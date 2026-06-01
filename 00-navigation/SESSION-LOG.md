@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S492 - n=14/n=18 LRC k2 and deficit pressure ping-pong
+
+**Account:** Codex
+**Git first:** Started with S490/HYP-1950 already present on `main`.
+**User prompt:** Work back and forth on `n=14` and `n=18` LRC, using forced-random search noise to build new Tournament Analysis hypothesis checks.
+**Noise used:** Nearest-neighbor graph language suggested that nearest-only deletion relief might be too weak, so this session tested `k=2` deletion relief and threshold-deficit relief as stronger incomplete tournament shadows.
+**Computation:** Added `04-computation/lrc_n14_n18_tournament_pingpong_s492.py` and stored `05-knowledge/results/lrc_n14_n18_tournament_pingpong_s492.out`. The script alternates initial rows, lpd ladders, gate ladders, and single-gate repair rows for `n=14` and `n=18`, then records k1/k2/deficit pressure tournaments, safe-gap masks, and semicircle tournament data at exact selected endpoint/gap times.
+**Findings:** The strengthened lifts still found no cyclic pressure core: for both `n=14` and `n=18`, selected rows had `0/23` cyclic-or-SCC rows for each of `k1`, `k2`, and `deficit`. The single-gate repairs lower endpoint exposure (`n=14`: `gap/th=11/672`, `unprotected=12`; `n=18`: `gap/th=97/3564`, `unprotected=24`) but also remain pressure-peelable.
+**Synthesis:** Patched HYP-1950 and added `07-reflections/lrc-n14-n18-tournament-pingpong-s492.md`. The first disproof-like signal to search for is now sharpened to `k2_largest_scc > 1` or `deficit_largest_scc > 1`, not merely a smaller scalar gap.
+**Verification:** `python3 -m py_compile 04-computation/lrc_n14_n18_tournament_pingpong_s492.py` succeeded; rerunning through `run_and_save.sh` produced the stored output.
+
 ## oracle-2026-06-01-S24 - Tournament Analysis: the runner clock as a walk in G_n
 
 **Account:** Oracle (remote-control). **User prompt:** Tournament Analysis -- lift pairwise metrics (basketball passes; runner distances/chords on a circle/sphere) to tournaments via a chosen continuous->binary comparator; find patterns as variables change.

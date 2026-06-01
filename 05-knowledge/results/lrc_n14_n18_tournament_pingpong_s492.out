@@ -1,0 +1,258 @@
+codex-2026-06-01-S492
+n=14 / n=18 LRC tournament-analysis ping-pong
+==============================================================================================================
+
+Forced-random import used in this pass:
+  k-nearest-neighbor graphs suggest replacing one-neighbor deletion relief
+  by k=2 relief and by threshold-deficit relief.  Those are still finite
+  incomplete tournaments on the runners at exact LRC endpoint/gap times.
+
+[initial n=14]
+  role=boundary unit skeleton
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  class=boundary_only gap/th=0 forbidden=1 endpoints=176 unprotected=6 first=1/14 sampled_times=178/178
+  origin boundary       t=          1/14 origin=      1,1       best=   0:      1,1       safe=14 lonely=14 br=      1 half=tie 7/tri70  
+    k1       0/91 tri=0 scc=1 src/sink=0/0
+    k2       0/91 tri=0 scc=1 src/sink=0/0
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=        29/154 origin=   9/11,1       best=   4:   9/11,20/11   safe= 5 lonely= 0 br=   9/11 half=tie 0/tri108 
+    k1       8/83 tri=0 scc=1 src/sink=4/8
+    k2       10/81 tri=0 scc=1 src/sink=6/6
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=        27/112 origin=    1/2,1       best=   0:    1/2,1       safe= 4 lonely= 0 br=    1/2 half=tie 0/tri112 
+    k1       8/83 tri=0 scc=1 src/sink=6/8
+    k2       12/79 tri=0 scc=1 src/sink=8/6
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max deficit pressure  t=        41/126 origin=    1/3,2/3     best=   0:    1/3,2/3     safe= 3 lonely= 0 br=    1/3 half=tie 0/tri100 
+    k1       6/85 tri=0 scc=1 src/sink=6/6
+    k2       12/79 tri=0 scc=1 src/sink=8/6
+    deficit  12/79 tri=0 scc=1 src/sink=8/6
+
+[initial n=18]
+  role=boundary unit skeleton
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  class=boundary_only gap/th=0 forbidden=1 endpoints=300 unprotected=6 first=1/18 sampled_times=302/302
+  origin boundary       t=          1/18 origin=      1,1       best=   0:      1,1       safe=18 lonely=18 br=      1 half=tie 9/tri168 
+    k1       0/153 tri=0 scc=1 src/sink=0/0
+    k2       0/153 tri=0 scc=1 src/sink=0/0
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=        37/234 origin=  12/13,1       best=   5:  12/13,24/13   safe= 6 lonely= 0 br=  12/13 half=tie 0/tri240 
+    k1       12/141 tri=0 scc=1 src/sink=6/12
+    k2       12/141 tri=0 scc=1 src/sink=10/8
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=          7/36 origin=    1/2,1       best=   0:    1/2,1       safe= 5 lonely= 0 br=    1/2 half=tie 0/tri228 
+    k1       10/143 tri=0 scc=1 src/sink=8/10
+    k2       16/137 tri=0 scc=1 src/sink=10/8
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max deficit pressure  t=        53/216 origin=    1/3,2/3     best=   0:    1/3,2/3     safe= 4 lonely= 0 br=    1/3 half=tie 0/tri240 
+    k1       8/145 tri=0 scc=1 src/sink=8/8
+    k2       16/137 tri=0 scc=1 src/sink=10/8
+    deficit  16/137 tri=0 scc=1 src/sink=10/8
+
+[n=14 lpd ladder]
+  role=scale 7 skip 6; classic seven ladder
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  class=positive_gap gap/th=5/924 forbidden=142/143 endpoints=1150 unprotected=84 first=9/98 sampled_times=640/1177
+  origin gap mid        t=    3053/25872 origin=  29/24,27/22   best=   0:  29/24,27/22   safe= 7 lonely= 2 br=  29/24 half=tie 0/tri110 
+    k1       7/84 tri=0 scc=1 src/sink=3/5
+    k2       12/79 tri=0 scc=1 src/sink=4/5
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=          9/98 origin=      1,1       best=  21:      1,2       safe=12 lonely=11 br=      1 half=tie 6/tri73  
+    k1       4/87 tri=0 scc=1 src/sink=3/4
+    k2       6/85 tri=0 scc=1 src/sink=2/3
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=      279/1078 origin=   9/11,1       best=   7:      1,18/11   safe= 6 lonely= 2 br=   9/11 half=tie 0/tri110 
+    k1       10/81 tri=0 scc=1 src/sink=4/8
+    k2       10/81 tri=0 scc=1 src/sink=6/8
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=        83/784 origin=    1/2,1       best=  70:      1,21/8    safe= 5 lonely= 2 br=    1/2 half=tie 0/tri104 
+    k1       8/83 tri=0 scc=1 src/sink=6/7
+    k2       16/75 tri=0 scc=1 src/sink=5/5
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max deficit pressure  t=        19/392 origin=    1/4,19/28   best=   0:    1/4,19/28   safe= 3 lonely= 0 br=    1/4 half=tie 0/tri100 
+    k1       7/84 tri=0 scc=1 src/sink=6/7
+    k2       14/77 tri=0 scc=1 src/sink=6/6
+    deficit  14/77 tri=0 scc=1 src/sink=6/6
+  max mobile lonely     t=         19/98 origin=      1,1       best=  21:      1,12/7    safe=13 lonely=12 br=      1 half=tie 6/tri76  
+    k1       2/89 tri=0 scc=1 src/sink=2/2
+    k2       5/86 tri=0 scc=1 src/sink=1/3
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+
+[n=18 lpd ladder]
+  role=scale 9 skip 8; square-odd-core ladder
+  speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  class=positive_gap gap/th=1/176 forbidden=583927/590733 endpoints=2558 unprotected=176 first=11/162 sampled_times=640/2625
+  origin gap mid        t=    3991/57024 origin=3991/3168,41/32   best=   0:3991/3168,41/32   safe= 9 lonely= 1 br=3991/3168 half=tie 0/tri240 
+    k1       6/147 tri=0 scc=1 src/sink=4/6
+    k2       9/144 tri=0 scc=1 src/sink=4/6
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=        11/162 origin=      1,1       best=  27:      1,2       safe=16 lonely=15 br=      1 half=tie 8/tri173 
+    k1       4/149 tri=0 scc=1 src/sink=3/4
+    k2       6/147 tri=0 scc=1 src/sink=2/3
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  best origin bracket   t=   34025/57024 origin=  41/32,31/22   best=   0:  41/32,31/22   safe= 9 lonely= 2 br=  41/32 half=tie 0/tri238 
+    k1       7/146 tri=0 scc=1 src/sink=5/7
+    k2       9/144 tri=0 scc=1 src/sink=3/6
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=     1133/2106 origin=  12/13,1       best=  18:      1,24/13   safe= 7 lonely= 2 br=  12/13 half=tie 0/tri238 
+    k1       13/140 tri=0 scc=1 src/sink=5/10
+    k2       15/138 tri=0 scc=1 src/sink=6/9
+    deficit  3/150 tri=0 scc=1 src/sink=1/3
+  max k2 pressure       t=       101/324 origin=    1/2,1       best= 117:      1,5/2     safe= 6 lonely= 2 br=    1/2 half=tie 0/tri228 
+    k1       10/143 tri=0 scc=1 src/sink=8/9
+    k2       20/133 tri=0 scc=1 src/sink=7/7
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max deficit pressure  t=       71/2592 origin=    1/4,71/144  best=   1: 71/144,107/144 safe= 4 lonely= 0 br=    1/4 half=tie 0/tri236 
+    k1       9/144 tri=0 scc=1 src/sink=8/9
+    k2       18/135 tri=0 scc=1 src/sink=8/8
+    deficit  18/135 tri=0 scc=1 src/sink=8/8
+  max mobile lonely     t=        25/162 origin=      1,1       best= 117:      1,16/9    safe=17 lonely=16 br=      1 half=tie 8/tri176 
+    k1       2/151 tri=0 scc=1 src/sink=2/2
+    k2       5/148 tri=0 scc=1 src/sink=1/3
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+
+[n=14 gate ladder]
+  role=scale 14 skip 6; S380-style gate depth
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  class=positive_gap gap/th=5/1848 forbidden=142/143 endpoints=2298 unprotected=168 first=15/196 sampled_times=640/2349
+  origin gap mid        t=    4339/51744 origin=4339/3696,29/24   best=   0:4339/3696,29/24   safe= 7 lonely= 1 br=4339/3696 half=tie 0/tri106 
+    k1       6/85 tri=0 scc=1 src/sink=4/6
+    k2       9/82 tri=0 scc=1 src/sink=6/6
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=        15/196 origin=      1,1       best=  70:      1,2       safe=12 lonely=11 br=      1 half=tie 6/tri72  
+    k1       4/87 tri=0 scc=1 src/sink=3/4
+    k2       6/85 tri=0 scc=1 src/sink=2/3
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  best origin bracket   t=   26515/51744 origin=  29/24,27/22   best=   0:  29/24,27/22   safe= 7 lonely= 2 br=  29/24 half=tie 0/tri110 
+    k1       8/83 tri=0 scc=1 src/sink=4/7
+    k2       11/80 tri=0 scc=1 src/sink=5/8
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=     1385/2548 origin=   9/13,1       best= 154:  18/13,22/13   safe= 5 lonely= 1 br=   9/13 half=tie 0/tri110 
+    k1       10/81 tri=0 scc=1 src/sink=4/8
+    k2       11/80 tri=0 scc=1 src/sink=5/7
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=      293/2352 origin=    1/3,2/3     best=   1:  47/56,197/168 safe= 4 lonely= 0 br=    1/3 half=tie 0/tri104 
+    k1       8/83 tri=0 scc=1 src/sink=6/7
+    k2       16/75 tri=0 scc=1 src/sink=5/5
+    deficit  11/80 tri=0 scc=1 src/sink=5/7
+  max deficit pressure  t=      909/1960 origin=    1/5,2/5     best=   0:    1/5,2/5     safe= 2 lonely= 0 br=    1/5 half=tie 0/tri106 
+    k1       8/83 tri=0 scc=1 src/sink=5/8
+    k2       15/76 tri=0 scc=1 src/sink=4/5
+    deficit  15/76 tri=0 scc=1 src/sink=4/5
+  max mobile lonely     t=       111/196 origin=      1,1       best=  70:      1,15/14   safe=13 lonely=12 br=      1 half=tie 6/tri76  
+    k1       2/89 tri=0 scc=1 src/sink=2/2
+    k2       4/87 tri=0 scc=1 src/sink=2/3
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+
+[n=18 gate ladder]
+  role=scale 18 skip 8; doubled 9-core gate depth
+  speeds=(1, 18, 36, 54, 72, 90, 108, 126, 162, 180, 198, 216, 234, 252, 270, 288, 306)
+  class=positive_gap gap/th=1/352 forbidden=583927/590733 endpoints=5114 unprotected=352 first=19/324 sampled_times=640/5245
+  origin gap mid        t=   8681/114048 origin=  41/32,8681/6336 best= 288:  41/32,31/22   safe= 9 lonely= 2 br=  41/32 half=tie 0/tri236 
+    k1       8/145 tri=0 scc=1 src/sink=5/7
+    k2       11/142 tri=0 scc=1 src/sink=4/4
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=        19/324 origin=      1,1       best= 126:      1,2       safe=16 lonely=15 br=      1 half=tie 8/tri170 
+    k1       4/149 tri=0 scc=1 src/sink=3/4
+    k2       6/147 tri=0 scc=1 src/sink=2/3
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=      197/4212 origin=197/234,12/13   best=  36:      1,24/13   safe= 7 lonely= 2 br=197/234 half=tie 0/tri240 
+    k1       13/140 tri=0 scc=1 src/sink=5/10
+    k2       16/137 tri=0 scc=1 src/sink=7/8
+    deficit  3/150 tri=0 scc=1 src/sink=1/3
+  max k2 pressure       t=       209/648 origin=    1/2,1       best= 234:      1,5/2     safe= 6 lonely= 2 br=    1/2 half=tie 0/tri228 
+    k1       10/143 tri=0 scc=1 src/sink=8/9
+    k2       20/133 tri=0 scc=1 src/sink=7/7
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max deficit pressure  t=       71/5184 origin= 71/288,1/4     best= 288:    1/4,3/4     safe= 4 lonely= 0 br= 71/288 half=tie 0/tri236 
+    k1       9/144 tri=0 scc=1 src/sink=8/9
+    k2       18/135 tri=0 scc=1 src/sink=8/8
+    deficit  18/135 tri=0 scc=1 src/sink=8/8
+  max mobile lonely     t=        25/324 origin=      1,1       best=  54:      1,29/18   safe=17 lonely=16 br=      1 half=tie 8/tri176 
+    k1       2/151 tri=0 scc=1 src/sink=2/2
+    k2       5/148 tri=0 scc=1 src/sink=1/3
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+
+[n=14 single-gate repair]
+  role=HYP-1828 low-exposure repair: replace 6 by 14*16
+  speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 224)
+  class=positive_gap gap/th=11/672 forbidden=668471/672672 endpoints=612 unprotected=12 first=29/182 sampled_times=620/620
+  origin gap mid        t=    3259/18816 origin=123/112,1783/1344 best=   0:123/112,1783/1344 safe= 6 lonely= 2 br=123/112 half=tie 0/tri112 
+    k1       6/85 tri=0 scc=1 src/sink=4/6
+    k2       11/80 tri=0 scc=1 src/sink=5/8
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=        29/182 origin=      1,16/13   best=  12:  16/13,21/13   safe= 6 lonely= 2 br=      1 half=tie 0/tri112 
+    k1       7/84 tri=0 scc=1 src/sink=3/5
+    k2       11/80 tri=0 scc=1 src/sink=2/6
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=      671/3136 origin=219/224,1       best=   1:233/224,219/112 safe= 6 lonely= 2 br=219/224 half=tie 0/tri110 
+    k1       10/81 tri=0 scc=1 src/sink=4/8
+    k2       12/79 tri=0 scc=1 src/sink=5/6
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=        41/168 origin=    1/3,2/3     best=  10:    2/3,11/4    safe= 4 lonely= 0 br=    1/3 half=tie 0/tri112 
+    k1       7/84 tri=0 scc=1 src/sink=7/7
+    k2       16/75 tri=0 scc=1 src/sink=5/5
+    deficit  13/78 tri=0 scc=1 src/sink=5/6
+  max deficit pressure  t=     1021/3136 origin= 73/224,219/224 best=   0: 73/224,219/224 safe= 3 lonely= 0 br= 73/224 half=tie 0/tri100 
+    k1       7/84 tri=0 scc=1 src/sink=6/7
+    k2       14/77 tri=0 scc=1 src/sink=6/6
+    deficit  14/77 tri=0 scc=1 src/sink=6/6
+  max mobile lonely     t=          1/14 origin=      0,1       best=   5:      1,2       safe=13 lonely=12 br=      0 half=tie 8/tri65  
+    k1       2/89 tri=0 scc=1 src/sink=2/2
+    k2       2/89 tri=0 scc=1 src/sink=2/2
+    deficit  0/91 tri=0 scc=1 src/sink=0/0
+
+[n=18 single-gate repair]
+  role=n=18 analogue: replace lpd skip 8 by 18*18
+  speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 324)
+  class=positive_gap gap/th=97/3564 forbidden=3504535/3544398 endpoints=932 unprotected=24 first=37/306 sampled_times=640/946
+  origin gap mid        t=  47401/128304 origin=745/648,1426/891 best=   0:745/648,1426/891 safe= 9 lonely= 2 br=745/648 half=tie 0/tri240 
+    k1       7/146 tri=0 scc=1 src/sink=5/7
+    k2       9/144 tri=0 scc=1 src/sink=3/5
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  origin boundary       t=        37/306 origin=      1,20/17   best=  16:  20/17,27/17   safe= 9 lonely= 2 br=      1 half=tie 0/tri238 
+    k1       6/147 tri=0 scc=1 src/sink=2/4
+    k2       7/146 tri=0 scc=1 src/sink=3/4
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k1 pressure       t=        37/234 origin=  12/13,1       best=   2:      1,20/13   safe= 7 lonely= 1 br=  12/13 half=tie 0/tri240 
+    k1       12/141 tri=0 scc=1 src/sink=6/11
+    k2       14/139 tri=0 scc=1 src/sink=8/9
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+  max k2 pressure       t=     1169/5832 origin= 13/324,13/162  best= 324:      1,337/324 safe= 6 lonely= 1 br= 13/324 half=tie 0/tri212 
+    k1       10/143 tri=0 scc=1 src/sink=8/9
+    k2       20/133 tri=0 scc=1 src/sink=7/6
+    deficit  12/141 tri=0 scc=1 src/sink=6/6
+  max deficit pressure  t=     1439/5832 origin=  19/81,19/27   best=   0:  19/81,19/27   safe= 4 lonely= 0 br=  19/81 half=tie 0/tri240 
+    k1       9/144 tri=0 scc=1 src/sink=8/9
+    k2       18/135 tri=0 scc=1 src/sink=8/8
+    deficit  18/135 tri=0 scc=1 src/sink=8/8
+  max mobile lonely     t=          1/18 origin=      0,1       best=   7:      1,2       safe=17 lonely=16 br=      0 half=tie10/tri161 
+    k1       2/151 tri=0 scc=1 src/sink=2/2
+    k2       2/151 tri=0 scc=1 src/sink=2/2
+    deficit  0/153 tri=0 scc=1 src/sink=0/0
+
+CROSS-CASE SYNTHESIS
+==============================================================================================================
+n=14 selected tournament rows:
+  k1      cyclic-or-SCC rows 0/23
+  k2      cyclic-or-SCC rows 0/23
+  deficit cyclic-or-SCC rows 0/23
+n=18 selected tournament rows:
+  k1      cyclic-or-SCC rows 0/23
+  k2      cyclic-or-SCC rows 0/23
+  deficit cyclic-or-SCC rows 0/23
+
+No selected row produced a strict pressure SCC or directed 3-cycle.
+
+Working conclusion
+--------------------------------------------------------------------------------------------------------------
+1. The n=14 seven/gate ladders remain pressure-peelable even after the
+   k=2 and threshold-deficit tournament lifts.
+2. The n=18 lpd and gate ladders behave the same way in these exact samples:
+   they increase endpoint debt and pairwise crowding, but not a mobile
+   pressure core.
+3. The best next proof move is therefore not to hunt arbitrary speed-level
+   cycles.  It is to combine pressure leaves with labelled endpoint
+   handoff leaves.  A counterexample must survive both peelings.
+4. If future search finds a strict k=2 or deficit SCC for n=18 before n=14,
+   that SCC is the first place to try THM-365-style arithmetic labels.

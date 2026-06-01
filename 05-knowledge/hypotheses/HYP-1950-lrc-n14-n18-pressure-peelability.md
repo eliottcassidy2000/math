@@ -19,6 +19,18 @@ Orient `j -> i` when runner `j` is the more irreplaceable blocker of runner `i`.
 
 The S490 evidence supports the first alternative for known hard rows.
 
+S492 strengthens the same hypothesis by replacing nearest-only deletion relief
+with two additional pressure tournaments:
+
+```text
+k2 relief:      deleting j improves the sum of i's two nearest distances;
+deficit relief: deleting j reduces i's two-neighbor threshold deficit.
+```
+
+Across selected exact rows for initial, lpd-ladder, gate-ladder, and
+single-gate-repair examples at `n=14` and `n=18`, these strengthened pressure
+lifts still produced no strict SCC and no directed 3-cycle.
+
 ## Evidence
 
 `04-computation/lrc_n14_n18_tournament_feedback_s490.py` alternates between the known `n=14` hard ladders and the `n=18=2*3^2` quotient ladders.
@@ -38,6 +50,30 @@ Across selected tournament-pressure snapshots:
 n=14 d=7,d=14:  pressure triangles=0, largest pressure SCC=1
 n=18 d=3,d=9,d=18: pressure triangles=0, largest pressure SCC=1
 ```
+
+S492 adds the stronger k-nearest and deficit-relief audit:
+
+```text
+n=14 selected rows:
+  k1      cyclic-or-SCC rows 0/23
+  k2      cyclic-or-SCC rows 0/23
+  deficit cyclic-or-SCC rows 0/23
+
+n=18 selected rows:
+  k1      cyclic-or-SCC rows 0/23
+  k2      cyclic-or-SCC rows 0/23
+  deficit cyclic-or-SCC rows 0/23
+```
+
+It also checks the low-exposure single-gate repairs:
+
+```text
+n=14 replace 6 by 14*16: gap/th=11/672,  unprotected=12
+n=18 replace 8 by 18*18: gap/th=97/3564, unprotected=24
+```
+
+Those repair rows lower endpoint exposure compared with quotient ladders but
+still do not create a mobile pressure core.
 
 The safe-gap witness masks also stay simple:
 
@@ -71,7 +107,15 @@ Useful references include Busch's Hamiltonian path lower bound for strong tourna
 - For `n=18`, scan bounded perturbations around the `d=9` and `d=18` ladders looking specifically for `pressure_largest_scc > 1`.
 - Add safe-gap edge-cover transition graphs for n=14 and n=18 chamber walks.
 - Compare pressure leaves with HYP-1921 labelled handoff rows and HYP-1930 pairwise moat pressure.
+- Search bounded perturbations specifically for `k2_largest_scc > 1` or
+  `deficit_largest_scc > 1`, not just nearest-pressure SCCs.
 
 ## See Also
 
-HYP-1895, HYP-1903, HYP-1921, HYP-1930, HYP-1940, `04-computation/lrc_n14_n18_tournament_feedback_s490.py`, `05-knowledge/results/lrc_n14_n18_tournament_feedback_s490.out`, `07-reflections/lrc-n14-n18-tournament-feedback-s490.md`.
+HYP-1895, HYP-1903, HYP-1921, HYP-1930, HYP-1940,
+`04-computation/lrc_n14_n18_tournament_feedback_s490.py`,
+`05-knowledge/results/lrc_n14_n18_tournament_feedback_s490.out`,
+`07-reflections/lrc-n14-n18-tournament-feedback-s490.md`,
+`04-computation/lrc_n14_n18_tournament_pingpong_s492.py`,
+`05-knowledge/results/lrc_n14_n18_tournament_pingpong_s492.out`,
+`07-reflections/lrc-n14-n18-tournament-pingpong-s492.md`.
