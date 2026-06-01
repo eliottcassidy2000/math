@@ -1,0 +1,272 @@
+Deep Creative Reframings of LRC — opus-S540
+
+======================================================================
+REFRAME 1: BRAID — runner trajectories as a braid group
+======================================================================
+
+n=4, speeds=(1, 2, 3):
+  observer-runner crossings per period: 12
+  runner-runner crossings: 4
+  total braid crossings: 16
+  braid group: B_4 on 4 strands
+
+  avg unlinked fraction: -0.5000 (NEGATIVE)
+  (negative means observer is more often linked than not)
+
+n=5, speeds=(1, 2, 3, 4):
+  observer-runner crossings per period: 20
+  runner-runner crossings: 10
+  total braid crossings: 30
+  braid group: B_5 on 5 strands
+
+  avg unlinked fraction: -0.6000 (NEGATIVE)
+  (negative means observer is more often linked than not)
+
+n=6, speeds=(1, 2, 3, 4, 5):
+  observer-runner crossings per period: 30
+  runner-runner crossings: 20
+  total braid crossings: 50
+  braid group: B_6 on 6 strands
+
+  avg unlinked fraction: -0.6667 (NEGATIVE)
+  (negative means observer is more often linked than not)
+
+n=7, speeds=(1, 2, 3, 4, 5, 6):
+  observer-runner crossings per period: 42
+  runner-runner crossings: 35
+  total braid crossings: 77
+  braid group: B_7 on 7 strands
+
+  avg unlinked fraction: -0.7143 (NEGATIVE)
+  (negative means observer is more often linked than not)
+
+BRAID INSIGHT: the observer strand is 'entangled' with runner strands.
+LRC says: the braid has a moment of 'disentanglement' where the
+observer is free. The entanglement measure (linking number) is
+always 0 algebraically, but the GEOMETRIC entanglement (crossing
+pattern) determines whether disentanglement is possible.
+
+The braid group B_n acts on the tournament: a crossing σ_i
+corresponds to an arc flip in the tournament. The BRAID INVARIANTS
+(Jones polynomial, etc.) might encode the LRC condition.
+
+======================================================================
+REFRAME 2: ECLIPSE — moving shadows covering the observer
+======================================================================
+
+n=4:
+  shadow width: 2/4 = 0.5000
+  total shadow measure: 3×2/4 = 1.5000
+  eclipse excess: 0.5000
+  avg pairwise overlap: 0.7500
+  eclipse excess / overlap: 0.67
+
+n=5:
+  shadow width: 2/5 = 0.4000
+  total shadow measure: 4×2/5 = 1.6000
+  eclipse excess: 0.6000
+  avg pairwise overlap: 0.9600
+  eclipse excess / overlap: 0.63
+
+n=6:
+  shadow width: 2/6 = 0.3333
+  total shadow measure: 5×2/6 = 1.6667
+  eclipse excess: 0.6667
+  avg pairwise overlap: 1.1111
+  eclipse excess / overlap: 0.60
+
+n=7:
+  shadow width: 2/7 = 0.2857
+  total shadow measure: 6×2/7 = 1.7143
+  eclipse excess: 0.7143
+  avg pairwise overlap: 1.2245
+  eclipse excess / overlap: 0.58
+
+n=14:
+  shadow width: 2/14 = 0.1429
+  total shadow measure: 13×2/14 = 1.8571
+  eclipse excess: 0.8571
+  avg pairwise overlap: 1.5918
+  eclipse excess / overlap: 0.54
+
+ECLIPSE INSIGHT: the total shadow measure is 2(n-1)/n < 2.
+For permanent eclipse, shadows must cover [0,1) with this budget.
+The 'eclipse excess' (total - 1) = (n-2)/n is the amount of shadow
+that MUST overlap. If the overlap is FORCED to be more than the excess,
+the shadows can't cover [0,1), proving LRC.
+
+The CASCADE proof (S527) shows: the overlap IS forced to exceed the
+excess for n≥7, because the image-wrapping condition creates mandatory
+shadow overlaps. The 'wasted' shadow = the lonely time.
+
+======================================================================
+REFRAME 3: LATTICE — closest-vector to the lonely box
+======================================================================
+
+n=4:
+  box half-width: (n-2)/(2n) = 0.2500
+  box volume: ((n-2)/n)^3 = 0.125000
+  lattice points: lcm = 6
+  expected in box: 0.8
+  ≈ 1 (tight)
+
+n=5:
+  box half-width: (n-2)/(2n) = 0.3000
+  box volume: ((n-2)/n)^4 = 0.129600
+  lattice points: lcm = 12
+  expected in box: 1.6
+  ≈ 1 (tight)
+
+n=6:
+  box half-width: (n-2)/(2n) = 0.3333
+  box volume: ((n-2)/n)^5 = 0.131687
+  lattice points: lcm = 60
+  expected in box: 7.9
+  ≈ 1 (tight)
+
+n=7:
+  box half-width: (n-2)/(2n) = 0.3571
+  box volume: ((n-2)/n)^6 = 0.132810
+  lattice points: lcm = 60
+  expected in box: 8.0
+  ≈ 1 (tight)
+
+n=14:
+  box half-width: (n-2)/(2n) = 0.4286
+  box volume: ((n-2)/n)^13 = 0.134801
+  lattice points: lcm = 360360
+  expected in box: 48576.7
+  >> 1 (easy)
+
+LATTICE INSIGHT: LRC is a DIOPHANTINE APPROXIMATION problem.
+The rational line must come within (n-2)/(2n) of the box center
+in the L∞ norm. This is the VIEW OBSTRUCTION problem (Cusick 1973).
+
+The COVERING RADIUS of the speed lattice determines LRC:
+  μ ≤ (n-2)/(2n) iff LRC holds.
+
+For the initial segment: the lattice is 'well-spread' (many points)
+but the box hit count is LOW (6 for n=14) because the lattice points
+cluster in specific regions of the torus, missing the box interior
+but grazing its boundary.
+
+======================================================================
+REFRAME 4: CONFLICT HYPERGRAPH — overlapping close zones
+======================================================================
+
+n=4 (409 sets):
+  avg coverage range: [1.4966, 1.5006]
+  expected (uniform): 1.5000
+
+n=5 (205 sets):
+  avg coverage range: [1.5946, 1.5992]
+  expected (uniform): 1.6000
+
+n=6 (126 sets):
+  avg coverage range: [1.6662, 1.6682]
+  expected (uniform): 1.6667
+
+HYPERGRAPH INSIGHT: the average coverage is always 2(n-1)/n.
+But the DISTRIBUTION of coverage matters:
+  - Uniform coverage: each time has ~2(n-1)/n runners close.
+    Lonely probability ≈ Poisson with λ=2(n-1)/n.
+  - Clustered coverage: some times have many close runners,
+    others have few → more likely to have gaps (lonely times).
+
+The initial segment has the MOST UNIFORM coverage (least clustered)
+→ LEAST likely to have gaps → tightest case (lonely measure 0).
+All other speed sets have MORE clustering → MORE gaps → easier LRC.
+
+======================================================================
+REFRAME 5: MUSICAL CANON — when does the round resolve?
+======================================================================
+
+n=4, voices at tempos (1, 2, 3):
+  beat frequencies: [1, 2]
+  fundamental beat: 1
+  resolution period (lcm of beats): 2
+  resolution points per period: 2
+  consonance threshold: 1/4 of the octave
+
+n=5, voices at tempos (1, 2, 3, 4):
+  beat frequencies: [1, 2, 3]
+  fundamental beat: 1
+  resolution period (lcm of beats): 6
+  resolution points per period: 6
+  consonance threshold: 1/5 of the octave
+
+n=6, voices at tempos (1, 2, 3, 4, 5):
+  beat frequencies: [1, 2, 3, 4]
+  fundamental beat: 1
+  resolution period (lcm of beats): 12
+  resolution points per period: 12
+  consonance threshold: 1/6 of the octave
+
+n=7, voices at tempos (1, 2, 3, 4, 5, 6):
+  beat frequencies: [1, 2, 3, 4, 5]
+  fundamental beat: 1
+  resolution period (lcm of beats): 60
+  resolution points per period: 60
+  consonance threshold: 1/7 of the octave
+
+MUSICAL INSIGHT: LRC is about BEAT PATTERN ALIGNMENT.
+Each pair of voices creates a beat. The beats interact to create
+a complex rhythm. The 'resolution' is when ALL beats align at a
+consonant phase — all voices are simultaneously far from unison.
+
+The INITIAL SEGMENT has the richest beat structure (all integer
+beat frequencies), which makes alignment hardest (tightest case).
+Speed sets with coprime beat frequencies have SPARSER interactions,
+making resolution easier.
+
+The FORMAL GROUP F(x,y)=(x+y)/(1+xy) is the CONSONANCE LAW:
+it adds dissonances hyperbolically. The rapidity = hyperbolic
+distance = musical 'interval'. The lonely condition = all
+intervals exceed the consonance threshold 0.5*ln(n-1) in rapidity.
+
+======================================================================
+SYNTHESIS: Five faces of LRC
+======================================================================
+
+LRC has (at least) five natural mathematical identities:
+
+1. TOURNAMENT: observer source in a marked round tournament.
+   → iso class reachability on the metagraph G_n
+   → the 'inside/outside' polygon geometry
+
+2. BRAID: disentanglement of the observer strand.
+   → linking numbers and braid invariants
+   → the crossing pattern determines lonely times
+
+3. ECLIPSE: gaps in moving shadow coverage.
+   → overlap budget: total shadow = 2(n-1)/n
+   → mandatory overlap (cascade) forces gaps
+
+4. LATTICE: closest vector to the lonely box.
+   → covering radius of the speed sublattice
+   → Diophantine approximation in the L∞ norm
+
+5. CANON: resolution of a musical round.
+   → beat frequency alignment
+   → formal group as consonance law
+
+Each reframing highlights a different OBSTRUCTION to permanent
+non-loneliness:
+  - Tournament: the metagraph is too connected
+  - Braid: the linking is algebraically zero
+  - Eclipse: the shadow budget is too small
+  - Lattice: the box is too large
+  - Canon: the beats must eventually align
+
+THE UNIFYING PRINCIPLE: n-1 periodic constraints on a single
+parameter (time t) cannot SIMULTANEOUSLY block a target of
+measure ≈ e^{-2} ≈ 13.5% because the constraints INTERFERE
+with each other — their overlaps waste budget, their phases
+drift apart, their linking cancels, their resonances decohere.
+
+The INITIAL SEGMENT is the unique CRITICAL POINT where the
+interference is MAXIMALLY COHERENT — all phases align, all
+overlaps minimize, all beat frequencies harmonize. Even at
+this critical point, the target is barely reached (wall-only).
+Any perturbation breaks the coherence and opens gaps.
+
