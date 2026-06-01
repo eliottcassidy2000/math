@@ -1,0 +1,33 @@
+LRC annular braid: cyclic generators, windings, and the CENTER=shift (oracle-S541)
+
+(1) crossing counts: #sigma_0 (observer-wrap) = sum v_i ; runner-runner = sum|v_i-v_j|
+   v=(1, 2, 3): sigma_0(wrap)=6=sum(v)  runner-runner=4  total word len=10  windings(around hole)=(1, 2, 3)
+   v=(1, 2, 4): sigma_0(wrap)=7=sum(v)  runner-runner=6  total word len=13  windings(around hole)=(1, 2, 4)
+   v=(1, 3, 5): sigma_0(wrap)=9=sum(v)  runner-runner=8  total word len=17  windings(around hole)=(1, 3, 5)
+   v=(1, 2, 3, 4): sigma_0(wrap)=10=sum(v)  runner-runner=10  total word len=20  windings(around hole)=(1, 2, 3, 4)
+   v=(1, 2, 3, 4, 5): sigma_0(wrap)=15=sum(v)  runner-runner=20  total word len=35  windings(around hole)=(1, 2, 3, 4, 5)
+   => the braid's winding vector around the observer-hole IS the speed vector.
+
+(2a) per-runner loneliness (each runner's clear-collar = its own LRC question).
+    system S=(0, 1, 2, 3, 4), n=5, threshold 1/5.  runner k lonely = re-center on k:
+      runner 0 (speed 0): max collar = 1/5 = 0.2000  lonely=True
+      runner 1 (speed 1): max collar = 7/30 = 0.2333  lonely=True
+      runner 2 (speed 2): max collar = 3/10 = 0.3000  lonely=True
+      runner 3 (speed 3): max collar = 7/30 = 0.2333  lonely=True
+      runner 4 (speed 4): max collar = 1/5 = 0.2000  lonely=True
+      (edge runners are TIGHT at exactly 1/n — the AP extremal — middle runners looser.)
+
+(2b) CENTER = rho (add a constant c to ALL speeds = +1 winding around the core).
+    rho is central in the annular braid group; loneliness depends only on pairwise
+    differences, which rho fixes -> every runner's collar is UNCHANGED. Verify c=+10:
+      loneliness invariant under +c for c in {10,100}, all runners: True
+      => the CENTER of the annular braid group acts TRIVIALLY on the LRC question;
+         LRC is a statement in the annular braid group MOD CENTER = the affine
+         symmetric group / the windings-up-to-global-shift.
+
+(3) affine-permutation level = sum of windings = sum v_i (the #observer-crossings).
+    The annular braid surjects onto the affine symmetric group S~_{n-1}; the LRC
+    braid is the homogeneous TORUS braid whose affine part is the speed vector.
+    Loneliness = a height where the core collar is fat = the alcove walk (S525)
+    visits a deep alcove. The disk picture (S540o) forgets the hole; the annulus
+    keeps it, and the hole's radial coordinate is exactly ||v_i t||.

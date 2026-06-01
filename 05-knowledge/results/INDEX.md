@@ -23,6 +23,7 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 | `lake build TournamentH7` | [STORED] | Full root module builds successfully after wiring in `NaturalOperationDigraphs`; existing lint warnings in `BasePathSink`/`TransitiveH` remain unchanged. | `lean_tournamenth7_natural_operation_s366.out` |
 | `lake env lean TournamentH7/LonelyRunner.lean` + axiom print | [STORED] | Lean checks `ObserverTieFree` and `lonely_iff_observerTieFree`, the strict observer-tie core of THM-389; the audit lists only Lean foundations (`propext`, `Classical.choice`, `Quot.sound`). | `lean_lrc_trienerment_s542.out` |
 
+| `lrc_annular_braid_center_s541.py` | [STORED] | LRC's image in the ANNULAR braid group: observer=hole, radial coord=||v_i t||, winding=speeds. #σ_0(wrap)=Σv_i, runner-runner=Σ|v_i-v_j|. **The CENTER (full core rotation = add c to all speeds) acts trivially on loneliness** -> LRC lives in the affine symmetric group S̃_{n-1}. **HYP-2033**. | `lrc_annular_braid_center_s541.out` |
 ## Results catalog
 
 Scripts with stored results are marked [STORED]. Scripts without results are marked [MISSING].
