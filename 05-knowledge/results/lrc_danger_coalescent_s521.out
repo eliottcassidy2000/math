@@ -1,0 +1,21 @@
+(A) N(t) danger-count excursion (LRC: N reaches 0):
+speeds                 minN  maxN  E[N]   cells N=0 
+(1, 2, 3, 4)               1     4   1.60          0
+(1, 2, 4, 7)               0     4   1.60          2
+(1, 3, 4, 5, 9)            1     5   1.67          0
+(2, 3, 5, 7, 11)           0     5   1.67          4
+(1, 5, 6, 11, 16)          0     5   1.67          6
+(1, 2, 3, 4, 5, 6)         1     6   1.71          0
+
+(B) discretized covering of Z/N_* (uncovered = lonely discrete times):
+speeds                 n   N_*     uncovered 
+(1, 2, 3)                4      24          2
+(1, 2, 3, 4)             5      60          4
+(1, 2, 4, 7)             5     140         28
+(1, 3, 4, 5, 9)          6    1080          2
+(2, 3, 5, 7)             5    1050         70
+
+(C) fraction of sets lonely only at the boundary (tight/extremal), by n:
+  n=6: 1/599 sets reach N=0 only at the boundary wall (extremal)
+  n=7: 1/600 sets reach N=0 only at the boundary wall (extremal)
+  n=8: 1/600 sets reach N=0 only at the boundary wall (extremal)
