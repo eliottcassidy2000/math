@@ -43,6 +43,7 @@
 3. n=4 parity law (S531) is the ONE-channel degeneration: a+b+c = parity(pair1) XOR parity(pair2) -> 2 pairs fuse to one Z/2 bit -> half of n=4 proved.
 4. n=6 irreducibly multi-channel: ALL 120 sampled primitive 5-sets have an active full-support resonance -> no single congruence kills the inside debt; vanishing = JOINT state of the 3 pairs.
 **GENERALIZATION:** LRC(n) = a condition on the joint STATE of floor(n/2) independent pairs; inside debt vanishes/bounded for states satisfying a congruence mod n or n/2. n=14: 7 channels=opus CRT; musical-chairs = rotation of which pair is last blocker. New HYP-2012. Files: 07-reflections/independent-pairs-are-the-channels-s532.md; independent_pairs_channels_s532.py (+.out). Handoff: compute n=6 inside debt as a function of the 3-pair joint state; find the mod-6 3-channel analogue of "a+b+c odd".
+
 ## opus-2026-06-01-S532 - Independent pairs: the true degrees of freedom; CRT pairs = independent channels
 
 **Account:** Oracle (remote-control)
@@ -50,6 +51,13 @@
 **Computation:** `04-computation/lrc_independent_pairs_s532.py`. Independent set analysis, n=4 verification, CRT-as-matching, per-channel resonance.
 **Key findings:** (1) n=4: 2 independent tiles, 2^2=4=A000568(4). The dependent tile doesn't change the iso class — independent pairs ARE the only free variables. (2) n=14: CRT pairs {(1,8),...,(6,13)} form a MAXIMUM independent matching (6 pairs = ⌊13/2⌋). Each pair is an independent resonance channel. (3) The singleton (speed 7) = the apex channel. (4) The within-channel debt decomposes cleanly per pair, with cross-channel terms suppressed by the coprimality of CRT classes.
 **The multi-channel picture:** LRC@14 has 6+1 channels. Each channel is a 2-runner sub-problem with speed difference 7. The debt = Σ channel_debts + cross-channel + higher-order. The proof reduces to bounding each channel independently.
+
+## codex-2026-06-01-S532 - Independent-pair channel state for n=14 LRC
+
+**Account:** Codex. **User prompt:** "for the multi channel generalization, consider that the important metric is probably the amount and state of independent pairs..."
+**Result:** Formalized the user's K4 insight as a diameter-state refinement, now HYP-2015 after rebasing over the concurrent oracle HYP-2012/HYP-2013/HYP-2014 independent-pair commits. With scaffold `0->1->2->3` plus `0->3` fixed, the two independent crossing pair-arcs `(0,2)` and `(1,3)` hit all four ordinary K4 tournament isomorphism classes; across all K4 independent-pair scaffolds, 24/48 are complete coordinates.
+**n=14 translation:** In the clasp-deleted regular 14-gon, channels `d=1..6` each have 12 edges, max matching 6, and 7 maximum matchings, while the diameter channel `d=7` has exactly 6 edges, max matching 6, one maximum matching, and all edges independent. Thus the hidden diameter debt is a pure six-bit independent-pair state plus one singleton runner.
+**Handoff:** The multi-channel parity generalization should track `diameter_pair_state`, matching-shape entropy, and fixed-scaffold compatibility; "wall-only => AP" should factor through a finite classifier of independent-pair channel states under the non-diameter scaffold. Files: `04-computation/lrc_independent_pair_channels_s532.py`, `05-knowledge/results/lrc_independent_pair_channels_s532.out`, `07-reflections/lrc-independent-pair-channel-state-s532.md`, HYP-2015, T628.
 
 ## oracle-2026-06-01-S531 - The n=4 parity law: LRC(4) closes on every odd-sum triple; n=4 is the last clean case (HYP-2011)
 

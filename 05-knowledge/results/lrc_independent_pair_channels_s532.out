@@ -1,0 +1,30 @@
+K4 independent-pair coordinate
+fixed scaffold: 0->1, 1->2, 2->3, 0->3
+free independent pairs: (0,2), (1,3)
+state=00 canon=001000 scores=(1, 1, 2, 2) H=5 c3=2 scc=(4,)
+state=01 canon=000010 scores=(0, 2, 2, 2) H=3 c3=1 scc=(3, 1)
+state=10 canon=001001 scores=(1, 1, 1, 3) H=3 c3=1 scc=(3, 1)
+state=11 canon=000000 scores=(0, 1, 2, 3) H=1 c3=0 scc=(1, 1, 1, 1)
+distinct K4 iso classes reached: 4
+K4 independent-pair scaffold census:
+  1 classes reached: 12 scaffolds
+  2 classes reached: 12 scaffolds
+  4 classes reached: 24 scaffolds
+
+n=14 clasp-deleted chord channels
+d=1 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=2 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=3 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=4 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=5 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=6 edges=12 max_matching=6 max_matching_count=7 degree_hist=((1, 2), (2, 11)) all_edges_independent=False
+d=7 edges=6 max_matching=6 max_matching_count=1 degree_hist=((1, 12),) all_edges_independent=True
+Tournament Analysis over channel inventories:
+  score_hist: ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1))
+  tie_hamiltonian_path: (1, 2, 3, 4, 5, 6, 7)
+  edges: ((2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (1, 7), (3, 2), (4, 2), (5, 2), (6, 2), (2, 7), (4, 3), (5, 3), (6, 3), (3, 7), (5, 4), (6, 4), (4, 7), (6, 5), (5, 7), (6, 7))
+
+Interpretation:
+  K4: two independent pair states are a complete iso-class coordinate.
+  n=14: the diameter channel is six independent pairs plus one singleton;
+        multi-channel parity should track matching state, not only width.

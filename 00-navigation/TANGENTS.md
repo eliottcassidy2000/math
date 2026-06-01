@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T628** #lrc #n14 #independent-pairs #diameter-channel #matching-state | certainty: K4 exact + n14 channel audit | source: codex-2026-06-01-S532
+Multi-channel parity should track independent-pair state, not only support width. K4 has a fixed scaffold where two independent pair-arcs hit all four tournament classes; in clasp-deleted n=14, the diameter channel is uniquely pure: six mutually independent pairs, one maximum matching, plus one singleton. See HYP-2015, refining HYP-2012/HYP-2013/HYP-2014.
+
 **T627** #lrc #n14 #proof-leads #finite-sieve #apex #scalar-moat | certainty: synthesis from repo + web scan | source: codex-2026-06-01-S531
 Repo `n=14` is public-notation `k=13`, exactly the next case after the 2026 `k<=12` frontier. Best route: finite-check sieve survivors -> scalar-gauge/CRT parity and apex-module collapse -> AP/scalar-puncture wall classes -> `56`-cell moat or endpoint/resonance-debt export -> product-bound scoreboard. See `07-reflections/lrc-n14-lead-atlas-s531.md`.
 

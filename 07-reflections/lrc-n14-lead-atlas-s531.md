@@ -408,6 +408,41 @@ main: recursive apex modularity (HYP-2010), the resonance-debt conjecture
     Fourier resonance debt after summing hidden chord channels.  Prove the
     D_14 channel ledger is literally a grouping of the resonance-order terms.
 
+## Independent-pair channel addendum
+
+This addendum became HYP-2015 after rebasing over the concurrent HYP-2012
+independent-pair metric, HYP-2013 coupling-gap boundary, and HYP-2014
+almost-fixed-frame coupling result.
+
+88. Replace support width by independent-pair rank.  The user pointed out that
+    the K4 toy model is controlled by two independent pair-arcs under a fixed
+    scaffold.  For n=14, record not just which channels are active, but how many
+    vertex-disjoint pair states each channel can carry.
+
+89. Track the six-bit diameter state.  The clasp-deleted n=14 diameter channel
+    consists of exactly six mutually independent pairs plus one singleton.  This
+    is the purest candidate state vector for the hidden endpoint/diameter debt.
+
+90. Search for K4 windows in n=14 handoffs.  A local window should have fixed
+    non-window scaffold plus two independent pair toggles whose four states
+    determine a marked local tournament class.
+
+91. Quotient by non-diameter scaffold first.  Channels `d=1..6` each have max
+    matching 6 but seven possible maximum matchings; the diameter channel has a
+    unique maximum matching.  Classify the scaffold, then read the diameter bits.
+
+92. Add matching-shape entropy to the multi-channel parity law.  The obstruction
+    is not only how many residue channels survive, but whether their independent
+    pair matchings are unique, branched, or locked by endpoint labels.
+
+93. Turn "wall-only => AP" into a finite independent-pair classifier.  Under a
+    fixed non-diameter scaffold, prove that every non-AP diameter state opens
+    the clasp or exports endpoint/resonance debt.
+
+94. Use matching matroids for the channel state space.  Independent pair sets are
+    matchings; cross-channel compatibility should be a matroid-intersection or
+    Hall/Farkas problem over labelled endpoint debt.
+
 ## Near-term priority queue
 
 1. Implement `lrc_k13_sieve_probe_s532.py`: compute survivor sizes for
@@ -425,6 +460,8 @@ main: recursive apex modularity (HYP-2010), the resonance-debt conjecture
    it on bounded non-AP families.
 7. Add a product-bound scoreboard for the finite-checking route: `log product
    of certified primes / log B_13`.
+8. Add `diameter_pair_state` and channel matching-shape features to the n=14
+   hard-row audits.
 
 ## Most promising synthesis
 
