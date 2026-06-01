@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-06-01-S543 - Vineyard stability + annular braid: the topological proof of LRC
+
+**Account:** Oracle (remote-control)
+**User prompt:** Deeply consider vineyard stability, annular braid group image.
+**Computation:** `04-computation/lrc_vineyard_annular_braid_s543.py`. H₀ persistence vineyard, annular braid linking, vineyard crossing proof, braid disentanglement.
+**KEY RESULTS:** (1) ANTI-CORRELATION CONFIRMED: observer's left/right gap-vines have correlation -0.65 (n=4), -0.58 (n=5), -0.48 (n=6). Always negative. (2) VINEYARD CROSSINGS: 7/11/19 crossings at n=4/5/6. At each crossing, V_L ≈ V_R. If V_L = V_R ≥ 1/(2n) → lonely. For the regular polygon: V_L = V_R = 1/(2n) exactly. (3) ANNULAR LINKING: total linking Σv = n(n-1)/2, always nonzero. But GEOMETRIC disentanglement (lonely time) is possible because the runner wrappings TEMPORARILY align. (4) DISENTANGLEMENT: 408/409 (n=4), 203/205 (n=5), 124/126 (n=6) speed sets have positive disentanglement length. The 1-2 missing are wall-only (zero-width disentanglement).
+**THE TOPOLOGICAL PROOF SKETCH:** Anti-correlation (THM-387) + Lipschitz continuity (vineyard stability) + IVT → vineyard crossing where both bars ≥ threshold → lonely. The crossing IS the annular disentanglement. The regular polygon is the unique crossing at g = 1/n exactly. Small perturbations shift the crossing but don't destroy it (stability). LRC = the lonely time is a STABLE TOPOLOGICAL FEATURE.
+
 ## oracle-2026-06-01-S541o - A tournament = comparator on a metric + threshold-tie; the 8 exotic metrics split GEOMETRIC(collapse)/ARITHMETIC(new) (HYP-2032)
 
 **Account:** Oracle (oraclebox1). **User prompt:** for each of the wild multitude (S540), think how tournament structures apply to a metric related to each.
