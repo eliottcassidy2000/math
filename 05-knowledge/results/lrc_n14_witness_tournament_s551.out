@@ -1,0 +1,16 @@
+====== Tournament Analysis of LRC sieve witnesses, n=14 ======
+
+  witnessed lonely sets analysed: 300
+  runner points inside safe band [1/14,1-1/14]: 300/300 (must be 300)
+  #SCC histogram of runner half-turn tournament: {1: 284, 13: 16}
+     (S525 predicts #SCC in {1, 13} only)
+  largest circular gap straddles the observer: 279/300
+  distinct realised score sequences: 284
+  most common score sequences (out-degrees, sorted):
+        5x  (4, 5, 5, 5, 5, 5, 5, 5, 6, 6, 6, 6, 6)
+        3x  (4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6, 6, 6)
+        2x  (4, 4, 5, 5, 5, 5, 5, 5, 6, 6, 7, 7, 7)
+        2x  (4, 4, 5, 5, 5, 5, 6, 6, 6, 7, 7, 7, 7)
+        2x  (4, 4, 4, 5, 5, 5, 6, 6, 6, 7, 7, 7, 8)
+        2x  (3, 3, 3, 3, 4, 4, 4, 6, 6, 6, 7, 8, 8)
+  transitive score seq (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) realised: 0 times (= runners in a semicircle)

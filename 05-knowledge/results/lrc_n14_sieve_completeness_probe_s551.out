@@ -1,0 +1,36 @@
+====== (A) THE BLIND FAMILY: sieve has no finite completeness Q ======
+A speed divisible by lcm(2..Q) is danger-band (residue 0) at every
+q<=Q for every multiplier => NO division-point witness with q<=Q.
+We still PROVE loneliness by exhibiting a witness at a larger q.
+
+  Q=14: lcm(2..Q)=    360360  blind up to 14? True   smallest witness q*=27   [exact-skipped]
+        proof of loneliness: witness 2/27 (verified safe) => LONELY
+  Q=16: lcm(2..Q)=    720720  blind up to 16? True   smallest witness q*=27   [exact-skipped]
+        proof of loneliness: witness 2/27 (verified safe) => LONELY
+  Q=18: lcm(2..Q)=  12252240  blind up to 18? True   smallest witness q*=27   [exact-skipped]
+        proof of loneliness: witness 2/27 (verified safe) => LONELY
+  Q=20: lcm(2..Q)= 232792560  blind up to 20? True   smallest witness q*=27   [exact-skipped]
+        proof of loneliness: witness 2/27 (verified safe) => LONELY
+  Q=24: lcm(2..Q)=5354228880  blind up to 24? True   smallest witness q*=27   [exact-skipped]
+        proof of loneliness: witness 2/27 (verified safe) => LONELY
+
+  => blindness up to ANY Q is achievable, yet every such set is lonely.
+     The minimal witness denominator is UNBOUNDED over lonely sets:
+     a finite-modulus division-point sieve CANNOT prove LRC(n).
+
+====== (B) HARDEST BOUNDED set (speeds<= 300), n=14 ======
+  hill-climb max min-witness-modulus = 35
+  set: (25, 55, 127, 136, 191, 197, 217, 260, 266, 274, 288, 297, 299)
+  smallest witness: 1/35    exact lonely: True  (t=1/350)
+  divisibility loading (q<= 14 dividing some speed): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  -> bounded speeds keep the witness denominator small; the only
+     way to push it up is divisibility loading (=> larger speeds).
+
+====== (B) HARDEST BOUNDED set (speeds<= 60), n=14 ======
+  hill-climb max min-witness-modulus = 34
+  set: (17, 20, 26, 27, 33, 36, 44, 46, 48, 50, 53, 56, 60)
+  smallest witness: 11/34    exact lonely: True  (t=1/238)
+  divisibility loading (q<= 14 dividing some speed): [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  -> bounded speeds keep the witness denominator small; the only
+     way to push it up is divisibility loading (=> larger speeds).
+
