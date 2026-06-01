@@ -7,6 +7,9 @@ related:
   - HYP-1900
   - HYP-1910
   - HYP-1920
+  - HYP-1932
+  - HYP-1940
+  - HYP-1941
   - THM-002
 ---
 
@@ -89,6 +92,22 @@ This supports HYP-1895: the LRC two-neighbor bracket is a marked metric
 constraint, but tournament information appears when that metric is lifted by
 edge-local or edge-switch comparators.
 
+S454 sharpens the middle layer as a switchboard: one bit-channel per unordered
+pair plus a fixed Hamiltonian-path tie-break.  In the expanded samples, rank
+shadows were transitive in `172/172` states, while analyzer shadows were
+transitive in only `31/672` states.  The mean analyzer path had `22.95` live
+edges out of `28` in the eight-vertex families.
+
+S480 gives the same idea the language of gauges: a map
+`(labels, pairwise observables, gauge, tie path) -> tournament movie`.  Its
+runner chord threshold and annulus gauges stay cyclic and strongly connected
+where vertex-score gauges collapse to total orders.
+
+S471 packages the same process as a repo-level functor: pairwise observable plus
+switch functional plus tie Hamiltonian path gives a tournament-valued
+observable.  This aligns the applied metric language with the old tiling-cube
+base-path coordinate.
+
 ## Predictions
 
 1. A metric-to-tournament pipeline should always report whether its comparator
@@ -104,10 +123,21 @@ edge-local or edge-switch comparators.
 5. Future feature extractors should record both a rank shadow and an analyzer
    shadow.  The difference between them measures how much cyclic information
    the metric carries beyond scalar ordering.
+6. Switchboard features should be standard: live edges, wall count, Hamming
+   diameter, Hamiltonian-path range, SCC range, and exact path clusters.
 
 ## Sources
 
 - `04-computation/tournament_analysis_metric_lifts_s23.py`
 - `05-knowledge/results/tournament_analysis_metric_lifts_s23.out`
 - `07-reflections/tournament-analysis-metric-lifts-s23.md`
+- `04-computation/tournament_analysis_switchboard_s454.py`
+- `05-knowledge/results/tournament_analysis_switchboard_s454.out`
+- `07-reflections/tournament-analysis-switchboard-s454.md`
+- `04-computation/tournament_analysis_metric_lifts_s480.py`
+- `05-knowledge/results/tournament_analysis_metric_lifts_s480.out`
+- `07-reflections/tournament-analysis-metric-lifts-s480.md`
+- `04-computation/tournament_analysis_framework_s471.py`
+- `05-knowledge/results/tournament_analysis_framework_s471.out`
+- `07-reflections/tournament-analysis-framework-s471.md`
 - HYP-1895, HYP-1900

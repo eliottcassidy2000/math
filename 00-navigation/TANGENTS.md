@@ -620,6 +620,18 @@ Symmetric metrics become tournaments by thresholding each pair against a base pa
 **T528** #lrc #chords #fourier-lift #switch-choice | certainty: computational probe | source: codex-2026-06-01-S471
 The switch functional selects the visible obstruction layer. For initial `n=14`, semicircle and chord-opening rules give high cyclic structure (`H=24104937`, `3cyc=112`), Fourier-opening changes H while preserving the score shape, and centrality-like metric switches collapse to transitive `H=1`.
 
+**T529** #tournament-analysis #switchboards #pairwise-relations | certainty: methodological thesis + computation | source: codex-2026-06-01-S454
+Tournament Analysis should treat the comparator family as a switchboard: one bit-channel `c_ij(x)` for every unordered pair, plus a fixed Hamiltonian-path tie-break. Rankers summarize objects; switchboards summarize relations. See HYP-1932.
+
+**T530** #tournament-analysis #rankers #analyzers #wall-crossing | certainty: exact S454 summary | source: codex-2026-06-01-S454
+S454 expands the S23 rank/analyzer split: rank shadows were transitive in `172/172` sampled states, while analyzer/switchboard shadows were transitive in only `31/672`, with mean analyzer live-edge count `22.95/28` in the 8-vertex families. Switchboard features should include live edges, wall count, Hamming diameter, H range, SCC range, and exact path clusters.
+
+**T531** #basketball #human-systems #tournament-analysis #tie-break-path | certainty: constructive model | source: codex-2026-06-01-S454
+A basketball lineup is a human switchboard: pass-flux orients directed social energy, assist-rank collapses to a transitive order, reciprocity/pressure switches toggle a labelled playbook path, and two-hop lenses compare relay creation. The fixed Hamiltonian tie-break path is a structural layer, not bookkeeping.
+
+**T532** #lonely-runner #switchboards #safe-distance #cyclic-crowding | certainty: sampled exact snapshots | source: codex-2026-06-01-S454
+The LRC safe-distance switchboard separates initial skeletons from structured ladders: `n14` initial and `n16` initial have safe-switch cycle count `0`, while the n14 seven-ladder and n16 dyadic ladder have `93` and `139`. Scalar lonely safety can coexist with cyclic pairwise crowding, so LRC feature extractors should keep a marked bracket plus pairwise switchboard shadows.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -10,6 +10,17 @@
 **Synthesis:** Added HYP-1940 and `07-reflections/tournament-analysis-metric-lifts-s480.md`. Tournament Analysis is now framed as a gauge functor `(labels, pairwise observables, gauge, tie path) -> tournament movie`. LRC becomes a marked Tournament Analysis problem: S22 and S431 are special stationary-bracket and two-nearest gauges, while S480 adds chord threshold/annulus and kinetic gauges that can reveal cyclic structure erased by scalar lonely-gap projections.
 **Next:** Run metric-switch gauges on the exact S22/S431 tight and near-tight LRC catalogue; add flip-event ledgers to compare chord threshold surfaces with good-cut/SCC and fixed-path tiling features; design two-nearest plus two-farthest gauges for LRC crowding.
 
+## codex-2026-06-01-S454 - Tournament Analysis Switchboards
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S453/S23.
+**User prompt:** Treat tournaments as binary relations on `n` things, explore pairwise metrics and arbitrary switches for basketball, runners, circle chords, higher-dimensional geometry, and name this process Tournament Analysis as the repo's primary focus.
+**Repo archaeology:** Re-read S23 Tournament Analysis metric lifts, HYP-1931, the S23 reflection, the S452/S470 LRC pairwise-distance lifts, and the current concept-map entry. S23 had defined the pipeline and ranker/analyzer split; this session focused on the switchboard itself.
+**Computation:** Added `04-computation/tournament_analysis_switchboard_s454.py` and stored `05-knowledge/results/tournament_analysis_switchboard_s454.out`. The script tests basketball pass-flux/rank/playbook switches, circle chord median/annulus/resonance/approach switches, cuboid dominant-axis and volume lenses, sphere great-circle/normal lenses, simplex KL-skew lenses, and LRC safe-distance switch snapshots.
+**Findings:** The S23 split sharpened: rank shadows were transitive in `172/172` sampled states, while analyzer shadows were transitive in only `31/672`, with mean analyzer live-edge count `22.95/28`. Basketball gives the human model: pass-flux and reciprocity switches retain relation cycles, while assist-rank collapses to a total order. LRC safe-distance switches are transitive on initial skeletons but cyclic on the n14 seven-ladder and n16 dyadic ladder.
+**Synthesis:** Added HYP-1932 and `07-reflections/tournament-analysis-switchboard-s454.md`. The new motto is: rankers summarize objects; switchboards summarize relations. Tournament Analysis artifacts should declare switchboard type and record live edges, wall count, Hamming diameter, H range, SCC range, and exact path clusters.
+**Verification:** `python -m py_compile 04-computation/tournament_analysis_switchboard_s454.py` succeeded; rerunning the script produced the stored output.
+
 ## oracle-2026-06-01-S23 - Tournament Analysis Metric Lifts
 
 **Account:** Codex on `oracle`. **User prompt:** Define Tournament Analysis as the repo's primary process: lift pairwise metrics or continuous geometry into binary relations/tournaments via creative comparators, then study tournament structure as variables change.
