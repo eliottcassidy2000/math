@@ -26,6 +26,10 @@
 (5) RESONANCE = TREE-GRADED FOURIER: intra-level resonances are strong (same p-adic ball). Inter-level resonances decay p-adically. Total debt = Σ level debts + small inter-level corrections.
 **n=14 p-adic structure:** 2-adic: 4 levels (7+3+2+1 runners). 7-adic: 2 levels (12+1). CRT product Z/8×Z/7. The cascade descends each prime tree independently.
 **n=18 p-adic structure:** 2-adic: 5 levels. 3-adic: 3 levels (the 9=3² structure = oracle-S534o's n*=9). CRT product Z/2×Z/9.
+## codex-2026-06-01-S546 - p-adic tree-cover trienerments for LRC sieve channels (HYP-2036, in progress)
+
+**Context:** User asked for another long session continuing the Gabor/t(r)ienerment themes and integrating the p-adic tree.  Fresh mainline already has HYP-2032 identifying p-adic ultrametrics as arithmetic metric/tie channels, HYP-2033 on annular braid image, incoming S544 integrating the p-adic tree with sieve/vineyard/braid, and HYP-2035 on channel rank `omega(n/2)`.  This session claims the narrower cover-core computation.
+**Stub:** HYP-2036 and tangent T636 reserve the prime-power zero-branch cover core: vertices are `q=p^d <= n`; node mass is `# {v_i: q divides v_i}`; empty zero branch gives the THM-369 witness `t=1/q`; covered zero branch is sieve debt.  Planned artifacts: `lrc_padic_tree_trienerment_s546.py/.out` and reflection `lrc-padic-tree-cover-trienerment-s546.md`.
 
 ## opus-2026-06-01-S543 - Vineyard stability + annular braid: the topological proof of LRC
 
