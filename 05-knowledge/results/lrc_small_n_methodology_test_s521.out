@@ -1,0 +1,15 @@
+Does fixed-Q residue covering prove small LRC? Test the (1, lcm(2..Q)) adversary.
+
+n=3 (2 movers): system (1, lcm(2..Qmax)) is blocked at all q<=Qmax, lonely just above:
+   Qmax   lcm(2..Qmax)  min lonely q
+      8            840             9   (> Qmax: True)
+     10           2520            11   (> Qmax: True)
+     12          27720            13   (> Qmax: True)
+     15         360360            16   (> Qmax: True)
+     20      232792560            23   (> Qmax: True)
+     25    26771144400            27   (> Qmax: True)
+     30  2329089562800            31   (> Qmax: True)
+
+=> minimal lonely denominator grows with the speed (no fixed Q covers all systems).
+   The methodology needs a SPEED BOUND to bound Q; then the covering is a finite check.
+   (Base reduction 'non-fully-covered => lonely at 1/q' is unaffected and remains proved.)
