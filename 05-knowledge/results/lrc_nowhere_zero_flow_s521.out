@@ -1,0 +1,17 @@
+(1) Divergence law (sp=[1, 2, 4, 7]): occupancy change = net crossing flow
+   S_0: d(occ)=-1  net flow(in b_0 - out b_1)=-1  OK
+   S_1: d(occ)=+0  net flow(in b_1 - out b_2)=+0  OK
+   S_2: d(occ)=+0  net flow(in b_2 - out b_3)=+0  OK
+   S_3: d(occ)=+0  net flow(in b_3 - out b_4)=+0  OK
+   S_4: d(occ)=+1  net flow(in b_4 - out b_0)=+1  OK
+   conservation law holds: True
+
+(2) observer is a flow-SOURCE  <=>  indeg(observer)=N(t)=0  <=>  lonely:
+   t=1/5: N(t)=indeg(observer)=0  -> observer source? True
+   t=3/11: N(t)=indeg(observer)=2  -> observer source? False
+   t=1/13: N(t)=indeg(observer)=2  -> observer source? False
+
+(3) Relation lattice (nowhere-zero flow of the speed system):
+   (1, 2, 3): minimal nowhere-zero relation (-1, -1, 1)  (L1=3)
+   (1, 2, 4): minimal nowhere-zero relation (-2, -1, 1)  (L1=4)
+   (2, 3, 5, 7): minimal nowhere-zero relation (-2, 2, 1, -1)  (L1=6)
