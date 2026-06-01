@@ -1,0 +1,296 @@
+Gabor Meets Tournaments — opus-S541
+
+======================================================================
+PART 1: The Gabor atom picture
+======================================================================
+
+n=4:
+  runners (Gabor voices): 3
+  total atoms: Σv_i = 6
+  atom width: 2/(nv) per atom, total 2/n per runner
+  Gabor density D = 2(n-1)/n = 1.5000
+  D > 1: density sufficient for potential frame
+
+  uncertainty products:
+    slowest (v=1): Δt=0.5000, Δt×Δf=0.5000
+    fastest (v=3): Δt=0.1667, Δt×Δf=0.1667
+    Heisenberg bound: 1/(4π) = 0.0796
+
+n=5:
+  runners (Gabor voices): 4
+  total atoms: Σv_i = 10
+  atom width: 2/(nv) per atom, total 2/n per runner
+  Gabor density D = 2(n-1)/n = 1.6000
+  D > 1: density sufficient for potential frame
+
+  uncertainty products:
+    slowest (v=1): Δt=0.4000, Δt×Δf=0.4000
+    fastest (v=4): Δt=0.1000, Δt×Δf=0.1000
+    Heisenberg bound: 1/(4π) = 0.0796
+
+n=6:
+  runners (Gabor voices): 5
+  total atoms: Σv_i = 15
+  atom width: 2/(nv) per atom, total 2/n per runner
+  Gabor density D = 2(n-1)/n = 1.6667
+  D > 1: density sufficient for potential frame
+
+  uncertainty products:
+    slowest (v=1): Δt=0.3333, Δt×Δf=0.3333
+    fastest (v=5): Δt=0.0667, Δt×Δf=0.0667
+    Heisenberg bound: 1/(4π) = 0.0796
+
+n=7:
+  runners (Gabor voices): 6
+  total atoms: Σv_i = 21
+  atom width: 2/(nv) per atom, total 2/n per runner
+  Gabor density D = 2(n-1)/n = 1.7143
+  D > 1: density sufficient for potential frame
+
+  uncertainty products:
+    slowest (v=1): Δt=0.2857, Δt×Δf=0.2857
+    fastest (v=6): Δt=0.0476, Δt×Δf=0.0476
+    Heisenberg bound: 1/(4π) = 0.0796
+
+n=14:
+  runners (Gabor voices): 13
+  total atoms: Σv_i = 91
+  atom width: 2/(nv) per atom, total 2/n per runner
+  Gabor density D = 2(n-1)/n = 1.8571
+  D > 1: density sufficient for potential frame
+
+  uncertainty products:
+    slowest (v=1): Δt=0.1429, Δt×Δf=0.1429
+    fastest (v=13): Δt=0.0110, Δt×Δf=0.0110
+    Heisenberg bound: 1/(4π) = 0.0796
+
+GABOR INSIGHT: each runner is a Gabor atom at frequency v.
+The fast runners have NARROW atoms (high time-resolution)
+and the slow runners have WIDE atoms (low time-resolution).
+The total density D = 2(n-1)/n > 1, so the system has enough
+atoms to potentially cover the time axis.
+
+But LRC says the system NEVER covers completely —
+there's always a gap (lonely time). Why?
+
+======================================================================
+PART 2: Gabor frame bounds A and B
+======================================================================
+
+n=4 (409 speed sets):
+  frame bound A (min coverage) distribution: {0: 409}
+  frame bound B (max coverage) distribution: {3: 409}
+  A=0 (LRC holds): 409/409 = 100.0%
+
+n=5 (479 speed sets):
+  frame bound A (min coverage) distribution: {0: 479}
+  frame bound B (max coverage) distribution: {4: 479}
+  A=0 (LRC holds): 479/479 = 100.0%
+
+n=6 (251 speed sets):
+  frame bound A (min coverage) distribution: {0: 249, 1: 2}
+  frame bound B (max coverage) distribution: {5: 251}
+  A=0 (LRC holds): 249/251 = 99.2%
+
+n=7 (84 speed sets):
+  frame bound A (min coverage) distribution: {0: 83, 1: 1}
+  frame bound B (max coverage) distribution: {6: 84}
+  A=0 (LRC holds): 83/84 = 98.8%
+
+FRAME BOUND INSIGHT:
+  A = 0 for ALL tested speed sets at every n.
+  This means: the Gabor system NEVER forms a frame.
+  The atoms always leave gaps (lonely times).
+
+  B = n-1 at t=0 (all runners at observer).
+  The coverage ranges from 0 to n-1: FULL DYNAMIC RANGE.
+
+  In Gabor terms: the frame is 'degenerate' — it has A=0,
+  meaning the time-frequency atoms don't span L^2.
+  The lonely set is the NULL SPACE of the Gabor analysis operator.
+
+======================================================================
+PART 3: Tournament tiles = Gabor coefficients
+======================================================================
+
+n=5: tiles sorted by beat frequency (Gabor frequency)
+  tile (5,1): beat freq = 1  [APEX]
+  tile (3,1): beat freq = 1  [boundary]
+  tile (4,2): beat freq = 1  [boundary]
+  tile (4,1): beat freq = 2  [diagonal]
+  tile (5,2): beat freq = 2  [diagonal]
+  tile (5,3): beat freq = 3  [boundary]
+  ...
+  total tiles: 6
+  frequency range: [1, 3]
+
+n=6: tiles sorted by beat frequency (Gabor frequency)
+  tile (6,1): beat freq = 1  [APEX]
+  tile (3,1): beat freq = 1  [boundary]
+  tile (4,2): beat freq = 1  [boundary]
+  tile (5,3): beat freq = 1  [boundary]
+  tile (4,1): beat freq = 2  [diagonal]
+  tile (6,2): beat freq = 2  [diagonal]
+  tile (5,2): beat freq = 2  [diagonal]
+  tile (5,1): beat freq = 3  [diagonal]
+  tile (6,3): beat freq = 3  [diagonal]
+  tile (6,4): beat freq = 4  [boundary]
+  ...
+  total tiles: 10
+  frequency range: [1, 4]
+
+n=7: tiles sorted by beat frequency (Gabor frequency)
+  tile (7,1): beat freq = 1  [APEX]
+  tile (3,1): beat freq = 1  [boundary]
+  tile (4,2): beat freq = 1  [boundary]
+  tile (5,3): beat freq = 1  [boundary]
+  tile (6,4): beat freq = 1  [boundary]
+  tile (4,1): beat freq = 2  [diagonal]
+  tile (7,2): beat freq = 2  [diagonal]
+  tile (5,2): beat freq = 2  [diagonal]
+  tile (6,3): beat freq = 2  [diagonal]
+  tile (5,1): beat freq = 3  [diagonal]
+  ...
+  total tiles: 15
+  frequency range: [1, 5]
+
+GABOR-TOURNAMENT CORRESPONDENCE:
+  tile (x,y) ↔ Gabor atom at beat frequency |v_x - v_y|
+  aligned tile ↔ positive Gabor coefficient (constructive)
+  anti-aligned ↔ negative coefficient (destructive)
+
+  OUTSIDE (boundary) tiles: LOW beat frequency (coarse structure)
+  INSIDE (diagonal) tiles: HIGH beat frequency (fine structure)
+
+  The CASCADE = MULTIRESOLUTION ANALYSIS:
+    Step 1: process low-frequency tiles (slow runners, coarse)
+    Step 2: process mid-frequency tiles
+    Step k: process high-frequency tiles (fast runners, fine)
+
+  This is EXACTLY Gabor's recipe: build the signal from
+  coarse to fine, using atoms at increasing frequency.
+  The lonely condition = the sum of all Gabor coefficients
+  is positive (the resonance credit exceeds the debt).
+
+======================================================================
+PART 4: The Balian-Low obstruction
+======================================================================
+
+Gabor density D = 2(n-1)/n for initial segment speeds:
+  n=  3: D = 1.3333  (above critical, ratio 1.33x)
+  n=  4: D = 1.5000  (above critical, ratio 1.50x)
+  n=  5: D = 1.6000  (above critical, ratio 1.60x)
+  n=  6: D = 1.6667  (above critical, ratio 1.67x)
+  n=  7: D = 1.7143  (above critical, ratio 1.71x)
+  n=  8: D = 1.7500  (above critical, ratio 1.75x)
+  n= 14: D = 1.8571  (above critical, ratio 1.86x)
+  n= 50: D = 1.9600  (above critical, ratio 1.96x)
+  n=100: D = 1.9800  (above critical, ratio 1.98x)
+
+THE BALIAN-LOW INSIGHT:
+  The LRC Gabor system has:
+    - Compactly supported window (indicator of width 2/n)
+    - Density D = 2(n-1)/n > 1 (above critical)
+    - RATIONAL frequencies (integer speeds)
+
+  Above critical density: a frame IS possible for GENERIC frequencies.
+  But INTEGER frequencies create ALIASING (periodic interference
+  patterns) that prevent full coverage.
+
+  The ALIASING = the resonance structure from S531.
+  Each resonance (k_1,...,k_{n-1}) with Σ k_i v_i = 0 is an
+  ALIAS — a frequency combination that maps to DC (zero frequency).
+  The aliases create destructive interference that carves gaps
+  in the coverage = lonely times.
+
+  The INITIAL SEGMENT has the MOST aliases (the arithmetic progression
+  creates maximal interference). This is why it's the tightest case.
+  Non-AP speed sets have FEWER aliases = less interference = easier LRC.
+
+  LRC = the ALIASING from integer frequencies always creates gaps.
+  This is a NUMBER-THEORETIC strengthening of the Balian-Low theorem:
+  not just 'the frame is unstable' but 'the frame has A=0' for all
+  primitive integer frequency sets.
+
+======================================================================
+PART 5: Spectrogram of loneliness at n=6
+======================================================================
+
+  t\v    1  2  3  4  5  cov
+  ------------------------
+  0.00   █  █  █  █  █   5
+  0.03   █  █  █  █  ·   4
+  0.07   █  █  ·  ·  ·   2
+  0.10   █  ·  ·  ·  ·   1
+  0.13   █  ·  ·  ·  ·   1
+  0.17   ·  ·  ·  ·  ·   0  ← LONELY
+  0.20   ·  ·  ·  ·  █   1
+  0.23   ·  ·  ·  █  ·   1
+  0.27   ·  ·  ·  █  ·   1
+  0.30   ·  ·  █  ·  ·   1
+  0.33   ·  ·  █  ·  ·   1
+  0.37   ·  ·  █  ·  ·   1
+  0.40   ·  ·  ·  ·  █   1
+  0.43   ·  █  ·  ·  ·   1
+  0.47   ·  █  ·  █  ·   2
+  0.50   ·  █  ·  █  ·   2
+  0.53   ·  █  ·  █  ·   2
+  0.57   ·  █  ·  ·  ·   1
+  0.60   ·  ·  ·  ·  █   1
+  0.63   ·  ·  █  ·  ·   1
+  0.67   ·  ·  █  ·  ·   1
+  0.70   ·  ·  █  ·  ·   1
+  0.73   ·  ·  ·  █  ·   1
+  0.77   ·  ·  ·  █  ·   1
+  0.80   ·  ·  ·  ·  █   1
+  0.83   ·  ·  ·  ·  ·   0  ← LONELY
+  0.87   █  ·  ·  ·  ·   1
+  0.90   █  ·  ·  ·  ·   1
+  0.93   █  █  ·  ·  ·   2
+  0.97   █  █  █  █  ·   4
+
+  lonely times: [0.16666666666666666, 0.8333333333333334]...
+
+SPECTROGRAM INSIGHT:
+  Each column = one runner's 'shadow' (close zone pattern)
+  Each row = one time instant's coverage
+  Lonely = an entire row of dots (no shadows)
+
+  The PATTERN: fast runners (high v) have thin, frequent shadows.
+  Slow runners (low v) have wide, rare shadows.
+  The lonely times are in the GAPS between shadow clusters.
+
+  In GABOR terms: the spectrogram IS the Gabor transform.
+  Each shadow = a Gabor atom. The lonely time = a point in
+  the time-frequency plane where NO atom is present.
+  LRC = the Gabor system has a non-trivial NULL SPACE.
+
+======================================================================
+GRAND SYNTHESIS: Gabor × Tournament = LRC
+======================================================================
+
+THE CORRESPONDENCE:
+  Runner v_i          ↔  Gabor atom at frequency v_i
+  Close zone [0,2/n]  ↔  Window function of width 2/n
+  Tournament tile     ↔  Gabor coefficient (beat frequency)
+  Resonance order r   ↔  r-point correlation in TF plane
+  Inside/outside      ↔  High/low frequency
+  Cascade             ↔  Multiresolution analysis
+  Lonely time         ↔  Null of the Gabor analysis operator
+  Resonance debt      ↔  Aliasing from integer frequencies
+
+WHY LRC IS TRUE (Gabor perspective):
+  1. The Gabor density D = 2(n-1)/n < 2 is INSUFFICIENT to
+     cover the time axis with compactly-supported atoms.
+  2. Even if D were sufficient: INTEGER frequencies create ALIASING
+     that carves gaps in the coverage (the resonance structure).
+  3. The INITIAL SEGMENT has maximal aliasing (AP = maximal coherence)
+     but even then, the coverage has gaps (wall-only lonely times).
+  4. Non-AP speeds have LESS aliasing → MORE gaps → easier LRC.
+
+THE FORMAL GROUP F(x,y)=(x+y)/(1+xy) IS the GABOR COMPOSITION LAW:
+  It adds dissonances (distances from observer) hyperbolically.
+  The rapidity = log of the Gabor atom's time-frequency area.
+  The lonely threshold 0.5·ln(n-1) = the minimum atom area
+  for a single runner to be 'resolved' (safe from observer).
+

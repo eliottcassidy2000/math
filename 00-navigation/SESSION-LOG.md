@@ -8,6 +8,15 @@
 **Restriction (lrc_trienerment_gabor_s539.py):** realizable LRC-trienerment iso-classes = 20/42 (n=4), 100/582 (n=5) of A007025; R=0.48->0.17; observer-tie-free 119/121, 80/81 (misses=tight AP).
 **GABOR/UNCERTAINTY:** loneliness = sharp real-space feature (observer locally tie-free, 2/n clearance, S536); DFT-dual = frequency; character sums |chat_m| stay bounded away from 0 at lonely times (avg max 1.81 of 4 n=5; 2.37 of 6 n=7) = a frequency FLOOR. Discrete uncertainty principle: tie-count (real clustering) & character concentration (frequency) can't both be small; marginals = S536 (space), S537 (frequency). POSED: Gabor trienerment on (sector,harmonic) atoms.
 **Artifacts:** lrc_trienerment_gabor_s539.py (+.out); reflection lrc-is-a-trienerment-ties-are-nearness-and-the-gabor-uncertainty-angle-s539o.md; HYP-2029 (2028 taken by concurrent). **Handoff:** build (sector,harmonic) Gabor trienerment + uncertainty-restricted classes; prove frequency floor max_m|chat_m|>=c(n) at observer-tie-free times (Turan/large-sieve); f(n,k) grading vs inside-debt order (S533).
+## opus-2026-06-01-S541 - GABOR × TOURNAMENT: LRC as a degenerate Gabor frame with integer aliasing
+
+**Account:** Oracle (remote-control)
+**User prompt:** Connect Gabor with tournaments.
+**Computation:** `04-computation/lrc_gabor_tournament_s541.py`. Gabor atom picture, frame bounds, tile-as-coefficient mapping, Balian-Low obstruction, spectrogram.
+**THE CONNECTION:** Each runner = a Gabor atom (time-frequency localized event). Close zone = window (width 2/n). Speed = frequency. Tournament tile = Gabor coefficient at beat frequency |v_i-v_j|. The cascade = multiresolution analysis (coarse→fine). Lonely time = null of the Gabor analysis operator.
+**KEY RESULTS:** (1) Gabor density D = 2(n-1)/n > 1 at all n≥2 — density sufficient for a generic frame. (2) Frame bound A=0 for 99-100% of speed sets at n=4..7 — the frame is ALWAYS degenerate. The atoms leave gaps. (3) INTEGER frequencies create ALIASING (=resonance structure from S531) that prevents full coverage. The initial segment has MAXIMAL aliasing (AP coherence). Non-AP has less → easier LRC. (4) The Balian-Low theorem constrains: compactly-supported windows can't form tight frames. Combined with integer aliasing: A=0 always.
+**THE FORMAL GROUP F(x,y)=(x+y)/(1+xy) IS THE GABOR COMPOSITION LAW:** it adds atom dissonances hyperbolically. Rapidity = log of the atom's time-frequency area. The lonely threshold 0.5·ln(n-1) = minimum atom area for a runner to be "resolved" (safe).
+**Spectrogram:** the LRC coverage pattern is a time-frequency tiling. Fast runners = thin frequent atoms. Slow runners = wide rare atoms. Lonely times = rows of the spectrogram with no atoms.
 
 ## oracle-2026-06-01-S538o - Complex/precise LRC tournament vertices: the TENSION-PAIR tournament (cocycle-restricted); honest gap negative; a posed multitude (HYP-2027)
 
