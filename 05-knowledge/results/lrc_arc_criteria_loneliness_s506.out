@@ -1,0 +1,245 @@
+LRC arc criteria for tournament-analysis loneliness metrics
+====================================================================================================
+Tie Hamiltonian path for every criterion: increasing runner label i -> j for i < j.
+Strict arcs are reported separately from tie-path completion.
+
+Criteria switchboard:
+  phase_half                   vertices=all    observable=pair phase delta frac(x_j-x_i)
+    switch=i -> j iff j is clockwise from i by less than 1/2
+  lrc_close_sector             vertices=all    observable=pair phase delta frac(x_j-x_i)
+    switch=strict arc only inside the LRC danger sector of width 1/n
+  local_moat_min               vertices=all    observable=vertex score min(left_gap,right_gap)
+    switch=larger two-sided local moat points to smaller local moat
+  local_moat_sum               vertices=all    observable=vertex score left_gap+right_gap
+    switch=larger adjacent gap sum points to smaller sum
+  safe_deficit                 vertices=all    observable=vertex score local deficit below threshold on two adjacent gaps
+    switch=smaller deficit points to larger deficit
+  origin_distance              vertices=moving observable=moving runner distance from stationary runner 0
+    switch=farther from 0 points to closer to 0
+  origin_blocker_relief        vertices=moving observable=origin nearest distance after deleting one moving runner
+    switch=runner whose deletion most improves origin moat points to the other
+  origin_deficit_relief        vertices=moving observable=origin threshold-deficit relief after deleting one moving runner
+    switch=runner whose deletion removes more origin deficit points to the other
+  k1_relief_pressure           vertices=all    observable=pairwise nearest-neighbor deletion relief
+    switch=blocker points to runner whose k=1 nearest moat it improves more
+  k2_relief_pressure           vertices=all    observable=pairwise two-nearest-neighbor deletion relief
+    switch=blocker points to runner whose k=2 nearest moat it improves more
+  threshold_deficit_pressure   vertices=all    observable=pairwise relief of two-neighbor deficit below 1/n
+    switch=blocker points to runner whose threshold deficit it removes more
+  bracket_relief_pressure      vertices=all    observable=pairwise relief of circular two-sided local bracket
+    switch=blocker points to runner whose adjacent safe bracket it improves more
+
+SMALL EXACT CLOCK SCORECARD
+====================================================================================================
+criterion                    best_abs  common_best_feature->target                  H~maxgap H~lonely originScore~bracket flips ties
+lrc_close_sector                0.881  tie_rate->safe_gap_count                   +0.101   -0.090     +0.194 0.152 0.689
+local_moat_min                  0.821  origin_score_norm->origin_clearance                 +0.000   +0.000     +0.305 0.170 0.491
+phase_half                      0.790  H->max_gap                          -0.723   +0.294     +0.000 0.169 0.000
+safe_deficit                    0.758  origin_score_norm->origin_clearance                 +0.000   +0.000     +0.279 0.212 0.300
+local_moat_sum                  0.689  origin_score_norm->origin_clearance                 +0.000   +0.000     +0.295 0.199 0.230
+k1_relief_pressure              0.651  origin_score_norm->lonely_vertices                  -0.055   +0.057     -0.180 0.072 0.811
+bracket_relief_pressure         0.651  origin_score_norm->lonely_vertices                  -0.055   +0.057     -0.180 0.072 0.811
+k2_relief_pressure              0.619  origin_score_norm->safe_gap_count                   +0.041   -0.173     -0.090 0.105 0.666
+origin_deficit_relief           0.573  tie_rate->origin_clearance                 +0.000   +0.000     +0.000 0.237 0.445
+threshold_deficit_pressure      0.528  tie_rate->max_gap                          +0.063   +0.047     +0.313 0.046 0.926
+origin_distance                 0.000  -->-                                +0.000   +0.000     +0.000 0.233 0.000
+origin_blocker_relief           0.000  -->-                                +0.000   +0.000     +0.000 0.223 0.576
+
+Reading the scorecard:
+  best_abs is the mean absolute within-family Spearman score for the best
+  fingerprint/target pairing.  H~maxgap and H~lonely are shown separately
+  because H is only useful when the switch itself preserves cyclic structure.
+
+SELECTED n=14/n=18 LRC ROWS
+====================================================================================================
+H is omitted above n=14; score histograms, strict cycles, SCCs, and ties remain exact.
+
+[initial n=14]
+  class=boundary_only gap/th=0 unprotected=6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  time=unit      t=          1/14 origin_clear=      1 bracket=      1 safe=14 lonely=14 max_gap/th=      1
+    phase_half                   v=14 H=    24104937 score=[6:7 7:7] w= 1 o=  7 strict= 84 ties=  7 tri= 70 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+  time=half-unit t=          1/28 origin_clear=    1/2 bracket=    1/2 safe= 1 lonely= 0 max_gap/th=   15/2
+    phase_half                   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 91 ties=  0 tri=  0 scc= 1
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict= 12 ties= 66 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 11 strict=  4 ties= 87 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict=  2 ties= 89 tri=  0 scc= 1
+
+[initial n=18]
+  class=boundary_only gap/th=0 unprotected=6 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  time=unit      t=          1/18 origin_clear=      1 bracket=      1 safe=18 lonely=18 max_gap/th=      1
+    phase_half                   v=18 H=           - score=[8:9 9:9] w= 1 o=  9 strict=144 ties=  9 tri=168 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+  time=half-unit t=          1/36 origin_clear=    1/2 bracket=    1/2 safe= 1 lonely= 0 max_gap/th=   19/2
+    phase_half                   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=153 ties=  0 tri=  0 scc= 1
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict= 16 ties=120 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 15 strict=  4 ties=149 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict=  2 ties=151 tri=  0 scc= 1
+
+[n=14 lpd ladder skip 6]
+  class=positive_gap gap/th=5/924 unprotected=84 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  time=unit      t=          1/14 origin_clear=      0 bracket=      0 safe= 3 lonely= 1 max_gap/th=      7
+    phase_half                   v=14 H=         921 score=[0:1 2:2 4:2 6:2 7:2 9:2 11:2 13:1] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict= 13 ties= 78 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+  time=half-unit t=          1/28 origin_clear=      0 bracket=      0 safe= 4 lonely= 0 max_gap/th=    7/2
+    phase_half                   v=14 H=     4889077 score=[2:1 4:2 5:1 6:3 7:2 8:3 10:2] w= 8 o= 10 strict= 55 ties= 36 tri=  6 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict= 13 ties= 78 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+  time=gap-mid   t=    3053/25872 origin_clear=  29/24 bracket=  29/24 safe= 7 lonely= 2 max_gap/th=481/264
+    phase_half                   v=14 H=    22168229 score=[5:1 6:6 7:6 8:1] w= 3 o=  7 strict= 91 ties=  0 tri=110 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 53 ties= 38 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict= 12 ties= 66 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=      183523 score=[1:1 2:1 4:2 5:2 6:2 7:1 8:1 9:1 11:2 12:1] w=11 o= 12 strict= 12 ties= 79 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=        3601 score=[0:1 1:1 3:2 4:1 5:1 7:2 8:1 9:1 10:2 12:2] w=12 o= 12 strict=  7 ties= 84 tri=  0 scc= 1
+  time=boundary  t=          9/98 origin_clear=      1 bracket=      1 safe=12 lonely=11 max_gap/th=      2
+    phase_half                   v=14 H=    20372043 score=[5:2 6:5 7:5 8:2] w= 3 o=  8 strict= 85 ties=  6 tri= 73 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 35 ties= 56 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=       12309 score=[0:1 1:1 3:1 4:2 6:1 7:2 8:1 9:2 10:1 11:1 12:1] w=12 o= 12 strict=  6 ties= 85 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           5 score=[0:1 2:2 3:2 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  4 ties= 87 tri=  0 scc= 1
+
+[n=18 lpd ladder skip 8]
+  class=positive_gap gap/th=1/176 unprotected=176 speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  time=unit      t=          1/18 origin_clear=      0 bracket=      0 safe= 3 lonely= 1 max_gap/th=      9
+    phase_half                   v=18 H=           - score=[0:1 2:2 4:2 6:2 8:2 9:2 11:2 13:2 15:2 17:1] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict= 17 ties=136 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+  time=half-unit t=          1/36 origin_clear=      0 bracket=      0 safe= 4 lonely= 0 max_gap/th=    9/2
+    phase_half                   v=18 H=           - score=[4:1 5:1 6:3 7:1 8:4 9:1 10:3 11:1 12:2 13:1] w= 9 o= 13 strict= 89 ties= 64 tri= 16 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict= 17 ties=136 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+  time=gap-mid   t=    3991/57024 origin_clear=3991/3168 bracket=3991/3168 safe= 9 lonely= 1 max_gap/th=699/352
+    phase_half                   v=18 H=           - score=[8:9 9:9] w= 1 o=  8 strict=153 ties=  0 tri=240 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict= 47 ties=106 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict= 16 ties=120 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[2:2 3:2 4:1 5:1 6:1 7:2 9:2 10:1 12:1 13:1 14:1 15:2 17:1] w=15 o= 17 strict=  9 ties=144 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:2 16:1 17:1] w=17 o= 16 strict=  6 ties=147 tri=  0 scc= 1
+  time=boundary  t=        11/162 origin_clear=      1 bracket=      1 safe=16 lonely=15 max_gap/th=      2
+    phase_half                   v=18 H=           - score=[7:2 8:7 9:7 10:2] w= 3 o= 10 strict=145 ties=  8 tri=173 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict= 47 ties=106 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 3:2 4:1 5:1 6:1 8:2 9:1 10:1 12:1 13:3 14:1 15:1 16:1] w=16 o= 16 strict=  6 ties=147 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 2:2 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:2 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  4 ties=149 tri=  0 scc= 1
+
+[n=14 gate ladder skip 6]
+  class=positive_gap gap/th=5/1848 unprotected=168 speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  time=unit      t=          1/14 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     13
+    phase_half                   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict= 13 ties= 78 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+  time=half-unit t=          1/28 origin_clear=      0 bracket=      0 safe= 2 lonely= 0 max_gap/th=      7
+    phase_half                   v=14 H=         921 score=[0:1 2:2 4:2 6:2 7:2 9:2 11:2 13:1] w=13 o= 13 strict= 13 ties= 78 tri=  0 scc= 1
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict= 13 ties= 78 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+  time=gap-mid   t=    4339/51744 origin_clear=4339/3696 bracket=4339/3696 safe= 7 lonely= 1 max_gap/th=481/264
+    phase_half                   v=14 H=    17826951 score=[5:3 6:4 7:4 8:3] w= 3 o=  7 strict= 91 ties=  0 tri=106 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 35 ties= 56 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict= 12 ties= 66 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=       55701 score=[2:3 3:1 4:1 5:1 6:1 7:1 8:2 9:1 11:2 13:1] w=11 o= 13 strict=  9 ties= 82 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=         161 score=[0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:2 12:1 13:1] w=13 o= 12 strict=  6 ties= 85 tri=  0 scc= 1
+  time=boundary  t=        15/196 origin_clear=      1 bracket=      1 safe=12 lonely=11 max_gap/th=      2
+    phase_half                   v=14 H=    24104937 score=[6:7 7:7] w= 1 o=  7 strict= 85 ties=  6 tri= 72 scc=14
+    local_moat_min               v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict= 35 ties= 56 tri=  0 scc= 1
+    origin_blocker_relief        v=13 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1] w=12 o=  - strict=  0 ties= 78 tri=  0 scc= 1
+    k2_relief_pressure           v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 12 strict=  6 ties= 85 tri=  0 scc= 1
+    threshold_deficit_pressure   v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  0 ties= 91 tri=  0 scc= 1
+    bracket_relief_pressure      v=14 H=           1 score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1] w=13 o= 13 strict=  4 ties= 87 tri=  0 scc= 1
+
+[n=18 gate ladder skip 8]
+  class=positive_gap gap/th=1/352 unprotected=352 speeds=(1, 18, 36, 54, 72, 90, 108, 126, 162, 180, 198, 216, 234, 252, 270, 288, 306)
+  time=unit      t=          1/18 origin_clear=      0 bracket=      0 safe= 2 lonely= 1 max_gap/th=     17
+    phase_half                   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict= 17 ties=136 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+  time=half-unit t=          1/36 origin_clear=      0 bracket=      0 safe= 2 lonely= 0 max_gap/th=      9
+    phase_half                   v=18 H=           - score=[0:1 2:2 4:2 6:2 8:2 9:2 11:2 13:2 15:2 17:1] w=17 o= 17 strict= 17 ties=136 tri=  0 scc= 1
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict= 17 ties=136 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+  time=gap-mid   t=   8681/114048 origin_clear=  41/32 bracket=  41/32 safe= 9 lonely= 2 max_gap/th=699/352
+    phase_half                   v=18 H=           - score=[7:2 8:7 9:7 10:2] w= 3 o= 10 strict=153 ties=  0 tri=236 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict= 73 ties= 80 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict= 16 ties=120 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[1:1 2:2 4:2 5:1 7:2 8:2 9:1 11:1 12:1 14:2 15:3] w=14 o= 15 strict= 11 ties=142 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 3:2 4:1 5:1 7:2 8:1 9:1 10:1 11:1 12:1 13:1 14:2 16:2] w=16 o= 16 strict=  8 ties=145 tri=  0 scc= 1
+  time=boundary  t=        19/324 origin_clear=      1 bracket=      1 safe=16 lonely=15 max_gap/th=      2
+    phase_half                   v=18 H=           - score=[8:9 9:9] w= 1 o=  9 strict=145 ties=  8 tri=170 scc=18
+    local_moat_min               v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict= 47 ties=106 tri=  0 scc= 1
+    origin_blocker_relief        v=17 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1] w=16 o=  - strict=  0 ties=136 tri=  0 scc= 1
+    k2_relief_pressure           v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 16 strict=  6 ties=147 tri=  0 scc= 1
+    threshold_deficit_pressure   v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  0 ties=153 tri=  0 scc= 1
+    bracket_relief_pressure      v=18 H=           - score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1] w=17 o= 17 strict=  4 ties=149 tri=  0 scc= 1
+
+SYNTHESIS
+====================================================================================================
+Most useful criteria in this audit:
+  lrc_close_sector: tie_rate->safe_gap_count, mean_abs_spearman=0.881, tie_rate=0.689
+  local_moat_min: origin_score_norm->origin_clearance, mean_abs_spearman=0.821, tie_rate=0.491
+  phase_half: H->max_gap, mean_abs_spearman=0.790, tie_rate=0.000
+  safe_deficit: origin_score_norm->origin_clearance, mean_abs_spearman=0.758, tie_rate=0.300
+  local_moat_sum: origin_score_norm->origin_clearance, mean_abs_spearman=0.689, tie_rate=0.230
+
+Operational conclusion:
+  1. Half-turn phase H remains the global spread meter: low H is the
+     unanchored open-semicircle signal, while high H often means many
+     locally lonely vertices.
+  2. Scalar rank gauges such as local_moat_min and safe_deficit are better
+     marked LRC meters, but their H is mostly tie-path or transitive noise.
+     Use the marked origin score and score histogram instead.
+  3. Origin blocker relief is not a good clock-wide scalar by itself, but
+     it is a useful selected-snapshot diagnostic for 'why is runner 0 not
+     lonely?': read its strict/tie pattern before trusting its completed H.
+  4. k2, threshold-deficit, and bracket-relief pressure gauges should be read
+     by strict SCCs and directed triangles.  In the selected n=14/n=18 rows
+     they still peel rather than forming a cyclic pressure core.
+
+Proposed LRC tournament metric vector:
+  (phase_H, phase_score_width, origin_marked_score, safe_deficit_score_hist,
+   origin_blocker_score_width, pressure_largest_SCC, pressure_triangles,
+   strict_tie_rate, edge_flip_rate)
+
+This is the useful replacement for a single loneliness scalar: H supplies
+the cyclic spread coordinate, while marked scores and pressure-core shape
+supply the LRC threshold coordinate.

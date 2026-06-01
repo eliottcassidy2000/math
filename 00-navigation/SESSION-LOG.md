@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S506b - LRC arc criteria as a loneliness metric vector
+
+**Account:** Codex
+**Git first:** Started on `main...origin/main` with HYP-1971/H-loneliness work already present.
+**User prompt:** Spend a long session coming up with possible definitions or criteria for assigning arcs in Tournament Analysis of the LRC until their shape, H values, or score sequences become useful loneliness-related metrics.
+**Computation:** Added `04-computation/lrc_arc_criteria_loneliness_s506.py` and stored `05-knowledge/results/lrc_arc_criteria_loneliness_s506.out`. The script defines twelve criteria with explicit pairwise observables, switches/gauges, and the increasing-label tie Hamiltonian path. It scores them over exact small runner-clock cells and selected `n=14`/`n=18` LRC rows, reporting H where feasible, score histograms, strict/tie rates, directed triangles, SCCs, and edge-flip rates.
+**Findings:** No single arc rule is the LRC loneliness meter. The useful vector is `(phase_H, phase_score_width, origin_marked_score, safe_deficit_score_hist, origin_blocker_strict/tie_shape, pressure_largest_SCC, pressure_triangles, strict_tie_rate, edge_flip_rate)`. Best exact small-clock pairings: close-sector `tie_rate -> safe_gap_count` (`0.881` mean |rho|), local-moat marked origin score -> origin clearance (`0.821`), phase-half `H -> max_gap` (`0.790`), safe-deficit marked origin score -> origin clearance (`0.758`), local-moat-sum marked origin score -> origin clearance (`0.689`).
+**Synthesis:** Added HYP-1972 and `07-reflections/lrc-arc-criteria-loneliness-s506.md`, updated result/hypothesis indexes, concept map, and tangent T596. Pressure gauges remain proof-shape gauges: in selected hard rows their strict SCCs stay `1` and strict triangle counts stay `0`, so they still support the pressure-DAG certificate story rather than a cyclic pressure-core disproof signal.
+**Verification:** `python3 -m py_compile 04-computation/lrc_arc_criteria_loneliness_s506.py`; full script rerun stored the output.
+
 ## codex-2026-06-01-S26b - H as a half-turn loneliness meter, corrected
 
 **Account:** Codex

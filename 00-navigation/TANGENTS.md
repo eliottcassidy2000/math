@@ -815,6 +815,9 @@ The LRC is not a scalar-H problem. It is a marked tournament movie: half-turn to
 **T595** #lonely-runner #n14 #n18 #high-h-witnesses | certainty: exact selected-row audit | source: codex-2026-06-01-S506
 For initial `n=14` and `n=18`, `t=1/n` is high-H and all-lonely (`H=24104937` and `115642276825`), while `t=1/(2n)` has `H=1`, a huge gap, and no marked stationary loneliness. Hard-ladder rows can stay high-H while losing the stationary witness.
 
+**T596** #lonely-runner #arc-criteria #metric-vector #tournament-analysis | certainty: exact small-clock scorecard | source: codex-2026-06-01-S506b
+LRC loneliness needs a vector of arc gauges, not one tournament. Best small-clock signals: close-sector tie rate tracks safe-gap count (`0.881`), local-moat marked origin score tracks origin clearance (`0.821`), and phase-half `H` tracks max gap (`0.790`). Pressure gauges are SCC/triangle detectors, not H meters. See HYP-1972.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
