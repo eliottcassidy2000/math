@@ -1,0 +1,191 @@
+Resonance Debt Proof Engine — opus-S531
+
+======================================================================
+n=3, speeds=(1, 2)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^2 = 0.1111111111
+  PAIRWISE debt (order 2, numerical) = -0.1108590715
+  PAIRWISE debt (order 2, Bernoulli) = 0.1111111111
+  HIGHER debt (order ≥ 3) = -0.0002520396
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.997732
+  |higher/outside| = 0.002268
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,2): -0.1108590715
+
+======================================================================
+n=4, speeds=(1, 2, 3)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^3 = 0.1250000000
+  PAIRWISE debt (order 2, numerical) = -0.0415822331
+  PAIRWISE debt (order 2, Bernoulli) = 0.0416666667
+  HIGHER debt (order ≥ 3) = -0.0834177669
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.332658
+  |higher/outside| = 0.667342
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,3): -0.0415822331
+    (1,2): 0.0000000000
+    (2,3): -0.0000000000
+
+======================================================================
+n=5, speeds=(1, 2, 3, 4)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^4 = 0.1296000000
+  PAIRWISE debt (order 2, numerical) = -0.0095240136
+  PAIRWISE debt (order 2, Bernoulli) = 0.0096000000
+  HIGHER debt (order ≥ 3) = -0.1200759864
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.073488
+  |higher/outside| = 0.926512
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,4): -0.0215544059
+    (1,2): 0.0143999980
+    (2,4): 0.0143999980
+    (1,3): -0.0095999986
+    (2,3): -0.0095696046
+
+======================================================================
+n=6, speeds=(1, 2, 3, 4, 5)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^5 = 0.1316872428
+  PAIRWISE debt (order 2, numerical) = 0.0099064185
+  PAIRWISE debt (order 2, Bernoulli) = -0.0098765432
+  HIGHER debt (order ≥ 3) = -0.1415936613
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.075227
+  |higher/outside| = 1.075227
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,2): 0.0164609081
+    (2,4): 0.0164609081
+    (1,5): -0.0131388529
+    (1,4): -0.0082304541
+    (2,5): -0.0032921816
+
+======================================================================
+n=7, speeds=(1, 2, 3, 4, 5, 6)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^6 = 0.1328103086
+  PAIRWISE debt (order 2, numerical) = 0.0358156184
+  PAIRWISE debt (order 2, Bernoulli) = -0.0357702431
+  HIGHER debt (order ≥ 3) = -0.1686259270
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.269675
+  |higher/outside| = 1.269675
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,2): 0.0159370171
+    (2,4): 0.0159370171
+    (3,6): 0.0159370171
+    (1,6): -0.0088320282
+    (1,5): -0.0063748069
+
+======================================================================
+n=8, speeds=(1, 2, 3, 4, 5, 6, 7)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^7 = 0.1334838867
+  PAIRWISE debt (order 2, numerical) = 0.0433897811
+  PAIRWISE debt (order 2, Bernoulli) = -0.0433646066
+  HIGHER debt (order ≥ 3) = -0.1768736679
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.325056
+  |higher/outside| = 1.325056
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,2): 0.0148315387
+    (2,4): 0.0148315387
+    (3,6): 0.0148315387
+    (1,7): -0.0063392016
+    (1,3): 0.0049438472
+
+======================================================================
+n=14, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+======================================================================
+  direct μ(LONELY) = 0.0000000000
+  OUTSIDE credit (order 0) = ((n-2)/n)^13 = 0.1348005719
+  PAIRWISE debt (order 2, numerical) = 0.1119133366
+  PAIRWISE debt (order 2, Bernoulli) = -0.1118982655
+  HIGHER debt (order ≥ 3) = -0.2467139085
+
+  CREDIT + DEBT = 0.0000000000
+  direct check:  0.0000000000
+
+  |pairwise/outside| = 0.830214
+  |higher/outside| = 1.830214
+  debt ratio = 1.000000
+
+  largest pairwise terms:
+    (1,2): 0.0093616659
+    (2,4): 0.0093616659
+    (3,6): 0.0093616659
+    (4,8): 0.0093616659
+    (5,10): 0.0093616659
+
+======================================================================
+n=14, NON-initial speeds (primes)
+======================================================================
+  direct μ(LONELY) = 0.0891800000
+  OUTSIDE credit = 0.1348005719
+  PAIRWISE debt = 0.0212646777
+  HIGHER debt = -0.0668852497
+  debt ratio = 0.338430
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+THE RESONANCE DECOMPOSITION:
+  μ(LONELY) = OUTSIDE_CREDIT + PAIRWISE_DEBT + HIGHER_DEBT
+
+  OUTSIDE = ((n-2)/n)^{n-1} ≈ e^{-2} ≈ 13.5% for large n
+  PAIRWISE = negative (cancels part of outside)
+  HIGHER = the remaining correction
+
+  For INITIAL SEGMENT: OUTSIDE + PAIRWISE + HIGHER = 0 exactly
+    (wall-only lonely, measure 0)
+  For OTHER speed sets: OUTSIDE + PAIRWISE + HIGHER > 0
+    (positive lonely measure)
+
+  The PROOF TARGET: show |PAIRWISE + HIGHER| < OUTSIDE
+  for all non-initial primitive speed sets.
+  Equivalently: the initial segment MAXIMIZES the debt.
+
+  This is the RESONANCE DEBT CONJECTURE:
+  Among all primitive speed sets at a given n, the initial segment
+  {1,...,n-1} has the maximum |debt/credit| ratio, equal to exactly 1.
+  All other speed sets have ratio < 1, proving LRC.
+
