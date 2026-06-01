@@ -16,6 +16,8 @@ related:
   - THM-374
   - THM-382
   - THM-383
+  - THM-384
+  - HYP-1986
 ---
 
 # HYP-1982: LRC is a forced visit in a threshold-decorated tournament-class fiber
@@ -51,6 +53,11 @@ on exact wall/cell samples for total `n=3,4`.
 
 S513 canonized the bounded parts of this evidence as THM-382 and THM-383.  The
 global forced-visit statement remains open.
+
+S516 sharpened the local gap side as THM-384: once the observer is marked,
+LRC-good status is exactly the closed `1/n` threshold color of the two
+observer-adjacent gaps.  Thus the remaining open problem is the HYP-1986
+compactified source-gap forced-visit theorem.
 
 The open half-turn clock is genuinely class-restricted:
 

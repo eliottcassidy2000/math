@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S516 - LRC compactified source-gap proof route
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; fetched before editing and found no divergence.
+**User prompt:** Use THM-383 and THM-382 as major inspiration for a long session and try to come to a proof.
+**Computation:** Added `04-computation/lrc_gap_threshold_proof_route_s516.py` and stored `05-knowledge/results/lrc_gap_threshold_proof_route_s516.out`. The script audits the exact observer-adjacent gap criterion over compactified small samples, profiles wall-only versus open source-gap witnesses, checks selected n14/n16/n18 hard rows, and runs a proof-route Tournament Analysis comparing raw A000568, observer-source, threshold-gap, compactified-gap-walk, endpoint-pressure, and add/multiply-stack languages.
+**Theorem:** Added THM-384. It proves that the observer is lonely at time `t` iff the two circular gaps adjacent to the observer are both at least `1/n`. Thus the local THM-382 threshold-fiber phenomenon collapses to the two-bit source-gap fiber `(long,long)`.
+**Findings:** The S516 audit has zero criterion mismatches over bounded total `n=3,4,5,6` windows (`79`, `109`, `125`, and `56` primitive systems respectively). The only good adjacent-threshold fiber is `(1,1)`. Initial n14/n16/n18 rows are wall-only source hits, while hard row-parent/gate/double-gate rows have short positive source-gap corridors whose counts scale by the dyadic gate factor.
+**Synthesis:** Added HYP-1986 and `07-reflections/lrc-compactified-source-gap-proof-route-s516.md`. The remaining global proof is now sharper: rule out compactified arithmetic walks that avoid `(long,long)` while also being denominator-sieve complete and carrying the THM-380 owner-compatible pressure cycle.
+**Verification:** `python -m py_compile 04-computation/lrc_gap_threshold_proof_route_s516.py`; full script rerun with output stored.
+
 ## codex-2026-06-01-S514 - LRC three-layer stack pressure-core audit
 
 **Account:** Codex
