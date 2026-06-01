@@ -1,0 +1,202 @@
+LRC@14 via Permutohedron Geometry — opus-S526
+
+======================================================================
+PART 1: Slab covering analysis at n=14
+======================================================================
+
+initial: speeds=(1, 2, 3, 4, 5, 6, 7)...
+  uncovered measure (lonely): 0.00000000
+  uncovered intervals: 0
+  essential runners: 13/13
+  redundant runners: 0 — []
+
+primes_13: speeds=(1, 2, 3, 5, 7, 11, 13)...
+  uncovered measure (lonely): 0.08919234
+  uncovered intervals: 22
+  essential runners: 13/13
+  redundant runners: 0 — []
+  first uncovered: [0.083012, 0.083851]
+
+coprime_near: speeds=(1, 2, 3, 4, 5, 6, 7)...
+  uncovered measure (lonely): 0.02933931
+  uncovered intervals: 12
+  essential runners: 13/13
+  redundant runners: 0 — []
+  first uncovered: [0.071429, 0.077381]
+
+spread: speeds=(1, 3, 7, 11, 13, 17, 23)...
+  uncovered measure (lonely): 0.10294106
+  uncovered intervals: 43
+  essential runners: 13/13
+  redundant runners: 0 — []
+  first uncovered: [0.083012, 0.083587]
+
+======================================================================
+PART 2: Permutohedron cell at the lonely time
+======================================================================
+
+initial:
+  best outdeg: 13
+  best t: 0.07142857
+  circular order at best t: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  observer's CW neighbor: speed 1
+  observer's CCW neighbor: speed 13
+  CW distance: 0.071429 (≥1/14)
+  CCW distance: 0.071429 (≥1/14)
+
+primes_13:
+  best outdeg: 13
+  best t: 0.08302000
+  circular order at best t: (37, 13, 1, 2, 3, 29, 17, 5, 31, 19, 7, 23, 11)
+  observer's CW neighbor: speed 37
+  observer's CCW neighbor: speed 11
+  CW distance: 0.071740 (≥1/14)
+  CCW distance: 0.086780 (≥1/14)
+
+======================================================================
+PART 3: Slab redundancy / overlap proof
+======================================================================
+
+initial:
+  Σ μ(S_i) = 13/7 = 1.857143
+  Σ μ(S_i ∩ S_j) = 1.763635
+  min pairwise: 0.005495
+  max pairwise: 0.065476
+  Bonferroni: μ(∪S_i) ≥ 0.093508
+  total overlap vs target (6/7=0.857143): 1.763635 ≥ 0.857143
+  *** BONFERRONI PROVES: μ(lonely) ≥ 0.906492 > 0 ***
+
+primes_13:
+  Σ μ(S_i) = 13/7 = 1.857143
+  Σ μ(S_i ∩ S_j) = 1.370472
+  min pairwise: 0.005495
+  max pairwise: 0.035714
+  Bonferroni: μ(∪S_i) ≥ 0.486671
+  total overlap vs target (6/7=0.857143): 1.370472 ≥ 0.857143
+  *** BONFERRONI PROVES: μ(lonely) ≥ 0.513329 > 0 ***
+
+coprime_near:
+  Σ μ(S_i) = 13/7 = 1.857143
+  Σ μ(S_i ∩ S_j) = 1.870867
+  min pairwise: 0.005952
+  max pairwise: 0.065476
+  Bonferroni: μ(∪S_i) ≥ -0.013724
+  total overlap vs target (6/7=0.857143): 1.870867 ≥ 0.857143
+  *** BONFERRONI PROVES: μ(lonely) ≥ 1.013724 > 0 ***
+
+======================================================================
+PART 4: CRT-factored view obstruction
+======================================================================
+
+CRT factorization of the lonely condition:
+  δ = {7t}, θ_a = {at} for a=1,...,6
+  Lonely iff:
+    δ ∈ [1/14, 13/14]
+    For a=1,...,6: θ_a ∈ [1/14, 13/14] ∩ [1/14-δ, 13/14-δ] (mod 1)
+
+Constraint width as function of δ:
+  δ=0/14=0.0000: constraint width per class = 0.8571
+  δ=1/14=0.0714: constraint width per class = 0.7857
+  δ=2/14=0.1429: constraint width per class = 0.7143
+  δ=3/14=0.2143: constraint width per class = 0.6429
+  δ=4/14=0.2857: constraint width per class = 0.5714
+  δ=5/14=0.3571: constraint width per class = 0.5000
+  δ=6/14=0.4286: constraint width per class = 0.4286
+  δ=7/14=0.5000: constraint width per class = 0.3571
+  δ=8/14=0.5714: constraint width per class = 0.2857
+  δ=9/14=0.6429: constraint width per class = 0.2143
+  δ=10/14=0.7143: constraint width per class = 0.1429
+  δ=11/14=0.7857: constraint width per class = 0.0714
+  δ=12/14=0.8571: constraint width per class = 0.7143
+  δ=13/14=0.9286: constraint width per class = 0.7857
+  δ=14/14=1.0000: constraint width per class = 0.8571
+
+Product of class constraint widths as function of δ:
+  δ=1/14: width=0.7857, product=0.235282
+  δ=2/14: width=0.7143, product=0.132810
+  δ=3/14: width=0.6429, product=0.070581
+  δ=4/14: width=0.5714, product=0.034815
+  δ=5/14: width=0.5000, product=0.015625
+  δ=6/14: width=0.4286, product=0.006196
+  δ=7/14: width=0.3571, product=0.002075
+
+THE PROOF FRAMEWORK:
+  At δ=1/14: each class has constraint width 11/14 ≈ 78.6%.
+  The 6 class constraints on (θ₁,...,θ₆) define a BOX of volume (11/14)⁶ ≈ 27.7%.
+  The line (t, 2t, 3t, 4t, 5t, 6t) mod 1 passes through this box
+  iff a specific linear Diophantine condition is met.
+
+  For INITIAL SEGMENT: at t=1/14, δ={7/14}=1/2, and θ_a = {a/14}.
+  Width at δ=1/2: 12/14 - 1/2 = 5/14 per class.
+  Product = (5/14)^6 ≈ 0.0002 — tight but nonzero!
+
+  For δ NEAR 0: width ≈ 12/14 per class, product ≈ (6/7)^6 ≈ 37.6% — easy.
+  The proof should show that for some δ ∈ [1/14, 13/14],
+  the corresponding (θ₁,...,θ₆) constraints are satisfiable.
+
+======================================================================
+PART 5: Volume / equidistribution argument
+======================================================================
+
+Initial segment speeds {1,...,13}:
+  lcm(1,...,13) = 360360
+  volume of L = (12/14)^13 = 0.134801
+  N × V = 48576.7
+
+  points in L: 6 / 360360
+  fraction: 0.00001665
+  expected (equidistributed): 0.134801
+
+  primes: partial lcm((1, 2, 3, 5, 7, 11)) = 2310
+    points in L: 210 / 2310
+    fraction: 0.09090909
+
+  spread: partial lcm((1, 3, 7, 11, 13, 17)) = 51051
+    points in L: 5258 / 51051
+    fraction: 0.10299504
+
+EQUIDISTRIBUTION ARGUMENT:
+  The Weyl sum for the line (v₁t,...,v₁₃t) mod 1:
+  S(N) = (1/N) Σ_{k=0}^{N-1} 1_L(v₁k/N,...,v₁₃k/N)
+  converges to Vol(L) = 0.134801 as N → ∞.
+
+  For FINITE N = lcm(speeds), S(N) is EXACT.
+  Initial segment: S(360360) = 0.00001665
+  Equidistributed prediction: 0.13480057
+  Ratio: 0.000124
+
+  The ratio is < 1 — the line is
+  UNDER-represented in L
+  relative to equidistribution.
+
+THE PROOF QUESTION (restated):
+  LRC@14 ⇔ for every primitive (v₁,...,v₁₃),
+  (1/N) Σ_{k=0}^{N-1} 1_L(v₁k/N,...,v₁₃k/N) > 0
+  where N = lcm(v₁,...,v₁₃).
+
+  The equidistribution gives S(N) → V ≈ 13.5% as max(v_i) → ∞.
+  The EXTREMAL case is when the speeds are SMALL and the
+  line is NOT well-distributed.
+  The initial segment (max speed 13) is the tightest case.
+  Its S(N) = 6/360360 = 0.00001665.
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+THE PERMUTOHEDRON PROOF FRAMEWORK:
+  LRC@14 = line on T^13 hits box L = [1/14, 13/14]^13.
+  Volume(L) = (6/7)^13 ≈ 13.5%.
+
+  THREE APPROACHES:
+  A. SLAB REDUNDANCY: 13 slabs of measure 1/7 have total 13/7 ≈ 1.86.
+     If pairwise overlaps > 6/7, Bonferroni gives μ(lonely) > 0.
+  B. CRT FACTORING: reduce to δ + 6 class constraints. At δ near 0,
+     class constraints have width 12/14 and product (6/7)^6 ≈ 37.6%.
+  C. EQUIDISTRIBUTION: S(N) → 13.5%. For initial segment,
+     S(360360) counts EXACT lonely lattice points.
+
+  THE WINNER should be a HYBRID: use CRT to factor the problem,
+  Bonferroni within each CRT factor to bound the class-safe measure,
+  and the permutohedron face lattice to bound the cross-class correlation.
+

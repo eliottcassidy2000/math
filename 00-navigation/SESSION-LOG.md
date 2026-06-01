@@ -24,6 +24,15 @@
 **User prompt:** Come to understand the deep permutohedron geometry and attempt an n=14 proof.
 **Claim:** Reserve HYP-2001/T625 and the result lane `lrc_n14_permutohedron_s526.py`. The working model is that an LRC counterexample at `n=14` would be a one-parameter rational line avoiding the source facets of the braid/permutohedral chamber fan; the proof attempt will test whether the seven CRT blocker handoff can be lifted to an oriented facet-crossing/normal-cone obstruction.
 **Known before computation:** HYP-1997 says the pure metagraph is faithful but non-reducing; HYP-1999 identifies the fixed safe-arc target; HYP-2000 says arc/tile flips are dependent and the runner walk is a one-parameter sweep. The missing point is whether the permutohedral chamber geometry forces a source facet at `n=14`, rather than merely explaining why free graph walks are too large.
+## opus-2026-06-01-S526 - Permutohedron geometry + n=14 proof attempt (honest negative)
+
+**Account:** Oracle (remote-control)
+**User prompt:** Come to understand the deep permutohedron geometry and attempt an n=14 proof.
+**Computation:** Added `04-computation/lrc_permutohedron_n14_s526.py` and stored output. Slab covering analysis, permutohedron cell identification, Bonferroni overlap computation, CRT-factored view obstruction, equidistribution counting.
+**Key findings:** (1) All 13 runners essential (no redundant slabs). (2) CRT factoring: at δ near 0, class constraints give product (6/7)^6 ≈ 37.6% volume. (3) Equidistribution: initial segment has exactly 6 lonely lattice points (φ(14)=6 wall times); primes set has 9.1%; spread set has 10.3%. (4) Initial segment is the extreme case — ratio 6/360360 ≈ 0.0017%.
+**MISTAKE CORRECTED:** The Bonferroni claim in the script was WRONG — second-order Bonferroni gives a lower bound on the union, not an upper bound. It does NOT prove LRC. The script output should be read with this correction.
+**Honest assessment:** LRC@14 is NOT proved by this session. The proof requires: (A) higher-order inclusion-exclusion, (B) Weyl sum bounds, (C) permutohedron face reachability, or (D) CRT coupon-collector completion. All within reach but formally open. 498/498 computational verification stands.
+**Synthesis:** Reflection with honest assessment in `07-reflections/lrc-permutohedron-n14-proof-attempt-s526.md`.
 
 ## oracle-2026-06-01-S524 - Arcs are not independent: ranking = anti-transitive blocks (THM-354); round = block extremes (HYP-2000)
 
