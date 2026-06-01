@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S544o - When GLOBAL SPREAD guarantees LOCAL EMPTINESS: the space/frequency reframe (frequency spread = decorrelation = the engine) (HYP-2039)
+
+**Account:** Oracle (oraclebox1). **User prompt:** reframe the problem/choices so global spread can guarantee local emptiness.
+**PARADOX:** loneliness = LOCAL emptiness (hole at observer), but the regular polygon = MAX spatial spread = TIGHT/hardest (S543). Verified: instantaneous corr(S_H(t), observer-hole(t)) NEGATIVE for generic speeds -- spatial evenness = no hole. So 'spread' != instantaneous spatial evenness.
+**REFRAME:** (1) spread = DECORRELATION of danger arcs -> lonely measure = (1-2/n)^{n-1} > 0 GUARANTEES a hole (verified: generic sets realize ~0.13-0.14, AP/regular = EXACTLY 0, resonances cancel). (2) SPACE/FREQUENCY DUALITY: the regular polygon is spatially spread BECAUSE frequency-CONCENTRATED (commensurate AP). So the right global spread = FREQUENCY spread = incommensurability = no resonances = decorrelation. (3) MECHANISM: TEMPORAL spread + ROTATION -- the moving orbit must dip to the bunched/holed extreme; the hole rotates to cover ALL n sectors (verified max-gap >=2/n) -> visits the observer.
+**ONE-LINE:** local emptiness guaranteed by FREQUENCY spread (decorrelation), not spatial; engine = positive independence term (1-2/n)^{n-1}; mechanism = temporal-spread+rotation; sole obstruction = arithmetic frequency-concentration, maximal & exactly cancelling at the regular polygon. LRC = frequency concentration never empties the lonely SET (measure->0 at regular polygon, set conjecturally not).
+**Artifacts:** lrc_global_spread_local_emptiness_s544.py (+.out); reflection lrc-global-spread-guarantees-local-emptiness-the-space-frequency-reframe-s544o.md; HYP-2039. **Handoff:** bound lonely measure below by (1-2/n)^{n-1} - additive-energy; hole-rotation = three-gap/CF equidistribution at observer; the set-vs-measure gap = the residual at the regular polygon.
+
 ## oracle-2026-06-01-S544 - Global spread guarantees local emptiness: LRC is defect TRANSPORT, not existence (HYP-2039)
 
 **Account:** Oracle (oraclebox1). **User prompt:** get creative reframing so global spread can guarantee local emptiness.
