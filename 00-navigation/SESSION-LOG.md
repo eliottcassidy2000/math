@@ -8,6 +8,17 @@
 **Synthesis:** Added HYP-1931 and `07-reflections/tournament-analysis-metric-lifts-s23.md`, and added Tournament Analysis to the concept map. The proposed abstraction stack is: raw data -> metric/sensor -> comparator -> tournament -> invariants -> wall-crossing path. The comparator is the creative step; rank comparators are useful shadows, but edge-local/switch comparators preserve the cyclic data seen by OCF and Hamiltonian-path machinery.
 **Verification:** `python3 -m py_compile 04-computation/tournament_analysis_metric_lifts_s23.py` succeeded; the script ran end-to-end and produced the stored output.
 
+## codex-2026-05-31-S453 - LRC First-Doubling Parity Seam
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S452.
+**User prompt:** Return to the old natural-number picture of odd `x+2` chains and even `x*2` chains, relate tournament doubling/add-two modes to LRC, and focus on the initial tournament-doubling phase at the even/odd seam.
+**Repo archaeology:** Re-read `07-reflections/adic-column-families.md`, `07-reflections/sc-blowup-and-twin-gaining.md`, HYP-1881, HYP-1891, and the S411/S421 LRC column-row scripts. The old notes already identified the `r=0 -> r=1` seam: tournament matching gains one extra pair when an odd unmatched vertex gets a twin, while LRC boundary debt satisfies `phi(2m)=phi(m)` for odd `m`.
+**Computation:** Added `04-computation/lrc_tournament_first_doubling_seam_s453.py` and stored `05-knowledge/results/lrc_tournament_first_doubling_seam_s453.out`. The script prints the arithmetic seam, explicit unit lifts `U(m)->U(2m)`, SC/lex tournament blowup comparisons, all-labelled small tournament H ranges, and first-even LRC row-parent ladder rows for `n=6,10,14,16,18,22,26`.
+**Findings:** Canonized THM-371: for odd `m`, reduction `U(2m)->U(m)` is a bijection via the unique odd lift; `phi(2m)=phi(m)` but later dyadic steps double; matching pairs obey the complementary `pairs(2m)=2*pairs(m)+1`. The SC blowup is the right tournament analogy because it keeps hidden lane/cross-lane data while forcing universal twin scores `(m-1)^m,m^m`.
+**Synthesis:** Added HYP-1905 and `07-reflections/lrc-tournament-first-doubling-seam-s453.md`. The proof reframe is: first-even denominators do not create new unit witnesses; they create nonunit quotient room. An LRC proof at `n=14` or `n=18` should show every use of that room exports endpoint debt to row-parent/product-depth layers. `n=16` remains the pure dyadic row lab, not another first-even seam.
+**Verification:** `python -m py_compile 04-computation/lrc_tournament_first_doubling_seam_s453.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S452 - LRC Runner-Distance Tournament Lift
 
 **Account:** Codex

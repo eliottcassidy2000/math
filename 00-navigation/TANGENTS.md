@@ -563,6 +563,15 @@ The complete pairwise LRC lift has `binom(n,2)=T_{n-1}` distance coordinates, ex
 **T506** #lonely-runner #chamber-automaton #safe-gap-mask #edge-cover | certainty: proof-program target | source: codex-2026-05-31-S452
 Between runner collisions, circular order is fixed and gaps are affine; collisions perform adjacent swaps. A counterexample would force, in every chamber, unsafe gaps to form an edge cover of `C_n` (equivalently safe gaps remain independent). Proposed proof target: build the chamber automaton and use endpoint rows as a Hall/Farkas obstruction to maintaining this edge cover without exported debt.
 
+**T507** #two-adic-grid #first-doubling #units #pairs | certainty: proved arithmetic seam | source: codex-2026-05-31-S453
+At the first seam `m odd -> 2m`, unit residues and tournament pairs behave oppositely but from the same missing-sheet event: `U(2m)->U(m)` is a bijection via the unique odd lift, so `phi(2m)=phi(m)`, while `pairs(2m)=2*pairs(m)+1` because the unmatched odd vertex gains a twin. Later dyadic row steps double honestly. See THM-371.
+
+**T508** #tournaments #sc-blowup #twin-score #first-doubling | certainty: exact theorem + small computation | source: codex-2026-05-31-S453
+The SC blowup is the correct tournament model for the first seam: it preserves hidden `T/T^op` lane data but forces universal twin scores `(m-1)^m,m^m`. In S453, all labelled `n=5` bases have SC-blowup scores `4^5 5^5` and H range `14937..15565`, while lex blowup ranges `1..15565`. Lex magnifies hierarchy; SC creates balanced twins.
+
+**T509** #lonely-runner #first-even-denominators #row-parent #endpoint-debt | certainty: exact rows + proof route | source: codex-2026-05-31-S453
+First-even LRC denominators open nonunit quotient room without adding unit witnesses. The row-parent ladders show the pressure: `n=14` has `gap/th=5/924,debt=84,product=5/11`, `n=18` has `1/176,176,1`, and `n=22` has `2/561,260,520/561`. Proposed proof target: inherited odd-lift unit rows force repairs, and every repair using new quotient room exports endpoint debt.
+
 **T510** #lonely-runner #pairwise-distances #circular-tournaments #antipodal-ties | certainty: exact time-slice construction | source: codex-2026-05-31-S470
 At any time `t`, runners `{0} union V` define an incomplete circular tournament by orienting pairs through the open clockwise semicircle. Unit skeletons show the even/odd split directly: `n=14` has `7` antipodal missing arcs at `t=1/14`, `n=16` has `8`, while `n=15` has none.
 

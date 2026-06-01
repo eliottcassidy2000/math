@@ -1,0 +1,66 @@
+FIRST DOUBLING SEAM: ARITHMETIC LEDGER
+================================================================================================
+odd m -> 2m is a parity-sheet selection, not a normal 2-copy lift.
+
+  m  2m  pairs defect  phi defect  later phi defect  unit density drop  Walsh missing
+   1   2             1           1                 0                1/2              1
+   3   6             1           2                 0                1/2              1
+   5  10             1           4                 0                1/2              1
+   7  14             1           6                 0                1/2              1
+   9  18             1           6                 0                1/2              1
+  11  22             1          10                 0                1/2              1
+  15  30             1           8                 0                1/2              1
+  21  42             1          12                 0                1/2              1
+
+Critical exact facts
+- pairs(2m) = 2*pairs(m) + 1 for odd m: the unmatched vertex gains a twin.
+- phi(2m) = phi(m) for odd m: the unit boundary does not double.
+- phi(4m) = 2*phi(2m): later row steps are honest doublings.
+- Walsh degree at even 2m misses the top size degree by exactly 1.
+
+UNIT LIFTS THROUGH THE FIRST PARITY SHEET
+================================================================================================
+  m=7  U(m)->U(2m): [(1, 1), (2, 9), (3, 3), (4, 11), (5, 5), (6, 13)]
+  m=9  U(m)->U(2m): [(1, 1), (2, 11), (4, 13), (5, 5), (7, 7), (8, 17)]
+  m=15 U(m)->U(2m): [(1, 1), (2, 17), (4, 19), (7, 7), (8, 23), (11, 11), (13, 13), (14, 29)]
+
+Interpretation: reduction U(2m)->U(m) is bijective at the first seam.
+The second sheet exists arithmetically, but exactly one lift is odd and survives.
+
+SC TOURNAMENT BLOWUP: TWIN SCORE COLLAPSE
+================================================================================================
+The SC blowup keeps T and T^op data, but forces universal twin scores.
+
+  base        n  score(T)        H(T)  score(SC)       H(SC)  H(Lex)
+  transitive  3  0 1 2              1 2^3 3^3              41       1
+  cyclic      3  1^3                3 2^3 3^3              45      45
+  transitive  5  0 1 2 3 4          1 4^5 5^5           14937       1
+  cyclic      5  2^5               15 4^5 5^5           15565   15565
+
+All labelled tournaments: SC blowup concentrates H while lex blowup magnifies variation.
+  n  H(T) range     H(SC) range       H(Lex) range      SC score
+  3     1..3            41..45              1..45       2^3 3^3
+  5     1..15        14937..15565           1..15565    4^5 5^5
+
+LRC FIRST-EVEN ROWS AND ROW-PARENT LADDERS
+================================================================================================
+For even n, lpd(n)=n/2: the quotient ladder is the row parent.
+
+  n   state      lpd  gap/th      debt  product   meaning
+   6  2^1*3       3     1/20      12      3/5  first child of 3
+  10  2^1*5       5     1/56      48      6/7  first child of 5
+  14  2^1*7       7    5/924      84     5/11  first child of 7
+  16  2^4*1       8    1/132     140    35/33  pure dyadic column
+  18  2^1*9       9    1/176     176        1  first child of 9
+  22  2^1*11     11    2/561     260  520/561  first child of 11
+  26  2^1*13     13   2/1235     336 672/1235  first child of 13
+
+S453 SYNTHESIS
+================================================================================================
+The first doubling is a parity seam, not a generic row step.
+Tournament side: an odd unmatched vertex gains a twin, and SC blowup
+turns arbitrary score data into the universal near-regular split n/n-1.
+LRC side: unit endpoints do not double; U(2m) is the odd-lift copy of U(m).
+The new room is nonunit quotient room, so first-even denominators such as
+14 and 18 should be attacked by showing every use of that room exports
+endpoint debt into the row-parent/product-depth ledger.

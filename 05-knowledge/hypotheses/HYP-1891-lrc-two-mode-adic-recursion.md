@@ -3,6 +3,7 @@ id: HYP-1891
 status: OPEN
 source: codex-2026-05-31-S421
 related:
+  - THM-371
   - HYP-1831
   - HYP-1838
   - HYP-1854
@@ -12,6 +13,7 @@ related:
   - HYP-1868
   - HYP-1880
   - HYP-1890
+  - HYP-1905
 ---
 
 # HYP-1891: LRC splits into row-mode dyadic flow and column-mode odd-payload transfer
@@ -60,6 +62,12 @@ Thus the first doubling keeps the boundary-debt count fixed, while all later
 row steps double it.  This is the LRC analogue of the tournament row-seam in
 the column-family notes: the first blowup is special.
 
+S453 identifies the fixed-count mechanism: `U(2m) -> U(m)` is not a two-sheet
+unit cover but a bijection, with inverse given by the unique odd lift among
+`a` and `a+m`.  On the tournament side, the same seam is the first
+twin-gaining event: the unmatched odd vertex gains a partner, so matching
+pairs acquire the extra `+1` while unit residues refuse to double.
+
 The first-even children of the odd `x+2` chain give the current LRC frontier:
 
 ```text
@@ -104,6 +112,9 @@ payloads.
 - `04-computation/lrc_adic_column_modes_s421.py`
 - `05-knowledge/results/lrc_adic_column_modes_s421.out`
 - `07-reflections/lrc-two-mode-adic-recursion-s421.md`
+- `04-computation/lrc_tournament_first_doubling_seam_s453.py`
+- `05-knowledge/results/lrc_tournament_first_doubling_seam_s453.out`
+- `07-reflections/lrc-tournament-first-doubling-seam-s453.md`
 - `07-reflections/adic-column-families.md`
 - HYP-1866.
 - HYP-1867.

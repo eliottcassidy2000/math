@@ -3,6 +3,7 @@ id: HYP-1881
 status: OPEN
 source: codex-2026-05-31-S411
 related:
+  - THM-371
   - HYP-1833
   - HYP-1855
   - HYP-1859
@@ -14,6 +15,7 @@ related:
   - HYP-1891
   - HYP-1892
   - HYP-1893
+  - HYP-1905
 ---
 
 # HYP-1881: LRC denominator recursion splits into +2 columns and *2 rows
@@ -61,6 +63,12 @@ So the first doubling `b -> 2b` is a seam: it creates nonunit quotient room but
 does not create new unit witnesses.  Later doublings are honest doublings.  This
 is the LRC analogue of the tournament column-family seam where an unmatched
 vertex first gains a twin.
+
+S453/THM-371 sharpens this into a residue-level statement: for odd `b`,
+`U(2b) -> U(b)` is a bijection, with inverse given by the unique odd lift among
+`a` and `a+b`.  Thus the first seam copies the unit skeleton into the odd
+parity sheet rather than doubling it.  The newly available columns are
+nonunit/quotient room, so using them should be charged as endpoint-debt export.
 
 The same script computes largest-proper-divisor ladders.  For every even
 denominator in the table,
@@ -149,3 +157,6 @@ both.
 - `04-computation/lrc_column_row_modes_s411.py`
 - `05-knowledge/results/lrc_column_row_modes_s411.out`
 - `07-reflections/lrc-column-row-modes-s411.md`
+- `04-computation/lrc_tournament_first_doubling_seam_s453.py`
+- `05-knowledge/results/lrc_tournament_first_doubling_seam_s453.out`
+- `07-reflections/lrc-tournament-first-doubling-seam-s453.md`

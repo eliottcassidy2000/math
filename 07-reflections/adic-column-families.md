@@ -123,6 +123,22 @@ the Walsh degree **jumps by 1** exactly at the $r = 0 \to r = 1$ seam (odd to fi
 even in each column). The Walsh degree anomaly IS the pairs anomaly in disguise —
 both are consequences of the structural seam at the first blowup.
 
+S453/THM-371 sharpen the seam by comparing it with the LRC denominator grid.
+For odd $m$, reduction $U(2m) \to U(m)$ is a bijection: every unit residue mod
+$m$ has exactly one odd lift among $a$ and $a+m$.  Thus the first doubling does
+not create a second unit sheet, even though the tournament matching count gains
+the missing twin.  The critical local picture is therefore asymmetric:
+
+| structure | odd $m \to 2m$ | later dyadic rows |
+|---|---|---|
+| tournament pairs | $2\mathrm{pairs}(m)+1$ | honest doubling |
+| LRC units | $\phi(2m)=\phi(m)$ | honest doubling |
+
+The same first seam simultaneously creates tournament twin room and LRC
+nonunit quotient room.  This is why first-even LRC denominators such as $14$
+and $18$ should be treated as parity-seam export problems rather than ordinary
+row doublings.
+
 ---
 
 ## Connection 5: HYP-217 as 2-Adic Orbit Structure
