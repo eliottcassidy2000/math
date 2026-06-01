@@ -183,6 +183,14 @@ supplies the arithmetic constraints lost by total ordering.  A proof would show
 that the compressed walk cannot avoid the source layer once the residue-channel
 walk obeys the CRT/unit constraints.
 
+The S534o rebase signal adds an important caveat.  Unit-channel tests are not
+automatically strong at large composite denominators: for `n=18`, `n*=9`, the
+single-level parity/unit obstruction is vacuous for primitive sets because the
+unit group and the `3`-adic sublevel make zero representable almost always.
+Thus the channel tournament should be treated as a compression layer, not as a
+complete proof invariant.  It must retain coupled higher-order debt, or it will
+repeat the same "parity fires at n=4, fades by n=8, vanishes at n=18" failure.
+
 ## Why Tournaments Are The Natural Sink
 
 Every serious reframe produces one of five pairwise observables:
@@ -231,7 +239,10 @@ If every faithful tournamentization is peelable, LRC follows.
 3. CRT/unit-channel tournaments.
    The pulled S533c result says inside debt is governed by unit-group balance
    modulo `n*`.  For `n=14`, the relevant split is parity plus mod `7`.
-   Treat residue classes as vertices, and signs/units as edge labels.
+   Treat residue classes as vertices, and signs/units as edge labels.  The
+   S534o n=18 attempt warns that this must be a coupled debt tournament, not
+   only a single-character parity test: at `n*=9`, the unit test alone becomes
+   vacuous on primitive sets.
 
 4. Zonotope facet-debt tournament.
    Translate endpoint debt into covering-radius facet debt.  A counterexample
@@ -294,4 +305,3 @@ It is a source-reachability problem whose faithful shadows are tournaments.
 The proof likely lives in showing that every source-avoiding shadow develops
 a forbidden SCC, or else has a peelable source/sink that exposes a witness.
 ```
-
