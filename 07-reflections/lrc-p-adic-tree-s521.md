@@ -82,6 +82,43 @@ residue near 0) localizes. The bounded-denominator program reads on the trees as
 primes is essential, plus the per-prime local densities and the cyclotomic
 `Z_p`-tower (Iwasawa) refinement, are under separate computation.]*
 
+## Sharpened by computation: ONE density (no Euler product), CRT only for composite n
+
+A descent study down the trees (primes 2,3,5,7,11,13, levels to `q ~ thousands`)
+gives three sharp facts — including a correction:
+
+- **`f(p^k) -> mu`, the true lonely measure, NOT the naive volume `V=(1-2/n)^m`,**
+  and the limit is **independent of the prime** (`d_2 = d_3 = ... = mu`). The gap
+  `V - mu` is exactly the correlation among the runners' safe-box constraints (the
+  resonances again). Convergence is non-monotone (oscillates and damps).
+- **`mu = d_p` (a single density), NOT the Euler product `prod_p d_p`** (which
+  collapses to ~0). *This corrects an earlier guess of mine.* The reason is
+  structural: all runners share the SAME time `t`, so loneliness is governed by one
+  density, not a product over independent primes. **So descending a SINGLE prime's
+  tree already sees the full lonely density** — one tree suffices to detect
+  loneliness whenever `mu > 0`.
+- **CRT (multiple primes) is essential precisely when `n` is composite.** For prime
+  `n` a single prime power already works; but the tight composite-`n` extremizers
+  (`{1,2,3,4,5}`, `{1,3,4,5,9}`, `n=6`) have NO lonely prime-power time and are
+  lonely only at `q = n = 2*3` — the local-global alignment of both prime factors.
+- **2-adic law (n even):** if ALL speeds are odd, the 2-adic tree alone suffices
+  (`a = 2^{k-1}` sends every odd speed to `~q/2`, the safe point); MIXED 2-adic
+  valuations obstruct the 2-adic tree and force the odd prime. (This is the
+  first-even bridge's parity split, made exact.)
+
+**The clean reduction this yields.** Since `mu > 0` implies a positive-measure set
+of lonely times (caught by descending one tree), the entire difficulty is the
+`mu = 0` cases — which are exactly the **tight extremizers** (p-adic dimension 0,
+lonely point `t = 1/n`). So:
+
+> **LRC  <=>  every `mu = 0` speed set is lonely at the boundary `q = n`**
+> (the regular-polygon / cyclotomic node). The `mu > 0` sets are automatically
+> lonely by single-prime tree descent.
+
+This is the sharpest distillation of the whole program: non-tight = positive p-adic
+density (one tree), tight = the measure-zero boundary at `q=n`; LRC is exactly the
+boundary statement, the regular polygon / Thm B locus.
+
 ## The Galois side: the cyclotomic Z_p-tower (Iwasawa)
 
 The Galois groups `Gal(Q(zeta_{p^k})/Q) = (Z/p^k)*` form the cyclotomic
@@ -113,7 +150,11 @@ obstacle is the finite set of cross-tree additive triples.
   gate/double-gate results (HYP-1952 etc.) as statements about the 2-adic speed
   tree; the doubling-benign / sum-relation-obstruction dichotomy should sharpen the
   even-case difficulty.
-- **Iwasawa descent.** Study `f(p^k)` down the cyclotomic tower; if `d_p = lim_k
-  f(p^k)` exists and `mu ~ prod_p d_p` (local-global Euler product), LRC becomes a
-  product of local (p-adic) conditions plus the archimedean base — the cleanest
-  possible factorization.
+- **Iwasawa descent (corrected).** `d_p = lim_k f(p^k) = mu` for EVERY prime (one
+  density, not an Euler product — that guess was wrong, since the runners share one
+  time `t`). The useful content: one prime's tower already computes `mu`; so the
+  proof obligation is purely the `mu = 0` (tight) boundary cases at `q = n`, where
+  the cyclotomic field `Q(zeta_n)` and the regular-polygon / Thm B structure live.
+  Pursue: prove `mu = 0  =>  lonely at q = n` (the tight extremizers are
+  boundary-lonely) — equivalently that no `mu=0` set is an empty-lonely
+  counterexample.
