@@ -1,0 +1,28 @@
+LRC(14): deep geometry + honest proof attempt (claudebox-S521)
+
+GEOMETRY: central cube K=[1/14,13/14]^13
+  vol(K) = (6/7)^13 = 0.1348   (positive: a generic curve meets K)
+  each runner bad-set measure = 1/7; union bound = 13/7 = 1.857 > 1  -> FAILS
+  => positivity needs independence; obstruction = rational coincidences.
+
+PAIR-COUNTING at modulus q (why no single modulus closes it):
+    q radius |F_q|  #pairs  note
+   14      0     1       6  radius grows with pairs -> 13 movers stay 'just enough'
+   17      1     3       8  radius grows with pairs -> 13 movers stay 'just enough'
+   19      1     3       9  radius grows with pairs -> 13 movers stay 'just enough'
+   23      1     3      11  radius grows with pairs -> 13 movers stay 'just enough'
+   25      1     3      12  radius grows with pairs -> 13 movers stay 'just enough'
+   28      1     3      13  radius grows with pairs -> 13 movers stay 'just enough'
+   29      2     5      14  radius grows with pairs -> 13 movers stay 'just enough'
+   42      2     5      20  radius grows with pairs -> 13 movers stay 'just enough'
+
+PROVED REDUCTION: if some q in 2..14 divides no speed, t=1/q is lonely
+  (||v/q|| >= 1/q >= 1/14).  So only 'fully covered' systems are hard.
+
+CROSS-MODULUS PROBE: worst minimal lonely denominator over fully-covered
+  adversaries = 25  (e.g. (5, 6, 7, 8, 9, 10, 11, 13, 14, 392, 399, 552, 564, 920, 989))
+  => CONJECTURE Q0: every primitive 13-system is lonely at q <= 25.
+
+VERDICT: NOT a proof of LRC(14).  Open links: (i) the denominator bound Q0
+  (cross-modulus incompatibility), (ii) a speed bound to finitize.  Both are
+  the genuine LRC difficulty; the geometry localizes them precisely.
