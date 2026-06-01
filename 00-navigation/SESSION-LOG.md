@@ -1,5 +1,18 @@
 # Session Log
 
+## oracle-2026-06-01-S512 - Tournament Analysis of the LRC: capstone (the true A000568 target)
+
+**Account:** Oracle (remote-control). **User prompt:** take these ideas as far as you can.
+**Pushed the S511 source-reachability reformulation to its limit.** LRC = observer-marked walk reaches a SOURCE class; source target = A000568(n-1). NEW (lrc_source_reachability_deep_s512.py): at a lonely time the n-1 runners are in the FIXED safe arc [1/n,1-1/n] (length L=1-2/n), so the reachable source classes = half-turn tournaments of n-1 points in an arc of length L -- a TINY subset of A000568(n-1).
+**Results (all primitive speed sets in a box):**
+- n=4: 1 reachable (forced transitive, L=1/2) of A000568(3)=2; 0 LRC failures /325.
+- n=5: 2 of 4; 0 fails /479. n=6: 6 of 12; 0 fails /461. n=7: 6 of 56; 0 fails /210.
+=> The tournament framing RE-PROVES LRC for n<=7 (every marked walk reaches a source cell, open or boundary). The TRUE LRC win-set (1,2,6,6) is microscopic inside A000568(n-1) (2,4,12,56). For L<=1/2 (n<=4) the target is forced transitive; for n>=5 non-transitive source classes appear; menu grows with L. min #near-runners hist {0: almost all, 1: tight few}.
+**Equivalent problem (LRC-T):** every primitive speed set's observer-marked clock visits a cell whose runner sub-tournament is a half-turn tournament of n-1 points in an arc of length 1-2/n. Faithful (mism=0), finite-per-instance; the missing piece = the additive walk cannot avoid this tiny multiplicatively-shaped target.
+**Addition/multiplication/A000568:** addition runs the walk (LRC walls, staircase of differences, single-edge-flip G_n steps); multiplication shapes arena+target (A000568 odd-Burnside, Paley/QR regular classes, the sieve THM-369 gating reachability via x+2/x*2 grid). A000568 is exactly where the two operations meet.
+**Honest assessment:** the A000568 analogy is now EXACT not loose, re-proves n<=7, gives a finite combinatorial target -- but does not crack LRC: reachability is as hard as LRC; the framing organizes/illuminates (tiny target in a studied space) rather than dissolving it. New HYP-1987. Capstone reflection: 07-reflections/lrc-tournament-analysis-capstone-s512.md (synthesizes S24/S25/S26/S511/S512).
+**Next:** identify the reachable-menu sequence; prove LRC-T for few-distinct-difference families via staircase synchrony; Lean the marked source predicate over THM-369; frontier n=14/16 distance-to-source probe.
+
 ## codex-2026-06-01-S516 - LRC compactified source-gap proof route
 
 **Account:** Codex

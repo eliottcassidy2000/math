@@ -1,0 +1,55 @@
+LRC source-reachability — the real target inside A000568(n-1) (oracle-S512)
+
+==================================================================
+n=4 runners (observer + 3); safe arc length L = 1-2/4 = 0.500
+==================================================================
+ primitive speed sets scanned: 325;  LRC failures (no source reached): 0
+ REACHABLE source classes: 2  (of A000568(3)=2 possible)
+   transitive among them: 1;  H values: [1]
+     H=1    score=(0, 1, 1) transitive=False
+     H=1    score=(0, 1, 2) transitive=True
+ min #near-runners over walk, histogram: {0: 324, 1: 1}
+
+==================================================================
+n=5 runners (observer + 4); safe arc length L = 1-2/5 = 0.600
+==================================================================
+ primitive speed sets scanned: 479;  LRC failures (no source reached): 0
+ REACHABLE source classes: 2  (of A000568(4)=4 possible)
+   transitive among them: 1;  H values: [1, 5]
+     H=1    score=(0, 1, 2, 3) transitive=True
+     H=5    score=(1, 1, 2, 2) transitive=False
+ min #near-runners over walk, histogram: {0: 477, 1: 2}
+
+==================================================================
+n=6 runners (observer + 5); safe arc length L = 1-2/6 = 0.667
+==================================================================
+ primitive speed sets scanned: 461;  LRC failures (no source reached): 0
+ REACHABLE source classes: 6  (of A000568(5)=12 possible)
+   transitive among them: 1;  H values: [1, 4, 7, 9, 11, 15]
+     H=1    score=(0, 1, 2, 3, 4) transitive=True
+     H=4    score=(1, 1, 1, 2, 3) transitive=False
+     H=7    score=(1, 1, 2, 2, 2) transitive=False
+     H=9    score=(1, 1, 2, 3, 3) transitive=False
+     H=11   score=(1, 2, 2, 2, 3) transitive=False
+     H=15   score=(2, 2, 2, 2, 2) transitive=False
+ min #near-runners over walk, histogram: {0: 459, 1: 2}
+
+==================================================================
+n=7 runners (observer + 6); safe arc length L = 1-2/7 = 0.714
+==================================================================
+ primitive speed sets scanned: 210;  LRC failures (no source reached): 0
+ REACHABLE source classes: 6  (of A000568(6)=56 possible)
+   transitive among them: 1;  H values: [1, 17, 23, 41, 45]
+     H=1    score=(0, 1, 2, 3, 4, 5) transitive=True
+     H=17   score=(1, 1, 2, 3, 4, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=41   score=(2, 2, 2, 3, 3, 3) transitive=False
+     H=45   score=(2, 2, 2, 3, 3, 3) transitive=False
+ min #near-runners over walk, histogram: {0: 209, 1: 1}
+
+READING: reachable source classes (the TRUE LRC win-set) are far fewer
+than A000568(n-1); for n<=4 they are forced transitive (arc <= 1/2). The
+min-near-runner histogram shows how close any set comes to source-
+avoidance (a 0 bucket = an open lonely interval; all sets reach 0 or a
+boundary source => LRC verified on the tournament side).
