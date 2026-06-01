@@ -1,0 +1,62 @@
+n=4 (196 sets, max_speed=12):
+  occupancy vectors (pointed): 20
+  occupancy vectors (unpointed/sorted): 3
+  lonely occupancy (pointed): 4
+  lonely (unpointed): 2
+  total compositions: 20
+  RESTRICTION (pointed): 20/20 = 100.0%
+  A000568(4): 4
+
+    lonely: (0, 0, 3, 0)  (3 empty sections, max=3)
+    lonely: (0, 1, 2, 0)  (2 empty sections, max=2)
+    lonely: (0, 2, 1, 0)  (2 empty sections, max=2)
+    lonely: (0, 3, 0, 0)  (3 empty sections, max=3)
+
+n=5 (125 sets, max_speed=9):
+  occupancy vectors (pointed): 70
+  occupancy vectors (unpointed/sorted): 5
+  lonely occupancy (pointed): 15
+  lonely (unpointed): 4
+  total compositions: 70
+  RESTRICTION (pointed): 70/70 = 100.0%
+  A000568(5): 12
+
+    lonely: (0, 0, 0, 4, 0)  (4 empty sections, max=4)
+    lonely: (0, 0, 1, 3, 0)  (3 empty sections, max=3)
+    lonely: (0, 0, 2, 2, 0)  (3 empty sections, max=2)
+    lonely: (0, 0, 3, 1, 0)  (3 empty sections, max=3)
+    lonely: (0, 0, 4, 0, 0)  (4 empty sections, max=4)
+    lonely: (0, 1, 0, 3, 0)  (3 empty sections, max=3)
+
+n=6 (56 sets, max_speed=8):
+  occupancy vectors (pointed): 208
+  occupancy vectors (unpointed/sorted): 7
+  lonely occupancy (pointed): 34
+  lonely (unpointed): 5
+  total compositions: 252
+  RESTRICTION (pointed): 208/252 = 82.5%
+  A000568(6): 56
+
+    lonely: (0, 0, 0, 1, 4, 0)  (4 empty sections, max=4)
+    lonely: (0, 0, 0, 2, 3, 0)  (4 empty sections, max=3)
+    lonely: (0, 0, 0, 3, 2, 0)  (4 empty sections, max=3)
+    lonely: (0, 0, 1, 1, 3, 0)  (3 empty sections, max=3)
+    lonely: (0, 0, 1, 2, 2, 0)  (3 empty sections, max=2)
+    lonely: (0, 0, 1, 3, 1, 0)  (3 empty sections, max=3)
+
+n=7 (28 sets, max_speed=8):
+  occupancy vectors (pointed): 374
+  occupancy vectors (unpointed/sorted): 11
+  lonely occupancy (pointed): 57
+  lonely (unpointed): 5
+  total compositions: 924
+  RESTRICTION (pointed): 374/924 = 40.5%
+  A000568(7): 456
+
+    lonely: (0, 0, 0, 0, 3, 3, 0)  (5 empty sections, max=3)
+    lonely: (0, 0, 0, 1, 2, 3, 0)  (4 empty sections, max=3)
+    lonely: (0, 0, 0, 1, 3, 2, 0)  (4 empty sections, max=3)
+    lonely: (0, 0, 0, 2, 2, 2, 0)  (4 empty sections, max=2)
+    lonely: (0, 0, 1, 1, 2, 2, 0)  (3 empty sections, max=2)
+    lonely: (0, 0, 1, 2, 1, 2, 0)  (3 empty sections, max=2)
+
