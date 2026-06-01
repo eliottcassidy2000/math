@@ -1,0 +1,70 @@
+LRC n=14 wacky attempts (oracle-2026-06-01-S514)
+
+======================================================================
+IDEA A: anti-concentration / lonely measure vs Poisson
+======================================================================
+ [initial 1..13 (tight)] speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+   lonely measure P(N=0) = 0.00000  (Poisson pred e^-13/7 = 0.15612)  max_gap=0
+ [drop13 add14] speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+   lonely measure P(N=0) = 0.02390  (Poisson pred e^-13/7 = 0.15612)  max_gap=1/308
+ [drop8 add14] speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14)
+   lonely measure P(N=0) = 0.04519  (Poisson pred e^-13/7 = 0.15612)  max_gap=2/147
+ [primes-ish 1,2,3,5,7,11,13,17,19,23,29,31,14] speeds=(1, 2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 14)
+   lonely measure P(N=0) = 0.09869  (Poisson pred e^-13/7 = 0.15612)  max_gap=75/6293
+ [super 1..12,360360] speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 360360)
+   lonely measure P(N=0) = 0.02923  (Poisson pred e^-13/7 = 0.15612)  max_gap=1/420420
+
+   => tight set has P(N=0)=0 (boundary only); all others P(N=0)>0.
+      The Poisson value 0.156 is the 'generic' lonely fraction; resonant
+      (arithmetic) sets push it toward 0 but only the exact initial
+      segment reaches 0 (boundary). This is the anti-concentration wall.
+
+======================================================================
+IDEA B: bounded ansatz (minimal witness denominator Q)
+======================================================================
+ [initial 1..13 (tight)]
+   minimal ansatz Q=14: witness t=1/14 (boundary)
+ [drop13 add14]
+   minimal ansatz Q=28: witness t=13/28 (boundary)
+ [drop8 add14]
+   minimal ansatz Q=56: witness t=1/8 (open)
+ [primes-ish 1,2,3,5,7,11,13,17,19,23,29,31,14]
+   minimal ansatz Q=28: witness t=1/4 (open)
+ [super 1..12,360360]
+   minimal ansatz Q=98: witness t=15/98 (boundary)
+ [rand (8, 9, 10, 11)...]
+   minimal ansatz Q=56: witness t=1/56 (open)
+ [rand (1, 7, 8, 13)...]
+   minimal ansatz Q=56: witness t=5/56 (open)
+ [rand (3, 6, 7, 9)...]
+   minimal ansatz Q=56: witness t=5/56 (boundary)
+ [rand (2, 3, 5, 9)...]
+   minimal ansatz Q=28: witness t=5/28 (boundary)
+ [rand (4, 5, 6, 8)...]
+   minimal ansatz Q=28: witness t=9/28 (boundary)
+ [rand (3, 7, 10, 12)...]
+   minimal ansatz Q=28: witness t=1/28 (boundary)
+
+   => max minimal-ansatz Q over tested sets: 98
+      (if bounded, a finite ansatz check proves LRC@14 for these)
+
+======================================================================
+IDEA C: parity split (n=14 = 2*7), leverage proved LRC@7 on smaller side
+======================================================================
+ [initial 1..13 (tight)]
+   parity split: |odd|=7 |even|=6 (halved=[1, 2, 3, 4, 5, 6])
+   smaller side = even(halved) with 6 speeds (<=6 => its own loneliness at threshold 1/7 is guaranteed by proved LRC@7)
+ [drop13 add14]
+   parity split: |odd|=6 |even|=7 (halved=[1, 2, 3, 4, 5, 6, 7])
+   smaller side = odd with 6 speeds (<=6 => its own loneliness at threshold 1/7 is guaranteed by proved LRC@7)
+ [drop8 add14]
+   parity split: |odd|=7 |even|=6 (halved=[1, 2, 3, 5, 6, 7])
+   smaller side = even(halved) with 6 speeds (<=6 => its own loneliness at threshold 1/7 is guaranteed by proved LRC@7)
+
+   => one side always has <=6 speeds (LRC@7 proved); the open problem is
+      COUPLING t (odds) with 2t (evens). The split reduces 13 speeds to two
+      proved subproblems whose witness times must be CRT-aligned.
+
+HONEST SUMMARY: A shows the anti-concentration wall (only exact resonance
+reaches P(N=0)=0); B screens whether a bounded ansatz suffices; C reduces
+to two proved LRC@<=7 halves coupled by the doubling map t<->2t.

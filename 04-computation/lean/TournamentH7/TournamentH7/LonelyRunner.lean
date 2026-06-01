@@ -115,6 +115,66 @@ theorem initial_segment_unit_lonely (n : ℕ) (hn : 1 ≤ n) (a : ℤ)
   have hb : (i : ℕ) < n - 1 := i.isLt
   omega
 
+/-! ### Grounding: `Lonely` is the standard central-box / nearest-integer condition
+
+These connect the proof-friendly "far from every integer" form of `Lonely` to
+`Int.fract`, hence to the **view-obstruction central box** `[1/n, 1-1/n]`, and
+prove that loneliness is `1`-periodic in `t` for integer speeds. -/
+
+section Grounding
+variable {ι : Type*}
+
+/-- `x` is at distance `≥ c` from every integer iff its fractional part lies in
+the central band `[c, 1-c]`. -/
+theorem far_iff_fract (c x : ℝ) :
+    (∀ m : ℤ, c ≤ |x - m|) ↔ (c ≤ Int.fract x ∧ Int.fract x ≤ 1 - c) := by
+  constructor
+  · intro h
+    refine ⟨?_, ?_⟩
+    · have h0 := h ⌊x⌋
+      have e : x - (⌊x⌋ : ℝ) = Int.fract x := by linarith [Int.floor_add_fract x]
+      rw [e, abs_of_nonneg (Int.fract_nonneg x)] at h0
+      exact h0
+    · have h1 := h (⌊x⌋ + 1)
+      have e : x - ((⌊x⌋ + 1 : ℤ) : ℝ) = Int.fract x - 1 := by
+        push_cast; linarith [Int.floor_add_fract x]
+      rw [e, abs_of_nonpos (by linarith [Int.fract_lt_one x] : Int.fract x - 1 ≤ 0)] at h1
+      linarith
+  · rintro ⟨h1, h2⟩ m
+    have key : x - (m : ℝ) = Int.fract x - ((m - ⌊x⌋ : ℤ) : ℝ) := by
+      push_cast; linarith [Int.floor_add_fract x]
+    rw [key]
+    obtain hk | hk : (m - ⌊x⌋ ≤ 0) ∨ (1 ≤ m - ⌊x⌋) := by omega
+    · have hk' : ((m - ⌊x⌋ : ℤ) : ℝ) ≤ 0 := by exact_mod_cast hk
+      exact le_abs.mpr (Or.inl (by linarith))
+    · have hk' : (1 : ℝ) ≤ ((m - ⌊x⌋ : ℤ) : ℝ) := by exact_mod_cast hk
+      exact le_abs.mpr (Or.inr (by linarith))
+
+/-- `Lonely` ⟺ every `v i · t` has fractional part in the central box
+`[1/n, 1-1/n]` — the view-obstruction formulation of the conjecture. -/
+theorem lonely_iff_fract_mem (n : ℕ) (v : ι → ℤ) (t : ℝ) :
+    Lonely n v t ↔
+      ∀ i, (1 : ℝ) / n ≤ Int.fract ((v i : ℝ) * t)
+            ∧ Int.fract ((v i : ℝ) * t) ≤ 1 - 1 / n := by
+  unfold Lonely
+  exact forall_congr' (fun i => far_iff_fract ((1 : ℝ) / n) ((v i : ℝ) * t))
+
+/-- Loneliness for integer speeds is `1`-periodic in `t`. -/
+theorem lonely_add_one (n : ℕ) (v : ι → ℤ) (t : ℝ) :
+    Lonely n v (t + 1) ↔ Lonely n v t := by
+  unfold Lonely
+  constructor
+  · intro h i m
+    have hm := h i (m + v i)
+    convert hm using 2
+    push_cast; ring
+  · intro h i m
+    have hm := h i (m - v i)
+    convert hm using 2
+    push_cast; ring
+
+end Grounding
+
 /-! ### Axiom audit
 
 Each `#print axioms` should report only the foundational
@@ -126,5 +186,8 @@ project-specific axioms underlie the LRC sieve theory. -/
 #print axioms counterexample_needs_all_divisors
 #print axioms all_odd_half_lonely
 #print axioms initial_segment_unit_lonely
+#print axioms far_iff_fract
+#print axioms lonely_iff_fract_mem
+#print axioms lonely_add_one
 
 end LonelyRunner

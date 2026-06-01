@@ -1,0 +1,40 @@
+LRC source-reachability EXTENSION to n=8 (oracle-2026-06-01-S513)
+
+==================================================================
+n=7 runners (observer + 6); safe arc length L = 1-2/7 = 0.714; box max_speed=10
+==================================================================
+ primitive speed sets scanned: 210;  LRC failures (no source reached): 0
+ REACHABLE source classes: 6  (of A000568(6)=56 possible)
+   transitive among them: 1;  H values: [1, 17, 23, 41, 45]
+     H=1    score=(0, 1, 2, 3, 4, 5) transitive=True
+     H=17   score=(1, 1, 2, 3, 4, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=41   score=(2, 2, 2, 3, 3, 3) transitive=False
+     H=45   score=(2, 2, 2, 3, 3, 3) transitive=False
+ min #near-runners over walk, histogram: {0: 209, 1: 1}
+
+==================================================================
+n=8 runners (observer + 7); safe arc length L = 1-2/8 = 0.750; box max_speed=9
+==================================================================
+ primitive speed sets scanned: 36;  LRC failures (no source reached): 0
+ REACHABLE source classes: 11  (of A000568(7)=456 possible)
+   transitive among them: 1;  H values: [1, 33, 47, 51, 70, 105, 123, 137, 151, 175]
+     H=1    score=(0, 1, 2, 3, 4, 5, 6) transitive=True
+     H=33   score=(1, 1, 2, 3, 4, 5, 5) transitive=False
+     H=47   score=(1, 2, 2, 3, 4, 4, 5) transitive=False
+     H=47   score=(1, 2, 2, 3, 4, 4, 5) transitive=False
+     H=51   score=(1, 2, 3, 3, 3, 4, 5) transitive=False
+     H=70   score=(2, 2, 2, 3, 3, 3, 3) transitive=False
+     H=105  score=(2, 2, 2, 3, 4, 4, 4) transitive=False
+     H=123  score=(2, 2, 3, 3, 3, 4, 4) transitive=False
+     H=137  score=(2, 2, 3, 3, 3, 4, 4) transitive=False
+     H=151  score=(2, 3, 3, 3, 3, 3, 4) transitive=False
+     H=175  score=(3, 3, 3, 3, 3, 3, 3) transitive=False
+ min #near-runners over walk, histogram: {0: 35, 1: 1}
+
+EXTENDED MENU SEQUENCE (reachable source classes, the TRUE LRC win-set):
+   n=4:1  n=5:2  n=6:6  n=7:6  n=8:11
+   vs A000568(n-1) = 2, 4, 12, 56, 456 for n=4..8
+ harness self-check OK: n=7 reproduced 6 (matches S512)
+ => LRC VERIFIED for n=8 on the tournament side (0 source-avoidance failures in box).

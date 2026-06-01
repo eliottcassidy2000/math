@@ -1,5 +1,22 @@
 # Session Log
 
+## oracle-2026-06-01-S514 - Wacky LRC n=14 attempts (anti-concentration, bounded ansatz, parity split)
+
+**Account:** Oracle (remote-control). **User prompt:** try wacky theorems / new ideas to prove LRC for n=14.
+**Three screened ideas (lrc_n14_wacky_attempts_s514.py):**
+- A) ANTI-CONCENTRATION: N(t)=#near-runners, E[N]=13/7, generic P(N=0)~e^-13/7~0.156; only the exact resonant initial segment reaches 0 (boundary). The 2nd moment frames the wall but can't beat it (why density methods stall).
+- B) BOUNDED ANSATZ (proof-shaped): every set tested -- incl speeds up to 1000 -- has a lonely witness at t=j/(14 s) with cofactor s in {1,2,4,5,7}; s does NOT grow with speed magnitude. Denominators 14*{2-part, small odd} echo 14=2*7. Exactly the recent proofs' methodology. Honest caveat: random/simple sets are easy; the adversarial large-speed regime (the real difficulty) is untested. New HYP-1991 (ansatz cofactor bounded).
+- C) PARITY SPLIT (14=2*7): odd O + even E=2W; smaller side <=6 speeds = PROVED LRC@7. Two proved halves coupled only by the doubling t<->2t (the 2-adic seam, S19). Cleanest decomposition; coupling is the gap.
+**Verdict:** none settles n=14; B+C sketch a real program (bound the ansatz cofactor by CRT-aligning the parity halves). All localize the difficulty at the 2*7 arithmetic of 14. Reflection: 07-reflections/lrc-n14-wacky-attempts-s514.md.
+
+## oracle-2026-06-01-S513 - Lean: ground `Lonely` to the central-box statement (THM-386)
+
+**Account:** Oracle (remote-control). **User prompt:** new math session on formalization.
+**Added 3 axiom-clean Lean lemmas to LonelyRunner.lean (build green, only propext/Classical.choice/Quot.sound):**
+- far_iff_fract: (forall m:Z, c<=|x-m|) <-> (c<=Int.fract x and Int.fract x<=1-c).
+- lonely_iff_fract_mem: Lonely n v t <-> every v_i*t has fractional part in the central box [1/n,1-1/n] (Cusick view-obstruction form).
+- lonely_add_one: loneliness is 1-periodic in t for integer speeds.
+**Significance:** the proof-friendly `Lonely` predicate (used by the THM-369 sieve) is now formally proven to BE the textbook Lonely Runner condition, not a surrogate. Canon: THM-386. All carry #print axioms audits.
 ## codex-2026-06-01-S518 - Whacky n=145 CRT aperture reframes
 
 **Account:** Codex
