@@ -43,6 +43,17 @@
 **Tournament Analysis:** The criteria-choice tournament compares the twenty arc rules by signal, threshold fidelity, operation-grid content, dynamic motion, novelty, and projection risk. It is transitive (`H=1`), with the hybrid operation-danger gauges as the top five profile winners.
 **Verification:** `python3 -m py_compile 04-computation/lrc_operation_grid_arc_criteria_s511.py`; full script rerun stored the output; rebase conflicts with HYP-1978/HYP-1979 were resolved by preserving both incoming marked-quotient threads and making this HYP-1980 the operation-weighted danger fiber.
 
+## codex-2026-06-01-S513 - LRC add/multiply gauge stack
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S509/S509b/S507 had landed; close-out rebased over concurrent S510/HYP-1979 sparse marked chamber work, S511/HYP-1980 operation-weighted danger work, Oracle HYP-1981 source-reachability work, S512/HYP-1982 threshold-decorated class-fiber work, and the S511c/HYP-1983 operation-arc-zoo work, so this strand was renumbered to S513/HYP-1984.
+**User prompt:** Spend a long session inventing Tournament Analysis arc criteria for LRC, connecting `H`, score sequences, A000568, the `x+2`/`x*2` odd-core grid, addition, multiplication, and product-sum equations.
+**Computation:** Added `04-computation/lrc_add_mult_gauge_stack_s513.py` and stored `05-knowledge/results/lrc_add_mult_gauge_stack_s513.out`. The script declares denominator-level Tournament Analysis observables and switches: Goldbach pairs for even `N`, Levy/Lemoine pairs for odd `N`, dyadic height and odd core, divisors and largest proper divisor, product-sum two-factor collisions `(a-1)(b-1)=N-1`, `phi(N)` endpoint debt, and A000568 odd-partition survival.
+**Findings:** Scalar operation gauges are ledgers rather than loneliness metrics: additive abundance/scarcity, multiplicative branch depth, product-sum collision, endpoint debt, A000568 odd survival, and scalar grid-stack gauges all completed to transitive tournaments (`H=1`, `c3=0`). Nontrivial shape appears in gauge conflicts: `add_mult_majority` has `H=242407`, `c3=42`, `SCCs=(13,1)`, while `loneliness_pressure_majority` has `H=509`, `c3=15`, `SCCs=(9,1,1,1,1,1)`.
+**Synthesis:** Added HYP-1984 and `07-reflections/lrc-add-mult-gauge-stack-s513.md`. The working metric is now a three-layer stack: dynamic runner gauges, pair-cell danger/operation labels, and denominator add/multiply/A000568 labels. Addition flattens into an order but keeps prime representation fibers; multiplication branches through divisors and dyadic height; product-sum equations are their collision laws.
+**Tournament Analysis:** The script reports score histograms, directed cycles, SCCs, Hamiltonian-path counts, and edge-flip rates. Key flip rates: additive abundance vs endpoint debt `0.10`, additive abundance vs A000568 odd survival `0.77`, multiplicative branch depth vs product-sum collision `0.69`.
+**Verification:** `python -m py_compile 04-computation/lrc_add_mult_gauge_stack_s513.py`; full script rerun with output stored.
+
 ## codex-2026-06-01-S509b - LRC over the A000568 isoclass quotient
 
 **Account:** Codex

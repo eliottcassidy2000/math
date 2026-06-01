@@ -70,6 +70,12 @@ Runner-level operation arc rules split into ledgers, phase perturbations, and ma
 **T607** #goldbach #lemoine #product-sum #lrc #A000568 | certainty: structural synthesis + finite table | source: codex-2026-06-01-S511c
 The useful arithmetic menu is `N=p+q` for even denominators, `N=p+2q` for odd denominators, `N=2^h*odd_core` for multiplicative branch position, and `(a-1)(b-1)=N-1` for the product-sum interface. This is the operation layer above the A000568 complete-relation base.
 
+**T608** #lrc #add-multiply #odd-core-grid #loneliness-metric | certainty: medium-high synthesis + denominator audit | source: codex-2026-06-01-S513
+LRC loneliness should be read as a gauge stack over `N=2^h*odd_core`: addition gives Goldbach/Lemoine fibers, multiplication gives dyadic/divisor branches, product-sum gives collision equations, and endpoint debt marks the LRC fiber. Scalar operation gauges are transitive ledgers, but the add/mult majority tournament has `H=242407`, `c3=42`, `SCCs=(13,1)`. See HYP-1984.
+
+**T609** #lrc #A000568 #product-sum #gauge-conflict | certainty: medium proof-strategy | source: codex-2026-06-01-S513
+The A000568 analogy becomes useful when odd-cycle quotient survival is paired with the natural-number odd-core/dyadic grid. Endpoint debt shadows additive abundance on the selected denominators (flip rate `0.10`), while additive abundance vs A000568 odd survival is nearly perpendicular (`0.77`), so a bad LRC row would need several disagreeing gauges to fail at once.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
