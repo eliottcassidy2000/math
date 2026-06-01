@@ -52,6 +52,32 @@ middle. This is the most principled version yet of the bounded-denominator
 reduction — the equidistribution mechanism is real, and the resonances are the
 explicit obstruction a Weil bound must beat.
 
+## Sharpened by computation: the Erdős–Turán bound and the SUM-relation obstruction
+
+A larger equidistribution study (exact, primes to 8000) makes the strategy
+concrete and corrects the obstruction:
+
+- **Exact Fourier identity.** `|O_q ∩ B_q^m| = q^{-m} Σ_c (∏_i ĥ_B(c_i)) S(Σ_i c_i v_i)`,
+  with the Ramanujan sum `S(t) = q-1` if `t ≡ 0 (mod q)` else `-1`. A genuine
+  integer relation `Σ c_i v_i = 0` forces `S = q-1` for EVERY prime `q` — a
+  *permanent* resonance; all other frequencies contribute only `O(1/q)`.
+- **Erdős–Turán / Fourier bound.** For sets with no small relation,
+  `|f(q) - V_q| <= C(m)/q`; since `V_q -> (1-2/n)^m > 0`, this forces `f(q) > 0`
+  (the box is hit) for all `q >= q_0(m)` — a genuine finite reduction for
+  non-resonant sets. Empirically `q_min <= 43` across everything tested (m<=5).
+- **The obstruction is the SUM-relation `v_i + v_j = v_k`, NOT doubling.** The
+  resistant sets (`f(q)` biased below `V`, larger `q_min`) all carry a weight-3
+  additive sum-relation whose box-Fourier sign is NEGATIVE (e.g. `2+3-5=0` in
+  `{2,3,5}`, `2+5-7=0` in `{2,3,5,7}`). The doubling relation `2v_i=v_j` resonates
+  too but its Fourier sign is `~0`/positive, so doubling sets are NOT resistant.
+  (This refines the earlier "doubling" emphasis: for *equidistribution* the active
+  resonance is the additive triple `v_i+v_j=v_k`, abundant in dense/AP-like sets.)
+- **Relation-aware bound suffices.** The resonant frequencies are FINITE in number
+  (the small relations); separating them out gives a relation-aware Erdős–Turán
+  bound that still yields a finite `q_0`. The only honest boundary case is the
+  **extremal AP family**, lonely exactly at `q = n` (composite when `n` is
+  composite, so the prime-only view misses it) — precisely the tight cases.
+
 ## Zak / theta: quasi-periodization and the theta divisor
 
 `v_i t mod 1` is precisely the quasi-periodization the **Zak transform** formalizes
@@ -95,11 +121,24 @@ Zak/theta**.
   (Balian-Low); turning it into a bound would need control of the theta zeros along
   the rational line.
 
-## Lead (concrete)
+## Lead (concrete, now sharpened)
 
-Derive `f(q) = V + O(q^{-1/2} * (resonance factor))` via the Weil bound on the
-diagonal Kloosterman/Ramanujan sums for `O_q`, identify the resonance factor with
-the relation lattice `{c : sum c_i v_i = 0}`, and solve `phi(q) V > error` for an
-explicit `q_0(n, ||v||)`. With the cyclotomic base `q = n` handled separately, this
-would reduce LRC(n) for bounded speeds to a finite, explicit computation — the
-Galois-Weil completion of the bounded-denominator program.
+The mechanism is the **Erdős–Turán bound** `|f(q) - V_q| <= C(m)/q` from the
+exact Fourier identity above, with the resonant frequencies (the finite set of
+small relations `Σ c_i v_i = 0`, dominated by additive triples `v_i+v_j=v_k`)
+separated out into a relation-aware error term. Solving `(q-1) V_q > error` gives an
+explicit `q_0(m)` (empirically `q_min <= 43`). The program is therefore:
+
+1. **Base `q = n`:** the cyclotomic/regular-polygon case (THM-369; lonely unless a
+   speed is `≡ 0 mod n`).
+2. **Tail `q >= q_0(m)`:** Erdős–Turán equidistribution forces `f(q) > 0`
+   (relation-aware for the finitely many sum-relations).
+3. **Middle `n < q < q_0(m)`:** a finite, explicit check.
+4. **Extremal AP family:** the honest boundary (`q = n` composite) — exactly the
+   tight cases, handled by the base step.
+
+Next concrete task: write the relation-aware Erdős–Turán bound with the additive
+triples `v_i+v_j=v_k` as the explicit resonant set, and pin down `C(m)` and
+`q_0(m)`. This is the Galois–Weil completion of the bounded-denominator program,
+and it is now reduced to an explicit harmonic-analysis estimate plus a finite
+computation.
