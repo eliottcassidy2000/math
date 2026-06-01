@@ -55,6 +55,17 @@
 **Synthesis:** Added `07-reflections/double-round-robin-vertex-doubling-s501.md` and tangents T580-T582. Vertex doubling should be read as a schedule/gauge lift: score sees the double round robin aggregate, while Hamiltonian paths see the voltage parity layer whose dimension matches the fixed-base tiling cube.
 **Verification:** `python3 -m py_compile 04-computation/double_round_robin_blowup_s501.py` succeeded; rerunning the script reproduced the stored output.
 
+## codex-2026-06-01-S495 - Pair lens and twin primes
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S494/S500 integrations.
+**User prompt:** See everything in terms of pairs; twin primes.
+**Repo archaeology and web anchors:** Re-read the S494 additive-basis synthesis, earlier natural-operation pair modes, and prime-gap scripts. Checked Hardy-Littlewood, Zhang, Maynard, and Polymath8 anchors for the prime-pair/gap background.
+**Computation:** Added `04-computation/pair_lens_twin_primes_s495.py` and stored `05-knowledge/results/pair_lens_twin_primes_s495.out`. The script writes prime pairs as `(m-h,m+h)`, compares twin-prime counts with the twin-constant heuristic, audits fixed-gap Hardy-Littlewood chords, lists midpoint-sieve forbidden residues, compares Goldbach fixed-midpoint rows, scans Zeckendorf carry debt on twin pairs, and checks two-polygonal-atom coverage.
+**Findings:** Twin primes are the forced fixed-gap ray `h=1`, while Goldbach is the orthogonal fixed-midpoint row. The Hardy-Littlewood gap factor is pair-local: forbidden midpoint residues `m=+/-h mod q` collapse when `q|h`, matching S495 fixed-gap ratios (`h=3` near `2`, `h=15` near `8/3`). The twin-prime ray has no odd-prime chord boost and lives on the `6Z` midpoint spine beyond `(3,5)`. No zero-carry Zeckendorf twin pair appeared up to `50000`, so prime-pair survival and normal-form compatibility are independent filters.
+**Synthesis:** Added HYP-1966 and `07-reflections/pair-lens-twin-primes-s495.md`. Proposed standard pair report: midpoint, half-gap, local product, carry debt, binary switch, tournament fingerprint, and wall-crossing movie.
+**Verification:** `python -m py_compile 04-computation/pair_lens_twin_primes_s495.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-06-01-S500 - Formalization pass for Tournament Analysis and LRC certificates
 
 **Account:** Codex

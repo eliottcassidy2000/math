@@ -758,6 +758,21 @@ Signed double-round-robin doublings over a fixed labelled tournament are voltage
 **T582** #tournaments #h-count #score-collapse #hidden-parity | certainty: exact computation through selected gauges | source: codex-2026-06-01-S501c
 S501c shows score collapse does not mean path collapse: for cyclic `n=5`, all 64 double-round-robin gauge classes have score `(4^5,5^5)` and quotient team record `(8,8,8,8,8)`, but Hamiltonian path counts range from `14937` to `15565`.
 
+**T583** #pair-lens #twin-primes #goldbach #midpoint-plane | certainty: structural synthesis + computation | source: codex-2026-06-01-S495
+Every unordered pair can be written `(m-h,m+h)`. Twin primes fix `h=1`; Goldbach fixes `m=N/2`; prime gaps fix `h`; Tournament Analysis orients pairwise data. This pair plane is the shared coordinate system behind S494/S501/S502 additive-pair lenses and S495 twin-prime probes. See HYP-1966.
+
+**T584** #twin-primes #midpoint-sieve #six-spine #pair-ray | certainty: exact local residue analysis | source: codex-2026-06-01-S495
+For a pair `(m-h,m+h)`, odd `q` forbids midpoint residues `m=+/-h mod q`. With `h=1`, `q=3` forces nontrivial twin-prime midpoints into `3Z`, and parity gives the familiar `6Z` spine `(6k-1,6k+1)`. This is the first local shadow of the twin-prime ray.
+
+**T585** #hardy-littlewood #prime-pairs #local-product #pair-chord | certainty: classical heuristic + exact small probe | source: codex-2026-06-01-S495
+The gap-`2h` Hardy-Littlewood boost is pair-local: if an odd prime `p|h`, the two forbidden midpoint residues collapse into one, giving factor `(p-1)/(p-2)`. S495 fixed-gap counts through `200000` track this chord pattern (`h=3` ratio `1.988`, `h=15` ratio `2.679`).
+
+**T586** #zeckendorf #twin-primes #carry-debt #pair-filter | certainty: bounded exact probe | source: codex-2026-06-01-S495
+Twin-prime survival and Zeckendorf normal-form compatibility are independent pair filters. S495 scanned `705` twin pairs up to `50000` and found no zero-carry twin pair, unlike S494 Goldbach rows where zero-carry prime pairs occur.
+
+**T587** #fermat-polygonal #pair-layer #higher-arity #additive-basis | certainty: bounded DP probe + theorem analogy | source: codex-2026-06-01-S495
+Pairs are the first relational layer, not always the proof layer. Two `k`-gonal atoms cover only part of `1..300` (`k=3` covers `180`, `k=8` covers `51`), while Fermat polygonal succeeds by bounded higher arity. This is the warning label for pair-first methods.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

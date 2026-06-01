@@ -1,0 +1,140 @@
+﻿Pair lens and twin primes (codex-2026-06-01 S495)
+
+================================================================================================================
+PAIR LENS DICTIONARY
+================================================================================================================
+Every unordered pair (a,b) can be written as (m-h,m+h).
+
+object               pair slice                   meaning
+Twin primes          h=1, entries prime           fixed-gap prime-pair ray
+Prime gap 2h         h fixed                      same ray with local chord factor
+Goldbach N           m=N/2 fixed                  fixed-sum prime-pair row
+Polygonal pair       a,b k-gonal                  two-term bounded-cover layer
+Zeckendorf pair      digit supports               carry debt to canonical sum
+Tournament edge      {i,j}                        the primitive pairwise relation
+
+================================================================================================================
+TWIN PRIME COUNTS AS THE BASELINE PAIR RAY
+================================================================================================================
+C2 approximation from finite Euler product: 0.660162345
+   limit    twins      2*C2*x/log^2x     ratio first/last
+     100        8               6.23     1.285 [(3, 5), (5, 7)] ... [(59, 61), (71, 73)]
+    1000       35              27.67     1.265 [(3, 5), (5, 7)] ... [(857, 859), (881, 883)]
+   10000      205             155.64     1.317 [(3, 5), (5, 7)] ... [(9857, 9859), (9929, 9931)]
+  100000     1224             996.11     1.229 [(3, 5), (5, 7)] ... [(99719, 99721), (99989, 99991)]
+  200000     2160            1772.39     1.219 [(3, 5), (5, 7)] ... [(199811, 199813), (199931, 199933)]
+
+Twin primes are the unboosted fixed-gap ray: h=1 has no odd prime factors.
+
+================================================================================================================
+PAIR CHORDS: GAP 2h RELATIVE TO TWINS
+================================================================================================================
+All prime pairs p,p+2h with p+2h <= 200000; not just consecutive prime gaps.
+   h   gap        odd p|h   HL chord    pairs   ratio/twin  predicted
+   1     2             []          1     2160        1.000      1.000
+   2     4             []          1     2135        0.988      1.000
+   3     6            [3]          2     4295        1.988      2.000
+   4     8             []          1     2194        1.016      1.000
+   5    10            [5]        4/3     2863        1.325      1.333
+   6    12            [3]          2     4274        1.979      2.000
+   7    14            [7]        6/5     2638        1.221      1.200
+  10    20            [5]        4/3     2879        1.333      1.333
+  12    24            [3]          2     4317        1.999      2.000
+  15    30         [3, 5]        8/3     5787        2.679      2.667
+  21    42         [3, 7]       12/5     5130        2.375      2.400
+  30    60         [3, 5]        8/3     5724        2.650      2.667
+
+The pair product is local: for odd q, midpoint residues m=+/-h mod q are forbidden.
+If q divides h, two forbidden residues collapse to one, creating the HL boost.
+
+================================================================================================================
+MIDPOINT SIEVE: TWIN PRIMES ARE SURVIVORS OF +/-1
+================================================================================================================
+   h forbidden residues m mod q                                     finite survival
+   1 q=3:[1, 2]; q=5:[1, 4]; q=7:[1, 6]; q=11:[1, 10]; q=13:[1, 12] 9/91
+   2 q=3:[1, 2]; q=5:[2, 3]; q=7:[2, 5]; q=11:[2, 9]; q=13:[2, 11]  9/91
+   3 q=3:[0]; q=5:[2, 3]; q=7:[3, 4]; q=11:[3, 8]; q=13:[3, 10]     18/91
+   5 q=3:[1, 2]; q=5:[0]; q=7:[2, 5]; q=11:[5, 6]; q=13:[5, 8]      12/91
+   6 q=3:[0]; q=5:[1, 4]; q=7:[1, 6]; q=11:[5, 6]; q=13:[6, 7]      18/91
+  15 q=3:[0]; q=5:[0]; q=7:[1, 6]; q=11:[4, 7]; q=13:[2, 11]        24/91
+
+For twin primes beyond (3,5), h=1 forces m divisible by 2 and 3,
+so the midpoint lives on the 6Z spine: (6k-1, 6k+1).
+
+================================================================================================================
+GOLDBACH IS THE ORTHOGONAL PAIR SLICE
+================================================================================================================
+      N    m=N/2   pairs            h range    best carry pair score
+    100       50       6              3..47           (11, 89) 0
+    200      100       8              3..97          (43, 157) 5
+    500      250      13            21..237          (13, 487) 4
+   1000      500      28             9..497           (3, 997) 5
+   2000     1000      37             9..997        (379, 1621) 4
+   5000     2500      76          117..2493        (673, 4327) 0
+  10000     5000     127           81..4941       (3209, 6791) 4
+
+Twin primes fix h and move in m. Goldbach fixes m and scans h.
+They are perpendicular slices through the same prime-pair lattice.
+
+================================================================================================================
+ZECKENDORF CARRY DEBT ON TWIN PAIRS
+================================================================================================================
+Twin pairs scanned: 705 up to 50000
+Carry-score histogram, first bins:
+  score  4:    2
+  score  7:    3
+  score  8:    1
+  score  9:    3
+  score 10:    6
+  score 11:    6
+  score 12:   14
+  score 13:   15
+  score 14:   19
+  score 15:   32
+  score 16:   34
+  score 17:   58
+
+First zero-carry twin pairs:
+  none found in this scan
+
+Zero carry means the two prime supports already union to the
+canonical Zeckendorf support of their sum.  Twin-ness and
+normal-form compatibility are independent pair filters.
+
+================================================================================================================
+FERMAT POLYGONAL BEGINS WITH PAIRS BUT NEEDS HIGHER ARITY
+================================================================================================================
+Pair coverage by two k-gonal atoms for targets 1..300.
+  k  pair-covered   misses first misses
+  3           180      120 [5, 8, 14, 17, 19, 23, 26, 32, 33, 35]
+  4           113      187 [3, 6, 7, 11, 12, 14, 15, 19, 21, 22]
+  5            90      210 [3, 4, 7, 8, 9, 11, 14, 15, 16, 18]
+  6            71      229 [3, 4, 5, 8, 9, 10, 11, 13, 14, 17]
+  7            60      240 [3, 4, 5, 6, 9, 10, 11, 12, 13, 15]
+  8            51      249 [3, 4, 5, 6, 7, 10, 11, 12, 13, 14]
+
+Fermat polygonal says the pair layer is only the first floor:
+at most k summands give universal coverage.
+
+================================================================================================================
+SYNTHESIS
+================================================================================================================
+Pair-first dictionary:
+  - A tournament is a complete decision on every pair.
+  - Goldbach is prime-pair coverage along fixed midpoint rows.
+  - Twin primes are prime-pair persistence along the h=1 ray.
+  - Hardy-Littlewood is the local residue product of a pair slice.
+  - Zeckendorf carry is the normal-form debt of a pair edge.
+  - Fermat polygonal says pairs are not always enough; higher arity repairs.
+
+New slogan:
+  pair = smallest relational molecule.
+
+Twin primes are the cleanest test object because no summand choice remains:
+the pair is forced to be (m-1,m+1).  The entire problem is whether infinitely
+many midpoints survive all local pair sieves.
+
+Repo target:
+  Turn every additive or LRC repair search into a pair movie in (midpoint,
+  half-gap, local product, carry debt), then use Tournament Analysis to orient
+  competing pairs by which debt they reduce.
