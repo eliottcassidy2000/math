@@ -1,0 +1,13 @@
+Correlation ratio r(a,b) = overlap * n^2/4   (1 = independent)
+
+  n= 5: doubling (1,2) r=1.250 (=n/4=1.250); negation (1,4) r=0.6250 (->1/2)
+  n= 7: doubling (1,2) r=1.750 (=n/4=1.750); negation (1,6) r=0.5833 (->1/2)
+  n= 9: doubling (1,2) r=2.250 (=n/4=2.250); negation (1,8) r=0.5625 (->1/2)
+  n=12: doubling (1,2) r=3.000 (=n/4=3.000); negation (1,11) r=0.5455 (->1/2)
+
+  scale-invariance check (n=7): r(1,2) vs r(3,6): 1.75 1.75
+
+  max correlation ratio over coprime pairs (a<b<=2n), per n:
+    n=5: max r=1.250 at pair (1, 2)  (predicted doubling, r=n/4=1.250)
+    n=6: max r=1.500 at pair (1, 2)  (predicted doubling, r=n/4=1.500)
+    n=7: max r=1.750 at pair (1, 2)  (predicted doubling, r=n/4=1.750)

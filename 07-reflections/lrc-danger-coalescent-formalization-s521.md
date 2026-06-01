@@ -63,22 +63,38 @@ wall `t = 1/n` (a measure-zero touch). So loneliness is a genuine
 
 ## Part III — Tangents (creative extensions)
 
-**T1 — Moment method / anti-concentration (quantified).** `E[N] = 2(n-1)/n ~ 2`.
-If the `B_i` were independent, `Var(N) = m·(2/n)(1-2/n)` and the lonely measure
-would be `(1-2/n)^m -> e^{-2} ~ 0.135 > 0`. Computed: the actual `Var(N)` runs
-slightly **above** the independent value on average (e.g. n=8: 1.49 vs 1.31), and
-the danger count sits `mean/std ~ 1.6` above `0`, so loneliness is a `~1.6σ`
-downward excursion of `N` — which essentially every set achieves in an interior
-cell. The exceptions are exactly the **extremal/tight** sets, which are
-**variance-MINIMIZERS**: e.g. AP `(1,2,3,4)` has `Var = 0.907` and `(1,3,4,5,9)`
-has `0.978`, both below the independent `~1.1`, so `N` stays concentrated near its
-mean and reaches `0` only at the boundary wall `t = 1/n`. So **the LRC-hard sets
-are the configurations that minimize the variance of the danger count** — the most
-"rigid"/anti-concentrated arrangements. A second-moment/Paley–Zygmund bound would
-give `mu > 0` (hence LRC) for sets whose pairwise correlations stay controlled.
-*[Pairwise-correlation `measure(B_i ∩ B_j)` data computed separately; resonant
-pairs (small `v_i ± v_j`, large `gcd`) over-correlate and are what the
-variance-minimizers exploit.]*
+**T1 — Moment method / anti-concentration (RULED OUT — a rigorous negative
+result).** `E[N] = 2(n-1)/n ~ 2` exactly.  Exact pairwise overlap (scale-
+invariant, depends only on the coprime pair and `n`); correlation ratio
+`r = measure(B_i ∩ B_j)·n^2/4` (`=1` iff independent):
+- **maximum = the doubling pair** `v_j = 2 v_i`: `measure = 1/n`, `r = n/4`
+  (grows *linearly* in n);
+- **minimum = the negation pair** `v_j ≡ -v_i (mod n)` (e.g. `(1,n-1)`):
+  `measure = 1/(n(n-1))`, `r = n/(2(n-1)) -> 1/2`.
+The lonely measure `mu = 0` **exactly on the LRC-extremal/tight sets** (and their
+scalar multiples) — e.g. `{1,2,3,4}`, `{1,3,4,7}`, `{1,2,3,4,5}`, `{1,3,4,5,9}`;
+the smallest positive `mu` is `1/60` (m=4), `1/84` (m=5).
+
+**The second moment cannot prove LRC**, for three structural reasons (verified):
+1. **Variance is blind to hardness.** The `mu=0` tight sets have utterly ordinary
+   moments (`E[N] ~ 1.6`, `Var ~ 0.8–1.2`), statistically indistinguishable from
+   easy sets.  (This *corrects* an earlier guess of mine that the extremizers are
+   variance-minimizers — they are not.)
+2. **Wrong inequality direction.** Cantelli gives only `mu <= Var/(Var+E[N]^2)`,
+   an *upper* bound on `mu`; Paley–Zygmund bounds the *busy* set `{N>=1}`.  No
+   second-moment quantity gives a positive *lower* bound on `mu`.
+3. **Correlation does not track hardness.** Across 1287 sets the Pearson
+   correlation between total excess pairwise correlation and `mu` is `+0.60`
+   (positive!), and the `mu=0` sets have mean excess `~ 0`.  "Resonance ⇒ small
+   `mu`" is false globally.
+
+The one clean sufficient condition the data support — **"if every pairwise
+`r_ij <= 1` then `mu > 0`"** (zero counterexamples; min `mu = 11/175, 1/24` for
+m=4,5) — is **unsatisfiable for `m >= 6`**: doubling pairs `(k,2k)` (ratio `n/4`)
+force some `r_ij > 1` in every large set, exactly the regime where LRC is hard.
+So the moment method handles the "generic" regime (`mu ~ e^{-2}`) but is
+*structurally incapable* of the resonant extremal sets.  **Conclusion: the
+anti-concentration / second-moment route is closed.**
 
 **T2 — Covering systems.** Def 4 turns a counterexample into a covering of `Z/N_*`
 by generalized APs (one family per speed, modulus `N_*/v_i`, block-width `~2L/v_i`).
@@ -110,17 +126,19 @@ discrete-geometry analogue of the covering bound.
 
 ## Part IV — New hypotheses (the multitudes)
 
-- **HYP (correlation criterion).** If every pair satisfies
-  `measure(B_i ∩ B_j) <= (2/n)^2` (no resonance), then `mu >= e^{-2}(1-o(1)) > 0`
-  and LRC holds with slack. (Tests the second-moment route; ties to the no-pair /
-  no-resonance reductions of earlier S521.)
-- **HYP (variance-minimizer = extremizer).** The arithmetic-progression speed set
-  `{1,...,n-1}` minimizes `Var(N)` among all primitive `m`-sets (and the tight
-  extremizers are exactly the low-variance, "most rigid" configurations). If true,
-  LRC reduces to a single inequality at the variance-minimizer, and a lower bound
-  `Var(N) >= c(n)` away from the minimizer would give interior loneliness. Computed
-  evidence: tight sets have `Var` strictly below the independent value while
-  generic sets exceed it.
+- **HYP (correlation criterion — CONFIRMED but LIMITED).** If every pairwise ratio
+  `r_ij <= 1`, then `mu > 0` (zero counterexamples). But this condition is
+  unsatisfiable for `m >= 6` (forced doubling-pair over-correlation), so it does
+  not reach the hard regime. Recorded as a true-but-insufficient fact.
+- **HYP (variance-minimizer) — RETRACTED.** I conjectured the extremizers minimize
+  `Var(N)`; the broader computation shows `Var` is blind to hardness (tight sets
+  have ordinary variance). False. Kept here as a logged dead end (the moment
+  profile does not see `mu=0`).
+- **HYP (doubling-pair obstruction).** Over-correlation is driven by *doubling*
+  `v_j = 2 v_i` (ratio `n/4`) and small multiplicative resonance `v_j ≡ c·v_i`.
+  Every `mu=0` extremal set contains such a pair. Conjecture: the hard locus is
+  characterised by a forced doubling/`2`-resonance — connecting to the
+  first-even-bridge `n = 2·odd` thread and the `2`-adic structure.
 - **HYP (coalescent monotonicity).** Over one period the observer's arc length, as
   a function tracked through merge/split events, must hit its minimum (a singleton)
   because the two observer-adjacent runners recede monotonically between wraps
@@ -139,9 +157,20 @@ discrete-geometry analogue of the covering bound.
 The coalescent is now a precise object: a fragmentation–coalescence process whose
 absorbing event (observer singleton) is loneliness, equivalent to a circular
 non-covering and to `N(t)` reaching `0`. The formalization unifies the gap, danger-
-graph, covering, moment, and Fourier views as one structure. It does **not** prove
-LRC — the residual is the same anti-concentration / covering obstruction (the mean
-danger is `~2`, the excursion to `0` is forced only off the resonant/blocker
-locus). But it pins the proof target to two concrete deep tools — the **second
-moment** (correlation control) and **covering-system bounds** (Hough/BBMS) — and
-states the precise hypotheses each must establish.
+graph, covering, moment, and Fourier views as one structure.
+
+This session also **closed one route and sharpened another**:
+- **The second-moment / anti-concentration route is RULED OUT** (T1): the variance
+  is blind to the `mu=0` extremizers, the inequalities point the wrong way, and the
+  only clean sufficient condition is unsatisfiable in the hard regime. A genuine
+  negative result — the moment method cannot prove LRC.
+- **The covering-system route (T2) is the surviving principled tool**: a
+  counterexample is an exact covering of `Z/N_*` by generalized APs with the
+  doubling/`2`-resonance structure that T1 isolated; Hough/BBMS-type minimum-
+  modulus bounds are the way to forbid it and bound the speeds.
+
+So the formalization does not prove LRC, but it converts the survey of S521 into a
+single recommendation: **attack the covering-system reformulation**, using the
+exact overlap structure (doubling pairs, `2`-resonance, the `n = 2·odd` first-even
+bridge) as the description of the forced over-correlation a counterexample would
+need — and which a covering-system density bound should forbid.
