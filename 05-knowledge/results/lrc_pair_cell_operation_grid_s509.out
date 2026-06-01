@@ -1,0 +1,259 @@
+LRC pair-cell operation-grid Tournament Analysis
+====================================================================================================
+Tie Hamiltonian path: lexicographic pair-cell order (0,1)->(0,2)->... .
+Strict arcs compare pair-cell scalar values; equal values use the tie path.
+
+Pair-cell criteria:
+  edge_danger_deficit       dynamic=True  observable=pair-cell deficit max(0,1/n-dist(i,j,t))
+    switch=larger current LRC danger deficit points to smaller deficit
+  edge_phase_distance       dynamic=True  observable=pair-cell circular distance dist(i,j,t)
+    switch=larger distance points to smaller distance
+  edge_wall_frequency       dynamic=False observable=pair-cell speed gap |v_i-v_j|
+    switch=larger half-turn wall frequency points to smaller frequency
+  edge_dyadic_row           dynamic=False observable=dyadic row v2(|v_i-v_j|)
+    switch=higher x*2 branch row points to lower row
+  edge_odd_core             dynamic=False observable=odd core of |v_i-v_j| on the x+2 row
+    switch=smaller odd core points to larger odd core
+  edge_same_odd_chain       dynamic=False observable=whether both speeds lie on the same odd-core doubling chain
+    switch=same-chain and deeper-row pairs point to other pairs
+  edge_product_sum_defect   dynamic=False observable=residue-pair distance from (a-1)(b-1)=n-1
+    switch=closer product-sum critical pair points to farther pair
+
+SMALL EXACT CLOCK PAIR-CELL SCORECARD
+====================================================================================================
+criterion                  best_abs  common_best_feature->target                  H~safe H~close originPair~clear flips ties scc
+edge_danger_deficit          0.986  tie_rate->close_pair_count                +0.000  +0.000     -0.474 0.140 0.521 0.076
+edge_phase_distance          0.536  origin_pair_mean_norm->max_gap                         +0.000  +0.000     +0.006 0.163 0.110 0.076
+edge_wall_frequency          0.000  -->-                               +0.000  +0.000     +0.000 0.000 0.110 0.076
+edge_dyadic_row              0.000  -->-                               +0.000  +0.000     +0.000 0.000 0.110 0.076
+edge_odd_core                0.000  -->-                               +0.000  +0.000     +0.000 0.000 0.110 0.076
+edge_same_odd_chain          0.000  -->-                               +0.000  +0.000     +0.000 0.000 0.308 0.076
+edge_product_sum_defect      0.000  -->-                               +0.000  +0.000     +0.000 0.000 0.061 0.076
+
+Reading: this is a tournament on runner-pairs, so H is computed only
+when the pair-cell count is at most 15.  For larger rows, score
+shape, SCCs, triangles, and tie rates are the intended fingerprints.
+
+SELECTED n=14/n=18 PAIR-CELL ROWS
+====================================================================================================
+H is omitted for these pair-cell tournaments; pair-cell counts are 91 or 153.
+
+[initial n=14]
+  gap/th=0 pair_cells=91 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  time=unit      t=          1/14 origin_clear=      1 safe=14 lonely=14 max_gap/th=      1
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/   84 strict=    0 ties= 4095 tri=     0 scc=  1 tie%=1.000
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/50.769 strict= 3528 ties=  567 tri=     0 scc=  1 tie%=0.138
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.923 strict= 3731 ties=  364 tri=     0 scc=  1 tie%=0.089
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/40.231 strict= 3731 ties=  364 tri=     0 scc=  1 tie%=0.089
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 69/48.231 strict= 3380 ties=  715 tri=     0 scc=  1 tie%=0.175
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 61/   55 strict= 4094 ties=    1 tri=     0 scc=  1 tie%=0.000
+  time=half-unit t=          1/28 origin_clear=    1/2 safe= 1 lonely= 0 max_gap/th=   15/2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/72.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/   62 strict= 3731 ties=  364 tri=     0 scc=  1 tie%=0.089
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.923 strict= 3731 ties=  364 tri=     0 scc=  1 tie%=0.089
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/40.231 strict= 3731 ties=  364 tri=     0 scc=  1 tie%=0.089
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 69/48.231 strict= 3380 ties=  715 tri=     0 scc=  1 tie%=0.175
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 61/   55 strict= 4094 ties=    1 tri=     0 scc=  1 tie%=0.000
+
+[initial n=18]
+  gap/th=0 pair_cells=153 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  time=unit      t=          1/18 origin_clear=      1 safe=18 lonely=18 max_gap/th=      1
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/  144 strict=    0 ties=11628 tri=     0 scc=  1 tie%=1.000
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/83.765 strict=10368 ties= 1260 tri=     0 scc=  1 tie%=0.108
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/90.118 strict=10812 ties=  816 tri=     0 scc=  1 tie%=0.070
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/68.765 strict=10812 ties=  816 tri=     0 scc=  1 tie%=0.070
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=116/81.176 strict= 9739 ties= 1889 tri=     0 scc=  1 tie%=0.162
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=109/  101 strict=11625 ties=    3 tri=     0 scc=  1 tie%=0.000
+  time=half-unit t=          1/36 origin_clear=    1/2 safe= 1 lonely= 0 max_gap/th=   19/2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/128.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/  104 strict=10812 ties=  816 tri=     0 scc=  1 tie%=0.070
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/90.118 strict=10812 ties=  816 tri=     0 scc=  1 tie%=0.070
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/68.765 strict=10812 ties=  816 tri=     0 scc=  1 tie%=0.070
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=116/81.176 strict= 9739 ties= 1889 tri=     0 scc=  1 tie%=0.162
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=109/  101 strict=11625 ties=    3 tri=     0 scc=  1 tie%=0.000
+
+[n=14 lpd ladder skip 6]
+  gap/th=5/924 pair_cells=91 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  time=unit      t=          1/14 origin_clear=      0 safe= 3 lonely= 1 max_gap/th=      7
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/64.923 strict= 1980 ties= 2115 tri=     0 scc=  1 tie%=0.516
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/62.692 strict= 2568 ties= 1527 tri=     0 scc=  1 tie%=0.373
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/46.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/43.308 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 75/53.923 strict= 3192 ties=  903 tri=     0 scc=  1 tie%=0.221
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 83/68.154 strict= 2883 ties= 1212 tri=     0 scc=  1 tie%=0.296
+  time=half-unit t=          1/28 origin_clear=      0 safe= 4 lonely= 0 max_gap/th=    7/2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/71.923 strict= 1484 ties= 2611 tri=     0 scc=  1 tie%=0.638
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/51.846 strict= 2908 ties= 1187 tri=     0 scc=  1 tie%=0.290
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/46.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/43.308 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 75/53.923 strict= 3192 ties=  903 tri=     0 scc=  1 tie%=0.221
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 83/68.154 strict= 2883 ties= 1212 tri=     0 scc=  1 tie%=0.296
+  time=gap-mid   t=    3053/25872 origin_clear=  29/24 safe= 7 lonely= 2 max_gap/th=481/264
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 82/   76 strict=  677 ties= 3418 tri=     0 scc=  1 tie%=0.835
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/44.462 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/46.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/43.308 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 75/53.923 strict= 3192 ties=  903 tri=     0 scc=  1 tie%=0.221
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 83/68.154 strict= 2883 ties= 1212 tri=     0 scc=  1 tie%=0.296
+  time=boundary  t=          9/98 origin_clear=      1 safe=12 lonely=11 max_gap/th=      2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 88/   82 strict=  179 ties= 3916 tri=     0 scc=  1 tie%=0.956
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/49.385 strict= 3684 ties=  411 tri=     0 scc=  1 tie%=0.100
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/46.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/43.308 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 75/53.923 strict= 3192 ties=  903 tri=     0 scc=  1 tie%=0.221
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 83/68.154 strict= 2883 ties= 1212 tri=     0 scc=  1 tie%=0.296
+
+[n=18 lpd ladder skip 8]
+  gap/th=1/176 pair_cells=153 speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  time=unit      t=          1/18 origin_clear=      0 safe= 3 lonely= 1 max_gap/th=      9
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/110.471 strict= 5696 ties= 5932 tri=     0 scc=  1 tie%=0.510
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/107.235 strict= 6992 ties= 4636 tri=     0 scc=  1 tie%=0.399
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/78.824 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/70.118 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=124/90.059 strict= 9087 ties= 2541 tri=     0 scc=  1 tie%=0.219
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=143/118.941 strict= 8000 ties= 3628 tri=     0 scc=  1 tie%=0.312
+  time=half-unit t=          1/36 origin_clear=      0 safe= 4 lonely= 0 max_gap/th=    9/2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/121.118 strict= 3984 ties= 7644 tri=     0 scc=  1 tie%=0.657
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/96.882 strict= 8036 ties= 3592 tri=     0 scc=  1 tie%=0.309
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/78.824 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/70.118 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=124/90.059 strict= 9087 ties= 2541 tri=     0 scc=  1 tie%=0.219
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=143/118.941 strict= 8000 ties= 3628 tri=     0 scc=  1 tie%=0.312
+  time=gap-mid   t=    3991/57024 origin_clear=3991/3168 safe= 9 lonely= 1 max_gap/th=699/352
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=143/  135 strict= 1304 ties=10324 tri=     0 scc=  1 tie%=0.888
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/77.529 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/78.824 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/70.118 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=124/90.059 strict= 9087 ties= 2541 tri=     0 scc=  1 tie%=0.219
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=143/118.941 strict= 8000 ties= 3628 tri=     0 scc=  1 tie%=0.312
+  time=boundary  t=        11/162 origin_clear=      1 safe=16 lonely=15 max_gap/th=      2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=150/  142 strict=  303 ties=11325 tri=     0 scc=  1 tie%=0.974
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/82.235 strict=10640 ties=  988 tri=     0 scc=  1 tie%=0.085
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/78.824 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/70.118 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=124/90.059 strict= 9087 ties= 2541 tri=     0 scc=  1 tie%=0.219
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=143/118.941 strict= 8000 ties= 3628 tri=     0 scc=  1 tie%=0.312
+
+[n=14 gate ladder skip 6]
+  gap/th=5/1848 pair_cells=91 speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  time=unit      t=          1/14 origin_clear=      0 safe= 2 lonely= 1 max_gap/th=     13
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/78.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/72.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.077 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/47.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 24/14.692 strict= 3629 ties=  466 tri=     0 scc=  1 tie%=0.114
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/78.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+  time=half-unit t=          1/28 origin_clear=      0 safe= 2 lonely= 0 max_gap/th=      7
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/62.231 strict= 2274 ties= 1821 tri=     0 scc=  1 tie%=0.445
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/62.692 strict= 2568 ties= 1527 tri=     0 scc=  1 tie%=0.373
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.077 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/47.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 24/14.692 strict= 3629 ties=  466 tri=     0 scc=  1 tie%=0.114
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/78.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+  time=gap-mid   t=    4339/51744 origin_clear=4339/3696 safe= 7 lonely= 1 max_gap/th=481/264
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 83/   77 strict=  594 ties= 3501 tri=     0 scc=  1 tie%=0.855
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 89/44.462 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.077 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/47.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 24/14.692 strict= 3629 ties=  466 tri=     0 scc=  1 tie%=0.114
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/78.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+  time=boundary  t=        15/196 origin_clear=      1 safe=12 lonely=11 max_gap/th=      2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 88/   82 strict=  179 ties= 3916 tri=     0 scc=  1 tie%=0.956
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/45.308 strict= 3684 ties=  411 tri=     0 scc=  1 tie%=0.100
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/53.077 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/47.846 strict= 3845 ties=  250 tri=     0 scc=  1 tie%=0.061
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 24/14.692 strict= 3629 ties=  466 tri=     0 scc=  1 tie%=0.114
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w= 90 top= 90 opair= 90/78.923 strict= 1014 ties= 3081 tri=     0 scc=  1 tie%=0.752
+
+[n=18 gate ladder skip 8]
+  gap/th=1/352 pair_cells=153 speeds=(1, 18, 36, 54, 72, 90, 108, 126, 162, 180, 198, 216, 234, 252, 270, 288, 306)
+  time=unit      t=          1/18 origin_clear=      0 safe= 2 lonely= 1 max_gap/th=     17
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/136.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/128.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/87.765 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/75.706 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair= 32/19.471 strict=10125 ties= 1503 tri=     0 scc=  1 tie%=0.129
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/136.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+  time=half-unit t=          1/36 origin_clear=      0 safe= 2 lonely= 0 max_gap/th=      9
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/106.765 strict= 6344 ties= 5284 tri=     0 scc=  1 tie%=0.454
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/107.235 strict= 6992 ties= 4636 tri=     0 scc=  1 tie%=0.399
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/87.765 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/75.706 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair= 32/19.471 strict=10125 ties= 1503 tri=     0 scc=  1 tie%=0.129
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/136.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+  time=gap-mid   t=   8681/114048 origin_clear=  41/32 safe= 9 lonely= 2 max_gap/th=699/352
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=142/  134 strict= 1447 ties=10181 tri=     0 scc=  1 tie%=0.876
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=151/78.353 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/87.765 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/75.706 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair= 32/19.471 strict=10125 ties= 1503 tri=     0 scc=  1 tie%=0.129
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/136.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+  time=boundary  t=        19/324 origin_clear=      1 safe=16 lonely=15 max_gap/th=      2
+    edge_danger_deficit       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=150/  142 strict=  303 ties=11325 tri=     0 scc=  1 tie%=0.974
+    edge_phase_distance       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/76.294 strict=10640 ties=  988 tri=     0 scc=  1 tie%=0.085
+    edge_dyadic_row           score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/87.765 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_odd_core             score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/75.706 strict=11012 ties=  616 tri=     0 scc=  1 tie%=0.053
+    edge_same_odd_chain       score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair= 32/19.471 strict=10125 ties= 1503 tri=     0 scc=  1 tie%=0.129
+    edge_product_sum_defect   score=[0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 ...] w=152 top=152 opair=152/136.941 strict= 2312 ties= 9316 tri=     0 scc=  1 tie%=0.801
+
+A000568 AND THE x+2 / x*2 GRID
+====================================================================================================
+A000568 Burnside terms use only odd cycle partitions.
+That is the tournament-counting version of an odd-core rule: even
+cycle orbits cannot carry a coherent complete orientation.
+
+n  A000568(n)  #odd_partitions  largest odd partitions contributing
+----------------------------------------------------------------------------------------------------
+ 1           1                1  1
+ 2           1                1  1+1
+ 3           2                2  3, 1+1+1
+ 4           4                2  3+1, 1+1+1+1
+ 5          12                3  5, 3+1+1, 1+1+1+1+1
+ 6          56                4  5+1, 3+3, 3+1+1+1, 1+1+1+1+1+1
+ 7         456                5  7, 5+1+1, 3+3+1, 3+1+1+1+1
+ 8        6880                6  7+1, 5+3, 5+1+1+1, 3+3+1+1
+ 9      191536                8  9, 7+1+1, 5+3+1, 5+1+1+1+1
+10     9733056               10  9+1, 7+3, 7+1+1+1, 5+5
+
+2-adic operation grid up to 40:
+  top row moves by x+2; each top-row odd core branches by x*2.
+  odd core  1: 1 -> 2 -> 4 -> 8 -> 16 -> 32
+  odd core  3: 3 -> 6 -> 12 -> 24
+  odd core  5: 5 -> 10 -> 20 -> 40
+  odd core  7: 7 -> 14 -> 28
+  odd core  9: 9 -> 18 -> 36
+  odd core 11: 11 -> 22
+  odd core 13: 13 -> 26
+  odd core 15: 15 -> 30
+  odd core 17: 17 -> 34
+  odd core 19: 19 -> 38
+
+Product-sum two-factor critical pairs for LRC denominators:
+  total arity k has r=k-2 ones and (a-1)(b-1)=k-1.
+  k=14: two-factor (2,14)->28; best seed 1^11 + 2 2 5
+  k=18: two-factor (2,18)->36; best seed 1^15 + 2 3 4
+  k=21: two-factor (2,21)->42, (3,11)->33, (5,6)->30; best seed 1^18 + 3 3 3
+  k=24: two-factor (2,24)->48; best seed 1^22 + 2 24
+
+SYNTHESIS
+====================================================================================================
+Most useful pair-cell criteria in this audit:
+  edge_danger_deficit: tie_rate->close_pair_count, mean_abs_spearman=0.986, ties=0.521, scc=0.076
+  edge_phase_distance: origin_pair_mean_norm->max_gap, mean_abs_spearman=0.536, ties=0.110, scc=0.076
+  edge_wall_frequency: -->-, mean_abs_spearman=0.000, ties=0.110, scc=0.076
+  edge_dyadic_row: -->-, mean_abs_spearman=0.000, ties=0.110, scc=0.076
+  edge_odd_core: -->-, mean_abs_spearman=0.000, ties=0.110, scc=0.076
+
+Interpretation:
+  1. Runner-level Tournament Analysis asks which runner wins a relation.
+     Pair-cell Tournament Analysis asks which arc/distance cell is the
+     dominant obstruction.  LRC needs both levels.
+  2. A000568's odd-partition Burnside formula is the unlabeled tournament
+     version of odd-core survival.  The LRC operation grid splits this
+     into horizontal x+2 odd-core movement and vertical x*2 doubling.
+  3. Product-sum defects are not a replacement for geometry.  They are a
+     static arithmetic pressure coordinate saying which pair-cells sit near
+     addition/multiplication critical pairs.
+  4. The useful loneliness metric is therefore two-layered:
+       runner vector from S506b
+       + pair-cell operation vector from this script.

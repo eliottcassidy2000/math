@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S509 - LRC pair-cell operation-grid Tournament Analysis
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` with S506b/HYP-1972 already present; rebased over concurrent S506/S507/S506c and S508 protocol work and renumbered to S509/HYP-1976/T599 before push.
+**User prompt:** Spend a long session defining LRC arc criteria until H values, score sequences, and tournament shapes become loneliness metrics; connect the result to A000568, the `x+2`/`x*2` grid, addition, multiplication, and product-sum equations.
+**Computation:** Added `04-computation/lrc_pair_cell_operation_grid_s509.py` and stored `05-knowledge/results/lrc_pair_cell_operation_grid_s509.out`. The script lifts Tournament Analysis to second-order pair-cell tournaments whose vertices are unordered runner pairs. It tests dynamic phase-distance and danger-deficit criteria plus static dyadic-row, odd-core, same-odd-chain, wall-frequency, and product-sum-defect criteria, with lexicographic pair-cell tie path.
+**Findings:** The dominant new local metric is `edge_danger_deficit`: its pair-cell tournament tie rate tracks close-pair count with mean absolute Spearman `0.986`. `edge_phase_distance` has a weaker signal (`origin_pair_mean_norm -> max_gap`, `0.536`). Static dyadic/odd/product-sum criteria are not time-loneliness meters, but they label which operation-grid branch each pair-cell occupies.
+**A000568 synthesis:** The script verifies A000568's initial values from the odd-partition Burnside formula and reads this as odd-core survival: unlabeled tournament counting uses only odd cycle partitions. The LRC operation grid splits the same idea into horizontal `x+2` odd-core rows and vertical `x*2` doubling branches, while product-sum equations `(a-1)(b-1)=k-1` label addition/multiplication critical pairs for denominators such as `k=14,18,21,24`.
+**Synthesis:** Added HYP-1976 and `07-reflections/lrc-pair-cell-operation-grid-s509.md`, and updated result/hypothesis indexes, concept map, and tangent T599. The proposed metric object is now the S506b runner vector plus the S509 pair-cell operation vector plus endpoint owner/pressure labels.
+**Verification:** `python3 -m py_compile 04-computation/lrc_pair_cell_operation_grid_s509.py`; full script rerun stored the output after fixing the odd-partition generator.
+
 ## codex-2026-06-01-S508 - Concurrent-session operating protocol
 
 **Account:** Codex

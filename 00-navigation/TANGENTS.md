@@ -830,6 +830,9 @@ For initial `n=14` and `n=18`, `t=1/n` is high-H and all-lonely (`H=24104937` an
 **T596** #lonely-runner #arc-criteria #metric-vector #tournament-analysis | certainty: exact small-clock scorecard | source: codex-2026-06-01-S506b
 LRC loneliness needs a vector of arc gauges, not one tournament. Best small-clock signals: close-sector tie rate tracks safe-gap count (`0.881`), local-moat marked origin score tracks origin clearance (`0.821`), and phase-half `H` tracks max gap (`0.790`). Pressure gauges are SCC/triangle detectors, not H meters. See HYP-1972.
 
+**T599** #lonely-runner #pair-cells #operation-grid #A000568 | certainty: exact pair-cell scorecard + synthesis | source: codex-2026-06-01-S509
+Lift LRC Tournament Analysis to runner-pairs as vertices. The pair-cell danger-deficit tie rate tracks close-pair count (`0.986` mean |rho|), while dyadic row, odd core, same-chain, and product-sum-defect criteria are static branch labels. A000568's odd-partition Burnside formula is the tournament-counting analogue of odd-core survival. See HYP-1976.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -6,6 +6,7 @@ related:
   - HYP-1951
   - HYP-1967
   - HYP-1971
+  - HYP-1976
   - HYP-1950
   - HYP-1960
   - THM-370
@@ -81,12 +82,16 @@ proof object.
    path.
 4. Future LRC scripts should emit the full metric vector above for selected
    times and corridors, not just `H` or scalar maximum gap.
+5. The runner-level metric vector should be paired with the second-order
+   pair-cell operation-grid vector from HYP-1976 when pairwise distance cells
+   are the actual obstruction carriers.
 
 ## Sources
 
 - `04-computation/lrc_arc_criteria_loneliness_s506.py`
 - `05-knowledge/results/lrc_arc_criteria_loneliness_s506.out`
 - `07-reflections/lrc-arc-criteria-loneliness-s506.md`
+- HYP-1976
 - HYP-1971
 - HYP-1967
 - HYP-1950
