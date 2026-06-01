@@ -69,6 +69,42 @@ factors), the realizable set stays polynomially thin and the LRC criterion stays
 clean "central object appears," while the proof difficulty migrates into the
 Diophantine/symbolic-complexity data of the line — the same conserved difficulty.
 
+## Flow-coloring duality: a clean coloring DESCRIPTION, but duality fails
+
+The danger graph `G(t)` (vertices = the `n` points, edges within `1/n`) is a
+**unit (proper) circular-arc graph**, and — because the `n` arcs each have length
+`1/n` so total length `= 1` (no wrap-around odd hole) — it is **PERFECT**:
+`chi(G(t)) = omega(G(t))` on every cell (0 counterexamples over 119k+ cells).
+Moreover `omega(G(t))` = the **maximum congestion** = max number of points inside
+any open `1/n`-arc. So:
+
+- `chi in {1,...,n}`; `max_t chi = n` only at the all-collision cells (`G = K_n`);
+- **LRC <=> chi(G(t)) can be driven low enough that the observer's color is free**
+  (observer isolated, `N(t)=0`);
+- for the EXTREMAL sets, `G(t)` becomes **edgeless (`chi = 1`)** at the equispaced
+  instant `t = 1/n` — the lonely time is the point of *minimum congestion*.
+
+But **flow-coloring (Tutte) duality does NOT transfer**: `G(t)` is non-planar
+exactly when `omega >= 5` (the `K5` obstruction), so for `n >= 5` the
+high-congestion cells are non-planar and there is no global planar-dual /
+nowhere-zero-flow correspondence. `chi <= n` is automatic (n vertices), so the
+chromatic number gives no LRC bound — the content is entirely the **arc-covering /
+congestion-minimization** over `t`. The coloring language *describes* LRC
+elegantly ("make the danger graph edgeless at the observer") but does not bound it.
+
+## Witness-time / pair tournament: faithful and restricted, but the tournament is inert
+
+Vertices = the candidate optima `t = k/(v_i+v_j)` (S521 Thm A); this is a faithful,
+finite, restricted encoding of `M(v)` (0 mismatches). But the *tournament* built on
+it is uninformative: the pair-tournament winner has **no simple characterization**
+(not smallest-sum, not extremes, not nearest-multiple-of-n — it depends on the
+global safety constraint), and the witness-time tournament's "source" is a
+reflection-closed (`t <-> 1-t`) class, not a unique vertex. The one clean fact is
+the sharpened tightness theorem: **`M = 1/n` (tight) ⟹ the binding pair sums to
+EXACTLY `n` with `t* = 1/n`** (one-directional; the converse fails). A meta-LRC on
+the pairwise sums `{v_i+v_j}` exists but is loose (always slack, sums collide) — not
+a faithful reduction.
+
 ## Assessment
 
 The richest new vertex is the **sector-vector / cutting sequence**: polynomially
@@ -77,8 +113,9 @@ single-coordinate-walk dynamics, and it places LRC inside **symbolic dynamics**
 (cutting sequences, factor complexity, bounded remainder sets, discrepancy) — a
 toolkit not previously brought to bear here. The Menger/source-expulsion thread is
 a logged negative (source = local degree). The flow-coloring and pair/witness
-tournament threads are under separate computation; their results extend this
-taxonomy. Difficulty remains conserved — it now lives in the Diophantine data
-controlling whether the central factor appears — but the cutting-sequence /
-discrepancy framing is the most principled new home for it after the covering-
-systems route.
+tournament threads (computed above) give clean descriptions but no new bound.
+Difficulty remains conserved — it now lives in the Diophantine data controlling
+whether the central factor appears — but the cutting-sequence / discrepancy and
+arc-covering / congestion framings are the most principled new homes for it, both
+pointing back at the covering-systems route as the one tool that could forbid a
+counterexample.
