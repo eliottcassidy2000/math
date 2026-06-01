@@ -1,0 +1,160 @@
+== arc criteria manifest ==
+phase_half                | phase                       | i -> j iff j is clockwise from i by less than 1/2
+origin_clearance_rank     | endpoint                    | farther from stationary observer points to closer
+endpoint_deficit_rank     | endpoint                    | smaller deficit below 1/N points to larger deficit
+two_neighbor_guard        | two-neighbor                | larger sum of two nearest circular distances points to smaller
+dyadic_height             | x*2 branch                  | higher v2(speed) branch points to lower branch
+odd_core_row              | x+2 row                     | smaller odd core points to larger odd core
+same_chain_dyadic_phase   | x*2 over phase              | same odd-core chain uses dyadic branch; other pairs use phase
+adjacent_oddrow_phase     | x+2 over phase              | adjacent odd rows differ by 2; otherwise use phase
+product_sum_gate          | addition*multiplication     | near (a-1)(b-1)=N-1 product-sum pairs override phase
+goldbach_lemoine_gate     | prime additive gate         | even N uses p+q; odd N uses p+2q; otherwise phase
+danger_then_grid          | LRC threshold + operation grid | pairs closer than 1/N use endpoint danger then grid order
+operation_bundle_vote     | bundle                      | phase, endpoint, two-neighbor, dyadic, odd, product-sum, and prime gates vote
+
+== small exact clock scorecard ==
+N5 initial: 28 chamber midpoints
+N5 primes: 58 chamber midpoints
+N6 initial: 46 chamber midpoints
+N6 prime-lac: 168 chamber midpoints
+N7 initial: 60 chamber midpoints
+N7 dyadic: 316 chamber midpoints
+
+criterion                         H~maxgap  c3~maxgap  obs~origin  ties~close  width~local
+phase_half                           -0.733    -0.780    +0.000         -    -0.289
+origin_clearance_rank                     -         -         -         -         -
+endpoint_deficit_rank                     -         -         -    -0.717         -
+two_neighbor_guard                        -         -    +0.383    +0.218         -
+dyadic_height                             -         -         -         -         -
+odd_core_row                              -         -         -         -         -
+same_chain_dyadic_phase              -0.575    -0.615    +0.000         -    -0.234
+adjacent_oddrow_phase                -0.625    -0.611    +0.000         -    -0.289
+product_sum_gate                     -0.675    -0.690    +0.000         -    -0.232
+goldbach_lemoine_gate                -0.732    -0.769    +0.000         -    -0.276
+danger_then_grid                     -0.643    -0.667    -0.289         -    -0.394
+operation_bundle_vote                -0.263    -0.285    +0.196    -0.179    -0.219
+
+== selected n=14 / n=18 hard-row fingerprints ==
+
+n14 initial: total N=14, moving=13, best_t=1/14, best_origin=1/14 (ratio 1)
+  geometry half/unit/best ratios=1/2/1/1; best safe_gaps=14, local_lonely=14, close_pairs=0, max_gap=1/14
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                         24104937   112      1   7    7        14 6:7,7:7
+  origin_clearance_rank                     1     0     13   0    6         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  endpoint_deficit_rank                     1     0     13   0   78         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  two_neighbor_guard                        1     0     13  13   91         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  same_chain_dyadic_phase            18528105   105      5   7    6        14 4:1,6:7,7:4,8:1,9:1
+  product_sum_gate                   19613219   107      4   7    7        14 5:2,6:5,7:6,9:1
+  goldbach_lemoine_gate              21815229   110      3   7    7        14 5:1,6:6,7:6,8:1
+  danger_then_grid                   24104937   112      1   7    7        14 6:7,7:7
+  operation_bundle_vote                 37407    35     11   7   11        12 1:1,2:1,3:2,4:1,7:5,10:2,11:1,12:1
+
+n14 row-parent 7*: total N=14, moving=13, best_t=4339/25872, best_origin=29/336 (ratio 29/24)
+  geometry half/unit/best ratios=0/0/29/24; best safe_gaps=7, local_lonely=2, close_pairs=8, max_gap=481/3696
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                         17826951   106      3   7    0        14 5:3,6:4,7:4,8:3
+  origin_clearance_rank                     1     0     13   0    0         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  endpoint_deficit_rank                     1     0     13   0   78         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  two_neighbor_guard                        1     0     13  13   18         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  same_chain_dyadic_phase            14501729   101      4   7    0        14 4:2,5:1,6:3,7:4,8:4
+  product_sum_gate                   17826951   106      3   7    0        14 5:3,6:4,7:4,8:3
+  goldbach_lemoine_gate              17826951   106      3   7    0        14 5:3,6:4,7:4,8:3
+  danger_then_grid                   17022581   105      4   7    0        14 4:1,5:1,6:5,7:4,8:3
+  operation_bundle_vote                  4621    21     13  13   12         8 0:1,2:2,4:2,6:1,7:2,8:3,11:2,13:1
+
+n14 gate 14*: total N=14, moving=13, best_t=12227/53932, best_origin=2331/26966 (ratio 16317/13483)
+  geometry half/unit/best ratios=0/0/16317/13483; best safe_gaps=7, local_lonely=2, close_pairs=9, max_gap=3511/26966
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                         17755905   106      3   7    0        14 5:3,6:4,7:4,8:3
+  origin_clearance_rank                     1     0     13   0    0         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  endpoint_deficit_rank                     1     0     13   0   78         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  two_neighbor_guard                        1     0     13  13   17         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1
+  same_chain_dyadic_phase            17101503   104      4   7    0        14 4:1,5:2,6:3,7:5,8:3
+  product_sum_gate                   17755905   106      3   7    0        14 5:3,6:4,7:4,8:3
+  goldbach_lemoine_gate              17755905   106      3   7    0        14 5:3,6:4,7:4,8:3
+  danger_then_grid                   16177369   104      4   7    0        14 4:1,5:2,6:3,7:5,8:3
+  operation_bundle_vote                 12903    32     12  13   14         7 1:1,2:1,3:1,4:1,5:2,6:2,7:1,8:1,10:2,11:1,13:1
+
+n18 initial: total N=18, moving=17, best_t=1/18, best_origin=1/18 (ratio 1)
+  geometry half/unit/best ratios=1/2/1/1; best safe_gaps=18, local_lonely=18, close_pairs=0, max_gap=1/18
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                                -   240      1   9    9        18 8:9,9:9
+  origin_clearance_rank                     -     0     17   0    8         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  endpoint_deficit_rank                     -     0     17   0  136         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  two_neighbor_guard                        -     0     17  17  153         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  same_chain_dyadic_phase                   -   231      5   9    8        18 6:1,7:1,8:8,9:5,10:2,11:1
+  product_sum_gate                          -   231      5   9    9        18 7:3,8:6,9:8,12:1
+  goldbach_lemoine_gate                     -   240      1   9    9        18 8:9,9:9
+  danger_then_grid                          -   240      1   9    9        18 8:9,9:9
+  operation_bundle_vote                     -    62     16   9   16        17 1:1,2:1,3:1,4:2,5:1,8:1,9:5,10:1,12:1,14:3,17:1
+
+n18 row-parent 9*: total N=18, moving=17, best_t=8681/57024, best_origin=41/576 (ratio 41/32)
+  geometry half/unit/best ratios=0/0/41/32; best safe_gaps=8, local_lonely=2, close_pairs=10, max_gap=233/2112
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                                -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  origin_clearance_rank                     -     0     17   0    0         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  endpoint_deficit_rank                     -     0     17   0  136         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  two_neighbor_guard                        -     0     17  17   38         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  same_chain_dyadic_phase                   -   228      5  10    0        18 6:1,7:3,8:5,9:5,10:3,11:1
+  product_sum_gate                          -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  goldbach_lemoine_gate                     -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  danger_then_grid                          -   231      4  10    0        18 6:1,7:2,8:6,9:5,10:4
+  operation_bundle_vote                     -    33     17  16   28        13 0:1,1:1,3:1,4:1,5:1,6:3,9:2,10:2,12:2,13:1,14:1,16:1,17:1
+
+n18 gate 18*: total N=18, moving=17, best_t=1218421/2975616, best_origin=755/10332 (ratio 755/574)
+  geometry half/unit/best ratios=0/0/755/574; best safe_gaps=8, local_lonely=2, close_pairs=10, max_gap=6133/55104
+  criterion                         H          c3    width obs ties strictSCC hist
+  phase_half                                -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  origin_clearance_rank                     -     0     17   0    0         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  endpoint_deficit_rank                     -     0     17   0  136         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  two_neighbor_guard                        -     0     17  17   30         1 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1,11:1,12:1,13:1,14:1,15:1,16:1,17:1
+  same_chain_dyadic_phase                   -   230      4  10    0        18 7:4,8:6,9:4,10:3,11:1
+  product_sum_gate                          -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  goldbach_lemoine_gate                     -   234      3  10    0        18 7:3,8:6,9:6,10:3
+  danger_then_grid                          -   228      5  10    0        18 6:1,7:3,8:5,9:5,10:3,11:1
+  operation_bundle_vote                     -    52     16  16   35        13 1:1,2:2,4:1,6:2,7:2,8:2,9:2,12:1,13:3,16:1,17:1
+
+== addition / multiplication operation grid ==
+N   2^h*odd   additive prime gate       two-core product-sum gates (a-1)(b-1)=N-1
+ 2  2^1*1    Goldbach ()                   ((2, 2),)
+ 3  2^0*3    Lemoine ()                    ((2, 3),)
+ 4  2^2*1    Goldbach ((2, 2),)            ((2, 4),)
+ 5  2^0*5    Lemoine ()                    ((2, 5), (3, 3))
+ 6  2^1*3    Goldbach ((3, 3),)            ((2, 6),)
+ 7  2^0*7    Lemoine ((3, 2),)             ((2, 7), (3, 4))
+ 8  2^3*1    Goldbach ((3, 5),)            ((2, 8),)
+ 9  2^0*9    Lemoine ((3, 3), (5, 2))      ((2, 9), (3, 5))
+10  2^1*5    Goldbach ((3, 7), (5, 5))     ((2, 10), (4, 4))
+11  2^0*11   Lemoine ((5, 3), (7, 2))      ((2, 11), (3, 6))
+12  2^2*3    Goldbach ((5, 7),)            ((2, 12),)
+13  2^0*13   Lemoine ((3, 5), (7, 3))      ((2, 13), (3, 7), (4, 5))
+14  2^1*7    Goldbach ((3, 11), (7, 7))    ((2, 14),)
+15  2^0*15   Lemoine ((5, 5), (11, 2))     ((2, 15), (3, 8))
+16  2^4*1    Goldbach ((3, 13), (5, 11))   ((2, 16), (4, 6))
+17  2^0*17   Lemoine ((3, 7), (7, 5), (11, 3), (13, 2)) ((2, 17), (3, 9), (5, 5))
+18  2^1*9    Goldbach ((5, 13), (7, 11))   ((2, 18),)
+19  2^0*19   Lemoine ((5, 7), (13, 3))     ((2, 19), (3, 10), (4, 7))
+20  2^2*5    Goldbach ((3, 17), (7, 13))   ((2, 20),)
+21  2^0*21   Lemoine ((7, 7), (11, 5), (17, 2)) ((2, 21), (3, 11), (5, 6))
+22  2^1*11   Goldbach ((3, 19), (5, 17), (11, 11)) ((2, 22), (4, 8))
+23  2^0*23   Lemoine ((13, 5), (17, 3), (19, 2)) ((2, 23), (3, 12))
+24  2^3*3    Goldbach ((5, 19), (7, 17), (11, 13)) ((2, 24),)
+25  2^0*25   Lemoine ((3, 11), (11, 7), (19, 3)) ((2, 25), (3, 13), (4, 9), (5, 7))
+26  2^1*13   Goldbach ((3, 23), (7, 19), (13, 13)) ((2, 26), (6, 6))
+27  2^0*27   Lemoine ((5, 11), (13, 7), (17, 5), (23, 2)) ((2, 27), (3, 14))
+28  2^2*7    Goldbach ((5, 23), (11, 17))  ((2, 28), (4, 10))
+29  2^0*29   Lemoine ((3, 13), (7, 11), (19, 5), (23, 3)) ((2, 29), (3, 15), (5, 8))
+30  2^1*15   Goldbach ((7, 23), (11, 19), (13, 17)) ((2, 30),)
+
+selected operation readings:
+  N=14: odd_core=7, v2=1, Goldbach=((3, 11), (7, 7)), Lemoine=-, product_sum=((2, 14),)
+  N=15: odd_core=15, v2=0, Goldbach=-, Lemoine=((5, 5), (11, 2)), product_sum=((2, 15), (3, 8))
+  N=16: odd_core=1, v2=4, Goldbach=((3, 13), (5, 11)), Lemoine=-, product_sum=((2, 16), (4, 6))
+  N=18: odd_core=9, v2=1, Goldbach=((5, 13), (7, 11)), Lemoine=-, product_sum=((2, 18),)
+  N=21: odd_core=21, v2=0, Goldbach=-, Lemoine=((7, 7), (11, 5), (17, 2)), product_sum=((2, 21), (3, 11), (5, 6))
+  N=24: odd_core=3, v2=3, Goldbach=((5, 19), (7, 17), (11, 13)), Lemoine=-, product_sum=((2, 24),)
+
+== interpretation ==
+A000568 is the unmarked quotient of complete binary relations.  Its Burnside formula only sees odd permutation cycles; the LRC operation-grid lift keeps a parallel odd/even memory by splitting each speed into an odd x+2 row and a vertical x*2 branch.
+Addition supplies fixed-sum and adjacent-row gates: Goldbach p+q=N for even N and Lemoine p+2q=N for odd N.  Multiplication supplies branch/factor gates: dyadic height, odd cores, divisibility, and the shifted product-sum equation (a-1)(b-1)=N-1.
+The useful loneliness object is therefore not a scalar H.  It is a marked fiber over A000568 carrying phase H, observer score, close-pair tie rate, two-neighbor width, strict pressure SCCs, and operation-grid labels.

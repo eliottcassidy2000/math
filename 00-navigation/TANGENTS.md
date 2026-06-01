@@ -64,6 +64,12 @@ S510 refines the rooted/marked quotient frame with sparse clock-image counts: th
 **T604** #lrc #counterexample-shape #endpoint-pressure #A000568 | certainty: proof-strategy reframing | source: codex-2026-06-01-S510
 A serious LRC counterexample should look like an arithmetic loop in the observer-marked A000568 fiber that avoids every safe target and carries a nonempty endpoint-pressure core. Scalar near-misses without a marked target-avoidance loop are not yet disproof-shaped.
 
+**T606** #lrc #tournament-analysis #operation-grid #arc-criteria | certainty: computed taxonomy | source: codex-2026-06-01-S511c
+Runner-level operation arc rules split into ledgers, phase perturbations, and marked bundle coordinates. Static dyadic/odd-core labels do not move with time; product-sum and Goldbach/Lemoine gates perturb phase only at operation hits; bundled votes create a separate marked-fiber fingerprint. See HYP-1983.
+
+**T607** #goldbach #lemoine #product-sum #lrc #A000568 | certainty: structural synthesis + finite table | source: codex-2026-06-01-S511c
+The useful arithmetic menu is `N=p+q` for even denominators, `N=p+2q` for odd denominators, `N=2^h*odd_core` for multiplicative branch position, and `(a-1)(b-1)=N-1` for the product-sum interface. This is the operation layer above the A000568 complete-relation base.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 

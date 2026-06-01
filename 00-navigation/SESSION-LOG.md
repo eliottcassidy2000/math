@@ -10,6 +10,17 @@
 **Synthesis:** Added HYP-1982 and `07-reflections/lrc-as-threshold-decorated-tournament-class-fiber-s512.md`, updated HYP-1951/HYP-1976, result/hypothesis indexes, concept map, and tangent T605. The viable n=14 route is not full A000568(14) enumeration; it is proving that the hard quotient-ladder walk in a compressed gap/pair/endpoint-pressure fiber must hit a good-only threshold class.
 **Verification:** `python3 -m py_compile 04-computation/lrc_iso_class_constraint_s512.py`; full script rerun stored output.
 
+## codex-2026-06-01-S511c - LRC operation arc zoo
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; close-out rebase found upstream S512 had claimed HYP-1982/T605, so this branch was renumbered to HYP-1983 and tangents T606/T607.
+**User prompt:** Spend a long session inventing LRC Tournament Analysis arc definitions until H values, score sequences, and related invariants become useful loneliness metrics; connect to A000568, Goldbach/Lemoine odd/even prime gates, the `x+2`/`x*2` grid, addition, multiplication, and equations relating them.
+**Computation:** Added `04-computation/lrc_operation_arc_zoo_s511.py` and stored `05-knowledge/results/lrc_operation_arc_zoo_s511.out`. The script tests twelve runner-level arc criteria: phase, endpoint clearance, endpoint deficit, two-neighbor guard, dyadic height, odd-core row, same-chain dyadic-over-phase, adjacent odd-row-over-phase, product-sum gate, Goldbach/Lemoine gate, danger-grid, and operation-bundle vote.
+**Findings:** Static arithmetic labels are ledgers, not time meters; phase remains the global H/c3 spread channel (`H -> max_gap = -0.733`, `c3 -> max_gap = -0.780` on small clocks); scalar endpoint/two-neighbor rankers collapse to transitive H on hard rows; phase-overridden operation gates perturb initial-row H and score histograms; danger-grid and operation-bundle gauges create separate marked-fiber coordinates with nontrivial strict SCCs on n14 hard rows.
+**Arithmetic synthesis:** Even denominators use Goldbach gates `N=p+q`, odd denominators use Lemoine gates `N=p+2q`, multiplication gives `N=2^h*odd_core`, and product-sum supplies the interface `(a-1)(b-1)=N-1`. This supports the A000568 view as an unmarked complete-relation base with LRC proof data living in the observer/endpoint/operation marked fiber.
+**Synthesis:** Added HYP-1983 and `07-reflections/lrc-operation-arc-zoo-s511.md`; updated result/hypothesis indexes, concept map, and tangents T606/T607.
+**Verification:** `python3 -m py_compile 04-computation/lrc_operation_arc_zoo_s511.py`; full script rerun with output stored.
+
 ## oracle-2026-06-01-S511 - LRC as source-reachability in the marked A000568 quotient
 
 **Account:** Oracle (remote-control). **User prompt:** explore many creative paths for how LRC is completely analogous to a problem on tournament iso-classes and A000568.
