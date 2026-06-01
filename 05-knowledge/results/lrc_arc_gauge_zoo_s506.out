@@ -1,0 +1,205 @@
+LRC arc-gauge zoo (codex-2026-06-01 S506c)
+========================================================================================================================
+Selected rows: gauges are evaluated at the LRC witness boundary or gap midpoint.
+H is exact for gauges with <=14 vertices; n=18 rows still report score/c3/SCC.
+
+[n14 initial]
+  mode=initial t=1/14 origin/th=1
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             14 24104937   2.265      1 112   14  0/0       7 6:7 7:7
+  origin_danger_rank     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  local_moat_rank        14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  close_pair_switch      14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  danger_band_switch     14    44013   0.004     11  22   14  0/0      11 1:1 2:2 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:2 12:1
+  quarter_lead_switch    14   870785   0.082      7  56   14  0/0      10 3:4 4:1 5:1 6:1 7:1 8:1 9:1 10:4
+  open_arc_density       14 24104937   2.265      1 112   14  0/0       6 6:7 7:7
+  open_arc_count         14 24104937   2.265      1 112   14  0/0       6 6:7 7:7
+  blocker_relief         14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  two_neighbor_relief    14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  threshold_deficit      14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_two_guard     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_relief_rank   14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_escape         14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_close_switch   14     4097   0.000     11  12   14  0/0      12 1:2 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:2
+  endpoint_cross_protect 13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+  endpoint_debt_rank     13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+
+[n14 row-parent]
+  mode=row-parent t=3053/25872 origin/th=29/24
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             14 22168229   2.083      3 110   14  0/0       7 5:1 6:6 7:6 8:1
+  origin_danger_rank     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  local_moat_rank        14        1   0.000     13   0    1  1/1       1 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  close_pair_switch      14   109371   0.010     12  38   13  1/0      13 1:2 4:2 5:1 6:2 7:2 8:1 9:1 10:2 13:1
+  danger_band_switch     14  4231707   0.398      9  71   14  0/0       9 3:2 4:1 5:3 6:1 7:2 8:2 9:2 12:1
+  quarter_lead_switch    14  9268187   0.871      7  87   14  0/0      10 3:1 4:1 5:2 6:4 7:2 8:2 10:2
+  open_arc_density       14  2952757   0.277      9  76   14  0/0       5 3:1 4:1 5:4 6:2 7:2 8:2 10:1 12:1
+  open_arc_count         14 24369345   2.290      1 112   14  0/0       7 6:7 7:7
+  blocker_relief         14     3601   0.000     12  14   12  0/1      12 0:1 1:1 3:2 4:1 5:1 7:2 8:1 9:1 10:2 12:2
+  two_neighbor_relief    14   183523   0.017     11  40   14  0/0      12 1:1 2:1 4:2 5:2 6:2 7:1 8:1 9:1 11:2 12:1
+  threshold_deficit      14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_two_guard     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_relief_rank   14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_escape         14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_close_switch   14  2703685   0.254     10  53   14  0/0      12 2:2 4:2 5:1 6:3 7:1 8:1 9:2 11:1 12:1
+  endpoint_cross_protect 13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+  endpoint_debt_rank     13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+
+[n14 gate]
+  mode=gate t=4339/51744 origin/th=4339/3696
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             14 17826951   1.675      3 106   14  0/0       7 5:3 6:4 7:4 8:3
+  origin_danger_rank     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  local_moat_rank        14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  close_pair_switch      14   207651   0.020     12  36   13  1/0      13 1:1 2:1 3:1 4:1 5:1 6:3 7:1 8:1 9:1 10:1 11:1 13:1
+  danger_band_switch     14  3826755   0.360      8  71   14  0/0       9 3:2 4:2 5:2 7:3 8:2 9:1 10:1 11:1
+  quarter_lead_switch    14  3090233   0.290      9  63   14  0/0      11 2:1 3:1 4:2 5:2 6:1 7:1 8:3 10:2 11:1
+  open_arc_density       14   452385   0.043      9  60   14  0/0       3 2:1 3:2 4:1 5:1 6:2 7:2 8:1 9:1 10:2 11:1
+  open_arc_count         14 24104937   2.265      1 112   14  0/0       7 6:7 7:7
+  blocker_relief         14      161   0.000     13   8   10  1/1      12 0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:2 12:1 13:1
+  two_neighbor_relief    14    55701   0.005     11  26   13  1/0      13 2:3 3:1 4:1 5:1 6:1 7:1 8:2 9:1 11:2 13:1
+  threshold_deficit      14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_two_guard     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_relief_rank   14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_escape         14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_close_switch   14  1249481   0.117     10  52   14  0/0      11 2:1 3:2 4:1 5:2 6:1 7:2 8:2 10:1 11:1 12:1
+  endpoint_cross_protect 13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+  endpoint_debt_rank     13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+
+[n14 double-gate]
+  mode=double-gate t=8035/103488 origin/th=8035/7392
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             14 17826951   1.675      3 106   14  0/0       7 5:3 6:4 7:4 8:3
+  origin_danger_rank     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  local_moat_rank        14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  close_pair_switch      14   207651   0.020     12  36   13  1/0      13 1:1 2:1 3:1 4:1 5:1 6:3 7:1 8:1 9:1 10:1 11:1 13:1
+  danger_band_switch     14  3826755   0.360      8  71   14  0/0       9 3:2 4:2 5:2 7:3 8:2 9:1 10:1 11:1
+  quarter_lead_switch    14  3090233   0.290      9  63   14  0/0      11 2:1 3:1 4:2 5:2 6:1 7:1 8:3 10:2 11:1
+  open_arc_density       14   452385   0.043      9  60   14  0/0       3 2:1 3:2 4:1 5:1 6:2 7:2 8:1 9:1 10:2 11:1
+  open_arc_count         14 24104937   2.265      1 112   14  0/0       7 6:7 7:7
+  blocker_relief         14      161   0.000     13   8   10  1/1      12 0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:2 12:1 13:1
+  two_neighbor_relief    14    55701   0.005     11  26   13  1/0      13 2:3 3:1 4:1 5:1 6:1 7:1 8:2 9:1 11:2 13:1
+  threshold_deficit      14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_two_guard     14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  observer_relief_rank   14        1   0.000     13   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_escape         14        1   0.000     13   0    1  1/1      13 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1
+  kinetic_close_switch   14  1249481   0.117     10  52   14  0/0      11 2:1 3:2 4:1 5:2 6:1 7:2 8:2 10:1 11:1 12:1
+  endpoint_cross_protect 13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+  endpoint_debt_rank     13        1   0.000     12   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1
+
+[n18 initial]
+  mode=initial t=1/18 origin/th=1
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             18        -       -      1 240   18  0/0       9 8:9 9:9
+  origin_danger_rank     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  local_moat_rank        18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  close_pair_switch      18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  danger_band_switch     18        -       -     15  30   18  0/0      15 1:1 2:2 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:2 16:1
+  quarter_lead_switch    18        -       -      9 120   18  0/0      13 4:5 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:5
+  open_arc_density       18        -       -      1 240   18  0/0       8 8:9 9:9
+  open_arc_count         18        -       -      1 240   18  0/0       8 8:9 9:9
+  blocker_relief         18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  two_neighbor_relief    18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  threshold_deficit      18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_two_guard     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_relief_rank   18        -       -     17   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_escape         18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_close_switch   18        -       -     15  16   18  0/0      16 1:2 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:2
+  endpoint_cross_protect 17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+  endpoint_debt_rank     17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+
+[n18 row-parent]
+  mode=row-parent t=3991/57024 origin/th=3991/3168
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             18        -       -      1 240   18  0/0       8 8:9 9:9
+  origin_danger_rank     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  local_moat_rank        18        -       -     17   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  close_pair_switch      18        -       -     16  64   17  1/0      17 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:3 9:1 10:1 11:1 12:1 13:1 14:1 15:1 17:1
+  danger_band_switch     18        -       -     13 117   18  0/0      13 3:1 4:3 5:1 6:2 7:1 8:1 9:2 11:1 12:4 13:1 16:1
+  quarter_lead_switch    18        -       -     10 173   18  0/0      13 4:1 5:2 6:2 7:3 8:1 9:2 10:2 11:3 13:1 14:1
+  open_arc_density       18        -       -      8 184   18  0/0       9 5:2 6:3 7:3 8:2 9:1 10:3 11:1 12:1 13:2
+  open_arc_count         18        -       -      1 240   18  0/0       8 8:9 9:9
+  blocker_relief         18        -       -     17  12   14  1/1      16 0:1 1:1 3:2 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:2 16:1 17:1
+  two_neighbor_relief    18        -       -     15  37   17  1/0      17 2:2 3:2 4:1 5:1 6:1 7:2 9:2 10:1 12:1 13:1 14:1 15:2 17:1
+  threshold_deficit      18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_two_guard     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_relief_rank   18        -       -     17   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_escape         18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_close_switch   18        -       -     14  94   18  0/0      15 2:1 3:1 4:2 5:1 6:2 7:1 8:1 9:2 11:2 12:2 13:1 15:1 16:1
+  endpoint_cross_protect 17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+  endpoint_debt_rank     17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+
+[n18 gate]
+  mode=gate t=8681/114048 origin/th=41/32
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             18        -       -      3 236   18  0/0      10 7:2 8:7 9:7 10:2
+  origin_danger_rank     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  local_moat_rank        18        -       -     17   0    1  1/1       1 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  close_pair_switch      18        -       -     16  60   17  1/0      17 1:2 3:1 4:1 5:1 6:1 8:4 9:1 10:1 11:1 13:2 14:2 17:1
+  danger_band_switch     18        -       -     13 124   18  0/0      13 3:1 4:2 5:2 6:2 7:1 8:1 9:2 11:2 12:3 13:1 16:1
+  quarter_lead_switch    18        -       -     10 172   18  0/0      14 4:1 5:2 6:3 8:4 9:2 11:4 13:1 14:1
+  open_arc_density       18        -       -     12 123   18  0/0       2 1:1 2:1 5:3 7:3 9:1 10:1 11:2 12:5 13:1
+  open_arc_count         18        -       -      1 240   18  0/0       9 8:9 9:9
+  blocker_relief         18        -       -     16  22   16  0/1      16 0:1 1:1 3:2 4:1 5:1 7:2 8:1 9:1 10:1 11:1 12:1 13:1 14:2 16:2
+  two_neighbor_relief    18        -       -     14  40   18  0/0      15 1:1 2:2 4:2 5:1 7:2 8:2 9:1 11:1 12:1 14:2 15:3
+  threshold_deficit      18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_two_guard     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_relief_rank   18        -       -     17   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_escape         18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_close_switch   18        -       -     14  85   18  0/0      16 2:2 3:1 4:1 5:1 6:1 8:4 9:1 10:1 11:1 12:1 13:2 15:1 16:1
+  endpoint_cross_protect 17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+  endpoint_debt_rank     17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+
+[n18 double-gate]
+  mode=double-gate t=15017/228096 origin/th=15017/12672
+  gauge                  V        H   Hratio scoreW c3  SCC src/sink obsOut score-hist
+  phase_half             18        -       -      3 236   18  0/0      10 7:2 8:7 9:7 10:2
+  origin_danger_rank     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  local_moat_rank        18        -       -     17   0    1  1/1       1 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  close_pair_switch      18        -       -     16  60   17  1/0      17 1:2 3:1 4:1 5:1 6:1 8:4 9:1 10:1 11:1 13:2 14:2 17:1
+  danger_band_switch     18        -       -     14 112   17  1/0      13 3:1 4:3 5:1 6:2 7:1 8:1 9:2 11:2 12:3 13:1 17:1
+  quarter_lead_switch    18        -       -     10 166   18  0/0      14 4:1 5:2 6:3 7:1 8:3 9:2 11:4 14:2
+  open_arc_density       18        -       -     12 124   18  0/0       2 1:1 2:1 5:2 6:2 7:2 9:1 10:1 11:2 12:5 13:1
+  open_arc_count         18        -       -      1 240   18  0/0       9 8:9 9:9
+  blocker_relief         18        -       -     16  27   16  0/1      16 0:1 1:1 3:2 4:1 5:1 7:1 8:2 9:1 10:1 11:1 12:2 14:2 16:2
+  two_neighbor_relief    18        -       -     16  24   17  1/0      15 1:1 2:2 3:1 4:1 5:1 7:3 9:2 11:1 12:1 13:1 14:1 15:2 17:1
+  threshold_deficit      18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_two_guard     18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  observer_relief_rank   18        -       -     17   0    1  1/1       0 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_escape         18        -       -     17   0    1  1/1      17 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1 17:1
+  kinetic_close_switch   18        -       -     14  77   18  0/0      16 2:2 3:1 4:1 5:1 6:1 7:1 8:3 9:1 10:1 11:1 12:1 13:2 16:2
+  endpoint_cross_protect 17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+  endpoint_debt_rank     17        -       -     16   0    1  1/1       - 0:1 1:1 2:1 3:1 4:1 5:1 6:1 7:1 8:1 9:1 10:1 11:1 12:1 13:1 14:1 15:1 16:1
+
+CORRELATION AUDIT ON N14 ROW-PARENT/GATE TIME SAMPLES
+========================================================================================================================
+Target is actual observer loneliness margin min||v t||/(1/n).
+Positive corr means the invariant rises when the observer is lonelier.
+
+gauge                  samples    Hratio    scoreW        c3    obsOut read
+blocker_relief              50     0.023     0.036    -0.180    -0.175 deletion relief / pressure
+close_pair_switch           50    -0.409     0.419    -0.444     0.506 edge-local threshold switch
+danger_band_switch          50     0.034     0.021     0.081    -0.012 edge-local threshold switch
+kinetic_close_switch        50    -0.130     0.061    -0.053     0.269 velocity-aware wall-crossing
+kinetic_escape              50         -         -         -         - velocity-aware wall-crossing
+local_moat_rank             50         -         -         -    -0.710 scalar rank; readable but often H=1
+observer_relief_rank        50         -         -         -         - scalar rank; readable but often H=1
+observer_two_guard          50    -0.330     0.200    -0.365     0.506 marked observer two-neighbor guard
+open_arc_count              50    -0.158         -         -     0.099 global circular spread
+open_arc_density            50     0.190    -0.303     0.403    -0.090 global circular spread
+origin_danger_rank          50         -         -         -         - scalar rank; readable but often H=1
+phase_half                  50     0.393    -0.439     0.416     0.044 global circular spread
+quarter_lead_switch         50     0.086    -0.161     0.106     0.175 edge-local threshold switch
+threshold_deficit           50    -0.081     0.277    -0.006     0.514 deletion relief / pressure
+two_neighbor_relief         50     0.184    -0.067     0.174     0.231 deletion relief / pressure
+
+SYNTHESIS
+========================================================================================================================
+1. Rank gauges are useful diagnostics but poor tournaments: H usually collapses to 1.
+2. Phase/open-arc gauges are global circular-spread meters; phase_H is the HYP-1970 channel.
+3. Close/danger/kinetic-close switches preserve local 1/n crowding and approach bits.
+4. Blocker, two-neighbor, and threshold-deficit relief are pressure gauges; SCC > 1 is the core alarm.
+5. Observer-two-guard is the marked loneliness channel: observer outdegree tracks the bracket directly.
+6. Runner-level endpoint summaries were transitive here; endpoint data should stay labelled, not collapsed.
+7. A useful LRC metric is therefore a bundle:
+   phase_H + open_arc scores + threshold-switch c3 + pressure SCC/sinks + observer out + endpoint debt.

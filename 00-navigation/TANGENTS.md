@@ -46,6 +46,12 @@ LRC arc gauges split into ranker/entropy/pressure families. Scalar rankers (`ori
 **T569** #lrc #composite-metric #pressure-k2 #safe-phase | certainty: medium-high proof target | source: codex-2026-06-01-S506
 Future LRC row summaries should use a vector, not a single tournament: `(H_ratio(phase_half), H_ratio(safe_phase_gate), score_width(pressure_k2), largest_SCC(pressure_k2), endpoint_debt, gap*endpoint_debt)`. A real counterexample-shaped row should perturb phase H, trigger endpoint-safe alarm, and carry a pressure SCC with surviving endpoint core.
 
+**T597** #lrc #tournament-analysis #arc-gauges #loneliness-metric | certainty: high computational | source: codex-2026-06-01-S506c
+LRC loneliness should be measured as a gauge bundle, not one tournament: phase/open-arc gauges record global spread, close/danger/kinetic switches record local `1/n` crowding, relief gauges record pressure peeling, observer outdegree records the marked bracket, and endpoint debt must stay labelled. See HYP-1975.
+
+**T598** #lrc #open-arc-density #H #n14 | certainty: computed bridge gauge | source: codex-2026-06-01-S506c
+Open-arc density is a promising bridge between half-turn H and local crowding: on n=14 it separates row-parent from gate (`H=2952757` vs `452385`) and its c3 count correlates `+0.403` with observer margin across deterministic hard-row time samples.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 

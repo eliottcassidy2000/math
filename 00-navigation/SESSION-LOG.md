@@ -10,6 +10,16 @@
 **Synthesis:** Added HYP-1972 and `07-reflections/lrc-arc-criteria-loneliness-s506.md`, updated result/hypothesis indexes, concept map, and tangent T596. Pressure gauges remain proof-shape gauges: in selected hard rows their strict SCCs stay `1` and strict triangle counts stay `0`, so they still support the pressure-DAG certificate story rather than a cyclic pressure-core disproof signal.
 **Verification:** `python3 -m py_compile 04-computation/lrc_arc_criteria_loneliness_s506.py`; full script rerun stored the output.
 
+## codex-2026-06-01-S506c - LRC arc-gauge bundle for Tournament Analysis
+
+**Account:** Codex
+**Git first:** Started from `main...origin/main` with a recovered WIP script; rebased over concurrent S506/S506b gauge work before close-out.
+**User prompt:** Spend a long session inventing possible criteria for assigning arcs in LRC Tournament Analysis until their shapes, H values, score sequences, or related invariants become useful loneliness metrics.
+**Computation:** Added `04-computation/lrc_arc_gauge_zoo_s506.py` and stored `05-knowledge/results/lrc_arc_gauge_zoo_s506.out`. The script evaluates n=14/n=18 initial, row-parent, gate, and double-gate rows under phase, rank, close-pair, danger-band, quarter-lead, open-arc density/count, blocker relief, two-neighbor relief, threshold-deficit, observer two-guard, observer relief rank, kinetic escape, kinetic-close, and endpoint summary gauges.
+**Findings:** Scalar ranks and speed-level endpoint summaries mostly collapse to transitive tournaments, so they are ledgers rather than useful switchboards. Phase H remains the global spread channel (`n14: 24104937 -> 22168229 -> 17826951`) and correlates positively with observer margin in the n=14 time audit (`Hratio +0.393`). Open-arc density is the best new bridge gauge (`n14 row-parent H=2952757`, gate `452385`, c3 correlation `+0.403`). Local crowding switches, kinetic-close, and two-neighbor relief retain separate nontransitive structure; pressure SCC/source/sink data should be read alongside H rather than replaced by it.
+**Synthesis:** Added HYP-1975 and `07-reflections/lrc-arc-gauge-zoo-s506.md`. The practical LRC loneliness metric is a gauge bundle: `phase_H + open_arc_density + danger/close switches + pressure SCCs + observer outdegree + labelled endpoint debt`. Endpoint data should remain labelled at the endpoint-runner pair-cell level before any tournament projection.
+**Next:** Build a labelled endpoint-runner switchboard rather than speed-level endpoint ranks; add corridor movies for these gauges across the full LRC gap interval; search for the first pressure `largest_scc > 1` after endpoint-private leaves are peeled.
+
 ## codex-2026-06-01-S26b - H as a half-turn loneliness meter, corrected
 
 **Account:** Codex
