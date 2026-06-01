@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S23 - Tournament Analysis Metric Lifts
+
+**Account:** Codex on `oracle`. **User prompt:** Define Tournament Analysis as the repo's primary process: lift pairwise metrics or continuous geometry into binary relations/tournaments via creative comparators, then study tournament structure as variables change.
+**Computation:** Added `04-computation/tournament_analysis_metric_lifts_s23.py` and stored `05-knowledge/results/tournament_analysis_metric_lifts_s23.out`. The script tests directed basketball pass flux, circle-runner arc/chord/phase/lens/switch metrics, cuboid/sphere/simplex-style Lp/entropy/area/volume lifts, and active LRC witness rows from `n=14,15,16`.
+**Findings:** The central split is ranker versus analyzer. Score/rank lifts assign one scalar per vertex and collapsed to transitive tournaments in all `316/316` sampled continuous cases. Edge-local and edge-switch lifts decide each pair separately and were transitive only `1/290` times, with broad Hamiltonian-path ranges such as circle phase `H=65..653`, circle median-switch `H=51..653`, and cube `Linf` resonance `H=15..659`. The user-requested "switch every pair by a metric" is captured by a switch lift: symmetric distance `D_ij` toggles each edge against a fixed Hamiltonian-path label order.
+**Synthesis:** Added HYP-1931 and `07-reflections/tournament-analysis-metric-lifts-s23.md`, and added Tournament Analysis to the concept map. The proposed abstraction stack is: raw data -> metric/sensor -> comparator -> tournament -> invariants -> wall-crossing path. The comparator is the creative step; rank comparators are useful shadows, but edge-local/switch comparators preserve the cyclic data seen by OCF and Hamiltonian-path machinery.
+**Verification:** `python3 -m py_compile 04-computation/tournament_analysis_metric_lifts_s23.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S452 - LRC Runner-Distance Tournament Lift
 
 **Account:** Codex
@@ -20,7 +28,6 @@
 **Findings:** The scalar lonely gap is a lossy projection. Initial `k=4` and sporadic `n=5` collapse to the same regular 5-gon at `t=1/5`; initial `k=5` is a regular 6-gon with antipodal incomplete-tournament ties; sporadic `n=6` is scalar-tight but has a moving-runner collision `v3=v9` at `t=1/6`. The n=14 ladder near-misses have lonely gaps above threshold but pairwise gaps far below threshold, so they are crowded difference-speed configurations rather than near-regular packings. Oracle S22 independently landed a complementary marked-bracket formulation as HYP-1895.
 **Synthesis:** Added HYP-1903 and `07-reflections/lrc-neighbor-tournament-lift-s431.md`. The proposed lift views LRC as a one-parameter walk through round/incomplete tournament configurations observed from the stationary vertex. The new proof target is a two-nearest protection core: zero-bracket cuts, local contact arcs, quotient collisions, and antipodal ties should be peeled by the same private-leaf/good-cut instincts used on tournaments.
 **Next:** Implement two-nearest core peeling and add its private-leaf count to the LRC search feature vector alongside endpoint-core size, pairwise-min-gap ratio, collision count, half-tournament score defect, and S22 marked bracket margin.
-
 ## oracle-2026-05-31-S22 - LRC Two-Neighbor Distance Tournament Lens
 
 **Account:** Codex on `oracle`. **User prompt:** Think creatively about how tournament structure may show up in LRC, especially whether tracking extra distance data between runners or two nearest neighbors instead of one can leverage tournament knowledge.

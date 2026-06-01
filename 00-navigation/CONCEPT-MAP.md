@@ -12,6 +12,7 @@
 | Concept | Definition | Key Properties | Where Used |
 |---------|-----------|---------------|------------|
 | **Tournament** T | Complete directed graph on n vertices | Every pair has exactly one arc | Everywhere |
+| **Tournament Analysis** | Pipeline from pairwise/geometric data to binary comparators, tournaments, invariants, and wall-crossing paths | Rank lifts collapse to transitive tournaments; edge-local/switch lifts preserve cyclic structure | HYP-1931, S23 |
 | **Opposite tournament** T^op | Reverse all arcs: T^op(u,v) = T(v,u) | H(T) = H(T^op) for Hamiltonian paths | THM-002, THM-030 |
 | **Self-complementary (SC) tournament** | T ≅ T^op via some permutation | Exists only at n ≡ 0,1 (mod 4); |Aut| always odd (Moon) | THM-024, INV-043, T019 |
 | **Self-converse tournament** | T has an anti-automorphism | SC ⊂ Self-converse; all circulant tournaments are SC | THM-052 |

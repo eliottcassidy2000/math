@@ -1,0 +1,81 @@
+TOURNAMENT ANALYSIS METRIC LIFTS (oracle-2026-06-01-S23)
+======================================================================================================================
+Tournament Analysis means choosing a meaningful binary comparator for each pair, then studying the resulting tournament and its changes.
+
+A. DISCRETE DIRECTED DATA: BASKETBALL PASS TOURNAMENT
+======================================================================================================================
+  tie-break is fixed path 1 -> 2 -> 3 -> 4 -> 5.
+  quarter        ties score_hist      cycles H  scc reg2 flips
+  Q1 guard hub      2 ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1))      0  1    5   12     -
+  Q2 triangle       2 ((1, 1), (2, 3), (3, 1))      4 11    1    4     6
+  Q3 post split     2 ((1, 1), (2, 3), (3, 1))      4 13    1    4     8
+  Q4 scramble       1 ((0, 1), (2, 2), (3, 2))      2  5    2    8     4
+
+B. CONTINUOUS CIRCLE RUNNERS: MANY METRIC LIFTS
+======================================================================================================================
+  family      lift                    kind        n samp states flips maxF trans cyc-range H-range reg2 scc
+  circle8     phase-halfturn          edge-local  8   28     28   340   28     0 6..20     65..653  8..28   1
+  circle8     pivot-area              edge-local  8   28     28   340   28     0 6..20     65..653  8..28   1
+  circle8     anchor-arc-far          score       8   28     14   210   15    28 0         1        32      8
+  circle8     anchor-chord-far        score       8   28     14   210   15    28 0         1        32      8
+  circle8     row-sum-arc             score       8   28     14   318   18    28 0         1        32      8
+  circle8     row-sum-chord           score       8   28     14   322   18    28 0         1        32      8
+  circle8     local-cell-radius       score       8   28     13   314   16    28 0         1        32      8
+  circle8     profile-entropy         score       8   28     14   368   19    28 0         1        32      8
+  circle8     label-shift-arc         edge-local  8   28     14   230   11     0 10..20    107..653 8..24   1
+  circle8     arc-median-switch       edge-switch  8   28     14   340   19     0 9..20     51..653  8..22   1..2
+  circle8     chord-resonance         edge-switch  8   28     14   372   20     0 10..20    81..651  8..22   1
+  circle8     receding-anchor         score       8   28     28   378   28    28 0         1        32      8
+
+circle8 exact state-sequence clusters
+======================================================================================================================
+  same tournament path: phase-halfturn, pivot-area
+  same tournament path: anchor-arc-far, anchor-chord-far
+
+C. CUBOID / SPHERE / SIMPLEX-STYLE LIFTS
+======================================================================================================================
+  family      lift                    kind        n samp states flips maxF trans cyc-range H-range reg2 scc
+  cube8       cuboid-L1-row           score       8   30     30   277   17    30 0         1        32      8
+  cube8       cuboid-L2-row           score       8   30     30   264   18    30 0         1        32      8
+  cube8       cuboid-Linf-row         score       8   30     29   267   20    30 0         1        32      8
+  cube8       simplex-entropy         score       8   30     30   294   19    30 0         1        32      8
+  cube8       label-shift-L2          edge-local  8   30     29   217   13     0 6..19     51..585  10..28  1
+  cube8       L2-median-switch        edge-switch  8   30     30   318   19     0 7..19     33..589  10..26  1..3
+  cube8       Linf-resonance          edge-switch  8   30     30   359   20     0 4..20     15..659  8..28   1..3
+  cube8       xy-area                 edge-local  8   30     30   329   17     1 0..20     1..653   8..32   1..8
+  cube8       drift-volume            edge-local  8   30     30   325   15     0 6..20     65..653  8..28   1
+
+cube8 exact state-sequence clusters
+======================================================================================================================
+  no exact coincidences
+
+D. ACTIVE LRC WITNESS ROWS UNDER MULTIPLE TOURNAMENT LIFTS
+======================================================================================================================
+  sample     t          margin      phase cyc/H  anchor cyc/H cell cyc/H  shift cyc/H switch phase hist
+  n14 d=7   3053/25872 +0.014881       110/-           0/-        0/-       110/-  108/- ((5, 1), (6, 6), (7, 6), (8, 1))
+  n14 d=14  4339/51744 +0.012427       106/-           0/-        0/-       110/-  110/- ((5, 3), (6, 4), (7, 4), (8, 3))
+  n15 d=3   3271/11880 +0.019444       138/-           0/-        0/-       133/-  132/- ((6, 2), (7, 11), (8, 2))
+  n15 d=5   3271/19800 +0.019444       139/-           0/-        0/-       138/-  129/- ((6, 1), (7, 13), (8, 1))
+  n16 d=2   47/264     +0.005682       162/-           0/-        0/-       158/-  161/- ((6, 3), (7, 5), (8, 5), (9, 3))
+  n16 d=8   85/1056    +0.005682       168/-           0/-        0/-       164/-  156/- ((7, 8), (8, 8))
+
+E. SYNTHESIS: WHAT TOURNAMENT ANALYSIS IS TESTING
+======================================================================================================================
+  abstraction stack:
+    raw data -> metric/sensor -> comparator -> tournament -> invariants -> wall-crossing path
+
+  Score lifts are rankers.  They orient i,j by scalar s_i - s_j, so distinct scores force transitive tournaments.
+    observed score transitive samples: 316/316
+  Edge-local and edge-switch lifts are analyzers.  They decide every pair from pair- or lens-specific data, so cycles can survive.
+    observed edge-local transitive samples: 1/290
+
+  useful layer names:
+    flux lift:       directed counts, e.g. basketball passes i->j vs j->i
+    phase lift:      circular half-turn/chirality from moving runners
+    rank lift:       any centrality, distance-to-anchor, entropy, or isolation score
+    lens lift:       pair i,j compared through a third label, anchor, or shifted coordinate
+    switch lift:     symmetric distance D_ij toggles a base Hamiltonian-path edge
+    volume lift:     oriented area/volume after embedding in sphere/cuboid/simplex
+    dynamic lift:    edge flips as the continuous variable crosses comparator walls
+
+  repo connection: the Hamiltonian tie-break path is not a detail.  It is the fixed labelled path used to complete ties, just as the tiling model uses a base path and S22 used lex completion for degenerate circle states.
