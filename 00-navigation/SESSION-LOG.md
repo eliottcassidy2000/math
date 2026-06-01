@@ -1,5 +1,17 @@
 # Session Log
 
+## oracle-2026-06-01-S26 - H as a loneliness meter: resolution and what it counts
+
+**Account:** Oracle (remote-control). **User prompt:** spend another session investigating H as a loneliness meter.
+**Setup:** half-turn (round) tournament from n circle points i->j iff (x_i-x_j)mod1 in (0,1/2); H = directed Hamiltonian-path count. 20000-sample exact study (H_loneliness_meter_s26.py), n=5,6,7.
+**Findings:**
+1. ONE SHARP READING: H=1 (transitive) <=> max_gap >= 1/2 EXACTLY (all n) = an empty semicircle = the n=2 lonely-runner gap. The unique sharp threshold.
+2. ABOVE THRESHOLD H IS COARSE: max_gap ranges of distinct H overlap heavily; H is NOT a function of max_gap and ranges are not strictly ordered -- only the MEAN max_gap is monotone in H. The tournament quantizes the gap profile (records only which cumulative arcs cross 1/2), so a single half-turn tournament can sharply detect ONLY the 1/2 threshold; finer gaps are quantized away. This is why the clock lens lives at 1/2 and LRC's 1/n needs richer comparators (S25 alpha=1/k).
+3. WHAT IT COUNTS: #3-cycles(T) = #{triples whose 3 pairwise arcs are all <1/2} = #{triples not in any semicircle} (spread-triple count), = C(n,3)-sum C(s_i,2). At n=5 a perfect monotone bijection with H (#3cyc 0,3,4,5 <-> H 1,9,11,15). But H is STRICTLY FINER than score-based meters: n=6 H=41 vs 45 (and n=7 H=123 vs 137) share score seq and #3-cycles yet differ in H -- H sees the cyclic ARRANGEMENT, not just degrees.
+4. METER HIERARCHY: min-out-deg=0 (binary 1/2-gap) < score-seq/#3-cycles/score-var (spread profile) < H (finer). Per-runner 1/2-loneliness = out-degree s_i (#runners in i's leading semicircle); s_i=0 flags an empty semicircle ahead of i.
+**LRC tie:** H meters the n=2 threshold; LRC's 1/n is sub-1/2 and local, beyond a single tournament's resolution -- needs the alpha=1/k lift or the whole clock walk. New HYP-1968. Reflection: 07-reflections/H-as-a-loneliness-meter-s26.md.
+**Next:** prove #3cyc=non-semicircle-triple count; characterise the H=41/45 finer feature (second-longest arc?); build the alpha=1/k meter whose transitive reading = the 1/k-gap.
+
 ## codex-2026-06-01-S503 - LRC Endpoint-Pressure Formalization
 
 **Account:** Codex
