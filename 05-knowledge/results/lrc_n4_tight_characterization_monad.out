@@ -1,0 +1,32 @@
+LRC n=4: characterizing the measure-ZERO (tight) triples (monad-S1, v2)
+
+speeds<= 20:  primitive triples=997  LRC failures=0
+   measure-zero (tight) triples: [(1, 2, 3)]
+     (1,2,3): closed-nonempty=True witness t*~0.2500 margin~0.2500
+   min POSITIVE |SAFE|: 0.035714 at (1, 6, 7)
+
+speeds<= 40:  primitive triples=8410  LRC failures=0
+   measure-zero (tight) triples: [(1, 2, 3)]
+     (1,2,3): closed-nonempty=True witness t*~0.2500 margin~0.2500
+   min POSITIVE |SAFE|: 0.035714 at (1, 6, 7)
+
+speeds<= 70:  primitive triples=46120  LRC failures=0
+   measure-zero (tight) triples: [(1, 2, 3)]
+     (1,2,3): closed-nonempty=True witness t*~0.2500 margin~0.2500
+   min POSITIVE |SAFE|: 0.035714 at (1, 6, 7)
+
+speeds<= 100:  primitive triples=135739  LRC failures=0
+   measure-zero (tight) triples: [(1, 2, 3)]
+     (1,2,3): closed-nonempty=True witness t*~0.2500 margin~0.2500
+   min POSITIVE |SAFE|: 0.035714 at (1, 6, 7)
+
+======================================================================
+EXACT confirmation of the unique small tight set:
+======================================================================
+  (1, 2, 3): t*=1/4 margins = [Fraction(1, 4), Fraction(1, 2), Fraction(1, 4)] (all = 1/4 = threshold) -> lonely witness EXACT
+
+======================================================================
+Parity lemma: all speeds odd => t=1/4 safe (||odd/4||=1/4). Tight => has even speed.
+======================================================================
+  all-odd primitive triples (<=40): 1100; all have t=1/4 witness: True
+  all-odd tight (measure 0): 0
