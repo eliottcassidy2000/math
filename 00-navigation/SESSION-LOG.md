@@ -19,6 +19,15 @@ Turned the doubling/apex/cascade metaphor thread into an EXACT, falsifiable extr
 **CORRECTION:** pairwise E2 alone NOT sufficient (AP E2=0.122<main but |LONELY|=0); need FULL E (incl returns).
 **PROGRESS:** LRC reduced to the HIGH-ENERGY CORE (E>=main = small-l/many-returns sets, led by AP, which IS lonely via the sieve t=a/n). LIMITS: tail not rigorously bounded (margin large); does NOT settle the core/n=14.
 **Artifacts:** lrc_resonance_energy_full_s550b.py (+.out), lrc_resonance_energy_sufficient_s550.py (+.out); reflection lrc-resonance-energy-sufficient-condition-and-the-high-energy-core-s550o.md; HYP-2053. **Handoff:** prove the geometric tail bound (-> clean theorem, formalizable); characterize the core as bounded small-l ratios (finite check per n?); n=14 core = sieve/AP?
+## codex-2026-06-01-S553a - Proved the primitive additive-return n=4 LRC measure formula (THM-393)
+
+**Context:** User asked for another long LRC proof session, "something like this a few times." I continued the HYP-2040 n=4 measure-gap route after THM-392, targeting the next S552 obstruction family `(a,b,a+b)`.
+**Theorem:** Added THM-393. For primitive generator pairs `(a,b)` at threshold `1/4`, the exact safe measure of speeds `(a,b,a+b)` is: if `a,b` odd and `a+b=0 mod4`, `(ab-1)/(16ab)`; if `a,b` odd and `a+b=2 mod4`, `(ab+3)/(16ab)`; if exactly one generator is even `e` with odd generator `o` and `c=a+b`, then `e=0 mod4 -> (oc+1)/(16oc)` and `e=2 mod4 -> (oc-3)/(16oc)`.
+**Proof mechanism:** On each speed-`a` safe arc, write `t=(2h+1)/(2a)+u`. Then `{a t}=1/2+a u`, and the two speeds `b,a+b` reduce to one moving-window condition on `{b t}`: `[3/4-au,3/4]` for `u>=0`, and `[1/4,1/4-au]` for `u<=0`. Multiplication by `b` permutes the odd residues mod `2a`, so the sum collapses to four quarter-grid cases.
+**Payoff:** The whole additive-return family obeys the HYP-2040 gap: only generators `{1,2}` give zero `(1,2,3)`, and the unique positive minimum is generators `{1,6}` giving `(1,6,7)` with `1/28`. This covers the first non-adjacent competitors `(2,3,5)`, `(2,5,7)`, `(3,10,13)`, `(3,5,8)`.
+**Next obstruction:** Excluding both adjacent and additive-return rows through speeds `<=60`, the next small structured row is `(1,3,9)` with measure `1/18`; it belongs to the family `(1,3,q)`, where speeds `1` and `3` force `t in [5/12,7/12]`.
+**Tournament Analysis:** `lrc_n4_additive_return_s553.py` treats selected generator pairs as vertices, exact safe measure as observable, lower-measure-as-tighter as the switch, and lexicographic generator order as the tie path. The tournament is transitive, with score histogram `{0:1,...,11:1}`, no directed 3-cycles, singleton SCCs, and one Hamiltonian path.
+**Artifacts:** `01-canon/theorems/THM-393-lrc-n4-additive-return-measure-formula.md`; `04-computation/lrc_n4_additive_return_s553.py`; `05-knowledge/results/lrc_n4_additive_return_s553.out`; `07-reflections/lrc-n4-additive-return-measure-gap-s553.md`.
 
 ## oracle-2026-06-01-S549o - Lean-formalized recent LRC ideas: scaling/repeated-addition, doubled-prime sieve, Dirichlet near-pair (3 axiom-clean lemmas) (HYP-2050)
 

@@ -51,6 +51,11 @@ At `n=4` (threshold 1/4, 3 runners), with the mod-4 character decomposition
    **S552 update:** THM-392 proves the exact formula for the whole adjacent
    family `(1,q,q+1)`, including that `(1,6,7)` is the unique positive minimum
    in that family.
+   **S553 update:** THM-393 proves the exact formula for every primitive
+   additive-return triple `(a,b,a+b)`.  This covers the first non-adjacent
+   competitors `(2,3,5)`, `(2,5,7)`, `(3,10,13)`, `(3,5,8)`, and proves the
+   same gap inside that family: only `(1,2,3)` is zero and only `(1,6,7)`
+   attains the positive minimum `1/28`.
 
 3. **Boundary witness at the AP.** For `{1,2,3}`, `t* = 1/4` gives
    `(||1/4||, ||2/4||, ||3/4||) = (1/4, 1/2, 1/4) >= 1/4`. Lonely. ∎ (for AP)
@@ -93,5 +98,9 @@ resonance sum directly.
   `1/28` gap confirmed.
 - `04-computation/lrc_n4_adjacent_family_s552.py` (+.out): exact adjacent-family
   formula, proving the main near-tight family bottoms at `(1,6,7)`.
+- `04-computation/lrc_n4_additive_return_s553.py` (+.out): exact
+  additive-return formula for primitive triples `(a,b,a+b)`, proving the
+  next obstruction family also bottoms at `(1,6,7)`.
 - `01-canon/theorems/THM-392-lrc-n4-adjacent-family-measure-formula.md`.
+- `01-canon/theorems/THM-393-lrc-n4-additive-return-measure-formula.md`.
 - Reflection: `07-reflections/lrc-the-measure-is-trivially-nonneg-the-tight-set-is-everything-s1.md`.
