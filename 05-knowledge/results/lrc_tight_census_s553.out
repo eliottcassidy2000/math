@@ -1,0 +1,36 @@
+######## CALIBRATION (n=5,6 known NON-unique tight; n=7 proven) ########
+
+== n=5 calib: primitive 4-subsets of [1,12] (479 sets) ==
+   TIGHT family |M=1/n| size: 2   (AP: 1, non-AP: 1)
+       non-AP tight (1, 3, 4, 7)  reduced=(1, 3, 4, 7)
+
+== n=6 calib: primitive 5-subsets of [1,13] (1281 sets) ==
+   TIGHT family |M=1/n| size: 2   (AP: 1, non-AP: 1)
+       non-AP tight (1, 3, 4, 5, 9)  reduced=(1, 3, 4, 5, 9)
+
+== n=7 calib: primitive 6-subsets of [1,13] (1715 sets) ==
+   TIGHT family |M=1/n| size: 1   (AP: 1, non-AP: 0)
+
+######## TARGET: n=14 = 2*7 doubled prime ########
+
+== n=14 DOUBLED PRIME: primitive 13-subsets of [1,18] (8568 sets) ==
+   TIGHT family |M=1/n| size: 1   (AP: 1, non-AP: 0)
+
+== apex-doubled A_14 = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26) ==
+   SAFE at 2/(2n-1)=2/27: nonempty=True, measure=0
+   SAFE just above edge: nonempty=False  (should be False => M=edge)
+   => M(A_14) = 2/(2n-1) confirmed: True
+
+== n=14 n=14 (bounded stress test): SPECTRAL-GAP stress test over 560 configs ==
+   floor 1/n = 1/14,  gap edge 2/(2n-1) = 2/27
+   configs with M in OPEN (1/n, 2/(2n-1)): 0  (gap holds iff 0)
+   configs achieving M = 2/(2n-1) exactly (edge): 0
+
+######## NEIGHBOURS (doubled-prime comparison) ########
+
+== n=12 4*3: primitive 11-subsets of [1,15] (1365 sets) ==
+   TIGHT family |M=1/n| size: 1   (AP: 1, non-AP: 0)
+
+== n=16 2^4: primitive 15-subsets of [1,18] (816 sets) ==
+   TIGHT family |M=1/n| size: 1   (AP: 1, non-AP: 0)
+

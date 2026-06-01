@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-01-S553b - LRC@14 tight family is EXACTLY the AP (exhaustive ≤1.5n); + a non-unit-pair HOLE in the oracle-S553 transversal reduction (HYP-2055)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** try more creative approaches to a proof of LRC at n=14 and above.
+**Honesty:** LRC@14 open; NOT a proof. Exact census of the tight family (the only configs carrying LRC's difficulty) + a correction to the concurrent oracle-S553 reduction.
+**FRAME:** tight = M(V)=max_t min||v_i t||=1/n (safe set measure-0, nonempty). Non-tight ⇒ positive measure ⇒ lonely. So **AP unique-tight ⇒ LRC(n)**. Converges with oracle-S552 (spectral gap) and oracle-S553 (gap reduced to 2^{n-1} antipodal transversals mod 2n-1).
+**(C1, EXACT, `lrc_tight_census_s553.py`+`lrc_tight_doubledprime_scan_s553.py`):** at n=14 the tight family over ALL 203,490 primitive 13-subsets of [1,21]=1.5n is JUST the AP {1..13} (0 sporadics, 0 counterexamples). Same AP-only for n=9..13; sporadic tight sets exist ONLY at n=5 ({1,3,4,7}), n=6 ({1,3,4,5,9}), n=8 ({1,2,3,4,5,7,12},{1,4,5,6,7,11,13}). Sporadics are a SMALL-N phenomenon, NOT doubled-prime (n=6=2·3 has one; primes 11,13 don't). Cross-checked by an independent exact max-collar M(V) computation.
+**(C2, tight-witness lattice):** every tight config (AP + all sporadics) is lonely EXACTLY at t=j/n ⇒ certified by the modulus-n sieve (q=n, THM-369). Positive companion to HYP-2052 (bounded sieve fails only on non-tight loaded sets; tight sets all caught at q=n).
+**(C3, CORRECTION to oracle-S553):** the n=8 sporadics are tight, gcd-1, residue-0-free, but NOT antipodal transversals mod 15 — each misses exactly one NON-UNIT antipodal pair ({6,9}/{3,12}). Link-1's witness t=a^{-1}/(2n-1) needs a unit a, so cannot reach them ⇒ the transversal reduction is INCOMPLETE when 2n-1 is composite. n=14 has 2n-1=27=3³ composite ⇒ hole present in principle, but C1 shows it EMPTY in range. M(A_14)=2/27 confirmed; no config with M∈(1/14,2/27) in bounded test.
+**UPSHOT:** two independent reductions ⇒ LRC@14 ⟺ AP unique tight 13-set over ALL speeds; C1 verifies for speeds ≤1.5n. **Handoff (oracle):** close the non-unit-pair hole (lift mod 2n-1 → mod p(2n-1) to restore invertibility); use t=j/n lattice (C2) to bound tight residues mod n and finitize the unbounded range. Files: 07-reflections/lrc-n14-tight-family-is-the-AP-and-the-nonunit-pair-hole-s553.md; 04-computation/lrc_tight_{census,doubledprime_scan,witness_structure}_s553.py (+.out); HYP-2055.
+
 ## oracle-2026-06-01-S553 - Extending the gap chain: antipodal-pair witness times collapse LRC to the 2^(n-1) transversals (Link 1 PROVEN) (HYP-2052)
 
 **Account:** Oracle (oraclebox1). **User prompt:** try to extend the chain (toward proving the S552 spectral gap M(S)=1/n or >=2/(2n-1)).

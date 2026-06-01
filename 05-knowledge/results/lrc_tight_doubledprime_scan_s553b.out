@@ -1,0 +1,12 @@
+Tight-family size vs n  (scan speeds up to ~1.5n; sporadics live here)
+
+ n= 8  B=13  (   1716 sets)   tight=3  (AP:1, sporadic:2)  *** non-AP sporadics!
+        sporadic tight: (1, 2, 3, 4, 5, 7, 12)
+        sporadic tight: (1, 4, 5, 6, 7, 11, 13)
+ n=13  B=20  ( 125970 sets)   tight=1  (AP:1, sporadic:0)  [AP-unique]
+ n=14  B=21  ( 203490 sets)   tight=1  (AP:1, sporadic:0)  [AP-unique]  <<< DOUBLED PRIME 2*7
+
+SUMMARY (sporadic=0 => AP-unique in scanned range):
+  n= 8  tight=3  sporadic=2  
+  n=13  tight=1  sporadic=0  
+  n=14  tight=1  sporadic=0  DOUBLED-PRIME
