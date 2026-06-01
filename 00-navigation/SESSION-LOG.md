@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S538o - Complex/precise LRC tournament vertices: the TENSION-PAIR tournament (cocycle-restricted); honest gap negative; a posed multitude (HYP-2027)
+
+**Account:** Oracle (oraclebox1). **User prompt:** come up with even more complex, precise things for the tournament vertices; really get creative.
+**PRINCIPLE:** a complex vertex object restricts the realizable iso-classes exactly to the extent it carries a CONSISTENCY LAW (S535 metric + S537 tension lessons).
+**STAR -- TENSION-PAIR tournament:** vertices = C(n,2) pairs (edges of K_n), pair {i,j} carrying difference-speed w_ij=v_i-v_j (a TENSION/coboundary, cocycle w_ij+w_jk+w_ki=0 verified) = a 2nd-order LRC on the difference set. Cocycle => C(n-1,2) constraints, not free. Restriction: n=5 realizable LABELED pair-types = 24535 of 2^45 (~7e-10). n=4: tension-valued DIGRAPH WITH TIES; ties = coincident differences = the Sidon-defect, so it SEES the additive combinatorics the runner tournament can't. Observer loneliness = observer-pairs {0,i} (w=-v_i) all far = marked sub-family.
+**HONEST NEGATIVE -- GAPS:** three-gap/Steinhaus rigidity (<=3 lengths) is single-rotation only; multi-speed gaps run to n distinct lengths; gaps weaker than sectors (S536). Recorded to avoid re-attempt.
+**MULTITUDE (posed by consistency law):** harmonic/spectral (Fourier support); ARRANGEMENT CELLS (braid+1/n-wall on T^{n-1} -- genuine LRC home); incidence (sector x runner); matroid flats (resonance matroid M_v); TIME-FREQUENCY/GABOR cells (sector x harmonic, uncertainty-principle restriction -- deepest unification of S536 space x S537 frequency); wiring-diagram events (stretchability).
+**Artifacts:** lrc_complex_vertex_objects_s538.py (+.out); reflection lrc-complex-vertex-objects-the-tension-pair-tournament-and-a-multitude-s538o.md; HYP-2027 (renumbered around concurrent HYP-2026 flow/cut-flow duality). **Handoff:** Sidon-aware tiebreak to make pair-tournament genuine + recompute R; build the (sector,harmonic) Gabor tournament + test uncertainty restriction; arrangement-cell walk = exact LRC object.
+
 ## codex-2026-06-01-S540 - Support-flow and cut-flow duality for LRC (HYP-2026)
 
 **Context:** User asked to continue attacking LRC from a nowhere-zero-flow on directed graphs mindset. Upstream HYP-2025 had just identified full-support resonance with NZ flows on the speed-weighted dipole and runner positions with the tension/circular-coloring dual.
