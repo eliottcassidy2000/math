@@ -1,0 +1,10 @@
+Apex-direction slice: M({1,..,n-2, s}) as the top speed s varies (>= n-1).
+The AP is s=n-1 (M=1/n). Find the SECOND-loneliest s and its M.
+----------------------------------------------------------------------
+ n=5: floor s=4 M=1/5(=1/n? True); 2nd-loneliest M=2/9 at s=[8] (2(n-1)=8); ==2/(2n-1)? True
+ n=6: floor s=5 M=1/6(=1/n? True); 2nd-loneliest M=2/11 at s=[10] (2(n-1)=10); ==2/(2n-1)? True
+ n=7: floor s=6 M=1/7(=1/n? True); 2nd-loneliest M=2/13 at s=[12] (2(n-1)=12); ==2/(2n-1)? True
+ n=8: floor s=7 M=1/8(=1/n? True); 2nd-loneliest M=2/15 at s=[14] (2(n-1)=14); ==2/(2n-1)? True
+ n=9: floor s=8 M=1/9(=1/n? True); 2nd-loneliest M=2/17 at s=[16] (2(n-1)=16); ==2/(2n-1)? True
+ n=10: floor s=9 M=1/10(=1/n? True); 2nd-loneliest M=2/19 at s=[18] (2(n-1)=18); ==2/(2n-1)? True
+ n=12: floor s=11 M=1/12(=1/n? True); 2nd-loneliest M=2/23 at s=[22] (2(n-1)=22); ==2/(2n-1)? True

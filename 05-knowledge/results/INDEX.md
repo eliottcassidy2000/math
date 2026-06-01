@@ -39,6 +39,7 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 | `lrc_tetration_hyper_lacunary_s551.py` | [STORED] | Level-4 tetration speeds are the hyper-lacunary clearance extreme: runner clearances are level-2 factors, the cascade product is level-3 repeated-x closure, and tetration is level-4 aliasing/decorrelation stress. In the six-runner probe, `L3_geom2` has best product `0.2319`, while `L4_tetr3` has positive product `0.1873` and lowest mean H-entropy `3.1556`; family tournament is transitive with no directed 3-cycles. **HYP-2050**. | `lrc_tetration_hyper_lacunary_s551.out` |
 | `lrc_n4_adjacent_family_s552.py` | [STORED] | Proves/verifies the exact n=4 adjacent-family formula for triples `(1,q,q+1)`: four residue-class formulas for safe measure; `M(2)=0` for AP and `M(q)>=1/28` for all `q>=3`, equality only at `q=6` (`(1,6,7)`). Adjacent-row Tournament Analysis is transitive with one Hamiltonian path. **THM-392**. | `lrc_n4_adjacent_family_s552.out` |
 ## Results catalog
+| `lrc_minimax_margin_extremizers_s552.py` / `lrc_collar_gap_s552b.py` / `lrc_doubled_apex_gap_s552c.py` | [STORED] | LRC loneliness SPECTRAL GAP: max-collar M(S)=1/n (AP) or >=2/(2n-1) -- nothing between (exhaustive n<=8); margin=1/(n(2n-1)); gap edge 2/(2n-1) PROVEN achieved (all n) by A_n={1,..,n-2,2(n-1)} = AP with apex DOUBLED; (q,q) cycle confirmed n=6,10. **HYP-2052**. | `*_s552.out`, `*_s552b.out`, `*_s552c.out`, `lrc_apex_slice_s552d.out` |
 
 Scripts with stored results are marked [STORED]. Scripts without results are marked [MISSING].
 

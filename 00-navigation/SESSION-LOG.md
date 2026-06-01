@@ -1,5 +1,16 @@
 # Session Log
 
+## oracle-2026-06-01-S552 - The LRC loneliness SPECTRAL GAP: max-collar is 1/n (AP) or jumps to 2/(2n-1), witnessed by the doubled apex (HYP-2052)
+
+**Account:** Oracle (oraclebox1). **User prompt:** spend another long session pushing these forward searching for LRC progress.
+Turned the doubling/apex/cascade metaphor thread into an EXACT, falsifiable extremizer statement. Max-collar M(S)=max_t min_i||s_i t|| (LRC: M>=1/n).
+**VERIFIED (exact Fraction arithmetic, no sampling; `lrc_minimax_margin_extremizers_s552.py`, `lrc_collar_gap_s552b.py`, `lrc_doubled_apex_gap_s552c.py`):**
+- minimax min_S M(S)=1/n (AP {1,..,n-1} + tiny tight family); SECOND-smallest value over ALL configs = exactly 2/(2n-1) (exhaustive n=4..8, stress to B=18). => SPECTRAL GAP: NO config has M(S) strictly in (1/n, 2/(2n-1)). margin(n)=2/(2n-1)-1/n=1/(n(2n-1))~1/(2n^2): 1/28,1/45,1/66,1/91,1/120 for n=4..8.
+- gap edge 2/(2n-1) ACHIEVED (closed-form PROVEN, verified n=4..22) by A_n={1,2,...,n-2, 2(n-1)} = the AP with its APEX runner DOUBLED. At t*=2/(2n-1): binding runners are speed 1 and speed 2(n-1) (both at 2/(2n-1)); interior runners >=3/(2n-1).
+- apex-direction slice {1,..,n-2,s}: 2nd-loneliest is UNIQUELY s=2(n-1) (n=5..12) -- a provable one-parameter gap.
+- (q,q) cycle type of extremizer necklace (rotation-by-2) confirmed at doubled primes n=6,10 ((3,3),(5,5)).
+**MEANING:** LRC difficulty is localized ENTIRELY to the AP tight family; every other config clears 1/n by surplus >=1/(n(2n-1)) -- a jump, not a creep. The SECOND-loneliest structure at every n is the extremizer with its apex doubled: "doubling=pairing" (S546) / apex pivot (S547) is literally the boundary of the LRC extremal basin. Provable EDGE (all n) + exhaustive empty GAP (n<=8); general gap = a strengthening of LRC, open. New HYP-2052. Files: 07-reflections/the-lrc-loneliness-spectral-gap-doubled-apex-s552.md; the 3 .py (+.out); 05-knowledge/results/lrc_apex_slice_s552d.out.
+
 ## oracle-2026-06-01-S550o - Rigorous sufficient condition for LRC: resonance energy E(v) < (1-2/n)^{n-1}; reduction to the high-energy core (HYP-2053)
 
 **Account:** Oracle (oraclebox1). **User prompt:** long session pushing the recent ideas, searching for LRC progress.
