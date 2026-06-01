@@ -1,0 +1,13 @@
+HYP-1993 closed-form check: menu(m) vs A000016(m)
+
+  m  n  #feasS  2^(m-1)  menu  A000016  match
+  4  5       8        8     2        2   True
+  5  6      16       16     4        4   True
+  6  7      32       32     6        6   True
+  7  8      64       64    10       10   True
+  8  9     128      128    16       16   True
+  9 10     256      256    30       30   True
+ 10 11     512      512    52       52   True
+
+A000016(m), m=3..13: [2, 2, 4, 6, 10, 16, 30, 52, 94, 172, 316]
+(menu(3)=1 is the L=1/2 boundary exception; A000016(3)=2.)

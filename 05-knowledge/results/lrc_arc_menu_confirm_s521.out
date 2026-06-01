@@ -1,0 +1,30 @@
+claudebox-S521 confirmation
+
+VALIDATION (fast canon vs brute canon), L=(n-2)/n:
+  n=4 m=3: brute=1 fast=1  OK
+  n=5 m=4: brute=2 fast=2  OK
+  n=6 m=5: brute=4 fast=4  OK
+  n=7 m=6: brute=6 fast=6  OK
+
+(A) menu(n) vs 2*F(n-3) [n>=5], at LRC arc L=(n-2)/n:
+   n  m  #feasS  menu  2F(n-3)  2^(m-1)
+   4  3       1     1                 4
+   5  4       8     2        2        8
+   6  5      16     4        4       16
+   7  6      32     6        6       32
+   8  7      64    10       10       64
+   9  8     128    16       16      128
+  10  9     256    30       26      256
+  menu sequence n=4..10: [1, 2, 4, 6, 10, 16, 30]
+  2*F(n-3) n=5..10:      [2, 4, 6, 10, 16, 26]
+
+(B) L-independence on (1/2,1): menu & #feasS at L near 1/2 and near 1
+   n  m        L  #feasS  menu
+   6  5    0.505      16     4
+   6  5    0.995      16     4
+   7  6    0.505      32     6
+   7  6    0.995      32     6
+   8  7    0.505      64    10
+   8  7    0.995      64    10
+   9  8    0.505     128    16
+   9  8    0.995     128    16

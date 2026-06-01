@@ -1,5 +1,20 @@
 # Session Log
 
+## claudebox-2026-06-01-S521 - LRC arc menu is a complemented-necklace count (A000016)
+
+**Account:** claudebox (remote-control). **User prompt:** spend a session beginning to work on math / continue on the LRC.
+**Delivery note:** claudebox has only `claude-monad` creds (pull-only on eliottcassidy2000/math), so this session is delivered as a PR from a fork, not a direct push to main. A write-capable machine (oracle) or a push token is needed to land it. Ids renumbered to S521 / THM-387 / HYP-1993 after concurrent codex/opus/oracle sessions consumed S517-S520, THM-385/386, HYP-1988-1992.
+**Frontier picked up:** THM-384 (codex-S516) reduces the marked-observer LRC to "all m=n-1 movers in the safe arc of length L=(n-2)/n"; HYP-1987/S512 framed the target as the arc-confined menu inside A000568(m), scanned arithmetically (2,2,6,6 for n=4..7) and predicted "menu grows with L". I made that target box-INDEPENDENT and exact.
+**Proved (THM-387):** a half-turn tournament of m points in an arc of length L<1 is forced to be the transitive "later-beats-earlier" backbone with the LONG pairs (circular sep >1/2) reversed; the reversed set is an UP-SET of the interval-containment (type-A root) poset. L<=1/2 => transitive only (so the S512 n=4 score-(0,1,1) "class" is a degenerate antipodal tie, not a tournament).
+**Computed (exact, box-independent):** geometric menu by #movers m=n-1:
+  m     : 3  4  5  6  7  8  9  10
+  menu  : 1  2  4  6 10 16 30  52   ; labelled realizable flip-up-sets = 2^{m-1} (1,8,16,32,64,128,256,512).
+**Identification (HYP-1993):** menu(m) = A000016(m) = (1/2m) Σ_{d|m,odd} φ(d) 2^{m/d} for m>=4 (matches m=4..10 exactly; m=3 is the L=1/2 exception, menu=1 vs A000016(3)=2). A000016 = binary necklaces under shift+COMPLEMENT — the half-turn rule's two symmetries (rotation + antipodal/long-short). Predicts menu(m=11)=94, menu(m=12)=172. Open: the explicit bijection flip-up-set classes <-> complemented necklaces (would prove the closed form + give the formalizer a finite named target over THM-369).
+**Corrections to HYP-1987:** (a) "menu grows with L" is FALSE — menu and 2^{m-1} are CONSTANT on L in (1/2,1) (verified L=0.505 vs 0.995); the arc length is a switch (L>1/2?), not a dial. (b) geometric menu = S512 *non-degenerate* reachable menu exactly for n=5,6,7, confirming HYP-1987's core equivalence and the n=4 correction.
+**Refuted en route (why exact iso-counting matters):** menu != 2*Fibonacci (m=9: 30 not 26); menu != A164142 (m=10: 52 not 56). Both matched the first 7 terms.
+**New contributions:** THM-387, HYP-1993, `04-computation/lrc_arc_menu_{geometry,confirm,a000016_check}_s521.py` (+ .out files), `07-reflections/lrc-arc-menu-and-complemented-necklaces-s521.md`. Canonical form: exact difference-constraint feasibility (Bellman-Ford over (rational,eps)); refinement-canonical iso-count validated vs brute permutation canon m<=8 and brute-cross-checked at m=9.
+**Next:** (1) prove HYP-1993 via the necklace bijection; (2) prove the 2^{m-1} labelled count and L-independence on (1/2,1) (currently verified, not proved); (3) confirm menu(m=11)=94 (11-vertex canon was slow); (4) feed the A000016 target (A000016(m) << A000568(m): 52 vs 191536 at m=10) into HYP-1986's source-gap / THM-369 sieve route.
+
 ## oracle-2026-06-01-S514 - Wacky LRC n=14 attempts (anti-concentration, bounded ansatz, parity split)
 
 **Account:** Oracle (remote-control). **User prompt:** try wacky theorems / new ideas to prove LRC for n=14.

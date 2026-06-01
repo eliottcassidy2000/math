@@ -1,0 +1,87 @@
+LRC geometric arc menu -- box-independent target (claudebox-S521)
+
+S512 arithmetic-reachable iso-classes (lower bound): n=4..7 -> 2,2,6,6
+
+======================================================================
+ n  m  L=(n-2)/n Catalan(m)  #feasS  menu A000568(m)
+----------------------------------------------------------------------
+ 4  3        1/2          5       1     1          2
+ 5  4        3/5         14       8     2          4
+ 6  5        2/3         42      16     4         12
+ 7  6        5/7        132      32     6         56
+ 8  7        3/4        429      64    10        456
+ 9  8        7/9       1430     128    16       6880
+10  9        4/5       4862     256   ~23     191536   (heuristic (H,score) key)
+
+menu sequence n=4..9 (m=3..8): [1, 2, 4, 6, 10, 16]
+
+--- n=4  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2) transitive=True
+
+--- n=5  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2, 3) transitive=True
+     H=5    score=(1, 1, 2, 2) transitive=False
+
+--- n=6  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2, 3, 4) transitive=True
+     H=9    score=(1, 1, 2, 3, 3) transitive=False
+     H=11   score=(1, 2, 2, 2, 3) transitive=False
+     H=15   score=(2, 2, 2, 2, 2) transitive=False
+
+--- n=7  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2, 3, 4, 5) transitive=True
+     H=17   score=(1, 1, 2, 3, 4, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=23   score=(1, 2, 2, 3, 3, 4) transitive=False
+     H=41   score=(2, 2, 2, 3, 3, 3) transitive=False
+     H=45   score=(2, 2, 2, 3, 3, 3) transitive=False
+
+--- n=8  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2, 3, 4, 5, 6) transitive=True
+     H=33   score=(1, 1, 2, 3, 4, 5, 5) transitive=False
+     H=47   score=(1, 2, 2, 3, 4, 4, 5) transitive=False
+     H=47   score=(1, 2, 2, 3, 4, 4, 5) transitive=False
+     H=51   score=(1, 2, 3, 3, 3, 4, 5) transitive=False
+     H=105  score=(2, 2, 2, 3, 4, 4, 4) transitive=False
+     H=123  score=(2, 2, 3, 3, 3, 4, 4) transitive=False
+     H=137  score=(2, 2, 3, 3, 3, 4, 4) transitive=False
+     H=151  score=(2, 3, 3, 3, 3, 3, 4) transitive=False
+     H=175  score=(3, 3, 3, 3, 3, 3, 3) transitive=False
+
+--- n=9  geometric menu iso-classes (the target inside A000568) ---
+     H=1    score=(0, 1, 2, 3, 4, 5, 6, 7) transitive=True
+     H=65   score=(1, 1, 2, 3, 4, 5, 6, 6) transitive=False
+     H=95   score=(1, 2, 2, 3, 4, 5, 5, 6) transitive=False
+     H=95   score=(1, 2, 2, 3, 4, 5, 5, 6) transitive=False
+     H=107  score=(1, 2, 3, 3, 4, 4, 5, 6) transitive=False
+     H=107  score=(1, 2, 3, 3, 4, 4, 5, 6) transitive=False
+     H=269  score=(2, 2, 2, 3, 4, 5, 5, 5) transitive=False
+     H=347  score=(2, 2, 3, 3, 4, 4, 5, 5) transitive=False
+     H=347  score=(2, 2, 3, 3, 4, 4, 5, 5) transitive=False
+     H=393  score=(2, 2, 3, 3, 4, 4, 5, 5) transitive=False
+     H=465  score=(2, 3, 3, 3, 4, 4, 4, 5) transitive=False
+     H=479  score=(2, 3, 3, 3, 4, 4, 4, 5) transitive=False
+     H=479  score=(2, 3, 3, 3, 4, 4, 4, 5) transitive=False
+     H=509  score=(2, 3, 3, 3, 4, 4, 4, 5) transitive=False
+     H=629  score=(3, 3, 3, 3, 4, 4, 4, 4) transitive=False
+     H=653  score=(3, 3, 3, 3, 4, 4, 4, 4) transitive=False
+
+======================================================================
+L-SWEEP: geometric menu size vs arc length L (m fixed). New classes
+enter at rational thresholds; LRC uses L=(n-2)/n marked below.
+======================================================================
+
+ m=4 (n=5, LRC arc L*=3/5):
+   L=0.500 (1/2):  menu=1  feasible flip-sets=1
+   L=0.517 (31/60):  menu=2  feasible flip-sets=8
+   [at L*=3/5: menu=2]
+
+ m=5 (n=6, LRC arc L*=2/3):
+   L=0.500 (1/2):  menu=1  feasible flip-sets=1
+   L=0.517 (31/60):  menu=4  feasible flip-sets=16
+   [at L*=2/3: menu=4]
+
+ m=6 (n=7, LRC arc L*=5/7):
+   L=0.500 (1/2):  menu=1  feasible flip-sets=1
+   L=0.517 (31/60):  menu=6  feasible flip-sets=32
+   [at L*=5/7: menu=6]
