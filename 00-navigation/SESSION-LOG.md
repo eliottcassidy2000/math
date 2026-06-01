@@ -44,6 +44,16 @@
 **Findings:** No accepted complete proof of full LRC was found. The credible fixed-case frontier is now product-sieve plus finite-checking through `k <= 12` moving speeds, i.e. thirteen total runners. Actionability tournament was transitive with top routes `ST13 -> Repo26 -> T9T10 -> MSS25 -> R8 -> R9`; credence tournament had SCC sizes `[8,1,1,1,1,1]`, `9` directed 3-cycles, and `99` Hamiltonian paths. There were `29/78` edge flips between credence and actionability.
 **Synthesis:** Added HYP-1969 and `07-reflections/lrc-proof-route-landscape-s505.md`. The proposed proof-currency split is finite product-sieve, spectral/kernel, zonotope, and endpoint-pressure. Next concrete target: translate `J(k,p)` / `I(k,p,l)` improper tuples from the product-sieve papers into endpoint row-cover cores and pressure-DAG peel certificates.
 
+## codex-2026-06-01-S506 - H as LRC Loneliness Meter
+
+**Account:** Codex
+**Git first:** Continued from the S502/S501c research stack, then rebased over concurrent S495/S502b/S503/S504/S505/S26/S26b work; renumbered this hypothesis to HYP-1971 and tangents to T593-T595.
+**User prompt:** Spend another long session investigating `H` as a loneliness meter and see how the LRC is about tournament structures.
+**Computation:** Added `04-computation/h_loneliness_meter_s506.py` and stored `05-knowledge/results/h_loneliness_meter_s506.out`. The script audits exact runner-clock cells, computes half-turn tournaments with deterministic tie paths, counts Hamiltonian paths by bitmask DP, records circular gaps, marked stationary distance, safe-gap counts, locally lonely vertices, and selected n=14/n=18 rows.
+**Findings:** `H` has two readings. Low `H`, especially `H=1`, is the THM-374 open-semicircle detector: unanchored bunching with a huge empty gap. LRC loneliness is marked and local: the stationary vertex needs distance at least `1/n`, and any vertex is locally lonely exactly when both adjacent circular gaps are safe. Initial witnesses `t=1/n` for total `n=5..9` are high-H and all-lonely (`15,41,175,629,3267`), while selected `t=1/(2n)` rows for `n=14,18` have `H=1` and no stationary loneliness.
+**Synthesis:** Added HYP-1971 and `07-reflections/h-as-loneliness-meter-s506.md`, patched HYP-1951, updated result/hypothesis indexes, concept map, and tangents T593-T595. The operational conclusion is that LRC scripts should carry `H` with marked tournament data: circular order, stationary vertex, safe-gap mask, locally lonely vertices, and pressure DAG/SCC status.
+**Verification:** `python3 -m py_compile 04-computation/h_loneliness_meter_s506.py` and `git diff --check` passed before close-out.
+
 ## codex-2026-06-01-S502 - Pair-First Twin Prime Lens
 
 **Account:** Codex

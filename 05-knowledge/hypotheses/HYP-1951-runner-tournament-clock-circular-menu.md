@@ -8,7 +8,8 @@ related:
   - THM-369
   - HYP-1850
   - HYP-1931
-  - HYP-1970
+  - HYP-1967
+  - HYP-1971
 ---
 
 # HYP-1951: The runner tournament-clock realizes a fixed circular menu in G_n
@@ -52,6 +53,13 @@ half-turn circular-tournament cell invariant, correlated with spread and finer
 than score/3-cycle summaries, while LRC threshold data still needs the anchored
 endpoint clock and two-neighbor gaps.
 
+S506 refines the loneliness reading.  The transitive endpoint is an
+unanchored bunching detector, while the LRC threshold `1/n` lives on the
+marked, high-H side of the clock: near-regular circular cells can have many
+vertices whose two adjacent gaps are both safe.  Thus `H` is useful, but the
+LRC invariant must also remember the marked stationary vertex, the safe-gap
+mask, and pressure/deletion data.  See HYP-1971.
+
 ## Evidence
 
 The S24 scripts
@@ -75,6 +83,12 @@ positive gaps are instead short corridors crossing one or two half-turn walls,
 with ladder-invariant boundary alignment ratios `3/7` for `n=14` and `3/11`
 for `n=18`.  This refines the LRC bridge: half-turn spread data and anchored
 `1/n` endpoint data are two clocks that must be overlaid, not identified.
+
+The S506 audit found strong negative correlations between `H` and maximum
+circular gap in sampled clocks, but also found bucket inversions at `n=6` and
+`n=7`.  This makes the fixed-menu claim more important: `H` orders much of the
+circle geometry, but it does not replace the circular order and marked LRC
+data.
 
 ## Predictions
 
@@ -101,4 +115,7 @@ for `n=18`.  This refines the LRC bridge: half-turn spread data and anchored
 - HYP-1850
 - HYP-1931
 - HYP-1967
-- HYP-1970
+- HYP-1971
+- `04-computation/h_loneliness_meter_s506.py`
+- `05-knowledge/results/h_loneliness_meter_s506.out`
+- `07-reflections/h-as-loneliness-meter-s506.md`

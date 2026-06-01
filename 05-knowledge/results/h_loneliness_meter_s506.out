@@ -1,0 +1,125 @@
+H as a loneliness meter for runner-clock tournaments
+========================================================================================
+Part A: exact clock-cell audits
+
+[initial n=5] speeds=(0, 1, 2, 3, 4) n=5 cells=12
+  correlations: Pearson(H,max_gap)=-0.946 Spearman=-0.746; Pearson(H,stationary_min)=+0.635; Pearson(H,#lonely_vertices)=+0.508
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        2     0.7500[0.7500,0.7500] 0      0.00   1.00
+    9        2     0.4167[0.4167,0.4167] 0      0.00   1.00
+    11       4     0.2917[0.2917,0.2917] 0      1.00   2.50
+    15       4     0.2604[0.2083,0.3125] 0      1.50   3.00
+  bucket max-gap mean inversions as H increases: 0
+
+[primes n=5] speeds=(0, 2, 3, 5, 7) n=5 cells=32
+  correlations: Pearson(H,max_gap)=-0.902 Spearman=-0.896; Pearson(H,stationary_min)=+0.381; Pearson(H,#lonely_vertices)=+0.465
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        8     0.6054[0.5357,0.7500] 0      0.00   1.25
+    9        4     0.4321[0.4000,0.4643] 0      0.00   1.00
+    11       16    0.3530[0.2679,0.4143] 0      0.50   2.50
+    15       4     0.2643[0.2250,0.3036] 2      1.50   3.00
+  bucket max-gap mean inversions as H increases: 0
+
+[spread n=5] speeds=(0, 1, 4, 9, 11) n=5 cells=80
+  correlations: Pearson(H,max_gap)=-0.812 Spearman=-0.788; Pearson(H,stationary_min)=+0.268; Pearson(H,#lonely_vertices)=+0.321
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        18    0.5552[0.5227,0.7500] 0      0.22   1.78
+    9        34    0.4362[0.3643,0.4773] 4      0.59   2.00
+    11       24    0.3991[0.3348,0.4416] 6      0.83   2.33
+    15       4     0.3087[0.2667,0.3507] 0      0.50   2.50
+  bucket max-gap mean inversions as H increases: 0
+
+[initial n=6] speeds=(0, 1, 2, 3, 4, 5) n=6 cells=20
+  correlations: Pearson(H,max_gap)=-0.912 Spearman=-0.337; Pearson(H,stationary_min)=+0.150; Pearson(H,#lonely_vertices)=+0.245
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        2     0.7500[0.7500,0.7500] 0      0.00   1.00
+    17       2     0.4375[0.4375,0.4375] 0      0.00   1.00
+    41       12    0.2549[0.1833,0.3500] 0      1.33   2.83
+    45       4     0.3042[0.2917,0.3167] 0      0.00   3.00
+  bucket max-gap mean inversions as H increases: 1
+
+[primes n=6] speeds=(0, 2, 3, 5, 7, 11) n=6 cells=76
+  correlations: Pearson(H,max_gap)=-0.831 Spearman=-0.869; Pearson(H,stationary_min)=+0.351; Pearson(H,#lonely_vertices)=+0.136
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        8     0.5878[0.5227,0.7500] 0      0.00   1.25
+    17       12    0.4468[0.3810,0.4773] 0      0.50   1.50
+    23       30    0.3486[0.2679,0.4222] 0      1.33   3.00
+    41       20    0.2941[0.2361,0.3452] 4      1.00   2.60
+    45       6     0.2745[0.2381,0.3063] 0      0.00   2.33
+  bucket max-gap mean inversions as H increases: 0
+
+[initial n=7] speeds=(0, 1, 2, 3, 4, 5, 6) n=7 cells=24
+  correlations: Pearson(H,max_gap)=-0.890 Spearman=-0.703; Pearson(H,stationary_min)=+0.260; Pearson(H,#lonely_vertices)=+0.447
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        2     0.7500[0.7500,0.7500] 0      0.00   1.00
+    33       2     0.4500[0.4500,0.4500] 0      0.00   1.00
+    105      2     0.3250[0.3250,0.3250] 0      0.00   1.00
+    123      4     0.2042[0.1833,0.2250] 0      2.00   3.00
+    137      4     0.2792[0.2667,0.2917] 0      0.00   3.00
+    151      4     0.2042[0.1833,0.2250] 0      3.00   5.00
+    175      6     0.2042[0.1458,0.2917] 0      2.00   4.00
+  bucket max-gap mean inversions as H increases: 1
+
+[spread n=7] speeds=(0, 1, 3, 7, 12, 18, 27) n=7 cells=268
+  correlations: Pearson(H,max_gap)=-0.716 Spearman=-0.722; Pearson(H,stationary_min)=-0.041; Pearson(H,#lonely_vertices)=+0.084
+  H buckets: H cells max_gap_mean[min,max] stat_lonely avg_lonely avg_safe_gaps
+    1        24    0.5639[0.5167,0.7500] 2      0.08   1.83
+    33       26    0.4508[0.3287,0.4904] 6      0.54   2.08
+    47       70    0.3743[0.2788,0.4626] 12     1.11   2.83
+    51       32    0.3437[0.2864,0.4115] 8      1.19   3.06
+    105      28    0.3022[0.2381,0.4083] 2      1.07   2.86
+    123      32    0.3091[0.2535,0.4135] 4      1.00   2.94
+    137      14    0.3343[0.2454,0.3730] 0      1.00   3.43
+    151      38    0.2903[0.2091,0.3995] 6      0.58   3.16
+    175      4     0.1897[0.1838,0.1956] 0      1.50   4.00
+  bucket max-gap mean inversions as H increases: 2
+
+========================================================================================
+Part B: LRC marked stationary-witness times
+
+[initial segment total n=5] speeds=(0, 1, 2, 3, 4) n=5
+  best stationary time t=1/5 min_dist0=1/5 threshold=1/5 margin=0 stationary_lonely=True
+  half-turn H=15 score=(2, 2, 2, 2, 2) max_gap=1/5 lonely_vertices=(0, 1, 2, 3, 4) safe_gap_count=5
+[initial segment total n=6] speeds=(0, 1, 2, 3, 4, 5) n=6
+  best stationary time t=1/6 min_dist0=1/6 threshold=1/6 margin=0 stationary_lonely=True
+  half-turn H=41 score=(2, 2, 2, 3, 3, 3) max_gap=1/6 lonely_vertices=(0, 1, 2, 3, 4, 5) safe_gap_count=6
+[initial segment total n=7] speeds=(0, 1, 2, 3, 4, 5, 6) n=7
+  best stationary time t=1/7 min_dist0=1/7 threshold=1/7 margin=0 stationary_lonely=True
+  half-turn H=175 score=(3, 3, 3, 3, 3, 3, 3) max_gap=1/7 lonely_vertices=(0, 1, 2, 3, 4, 5, 6) safe_gap_count=7
+[initial segment total n=8] speeds=(0, 1, 2, 3, 4, 5, 6, 7) n=8
+  best stationary time t=1/8 min_dist0=1/8 threshold=1/8 margin=0 stationary_lonely=True
+  half-turn H=629 score=(3, 3, 3, 3, 4, 4, 4, 4) max_gap=1/8 lonely_vertices=(0, 1, 2, 3, 4, 5, 6, 7) safe_gap_count=8
+[initial segment total n=9] speeds=(0, 1, 2, 3, 4, 5, 6, 7, 8) n=9
+  best stationary time t=1/9 min_dist0=1/9 threshold=1/9 margin=0 stationary_lonely=True
+  half-turn H=3267 score=(4, 4, 4, 4, 4, 4, 4, 4, 4) max_gap=1/9 lonely_vertices=(0, 1, 2, 3, 4, 5, 6, 7, 8) safe_gap_count=9
+
+[prime speeds total n=7] speeds=(0, 2, 3, 5, 7, 11, 13) n=7
+  best stationary time t=251/1001 min_dist0=22/91 threshold=1/7 margin=9/91 stationary_lonely=True
+  half-turn H=123 score=(2, 2, 3, 3, 3, 4, 4) max_gap=254/1001 lonely_vertices=(0, 1) safe_gap_count=4
+[spread speeds total n=7] speeds=(0, 1, 3, 7, 12, 18, 27) n=7
+  best stationary time t=13/28 min_dist0=1/4 threshold=1/7 margin=3/28 stationary_lonely=True
+  half-turn H=47 score=(1, 2, 2, 3, 4, 4, 5) max_gap=3/7 lonely_vertices=(0,) safe_gap_count=2
+
+========================================================================================
+Part C: selected larger LRC rows
+
+[n=14 initial/ladders] selected times, speeds=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) n=14
+  t=      1/14 H=          24104937 max_gap=    1/14 stat_min=    1/14 stat_lonely=True  lonely=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  t=      1/28 H=                 1 max_gap=   15/28 stat_min=    1/28 stat_lonely=False lonely=()
+  t=3053/25872 H=          15649345 max_gap=3053/25872 stat_min=181/3234 stat_lonely=False lonely=(6, 7)
+  t=4339/51744 H=          15649345 max_gap=4339/51744 stat_min= 27/4312 stat_lonely=False lonely=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+
+[n=18 initial/ladders] selected times, speeds=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17) n=18
+  t=      1/18 H=      115642276825 max_gap=    1/18 stat_min=    1/18 stat_lonely=True  lonely=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  t=      1/36 H=                 1 max_gap=   19/36 stat_min=    1/36 stat_lonely=False lonely=()
+  t=3991/57024 H=       77132546865 max_gap=3991/57024 stat_min=575/28512 stat_lonely=False lonely=(4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  t=8681/114048 H=       49494399121 max_gap=8681/114048 stat_min=1195/114048 stat_lonely=False lonely=(5, 6, 7, 8, 9, 10, 11, 12)
+
+SYNTHESIS
+========================================================================================
+H has two loneliness readings.
+  Low H, especially H=1, detects unanchored bunching: a huge empty semicircle.
+  High H detects LRC-style even separation: many vertices have two safe gaps.
+Plain H is therefore not the LRC invariant by itself; LRC needs a marked
+tournament structure: circular order, stationary vertex, safe-gap mask, and
+pressure/deletion data.  H is the scalar shadow of that richer tournament movie.
