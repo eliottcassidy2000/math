@@ -1,0 +1,108 @@
+========================================================================
+(1) THE POLYGON: chord product = n, and the skip-shells (outside/inside)
+========================================================================
+  n= 3: prod|1-w^k| = 3.000000  (= n? True)   nearest gap = 1/n = 0.3333
+  n= 4: prod|1-w^k| = 4.000000  (= n? True)   nearest gap = 1/n = 0.2500
+  n= 5: prod|1-w^k| = 5.000000  (= n? True)   nearest gap = 1/n = 0.2000
+  n= 6: prod|1-w^k| = 6.000000  (= n? True)   nearest gap = 1/n = 0.1667
+  n= 7: prod|1-w^k| = 7.000000  (= n? True)   nearest gap = 1/n = 0.1429
+  n= 8: prod|1-w^k| = 8.000000  (= n? True)   nearest gap = 1/n = 0.1250
+  n= 9: prod|1-w^k| = 9.000000  (= n? True)   nearest gap = 1/n = 0.1111
+  n=10: prod|1-w^k| = 10.000000  (= n? True)   nearest gap = 1/n = 0.1000
+
+  n=3 shells:
+      skip 1:  3 chords, len 1.7321  SIDE (outside)
+  n=4 shells:
+      skip 1:  4 chords, len 1.4142  SIDE (outside)
+      skip 2:  2 chords, len 2.0000  DIAMETER (inside)
+  n=5 shells:
+      skip 1:  5 chords, len 1.1756  SIDE (outside)
+      skip 2:  5 chords, len 1.9021  DIAGONAL (inside)
+  n=6 shells:
+      skip 1:  6 chords, len 1.0000  SIDE (outside)
+      skip 2:  6 chords, len 1.7321  DIAGONAL (inside)
+      skip 3:  3 chords, len 2.0000  DIAMETER (inside)
+  n=7 shells:
+      skip 1:  7 chords, len 0.8678  SIDE (outside)
+      skip 2:  7 chords, len 1.5637  DIAGONAL (inside)
+      skip 3:  7 chords, len 1.9499  DIAGONAL (inside)
+  n=8 shells:
+      skip 1:  8 chords, len 0.7654  SIDE (outside)
+      skip 2:  8 chords, len 1.4142  DIAGONAL (inside)
+      skip 3:  8 chords, len 1.8478  DIAGONAL (inside)
+      skip 4:  4 chords, len 2.0000  DIAMETER (inside)
+
+========================================================================
+(2) REGULAR-POLYGON TOURNAMENT: regular?, sides vs diagonals, Gauss sum
+========================================================================
+  n= 3: regular=True (out-degrees={1}); arcs on sides(skip1)=3, on diagonals(inside)=0
+  n= 5: regular=True (out-degrees={2}); arcs on sides(skip1)=5, on diagonals(inside)=5
+  n= 7: regular=True (out-degrees={3}); arcs on sides(skip1)=7, on diagonals(inside)=14
+  n= 9: regular=True (out-degrees={4}); arcs on sides(skip1)=9, on diagonals(inside)=27
+  n=11: regular=True (out-degrees={5}); arcs on sides(skip1)=11, on diagonals(inside)=44
+  Gauss sum magnitude |sum chi(k) w^k| (inside balance), should be sqrt(p):
+      p= 3: |g| = 1.732051  vs sqrt(p) = 1.732051
+      p= 5: |g| = 2.236068  vs sqrt(p) = 2.236068
+      p= 7: |g| = 2.645751  vs sqrt(p) = 2.645751
+      p=11: |g| = 3.316625  vs sqrt(p) = 3.316625
+      p=13: |g| = 3.605551  vs sqrt(p) = 3.605551
+
+========================================================================
+(3) LRC COVERING SUM graded by resonance order (= shell depth)
+========================================================================
+  --- n=3  (main term (1-2/n)^(n-1) = 0.111111) ---
+    v=(1, 2) [AP=regular polygon]
+        direct |LONELY|=0.000000   resonance-sum=0.006783
+        by order: r0:+0.11111  r2:-0.10433
+    v=(1, 3)
+        direct |LONELY|=0.111110   resonance-sum=0.111111
+        by order: r0:+0.11111  r2:-0.00000
+    v=(2, 3)
+        direct |LONELY|=0.111110   resonance-sum=0.111111
+        by order: r0:+0.11111  r2:+0.00000
+    v=(1, 4)
+        direct |LONELY|=0.166670   resonance-sum=0.158605
+        by order: r0:+0.11111  r2:+0.04749
+  --- n=4  (main term (1-2/n)^(n-1) = 0.125000) ---
+    v=(1, 2, 3) [AP=regular polygon]
+        direct |LONELY|=0.000000   resonance-sum=0.006189
+        by order: r0:+0.12500  r2:-0.03753  r3:-0.08128
+    v=(1, 2, 4)
+        direct |LONELY|=0.125000   resonance-sum=0.125000
+        by order: r0:+0.12500  r2:+0.00000  r3:-0.00000
+    v=(1, 3, 5)
+        direct |LONELY|=0.100000   resonance-sum=0.100983
+        by order: r0:+0.12500  r2:-0.02402  r3:-0.00000
+  --- n=5  (main term (1-2/n)^(n-1) = 0.129600) ---
+    v=(1, 2, 3, 4) [AP=regular polygon]
+        direct |LONELY|=0.000000   resonance-sum=0.010134
+        by order: r0:+0.12960  r2:-0.00567  r3:-0.11458  r4:+0.00078
+    v=(1, 2, 3, 5)
+        direct |LONELY|=0.053335   resonance-sum=0.053508
+        by order: r0:+0.12960  r2:-0.00352  r3:-0.07734  r4:+0.00477
+
+========================================================================
+(4) n=3: order-2 term reproduces S526 Legendre form; INSIDE DEBT birth
+========================================================================
+  n=3 pairwise (order-2) overlap vs S526 closed form 1/9+(2/9)chi(a)chi(b)/(ab):
+    (a,b)=(1,2): direct|LONELY|=0.000000  S526 closed=0.000000  match=True
+    (a,b)=(1,3): direct|LONELY|=0.111110  S526 closed=0.111111  match=True
+    (a,b)=(2,3): direct|LONELY|=0.111110  S526 closed=0.111111  match=True
+    (a,b)=(1,4): direct|LONELY|=0.166670  S526 closed=0.166667  match=True
+    (a,b)=(2,5): direct|LONELY|=0.133330  S526 closed=0.133333  match=True
+
+  INSIDE DEBT = sum of resonance orders r>=3 (the deep diagonals):
+    n=3 v=(1, 2): inside-debt(r>=3) = +0.000000   (=0: no 3-term resonance possible with 2 speeds)
+    n=3 v=(1, 3): inside-debt(r>=3) = +0.000000   (=0: no 3-term resonance possible with 2 speeds)
+    n=3 v=(2, 3): inside-debt(r>=3) = +0.000000   (=0: no 3-term resonance possible with 2 speeds)
+    n=3 v=(1, 4): inside-debt(r>=3) = +0.000000   (=0: no 3-term resonance possible with 2 speeds)
+    n=4 v=(1, 2, 3): inside-debt(r>=3) = -0.081285
+    n=4 v=(1, 2, 4): inside-debt(r>=3) = -0.000000
+    n=4 v=(1, 3, 5): inside-debt(r>=3) = -0.000000
+    n=5 v=(1, 2, 3, 4): inside-debt(r>=3) = -0.113800
+    n=5 v=(1, 2, 3, 5): inside-debt(r>=3) = -0.072575
+
+  => n=3 has NO inside debt (the triangle's only inside is its single
+     diagonal-class = the 3-cycle, captured entirely by the order-2 Legendre
+     term). The inside debt first switches on at n=4: that is the geometric
+     birth of the open case -- the polygon acquires genuine interior diagonals.

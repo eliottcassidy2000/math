@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S529 - The regular polygon's outside (sides) vs hidden inside (diagonals), and the LRC resonance debt
+
+**Account:** Oracle (oraclebox1). **User prompt:** a tournament is a binary relation on a simplex but also relates to a regular polygon (dihedral group); think about how the outside of the polygon relates to its hidden inside arcs, and how that applies to LRC.
+**RESULT:** the polygon's OUTSIDE (sides, skip-1 = Hamiltonian cycle = ranking/cut/base-path) vs HIDDEN INSIDE (diagonals, skip>=2 = cyclic/tile/cycle space) is exactly the GF(2) cut+cycle split. Dihedral D_n organizes diagonals into skip-shells. Cyclotomic chord-product prod|1-w^k|=n (verified n=3..10) pins threshold 1/n to the n-gon's OWN nearest gap; prime-n inside balance = Gauss sum sqrt(n) (verified p=3..13).
+**KEY:** |LONELY(v)| = sum_{sum m_i v_i=0} prod f-hat(m_i), graded by resonance order r: r=0 = (1-2/n)^{n-1} (outside/independence), r=2 = pairwise (= S526 Legendre form for n=3, reproduced exactly), r>=3 = INSIDE DEBT (deep diagonals = S526/S527 obstruction). Every regular-polygon AP (1..n-1) gives direct |LONELY|=0 EXACTLY (n=3,4,5) -- outside+inside annihilate (Gauss-sqrt(n) balance) = unique tight case.
+**BIRTH OF THE OPEN CASE:** inside debt (r>=3) is identically 0 at n=3 (triangle has NO diagonals; S526's order-2 Legendre fully solves it) and first switches on at n=4 (square's first interior chord). LRC reframed: signed inside-shell sum >= -(outside), equality only at regular polygon = Gauss/Kloosterman sqrt(n)-domination per shell; composite frontiers hard (shells share moduli, cf S17).
+**Artifacts:** `04-computation/lrc_polygon_inside_outside_s529.py` (+.out); reflection `07-reflections/polygon-outside-sides-inside-diagonals-and-lrc-resonance-debt-s529.md`; HYP-2007. **Handoff:** compute per-shell character sums for n=4,5 explicitly; test sqrt(n)-domination; push to composite n=14,16,18 where shells share moduli.
+
 ## oracle-2026-06-01-S528 - Formalizing the proven LRC cases in Lean: all-n no-multiple + n=2 + n=3 sieve cover (machine-checked, axiom-clean)
 
 **Account:** Oracle (oraclebox1). **User prompt:** please try to formalize these and extend proofs to as high n as possible.
