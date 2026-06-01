@@ -1,0 +1,108 @@
+﻿n=14/n=18 LRC alternating-noise exploration (codex-2026-06-01 S455)
+All LRC endpoint computations are exact over Fraction; tournament switchboards use sampled t=1/n.
+
+======================================================================================================================
+ROUND 1: LOCAL N-GATE LOWER-COVER INVOICES
+======================================================================================================================
+A counterexample branch that spends an n-gate must also pay this local lower-cover invoice.
+
+n=14: targets=28 exact_size=8 cover_count=6
+  forced=(1, 3, 5, 7, 9, 11, 13)
+  free_parts=((2,), (4,), (6,), (8,), (10,), (12,))
+  private endpoint rows by lower column:
+     1  2^0*1   covers= 4 private= 2
+     3  2^0*3   covers= 4 private= 2
+     5  2^0*5   covers= 4 private= 2
+     7  2^0*7   covers=14 private=12
+     9  2^0*9   covers= 4 private= 2
+    11  2^0*11  covers= 4 private= 2
+    13  2^0*13  covers= 4 private= 2
+
+n=18: targets=36 exact_size=8 cover_count=2
+  forced=(1, 5, 7, 9, 11, 13, 17)
+  free_parts=((6,), (12,))
+  private endpoint rows by lower column:
+     1  2^0*1   covers= 4 private= 2
+     5  2^0*5   covers= 4 private= 2
+     7  2^0*7   covers= 4 private= 2
+     9  2^0*9   covers=18 private=12
+    11  2^0*11  covers= 4 private= 2
+    13  2^0*13  covers= 4 private= 2
+    17  2^0*17  covers= 4 private= 2
+
+======================================================================================================================
+ROUND 2: ROW-PARENT AND N-GATE DEBT LEDGERS
+======================================================================================================================
+product = (max_gap / threshold) * unprotected_endpoint_count.
+
+n  label                 class          gap/th      debt product   n-gates parent missing fragile
+----------------------------------------------------------------------------------------------------------------------
+14 initial               boundary_only         0       6       0        0      1 14      7,8,9,10,11,12,13
+14 drop-top add n        positive_gap       1/22      24   12/11        1      2 13      8,9,10,11,12,14
+14 drop-top nonmult      positive_gap       1/30      34   17/15        0      1 13,14   7,8,10,11,12
+14 row-parent ladder     positive_gap      5/924      84    5/11        5     12 -       6,8,9,10,11,12,13
+14 n-gate ladder         positive_gap     5/1848     168    5/11       12     12 -       9,11,12,13
+18 initial               boundary_only         0       6       0        0      1 18      9,10,11,12,13,14,15,16,17
+18 drop-top add n        positive_gap       1/30      32   16/15        1      2 17      10,11,12,13,14,15,16,18
+18 drop-top nonmult      positive_gap       1/42      42       1        0      1 17,18   9,11,12,13,15,16
+18 row-parent ladder     positive_gap      1/176     176       1        7     16 -       8,10,11,13,14,16,17
+18 n-gate ladder         positive_gap      1/352     352       1       16     16 -       11,13,16,17
+
+Product-depth histograms:
+  n=14 drop-top add n        depths={2:+0,7:+0}:8 {2:+0,7:+1}:2 {2:+1,7:+0}:6 {2:+1,7:+1}:2 {2:+2,7:+0}:4 {2:+3,7:+0}:2 frontier=355/28 pressure=94
+      top owners labels/unique = 2:2/2, 3:2/2, 4:2/2, 5:2/2, 6:2/2
+  n=14 drop-top nonmult      depths={2:+0,7:+0}:14 {2:+0,7:+1}:2 {2:+1,7:+0}:12 {2:+2,7:+0}:4 {2:+3,7:+0}:2 frontier=603/28 pressure=84
+      top owners labels/unique = 54:8/8, 3:4/4, 5:4/4, 9:4/4, 11:4/4
+  n=14 row-parent ladder     depths={2:+0,7:+1}:60 {2:+2,7:+1}:24                            frontier=  66/7 pressure=1092
+      top owners labels/unique = 77:24/24, 84:24/24, 91:24/24, 7:12/12, 21:12/12
+  n=14 n-gate ladder         depths={2:+1,7:+1}:120 {2:+3,7:+1}:48                           frontier=  66/7 pressure=4368
+      top owners labels/unique = 154:48/48, 168:48/48, 182:48/48, 14:24/24, 42:24/24
+  n=18 drop-top add n        depths={2:+0,3:+0}:8 {2:+0,3:+1}:4 {2:+0,3:+2}:2 {2:+1,3:+0}:6 {2:+1,3:+1}:2 {2:+1,3:+2}:2 {2:+2,3:+0}:2 {2:+2,3:+1}:2 {2:+3,3:+0}:2 {2:+4,3:+0}:2 frontier=337/24 pressure=178
+      top owners labels/unique = 2:2/2, 3:2/2, 4:2/2, 5:2/2, 6:2/2
+  n=18 drop-top nonmult      depths={2:+0,3:+0}:14 {2:+0,3:+1}:4 {2:+0,3:+2}:2 {2:+1,3:+0}:12 {2:+1,3:+1}:2 {2:+2,3:+0}:2 {2:+2,3:+1}:2 {2:+3,3:+0}:2 {2:+4,3:+0}:2 frontier=1651/72 pressure=160
+      top owners labels/unique = 70:8/8, 5:4/4, 7:4/4, 11:4/4, 13:4/4
+  n=18 row-parent ladder     depths={2:+0,3:+2}:96 {2:+0,3:+3}:16 {2:+4,3:+2}:64             frontier=316/27 pressure=10512
+      top owners labels/unique = 144:64/64, 99:32/32, 117:32/32, 153:32/32, 9:16/16
+  n=18 n-gate ladder         depths={2:+1,3:+2}:192 {2:+1,3:+3}:32 {2:+5,3:+2}:128           frontier=316/27 pressure=42048
+      top owners labels/unique = 288:128/128, 198:64/64, 234:64/64, 306:64/64, 18:32/32
+
+======================================================================================================================
+ROUND 3: ONE-SLOT REPAIR SCAN, MULTIPLE VS NONMULTIPLE
+======================================================================================================================
+Scan: drop n-1 from the initial segment and add one speed a in [n, n(n-1)].
+This is a small stress test of 'multiples are required' versus 'multiples create debt'.
+
+n  drop  best multiple       gap/th debt   best nonmultiple   gap/th debt
+--------------------------------------------------------------------------------------
+14   13             14     1/22   24                 54     1/30   34
+18   17             18     1/30   32                 70     1/42   42
+
+======================================================================================================================
+ROUND 4: TOURNAMENT ANALYSIS SWITCHBOARDS AT T=1/N
+======================================================================================================================
+phase is circular halfturn orientation; safe switches edges by pairwise distance >= 1/n.
+
+n  label                 t       phaseC safeC relC localC safe_scc safe_score_hist
+----------------------------------------------------------------------------------------------------------------------
+14 initial               1/14       112     0   80      0       14 ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1))
+14 row-parent ladder     1/14        18    93   10      0        1 ((5, 3), (6, 7), (7, 2), (8, 1), (12, 1))
+14 n-gate ladder         1/14         0    12    0      0        1 ((1, 2), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 2))
+18 initial               1/18       240     0  196      0       18 ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 1), (17, 1))
+18 row-parent ladder     1/18        32   207   14      0        1 ((7, 4), (8, 9), (9, 3), (10, 1), (16, 1))
+18 n-gate ladder         1/18         0    16    0      0        1 ((1, 2), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 2))
+
+======================================================================================================================
+FORCED-RANDOM NOISE CARDS THAT SURVIVED CONTACT WITH COMPUTATION
+======================================================================================================================
+  covering-radius/zonotope     Treat endpoint protection as a cell-cover invoice.  The n=18 local invoice is smaller than n=14: two bridge choices instead of six.
+  mixed-threshold Fourier      Separate unit, half-gate, and bridge thresholds.  At n=18 the bridge is forced into the 6/12 triadic channel.
+  covering systems             Small denominator rows are not enough.  The one-slot nonmultiple repairs can be tighter than multiples, but they carry more endpoint debt.
+  Tournament Analysis          Initial rows can look ordered under safe-distance switches while ladders create cyclic pairwise crowding.
+
+Working proof guess:
+  n=14 is the wide parity-bridge problem: forced odd fan plus a six-element even bridge fiber.
+  n=18 is the square-core seam: forced unit fan plus half-gate 9 plus only bridges 6 or 12.
+  I would currently attack n=18 first.  Its row-parent product is exactly 1 and its local
+  bridge fiber has size 2, so a dual certificate has fewer bridge cases to break.
+  Then push the resulting triadic debt argument back to n=14 as a 2 x 7 bridge-family
+  inequality over the six even choices.

@@ -40,6 +40,17 @@
 **Synthesis:** Added HYP-1942 and `07-reflections/lrc-n14-n18-tournament-pingpong-s481.md`. The proposed proof route is a first-even bridge-fiber lemma: unit/half fan rows force one bridge fiber, and every bridge fiber either reopens a small-denominator row or exports positive endpoint frontier mass under an edge-local tournament. Also updated `AGENTS.md` so future agents should include Tournament Analysis in scripts when meaningfully available.
 **Verification:** `python3 -m py_compile 04-computation/lrc_n14_n18_tournament_pingpong_s481.py` succeeded; the script ran end-to-end and produced the stored output.
 
+## codex-2026-06-01-S455 - LRC n=14/n=18 Alternating Noise
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after the Tournament Analysis S454/S471/S480 integrations; during close-out, upstream S481/S490/S24 landed first, so S455 was rebased as an extension of canonical HYP-1942 rather than a duplicate hypothesis.
+**User prompt:** Work on `n=14` and `n=18` LRC back and forth many times; when stuck on one, search around for forced-random inspiration for the other, mostly as noise before building the next hypothesis check.
+**Repo archaeology and web noise:** Re-read HYP-1905/HYP-1910/HYP-1920 and the S453/S440/S460/S454 scripts. Searched current LRC literature for inspiration: Tao's finite-checking frame, zonotopal/covering-radius reductions, shifted LRC covering radii, and mixed-threshold Fourier variants. These were used as heuristic noise cards, then reduced back to exact repo computations.
+**Computation:** Added `04-computation/lrc_n14_n18_alternating_noise_s455.py` and stored `05-knowledge/results/lrc_n14_n18_alternating_noise_s455.out`. The script alternates exact local `n`-gate set covers, row-parent and `n`-gate debt ledgers, a one-slot multiple/nonmultiple repair scan, and Tournament Analysis safe-distance switchboards at `t=1/n`.
+**Findings:** The S481 bridge-fiber picture was confirmed and sharpened. A one-slot scan showed nonmultiples can be archimedean-tighter while carrying more endpoint debt: `n=14` add `54` gives `gap/th=1/30`, debt `34`, while add `14` gives `1/22`, debt `24`; `n=18` add `70` gives `1/42`, debt `42`, while add `18` gives `1/30`, debt `32`. Safe-distance switchboards remain transitive on initial rows but cyclic on row-parent ladders (`93` cycles at `n=14`, `207` at `n=18`).
+**Synthesis:** Updated HYP-1942 with S455 evidence and added `07-reflections/lrc-n14-n18-alternating-noise-s455.md`. The current S455 preference is to attack `n=18` first as a two-bridge Hall/Farkas dual lab, then lift the certificate to the `n=14` six-bridge parity family.
+**Verification:** `python -m py_compile 04-computation/lrc_n14_n18_alternating_noise_s455.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-05-31-S480 - Tournament Analysis Metric Lifts
 
 **Account:** Codex

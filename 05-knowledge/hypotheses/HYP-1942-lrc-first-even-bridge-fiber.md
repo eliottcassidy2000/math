@@ -9,6 +9,7 @@ related:
   - HYP-1905
   - HYP-1910
   - HYP-1930
+  - HYP-1932
   - HYP-1940
   - HYP-1941
 ---
@@ -77,6 +78,28 @@ structure.  For example, at the `n=18` gate midpoint the close-threshold gauge
 has `60` cyclic triples and SCC sizes `17,1`, while pressure has `22` cyclic
 triples and SCC sizes `16,1,1`.
 
+S455 adds two refinements.  First, a one-slot scan that drops the top initial
+speed and adds one speed in `[n,n(n-1)]` shows that nonmultiples can be
+archimedean-tighter while carrying more endpoint debt:
+
+```text
+n=14: add 14 gives gap/th=1/22, debt=24
+      add 54 gives gap/th=1/30, debt=34
+n=18: add 18 gives gap/th=1/30, debt=32
+      add 70 gives gap/th=1/42, debt=42
+```
+
+Second, at the gate time `t=1/n`, the safe-distance switchboard is transitive
+on initial rows but cyclic on row-parent ladders:
+
+```text
+n=14 initial safe cycles=0, row-parent safe cycles=93
+n=18 initial safe cycles=0, row-parent safe cycles=207
+```
+
+Thus the bridge-fiber lemma should keep both the scalar endpoint ledger and a
+marked pairwise safe-switch tournament.
+
 ## Predictions
 
 1. A general first-even lemma should prove: after the unit/half fan invoice,
@@ -96,6 +119,9 @@ triples and SCC sizes `16,1,1`.
 - `04-computation/lrc_n14_n18_tournament_pingpong_s481.py`
 - `05-knowledge/results/lrc_n14_n18_tournament_pingpong_s481.out`
 - `07-reflections/lrc-n14-n18-tournament-pingpong-s481.md`
+- `04-computation/lrc_n14_n18_alternating_noise_s455.py`
+- `05-knowledge/results/lrc_n14_n18_alternating_noise_s455.out`
+- `07-reflections/lrc-n14-n18-alternating-noise-s455.md`
 - HYP-1840
 - HYP-1866
 - HYP-1891

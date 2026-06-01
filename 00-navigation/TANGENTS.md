@@ -656,6 +656,18 @@ Mixed two-neighbor slack behaves like a rank gauge and collapses to transitive t
 **T547** #agents #methodology #tournament-analysis #scripts | certainty: repository instruction | source: codex-2026-06-01-S481
 Future computational scripts should aim to include Tournament Analysis when meaningfully available: declare pairwise observable, switch/gauge, tie Hamiltonian path, and tournament fingerprints such as score histograms, directed cycles, SCCs, edge flips, and H counts when feasible. This is now recorded in `AGENTS.md`.
 
+**T548** #lonely-runner #n18 #square-core #bridge-fiber | certainty: exact local cover computation | source: codex-2026-06-01-S455
+S455 independently rechecked the S481 bridge-fiber picture: owner `18` endpoints covered by lower columns force `(1,5,7,9,11,13,17)` and one of `(6)` or `(12)`. The useful refinement is proof-strategic: `n=18` is the two-bridge Hall/Farkas lab for the six-bridge `n=14` parity family.
+
+**T549** #lonely-runner #gap-debt-product #row-parent-ladder | certainty: exact endpoint audit | source: codex-2026-06-01-S455
+Row-parent and `n`-gate ladders conserve the gap-debt product in the S455 audit: at `n=14`, both row-parent and `14`-gate ladders have product `5/11`; at `n=18`, both have product `1`. Moving to the `n`-gate ladder halves the archimedean gap and doubles endpoint debt, rather than removing the obstruction.
+
+**T550** #lonely-runner #multiple-of-n #endpoint-debt | certainty: bounded one-slot scan | source: codex-2026-06-01-S455
+In the scan "drop `n-1`, add one speed in `[n,n(n-1)]`," the best nonmultiple repair is tighter than the best multiple repair but carries more endpoint debt: `n=14` add `54` has gap/th `1/30`, debt `34` versus add `14` gap/th `1/22`, debt `24`; `n=18` add `70` has gap/th `1/42`, debt `42` versus add `18` gap/th `1/30`, debt `32`. The multiple heuristic needs a debt ledger.
+
+**T551** #lonely-runner #n18 #tournament-analysis #safe-switch | certainty: sampled exact switchboard at t=1/n | source: codex-2026-06-01-S455
+Safe-distance switchboards are transitive on initial first-even rows but cyclic on row-parent ladders: `n=14` initial safe cycles `0` versus row-parent `93`; `n=18` initial safe cycles `0` versus row-parent `207`. Pairwise crowding is a separate obstruction layer from the scalar lonely gap.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
