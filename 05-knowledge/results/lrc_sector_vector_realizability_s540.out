@@ -1,0 +1,102 @@
+Sector-vector realizability -- codex S540
+==============================================================================
+A sector-vector is c=(c_0,...,c_{n-1}), sum c_i=n-1.
+Good means c_0=c_{n-1}=0, i.e. the observer's two sectors are empty.
+
+n=3
+  all raw sector-vectors:        6 = C(4,2)
+  observer-clasp reflection orbits: 4
+  free dihedral orbits:          2
+  good raw vectors c0=c[n-1]=0:  1
+  good clasp-reflection orbits:  1
+  constructive theorem:          6/6 vectors realized, max witness speed <= 12
+  bounded exact search B<=10:
+    speed sets=31, certified by open good vector=30/31
+    vectors seen=6/6, good seen=1/1, forced intersection=4 (good=0)
+    first-seen max-speed histogram: {2: 4, 3: 2}
+    forced vectors: [(0, 0, 2), (0, 1, 1), (1, 1, 0), (2, 0, 0)]
+  worst constructive witnesses:
+    max= 12, c=(0, 0, 2), speeds=(11, 12), t=1/15
+    max=  9, c=(1, 0, 1), speeds=(1, 9), t=1/12
+    max=  9, c=(0, 1, 1), speeds=(5, 9), t=1/12
+
+n=4
+  all raw sector-vectors:        20 = C(6,3)
+  observer-clasp reflection orbits: 10
+  free dihedral orbits:          4
+  good raw vectors c0=c[n-1]=0:  4
+  good clasp-reflection orbits:  2
+  constructive theorem:          20/20 vectors realized, max witness speed <= 21
+  bounded exact search B<=12:
+    speed sets=196, certified by open good vector=195/196
+    vectors seen=20/20, good seen=4/4, forced intersection=8 (good=0)
+    first-seen max-speed histogram: {3: 12, 4: 4, 5: 4}
+    forced vectors: [(0, 0, 0, 3), (0, 0, 1, 2), (0, 1, 1, 1), (1, 0, 1, 1), (1, 1, 0, 1), (1, 1, 1, 0), (2, 1, 0, 0), (3, 0, 0, 0)]
+  worst constructive witnesses:
+    max= 21, c=(0, 0, 0, 3), speeds=(19, 20, 21), t=1/24
+    max= 17, c=(1, 0, 0, 2), speeds=(1, 16, 17), t=1/20
+    max= 17, c=(0, 1, 0, 2), speeds=(6, 16, 17), t=1/20
+
+n=5
+  all raw sector-vectors:        70 = C(8,4)
+  observer-clasp reflection orbits: 38
+  free dihedral orbits:          10
+  good raw vectors c0=c[n-1]=0:  15
+  good clasp-reflection orbits:  9
+  constructive theorem:          70/70 vectors realized, max witness speed <= 32
+  bounded exact search B<=14:
+    speed sets=965, certified by open good vector=963/965
+    vectors seen=70/70, good seen=15/15, forced intersection=4 (good=0)
+    first-seen max-speed histogram: {4: 22, 5: 22, 6: 14, 7: 12}
+    forced vectors: [(0, 0, 0, 0, 4), (0, 0, 0, 1, 3), (3, 1, 0, 0, 0), (4, 0, 0, 0, 0)]
+  worst constructive witnesses:
+    max= 32, c=(0, 0, 0, 0, 4), speeds=(29, 30, 31, 32), t=1/35
+    max= 27, c=(1, 0, 0, 0, 3), speeds=(1, 25, 26, 27), t=1/30
+    max= 27, c=(0, 1, 0, 0, 3), speeds=(7, 25, 26, 27), t=1/30
+
+n=6
+  all raw sector-vectors:        252 = C(10,5)
+  observer-clasp reflection orbits: 126
+  free dihedral orbits:          26
+  good raw vectors c0=c[n-1]=0:  56
+  good clasp-reflection orbits:  28
+  constructive theorem:          252/252 vectors realized, max witness speed <= 45
+  bounded exact search B<=16:
+    speed sets=4311, certified by open good vector=4309/4311
+    vectors seen=252/252, good seen=56/56, forced intersection=4 (good=0)
+    first-seen max-speed histogram: {5: 40, 6: 48, 7: 72, 8: 48, 9: 30, 10: 6, 11: 4, 12: 2, 13: 2}
+    forced vectors: [(0, 0, 0, 0, 0, 5), (0, 0, 0, 0, 1, 4), (4, 1, 0, 0, 0, 0), (5, 0, 0, 0, 0, 0)]
+  worst constructive witnesses:
+    max= 45, c=(0, 0, 0, 0, 0, 5), speeds=(41, 42, 43, 44, 45), t=1/48
+    max= 39, c=(1, 0, 0, 0, 0, 4), speeds=(1, 36, 37, 38, 39), t=1/42
+    max= 39, c=(0, 1, 0, 0, 0, 4), speeds=(8, 36, 37, 38, 39), t=1/42
+
+n=7
+  all raw sector-vectors:        924 = C(12,6)
+  observer-clasp reflection orbits: 472
+  free dihedral orbits:          76
+  good raw vectors c0=c[n-1]=0:  210
+  good clasp-reflection orbits:  110
+  constructive theorem:          924/924 vectors realized, max witness speed <= 60
+  bounded exact search B<=14:
+    speed sets=2996, certified by open good vector=2995/2996
+    vectors seen=897/924, good seen=202/210, forced intersection=4 (good=0)
+    first-seen max-speed histogram: {6: 64, 7: 162, 8: 148, 9: 203, 10: 151, 11: 72, 12: 16, 13: 66, 14: 15}
+    forced vectors: [(0, 0, 0, 0, 0, 0, 6), (0, 0, 0, 0, 0, 1, 5), (5, 1, 0, 0, 0, 0, 0), (6, 0, 0, 0, 0, 0, 0)]
+  worst constructive witnesses:
+    max= 60, c=(0, 0, 0, 0, 0, 0, 6), speeds=(55, 56, 57, 58, 59, 60), t=1/63
+    max= 53, c=(1, 0, 0, 0, 0, 0, 5), speeds=(1, 49, 50, 51, 52, 53), t=1/56
+    max= 53, c=(0, 1, 0, 0, 0, 0, 5), speeds=(9, 49, 50, 51, 52, 53), t=1/56
+
+Interpretation
+------------------------------------------------------------------------------
+Existential sector-vector realizability is trivial in the strong sense:
+  every composition of n-1 into n sectors is realized by an explicit
+  primitive speed set at an open time t=1/(nL).
+Therefore HYP-2022's restriction is not global vector existence.
+The real questions are fixed-clock menus, low-complexity realization,
+observer anchoring, boundary compactification, and forced hitting of
+the good face c_0=c_{n-1}=0 by every primitive clock.
+The bounded forced intersections above are bad boundary fans, not LRC
+witnesses: they come from times near 0 or 1 where almost all runners sit
+next to the observer.  The good face is not a single forced vector.

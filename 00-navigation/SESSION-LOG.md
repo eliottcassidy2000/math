@@ -37,6 +37,15 @@
 **TENSION DUAL:** runner positions = tension (cut space) on observer-star; loneliness = circular n-coloring (observer >=1 from all, circumference n); LRC = orbit-constrained circular coloring (verified n=7 v=(1,2,3,4,6) at t=0.19). Flow<->coloring Tutte duality = two faces of LRC.
 **Honest limit:** reframes inside-debt/parity (insufficient beyond n=4) into flow language; toolbox not proof.
 **Artifacts:** lrc_nowhere_zero_flow_s537.py (+.out); reflection lrc-as-nowhere-zero-flows-on-the-speed-dipole-and-the-tension-dual-s537o.md; HYP-2025. **Handoff:** full |LONELY| = flow enumerator over all sub-dipoles (deletion-contraction); circular-flow-number bound via Tutte 5-/Seymour 6-flow; counterexample <=> derived graph lacks a NZ flow of prescribed circular type.
+## codex-2026-06-01-S540 - Sector-vector realizability is full; LRC is forced hitting of the good face (HYP-2028)
+
+**User prompt:** investigate realizable sector-vectors.
+**Computation:** `04-computation/lrc_sector_vector_realizability_s540.py` (+ stored output) separates three meanings of realizable: existentially realizable by some speed set/time, reachable by a fixed speed clock, and forced across every primitive speed set.
+**Main result:** every composition of `n-1` into `n` sector counts is existentially realizable.  Constructively, take `q=nL`, choose distinct open residues in each sector according to `c_k`, force gcd `1`, use those residues as speeds, and set `t=1/q`.  Audited through `n=7`: `6/6,20/20,70/70,252/252,924/924` vectors realized.
+**Correction to HYP-2022:** sector restriction is not global vector existence.  It lives in fixed-clock menus, low-complexity realization, sector-tournament quotients, observer anchoring, and forced hitting of the good face `c_0=c_{n-1}=0`.
+**Concurrent integration:** upstream HYP-2024 section/boundary functors and HYP-2026 support-flow/zero-cut duality are now interpreted as forced-menu/cut statements inside the full sector-vector simplex; this result was renumbered to HYP-2028 after upstream claimed HYP-2024..2027.
+**Bounded search:** all raw/good vectors are seen through `n=6`; at `n=7`, `B<=14` sees `897/924` raw and `202/210` good.  The vectors forced in every bounded primitive clock are bad boundary fans only: for `n>=5`, `(n-1,0,...,0)`, `(n-2,1,0,...,0)`, and the symmetric sector-`n-1` versions.  Forced intersection has `good=0`.
+**Handoff:** study fixed-clock menus `M(V)`, first-hit good-face profiles, AP boundary-only menus, and sector/hole tournament good-face ideals.
 
 ## codex-2026-06-01-S539 - Event-media tournaments: holes, gates, certificates, carries (HYP-2023)
 
