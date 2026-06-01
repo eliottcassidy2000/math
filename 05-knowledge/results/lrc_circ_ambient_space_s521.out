@@ -1,0 +1,12 @@
+Ambient space of the LRC walk:  M(n)=A000016(m)  <=  Circ(m)  <=  A000568(m)
+
+  m  menu M |Circ(m)|  A000568   Circ/A000568  new-in-tail
+  3       1         2        2            2/2            0
+  4       2         2        4            2/4            0
+  5       4         4       12           4/12            0
+  6       6         6       56           6/56            0
+  7      10        10      456         10/456            0
+  8      16        16     6880        16/6880            0
+
+(new-in-tail = distinct raw circular matrices first seen in the last 20% of
+ samples; 0 indicates the class set is saturated / count is exact.)
