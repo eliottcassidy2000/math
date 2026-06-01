@@ -1,0 +1,108 @@
+LRC fixed-n tournament class atlas -- codex-2026-06-01 S525
+
+PART A: open source menus as Ferrers interval tournaments
+========================================================================
+n=4 m=3 L=1-2/n=0.500000 A000568(m)=2 Catalan=5 feasible_signatures=1 open_iso=1 H=[1]
+n=5 m=4 L=1-2/n=0.600000 A000568(m)=4 Catalan=14 feasible_signatures=8 open_iso=2 H=[1, 5]
+n=6 m=5 L=1-2/n=0.666667 A000568(m)=12 Catalan=42 feasible_signatures=16 open_iso=4 H=[1, 9, 11, 15]
+n=7 m=6 L=1-2/n=0.714286 A000568(m)=56 Catalan=132 feasible_signatures=32 open_iso=6 H=[1, 17, 23, 41, 45]
+n=8 m=7 L=1-2/n=0.750000 A000568(m)=456 Catalan=429 feasible_signatures=64 open_iso=10 H=[1, 33, 47, 51, 105, 123, 137, 151, 175]
+n=9 m=8 L=1-2/n=0.777778 A000568(m)=6880 Catalan=1430 feasible_signatures=128 open_iso=16 H=[1, 65, 95, 107, 269, 347, 393, 465, 479, 509, 629, 653]
+
+PART B: bounded speed-clock cross-check of the open menu
+========================================================================
+n=4 max_speed=14 primitive_sets=325 source_sets=324 speed_open_iso=1 geometric_open_iso=1 match=True
+n=5 max_speed=12 primitive_sets=479 source_sets=477 speed_open_iso=2 geometric_open_iso=2 match=True
+n=6 max_speed=11 primitive_sets=461 source_sets=459 speed_open_iso=4 geometric_open_iso=4 match=True
+n=7 max_speed=10 primitive_sets=210 source_sets=209 speed_open_iso=6 geometric_open_iso=6 match=True
+n=8 max_speed=9 primitive_sets=36 source_sets=35 speed_open_iso=10 geometric_open_iso=10 match=True
+
+Closed/wall compactification note:
+  S512/S520 source menus include equality-wall witnesses.  The open
+  Ferrers tournament menu gives 1,2,4,6,10 classes for n=4..8, while
+  stored closed/wall speed menus report 2,2,6,6,>=12.  The surplus
+  classes are boundary/tie-path data, not raw open A000568 classes.
+
+PART C: class spectra
+========================================================================
+n=4 open source class spectrum:
+  H=1    score=(0, 1, 2) c3=0  ferrers_signatures=1
+
+n=5 open source class spectrum:
+  H=1    score=(0, 1, 2, 3) c3=0  ferrers_signatures=4
+  H=5    score=(1, 1, 2, 2) c3=2  ferrers_signatures=4
+
+n=6 open source class spectrum:
+  H=1    score=(0, 1, 2, 3, 4) c3=0  ferrers_signatures=5
+  H=9    score=(1, 1, 2, 3, 3) c3=3  ferrers_signatures=5
+  H=11   score=(1, 2, 2, 2, 3) c3=4  ferrers_signatures=5
+  H=15   score=(2, 2, 2, 2, 2) c3=5  ferrers_signatures=1
+
+n=7 open source class spectrum:
+  H=1    score=(0, 1, 2, 3, 4, 5) c3=0  ferrers_signatures=6
+  H=17   score=(1, 1, 2, 3, 4, 4) c3=4  ferrers_signatures=6
+  H=23   score=(1, 2, 2, 3, 3, 4) c3=6  ferrers_signatures=6
+  H=23   score=(1, 2, 2, 3, 3, 4) c3=6  ferrers_signatures=6
+  H=41   score=(2, 2, 2, 3, 3, 3) c3=8  ferrers_signatures=6
+  H=45   score=(2, 2, 2, 3, 3, 3) c3=8  ferrers_signatures=2
+
+n=8 open source class spectrum:
+  H=1    score=(0, 1, 2, 3, 4, 5, 6) c3=0  ferrers_signatures=7
+  H=33   score=(1, 1, 2, 3, 4, 5, 5) c3=5  ferrers_signatures=7
+  H=47   score=(1, 2, 2, 3, 4, 4, 5) c3=8  ferrers_signatures=7
+  H=47   score=(1, 2, 2, 3, 4, 4, 5) c3=8  ferrers_signatures=7
+  H=51   score=(1, 2, 3, 3, 3, 4, 5) c3=9  ferrers_signatures=7
+  H=105  score=(2, 2, 2, 3, 4, 4, 4) c3=11 ferrers_signatures=7
+  H=123  score=(2, 2, 3, 3, 3, 4, 4) c3=12 ferrers_signatures=7
+  H=137  score=(2, 2, 3, 3, 3, 4, 4) c3=12 ferrers_signatures=7
+  H=151  score=(2, 3, 3, 3, 3, 3, 4) c3=13 ferrers_signatures=7
+  H=175  score=(3, 3, 3, 3, 3, 3, 3) c3=14 ferrers_signatures=1
+
+n=9 open source class spectrum:
+  H=1    score=(0, 1, 2, 3, 4, 5, 6, 7) c3=0  ferrers_signatures=8
+  H=65   score=(1, 1, 2, 3, 4, 5, 6, 6) c3=6  ferrers_signatures=8
+  H=95   score=(1, 2, 2, 3, 4, 5, 5, 6) c3=10 ferrers_signatures=8
+  H=95   score=(1, 2, 2, 3, 4, 5, 5, 6) c3=10 ferrers_signatures=8
+  H=107  score=(1, 2, 3, 3, 4, 4, 5, 6) c3=12 ferrers_signatures=8
+  H=107  score=(1, 2, 3, 3, 4, 4, 5, 6) c3=12 ferrers_signatures=8
+  H=269  score=(2, 2, 2, 3, 4, 5, 5, 5) c3=14 ferrers_signatures=8
+  H=347  score=(2, 2, 3, 3, 4, 4, 5, 5) c3=16 ferrers_signatures=8
+  H=347  score=(2, 2, 3, 3, 4, 4, 5, 5) c3=16 ferrers_signatures=8
+  H=393  score=(2, 2, 3, 3, 4, 4, 5, 5) c3=16 ferrers_signatures=8
+  H=465  score=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 ferrers_signatures=8
+  H=479  score=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 ferrers_signatures=8
+  H=479  score=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 ferrers_signatures=8
+  H=509  score=(2, 3, 3, 3, 4, 4, 4, 5) c3=18 ferrers_signatures=8
+  H=629  score=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 ferrers_signatures=8
+  H=653  score=(3, 3, 3, 3, 4, 4, 4, 4) c3=20 ferrers_signatures=8
+
+PART D: Tournament Analysis across fixed-n profiles
+========================================================================
+score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1))
+c3=0
+SCCs=(1, 1, 1, 1, 1, 1)
+Hamiltonian_paths=1
+top order by score:
+  score=5 n=9 profile=(16, 128, 6880, 653, 12, 9)
+  score=4 n=8 profile=(10, 64, 456, 175, 9, 8)
+  score=3 n=7 profile=(6, 32, 56, 45, 5, 7)
+  score=2 n=6 profile=(4, 16, 12, 15, 4, 6)
+  score=1 n=5 profile=(2, 8, 4, 5, 2, 5)
+  score=0 n=4 profile=(1, 1, 2, 1, 1, 4)
+
+SYNTHESIS
+========================================================================
+1. Fixed total n turns LRC into source reachability in a marked
+   tournament on n vertices; after deleting the source observer, the
+   target lives in tournament classes on m=n-1 vertices.
+2. In an open source cell those m vertices lie in one arc of length
+   1-2/n.  Relative to their arc order, backward edges form a Ferrers
+   filter, and the fixed safe-arc length cuts Catalan many Ferrers
+   signatures down to a much smaller interval-feasible menu.
+3. Bounded speed clocks hit exactly the same open isomorphism classes
+   for n=4..8.  Wall witnesses explain the extra closed-menu classes
+   from S512/S520, so the true LRC object is an open tournament menu
+   plus a compactified boundary fiber.
+4. The problem at a particular n is therefore: prove every primitive
+   arithmetic clock reaches this tiny Ferrers interval menu, or its
+   compactified wall boundary, inside the A000568(n-1) class universe.

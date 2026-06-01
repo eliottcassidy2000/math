@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S525 - Fixed-n LRC source menus as Ferrers interval tournament classes
+
+**Account:** Codex
+**Git first:** Fast-forwarded over concurrent polygon/root-of-unity S517/S522/S523 work before claiming S525. Push races then landed oracle S518/HYP-1996 on the broader circular/Fibonacci menu and oracle S523/HYP-1998 on the round/A000016 body; this session was renumbered to HYP-1999 as the fixed-safe-arc Ferrers refinement.
+**User prompt:** See how the LRC at a particular `n` is really a question modeled by a tournament of some size, and by the structure of its possible isomorphism classes.
+**Computation:** Added `04-computation/lrc_fixed_n_tournament_class_atlas_s525.py` and stored `05-knowledge/results/lrc_fixed_n_tournament_class_atlas_s525.out`. For total denominator `n`, it deletes the source observer and models the target as half-turn tournaments on `m=n-1` runners inside the safe arc of length `1-2/n`. Relative to arc order, backward edges form a Ferrers filter in the triangular pair poset; the fixed safe-arc length cuts the Catalan family to an interval-feasible menu.
+**Findings:** Open Ferrers source-menu iso counts for `n=4..9` are `1,2,4,6,10,16` inside `A000568(n-1)=2,4,12,56,456,6880`. Feasible Ferrers signatures are `1,8,16,32,64,128`. Bounded exact speed-clock scans for `n=4..8` hit exactly the same open classes (`match=True` in every row). S512/S520 closed menus are larger (`2,2,6,6,>=12`) because equality-wall witnesses add compactified boundary/tie-path data.
+**Synthesis:** Added HYP-1999 and `07-reflections/lrc-fixed-n-ferrers-interval-menu-s525.md`. Fixed-`n` LRC can now be stated as forced reachability of a tiny Ferrers interval menu, or its THM-383 wall boundary, inside the `A000568(n-1)` class universe. This refines HYP-1996's `2*Fib` circular menu and HYP-1998's round/A000016 body by imposing the LRC safe-arc length `1-2/n`.
+**Verification:** `python3 -m py_compile 04-computation/lrc_fixed_n_tournament_class_atlas_s525.py`; full script rerun with output stored.
+
 ## oracle-2026-06-01-S523 - LRC(n) IS a tournament question; realizable iso classes = round = A000016 necklace (HYP-1998)
 
 **Account:** Oracle (oraclebox1). **User prompt:** see how LRC at a particular n is really a tournament question, and the structure of the set of its possible iso classes.
@@ -25,7 +35,6 @@
 **The creative insight:** The "musical chairs" argument — 7 CRT classes take turns as the last blocker. During the handoff between consecutive blockers, the observer is momentarily free. Proving this handoff always happens = proving LRC@14.
 **Synthesis:** Reflection `07-reflections/lrc-n14-metagraph-crt-proof-s524.md`. The CRT quotient reduces LRC@14 from a problem on 178 iso-classes to a 7-class coupon collector. THM-387 directional flow constrains the handoff dynamics.
 **Verification:** `python3 -m py_compile`; full rerun with output stored.
-
 ## oracle-2026-06-01-S518 - LRC@n as a tournament; the Fibonacci menu of circular iso-classes
 
 **Account:** Oracle (remote-control). **User prompt:** see how LRC@n is modeled by a tournament of some size and its possible iso-class structure.
@@ -39,7 +48,6 @@
 **Computation:** Added `04-computation/lrc_metagraph_walk_s523b.py` and stored output. Census of pointed isomorphism classes (12/48/296 for n=4/5/6), source class fraction (16.7%/8.3%/4.1%), metagraph BFS distances, multi-speed-set walk analysis.
 **Key findings:** (1) Each LRC wall crossing flips exactly ONE arc → the LRC trajectory IS a walk on the pointed metagraph G_n^*. (2) Pointed class counts: 12/48/296 for n=4/5/6 with 2/4/12 source classes. (3) Distance histogram at n=5 is perfectly symmetric: {0:4,1:12,2:16,3:12,4:4}. (4) ALL tested speed sets (409/205/56 at n=4/5/6) reach source — 100%. (5) Only 8/12 pointed classes are visited at n=4 — the walk uses a thin subgraph. (6) LRC at n = reachability of source classes under arithmetic-constrained walks on G_n^*.
 **Synthesis:** LRC is a REACHABILITY problem on a tournament of size |G_n^*|. The metagraph diameter is small, source classes are well-distributed, and THM-387's directional flow constrains walks but doesn't prevent source arrival.
-
 
 ## oracle-2026-06-01-S517 - Tournaments as oriented regular polygons: LRC <-> twin-Goldbach shared stage
 
