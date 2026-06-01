@@ -1,0 +1,51 @@
+LRC tournament-clock overlay (codex-2026-06-01 S502b)
+
+LRC WITNESS TIMES OVERLAID ON THE HALF-TURN TOURNAMENT CLOCK
+====================================================================================================================================
+row                mode        scale skip        class    gap/th   debt t-kind               t  orig/th  clock  cell/wall     LRCgap walls  bdy wall            H
+------------------------------------------------------------------------------------------------------------------------------------
+n14 initial        initial         -    - boundary_only         0      6 boundary          1/14        1   wall      1/182          0     0       6/6     24104937
+n14 row-parent     row-parent      7    6 positive_gap     5/924     84 gap-mid     3053/25872    29/24   cell     1/1870    5/12936     1     36/84     22168229
+n14 gate           gate           14    6 positive_gap    5/1848    168 gap-mid     4339/51744 4339/3696   cell    7/41750    5/25872     1    72/168     17826951
+n14 double-gate    double-gate    28    6 positive_gap    5/3696    336 gap-mid    8035/103488 8035/7392   cell  13/168170    5/51744     2   144/336     17826951
+n18 initial        initial         -    - boundary_only         0      6 boundary          1/18        1   wall      1/306          0     0       6/6            -
+n18 row-parent     row-parent      9    8 positive_gap     1/176    176 gap-mid     3991/57024 3991/3168   cell    5/30602     1/3168     2    48/176            -
+n18 gate           gate           18    8 positive_gap     1/352    352 gap-mid    8681/114048    41/32   cell    7/49250     1/6336     1    96/352            -
+n18 double-gate    double-gate    36    8 positive_gap     1/704    704 gap-mid   15017/228096 15017/12672   cell  17/425810    1/12672     2   192/704            -
+
+HALF-TURN TOURNAMENT SHAPE AT THE LRC SELECTED TIME
+========================================================================================================
+row                t-kind   max circle gap  score width   cyc3 largest SCC read
+--------------------------------------------------------------------------------------------------------
+n14 initial        boundary           1/14            1    112          14 near-regular clock top
+n14 row-parent     gap-mid        481/3696            3    110          14 interior circular cell
+n14 gate           gap-mid        481/3696            3    106          14 interior circular cell
+n14 double-gate    gap-mid        481/3696            3    106          14 interior circular cell
+n18 initial        boundary           1/18            1    240          18 near-regular clock top
+n18 row-parent     gap-mid        233/2112            1    240          18 near-regular clock top
+n18 gate           gap-mid        233/2112            3    236          18 interior circular cell
+n18 double-gate    gap-mid        233/2112            3    236          18 interior circular cell
+
+SYNTHESIS
+========================================================================================================
+Positive-gap rows whose LRC gap crosses at least one half-turn wall: 6/6
+  n14 row-parent: LRC gap 5/12936 crosses 1 wall(s), so it is a corridor through 2 adjacent clock cells; midpoint t=3053/25872 is a cell interior.
+  n14 gate: LRC gap 5/25872 crosses 1 wall(s), so it is a corridor through 2 adjacent clock cells; midpoint t=4339/51744 is a cell interior.
+  n14 double-gate: LRC gap 5/51744 crosses 2 wall(s), so it is a corridor through 3 adjacent clock cells; midpoint t=8035/103488 is a cell interior.
+  n18 row-parent: LRC gap 1/3168 crosses 2 wall(s), so it is a corridor through 3 adjacent clock cells; midpoint t=3991/57024 is a cell interior.
+  n18 gate: LRC gap 1/6336 crosses 1 wall(s), so it is a corridor through 2 adjacent clock cells; midpoint t=8681/114048 is a cell interior.
+  n18 double-gate: LRC gap 1/12672 crosses 2 wall(s), so it is a corridor through 3 adjacent clock cells; midpoint t=15017/228096 is a cell interior.
+
+Initial rows:
+  n14 initial: 6/6 lonely boundary witnesses are half-turn clock walls; selected t=1/14 has score width 1.
+  n18 initial: 6/6 lonely boundary witnesses are half-turn clock walls; selected t=1/18 has score width 1.
+
+Boundary alignment ratios on the hard ladders:
+  n14 row-parent: 36/84 = 3/7 LRC boundary witnesses are also half-turn clock walls.
+  n14 gate: 72/168 = 3/7 LRC boundary witnesses are also half-turn clock walls.
+  n14 double-gate: 144/336 = 3/7 LRC boundary witnesses are also half-turn clock walls.
+  n18 row-parent: 48/176 = 3/11 LRC boundary witnesses are also half-turn clock walls.
+  n18 gate: 96/352 = 3/11 LRC boundary witnesses are also half-turn clock walls.
+  n18 double-gate: 192/704 = 3/11 LRC boundary witnesses are also half-turn clock walls.
+
+Interpretation: the half-turn clock sees global circular spread.  The initial-segment unit witnesses are exactly clock-wall events.  The hard quotient-ladder lonely intervals are different: they are tiny corridors through a few adjacent circular-tournament cells, with fixed alignment ratios along the row-parent/gate/double-gate ladder.  LRC proof data should therefore keep two clocks: the coarse half-turn walk for spread/topology, and an anchored 1/n endpoint clock for the actual lonely boundary certificate.

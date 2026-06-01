@@ -59,6 +59,14 @@ lift on five starters reached `H=5` and `H=13`, outside the circular menu.
 This supports the claim that the restriction comes from circle geometry, not
 from the tournament-analysis switchboard mechanism alone.
 
+S502 overlays this half-turn clock with the actual LRC endpoint clock for the
+hard `n=14` and `n=18` rows.  Initial-segment lonely boundary witnesses are
+half-turn clock walls (`6/6` for both `n=14` and `n=18`).  Hard quotient-ladder
+positive gaps are instead short corridors crossing one or two half-turn walls,
+with ladder-invariant boundary alignment ratios `3/7` for `n=14` and `3/11`
+for `n=18`.  This refines the LRC bridge: half-turn spread data and anchored
+`1/n` endpoint data are two clocks that must be overlaid, not identified.
+
 ## Predictions
 
 1. The circular menu for `n` is the full set of tournaments realizable by
@@ -68,13 +76,19 @@ from the tournament-analysis switchboard mechanism alone.
 3. The alpha-comparator family `frac((s_j-s_i)t) in (0,1/k)` should recover
    LRC threshold cells at `1/k`, with open-arc containment replacing the
    semicircle criterion.
+4. LRC hard-row proofs should record half-turn clock corridors across each
+   positive lonely interval, including phase-wall count, boundary alignment
+   ratio, and the tournament invariants on adjacent cells.
 
 ## Sources
 
 - `07-reflections/tournament-clock-runner-walks-in-Gn-s24.md`
 - `07-reflections/tournament-analysis-metric-lifts-s23.md`
+- `04-computation/lrc_tournament_clock_overlay_s502.py`
+- `07-reflections/lrc-tournament-clock-overlay-s502.md`
 - THM-373
 - THM-374
 - THM-369
 - HYP-1850
 - HYP-1931
+- HYP-1967

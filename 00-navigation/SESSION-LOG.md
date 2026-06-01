@@ -11,6 +11,16 @@
 **Synthesis:** Added HYP-1965 and `07-reflections/pair-first-twin-prime-lens-s502.md`, and created the missing `05-knowledge/variables/edge-variable.md`. The proposed ontology is `pair-cell = endpoints + relation/label + fiber coordinates`; vertices are carriers, but the connection is the coordinate.
 **Next:** Build pair-surface TDA: for tournaments store `(range, midpoint, sign, flip-impact)` before vertex projections; for prime pairs store `(sum, gap, singular multiplier, Zeckendorf carry debt)`; for LRC rebuild pressure DAGs on endpoint-runner or runner-pair cells before projecting to runner-level pressure.
 
+## codex-2026-06-01-S502b - LRC tournament-clock overlay
+
+**Account:** Codex
+**Git first:** Rebased over concurrent S502 pair-first twin-prime lens.
+**User prompt:** Integrate ideas of the tournament clock and work on the LRC.
+**Computation:** Added `04-computation/lrc_tournament_clock_overlay_s502.py` and stored `05-knowledge/results/lrc_tournament_clock_overlay_s502.out`. The script overlays exact half-turn tournament-clock walls `m/(2|s_i-s_j|)` with anchored LRC endpoint walls `||v t||=1/n` for `n=14` and `n=18` initial, row-parent, gate, and double-gate hard rows.
+**Findings:** Initial unit witnesses are half-turn clock-wall events (`6/6` for both `n=14` and `n=18`). Hard positive lonely intervals are not single clock cells; they are short corridors through adjacent circular-tournament cells, crossing one or two half-turn walls. Boundary alignment ratios are invariant along dyadic ladders: `n=14` has `3/7`, `n=18` has `3/11`. The `n=18` row-parent midpoint keeps a near-regular half-turn profile, supporting the square-core proof-lab reading rather than scalar-gap disproof pressure.
+**Synthesis:** Added HYP-1967 and `07-reflections/lrc-tournament-clock-overlay-s502.md`. The proof object should keep two clocks: half-turn spread/topology and anchored `1/n` endpoint protection. Future LRC Tournament Analysis should record corridor vectors, not only selected-time snapshots.
+**Verification:** `python3 -m py_compile 04-computation/lrc_tournament_clock_overlay_s502.py` succeeded; rerunning the script reproduced the stored output.
+
 ## oracle-2026-06-01-S25 - Holdback, twin primes, and the staircase (tournament clock x LRC)
 
 **Account:** Oracle (remote-control). **User prompt:** think about the tournament clock in terms of holdback and twin primes and how they relate to the LRC.

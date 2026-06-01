@@ -107,6 +107,20 @@ n=18 initial safe cycles=0, row-parent safe cycles=207
 Thus the bridge-fiber lemma should keep both the scalar endpoint ledger and a
 marked pairwise safe-switch tournament.
 
+S502 adds the tournament-clock overlay.  Initial-segment lonely witnesses are
+half-turn clock walls, while the hard row-parent/gate/double-gate positive
+lonely intervals are small corridors through adjacent half-turn tournament
+cells.  The boundary alignment ratio is preserved along the dyadic ladder:
+
+```text
+n=14: 3/7
+n=18: 3/11
+```
+
+This suggests the bridge-fiber certificate should charge a corridor of
+half-turn cells carrying anchored endpoint debt, not just one selected
+tournament snapshot.
+
 ## Predictions
 
 1. A general first-even lemma should prove: after the unit/half fan invoice,
@@ -129,6 +143,9 @@ marked pairwise safe-switch tournament.
 - `04-computation/lrc_n14_n18_alternating_noise_s455.py`
 - `05-knowledge/results/lrc_n14_n18_alternating_noise_s455.out`
 - `07-reflections/lrc-n14-n18-alternating-noise-s455.md`
+- `04-computation/lrc_tournament_clock_overlay_s502.py`
+- `05-knowledge/results/lrc_tournament_clock_overlay_s502.out`
+- `07-reflections/lrc-tournament-clock-overlay-s502.md`
 - THM-375
 - THM-376
 - HYP-1840

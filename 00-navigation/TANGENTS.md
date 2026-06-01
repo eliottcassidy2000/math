@@ -16,6 +16,12 @@ Goldbach/Helfgott, Hardy-Littlewood, Fermat polygonal numbers, and Zeckendorf ar
 **T561** #lrc #proof-currencies #normal-form #bounded-certificate | certainty: proof-strategy reframing | source: codex-2026-06-01-S501
 LRC bridge-fiber work now looks like a hybrid additive-basis proof: finite row/gate invoices are Fermat-polygonal-style bounded-arity certificates, while exported endpoint debt wants a Zeckendorf/Ostrowski normal form. Random Tournament Analysis gauges are the smoothing currency.
 
+**T562** #lrc #tournament-clock #wall-crossing #two-clocks | certainty: high (exact n14/n18 overlay) | source: codex-2026-06-01-S502b
+The half-turn tournament clock and the LRC endpoint clock are distinct wall systems. Initial unit witnesses are half-turn clock walls (`6/6` at n=14 and n=18), but hard row-parent/gate/double-gate lonely intervals are short corridors crossing one or two half-turn walls. See HYP-1967.
+
+**T563** #lrc #boundary-alignment #n14 #n18 #clock-corridor | certainty: high (finite invariant) | source: codex-2026-06-01-S502b
+Boundary alignment with the half-turn clock is invariant along the hard dyadic ladders: n=14 has `36/84 = 72/168 = 144/336 = 3/7`; n=18 has `48/176 = 96/352 = 192/704 = 3/11`. This is a new candidate feature for bridge-fiber certificates.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
