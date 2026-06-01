@@ -1,0 +1,12 @@
+LRC(14) multiplicative-walk reduction (claudebox-S521)
+
+(1) reduction: small-denominator loneliness <=> some q in 2..14 divides no speed
+    verified: True
+
+(2) fully-covered residual (every q in 2..14 divides some speed):
+    sets tested: 400   no lonely time found (q<=400): 0
+    minimal-denominator distribution: {15: 88, 16: 136, 17: 131, 18: 15, 19: 22, 20: 2, 21: 4, 22: 2}
+    max denominator needed: 22
+
+    => non-fully-covered sets: PROVED lonely at t=1/q.  Fully-covered core
+       remains the open heart of LRC(14) (multiplicative cover vs additive walk).
