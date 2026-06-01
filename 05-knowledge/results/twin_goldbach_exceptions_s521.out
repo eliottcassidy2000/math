@@ -1,0 +1,19 @@
+twin-prime Goldbach exceptions up to 2000000 (oracle-S521)
+
+primes < 2000000: 148932;  twin primes: 29741
+first twin primes: [3, 5, 7, 11, 13, 17, 19, 29, 31, 41, 43, 59, 61, 71, 73]
+
+EVEN numbers (>=2) that are NOT a sum of two twin primes: 35
+largest exception: 4208
+
+THE LIST:
+[2, 4, 94, 96, 98, 400, 402, 404, 514, 516, 518, 784, 786, 788, 904, 906, 908, 1114, 1116, 1118, 1144, 1146, 1148, 1264, 1266, 1268, 1354, 1356, 1358, 3244, 3246, 3248, 4204, 4206, 4208]
+
+STRUCTURE
+  runs of consecutive even exceptions (step +2): 12 runs, length histogram {2: 1, 3: 11}
+  the runs: [(2, 4, 2), (94, 98, 3), (400, 404, 3), (514, 518, 3), (784, 788, 3), (904, 908, 3), (1114, 1118, 3), (1144, 1148, 3), (1264, 1268, 3), (1354, 1358, 3), (3244, 3248, 3), (4204, 4208, 3)]
+  residues mod 3: {0: 11, 1: 12, 2: 12}
+  residues mod 6: {0: 11, 2: 12, 4: 12}
+  residues mod 10: {0: 1, 2: 2, 4: 12, 6: 10, 8: 10}
+  residues mod 30: {2: 1, 4: 11, 6: 10, 8: 10, 10: 1, 12: 1, 14: 1}
+  distinct gaps between successive exceptions: [2, 26, 86, 90, 110, 116, 206, 266, 302, 956, 1886]

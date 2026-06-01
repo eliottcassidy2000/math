@@ -1,0 +1,26 @@
+twin-Goldbach necklace reduction (oracle-S521), bound 200000
+
+twin-pair centers up to 200000: 2160;  first: [4, 6, 12, 18, 30, 42, 60, 72, 102, 108, 138, 150]
+centers NOT divisible by 6 (anomalous): [4]   <-- only the {3,5} pair
+
+REDUCTION CHECK on even n in (8,6000]: mismatches = 0
+  => the triple/necklace reduction holds EXACTLY on this range.
+
+multiples of 6 in (8,4210] NOT expressible as a sum of two twin-pair centers: 11
+  holes 6m: [96, 402, 516, 786, 906, 1116, 1146, 1266, 1356, 3246, 4206]
+  each generates the exception triple {6m-2,6m,6m+2}:
+    6m=  96  ->  {94, 96, 98}
+    6m= 402  ->  {400, 402, 404}
+    6m= 516  ->  {514, 516, 518}
+    6m= 786  ->  {784, 786, 788}
+    6m= 906  ->  {904, 906, 908}
+    6m=1116  ->  {1114, 1116, 1118}
+    6m=1146  ->  {1144, 1146, 1148}
+    6m=1266  ->  {1264, 1266, 1268}
+    6m=1356  ->  {1354, 1356, 1358}
+    6m=3246  ->  {3244, 3246, 3248}
+    6m=4206  ->  {4204, 4206, 4208}
+
+TWIN-CENTER NECKLACE K = C/6 (k with 6k+-1 twin): [1, 2, 3, 5, 7, 10, 12, 17, 18, 23, 25, 30, 32, 33, 38, 40, 45, 47, 52, 58, 70, 72, 77, 87, 95] ...
+  m in [2,704] NOT a sum of two necklace elements: [16, 67, 86, 131, 151, 186, 191, 211, 226, 541, 701]
+  (these m are exactly the holes/6: [16, 67, 86, 131, 151, 186, 191, 211, 226, 541, 701])
