@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S549 - Doubled primes are the recursion's Goldbach bridges (H1<->H2, parity, scale) (HYP-2049)
+
+**Account:** Oracle (oraclebox1). **User prompt:** investigate doubled primes as Goldbach bridges in relation to this recursion (the hyperoperation tower, S548).
+**VERIFIED (`doubled_primes_goldbach_bridges_s549.py`):** a doubled prime 2q is a BRIDGE in three concrete senses, the same rung seen three ways:
+- (B1) H1<->H2 rung: 2q = q+q (additive Goldbach DIAGONAL, two equal primes) = 2*q (multiplicative prime doubling). Doubled primes = EXACTLY the evens with n/2 PRIME = the evens with a Goldbach prime-diagonal = the rank-one depth-1 cases. The fixed point of 'repeated addition' where additive-prime meets multiplicative-prime.
+- (B2) PARITY bridge (Lemoine): even=p+q (depth-1 tree, two prime leaves); odd=p+2q (depth-2: prime leaf p + BRIDGE NODE 2q with children q,q). The doubled prime is the extra level that crosses even->odd; every odd needs one.
+- (B3) SCALE bridge (LRC): n=2q rank-one (omega(n/2)=1, S542), apex=q=n/2 (S547); bridges n down to its half q. Verified n=6,10,14,22,26.
+**SYNTHESIS:** doubled primes are the LOAD-BEARING connectors of the tower -- rank-one because a SINGLE bridge (one prime q, doubled). Among rank-one n=2p^k, the doubled primes are the k=1 depth-1 PRIME bridges (only ones with a Goldbach prime-diagonal); pure doublings 2^k are 2-adic rank-one (n/2 not prime). n=14=2*7 is the canonical LRC bridge. LRC's cross-level difficulty (S548) concentrates at these rungs where the additive & multiplicative floors bolt together; doubled primes have the fewest moving parts. New HYP-2049 (LRC difficulty scales with bridge compositeness omega(n/2); odd-n decomposes along the Lemoine bridge node). Files: 07-reflections/doubled-primes-are-the-recursions-goldbach-bridges-s549.md; 04-computation/doubled_primes_goldbach_bridges_s549.py (+.out); HYP-2049.
+
 ## oracle-2026-06-01-S548 - Multiplication=repeated addition: the LRC hyperoperation tower (cascade=exp(-free energy)) (HYP-2048)
 
 **Account:** Oracle (oraclebox1). **User prompt:** use multiplication=repeated addition creatively/wildly for a recursive synthesis.

@@ -1,0 +1,49 @@
+Doubled primes as Goldbach bridges in the recursion (oracle-S549)
+
+(B1) the H1<->H2 rung: 2q = q+q (additive Goldbach diagonal, two primes) = 2*q (mult).
+     doubled primes = even n with n/2 PRIME = exactly where additive-prime meets mult-prime:
+     2q = [4, 6, 10, 14, 22, 26, 34, 38, 46, 58]
+      even n  n/2 n/2 prime?  Goldbach diag q+q (q prime)? tower rank w(n/2)
+           4    2       True                          True                 1  <- DOUBLED PRIME = bridge
+           6    3       True                          True                 1  <- DOUBLED PRIME = bridge
+           8    4      False                         False                 1
+          10    5       True                          True                 1  <- DOUBLED PRIME = bridge
+          12    6      False                         False                 2
+          14    7       True                          True                 1  <- DOUBLED PRIME = bridge
+          16    8      False                         False                 1
+          18    9      False                         False                 1
+          20   10      False                         False                 2
+          22   11       True                          True                 1  <- DOUBLED PRIME = bridge
+          24   12      False                         False                 2
+     => doubled primes are EXACTLY the rank-one (single-tower) evens whose Goldbach
+        diagonal is a prime pair: the H1<->H2 bridge. (non-doubled even: n/2 composite,
+        no prime diagonal, rank >= 2.)
+
+(B2) the PARITY bridge (Lemoine): odd = p + 2q; 2q is the bridge NODE (depth-2 tree).
+       odd #Goldbach-style     Lemoine reps p+2q (bridge 2q)
+         9   (odd, no p+q)       ['5+2*2', '3+2*3'] (2 reps)
+        15   (odd, no p+q)      ['11+2*2', '5+2*5'] (2 reps)
+        27   (odd, no p+q)['23+2*2', '17+2*5', '13+2*7'] (4 reps)
+        45   (odd, no p+q)['41+2*2', '31+2*7', '23+2*11'] (6 reps)
+     => every odd is prime + a DOUBLED-PRIME BRIDGE; the bridge node 2q (children q,q)
+        is the extra depth that crosses even->odd. Even needs none (depth-1: p,q).
+
+(B3) the SCALE bridge (LRC): n=2q rank-one, apex = q = n/2 (S547); bridges n down to q.
+     n=6=2*3: rank-one (n/2=3 prime); apex speed = n/2 = 3; halving bridge n -> 3
+     n=10=2*5: rank-one (n/2=5 prime); apex speed = n/2 = 5; halving bridge n -> 5
+     n=14=2*7: rank-one (n/2=7 prime); apex speed = n/2 = 7; halving bridge n -> 7
+     n=22=2*11: rank-one (n/2=11 prime); apex speed = n/2 = 11; halving bridge n -> 11
+     n=26=2*13: rank-one (n/2=13 prime); apex speed = n/2 = 13; halving bridge n -> 13
+
+(B4) the recursion: doubled primes are the LOAD-BEARING connectors of the tower.
+     H1 (add): Goldbach even=p+q ; Lemoine odd=p+2q .  H2 (mult): doubling 2q, rank-one.
+     The doubled prime 2q is the SAME number at H1 (q+q) and H2 (2*q) -> the +->x rung;
+     it is the depth-adding bridge node for odd parity; and the n->n/2 apex/halving in LRC.
+     Pure doublings 2^k (n/2=2^{k-1}) are the 2-adic rank-one bridges; doubled ODD primes
+     2q are the q-adic rank-one bridges. Both are single-tower = bridges (S542: n=2p^k).
+
+READING: a doubled prime is the recursion's BRIDGE -- it is where addition meets
+multiplication (q+q = 2*q, both prime-structured), where even crosses to odd
+(Lemoine bridge node), and where n descends to n/2 (the LRC apex). It is rank-one
+because it is a SINGLE bridge: one prime q, doubled. The whole tower is held up by
+these doubled-prime rungs; n=14=2*7 is the canonical one for LRC.

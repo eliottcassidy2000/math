@@ -278,6 +278,72 @@ theorem three_one_three_mul_lonely (r : ℕ) (hr : 0 < r) :
     rw [hfract]
     constructor <;> norm_num
 
+/-- **Scaling invariance (repeated-addition reduction, S548).** Loneliness is
+invariant under scaling all speeds by a nonzero `c` and the time by `1/c`, because
+`(c·v_i)·(t/c) = v_i·t`.  Since a runner's position `v_i·t` is `t` *repeated-added*
+`v_i` times, this is the statement that an arithmetic-progression family
+`c·(v_i)` reduces to `(v_i)` at the scaled time `c·t`. -/
+theorem lonely_scale (n : ℕ) (v : ι → ℤ) (t : ℝ) (c : ℤ) (hc : c ≠ 0) :
+    Lonely n (fun i => c * v i) (t / (c : ℝ)) ↔ Lonely n v t := by
+  have hc' : (c : ℝ) ≠ 0 := by exact_mod_cast hc
+  unfold Lonely
+  refine forall_congr' fun i => forall_congr' fun m => ?_
+  have h : ((c * v i : ℤ) : ℝ) * (t / (c : ℝ)) = (v i : ℝ) * t := by
+    push_cast; field_simp
+  rw [h]
+
+/-- **Doubled-prime / `n*=n/2` sieve (S546).** For the *doubled* dimension `n = 2p`
+(`p > 0`), if no speed is divisible by `p` then `t = 1/p` (margin `2/n = 1/p`) is
+lonely.  So a doubled-prime dimension `n = 2p` inherits the clean `mod p` channel via
+`q = p ≤ n`. -/
+theorem lonely_doubled (p : ℕ) (hp : 0 < p) (v : ι → ℤ)
+    (hdiv : ∀ i, ¬ ((p : ℤ) ∣ v i)) : Lonely (2 * p) v ((1 : ℝ) / p) :=
+  sieve_one_div (2 * p) p v (by omega) hp hdiv
+
+/-- **Dirichlet box pigeonhole — "always a near pair" (S536/S539).** Among any
+`n + 1` reals, two have fractional parts within `1/n`.  In the runner picture
+(observer + runners) some pair is always within `1/n`, so the half-turn relation
+always carries a *tie* (the trienerment is never a pure tournament) and some gap is
+`≤ 1/n` (the apex pigeonhole). -/
+theorem near_pair (n : ℕ) (hn : 0 < n) (x : Fin (n + 1) → ℝ) :
+    ∃ i j : Fin (n + 1), i ≠ j ∧ |Int.fract (x i) - Int.fract (x j)| < 1 / n := by
+  have hnR : (0 : ℝ) < n := by exact_mod_cast hn
+  -- box of a point = ⌊n · fract(x)⌋, landing in {0, …, n-1}
+  set box : Fin (n + 1) → ℕ := fun i => (⌊(n : ℝ) * Int.fract (x i)⌋).toNat with hbox
+  have hmaps : ∀ i ∈ (Finset.univ : Finset (Fin (n + 1))), box i ∈ Finset.range n := by
+    intro i _
+    have h0 : (0 : ℝ) ≤ (n : ℝ) * Int.fract (x i) :=
+      mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _)
+    have h1 : (n : ℝ) * Int.fract (x i) < n := by
+      nlinarith [Int.fract_lt_one (x i), Int.fract_nonneg (x i)]
+    have hge : 0 ≤ ⌊(n : ℝ) * Int.fract (x i)⌋ := Int.floor_nonneg.mpr h0
+    have hlt : ⌊(n : ℝ) * Int.fract (x i)⌋ < (n : ℤ) := by
+      rw [Int.floor_lt]; exact_mod_cast h1
+    rw [Finset.mem_range, hbox]
+    omega
+  have hcard : (Finset.range n).card < (Finset.univ : Finset (Fin (n + 1))).card := by
+    simp
+  obtain ⟨i, _, j, _, hij, hbox_eq⟩ :=
+    Finset.exists_ne_map_eq_of_card_lt_of_maps_to hcard hmaps
+  refine ⟨i, j, hij, ?_⟩
+  -- equal boxes ⇒ equal floors (both nonneg) ⇒ the scaled values are within 1
+  have hgei : 0 ≤ ⌊(n : ℝ) * Int.fract (x i)⌋ :=
+    Int.floor_nonneg.mpr (mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _))
+  have hgej : 0 ≤ ⌊(n : ℝ) * Int.fract (x j)⌋ :=
+    Int.floor_nonneg.mpr (mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _))
+  have hfloor : ⌊(n : ℝ) * Int.fract (x i)⌋ = ⌊(n : ℝ) * Int.fract (x j)⌋ := by
+    have := hbox_eq
+    rw [hbox] at this
+    omega
+  have hlt1 : |(n : ℝ) * Int.fract (x i) - (n : ℝ) * Int.fract (x j)| < 1 :=
+    Int.abs_sub_lt_one_of_floor_eq_floor hfloor
+  have hexp : (n : ℝ) * Int.fract (x i) - (n : ℝ) * Int.fract (x j)
+      = (n : ℝ) * (Int.fract (x i) - Int.fract (x j)) := by ring
+  rw [hexp, abs_mul, abs_of_pos hnR] at hlt1
+  -- hlt1 : n * |fract i - fract j| < 1
+  rw [lt_div_iff₀ hnR]
+  linarith [hlt1]
+
 end Cases
 
 /-! ### Axiom audit
@@ -299,5 +365,8 @@ project-specific axioms underlie the LRC sieve theory. -/
 #print axioms lonely_two
 #print axioms three_lonely_sieve_cover
 #print axioms three_one_three_mul_lonely
+#print axioms lonely_scale
+#print axioms lonely_doubled
+#print axioms near_pair
 
 end LonelyRunner
