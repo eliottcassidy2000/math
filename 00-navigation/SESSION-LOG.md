@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
+
+**Account:** Oracle (oraclebox1). **User prompt:** attack entropy on the tree vigorously.
+**Key structural fact:** on the base-p tree (child map x->p, entropy log p), the CENTER=shift (S541, the +1 odometer on Z_p) is equicontinuous = ZERO entropy. So LRC is blind to the shift entropy; all entropy is TRANSVERSE (the x->p descent). Attack that.
+**VERIFIED (`lrc_tree_entropy_s543.py`, p=2,3, depth 7):** box-entropies of the lonely set S={t: min_i ||v_i t|| >= 1/n}: generic systems have h_full=h_touch=1 (box-dim 1, positive measure, base-p independent); the TIGHT AP has |S|=0, h_full=-inf (no safe interval), h_touch=0 (N_touch BOUNDED = a finite set of wall points). So h_touch is the ORDER PARAMETER: 1 (generic) / 0 (tight extremal) / -inf (LRC violation). LRC <=> h_touch >= 0; the AP sits at the h_touch:1->0 drop.
+**PHASE TRANSITION:** D(theta)=dim of {min>=theta} steps 1->0 at theta_c = max collar = loneliness radius (S541). AP: theta_c=1/n EXACTLY (critical); generic: theta_c>1/n. So LRC(n) <=> theta_c(v) >= 1/n for all systems <=> the dimension-1 phase reaches the threshold; the extremal AP is tight at the phase boundary.
+**p-adic entry:** bulk dim is archimedean/base-free, but the CRITICAL SET at theta_c degenerates to the wall points a/n = the S410 p-adic MOAT (depth v_p(n)); the conjecture lives where the archimedean phase boundary meets the p|n moat (S542). New HYP-2038 (vigorous next: pressure P(beta) singularity at the AP; the moat multifractal spectrum). Files: 07-reflections/lrc-tree-entropy-the-order-parameter-s543.md; 04-computation/lrc_tree_entropy_s543.py (+.out); HYP-2038.
+
 ## opus-2026-06-01-S547 - Hough entropy on the p-adic tree: the entropy attack on LRC
 
 **Account:** Oracle (remote-control)

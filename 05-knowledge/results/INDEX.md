@@ -25,6 +25,7 @@ python3 04-computation/SCRIPT.py 2>&1 | tee 05-knowledge/results/SCRIPT.out
 
 | `lrc_annular_braid_center_s541.py` | [STORED] | LRC's image in the ANNULAR braid group: observer=hole, radial coord=||v_i t||, winding=speeds. #σ_0(wrap)=Σv_i, runner-runner=Σ|v_i-v_j|. **The CENTER (full core rotation = add c to all speeds) acts trivially on loneliness** -> LRC lives in the affine symmetric group S̃_{n-1}. **HYP-2033**. | `lrc_annular_braid_center_s541.out` |
 | `lrc_padic_tree_channels_s542.py` | [STORED] | The p-adic tree unifies LRC: CHANNELS (S532)=residues mod n/2=product-tree vertices at depth v_p(n/2); APEX (S530, speed n/2)=residue-0 branch; coupling=tree depth; moat (S410)=boundary v_p(n). **Channel rank=omega(n/2); n=2p^k rank-one; n=14 (n/2=7) simplest.** **HYP-2035**. | `lrc_padic_tree_channels_s542.out` |
+| `lrc_tree_entropy_s543.py` | [STORED] | LRC as a phase transition on the base-p tree: lonely-set box-entropy h_touch=1 (generic)/0 (tight AP)/-inf (violation) is the ORDER PARAMETER; D(theta) steps 1->0 at theta_c=max collar; **LRC <=> theta_c>=1/n; AP critical at theta_c=1/n**. Center=odometer=zero entropy. **HYP-2038**. | `lrc_tree_entropy_s543.out` |
 ## Results catalog
 
 Scripts with stored results are marked [STORED]. Scripts without results are marked [MISSING].
