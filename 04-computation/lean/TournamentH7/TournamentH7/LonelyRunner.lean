@@ -308,9 +308,9 @@ always carries a *tie* (the trienerment is never a pure tournament) and some gap
 theorem near_pair (n : ℕ) (hn : 0 < n) (x : Fin (n + 1) → ℝ) :
     ∃ i j : Fin (n + 1), i ≠ j ∧ |Int.fract (x i) - Int.fract (x j)| < 1 / n := by
   have hnR : (0 : ℝ) < n := by exact_mod_cast hn
-  -- box of a point = ⌊n · fract(x)⌋, landing in {0, …, n-1}
-  set box : Fin (n + 1) → ℕ := fun i => (⌊(n : ℝ) * Int.fract (x i)⌋).toNat with hbox
-  have hmaps : ∀ i ∈ (Finset.univ : Finset (Fin (n + 1))), box i ∈ Finset.range n := by
+  -- box of a point = ⌊n · fract(x)⌋ (as a ℕ), landing in {0, …, n-1}; explicit (no `set`)
+  have hmaps : ∀ i ∈ (Finset.univ : Finset (Fin (n + 1))),
+      (⌊(n : ℝ) * Int.fract (x i)⌋).toNat ∈ Finset.range n := by
     intro i _
     have h0 : (0 : ℝ) ≤ (n : ℝ) * Int.fract (x i) :=
       mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _)
@@ -319,21 +319,19 @@ theorem near_pair (n : ℕ) (hn : 0 < n) (x : Fin (n + 1) → ℝ) :
     have hge : 0 ≤ ⌊(n : ℝ) * Int.fract (x i)⌋ := Int.floor_nonneg.mpr h0
     have hlt : ⌊(n : ℝ) * Int.fract (x i)⌋ < (n : ℤ) := by
       rw [Int.floor_lt]; exact_mod_cast h1
-    rw [Finset.mem_range, hbox]
+    rw [Finset.mem_range]
     omega
   have hcard : (Finset.range n).card < (Finset.univ : Finset (Fin (n + 1))).card := by
     simp
   obtain ⟨i, _, j, _, hij, hbox_eq⟩ :=
     Finset.exists_ne_map_eq_of_card_lt_of_maps_to hcard hmaps
   refine ⟨i, j, hij, ?_⟩
-  -- equal boxes ⇒ equal floors (both nonneg) ⇒ the scaled values are within 1
+  -- hbox_eq : (⌊n·fract i⌋).toNat = (⌊n·fract j⌋).toNat; with both floors ≥ 0 ⇒ floors equal
   have hgei : 0 ≤ ⌊(n : ℝ) * Int.fract (x i)⌋ :=
     Int.floor_nonneg.mpr (mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _))
   have hgej : 0 ≤ ⌊(n : ℝ) * Int.fract (x j)⌋ :=
     Int.floor_nonneg.mpr (mul_nonneg (le_of_lt hnR) (Int.fract_nonneg _))
   have hfloor : ⌊(n : ℝ) * Int.fract (x i)⌋ = ⌊(n : ℝ) * Int.fract (x j)⌋ := by
-    have := hbox_eq
-    rw [hbox] at this
     omega
   have hlt1 : |(n : ℝ) * Int.fract (x i) - (n : ℝ) * Int.fract (x j)| < 1 :=
     Int.abs_sub_lt_one_of_floor_eq_floor hfloor

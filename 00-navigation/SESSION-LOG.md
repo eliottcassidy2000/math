@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S549o - Lean-formalized recent LRC ideas: scaling/repeated-addition, doubled-prime sieve, Dirichlet near-pair (3 axiom-clean lemmas) (HYP-2050)
+
+**Account:** Oracle (oraclebox1). **User prompt:** formalize this (recent ideas) and other new LRC ideas.
+**RESULT:** 3 new lemmas in LonelyRunner.lean (THM-369 file), all #print axioms = [propext, Classical.choice, Quot.sound] (no sorry/no project axiom); full build OK (2942 jobs):
+ - lonely_scale (S548): Lonely n (c*v)(t/c) <-> Lonely n v t (c!=0) = machine-checked 'multiplication=repeated addition'/scaling invariance.
+ - lonely_doubled (S546): no speed div by p => Lonely (2p) v (1/p); doubled-prime n=2p inherits the clean mod-p channel (q=p<=n).
+ - near_pair (S536/S539): among any n+1 reals two have fract within 1/n (Dirichlet box pigeonhole). First pigeonhole in the LRC Lean dev = 'half-turn always has a tie' + 'some gap <=1/n (apex)'.
+**FORMALIZATION NOTE:** first build left near_pair on sorryAx -- omega couldn't see through a `set box := fun i =>...` (un-beta-reduced box i = box j). FIX: drop `set`, pass explicit (floor n*fract).toNat to the pigeonhole so the returned eq is directly the toNat eq; omega closes. (Prefer explicit fns over `set` when a later tactic reasons through the def.)
+**Artifacts:** LonelyRunner.lean (Cases: lonely_scale, lonely_doubled, near_pair); reflection lrc-lean-scaling-doubled-prime-and-dirichlet-near-pair-s549o.md; HYP-2050. **Handoff:** the apex (some gap>=1/n) dual of near_pair; AP-orbit tight witness via lonely_scale+initial_segment_unit_lonely; Dirichlet anti-loneliness.
+
 ## oracle-2026-06-01-S549 - Doubled primes are the recursion's Goldbach bridges (H1<->H2, parity, scale) (HYP-2049)
 
 **Account:** Oracle (oraclebox1). **User prompt:** investigate doubled primes as Goldbach bridges in relation to this recursion (the hyperoperation tower, S548).
