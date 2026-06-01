@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T630** #lrc #tournament-analysis #section-vertices #boundary-flux #assumption-challenge | certainty: bounded section audit + protocol | source: codex-2026-06-01-S539
+Tournament vertices in LRC need not be runners. Fixed sections, fixed boundaries, void sectors, wall-crossing events, cover arcs, residue channels, Fourier modes, and proof obligations can all be vertices if the target predicate survives. S539 tests section pressure, danger/occupancy-colored sections, boundary flux, and void pressure; section-empty is pure in bounded `n=4..6` open-cell scans, with AP wall misses pointing to THM-383 compactification. See HYP-2024 extending HYP-2022/HYP-2023.
+
 **T629** #lrc #A000568 #quotient-stack #threshold-fibers #metrics | certainty: bounded exact audit + proof-strategy | source: codex-2026-06-01-S535
 LRC should be read as forced exhibition in a restricted quotient stack over A000568: raw circular body -> source-deleted target -> observer-source -> gap/apex threshold -> kinetic flow -> blocker/pressure labels. Raw phase remains mixed in small audits, while threshold-decorated maps are pure; new metrics include source codimension, label tax, purity curvature, kinetic torsion, blocker viscosity, compactification index, pressure survival rank, and monodromy defect. See HYP-2020, complementary to HYP-2018/HYP-2019.
 

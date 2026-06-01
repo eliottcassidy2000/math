@@ -39,6 +39,17 @@ histograms, directed cycles, SCCs, edge flips, and Hamiltonian-path counts when
 feasible. If a script cannot use Tournament Analysis cleanly, state why in its
 methodology or notes.
 
+## Assumption-Challenge Default
+
+For LRC or Tournament Analysis sessions, do not assume tournament vertices must
+be runners or arcs. Before settling on a mapping, explicitly consider alternate
+vertex sets such as runners, gaps, fixed circle sections, section boundaries,
+wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits,
+and proof obligations. Record which LRC predicate the quotient preserves, what
+information it destroys, and at least one challenged assumption in the relevant
+reflection, hypothesis, script note, or session log when the session is
+exploratory.
+
 ## Mandatory GitHub Close-Out
 
 Before the final response in every future Codex session from this repository:
