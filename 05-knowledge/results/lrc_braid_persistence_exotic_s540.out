@@ -1,0 +1,45 @@
+==========================================================================
+STAR 1 -- SPACETIME BRAID: runners = strands; pure braid; linking = tension
+==========================================================================
+  n=5: all pure braids=True; linking matrix = tension (cocycle) ok=True; avg braid-word length (=holdback Sum|v_i-v_j|)=121.0;
+        FAT-CHANNEL LRC (observer strand >= 1/n from all at some t): 60/60
+  n=6: all pure braids=True; linking matrix = tension (cocycle) ok=True; avg braid-word length (=holdback Sum|v_i-v_j|)=199.6;
+        FAT-CHANNEL LRC (observer strand >= 1/n from all at some t): 60/60
+  n=7: all pure braids=True; linking matrix = tension (cocycle) ok=True; avg braid-word length (=holdback Sum|v_i-v_j|)=345.8;
+        FAT-CHANNEL LRC (observer strand >= 1/n from all at some t): 60/60
+  => the runner system IS a pure braid on n strands; its linking matrix
+     lk(i,j)=v_i-v_j is exactly the S538 tension; word length = holdback (S25);
+     LRC = a fat channel around the observer strand. Realizable = torus braids.
+
+==========================================================================
+STAR 2 -- PERSISTENT HOMOLOGY / VINEYARDS: H_0 barcode = gaps; observer vine
+==========================================================================
+  n=5: threshold 1/(2n)=0.1000; avg observer-vine max r_obs=0.1790; LRC (r_obs >= 1/(2n) reached): 60/60
+        example barcode (gap/2 death radii) at observer-optimal t: [0.017, 0.052, 0.052, 0.19, 0.19]
+  n=6: threshold 1/(2n)=0.0833; avg observer-vine max r_obs=0.1625; LRC (r_obs >= 1/(2n) reached): 60/60
+        example barcode (gap/2 death radii) at observer-optimal t: [0.0, 0.045, 0.045, 0.046, 0.181, 0.182]
+  n=7: threshold 1/(2n)=0.0714; avg observer-vine max r_obs=0.1516; LRC (r_obs >= 1/(2n) reached): 60/60
+        example barcode (gap/2 death radii) at observer-optimal t: [0.017, 0.033, 0.052, 0.053, 0.069, 0.138, 0.139]
+  => the H_0 barcode = the gaps (longest bar = apex = largest gap, S530);
+     observer's component persists to r_obs=(min flanking gap)/2; LRC = the
+     observer VINE crosses r=1/(2n). A vineyard over t.
+
+==========================================================================
+THE WILD MULTITUDE (posed)
+==========================================================================
+  - TROPICAL: Newton polygon / tropical curve of the speed polynomial; tournament
+    from tropical (min-plus) comparisons; LRC = a tropical cell containing 0.
+  - p-ADIC BRUHAT-TITS TREE: speeds' p-adic valuations (p|n*, e.g. 3 for n=18/n*=9,
+    S534); runner dynamics = a walk on the tree; loneliness = reaching a far vertex.
+  - QUANTUM / OPERATOR: U_i = e^{2pi i v_i t} unitaries; tournament from operator
+    ordering / non-commutativity defect; LRC = a near-classical (commuting) window.
+  - ABELIAN SANDPILE: sector occupancy = chips on the cycle C_n; toppling; sandpile
+    group Z_n; LRC = a recurrent config with the observer cells empty.
+  - DYNAMICAL ZETA: wall-crossing flow on the torus; periodic orbits = rational t;
+    the zeta/Ruelle resonances; LRC = a spectral gap.
+  - QUASICRYSTAL HULL: irrational speeds -> cut-and-project point set; the hull's
+    local patches; LRC at the rational boundary = a forbidden patch.
+  - SPRAGUE-GRUNDY GAME: each runner-pair = a subtraction game (period |v_i-v_j|);
+    Grundy values -> a game-tournament; LRC = a P-position of the observer.
+  - GALOIS / FROBENIUS: the n-th roots of unity with Gal(Q(zeta_n)/Q); the speed
+    action; tournament from Frobenius orbits; LRC = an orbit avoiding the observer arc.
