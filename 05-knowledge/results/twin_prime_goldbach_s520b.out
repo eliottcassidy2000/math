@@ -1,0 +1,256 @@
+Twin-Prime Goldbach Analysis — opus-2026-06-01-S520b
+
+Twin primes up to 100000: 2447
+First 30: [3, 5, 7, 11, 13, 17, 19, 29, 31, 41, 43, 59, 61, 71, 73, 101, 103, 107, 109, 137, 139, 149, 151, 179, 181, 191, 193, 197, 199, 227]
+
+======================================================================
+PART A: The exceptions
+======================================================================
+
+Total exceptions found: 35
+Exceptions: [2, 4, 94, 96, 98, 400, 402, 404, 514, 516, 518, 784, 786, 788, 904, 906, 908, 1114, 1116, 1118, 1144, 1146, 1148, 1264, 1266, 1268, 1354, 1356, 1358, 3244, 3246, 3248, 4204, 4206, 4208]
+
+Factorizations:
+     2 = 2  mod 6=2  mod 12=2  mod 30=2
+     4 = 2 × 2  mod 6=4  mod 12=4  mod 30=4
+    94 = 2 × 47  mod 6=4  mod 12=10  mod 30=4
+    96 = 2 × 2 × 2 × 2 × 2 × 3  mod 6=0  mod 12=0  mod 30=6
+    98 = 2 × 7 × 7  mod 6=2  mod 12=2  mod 30=8
+   400 = 2 × 2 × 2 × 2 × 5 × 5  mod 6=4  mod 12=4  mod 30=10
+   402 = 2 × 3 × 67  mod 6=0  mod 12=6  mod 30=12
+   404 = 2 × 2 × 101  mod 6=2  mod 12=8  mod 30=14
+   514 = 2 × 257  mod 6=4  mod 12=10  mod 30=4
+   516 = 2 × 2 × 3 × 43  mod 6=0  mod 12=0  mod 30=6
+   518 = 2 × 7 × 37  mod 6=2  mod 12=2  mod 30=8
+   784 = 2 × 2 × 2 × 2 × 7 × 7  mod 6=4  mod 12=4  mod 30=4
+   786 = 2 × 3 × 131  mod 6=0  mod 12=6  mod 30=6
+   788 = 2 × 2 × 197  mod 6=2  mod 12=8  mod 30=8
+   904 = 2 × 2 × 2 × 113  mod 6=4  mod 12=4  mod 30=4
+   906 = 2 × 3 × 151  mod 6=0  mod 12=6  mod 30=6
+   908 = 2 × 2 × 227  mod 6=2  mod 12=8  mod 30=8
+  1114 = 2 × 557  mod 6=4  mod 12=10  mod 30=4
+  1116 = 2 × 2 × 3 × 3 × 31  mod 6=0  mod 12=0  mod 30=6
+  1118 = 2 × 13 × 43  mod 6=2  mod 12=2  mod 30=8
+  1144 = 2 × 2 × 2 × 11 × 13  mod 6=4  mod 12=4  mod 30=4
+  1146 = 2 × 3 × 191  mod 6=0  mod 12=6  mod 30=6
+  1148 = 2 × 2 × 7 × 41  mod 6=2  mod 12=8  mod 30=8
+  1264 = 2 × 2 × 2 × 2 × 79  mod 6=4  mod 12=4  mod 30=4
+  1266 = 2 × 3 × 211  mod 6=0  mod 12=6  mod 30=6
+  1268 = 2 × 2 × 317  mod 6=2  mod 12=8  mod 30=8
+  1354 = 2 × 677  mod 6=4  mod 12=10  mod 30=4
+  1356 = 2 × 2 × 3 × 113  mod 6=0  mod 12=0  mod 30=6
+  1358 = 2 × 7 × 97  mod 6=2  mod 12=2  mod 30=8
+  3244 = 2 × 2 × 811  mod 6=4  mod 12=4  mod 30=4
+  3246 = 2 × 3 × 541  mod 6=0  mod 12=6  mod 30=6
+  3248 = 2 × 2 × 2 × 2 × 7 × 29  mod 6=2  mod 12=8  mod 30=8
+  4204 = 2 × 2 × 1051  mod 6=4  mod 12=4  mod 30=4
+  4206 = 2 × 3 × 701  mod 6=0  mod 12=6  mod 30=6
+  4208 = 2 × 2 × 2 × 2 × 263  mod 6=2  mod 12=8  mod 30=8
+
+Mod distributions of exceptions:
+  mod  3: {0: 11, 1: 12, 2: 12}
+  mod  4: {0: 19, 2: 16}
+  mod  6: {0: 11, 2: 12, 4: 12}
+  mod  8: {0: 8, 2: 10, 4: 11, 6: 6}
+  mod 10: {0: 1, 2: 2, 4: 12, 6: 10, 8: 10}
+  mod 12: {0: 4, 2: 5, 4: 8, 6: 7, 8: 7, 10: 4}
+  mod 30: {2: 1, 4: 11, 6: 10, 8: 10, 10: 1, 12: 1, 14: 1}
+
+Gaps between consecutive exceptions:
+  Gaps: [2, 90, 2, 2, 302, 2, 2, 110, 2, 2, 266, 2, 2, 116, 2, 2, 206, 2, 2, 26, 2, 2, 116, 2, 2, 86, 2, 2, 1886, 2, 2, 956, 2, 2]
+  Gap set: [2, 26, 86, 90, 110, 116, 206, 266, 302, 956, 1886]
+
+Nearest twin primes to each exception:
+     2: below=None, above=3, gaps=(-, 1)
+     4: below=3, above=5, gaps=(1, 1)
+    94: below=73, above=101, gaps=(21, 7)
+    96: below=73, above=101, gaps=(23, 5)
+    98: below=73, above=101, gaps=(25, 3)
+   400: below=349, above=419, gaps=(51, 19)
+   402: below=349, above=419, gaps=(53, 17)
+   404: below=349, above=419, gaps=(55, 15)
+   514: below=463, above=521, gaps=(51, 7)
+   516: below=463, above=521, gaps=(53, 5)
+   518: below=463, above=521, gaps=(55, 3)
+   784: below=661, above=809, gaps=(123, 25)
+   786: below=661, above=809, gaps=(125, 23)
+   788: below=661, above=809, gaps=(127, 21)
+   904: below=883, above=1019, gaps=(21, 115)
+   906: below=883, above=1019, gaps=(23, 113)
+   908: below=883, above=1019, gaps=(25, 111)
+  1114: below=1093, above=1151, gaps=(21, 37)
+  1116: below=1093, above=1151, gaps=(23, 35)
+  1118: below=1093, above=1151, gaps=(25, 33)
+
+======================================================================
+PART B: Complement and necklace structure
+======================================================================
+
+Max exception: 4208
+
+Complement target = 4210:
+  Paired: [(2, 4208), (4, 4206)]...
+  Unpaired: [94, 96, 98, 400, 402, 404, 514, 516, 518, 784, 786, 788, 904, 906, 908, 1114, 1116, 1118, 1144, 1146, 1148, 1264, 1266, 1268, 1354, 1356, 1358, 3244, 3246, 3248, 4204]
+
+  Target 4208: 4/35 paired
+  Target 4210: 4/35 paired
+  Target 4212: 2/35 paired
+  Target 8416: 1/35 paired
+
+Arithmetic progression analysis:
+  mod  6: residues=[0, 2, 4], coverage=100.00%
+  mod 10: residues=[0, 2, 4, 6, 8], coverage=100.00%
+  mod 12: residues=[0, 2, 4, 6, 8, 10], coverage=100.00%
+  mod 30: residues=[2, 4, 6, 8, 10, 12, 14], coverage=100.00%
+
+  Primorial 2: 1 exceptions below it, residues mod 2: [0]...
+  Primorial 6: 2 exceptions below it, residues mod 6: [0, 2, 4]...
+  Primorial 30: 2 exceptions below it, residues mod 30: [2, 4, 6, 8, 10, 12, 14]...
+  Primorial 210: 5 exceptions below it, residues mod 210: [2, 4, 6, 8, 64, 66, 68, 94, 96, 98]...
+  Primorial 2310: 29 exceptions below it, residues mod 2310: [2, 4, 94, 96, 98, 400, 402, 404, 514, 516]...
+
+======================================================================
+PART C: Representation counts
+======================================================================
+
+First even numbers and their representation counts:
+    2: r(N) =   0 ***
+    4: r(N) =   0 ***
+    6: r(N) =   1
+    8: r(N) =   1
+   10: r(N) =   2
+   12: r(N) =   1
+   14: r(N) =   2
+   16: r(N) =   2
+   18: r(N) =   2
+   20: r(N) =   2
+   22: r(N) =   3
+   24: r(N) =   3
+   26: r(N) =   2
+   28: r(N) =   1
+   30: r(N) =   2
+   32: r(N) =   2
+   34: r(N) =   3
+   36: r(N) =   3
+   38: r(N) =   2
+   40: r(N) =   1
+   42: r(N) =   2
+   44: r(N) =   2
+   46: r(N) =   3
+   48: r(N) =   4
+   50: r(N) =   2
+   52: r(N) =   1
+   54: r(N) =   2
+   56: r(N) =   1
+   58: r(N) =   2
+   60: r(N) =   3
+   62: r(N) =   3
+   64: r(N) =   2
+   66: r(N) =   2
+   68: r(N) =   1
+   70: r(N) =   2
+   72: r(N) =   4
+   74: r(N) =   3
+   76: r(N) =   3
+   78: r(N) =   4
+   80: r(N) =   2
+   82: r(N) =   2
+   84: r(N) =   3
+   86: r(N) =   2
+   88: r(N) =   2
+   90: r(N) =   4
+   92: r(N) =   2
+   94: r(N) =   0 ***
+   96: r(N) =   0 ***
+   98: r(N) =   0 ***
+  100: r(N) =   2
+
+Distribution of r(N) for N <= 500:
+  r(N)=0: 8 values
+  r(N)=1: 28 values
+  r(N)=2: 67 values
+  r(N)=3: 49 values
+  r(N)=4: 44 values
+  r(N)=5: 15 values
+  r(N)=6: 21 values
+  r(N)=7: 4 values
+  r(N)=8: 5 values
+  r(N)=10: 6 values
+  r(N)=12: 2 values
+  r(N)=13: 1 values
+
+Growth of r(N):
+  r(50) = 2
+  r(100) = 2
+  r(200) = 4
+  r(300) = 13
+  r(400) = 0
+  r(500) = 2
+
+======================================================================
+PART D: Tournament / complement necklace connections
+======================================================================
+
+Complement necklaces = orbits under T -> T^op:
+  |G_n/Z_2| = (A000568(n) + SC(n)) / 2
+  n=1: A000568=1, SC=1, |G_n/Z_2|=1
+  n=2: A000568=1, SC=1, |G_n/Z_2|=1
+  n=3: A000568=2, SC=2, |G_n/Z_2|=2
+  n=4: A000568=4, SC=4, |G_n/Z_2|=4
+  n=5: A000568=12, SC=4, |G_n/Z_2|=8
+  n=6: A000568=56, SC=8, |G_n/Z_2|=32
+  n=7: A000568=456, SC=8, |G_n/Z_2|=232
+  n=8: A000568=6880, SC=48, |G_n/Z_2|=3464
+
+Exceptions as 2*(n-1) for tournament sizes:
+  n=2: 2(n-1)=2 IS an exception
+  n=3: 2(n-1)=4 IS an exception
+  n=48: 2(n-1)=94 IS an exception
+  n=49: 2(n-1)=96 IS an exception
+  n=50: 2(n-1)=98 IS an exception
+
+Twin pair products vs exceptions:
+  3×5=15: representable
+  5×7=35: representable
+  11×13=143: representable
+  17×19=323: representable
+  29×31=899: representable
+  41×43=1763: representable
+  59×61=3599: representable
+  71×73=5183: representable
+
+Binary representations of exceptions:
+     2 =           10  complement = 01 =    1  
+     4 =          100  complement = 011 =    3  
+    94 =      1011110  complement = 0100001 =   33  
+    96 =      1100000  complement = 0011111 =   31  
+    98 =      1100010  complement = 0011101 =   29  
+   400 =    110010000  complement = 001101111 =  111  
+   402 =    110010010  complement = 001101101 =  109  
+   404 =    110010100  complement = 001101011 =  107  
+   514 =   1000000010  complement = 0111111101 =  509  
+   516 =   1000000100  complement = 0111111011 =  507  
+   518 =   1000000110  complement = 0111111001 =  505  
+   784 =   1100010000  complement = 0011101111 =  239  
+   786 =   1100010010  complement = 0011101101 =  237  
+   788 =   1100010100  complement = 0011101011 =  235  
+   904 =   1110001000  complement = 0001110111 =  119  
+   906 =   1110001010  complement = 0001110101 =  117  
+   908 =   1110001100  complement = 0001110011 =  115  
+  1114 =  10001011010  complement = 01110100101 =  933  
+  1116 =  10001011100  complement = 01110100011 =  931  
+  1118 =  10001011110  complement = 01110100001 =  929  
+
+======================================================================
+PART E: Deeper structure
+======================================================================
+
+Goldbach partitions of exceptions (standard primes):
+Traceback (most recent call last):
+  File "/home/e/Documents/claude/math/04-computation/twin_prime_goldbach_s520b.py", line 396, in <module>
+    main()
+  File "/home/e/Documents/claude/math/04-computation/twin_prime_goldbach_s520b.py", line 384, in main
+    deeper_structure(exceptions)
+  File "/home/e/Documents/claude/math/04-computation/twin_prime_goldbach_s520b.py", line 323, in deeper_structure
+    p_twin = is_prime.get(p - 2, False) or is_prime.get(p + 2, False) if p + 2 <= limit else False
+AttributeError: 'list' object has no attribute 'get'
