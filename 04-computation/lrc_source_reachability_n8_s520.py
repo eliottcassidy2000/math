@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """
-lrc_source_reachability_n8_s513.py
+lrc_source_reachability_n8_s520.py
 
-oracle-2026-06-01-S513
+oracle-2026-06-01-S520
 
 Extend the S512 reachable-source-class menu (the TRUE LRC win-set inside
 A000568(n-1)) to n=8, the first value oracle-S512 and codex-S516 did not reach.
@@ -172,7 +172,7 @@ def report(n, ms):
 
 
 def main():
-    print("LRC source-reachability EXTENSION to n=8 (oracle-2026-06-01-S513)\n")
+    print("LRC source-reachability EXTENSION to n=8 (oracle-2026-06-01-S520)\n")
     menu = {}
     # self-check on n=7 (must give 6), then the new n=8 point.
     for n, ms in [(7, 10), (8, 9)]:

@@ -1,4 +1,4 @@
-LRC source-reachability EXTENSION to n=8 (oracle-2026-06-01-S513)
+LRC source-reachability EXTENSION to n=8 (oracle-2026-06-01-S520)
 
 ==================================================================
 n=7 runners (observer + 6); safe arc length L = 1-2/7 = 0.714; box max_speed=10
