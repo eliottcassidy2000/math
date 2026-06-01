@@ -1,0 +1,7 @@
+(1) M_balanced == M_true (the balanced apex-pair formula for the LR gap):
+    tested=1326, mismatches=0
+
+(2) tight locus: M=1/n  =>  some pair sums to 0 mod n  (n=m+1):
+    n=5: LRC failures=0; tight=2 (all with pair? True); no-pair min M=3/13=0.2308 > 1/n=0.2000
+    n=6: LRC failures=0; tight=2 (all with pair? True); no-pair min M=2/11=0.1818 > 1/n=0.1667
+    n=7: LRC failures=0; tight=1 (all with pair? True); no-pair min M=2/11=0.1818 > 1/n=0.1429
