@@ -1,0 +1,75 @@
+==============================================================================
+Extending the gap chain: antipodal-pair witness times t_k = k/(2n-1)
+oracle-2026-06-01-S553
+==============================================================================
+
+(A) LINK 1 proof-check: no residue 0 AND misses an antipodal pair => M>=2/(2n-1)
+------------------------------------------------------------------------------
+  n=4 (B=14): Link-1 sets=142, all have M>=2/(2n-1)? True  (violations=0)
+  n=5 (B=13): Link-1 sets=403, all have M>=2/(2n-1)? True  (violations=0)
+  n=6 (B=12): Link-1 sets=410, all have M>=2/(2n-1)? True  (violations=0)
+  n=7 (B=12): Link-1 sets=860, all have M>=2/(2n-1)? True  (violations=0)
+  n=8 (B=11): Link-1 sets=314, all have M>=2/(2n-1)? True  (violations=0)
+
+(B) the RESIDUAL is the perfect transversals mod (2n-1); AP=all-lower
+------------------------------------------------------------------------------
+  n=5: M=2n-1=9; antipodal pairs {1,8}, {2,7}, {3,6}, {4,5}
+        AP residues = [1, 2, 3, 4] (the lower halves 1..4); transversal? True; #residue-transversals = 2^(n-1) = 16
+  n=6: M=2n-1=11; antipodal pairs {1,10}, {2,9}, {3,8}, {4,7}, {5,6}
+        AP residues = [1, 2, 3, 4, 5] (the lower halves 1..5); transversal? True; #residue-transversals = 2^(n-1) = 32
+  n=7: M=2n-1=13; antipodal pairs {1,12}, {2,11}, {3,10}, {4,9}, {5,8}, {6,7}
+        AP residues = [1, 2, 3, 4, 5, 6] (the lower halves 1..6); transversal? True; #residue-transversals = 2^(n-1) = 64
+
+(C) REDUCED gap: among ENUMERATED transversal-configs, which dip below 2/(2n-1)?
+    (conjecture: only the AP-tight family)
+------------------------------------------------------------------------------
+  n=4 (B=16): transversal-configs=83; with M<2/(2n-1): 1 (all at the 1/n floor? True, count at floor=1)
+        (1, 2, 3)  M=1/4  t*=1/4 [=AP]
+  n=5 (B=15): transversal-configs=136; with M<2/(2n-1): 2 (all at the 1/n floor? True, count at floor=2)
+        (1, 2, 3, 4)  M=1/5  t*=1/5 [=AP]
+        (1, 3, 4, 7)  M=1/5  t*=1/5
+  n=6 (B=14): transversal-configs=104; with M<2/(2n-1): 2 (all at the 1/n floor? True, count at floor=2)
+        (1, 2, 3, 4, 5)  M=1/6  t*=1/6 [=AP]
+        (1, 3, 4, 5, 9)  M=1/6  t*=1/6
+  n=7 (B=13): transversal-configs=63; with M<2/(2n-1): 1 (all at the 1/n floor? True, count at floor=1)
+        (1, 2, 3, 4, 5, 6)  M=1/7  t*=6/7 [=AP]
+
+(D) one-flip neighbors of AP: flip pair a from lower (a) to upper (2n-1-a).
+    AP=all-lower. The minimal residue-transversal moves off AP; do they jump?
+------------------------------------------------------------------------------
+  n=5: AP=(1, 2, 3, 4) M=1/5
+     flip a=1: S=(2, 3, 4, 8) gcd=1  M=1/3  (>=edge OK)
+     flip a=2: S=(1, 3, 4, 7) gcd=1  M=1/5  (=floor1/n)
+     flip a=3: S=(1, 2, 4, 6) gcd=1  M=1/4  (>=edge OK)
+     flip a=4: S=(1, 2, 3, 5) gcd=1  M=1/4  (>=edge OK)
+  n=6: AP=(1, 2, 3, 4, 5) M=1/6
+     flip a=1: S=(2, 3, 4, 5, 10) gcd=1  M=2/7  (>=edge OK)
+     flip a=2: S=(1, 3, 4, 5, 9) gcd=1  M=1/6  (=floor1/n)
+     flip a=3: S=(1, 2, 4, 5, 8) gcd=1  M=1/3  (>=edge OK)
+     flip a=4: S=(1, 2, 3, 5, 7) gcd=1  M=1/4  (>=edge OK)
+     flip a=5: S=(1, 2, 3, 4, 6) gcd=1  M=1/5  (>=edge OK)
+  n=7: AP=(1, 2, 3, 4, 5, 6) M=1/7
+     flip a=1: S=(2, 3, 4, 5, 6, 12) gcd=1  M=1/4  (>=edge OK)
+     flip a=2: S=(1, 3, 4, 5, 6, 11) gcd=1  M=3/16  (>=edge OK)
+     flip a=3: S=(1, 2, 4, 5, 6, 10) gcd=1  M=2/11  (>=edge OK)
+     flip a=4: S=(1, 2, 3, 5, 6, 9) gcd=1  M=1/4  (>=edge OK)
+     flip a=5: S=(1, 2, 3, 4, 6, 8) gcd=1  M=1/5  (>=edge OK)
+     flip a=6: S=(1, 2, 3, 4, 5, 7) gcd=1  M=1/6  (>=edge OK)
+  n=8: AP=(1, 2, 3, 4, 5, 6, 7) M=1/8
+     flip a=1: S=(2, 3, 4, 5, 6, 7, 14) gcd=1  M=2/9  (>=edge OK)
+     flip a=2: S=(1, 3, 4, 5, 6, 7, 13) gcd=1  M=3/20  (>=edge OK)
+     flip a=3: S=(1, 2, 4, 5, 6, 7, 12) gcd=1  M=2/11  (>=edge OK)
+     flip a=4: S=(1, 2, 3, 5, 6, 7, 11) gcd=1  M=1/4  (>=edge OK)
+     flip a=5: S=(1, 2, 3, 4, 6, 7, 10) gcd=1  M=2/13  (>=edge OK)
+     flip a=6: S=(1, 2, 3, 4, 5, 7, 9) gcd=1  M=1/6  (>=edge OK)
+     flip a=7: S=(1, 2, 3, 4, 5, 6, 8) gcd=1  M=1/7  (>=edge OK)
+
+==============================================================================
+READING
+------------------------------------------------------------------------------
+ Link 1 is a clean THEOREM: any gcd-1 set whose residues mod (2n-1) avoid 0
+ and miss an antipodal pair clears the gap (M>=2/(2n-1)), witnessed by t_k,
+ k=a^{-1}. This collapses the ENTIRE gap conjecture onto the 2^(n-1) perfect
+ transversals of the antipodal pairs -- the AP being the all-lower transversal.
+ The reduced conjecture: among transversal-configs only the AP-tight family
+ reaches below 2/(2n-1). Each one-flip neighbor of the AP is the next chain link.

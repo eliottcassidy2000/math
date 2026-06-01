@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S551o - The VITALI wall: measure vs set; the S550 measure bound is blind to the measure-zero core; sieve = the constructive bypass (HYP-2054)
+
+**Account:** Oracle (oraclebox1). **User prompt:** consider the Vitali set.
+**THE VITALI POINT:** on R/Z, x~y iff x-y in Q; an AC-transversal V tiles the circle by countable congruent translates => non-measurable. Lesson: MEASURE and SET-NONEMPTINESS are INDEPENDENT.
+**THE LRC WALL (diagnoses S550):** LRC is a SET statement (L(v) nonempty); S550 bounds only measure(L)>=main-E -> works WHEN measure>0 (bulk, 180/180). At the HIGH-ENERGY CORE (regular polygon) measure(open L)=0 EXACTLY (verified n=5,6,7) but L closed = the n-gon vertices {k/n} (measure 0, NONEMPTY; t=1/n a witness). Measure can't distinguish empty/n-points/boundary -> intrinsically BLIND to the core. No measure/circle-method sharpening resolves it.
+**RESOLUTION:** LRC's core is NOT Vitali-pathological -- measure-0 but EXPLICITLY CONSTRUCTIBLE; the SIEVE (THM-369) exhibits the rational witness t=a/q (no AC). Measure (S550) for the positive-measure bulk; construction (sieve / three-gap-CF S548 / apex S530) for the measure-zero core; Vitali marks the handoff. ADELIC echo (S547): Vitali R/Q at the archimedean line; core witnesses are rational (line<->tree diagonal); measure=line tool, sieve=tree construction.
+**REDIRECT:** stop pushing the measure bound into the core; develop SET-CONSTRUCTIONS there.
+**Artifacts:** lrc_vitali_measure_vs_set_s551.py (+.out); reflection the-vitali-wall-measure-vs-set-and-why-the-core-needs-construction-not-measure-s551o.md; HYP-2054. **Handoff:** 'LRC = (positive-measure bulk by S550) U (measure-zero core by construction)' proof skeleton; explicit rational witnesses across the n=14 core (prime n*=7).
+
 ## oracle-2026-06-01-S552 - The LRC loneliness SPECTRAL GAP: max-collar is 1/n (AP) or jumps to 2/(2n-1), witnessed by the doubled apex (HYP-2052)
 
 **Account:** Oracle (oraclebox1). **User prompt:** spend another long session pushing these forward searching for LRC progress.

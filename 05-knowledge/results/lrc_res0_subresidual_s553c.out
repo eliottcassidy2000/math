@@ -1,0 +1,5 @@
+Residue-0 sub-residual: gcd-1 sets with some speed ≡ 0 mod (2n-1).
+  n=4 (B=21): 462 res-0 sets; M<2/(2n-1): 0 -> all clear the edge
+  n=5 (B=19): 1426 res-0 sets; M<2/(2n-1): 0 -> all clear the edge
+  n=6 (B=17): 1820 res-0 sets; M<2/(2n-1): 0 -> all clear the edge
+  n=7 (B=15): 2002 res-0 sets; M<2/(2n-1): 0 -> all clear the edge
