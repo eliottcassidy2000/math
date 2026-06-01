@@ -116,5 +116,137 @@ theorem two_entry_product_sum_iff {a b : Nat} (ha : 0 < a) (hb : 0 < b) :
   · rintro ⟨rfl, rfl⟩
     simp [IsProductSum]
 
+/-- Three product-sum entries cannot all be at least `2`. -/
+theorem no_three_ge_two_product_sum {a b c : Nat}
+    (ha : 2 ≤ a) (hb : 2 ≤ b) (hc : 2 ≤ c)
+    (h : IsProductSum [a, b, c]) : False := by
+  unfold IsProductSum at h
+  simp at h
+  have h' : a * b * c = a + b + c := by
+    simpa [Nat.mul_assoc, Nat.add_assoc] using h
+  have h4a : 4 * a ≤ a * b * c := by
+    have hbc4 : 4 ≤ b * c := by
+      have := Nat.mul_le_mul hb hc
+      simpa using this
+    calc
+      4 * a = a * 4 := by rw [Nat.mul_comm]
+      _ ≤ a * (b * c) := Nat.mul_le_mul_left a hbc4
+      _ = a * b * c := by rw [Nat.mul_assoc]
+  have h4b : 4 * b ≤ a * b * c := by
+    have hac4 : 4 ≤ a * c := by
+      have := Nat.mul_le_mul ha hc
+      simpa using this
+    calc
+      4 * b = b * 4 := by rw [Nat.mul_comm]
+      _ ≤ b * (a * c) := Nat.mul_le_mul_left b hac4
+      _ = a * b * c := by ring
+  have h4c : 4 * c ≤ a * b * c := by
+    have hab4 : 4 ≤ a * b := by
+      have := Nat.mul_le_mul ha hb
+      simpa using this
+    calc
+      4 * c = c * 4 := by rw [Nat.mul_comm]
+      _ ≤ c * (a * b) := Nat.mul_le_mul_left c hab4
+      _ = a * b * c := by ring
+  rw [h'] at h4a h4b h4c
+  omega
+
+/-- With one explicit unit, the remaining positive nonunit pair is `(2,3)`
+or `(3,2)`. -/
+theorem one_cons_two_entry_product_sum {a b : Nat}
+    (ha : 0 < a) (hb : 0 < b) (ha1 : a ≠ 1) (hb1 : b ≠ 1)
+    (h : IsProductSum [1, a, b]) :
+    (a = 2 ∧ b = 3) ∨ (a = 3 ∧ b = 2) := by
+  have ha2 : 2 ≤ a := by
+    by_contra hlt
+    have hle : a ≤ 1 := by omega
+    interval_cases a; simp_all
+  have hb2 : 2 ≤ b := by
+    by_contra hlt
+    have hle : b ≤ 1 := by omega
+    interval_cases b; simp_all
+  let a0 := a - 2
+  let b0 := b - 2
+  have ha_eq : a = a0 + 2 := by omega
+  have hb_eq : b = b0 + 2 := by omega
+  unfold IsProductSum at h
+  rw [ha_eq, hb_eq] at h
+  simp at h
+  have hab : (a0 + 1) * (b0 + 1) = 2 := by
+    nlinarith
+  have hb0_pos : 0 < b0 + 1 := by omega
+  have ha0_pos : 0 < a0 + 1 := by omega
+  have ha0_le1 : a0 ≤ 1 := by
+    have hle : a0 + 1 ≤ (a0 + 1) * (b0 + 1) :=
+      Nat.le_mul_of_pos_right (a0 + 1) hb0_pos
+    omega
+  have hb0_le1 : b0 ≤ 1 := by
+    have hle : b0 + 1 ≤ (a0 + 1) * (b0 + 1) :=
+      Nat.le_mul_of_pos_left (b0 + 1) ha0_pos
+    omega
+  interval_cases a0 <;> interval_cases b0 <;> simp_all
+
+/-- The only ordered positive, pairwise-distinct, three-entry product-sum
+lists are permutations of `[1, 2, 3]`. -/
+theorem three_entry_distinct_product_sum {a b c : Nat}
+    (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)
+    (hab : a ≠ b) (hac : a ≠ c) (hbc : b ≠ c)
+    (h : IsProductSum [a, b, c]) :
+    List.Perm [a, b, c] [1, 2, 3] := by
+  by_cases ha1 : a = 1
+  · subst a
+    have hb1 : b ≠ 1 := by
+      intro hb_eq
+      exact hab hb_eq.symm
+    have hc1 : c ≠ 1 := by
+      intro hc_eq
+      exact hac hc_eq.symm
+    have h' : IsProductSum [1, b, c] := by simpa using h
+    rcases one_cons_two_entry_product_sum hb hc hb1 hc1 h' with h23 | h32
+    · rcases h23 with ⟨rfl, rfl⟩
+      decide
+    · rcases h32 with ⟨rfl, rfl⟩
+      decide
+  by_cases hb1 : b = 1
+  · subst b
+    have ha1' : a ≠ 1 := ha1
+    have hc1 : c ≠ 1 := by
+      intro hc_eq
+      exact hbc hc_eq.symm
+    have h' : IsProductSum [1, a, c] := by
+      simpa [IsProductSum, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm,
+        Nat.mul_assoc, Nat.mul_comm, Nat.mul_left_comm] using h
+    rcases one_cons_two_entry_product_sum ha hc ha1' hc1 h' with h23 | h32
+    · rcases h23 with ⟨rfl, rfl⟩
+      decide
+    · rcases h32 with ⟨rfl, rfl⟩
+      decide
+  by_cases hc1 : c = 1
+  · subst c
+    have ha1' : a ≠ 1 := ha1
+    have hb1' : b ≠ 1 := hb1
+    have h' : IsProductSum [1, a, b] := by
+      simpa [IsProductSum, Nat.add_assoc, Nat.add_comm, Nat.add_left_comm,
+        Nat.mul_assoc, Nat.mul_comm, Nat.mul_left_comm] using h
+    rcases one_cons_two_entry_product_sum ha hb ha1' hb1' h' with h23 | h32
+    · rcases h23 with ⟨rfl, rfl⟩
+      decide
+    · rcases h32 with ⟨rfl, rfl⟩
+      decide
+  exfalso
+  have ha2 : 2 ≤ a := by
+    by_contra hlt
+    have hle : a ≤ 1 := by omega
+    interval_cases a; simp_all
+  have hb2 : 2 ≤ b := by
+    by_contra hlt
+    have hle : b ≤ 1 := by omega
+    interval_cases b; simp_all
+  have hc2 : 2 ≤ c := by
+    by_contra hlt
+    have hle : c ≤ 1 := by omega
+    interval_cases c; simp_all
+  exact no_three_ge_two_product_sum ha2 hb2 hc2 h
+
 end ProductSum
 end Tournament

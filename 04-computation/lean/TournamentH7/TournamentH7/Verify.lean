@@ -70,6 +70,27 @@ theorem two_entry_product_sum_audit {a b : Nat} (ha : 0 < a) (hb : 0 < b)
   ProductSum.two_entry_product_sum ha hb h
 #print axioms two_entry_product_sum_audit
 
+theorem no_three_ge_two_product_sum_audit {a b c : Nat}
+    (ha : 2 ≤ a) (hb : 2 ≤ b) (hc : 2 ≤ c)
+    (h : ProductSum.IsProductSum [a, b, c]) : False :=
+  ProductSum.no_three_ge_two_product_sum ha hb hc h
+#print axioms no_three_ge_two_product_sum_audit
+
+theorem one_cons_two_entry_product_sum_audit {a b : Nat}
+    (ha : 0 < a) (hb : 0 < b) (ha1 : a ≠ 1) (hb1 : b ≠ 1)
+    (h : ProductSum.IsProductSum [1, a, b]) :
+    (a = 2 ∧ b = 3) ∨ (a = 3 ∧ b = 2) :=
+  ProductSum.one_cons_two_entry_product_sum ha hb ha1 hb1 h
+#print axioms one_cons_two_entry_product_sum_audit
+
+theorem three_entry_distinct_product_sum_audit {a b c : Nat}
+    (ha : 0 < a) (hb : 0 < b) (hc : 0 < c)
+    (hab : a ≠ b) (hac : a ≠ c) (hbc : b ≠ c)
+    (h : ProductSum.IsProductSum [a, b, c]) :
+    List.Perm [a, b, c] [1, 2, 3] :=
+  ProductSum.three_entry_distinct_product_sum ha hb hc hab hac hbc h
+#print axioms three_entry_distinct_product_sum_audit
+
 /-! ### Type-A root-sign atoms -/
 
 theorem typeA_root_self_audit {n : ℕ} (i : Fin n) :

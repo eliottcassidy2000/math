@@ -19,6 +19,16 @@
 **Synthesis:** Added `05-knowledge/hypotheses/HYP-1981-lrc-observer-source-reachability.md` and `07-reflections/formalizing-lrc-a000568-results-s513.md`, updated canon definitions, concept map, tangent entries T606-T608, hypothesis index entries for HYP-1981/HYP-1982, and result-index entries for the S511 observer-source outputs. The upgraded theorem layer is narrow: source reachability and finite bounded audits are canon; reachable-source classification, operation-weighted danger fibers, and full `n=14` decorated-fiber forcing remain hypotheses.
 **Verification:** Markdown/reference sanity checks plus reruns of the relevant S511/S512 scripts before close-out.
 
+## codex-2026-06-01-S515 - THM-361 distinct ternary Lean formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; fetched `origin` before editing and found no divergence. Close-out rebase brought in the LRC pressure-core `S514`, so this Lean formalization was renumbered to `S515`.
+**User prompt:** Begin a session formalizing as much in Lean as possible.
+**Formalization:** Extended `TournamentH7.ProductSum` with three axiom-free THM-361 lemmas: `no_three_ge_two_product_sum` proves three entries all at least `2` cannot satisfy product-sum equality; `one_cons_two_entry_product_sum` classifies `IsProductSum [1,a,b]` with positive nonunit `a,b` as `(1,2,3)` or `(1,3,2)`; and `three_entry_distinct_product_sum` proves every positive pairwise-distinct three-entry product-sum list is a `List.Perm` of `[1,2,3]`.
+**Audit:** Added `Verify.lean` wrappers and stored `05-knowledge/results/lean_product_sum_distinct_s515.out`. The new audit entries depend only on Lean/mathlib foundations (`propext`, `Classical.choice`, `Quot.sound`) and no project axioms.
+**Canon updates:** Updated THM-361's Lean formalization section and the result index to record that the ordered distinct ternary uniqueness is now machine-checked; the arbitrary-length multiset quotient remains future work.
+**Verification:** `lake build TournamentH7.ProductSum`; `lake build TournamentH7.Verify`; `lake build TournamentH7`.
+
 ## codex-2026-06-01-S512 - LRC as threshold-decorated A000568 class fiber
 
 **Account:** Codex

@@ -123,12 +123,17 @@ Tournament.ProductSum.product_sum_iff_core
 Tournament.ProductSum.pad_core_product_sum
 Tournament.ProductSum.core_defect_eq_ones_of_product_sum
 Tournament.ProductSum.two_entry_product_sum
+Tournament.ProductSum.no_three_ge_two_product_sum
+Tournament.ProductSum.one_cons_two_entry_product_sum
+Tournament.ProductSum.three_entry_distinct_product_sum
 ```
 
 This covers the core defect normal form, the padding converse, the natural
-subtraction corollary, and the positive ordered two-entry uniqueness `(2,2)`.
-The multiset-level quotient and the full distinct positive uniqueness theorem
-remain future formalization targets.
+subtraction corollary, the positive ordered two-entry uniqueness `(2,2)`, the
+three-entry obstruction when all entries are at least `2`, the explicit
+`1,a,b` classification, and the ordered distinct positive ternary uniqueness
+up to `List.Perm [1,2,3]`. The multiset-level quotient and arbitrary-length
+distinct positive uniqueness theorem remain future formalization targets.
 
 ## Related
 
