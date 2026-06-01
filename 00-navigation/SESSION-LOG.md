@@ -28,6 +28,16 @@
 **Findings:** Canonized THM-371: for odd `m`, reduction `U(2m)->U(m)` is a bijection via the unique odd lift; `phi(2m)=phi(m)` but later dyadic steps double; matching pairs obey the complementary `pairs(2m)=2*pairs(m)+1`. The SC blowup is the right tournament analogy because it keeps hidden lane/cross-lane data while forcing universal twin scores `(m-1)^m,m^m`.
 **Synthesis:** Added HYP-1905 and `07-reflections/lrc-tournament-first-doubling-seam-s453.md`. The proof reframe is: first-even denominators do not create new unit witnesses; they create nonunit quotient room. An LRC proof at `n=14` or `n=18` should show every use of that room exports endpoint debt to row-parent/product-depth layers. `n=16` remains the pure dyadic row lab, not another first-even seam.
 **Verification:** `python -m py_compile 04-computation/lrc_tournament_first_doubling_seam_s453.py` succeeded; rerunning the script produced the stored output.
+## codex-2026-06-01-S471 - Tournament Analysis Framework
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S461/S470/S452 tournament-distance sessions.
+**User prompt:** Name the process as Tournament Analysis, treat tournaments as binary relations on `n` things, explore arbitrary pairwise metrics and switch rules, use the basketball passing example with role-order tie-breaks, and try many continuous runner/chord/sphere/cuboid/simplex possibilities.
+**Repo archaeology:** Re-read THM-370, HYP-1903/HYP-1904, S431/S452/S461/S470 runner-distance tournament artifacts, and the core tournament definitions. The existing thread had already reached two-neighbor/circular-order lifts; this session abstracted the common method.
+**Computation:** Added `04-computation/tournament_analysis_framework_s471.py` and stored `05-knowledge/results/tournament_analysis_framework_s471.out`. The script implements a Tournament Analysis schema: objects plus pairwise observable plus switch functional plus tie Hamiltonian path. It tests basketball pass-majority tournaments, semicircle orientation, chord-threshold cuboid switches, chord/Fourier opening rules, chord/Fourier isolation, heat escape, simplex stress, and two-neighbor pressure.
+**Findings:** Basketball role labels `1..5` are a base Hamiltonian path tie-break, matching the repo's fixed-path/staircase encoding. Symmetric metrics become tournaments by thresholding each edge against that base path. Cyclic/geometric switches produce high-H tournament structure, while centrality-like switches often collapse to transitive `H=1` rankings. The initial five-runner chord-threshold cuboid trajectory visits 12 tournaments with H spectrum `{1,5,9,11,13,15}`.
+**Synthesis:** Added HYP-1941 and `07-reflections/tournament-analysis-framework-s471.md`, and added a concise Tournament Analysis definition to `01-canon/definitions.md`. The proposed repo-level frame is: do not ask for one scalar summary; choose a meaningful binary relation from pairwise data, then study the tournament shadow and its trajectory.
+**Verification:** `python3 -m py_compile 04-computation/tournament_analysis_framework_s471.py` succeeded; the script ran end-to-end and produced the stored output.
 
 ## codex-2026-05-31-S452 - LRC Runner-Distance Tournament Lift
 

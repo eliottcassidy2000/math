@@ -16,6 +16,18 @@ Last reviewed: SYSTEM-2026-03-05-S1
 
 **Anti-automorphism** of T: a bijection α: V→V with T(α(u),α(v)) = T(v,u).
 
+**Tournament Analysis**: the repo's general method of converting pairwise data
+on `n` objects into a tournament-valued observable.  The data are:
+
+1. a pairwise observable or metric on the `C(n,2)` unordered pairs, possibly
+   depending on a parameter;
+2. a switch functional deciding one orientation for each pair;
+3. a fixed Hamiltonian path used to break ties or to orient threshold bits.
+
+The resulting tournament, or trajectory of tournaments as the parameter
+changes, is then studied using `H(T)`, score data, directed cycles, cut
+structure, endpoint/packet incidence, and related invariants.
+
 ---
 
 ## The Tiling Model

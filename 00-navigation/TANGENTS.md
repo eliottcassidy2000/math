@@ -608,6 +608,18 @@ For speeds `(0,1,4,5,6,7,11)`, distance-to-zero, chord row-sum, nearest-radius, 
 **T524** #lonely-runner #marked-tournament-analysis #two-nearest #chord-switch | certainty: medium proof route | source: codex-2026-05-31-S480
 LRC is marked Tournament Analysis: the stationary runner is the mark, S22 gives the two-sided bracket, S431 gives circular/two-nearest lift data, and S480 adds chord-switch/annulus/kinetic gauges. A counterexample search should record several simultaneous tournament movies, not only the scalar lonely gap.
 
+**T525** #tournament-analysis #pairwise-data #switch-functional #base-path | certainty: repo-level framework | source: codex-2026-06-01-S471
+Tournament Analysis is the method: pairwise observable plus switch functional plus tie Hamiltonian path gives a tournament-valued observable. The tie path is not an implementation detail; it is the same base-path structure as the staircase/tiling model.
+
+**T526** #basketball #passes #hamiltonian-path #ties | certainty: exact modeling analogy | source: codex-2026-06-01-S471
+A basketball lineup's labels `1..5` give a natural Hamiltonian path for tie-breaking pass counts. Orient `i->j` when `i` passes to `j` more than `j` to `i`; if tied, use role order. This is a human discrete example of the repo's base-path tournamentization.
+
+**T527** #metrics #cuboid #thresholds #tournament-trajectory | certainty: computational probe | source: codex-2026-06-01-S471
+Symmetric metrics become tournaments by thresholding each pair against a base path: if `d_ij >= theta`, keep `i->j`; otherwise flip. The initial five-runner chord-threshold trajectory sampled at `t=q/60` visits 12 tournaments with H spectrum `{1,5,9,11,13,15}`.
+
+**T528** #lrc #chords #fourier-lift #switch-choice | certainty: computational probe | source: codex-2026-06-01-S471
+The switch functional selects the visible obstruction layer. For initial `n=14`, semicircle and chord-opening rules give high cyclic structure (`H=24104937`, `3cyc=112`), Fourier-opening changes H while preserving the score shape, and centrality-like metric switches collapse to transitive `H=1`.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
