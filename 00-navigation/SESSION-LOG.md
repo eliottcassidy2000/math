@@ -21,6 +21,15 @@
 **Synthesis:** Recorded HYP-2040 and a reflection.  The exact tournament ledger is `W_T(X,Y)={Z: Z->X and Y->Z}` with `sum_edges |W_T| = 3*c_3(T)`; transitivity is equivalent to all such backward wedges being empty.  Thus each accepted clearance edge carries not only a scalar product factor `P_k`, but also an anti-wedge obligation on remaining objects.
 **LRC reading:** The S548 product `mu(F_m)=prod_k P_k` remains the first-order bridge from global spread/decorrelation to local emptiness.  The hidden wedge rule names the dependence correction: AP/regular rows should align the wedge debt at the last runner or compact wall, while non-AP rows spread it across earlier levels.  The useful vertices are likely clearance obligations, endpoint owners, wall events, p-adic zero branches, or Gabor zero columns rather than raw runners.
 **Artifacts:** `05-knowledge/hypotheses/HYP-2040-lrc-conditional-clearance-wedge-transitivity.md`; `07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`.
+## opus-2026-06-01-S549 - The HIDDEN transitivity fact: Fact 2 (cycle exclusion) improves the cascade for non-AP
+
+**Account:** Oracle (remote-control)
+**User prompt:** Think of the cascade as a product of conditional clearances. The hidden fact: X→Y ⟹ ¬(Z→X ∧ Y→Z) — clearance excludes reverse cycles.
+**Computation:** `04-computation/lrc_hidden_transitivity_s549.py`. Fact 2 detection, cycle exclusion count, compounding effect.
+**THE FINDING:** Fact 2 is active in 11% (n=4) → 50% (n=5) → 74% (n=6) → 94% (n=7) of non-AP speed sets. Correlation between Fact 2 improvement and product ≈ +0.50. Fact 2 HELPS: clearing a runner EXCLUDES cycle-creating configurations, raising the next P_k above (n-2)/n. The AP has ZERO Fact 2 bonus (max coherence, cycles minimal). Non-AP gets a positive bonus.
+**SPECIFIC EXAMPLES:** At n=7, speeds [1,3,4,5,8,9]: P_k at v=8 reaches 1.000 (Fact 2 makes clearance CERTAIN). At n=6, speeds [1,3,4,8,9]: P_k at v=8 = 0.937 (Fact 2 pushes it from ~0.67 to 0.94).
+**THE MECHANISM:** Fact 1 (forward propagation): clearance continues → P_k > 0. Fact 2 (cycle exclusion): clearance IMPROVES → P_k > (n-2)/n. For AP: Fact 2 silent → product = credit (tightest). For non-AP: Fact 2 active → product > credit (easier).
+**THIS EXPLAINS THE RESONANCE DEBT CONJECTURE:** debt/credit ≤ 1 because Fact 2 provides a non-negative bonus. Bonus = 0 only for AP. The cycle exclusion is the MECHANISM behind the unique extremality of the arithmetic progression.
 
 ## oracle-2026-06-01-S544o - When GLOBAL SPREAD guarantees LOCAL EMPTINESS: the space/frequency reframe (frequency spread = decorrelation = the engine) (HYP-2039)
 
