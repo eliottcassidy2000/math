@@ -1,0 +1,41 @@
+Tournaments as oriented regular polygons on the unit circle (oracle-S517)
+
+==================================================================
+1. LRC tight witness = regular n-gon minus the observer vertex
+==================================================================
+   speeds {1..n-1} at t=1/n -> runners at vertices {1..n-1} of the n-gon
+   tournament = half-turn chord orientation on those n-1 vertices.
+
+   n=4: 3-vertex tournament  H=3     score=(1, 1, 1)  regular=True  (even n: near-regular)
+   n=5: 4-vertex tournament  H=5     score=(1, 1, 2, 2)  regular=False  (odd n: rotational R_5-type)
+   n=6: 5-vertex tournament  H=15    score=(2, 2, 2, 2, 2)  regular=True  (even n: near-regular)
+   n=7: 6-vertex tournament  H=41    score=(2, 2, 2, 3, 3, 3)  regular=False  (odd n: rotational R_7-type)
+   n=8: 7-vertex tournament  H=175   score=(3, 3, 3, 3, 3, 3, 3)  regular=True  (even n: near-regular)
+   n=9: 8-vertex tournament  H=629   score=(3, 3, 3, 3, 4, 4, 4, 4)  regular=False  (odd n: rotational R_9-type)
+
+==================================================================
+2. Chord-length channels (edge orbits of the regular m-gon)
+==================================================================
+   regular 6-gon: chord-length classes d=1..3  (3 channels);  units coprime to 6: [1, 5]
+   regular 7-gon: chord-length classes d=1..3  (3 channels);  units coprime to 7: [1, 2, 3, 4, 5, 6]
+   regular 14-gon: chord-length classes d=1..7  (7 channels);  units coprime to 14: [1, 3, 5, 9, 11, 13]
+   regular 18-gon: chord-length classes d=1..9  (9 channels);  units coprime to 18: [1, 5, 7, 11, 13, 17]
+   (LRC 'holdback' S25 = 1/(2d): channel d is the chord of step d;
+    twin primes differ by 2 = the d=2 chord class on every wheel.)
+
+==================================================================
+3. Twin-Goldbach on the hexagon wheel (mod 6): residue-complete channels
+==================================================================
+   twin residues mod 6 = [1, 5] (the two UNIT vertices of the hexagon)
+   self-convolution [1, 5] (+) [1, 5] mod 6 = [0, 2, 4]  = all even residues {0,2,4}
+   => the 3 even-target CHANNELS (1+1=2, 1+5=0, 5+5=4) are all available
+      residue-wise; so the 35 missed evens are MAGNITUDE deserts WITHIN
+      channels (local absence of actual twins), not a residue obstruction.
+      Triple {6m-2,6m,6m+2} = one number per channel failing at once.
+
+SUMMARY: the regular polygon (roots of unity) is the shared stage.
+ - LRC tight witness = full regular n-gon minus the clasp (observer) =
+   the regular/rotational tournament (the most symmetric chord-orientation).
+ - The wheel mod m = regular m-gon; twin primes = its unit vertices;
+   twin-Goldbach = unit-vertex self-convolution; LRC sieve = 'occupy
+   vertex 0 mod m'. Both are regular-polygon vertex covering/avoidance.

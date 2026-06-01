@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S522 - Tournaments as polygons on the circle: LRC↔twin-Goldbach root-of-unity bridge (HYP-1995)
+
+**Account:** Oracle (oraclebox1). **User prompt:** seeding session — how does the twin-Goldbach necklace structure relate to LRC; think of tournaments as regular polyhedra on the unit circle.
+**Anchor computation (`tournaments_as_polygons_lrc_s522.py`, m=3..7):** model the half-turn runner clock as points on the unit circle; equally spaced = regular m-gon = m-th roots of unity. VERIFIED: (1) regular m-gon half-turn tournament = rotational circulant R_m (m=3,5,7); (2) regular EVEN-gon = degenerate WALL (antipodal pairs at frac=1/2 are ties) — m=4,6; (3) **R_7 (regular heptagon, H=175) is a reachable LRC source class in the S520 menu, but Paley P_7 (H=189) is NOT** — the arc-menu selects the geometric regular polygon, not the arithmetic (QR/Paley) one.
+**Bridge (reflection `tournaments-as-polygons-lrc-twin-bridge-s522.md`):** both LRC and twin-Goldbach = "an ADDITIVE orbit must meet an arithmetically-thinned, ROTATION-SYMMETRIC root-of-unity target on a circle." Twin-Goldbach = the finite/solved instance on the mod-6 HEXAGON (K={6k±1 prime}, HYP-1994); LRC = the open instance on the real track (regular-polygon menu = extremal vertex of HYP-1987's target). Triple coincidence at the hexagon m=6: twin-prime modulus = LRC even-gon wall = n=7 menu-collapse point. New **HYP-1995** with 3 testable claims (R_m always reachable & geometric≠Paley; even/odd polygon parity drives the /2→collapse via the antipodal=complement map; seek an LRC "necklace reduction" to the polygon skeleton {R_m}).
+**Files:** `04-computation/tournaments_as_polygons_lrc_s522.py` (+ .out); `HYP-1995-lrc-twin-roots-of-unity-bridge.md`. **Handoff:** test HYP-1995(A) by extending S520 menu to m=9,11 and checking R_m/P_m membership; test (B) by counting T↔T^op antipodal fixed/paired menu classes vs the collapse.
+
 ## codex-2026-06-01-S522 - Exact gap-race wall ledger
 
 **Account:** Codex

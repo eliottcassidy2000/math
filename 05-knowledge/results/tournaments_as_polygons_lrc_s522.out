@@ -1,0 +1,15 @@
+tournaments as polygons on the unit circle — regular polygon vs LRC menu (oracle-S522)
+
+m=3 (n=4): regular 3-gon half-turn -> tournament H=3, score=(1, 1, 1), == R_3(rotational): True
+        regular-polygon H=3 in S520 LRC source menu for m=3? False
+        Paley P_3: H=3, score=(1, 1, 1), ==R_3? True, in menu? False
+m=4 (n=5): regular 4-gon half-turn -> DEGENERATE: 2 antipodal TIE pair(s) at frac=1/2 (a WALL, not a tournament).
+m=5 (n=6): regular 5-gon half-turn -> tournament H=15, score=(2, 2, 2, 2, 2), == R_5(rotational): True
+        regular-polygon H=15 in S520 LRC source menu for m=5? False
+m=6 (n=7): regular 6-gon half-turn -> DEGENERATE: 3 antipodal TIE pair(s) at frac=1/2 (a WALL, not a tournament).
+m=7 (n=8): regular 7-gon half-turn -> tournament H=175, score=(3, 3, 3, 3, 3, 3, 3), == R_7(rotational): True
+        regular-polygon H=175 in S520 LRC source menu for m=7? True   <-- REACHABLE LRC SOURCE
+        Paley P_7: H=189, score=(3, 3, 3, 3, 3, 3, 3), ==R_7? False, in menu? False
+
+NOTE: m even => regular polygon is a wall (antipodal ties). m=6 (the hexagon,
+the twin-Goldbach mod-6 wheel) is exactly n=7, where the S520 menu COLLAPSES.
