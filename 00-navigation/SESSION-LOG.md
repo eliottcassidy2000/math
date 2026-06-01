@@ -19,6 +19,17 @@
 **Synthesis:** Added HYP-1960 and `07-reflections/lrc-pressure-dag-audit-s500.md`. A pressure search returning DAGs should be read as a certificate search: sources are chargeable blockers, sinks are blocked runners, topological layers are a peel order, and the first non-DAG pressure sample would be the first serious disproof-like core.
 **Next:** Compute transitive reductions of pressure DAGs and compare source/sink labels with endpoint-private owner rows, endpoint peel depth, and denominator/product-tree depth.
 
+## codex-2026-06-01-S494 - Goldbach, polygonal, and Zeckendorf additive-basis synthesis
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S493.
+**User prompt:** Connect the Goldbach conjecture with Helfgott, Hardy-Littlewood, Fermat polygonal number theorem, and Zeckendorf; understand deeper patterns and structure.
+**Repo archaeology and web anchors:** Re-read the repo's `what_numbers_are_s112.py` additive-vs-multiplicative Cayley-line note, Vinogradov/circle-method analogies, summand-graph/Fermat/Zeckendorf script, and Zeckendorf-tournament independence-polynomial material. Checked external anchors for Helfgott's ternary Goldbach theorem, Hardy-Littlewood's 1923 prime-sums paper, Fermat polygonal, and Zeckendorf.
+**Computation:** Added `04-computation/additive_basis_normal_forms_s494.py` and stored `05-knowledge/results/additive_basis_normal_forms_s494.out`. The script compares Goldbach pair counts to a rough unordered Hardy-Littlewood heuristic, counts ternary prime triples, checks polygonal bounded-cover minimal terms for `k=3..8`, and defines Zeckendorf carry debt for Goldbach pairs.
+**Findings:** The common object is a representation hypergraph `a_1+...+a_r=n`. Hardy-Littlewood supplies archimedean volume times p-adic local product; Helfgott's third prime is a dimension/smoothing lift; Fermat polygonal is bounded arity cover; Zeckendorf is unique normal form via path carries. Some Goldbach pairs have zero Zeckendorf carry debt, e.g. `50=13+37`, `100=11+89`, `5000=673+4327`, while balanced pairs can have larger carry debt.
+**Synthesis:** Added HYP-1953 and `07-reflections/goldbach-additive-basis-normal-forms-s494.md`. Proposed standard additive-basis profile: atom set, arity, representation entropy, local singular product, carry debt, and canonical normal form.
+**Verification:** `python -m py_compile 04-computation/additive_basis_normal_forms_s494.py` succeeded; rerunning the script produced the stored output.
+
 ## codex-2026-06-01-S493 - n=18 LRC square-core packet certificate
 
 **Account:** Codex

@@ -1,0 +1,121 @@
+﻿Additive basis normal forms (codex-2026-06-01 S494)
+Goldbach / Helfgott / Hardy-Littlewood / Fermat polygonal / Zeckendorf
+
+================================================================================================================
+ADDITIVE BASIS NORMAL-FORM DICTIONARY
+================================================================================================================
+object             atoms              arity          status                 control
+Goldbach           primes             2 on even n    open positivity        HL singular series predicts count
+Helfgott           primes             3 on odd n     proved positivity      third prime smooths minor arcs
+Fermat polygonal   k-gonal numbers    <= k           proved bounded cover   polynomial atoms with finite arity
+Zeckendorf         Fibonacci numbers  variable       unique normal form     path independence plus local carries
+
+Shared object: target n is covered by hyperedges a_1+...+a_r=n.
+Deeper axis: local residue/carry constraints decide which hyperedges are legal.
+
+================================================================================================================
+GOLDBACH PAIRS VS HARDY-LITTLEWOOD LOCAL PRODUCT
+================================================================================================================
+Twin-prime constant approximation C2=0.660162938
+       n    pairs   HL_unordered      ratio        prime factors
+      50        4           2.88      1.391               [2, 5]
+     100        6           4.15      1.446               [2, 5]
+     200        8           6.27      1.276               [2, 5]
+     500       13          11.40      1.141               [2, 5]
+    1000       28          18.45      1.518               [2, 5]
+    2000       37          30.47      1.214               [2, 5]
+    5000       76          60.67      1.253               [2, 5]
+   10000      127         103.76      1.224               [2, 5]
+
+Reading: Hardy-Littlewood is not just 'many primes'.
+It is archimedean area n/log^2(n) times a product of local residue bonuses.
+
+================================================================================================================
+HELFGOTT TERNARY LIFT: ADD ONE PRIME, GAIN SMOOTHING
+================================================================================================================
+       n    triples first triples
+       7          1 [(2, 2, 3)]
+       9          2 [(2, 2, 5), (3, 3, 3)]
+      15          3 [(2, 2, 11), (3, 5, 7), (5, 5, 5)]
+      31          6 [(3, 5, 23), (3, 11, 17), (5, 7, 19), (5, 13, 13)]
+      99         30 [(3, 7, 89), (3, 13, 83), (3, 17, 79), (3, 23, 73)]
+     501        283 [(3, 7, 491), (3, 11, 487), (3, 19, 479), (3, 31, 467)]
+     999        769 [(3, 5, 991), (3, 13, 983), (3, 19, 977), (3, 29, 967)]
+    1999       3105 [(3, 3, 1993), (3, 17, 1979), (3, 23, 1973), (3, 47, 1949)]
+
+Fewest ternary prime triples for odd 7..501:
+  n=  7: triples=1
+  n=  9: triples=2
+  n= 11: triples=2
+  n= 13: triples=2
+  n= 15: triples=3
+  n= 19: triples=3
+  n= 17: triples=4
+  n= 21: triples=5
+
+Reading: the third variable turns the prime hypergraph from a thin edge
+problem into a surface with enough averaging for Helfgott's theorem.
+
+================================================================================================================
+FERMAT POLYGONAL: BOUNDED ADDITIVE COVER BY POLYNOMIAL ATOMS
+================================================================================================================
+DP check for n <= 300; repetitions allowed; fewer than k terms allowed.
+  k  max min-terms first hits max             sample representation at first hit
+  3              3 [5, 8, 14, 17, 19, 23, 26, 32] [3, 1, 1]
+  4              4 [7, 15, 23, 28, 31, 39, 47, 55] [4, 1, 1, 1]
+  5              5 [9, 21, 31, 43, 55, 89]    [5, 1, 1, 1, 1]
+  6              6 [11, 26]                   [6, 1, 1, 1, 1, 1]
+  7              7 [13, 31]                   [7, 1, 1, 1, 1, 1, 1]
+  8              8 [15, 36]                   [8, 1, 1, 1, 1, 1, 1, 1]
+
+Reading: Fermat polygonal is a uniform arity theorem.
+The atom set is structured enough that a finite number of summands
+beats all local obstructions.
+
+================================================================================================================
+ZECKENDORF CARRY DEBT ON GOLDBACH PAIRS
+================================================================================================================
+Fibonacci convention: 1,2,3,5,... with indices 1,2,3,4,...
+     n  pairs target Z           best carry pair   score raw support              balanced pair     score
+    50      4 (3, 6, 8)          (13, 37)              0 (3, 6, 8)                (19, 31)             11
+   100      6 (3, 5, 10)         (11, 89)              0 (3, 5, 10)               (47, 53)             11
+   200      8 (1, 9, 11)         (43, 157)             5 (1, 5, 6, 8, 11)         (97, 103)             8
+   500     13 (8, 10, 13)        (13, 487)             4 (6, 7, 10, 13)           (229, 271)           14
+  1000     28 (6, 15)            (3, 997)              5 (2, 3, 5, 15)            (491, 509)           16
+  2000     37 (4, 7, 13, 16)     (379, 1621)           4 (2, 3, 7, 13, 16)        (991, 1009)          10
+  5000     76 (2, 5, 9, 11, 14, 18) (673, 4327)           0 (2, 5, 9, 11, 14, 18)    (2383, 2617)         15
+
+Carry score = L1(raw Fibonacci digits, target Zeckendorf digits)
+              + repeated-index penalties + adjacent-index penalties.
+Reading: Goldbach gives many prime hyperedges; Zeckendorf gives a
+canonical normal form. Carry debt measures how violently a chosen
+prime edge must normalize back to the target integer.
+
+================================================================================================================
+SYNTHESIS: FOUR LEVELS OF THE SAME ADDITIVE-BASIS MACHINE
+================================================================================================================
+1. Coverage layer.
+   Does the representation hypergraph have at least one edge over each target?
+   Goldbach asks this for two prime atoms; Helfgott proves it for three.
+
+2. Density layer.
+   Hardy-Littlewood predicts not only existence but the number of prime edges:
+   archimedean volume times a p-adic singular series.
+
+3. Bounded-arity layer.
+   Fermat polygonal says polynomial atoms become a universal basis once the
+   allowed arity is k. This is Waring-like: enough summands erase obstruction.
+
+4. Normal-form layer.
+   Zeckendorf is the opposite extreme: it gives uniqueness, not abundance.
+   The price is a local carry law, equivalently independence in a path graph.
+
+Repo pattern:
+   additive theorem = legal hyperedges + local obstruction product + carry
+   normal form + entropy lower bound.
+
+Possible new invariant:
+   For any additive basis A, record (representation count, local singular
+   product, normal-form carry debt). Goldbach-HL controls the first two;
+   Zeckendorf supplies the third; Fermat polygonal is the bounded-cover
+   sanity check.

@@ -701,6 +701,21 @@ Pressure DAGs give topological peel layers that should be matched to endpoint-pr
 **T562** #lonely-runner #pressure-scc #disproof-signal #search-priority | certainty: methodological filter | source: codex-2026-06-01-S491
 The first disproof-like pressure signal should be a labelled SCC after private leaves are removed, not merely a smaller scalar gap. Acyclic pressure means dependencies can be sorted; cyclic pressure means every runner in the core blocks another in a closed loop requiring THM-365-style arithmetic labels.
 
+**T563** #additive-basis #goldbach #representation-hypergraph #normal-form | certainty: structural synthesis + computation | source: codex-2026-06-01-S494
+Goldbach, Helfgott, Hardy-Littlewood, Fermat polygonal, and Zeckendorf share one representation-hypergraph object: atoms `A`, arity `r`, hyperedges `a_1+...+a_r=n`. The useful profile is count, local obstruction product, and carry/normal-form debt. See HYP-1953.
+
+**T564** #hardy-littlewood #goldbach #singular-series #local-debt | certainty: classical heuristic + exact small probe | source: codex-2026-06-01-S494
+Hardy-Littlewood's Goldbach prediction is archimedean volume `n/log^2 n` multiplied by a p-adic singular product `prod_{p|n,p>2}(p-1)/(p-2)`. In repo language, this is a local residue-debt product attached to prime-pair hyperedges.
+
+**T565** #helfgott #ternary-goldbach #dimension-lift #circle-method | certainty: theorem-level anchor + S494 counts | source: codex-2026-06-01-S494
+Helfgott's ternary theorem is a smoothing lift: adding a third prime changes Goldbach from a thin edge problem into a surface with enough averaging for the circle method. S494 counts grow quickly (`999` has `769` unordered triples; `1999` has `3105`).
+
+**T566** #fermat-polygonal #bounded-cover #waring #additive-basis | certainty: theorem analogy + DP check | source: codex-2026-06-01-S494
+Fermat polygonal is the bounded-arity pole of the additive-basis spectrum: `k`-gonal atoms cover every positive integer with at most `k` summands. S494's DP check up to `300` hits max min-terms exactly `k` for `k=3..8`.
+
+**T567** #zeckendorf #goldbach #carry-debt #normal-form | certainty: new exact metric | source: codex-2026-06-01-S494
+Overlaying the Zeckendorf supports of a Goldbach pair `p+q=n` gives a carry-debt metric against the canonical support of `n`. Some prime edges have zero carry debt (`50=13+37`, `100=11+89`, `5000=673+4327`), while balanced prime pairs can carry much larger debt.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
