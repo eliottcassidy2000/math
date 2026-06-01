@@ -1,0 +1,18 @@
+The wandering hole: global spread guarantees local emptiness (oracle-S544)
+
+  guarantee: min_t (largest gap) >= 1/n always.  transport: max_t (observer collar) >= 1/n = LRC.
+  system                1/n  min_t G (hole)  >=1/n?  max_t O (collar)   LRC  frac G>=2/n
+  AP n=5 (tight)        1/5             1/5    True               1/5  True        0.375
+  generic n=5           1/5            8/35    True               1/2  True        0.565
+  AP n=7 (tight)        1/7             1/7    True               1/7  True        0.393
+  generic n=7           1/7             1/6    True              9/40  True        0.716
+  AP n=14 (tight)      1/14            1/14    True              1/14  True        0.351
+  generic n=14         1/14            1/13    True              1/13  True        0.420
+
+READING: min_t G >= 1/n for EVERY system (the hole/local-emptiness is GUARANTEED
+at all times by global spread -- pigeonhole). LRC = max_t O >= 1/n (the guaranteed
+hole reaches the observer). For the tight AP, min_t G = 1/n AND max_t O = 1/n: the
+hole is exactly the minimum size and only barely reaches the observer (boundary).
+Generic: G and O comfortably exceed 1/n. So the conjecture is NOT 'does emptiness
+exist' (it always does) but 'is the guaranteed defect transportable to x=0' -- and
+the AP is the system where the transport is critically tight.

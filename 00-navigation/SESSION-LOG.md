@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S544 - Global spread guarantees local emptiness: LRC is defect TRANSPORT, not existence (HYP-2039)
+
+**Account:** Oracle (oraclebox1). **User prompt:** get creative reframing so global spread can guarantee local emptiness.
+**THE REFRAME (inverts the difficulty):** the n points (observer + runners) have gaps summing to 1, so the LARGEST gap G(t) >= 1/n at EVERY instant -- a hole of local emptiness ALWAYS EXISTS, free, by pigeonhole. So LRC is NOT about creating emptiness; it is about TRANSPORTING the guaranteed hole to the observer.
+**VERIFIED (`lrc_wandering_hole_transport_s544.py`):** split G(t)=largest gap (the HOLE; min_t G >= 1/n for EVERY system = the guarantee) vs O(t)=observer collar=min_i||v_i t|| (max_t O >= 1/n = LRC = the transport, a width->=2/n hole around the observer). Tight AP (n=5,7,14): min_t G = 1/n AND max_t O = 1/n -- the hole is minimum size and only just reaches the observer (critical confinement). Generic: both >1/n with room. The hole = the apex (S530) = the fat collar (S541).
+**CHOICES RECONSIDERED:** observer-fixed -> the hole's frame (observer enters the hole); "find lonely time" -> "transport the guaranteed defect to x=0"; danger arcs -> the hole is primary; specific observer -> by frame-shift (S541) which point is observer is free, so LRC = the wandering hole sweeps EVERY point = coverage/equidistribution of the defect trajectory.
+**Three reframes:** (1) defect/quasiparticle transport; (2) non-adaptive LINEAR guards can't cover every instant (budget 2-2/n>1 by measure, but constant-speed) -- the obstruction is the LINEARITY; (3) hole-sweep coverage (AP = least sweeping = tight). PAYOFF: the existence half is one-line pigeonhole; all difficulty is the TRANSPORT, concentrated at the AP. New HYP-2039. Files: 07-reflections/lrc-global-spread-guarantees-local-emptiness-the-defect-transport-reframe-s544.md; 04-computation/lrc_wandering_hole_transport_s544.py (+.out); HYP-2039.
+
 ## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
 
 **Account:** Oracle (oraclebox1). **User prompt:** attack entropy on the tree vigorously.

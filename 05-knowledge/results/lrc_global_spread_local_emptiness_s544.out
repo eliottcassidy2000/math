@@ -1,0 +1,45 @@
+========================================================================
+(1) INSTANTANEOUS spatial spread S_H(t) vs local hole: ANTI-correlated
+========================================================================
+  n=5 AP        v=(1, 2, 3, 4, 5): corr(S_H, observer-hole) = +0.096
+  n=5 geometric v=(1, 2, 4, 8, 16): corr(S_H, observer-hole) = -0.047
+  n=5 random    v=(2, 17, 23, 30, 34): corr(S_H, observer-hole) = -0.216
+  n=6 AP        v=(1, 2, 3, 4, 5, 6): corr(S_H, observer-hole) = +0.177
+  n=6 geometric v=(1, 2, 4, 8, 16, 32): corr(S_H, observer-hole) = -0.056
+  n=6 random    v=(1, 3, 6, 17, 32, 37): corr(S_H, observer-hole) = -0.279
+  => NEGATIVE: instantaneous spatial spread (even/high-entropy) means SMALL gaps =
+     NO local hole. 'Global spread' must NOT be instantaneous spatial evenness.
+
+========================================================================
+(2) The INDEPENDENCE main term (1-2/n)^{n-1} guarantees emptiness; resonances obstruct
+========================================================================
+  n=5: independence main term (1-2/n)^(n-1) = 0.1296
+      AP 1..n-1 (regular)    v=(1, 2, 3, 4): lonely MEASURE = 0.0000  (resonances cancel toward 0 (tight))
+      random primitive       v=(1, 7, 23, 38): lonely MEASURE = 0.1425  (~main term: spread wins)
+  n=6: independence main term (1-2/n)^(n-1) = 0.1317
+      AP 1..n-1 (regular)    v=(1, 2, 3, 4, 5): lonely MEASURE = 0.0000  (resonances cancel toward 0 (tight))
+      random primitive       v=(2, 31, 34, 36, 46): lonely MEASURE = 0.1063  (~main term: spread wins)
+  n=7: independence main term (1-2/n)^(n-1) = 0.1328
+      AP 1..n-1 (regular)    v=(1, 2, 3, 4, 5, 6): lonely MEASURE = 0.0000  (resonances cancel toward 0 (tight))
+      random primitive       v=(16, 38, 40, 43, 47, 50): lonely MEASURE = 0.1398  (~main term: spread wins)
+  => the SPREAD (independent) main term is POSITIVE and guarantees a hole; only the
+     arithmetic resonances can cancel it. Regular polygon = exact cancellation (->0).
+
+========================================================================
+(3) TEMPORAL spread + ROTATION: the orbit must DIP to bunched; the hole ROTATES to 0
+========================================================================
+  n=5 AP 1..n v=(1, 2, 3, 4, 5): max-gap(t) range [0.167,0.999] (>=2/n=0.400? True); hole-position covers 5/5 sectors
+  n=5 random  v=(7, 28, 31, 32, 35): max-gap(t) range [0.207,0.996] (>=2/n=0.400? True); hole-position covers 5/5 sectors
+  n=6 AP 1..n v=(1, 2, 3, 4, 5, 6): max-gap(t) range [0.143,0.999] (>=2/n=0.333? True); hole-position covers 6/6 sectors
+  n=6 random  v=(1, 6, 9, 15, 20, 44): max-gap(t) range [0.179,0.995] (>=2/n=0.333? True); hole-position covers 6/6 sectors
+  => the orbit's max-gap (the bunched-extreme hole) reaches >=2/n, and the hole
+     POSITION rotates to cover the circle -> it visits the observer's sector.
+     TEMPORAL spread (the moving orbit) + ROTATION = local emptiness at the observer.
+
+========================================================================
+REFRAME: local emptiness = global ANTI-spread (bunching). Instantaneous spatial
+spread is the ENEMY (even=no hole). What guarantees the hole is (a) the positive
+INDEPENDENCE main term (1-2/n)^{n-1}, obstructed only by arithmetic resonances, and
+(b) TEMPORAL spread + ROTATION: a moving orbit must dip to the bunched/holed extreme
+and rotate the hole onto the observer. Choose 'spread' in TIME, not in space.
+========================================================================
