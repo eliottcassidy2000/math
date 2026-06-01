@@ -3,6 +3,7 @@ id: HYP-1992
 status: OPEN
 source: codex-2026-06-01-S520
 related:
+  - HYP-1991
   - HYP-1990
   - HYP-1989
   - HYP-1988
@@ -165,6 +166,7 @@ first descendant denominator doubles.
 - `04-computation/lrc_n18_gate_battlefield_s520.py`
 - `05-knowledge/results/lrc_n18_gate_battlefield_s520.out`
 - `07-reflections/lrc-n18-observer-source-gate-battlefield-s520.md`
+- HYP-1991
 - HYP-1990
 - HYP-1989
 - HYP-1988
