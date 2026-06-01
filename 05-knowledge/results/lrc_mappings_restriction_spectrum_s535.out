@@ -1,0 +1,26 @@
+==========================================================================
+META: realizable iso-class set shrinks as the mapping retains more METRIC
+==========================================================================
+
+--- M1: NEAR-GRAPH (threshold 1/n) --- LRC <=> observer-isolated is exhibitable
+  n=4: realizable near-graph iso-classes = 8 of 11 all graphs (R=0.73); per-set avg distinct near-graphs=36.0; LRC(observer-isolated exhibited)=120/121
+  n=5: realizable near-graph iso-classes = 20 of 34 all graphs (R=0.59); per-set avg distinct near-graphs=88.4; LRC(observer-isolated exhibited)=120/121
+  n=6: realizable near-graph iso-classes = 54 of 156 all graphs (R=0.35); per-set avg distinct near-graphs=171.3; LRC(observer-isolated exhibited)=60/61
+  => near-graphs are a RESTRICTED family (circular indifference graphs); LRC = the
+     marked observer-isolated near-graph lies in EVERY speed set's realizable union.
+
+--- M2: 3-LEVEL METRIC tournament (near/mid/far) --- massive restriction
+  n=4: realizable 3-level iso-classes = 14  (vs 729 labeled 3-colorings of 6 edges); astronomically restricted
+  n=5: realizable 3-level iso-classes = 75  (vs 59049 labeled 3-colorings of 10 edges); astronomically restricted
+
+--- M3: RESONANCE/QR tournament (n prime) --- arithmetic restriction
+  n=5 (prime): realizable QR-tournament iso-classes on 4 runners = 1 of A000568(4)=4 (R=0.250); 401 sets sampled
+  n=7 (prime): realizable QR-tournament iso-classes on 6 runners = 1 of A000568(6)=56 (R=0.018); 401 sets sampled
+  => QR-difference tournaments hit only a thin arithmetic slice (Paley-type),
+     restricted by reciprocity/difference-set constraints.
+
+==========================================================================
+RANKING (small-n restriction R = realizable/all): M0 order ~ 2Fib/A000568;
+M1 near-graph (metric threshold) strong; M2 3-level near-total collapse;
+M3 QR arithmetic slice. The conjecture lives at the METRIC rungs (M1+).
+==========================================================================

@@ -3645,3 +3645,26 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Verdict:** n=18 NOT proved. Wall = sieve-covered residual + discrepancy/coupling gap (same as n=14/16, general conjecture). Parity route now known insufficient beyond n=4.
 **Predictions:** closing n=18 needs either (i) rigorous discrepancy bound for the cascade shrink on the sieve-covered residual, or (ii) coupled control of the order>=3 inside debt the parity bit cannot see.
 **See:** `07-reflections/lrc-n18-proof-attempt-parity-vacuity-prime-power-s534o.md`, `04-computation/lrc_n18_proof_attempt_s534.py` (+.out), HYP-2016 (mod-6 three-channel parity), HYP-2007 (inside debt), HYP-2003 (n14 covering), S527 (cascade), THM-369 (sieve), S17.
+
+## HYP-2018: LRC mapping spectrum -- restriction of realizable iso-classes = retained metric; the NEAR-GRAPH mapping is the sweet spot (oracle-2026-06-01-S535o)
+**Status:** SUPPORTED (computed n=4,5,6); reframes LRC as membership on a restricted family.
+**What:** The S518 order-tournament menu is non-restrictive (the conjecture hides in the walk) because a tournament keeps only ORDER; loneliness is METRIC (1/n). PRINCIPLE: the realizable iso-class set shrinks as the mapping retains more metric. Computed spectrum (R=realizable/all):
+ - M0 order tournament: no restriction (walk).
+ - M1 NEAR-GRAPH (i~j iff circular dist<1/n): realizable = circular indifference graphs; R=8/11,20/34,54/156=0.73,0.59,0.35 (SHRINKS with n). LRC@n <=> the marked OBSERVER-ISOLATED near-graph is in EVERY speed set's realizable family. Verified 120/121,120/121,60/61 -- the lone misses are the tight AP/regular-polygon set (lonely only at measure-zero t=k/n the grid skips) = the boundary extremal.
+ - M2 3-level metric tournament (near/mid/far): realizable 14 (n=4), 75 (n=5) vs 3^6=729, 3^10=59049 -- near-total restriction; target = circular-metric/Robinson colorings.
+ - M3 QR/Paley tournament (i->j iff v_i-v_j is QR mod n): collapses to ~1 Paley-type class (R=0.25 n=5, 0.018 n=7); CAVEAT: n=1 mod4 makes QR symmetric (degenerate), needs n=3 mod4.
+**Lesson:** realizable-class restriction is meaningful exactly to the extent the 1/n metric is carried; near-graph (1 threshold bit over the order tournament) is the sweet spot turning LRC into membership on a shrinking family.
+**Predictions:** realizable near-graphs are EXACTLY circular indifference graphs; characterize the observer-isolable subfamily; restriction R->0 as n->inf.
+**See:** `07-reflections/lrc-mapping-spectrum-metric-retention-restricts-the-realizable-classes-s535o.md`, `04-computation/lrc_mappings_restriction_spectrum_s535.py` (+.out), HYP-2007 (inside debt), HYP-2008 (apex=largest gap), S518/S519 (menu/walk).
+
+## HYP-2019: the multitude of metric/arithmetic LRC mappings (p-adic, nerve, wiring, matroid, CF, Robinson) -- restricted realizability (oracle-2026-06-01-S535o)
+**Status:** OPEN (conjectural family; posed for investigation).
+**What:** Beyond the computed M1-M3, a multitude of mappings each retaining a different metric/arithmetic slice, each conjectured to give a restricted realizable iso-class set with LRC as a membership/feature statement:
+ - MAP-p: edge label v_p(v_i-v_j), p|n* (prime-power filtration, S534) -> ULTRAMETRIC patterns (every triangle isosceles); LRC reads the deepest valuation; S533/S534 channels = quotients.
+ - MAP-nerve: Cech complex of the danger cover {B_i={t:||v_i t||<1/n}}; LRC <=> nerve does NOT cover [0,1) (H_0 of complement survives); restricted by Helly-on-circle/periodic-arc.
+ - MAP-wire: cyclic ordering sequence = closed ALLOWABLE SEQUENCE (wiring diagram of runner lines); realizable = STRETCHABLE; LRC = sequence has an observer-isolated (wide-gap) frame.
+ - MAP-matroid: resonance-independence matroid of the speeds (Q-representable); LRC couples to matroid connectivity / inside-debt support (S533).
+ - MAP-CF: speed-ratio continued fractions; three-gap (Steinhaus) governs; LRC = largest gap (apex S530) stays >=2/n along the CF descent.
+ - MAP-Robinson: time-averaged closeness = circular Robinson(ian) matrix; LRC = observer row uniformly far.
+**Predictions:** each realizable family is a classified restricted class (ultrametric/circular-arc/stretchable/representable-matroid/bounded-CF/circular-Robinsonian); the MOST restrictive that still has LRC=membership wins. MAP-p ties directly to the S534 n=18 prime-power channels; MAP-wire to S519/S520 walk.
+**See:** `07-reflections/lrc-mapping-spectrum-metric-retention-restricts-the-realizable-classes-s535o.md`, HYP-2018, HYP-2017 (n=18 prime-power), HYP-2008 (apex), S521o (permutohedron).

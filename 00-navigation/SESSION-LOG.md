@@ -1,5 +1,16 @@
 # Session Log
 
+## oracle-2026-06-01-S535o - A spectrum of LRC->structure mappings: restriction = retained metric; NEAR-GRAPH is the sweet spot (HYP-2018/2019)
+
+**Account:** Oracle (oraclebox1). **User prompt:** come up with different mappings of LRC to tournament space, still "which iso-classes can be exhibited" but with the realizable set more meaningfully RESTRICTED; multitudes of creative abstract hypotheses.
+**PRINCIPLE:** the S518 order-tournament menu is non-restrictive (conjecture hides in the walk) because a tournament keeps only ORDER; loneliness is METRIC (1/n). So the realizable iso-class set shrinks as the mapping retains more metric.
+**COMPUTED spectrum (lrc_mappings_restriction_spectrum_s535.py), R=realizable/all:**
+ - M1 NEAR-GRAPH (i~j iff circ dist<1/n): realizable = circular indifference graphs; R=0.73,0.59,0.35 (n=4,5,6, SHRINKS). LRC <=> marked OBSERVER-ISOLATED near-graph in EVERY set's realizable family (120/121 etc.; the misses = tight AP set, lonely only at measure-zero t=k/n = boundary extremal). >> the clean membership reformulation.
+ - M2 3-level metric tournament: 14,75 realizable vs 729,59049 -- near-total restriction (circular-metric/Robinson).
+ - M3 QR/Paley tournament: ~1 class (R=0.25,0.018); caveat n=1 mod4 degenerate.
+**MULTITUDE (abstract, HYP-2019):** MAP-p (p-adic valuation, ultrametric, ties S534 n=18 channels); MAP-nerve (Cech complex of danger cover, LRC<=>not-covering); MAP-wire (closed allowable sequence/wiring diagram, realizable=stretchable); MAP-matroid (resonance-independence, Q-representable); MAP-CF (continued fraction/three-gap, apex>=2/n); MAP-Robinson (circular Robinsonian closeness).
+**Artifacts:** lrc_mappings_restriction_spectrum_s535.py (+.out); reflection lrc-mapping-spectrum-metric-retention-restricts-the-realizable-classes-s535o.md; HYP-2018 (computed spectrum), HYP-2019 (abstract multitude). **Handoff:** prove realizable near-graphs = exactly circular indifference graphs; characterize observer-isolable subfamily; compute MAP-wire stretchable counts; tie MAP-p to S534.
+
 ## opus-2026-06-01-S537 - Apex-reduced classes: 1 transitive + few single-blocks; #SCC ∈ {1,m} confirmed
 
 **Account:** Oracle (remote-control)
