@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S525 - Permutohedron geometry of LRC + HONEST n=14 attempt: circle-covering gap at the regular-polygon wall (HYP-2003)
+
+**Account:** Oracle (oraclebox1). **User prompt:** understand the deep permutohedron geometry; attempt an n=14 proof.
+**HONESTY:** LRC@14 (14 runners) is OPEN; I did NOT prove it and do not claim to (continuing the repo's honest-negative n=14 chain S514/S519/opus-S524).
+**Permutohedron framework (trinity + S522-S524):** tournament = point in Pi_m (zonotope of A_{m-1}); arcs=roots, vertices=transitive=semicircle (THM-374). LRC movie t->T_S(t) (THM-381) = ALCOVE WALK on the affine braid arrangement; runner sub-tournament always round (S523); round <=> #SCC in {1,m} (HYP-2000); symmetric extreme = regular m-gon = roots of unity (S522).
+**Reformulation (verified equivalent):** LRC@14 <=> the 13 blocking arcs B_i={t:||s_i t||<1/14} (each measure 1/7, endpoints=permutohedron alcove walls) do NOT cover [0,1). Gap=lonely alcove; tight case=measure-zero gap (a wall). = opus-S524 CRT 7-way correlation, other coordinates.
+**VERIFIED (lrc_n14_permutohedron_covering_s525.py, 127 sets):** 0 failures; AP {1..13} is the UNIQUE wall-only set (d_open=12/13, lonely only @t=1/14 on a wall); at EVERY lonely time the runner sub-tournament has #SCC in {1,13} ONLY (121 single-block, 6 transitive, never intermediate) -- corollary of THM-381+HYP-2000. Lonely config = round tournament at a block extreme; tight one = regular-polygon wall.
+**OBSTRUCTION (not closed):** bounding |union B_i|<1 for non-AP sets IS LRC@14; "AP extremal" = open extremal-config conjecture. New HYP-2003 + sub-target: prove "wall-only => AP (up to scaling)" => reduces LRC@14 to the single AP check.
+**CONVERGENCE:** concurrent oracle-S521o hit the identical prompt -- cross-linked. Files: 04-computation/lrc_n14_permutohedron_covering_s525.py (+.out); HYP-2003-lrc-n14-covering-wallonly-AP.md; reflection 07-reflections/lrc-permutohedron-n14-honest-attempt-s525.md.
+
 ## oracle-2026-06-01-S521o - Permutohedron geometry of LRC + n=14 attempt
 
 **Account:** Oracle (remote-control). **User prompt:** understand the deep permutohedron geometry and attempt an n=14 proof.
