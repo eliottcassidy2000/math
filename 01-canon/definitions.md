@@ -28,6 +28,29 @@ The resulting tournament, or trajectory of tournaments as the parameter
 changes, is then studied using `H(T)`, score data, directed cycles, cut
 structure, endpoint/packet incidence, and related invariants.
 
+**Tournament Analysis switchboard**: a concrete Tournament Analysis object with
+one switch value in `{-1,0,+1}` for every unordered pair, plus a fixed
+Hamiltonian tie path.  THM-372 proves that every switchboard determines a
+unique tournament, and a finite-wall switchboard determines a piecewise-constant
+tournament movie.
+
+**Half-turn circular tournament**: given distinct non-antipodal points on a
+circle, orient `x -> y` iff `y` lies clockwise from `x` by distance in
+`(0,1/2)`.  THM-374 proves that such a tournament is transitive exactly when
+the point set lies in an open semicircle.
+
+**Runner phase clock**: for integer runner speeds `s_i`, the Tournament
+Analysis movie obtained from the half-turn comparator on positions
+`s_i t mod 1`.  THM-373 proves that its wall times are exactly
+`m/(2|s_i-s_j|)` and that it is a closed finite tournament walk.
+
+**LRC pressure lift**: a Tournament Analysis switchboard on runners where an
+arc records which runner is the more irreplaceable blocker under deletion.  The
+current canon uses three finite variants: `k1` nearest-distance relief, `k2`
+two-nearest-distance-sum relief, and two-neighbor threshold-deficit relief.
+THM-377 is a selected-row exact certificate for these lifts at `n=14` and
+`n=18`.
+
 ---
 
 ## The Tiling Model

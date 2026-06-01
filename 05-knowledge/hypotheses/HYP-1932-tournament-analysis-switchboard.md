@@ -3,6 +3,7 @@ id: HYP-1932
 status: OPEN
 source: codex-2026-06-01-S454
 related:
+  - THM-372
   - HYP-1931
   - HYP-1930
   - HYP-1904
@@ -29,6 +30,11 @@ and the resulting path T(x) in {0,1}^{binom(n,2)}.
 Rank lifts assign one scalar to each object.  Switchboards assign one channel
 to each relation.  If the problem lives in pairwise tension, the switchboard is
 closer to the object than any scalar rank shadow.
+
+S500 canonized the construction as THM-372: a switch value for every unordered
+pair, together with a fixed Hamiltonian tie path, determines a unique
+tournament.  Finite wall sets therefore produce piecewise-constant tournament
+movies.
 
 ## Evidence
 
@@ -95,4 +101,5 @@ surrounding pairwise moat switchboard carries additional tournament structure.
 - `07-reflections/tournament-analysis-switchboard-s454.md`
 - `04-computation/tournament_analysis_metric_lifts_s23.py`
 - `07-reflections/tournament-analysis-metric-lifts-s23.md`
+- THM-372
 - HYP-1931

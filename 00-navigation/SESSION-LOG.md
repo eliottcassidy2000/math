@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-01-S500 - Formalization pass for Tournament Analysis and LRC certificates
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S492.
+**User prompt:** Formalize as many things as possible across the repo, prioritizing relevance and mathematical novelty.
+**Canonized:** Added THM-372 through THM-377.  THM-372 proves pairwise Tournament Analysis switchboards are well-defined.  THM-373 proves integer runner phase clocks have exact wall times and form closed finite walks.  THM-374 proves half-turn circular tournaments are transitive exactly on open-semicircle configurations.  THM-375 and THM-376 formalize the S481 n=14/n=18 bridge-fiber and gap-debt certificates.  THM-377 formalizes the S492 selected-row k1/k2/deficit pressure acyclicity audit.
+**Definitions and wiring:** Extended `01-canon/definitions.md`, patched HYP-1931/HYP-1932/HYP-1940/HYP-1941/HYP-1942/HYP-1950/HYP-1951, added the missing HYP-1951 file, updated the hypothesis/result indexes and the concept map, and added `07-reflections/formalization-pass-s500.md`.
+**Open frontier:** Bridge-fiber dual certificates and global pressure-peeling remain open; the runner clock now has wall/semicircle theorems, but the fixed circular menu classification is still exploratory.
+
 ## codex-2026-06-01-S500 - LRC Pressure DAG Audit
 
 **Account:** Codex

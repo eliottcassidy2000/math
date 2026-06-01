@@ -3,6 +3,7 @@ id: HYP-1941
 status: OPEN
 source: codex-2026-06-01-S471
 related:
+  - THM-372
   - THM-370
   - HYP-1900
   - HYP-1903
@@ -34,6 +35,11 @@ Hamiltonian path, exactly as in the repo's base-path/staircase model.
 
 The hypothesis is that useful problem analogies preserve the switch-and-residue
 structure of this functor, not merely the visual metric.
+
+S500 canonized the finite construction layer as THM-372: a switch value for
+each unordered pair plus a fixed tie Hamiltonian path always produces a unique
+tournament, and finite-wall switchboards produce piecewise-constant tournament
+movies.
 
 ## Evidence
 
@@ -98,6 +104,7 @@ edge-bit tournament trajectory by thresholding against a base Hamiltonian path.
 - `05-knowledge/results/tournament_analysis_framework_s471.out`
 - `07-reflections/tournament-analysis-framework-s471.md`
 - `01-canon/definitions.md`
+- THM-372
 - THM-370
 - HYP-1904
 - HYP-1921

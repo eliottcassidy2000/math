@@ -3,6 +3,8 @@ id: HYP-1942
 status: OPEN
 source: codex-2026-06-01-S481
 related:
+  - THM-375
+  - THM-376
   - HYP-1840
   - HYP-1866
   - HYP-1891
@@ -39,6 +41,11 @@ Thus `n=18` is not locally larger at the gate invoice.  It is locally more
 rigid: the square `3`-torsion row collapses the bridge fiber to the two
 residues `+-6 mod 18`.  Its difficulty is not the local gate cover but the
 endpoint debt exported into `3^2` and `3^3` layers.
+
+S500 canonized the exact local part as THM-375 and the exact ladder
+gap-debt-product part as THM-376.  The remaining open part is the proposed
+dual certificate showing that every bridge fiber either reopens a small row or
+exports endpoint frontier mass in a way that cannot be globally repaired.
 
 ## Evidence
 
@@ -122,6 +129,8 @@ marked pairwise safe-switch tournament.
 - `04-computation/lrc_n14_n18_alternating_noise_s455.py`
 - `05-knowledge/results/lrc_n14_n18_alternating_noise_s455.out`
 - `07-reflections/lrc-n14-n18-alternating-noise-s455.md`
+- THM-375
+- THM-376
 - HYP-1840
 - HYP-1866
 - HYP-1891

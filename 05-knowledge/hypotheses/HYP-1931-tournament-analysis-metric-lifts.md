@@ -3,6 +3,9 @@ id: HYP-1931
 status: OPEN
 source: oracle-2026-06-01-S23
 related:
+  - THM-372
+  - THM-373
+  - THM-374
   - HYP-1895
   - HYP-1900
   - HYP-1910
@@ -28,6 +31,12 @@ raw pairwise or geometric data
 ```
 
 The critical distinction is between rank lifts and analyzer lifts.
+
+S500 canonized the finite switchboard mechanism behind this process.  THM-372
+proves that a pairwise switchboard plus a tie path is a well-defined
+tournament.  THM-373 specializes the wall-crossing statement to integer runner
+phase clocks, and THM-374 proves that the half-turn circular tournament is
+transitive exactly in the open-semicircle case.
 
 Rank lifts assign one scalar score `s_i` to each object and orient
 `i -> j` when `s_i > s_j`, with a fixed Hamiltonian path as tie-break.  These
@@ -140,4 +149,7 @@ base-path coordinate.
 - `04-computation/tournament_analysis_framework_s471.py`
 - `05-knowledge/results/tournament_analysis_framework_s471.out`
 - `07-reflections/tournament-analysis-framework-s471.md`
+- THM-372
+- THM-373
+- THM-374
 - HYP-1895, HYP-1900

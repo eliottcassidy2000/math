@@ -21,6 +21,12 @@ flip edge {i,j} exactly when a chosen predicate on d(i,j) is true.
 
 Thus a metric threshold, annulus, shell, or phase condition becomes an edge mask over the `N choose 2` coordinates of the fixed-path tiling cube.
 
+S500 formalized the finite base case as THM-372.  A gauge is mathematically
+complete once it returns one switch value for each unordered pair and declares
+the tie path; finite flip surfaces then give a well-defined tournament movie.
+The runner phase-clock specialization is THM-373, and the half-turn
+transitive/semicircle criterion is THM-374.
+
 ## Evidence
 
 `04-computation/tournament_analysis_metric_lifts_s480.py` implements the framework on three examples:
@@ -48,4 +54,4 @@ The decisive S480 observation is that changing the gauge changes the mathematica
 
 ## See Also
 
-HYP-1895, HYP-1900, HYP-1903, THM-354, `04-computation/tournament_analysis_metric_lifts_s480.py`, `05-knowledge/results/tournament_analysis_metric_lifts_s480.out`, `07-reflections/tournament-analysis-metric-lifts-s480.md`.
+HYP-1895, HYP-1900, HYP-1903, THM-354, THM-372, THM-373, THM-374, `04-computation/tournament_analysis_metric_lifts_s480.py`, `05-knowledge/results/tournament_analysis_metric_lifts_s480.out`, `07-reflections/tournament-analysis-metric-lifts-s480.md`.

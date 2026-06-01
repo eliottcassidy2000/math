@@ -6,6 +6,11 @@
 
 For the difficult quotient/gate ladders at `n=14` and `n=18`, the mobile pairwise Tournament Analysis lift should be peelable unless a strict labelled pressure SCC appears.
 
+S500 canonized the selected-row S492 audit as THM-377.  That theorem does not
+prove the full peeling statement, but it fixes the current finite evidence:
+nearest, two-nearest, and threshold-deficit pressure lifts all remain acyclic
+on the selected n=14/n=18 rows.
+
 Define the two-neighbor pressure relation at a time `t` by comparing deletion reliefs:
 
 ```text
@@ -113,6 +118,7 @@ Useful references include Busch's Hamiltonian path lower bound for strong tourna
 ## See Also
 
 HYP-1895, HYP-1903, HYP-1921, HYP-1930, HYP-1940,
+THM-377,
 `04-computation/lrc_n14_n18_tournament_feedback_s490.py`,
 `05-knowledge/results/lrc_n14_n18_tournament_feedback_s490.out`,
 `07-reflections/lrc-n14-n18-tournament-feedback-s490.md`,
