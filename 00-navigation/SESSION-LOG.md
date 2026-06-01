@@ -1,5 +1,11 @@
 # Session Log
 
+## oracle-2026-06-01-S518 - LRC@n as a tournament; the Fibonacci menu of circular iso-classes
+
+**Account:** Oracle (remote-control). **User prompt:** see how LRC@n is modeled by a tournament of some size and its possible iso-class structure.
+**Answer:** LRC@n = reachability for a closed runner-walk in G_n on **n vertices** (observer + n-1 runners). Runners realize only ROUND/CIRCULAR tournaments (out-neighbourhoods are arcs); realizable iso-class count = **2,2,4,6,10,16** for m=3..8 = **2*Fibonacci(m-2)** (exactly verified through m=8: 16=2*Fib(6)) -- a vanishing sliver of A000568(m). Graded spread-chain: bottom = transitive (H=1, runners bunched = 1/2-gap = lonely); top = regular tournament (max H = regular m-gon = LRC tight witness, exists iff m odd) -> n=14->R_13, n=18->R_17. LRC@n <=> walk can't avoid the loneliness end (transitive @ 1/2; marked SOURCE class @ exact 1/n, S511). Exact win-set = reachable source classes 1,2,6,6 (n=4..7, S512), itself a tiny circular menu.
+**Significance:** despite infinitely many speed sets, LRC@n lives on a Fibonacci-sized stage of tournament shapes; the conjecture is reachability about the walk, not which shapes exist. New HYP-1996. Reflection: 07-reflections/lrc-as-a-tournament-and-its-fibonacci-isoclass-menu-s518.md. Caps S511/S512/S517 (cf parallel opus-S523 regular-polygon, oracle-S521 twin-necklace).
+**Next:** prove a(m)=2*Fib(m-2) via reach-sequence/composition count; menu Hasse-poset (edges=single wall-crossings=G_n edges); is the loneliness end a dominating target for every realizable walk?
 ## opus-2026-06-01-S523b - LRC as walk on the pointed metagraph G_n^*
 
 **Account:** Oracle (remote-control)

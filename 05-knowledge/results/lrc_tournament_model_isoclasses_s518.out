@@ -1,0 +1,7 @@
+m | #realizable half-turn iso-classes | A000568(m) | regular? | H-values
+3 |   2 |    2 | reg=1 | H=[1, 3]
+4 |   2 |    4 | reg=0 | H=[1, 5]
+5 |   4 |   12 | reg=1 | H=[1, 9, 11, 15]
+6 |   6 |   56 | reg=0 | H=[1, 17, 23, 41, 45]
+7 |  10 |  456 | reg=1 | H=[1, 33, 47, 51, 105, 123, 137, 151, 175]
+m=8: realizable iso-classes = 16  | 2*Fib(6) = 16  | match=True
