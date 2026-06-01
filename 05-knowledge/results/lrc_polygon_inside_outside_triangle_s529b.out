@@ -1,0 +1,16 @@
+oracle-2026-06-01-S529b -- the triangle-has-no-diagonals fact behind "inside debt"
+
+ n | sides(outside) | diagonals(INSIDE) | min runners for a >=3-term resonance
+ 3 |       3        |         0         | 3 runners (m=n-1>=3 <=> n>=4)
+ 4 |       4        |         2         | 3 runners (m=n-1>=3 <=> n>=4)
+ 5 |       5        |         5         | 3 runners (m=n-1>=3 <=> n>=4)
+ 6 |       6        |         9         | 3 runners (m=n-1>=3 <=> n>=4)
+ 7 |       7        |        14         | 3 runners
+ 8 |       8        |        20         | 3 runners
+
+triangle (n=3): 0 diagonals => no inside => inside-debt=0 => S526 closes (m=2 pairwise only)
+square   (n=4): first diagonal (the diameter) => inside born => first OPEN case
+
+Diagonals(n) = C(n,2) - n = n(n-3)/2.  Zero iff n=3.  This matches the concurrent
+oracle-S529 numeric finding "inside debt (r>=3 resonances) born at n=4" and the
+S526 proof (n=3 |SAFE| = 1/9 + (2/9)chi(a)chi(b)/(ab), order-2 only).
