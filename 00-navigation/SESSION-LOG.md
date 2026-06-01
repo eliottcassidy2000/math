@@ -1,5 +1,11 @@
 # Session Log
 
+## oracle-2026-06-01-S546 - Doubling is pairing: the doubled primes 2q are the resonant diagonal (odd-cycles, Goldbach, LRC) (HYP-2044)
+
+**Account:** Oracle (oraclebox1). **User prompt:** understand odd/even cycles, odd/even numbers, primes (Goldbach even=2 primes; odd = prime + doubled prime), and the importance of doubled primes.
+**THE WEB (verified, `doubled_primes_odd_cycles_goldbach_s546.py`):** (1) parity = parity of #odd-parts: even = p+q (Goldbach); odd = p+2q (Lemoine/Levy: prime + DOUBLED prime = 3 odd primes p,q,q); doubled prime 2q = q+q = the DIAGONAL of Goldbach (4,6,10,14,22,...). (2) A000568 = the odd-cycle Burnside (verified n=3..8): e=sum(l-1)/2 + sum_{i<j}gcd(l_i,l_j); Fix=0 if ANY even cycle (even cycle reverses an antipodal edge) -- an even cycle is a 0 = "even is not a single prime". (3) THE DOUBLED PRIME = the equal odd-cycle pair (q,q): contributes gcd(q,q)=q = the MAXIMAL between-cycle term (distinct coprime->1); verified (3,3)->3,(5,5)->5,(7,7)->7. Where the tournament symmetry CONCENTRATES. (4) LRC: n=2q (doubled prime) = rank-one p-adic tree (omega(n/2)=1, S542), cleanest hard case, apex=q=n/2; n=14=2*7 is a doubled prime -> the canonical target.
+**PRINCIPLE:** doubling (x2) is PAIRING -- q->2q turns one odd prime into a resonant pair (q,q); equal things maximize gcd, make Goldbach diagonal, make the LRC tower rank-one. The lone 2 (only even prime) is the parity-fixer (even 2-object story -> odd 3-object p+q+q; halves n to the apex). Doubled primes = the resonant diagonal where additive primes, odd-cycle symmetry, and LRC tightness all put their extremal structure. New HYP-2044. Files: 07-reflections/doubled-primes-doubling-is-pairing-s546.md; 04-computation/doubled_primes_odd_cycles_goldbach_s546.py (+.out); HYP-2044.
+
 ## oracle-2026-06-01-S546o - Doubled primes = the parity hinge; doubled-prime dimensions n=2p have clean PRIME LRC channels (n=14 clean vs 16,18 messy) (HYP-2043)
 
 **Account:** Oracle (oraclebox1). **User prompt:** understand odd/even cycles, odd/even numbers, primes (Goldbach even=2 primes, odd=1 prime+1 doubled prime), and the importance of doubled primes.
