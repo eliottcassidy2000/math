@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S531 - The n=4 parity law: LRC(4) closes on every odd-sum triple; n=4 is the last clean case (HYP-2011)
+
+**Account:** Oracle (oraclebox1). **User prompt:** be very creative, long session, push math forward.
+**MAIN RESULT (n=4 frontier):** the covering character g_k=-sin(pi k/2)/(pi k) is supported ONLY on odd k (g_even=0). The inside-debt (order-3) term needs an all-odd resonance k_a a+k_b b+k_c c=0; mod 2 the LHS = a+b+c. RIGOROUS (0 violations/1336 triples): a+b+c ODD => no all-odd resonance => n=4 inside debt IDENTICALLY 0. => LRC(n=4) holds on every ODD-SUM triple: |SAFE|=1/8+pairwise>0 (verified all 752 odd-sum triples, min 1/18 at (1,3,9); bound: Σ1/(xy)<=0.875<1). That settles ~half of all n=4 speed sets by a one-line parity law.
+**HARD CORE isolated:** even-sum triples carry the active inside debt; AP {1,2,3} is the UNIQUE tight set (|SAFE|=0, speeds<=30; cleaner than n=5,6), others >= 1/28; near-tight families (1,4k+2,4k+3),(2,2j+1,2j+3) collapse onto the AP.
+**META-INSIGHT (why n=4 last clean case):** g_k=0 iff (n/2)|k; support residues mod n/2: n=4->{1} (ONE class=>single parity law), n=6->{1,2}, n=8->{1,2,3}. For n>=6 the support spans multiple classes so NO single congruence kills the debt. The difficulty ramp = the width of the character support.
+**SYNTHESIS (loneliness ladder):** L(n;s)=|SAFE| is an explicit arithmetic function per n; L(3)=1/9+(2/9)chi_3 chi_3/(ab), L(4,odd)=1/8+pairwise(psi_4). LRC(n) <=> L(n;s)>=0 for all primitive s. New HYP-2011 (parity law THM-worthy). Files: 07-reflections/lrc-n4-parity-law-and-the-loneliness-ladder-s531.md; 04-computation/lrc_n4_parity_inside_debt_s531.py (+.out). Handoff: close even-sum n=4 (mod-4 triple character sum, AP unique tight); multi-channel parity generalization for n>=6.
+
 ## oracle-2026-06-01-S531 - The apex applies RECURSIVELY = modular decomposition; H multiplicative over disjoint apex-modules; recursive LRC carving (HYP-2010)
 
 **Account:** Oracle (oraclebox1). **User prompt:** be very creative, long session, push math forward; see how this (the apex) applies recursively.
