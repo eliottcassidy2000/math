@@ -175,6 +175,48 @@ theorem lonely_add_one (n : ℕ) (v : ι → ℤ) (t : ℝ) :
 
 end Grounding
 
+/-! ### Proven LRC cases (as high `n` as the methodology gives unconditionally)
+
+For *every* `n`, the `t = 1/n` (n-gon vertex) witness settles the case where no
+speed is divisible by `n`; and `n = 2` is unconditional. -/
+
+section Cases
+variable {ι : Type*}
+
+/-- **LRC for all `n`, no-multiple case.** If `0 < n` and no speed is divisible by
+`n`, then `t = 1/n` is `n`-lonely. (The geodesic hits the `n`-gon vertex inside the
+box.) -/
+theorem lonely_of_no_multiple (n : ℕ) (hn : 0 < n) (v : ι → ℤ)
+    (hdiv : ∀ i, ¬ ((n : ℤ) ∣ v i)) : Lonely n v ((1 : ℝ) / n) :=
+  sieve_one_div n n v (le_refl n) hn hdiv
+
+/-- **The 2-runner case (n = 2).** Any single nonzero speed has a 2-lonely time
+(`t = 1/(2a)`, where `a·t = 1/2` is at distance `1/2` from every integer). -/
+theorem lonely_two (a : ℤ) (ha : a ≠ 0) :
+    ∃ t : ℝ, ∀ m : ℤ, (1 : ℝ) / 2 ≤ |(a : ℝ) * t - m| := by
+  have ha' : (a : ℝ) ≠ 0 := by exact_mod_cast ha
+  refine ⟨1 / (2 * a), fun m => ?_⟩
+  have hval : (a : ℝ) * (1 / (2 * a)) = 1 / 2 := by field_simp
+  rw [hval]
+  have hf : Int.fract ((1 : ℝ) / 2) = 1 / 2 :=
+    Int.fract_eq_self.mpr ⟨by norm_num, by norm_num⟩
+  exact (far_iff_fract (1 / 2) (1 / 2)).mpr ⟨le_of_eq hf.symm, by rw [hf]; norm_num⟩ m
+
+/-- **The 3-runner sieve coverage.**  For `n = 3`, the two unit witnesses `t = 1/3`
+(`q = 3`) and `t = 1/2` (`q = 2`) settle every speed family *except* those in which
+some speed is divisible by `3` AND some speed is divisible by `2`.  Concretely: if
+either no speed is a multiple of `3`, or no speed is a multiple of `2`, then `v` has
+a `3`-lonely time.  This isolates the genuine residual kernel of LRC@3 (speeds
+entangled with `6`), which the denominator sieve alone cannot reach. -/
+theorem three_lonely_sieve_cover (v : ι → ℤ)
+    (h : (∀ i, ¬ (3 : ℤ) ∣ v i) ∨ (∀ i, ¬ (2 : ℤ) ∣ v i)) :
+    ∃ t : ℝ, Lonely 3 v t := by
+  rcases h with h3 | h2
+  · exact ⟨(1 : ℝ) / 3, sieve_one_div 3 3 v (le_refl 3) (by norm_num) h3⟩
+  · exact ⟨(1 : ℝ) / 2, sieve_one_div 3 2 v (by norm_num) (by norm_num) h2⟩
+
+end Cases
+
 /-! ### Axiom audit
 
 Each `#print axioms` should report only the foundational
@@ -189,5 +231,8 @@ project-specific axioms underlie the LRC sieve theory. -/
 #print axioms far_iff_fract
 #print axioms lonely_iff_fract_mem
 #print axioms lonely_add_one
+#print axioms lonely_of_no_multiple
+#print axioms lonely_two
+#print axioms three_lonely_sieve_cover
 
 end LonelyRunner

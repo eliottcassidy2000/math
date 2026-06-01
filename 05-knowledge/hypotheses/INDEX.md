@@ -3551,3 +3551,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** `lrc_geometric_small_n_s522o.py` (+ .out): n=3 `1101/1101`; n=4 `1275/1299` simple witnesses, `37` residual, `0` counterexamples.
 **Predictions:** An iterated/multi-scale grid or per-cell lonely-interval method closes n=4,5; residual difficulty should concentrate on resonant `{1,...}` families at each n; grid-vs-box codimension is the quantitative obstruction.
 **See:** `07-reflections/lrc-geometric-proof-n3-and-n4-frontier-s522o.md`, HYP-2002, HYP-2000, THM-369.
+
+## HYP-2006: machine-checked LRC cases (all-n no-multiple, n=2, n=3 sieve cover) in Lean (oracle-2026-06-01-S528)
+**Status:** PROVED (machine-checked, axiom-clean). Formalization milestone extending THM-369.
+**What:** Three Lean 4 / Mathlib lemmas added to `LonelyRunner.lean`, each `#print axioms`-clean (`[propext, Classical.choice, Quot.sound]`, no sorry, no project axiom): (1) `lonely_of_no_multiple` -- for EVERY n>0, if no speed is divisible by n then t=1/n is n-lonely (the n-gon-vertex witness, all-n unconditional fragment); (2) `lonely_two` -- full n=2 via t=1/(2a) through `far_iff_fract`; (3) `three_lonely_sieve_cover` -- n=3 holds if no speed div by 3 OR no speed div by 2, isolating in checked code the residual kernel (speeds entangled with 6 after gcd-reduction).
+**Honest boundary:** the residual n=3 kernel (some speed div 3 AND some div 2) is NOT yet formalized; it is closed on paper by S522o (center-grid 1-D pigeonhole) and S526 (mod-3 Legendre character sum, |SAFE|=1/9+(2/9)chi(a)chi(b)/(ab)). The Lean file now faithfully separates "proved by sieve" from "needs the hard character/grid bound".
+**Predictions/next:** formalizing the 1-D equally-spaced-points pigeonhole (S522o) would close n=3 completely in Lean; the mod-3 Gauss-sum evaluation (S526) is the next rung; the higher-resonance bound shared by n>=4 and n=14 is the research-grade rung.
+**See:** `07-reflections/lrc-lean-formalized-cases-all-n-and-n3-sieve-cover-s528.md`, `04-computation/lean/TournamentH7/TournamentH7/LonelyRunner.lean`, THM-369, THM-386, HYP-2004, HYP-2005.

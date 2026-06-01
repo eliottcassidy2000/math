@@ -49,6 +49,22 @@ The single lemma `sieve_frac` thus unifies the divisibility filter (THM-360), th
 initial-segment unit witnesses (THM-358⁺), the even-`n` antipodal trick, and the
 composite-`n` CRT folds under one elementary, machine-checked proof.
 
+## Proven-cases extension (oracle-2026-06-01-S528, axiom-clean)
+
+A `Cases` section now formalizes the LRC cases the elementary methodology settles
+(each `#print axioms`-clean):
+
+- `lonely_of_no_multiple` — **for every `n > 0`**, no speed divisible by `n` ⇒
+  `t = 1/n` is `n`-lonely (the all-`n` unconditional fragment; one-line corollary
+  of `sieve_one_div`).
+- `lonely_two` — the **`n = 2`** case in full: any nonzero speed `a` has a
+  `2`-lonely time `t = 1/(2a)` (via the `far_iff_fract` bridge).
+- `three_lonely_sieve_cover` — **`n = 3`**: lonely if no speed is divisible by `3`
+  *or* none by `2`; this isolates, in checked code, the residual `6`-entangled
+  kernel of LRC@3 (closed on paper by S522o center-grid / S526 mod-3 character, not
+  yet formalized). See HYP-2006 and
+  `07-reflections/lrc-lean-formalized-cases-all-n-and-n3-sieve-cover-s528.md`.
+
 ## Significance
 
 First **Lean-formalized** Lonely Runner result in the repo (all prior LRC

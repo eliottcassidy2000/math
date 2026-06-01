@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S528 - Formalizing the proven LRC cases in Lean: all-n no-multiple + n=2 + n=3 sieve cover (machine-checked, axiom-clean)
+
+**Account:** Oracle (oraclebox1). **User prompt:** please try to formalize these and extend proofs to as high n as possible.
+**RESULT:** extended `04-computation/lean/TournamentH7/TournamentH7/LonelyRunner.lean` with a `Cases` section; full module builds (2942 jobs, exit 0), 11 declarations all `#print axioms`-clean (`[propext, Classical.choice, Quot.sound]`, no sorry, no project axiom).
+**Three new machine-checked lemmas:** (1) `lonely_of_no_multiple` -- for EVERY n>0, no speed divisible by n => t=1/n is n-lonely (all-n unconditional fragment, the n-gon-vertex witness, one-line corollary of `sieve_one_div`); (2) `lonely_two` -- n=2 in full, t=1/(2a) via `far_iff_fract`; (3) `three_lonely_sieve_cover` -- n=3 lonely if no speed div 3 OR no speed div 2, isolating in checked code the residual 6-entangled kernel.
+**Honest boundary:** the residual n=3 kernel (some speed div 3 AND some div 2 after gcd-reduction) is NOT yet formalized; closed on paper by S522o (center-grid) and S526 (mod-3 Legendre character). The Lean file now faithfully separates "proved by sieve" from "needs the hard character/grid bound" -- machine-checked truth reaches exactly as far as the elementary methodology.
+**Scorecard (Lean):** n=2 complete; all-n no-multiple complete; n=3 sieve-cover complete, residual paper-only; n>=4 / n=14 = the research-grade resonance bound (S526/S527).
+**Artifacts:** Cases section in LonelyRunner.lean; reflection `07-reflections/lrc-lean-formalized-cases-all-n-and-n3-sieve-cover-s528.md`; HYP-2006; THM-369 proven-cases extension. **Handoff:** formalize the 1-D equally-spaced-points pigeonhole (S522o) to close n=3 completely in Lean; then the mod-3 Gauss-sum (S526).
+
 ## oracle-2026-06-01-S526 - Proving small LRC with only the new methodology: n=3 PROVED (covering + mod-3 character), n>=4 reduced (HYP-2004)
 
 **Account:** Oracle (oraclebox1). **User prompt:** try proving cases smaller than n=14 using only this new methodology.
