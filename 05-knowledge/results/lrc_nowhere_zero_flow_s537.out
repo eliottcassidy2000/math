@@ -1,0 +1,46 @@
+==========================================================================
+LRC via NOWHERE-ZERO FLOWS: full-support resonance = NZ flow on speed dipole
+==========================================================================
+
+(1)+(2) FACTORIZATION & BRIDGE: NZ Z_{n*}-flow count, inert factor, active count
+   n=6 (n*=3) and n=18 (n*=9). debt-free <=> NZ-flow-count=0 <=> exactly 1 active.
+   n=6 v=(1, 2, 3, 4, 5): active=4, inert factor (k-1)^inert=2, NZ-Z3-flow count=12 (active part 6) -> debt present
+   n=6 v=(3, 6, 9, 12, 1): active=1, inert factor (k-1)^inert=16, NZ-Z3-flow count=0 (active part 0) -> DEBT-FREE
+   n=6 v=(3, 6, 9, 15, 2): active=1, inert factor (k-1)^inert=16, NZ-Z3-flow count=0 (active part 0) -> DEBT-FREE
+   n=6 v=(1, 2, 3, 6, 9): active=2, inert factor (k-1)^inert=8, NZ-Z3-flow count=16 (active part 2) -> debt present
+   n=6 v=(6, 1, 12, 18, 24): active=1, inert factor (k-1)^inert=16, NZ-Z3-flow count=0 (active part 0) -> DEBT-FREE
+
+   n=18 v=AP 1..17: active(coprime+v3=1 nonzero)=16, NZ-Z9-flow count=250199979305648 -> debt present
+   n=18 v=(3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39, 42, 45, 48, 1): active(coprime+v3=1 nonzero)=12, NZ-Z9-flow count=187649984495616 -> debt present
+
+(2') BRIDGE LAW verified on random primitive sets (debt-free <=> 1 active):
+   n=6 (n*=3): bridge law (NZ-flow=0 <=> 1 active) holds 400/401; debt-free count=12
+   n=8 (n*=4): bridge law (NZ-flow=0 <=> 1 active) holds 400/401; debt-free count=0
+   n=18 (n*=9): bridge law (NZ-flow=0 <=> 1 active) holds 400/401; debt-free count=0
+
+(3) FLOW POLYNOMIAL: unweighted m-dipole F(D_m;k)=((k-1)^m+(-1)^m(k-1))/k
+   D_3, k=3: NZ-flow count(weights all 1)=2, formula=2, match=True
+   D_3, k=4: NZ-flow count(weights all 1)=6, formula=6, match=True
+   D_3, k=5: NZ-flow count(weights all 1)=12, formula=12, match=True
+   D_4, k=3: NZ-flow count(weights all 1)=6, formula=6, match=True
+   D_4, k=4: NZ-flow count(weights all 1)=21, formula=21, match=True
+   D_4, k=5: NZ-flow count(weights all 1)=52, formula=52, match=True
+   D_5, k=3: NZ-flow count(weights all 1)=10, formula=10, match=True
+   D_5, k=4: NZ-flow count(weights all 1)=60, formula=60, match=True
+   D_5, k=5: NZ-flow count(weights all 1)=204, formula=204, match=True
+
+(3') INSIDE-DEBT as ghat-weighted NZ-integer-flow enumerator (n=6):
+   v=(1, 2, 3, 4, 5): full-support inside debt (flow enumerator) = -0.00745; NZ-Z3-flow count=12 (nonzero)
+   v=(3, 6, 9, 12, 1): full-support inside debt (flow enumerator) = +0.00000; NZ-Z3-flow count=0 (0 => debt exactly 0)
+   v=(1, 2, 3, 6, 9): full-support inside debt (flow enumerator) = -0.00334; NZ-Z3-flow count=16 (nonzero)
+
+(4) TENSION DUAL sanity: runner positions = circular coloring (circumference n)
+    loneliness <=> observer at circular distance >= 1 from every runner (scaled).
+    n=7 v=(1, 2, 3, 4, 6): circular-7-coloring with observer far found at t=0.1905: positions [1.33, 2.67, 4.0, 5.33, 1.0] (all >= 1 from 0). LRC = orbit-constrained circular coloring.
+
+==========================================================================
+SYNTHESIS: inside debt / parity = NZ Z_{n*}-flow on the speed dipole; debt-free
+= a Z_{n*}-bridge (1 active runner). Tutte/Seymour: bridgeless => NZ flow exists
+=> debt present once >=2 active -- the flow reason large n* is parity-vacuous.
+Runner positions are the dual TENSION (circular coloring). 
+==========================================================================

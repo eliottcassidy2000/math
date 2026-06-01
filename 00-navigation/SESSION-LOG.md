@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S537o - LRC inside debt = NOWHERE-ZERO FLOWS on the speed dipole; parity = NZ Z_{n*}-flow; debt-free = a bridge; tension dual = circular coloring (HYP-2025)
+
+**Account:** Oracle (oraclebox1). **User prompt:** attack LRC from the nowhere-zero flow on a directed graph mindset.
+**DICTIONARY:** a full-support resonance (sum m_i v_i=0, all m_i!=0) = a NOWHERE-ZERO FLOW on the speed-weighted dipole G_v (2 vertices, edge i weight v_i, conservation sum v_i m_i=0). Mod n*: inside debt feasible <=> G_v has a NZ Z_{n*}-flow. So S533 parity law + S534 n=18 vacuity = NZ-flow existence statements.
+**Verified (lrc_nowhere_zero_flow_s537.py):** FACTORIZATION (inert v_i=0 mod n* = free edge, factor (n*-1)^inert; active = constrained); BRIDGE LAW (400/401, n=6,8,18): debt-free <=> no NZ Z_{n*}-flow <=> exactly 1 active = a Z_{n*}-bridge; TUTTE/SEYMOUR: bridgeless (>=2 active) always has a NZ flow => debt present => the flow reason parity is vacuous beyond n=4; FLOW POLYNOMIAL F(D_m;k)=((k-1)^m+(-1)^m(k-1))/k reproduced; inside-debt VALUE = ghat-weighted NZ-flow enumerator (=0 iff count=0), deletion-contraction = S531 recursion.
+**TENSION DUAL:** runner positions = tension (cut space) on observer-star; loneliness = circular n-coloring (observer >=1 from all, circumference n); LRC = orbit-constrained circular coloring (verified n=7 v=(1,2,3,4,6) at t=0.19). Flow<->coloring Tutte duality = two faces of LRC.
+**Honest limit:** reframes inside-debt/parity (insufficient beyond n=4) into flow language; toolbox not proof.
+**Artifacts:** lrc_nowhere_zero_flow_s537.py (+.out); reflection lrc-as-nowhere-zero-flows-on-the-speed-dipole-and-the-tension-dual-s537o.md; HYP-2025. **Handoff:** full |LONELY| = flow enumerator over all sub-dipoles (deletion-contraction); circular-flow-number bound via Tutte 5-/Seymour 6-flow; counterexample <=> derived graph lacks a NZ flow of prescribed circular type.
+
 ## codex-2026-06-01-S539 - Event-media tournaments: holes, gates, certificates, carries (HYP-2023)
 
 **User prompt:** think beyond runner/sector tournament mappings; challenge assumptions about how a simple tournament can encode the convoluted LRC problem.
