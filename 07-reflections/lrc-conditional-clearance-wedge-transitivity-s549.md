@@ -66,7 +66,7 @@ T transitive  <=>  W_T(X,Y)=empty for every edge X -> Y,
 sum_edges |W_T(X,Y)| = 3*c_3(T).
 ```
 
-THM-392 now records this as a canon theorem.  This packages the hidden fact as
+THM-395 now records this as a canon theorem.  This packages the hidden fact as
 a measurable obstruction.  The first directed 3-cycle is exactly the first
 unpaid backward wedge.
 
@@ -156,7 +156,7 @@ the product cascade is scalar.
 
 The better object is scalar product plus edge-local wedge ledger.
 
-After THM-392, the exact theorem-level content is no longer speculative:
+After THM-395, the exact theorem-level content is no longer speculative:
 transitive clearance is equivalent to zero backward-wedge debt.  The open LRC
 choice is the lift in which that debt is certificate-bearing rather than only
 descriptive.
@@ -183,7 +183,7 @@ epsilon in the product.  Either outcome is useful: transitive means clearance
 propagates; cyclic means the script has found the real obstruction layer.
 
 The proof obligation can therefore be written as a cascade of ordinary
-conditional clearances multiplied by THM-392 anti-wedge clearances.  A zero in
+conditional clearances multiplied by THM-395 anti-wedge clearances.  A zero in
 the second ledger is not noise; it is exactly a directed triangle in the lifted
 object.
 

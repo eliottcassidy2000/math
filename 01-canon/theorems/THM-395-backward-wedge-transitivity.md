@@ -1,5 +1,5 @@
 ---
-id: THM-392
+id: THM-395
 name: backward-wedge-transitivity
 status: PROVED
 date: 2026-06-01
@@ -8,7 +8,7 @@ depends_on:
   - HYP-2040
 ---
 
-# THM-392: Transitivity is exactly zero backward-wedge debt
+# THM-395: Transitivity is exactly zero backward-wedge debt
 
 ## Statement
 

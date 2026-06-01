@@ -175,3 +175,16 @@ Lemoine:   odd numbers are covered by P + 2P.
 The doubled primes are important because they preserve the prime cycle while
 making it parity-compatible.  They are the seam between odd-cycle arithmetic
 and even-cycle transport.
+
+## LRC boundary addendum
+
+The n=4 LRC character formula adds a useful warning.  A doubled-prime leg is
+not just an even speed; it is an even speed whose odd core is still prime.
+In the mod-4 pair ledger, even reduced cofactors are `chi4`-silent, so the
+bridge can be pairwise quiet.  But the same dyadic move can destroy the
+all-odd `t=1/4` boundary witness.
+
+That makes doubled primes boundary-active but pairwise quiet.  The right next
+tournament vertices are bridge cells `(N,p,q)` for `N=p+2q`, compared against
+Goldbach cells `N=p+q`, with endpoint-owner and residue labels retained rather
+than projected away.

@@ -1,12 +1,13 @@
 ---
 id: HYP-2051
 status: OPEN
-source: codex-2026-06-01-S550
+source: codex-2026-06-01-S550; codex-2026-06-01-S551 addendum
 related:
   - HYP-1983
   - HYP-1984
   - HYP-1994
   - HYP-2040
+  - HYP-2044
   - HYP-2049
 ---
 
@@ -129,6 +130,40 @@ HYP-2049 strengthens this parity-lift reading into the recursion-bridge
 language: `2p=p+p=2*p` is the rung where the additive Goldbach diagonal and the
 multiplicative doubling bridge coincide.
 
+## n=4 LRC boundary reading
+
+The n=4 character layer makes the gate sharper.  In the mod-4 Fourier
+description, the safe-indicator pair correction is controlled by the odd
+character `chi4`; even reduced cofactors are pairwise silent.  At the same
+time, HYP-2040 and THM-391 record the boundary fact that all-odd triples have
+the closed witness `t=1/4`, so any tight n=4 obstruction must involve an even
+speed.
+
+Thus a doubled-prime leg can be boundary-active while remaining pairwise
+quiet.  It can break the all-odd `t=1/4` witness by spending one dyadic factor,
+but because the even reduced cofactor kills the `chi4` pair correction, that
+debt need not appear in the easy `R2` ledger.  The natural place to look is
+therefore the endpoint, full-support, or higher-order resonance layer.
+
+## Tournament Analysis next object
+
+Do not default to runner vertices for this layer.  The object that preserves
+the Goldbach/Lemoine distinction is a bridge cell
+
+```text
+b = (N,p,q),
+```
+
+with `N=p+2q` for Lemoine bridges and `N=p+q` for Goldbach comparison
+bridges.  Useful observables are dyadic height, odd core, representation
+abundance in the fixed-`N` fiber, endpoint-debt proxy, `chi4` neutrality, and
+endpoint-owner labels when available.
+
+A first switch should orient `b1 -> b2` by lower boundary debt or higher repair
+potential, with ties ordered by increasing `(N,q,p)`.  Report score
+histograms, directed cycles, SCCs, Hamiltonian-path counts, and edge flips
+against the S513 add/multiply denominator tournament.
+
 ## Predictions
 
 1. Lemoine representation counts should behave like a cross-correlation
@@ -143,12 +178,15 @@ multiplicative doubling bridge coincide.
    prime cycle `p`, not as a featureless even length.
 5. The doubled-prime gate should help separate odd/even additive questions:
    `P+P` covers even channels, while `P+2P` covers odd channels.
+6. In n=4-style LRC decompositions, doubled-prime legs should be boundary
+   active but pairwise quiet, moving debt out of the `chi4` pair ledger and
+   into endpoint/full-support bridge-cell fingerprints.
 
 ## Status
 
-Open synthesis.  The parity, residue, and cycle identities are exact; the
-unproved content is the explanatory force for Lemoine density and for LRC
-first-even denominators.
+Open synthesis.  The parity, residue, cycle, and n=4 pairwise-quiet identities
+are exact; the unproved content is the explanatory force for Lemoine density
+and for LRC first-even denominators.
 
 ## Files
 

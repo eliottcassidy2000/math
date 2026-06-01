@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Exact checks for THM-392 and the LRC conditional-clearance cascade.
+"""Exact checks for THM-395 and the LRC conditional-clearance cascade.
 
 The tournament half verifies that backward-wedge mass is exactly three times
 the directed-triangle count, and that zero wedge debt is equivalent to
@@ -283,7 +283,7 @@ def clearance_report() -> list[str]:
 
 
 def main() -> None:
-    print("THM-392 backward-wedge transitivity verifier")
+    print("THM-395 backward-wedge transitivity verifier")
     print("pairwise observable: oriented tournament edge X->Y")
     print("switch/gauge: the tournament orientation; no ties in these exact checks")
     print("tie Hamiltonian path: not used here because all pair data are strict")

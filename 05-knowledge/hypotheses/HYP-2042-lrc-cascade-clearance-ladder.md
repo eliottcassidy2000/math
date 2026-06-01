@@ -8,7 +8,7 @@ related:
   - HYP-2003
   - HYP-2040
   - HYP-2041
-  - THM-392
+  - THM-395
 ---
 
 # HYP-2042: LRC is a cascade of conditional clearances; the cycle-exclusion is the Helly-3 shadow (necessary, not sufficient); collar ladder = 1/(k+1)
@@ -25,7 +25,7 @@ the worst TRIPLE collar = 1/4 for AP n=5,6,7 (>1/n), yet the FULL collar = 1/n. 
 the cycle-exclusion is NECESSARY but NOT SUFFICIENT; LRC is irreducibly the whole
 cascade (order n), not any fixed Helly-k.
 
-**Relation to THM-392/HYP-2040:** THM-392 proves the exact tournament identity behind
+**Relation to THM-395/HYP-2040:** THM-395 proves the exact tournament identity behind
 this cycle-exclusion: transitivity is equivalent to zero backward-wedge debt, and the
 total wedge mass is `3*c_3(T)`.  This hypothesis records the LRC limitation: that
 exact 3-cycle ledger is necessary, but it must be lifted through the whole

@@ -12,7 +12,7 @@ related:
   - HYP-2042
   - THM-381
   - THM-389
-  - THM-392
+  - THM-395
 ---
 
 # HYP-2040: LRC conditional-clearance cascades carry a hidden transitive wedge debt
@@ -52,7 +52,7 @@ obligations.
 
 ## Exact tournament identity
 
-THM-392 canonizes the exact tournament part of this hypothesis.  For a
+THM-395 canonizes the exact tournament part of this hypothesis.  For a
 tournament `T`, define the backward-wedge set of an oriented edge:
 
 ```text
@@ -176,7 +176,7 @@ dependent clearances as independent.
 
 ## Status
 
-Open as an LRC lift claim.  THM-392 proves the exact tournament identity and
+Open as an LRC lift claim.  THM-395 proves the exact tournament identity and
 turns the hidden transitivity fact into a canon ledger.  HYP-2041 identifies
 the same ledger with no-return/resonance debt, while HYP-2042 records the
 honest limitation that fixed triple clearance is not enough for the order-`n`
@@ -185,7 +185,7 @@ debt becomes a certificate rather than a visualization.
 
 ## Files
 
-`01-canon/theorems/THM-392-backward-wedge-transitivity.md`;
+`01-canon/theorems/THM-395-backward-wedge-transitivity.md`;
 `04-computation/lrc_conditional_clearance_wedge_s550.py`;
 `05-knowledge/results/lrc_conditional_clearance_wedge_s550.out`;
 `07-reflections/lrc-conditional-clearance-wedge-transitivity-s549.md`;

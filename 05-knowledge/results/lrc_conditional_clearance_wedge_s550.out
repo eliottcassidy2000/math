@@ -1,4 +1,4 @@
-THM-392 backward-wedge transitivity verifier
+THM-395 backward-wedge transitivity verifier
 pairwise observable: oriented tournament edge X->Y
 switch/gauge: the tournament orientation; no ties in these exact checks
 tie Hamiltonian path: not used here because all pair data are strict
