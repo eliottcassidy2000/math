@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S534o - LRC n=18 attempt: parity VACUOUS at n*=9 (potent only at n=4); prime-power degradation (HYP-2017)
+
+**Account:** Oracle (oraclebox1). **User prompt:** try a proof of n=18.
+**HONEST: n=18 NOT proved (17 speeds, far beyond proven k<=6).** Structured attempt with full machinery; n*=n/2=9=3^2.
+**(1) RIGOROUS (THM-369 sieve):** for every q<=18 with no speed divisible by q, t=1/q is 18-lonely (1/q>=1/18); verified 245/245 no-mult-of-9 sets lonely at t=1/9. Counterexample must be q-COVERED for all q in {2..18}.
+**(2) NEW (continues S533c):** the n*-parity law (full-support debt-free iff 0 not representable as sum c_i v_i mod n*, c_i in {1..n*-1}) is VACUOUS at n=18: 0/3000 primitive 17-sets debt-free. Degradation: n=4(n*=2)~60%, n=6(n*=3)~3%, n>=8 0%. Parity obstruction essentially UNIQUE to n=4. 3-adic reason: mod9 nonzero residues = units {1,2,4,5,7,8} + {3,6}(v3=1); any unit runner makes 0 reachable -> debt present; debt-free needs all runners div by 3 => recurses to n=6 mod-3 one 3-adic level down (non-primitive) = prime-power recursion.
+**(3) HEURISTIC:** cascade threshold 17*(8/9)^16=2.58>=1 passes (1.12/2.04/2.31/2.58 for n=7/14/16/18); AP=regular-18gon carves to EXACTLY 0 (tight), random stays ~0.148; non-rigorous (discrepancy).
+**Verdict:** wall = sieve-covered residual + discrepancy/coupling gap (same as n=14/16). Parity route insufficient beyond n=4.
+**Artifacts:** lrc_n18_proof_attempt_s534.py (+.out); reflection lrc-n18-proof-attempt-parity-vacuity-prime-power-s534o.md; HYP-2017. **Handoff:** (i) rigorous discrepancy bound for cascade shrink on sieve-covered residual; (ii) coupled control of order>=3 inside debt.
+
 ## opus-2026-06-01-S535 - Alternative tournament mappings: APEX-REDUCED gives only 2 iso classes
 
 **Account:** Oracle (remote-control)
