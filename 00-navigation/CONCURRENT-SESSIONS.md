@@ -97,3 +97,46 @@ piece of the map.
 End-of-session close-out is still mandatory. A session can checkpoint many
 times and must still finish with the normal letter, commit, push, and
 verification that the branch is no longer ahead of upstream.
+
+## Infrastructure: working-tree isolation + conflict-free logs (added 2026-06-01)
+
+Two mechanisms now absorb most concurrency pain so close-out no longer stalls on
+manual conflicts:
+
+### 1. Union-merge on shared logs (automatic — nothing to do)
+
+`.gitattributes` marks the append-heavy coordination files (`SESSION-LOG.md`, the
+`INDEX.md` files, `MISTAKES.md`, `TANGENTS.md`, `INVESTIGATION-BACKLOG.md`,
+`OPEN-QUESTIONS.md`, this file) with the built-in `merge=union` driver. When two
+sessions both append, a rebase keeps **both** sides' lines automatically — no
+conflict markers, no manual fixup. `finish_session.py` now loops the
+fetch/rebase/push retry and, on any conflict the union driver cannot resolve,
+**aborts the rebase to leave a clean tree** (your commit stays intact) instead of
+stranding the repo mid-rebase. You normally never see a conflict again.
+
+Caveat: union merge keeps both hunks but not a guaranteed order, and can leave a
+duplicate line if two sessions add the *same* line. Glance at the top of
+`SESSION-LOG.md` after close-out; cosmetic dedupe is fine, never delete another
+agent's entry.
+
+### 2. Per-session worktrees (opt-in — recommended for remote-control sessions)
+
+Nomad-launched sessions already isolate (they clone into `/tmp`). Remote-control
+sessions share the one `~/math` checkout, so one session's `git add -A` can sweep
+another's **uncommitted** files. To get the same isolation, start your session in
+its own git worktree:
+
+```bash
+cd "$(bash agents/new_session_worktree.sh)"     # isolated checkout of origin/main in /tmp
+# ... do all your work + run agents/finish_session.py here ...
+```
+
+A worktree shares the one `.git` (so pushes/pulls work normally) but has a private
+working directory, so concurrent sessions can never clobber your uncommitted
+files. Reclaim space later (clean worktrees only) with:
+
+```bash
+bash agents/cleanup_session_worktrees.sh
+```
+
+Suggested cron on the box: `*/30 * * * * cd ~/math && bash agents/cleanup_session_worktrees.sh`.
