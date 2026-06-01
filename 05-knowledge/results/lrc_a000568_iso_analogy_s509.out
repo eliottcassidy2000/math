@@ -1,0 +1,180 @@
+LRC -> A000568 / tournament-isoclass analogy probe (S509)
+========================================================================
+Interpretation: if safe/unsafe is mixed inside an iso-class bucket,
+plain A000568 is the base quotient, not the whole LRC state.
+
+FAMILY N4 consecutive
+  speeds=(1, 2, 3) total_N=4 A000568=4
+  cells=14 safe_cells=0 unsafe_cells=14
+  safe boundary events=2 boundary unmarked/pointed classes=1/2
+  visited unmarked iso classes=2 (0.500 of A000568); pointed=6
+  safe-hit classes: unmarked=0 pointed=0
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/2/0
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/6/0
+  quotient walk unmarked: transitions=2 unique_edges=1 self_steps=11
+  quotient walk pointed:   transitions=7 unique_edges=5 self_steps=6
+  H among safe cells:   []
+  H among unsafe cells: [(1, 6), (5, 8)]
+  observer score safe:   []
+  observer score unsafe: [(0, 3), (1, 4), (2, 4), (3, 3)]
+
+FAMILY N4 sparse
+  speeds=(1, 3, 4) total_N=4 A000568=4
+  cells=22 safe_cells=2 unsafe_cells=20
+  safe boundary events=4 boundary unmarked/pointed classes=1/2
+  visited unmarked iso classes=2 (0.500 of A000568); pointed=8
+  safe-hit classes: unmarked=1 pointed=2
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/1/1
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/6/2
+  quotient walk unmarked: transitions=6 unique_edges=1 self_steps=15
+  quotient walk pointed:   transitions=11 unique_edges=9 self_steps=10
+  H among safe cells:   [(5, 2)]
+  H among unsafe cells: [(1, 10), (5, 10)]
+  observer score safe:   [(1, 1), (2, 1)]
+  observer score unsafe: [(0, 4), (1, 6), (2, 6), (3, 4)]
+  example unmarked-mixed class: safe_t=41/96 unsafe_t=7/48 H=5/5 score=(1, 1, 2, 2)/(1, 1, 2, 2) stationary_score=2/2
+
+FAMILY N5 consecutive
+  speeds=(1, 2, 3, 4) total_N=5 A000568=12
+  cells=26 safe_cells=0 unsafe_cells=26
+  safe boundary events=4 boundary unmarked/pointed classes=1/1
+  visited unmarked iso classes=4 (0.333 of A000568); pointed=9
+  safe-hit classes: unmarked=0 pointed=0
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/4/0
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/9/0
+  quotient walk unmarked: transitions=8 unique_edges=3 self_steps=17
+  quotient walk pointed:   transitions=10 unique_edges=10 self_steps=15
+  H among safe cells:   []
+  H among unsafe cells: [(1, 8), (9, 2), (11, 6), (15, 10)]
+  observer score safe:   []
+  observer score unsafe: [(0, 4), (1, 2), (2, 14), (3, 2), (4, 4)]
+
+FAMILY N5 powers-ish
+  speeds=(1, 2, 4, 8) total_N=5 A000568=12
+  cells=52 safe_cells=4 unsafe_cells=48
+  safe boundary events=10 boundary unmarked/pointed classes=3/4
+  visited unmarked iso classes=4 (0.333 of A000568); pointed=12
+  safe-hit classes: unmarked=2 pointed=3
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/2/2
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/9/3
+  quotient walk unmarked: transitions=22 unique_edges=3 self_steps=29
+  quotient walk pointed:   transitions=25 unique_edges=18 self_steps=26
+  H among safe cells:   [(9, 2), (11, 2)]
+  H among unsafe cells: [(1, 6), (9, 20), (11, 12), (15, 10)]
+  observer score safe:   [(1, 1), (2, 2), (3, 1)]
+  observer score unsafe: [(0, 3), (1, 12), (2, 18), (3, 12), (4, 3)]
+  example unmarked-mixed class: safe_t=49/160 unsafe_t=15/224 H=9/9 score=(1, 1, 2, 3, 3)/(1, 1, 2, 3, 3) stationary_score=3/3
+
+FAMILY N5 prime-ish
+  speeds=(2, 3, 5, 7) total_N=5 A000568=12
+  cells=48 safe_cells=6 unsafe_cells=42
+  safe boundary events=10 boundary unmarked/pointed classes=5/6
+  visited unmarked iso classes=4 (0.333 of A000568); pointed=14
+  safe-hit classes: unmarked=2 pointed=3
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/2/2
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/11/3
+  quotient walk unmarked: transitions=14 unique_edges=4 self_steps=33
+  quotient walk pointed:   transitions=25 unique_edges=17 self_steps=22
+  H among safe cells:   [(11, 2), (15, 4)]
+  H among unsafe cells: [(1, 16), (9, 6), (11, 16), (15, 4)]
+  observer score safe:   [(1, 1), (2, 4), (3, 1)]
+  observer score unsafe: [(0, 4), (1, 10), (2, 14), (3, 10), (4, 4)]
+  example unmarked-mixed class: safe_t=3/28 unsafe_t=67/560 H=15/15 score=(2, 2, 2, 2, 2)/(2, 2, 2, 2, 2) stationary_score=2/2
+
+FAMILY N6 consecutive
+  speeds=(1, 2, 3, 4, 5) total_N=6 A000568=56
+  cells=40 safe_cells=0 unsafe_cells=40
+  safe boundary events=2 boundary unmarked/pointed classes=1/2
+  visited unmarked iso classes=4 (0.071 of A000568); pointed=12
+  safe-hit classes: unmarked=0 pointed=0
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/4/0
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/12/0
+  quotient walk unmarked: transitions=8 unique_edges=3 self_steps=31
+  quotient walk pointed:   transitions=18 unique_edges=14 self_steps=21
+  H among safe cells:   []
+  H among unsafe cells: [(1, 10), (17, 2), (41, 24), (45, 4)]
+  observer score safe:   []
+  observer score unsafe: [(0, 5), (1, 1), (2, 13), (3, 15), (4, 1), (5, 5)]
+
+FAMILY N6 mixed
+  speeds=(1, 3, 4, 7, 9) total_N=6 A000568=56
+  cells=76 safe_cells=6 unsafe_cells=70
+  safe boundary events=10 boundary unmarked/pointed classes=3/6
+  visited unmarked iso classes=5 (0.089 of A000568); pointed=24
+  safe-hit classes: unmarked=1 pointed=4
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/4/1
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/20/4
+  quotient walk unmarked: transitions=27 unique_edges=7 self_steps=48
+  quotient walk pointed:   transitions=47 unique_edges=38 self_steps=28
+  H among safe cells:   [(41, 6)]
+  H among unsafe cells: [(1, 14), (17, 8), (23, 30), (41, 18)]
+  observer score safe:   [(2, 3), (3, 3)]
+  observer score unsafe: [(0, 5), (1, 9), (2, 21), (3, 20), (4, 9), (5, 6)]
+  example unmarked-mixed class: safe_t=17/96 unsafe_t=13/168 H=41/41 score=(2, 2, 2, 3, 3, 3)/(2, 2, 2, 3, 3, 3) stationary_score=2/3
+
+FAMILY N7 consecutive
+  speeds=(1, 2, 3, 4, 5, 6) total_N=7 A000568=456
+  cells=54 safe_cells=0 unsafe_cells=54
+  safe boundary events=6 boundary unmarked/pointed classes=1/1
+  visited unmarked iso classes=7 (0.015 of A000568); pointed=15
+  safe-hit classes: unmarked=0 pointed=0
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/7/0
+  projection defect pointed   safe-only/unsafe-only/mixed = 0/15/0
+  quotient walk unmarked: transitions=16 unique_edges=7 self_steps=37
+  quotient walk pointed:   transitions=20 unique_edges=19 self_steps=33
+  H among safe cells:   []
+  H among unsafe cells: [(1, 12), (33, 2), (105, 2), (123, 10), (137, 8), (151, 4), (175, 16)]
+  observer score safe:   []
+  observer score unsafe: [(0, 6), (1, 1), (2, 7), (3, 24), (4, 9), (5, 1), (6, 6)]
+
+FAMILY N7 mixed
+  speeds=(1, 4, 6, 9, 10, 15) total_N=7 A000568=456
+  cells=144 safe_cells=10 unsafe_cells=134
+  safe boundary events=18 boundary unmarked/pointed classes=6/11
+  visited unmarked iso classes=9 (0.020 of A000568); pointed=47
+  safe-hit classes: unmarked=5 pointed=7
+  projection defect unmarked safe-only/unsafe-only/mixed = 0/4/5
+  projection defect pointed   safe-only/unsafe-only/mixed = 2/40/5
+  quotient walk unmarked: transitions=68 unique_edges=17 self_steps=75
+  quotient walk pointed:   transitions=77 unique_edges=61 self_steps=66
+  H among safe cells:   [(33, 2), (47, 2), (123, 4), (151, 2)]
+  H among unsafe cells: [(1, 28), (33, 12), (47, 20), (51, 2), (105, 18), (123, 16), (137, 16), (151, 22)]
+  observer score safe:   [(1, 1), (2, 2), (3, 4), (4, 2), (5, 1)]
+  observer score unsafe: [(0, 7), (1, 5), (2, 28), (3, 52), (4, 29), (5, 5), (6, 8)]
+  example unmarked-mixed class: safe_t=38/105 unsafe_t=29/840 H=33/33 score=(1, 1, 2, 3, 4, 5, 5)/(1, 1, 2, 3, 4, 5, 5) stationary_score=5/5
+
+GLOBAL PROJECTION SUMMARY
+  N=4 A000568=4 cells=36 unmarked_mixed=1 pointed_mixed=2 safe_only_unmarked=0 unsafe_only_unmarked=1
+  N=5 A000568=12 cells=126 unmarked_mixed=3 pointed_mixed=6 safe_only_unmarked=0 unsafe_only_unmarked=1
+  N=6 A000568=56 cells=116 unmarked_mixed=1 pointed_mixed=4 safe_only_unmarked=0 unsafe_only_unmarked=5
+  N=7 A000568=456 cells=198 unmarked_mixed=5 pointed_mixed=5 safe_only_unmarked=0 unsafe_only_unmarked=5
+
+ROUTE TOURNAMENT
+  observable = six route attributes
+  switch = majority of attributes wins; lower projection risk wins risk vote
+  tie path = listed order
+  H=65
+  score_hist={1: 2, 2: 1, 3: 1, 4: 1, 5: 1, 6: 2, 8: 1, 9: 1, 10: 1, 11: 1}
+  c3=6 scc_count=5
+  ranking:
+    projection-defect obstruction   route_score=49 tournament_score=11
+    alpha=1/N gauge bundle          route_score=45 tournament_score=10
+    residue bucket transport        route_score=42 tournament_score= 6
+    endpoint-pressure sheaf         route_score=41 tournament_score= 9
+    G_N wall-crossing corridors     route_score=38 tournament_score= 8
+    staircase extremal geodesic     route_score=38 tournament_score= 6
+    pointed A000568 lift            route_score=35 tournament_score= 5
+    even-graph cycle-space dual     route_score=32 tournament_score= 4
+    clock-word in G_N               route_score=31 tournament_score= 3
+    Hamiltonian-path H meter        route_score=28 tournament_score= 1
+    Burnside fiber mass             route_score=26 tournament_score= 2
+    A000568 entropy barrier         route_score=24 tournament_score= 1
+
+SYNTHESIS
+  1. The LRC movie naturally walks on tournament isomorphism classes.
+  2. The safe bit is often not a function of the unmarked A000568 class.
+  3. Even pointed classes can mix safe and unsafe cells; gap lengths and
+     endpoint labels are extra sheaf data over the A000568 base.
+  4. Therefore the most plausible analogy is convoluted but sharp:
+     LRC is a forbidden-cover / section-existence problem over the
+     A000568 isoclass quotient, with projection defect as the obstruction.
