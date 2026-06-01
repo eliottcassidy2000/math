@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S539o - LRC pairwise structure = a T(R)IENERMENT (ties=nearness); loneliness=observer tie-degree 0; the Gabor uncertainty angle (HYP-2029)
+
+**Account:** Oracle (oraclebox1). **User prompt:** investigate the Gabor angle alongside our previous work regarding t(r)ienerments.
+**CORE:** the LRC pairwise comparator is a T(R)IENERMENT (3 states i->j, i<-j, i<->j=tie), NOT a tournament. Edge {i,j}: TIE iff circular dist<1/n (NEAR); else directed by half-turn. tie=near-pair. Loneliness <=> observer tie-degree 0 (LOCAL). Unifies: order tournament (S518)=tie-free limit f(n,0)=A000568; near-graph (S535/536)=the TIE-SUBGRAPH; metric mappings=the tie threshold. Uses repo A007025/f(n,k) (trienerment_iso_count.py).
+**PIGEONHOLE FACT:** realized total-tie-counts start at 1, NEVER 0 (n points -> min gap <=1/n -> always >=1 near-pair). The LRC trienerment is NEVER a pure tournament; f(n,0) is the unrealizable tie-free limit; loneliness is the LOCAL observer-tie-degree-0 condition.
+**Restriction (lrc_trienerment_gabor_s539.py):** realizable LRC-trienerment iso-classes = 20/42 (n=4), 100/582 (n=5) of A007025; R=0.48->0.17; observer-tie-free 119/121, 80/81 (misses=tight AP).
+**GABOR/UNCERTAINTY:** loneliness = sharp real-space feature (observer locally tie-free, 2/n clearance, S536); DFT-dual = frequency; character sums |chat_m| stay bounded away from 0 at lonely times (avg max 1.81 of 4 n=5; 2.37 of 6 n=7) = a frequency FLOOR. Discrete uncertainty principle: tie-count (real clustering) & character concentration (frequency) can't both be small; marginals = S536 (space), S537 (frequency). POSED: Gabor trienerment on (sector,harmonic) atoms.
+**Artifacts:** lrc_trienerment_gabor_s539.py (+.out); reflection lrc-is-a-trienerment-ties-are-nearness-and-the-gabor-uncertainty-angle-s539o.md; HYP-2029 (2028 taken by concurrent). **Handoff:** build (sector,harmonic) Gabor trienerment + uncertainty-restricted classes; prove frequency floor max_m|chat_m|>=c(n) at observer-tie-free times (Turan/large-sieve); f(n,k) grading vs inside-debt order (S533).
+
 ## oracle-2026-06-01-S538o - Complex/precise LRC tournament vertices: the TENSION-PAIR tournament (cocycle-restricted); honest gap negative; a posed multitude (HYP-2027)
 
 **Account:** Oracle (oraclebox1). **User prompt:** come up with even more complex, precise things for the tournament vertices; really get creative.

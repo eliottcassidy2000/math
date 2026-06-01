@@ -1,0 +1,23 @@
+==========================================================================
+LRC AS A T(R)IENERMENT: ties = nearness; observer lonely <=> observer tie-free
+==========================================================================
+  n=4: realizable LRC-trienerment iso-classes = 20 of A007025(4)=42 (R=0.476); realized total-tie-counts=[1, 2, 3, 4, 5, 6]
+        observer-tie-free (LRC loneliness) reached: 119/121
+        f(4,k) [iso-classes by #ties] = [4, 10, 12, 10, 4, 1, 1]
+  n=5: realizable LRC-trienerment iso-classes = 100 of A007025(5)=582 (R=0.172); realized total-tie-counts=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        observer-tie-free (LRC loneliness) reached: 80/81
+        f(5,k) [iso-classes by #ties] = [12, 50, 107, 144, 131, 78, 41, 13, 4, 1, 1]
+  => the LRC structure is a trienerment (NOT a tournament); ties = near-pairs;
+     loneliness = observer tie-degree 0. Tournaments (f(n,0)) = the tie-free slice.
+
+==========================================================================
+THE GABOR / UNCERTAINTY ANGLE: sharp real-space hole (loneliness) vs freq spread
+==========================================================================
+  n=5: at the LONELY time (observer-hole >= 2/n=0.400): avg hole=0.299, avg max|char_sum|=1.805 (of n-1=4 runners)
+  n=7: at the LONELY time (observer-hole >= 2/n=0.286): avg hole=0.245, avg max|char_sum|=2.373 (of n-1=6 runners)
+  => loneliness forces a real-space hole of width >= 2/n; by the DFT duality
+     (S536/S537) this is a frequency feature -- the max character sum stays
+     bounded away from 0 at the lonely time (an uncertainty trade-off). The
+     (sector,harmonic) cells are the Gabor atoms; ties (real clustering) <->
+     character concentration (frequency). The Gabor TRIENERMENT on (sector,
+     harmonic) cells is the joint space-frequency lift (posed).
