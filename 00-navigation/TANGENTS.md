@@ -863,6 +863,15 @@ Lift LRC Tournament Analysis to runner-pairs as vertices. The pair-cell danger-d
 **T605** #lonely-runner #A000568 #iso-classes #threshold-fiber | certainty: exact bounded n=3,4 audit | source: codex-2026-06-01-S512
 Raw A000568 classes are too coarse for LRC: phase, observer-marked, gap-rank, and pair-deficit-rank fibers are mixed for total `n=3,4`. Threshold-decorated gap and pair-cell fibers separate good-only classes and certify all sampled primitive speed sets (`79/79`, `109/109`). See HYP-1982.
 
+**T606** #lonely-runner #observer-source #A000568 #marked-tournament | certainty: proved | source: codex-2026-06-01-S513
+The exact LRC/A000568 bridge is observer-source reachability: orient observer arcs by `||v_i t|| >= 1/n`, then observer lonely iff the marked observer is a source. Source-marked target classes on `n` vertices are in bijection with ordinary tournament classes on `n-1` vertices, hence counted by `A000568(n-1)`. See THM-381.
+
+**T607** #lonely-runner #threshold-fibers #formalization | certainty: exact bounded finite theorem | source: codex-2026-06-01-S513
+The S512 bounded fiber audit is now canonized with scoped claims: raw/rank-only fibers are mixed and certify none of the sampled `n=3,4` speed systems, while threshold-decorated gap and pair-cell fibers have no mixed classes and certify all sampled systems. See THM-382.
+
+**T608** #lonely-runner #half-turn-clock #boundary-compactification | certainty: exact bounded finite theorem | source: codex-2026-06-01-S513
+Equality walls are not cosmetic in the A000568 clock image. In the bounded S512 probe, open half-turn classes are `2/2`, `2/4`, `4/12` for total `n=3,4,5`, but wall-compactified classes are `2/2`, `4/4`, `11/12` under the fixed tie path. See THM-383.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

@@ -57,6 +57,19 @@ Analysis movie obtained from the half-turn comparator on positions
 `s_i t mod 1`.  THM-373 proves that its wall times are exactly
 `m/(2|s_i-s_j|)` and that it is a closed finite tournament walk.
 
+**LRC observer-source tournament**: for a speed system
+`{0,v_1,...,v_{n-1}}` with stationary observer `0` and threshold `1/n`, orient
+`0 -> i` iff `||v_i t|| >= 1/n`; orient moving-runner pairs by a complete
+tie-resolved comparator such as the half-turn phase clock.  THM-381 proves
+that the observer is lonely at `t` iff the marked observer vertex is a source,
+and that the source-marked target classes are counted by `A000568(n-1)`.
+
+**LRC threshold-decorated class fiber**: a tournament-isomorphism class
+together with LRC threshold colors, such as which circular gaps are at least
+`1/n` or which pair-cells have zero danger deficit.  THM-382 records that in
+the bounded `n=3,4` S512 audits, raw and rank-only fibers are mixed while
+threshold-decorated gap and pair-cell fibers separate good from bad states.
+
 **LRC pressure lift**: a Tournament Analysis switchboard on runners where an
 arc records which runner is the more irreplaceable blocker under deletion.  The
 current canon uses three finite variants: `k1` nearest-distance relief, `k2`

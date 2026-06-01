@@ -10,6 +10,15 @@
 **Synthesis:** Added HYP-1985 and `07-reflections/lrc-three-layer-stack-pressure-core-s514.md`. The S513 counterexample-shaped conjunction is refined: n14/n16 rows hit `4/5` arithmetic/danger flags and n18 rows hit `3/5`, but no sampled row has a nontrivial coarse pressure SCC. The pressure coordinate should be replaced by THM-380 owner-compatible endpoint-core data.
 **Verification:** `python3 -m py_compile 04-computation/lrc_three_layer_stack_audit_s514.py`; full script rerun with output stored.
 
+## codex-2026-06-01-S513 - Formalized LRC/A000568 results from recent sessions
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S512/HYP-1982.
+**User prompt:** Spend a long session formalizing novel results from across previous sessions.
+**Formalized:** Added THM-381, THM-382, and THM-383. THM-381 proves the exact observer-source LRC equivalence: with observer arcs oriented by `||v_i t|| >= 1/n`, the observer is lonely iff the marked observer vertex is a source, and source-marked target classes on `n` vertices are counted by `A000568(n-1)`. THM-382 canonizes the bounded S512 `n=3,4` threshold-fiber separation audit. THM-383 canonizes the bounded S512 half-turn boundary-compactification audit.
+**Synthesis:** Added `05-knowledge/hypotheses/HYP-1981-lrc-observer-source-reachability.md` and `07-reflections/formalizing-lrc-a000568-results-s513.md`, updated canon definitions, concept map, tangent entries T606-T608, hypothesis index entries for HYP-1981/HYP-1982, and result-index entries for the S511 observer-source outputs. The upgraded theorem layer is narrow: source reachability and finite bounded audits are canon; reachable-source classification, operation-weighted danger fibers, and full `n=14` decorated-fiber forcing remain hypotheses.
+**Verification:** Markdown/reference sanity checks plus reruns of the relevant S511/S512 scripts before close-out.
+
 ## codex-2026-06-01-S512 - LRC as threshold-decorated A000568 class fiber
 
 **Account:** Codex

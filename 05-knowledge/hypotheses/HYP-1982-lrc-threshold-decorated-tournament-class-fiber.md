@@ -14,6 +14,8 @@ related:
   - HYP-1824
   - THM-373
   - THM-374
+  - THM-382
+  - THM-383
 ---
 
 # HYP-1982: LRC is a forced visit in a threshold-decorated tournament-class fiber
@@ -46,6 +48,9 @@ those classes begin to behave like a proof language.
 `lrc_iso_class_constraint_s512.py` enumerates A000568 by Burnside and direct
 canonicalization through `n<=5`, then tests several runner-to-tournament lifts
 on exact wall/cell samples for total `n=3,4`.
+
+S513 canonized the bounded parts of this evidence as THM-382 and THM-383.  The
+global forced-visit statement remains open.
 
 The open half-turn clock is genuinely class-restricted:
 
