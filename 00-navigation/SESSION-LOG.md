@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S518 - Whacky n=145 CRT aperture reframes
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main`; fetched before editing and found no divergence.
+**User prompt:** Come up with whacky possibilities in an attempt to reframe and solve LRC at `n=145`.
+**Computation:** Added `04-computation/lrc_n145_whacky_reframes_s518.py` and stored `05-knowledge/results/lrc_n145_whacky_reframes_s518.out`. The script treats `145=5*29` as total LRC denominator, audits model speed families by residue support, THM-369 denominator traps, CRT residue class, antipodal boundary-pair occupancy, and a Tournament Analysis over wild proof routes.
+**Main reframe:** At unit walls `t=a/145`, all nonzero residues modulo `145` are already safe; only speeds divisible by `145` block. If no speed is divisible by `145`, THM-369 solves immediately. If such a blocker exists, the `144` moving-runner budget forces at least one missing antipodal nonzero boundary side, so there is a one-sided unit-wall aperture.
+**Synthesis:** Added HYP-1989 and `07-reflections/lrc-n145-whacky-reframes-s518.md`. The attempted n=145 proof is reframed as: push the zero-residue embryo (the speeds divisible by `145`, scaled down by `145`) through some unit-wall aperture, or extract a labelled endpoint-pressure obstruction contradicting THM-380. The route tournament ranks `unit_wall_aperture`, `zero_residue_embryo`, `almost_source_tunnel`, `crt_5_29_two_moons`, and `observer_score_descent` as the top five proof languages.
+**Verification:** `python -m py_compile 04-computation/lrc_n145_whacky_reframes_s518.py`; full script rerun with output stored.
+
 ## codex-2026-06-01-S517 - Observer-score repair fibers around HYP-1981
 
 **Account:** Codex
