@@ -1,0 +1,337 @@
+LRC Creative Reframes — opus-2026-06-01-S520
+Exploring LRC through 10 radically different mathematical lenses
+
+======================================================================
+REFRAME 1: BILLIARD — line in the torus hitting a box
+======================================================================
+
+n=3  dim=2  good_side=0.3333  good_volume=0.111111
+  initial segment: 0/10000 samples in good box (0.00%)
+  expected if uniform: 11.11%
+  ratio (observed/expected): 0.000
+
+n=4  dim=3  good_side=0.5000  good_volume=0.125000
+  initial segment: 2/10000 samples in good box (0.02%)
+  expected if uniform: 12.50%
+  ratio (observed/expected): 0.002
+
+n=5  dim=4  good_side=0.6000  good_volume=0.129600
+  initial segment: 4/10000 samples in good box (0.04%)
+  expected if uniform: 12.96%
+  ratio (observed/expected): 0.003
+
+n=6  dim=5  good_side=0.6667  good_volume=0.131687
+  initial segment: 0/10000 samples in good box (0.00%)
+  expected if uniform: 13.17%
+  ratio (observed/expected): 0.000
+
+Large-n asymptotics of good volume:
+  n= 10: vol = 0.134218  (e^-2 = 0.135335)
+  n= 14: vol = 0.134801  (e^-2 = 0.135335)
+  n= 20: vol = 0.135085  (e^-2 = 0.135335)
+  n= 50: vol = 0.135298  (e^-2 = 0.135335)
+  n=100: vol = 0.135326  (e^-2 = 0.135335)
+
+======================================================================
+REFRAME 2: LOVÁSZ LOCAL LEMMA — dependent coverage events
+======================================================================
+
+n= 3  p=2/n=0.6667  dep_edges=0  max_deg=0
+  LLL criterion: e*p*(d+1) = 1.8122  > 1 FAILS
+  Shearer bound: p < 1.0000  HOLDS
+  primes in speed set: 2 ([1, 2]...)
+
+n= 4  p=2/n=0.5000  dep_edges=0  max_deg=0
+  LLL criterion: e*p*(d+1) = 1.3591  > 1 FAILS
+  Shearer bound: p < 1.0000  HOLDS
+  primes in speed set: 3 ([1, 2, 3]...)
+
+n= 5  p=2/n=0.4000  dep_edges=1  max_deg=1
+  LLL criterion: e*p*(d+1) = 2.1746  > 1 FAILS
+  Shearer bound: p < 0.5000  HOLDS
+  primes in speed set: 3 ([1, 2, 3]...)
+
+n= 6  p=2/n=0.3333  dep_edges=1  max_deg=1
+  LLL criterion: e*p*(d+1) = 1.8122  > 1 FAILS
+  Shearer bound: p < 0.5000  HOLDS
+  primes in speed set: 4 ([1, 2, 3, 5]...)
+
+n= 7  p=2/n=0.2857  dep_edges=4  max_deg=3
+  LLL criterion: e*p*(d+1) = 3.1066  > 1 FAILS
+  Shearer bound: p < 0.2500  FAILS
+  primes in speed set: 4 ([1, 2, 3, 5]...)
+
+n=14  p=2/n=0.1429  dep_edges=21  max_deg=7
+  LLL criterion: e*p*(d+1) = 3.1066  > 1 FAILS
+  Shearer bound: p < 0.1250  FAILS
+  primes in speed set: 7 ([1, 2, 3, 5, 7, 11, 13]...)
+
+======================================================================
+REFRAME 3: RELATIVISTIC VELOCITY — rapidity of loneliness
+======================================================================
+
+n=3  threshold rapidity = atanh((n-2)/n) = 0.5*ln(n-1) = 0.3466
+  lonely iff all |rapidity_i| <= 0.3466
+  at t=1/(2n)=0.166667:
+    max rapidity: 0.8047 (threshold: 0.3466)
+    total rapidity sum: 1.1513
+    all below threshold: False
+    total 'relativistic energy' (product of cosh): 3.1623
+
+n=4  threshold rapidity = atanh((n-2)/n) = 0.5*ln(n-1) = 0.5493
+  lonely iff all |rapidity_i| <= 0.5493
+  at t=1/(2n)=0.125000:
+    max rapidity: 0.9730 (threshold: 0.5493)
+    total rapidity sum: 1.7777
+    all below threshold: False
+    total 'relativistic energy' (product of cosh): 5.9161
+
+n=5  threshold rapidity = atanh((n-2)/n) = 0.5*ln(n-1) = 0.6931
+  lonely iff all |rapidity_i| <= 0.6931
+  at t=1/(2n)=0.100000:
+    max rapidity: 1.0986 (threshold: 0.6931)
+    total rapidity sum: 2.4181
+    all below threshold: False
+    total 'relativistic energy' (product of cosh): 11.2250
+
+n=6  threshold rapidity = atanh((n-2)/n) = 0.5*ln(n-1) = 0.8047
+  lonely iff all |rapidity_i| <= 0.8047
+  at t=1/(2n)=0.083333:
+    max rapidity: 1.1989 (threshold: 0.8047)
+    total rapidity sum: 3.0678
+    all below threshold: False
+    total 'relativistic energy' (product of cosh): 21.4942
+
+Rapidity budget analysis:
+  n=  3: total rapidity budget = 0.69, per-runner = 0.3466
+  n=  5: total rapidity budget = 2.77, per-runner = 0.6931
+  n=  7: total rapidity budget = 5.38, per-runner = 0.8959
+  n= 14: total rapidity budget = 16.67, per-runner = 1.2825
+  n= 20: total rapidity budget = 27.97, per-runner = 1.4722
+  n= 50: total rapidity budget = 95.35, per-runner = 1.9459
+
+======================================================================
+REFRAME 4: LATTICE — covering radius of the speed lattice
+======================================================================
+
+n=3: speed lattice direction (1,2)
+  good box side: 0.3333
+  100 trajectory points: 0 in good box (0.0%)
+  1000 trajectory points: 0 in good box (0.0%)
+
+n=4: speed lattice direction (1,2,3)
+  good box side: 0.5000
+  100 trajectory points: 2 in good box (2.0%)
+  1000 trajectory points: 2 in good box (0.2%)
+
+n=5: speed lattice direction (1,2,3,4)
+  good box side: 0.6000
+  100 trajectory points: 4 in good box (4.0%)
+  1000 trajectory points: 4 in good box (0.4%)
+
+n=6: speed lattice direction (1,2,3,4,5)
+  good box side: 0.6667
+  100 trajectory points: 0 in good box (0.0%)
+  1000 trajectory points: 0 in good box (0.0%)
+
+======================================================================
+REFRAME 5: SPECTRAL — Fourier of the lonely indicator
+======================================================================
+
+n=3  mean L(t) = ((n-2)/n)^(n-1) = 0.111111
+  L̂(0) = 0.000000  (mean)
+  |L̂(1)| = 0.000000
+  |L̂(2)| = 0.000000
+  |L̂(n)| = 0.000000
+  L̂(0) - sum|L̂(m!=0)| = 0.000000  (< 0 inconclusive)
+
+n=4  mean L(t) = ((n-2)/n)^(n-1) = 0.125000
+  L̂(0) = 0.000977  (mean)
+  |L̂(1)| = 0.000000
+  |L̂(2)| = 0.000977
+  |L̂(n)| = 0.000977
+  DC fraction of energy: 0.1000
+  L̂(0) - sum|L̂(m!=0)| = -0.007813  (< 0 inconclusive)
+
+n=5  mean L(t) = ((n-2)/n)^(n-1) = 0.129600
+  L̂(0) = 0.000000  (mean)
+  |L̂(1)| = 0.000000
+  |L̂(2)| = 0.000000
+  |L̂(n)| = 0.000000
+  L̂(0) - sum|L̂(m!=0)| = 0.000000  (< 0 inconclusive)
+
+n=6  mean L(t) = ((n-2)/n)^(n-1) = 0.131687
+  L̂(0) = 0.000000  (mean)
+  |L̂(1)| = 0.000000
+  |L̂(2)| = 0.000000
+  |L̂(n)| = 0.000000
+  L̂(0) - sum|L̂(m!=0)| = 0.000000  (< 0 inconclusive)
+
+======================================================================
+REFRAME 6: THERMODYNAMIC — runner gas on the circle
+======================================================================
+
+n= 3  energy_threshold=2.20
+  E range: [2.08, 17.73]  avg=3.38
+  lonely fraction: 0/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 2.80
+
+n= 4  energy_threshold=4.16
+  E range: [3.41, 25.84]  avg=5.08
+  lonely fraction: 2/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 4.65
+
+n= 5  energy_threshold=6.44
+  E range: [4.68, 33.66]  avg=6.77
+  lonely fraction: 0/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 6.98
+
+n= 6  energy_threshold=8.96
+  E range: [6.11, 41.26]  avg=8.46
+  lonely fraction: 0/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 8.64
+
+n= 7  energy_threshold=11.68
+  E range: [7.49, 48.68]  avg=10.15
+  lonely fraction: 0/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 11.62
+
+n=14  energy_threshold=34.31
+  E range: [17.35, 97.18]  avg=21.99
+  lonely fraction: 0/10000
+  min_E < threshold => LONELY EXISTS
+  heat capacity (Var[E]): 26.90
+
+======================================================================
+REFRAME 7: TOPOLOGICAL — winding number and parity
+======================================================================
+
+n=3  even speeds: [2]  odd speeds: [1]
+  odd-runner complementarity: each bad set measure = 2/n, disjoint under t+1/2
+  union bound on odd-bad: 0.6667
+  lower bound on all-odd-safe: 0.3333
+  even-runner bad measure (can overlap): 0.6667
+  COMBINED lonely lower bound: 0.0000
+  Inconclusive
+
+n=4  even speeds: [2]  odd speeds: [1, 3]
+  odd-runner complementarity: each bad set measure = 2/n, disjoint under t+1/2
+  union bound on odd-bad: 1.0000
+  lower bound on all-odd-safe: 0.0000
+  even-runner bad measure (can overlap): 0.5000
+  COMBINED lonely lower bound: 0.0000
+  Inconclusive
+
+n=5  even speeds: [2, 4]  odd speeds: [1, 3]
+  odd-runner complementarity: each bad set measure = 2/n, disjoint under t+1/2
+  union bound on odd-bad: 0.8000
+  lower bound on all-odd-safe: 0.2000
+  even-runner bad measure (can overlap): 0.8000
+  COMBINED lonely lower bound: 0.0000
+  Inconclusive
+
+======================================================================
+REFRAME 8: CHIP-FIRING — proximity chips on observer
+======================================================================
+
+n=3  initial segment
+  chip load range: [0.000333, 0.666667]  avg=0.222223
+  zero-load samples: 0/1000
+  expected mean load: 0.222222 (integral of max(0,1/n-x) for uniform x)
+
+n=4  initial segment
+  chip load range: [0.000000, 0.750000]  avg=0.187500
+  zero-load samples: 2/1000
+  expected mean load: 0.187500 (integral of max(0,1/n-x) for uniform x)
+
+n=5  initial segment
+  chip load range: [0.000000, 0.800000]  avg=0.160000
+  zero-load samples: 4/1000
+  expected mean load: 0.160000 (integral of max(0,1/n-x) for uniform x)
+
+n=6  initial segment
+  chip load range: [0.000667, 0.833333]  avg=0.138899
+  zero-load samples: 0/1000
+  expected mean load: 0.138889 (integral of max(0,1/n-x) for uniform x)
+
+======================================================================
+REFRAME 9: AUCTION — two-slot gap bidding game
+======================================================================
+
+n=3  initial segment
+  right slot above reserve: 500/999 (50.1%)
+  left slot above reserve: 500/999 (50.1%)
+  BOTH above reserve (lonely): 1/999 (0.1%)
+  left-right bid correlation: -0.8459
+
+n=4  initial segment
+  right slot above reserve: 460/999 (46.0%)
+  left slot above reserve: 460/999 (46.0%)
+  BOTH above reserve (lonely): 3/999 (0.3%)
+  left-right bid correlation: -0.6616
+
+n=5  initial segment
+  right slot above reserve: 468/999 (46.8%)
+  left slot above reserve: 467/999 (46.7%)
+  BOTH above reserve (lonely): 3/999 (0.3%)
+  left-right bid correlation: -0.5891
+
+n=6  initial segment
+  right slot above reserve: 425/999 (42.5%)
+  left slot above reserve: 425/999 (42.5%)
+  BOTH above reserve (lonely): 7/999 (0.7%)
+  left-right bid correlation: -0.4836
+
+======================================================================
+TOURNAMENT ANALYSIS: Comparing the reframes
+======================================================================
+
+Ranking (by tournament out-degree):
+  1. topological      score=8  nov=4 comp=4 proof=5 conn=5 beauty=5
+  2. spectral         score=7  nov=3 comp=5 proof=4 conn=5 beauty=4
+  3. lovász_LLL       score=3  nov=3 comp=4 proof=3 conn=5 beauty=3
+  4. relativistic     score=3  nov=5 comp=3 proof=2 conn=4 beauty=5
+  5. thermodynamic    score=3  nov=4 comp=4 proof=2 conn=3 beauty=4
+  6. billiard         score=0  nov=2 comp=4 proof=2 conn=4 beauty=3
+  7. lattice          score=0  nov=2 comp=3 proof=3 conn=5 beauty=3
+  8. chipfiring       score=0  nov=3 comp=3 proof=2 conn=3 beauty=3
+  9. auction          score=0  nov=3 comp=4 proof=2 conn=2 beauty=3
+
+WINNER: topological
+
+PROOF-FORCE ranking (which reframe suggests a proof mechanism):
+  topological      proof_force=5
+  spectral         proof_force=4
+  lovász_LLL       proof_force=3
+  lattice          proof_force=3
+  billiard         proof_force=2
+
+======================================================================
+GRAND SYNTHESIS
+======================================================================
+
+The most promising reframes for new proof routes:
+
+1. TOPOLOGICAL (odd/even parity complementarity):
+   Every odd-speed runner is safe at t or at t+1/2.
+   This gives a FREE lower bound on the all-safe measure.
+   For small n with many odd speeds, this may already prove LRC!
+
+2. SPECTRAL (Fourier):
+   If the DC component exceeds the sum of AC components,
+   L(t) > 0 for some t.  Computable and tight for small n.
+
+3. LOVÁSZ LOCAL LEMMA:
+   The dependency structure of runner-close events is sparse
+   for coprime speed sets.  May prove LRC for large max_speed/n.
+
+4. RELATIVISTIC:
+   Rapidity threshold = 0.5*ln(n-1) gives a natural scale.
+   The formal group F(x,y)=(x+y)/(1+xy) is additive in rapidity.
+   This connects to the project's central object.
+

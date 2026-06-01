@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
-"""Gap race analysis for the LRC LL entry mechanism (THM-386).
+"""Gap race analysis for the LRC LL entry mechanism (THM-387).
 
 opus-2026-06-01-S518
 
-THM-386 proves that LL can only be entered from LS after a wrap-around
+THM-387 proves that LL can only be entered from LS after a wrap-around
 reset.  This script analyzes the "gap race" at each wrap-around:
 does g_right reach 1/n before g_left drops to 1/n?
 
@@ -316,7 +316,7 @@ def L0_distribution_analysis():
 
 def main():
     print("LRC Gap Race Analysis — opus-2026-06-01-S518")
-    print("THM-386: LL entry requires winning the gap race from LS")
+    print("THM-387: LL entry requires winning the gap race from LS")
     print()
 
     analyze_gap_races(n_values=[3, 4, 5, 6])

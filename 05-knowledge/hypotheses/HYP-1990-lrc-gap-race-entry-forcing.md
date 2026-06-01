@@ -10,7 +10,7 @@ session: opus-2026-06-01-S519
 
 ## Statement
 
-By THM-386, the LL fiber (lonely state) can only be entered from LS via a
+By THM-387, the LL fiber (lonely state) can only be entered from LS via a
 "gap race": g_right growing to 1/n before g_left shrinks to 1/n.
 
 **Conjecture:** For any primitive speed set with n >= 3, at least one of the

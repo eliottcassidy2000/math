@@ -6,7 +6,7 @@
 ## The key insight
 
 THM-384 reduces LRC to a two-gap question: lonely iff g_left >= 1/n AND
-g_right >= 1/n.  THM-386 reveals that these two gaps have fundamentally
+g_right >= 1/n.  THM-387 reveals that these two gaps have fundamentally
 different dynamics because all runner speeds are positive:
 
 - **g_right (clockwise gap) is non-decreasing between wrap-arounds** —
@@ -36,7 +36,7 @@ won by g_right.
 ## What makes this different from prior approaches
 
 1. **It's dynamical, not static.** Previous approaches (S506-S516) studied
-   individual time snapshots.  THM-386 is about the TRAJECTORY.
+   individual time snapshots.  THM-387 is about the TRAJECTORY.
 
 2. **It uses the positivity of speeds.** The monotonicity comes from all
    runners moving in the same direction.  This is the first result to

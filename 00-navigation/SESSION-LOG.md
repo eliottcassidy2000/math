@@ -19,6 +19,16 @@
 - **Box-saturation tested every term** (the question S512 left open — were 1,2,6,6 converged or single-box lower bounds?): n=5:2 (stable to ms=26), n=6:6 (to ms=15), n=7:6 (to ms=14) are **box-stable**; **n=8 is NOT converged** — count grew 11->12 (new class H=24) when box went 11->12, so it is a **lower bound >=12**. Caveat folded into HYP-1987: single-box menu counts are lower bounds until saturation shown.
 - **Structural finding:** menu = **A000568(n-1)/2 exactly** for n=4,5,6 (1,2,6) then **collapses sharply at n=7** (6 vs 28) — the HYP-1987 "vanishing fraction" switches on at n=7 (same threshold as width-formula failure / E_7 odd holes), not gradually. Reflection: `07-reflections/lrc-source-menu-collapses-at-n7-s520.md`.
 **Files:** `04-computation/lrc_source_reachability_n8_s520.py`, results `lrc_source_reachability_n8_s520.out` + `lrc_source_menu_saturation_s520.out`. **Cluster:** oraclebox1 joined Nomad cluster today as a `pro` node; 3 nodes ready (oraclebox1, claudebox, bigo-server); math collaboration is rolling hard (108 commits/24h, oracle+codex on LRC) via the git/messaging layer (Nomad research-job dispatch not yet deployed). **Handoff:** open question = the true n=8 menu size (needs a bigger box than ms=12); and *why* the /2 identity breaks exactly at n=7.
+## opus-2026-06-01-S520 - Creative reframes of LRC through 10 mathematical lenses
+
+**Account:** Oracle (remote-control)
+**Git first:** Started on `main` after syncing with origin; rebased over concurrent S518/S519 and oracle S513/S514.
+**User prompt:** Spend this session looking for even more creative reframes.
+**Computation:** Added `04-computation/lrc_creative_reframes_s520.py` and stored output. Script explores LRC through 9 frameworks: billiard, Lovász LLL, relativistic velocity (formal group rapidity), lattice covering radius, Fourier/spectral, thermodynamic (runner gas energy), topological (odd/even parity), chip-firing, and auction theory.
+**Key findings:** (1) RAPIDITY: the formal group F(x,y)=(x+y)/(1+xy) gives threshold atanh((n-2)/n)=0.5*ln(n-1) — first quantitative bridge from H(T) to LRC. (2) GOOD BOX VOLUME: ((n-2)/n)^{n-1} → e^{-2} ≈ 13.5% for large n. (3) THERMODYNAMIC: min_t E(t) < (n-1)*log(n) universally. (4) ODD/EVEN COMPLEMENTARITY: ||vt||+||v(t+1/2)||=1/2 for odd v. (5) AUCTION: left-right correlation -0.85 to -0.48. Tournament ranking: topological > spectral > LLL/relativistic/thermo.
+**Synthesis:** Added HYP-1992 (rapidity formal group bridge) and reflection. The rapidity connection is the deepest — it links the project's central algebraic object to LRC via hyperbolic geometry.
+**ID note:** THM-386→THM-387 and HYP-1991→HYP-1992 due to concurrent oracle-S513/S514 claiming those IDs.
+**Verification:** `python3 -m py_compile`; full rerun with output stored.
 
 ## oracle-2026-06-01-S514 - Wacky LRC n=14 attempts (anti-concentration, bounded ansatz, parity split)
 

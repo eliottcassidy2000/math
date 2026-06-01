@@ -1,5 +1,5 @@
 ---
-id: THM-386
+id: THM-387
 name: lrc-two-gap-monotonicity-and-fiber-flow
 status: PROVED
 date: 2026-06-01
@@ -8,7 +8,7 @@ depends_on:
   - THM-384
 ---
 
-# THM-386: LRC two-gap monotonicity and fiber flow
+# THM-387: LRC two-gap monotonicity and fiber flow
 
 ## Statement
 
