@@ -1,0 +1,18 @@
+Loneliness rotates: min/max # simultaneously lonely (max=n only at regular polygon):
+  (0, 1, 2, 3): min#lonely=0, max#lonely=4, each lonely sometime=True
+  (0, 1, 2, 4): min#lonely=0, max#lonely=2, each lonely sometime=True
+  (0, 1, 3, 4, 9): min#lonely=0, max#lonely=3, each lonely sometime=True
+  (0, 2, 3, 5, 7): min#lonely=0, max#lonely=3, each lonely sometime=True
+
+Hidden tightness: per-frame lonely-measure & reduced difference-set (0 = tight observer):
+  (0, 1, 2, 3) runner@0: measure=0.0000 D=(1, 2, 3) (3 distinct) <- TIGHT frame
+  (0, 1, 2, 3) runner@3: measure=0.0000 D=(1, 2, 3) (3 distinct) <- TIGHT frame
+  (0, 1, 2, 3) runner@1: measure=0.2500 D=(1, 2) (2 distinct)
+  (0, 1, 2, 3) runner@2: measure=0.2500 D=(1, 2) (2 distinct)
+
+  (0, 2, 3, 5, 7) runner@3: measure=0.0000 D=(1, 2, 3, 4) (4 distinct) <- TIGHT frame
+  (0, 2, 3, 5, 7) runner@2: measure=0.0533 D=(1, 2, 3, 5) (4 distinct)
+  (0, 2, 3, 5, 7) runner@0: measure=0.0629 D=(2, 3, 5, 7) (4 distinct)
+  (0, 2, 3, 5, 7) runner@7: measure=0.1200 D=(2, 4, 5, 7) (4 distinct)
+  (0, 2, 3, 5, 7) runner@5: measure=0.1733 D=(2, 3, 5) (3 distinct)
+
