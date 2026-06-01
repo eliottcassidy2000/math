@@ -3788,3 +3788,16 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **CONCLUSION:** geometry gives back the circle; arithmetic gives the channels. The genuinely new tournament content of LRC is ARITHMETIC (difference/resonance/channel), and the p-adic tree is its cleanest carrier (ties = sieve channels).
 **Predictions:** full p-adic tree for composite n* (n=18,n*=9) as a tree-covering LRC; Grundy P-position structure vs loneliness; Galois-Frobenius (Paley) realizable classes at prime n=3 mod 4.
 **See:** `07-reflections/lrc-a-tournament-is-a-comparator-on-a-metric-the-geometric-arithmetic-dichotomy-s541o.md`, `04-computation/lrc_metric_tournaments_multitude_s541.py` (+.out), HYP-2030 (the wild multitude), HYP-2029 (trienerment), HYP-2025 (flows), HYP-2017 (n=18 channels), THM-369 (sieve).
+
+## HYP-2034: Tournament Analysis pattern hunt -- H is UNIMODAL in cyclic content (tile-count); the comparator/threshold are new axes (oracle-2026-06-01-S542o)
+**Status:** SUPPORTED (computed); empirical laws of Tournament Analysis (the repo method, s471/s23).
+**Framework:** TA(data, comparator C, tie-path pi) = the tournament where i->j by C with ties resolved along pi. The tie-path pi = basketball jersey 1..5 = the tiling-model BASE HAMILTONIAN PATH (S530/531); every output = base-path backbone (+) TILES (the metric's signal) = cut(+)cycle = tension(+)flow (S537); tiles = pairs disagreeing with the base order = cyclic content.
+**Six runs (tournament_analysis_pattern_hunt_s542.py):**
+ P1 BASKETBALL: star & two-man -> H=1 (hierarchical/transitive, source+sink); balanced -> H=15 (regular max). H = team-balance/loneliness meter (S26).
+ P2 COMPARATOR ZOO: arc-rank==chord-rank (chord=2sin(pi*arc) monotone -> GEOMETRIC collapse, S541); signed half-turn (cyclic) != distance-rank (transitive). Comparator choice = geometry exposed.
+ P3 H-WALK over t: visits EXACTLY 2*Fib(n-2)=4 iso-classes at n=5 (circular menu S518, confirmed); H in [1,15]; AP/regular has HIGHER mean H (10.0) than generic (8.0) -- a fingerprint of arithmetic regularity.
+ P4 COMPARATOR PHASE SWEEP: rotating the half-turn window phi on FIXED data traces 6 iso-classes (>4 from time) -- the SWITCH itself is a new axis.
+ P5 THRESHOLD theta SWEEP (trienerment): ties percolate 0->4(at 1/n)->7->10(all-tie at 1/2); theta=1/n distinguished (S539).
+ P6 KEY LAW: H is SYMMETRIC-UNIMODAL in tile-count: tiles=0 -> H=1 (agrees w/ base path=transitive), tiles=10 -> H=1 (fully reversed), middle (tiles 4-6) -> H=15 (max). H peaks at HALF-departure from the base path (maximal cyclic mixing); rigid at both ordered extremes.
+**Predictions:** prove H-unimodal-in-tiles from cut(+)cycle + the H=1+2^{r-1} apex law (S531); comparator-orbit (P4) as a group action on iso-classes; AP-higher-mean-H as a detector of arithmetic structure in any pairwise data.
+**See:** `07-reflections/tournament-analysis-pattern-hunt-H-unimodal-in-cyclic-content-s542o.md`, `04-computation/tournament_analysis_pattern_hunt_s542.py` (+.out), s471/s23 (TA framework), HYP-2032 (geometric/arithmetic dichotomy), S518 (2Fib menu), S26 (H), S531 (apex/recursion).

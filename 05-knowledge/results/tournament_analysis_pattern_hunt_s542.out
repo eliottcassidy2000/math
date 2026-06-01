@@ -1,0 +1,62 @@
+======================================================================
+P1 BASKETBALL archetypes (jersey 1..5 tie-break = base path)
+======================================================================
+  star/ball-dominant: H=  1, 3-cycles=0, source=True, sink=True
+  balanced          : H= 15, 3-cycles=5, source=False, sink=False
+  two-man-game      : H=  1, 3-cycles=0, source=True, sink=True
+  PATTERN: ball-dominant -> a SOURCE, near-transitive, LOW H (bunched); balanced
+  -> regular-like, HIGH H (spread). H = the 'team balance / loneliness' meter (S26).
+  Jersey 1..5 tie-break = base Hamiltonian path; passing asymmetries = the TILES.
+
+======================================================================
+P2 COMPARATOR ZOO (runners): which collapse, which are distinct
+======================================================================
+  arc-rank == chord-rank (chord=2sin(pi*arc) monotone): True  (GEOMETRIC collapse, S541)
+  half-turn(ahead) vs distance-rank(approaching): distinct iso-classes seen: True
+  => distance-based comparators (arc/chord) collapse; SIGNED 'ahead' (half-turn,
+     cyclic, non-transitive) differs from distance-RANK (transitive). Comparator choice = geometry exposed.
+
+======================================================================
+P3 H(t) TRAJECTORY + iso-class WALK over t: AP vs generic
+======================================================================
+  v=(1, 2, 3, 4, 5) [AP/regular]: H range [1,15], mean 10.0, #distinct iso-classes visited=4, frac transitive(H=1)=0.250
+  v=(1, 2, 4, 7, 11): H range [1,15], mean 8.0, #distinct iso-classes visited=4, frac transitive(H=1)=0.256
+  PATTERN: the tournament WALKS the menu; H oscillates between 1 (bunched/transitive)
+  and max (spread/regular). The walk's statistics fingerprint the speed set.
+
+======================================================================
+P4 COMPARATOR PHASE SWEEP: rotate the half-turn window by phi
+======================================================================
+  fixed positions (v=(1, 2, 3, 4),t=0.137); rotating comparator window phi:0->1:
+  distinct iso-classes = 6, transitions = 12
+  => the SWITCH itself is a variable; rotating the comparator window traces an
+     orbit of iso-classes for FIXED data -- a new axis of Tournament Analysis.
+
+======================================================================
+P5 THRESHOLD theta SWEEP (trienerment): #ties vs theta
+======================================================================
+  theta : #ties (pairs within theta)   (loneliness threshold theta=1/n marked)
+  0.050 : 0
+  0.100 : 0
+  0.200 : 4 <- 1/n
+  0.200 : 4 <- 1/n
+  0.300 : 7
+  0.500 : 10
+  => theta=0 pure tournament (0 ties); theta growing -> ties percolate -> all-tie at
+     theta=1/2. The loneliness threshold 1/n is where 'near'=tie is defined (S539).
+
+======================================================================
+P6 BASE-PATH (+) TILES: tile-count (cyclic content) over t vs H
+======================================================================
+  tile-count -> avg H (cyclic content drives the loneliness meter):
+    tiles=0: avg H=1.0  (freq 500)
+    tiles=1: avg H=9.0  (freq 167)
+    tiles=3: avg H=13.7  (freq 500)
+    tiles=4: avg H=15.0  (freq 500)
+    tiles=5: avg H=11.0  (freq 666)
+    tiles=6: avg H=15.0  (freq 500)
+    tiles=7: avg H=13.7  (freq 500)
+    tiles=9: avg H=9.0  (freq 167)
+    tiles=10: avg H=1.0  (freq 500)
+  => tiles = where the metric disagrees with the base path = the CYCLIC content;
+     more tiles -> higher H (more spread). base-path(+)tiles = cut(+)cycle = S537.
