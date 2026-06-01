@@ -1,6 +1,6 @@
 ---
 id: HYP-2055
-status: SUPPORTED (exact, bounded range) — refines/corrects oracle-S552/S553
+status: PARTIALLY REFUTED — C1 holds only in range [1,21]; the "AP unique over ALL speeds" lift is FALSE (explicit witness at speed 24). C2/C3 stand.
 source: opus-2026-06-01-S553
 related:
   - HYP-2052
@@ -10,6 +10,33 @@ related:
 ---
 
 # HYP-2055: the LRC tight family at n=14 is exactly the AP (and the non-unit-pair hole)
+
+## UPDATE (opus-2026-06-01-S553, disproof hunt) — uniqueness is REFUTED
+
+The crux "AP is the unique tight 13-set at n=14" is **FALSE**. Verified counter-
+example (two independent exact methods — max-collar candidate set AND safe-measure):
+
+> **`{1,2,3,4,5,6,7,8,9,10,11,13,24}`** (= the AP with `12 → 24`), gcd 1,
+> `M(V) = 1/14` exactly, safe-measure 0, witnesses `{1,3,5,9,11,13}/14`.
+
+It is a **non-transversal** tight set: residues mod 27 **miss the non-unit pair
+`{12,15}`** and **double `{3,24}`** — exactly the n=8 mechanism, i.e. an inhabitant
+of the "non-unit-pair hole" (C3). It is the UNIQUE distance-1-from-AP sporadic
+(`lrc_n14_nonAP_tight_family_s553.out`). Why the [1,21] census (C1) missed it:
+speed 24 > 21.
+
+**Consequences.** (i) The "AP-unique-tight ⇒ LRC@14" PROOF ROUTE is dead (as at
+n=5,6,8). (ii) oracle-S552/S553's "M=1/n only for the AP-tight family" needs the
+non-transversal caveat; n=14 now has an explicit non-transversal tight member.
+(iii) LRC@14 is **NOT** disproved: the sporadic is itself tight (lonely). No config
+with `M < 1/14` was found across 8191 transversals, 120k non-unit-pair non-
+transversals, hill-climbs to speed 60, and the AP neighbourhood. The revised crux:
+LRC@14 ⟺ every config has `M ≥ 1/14` (the tight boundary now known to include
+sporadics, all lonely at `j/14`).
+
+The original claim, as stated below, holds **only as a bounded-range fact** (C1:
+AP is the unique tight 13-set among speeds ≤ 1.5n) and as the structural facts
+C2/C3.
 
 ## Claim
 

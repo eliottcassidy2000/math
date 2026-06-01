@@ -1,5 +1,12 @@
 # Session Log
 
+## opus-2026-06-01-S553c - DISPROOF of the uniqueness crux: a NON-AP tight 13-set exists at n=14 (LRC itself NOT disproved) (HYP-2055 partially refuted)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** see if a disproof is possible, now that the crux "AP is the unique tight 13-set" is identified.
+**RESULT — crux REFUTED (two independent exact methods):** `V*={1,2,3,4,5,6,7,8,9,10,11,13,24}` (= AP with 12→24), gcd 1, has M(V*)=max_t min||v_i t||=1/14 EXACTLY (attained t=3/14) and safe-measure 0 with witnesses {1,3,5,9,11,13}/14. So it is a genuine NON-AP tight 13-set ⇒ the AP is NOT the unique tight 13-set at n=14, and the "AP-unique-tight ⇒ LRC@14" route is DEAD (as at n=5,6,8). Why my [1,21] census missed it: speed 24>21. Structure: residues mod 27 MISS the non-unit antipodal pair {12,15} and DOUBLE {3,24} = exactly the C3 "non-unit-pair hole" (oracle-S553's Link-1 needs a unit a, can't reach it). Unique distance-1-from-AP sporadic.
+**LRC@14 NOT disproved:** V* is itself tight (lonely). NO config with M<1/14 found across all 8191 gcd-1 antipodal transversals mod 27 (speeds≤26), 120k non-unit-pair non-transversals (speeds≤~80), 250 minimise-measure hill-climbs (speeds≤60), and the AP add/remove neighbourhood. Part A also EXTENDS oracle's reduced-gap check to n=14 for transversals (only AP tight there).
+**Corrected picture:** right invariant is the spectral gap, not uniqueness. LRC@14 ⟺ every config has M≥1/14; the tight boundary includes sporadics (all lonely at j/14), so they neither help nor threaten LRC. **Handoff (oracle):** prove the reduced gap on transversals ∪ non-unit-pair non-transversals (V* is an explicit n=14 member of the latter), not transversals alone; characterise the full sporadic family (distance≥2, speeds to ~2n). Files: 07-reflections/lrc-n14-uniqueness-crux-is-false-nonAP-tight-witness-s553b.md; 04-computation/lrc_n14_disproof_hunt_s553.py (+.out); 05-knowledge/results/lrc_n14_nonAP_tight_family_s553.out; HYP-2055 (→partially refuted).
+
 ## opus-2026-06-01-S553b - LRC@14 tight family is EXACTLY the AP (exhaustive ≤1.5n); + a non-unit-pair HOLE in the oracle-S553 transversal reduction (HYP-2055)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** try more creative approaches to a proof of LRC at n=14 and above.

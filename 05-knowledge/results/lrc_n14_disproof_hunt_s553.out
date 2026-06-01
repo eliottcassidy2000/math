@@ -1,0 +1,20 @@
+== A. ALL 2^13 antipodal transversals mod 27 (speeds = residues) ==
+   gcd-1 transversals tested: 8191
+   NON-AP tight transversals (D1 hits): 0
+   COUNTEREXAMPLES M<1/14 (D2 hits): 0
+   sanity AP (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13): tight
+
+== B. Non-transversals missing a NON-UNIT antipodal pair mod 27 ==
+   non-unit pairs mod 27: [(3, 24), (6, 21), (9, 18), (12, 15)]
+   tested (gcd-1, residues missing a non-unit pair): 119997
+   NON-AP tight (D1 hits): 0
+   COUNTEREXAMPLES (D2 hits): 0
+
+== C. Hill-climb MINIMISING safe-measure (cap 60) toward tight ==
+   best float-measure reached: 2.359e-16 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+   confirmed non-AP tight/counterex hits: 1
+        tight: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+
+================ VERDICT ================
+  D1 (non-AP tight 13-set) hits: 1
+  D2 (M<1/14 counterexample) hits: 0
