@@ -11,6 +11,16 @@
 **Tournament Analysis:** The script's route tournament compares twelve analogy routes by majority vote over A000568-closeness, threshold fidelity, computation, proof potential, novelty, and projection risk. It has `H=65`, `c3=6`, `scc_count=5`, with projection-defect obstruction and alpha-threshold gauge bundle as the top routes.
 **Verification:** `python3 -m py_compile 04-computation/lrc_a000568_iso_analogy_s509.py`; full script rerun with output stored; `git diff --check`; mid-session checkpoint pushed after resolving the HYP-1976/HYP-1977 rebase collision.
 
+## codex-2026-06-01-S510 - Sparse marked chamber walk over A000568
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` with S506c/S507 gauge work present; close-out rebased over S508 concurrent-protocol work and S509/HYP-1976/HYP-1977 A000568 projection work, so this strand was renumbered to S510/HYP-1979.
+**User prompt:** Explore the hypothesis that LRC is ultimately analogous to a problem on tournament isomorphism classes and A000568, creatively following the convoluted ways this could be true.
+**Computation:** Added `04-computation/lrc_a000568_marked_chamber_s510.py` and stored `05-knowledge/results/lrc_a000568_marked_chamber_s510.out`. The script computes A000568 by the odd-cycle Burnside formula, canonicalizes small half-turn runner clocks exactly under all relabelings and observer-fixing relabelings, and records coarse phase fingerprints for n=14/n=18 initial and hard rows.
+**Findings:** This is a sparse-image refinement of HYP-1977. Initial clocks are tiny in the A000568 chamber space (`N5: 4/12`, `N6: 4/56`, `N7: 7/456` unmarked classes), while the observer-marked fibers carry the actual safe-target information. n14/n18 hard rows remain microscopic relative to A000568: n14 row-parent has `1772` clock cells and `140` coarse fingerprints versus A000568(14)=`28401423719122304`; n18 row-parent has `4008` cells and `304` fingerprints versus A000568(18)=`1783398846284777975419600287232`.
+**Synthesis:** Added HYP-1979 and `07-reflections/lrc-a000568-marked-chamber-walk-s510.md`. The proof reframe is: characterize the circular arithmetic image inside `Tour_N/S_N`, lift it to the observer-marked quotient, mark safe endpoint targets, and then apply HYP-1977's projection-defect/fiber warning before any endpoint or pressure data is discarded.
+**Next:** Compare S510's sparse clock-image counts against S509's exact endpoint-wall cell projection buckets; then build the labelled endpoint-runner switchboard over exact small marked fibers and fingerprint surrogates for n=14/n=18.
+
 ## codex-2026-06-01-S509 - LRC pair-cell operation-grid Tournament Analysis
 
 **Account:** Codex
@@ -40,7 +50,7 @@
 **User prompt:** Explore the hypothesis that LRC is ultimately analogous to tournament isomorphism classes and A000568, creatively and through the convoluted possible paths.
 **Computation:** Added `04-computation/lrc_a000568_isoclass_atlas_s507.py` and stored `05-knowledge/results/lrc_a000568_isoclass_atlas_s507.out`. The script declares Tournament Analysis observables/switches/tie path, computes A000568/Burnside scale data, exact rooted/unrooted small tournament quotients, initial LRC half-turn clock quotient walks, and n=14/n=18 hard-row rooted shadows for `phase_half`, `safe_phase_gate`, and `pressure_k2`.
 **Findings:** The A000568 analogy should be rooted/marked. Ordinary A000568 is the unrooted base, but LRC needs the stationary observer, endpoint/safe labels, and pressure labels. Exact small counts: `n=6` has A000568 `56` but rooted `296`; H is only a height (`19` buckets), not a full coordinate. The initial LRC clock is a thin quotient path (`n=7`: `7` unrooted / `17` rooted states out of `456`). Hard ladders often stabilize in coarse rooted shadow while endpoint debt doubles (`n14-s14/s28`: `168 -> 336`, product `5/11`; `n18-s18/s36`: `352 -> 704`, product `1`).
-**Synthesis:** Added HYP-1978 and `07-reflections/lrc-a000568-isoclass-analogy-s507.md`, updated result/hypothesis indexes, concept map, and tangents T600/T601. The proof target becomes emptiness of bad marked classes over the A000568 base, not a scalar H inequality.
+**Synthesis:** Added HYP-1979 and `07-reflections/lrc-a000568-isoclass-analogy-s507.md`, updated result/hypothesis indexes, concept map, and tangents T600/T601. The proof target becomes emptiness of bad marked classes over the A000568 base, not a scalar H inequality.
 **Verification:** `python -m py_compile 04-computation/lrc_a000568_isoclass_atlas_s507.py`; full script rerun stored the output.
 
 ## codex-2026-06-01-S506b - LRC arc criteria as a loneliness metric vector

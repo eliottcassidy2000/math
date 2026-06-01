@@ -1,0 +1,84 @@
+LRC / A000568 isomorphism-class analogy (codex-2026-06-01-S510)
+==============================================================================
+A000568 as the chamber count for unmarked tournament shapes
+==============================================================================
+ n | A000568(n) | odd partitions used
+---+------------+--------------------
+ 1 |          1 |                  1
+ 2 |          1 |                  1
+ 3 |          2 |                  2
+ 4 |          4 |                  2
+ 5 |         12 |                  3
+ 6 |         56 |                  4
+ 7 |        456 |                  5
+ 8 |       6880 |                  6
+ 9 |     191536 |                  8
+10 |    9733056 |                 10
+11 |  903753248 |                 12
+12 | 154108311168 |                 15
+13 | 48542114686912 |                 18
+14 | 28401423719122304 |                 22
+15 | 31021002160355166848 |                 27
+16 | 63530415842308265100288 |                 32
+17 | 244912778438520759443245824 |                 38
+18 | 1783398846284777975419600287232 |                 46
+
+==============================================================================
+Exact small runner clocks as walks through A000568 chambers
+==============================================================================
+case                  N cells diffsum unmarked/A  marked safe-samp  safe-classes mixed-safe mixed-score H-values
+----------------------------------------------------------------------------------------------------------------------
+N5 initial 0..4        5    12      20    4/12        9     4   1/1            1           3 (1, 9, 11, 15)
+  local class run prefix: 0^1 1^1 2^1 3^2 2^2 3^2 2^1 1^1 0^1
+N5 prime-like          5    32      34    4/12       14    12   3/4            3           3 (1, 9, 11, 15)
+  local class run prefix: 0^1 1^1 2^1 3^4 2^1 3^4 1^1 0^6 1^1 3^4 2^1 3^4 2^1 1^1 0^1
+N5 lopsided            5    80      60    4/12       16    14   3/6            3           3 (1, 9, 11, 15)
+  local class run prefix: 0^1 1^1 2^1 3^1 2^1 1^2 0^2 1^1 2^2 3^1 1^2 0^2 1^2 2^1 0^2 1^2 2^1 1^1
+N6 initial 0..5        6    20      35    4/56       12     2   1/2            1           4 (1, 17, 41, 45)
+  local class run prefix: 0^1 1^1 2^4 3^2 2^4 3^2 2^4 1^1 0^1
+N6 coprime spread      6   104      97    6/56       32    17   4/10           4           6 (1, 17, 23, 41, 45)
+  local class run prefix: 0^1 1^1 2^1 3^1 4^1 3^3 5^2 3^1 4^1 5^1 1^2 0^4 1^1 2^2 5^1 3^1 4^2 2^1
+N7 initial 0..6        7    24      56    7/456      17     6   1/1            1           6 (1, 33, 105, 123, 137, 151, 175)
+  local class run prefix: 0^1 1^1 2^1 3^1 4^2 3^1 5^2 6^2 3^2 6^2 5^2 3^1 4^2 3^1 2^1 1^1 0^1
+N7 prime-like          7   108     122   10/456      55    18   4/10           4           9 (1, 33, 47, 51, 105, 123, 137, 151, 175)
+  local class run prefix: 0^1 1^1 2^1 3^1 4^1 2^1 3^2 5^2 3^2 4^4 6^2 7^2 2^1 6^2 4^4 3^1 7^2 3^2
+
+Marked fiber sample: N5 initial 0..4
+  id  H     score-seq             cells safeW observer-score  margin-range
+   0  1     (0, 1, 2, 3, 4)           2     0  0,4            0.312..0.312
+   1  9     (1, 1, 2, 3, 3)           2     0  1,3            0.729..0.729
+   3  11    (1, 2, 2, 2, 3)           4     0  1,2,3          0.312..0.625
+   2  15    (2, 2, 2, 2, 2)           4     4  2              0.625..0.833
+
+Marked fiber sample: N6 initial 0..5
+  id  H     score-seq             cells safeW observer-score  margin-range
+   0  1     (0, 1, 2, 3, 4, 5)        2     0  0,5            0.300..0.300
+   1  17    (1, 1, 2, 3, 4, 4)        2     0  1,4            0.675..0.675
+   2  41    (2, 2, 2, 3, 3, 3)       12     2  2,3            0.375..0.875
+   3  45    (2, 2, 2, 3, 3, 3)        4     0  2,3            0.300..0.375
+
+==============================================================================
+n=14 and n=18 LRC rows: coarse shadows of huge A000568 walks
+==============================================================================
+case             N cells     A000568(N)         fp safe-samp  safe-fp obs-score-range c3-range         SCC-range
+--------------------------------------------------------------------------------------------------------------------------
+n14 initial      14   116      28401423719122304       26          6       1 0..13           0..112           1..14
+n14 row-parent   14  1772      28401423719122304      140        108      14 0..13           0..112           1..14
+n14 gate         14  3856      28401423719122304      156        216      16 0..13           0..112           1..14
+n18 initial      18   192 1783398846284777975419600287232       44          6       1 0..17           0..240           1..18
+n18 row-parent   18  4008 1783398846284777975419600287232      304        240      19 0..17           0..240           1..18
+n18 gate         18  8512 1783398846284777975419600287232      344        480      24 0..17           0..240           1..18
+
+Interpretation: fingerprints are coarse, so they are a lower-resolution shadow of visited isomorphism classes.  But cells are an upper bound on visited classes, and cells << A000568(N) already says LRC rows trace a microscopic walk in the full chamber space.
+
+==============================================================================
+Creative paths suggested by the data
+==============================================================================
+1. unmarked chamber problem: A000568(N) is the number of unlabelled tournament chambers; an LRC speed row is a closed walk through a tiny subset of these chambers.
+2. marked fiber problem: The observer is not quotientable.  The LRC object is a marked fiber over A000568: one unmarked chamber can carry safe and unsafe observer placements.
+3. target-avoidance problem: A counterexample becomes a closed arithmetic walk avoiding all observer-safe marked chambers while respecting endpoint-wall protection.
+4. Burnside resonance problem: A000568 skips even permutation cycles; runner clocks collapse wall events when speed differences share denominators.  Both are quotient counts controlled by cycle parity and gcd data.
+5. q-deformed pressure problem: The repo's A(n,q) viewpoint suggests weighting chambers by endpoint pressure, with q=2 the unmarked tournament count and higher q remembering labelled protection debt.
+6. Royle-even shadow: The A000568/even-graph equinumerosity may make endpoint-safe masks an even-graph shadow of the marked tournament clock.
+7. H as a chamber coordinate: H is not the whole metric, but within the circular clock image it is a useful coordinate on chambers; endpoint-aware gauges add the missing marked coordinates.
+8. proof by sparse image: For large N, LRC rows occupy cells many orders below A000568(N).  A proof may only need the circular arithmetic image, not all tournament classes.
