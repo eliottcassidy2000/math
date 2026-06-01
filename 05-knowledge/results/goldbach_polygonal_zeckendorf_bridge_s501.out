@@ -1,0 +1,60 @@
+Binary Goldbach as a prime-pair edge search
+  C2 approximation from primes <= 2000: 0.660200334
+  N    pairs  HL-pred  ratio  odd-prime factors  Zeck(N)
+   100      6     8.30  0.723  5                 F10(89)+F5(8)+F3(3)
+   250      9    14.44  0.623  5                 F12(233)+F6(13)+F3(3)+F1(1)
+   500     13    22.79  0.570  5                 F13(377)+F10(89)+F8(34)
+  1000     28    36.90  0.759  5                 F15(987)+F6(13)
+  1500     67    98.75  0.678  3,5               F15(987)+F13(377)+F10(89)+F8(34)+F6(13)
+  2000     37    60.95  0.607  5                 F16(1597)+F13(377)+F7(21)+F4(5)
+
+  Sparsest even rows in 500..2000:
+  542:10 632:10 512:11 518:11 524:11 548:11 554:11 556:11
+
+Ternary Goldbach as the Helfgott-covered hypergraph
+  N    unordered prime triples  example
+   101                       38  2+2+97
+   301                      171  3+5+293
+   701                      667  3+7+691
+  1001                     1095  2+2+997
+  1501                     2004  3+5+1493
+  1999                     3105  3+3+1993
+
+  min triples for odd N in [7,101]: 7 has 1
+  min triples for odd N in [101,501]: 105 has 35
+  min triples for odd N in [501,1001]: 501 has 283
+  min triples for odd N in [1001,2000]: 1005 has 734
+
+Fermat polygonal theorem as bounded additive basis depth
+  sides  max depth <=600  first witness  first missing above side-bound
+      3                3              5  -
+      4                4              7  -
+      5                5              9  -
+      6                6             11  -
+      7                7             13  -
+      8                8             15  -
+
+Zeckendorf as a unique no-adjacent-carry cover
+  N     summands  gaps       representation
+   100         3  5,2       F10(89)+F5(8)+F3(3)
+   250         4  6,3,2     F12(233)+F6(13)+F3(3)+F1(1)
+   500         3  3,2       F13(377)+F10(89)+F8(34)
+  1000         2  9         F15(987)+F6(13)
+  1500         5  2,3,2,2   F15(987)+F13(377)+F10(89)+F8(34)+F6(13)
+  1729         5  6,2,3,4   F16(1597)+F10(89)+F8(34)+F5(8)+F1(1)
+  2000         4  3,6,3     F16(1597)+F13(377)+F7(21)+F4(5)
+
+Synthesis: one representation-hypergraph grammar
+  system              atoms             rule                         output
+  Goldbach            prime atoms       2-uniform edges on even N    conjectural nonempty; HL predicts abundance
+  Helfgott            prime atoms       3-uniform hyperedges on odd N proved nonempty for N>5
+  Fermat polygonal    s-gonal atoms     at most s summands           proved bounded basis; local quadratic residues absorbed
+  Zeckendorf          Fibonacci atoms   independent support in path  proved unique normal form; entropy forced to 1
+
+  Deep pattern:
+    Hardy-Littlewood = abundant local-global coverage.
+    Helfgott = enough analytic control to turn ternary abundance into proof.
+    Fermat polygonal = bounded-depth coverage by a structured quadratic basis.
+    Zeckendorf = coverage plus a local no-carry law that kills all redundancy.
+    So the axis is not only additive vs multiplicative; it is
+    redundancy -> bounded basis -> canonical peel.

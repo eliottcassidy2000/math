@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S501 - Goldbach, Polygonal, and Zeckendorf Representation Hypergraphs
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S500.
+**User prompt:** Connect Goldbach conjecture with Helfgott, Hardy-Littlewood, Fermat polygonal number theorem, and Zeckendorf; understand deeper patterns and structure.
+**Repo archaeology:** Re-read the natural operation graph S365 thread, the summand-graph/Fermat/Zeckendorf reflection, Zeckendorf non-consecutivity notes, and recent LRC Zeckendorf bridge work.
+**Computation:** Added `04-computation/goldbach_polygonal_zeckendorf_bridge_s501.py` and stored `05-knowledge/results/goldbach_polygonal_zeckendorf_bridge_s501.out`. The script compares Goldbach pair counts against a Hardy-Littlewood-style singular-series prediction, ternary prime triples in the Helfgott regime, minimal polygonal summand depth for sides `3..8`, and Zeckendorf no-adjacent supports.
+**Findings:** The shared object is a representation hypergraph over each target `N`. Goldbach is a prime-pair edge search with Hardy-Littlewood abundance; Helfgott's theorem moves to a denser 3-uniform prime hypergraph; Fermat polygonal numbers give bounded-depth additive bases; Zeckendorf gives a unique path-independent no-carry support. S501 verified polygonal max depths `3..8` through `600` and recorded prime-triple counts growing from `38` at `101` to `3105` at `1999`.
+**Synthesis:** Added HYP-1962 and `07-reflections/goldbach-polygonal-zeckendorf-s501.md`. Proposed axis: `redundancy -> bounded basis -> canonical peel`. Hardy-Littlewood lives at the abundance end, Fermat polygonal in the bounded-basis middle, and Zeckendorf at the entropy-zero normal-form end.
+**Next:** Build representation-hypergraph TDA: compare prime pairs, prime triples, triangular triples, square quadruples, and Fibonacci carry supports by entropy, local obstruction rank, connected components, private atoms, and peelability.
+
 ## codex-2026-06-01-S500 - Formalization pass for Tournament Analysis and LRC certificates
 
 **Account:** Codex

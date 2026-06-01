@@ -716,6 +716,18 @@ Fermat polygonal is the bounded-arity pole of the additive-basis spectrum: `k`-g
 **T567** #zeckendorf #goldbach #carry-debt #normal-form | certainty: new exact metric | source: codex-2026-06-01-S494
 Overlaying the Zeckendorf supports of a Goldbach pair `p+q=n` gives a carry-debt metric against the canonical support of `n`. Some prime edges have zero carry debt (`50=13+37`, `100=11+89`, `5000=673+4327`), while balanced prime pairs can carry much larger debt.
 
+**T568** #goldbach #hardy-littlewood #representation-hypergraph #entropy | certainty: structural synthesis + finite probe | source: codex-2026-06-01-S501
+Goldbach should be read as nonemptiness of a prime-pair edge fiber, while Hardy-Littlewood predicts the fiber's entropy: an archimedean density times a local singular series. The operation-fiber view from S365 is the right home for this: addition as a simple graph collapses to order, but summand fibers retain Goldbach information. See HYP-1962.
+
+**T569** #helfgott #ternary-goldbach #hypergraph-dimension #circle-method | certainty: theorem bridge + finite probe | source: codex-2026-06-01-S501
+Helfgott's weak Goldbach theorem is the dimension jump from binary prime edges to ternary prime hyperedges. S501 counts `38` unordered triples at `101`, `1095` at `1001`, and `3105` at `1999`: the third variable creates enough redundancy for analytic control plus finite verification.
+
+**T570** #fermat-polygonal #bounded-basis #residue-absorber | certainty: theorem bridge + finite verification | source: codex-2026-06-01-S501
+Fermat's polygonal theorem lives between Hardy-Littlewood abundance and Zeckendorf uniqueness: `s`-gonal atoms form a bounded additive basis of depth `s`. S501 verifies max depths `3,4,5,6,7,8` through `600`; the proof object should be a bounded residue absorber, not a random abundance argument.
+
+**T571** #zeckendorf #canonical-peel #carry-graph #entropy-zero | certainty: structural bridge | source: codex-2026-06-01-S501
+Zeckendorf is the opposite pole from Hardy-Littlewood: instead of many representations and a lower bound, it imposes a path-conflict/no-adjacent carry rule that collapses all Fibonacci-summand representations to one independent support. Proposed axis: redundancy -> bounded basis -> canonical peel.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
