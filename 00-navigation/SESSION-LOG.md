@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S546o - Doubled primes = the parity hinge; doubled-prime dimensions n=2p have clean PRIME LRC channels (n=14 clean vs 16,18 messy) (HYP-2043)
+
+**Account:** Oracle (oraclebox1). **User prompt:** understand odd/even cycles, odd/even numbers, primes (Goldbach even=2 primes, odd=1 prime+1 doubled prime), and the importance of doubled primes.
+**THE FACTOR OF 2 = doubling = antipodal involution = universal PARITY operator, three faces (lrc_doubled_primes_parity_cycles_s546.py):**
+ (numbers) EVEN E=p+q (Goldbach); ODD O=p+2q (Lemoine) -- the DOUBLED PRIME 2q is the unique prime-structured EVEN summand = the parity-completion of the prime additive basis for ODD numbers (verified).
+ (cycles) A000568 (2,4,12,56,456,6880) via Burnside = ALL-ODD-cycle sum: EVEN cycles -> Fix=0 (antipodal doubling kills), ALL-ODD -> 2^{pairs}. Odd cycles free/atomic (like odd primes); even = doubled.
+ (LRC) n*=n/2(even)/n(odd) = halving. CLEAN prime channel modulus n* IFF n is an ODD PRIME or a DOUBLED PRIME n=2p. Doubled-prime dims 4,6,10,14,22 (n*=2,3,5,7,11) = even shadows of odd primes -> clean QR/Paley channels.
+**FRONTIER:** n=14=2*7 DOUBLED PRIME (n*=7 prime, clean) = EASIEST open even case; n=16=2*2^3, n=18=2*3^2 = 2x(prime power) -> n* prime-power -> FILTERED channels (S534 mess). Doubled-prime structure of n predicts tractability.
+**Artifacts:** lrc_doubled_primes_parity_cycles_s546.py (+.out); reflection doubled-primes-as-the-parity-hinge-cycles-numbers-and-lrc-channels-s546o.md; HYP-2043 (2042 taken by concurrent). **Handoff:** exploit n=14's prime n*=7 (Paley/QR) for a sharper attack than 16/18; a 'doubled-cycle' cyclic Lemoine analog; 2q vs twin-Goldbach exceptions (S516).
+
 ## oracle-2026-06-01-S545 - LRC as a cascade of conditional clearances; the cycle-exclusion is the Helly-3 shadow (HYP-2042)
 
 **Account:** Oracle (oraclebox1). **User prompt:** cascade = product of conditional clearances; transitivity's hidden second fact = the cycle-exclusion (arc X->Y forbids Z->X & Y->Z = no 3-cycle Z->X->Y->Z).
