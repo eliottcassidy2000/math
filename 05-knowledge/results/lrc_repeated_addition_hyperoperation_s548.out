@@ -1,0 +1,38 @@
+======================================================================
+(A) RUNNERS = the repeated-addition orbit: r_k = r_{k-1} + t = k*t
+======================================================================
+  t=0.31831: r_k (= t added k times) = [0.0, 0.3183, 0.6366, 0.9549, 0.2732, 0.5915, 0.9099, 0.2282]
+  check k*t mod 1: [0.0, 0.3183, 0.6366, 0.9549, 0.2732, 0.5915, 0.9099, 0.2282]  (identical)
+  => 'multiplication k*t' IS 't repeated-added k times'. AP speeds {1..N} = the orbit.
+
+======================================================================
+(B) THREE-GAP rigidity: AP {1..N} (repeated-add orbit) <=3 gaps; general breaks it
+======================================================================
+  N=6, t=0.3238: AP {1..5} orbit -> 3 distinct gaps (<=3: True); general speeds (4, 5, 10, 26, 42) -> 6 distinct gaps
+  N=9, t=0.8213: AP {1..8} orbit -> 3 distinct gaps (<=3: True); general speeds (5, 8, 12, 13, 28, 47, 56, 65) -> 8 distinct gaps
+  N=12, t=0.4182: AP {1..11} orbit -> 2 distinct gaps (<=3: True); general speeds (8, 12, 16, 29, 31, 55, 71, 73, 74, 75, 81) -> 10 distinct gaps
+  => the SINGLE repeated-addition orbit (AP) obeys three-gap (<=3, recursive CF
+     structure); general speeds are NOT one additive orbit -> >3 gaps (S538). The
+     additive (x=repeated+) structure is EXACTLY the three-gap rigidity.
+
+======================================================================
+(C) HYPEROPERATION LEVEL of speeds vs LRC mean H-entropy (S543 spectrum)
+======================================================================
+  level-2 ADD: AP 1,2,3,4,5,6 (repeated +)       v=(1, 2, 3, 4, 5, 6): mean H-entropy=4.243
+  level-2 ADD: Fibonacci 1,2,3,5,8,13 (s+s)      v=(1, 2, 3, 5, 8, 13): mean H-entropy=4.364
+  level-3 EXP: geometric 1,2,4,8,16,32 (x2)      v=(1, 2, 4, 8, 16, 32): mean H-entropy=3.370
+  level-3 EXP: geometric 1,3,9,27,81,243 (x3)    v=(1, 3, 9, 27, 81, 243): mean H-entropy=3.941
+  => ADDITIVE (AP / repeated +) speeds -> HIGH mean H-entropy (even orbit, the tight
+     regular polygon); EXPONENTIAL (geometric / repeated x) speeds -> LOW (lacunary).
+     The hyperoperation LEVEL of the speed recursion = the LRC difficulty/entropy spectrum.
+
+======================================================================
+RECURSIVE SYNTHESIS: x = repeated + builds the hyperoperation ladder
+succ -> + -> x -> ^. The runner position k*t is level-2 (t repeated-added k times);
+AP speeds = the pure repeated-addition orbit = three-gap-rigid (CF recursion =
+repeated SUBTRACTION, the Euclidean inverse) = HIGH entropy = the tight regular
+polygon. The cascade PRODUCT of clearances (S545) is level-3 (repeated x) over the
+runners. The hyperoperation LEVEL at which the speeds are generated sets the LRC
+regime: level-2 additive = even/rigid/tight; level-3 multiplicative = lacunary/loose.
+LRC = whether the level-2 repeated-addition orbit's apex gap clears 1/n.
+======================================================================

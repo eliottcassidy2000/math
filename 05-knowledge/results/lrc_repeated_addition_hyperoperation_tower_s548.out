@@ -1,0 +1,30 @@
+Multiplication = repeated addition: the cascade<->free-energy bridge + the tower (oracle-S548)
+
+(1) BRIDGE: |SAFE| = prod c_i = exp(-F),  F = -sum log c_i (repeated addition of log-clearances)
+   generic n=5: prod c_i = 3/25 = |SAFE|? True;  F=-sum log c = 2.120263536200091;  exp(-F)=0.12000 ~ 0.12000
+      additive build F_k (repeated addition): [0.511, 1.099, 1.753, 2.12]
+   generic n=6: prod c_i = 4/21 = |SAFE|? True;  F=-sum log c = 1.6582280766035327;  exp(-F)=0.19048 ~ 0.19048
+      additive build F_k (repeated addition): [0.405, 0.693, 1.099, 1.295, 1.658]
+   AP n=5 (tight): prod c_i = 0 = |SAFE|? True;  F=-sum log c = inf;  exp(-F)=0.00000 ~ 0.00000
+      additive build F_k (repeated addition): [0.511, 0.916, 2.015, 'inf']
+   => the multiplicative cascade and the additive free energy are ONE object via log/exp.
+
+(2) THE HYPEROPERATION TOWER (each level = the previous REPEATED), magnitudes for n=6
+   H1 add (+):    holdback sum|v_i-v_j| = 38;  winding sum v_i = 22   (runner s*t = t added s times)
+   H2 mult (x):   cascade prod c_i = |SAFE| = 4/21 = 0.1905   (= exp(-F), repeated add of logs)
+   H3 exp (^):    #tournaments 2^C(n,2) = 32768;  covering main (1-2/n)^(n-1) = 0.1317
+   H4 tetration:  metagraph (tournaments OF tournaments) / Cayley-Dickson dims 2^(2^..) -- the iterated count
+
+(3) THE DOUBLED PRIME 2q=q+q SEEDS H2 and propagates up; n=2q Burnside (q,q): Fix=2^e, e has gcd(q,q)=q
+   n=6=2*3: doubled prime; (q,q) Burnside exponent e = 1*2 + gcd(3,3)=5 = 5; Fix=2^5; apex=q (S547)
+   n=10=2*5: doubled prime; (q,q) Burnside exponent e = 2*2 + gcd(5,5)=9 = 9; Fix=2^9; apex=q (S547)
+   n=14=2*7: doubled prime; (q,q) Burnside exponent e = 3*2 + gcd(7,7)=13 = 13; Fix=2^13; apex=q (S547)
+
+READING: 'multiplication = repeated addition' is not a side identity here -- it is the
+SPINE. The runners are additive (speed s = the unit step t repeated s times). Their
+clearances MULTIPLY into the cascade (= exp of a repeated ADDITION of log-clearances,
+so S545's product and S543's free energy are one object). The cascades EXPONENTIATE into
+the counts (Burnside, covering, 2^C(n,2)). The counts TETRATE into the metagraph /
+Cayley-Dickson tower. LRC is the cross-level claim: the ADDITIVE orbit (runners reaching)
+is never fully blocked by the MULTIPLICATIVE cascade, measured by the EXPONENTIAL count.
+The doubled prime 2q=q+q is the seed of the multiplicative rung, climbing as (q,q).
