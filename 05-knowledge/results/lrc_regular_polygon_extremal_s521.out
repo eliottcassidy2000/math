@@ -1,0 +1,10 @@
+LRC extremal lonely config = regular n-gon minus observer (v_i=i, t=1/n)
+
+ n  m  result
+ 4  3  ANTIPODAL TIE (even n): polygon has a diameter -> degenerate
+ 5  4  scores=[1, 1, 2, 2] H=5 self-complementary=True  (= top S521 menu class)
+ 6  5  ANTIPODAL TIE (even n): polygon has a diameter -> degenerate
+ 7  6  scores=[2, 2, 2, 3, 3, 3] H=41 self-complementary=True  (= top S521 menu class)
+ 8  7  ANTIPODAL TIE (even n): polygon has a diameter -> degenerate
+ 9  8  scores=[3, 3, 3, 3, 4, 4, 4, 4] H=629 self-complementary=True  (= top S521 menu class)
+10  9  ANTIPODAL TIE (even n): polygon has a diameter -> degenerate
