@@ -40,6 +40,12 @@ The hard LRC ladders split into two recursions: endpoint ledger `gap*debt` stays
 **T592** #lrc #two-neighbor #endpoint-clock #n14 | certainty: computed n=14 overlay | source: codex-2026-06-01-S26b
 The n=14 hard rows keep high half-turn H (`0.92`, `0.74`, `0.74` of initial), so they are not bunched by the H meter. LRC pressure lives in the anchored `1/n` endpoint clock and two-neighbor safety data, which H does not recover.
 
+**T568** #lrc #tournament-analysis #arc-gauges #loneliness-metric | certainty: high computational taxonomy | source: codex-2026-06-01-S506
+LRC arc gauges split into ranker/entropy/pressure families. Scalar rankers (`origin_lonely`, `clearance`, `nearest`, etc.) identify lonely runners but collapse H (`cyc3=0`, `SCC=1`). The clean H-loneliness metric is still `phase_half`, while `safe_phase_gate` is an endpoint-aware alarm and `pressure_k2` is a blocker-debt shape gauge. See HYP-1973.
+
+**T569** #lrc #composite-metric #pressure-k2 #safe-phase | certainty: medium-high proof target | source: codex-2026-06-01-S506
+Future LRC row summaries should use a vector, not a single tournament: `(H_ratio(phase_half), H_ratio(safe_phase_gate), score_width(pressure_k2), largest_SCC(pressure_k2), endpoint_debt, gap*endpoint_debt)`. A real counterexample-shaped row should perturb phase H, trigger endpoint-safe alarm, and carry a pressure SCC with surviving endpoint core.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
