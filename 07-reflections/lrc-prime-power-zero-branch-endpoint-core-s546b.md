@@ -1,6 +1,6 @@
 ---
-source: codex-2026-06-01-S546b
-status: supported computation + local structural lemma
+source: codex-2026-06-01-S546b; codex-2026-06-01-S548
+status: theorem-level formalization (THM-390) + supporting computation
 tags: [lonely-runner, p-adic, prime-power, cover-core, trienerment, tournament-analysis, gabor, zero-branch, endpoint-core]
 ---
 
@@ -21,8 +21,8 @@ lands at the observer, and every nonzero residue has distance at least `1/q >=
 1/n`.  If `Z_q` is nonempty, those unit witnesses are killed.  The question was
 whether the killed branch itself can become the hard cover core.
 
-The answer from S546 is: no, at least in the exact audited rows, and in fact the
-local reason is almost formal.  A q-divisible speed `s` contributes local danger
+The answer from S546 was no in the exact audited rows, and S548 turns the local
+reason into THM-390.  A q-divisible speed `s` contributes local danger
 intervals around each unit point `u/q` with radius `1/(n s)`.  For fixed `u`,
 these intervals are concentric.  Distinct unit points are separated by at least
 `1/q`, while every half-width is at most `1/(n q)`, so the unit-point clusters do
@@ -31,12 +31,19 @@ peels away, and the same argument repeats.  A prime-power zero branch therefore
 kills a rational witness but cannot store a nonpeeling endpoint-protection core
 by itself.
 
+The formal surprise is that primality never enters the proof.  THM-390 works
+for every `2 <= q <= n` and every nonzero q-grid center set.  Prime powers are
+structural labels in the p-adic tree, not special local interval geometries.
+
 ## Computation
 
 Artifacts:
 
 - `04-computation/lrc_prime_power_zero_branch_core_s546b.py`
 - `05-knowledge/results/lrc_prime_power_zero_branch_core_s546b.out`
+- `01-canon/theorems/THM-390-lrc-zero-branch-star-core-peeling.md`
+- `04-computation/lrc_zero_branch_star_theorem_s548.py`
+- `05-knowledge/results/lrc_zero_branch_star_theorem_s548.out`
 
 The script audits selected `n=6,8,14,18` rows: AP walls, the `n=6` `Z_3` bridge
 row, the `n=18` no-`9` row, the `18`-gate and `36`-double-gate rows, and a deep
@@ -47,6 +54,13 @@ For every audited branch:
 ```text
 Audited local branch cores: 86, nonempty=0
 Audited full cover cores: 9, nonempty=0
+```
+
+The THM-390 verifier then checks the stronger q-grid star theorem and the
+explicit peel-layer formula in `3255` bounded exact cases:
+
+```text
+all bounded cores empty and all peel layers match the formula
 ```
 
 The n=18 signal is the useful warning.  The p-adic zero-flow side is huge:

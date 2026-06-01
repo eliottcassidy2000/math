@@ -1,0 +1,20 @@
+THM-390 q-grid zero-branch star peeling verifier
+========================================================================
+bounded exact cases checked: 3255
+max intervals in bounded check: 21
+max predicted peel layers: 3
+all bounded cores empty and all peel layers match the formula
+
+selected LRC-style stars
+  n=18 q= 9 centers=units   |C|= 6 speeds=(9,): intervals= 6 core=0 layers=(6,) expected=(6,)
+  n=18 q= 9 centers=units   |C|= 6 speeds=(9, 18, 36): intervals=18 core=0 layers=(6, 6, 6) expected=(6, 6, 6)
+  n=18 q=18 centers=units   |C|= 6 speeds=(18, 36): intervals=12 core=0 layers=(6, 6) expected=(6, 6)
+  n=14 q= 7 centers=units   |C|= 6 speeds=(7, 14, 21): intervals=18 core=0 layers=(6, 6, 6) expected=(6, 6, 6)
+  n=12 q= 6 centers=nonzero |C|= 5 speeds=(6, 12, 18): intervals=15 core=0 layers=(5, 5, 5) expected=(5, 5, 5)
+
+synthesis
+  The local star theorem is q-agnostic: primality is not used.
+  Prime powers matter because they are p-adic tree branches, not because
+  their local interval geometry is harder.
+  A nonempty LRC endpoint core must mix descendant/off-grid/event labels;
+  one zero branch cannot hold the core by itself.

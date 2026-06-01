@@ -24,6 +24,14 @@
 **THE LAST-RUNNER BOTTLENECK:** After constraining all but the fastest, the feasible set is tiny. The fastest runner must hit this tiny set. For the initial segment: the feasible set is perfectly aligned with the last runner's close zone → P_last ≈ 0 (wall-only). For non-AP: alignment is imperfect → P_last > 0 (open lonely).
 **DANGER ZONE OCCUPANCY:** Poisson(λ=2(n-1)/n) predicts P(D=0)≈20%. Actual ≈10% — half of Poisson. The runners are MORE correlated than independent (dependence reduces lonely probability). The ratio actual/Poisson ≈ 0.53 across all n.
 **THE PRODUCT FORMULA = THE RESONANCE DEBT in conditional form:** outside credit = Π((n-2)/n) = ((n-2)/n)^{m}. The corrections ε_k are near zero for all but the last runner. The last runner's correction is maximal for AP (debt = credit). The product formula makes the global→local bridge EXPLICIT: each level clears independently, the product of clearances is positive.
+## codex-2026-06-01-S548 - formalized zero-branch star peeling as THM-390
+
+**Context:** User asked for a long formalization session on recent novel work, with discovery allowed to steer.  The live cluster was HYP-2036 (p-adic zero-branch cover trienerments), HYP-2037/HYP-2038 (tree entropy/order parameters), and the S546b prime-power endpoint-core audit.
+**Formalization:** Added THM-390, proving that for `n>=2`, `2<=q<=n`, any nonzero q-grid center set and any speeds all divisible by q form a zero-branch star with empty strict endpoint-protection core.  The proof is a separation+nestedness argument: different q-grid centers cannot strictly protect each other's endpoints, and a largest-radius interval at any center has no strict protector.
+**Discovery:** The theorem is q-agnostic.  Prime powers matter as p-adic branch labels, not as special local interval geometry.  Peel layers are explicit: speeds peel in increasing speed order with layer size `|C| * multiplicity(s)`.
+**Computation:** Added `04-computation/lrc_zero_branch_star_theorem_s548.py` and stored `05-knowledge/results/lrc_zero_branch_star_theorem_s548.out`; the verifier checks `3255` bounded exact stars plus selected n=14/n=18 examples and confirms the peel-layer formula.
+**Synthesis:** HYP-2036's local negative result is now theorem-level: covered zero branches kill THM-369 unit witnesses but cannot be local counterexample cores.  HYP-2037/HYP-2038 entropy/box-dimension signals must retain exported labels (endpoint descendants, event owners, critical walls, cross-prime coordinates, or Gabor zero columns) before they can become proof-bearing cyclic trienerments.
+**Artifacts:** `01-canon/theorems/THM-390-lrc-zero-branch-star-core-peeling.md`; `07-reflections/lrc-zero-branch-star-formalization-s548.md`; updated HYP-2036, T636, definitions, and result index.
 
 ## oracle-2026-06-01-S543 - Entropy on the tree: the loneliness box-dimension is the order parameter; tight AP = critical point (HYP-2038)
 

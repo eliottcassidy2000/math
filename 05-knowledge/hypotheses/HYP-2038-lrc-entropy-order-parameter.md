@@ -7,6 +7,7 @@ related:
   - HYP-2035
   - HYP-2033
   - HYP-2003
+  - THM-390
 ---
 
 # HYP-2038: LRC is a phase transition — the loneliness box-dimension is the order parameter; the tight AP is the critical point
@@ -40,6 +41,9 @@ point lands exactly on 1/n (theta_c=1/n) -- LRC is tight at the phase boundary.
   encoding how tightly the AP fails to clear 1/n. Compute the moat dimension.
 - (C) Tie to HYP-2035: the rank omega(n/2) of the channel tree vs the critical-set
   dimension.
+- (D) Tie to THM-390: entropy/box-dimension sees global criticality, but a bare
+  q-grid zero branch has empty local endpoint core; the multifractal object must
+  remember descendant critical-wall labels, not only branch occupancy.
 
 **Files:** `04-computation/lrc_tree_entropy_s543.py` (+.out). Reflection:
 `07-reflections/lrc-tree-entropy-the-order-parameter-s543.md`.
