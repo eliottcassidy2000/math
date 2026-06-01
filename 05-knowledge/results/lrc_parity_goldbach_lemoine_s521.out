@@ -1,0 +1,24 @@
+Even n = p+q (Goldbach); Odd n = p + 2q (Lemoine; 2q = DOUBLED prime, the parity carrier):
+  n= 6 EVEN: 1 reps, e.g. 3+3
+  n= 7 ODD : 1 reps, e.g. 3+2*2
+  n= 8 EVEN: 1 reps, e.g. 3+5
+  n= 9 ODD : 2 reps, e.g. 5+2*2
+  n=10 EVEN: 2 reps, e.g. 3+7
+  n=11 ODD : 2 reps, e.g. 7+2*2
+  n=12 EVEN: 1 reps, e.g. 5+7
+  n=13 ODD : 2 reps, e.g. 7+2*3
+  n=14 EVEN: 2 reps, e.g. 3+11
+  n=15 ODD : 2 reps, e.g. 11+2*2
+  n=16 EVEN: 2 reps, e.g. 3+13
+  n=17 ODD : 4 reps, e.g. 13+2*2
+  n=18 EVEN: 2 reps, e.g. 5+13
+  n=19 ODD : 2 reps, e.g. 13+2*3
+  n=20 EVEN: 2 reps, e.g. 3+17
+
+  Odd primes sum to an EVEN total; reaching an ODD total needs one EVEN adjustment
+  = exactly one DOUBLED prime 2q (Lemoine). The factor 2 is the odd<->even bridge.
+
+  LRC binding pair v_i+v_j=n (Thm B, tight): n even => same-parity pair (Goldbach-type);
+  n odd => (odd,even) pair, the even member a doubled atom. First-even bridge n=2*odd
+  = one doubling of an odd n. Doubling 2v is BENIGN (2-adic edge); the additive prime
+  PAIR (sum-relation v_i+v_j=v_k) is the obstruction. Doubled primes carry parity, not difficulty.
