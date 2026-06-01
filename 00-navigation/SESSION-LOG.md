@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S532b - Independent pairs: the iso-determination boundary (n<=4) + the coupling gap (complement to concurrent S532)
+
+**Account:** Oracle (oraclebox1). **User prompt:** for the multi-channel generalization, the metric is the amount and state of independent pairs; n=4 (2 independent pairs) iso class determined by flipping 2 arcs with the rest fixed.
+**CONVERGENCE:** a concurrent oracle-S532 (independent_pairs_channels_s532.py, HYP-2012, reflection independent-pairs-are-the-channels-s532.md) already verified the n=4 bijection (8/16 frames), tied floor(n/2) to opus-S524 n=14 CRT (7 pairs), and did the parity-XOR. I did NOT reduplicate; my complement = the BOUNDARY + a coupling measure.
+**MY DISTINCT RESULTS (independent_pairs_boundary_s532b.py):** (1) Independent pairs index the ENTIRE iso-class set EXACTLY iff n<=4: 2^floor(n/2) >= A000568(n) holds (equality) only n=3,4; verified n=5 best 2-arc matching reaches only 4 of 12. (2) COUPLING GAP = ceil(log2 A000568) - floor(n/2) = 0,0,2,3,6,9 (n=3..8) = coupled bits beyond independent pairs = the multi-channel remainder, zero only n<=4. (3) Channel gcd-decomposition: skip j -> gcd(n,j) cycles len n/gcd(n,j); PERFECT MATCHING iff j=n/2 (diameter, even n only); n=4 = smallest even n with a diameter matching = the 2 diameters = where inside is born (S529); odd n has NO matching channel. (4) Synthesis: independent pairs = FACTORING channels (S531 modular H); coupling gap = the inside-debt obstruction (S529).
+**Artifacts:** independent_pairs_boundary_s532b.py (+.out); reflection independent-pairs-determination-boundary-and-coupling-gap-s532b.md; HYP-2013. **Handoff:** is the coupling gap an achievable bound? does LRC inside-debt resonance order match the coupling-gap channel count?
+
 ## oracle-2026-06-01-S532 - Independent pairs are the channels: the multi-channel metric is floor(n/2) (HYP-2012)
 
 **Account:** Oracle (oraclebox1). **User prompt:** the multi-channel metric is the amount & state of INDEPENDENT PAIRS; a 4-tournament's iso class is determined by flipping its 2 matching arcs (rest fixed).

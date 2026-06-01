@@ -1,0 +1,31 @@
+========================================================================
+(A) ISO-DETERMINATION BOUNDARY: independent pairs suffice iff n<=4
+========================================================================
+  n :  A000568   2^floor(n/2)  indep>=iso?  ceil(log2 A000568)  coupling_gap
+  3 :       2          2        YES            1             +0
+  4 :       4          4        YES            2             +0
+  5 :      12          4        no             4             +2
+  6 :      56          8        no             6             +3
+  7 :     456          8        no             9             +6
+  8 :    6880         16        no            13             +9
+  => 2^floor(n/2) >= A000568 only for n<=4 (equality): independent pairs alone
+     index the whole iso-class set iff n<=4. coupling_gap>0 for n>=5 = the
+     coupled bits beyond the independent-pair channels.
+
+  n=5: max iso classes reachable by a 2-arc MATCHING (best frame) = 4 (out of A000568(5)=12; ceiling 2^2=4). Coupled arcs needed for the other 8.
+
+========================================================================
+(B) CHANNELS: skip-shell gcd-decomposition; diameter shell = matching
+========================================================================
+   n=3: j1:1xC3
+   n=4: j1:1xC4 j2:MATCH [DIAMETER=perfect matching, n/2 indep channels]
+   n=5: j1:1xC5 j2:1xC5
+   n=6: j1:1xC6 j2:2xC3 j3:MATCH [DIAMETER=perfect matching, n/2 indep channels]
+   n=7: j1:1xC7 j2:1xC7 j3:1xC7
+   n=8: j1:1xC8 j2:2xC4 j3:1xC8 j4:MATCH [DIAMETER=perfect matching, n/2 indep channels]
+   n=9: j1:1xC9 j2:1xC9 j3:3xC3 j4:1xC9
+   n=10: j1:1xC10 j2:2xC5 j3:1xC10 j4:2xC5 j5:MATCH [DIAMETER=perfect matching, n/2 indep channels]
+
+  (C) Link to S531: independent (vertex-disjoint) arcs = the FACTORING
+  channels (H multiplies over disjoint modules); coupled arcs = obstruction.
+  'Amount/state of independent pairs' = free part; coupling_gap = inside-debt part.
