@@ -39,6 +39,12 @@
 **Other mappings:** Distance-rank gives n classes (linear, trivially transitive = the outdegree walk). Modular mod-2 gives 6 classes (constant!). Layered gives O(n) classes.
 **Significance:** The apex-reduced mapping makes the LRC reachability question a 2-STATE SYSTEM. The walk on 2 states is trivially ergodic — both states are visited. If either state is lonely-compatible, LRC is proved.
 **The hierarchy:** Distance-rank (n) > Layered (O(n)) > Modular (constant) > Apex-reduced (2!) > Standard (A000016). The apex-reduced mapping is the MOST restricted and most promising for proof.
+## codex-2026-06-01-S535 - Restricted LRC tournament quotient stack (HYP-2020)
+
+**Context:** User asked for different mappings from LRC to tournament space that preserve the "which isomorphism classes can be exhibited?" framing while making the target class set meaningfully smaller and more abstract.
+**Computation:** Added `04-computation/lrc_restricted_tournament_mappings_s535.py` and stored `05-knowledge/results/lrc_restricted_tournament_mappings_s535.out`. The script audits exact wall/open-cell samples for primitive clocks at total `n=4..7` across seven quotient maps: raw phase, source-deleted target, observer-source marked, gap-threshold necklace, kinetic gap-flow necklace, blocker-deficit shadow, and apex-boundary runner body.
+**Findings:** Raw phase classes remain mixed (`n=4`: 2/2 mixed, `n=5`: 4/4, `n=6`: 11/11), so raw A000568 is still too coarse. The source-deleted target menu certifies all sampled speed sets with small images (`2,4,11,9` classes for `n=4..7` in the wall-inclusive sample). Threshold-decorated maps have zero mixed fibers and certify every sampled system, trading label tax for class-local correctness.
+**Synthesis:** New HYP-2020 after rebasing over the concurrent HYP-2016/HYP-2018/HYP-2019 mapping work: LRC should be read as forced exhibition inside a restricted quotient stack over A000568, not as a single raw tournament class problem. Metrics added: source codimension bits, label tax, purity curvature, kinetic torsion, blocker viscosity, compactification index, pressure survival rank, monodromy defect, and quotient-lens resolvent. Reflection: `07-reflections/lrc-restricted-tournament-quotient-stack-s535.md`; tangent T629.
 
 ## codex-2026-06-01-S534 - Lean residual family for LRC n=3 (THM-388)
 
