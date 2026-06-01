@@ -1,0 +1,39 @@
+Tournament clock — universality & identification (oracle-S24)
+
+================================================================
+n=5: realizable phase-comparator tournaments over 150 random speed sets
+================================================================
+ realizable iso-classes: 4  (of 12 total tournaments on 5)
+ realizable H-values: [1, 9, 11, 15]
+ class details (H, score sequence, regular?, rotational?):
+   H=1    score=(0, 1, 2, 3, 4) regular=False rotational=False
+   H=9    score=(1, 1, 2, 3, 3) regular=False rotational=False
+   H=11   score=(1, 2, 2, 2, 3) regular=False rotational=False
+   H=15   score=(2, 2, 2, 2, 2) regular=True rotational=True
+
+================================================================
+n=6: realizable phase-comparator tournaments over 60 random speed sets
+================================================================
+ realizable iso-classes: 6  (of 56 total tournaments on 6)
+ realizable H-values: [1, 17, 23, 41, 45]
+ class details (H, score sequence, regular?, rotational?):
+   H=1    score=(0, 1, 2, 3, 4, 5) regular=False rotational=False
+   H=17   score=(1, 1, 2, 3, 4, 4) regular=False rotational=False
+   H=23   score=(1, 2, 2, 3, 3, 4) regular=False rotational=False
+   H=23   score=(1, 2, 2, 3, 3, 4) regular=False rotational=False
+   H=41   score=(2, 2, 2, 3, 3, 3) regular=False rotational=False
+   H=45   score=(2, 2, 2, 3, 3, 3) regular=False rotational=False
+
+================================================================
+n=7: realizable phase-comparator tournaments over 12 random speed sets
+================================================================
+
+[n=7 detailed iso-identification skipped (7! canonical too slow); menu from tournament_clock_s24]
+
+========= transitive  <=>  empty semicircle (1/2-gap)  =========
+  [arith 0..4] cells=12 mismatches=0 CONFIRMED
+  [primes 0,2,3,5,7] cells=32 mismatches=0 CONFIRMED
+  [spread 0,1,4,9,11] cells=80 mismatches=0 CONFIRMED
+  [arith 0..5] cells=20 mismatches=0 CONFIRMED
+  [primes6 0,2,3,5,7,11] cells=76 mismatches=0 CONFIRMED
+  [n7 arith 0..6] cells=24 mismatches=0 CONFIRMED

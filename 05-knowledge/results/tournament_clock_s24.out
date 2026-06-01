@@ -1,0 +1,71 @@
+Tournament clock — phase comparator (oracle-2026-06-01-S24)
+
+====================================================================
+A. n=5 (basketball-sized) speed families
+====================================================================
+[arithmetic 0..4] speeds=(0,1,2,3,4)  n=5
+   cells=12  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 9: 2, 11: 4, 15: 4}
+[LRC initial 0,1,2,3,4] speeds=(0,1,2,3,4)  n=5
+   cells=12  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 9: 2, 11: 4, 15: 4}
+[geometric 0,1,2,4,8] speeds=(0,1,2,4,8)  n=5
+   cells=36  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 9: 14, 11: 14, 15: 6}
+[primes 0,2,3,5,7] speeds=(0,2,3,5,7)  n=5
+   cells=32  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=8 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 8, 9: 4, 11: 16, 15: 4}
+[random-ish 0,1,4,9,11] speeds=(0,1,4,9,11)  n=5
+   cells=80  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=18 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 18, 9: 34, 11: 24, 15: 4}
+[resonant 0,1,2,3,6] speeds=(0,1,2,3,6)  n=5
+   cells=24  distinct_iso_classes=4  distinct_H=(1, 9, 11, 15)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 9: 12, 11: 8, 15: 2}
+
+====================================================================
+B. n=6 speed families
+====================================================================
+[arithmetic 0..5] speeds=(0,1,2,3,4,5)  n=6
+   cells=20  distinct_iso_classes=4  distinct_H=(1, 17, 41, 45)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 17: 2, 41: 12, 45: 4}
+[geometric 0,1,2,4,8,16] speeds=(0,1,2,4,8,16)  n=6
+   cells=96  distinct_iso_classes=6  distinct_H=(1, 17, 23, 41, 45)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 17: 20, 23: 32, 41: 38, 45: 4}
+[primes 0,2,3,5,7,11] speeds=(0,2,3,5,7,11)  n=6
+   cells=76  distinct_iso_classes=6  distinct_H=(1, 17, 23, 41, 45)
+   transitive_cells=8 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 8, 17: 12, 23: 30, 41: 20, 45: 6}
+[lonely extremal 0..5] speeds=(0,1,2,3,4,5)  n=6
+   cells=20  distinct_iso_classes=4  distinct_H=(1, 17, 41, 45)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 17: 2, 41: 12, 45: 4}
+[coprime spread 0,1,5,7,11,13] speeds=(0,1,5,7,11,13)  n=6
+   cells=104  distinct_iso_classes=6  distinct_H=(1, 17, 23, 41, 45)
+   transitive_cells=14 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 14, 17: 16, 23: 44, 41: 22, 45: 8}
+
+====================================================================
+C. n=7 (a couple)
+====================================================================
+[arithmetic 0..6] speeds=(0,1,2,3,4,5,6)  n=7
+   cells=24  distinct_iso_classes=7  distinct_H=(1, 33, 105, 123, 137, 151, 175)
+   transitive_cells=2 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 2, 33: 2, 105: 2, 123: 4, 137: 4, 151: 4, 175: 6}
+[primes 0,2,3,5,7,11,13] speeds=(0,2,3,5,7,11,13)  n=7
+   cells=108  distinct_iso_classes=10  distinct_H=(1, 33, 47, 51, 105, 123, 137, 151, 175)
+   transitive_cells=8 (times the speed-order is realized as a clean ranking)
+   H histogram over cells: {1: 8, 33: 14, 47: 10, 51: 8, 105: 12, 123: 20, 137: 16, 151: 18, 175: 2}
+
+SUMMARY
+ The tournament clock turns a runner system into a closed walk in G_n.
+ Pattern probes: #cells vs sum|s_i-s_j|; distinct iso-classes vs speed
+ arithmetic structure; whether the transitive tournament is visited
+ (a clean global ranking moment) and how often.

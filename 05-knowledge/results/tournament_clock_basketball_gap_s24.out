@@ -1,0 +1,33 @@
+Tournament Analysis vignettes (oracle-2026-06-01-S24)
+
+============================================================
+(1) BASKETBALL — pass matrix -> tournament of 5
+============================================================
+ Team A (PG-heavy): score=(1, 1, 2, 2, 4)  H=5  ties_via_path=0
+ Team B (with ties): score=(1, 2, 2, 2, 3)  H=13  ties_via_path=5
+ The team is a POINT in G_5; a season is a walk (one point per game).
+ Note H=1 would mean a perfect passing pecking-order (transitive);
+ higher H means cyclic passing structure (no clean hierarchy).
+
+============================================================
+(2) H as a spread-meter over the runner clock
+============================================================
+ [arith 0..4]
+    H=1  : cells=2   max_gap in [0.750, 0.750]  mean=0.750
+    H=9  : cells=2   max_gap in [0.417, 0.417]  mean=0.417
+    H=11 : cells=4   max_gap in [0.292, 0.292]  mean=0.292
+    H=15 : cells=4   max_gap in [0.208, 0.312]  mean=0.260
+ [primes 0,2,3,5,7]
+    H=1  : cells=8   max_gap in [0.536, 0.750]  mean=0.605
+    H=9  : cells=4   max_gap in [0.400, 0.464]  mean=0.432
+    H=11 : cells=16  max_gap in [0.268, 0.414]  mean=0.353
+    H=15 : cells=4   max_gap in [0.225, 0.304]  mean=0.264
+ [spread 0,1,4,9,11]
+    H=1  : cells=18  max_gap in [0.523, 0.750]  mean=0.555
+    H=9  : cells=34  max_gap in [0.364, 0.477]  mean=0.436
+    H=11 : cells=24  max_gap in [0.335, 0.442]  mean=0.399
+    H=15 : cells=4   max_gap in [0.267, 0.351]  mean=0.309
+
+ Trend: H=1 (transitive) sits at the LARGEST gaps (>1/2, bunched);
+ the maximal H (regular) sits at the SMALLEST max-gap (even spread).
+ So H reads off how bunched the runners are — a tournament gap-meter.

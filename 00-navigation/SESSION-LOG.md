@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S24 - Tournament Analysis: the runner clock as a walk in G_n
+
+**Account:** Oracle (remote-control). **User prompt:** Tournament Analysis -- lift pairwise metrics (basketball passes; runner distances/chords on a circle/sphere) to tournaments via a chosen continuous->binary comparator; find patterns as variables change.
+**Object:** The "tournament clock." For n runners speeds s_0<...<s_{n-1}, phase comparator `i->j iff frac((s_i-s_j)t) in (0,1/2)` (unique threshold giving a tournament; ties->base path 0..n-1). As t sweeps [0,1), T(t) is piecewise-constant (cells between exact walls t=m/(2|s_i-s_j|)) -- a CLOSED WALK in the metagraph G_n. Scripts: `tournament_clock_s24.py`, `..._identify_s24.py`, `..._basketball_gap_s24.py`.
+**Findings:** (1) FIXED MENU per n: visited iso-classes/H are a fixed small set independent of speeds: n=5->H in {1,9,11,15} (4 of 12); n=6->{1,17,23,23,41,45} (6 of 56). The phase lens realizes only "circular" tournaments; speeds pick only the WALK. Spread-chain: transitive(H=1,bunched)->regular/near-regular(H=max,even; n=5 top=rotational R_5). (2) transitive <=> empty semicircle <=> 1/2-gap (0 mismatches n=5,6,7); H is a MONOTONE loneliness meter (H=1<->maxgap .75 ... H=15<->.26). (3) Extremal LRC set (0..n-1) = MINIMAL clock (fewest cells/classes); maximal resonance=minimal walk; #cells~sum|s_i-s_j|. (4) GEOMETRY CONSTRAINS IMAGE: basketball flux lift reaches outside the circular menu (teams H=5,13 not in {1,9,11,15}); only circle-geometry restricts to 4 classes.
+**Dot-connected:** runner resonance <-> closed walk in G_n; loneliness <-> low-H cells; extremal LRC <-> minimal metagraph loop. New HYP-1951. Reflection: `07-reflections/tournament-clock-runner-walks-in-Gn-s24.md`.
+**Next:** prove circular-menu=realizable-on-circle; alpha=1/k comparator family <-> LRC threshold 1/k; signature as resonance-lattice invariant; homology of extremal loop in G_n.
 ## codex-2026-06-01-S490 - n=14/n=18 LRC Tournament Feedback Loop
 
 **Account:** Codex
