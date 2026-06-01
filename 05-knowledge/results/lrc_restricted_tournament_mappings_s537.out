@@ -1,0 +1,54 @@
+Restricted LRC tournament mappings — codex S537
+========================================================================
+Counts are over open wall cells; boundary compactification is not included.
+A good-only class is a target class never seen in an unsafe state.
+
+n=4: max_speed=12, speed_sets=196
+  open states=12308, good states=1252
+  standard_source          classes=   8 good_only=   1 bad_only=   7 mixed=   0
+  binary_danger_lex        classes=   4 good_only=   1 bad_only=   3 mixed=   0
+  ternary_danger_lex       classes=   4 good_only=   1 bad_only=   3 mixed=   0
+  two_sentinel_safe_arc    classes=   8 good_only=   1 bad_only=   7 mixed=   0
+  safe_only_subtournament  classes=   4 good_only=   1 bad_only=   3 mixed=   0
+  crt_channel              classes=   6 good_only=   2 bad_only=   4 mixed=   0
+
+n=5: max_speed=9, speed_sets=125
+  open states=7472, good states=646
+  standard_source          classes=  22 good_only=   2 bad_only=  20 mixed=   0
+  binary_danger_lex        classes=   7 good_only=   2 bad_only=   5 mixed=   0
+  ternary_danger_lex       classes=   8 good_only=   3 bad_only=   5 mixed=   0
+  two_sentinel_safe_arc    classes=  72 good_only=  23 bad_only=  49 mixed=   0
+  safe_only_subtournament  classes=   7 good_only=   2 bad_only=   5 mixed=   0
+  crt_channel              classes=   0 good_only=   0 bad_only=   0 mixed=   0
+
+n=6: max_speed=8, speed_sets=56
+  open states=3828, good states=382
+  standard_source          classes=  50 good_only=   4 bad_only=  46 mixed=   0
+  binary_danger_lex        classes=  11 good_only=   4 bad_only=   7 mixed=   0
+  ternary_danger_lex       classes=  11 good_only=   3 bad_only=   8 mixed=   0
+  two_sentinel_safe_arc    classes= 135 good_only=  17 bad_only= 118 mixed=   0
+  safe_only_subtournament  classes=  11 good_only=   4 bad_only=   7 mixed=   0
+  crt_channel              classes=  16 good_only=   3 bad_only=  13 mixed=   0
+
+n=7: max_speed=9, speed_sets=40
+  open states=3246, good states=310
+  standard_source          classes=  96 good_only=   6 bad_only=  90 mixed=   0
+  binary_danger_lex        classes=  17 good_only=   6 bad_only=  11 mixed=   0
+  ternary_danger_lex       classes=  12 good_only=   3 bad_only=   9 mixed=   0
+  two_sentinel_safe_arc    classes= 283 good_only=  40 bad_only= 243 mixed=   0
+  safe_only_subtournament  classes=  17 good_only=   6 bad_only=  11 mixed=   0
+  crt_channel              classes=   0 good_only=   0 bad_only=   0 mixed=   0
+
+Interpretation
+------------------------------------------------------------------------
+standard_source is exact but still too close to the raw observer-marked
+  quotient.  Its good classes are pure because observer-source is visible.
+binary_danger_lex forces all blockers above all safe runners.  It usually
+  collapses many unsafe states while preserving pure good target classes.
+ternary_danger_lex keeps near-safe versus deep-safe information; it trades
+  compression for a more geometric source neighborhood.
+two_sentinel_safe_arc makes the target a two-marked safe-arc class problem.
+safe_only_subtournament is the harshest quotient: LRC is exhibition of
+  the top safe-count layer.  It is pure by construction but loses blockers.
+crt_channel is the arithmetic quotient.  It can be tiny, but its coarse
+  channel memory needs coupled debt labels to become a proof tool.
