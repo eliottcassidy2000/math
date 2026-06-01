@@ -120,3 +120,55 @@ classes did mix blocker counts.
 - HYP-1982
 - HYP-1987
 - HYP-1988
+
+---
+
+## Update (claude-2026-06-01-S514): the reachable menu is arc-width-bounded
+
+The open part asked which source-marked classes are reachable by arithmetic
+runner clocks. **The menu is now characterized geometrically.** At any lonely time
+every runner phase lies in the safe arc `A_n = [1/n, 1-1/n]` of length
+`L_n = 1 - 2/n`, so the runner sub-tournament is a half-turn tournament of `n-1`
+points confined to an arc of length `L_n`. Hence
+
+```text
+reachable observer-source classes  =  Arc(n)
+   := half-turn tournaments on n-1 points realizable with spread <= 1 - 2/n.
+```
+
+Sorting the phases `p_1 < ... < p_{n-1}`, the comparator reduces to a gap rule:
+`j -> i` (later beats earlier) when `p_j - p_i < 1/2`, and the pair flips when the
+gap exceeds `1/2`. All gaps are `<= L_n`, so flips require `L_n > 1/2`, i.e. `n >= 5`.
+
+**Proved (n <= 4):** `L_n <= 1/2` forces every runner sub-tournament transitive;
+exactly one source class is reachable vs `A000568(n-1)`. Offered for canonization as
+a corollary of THM-381.
+
+**Computed** (sampling + exact arc-grid + arithmetic reachability, all agreeing;
+validity-filtered):
+
+| n | L_n=1-2/n | reachable \|Arc(n)\| | R_arith | A000568(n-1) |
+|---|-----------|----------------------|---------|--------------|
+| 4 | 1/2 | 1 | 1 | 2 |
+| 5 | 3/5 | 2 | 2 | 4 |
+| 6 | 2/3 | 4 | 4 | 12 |
+| 7 | 5/7 | 6 | 6 | 56 |
+
+Reachable-menu sizes `1,2,4,6` while `A000568(n-1)=2,4,12,56`: the reachable
+fraction collapses. In every computed `n`, `R_arith = Arc(n)` exactly (integer
+clocks already realize the whole menu), and the excluded classes are exactly those
+needing cyclic phase spread `> L_n` (e.g. at n=5: `(1,1,1,3)` dominant-over-3-cycle
+and `(0,2,2,2)` 3-cycle-over-sink).
+
+**Predictions resolved:** P1 (small strict subset) — confirmed, with explicit
+arc-width bound. P2 (boundary-only touchers) — confirmed: tight systems meet the safe
+box only on equality walls, where the class degenerates. P4 — refined: arc-width
+geometry is upstream of the operation-grid labels.
+
+**Still open (= LRC):** prove every primitive speed system reaches *some* class in
+`Arc(n)` (its orbit enters the safe box). The characterization pins the target but
+does not force reachability.
+
+Artifacts: `04-computation/lrc_reachable_source_classes_claude_s514.py`,
+`05-knowledge/results/lrc_reachable_source_classes_claude_s514.out`,
+`07-reflections/lrc-reachable-source-classes-arc-width-s514.md`.
