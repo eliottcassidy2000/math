@@ -8,6 +8,7 @@ related:
   - THM-369
   - HYP-1850
   - HYP-1931
+  - HYP-1970
 ---
 
 # HYP-1951: The runner tournament-clock realizes a fixed circular menu in G_n
@@ -42,6 +43,14 @@ S500 converted two pieces of the S24 clock into canon:
 These results make the "H as loneliness meter" direction precise at the
 transitive endpoint: `H=1` cells are exactly bunched/open-semicircle cells for
 the half-turn clock.
+
+S26b adds an important correction.  Beyond the transitive endpoint, `H` should
+not be read as a scalar largest-gap meter: max-gap ranges overlap, rounded
+max-gap buckets can have several `H` values, and higher `H` can occur with a
+larger max gap than lower `H`.  The robust reading is that `H` is a
+half-turn circular-tournament cell invariant, correlated with spread and finer
+than score/3-cycle summaries, while LRC threshold data still needs the anchored
+endpoint clock and two-neighbor gaps.
 
 ## Evidence
 
@@ -92,3 +101,4 @@ for `n=18`.  This refines the LRC bridge: half-turn spread data and anchored
 - HYP-1850
 - HYP-1931
 - HYP-1967
+- HYP-1970

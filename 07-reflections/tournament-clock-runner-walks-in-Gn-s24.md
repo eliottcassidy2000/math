@@ -107,8 +107,15 @@ threshold `1/2`* (the `n=2` lonely-runner gap). The half-turn comparator is the
 comparators (the two-neighbour bracket of S22). **The comparator threshold *is*
 the lonely-runner gap threshold** — one knob unifying the two programs.
 
-Better: `H(T(t))` is a *monotone* loneliness meter. Bucketing clock cells by `H`
-and recording the runners' max circular gap (`arith 0..4`):
+S26b correction: the next paragraph is reliable for the `n=5` chain and for the
+endpoint `H=1`, but not as a global scalar theorem.  Later samples through `n=9`
+show that, once `H>1`, max-gap ranges overlap and pointwise monotonicity fails.
+The corrected statement is: `H=1` exactly detects the open-semicircle state, and
+larger `H` values are circular-tournament class features correlated with spread,
+not a scalar max-gap meter.
+
+For the `n=5` chain, bucketing clock cells by `H` and recording the runners'
+max circular gap (`arith 0..4`) gives:
 
 ```
 H=1   max_gap = 0.750   (transitive — bunched, an empty semicircle)
@@ -117,11 +124,11 @@ H=11  max_gap = 0.292
 H=15  max_gap ≈ 0.26    (regular — most even spread)
 ```
 
-`H` decreases monotonically with bunching across every system tested (`H=1`
-always at `max_gap > 1/2`). So the Hamiltonian-path count of the lifted
-tournament *reads off how lonely/bunched the runners are* — a discrete
-gap-meter. Few Hamiltonian paths ⇔ a clean pecking-order ⇔ a big empty arc;
-many ⇔ even spread ⇔ no large gap.
+At all `n`, `H=1` still means the clean pecking-order/empty-semicircle state.
+For `H>1`, the Hamiltonian-path count reads a coarser circular arrangement
+class.  Few Hamiltonian paths still indicate bunched/transitive-side behavior,
+and many paths usually indicate even spread, but the statement is correlation
+and class structure rather than pointwise max-gap monotonicity.
 
 ## Finding 3 — the LRC-extremal set is the MINIMAL clock
 
