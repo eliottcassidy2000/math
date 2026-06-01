@@ -22,6 +22,12 @@ The half-turn tournament clock and the LRC endpoint clock are distinct wall syst
 **T563** #lrc #boundary-alignment #n14 #n18 #clock-corridor | certainty: high (finite invariant) | source: codex-2026-06-01-S502b
 Boundary alignment with the half-turn clock is invariant along the hard dyadic ladders: n=14 has `36/84 = 72/168 = 144/336 = 3/7`; n=18 has `48/176 = 96/352 = 192/704 = 3/11`. This is a new candidate feature for bridge-fiber certificates.
 
+**T564** #lrc #endpoint-pressure #pressure-dag #private-endpoints | certainty: high computational / proof-strategy | source: codex-2026-06-01-S504
+Endpoint-private debt in the hard first-even rows aligns more with pressure sinks than sources: across 4284 exact samples, sink/interval hits are `4244/4284` and sink/private hits `3464/4284`, while source/private hits are only `2854/4284`. Pressure arrows should be read as blocker -> debt-carrier, so the induction should charge through sources and peel sink/private endpoint layers. See HYP-1968.
+
+**T565** #lrc #tournament-analysis #transitive-reduction #labelled-pressure | certainty: high computational | source: codex-2026-06-01-S504
+The strict LRC deletion-relief pressure DAGs are sparse and mostly irredundant: transitive-reduction retention is `97.0%` to `99.8%` on the n=14/n=18 hard rows. The next THM-380 realization target is not a scalar potential, but endpoint labels on nearly every strict pressure edge. See `07-reflections/lrc-pressure-private-overlap-s504.md`.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
