@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T631** #lrc #nowhere-zero-flow #support-flow #cut-flow #endpoint-core | certainty: computational proof-shape | source: codex-2026-06-01-S540
+Full LRC safe measure is a support-decomposed NZ-flow enumerator over every speed sub-dipole, not only HYP-2025's full support. Dually, danger intervals form a nonnegative cover flow on the endpoint cell cycle: open witnesses are zero-flow cuts; AP walls have nowhere-zero open coverage but empty strict endpoint cores. A counterexample would need total support-flow cancellation plus a nonpeeling cover-flow core below margin `1/n`. See HYP-2026.
+
 **T630** #lrc #tournament-analysis #section-vertices #boundary-flux #assumption-challenge | certainty: bounded section audit + protocol | source: codex-2026-06-01-S539
 Tournament vertices in LRC need not be runners. Fixed sections, fixed boundaries, void sectors, wall-crossing events, cover arcs, residue channels, Fourier modes, and proof obligations can all be vertices if the target predicate survives. S539 tests section pressure, danger/occupancy-colored sections, boundary flux, and void pressure; section-empty is pure in bounded `n=4..6` open-cell scans, with AP wall misses pointing to THM-383 compactification. See HYP-2024 extending HYP-2022/HYP-2023.
 

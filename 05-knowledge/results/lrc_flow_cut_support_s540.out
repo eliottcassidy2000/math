@@ -1,0 +1,170 @@
+LRC support-flow and cut-flow probe -- codex-2026-06-01 S540
+==============================================================================
+Flow side: |SAFE| is a support-decomposed NZ-flow enumerator over sub-dipoles.
+Cut side: danger arcs induce a nonnegative cover flow on the time-cell cycle.
+
+CASE n4_AP_wall: n=4, speeds=(1, 2, 3), M=18
+------------------------------------------------------------------------------
+exact open |SAFE|=0 (0.000000); best_margin=1/4 (0.250000); closed_LRC=True
+cover-cut: intervals=12 cells=14 zero_cells=0 min_coverage=1 strict_core_intervals=0
+support-flow truncated total=+0.00603103; main=+0.12500000; nonzero=-0.11896897
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.12500000 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   1/3    active>=2=   0
+   2: -0.03887731 count=     42 modNZ=   1/3    active>=2=   1
+   3: -0.08009166 count=    414 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1)) c3=0 SCC=(1, 1, 1, 1) H=1
+reading: wall-only cover flow; open cells have no zero cut, but closed LRC survives on a boundary.
+
+CASE n4_odd_sum_open: n=4, speeds=(1, 2, 4), M=18
+------------------------------------------------------------------------------
+exact open |SAFE|=1/8 (0.125000); best_margin=5/16 (0.312500); closed_LRC=True
+cover-cut: intervals=13 cells=18 zero_cells=2 min_coverage=0 strict_core_intervals=0
+support-flow truncated total=+0.12500000; main=+0.12500000; nonzero=+0.00000000
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.12500000 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   2/3    active>=2=   0
+   2: +0.00000000 count=     44 modNZ=   1/3    active>=2=   0
+   3: -0.00000000 count=    306 modNZ=   0/1    active>=2=   0
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1)) c3=0 SCC=(1, 1, 1, 1) H=1
+reading: positive zero-flow cut exists on the cover cycle; nonzero support flows fail to cancel main.
+
+CASE n5_AP_wall: n=5, speeds=(1, 2, 3, 4), M=14
+------------------------------------------------------------------------------
+exact open |SAFE|=0 (0.000000); best_margin=1/5 (0.200000); closed_LRC=True
+cover-cut: intervals=18 cells=21 zero_cells=0 min_coverage=1 strict_core_intervals=0
+support-flow truncated total=+0.01013443; main=+0.12960000; nonzero=-0.11946557
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.12960000 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   0/4    active>=2=   0
+   2: -0.00566552 count=     56 modNZ=   6/6    active>=2=   6
+   3: -0.11458413 count=    800 modNZ=   4/4    active>=2=   4
+   4: +0.00078409 count=   4910 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)) c3=0 SCC=(1, 1, 1, 1, 1) H=1
+reading: wall-only cover flow; open cells have no zero cut, but closed LRC survives on a boundary.
+
+CASE n5_open_sample: n=5, speeds=(1, 2, 3, 5), M=14
+------------------------------------------------------------------------------
+exact open |SAFE|=4/75 (0.053333); best_margin=6/25 (0.240000); closed_LRC=True
+cover-cut: intervals=19 cells=25 zero_cells=2 min_coverage=0 strict_core_intervals=0
+support-flow truncated total=+0.05350797; main=+0.12960000; nonzero=-0.07609203
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.12960000 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   1/4    active>=2=   0
+   2: -0.00351704 count=     42 modNZ=   3/6    active>=2=   3
+   3: -0.07734335 count=    700 modNZ=   4/4    active>=2=   4
+   4: +0.00476836 count=   4102 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)) c3=0 SCC=(1, 1, 1, 1, 1) H=1
+reading: positive zero-flow cut exists on the cover cycle; nonzero support flows fail to cancel main.
+
+CASE n6_AP_wall: n=6, speeds=(1, 2, 3, 4, 5), M=10
+------------------------------------------------------------------------------
+exact open |SAFE|=0 (0.000000); best_margin=1/6 (0.166667); closed_LRC=True
+cover-cut: intervals=25 cells=34 zero_cells=0 min_coverage=1 strict_core_intervals=0
+support-flow truncated total=+0.00658129; main=+0.13168724; nonzero=-0.12510596
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13168724 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   1/5    active>=2=   0
+   2: +0.01137049 count=     56 modNZ=   6/10   active>=2=   6
+   3: -0.15673368 count=    828 modNZ=  10/10   active>=2=  10
+   4: +0.02862811 count=   7322 modNZ=   5/5    active>=2=   5
+   5: -0.00837087 count=  26140 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1) H=1
+reading: wall-only cover flow; open cells have no zero cut, but closed LRC survives on a boundary.
+
+CASE n6_Z3_bridge: n=6, speeds=(1, 3, 6, 9, 12), M=10
+------------------------------------------------------------------------------
+exact open |SAFE|=5/54 (0.092593); best_margin=7/36 (0.194444); closed_LRC=True
+cover-cut: intervals=41 cells=68 zero_cells=8 min_coverage=0 strict_core_intervals=0
+support-flow truncated total=+0.09148638; main=+0.13168724; nonzero=-0.04020086
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13168724 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   4/5    active>=2=   0
+   2: +0.02431708 count=     50 modNZ=   6/10   active>=2=   0
+   3: -0.07075890 count=    598 modNZ=   4/10   active>=2=   0
+   4: +0.00624096 count=   4142 modNZ=   1/5    active>=2=   0
+   5: -0.00000000 count=  10502 modNZ=   0/1    active>=2=   0
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1) H=1
+reading: positive zero-flow cut exists on the cover cycle; nonzero support flows fail to cancel main.
+
+CASE n6_two_active: n=6, speeds=(1, 2, 3, 6, 9), M=10
+------------------------------------------------------------------------------
+exact open |SAFE|=4/27 (0.148148); best_margin=2/9 (0.222222); closed_LRC=True
+cover-cut: intervals=31 cells=48 zero_cells=6 min_coverage=0 strict_core_intervals=0
+support-flow truncated total=+0.14864897; main=+0.13168724; nonzero=+0.01696173
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13168724 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   3/5    active>=2=   0
+   2: +0.03276052 count=     56 modNZ=   4/10   active>=2=   1
+   3: -0.04126704 count=    588 modNZ=   4/10   active>=2=   3
+   4: +0.02964062 count=   4304 modNZ=   3/5    active>=2=   3
+   5: -0.00417236 count=  16422 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1) H=1
+reading: positive zero-flow cut exists on the cover cycle; nonzero support flows fail to cancel main.
+
+CASE n7_AP_wall: n=7, speeds=(1, 2, 3, 4, 5, 6), M=7
+------------------------------------------------------------------------------
+exact open |SAFE|=0 (0.000000); best_margin=1/7 (0.142857); closed_LRC=True
+cover-cut: intervals=33 cells=43 zero_cells=0 min_coverage=1 strict_core_intervals=0
+support-flow truncated total=+0.02625482; main=+0.13281031; nonzero=-0.10655549
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13281031 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   0/6    active>=2=   0
+   2: +0.04035618 count=     50 modNZ=  15/15   active>=2=  15
+   3: -0.18615956 count=    672 modNZ=  20/20   active>=2=  20
+   4: +0.07171441 count=   6178 modNZ=  15/15   active>=2=  15
+   5: -0.03776499 count=  31638 modNZ=   6/6    active>=2=   6
+   6: +0.00529846 count=  66708 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1, 1) H=1
+reading: wall-only cover flow; open cells have no zero cut, but closed LRC survives on a boundary.
+
+CASE n7_open_sample: n=7, speeds=(1, 2, 3, 4, 6, 8), M=7
+------------------------------------------------------------------------------
+exact open |SAFE|=5/42 (0.119048); best_margin=4/21 (0.190476); closed_LRC=True
+cover-cut: intervals=36 cells=47 zero_cells=4 min_coverage=0 strict_core_intervals=0
+support-flow truncated total=+0.12417377; main=+0.13281031; nonzero=-0.00863654
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13281031 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   0/6    active>=2=   0
+   2: +0.06346235 count=     50 modNZ=  15/15   active>=2=  15
+   3: -0.11909339 count=    612 modNZ=  20/20   active>=2=  20
+   4: +0.06004925 count=   5176 modNZ=  15/15   active>=2=  15
+   5: -0.01828152 count=  25024 modNZ=   6/6    active>=2=   6
+   6: +0.00522677 count=  56348 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1, 1) H=1
+reading: positive zero-flow cut exists on the cover cycle; nonzero support flows fail to cancel main.
+
+CASE n14_AP_wall: n=14, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), M=3
+------------------------------------------------------------------------------
+exact open |SAFE|=0 (0.000000); best_margin=1/14 (0.071429); closed_LRC=True
+cover-cut: intervals=117 cells=190 zero_cells=0 min_coverage=1 strict_core_intervals=0
+support-flow truncated total=+0.07491131; main=+0.13480057; nonzero=-0.05988926
+support layers: k -> contribution, bounded-flow-count, modNZ/subsets, active>=2
+   0: +0.13480057 count=      1 modNZ=   1/1    active>=2=   0
+   1: +0.00000000 count=      0 modNZ=   1/13   active>=2=   0
+   2: +0.07770106 count=     28 modNZ=  66/78   active>=2=  66
+   3: -0.36665706 count=    910 modNZ= 286/286  active>=2= 286
+   4: +0.59500528 count=  10300 modNZ= 715/715  active>=2= 715
+   5: -0.82435649 count=  99992 modNZ=1287/1287 active>=2=1287
+   6: +0.86803411 count= 739778 modNZ=1716/1716 active>=2=1716
+   7: -0.68375725 count=4098324 modNZ=1716/1716 active>=2=1716
+   8: +0.40982896 count=17260082 modNZ=1287/1287 active>=2=1287
+   9: -0.18366949 count=54365826 modNZ= 715/715  active>=2= 715
+  10: +0.05950998 count=123780168 modNZ= 286/286  active>=2= 286
+  11: -0.01321739 count=193173924 modNZ=  78/78   active>=2=  78
+  12: +0.00180277 count=185170304 modNZ=  13/13   active>=2=  13
+  13: -0.00011373 count=82072096 modNZ=   1/1    active>=2=   1
+layer-tournament: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1)) c3=0 SCC=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) H=1
+reading: wall-only cover flow; open cells have no zero cut, but closed LRC survives on a boundary.
+
+SYNTHESIS
+==============================================================================
+1. HYP-2025's full-support NZ flow is one layer of a larger support-flow
+   enumerator: every nonzero Fourier support is a NZ flow on a sub-dipole.
+2. On the dual cover graph, a positive lonely interval is a zero-flow cut
+   in the danger-arc coverage flow.  AP walls are nowhere-zero on open
+   cells but have empty strict endpoint-protection cores.
+3. A true counterexample would need both sides at once: full cancellation
+   of the support-flow enumerator and a nonpeeling nowhere-zero cover-flow
+   core with best margin below 1/n.  That is much more rigid than merely
+   having many full-support resonances.

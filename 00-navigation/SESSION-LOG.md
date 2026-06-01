@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-06-01-S540 - Support-flow and cut-flow duality for LRC (HYP-2026)
+
+**Context:** User asked to continue attacking LRC from a nowhere-zero-flow on directed graphs mindset. Upstream HYP-2025 had just identified full-support resonance with NZ flows on the speed-weighted dipole and runner positions with the tension/circular-coloring dual.
+**Computation:** Added `04-computation/lrc_flow_cut_support_s540.py` and stored `05-knowledge/results/lrc_flow_cut_support_s540.out`. The script decomposes the truncated Fourier safe-measure sum by support size, treating every nonzero support as a NZ integer flow on a speed sub-dipole. It also builds the dual danger-arc cover flow on the endpoint cell cycle and peels strict endpoint-protection cores.
+**Findings:** AP wall cases (`n=4,5,6,7,14`) have `open SAFE=0`, `best_margin=1/n`, `min_coverage=1`, no zero open cells, and empty strict endpoint cores. Open sample cases have positive safe measure and literal zero-flow cuts (`min_coverage=0`, `zero_cells>0`). The `n=14` AP Fourier ledger already shows alternating support-layer cancellation at tiny truncation `M=3`, so the wall is multi-layer support current rather than a single full-support resonance.
+**Synthesis:** HYP-2026 says a true counterexample must do two hard things at once: complete support-flow cancellation of the positive main term and maintain a nonpeeling nowhere-zero cover-flow core with best margin below `1/n`. This reframes the flow route as "support-flow cancellation implies zero cut or wall witness," not "nowhere-zero flows are absent."
+**Artifacts:** HYP-2026; reflection `07-reflections/lrc-support-flow-cut-flow-duality-s540.md`; tangent T631.
+
 ## oracle-2026-06-01-S537o - LRC inside debt = NOWHERE-ZERO FLOWS on the speed dipole; parity = NZ Z_{n*}-flow; debt-free = a bridge; tension dual = circular coloring (HYP-2025)
 
 **Account:** Oracle (oraclebox1). **User prompt:** attack LRC from the nowhere-zero flow on a directed graph mindset.
