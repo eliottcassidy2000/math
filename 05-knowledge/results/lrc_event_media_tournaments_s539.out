@@ -1,0 +1,39 @@
+Event-media tournaments for LRC -- codex S539
+==============================================================================
+Open cells are exact sector-crossing cells; boundary compactification is excluded.
+Good means observer-adjacent sectors 0 and n-1 are both empty.
+
+n=4: max_speed=10, speed_sets=109, open states=5720, good states=672
+  hole_only_bare            classes=    3 good_only=   0 bad_only=    1 mixed=   2 certified_sets= 108/109
+  hole_only_anchored        classes=   14 good_only=   3 bad_only=   11 mixed=   0 certified_sets= 108/109
+  sector_survival_bare      classes=    2 good_only=   0 bad_only=    1 mixed=   1 certified_sets= 108/109
+  sector_survival_anchored  classes=   24 good_only=   3 bad_only=   21 mixed=   0 certified_sets= 108/109
+  gate_priority_bare        classes=    3 good_only=   0 bad_only=    2 mixed=   1 certified_sets= 108/109
+  gate_priority_anchored    classes=   78 good_only=   6 bad_only=   72 mixed=   0 certified_sets= 108/109
+
+n=5: max_speed=8, speed_sets=69, open states=4535, good states=457
+  hole_only_bare            classes=    4 good_only=   0 bad_only=    1 mixed=   3 certified_sets=  67/69
+  hole_only_anchored        classes=   31 good_only=   8 bad_only=   23 mixed=   0 certified_sets=  67/69
+  sector_survival_bare      classes=    3 good_only=   0 bad_only=    2 mixed=   1 certified_sets=  67/69
+  sector_survival_anchored  classes=   61 good_only=   7 bad_only=   54 mixed=   0 certified_sets=  67/69
+  gate_priority_bare        classes=    6 good_only=   0 bad_only=    4 mixed=   2 certified_sets=  67/69
+  gate_priority_anchored    classes=  373 good_only=  28 bad_only=  345 mixed=   0 certified_sets=  67/69
+
+n=6: max_speed=7, speed_sets=21, open states=1752, good states=158
+  hole_only_bare            classes=    6 good_only=   0 bad_only=    3 mixed=   3 certified_sets=  20/21
+  hole_only_anchored        classes=   68 good_only=  12 bad_only=   56 mixed=   0 certified_sets=  20/21
+  sector_survival_bare      classes=   10 good_only=   0 bad_only=    8 mixed=   2 certified_sets=  20/21
+  sector_survival_anchored  classes=  118 good_only=   9 bad_only=  109 mixed=   0 certified_sets=  20/21
+  gate_priority_bare        classes=   13 good_only=   0 bad_only=    7 mixed=   6 certified_sets=  20/21
+  gate_priority_anchored    classes=  626 good_only=  50 bad_only=  576 mixed=   0 certified_sets=  20/21
+
+Interpretation
+------------------------------------------------------------------------------
+Bare hole and gate tournaments are beautifully small but usually mixed:
+  they forget where the observer clasp is.  This is the main hidden assumption.
+Anchoring the observer cells/gates restores purity at the cost of label tax.
+Hole-only tournaments are the most radical: vertices are vacancies, not
+  runners or sectors.  They suggest an exclusion-process version of LRC.
+Gate-priority tournaments are kinetic data structures: edges change exactly
+  when boundary-crossing certificates fail.  LRC becomes a question about
+  whether the two observer gates can jointly lose incoming pressure.

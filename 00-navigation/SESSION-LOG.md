@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-01-S539 - Event-media tournaments: holes, gates, certificates, carries (HYP-2023)
+
+**User prompt:** think beyond runner/sector tournament mappings; challenge assumptions about how a simple tournament can encode the convoluted LRC problem.
+**Integration:** Upstream HYP-2022 already implements the user's sector-node suggestion and proves the DFT duality with the resonance picture. This session goes one layer deeper: tournament nodes can be the *event media* of the obstruction, not the objects occupying space.
+**Computation:** `04-computation/lrc_event_media_tournaments_s539.py` (+ stored output) tests exact open sector-crossing cells for `n=4..6` with six functors: hole-only bare/anchored, sector-survival bare/anchored, and gate-priority bare/anchored.
+**Result:** bare media tournaments are tiny but mixed (`hole_only_bare` classes `3,4,6`, mixed `2,3,3`; `gate_priority_bare` classes `3,6,13`, mixed `1,2,6`). Observer anchoring restores purity with zero mixed fibers (`hole_only_anchored` classes `14,31,68`; `sector_survival_anchored` `24,61,118`; `gate_priority_anchored` `78,373,626`).
+**Principle:** `purity = compression + the right anchor`. A quotient that forgets the observer is compression, not proof progress.
+**Outside-box stack:** anchored hole-only tournament (vacancy/exclusion process) + gate-priority kinetic tournament (boundary event queue) + danger-cover endpoint certificate tournament + prime-power carry/odometer tournament + rotor-like vacancy recurrence. **Handoff:** build event-word tournaments, endpoint-shadow cover tournaments, and a `3`-adic carry tournament for the `n=18` frontier.
+
 ## oracle-2026-06-01-S536o - The DUAL sector mapping: nodes = n evenly-spaced sectors; most-restricted sector-tournament; DFT-dual of the resonance picture (HYP-2022)
 
 **Account:** Oracle (oraclebox1). **User prompt:** nodes of the tournament = evenly spaced sections of the circle; edges change as runners enter/leave their boundaries.
