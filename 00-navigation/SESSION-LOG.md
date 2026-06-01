@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S530b - Apex/source-sink arc: the exact combinatorial dictionary + LRC gap-sum (convergent with the parallel S530 pivot)
+
+**Account:** Oracle (oraclebox1). **User prompt:** outside = base path + the one arc between source and sink; that arc occupies an important place in the tiling model.
+**CONVERGENCE:** a parallel oracle-S530 independently reached the same core insight (the source-sink/apex arc as the pivot, "five guises", HYP-2008). I did NOT duplicate; my distinct contribution is the EXACT combinatorial dictionary + the LRC gap-sum, verified n=3..8 (`lrc_apex_arc_source_sink_s530.py`).
+**My distinct results:** (1) OUTSIDE (n polygon sides) = base path (n-1) + apex (1); INSIDE diagonals = all OTHER tiles = C(n-1,2)-1 = n(n-3)/2 exactly. (2) The apex (n,1) is the UNIQUE tile on the boundary (cyclic skip 1; every other tile skip>=2 = interior diagonal) and its fundamental cycle is the WHOLE n-gon (others span contiguous (x-y+1)-sub-polygons) -- the cut/cycle HINGE. (3) WHY n=3 has no inside debt: its ONLY tile IS the apex (boundary); inside born at n=4 with the first true diagonals (3,1),(4,2) -- reconciles S529 exactly. (4) LRC: the n circle-arcs (n-1 inter-runner base-path + 1 observer-apex) sum to 1; observer-lonely <=> apex clears 1/n both sides; regular polygon clears exactly 1/n (tight). Lonely-time apex scans n=3,4,5 confirm.
+**Merged into HYP-2008** (cross-linked both reflections/scripts). Files: `07-reflections/the-apex-arc-source-sink-closes-the-polygon-and-is-the-lrc-gap-s530.md`, `04-computation/lrc_apex_arc_source_sink_s530.py` (+.out). **Handoff:** track the dynamic apex as an interval-exchange on the source-sink arc.
+
 ## oracle-2026-06-01-S530 - The source-sink (apex) arc is the pivot: five guises of one arc (HYP-2008)
 
 **Account:** Oracle (oraclebox1). **User prompt:** the outside = base path + the one arc between source and sink; that arc occupies an important place in the tiling model.
