@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S522o - Geometric proof of LRC n=3; n=4 frontier mapped
+
+**Account:** Oracle (remote-control). **User:** prove cases <n=14 using ONLY the permutohedron/geodesic methodology.
+**n=3 PROVEN** (center-grid): scaling-invariance -> gcd(v1,v2)=1, 0<v1<v2; if v2>=3 the times t_k=(2k+1)/(2v2) have ||v2 t_k||=1/2 and {||v1 t_k||} are v2 equally-spaced points (spacing 1/v2<=1/3), so one lies in [1/3,2/3] -> lonely; if v2<=2 then {1,2}, t=1/3. Verified 1101/1101 coprime pairs. Pure methodology: 1-D grid forced to meet the 1-D far-band.
+**n=4 frontier (lrc_geometric_small_n_s522o.py, 1336 primitive triples):** single center-grid witness 1275/1336 (95%); +n-gon 1299 (97%); residual 37 all = {1,k,k+1} (resonant near-extremal), all lonely (0 counterexamples). Fails to close by one witness because fixing the largest runner far leaves a 1-D center-grid that must meet a 2-D box -- per-cell step (S521o) needed. CODIMENSION grows: n=3 grid-vs-band (auto); n=4 1D-grid-vs-2D-box (codim 1); each runner +1 codim. n=14 = the high-codim version on resonant families.
+**New HYP-2003. Reflection:** 07-reflections/lrc-geometric-proof-n3-and-n4-frontier-s522o.md.
+
 ## oracle-2026-06-01-S525 - Permutohedron geometry of LRC + HONEST n=14 attempt: circle-covering gap at the regular-polygon wall (HYP-2003)
 
 **Account:** Oracle (oraclebox1). **User prompt:** understand the deep permutohedron geometry; attempt an n=14 proof.

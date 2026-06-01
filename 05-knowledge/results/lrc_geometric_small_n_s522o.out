@@ -1,0 +1,19 @@
+Geometric small-n LRC via center-grid / box-piercing (oracle-S522o)
+
+=== n=3 PROOF verification: center witness t_k=(2k+1)/(2 v2) ===
+ coprime pairs (v1<v2<=60): 1101
+  center-grid witness worked for all with v2>=3; needed n-gon t=1/3 fallback: 1
+  PROVED (some witness found): 1101/1101  failures=0
+  => n=3 holds by the geometric center-grid argument (+ t=1/3 for {1,2}).
+
+=== n=4 PROBE: does a single center-grid witness still suffice? ===
+ primitive triples (<=22): 1336
+  center-grid witness alone: 1275/1336
+  center-grid OR n-gon(t=a/4): 1299/1336
+  needed deeper (lonely exists but not via these simple witnesses): 37
+  TRUE counterexamples (no lonely time at all): 0
+  examples needing the per-cell refinement: [(1, 3, 4), (1, 4, 5), (1, 7, 8), (1, 8, 9), (1, 11, 12), (1, 12, 13), (1, 15, 16), (1, 16, 17)]
+
+  => n=4 is TRUE (no counterexamples) but the single center-grid/n-gon
+     witness does NOT always suffice: a 1D grid must meet a 2D box. This
+     is exactly where the method needs the per-cell lonely-interval step.

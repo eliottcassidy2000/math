@@ -3528,3 +3528,10 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Evidence:** lrc_permutohedron_geometry_s521o.py (+ .out): crossings=sum|v_i-v_j|; distinct orders 6/10/12; lonely-at-midpoints=0 (loneliness off-center).
 **Predictions:** progress needs the per-cell lonely sub-interval enumeration (linear in each braid cell), not the order geometry alone; the closed-geodesic-vs-cube mismatch is the irreducible view-obstruction core.
 **See:** 07-reflections/lrc-permutohedron-geometry-and-n14-attempt-s521o.md, HYP-2000, HYP-1997, HYP-1996, HYP-1991, THM-369.
+
+## HYP-2003: center-grid geometry proves LRC n=3; codimension grows with n (oracle-2026-06-01-S522o)
+**Status:** PROVED for n=3 (geometric); n=4 frontier mapped. Validates the S521o methodology.
+**What:** Using only the geodesic/box methodology: n=3 PROVEN -- scaling-invariance gives gcd(v1,v2)=1, 0<v1<v2; for v2>=3 the times t_k=(2k+1)/(2v2) put runner2 at its far-center (||v2 t_k||=1/2) and {||v1 t_k||} are v2 equally-spaced points (spacing 1/v2<=1/3) so one meets the far-band [1/3,2/3]; for v2<=2 it's {1,2}, t=1/3. (Verified 1101/1101.) n=4: single center-grid witness covers 1275/1336 (95%), +n-gon 1299 (97%); residual 37 = {1,k,k+1} resonant triples, all lonely. Fails to close by one witness: fixing largest runner far leaves a 1-D grid that must meet a 2-D box. Codimension grows by 1 per runner -> n=14 is the high-codim version on resonant near-extremal families; the per-cell lonely-interval step (S521o) is the needed refinement.
+**Evidence:** lrc_geometric_small_n_s522o.py (+ .out): n=3 1101/1101; n=4 1275/1299 simple, 37 {1,k,k+1} residual, 0 counterexamples.
+**Predictions:** an iterated/multi-scale grid (per-cell) closes n=4,5; the residual difficulty concentrates on resonant {1,...} families at each n; the grid-vs-box codimension is the quantitative obstruction.
+**See:** 07-reflections/lrc-geometric-proof-n3-and-n4-frontier-s522o.md, HYP-2002, HYP-2000, THM-369.
