@@ -98,47 +98,51 @@ def upstream_ref():
     return upstream or None
 
 
-def push_current_branch():
-    """Push HEAD to the current branch's upstream, setting one if needed."""
+def push_current_branch(max_attempts=6):
+    """Push HEAD to the upstream, with a fetch/rebase retry LOOP for concurrent-
+    push races. Append-heavy coordination files auto-resolve via the `merge=union`
+    driver in .gitattributes; on any conflict the union driver cannot resolve, the
+    rebase is ABORTED so the working tree is left clean (never mid-rebase) and the
+    local commit stays intact for a manual retry."""
     branch = current_branch()
-    if branch is None:
-        print("ERROR: Cannot push from detached HEAD. Check out a branch first.", file=sys.stderr)
-        return False
-
     upstream = upstream_ref()
-    if upstream is None:
-        print(f"\n-- git push (set upstream origin/{branch}) --------")
-        r = run(["git", "push", "-u", "origin", branch], capture=True)
+    if upstream:
+        remote, remote_branch = upstream.split("/", 1)
+    elif branch:
+        remote, remote_branch = "origin", branch
+    else:  # detached HEAD (e.g. after a prior aborted rebase): default to origin/main
+        remote, remote_branch = "origin", "main"
+
+    for attempt in range(1, max_attempts + 1):
+        print(f"\n-- git push (to {remote}/{remote_branch}, attempt {attempt}/{max_attempts}) --")
+        if branch and upstream_ref() is None:
+            r = run(["git", "push", "-u", remote, branch], capture=True)
+        else:
+            r = run(["git", "push", remote, f"HEAD:{remote_branch}"], capture=True)
         if r.returncode == 0:
             print(r.stdout or "  Pushed successfully.")
             return True
-        print(f"ERROR: git push failed.\n{r.stdout}\n{r.stderr}", file=sys.stderr)
-        return False
 
-    remote, remote_branch = upstream.split("/", 1)
-    print(f"\n-- git push (to {upstream}) ----------------------")
-    r = run(["git", "push", remote, f"HEAD:{remote_branch}"], capture=True)
-    if r.returncode == 0:
-        print(r.stdout or "  Pushed successfully.")
-        return True
+        print(f"  Push rejected (remote moved) — fetch + rebase onto {remote}/{remote_branch}...")
+        rf = run(["git", "fetch", remote], capture=True)
+        if rf.returncode != 0:
+            print(f"ERROR: git fetch failed.\n{rf.stdout}\n{rf.stderr}", file=sys.stderr)
+            return False
 
-    print(f"  Push to {upstream} failed — retrying with fetch/rebase...")
-    rf = run(["git", "fetch", remote], capture=True)
-    if rf.returncode != 0:
-        print(f"ERROR: git fetch failed.\n{rf.stdout}\n{rf.stderr}", file=sys.stderr)
-        return False
+        rr = run(["git", "rebase", f"{remote}/{remote_branch}"], capture=True)
+        if rr.returncode != 0:
+            print("  Rebase conflict the union driver could not auto-resolve —"
+                  " aborting rebase to keep a clean tree.")
+            run(["git", "rebase", "--abort"], capture=True)
+            print(f"ERROR: rebase conflict on close.\n{rr.stdout}\n{rr.stderr}", file=sys.stderr)
+            print("  Your commit is intact on a clean branch; resolve the file(s) and "
+                  "re-run finish_session, or push manually.", file=sys.stderr)
+            return False
+        # rebase succeeded (possibly via union merge) — loop and try the push again.
 
-    rr = run(["git", "rebase", upstream], capture=True)
-    if rr.returncode != 0:
-        print(f"ERROR: git rebase failed.\n{rr.stdout}\n{rr.stderr}", file=sys.stderr)
-        return False
-
-    r2 = run(["git", "push", remote, f"HEAD:{remote_branch}"], capture=True)
-    if r2.returncode != 0:
-        print(f"ERROR: git push failed even after rebase.\n{r2.stdout}\n{r2.stderr}", file=sys.stderr)
-        return False
-    print(r2.stdout or "  Pushed successfully.")
-    return True
+    print(f"ERROR: push still failing after {max_attempts} attempts (heavy contention).",
+          file=sys.stderr)
+    return False
 
 
 def verify_not_ahead():

@@ -6,6 +6,14 @@
 **Formalization:** Added and checked `three_one_three_mul_lonely`: for every `r>0`, the two-speed family `{1,3r}` is `3`-lonely at `t=1/3+1/(9r)`. This enters the residual `n=3` zone not covered by the denominator sieve because the family contains a multiple of `3`.
 **Verification:** `lake env lean TournamentH7/LonelyRunner.lean` succeeds and the axiom audit for `three_one_three_mul_lonely` reports only `propext`, `Classical.choice`, and `Quot.sound`. Canonized as THM-388 and stored the audit output at `05-knowledge/results/lean_lrc_small_residual_s533.out`.
 **Handoff:** formalize the scaling lemma and S522o center-grid pigeonhole to close full `n=3` in Lean; then attack the `n=4` parity/inside-debt frontier.
+## oracle-2026-06-01-S533c - The mod-6 three-channel parity law for the n=6 inside debt (generalizes 'a+b+c odd') (HYP-2016)
+
+**Account:** Oracle (oraclebox1). **User prompt:** compute the n=6 inside debt as a function of the 3-pair joint state and find the mod-6 three-channel analogue of 'a+b+c odd' -- the first genuinely multi-channel parity law.
+**RESULT:** In |LONELY|=sum_{sum m_i v_i=0} prod ghat(m_i), characters vanish iff n*|m (n*=n/2 even, n odd). Full-support resonance needs, mod n*, 0 = sum (units (Z/n*)^x) v_i.
+ - n=4 (n*=2, units {1}): one fixed sum -> debt-free iff Sum v_i ODD = 'a+b+c odd' (ONE channel).
+ - n=6 (n*=3, units {+-1}): a SIGN per runner -> debt-free iff NO eps in {+-1}^5 with sum eps_i v_i = 0 mod 3. THE FIRST multi-channel parity law. mod6 = (mod-3 residue channel)(x)(mod-2 sign-unit). The 3 channels = residues mod3 = the diameter/antipodal pairs (S530/S532).
+**Reduction (verified n6_full_support_three_channel_law_s533b.py):** active runner (v!=0 mod3) contributes {1,2} mod3 freely; inert (v=0 mod3) contributes 0; with k=#active, 0 reachable iff k>=2. FULL-SUPPORT DEBT VANISHES iff k=1 (primitive: exactly ONE runner !=0 mod3). Verified curated ((3,6,9,12,1) debt=0, 0 resonances) + 400/401 random primitive 5-sets (1 miss=bounded-search edge). Value/sign graded by m mod6 (|ghat|=sqrt3/(2pi m)); 'any-order' debt almost always present (inert runners = scaled 3*(...) sub-system = S531 recursion); clean law is the full-support term.
+**Artifacts:** n6_inside_debt_three_channel_s533.py (+.out), n6_full_support_three_channel_law_s533b.py (+.out); reflection n6-inside-debt-three-channel-parity-law-mod6-s533c.md; HYP-2016. **Handoff:** n=8 (n*=4, units {1,3}); n=9 (n*=9, units phi=6); integer-feasibility edge cases vs the resonance lattice.
 
 ## opus-2026-06-01-S533 - n=6 three-channel parity law: APEX IS THE GATEKEEPER (c=1 necessary+sufficient)
 
