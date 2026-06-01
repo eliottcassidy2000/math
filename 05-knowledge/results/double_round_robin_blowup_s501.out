@@ -1,0 +1,89 @@
+2x2 BLOCK TAXONOMY
+================================================================================
+all orientations of a 2x2 fiber block: 16
+by number of wins for the first fiber: {0: 1, 1: 4, 2: 6, 3: 4, 4: 1}
+balanced 2-2 blocks: 6
+double-round-robin matching blocks: 2
+balanced row/column-star blocks, not fiber-schedule balanced: 4
+matching blocks:
+  [(0, 1), (1, 0)]
+  [(0, 0), (1, 1)]
+
+Lex blowup uses 4-0 or 0-4 blocks; it magnifies the old result.
+SC/voltage blowups use matching 2-2 blocks; they store the old result as a parity.
+
+VOLTAGE/GAUGE COUNT
+================================================================================
+  n   edges  voltages  sheet-flip gauge classes  fundamental triangle bits
+  2       1         2                          1                            0
+  3       3         8                          2                            1
+  4       6        64                          8                            3
+  5      10      1024                         64                            6
+  6      15     32768                       1024                           10
+  7      21   2097152                      32768                           15
+
+Gauge normalization check
+  n=2: normalized=1 parity_vectors=1 target=1
+  n=3: normalized=2 parity_vectors=2 target=2
+  n=4: normalized=8 parity_vectors=8 target=8
+  n=5: normalized=64 parity_vectors=64 target=64
+  n=6: normalized=1024 parity_vectors=1024 target=1024
+
+FORMAL RULE
+================================================================================
+For base arc u -> v and voltage sigma_uv in F2:
+  u_r -> v_{r+sigma_uv}
+  v_r -> u_{r+sigma_uv+1}
+for r=0,1.  Internal arcs are v_0 -> v_1.
+
+sigma=0 for every edge gives the repo's SC blowup:
+  same sheet follows T; opposite sheet follows T^op.
+
+A sheet flip tau_v at each vertex sends
+  sigma_uv -> sigma_uv + tau_u + tau_v.
+The invariant data are triangle parities
+  p_abc = sigma_ab + sigma_bc + sigma_ac.
+
+LIFT FAMILY VERIFICATION
+================================================================================
+  transitive-3: gauges=2
+    tournament=True matching_blocks=True
+    score_hist={(2, 2, 2, 3, 3, 3): 2}
+    quotient_team_wins={(4, 4, 4): 2}
+    H over gauges: min=41 max=41 distinct=1 top=[(41, 2)]
+  cyclic-3: gauges=2
+    tournament=True matching_blocks=True
+    score_hist={(2, 2, 2, 3, 3, 3): 2}
+    quotient_team_wins={(4, 4, 4): 2}
+    H over gauges: min=41 max=45 distinct=2 top=[(41, 1), (45, 1)]
+  transitive-4: gauges=8
+    tournament=True matching_blocks=True
+    score_hist={(3, 3, 3, 3, 4, 4, 4, 4): 8}
+    quotient_team_wins={(6, 6, 6, 6): 8}
+    H over gauges: min=629 max=633 distinct=2 top=[(629, 6), (633, 2)]
+  transitive-5: gauges=64
+    tournament=True matching_blocks=True
+    score_hist={(4, 4, 4, 4, 4, 5, 5, 5, 5, 5): 64}
+    quotient_team_wins={(8, 8, 8, 8, 8): 64}
+    H over gauges: min=14937 max=15109 distinct=4 top=[(14937, 24), (14961, 8), (14973, 8), (15109, 24)]
+  cyclic-5: gauges=64
+    tournament=True matching_blocks=True
+    score_hist={(4, 4, 4, 4, 4, 5, 5, 5, 5, 5): 64}
+    quotient_team_wins={(8, 8, 8, 8, 8): 64}
+    H over gauges: min=14937 max=15565 distinct=9 top=[(14937, 4), (14973, 4), (15109, 16), (15201, 4), (15261, 4)]
+
+Lex contrast
+  transitive-5: block win counts={4: 10}
+    score=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    quotient_team_wins=(16, 12, 8, 4, 0)
+  cyclic-5: block win counts={4: 7, 0: 3}
+    score=(4, 4, 4, 4, 4, 5, 5, 5, 5, 5)
+    quotient_team_wins=(8, 8, 8, 8, 8)
+
+SYNTHESIS
+================================================================================
+Doubling vertices turns a tournament edge into a fiberwise double round robin.
+The old winner is not stored as a quotient score; every doubled pair ties 2-2.
+It is stored in which perfect matching of the 2x2 block carries the old edge.
+The hidden matching choices form a signed 2-lift; modulo sheet flips there are
+2^C(n-1,2) choices, the same cube dimension as fixed-base tournament tilings.

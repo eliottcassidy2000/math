@@ -16,6 +16,19 @@ Last reviewed: SYSTEM-2026-03-05-S1
 
 **Anti-automorphism** of T: a bijection α: V→V with T(α(u),α(v)) = T(v,u).
 
+**Double-round-robin vertex doubling**: a 2-fiber lift of a tournament `T`
+where every vertex `v` is replaced by `(v,0)->(v,1)`, and every base pair
+becomes a `2 x 2` block in which the base winner wins one perfect matching
+and the base loser wins the complementary perfect matching.  THM-378 proves
+that such doublings are exactly voltage lifts `D_sigma(T)` up to sheet labels:
+the all-zero voltage is the SC blowup, and sheet-flip gauge classes are
+classified by triangle parities.
+
+**SC blowup** `T_SC`: the all-zero double-round-robin vertex doubling.  For a
+base arc `u->v`, same-sheet arcs follow `T` (`u_0->v_0`, `u_1->v_1`) and
+cross-sheet arcs follow `T^op` (`v_0->u_1`, `v_1->u_0`), with internal arcs
+`v_0->v_1`.
+
 **Tournament Analysis**: the repo's general method of converting pairwise data
 on `n` objects into a tournament-valued observable.  The data are:
 

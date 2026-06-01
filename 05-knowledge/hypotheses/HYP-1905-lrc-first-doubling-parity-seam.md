@@ -4,6 +4,7 @@ status: OPEN
 source: codex-2026-05-31-S453
 related:
   - THM-371
+  - THM-378
   - HYP-1881
   - HYP-1890
   - HYP-1891
@@ -36,9 +37,11 @@ room without creating new unit witnesses.
 
 The tournament analogue is the first twin-gaining event.  An odd tournament has
 one unmatched vertex in a maximum matching; after doubling, that vertex gains a
-twin and creates the extra pair.  In the SC blowup, every base vertex becomes a
-strong/weak twin pair and all score variation collapses to the universal
-near-regular split.
+twin and creates the extra pair.  THM-378 refines the SC blowup into a
+double-round-robin voltage lift: every old edge becomes a `2 x 2` block where
+the winner and loser take complementary perfect matchings.  In the zero-voltage
+SC blowup, every base vertex becomes a strong/weak twin pair and all score
+variation collapses to the universal near-regular split.
 
 The proposed LRC proof move is:
 
@@ -85,6 +88,10 @@ independent of the base tournament.  Across all labelled `n=5` tournaments,
 the SC blowup concentrates Hamiltonian path counts in `14937..15565`, while
 lex blowup ranges across `1..15565`.
 
+S501c sharpens this: signed double-round-robin doublings have sheet-flip gauge
+classes classified by `binom(n-1,2)` triangle parity bits, matching the
+fixed-base tiling cube dimension.
+
 ## Predictions
 
 1. A proof for `n=14` should begin by treating `U(14)` as the odd-lift copy of
@@ -105,9 +112,13 @@ lex blowup ranges across `1..15565`.
 ## Sources
 
 - `01-canon/theorems/THM-371-first-doubling-unit-pair-seam.md`
+- `01-canon/theorems/THM-378-double-round-robin-vertex-doubling.md`
 - `04-computation/lrc_tournament_first_doubling_seam_s453.py`
+- `04-computation/double_round_robin_blowup_s501.py`
 - `05-knowledge/results/lrc_tournament_first_doubling_seam_s453.out`
+- `05-knowledge/results/double_round_robin_blowup_s501.out`
 - `07-reflections/lrc-tournament-first-doubling-seam-s453.md`
+- `07-reflections/double-round-robin-vertex-doubling-s501.md`
 - `07-reflections/adic-column-families.md`
 - `07-reflections/sc-blowup-and-twin-gaining.md`
 - HYP-1881

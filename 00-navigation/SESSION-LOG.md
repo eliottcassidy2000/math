@@ -43,6 +43,18 @@
 **Synthesis:** Added HYP-1963 and `07-reflections/goldbach-polygonal-zeckendorf-additive-bases-s501.md`. The central pattern refines HYP-1962 into a proof-currency trichotomy: Goldbach/Hardy-Littlewood/Helfgott use smoothing by many prime representations, Fermat polygonal numbers use bounded arity, and Zeckendorf uses a unique no-adjacent carry normal form. LRC bridge-fiber proof attempts likely need a bounded row certificate followed by a Zeckendorf/Ostrowski-style debt normal form.
 **Verification:** `python3 04-computation/additive_basis_goldbach_zeckendorf_s501.py` ran end-to-end and produced the stored output.
 
+## codex-2026-06-01-S501c - Double Round Robin Vertex Doubling Formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S491/S500 pressure and formalization work.
+**User prompt:** Spend a session formalizing; keep in mind double round robin tournaments and investigate them as what doubling vertices in a tournament does.
+**Repo archaeology:** Re-read the SC blowup/twin-gaining notes, THM-371 first-doubling seam, S453 tournament/LRC doubling script, and the Tournament Analysis definitions. The old thread had the SC zero-voltage case but not the full double-round-robin gauge family.
+**Computation:** Added `04-computation/double_round_robin_blowup_s501.py` and stored `05-knowledge/results/double_round_robin_blowup_s501.out`. The script classifies `2 x 2` fiber blocks, constructs signed double-round-robin lifts, verifies tournament/block/score properties, checks sheet-flip gauge normalization through `n=6`, and samples `H` variation over gauge classes.
+**Canonized:** Added THM-378 and definitions for double-round-robin vertex doubling and SC blowup. A doubled edge is a `2 x 2` block where the base winner wins one perfect matching and the base loser wins the complementary perfect matching. The all-zero voltage is SC blowup; sheet flips quotient voltages by `sigma_uv -> sigma_uv+tau_u+tau_v`; root triangle parities give `2^binom(n-1,2)` gauge classes.
+**Findings:** Quotient team scores tie completely: every old pair has record `2-2`, and clone scores are universally `(n-1)^n,n^n`. The old tournament data survives as hidden matching parity. For cyclic `n=5`, all 64 gauge classes have the same score and quotient team record but `H` ranges from `14937` to `15565`.
+**Synthesis:** Added `07-reflections/double-round-robin-vertex-doubling-s501.md` and tangents T580-T582. Vertex doubling should be read as a schedule/gauge lift: score sees the double round robin aggregate, while Hamiltonian paths see the voltage parity layer whose dimension matches the fixed-base tiling cube.
+**Verification:** `python3 -m py_compile 04-computation/double_round_robin_blowup_s501.py` succeeded; rerunning the script reproduced the stored output.
+
 ## codex-2026-06-01-S500 - Formalization pass for Tournament Analysis and LRC certificates
 
 **Account:** Codex

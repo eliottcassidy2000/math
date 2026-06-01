@@ -698,13 +698,13 @@ The first serious disproof-shaped pressure object is not a small scalar gap but 
 **T559** #lonely-runner #pressure-potential #non-scalar-order #two-neighbor | certainty: exact S500 diagnostic | source: codex-2026-06-01-S500
 Pressure DAGs are not merely nearest-distance rankings: pressure edges descend `d1` only about `69-76%` of the time in S500. The acyclic order is therefore a real two-neighbor relation residue, matching the ranker/analyzer split in Tournament Analysis.
 
-**T560** #lonely-runner #pressure-dag #peel-certificate #tournament-analysis | certainty: exact bounded audit | source: codex-2026-06-01-S491
+**T577** #lonely-runner #pressure-dag #peel-certificate #tournament-analysis | certainty: exact bounded audit | source: codex-2026-06-01-S491
 A pressure search returning a DAG is not null output. For S491's bounded windows on `n14 initial`, `n14 d=7,d=14`, `n18 initial`, and `n18 d=3,d=9,d=18`, every strict deletion-relief pressure graph was a DAG: cyclic count `0`, max SCC `1`, max pressure triangles `0`. See HYP-1961.
 
-**T561** #lonely-runner #pressure-layers #endpoint-private #dag-peeling | certainty: proof-route hypothesis | source: codex-2026-06-01-S491
+**T578** #lonely-runner #pressure-layers #endpoint-private #dag-peeling | certainty: proof-route hypothesis | source: codex-2026-06-01-S491
 Pressure DAGs give topological peel layers that should be matched to endpoint-private rows. Example source peels: `n14 d=7` has `{1,14,49}->{7,35,56,77,91}->{0,84}`; `n18 d=18` has `{1,36,90,162,270}->{18,54,126,180,198,288,306}->{0}`.
 
-**T562** #lonely-runner #pressure-scc #disproof-signal #search-priority | certainty: methodological filter | source: codex-2026-06-01-S491
+**T579** #lonely-runner #pressure-scc #disproof-signal #search-priority | certainty: methodological filter | source: codex-2026-06-01-S491
 The first disproof-like pressure signal should be a labelled SCC after private leaves are removed, not merely a smaller scalar gap. Acyclic pressure means dependencies can be sorted; cyclic pressure means every runner in the core blocks another in a closed loop requiring THM-365-style arithmetic labels.
 
 **T563** #additive-basis #goldbach #representation-hypergraph #normal-form | certainty: structural synthesis + computation | source: codex-2026-06-01-S494
@@ -748,6 +748,15 @@ Zeckendorf carry debt can be attached to a prime-pair edge by comparing endpoint
 
 **T576** #sc-blowup #twin-operation #pair-memory #score-flattening | certainty: theorem analogy | source: codex-2026-06-01-S502
 SC blowup is a finite tournament model of a twin operation: duplicate carriers, flatten vertex scores to `(n-1)^n,n^n`, but keep old pair memory in lane/cross edge labels. This matches the twin-prime reframing: the repeated relation type matters more than either endpoint alone.
+
+**T580** #tournaments #vertex-doubling #double-round-robin #sc-blowup | certainty: proved formalization | source: codex-2026-06-01-S501c
+Vertex doubling is a fiberwise double round robin when each old edge becomes a `2 x 2` block split into complementary perfect matchings. The old winner is not stored as quotient score; every old pair records `2-2`. It is stored in which perfect matching carries the old edge. See THM-378.
+
+**T581** #tournaments #voltage-lift #sheet-gauge #triangle-parity | certainty: proved gauge classification | source: codex-2026-06-01-S501c
+Signed double-round-robin doublings over a fixed labelled tournament are voltage lifts `D_sigma(T)`. Sheet flips send `sigma_uv` to `sigma_uv+tau_u+tau_v`; the complete invariants are root triangle parities `p_0ij`, giving exactly `2^binom(n-1,2)` gauge classes.
+
+**T582** #tournaments #h-count #score-collapse #hidden-parity | certainty: exact computation through selected gauges | source: codex-2026-06-01-S501c
+S501c shows score collapse does not mean path collapse: for cyclic `n=5`, all 64 double-round-robin gauge classes have score `(4^5,5^5)` and quotient team record `(8,8,8,8,8)`, but Hamiltonian path counts range from `14937` to `15565`.
 
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
