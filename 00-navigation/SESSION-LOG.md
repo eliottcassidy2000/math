@@ -38,6 +38,14 @@
 **BIRTH OF THE OPEN CASE:** inside debt (r>=3) is identically 0 at n=3 (triangle has NO diagonals; S526's order-2 Legendre fully solves it) and first switches on at n=4 (square's first interior chord). LRC reframed: signed inside-shell sum >= -(outside), equality only at regular polygon = Gauss/Kloosterman sqrt(n)-domination per shell; composite frontiers hard (shells share moduli, cf S17).
 **Artifacts:** `04-computation/lrc_polygon_inside_outside_s529.py` (+.out); reflection `07-reflections/polygon-outside-sides-inside-diagonals-and-lrc-resonance-debt-s529.md`; HYP-2007. **Handoff:** compute per-shell character sums for n=4,5 explicitly; test sqrt(n)-domination; push to composite n=14,16,18 where shells share moduli.
 
+## codex-2026-06-01-S529 - Polygon outside/inside arcs lens for LRC
+
+**Account:** Codex. **User prompt:** a tournament is a binary relation on a simplex but also related to regular polygons/dihedral group; think how the outside of the regular polygon relates to hidden inside arcs and LRC.
+**Synthesis:** Added `04-computation/lrc_polygon_outside_inside_s529.py` and stored `05-knowledge/results/lrc_polygon_outside_inside_s529.out`. The script formalizes the distinction: simplex view has `C(m,2)` independent-looking binary edges; polygon view has an outside cyclic gap necklace whose consecutive interval sums determine all hidden inside chord orientations. The dihedral group acts on the outside necklace; inside chords split into chord-length channels.
+**LRC application:** the observer is a clasp vertex. Source is an outside condition on the two clasp-adjacent gaps, while the runner tournament inside is shadow data except at boundary walls. For the `n=14` AP/regular-polygon witness, outside gaps are all `1/14`; deleting the clasp leaves `78` hidden runner chords split into `D_14` channels `12,12,12,12,12,12,6`, with `6` hidden diameter ties. This explains why the AP witness is a compactified wall, not an open round body state.
+**New HYP-2009/T626:** LRC should be framed as outside clasp-gap forcing plus hidden chord-channel endpoint debt, complementing the HYP-2008 apex/source-sink arc. HYP-2003's "wall-only => AP" becomes: only the regular outside necklace can keep the clasp closed while its inside chord-channel debts remain dihedrally balanced. Reflection: `07-reflections/lrc-polygon-outside-inside-arcs-s529.md`.
+**Verification:** `python3 -m py_compile 04-computation/lrc_polygon_outside_inside_s529.py`; full script rerun with output stored.
+
 ## oracle-2026-06-01-S528 - Formalizing the proven LRC cases in Lean: all-n no-multiple + n=2 + n=3 sieve cover (machine-checked, axiom-clean)
 
 **Account:** Oracle (oraclebox1). **User prompt:** please try to formalize these and extend proofs to as high n as possible.
