@@ -1,0 +1,51 @@
+Finite Gabor trienerments for LRC -- codex S542
+==============================================================================
+Atoms are (two-sector window a, harmonic m).
+Observer lonely in sectors iff the observer Gabor column is all zero.
+Edges: phase half-turn order; ties: zero/unresolved or same atom-angle cell.
+
+GLOBAL SECTOR-VECTOR IMAGE
+------------------------------------------------------------------------------
+n=3: raw=6 raw_dihedral_orbits=2 Gabor scaffold-classes=5
+     good_raw=1 good_Gabor_classes=1 observer_zero_atoms_hist=((0, 5), (3, 1))
+     Gabor tie range all=(6, 36) good=(24, 24)
+n=4: raw=20 raw_dihedral_orbits=4 Gabor scaffold-classes=18
+     good_raw=4 good_Gabor_classes=4 observer_zero_atoms_hist=((0, 14), (1, 2), (4, 4))
+     Gabor tie range all=(24, 120) good=(66, 104)
+n=5: raw=70 raw_dihedral_orbits=10 Gabor scaffold-classes=44
+     good_raw=15 good_Gabor_classes=11 observer_zero_atoms_hist=((0, 55), (5, 15))
+     Gabor tie range all=(30, 300) good=(120, 260)
+n=6: raw=252 raw_dihedral_orbits=26 Gabor scaffold-classes=178
+     good_raw=56 good_Gabor_classes=37 observer_zero_atoms_hist=((0, 172), (1, 24), (6, 56))
+     Gabor tie range all=(72, 630) good=(252, 594)
+
+FIXED-CLOCK MENUS
+------------------------------------------------------------------------------
+n=4, B<=10: speed_sets=109 open_good=108 wall_only=1 missing=0
+     Gabor classes seen=18/18 good seen=4/4
+     menu classes min/avg/max=12/16.66/18; runner-tie vs Gabor-tie corr=0.510
+     avg Gabor ties: observer-tie-free=73.3, observer-tied=58.4
+     AP row: {'menu_classes': 12, 'open_good': False, 'closed': True}
+n=5, B<=8: speed_sets=69 open_good=67 wall_only=2 missing=0
+     Gabor classes seen=44/44 good seen=11/11
+     menu classes min/avg/max=20/32.71/41; runner-tie vs Gabor-tie corr=0.706
+     avg Gabor ties: observer-tie-free=148.4, observer-tied=97.9
+     AP row: {'menu_classes': 22, 'open_good': False, 'closed': True}
+n=6, B<=7: speed_sets=21 open_good=20 wall_only=1 missing=0
+     Gabor classes seen=135/178 good seen=22/37
+     menu classes min/avg/max=36/58.86/74; runner-tie vs Gabor-tie corr=0.754
+     avg Gabor ties: observer-tie-free=304.3, observer-tied=252.3
+     AP row: {'menu_classes': 40, 'open_good': False, 'closed': True}
+
+INTERPRETATION
+------------------------------------------------------------------------------
+1. HYP-2028 survives the lift: every sector-vector gives a finite
+   Gabor trienerment, so global existence is still not the obstruction.
+2. The LRC target becomes sharper: not a favorite sector vector, but a
+   marked zero column in the two-sector Gabor atom grid.
+3. Runner trienerments and Gabor trienerments use ties oppositely:
+   observer loneliness deletes real near-ties, while it creates a large
+   unresolved zero block among observer-window Gabor atoms.
+4. The bounded fixed-clock menus see only part of the global Gabor-class
+   image, so the Gabor angle is useful only as a fixed-clock menu/fiber
+   restriction, not as global realizability.
