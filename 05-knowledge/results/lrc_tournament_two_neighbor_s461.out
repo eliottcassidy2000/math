@@ -1,0 +1,85 @@
+================================================================================================
+LRC TOURNAMENT AND TWO-NEIGHBOR LIFT
+================================================================================================
+codex-2026-05-31-S461
+
+[initial n=14]
+  n=14 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  classification=boundary_only threshold=1/14 unique_endpoints=176 unprotected=6 first_witness=1/14
+  endpoint_state_hist={'redundant_handoff': 42, 'single_handoff': 128, 'witness': 6}
+  handoff_scc_sizes=(12, 1) owner_out_hist={2: 1, 3: 1, 5: 1, 7: 2, 10: 1, 11: 2, 12: 4} protector_in_hist={4: 1, 5: 1, 6: 3, 7: 1, 8: 1, 9: 2, 10: 1, 11: 2, 12: 1}
+  majority_handoff_pairs decisive=78 ties=0 directed_3cycles=0
+
+[n14 seven-ladder]
+  n=14 speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  classification=positive_gap threshold=1/14 unique_endpoints=1150 unprotected=84 first_witness=9/98
+  endpoint_state_hist={'redundant_handoff': 356, 'single_handoff': 710, 'witness': 84}
+  handoff_scc_sizes=(13,) owner_out_hist={1: 1, 3: 1, 4: 1, 5: 1, 6: 1, 8: 1, 10: 1, 11: 2, 12: 4} protector_in_hist={5: 1, 6: 3, 7: 2, 8: 1, 9: 2, 10: 1, 11: 2, 12: 1}
+  majority_handoff_pairs decisive=78 ties=0 directed_3cycles=0
+
+[n14 S380 gate ladder]
+  n=14 speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  classification=positive_gap threshold=1/14 unique_endpoints=2298 unprotected=168 first_witness=15/196
+  endpoint_state_hist={'redundant_handoff': 710, 'single_handoff': 1420, 'witness': 168}
+  handoff_scc_sizes=(13,) owner_out_hist={1: 1, 3: 1, 4: 1, 6: 1, 8: 1, 10: 1, 11: 2, 12: 5} protector_in_hist={5: 1, 6: 1, 7: 3, 8: 1, 9: 2, 10: 1, 11: 2, 12: 2}
+  majority_handoff_pairs decisive=78 ties=0 directed_3cycles=0
+
+[initial n=16]
+  n=16 speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15)
+  classification=boundary_only threshold=1/16 unique_endpoints=232 unprotected=8 first_witness=1/16
+  endpoint_state_hist={'redundant_handoff': 60, 'single_handoff': 164, 'witness': 8}
+  handoff_scc_sizes=(14, 1) owner_out_hist={2: 1, 3: 1, 5: 1, 7: 2, 11: 3, 12: 2, 14: 4} protector_in_hist={6: 2, 7: 4, 8: 1, 9: 2, 10: 1, 11: 2, 12: 1, 13: 1, 14: 1}
+  majority_handoff_pairs decisive=105 ties=0 directed_3cycles=0
+
+initial n=14: two-neighbor endpoint samples
+------------------------------------------------------------------------------------------------
+  witness
+    t=1/14 state=witness owners=(1, 13) inside=() on=(1, 13) nearest=1/14 second=1/7 left=13@1/14 right=1@1/14
+    t=3/14 state=witness owners=(5, 9) inside=() on=(5, 9) nearest=1/14 second=1/7 left=9@1/14 right=5@1/14
+    t=5/14 state=witness owners=(3, 11) inside=() on=(3, 11) nearest=1/14 second=1/7 left=11@1/14 right=3@1/14
+    t=9/14 state=witness owners=(3, 11) inside=() on=(3, 11) nearest=1/14 second=1/7 left=3@1/14 right=11@1/14
+  single_handoff
+    t=1/28 state=single_handoff owners=(2,) inside=(1,) on=(2,) nearest=1/28 second=1/14 left=none right=1@1/28
+    t=13/168 state=single_handoff owners=(12,) inside=(13,) on=(12,) nearest=1/168 second=1/14 left=12@1/14 right=13@1/168
+    t=15/182 state=single_handoff owners=(13,) inside=(12,) on=(13,) nearest=1/91 second=1/14 left=12@1/91 right=13@1/14
+    t=13/154 state=single_handoff owners=(11,) inside=(12,) on=(11,) nearest=1/77 second=1/14 left=11@1/14 right=12@1/77
+  redundant_handoff
+    t=1/182 state=redundant_handoff owners=(13,) inside=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) on=(13,) nearest=1/182 second=1/91 left=none right=1@1/182
+    t=1/168 state=redundant_handoff owners=(12,) inside=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11) on=(12,) nearest=1/168 second=1/84 left=none right=1@1/168
+    t=1/154 state=redundant_handoff owners=(11,) inside=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10) on=(11,) nearest=1/154 second=1/77 left=none right=1@1/154
+    t=1/140 state=redundant_handoff owners=(10,) inside=(1, 2, 3, 4, 5, 6, 7, 8, 9) on=(10,) nearest=1/140 second=1/70 left=none right=1@1/140
+
+n14 S380 gate ladder: two-neighbor endpoint samples
+------------------------------------------------------------------------------------------------
+  witness
+    t=15/196 state=witness owners=(14, 182) inside=() on=(14, 182) nearest=1/14 second=15/196 left=182@1/14 right=14@1/14
+    t=211/2548 state=witness owners=(182,) inside=() on=(182,) nearest=1/14 second=211/2548 left=168@8/91 right=182@1/14
+    t=65/784 state=witness owners=(168,) inside=() on=(168,) nearest=1/14 second=65/784 left=168@1/14 right=1@65/784
+    t=197/2352 state=witness owners=(168,) inside=() on=(168,) nearest=1/14 second=197/2352 left=154@17/168 right=168@1/14
+  single_handoff
+    t=1/196 state=single_handoff owners=(14, 182) inside=(1,) on=(14, 182) nearest=1/196 second=1/14 left=182@1/14 right=1@1/196
+    t=29/2548 state=single_handoff owners=(182,) inside=(1,) on=(182,) nearest=29/2548 second=1/14 left=168@8/91 right=1@29/2548
+    t=9/784 state=single_handoff owners=(168,) inside=(1,) on=(168,) nearest=9/784 second=1/14 left=168@1/14 right=1@9/784
+    t=29/2352 state=single_handoff owners=(168,) inside=(1,) on=(168,) nearest=29/2352 second=1/14 left=154@17/168 right=1@29/2352
+  redundant_handoff
+    t=1/2548 state=redundant_handoff owners=(182,) inside=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168) on=(182,) nearest=1/2548 second=1/182 left=none right=1@1/2548
+    t=1/2352 state=redundant_handoff owners=(168,) inside=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154) on=(168,) nearest=1/2352 second=1/168 left=none right=1@1/2352
+    t=1/2156 state=redundant_handoff owners=(154,) inside=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140) on=(154,) nearest=1/2156 second=1/154 left=none right=1@1/2156
+    t=1/1960 state=redundant_handoff owners=(140,) inside=(1, 14, 28, 42, 56, 70, 98, 112, 126) on=(140,) nearest=1/1960 second=1/140 left=none right=1@1/1960
+
+initial n=14: round-tournament probe at first witness t=1/14
+------------------------------------------------------------------------------------------------
+  stationary two-sided neighbors: left=13@1/14 right=1@1/14
+  top semicircle scores including stationary runner: ((0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6), (6, 6), (7, 6))
+
+n14 seven-ladder: round-tournament probe at first witness t=9/98
+------------------------------------------------------------------------------------------------
+  stationary two-sided neighbors: left=21@1/14 right=77@1/14
+  top semicircle scores including stationary runner: ((0, 7), (1, 7), (21, 7), (77, 7), (7, 6), (14, 6), (35, 6), (56, 6))
+
+S461 synthesis
+================================================================================================
+Nearest-runner distance is the scalar shadow.  The endpoint proof object starts when we also remember which runner is second at a boundary and which side of the stationary runner each blocker occupies.
+At an LRC endpoint, a full cover needs a strict inside runner while an owner sits exactly on the threshold.  That is a handoff, not a pointwise minimum.  Handoff data naturally forms a labelled directed graph and a pairwise protection-dominance tournament shadow.
+The useful tournament import is therefore not arbitrary tournaments of speed sets.  It is good-cut/SCC technology for handoff cores, plus Omega-style conflict graphs for compatible repair packets.
+Zeckendorf enters at the next layer: if the handoff core quotients to a path-like carry graph, adjacent repairs are illegal and the residual endpoint debt has a no-adjacent normal form.

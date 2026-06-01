@@ -563,6 +563,27 @@ The complete pairwise LRC lift has `binom(n,2)=T_{n-1}` distance coordinates, ex
 **T506** #lonely-runner #chamber-automaton #safe-gap-mask #edge-cover | certainty: proof-program target | source: codex-2026-05-31-S452
 Between runner collisions, circular order is fixed and gaps are affine; collisions perform adjacent swaps. A counterexample would force, in every chamber, unsafe gaps to form an edge cover of `C_n` (equivalently safe gaps remain independent). Proposed proof target: build the chamber automaton and use endpoint rows as a Hall/Farkas obstruction to maintaining this edge cover without exported debt.
 
+**T510** #lonely-runner #pairwise-distances #circular-tournaments #antipodal-ties | certainty: exact time-slice construction | source: codex-2026-05-31-S470
+At any time `t`, runners `{0} union V` define an incomplete circular tournament by orienting pairs through the open clockwise semicircle. Unit skeletons show the even/odd split directly: `n=14` has `7` antipodal missing arcs at `t=1/14`, `n=16` has `8`, while `n=15` has none.
+
+**T511** #lonely-runner #two-nearest-neighbors #pressure-graph #peeling | certainty: exact construction, open proof use | source: codex-2026-05-31-S470
+Use the two nearest runners with multiplicity to define deletion relief `relief_i(j)`. Orient `j -> i` when deleting `j` improves `i`'s nearest moat more than the reverse. This blocker-pressure graph is an incomplete tournament whose leaves may become private endpoint/runner peel certificates. See HYP-1930.
+
+**T512** #lonely-runner #n14 #near-counterexamples #pressure-dag | certainty: computational on sampled critical rows | source: codex-2026-05-31-S470
+The n=14 seven-ladder and S380 gate-ladder critical rows have no strict pressure SCC and no strict pressure triangles in the sampled endpoint/gap times. Known near-misses therefore look pressure-peelable, not cyclic, despite tiny origin gaps.
+
+**T513** #lonely-runner #endpoint-cycles #tournament-protection #mobile-core | certainty: medium proof route | source: codex-2026-05-31-S470
+Pair THM-365 endpoint cycles with mobile pressure cycles: if a branch has no strict pressure SCC, peel a private leaf; if an SCC survives, label pressure arcs by speeds/residues/slack and try to rule it out as an arithmetic endpoint cycle.
+
+**T514** #lonely-runner #two-neighbor #endpoint-handoff #tournament-cuts | certainty: exact endpoint audit, open proof route | source: codex-2026-05-31-S461
+The scalar nearest-runner minimum hides the handoff: at an endpoint, an owner is exactly at threshold while strict protectors may sit inside. Keeping left/right nearest runners and second distinct distance turns endpoint protection into a labelled handoff graph, the LRC analogue of tournament good-cut protection.
+
+**T515** #lonely-runner #speed-tournament #projection-loss | certainty: exact in audited rows | source: codex-2026-05-31-S461
+For initial `n=14`, the seven-ladder, S380, and initial `n=16`, the pairwise speed-level protection-majority tournament is complete and transitive. Thus tournament structure is not useful after compressing to speeds alone; labels, endpoint sides, slack, and second-neighbor data are essential.
+
+**T516** #zeckendorf #ostrowski #nonconsecutivity #lrc-braid | certainty: structural synthesis | source: codex-2026-05-31-S461
+Zeckendorf non-consecutivity comes from rank-two recurrence plus local carry confluence: adjacent active digits carry to the next layer. The LRC analogue should be a left/right endpoint-handoff braid; adjacent repairs cannot coexist if the residual handoff core quotients to a path-like carry graph.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

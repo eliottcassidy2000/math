@@ -29,6 +29,28 @@
 **Synthesis:** Added HYP-1895 and `07-reflections/lrc-distance-tournament-two-neighbor-s22.md`. The proposed tournament reframe is a marked circular-order flow: every time state gives a circular tournament completion, and a counterexample must keep at least one of the two stationary bracket gaps below threshold in every order state while also paying endpoint and coarse divisor invoices.
 **Verification:** `python3 -m py_compile 04-computation/lrc_distance_tournament_lens_s22.py` succeeded; the script ran end-to-end and produced the stored output.
 
+## codex-2026-05-31-S470 - LRC Pairwise Distance Tournaments
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S460.
+**User prompt:** Explore how tournament structure may show up in LRC attempt routes, especially by keeping extra data about pairwise runner distances or the two nearest neighbors instead of only one.
+**Repo archaeology:** Re-read the exact LRC quotient-gap/endpoint machinery (S356/S360), the S386 labelled endpoint-cycle/tournament-protection bridge, the S359 distance-graph coloring note, and recent n=14/Zeckendorf gate-fan work.
+**Computation:** Added `04-computation/lrc_pairwise_tournament_s470.py` and stored `05-knowledge/results/lrc_pairwise_tournament_s470.out`. The script samples exact endpoint/gap times and builds two time-slice objects on runners `{0} union V`: a semicircle incomplete circular tournament, and a two-nearest-neighbor blocker-pressure graph where arcs point from the more irreplaceable blocker to the more blocked runner.
+**Findings:** The two-nearest correction matters: tight unit skeletons have `d1,d2=(1,1)` in threshold units, not a single scalar moat. Even-denominator unit rows expose incomplete circular tournaments through antipodal ties (`7` at `n=14`, `8` at `n=16`), while `n=15` has no antipodal ties. In every selected n=14 seven-ladder/S380 critical row, the strict pressure graph had largest SCC `1` and `0` directed triangles, so known near-misses look pressure-peelable rather than cyclic.
+**Synthesis:** Added HYP-1930 and `07-reflections/lrc-pairwise-distance-tournaments-s470.md`. Proposed proof target: combine endpoint-core peeling with pressure peeling; if no strict pressure SCC appears, extract a private endpoint/runner leaf, and if a strict SCC appears, label its arcs and kill it by the THM-365 arithmetic endpoint-cycle constraint.
+**Verification:** `python3 -m py_compile 04-computation/lrc_pairwise_tournament_s470.py` succeeded; the script ran end-to-end and produced the stored output.
+
+## codex-2026-05-31-S461 - LRC Two-Neighbor Handoff Tournament
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S460.
+**User prompt:** Explore creative routes where tournament structure may enter LRC, including pairwise distances, two nearest neighbors rather than one, usual-methodology reframes, and the Zeckendorf non-consecutivity mechanism.
+**Repo archaeology:** Re-read S386 labelled endpoint cycles, THM-357 endpoint protection, S376 recursive metrics, S440 n=14 gate fan tax, S450 analogy atlas, S451 Zeckendorf normal form, and S460 Zeckendorf-shell gate-cover work.
+**Computation:** Added `04-computation/lrc_tournament_two_neighbor_s461.py` and stored `05-knowledge/results/lrc_tournament_two_neighbor_s461.out`. The script records, for each forbidden endpoint, left/right nearest runners, second distinct nearest distance, threshold owners, strict protectors, endpoint handoff states, speed-level handoff SCCs, and pairwise protection-dominance tournament shadows.
+**Findings:** In audited rows, speed-level protection-majority tournaments are complete and transitive, so the compressed speed tournament is too coarse. The labelled endpoint handoff graph retains the boundary data: initial `n=14` has `128` single handoffs and `6` witnesses; the seven-ladder has `710` single handoffs and `84` witnesses; S380 has `1420` single handoffs and `168` witnesses.
+**Synthesis:** Added HYP-1921 and `07-reflections/lrc-tournament-two-neighbor-lift-s461.md`. Proposed target: use two-neighbor endpoint handoffs as the LRC analogue of tournament good-cut protection, then build an LRC Omega graph whose vertices are labelled handoff packets. Zeckendorf non-consecutivity is interpreted as rank-two local carry confluence; in LRC the two strands are left/right endpoint handoffs.
+**Verification:** `python3 -m py_compile 04-computation/lrc_tournament_two_neighbor_s461.py` succeeded; the script ran end-to-end and produced the stored output.
+
 ## codex-2026-05-31-S460 - LRC Zeckendorf Shell Bridge
 
 **Account:** Codex

@@ -1,0 +1,83 @@
+codex-2026-05-31-S470
+LRC pairwise distance tournaments and two-neighbor blocker pressure
+
+PAIRWISE TOURNAMENT REFRAMES
+================================================================================================
+1. Semicircle orientation: positions at time t define an incomplete circular
+   tournament.  Missing arcs are exactly collisions or antipodal ties.
+2. Two-neighbor pressure: i -> j means i is the more irreplaceable blocker
+   of j's nearest-neighbor moat.  This turns first/second-nearest data into
+   a labelled incomplete tournament, not just a scalar min-distance ledger.
+3. A pressure SCC is the mobile analogue of a protected endpoint core: no
+   runner in the component can be peeled without immediately changing
+   someone else's local moat.
+
+[initial n=14]
+  note=tight boundary row; origin sees the perfectly spaced unit skeleton
+  n=14 threshold=1/14 classification=boundary_only gap/th=0 boundary_witnesses=6 sampled_times=178
+  tag                  t              origin d1,d2   best speed d1,d2   nn uniq/mut   pressure arcs/ties tri scc src/sink   half ties width tri
+  origin boundary                1/14     1,1         0     1,1       0/14     0/91     0   1   0/0    0+7    0   70
+  best mobile d1                 5/42   2/3,1         6   5/3,5/3    12/7      2/89     0   1   2/2    0+0    3  104
+  max pressure core            29/154  9/11,1         4  9/11,20/11  10/9      8/83     0   1   4/8    0+0    3  108
+  max semicircle cycles         13/168  1/12,1         2 13/12,13/12   4/10     2/89     0   1   2/2    0+0    1  112
+
+[n14 seven-ladder]
+  note=classic near-disproof ladder with gap/th=5/924
+  n=14 threshold=1/14 classification=positive_gap gap/th=5/924 boundary_witnesses=84 sampled_times=1177
+  tag                  t              origin d1,d2   best speed d1,d2   nn uniq/mut   pressure arcs/ties tri scc src/sink   half ties width tri
+  origin gap mid           3053/25872 29/24,27/22     0 29/24,27/22  13/6      7/84     0   1   3/5    0+0    3  110
+  origin boundary                9/98     1,1        21     1,2       5/10     4/87     0   1   3/4    0+6    2   73
+  best mobile d1             545/1274  1/13,2/13      1 545/91,552/91   5/11     5/86     0   1   4/4    0+0   13    0
+  max pressure core          279/1078  9/11,1         7     1,18/11  11/7     10/81     0   1   4/8    0+0    3  110
+  max semicircle cycles        85/1176   1/6,1/3       0   1/6,1/3     7/10     6/85     0   1   5/6    0+0    1  112
+
+[n14 S380 gate ladder]
+  note=gate-heavy composite-denominator anomaly with doubled endpoint debt
+  n=14 threshold=1/14 classification=positive_gap gap/th=5/1848 boundary_witnesses=168 sampled_times=2349
+  tag                  t              origin d1,d2   best speed d1,d2   nn uniq/mut   pressure arcs/ties tri scc src/sink   half ties width tri
+  origin gap mid           4339/51744 4339/3696,29/24     0 4339/3696,29/24  13/7      6/85     0   1   4/6    0+0    3  106
+  origin boundary              15/196     1,1        70     1,2       5/10     4/87     0   1   3/4    0+6    2   72
+  best origin d1           6749/51744 29/24,27/22     0 29/24,27/22  13/6      8/83     0   1   4/6    0+0    3  110
+  best mobile d1                  1/2     0,0         1     7,7       0/78     0/91     0   1   0/0   78+13   0    0
+  max pressure core          195/2156 10/11,1       140 20/11,21/11  11/6     10/81     0   1   4/6    0+0    3  102
+  max semicircle cycles        85/2352   1/6,1/3       0   1/6,1/3     7/10     6/85     0   1   5/6    0+0    1  112
+
+[initial n=15]
+  note=odd-denominator baseline beside the n=14 composite anomaly
+  n=15 threshold=1/15 classification=boundary_only gap/th=0 boundary_witnesses=8 sampled_times=204
+  tag                  t              origin d1,d2   best speed d1,d2   nn uniq/mut   pressure arcs/ties tri scc src/sink   half ties width tri
+  origin boundary                1/15     1,1         0     1,1       0/15     0/105    0   1   0/0    0+0    0  140
+  best mobile d1               16/135   7/9,1         7  16/9,16/9   14/7      2/103    0   1   2/2    0+0    2  134
+  max pressure core            31/165 10/11,1         4 10/11,20/11  10/10    10/95     0   1   5/10   0+0    2  137
+
+[initial n=16]
+  note=pure dyadic baseline with a unique local gate-fan cover in older sessions
+  n=16 threshold=1/16 classification=boundary_only gap/th=0 boundary_witnesses=8 sampled_times=234
+  tag                  t              origin d1,d2   best speed d1,d2   nn uniq/mut   pressure arcs/ties tri scc src/sink   half ties width tri
+  origin boundary                1/16     1,1         0     1,1       0/16     0/120    0   1   0/0    0+8    0  112
+  best mobile d1               17/160  7/10,1         7 17/10,17/10  14/8      2/118    0   1   2/2    0+0    3  158
+  max pressure core             11/64   1/2,1         5   1/2,9/4    12/10    10/110    0   1   6/10   0+0    1  168
+  max semicircle cycles         15/224  1/14,1         2 15/14,15/14   4/12     2/118    0   1   2/2    0+0    1  168
+
+SYNTHESIS
+================================================================================================
+The origin-only LRC ledger forgets two pieces of structure:
+* whether the tight runner has one blocker or a two-sided pair of blockers;
+* whether blocker dependence peels like a DAG or closes into an SCC.
+
+For a proof search, the useful invariant is not just max_i d1(i).
+Keep the ordered pair (d1(i), d2(i)) and the deletion relief
+  relief_i(j) = nearest_i(after deleting j) - nearest_i.
+Those reliefs form an incomplete tournament whose cyclic core can be
+compared directly with the old endpoint-protection core.
+
+A concrete n=14 target suggested by this pass:
+  Any attempted all-protected endpoint row should induce either
+  (a) a pressure leaf, giving a private runner/endpoint to peel, or
+  (b) a strict pressure SCC whose labels must satisfy the same kind of
+      arithmetic cycle constraint as THM-365's endpoint cycles.
+
+The second-nearest runner distance is the missing datum.  Without it,
+deleting a nearest neighbor has no measurable relief, so nearest-neighbor
+graphs alone cannot distinguish a rigid two-sided moat from a fragile
+one-blocker moat.
