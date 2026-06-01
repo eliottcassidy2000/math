@@ -53,7 +53,7 @@ The time-reversal symmetry t → 1-t swaps g_left ↔ g_right, giving
 
     μ(LL) = 1 - μ(LS) - μ(SL) - μ(SS) = 1 - 2μ(LS) - μ(SS)
 
-So μ(LL) > 0 iff μ(LS) + μ(SS)/2 < 1/2.  The exhaustive data shows:
+So μ(LL) > 0 iff μ(LS) + μ(SS)/2 < 1/2.  The bounded exact data shows:
 - μ(LS) is typically 0.40-0.47 at small n
 - μ(SS) is typically 0.05-0.20
 - μ(LL) is typically 0.10-0.12 (except initial segments where μ(LL) = 0)

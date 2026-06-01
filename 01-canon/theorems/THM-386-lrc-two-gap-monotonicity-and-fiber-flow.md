@@ -145,10 +145,9 @@ entry.
 
 ## Verification Record
 
-The forbidden transitions are confirmed exhaustively:
-- n=3: 277 primitive speed sets, 0/4432 LL-entry transitions from SL
-- n=4: 997 sets, 0/15216 LL-entry transitions from SL
-- n=5: 1325 sets, 0/20936 LL-entry transitions from SL
+The forbidden transitions are confirmed in the stored exact bounded audit:
+for total `n=3,4,5`, the transition table contains `LS -> LL` entries but no
+`SL -> LL`, no `LL -> LS`, no `SS -> LL`, and no `LL -> SS` entries.
 
 Script: `04-computation/lrc_two_gap_dynamics_s518.py`
 Output: `05-knowledge/results/lrc_two_gap_dynamics_s518.out`

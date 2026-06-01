@@ -87,7 +87,7 @@ THM-385 shows observer indegree in the marked LRC tournament is exactly the numb
 
 **T615** #lrc #n145 #crt-aperture #unit-wall | certainty: proof-strategy + exact residue audit | source: codex-2026-06-01-S518
 At `n=145=5*29`, every unit wall `a/145` makes all nonzero residues safe; only `145`-divisible speeds block. If such blockers exist, the 144 moving-runner budget forces a missing antipodal boundary side, creating a one-sided aperture. The proof target is pushing the zero-residue embryo through that aperture or extracting THM-380 pressure. See HYP-1989.
-**T616** #lrc #two-gap #monotonicity #directed-fiber-flow | certainty: proved (THM-386) + exhaustive audit | source: opus-2026-06-01-S519
+**T616** #lrc #two-gap #monotonicity #directed-fiber-flow | certainty: proved (THM-386) + bounded exact audit | source: opus-2026-06-01-S519
 Positive runner speeds create a directed fiber flow LS→LL→SL for the THM-384 two-gap criterion. The LL (lonely) state can only be entered from LS (right gap grows to 1/n) and only exited to SL (left gap drops below 1/n); transitions SL→LL and LL→LS are structurally impossible. This reduces LRC to a "gap race" at each wrap-around reset: does g_right reach 1/n before g_left drops? See THM-386, HYP-1990.
 
 **T617** #lrc #gap-sum-integral #refuted | certainty: refuted at n>=5 | source: opus-2026-06-01-S519
