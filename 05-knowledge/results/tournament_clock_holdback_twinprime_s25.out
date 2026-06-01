@@ -1,0 +1,75 @@
+Holdback / twin primes / LRC via the tournament clock (oracle-S25)
+
+======================================================================
+A. The extremal axis: consecutive integers vs primes vs twin primes
+======================================================================
+[consecutive 1..7 (LRC-extremal)] speeds=(1, 2, 3, 4, 5, 6, 7)
+   pairs=21 distinct_diffs=6  (Sidon-ratio=6/21)  min_diff=1 => MAX holdback=1/2
+   consecutive(d=1) edges=6   twin(d=2) edges=5
+   LRC mod-cover: covered(anti-adm)=[2, 3, 4, 5, 6, 7]  missed(adm->lonely t=1/m)=[]
+   LRC gap=0 thr=1/8 forbidden_len=1  -> tight/boundary
+
+[primes <=17 (7 of them)] speeds=(2, 3, 5, 7, 11, 13, 17)
+   pairs=21 distinct_diffs=13  (Sidon-ratio=13/21)  min_diff=1 => MAX holdback=1/2
+   consecutive(d=1) edges=1   twin(d=2) edges=3
+   LRC mod-cover: covered(anti-adm)=[2, 3, 5, 7]  missed(adm->lonely t=1/m)=[4, 6]
+   LRC gap=7/374 thr=1/8 forbidden_len=2268/2431  -> LONELY easy (positive gap)
+
+[odd primes 3..19 (7)] speeds=(3, 5, 7, 11, 13, 17, 19)
+   pairs=21 distinct_diffs=8  (Sidon-ratio=8/21)  min_diff=2 => MAX holdback=1/4
+   consecutive(d=1) edges=0   twin(d=2) edges=4
+   LRC mod-cover: covered(anti-adm)=[3, 5, 7]  missed(adm->lonely t=1/m)=[2, 4, 6]
+   LRC gap=3/76 thr=1/8 forbidden_len=45971/50388  -> LONELY easy (positive gap)
+
+[twin-prime members (7)] speeds=(3, 5, 11, 13, 17, 19, 29)
+   pairs=21 distinct_diffs=11  (Sidon-ratio=11/21)  min_diff=2 => MAX holdback=1/4
+   consecutive(d=1) edges=0   twin(d=2) edges=3
+   LRC mod-cover: covered(anti-adm)=[3, 5]  missed(adm->lonely t=1/m)=[2, 4, 6, 7]
+   LRC gap=3/116 thr=1/8 forbidden_len=14123375/16073772  -> LONELY easy (positive gap)
+
+[a pure twin cluster 3,5 / 11,13 / 17,19 / 29 (=7)] speeds=(3, 5, 11, 13, 17, 19, 29)
+   pairs=21 distinct_diffs=11  (Sidon-ratio=11/21)  min_diff=2 => MAX holdback=1/4
+   consecutive(d=1) edges=0   twin(d=2) edges=3
+   LRC mod-cover: covered(anti-adm)=[3, 5]  missed(adm->lonely t=1/m)=[2, 4, 6, 7]
+   LRC gap=3/116 thr=1/8 forbidden_len=14123375/16073772  -> LONELY easy (positive gap)
+
+======================================================================
+B. Synchrony: equal differences flip in lockstep (clock complexity)
+======================================================================
+ #distinct differences controls how many independent flip-rhythms the
+ clock has. Arithmetic progressions (all diffs multiples of a gap) and
+ twin clusters (many d=2) synchronise; Sidon sets maximise complexity.
+
+[AP gap 1: 1..7] speeds=(1, 2, 3, 4, 5, 6, 7)
+   pairs=21 distinct_diffs=6  (Sidon-ratio=6/21)  min_diff=1 => MAX holdback=1/2
+   consecutive(d=1) edges=6   twin(d=2) edges=5
+   LRC mod-cover: covered(anti-adm)=[2, 3, 4, 5, 6, 7]  missed(adm->lonely t=1/m)=[]
+   LRC gap=0 thr=1/8 forbidden_len=1  -> tight/boundary
+
+[AP gap 3: 3,6,9,12,15,18,21] speeds=(3, 6, 9, 12, 15, 18, 21)
+   pairs=21 distinct_diffs=6  (Sidon-ratio=6/21)  min_diff=3 => MAX holdback=1/6
+   consecutive(d=1) edges=0   twin(d=2) edges=0
+   LRC mod-cover: covered(anti-adm)=[2, 3, 4, 5, 6, 7]  missed(adm->lonely t=1/m)=[]
+   LRC gap=0 thr=1/8 forbidden_len=1  -> tight/boundary
+
+[Sidon-ish 1,2,5,11,22,33,50] speeds=(1, 2, 5, 11, 22, 33, 50)
+   pairs=21 distinct_diffs=18  (Sidon-ratio=18/21)  min_diff=1 => MAX holdback=1/2
+   consecutive(d=1) edges=1   twin(d=2) edges=0
+   LRC mod-cover: covered(anti-adm)=[2, 3, 5]  missed(adm->lonely t=1/m)=[4, 6, 7]
+   LRC gap=59/4400 thr=1/8 forbidden_len=5527/6600  -> LONELY easy (positive gap)
+
+======================================================================
+C. Holdback spectrum (persistence = 1/(2d)) for a few sets
+======================================================================
+ [consecutive 1..6] holdbacks (value:count, stickiest first): 1/2:5, 1/4:4, 1/6:3, 1/8:2, 1/10:1
+ [twin members 3,5,11,13,17,19] holdbacks (value:count, stickiest first): 1/4:3, 1/8:1, 1/12:3, 1/16:3, 1/20:1
+ [geometric 1,2,4,8,16,32] holdbacks (value:count, stickiest first): 1/2:1, 1/4:1, 1/6:1, 1/8:1, 1/12:1
+
+SUMMARY
+ holdback = 1/(2*difference): small speed-gap = sticky edge.
+ Consecutive integers: min_diff=1 => MAX holdback, covers all moduli
+   => anti-admissible => LRC-extremal (and minimal clock, S24).
+ Twin primes (d=2) are the stickiest pairs the primes allow -- the
+   prime analogue of consecutive integers -- but prime sets MISS the
+   small residues (admissible) and so are LRC-easy. The tension:
+   holdback wants LRC-hardness; admissibility (primes) grants ease.

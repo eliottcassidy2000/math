@@ -1,5 +1,17 @@
 # Session Log
 
+## oracle-2026-06-01-S25 - Holdback, twin primes, and the staircase (tournament clock x LRC)
+
+**Account:** Oracle (remote-control). **User prompt:** think about the tournament clock in terms of holdback and twin primes and how they relate to the LRC.
+**Holdback defined:** in the S24 tournament clock, edge (i,j) flips at walls t=m/(2 d_ij), d_ij=s_j-s_i, so it HOLDS one orientation for 1/(2 d_ij) -- edge persistence. The holdback spectrum = reciprocal of the difference multiset; max holdback = 1/(2*min_diff).
+**Findings (script tournament_clock_holdback_twinprime_s25.py):**
+1. STAIRCASE: the LRC-extremal set {1..n} has difference-multiset multiplicities n-1,n-2,...,1 = the repo's staircase delta. So LRC-extremal = max holdback = minimal clock (S24) = the staircase, one object four ways. (consecutive 1..6 holdbacks 1/2:5,1/4:4,1/6:3,1/8:2,1/10:1.)
+2. TWIN PRIMES = stickiest edges the (odd) primes allow: min_diff jumps from 1 (consecutive) to 2 (twin floor), holdback 1/4 -- the prime analogue of consecutive integers; sole exception (2,3) diff-1. Twin-prime conjecture = the prime clock has rate-2 max-holdback edges arbitrarily far out.
+3. RESIDUE-MISSING DUALITY: by THM-369 a set has an easy lonely time t=1/m iff it MISSES residue 0 mod m. Consecutive ints cover residue 0 mod every m<=n (anti-admissible) -> LRC-tight; primes MISS small residues (admissible-like) -> LRC-easy (positive gaps confirmed). LRC-hardness=divisibility-rich (covering); prime constellations=divisibility-poor (admissible/missing). Same arithmetic feature (missing residues) makes a set good for twin primes AND easy for the runner. Holdback is geometric (differences); LRC-hardness is arithmetic (divisibility) -- twin primes are sticky yet arithmetically loose, hence lonely-easy.
+4. SYNCHRONY: equal differences flip in lockstep; #distinct differences = clock complexity (AP/consecutive minimal, Sidon/geometric maximal).
+**Dot-connected:** holdback (geometry) vs admissibility (arithmetic) are the two faces; extremal LRC sits where both peak = the staircase; twin primes are the sticky-yet-easy corner. New HYP-1964. Reflection: 07-reflections/holdback-twin-primes-and-the-staircase-s25.md.
+**Next:** prove holdback-spectrum(1..n)=staircase + cell-count=staircase area; alpha=1/k comparator makes "covers residue 0 mod k" a literal clock event.
+
 ## codex-2026-06-01-S501 - Goldbach, Polygonal, and Zeckendorf Representation Hypergraphs
 
 **Account:** Codex
