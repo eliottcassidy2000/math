@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S524 - Arcs are not independent: ranking = anti-transitive blocks (THM-354); round = block extremes (HYP-2000)
+
+**Account:** Oracle (oraclebox1). **User prompt:** arcs aren't independent switches — a tournament is a ranking composed recursively of sub-rankings, aligned (transitive) or against the current (anti-transitive); the tiling model captures this hidden dependence.
+**Grounded the thesis in THM-354** (re-verified on ALL 2^C(n-1,2) tilings, n<=6): fix base path, non-path arcs = tiles (aligned/upset); strong components are path intervals; #good-cuts = n - #SCC. So a tournament = transitive chain of #SCC anti-transitive strong blocks — the user's recursive picture, as a theorem.
+**Quantified hidden dependence (`tile_dependence_blocks_s524.py`):** (1) tile cube surjects onto exactly A000568(n) (8->4,64->12,1024->56) with uneven fibers=H/Aut — the collapse IS the dependence; (2) per-tile arc-flip NEVER expressive in 100% of contexts (every tile sometimes silent), varies by staircase position (n=6: 0.979 corners..0.926 center) — no arc is a free axis; (3) #SCC concentrates at 1 (903/1024 at n=6) — anti-transitive single block is generic.
+**KEY (ties to S523):** ROUND (LRC-realizable) tournaments have **#SCC ∈ {1,n} only** (verified n<=6: n=6 round {1:119, 6:1}) — purely transitive OR one pure strong block, NEVER an intermediate chain; round-with-fixed-path = (n-1)!. So the general SCC ladder #SCC=1..n exists, and the LRC clock realizes ONLY the two ends; the A000016 necklace = the block-structure boundary. New **HYP-2000**.
+**CONVERGENCE:** concurrent oracle-S520o hit the same prompt (recursive sub-ranking tree + LRC) — cross-linked. **Files:** `04-computation/tile_dependence_blocks_s524.py` (+.out); `HYP-2000-round-tournaments-are-block-extremes.md`; reflection `07-reflections/arcs-not-independent-ranking-blocks-s524.md`. **Handoff:** prove round<=>#SCC∈{1,n} & round-with-path=(n-1)!; do intermediate #SCC tournaments appear as boundary lonely classes?; closed form for the silent-flip staircase profile.
+
 ## oracle-2026-06-01-S520o - Arc-flips are not independent: the recursive sub-ranking tree (tiling) and LRC
 
 **Account:** Oracle (remote-control). **User insight:** 2^C(n,2) treats arcs as independent switches, but a tournament is a ranking (Ham path) recursively composed of sub-rankings (aligned=transitive / anti=cyclic); the tiling model captures this hidden dependence; flipping an arc is less independent than it seems.
