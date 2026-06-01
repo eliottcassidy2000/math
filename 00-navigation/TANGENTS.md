@@ -593,6 +593,21 @@ For initial `n=14`, the seven-ladder, S380, and initial `n=16`, the pairwise spe
 **T516** #zeckendorf #ostrowski #nonconsecutivity #lrc-braid | certainty: structural synthesis | source: codex-2026-05-31-S461
 Zeckendorf non-consecutivity comes from rank-two recurrence plus local carry confluence: adjacent active digits carry to the next layer. The LRC analogue should be a left/right endpoint-handoff braid; adjacent repairs cannot coexist if the residual handoff core quotients to a path-like carry graph.
 
+**T520** #tournament-analysis #gauges #pairwise-data #binary-relations | certainty: high methodological reframing | source: codex-2026-05-31-S480
+Tournament Analysis is the map `(labels, pairwise observables, gauge, tie path) -> tournament movie`. The gauge is first-class: the same data can be a total order under a vertex-score gauge and a strongly connected cyclic tournament under a pairwise-switch gauge. See HYP-1940.
+
+**T521** #metric-switch #tiling-cube #hamiltonian-path #edge-masks | certainty: high exact implementation | source: codex-2026-05-31-S480
+A symmetric metric becomes repo-native by starting with the fixed Hamiltonian path and flipping edge `{i,j}` when a predicate on `d(i,j)` holds. Thresholds, annuli, shells, and derivative signs are edge masks over the `N choose 2` tiling coordinates.
+
+**T522** #basketball #weighted-relations #ties #active-ranking | certainty: medium-high model example | source: codex-2026-05-31-S480
+Basketball pass-flow is a human weighted directed relation: compare passes `i->j` versus `j->i`, and complete ties by jersey order `1->2->3->4->5`. The sample matrix has three ties and yields `score=(0,2,2,3,3)`, `scc=2`, `c3=2`, `H=5`.
+
+**T523** #lonely-runner #chord-metric #runner-gauges #scc | certainty: exact S480 computation | source: codex-2026-05-31-S480
+For speeds `(0,1,4,5,6,7,11)`, distance-to-zero, chord row-sum, nearest-radius, and x-projection gauges stay transitive. Chord-threshold and chord-annulus switches recover strongly connected cyclic tournament movies with `H` up to `157` and `159`, so pairwise metric gauges preserve structure erased by scalar ranking.
+
+**T524** #lonely-runner #marked-tournament-analysis #two-nearest #chord-switch | certainty: medium proof route | source: codex-2026-05-31-S480
+LRC is marked Tournament Analysis: the stationary runner is the mark, S22 gives the two-sided bracket, S431 gives circular/two-nearest lift data, and S480 adds chord-switch/annulus/kinetic gauges. A counterexample search should record several simultaneous tournament movies, not only the scalar lonely gap.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 

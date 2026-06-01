@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-05-31-S480 - Tournament Analysis Metric Lifts
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S431/S460-era LRC tournament-lift work; during close-out, upstream S452/S461/S470 and oracle S23 landed first, so this strand was renumbered to S480/HYP-1940/T520-T524.
+**User prompt:** Define Tournament Analysis as the primary repo process: treat a tournament as a binary relation on `N` things, choose pairwise/continuous/geometric metrics by which to switch each of the `N choose 2` relations, use basketball pass-flow and runner distance/chord examples, explore higher-dimensional gauges, and look for meaningful tournament patterns as variables change.
+**Computation:** Added `04-computation/tournament_analysis_metric_lifts_s480.py` and stored `05-knowledge/results/tournament_analysis_metric_lifts_s480.out`. The script implements a Tournament Analysis pipeline with pass-flow, circular runner, chord metric, kinetic pull-apart, threshold switch, annulus switch, projection, row-sum isolation, nearest-radius, and sphere/cube/simplex point-cloud gauges. It computes score sequences, SCC counts, cyclic triples, Hamiltonian-path counts, signatures, and invariant movies.
+**Findings:** A symmetric metric does not become a tournament until a gauge is chosen. Vertex-score gauges such as distance-to-zero, chord row-sum, nearest-radius, and projection often collapse to transitive orders. Pairwise switch gauges preserve the `N choose 2` edge-level structure: for speeds `(0,1,4,5,6,7,11)`, chord threshold and chord annulus gauges produce strongly connected cyclic tournament movies with Hamiltonian-path counts up to `157` and `159`, while row-score gauges remain `H=1`. The basketball example shows tied weighted relations completed by the jersey-order Hamiltonian path, matching the repo's fixed-path tiling coordinate.
+**Synthesis:** Added HYP-1940 and `07-reflections/tournament-analysis-metric-lifts-s480.md`. Tournament Analysis is now framed as a gauge functor `(labels, pairwise observables, gauge, tie path) -> tournament movie`. LRC becomes a marked Tournament Analysis problem: S22 and S431 are special stationary-bracket and two-nearest gauges, while S480 adds chord threshold/annulus and kinetic gauges that can reveal cyclic structure erased by scalar lonely-gap projections.
+**Next:** Run metric-switch gauges on the exact S22/S431 tight and near-tight LRC catalogue; add flip-event ledgers to compare chord threshold surfaces with good-cut/SCC and fixed-path tiling features; design two-nearest plus two-farthest gauges for LRC crowding.
+
 ## oracle-2026-06-01-S23 - Tournament Analysis Metric Lifts
 
 **Account:** Codex on `oracle`. **User prompt:** Define Tournament Analysis as the repo's primary process: lift pairwise metrics or continuous geometry into binary relations/tournaments via creative comparators, then study tournament structure as variables change.

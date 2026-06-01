@@ -1,0 +1,79 @@
+Tournament Analysis metric lifts (codex-2026-05-31 S480)
+Pairwise data becomes tournament structure only after choosing a gauge.
+
+TOURNAMENT ANALYSIS PIPELINE
+================================================================================================
+gauge                    binary function                      example
+------------------------------------------------------------------------------------------------
+raw pairwise direction   pass_i_j - pass_j_i                  sports, votes, traffic, trades
+                                                              already antisymmetric; ties need a path
+marked reference         d(i, base) - d(j, base)              LRC stationary runner, hub audits
+                                                              usually transitive but tracks threat order
+circular orientation     clockwise displacement < 1/2         runners, rotations, phases
+                                                              round tournament with tie defects
+global metric row        sum_k d(i,k) - sum_k d(j,k)          isolation/spread/spacing
+                                                              turns symmetric metric into vertex scores
+local metric row         nearest_radius(i)-nearest_radius(j)  crowding, local density
+                                                              detects private leaves and packed clusters
+metric switch            1[d(i,j)>theta] flips base edge      pairwise distances, chords, polls
+                                                              the N choose 2 metrics become a tiling coordinate
+metric annulus           1[lo<d(i,j)<hi] flips base edge      middle-distance bonds, shell tests
+                                                              switches edges by belonging to a chosen shell
+projection gauge         <x_i,u>-<x_j,u>                      sphere/cube/simplex shadows
+                                                              sweeping u gives a tournament movie
+kinetic gauge            outward velocity from pair midpoint  moving runners, fluids, teams in motion
+                                                              uses derivative of metric, not only metric
+tie Hamiltonian path     fixed label order 1->2->...->n       basketball jerseys, base-path tilings
+                                                              same convenience as the repo tiling model
+
+BASKETBALL PASS-FLOW TOURNAMENT
+================================================================================================
+players = 1,2,3,4,5; ties broken by Hamiltonian path 1->2->3->4->5
+tied pair count=3
+summary: score=(0, 2, 2, 3, 3) scc=2 c3=2 H=5
+signature=1110111001
+reading: the pass matrix is a weighted directed relation; Tournament Analysis keeps the binary skeleton first, then asks which weighted margins explain its cycles.
+
+RUNNER MOVIE: ONE SPEED SET, MANY TOURNAMENT GAUGES
+================================================================================================
+speeds=(0,1,4,5,6,7,11), sampled at t=k/84 for k=1..83
+gauge              distinct  changes          H-range     c3-range        scc  score-patterns
+------------------------------------------------------------------------------------------------
+round-half               61       61         (1, 175)      (0, 14)  (1, 2, 7)               9
+zero-distance            37       72           (1, 1)       (0, 0)       (7,)               1
+chord-row-sum            34       66           (1, 1)       (0, 0)       (7,)               1
+nearest-radius           18       48           (1, 1)       (0, 0)       (7,)               1
+chord-threshold          33       64         (1, 157)      (0, 13)     (1, 7)              10
+chord-annulus            36       78         (1, 159)      (0, 13) (1, 2, 4, 7)              16
+x-projection             37       72           (1, 1)       (0, 0)       (7,)               1
+pull-apart               61       61         (1, 175)      (0, 14)  (1, 2, 7)               9
+
+selected time t=181/588 from the S431 near-tight k=6 example
+  round-half         score=(2, 2, 2, 3, 4, 4, 4) scc=1 c3=11 H=105
+  zero-distance      score=(0, 1, 2, 3, 4, 5, 6) scc=7 c3=0 H=1
+  chord-row-sum      score=(0, 1, 2, 3, 4, 5, 6) scc=7 c3=0 H=1
+  nearest-radius     score=(0, 1, 2, 3, 4, 5, 6) scc=7 c3=0 H=1
+  chord-threshold    score=(2, 2, 3, 3, 3, 3, 5) scc=1 c3=11 H=111
+  chord-annulus      score=(2, 3, 3, 3, 3, 3, 4) scc=1 c3=13 H=159
+  x-projection       score=(0, 1, 2, 3, 4, 5, 6) scc=7 c3=0 H=1
+  pull-apart         score=(2, 2, 2, 3, 4, 4, 4) scc=1 c3=11 H=105
+
+SPHERE/CUBE/SIMPLEX POINT CLOUD
+================================================================================================
+same six points; seven gauges
+  3d projection axis        score=(0, 1, 2, 3, 4, 5) scc=6 c3=0 H=1 signature=011101111110000
+  centroid outside          score=(0, 1, 2, 3, 4, 5) scc=6 c3=0 H=1 signature=000000001011111
+  simplex vertex affinity   score=(0, 1, 2, 3, 4, 5) scc=6 c3=0 H=1 signature=111111100100000
+  metric row-sum isolation  score=(0, 1, 2, 3, 4, 5) scc=6 c3=0 H=1 signature=000000001011111
+  nearest-radius isolation  score=(0, 1, 2, 3, 4, 5) scc=6 c3=0 H=1 signature=000011111101011
+  median-distance switch    score=(2, 2, 2, 3, 3, 3) scc=1 c3=8 H=41 signature=100111001100101
+  middle-annulus switch     score=(1, 2, 2, 3, 3, 4) scc=1 c3=6 H=23 signature=001011010101011
+
+PATTERNS / QUESTIONS
+================================================================================================
+- Gauge non-uniqueness is the point: A symmetric metric does not become a tournament until a gauge chooses what a pairwise comparison means.
+- Ties are structure, not noise: Basketball equal pass counts and runner antipodes are both incomplete relations completed by a base Hamiltonian path.
+- Movies matter more than frames: For continuous variables, the flip events and invariant ranges are often more meaningful than a single tournament.
+- LRC is marked Tournament Analysis: The stationary runner supplies the mark; S22 keeps its two bracket gaps, while S431 keeps the surrounding pairwise tournament shadow.
+- Higher geometry supplies gauges: Spheres, cubes, and simplices naturally give projection, centroid, face-affinity, and isolation tournaments.
+- Repo bridge: The fixed tie path is the same mental move as the tiling model's fixed Hamiltonian path: it turns ambiguity into a controlled coordinate system.
