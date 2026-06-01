@@ -1,5 +1,16 @@
 # Session Log
 
+## oracle-2026-06-01-S511 - LRC as source-reachability in the marked A000568 quotient
+
+**Account:** Oracle (remote-control). **User prompt:** explore many creative paths for how LRC is completely analogous to a problem on tournament iso-classes and A000568.
+**Fix to codex's wall:** codex (S507/509/510) found LRC safety is NOT a function of the half-turn tournament class -> sheaf/fiber retreat. Cause: half-turn meters the 1/2 gap (wrong walls). FIX: use the LRC walls + mark the observer.
+**Construction (lrc_observer_source_tournament_s511.py):** observer(speed0)+runners; observer->i iff ||v_i t||>=1/n (runner far/safe-arc), else i->observer; runner-runner = half-turn. Then EXACTLY: observer LONELY <=> observer beats all runners <=> observer is a SOURCE. Verified mism=0 across n=4,5,6. => LRC = "the observer-marked tournament clock reaches a SOURCE class" -- a pure MARKED tournament-iso-class (A000568-with-mark) reachability problem.
+**A000568 target:** a source-marked class has observer beating all runners, so the runner-runner sub-tournament is an arbitrary tournament on n-1 -> # source classes = A000568(n-1) EXACTLY (n=4->2,5->4,6->12,7->56,8->456,...). The LRC win-set is literally A000568(n-1)-sized; counterexample <=> marked walk avoids all source classes. Reachable source classes = circular (n-1)-tournaments in an arc of length 1-2/n (tiny subset, the S24 menu).
+**Regimes:** LRC-easy = >=1 open source cell; tight = source only on boundary (initial segments, sporadic {1,3,4,5,9} all 0 open source cells); counterexample = no source cell at all.
+**Addition/multiplication:** addition drives the walk (LRC walls, staircase of differences); multiplication shapes space+target (A000568 odd-cycle Burnside; Paley/QR speed-difference tournaments p=3,7,11 -> regular H=3,189,95095). The marked A000568 quotient is where the two operations meet.
+**New HYP-1981. Reflection:** 07-reflections/lrc-as-source-reachability-in-marked-A000568-s511.md. Builds on codex HYP-1977/1979 (projection/sheaf), improves to an exact marked reachability statement.
+**Next:** count reachable source classes vs A000568(n-1); marked-walk homology; tie Paley/Burnside menu to the sieve THM-369.
+
 ## codex-2026-06-01-S511 - LRC operation-weighted danger fibers
 
 **Account:** Codex
