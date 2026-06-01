@@ -3,6 +3,8 @@ id: HYP-1986
 status: OPEN
 source: codex-2026-06-01-S516
 related:
+  - HYP-1990
+  - HYP-1989
   - HYP-1985
   - HYP-1982
   - HYP-1981
@@ -118,3 +120,8 @@ The proof-route tournament in the script ranks `threshold_gap_source`,
 `compactified_gap_walk`, and `endpoint_pressure_core` as the top three route
 languages.  The tournament is transitive (`H=1`, `c3=0`), which reflects a
 strict narrowing rather than a tradeoff cycle.
+
+S518 adds the THM-386 two-gap race refinement: in the source-gap walk, LL can
+only be entered from LS and exited to SL.  Thus the compactified forcing route
+can be sharpened to proving that at least one wrap-around reset wins the
+right-gap race before the left gap decays below the threshold.

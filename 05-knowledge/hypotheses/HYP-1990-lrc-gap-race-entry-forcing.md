@@ -19,8 +19,13 @@ the gap race is won by g_right (i.e., LL is reached).
 
 ## Evidence
 
-- Bounded exact verification at n=3,4,5,6 (3385 primitive speed sets in the
-  stored windows): ALL visit LL.
+- Exact bounded verification in `lrc_two_gap_dynamics_s518.py` at
+  `n=3,4,5,6` confirms that all systems in the stored windows visit the
+  closed `LL` fiber.
+- The simplified no-swap race model in `lrc_gap_race_analysis_s518.py` scans
+  3385 primitive speed sets at `n=3,4,5,6`; it predicts an `LL` race for all
+  but the known wall/tie edge cases where the full compactified analysis is
+  needed.
 - The initial segment {1,...,n-1} always visits LL (wall-only at t = k/n).
 - The minimum lonely measure across all tested sets approaches 0 from above
   (tightest at initial segment, where only walls are LL).
@@ -43,11 +48,16 @@ must be less than time for g_left to drop from L_0 to 1/n (~(L_0 - 1/n) / v_near
 bunched near position 0) give g_left a long runway before it hits 1/n.
 
 **Pigeonhole target:** Show that among all wrap-arounds per period, at least
-one has L_0 > 1 - 1/n (i.e., only the wrapping runner was near position 1).
+one has enough left-gap runway, relative to the two active speeds and possible
+nearest-runner swaps, for the right gap to reach `1/n` first.  The stronger
+condition `L_0 > 1 - 1/n` is sufficient in simple cases but not necessary.
 
 ## Next steps
 
-1. Compute L_0 distribution across wrap-arounds for various speed sets
-2. Prove a lower bound on max L_0 across wrap-arounds
-3. Connect to THM-369 sieve completeness (primitive speed sets have specific arithmetic structure)
-4. Try CRT descent for n=14: the 2*7 structure might guarantee a good wrap-around entry
+1. Compute the exact, swap-aware race outcome rather than the current no-swap
+   approximation.
+2. Prove a lower bound on the best reset runway after accounting for active
+   speeds and swaps.
+3. Connect to THM-369 sieve completeness.
+4. Try CRT descent for n=14: the `2*7` structure might guarantee a good
+   wrap-around entry.
