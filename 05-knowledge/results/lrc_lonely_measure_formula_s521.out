@@ -1,0 +1,16 @@
+THEOREM: mu(v) = sum over relation lattice {c:<c,v>=0} of prod hhat(c_i).
+speeds           mu_exact   formula(H=8) V       
+(1, 2, 4, 7)        0.17143      0.18045   0.1296
+(2, 3, 5, 7)        0.06286      0.06445   0.1296
+(1, 5, 7, 11)       0.14597      0.14896   0.1296
+(3, 5, 7, 11)       0.10615      0.10546   0.1296
+
+COROLLARY: corr=sum_{c!=0,rel}|prod hhat| < V  =>  mu>0 => LRC (rigorous, relation-sparse):
+speeds           V        corr(H=7)  corr<V => LRC  mu_exact  
+(1, 5, 7, 11)      0.1296     0.0925 PROVED            0.14597
+(3, 5, 7, 11)      0.1296     0.0826 PROVED            0.10615
+(1, 2, 4, 7)       0.1296     0.1980 (inconclusive)    0.17143
+(2, 3, 5, 7)       0.1296     0.1709 (inconclusive)    0.06286
+(1, 2, 3, 4)       0.1296     0.3039 (inconclusive)    0.00000
+
+  Residual (corr>=V) = short additive relations v_i+v_j=v_k (AP-like / tight core).
