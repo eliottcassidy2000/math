@@ -56,6 +56,10 @@ At `n=4` (threshold 1/4, 3 runners), with the mod-4 character decomposition
    competitors `(2,3,5)`, `(2,5,7)`, `(3,10,13)`, `(3,5,8)`, and proves the
    same gap inside that family: only `(1,2,3)` is zero and only `(1,6,7)`
    attains the positive minimum `1/28`.
+   **S553 second update:** THM-394 proves the exact formula for the next
+   visible corridor `(1,3,q)`.  After excluding duplicates, the AP, and the
+   adjacent/additive row `(1,3,4)`, this family bottoms at `(1,3,9)` with
+   measure `1/18`, safely above `1/28`.
 
 3. **Boundary witness at the AP.** For `{1,2,3}`, `t* = 1/4` gives
    `(||1/4||, ||2/4||, ||3/4||) = (1/4, 1/2, 1/4) >= 1/4`. Lonely. ∎ (for AP)
@@ -101,6 +105,9 @@ resonance sum directly.
 - `04-computation/lrc_n4_additive_return_s553.py` (+.out): exact
   additive-return formula for primitive triples `(a,b,a+b)`, proving the
   next obstruction family also bottoms at `(1,6,7)`.
+- `04-computation/lrc_n4_13q_family_s553.py` (+.out): exact `(1,3,q)` formula,
+  proving the next post-additive corridor bottoms at `(1,3,9)` with `1/18`.
 - `01-canon/theorems/THM-392-lrc-n4-adjacent-family-measure-formula.md`.
 - `01-canon/theorems/THM-393-lrc-n4-additive-return-measure-formula.md`.
+- `01-canon/theorems/THM-394-lrc-n4-13q-family-measure-formula.md`.
 - Reflection: `07-reflections/lrc-the-measure-is-trivially-nonneg-the-tight-set-is-everything-s1.md`.

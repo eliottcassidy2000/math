@@ -29,6 +29,15 @@ Turned the doubling/apex/cascade metaphor thread into an EXACT, falsifiable extr
 **Tournament Analysis:** `lrc_n4_additive_return_s553.py` treats selected generator pairs as vertices, exact safe measure as observable, lower-measure-as-tighter as the switch, and lexicographic generator order as the tie path. The tournament is transitive, with score histogram `{0:1,...,11:1}`, no directed 3-cycles, singleton SCCs, and one Hamiltonian path.
 **Artifacts:** `01-canon/theorems/THM-393-lrc-n4-additive-return-measure-formula.md`; `04-computation/lrc_n4_additive_return_s553.py`; `05-knowledge/results/lrc_n4_additive_return_s553.out`; `07-reflections/lrc-n4-additive-return-measure-gap-s553.md`.
 
+## codex-2026-06-01-S553b - Proved the `(1,3,q)` n=4 LRC measure formula (THM-394)
+
+**Context:** After THM-393, I scanned primitive triples through speeds `<=60` while excluding adjacent and additive-return rows. The next small structured row was `(1,3,9)` with safe measure `1/18`, suggesting the corridor `(1,3,q)`.
+**Theorem:** Added THM-394. For speeds `(1,3,q)`, write `q=12m+r`; then `M(q)=N_r(q)/(12q)`, with numerator table `N=q,q+1,q-2,q+3,q-2,q+1,q,q-1,q+2,q-3,q+2,q-1` for residues `r=0..11`.
+**Proof mechanism:** Speeds `1` and `3` force `t in [5/12,7/12]`. Put `t=1/2+u`, `|u|<=1/12`; if `q` is even, count `{qu} in [1/4,3/4]`, and if `q` is odd, count `{qu} in [-1/4,1/4] mod 1`. The interval `[-q/12,q/12]` contributes half of every full period plus one residue table modulo 12.
+**Payoff:** `q=2` is the AP zero, `q=4` is the already-solved adjacent/additive row `(1,3,4)` with `1/24`, and every remaining distinct row has `M>=1/18`, equality first at `(1,3,9)`.
+**Tournament Analysis:** `lrc_n4_13q_family_s553.py` treats selected `q` rows as vertices, exact safe measure as observable, lower-measure-as-tighter as the switch, and selected `q` order as the tie path. The tournament is transitive, with score histogram `{0:1,...,11:1}`, no directed 3-cycles, singleton SCCs, and one Hamiltonian path.
+**Artifacts:** `01-canon/theorems/THM-394-lrc-n4-13q-family-measure-formula.md`; `04-computation/lrc_n4_13q_family_s553.py`; `05-knowledge/results/lrc_n4_13q_family_s553.out`; `07-reflections/lrc-n4-13q-family-next-obstruction-s553.md`.
+
 ## oracle-2026-06-01-S549o - Lean-formalized recent LRC ideas: scaling/repeated-addition, doubled-prime sieve, Dirichlet near-pair (3 axiom-clean lemmas) (HYP-2050)
 
 **Account:** Oracle (oraclebox1). **User prompt:** formalize this (recent ideas) and other new LRC ideas.

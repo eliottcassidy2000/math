@@ -1,0 +1,102 @@
+LRC n=4 (1,3,q) family formula (codex-S553)
+Family: speeds (1,3,q), threshold 1/4
+
+Closed form: q=12m+r and M(q)=N_r(q)/(12q)
+  r= 0: N=q      r= 1: N=q+1    r= 2: N=q-2    r= 3: N=q+3
+  r= 4: N=q-2    r= 5: N=q+1    r= 6: N=q      r= 7: N=q-1
+  r= 8: N=q+2    r= 9: N=q-3    r=10: N=q+2    r=11: N=q-1
+
+Verification table
+  q= 1 r= 1 exact=   1/6 formula=   1/6 interval_count=   1/6 intervals= 1
+  q= 2 r= 2 exact=     0 formula=     0 interval_count=     0 intervals= 0
+  q= 3 r= 3 exact=   1/6 formula=   1/6 interval_count=   1/6 intervals= 1
+  q= 4 r= 4 exact=  1/24 formula=  1/24 interval_count=  1/24 intervals= 2
+  q= 5 r= 5 exact=  1/10 formula=  1/10 interval_count=  1/10 intervals= 1
+  q= 6 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 2
+  q= 7 r= 7 exact=  1/14 formula=  1/14 interval_count=  1/14 intervals= 1
+  q= 8 r= 8 exact=  5/48 formula=  5/48 interval_count=  5/48 intervals= 2
+  q= 9 r= 9 exact=  1/18 formula=  1/18 interval_count=  1/18 intervals= 1
+  q=10 r=10 exact=  1/10 formula=  1/10 interval_count=  1/10 intervals= 2
+  q=11 r=11 exact=  5/66 formula=  5/66 interval_count=  5/66 intervals= 3
+  q=12 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 2
+  q=13 r= 1 exact=  7/78 formula=  7/78 interval_count=  7/78 intervals= 3
+  q=14 r= 2 exact=  1/14 formula=  1/14 interval_count=  1/14 intervals= 2
+  q=15 r= 3 exact=  1/10 formula=  1/10 interval_count=  1/10 intervals= 3
+  q=16 r= 4 exact=  7/96 formula=  7/96 interval_count=  7/96 intervals= 4
+  q=17 r= 5 exact=  3/34 formula=  3/34 interval_count=  3/34 intervals= 3
+  q=18 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 4
+  q=19 r= 7 exact=  3/38 formula=  3/38 interval_count=  3/38 intervals= 3
+  q=20 r= 8 exact=11/120 formula=11/120 interval_count=11/120 intervals= 4
+  q=21 r= 9 exact=  1/14 formula=  1/14 interval_count=  1/14 intervals= 3
+  q=22 r=10 exact=  1/11 formula=  1/11 interval_count=  1/11 intervals= 4
+  q=23 r=11 exact=11/138 formula=11/138 interval_count=11/138 intervals= 5
+  q=24 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 4
+  q=25 r= 1 exact=13/150 formula=13/150 interval_count=13/150 intervals= 5
+  q=26 r= 2 exact=  1/13 formula=  1/13 interval_count=  1/13 intervals= 4
+  q=27 r= 3 exact=  5/54 formula=  5/54 interval_count=  5/54 intervals= 5
+  q=28 r= 4 exact=13/168 formula=13/168 interval_count=13/168 intervals= 6
+  q=29 r= 5 exact=  5/58 formula=  5/58 interval_count=  5/58 intervals= 5
+  q=30 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 6
+  q=31 r= 7 exact=  5/62 formula=  5/62 interval_count=  5/62 intervals= 5
+  q=32 r= 8 exact=17/192 formula=17/192 interval_count=17/192 intervals= 6
+  q=33 r= 9 exact=  5/66 formula=  5/66 interval_count=  5/66 intervals= 5
+  q=34 r=10 exact=  3/34 formula=  3/34 interval_count=  3/34 intervals= 6
+  q=35 r=11 exact=17/210 formula=17/210 interval_count=17/210 intervals= 7
+  q=36 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 6
+  q=37 r= 1 exact=19/222 formula=19/222 interval_count=19/222 intervals= 7
+  q=38 r= 2 exact=  3/38 formula=  3/38 interval_count=  3/38 intervals= 6
+  q=39 r= 3 exact=  7/78 formula=  7/78 interval_count=  7/78 intervals= 7
+  q=40 r= 4 exact=19/240 formula=19/240 interval_count=19/240 intervals= 8
+  q=42 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 8
+  q=43 r= 7 exact=  7/86 formula=  7/86 interval_count=  7/86 intervals= 7
+  q=45 r= 9 exact=  7/90 formula=  7/90 interval_count=  7/90 intervals= 7
+  q=47 r=11 exact=23/282 formula=23/282 interval_count=23/282 intervals= 9
+  q=48 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals= 8
+  q=50 r= 2 exact=  2/25 formula=  2/25 interval_count=  2/25 intervals= 8
+  q=52 r= 4 exact=25/312 formula=25/312 interval_count=25/312 intervals=10
+  q=54 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals=10
+  q=55 r= 7 exact= 9/110 formula= 9/110 interval_count= 9/110 intervals= 9
+  q=57 r= 9 exact=  3/38 formula=  3/38 interval_count=  3/38 intervals= 9
+  q=59 r=11 exact=29/354 formula=29/354 interval_count=29/354 intervals=11
+  q=60 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals=10
+  q=62 r= 2 exact=  5/62 formula=  5/62 interval_count=  5/62 intervals=10
+  q=64 r= 4 exact=31/384 formula=31/384 interval_count=31/384 intervals=12
+  q=66 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals=12
+  q=67 r= 7 exact=11/134 formula=11/134 interval_count=11/134 intervals=11
+  q=69 r= 9 exact=11/138 formula=11/138 interval_count=11/138 intervals=11
+  q=71 r=11 exact=35/426 formula=35/426 interval_count=35/426 intervals=13
+  q=72 r= 0 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals=12
+  q=74 r= 2 exact=  3/37 formula=  3/37 interval_count=  3/37 intervals=12
+  q=76 r= 4 exact=37/456 formula=37/456 interval_count=37/456 intervals=14
+  q=78 r= 6 exact=  1/12 formula=  1/12 interval_count=  1/12 intervals=14
+  q=79 r= 7 exact=13/158 formula=13/158 interval_count=13/158 intervals=13
+
+formula mismatches for q=1..80: 0
+interval-count mismatches for q=1..80: 0
+smallest (1,3,q) measures with distinct triples
+  q= 2, speeds=(1, 2, 3), M=0
+  q= 4, speeds=(1, 3, 4), M=1/24
+  q= 9, speeds=(1, 3, 9), M=1/18
+  q= 7, speeds=(1, 3, 7), M=1/14
+  q=14, speeds=(1, 3, 14), M=1/14
+  q=21, speeds=(1, 3, 21), M=1/14
+  q=16, speeds=(1, 3, 16), M=7/96
+  q=11, speeds=(1, 3, 11), M=5/66
+  q=33, speeds=(1, 3, 33), M=5/66
+  q=26, speeds=(1, 3, 26), M=1/13
+  q=28, speeds=(1, 3, 28), M=13/168
+  q=45, speeds=(1, 3, 45), M=7/90
+
+minimum after excluding duplicate/AP/adjacent-additive rows q in {1,2,3,4}: q=9, M=1/18
+
+Tournament Analysis
+  vertices: selected q rows for triples (1,3,q)
+  observable: exact safe measure M(q); lower means tighter
+  switch: q_i -> q_j iff M(q_i) < M(q_j); ties use selected q order
+  tie path: q=2 -> q=4 -> q=9 -> q=7 -> q=14 -> q=11 -> q=16 -> q=6 -> q=13 -> q=5 -> q=8 -> q=10
+  scores: {2: 11, 4: 10, 9: 9, 7: 8, 14: 7, 11: 5, 16: 6, 6: 4, 13: 3, 5: 2, 8: 0, 10: 1}
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  directed_3_cycles: 0
+  SCCs: [[2], [4], [9], [7], [14], [16], [11], [6], [13], [5], [10], [8]]
+  Hamiltonian_path_count: 1
+  edge_flips_vs_tie_path: ['q=16->q=11', 'q=10->q=8']
