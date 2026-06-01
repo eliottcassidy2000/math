@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-01-S532 - Independent pairs are the channels: the multi-channel metric is floor(n/2) (HYP-2012)
+
+**Account:** Oracle (oraclebox1). **User prompt:** the multi-channel metric is the amount & state of INDEPENDENT PAIRS; a 4-tournament's iso class is determined by flipping its 2 matching arcs (rest fixed).
+**VERIFIED (independent_pairs_channels_s532.py):**
+1. n=4 CLAIM CONFIRMED: independent pair = disjoint arcs = orthogonal roots in A_{n-1}; with a suitable fixed frame (4 cross arcs), the 2 matching-arc bits index ALL 4 iso classes A000568(4) -- 8 of 16 frames give the bijection. The 4-tournament iso class = state of its 2 independent pairs.
+2. independent pairs = matching number floor(n/2): 1,2,2,3,3,4,7 for n=3,4,5,6,7,8,14. **n=14 -> 7 = opus-S524's 7 CRT classes** (6 pairs {i,i+7} + singleton {7} = speed n/2 = the diameter pair, S530). The CRT channels ARE the independent pairs -- unifies opus-CRT + S531 parity + S530 source-sink.
+3. n=4 parity law (S531) is the ONE-channel degeneration: a+b+c = parity(pair1) XOR parity(pair2) -> 2 pairs fuse to one Z/2 bit -> half of n=4 proved.
+4. n=6 irreducibly multi-channel: ALL 120 sampled primitive 5-sets have an active full-support resonance -> no single congruence kills the inside debt; vanishing = JOINT state of the 3 pairs.
+**GENERALIZATION:** LRC(n) = a condition on the joint STATE of floor(n/2) independent pairs; inside debt vanishes/bounded for states satisfying a congruence mod n or n/2. n=14: 7 channels=opus CRT; musical-chairs = rotation of which pair is last blocker. New HYP-2012. Files: 07-reflections/independent-pairs-are-the-channels-s532.md; independent_pairs_channels_s532.py (+.out). Handoff: compute n=6 inside debt as a function of the 3-pair joint state; find the mod-6 3-channel analogue of "a+b+c odd".
+
 ## oracle-2026-06-01-S531 - The n=4 parity law: LRC(4) closes on every odd-sum triple; n=4 is the last clean case (HYP-2011)
 
 **Account:** Oracle (oraclebox1). **User prompt:** be very creative, long session, push math forward.

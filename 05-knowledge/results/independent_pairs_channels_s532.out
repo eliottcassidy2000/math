@@ -1,0 +1,31 @@
+Independent pairs as the multi-channel metric (oracle-S532)
+
+(1) n=4: iso class vs the 2 matching-arc flips (frame fixed)
+    total iso classes of 4-tournaments = 4 (A000568(4)=4)
+    over 16 frames, #distinct iso among the 4 matching-settings: histogram {1: 4, 2: 4, 4: 8}
+    frames where the 2 matching bits hit ALL 4 iso classes (bijection): 8
+    => YES: with a suitable frame, the 2 independent-pair arcs are exactly the
+       2 bits that index A000568(4)=4 iso classes (the user's claim).
+
+(2) independent pairs = matching number floor(n/2)  vs  channels
+      n indep_pairs  support_live  opus_CRT
+      3           1             2         -
+      4           2             1         2
+      5           2             4         -
+      6           3             2         3
+      7           3             6         -
+      8           4             3         4
+     14           7             6         7
+    floor(n/2): 1,2,2,3,3,4,7 for n=3,4,5,6,7,8,14.
+    n=14 -> 7 independent pairs = opus-S524's 7 CRT classes (6 pairs {i,i+7} + singleton {7}).
+    live residues mod n* = floor(n/2)-? : the special pair is the speed n/2 (the singleton).
+
+(3) parity law decomposes over the pairs (the channel picture)
+    n=4 inside debt vanishes iff a+b+c odd. Pair the observer(0) with one runner,
+    the other two runners together: a+b+c = a + (b+c) = parity(pair1) XOR parity(pair2).
+    So 'sum odd' = XOR of the two independent-pair parities -> ONE channel obstruction.
+    n=6 probe (5 runners, support k not in 3Z): does a full-support resonance exist?
+      sampled 120 primitive 5-sets; full-support resonance exists in 120; ABSENT in 0
+      examples with NO full-support resonance (candidate 'inside-debt-free'): []
+      => unlike n=4 (one clean parity), n=6 the obstruction is multi-residue (mod 6 / 3-pair);
+         the vanishing condition is a JOINT state of the 3 independent pairs, not one bit.
