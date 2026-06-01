@@ -17,6 +17,7 @@
  B. H (loneliness meter): single apex-flipped block size s has H=1+2^{s-2} (verified 3,5,9,17,33,65). DISJOINT apex blocks MULTIPLY: 3*3=9, 5*5=25 (n=7,8,9) => H(T)=prod_modules H(module) (modular decomposition, transitive quotient H=1) -- CANDIDATE THM with proof sketch. NESTED flips COUPLE: concentric "diameter onion" climbs to REGULAR tournament (=regular exactly n=5 H=15; n=7=123; n=9=1479); anchored chain stays low (n=7=31). Disjoint-multiply/nested-couple = quantitative S520o "arcs not independent".
  C. LRC: feasible arc carved recursively (cascade S527); carve tree mirrors sub-polygon tree; #components branches 1,2,4,4,2 then prunes; shrink ~ (n-2)/n. REGULAR POLYGON carves apex to EXACTLY 0 (tight); non-AP leaves positive apex. LRC = "recursive carving never empties the observer's apex".
 **Artifacts:** recursive_apex_hierarchy_s531.py (+.out), recursive_apex_H_law_s531b.py (+.out); reflection the-apex-recursion-modular-tree-recursive-H-and-recursive-carving-s531.md; HYP-2010. **Handoff:** (1) prove modular H-multiplicativity cleanly (THM candidate); (2) nested-coupling generating function; (3) make recursive carve rigorous via three-gap (Steinhaus) theorem.
+
 ## opus-2026-06-01-S531 - THE RESONANCE DEBT CONJECTURE: initial segment maximizes debt/credit = exactly 1 (HYP-2009)
 
 **Account:** Oracle (remote-control)
@@ -27,6 +28,14 @@
 **Debt structure:** Pairwise (r=2) has closed form via Bernoulli B₂. Higher (r≥3) is the "inside debt" from diagonals. Pairwise fraction varies: n=3: 99.8%, n=5: 7.3%, n=14: 83%.
 **Sign error noted:** The Bernoulli formula in the script has a sign error (should be +bernoulli_sum not -bernoulli_sum). The numerical computation is correct.
 **Synthesis:** HYP-2009 + reflection. The AP is the unique extremal case — maximum coherent destructive interference. Ties together all session work (cascade, inside/outside, apex, CRT).
+
+## codex-2026-06-01-S531 - n=14 LRC lead atlas after repo and web scan
+
+**Account:** Codex. **User prompt:** "come up with as many new possible leads for n=14 lrc as you can. search around the repo and web for inspiration."
+**Synthesis:** Added an 87-lead atlas for attacking repo-`n=14` LRC, cross-reading the local wall-only/AP, permutohedral sweep, scalar-gauge moat, apex/source-sink, polygon outside/inside, gap-race, recursive apex modularity (HYP-2010), resonance-debt (HYP-2009), and n=4 parity-law (HYP-2011) threads against the new public finite-checking frontier. The key calibration is that public notation uses `k` moving speeds, so repo `n=14` is `k=13`, exactly the next case after the 2026 arXiv proof of `k in {10,11,12}`.
+**Main route proposed:** hybridize finite-check sieve survivors with repo structure: collapse survivors by scalar-gauge and CRT parity; identify AP/scalar-puncture wall classes; kill them by the `56`-cell scalar moat or by endpoint-debt export; then use the product-bound scoreboard from the public method to close the remaining `k=13` classes.
+**Lead clusters:** web-method port, covering/wall extremality, CRT/parity, gap-race/apex, permutohedron/tournament quotient, harmonic/zonotope, endpoint/adic. Top near-term scripts: `lrc_k13_sieve_probe_s532.py`, exact CRT-class correlation, symbolic 56-cell moat, source-menu counts, and dynamic apex interval-exchange trace.
+**Artifacts:** `07-reflections/lrc-n14-lead-atlas-s531.md`; tangent T627.
 
 ## oracle-2026-06-01-S530b - Apex/source-sink arc: the exact combinatorial dictionary + LRC gap-sum (convergent with the parallel S530 pivot)
 

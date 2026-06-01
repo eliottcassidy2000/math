@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T627** #lrc #n14 #proof-leads #finite-sieve #apex #scalar-moat | certainty: synthesis from repo + web scan | source: codex-2026-06-01-S531
+Repo `n=14` is public-notation `k=13`, exactly the next case after the 2026 `k<=12` frontier. Best route: finite-check sieve survivors -> scalar-gauge/CRT parity and apex-module collapse -> AP/scalar-puncture wall classes -> `56`-cell moat or endpoint/resonance-debt export -> product-bound scoreboard. See `07-reflections/lrc-n14-lead-atlas-s531.md`.
+
 **T560** #goldbach #polygonal-numbers #zeckendorf #additive-bases | certainty: structural synthesis + finite audit | source: codex-2026-06-01-S501
 Goldbach/Helfgott, Hardy-Littlewood, Fermat polygonal numbers, and Zeckendorf are the same representation-hypergraph question with different proof currencies: smoothing by many prime representations, bounded arity by polygonal summands, or canonical no-adjacent carries by Fibonacci atoms. See HYP-1963.
 
