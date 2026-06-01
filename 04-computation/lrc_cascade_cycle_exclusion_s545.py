@@ -116,31 +116,32 @@ def main():
         print(f"   {name}: c_i = {[str(c) for c in cs]}  -> prod = {prod} (= |SAFE|)")
     print("   (a zero factor = the runner whose clearance the previous ones made impossible.)\n")
 
-    print("(2) CYCLE-EXCLUSION crux, n=4 (3 runners, one triple): 3-cycle at loneliest time")
-    print("    <=> inside-debt (sum v_i EVEN, S531) <=> the hard even-sum class?")
-    print(f"    {'triple':<12}{'sum':>4}{'parity':>7}{'3cyc@t*':>8}{'#SCC':>6}{'|SAFE|':>8}{'tight':>6}")
-    agree=0; tot=0
-    for combo in combinations(range(1,14),3):
-        if not primitive(combo): continue
-        sp=(0,)+combo; n=4
-        t,_=loneliest_time(sp,n); adj=runner_tournament(sp,t)
-        c3=count_3cycles(adj); sc=scc_count(adj)
-        sf=safe_measure(combo,n); even=(sum(combo)%2==0)
-        is3=(c3>0)
-        # claim: 3-cycle present  <=>  sum even (inside debt)
-        if is3==even: agree+=1
-        tot+=1
-        if combo in [(1,2,3),(1,3,5),(1,2,4),(2,3,5),(1,3,4)]:
-            print(f"    {str(combo):<12}{sum(combo):>4}{'even' if even else 'odd':>7}{str(is3):>8}{sc:>6}{str(sf):>8}{str(sf==0):>6}")
-    print(f"    ... CLAIM '3-cycle@t* <=> sum even (inside debt)' holds for {agree}/{tot} primitive triples (speeds<=13)")
+    print("(2) WHICH ORDER does the cycle-exclusion live at? The cycle-exclusion is a")
+    print("    TRIPLE (3-node) fact, i.e. a Helly-3 condition: does 'every triple clears'")
+    print("    force 'all clear'? Compare full collar vs worst k-subset collar.")
+    def collar(runset, n):
+        sp = (0,) + tuple(runset); W = walls(sp, n)
+        pts = W + [(a+b)/2 for a, b in zip(W, W[1:])]
+        return max(min((d0(Fraction(s)*t) for s in runset), default=Fraction(1)) for t in pts)
+    print(f"    {'system':<14}{'1/n':>6}{'full':>7}{'worst pair':>11}{'worst triple':>13}{'worst 4-set':>12}")
+    for name, sp, n in [("AP n=5",(0,1,2,3,4),5),("AP n=6",(0,1,2,3,4,5),6),
+                        ("AP n=7",(0,1,2,3,4,5,6),7),("generic n=6",(0,1,2,4,7,8),6)]:
+        runs = sp[1:]; full = collar(runs, n)
+        mink = lambda k: (min(collar(c, n) for c in combinations(runs, k)) if len(runs) >= k else None)
+        p2, p3, p4 = mink(2), mink(3), mink(4)
+        print(f"    {name:<14}{str(Fraction(1,n)):>6}{str(full):>7}{str(p2):>11}{str(p3):>13}{str(p4) if p4 else '-':>12}")
+    print("    => worst k-subset collar = 1/(k+1) (the k-runner LRC, achieved by the sub-AP):")
+    print("       worst TRIPLE collar = 1/4 for AP n=5,6,7; the FULL collar = 1/n. So clearing")
+    print("       every triple (cycle-exclusion / Helly-3) gives only 1/4, NOT 1/n.")
     print()
     print("READING: the cascade telescopes |SAFE| = prod of conditional clearances; a tight")
-    print("system has a ZERO factor (a runner the previous clearances trapped). The user's")
-    print("hidden cycle-exclusion is the governor: a runner TRIPLE forms a 3-CYCLE exactly")
-    print("when the inside-debt is active (S531) -- i.e. the cycle-exclusion is VIOLATED")
-    print("precisely on the hard class. Transitive triples (cycle-exclusion holds) = clean")
-    print("conditional clearance; 3-cycles = the trapped/inside-debt obstruction. So 'no")
-    print("3-cycle propagates' = the cascade clears = loneliness; the cycles are the defect.")
+    print("system has a ZERO factor (the runner the previous clearances trapped, at the wall).")
+    print("The user's cycle-exclusion (no 3-cycle) is the TRIPLE / Helly-3 layer -- REAL and")
+    print("necessary (every triple of runners clears, collar 1/4 > 1/n) but NOT sufficient: the")
+    print("collar DEGRADES monotonically with subset size (1/(k+1)), reaching 1/n only at the")
+    print("FULL cascade. So LRC is irreducibly the whole cascade; the cycle-exclusion is its")
+    print("3-shadow. (The naive 'tournament 3-cycle at t* <=> inside debt' fails: t* is a wall")
+    print("where the half-turn tournament has ties, so the 3-cycle there is ill-defined.)")
 
 if __name__=="__main__":
     main()

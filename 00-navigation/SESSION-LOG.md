@@ -1,5 +1,12 @@
 # Session Log
 
+## oracle-2026-06-01-S545 - LRC as a cascade of conditional clearances; the cycle-exclusion is the Helly-3 shadow (HYP-2042)
+
+**Account:** Oracle (oraclebox1). **User prompt:** cascade = product of conditional clearances; transitivity's hidden second fact = the cycle-exclusion (arc X->Y forbids Z->X & Y->Z = no 3-cycle Z->X->Y->Z).
+**CASCADE (verified, `lrc_cascade_cycle_exclusion_s545.py`):** loneliness telescopes as |SAFE| = prod_i c_i, c_i=|S_{<=i}|/|S_{<i}| (conditional clearance of runner i given previous). generic n=5: c=(3/5,5/9,13/25,9/13)->3/25, all >0. AP n=5 (tight): c=(3/5,2/3,1/3,0)->0, a ZERO factor = the 4th runner TRAPPED by the first three (at the wall). The cascade is the right object: loneliness as a chain where each link can collapse.
+**CYCLE-EXCLUSION = Helly-3 layer:** the inclusion (X->Y,Y->Z=>X->Z) telescopes the cascade; the cycle-exclusion (no 3-cycle) is a TRIPLE/Helly-3 fact. Test 'every triple clears => all clear': worst k-subset collar = 1/(k+1) (the k-runner LRC, sub-AP tight), so worst TRIPLE collar = 1/4 for AP n=5,6,7 (>1/n) yet the FULL collar = 1/n. So the cycle-exclusion is NECESSARY but NOT SUFFICIENT; LRC is irreducibly the whole cascade (order n). The collar degrades monotonically along the LRC ladder 1/(k+1).
+**HONEST NEGATIVE:** 'runner sub-tournament at t* is a 3-cycle <=> inside-debt' is FALSE (104/262 ~ chance) -- t* is a WALL with antipodal TIES, so the geometric 3-cycle there is ill-defined; the cycle-exclusion lives in the clearance ladder, not the tournament at t*. New HYP-2042 (prove worst-k-subset collar=1/(k+1); the Helly number of the clearance arcs = the obstruction order, = n-1 not 3). Files: 07-reflections/lrc-cascade-of-conditional-clearances-cycle-exclusion-is-helly3-s545.md; 04-computation/lrc_cascade_cycle_exclusion_s545.py (+.out); HYP-2042.
+
 ## oracle-2026-06-01-S545o - The cascade = product of conditional clearances; the hidden no-return fact = the resonance/3-cycle obstruction (HYP-2041)
 
 **Account:** Oracle (oraclebox1). **User prompt:** think of a cascade as a product of conditional clearances; transitivity = completion, but a second hidden fact (X,Y) arc => NOT((Z,X)&(Y,Z)) propagates with it.

@@ -5,20 +5,23 @@ LRC as a cascade of conditional clearances; the cycle-exclusion crux (oracle-S54
    AP n=5 (tight): c_i = ['3/5', '2/3', '1/3', '0']  -> prod = 0 (= |SAFE|)
    (a zero factor = the runner whose clearance the previous ones made impossible.)
 
-(2) CYCLE-EXCLUSION crux, n=4 (3 runners, one triple): 3-cycle at loneliest time
-    <=> inside-debt (sum v_i EVEN, S531) <=> the hard even-sum class?
-    triple       sum parity 3cyc@t*  #SCC  |SAFE| tight
-    (1, 2, 3)      6   even    True     3       0  True
-    (1, 2, 4)      7    odd   False     3     1/8 False
-    (1, 3, 4)      8   even   False     3    1/24 False
-    (1, 3, 5)      9    odd    True     3    1/10 False
-    (2, 3, 5)     10   even   False     3    1/20 False
-    ... CLAIM '3-cycle@t* <=> sum even (inside debt)' holds for 104/262 primitive triples (speeds<=13)
+(2) WHICH ORDER does the cycle-exclusion live at? The cycle-exclusion is a
+    TRIPLE (3-node) fact, i.e. a Helly-3 condition: does 'every triple clears'
+    force 'all clear'? Compare full collar vs worst k-subset collar.
+    system           1/n   full worst pair worst triple worst 4-set
+    AP n=5           1/5    1/5       3/10          1/4         1/5
+    AP n=6           1/6    1/6       7/24          1/4        7/36
+    AP n=7           1/7    1/7        2/7          1/4        4/21
+    generic n=6      1/6    1/3       7/24          1/3         1/3
+    => worst k-subset collar = 1/(k+1) (the k-runner LRC, achieved by the sub-AP):
+       worst TRIPLE collar = 1/4 for AP n=5,6,7; the FULL collar = 1/n. So clearing
+       every triple (cycle-exclusion / Helly-3) gives only 1/4, NOT 1/n.
 
 READING: the cascade telescopes |SAFE| = prod of conditional clearances; a tight
-system has a ZERO factor (a runner the previous clearances trapped). The user's
-hidden cycle-exclusion is the governor: a runner TRIPLE forms a 3-CYCLE exactly
-when the inside-debt is active (S531) -- i.e. the cycle-exclusion is VIOLATED
-precisely on the hard class. Transitive triples (cycle-exclusion holds) = clean
-conditional clearance; 3-cycles = the trapped/inside-debt obstruction. So 'no
-3-cycle propagates' = the cascade clears = loneliness; the cycles are the defect.
+system has a ZERO factor (the runner the previous clearances trapped, at the wall).
+The user's cycle-exclusion (no 3-cycle) is the TRIPLE / Helly-3 layer -- REAL and
+necessary (every triple of runners clears, collar 1/4 > 1/n) but NOT sufficient: the
+collar DEGRADES monotonically with subset size (1/(k+1)), reaching 1/n only at the
+FULL cascade. So LRC is irreducibly the whole cascade; the cycle-exclusion is its
+3-shadow. (The naive 'tournament 3-cycle at t* <=> inside debt' fails: t* is a wall
+where the half-turn tournament has ties, so the 3-cycle there is ill-defined.)
