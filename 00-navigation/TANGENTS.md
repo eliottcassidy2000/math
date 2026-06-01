@@ -16,6 +16,9 @@ Multi-channel parity should track independent-pair state, not only support width
 **T627** #lrc #n14 #proof-leads #finite-sieve #apex #scalar-moat | certainty: synthesis from repo + web scan | source: codex-2026-06-01-S531
 Repo `n=14` is public-notation `k=13`, exactly the next case after the 2026 `k<=12` frontier. Best route: finite-check sieve survivors -> scalar-gauge/CRT parity and apex-module collapse -> AP/scalar-puncture wall classes -> `56`-cell moat or endpoint/resonance-debt export -> product-bound scoreboard. See `07-reflections/lrc-n14-lead-atlas-s531.md`.
 
+**T628** #lrc #lean #n3 #residual-family | certainty: proved in Lean | source: codex-2026-06-01-S534
+Lean now proves the residual `n=3` family `{1,3r}` by the explicit witness `t=1/3+1/(9r)`: runner `1` stays in the central band and runner `3r` lands at fractional part `1/3`. This is the first checked step past the denominator-sieve cover; the next target is S522o's center-grid pigeonhole. See THM-388.
+
 **T560** #goldbach #polygonal-numbers #zeckendorf #additive-bases | certainty: structural synthesis + finite audit | source: codex-2026-06-01-S501
 Goldbach/Helfgott, Hardy-Littlewood, Fermat polygonal numbers, and Zeckendorf are the same representation-hypergraph question with different proof currencies: smoothing by many prime representations, bounded arity by polygonal summands, or canonical no-adjacent carries by Fibonacci atoms. See HYP-1963.
 

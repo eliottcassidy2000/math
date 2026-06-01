@@ -1,5 +1,12 @@
 # Session Log
 
+## codex-2026-06-01-S534 - Lean residual family for LRC n=3 (THM-388)
+
+**Context:** User asked to keep trying to prove LRC and formalize smaller values. I built on the concurrent Lean `LonelyRunner.lean` work (THM-369/386 and HYP-2006), which already proved the all-`n` no-multiple case, `n=2`, and the `n=3` sieve cover.
+**Formalization:** Added and checked `three_one_three_mul_lonely`: for every `r>0`, the two-speed family `{1,3r}` is `3`-lonely at `t=1/3+1/(9r)`. This enters the residual `n=3` zone not covered by the denominator sieve because the family contains a multiple of `3`.
+**Verification:** `lake env lean TournamentH7/LonelyRunner.lean` succeeds and the axiom audit for `three_one_three_mul_lonely` reports only `propext`, `Classical.choice`, and `Quot.sound`. Canonized as THM-388 and stored the audit output at `05-knowledge/results/lean_lrc_small_residual_s533.out`.
+**Handoff:** formalize the scaling lemma and S522o center-grid pigeonhole to close full `n=3` in Lean; then attack the `n=4` parity/inside-debt frontier.
+
 ## opus-2026-06-01-S533 - n=6 three-channel parity law: APEX IS THE GATEKEEPER (c=1 necessary+sufficient)
 
 **Account:** Oracle (remote-control)
