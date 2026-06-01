@@ -1,0 +1,109 @@
+n=18 gate/source battlefield audit (codex-2026-06-01 S520)
+Convention: k=17 moving speeds, threshold=1/18.
+
+Residue action on the n=18 unit skeleton
+  Unit points are a/18 for a in {1,5,7,11,13,17}.
+  A speed with residue r mod 18 covers such a point iff r*a == 0 mod 18.
+  residue= 0 covers_unit_points=6
+  residue= 1 covers_unit_points=0
+  residue= 2 covers_unit_points=0
+  residue= 3 covers_unit_points=0
+  residue= 6 covers_unit_points=0
+  residue= 9 covers_unit_points=0
+  residue=17 covers_unit_points=0
+  Therefore: without an 18-multiple, all six unit points remain safe.
+
+Canonical exact audits
+  initial tight                      class=boundary_only gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.000000 unprot=  6 first=      1/18 denoms=[18:6]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  initial replace 8 by 18            class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.051136 unprot= 16 first=    37/306 denoms=[54:2,198:2,234:2,288:8,306:2]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  initial replace 17 by 18           class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.033333 unprot= 32 first=    19/324 denoms=[36:2,54:2,72:2,90:2,108:2,126:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18)
+  no-gate stress                     class=positive_gap  gate= 0 unit_safe=6 unit_owned=4 unit_unprot=4 gap/th=0.180000 unprot= 82 first=      1/36 denoms=[18:4,36:8,54:2,72:2,90:2,108:4,...]
+    speeds=(2, 3, 4, 5, 6, 8, 9, 10, 12, 14, 15, 16, 20, 21, 22, 24, 25)
+  lpd ladder 9* skip 8               class=positive_gap  gate= 7 unit_safe=0 unit_owned=2 unit_unprot=0 gap/th=0.005682 unprot=176 first=    11/162 denoms=[162:48,486:16,1782:16,2106:16,2592:64,2754:16]
+    speeds=(1, 9, 18, 27, 36, 45, 54, 63, 81, 90, 99, 108, 117, 126, 135, 144, 153)
+  gate ladder 18* skip 8             class=positive_gap  gate=16 unit_safe=0 unit_owned=2 unit_unprot=0 gap/th=0.002841 unprot=352 first=    19/324 denoms=[324:96,972:32,3564:32,4212:32,5184:128,5508:32]
+    speeds=(1, 18, 36, 54, 72, 90, 108, 126, 162, 180, 198, 216, 234, 252, 270, 288, 306)
+  double-gate 36* skip 8             class=positive_gap  gate=16 unit_safe=0 unit_owned=2 unit_unprot=0 gap/th=0.001420 unprot=704 first=    37/648 denoms=[648:192,1944:64,7128:64,8424:64,10368:256,11016:64]
+    speeds=(1, 36, 72, 108, 144, 180, 216, 252, 324, 360, 396, 432, 468, 504, 540, 576, 612)
+
+Targeted one-step repair scan around n=18 torsion/gate coordinates
+  removed coordinates: 6,8,9,12,16,17
+  inserted values: multiples of 2,3,6,9,18,36 up to q=12 plus selected descendants
+  without an 18-multiple: total=66 classes={'positive_gap': 66}
+  swap 16->48                        class=positive_gap  gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.020833 unprot= 14 first=      1/18 denoms=[18:6,54:2,90:2,864:4]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 48)
+  swap 12->24                        class=positive_gap  gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.029762 unprot= 14 first=      1/18 denoms=[18:6,126:2,198:2,432:4]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 24)
+  swap 6->81                         class=positive_gap  gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.030389 unprot= 18 first=      1/18 denoms=[18:6,216:4,234:2,1458:6]
+    speeds=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 81)
+  swap 8->27                         class=positive_gap  gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.033654 unprot= 18 first=      1/18 denoms=[18:6,54:2,234:2,288:6,306:2]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 27)
+  swap 8->81                         class=positive_gap  gate= 0 unit_safe=6 unit_owned=6 unit_unprot=6 gap/th=0.033654 unprot= 26 first=      1/18 denoms=[18:6,54:2,198:2,234:2,288:8,306:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 81)
+  with an 18-multiple: total=36 classes={'positive_gap': 36}
+  swap 8->108                        class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.021044 unprot= 24 first=    37/306 denoms=[198:2,234:2,288:8,306:2,1944:10]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 108)
+  swap 17->18                        class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.033333 unprot= 32 first=    19/324 denoms=[36:2,54:2,72:2,90:2,108:2,126:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18)
+  swap 8->54                         class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.033654 unprot= 20 first=    37/306 denoms=[198:2,234:2,288:8,306:2,972:6]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 54)
+  swap 17->36                        class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.034722 unprot= 32 first=    37/648 denoms=[54:2,72:2,90:2,108:2,126:2,144:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 36)
+  swap 16->54                        class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.036364 unprot= 16 first=    19/306 denoms=[90:2,126:2,162:2,198:2,234:2,270:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 54)
+
+Pure gate replacement ledger: replace fragile initial speeds by 18*q, q<= 6
+  audited=36 class_counts={'positive_gap': 36}
+  best gate replacements:
+  remove 8, add 108                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.021044 unprot= 24 first=    37/306 denoms=[198:2,234:2,288:8,306:2,1944:10]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 108)
+  remove 17, add 18                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.033333 unprot= 32 first=    19/324 denoms=[36:2,54:2,72:2,90:2,108:2,126:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 18)
+  remove 8, add 54                   class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.033654 unprot= 20 first=    37/306 denoms=[198:2,234:2,288:8,306:2,972:6]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 16, 17, 54)
+  remove 17, add 36                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.034722 unprot= 32 first=    37/648 denoms=[54:2,72:2,90:2,108:2,126:2,144:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 36)
+  remove 16, add 54                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.036364 unprot= 16 first=    19/306 denoms=[90:2,126:2,162:2,198:2,234:2,270:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 54)
+  remove 16, add 108                 class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.042023 unprot= 16 first=    19/306 denoms=[90:2,126:2,162:2,198:2,234:2,270:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 17, 108)
+  remove 12, add 36                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.043651 unprot= 16 first=    19/234 denoms=[126:2,198:2,234:2,306:2,648:8]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17, 36)
+  remove 17, add 54                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.043981 unprot= 32 first=    55/972 denoms=[36:2,72:2,90:2,108:2,126:2,144:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 54)
+  remove 9, add 18                   class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.044444 unprot= 24 first=    19/180 denoms=[180:2,198:2,234:2,252:2,288:2,306:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 13, 14, 15, 16, 17, 18)
+  remove 17, add 72                  class=positive_gap  gate= 1 unit_safe=0 unit_owned=6 unit_unprot=0 gap/th=0.048611 unprot= 32 first=   73/1296 denoms=[54:2,90:2,108:2,126:2,144:2,162:2,...]
+    speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 72)
+
+Observer-source fingerprints (HYP-1981 / THM-381)
+  observer -> runner iff ||v*t|| >= 1/18; source means observer outdegree 17.
+  runner half-turn ties are completed by the listed speed-order tie path.
+  initial tight                      source=boundary_source t=      1/18 obs_out=17/17 runner_ties=  8 runner_c3= 204 runner_sccs=(17,) score_hist=8:17
+  initial replace 8 by 18            source=open_source     t= 2345/6336 obs_out=17/17 runner_ties=  0 runner_c3= 196 runner_sccs=(17,) score_hist=7:8,8:1,9:8
+  initial replace 17 by 18           source=open_source     t=  509/1080 obs_out=17/17 runner_ties=  0 runner_c3= 196 runner_sccs=(17,) score_hist=7:8,8:1,9:8
+  no-gate stress                     source=open_source     t=   59/1800 obs_out=17/17 runner_ties=  0 runner_c3= 185 runner_sccs=(17,) score_hist=5:1,6:1,7:6,8:1,9:6,10:1,11:1
+  lpd ladder 9* skip 8               source=open_source     t=3991/57024 obs_out=17/17 runner_ties=  0 runner_c3= 201 runner_sccs=(17,) score_hist=7:3,8:11,9:3
+  gate ladder 18* skip 8             source=open_source     t=8681/114048 obs_out=17/17 runner_ties=  0 runner_c3= 198 runner_sccs=(17,) score_hist=6:1,7:2,8:11,9:2,10:1
+  double-gate 36* skip 8             source=open_source     t=15017/228096 obs_out=17/17 runner_ties=  0 runner_c3= 198 runner_sccs=(17,) score_hist=6:1,7:2,8:11,9:2,10:1
+  swap 16->48                        source=open_source     t=   181/576 obs_out=17/17 runner_ties=  0 runner_c3= 198 runner_sccs=(17,) score_hist=6:1,7:2,8:11,9:2,10:1
+  swap 8->108                        source=open_source     t=15793/42768 obs_out=17/17 runner_ties=  0 runner_c3= 201 runner_sccs=(17,) score_hist=7:3,8:11,9:3
+  Reading: the no-gate unit witnesses are source-marked boundary targets; gate rows destroy those targets but create open source targets in descendant endpoint layers.
+
+Branch Tournament Analysis
+  vertices: representative n=18 branch rows
+  observable: has-gate, unit witness loss, gap, endpoint debt, descendant denominator
+  switch: more counterexample-shaped row points to less; tie path is listed row order
+  H=1 c3=0 SCCs=(1, 1, 1, 1, 1, 1, 1, 1, 1) score_hist=0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1
+  top branch rows: double-gate 36* skip 8:8 | gate ladder 18* skip 8:7 | lpd ladder 9* skip 8:6 | swap 8->108:5 | initial replace 17 by 18:4 | initial replace 8 by 18:3
+
+Interpretation
+  THM-382/383 say the right LRC quotient must remember threshold colors and boundary tie-wall compactification.
+  HYP-1981 turns that decorated target into source reachability: every lonely witness listed above is an observer-source marked tournament.
+  The n=18 unit skeleton behaves like the old n=14 gate/tightness skeleton: without an 18-multiple, all six unit points remain safe.
+  Therefore the no-18-gate branch cannot be an open-cover counterexample. It can only be tight/boundary-like or positive-gap with unit witnesses intact.
+  The has-18-gate branch kills the unit witnesses but exports debt to descendant endpoint denominators.  In HYP-1981 language, it kills the unit source targets but moves source reachability into descendant layers.
+  The next proof object should be an observer-source endpoint-debt certificate for the 18-gate/lpd branch, split into 2-torsion and 3^2-torsion descendant layers.

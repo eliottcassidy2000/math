@@ -93,6 +93,9 @@ Positive runner speeds create a directed fiber flow LS→LL→SL for the THM-384
 **T617** #lrc #gap-sum-integral #refuted | certainty: refuted at n>=5 | source: opus-2026-06-01-S519
 The conjecture ∫(g_left+g_right)dt >= 2/n is FALSE: speeds (5,11,12,17) at n=5 give ratio 0.979. The observer can be "gap-disadvantaged on average" while still visiting LL. LRC is NOT a consequence of averaging; it's a trajectory-hitting theorem. See S519 output.
 
+**T618** #lrc #n18 #observer-source #gate-tightness #endpoint-debt | certainty: exact bounded audit | source: codex-2026-06-01-S520
+THM-382/383 plus HYP-1981, THM-384/HYP-1986, HYP-1987, THM-385/HYP-1988, and the THM-386 two-gap flow reframe the n=18 gate split as source-target survival inside the arc-confined source menu: without an `18`-multiple all six unit points stay observer-source boundary targets; with gates, the `9->18->36` ladder has `gap/th` `1/176 -> 1/352 -> 1/704` and endpoint debt `176 -> 352 -> 704`. The branch tournament is transitive, so this is a source/debt ladder, not a cyclic repair menu. See HYP-1992.
+
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.
 
