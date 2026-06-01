@@ -64,6 +64,22 @@ two-nearest-distance-sum relief, and two-neighbor threshold-deficit relief.
 THM-377 is a selected-row exact certificate for these lifts at `n=14` and
 `n=18`.
 
+**LRC endpoint owner**: for an endpoint of the forbidden interval
+`||v t|| < 1/n`, the owner is the speed `v` whose interval has that endpoint.
+For an interval, the owner is its defining speed.  An interval never strictly
+protects its own endpoint, because its own endpoints are boundary points.
+
+**Endpoint-pressure owner graph**: given an endpoint protection core, draw an
+edge `u -> v` when an interval owned by speed `u` strictly protects an endpoint
+owned by speed `v`.  THM-379 proves that any nonempty owner-compatible core
+has a directed owner cycle.
+
+**Pressure-realized endpoint core**: an endpoint protection core whose
+endpoint-pressure owner edges are contained in a chosen LRC pressure lift.
+THM-380 packages the resulting proof rule: a full-open-cover counterexample
+must be sieve-complete, have a nonempty endpoint core, and have a nontrivial
+pressure SCC whenever the core is pressure-realized.
+
 ---
 
 ## The Tiling Model

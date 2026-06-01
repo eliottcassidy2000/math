@@ -21,6 +21,11 @@ Orient `j -> i` when `j` is the more irreplaceable blocker of `i`.  If the stric
 
 Thus a pressure-DAG search should output a peel order.  A genuine counterexample branch should first force a nontrivial pressure SCC.
 
+S503 canonizes the payoff as THM-379 and THM-380.  A nonempty terminal endpoint
+core whose strict protection incidences are realized by pressure arrows forces
+an owner-pressure directed cycle.  Therefore a pressure DAG is a certificate
+once it is paired with pressure-realization of the terminal core.
+
 ## Evidence
 
 `04-computation/lrc_pressure_dag_audit_s500.py` audits pressure graphs for the hard quotient ladders:
@@ -58,4 +63,10 @@ The DAG is not just sorting by nearest-neighbor distance.  Mean edge agreement w
 
 ## See Also
 
-HYP-1930, HYP-1950, THM-354, THM-359, `04-computation/lrc_pressure_dag_audit_s500.py`, `05-knowledge/results/lrc_pressure_dag_audit_s500.out`, `07-reflections/lrc-pressure-dag-audit-s500.md`.
+HYP-1930, HYP-1950, THM-354, THM-359, THM-379, THM-380,
+`04-computation/lrc_pressure_dag_audit_s500.py`,
+`05-knowledge/results/lrc_pressure_dag_audit_s500.out`,
+`07-reflections/lrc-pressure-dag-audit-s500.md`,
+`04-computation/lrc_endpoint_pressure_formal_s503.py`,
+`05-knowledge/results/lrc_endpoint_pressure_formal_s503.out`,
+`07-reflections/lrc-endpoint-pressure-formalization-s503.md`.

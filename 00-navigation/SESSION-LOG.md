@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-01-S503 - LRC Endpoint-Pressure Formalization
+
+**Account:** Codex
+**Git first:** Started clean at `main...origin/main` after S502/S501c/S495.
+**User prompt:** Spend a long session formalizing around the Lonely Runner Conjecture.
+**Canonized:** Added THM-379 and THM-380. THM-379 proves that any nonempty owner-compatible endpoint protection core forces a directed owner-protection cycle. THM-380 packages the LRC certificate trilemma: a full-open-cover counterexample must be small-denominator sieve-complete, have a nonempty terminal endpoint core, and contain a pressure cycle whenever the terminal core is pressure-realized.
+**Definitions:** Added LRC endpoint owner, endpoint-pressure owner graph, and pressure-realized endpoint core to `01-canon/definitions.md`.
+**Computation:** Added `04-computation/lrc_endpoint_pressure_formal_s503.py` and stored `05-knowledge/results/lrc_endpoint_pressure_formal_s503.out`. The script exhaustively checks the finite owner-graph lemma through loopless digraphs on four vertices and protector-selector shadows through eight active owners; all all-owned strict-protector shadows are cyclic.
+**Synthesis:** Added `07-reflections/lrc-endpoint-pressure-formalization-s503.md` and tangents T588-T590. The new proof route is `denominator sieve -> endpoint core -> pressure SCC`: pressure DAGs become certificates once their arcs realize endpoint-core protection incidences. The remaining disproof-shaped object is sieve-complete plus nonempty terminal endpoint core plus labelled pressure SCC, or a failure of the current pressure gauge to realize the core.
+**Next:** Attach endpoint-runner or runner-pair labels to pressure arcs and prove realization for `k1`, `k2`, or threshold-deficit pressure lifts; then rerun the hard `n=14` and `n=18` rows with core-incidence labels attached to source/sink layers.
+
 ## codex-2026-06-01-S502 - Pair-First Twin Prime Lens
 
 **Account:** Codex

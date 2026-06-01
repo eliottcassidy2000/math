@@ -39,6 +39,12 @@ pressure DAG + endpoint-private rows -> ordered peel certificate;
 no compatible peel row -> labelled pressure SCC obstruction.
 ```
 
+S503 makes the owner-cycle obstruction formal.  By THM-379/THM-380, if a
+nonempty terminal endpoint core is pressure-realized, then a pressure DAG
+excludes it.  Thus the peel-layer program should now record not only pressure
+layers, but also which endpoint-core protection incidences each pressure edge
+realizes.
+
 ## Evidence
 
 `lrc_pressure_dag_s491.py` audits the pressure relation on the current hard
@@ -105,6 +111,11 @@ n18 d=18: gap/th=1/352,  unprotected=352, product=1
 - `04-computation/lrc_pressure_dag_s491.py`
 - `05-knowledge/results/lrc_pressure_dag_s491.out`
 - `07-reflections/lrc-pressure-dags-s491.md`
+- `04-computation/lrc_endpoint_pressure_formal_s503.py`
+- `05-knowledge/results/lrc_endpoint_pressure_formal_s503.out`
+- `07-reflections/lrc-endpoint-pressure-formalization-s503.md`
 - HYP-1930
 - HYP-1942
 - HYP-1950
+- THM-379
+- THM-380

@@ -1,0 +1,35 @@
+﻿LRC endpoint-pressure formalization (codex-2026-06-01 S503)
+============================================================================
+FINITE OWNER-GRAPH LEMMA
+Every loopless finite digraph with indegree >= 1 at each vertex has a directed cycle.
+  n   digraphs  min-in>=1 acyclic among them
+  1          1          0                  0
+  2          4          1                  0
+  3         64         27                  0
+  4       4096       2401                  0
+
+PROTECTOR SELECTOR MODEL
+Each active owner chooses one strict protector owner different from itself.
+This functional subgraph is the minimal shadow of an endpoint core.
+owners    selectors  acyclic selectors
+     2            1                  0
+     3            8                  0
+     4           81                  0
+     5         1024                  0
+     6        15625                  0
+     7       279936                  0
+     8      5764801                  0
+
+LRC FORMAL CERTIFICATE TRILEMMA
+For a speed set V at denominator n, a no-lonely open cover must pass:
+  1. denominator sieve completeness (THM-366/369),
+  2. nonempty terminal endpoint protection core (THM-357/359),
+  3. a cyclic owner-pressure graph if core protection is pressure-realized (THM-379/380).
+
+Therefore a proof search can stop on any of these certificates:
+  missing small denominator -> rational lonely witness;
+  empty endpoint core       -> no all-protected open cover;
+  pressure DAG + realized core incidences -> no counterexample core.
+
+The remaining disproof-shaped object is narrow:
+  sieve-complete + nonempty endpoint core + nontrivial labelled pressure SCC.

@@ -779,6 +779,15 @@ Twin-prime survival and Zeckendorf normal-form compatibility are independent pai
 **T587** #fermat-polygonal #pair-layer #higher-arity #additive-basis | certainty: bounded DP probe + theorem analogy | source: codex-2026-06-01-S495
 Pairs are the first relational layer, not always the proof layer. Two `k`-gonal atoms cover only part of `1..300` (`k=3` covers `180`, `k=8` covers `51`), while Fermat polygonal succeeds by bounded higher arity. This is the warning label for pair-first methods.
 
+**T588** #lonely-runner #endpoint-pressure #owner-cycle #certificate | certainty: proved formalization | source: codex-2026-06-01-S503
+Every nonempty owner-compatible LRC endpoint core casts an owner-protection digraph with indegree at least one at every active owner, hence a directed cycle. If a pressure lift realizes those strict protection incidences, a pressure DAG rules out the counterexample core. See THM-379.
+
+**T589** #lonely-runner #pressure-dag #endpoint-core #trilemma | certainty: proved certificate ladder | source: codex-2026-06-01-S503
+The LRC proof search now has a formal three-stop ladder: missing small denominator gives a rational lonely witness; empty endpoint core gives no all-protected open cover; pressure-realized endpoint core plus pressure DAG gives no counterexample core. What remains is sieve-complete plus nonempty core plus labelled pressure SCC. See THM-380.
+
+**T590** #tournament-analysis #pair-cells #lrc #pressure-realization | certainty: proof obligation | source: codex-2026-06-01-S503
+The next pressure task is not just finding SCCs; it is proving realization. Label each pressure arc by the endpoint-runner or runner-pair cell that generated it, then prove `k1`, `k2`, or deficit pressure arrows contain the terminal endpoint-core protection arrows, or refine the gauge until they do.
+
 **T286** #h-gradient #score-gradient #projection-defects | certainty: high (n=5,6 exact) | source: kind-pasteur-2026-05-29-S3
 Endpoint-star tournament bias is not merely "large H movement." At n=6, endpoint stars have defect +0.2109 and tournament-only mean |Delta H| 10.56, but range-3 single tiles also have positive defect (+0.1615) while range-2 single tiles are even-biased (-0.0742) despite joint mean |Delta H| 6.63. Projection-defect sign, H-gradient, and score motion are separate feature channels.
 
