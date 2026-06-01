@@ -1,0 +1,28 @@
+LRC loneliness ENTROPY on the base-p tree (oracle-S543)
+
+--- base p = 2 (descent entropy log p; depth D=7) ---
+   system                    |S|  h_full  h_touch  N_touch(d=1..7)
+   AP n=5 (tight)              0    -inf    0.286  [2, 4, 4, 4, 4, 4, 4]
+   generic n=5              3/25   0.512    0.596  [2, 4, 6, 6, 8, 10, 18]
+   AP n=4 (tight)              0    -inf    0.143  [2, 2, 2, 2, 2, 2, 2]
+   generic n=4              1/10   0.512    0.571  [2, 3, 4, 4, 6, 10, 16]
+   AP n=6 (tight)              0    -inf    0.143  [2, 2, 2, 2, 2, 2, 2]
+   generic n=6              4/21   0.596    0.701  [2, 4, 6, 10, 12, 18, 30]
+
+--- base p = 3 (descent entropy log p; depth D=7) ---
+   system                    |S|  h_full  h_touch  N_touch(d=1..7)
+   AP n=5 (tight)              0    -inf    0.180  [3, 4, 4, 4, 4, 4, 4]
+   generic n=5              3/25   0.724    0.727  [3, 3, 5, 11, 31, 91, 267]
+   AP n=4 (tight)              0    -inf    0.090  [2, 2, 2, 2, 2, 2, 2]
+   generic n=4              1/10   0.700    0.702  [3, 3, 5, 11, 27, 75, 221]
+   AP n=6 (tight)              0    -inf    0.090  [2, 2, 2, 2, 2, 2, 2]
+   generic n=6              4/21   0.783    0.787  [3, 6, 10, 18, 52, 146, 424]
+
+READING: generic systems have h_full = h_touch = 1 (the lonely set has full
+box-dimension 1 in every base p -> loneliness with positive measure). The TIGHT
+AP has |S|=0, N_full=0 (h_full=-inf) and N_touch BOUNDED (h_touch=0): the safe set
+is a finite set of wall points -> the critical/zero-entropy line. So the loneliness
+box-entropy h_touch is the order parameter: LRC <=> h_touch >= 0 (a safe point
+exists); the extremal AP sits exactly at the h_touch: 1->0 drop. The center=shift
+(odometer, zero entropy) is invisible here; the entropy is the transverse x->p
+descent, independent of p (dim 1 generic / dim 0 tight in every base).

@@ -1,0 +1,68 @@
+======================================================================
+(1) H-ENTROPY S_H=log2 H is ADDITIVE over disjoint modules (S531)
+======================================================================
+  n=8: S_H(A)=1.585, S_H(B)=1.585, S_H(A+B)=3.170; sum=3.170  additive=True
+  n=9: S_H(A)=2.322, S_H(B)=2.322, S_H(A+B)=4.644; sum=4.644  additive=True
+  apex module size s -> S_H contribution log2(1+2^{s-2}):
+    s=2: 1+2^(s-2)=2, log2=1.000
+    s=3: 1+2^(s-2)=3, log2=1.585
+    s=4: 1+2^(s-2)=5, log2=2.322
+    s=5: 1+2^(s-2)=9, log2=3.170
+    s=6: 1+2^(s-2)=17, log2=4.087
+    s=7: 1+2^(s-2)=33, log2=5.044
+  => S_H is a TREE-ADDITIVE entropy: S_H=0 (transitive, rigid) up to log2(H_regular)
+     (the regular polygon = LRC-tight extremal). Max entropy = the tight witness.
+
+======================================================================
+(1b) H-ENTROPY trajectory S_H(t) over the runner walk, n=5
+======================================================================
+  AP 1..n (regular)          v=(1, 2, 3, 4, 5): S_H(t) in [0.00,3.91], mean 2.757
+  geometric 1,2,4,..         v=(1, 2, 4, 8, 16): S_H(t) in [0.00,3.91], mean 1.926
+  random primitive           v=(10, 18, 23, 31, 34): S_H(t) in [0.00,3.91], mean 2.295
+  sieve 1,2,..,n with mult   v=(1, 2, 3, 4, 30): S_H(t) in [0.00,3.91], mean 2.576
+  PATTERN: max S_H = log2(H_regular) at the spread/regular slices; AP/regular speeds
+  carry the HIGHEST mean H-entropy (most time spread) -- entropy fingerprints regularity.
+
+======================================================================
+(1b) H-ENTROPY trajectory S_H(t) over the runner walk, n=6
+======================================================================
+  AP 1..n (regular)          v=(1, 2, 3, 4, 5, 6): S_H(t) in [0.00,5.49], mean 4.243
+  geometric 1,2,4,..         v=(1, 2, 4, 8, 16, 32): S_H(t) in [0.00,5.49], mean 3.367
+  random primitive           v=(12, 17, 19, 42, 44, 45): S_H(t) in [0.00,5.49], mean 3.749
+  sieve 1,2,..,n with mult   v=(1, 2, 3, 4, 5, 30): S_H(t) in [0.00,5.49], mean 4.107
+  PATTERN: max S_H = log2(H_regular) at the spread/regular slices; AP/regular speeds
+  carry the HIGHEST mean H-entropy (most time spread) -- entropy fingerprints regularity.
+
+======================================================================
+(2) p-ADIC TREE entropy (p=3): Shannon spread across residues mod p^k
+======================================================================
+  AP 1..n-1                     : level-entropies(mod p^1..p^3)=[1.52, 2.32, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  random primitive              : level-entropies(mod p^1..p^3)=[0.72, 1.92, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  sieve: all ≡0 mod p (x3 of 1..): level-entropies(mod p^1..p^3)=[-0.0, 1.52, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  mixed: 1 + multiples of p     : level-entropies(mod p^1..p^3)=[0.72, 1.92, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  PATTERN: HIGH tree entropy = speeds spread across channels (debt present, sieve
+  blocked, S534 vacuity); LOW entropy / empty 0-branch = sieve loneliness available.
+
+======================================================================
+(2) p-ADIC TREE entropy (p=2): Shannon spread across residues mod p^k
+======================================================================
+  AP 1..n-1                     : level-entropies(mod p^1..p^3)=[0.97, 1.92, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  random primitive              : level-entropies(mod p^1..p^3)=[0.72, 1.52, 1.92]; 0-branch empty (sieve t=1/p lonely)=False
+  sieve: all ≡0 mod p (x3 of 1..): level-entropies(mod p^1..p^3)=[-0.0, 0.97, 1.92]; 0-branch empty (sieve t=1/p lonely)=False
+  mixed: 1 + multiples of p     : level-entropies(mod p^1..p^3)=[0.72, 1.52, 2.32]; 0-branch empty (sieve t=1/p lonely)=False
+  PATTERN: HIGH tree entropy = speeds spread across channels (debt present, sieve
+  blocked, S534 vacuity); LOW entropy / empty 0-branch = sieve loneliness available.
+
+======================================================================
+(3) ISO-CLASS WALK entropy over t (the menu walk), n=5
+======================================================================
+  AP 1..n    v=(1, 2, 3, 4, 5): walk entropy=1.825 bits over 4 iso-classes (max if uniform=2.000)
+  random     v=(15, 19, 24, 27, 31): walk entropy=1.796 bits over 4 iso-classes (max if uniform=2.000)
+  PATTERN: the walk entropy measures the MIXING across the 2Fib(n-2) menu; the
+  more uniform the time-in-class, the higher -- another regularity fingerprint.
+======================================================================
+SYNTHESIS: three TREE entropies all measure SPREAD/MIXING. H-ENTROPY (log2 H) is
+TREE-ADDITIVE over the modular tree (S531), maximized at the regular polygon (LRC-
+tight). p-adic tree entropy = channel spread (S534): high => sieve blocked. Walk
+entropy = menu mixing. Regularity (AP) shows up as HIGH entropy on every tree.
+======================================================================
