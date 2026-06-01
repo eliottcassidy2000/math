@@ -1,0 +1,138 @@
+LRC Gap Race Analysis — opus-2026-06-01-S518
+THM-386: LL entry requires winning the gap race from LS
+
+======================================================================
+PART A: Gap race analysis — wrap-around entry quality
+======================================================================
+
+n=3  max_speed=30  total_sets=277
+  LL via simplified race: 276/277
+  no LL via simplified race: 1/277
+  max(L_0) across wrap-arounds: avg=0.9373, min=0.5000
+  best race ratio (< 1 = LL): avg=0.1343, max=1.0000
+
+n=4  max_speed=20  total_sets=997
+  LL via simplified race: 997/997
+  no LL via simplified race: 0/997
+  max(L_0) across wrap-arounds: avg=0.7883, min=0.5000
+  best race ratio (< 1 = LL): avg=0.0932, max=0.5000
+
+n=5  max_speed=15  total_sets=1325
+  LL via simplified race: 1324/1325
+  no LL via simplified race: 1/1325
+  max(L_0) across wrap-arounds: avg=0.6443, min=0.3333
+  best race ratio (< 1 = LL): avg=0.0675, max=1.0000
+
+n=6  max_speed=12  total_sets=786
+  LL via simplified race: 786/786
+  no LL via simplified race: 0/786
+  max(L_0) across wrap-arounds: avg=0.5204, min=0.3333
+  best race ratio (< 1 = LL): avg=0.0713, max=0.5000
+
+======================================================================
+PART B: Initial segment {1,...,n-1} gap races
+======================================================================
+
+n= 3  wrap-arounds=1  LS entries=1
+  LL races: 0  tie: 1  SS: 0
+  L_0 range: [0.500000, 0.500000]
+  race ratio range: [1.000000, 1.000000]
+  closest race (TIE): v_reset=2, v_ccw=1
+
+n= 4  wrap-arounds=3  LS entries=3
+  LL races: 1  tie: 1  SS: 1
+  L_0 range: [0.333333, 0.500000]
+  race ratio range: [0.500000, 2.000000]
+  best LL race: t_reset=0.5000, v_reset=2, v_ccw=1, ratio=0.5000
+
+n= 5  wrap-arounds=6  LS entries=4
+  LL races: 1  tie: 2  SS: 1
+  L_0 range: [0.250000, 0.333333]
+  race ratio range: [0.500000, 3.000000]
+  best LL race: t_reset=0.6667, v_reset=3, v_ccw=1, ratio=0.5000
+
+n= 6  wrap-arounds=10  LS entries=8
+  LL races: 3  tie: 1  SS: 4
+  L_0 range: [0.200000, 0.333333]
+  race ratio range: [0.333333, 4.000000]
+  best LL race: t_reset=0.6667, v_reset=3, v_ccw=1, ratio=0.3333
+
+n= 7  wrap-arounds=15  LS entries=8
+  LL races: 2  tie: 3  SS: 3
+  L_0 range: [0.166667, 0.250000]
+  race ratio range: [0.333333, 5.000000]
+  best LL race: t_reset=0.7500, v_reset=4, v_ccw=1, ratio=0.3333
+
+n= 8  wrap-arounds=21  LS entries=14
+  LL races: 5  tie: 2  SS: 7
+  L_0 range: [0.142857, 0.250000]
+  race ratio range: [0.250000, 6.000000]
+  best LL race: t_reset=0.7500, v_reset=4, v_ccw=1, ratio=0.2500
+
+n= 9  wrap-arounds=28  LS entries=16
+  LL races: 5  tie: 3  SS: 8
+  L_0 range: [0.125000, 0.200000]
+  race ratio range: [0.250000, 7.000000]
+  best LL race: t_reset=0.8000, v_reset=5, v_ccw=1, ratio=0.2500
+
+n=10  wrap-arounds=36  LS entries=22
+  LL races: 8  tie: 2  SS: 12
+  L_0 range: [0.111111, 0.200000]
+  race ratio range: [0.200000, 8.000000]
+  best LL race: t_reset=0.8000, v_reset=5, v_ccw=1, ratio=0.2000
+
+n=11  wrap-arounds=45  LS entries=22
+  LL races: 6  tie: 5  SS: 11
+  L_0 range: [0.100000, 0.166667]
+  race ratio range: [0.200000, 9.000000]
+  best LL race: t_reset=0.8333, v_reset=6, v_ccw=1, ratio=0.2000
+
+n=12  wrap-arounds=55  LS entries=32
+  LL races: 11  tie: 2  SS: 19
+  L_0 range: [0.090909, 0.166667]
+  race ratio range: [0.166667, 10.000000]
+  best LL race: t_reset=0.8333, v_reset=6, v_ccw=1, ratio=0.1667
+
+n=13  wrap-arounds=66  LS entries=34
+  LL races: 11  tie: 6  SS: 17
+  L_0 range: [0.083333, 0.142857]
+  race ratio range: [0.166667, 11.000000]
+  best LL race: t_reset=0.8571, v_reset=7, v_ccw=1, ratio=0.1667
+
+n=14  wrap-arounds=78  LS entries=46
+  LL races: 17  tie: 3  SS: 26
+  L_0 range: [0.076923, 0.142857]
+  race ratio range: [0.142857, 12.000000]
+  best LL race: t_reset=0.8571, v_reset=7, v_ccw=1, ratio=0.1429
+
+======================================================================
+PART C: L_0 maximum vs speed bound
+======================================================================
+
+n=3:
+  max_speed= 10  sets=31  max(L_0)=0.900000
+  max_speed= 20  sets=127  max(L_0)=0.950000
+  max_speed= 30  sets=277  max(L_0)=0.966667
+  max_speed= 50  sets=501  max(L_0)=0.980000
+
+n=4:
+  max_speed= 10  sets=109  max(L_0)=0.888889
+  max_speed= 20  sets=501  max(L_0)=0.947368
+  max_speed= 30  sets=501  max(L_0)=0.965517
+  max_speed= 50  sets=501  max(L_0)=0.960000
+
+n=5:
+  max_speed= 10  sets=205  max(L_0)=0.777778
+  max_speed= 20  sets=501  max(L_0)=0.894737
+  max_speed= 30  sets=501  max(L_0)=0.931034
+  max_speed= 50  sets=501  max(L_0)=0.940000
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+The simplified race analysis captures the EXACT outcome when no
+runner swaps occur during the race interval.  For initial segments,
+the tie races (race_ratio = 1) correspond to the wall-only LL witnesses.
+The full picture requires tracking runner swaps during the race.
+

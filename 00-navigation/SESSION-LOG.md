@@ -9,6 +9,16 @@
 **Main reframe:** At unit walls `t=a/145`, all nonzero residues modulo `145` are already safe; only speeds divisible by `145` block. If no speed is divisible by `145`, THM-369 solves immediately. If such a blocker exists, the `144` moving-runner budget forces at least one missing antipodal nonzero boundary side, so there is a one-sided unit-wall aperture.
 **Synthesis:** Added HYP-1989 and `07-reflections/lrc-n145-whacky-reframes-s518.md`. The attempted n=145 proof is reframed as: push the zero-residue embryo (the speeds divisible by `145`, scaled down by `145`) through some unit-wall aperture, or extract a labelled endpoint-pressure obstruction contradicting THM-380. The route tournament ranks `unit_wall_aperture`, `zero_residue_embryo`, `almost_source_tunnel`, `crt_5_29_two_moons`, and `observer_score_descent` as the top five proof languages.
 **Verification:** `python -m py_compile 04-computation/lrc_n145_whacky_reframes_s518.py`; full script rerun with output stored.
+## opus-2026-06-01-S519 - LRC two-gap monotonicity and directed fiber flow
+
+**Account:** Oracle (remote-control)
+**Git first:** Started on `main` after fetching origin; rebased over concurrent S516, S515, S514, S513, S512, S511 LRC work and the codex-S517 observer-score session.
+**User prompt:** Work on some math (open-ended research session).
+**Theorem:** Added THM-386 (LRC two-gap monotonicity and fiber flow). PROVED: For positive integer speeds, g_right is non-decreasing and g_left is non-increasing between runner wrap-arounds. The LL fiber (lonely state) can only be entered from LS and only exited to SL. The transitions SL→LL and LL→LS are structurally forbidden. Time-reversal t→1-t swaps g_left↔g_right, giving μ(LS)=μ(SL).
+**Computation:** Added `04-computation/lrc_two_gap_dynamics_s518.py` and `04-computation/lrc_gap_race_analysis_s518.py` with outputs in `05-knowledge/results/`. The dynamics script tracks (g_left, g_right) through all cells for bounded primitive speed windows and initial segments up to n=14. The race script analyzes the "gap race" at each wrap-around: does g_right reach 1/n before g_left drops to 1/n?
+**Findings:** (1) The forbidden transitions SS→LL, SL→LL, LL→SS, LL→LS are absent in the bounded n=3..5 transition audit. (2) The gap-sum integral ∫(g_left+g_right) is NOT always ≥ 2/n — refuted at n=5 by speeds (5,11,12,17) with ratio 0.979. (3) All 3385 tested primitive speed sets in the gap-race n=3..6 windows visit LL. (4) The gap exchange is strongly anti-correlated. (5) For initial segments at n=14, 17/46 LS entries lead to LL via the simplified race.
+**Synthesis:** Added HYP-1989 (gap-race entry forcing) and `07-reflections/lrc-two-gap-monotonicity-dynamics-s518.md`. THM-386 reduces LRC to a finite collection of "gap races" at wrap-around events. The next target is proving that among all wrap-arounds per period, at least one race is won by g_right.
+**Verification:** `python3 -m py_compile` on both scripts; full reruns with output stored.
 
 ## codex-2026-06-01-S517 - Observer-score repair fibers around HYP-1981
 

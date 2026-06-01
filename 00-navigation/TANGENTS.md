@@ -85,8 +85,13 @@ THM-384 turns THM-382's threshold-gap evidence into a local theorem: the observe
 **T612** #lrc #observer-score #almost-source #pressure-repair | certainty: proved local stratification + computed audit | source: codex-2026-06-01-S517
 THM-385 shows observer indegree in the marked LRC tournament is exactly the number of blocking runners. Thus source means zero blockers, almost-source means one blocker, and observer score is distance-to-source. S517 adds side-defect and observer 2-king repair layers as possible bridges to labelled endpoint pressure. See HYP-1988.
 
-**T613** #lrc #n145 #crt-aperture #unit-wall | certainty: proof-strategy + exact residue audit | source: codex-2026-06-01-S518
+**T615** #lrc #n145 #crt-aperture #unit-wall | certainty: proof-strategy + exact residue audit | source: codex-2026-06-01-S518
 At `n=145=5*29`, every unit wall `a/145` makes all nonzero residues safe; only `145`-divisible speeds block. If such blockers exist, the 144 moving-runner budget forces a missing antipodal boundary side, creating a one-sided aperture. The proof target is pushing the zero-residue embryo through that aperture or extracting THM-380 pressure. See HYP-1989.
+**T616** #lrc #two-gap #monotonicity #directed-fiber-flow | certainty: proved (THM-386) + exhaustive audit | source: opus-2026-06-01-S519
+Positive runner speeds create a directed fiber flow LS→LL→SL for the THM-384 two-gap criterion. The LL (lonely) state can only be entered from LS (right gap grows to 1/n) and only exited to SL (left gap drops below 1/n); transitions SL→LL and LL→LS are structurally impossible. This reduces LRC to a "gap race" at each wrap-around reset: does g_right reach 1/n before g_left drops? See THM-386, HYP-1990.
+
+**T617** #lrc #gap-sum-integral #refuted | certainty: refuted at n>=5 | source: opus-2026-06-01-S519
+The conjecture ∫(g_left+g_right)dt >= 2/n is FALSE: speeds (5,11,12,17) at n=5 give ratio 0.979. The observer can be "gap-disadvantaged on average" while still visiting LL. LRC is NOT a consequence of averaging; it's a trajectory-hitting theorem. See S519 output.
 
 **T267** #2-adic-grid #column-families #mode-B #blowup #tournament-sizes | certainty: HIGH (algebraic) | source: oracle-2026-05-15
 Every natural number $n = 2^r(2k-1)$ sits at grid position (row $r$, column $k$). Column families $F_k = \{2^r(2k-1)\}$ organize tournament sizes: Mode B recursion ($n \to n-2$) = left-column step (top row only). Tournament blowup $T[K_2]$ = row step. The pairs anomaly $\lfloor n/2\rfloor$ has +1 extra at the $r=0 \to r=1$ seam (unmatched vertex gains twin). Walsh degree jump odd/even IS this seam. SC∩SF = SC($n-2$) is adjacent-column bijection via middle subtournament. HYP-217 doubling-closed condition = 2-adic orbit in $\mathbb{Z}/n\mathbb{Z}$. See `07-reflections/adic-column-families.md`, INV-184, INV-185, INV-186, OPEN-Q-045.

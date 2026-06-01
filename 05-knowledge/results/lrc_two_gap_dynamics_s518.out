@@ -1,0 +1,366 @@
+LRC Two-Gap Dynamics — opus-2026-06-01-S518
+THM-384 reduction: lonely iff g_left >= 1/n AND g_right >= 1/n
+
+======================================================================
+PART A: Initial segment speeds {1,...,n-1}
+======================================================================
+
+n= 3  speeds=(1, 2)
+  cells=    6  walls=    6
+  fiber measures: LS=0.500000, SL=0.500000
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.750000  (fair share = 0.666667)
+  max(g_left+g_right) = 0.916667
+  min(g_left+g_right) = 0.583333
+  wall LL points: 2
+    t=0.333333  g_left=0.333333  g_right=0.333333
+    t=0.666667  g_left=0.333333  g_right=0.333333
+
+n= 4  speeds=(1, 2, 3)
+  cells=   14  walls=   14
+  fiber measures: LS=0.458333, SL=0.458333, SS=0.083333
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.583333  (fair share = 0.500000)
+  max(g_left+g_right) = 0.916667
+  min(g_left+g_right) = 0.354167
+  wall LL points: 2
+    t=0.250000  g_left=0.250000  g_right=0.250000
+    t=0.750000  g_left=0.250000  g_right=0.250000
+
+n= 5  speeds=(1, 2, 3, 4)
+  cells=   22  walls=   22
+  fiber measures: LS=0.466667, SL=0.466667, SS=0.066667
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.500000  (fair share = 0.400000)
+  max(g_left+g_right) = 0.925000
+  min(g_left+g_right) = 0.258333
+  wall LL points: 4
+    t=0.200000  g_left=0.200000  g_right=0.200000
+    t=0.400000  g_left=0.200000  g_right=0.200000
+    t=0.600000  g_left=0.200000  g_right=0.200000
+
+n= 6  speeds=(1, 2, 3, 4, 5)
+  cells=   38  walls=   38
+  fiber measures: LS=0.422222, SL=0.422222, SS=0.155556
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.416667  (fair share = 0.333333)
+  max(g_left+g_right) = 0.933333
+  min(g_left+g_right) = 0.204167
+  wall LL points: 2
+    t=0.166667  g_left=0.166667  g_right=0.166667
+    t=0.833333  g_left=0.166667  g_right=0.166667
+
+n= 7  speeds=(1, 2, 3, 4, 5, 6)
+  cells=   48  walls=   48
+  fiber measures: LS=0.457143, SL=0.457143, SS=0.085714
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.383333  (fair share = 0.285714)
+  max(g_left+g_right) = 0.940476
+  min(g_left+g_right) = 0.169048
+  wall LL points: 6
+    t=0.142857  g_left=0.142857  g_right=0.142857
+    t=0.285714  g_left=0.142857  g_right=0.142857
+    t=0.428571  g_left=0.142857  g_right=0.142857
+
+n= 8  speeds=(1, 2, 3, 4, 5, 6, 7)
+  cells=   70  walls=   70
+  fiber measures: LS=0.417857, SL=0.417857, SS=0.164286
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.333333  (fair share = 0.250000)
+  max(g_left+g_right) = 0.946429
+  min(g_left+g_right) = 0.144345
+  wall LL points: 4
+    t=0.125000  g_left=0.125000  g_right=0.125000
+    t=0.375000  g_left=0.125000  g_right=0.125000
+    t=0.625000  g_left=0.125000  g_right=0.125000
+
+n= 9  speeds=(1, 2, 3, 4, 5, 6, 7, 8)
+  cells=   88  walls=   88
+  fiber measures: LS=0.426984, SL=0.426984, SS=0.146032
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.307143  (fair share = 0.222222)
+  max(g_left+g_right) = 0.951389
+  min(g_left+g_right) = 0.125992
+  wall LL points: 6
+    t=0.111111  g_left=0.111111  g_right=0.111111
+    t=0.222222  g_left=0.111111  g_right=0.111111
+    t=0.444444  g_left=0.111111  g_right=0.111111
+
+n=10  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  cells=  114  walls=  114
+  fiber measures: LS=0.417619, SL=0.417619, SS=0.164762
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.279762  (fair share = 0.200000)
+  max(g_left+g_right) = 0.955556
+  min(g_left+g_right) = 0.111806
+  wall LL points: 4
+    t=0.100000  g_left=0.100000  g_right=0.100000
+    t=0.300000  g_left=0.100000  g_right=0.100000
+    t=0.700000  g_left=0.100000  g_right=0.100000
+
+n=11  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  cells=  132  walls=  132
+  fiber measures: LS=0.434199, SL=0.434199, SS=0.131602
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.263889  (fair share = 0.181818)
+  max(g_left+g_right) = 0.959091
+  min(g_left+g_right) = 0.100505
+  wall LL points: 10
+    t=0.090909  g_left=0.090909  g_right=0.090909
+    t=0.181818  g_left=0.090909  g_right=0.090909
+    t=0.272727  g_left=0.090909  g_right=0.090909
+
+n=12  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+  cells=  170  walls=  170
+  fiber measures: LS=0.405592, SL=0.405592, SS=0.188817
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.239683  (fair share = 0.166667)
+  max(g_left+g_right) = 0.962121
+  min(g_left+g_right) = 0.091288
+  wall LL points: 4
+    t=0.083333  g_left=0.083333  g_right=0.083333
+    t=0.416667  g_left=0.083333  g_right=0.083333
+    t=0.583333  g_left=0.083333  g_right=0.083333
+
+n=13  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+  cells=  190  walls=  190
+  fiber measures: LS=0.425674, SL=0.425674, SS=0.148651
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.229726  (fair share = 0.153846)
+  max(g_left+g_right) = 0.964744
+  min(g_left+g_right) = 0.083625
+  wall LL points: 12
+    t=0.076923  g_left=0.076923  g_right=0.076923
+    t=0.153846  g_left=0.076923  g_right=0.076923
+    t=0.230769  g_left=0.076923  g_right=0.076923
+
+n=14  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  cells=  234  walls=  234
+  fiber measures: LS=0.400764, SL=0.400764, SS=0.198473
+  lonely measure (LL): 0.00000000
+  avg(g_left+g_right) = 0.211364  (fair share = 0.142857)
+  max(g_left+g_right) = 0.967033
+  min(g_left+g_right) = 0.077152
+  wall LL points: 6
+    t=0.071429  g_left=0.071429  g_right=0.071429
+    t=0.214286  g_left=0.071429  g_right=0.071429
+    t=0.357143  g_left=0.071429  g_right=0.071429
+
+======================================================================
+PART B: Exhaustive primitive speed sets
+======================================================================
+
+n=3  max_speed=20  total_sets=127
+  LL found: 127/127  (100.0%)
+  ALL sets visit LL — LRC holds for all tested.
+  avg LL measure: 0.110407
+  avg g_sum integral: 0.672584  (fair share: 0.666667)
+  min lonely measure (open): 0.00000000  set=(1, 2)
+  max lonely measure: 0.16666667
+  avg exchange ratio: 0.9386  (1.0 = perfect anti-correlation)
+
+n=4  max_speed=14  total_sets=325
+  LL found: 325/325  (100.0%)
+  ALL sets visit LL — LRC holds for all tested.
+  avg LL measure: 0.116443
+  avg g_sum integral: 0.524348  (fair share: 0.500000)
+  min lonely measure (open): 0.00000000  set=(1, 2, 3)
+  max lonely measure: 0.20000000
+  avg exchange ratio: 0.9612  (1.0 = perfect anti-correlation)
+
+n=5  max_speed=11  total_sets=325
+  LL found: 325/325  (100.0%)
+  ALL sets visit LL — LRC holds for all tested.
+  avg LL measure: 0.109416
+  avg g_sum integral: 0.438855  (fair share: 0.400000)
+  min lonely measure (open): 0.00000000  set=(1, 2, 3, 4)
+  max lonely measure: 0.20779221
+  avg exchange ratio: 0.9762  (1.0 = perfect anti-correlation)
+
+n=6  max_speed=9  total_sets=126
+  LL found: 126/126  (100.0%)
+  ALL sets visit LL — LRC holds for all tested.
+  avg LL measure: 0.099932
+  avg g_sum integral: 0.389918  (fair share: 0.333333)
+  min lonely measure (open): 0.00000000  set=(1, 2, 3, 4, 5)
+  max lonely measure: 0.19047619
+  avg exchange ratio: 1.0000  (1.0 = perfect anti-correlation)
+
+======================================================================
+PART C: Gap-sum integral >= 2/n conjecture
+======================================================================
+
+n= 3  sets=241  violations=0
+  min ratio (integral / fair_share): 1.000331  set=(27, 28)
+  max ratio: 1.125000
+  integral >= 2/n holds for all tested sets.
+
+n= 4  sets=712  violations=0
+  min ratio (integral / fair_share): 1.001961  set=(15, 16, 17)
+  max ratio: 1.208333
+  integral >= 2/n holds for all tested sets.
+
+n= 5  sets=699  violations=35
+  min ratio (integral / fair_share): 0.982077  set=(5, 8, 9, 13)
+  max ratio: 1.272321
+  *** CONJECTURE VIOLATED: 35 sets have integral < 2/n ***
+
+n= 6  sets=461  violations=5
+  min ratio (integral / fair_share): 0.973303  set=(3, 5, 7, 8, 11)
+  max ratio: 1.316667
+  *** CONJECTURE VIOLATED: 5 sets have integral < 2/n ***
+
+n= 7  sets=84  violations=0
+  min ratio (integral / fair_share): 1.093075  set=(1, 5, 6, 7, 8, 9)
+  max ratio: 1.371528
+  integral >= 2/n holds for all tested sets.
+
+n= 8  sets=8  violations=0
+  min ratio (integral / fair_share): 1.269388  set=(1, 3, 4, 5, 6, 7, 8)
+  max ratio: 1.389144
+  integral >= 2/n holds for all tested sets.
+
+Targeted exact gap-sum counterexamples outside the bounded scan:
+  n=5 speeds=(5, 11, 12, 17): integral=0.391785 fair=0.400000 ratio=0.979463 LL=0.07882353 wallLL=18
+  n=6 speeds=(5, 7, 8, 9, 13): integral=0.320958 fair=0.333333 ratio=0.962875 LL=0.08148148 wallLL=18
+
+======================================================================
+PART D: n=14 initial/doubled periodic sanity check
+======================================================================
+
+
+--- initial: speeds=(1, 2, 3, 4, 5, 6)... (n=14) ---
+  estimated wall count: ~819
+  cells=234  walls=234
+  fibers: LS=0.400764, SL=0.400764, SS=0.198473
+  lonely measure: 0.00000000
+  avg g_sum: 0.211364  (fair: 0.142857)
+  doubled initial (2x traversal): gcd=2, reducing to primitive form
+
+--- doubled initial (2x traversal): speeds=(1, 2, 3, 4, 5, 6)... (n=14) ---
+  estimated wall count: ~819
+  cells=234  walls=234
+  fibers: LS=0.400764, SL=0.400764, SS=0.198473
+  lonely measure: 0.00000000
+  avg g_sum: 0.211364  (fair: 0.142857)
+======================================================================
+PART E: Fiber transition structure
+======================================================================
+
+n=3:
+  total sets: 127
+  unique fiber counts: {2: 1, 4: 126}
+  transitions (total across all sets):
+    LL -> LL: 255
+    LL -> SL: 837
+    LS -> LL: 837
+    LS -> LS: 1025
+    LS -> SL: 70
+    LS -> SS: 805
+    SL -> LS: 935
+    SL -> SL: 1025
+    SL -> SS: 777
+    SS -> LS: 777
+    SS -> SL: 805
+  MISSING transitions: [('SS', 'SS'), ('SS', 'LL'), ('SL', 'LL'), ('LL', 'SS'), ('LL', 'LS')]
+
+n=4:
+  total sets: 325
+  unique fiber counts: {3: 1, 4: 324}
+  transitions (total across all sets):
+    LL -> LL: 773
+    LL -> SL: 1695
+    LS -> LL: 1695
+    LS -> LS: 2792
+    LS -> SL: 256
+    LS -> SS: 2024
+    SL -> LS: 2377
+    SL -> SL: 2792
+    SL -> SS: 1598
+    SS -> LS: 1598
+    SS -> SL: 2024
+    SS -> SS: 2144
+  MISSING transitions: [('SS', 'LL'), ('SL', 'LL'), ('LL', 'SS'), ('LL', 'LS')]
+
+n=5:
+  total sets: 325
+  unique fiber counts: {3: 2, 4: 323}
+  transitions (total across all sets):
+    LL -> LL: 757
+    LL -> SL: 1461
+    LS -> LL: 1461
+    LS -> LS: 2726
+    LS -> SL: 378
+    LS -> SS: 1997
+    SL -> LS: 2481
+    SL -> SL: 2726
+    SL -> SS: 1355
+    SS -> LS: 1355
+    SS -> SL: 1997
+    SS -> SS: 2916
+  MISSING transitions: [('SS', 'LL'), ('SL', 'LL'), ('LL', 'SS'), ('LL', 'LS')]
+
+======================================================================
+PART F: Pigeonhole measure decomposition
+======================================================================
+
+n=3:
+  total sets: 127
+  min overlap excess (mu_both - (mu_bp + mu_bm - 1)): 0.00000000
+    at speeds: (1, 2)
+  NOTE: overlap excess = mu(LL), so this should always be >= 0
+
+n=4:
+  total sets: 325
+  min overlap excess (mu_both - (mu_bp + mu_bm - 1)): 0.00000000
+    at speeds: (1, 2, 3)
+  NOTE: overlap excess = mu(LL), so this should always be >= 0
+
+n=5:
+  total sets: 325
+  min overlap excess (mu_both - (mu_bp + mu_bm - 1)): 0.00000000
+    at speeds: (1, 2, 3, 4)
+  NOTE: overlap excess = mu(LL), so this should always be >= 0
+
+n=6:
+  total sets: 126
+  min overlap excess (mu_both - (mu_bp + mu_bm - 1)): 0.00000000
+    at speeds: (1, 2, 3, 4, 5)
+  NOTE: overlap excess = mu(LL), so this should always be >= 0
+
+======================================================================
+PART G: Tournament Analysis of representative n=5 speed sets
+======================================================================
+
+Pairwise observable: open LL measure, exchange ratio, gap-sum integral.
+Switch: larger open LL measure wins; ties use exchange/gap-sum, then lexicographic path.
+
+vertices=5  H=1  c3=0  SCCs=(1, 1, 1, 1, 1)  score=[0:1 1:1 2:1 3:1 4:1]
+ranked vertices by score:
+  score= 4  speeds=(1, 2, 7, 11)  LL=0.20779221  wallLL=18  gapInt=0.448275  exchange=0.9710
+  score= 3  speeds=(6, 7, 10, 11)  LL=0.14787879  wallLL=10  gapInt=0.419486  exchange=0.9101
+  score= 2  speeds=(1, 2, 4, 8)  LL=0.10000000  wallLL=10  gapInt=0.508929  exchange=1.0000
+  score= 1  speeds=(4, 7, 9, 11)  LL=0.08181818  wallLL=10  gapInt=0.394998  exchange=0.9765
+  score= 0  speeds=(1, 2, 3, 4)  LL=0.00000000  wallLL= 4  gapInt=0.500000  exchange=1.0000
+
+======================================================================
+SYNTHESIS
+======================================================================
+
+1. HYP-1981/THM-381 turns LRC into source reachability; THM-384
+   reduces that source condition to the two observer-adjacent gaps.
+2. In bounded exhaustive windows for n=3..6, every primitive speed set
+   visits the closed LL source-gap fiber.  Initial segments are the
+   extremal wall-only cases: open LL measure is 0 but wall LL points exist.
+3. The naive integral proof route fails.  The conjecture
+   integral(g_left+g_right) >= 2/n has explicit violations at n=5 and n=6.
+4. The dynamic signal is exchange, not average size: gap changes are
+   strongly anti-correlated in the tested windows, and LL appears as a
+   bridge from one-sided-long LS into one-sided-long SL.
+5. The inclusion-exclusion/pigeonhole identity is useful bookkeeping but
+   tautological by itself: the overlap excess is exactly the LL measure.
+6. Tournament Analysis on representative speed sets is transitive in this
+   audit, ranking source-corridor abundance rather than exposing a cyclic
+   obstruction.  That pushes the proof burden back to labelled endpoint
+   pressure and compactified walk constraints.
+
