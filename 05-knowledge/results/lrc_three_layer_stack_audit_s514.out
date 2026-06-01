@@ -1,0 +1,105 @@
+LRC THREE-LAYER STACK AUDIT - S514
+============================================================================================
+Recovered line: S511 operation-weighted danger, S512 decorated fibers,
+S513 add/multiply gauge stack.  This pass asks whether selected hard
+rows align the whole obstruction stack at once.
+
+Tie Hamiltonian paths:
+  row tournaments: listed row order
+  state tournament: row order, then selected-time order
+
+Layer switches:
+  runner dynamic:
+    small_LRC_gap            low  wins  smaller certified gap wins
+    close_pair_mass          high wins  more close pair-cells wins
+    threshold_danger         high wins  more threshold deficit wins
+    safe_gap_shortage        low  wins  fewer safe gaps wins
+    pressure_SCC             high wins  larger pressure SCC wins
+    pressure_triangles       high wins  more pressure cycles wins
+  operation-weighted:
+    dyadic_danger            high wins  more dyadic-weighted danger wins
+    additive_danger          high wins  more additive-weighted danger wins
+    multiplicative_danger    high wins  more multiplicative-weighted danger wins
+    product_sum_danger       high wins  more product-sum danger wins
+    scalar_stack             high wins  larger S513 stack score wins
+  denominator static:
+    endpoint_debt_phi        high wins  larger phi(N) wins
+    additive_scarcity        low  wins  fewer prime representations wins
+    dyadic_height            high wins  higher x*2 branch wins
+    product_sum_collisions   high wins  more two-factor product-sum gates wins
+    odd_A000568_survival     high wins  larger odd partition survival wins
+    small_best_origin        low  wins  smaller best witness margin wins
+
+ROW STACK FEATURES
+============================================================================================
+row                                  N gap/th bestO phi add h core ps oddsurv close danger safeSCC addD multD prodD
+n14 initial                          14       0     1   6   2 1    7  1   0.163 0.143  0.071  0.071 0.170 0.077 0.006
+n14 row-parent 7* skip 6             14   5/924 29/24   6   2 1    7  1   0.163 0.396  0.396  0.071 0.791 0.538 0.018
+n14 gate 14* skip 6                  14  5/1848 4339/3696   6   2 1    7  1   0.163 0.857  0.857  0.071 1.824 1.077 0.061
+n14 double-gate 28* skip 6           14  5/3696 8035/7392   6   2 1    7  1   0.163 1.000  0.929  0.071 1.896 1.214 0.066
+n16 initial                          16       0     1   8   2 4    1  2   0.139 0.125  0.062  0.062 0.150 0.067 0.004
+n16 row-parent 8* skip 14            16   1/132 12/11   8   2 4    1  2   0.139 0.408  0.408  0.062 0.883 0.558 0.016
+n16 gate 16* skip 14                 16   1/264 12/11   8   2 4    1  2   0.139 0.875  0.875  0.062 1.975 1.100 0.055
+n18 initial                          18       0     1   6   2 1    9  1   0.119 0.111  0.056  0.056 0.134 0.059 0.003
+n18 row-parent 9* skip 8             18   1/176 3991/3168   6   2 1    9  1   0.119 0.418  0.418  0.056 0.882 0.549 0.014
+n18 gate 18* skip 8                  18   1/352 41/32   6   2 1    9  1   0.119 0.889  0.889  0.056 1.967 1.092 0.049
+n18 double-gate 36* skip 8           18   1/704 15017/12672   6   2 1    9  1   0.119 1.000  0.944  0.056 2.023 1.199 0.052
+
+ROW TOURNAMENT FINGERPRINTS
+============================================================================================
+gauge                  H       c3  SCCs                 score_hist              top obstruction-shaped rows
+runner_dynamic              237   12 (8, 1, 1, 1)         2:4,5:4,8:1,9:1,10:1   n14 double-gate 28* skip 6:10 | n18 double-gate 36* skip 8:9 | n14 initial:8 | n18 gate 18* skip 8:5 | n16 initial:5
+operation_weighted            1    0 (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1 n16 gate 16* skip 14:10 | n14 double-gate 28* skip 6:9 | n18 double-gate 36* skip 8:8 | n18 gate 18* skip 8:7 | n14 gate 14* skip 6:6
+denominator_static            1    0 (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) 0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1 n16 initial:10 | n16 row-parent 8* skip 14:9 | n16 gate 16* skip 14:8 | n14 initial:7 | n14 double-gate 28* skip 6:6
+full_stack                   87   10 (8, 1, 1, 1)         0:1,2:1,3:2,4:1,5:1,6:2,7:1,9:1,10:1 n14 double-gate 28* skip 6:10 | n16 gate 16* skip 14:9 | n18 double-gate 36* skip 8:7 | n18 gate 18* skip 8:6 | n14 gate 14* skip 6:6
+
+ROW LAYER EDGE-FLIP RATES
+============================================================================================
+                        runner_d operatio denomina full_sta
+runner_dynamic                --     0.29     0.45     0.25
+operation_weighted          0.29       --     0.53     0.07
+denominator_static          0.45     0.53       --     0.49
+full_stack                  0.25     0.07     0.49       --
+
+STATE TOURNAMENT FINGERPRINT
+============================================================================================
+states=38 H=- c3=2 SCCs=(4, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) score_hist=0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,9:2,10:2,12:1,13:1,14:1,15:1,16:1,17:1,18:1,19:1,20:1,21:1,22:1,23:1,24:1,25:1,26:1,27:1,28:1,29:1,30:1,31:1,32:1,33:1,34:1,35:1,36:1,37:1
+top states: n18 double-gate 36* skip 8/half-unit:37 | n14 double-gate 28* skip 6/half-unit:36 | n16 gate 16* skip 14/unit:35 | n18 gate 18* skip 8/unit:34 | n18 double-gate 36* skip 8/unit:33 | n14 gate 14* skip 6/unit:32 | n14 double-gate 28* skip 6/unit:31 | n16 gate 16* skip 14/half-unit:30
+
+Selected top-state diagnostics:
+  n18 double-gate 36* skip 8           half-unit score=37 t=          1/36 origin/th=      0 close=153 danger=0.944 safe= 1 opD=(2.023,1.199,0.052)
+  n14 double-gate 28* skip 6           half-unit score=36 t=          1/28 origin/th=      0 close= 91 danger=0.929 safe= 1 opD=(1.896,1.214,0.066)
+  n16 gate 16* skip 14                 unit      score=35 t=          1/16 origin/th=      0 close=105 danger=0.875 safe= 2 opD=(1.975,1.100,0.055)
+  n18 gate 18* skip 8                  unit      score=34 t=          1/18 origin/th=      0 close=136 danger=0.889 safe= 2 opD=(1.967,1.092,0.049)
+  n18 double-gate 36* skip 8           unit      score=33 t=          1/18 origin/th=      0 close=136 danger=0.889 safe= 2 opD=(1.967,1.092,0.049)
+  n14 gate 14* skip 6                  unit      score=32 t=          1/14 origin/th=      0 close= 78 danger=0.857 safe= 2 opD=(1.824,1.077,0.061)
+  n14 double-gate 28* skip 6           unit      score=31 t=          1/14 origin/th=      0 close= 78 danger=0.857 safe= 2 opD=(1.824,1.077,0.061)
+  n16 gate 16* skip 14                 half-unit score=30 t=          1/32 origin/th=      0 close= 56 danger=0.438 safe= 2 opD=(0.912,0.613,0.027)
+  n18 gate 18* skip 8                  half-unit score=29 t=          1/36 origin/th=      0 close= 72 danger=0.444 safe= 2 opD=(0.908,0.598,0.025)
+  n14 gate 14* skip 6                  half-unit score=28 t=          1/28 origin/th=      0 close= 42 danger=0.429 safe= 2 opD=(0.824,0.599,0.031)
+
+COUNTEREXAMPLE-SHAPED CONJUNCTION AUDIT
+============================================================================================
+Flags: scarce(add<=median), debt(phi>=median), ps(twofactor>=median), A568(odd survival>=median), pressure(nontrivial SCC).
+medians: add=2.0, phi=6.0, twofactor=1.0, oddsurv=0.139, pressure>0.071
+row                                  scarce debt ps A568 pressure  flags
+n14 initial                                Y    Y  Y    Y        - 4/5
+n14 row-parent 7* skip 6                   Y    Y  Y    Y        - 4/5
+n14 gate 14* skip 6                        Y    Y  Y    Y        - 4/5
+n14 double-gate 28* skip 6                 Y    Y  Y    Y        - 4/5
+n16 initial                                Y    Y  Y    Y        - 4/5
+n16 row-parent 8* skip 14                  Y    Y  Y    Y        - 4/5
+n16 gate 16* skip 14                       Y    Y  Y    Y        - 4/5
+n18 initial                                Y    Y  Y    -        - 3/5
+n18 row-parent 9* skip 8                   Y    Y  Y    -        - 3/5
+n18 gate 18* skip 8                        Y    Y  Y    -        - 3/5
+n18 double-gate 36* skip 8                 Y    Y  Y    -        - 3/5
+
+Closest sampled rows: n16 row-parent 8* skip 14:4/5 | n16 initial:4/5 | n16 gate 16* skip 14:4/5 | n14 row-parent 7* skip 6:4/5
+
+SYNTHESIS
+============================================================================================
+1. The full-stack row tournament is not a scalar ledger: it has c3=10, SCCs=(8, 1, 1, 1), and H=87.
+2. Runner dynamics and denominator labels disagree on 0.45 of row edges; operation-weighted danger sits 0.29 from runner dynamics and 0.53 from denominator labels.
+3. No sampled row has a nontrivial pressure SCC at the selected times. The S513 counterexample stack currently fails at the pressure-peeling coordinate.
+4. Practical next test: keep this row-level stack but replace the pressure coordinate by owner-compatible endpoint cores from THM-380, because the coarse row-time SCC coordinate is still too easy to peel.

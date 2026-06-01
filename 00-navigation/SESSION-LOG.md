@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-01-S514 - LRC three-layer stack pressure-core audit
+
+**Account:** Codex
+**Git first:** Started on `main` after recovering an errored local session marker whose `.session-state` still pointed at the first S511 commit. Fetched and fast-forwarded over concurrent S512, S511c, and S513 mainline work before extending.
+**User prompt:** The local working tree contains an important but incomplete session that errored; carefully recover it, then extend.
+**Computation:** Added `04-computation/lrc_three_layer_stack_audit_s514.py` and stored `05-knowledge/results/lrc_three_layer_stack_audit_s514.out`. The script reuses S506/S511/S513 machinery to build Tournament Analysis row and state tournaments over selected n14/n16/n18 initial, row-parent, gate, and double-gate rows. Observables split into runner dynamics, operation-weighted pair-cell danger, and denominator add/multiply/A000568 labels.
+**Findings:** The full-stack row tournament is nontrivial (`H=87`, `c3=10`, `SCCs=(8,1,1,1)`), led by n14 double-gate, n16 gate, n18 double-gate, and n18 gate rows. Runner dynamics and denominator labels flip `0.45` of row edges; operation-weighted danger and denominator labels flip `0.53`; the full stack stays close to operation-weighted danger (`0.07` flips). The 38-state tournament has `c3=2`, `SCCs=(4,1,1,...)`, led by unsafe gate/double-gate wall states.
+**Synthesis:** Added HYP-1985 and `07-reflections/lrc-three-layer-stack-pressure-core-s514.md`. The S513 counterexample-shaped conjunction is refined: n14/n16 rows hit `4/5` arithmetic/danger flags and n18 rows hit `3/5`, but no sampled row has a nontrivial coarse pressure SCC. The pressure coordinate should be replaced by THM-380 owner-compatible endpoint-core data.
+**Verification:** `python3 -m py_compile 04-computation/lrc_three_layer_stack_audit_s514.py`; full script rerun with output stored.
+
 ## codex-2026-06-01-S512 - LRC as threshold-decorated A000568 class fiber
 
 **Account:** Codex
