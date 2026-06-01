@@ -56,6 +56,27 @@ q=9 -> first next-corridor minimum, M=1/18
 This is not as sharp as the `1/28` global candidate; rather, it explains why
 the first post-additive scan result is already far above the gap threshold.
 
+## Next After This
+
+A smaller exact scan through speeds `<=40`, excluding adjacent rows,
+additive-return rows, and the solved `(1,3,q)` corridor, pushed the next
+visible obstruction into ratio-3 territory:
+
+```text
+(2,5,15) -> 1/15
+(1,7,21), (3,7,21) -> 1/14
+(2,9,27) -> 2/27
+(4,5,15) -> 3/40
+```
+
+The repeated signature is that one speed is three times another: `c=3b`,
+`c=3a`, or `b=3a`.  This suggests the next proof target should be a
+multiplicative corridor such as `(a,b,3b)` or `(a,3a,c)`.  It is a different
+shape from the additive-return theorem: speeds `b` and `3b` force the same
+short interval as `(1,3,q)` after the measure-preserving map `t -> bt`, but
+the remaining speed `a` sees the `b` preimages.  That preimage bookkeeping is
+the new difficulty.
+
 ## Tournament Analysis
 
 The S553 `(1,3,q)` script treats selected `q` rows as vertices.  The observable
