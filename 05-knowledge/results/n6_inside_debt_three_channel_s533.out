@@ -1,0 +1,56 @@
+======================================================================
+(A) n=6 character ghat(m): zeros at 3|m; sign by m mod 6
+======================================================================
+   m : ghat(m)      |ghat|*pi   m%6   sign   (zero iff 3|m)
+   1 : -0.27566   0.86603    1     -
+   2 : -0.13783   0.43301    2     -
+   3 : -0.00000   0.00000    3     0
+   4 : +0.06892   0.21651    4     +
+   5 : +0.05513   0.17321    5     +
+   6 : +0.00000   0.00000    0     0
+   7 : -0.03938   0.12372    1     -
+   8 : -0.03446   0.10825    2     -
+   => |ghat(m)| = sqrt(3)/(2 pi m) for m not= 0 mod 3; sign: m%6 in {1,2}-> -,
+      m%6 in {4,5}-> +. The mod-6 pattern = (mod-3 channel)(x)(mod-2 sign).
+
+======================================================================
+(B) order-graded resonance sums; inside debt = sum of order>=3
+======================================================================
+  v=(1, 2, 3, 4, 5) (res mod3=[1, 2, 0, 1, 2], k=4, 0-reach mod3=True)
+     r0:+0.1317 r2:+0.0113 r3:-0.1505 r4:+0.0282 r5:-0.0075
+     INSIDE DEBT(order>=3) = -0.12971 ; total resonance-sum=0.01323 ; direct|LONELY|=0.00000
+  v=(1, 2, 4, 5, 3) (res mod3=[1, 2, 1, 2, 0], k=4, 0-reach mod3=True)
+     r0:+0.1317 r2:+0.0113 r3:-0.1505 r4:+0.0282 r5:-0.0075
+     INSIDE DEBT(order>=3) = -0.12971 ; total resonance-sum=0.01323 ; direct|LONELY|=0.00000
+  v=(3, 6, 9, 12, 1) (res mod3=[0, 0, 0, 0, 1], k=1, 0-reach mod3=False)
+     r0:+0.1317 r2:+0.0225 r3:-0.0706 r4:+0.0056 r5:+0.0000
+     INSIDE DEBT(order>=3) = -0.06496 ; total resonance-sum=0.08924 ; direct|LONELY|=0.09259
+  v=(3, 6, 9, 12, 15) (res mod3=[0, 0, 0, 0, 0], k=0, 0-reach mod3=True)
+     r0:+0.1317 r2:+0.0113 r3:-0.1505 r4:+0.0282 r5:-0.0075
+     INSIDE DEBT(order>=3) = -0.12971 ; total resonance-sum=0.01323 ; direct|LONELY|=0.00000
+  v=(1, 2, 3, 6, 9) (res mod3=[1, 2, 0, 0, 0], k=2, 0-reach mod3=True)
+     r0:+0.1317 r2:+0.0338 r3:-0.0369 r4:+0.0225 r5:-0.0033
+     INSIDE DEBT(order>=3) = -0.01776 ; total resonance-sum=0.14770 ; direct|LONELY|=0.14815
+  v=(1, 4, 7, 2, 5) (res mod3=[1, 1, 1, 2, 2], k=5, 0-reach mod3=True)
+     r0:+0.1317 r2:+0.0113 r3:-0.0731 r4:+0.0392 r5:-0.0012
+     INSIDE DEBT(order>=3) = -0.03506 ; total resonance-sum=0.10789 ; direct|LONELY|=0.11429
+
+======================================================================
+(C) LAW CHECK on primitive 5-sets: debt-zero <=> 0 not sign-reachable mod3 <=> k<=1
+======================================================================
+  tested 201 primitive 5-sets; law (no-debt <=> 0-not-reachable-mod3 <=> k<=1) holds: 200/201
+  debt-FREE sets found: []
+  (debt-free require exactly one runner != 0 mod 3, the rest divisible by 3)
+
+======================================================================
+(D) n=4 parallel: units mod 2 = {1} -> single sum 'a+b+c odd' (no sign freedom)
+======================================================================
+   (a,b,c) : sum  parity   debt-free(no odd-coeff resonance)?
+   (1, 2, 3) :  6  even   debt-free=False  (predict False)
+   (1, 2, 4) :  7  odd    debt-free=True  (predict True)
+   (1, 3, 5) :  9  odd    debt-free=True  (predict True)
+   (2, 3, 4) :  9  odd    debt-free=True  (predict True)
+   (1, 1, 1) :  3  odd    debt-free=True  (predict True)
+   (1, 2, 5) :  8  even   debt-free=False  (predict False)
+   => n=4: ONE fixed sum mod 2 (units {1}). n=6: SIGNED sum mod 3 (units {+-1})
+      = the first genuinely multi-channel parity law; mod6 = mod3 (x) mod2-sign.

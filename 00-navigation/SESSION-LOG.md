@@ -10,6 +10,16 @@
 **Initial segment insight:** Only visits states with a=b (channels always synchronized) — the symmetric case. Non-initial sets can desynchronize (a≠b), which reduces the lonely rate but never kills it.
 **Debt analysis:** c=0 states have debt/credit = 1.0 (full cancellation, never lonely). c=1 states have debt/credit < 0 (negative = credit EXCEEDS debt = positive lonely measure).
 
+## oracle-2026-06-01-S533 - The almost-fixed frame works exactly at n<=4; its failure is the LRC coupling (HYP-2014)
+
+**Account:** Oracle (oraclebox1). **User prompt:** consider 2^x iso classes as x independent-pair flips on a fixed frame; understand how an ALMOST fixed frame can satisfy this.
+**VERIFIED (almost_fixed_frame_s533.py):**
+1. ALGEBRA real: 2^floor(n/2) | A000568(n) for n=3..12; quotients 1,1,3,7,57,430,11971,... The floor(n/2) pair-flips are a genuine 2^floor(n/2) factor. v_2 exceeds floor(n/2) (extra 2) for even n>=8.
+2. CLEAN only n=3,4: quotient=1 -> a SINGLE fixed frame + floor(n/2) pair-flips realizes ALL iso classes (2=2^1, 4=2^2). The user's picture, exactly true for triangle & square.
+3. n>=5 FAILS: for n=5, 12=3x4 but NO partition into 3 disjoint pair-flip blocks exists (136/256 frames give a full 4-block, all OVERLAPPING; min cover 5 frames, Hamming-spread 4/8). Neither fixed nor almost-fixed frame realizes the factorization.
+**INTERPRETATION (the payoff):** the frame can't stay fixed for n>=5 because flipping one independent pair changes how the others sit on the shared frame -> the pairs are COUPLED. This IS the same fact as the n=4 parity law failing for n>=6 (floor(n/2) channels stay independent & couple, S531/S532). 'Frame won't stay fixed' = 'pairs coupled' = 'no single-congruence parity law' = LRC hard. The 2^floor(n/2) divisibility = a free (Z/2)^floor(n/2) SHADOW on the iso set even when no frame displays it; the program is to MEASURE the coupling (deviation from the free product). New HYP-2014.
+**Files:** 07-reflections/almost-fixed-frame-and-the-coupling-s533.md; almost_fixed_frame_s533.py (+.out). Handoff: prove 2^floor(n/2)|A000568(n) (known 2-adic result?); define the coupling tensor and relate its vanishing to inside-debt vanishing (S531).
+
 ## oracle-2026-06-01-S532b - Independent pairs: the iso-determination boundary (n<=4) + the coupling gap (complement to concurrent S532)
 
 **Account:** Oracle (oraclebox1). **User prompt:** for the multi-channel generalization, the metric is the amount and state of independent pairs; n=4 (2 independent pairs) iso class determined by flipping 2 arcs with the rest fixed.

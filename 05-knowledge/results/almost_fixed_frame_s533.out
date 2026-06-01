@@ -1,0 +1,20 @@
+Almost-fixed frame: 2^x pair-flips + a barely-varying frame (oracle-S533)
+
+  n=5: matching M=[(0, 1), (2, 3)] (2 pairs), frame=8 arcs, pair-flips=2^2
+     total iso classes covered = 12 (A000568(5))
+     frames whose 2^2 pair-flips give a FULL block of 4 distinct iso = 136/256
+     MIN frames to cover all iso (greedy) = 5  (quotient predicts 3)
+     Hamming spread of the covering frames = 4 of 8 frame-arcs
+
+  n=6: matching M=[(0, 1), (2, 3), (4, 5)] (3 pairs), frame=12 arcs, pair-flips=2^3
+     total iso classes covered = 56 (A000568(6))
+     frames whose 2^3 pair-flips give a FULL block of 8 distinct iso = 2400/4096
+     MIN frames to cover all iso (greedy) = 11  (quotient predicts 7)
+     Hamming spread of the covering frames = 7 of 12 frame-arcs
+
+READING: the iso classes factor as (frame) x (2^floor(n/2) pair-flips). For
+n=3,4 one fixed frame suffices; for n>=5 the frame ranges over the quotient
+A000568(n)/2^floor(n/2) but the needed frames are HAMMING-CLOSE -- an almost
+fixed frame whose few toggled arcs ride along with the pair-flips. The pair-
+flips are the free (Z/2)^floor(n/2) channels (the LRC independent pairs, S532);
+the frame residue is the small remaining coupling.
