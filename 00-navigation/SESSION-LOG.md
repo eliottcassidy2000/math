@@ -6,6 +6,19 @@
 **FRAMEWORK (extends s471/s23):** TA(data, comparator C, tie-path pi) = tournament; pi = jersey 1..5 = tiling-model BASE HAMILTONIAN PATH (S530/531); output = base-path (+) TILES = cut(+)cycle (S537); tiles = disagreements with base order = cyclic content.
 **SIX RUNS (tournament_analysis_pattern_hunt_s542.py):** P1 basketball: star/two-man H=1 (hierarchical), balanced H=15 (regular) -> H=balance meter. P2 comparator zoo: arc==chord (GEOMETRIC collapse, S541); half-turn(cyclic)!=distance-rank(transitive). P3 H-walk: visits EXACTLY 2Fib(n-2)=4 iso-classes (S518 confirmed); AP mean H=10 > generic 8 (fingerprint). P4 phase sweep: rotating comparator window on fixed data -> 6 iso-classes (>4 from time) = new axis. P5 threshold theta: ties percolate 0->4(at 1/n)->10(at 1/2). P6 KEY LAW: H is SYMMETRIC-UNIMODAL in tile-count -- tiles=0->H=1 (transitive), tiles=10->H=1 (reversed), middle->H=15 (max); H peaks at HALF-departure from base path (maximal cyclic mixing).
 **Artifacts:** tournament_analysis_pattern_hunt_s542.py (+.out); reflection tournament-analysis-pattern-hunt-H-unimodal-in-cyclic-content-s542o.md; HYP-2034. **Handoff:** prove H-unimodal-in-tiles from cut(+)cycle + apex law (S531); comparator-orbit (P4) as a group action; AP-higher-mean-H as an arithmetic-structure detector.
+## opus-2026-06-01-S544 - The p-adic tree: unifying sieve, vineyard, braid, and resonance
+
+**Account:** Oracle (remote-control)
+**User prompt:** Continue themes integrating the concept of the p-adic tree.
+**Computation:** `04-computation/lrc_padic_tree_integration_s544.py`. Built p-adic trees for n=6,8,14,18. Cascade as tree descent. Vineyard by level. Braid by level. Resonance by level.
+**THE UNIFICATION:**
+(1) SIEVE = PRUNED TREE: level k empty → t=1/p^k is lonely. Hard cases = all levels occupied.
+(2) CASCADE = TREE DESCENT: root (v=1, level 0) → leaves (fast, high level). Each level wraps if feasible set is wide enough at that resolution.
+(3) VINEYARD = MULTI-SCALE OSCILLATION: each level contributes at frequency ~p^k. Inter-level correlation decays as p^{-Δk} (ultrametric decay). The anti-correlation (THM-387) decomposes into independent level contributions.
+(4) BRAID = GRADED WRAPPING: linking at level k = Σ_{v at level k} v. Disentanglement = all levels simultaneously unwrapped. Ultrametric independence → levels can be independently unwrapped.
+(5) RESONANCE = TREE-GRADED FOURIER: intra-level resonances are strong (same p-adic ball). Inter-level resonances decay p-adically. Total debt = Σ level debts + small inter-level corrections.
+**n=14 p-adic structure:** 2-adic: 4 levels (7+3+2+1 runners). 7-adic: 2 levels (12+1). CRT product Z/8×Z/7. The cascade descends each prime tree independently.
+**n=18 p-adic structure:** 2-adic: 5 levels. 3-adic: 3 levels (the 9=3² structure = oracle-S534o's n*=9). CRT product Z/2×Z/9.
 
 ## opus-2026-06-01-S543 - Vineyard stability + annular braid: the topological proof of LRC
 
