@@ -1,0 +1,99 @@
+S563 recursive multi-sieve lower-bound ledger
+==============================================================================
+Benchmark frame
+  Tao: global 1/(2k) + c log(k)/(k^2 (log log k)^2), unspecified c.
+  Bedert: later Riesz-product global improvement of polynomial scale.
+  This script: case/recursive certificates, often reaching 1/(k+1).
+  denominator cutoff Q=220
+
+1. Samples
+  label                  k  n  coarse_q  first>=1/n                 best<=Q                  surplus_vs_1/(2k)
+  AP_k13                 13 14       14  T0_small_sieve:a=1,q=14,m=1/14 T0_small_sieve:a=1,q=14,m=1/14    3/91
+    note: wall; small sieve reaches q=n exactly
+  noncovered_random_k13  13 14        3  T0_small_sieve:a=1,q=3,m=1/3 T0_small_sieve:a=1,q=3,m=1/3     23/78
+    note: misses q=3, so coarse sieve already beats Tao
+  blind_lcm_2_14         13 14        -  T1_first_fine_window:a=2,q=27,m=2/27 T4_external_fine:a=16,q=209,m=16/209  207/5434
+    note: sieve-covered through q<=14; fine witness should be 2/27
+  blind_lcm_2_24         13 14        -  T1_first_fine_window:a=2,q=27,m=2/27 T3_crt_smooth_lift:a=15,q=196,m=15/196  97/2548
+    note: sieve-blind far beyond n; same fine witness survives
+  S562_packet_n14        13 14        -  T1_first_fine_window:a=6,q=23,m=2/23 T1_first_fine_window:a=6,q=23,m=2/23    29/598
+    note: residual packet from HYP-2073
+  S562_packet_n14_lift   13 14        -  T1_first_fine_window:a=3,q=23,m=2/23 T1_first_fine_window:a=3,q=23,m=2/23    29/598
+    note: dyadic lift of the n=14 residual packet
+  S562_packet_n17        16 17        -  T1_first_fine_window:a=9,q=25,m=2/25 T1_first_fine_window:a=9,q=25,m=2/25    39/800
+    note: prime n=17 control with residual dyadic denominator
+  S562_packet_n18        17 18        -  T1_first_fine_window:a=2,q=29,m=2/29 T3_crt_smooth_lift:a=101,q=208,m=15/208  151/3536
+    note: n=18 square-payload residual packet
+
+2. Tier bests
+  AP_k13:
+    T0_small_sieve         best a/q=1/14  margin=1/14
+    T1_first_fine_window   best a/q=2/28  margin=1/14
+    T2_prime_power_lift    best a/q=12/169 margin=12/169
+    T3_crt_smooth_lift     best a/q=3/42  margin=1/14
+    T4_external_fine       best a/q=15/211 margin=15/211
+  noncovered_random_k13:
+    T0_small_sieve         best a/q=1/3   margin=1/3
+    T1_first_fine_window   best a/q=5/15  margin=1/3
+    T2_prime_power_lift    best a/q=27/81  margin=1/3
+    T3_crt_smooth_lift     best a/q=10/30  margin=1/3
+    T4_external_fine       best a/q=17/51  margin=1/3
+  blind_lcm_2_14:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=2/27  margin=2/27
+    T2_prime_power_lift    best a/q=9/121 margin=9/121
+    T3_crt_smooth_lift     best a/q=15/196 margin=15/196
+    T4_external_fine       best a/q=16/209 margin=16/209
+  blind_lcm_2_24:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=2/27  margin=2/27
+    T2_prime_power_lift    best a/q=9/121 margin=9/121
+    T3_crt_smooth_lift     best a/q=15/196 margin=15/196
+    T4_external_fine       best a/q=14/183 margin=14/183
+  S562_packet_n14:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=6/23  margin=2/23
+    T2_prime_power_lift    best a/q=15/125 margin=2/25
+    T3_crt_smooth_lift     best a/q=41/132 margin=1/12
+    T4_external_fine       best a/q=12/46  margin=2/23
+  S562_packet_n14_lift:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=3/23  margin=2/23
+    T2_prime_power_lift    best a/q=59/121 margin=10/121
+    T3_crt_smooth_lift     best a/q=86/195 margin=16/195
+    T4_external_fine       best a/q=6/46  margin=2/23
+  S562_packet_n17:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=9/25  margin=2/25
+    T2_prime_power_lift    best a/q=45/125 margin=2/25
+    T3_crt_smooth_lift     best a/q=18/50  margin=2/25
+    T4_external_fine       best a/q=24/217 margin=17/217
+  S562_packet_n18:
+    T0_small_sieve         best a/q=1/2   margin=0
+    T1_first_fine_window   best a/q=2/29  margin=2/29
+    T2_prime_power_lift    best a/q=68/169 margin=10/169
+    T3_crt_smooth_lift     best a/q=101/208 margin=15/208
+    T4_external_fine       best a/q=73/181 margin=13/181
+
+3. Tao/Bedert-scale orientation
+  k=13: 1/(2k)=1/26  1/(k+1)=1/14  gap_to_conjecture=3/91  Tao_shape_unit(c=1)~0.017106  Bedert_shape_unit(c=1)~0.013913
+  k=16: 1/(2k)=1/32  1/(k+1)=1/17  gap_to_conjecture=15/544  Tao_shape_unit(c=1)~0.010414  Bedert_shape_unit(c=1)~0.009843
+  k=17: 1/(2k)=1/34  1/(k+1)=1/18  gap_to_conjecture=4/153  Tao_shape_unit(c=1)~0.009039  Bedert_shape_unit(c=1)~0.008897
+  The constants in the global theorems are not asserted here; the point is
+  that a recursive sieve certificate at 1/(k+1) is far above the Tao regime
+  on any instance where it applies.
+
+4. Tournament Analysis
+  vertices: speed-set proof obligations
+  observable: best certified margin, first conjecture-reaching tier, denominator
+  switch: larger margin wins; ties prefer earlier tier and smaller q
+  fingerprints: {'vertices': ['AP_k13', 'noncovered_random_k13', 'blind_lcm_2_14', 'blind_lcm_2_24', 'S562_packet_n14', 'S562_packet_n14_lift', 'S562_packet_n17', 'S562_packet_n18'], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+
+5. Synthesis
+  Coarse THM-369 already proves the full 1/(k+1) bound off the sieve-covered core.
+  The multi-sieve tiers are useful precisely inside that core:
+    blind_lcm_* has no q<=14 witness but gets t=2/27 with margin 2/27.
+    S562 n=14 residual packets get fine-window witnesses such as 6/23.
+    S562 n=17 residual packets get a dyadic-residual witness 9/25.
+  This does not beat Tao as a universal asymptotic theorem; it shrinks the
+  Tao/Bedert hard regime to a recursively generated near-AP residual core.
