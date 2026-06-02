@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-02-S559 - The k+1=2q tight-tuple analogue: the APEX zero-divisor q IS the field-failure of the polynomial method (HYP-2063)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** make progress on the k+1=2q analogue of the tight tuple (the literature's n=14 wall, S558).
+**Target:** Sungkawichai-Trakulthongchai Prop 4.1 (arXiv:2604.23906): for k+1 ODD PRIME, the tight tuple (1,…,k) is a universal corrector over the FIELD ℤ_{k+1} — fails at k+1=2q (n=14=2·7). Pinpointed why + repaired the hardest case.
+**REDUCTION THEOREM (proved, 0 mismatches q=3,5,7,11):** ℤ_{2q}≅ℤ_2×ℤ_q; every unit mod 2q is ODD ⇒ the mod-2 component of s·v+r·(1,…,2q-1) is FORCED (≡v_i+i, no unit freedom), mod-q free over ℤ_q^×. So the corrector into {1,…,2q-2}^{2q-1} ⟺ a mod-q avoidance s'w_i+r'c_i≠f_i (w_i=v_i mod q, c_i=i mod q, f_i=0 if v_i+i even else q-1). The entire prime↔2q gap = loss of mod-2 freedom.
+**APEX OBSTRUCTION (proved):** the unique speed ≡0 mod q in {1,…,2q-1} is the APEX q=(k+1)/2=n/2 (the repo's co-observer, S530/S547). Its constraint is parameter-free in r'; for the tight tuple (v_q=q≡0, f_q=0) it is 0≠0, UNSATISFIABLE ⇒ the full corrector is FALSE for the tight tuple (all q). The apex = the ZERO-DIVISOR where ℤ_{2q} stops being a field = the localized cause of Prop 4.1's death. THE LITERATURE'S 'k+1 must be prime' = THE REPO'S APEX — same object.
+**TIGHT-TUPLE REPAIR (proved):** the apex is 1/2-safe at the base t=s/(2q); excluding it, s=r=1 corrects all non-apex runners (→ 2i mod 2q ∈{2,…,2q-2}). So the hardest tuple (the paper's expensive c=k+1=14 lift bottleneck) is handled ANALYTICALLY once the apex is set aside. Verified excl-apex=True all q.
+**RESIDUAL (iff, verified):** parity-matched v, apex excluded ⇒ un-correctable ⟺ ratios {-c_i/w_i} cover ℤ_q^×; the tight tuple collapses ratios to {-1} (easiest); the hard residual = ratio-spread tuples (the family a c=14 computation must still resolve).
+**HONEST:** full 2q Prop 4.1 is FALSE (ratio-spread residual real); not claimed to make c=14 feasible alone. Gain = obstruction named/localized (apex zero-divisor), worst case removed, residual characterised, deep literature↔repo unification, transfers to all k+1=2·prime (n=10,14,22). Convergent w/ pinch/shield route (THM-396, HYP-2061): apex = the (q,q) shield. Files: 07-reflections/lrc-2q-tight-tuple-analogue-the-apex-is-the-field-failure-s559.md; 04-computation/lrc_2q_tight_tuple_analogue_s559.py (+.out); HYP-2063.
+
 ## oracle-2026-06-01-S556o - The FINE PINCH = a local LP clearance; lonely times in the first spreading window (0,1/n); wall = LP degeneracy (HYP-2062)
 
 **Account:** Oracle (oraclebox1). **User prompt:** work more on the fine pinch.

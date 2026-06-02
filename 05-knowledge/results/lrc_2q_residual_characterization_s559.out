@@ -1,0 +1,5 @@
+q=7 parity-tight, apex excluded: 2827 succeed, 1173 fail (of 4000)
+  among FAILS:  fraction whose ratios -c/w cover ALL of Z_7^x: 1.000
+  among SUCCESS: fraction whose ratios cover all of Z_7^x:      0.000
+  => failure (excl apex) <=> ratios cover Z_q^x (characterised)
+  tight tuple ratios -c_i/w_i (non-apex): [6]  (single value => easiest)
