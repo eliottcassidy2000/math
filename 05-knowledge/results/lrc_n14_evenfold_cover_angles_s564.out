@@ -1,0 +1,76 @@
+S564 n=14 even-fold cover angles
+==============================================================================
+Exact reduction: even-good set G, odd danger cover, closed witnesses.
+threshold=1/14, witness cutoff Q=220
+
+AP_wall
+  note: wall row; zero safe measure but closed q=14 witness
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  |G|=16/35 (0.457143)  |G\D_odd|=0 (0.000000)
+  components: G=24 safe=0 complete_odd_cover=24 gap_components=0 max_greedy_chain=4
+  first closed witness <=Q: 1/14 margin=1/14
+  first greedy cover gap: -
+  odd-pressure tournament: {'vertices': [1, 3, 5, 7, 9, 11, 13], 'top_pressure': [(7, '619/5880'), (11, '41/440'), (9, '41/504')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+V_star_wall
+  note: sporadic tight wall row
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  |G|=37/84 (0.440476)  |G\D_odd|=0 (0.000000)
+  components: G=28 safe=0 complete_odd_cover=28 gap_components=0 max_greedy_chain=3
+  first closed witness <=Q: 1/14 margin=1/14
+  first greedy cover gap: -
+  odd-pressure tournament: {'vertices': [1, 3, 5, 7, 9, 11, 13], 'top_pressure': [(7, '121/1176'), (11, '811/9240'), (9, '41/504')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+sieve_minimal_lonely
+  note: contains apex 14 and omits runner 1
+  speeds=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  |G|=82/245 (0.334694)  |G\D_odd|=3/49 (0.061224)
+  components: G=36 safe=2 complete_odd_cover=34 gap_components=2 max_greedy_chain=4
+  first closed witness <=Q: 1/16 margin=1/8
+  first greedy cover gap: 1/28..13/196 len=3/98
+  odd-pressure tournament: {'vertices': [3, 5, 7, 9, 11, 13], 'top_pressure': [(11, '1789/21560'), (9, '251/3528'), (13, '1763/25480')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+near_AP_apex
+  note: AP with 12 replaced by apex 14
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+  |G|=281/735 (0.382313)  |G\D_odd|=426/35035 (0.012159)
+  components: G=32 safe=4 complete_odd_cover=28 gap_components=4 max_greedy_chain=4
+  first closed witness <=Q: 1/12 margin=1/12
+  first greedy cover gap: 15/182..13/154 len=2/1001
+  odd-pressure tournament: {'vertices': [1, 3, 5, 7, 9, 11, 13], 'top_pressure': [(11, '1999/21560'), (13, '6059/76440'), (9, '251/3528')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+S562_packet_n14
+  note: HYP-2073 n=14 residual packet
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  |G|=53/105 (0.504762)  |G\D_odd|=1/143 (0.006993)
+  components: G=168 safe=24 complete_odd_cover=144 gap_components=24 max_greedy_chain=4
+  first closed witness <=Q: 6/23 margin=2/23
+  first greedy cover gap: 127/1078..139/1176 len=5/12936
+  odd-pressure tournament: {'vertices': [1, 7, 21, 35, 49, 63, 77, 91], 'top_pressure': [(49, '619/5880'), (77, '307/3080'), (63, '5/56')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+S562_packet_n14_lift
+  note: dyadic lift of HYP-2073 n=14 packet
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  |G|=7/858 (0.008159)  |G\D_odd|=1/143 (0.006993)
+  components: G=56 safe=48 complete_odd_cover=8 gap_components=48 max_greedy_chain=1
+  first closed witness <=Q: 3/23 margin=2/23
+  first greedy cover gap: 211/2548..65/784 len=1/10192
+  odd-pressure tournament: {'vertices': [1], 'top_pressure': [(1, '1/858')], 'score_hist': {0: 1}, 'directed_3_cycles': 0, 'sccs': [1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+no_small_pinch_proxy
+  note: THM-396 proxy: lonely but no small-pinch witness
+  speeds=(1, 2, 9, 26, 110, 153, 166, 170, 178, 190, 192, 196, 201)
+  |G|=6163329408853/28087431131760 (0.219434)  |G\D_odd|=1405685802395447/11291147314967520 (0.124495)
+  components: G=364 safe=246 complete_odd_cover=130 gap_components=234 max_greedy_chain=2
+  first closed witness <=Q: 2/15 margin=2/15
+  first greedy cover gap: 197/2660..27/364 len=1/8645
+  odd-pressure tournament: {'vertices': [1, 9, 153, 201], 'top_pressure': [(153, '1142263169/32489798880'), (9, '397160730067/12037470485040'), (201, '5674674955253/198090303771360')], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1], 'hamiltonian_paths': 1, 'edge_flips_vs_pressure_order': 0}
+
+Proof-angle synthesis
+  Angle A: exact even-fold cover.  Prove that, outside wall rows, odd danger
+    cannot cover every positive component of G.  S564 gives exact cover gaps
+    for residual rows where coarse q<=14 sieves are blind.
+  Angle B: wall endpoint fallback.  AP/V* have zero safe measure but retain
+    closed rational witnesses; a counterexample must also kill all such
+    endpoints, not merely cover G in measure.
+  Angle C: recursive fine denominators.  The first witnesses for HYP-2073
+    residual packets sit in the first fine window (23) or nearby fine tiers,
+    matching HYP-2074's local-tier branch.
+  Angle D: no-return cover chains.  A full odd cover of a G component is a
+    left-to-right greedy handoff chain.  To use the user's hidden
+    transitivity fact, refine odd runners into interval owner events and
+    forbid return triangles in those handoffs.
