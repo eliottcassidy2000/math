@@ -1,0 +1,29 @@
+== A. AP with a subset of its even runners DOUBLED (generalises V*) ==
+   subsets tested; min M found = 1/14 = 0.071429 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+   how many stayed exactly tight (M=1/14): 1
+   counterexamples: 0
+
+== B. doubled-AP_k even part {2,...,2k} + (13-k) odd speeds (e=k>=7) ==
+   k=7 (fold={1..7}, M(fold)=1/8): min M over odd choices = 1=1.000000 at None
+   k=8 (fold={1..8}, M(fold)=1/9): min M over odd choices = 1=1.000000 at None
+   k=9 (fold={1..9}, M(fold)=1/10): min M over odd choices = 1=1.000000 at None
+   k=10 (fold={1..10}, M(fold)=1/11): min M over odd choices = 1=1.000000 at None
+   k=11 (fold={1..11}, M(fold)=1/12): min M over odd choices = 1=1.000000 at None
+   k=12 (fold={1..12}, M(fold)=1/13): min M over odd choices = 1=1.000000 at None
+   global min over B = 1=1.000000 at None
+   counterexamples: 0
+
+== C. mod-7 / 7-resonant random configs ==
+   min M = 1=1.000000 at None
+   counterexamples: 0
+
+== D. measure-minimising hill-climb forced e>=7, 7-seeded (cap 120) ==
+   global min M = 1/14=0.071429 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  (1/14=0.071429)
+   counterexamples: 0
+
+================ VERDICT ================
+  total verified counterexamples (M<1/14): 0
+  => NO disproof: every 7-structured / e>=7 / doubled-AP / hill-climb
+     config has M >= 1/14. The minimum collar found is 1/14 (the tight
+     family). Consistent with LRC(14) TRUE; the 7-fold lower-bounds the
+     protected e<=6 half, and the e>=7 hunt is empty.

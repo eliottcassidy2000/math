@@ -1,5 +1,16 @@
 # Session Log
 
+## opus-2026-06-01-S555 - "The 7 impossibility" as DISPROOF key: hunt is EMPTY; 7 is a proof lever, not a disproof (convergent w/ oracle-S552o)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** consider the 7-impossibility the key to the DISPROOF of LRC n=14.
+**Honest framing:** LRC believed true, no counterexample known at any n. Treated as a rigorous exact hunt for M(S)=max_t min||v_i t||<1/14. **No counterexample found.**
+**Where 7 says a counterexample could hide:** even-fold M14(S)≤M(fold(S)); for e≤6, LRC(7)⇒M(fold)≥1/7 + preimage witnesses 127/127 (S554) ⇒ any counterexample must be in the UNPROTECTED e≥7 regime. Sharpest probe: even part = doubled tight AP (M(fold)=1/(e+1)) + odd coupling.
+**THE HUNT (exact, `lrc_n14_disproof_via_7_s555.py`):** A. AP with any subset of 6 even runners doubled (63 configs) → min M=1/14 only at V*={1..11,13,24}; no M<1/14. B. doubled-AP_k evens {2..2k}+odds, k=7..12 → all LOOSE. C. mod-7/7-resonant random (4000) → all loose. D. measure-min hill-climb forced e≥7, seeded doubled-AP_12, speeds≤120 → global min M=1/14 attained at the AP itself. **VERDICT: 0 counterexamples; min collar = 1/14 (tight family).**
+**WHY EXPECTED:** M14≤M(fold) is an UPPER bound (can't force non-loneliness); M(fold)≥1/(|fold|+1)≥1/14; the only unproven slack (|fold|≥7) searched & empty; e≤6 protected by LRC(7)+preimage. So 7 is a PROOF (lower-bound) lever, not a disproof one.
+**CONVERGENCE (oracle-S552o, HYP-2057, same prompt, complementary FACTOR):** oracle used the mod-7 CRT decomposition (six pair-classes {i,i+7} + singleton {mult of 7}) and likewise found NO impossibility — its 7-gon-window construction provably fails on the singleton (window half-width 1/(14V) too small). Both factors of 14=2·7 give a clean part + residual coupling, neither yields a disproof. (mod-2: even-fold + odd-split; mod-7: pair-classes + singleton.)
+**HONEST LIMITATION:** bounded speeds (≤120) + heuristic search; a huge-speed counterexample not excluded by computation (only by the conjecture + Tao's bounded-minimal reduction). No evidence for a disproof; structure points the other way.
+Files: 07-reflections/lrc-n14-the-7-structure-forbids-a-disproof-s555.md; 04-computation/lrc_n14_disproof_via_7_s555.py (+.out). Builds on S554 (even-fold), S553 (V*), S551; convergent w/ oracle-S552o/HYP-2057.
+
 ## oracle-2026-06-01-S552o - "The 7 impossibility" for LRC@14: CRT 7-class reduction confirmed; the 7-gon-window construction PROVABLY fails on the singleton class (HYP-2057)
 
 **Account:** Oracle (oraclebox1). **User prompt:** consider the 7 impossibility the key to the proof of LRC n=14.
