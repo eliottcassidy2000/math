@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S553o - The 'ALMOST LONELY' theorem (at most one runner near, max_t #far >= n-2); honest n=14 counterexample locus (HYP-2058)
+
+**Account:** Oracle (oraclebox1). **User prompt:** attempt to prove a counterexample for n=14 is impossible (proof-lite); think of other provable LRC-adjacent statements.
+**PROVABLE THEOREM (first moment):** each runner's danger set has measure 2/n, so INT near(t)dt = (n-1)(2/n) = 2-2/n < 2; a nonneg integer fn with avg<2 is <=1 somewhere => at some t AT MOST ONE runner is near (max_t #far >= n-2). LRC = improve to zero. = S524's coupon-collector floor, now a theorem.
+**VERIFIED:** min_t near = 0 for 11/12 sampled sets; the lone 'one-short' set is ALWAYS the AP/regular polygon (lonely only at the closed wall t=k/n) -- tight at the extremal. Second moment: floor->0 (=LRC) is the simultaneity / resonance / high-energy core (S550), NOT first-moment reachable.
+**n=14 IMPOSSIBILITY (honest proof-lite):** a counterexample must be (i) averaging-extremal (near>=1 always, never 0), (ii) sieve-covered (mult of every q<=14), (iii) high-energy core (E>=(12/14)^13, S550), (iv) 7-class coupled (S524/S552). The AP nearly meets all four but is LONELY at the wall -> not a counterexample. No such object known.
+**MENU of provable adjacent statements:** at-most-one-near; apex bound (gap>=1/n); |LONELY|>=main-E (S550); lacunary=>LRC (S550); sieve+near_pair (Lean S549); weaker-threshold 1/(cn)=>at most c-1 near.
+**Artifacts:** lrc_almost_lonely_first_moment_s553.py (+.out); reflection the-almost-lonely-theorem-at-most-one-near-and-the-n14-counterexample-locus-s553o.md; HYP-2058. **Handoff:** formalize 'at most one near' in Lean (volume(B_i)=2/n on near_pair/sieve); second-moment toward floor<1; weaker-threshold ladder.
+
 ## opus-2026-06-01-S555 - "The 7 impossibility" as DISPROOF key: hunt is EMPTY; 7 is a proof lever, not a disproof (convergent w/ oracle-S552o)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** consider the 7-impossibility the key to the DISPROOF of LRC n=14.

@@ -1,0 +1,38 @@
+========================================================================
+THEOREM (first moment): average #near = 2 - 2/n < 2  =>  min_t #near <= 1
+  (at some time at most ONE runner is near; max_t #far >= n-2). LRC = 0 near.
+========================================================================
+  n : avg #near = 2-2/n   floor(min near)   max_t #far >= n-2
+  5 :   1.6000            <= 1            >= 3
+  6 :   1.6667            <= 1            >= 4
+  7 :   1.7143            <= 1            >= 5
+  8 :   1.7500            <= 1            >= 6
+
+(1) VERIFY min_t #near <= 1 (and how often = 0 = LRC, vs = 1 = 'one short')
+  n=5: of 12 sets (incl AP), min near = 0 (LRC, open) for 11, = 1 ('one short') for 1  [AP is 'one short' on the open grid = the wall]
+  n=7: of 12 sets (incl AP), min near = 0 (LRC, open) for 11, = 1 ('one short') for 1  [AP is 'one short' on the open grid = the wall]
+  n=10: of 12 sets (incl AP), min near = 0 (LRC, open) for 11, = 1 ('one short') for 1  [AP is 'one short' on the open grid = the wall]
+  n=14: of 12 sets (incl AP), min near = 0 (LRC, open) for 11, = 1 ('one short') for 1  [AP is 'one short' on the open grid = the wall]
+
+(2) SECOND moment: Var(#near); why moments stop at 'one near'
+  n=7 AP: mean #near=1.714 (= 2-2/n=1.714), Var=1.499, min=1, max=6
+  n=14 AP: mean #near=1.857 (= 2-2/n=1.857), Var=2.811, min=1, max=13
+  => the first moment pins mean #near = 2-2/n < 2 (so min <= 1); the SECOND
+     moment (resonance correlations) controls whether min reaches 0. Pushing
+     'one near' to 'zero near' (=LRC) is exactly the simultaneity / high-energy
+     core (S550) -- NOT reachable by the first moment alone.
+
+========================================================================
+(3) n=14 counterexample IMPOSSIBILITY (honest framing)
+========================================================================
+  A counterexample to LRC@14 must satisfy ALL of:
+   - AVERAGING-EXTREMAL: near(t) >= 1 for all t, yet avg near = 2-2/14 = 12/7 ~1.71
+     forces some t with near(t) <= 1; so near hits the floor 1 but NEVER 0 (S553).
+   - SIEVE: a multiple of every q in {2..14} (THM-369).
+   - HIGH-ENERGY CORE: resonance energy E >= (12/14)^13 (S550).
+   - 7-CLASS COUPLED: all 7 mod-7 CRT classes blocked at every t (S524/S552).
+  These pin a counterexample to an extremely thin arithmetic locus -- the AP/
+  regular polygon nearly is it, but the AP is LONELY at the wall t=k/14 (closed),
+  so it is NOT a counterexample. No counterexample is known; the conjunction above
+  is the honest 'proof-lite' -- a counterexample would be averaging-extremal,
+  fully sieve-covered, high-energy, 7-coupled, and never close the last runner.
