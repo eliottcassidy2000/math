@@ -13,6 +13,14 @@
 **Account:** Codex. **User prompt:** go back to working on n=14 and see if any n=17 concepts carry over in surprising ways.
 **RESULT:** yes. The n=17 "prime-gate skip 8" idea is really a gate-packet invariant. Exact S560 scans show n=14's row-parent/gate/double-gate ladders all optimize by keeping the apex/bridge `q=7` and skipping its predecessor `q=6`: scale `7` has `gap/th=5/924`, scale `14` has `5/1848`, and scale `28` has `5/3696`. Thus the old seven-ladder/S380 packet is the `2*7` version of the n=17 half-gate packet, with the missing middle shifted left because the apex is a shield.
 **Tournament Analysis:** vertices were whole gate-packet rows, not runners. Observable `(gap/th, missing moduli, forbidden length, scale, skip)`; switch smaller gap, then sieve-complete/longer coverage. Fingerprint transitive: score histogram `{0:1,1:1,2:1,3:1}`, no 3-cycles, singleton SCCs, one Hamiltonian path. **Artifacts:** HYP-2064; `lrc_n14_n17_gate_skip_transfer_s560.py` (+.out); reflection `lrc-n14-n17-gate-skip-transfer-s560.md`. **Handoff:** combine this with HYP-2061/THM-396: retained apex = shield, skipped predecessor = leak corridor, scale lifts export endpoint debt.
+## monad-researcher-2026-06-02-S560 - Exact float-free Burnside for A000568: confirms n=1..20, corrects the float-script bug at n=14/15, extends exact to n=50 (HYP-2064)
+
+**Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data.
+**WHAT:** Wrote `04-computation/a000568_exact_burnside.py` — a fully exact, float-free computation of A000568 (non-isomorphic tournament count) as a `Fraction` sum over partitions of n into ODD parts, with pair-orbit exponent t = sum_i (c_i-1)/2 + sum_{i<j} gcd(c_i,c_j) (Davis/Burnside; only all-odd cycle types fix tournaments). Total asserted integer; sub-0.15s/term to n=50.
+**VERIFIED:** a(1..20) match OEIS + the repo's independent CRT/series/gmpy2 results exactly (incl. a(20)=645022068557873570931850526424042500096, triple-confirmed). 
+**CORRECTION CONFIRMED:** the prior `a000568_asymptotic_exact_s26.py` (float approx+correction) self-reports wrong values from n=14: a(14)=...300 (true ...304), a(15)=...168256 (true ...166848), and OverflowErrors at large n. The new exact script replaces it cleanly.
+**EXTENSION:** guaranteed-exact a(21)..a(50) recorded in `05-knowledge/results/a000568_exact_burnside.out`.
+**Artifacts:** HYP-2064; `04-computation/a000568_exact_burnside.py` (+.out). **Handoff:** the same odd-partition Burnside engine extends trivially to n>50 and to any quantity expressible as a fixed-point sum over all-odd cycle types (e.g. SC-tournament counts, the merged-metagraph V_merged = (A000568+SC)/2). Note the existing float "exact" script should be considered deprecated for n>=14.
 
 ## opus-2026-06-02-S559 - The k+1=2q tight-tuple analogue: the APEX zero-divisor q IS the field-failure of the polynomial method (HYP-2063)
 
