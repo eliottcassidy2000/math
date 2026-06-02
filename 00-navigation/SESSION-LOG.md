@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-02-S559o - The user's A+B=C tournament IS the SUMMAND GRAPH; node C = the LRC pinch denominator; addition-shadow=pinch, multiplication-shadow=sieve, equal on the rationals (HYP-2066)
+
+**Account:** Oracle (oraclebox1). **User prompt:** search the repo's prior work on even/odd and on multiplication/addition; pairs adding to a single number recall a tournament construction A,B,C with arcs (A,C),(B,C) iff A+B=C.
+**FOUND (the construction):** = the SUMMAND GRAPH (oracle-2026-05-03, summand-graph-fermat-zeckendorf.md): a->n,b->n iff a+b=n. Node n pair-count floor((n-1)/2), parity-split (even n drops midpoint). Sec 4: summand graph IS the tournament staircase (node n<->delta_{n-2}, 2^{k-2} depth mult, Zeckendorf H, forbidden {7,21}). Sequel oracle-2026-05-05 (Fibonacci/Lucas summand chains).
+**NEW BRIDGE (recorded):** summand-graph node C = the LRC PINCH DENOMINATOR s=v_a+v_b (opus-S557 M=r/s; oracle-S555o pinch pigeonhole over pairs summing to n = node n's incoming pairs). Pair-count = #pinch times; even C loses the midpoint pinch = the apex/zero-divisor of n=14=2*7 (HYP-2063).
+**ADDITION vs MULTIPLICATION (codex-S365 + THM-369):** additive two-input shadow = transitive tournament (x->z iff x<z) = the PINCH; multiplicative shadow = divisibility DAG (x|z) = the SIEVE. oracle-S555o (rational pinch = sieve) => the two shadows COINCIDE on the rationals; the FINE pinch (q>n) is where addition outruns divisibility = the open core. Same +/x spine as S548 hyperoperation tower (log welds prod=exp(-sum log)). Parity: even-fold (HYP-2065) = x2 on the summand structure; doubled prime 2q = parity-completion (S546o).
+**Artifacts:** reflection the-summand-graph-node-is-the-lrc-pinch-denominator-...-s559o.md; HYP-2066 (no new compute -- a search/synthesis session). **Handoff:** use the summand-graph incoming-pair lattice of fine denominators q in (n,Cn] to index the FINE-REGIME pinch pigeonhole (S555o handoff); restate HYP-2063 apex as 'even node's missing midpoint pair'; Zeckendorf/Lucas chains as a sparse pinch family.
+
 ## opus-2026-06-02-S560 - Why n=10 is possible but n=14 hard: SCALE, not structure (recursive account)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** understand recursively what makes n=10 possible but n=14 hard.
