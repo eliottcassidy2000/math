@@ -1,0 +1,25 @@
+Pinch/r-over-s verified: 200/200 random 13-sets (speeds<= 40)
+
+Critical configs — straddling pair and reduced sum s:
+  AP@14 t*=1/14: straddle (+1,-13) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  AP@14 t*=3/14: straddle (+5,-9) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  AP@14 t*=5/14: straddle (+3,-11) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  AP@14 t*=9/14: straddle (+11,-3) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  AP@14 t*=11/14: straddle (+9,-5) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  AP@14 t*=13/14: straddle (+13,-1) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=1/14: straddle (+1,-13) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=3/14: straddle (+5,-9) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=5/14: straddle (+3,-11) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=9/14: straddle (+11,-3) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=11/14: straddle (+9,-5) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  V*@14 t*=13/14: straddle (+13,-1) sum=14 reduced s=14 (s mod 14=0); (a-b)t*=1/7=2/n? True
+  sporadic@5 t*=1/5: straddle (+1,-4) sum=5 reduced s=5 (s mod 5=0); (a-b)t*=2/5=2/n? True
+  sporadic@5 t*=2/5: straddle (+3,-7) sum=10 reduced s=10 (s mod 5=0); (a-b)t*=2/5=2/n? True
+  sporadic@5 t*=3/5: straddle (+7,-3) sum=10 reduced s=10 (s mod 5=0); (a-b)t*=2/5=2/n? True
+  sporadic@5 t*=4/5: straddle (+4,-1) sum=5 reduced s=5 (s mod 5=0); (a-b)t*=2/5=2/n? True
+  sporadic@6 t*=1/6: straddle (+1,-5) sum=6 reduced s=6 (s mod 6=0); (a-b)t*=1/3=2/n? True
+  sporadic@6 t*=5/6: straddle (+5,-1) sum=6 reduced s=6 (s mod 6=0); (a-b)t*=1/3=2/n? True
+  sporadic@8 t*=1/8: straddle (+1,-7) sum=8 reduced s=8 (s mod 8=0); (a-b)t*=1/4=2/n? True
+  sporadic@8 t*=3/8: straddle (+3,-5) sum=8 reduced s=8 (s mod 8=0); (a-b)t*=1/4=2/n? True
+  sporadic@8 t*=5/8: straddle (+5,-3) sum=8 reduced s=8 (s mod 8=0); (a-b)t*=1/4=2/n? True
+  sporadic@8 t*=7/8: straddle (+7,-1) sum=8 reduced s=8 (s mod 8=0); (a-b)t*=1/4=2/n? True

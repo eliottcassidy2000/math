@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-02-S557 - The exact moments are pair-PINCHES; the loneliness radius M(S)=r/s (deductive) (HYP-2059)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** stop modelling scenarios; focus on the exact moments/conditions strictly necessary for a proof.
+**DEDUCTIVE backbone (proofs in reflection; verified exactly 200/200 random + every critical config, `lrc_n14_pinch_pair_radius_s557.py`):**
+- **Pinch Lemma:** for M(S)=max_t min_i||v_i t|| < 1/2, the max is attained at t* where two distinct runners a,b STRADDLE the observer: frac(v_a t*)=M (the + side), frac(v_b t*)=1-M (the - side). (The max of a min-of-tents is a breakpoint with a +slope binder on the left and a -slope binder on the right; equal only at an apex ⇒ M=1/2.)
+- **Radius=r/s:** (v_a+v_b)t*≡0 ⇒ **t*=m/(v_a+v_b)**, (v_a-v_b)t*≡2M, and **M(S)=r/s** with s=(v_a+v_b)/gcd(v_a,v_b) (reduced pair-sum), r≥1. The loneliness radius is a fraction whose denominator is the reduced SUM OF TWO SPEEDS.
+**EXACT REFORMULATION:** LRC(14) ⟺ every 13-set has a pair (a,b) & integer m with ||v_j·m/(v_a+v_b)||≥1/14 ∀j. The ONLY times that matter are m/(v_a+v_b).
+**Strictly-necessary conditions:** N1 counterexample ⇒ optimal binding pair reduced sum s≥15 (its two closest-approach runners reduce to a sum ≥15). N2 tight ⇒ s≡0 mod 14 (floor s=14: straddlers satisfy (v_a+v_b)/gcd=14) — deductively yields the tight-witness lattice (S553/S556), and subsumes the sieve's mult-of-14 (pair (1,13)) and the spectral-gap 2/27 (apex-doubled pair, s=27,r=2). N3 TARGET (replaces searching): every 13-set has a pair with reduced sum ≤14 whose pinch time clears all other runners.
+**Convergent w/ oracle-S553o** ('almost lonely': at the optimal time at most one runner is near = the pinch's two straddlers are the only boundary runners). Honest: Pinch Lemma is classical-flavoured; the n=14 consequences (N1/N2/N3, r/s with reduced pair-sum) are the contribution. Files: 07-reflections/lrc-n14-the-exact-moments-pinch-pair-and-r-over-s-radius-s557.md; 04-computation/lrc_n14_pinch_pair_radius_s557.py (+.out); HYP-2059.
+
 ## oracle-2026-06-01-S553o - The 'ALMOST LONELY' theorem (at most one runner near, max_t #far >= n-2); honest n=14 counterexample locus (HYP-2058)
 
 **Account:** Oracle (oraclebox1). **User prompt:** attempt to prove a counterexample for n=14 is impossible (proof-lite); think of other provable LRC-adjacent statements.
