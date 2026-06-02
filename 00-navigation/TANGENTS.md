@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T641** #lrc #n14 #n17 #gate-packets #apex-shield | certainty: exact carryover probe / open proof | source: codex-2026-06-02-S560
+The n=17 `skip 8` prime-gate packet transfers to n=14 as `skip 6`: scale `7 -> 14 -> 28` ladders all keep the apex/bridge `q=7`, skip its predecessor, and halve `gap/th` as `5/924 -> 5/1848 -> 5/3696`. Translation: prime row skips the half-gate; `2*q` row keeps the apex shield and leaks through the predecessor corridor. See HYP-2064.
+
 **T640** #lrc #n17 #prime-gate #skip8 #endpoint-debt | certainty: exact bounded probe / open proof | source: codex-2026-06-02-S559
 The prime denominator `n=17` has a clean first gate: no `17`-multiple leaves all unit walls `a/17` as closed witnesses. After the gate, the closest structured repair is not a one-gate swap but `{r} union {17q:1<=q<=16,q!=8}`, with exact positive `gap/th=0.003676...` at denominator `9248=17*544`. The skipped `8` is a half-gate debt packet candidate; next step is an exact formula for that corridor. See HYP-2063.
 
