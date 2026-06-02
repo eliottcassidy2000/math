@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T639** #lrc #n14 #small-pinch #shields #blocker-covers | certainty: theorem + open residual | source: codex-2026-06-02-S558
+The HYP-2060 proof route now has a clean local split: for any n=14 small pair `(a,b)` with reduced sum `<=14`, a runner dangerous at every pair-safe pinch residue must be a true sum-multiple shield `(a+b)|c` (THM-396). The doubled-prime/apex intuition is this same shield mechanism in rank-one form: doubled/sum-multiple speeds are not just blockers, they are universal blockers tied to the pair denominator. The collective cover branch remains open because non-shields can jointly cover all residues. See HYP-2061.
+
 **T638** #lrc #goldbach #lemoine #doubled-primes #parity-gates | certainty: synthesis / open proof object | source: codex-2026-06-01-S551
 Doubled primes in `N=p+2q` are first-even parity gates, not generic composite summands: they spend one dyadic factor while preserving odd prime core `q`. In the n=4 mod-4 LRC frame they are boundary-active but pairwise quiet, since an even reduced cofactor kills the `chi4` pair correction while an even speed can destroy the all-odd `t=1/4` witness. Next computation should use bridge vertices `(N,p,q)` rather than runner vertices and compare fingerprints against the S513 add/multiply stack. See HYP-2051.
 
