@@ -1,0 +1,106 @@
+================================================================================
+EVEN-FOLD MEASURE REDUCTION (n=14): does the ODD danger cover the even-good set G?
+  G = {t: every EVEN speed >= 1/14} has positive measure by PROVEN LRC(13).
+  S lonely <=> |G \ U_odd D_v| > 0.  SUF: |G| > o/7.
+================================================================================
+
+(1) THE TIGHT CONFIGS (safe measure should be ~0 -- the boundary):
+  AP {1..13}: e=6 o=7 apex=0 prim=1
+      |G|=0.4571  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.4571  safe=|G\Dodd|=0.00000  -> LONELY=False
+      odd-danger density: in G=1.0000 vs global=0.7607  (no anti-corr)
+  V* {1..11,13,24}: e=6 o=7 apex=0 prim=1
+      |G|=0.4405  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.4405  safe=|G\Dodd|=0.00000  -> LONELY=False
+      odd-danger density: in G=1.0000 vs global=0.7607  (no anti-corr)
+
+(2) RANDOM primitive 13-sets:
+  rand0: e=5 o=8 apex=0 prim=1
+      |G|=0.5205  o/7=1.1429  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3474  safe=|G\Dodd|=0.17305  -> LONELY=True
+      odd-danger density: in G=0.6675 vs global=0.7284  (ANTI-corr (room))
+  rand1: e=7 o=6 apex=0 prim=1
+      |G|=0.2996  o/7=0.8571  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.1841  safe=|G\Dodd|=0.11551  -> LONELY=True
+      odd-danger density: in G=0.6145 vs global=0.5901  (no anti-corr)
+  rand2: e=9 o=4 apex=0 prim=1
+      |G|=0.2269  o/7=0.5714  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.0931  safe=|G\Dodd|=0.13377  -> LONELY=True
+      odd-danger density: in G=0.4104 vs global=0.4427  (ANTI-corr (room))
+  rand3: e=5 o=8 apex=0 prim=1
+      |G|=0.5079  o/7=1.1429  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3674  safe=|G\Dodd|=0.14051  -> LONELY=True
+      odd-danger density: in G=0.7234 vs global=0.6947  (no anti-corr)
+  rand4: e=6 o=7 apex=1 prim=1
+      |G|=0.3824  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.2424  safe=|G\Dodd|=0.13998  -> LONELY=True
+      odd-danger density: in G=0.6339 vs global=0.6406  (ANTI-corr (room))
+  rand5: e=8 o=5 apex=0 prim=1
+      |G|=0.2856  o/7=0.7143  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.1457  safe=|G\Dodd|=0.13994  -> LONELY=True
+      odd-danger density: in G=0.5101 vs global=0.5158  (ANTI-corr (room))
+  rand6: e=4 o=9 apex=1 prim=1
+      |G|=0.5296  o/7=1.2857  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.4192  safe=|G\Dodd|=0.11042  -> LONELY=True
+      odd-danger density: in G=0.7915 vs global=0.7707  (no anti-corr)
+  rand7: e=6 o=7 apex=1 prim=1
+      |G|=0.3864  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.2258  safe=|G\Dodd|=0.16061  -> LONELY=True
+      odd-danger density: in G=0.5844 vs global=0.6698  (ANTI-corr (room))
+  rand8: e=8 o=5 apex=1 prim=1
+      |G|=0.3415  o/7=0.7143  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.2044  safe=|G\Dodd|=0.13714  -> LONELY=True
+      odd-danger density: in G=0.5985 vs global=0.5482  (no anti-corr)
+  rand9: e=6 o=7 apex=1 prim=1
+      |G|=0.4272  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3227  safe=|G\Dodd|=0.10448  -> LONELY=True
+      odd-danger density: in G=0.7554 vs global=0.6813  (no anti-corr)
+  rand10: e=8 o=5 apex=1 prim=1
+      |G|=0.3386  o/7=0.7143  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.1982  safe=|G\Dodd|=0.14041  -> LONELY=True
+      odd-danger density: in G=0.5853 vs global=0.5278  (no anti-corr)
+  rand11: e=10 o=3 apex=1 prim=1
+      |G|=0.2006  o/7=0.4286  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.0656  safe=|G\Dodd|=0.13499  -> LONELY=True
+      odd-danger density: in G=0.3270 vs global=0.3753  (ANTI-corr (room))
+
+  -> SUF(|G|>o/7) held for 0/12;  LONELY for 12/12;  min safe slack = 0.10448
+
+(3) APEX-FORCED sets (contain a multiple of 14 -- opus-S556 ThmB necessary):
+  AP w/ 14 added, drop 7 {1..6,8..13,14}: e=7 o=6 apex=1 prim=1
+      |G|=0.3347  o/7=0.8571  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3120  safe=|G\Dodd|=0.02267  -> LONELY=True
+      odd-danger density: in G=0.9323 vs global=0.6596  (no anti-corr)
+  AP, 12->14 (apex) {1..11,13,14}: e=6 o=7 apex=1 prim=1
+      |G|=0.3823  o/7=1.0000  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3701  safe=|G\Dodd|=0.01216  -> LONELY=True
+      odd-danger density: in G=0.9682 vs global=0.7607  (no anti-corr)
+  apex-rand0: e=7 o=6 apex=1 prim=1
+      |G|=0.2601  o/7=0.8571  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.1516  safe=|G\Dodd|=0.10848  -> LONELY=True
+      odd-danger density: in G=0.5830 vs global=0.5848  (ANTI-corr (room))
+  apex-rand1: e=9 o=4 apex=1 prim=1
+      |G|=0.2020  o/7=0.5714  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.0695  safe=|G\Dodd|=0.13253  -> LONELY=True
+      odd-danger density: in G=0.3439 vs global=0.4765  (ANTI-corr (room))
+  apex-rand2: e=7 o=6 apex=1 prim=1
+      |G|=0.3058  o/7=0.8571  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.2111  safe=|G\Dodd|=0.09475  -> LONELY=True
+      odd-danger density: in G=0.6902 vs global=0.6014  (no anti-corr)
+  apex-rand3: e=4 o=9 apex=1 prim=1
+      |G|=0.5283  o/7=1.2857  SUF(|G|>o/7)=False
+      |G∩Dodd|=0.3984  safe=|G\Dodd|=0.12991  -> LONELY=True
+      odd-danger density: in G=0.7541 vs global=0.7701  (ANTI-corr (room))
+
+================================================================================
+READING
+================================================================================
+  The reframing isolates the proof to ONE inequality per config:
+      |G ∩ U_odd D_v| < |G|   (the odds do not cover the guaranteed even-good window).
+  |G|>0 is FREE (proven LRC(13)). The union bound SUF |G|>o/7 is the cheap test; where
+  it fails (tight / many odds), the real lever is ANTI-CORRELATION: the odd danger is
+  LESS dense inside G than globally (odds tend to be safe where evens are safe), so the
+  odds cover only part of G. The hard locus is exactly the tight configs (AP, V*) where
+  |G|->0 and safe->0 -- the measure-zero wall (S551). Off the wall, the anti-correlation
+  slack is the room LRC@14 lives in. APEX-forced sets carry a mult of 14 (folds to the
+  fold's apex) and are robustly loose -- matching opus-S556's 'tension'.

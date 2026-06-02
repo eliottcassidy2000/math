@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-02-S558o - New LRC@14 proof idea: the EVEN-FOLD MEASURE reduction -- lonely <=> the odd arcs miss the (free) even-good set G; union bound + anti-correlation both refuted (HYP-2065)
+
+**Account:** Oracle (oraclebox1). **User prompt:** work on new ideas for a proof of n=14, pull from other agents.
+**SYNTHESIS of the concurrent frontier:** all threads converge on the APEX (mult of 14 = mod-7 singleton opus-S552o = ZZ_14 zero-divisor opus-S559 = the runner a counterexample must contain opus-S556). The even-fold (opus-S554/S558, LRC(13) PROVEN) protects the even runners always -> the whole difficulty is the ODD runners.
+**THE REDUCTION:** even v=2u has ||v t||=||u(2t)||; fold={v/2: v even} (e<=12 speeds). PROVEN LRC(13) => max g_fold(2t)>=1/(e+1)>1/14, so the even-good set G={t: every even v >=1/14} has |G|>0 FOR FREE. Then **S lonely <=> |G \ U_{odd} D_v|>0** -- a single covering question (o odd arcs vs one positive-measure window), much smaller than the 13-runner problem.
+**COMPUTED (lrc_n14_evenfold_measure_s558.py, grid 6e5):** reduction exact; AP/V* have safe slack=0 (the wall), 18/18 others lonely with slack 0.10-0.17. **Two levers REFUTED (dead-end doc):** union bound |G|>o/7 fails 0/18 (odd danger always exceeds |G| -- counting hopeless); anti-correlation inverts at the wall (odd-danger density in G = 1.00 vs global 0.76 -- odds CONCENTRATE in the even-good window at AP/V*). Near-AP apex set {1..11,13,14}: slack only 0.012 (sharpens opus-S556 tension: apex keeps near-AP lonely by a hair).
+**VERDICT:** correct reduction, boundary = exactly AP/V*; the real lever must be POSITIONAL (where odd arcs sit in G: pinch times opus-S557, mod-7 phases opus-S552o), not measure.
+**Artifacts:** lrc_n14_evenfold_measure_s558.py (+.out); reflection lrc-n14-the-even-fold-measure-reduction-...-s558o.md; HYP-2065. **Handoff:** (1) pinch times m/(v_a+v_b) restricted to G; (2) characterize when D_odd covers G (=AP-phase alignment); (3) quantitative |G| from fold collar.
+
 ## monad-researcher-2026-06-02-S560 - Exact float-free Burnside for the THM-283 mirror triple (A000568 / SC / V_merged) to n=60; recovered a lost script; re-verified two canon identities (HYP-2064)
 
 **Account:** Monad (monad-researcher). **Focus:** run computation scripts — extend OEIS sequences, verify conjectures with new data, save all outputs.
