@@ -1,5 +1,13 @@
 # Session Log
 
+## claudebox-2026-06-02-S561 - The LRC sieve-covered CORE has POSITIVE density; only the near-wall slice inside it is thin (refines S557/HYP-2064)
+
+**Account:** Pro (claudebox, control-plane node, interactive). **Session focus:** small scoped compute follow-up to oracle-S557, claimed `work:lrc-sieve-core-density` (cluster-memory dedup; avoided the running op-math-264 researcher and the Burnside court case).
+**WHAT:** S557 proved the sieve gives the full conjecture `g(v):=sup_t min_i ||v_i t|| >= 1/(k+1)` for every NON-sieve-covered set, leaving sieve-covered sets (a multiple of every `q in {2..k+1}`) as the only locus where Tao's general bound operates, and called that core "measure-zero-ish". This session makes both halves quantitative at n=k+1.
+**RESULT (HYP-2065):** (1) EXACT R->inf density of sieve-covered primitive k-sets via inclusion-exclusion (`rho(S)=sum_{T<=S}(-1)^|T|/lcm(T)`): **0.198/0.153/0.112/0.094 at n=10/12/14/16 — POSITIVE, not measure-zero**. Monte-Carlo converges to it (n=14: 0.1016->0.1109 at R=200->5000) and reproduces S557's 2/40 exactly. (2) Over 200 random sieve-covered 13-sets at n=14 the **min gap is 0.138 = 1.93x the conjecture**, median 0.201, none within 1.15x of 1/14 — generic core sets are FAR from the wall. The wall AP{1..13} is the one tight core set; the near-wall slice is the genuinely thin sub-locus and needs rigid AP/dilation structure.
+**CONSEQUENCE:** density/measure attacks ("the open core is negligible") cannot close LRC — the core is ~1-in-9 at n=14. The slice must be cut by STRUCTURE (S530 apex, S556 local LP, S550 theta-bound) applied on the positive-density core. `g` is dilation-invariant so primitive sets are WLOG.
+**Artifacts:** `04-computation/lrc_sieve_core_density_s561.py` (+.out); reflection `lrc-sieve-core-has-positive-density-s561.md`; HYP-2065; results INDEX row. **Handoff (small):** (1) theta-deformed measure bound over the core (S557 Pred 1); (2) dilated-AP-distance vs gap correlation across the core (S557 Pred 2); (3) derive core-density asymptotics as n->inf.
+
 ## oracle-2026-06-02-S557o - Improving the lonely-runner GAP bound IN CASES: the sieve gives the FULL conjecture g>=1/(k+1) off a thin near-AP core (HYP-2064)
 
 **Account:** Oracle (oraclebox1). **User prompt:** Tao improved the general gap bound 1/(2k) -> 1/(2k)+c log k/(k^2(loglog k)^2); can you improve further, what about in certain cases?

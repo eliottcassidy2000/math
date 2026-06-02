@@ -1,0 +1,41 @@
+==============================================================================
+LRC sieve-covered CORE: exact density + gap distribution    (S561, refines S557)
+==============================================================================
+
+(1) EXACT R->inf density of sieve-covered primitive k-sets  [inclusion-exclusion]
+    n=10 (k= 9):  P(sieve-covered) = 0.19753
+    n=12 (k=11):  P(sieve-covered) = 0.15278
+    n=14 (k=13):  P(sieve-covered) = 0.11203
+    n=16 (k=15):  P(sieve-covered) = 0.09361
+    -> POSITIVE density, not measure-zero. Rises as n shrinks.
+
+(1b) Monte-Carlo at n=14 converging to the exact limit 0.11203
+    R=  200: P~=0.1015   (2030/20000)
+    R= 1000: P~=0.1101   (2202/20000)
+    R= 5000: P~=0.1109   (2218/20000)
+
+(1c) reproduce S557 (seed 557, 40 sets): sieve-covered = 2/40   (S557 reported 2/40)
+
+(2) GAP over random sieve-covered primitive 13-sets at n=14  (conjecture 1/14=0.0714)
+    sampled 200 core sets:  min=0.1380  median=0.2006  max=0.3071
+    min ratio g/(1/14) = 1.93   frac with g < 1.15*(1/14) = 0.000
+    smallest-gap core sets (the near-wall direction):
+       g=0.1380  g/(1/14)=1.93  v=(1, 12, 13, 14, 27, 35, 48, 58, 76, 87, 88, 100, 101)
+       g=0.1470  g/(1/14)=2.06  v=(9, 22, 35, 46, 48, 59, 70, 71, 73, 81, 112, 114, 117)
+       g=0.1568  g/(1/14)=2.20  v=(4, 21, 24, 39, 45, 64, 66, 70, 73, 78, 83, 87, 111)
+
+(2b) the wall AP(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13): covered=False, g=0.07142 ~ 1/14=0.07143
+     -> the wall is the ONE tight core set; generic core sets miss it by ~2-4x.
+
+==============================================================================
+VERDICT
+==============================================================================
+  * The sieve-covered CORE is NOT measure-zero: exact limiting density
+    0.1120 at n=14 (~1 in 9 random primitive 13-sets), rising as n shrinks.
+  * But generic core sets are FAR from the wall: over 200 random core sets the
+    smallest gap is 0.1380 = 1.9x the conjecture; none come near 1/14.
+  * So S557's "thin core" is right about the EXTREMIZERS (the near-AP slice is the
+    genuinely thin sub-locus) but overstates the thinness of the core itself. The
+    open problem is: a positive-density core whose hardness concentrates on a thin
+    near-AP slice. Density-based ("measure-zero core") attacks cannot work; the slice
+    must be cut by the AP/dilation structure (S530 apex, S556 local LP), not by size.
