@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T642** #lrc #crt #recursive-sieve #frontier-product #proof-obligations | certainty: exact packet audit / open norm | source: codex-2026-06-02-S562
+Multi-tier CRT sieves should recurse on generated residual packets, not only on the prime factors of the base denominator. In the S562 audit, dyadic lifts of `n=14` skip-6, `n=17` skip-8, and `n=18` skip-8 packets all divide visible `gap/th` by `2`, double boundary debt, and preserve `gap*boundary` (`5/11`, `225/136`, `1`). The `n=17` control shows a new tier can come from endpoint denominators even when `2` is not in base `n`. Vertices should be proof-obligation packet states; cyclic structure needs owners/pressure/cross-prime signs. See HYP-2073.
+
 **T641** #lrc #n14 #n17 #gate-packets #apex-shield | certainty: exact carryover probe / open proof | source: codex-2026-06-02-S560
 The n=17 `skip 8` prime-gate packet transfers to n=14 as `skip 6`: scale `7 -> 14 -> 28` ladders all keep the apex/bridge `q=7`, skip its predecessor, and halve `gap/th` as `5/924 -> 5/1848 -> 5/3696`. Translation: prime row skips the half-gate; `2*q` row keeps the apex shield and leaks through the predecessor corridor. See HYP-2064.
 

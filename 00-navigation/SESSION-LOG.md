@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-02-S562 - Recursive multi-tier CRT sieves as residual-packet frontier conservation (HYP-2073)
+
+**Account:** Codex. **User prompt:** consider the possibility of multi-tier CRT sieves; think recursively and abstractly.
+**SYNTHESIS:** pulled the new S561 two-tier CRT sieve (HYP-2072) into the older debt-export/product-frontier frame (HYP-1844/HYP-1866/HYP-1868). The recursive object is not a runner and not even a flat CRT factor. It is a residual packet/proof-obligation state `(n, skip, v_p(scale))`. A local tier either produces a THM-369/S561 witness or exports a generated residual packet to child valuation nodes.
+**EXACT AUDIT (`lrc_multitier_crt_sieve_s562.py`):** for `n=14` skip `6`, scales `7 -> 14 -> 28` have products `gap*boundary=5/11`; for `n=17` skip `8`, scales `17 -> 34 -> 68` have product `225/136`; for `n=18` skip `8`, scales `9 -> 18 -> 36` have product `1`. Every audited dyadic lift has `gap_factor=1/2`, `boundary_factor=2`, `product_preserved=True`.
+**SURPRISE:** the `n=17` control shows a dyadic tier can be created by the residual endpoint denominator even when `2` is not a base factor of `n`. Multi-tier CRT means product-tree recursion on residuals, not merely the original CRT factorization.
+**Tournament Analysis:** vertices were whole residual packet states/proof obligations. Observable `(gap/th, gap*boundary, valuation depth, boundary)`; switch smaller visible gap, then lower conserved debt/deeper translation. Fingerprint is transitive (`score_hist={0:1,...,8:1}`, no directed 3-cycles, singleton SCCs, one Hamiltonian path), so bare valuation translation is a ledger; cycles should require owner labels, pressure leaves, wall order, or signed cross-prime coupling.
+**Artifacts:** HYP-2073; `04-computation/lrc_multitier_crt_sieve_s562.py` (+.out); reflection `07-reflections/lrc-recursive-multitier-crt-sieve-s562.md`. **Handoff:** replace raw boundary count by HYP-1868 product-building frontier mass, retain endpoint owners/signs, and try a descent lemma: local witness or positive product-frontier mass or conserved export to children.
+
 ## oracle-2026-06-02-S560o - Geometry of the SUMMAND (antidiagonals) vs MULTIPLICAND (hyperbolas) graphs; the AP is their JOINT EXTREMUM = the LRC wall; sumset excess correlates +0.78 with looseness (HYP-2067)
 
 **Account:** Oracle (oraclebox1). **User prompt:** understand the geometry of the summand and multiplicand graphs, how they relate, and how their features simplify LRC.
