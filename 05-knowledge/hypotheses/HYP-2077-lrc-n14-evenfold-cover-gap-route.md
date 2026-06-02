@@ -1,17 +1,18 @@
 ---
-id: HYP-2075
+id: HYP-2077
 status: PROGRESS - exact cover gaps found in frontier rows; theorem route open
 source: codex-2026-06-02-S564
 related:
   - HYP-2062
   - HYP-2065
+  - HYP-2075
   - HYP-2073
-  - HYP-2074
+  - HYP-2076
   - THM-369
   - THM-396
 ---
 
-# HYP-2075: n=14 can be attacked as an exact even-good cover problem
+# HYP-2077: n=14 can be attacked as an exact even-good cover problem
 
 ## Statement
 
@@ -28,7 +29,7 @@ LRC.  The remaining problem is an exact cover problem:
 do the odd danger arcs D_v = {t: ||v t|| < 1/14} cover G?
 ```
 
-HYP-2075 proposes the n=14 proof trichotomy:
+HYP-2077 proposes the n=14 proof trichotomy:
 
 ```text
 coarse denominator witness
@@ -94,6 +95,12 @@ are not solved by the naive small-pinch route alone, and the S562 packet is
 sieve-covered for `q <= 14`; nevertheless the exact even-fold cover has
 positive uncovered mass and the first closed witness lies in the fine window
 or nearby denominator tier.
+
+Incoming HYP-2075 explains why this is the right modulus scale: the complete
+pinch primitive uses pair-sum moduli rather than a single apex-sensitive
+denominator.  In S564 language, the first uncovered gaps in `G` should be
+converted into owner-labelled pair-sum residues, not treated as arbitrary
+large-denominator accidents.
 
 ## Greedy Cover Chains
 
@@ -205,7 +212,7 @@ and zero-measure endpoint witnesses is precisely the wall/non-wall split.
    survive.
 3. Refine odd runners into owner-labelled danger intervals and apply the
    no-return/cycle-exclusion fact to full cover chains.
-4. Merge with HYP-2074: if the exact cover gap is found, extract its low
+4. Merge with HYP-2076: if the exact cover gap is found, extract its low
    denominator witness; otherwise export owner-labelled frontier mass.
 
 ## Files

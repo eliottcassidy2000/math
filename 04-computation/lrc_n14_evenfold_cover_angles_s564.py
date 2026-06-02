@@ -377,7 +377,7 @@ def main() -> None:
     print("    endpoints, not merely cover G in measure.")
     print("  Angle C: recursive fine denominators.  The first witnesses for HYP-2073")
     print("    residual packets sit in the first fine window (23) or nearby fine tiers,")
-    print("    matching HYP-2074's local-tier branch.")
+    print("    matching HYP-2076's local-tier branch.")
     print("  Angle D: no-return cover chains.  A full odd cover of a G component is a")
     print("    left-to-right greedy handoff chain.  To use the user's hidden")
     print("    transitivity fact, refine odd runners into interval owner events and")

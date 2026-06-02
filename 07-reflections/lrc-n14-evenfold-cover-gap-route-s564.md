@@ -54,6 +54,11 @@ no-small-pinch proxy: |safe| ~= 0.124495,  witness 2/15
 This is a real n=14 angle: prove every non-wall residual has a positive exact
 gap in `G`, and separately classify the zero-measure wall covers.
 
+The incoming HYP-2075 pair-sum-modulus result plugs directly into this:
+uncovered intervals in `G` should be searched and certified through pair-sum
+pinch residues, not only through small integer denominators or the single
+`14`-apex lens.
+
 ## Greedy chains and no-return
 
 On each component of `G`, odd danger intervals either cover left-to-right or
@@ -94,6 +99,8 @@ This suggests a sharper n=14 program:
 3. Wall endpoint: odd danger covers G in measure, but closed endpoints survive.
 4. Residual export: if a full cover chain remains, export owner-labelled
    frontier mass to the recursive sieve state.
+5. Pair-sum witness extraction: when a gap appears, translate it to the
+   HYP-2075 pinch-modulus primitive whenever possible.
 ```
 
 This is more concrete than "try another lower bound."  It is a finite exact
@@ -131,4 +138,4 @@ If the only complete chains with no return defects are AP/V*-type wall chains,
 that would be a serious n=14 proof route.
 
 **Artifacts:** `04-computation/lrc_n14_evenfold_cover_angles_s564.py`,
-`05-knowledge/results/lrc_n14_evenfold_cover_angles_s564.out`, HYP-2075.
+`05-knowledge/results/lrc_n14_evenfold_cover_angles_s564.out`, HYP-2077.

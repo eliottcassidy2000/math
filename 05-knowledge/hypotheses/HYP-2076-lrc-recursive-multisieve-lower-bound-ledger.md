@@ -1,5 +1,5 @@
 ---
-id: HYP-2074
+id: HYP-2076
 status: PROGRESS - case certificates found; global descent lemma open
 source: codex-2026-06-02-S563
 related:
@@ -7,12 +7,13 @@ related:
   - HYP-1868
   - HYP-2061
   - HYP-2062
+  - HYP-2075
   - HYP-2072
   - HYP-2073
   - THM-369
 ---
 
-# HYP-2074: Recursive multi-sieves should shrink the Tao hard regime to a residual core
+# HYP-2076: Recursive multi-sieves should shrink the Tao hard regime to a residual core
 
 ## Statement
 
@@ -21,7 +22,7 @@ bound `1/(k+1)` whenever some denominator `q <= k+1` divides no speed.  Hence
 Tao/Bedert-type global lower bounds are operative only on the sieve-covered
 core.
 
-HYP-2074 proposes a next proof norm for that core:
+HYP-2076 proposes a next proof norm for that core:
 
 ```text
 each residual proof obligation either
@@ -121,7 +122,9 @@ frontier mass.
 ```
 
 That is a much narrower object, and it matches the HYP-2073 residual-packet
-frontier picture.
+frontier picture.  Incoming HYP-2075 sharpens the denominator side: the natural
+complete pinch moduli are pair-sums, so a future version of this ledger should
+extract local witnesses from pair-sum residues before exporting frontier mass.
 
 ## Tournament Analysis
 

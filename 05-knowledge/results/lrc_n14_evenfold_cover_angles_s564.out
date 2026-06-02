@@ -69,7 +69,7 @@ Proof-angle synthesis
     endpoints, not merely cover G in measure.
   Angle C: recursive fine denominators.  The first witnesses for HYP-2073
     residual packets sit in the first fine window (23) or nearby fine tiers,
-    matching HYP-2074's local-tier branch.
+    matching HYP-2076's local-tier branch.
   Angle D: no-return cover chains.  A full odd cover of a G component is a
     left-to-right greedy handoff chain.  To use the user's hidden
     transitivity fact, refine odd runners into interval owner events and
