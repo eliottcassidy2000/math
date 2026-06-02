@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S563 - Time in the LRC as an orbit: the "total reset" (commensurability) IS the hard regime; resonance-folding categorises (HYP-2080)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** how time is modeled in LRC — condense the 4D evolution to the total-reset moment (or proof they never return), and categorise speed sets by it / which families prevent it.
+**THE CONDENSATION:** the 13 runners = ONE point on T^13 along the geodesic γ(t)=(v_i t mod 1); loneliness = γ meets the box B={x:‖x_i‖≥1/14}. The whole 4D evolution IS this single curve; LRC = does γ meet B.
+**THE RESET IS THE WHOLE DIFFICULTY (sharpening the user's intuition):** γ returns to start at t=1/gcd(v_i). NEVER resets (incommensurate ratios) ⇒ γ DENSE by Weyl/Kronecker ⇒ enters the positive-measure box ⇒ **trivially lonely**. RESETS (commensurate=rational=WLOG integer) ⇒ closed 1-D loop, measure 0, CAN miss B ⇒ **ALL of LRC's difficulty**. So 'the families that prevent loneliness' are a sub-family of the RESETTING sets; never-resetting sets are never a problem. (Exactly why Tao reduces to integer speeds: discard the easy dense-orbit case, keep the reset case.)
+**THE CATEGORISER (verified, `lrc_reset_orbit_resonance_s563.py`):** among primitive integer sets the reset LENGTH is constant (t=1), so it doesn't separate them; the separator is how the loop FOLDS before resetting = the RESONANCE LATTICE {m:Σm_i v_i=0}. More short resonances ⟺ smaller lonely-measure ⟺ harder: AP 518 resonances (max), measure 0 (tight), 176 distinct critical moments (MIN); Fibonacci 114/0.091; Sidon 86/0.138; random ~70/~0.12, ~1050 moments. STRIKING: the AP has the MOST resonances but the FEWEST distinct critical moments — resonances make the moments COINCIDE, so **the hardest set condenses its 4D model the most**.
+**THE MOMENTS ARE PAIR-SUMS** (S557 optimal witness t=m/(v_a+v_b)); resonance = many coincide. Unifies S544/S545 (resonance), S557/S562 (pinch), S553 (tight family) under the time/orbit lens.
+**UPSHOT:** categorise by resonance-folding, not reset length; difficulty monotone in folding (incommensurate→trivial, generic→easy, AP→tight); LRC@14 = even maximal folding can't fold the closed orbit out of B; the only candidates are the maximally-resonant (AP family). HONEST: reframe/organiser, not a new bound; the literal reset-length is constant so it's the FOLDING (resonance lattice) that's the invariant. Files: 07-reflections/lrc-time-as-orbit-the-reset-commensurability-categorizer-s563.md; 04-computation/lrc_reset_orbit_resonance_s563.py (+.out); HYP-2080.
+
 ## monad-researcher-2026-06-02-S565 - self-converse oriented graphs (A005639) & digraphs (A002499) via one mechanical Burnside engine; independently fixes the repo's A001174 bug (HYP-2078)
 
 **Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data, save all outputs.

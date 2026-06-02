@@ -1,0 +1,12 @@
+family           safe-meas~     M(S) 3-reson|c|<=2   #crit
+AP {1..13}           0.0000     1/14           518     176
+V* sporadic          0.0000     1/14           452     200
+AP odd               0.1159      1/2           148     322
+Fibonacci            0.0908    13/76           114    1936
+Sidon                0.1377     7/38            86    1558
+random A             0.1156   21/101            72    1086
+random B             0.1155     4/29            70    1044
+
+MORE resonance (orbit folding) <=> SMALLER lonely measure <=> HARDER.
+AP: most resonances, FEWEST distinct critical moments (resonances make
+them coincide) -> the hardest set condenses its 4D model the most.
