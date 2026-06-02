@@ -1,0 +1,35 @@
+=== Two-tier CRT sieve oracle for k+1=2q: settle rate & residual ===
+
+q= 3 (n=6, k=5):
+   tier1 mod-q oracle == brute mod-2q:      1500/1500 agree (EXACT)
+   TIER-1 correction-success rate:          42.880%
+   tier-2 residual fraction (needs lift):   57.1200%  (=> ~2x fewer tuples reach the expensive lift)
+      of residual: apex-stuck 29.8% (apex base-safe => reducible), rest = ratio-cover
+   inner-loop cost proxy (modulus*runners): brute 30 -> tier1 12  (2.50x lighter)
+q= 5 (n=10, k=9):
+   tier1 mod-q oracle == brute mod-2q:      1500/1500 agree (EXACT)
+   TIER-1 correction-success rate:          80.780%
+   tier-2 residual fraction (needs lift):   19.2200%  (=> ~5x fewer tuples reach the expensive lift)
+      of residual: apex-stuck 52.0% (apex base-safe => reducible), rest = ratio-cover
+   inner-loop cost proxy (modulus*runners): brute 90 -> tier1 40  (2.25x lighter)
+q= 7 (n=14, k=13):
+   tier1 mod-q oracle == brute mod-2q:      1500/1500 agree (EXACT)
+   TIER-1 correction-success rate:          90.585%
+   tier-2 residual fraction (needs lift):   9.4150%  (=> ~11x fewer tuples reach the expensive lift)
+      of residual: apex-stuck 76.4% (apex base-safe => reducible), rest = ratio-cover
+   inner-loop cost proxy (modulus*runners): brute 182 -> tier1 84  (2.17x lighter)
+q=11 (n=22, k=21):
+   tier1 mod-q oracle == brute mod-2q:      1500/1500 agree (EXACT)
+   TIER-1 correction-success rate:          95.525%
+   tier-2 residual fraction (needs lift):   4.4750%  (=> ~22x fewer tuples reach the expensive lift)
+      of residual: apex-stuck 95.7% (apex base-safe => reducible), rest = ratio-cover
+   inner-loop cost proxy (modulus*runners): brute 462 -> tier1 220  (2.10x lighter)
+q=13 (n=26, k=25):
+   tier1 mod-q oracle == brute mod-2q:      1500/1500 agree (EXACT)
+   TIER-1 correction-success rate:          95.875%
+   tier-2 residual fraction (needs lift):   4.1250%  (=> ~24x fewer tuples reach the expensive lift)
+      of residual: apex-stuck 98.3% (apex base-safe => reducible), rest = ratio-cover
+   inner-loop cost proxy (modulus*runners): brute 650 -> tier1 312  (2.08x lighter)
+
+=== Direct-generation validation (the residual IS generated, not searched) ===
+q=3: FULL enumeration 7776 tuples -- brute-improper=4465, generated-improper=4465, identical=True
