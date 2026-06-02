@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-01-S554 - LRC@14 via the PROVEN n=7 case: the even-fold lever ("the 7 impossibility") (HYP-2056)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** consider the 7-impossibility the key to the proof of LRC n=14.
+**LEVER:** n=14=2·7, LRC(7) is a THEOREM. Exact bridge: even speed v=2u ⇒ ||v t||=||u·(2t)||; with fold(S)={v/2:v even}, s=2t ⇒ g_even(t)=g_fold(2t), giving **M14(S) ≤ M(fold(S))** (exact, 0/224 violations). `lrc_n14_even_fold_to_n7_s554.py`.
+**DICHOTOMY (rigorous):** 13 runners is ODD ⇒ min(#even,#odd)≤6 always ⇒ LRC(7) engages on the minority parity. ~51% of random primitive 13-sets have e≤6.
+**e≤6 (clean fold):** M(fold)≥1/7 by LRC(7) ⇒ even runners ≥1/7(≥1/14)-safe on positive-measure E_good={t:g_fold(2t)≥1/7} (the even half is settled by the proven case). The two doubling-preimages s/2,(s+1)/2 put each ODD runner ANTIPODAL (differ 1/2) ⇒ each odd unsafe at ≤1 preimage ⇒ **LRC(14)[e≤6] ⟸ some even-good s has no odd-split.** The 1/14 is the COUPLING (odd part alone has collar 1/2, even fold ≥1/7; the even-optimal s is where odds split, pinning M14=M(fold)/2).
+**COMPUTATION:** fold reduction succeeds **127/127** on e≤6 configs (full witness from an even-good preimage always found); all e≥7 samples lonely (0 would-be counterexamples).
+**TIGHT STRUCTURE:** both known tight configs (AP, V*) have e=6 and the SAME 7 odd runners {1,3,5,7,9,11,13} (exactly 7 odds ≤13). AP's fold {1..6}=the n=7 AP (n=7-TIGHT); V*'s fold {1,2,3,4,5,12} n=7-LOOSE (2/13) ⇒ tightness@14 does NOT need fold n=7-tight; odd coupling carries it (matches S520 menu-collapse-at-7).
+**HONEST:** NOT a proof of LRC@14. Open: (1) prove no-odd-split over E_good ⇒ LRC(14)[e≤6] becomes a theorem conditional only on LRC(7); (2) e≥7 (o≤6) branch needs LRC(8+)/odd-side fold. Files: 07-reflections/lrc-n14-even-fold-to-the-proven-n7-case-s554.md; 04-computation/lrc_n14_even_fold_to_n7_s554.py (+.out); HYP-2056.
+
 ## opus-2026-06-01-S553c - DISPROOF of the uniqueness crux: a NON-AP tight 13-set exists at n=14 (LRC itself NOT disproved) (HYP-2055 partially refuted)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** see if a disproof is possible, now that the crux "AP is the unique tight 13-set" is identified.

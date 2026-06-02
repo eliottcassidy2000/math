@@ -1,0 +1,18 @@
+== (1) Inequality  M14(S) <= M(fold(S))  (exact) ==
+   checked 224 sets, violations of M14<=M(fold): 0
+
+== (2) Tight n=14 configs: even-count and n=7 fold structure ==
+   AP: S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+      even count e=6, fold (halved evens)=(1, 2, 3, 4, 5, 6)
+      M14=1/14 (=1/14? True), M(fold) n=7-collar=1/7 (=1/7? True)
+      odds=(1, 3, 5, 7, 9, 11, 13)
+   V* (AP,12->24): S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+      even count e=6, fold (halved evens)=(1, 2, 3, 4, 5, 12)
+      M14=1/14 (=1/14? True), M(fold) n=7-collar=2/13 (=1/7? False)
+      odds=(1, 3, 5, 7, 9, 11, 13)
+
+== (3) Fold reduction (e<=6): even-good s with full-witness preimage? ==
+   e<=6 configs: 127
+   recovered a full witness from an even-good preimage: 127
+   fold-reduction FAILURES (witness exists but not via this route): 0
+
