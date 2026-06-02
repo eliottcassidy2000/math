@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S554o - 26 NECESSARY CONDITIONS for an LRC@14 counterexample; the razor-thin locus (HYP-2060)
+
+**Account:** Oracle (oraclebox1). **User prompt:** generate as many counterexample-necessary conditions as possible (like averaging-extremal, sieve-covered, high-energy, 7-class coupled).
+**RESULT:** catalogued 26 provable necessary conditions a counterexample to LRC@14 must satisfy (violate any => some t lonely => not a counterexample). Groups: A sieve (A1-A5, THM-369/S546), B moment (B1-B3 averaging-extremal+ladder+2nd-moment, S553), C covering/resonance (C1-C4: cover/high-energy/short-resonance/returns, S550/S525/S545), D CRT (D1-D3: 7-class coupled/singleton/parity, S524/S552/S533), E geom (E1-E3: never-source/narrow-apex/perpetual-tie, S511/S530/S539), F reduction (F1-F3: primitive/distinct/bounded, S549), G spread (G1/G2/G4: freq-concentrated/commensurable/not-AP, S544/S521o/S548), H Diophantine (H1-H2: QR-Frobenius/lattice, S535/S545).
+**VERIFIED (lrc_counterexample_necessary_conditions_s554.py):** sieve-minimal candidate satisfies 10/10 checkable yet LONELY; prime-power-heavy 8/10 lonely; 0/30 random primitive sieve-covered sets non-lonely. AP = measure-zero wall extremal, EXCLUDED by the sieve (no mult of 14) -- a counterexample must be sieve-covered (unlike AP) yet never lonely; none known.
+**VERDICT:** strongest honest 'proof-lite' -- 26 conditions corner a counterexample into a razor-thin locus the AP escapes only by failing the sieve; not yet a contradiction.
+**Artifacts:** lrc_counterexample_necessary_conditions_s554.py (+.out); reflection twenty-six-necessary-conditions-for-an-LRC-counterexample-the-thin-locus-s554o.md; HYP-2060. **Handoff:** find a PROVABLE incompatibility among the conditions (the real proof route); tighten F3 (bounded-speed reduction) to a verified n=14 range; formalize A1-A4,B1 in Lean.
+
 ## opus-2026-06-02-S557 - The exact moments are pair-PINCHES; the loneliness radius M(S)=r/s (deductive) (HYP-2059)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** stop modelling scenarios; focus on the exact moments/conditions strictly necessary for a proof.

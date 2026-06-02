@@ -1,0 +1,52 @@
+==========================================================================
+NECESSARY CONDITIONS a counterexample to LRC@14 must satisfy (verify on candidates)
+==========================================================================
+
+  sieve-minimal-ish: v=(5, 7, 8, 9, 11, 13, 14, 2, 3, 4, 6, 10, 12)
+    satisfies 10/10 conditions: ['A1', 'A2', 'A3', 'A4', 'D1', 'C2', 'C3', 'F1', 'F2', 'G4']
+    LONELY somewhere = True  ->  NOT a counterexample (lonely)
+
+  AP 1..13 (the extremal): v=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    satisfies 7/10 conditions: ['A3', 'A4', 'D1', 'C2', 'C3', 'F1', 'F2']
+    LONELY somewhere = False  ->  CANDIDATE (no lonely time found!)
+
+  prime-power heavy: v=(5, 7, 8, 9, 11, 13, 14, 16, 18, 22, 26, 35, 45)
+    satisfies 8/10 conditions: ['A2', 'A3', 'A4', 'D1', 'C3', 'F1', 'F2', 'G4']
+    LONELY somewhere = True  ->  NOT a counterexample (lonely)
+
+  random primitive sieve-covered sets (do any satisfy ALL + be non-lonely?):
+    checked 30 primitive sieve-covered sets; non-lonely (counterexamples): 0
+
+==========================================================================
+THE FULL CONDITION LIST (necessary for a counterexample; sources)
+==========================================================================
+   1. A1 sieve-covered: mult of every q in {2..n}  [THM-369]
+   2. A2 multiple of n  [sieve q=n; blocks all t=a/n]
+   3. A3 multiple of each maximal prime power <=n  [sieve]
+   4. A4 multiple of n* (=n/2 even / n odd); for n=14, of 7  [S546]
+   5. A5 for each q<=n NOT all speeds coprime to q  [= A1]
+   6. B1 averaging-extremal: near(t)>=1 for ALL t, but mean near=2-2/n => floor 1 never 0 [S553]
+   7. B2 weaker-threshold: at 1/(cn), the >=? near-set covers for each c [S553 menu]
+   8. B3 2nd-moment-consistent: pairwise danger-overlaps tuned so min near=1 not 0 [S553]
+   9. C1 danger arcs B_i cover [0,1) (total measure 2-2/n>1; overlaps exact) [def/S525]
+  10. C2 high-energy core: resonance energy E(v) >= (1-2/n)^{n-1}  [S550]
+  11. C3 small minimal resonance length l(v) (a short resonance exists)  [S550]
+  12. C4 pervasive returns: cascade product of conditional clearances = 0  [S545]
+  13. D1 all n* CRT classes blocked at every t (n=14: 7 mod-7 classes) [S524/S552]
+  14. D2 singleton class (mult of n*) coupled to the pair-classes [S552]
+  15. D3 full-support inside debt present mod n* (parity) [S533]
+  16. E1 observer NEVER a source in the LRC-marked tournament [S511]
+  17. E2 observer apex (bracketing) gap < 2/n at all t (never a wide gap at 0) [S530]
+  18. E3 always >=1 trienerment tie at the observer [S539] (= B1)
+  19. F1 primitive: gcd(speeds)=1 (WLOG, scaling) [S549]
+  20. F2 distinct nonzero speeds [normalization]
+  21. F3 minimal counterexample has bounded speeds (finite reduction) [Cusick/Tao]
+  22. G1 frequency-concentrated, NOT decorrelated [S544]
+  23. G2 commensurable (closed orbit, not dense) [S521o] (auto for integers)
+  24. G4 NOT AP-scaled c*(1..n-1) (else lonely at the wall t=k/n) [S548]
+  25. H1 the difference set has a specific QR/Frobenius pattern mod n* [S535]
+  26. H2 the relation lattice carries the high energy via low-order returns [S545/S550]
+
+  >>> 26 necessary conditions enumerated. A counterexample must satisfy
+      ALL simultaneously. Tested candidates satisfy many yet remain LONELY -- the
+      conjunction is not (yet) shown unsatisfiable, but the locus is razor-thin.

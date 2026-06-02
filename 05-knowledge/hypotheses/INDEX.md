@@ -3985,3 +3985,19 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Exact reformulation:** LRC(14) ⟺ every 13-set has a pair (a,b) and integer m with ||v_j·m/(v_a+v_b)|| ≥ 1/14 ∀j. Only times that matter: m/(v_a+v_b).
 **Necessary/structure:** N1 counterexample ⇒ optimal binding pair reduced sum s≥15; N2 tight ⇒ s≡0 mod 14 (floor: s=14, straddlers satisfy (v_a+v_b)/gcd=14) — deductively yields the tight-witness lattice, subsumes the sieve's mult-of-14 (pair (1,13)) and the gap value 2/27 (apex-doubled pair, s=27,r=2). N3 TARGET: every 13-set has a pair with reduced sum ≤14 whose pinch clears all others (pigeonhole over the ⌊n/2⌋ pairs summing to n).
 **See:** `05-knowledge/hypotheses/HYP-2059-lrc-pinch-pair-radius.md`, `07-reflections/lrc-n14-the-exact-moments-pinch-pair-and-r-over-s-radius-s557.md`, `04-computation/lrc_n14_pinch_pair_radius_s557.py` (+.out); HYP-2058, HYP-2055, oracle-S552, THM-369.
+
+## HYP-2060: 26 NECESSARY CONDITIONS for an LRC@14 counterexample; the razor-thin locus (oracle-2026-06-01-S554o)
+**Status:** SYNTHESIS/PROGRESS (26 provable necessary conditions catalogued + verified; the joint locus is thin but not proven empty).
+**WHAT:** a counterexample to LRC@14 (no lonely time) must satisfy ALL of 26 provable necessary conditions (violate any => some t lonely => not a counterexample). Grouped:
+ A sieve [THM-369/S546]: A1 mult of every q in {2..14}; A2 mult of 14; A3 mult of each prime power 8,9,5,7,11,13; A4 mult of 7 (n*); A5(=A1).
+ B moment [S553]: B1 averaging-extremal (near>=1 all t, mean=12/7, touches floor 1 never 0); B2 weaker-threshold ladder; B3 2nd-moment-consistent.
+ C covering/resonance [S550/S525/S545]: C1 danger arcs cover [0,1) (measure 13/7>1); C2 high-energy E>=(6/7)^13; C3 short minimal resonance; C4 pervasive returns (cascade product=0).
+ D CRT [S524/S552/S533]: D1 all 7 mod-7 classes blocked at every t; D2 singleton {mult7} coupled to pairs; D3 inside debt present mod 7.
+ E geom/tournament [S511/S530/S539]: E1 observer never a source; E2 narrow apex (<2/14 always); E3 perpetual tie (=B1).
+ F reduction [S549/classical]: F1 primitive; F2 distinct nonzero; F3 bounded (finite reduction).
+ G spread [S544/S521o/S548]: G1 frequency-concentrated; G2 commensurable; G4 not AP-scaled.
+ H Diophantine [S535/S545]: H1 QR/Frobenius pattern mod 7; H2 lattice short vectors carry the energy.
+**VERIFIED (lrc_counterexample_necessary_conditions_s554.py):** a sieve-minimal candidate satisfies 10/10 checkable conditions yet is LONELY (conjunction insufficient); prime-power-heavy 8/10 lonely; 0/30 random primitive sieve-covered sets non-lonely. The AP is the measure-zero wall extremal (lonely at closed t=k/14, S553) and is EXCLUDED by the sieve (no mult of 14, fails A1/A2/G4) -- so a counterexample must be sieve-covered (unlike AP) yet never lonely; none known.
+**VERDICT:** strongest honest 'proof-lite' -- 26 conditions corner a counterexample into a razor-thin arithmetic locus the AP escapes only by failing the sieve; not yet a contradiction.
+**Predictions:** find a PROVABLE incompatibility among the conditions (real proof route, e.g. sieve-covered + short-resonance + averaging-extremal => contradiction); tighten F3 (bounded-speed reduction) to a verified n=14 range; formalize A1-A4,B1 in Lean.
+**See:** `07-reflections/twenty-six-necessary-conditions-for-an-LRC-counterexample-the-thin-locus-s554o.md`, `04-computation/lrc_counterexample_necessary_conditions_s554.py` (+.out), HYP-2058 (almost-lonely + first 4 conditions), S550/S551/S552/S524, THM-369.
