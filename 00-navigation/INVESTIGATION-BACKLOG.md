@@ -2293,3 +2293,12 @@ in quotient/H/isomorphism statistics must come from tournament structure.
 3. Use the SCC interpretation to separate quotient transport inside fixed component-count strata.
 4. Seek asymptotics for the connected-run covers `c_L` and the top bucket.
 5. Add `g`, `#SCC`, bucket-transition profile, range-parity, SC/top-bucket flag, and interval-cover features to a future tiling-aware TDA extractor.
+
+## LEAD (opus-2026-06-02-S558): LRC proof-methodology map + two corrections + the 2·7 target
+**Source:** literature survey (verified June 2026), `07-reflections/lrc-proof-methodologies-by-n-the-complete-map-s558.md`.
+**Status of LRC (n=total runners, gap 1/n = repo convention):** PROVEN through **n=13** — structural era n≤7 (n=4 Betke-Wills/Cusick view-obstruction; n=5 Cusick-Pomerance; n=6 Bohman-Holzman-Kleitman averaging; n=7 Barajas-Serra circular chromatic number of distance graphs), then finite-checking era n≥8 (Tao reduction + Malikiosis-Santos-Schymura bound `∏uᵢ<B_k` + Rosenfeld divisibility sieve ⇒ prime-product contradiction; n=8 Rosenfeld 2025, n=9,10 Trakulthongchai 2025, **n=11,12,13 Sungkawichai-Trakulthongchai Apr 2026, arXiv:2604.23906**). **n=14 = immediate open frontier.**
+**WHY n=14 is the wall (literature's own reason):** the polynomial-method shortcut that handles the tight tuple (1,…,k) analytically requires **k+1 to be an odd prime**; for k=13, k+1=**14=2·7 is composite**, so it fails and the full c=14 sieve lift is needed (infeasible; k=12 ~40 days/10 cores). This is EXACTLY the repo's 2·7 / "7-impossibility" / even-fold / mod-7 thread — not a metaphor, the actual obstruction.
+**CORRECTION 1:** LRC is proven to n=13, NOT n=7 (our prior framing). 
+**CORRECTION 2:** the even-fold (S554, HYP-2056) `M(S)≤M(fold)` should use **LRC(13)**: any primitive 13-set has ≤12 even speeds ⇒ |fold|≤12 ⇒ M(fold)≥1/13 by proven LRC(13) ⇒ the EVEN half of LRC@14 is fully protected for EVERY config; residual = odd coupling only (the e≤6 restriction was an artifact of using LRC(7)).
+**Repo's sieve THM-369 = Rosenfeld's divisibility sieve** (independently rediscovered the modern engine); pair it with the MSS finite bound (HYP-2052 shows why the bounded sieve alone can't close it).
+**TOP TARGET:** find the `k+1=2q`-analogue of "the tight tuple (1,…,k) is proper" — an algebraic substitute for the polynomial method when k+1 is twice an odd prime (k+1=14=2·7). This is the single most leveraged route to n=14 and squarely in the repo's wheelhouse.

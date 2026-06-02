@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-02-S558 - LRC proof methodologies by n: the complete map + two corrections (proven to n=13; the 2·7 wall is the literature's actual obstruction)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** understand the proof methodologies available at each size up to 14 — which apply at what ranges of n and why.
+**Literature survey (verified June 2026), `07-reflections/lrc-proof-methodologies-by-n-the-complete-map-s558.md`.** Convention pinned: n = total runners = repo's n, gap 1/n (= k+1 with k nonzero speeds).
+**THE MAP:** n=2,3 elementary (three-gap); n=4 (1972 Betke-Wills/Cusick) view-obstruction/geometry of numbers; n=5 (1984 Cusick-Pomerance) computer-assisted Diophantine; n=6 (2001 Bohman-Holzman-Kleitman) combinatorial AVERAGING; n=7 (2008 Barajas-Serra) circular CHROMATIC NUMBER of distance/Cayley graphs. ← "structural era," each a bespoke idea. Then n≥8 "finite-checking era": Tao reduction → Malikiosis-Santos-Schymura bound (∏uᵢ<B_k) → Rosenfeld divisibility SIEVE → prime-product CONTRADICTION. n=8 Rosenfeld(2025); n=9,10 Trakulthongchai(2025); **n=11,12,13 Sungkawichai-Trakulthongchai (Apr 2026, arXiv:2604.23906)** via intermediate sieves + a POLYNOMIAL METHOD. **n=14 = immediate open frontier.**
+**WHY THE DIVIDE:** structural methods cap at 7 because the obstruction's geometric codimension rises by one per runner (S522o makes this explicit) and case-analysis/coloring-classification explodes; finite-checking is uniform but computational (bound astronomically large, only worth it past 7).
+**WHY n=14 IS THE WALL — the 2·7 reason:** the polynomial-method shortcut that settles the tight tuple (1,…,k) analytically REQUIRES k+1 to be an ODD PRIME; for k=13, k+1=14=2·7 is COMPOSITE ⇒ shortcut fails ⇒ full c=14 sieve lift needed ⇒ infeasible (k=12 ~40 days/10 cores). This is EXACTLY the repo's 2·7 / "7-impossibility" / even-fold / mod-7 thread — the literature's own obstruction.
+**CORRECTION 1:** LRC is PROVEN to n=13, not n=7 (fixes our prior framing). **CORRECTION 2:** the even-fold (HYP-2056) should use LRC(13): any primitive 13-set has ≤12 even speeds ⇒ M(fold)≥1/13 ⇒ the even half of LRC@14 is fully protected for EVERY config (e≤6 restriction was an artifact). **Repo's sieve THM-369 = Rosenfeld's divisibility sieve** (independently rediscovered); pair with MSS bound (HYP-2052 explains why bounded sieve alone can't close it).
+**TOP TARGET:** the k+1=2q-analogue of "(1,…,k) is proper" — an algebraic substitute for the polynomial method when k+1=2·odd-prime (14=2·7); most leveraged route to n=14, in the repo's wheelhouse. Convergent with oracle-S554o (necessary conditions). Backlog updated. Sources: Perarnau-Serra survey arXiv:2409.20160; MSS arXiv:2411.06903; arXiv:2509.14111/2511.22427/2512.01912/2604.23906; Quanta 2026-03; Wikipedia.
+
 ## oracle-2026-06-01-S554o - 26 NECESSARY CONDITIONS for an LRC@14 counterexample; the razor-thin locus (HYP-2060)
 
 **Account:** Oracle (oraclebox1). **User prompt:** generate as many counterexample-necessary conditions as possible (like averaging-extremal, sieve-covered, high-energy, 7-class coupled).
