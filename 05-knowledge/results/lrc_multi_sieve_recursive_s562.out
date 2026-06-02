@@ -1,0 +1,44 @@
+==== Multi-sieve on hard n=14 configs ====
+
+  AP (tight)                  
+     div{2..14}: CAUGHT (14, Fraction(1, 14));  div{2..28}: CAUGHT m=14;  min div modulus = 14
+     PINCH: CAUGHT m=v_a+v_b=14 a=1/14;  FOLD: CAUGHT depth=0
+  V* (sporadic tight)         
+     div{2..14}: CAUGHT (14, Fraction(1, 14));  div{2..28}: CAUGHT m=14;  min div modulus = 14
+     PINCH: CAUGHT m=v_a+v_b=14 a=1/14;  FOLD: CAUGHT depth=0
+  apex=mult of 14             
+     div{2..14}: MISS;  div{2..28}: CAUGHT m=22;  min div modulus = 22
+     PINCH: CAUGHT m=v_a+v_b=22 a=3/22;  FOLD: MISS
+  loaded (mult of all q<=14)  
+     div{2..14}: MISS;  div{2..28}: CAUGHT m=25;  min div modulus = 25
+     PINCH: CAUGHT m=v_a+v_b=144 a=11/144;  FOLD: MISS
+  rand-large 0                
+     div{2..14}: CAUGHT (10, Fraction(1, 10));  div{2..28}: CAUGHT m=10;  min div modulus = 10
+     PINCH: CAUGHT m=v_a+v_b=154 a=9/154;  FOLD: CAUGHT depth=0
+  rand-large 1                
+     div{2..14}: CAUGHT (14, Fraction(1, 14));  div{2..28}: CAUGHT m=14;  min div modulus = 14
+     PINCH: CAUGHT m=v_a+v_b=87 a=11/87;  FOLD: CAUGHT depth=0
+  rand-large 2                
+     div{2..14}: CAUGHT (10, Fraction(1, 10));  div{2..28}: CAUGHT m=10;  min div modulus = 10
+     PINCH: CAUGHT m=v_a+v_b=56 a=11/56;  FOLD: CAUGHT depth=0
+  rand-large 3                
+     div{2..14}: CAUGHT (4, Fraction(1, 4));  div{2..28}: CAUGHT m=4;  min div modulus = 4
+     PINCH: CAUGHT m=v_a+v_b=34 a=15/34;  FOLD: CAUGHT depth=0
+
+==== Assumption #1: does multi-sieving dissolve the apex obstruction? ====
+  configs containing a multiple of 14 (apex-stuck at m=14): 2366
+   caught by m=14 alone:           0/2366 (0.0%)
+   caught by some m in {2..13}:    2154/2366 (91.0%)
+   => apex-stuck-at-14 configs rescued by a DIFFERENT modulus:
+        (4, 6, 11, 14, 17, 20, 24, 39, 43, 48, 55, 56, 59)  caught at m=9
+        (2, 3, 11, 18, 21, 24, 25, 28, 30, 33, 34, 42, 56)  caught at m=13
+        (2, 9, 12, 15, 16, 21, 24, 33, 42, 50, 51, 55, 59)  caught at m=13
+   The apex is a single-modulus artifact; multi-sieve has no apex.
+
+multi-sieve residual shrinkage over 329 configs (random + loaded):
+  div{2..14} alone:        caught 292/329 (88.8%)
+  fold (recursive) alone:   caught 283/329 (86.0%)
+  div{2..14} OR fold:      caught 313/329 (95.1%)
+  div{2..28}:              caught 329/329 (100.0%)
+  PINCH (pair-sum moduli):  caught 329/329 (100.0%)  <- COMPLETE
+  largest min-division-modulus among the div+fold residual: 23  (S551 unboundedness)

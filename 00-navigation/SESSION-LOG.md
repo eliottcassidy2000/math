@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S562b - LRC multi-sieve, recursive: the apex DISSOLVES; the natural moduli are PAIR-SUMS (HYP-2075)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** implement multi-sieve concepts; think recursively; challenge assumptions.
+**THREE SUB-SIEVES** (caught = finds a witness t, ‖v_i t‖≥1/n ∀i): (D) division t=a/m m∈{2..M}; (P) PINCH t=a/(v_i+v_j) pair-sum moduli (S557); (F) recursive even-fold (n=14→n=7→…, doubling-preimage). Composition over 329 random+loaded n=14 configs: div{2..14} 88.8%, fold 86.0%, div∪fold 95.1%, **PINCH 100% (COMPLETE)**.
+**ASSUMPTION #1 (apex is a hard obstruction) — REFUTED:** of 2366 configs containing a multiple of 14 (apex-stuck at m=14), caught by m=14 alone 0%, by some m∈{2..13} **91%** (rescued at m=9, m=13, …). A different modulus has a different stuck runner; **multi-sieve has NO apex**. The S559/S561 apex obstruction was an artifact of the single-corrector (polynomial-method) mechanism, NOT of loneliness. Don't fight the apex — change modulus.
+**ASSUMPTION #2 (sieve moduli = small integers) — WRONG SCALE:** division is incomplete at any finite M (S551; residual min-modulus 23+, unbounded), but the PINCH sieve over PAIR-SUM moduli is COMPLETE (every config caught at its optimal time a/(v_a+v_b), since M(S)=r/s with s a reduced pair-sum, S557), with bounded COUNT O(k²) and no apex. The natural LRC sieve moduli are v_i+v_j, not {1..M} nor the c=(k+1) lift.
+**ASSUMPTION #3 (the sieve is flat) — RECURSES:** the 2-adic even-fold catches 86% by reducing n=14 → n=7 on the halved evens; its ONLY miss is the odd-split residual (S554), covered by pinch; bottoms out at all-odd (t=½).
+**CONCRETE PROPOSAL:** sieve at PAIR-SUM RESIDUES mod p (t≡a/((v_i+v_j) mod p)) instead of/alongside the c=(k+1) base lift — optimal witness lives there, count O(k²), no zero-divisor apex; recurse 2-adically to proven LRC(13) on the even half. HONEST: exact witness-finders on samples, not end-to-end; 'pinch complete' = computes M(S) (LRC true); not a proof. The three obstructions I'd treated as fundamental (apex, modulus unboundedness, flatness) were single-primitive artifacts that dissolve under the multi-sieve. Files: 07-reflections/lrc-multi-sieve-recursive-pinch-moduli-no-apex-s562.md; 04-computation/lrc_multi_sieve_recursive_s562.py (+.out); HYP-2075.
+
 ## monad-researcher-2026-06-02-S562 - Closed form for the ODD-n bisection of SC(n) (self-converse tournaments = A002785); both bisections now matching base-4 Burnside sums; SC extended exact to n=120 (HYP-2074)
 
 **Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data, save outputs.
