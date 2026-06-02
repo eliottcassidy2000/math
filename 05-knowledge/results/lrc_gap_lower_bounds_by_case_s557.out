@@ -1,0 +1,49 @@
+==============================================================================
+n=14 runners (observer + 13 movers).  trivial g>=1/(2k)=1/26=0.03846   conjecture g>=1/14=0.07143
+==============================================================================
+
+(A) RANDOM primitive 13-sets: actual gap vs sieve bound (C1) vs trivial (C0)
+  set#00 max=78: g=0.1817  triv=0.0385  q*=10: g>=1/10=0.1000 (>=1/14 conj)  [OK]
+  set#01 max=72: g=0.1653  triv=0.0385  q*=14: g>=1/14=0.0714 (>=1/14 conj)  [OK]
+  set#02 max=73: g=0.1728  triv=0.0385  q*=13: g>=1/13=0.0769 (>=1/14 conj)  [OK]
+  set#03 max=77: g=0.2000  triv=0.0385  q*=5: g>=1/5=0.2000 (>=1/14 conj)  [OK]
+  set#04 max=75: g=0.2871  triv=0.0385  q*=9: g>=1/9=0.1111 (>=1/14 conj)  [OK]
+  set#05 max=73: g=0.1600  triv=0.0385  q*=10: g>=1/10=0.1000 (>=1/14 conj)  [OK]
+  set#06 max=78: g=0.1515  triv=0.0385  q*=12: g>=1/12=0.0833 (>=1/14 conj)  [OK]
+  set#07 max=71: g=0.2206  triv=0.0385  q*=14: g>=1/14=0.0714 (>=1/14 conj)  [OK]
+  set#08 max=78: g=0.2500  triv=0.0385  q*=12: g>=1/12=0.0833 (>=1/14 conj)  [OK]
+  set#09 max=70: g=0.2059  triv=0.0385  q*=9: g>=1/9=0.1111 (>=1/14 conj)  [OK]
+  set#10 max=75: g=0.1918  triv=0.0385  q*=7: g>=1/7=0.1429 (>=1/14 conj)  [OK]
+  set#11 max=76: g=0.1613  triv=0.0385  q*=12: g>=1/12=0.0833 (>=1/14 conj)  [OK]
+  set#23 max=60: g=0.2272  triv=0.0385  SIEVE-COVERED (core; Tao's regime)  [OK]
+  set#28 max=78: g=0.1639  triv=0.0385  SIEVE-COVERED (core; Tao's regime)  [OK]
+
+  -> not sieve-covered: 38/40  (these have g >= 1/14, the FULL conjecture, proven by the sieve)
+  -> sieve-covered:     2/40  (the ONLY locus where Tao's general bound is operative -- the open core)
+  -> over non-covered sets: min actual gap = 0.1515 >= conjecture 1/14=0.0714  (>> trivial 0.0385; ~3.9x Tao)
+
+(B) STRUCTURED cases (rigorous, far above the conjecture):
+  all-odd  (1, 3, 5, 7, 9)...: q*=2  g>=1/2;  actual g=0.5000
+  no mult of 14: q*=14  g>=1/14=0.0714 (conjecture exactly); actual g=0.0714
+  no mult of 2 or 3: q*=2  g>=1/2=0.5000; actual g=0.5000
+
+(C) THE WALL (AP 1..13): sieve-covered, gap = exactly the conjecture
+  AP (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13): sieve-covered (q*=None, has a mult of every q<=14); g=0.07143 ~ 1/14=0.07143
+  -> the AP saturates the conjecture: NO general bound can exceed 1/14. The wall caps the game at the conjecture; Tao's bound lives BELOW it, for the sieve-covered core only.
+
+==============================================================================
+VERDICT
+==============================================================================
+  * Trivial 1/(2k) = first moment; Tao adds a log/loglog hair via arc-overlaps.
+  * SIEVE (C1) beats Tao outright for every NON-sieve-covered set: g >= 1/q* >= 1/14
+    (the FULL conjecture). That is the BULK (38/40 here).
+  * Structured cases blow past it: all-odd -> g >= 1/2; no-mult-of-2-or-3 -> g >= 1/2.
+  * The ONLY sets where Tao's general bound is the operative one are SIEVE-COVERED
+    (a multiple of every q<=k+1) -- a subset of the open core (S554-A1). And even most
+    SIEVE-COVERED sets have gap >> 1/(k+1) (e.g. 0.16-0.23 above): the genuinely hard
+    locus is the even thinner near-AP slice. The AP/wall is sieve-covered and saturates
+    g = 1/(k+1): no general bound can beat the conjecture.
+  * So 'improve in certain cases' = PROVEN: g >= 1/(k+1) for all non-sieve-covered
+    sets (the bulk). Tao's frontier is the measure-zero-ish sieve-covered core, where
+    the repo's tools (measure bound S550 at theta<1/n; local LP S556) give g >= 1/n
+    off the AP -- the genuine remaining work.

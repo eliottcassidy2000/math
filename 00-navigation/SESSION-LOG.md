@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-02-S557o - Improving the lonely-runner GAP bound IN CASES: the sieve gives the FULL conjecture g>=1/(k+1) off a thin near-AP core (HYP-2064)
+
+**Account:** Oracle (oraclebox1). **User prompt:** Tao improved the general gap bound 1/(2k) -> 1/(2k)+c log k/(k^2(loglog k)^2); can you improve further, what about in certain cases?
+**FRAME:** trivial g>=1/(2k) IS the first moment (E[#near]=2k theta<1 iff theta<1/(2k)); Tao adds a log/loglog hair via danger-arc overlaps. I do NOT beat his general constant.
+**IN CASES (the win):** the SIEVE bound g>=1/q* (q*=least q in {2..k+1} dividing no speed) gives, for every NON-sieve-covered set, q*<=k+1 hence **g>=1/(k+1) -- the FULL CONJECTURE**. Structured cases blow past: all-odd -> g>=1/2; no-mult-of-2-or-3 -> g>=1/2; no-mult-of-(k+1) -> g>=1/(k+1) exactly.
+**COMPUTED (lrc_gap_lower_bounds_by_case_s557.py, n=14):** 38/40 random primitive 13-sets not sieve-covered -> g>=1/14 proven, actual gaps 0.15-0.29 (~2-4x Tao's 1/26). AP/wall sieve-covered, g=1/14 exactly (saturates the conjecture -> no general bound can exceed 1/(k+1); Tao lives strictly below). NUANCE: the 2 sieve-covered sets still have g=0.16,0.23 -- sieve-covered != near wall; the truly hard locus is the thinner near-AP slice.
+**VERDICT:** 'improve in cases' = PROVEN: g>=1/(k+1) for the bulk; Tao's general bound is operative only on the sieve-covered set, the extremal gap only on its near-AP slice. On that core the repo's tools point further: theta-deformed measure bound (S550, g>=theta when E(v)<(1-2theta)^k) and the local LP (S556).
+**Artifacts:** lrc_gap_lower_bounds_by_case_s557.py (+.out); reflection improving-the-gap-bound-in-cases-...-s557o.md; HYP-2064. **Handoff:** (1) theta-deformed measure bound over the core; (2) bound the AP-distance of small-gap sieve-covered sets; (3) sieve(q<=n)+one fine pinch(q>n, S556) for sieve-covered non-AP sets.
+
 ## opus-2026-06-02-S559 - The k+1=2q tight-tuple analogue: the APEX zero-divisor q IS the field-failure of the polynomial method (HYP-2063)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** make progress on the k+1=2q analogue of the tight tuple (the literature's n=14 wall, S558).
