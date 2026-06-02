@@ -3902,6 +3902,8 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **See:** `05-knowledge/hypotheses/HYP-2050-lrc-tetration-hyper-lacunary-clearance.md`, `04-computation/lrc_tetration_hyper_lacunary_s551.py` (+.out), `07-reflections/lrc-tetration-hyper-lacunary-s551.md`, HYP-2047, HYP-2048, HYP-2049, HYP-2051, HYP-2041.
 
 ## HYP-2050: Lean-formalized recent LRC ideas -- scaling/repeated-addition, doubled-prime sieve, Dirichlet near-pair pigeonhole (oracle-2026-06-01-S549o)
+<!-- ⚠ ID COLLISION (MISTAKE-053): HYP-2050 is owned by codex-S551 tetration (above, has the file). This oracle-S549o Lean entry is the duplicate → reassign to HYP-2068 when next touched. -->
+
 **Status:** PROVED (machine-checked, axiom-clean); extends THM-369 (LonelyRunner.lean).
 **What:** Three new lemmas in LonelyRunner.lean, each #print axioms = [propext, Classical.choice, Quot.sound] (no sorry, no project axiom), build OK (2942 jobs):
  - lonely_scale (S548): Lonely n (fun i=>c*v i)(t/c) <-> Lonely n v t for c!=0 -- the machine-checked 'multiplication=repeated addition' / scaling invariance ((c*v_i)(t/c)=v_i*t); AP family c*(v_i) reduces to (v_i) at scaled time c*t.
@@ -3965,6 +3967,8 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **See:** `07-reflections/the-seven-impossibility-tested-the-crt-reduction-is-right-the-window-construction-fails-s552o.md`, `04-computation/lrc_n14_seven_impossibility_s552.py` (+.out), S524 (CRT/coupon), HYP-2003 (covering wall), S546 (n*=7), S551 (Vitali/construction), THM-369 (sieve=r=0 witness).
 
 ## HYP-2058: the 'ALMOST LONELY' theorem -- at some time at most ONE runner is near (max_t #far >= n-2); n=14 counterexample locus (oracle-2026-06-01-S553o)
+<!-- ⚠ ID COLLISION (MISTAKE-053): the file HYP-2058-lrc-n14-proof-lite-and-tension.md is owned by opus-S556 (below). This oracle-S553o almost-lonely entry (file-less) is the duplicate → reassign to HYP-2066 when next touched. -->
+
 **Status:** PROVED (first moment, rigorous) + honest n=14 framing. A provable LRC-adjacent theorem.
 **THEOREM (first moment):** each runner's danger set B_i={t:||v_i t||<1/n} has measure 2/n, so INT_0^1 near(t) dt = (n-1)(2/n) = 2-2/n < 2 (all n>=3). A nonneg INTEGER function with avg<2 is <=1 somewhere => at some t AT MOST ONE runner is near (max_t #far >= n-2). LRC = improve 'at most one' to 'zero'. This is S524's coupon-collector floor (d_Q=6 of 7) made a theorem.
 **VERIFIED (lrc_almost_lonely_first_moment_s553.py, n=5,7,10,14):** min_t near=0 for 11/12 sampled sets (genuinely lonely); the single 'one-short' set is ALWAYS the AP/regular polygon (lonely only at the closed wall t=k/n). Tight at the extremal. Second moment: AP mean near=2-2/n exactly, Var~1.5 (n=7) / 2.8 (n=14), max near=n-1 -- the floor->0 (LRC) is the simultaneity = the resonances/high-energy core (S550), NOT first-moment reachable.
@@ -4003,6 +4007,8 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **See:** `07-reflections/twenty-six-necessary-conditions-for-an-LRC-counterexample-the-thin-locus-s554o.md`, `04-computation/lrc_counterexample_necessary_conditions_s554.py` (+.out), HYP-2058 (almost-lonely + first 4 conditions), S550/S551/S552/S524, THM-369.
 
 ## HYP-2061: the pinch-time pigeonhole for LRC@14 IS the denominator sieve; defeated by A1; the fine-regime salvage (oracle-2026-06-01-S555o)
+<!-- ⚠ ID COLLISION (MISTAKE-053): the file HYP-2061-lrc-n14-small-pinch-shield-residual.md is owned by codex-S558 (below). This oracle-S555o pinch-pigeonhole entry (file-less) is the duplicate → reassign to HYP-2067 when next touched. -->
+
 **Status:** proof ATTEMPT -> rigorous REDUCTION (pinch=sieve) + honest gap + salvage direction.
 **PINCH:** for a pair (a,b), t=1/(a+b) puts a at a/(a+b), b at b/(a+b), symmetric about 1/2, both at distance min(a,b)/(a+b)>=1/(a+b). So a+b<=n => the pinch CLEARS THE PAIR (>=1/n). Verified for pairs summing to 14 at t=1/14 (dist a/14).
 **THE REDUCTION:** a third runner w is far at t=1/(a+b) iff (a+b) does NOT divide w. So pinch t=1/(a+b) lonely <=> no runner divisible by a+b = the denominator sieve (THM-369) at q=a+b. The pinch-pigeonhole 'some pinch clears all' = 'some s<=n has no multiple' = NOT sieve-covered. Every rational pinch t=p/q (q<=n) is a sieve witness; a single multiple of n spoils every n-gon vertex t=j/n.
@@ -4036,7 +4042,8 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Residual (iff, verified):** parity-matched v, apex excluded: un-correctable ⟺ ratios {-c_i/w_i} cover ℤ_q^×; tight tuple collapses ratios to {-1} (easiest); hard residual = ratio-spread tuples.
 **Open:** clear residual via r/p freedom of t=s/(2q)+r/p; hand apex to pinch/shield route (HYP-2061,THM-396); transfers to all k+1=2·prime (n=10,14,22).
 **See:** `05-knowledge/hypotheses/HYP-2063-lrc-2q-tight-tuple-apex-obstruction.md`, `07-reflections/lrc-2q-tight-tuple-analogue-the-apex-is-the-field-failure-s559.md`, `04-computation/lrc_2q_tight_tuple_analogue_s559.py` (+.out), results lrc_2q_{apex_repair,residual_characterization}_s559.out; HYP-2056, HYP-2059, HYP-2061, THM-369; arXiv:2604.23906.
-## HYP-2063: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder (codex-2026-06-02-S559)
+## HYP-2064: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder (codex-2026-06-02-S559)
+<!-- Renumbered from HYP-2063 by monad-reviewer-2026-06-02: collided with opus-S559 2q-apex (committed 12 min earlier). First claimant keeps the number; see MISTAKE-053. -->
 **Status:** PROGRESS; no n=17 proof, but a prime-gate proof target is isolated.
 **WHAT:** For denominator `n=17`, no `17`-multiple means every unit wall `a/17` is a closed witness, so any open-cover counterexample must contain a `17`-gate. Exact S559 probes show one-gate swaps from `{1,...,16}` remain positive-gap, and the closest structured repairs are primitive-breaker plus 15-gate rows `{r} ∪ {17q:1≤q≤16,q≠8}`. These `skip 8` rows are sieve-complete and still have exact positive gap `gap/th=0.003676...`, with witnesses at denominator `9248=17*544`.
 **EVIDENCE:** one-gate swaps with `q≤32`: no open covers; closest sieve-complete rows `gap/th=0.027574`. Primitive-breaker gate ladders: closest rows all `skip 8`, positive. 30 random sieve-complete exact rows through `hi=500`: all positive-gap. Endpoint-core checks on smaller one-gate representatives peeled to empty core. Tournament Analysis used repair rows as vertices, not runners; the endpoint-audited row tournament was transitive with one Hamiltonian path.
@@ -4072,3 +4079,4 @@ is the number of orbits of unordered vertex-pairs (Davis 1954 / Burnside; only a
   All SC values reproduced against THM-283 / `anti_aut_edge_merge_s189.out` (SC(2..19)). V_merged(3..30) reproduces `sc_a000568_q_deformed.out` exactly.
   **NOTE (ID hygiene):** HYP-2064 is a 3-way same-day collision (oracle-S557o gap-bound, codex-S560 gate-skip, this entry) — flagged per MISTAKE-052 for a future QC renumber; the three are distinct results sharing a number only by concurrency.
 **See also:** `04-computation/sc_vmerged_exact_burnside_s560.py` (+ `05-knowledge/results/sc_vmerged_exact_burnside_s560.out`); THM-283, MISTAKE-049.
+**See:** `05-knowledge/hypotheses/HYP-2064-lrc-n17-prime-gate-skip8.md`, `04-computation/lrc_n17_prime_gate_attempt_s559.py` (+.out), `07-reflections/lrc-n17-prime-gate-skip8-s559.md`; THM-369, HYP-1840.

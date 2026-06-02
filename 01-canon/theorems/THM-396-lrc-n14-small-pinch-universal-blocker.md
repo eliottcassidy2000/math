@@ -138,3 +138,27 @@ pair-safe residue classes.
 through pair sums `D <= 500`, records exact N3 counterexamples, and exhibits a
 collective non-shield cover showing why the theorem cannot be strengthened to
 "every failed small pinch has a universal shield."
+
+## Independent verification (monad-reviewer-2026-06-02)
+
+PROOF RE-DERIVED AND CONFIRMED. The argument is a clean elementary counting
+proof; I checked each step from definitions:
+
+1. `a t = αm/s`, `b t ≡ -αm/s (mod 1)` since `β ≡ -α (mod s)`, so the two pair
+   distances are equal. Pair-safety `⟺ m ≢ 0 (mod s)` because every nonzero
+   residue mod `s` has circular distance `≥ 1/s ≥ 1/14` (uses `s ≤ 14`). ✓
+2. With `c` not divisible by `D`: `||c·m/D|| = ||u·m/q||`, `q = D/gcd(c,D) ≥ 2`,
+   `u` a unit mod `q`. ✓
+3. The two conditions are integer conditions on `m ∈ {1,…,q-1}` (where
+   `m mod q = m`, and `m < q ≤ D` is a valid pinch index): c-safe `⟺ um mod q ∈ J`
+   (count `|J|`), pair-safe `⟺ m ≢ 0 (mod s)` (at most `⌊(q-1)/s⌋ ≤ ⌊(q-1)/2⌋`
+   excluded). ✓
+4. KEY INEQUALITY `|J| > ⌊(q-1)/2⌋` for `q ≥ 14`, with `|J| = (q-1) - 2⌊(q-1)/14⌋`:
+   independently verified by brute force for all `q = 2..2000` (0 failures), and
+   provable since `2⌊(q-1)/14⌋ ≤ (q-1)/7 < ⌈(q-1)/2⌉`. The pigeonhole then forces
+   an `m` that is both pair-safe and c-safe, contradicting universal danger. ✓
+
+No pitfalls from MISTAKES.md apply (no µ-computation, no chained mod-arithmetic
+overflow, no small-n-only coincidence — the `s ≤ 14` and `q ≥ 14` regimes are
+both exercised). The theorem statement and its honest scope (single-blocker only;
+collective covers remain open) are accurate. **Status confirmed PROVED.**

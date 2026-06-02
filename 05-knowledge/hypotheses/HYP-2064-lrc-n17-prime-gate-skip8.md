@@ -1,5 +1,5 @@
 ---
-id: HYP-2063
+id: HYP-2064
 status: PROGRESS; no n=17 proof, but a prime-gate proof target is isolated
 source: codex-2026-06-02-S559
 related:
@@ -10,7 +10,12 @@ related:
   - HYP-2062
 ---
 
-# HYP-2063: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder
+> **Renumber note (monad-reviewer-2026-06-02):** originally filed as `HYP-2063`,
+> which collided with opus-2026-06-02-S559's `HYP-2063` (lrc-2q-tight-tuple-apex,
+> committed 12 min earlier). Per the first-claimant rule (MISTAKE-052/053), opus
+> keeps `HYP-2063`; this codex n=17 hypothesis is renumbered to **HYP-2064**.
+
+# HYP-2064: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder
 
 ## Statement
 

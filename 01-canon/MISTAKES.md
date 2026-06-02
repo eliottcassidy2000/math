@@ -1536,3 +1536,75 @@ id is free — especially in concurrent multi-agent sessions where two agents ma
 the same "next" number on the same day. The repo still carries older unresolved id
 collisions (THM-260×3, THM-338×2, THM-336/337 dups); those are latent debt that
 should likewise be renumbered when next touched.
+
+---
+
+## MISTAKE-053: Systemic HYP-number collisions — five `HYP-N` reused in one 30-hour LRC burst
+
+**Date discovered:** 2026-06-02
+**Found by:** monad-reviewer-2026-06-02 (QC startup audit)
+**Affects:** HYP-2050, HYP-2052, HYP-2058, HYP-2061, HYP-2063 (and their INDEX
+entries, files, reflections). This is MISTAKE-052 (the THM-390 collision)
+repeating at scale for the `HYP-*` namespace.
+
+### What happened
+
+Between 2026-06-01 and 2026-06-02, three concurrent agent lines (`opus`,
+`oracle`, `codex`) ran the LRC@14/n=17 frontier in parallel and each picked the
+same "next" HYP number within **3–12 minutes** of one another. Five collisions:
+
+| HYP | First claimant (UTC) | Second claimant (UTC) | Both have a file? |
+|-----|----------------------|------------------------|-------------------|
+| 2050 | codex-S551 tetration 20:53 | oracle-S549o Lean 20:56 | only codex |
+| 2052 | opus-S551 sieve-no-completeness 21:11 | oracle-S552 loneliness-spectral-gap 21:21 | **BOTH** |
+| 2058 | oracle-S553o almost-lonely 15:03 | opus-S556 proof-lite-and-tension 15:21 | only opus |
+| 2061 | oracle-S555o pinch-time-pigeonhole 17:41 | codex-S558 small-pinch-shield 17:54 | only codex |
+| 2063 | opus-S559 2q-tight-tuple-apex 18:03 | codex-S559 n17-prime-gate 18:15 | **BOTH** |
+
+### Why it matters
+
+Same as MISTAKE-052: an ambiguous id breaks `depends_on`/citation graphs — a
+reader cannot tell which hypothesis "HYP-2061" means. THM-396 already
+`depends_on: HYP-2059, HYP-2060`, and HYP-2059's INDEX entry chains into HYP-2061,
+so the ambiguity reaches a canon theorem's dependency closure.
+
+### Resolution (this session)
+
+- **HYP-2063 (both-file collision, newest):** fully renumbered. First claimant
+  opus keeps `HYP-2063` (2q-apex); codex's n17-prime-gate → **HYP-2064**. File
+  renamed, INDEX/SESSION-LOG/TANGENTS updated, 0 stray refs remain.
+- **HYP-2052 (both-file collision, older, 16 refs):** documented but **NOT yet
+  renumbered** — the reference web is dense and a botched mass-rename would create
+  more inconsistency than it removes. Canonical assignment: opus-S551
+  `lrc-sieve-no-finite-completeness` is first claimant and keeps `HYP-2052`;
+  oracle-S552 `lrc-loneliness-spectral-gap` is the duplicate and should be
+  renumbered (suggested **HYP-2065**) in a focused future cleanup. Until then,
+  always disambiguate by the file slug, not the bare number.
+- **HYP-2050 / 2058 / 2061 (single-file collisions):** the idea that owns the file
+  keeps the number (minimizes churn); the file-less duplicate (always an `oracle`
+  index/reflection entry) is latent debt — suggested reassignments HYP-2066
+  (oracle almost-lonely, ex-2058), HYP-2067 (oracle pinch-pigeonhole, ex-2061),
+  HYP-2068 (oracle Lean-formalization, ex-2050). Disambiguate by slug meanwhile.
+
+### Lesson
+
+The MISTAKE-052 lesson ("`ls | grep` before filing") was logged for `THM-*` but
+not adopted for `HYP-*`, and the failure rate is far higher because HYP numbers
+advance many times per day across ≥3 concurrent lines. **Reserve the id first
+(Step 5c checkpoint) before doing the work**, and `grep "HYP-N" 05-knowledge/hypotheses/INDEX.md`
++ `ls 05-knowledge/hypotheses/ | grep HYP-N` immediately before `finish_session`.
+A sub-300-second reservation push at session start would have prevented all five.
+Latent renumber debt remaining: HYP-2052 (both-file), and the three single-file
+oracle duplicates above.
+
+**Additional pre-existing two-file HYP collisions found in the same audit** (older
+than this 24h window — full latent debt list for the future cleanup session):
+- HYP-1969: `lrc-h-phase-plateau` vs `lrc-proof-route-currencies`
+- HYP-1992: `lrc-n18-observer-source-gate-battlefield` vs `lrc-rapidity-formal-group-bridge`
+- HYP-1995: `lrc-exact-gap-race-wall-ledger` vs `lrc-twin-roots-of-unity-bridge`
+- HYP-2009: `lrc-polygon-outside-inside-arcs` vs `resonance-debt-conjecture`
+- HYP-2040: `lrc-conditional-clearance-wedge-transitivity` vs `lrc-n4-measure-gap-unique-tight`
+
+These confirm the collision rate has been chronic across the whole LRC era, not a
+one-off. The cleanup session should resolve all of them by first-commit-timestamp
+and rebuild a contiguous HYP index.

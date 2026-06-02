@@ -9,6 +9,11 @@ related:
   - HYP-2040
 ---
 
+<!-- ⚠ ID COLLISION (MISTAKE-053): two files share HYP-2052. THIS file
+(opus-S551 sieve-no-finite-completeness) is the first claimant and KEEPS the
+number; the duplicate is oracle-S552 `lrc-loneliness-spectral-gap` (→ HYP-2065 in
+a future cleanup). This is the canonical HYP-2052. -->
+
 # HYP-2052: the division-point sieve has no finite completeness threshold for LRC(n)
 
 ## Rigorous part (PROVED)

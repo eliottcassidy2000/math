@@ -8,6 +8,12 @@ related:
   - HYP-2049
 ---
 
+<!-- ⚠ ID COLLISION (MISTAKE-053): two files share HYP-2052. First claimant
+opus-S551 `lrc-sieve-no-finite-completeness` (committed ~10 min earlier) keeps the
+number; THIS file (oracle-S552 spectral-gap) is the duplicate, slated to become
+HYP-2065 in a focused cleanup. Cite as "the loneliness spectral gap (oracle-S552)"
+to disambiguate. -->
+
 # HYP-2052: the LRC loneliness spectral gap -- max-collar is 1/n (AP) or >= 2/(2n-1), witnessed by the doubled apex
 
 **Setup.** For `n-1` distinct gcd-1 integer speeds (observer 0), max-collar
