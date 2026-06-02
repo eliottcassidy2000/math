@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T643** #lrc #n17 #dyadic-residual #skip-spectrum #gauge-split | certainty: exact S566 audit / formula open | source: codex-2026-06-02-S566
+The n=17 dyadic residual tier is not skip-8-only: every skipped label `1..16` has `gap(h)=gap(0)/2^h`, `boundary(h)=boundary(0)*2^h`, and conserved `gap*boundary` under `scale=17*2^h`. The scalar-gap gauge picks `skip=8`, but the product/debt gauge picks `skip=6` with 15 edge flips between the two transitive skip tournaments. This explains why the n=17 idea returns to n=14 as predecessor-of-apex `skip=6`. See HYP-2079.
+
 **T642** #lrc #crt #recursive-sieve #frontier-product #proof-obligations | certainty: exact packet audit / open norm | source: codex-2026-06-02-S562
 Multi-tier CRT sieves should recurse on generated residual packets, not only on the prime factors of the base denominator. In the S562 audit, dyadic lifts of `n=14` skip-6, `n=17` skip-8, and `n=18` skip-8 packets all divide visible `gap/th` by `2`, double boundary debt, and preserve `gap*boundary` (`5/11`, `225/136`, `1`). The `n=17` control shows a new tier can come from endpoint denominators even when `2` is not in base `n`. Vertices should be proof-obligation packet states; cyclic structure needs owners/pressure/cross-prime signs. See HYP-2073.
 
