@@ -1,5 +1,15 @@
 # Session Log
 
+## monad-researcher-2026-06-02-S560 - Exact float-free Burnside for the THM-283 mirror triple (A000568 / SC / V_merged) to n=60; recovered a lost script; re-verified two canon identities (HYP-2064)
+
+**Account:** Monad (monad-researcher). **Focus:** run computation scripts — extend OEIS sequences, verify conjectures with new data, save all outputs.
+**ARTIFACT 1 (committed earlier this session, 8abae55):** `a000568_exact_burnside.py` — number of tournaments A000568 via exact `Fraction` Burnside over odd partitions (2^t/z, t = pair-orbit exponent). NO floats. Reproduces OEIS n=1..20; CORRECTS the float script `a000568_asymptotic_exact_s26.py` which self-reports a(14)=...300 (true ...304) and a(15)=...256 (true ...166848); extended exact n=21..50 (sub-0.15s each).
+**ARTIFACT 2 (this window):** `sc_vmerged_exact_burnside_s560.py` — same machinery, full THM-283 MIRROR TRIPLE. RECOVERS the lost q-deformed script (only stale output `sc_a000568_q_deformed.out` to n=30 survived) and extends A000568 / SC / V_merged to n=60, all exact (Fraction denominator==1 asserted).
+**VERIFIED (fresh exact arithmetic):** (I) THM-283 mirror SC = sum over parts≡2 mod4 (+one fixed point iff n odd) of 2^c/z; V_merged=(A000568+SC)/2 integer ∀n; all SC(2..19) match canon. KEY subtlety: inside-cycle pair-orbit term is floor(L/2) — equals (L-1)/2 only for ODD L; A000568's `(L-1)//2` is fine, SC's even parts need floor(L/2); new script uses L//2 universally. (II) MISTAKE-049 corrected identity SC(2m)=A(m,4) (base-4 Burnside over odd partitions) verified m=1..25, 0 mismatches; sanity A(m,2)=A000568(m) m=1..20.
+**ID HYGIENE FLAG:** HYP-2064 is a 3-way same-day collision (oracle-S557o, codex-S560, this) — distinct results, same number by concurrency. Logged per MISTAKE-052 for a future QC renumber; I extended my existing HYP-2064 entry rather than mint a 4th colliding ID.
+**Handoff:** (a) push SC/V_merged to OEIS-submission scale if desired (formula is O(p(n)) partition terms, trivially reaches n=200+); (b) someone with QC mandate should renumber the HYP-2064 trio; (c) SC at ODD n is NOT base-4 Burnside of m — the q-deformation only captures the even-n half (SC(2m)=A(m,4)); the odd-n SC values come from the one-fixed-point partition filter, an open target for its own clean closed form.
+**Files:** `04-computation/a000568_exact_burnside.py`, `04-computation/sc_vmerged_exact_burnside_s560.py` (+ both `.out` in `05-knowledge/results/`); HYP-2064; THM-283, MISTAKE-049.
+
 ## oracle-2026-06-02-S557o - Improving the lonely-runner GAP bound IN CASES: the sieve gives the FULL conjecture g>=1/(k+1) off a thin near-AP core (HYP-2064)
 
 **Account:** Oracle (oraclebox1). **User prompt:** Tao improved the general gap bound 1/(2k) -> 1/(2k)+c log k/(k^2(loglog k)^2); can you improve further, what about in certain cases?
