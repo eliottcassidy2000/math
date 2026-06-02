@@ -1,0 +1,26 @@
+k  n=k+1  k+1 factorization    log10(B_k)   B_k/B_{k-1} (log10)   prime k+1?
+ 7   8    composite                54.9                     no
+ 8   9    composite                79.9         25.1        no
+ 9  10    2*5                     110.4         30.5        no
+10  11    PRIME                   146.6         36.2        yes
+11  12    composite               188.7         42.1        no
+12  13    PRIME                   236.8         48.1        yes
+13  14    2*7                     291.1         54.3        no
+
+Two escape routes to a feasible finite check:
+  (A) direct c=(k+1) lift small enough  -> works while k is small (n<=~12)
+  (B) k+1 an ODD PRIME -> polynomial method skips the tight-tuple lift (Prop 4.1)
+
+  n=10 (k=9):  route (A) -- small. DONE (Trakulthongchai 2025).
+  n=11 (k=10): k+1=11 PRIME -> route (B). DONE.
+  n=12 (k=11): k+1=12 composite, but still small enough for (A). DONE.
+  n=13 (k=12): k+1=13 PRIME -> route (B) rescues the now-large lift. DONE.
+  n=14 (k=13): k+1=14=2*7 composite -> (B) UNAVAILABLE; k=13 too big for (A). WALL.
+q  n=2q  tight handled(excl apex)  per-tuple residual rate (parity-tight, apex excl, lower=easier)
+ 3    6   True                   residual=0.617
+ 5   10   True                   residual=0.414
+ 7   14   True                   residual=0.277
+11   22   True                   residual=0.141
+
+=> n=10 and n=14 are STRUCTURALLY ISOMORPHIC (apex repair works for both);
+   per-tuple difficulty does NOT grow (q=7 residual <= q=5). The wall is SCALE only.

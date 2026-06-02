@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-02-S560 - Why n=10 is possible but n=14 hard: SCALE, not structure (recursive account)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** understand recursively what makes n=10 possible but n=14 hard.
+**THE TRAP DISSOLVED:** n=10=2·5 and n=14=2·7 are BOTH doubled primes ⇒ both have the apex zero-divisor and both FAIL the polynomial-method shortcut (S559). So the apex/2q structure CANNOT distinguish them.
+**RECURSION OF THE PROOF:** LRC(k) → (Tao/MSS) bound ∏uᵢ<B_k=(C(k+1,2)^{k-1}/k)^k → divisibility sieve over primes p → per-prime lift c=2,…,k+1 → the c=(k+1) lift of the TIGHT tuple is the deepest layer. Two survival routes: (A) compute it directly (feasible only while k small); (B) skip via polynomial method (only when k+1 ODD PRIME; fails at 2q by the apex, S559).
+**THE HAYSTACK EXPLODES (the only thing that changes):** log10 B_k = 55,80,110(n=10),147,189,237,291(n=14); per-step increment GROWS +25→+54. Route (A) ran out around k=12-13.
+**CRISP ANSWER:** n=10 (k=9, 2·5): route (B) blocked (apex 5) but k=9 small ⇒ route (A) closes it. n=11,13 (k+1 prime): route (B) open ⇒ done despite size, MASKING route (A)'s ceiling. n=12 (k=11, composite): route (B) blocked but k=11 still small enough for (A). **n=14 (k=13, 2·7): FIRST doubled-prime case where (A) is infeasible (B₁₃≈10²⁹¹, c=14 lift ≫ k=12's ~40 CPU-days) AND (B) unavailable (14 not odd prime). Falls in the gap when the prime sequence 11,13 steps to the next composite 14.**
+**COUNTERINTUITIVE REFINEMENT (verified):** per-tuple residual rate (apex excluded, parity-matched, S559 framework) DECREASES with q: .62,.41,.28,.14 for q=3,5,7,11. So a single hard tuple at n=14 is EASIER than at n=10 (more units in ℤ_q^× = more dodging freedom). **n=14 is structurally NO harder (per-tuple easier); the wall is pure SCALE (count of tuples / B_k), not structure.** n=10,n=14 structurally isomorphic.
+**COROLLARY for the program:** since per-tuple eases with q but the count explodes, the productive attacks fight SCALE not structure: (1) restore route (B) for k+1=2q (the S559 program — apex handled, residual = a shrinking ℤ_q^× ratio-cover); (2) a k-uniform structural proof (pinch/shield THM-396/HYP-2061, or even-fold). The brute c=14 lift is not scale-beating. Convergent w/ oracle-S558o (even-fold measure). Files: 07-reflections/lrc-why-n10-possible-n14-hard-recursively-s560.md; 05-knowledge/results/lrc_n10_vs_n14_cost_s560.out. Refines HYP-2063; no new HYP.
+
 ## oracle-2026-06-02-S558o - New LRC@14 proof idea: the EVEN-FOLD MEASURE reduction -- lonely <=> the odd arcs miss the (free) even-good set G; union bound + anti-correlation both refuted (HYP-2065)
 
 **Account:** Oracle (oraclebox1). **User prompt:** work on new ideas for a proof of n=14, pull from other agents.
