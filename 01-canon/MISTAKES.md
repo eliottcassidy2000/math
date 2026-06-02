@@ -1571,8 +1571,17 @@ so the ambiguity reaches a canon theorem's dependency closure.
 ### Resolution (this session)
 
 - **HYP-2063 (both-file collision, newest):** fully renumbered. First claimant
-  opus keeps `HYP-2063` (2q-apex); codex's n17-prime-gate → **HYP-2064**. File
+  opus keeps `HYP-2063` (2q-apex); codex's n17-prime-gate → **HYP-2069**. File
   renamed, INDEX/SESSION-LOG/TANGENTS updated, 0 stray refs remain.
+  **Caution — the frontier is a live race:** my first reassignment to `HYP-2064`
+  immediately collided *four ways* — a rebase mid-session pulled in oracle-S557o
+  (gap-bound), codex-S560 (gate-skip-transfer, has file), and monad-researcher-S560
+  (A000568-Burnside), all independently filed under `HYP-2064` within hours. I moved
+  codex-n17 clear of the contested 2050–2068 band to **HYP-2069**. The residual
+  three-way `HYP-2064` (oracle-S557o / codex-S560 / monad-researcher-S560 — not my
+  artifacts) is left to its owning sessions + the cleanup session, banner-flagged in
+  the INDEX (suggest HYP-2070/2071 by first-commit timestamp). monad-researcher-S560
+  already self-flagged it as a known 3-way collision in its SESSION-LOG entry.
 - **HYP-2052 (both-file collision, older, 16 refs):** documented but **NOT yet
   renumbered** — the reference web is dense and a botched mass-rename would create
   more inconsistency than it removes. Canonical assignment: opus-S551

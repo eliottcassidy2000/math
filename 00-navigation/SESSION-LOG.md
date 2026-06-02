@@ -49,7 +49,7 @@
 **Artifacts:** HYP-2064; `04-computation/a000568_exact_burnside.py` (+.out). **Handoff:** the same odd-partition Burnside engine extends trivially to n>50 and to any quantity expressible as a fixed-point sum over all-odd cycle types (e.g. SC-tournament counts, the merged-metagraph V_merged = (A000568+SC)/2). Note the existing float "exact" script should be considered deprecated for n>=14.
 
 ## opus-2026-06-02-S559 - The k+1=2q tight-tuple analogue: the APEX zero-divisor q IS the field-failure of the polynomial method (HYP-2063)
-## monad-reviewer-2026-06-02 - QC daily digest: THM-396 VERIFIED; 5 HYP collisions found (MISTAKE-053), 2063→2064 fixed
+## monad-reviewer-2026-06-02 - QC daily digest: THM-396 VERIFIED; HYP collisions (MISTAKE-053), codex-n17 → HYP-2069
 
 **Account:** monad-reviewer (QC/skeptic). **Scope:** audit of the LRC burst since my 2026-06-01 pass (commits aa65973→cea065e, ~14 sessions, all LRC).
 
@@ -58,11 +58,12 @@
 **SPOT-CHECK — opus-S559 HYP-2063 (2q-apex):** structural claims sound (units mod 2q are all odd ⇒ mod-2 component forced; unique speed ≡0 mod q in {1,…,2q-1} is the apex q). Appropriately marked PARTIAL/honest (full 2q corrector FALSE; ratio-spread residual real). No overclaim.
 
 **CLEANED — MISTAKE-053: systemic HYP-number collisions.** Five HYP numbers were reused by concurrent opus/oracle/codex lines, each picking the same "next" number 3–12 min apart: HYP-2050, 2052, 2058, 2061, 2063. This is MISTAKE-052 (the THM-390 collision) repeating at scale for the HYP namespace.
-- **HYP-2063 (both-file, newest): FULLY FIXED.** First claimant opus keeps 2063; codex's n17-prime-gate renumbered → **HYP-2064** (file renamed, INDEX/SESSION-LOG/TANGENTS updated, 0 stray refs).
+- **HYP-2063 (both-file, newest): FIXED.** First claimant opus keeps 2063; codex's n17-prime-gate renumbered. NOTE: my first reassignment to **2064** turned out to be a *live four-way* collision (oracle-S557o + codex-S560 + monad-researcher-S560 all grabbed 2064 via rebase during/after my session), so I moved codex-n17 clear to **HYP-2069** (file renamed, INDEX/SESSION-LOG/TANGENTS updated, 0 stray refs). The residual three-way 2064 (other agents' work) is banner-flagged in INDEX for them / the cleanup session (suggest HYP-2070/2071).
 - **HYP-2052 (both-file, older, 16 refs):** documented + disambiguation banners added to both files (opus-S551 sieve = canonical 2052; oracle-S552 spectral-gap = dup, → HYP-2065 later). Not mass-renamed — the ref web is too dense to do safely this session.
 - **HYP-2050 / 2058 / 2061 (single-file):** file-owner keeps the number; the file-less oracle duplicate INDEX entries banner-marked for future reassignment (→ 2068 / 2066 / 2067). Disambiguate by slug meanwhile.
+- **5 older pre-existing two-file collisions** also found: HYP-1969, 1992, 1995, 2009, 2040 (listed in MISTAKE-053). Chronic, not a one-off.
 
-**HANDOFF / asks to the cluster:** (1) Step 5c is being skipped — **reserve your HYP/THM id at session START** and `grep HYP-N INDEX.md` + `ls hypotheses/ | grep HYP-N` right before finish_session. A 5-minute reservation push would have prevented all five collisions. (2) A focused future session should complete the deferred renumbers (HYP-2052→2065, plus 2066/2067/2068) and the older latent THM debt (THM-260×3, THM-338×2). (3) Open math frontier unchanged: LRC@14 via the small-pinch shield-cover residual (THM-396 + HYP-2060/2061) and the 2q-apex residual (HYP-2063).
+**HANDOFF / asks to the cluster:** (1) Step 5c is being skipped — **reserve your HYP/THM id at session START** and `grep HYP-N INDEX.md` + `ls hypotheses/ | grep HYP-N` right before finish_session. The frontier band 2050–2068 is so contested that even *my own* renumber target (2064) collided four ways within hours — pick a number, push a one-line reservation immediately. (2) A focused cleanup session should finish the deferred renumbers (HYP-2052→2065, 2066/2067/2068, the live 2064 trio → 2070/2071, the 5 older two-file dups) and the latent THM debt (THM-260×3, THM-338×2). (3) Open math frontier unchanged: LRC@14 via the small-pinch shield-cover residual (THM-396 + HYP-2060/2061) and the 2q-apex residual (HYP-2063).
 
 
 
@@ -73,14 +74,14 @@
 **TIGHT-TUPLE REPAIR (proved):** the apex is 1/2-safe at the base t=s/(2q); excluding it, s=r=1 corrects all non-apex runners (→ 2i mod 2q ∈{2,…,2q-2}). So the hardest tuple (the paper's expensive c=k+1=14 lift bottleneck) is handled ANALYTICALLY once the apex is set aside. Verified excl-apex=True all q.
 **RESIDUAL (iff, verified):** parity-matched v, apex excluded ⇒ un-correctable ⟺ ratios {-c_i/w_i} cover ℤ_q^×; the tight tuple collapses ratios to {-1} (easiest); the hard residual = ratio-spread tuples (the family a c=14 computation must still resolve).
 **HONEST:** full 2q Prop 4.1 is FALSE (ratio-spread residual real); not claimed to make c=14 feasible alone. Gain = obstruction named/localized (apex zero-divisor), worst case removed, residual characterised, deep literature↔repo unification, transfers to all k+1=2·prime (n=10,14,22). Convergent w/ pinch/shield route (THM-396, HYP-2061): apex = the (q,q) shield. Files: 07-reflections/lrc-2q-tight-tuple-analogue-the-apex-is-the-field-failure-s559.md; 04-computation/lrc_2q_tight_tuple_analogue_s559.py (+.out); HYP-2063.
-## codex-2026-06-02-S559 - n=17 prime-gate proof attempt and the skip-8 gate ladder (HYP-2064)
-<!-- HYP renumbered 2063→2064 by monad-reviewer-2026-06-02 (collision with opus-S559; MISTAKE-053). -->
+## codex-2026-06-02-S559 - n=17 prime-gate proof attempt and the skip-8 gate ladder (HYP-2069)
+<!-- HYP renumbered 2063→2064→2069 by monad-reviewer-2026-06-02 (2063 collided with opus-S559; 2064 was a live four-way collision; moved clear of the frontier band; MISTAKE-053). -->
 
 
 **Account:** Codex. **User prompt:** make an attempt now at n=17.
 **RESULT:** no n=17 LRC proof and no open-cover candidate. The prime row gives a clean first branch: if no speed is divisible by `17`, every unit wall `a/17` is a closed witness, so a counterexample must contain a `17`-gate. One-gate swaps from `{1,...,16}` with `17q, q<=32` all stayed positive-gap; sieve-complete one-gate rows bottomed at `gap/th=0.027574`.
 **NEW PRESSURE FAMILY:** primitive-breaker plus 15-gate rows `{r} union {17q:1<=q<=16,q!=s}`. The closest exact rows all had `s=8`, were sieve-complete, and still had positive `gap/th=0.003676...` with witnesses at denominator `9248=17*544`. This looks like the prime-row analogue of a half-gate debt packet.
-**Tournament Analysis:** challenged runner-vertex assumptions; used repair rows as vertices, with observable `(exact gap/th, missing moduli, forbidden length, endpoint debt)`. Endpoint-audited one-gate repair tournament was transitive with one Hamiltonian path. **Artifacts:** HYP-2064 (renumbered from 2063); `lrc_n17_prime_gate_attempt_s559.py` (+.out); reflection `lrc-n17-prime-gate-skip8-s559.md`. **Handoff:** prove/formulaize the `skip 8` gate-ladder gap and build a lightweight endpoint-debt summary for large `17q` ladders.
+**Tournament Analysis:** challenged runner-vertex assumptions; used repair rows as vertices, with observable `(exact gap/th, missing moduli, forbidden length, endpoint debt)`. Endpoint-audited one-gate repair tournament was transitive with one Hamiltonian path. **Artifacts:** HYP-2069 (renumbered from 2063, via a transient 2064); `lrc_n17_prime_gate_attempt_s559.py` (+.out); reflection `lrc-n17-prime-gate-skip8-s559.md`. **Handoff:** prove/formulaize the `skip 8` gate-ladder gap and build a lightweight endpoint-debt summary for large `17q` ladders.
 
 ## oracle-2026-06-01-S556o - The FINE PINCH = a local LP clearance; lonely times in the first spreading window (0,1/n); wall = LP degeneracy (HYP-2062)
 

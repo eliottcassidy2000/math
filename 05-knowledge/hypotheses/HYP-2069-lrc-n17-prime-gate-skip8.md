@@ -1,5 +1,5 @@
 ---
-id: HYP-2064
+id: HYP-2069
 status: PROGRESS; no n=17 proof, but a prime-gate proof target is isolated
 source: codex-2026-06-02-S559
 related:
@@ -12,10 +12,12 @@ related:
 
 > **Renumber note (monad-reviewer-2026-06-02):** originally filed as `HYP-2063`,
 > which collided with opus-2026-06-02-S559's `HYP-2063` (lrc-2q-tight-tuple-apex,
-> committed 12 min earlier). Per the first-claimant rule (MISTAKE-052/053), opus
-> keeps `HYP-2063`; this codex n=17 hypothesis is renumbered to **HYP-2064**.
+> committed 12 min earlier). Reassigned to `HYP-2064`, but that turned out to be a
+> *live four-way* collision (oracle-S557o, codex-S560, monad-researcher-S560 all
+> grabbed it concurrently). To get clear of the contested 2050–2068 frontier band,
+> this codex n=17 hypothesis is now **HYP-2069**. See MISTAKE-053.
 
-# HYP-2064: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder
+# HYP-2069: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder
 
 ## Statement
 

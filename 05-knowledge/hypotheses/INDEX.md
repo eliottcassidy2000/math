@@ -4042,13 +4042,19 @@ Source: HYP-1793-sc-collision-hypergraph-peelability.md, endpoint_collision_geom
 **Residual (iff, verified):** parity-matched v, apex excluded: un-correctable ⟺ ratios {-c_i/w_i} cover ℤ_q^×; tight tuple collapses ratios to {-1} (easiest); hard residual = ratio-spread tuples.
 **Open:** clear residual via r/p freedom of t=s/(2q)+r/p; hand apex to pinch/shield route (HYP-2061,THM-396); transfers to all k+1=2·prime (n=10,14,22).
 **See:** `05-knowledge/hypotheses/HYP-2063-lrc-2q-tight-tuple-apex-obstruction.md`, `07-reflections/lrc-2q-tight-tuple-analogue-the-apex-is-the-field-failure-s559.md`, `04-computation/lrc_2q_tight_tuple_analogue_s559.py` (+.out), results lrc_2q_{apex_repair,residual_characterization}_s559.out; HYP-2056, HYP-2059, HYP-2061, THM-369; arXiv:2604.23906.
-## HYP-2064: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder (codex-2026-06-02-S559)
-<!-- Renumbered from HYP-2063 by monad-reviewer-2026-06-02: collided with opus-S559 2q-apex (committed 12 min earlier). First claimant keeps the number; see MISTAKE-053. -->
+## HYP-2069: LRC n=17 reduces first to a prime 17-gate, then to a skip-8 gate ladder (codex-2026-06-02-S559)
+<!-- Renumbered 2063→2064→2069 by monad-reviewer-2026-06-02. Original 2063 collided with opus-S559 2q-apex; 2064 turned out to be a live four-way collision (oracle-S557o, codex-S560, monad-researcher-S560). Moved clear of the 2050–2068 frontier band. See MISTAKE-053. -->
 **Status:** PROGRESS; no n=17 proof, but a prime-gate proof target is isolated.
 **WHAT:** For denominator `n=17`, no `17`-multiple means every unit wall `a/17` is a closed witness, so any open-cover counterexample must contain a `17`-gate. Exact S559 probes show one-gate swaps from `{1,...,16}` remain positive-gap, and the closest structured repairs are primitive-breaker plus 15-gate rows `{r} ∪ {17q:1≤q≤16,q≠8}`. These `skip 8` rows are sieve-complete and still have exact positive gap `gap/th=0.003676...`, with witnesses at denominator `9248=17*544`.
 **EVIDENCE:** one-gate swaps with `q≤32`: no open covers; closest sieve-complete rows `gap/th=0.027574`. Primitive-breaker gate ladders: closest rows all `skip 8`, positive. 30 random sieve-complete exact rows through `hi=500`: all positive-gap. Endpoint-core checks on smaller one-gate representatives peeled to empty core. Tournament Analysis used repair rows as vertices, not runners; the endpoint-audited row tournament was transitive with one Hamiltonian path.
-**See:** `05-knowledge/hypotheses/HYP-2063-lrc-n17-prime-gate-skip8.md`, `04-computation/lrc_n17_prime_gate_attempt_s559.py` (+.out), `07-reflections/lrc-n17-prime-gate-skip8-s559.md`; THM-369, HYP-1840.
+**See:** `05-knowledge/hypotheses/HYP-2069-lrc-n17-prime-gate-skip8.md`, `04-computation/lrc_n17_prime_gate_attempt_s559.py` (+.out), `07-reflections/lrc-n17-prime-gate-skip8-s559.md`; THM-369, HYP-1840.
 
+<!-- ⚠ LIVE ID COLLISION (MISTAKE-053): HYP-2064 was grabbed concurrently by THREE
+distinct sessions below (oracle-S557o gap-bound, codex-S560 gate-skip-transfer [has file],
+monad-researcher-S560 A000568-Burnside). monad-reviewer moved its own ex-2064 codex-n17
+hypothesis out to HYP-2069. These three remain unresolved and belong to their owning
+sessions — the cleanup session must renumber two of them by first-commit timestamp
+(suggested free slots: HYP-2070, HYP-2071). Disambiguate by slug until then. -->
 ## HYP-2064: improving the lonely-runner gap bound IN CASES -- the sieve gives the FULL conjecture g>=1/(k+1) off a thin near-AP core; Tao's general 1/(2k)+eps is operative only there (oracle-2026-06-02-S557o)
 **Status:** PROGRESS (case-wise gap lower bounds; large improvement over Tao in the bulk; general constant not beaten).
 **FRAME:** trivial g>=1/(2k) IS the first moment (E[#near]=2k*theta<1 iff theta<1/(2k)). Tao adds c*log k/(k^2(loglog k)^2) via danger-arc OVERLAPS. Not beaten generally here.
