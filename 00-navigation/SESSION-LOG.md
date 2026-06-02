@@ -1,5 +1,15 @@
 # Session Log
 
+## monad-researcher-2026-06-02-S562 - Closed form for the ODD-n bisection of SC(n) (self-converse tournaments = A002785); both bisections now matching base-4 Burnside sums; SC extended exact to n=120 (HYP-2074)
+
+**Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data, save outputs.
+**WHAT:** Closed my own S560 handoff (c) — the open target "SC at ODD n lacks a clean closed form." Built `04-computation/sc_odd_bisection_closed_form_s562.py` on the validated S560/S561 THM-283 Burnside engine. Derived, from the anti-automorphism cycle-type structure ({fixed point}∪{2λᵢ}), the **odd-n bisection closed form SC(2m+1)=Σ_{odd λ⊢m} 2^{ℓ(λ)}·4^{c2(λ)}/z(λ) = 2^m·Σ 4^{G(λ)}/z(λ)** — the SAME sum as the proven even-n identity SC(2m)=A(m,4) but with an extra factor 2^{(#parts)} (the single fixed vertex pairing gcd-1 with each of the ℓ cycles). The even-case re-derivation reproduces A(m,4) exactly, validating the method.
+**VERIFIED:** direct THM-283 SC reproduces OEIS A002785 to n=22; SC(2m)=A(m,4) m=1..40; SC(2m+1)=formA=formB m=0..40 (0 mismatches); exact extension to n=120 each re-checked against its bisection form.
+**OEIS:** confirmed (via curl to oeis.org) the repo's SC = **A002785** rigorously — offset 1, McKay comment "Also, self-converse tournaments," %S/%T/%U terms match to n=22, and SC(40)/SC(100) match the b-file term-for-term. The A002785 b-file stops at n=100, so **SC(101..120) are a genuine extension**. The two bisections individually return "No results" in OEIS (only the interleave is listed).
+**HONEST:** the closed form is new to the REPO (a documented open target) but NOT to the literature — Howroyd's existing A002785 formula already carries the `2^{#p}` factor = my 2^{ℓ(λ)} fixed-point factor. So this is an independent re-derivation that fills the repo gap AND cross-validates THM-283 against an external authority (the right counter to the MISTAKE-049 fabricated-SC-identity class).
+**ID HYGIENE (per MISTAKE-053):** picked HYP-2074, which was free (0 INDEX refs, 0 files) at claim time — clear of the contested 2050–2069 band and the 2070/2071 cleanup reservations and 2072/2073 (opus-S561, codex-S562). Single file, single INDEX entry, verified unique.
+**Artifacts:** HYP-2074; `04-computation/sc_odd_bisection_closed_form_s562.py` (+ `.out`). **Handoff:** (a) SC(101..120) could be appended to the OEIS A002785 b-file if desired; (b) the bisections (even=A(m,4)=A002785 even-indexed; odd=1,2,8,88,2752,279968,... not separately in OEIS) could be submitted as standalone sequences with these closed forms; (c) same fixed-point-factor technique applies to any self-converse family with an odd-order anti-automorphism (one fixed point).
+
 ## codex-2026-06-02-S562 - Recursive multi-tier CRT sieves as residual-packet frontier conservation (HYP-2073)
 
 **Account:** Codex. **User prompt:** consider the possibility of multi-tier CRT sieves; think recursively and abstractly.
