@@ -1,0 +1,37 @@
+==========================================================================
+(1) PINCH CLEARS THE PAIR: pairs summing to 14, t=1/14, distance min(a,b)/14
+==========================================================================
+  pair (1,13) sum 14, pinch t=1/14: dist 1=1/14, dist 13=1/14  cleared=True
+  pair (2,12) sum 14, pinch t=1/14: dist 2=1/7, dist 12=1/7  cleared=True
+  pair (3,11) sum 14, pinch t=1/14: dist 3=3/14, dist 11=3/14  cleared=True
+  pair (4,10) sum 14, pinch t=1/14: dist 4=2/7, dist 10=2/7  cleared=True
+  pair (5,9) sum 14, pinch t=1/14: dist 5=5/14, dist 9=5/14  cleared=True
+  pair (6,8) sum 14, pinch t=1/14: dist 6=3/7, dist 8=3/7  cleared=True
+  small-sum pairs (a+b<=14) cleared with margin; (1,13) is borderline (=1/14).
+
+==========================================================================
+(2) THE PINCH t=1/(a+b) IS THE SIEVE: lonely iff no runner divisible by (a+b)
+==========================================================================
+  so the pinch-pigeonhole 'some pinch clears all' = 'some s<=14 has no multiple'
+  = NOT sieve-covered. A counterexample is SIEVE-COVERED (A1) -> defeats it.
+
+==========================================================================
+(3) VERIFY: sieve-covered sets have NO lonely rational t=p/q (q<=14), yet ARE
+    lonely at a FINE (denominator > 14) time -- out of reach of the pinch.
+==========================================================================
+  of 40 sieve-covered primitive 13-sets: NO rational pinch lonely AND lonely-fine for 40/40.
+  examples (rational-pinch-lonely?, fine-lonely?, fine t): [(False, True, 0.00893), (False, True, 0.02232), (False, True, 0.07271), (False, True, 0.01021), (False, True, 0.00376)]
+
+==========================================================================
+VERDICT
+==========================================================================
+  The pinch-time pigeonhole is the RIGHT SHAPE, but every rational pinch t=p/q
+  (q<=n) is a denominator-sieve witness (THM-369), lonely iff no runner divisible
+  by q. A counterexample is SIEVE-COVERED (A1) -- it has a multiple of every q<=n
+  -- so it defeats EVERY rational pinch BY CONSTRUCTION; a single multiple of n
+  spoils every n-gon vertex t=j/n (that runner sits at 0). The pinch pigeonhole
+  thus = the sieve; it settles the decorrelated majority but NOT the sieve-covered
+  core. The genuine lonely time of a counterexample-candidate lives at a FINE
+  denominator > n (S18 fine regime) -- where the pinch/sieve cannot reach. To
+  beat the core one needs irrational/fine pinches (the measure core S550, or the
+  windows S552), which carry the unresolved multiples-of-n* coupling.

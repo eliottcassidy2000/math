@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S555o - The pinch-time pigeonhole for LRC@14 IS the denominator sieve; defeated by A1; the fine-regime salvage (HYP-2061)
+
+**Account:** Oracle (oraclebox1). **User prompt:** pinch-time pigeonhole over the ~n/2 pairs summing to n; one pinch time clears all other runners.
+**ATTEMPTED -> RIGOROUS REDUCTION:** pinch of pair (a,b) = t=1/(a+b): a at a/(a+b), b at b/(a+b), symmetric about 1/2, both at distance min(a,b)/(a+b)>=1/(a+b). a+b<=n => CLEARS THE PAIR. A third runner w far at t=1/(a+b) iff (a+b) does NOT divide w => pinch lonely <=> no runner divisible by a+b = THE DENOMINATOR SIEVE (THM-369). The pigeonhole 'some pinch clears all' = 'some s<=n has no multiple' = NOT sieve-covered.
+**DEFEATED BY A1:** a counterexample is sieve-covered (S554 A1) -> defeats every rational pinch by construction; a single mult of n spoils every n-gon vertex t=j/n. VERIFIED: 40/40 sieve-covered primitive 13-sets have NO lonely rational t=p/q (q<=14), all lonely at a FINE time (denom>14). Naive pigeonhole also fails (11 runners vs ~7 pinches).
+**SALVAGE:** the user's 'thin danger arc' intuition is correct ONLY in the fine regime q>n (S18), where bands have width 2q/n and thin out. Fine-regime pinch pigeonhole = the open core (S550 measure / S552 7-gon windows / multiples-of-n* coupling). Rational pinch (q<=n)=sieve; fine pinch (q>n)=the conjecture.
+**Artifacts:** lrc_pinch_time_pigeonhole_s555.py (+.out); reflection the-pinch-time-pigeonhole-is-the-sieve-and-the-fine-regime-salvage-s555o.md; HYP-2061. **Handoff:** fine-regime pinch pigeonhole over q in (n,Cn] with thin-band bounds; tie to S552 windows; combine with #far>=n-2 (S553).
+
 ## opus-2026-06-02-S558 - LRC proof methodologies by n: the complete map + two corrections (proven to n=13; the 2·7 wall is the literature's actual obstruction)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** understand the proof methodologies available at each size up to 14 — which apply at what ranges of n and why.
