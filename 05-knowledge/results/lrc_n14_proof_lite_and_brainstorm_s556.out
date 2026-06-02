@@ -1,0 +1,8 @@
+===== PROOF-LITE (rigorous impossibility of structured counterexamples) =====
+P1 (no mult of 14 => t=1/14 witness): 1150 configs, failures=0  [PROVED: sieve THM-369, q=14]
+P2 (AP-with-evens-doubled lonely at 1/14): 23 configs, t=1/14 fails on 0  [PROVED self-contained]
+   of these, exactly tight (M=1/14): [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)]
+P4 (bridge): a counterexample needs 14|v (else t=1/14 wins). 14|v ⇒ 7|v ⇒ v is in oracle-S552o's mod-7 SINGLETON class AND even.
+   So the mod-2 fold's obstruction (multiple of 14) is exactly the even half of the mod-7 singleton — the two factorisations meet here.
+
+===== ADJACENT STATEMENTS (evidence) =====

@@ -1,0 +1,4 @@
+B3: tight configs within distance<=2 of AP (adds<=46): 2
+   AP: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  wits=['13/14', '5/14', '11/14', '3/14', '9/14', '1/14'] onlattice=True
+   tight: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)  wits=['3/14', '13/14', '9/14', '5/14', '1/14', '11/14'] onlattice=True
+   EVERY tight config witnessed only on (1/14)Z? True
