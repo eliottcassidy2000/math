@@ -1,0 +1,55 @@
+==============================================================================
+SELF-CONVERSE FAMILIES VIA ANTI-AUTOMORPHISM BURNSIDE  —  monad-S565
+==============================================================================
+
+[1] INDEPENDENT brute-force (ENGINE B) vs ENGINE A — direct orbit enumeration
+    --- tournament (brute n<= 5) ---
+      n=2: brute(iso=1, sc=1)  formula(iso=1, sc=1)  [MATCH]  (0.0s)
+      n=3: brute(iso=2, sc=2)  formula(iso=2, sc=2)  [MATCH]  (0.0s)
+      n=4: brute(iso=4, sc=2)  formula(iso=4, sc=2)  [MATCH]  (0.0s)
+      n=5: brute(iso=12, sc=8)  formula(iso=12, sc=8)  [MATCH]  (0.0s)
+    --- oriented (brute n<= 5) ---
+      n=2: brute(iso=2, sc=2)  formula(iso=2, sc=2)  [MATCH]  (0.0s)
+      n=3: brute(iso=7, sc=5)  formula(iso=7, sc=5)  [MATCH]  (0.0s)
+      n=4: brute(iso=42, sc=18)  formula(iso=42, sc=18)  [MATCH]  (0.0s)
+      n=5: brute(iso=582, sc=102)  formula(iso=582, sc=102)  [MATCH]  (0.3s)
+    --- digraph (brute n<= 4) ---
+      n=2: brute(iso=3, sc=3)  formula(iso=3, sc=3)  [MATCH]  (0.0s)
+      n=3: brute(iso=16, sc=10)  formula(iso=16, sc=10)  [MATCH]  (0.0s)
+      n=4: brute(iso=218, sc=70)  formula(iso=218, sc=70)  [MATCH]  (0.0s)
+    => brute-force verification: PASSED
+
+[2] ENGINE A vs OEIS  (b-files A001174/A005639/A002499 to n=40)
+      tournament total  A000568: MATCH for all n<= 14
+      tournament SC     A002785: MATCH for all n<= 14
+      oriented total    A001174: MATCH for all n<= 40
+      oriented SC       A005639: MATCH for all n<= 40
+      digraph  total    A000273: MATCH for all n<= 9
+      digraph  SC       A002499: MATCH for all n<= 40
+    => OEIS cross-check: PASSED
+
+[3] Self-converse family sequences (new to the repo; OEIS-confirmed)
+
+  self-converse ORIENTED graphs = OEIS A005639, n=1..18:
+    1, 2, 5, 18, 102, 848, 12452, 265759, 10454008, 598047612, 63620448978, 9974635937844, 2905660724913768, 1268590412128132389, 1023130650177394611897, 1258149993547327488275562, 2834863110716120144290954314, 9900859865505110360978721901778
+
+  self-converse DIGRAPHS = OEIS A002499, n=1..16:
+    1, 3, 10, 70, 708, 15224, 544152, 39576432, 5074417616, 1296033011648, 604178966756320, 556052774253161600, 954895322019762585664, 3224152068625567826724224, 20610090531322819956330186112, 258578420736523640744475870309376
+
+[4] structural sanity checks
+    self-converse <= total and (iso-sc) even for all n<= 40: OK
+
+[5] wrote b-files:
+    /tmp/math-researcher-43890/math/04-computation/b_sc_oriented_s565.txt
+    /tmp/math-researcher-43890/math/04-computation/b_sc_digraph_s565.txt
+
+==============================================================================
+SUMMARY
+  OEIS cross-check (A000568,A002785,A001174,A005639,A000273,A002499): PASS
+  independent brute force:                        PASS
+  structural sanity:                              PASS
+  SC-oriented(1..10) = 1, 2, 5, 18, 102, 848, 12452, 265759, 10454008, 598047612
+  SC-digraph (1..10) = 1, 3, 10, 70, 708, 15224, 544152, 39576432, 5074417616, 1296033011648
+==============================================================================
+
+Saved transcript to /tmp/math-researcher-43890/math/04-computation/../05-knowledge/results/self_converse_families_burnside_s565.out

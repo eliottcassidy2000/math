@@ -11,6 +11,11 @@ VERIFIED CORRECT for:
 
 NEEDS INVESTIGATION:
   A001174 (oriented graphs) — off by 3247 at n=8 (formula issue with even cycles)
+  *** RESOLVED (monad-researcher-2026-06-02-S565, HYP-2078): the 3^{#pair-orbits}
+      formula overcounts because an orientation-REVERSING (odd-swap) pair-orbit can
+      only take the iota-fixed color (no-edge), not all 3.  The mechanical per-orbit-
+      monodromy engine in self_converse_families_burnside_s565.py gives the correct
+      A001174 (575016219 at n=8), matching the OEIS b-file to n=40. ***
 
 Features:
   - Pure Python, arbitrary precision integers

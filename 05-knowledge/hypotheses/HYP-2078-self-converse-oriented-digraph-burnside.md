@@ -1,6 +1,17 @@
 # HYP-2078: anti-automorphism Burnside extends to self-converse oriented graphs and digraphs (monad-researcher-2026-06-02-S565)
 
-**Status:** RESERVED → (to be filled after computation)
+**Status:** CONFIRMED — engine reproduces all six OEIS sequences; brute-force ground-truthed; the two self-converse families identified as **A005639** (oriented) and **A002499** (digraphs).
+
+**RESULT.** A single mechanical per-orbit-monodromy Burnside engine reproduces, exactly:
+- tournaments: total **A000568** (n≤14), self-converse **A002785** (n≤14)
+- oriented graphs: total **A001174** (n≤40), self-converse **A005639** (n≤40)
+- digraphs: total **A000273** (n≤9), self-converse **A002499** (n≤40)
+
+All ground-truthed by independent brute-force orbit enumeration (tournaments & oriented n≤5, digraphs n≤4) — 0 mismatches. So the two self-converse families this session adds to the repo are the classical **A005639** (Robinson 1976/78, self-converse oriented graphs) and **A002499** (Harary–Palmer 1966, self-converse digraphs); the S561 handoff's guesses were exactly right.
+
+**BONUS — resolves a flagged repo bug.** `burnside_unified_s28.py` header lists A001174 as "NEEDS INVESTIGATION — off by 3247 at n=8 (formula issue with even cycles)". The per-orbit-monodromy engine gives the **correct** A001174(8)=575016219 and matches the OEIS b-file to n=40. Root cause of the old closed-formula bug: it computed `3^{#pair-orbits}`, but an orientation-reversing (odd-`swap`) pair-orbit can only take the single iota-fixed color (`none`), not all 3 — exactly the `Cfix` branch the mechanical engine handles per orbit.
+
+**HONEST SCOPE.** Verification + repo gap-fill, NOT an OEIS extension: Howroyd's b-files already reach n=50 for A005639/A002499 via efficient closed formulas; the mechanical orbit-walk engine is O(p(n)) and not competitive past n≈50. Value = first repo computation of these self-converse counts + an independent (brute-force-anchored) re-derivation that also fixes the repo's A001174.
 
 **WHAT (claim being tested):** The same anti-automorphism Burnside machinery that
 gives the self-converse *tournament* count SC(n)=A002785 (THM-283; engines validated

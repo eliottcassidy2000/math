@@ -229,17 +229,39 @@ def brute_force(n, C, Cfix):
 
 # ===========================================================================
 # OEIS anchors
+#   small hard-coded anchors (totals A000568, A000273; self-conv tournaments
+#   A002785) + the official Robinson/Howroyd b-files for the three families this
+#   engine reproduces:  A001174 (oriented totals), A005639 (self-conv oriented),
+#   A002499 (self-conv digraphs).  b-files were downloaded to 05-knowledge/results/.
 # ===========================================================================
 A000568 = {1:1,2:1,3:2,4:4,5:12,6:56,7:456,8:6880,9:191536,10:9733056,
            11:903753248,12:154108311168,13:48542114686912,14:28401423719122304}
 A002785 = {2:1,3:2,4:2,5:8,6:12,7:88,8:176,9:2752,10:8784,11:279968,12:1492288,
            13:95458560,14:872687552}
-A001174 = {1:1,2:2,3:7,4:42,5:582,6:21480,7:2142288,8:575016219,
-           9:388311934228,10:617839462647568}      # oriented graphs (unlabeled)
 A000273 = {1:1,2:3,3:16,4:218,5:9608,6:1540944,7:882033440,
            8:1793359192848,9:13027956824399552}     # digraphs (unlabeled)
 
+def read_bfile(name):
+    """Read an OEIS b-file (n value per line) from 05-knowledge/results/."""
+    base = os.path.dirname(os.path.abspath(__file__))
+    path = os.path.join(base, '..', '05-knowledge', 'results', name)
+    d = {}
+    try:
+        with open(path) as f:
+            for line in f:
+                line = line.strip()
+                if not line or line.startswith('#'):
+                    continue
+                k, v = line.split()
+                d[int(k)] = int(v)
+    except FileNotFoundError:
+        pass
+    return d
+
 def main():
+    A001174 = read_bfile('b001174_oeis.txt')   # oriented graph totals (Robinson/Howroyd)
+    A005639 = read_bfile('b005639_oeis.txt')   # self-converse oriented graphs (Robinson)
+    A002499 = read_bfile('b002499_oeis.txt')   # self-converse digraphs (Harary-Palmer 1966)
     out = []
     def pr(s=""):
         print(s); out.append(s)
@@ -248,29 +270,19 @@ def main():
     pr("SELF-CONVERSE FAMILIES VIA ANTI-AUTOMORPHISM BURNSIDE  —  monad-S565")
     pr("=" * 78)
 
-    # ---- [1] ENGINE A reproduces OEIS total + self-converse anchors ----
-    pr("\n[1] ENGINE A vs OEIS anchors (totals A000568/A001174/A000273; SC tournaments A002785)")
-    anchors_ok = True
-    def check(name, C, Cfix, tot_ref, sc_ref, nmax):
-        nonlocal anchors_ok
-        pr(f"    --- {name} (C={C}, Cfix={Cfix}) ---")
-        for n in range(1, nmax + 1):
-            iso, sc = burnside_counts(n, C, Cfix)
-            tref = tot_ref.get(n)
-            sref = sc_ref.get(n) if sc_ref else None
-            tmark = "" if (tref is None or iso == tref) else f"  <-- TOTAL MISMATCH ({tref})"
-            smark = "" if (sref is None or sc == sref) else f"  <-- SC MISMATCH ({sref})"
-            if tmark or smark:
-                anchors_ok = False
-            if n <= 10:
-                pr(f"      n={n:2d}: iso={iso}{tmark}   self-conv={sc}{smark}")
-    check("tournaments", 2, 0, A000568, A002785, 12)
-    check("oriented graphs", 3, 1, A001174, None, 10)
-    check("digraphs", 4, 2, A000273, None, 9)
-    pr(f"    => OEIS anchor cross-check: {'PASSED' if anchors_ok else 'FAILED'}")
+    NMAX = 40
 
-    # ---- [2] independent brute-force ground truth ----
-    pr("\n[2] INDEPENDENT brute-force (ENGINE B) vs ENGINE A")
+    # ---- [0] compute everything once (engine A) ----
+    iso_oriented, sc_oriented = {}, {}
+    iso_digraph, sc_digraph = {}, {}
+    iso_tourn, sc_tourn = {}, {}
+    for n in range(1, NMAX + 1):
+        iso_tourn[n], sc_tourn[n]       = burnside_counts(n, 2, 0)
+        iso_oriented[n], sc_oriented[n] = burnside_counts(n, 3, 1)
+        iso_digraph[n], sc_digraph[n]   = burnside_counts(n, 4, 2)
+
+    # ---- [1] independent brute-force ground truth (the MISTAKE-049 counter) ----
+    pr("\n[1] INDEPENDENT brute-force (ENGINE B) vs ENGINE A — direct orbit enumeration")
     brute_ok = True
     brute_plan = [("tournament", 2, 0, 5),
                   ("oriented",   3, 1, 5),
@@ -287,31 +299,42 @@ def main():
                f"[{'MATCH' if ok else '*** MISMATCH ***'}]  ({time.time()-t0:.1f}s)")
     pr(f"    => brute-force verification: {'PASSED' if brute_ok else 'FAILED'}")
 
-    # ---- [3] the two NEW self-converse sequences ----
-    pr("\n[3] NEW self-converse sequences (ENGINE A)")
-    NMAX = 30
-    sc_oriented = {}
-    sc_digraph = {}
-    iso_oriented = {}
-    iso_digraph = {}
-    for n in range(1, NMAX + 1):
-        io, so = burnside_counts(n, 3, 1)
-        idg, sdg = burnside_counts(n, 4, 2)
-        iso_oriented[n], sc_oriented[n] = io, so
-        iso_digraph[n], sc_digraph[n] = idg, sdg
-    pr("\n  self-converse ORIENTED graphs, n=1..18:")
+    # ---- [2] ENGINE A vs OEIS (b-files to n=NMAX, + small hardcoded anchors) ----
+    pr("\n[2] ENGINE A vs OEIS  (b-files A001174/A005639/A002499 to n=%d)" % NMAX)
+    anchors_ok = True
+    def xcheck(label, vals, ref):
+        nonlocal anchors_ok
+        last = 0; bad = 0
+        for n in range(1, NMAX + 1):
+            if n in ref:
+                last = n
+                if vals[n] != ref[n]:
+                    bad += 1
+                    if bad <= 3:
+                        pr(f"      {label} MISMATCH n={n}: {vals[n]} != {ref[n]}")
+        if bad: anchors_ok = False
+        pr(f"      {label}: {'MATCH' if bad == 0 else f'{bad} MISMATCH'} for all n<= {last}")
+    xcheck("tournament total  A000568", iso_tourn,    A000568)
+    xcheck("tournament SC     A002785", sc_tourn,     A002785)
+    xcheck("oriented total    A001174", iso_oriented, A001174)
+    xcheck("oriented SC       A005639", sc_oriented,  A005639)
+    xcheck("digraph  total    A000273", iso_digraph,  A000273)
+    xcheck("digraph  SC       A002499", sc_digraph,   A002499)
+    pr(f"    => OEIS cross-check: {'PASSED' if anchors_ok else 'FAILED'}")
+
+    # ---- [3] the self-converse sequences (repo gap-fill) ----
+    pr("\n[3] Self-converse family sequences (new to the repo; OEIS-confirmed)")
+    pr("\n  self-converse ORIENTED graphs = OEIS A005639, n=1..18:")
     pr("    " + ", ".join(str(sc_oriented[n]) for n in range(1, 19)))
-    pr("\n  self-converse DIGRAPHS, n=1..16:")
+    pr("\n  self-converse DIGRAPHS = OEIS A002499, n=1..16:")
     pr("    " + ", ".join(str(sc_digraph[n]) for n in range(1, 17)))
 
-    # ---- [4] sanity: self-converse <= total, parity, complement-pair integrality ----
+    # ---- [4] structural sanity ----
     pr("\n[4] structural sanity checks")
     sanity_ok = True
     for n in range(1, NMAX + 1):
-        # self-converse count must be <= total iso count
         if sc_oriented[n] > iso_oriented[n] or sc_digraph[n] > iso_digraph[n]:
             pr(f"    n={n}: SC exceeds total!"); sanity_ok = False
-        # (iso + sc) even  ->  #converse-pairs = (iso - sc)/2 integral
         if (iso_oriented[n] - sc_oriented[n]) % 2 or (iso_digraph[n] - sc_digraph[n]) % 2:
             pr(f"    n={n}: (iso-sc) odd -> converse pairing not integral!"); sanity_ok = False
     pr(f"    self-converse <= total and (iso-sc) even for all n<= {NMAX}: "
@@ -331,7 +354,7 @@ def main():
 
     pr("\n" + "=" * 78)
     pr("SUMMARY")
-    pr(f"  OEIS anchors (A000568,A001174,A000273,A002785): "
+    pr(f"  OEIS cross-check (A000568,A002785,A001174,A005639,A000273,A002499): "
        f"{'PASS' if anchors_ok else 'FAIL'}")
     pr(f"  independent brute force:                        "
        f"{'PASS' if brute_ok else 'FAIL'}")
