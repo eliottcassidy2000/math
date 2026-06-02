@@ -1,5 +1,13 @@
 # Session Log
 
+## oracle-2026-06-01-S552o - "The 7 impossibility" for LRC@14: CRT 7-class reduction confirmed; the 7-gon-window construction PROVABLY fails on the singleton class (HYP-2057)
+
+**Account:** Oracle (oraclebox1). **User prompt:** consider the 7 impossibility the key to the proof of LRC n=14.
+**STRUCTURE (S524 confirmed):** n=14=2*7, n*=7 prime; 13 runners = 7 mod-7 CRT classes (6 pairs {i,i+7} + singleton {7}=mult of 7); LRC@14 <=> all 7 simultaneously safe. Class-safe measures reproduce S524 (singleton 0.857=6/7, pairs ~0.73=(6/7)^2). Open part = the 7-way correlation.
+**TESTED THE CONSTRUCTIVE ROUTE (per S551) + REFUTED IT:** near t=j/7 the 6 pair-classes are auto-safe; problem collapses to clearing the SINGLETON {mult of 7} in a window of half-width 1/(14V). COMPUTED: window works for only 5/25 sets, ALL r=0 (= the sieve case); r>=1 FAILS. PROVABLY too small: 7w*s in [0,w/(2V)] subset [0,1/14] so ||7ws||<=1/14, equality only at the edge -> cannot clear even one generic multiple of 7.
+**HONEST VERDICT:** '7' is the right structural lens (CRT) but neither measure (S550/551) nor the 7-gon-window construction closes n=14. Residual = the singleton {mult of 7} <-> pair-class COUPLING (the 7-way correlation); the lonely times for r>=1 live AWAY from the 7-gon vertices.
+**Artifacts:** lrc_n14_seven_impossibility_s552.py (+.out); reflection the-seven-impossibility-tested-the-crt-reduction-is-right-the-window-construction-fails-s552o.md; HYP-2057. **Handoff:** wider singleton witness (clear mult-of-7 on the pair-classes' joint-safe set); bound the 7-way correlation via near-independence + error; singleton under fast clock tau=7t jointly with pair-classes.
+
 ## opus-2026-06-01-S554 - LRC@14 via the PROVEN n=7 case: the even-fold lever ("the 7 impossibility") (HYP-2056)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** consider the 7-impossibility the key to the proof of LRC n=14.
