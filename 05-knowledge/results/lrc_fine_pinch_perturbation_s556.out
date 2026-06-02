@@ -1,0 +1,30 @@
+==========================================================================
+FINE PINCH = perturb the 'one-near' time. Clearing condition (*): d/w* <= min m_i/v_i
+==========================================================================
+  AP 1..13 (wall): min near=1 at t0=0.03572; (*) d/w*=0.03571 vs min m_i/v_i=0.00000  cond=False; fine-perturb lonely=False
+  rand1: min near = 0 at t0=0.01191 -> ALREADY LONELY (open)
+  rand2: min near = 0 at t0=0.00794 -> ALREADY LONELY (open)
+  rand3: min near = 0 at t0=0.03572 -> ALREADY LONELY (open)
+  rand4: min near = 0 at t0=0.02748 -> ALREADY LONELY (open)
+  rand5: min near = 0 at t0=0.00893 -> ALREADY LONELY (open)
+  rand6: min near = 0 at t0=0.02613 -> ALREADY LONELY (open)
+  rand7: min near = 0 at t0=0.01021 -> ALREADY LONELY (open)
+  rand8: min near = 0 at t0=0.00893 -> ALREADY LONELY (open)
+
+  => for non-tight sets the margins are positive and (*) holds with room: a fine
+     perturbation off the one-near time CONSTRUCTS a lonely time. The AP/regular
+     polygon is the wall: at the one-near time the far runners sit AT 1/n (margins 0),
+     so RHS=0 < d/w* -- (*) fails, no perturbation clears -- exactly the measure-zero
+     wall (S551). LRC@core = (*) (or its multi-near generalization) holds off the wall.
+
+==========================================================================
+THE FINE-PINCH SUFFICIENT CONDITION (clean)
+==========================================================================
+  If at SOME time t0 the near set is a single runner w* with deficit d and the far
+  margins satisfy d/w* <= min_i m_i/v_i, then t0 + eps (eps ~ d/w*, FINE) is lonely.
+  More generally with a k-near set, a fine perturbation clears iff the k near-deficits
+  can be simultaneously pushed out within the far margins -- a small LINEAR feasibility
+  (a system |v_i eps|<=m_i, sign(w_j eps)=outward, |w_j eps|>=d_j). The wall = the
+  feasibility region collapses to a point (AP, margins 0).
+  This is the fine pinch: a LOCAL linear-programming clearance, NOT a global count
+  (which fails, 2-2/n>1). Correlation (S553 'at most one near') makes the LP small.

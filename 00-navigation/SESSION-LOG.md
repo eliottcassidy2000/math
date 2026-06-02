@@ -1,5 +1,14 @@
 # Session Log
 
+## oracle-2026-06-01-S556o - The FINE PINCH = a local LP clearance; lonely times in the first spreading window (0,1/n); wall = LP degeneracy (HYP-2062)
+
+**Account:** Oracle (oraclebox1). **User prompt:** work more on the fine pinch.
+**THE LOCAL LP:** naive count fails (danger 2-2/n>1), so the fine pinch uses correlation (S553: at most one near). At time t0 with near={w*}: deficit d=1/n-||w*t0||, far margins m_i. Perturb t0+eps: far stays iff |eps|<=m_i/v_i; w* clears iff |eps|>=d/w*. CLEARING CONDITION (*): d/w* <= min_i m_i/v_i (generalizes to a k-near linear feasibility). The fine pinch is a LOCAL LP, not a global count.
+**COMPUTED (lrc_fine_pinch_perturbation_s556.py, n=14):** generic sets lonely DIRECTLY (min-near=0) at fine t0~0.008-0.036, all BELOW 1/14 (the FIRST SPREADING WINDOW). AP/regular = the WALL: min-near=1, d/w*=0.0357 but min m_i/v_i=0 (margins vanish) -> (*) fails = the measure-zero wall (S551).
+**FIRST-WINDOW LEAD:** as t grows from 0 runners spread from the observer; first lonely window in (0,1/n). CONJECTURE: every off-wall set is lonely in (0,c/n) -> localizes the fine pinch to a bounded LP feasibility.
+**VERDICT:** LRC@core = local LP feasible off the wall; wall = unique degeneracy (margins->0). Honest limit: proving LP-feasibility for every wall-adjacent set is still the conjecture; open part = lower-bounding far margins away from AP.
+**Artifacts:** lrc_fine_pinch_perturbation_s556.py (+.out); reflection the-fine-pinch-is-a-local-LP-clearance-and-the-first-spreading-window-s556o.md; HYP-2062. **Handoff:** prove the first-window conjecture (bounded LP); lower-bound far margins for non-AP; multi-near LP region vs resonances.
+
 ## oracle-2026-06-01-S555o - The pinch-time pigeonhole for LRC@14 IS the denominator sieve; defeated by A1; the fine-regime salvage (HYP-2061)
 
 **Account:** Oracle (oraclebox1). **User prompt:** pinch-time pigeonhole over the ~n/2 pairs summing to n; one pinch time clears all other runners.
