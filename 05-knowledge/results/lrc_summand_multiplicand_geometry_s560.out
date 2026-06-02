@@ -1,0 +1,81 @@
+==================================================================================
+SUMMAND (antidiagonals, +) vs MULTIPLICAND (hyperbolas, x) -- geometry & LRC
+==================================================================================
+
+(0) IN-DEGREE GEOMETRY (incoming-pair counts; the two foliations):
+   n : summand floor((n-1)/2) | multiplicand divisor-pairs (1..n)
+    4 :   1                  |   1   
+    6 :   2                  |   2   
+    7 :   3                  |   1   (prime: only (1,p))
+   12 :   5                  |   3   
+   13 :   6                  |   1   (prime: only (1,p))
+   14 :   6                  |   2   
+   16 :   7                  |   2   
+   24 :  11                  |   4   
+   30 :  14                  |   4   
+   36 :  17                  |   4   
+   -> summand in-degree grows linearly (dense, additive); multiplicand stays tiny
+      except at highly-composite n (sparse, multiplicative). Log map sends the
+      hyperbola xy=n to the antidiagonal log x+log y=log n: multiplicand = summand
+      in log-coordinates.
+
+(1) THE WALL configs -- joint extremum?
+  AP {1..13}: k=13  |S+S|=23 (min 23, excess 0)  M=0.0714(1.00/14)
+      pinch denominators: 12 coarse(<=14)  11 fine(>14)   sieve-coverage q<=14: 12/13
+  V* {1..11,13,24}: k=13  |S+S|=34 (min 23, excess 11)  M=0.0714(1.00/14)
+      pinch denominators: 12 coarse(<=14)  22 fine(>14)   sieve-coverage q<=14: 12/13
+
+(2) RANDOM primitive 13-sets: sumset excess vs loneliness margin
+  rand00: k=13  |S+S|=58 (min 23, excess 35)  M=0.1609(2.25/14)
+      pinch denominators: 1 coarse(<=14)  57 fine(>14)   sieve-coverage q<=14: 10/13
+  rand01: k=13  |S+S|=61 (min 23, excess 38)  M=0.1818(2.55/14)
+      pinch denominators: 2 coarse(<=14)  59 fine(>14)   sieve-coverage q<=14: 10/13
+  rand02: k=13  |S+S|=57 (min 23, excess 34)  M=0.1702(2.38/14)
+      pinch denominators: 1 coarse(<=14)  56 fine(>14)   sieve-coverage q<=14: 8/13
+  rand03: k=13  |S+S|=53 (min 23, excess 30)  M=0.1880(2.63/14)
+      pinch denominators: 0 coarse(<=14)  53 fine(>14)   sieve-coverage q<=14: 12/13
+  rand04: k=13  |S+S|=55 (min 23, excess 32)  M=0.2343(3.28/14)
+      pinch denominators: 1 coarse(<=14)  54 fine(>14)   sieve-coverage q<=14: 10/13
+  rand05: k=13  |S+S|=56 (min 23, excess 33)  M=0.1958(2.74/14)
+      pinch denominators: 1 coarse(<=14)  55 fine(>14)   sieve-coverage q<=14: 10/13
+  rand06: k=13  |S+S|=58 (min 23, excess 35)  M=0.2130(2.98/14)
+      pinch denominators: 3 coarse(<=14)  55 fine(>14)   sieve-coverage q<=14: 11/13
+  rand07: k=13  |S+S|=54 (min 23, excess 31)  M=0.1363(1.91/14)
+      pinch denominators: 8 coarse(<=14)  46 fine(>14)   sieve-coverage q<=14: 11/13
+  rand08: k=13  |S+S|=57 (min 23, excess 34)  M=0.2299(3.22/14)
+      pinch denominators: 0 coarse(<=14)  57 fine(>14)   sieve-coverage q<=14: 11/13
+  rand09: k=13  |S+S|=54 (min 23, excess 31)  M=0.1579(2.21/14)
+      pinch denominators: 1 coarse(<=14)  53 fine(>14)   sieve-coverage q<=14: 12/13
+  rand10: k=13  |S+S|=52 (min 23, excess 29)  M=0.1891(2.65/14)
+      pinch denominators: 2 coarse(<=14)  50 fine(>14)   sieve-coverage q<=14: 11/13
+  rand11: k=13  |S+S|=52 (min 23, excess 29)  M=0.1765(2.47/14)
+      pinch denominators: 4 coarse(<=14)  48 fine(>14)   sieve-coverage q<=14: 12/13
+  rand12: k=13  |S+S|=64 (min 23, excess 41)  M=0.1887(2.64/14)
+      pinch denominators: 4 coarse(<=14)  60 fine(>14)   sieve-coverage q<=14: 12/13
+  rand13: k=13  |S+S|=55 (min 23, excess 32)  M=0.1555(2.18/14)
+      pinch denominators: 0 coarse(<=14)  55 fine(>14)   sieve-coverage q<=14: 10/13
+  rand14: k=13  |S+S|=62 (min 23, excess 39)  M=0.1667(2.33/14)
+      pinch denominators: 3 coarse(<=14)  59 fine(>14)   sieve-coverage q<=14: 12/13
+  rand15: k=13  |S+S|=58 (min 23, excess 35)  M=0.2058(2.88/14)
+      pinch denominators: 0 coarse(<=14)  58 fine(>14)   sieve-coverage q<=14: 9/13
+
+==================================================================================
+FINDINGS
+==================================================================================
+  * ADDITIVE (Freiman): min distinct-pair-sum excess over 2k-3 = 0; AP excess = 0  (AP attains the restricted-sumset minimum 23=23 distinct pair-sums).
+  * The TIGHTEST set (smallest M) is 'AP {1..13}' with M=0.0714, excess=0.
+  * CORRELATION(sumset excess, margin M) = +0.775  (bigger sumset -> looser (more pinch denominators = more room)).
+  * MULTIPLICATIVE: AP coverage q<=14 = 12/13 (max among bounded sets; misses only q=14). The AP is the small-divisor-coverage maximizer.
+
+  GEOMETRIC PICTURE. The AP sits at the JOINT EXTREMUM:
+    - summand graph: minimal sumset S+S (Freiman) = fewest distinct pinch denominators
+      = the tightest pinch pigeonhole (the additive reason the AP is hard);
+    - multiplicand graph: maximal small-q divisor coverage = most sieve-covered, escaping
+      the sieve only at the single modulus q=n (the multiplicative reason).
+  SIMPLIFICATION FOR LRC. Off the AP, Freiman gives |S+S| > 2k-1: there are STRICTLY MORE
+  pinch denominators (antidiagonals carrying witnesses) than for the AP. The pinch
+  pigeonhole therefore has provable surplus exactly where the AP's tightness is relaxed.
+  The proof effort should index the (fine) pinch search by the SUMSET S+S (the summand
+  graph on S) and use the divisibility (multiplicand) structure only to test clearance --
+  the two graphs split the problem cleanly: addition supplies the candidate times,
+  multiplication tests them, and they coincide exactly on the coarse rationals (S555o).

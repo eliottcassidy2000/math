@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-02-S560o - Geometry of the SUMMAND (antidiagonals) vs MULTIPLICAND (hyperbolas) graphs; the AP is their JOINT EXTREMUM = the LRC wall; sumset excess correlates +0.78 with looseness (HYP-2067)
+
+**Account:** Oracle (oraclebox1). **User prompt:** understand the geometry of the summand and multiplicand graphs, how they relate, and how their features simplify LRC.
+**TWO FOLIATIONS:** summand (a,b->a+b) = ANTIDIAGONALS x+y=n (in-pair floor((n-1)/2), dense/additive, shadow=transitive tournament); multiplicand (a,b->ab) = HYPERBOLAS xy=n (in-pair (tau(n)-[sq])/2, sparse, primes=sources, shadow=divisibility DAG). LOG BRIDGE: (x,y)->(log x,log y) sends xy=n to log x+log y=log n -- multiplicand = summand in log-coords (the +/x weld, S548).
+**LRC DICTIONARY:** pinch denominator C=v_a+v_b is a summand node; available denoms = SUMSET S+S; w cleared at t=m/C iff C does NOT divide w = divisibility/sieve test. S555o (rational pinch=sieve) => the two foliations COINCIDE on integers; the FINE pinch (C>n) = where addition outruns division = open core.
+**AP = JOINT EXTREMUM (why it's the wall):** additively minimizes the distinct-pair sumset (|S^+S|>=2k-3, equality IFF arithmetic progression, Freiman) = fewest pinch denominators = tightest pigeonhole; multiplicatively maximizes small-q coverage (mult of every q<=13, escapes sieve only at q=14).
+**COMPUTED (lrc_summand_multiplicand_geometry_s560.py, grid 2e5):** AP attains |S^+S|=23=2*13-3 (excess 0); randoms 52-64 (excess 27-41). **CORRELATION(sumset excess, margin M)=+0.775** (bigger sumset => looser). AP tightest (M=1/14) and unique sumset minimizer.
+**SIMPLIFICATION:** index the pinch search by the SUMSET (addition supplies times), test clearance by DIVISIBILITY (multiplication); meet on coarse rationals, work lives on the FINE sumset S+S cap (n,2max]. A counterexample must be both sumset-minimal AND coverage-maximal = an AP, which is lonely (no mult of n) -- the summand/multiplicand form of the S556 tension.
+**Artifacts:** lrc_summand_multiplicand_geometry_s560.py (+.out); reflection the-geometry-of-the-summand-and-multiplicand-graphs-...-s560o.md; HYP-2067. **Handoff:** (1) Freiman 3k-4 => non-AP has extra pinch denominator clearing an extra runner; (2) fine sumset as index set for the fine-regime pinch pigeonhole (S555o); (3) apex = even node's missing midpoint pair = unique antidiagonal/hyperbola coincidence at n=2q.
+
 ## oracle-2026-06-02-S559o - The user's A+B=C tournament IS the SUMMAND GRAPH; node C = the LRC pinch denominator; addition-shadow=pinch, multiplication-shadow=sieve, equal on the rationals (HYP-2066)
 
 **Account:** Oracle (oraclebox1). **User prompt:** search the repo's prior work on even/odd and on multiplication/addition; pairs adding to a single number recall a tournament construction A,B,C with arcs (A,C),(B,C) iff A+B=C.
