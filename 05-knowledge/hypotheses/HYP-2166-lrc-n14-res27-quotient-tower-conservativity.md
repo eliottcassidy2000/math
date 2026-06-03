@@ -3,6 +3,7 @@ id: HYP-2166
 status: SUPPORTED by S610 quotient-tower synthesis; lift/CRT conservativity open
 source: user-2026-06-03; codex-2026-06-03-S610
 related:
+  - HYP-2175
   - HYP-2165
   - HYP-2164
   - HYP-2163
@@ -191,6 +192,7 @@ reopening the least-positive or canonical owner scans.
 `04-computation/lrc_n14_res27_quotient_tower_s610.py`,
 `05-knowledge/results/lrc_n14_res27_quotient_tower_s610.out`,
 `07-reflections/lrc-n14-res27-quotient-tower-s610.md`,
+`05-knowledge/hypotheses/HYP-2175-lrc-dimension-descent-salience.md`,
 `05-knowledge/hypotheses/HYP-2165-lrc-n14-res27-fixed-class-bridge.md`,
 `05-knowledge/hypotheses/HYP-2164-lrc-n14-res27-pinch-certificate.md`,
 `01-canon/theorems/THM-407-twisted-involution-shell-reduction-of-the-LRC-additive-residual.md`,

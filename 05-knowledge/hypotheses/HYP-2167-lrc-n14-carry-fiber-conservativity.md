@@ -3,6 +3,7 @@ id: HYP-2167
 status: SUPPORTED by S611 diagnostic + S612 bounded carry-fiber search (no nonzero floor lift in L1<=6 / {0,1}^13 over AP,V*); full carry theorem open
 source: user-2026-06-03; codex-2026-06-03-S611; monad-compute-2026-06-03-S3
 related:
+  - HYP-2175
   - HYP-2166
   - HYP-2165
   - HYP-2164
@@ -247,6 +248,7 @@ multiple / owner certificate (HYP-2165) — exactly the residual proof targets.
 `04-computation/lrc_n14_carry_conservativity_s611.py`,
 `05-knowledge/results/lrc_n14_carry_conservativity_s611.out`,
 `07-reflections/lrc-n14-carry-fiber-conservativity-s611.md`,
+`05-knowledge/hypotheses/HYP-2175-lrc-dimension-descent-salience.md`,
 `05-knowledge/hypotheses/HYP-2166-lrc-n14-res27-quotient-tower-conservativity.md`,
 `05-knowledge/hypotheses/HYP-2164-lrc-n14-res27-pinch-certificate.md`,
 `05-knowledge/hypotheses/HYP-2165-lrc-n14-res27-fixed-class-bridge.md`,

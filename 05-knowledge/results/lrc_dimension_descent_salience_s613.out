@@ -1,0 +1,88 @@
+==== LRC dimension-descent salience audit (S613) ====
+Rows are unit-shell quotient rows modulo C=2n-1.
+Pinch route is after D/N gates; floor is M=1/n in the quotient.
+
+ n   C factors raw_subsets shell_orb orbit_gcds unit/nonunit unit_rows D_pass DN_pass survivors strict floor prim_floor below
+--------------------------------------------------------------------------------------------------------------------------------
+14  27     3^3    10400600         3      (1, 3, 9)    9/4          340928  29384   27733     27733  27730     3          2     0
+13  25     5^2     2704156         2         (1, 5)   10/2           38144   5552    4883      4883   4881     2          1     0
+12  23      23      705432         1           (1,)   11/0            2048    456     420       420    418     2          1     0
+11  21     3*7      184756         3      (1, 3, 7)    6/4           23292   3698    3415      3415   3413     2          1     0
+10  19      19       48620         1           (1,)    9/0             512    150     146       146    144     2          1     0
+ 9  17      17       12870         2         (1, 1)    8/0             256     84      80        80     78     2          1     0
+ 8  15     3*5        3432         3      (1, 3, 5)    4/3             952    228     220       220    216     4          3     0
+ 7  13      13         924         1           (1,)    6/0              64     32      31        31     29     2          1     0
+ 6  11      11         252         1           (1,)    5/0              32     14      14        14     11     3          2     0
+ 5   9     3^2          70         2         (1, 3)    3/1              28     12      12        12      9     3          2     0
+ 4   7       7          20         1           (1,)    3/0               8      5       5         5      3     2          1     0
+ 3   5       5           6         1           (1,)    2/0               4      3       3         3      1     2          1     0
+
+Floor atoms seen by the quotient:
+  n=14: AP via 1/14, AP[12->24] via 1/14, 2*AP via 1/28
+  n=13: AP via 1/13, 2*AP via 1/26
+  n=12: AP via 1/12, 2*AP via 1/24
+  n=11: AP via 1/11, 2*AP via 1/22
+  n=10: AP via 1/10, 2*AP via 1/20
+  n= 9: AP via 1/9, 2*AP via 1/18
+  n= 8: AP via 1/8, AP[6->12] via 1/8, (1, 4, 5, 6, 7, 11, 13) via 1/8, 2*AP via 1/16
+  n= 7: AP via 1/7, 2*AP via 1/14
+  n= 6: AP via 1/6, (1, 3, 4, 5, 9) via 1/6, 2*AP via 1/12
+  n= 5: AP via 1/5, (1, 3, 4, 7) via 1/5, 2*AP via 1/10
+  n= 4: AP via 1/4, 2*AP via 1/8
+  n= 3: AP via 1/3, 2*AP via 1/6
+
+Shell orbits under <2,-1> on antipodal shells:
+  n=14, C=27: gcd 1:(1, 2, 4, 5, 7, 8, 10, 11, 13); gcd 3:(3, 6, 12); gcd 9:(9,)
+  n=13, C=25: gcd 1:(1, 2, 3, 4, 6, 7, 8, 9, 11, 12); gcd 5:(5, 10)
+  n=12, C=23: gcd 1:(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+  n=11, C=21: gcd 1:(1, 2, 4, 5, 8, 10); gcd 3:(3, 6, 9); gcd 7:(7,)
+  n=10, C=19: gcd 1:(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  n= 9, C=17: gcd 1:(1, 2, 4, 8); gcd 1:(3, 5, 6, 7)
+  n= 8, C=15: gcd 1:(1, 2, 4, 7); gcd 3:(3, 6); gcd 5:(5,)
+  n= 7, C=13: gcd 1:(1, 2, 3, 4, 5, 6)
+  n= 6, C=11: gcd 1:(1, 2, 3, 4, 5)
+  n= 5, C= 9: gcd 1:(1, 2, 4); gcd 3:(3,)
+  n= 4, C= 7: gcd 1:(1, 2, 3)
+  n= 3, C= 5: gcd 1:(1, 2)
+
+Adjacent descent ledger:
+  14->13: prime-power depth drops 3->2; shell orbits 3->2; survivors shrink 27733->4883; floor atoms 3->2
+  13->12: prime-power depth drops 2->1; nonunit shells vanish; shell orbits 2->1; survivors shrink 4883->420
+  12->11: nonunit shells reappear; shell orbits 1->3; survivors grow 420->3415
+  11->10: nonunit shells vanish; shell orbits 3->1; survivors shrink 3415->146
+  10-> 9: shell orbits 1->2; survivors shrink 146->80
+   9-> 8: nonunit shells reappear; shell orbits 2->3; survivors grow 80->220; floor atoms 2->4
+   8-> 7: nonunit shells vanish; shell orbits 3->1; survivors shrink 220->31; floor atoms 4->2
+   7-> 6: survivors shrink 31->14; floor atoms 2->3
+   6-> 5: prime-power depth rises 1->2; nonunit shells reappear; shell orbits 1->2; survivors shrink 14->12
+   5-> 4: prime-power depth drops 2->1; nonunit shells vanish; shell orbits 2->1; survivors shrink 12->5; floor atoms 3->2
+   4-> 3: survivors shrink 5->3
+
+Top survivor obligation types:
+  n=14: prim;double=1;miss_nonunit=1;full_nonunit=0:10760, prim;double=2;miss_nonunit=2;full_nonunit=0:7810, prim;double=2;miss_nonunit=2;full_nonunit=1:4079, prim;double=1;miss_nonunit=1;full_nonunit=1:3280, prim;double=0;miss_nonunit=0;full_nonunit=0:1611, prim;double=2;miss_nonunit=2;full_nonunit=2:192
+  n=13: prim;double=1;miss_nonunit=1;full_nonunit=0:3607, prim;double=0;miss_nonunit=0;full_nonunit=0:769, prim;double=1;miss_nonunit=1;full_nonunit=1:506, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n=12: prim;double=0;miss_nonunit=0;full_nonunit=0:419, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n=11: prim;double=1;miss_nonunit=1;full_nonunit=0:1228, prim;double=1;miss_nonunit=1;full_nonunit=1:812, prim;double=2;miss_nonunit=2;full_nonunit=1:612, prim;double=2;miss_nonunit=2;full_nonunit=0:379, prim;double=0;miss_nonunit=0;full_nonunit=0:315, prim;double=2;miss_nonunit=2;full_nonunit=2:68
+  n=10: prim;double=0;miss_nonunit=0;full_nonunit=0:145, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 9: prim;double=0;miss_nonunit=0;full_nonunit=0:79, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 8: prim;double=1;miss_nonunit=1;full_nonunit=0:102, prim;double=0;miss_nonunit=0;full_nonunit=0:59, prim;double=1;miss_nonunit=1;full_nonunit=1:58, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 7: prim;double=0;miss_nonunit=0;full_nonunit=0:30, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 6: prim;double=0;miss_nonunit=0;full_nonunit=0:13, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 5: prim;double=0;miss_nonunit=0;full_nonunit=0:11, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 4: prim;double=0;miss_nonunit=0;full_nonunit=0:4, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+  n= 3: prim;double=0;miss_nonunit=0;full_nonunit=0:2, imprim;double=0;miss_nonunit=0;full_nonunit=0:1
+
+Tournament Analysis over n-level quotient summaries:
+  vertices: 12
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+  directed_3_cycles: 0
+  SCCs: transitive burden order, singleton components
+  edge_flips_vs_naive_dimension: 3/66
+  burden Hamiltonian path easiest->hardest: n=3 -> n=4 -> n=5 -> n=6 -> n=7 -> n=9 -> n=10 -> n=8 -> n=12 -> n=11 -> n=13 -> n=14
+
+Salient conclusions:
+  * Descent is controlled by C=2n-1 arithmetic, not by n alone. The quotient gets easier when nonunit shells and prime-power depth drop, and harder when they reappear.
+  * n=12 is the clean reset in the 14->13->12->11 descent: C=23 is prime, all shells are unit shells, and the unit quotient is exactly one choice from each antipodal shell.
+  * n=14 is arithmetically special because C=27=3^3 has a three-level nonunit tower gcd 1/3/9; this is the shell-depth behind the owner and carry-fiber work.
+  * n=11 is smaller but not monotone-easier: C=21 is composite, so nonunit obligations reappear after the prime C=23 reset.
+  * The actual lift theorem cannot descend by projecting 27->25->23: the modulus changes.  What descends is the obligation ledger, while S611's carry fiber remains a separate n=14 issue.
