@@ -5,7 +5,7 @@ source: opus-2026-06-03-S592
 related:
   - THM-401
   - THM-402
-  - HYP-2139
+  - HYP-2135
   - HYP-2137
   - HYP-2136
   - HYP-2132
@@ -42,9 +42,9 @@ n=10, C=19 prime: AP only.
 For `n=14`, `C=27=3^3`; the known `V*` row misses/doubles only gcd-3
 shells, so the classification residual localizes to the prime-3 shell branch.
 
-## Relation To HYP-2139
+## Relation To HYP-2135
 
-HYP-2139 supplies the labelled support calculus.  HYP-2138 is the proposed
+HYP-2135 supplies the labelled support calculus.  HYP-2138 is the proposed
 classification law for one of its residual fibers:
 
 ```text
@@ -68,4 +68,4 @@ prime 3: composite C=27 shell-sporadic branch.
 `07-reflections/lrc-sporadics-iff-2n-1-composite-prime-3-at-n14-s592.md`,
 `04-computation/lrc_worryset_sporadics_s592.py`,
 `05-knowledge/results/lrc_worryset_sporadics_s592.out`,
-HYP-2139, THM-401, THM-402, HYP-2088, HYP-2083.
+HYP-2135, THM-401, THM-402, HYP-2088, HYP-2083.

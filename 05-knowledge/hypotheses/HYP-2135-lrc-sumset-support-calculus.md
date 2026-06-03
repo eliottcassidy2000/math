@@ -1,11 +1,11 @@
 ---
-id: HYP-2139
+id: HYP-2135
 status: OPEN support-calculus formalization plus exact S591 named-row audit
 source: codex-2026-06-03-S591
 related:
   - THM-401
   - HYP-2138
-  - HYP-2140
+  - HYP-2139
   - HYP-2137
   - HYP-2136
   - HYP-2132
@@ -21,7 +21,7 @@ related:
   - THM-397
 ---
 
-# HYP-2139: after THM-401, LRC should be checked by a labelled sumset-support calculus
+# HYP-2135: after THM-401, LRC should be checked by a labelled sumset-support calculus
 
 ## Claim
 
@@ -248,7 +248,7 @@ unit-visible hole, an unshielded low denominator, or a lifted exact witness.
 
 ## Relation To THM-401 And HYP-2132
 
-THM-401 proves the modulus identity.  HYP-2139 proposes the next formal layer:
+THM-401 proves the modulus identity.  HYP-2135 proposes the next formal layer:
 the residual finite arithmetic problem should be expressed as a labelled
 support calculus at `Z/(2n-1)`, not as raw `S+S` size or unlabelled pair-shell
 coverage.
@@ -274,9 +274,9 @@ prime-fiber search precisely when this calculus closes before the fallback
 finite sieve.  The `n=12, C=23` row is the clearest test: with no nonunit shell
 strata, any missing speed shell is unit-visible.
 
-## Relation To HYP-2140
+## Relation To HYP-2139
 
-HYP-2140 supplies the tournament-side restriction: LRC-accessible comparisons
+HYP-2139 supplies the tournament-side restriction: LRC-accessible comparisons
 are round, so the regular tight beat is the interval circulant rather than a
 Paley or QR beat.  In this support-sheaf language, the base shell order is not
 arbitrary support data; it is the round additive order.  Unit action remains a
@@ -307,5 +307,5 @@ quotient must be lifted with endpoint-owner, pincer, or D/U/N labels.
 `04-computation/lrc_sumset_support_calculus_s591.py`,
 `05-knowledge/results/lrc_sumset_support_calculus_s591.out`,
 `07-reflections/lrc-sumset-support-calculus-s591.md`,
-THM-401, HYP-2138, HYP-2140, HYP-2132, HYP-2134, HYP-2133, HYP-2122, HYP-2118,
+THM-401, HYP-2138, HYP-2139, HYP-2137, HYP-2136, HYP-2132, HYP-2134, HYP-2133, HYP-2122, HYP-2118,
 HYP-2088, HYP-2084, HYP-2083, HYP-2059, THM-400, THM-397.

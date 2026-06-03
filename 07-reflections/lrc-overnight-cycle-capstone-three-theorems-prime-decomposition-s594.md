@@ -50,7 +50,7 @@ n = 14 = 2 · 7              2n − 1 = 27 = 3³
 Everything sidesteps resonance energy (THM-401): the open work is the finite prime-2 and
 prime-3 ledgers at `ℤ/14` and `ℤ/27`.
 
-**Artifacts:** THM-402/403/404; the S592–S594 computations. New: **HYP-2139** (index pointer).
+**Artifacts:** THM-402/403/404; the S592–S594 computations. New: **HYP-2138** (index pointer).
 
 ## Round-7 refinement: which prime makes n=14 the frontier?
 
