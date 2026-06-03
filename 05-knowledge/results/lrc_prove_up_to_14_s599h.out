@@ -1,0 +1,20 @@
+  n= 7: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/7 = 1/n  ✓ (no enumeration needed)
+  n= 8: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/8 = 1/n  ✓ (no enumeration needed)
+  n= 9: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/9 = 1/n  ✓ (no enumeration needed)
+  n=10: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/10 = 1/n  ✓ (no enumeration needed)
+  n=11: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/11 = 1/n  ✓ (no enumeration needed)
+  n=12: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/12 = 1/n  ✓ (no enumeration needed)
+  n=13: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/13 = 1/n  ✓ (no enumeration needed)
+  n=14: min_{r=1..n-1} min(r,n-r) = 1  => ||v_i/n|| >= 1/14 = 1/n  ✓ (no enumeration needed)
+
+PART 2 — C'(n): configs with >=1 multiple of n. Verify M>=1/n over window [1,2n], gcd=1:
+  n | #configs(mult,gcd1) | min M over them | 1/n | LRC ok | C' strict-loose(min M>1/n)
+   3 |      6 | M=2/5=0.4000 at (2, 3) | 1/3 | True | True
+   4 |     32 | M=2/7=0.2857 at (1, 3, 4) | 1/4 | True | True
+   5 |    136 | M=2/9=0.2222 at (1, 3, 4, 5) | 1/5 | True | True
+   6 |    534 | M=2/11=0.1818 at (1, 4, 5, 6, 7) | 1/6 | True | True
+   7 |   2073 | M=2/13=0.1538 at (1, 2, 5, 6, 7, 8) | 1/7 | True | True
+   8 |   8000 | M=2/15=0.1333 at (1, 4, 5, 6, 7, 11, 16) | 1/8 | True | True
+
+PART 2 at n=14 (THM-407): C'(14) residual folds to 3 shell reps gcd∈{1,3,9} (open).
+  LRC(n) <=> C'(n): PROVEN n<=13 (literature + window above); n=14 = 3-shell residual.
