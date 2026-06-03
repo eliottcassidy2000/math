@@ -1,0 +1,7 @@
+n=22 cluster: |S|=22, unit distances (edges) = 49 (= Harborth 49)
+(1) ADDITIVE ENERGY: #{(p,q): p-q in U_6} = 98 = 2*edges = 98 ✓  (UD count IS additive energy wrt the 6 sixth-roots of unity)
+(2) 3-COLORING by (i-j) mod 3 (Eisenstein sublattice = ideal of norm 3): proper=True; class sizes {0: 7, 1: 7, 2: 8}
+    => chi(UD cluster)=3, from the prime-3 / ζ3 structure of Z[ζ6] — the SAME prime 3
+    that rules the LRC n=14 residual (2n-1=27=3^3, THM-407). Round LRC tournaments are χ=2 (THM-402).
+(3) unit TRIANGLES (3-cliques) = 28  (the odd-cycle/Rédei generators; oriented => 3-cycles)
+    Euler check for a triangulated disk: V-E+F: V=22, E=49, triangles=28

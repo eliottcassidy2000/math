@@ -1,0 +1,5 @@
+Harborth n=22 = 49
+best found (compact nearest-22) = 49  optimal=True  (target 49)
+after local search = 49
+FINAL n=22 unit distances = 49 (Harborth 49); deg dist {3: 8, 4: 4, 5: 2, 6: 8}, interior(6)=8
+cluster: [(-3, -2), (-3, -1), (-3, 0), (-3, 1), (-2, -3), (-2, -2), (-2, -1), (-2, 0), (-2, 1), (-1, -3), (-1, -2), (-1, -1), (-1, 0), (0, -4), (0, -3), (0, -2), (0, -1), (0, 0), (1, -4), (1, -3), (1, -2), (1, -1)]

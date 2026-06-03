@@ -1,0 +1,13 @@
+Harborth max-unit-distances on the triangular lattice: floor(3n - sqrt(12n-3))
+  n= 3: formula= 3  (sanity 3)  match=True
+  n= 4: formula= 5  (sanity 5)  match=True
+  n= 7: formula=12  (sanity 12)  match=True
+  n= 8: formula=14  (sanity 14)  match=True
+  n=12: formula=24  (sanity 21)  match=False
+  n=19: formula=42  (sanity 42)  match=True
+
+n=22 target (Harborth) = 49
+best found: 41 unit distances  (target 49)  optimal=False
+cluster (axial coords, 22 pts): [(-11, 1), (-10, 0), (-10, 1), (-9, 0), (-9, 1), (-8, 0), (-8, 1), (-7, 0), (-7, 1), (-6, 0), (-6, 1), (-5, 0), (-5, 1), (-4, 0), (-4, 1), (-3, 0), (-3, 1), (-2, 0), (-2, 1), (-1, 0), (-1, 1), (0, 0)]
+degree distribution (max 6): {2: 2, 3: 2, 4: 18}; sum/2=41
+interior(deg6)=0, boundary=22; perimeter ~ sqrt(12n-3)=16.16
