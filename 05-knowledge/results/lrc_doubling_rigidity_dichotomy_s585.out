@@ -1,0 +1,15 @@
+Dynamical (doubling) rigidity of the witness orbit: connected(odd) vs fragmented(even)
+  n= 5 (odd ): 2-is-unit=True; #doubling-orbits-of-units=1; fragmented(all singletons)=False
+  n= 6 (even): 2-is-unit=False; #doubling-orbits-of-units=2; fragmented(all singletons)=True
+  n= 7 (odd ): 2-is-unit=True; #doubling-orbits-of-units=2; fragmented(all singletons)=False
+  n= 8 (even): 2-is-unit=False; #doubling-orbits-of-units=4; fragmented(all singletons)=True
+  n= 9 (odd ): 2-is-unit=True; #doubling-orbits-of-units=1; fragmented(all singletons)=False
+  n=10 (even): 2-is-unit=False; #doubling-orbits-of-units=4; fragmented(all singletons)=True
+  n=11 (odd ): 2-is-unit=True; #doubling-orbits-of-units=1; fragmented(all singletons)=False
+  n=12 (even): 2-is-unit=False; #doubling-orbits-of-units=4; fragmented(all singletons)=True
+  n=13 (odd ): 2-is-unit=True; #doubling-orbits-of-units=1; fragmented(all singletons)=False
+  n=14 (even): 2-is-unit=False; #doubling-orbits-of-units=6; fragmented(all singletons)=True
+  n=15 (odd ): 2-is-unit=True; #doubling-orbits-of-units=2; fragmented(all singletons)=False
+  n=16 (even): 2-is-unit=False; #doubling-orbits-of-units=8; fragmented(all singletons)=True
+  n=17 (odd ): 2-is-unit=True; #doubling-orbits-of-units=2; fragmented(all singletons)=False
+  n=18 (even): 2-is-unit=False; #doubling-orbits-of-units=6; fragmented(all singletons)=True
