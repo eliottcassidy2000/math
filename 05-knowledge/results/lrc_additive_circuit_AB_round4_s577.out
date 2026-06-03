@@ -1,0 +1,5 @@
+Lemma A measure route: min safe-measure(level delta) for circuit-free vs 3-term-rich;
+and does measure track 3-term (not 4-term)?
+  k= 6: circuit-free min safe-measure=0.0806 (4-term-rich-but-cf min=0.0806); 3-term-rich(>=3) min safe-measure=0.0037
+  k= 8: circuit-free min safe-measure=0.1015 (4-term-rich-but-cf min=0.1015); 3-term-rich(>=3) min safe-measure=0.0185
+  k=10: circuit-free min safe-measure=0.1128 (4-term-rich-but-cf min=0.1128); 3-term-rich(>=3) min safe-measure=0.0178
