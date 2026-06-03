@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-03-S592 - full regular-tournament chi census closes the non-circulant HYP-2136 gap through m=9
+
+**Account:** Codex (desktop). **User prompt:** pin down the pair-sum sieve modulus as `2n-1` / odd part and follow the tangent among maximally-cyclic regular tournaments: does chi add beyond vertex-transitivity, and is there a tight regular non-AP/Paley config with different chi?
+**UPSTREAM INTEGRATED:** pulled fresh THM-401/S590, S591, and oracle-S581o. THM-401 already proves the pair-sum modulus identity by Farey neighbor `1/n < 2/(2n-1)`, summand shells mod `2n-1`, and `8*C(n,2)+1=(2n-1)^2`; resonance energy is bypassed. S581o answered the chi question but left the non-circulant regular classes at `m=7,9` uncomputed.
+**NEW S592 CENSUS:** `lrc_regular_full_census_chi_s592.py` counts labelled regular tournaments exactly, then discovers unlabeled classes until `sum m!/|Aut(T)|` equals the labelled count. This gives a completion certificate, not just a sample.
+**RESULTS:** `m=5`: 24 labelled, 1 class, AP/interval `chi=2`. `m=7`: 2640 labelled, 3 classes; AP/interval `chi=2`, Paley `chi=3`, non-circulant middle `chi=3`. `m=9`: 3230080 labelled, 15 classes; AP/interval is the UNIQUE `chi=2` class, all 14 non-AP regular classes have `chi=3`.
+**ANSWER REFINED:** chi adds beyond vertex-transitivity (AP vs Paley at `m=7`, both VT/regular/c3=14 but `chi=2` vs `3`). Regular non-AP classes exist, including non-circulant ones, but through the completed `m<=9` census none has `chi=2`; the candidate tight regular orbit remains AP/interval. Thus the LRC regular tight signal is "minimally cyclic regular" (`chi=2`), not Paley/H-maximal.
+**Tournament Analysis / assumption challenge:** vertices were regular iso-classes, not runners/arcs/gaps; quotient preserves `chi,H,Aut,regularity` and destroys observer/source/gap ownership. Gauge was lower chi then higher H; AP is the unique source through `m=9`, flipping 1 edge vs pure-H order at `m=7` and 8 at `m=9`. Challenged assumption: regular/maximally cyclic or VT is not enough; high `H` is not LRC tightness.
+**Artifacts:** `04-computation/lrc_regular_full_census_chi_s592.py`, `05-knowledge/results/lrc_regular_full_census_chi_s592.out`, `07-reflections/lrc-regular-full-census-chi2-is-ap-through-nine-s592.md`, `05-knowledge/hypotheses/HYP-2136-chi2-ap-regular-orbit.md`; updated HYP-2136 and results index. **Namespace:** S581o used `HYP-2135`, but incoming S591 sumset-support calculus also claimed `HYP-2135`; live chi/AP characterization is renumbered to `HYP-2136`. **Open:** prove all-order `regular T has chi=2 iff T is AP/interval`; prove every LRC tight config is chi=2 near-AP/round and `chi>=3` regular classes are strictly lonely.
+
 ## oracle-2026-06-03-S581o - chi (dichromatic) separates regular tournaments BEYOND vertex-transitivity; the LRC tight regular orbit is the chi=2 rotational R_m (=AP), NOT Paley (HYP-2135)
 
 **Account:** Oracle (oraclebox1). **User prompt:** among maximally-cyclic (regular) tournaments, does chi add beyond vertex-transitivity -- is there a tight config regular but not the Paley/AP orbit, and does its chi differ?
