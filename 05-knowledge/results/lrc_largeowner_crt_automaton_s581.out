@@ -1,0 +1,30 @@
+==========================================================================
+S581  large-owner residual as a bounded CRT residue automaton (HYP-2110)
+==========================================================================
+
+[A] correctness cross-checks (n=14), random large-owner components:
+    trials=4000  feasible=6  decider!=automaton: 0  decider!=brute: 0
+    => the bounded CRT decider IS the automaton's acceptance (AGREE), and matches the infinite search (AGREE).
+
+[B] the automaton on a worked component (u_a=21,k_a=3, u_b=35,k_b=5):
+    state space Z/21 x Z/35; reachable orbit (period) P=105 = 3^1 * 5^1 * 7^1
+    A=43 (≡1 mod 14), B=69 (≡13 mod 14); accept state: (1, 1, 34)
+    boundedness: deciding 'exists w in 1..infinity' needs only the P=105 orbit states (one period).
+
+[C] boundedness — period P = #automaton states over random components:
+    period: min=1 median=495 max=3080 (<= lcm(u_a,u_b) <= 3136); the decider's (r_a,r_b) check is O((u_a u_b)/n^2)
+
+[D] resonance probe — what distinguishes feasible components (n=14)?
+    feasible:   699  | D==0 (cross-relation): 19  | gcd(u_a,u_b)>=n: 26
+    infeasible: 141989  | D==0: 0  | gcd(u_a,u_b)>=n: 7618
+    => feasibility rate 699/142688 = 0.005 on this generic grid
+
+[F] resonance necessary condition  |D| <= u_b*K_a + u_a*K_b  (D=u_b A - u_a B):
+    feasible components violating the bound: 0/699 (0 = bound is a PROVED necessary condition)
+    |D| over feasible: min=0 median=11 max=140
+    the |D|-band contains 3589/142688 = 0.025 of the grid — the bounded resonance window the automaton's accept set lives in
+    D==0 (cross-relation, gcd>=n) was feasible in all 19 of its occurrences
+
+[E] LRC-residual restriction (a<b in (0,1/2], short b-a<=2/(n^2 w)) -- opus's 'never satisfiable':
+    valid+feasible+short components found: 1590 of 1590 feasible-valid
+    examples (u_a,k_a,u_b,k_b,w): [(14, 3, 27, 6, 14), (14, 2, 40, 6, 14), (14, 4, 41, 12, 14), (14, 5, 55, 20, 14), (15, 2, 20, 3, 1)]
