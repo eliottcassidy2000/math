@@ -3,6 +3,8 @@ id: HYP-2096
 status: SUPPORTED by bounded canonical n=14 spine audit; normalization/exchange lemma open
 source: codex-2026-06-03-S576
 related:
+  - HYP-2100
+  - HYP-2099
   - HYP-2095
   - HYP-2094
   - HYP-2093
@@ -104,6 +106,11 @@ This complements HYP-2094. HYP-2094 collapses the even-ladder worry set to the
 owners and private pivots attached to the clean polygon face. The two lenses
 should meet when each self-converse class is assigned a unit-spine owner table
 and a four-slack composite debt certificate.
+
+S578/HYP-2100 sharpens the first step: before lowering a large unit-shell
+representative, apply the HYP-2095 unblocked-small-pair sieve. In the bounded
+one-unit-lift and named local/extreme stress audits, every full lifted unit row
+already has such a cheap witness, leaving no no-cheap exchange residual.
 
 ## Why Doubled Prime n=14 Is Special
 

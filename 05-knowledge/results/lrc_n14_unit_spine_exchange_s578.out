@@ -1,0 +1,128 @@
+S578 n=14 unit-spine exchange audit
+==============================================================================
+n=14; C=27; floor=1/14; edge=2/27
+canonical unit spine=(1, 2, 4, 5, 7, 8, 10, 11, 13)
+unit reps per shell through 81=[6, 6, 6, 6, 6, 6, 6, 6, 6]
+one-lift reps per shell through 81 excluding canonical=[5, 5, 5, 5, 5, 5, 5, 5, 5]
+named local/extreme unit patterns=950
+
+[one_unit_lift_all_slack]
+  rows=45045 full_cover=13169
+  cheap_unblocked_pair=13169 no_cheap_residual=0
+  cheap_witness_den_hist={14: 7943, 26: 1206, 20: 1067, 40: 873, 28: 428, 22: 364, 49: 266, 16: 235}
+  cheap_witness_examples:
+    slack=(3, 6, 9, 12) lift 1->26 pair=(2, 12) t=1/14
+    slack=(3, 6, 9, 12) lift 1->28 pair=(3, 12) t=1/15
+    slack=(3, 6, 9, 12) lift 1->53 pair=(2, 12) t=1/14
+    slack=(3, 6, 9, 12) lift 1->55 pair=(2, 12) t=1/14
+    slack=(3, 6, 9, 12) lift 1->80 pair=(2, 12) t=1/14
+    slack=(3, 6, 9, 12) lift 2->25 pair=(1, 13) t=1/14
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+[AP_slack]
+  rows=950 full_cover=240
+  cheap_unblocked_pair=240 no_cheap_residual=0
+  cheap_witness_den_hist={14: 187, 15: 20, 63: 12, 16: 6, 64: 4, 24: 3, 77: 1, 40: 1}
+  cheap_witness_examples:
+    units=(1, 2, 4, 5, 7, 8, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) pair=(7, 70) t=23/77
+    units=(1, 2, 4, 22, 7, 8, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 16, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 38, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 43, 13) pair=(1, 13) t=1/14
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+[Vstar_slack]
+  rows=950 full_cover=336
+  cheap_unblocked_pair=336 no_cheap_residual=0
+  cheap_witness_den_hist={14: 216, 26: 68, 28: 19, 63: 11, 32: 6, 15: 5, 30: 4, 33: 1}
+  cheap_witness_examples:
+    units=(1, 2, 4, 5, 7, 8, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) pair=(2, 24) t=7/26
+    units=(1, 2, 4, 5, 7, 19, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 35, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 46, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 62, 10, 11, 13) pair=(1, 13) t=1/14
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+[first_open_gap_slack]
+  rows=950 full_cover=240
+  cheap_unblocked_pair=240 no_cheap_residual=0
+  cheap_witness_den_hist={14: 168, 39: 42, 28: 11, 24: 6, 40: 6, 15: 2, 26: 1, 42: 1}
+  cheap_witness_examples:
+    units=(1, 2, 4, 5, 7, 8, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) pair=(3, 36) t=4/39
+    units=(1, 2, 4, 22, 7, 8, 10, 11, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 16, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 38, 13) pair=(1, 13) t=1/14
+    units=(1, 2, 4, 22, 7, 8, 10, 43, 13) pair=(1, 13) t=1/14
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+[zero_slack_control]
+  rows=950 full_cover=0
+  cheap_unblocked_pair=0 no_cheap_residual=0
+  cheap_witness_den_hist={}
+  cheap_witness_examples:
+    -
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+[double3_control]
+  rows=950 full_cover=0
+  cheap_unblocked_pair=0 no_cheap_residual=0
+  cheap_witness_den_hist={}
+  cheap_witness_examples:
+    -
+  lowers_to_full=0 bad_lowering=0
+  below_floor=0 floor_or_above=0 min_M=- max_rep=80
+  lost_obligation_hist:
+    -
+  examples:
+    -
+
+Tournament Analysis
+------------------------------------------------------------------------------
+  vertices: exchange audit patterns
+  observable: bad lowerings, below-floor rows, no-cheap residual, full covers
+  switch: harder = more bad lowerings, then below-floor, then no-cheap
+  fingerprints: {'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1], 'hardness_order': ['one_unit_lift_all_slack', 'Vstar_slack', 'first_open_gap_slack', 'AP_slack', 'zero_slack_control', 'double3_control']}
+
+Synthesis
+------------------------------------------------------------------------------
+Bounded evidence supports the exchange lemma in a sharper form:
+  after HYP-2095 removes rows with an unblocked small pair, the audited
+  full D/U/N unit-lift residual is empty.
+In the one-lift exhaustive scan, every full cover already has a cheap
+unblocked-pair witness.  In the named local/extreme unit stress,
+AP/V*/open-gap families again have no bad lowerings or below-floor
+residuals.
+The two non-cover controls show why D9/D12-style composite debt cannot be
+repaired by unit representatives: no full-cover residual survives there.
+Next proof move: formalize this as a local exchange rule: a lifted unit
+representative that is not part of an unblocked small-pair witness can be
+lowered shellwise, because unit representatives do not repair the gcd-3
+D-obligations that make the canonical slack layer fail.
