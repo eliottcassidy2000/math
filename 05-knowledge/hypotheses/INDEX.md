@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+**HYP-2196 / THM-411 — TIGHT FAMILY STRUCTURE (S621, CORRECTS the additive-chain story):** the collapse family `{p₀=0}` = exactly-tight (Kravitz "barely lonely") LRC instances = forbidden arcs cover the circle. **VERIFIED n=3..8:** (1) FINITE, `v_max ≤ 2n-1` (sporadics hit it); (2) count `1,2,2,1,3,1` (not in OEIS); (3) every tight set witnessed exactly on the `(ℤ/m)*` orbit `{k/m:gcd(k,m)=1}` (φ(m)/2 times) — extends THM-403 from the AP to all tights; (4) even n=6,8 give only the AP (2-adic seam). **CORRECTS HYP-2153/2195:** additive-chain ⟺ collapse is FALSE — additive structure is necessary-ish (`max(S)∈S+S`) but vastly insufficient (n=7: 3 collapse vs 364 chains vs 5858 max-in-sumset). True cause = gap pinned at 1/m across the whole witness orbit. **See:** THM-411, HYP-2196, `lrc_tight_*_s621.py`, `lrc_chain_vs_collapse_s621.py`, `07-reflections/consolidated-structure-analysis-s621.md`.
+
 **Status codes:** CONFIRMED | REFUTED | OPEN | PARTIALLY-TRUE
 
 ---
@@ -8634,3 +8636,12 @@ only the *iff-3|C generalization* is dead. See `04-computation/lrc_field_rosette
 **CONSOLIDATION:** see `06-writeups/consolidated-structure-analysis-s617.md` — the 4 faces (measure p₀ / sheaf H⁰ / resonance / altitude) are one object; p₀>0 ⟺ H⁰≠∅ ⟺ trivial resonance; the 2q seam is the shared load-bearing wall.
 **OPEN:** prove additive-chain ⟺ collapse; clean (loglog)² via simultaneous-break; p_k cumulants ↔ resonance energy; p₀ as measure-refinement of sheaf H⁰.
 **See:** `HYP-2195-...md`, `07-reflections/the-covering-depth-master-object-s617.md`, `06-writeups/consolidated-structure-analysis-s617.md`, `04-computation/covering_depth_distribution_s617.py`, `04-computation/singleton_wall_exponent_s617.py`, math-lean CoveringDepth.lean; HYP-2175, HYP-2180, HYP-2185, HYP-2155.
+
+## HYP-2200: Four lenses on the covering-depth object — Helly order / Vitali wall / Collatz two-block / partition-function sibling (claudebox-2026-06-03-S618)
+**Status:** CONSOLIDATION + VERIFIED + FORMALIZED. The four user-named lenses are four readings of ONE object: the overlap hierarchy S_k = Σ_{|I|=k} meas(∩A_i), with p₀ = Σ(−1)^k S_k (verified exact).
+**HELLY (order):** Bonferroni T_m bracket p₀; order-3 lower bound T₃=1−S₁+S₂−S₃>0 is a RIGOROUS loneliness certificate (circular-arc Helly number 3). Decides generic configs at order 3; thin boundary layer near collapse where it fails ({1,5,8,11,13}: T₃<0 yet p₀>0). Collapse always T₃≤0 (resonance at order-3 triples = sum-relations).
+**VITALI (moments):** at collapse no finite truncation m<n closes; series reaches 0 only at top order. Finite moments can't decide p₀; can't separate tight (LRC holds) from empty (fails). Measure blind, construction needed.
+**COLLATZ two-block:** the multiplicative twin — density blind to the structured residue (cycle/2-block) = the Vitali wall across the additive↔multiplicative dictionary (HYP-2175).
+**PARTITION SIBLING (lens 4):** depth GF P(z)=∫z^depth is a hard-core partition function, p₀=P(0); factors over disjoint blocks (formalized). At δ=1/(n+1) the pairwise dependency graph is COMPLETE ⟹ crude independence polynomial degenerate (1+nλ) — as vacuous as the first moment. Discriminating object = the FULL P(z)/all overlap orders. All four lenses ⟹ need the whole hierarchy.
+**FORMALIZED (math-lean, sorry-free):** Math/LonelyRunner/DepthGenerating.lean — depthGF, depthGF_one, depthGF_union (partition factorization), prod_one_sub_eq_inclusion_exclusion (overlap hierarchy), depthGF_zero (p₀=P(0)=incl-excl).
+**See:** `HYP-2200-...md`, `07-reflections/one-boundary-four-names-s618.md`, `04-computation/overlap_hierarchy_s618.py`, `four_lenses_bonferroni_partition_s618.py`, math-lean DepthGenerating.lean; HYP-2195, HYP-2185, HYP-2175, HYP-2150.
