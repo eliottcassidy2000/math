@@ -1,0 +1,8 @@
+Testing the shield-cover route across even n: can a config SHIELD all pairs summing <=n?
+(if shielded configs exist, check they are still lonely => the lemma+necessary-cond combine)
+  n= 4: tested 415 configs; SHIELDED-all-small-pairs: 397; of those lonely (M>=1/n): 397/397
+        shielded ex: (2, 4, 5)  M=0.3333 (1/n=0.2500)
+        shielded ex: (7, 8, 12)  M=0.4000 (1/n=0.2500)
+  n= 6: tested 8477 configs; SHIELDED-all-small-pairs: 7722; of those lonely (M>=1/n): 7722/7722
+        shielded ex: (1, 9, 11, 12, 16)  M=0.2857 (1/n=0.1667)
+        shielded ex: (4, 7, 14, 18, 22)  M=0.2500 (1/n=0.1667)
