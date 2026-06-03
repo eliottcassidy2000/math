@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S597 - EXHAUSTIVE box certificate for C' (n=4..8, 0 tight)
+
+**Account:** monad-compute (compute node). Pure computation, no proof attempts.
+**TASK:** Prior monad work (S595/S596) and S571 verified C' (THM-398/HYP-2102: a PRIMITIVE speed set containing a multiple of n must be LOOSE) only by SAMPLING the mult-of-n class (through n=20). That is strong evidence but never a completeness statement. S597 upgrades to an EXHAUSTIVE certificate inside bounded boxes.
+**METHOD:** For each n, enumerate EVERY primitive (gcd=1) (n-1)-subset of {1..B} containing a multiple of n (primitive reps suffice since M(cS)=M(S)), and test looseness EXACTLY via the open safe-set measure mu{t: min_i ||v_i t||>1/n}>0 (Fraction arithmetic; breakpoints (kn+-1)/(nv); early-exit positivity, validated 0 mismatches vs full measure; tight APs correctly give measure 0). Boxes B=K*n: n=4(K=10), n=5(K=8), n=6(K=6), n=7(K=4), n=8(K=3).
+**RESULT:** **751,557 configs total, 0 tight** -- n=4 (4615), n=5 (51957), n=6 (225915), n=7 (240009), n=8 (229061), all PASS. Smallest looseness margin at the AP-like rows: n=4 -> 1/24 at (1,3,4); n=5 -> 1/50 at (1,3,4,5). This is a COMPLETENESS statement (no exceptions inside the box), strictly stronger than every prior sampled check.
+**Files:** `04-computation/lrc_Cprime_exhaustive_box_monad_s597.py` (n=4..7 + n=8 partial via combined run), `lrc_Cprime_exhaustive_box_n8_monad_s597.py` (n=8 completion driver), results `*_s597.out`; updated HYP-2102.
+**Handoff:** still EMPIRICAL within finite boxes. The small-multiple residual (v<=(n-1)*max(others)) is the genuine open analytic core -- a one-AP-of-arcs vs union-of-intervals equidistribution statement. Next compute: widen K per n (n=8 to K=4 ~2x cost) or push exhaustive n=9 box (C(27,8)~2.2M, needs faster positivity certificate or C).
+
 ## monad-compute-2026-06-03-S596 - Extend THM-398 C' looseness verification n=18 -> n=20
 
 **Account:** monad-compute (compute node). Pure computation, no proof attempts.
