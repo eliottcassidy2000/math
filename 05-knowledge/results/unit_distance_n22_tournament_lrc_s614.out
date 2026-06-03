@@ -1,0 +1,71 @@
+==== S614 unit-distance n=22 / tournament / LRC scout ====
+Published state for planar unit distances at n=22
+  Exact values through n=21 end at u(21)=57.
+  Current n=22 bounds: 60 <= u(22) <= 61.
+  The 62-edge F-free graph-only frontier has exactly two candidates;
+  both are killed by totally unfaithful subgraphs, giving u(22)<=61.
+  The 60-edge lower bound is realized by known Moser-ring database examples.
+  Therefore the n=22 optimum is exactly one bit: either 60 or 61.
+
+n=21 exact-core deletion pressure
+  core 1: edges=57 degree_hist={5: 18, 8: 3} min=5 max=8 triangles=25 fourcycle_count=288
+  core 2: edges=57 degree_hist={3: 1, 4: 2, 5: 8, 6: 7, 7: 3} min=3 max=7 triangles=23 fourcycle_count=265
+  core 3: edges=57 degree_hist={3: 1, 4: 2, 5: 9, 6: 5, 7: 4} min=3 max=7 triangles=23 fourcycle_count=265
+  core 4: edges=57 degree_hist={3: 1, 4: 2, 5: 8, 6: 7, 7: 3} min=3 max=7 triangles=23 fourcycle_count=263
+  core 5: edges=57 degree_hist={3: 1, 4: 3, 5: 6, 6: 8, 7: 3} min=3 max=7 triangles=23 fourcycle_count=266
+  Consequence for a hypothetical 61-edge UDG on 22 vertices:
+    average degree = 122/22, so a min-degree vertex has degree <=5;
+    deleting it leaves at least 56 edges on 21 vertices;
+    u(21)=57 forces min degree >=4, so min degree is 4 or 5.
+    Thus a 61 proof/hunt can focus on 21-vertex 56/57-edge cores
+    plus one degree-5 or degree-4 embeddable extension vertex.
+  Consequence for a 60-edge witness:
+    min degree is at least 3, and deleting a min vertex leaves 55..57
+    edges; known 60-edge examples should have dense 21-decks.
+
+Small lattice scouts
+triangular beam size=7: states=3652 best_edges=12 compact_span=6
+triangular beam size=13: states=15001 best_edges=26 compact_span=10
+triangular beam size=19: states=20255 best_edges=42 compact_span=12
+triangular beam size=22: states=22595 best_edges=49 compact_span=14
+  Triangular-lattice connected beam best at n=22: 49 edges (cluster size 22).
+  This is intentionally a grid sanity check, not a proof of the global UDG optimum; it shows why the 60-edge lower bound must use richer unit-vector structure than the plain triangular lattice.
+  Moser lattice unit shell: 18 directed unit vectors, 9 antipodal pairs.
+  Unit vectors in Z^4 basis: ((-2, 1, 2, -1), (-1, -1, 1, 1), (-1, 0, 0, 0), (-1, 1, 0, 0), (-1, 2, 1, -2), (0, -1, 0, 0), (0, 0, -1, 0), (0, 0, -1, 1), (0, 0, 0, -1), (0, 0, 0, 1), (0, 0, 1, -1), (0, 0, 1, 0), (0, 1, 0, 0), (1, -2, -1, 2), (1, -1, 0, 0), (1, 0, 0, 0), (1, 1, -1, -1), (2, -1, -2, 1))
+  The Moser model is already a coimage: rank-4 integer coordinates plus an 18-vector unit shell project to planar geometry.
+
+Tournament Analysis on n=22 proof routes
+  score=6 route=Moser-ring beam search to 61; features=(burden=5.0, side=3, rank=4, spec=4, loss=1, geom=4)
+  score=6 route=extend 21-vertex max/near-max cores; features=(burden=7.0, side=4, rank=2, spec=5, loss=0, geom=3)
+  score=6 route=mine totally-unfaithful obstructions; features=(burden=6.0, side=5, rank=3, spec=4, loss=0, geom=2)
+  score=3 route=CM tower asymptotic transfer; features=(burden=8.0, side=5, rank=5, spec=1, loss=3, geom=5)
+  score=3 route=LRC coimage side-channel transfer; features=(burden=6.0, side=5, rank=5, spec=2, loss=1, geom=0)
+  score=2 route=enumerate 61-edge F-free graphs; features=(burden=14.0, side=2, rank=2, spec=5, loss=1, geom=2)
+  score=2 route=graph-only 62 upper-bound transfer; features=(burden=3.0, side=1, rank=1, spec=3, loss=5, geom=1)
+  score=0 route=triangular/square grid variants; features=(burden=2.0, side=0, rank=1, spec=1, loss=6, geom=4)
+  score histogram: {0: 1, 2: 2, 3: 2, 6: 3}
+  directed 3-cycles: 3
+  SCC sizes: [4, 3, 1]
+  Hamiltonian path count: 15
+  Reading: the best immediate route is not a raw graph-only quotient. It is an extension/obstruction search that retains side information about dense cores, Moser coordinates, and unfaithful subgraphs.
+
+LRC/tournament bridge
+  Shared pattern: exactness fails when the quotient forgets side channels.
+  Unit-distance n=22: F-free graph coimage says 62, but geometry/unfaithfulness
+    lowers it to <=61; deciding 61 needs retained embedding data.
+  LRC n=14: Res_27/coarse tournament coimages shrink the state, but floor
+    status needs owner labels, carry cocycles, and endpoint/pinch channels.
+  Recent asymptotic disproof: the old grid intuition fixes a low-degree
+    visible lattice; the counterexample fixes small primes and varies the
+    CM field degree through a Golod-Shafarevich class-field tower, then
+    projects one coordinate to the plane.
+  Hypothesis HYP-2176: n=22 is the first small unit-distance coimage
+    failure frontier, just as n=14 LRC is a small coimage-with-side-channel
+    frontier. The right tournament vertices are proof obligations/cores,
+    not only points or runners.
+
+Sources summarized in the companion reflection:
+  Alexeev-Tikhonov arXiv:2412.11914 exact n<=21 and n=22 bounds.
+  Engel-Hammond-Lee-Su-Varga-Zsamboki arXiv:2406.15317 Moser-ring database.
+  Alon-Bloom-Gowers-Litt-Sawin-Shankar-Tsimerman-Wang-Wood arXiv:2605.20695.
+  Sawin arXiv:2605.20579 for explicit n^1.014 asymptotic lower bound.
