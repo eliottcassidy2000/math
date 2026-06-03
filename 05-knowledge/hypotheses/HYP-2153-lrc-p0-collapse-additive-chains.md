@@ -22,6 +22,7 @@ related:
   - HYP-2155
   - HYP-2156
   - HYP-2157
+  - HYP-2161
   - THM-358
   - THM-401
   - THM-406
@@ -66,6 +67,12 @@ HYP-2157 names the shared overlap-order calculus: Helly number is the order
 cutoff needed for a certificate, while the Vitali wall is the failure of any
 fixed finite cutoff.  HYP-2153's additive/shell labels should therefore be read
 as a compressed all-orders coordinate, not as a low-order moment.
+
+HYP-2161 sharpens the shell side: the `C=2n-1` ledger is a candidate Yoneda
+probe family for the coimage.  The slogan "`2n-1` resonances are the
+cancellation" means the additive-chain and nonunit-shell labels are not
+secondary decorations; they are the first finite arithmetic presentation of the
+all-orders `p_0` cancellation.
 
 HYP-2156 is the companion covering-depth/entropy audit.  It proves the same
 first-moment law, treats `p_0=0` as tight circular-arc cover, and adds the
@@ -289,4 +296,4 @@ the collapse family, not proof of endpoint protection itself.
 `07-reflections/lrc-coimage-fundamentality-made-rigorous-s599.md`,
 HYP-1802, HYP-1810, HYP-2084, HYP-2135, HYP-2138, HYP-2114,
 HYP-2146, HYP-2151, HYP-2152, HYP-2154, HYP-2155, HYP-2156,
-HYP-2157, THM-401, THM-406.
+HYP-2157, HYP-2161, THM-401, THM-406.

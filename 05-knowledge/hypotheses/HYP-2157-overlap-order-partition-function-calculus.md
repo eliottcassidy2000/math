@@ -14,6 +14,7 @@ related:
   - HYP-2154
   - HYP-2155
   - HYP-2156
+  - HYP-2161
   - THM-002
   - THM-401
   - THM-406
@@ -186,10 +187,16 @@ when the retained object still decides the predicate or yields a certificate.
    all-orders certificate for the `p_0` collapse branch, rather than a low-order
    density estimate.
 
+HYP-2161 sharpens step 5: the `C=2n-1` shell/lift/CRT ledger should be tested as
+a Yoneda-style conservative probe family for the coimage.  In that reading,
+"`2n-1` resonances are the cancellation" means the nonzero relation-lattice
+corrections that cancel the free `p_0` term are first finitely visible through
+the THM-401 shell probes.
+
 ## See
 
 HYP-2142, HYP-2144, HYP-2146, HYP-2151, HYP-2152, HYP-2153,
-HYP-2154, HYP-2155, HYP-2156, THM-002, THM-406,
+HYP-2154, HYP-2155, HYP-2156, HYP-2161, THM-002, THM-406,
 `05-knowledge/hypotheses/HYP-2153-lrc-p0-collapse-additive-chains.md`,
 `01-canon/theorems/THM-002-ocf.md`,
 `01-canon/theorems/THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md`.
