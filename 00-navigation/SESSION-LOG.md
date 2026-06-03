@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-06-03-S588 - exp/helix & the hyperoperation tower: the worry-set is CYCLOTOMIC (primitive roots); hardness INVERTS the hyperoperation level (HYP-2130)
+
+**Account:** Opus (remote-control, v1410-1). **User:** understand exponentiation and tetration; remember the complex plane is not a plane but a helix.
+**exp = the homomorphism (ℝ,+)→(circle,×):** e^{2πi(v+w)t}=e^{2πi vt}·e^{2πi wt}. Runners are HELICES (winding v_i); exp wraps the time-line onto the circle, so the complex "plane" of times is a HELIX (the universal cover / log Riemann surface). The two sides of every recent session = the two sides of exp: ADDITION (line; +2 ladder, augmentation THM-400, staircase/gnomons S586, arc-flip even-parity S587) vs MULTIPLICATION (circle; ×2 doubling, unit orbit (ℤ/n)* HYP-2124, cyclotomic clock, Rédei H odd-parity S587).
+**WORRY-SET IS CYCLOTOMIC (verified n=7,12,14):** AP lonely at j/n ⟺ gcd(j,n)=1 ⟺ e^{2πi j/n} is a PRIMITIVE n-th root; the witness set = μ_n^× = roots of Φ_n = Galois orbit (ℤ/n)*. Static rigidity (HYP-2124) = cyclotomic rigidity; worry-modulus 2n−1=√(8 C(n,2)+1) (S586) the companion shell.
+**HARDNESS INVERTS THE HYPEROPERATION LEVEL (verified):** additive AP (level 1, densest) M−δ=0 (unique hardest, tight); geometric 2^i +0.17..0.21; lacunary 3^i +0.33..0.38; tetration (hyper-lacunary, S551) trivial. **The conjecture's entire difficulty is the BOTTOM rung — addition; higher rungs (^,^^) just measure sparsity = free.** The hyperoperation ladder = iterated exp; LRC sits at the first exp; the 2-adic doubling tower (S579)=×2 rung; flip-count 2^((n-2)/2) & tiling space 2^{C(n-1,2)} = the ^ rung.
+**HYP H (cyclotomic/Frobenius):** the worry-set arithmetic = ℚ(ζ_n), Galois (ℤ/n)*; the n=2q obstruction = ramification at 2 (the even prime); the ×2-fragmentation (S585) = Frobenius-at-2 failing to act on μ_n^× when 2|n; n=14 residual = the 2-ramified part of ℚ(ζ_14). Files: 07-reflections/lrc-exp-the-helix-and-the-hyperoperation-tower-s588.md; 04-computation/lrc_hyperoperation_helix_s588.py (+.out); HYP-2130.
+
 ## opus-2026-06-03-S587 - Tournament PARITY sectors: Rédei odd / flip even / self-converse odd; addition certifies multiplication; the LRC worry-set is the ODD (self-converse) sector (HYP-2129)
 
 **Account:** Opus (remote-control, v1410-1). **User:** tournaments encode even/odd & mult/add; HP count always odd; flipping an arc changes it by even; merged chiral nodes have even tilings, self-converse odd.
