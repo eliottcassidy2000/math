@@ -1,0 +1,59 @@
+LRC tournament-computation speedup roadmap (S583)
+Scores: certificate_safety, proof_payoff, algorithmic_leverage, -cost, maturity.
+
+Priority order
+ 1. Cprime_gate_tournament_calculus      priority=37 key=(5, 5, 5, -3, 5) source=THM-398, HYP-2105/2108/2112, lrc_n14_certificate_calculus_s580.py, lrc_circuit_to_gap_functional_s576.py
+    preserves: proof obligations, residual gates, Phi/P gap functionals, and named exits
+    destroys:  fine speed realization labels unless endpoint owners are carried
+    next:      Compile gates into a decision DAG whose terminal middle circuits call Phi(C)/P(S).
+ 2. observer_source_marked_reachability  priority=36 key=(5, 5, 4, -2, 5) source=THM-381, lrc_observer_source_tournament_s511.py
+    preserves: exact LRC predicate: observer lonely iff marked observer is a source
+    destroys:  continuous time geometry after cell/class projection
+    next:      Build a marked-class transition automaton with source targets precomputed.
+ 3. goodcut_SCC_protection_core          priority=31 key=(4, 4, 4, -2, 5) source=THM-354, THM-395, good-cut-count.md, tournament_tda.py
+    preserves: endpoint-protection core shape via SCC defect and backward-wedge debt
+    destroys:  arithmetic labels on protector intervals unless attached separately
+    next:      Attach SCC/private-leaf peeling to endpoint-owner and pressure graphs.
+ 4. threshold_decorated_quotient_stack   priority=29 key=(4, 4, 4, -3, 4) source=lrc_restricted_tournament_mappings_s535.py, lrc_section_boundary_functors_s539.py
+    preserves: good-only class fibers after observer/source/gap/threshold labels
+    destroys:  purity if labels are dropped; raw phase classes mix good and bad
+    next:      Use good-only colored fibers as fast certificate targets before exact search.
+ 5. three_state_middle_automata          priority=27 key=(3, 5, 4, -3, 3) source=HYP-2109, tournament_three_state_automaton_s582.py
+    preserves: left/right owner exits and middle wall survival before projection
+    destroys:  metric margin unless M cells keep length/residue labels
+    next:      Make endpoint-owner and residue cells emit L/M/R event words.
+ 6. Burnside_restricted_orbit_counts     priority=27 key=(3, 4, 5, -4, 4) source=HYP-2097, HYP-2099, A000568/Burnside quotient scripts
+    preserves: symmetry quotient counts and orbit representatives
+    destroys:  endpoint/pair certificates until labels are reattached
+    next:      Refine A000568(13)->round316->merged190->fixed64 with owner labels.
+ 7. A2_iso_fingerprint_lookup            priority=27 key=(3, 3, 5, -2, 4) source=fractal-isomorphism-via-a2.md, a2_applications_s339.py
+    preserves: tournament isomorphism class through n<=9; strong hash beyond
+    destroys:  proof certainty beyond verified range unless backed by canonical fallback
+    next:      Use sorted A^2 rows as first-pass cache key for LRC quotient walks.
+ 8. cheap_TDA_prefilter                  priority=24 key=(2, 3, 4, -1, 5) source=tournament_tda.py, tournament_tda_residue_features_s355.out
+    preserves: score, c3, SCC defect, residue rank, Omega packet summaries
+    destroys:  the LRC threshold predicate; cannot certify alone
+    next:      Emit LRC JSON fingerprints for each quotient cell and rank residuals.
+ 9. near_transitive_perturbation_DP      priority=22 key=(2, 3, 5, -3, 3) source=applications-probe-2026-05-30.md, algorithmic_breakthroughs_s90ai.out
+    preserves: small upset set relative to a base order or tie-wall perturbation
+    destroys:  global class exactness when the upset set is not small
+    next:      Parameterize AP/Vstar/tie-wall neighborhoods by upset set k and update locally.
+
+Tournament Analysis fingerprint on speedup engines
+  vertices: speedup engines
+  observable: (certificate_safety, proof_payoff, leverage, -cost, maturity)
+  switch: lexicographically larger observable beats smaller
+  tie Hamiltonian path: declaration order
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed 3-cycles: 0
+  SCCs: [('cheap_TDA_prefilter',), ('near_transitive_perturbation_DP',), ('A2_iso_fingerprint_lookup',), ('Burnside_restricted_orbit_counts',), ('three_state_middle_automata',), ('threshold_decorated_quotient_stack',), ('goodcut_SCC_protection_core',), ('observer_source_marked_reachability',), ('Cprime_gate_tournament_calculus',)]
+  Hamiltonian path count: 1
+  Hamiltonian path examples: [('Cprime_gate_tournament_calculus', 'observer_source_marked_reachability', 'goodcut_SCC_protection_core', 'threshold_decorated_quotient_stack', 'three_state_middle_automata', 'Burnside_restricted_orbit_counts', 'A2_iso_fingerprint_lookup', 'near_transitive_perturbation_DP', 'cheap_TDA_prefilter')]
+
+Recommended implementation stack
+  1. exact source-marked reachability target (THM-381)
+  2. certificate-gate DAG with Cprime/Phi/P(S) terminal calls (THM-398/HYP-2112/HYP-2108)
+  3. A^2 cache for small quotient-class lookup, canonical fallback outside range
+  4. SCC/good-cut/private-leaf peeling on endpoint-owner proof graphs
+  5. L/M/R middle automata so only live middle cells receive CRT/metric detail
+  6. threshold-colored section/fiber pre-sieves before exact interval search

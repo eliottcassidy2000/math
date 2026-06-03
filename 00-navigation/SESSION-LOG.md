@@ -8,6 +8,14 @@
 **LEMMA G (PROVED):** G(v):=μ(safe set of S=S'∪{v}) = Φ(C), exactly. **Verified Φ==μ(safe) 900/900 each n=6..14, zero error.**
 **SIGN→VALUE:** each φ_i≥0 is a ReLU ramp (poke-out of the phase-interval beyond B); φ_i>0 ⟺ the i-th P-term>0; Φ=Σφ_i = exact uncovered measure. Φ>0 ⟺ loose AND Φ gives the exact gap (P only gave the sign).
 **KERNEL:** ker Φ = {Φ=0} = {every φ_i=0} = TIGHT/worry-set. So **C' ⟺ ker Φ contains no multiple-of-n config ⟺ Φ>0 for every n|v** — a sum-of-ReLU optimisation, not "no counterexample in a box." vs S581: their peeling Lemmas E/F (+B'/C) prove φ_i>0 for one component (which/why), covering 100% of sampled mult-of-14; Φ computes the exact Σφ_i (how much) — complementary. Renamed my lemma to Lemma G / §4.95 to avoid collision with S581's Lemmas E/F. Folded into THM-398. Files: 07-reflections/lrc-circuit-to-gap-functional-G-equals-Phi-s576.md; THM-398 (§4.95); 04-computation/lrc_circuit_to_gap_functional_s576.py (+.out); HYP-2112.
+## codex-2026-06-03-S583 - Tournament-computation speedups for LRC (HYP-2113)
+
+**Account:** Codex (GPT-5). **User prompt:** find tournament-related computations and speedups that can help solve LRC further; be creative.
+**Repo archaeology:** Read the exact observer-source theorem (THM-381), restricted quotient/fiber audits (S535), section/boundary functors (S539), certificate calculus (S580), three-state automata (S582), good-cut/SCC and backward-wedge records (THM-354/THM-395), `tournament_tda.py`, `A^2` isomorphism material, and near-transitive speedup notes.
+**Computation:** Added `04-computation/lrc_tournament_speedup_roadmap_s583.py` and stored `05-knowledge/results/lrc_tournament_speedup_roadmap_s583.out`. The script ranks nine reusable engines by certificate safety, algorithmic leverage, proof payoff, implementation cost, and maturity, then runs Tournament Analysis on the engines themselves.
+**Findings:** the ranked stack is: Cprime gate calculus; exact observer-source marked reachability; SCC/good-cut protection core; threshold-decorated quotient stack; three-state middle automata; Burnside restricted orbits; `A^2` lookup; cheap TDA prefilter; near-transitive perturbation DP. The engine meta-tournament is transitive with score histogram `{0:1,...,8:1}`, zero directed 3-cycles, singleton SCCs, and one Hamiltonian path.
+**Synthesis:** tournament computation helps LRC only when the quotient preserves the right predicate. Raw phase classes are heuristics and can mix lonely/non-lonely states; the safe payload is observer marks, threshold colors, endpoint-owner/proof-obligation labels, and terminal `M` middle-state labels. After rebasing over Opus S576/HYP-2112, the top Cprime gate now calls the exact `Phi/P(S)` gap functional before any raw residual search; after S577, additive 3-term folds become summand-graph shield exits. The proposed next build is `lrc_marked_source_speedup_stack.py`, routing event cells through source-marked/threshold-colored classes, `A^2` cache, SCC and middle-state features, Cprime gates, then exact CRT/interval work only on labelled residuals.
+**Artifacts:** HYP-2113; `07-reflections/lrc-tournament-computation-speedups-s583.md`; `04-computation/lrc_tournament_speedup_roadmap_s583.py` (+.out); T659; concept-map row.
 
 ## codex-2026-06-03-S582 - Tournament edges as left-middle-right pair automata (HYP-2109)
 
@@ -19,8 +27,6 @@
 **Artifacts:** HYP-2109; `07-reflections/tournament-three-state-automaton-left-middle-right-s582.md`; `04-computation/tournament_three_state_automaton_s582.py` (+.out); T658; concept-map row.
 
 ## opus-2026-06-03-S575 - Endpoint-cover circuit positivity: exact criterion (Lemma D) + the functional P(S) (P>0 ⟺ loose), verified 100%; a PROVED summed corollary (HYP-2108)
-## opus-2026-06-03-S575 - Endpoint-cover circuit positivity: exact criterion (Lemma D) + the functional P(S) (P>0 ⟺ loose), verified 100%; a PROVED summed corollary (HYP-2110)
-
 **Account:** Opus (remote-control, v1410-1). **User prompt:** work on endpoint cover circuit positivity.
 **LEMMA D (PROVED, verified 100% n=6..14):** for a component C_i=(a_i,b_i) of G(S') (midpoint m_i, length l_i), v=nw the multiple: C_i⊆D_v ⟺ ∃j∈ℤ with ‖v a_i−j‖≤1/n AND ‖v b_i−j‖≤1/n (both endpoint v-phases near ONE integer) ⟺ **‖v m_i‖ ≤ 1/n − (v/2) l_i**. So S TIGHT ⟺ every component satisfies it.
 **CIRCUIT:** the M component arc-indices j_i wind once (Σ(j_{i+1}−j_i)=v) — one integer v must SIMULTANEOUSLY bring all M midpoints within 1/n phase of an arc centre j/v; a closed circuit, not M separate problems.
