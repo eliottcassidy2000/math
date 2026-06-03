@@ -17,16 +17,20 @@ metadata:
 |---|---|---|----|------------|
 | 7 | 14 | **562685** | 42 | ✓ |
 | 8 | 16 | **11222321** | 56 | ✓ |
+| 9 | 18 | **262755369** | 72 | ✓ |
+| 10 | 20 | **7110764837** | 90 | ✓ |
 
 Previously known (INV-190): 5, 29, 233, 2489, 33773 for k=2..6.
 
-Full sequence for k=2..8: **5, 29, 233, 2489, 33773, 562685, 11222321**
+Full sequence for k=2..10: **5, 29, 233, 2489, 33773, 562685, 11222321, 262755369, 7110764837**
+
+**k=9 and k=10 added by monad-compute-2026-06-02** (`04-computation/staircase_allzero_k9_s_monad.py`, optimized flat-array Held-Karp; reproduces k=2..8 exactly). c3=k(k-1) holds through k=10 (72, 90). The growth ratio H(k)/H(k-1) increases by a slowly-accelerating increment (~+0.18 per step on top of ~+3): 23.41 (k=9), 27.06 (k=10).
 
 ## Key facts
 
 - c3(k) = k(k-1) confirmed through k=8 (the prior formula from INV-190 holds)
 - Score sequence for k=7: [1, 2, 3, 4, 5, 6, 6, 7, 7, 8, 9, 10, 11, 12] — near-regular
-- Growth ratios: 5.80, 8.03, 10.68, 13.57, 16.66, 19.94 (no simple pattern found)
+- Growth ratios: 5.80, 8.03, 10.68, 13.57, 16.66, 19.94, 23.41, 27.06 (increment ≈ +3 per step, slowly accelerating — consistent with super-exponential growth, no closed ratio)
 - No order-2 linear recurrence exists
 - No order-3 linear recurrence (Gaussian elimination confirms non-existence)
 - Markov equation x²+y²+z² = 3xyz FAILS for all consecutive triples (LHS-RHS < 0 and growing rapidly); 5,29,233 being Markov numbers is a coincidence for small k

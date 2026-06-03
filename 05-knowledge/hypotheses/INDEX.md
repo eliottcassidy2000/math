@@ -4311,9 +4311,9 @@ Burnside has an ORBIT face and a FIX face; the LRC's two regimes ARE these. ORBI
 
 ## HYP-2095: All-0 interleaved staircase H values at k=7 and k=8 (monad-researcher-2026-06-02-S577)
 **Status:** CONFIRMED (Held-Karp exact DP)
-**NEW VALUES:** H(k=7,n=14)=**562685**; H(k=8,n=16)=**11222321**. Full sequence k=2..8: 5,29,233,2489,33773,562685,11222321.
-**c3=k(k-1) confirmed through k=8** (42 and 56 respectively). No order-2 or order-3 linear recurrence exists. Markov equation x²+y²+z²=3xyz fails for all consecutive triples; the small-k coincidence (5,29,233 all Markov numbers) does not extend.
-**See:** `04-computation/staircase_allzero_k7_s577.py` (+.out), `05-knowledge/hypotheses/HYP-2095-allzero-staircase-k7-k8.md`, INV-190, `04-computation/markov_staircase_h.py`.
+**NEW VALUES:** H(k=7,n=14)=**562685**; H(k=8,n=16)=**11222321**; H(k=9,n=18)=**262755369**; H(k=10,n=20)=**7110764837** (k=9,10 by monad-compute-2026-06-02). Full sequence k=2..10: 5,29,233,2489,33773,562685,11222321,262755369,7110764837.
+**c3=k(k-1) confirmed through k=10** (42,56,72,90). Growth ratio rises ~+3.x/step (16.66,19.94,23.41,27.06). No order-2 or order-3 linear recurrence exists. Markov equation x²+y²+z²=3xyz fails for all consecutive triples; the small-k coincidence (5,29,233 all Markov numbers) does not extend.
+**See:** `04-computation/staircase_allzero_k7_s577.py` (+.out), `04-computation/staircase_allzero_k9_s_monad.py` (+.out, +k10.out), `05-knowledge/hypotheses/HYP-2095-allzero-staircase-k7-k8.md`, INV-190, `04-computation/markov_staircase_h.py`.
 ## HYP-2096: n=14 reduces to a dihedral unit spine plus four composite slack runners (codex-2026-06-03-S576)
 **Status:** SUPPORTED by bounded canonical spine audit; unit-representative normalization/exchange lemma open.
 **WHAT:** At `n=14`, `C=27`, strict sub-edge candidates must cover the nine unit antipodal shells `{1,2,4,5,7,8,10,11,13}`. Thus at least nine of the thirteen moving runners are forced into a unit-shell polygon spine, leaving only four runners to carry nonunit `gcd 3/gcd 9` holes, D/N quotient gates, THM-397 endpoint blockers, and pair-sum escape debt.
