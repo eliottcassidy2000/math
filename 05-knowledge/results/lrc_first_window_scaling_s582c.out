@@ -1,0 +1,16 @@
+========================================================================
+FIRST-WINDOW scaling: smallest lonely t0, as t0*n, over configs (S556o)
+========================================================================
+  n= 8: configs=150  first-lonely t0*n:  median=0.214  max=1.354  frac(<1)=0.88  AP=1.0  none-in-(0,6/n)=0
+  n=10: configs=150  first-lonely t0*n:  median=0.212  max=1.457  frac(<1)=0.85  AP=1.0  none-in-(0,6/n)=0
+  n=12: configs=150  first-lonely t0*n:  median=0.210  max=1.370  frac(<1)=0.86  AP=1.0  none-in-(0,6/n)=0
+  n=14: configs=150  first-lonely t0*n:  median=0.250  max=1.295  frac(<1)=0.86  AP=1.0  none-in-(0,6/n)=0
+
+========================================================================
+READING
+========================================================================
+  The AP (tight wall) is lonely first at t0*n = 1 (=t=1/n). If every off-wall config has
+  first-lonely t0*n bounded by an absolute c (and none are 'none-in-window'), the LRC lonely
+  time always lives in (0, c/n) -- a bounded window. max(t0*n) is the empirical c; a small,
+  n-stable c supports localizing the proof to a finite structured search in the first window.
+  'none-in-window' configs (if any) would be the hard near-wall cases needing a wider C.
