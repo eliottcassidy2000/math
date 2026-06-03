@@ -1,0 +1,42 @@
+============================================================================================
+S593  rigidity: local fixed-point pinning vs global symmetry cascade (LRC witness)
+============================================================================================
+
+[1] TIGHT (symmetric) vs SAFE (generic): binding-set size & local rigidity at the witness
+  AP {1..6}              k= 6 G=0.1429 δ=0.1429 margin=-0.0000 TIGHT | binding= 2 (+1 −1 apex0) localrigid=Y | 3term= 9 energy=146
+  AP {1..7}              k= 7 G=0.1250 δ=0.1250 margin=+0.0000 TIGHT | binding= 2 (+1 −1 apex0) localrigid=Y | 3term=12 energy=231
+  AP {1..13} (n=14)      k=13 G=0.0714 δ=0.0714 margin=-0.0000 TIGHT | binding= 2 (+1 −1 apex0) localrigid=Y | 3term=42 energy=1469
+  transl {7..12}         k= 6 G=0.3684 δ=0.1429 margin=+0.2255 safe  | binding= 2 (+1 −1 apex0) localrigid=Y | 3term= 0 energy=146
+  transl {8..14}         k= 7 G=0.3636 δ=0.1250 margin=+0.2386 safe  | binding= 2 (+1 −1 apex0) localrigid=Y | 3term= 0 energy=231
+  geometric 1,2,4..      k= 6 G=0.3333 δ=0.1429 margin=+0.1905 safe  | binding= 6 (+3 −3 apex0) localrigid=Y | 3term= 5 energy=66
+  Sidon 1,2,5,11,22      k= 5 G=0.3333 δ=0.1667 margin=+0.1667 safe  | binding= 5 (+2 −3 apex0) localrigid=Y | 3term= 2 energy=45
+  generic A              k= 6 G=0.5000 δ=0.1429 margin=+0.3571 safe  | binding= 6 (+0 −0 apex6) localrigid=Y | 3term= 0 energy=86
+  generic B              k= 7 G=0.3333 δ=0.1250 margin=+0.2083 safe  | binding= 7 (+5 −2 apex0) localrigid=Y | 3term= 0 energy=111
+
+[2] THE CASCADE: do binding runners form a SYMMETRY ORBIT? (reflection x→−x mod n)
+    tight/symmetric configs should have their pins replicate through symmetry.
+    AP {1..6}        n= 7 speeds±-sym mod n=True  binders=[3, 4]  binders ±-closed mod n=True
+    AP {1..13}       n=14 speeds±-sym mod n=True  binders=[5, 9]  binders ±-closed mod n=True
+    transl {7..12}   n= 7 speeds±-sym mod n=False  binders=[7, 12]  binders ±-closed mod n=False
+    generic A        n= 7 speeds±-sym mod n=False  binders=[3, 5, 11, 17, 29, 41]  binders ±-closed mod n=False
+
+[3] THE APEX as reflection fixed point (even n: runner n/2 sits at frac=1/2)
+    n=6: apex=3, frac(apex·t*)=0.5000 (→ reflection fixed pt 1/2), ‖apex·t*‖=0.5000 (max possible) — the safest spot, a non-smooth pin
+    n=10: apex=5, frac(apex·t*)=0.5000 (→ reflection fixed pt 1/2), ‖apex·t*‖=0.5000 (max possible) — the safest spot, a non-smooth pin
+    n=14: apex=7, frac(apex·t*)=0.5000 (→ reflection fixed pt 1/2), ‖apex·t*‖=0.5000 (max possible) — the safest spot, a non-smooth pin
+
+[4] SUMMARY — the rigidity duality
+    TIGHT configs: avg binding=2.0, avg 3term=21.0, all local-rigid=True
+    SAFE  configs: avg binding=4.7, avg 3term=1.2
+    => symmetry (3-term/AP) ⇒ large binding orbit ⇒ witness-rigid (tight);
+       asymmetry ⇒ small generic binding ⇒ witness-flexible (safe).
+
+[5] RIGOR: is 'binding set closed under a symmetry of the speed set' the tight discriminator?
+    Test reflection x→a−x and dilation x→cx mod n that fix the speed set, check binders orbit-closed.
+    AP {1..6} (tight)          n= 7 G=0.1429 δ=0.1429 TIGHT | #speed-syms=5 binders=[3, 4] closed under [(6, 0)]
+    sporadic {1,3,4,7} n=5     n= 5 G=0.2000 δ=0.2000 TIGHT | #speed-syms=3 binders=[2, 3] closed under [(4, 0)]
+    sporadic {1,3,4,5,9} n=6   n= 6 G=0.1667 δ=0.1667 TIGHT | #speed-syms=1 binders=[1, 5] closed under NONE
+    transl {7..12} (safe)      n= 7 G=0.3684 δ=0.1429 safe  | #speed-syms=5 binders=[0, 5] closed under [(6, 5)]
+    generic A (safe)           n= 7 G=0.5000 δ=0.1429 safe  | #speed-syms=1 binders=[1, 3, 4, 5, 6] closed under [(6, 2)]
+    => tight configs: binding set is invariant under a nontrivial speed-set symmetry (a cascade orbit);
+       safe configs: no nontrivial symmetry, binders generic. Local pin (apex/fixed pt) vs global orbit.
