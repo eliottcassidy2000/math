@@ -61,6 +61,16 @@ isolated into a single structural statement about the distinguished runner that
 vanishes on the whole `n`-clock. (Verified: 0 tight-with-multiple over exhaustive
 small boxes and large samples, `n = 4..14`, every multiplier size — HYP-2102.)
 
+**Remark (the Vitali handoff — S551o).** This split *is* the "Vitali wall" of S551o:
+LRC = (positive-measure bulk, settled by *measure*) ∪ (measure-zero core, settled by
+*construction*), with the Vitali set marking the handoff. THM-398 *locates the
+handoff*: it is the equation **`n | v`**. Configs with `n ∤ v` are handled by Lemma A
+— the `t=1/n` construction, which is *measure-blind* and so reaches the measure-zero
+core (the worry-set has no multiple of `n`, S564). Configs with `n | v` are pushed to
+the *measure* side (C′). On that side the danger of `v=nw` is a **periodic,
+bounded-eccentricity arc family** (a genuine Vitali cover), so the **Vitali covering
+lemma / Lebesgue density theorem** is the natural tool — see §3–§4 and HYP-2104.
+
 ## 3. Lemma B (the dominance-dodge): a partial proof of C′ — **and more**
 
 For a speed set `S` and `v ∈ S` write `V'(v) = max(S \ {v})`.
@@ -113,6 +123,14 @@ Inspecting the proof, Lemma B only used that *some* component interval of `G(S')
 > **Criterion B′.** If `G(S\{v})` has a connected component of length `> 2ρ = 2/(nv)`,
 > then `S` is loose. *(Proof identical: that long interval cannot sit inside one
 > `v`-arc, so it meets `G(S)`.)*
+
+**Vitali-covering iff (HYP-2104).** Because `G(S\{v})` is a finite union of intervals
+and `D_v`'s gaps are open and nonempty, *an interval of `G(S\{v})` lies in `D_v` iff
+it fits inside a single arc*. So Criterion B′ is the Vitali-covering direction, and a
+multiple-of-`n` config is tight (measure-0) *only if* every component of `G(S\{v})` is
+both short **and** arc-aligned. Quantified: B′ already proves looseness for **72%
+(n=6) → 96.8% (n=14)** of multiple-of-`n` configs, and the all-short residual is
+**never tight** (0 across n=6..14) — `lrc_vitali_covering_residual_s573.py`.
 
 This yields the honest **dichotomy** for a multiple-of-`n` config `S` (`v = nw`):
 

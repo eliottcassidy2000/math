@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-03-S573 - The Vitali handoff equation is n|v: THM-398's split IS S551o's Vitali wall; Criterion B' = the Vitali-covering iff (proves 72→97% of C') (HYP-2104)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** see the connection to Vitali; search the repo for inspiration.
+**Found S551o "the Vitali wall"** (oracle): LRC = positive-measure bulk (by MEASURE) ∪ measure-zero core (by CONSTRUCTION); "Vitali marks the handoff — where measure ends, construction begins" — but left the handoff UNLOCATED.
+**THM-398 LOCATES IT: the handoff equation is `n | v`.** No multiple of n ⟹ construction side (t=1/n, measure-BLIND, so it reaches the measure-0 worry-core — which has no multiple of n, S564); n|v ⟹ measure side (C': positive measure). So the two threads (S551o diagnosis + S571/S572 reduction) are ONE theorem, with the abstract Vitali boundary made into a decidable arithmetic equation.
+**TWO VITALIS:** the Vitali SET (S551o) = the boundary (measure can't see the n-point core); the Vitali COVERING lemma / Lebesgue density = the TOOL on the measure side. It APPLIES to n|v because D_v (v=nw) is a periodic bounded-eccentricity arc family (centres k/(nw), radius 1/(n²w), gaps>0) = a genuine Vitali cover; the worry-core is n isolated points {k/n} = no cover structure = measure-blind. The multiple of n is exactly what makes the question Vitali-answerable.
+**CRITERION B' = THE VITALI-COVERING IFF (PROVED):** G(S\{v}) a finite union of intervals + D_v gaps open ⟹ an interval lies in D_v iff it fits one arc (len≤2/(nv)); so S loose ⟸ some component of G(S\{v}) longer than 2/(nv); S tight(measure-0) ⟹ every component short AND arc-aligned. Residual = arc-ALIGNMENT.
+**QUANTIFIED (lrc_vitali_covering_residual_s573.py):** B' proves looseness for 72.4/78.7/88.9/91.5/**96.8%** of mult-of-n configs (n=6/8/10/12/14) — proved fraction GROWS toward the frontier; all-short residual NEVER tight (0 across n=6..14). RESIDUAL (≤3% at n=14): Diophantine alignment (interval centres of G(S\{v}) all 1/(n²w)-close to the 1/(nw)-lattice) — Erdős–Turán/three-distance. Folded a Vitali remark + the iff + coverage into THM-398. Convergent w/ codex-S579 (apex-lift). Files: 07-reflections/lrc-the-vitali-handoff-equation-is-multiple-of-n-s573.md; THM-398 (updated); 04-computation/lrc_vitali_covering_residual_s573.py (+.out); HYP-2104.
+
 ## opus-2026-06-03-S572 - Formalized C' ⟹ LRC as THM-398; formalization surfaced the DOMINANCE dodge (not divisibility), the interval criterion, and the all-short residual (HYP-2103)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** work on formalizing this; let it inspire extensions/improvements.

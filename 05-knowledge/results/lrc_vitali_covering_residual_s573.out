@@ -1,0 +1,6 @@
+Mult-of-n configs: PROVED-by-Criterion-B' (max G(S\v) interval > 2/(n^2 w)) vs residual
+  n= 6: 1199 mult-of-n configs; PROVED by B' (long interval)=868 (72.4%); residual all-short loose=331; all-short tight(measure-0 w/ multiple)=0
+  n= 8: 1199 mult-of-n configs; PROVED by B' (long interval)=944 (78.7%); residual all-short loose=255; all-short tight(measure-0 w/ multiple)=0
+  n=10: 1200 mult-of-n configs; PROVED by B' (long interval)=1067 (88.9%); residual all-short loose=133; all-short tight(measure-0 w/ multiple)=0
+  n=12: 1200 mult-of-n configs; PROVED by B' (long interval)=1098 (91.5%); residual all-short loose=102; all-short tight(measure-0 w/ multiple)=0
+  n=14: 1200 mult-of-n configs; PROVED by B' (long interval)=1161 (96.8%); residual all-short loose=39; all-short tight(measure-0 w/ multiple)=0
