@@ -1,0 +1,14 @@
+========================================================================
+C' EXHAUSTIVE BOX CERTIFICATE -- n=8 completion (monad-compute-S597)
+n=8, B=24 (K=3): every primitive (n-1)-subset of {1..24}
+containing a multiple of 8, tested loose EXACTLY (positivity).
+========================================================================
+    ... scanned 50000 (50000 loose, 0 tight)
+    ... scanned 100000 (100000 loose, 0 tight)
+    ... scanned 150000 (150000 loose, 0 tight)
+    ... scanned 200000 (200000 loose, 0 tight)
+
+n=8 B=24: 229061 configs, 229061 loose, 0 tight  -> PASS
+CERTIFICATE: every primitive multiple-of-8 speed set in the box is
+LOOSE -- 0 exceptions. Combined with the main run, C' is now
+EXHAUSTIVELY certified for n=4,5,6,7,8 within the listed boxes.
