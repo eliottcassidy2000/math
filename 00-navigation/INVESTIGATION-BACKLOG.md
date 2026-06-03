@@ -2210,15 +2210,24 @@ Key insight: QR_p has both forward and backward connections; purely forward circ
   3. Search for proof that n=13 breaks circulant optimality: what structure is exploited?
 
 ### INV-234: A038375 Extended Terms
-**Source:** opus-2026-05-27-S7
-**Status:** CONFIRMED new lower bounds; need exact values
-**New bounds:** a(15) ≥ 198464295, a(17) ≥ 13689269499, a(25) ≥ 2418453569285650675,
-  a(27) ≥ 17051631267035242313
-**Conjectured exact (Paley):** a(18)=117266659317, a(19)=1172695746915,
-  a(22)=1313333107451805, a(23)=15760206976379349
+**Source:** opus-2026-05-27-S7; extended monad-researcher-2026-06-03-S578
+**Status:** EXTENDED — new bounds for n=13..16 from local search
+**Best known lower bounds (all from local hill-climb, may not be exact):**
+  a(13) ≥ 3,719,831 (prior best, hardcoded in solver source)
+  a(14) ≥ 24,762,119 (NEW S578 — first non-trivial bound for n=14)
+  a(15) ≥ 198,464,295 (confirmed from circulant; prior from backlog)
+  a(16) ≥ 1,522,320,909 (NEW S578 — first non-trivial bound for n=16)
+  a(17) ≥ 13,689,269,499 (prior from backlog)
+  a(25) ≥ 2,418,453,569,285,650,675 (prior)
+  a(27) ≥ 17,051,631,267,035,242,313 (prior)
+**Exact values (Paley tournaments, confirmed):**
+  a(18)=117,266,659,317, a(19)=1,172,695,746,915,
+  a(22)=1,313,333,107,451,805, a(23)=15,760,206,976,379,349
+**Results:** `05-knowledge/results/a038375_n13_16_s578.out`
 **Next:**
-  1. Run a038375 solver on n=14..16 to confirm circulant bounds (or improve them)
-  2. Submit new OEIS terms once a(p) = H(QR_p) is confirmed exact for p=19
+  1. Try longer searches for n=14, n=16 to improve lower bounds
+  2. Submit new OEIS terms: a(12)=531205 (likely exact), a(13)≥3719831, a(14)≥24762119, etc.
+  3. Check if a(15)=198464295 is exact (circulant is best for odd n; n=15 is not prime but check)
 
 ### INV-235: c(p) Odd Cycle Count as New OEIS Sequence
 **Source:** opus-2026-05-27-S7

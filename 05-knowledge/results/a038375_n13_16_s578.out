@@ -1,0 +1,75 @@
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+n=13: searching (60s budget)...
+  n=13  hp=3711175      (0.1s)
+a(13) = 3711175         [60.1s] NEW
+  best_adj: 126 252 504 1008 2016 4032 8064 7937 7683 7175 6159 4127 63
+
+n=14: searching (60s budget)...
+  n=14  hp=24680453     (0.4s)
+  n=14  hp=24762119     (0.9s)
+a(14) = 24762119        [60.3s] NEW
+  best_adj: 8318 8444 2544 1012 2016 8128 8064 16129 15875 14343 6671 12315 8223 1148
+
+n=15: searching (60s budget)...
+  n=15  hp=198464295    (0.8s)
+a(15) = 198464295       [60.7s] NEW
+  best_adj: 254 508 1016 2032 4064 8128 16256 32512 32257 31747 30727 28687 24607 16447 127
+
+n=16: searching (60s budget)...
+  n=16  hp=1518271809   (1.9s)
+a(16) = 1518271809      [64.1s] NEW
+  best_adj: 510 1020 1016 4080 8160 12224 30592 65280 65024 64513 63495 61511 57391 49183 32831 127
+
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+n=13: searching (300s budget)...
+  n=13  hp=3711175      (0.1s)
+  n=13  hp=3711343      restart=558   (161.7s)
+a(13) = 3711343         [300.1s] NEW
+  best_adj: 3718 3476 7968 2375 621 6283 4647 5212 1265 4522 2680 5072 1307
+
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+n=14: searching (180s budget)...
+  n=14  hp=24634639     (0.4s)
+  n=14  hp=24720585     (0.7s)
+a(14) = 24720585        [180.7s] NEW
+  best_adj: 2174 8444 4600 2032 2016 4032 8064 16129 15875 15367 14343 12318 8251 125
+
+n=15: searching (180s budget)...
+  n=15  hp=198464295    (0.9s)
+a(15) = 198464295       [181.2s] NEW
+  best_adj: 254 508 1016 2032 4064 8128 16256 32512 32257 31747 30727 28687 24607 16447 127
+
+n=16: searching (180s budget)...
+  n=16  hp=1521076759   (2.2s)
+  n=16  hp=1522320909   (4.5s)
+a(16) = 1522320909      [180.9s] NEW
+  best_adj: 254 508 2040 4080 4064 16320 16256 32512 65025 64515 63491 61447 57375 49183 32895 255
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+n=13: searching (600s budget)...
+  n=13  hp=3711175      (0.1s)
+  n=13  hp=3717455      restart=783   (222.5s)
+  n=13  hp=3718291      restart=1842  (526.1s)
+a(13) = 3718291         [600.0s] NEW
+  best_adj: 4430 7252 3936 3462 4749 2587 1464 1575 4786 5195 6449 977 2284
+
