@@ -1,0 +1,12 @@
+ADELIC split of the n=14 AP worry-set (n=2*7):
+  clock j=1..13 stratified by gcd(j,14):
+   archimedean WITNESSES (gcd=1, primitive 14th roots, lonely): [1, 3, 5, 9, 11, 13]
+   7-place (gcd=7 -> j=7, the apex, NOT lonely): [7]
+   2-place (gcd=2, the 7th-root shadow, NOT lonely): [2, 4, 6, 8, 10, 12]
+  Frobenius-at-2 (x2 mod 14) on the witnesses:  {1: 2, 3: 6, 5: 10, 9: 4, 11: 8, 13: 12} (all land OUTSIDE the witnesses => 2 ramifies/fragments)
+  cyclotomic field: Q(zeta_14)=Q(zeta_7) (since zeta_2=-1 rational) -- SAME as the prime 7!
+
+Mahler/HEIGHT probe: the AP margin vs a product-of-phases at the witness t=1/n
+  n=7: min phase (margin)=0.1429=1/n; normalized product Prod(n*||v/n||)=3.600e+01
+  n=12: min phase (margin)=0.0833=1/n; normalized product Prod(n*||v/n||)=8.640e+04
+  n=14: min phase (margin)=0.0714=1/n; normalized product Prod(n*||v/n||)=3.629e+06
