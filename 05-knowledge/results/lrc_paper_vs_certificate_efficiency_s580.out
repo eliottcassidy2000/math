@@ -1,0 +1,47 @@
+LRC paper finite-sieve scale vs certificate-clock scale (S580)
+Convention: total n = paper k + 1
+
+PAPER PROOF SCHEDULE
+n  k  |P| p-range   ln(prod P)  ln(B_k)  runtime   diagram
+11 10   61 127-467     342.716  337.634  ~45 min  x2,x2,x2,project; polynomial removes AP
+12 11   76  23-577     435.047  434.485    ~40 h  x2,x2,x2,x2,x3,x3
+13 12   91 167-733     547.381  545.267    ~40 d  x2,x2,x2,project; polynomial removes AP
+
+LOG10 WORK-SCALE COMPARISON
+n  raw sum p^k   exact final ansatz   paper heuristic   cert scan ops   raw->cert   final->cert
+11    27.63    38.05    11.81     4.86      22.77        33.19
+   C=2n-1=21; unit/nonunit shells=6/4; D/U/N=9/6/10; pairs=45; shell transversals=1024
+12    31.27    55.01    13.33     5.26      26.01        49.75
+   C=2n-1=23; unit/nonunit shells=11/0; D/U/N=10/11/11; pairs=55; shell transversals=2048
+13    35.31    48.68    15.10     5.61      29.70        43.06
+   C=2n-1=25; unit/nonunit shells=10/2; D/U/N=11/10/12; pairs=66; shell transversals=4096
+
+KEY LIFT PENALTIES
+n=11: direct c=11 lift costs 2.533e+07 times a c=2 lift for fixed input set (paper avoids it by the odd-prime polynomial method).
+n=12: paper uses composite lift chain x2,x2,x2,x2,x3,x3; certificate clock C=23 is prime, so the repo unit-shell residual is 0.
+n=13: direct c=13 lift costs 5.688e+09 times a c=2 lift for fixed input set (paper avoids it by the odd-prime polynomial method).
+
+THM-398 DODGE-FIRST FILTER
+n  dominance cut       all-short cap at v=n   n-clock safe gap   gap/cap
+11 v > 10*max(other)              0.016529           0.074380      4.50
+12 v > 11*max(other)              0.013889           0.069444      5.00
+13 v > 12*max(other)              0.011834           0.065089      5.50
+   General interval criterion: for any chosen runner v, a component of G(S\{v}) longer than 2/(n*v) certifies looseness.
+   For a multiple v=n*w, the only residual is all-short: every component of G(S\{v}) has length <= 2/(n^2*w).
+
+S573 VITALI SAMPLE FOR THE INTERVAL FILTER
+n  mult-of-n configs proved by B'   all-short loose residual
+ 6                        72.4%                        331
+ 8                        78.7%                        255
+10                        88.9%                        133
+12                        91.5%                        102
+14                        96.8%                         39
+   Sampled all-short tight cases: 0 for every listed n.
+
+INTERPRETATION
+- Paper exactness is prime-fiber exactness: certify J(k,p)=empty for many p.
+- Repo clocks ask for a proof quotient first: n-clock, C=2n-1 shells, pair pinches, D/U/N owners.
+- THM-398 inserts an interval oracle before the quotient scan: long safe components dodge any one runner.
+- S573 identifies n|v as the Vitali handoff; the fallback is arc alignment, not ordinary tuple search.
+- If the certificate quotient is complete, the expensive object is not p^k tuples but at most a few thousand shell/fiber rows plus O(k^2) pair tests.
+- n=12 is the clearest rotated case: paper n=12 is composite, but C=23 is prime, so every antipodal shell is a unit shell.
