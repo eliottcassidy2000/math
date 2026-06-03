@@ -1,0 +1,131 @@
+﻿LRC witness-or-core pipeline (codex-2026-06-03 S570)
+Exact rank-one integer checker: n-clock, pair-sum pinch, antipodes,
+then endpoint-core peel if the cheap primal clocks do not settle the row.
+
+Sample families
+[AP n=14]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  route=n_clock route_time=1/14 route_score=1/14 threshold=1/14
+  exact_M=1/14 exact_witness=1/14 pair_sum_exact=True
+  pair_sum_best=(1/14, 1/14, act=2, q=14) antipode_best=(1/14, 1/14, act=2, q=14)
+  n_clock_best=(1/14, 1/14, act=2, q=14) positive_gap=False boundary_witnesses=6
+  core_endpoints=0 core_intervals=0 core_rounds=15 removed=(7, 42, 24, 32, 28, 12, 8, 4, 4, 4, 4, 2, 2, 2, 2)
+  short_resonances=518 critical_moments=176
+
+[V* sporadic n=14]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  route=n_clock route_time=1/14 route_score=1/14 threshold=1/14
+  exact_M=1/14 exact_witness=1/14 pair_sum_exact=True
+  pair_sum_best=(1/14, 1/14, act=2, q=14) antipode_best=(1/14, 1/14, act=2, q=14)
+  n_clock_best=(1/14, 1/14, act=2, q=14) positive_gap=False boundary_witnesses=6
+  core_endpoints=0 core_intervals=0 core_rounds=16 removed=(7, 46, 32, 32, 30, 14, 12, 4, 4, 2, 6, 4, 2, 2, 2, 2)
+  short_resonances=452 critical_moments=200
+
+[Fibonacci n=14]
+  speeds=(1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377)
+  route=n_clock route_time=1/14 route_score=1/14 threshold=1/14
+  exact_M=13/76 exact_witness=21/76 pair_sum_exact=True
+  pair_sum_best=(21/76, 13/76, act=2, q=76) antipode_best=(49/288, 41/288, act=2, q=288)
+  n_clock_best=(1/14, 1/14, act=4, q=14) positive_gap=True boundary_witnesses=292
+  core_endpoints=0 core_intervals=0 core_rounds=9 removed=(293, 614, 516, 270, 116, 56, 28, 32, 12)
+  short_resonances=114 critical_moments=1936
+
+[Sidon n=14]
+  speeds=(1, 2, 5, 11, 22, 40, 56, 73, 78, 97, 118, 134, 150)
+  route=pair_sum route_time=55/228 route_score=7/38 threshold=1/14
+  exact_M=7/38 exact_witness=55/228 pair_sum_exact=True
+  pair_sum_best=(55/228, 7/38, act=2, q=228) antipode_best=(57/236, 19/118, act=1, q=236)
+  n_clock_best=(1/2, 0, act=8, q=2) positive_gap=True boundary_witnesses=276
+  core_endpoints=0 core_intervals=0 core_rounds=16 removed=(277, 296, 258, 250, 138, 88, 92, 42, 8, 40, 34, 20, 10, 2, 2, 2)
+  short_resonances=86 critical_moments=1558
+
+[random A n=14]
+  speeds=(1, 2, 7, 10, 26, 29, 30, 34, 43, 47, 48, 70, 76)
+  route=pair_sum route_time=19/86 route_score=9/43 threshold=1/14
+  exact_M=9/43 exact_witness=19/86 pair_sum_exact=True
+  pair_sum_best=(19/86, 9/43, act=2, q=86) antipode_best=(19/86, 9/43, act=2, q=86)
+  n_clock_best=(1/2, 0, act=8, q=2) positive_gap=True boundary_witnesses=124
+  core_endpoints=0 core_intervals=0 core_rounds=12 removed=(125, 184, 160, 130, 86, 66, 36, 20, 18, 6, 2, 2)
+  short_resonances=84 critical_moments=834
+
+[random B n=14]
+  speeds=(1, 2, 3, 10, 25, 35, 42, 44, 51, 55, 58, 65, 68)
+  route=pair_sum route_time=19/71 route_score=14/71 threshold=1/14
+  exact_M=14/71 exact_witness=19/71 pair_sum_exact=True
+  pair_sum_best=(19/71, 14/71, act=2, q=71) antipode_best=(31/116, 5/29, act=1, q=116)
+  n_clock_best=(1/2, 0, act=6, q=2) positive_gap=True boundary_witnesses=158
+  core_endpoints=0 core_intervals=0 core_rounds=10 removed=(159, 216, 192, 134, 74, 12, 44, 32, 28, 10)
+  short_resonances=78 critical_moments=900
+
+[near-tight k=6]
+  speeds=(1, 4, 5, 6, 7, 11)
+  route=pair_sum route_time=4/13 route_score=2/13 threshold=1/7
+  exact_M=2/13 exact_witness=4/13 pair_sum_exact=True
+  pair_sum_best=(4/13, 2/13, act=2, q=13) antipode_best=(1/8, 1/8, act=2, q=8)
+  n_clock_best=(1/7, 0, act=1, q=7) positive_gap=True boundary_witnesses=4
+  core_endpoints=0 core_intervals=0 core_rounds=7 removed=(5, 20, 12, 12, 8, 4, 4)
+  short_resonances=40 critical_moments=64
+
+[sporadic n=8]
+  speeds=(1, 4, 5, 6, 7, 11, 13)
+  route=n_clock route_time=3/8 route_score=1/8 threshold=1/8
+  exact_M=1/8 exact_witness=3/8 pair_sum_exact=True
+  pair_sum_best=(3/8, 1/8, act=3, q=8) antipode_best=(3/8, 1/8, act=3, q=8)
+  n_clock_best=(3/8, 1/8, act=3, q=8) positive_gap=False boundary_witnesses=4
+  core_endpoints=0 core_intervals=0 core_rounds=8 removed=(5, 24, 14, 14, 10, 12, 8, 2)
+  short_resonances=54 critical_moments=88
+
+Bounded primitive boxes
+Primitive box k=3, max_speed=20
+  total=997
+  route_hist={'n_clock': 434, 'pair_sum': 563}
+  pair_sum_exact=997/997
+  nonempty_core=0
+  hardest_examples
+    speeds=(1, 2, 3) route=n_clock M=1/4 pair_sum=1/4 core=0 reson=8
+    speeds=(1, 3, 4) route=pair_sum M=2/7 pair_sum=2/7 core=0 reson=6
+    speeds=(1, 2, 4) route=pair_sum M=1/3 pair_sum=1/3 core=0 reson=6
+    speeds=(2, 3, 4) route=pair_sum M=1/3 pair_sum=1/3 core=0 reson=6
+    speeds=(1, 2, 6) route=n_clock M=2/7 pair_sum=2/7 core=0 reson=4
+
+Primitive box k=4, max_speed=16
+  total=1745
+  route_hist={'n_clock': 679, 'pair_sum': 1066}
+  pair_sum_exact=1745/1745
+  nonempty_core=0
+  hardest_examples
+    speeds=(1, 2, 3, 4) route=n_clock M=1/5 pair_sum=1/5 core=0 reson=26
+    speeds=(1, 2, 4, 6) route=n_clock M=1/4 pair_sum=1/4 core=0 reson=22
+    speeds=(1, 2, 3, 5) route=pair_sum M=1/4 pair_sum=1/4 core=0 reson=20
+    speeds=(1, 3, 4, 5) route=pair_sum M=2/9 pair_sum=2/9 core=0 reson=18
+    speeds=(2, 3, 4, 6) route=n_clock M=1/4 pair_sum=1/4 core=0 reson=18
+
+Primitive box k=5, max_speed=13
+  total=1281
+  route_hist={'n_clock': 462, 'pair_sum': 819}
+  pair_sum_exact=1281/1281
+  nonempty_core=0
+  hardest_examples
+    speeds=(1, 2, 3, 4, 5) route=n_clock M=1/6 pair_sum=1/6 core=0 reson=50
+    speeds=(1, 2, 3, 4, 6) route=pair_sum M=1/5 pair_sum=1/5 core=0 reson=48
+    speeds=(1, 2, 4, 6, 8) route=pair_sum M=1/5 pair_sum=1/5 core=0 reson=46
+    speeds=(1, 2, 4, 5, 6) route=pair_sum M=1/5 pair_sum=1/5 core=0 reson=44
+    speeds=(1, 2, 3, 4, 8) route=n_clock M=1/5 pair_sum=1/5 core=0 reson=42
+
+Primitive box k=6, max_speed=11
+  total=462
+  route_hist={'n_clock': 210, 'pair_sum': 252}
+  pair_sum_exact=462/462
+  nonempty_core=0
+  hardest_examples
+    speeds=(1, 2, 3, 4, 5, 6) route=n_clock M=1/7 pair_sum=1/7 core=0 reson=84
+    speeds=(1, 2, 3, 4, 6, 8) route=n_clock M=1/5 pair_sum=1/5 core=0 reson=80
+    speeds=(1, 2, 4, 6, 8, 10) route=n_clock M=1/6 pair_sum=1/6 core=0 reson=78
+    speeds=(1, 2, 3, 4, 5, 8) route=n_clock M=1/6 pair_sum=1/6 core=0 reson=76
+    speeds=(1, 2, 4, 5, 6, 8) route=n_clock M=1/5 pair_sum=1/5 core=0 reson=76
+
+Synthesis
+  1. Pair-sum/antipode candidates appear to recover the exact tropical max M(S).
+  2. The n-clock is the wall witness route for the resonance-maximal tight rows.
+  3. The endpoint core is a dual ledger, not a fallback scalar: if it survives,
+     the checker exports the obstruction packet instead of only a missed witness.

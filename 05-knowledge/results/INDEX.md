@@ -248,6 +248,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `self_converse_families_burnside_s565.py` | [STORED] | One mechanical Burnside engine for all three orientation-reversal families: tournaments (A000568/A002785), oriented graphs (A001174/A005639), digraphs (A000273/A002499). Brute-force verified; resolves A001174 bug in burnside_unified_s28.py. Supports HYP-2078. | `self_converse_families_burnside_s565.out` |
 | `self_complementary_graphs_burnside_s566.py` | [STORED] | Parallel Burnside engine for UNDIRECTED simple graphs: total=A000088, self-complementary=A000171. Swap-override modification: pair-transposition does NOT apply iota for undirected. Verified n=1..40 vs OEIS b-file (0 mismatches). Catches wrong "known" A000171(13): 5765760 → correct 5600. Supports HYP-2080. | `self_complementary_graphs_burnside_s566.out` |
 
+| `lrc_witness_or_core_s570.py` | [STORED] | Exact primal-dual LRC checker: cheap clocks (`n`-clock, pair-sum pinch, antipodes), exact gap fallback, and endpoint-core peel. In audited primitive boxes through `k=6,max_speed=11`, pair-sum/antipode recover exact `M(S)`, route histograms collapse to `{n_clock, pair_sum}`, and every core peels empty. Supports HYP-2082. | `lrc_witness_or_core_s570.out` |
+
 ## Convention for new scripts
 
 1. Save the script in `04-computation/`

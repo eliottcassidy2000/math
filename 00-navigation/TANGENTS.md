@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T647** #lrc #maximin #pinch #spectral-gap #endpoint-core #prime-gears | certainty: breakthrough-route synthesis | source: codex-2026-06-03-S570
+LRC's special structure is a 1D periodic maximin: the lower envelope of tents has exact active-set breakpoints. Repo leverage suggests a theorem route: pair-pinch moments collapse time; mod `(2n-1)` antipodal witnesses prove an off-stratum margin; CRT n-gears classify equality; endpoint-protection cores rule out sub-tight covers. Companion script `04-computation/lrc_witness_or_core_s570.py` returns primal route plus endpoint-core ledger; next audit should add active-pair, mod-27, multiple-of-14, and n-clock classifications. See `07-reflections/lrc-1d-periodic-maximin-breakthrough-route-s570.md`.
+
 **T646** #lrc #safe-box #connection-atlas #anti-bohr #pinch-core #resonance | certainty: long repo archaeology / synthesis | source: codex-2026-06-03-S569
 Repo search collapses many LRC safe-box tangents into one primal-dual architecture: closure/rank and resonance dismiss or sort regimes; pair-sum pinch gives cheap primal witnesses; anti-Bohr endpoint protection gives dual cores; p-adic, entropy, symbolic, sector, braid, and coding lenses are useful when they preserve endpoint labels. Next scripts: witness-or-core, resonance-dual-code, sector-sandpile, vineyard stability, endpoint normal form. See `07-reflections/lrc-safe-box-connection-atlas-s569.md`.
 

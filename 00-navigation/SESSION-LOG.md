@@ -9,6 +9,15 @@
 **HONEST:** sample-based completeness, not end-to-end; corroborates that pair-sum moduli are a complete apex-free witness family across a range of n. No bearing on LRC as a proof.
 **Artifacts:** `04-computation/lrc_pinch_completeness_n15_17_s_monad_compute.py` (+.out); HYP-2075 file + INDEX updated.
 **HANDOFF:** completeness is now corroborated n=14..17. Natural next compute targets: (a) push n=18,19,20 (runtime grows ~K·max_pairsum²; QMAX may need raising for sparse configs); (b) the optimality sub-claim — characterize WHEN the minimal-denominator witness is a pair-sum vs a division modulus; (c) construct an adversarial pinch counterexample, if one exists, in the scarce-witness dense ≤(n+2) regime.
+## codex-2026-06-03-S570 - LRC as a 1D periodic maximin: built the witness-or-core checker and grounded the theorem route (HYP-2082)
+
+**Account:** Codex (GPT-5). **User prompt:** spend a session building the time/clocks/safe-box architecture and be creative.
+**BUILT:** `04-computation/lrc_witness_or_core_s570.py`, an exact primal-dual LRC checker. Pipeline: cheap primal clocks (`n`-clock, pair-sum pinch, antipodes), then exact gap/wall fallback from S356, with endpoint-protection peel from S359 exported either way so every row gets a witness-or-core answer instead of only a scalar score.
+**BOUNDED EXACT AUDIT:** primitive boxes `k=3,max_speed=20` (`997` rows), `k=4,16` (`1745`), `k=5,13` (`1281`), `k=6,11` (`462`). In all audited rows, the exact maximin `M(S)` is recovered by pair-sum pinch or antipode; route histograms collapse to `{n_clock, pair_sum}`; `pair_sum_exact` holds everywhere; `nonempty_core=0`. Sample `n=14` families behave exactly by type: AP and `V*` route through the `n`-clock at `1/14`, while Fibonacci, Sidon, and random rows route through pair-sum witnesses strictly above threshold.
+**SYNTHESIS:** this grounds the theorem route from the reflection: LRC really does look like a 1D periodic maximin whose continuum collapses to a finite active-set catalogue plus a finite dual obstruction ledger. Tightness is the arithmetic `n`-clock / CRT-gear stratum; generic rows clear by pair-pinch; any true failure should have to export a nonempty labelled endpoint core.
+**CREATIVE NEXT STEP:** the natural sequel is a mod-`(2n-1)` / flip-set refinement on top of this checker: for `n=14`, classify each row by antipodal-transversal status mod `27`, presence of a multiple of `14`, `n`-clock clear settings, and any residual endpoint-core obligations.
+**HONEST:** this is a strong bounded exact audit and a much cleaner proof architecture, not a theorem. The open step is to prove globally that a strict bad row cannot avoid both the cheap active-set witnesses and a surviving labelled core.
+**Artifacts:** HYP-2082; `07-reflections/lrc-1d-periodic-maximin-breakthrough-route-s570.md`; `04-computation/lrc_witness_or_core_s570.py` (+.out).
 
 ## opus-2026-06-02-S564 - Which clocks matter: worry/ignore split + the PRIME-GEAR n-clock + covering-system bridge (HYP-2081)
 
