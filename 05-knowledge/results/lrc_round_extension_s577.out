@@ -1,0 +1,25 @@
+A000016 closed form + SC-round formula for m=14..20
+Oracle S575 verified m<=13; this extends the table.
+
+  m   A000016    SC=2^fl   merged=(A+SC)/2
+---------------------------------------------
+  3         2          2                 2  (OK)
+  4         2          2                 2  (OK)
+  5         4          4                 4  (OK)
+  6         6          4                 5  (OK)
+  7        10          8                 9  (OK)
+  8        16          8                12  (OK)
+  9        30         16                23  (OK)
+ 10        52         16                34  (OK)
+ 11        94         32                63  (OK)
+ 12       172         32               102  (OK)
+ 13       316         64               190  (OK)
+
+Extending to m=14..20 via closed form (not computationally verified):
+ 14       586         64               325  (closed form, unverified)
+ 15      1096        128               612  (closed form, unverified)
+ 16      2048        128              1088  (closed form, unverified)
+ 17      3856        256              2056  (closed form, unverified)
+ 18      7286        256              3771  (closed form, unverified)
+ 19     13798        512              7155  (closed form, unverified)
+ 20     26216        512             13364  (closed form, unverified)
