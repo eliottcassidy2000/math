@@ -1,0 +1,12 @@
+(1) Verify the 2x2-determinant (two-block) identity for a COVERED component:
+   comp len=0.0026 owners u_a=15 u_b=13: det[[u_a,r_a],[u_b,r_b]]=12; w*n*u_a*u_b*(b-a)=12; identity=True
+   comp len=0.0070 owners u_a=13 u_b=11: det[[u_a,r_a],[u_b,r_b]]=24; w*n*u_a*u_b*(b-a)=24; identity=True
+   comp len=0.0179 owners u_a=13 u_b=15: det[[u_a,r_a],[u_b,r_b]]=84; w*n*u_a*u_b*(b-a)=84; identity=True
+   comp len=0.0076 owners u_a=11 u_b=3: det[[u_a,r_a],[u_b,r_b]]=6; w*n*u_a*u_b*(b-a)=6; identity=True
+   comp len=0.0125 owners u_a=5 u_b=2: det[[u_a,r_a],[u_b,r_b]]=3; w*n*u_a*u_b*(b-a)=3; identity=True
+   comp len=0.0125 owners u_a=2 u_b=5: det[[u_a,r_a],[u_b,r_b]]=3; w*n*u_a*u_b*(b-a)=3; identity=True
+
+(2) Bounded CRT automaton (per-component allowed w) for mult-of-n residual rows; intersection empty => loose
+   n=10: residual rows=400; bounded-CRT-automaton EMPTY (=> loose)=400/400
+   n=12: residual rows=400; bounded-CRT-automaton EMPTY (=> loose)=400/400
+   n=14: residual rows=400; bounded-CRT-automaton EMPTY (=> loose)=400/400

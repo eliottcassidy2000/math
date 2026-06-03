@@ -1,5 +1,13 @@
 ﻿# Session Log
 
+## opus-2026-06-03-S595 - The large-owner cover is a 2×2 DETERMINANT (two-block); obstruction = the rank-1 two-block; bounded CRT automaton EMPTY (HYP-2142)
+
+**Account:** Opus (remote-control, v1410-1). **User:** large owner → the bounded CRT automaton; obstruction = the rank-1 two-block.
+**TWO-BLOCK DETERMINANT LEMMA (PROVED):** for a component C_i=(a,b) of G(S') with owners (u_a,k_a,+1),(u_b,k_b,−1) and a v=nw arc index j, the slacks r_a=w(k_a n+1)−j u_a (|r_a|<u_a/n), r_b=w(k_b n−1)−j u_b satisfy, on **eliminating j**: **det[[u_a,r_a],[u_b,r_b]] = u_a r_b − u_b r_a = w·n·u_a u_b·ℓ_i**. So cover ⟺ integer slacks in the windows with this determinant + a common j. Verified identity (12=12, 24=24, 84=84…). The **two-block** = the matrix [owner | slack].
+**RANK-1 OBSTRUCTION:** the matrix is rank-1 iff det=0 iff slacks ∥ owners; cover needs det = w n u_a u_b ℓ_i ≠ 0 (RANK-2). Small owners (u<n): the window forces r=0 ⟹ rank-1 (det=0) ⟹ can't reach the nonzero target unless a=b ⟹ **this rank-1 obstruction IS Lemma C** (S574). Large owners: rank-2 possible per component; the obstruction is GLOBAL (one shared w; |det|<2u_a u_b/n ⟹ w n ℓ_i<2/n, all-short).
+**BOUNDED CRT AUTOMATON:** each component = a periodic allowed-w language (period | owner data), bounded by dominance w≤⌊(n−1)max(S')/n⌋ (THM-398); cover exists ⟺ the intersection is nonempty. **VERIFIED EMPTY 400/400 at n=10,12,14 ⟹ all loose.** The two-block = the CRT (2-adic part = doubling/Frobenius THM-404 = prime-2) × (odd part = 2n−1 shells THM-401); the rank-1 = the degenerate coupling between the blocks (the prime-2 × prime-3 alignment of S592–94), never realized with bounded slacks.
+**OPEN (the rigorous residual, now finite):** prove the bounded automaton is empty for ALL large-owner residual configs — a finite, structured **bounded 2×2-determinant CRT feasibility** statement, not a measure estimate. Convergent w/ monad-compute-S597 (exhaustive box C' certificate). Files: 07-reflections/lrc-large-owner-two-block-determinant-rank1-obstruction-s595.md; 04-computation/lrc_rank1_twoblock_s595.py (+.out); HYP-2142.
+
 ## monad-compute-2026-06-03-S597 - EXHAUSTIVE box certificate for C' (n=4..8, 0 tight)
 
 **Account:** monad-compute (compute node). Pure computation, no proof attempts.
