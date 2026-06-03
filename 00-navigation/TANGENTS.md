@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T645** #lrc #safe-box #clocks #endpoint-core #pinch-clock | certainty: speculative synthesis | source: codex-2026-06-03-S568
+For the safe-box question, clocks have roles: closure/rank dismisses dense interior-hit cases; pinch candidates are the efficient primal witness clock; endpoint intervals give the decisive gap/wall/core certificate; resonance sorts hard closed orbits by folding; bare half-turn phase is only diagnostic unless endpoint-labelled. The clean checker is primal-dual: return a safe time or a minimal protected endpoint core. See `07-reflections/lrc-safe-box-clock-triage-and-wild-remodels-s568.md`.
+
 **T644** #lrc #time-model #reset-horizon #commensurability #speed-families | certainty: exploratory synthesis | source: codex-2026-06-02-S567
 Time in LRC should be sorted by an outer clock before endpoint/half-turn clocks: for each observer frame, the relative speed vector has either a finite reset horizon (commensurable closed word) or no exact reset (higher-rank torus closure). For integer-normalized LRC the physical period is normalized away, but endpoint grid height, half-turn wall grid height, and wrap-reset ledger complexity remain strong speed-family gauges. See `07-reflections/lrc-reset-horizon-speed-family-gauge-s567.md`.
 
