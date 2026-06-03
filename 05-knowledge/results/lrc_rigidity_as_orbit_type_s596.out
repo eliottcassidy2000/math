@@ -1,0 +1,81 @@
+================================================================================================
+S596  rigidity = orbit-type; the 2-adic seam unifies the apex, the doubling collapse
+================================================================================================
+
+[1] THE REFLECTION <-1>: apex = the second fixed point n/2, exists IFF n even
+  n | fixed pts of x->-x | #±-pairs | apex present?
+   3 | [0]            |       1  | no
+   4 | [0, 2]         |       1  | YES (apex=2)
+   5 | [0]            |       2  | no
+   6 | [0, 3]         |       2  | YES (apex=3)
+   7 | [0]            |       3  | no
+   8 | [0, 4]         |       3  | YES (apex=4)
+   9 | [0]            |       4  | no
+  10 | [0, 5]         |       4  | YES (apex=5)
+  11 | [0]            |       5  | no
+  12 | [0, 6]         |       5  | YES (apex=6)
+  13 | [0]            |       6  | no
+  14 | [0, 7]         |       6  | YES (apex=7)
+  15 | [0]            |       7  | no
+  16 | [0, 8]         |       7  | YES (apex=8)
+  17 | [0]            |       8  | no
+  18 | [0, 9]         |       8  | YES (apex=9)
+
+[2] THE DOUBLING <2>: permutation (odd) vs 2-adic collapse (even); mixing if 2 prim root
+  n | n factored | doubling perm? | 2 prim root? | <2>-orbit sizes on units
+   3 | 3        | True           | True         | [2]
+   4 | 2^2      | False          | False        | ['2-ADIC COLLAPSE']
+   5 | 5        | True           | True         | [4]
+   6 | 2·3      | False          | False        | ['2-ADIC COLLAPSE']
+   7 | 7        | True           | False        | [3, 3]
+   8 | 2^3      | False          | False        | ['2-ADIC COLLAPSE']
+   9 | 3^2      | True           | True         | [6]
+  10 | 2·5      | False          | False        | ['2-ADIC COLLAPSE']
+  11 | 11       | True           | True         | [10]
+  12 | 2^2·3    | False          | False        | ['2-ADIC COLLAPSE']
+  13 | 13       | True           | True         | [12]
+  14 | 2·7      | False          | False        | ['2-ADIC COLLAPSE']
+  15 | 3·5      | True           | False        | [4, 4]
+  16 | 2^4      | False          | False        | ['2-ADIC COLLAPSE']
+  17 | 17       | True           | False        | [8, 8]
+  18 | 2·3^2    | False          | False        | ['2-ADIC COLLAPSE']
+  19 | 19       | True           | True         | [18]
+  20 | 2^2·5    | False          | False        | ['2-ADIC COLLAPSE']
+  21 | 3·7      | True           | False        | [6, 6]
+  22 | 2·11     | False          | False        | ['2-ADIC COLLAPSE']
+  23 | 23       | True           | False        | [11, 11]
+  24 | 2^3·3    | False          | False        | ['2-ADIC COLLAPSE']
+
+[3] THE FRONTIER as orbit-degeneracy: classify n by (v2, odd-part-type)
+  n | v2(n) | class | LRC reading
+   5 |    0  | ODD: 2-prim-root MAX-MIXING (easiest)
+   7 |    0  | ODD: <2> splits (cyclotomic cosets)
+   8 |    3  | 2^3·1: deep 2-adic seam
+  10 |    1  | 2·prime: APEX + single 2-collapse = HARD FRONTIER
+  11 |    0  | ODD: 2-prim-root MAX-MIXING (easiest)
+  13 |    0  | ODD: 2-prim-root MAX-MIXING (easiest)
+  14 |    1  | 2·prime: APEX + single 2-collapse = HARD FRONTIER
+  16 |    4  | 2^4·1: deep 2-adic seam
+  17 |    0  | ODD: <2> splits (cyclotomic cosets)
+  18 |    1  | 2^1·9: deep 2-adic seam
+  22 |    1  | 2·prime: APEX + single 2-collapse = HARD FRONTIER
+  23 |    0  | ODD: <2> splits (cyclotomic cosets)
+
+[4] ORBIT-COUNT = a rigidity invariant (Burnside flavor): #orbits of <-1>, <2>, units
+  n | #<-1>-orbits | #units-orbits | (orbit count drops as symmetry rises)
+   3 |           2  |            2
+   4 |           3  |            3
+   5 |           3  |            2
+   6 |           4  |            4
+   7 |           4  |            2
+   8 |           5  |            4
+   9 |           5  |            3
+  10 |           6  |            4
+  11 |           6  |            2
+  12 |           7  |            6
+  13 |           7  |            2
+  14 |           8  |            4
+  15 |           8  |            4
+  16 |           9  |            5
+  17 |           9  |            2
+  18 |          10  |            6
