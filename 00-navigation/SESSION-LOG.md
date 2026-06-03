@@ -18,6 +18,17 @@
 **Rebase integration:** origin added monad-compute S598 while this was being pushed: a widened exhaustive Cprime box plus n=9 run checks 6.24M configs with 0 tight. That strengthens the empirical Cprime backdrop; S599's contribution is proof-shape extraction inside the determinant automaton, not additional raw looseness volume.
 **Tournament Analysis / assumption challenge:** vertices are certificate sizes (`singleton_empty`, `pair_empty`, `triple_empty`, `quad_empty`, `high_order_empty`, `bounded_live`, `preempted_gate`), not runners or arcs. Observable `(certificate_rank, sampled_route_count, name)` gives a transitive fingerprint with no directed cycles and one Hamiltonian path. Challenged assumption: HYP-2142's automaton emptiness need not be attacked globally first; small Helly witnesses may be the human proof objects.
 **Artifacts:** HYP-2144; `07-reflections/lrc-two-block-determinant-helly-s599.md`; updates to HYP-2142, results/hypothesis indexes, tangents, and this session log.
+## claudebox-2026-06-03-S615 - Iterated logarithms are altitudes: the abstraction behind Tao's loglog/logloglog bounds, + a verified double-log inside Collatz (HYP-2180)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** Tao is good at seeing loglog / logloglog inequalities — understand the deeper abstraction and produce my own.
+**Abstraction:** the iterated-log depth of an iteration bound = the altitude in the log-tower (N, log N, loglog N, …) at which the renormalization becomes a geometric contraction; equivalently the count of nested "for-almost-all" averagings. Leading coefficient = 1/log(1/ρ).
+**My instance (verified):** Collatz raw step-count is single-log (value contracts ×√3/2/step). The EPOCH count — epoch = bit-length-many steps — is DOUBLE-log: bit-length contracts ×0.79/epoch ⇒ epochs = 2.82·log₂log₂n − 3.6, R²=0.9987 over n of 16…1024 bits (predicted slope 2.98). The two logs of Collatz are step-altitude and epoch-altitude, successive floors of one descent.
+**Tao's four logs (ledger):** loglogloglog n = value / epoch / union-bound over dyadic scales / arbitrary-threshold slack — four nested averagings, four floors.
+**Formalized (math-lean, sorry-free):** `Math/IteratedLog/Altitude.lean` — `altitude_descent` (aᵢ ≤ ρⁱa₀ + C/(1−ρ)) and `altitude_within`; the altitude-agnostic engine (feed value→1 log, bit-length→2, growing altitude→log*).
+**LRC tie (extends HYP-2175):** "almost all configs very lonely" = same altimeter on the additive face (dyadic frequency-scale union bound ⇒ loglog-deep); resonance = the tower that never terminates (cycle = orbit stuck on the ground floor).
+**Handoff:** make the epoch double-log a theorem (needs Tao almost-all drift); prove the LRC almost-all gap improvement is loglog-deep via relation-lattice minima; the log*/moving-altitude case.
+**Artifacts:** HYP-2180; `07-reflections/iterated-logarithms-are-altitudes-s615.md`; `04-computation/iterated_log_altitude_s615.py`; math-lean `Math/IteratedLog/Altitude.lean`.
+
 
 ## opus-2026-06-03-S596 - Collatz IS the LRC residual's two-block question (2^E−3^k ↔ the S595 rank-1 two-block); shared Baker + Vitali wall (HYP-2143)
 

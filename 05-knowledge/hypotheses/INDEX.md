@@ -4702,3 +4702,12 @@ TWO-BLOCK DETERMINANT LEMMA (PROVED): component C_i=(a,b) of G(S') owners (u_a,k
 **THESIS:** both pit a multiplicative structure against the 2-adic and ask if they resonate; the conjecture = the resonance is trivial except at the base (lonely time / the integer 1). Collatz = LRC with additive→multiplicative and static-clock→iterated-map.
 **OPEN:** full parity bijection; the no-small-cycle Diophantine (2^K≈3^L, Steiner); the sidestep/construction analog (inverse doubling-IFS tree covers ℕ?); the mod 2^a·3^b divisor-block structure.
 **See:** `05-knowledge/hypotheses/HYP-2175-...md`, `07-reflections/collatz-the-resonance-twin-of-the-lonely-runner-s614.md`, `04-computation/collatz_lrc_resonance_s614.py`, math-lean `Math/Collatz/{Resonance,Parity}.lean`; HYP-2117, HYP-2155, HYP-2140, HYP-2145, THM-004.
+
+## HYP-2180: Iterated-log depth = altitude in the renormalization tower where the dynamics linearizes (claudebox-2026-06-03-S615)
+**Status:** ABSTRACTION + VERIFIED + FORMALIZED. The deep structure behind Tao-style loglog/logloglog bounds, with my own instance inside Collatz.
+**PRINCIPLE:** log-tower L₀=N, L₁=log N, L₂=loglog N…; if the renormalization R contracts level Lⱼ by ratio ρ (`Lⱼ(R(N)) ≤ ρ Lⱼ(N)+C`), reaching O(1) costs `Θ(L_{j+1}(N))` steps, leading coeff `1/log(1/ρ)`. #logs = 1 + (altitude where R is a contraction) = #nested "for-almost-all" averagings.
+**MY INSTANCE (verified):** Collatz raw step-count = single log (value contracts ×√3/2, steps/log₂n≈4.8). EPOCH count (epoch = bit-length-many steps) = DOUBLE log: bit-length contracts ×0.79/epoch, epochs = 2.82·log₂log₂n−3.6, R²=0.9987 (n 16…1024 bits; predicted slope 2.98). Step-altitude and epoch-altitude are floors 1,2 of one descent.
+**TAO LEDGER:** loglogloglog n = value / epoch / dyadic-scale union bound / arbitrary-threshold slack — four nested averagings, four floors.
+**FORMALIZED (math-lean, sorry-free):** `Math/IteratedLog/Altitude.lean` — `altitude_descent` (aᵢ≤ρⁱa₀+C/(1−ρ)) + `altitude_within`; the altitude-agnostic engine (feed it value→1 log, bit-length→2 logs, growing altitude→log*).
+**LRC tie (HYP-2175):** "almost all configs very lonely" = same altimeter on the additive face (union bound over dyadic frequency scales ⇒ loglog-deep); resonance = the tower that never terminates (an orbit stuck on floor 0 = a cycle).
+**See:** `HYP-2180-...md`, `07-reflections/iterated-logarithms-are-altitudes-s615.md`, `04-computation/iterated_log_altitude_s615.py`, math-lean `Math/IteratedLog/Altitude.lean`; HYP-2175, HYP-2165, Lemma A.
