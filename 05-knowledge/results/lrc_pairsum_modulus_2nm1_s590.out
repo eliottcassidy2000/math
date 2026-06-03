@@ -1,0 +1,26 @@
+(i) Farey-neighbor identity: 1/n & 2/(2n-1) adjacent in F_{2n-1} (cross-product +-1):
+   n= 3: 1/3 , 2/5: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 4: 1/4 , 2/7: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 5: 1/5 , 2/9: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 6: 1/6 , 2/11: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 7: 1/7 , 2/13: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 8: 1/8 , 2/15: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n= 9: 1/9 , 2/17: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=10: 1/10 , 2/19: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=11: 1/11 , 2/21: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=12: 1/12 , 2/23: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=13: 1/13 , 2/25: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=14: 1/14 , 2/27: cross-product = -1 (|.|=1 => Farey neighbors: True)
+   n=15: 1/15 , 2/29: cross-product = -1 (|.|=1 => Farey neighbors: True)
+
+(ii) mod C=2n-1: additive shells {a, C-a}={a,-a}; (iii) C=sqrt(8 C(n,2)+1):
+   n=4: C=7 (odd; sqrt(8*C(n,2)+1)=7); shells [(1, 6), (2, 5), (3, 4)] (a+(C-a)=C, antipodal a<->-a)
+   n=7: C=13 (odd; sqrt(8*C(n,2)+1)=13); shells [(1, 12), (2, 11), (3, 10), (4, 9)]... (a+(C-a)=C, antipodal a<->-a)
+   n=14: C=27 (odd; sqrt(8*C(n,2)+1)=27); shells [(1, 26), (2, 25), (3, 24), (4, 23)]... (a+(C-a)=C, antipodal a<->-a)
+
+(iv) on FLOOR-TIGHT configs: M=1/n exactly, and the next achievable pinch value
+     just above 1/n is the Farey neighbor 2/(2n-1) (verify on AP & sporadics):
+   V=(1, 2, 3) (n=4): M=1/4=0.2500; floor 1/n=0.2500; 2/(2n-1)=0.2857; M==1/n: True; M<2/(2n-1): True
+   V=(1, 2, 3, 4, 5, 6) (n=7): M=1/7=0.1429; floor 1/n=0.1429; 2/(2n-1)=0.1538; M==1/n: True; M<2/(2n-1): True
+   V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) (n=14): M=1/14=0.0714; floor 1/n=0.0714; 2/(2n-1)=0.0741; M==1/n: True; M<2/(2n-1): True
+   V=(1, 3, 4, 5, 9) (n=6): M=1/6=0.1667; floor 1/n=0.1667; 2/(2n-1)=0.1818; M==1/n: True; M<2/(2n-1): True

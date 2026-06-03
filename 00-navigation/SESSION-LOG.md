@@ -1,5 +1,17 @@
 # Session Log
 
+## opus-2026-06-03-S590 - THM-401: the pair-sum sieve's modulus IS 2n-1 (identity, three ways); "multi-sieve = additive face" rigorous; sidesteps resonance energy (HYP-2132)
+
+**Account:** Opus (remote-control, v1410-1). **User:** always make everything rigorous; pin down that the pair-sum sieve's modulus literally is 2n−1 (or its odd part), turning "multi-sieve = additive face" from conjecture into identity; sidestep the resonance energy — the key concept.
+**THM-401 (PROVED, three independent ways, all pure arithmetic):** the pair-sum (pinch) sieve's modulus = C=2n−1.
+(1) **FAREY:** 1/n & 2/(2n−1) are Farey neighbors (1·(2n−1)−2·n=−1), so the pinch value one step above the floor is 2/(2n−1), denominator 2n−1; the pinch sieve (witnesses at pair-sum denominators, S557) has floor-resolution 2n−1.
+(2) **SUMMAND-SHELL:** mod 2n−1 (odd) residues pair into antipodal shells P_a={a, 2n−1−a}={a,−a} (the additive structure); witness family t=k/(2n−1) = the summand graph at the odd node C; units (ℤ/C)* act by inverse clocks.
+(3) **ODD-SQUARE:** 2n−1=√(8·C(n,2)+1) (S586).
+Three faces (Farey, shells, triangular pairs) = ONE number 2n−1 ⟹ **"multi-sieve = additive face" is an IDENTITY.**
+**ODD PART:** 2n−1 odd; the 2-adic doubling part factors off (S585) ⟹ modulus = (2-adic part)×(odd part 2n−1); the odd part IS the additive face (the add/mult split S586–S589 at the modulus itself).
+**WHY KEY (sidestep resonance energy):** the resonance-energy/measure bound (S550) is Vitali-blind at the floor (S551o); THM-401 replaces it with arithmetic that sees the floor exactly ⟹ the residual is a FINITE LEDGER at ℤ/(2n−1) (n=14: C=27=3³, 13 shells, 2-adic factored off — the prime-2 localization of S589), never touching resonance energy.
+**HONEST:** the modulus identity is PROVED; "M<2/(2n−1) ⟹ floor-tight ⟹ transversal" is verified-in-boxes but has EXCEPTIONS (S573: (1,5,6,11,16,17), M=5/33 at n=7), so the classification at the modulus is the remaining finite ledger (HYP-2088), not a measure claim. Files: 01-canon/theorems/THM-401-pair-sum-sieve-modulus-is-2n-minus-1.md; 07-reflections/lrc-the-pair-sum-sieve-modulus-is-2n-1-an-identity-s590.md; 04-computation/lrc_pairsum_modulus_2nm1_s590.py (+.out); HYP-2132.
+
 ## opus-2026-06-03-S589 - Tangent atlas: 5 out-of-box frames (adelic, covering-radius, RG, hyperoperation, quasicrystal); the n=14 obstruction localizes to the PRIME 2 (HYP-2131)
 
 **Account:** Opus (remote-control, v1410-1). **User:** keep thinking like this, even more out of the box; explore tangents abstractly/creatively; think about what you can use them for.
