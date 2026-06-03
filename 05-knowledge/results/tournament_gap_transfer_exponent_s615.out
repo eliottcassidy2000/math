@@ -1,0 +1,99 @@
+S615: tournament forbidden-H transfer and exponent normalization
+Assumption challenge: vertices are transfer mechanisms/proof obligations,
+not runners, arcs, unit-distance points, or Collatz residues by default.
+
+========================================================================
+Known permanent H gaps
+========================================================================
+H=7: THM-029
+  obstruction: exactly three mutually conflicting odd-cycle packets cannot remain closed; tournament completion forces extra odd-cycle structure
+  transfer:    small forbidden evaluation becomes a certificate that a quotient has forgotten a forced completion channel
+  arithmetic alpha-tuples up to degree 4: 2 (first 2: [(1, 1, 0, 0), (3, 0, 0, 0)])
+H=21: THM-079
+  obstruction: all OCF decompositions of I(Omega,2)=21 are blocked by tournament forcing and base-case discharge
+  transfer:    larger forbidden evaluation becomes a multi-packet obstruction, not a Mersenne-pattern continuation
+  arithmetic alpha-tuples up to degree 4: 14 (first 8: [(0, 1, 0, 1), (0, 1, 2, 0), (2, 0, 0, 1), (0, 3, 1, 0), (2, 0, 2, 0), (0, 5, 0, 0), (2, 2, 1, 0), (2, 4, 0, 0)])
+
+Guardrail: H=63 is known to be achieved at n=8; larger Mersenne-looking
+values are not permanent gaps merely because 7 and 21 are forbidden.
+
+========================================================================
+Cross-domain carrier ledger
+========================================================================
+tournament H-spectrum:
+  carrier:  odd-cycle conflict graph Omega(T)
+  observed: H(T)=I(Omega(T),2)
+  wall:     H=7 and H=21 are permanent forbidden evaluations
+  retain:   which compatible odd-cycle packets completion forces
+LRC floor problem:
+  carrier:  depth nerve / relation lattice / Res_(2n-1) coimage
+  observed: p0 and maximin radius M(S)
+  wall:     p0=0 collapse is all-orders cancellation; finite moments are blind
+  retain:   owner labels, carry cocycles, pinch witnesses, endpoint certificates
+unit-distance grids:
+  carrier:  geometric graph plus Moser/CM arithmetic carrier
+  observed: number of unit-distance pairs
+  wall:     graph-only or visible-grid quotients miss embeddability and tower data
+  retain:   coordinates, unfaithful subgraphs, dense deletion cores, split primes
+Collatz/two-block residues:
+  carrier:  carry/residue automaton over the log2-log3 near-lattice
+  observed: cycle or empty-residual certificate
+  wall:     density of residue classes is blind to correlated carry constraints
+  retain:   carry depth, determinant walls, CRT compatibility, valuation history
+
+========================================================================
+Tournament Analysis over mechanisms
+========================================================================
+1. coimage side-channel retention: out=5, score=29, risk=1
+   shared with LRC Res_27, unit-distance n=22, and CM projection carriers
+2. H-gap completion forcing: out=4, score=28, risk=1
+   proved tournament side; explains why a tiny arithmetic evaluation can be impossible
+3. two-block determinant walls: out=3, score=19, risk=2
+   local CRT incompatibility version of an unavailable global state
+4. exponent entropy normalization: out=2, score=18, risk=3
+   the right place to test the user's 1.014 tournament/unit-distance match
+5. Collatz carry-residue transfer: out=1, score=12, risk=3
+   promising analogy, but needs a sharper conserved observable
+6. raw scalar H matching: out=0, score=-2, risk=5
+   dangerous: the repo already warns against promoting sampled H gaps
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed 3-cycles: 0
+SCCs: [[0], [1], [2], [3], [4], [5]]
+Hamiltonian paths in mechanism tournament: 1
+
+========================================================================
+1.014 normalization audit
+========================================================================
+Sawin unit-distance lower bound:
+  value:    1.014
+  variable: number n of planar points
+  carrier:  CM/class-field tower projected to the plane
+  status:   primary-source theorem statement; unit side is normalized
+raw A000568 tournament growth:
+  value:    not 1.014
+  variable: number of tournament vertices
+  carrier:  unlabelled tournament Burnside quotient
+  status:   wrong normalization for the user's claim; identity term dominates
+tournament forbidden-carrier entropy:
+  value:    unmeasured
+  variable: growth of feasible OCF/obligation carriers after forbidden packets
+  carrier:  Omega(T), proof obligations, residue/gap carriers
+  status:   candidate place where a 1.014-style exponent could genuinely live
+
+Working target:
+  If a tournament-side 1.014 exists, it should be measured as an
+  entropy dividend/deficit of the feasible OCF or proof-obligation carrier,
+  after forbidden H packets and side-channel constraints are retained.
+  Raw scalar H counts and raw A000568 growth are the wrong coordinates.
+
+========================================================================
+Next proof probes
+========================================================================
+1. Complete-core H=21: prove the r=10 single-core signature gap or find
+   a non-core route that explains why THM-079 needs its full decomposition.
+2. Unit-distance transfer: map each killed graph-only state to the
+   corresponding missing side-channel, not merely to an edge count.
+3. LRC transfer: treat Res_(2n-1) floor atoms as forbidden-evaluation
+   tests; a lift must preserve owner/carry/pinch probes Yoneda-style.
+4. Exponent test: define one common carrier-size variable and measure the
+   tournament entropy dividend against Sawin's n^1.014 unit-distance side.
