@@ -1,0 +1,52 @@
+Three-state Tournament Analysis automaton (S582)
+Observable: pair event word over {L,M,R}.
+Switch: terminal L gives lower->higher, terminal R gives higher->lower.
+Tie Hamiltonian path: A->B->C->D->E resolves terminal M.
+Interpretation: M is the wall/corridor state retained before projection.
+
+Automaton: wall
+  direct side-to-side state transitions: 0 []
+  pair terminals:
+    AB word=LMLL trace=MLMLL terminal=L edge=A->B (terminal L)
+    AC word=RMRR trace=MRMRR terminal=R edge=C->A (terminal R)
+    AD word=MM   trace=MMM   terminal=M edge=A->D (tie path)
+    AE word=RML  trace=MRML  terminal=L edge=A->E (terminal L)
+    BC word=LL   trace=MLL   terminal=L edge=B->C (terminal L)
+    BD word=RLR  trace=MRMR  terminal=R edge=D->B (terminal R)
+    BE word=RR   trace=MRR   terminal=R edge=E->B (terminal R)
+    CD word=LML  trace=MLML  terminal=L edge=C->D (terminal L)
+    CE word=MRM  trace=MMRM  terminal=M edge=C->E (tie path)
+    DE word=RMR  trace=MRMR  terminal=R edge=E->D (terminal R)
+  scores: {'A': 3, 'B': 1, 'C': 3, 'D': 1, 'E': 2}
+  score histogram: {1: 2, 2: 1, 3: 2}
+  directed 3-cycles: 3 [('A', 'B', 'C'), ('B', 'C', 'D'), ('B', 'C', 'E')]
+  SCCs: [('A', 'B', 'C', 'D', 'E')]
+  Hamiltonian path count: 9; examples=[('A', 'B', 'C', 'E', 'D'), ('A', 'D', 'B', 'C', 'E'), ('A', 'E', 'B', 'C', 'D'), ('A', 'E', 'D', 'B', 'C')]
+
+Automaton: last_nonmiddle
+  direct side-to-side state transitions: 2 [('L', 'R', 'R'), ('R', 'L', 'L')]
+  pair terminals:
+    AB word=LMLL trace=MLLLL terminal=L edge=A->B (terminal L)
+    AC word=RMRR trace=MRRRR terminal=R edge=C->A (terminal R)
+    AD word=MM   trace=MMM   terminal=M edge=A->D (tie path)
+    AE word=RML  trace=MRRL  terminal=L edge=A->E (terminal L)
+    BC word=LL   trace=MLL   terminal=L edge=B->C (terminal L)
+    BD word=RLR  trace=MRLR  terminal=R edge=D->B (terminal R)
+    BE word=RR   trace=MRR   terminal=R edge=E->B (terminal R)
+    CD word=LML  trace=MLLL  terminal=L edge=C->D (terminal L)
+    CE word=MRM  trace=MMRR  terminal=R edge=E->C (terminal R)
+    DE word=RMR  trace=MRRR  terminal=R edge=E->D (terminal R)
+  scores: {'A': 3, 'B': 1, 'C': 2, 'D': 1, 'E': 3}
+  score histogram: {1: 2, 2: 1, 3: 2}
+  directed 3-cycles: 3 [('A', 'B', 'C'), ('A', 'E', 'C'), ('B', 'C', 'D')]
+  SCCs: [('A', 'B', 'C', 'D', 'E')]
+  Hamiltonian path count: 9; examples=[('A', 'E', 'B', 'C', 'D'), ('A', 'E', 'C', 'D', 'B'), ('A', 'E', 'D', 'B', 'C'), ('B', 'C', 'A', 'E', 'D')]
+
+Rule comparison
+  edge flips between wall and last_nonmiddle: 1 [('C', 'E', 'C', 'E')]
+  lesson: the wall automaton forbids direct L<->R state flips, so every orientation change must pass through M before it becomes a tournament edge.
+
+Compression note
+  pair automata for n=5 use 10 local 3-state cells.
+  product state count is 3^10, but one scan costs O(pair-events).
+  for LRC, replace A..E by components, residue states, cover arcs, or proof obligations; project only after the middle states have been audited.

@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-03-S582 - Tournament edges as left-middle-right pair automata (HYP-2109)
+
+**Account:** Codex (GPT-5). **User prompt:** see the connection between tournaments and automata; think of a very simple three-state one: left, right, and middle.
+**Context:** Fast-forwarded over Opus S575/HYP-2108, which added endpoint-cover circuit positivity and the scalar `P(S)`. That makes the `M` state concrete: a component/residue/certificate remains middle exactly while it is still in the wall or midpoint corridor before a side owner wins.
+**Computation:** Added `04-computation/tournament_three_state_automaton_s582.py` and stored `05-knowledge/results/tournament_three_state_automaton_s582.out`. The script reads pair event words over `{L,M,R}`, runs two tiny automata, projects terminal states to tournament edges, resolves terminal `M` by the tie path `A->B->C->D->E`, and reports score histograms, directed 3-cycles, SCCs, Hamiltonian paths, and edge flips.
+**Findings:** the wall automaton has zero direct `L<->R` state transitions, so every side change is forced through `M` before becoming a binary edge. In the toy sample, wall vs last-nonmiddle changes one projected edge (`CE`), preserves score histogram `{1:2,2:1,3:2}`, one-SCC status, directed 3-cycle count `3`, and Hamiltonian path count `9`, but changes which triangles witness cyclicity.
+**Synthesis:** a tournament can be the binary shadow of a product of pair automata. For LRC, `M` is not indecision: it is the endpoint-cover wall, live CRT residue, midpoint corridor, or sheaf-gluing seam. The next proof target is a no-closed-middle lemma: all local cells terminal `M` around the circuit contradict HYP-2108 midpoint positivity or HYP-2107 bounded CRT/dominance; otherwise an `L/R` exit gives an owner obstruction/private pivot.
+**Artifacts:** HYP-2109; `07-reflections/tournament-three-state-automaton-left-middle-right-s582.md`; `04-computation/tournament_three_state_automaton_s582.py` (+.out); T658; concept-map row.
+
 ## opus-2026-06-03-S575 - Endpoint-cover circuit positivity: exact criterion (Lemma D) + the functional P(S) (P>0 ⟺ loose), verified 100%; a PROVED summed corollary (HYP-2108)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** work on endpoint cover circuit positivity.
