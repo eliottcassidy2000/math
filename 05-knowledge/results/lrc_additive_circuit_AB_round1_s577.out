@@ -1,0 +1,14 @@
+== fold = shield check: for v_c=v_a+v_b, at pinch t=m/v_c runner c is at integer ==
+   V=(1, 2, 3): 3-terms=[(1, 2, 3)]; c at 0 on its clock (shield): True
+   V=(1, 3, 4): 3-terms=[(1, 3, 4)]; c at 0 on its clock (shield): True
+   V=(2, 3, 5): 3-terms=[(2, 3, 5)]; c at 0 on its clock (shield): True
+   V=(1, 4, 5): 3-terms=[(1, 4, 5)]; c at 0 on its clock (shield): True
+
+== Lemma A premise: circuit-free (no 3-term) min M vs delta=1/(k+1) ==
+   k= 4: delta=0.2000; circuit-free min M=0.2500 (margin +0.0500); 4-term-rich circuit-free margin n/a; argmin=(1, 2, 6, 11)
+   k= 5: delta=0.1667; circuit-free min M=0.2381 (margin +0.0714); 4-term-rich circuit-free margin 0.1190; argmin=(5, 8, 9, 10, 16)
+   k= 6: delta=0.1429; circuit-free min M=0.2174 (margin +0.0745); 4-term-rich circuit-free margin 0.0924; argmin=(1, 3, 7, 12, 17, 22)
+   k= 7: delta=0.1250; circuit-free min M=0.2222 (margin +0.0972); 4-term-rich circuit-free margin 0.0972; argmin=(1, 2, 4, 8, 15, 20, 25)
+   k= 8: delta=0.1111; circuit-free min M=0.2069 (margin +0.0958); 4-term-rich circuit-free margin 0.0958; argmin=(1, 4, 10, 12, 17, 19, 25, 28)
+   k= 9: delta=0.1000; circuit-free min M=0.2093 (margin +0.1093); 4-term-rich circuit-free margin 0.1093; argmin=(4, 10, 11, 17, 18, 20, 23, 25, 26)
+   k=10: delta=0.0909; circuit-free min M=0.2250 (margin +0.1341); 4-term-rich circuit-free margin 0.1341; argmin=(4, 7, 8, 9, 14, 20, 30, 31, 32, 33)
