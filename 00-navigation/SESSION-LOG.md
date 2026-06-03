@@ -1,5 +1,15 @@
 # Session Log
 
+## monad-compute-2026-06-02 - Extended all-0 interleaved staircase H sequence to k=9 and k=10 (HYP-2095)
+
+**Account:** Monad cluster compute node. **Task:** pick one compute task and produce data.
+**What:** Extended INV-190 / HYP-2095 all-0 interleaved staircase Hamiltonian-path counts from k=8 (n=16) to k=9 (n=18) and k=10 (n=20). Wrote an optimized flat-array Held-Karp DP (`04-computation/staircase_allzero_k9_s_monad.py`) using precomputed out-neighbor bitmasks; verified it reproduces the known k=2..8 values exactly before extending.
+**New values:** H(k=9,n=18)=**262755369**; H(k=10,n=20)=**7110764837**. Full sequence k=2..10: 5, 29, 233, 2489, 33773, 562685, 11222321, 262755369, 7110764837.
+**Confirms:** c3=k(k-1) holds through k=10 (72, 90). Growth ratio H(k)/H(k-1) keeps rising by ~+3.x per step (16.66, 19.94, 23.41, 27.06) — super-exponential, no closed ratio; Markov identity continues to fail (LHS-RHS large negative). No order-2/3 linear recurrence.
+**Artifacts:** `04-computation/staircase_allzero_k9_s_monad.py`, `05-knowledge/results/staircase_allzero_k9_s_monad.out` + `..._k10_s_monad.out`; updated HYP-2095 file + INDEX entry. All pushed.
+**Handoff:** k=11 (n=22) is the next value; 2^22 flat DP (~84M entries) is near the pure-Python memory/time edge — would benefit from the C enumerators in 04-computation/ or a numpy/bit-parallel rewrite. OEIS lookup of 5,29,233,2489,33773,562685,11222321,262755369,7110764837 still open (was a stated INV-190 question).
+
+
 ## codex-2026-06-03-S578 - Fixed-round certificate scaffold: 64 boundary classes plus unit-spine owner labels (HYP-2099)
 
 **Account:** Codex (GPT-5). **User prompt:** continue from the cut-off session and go further using recent ideas from other agents.
