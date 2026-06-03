@@ -1,0 +1,9 @@
+ m | #roundTours | #roundClasses | #self-converse(=worry-set) | Ham-counts(round) all-odd
+ 3 |     8 |      2 |      2 | counts=[1, 3] allodd=True
+ 4 |    56 |      3 |      2 | counts=[1, 3, 5] allodd=True
+ 5 |   544 |      6 |      4 | counts=[1, 3, 5, 9, 11, 15] allodd=True
+ 6 |  6384 |     11 |      4 | counts=[1, 3, 5, 9, 11, 15, 17, 23, 41, 45] allodd=True
+
+Worry-set bridge: self-converse round classes = the LRC worry-set (the 64 at n=14).
+SPEEDUP: enumerate round tournament classes (small) instead of integer configs (exp).
+Rédei TRUTH: every round tournament has ODD #HamPaths -> a forced-parity certificate.
