@@ -874,6 +874,17 @@ Prompt: hard parts of LRC/unit-distance/Collatz are analogous to tournament stru
 **Findings:** The route tournament is transitive. It ranks the `gcd(3,2n-1)` lattice-law/carry-conservativity route first, the OCF `H=7/21` obstruction route second, and the unit-distance CM/class-field carrier route third. The raw numeric-equality route "tournament exponent = 1.014" scores low because the carrier has not been identified.
 **Synthesis:** HYP-2181 keeps the user's core insight but makes it falsifiable: the shared object is a retained arithmetic carrier whose visible coimage forgets a thin obstruction/amplification channel. The exact `1.014` equality is an open probe, not yet evidence. The next target is to build constrained carrier tournaments for the CM unit-distance construction, LRC shell/carry ledgers, and Collatz two-block residue states.
 **Artifacts:** HYP-2181, `07-reflections/tournament-obstruction-amplification-s615.md`, T682, result-index and concept-map updates.
+## claudebox-2026-06-03-S624b - Tournaments are the master structure: the H-spectrum (7·3^k), the partition function, the 1.014 exponent (HYP-2245)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** the hard part of LRC/unit-distance/Collatz is analogous to tournament structure; fully understanding tournaments (esp. H=7,H=21 impossibilities) is the key; the shared 1.014 exponent between tournaments and the unit-grid disproof.
+**Master structure:** H(T)=I(Ω,2) = #Hamiltonian paths (Rédei) = hard-core partition function of the 3-cycle conflict graph = the SAME object as the LRC depth-GF (HYP-2200), unit-distance count (HYP-2235), Delsarte/Krawtchouk (HYP-2210/2215).
+**Forbidden spectrum = 7·3^k (verified):** corrected H to actual Hamiltonian-path count; exhaustive n≤6 + sampled n=7 ⟹ persistent low gaps EXACTLY 7,21,63=7·3^k (confirms THM-029/079, finds H=63 = the 3rd impossibility). Engine: free baseline edgeless Ω ⟹ H=(1+2)^k=3^k (the 3=ternary weight); conflicts only reduce (H≤3^k); atomic gap 7 propagates ×3 by partition-function multiplicativity (=depthGF_union).
+**1.014 exponent:** = the CM norm-1 / α₂=1 self-complementary family (roots ρ₁ρ₂=1, fixed by complement involution τ=σ=CM conjugation); shape exponent cubic in n (3-cycle count). 0.014 = surplus from the conjugation's free orbits over the fixed lattice (= grid suboptimal = AP-not-whole-story = transitive-has-no-surplus, one statement).
+**Propagation:** forbidden-value = partition-function spectrum constraint (stronger than LP); 4 faces: tournament 7·3^k / LRC p₀=0 collapse / unit-distance u(n) gaps / Collatz no-cycle. Tournament face is key (explicit gaps + formalized engine).
+**Formalized (sorry-free):** Math/Tournaments/IndependencePolynomial.lean (indepPoly, sum_pow_card_powerset, indepPoly_edgeless, indepPoly_le_edgeless, indepPoly_two_edgeless H=3^k, indepPoly_two_le H≤3^k). Pushed to math-lean main.
+**Handoff:** prove the full 7·3^k family forbidden; formalize indepPoly multiplicativity over disjoint components (THM-079 engine); the propagation theorems; the rigorous 1.014↔cubic-3 shape-exponent.
+**Artifacts:** HYP-2245; reflection the-master-structure-was-the-tournament-s624b.md; computation h_spectrum_forbidden_7x3k_s624b.py; math-lean Tournaments/IndependencePolynomial.lean.
+
 
 ## codex-2026-06-03-S616 - infinite-game `n+2` recursion: period-3 V* automaton and `omega^2` row/column proof rank (HYP-2183)
 
