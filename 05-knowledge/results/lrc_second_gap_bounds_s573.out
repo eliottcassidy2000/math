@@ -1,0 +1,165 @@
+﻿Second-gap clock-blocker bounds (codex-2026-06-03 S573)
+==============================================================================
+Necessary bounds for any strict sub-edge row M(S)<2/(2n-1):
+  D_q: for every 2<=q<=n-1, some speed is divisible by q.
+       Otherwise t=1/q scores at least 1/q >= 2/(2n-1).
+  U_a: every unit antipodal shell mod C=2n-1 is hit.
+       Otherwise S553's inverse clock scores exactly at the edge.
+  N_j: every j/n clock is blocked by a runner at distance 0 or 1/n.
+       Otherwise that n-clock scores at least 2/n > 2/(2n-1).
+
+Primitive exact box k=3, max_speed=60, n=4, edge=2/7
+  total=34220 primitive=28876
+  gate D small-denominator blockers pass=17432
+  gate U unit-shell coverage pass=4319
+  gate N n-clock blockers pass=24961
+  all-gate survivors exact-checked=2623
+  below_edge=1 floor_count=1 open_gap_count=0
+  perfect_below=1/1
+  zero_mod_c_hist={0: 1}
+  missed_nonunit_hist={(): 1}
+  flip_hist_top=[((), 1)]
+  min_edge_or_above=4/13 count=2
+  below_edge_sample:
+    (1, 2, 3) M=1/4 t=1/4 perfect=True flip=() missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Primitive exact box k=4, max_speed=40, n=5, edge=2/9
+  total=91390 primitive=85771
+  gate D small-denominator blockers pass=47078
+  gate U unit-shell coverage pass=17045
+  gate N n-clock blockers pass=82291
+  all-gate survivors exact-checked=5676
+  below_edge=2 floor_count=2 open_gap_count=0
+  perfect_below=2/2
+  zero_mod_c_hist={0: 2}
+  missed_nonunit_hist={(): 2}
+  flip_hist_top=[((), 1), ((2,), 1)]
+  min_edge_or_above=3/13 count=2
+  below_edge_sample:
+    (1, 2, 3, 4) M=1/5 t=1/5 perfect=True flip=() missed_nonunit=- doubled=-
+    (1, 3, 4, 7) M=1/5 t=1/5 perfect=True flip=(2,) missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Primitive exact box k=5, max_speed=32, n=6, edge=2/11
+  total=201376 primitive=196751
+  gate D small-denominator blockers pass=87189
+  gate U unit-shell coverage pass=7500
+  gate N n-clock blockers pass=163069
+  all-gate survivors exact-checked=3237
+  below_edge=2 floor_count=2 open_gap_count=0
+  perfect_below=2/2
+  zero_mod_c_hist={0: 2}
+  missed_nonunit_hist={(): 2}
+  flip_hist_top=[((), 1), ((2,), 1)]
+  min_edge_or_above=1/5 count=8
+  below_edge_sample:
+    (1, 2, 3, 4, 5) M=1/6 t=1/6 perfect=True flip=() missed_nonunit=- doubled=-
+    (1, 3, 4, 5, 9) M=1/6 t=1/6 perfect=True flip=(2,) missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Primitive exact box k=6, max_speed=26, n=7, edge=2/13
+  total=230230 primitive=228486
+  gate D small-denominator blockers pass=97347
+  gate U unit-shell coverage pass=4028
+  gate N n-clock blockers pass=210615
+  all-gate survivors exact-checked=1446
+  below_edge=2 floor_count=1 open_gap_count=1
+  perfect_below=2/2
+  zero_mod_c_hist={0: 2}
+  missed_nonunit_hist={(): 2}
+  flip_hist_top=[((), 1), ((2,), 1)]
+  min_edge_or_above=3/19 count=1
+  below_edge_sample:
+    (1, 2, 3, 4, 5, 6) M=1/7 t=1/7 perfect=True flip=() missed_nonunit=- doubled=-
+    (1, 5, 6, 11, 16, 17) M=5/33 t=10/33 perfect=True flip=(2,) missed_nonunit=- doubled=-
+  open_gap_sample:
+    (1, 5, 6, 11, 16, 17) M=5/33 t=10/33 perfect=True flip=(2,) missed_nonunit=- doubled=-
+
+Primitive exact box k=7, max_speed=22, n=8, edge=2/15
+  total=170544 primitive=170213
+  gate D small-denominator blockers pass=53259
+  gate U unit-shell coverage pass=30803
+  gate N n-clock blockers pass=142092
+  all-gate survivors exact-checked=4654
+  below_edge=5 floor_count=3 open_gap_count=2
+  perfect_below=1/5
+  zero_mod_c_hist={0: 5}
+  missed_nonunit_hist={(): 1, ((6, 9),): 3, ((3, 12),): 1}
+  flip_hist_top=[((), 2), ((3,), 1), ((2,), 1), ((2, 4), 1)]
+  min_edge_or_above=1/7 count=2
+  below_edge_sample:
+    (1, 2, 3, 4, 5, 6, 7) M=1/8 t=1/8 perfect=True flip=() missed_nonunit=- doubled=-
+    (1, 2, 3, 4, 5, 7, 12) M=1/8 t=1/8 perfect=False flip=(3,) missed_nonunit=((6, 9),) doubled=((3, 12),)
+    (1, 2, 3, 4, 5, 7, 18) M=3/23 t=4/23 perfect=False flip=() missed_nonunit=((6, 9),) doubled=((3, 12),)
+    (1, 3, 4, 5, 7, 13, 18) M=3/23 t=4/23 perfect=False flip=(2,) missed_nonunit=((6, 9),) doubled=((3, 12),)
+    (1, 4, 5, 6, 7, 11, 13) M=1/8 t=1/8 perfect=False flip=(2, 4) missed_nonunit=((3, 12),) doubled=((4, 11),)
+  open_gap_sample:
+    (1, 2, 3, 4, 5, 7, 18) M=3/23 t=4/23 perfect=False flip=() missed_nonunit=((6, 9),) doubled=((3, 12),)
+    (1, 3, 4, 5, 7, 13, 18) M=3/23 t=4/23 perfect=False flip=(2,) missed_nonunit=((6, 9),) doubled=((3, 12),)
+
+Primitive exact box k=8, max_speed=20, n=9, edge=2/17
+  total=125970 primitive=125925
+  gate D small-denominator blockers pass=32170
+  gate U unit-shell coverage pass=860
+  gate N n-clock blockers pass=117427
+  all-gate survivors exact-checked=238
+  below_edge=1 floor_count=1 open_gap_count=0
+  perfect_below=1/1
+  zero_mod_c_hist={0: 1}
+  missed_nonunit_hist={(): 1}
+  flip_hist_top=[((), 1)]
+  min_edge_or_above=1/8 count=2
+  below_edge_sample:
+    (1, 2, 3, 4, 5, 6, 7, 8) M=1/9 t=1/9 perfect=True flip=() missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Primitive exact box k=9, max_speed=18, n=10, edge=2/19
+  total=48620 primitive=48619
+  gate D small-denominator blockers pass=15150
+  gate U unit-shell coverage pass=511
+  gate N n-clock blockers pass=41181
+  all-gate survivors exact-checked=145
+  below_edge=1 floor_count=1 open_gap_count=0
+  perfect_below=1/1
+  zero_mod_c_hist={0: 1}
+  missed_nonunit_hist={(): 1}
+  flip_hist_top=[((), 1)]
+  min_edge_or_above=2/17 count=1
+  below_edge_sample:
+    (1, 2, 3, 4, 5, 6, 7, 8, 9) M=1/10 t=1/10 perfect=True flip=() missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Primitive exact box k=10, max_speed=17, n=11, edge=2/21
+  total=19448 primitive=19448
+  gate D small-denominator blockers pass=3060
+  gate U unit-shell coverage pass=2241
+  gate N n-clock blockers pass=18244
+  all-gate survivors exact-checked=111
+  below_edge=1 floor_count=1 open_gap_count=0
+  perfect_below=1/1
+  zero_mod_c_hist={0: 1}
+  missed_nonunit_hist={(): 1}
+  flip_hist_top=[((), 1)]
+  min_edge_or_above=1/9 count=5
+  below_edge_sample:
+    (1, 2, 3, 4, 5, 6, 7, 8, 9, 10) M=1/11 t=1/11 perfect=True flip=() missed_nonunit=- doubled=-
+  open_gap_sample:
+    -
+
+Synthesis
+------------------------------------------------------------------------------
+The expanded boxes refute the earlier floor-only reading of S572.
+There are genuine audited rows in the open interval (1/n, 2/(2n-1)),
+beginning with the lifted flip-set row (1,5,6,11,16,17) at n=7,
+where M=5/33, and lifted/nonunit-hole rows at n=8 with M=3/23.
+The sharpened bound is therefore not 'below edge implies floor'.
+It is the three-gate necessary ledger: any strict sub-edge row must
+simultaneously block all small denominators, all unit shells, and all
+n-clock ticks.  The remaining proof target is to classify that ledger's
+finite lift/nonunit families and prove they stay at or above 1/n.

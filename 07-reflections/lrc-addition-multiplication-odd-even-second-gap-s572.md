@@ -15,6 +15,13 @@ tags:
 
 # Addition, Multiplication, Odd, Even: What Each One Actually Does in the `2n-1` Gap Picture
 
+**S573 correction.** The floor-only conclusion below `2/(2n-1)` was true only
+for the original S572 small boxes.  The expanded S573 clock-blocker audit finds
+open-gap lifted rows, including `(1,5,6,11,16,17)` with `M=5/33` at `n=7` and
+two `n=8` rows with `M=3/23`.  The corrected theorem target is the
+three-clock blocker ledger in HYP-2088, not a global claim that every
+below-edge row is floor-tight.
+
 The repo now has enough pieces to say something sharper than "AP is hard."
 
 For the spectral-gap route around
@@ -208,7 +215,8 @@ plus composite-modulus nonunit-hole defects.
 3. Use S572's bounded evidence and the old S553 data:
 
 ```text
-the only rows below 2/(2n-1) are already n-clock-tight floor rows.
+in the original small boxes, the only rows below 2/(2n-1)
+were already n-clock-tight floor rows.
 ```
 
 4. Finish by proving that any non-floor residual clears either by:
@@ -224,8 +232,8 @@ or an endpoint-core contradiction.
 If I compress the whole session to one line, it is this:
 
 ```text
-Below the second floor, the bounded residual is not "small sumset";
-it is "already floor-tight perfect transversal."
+In the original S572 boxes, below the second floor was not "small sumset";
+it was "already floor-tight perfect transversal."
 ```
 
 And that explains the roles:

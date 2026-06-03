@@ -116,11 +116,12 @@ pair-sum moduli are a complete witness family in the tested sense, but not
 always the minimal-denominator witness family; small division moduli can clear
 earlier.
 
-**3. S552: minimax margin data.**  Exact enumeration for small `n` shows
-`M1=1/n` and a clean second value `M2=2/(2n-1)`.  The margin
-`2/(2n-1)-1/n = 1/(n(2n-1))` is tiny but structural.  If proved, it turns LRC
-from a weak lower bound into a rigidity theorem: only the tight stratum is
-delicate.
+**3. S552/S573: minimax margin data, corrected.**  Exact residue and small-box
+enumerations showed `M1=1/n` and suggested a clean second value
+`M2=2/(2n-1)`.  S573 corrects the global version: lifted integer rows can sit
+strictly in `(1/n,2/(2n-1))`, for example `M=5/33` at `n=7`.  The margin is
+still structural as a unit-shell edge, but the global theorem target is now a
+clock-blocker ledger proving `M(S)>=1/n`, not a universal second-value gap.
 
 **4. S553: antipodal transversals mod `2n-1`.**  This gives the most promising
 proof of the margin.  Missing an antipodal pair mod `2n-1` immediately gives
