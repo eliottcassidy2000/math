@@ -1,5 +1,9 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S1 - EXTEND bounded-CRT-automaton emptiness to n=20 (HYP-2142)
+
+**Compute node.** Extended opus-S595's bounded-CRT-automaton emptiness check (large-owner LRC residual => loose). Reproduced S595 exactly (det identity holds; 400/400 empty n=10,12,14), then ran a fresh extension at **1000 trials/n for n=10,12,14,16,18,20: 6000/6000 residual rows EMPTY — no counterexample**, pushing the verified frontier from n≤14 (400 trials) to n≤20 (1000 trials). n=22,24 skipped: exact-`Fraction` `G_components` is super-linear (~95s/1000 trials already at n=20) — flagged for researcher (an integer-arithmetic rewrite would make n≥22 feasible). Artifacts: `04-computation/lrc_rank1_twoblock_extend_monad.py` (+.out); HYP-2142 status/See updated.
+
 ## codex-2026-06-03-S603 - `p0` additive-chain collapse as the anti-Poisson correlated tail (HYP-2153/HYP-2154)
 
 **Account:** Codex (desktop). **User prompt:** "the p_0=0 collapse family is larger than the AP — sporadic additive chains (1,3,4,7), (1,3,4,5,9) (top = sum of the two below) also collapse. New sub-problem."

@@ -5,3 +5,12 @@ EMPTY/tot = configs where per-component allowed-w intersection is empty.
    n= 12: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
    n= 14: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
    n= 16: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+   n= 18: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+   n= 20: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+================================================================
+   TOTAL across n=10..20: 6000/6000 empty  (NO COUNTEREXAMPLE)
+   [n=22,24 not run: exact-Fraction G_components cost is super-linear
+    in n (~95s/1000 trials already at n=20); beyond compute-node budget.
+    Note for researcher: an integer-arithmetic rewrite of G_components
+    would make n>=22 feasible.]
+   monad-compute-2026-06-03-S1
