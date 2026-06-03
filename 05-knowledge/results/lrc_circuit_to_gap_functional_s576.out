@@ -1,0 +1,6 @@
+Verify  G(v)=mu(safe set) == Phi(C)  exactly, over multiple-of-n configs
+  n= 6: 899 configs; Phi==mu(safe) exactly: 899/899; max|err|=0.00e+00
+  n= 8: 900 configs; Phi==mu(safe) exactly: 900/900; max|err|=0.00e+00
+  n=10: 900 configs; Phi==mu(safe) exactly: 900/900; max|err|=0.00e+00
+  n=12: 900 configs; Phi==mu(safe) exactly: 900/900; max|err|=0.00e+00
+  n=14: 900 configs; Phi==mu(safe) exactly: 900/900; max|err|=0.00e+00

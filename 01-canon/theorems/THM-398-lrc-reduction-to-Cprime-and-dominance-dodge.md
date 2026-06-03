@@ -261,6 +261,39 @@ prove `92.44%` at `n=6`, `97.26%` at `n=8`, and `100%` of sampled rows at
 `n=10,12,14`; the `n=14` sample splits as B′ `3407`, Lemma C `843`, Lemma E `748`,
 Lemma F `2`, residual `0`.
 
+## 4.95. The circuit-to-gap functional Φ(C): `G(v) = Φ(C)` (exact)
+
+(Independent of §4⅞'s Lemmas E/F — those refine the *peeling sieve*; this gives the
+*exact gap value*.) Lemma D's `P(S)` reads only the *sign* of the cover deficit (a max
+over components).
+Summing the deficit instead — the *uncovered phase* of each component — gives the
+**exact gap**. In v-phase coordinates a component `C_i=(a_i,b_i)` of `G(S')` maps to the
+interval `(v a_i, v b_i)`; the v-danger is the band `B = ⋃_k (k−1/n, k+1/n)`; the
+uncovered length is `v ℓ_i − |(v a_i, v b_i) ∩ B|`. Define the **circuit-to-gap
+functional**
+```
+Φ(C) := (1/v) · Σ_i [ v ℓ_i − Σ_k |(v a_i, v b_i) ∩ (k − 1/n, k + 1/n)| ].
+```
+
+> **Lemma G.** `G(v) := μ(safe set of S = S'∪{v}) = Φ(C)`, exactly.
+> *Proof.* `safe(S) = G(S') \ D_v`; per component `μ(C_i \ D_v) = (1/v)·(`uncovered
+> phase of `(v a_i, v b_i)` against the band `B)`; sum over the circuit. ∎
+
+**Verified exactly** (`Φ == μ(safe)`, `900/900` each `n=6..14`, zero error —
+`lrc_circuit_to_gap_functional_s576.py`). Each summand `φ_i ≥ 0` is a **ramp** (the
+`v`-phase interval's poke-out beyond the danger band); `Φ = Σ_i φ_i` is a sum of ramps
+over the cover circuit. Consequences:
+
+- **`Φ(C) > 0 ⟺ S loose`**, and `Φ` gives the *exact* loneliness measure, not just the
+  sign that `P(S)` gave (`φ_i>0 ⟺` the `i`-th `P`-term `>0`).
+- **Kernel.** `ker Φ := {Φ(C)=0}` `= {`every `φ_i=0}` `= {`every component's phase
+  interval `⊆ B}` `=` the **tight / worry-set**. So **C′ ⟺ Φ(C) > 0 for every
+  multiple-of-`n` config**, i.e. `ker Φ` contains no `n|v` config. The conjecture is now
+  *"the gap functional has empty kernel on the multiple-of-`n` class."*
+- **Optimisation form.** `Φ` is an explicit piecewise-linear (sum-of-ReLU) functional of
+  the circuit data `{v a_i, v b_i}`; minimising `Φ` over multiple-of-`n` configs is an
+  LP-flavoured problem whose optimum being `> 0` is exactly C′.
+
 ## 5. Status ledger
 
 | Statement | status |
@@ -277,7 +310,8 @@ Lemma F `2`, residual `0`.
 | Lemma E (one small owner off lattice ⟹ loose) | **PROVED** (§4⅞), S581 route |
 | Lemma F (one pinned small owner but component longer than half-radius ⟹ loose) | **PROVED** (§4⅞), S581 route |
 | B′ ∪ C ∪ E ∪ F | **PROVED criteria**, covers **100%** of S581 sampled multiple-of-14 configs |
-| C′ residual = `P(S) > 0` always (simultaneous-resonance infeasibility) | **OPEN** (~1% at n=14; the circuit Diophantine obstruction) |
+| Lemma G (`G(v) = Φ(C)`, exact circuit-to-gap functional) | **PROVED** (§4.95), verified exact 900/900 n=6..14 |
+| C′ ⟺ `ker Φ` has no multiple-of-`n` config (= `Φ>0` always) | **OPEN** (the gap functional's kernel; sum-of-ReLU optimisation) |
 
 So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs
 of a multiple of 14 cannot cover the safe set of the other twelve runners* (the

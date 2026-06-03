@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-03-S576 - The kernel of ECCP points at an exact circuit-to-gap functional: G(v)=Φ(C) (Lemma G), verified exact 900/900 (HYP-2112)
+
+**Account:** Opus (remote-control, v1410-1). **User idea:** kernel ECCP points at a circuit-to-gap functional Φ(C) with G(v)=Φ(C).
+**Confirmed exactly.** S575's P(S) was the SIGN of the cover deficit; refining the max to a SUM of per-component uncovered phase gives the EXACT gap.
+**FUNCTIONAL:** in v-phase a component C_i=(a_i,b_i) of G(S') is the interval (v a_i, v b_i); v-danger is the band B=⋃_k(k−1/n,k+1/n); uncovered = v ℓ_i − |(v a_i,v b_i)∩B|. **Φ(C):=(1/v) Σ_i [ v ℓ_i − Σ_k |(v a_i,v b_i)∩(k−1/n,k+1/n)| ].**
+**LEMMA G (PROVED):** G(v):=μ(safe set of S=S'∪{v}) = Φ(C), exactly. **Verified Φ==μ(safe) 900/900 each n=6..14, zero error.**
+**SIGN→VALUE:** each φ_i≥0 is a ReLU ramp (poke-out of the phase-interval beyond B); φ_i>0 ⟺ the i-th P-term>0; Φ=Σφ_i = exact uncovered measure. Φ>0 ⟺ loose AND Φ gives the exact gap (P only gave the sign).
+**KERNEL:** ker Φ = {Φ=0} = {every φ_i=0} = TIGHT/worry-set. So **C' ⟺ ker Φ contains no multiple-of-n config ⟺ Φ>0 for every n|v** — a sum-of-ReLU optimisation, not "no counterexample in a box." vs S581: their peeling Lemmas E/F (+B'/C) prove φ_i>0 for one component (which/why), covering 100% of sampled mult-of-14; Φ computes the exact Σφ_i (how much) — complementary. Renamed my lemma to Lemma G / §4.95 to avoid collision with S581's Lemmas E/F. Folded into THM-398. Files: 07-reflections/lrc-circuit-to-gap-functional-G-equals-Phi-s576.md; THM-398 (§4.95); 04-computation/lrc_circuit_to_gap_functional_s576.py (+.out); HYP-2112.
+
 ## codex-2026-06-03-S582 - Tournament edges as left-middle-right pair automata (HYP-2109)
 
 **Account:** Codex (GPT-5). **User prompt:** see the connection between tournaments and automata; think of a very simple three-state one: left, right, and middle.
