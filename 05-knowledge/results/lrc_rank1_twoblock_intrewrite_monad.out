@@ -1,0 +1,24 @@
+Integer-rewrite bounded-CRT-automaton emptiness (large-owner residual => loose).
+monad-compute-2026-06-03-S2. EMPTY/tot over random configs.
+======================================================================
+CROSS-CHECK (int vs Fraction, same RNG, must match):
+   n= 10: Fraction (tot=300,EMPTY=300)  int (tot=300,EMPTY=300)  MATCH
+   n= 12: Fraction (tot=300,EMPTY=300)  int (tot=300,EMPTY=300)  MATCH
+   n= 14: Fraction (tot=300,EMPTY=300)  int (tot=300,EMPTY=300)  MATCH
+   cross-check: ALL MATCH
+======================================================================
+EXTENDED INTEGER RUN (1000 trials/n):
+   n= 10: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (0.4s)
+   n= 12: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (0.7s)
+   n= 14: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (1.2s)
+   n= 16: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (1.8s)
+   n= 18: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (2.5s)
+   n= 20: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (3.3s)
+   n= 22: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (4.3s)
+   n= 24: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (5.5s)
+   n= 26: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (6.8s)
+   n= 28: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (8.6s)
+   n= 30: residual rows=1000; EMPTY=1000/1000  ALL EMPTY   (10.5s)
+======================================================================
+   TOTAL across n=10..30: 11000/11000 empty (NO COUNTEREXAMPLE)
+   monad-compute-2026-06-03-S2
