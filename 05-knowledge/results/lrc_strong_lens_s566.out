@@ -1,0 +1,5 @@
+152 configs, runner-block at a lonely time:
+  STRONG (#SCC=1): 139   transitive (#SCC=13): 13   intermediate: 0
+  runners fit in a semicircle (transitive-realizable) at that time: 13
+  AP: lonely t=1/14 (boundary), runner #SCC=1, semicircle=False
+  V*: lonely t=1/14 (boundary), runner #SCC=1, semicircle=False

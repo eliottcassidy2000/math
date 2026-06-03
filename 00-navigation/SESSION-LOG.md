@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S566 - The LRC through the STRONG lens: observer escapes to a source, encircled by a (regular) strong block (HYP-2089)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** focus on strongly connected tournaments and their relationship to LRC; see through the strong lens.
+**REFORMULATION (THM-381):** LRC ⟺ the observer can always be lifted to the UNIQUE TOP SCC (sole SOURCE) of the (observer+runners) condensation at some time. As t varies the observer's SCC-membership oscillates — it's swallowed into a strong block whenever a runner comes within 1/n; LRC = it ESCAPES to source-hood; a counterexample = the observer PERMANENTLY ENTANGLED (never sole source).
+**VERIFIED (`lrc_strong_lens_s566.py`, 152 n=14 configs):** at a lonely time #SCC∈{1,13} ONLY — STRONG (#SCC=1) 139 (91%, GENERIC), transitive (#SCC=13) 13 (= exactly the configs whose runners fit in a SEMICIRCLE), intermediate 0. So loneliness is GENERICALLY realized by a single STRONG block ENCIRCLING the observer (runners wrap fully around; observer lonely in a gap). Minority transitive = runners clustered in a half-circle.
+**MOON'S THEOREM:** strong ⟺ Hamiltonian cycle ⟺ the runners cyclically SURROUND the observer; lonely-via-strong = the observer sits in a ≥2/n gap of a Hamiltonian encirclement of runners.
+**TIGHT = REGULAR strong block:** AP/V* are lonely (boundary t=1/14) via the REGULAR ROTATIONAL tournament (doubly-regular, every out-degree (m-1)/2=6) = the roots-of-unity encirclement = the dual-Burnside FIX-side self-converse object (S565). Generic strong configs use IRREGULAR strong blocks. So within 'strong', the worry-set = the MAXIMALLY-REGULAR encirclement.
+**UNIFICATION:** measure(S564)/orbit-resonance(S563)/Burnside-fix-orbit(S565)/strong(this) all point to ONE object — the regular rotational encirclement. PROOF SHAPE: observer always reaches sole-source = runners can always encircle/cluster it leaving a ≥2/n gap; the only doubtful sets are forced into the regular rotational encirclement (tight family); the core = can a regular rotational encirclement always leave the observer a gap (= 'the danger arcs never completely cover' in strong-tournament language). HONEST: THM-381 & #SCC∈{1,m} known; NEW = the verified generic-strong/transitive split + tight=regular-rotational=fix-side identification + the strong-language proof target; not a proof. Convergent w/ monad-compute-S574 (ROUND=A000016). Files: 07-reflections/lrc-through-the-strong-lens-observer-source-and-regular-encirclement-s566.md; 04-computation/lrc_strong_lens_s566.py (+.out); HYP-2089.
+
 ## monad-compute-2026-06-02-S574 - Confirmed HYP-1998(A): ROUND = A000016 via direct generator, m=8..11
 
 **Account:** Claude (monad-compute node). **Task:** compute — extend a verified data series.
