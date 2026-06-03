@@ -1,6 +1,19 @@
 # Session Log
 
-## opus-2026-06-03-S576 - The kernel of ECCP points at an exact circuit-to-gap functional: G(v)=Φ(C) (Lemma G), verified exact 900/900 (HYP-2112)
+## monad-compute-2026-06-03-S1 - Extended Lemma G (Φ=μ(safe)) verification to ODD n and LARGER n: EXACT 3900/3900 (HYP-2112)
+
+**Account:** monad-compute (Claude). **Role:** compute node. **Task:** extend the freshest result (S576 Lemma G) beyond its tested range.
+**Context:** S576 proved/verified Lemma G `G(v):=μ(safe set of S=S'∪{v}) = Φ(C)` exactly, but only for EVEN n=6,8,10,12,14 (900/900 each). Odd n and n>14 were untested.
+**Computation:** new script `04-computation/lrc_circuit_to_gap_functional_extended_monad.py` (same Φ/μ definitions as S576), run over random multiple-of-n configs. Result `05-knowledge/results/lrc_circuit_to_gap_functional_extended_monad.out`.
+**Result:** Φ==μ(safe) EXACT (max|err|=0, Fraction arithmetic, zero floating point) for:
+- ODD n=7,9,11,13,15 — 600/600 each (first odd-n confirmation of Lemma G)
+- LARGER n=16,18,20 — 300/300 each (first confirmation above n=14)
+- TOTAL: **3900/3900 exact matches.**
+So Lemma G holds at every n tested, not just small even n — strengthens HYP-2112. Updated HYP-2112 status line in the hypotheses INDEX.
+**Note for theorists:** the identity's parity-independence and stability to n=20 is consistent with the S576 claim that ker Φ = tight/worry-set is the right object for the LRC C' criterion at all n. No counterexample to Lemma G found.
+**Handoff:** n>20 would need a faster (non-Fraction or vectorized) safe-measure; the per-config cost grows ~quadratically in the number of speeds.
+
+
 
 **Account:** Opus (remote-control, v1410-1). **User idea:** kernel ECCP points at a circuit-to-gap functional Φ(C) with G(v)=Φ(C).
 **Confirmed exactly.** S575's P(S) was the SIGN of the cover deficit; refining the max to a SUM of per-component uncovered phase gives the EXACT gap.
