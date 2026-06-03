@@ -103,8 +103,8 @@ should realize a `chi=2` near-AP/round tournament, while regular classes with
 `chi>=3` should be strictly lonely.
 
 Namespace note: the S581o log used `HYP-2135` for this chi question; the live
-hypothesis is renumbered to `HYP-2136` after the same-day S591 sumset-support
-calculus claimed `HYP-2135`.
+hypothesis is renumbered to `HYP-2136`.  The same-day S591 sumset-support
+calculus is now live as `HYP-2138`.
 
 Artifacts: `04-computation/lrc_regular_full_census_chi_s592.py`,
 `05-knowledge/results/lrc_regular_full_census_chi_s592.out`.
