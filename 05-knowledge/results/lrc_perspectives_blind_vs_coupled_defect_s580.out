@@ -1,0 +1,42 @@
+================================================================================
+THE PERSPECTIVES CURIOSITY: observer-BLIND (vertex-orbit) vs COUPLED (n+1)
+================================================================================
+
+(1) Direct enumeration (vertex-orbit perspectives), small n:
+   n=2: 1 structures, perspectives=2, per-class orbits=[2],  A000568(n+1)=2  == (accident)
+   n=3: 2 structures, perspectives=4, per-class orbits=[3, 1],  A000568(n+1)=4  == (accident)
+   n=4: 4 structures, perspectives=12, per-class orbits=[4, 4, 2, 2],  A000568(n+1)=12  == (accident)
+   n=5: 12 structures, perspectives=48, per-class orbits=[5, 5, 5, 5, 5, 5, 5, 3, 3, 3, 3, 1],  A000568(n+1)=56  DEFECT 8
+
+(2) Burnside defect sequence (all n):
+    n   rooted(n)=blind     A000568(n+1)=coupled    defect       ratio
+    2             2                    2               0    1.0000
+    3             4                    4               0    1.0000
+    4            12                   12               0    1.0000
+    5            48                   56               8    1.1667
+    6           296                  456             160    1.5405
+    7          3040                 6880            3840    2.2632
+    8         54256               191536          137280    3.5302
+    9       1716608              9733056         8016448    5.6699
+   10      97213472            903753248       806539776    9.2966
+
+================================================================================
+READING
+================================================================================
+  A "perspective" = a tournament viewed from a distinguished vertex.  Read as a
+  VERTEX-ORBIT it is OBSERVER-BLIND (forgets how the observer connects); the count is
+  rooted(n) = 2,4,12,48,296,... .  The full count A000568(n+1) = 2,4,12,56,456,... is
+  OBSERVER-COUPLED.  They coincide EXACTLY for n<=4 and split at n=5 (defect 8), then
+  explode.  The clean recursion "perspectives(n)=structures(n+1)" is a small-n ACCIDENT.
+
+  THE MISINTERPRETATION: the LRC runner tournament has been studied UNMARKED (the round
+  body A000016; the 64 self-converse classes, S576/S577; the blind vertex-orbit reading).
+  But LRC safety is NOT a function of the unmarked class (S511) -- it is observer-COUPLED:
+  loneliness = the observer is a SOURCE (THM-381), observer score = blocker count
+  (THM-385), LRC = a projection-DEFECT over A000568 (HYP-1977).  The defect computed here
+  IS that coupling, = the augmentation-index split (blind j=0 vs coupled j!=0).
+
+  WHERE/WHY LRC WORKS AND DOESN'T: the observer-coupling defect is 0 for vertex count <=4
+  (LRC structurally trivial/clean) and turns on at 5, then explodes -- the exact place the
+  structural era ramps up (n=5 first computer-assisted) and dies after 7.  Unmarked
+  (blind) structure can decide LRC only while the defect is 0.
