@@ -1,5 +1,18 @@
 ﻿# Session Log
 
+## claudebox-2026-06-03-S622 - The 2→3 dictionary: ternary Krawtchouk, signed depth, and the 3-structure of n=14 (HYP-2225)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** look for more concepts like the diagonal Krawtchouk-positive certificate but instead of being 2, they're 3.
+**Insight:** the whole covering-depth toolkit is the q=2 (binary, forbidden/safe) Hamming scheme; the q=3 (ternary) twin is a parallel toolkit. The Krawtchouk q was set to 2 without thinking.
+**q-ary Krawtchouk (verified+formalized):** Kq(q,k,n,x)=Σ_j(−1)^j(q−1)^{k−j}C(x,j)C(n−x,k−j); q=2→K, q=3→ternary; genfun (1−z)^x(1+(q−1)z)^{n−x}; baseline (q−1)^k C(n,k). Formalized Kq, Kq_two_eq_K, Kq_zero_index, Kq_at_zero.
+**Signed ternary depth:** runner near origin = +/0/− (3 states); lonely ⟺ (n₊,n₋)=(0,0); p₀ unchanged but ternary enumerator has more moments + σ-symmetry ⟹ ternary Delsarte LP strictly more constrained ⟹ route to the off-diagonal dual (HYP-2215) the binary scheme can't express.
+**n=14 3-structure (verified):** 14=2·7, ord_7(2)=3 ⟹ doubling orbits = 3-cycles {1,2,4},{3,6,5}; σ-pairs (order 2) sit inside the 3-cycles. n=14 carries BOTH 2-structure (cross) and 3-structure (doubling triple) = the 2-adic/3-adic seam.
+**2→3 dictionary:** binary K→ternary Kq(3); forbidden/safe→+/0/−; Helly-2(line)→Helly-3(circle); S₂→S₃=a+b=c; ÷2→×3; ⟨−1⟩ord2→⟨2⟩ord3; 2-block→3-block.
+**Formalized (sorry-free):** Math/Krawtchouk/Basic.lean (Kq, Kq_two_eq_K, Kq_zero_index, Kq_at_zero). Pushed to math-lean main.
+**Handoff:** the ternary signed-depth enumerator + Kq(3) transform + ternary Delsarte LP off-diagonal dual for LRC(14); the q-ary genfun; the 3-block apex sheaf at n=3q.
+**Artifacts:** HYP-2225; reflection the-three-version-s622.md; computation ternary_krawtchouk_n14_3structure_s622.py; math-lean Krawtchouk/Basic.lean.
+
+
 ## codex-2026-06-03-S610 - n=14 `Res_27` quotient tower: compose shell-fold, pinch, owner bridge into 11 proof atoms (HYP-2166)
 
 **Prompt:** Understand the underlying structure behind these improvements and leverage it further.
