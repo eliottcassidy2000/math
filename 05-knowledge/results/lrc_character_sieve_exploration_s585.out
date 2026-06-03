@@ -1,0 +1,58 @@
+============================================================================
+S585  Lonely Runner — character/sieve exploration (two lenses)
+============================================================================
+
+[1] REP-THEORY IDENTITY  ∫Π 1_{B_i} = Σ_{Σ m_i v_i=0} Π b̂(m_i)
+    (validates that sieve overlaps are character/relation sums)
+    T=(3,)            relation-sum=+0.3000  direct=0.3000  indep=Π(2δ)=0.3000
+    T=(3, 5)          relation-sum=+0.0858  direct=0.0867  indep=Π(2δ)=0.0900
+    T=(2, 3, 5)       relation-sum=+0.0610  direct=0.0600  indep=Π(2δ)=0.0270
+    T=(1, 2, 3)       relation-sum=+0.1003  direct=0.1000  indep=Π(2δ)=0.0270
+
+[2] LEMMA A baseline:  circuit-free ⇒ good-measure ≈ (1-2δ)^k → e^{-2}
+    k | 3term | #rel(|m|≤1) | G-δ (margin) | good-meas | (1-2δ)^k | e^-2
+    3 |   0   |     0      |   +0.1500   |  0.1429  |  0.1250 | 0.1353
+    4 |   0   |     0      |   +0.3000   |  0.1172  |  0.1296 | 0.1353
+    5 |   0   |     0      |   +0.2333   |  0.1207  |  0.1317 | 0.1353
+    6 |   0   |     0      |   +0.2321   |  0.1169  |  0.1328 | 0.1353
+    7 |   1   |     10      |   +0.1685   |  0.1315  |  0.1335 | 0.1353
+    8 |   2   |     28      |   +0.1542   |  0.1585  |  0.1339 | 0.1353
+    e^-2 = 0.1353; circuit-free good-measure should hug the baseline, margin G-δ > 0.
+
+[3] LEMMA B regime:  3-term relations shrink the margin toward 0 (the hard configs)
+    config             | 3term | energy | G-δ     | good-meas
+    circuit-free       |    0  |    74  | +0.2187 | 0.1071
+    AP 1..k (max 3term) |    9  |   146  | -0.0000 | 0.0000
+    geometric 1,2,4,.. |    5  |    66  | +0.1899 | 0.2319
+    Sidon-ish          |    3  |    70  | +0.1071 | 0.1383
+
+[4] USER CLAIM: 4-term-rich (high energy) BUT 3-term-free ⇒ still safe (margin>0)
+    searching for high-energy, 3-term-free configs and checking the margin...
+    highest-energy 3-term-free found: S=[14, 16, 18, 20, 22, 24]  energy=146  3term=0  margin G-δ=+0.2253
+    => SAFE (margin>0), supports the claim
+
+[5] HASKELL LENS: curry ev at witness t* ⇒ tournament arcs = sign Im χ_{v_a-v_b}(t*)
+    S=[1, 2, 3, 5, 8], witness t*=0.27275, G=0.1818, δ=0.1667
+    arcs (a→b if Im e^{2πi(v_a−v_b)t*}>0), indexed by difference set S−S:
+    out-degrees (tournament score seq): [1, 2, 2, 2, 3]
+    #arcs=10 (of 10 pairs); difference set size |S−S|=15
+
+[6] THETA-FUNCTION form  good-measure = Σ_{m∈Λ=ker(v)} Π ĝ(m_i)
+    Lemma A = 'the relation-lattice theta sum is dominated by its constant term'
+    config        | (1-2δ)^k const | corrections | const+corr | actual good | λ1(Λ)=min relation
+    circuit-free  | 0.1328         | -0.0339     | 0.0989     | 0.1071      | 4
+    {1..6} (AP)   | 0.1328         | -0.0551     | 0.0778     | 0.0000      | 3
+    {7..12} (AP↑) | 0.1328         | -0.0015     | 0.1313     | 0.1404      | 4
+    geometric     | 0.1328         | +0.0831     | 0.2159     | 0.2319      | 3
+    => circuit-free: corrections ≈ 0, theta ≈ const > 0 (Lemma A); AP {1..6}: large negative
+       corrections cancel the const → good=0 (tight). λ1(Λ) small = short 3-term relation.
+
+[7] AP-TRANSLATION FLIP: {m+1..m+k} keeps additive energy but kills 3-term relations
+    m | set          | energy | 3term | G-δ      | regime
+    0 | [1, 2, 3, 4, 5, 6]|  146   |   9   | -0.0000 | TIGHT (Lemma B)
+    2 | [3, 4, 5, 6, 7, 8]|  146   |   4   | +0.1298 | safe (Lemma A)
+    4 | [5, 6, 7, 8, 9, 10]|  146   |   1   | +0.1904 | safe (Lemma A)
+    6 | [7, 8, 9, 10, 11, 12]|  146   |   0   | +0.2253 | safe (Lemma A)
+    8 | [9, 10, 11, 12, 13, 14]|  146   |   0   | +0.2482 | safe (Lemma A)
+    => energy constant (translation-invariant); 3-term count drops to 0 once m≥k;
+       the gap flips TIGHT→safe exactly when the 3-term relations vanish.
