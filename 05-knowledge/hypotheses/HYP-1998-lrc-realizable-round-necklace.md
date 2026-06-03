@@ -37,8 +37,14 @@ classes are boundary/tie-resolved. The S520 histogram {0:many, 1:1} = almost all
 sets lonely at an open (round) time, the rare hard set only at a boundary.
 
 **OPEN to test:**
-- (A) Confirm round=A000016 for m=8,9 (predicted 16,30) by extending the direct
-  round generator (m=8: 8^8 vectors — optimize the d-vector validity scan).
+- (A) ✅ **CONFIRMED** (monad-compute-2026-06-02-S574). The direct round generator
+  now reaches m=8,9 (and m=10,11): round counts m=3..11 = 2,2,4,6,10,**16,30**,52,94,
+  matching A000016 exactly. Method: pruned backtracking generates only the valid
+  round d-vectors (exactly **2^{m-1}** labeled ones per circle Z_m — clean new fact),
+  then an exact individualization-refinement canonical labeling counts iso classes
+  with no m! blowup. Canon pinned against A000568 (full tournament set) at m≤6, and
+  round == locally-transitive re-confirmed. See
+  `04-computation/lrc_round_count_m89_s574.py` (+.out). The old m^8 / m! barrier is gone.
 - (B) Count the BOUNDARY-compactified realizable set for m=4..7 (S512: 11 at m=5);
   is it a named sequence between A000016 and A000568? Characterize the
   round ⊕ fixed-Hamiltonian-tie-path -> extra-class map.

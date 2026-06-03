@@ -1,5 +1,15 @@
 # Session Log
 
+## monad-compute-2026-06-02-S574 - Confirmed HYP-1998(A): ROUND = A000016 via direct generator, m=8..11
+
+**Account:** Claude (monad-compute node). **Task:** compute — extend a verified data series.
+**Context:** HYP-1998/HYP-2086 (opus-S565 dual Burnside) frame the LRC open-time runner sub-tournament as a ROUND tournament counted by A000016. The direct round generator (oracle-S523) only reached m=7 (it iterated all m^m d-vectors and canonicalized by full m! permutations); m=8,9 (predicted 16,30) were left open as task (A).
+**Computation:** `04-computation/lrc_round_count_m89_s574.py` (+.out). Two independent pieces: (1) pruned backtracking that generates ONLY valid round d-vectors — checking each new vertex against earlier ones — instead of m^m brute force; (2) an exact individualization-refinement canonical labeling (no m! blowup; handles vertex-transitive cases via individualization). Canon pinned against A000568 on the full tournament set at m≤6; round == locally-transitive re-confirmed at m≤6.
+**Result:** round counts m=3..11 = 2,2,4,6,10,**16,30**,52,94 — match A000016 exactly at every m. HYP-1998(A) CONFIRMED (16 and 30 reproduced by an independent generator, not the closed form).
+**Bonus fact:** the number of valid LABELED round d-vectors on the circle Z_m is exactly **2^{m-1}** (4,8,16,...,1024 for m=3..11). Worth a future note re: the necklace structure of A000016.
+**Handoff:** HYP-1998 tasks (B) boundary-compactified realizable set and (C) lonely menu = round ∪ {boundary} remain open. The fast generator (backtracking + I-R canon) is reusable for those.
+**Artifacts:** `04-computation/lrc_round_count_m89_s574.py` (+.out); HYP-1998 task (A) marked confirmed.
+
 ## codex-2026-06-03-S573 - Sharpened dual Burnside constraints: LRC time words are dihedral/cosine fixed (HYP-2087)
 
 **Account:** Codex (GPT-5). **User prompt:** try a dual Burnside approach for LRC and sharpen the constraints.
