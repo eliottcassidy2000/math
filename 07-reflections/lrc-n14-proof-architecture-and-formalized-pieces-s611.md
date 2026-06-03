@@ -38,6 +38,7 @@ LRC(14)
 | component | module | content |
 |---|---|---|
 | danger block-diagonalization | `DangerBlocks.lean` | `gcd(j,n)=Σ_{d∣n,d∣j}φ(d)`; lonely-clock = unit |
+| danger depth (runner count) | `DangerCount.lean` | `#{v∈(0,n−1]: n∣vj} = gcd(j,n)−1` |
 | the unit/division sieve (trivial half) | `UnitClock.lean` | no multiple of `n` ⇒ lonely at `t=a/n` |
 | the apex / 2-block / lift | `ApexCertificate.lean` | count `(q−1)(q−1−|S|)`, trichotomy, the lift |
 | owner rigidity + Lemma C | `OwnerCongruence.lean` | `rigidity`, `lemmaC`, `lemmaC_no_fit`, `resonance_bound` |
