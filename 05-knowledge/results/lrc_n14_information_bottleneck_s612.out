@@ -1,0 +1,57 @@
+S612 information-theoretic reading of the n=14 Res_27 progress
+========================================================================
+
+A. Address entropy compression
+  raw 13-subsets of nonzero residues     count=  10400600 address_bits= 23.3102
+  unit-shell rows                        count=    340928 address_bits= 18.3791
+    compression from previous: 4.9311 bits
+  D/U/N survivors                        count=     27733 address_bits= 14.7593
+    compression from previous: 3.6198 bits
+  proof-obligation types                 count=       148 address_bits=  7.2095
+    compression from previous: 7.5499 bits
+  S610 proof atoms                       count=        11 address_bits=  3.4594
+    compression from previous: 3.7500 bits
+  primitive floor atoms                  count=         2 address_bits=  1.0000
+    compression from previous: 2.4594 bits
+
+B. Relevance entropy of proof predicates
+  pinch status on D/U/N survivors    H= 0.0016 bits counts=(27730, 3, 0) meaning=strict/floor/below
+  owner route through slack <=81     H= 0.9981 bits counts=(8044, 9502, 2, 2, 0) meaning=ledger/cheap/floor/control/open
+  scalar carry shadow route          H= 0.4138 bits counts=(33, 3) meaning=strict/floor
+  local carry route, weight <=2      H= 0.0000 bits counts=(182, 0, 0) meaning=strict/floor/below
+
+C. Carry side-information channel
+  scalar probes: 36
+  distinct carry signatures: 33
+  route counts: {'floor shadow': 3, 'strict shadow': 33}
+  carry indicator counts: {'zero carry': 3, 'nonzero carry': 33}
+  H(route)=0.4138 bits
+  H(carry_nonzero)=0.4138 bits
+  I(carry_nonzero; shadow_route)=0.4138 bits (perfect in S611 scalar probes)
+
+D. Information-bottleneck interpretation
+  The tower is not just smaller search.  It is maximal forgetting subject to sufficiency for the current proof predicate.
+  HYP-2164 is a low-rate least-positive section; S611 shows it is lossy for lifted floor behavior unless the carry side channel is attached.
+  The carry bit has tiny Shannon entropy in the scalar audit, but high relevance: it exactly distinguishes floor shadows from strict shadows.
+  This is the rare-event lesson: proof relevance is not proportional to ambient address entropy.
+
+Tournament Analysis over information channels:
+  vertices: 9
+  score_histogram: ((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1))
+  SCCs: count=9 largest=1
+  directed_3_cycles: 0
+  edge_flips between proof-burden and entropy gauges: 6/36
+  proof-burden Hamiltonian path:
+    scalar carry bit
+    S610 proof atoms
+    owner route
+    proof-obligation types
+    64 fixed classes
+    THM-407 gcd strata
+    unit-shell rows
+    D/U/N survivors
+    raw Res_27 subsets
+
+Conclusion:
+  Recent progress is an information-bottleneck theorem schema: identify a sufficient statistic for the floor predicate, quotient to it, and reattach only the side information whose conditional mutual information with the proof predicate is nonzero.
+  For n=14 the side information is now explicit: owner labels and the carry cocycle k in v=r+27k.
