@@ -73,3 +73,15 @@ n=13: searching (600s budget)...
 a(13) = 3718291         [600.0s] NEW
   best_adj: 4430 7252 3936 3462 4749 2587 1464 1575 4786 5195 6449 977 2284
 
+=== A038375: max Hamiltonian paths in n-vertex tournament ===
+Key formula: H(T) = I(Omega(T), 2)  (OCF identity, verified T_2..T_4)
+Strategy: local search + structured warm starts
+
+--- Warm-start validation ---
+  All constructors valid for n=2..12
+
+n=17: searching (120s budget)...
+  n=17  hp=13689269499  (4.3s)
+a(17) = 13689269499     [120.6s] NEW
+  best_adj: 510 1020 2040 4080 8160 16320 32640 65280 130560 130049 129027 126983 122895 114719 98367 65663 255
+

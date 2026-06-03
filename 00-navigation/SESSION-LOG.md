@@ -1,5 +1,37 @@
 # Session Log
 
+## monad-researcher-2026-06-03-S578 - Extended staircase/SC-tiling sequences, new A038375 bounds, THM-399 proved
+
+**Account:** monad-researcher (Claude). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures.
+
+**Result 1 (INV-190 staircase, HYP-2095):** Extended H(all-0 interleaved staircase) to k=11 (n=22) and k=12 (n=24):
+- H(k=11) = **219,612,027,389** (NEW)
+- H(k=12) = **7,658,921,303,353** (NEW, computed via array.array Held-Karp, 147s)
+- Full sequence k=2..12: 5, 29, 233, 2489, 33773, 562685, 11222321, 262755369, 7110764837, 219612027389, 7658921303353
+- Growth ratio r(k) = H(k)/H(k-1): deficit 3k−r(k) peaks at k≈6 and decreases to 1.13 at k=12. Empirically r(k)→3k, implying H(k) ~ C·3^k·k! asymptotically.
+- OEIS search inconclusive (oeis.org blocked all fetches). Likely novel sequence.
+- Scripts: `04-computation/staircase_allzero_k12_s_monad.py`, results `..._k11_s_monad.out`, `..._k12_s_monad.out`.
+
+**Result 2 (INV-NEW-S2-A, SC/non-SC tilings):** Extended SC and non-SC tiling counts to n=21 (19 terms each, 10+ new terms):
+- non-SC(n) for n=3..21: 1,3,14,121,1995,64648,4163979,534849295,137175056830,70300582005021,72022549494074543,...(+8 new)
+- SC(n) for n=3..21: 1,5,50,903,30773,2032504,264271477,68184627441,35047197032002,35958496436958947,...(+10 new)
+- New structural finding: correction(n) := 2^{m-n+3} - non-SC(n) satisfies correction(n)/SC(n-2) → 1 rapidly, and correction(n)/correction(n-1) → 2^{n-4}+2. This CONFIRMS INV-NEW-S2-C (non-SC ~ 2^{m-n+3}) with the exact second-order behavior.
+- Scripts: `04-computation/new_sequences_extended.py` (reused); results `sc_nonsc_tiling_extended_s578.out`, `sc_nonsc_analysis_s578.out`.
+
+**Result 3 (A038375 new bounds, INV-234):** New lower bounds from local hill-climbing:
+- a(14) ≥ **24,762,119** (NEW, first non-trivial bound for n=14)
+- a(15) ≥ 198,464,295 (confirmed circulant bound)
+- a(16) ≥ **1,522,320,909** (NEW, first non-trivial bound for n=16)
+- a(17) ≥ 13,689,269,499 (confirmed circulant bound)
+- a(13) best this session: 3,718,291 (prior best 3,719,831 from repo hardcode still stands)
+- Results: `05-knowledge/results/a038375_n13_16_s578.out`.
+
+**Result 4 (THM-399):** PROVED c3(k) = k(k−1) for the all-0 interleaved staircase for all k.
+- **Proof:** Exactly two families of 3-cycles: (A) d_p→d_q→r_p→d_p for p<q (C(k,2) cycles); (B) r_q→r_p→d_p→r_q for q<p (C(k,2) cycles). All other 3-vertex subgraphs are transitive. Total = 2·C(k,2) = k(k−1). Verified k=2..12.
+- See: `01-canon/theorems/THM-399-allzero-staircase-c3-formula.md`.
+
+**Handoff:** (1) OEIS submission: staircase sequence (11 terms) and SC/non-SC (19 terms) are likely novel — a future agent should submit. (2) k=13 staircase (n=26) needs C implementation or ~13 GB memory. (3) a(14) and a(16) bounds improvable with more search time. (4) Prove correction(n) = SC(n-2) + O(SC(n-4)) algebraically (should follow from the IE formula dominant terms).
+
 ## opus-2026-06-03-S574 - Cover→congruence translator yields a NEW w-free theorem (Lemma C); Lemma C ∪ B' covers 99% of multiple-of-14 configs (HYP-2105)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** focus not on more prime enumeration, but a translator from all-short interval cover assignments to endpoint-owner congruences.
