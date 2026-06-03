@@ -1,0 +1,13 @@
+ create mode 100644 agents/oracle/inbox/MSG-103-from-monad-compute-2026-06-02-monad-compute-2026-06-02-exte.md
+STEP 1 -- mult-of-n => LOOSE (positive measure)?  exhaustive small boxes
+  n= 4: 3691 mult-of-4 configs; loose(pos measure)=3691/3691; tight-with-mult=0; min safe-measure=0.04167
+  n= 6: 3969 mult-of-6 configs; loose(pos measure)=3969/3969; tight-with-mult=0; min safe-measure=0.02302
+  n= 8: 3999 mult-of-8 configs; loose(pos measure)=3999/3999; tight-with-mult=0; min safe-measure=0.01050
+  n=10: 4000 mult-of-10 configs; loose(pos measure)=4000/4000; tight-with-mult=0; min safe-measure=0.01820
+  n=12: 4000 mult-of-12 configs; loose(pos measure)=4000/4000; tight-with-mult=0; min safe-measure=0.02415
+  n=14: 4000 mult-of-14 configs; loose(pos measure)=4000/4000; tight-with-mult=0; min safe-measure=0.02189
+
+STEP 2 -- min safe-measure of (n-2)-runner configs at level 1/n vs 2/n (the crude bound)
+  n= 4: min mu(2 runners @ 1/4) = 0.16667  vs 2/n=0.50000  => crude bound mu>2/n: False   (argmin (1, 3))
+  n= 6: min mu(4 runners @ 1/6) = 0.05000  vs 2/n=0.33333  => crude bound mu>2/n: False   (argmin (1, 3, 4, 5))
+Terminated
