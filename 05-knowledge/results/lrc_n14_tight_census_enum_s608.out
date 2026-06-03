@@ -1,0 +1,58 @@
+
+  FINITE ENUMERATIONS FOR LRC@14
+======================================================================
+
+  I. EXHAUSTIVE TIGHT CENSUS (primitive 13-sets, speeds <= B)
+  --------------------------------------------------
+    B   #configs  loose(M>1/14)  TIGHT  counterex(M<1/14)    sec
+   16        560            559      1                  0    0.1
+   18       8568           8567      1                  0    0.7
+   20      77520          77519      1                  0    6.8
+      TIGHT: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  => only the AP is tight (speeds <= 20); ZERO counterexamples -- LRC@14
+     holds for all 77520 primitive 13-sets in range.
+
+  II. THE TIGHT FAMILY IS {AP, V*};  V* UNIQUE AMONG SWAPS
+  --------------------------------------------------
+  AP {1..13}: tight=True, M=1/14
+  V*=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24): tight=True, M=1/14  (= AP with 12->24)
+  1-swap-of-AP tights (replace one element, new value <= 40): [(12, 24)]
+  (only 12->24; exhaustive 2-swaps to 30 give NONE -- tight family = {AP, V*}.)
+
+  III. THE DOUBLING LAW: only 12->24 stays on the wall
+  --------------------------------------------------
+    a   2a  gcd(a,28)        M   vs 1/14
+    7   14          7     1/11     >1/14
+    8   16          4     2/23     >1/14
+    9   18          1     2/23     >1/14
+   10   20          2     2/27     >1/14
+   11   22          1     2/25     >1/14
+   12   24          4     1/14    =TIGHT
+   13   26          1     2/27     >1/14
+  (every doubling has M>=1/14: no counterexample. Only 12->24 lands on the
+   wall; the others LOOSEN -- removing the element opens a better window.)
+
+  IV. WITNESS STRUCTURE: AP and V* share t*=j/14, binding pairs sum to n=14
+  --------------------------------------------------
+  AP: witnesses t*=['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+     t*=1/14: binding [1, 13] (sums: [14])
+     t*=3/14: binding [5, 9] (sums: [14])
+     t*=5/14: binding [3, 11] (sums: [14])
+  V*: witnesses t*=['1/14', '3/14', '5/14', '9/14', '11/14', '13/14']
+     t*=1/14: binding [1, 13] (sums: [14])
+     t*=3/14: binding [5, 9] (sums: [14])
+     t*=5/14: binding [3, 11] (sums: [14])
+  => binding pairs are ANTIPODAL {a, 14-a} (sum = n); 24 in V* never binds
+     (slack everywhere), so V* inherits the AP wall exactly.
+
+======================================================================
+  SUMMARY (finite, efficient, all computed here)
+  * Exhaustive census speeds<=20: AP is the only tight config, ZERO
+    counterexamples -- LRC@14 verified on 77520 configs.
+  * Tight family = {AP, V* = AP[12->24]}; V* unique among 1-swaps (<=40) and
+    2-swaps (<=30).
+  * Doubling law: all a->2a have M>=1/14; only 12->24 stays at M=1/14, the rest
+    loosen. 12 is the unique 'on-wall' doubling.
+  * AP and V* share witnesses t*=j/14 (j odd); binding pairs are antipodal
+    {a,14-a} summing to n=14; 24 never binds. (2n-1=27 composite => sporadics.)
+
