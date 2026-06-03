@@ -1,0 +1,42 @@
+============================================================================================
+S605  the resonance energy (key LRC concept) and the SIDESTEP (construction/additive face)
+============================================================================================
+
+[1] THE BOUND (HYP-2053): |LONELY| ≥ main - E(v); E<main ⇒ LRC proven (else high-energy core)
+  config              n  | main=(1-2/n)^{n-1} | resonance energy E(v) | E<main? | regime
+  AP {1..5} core       6 | 0.1317             | 0.3553                | False   | HIGH-ENERGY CORE (energy blind)
+  AP {1..6} core       7 | 0.1328             | 0.5948                | False   | HIGH-ENERGY CORE (energy blind)
+  Fibonacci 1,2,3,5,8  6 | 0.1317             | 0.2573                | False   | HIGH-ENERGY CORE (energy blind)
+  generic 3,5,11,17,29  6 | 0.1317             | 0.0708                | True    | BULK: LRC proven by energy
+  Sidon 1,2,5,11,22    6 | 0.1317             | 0.1151                | True    | BULK: LRC proven by energy
+  transl {7..11}       6 | 0.1317             | 0.0999                | True    | BULK: LRC proven by energy
+
+[2] E IS DOMINATED BY THE SHORT (length-3 = 3-term fusion) RESONANCES (S585 grading)
+  config              | E by resonance length Σ|m_i| (3=3-term fusion dominates the core)
+  AP {1..5} core      | l=3:0.120  l=4:0.088  l=5:0.045  l=6:0.038  l=7:0.022  l=8:0.020  l=9:0.009  l=10:0.007  l=11:0.003  l=12:0.002  l=13:0.000  l=14:0.001  l=15:0.000  l=16:0.000  l=17:0.000  l=18:0.000  l=19:0.000
+  AP {1..6} core      | l=3:0.128  l=4:0.113  l=5:0.086  l=6:0.087  l=7:0.065  l=8:0.047  l=9:0.030  l=10:0.018  l=11:0.011  l=12:0.006  l=13:0.003  l=14:0.001  l=15:0.000  l=16:0.000  l=17:0.000  l=18:0.000  l=19:0.000  l=20:0.000  l=21:0.000  l=22:0.000  l=23:0.000
+  Fibonacci 1,2,3,5,8 | l=3:0.078  l=4:0.064  l=5:0.036  l=6:0.026  l=7:0.020  l=8:0.018  l=9:0.009  l=10:0.003  l=11:0.001  l=12:0.002  l=13:0.001  l=14:0.000  l=15:0.000  l=16:0.000  l=17:0.000  l=18:0.000
+  generic 3,5,11,17,29 | l=4:0.037  l=6:0.021  l=8:0.010  l=10:0.001  l=12:0.001  l=14:0.000  l=16:0.000  l=18:0.000
+  Sidon 1,2,5,11,22   | l=3:0.045  l=4:0.019  l=5:0.008  l=6:0.023  l=7:0.009  l=8:0.004  l=9:0.003  l=10:0.002  l=11:0.001  l=12:0.000  l=13:0.000  l=14:0.000  l=15:0.000  l=16:0.000  l=17:0.000  l=18:0.000
+  transl {7..11}      | l=4:0.060  l=5:0.005  l=6:0.006  l=7:0.012  l=8:0.008  l=9:0.005  l=10:0.002  l=11:0.001  l=12:0.000  l=13:0.000  l=14:0.000  l=15:0.000  l=16:0.000  l=17:0.000  l=18:0.000
+  => the core's resonance energy is carried by the length-3 (3-term v_a+v_b=v_c) fusions —
+     the dynamical-face resonances. This is what no measure bound can push below `main`.
+
+[3] THE SIDESTEP: the high-energy core is lonely by CONSTRUCTION at the rational sieve t=a/n
+  config              | E≥main (energy fails) | sieve witness t=a/n | gap there | = 1/n (tight)?
+  AP {1..5} core      | True                  | t=1/6             | 0.1667    | YES (the n-gon vertex, measure-0 witness)
+  AP {1..6} core      | True                  | t=1/7             | 0.1429    | YES (the n-gon vertex, measure-0 witness)
+  Fibonacci 1,2,3,5,8 | True                  | t=1/6             | 0.1667    | YES (the n-gon vertex, measure-0 witness)
+  generic 3,5,11,17,29 | False                 | t=3/6             | 0.5000    | gap>1/n (bulk, also fine)
+  Sidon 1,2,5,11,22   | False                 | t=2/6             | 0.3333    | gap>1/n (bulk, also fine)
+  transl {7..11}      | False                 | t=1/6             | 0.1667    | YES (the n-gon vertex, measure-0 witness)
+  => where the resonance energy is too large to bound (the core), the rational sieve t=a/n
+     EXHIBITS the witness directly — sidestepping the energy. (Vitali boundary HYP-2054.)
+
+[4] THE TWO FACES (S602) of the sidestep
+  DYNAMICAL face = the resonance energy E(v) = Σ over the relation lattice (resonances);
+                   a MEASURE quantity; proves the BULK; BLIND to the measure-0 core (Vitali).
+  ADDITIVE  face = the construction: sieve t=a/n, the mod-(2n-1) transversal rigidity (64
+                   classes all lonely). Handles the CORE; SIDESTEPS the resonance energy.
+  => LRC = bulk (bound the resonance energy) ⊔ core (sidestep it by construction). One
+     concept (resonance energy), one boundary (Vitali), two faces (measure ⊔ construction).
