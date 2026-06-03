@@ -1,0 +1,11 @@
+CLEARANCE-ENTROPY ledger log|SAFE|=sum log c_i; and the Helly trap number
+  AP n=6 tight: |SAFE|=0.0000; clearances=['2/3', '3/4', '5/9', '1/2', '0']
+     clearance-entropy log2 c_i = ['-0.58', '-0.42', '-0.85', '-1.00', '-inf']; sum=log2|SAFE|=-inf
+     HELLY trap number (min subfamily with measure-0 safe set) = 5, runners [1, 2, 3, 4, 5]
+  generic n=6 loose: |SAFE|=0.1905; clearances=['2/3', '3/4', '2/3', '23/28', '16/23']
+     clearance-entropy log2 c_i = ['-0.58', '-0.42', '-0.58', '-0.28', '-0.52']; sum=log2|SAFE|=-2.392
+  AP n=7 tight: |SAFE|=0.0000; clearances=['5/7', '4/5', '2/3', '5/8', '6/25', '0']
+     clearance-entropy log2 c_i = ['-0.49', '-0.32', '-0.58', '-0.68', '-2.06', '-inf']; sum=log2|SAFE|=-inf
+     HELLY trap number (min subfamily with measure-0 safe set) = 6, runners [1, 2, 3, 4, 5, 6]
+  generic n=7: |SAFE|=0.0861; clearances=['5/7', '11/15', '3/5', '29/44', '16/29', '199/264']
+     clearance-entropy log2 c_i = ['-0.49', '-0.45', '-0.74', '-0.60', '-0.86', '-0.41']; sum=log2|SAFE|=-3.537
