@@ -2,6 +2,8 @@
 id: HYP-2157
 status: synthesis / proof-program
 source: user-2026-06-03; codex-2026-06-03-S604
+updates:
+  - codex-2026-06-03-S605
 related:
   - HYP-2142
   - HYP-2144
@@ -13,6 +15,7 @@ related:
   - HYP-2155
   - HYP-2156
   - THM-002
+  - THM-401
   - THM-406
 ---
 
@@ -81,6 +84,37 @@ The additive-chain and shell labels are candidates for a compressed
 all-orders certificate.  They do not replace `{S_j}` by a low-order moment;
 they explain why the full alternating sum collapses while the unit boundary
 witness floor survives.
+
+## Category / Number-Theory Refinement
+
+The all-orders package becomes canonical through a categorical coimage:
+
+```text
+clock circle -> coimage(depth observable) -> depth values.
+```
+
+Yoneda gives the recognition principle: if the depth law, factorial moments,
+spectral measure, Helly probes, CRT witnesses, and partition-function
+evaluations all represent the same answer functor, then the package is not an
+arbitrary invariant.  It is the coimage of the observable.
+
+Number theory supplies one of the most important probe families.  At
+`delta=1/n`, THM-401/S571 compresses endpoint witnesses through
+
+```text
+C = 2n - 1,
+V mod C,
+antipodal shells {a,-a},
+unit clocks a^{-1},
+gcd strata for composite C.
+```
+
+The `C`-resonance quotient is a compressed all-orders coordinate.  If a unit
+shell is missed, a witness exists and `p_0` cannot collapse.  If unit shells are
+covered, the remaining cancellation question moves to additive resonances and
+nonunit strata.  Thus `2n-1` resonances are not merely a floor trick: they are
+the number-theoretic observer maps that expose or block the inclusion-exclusion
+cancellation.
 
 The incoming bounded-CRT automaton work through `n=20` (HYP-2142) is the same
 kind of move on the two-block side: density and low-order measures are blind,

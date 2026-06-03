@@ -3,6 +3,7 @@ id: HYP-2156
 status: OPEN synthesis program; anti-Poisson/coimage atlas for LRC collapse, strong tournament residuals, and adjacent arithmetic systems
 source:
   - codex-2026-06-03-S604
+  - codex-2026-06-03-S605
 related:
   - HYP-2153
   - HYP-2154
@@ -15,6 +16,8 @@ related:
   - HYP-2143
   - HYP-2114
   - HYP-2104
+  - HYP-2135
+  - HYP-2157
   - THM-401
   - THM-406
 ---
@@ -51,6 +54,47 @@ an all-orders overlap cancellation in the spectral/coimage measure.  S599c also
 shows that `S_2` does not separate additive chains from generic controls.  The
 right object is therefore the whole coimage distribution, not any finite moment
 truncation.
+
+## Category / Number-Theory Addendum
+
+The categorical reading and the number-theoretic reading are complementary, not
+parallel metaphors.
+
+The categorical side:
+
+```text
+N_delta : clock circle -> depth values,
+coimage(N_delta) = the minimal quotient retaining the depth predicate,
+Yoneda = the coimage is recognized by all natural probes into it.
+```
+
+Those probes include the depth distribution, factorial moments, spectral
+measure, Helly certificates, partition-function evaluations, CRT witnesses, and
+unit-shell observers.  If all these probes keep recovering the same obstruction,
+the object is canonical in the Yoneda sense: it represents the problem's
+observable functor.
+
+The number-theoretic side says which probes matter at the LRC floor.  At
+`delta=1/n`, the sharp resonance modulus is
+
+```text
+C = 2n - 1.
+```
+
+A missed unit antipodal shell `{a,-a} mod C` gives the inverse clock
+`k=a^{-1}` and therefore a witness at `k/C` with gap `2/C > 1/n`.  Thus any
+`p_0=0` collapse must pass through the `C`-shell quotient:
+
+```text
+V mod C -> antipodal shells -> unit action by (Z/CZ)^x -> gcd strata.
+```
+
+This is the THM-401/S571 witness functor.  The `2n-1` resonances are the
+arithmetic part of the all-orders cancellation.  They do not replace
+`sum_j (-1)^j S_j`; they compress the conditions under which that alternating
+sum can vanish.  Prime `C` makes every shell unit-visible.  Composite `C`
+creates nonunit lanes where sporadic collapse can hide, such as `C=27` for the
+`n=14` route.
 
 ## Dictionary
 
@@ -156,7 +200,7 @@ whether a row is AP-like.  The row should be projected through:
 
 ```text
 coimage depth law,
-unit/nonunit shell floor,
+Res_27(V): unit/nonunit C=27 shell floor,
 additive-chain labels,
 two-block determinant component languages,
 Helly certificate rank,
@@ -172,6 +216,8 @@ survives, it becomes the next proof object rather than a search artifact.
 
 1. Extend `lrc_p0_collapse_additive_chains_s602.py` with an `APSig` table:
    `p_k`, `S_j`, alternating partial sums, shell floor, and proof-lens SCCs.
+   Add `Res_C(V)` columns: antipodal shell coverage, unit-character orbits, gcd
+   strata, and additive-chain relations.
 2. Compare AP, `(1,3,4,7)`, `(1,3,4,5,9)`, the two `n=8` sporadics, and
    non-chain controls by their full inclusion-exclusion profiles, not only
    `S_2`.
@@ -195,10 +241,12 @@ HYP-2153: the p_0 collapse family is larger than AP and contains sporadic chains
 HYP-2154: the free/depth baseline is Poisson-like.
 HYP-2155: the master object is a coimage.
 HYP-2151/HYP-2152: Helly rank is certificate entropy.
+THM-401/S571: `2n-1` unit-shell resonances give witness exits.
 ```
 
 The new contribution is the named proof program: anti-Poisson means
 coimage-level ground-cell collapse by structured correlation, and strong
 tournament residuals are the cyclic proof-obligation subset where that
-collapse can hide.
-
+collapse can hide.  S605 sharpens the number-theory layer: `2n-1` resonances
+are the shell/character probes whose coverage decides whether the all-orders
+cancellation is even possible.

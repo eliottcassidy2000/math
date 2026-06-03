@@ -51,6 +51,36 @@ linear-form image in which `2^E - 3^k` is visible.
 That is what "fundamental" means here: a thing is fundamental when it is the
 minimal object that still remembers the obstruction.
 
+## Category + Number Theory
+
+The category-theory side says:
+
+```text
+coimage = the minimal quotient that still decides p_0.
+Yoneda  = the quotient is canonical because every natural probe recovers it.
+```
+
+The number-theory side says which probes matter at the LRC floor.  At
+`delta=1/n`, set `C=2n-1`.  The antipodal pairs `{a,-a} mod C`, the unit action
+of `(Z/CZ)^x`, and the gcd strata for composite `C` are the resonance observers.
+If a unit shell is missed, multiplication by `a^{-1}` exposes a witness at
+`a^{-1}/C`, so `p_0` cannot be zero.  If all unit shells are covered, the
+remaining question is whether additive resonances align the higher overlaps so
+that
+
+```text
+p_0 = sum_j (-1)^j S_j
+```
+
+cancels exactly.
+
+So `2n-1` is not just a convenient denominator.  It is the number-theoretic
+coimage of the floor witness problem.  Prime `C` makes every shell visible to
+unit clocks; composite `C` creates nonunit lanes where sporadic cancellation can
+hide.  For `n=14`, this means `C=27=3^3`, and the useful object is `Res_27(V)`:
+unit-shell coverage plus gcd lanes plus additive-chain relations plus the depth
+polynomial cancellation profile.
+
 ## Repo Atlas
 
 LRC depth:
@@ -163,4 +193,3 @@ This is a frame, not a proof.  The rigorous anchors are THM-406
 coimage meaning), and the Helly/logarithm work HYP-2151/HYP-2152.  The new
 claim is that anti-Poisson should be promoted to a named coimage-level
 signature and used to organize the `n=14` proof residuals.
-
