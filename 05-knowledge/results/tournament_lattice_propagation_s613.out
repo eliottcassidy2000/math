@@ -1,0 +1,43 @@
+
+  TOURNAMENT-LATTICE PROPAGATION: THM D, H-GAPS, Cl2(pi/3)
+======================================================================
+
+  PART 1 [VERIFIED] Theorem D: loose gaps of V* lie on the (2n-1) lattice
+    n Q=2n-1  #lonely intervals    centers * Q (near integers)
+   10     19                  2                  [6.99, 12.01]
+   12     23                  2                  [7.01, 15.99]
+   16     31                  2                 [10.99, 20.01]
+   18     35                  2                 [11.01, 23.99]
+   22     43                  2                 [14.99, 28.01]
+  => the only V* gaps are {3,2n-4} pinches (on the (2n-1) lattice). [Theorem D content]
+
+  PART 2 [VERIFIED/REFUTED] H-impossibilities
+  H(T)=#HamPaths is always odd. Forbidden odd values <=80: {7, 21}.
+  Tempting pattern 7*3^k={7,21,63,189}: REFUTED -- 63,189 achievable (first at n=8).
+  (n<=7 sampling missed 63; verified 63 hit 6x and 189 hit 121x at n=8.)
+  So forbidden-H is sporadic {7,21}; the powers-of-3 live in the 3-shell, not here.
+
+  PART 3 [NUMERICAL/STRUCTURAL] the 1.014 constant
+  Cl_2(pi/3) = 1.014942  (tournament tropical constant numerator, HYP-707)
+  unit-distance disproof exponent: > 1.014 (Sawin, a LOWER bound, no closed form)
+  => 'UD exponent = Cl_2(pi/3)' UNVERIFIED; shared object is the prime-3 angle pi/3
+     (Eisenstein zeta_6): triangular UD lattice Cay(Z[zeta_6]) AND the tropical log-sin sum.
+
+  PART 4 [SYNTHESIS] the shared Cayley primes across problems
+  prime                             tournaments                                               LRC                                           unit distance
+  prime 3 (Eisenstein/zeta_6, pi/3) ramified; Cl2(pi/3) tropical const; boost RAMIFIED (THM-253)3-shell 3|(2n-1); the V* doubling (THM D); gcd-strata {1,3,9}triangular lattice Cay(Z[zeta_6]); Cl2(pi/3)~exponent?
+  prime 7 (forbidden)               H=7,21 impossible (THM-200/115); forbidden prime (THM-253)2n-1=7 at n=4; pair-sum modulus base          F-free frontier; n=22 first awkward (=3*7+1)
+  prime 2 (inert/doubling)          Redei parity / GF(2) involution (SOLVED face)             even-fold (HYP-2065); doubling voltage lift   edge/2-coloring duality
+
+======================================================================
+  SUMMARY
+  * Theorem D: loose V* gaps are exactly {3,2n-4} pinches on the (2n-1) lattice
+    [VERIFIED] => M(V*)=max(1/n,P); with S612 the doubling law holds modulo the
+    general single-family statement (= codex Res_27 conservativity).
+  * H-impossibilities: {7,21} only; the 7*3^k family is REFUTED (63,189 achievable).
+    Impossibilities are sporadic, tied to the forbidden prime 7.
+  * 1.014 = Cl_2(pi/3) (exact tournament constant); equals the UD disproof exponent
+    only NUMERICALLY/unverified; the real shared object is the prime-3 angle pi/3.
+  * Propagation: the Cayley primes {2,3,7} are the shared arithmetic invariants;
+    each problem's hard core lives in a prime-{3,7}-controlled arithmetic lattice.
+
