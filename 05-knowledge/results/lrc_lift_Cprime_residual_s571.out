@@ -1,0 +1,16 @@
+C' test: n|v => loose, split by multiplier size (residual = small multiples)
+  n= 6 [v=n exactly       ]: 790 configs; loose=790/790; min measure=0.02500; tight-with-mult=0
+  n= 6 [small mult (w<=3) ]: 794 configs; loose=794/794; min measure=0.01296; tight-with-mult=0
+  n= 6 [large mult (w>=4) ]: 800 configs; loose=800/800; min measure=0.03611; tight-with-mult=0
+  n= 8 [v=n exactly       ]: 800 configs; loose=800/800; min measure=0.02015; tight-with-mult=0
+  n= 8 [small mult (w<=3) ]: 800 configs; loose=800/800; min measure=0.02232; tight-with-mult=0
+  n= 8 [large mult (w>=4) ]: 800 configs; loose=800/800; min measure=0.03935; tight-with-mult=0
+  n=10 [v=n exactly       ]: 800 configs; loose=800/800; min measure=0.02158; tight-with-mult=0
+  n=10 [small mult (w<=3) ]: 800 configs; loose=800/800; min measure=0.02571; tight-with-mult=0
+  n=10 [large mult (w>=4) ]: 800 configs; loose=800/800; min measure=0.02333; tight-with-mult=0
+  n=12 [v=n exactly       ]: 800 configs; loose=800/800; min measure=0.03464; tight-with-mult=0
+  n=12 [small mult (w<=3) ]: 800 configs; loose=800/800; min measure=0.03399; tight-with-mult=0
+  n=12 [large mult (w>=4) ]: 800 configs; loose=800/800; min measure=0.03498; tight-with-mult=0
+  n=14 [v=n exactly       ]: 800 configs; loose=800/800; min measure=0.03323; tight-with-mult=0
+  n=14 [small mult (w<=3) ]: 800 configs; loose=800/800; min measure=0.02320; tight-with-mult=0
+  n=14 [large mult (w>=4) ]: 800 configs; loose=800/800; min measure=0.02417; tight-with-mult=0

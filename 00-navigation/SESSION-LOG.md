@@ -1,5 +1,15 @@
 # Session Log
 
+## opus-2026-06-02-S571 - The lift lemma collapses to C': "a multiple of n forces positive measure" — C' ⟹ LRC (HYP-2102)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** work on the lift lemma; look for simplifications and speedups.
+**SIMPLIFICATION (the split):** for speed set S test t=1/n. (a) NO multiple of n ⟹ every ‖v_i/n‖≥1/n ⟹ t=1/n is a witness, M≥1/n (THM-369, free). (b) A multiple of n (v=nw) kills every j/n — the only hard case. So the lift lemma = C' (S564): n|v ⟹ M(S)>1/n (loose).
+**REDUCTION (headline, rigorous):** **C' ⟹ LRC(n)** — every config has no multiple of n (⟹ 1/n witness) or has one (⟹ M>1/n by C'); either way M≥1/n. So proving "a multiple of n can't be tight" proves ALL of LRC. S564 saw C' only as a SYMPTOM of tight sets; its converse direction IS the whole conjecture.
+**VERIFIED n=4..14, ALL multiplier sizes** (v=n exactly=hardest w=1, small w≤3, large w≥4): every mult-of-n config LOOSE, 0 tight-with-multiple, min safe-measure always >0 (~0.02-0.04). 
+**CRUDE BOUND FAILS:** μ(safe S)≥μ(safe S')−2/n too lossy (min μ of (n-2)-runner configs at 1/n ≪ 2/n; n=6 S'={1,3,4,5}: 0.05≪1/3). Real mechanism: v's thin evenly-spaced arcs can't COVER safe(S').
+**RIGOROUS PARTIAL (large multiples dodgeable, uses PROVEN LRC(n-1)):** if v=nw>(n-1)·max(other speeds) then M(S)>1/n. Proof: S'=S\{v} has t0 with min‖v_i t0‖≥1/(n-1) by LRC(n-1); on interval I half-width δ=1/(n(n-1)V') around t0 all S'>1/n; v's arcs radius ρ=1/(n²w); δ>ρ ⟺ nw>(n-1)V' ⟹ I wider than an arc ⟹ a v-safe sub-interval ⟹ positive measure. Cleanly leverages literature's proven n=13 on n=14.
+**RESIDUAL (open, sharp):** small multiples v≤(n-1)·max (down to v=n) — needs equidistribution (one AP of thin arcs, period 1/(nw) total 2/n, meets safe(S') in ~(2/n)μ<μ, can't align to cover). **SPEEDUPS:** no-mult configs free; only the mult-of-n slice needs a fast positive-measure certificate; safe_measure via endpoint enumeration (grid-free); residual = small-multiples band only. Convergent w/ codex-S579 (apex-lift) & monad-S577. Files: 07-reflections/lrc-lift-lemma-reduces-to-Cprime-multiple-of-n-loose-s571.md; 04-computation/lrc_lift_Cprime_residual_s571.py (+.out), lrc_lift_lemma_measure_bound_s571.py (+.out); HYP-2102.
+
 ## codex-2026-06-03-S579 - Apex-lift certificate sheaf for the n=14 tie-wall (HYP-2101)
 
 **Account:** Codex (GPT-5). **User prompt:** consider creative ways to extend the current LRC n=14 ideas.
