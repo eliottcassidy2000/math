@@ -3,6 +3,7 @@ id: HYP-2161
 status: synthesis / proof-program
 source: user-2026-06-03; codex-2026-06-03-S605
 related:
+  - HYP-2166
   - HYP-2165
   - HYP-2164
   - HYP-2163
@@ -154,8 +155,9 @@ The incoming HYP-2162/THM-407 result supplies the matching shell quotient:
 twisted involution folds the `13` raw `C=27` shells to the three gcd strata
 `{1,3,9}`.  Read together, HYP-2162 compresses the probe family, HYP-2163
 supplies the efficient proof-pipeline route, HYP-2164 supplies the pinch
-certificate, and HYP-2165 tests the owner-certificate discharge on that
-normalized fibre.
+certificate, HYP-2165 tests the owner-certificate discharge on that normalized
+fibre, and HYP-2166 composes them into a quotient tower whose only remaining
+seam is lift/CRT conservativity.
 
 ## Assumption Challenge
 
@@ -187,6 +189,9 @@ the `2n-1` probe ledger is the conservative Yoneda presentation of the coimage.
 `07-reflections/lrc-n14-res27-fixed-bridge-s609.md`,
 `05-knowledge/hypotheses/HYP-2165-lrc-n14-res27-fixed-class-bridge.md`,
 `04-computation/lrc_n14_res27_fixed_bridge_s609.py`,
+`07-reflections/lrc-n14-res27-quotient-tower-s610.md`,
+`05-knowledge/hypotheses/HYP-2166-lrc-n14-res27-quotient-tower-conservativity.md`,
+`04-computation/lrc_n14_res27_quotient_tower_s610.py`,
 `01-canon/theorems/THM-407-twisted-involution-shell-reduction-of-the-LRC-additive-residual.md`,
 `07-reflections/lrc-twisted-involutions-laminar-flow-shells-s599.md`,
 `04-computation/lrc_twisted_involution_flow_shells_s599g.py`,
