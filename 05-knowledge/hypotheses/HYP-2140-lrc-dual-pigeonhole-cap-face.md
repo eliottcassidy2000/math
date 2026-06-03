@@ -4,7 +4,7 @@ title: the dual n-clock cap face should close the Cprime cover residual aggregat
 status: OPEN proof program; Lemma H cell-cap pigeonhole is proved and folded into THM-398
 sources:
   - codex-2026-06-03-S593
-related: [THM-398, HYP-2105, HYP-2110, HYP-2112, HYP-2135]
+related: [THM-398, HYP-2102, HYP-2105, HYP-2110, HYP-2112, HYP-2135]
 ---
 
 # HYP-2140 -- dual pigeonhole cap face for the LRC Cprime residual
@@ -34,6 +34,14 @@ Evidence from `lrc_dual_pigeonhole_cap_face_s593.py`:
 - the named `unit_shift_AP_n14` row is certified by cell-cap overload in cell
   `0`, while the near-AP multiple rows with lower safe mass route through
   Lemma C.
+
+Rebase integration: monad-compute S595 extends the ambient Cprime evidence
+beyond the original n=14 focus.  Its exact open-safe-measure test finds
+`19600/19600` sampled/systematic multiple-of-`n` rows loose and `0` tight for
+control rows `n=12,13,14` plus new rows `n=15,16,17,18`, with minimum observed
+positive measure about `0.016..0.023`.  This does not prove the under-cap
+residual, but it makes Lemma H one aggregate certificate inside a tested
+multiple branch that appears stable through `n<=18`, not a one-row accident.
 
 Working hypothesis: the Cprime kernel should be attacked by a two-level cap
 certificate:

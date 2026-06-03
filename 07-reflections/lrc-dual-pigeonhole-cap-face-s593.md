@@ -70,6 +70,20 @@ n=10: 19
 At `n=14`, it is dominant in the deterministic sample: `2460/2500` rows are
 cell-cap overloads, and the remaining `40` are local owner-descent exits.
 
+## Rebase integration: S595
+
+The later monad-compute S595 push strengthens the background Cprime picture:
+an exact open-safe-measure audit finds `19600/19600` sampled/systematic
+multiple-of-`n` configs loose and `0` tight across controls `n=12,13,14` and
+new rows `n=15,16,17,18`, with observed positive-measure margins about
+`0.016..0.023`.
+
+This connects directly to the cap face.  Lemma H is not a proof of that whole
+S595 phenomenon, but it is an aggregate certificate for the same multiple
+branch.  The under-cap residual should therefore be tracked as the common
+owner-congruence/large-residue residual across the `n=14..18` frontier, not as a
+quirk of the fourteen-runner row alone.
+
 ## Named calibration rows
 
 - `unit_shift_AP_n14 = {2,...,14}` is loose by dual cell-cap overload:
