@@ -81,6 +81,14 @@ Equivalently, the 64 fixed classes must be connected to labelled speed owners in
 `measure-zero => unblocked small pair`,  
 `block-all => positive measure`.
 
+S579/HYP-2101 gives the local language for this bridge: over each labelled
+speed-owner fibre, use an apex-lift certificate sheaf whose objects are
+unit-shell lift subsets and whose restriction maps lower one unit representative
+at a time.  The denominator-14 apex chart is central but not complete; side
+charts and ledger-failure local sections have to be part of the gluing data.
+The bounded S579 audit found zero restriction residuals in the tested lift
+site.
+
 ## Tournament Analysis
 
 For the speed-level part of S578, vertices are canonical full-cover slack rows over the forced unit spine.  The pair observable is:
@@ -101,4 +109,3 @@ The quotient preserves fixed-boundary structure, score span, SCC shape, and dihe
 ## Honest Status
 
 This is not a proof of n=14.  It is a certificate architecture plus a bounded normal-form verification.  The unbounded closure from HYP-2098 remains central: we still need to know whether tight speed families beyond `{AP,V*}` exist at large speeds, and whether arbitrary unit-shell representatives can be normalized without losing the cheap certificate.
-

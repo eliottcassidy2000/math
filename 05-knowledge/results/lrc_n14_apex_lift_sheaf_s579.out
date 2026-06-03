@@ -1,0 +1,102 @@
+S579 n=14 apex-lift certificate sheaf
+==============================================================================
+n=14; C=27; apex_speed=7; apex_denominator=14
+site: unit-shell lift subsets; restriction lowers one lifted shell
+sections: ledger_failure, cheap_d14, cheap_side, positive_measure, residual
+
+[one_lift_all_slack]
+  rows=45045 full=13169
+  route_hist={'ledger_failure': 31876, 'cheap_d14': 7943, 'cheap_side': 5226}
+  witness_den_hist={14: 7943, 26: 1206, 20: 1067, 40: 873, 28: 428, 22: 364, 49: 266, 16: 235}
+  apex_lifts=rows:5005 full:1085 d14:500
+  apex_pair_witnesses=514
+  restriction_pair_hist={('cheap',): 13119, ('positive_measure',): 50}
+  restriction_residual=0 union_only=0
+  nontrivial restriction examples:
+    slack=(3, 9, 12, 42) lift=1->26 route=cheap_side D=28 restriction=positive_measure
+    slack=(3, 9, 12, 42) lift=1->28 route=cheap_side D=15 restriction=positive_measure
+    slack=(3, 9, 12, 42) lift=1->53 route=cheap_side D=15 restriction=positive_measure
+    slack=(3, 9, 12, 42) lift=1->55 route=cheap_side D=15 restriction=positive_measure
+    slack=(3, 9, 12, 42) lift=1->80 route=cheap_side D=15 restriction=positive_measure
+
+[AP_slack]
+  rows=950 full=240
+  route_hist={'ledger_failure': 710, 'cheap_d14': 187, 'cheap_side': 53}
+  witness_den_hist={14: 187, 15: 20, 63: 12, 16: 6, 64: 4, 24: 3, 77: 1, 40: 1}
+  apex_lifts=rows:209 full:21 d14:10
+  apex_pair_witnesses=15
+  two_lift_full=218 two_lift_d14=168
+  restriction_pair_hist={('cheap', 'cheap'): 150, ('cheap', 'ledger_failure'): 67, ('ledger_failure', 'ledger_failure'): 1}
+  restriction_residual=0 union_only=1
+  nontrivial restriction examples:
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) lifts=(10, 11) route=cheap_side pair=(7, 70) D=77 restrictions=('ledger_failure', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 16, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 38, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 43, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 65, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+
+[Vstar_slack]
+  rows=950 full=336
+  route_hist={'ledger_failure': 614, 'cheap_d14': 216, 'cheap_side': 120}
+  witness_den_hist={14: 216, 26: 68, 28: 19, 63: 11, 32: 6, 15: 5, 30: 4, 33: 1}
+  apex_lifts=rows:209 full:27 d14:15
+  apex_pair_witnesses=13
+  two_lift_full=308 two_lift_d14=195
+  restriction_pair_hist={('cheap', 'cheap'): 250, ('cheap', 'ledger_failure'): 57, ('ledger_failure', 'ledger_failure'): 1}
+  restriction_residual=0 union_only=1
+  nontrivial restriction examples:
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) lifts=(10, 11) route=cheap_side pair=(2, 24) D=26 restrictions=('ledger_failure', 'ledger_failure')
+    units=(1, 2, 4, 5, 20, 35, 10, 11, 13) lifts=(7, 8) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 5, 34, 35, 10, 11, 13) lifts=(7, 8) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 5, 47, 35, 10, 11, 13) lifts=(7, 8) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 5, 61, 35, 10, 11, 13) lifts=(7, 8) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+
+[first_open_gap_slack]
+  rows=950 full=240
+  route_hist={'ledger_failure': 710, 'cheap_d14': 168, 'cheap_side': 72}
+  witness_den_hist={14: 168, 39: 42, 28: 11, 24: 6, 40: 6, 15: 2, 26: 1, 42: 1}
+  apex_lifts=rows:209 full:21 d14:10
+  apex_pair_witnesses=1
+  two_lift_full=218 two_lift_d14=150
+  restriction_pair_hist={('cheap', 'cheap'): 150, ('cheap', 'ledger_failure'): 67, ('ledger_failure', 'ledger_failure'): 1}
+  restriction_residual=0 union_only=1
+  nontrivial restriction examples:
+    units=(1, 2, 4, 5, 7, 8, 44, 70, 13) lifts=(10, 11) route=cheap_side pair=(3, 36) D=39 restrictions=('ledger_failure', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 16, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 38, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 43, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+    units=(1, 2, 4, 22, 7, 8, 10, 65, 13) lifts=(5, 11) route=cheap_d14 pair=(1, 13) D=14 restrictions=('cheap', 'ledger_failure')
+
+[zero_slack_control]
+  rows=950 full=0
+  route_hist={'ledger_failure': 950}
+  witness_den_hist={}
+  apex_lifts=rows:209 full:0 d14:0
+  apex_pair_witnesses=0
+  restriction_pair_hist={}
+  restriction_residual=0 union_only=0
+
+[double3_control]
+  rows=950 full=0
+  route_hist={'ledger_failure': 950}
+  witness_den_hist={}
+  apex_lifts=rows:209 full:0 d14:0
+  apex_pair_witnesses=0
+  restriction_pair_hist={}
+  restriction_residual=0 union_only=0
+
+Tournament Analysis
+  vertices: sheaf sites
+  observable: restriction residual defects, side-chart load, union-only sections, full covers, apex-lift full covers
+  switch: harder = more residual, then more side-chart load
+  fingerprints={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1], 'hardness_order': ['one_lift_all_slack', 'Vstar_slack', 'first_open_gap_slack', 'AP_slack', 'zero_slack_control', 'double3_control']}
+
+Synthesis
+  The denominator-14 apex chart is large but not complete: side charts
+  are needed for lifted full covers.  The useful object is therefore a
+  certificate sheaf, not one global apex witness.  In this bounded site,
+  every full restriction is certified by a cheap section; restriction
+  residuals are zero.  A few two-lift rows are union-only: each one-lift
+  restriction is a ledger failure, while the two-lift union creates a full
+  cover with a cheap witness.  That is exactly the local-to-global behavior
+  the next HYP-2099/HYP-2100 bridge lemma should formalize.

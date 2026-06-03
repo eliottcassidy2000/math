@@ -1,6 +1,6 @@
 ---
 source: codex-2026-06-03-S579
-status: speculative synthesis; no new computation
+status: speculative synthesis plus bounded S579 lift-site audit
 tags:
   - lonely-runner
   - n14
@@ -68,7 +68,7 @@ full D/U/N covers had an unblocked small pair. S578 also says the canonical
 composite slack fibre behaves the same way through slack `42`: AP and V* are
 the only floor rows, and both use `(1,13)` at `1/14`; the only block-all
 controls are positive measure.
-Opus S571 adds a complementary positive-measure signal: bounded rows with a
+HYP-2102/Opus S571 adds a complementary positive-measure signal: bounded rows with a
 multiple of `n` were all loose for `n=4,6,8,10,12,14`, but the crude lower bound
 failed, leaving a thin-arc-cover residual. That is exactly the kind of failed
 gluing branch that should use endpoint labels rather than a scalar bound.
@@ -84,6 +84,45 @@ block-all:         no section glues, so an endpoint/cover obstruction opens meas
 ```
 
 That is a much cleaner shape.
+
+## What The Bounded Audit Added
+
+The companion script `04-computation/lrc_n14_apex_lift_sheaf_s579.py` made this
+finite over the HYP-2100 unit-spine lift site.  Objects are unit-shell lift
+subsets, restrictions lower one unit representative, and sections are:
+
+```text
+ledger_failure
+cheap_d14
+cheap_side
+positive_measure
+residual
+```
+
+The all-slack one-lift scan has no residual section:
+
+```text
+full covers=13169
+cheap_d14=7943
+cheap_side=5226
+restriction_residual=0
+```
+
+That is the key correction.  Denominator `14=2*7` is the big apex chart, but it
+is not the whole sheaf.  Side denominators are not noise; they are required
+charts.
+
+The named two-lift stress rows show the gluing behavior:
+
+```text
+AP:       {cheap,cheap}:150, {cheap,ledger}:67, {ledger,ledger}:1
+V*:       {cheap,cheap}:250, {cheap,ledger}:57, {ledger,ledger}:1
+open-gap: {cheap,cheap}:150, {cheap,ledger}:67, {ledger,ledger}:1
+```
+
+The single `{ledger,ledger}` row in each layer is the warning label: a full
+cover can appear only at the union object.  So a certificate sheaf must include
+ledger-failure local sections, not just already-full local witnesses.
 
 ## Creative Extensions
 

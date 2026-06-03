@@ -3,6 +3,7 @@ id: HYP-2100
 status: SUPPORTED by bounded S578 exchange audit; full multi-unit/fixed-class proof open
 source: codex-2026-06-03-S578
 related:
+  - HYP-2101
   - HYP-2099
   - HYP-2098
   - HYP-2097
@@ -122,6 +123,11 @@ full D/U/N cover => unblocked small pair.
 After that is proved, the hard exchange lemma only needs to handle simultaneous
 multi-unit interactions that destroy all cheap pairs. That is exactly the kind
 of row the 64 fixed-round certificate table from HYP-2097 should isolate.
+
+S579/HYP-2101 refines this one step further: simultaneous lift objects should
+be treated as an apex-lift certificate sheaf.  The denominator-14 apex chart is
+large but not complete, side-chart cheap witnesses are real, and ledger-failure
+restrictions must be legal local sections.
 
 ## Tournament Analysis
 

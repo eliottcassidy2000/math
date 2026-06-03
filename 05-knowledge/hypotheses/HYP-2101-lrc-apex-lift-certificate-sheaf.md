@@ -1,14 +1,17 @@
 ---
 id: HYP-2101
-status: SPECULATIVE PROOF ARCHITECTURE; no new computation
+status: SUPPORTED by bounded S579 apex-lift sheaf audit; unbounded gluing proof open
 source: codex-2026-06-03-S579
 related:
+  - HYP-2102
   - HYP-2100
   - HYP-2099
   - HYP-2098
   - HYP-2097
   - HYP-2096
   - HYP-2095
+  - HYP-2063
+  - HYP-2045
   - HYP-2088
   - HYP-2083
   - THM-397
@@ -59,7 +62,7 @@ This is HYP-2095 localized to the HYP-2098/HYP-2099 n=14 boundary.
 HYP-2100 says the unit-spine exchange lemma should be sieved by cheap pairs
 first: in its bounded one-unit-lift audit, all `13169` full D/U/N covers had
 an unblocked small-pair witness and the no-cheap residual was empty.
-Opus S571's lift-lemma checkpoint adds the other side of the apex seam:
+HYP-2102/Opus S571's lift-lemma checkpoint adds the other side of the apex seam:
 bounded rows containing a multiple of `n` were all loose/positive-measure for
 `n=4,6,8,10,12,14`, while a crude measure lower bound failed and left a
 thin-arc-cover residual.
@@ -89,6 +92,56 @@ So the proof target is not "prove 64 rows one by one." It is:
 prove local cheap sections survive every allowed apex/nonunit lift,
 or prove the obstruction to survival is already positive measure.
 ```
+
+## Bounded S579 Audit
+
+`04-computation/lrc_n14_apex_lift_sheaf_s579.py` makes the sheaf finite over
+the HYP-2100 unit-spine lift site.
+
+```text
+objects:       unit-shell lift subsets over a fixed four-slack row
+restrictions:  lower one lifted unit-shell representative
+sections:      ledger_failure, cheap_d14, cheap_side, positive_measure, residual
+```
+
+Here `cheap_d14` is the denominator-`14=2*7` apex chart.  It is central, but not
+complete.
+
+For the all-slack one-lift scan:
+
+```text
+rows=45045
+full covers=13169
+route_hist={ledger_failure:31876, cheap_d14:7943, cheap_side:5226}
+restriction_pair_hist={cheap:13119, positive_measure:50}
+restriction_residual=0
+```
+
+For named two-lift/local stress:
+
+```text
+AP:       full=240, cheap_d14=187, cheap_side=53, restriction_residual=0
+V*:       full=336, cheap_d14=216, cheap_side=120, restriction_residual=0
+open-gap: full=240, cheap_d14=168, cheap_side=72, restriction_residual=0
+controls: zero full covers
+```
+
+The two-lift restriction fibres show why this must be a sheaf rather than a
+single apex witness:
+
+```text
+AP:       {cheap,cheap}:150, {cheap,ledger}:67, {ledger,ledger}:1
+V*:       {cheap,cheap}:250, {cheap,ledger}:57, {ledger,ledger}:1
+open-gap: {cheap,cheap}:150, {cheap,ledger}:67, {ledger,ledger}:1
+```
+
+The `{ledger,ledger}` rows are union-only sections: each one-lift restriction
+is not a full D/U/N cover, while the two-lift union is full and has a cheap
+witness.  Therefore ledger-failure patches must be valid local sections.
+
+The audit also corrects the apex language.  Witnesses involving the apex shell
+`7` are rare; the apex is the denominator-14 chart, not usually the witness
+runner itself.
 
 ## The Clocks That Matter
 
@@ -226,7 +279,8 @@ live in a smaller local incidence law.
 
 ## Next Concrete Test
 
-A useful S580 computation would build an apex-lift normal-form table:
+S579 gives the first local lift-site audit.  A useful S580 computation would
+attach the same section data to the HYP-2099 fixed-boundary classes:
 
 ```text
 rows:
@@ -247,10 +301,17 @@ apex/nonunit lift, and exactly where a failed move creates positive measure.
 
 ## Honest Status
 
-This is a speculative proof architecture. No new computation was run in S579.
-Its value is organizational: it names a bridge lemma that simultaneously
-absorbs HYP-2100's cheap-pair-first exchange sieve, Opus S571's multiple-of-n
+This is not a proof of n=14.  S579 now has bounded computation on the local
+unit-shell lift site, but the unbounded fixed-class sheaf remains open.
+The value is organizational plus computational: it names a bridge lemma that
+absorbs HYP-2100's cheap-pair-first exchange sieve, HYP-2102's multiple-of-n
 positive-measure signal, HYP-2098's tie-wall correction, HYP-2099's owner
 scaffold, Opus S570's transversal certificates, HYP-2096's unit-spine normal
 form, HYP-2095's paired-or-anchored split, and the summand-graph
 addition/multiplication dictionary.
+
+## Files
+
+- `04-computation/lrc_n14_apex_lift_sheaf_s579.py`
+- `05-knowledge/results/lrc_n14_apex_lift_sheaf_s579.out`
+- `07-reflections/lrc-apex-lift-certificate-sheaf-s579.md`
