@@ -1,0 +1,11 @@
+==== PINCH completeness stress test, n=14 (13 runners) ====
+seeds: [1, 7, 42, 100, 2026, 31337]
+total configs tested: 7968
+PINCH caught (1/14 witness via pair-sum): 7968/7968 (100.000%)
+PINCH missed: 0
+
+No refutations: PINCH caught every config that has any witness with q<=400.
+
+Every config has a 1/14 witness with q<=400.
+
+DONE.

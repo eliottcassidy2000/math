@@ -1,0 +1,26 @@
+==== PINCH adversarial dense test, n=14 (13 runners) ====
+distinct configs tested: 12104  (QMAX ground-truth = 600)
+PINCH caught: 12104/12104 (100.0000%)
+PINCH missed: 0
+largest min-q witness denominator seen: q=26  V=(7, 8, 9, 10, 12, 13, 14, 17, 19, 21, 22, 23, 24)
+
+No refutations: pinch caught every config with a witness q<=QMAX.
+
+Configs whose SMALLEST-q witness denominator is NOT a pair-sum: examples below
+   dense<= 17: V=(2, 3, 5, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17) min-q=1/6 (q not a pair-sum; pinch uses a larger pair-sum<= 33)
+   dense<= 17: V=(1, 3, 4, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17) min-q=1/6 (q not a pair-sum; pinch uses a larger pair-sum<= 33)
+   dense<= 18: V=(2, 3, 4, 5, 9, 11, 12, 13, 14, 15, 16, 17, 18) min-q=1/10 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(1, 4, 5, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18) min-q=1/7 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(4, 5, 6, 7, 9, 10, 11, 12, 13, 14, 15, 17, 18) min-q=1/8 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(2, 3, 5, 6, 9, 11, 12, 13, 14, 15, 16, 17, 18) min-q=1/10 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(1, 2, 5, 6, 7, 9, 10, 11, 13, 14, 15, 17, 18) min-q=1/4 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(1, 2, 3, 7, 8, 9, 10, 11, 13, 14, 15, 16, 17) min-q=1/6 (q not a pair-sum; pinch uses a larger pair-sum<= 33)
+   dense<= 18: V=(3, 4, 5, 8, 9, 11, 12, 13, 14, 15, 16, 17, 18) min-q=1/10 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(1, 2, 4, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18) min-q=1/7 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(1, 4, 5, 7, 8, 11, 12, 13, 14, 15, 16, 17, 18) min-q=1/10 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 18: V=(3, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18) min-q=1/7 (q not a pair-sum; pinch uses a larger pair-sum<= 35)
+   dense<= 20: V=(2, 3, 6, 8, 9, 10, 11, 13, 15, 16, 17, 18, 20) min-q=1/7 (q not a pair-sum; pinch uses a larger pair-sum<= 38)
+   dense<= 20: V=(4, 5, 6, 9, 10, 11, 13, 14, 15, 17, 18, 19, 20) min-q=1/8 (q not a pair-sum; pinch uses a larger pair-sum<= 39)
+   dense<= 20: V=(2, 5, 6, 9, 11, 13, 14, 15, 16, 17, 18, 19, 20) min-q=1/12 (q not a pair-sum; pinch uses a larger pair-sum<= 39)
+
+DONE.
