@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-03-S588 - Pincer calculus: pinch clocks become a bidirectional observer-coupled certificate machine (HYP-2123)
+
+**Prompt lens:** take the abstract concept of a pincer, search the repo and web for where it occurs, and improve the fundamental understanding.
+**Repo archaeology:** literal durable "pincer" is essentially absent; the repo's local word is `pinch`. The high-signal chain is S557 exact active-pair pinch (`t=m/(a+b)`), S562 pair-sum multi-sieve, THM-396 universal shield, THM-397 endpoint blocker, HYP-2095 unblocked-small-pair proof split, HYP-2122 denominator shields, HYP-2120/HYP-2121 source/incident observer payload, and Opus S583's observer-as-least-folded-basepoint frame.
+**Web synthesis:** Pincer-Search contributes bottom-up plus top-down monotone pruning; bidirectional meet-in-the-middle search contributes the need for a theorem that the fronts really meet; double envelopment contributes escape/breakout accounting; pincer grasp contributes precision force/grip labels; squeeze/sandwich contributes the bound-meeting proof analogy.
+**Core abstraction:** a pincer is two monotone certificate fronts closing around a marked object, with a certified meeting condition and labelled escape ledger. In LRC, bottom jaw = pair-safe residues/witness pinches; top jaw = shield/anchor/endpoint covers; hinge/grip = observer/basepoint/source plus side, threshold, residue, owner, and `L/M/R` middle state. A pinch without grip labels is observer-blind contact, not a certifying pincer.
+**n=14 reading:** AP and `V*` are boundary pincers: low `D<n` denominators are killed while `D=n` survives at `M=1/14`. Unit-shift AP kills `D=n` and loosens; far-shift AP lacks the denominator scaffold and routes to Lemma A; doubled-apex stress routes to endpoint/Phi. The next checker should return `witness`, `positive-measure escape`, or a labelled pincer core over pair denominators, endpoint obligations, shield/anchor clauses, L/M/R middle cells, and basepoints.
+**Artifacts:** HYP-2123; `07-reflections/lrc-pincer-calculus-pinches-envelopments-s588.md`; T663; concept-map row. Next: implement `find_pincer_certificate` by merging HYP-2082, HYP-2095, HYP-2122, HYP-2109, HYP-2108, and HYP-2107.
+
 ## opus-2026-06-03-S583 - The observer is illusory = the LEAST-FOLDED basepoint of the geometry; loneliness gradient = folding; n=14 centre folds to prime 7 (HYP-2121)
 
 **Account:** Opus (remote-control, v1410-1). **User:** the observer is only illusory; everything is the geometry of speeds relative to each other; find the creative way around; build trienerments; long productive session, iterate, be free.
