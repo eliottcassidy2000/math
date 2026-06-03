@@ -1,0 +1,77 @@
+==== LRC n=14 carry-fiber conservativity diagnostic (S611) ====
+C=2n-1=27; floor=1/14
+
+THM-407 shell orbits under G=<2,-1> modulo 27:
+  gcd= 1: (1, 2, 4, 5, 7, 8, 10, 11, 13)
+  gcd= 3: (3, 6, 12)
+  gcd= 9: (9,)
+
+Carry/CRT identity:
+  For every scalar probe x=u*v, write x=r+27k with 1<=r<=26.
+  Since 27 == -1 (mod 14), x mod 14 is r-k mod 14.
+  Therefore the carry vector k is visible to the n=14 clock ledger.
+
+Scalar lift versus least-positive section:
+  scalar probes: 36
+  actual scaled rows at floor: 36/36
+  least-positive shadow route histogram: {'floor shadow': 3, 'strict shadow': 33}
+  shadow below-floor rows: 0
+  floor shadows:
+    AP:u=1   shadow=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) carry_sum=0 carry_span=0 M=1/14 t=1/14
+    AP:u=2   shadow=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26) carry_sum=0 carry_span=0 M=1/14 t=1/28
+    V*:u=1   shadow=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) carry_sum=0 carry_span=0 M=1/14 t=1/14
+  strict shadow margin range: min=1/84 (V*:u=2, M=1/12), max=3/7 (AP:u=25, M=1/2)
+
+  sample scalar probes:
+    AP:u=1   actual_M= 1/14 shadow_M= 1/14 route=floor shadow  carries=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) clock_fail actual/shadow=()/()
+    AP:u=2   actual_M= 1/14 shadow_M= 1/14 route=floor shadow  carries=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) clock_fail actual/shadow=()/()
+    AP:u=7   actual_M= 1/14 shadow_M=  1/6 route=strict shadow carries=(0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3) clock_fail actual/shadow=()/()
+    AP:u=14  actual_M= 1/14 shadow_M= 2/21 route=strict shadow carries=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6) clock_fail actual/shadow=()/()
+    AP:u=26  actual_M= 1/14 shadow_M= 7/20 route=strict shadow carries=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) clock_fail actual/shadow=()/()
+    V*:u=1   actual_M= 1/14 shadow_M= 1/14 route=floor shadow  carries=(0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0) clock_fail actual/shadow=()/()
+    V*:u=7   actual_M= 1/14 shadow_M= 3/29 route=strict shadow carries=(0, 0, 0, 1, 1, 1, 1, 2, 2, 2, 2, 3, 6) clock_fail actual/shadow=()/()
+    V*:u=14  actual_M= 1/14 shadow_M= 2/21 route=strict shadow carries=(0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 12) clock_fail actual/shadow=()/()
+    V*:u=26  actual_M= 1/14 shadow_M= 7/39 route=strict shadow carries=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 23) clock_fail actual/shadow=()/()
+
+Local carry perturbations over AP and V* residues:
+  AP weight=1 count= 13 routes={'strict local carry': 13} min_M=1/13 at t=1/13 via AP:w1:carry(13)
+  AP weight=2 count= 78 routes={'strict local carry': 78} min_M=1/12 at t=1/12 via AP:w2:carry(12,13)
+  V* weight=1 count= 13 routes={'strict local carry': 13} min_M=2/25 at t=2/25 via V*:w1:carry(13)
+  V* weight=2 count= 78 routes={'strict local carry': 78} min_M=1/12 at t=1/12 via V*:w2:carry(13,24)
+  local floor rows: 0
+  local below-floor rows: 0
+
+Tournament Analysis over carry probes:
+  vertices: 218
+  score_histogram: transitive total order, degrees 0..217 once each
+  SCCs: count=218 largest=1
+  directed_3_cycles: 0
+  edge_flips between proof-burden and carry-complexity gauges: 8708/23653
+  proof Hamiltonian path head:
+    AP:u=25
+    AP:u=26
+    AP:u=23
+    V*:u=25
+    AP:u=13
+    V*:u=20
+    AP:u=22
+    V*:u=13
+    V*:u=11
+    AP:w2:carry(5,10)
+  proof Hamiltonian path tail:
+    AP:w1:carry(12)
+    V*:u=2
+    V*:w1:carry(24)
+    AP:w2:carry(12,13)
+    V*:w2:carry(13,24)
+    V*:w1:carry(13)
+    AP:w1:carry(13)
+    AP:u=1
+    AP:u=2
+    V*:u=1
+
+Conclusion:
+  The least-positive Res_27 section is not conservative for lifted floor rows: all 36 AP/V* unit scalar lifts remain at M=1/14, but only three section shadows stay at the floor.
+  Those three floor shadows are exactly AP, V*, and nonprimitive 2*AP, matching HYP-2164.
+  In the AP/V* residue fibers, every tested nonzero local carry vector of Hamming weight one or two is strict.  Any new floor lift must therefore use a globally coherent carry pattern, not an isolated wrap.
+  The next proof target is a carry-conservativity theorem for the CRT fiber k in v=r+27k, together with the HYP-2165 owner/certificate bridge.
