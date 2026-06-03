@@ -1,0 +1,31 @@
+==============================================================================================
+S608  χ beyond vertex-transitivity: tight rotational (AP) vs SAFE doubly-regular (Paley)
+==============================================================================================
+
+[1] PALEY (doubly-regular, flat χ) is SAFE; AP (rotational, structured χ) is TIGHT
+  config            | regular? (mult-inv) | χ flat? | resonance E vs main | verdict
+  Paley P_7 {1,2,4} | yes mod 7 (|grp|=3) | True    | E=0.000  main=0.125    | SAFE (low/zero-E)
+  AP {1,2,3}        | rotational (interval) | False   | E=0.108  main=0.125    | SAFE (low/zero-E)
+  AP {1..5}         | rotational (interval) | False   | E=0.277  main=0.132    | TIGHT (high-E)
+  AP {1..6}         | rotational (interval) | False   | E=0.509  main=0.133    | TIGHT (high-E)
+  => Paley P_7 has resonance energy E=0 (no effective 3-term resonance) ⇒ the SAFEST
+     regular config. The tight regular configs are the structured-χ rotational (AP) class.
+
+[2] THE ONE TIGHT REGULAR NON-AP-INTERVAL CONFIG (n=6) IS AN AP-LIFT
+  {1,3,4,5,9} = QR mod 11 (Paley P_11): tight=True (G=0.1667, t=1/6)
+     vertex-transitive: mult-inv mod 11 = [1, 3, 4, 5, 9] (size 5 = QR group, ONE orbit)
+     χ mod 11 = {1.732} (FLAT, doubly-regular) — DIFFERS from AP's χ.
+     BUT it is an AP-LIFT: {1,3,4,5,9} ≡ {1,2,3,4,5} (mod 7) — the AP in another face.
+
+[3] THE GENUINELY NON-AP TIGHT CONFIGS (sporadics) ARE NON-REGULAR
+  n=5 {1,3,4,7}         : tight=True (G=0.2000) | regular? NO (not vertex-transitive)
+  n=8 {1,2,3,4,5,7,12}  : tight=True (G=0.1250) | regular? NO (not vertex-transitive)
+  n=8 {1,4,5,6,7,11,13} : tight=True (G=0.1250) | regular? NO (not vertex-transitive)
+  => the genuinely-new tight configs carry NO vertex-transitive symmetry. So every tight
+     REGULAR config is the AP / an AP-lift; χ (=resonance energy) is the discriminator.
+
+[4] ANSWER
+  χ ADDS beyond vertex-transitivity: it is the resonance-energy signature. Among regular
+  (maximally-cyclic) tournaments, the FLAT-χ doubly-regular Paley class is SAFE (low E);
+  the TIGHT ones are the structured-χ rotational (AP) class and its lifts. There is NO
+  tight regular config off the AP/AP-lift orbit — the non-AP tight configs are non-regular.
