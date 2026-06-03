@@ -1,0 +1,15 @@
+(A) worry-set obstruction primes omega(2n-1): average vs loglog n, max order vs log/loglog
+  N=  100: mean omega(2n-1)=1.505  vs loglog(N)=1.527 (+Mertens const ~ -0.02); max omega=3 vs log(2N)/loglog(2N)=3.2
+  N= 1000: mean omega(2n-1)=1.831  vs loglog(N)=1.933 (+Mertens const ~ -0.10); max omega=4 vs log(2N)/loglog(2N)=3.7
+  N= 5000: mean omega(2n-1)=2.013  vs loglog(N)=2.142 (+Mertens const ~ -0.13); max omega=4 vs log(2N)/loglog(2N)=4.1
+  N=20000: mean omega(2n-1)=2.148  vs loglog(N)=2.293 (+Mertens const ~ -0.14); max omega=5 vs log(2N)/loglog(2N)=4.5
+
+(B) iterated-omega 'tower height' h(2n-1) (~ log* (2n-1), inverse tetration):
+  N=1000: height distribution {1: 848, 2: 149}; max height=2 (log* scale, grows ULTRA-slow)
+  N=20000: height distribution {1: 13605, 2: 6392}; max height=2 (log* scale, grows ULTRA-slow)
+
+(C) the doubling order ord_n(2) (THM-404 orbit size) -- the multiplicative depth:
+  n=7: ord_n(2)=3 (vs log2(n)=2.8; n-1=6)
+  n=13: ord_n(2)=12 (vs log2(n)=3.7; n-1=12)
+  n=27: ord_n(2)=18 (vs log2(n)=4.8; n-1=26)
+  n=127: ord_n(2)=7 (vs log2(n)=7.0; n-1=126)
