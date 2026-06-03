@@ -1,0 +1,77 @@
+S571 finite time Burnside/Fourier atlas
+==============================================================================
+grid N=38640; threshold=1/14
+Full Z/N Burnside on lonely slots is valid only when the lonely word is
+translation-invariant.  Otherwise |X|/N is a density, not an orbit count.
+
+AP_wall
+  note: maximally folded wall; closed n-clock witnesses
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  lonely_slots=6/38640 density=1/6440 (0.000155)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=1/6440 valid_full_action=False; lonely orbits under K=6
+  Mobius exact period=38640; Fourier support=38640; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=13.3914; top nonzero mass=0.000155; top freqs=294:0.0002, 322:0.0002, 427:0.0002, 546:0.0002
+V_star_wall
+  note: sporadic wall row
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  lonely_slots=6/38640 density=1/6440 (0.000155)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=1/6440 valid_full_action=False; lonely orbits under K=6
+  Mobius exact period=38640; Fourier support=38640; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=13.3914; top nonzero mass=0.000155; top freqs=294:0.0002, 322:0.0002, 427:0.0002, 546:0.0002
+near_AP_apex
+  note: near AP with apex replacement
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+  lonely_slots=470/38640 density=47/3864 (0.012164)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=47/3864 valid_full_action=False; lonely orbits under K=470
+  Mobius exact period=38640; Fourier support=38582; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=8.6740; top nonzero mass=0.012144; top freqs=38634:0.0121, 6:0.0121, 38628:0.0121, 12:0.0121
+S562_packet_n14
+  note: HYP-2073 n=14 residual packet
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  lonely_slots=276/38640 density=1/140 (0.007143)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=1/140 valid_full_action=False; lonely orbits under K=276
+  Mobius exact period=38640; Fourier support=38616; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=10.2516; top nonzero mass=0.007017; top freqs=38619:0.0070, 21:0.0070, 42:0.0066, 38598:0.0066
+S562_packet_n14_lift
+  note: dyadic lift of n=14 packet
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  lonely_slots=264/38640 density=11/1610 (0.006832)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=11/1610 valid_full_action=False; lonely orbits under K=264
+  Mobius exact period=38640; Fourier support=35842; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=10.2762; top nonzero mass=0.006711; top freqs=42:0.0067, 38598:0.0067, 38556:0.0064, 84:0.0064
+no_small_pinch_proxy
+  note: THM-396 proxy
+  speeds=(1, 2, 9, 26, 110, 153, 166, 170, 178, 190, 192, 196, 201)
+  lonely_slots=4810/38640 density=481/3864 (0.124482)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=481/3864 valid_full_action=False; lonely orbits under K=4810
+  Mobius exact period=38640; Fourier support=38606; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=9.8736; top nonzero mass=0.010016; top freqs=2:0.0100, 38638:0.0100, 24:0.0072, 38616:0.0072
+random_low_resonance
+  note: low-resonance primitive sample
+  speeds=(2, 5, 11, 17, 23, 31, 37, 41, 43, 47, 53, 59, 61)
+  lonely_slots=4966/38640 density=2483/19320 (0.128520)
+  time-word period=38640; stabilizer |K|=1; word orbit under full shifts=38640
+  Burnside: naive full average=2483/19320 valid_full_action=False; lonely orbits under K=4966
+  Mobius exact period=38640; Fourier support=38600; allowed freq multiple=1; annihilator violations=0
+  Fourier entropy=8.7178; top nonzero mass=0.014396; top freqs=34:0.0144, 38606:0.0144, 2:0.0113, 38638:0.0113
+
+Tournament Analysis
+  vertices: speed-set time words
+  observable: density, stabilizer size, Fourier entropy/top mode, period
+  switch: harder = lower density, more folding, lower entropy, stronger mode
+  fingerprints: {'vertices': ['AP_wall', 'V_star_wall', 'near_AP_apex', 'S562_packet_n14', 'S562_packet_n14_lift', 'no_small_pinch_proxy', 'random_low_resonance'], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+
+Synthesis
+  Raw primitive reset time is one lap, so it does not classify integer rows.
+  The useful reset invariant is the finite time word: period, stabilizer,
+  and Fourier character support.  Burnside becomes legal after replacing
+  the full shift group by the stabilizer K of that word.
+  Pair-sum and n-clock witnesses are visible as time-word frequencies;
+  the next proof object should combine S570 witness-or-core with this
+  Fourier/stabilizer ledger on owner-labelled time events.
