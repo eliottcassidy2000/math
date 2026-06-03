@@ -22,6 +22,7 @@ related:
 - Route split is simple: the resonance-maximal tight rows route through the `n`-clock, while the generic rows route through pair-sum pinch. In the audited boxes the route histogram is exactly `{n_clock, pair_sum}` with no surviving fallback/core cases.
 - Sample `n=14` families fit the same picture: AP and `V*` certify at the `n`-clock threshold `1/14`; Fibonacci, Sidon, and random rows certify at pair-sum times strictly above threshold.
 - Every audited primitive box peels to an empty endpoint-protection core (`nonempty_core=0`), so the core behaves as a dual obstruction ledger rather than a routine witness source.
+- Bonus bounded margin probe: against the speculative second floor `2/(2n-1)`, the only audited rows below that value were already `n`-clock-tight rows with `M(S)=1/n` (counts `1,2,2,1` in the four scanned boxes). No off-stratum pair-sum row in those boxes fell below the second-gap floor.
 
 **Hypothesis / proof shape:**
 - For primitive integer LRC rows, the exact maximin should always be attained by a pair-pinch time `t=m/(v_a+v_b)` or by an antipode.
