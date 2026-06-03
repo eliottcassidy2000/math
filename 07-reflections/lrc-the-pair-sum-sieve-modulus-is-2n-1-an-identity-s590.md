@@ -1,4 +1,4 @@
----
+﻿---
 source: opus-2026-06-03-S590 (remote-control)
 status: THEOREM (THM-401) — the pair-sum sieve's modulus IS 2n-1, proved three independent ways (Farey, summand-shell, odd-square); "multi-sieve = additive face" is now an identity; sidesteps resonance energy
 tags: [LRC, pair-sum, sieve, modulus, 2n-1, farey, summand-shell, additive-face, identity, rigorous, n14]
@@ -76,7 +76,7 @@ divisibility shields, unit/nonunit holes, and lift denominators. This is the
 first explicit language for why raw `V+V` support is too coarse after the
 modulus identity is proved.
 
-S591/HYP-2139 supplies the matching tournament interpretation: the LRC beat is
+S591/HYP-2141 supplies the matching tournament interpretation: the LRC beat is
 round/interval/additive, while the multiplicative unit orbit is a symmetry of
 witness clocks rather than a Paley/QR beat.
 S592/HYP-2138 isolates the composite-`C` branch where nonunit shells create

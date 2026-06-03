@@ -1,4 +1,4 @@
----
+﻿---
 id: THM-401
 title: The pair-sum sieve's modulus is C = 2n−1 — two independent identities (Farey, odd-square)
 status: PROVED (the modulus identity, parts i–iii); the transversal characterization is VERIFIED-with-exceptions
@@ -10,7 +10,7 @@ related:
   - HYP-2135   # labelled sumset-support calculus after the modulus identity
   - HYP-2138   # composite C=2n-1 nonunit shell sporadic branch
   - HYP-2136   # chi=2 AP/interval regular orbit
-  - HYP-2139   # tournament-level interval/additive beat, not Paley/QR
+  - HYP-2141   # tournament-level interval/additive beat, not Paley/QR
   - HYP-2137   # n=14 multiple-of-3 shell-swap branch
   - HYP-2084   # antipodal transversals mod 2n-1
   - HYP-2088   # clock-blocker ledger / second-gap exceptions (S573)
@@ -100,7 +100,7 @@ HYP-2059 (pinch), HYP-2128 (`8C(n,2)+1=(2n-1)²`), HYP-2084 (transversals), HYP-
 (second-gap ledger), S572o (summand graph at `C=2n-1`). See reflection
 `07-reflections/lrc-the-pair-sum-sieve-modulus-is-2n-1-an-identity-s590.md`.
 HYP-2135 adds the next labelled support calculus layer: speed shells, pair
-shells, denominator shields, unit visibility, and lift denominators. HYP-2139
+shells, denominator shields, unit visibility, and lift denominators. HYP-2141
 adds the tournament-level reading: the additive interval circulant is the beat,
 while multiplicative units are witness symmetries rather than Paley/QR beats.
 HYP-2138 isolates the composite-`C` nonunit-shell sporadic branch, refined at

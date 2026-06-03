@@ -1,4 +1,4 @@
----
+﻿---
 source: codex-2026-06-03-S591
 status: support-calculus formalization extending THM-401/HYP-2132; exact named-row audit; HYP-2135
 tags: [LRC, sumset-support, THM-401, HYP-2132, pair-sum, support-sheaf, nonunit-holes, denominator-shields, tournament-analysis]

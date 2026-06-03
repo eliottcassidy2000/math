@@ -1,4 +1,4 @@
----
+﻿---
 id: HYP-2140
 title: the dual n-clock cap face should close the Cprime cover residual aggregate layer
 status: OPEN proof program; Lemma H cell-cap pigeonhole is proved and folded into THM-398

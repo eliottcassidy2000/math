@@ -1,4 +1,4 @@
-# Tangents, Rabbit Holes & Novel Ideas
+﻿# Tangents, Rabbit Holes & Novel Ideas
 
 **Purpose:** Dense, scannable index of interesting directions that have emerged. Each entry is 2–4 lines. A new Claude reads this whole file quickly to find a jumping-off point. Add entries with the tag format shown. Do not expand entries here — create a separate file in `03-artifacts/drafts/` if you want to develop a tangent.
 

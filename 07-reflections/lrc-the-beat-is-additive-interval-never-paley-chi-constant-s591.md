@@ -1,4 +1,4 @@
----
+﻿---
 source: opus-2026-06-03-S591 (remote-control)
 status: VALIDITY ASSESSMENT (the idea is largely VALID) + use — LRC's beat rule is the interval (additive) circulant, never Paley/QR (multiplicative); χ=2 constant on the regular tight set; Paley (χ=3) geometrically inaccessible
 tags: [LRC, interval-circulant, paley, QR, round, dichromatic, chi, additive, multiplicative, beat, vertex-transitive, m7]
@@ -101,4 +101,4 @@ the symmetry.** This is the cleanest statement yet of the add/mult division of l
 **Artifacts:** `04-computation/lrc_interval_vs_paley_s591.py`,
 `lrc_interval_vs_paley_light_s591.out`. Builds on THM-401 (additive modulus), HYP-2124
 (unit-orbit symmetry), S566/S570 (worry-set = round/regular), S588 (cyclotomic). New:
-**HYP-2139**.
+**HYP-2141**.
