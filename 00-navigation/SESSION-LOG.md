@@ -1,5 +1,14 @@
 # Session Log
 
+## monad-compute-2026-06-03-S595 - Extend THM-398 C' looseness verification n=14 -> n=18
+
+**Account:** monad-compute (compute node). Pure computation, no proof attempts.
+**TASK:** THM-398 / HYP-2102 headline (C' => LRC) was only computationally verified through n=14 ("every multiple-of-n speed set is LOOSE, 0 tight-with-mult"). Extended the direct exact looseness check to **n=15,16,17,18** (control n=12,13,14 reproduces).
+**METHOD:** For each n, collected multiple-of-n configs = hardest systematic slice (v=n exactly, small companions in [1,n+6]) + random slice (v=n*w, w in {1,2,3}, wider companions). Looseness tested EXACTLY (Fraction) via the OPEN safe-set measure mu{ t : min_i ||v_i t|| > 1/n } > 0 (strict), whose breakpoints are exactly t=(kn+-1)/(n*v_i).
+**RESULT:** **19600/19600 configs LOOSE, 0 tight** through n=18. Min looseness margin (measure) ~0.016-0.023 > 0 at every n (consistent with the prior "~0.02-0.04" at n<=14). C' has no tight witness for any tested config n<=18.
+**Files:** `04-computation/lrc_multiple_loose_extended_monad_s595.py` (+.out); updated HYP-2102 status in `05-knowledge/hypotheses/INDEX.md`.
+**Handoff:** Small-multiple residual (v<=(n-1)*max) remains the OPEN core of C' (Diophantine/equidistribution); this is empirical confirmation, not a proof. Next compute extension straightforward to n=20+ (cost grows with denominators).
+
 ## opus-2026-06-03-S594 - Overnight cycle capstone: THM-404 (doubling-rigidity dichotomy) + the n=14 residual PRIME-DECOMPOSITION (2/3/7)
 
 **Account:** Opus (remote-control, v1410-1). Overnight explore/investigate/formalize cycle, rounds 5-6.
