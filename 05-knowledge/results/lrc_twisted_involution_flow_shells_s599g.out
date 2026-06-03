@@ -1,0 +1,22 @@
+(A) SCALING & REVERSAL invariance of M (the symmetry that powers the reduction):
+   V=(1, 2, 3, 4, 5): M=1/6; M(2V)=1/6; M(3V)=1/6; all equal=True
+   V=(1, 3, 4, 5, 9): M=1/6; M(2V)=1/6; M(3V)=1/6; all equal=True
+   V=(2, 3, 7, 8, 12): M=2/5; M(2V)=2/5; M(3V)=2/5; all equal=True
+
+(B) ⟨2,−1⟩ ORBIT REDUCTION of the pair-sum shells on Z/(2n−1), even n:
+   n | 2n−1 | raw shells (n−1) | ⟨2,−1⟩-orbits (reduced cases) | reduction
+    6 |   11 |   5 |   1 | 5->1  (x5.0)
+    8 |   15 |   7 |   3 | 7->3  (x2.3)
+   10 |   19 |   9 |   1 | 9->1  (x9.0)
+   12 |   23 |  11 |   1 | 11->1  (x11.0)
+   14 |   27 |  13 |   3 | 13->3  (x4.3)
+   16 |   31 |  15 |   3 | 15->3  (x5.0)
+   18 |   35 |  17 |   3 | 17->3  (x5.7)
+   20 |   39 |  19 |   3 | 19->3  (x6.3)
+
+(C) n=14 detail (2n−1=27): the orbits = the irreducible flow shells to check
+   orbit size 18: [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26]  -> 9 shell(s); rep a=1, gcd(a,27)=1
+   orbit size  6: [3, 6, 12, 15, 21, 24]  -> 3 shell(s); rep a=3, gcd(a,27)=3
+   orbit size  2: [9, 18]  -> 1 shell(s); rep a=9, gcd(a,27)=9
+   => 13 shells collapse to 3 ⟨2,−1⟩-orbits: a unit-shell, a 3-shell, a 9-shell.
+   The 3 reps are stratified by gcd(a,27) ∈ {1,3,9} = the prime-3 tower 3^0,3^1,3^2.
