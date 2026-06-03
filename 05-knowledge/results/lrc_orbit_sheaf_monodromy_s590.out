@@ -1,0 +1,54 @@
+S590 ORBIT-SHEAF MONODROMY RIGIDITY AUDIT
+================================================
+
+1. AP unit-clock sheaf under doubling
+  n= 5 odd  v2=0 |U|= 4 kept= 4 boundary= 0 image_size= 4 gcd_hist={} collapse={1: 4} status=automorphism
+  n= 6 even v2=1 |U|= 2 kept= 0 boundary= 2 image_size= 2 gcd_hist={2: 2} collapse={1: 2} status=boundary
+  n= 7 odd  v2=0 |U|= 6 kept= 6 boundary= 0 image_size= 6 gcd_hist={} collapse={1: 6} status=automorphism
+  n= 8 even v2=3 |U|= 4 kept= 0 boundary= 4 image_size= 2 gcd_hist={2: 4} collapse={2: 2} status=boundary
+  n= 9 odd  v2=0 |U|= 6 kept= 6 boundary= 0 image_size= 6 gcd_hist={} collapse={1: 6} status=automorphism
+  n=10 even v2=1 |U|= 4 kept= 0 boundary= 4 image_size= 4 gcd_hist={2: 4} collapse={1: 4} status=boundary
+  n=11 odd  v2=0 |U|=10 kept=10 boundary= 0 image_size=10 gcd_hist={} collapse={1: 10} status=automorphism
+  n=12 even v2=2 |U|= 4 kept= 0 boundary= 4 image_size= 2 gcd_hist={2: 4} collapse={2: 2} status=boundary
+  n=13 odd  v2=0 |U|=12 kept=12 boundary= 0 image_size=12 gcd_hist={} collapse={1: 12} status=automorphism
+  n=14 even v2=1 |U|= 6 kept= 0 boundary= 6 image_size= 6 gcd_hist={2: 6} collapse={1: 6} status=boundary
+  n=15 odd  v2=0 |U|= 8 kept= 8 boundary= 0 image_size= 8 gcd_hist={} collapse={1: 8} status=automorphism
+  n=16 even v2=4 |U|= 8 kept= 0 boundary= 8 image_size= 4 gcd_hist={2: 8} collapse={2: 4} status=boundary
+  n=17 odd  v2=0 |U|=16 kept=16 boundary= 0 image_size=16 gcd_hist={} collapse={1: 16} status=automorphism
+  n=18 even v2=1 |U|= 6 kept= 0 boundary= 6 image_size= 6 gcd_hist={2: 6} collapse={1: 6} status=boundary
+  n=14 boundary map:
+    unit  1 ->  2 (gcd=2); all lifts=[(1, 1), (8, 2)]
+    unit  3 ->  6 (gcd=2); all lifts=[(3, 1), (10, 2)]
+    unit  5 -> 10 (gcd=2); all lifts=[(5, 1), (12, 2)]
+    unit  9 ->  4 (gcd=2); all lifts=[(2, 2), (9, 1)]
+    unit 11 ->  8 (gcd=2); all lifts=[(4, 2), (11, 1)]
+    unit 13 -> 12 (gcd=2); all lifts=[(6, 2), (13, 1)]
+
+2. Dihedral point-set trienerment sheaf
+  searched N<=18; dihedral_VT=83 regular=31 bracelet=52 gap_period_hist={1: 31, 2: 52}
+  first_bracelet={'n': 6, 'p': (0, 1, 3, 4), 'gaps': (1, 2, 1, 2), 'period': 2, 'stabilizer_size': 4}
+  first_period_gt2=None
+
+3. Rooted tournament quotient sheaf through n=6
+  full_rooted           unique=296 collisions=  0 max_fiber=  1 mixed={'source': 0, 'sink': 0, 'fixed': 0, 'orbit_size': 0, 'parent': 0}
+  unrooted_plus_score   unique=196 collisions=100 max_fiber=  4 mixed={'source': 0, 'sink': 0, 'fixed': 2, 'orbit_size': 2, 'parent': 74}
+  split_no_cross        unique= 36 collisions=260 max_fiber= 64 mixed={'source': 0, 'sink': 0, 'fixed': 8, 'orbit_size': 8, 'parent': 12}
+  unrooted              unique= 56 collisions=240 max_fiber=  6 mixed={'source': 12, 'sink': 12, 'fixed': 12, 'orbit_size': 12, 'parent': 53}
+  delete_parent         unique= 12 collisions=284 max_fiber= 32 mixed={'source': 12, 'sink': 12, 'fixed': 8, 'orbit_size': 8, 'parent': 0}
+  score_sequence        unique= 22 collisions=274 max_fiber= 72 mixed={'source': 9, 'sink': 9, 'fixed': 13, 'orbit_size': 13, 'parent': 21}
+  root_score            unique=  6 collisions=290 max_fiber= 88 mixed={'source': 0, 'sink': 0, 'fixed': 4, 'orbit_size': 4, 'parent': 6}
+
+4. Tournament Analysis on rigidity lenses
+  pairwise observable: defect tuple = (boundary_loss, collisions, max_fiber, label_mix)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3_cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  tie_edge_count=3
+  hamiltonian_paths=1
+  one_hamiltonian_order=cyclic_polygon_spine -> source_root_sheaf -> static_unit_sheaf -> dihedral_bracelet_monodromy -> unmarked_shadow -> split_profile_no_cross -> root_score_shadow -> doubling_even_boundary_n14
+
+READING
+  Odd n: doubling is an automorphism of the AP unit-clock sheaf. Even n: it is a boundary morphism from units to nonunits.
+  At n=14 every unit witness doubles into gcd-2 residue; each image has one unit lift and one nonunit lift, exposing the 2-block seam.
+  Dihedral VT point-sets glue local vertex profiles with either trivial cyclic monodromy or a two-block bracelet monodromy.
+  Rooted tournament quotients show the sheaf warning: source is rigid, but fixed-root, parent, and orbit-size labels become mixed once cross fibers are forgotten.
