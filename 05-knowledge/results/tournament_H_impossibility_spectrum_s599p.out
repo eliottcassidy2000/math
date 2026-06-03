@@ -1,0 +1,15 @@
+FULL SPECTRUM (exhaustive) — achievable Hamiltonian-path counts; gaps = impossible odds
+ n=3: max P(n)=3; #achievable=2; GAPS (impossible odd ≤max)= []
+ n=4: max P(n)=5; #achievable=3; GAPS (impossible odd ≤max)= []
+ n=5: max P(n)=15; #achievable=7; GAPS (impossible odd ≤max)= [7]
+ n=6: max P(n)=45; #achievable=19; GAPS (impossible odd ≤max)= [7, 21, 35, 39]
+
+ union of achievable (n≤6): contains 7? False  contains 21? False
+
+TEST: do 7 or 21 appear among NEAR-TRANSITIVE tournaments at n=7,8 (where small H live)?
+ near-transitive n=7,8 scan: 7 found=False; 21 found=False; small odds seen=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25]
+
+GROWTH: P(n)=max Ham paths, and exponents
+ n=4: P=5; P/P_prev=1.667; P^(1/n)=1.4953; P/avg=1.667; (P/avg)^(1/n)=1.1362
+ n=5: P=15; P/P_prev=3.000; P^(1/n)=1.7188; P/avg=2.000; (P/avg)^(1/n)=1.1487
+ n=6: P=45; P/P_prev=3.000; P^(1/n)=1.8860; P/avg=2.000; (P/avg)^(1/n)=1.1225

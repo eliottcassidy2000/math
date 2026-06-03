@@ -1,0 +1,6 @@
+Do ROUND tournaments (= LRC worry-set carriers) avoid the H-gaps 7,21,...?
+ n | round H-values | contains 7? 21? | all-tournament H-values (for contrast)
+ 3 | [1, 3] | 7:False 21:False
+ 4 | [1, 3, 5] | 7:False 21:False
+ 5 | [1, 3, 5, 9, 11, 15] | 7:False 21:False
+ 6 | [1, 3, 5, 9, 11, 15, 17, 23, 41, 45] | 7:False 21:False
