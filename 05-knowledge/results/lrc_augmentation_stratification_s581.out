@@ -1,0 +1,13 @@
+THEOREM check: relation survives translation S->S+t  <=>  eps=0 (balanced)
+   a+b=c     : eps=+1  translation-invariant=False
+   2a=b+c    : eps=+0  translation-invariant=True
+   a+b=c+d   : eps=+0  translation-invariant=True
+   c=2a      : eps=+1  translation-invariant=False
+
+STRATIFICATION: M-delta binned by UNBALANCED count and (separately) by BALANCED count
+  k=6 by UNBALANCED count: u=0:minMargin=+0.0879(n=472); u=1:minMargin=+0.0495(n=1524); u=2:minMargin=+0.0311(n=2939); u=3+:minMargin=+0.0000(n=4065)
+  k=6 | u=0, by BALANCED count: b=2:minMargin=+0.1136(n=15); b=3+:minMargin=+0.0879(n=457)
+k=8 by UNBALANCED: u=0:min=+0.1111(n=26); u=1:min=+0.0824(n=96); u=2:min=+0.0654(n=322); u=3:min=+0.0451(n=891); u=4+:min=+0.0222(n=5665)
+k=8 |u=0 by BALANCED: b=4+:min=+0.1111(n=26)
+k=10 by UNBALANCED: u=0:min=+0.2620(n=4); u=1:min=+0.1818(n=7); u=2:min=+0.1132(n=18); u=3:min=+0.0629(n=74); u=4+:min=+0.0202(n=6897)
+k=10 |u=0 by BALANCED: b=4+:min=+0.2620(n=4)

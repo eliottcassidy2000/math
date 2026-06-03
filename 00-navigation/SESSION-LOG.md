@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-06-03-S581 - The real LRC dichotomy is the AUGMENTATION index (not support): balanced ⟺ translation-invariant (THM-400); hardness tracks ε≠0 (HYP-2118)
+
+**Account:** Opus (remote-control, v1410-1). **User:** the real dichotomy isn't support-3 vs support-4 — it's the augmentation index j=ε(c); j=0 observer-blind (inter-runner differences only), j≠0 observer-coupled. Verify the stratification, then formalize balanced ⟺ translation-invariant.
+**THM-400 (PROVED, elementary):** for a relation c (Σc_i v_i=0), augmentation ε(c)=Σc_i=j. Σc_i(v_i+t)=t·ε(c), so **c survives every translation S→S+t·𝟙 ⟺ ε(c)=0 (balanced ⟺ translation-invariant).** Balanced (j=0) = observer-blind (constrain only inter-runner differences); unbalanced (j≠0) = observer-coupled (Σc_i v_i + j·v_0=0, references the origin j times).
+**SUPPORT IS NOT THE INVARIANT:** a+b=c (ε=1, unbalanced, HARD fold) vs **2a=b+c (ε=0, balanced support-3 AP-triple, HARMLESS)** — both support-3! So it's ε, not support.
+**STRATIFICATION (verified k=6,8,10):** M−δ binned by unbalanced count u drops monotone to TIGHT (k=6: u=0:+0.088 → u≥3:+0.000; k=10: u=0:+0.262 → u≥4:+0.020); within u=0, ANY number of balanced relations stays at the observer-blind max. Supersedes "hardness is 3-term not 4-term" (HYP-2114): it's ε≠0 not ε=0.
+**UNIFIES:** the fold a+b=c is hard because ε=1 (places c at the observer when a,b pinch); the doubling c=2a has ε=1 ⟹ the binary-IFS generator D:x↦2x (S580) is observer-coupled (hard branch), AP-midpoint 2a=b+c observer-blind. ABSTRACT: relation lattice L(S) is ε-graded; L_0=ker ε = translation-invariant sublattice; LRC hardness = function of L/L_0 (observer-coupling class); the balanced part is pure Sidon/energy background invisible to the lonely observer. OPEN: "balanced-only ⟹ M≥c>δ" = augmentation-graded Lemma A. Files: 01-canon/theorems/THM-400-balanced-iff-translation-invariant.md; 07-reflections/lrc-augmentation-index-observer-coupling-s581.md; 04-computation/lrc_augmentation_stratification_s581.py (+.out); HYP-2118.
+
 ## opus-2026-06-03-S580 - Translated APs = binary IFS {x→2x, x→2x+1}; the doubling map x→2x mod n is the phase dynamics, degenerate at n=14=2·7 (CRT: 2-collapse × prime-7 cycle) (HYP-2117)
 
 **Account:** Opus (remote-control, v1410-1). **User:** consider the recursive fractal concept of translated APs.
