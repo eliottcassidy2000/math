@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T644** #lrc #time-model #reset-horizon #commensurability #speed-families | certainty: exploratory synthesis | source: codex-2026-06-02-S567
+Time in LRC should be sorted by an outer clock before endpoint/half-turn clocks: for each observer frame, the relative speed vector has either a finite reset horizon (commensurable closed word) or no exact reset (higher-rank torus closure). For integer-normalized LRC the physical period is normalized away, but endpoint grid height, half-turn wall grid height, and wrap-reset ledger complexity remain strong speed-family gauges. See `07-reflections/lrc-reset-horizon-speed-family-gauge-s567.md`.
+
 **T643** #lrc #n17 #dyadic-residual #skip-spectrum #gauge-split | certainty: exact S566 audit / formula open | source: codex-2026-06-02-S566
 The n=17 dyadic residual tier is not skip-8-only: every skipped label `1..16` has `gap(h)=gap(0)/2^h`, `boundary(h)=boundary(0)*2^h`, and conserved `gap*boundary` under `scale=17*2^h`. The scalar-gap gauge picks `skip=8`, but the product/debt gauge picks `skip=6` with 15 edge flips between the two transitive skip tournaments. This explains why the n=17 idea returns to n=14 as predecessor-of-apex `skip=6`. See HYP-2079.
 
