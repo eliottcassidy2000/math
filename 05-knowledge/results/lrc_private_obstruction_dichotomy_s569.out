@@ -1,0 +1,4 @@
+tested 3002 n=14 configs
+DICHOTOMY: sole(private) blockers of a small-pair pinch: 521291; of those NEITHER shield NOR anchor: 419914
+  => every private obstruction is paired(shield) or anchored(endpoint): False
+configs with EVERY small pair blocked (refined counterexample necessary cond): 2/3002

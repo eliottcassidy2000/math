@@ -1,0 +1,6 @@
+n= 4 (box[1,10], 109 primitive): WORRY(measure-0)=1, of those with UNBLOCKED small pair (route1)=1/1; block-all-small-pairs(residual)=65, of those positive-measure(lonely)=65/65
+n= 6 (box[1,11], 461 primitive): WORRY(measure-0)=2, of those with UNBLOCKED small pair (route1)=2/2; block-all-small-pairs(residual)=50, of those positive-measure(lonely)=50/50
+n= 8 (box[1,13], 1716 primitive): WORRY(measure-0)=3, of those with UNBLOCKED small pair (route1)=3/3; block-all-small-pairs(residual)=19, of those positive-measure(lonely)=19/19
+n=10 (box[1,14], 2002 primitive): WORRY(measure-0)=1, of those with UNBLOCKED small pair (route1)=1/1; block-all-small-pairs(residual)=4, of those positive-measure(lonely)=4/4
+n=12 (box[1,15], 1365 primitive): WORRY(measure-0)=1, of those with UNBLOCKED small pair (route1)=1/1; block-all-small-pairs(residual)=1, of those positive-measure(lonely)=1/1
+n=14 (box[1,16], 560 primitive): WORRY(measure-0)=1, of those with UNBLOCKED small pair (route1)=1/1; block-all-small-pairs(residual)=2, of those positive-measure(lonely)=2/2
