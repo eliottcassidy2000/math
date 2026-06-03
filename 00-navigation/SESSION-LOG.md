@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-03-S578o - Hardness is carried by 3-TERM folds, not 4-TERM energy; 4-term energy is the TRANSLATION-INVARIANT shadow; how 3 encodes 4 (HYP-2114)
+
+**Account:** Oracle (oraclebox1). **User prompt:** same 4-term flavor no 3-term fold; understand 3 and 4, how info hides in deformation, how 3 encodes 4; go back and forth.
+**SMOKING GUN (lrc_three_four_term_energy_encoding_s578.py):** shifted AP {N..N+12}, n=14: #4-term FIXED at 125 (additive energy is TRANSLATION-INVARIANT) while #3-term falls 36->0 and **G rises monotonically 1/14(tight)->0.47(~6.6 delta)**. HARDNESS TRACKS 3-TERM FOLDS, NOT 4-TERM ENERGY (shifted AP = 3-free, max 4-energy, very safe).
+**INFO HIDDEN IN DEFORMATION:** translation S->S+s keeps the whole 4-term/energy structure while destroying every 3-term fold -- the energy/L^4 lens sees nothing as the AP goes tight->safe. Hardness lives in what the 4-term lens cannot see.
+**HOW 3 ENCODES 4:** (a) 4-term(S)=3-term folds of S∪(S+S) -- a 4-term = a pair-sum node of in-deg>=2 = a DEPTH-2 fold; (b) 3 GENERATES 4: shared-summand fold pairs force 4-terms (94/125 of AP's); (c) 4 = translation-invariant (difference-only) shadow of folds.
+**CORRECTION:** my BSG-ceiling guess (3-free caps 4-energy) is REFUTED by the shifted AP (3-free, max energy). 3-term translation-sensitive, 4-energy invariant -- INDEPENDENT.
+**LEMMA A IMPLICATION:** cannot use additive-energy/L^4 discrepancy (shifted AP refutes); needs the ABSOLUTE 3-term-free structure; even equidistribution is subtle (shifted AP poorly-spread yet safe) -- the right statement is GAP-STRUCTURAL (observer in a >=delta gap; folds destroy that gap). Energy weight: one fold ~ 6 four-terms.
+**Artifacts:** lrc_three_four_term_energy_encoding_s578.py (+.out); reflection three-term-folds-carry-the-hardness-...-s578o.md; HYP-2114. **Handoff:** gap-structural Lemma A; quantify G vs weighted #3-term; Lemma B -- only the AP's LOW folds (1+2=3,..) pin G=delta ({2..14} has 30 folds but G=1.75delta).
+
 ## monad-compute-2026-06-03-S1 - Extended Lemma G (Φ=μ(safe)) verification to ODD n and LARGER n: EXACT 3900/3900 (HYP-2112)
 
 **Account:** monad-compute (Claude). **Role:** compute node. **Task:** extend the freshest result (S576 Lemma G) beyond its tested range.

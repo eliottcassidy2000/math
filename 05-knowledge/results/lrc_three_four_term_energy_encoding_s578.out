@@ -1,0 +1,60 @@
+========================================================================================
+3-TERM (fold) vs 4-TERM (energy), how 3 encodes 4. n=14, delta=1/14=0.0714
+========================================================================================
+
+(0) energy weights: one 3-term FOLD costs (1-2/n)/|ghat(1)| = 6.21 four-term relations. Folds are the heavy layer.
+
+(1) THE SMOKING GUN -- shifted AP {N..N+12}: 4-energy FIXED, 3-term->0, G tight->safe
+    N   set         #3term  #4term     G      G/delta
+     1  {1..13}      36     125   0.0714   1.00   <- AP, TIGHT
+     2  {2..14}      30     125   0.1250   1.75
+     3  {3..15}      25     125   0.1667   2.33
+     4  {4..16}      20     125   0.2000   2.80
+     5  {5..17}      16     125   0.2273   3.18
+     7  {7..19}       9     125   0.2692   3.77
+    10  {10..22}      2     125   0.3125   4.38
+    15  {15..27}      0     125   0.3571   5.00   <- first 3-free
+    30  {30..42}      0     125   0.4167   5.83
+   100  {100..112}    0     125   0.4717   6.60
+    => 4-term energy is TRANSLATION-INVARIANT (125 throughout); 3-term folds vanish
+       as N grows; G rises monotonically from delta to ~6 delta. HARDNESS = 3-TERM.
+       The translation DEFORMATION hides the hardness from the energy/4-term lens.
+
+(2) BACK-AND-FORTH: inject structure into a Sidon set (no 3, no 4) and watch G drop
+   Sidon (1, 2, 5, 11, 22, 33)...: #3=2 #4=8  G=0.2090 (2.93d)  [no structure -> very safe]
+   +low-AP folds (1, 2, 3, 4, 5, 6)...: #3=6 #4=14  G=0.1404 (1.96d)  [folds -> G drops toward delta]
+
+(3) HOW 3 ENCODES 4: 4-term(S) = 3-term folds of S∪(S+S) (depth-2 fold)
+   AP{1..13}       : 4-term= 125  colliding pair-sums(nodes)= 19  folds-into-collisions in S∪(S+S)= 74
+   shiftAP{30..42} : 4-term= 125  colliding pair-sums(nodes)= 19  folds-into-collisions in S∪(S+S)= 74
+   => each collision node C of in-degree r contributes C(r,2) four-terms and r folds;
+      adding the (S+S) collision nodes converts every 4-term into a pair of 3-folds.
+   NOTE: shiftAP has the SAME 4-term structure as the AP (translation-invariant),
+         yet ZERO 3-term folds in S itself -- the folds live only in S∪(S+S).
+
+(4) CORRECTED principle (refuting my BSG-ceiling guess):
+   3-FREENESS does NOT cap 4-energy: the shifted AP is 3-free with MAXIMAL 4-energy.
+   4-energy is translation-INVARIANT; 3-term is translation-SENSITIVE. Hardness (G
+   near delta) follows the ABSOLUTE 3-term fold structure, not the energy. So Lemma A's
+   discrepancy bound must come from 3-term-free EQUIDISTRIBUTION of {v_i t}, not from
+   bounding additive energy. 4-term/energy is a RED HERRING for hardness.
+
+(5) k-sweep: shifted AP {N..N+k-1}, smallest N making it 3-free, and its G/delta:
+   k= 4 n= 5: first 3-free shift N=4, set {4..7}  #3=0 #4=1  G=0.3636  G/delta=1.82
+   k= 6 n= 7: first 3-free shift N=6, set {6..11}  #3=0 #4=7  G=0.3529  G/delta=2.47
+   k= 8 n= 9: first 3-free shift N=8, set {8..15}  #3=0 #4=22  G=0.3478  G/delta=3.13
+   k=10 n=11: first 3-free shift N=10, set {10..19}  #3=0 #4=50  G=0.3448  G/delta=3.79
+   k=12 n=13: first 3-free shift N=12, set {12..23}  #3=0 #4=95  G=0.3429  G/delta=4.46
+   k=13 n=14: first 3-free shift N=13, set {13..25}  #3=0 #4=125  G=0.3421  G/delta=4.79
+   (3-free shifted APs stay safely above delta across k -- Lemma A de-risked, k=4..13.)
+
+========================================================================================
+READING
+========================================================================================
+  The shifted AP is the key particularity: 4-term additive energy is TRANSLATION-INVARIANT
+  while 3-term folds are not, so translating the AP up keeps 4-energy MAXIMAL (125) yet kills
+  every fold -- and G rises from tight (delta) to ~6 delta. HARDNESS IS CARRIED BY 3-TERM
+  FOLDS, NOT 4-TERM ENERGY; the translation deformation HIDES the hardness from the energy
+  lens. How 3 encodes 4: a 4-term relation is a pair-sum node of in-degree>=2 = a depth-2
+  fold (3-term in S∪(S+S)). And the correction: 3-freeness does NOT bound 4-energy, so
+  Lemma A must use absolute 3-term-free equidistribution -- 4-energy is a red herring.
