@@ -1,0 +1,49 @@
+==============================================================================
+S590  perspectives = rigidity (not chirality); the observer-coupled/blind LRC reading
+==============================================================================
+
+[1] THE COINCIDENCE AND ITS BREAK (Burnside, exact)
+  n :   T(n)   persp(n)   T(n+1)   2(n-1)!   gap=T(n+1)-persp   persp/T(n)
+   2:        1         2        2         2             0      2.0000
+   3:        2         4        4         4             0      2.0000
+   4:        4        12       12        12             0      3.0000
+   5:       12        48       56        48             8      4.0000
+   6:       56       296      456       240           160      5.2857
+   7:      456      3040     6880      1440          3840      6.6667
+   8:     6880     54256   191536     10080        137280      7.8860
+   9:   191536   1716608  9733056     80640       8016448      8.9623
+  10:  9733056  97213472 903753248    725760     806539776      9.9880
+  => persp(n)=T(n+1) ONLY n<=4 (both = 2(n-1)! briefly); gap explodes after.
+     persp(n)/T(n) -> n: almost every large tournament is RIGID (n distinct perspectives).
+
+[2] THE SYMMETRY DEFICIT = n*T(n) - persp(n)  (the 'observer-blind' mass)
+  n : n*T(n)  persp(n)  deficit  deficit/T(n) = avg(n - #orbits) [symmetry per class]
+   2:         2         2        0   0.0000
+   3:         6         4        2   1.0000
+   4:        16        12        4   1.0000
+   5:        60        48       12   1.0000
+   6:       336       296       40   0.7143
+   7:      3192      3040      152   0.3333
+   8:     55040     54256      784   0.1140
+   9:   1723824   1716608     7216   0.0377
+  10:  97330560  97213472   117088   0.0120
+  => deficit/T(n) -> 0: the rigid (observer-coupled) regime dominates asymptotically;
+     symmetric (observer-blind) classes are a vanishing fraction but set the small-n gap.
+
+[3] orbit-size distribution per n (the human's 3+1, 4+4+2+2 decomposition)
+  n=3: #orbits-per-class multiset {1: 1, 3: 1}   (sum = perspectives = 4)
+        per-class (orbits,|Aut|): [(1, 3), (3, 1)]
+  n=4: #orbits-per-class multiset {2: 2, 4: 2}   (sum = perspectives = 12)
+        per-class (orbits,|Aut|): [(2, 3), (2, 3), (4, 1), (4, 1)]
+  n=5: #orbits-per-class multiset {1: 1, 3: 4, 5: 7}   (sum = perspectives = 48)
+        per-class (orbits,|Aut|): [(1, 5), (3, 3), (3, 3), (3, 3), (3, 3), (5, 1), (5, 1), (5, 1), (5, 1), (5, 1), (5, 1), (5, 1)]
+
+[4] CHIRALITY IS A DIFFERENT SYMMETRY: gap vs self-converse/chiral split
+  n : structures  self-converse  chiral   gap=T(n+1)-persp(n)
+   3:        2            2        0        0
+   4:        4            2        2        0
+   5:       12            8        4        8
+   6:       56           12       44      160
+  => the perspective gap (0,0,8,160,...) does NOT equal the chiral count nor the SC count;
+     HYP-1825's '8 = chirality/stencil residue' matched a number, not the mechanism.
+     The mechanism is automorphism RIGIDITY (vertex-orbits), not T<->T^op chirality.
