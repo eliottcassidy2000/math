@@ -1,0 +1,27 @@
+HYP-1998(A): confirm ROUND == A000016 via the direct generator
+monad-compute-2026-06-02-S574
+
+CANON CORRECTNESS CHECK (I-R canon vs A000568 on full tournament set):
+  m=3: |all-iso|=  2 (A000568=  2, match=True) | round=2 loc-trans=2 round==loctrans:True
+  m=4: |all-iso|=  4 (A000568=  4, match=True) | round=2 loc-trans=2 round==loctrans:True
+  m=5: |all-iso|= 12 (A000568= 12, match=True) | round=4 loc-trans=4 round==loctrans:True
+  m=6: |all-iso|= 56 (A000568= 56, match=True) | round=6 loc-trans=6 round==loctrans:True
+  -> canon verified exact; round == locally-transitive confirmed.
+
+  m round(direct)  A000016  #valid-d  match
+  3             2        2         4   True
+  4             2        2         8   True
+  5             4        4        16   True
+  6             6        6        32   True
+  7            10       10        64   True
+  8            16       16       128   True
+  9            30       30       256   True
+ 10            52       52       512   True
+ 11            94       94      1024   True
+
+ ROUND (direct) m=3..11 : [2, 2, 4, 6, 10, 16, 30, 52, 94]
+ A000016         m=3..11 : [2, 2, 4, 6, 10, 16, 30, 52, 94]
+
+ ALL MATCH: True
+ => HYP-1998(A) CONFIRMED: round(8)=16, round(9)=30 reproduced by the
+    direct generator; A000016 closed form holds m=3..11.
