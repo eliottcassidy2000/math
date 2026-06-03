@@ -68,3 +68,10 @@ Close-out rebase integration: Opus S595/HYP-2142 names the next residual after
 these cap filters.  If total caps and one-sided origin-bisection caps are all
 under capacity, the remaining large-owner cover constraints become a 2x2
 determinant / bounded CRT feasibility problem.
+
+S599 extension: HYP-2144 asks for small Helly witnesses inside that determinant
+residual.  Instead of building the whole CRT modulus first, enumerate the
+dominance-bounded `w` window and extract a singleton component wall or pair of
+incompatible owner/slack determinant rows.  In the S599 deterministic sample,
+n=14 rows that reach the post-B/C determinant layer already collapse to
+singleton walls, while smaller n show the first pair witnesses.

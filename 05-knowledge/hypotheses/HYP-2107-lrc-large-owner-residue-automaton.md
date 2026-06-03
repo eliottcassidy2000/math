@@ -60,6 +60,14 @@ counter-signals; they are modulus-overflow cases where the naive residue-set
 implementation stopped before classifying the row.  Median exact moduli were
 `23940, 42840, 45885, 88380`.
 
+S599 follow-up: `lrc_twoblock_helly_s599.py` implements the promised minimal
+contradiction extraction in the dominance-bounded window rather than the full
+CRT modulus.  In deterministic samples after Bprime and Lemma C it finds zero
+bounded-live rows; the remaining n=14 determinant residuals collapse to
+singleton component walls, while n=6/n=8 include the first pair incompatibility
+certificates.  This creates HYP-2144: prove the automaton emptiness by
+singleton/pair/bounded-size Helly witnesses before resorting to a global CRT/ZDD.
+
 ## Why This Improves the Algorithm
 
 S574 leaves an open residual: every component is short, and every component has
