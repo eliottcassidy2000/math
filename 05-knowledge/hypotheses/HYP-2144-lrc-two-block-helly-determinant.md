@@ -90,7 +90,7 @@ C1 allowed={3,7,10}
 
 ## S601 Helly-Log Follow-Up
 
-HYP-2151 and `04-computation/helly_scale_log_laws_s601.py` turn the informal
+HYP-2152 and `04-computation/helly_scale_log_laws_s601.py` turn the informal
 "Helly scale" phrase into a certificate entropy:
 
 ```text

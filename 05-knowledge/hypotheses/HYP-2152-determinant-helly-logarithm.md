@@ -1,11 +1,12 @@
 ---
-id: HYP-2151
+id: HYP-2152
 status: CONCEPTUAL PROOF-PROGRAM plus S601 deterministic sample evidence
 source: codex-2026-06-03-S601
 related:
   - HYP-2144
   - HYP-2146
   - HYP-2145
+  - HYP-2151
   - HYP-2150
   - HYP-2149
   - HYP-2142
@@ -13,7 +14,7 @@ related:
   - THM-398
 ---
 
-# HYP-2151: Helly logarithms measure certificate entropy
+# HYP-2152: determinant Helly logarithms measure certificate entropy
 
 ## Claim
 
@@ -45,7 +46,8 @@ M(N) ~ log N      => Lambda_H(M(N)) ~ log log N
 M(N) ~ log log N  => Lambda_H(M(N)) ~ log log log N.
 ```
 
-This is the Helly-scale version of HYP-2146's scale-currency ledger.
+This is the determinant-component specialization of HYP-2151's broader Helly
+entropy accounting and HYP-2146's scale-currency ledger.
 
 ## S601 Evidence
 
@@ -138,16 +140,21 @@ For the n=14 Lonely Runner program, the useful proof obligations are:
 
 If steps 1 and 2 hold uniformly, the determinant branch is bounded-Helly and
 does not need Tao-style iterated-log losses.  If a family forces `H` or `M` to
-grow, HYP-2151 says exactly which logarithm is being paid.
+grow, HYP-2152 says exactly which logarithm is being paid.
 
-## Relation To HYP-2145, HYP-2149, And HYP-2150
+## Relation To HYP-2151 And The Collatz Log Tower
 
-HYP-2145 and the Collatz excursion-tower work (now HYP-2149/HYP-2150 after the
-incoming renumber) locate logarithmic floors by iterated linearization of an
-orbit.  HYP-2151 locates a different source of the same symbols: finite proof
-certificates.  In Collatz, the log variable is orbit height or excursion length.
-In the two-block LRC residual, the log variable can be the number of local
-determinant rows one must search before finding an empty subfamily.
+Opus S598/HYP-2151 gives the broad Helly entropy accounting: clearance entropy,
+H-entropy, and Helly number are co-monotone order parameters, and the AP
+worry-set is a full-Helly isostatic trap.  HYP-2152 is narrower: it measures the
+certificate entropy of the post-owner two-block determinant component languages.
+
+HYP-2145 and the Collatz excursion-tower work (HYP-2149/HYP-2150) locate
+logarithmic floors by iterated linearization of an orbit.  HYP-2152 locates a
+different source of the same symbols: finite proof certificates.  In Collatz,
+the log variable is orbit height or excursion length.  In the two-block LRC
+residual, the log variable can be the number of local determinant rows one must
+search before finding an empty subfamily.
 
 Both are scale ladders.  They differ in what the ladder counts.
 
@@ -209,4 +216,4 @@ and to bound `M` or `H` in the true residual families.
 
 **See:** `04-computation/helly_scale_log_laws_s601.py`
 (+ `05-knowledge/results/helly_scale_log_laws_s601.out`),
-HYP-2144, HYP-2146, HYP-2145, HYP-2149, HYP-2150, HYP-2142, HYP-2107.
+HYP-2144, HYP-2146, HYP-2145, HYP-2151, HYP-2149, HYP-2150, HYP-2142, HYP-2107.

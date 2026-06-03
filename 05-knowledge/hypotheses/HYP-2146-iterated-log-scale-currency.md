@@ -183,7 +183,7 @@ then the log factor comes from certificate size, not from time or denominator
 height.  If `H(M)` itself is logarithmic in the ambient scale, the proof pays a
 `log log` or `log log log` tax automatically.
 
-S601/HYP-2151 makes the accounting explicit.  For `M` live determinant
+S601/HYP-2152 makes the accounting explicit.  For `M` live determinant
 component languages and Helly cutoff `H`, the local certificate entropy is
 
 ```text

@@ -105,4 +105,4 @@ The concrete LRC route now looks sharper:
 4. Only then worry about high-rank Helly or CRT/ZDD machinery.
 
 If `H<=2` survives formalization, the logarithm is mostly bookkeeping.  If some
-family forces `H` to grow, HYP-2151 tells us which log is being paid and why.
+family forces `H` to grow, HYP-2152 tells us which log is being paid and why.
