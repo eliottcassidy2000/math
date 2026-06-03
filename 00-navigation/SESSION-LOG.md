@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-03-S578 - Fixed-round certificate scaffold: 64 boundary classes plus unit-spine owner labels (HYP-2099)
+
+**Account:** Codex (GPT-5). **User prompt:** continue from the cut-off session and go further using recent ideas from other agents.
+**Preservation:** First rebased and pushed S577 as HYP-2097 after origin moved; renumbered around incoming HYP-2095/HYP-2096/HYP-2098 work so the previous cut-off synthesis was not lost.
+**Incoming signal:** Oracle S577o/HYP-2098 corrected the naive 64-class target: the tight boundary is a mod-7 tie-wall, `64 != 2^6` AP tie-resolutions, tight realizability collapses toward `{AP,V*}`, and containment must be phrased on the boundary tie-wall rather than a single perturbation class. Opus HYP-2095 supplies the cheap unblocked-small-pair route; HYP-2096 supplies the unit-spine/four-slack owner normal form. While closing, Opus S570 added the transversal complement: all `8191` gcd-1 antipodal transversals mod `27` are lonely and have unblocked small pairs, with AP the unique floor-tight transversal.
+**Computation:** Added `04-computation/lrc_n14_fixed_round_certificate_s578.py` and stored `05-knowledge/results/lrc_n14_fixed_round_certificate_s578.out`. The script builds a direct fixed-boundary scaffold from round `d`-vectors and then audits the canonical unit-spine slack fibre with exact maximin, positive-measure, D/U/N cover, and unblocked-small-pair tests.
+**Result:** fixed scaffold: `4096` labelled round vectors, `820` with dihedral anti-witness, `64` fixed groups inside `316` round classes, score-span histogram `{0:1,2:20,4:21,6:12,8:7,10:2,12:1}`, SCC histogram `{1:63,13:1}`, anti-count histogram `{1:63,13:1}`. Speed scaffold through slack `42`: `1001` rows, `531` full covers, `0` below floor, `2` floor rows, `1` open-gap row, `529/531` full covers with unblocked small pair, `2/2` block-all rows positive-measure, and `2/2` measure-zero full covers with unblocked pair.
+**Synthesis:** Opus S570 covers the transversal flip-lattice; S578 covers the canonical composite unit-spine fibre. In S578, AP slack `(3,6,9,12)` and V* slack `(3,6,9,24)` are exactly the floor rows, and both have cheap unblocked pair `(1,13)` at `1/14`; the block-all controls are positive measure. This is the first concrete bridge between HYP-2098's `{AP,V*}` collapse and HYP-2095's paired-or-anchored split inside HYP-2096's unit-spine normal form.
+**Handoff:** prove the bridge lemma: every tight-boundary n=14 realization either lifts to the unit-spine owner scaffold while preserving cheap-pair status, or failure of the lift already exposes an unblocked small pair / positive-measure interval.
+**Artifacts:** HYP-2099; `07-reflections/lrc-n14-fixed-round-certificate-scaffold-s578.md`; `04-computation/lrc_n14_fixed_round_certificate_s578.py` (+.out).
+
 ## oracle-2026-06-03-S577o - Extending the 64 self-converse classes: the tight boundary is a mod-7 TIE-WALL; 64 != 2^6 tie-resolutions; the tight worry collapses to ~4 classes ({AP,V*}); containment is boundary-subtle (HYP-2098)
 
 **Account:** Oracle (oraclebox1). **User prompt:** extend ideas around the 64 classes; what are we missing still?

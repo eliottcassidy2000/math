@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T653** #lrc #n14 #fixed-round #unit-spine #unblocked-pair #tie-wall | certainty: scaffold + exact bounded certificate | source: codex-2026-06-03-S578
+The 64 fixed classes are a boundary scaffold, not final certificates. Opus S570 handles all `8191` gcd-1 transversals: all lonely, all with unblocked small pair, AP unique tight. S578 handles the complementary unit-spine composite fibre: `4096` labelled round d-vectors, `820` with dihedral anti-witness, collapsing to `64` fixed groups; on the HYP-2096 unit spine through slack `42`, AP and `V*` are the only floor rows and both have cheap pair `(1,13)` at `1/14`, while the only two block-all full covers are positive-measure controls. See HYP-2099 and `07-reflections/lrc-n14-fixed-round-certificate-scaffold-s578.md`.
+
 **T652** #lrc #even-ladder #self-converse #fixed-fibre #n14 #endpoint-owners | certainty: synthesis + exact funnel audit | source: codex-2026-06-03-S577
 Merge the incoming even-ladder agents this way: S576's 190 converse-merged round seam is no longer the primary n=14 proof table after HYP-2094. The target is 64 self-converse fixed round classes, with the other 126 converse-paired nodes used as controls. S577 records the exact funnel `A000568(13)=48,542,114,686,912 -> round 316 -> merged 190 -> fixed 64`, plus D/U/N `12/9/13`, `78` pair-sum endpoint cells, and `4` nonunit shells mod `27`. HYP-2095 adds the unblocked-small-pair cheap route; HYP-2096 adds the unit-spine/four-slack ledger. Next script: a 64-row fixed-round certificate table with unblocked-pair, n-clock, pair-sum, D/U/N private-pivot, THM-397 endpoint-owner, and gcd-3/gcd-9 descent columns. See HYP-2097 and `07-reflections/lrc-even-clean-lane-fixed-fibre-collapse-s577.md`.
 
