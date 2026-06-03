@@ -1,5 +1,13 @@
 ﻿# Session Log
 
+## opus-2026-06-03-S596 - Collatz IS the LRC residual's two-block question (2^E−3^k ↔ the S595 rank-1 two-block); shared Baker + Vitali wall (HYP-2143)
+
+**Account:** Opus (remote-control, v1410-1). **User:** consider Collatz and how it is a similar question to work in the repo.
+**SAME QUESTION:** both are a 2-adic `×odd/÷2` orbit hitting a target — EASY by measure/density (LRC S550 measure bound / Collatz Terras-Korec density-1 reach 1), HARD on a measure-zero/density-0 arithmetic residual that measure CAN'T reach (the Vitali wall S551o — both). LRC: doubling x→2x mod n / runner flow → safe box. Collatz: 3x+1,÷2 → reach 1.
+**THE TWO-BLOCK (anchor):** the Collatz cycle equation a_1(2^E−3^k)=S (S=Σ 3^{k−i} 2^σ, a bounded sum) needs (2^E−3^k)|S — a 2-power-vs-3-power (2-adic × odd) bounded Diophantine. **SAME shape as the LRC S595 rank-1 two-block** det[u_a,r_a;u_b,r_b]=w·n·u_a u_b·ℓ with bounded slacks. VERIFIED (collatz_two_block_parallel_s596.py): only the trivial cycle (e≤5,k≤7); |2^E−3^k|/2^E bounded away from 0 (min ~0.0136 at k=12) = the Baker/linear-forms phenomenon, mirror of S595's "automaton empty."
+**PRIME SPLIT:** Collatz ÷2 vs ×3 = LRC prime-2 (doubling, THM-404) vs prime-3 (2n−1=27=3³ shells, n=14, S592). Other parallels: 2-adic shift (Collatz Lagarias / LRC doubling=binary shift S580); reverse tree {×2, ÷3-branch} ↔ binary IFS {×2,×2+1} (S580).
+**TWO PAYOFFS:** (a) IMPORT to LRC — a Baker / linear-forms-in-logs bound on the two-block determinant gap should close the large-owner residual the way it eliminates Collatz cycles for bounded k (the concrete next instrument, replacing "verified empty automaton"); (b) EXPORT to Collatz — the Vitali-wall framing (measure-blind on the exceptional set; arithmetic not density) = "sidestep resonance energy" (THM-401). Not a resolution of either; the identity of the questions + the shared technique. Files: 07-reflections/lrc-collatz-the-same-two-block-question-s596.md; 04-computation/collatz_two_block_parallel_s596.py (+.out); HYP-2143.
+
 ## opus-2026-06-03-S595 - The large-owner cover is a 2×2 DETERMINANT (two-block); obstruction = the rank-1 two-block; bounded CRT automaton EMPTY (HYP-2142)
 
 **Account:** Opus (remote-control, v1410-1). **User:** large owner → the bounded CRT automaton; obstruction = the rank-1 two-block.
