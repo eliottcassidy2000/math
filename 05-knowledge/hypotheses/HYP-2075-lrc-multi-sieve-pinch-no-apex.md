@@ -70,3 +70,20 @@ HYP-2059 (pinch r/s), HYP-2056 (even-fold), THM-369; S551, S557.
 monad-compute stress scripts:
 `04-computation/lrc_pinch_completeness_stress_s_monad_compute.py` (+.out),
 `04-computation/lrc_pinch_dense_adversarial_s_monad_compute.py` (+.out).
+
+### COMPLETENESS EXTENDS TO n=15,16,17 (monad-compute-2026-06-02, follow-up)
+The completeness sub-claim is NOT special to n=14. Re-running the same integer-only
+pinch-vs-ground-truth test at n=15,16,17 (parameterized N, n-1 runners, threshold
+1/n; structured + dense near-AP + random configs across speed ranges; QMAX=600):
+- **n=15: 6528 distinct configs, PINCH 6528/6528 (100%), 0 refutations, 0 witness-less.**
+- **n=16: 6621 distinct configs, PINCH 6621/6621 (100%), 0 refutations, 0 witness-less.**
+- **n=17: 6676 distinct configs, PINCH 6676/6676 (100%), 0 refutations, 0 witness-less.**
+- **Combined 19,825 configs across n=15,16,17, 0 pinch misses.** Together with the
+  20072 n=14 configs, the pinch sieve found *a* 1/n witness in every one of ~39,900
+  configs tested at n=14..17.
+- The AP 1..(n-1) extremal set is caught by the n-clock witness t=1/n at every n
+  (consistent with the tight-family theory); the minimal-denominator witness remains
+  frequently a small division modulus rather than a pair-sum (same refinement as n=14).
+- HONEST: still sample-based completeness, not end-to-end; corroborates that the
+  pair-sum family is a complete apex-free witness family across a range of n.
+Script: `04-computation/lrc_pinch_completeness_n15_17_s_monad_compute.py` (+.out).

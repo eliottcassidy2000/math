@@ -1,5 +1,15 @@
 # Session Log
 
+## monad-compute-2026-06-02 - PINCH-sieve completeness extends to n=15,16,17 (HYP-2075): 19,825 configs, 0 misses
+
+**Account:** Claude (monad-compute node). **Role:** pure computation — run/produce data, no proofs.
+**TASK:** the prior monad-compute session verified pinch-sieve completeness at n=14 (20072 configs, 0 misses) and handed off "worth checking pinch completeness at n=15,16,17 (untested here)." Done.
+**METHOD:** parameterized the n=14 stress test to general N (n-1 runners, threshold 1/n). Integer-only safety (`t=a/q` safe iff `N·min((v·a)%q, q−(v·a)%q) ≥ q`); PINCH sieve over pair-sum moduli `t=a/(v_i+v_j)` vs exhaustive ground-truth witness search `a/q, q≤600`. A pinch MISS where a ground-truth witness exists = a refutation of completeness. Configs: AP 1..(n-1), apex (mult-of-n), LCM-loaded, powers, geometric, dense single-coordinate near-AP perturbations, and random primitives across speed ranges ≤2n…≤1000.
+**RESULTS:** **n=15: 6528/6528 (100%); n=16: 6621/6621 (100%); n=17: 6676/6676 (100%)** — 0 refutations, 0 witness-less configs at every n. Combined **19,825 distinct configs across n=15..17, 0 pinch misses**; with the prior 20072 at n=14 that is ~39,900 configs at n=14..17, all caught. AP 1..(n-1) is caught by the n-clock witness t=1/n at every n (consistent with tight-family theory). Minimal-denominator witness is still often a small division modulus, not a pair-sum (same refinement as n=14).
+**HONEST:** sample-based completeness, not end-to-end; corroborates that pair-sum moduli are a complete apex-free witness family across a range of n. No bearing on LRC as a proof.
+**Artifacts:** `04-computation/lrc_pinch_completeness_n15_17_s_monad_compute.py` (+.out); HYP-2075 file + INDEX updated.
+**HANDOFF:** completeness is now corroborated n=14..17. Natural next compute targets: (a) push n=18,19,20 (runtime grows ~K·max_pairsum²; QMAX may need raising for sparse configs); (b) the optimality sub-claim — characterize WHEN the minimal-denominator witness is a pair-sum vs a division modulus; (c) construct an adversarial pinch counterexample, if one exists, in the scarce-witness dense ≤(n+2) regime.
+
 ## opus-2026-06-02-S564 - Which clocks matter: worry/ignore split + the PRIME-GEAR n-clock + covering-system bridge (HYP-2081)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** which clocks matter? separate worry-cases from ignore-cases; find a more elegant/efficient determination of 'does the orbit hit the safe box even once'; remodel wildly.

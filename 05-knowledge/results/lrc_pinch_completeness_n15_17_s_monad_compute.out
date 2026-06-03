@@ -1,0 +1,32 @@
+==== PINCH completeness stress test, n=15 (14 runners) ====
+seeds: [1, 7, 42, 2026, 31337]   QMAX(ground truth)=600
+distinct configs tested: 6528
+PINCH caught (1/15 witness via pair-sum): 6528/6528 (100.000%)
+PINCH missed: 0
+No refutations: PINCH caught every config that has any witness with q<=600.
+Every config has a 1/15 witness with q<=600.
+
+==== PINCH completeness stress test, n=16 (15 runners) ====
+seeds: [1, 7, 42, 2026, 31337]   QMAX(ground truth)=600
+distinct configs tested: 6621
+PINCH caught (1/16 witness via pair-sum): 6621/6621 (100.000%)
+PINCH missed: 0
+No refutations: PINCH caught every config that has any witness with q<=600.
+Every config has a 1/16 witness with q<=600.
+
+==== PINCH completeness stress test, n=17 (16 runners) ====
+seeds: [1, 7, 42, 2026, 31337]   QMAX(ground truth)=600
+distinct configs tested: 6676
+PINCH caught (1/17 witness via pair-sum): 6676/6676 (100.000%)
+PINCH missed: 0
+No refutations: PINCH caught every config that has any witness with q<=600.
+Every config has a 1/17 witness with q<=600.
+
+==== SUMMARY ====
+  n   configs  pinch_caught  refutations  no_witness
+ 15      6528          6528            0           0
+ 16      6621          6621            0           0
+ 17      6676          6676            0           0
+
+VERDICT: PINCH sieve COMPLETE across all tested configs at n=15,16,17 (0 refutations).
+DONE.
