@@ -7,6 +7,7 @@ related:
   - HYP-2060
   - HYP-2058
   - THM-396
+  - THM-397
 ---
 
 # HYP-2061: HYP-2060 reduces the small-pinch route to sum-multiple shields or blocker covers
@@ -28,6 +29,19 @@ small-pinch failure = sum-multiple shields OR a finite non-shield blocker cover.
 THM-396 proves the first branch exactly.  If a single speed blocks every
 n=14-safe pinch residue of a pair `(a,b)` with reduced sum
 `(a+b)/gcd(a,b) <= 14`, then that speed is divisible by `a+b`.
+
+THM-397 adds a necessary condition for the collective branch.  If several
+non-shield blockers cover every safe pinch residue of a small pair with
+denominator `D=a+b`, then at least one blocker must lie in the endpoint window
+modulo `D`:
+
+```text
+||c/D|| < 1/14.
+```
+
+Consequently, when the actual pair sum satisfies `D <= 14`, collective
+non-shield covers are impossible.  Any failed small pair with `a+b <= 14` must
+have a genuine sum-multiple shield.
 
 ## Evidence and obstruction
 
@@ -92,9 +106,10 @@ To turn HYP-2060 into an n=14 proof, prove one of these sharper statements:
 1. A HYP-2060 counterexample cannot have all short-resonance pair-cells
    sum-multiple shielded without violating primitivity, distinctness, or the
    mod-7 singleton coupling.
-2. A collective non-shield cover of every short-resonance pair-cell forces a
-   high-order return pattern that creates a large-pair pinch with radius
-   `>=1/14`.
+2. A collective non-shield cover of every short-resonance pair-cell forces
+   endpoint blockers modulo the corresponding pair sums; the resulting
+   endpoint ledger is incompatible with the endpoint-core/pressure-owner
+   constraints, or creates a large-pair pinch with radius `>=1/14`.
 3. Under A1-A4 plus B1, the shield graph must contain an additive cycle
    `c_i | a_i+b_i` whose gcd descends, contradicting F1 minimality.
 
@@ -104,6 +119,7 @@ universal-blocker branch and refuted the overly broad N3 formulation.
 ## Files
 
 - `01-canon/theorems/THM-396-lrc-n14-small-pinch-universal-blocker.md`
+- `01-canon/theorems/THM-397-lrc-n14-collective-pinch-endpoint-blocker.md`
 - `04-computation/lrc_n14_small_pinch_shield_s558.py`
 - `05-knowledge/results/lrc_n14_small_pinch_shield_s558.out`
 - `07-reflections/lrc-n14-small-pinch-shield-residual-s558.md`
