@@ -196,6 +196,15 @@ global/asymptotic.
 S563 refutes that working assumption in examples: the first fine window and
 smooth denominator lifts can still certify the full conjectural lower bound.
 
+S600 follow-up: HYP-2146 abstracts the Tao/Bedert comparison as a scale-currency
+ledger.  The recursive tiers here are not merely denominators; they are places
+where the proof earns or pays scale mass.  Ordinary scale savings give `log`,
+compressed denominator tiers give `log log`, and meta-tiers of residual packets
+or determinant Helly witnesses can introduce `log log log` as either a tax or a
+dividend.  This complements HYP-2145's inverse-hyperoperation framing and
+reframes the open descent lemma as: identify the unpaid scale currency of any
+residual that survives the local tiers.
+
 ## Open Work
 
 1. Replace the raw finite `Q` scan by a proof-producing recursive tier rule.

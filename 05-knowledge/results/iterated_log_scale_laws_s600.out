@@ -1,0 +1,52 @@
+S600 iterated-log scale-law atlas
+
+ABSTRACTION
+  If a proof has savings eps_j over scale levels, then residual
+  survival is product_j(1-eps_j) <= exp(-sum_j eps_j).
+  log/loglog/logloglog are bookkeeping for how many independent
+  scale currencies survive after one, two, or three compressions.
+
+TEMPLATES
+  scale_harmonic             prod_{j<=J}(1-a/j) <= J^{-a+o(1)}                              ordinary dyadic scale dividend
+  compressed_harmonic        prod_{j<=J}(1-a/(j log j)) <= (log J)^{-a+o(1)}                one compressed scale ladder; loglog when J is log N
+  meta_compressed_harmonic   prod_{j<=J}(1-a/(j log j loglog j)) <= (loglog J)^{-a+o(1)}    two compressed ladders; logloglog when J is log N
+  Tao_shape_unit             log k / (k^2 (loglog k)^2)                                     second-moment overlap dividend spread over compressed scales
+  third_log_tax              Tao_shape / logloglog k                                        one extra unresolved meta-scale tax
+  third_log_dividend         Tao_shape * logloglog k                                        possible if meta-scale blocks are independently profitable
+
+NUMERIC ORIENTATION
+ k        L1        L2       L3      Tao      /L3      *L3      rank1
+13          2.565    0.942        - 1.711e-02 1.711e-02 1.711e-02 1.711e-02
+50          3.912    1.364    0.310 8.410e-04 8.410e-04 8.410e-04 5.581e-04
+1000        6.908    1.933    0.659 1.849e-06 1.849e-06 1.849e-06 1.029e-06
+1e+06      13.816    2.626    0.965 2.004e-12 2.004e-12 2.004e-12 1.071e-12
+1e+12      27.631    3.319    1.200 2.508e-24 2.091e-24 3.009e-24 1.353e-24
+
+PRODUCT SURVIVAL EXAMPLES
+ J      ordinary       compressed     meta-compressed
+20      3.34322e-01  5.42141e-01      4.34776e-01
+100     1.50263e-01  4.38661e-01      3.69680e-01
+1000    4.75707e-02  3.58332e-01      3.28726e-01
+10000   1.50449e-02  3.10335e-01      3.06697e-01
+
+OWN INEQUALITY TEMPLATES
+1. Meta-scale dividend template:
+   If a second-moment proof has one profitable block in each
+   logloglog k independent meta-scale class, try surplus
+   >= c log k logloglog k / (k^2 (loglog k)^2).
+2. Rank-tax template:
+   If r unresolved orthogonal scale channels must all be paid, replace
+   loglog k by loglog k + r logloglog k in the denominator.
+3. Residual-core product template:
+   If a sieve-covered residual exports alpha/(j log j) frontier mass
+   on compressed scale j, its unresolved mass falls like (log J)^(-alpha).
+4. Helly-scale template:
+   If every live automaton state of size M has a witness among the first
+   H(M) determinant rows, then global CRT search can be replaced by
+   a sum over H(M); loglog factors come from harmonic H(M), not from time.
+
+ASSUMPTION CHALLENGE
+  Vertices considered: integers, primes, denominator scales, prime blocks,
+  proof obligations, determinant rows, residual packets, and entropy channels.
+  Chosen vertices: scale currencies.  This preserves where logarithmic
+  losses are paid and destroys the original object labels.
