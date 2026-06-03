@@ -1,0 +1,2 @@
+  m=5: round tournaments examined=544; chi=1 (transitive)=120; chi=2=424; chi>=3=0  => round => chi<=2: True
+  m=7: round tournaments examined=147; chi=1 (transitive)=8; chi=2=139; chi>=3=0  => round => chi<=2: True
