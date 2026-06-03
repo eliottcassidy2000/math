@@ -54,7 +54,7 @@ Every `n > 1` that reaches 1 has mean halving exponent *strictly above*
 "on average" statement — it holds for each individual trajectory. (The only
 conjectural input is that `L, K` are finite, i.e. Collatz itself.)
 
-**(2) The defect is bounded (CONJ-defect-bound, HYP-2144).** `ln(1+1/(3a)) ~
+**(2) The defect is bounded (CONJ-defect-bound, HYP-2148).** `ln(1+1/(3a)) ~
 1/(3a)`, so `D(n)` is dominated by the handful of *small* odd values in the
 terminal cascade to 1. Empirically `D(n) < D* ≈ 0.2257` for all `n`; the
 champion `n = 993` (`D = 0.225654`) is unbeaten over all odd `n` up to

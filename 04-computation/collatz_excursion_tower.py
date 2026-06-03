@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """collatz_excursion_tower.py — The Collatz iterated-logarithm tower.
 
-Sequel to collatz_defect_rapidity.py (HYP-2143/2144). That session proved the
+Sequel to collatz_defect_rapidity.py (HYP-2147/2148). That session proved the
 EXACT rapidity law  ln n = K ln2 - L ln3 - D(n)  and that the harmonic defect
 D(n) is bounded (D* ~ 0.2257). This session asks the Tao-style question: once
 the FIRST logarithm (rapidity = log_F = arctanh) has tamed the +1 into a
@@ -243,7 +243,7 @@ print("""
   SUMMARY -- the tower, one log-order per floor:
 
     n            +1 is unbounded           (multiplicative)
-    ln n         +1 -> bounded D(n)<0.2257 (rapidity; PROVED, HYP-2143/44)
+    ln n         +1 -> bounded D(n)<0.2257 (rapidity; PROVED, HYP-2147/48)
     --- one logarithm tames the nonlinearity to O(1) ---
     L(n) ~ c ln n,  c = 1/ln(4/3)          (descent count = one log of n)
     lnln n       excursions ~ extreme value, exponent theta=2 set by 3+1=4

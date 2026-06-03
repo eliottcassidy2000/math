@@ -1,7 +1,7 @@
 # The Collatz iterated-logarithm tower: where each scale lives
 
 *Session: collatz-excursion-tower. Sequel to `collatz-rapidity-defect.md`
-(HYP-2143/2144). Prompt: "Tao is good at seeing log, loglog, logloglog
+(HYP-2147/2148). Prompt: "Tao is good at seeing log, loglog, logloglog
 inequalities — find the deeper abstraction and make your own."*
 
 ## The deeper abstraction: iterated linearization
@@ -22,9 +22,9 @@ each floor — but each floor is a different, one-order-finer, feature of the
 | floor | scale | what the `+1` becomes | status |
 |------|-------|----------------------|--------|
 | 0 | `n` | unbounded perturbation; `x↦3x`,`x↦x/2` are the group ops | — |
-| 1 | `ln n` (rapidity) | **bounded** defect `D(n) < 0.2257` | proved (HYP-2143/44) |
+| 1 | `ln n` (rapidity) | **bounded** defect `D(n) < 0.2257` | proved (HYP-2147/48) |
 | 1.5 | — | descent count `L(n) ~ ln n / ln(4/3)` = one log of `n` | Wald, confirmed |
-| 2 | `ln ln n` | excursions: exponent **θ = 2**, `P(peak/n > M) ~ C/M`; LIL scale `√(L·lnln L)` | model-proved + confirmed (HYP-2145) |
+| 2 | `ln ln n` | excursions: exponent **θ = 2**, `P(peak/n > M) ~ C/M`; LIL scale `√(L·lnln L)` | model-proved + confirmed (HYP-2149) |
 | 3 | `ln ln ln n` | a.s. envelope `peak(n) ≤ n·(ln n)^{o(1)}` for almost all `n` | Tao's scale; finite-range evidence |
 
 ## The one constant that runs the tower: θ = 2, and *why*
@@ -52,7 +52,7 @@ the prime-2 of halving showing up as the decay rate.)
 
 ## My own inequalities (the new content)
 
-**Level 2 — the excursion power law (HYP-2145).** Because `θ = 2` and rapidity
+**Level 2 — the excursion power law (HYP-2149).** Because `θ = 2` and rapidity
 is `½ln`, a peak-to-start ratio `M` corresponds to a rapidity excursion
 `x = ½ln M`, and `P(R > x) ≈ Ce^{−θx} = Ce^{−ln M} = C/M`. Hence
 
