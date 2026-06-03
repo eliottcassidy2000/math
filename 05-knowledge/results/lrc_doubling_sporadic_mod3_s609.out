@@ -1,0 +1,17 @@
+Doubling sporadic AP[(n-2)->2(n-2)] tight?  vs  n mod 3 and 3|(2n-1):
+    n  n%3  3|(2n-1)?  doubling tight?
+    4    1      False            False  <-- MATCH
+    6    0      False            False  <-- MATCH
+    8    2       True             True  <-- MATCH
+   10    1      False            False  <-- MATCH
+   12    0      False            False  <-- MATCH
+   14    2       True             True  <-- MATCH
+   16    1      False            False  <-- MATCH
+   18    0      False            False  <-- MATCH
+   20    2       True             True  <-- MATCH
+   22    1      False            False  <-- MATCH
+   24    0      False            False  <-- MATCH
+   26    2       True             True  <-- MATCH
+   28    1      False            False  <-- MATCH
+   30    0      False            False  <-- MATCH
+   32    2       True             True  <-- MATCH
