@@ -1,0 +1,76 @@
+﻿ORBIT RIGIDITY FUNCTOR ATLAS -- codex-2026-06-03-S590
+
+AP unit-clock orbit table
+n  phi  v2  odd-core  static        doubling                  reflect        CRT defect
+---------------------------------------------------------------------------------------
+7  6    0   7        [[1, 2, 3, 4, 5, 6]] [[1, 2, 4], [3, 5, 6]]    [[1, 6], [2, 5], [3, 4]] none
+8  4    3   1        [[1, 3, 5, 7]] fragments 4 singleton     [[1, 7], [3, 5]] 2-block height 3
+9  6    0   9        [[1, 2, 4, 5, 7, 8]] [[1, 2, 4, 5, 7, 8]]      [[1, 8], [2, 7], [4, 5]] none
+10 4    1   5        [[1, 3, 7, 9]] fragments 4 singleton     [[1, 9], [3, 7]] 2-block height 1
+12 4    2   3        [[1, 5, 7, 11]] fragments 4 singleton     [[1, 11], [5, 7]] 2-block height 2
+14 6    1   7        [[1, 3, 5, 9, 11, 13]] fragments 6 singleton     [[1, 13], [3, 11], [5, 9]] 2-block height 1
+15 8    0   15       [[1, 2, 4, 7, 8, 11, 13, 14]] [[1, 2, 4, 8], [7, 11, 13, 14]] [[1, 14], [2, 13], [4, 11], [7, 8]] none
+16 8    4   1        [[1, 3, 5, 7, 9, 11, 13, 15]] fragments 8 singleton     [[1, 15], [3, 13], [5, 11], [7, 9]] 2-block height 4
+18 6    1   9        [[1, 5, 7, 11, 13, 17]] fragments 6 singleton     [[1, 17], [5, 13], [7, 11]] 2-block height 1
+21 12   0   21       1 comps, sizes [12] [[1, 2, 4, 8, 11, 16], [5, 10, 13, 17, 19, 20]] 6 comps, sizes [2, 2, 2, 2, 2, 2] none
+27 18   0   27       1 comps, sizes [18] 1 comps, sizes [18]       9 comps, sizes [2, 2, 2, 2, 2, 2, 2, 2, 2] none
+28 12   2   7        1 comps, sizes [12] fragments 12 singleton    6 comps, sizes [2, 2, 2, 2, 2, 2] 2-block height 2
+30 8    1   15       [[1, 7, 11, 13, 17, 19, 23, 29]] fragments 8 singleton     [[1, 29], [7, 23], [11, 19], [13, 17]] 2-block height 1
+
+n=14 forensic
+  unit witnesses: [1, 3, 5, 9, 11, 13]
+  static unit orbit: [[1, 3, 5, 9, 11, 13]]
+  doubling x2 on units: illegal inside the unit fiber;
+    resulting witness fragments: [[1], [3], [5], [9], [11], [13]]
+  reflection/antipodal pairs: [[1, 13], [3, 11], [5, 9]]
+  CRT signature: mod 2: unit point [1], x2 collapses to 0; mod 7: x2 cycles [[1, 2, 4], [3, 5, 6]]
+  reading: the q=7 coordinate still has two x2 cycles, while the
+    mod-2 coordinate collapses.  Thus n=14 is statically rigid,
+    reflectively paired, and dynamically broken in one 2-adic bit.
+
+Rigidity type atlas
+  static multiplicative   | (Z/n)* acts on j/n                 | keeps: AP unit witnesses, local straddle pins
+                          |                                    | loses: nonunit clocks and endpoint payload
+  dynamical doubling      | x -> 2x on witness residues        | keeps: odd-n propagation and binary IFS
+                          |                                    | loses: even-n unit fiber; n=14 fragments
+  dihedral reflective     | j <-> -j                           | keeps: antipodal jaws and pincer symmetry
+                          |                                    | loses: orientation/source side unless labelled
+  CRT channel             | projection to prime-power factors  | keeps: localizes defects to one block
+                          |                                    | loses: cross-factor owner/endpoint coupling
+  quotient transport      | object -> fiber bucket             | keeps: empty/rigid/leaking/transport rows
+                          |                                    | loses: mixed predicate values in forgotten fibers
+  monodromy               | loop in quotient lifts to label permutation | keeps: trivial holonomy gives cascade
+                          |                                    | loses: nontrivial loop hides observer coupling
+  isostatic               | constraint graph on active obligations | keeps: critical rigidity counts
+                          |                                    | loses: over/underconstrained local cover cores
+  spectral character      | Fourier/Dirichlet blocks on orbit  | keeps: block-diagonal defect ledger
+                          |                                    | loses: gcd>1 and 2-adic leakage
+  fiber stiffness         | boundary vs inner label flips      | keeps: anisotropy of a fixed class
+                          |                                    | loses: ensemble isotropy hides class stiffness
+  source functor          | delete/add marked source           | keeps: exact fixed-point cascade
+                          |                                    | loses: generic rooted shadows without incidents
+
+Tournament Analysis: proof lenses as vertices
+pair observable = (payload_retention, orbit_connectedness,
+                   defect_localization, proof_maturity, -cost)
+switch = lexicographic dominance; tie Hamiltonian path = listed order
+  Hamiltonian path:
+    labelled_source_cascade > pincer_denominator_endpoint > static_unit_clock > CRT_factor_projection > dihedral_reflection_pincer > quotient_fiber_transport > cyclic_polygon_action > dynamical_doubling_action > spectral_character_blocks > dihedral_bracelet_action > isostatic_constraint_graph > raw_unmarked_shadow
+  score histogram: {11: 1, 10: 1, 8: 1, 6: 1, 9: 1, 7: 1, 4: 1, 3: 1, 1: 1, 5: 1, 2: 1, 0: 1}
+  directed 3-cycles: 0
+  SCCs: [['CRT_factor_projection'], ['cyclic_polygon_action'], ['dihedral_bracelet_action'], ['dihedral_reflection_pincer'], ['dynamical_doubling_action'], ['isostatic_constraint_graph'], ['labelled_source_cascade'], ['pincer_denominator_endpoint'], ['quotient_fiber_transport'], ['raw_unmarked_shadow'], ['spectral_character_blocks'], ['static_unit_clock']]
+  edge flips versus cost-only switch: 45
+
+New falsifiable hypotheses suggested by the atlas
+  H7 monodromy rigidity: any residual LRC counterexample core must
+     contain a nontrivial label-monodromy loop in an observer-marked
+     quotient.  Trivial monodromy should let source/denominator/endpoint labels cascade to a witness or positive Phi escape.
+  H8 dihedral pincer rigidity: even-n doubling fragments are still
+     paired by j <-> -j.  A labelled pincer proof should discharge
+     each antipodal pair unless a CRT/endpoint owner loop exports a middle-state core.
+  H9 fiber-stiffness criterion: hard buckets are maximally stiff in
+     the observer fiber, not necessarily maximally symmetric.  The
+     ratio of boundary-label flips to inner flips should predict which quotient fibers leak.
+  H10 character leakage: for n=2q, all non-principal orbit-defect
+      mass is carried by the 2-adic character block; the q-block is
+      already prime/odd and should be certifiable by existing clocks.

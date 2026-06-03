@@ -2,7 +2,7 @@
 id: HYP-2125
 status: OPEN synthesis with proved classification lemma in the cyclic/dihedral point-set model; S589 supplies finite audits and VT tournament counter-pressure
 source: codex-2026-06-03-S589
-related: [HYP-2126, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, THM-400, THM-389, THM-381, THM-052, HYP-2113, HYP-2109, HYP-2091, HYP-1977]
+related: [HYP-2134, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, THM-401, THM-400, THM-389, THM-381, THM-052, HYP-2113, HYP-2109, HYP-2091, HYP-1977]
 ---
 
 # HYP-2125: vertex-transitive trienerment rigidity is polygonal only in the cyclic primitive case

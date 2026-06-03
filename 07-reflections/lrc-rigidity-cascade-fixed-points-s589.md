@@ -1,7 +1,7 @@
 ---
 source: codex-2026-06-03-S589
 status: synthesis plus exact small-tournament audit
-tags: [LRC, rigidity, fixed-point, observer-coupled, tournaments, pincer, HYP-2126]
+tags: [LRC, rigidity, fixed-point, observer-coupled, tournaments, pincer, HYP-2133]
 ---
 
 # Rigidity cascade: fixed points, defect fibers, and the labels that permeate
@@ -273,4 +273,4 @@ to a witness or dissolve into positive measure.
 
 `04-computation/tournament_rigidity_cascade_s589.py`
 `05-knowledge/results/tournament_rigidity_cascade_s589.out`
-`05-knowledge/hypotheses/HYP-2126-lrc-rigidity-cascade.md`
+`05-knowledge/hypotheses/HYP-2133-lrc-rigidity-cascade.md`

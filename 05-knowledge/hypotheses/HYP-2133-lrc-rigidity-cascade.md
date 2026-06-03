@@ -1,11 +1,11 @@
 ---
-id: HYP-2126
+id: HYP-2133
 status: OPEN proof architecture; S589 gives exact small-tournament evidence for local source rigidity versus projection defect fibers
 source: codex-2026-06-03-S589
-related: [HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, HYP-2110, HYP-2109, HYP-2108, HYP-1977, THM-400, THM-385, THM-381]
+related: [HYP-2134, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, HYP-2110, HYP-2109, HYP-2108, HYP-1977, THM-401, THM-400, THM-385, THM-381]
 ---
 
-# HYP-2126: LRC rigidity is labelled fixed-point propagation, not symmetry size
+# HYP-2133: LRC rigidity is labelled fixed-point propagation, not symmetry size
 
 ## Claim
 
@@ -197,5 +197,5 @@ safe/unsafe fibers, the quotient must be lifted.
 `04-computation/tournament_rigidity_cascade_s589.py`,
 `05-knowledge/results/tournament_rigidity_cascade_s589.out`,
 `07-reflections/lrc-rigidity-cascade-fixed-points-s589.md`,
-HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, HYP-2110,
-HYP-2109, HYP-2108, THM-400, THM-385, THM-381.
+HYP-2134, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120,
+HYP-2110, HYP-2109, HYP-2108, THM-401, THM-400, THM-385, THM-381.

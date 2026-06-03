@@ -1,8 +1,8 @@
 ---
 id: HYP-2127
-status: OPEN synthesis with exact S590 orbit-sheaf audits; proposes boundary/gluing rigidity for n=14
+status: OPEN synthesis with exact S590 orbit-sheaf audits; bridged to HYP-2134 orbit-functor atlas; proposes boundary/gluing rigidity for n=14
 source: codex-2026-06-03-S590
-related: [HYP-2128, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2101, HYP-2020, HYP-1977, THM-400, THM-381]
+related: [HYP-2134, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2101, HYP-2020, HYP-1977, THM-401, THM-400, THM-381]
 ---
 
 # HYP-2127: rigidity is an orbit sheaf with monodromy defects at forgotten labels
@@ -35,6 +35,14 @@ orbit and compare rigidity types on that orbit.  The other says proof-relevant
 rigidity is labelled fixed-point propagation.  HYP-2127 says these are the same
 problem: a labelled orbit section either glues, hits a boundary, or exposes a
 projection defect.
+
+HYP-2134 complements this sheaf framing by classifying the same AP witness
+payload under explicit orbit functors: static units, doubling, reflection, CRT,
+quotient transport, monodromy, stiffness, and source deletion.  HYP-2133 is the
+labelled fixed-point cascade side of the same story, while HYP-2131 is the
+prime-2 localization atlas that names the bad place for the same defect.
+HYP-2132/THM-401 pins the additive pair-sum modulus `2n-1` that this sheaf uses
+as its odd shell.
 
 ## Types Of Rigidity
 
@@ -295,5 +303,5 @@ lifted.
 `04-computation/lrc_orbit_sheaf_monodromy_s590.py`,
 `05-knowledge/results/lrc_orbit_sheaf_monodromy_s590.out`,
 `07-reflections/lrc-orbit-sheaf-monodromy-rigidity-s590.md`,
-HYP-2128, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2101,
-HYP-2020, HYP-1977, THM-400, THM-381.
+HYP-2134, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2101,
+HYP-2020, HYP-1977, THM-401, THM-400, THM-381.
