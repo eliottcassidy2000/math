@@ -1,0 +1,28 @@
+DEPTH DISTRIBUTION vs POISSON(lambda=2n*delta) — the 'free'/independent baseline
+(generic = near-Poisson [arcs ~ independent]; additive chain = p_0=0 anti-Poisson [correlated])
+
+generic          V=(1, 4, 6, 9, 11) lam=1.667: p_0=0.136 (Pois e^-lam=0.189); TV(p,Pois)=0.282
+   p_k   =[0.136, 0.228, 0.538, 0.061, 0.007]
+   Pois_k=[0.189, 0.315, 0.262, 0.146, 0.061]
+generic          V=(2, 3, 7, 8, 12) lam=1.667: p_0=0.125 (Pois e^-lam=0.189); TV(p,Pois)=0.249
+   p_k   =[0.125, 0.26, 0.508, 0.065, 0.014]
+   Pois_k=[0.189, 0.315, 0.262, 0.146, 0.061]
+generic          V=(1, 5, 8, 11, 13, 17) lam=1.714: p_0=0.090 (Pois e^-lam=0.180); TV(p,Pois)=0.162
+   p_k   =[0.09, 0.379, 0.327, 0.171, 0.01]
+   Pois_k=[0.18, 0.309, 0.265, 0.151, 0.065]
+generic          V=(3, 4, 9, 10, 16, 19) lam=1.714: p_0=0.099 (Pois e^-lam=0.180); TV(p,Pois)=0.166
+   p_k   =[0.099, 0.337, 0.394, 0.12, 0.031]
+   Pois_k=[0.18, 0.309, 0.265, 0.151, 0.065]
+AP-chain         V=(1, 2, 3, 4, 5) lam=1.667: p_0=0.000 (Pois e^-lam=0.189); TV(p,Pois)=0.355
+   p_k   =[0.0, 0.594, 0.294, 0.028, 0.017]
+   Pois_k=[0.189, 0.315, 0.262, 0.146, 0.061]
+sporadic-chain   V=(1, 3, 4, 5, 9) lam=1.667: p_0=0.000 (Pois e^-lam=0.189); TV(p,Pois)=0.303
+   p_k   =[0.0, 0.57, 0.296, 0.067, 0.03]
+   Pois_k=[0.189, 0.315, 0.262, 0.146, 0.061]
+AP-chain         V=(1, 2, 3, 4, 5, 6) lam=1.714: p_0=0.000 (Pois e^-lam=0.180); TV(p,Pois)=0.336
+   p_k   =[0.0, 0.605, 0.252, 0.071, 0.014]
+   Pois_k=[0.18, 0.309, 0.265, 0.151, 0.065]
+
+Takeaway: generic configs sit near Poisson(2) with p_0~e^-2~0.135>0 (INDEPENDENCE => lonely);
+additive chains force p_0=0 (CORRELATION kills the ground state). LRC = correlation can
+empty the bulk p_0 but never the measure-0 witness set. The worry-set = the large-deviation residual.
