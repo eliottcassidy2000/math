@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S565 - Dual Burnside for the LRC: open=ORBIT side (round/A000016), boundary=FIX side (self-converse) (HYP-2086)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** try dual Burnside regarding the LRC.
+**THE DUALITY:** Burnside has an ORBIT face (count classes) and a FIX face (symmetric configs); **the LRC's two regimes ARE these two faces** (= the worry/ignore split, S564).
+**ORBIT side (IGNORE, positive measure):** at OPEN times the runner sub-tournament is ROUND = A000016 (HYP-1998) — verified counts m=3..13 = 2,4,10,30,94,**316** vs A000568 = …,**48.5e12**; ratio **6.5e-12** at m=13. The lonely sub-tournament is one of only 316 round classes out of 48 trillion; generic/open ⇒ automatically lonely.
+**FIX side (WORRY, measure 0):** the loneliest config (regular round tournament = roots of unity) is **SELF-CONVERSE** (T=T^op via the reflection i→-i, verified m=3..13), rotation-symmetric (full C_m), and carries the **(q,q) automorphism with Burnside Fix=2^{n-1}** (S547). The tight/worry family sits at these maximally-symmetric FIXED POINTS.
+**CONTAINMENT (the payoff):** a counterexample's sub-tournament cannot be a generic round class (open ⇒ lonely) ⇒ it must be a **boundary SELF-CONVERSE** class ⇒ **worry-set ⊆ self-converse boundary classes** (a thin, Burnside-counted family; cf. the repo's A002785/A005639 self-converse work). The lonely menu sits between: A000016 ⊆ menu ⊆ A000016 ∪ {self-converse boundary} (HYP-1998 open-Q-B); the surplus over round = the fixed-point layer.
+**PROOF SHAPE:** show every self-converse boundary runner tournament is source-realizable (lonely); the round/open side is free. = the Burnside translation of 'prove LRC only for the resonance-maximal tight family' (S563). HONEST: the orbit count (A000016) & fix anchors ((q,q), self-converse) are known/verified (HYP-1998, S547); NEW = the duality framing + the worry ⊆ self-converse-boundary containment; not a proof. Files: 07-reflections/lrc-dual-burnside-orbit-round-fix-self-converse-s565.md; 04-computation/lrc_dual_burnside_s565.py (+.out); HYP-2086.
+
 ## codex-2026-06-03-S572 - Below `2/(2n-1)`, the bounded residual is already floor-tight perfect transversals (HYP-2084)
 
 **Account:** Codex (GPT-5). **User prompt:** keep pushing on the 1D periodic maximin route, the `2n-1` antipodal witnesses, the similarity to the summand graph, and the roles of addition/multiplication and odd/even.

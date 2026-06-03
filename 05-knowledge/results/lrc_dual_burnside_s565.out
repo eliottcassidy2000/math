@@ -1,0 +1,12 @@
+m   A000016(m)=ROUND   A000568(m)            round/total      regular self-converse?  rot-aut
+ 3               2                    2   1.00e+00         True                3
+ 5               4                   12   3.33e-01         True                5
+ 7              10                  456   2.19e-02         True                7
+ 9              30               191536   1.57e-04         True                9
+11              94            903753248   1.04e-07         True                11
+13             316       48542114686912   6.51e-12         True                13
+
+DUAL BURNSIDE picture:
+  ORBIT side: open/generic times -> ROUND tournaments = A000016 (the IGNORE regime, positive measure).
+  FIX side:   the regular round tournament is SELF-CONVERSE (T=T^op via i->-i) and rotation-symmetric
+              (the WORRY regime: tight/boundary configs sit at the maximally-symmetric fixed points; S547 (q,q), Fix=2^{n-1}).
