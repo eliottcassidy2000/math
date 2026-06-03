@@ -69,3 +69,9 @@ The proof can proceed by the **shell-covering ledger**, never touching resonance
 `04-computation/lrc_pairsum_modulus_2nm1_s590.py` (+`.out`). Builds on S557 (pinch),
 S586 (8C(n,2)+1=(2n-1)²), S572o (summand graph), S573/HYP-2088 (second-gap ledger),
 S551o (Vitali / why measure fails). New: **HYP-2132**.
+
+**Follow-on:** S591/HYP-2136 turns the finite ledger named here into a labelled
+sumset-support calculus: speed shells, pair shells, actual pair denominators,
+divisibility shields, unit/nonunit holes, and lift denominators. This is the
+first explicit language for why raw `V+V` support is too coarse after the
+modulus identity is proved.

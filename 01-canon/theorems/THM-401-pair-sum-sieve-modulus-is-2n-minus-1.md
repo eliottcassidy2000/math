@@ -7,7 +7,7 @@ depends_on:
   - HYP-2059   # pinch lemma (S557): optimal witness at a pair-sum modulus
   - HYP-2128   # 8·C(n,2)+1 = (2n-1)^2
 related:
-  - HYP-2135   # labelled sumset-support calculus after the modulus identity
+  - HYP-2136   # labelled sumset-support calculus after the modulus identity
   - HYP-2084   # antipodal transversals mod 2n-1
   - HYP-2088   # clock-blocker ledger / second-gap exceptions (S573)
 ---
@@ -95,5 +95,5 @@ arithmetic ledger at the fixed modulus `2n−1`, not a measure estimate.
 HYP-2059 (pinch), HYP-2128 (`8C(n,2)+1=(2n-1)²`), HYP-2084 (transversals), HYP-2088
 (second-gap ledger), S572o (summand graph at `C=2n-1`). See reflection
 `07-reflections/lrc-the-pair-sum-sieve-modulus-is-2n-1-an-identity-s590.md`.
-HYP-2135 adds the next labelled support calculus layer: speed shells, pair
+HYP-2136 adds the next labelled support calculus layer: speed shells, pair
 shells, denominator shields, unit visibility, and lift denominators.

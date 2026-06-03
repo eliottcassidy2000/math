@@ -101,4 +101,4 @@ the symmetry.** This is the cleanest statement yet of the add/mult division of l
 **Artifacts:** `04-computation/lrc_interval_vs_paley_s591.py`,
 `lrc_interval_vs_paley_light_s591.out`. Builds on THM-401 (additive modulus), HYP-2124
 (unit-orbit symmetry), S566/S570 (worry-set = round/regular), S588 (cyclotomic). New:
-**HYP-2133**.
+**HYP-2137**.

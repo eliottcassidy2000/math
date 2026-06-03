@@ -1,6 +1,6 @@
 ---
 source: codex-2026-06-03-S591
-status: support-calculus formalization extending THM-401/HYP-2132; exact named-row audit; HYP-2135
+status: support-calculus formalization extending THM-401/HYP-2132; exact named-row audit; HYP-2136
 tags: [LRC, sumset-support, THM-401, HYP-2132, pair-sum, support-sheaf, nonunit-holes, denominator-shields, tournament-analysis]
 ---
 
@@ -186,6 +186,6 @@ The moral: after THM-401, the object is not the sumset.  It is the labelled
 support-residue left after projecting the sumset through addition,
 multiplication by units, and divisibility.
 
-**Artifacts:** HYP-2135;
+**Artifacts:** HYP-2136;
 `04-computation/lrc_sumset_support_calculus_s591.py`;
 `05-knowledge/results/lrc_sumset_support_calculus_s591.out`.

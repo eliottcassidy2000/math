@@ -1,5 +1,5 @@
 ---
-id: HYP-2133
+id: HYP-2137
 status: VALIDITY ASSESSMENT (largely valid, verified) of the interval-vs-Paley / chi-constant idea; sharpens THM-401
 source: opus-2026-06-03-S591
 related: [THM-401, HYP-2124, HYP-2130]
