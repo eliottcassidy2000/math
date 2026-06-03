@@ -1,5 +1,5 @@
 ---
-id: HYP-2137
+id: HYP-2140
 title: the dual n-clock cap face should close the Cprime cover residual aggregate layer
 status: OPEN proof program; Lemma H cell-cap pigeonhole is proved and folded into THM-398
 sources:
@@ -7,7 +7,7 @@ sources:
 related: [THM-398, HYP-2105, HYP-2110, HYP-2112, HYP-2135]
 ---
 
-# HYP-2137 -- dual pigeonhole cap face for the LRC Cprime residual
+# HYP-2140 -- dual pigeonhole cap face for the LRC Cprime residual
 
 For a multiple-of-`n` row `S=S' union {v=nw}`, Cprime asks whether the thin
 danger caps of `v` can cover `G(S')`.  Existing criteria attack the cover one

@@ -1,7 +1,7 @@
 ---
 source: codex-2026-06-03-S593
 status: proved cap lemma + computation + synthesis for the LRC n=14 Cprime residual
-tags: [LRC, n14, Cprime, pigeonhole, cap-face, endpoint-cover, THM-398, HYP-2137, tournament-analysis]
+tags: [LRC, n14, Cprime, pigeonhole, cap-face, endpoint-cover, THM-398, HYP-2140, tournament-analysis]
 ---
 
 # The dual pigeonhole cap face
@@ -117,4 +117,4 @@ Artifacts:
 
 - `04-computation/lrc_dual_pigeonhole_cap_face_s593.py`
 - `05-knowledge/results/lrc_dual_pigeonhole_cap_face_s593.out`
-- `05-knowledge/hypotheses/HYP-2137-lrc-dual-pigeonhole-cap-face.md`
+- `05-knowledge/hypotheses/HYP-2140-lrc-dual-pigeonhole-cap-face.md`

@@ -10,7 +10,7 @@ related:
   - HYP-2102  # the reduction, discovered S571
   - HYP-2097  # the 64-class worry container
   - HYP-2095  # the lift lemma (paired/anchored split)
-  - HYP-2137  # dual n-clock cap pigeonhole face
+  - HYP-2140  # dual n-clock cap pigeonhole face
 ---
 
 # THM-398 — LRC reduces to C′, and the dominance-dodge lemma
