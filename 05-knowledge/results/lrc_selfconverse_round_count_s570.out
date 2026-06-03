@@ -1,0 +1,4 @@
+m=3: round classes found=2 (A000016=2), self-converse=2 (2^((m-1)/2)=2)
+m=5: round classes found=4 (A000016=4), self-converse=4 (2^((m-1)/2)=4)
+m=7: round classes found=12 (A000016=10), self-converse=8 (2^((m-1)/2)=8)
+m=9: round classes found=35 (A000016=30), self-converse=16 (2^((m-1)/2)=16)
