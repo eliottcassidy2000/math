@@ -4933,3 +4933,12 @@ STEP C [PROVED] TIGHT on lattice (3|Q => P<=1/Q<1/n): every m has a close V* run
 STEP D [VERIFIED n<=40, OPEN] M(V*)=max(1/n,P): n-lattice witness t=1/n gives 1/n, no pinch family but {3,2n-4} beats 1/n. = codex's Res_27 lift/CRT conservativity (carry fiber, HYP-2167).
 MERGE WITH CODEX Res_27 (HYP-2164/65/66/67): least-positive C=27 quotient = this (2n-1)=27 lattice; THM-407 gcd-strata {1,3,9} = the mult-of-3 shell of Step C; codex's exhaustive n=14 floor-only-AP/V*/2AP (HYP-2164) = the n=14 instance of B+C, now with the general-n reason gcd(3,Q); OPEN Step D = HYP-2167 carry-fiber conservativity.
 **See:** `04-computation/lrc_doubling_law_lattice_proof_s612.py` (+.out); `07-reflections/lrc-doubling-law-lattice-proof-s612.md`; HYP-2174 (skeleton), HYP-2169 (law), HYP-2172 (n=14 census), HYP-2164/2167 (codex Res_27), THM-401 (modulus 2n-1), THM-407 (gcd strata).
+
+## HYP-2178: complete classification of tight AP single-swaps (doubling family + two exceptional reflections) (lrc-single-swap-classification, claude-2026-06-03-S612b)
+**Status:** VERIFIED n=4..26 (a' up to 5n). Companion to HYP-2177; explains the classic sporadics as AP single-swaps.
+RESULT: the tight single-swaps AP[a->a'] (a in {1..n-1}, a' not in AP) are EXACTLY two families:
+  FAMILY II (doubling V*): a=n-2, a'=2(n-2), tight <=> 3|(2n-1); infinite, n in {8,14,20,26,...} (n==2 mod 3). PROVED HYP-2177. n-2 is the UNIQUE a whose doubled value 2a has its Q-mirror (Q-2a) still in the AP -- namely Q-2(n-2)=3 -- which is why the threat stays on the (2n-1) lattice.
+  FAMILY I (reflection): a=2, a'=2n-3 (== -2 mod Q), tight ONLY at n=5,6 -- exactly the classic sporadics (1,3,4,7)[n=5] and (1,3,4,5,9)[n=6]. Exceptional/small-n; does NOT continue (n=7+ has no reflection-swap tight).
+  NOTHING ELSE among single swaps.
+CONSEQUENCE: the famous non-AP tights (1,3,4,7),(1,3,4,5,9) are AP reflection-swaps (a=2 -> its negative mod 2n-1), and V* is the AP doubling-swap; all single-swap sporadics are governed by the residue of the swapped element mod 2n-1. Multi-swap sporadics exist separately (e.g. n=8's (1,4,5,6,7,11,13) = 2-swap removing {2,3} adding {11,13}).
+**See:** `04-computation/lrc_single_swap_classification_s612b.py` (+.out); HYP-2177 (doubling proof), HYP-2169 (mod-3 law), HYP-2168/2172 (n=14 census), HYP-2152 (collapse-family additive chains).

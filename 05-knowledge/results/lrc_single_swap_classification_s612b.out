@@ -1,0 +1,5 @@
+Complete classification of tight AP single-swaps, n=4..26 (a' up to 5n):
+  Family II (doubling a=n-2 -> 2(n-2), needs 3|2n-1): [(8, 6, 12), (14, 12, 24), (20, 18, 36), (26, 24, 48)]
+    all have a=n-2? True; all 3|2n-1? True
+  Family I (reflection a=2 -> 2n-3 == -2): [(5, 2, 7), (6, 2, 9)]
+  Other (neither): []
