@@ -197,6 +197,40 @@ discharge `99%` of multiple-of-14 configs. The residual (`~1%`) is exactly the c
 where every component is short **and** every component has a **large** (`≥ n`) binding
 owner — the only regime where the congruence slack permits an off-centre fit.
 
+## 4¾. The endpoint-cover criterion and circuit positivity (Lemma D)
+
+The cover condition has an exact one-line form per component. Let `C_i = (a_i, b_i)` be
+a component of `G(S')`, with midpoint `m_i = (a_i+b_i)/2` and length `ℓ_i = b_i-a_i`.
+
+> **Lemma D (endpoint-cover criterion).**
+> `C_i ⊆ D_v  ⟺  ∃ j∈ℤ: ‖v a_i − j‖ ≤ 1/n and ‖v b_i − j‖ ≤ 1/n  ⟺  ‖v m_i‖ ≤ 1/n − (v/2)ℓ_i.`
+> *Proof.* `C_i ⊆` arc `(j/v − 1/(nv), j/v + 1/(nv))` ⟺ `v a_i, v b_i ∈ (j−1/n, j+1/n)`;
+> a common integer `j` exists iff the interval `[v b_i − 1/n, v a_i + 1/n]` — midpoint
+> `v m_i`, half-length `1/n − (v/2)ℓ_i` — contains an integer, i.e. `‖v m_i‖ ≤ 1/n −
+> (v/2)ℓ_i`. ∎
+
+Hence **`S` is tight ⟺ every component satisfies Lemma D**, and the **circuit-positivity
+margin**
+```
+P(S) := max_i ( ‖v m_i‖ + (v/2)ℓ_i − 1/n )      satisfies   P(S) > 0  ⟺  S is loose.
+```
+**Verified 100%** (criterion vs direct tight/loose, `2492/2492` … `700/700`, n=6..14;
+`lrc_endpoint_cover_circuit_positivity_s575.py`), and `P(S) > 0` for **every** sampled
+multiple-of-`n` config.
+
+**The circuit.** The `M` components' arc indices `j_i` wind once around the circle —
+`Σ_i (j_{i+1}-j_i) = v` — so the per-component conditions are not independent: one
+integer `v` must *simultaneously* bring every midpoint within `1/n` (phase) of an arc
+centre. **Summing** Lemma D over the circuit gives a provable necessary condition:
+```
+S tight  ⟹  Σ_i ‖v m_i‖  ≤  M/n − (v/2)·μ(G(S'))  <  M/n,
+```
+i.e. the components' midpoints must have **average v-phase distance `< 1/n`**. The
+actual average is **`≈ 0.245`** (near the generic `1/4`) for all n=6..14, versus the
+requirement `1/n` (`= 0.071` at n=14): a positivity margin that **grows toward the
+frontier**. So tightness would demand an anomalous simultaneous resonance of `v` with
+*all* component midpoints — the circuit obstruction, the sharpened residual of C′.
+
 ## 5. Status ledger
 
 | Statement | status |
@@ -208,7 +242,9 @@ owner — the only regime where the congruence slack permits an off-centre fit.
 | Criterion B′ (long component ⟹ loose) | **PROVED** (§4) |
 | Lemma C (both-small-owner component ⟹ loose, w-free) | **PROVED** (§4½), covers 81% at n=14 |
 | Lemma C ∪ B′ | **PROVED**, covers **99%** of multiple-of-14 configs |
-| C′ residual: every component short **and** every binding owner `≥ n` | **OPEN** (~1% at n=14; needs the large-owner congruence-slack analysis) |
+| Lemma D (exact endpoint-cover criterion + circuit positivity `P>0 ⟺ loose`) | **PROVED** (§4¾), verified 100% n=6..14 |
+| Summed corollary (tight ⟹ avg midpoint v-phase `< 1/n`) | **PROVED**; actual avg `≈0.245 ≫ 1/n` |
+| C′ residual = `P(S) > 0` always (simultaneous-resonance infeasibility) | **OPEN** (~1% at n=14; the circuit Diophantine obstruction) |
 
 So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs
 of a multiple of 14 cannot cover the safe set of the other twelve runners* (the

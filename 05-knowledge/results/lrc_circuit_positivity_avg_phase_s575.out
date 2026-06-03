@@ -1,0 +1,5 @@
+Average ||v m_i|| over components vs the tight-threshold 1/n  (positivity margin)
+  n= 6: mean of (avg_i ||v m_i||) = 0.245   tight needs < 1/n = 0.167   (generic ~0.25)
+  n= 8: mean of (avg_i ||v m_i||) = 0.239   tight needs < 1/n = 0.125   (generic ~0.25)
+  n=10: mean of (avg_i ||v m_i||) = 0.243   tight needs < 1/n = 0.100   (generic ~0.25)
+  n=14: mean of (avg_i ||v m_i||) = 0.245   tight needs < 1/n = 0.071   (generic ~0.25)

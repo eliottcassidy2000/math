@@ -1,0 +1,7 @@
+Circuit-positivity: criterion ||nw m_i||<=1/n-(nw/2)l_i  vs direct tight/loose
+  n= 6: 2492 mult-of-n; criterion agrees=2492/2492; circuit-positive (P>0 => loose)=2492/2492; actually tight=0
+  n= 8: 2500 mult-of-n; criterion agrees=2500/2500; circuit-positive (P>0 => loose)=2500/2500; actually tight=0
+  n=10: 2500 mult-of-n; criterion agrees=2500/2500; circuit-positive (P>0 => loose)=2500/2500; actually tight=0
+  n=12: 2500 mult-of-n; criterion agrees=2500/2500; circuit-positive (P>0 => loose)=2500/2500; actually tight=0
+  n=12: 700 mult-of-n; criterion agrees=700/700; circuit-positive P>0=700/700
+  n=14: 700 mult-of-n; criterion agrees=700/700; circuit-positive P>0=700/700
