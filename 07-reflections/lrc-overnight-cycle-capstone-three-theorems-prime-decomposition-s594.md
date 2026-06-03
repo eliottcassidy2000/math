@@ -51,3 +51,20 @@ Everything sidesteps resonance energy (THM-401): the open work is the finite pri
 prime-3 ledgers at `ℤ/14` and `ℤ/27`.
 
 **Artifacts:** THM-402/403/404; the S592–S594 computations. New: **HYP-2139** (index pointer).
+
+## Round-7 refinement: which prime makes n=14 the frontier?
+
+Solved range: `n = 4,6,8,10,12` (even) and `13` (odd); open at `14`. Note `2n−1` is
+**composite in solved cases too**: `n=8 → 15=3·5`, `n=13 → 25=5²`. So the **prime-3/5
+sporadics are NOT the blocker** — they were handled at `n=8` and `n=13`. The clean
+separator is:
+
+> **`n=13` is ODD ⟹ its witness orbit is `⟨×2⟩`-connected (THM-404, doubling propagates);
+> `n=14` is EVEN ⟹ the orbit fragments (`2·W∩W=∅`).** The **prime-2 (even-`n` / doubling
+> fragmentation) is the PRIMARY frontier-maker**; the prime-3 (composite `2n−1`)
+> classification sporadics are a *secondary, already-managed* complication.
+
+So the residual hierarchy is: **prime 2 (dynamical, the real wall) ≫ prime 3
+(classification, manageable) over the solved prime-7 kernel.** This sharpens S589's
+"everything localizes to the prime 2": among the small primes in play, only `2` (the
+doubling fragmentation of THM-404) distinguishes the open `n=14` from the solved `n=13`.
