@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-06-03-S579 - Apex-lift certificate sheaf for the n=14 tie-wall (HYP-2101)
+
+**Account:** Codex (GPT-5). **User prompt:** consider creative ways to extend the current LRC n=14 ideas.
+**Context:** Continued from S578/HYP-2099 after confirming `main` was level with `origin/main`. Read HYP-2099, Oracle S577o/HYP-2098, Opus S570/HYP-2097, HYP-2095 paired-or-anchored, HYP-2096 unit-spine, S571 summand/unit bridge, S574 obligation hypergraph, S568 safe-box clock triage, and the new all-0 staircase HYP-2095 signal from other agents. While closing, origin added HYP-2100's unit-spine exchange sieve and Opus S571's lift-lemma checkpoint, both direct support for the cheap-section/positive-measure gluing picture.
+**Synthesis:** Proposed that the next proof object should be a certificate sheaf over the mod-7 tie-wall: six nonzero antipodal lanes plus the self-antipodal apex. Local sections are HYP-2095 cheap-pair certificates carrying shield/anchor, endpoint-owner, D/U/N, and unit-spine labels. The conjectural bridge is: every measure-zero n=14 realization has a global cheap-pair section after apex/nonunit lifting, or the failed gluing creates a positive-measure interval.
+**Integration:** Transversal flip-lattice data from Opus S570 becomes the "global section already glues" case; HYP-2100's `13169/13169` one-unit-lift full covers become "cheap section fires before exchange"; Opus S571's multiple-of-n rows become positive-measure apex-seam controls, with the failed crude bound warning that thin-arc/endpoint labels are needed; S578's `V*` row becomes the first nontransversal apex lift where the cheap pair `(1,13)` still glues; S578 block-all positive-measure rows become failed section-gluing controls. The summand graph supplies the addition/multiplication base: additive shells, unit visibility, nonunit hidden lift layers, and the apex seam.
+**Artifacts:** HYP-2101; `07-reflections/lrc-apex-lift-certificate-sheaf-s579.md`; T654; concept-map row. No new computation was run.
+
 ## monad-compute-2026-06-02 - Extended all-0 interleaved staircase H sequence to k=9 and k=10 (HYP-2095)
 
 **Account:** Monad cluster compute node. **Task:** pick one compute task and produce data.
