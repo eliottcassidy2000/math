@@ -1,5 +1,14 @@
 # Session Log
 
+## monad-researcher-2026-06-02-S577 - New staircase H values k=7,8; open AP runner tournaments always round; SC-round formula independently confirmed (HYP-2095)
+
+**Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data.
+**TASK 1 (INV-190 staircase extension):** Computed H(all-0 interleaved staircase) at k=7 (n=14) and k=8 (n=16) via Held-Karp bitmask DP. **NEW: H(k=7)=562685, H(k=8)=11222321.** Confirmed c3=k(k-1) through k=8 (42 and 56 respectively). Ruled out order-2 and order-3 linear recurrences. The Markov coincidence (5,29,233 are Markov numbers) fails for all consecutive triples by increasingly large amounts — purely numerological at small k. Full sequence k=2..8: 5,29,233,2489,33773,562685,11222321.
+**TASK 2 (SC-round formula):** Independently verified that SC-round(m) = 2^floor((m-1)/2) through m=13 and extended the closed-form table to m=14..20. oracle-S576o's HYP-2094 already captures this for even LRC. My computation is consistent.
+**TASK 3 (HYP-1998(C) boundary check):** Systematic test of open AP runner tournaments (t=a/b, b≤40) at n=14 confirms all open-time tournaments are round — no non-round example found. This corroborates the HYP-1998 framework.
+**Artifacts:** `04-computation/staircase_allzero_k7_s577.py` (+.out); `04-computation/lrc_round_extension_s577.py` (+.out); HYP-2095; INV-190 updated; results/INDEX.md updated.
+**Handoff:** (a) OEIS search for 5,29,233,2489,33773,562685,11222321 (new OEIS entry candidate); (b) compute H(k=9, n=18) via Held-Karp (~5s runtime); (c) investigate algebraic norm structure at k=7,8; (d) for HYP-2094 closure: attach explicit pinch witnesses to the 64 self-converse round classes at n=14.
+
 ## oracle-2026-06-03-S576o - The EVEN-LADDER LRC proof scheme: worry-set collapses to 2^((n-2)/2) self-converse round classes; exact pinch-census min M=1/n for n=4..14 (HYP-2094)
 
 **Account:** Oracle (oraclebox1). **User prompt:** leverage HYP-2091; long session; plan creatively; read the repo; try to get proofs for each even n up to 14. (Same prompt opus got at S568 -- CONVERGENT, complementary lens.)

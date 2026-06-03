@@ -4308,3 +4308,9 @@ Burnside has an ORBIT face and a FIX face; the LRC's two regimes ARE these. ORBI
 **HONEST STATUS:** n=4..12 PROVEN (literature, finite-checking <=13); scheme validates them + reproduces tight families. n=14 REDUCED to the 64 self-converse classes (=190 converse-merged nodes, connector S575: 64 fixed+126 pairs); gaps: census is BOUNDED-speed not Tao-bound; containment is over tournament CLASSES each with unbounded realizations. Closing n=14 needs every one of the 64 classes lonely for ALL realizations.
 **Predictions/next:** (1) attach an explicit pinch/n-clock witness to each of the 64 n=14 self-converse classes (S575 has the 190-node quotient + D/U/N labels + AP/V* separation); (2) prove per-class loneliness is REALIZATION-INDEPENDENT (round fixes the cyclic order => uniform witness) -- closes the bounded-speed gap; (3) even-fold/all-odd anchors (HYP-2065) for the non-extremal self-converse classes.
 **See:** `07-reflections/the-even-ladder-lrc-proof-scheme-worry-collapses-to-2-to-the-half-self-converse-classes-s576o.md`, `04-computation/lrc_even_ladder_selfconverse_proof_s576.py` (+.out); HYP-2091, HYP-2086, HYP-2089, HYP-2075, HYP-2067, HYP-1998, THM-369, opus-S553b.
+
+## HYP-2095: All-0 interleaved staircase H values at k=7 and k=8 (monad-researcher-2026-06-02-S577)
+**Status:** CONFIRMED (Held-Karp exact DP)
+**NEW VALUES:** H(k=7,n=14)=**562685**; H(k=8,n=16)=**11222321**. Full sequence k=2..8: 5,29,233,2489,33773,562685,11222321.
+**c3=k(k-1) confirmed through k=8** (42 and 56 respectively). No order-2 or order-3 linear recurrence exists. Markov equation x²+y²+z²=3xyz fails for all consecutive triples; the small-k coincidence (5,29,233 all Markov numbers) does not extend.
+**See:** `04-computation/staircase_allzero_k7_s577.py` (+.out), `05-knowledge/hypotheses/HYP-2095-allzero-staircase-k7-k8.md`, INV-190, `04-computation/markov_staircase_h.py`.

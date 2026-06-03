@@ -45,10 +45,11 @@
 
 ### INV-190: All-0 Staircase H Sequence and Algebraic Structure
 **Source:** opus-2026-05-16-S1
-**Status:** COMPUTED — values 5,29,233,2489,33773 for k=2..6
-**What:** H values of all-0 interleaved staircase at n=2k. 5,29,233 are Markov numbers (breaks at k=5: 2489=19×131). The k=3 case: H = N_{Q(√35)/Q}(8+√35) = 29 (norm from quadratic field). k=4: H = N(41+√283)/6 = 233.
-**Proved:** # directed 3-cycles = k(k-1) exactly.
-**Next:** Compute H at k=7 (n=14). Find linear recurrence. Check algebraic norm structure.
+**Status:** EXTENDED — values 5,29,233,2489,33773,**562685,11222321** for k=2..8 (monad-researcher-S577)
+**What:** H values of all-0 interleaved staircase at n=2k. 5,29,233 are Markov numbers (breaks at k=5: 2489=19×131). c3=k(k-1) confirmed through k=8.
+**Proved:** # directed 3-cycles = k(k-1) exactly (through k=8).
+**Ruled out:** No order-2 or order-3 linear recurrence. Markov equation x²+y²+z²=3xyz fails for all consecutive triples; small-k coincidence does not extend.
+**Next:** OEIS search for 5,29,233,2489,33773,562685,11222321. Compute k=9 (feasible: Held-Karp at n=18, ~5s). Find algebraic norm structure for k=4,5,6,7. Check if k=7 norm is N_{Q(√d)/Q}(a+b√d) for some d.
 
 ---
 
