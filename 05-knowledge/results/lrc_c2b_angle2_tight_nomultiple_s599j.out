@@ -1,0 +1,7 @@
+ANGLE 2 — TIGHT (M=1/n) ⟹ NO multiple of n ?  (the C' reformulation)
+ n | #gcd1 configs | #tight (M=1/n) | #tight WITH a multiple of n (want 0)
+  3 |     11 |    1 | 0   []
+  4 |     52 |    1 | 0   []
+  5 |    205 |    2 | 0   []
+  6 |    786 |    2 | 0   []
+  7 |   2996 |    1 | 0   []

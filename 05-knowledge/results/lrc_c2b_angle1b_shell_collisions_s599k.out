@@ -1,0 +1,16 @@
+ANGLE 1b — discrete 2n-1 witness works  <=>  shell-collision present?
+ n | #C2b | works&shell | works&noshell | fails&shell | fails&noshell
+  3 |     6 |    1 |    1 |    0 |    4
+  4 |    32 |   11 |    4 |    2 |   15
+  5 |   136 |   60 |   12 |   19 |   45
+  6 |   534 |  268 |   32 |  116 |  118
+  7 |  2073 | 1105 |   80 |  585 |  303
+  8 |  8000 | 3947 |  128 | 3111 |  814
+
+MINIMIZER STRUCTURE — do all M=2/(2n-1) minimizers contain BOTH n and n-1 (shell-partners,
+ since (n-1)+n=2n-1≡0; their forbidden j's ±n^{-1}=±2 and ±(n-1)^{-1}=∓2 COLLIDE)?
+ n | minimizers (M=2/(2n-1)) | all contain {n, n-1}?
+  3 | 1 mins, e.g. [(2, 3)] | True
+  4 | 1 mins, e.g. [(1, 3, 4)] | True
+  5 | 2 mins, e.g. [(1, 3, 4, 5), (1, 4, 5, 6)] | True
+  6 | 2 mins, e.g. [(1, 3, 4, 5, 18), (1, 4, 5, 6, 7)] | False
