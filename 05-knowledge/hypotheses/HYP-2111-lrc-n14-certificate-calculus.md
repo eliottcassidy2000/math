@@ -1,9 +1,13 @@
 ---
-id: HYP-2105
+id: HYP-2111
 status: FORMALIZATION + extension program; no new proof of n=14
 source: codex-2026-06-03-S580
 related:
   - THM-398
+  - HYP-2108
+  - HYP-2107
+  - HYP-2106
+  - HYP-2105
   - HYP-2104
   - HYP-2103
   - HYP-2102
@@ -13,7 +17,7 @@ related:
   - HYP-2095
 ---
 
-# HYP-2105: the n=14 LRC frontier is a certificate calculus with one common positivity residual
+# HYP-2111: the n=14 LRC frontier is a certificate calculus with one common positivity residual
 
 ## Claim
 

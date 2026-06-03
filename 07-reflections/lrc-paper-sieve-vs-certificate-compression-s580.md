@@ -160,7 +160,7 @@ only then: exact prime-fiber fallback
    constraints.  A component of `G(S\{v})` has two boundary owners; forcing it
    inside one `v`-danger arc creates pair-sum/divisor/unit relations.  This is
    the bridge from interval search to D/U/N ledgers.
-8. Use HYP-2105's certificate calculus as the fallback order.  The exact paper
+8. Use HYP-2111's certificate calculus as the fallback order.  The exact paper
    fiber should only appear after `G3_all_short_Cprime_residual` fails to route
    into `G8_endpoint_cover_circuit_positivity`.
 9. For total `n=12`, write the prime-`C=23` unit-shell proof as a standalone

@@ -231,6 +231,36 @@ requirement `1/n` (`= 0.071` at n=14): a positivity margin that **grows toward t
 frontier**. So tightness would demand an anomalous simultaneous resonance of `v` with
 *all* component midpoints — the circuit obstruction, the sharpened residual of C′.
 
+## 4⅞. Small-owner descent past Lemma C (Lemmas E and F)
+
+**Small-owner descent past Lemma C (S581).** Lemma C used two small owners.  A
+single small owner already gives two further local exits.  If an endpoint of a
+component has owner `u < n`, then the congruence window has width `< 1`, so cover
+by the `v=nw` arc forces
+```
+w(k n ± 1) = j u.
+```
+Thus:
+
+> **Lemma E (small pin off-lattice).** If a component endpoint has owner `u < n`
+> and `u ∤ w(k n ± 1)`, then that component is not contained in any `v=nw`
+> danger arc, so `S` is loose.
+
+When the divisibility holds, the endpoint is pinned exactly to the arc centre.
+The component can then use only one side of the arc.
+
+> **Lemma F (small pin half-radius).** If a component endpoint has owner `u < n`,
+> is pinned to a `v=nw` arc centre, and the component length is `> 1/(n^2 w)`,
+> then the component is not contained in that arc, so `S` is loose.
+
+Together, B′/C/E/F form an endpoint-cover circuit positivity sieve: long
+components, two-small components, one-small off-lattice components, and one-small
+too-long half-arc components all peel immediately.  In S581's deterministic
+samples (`5000` multiple-of-`n` rows for each `n` where available), these criteria
+prove `92.44%` at `n=6`, `97.26%` at `n=8`, and `100%` of sampled rows at
+`n=10,12,14`; the `n=14` sample splits as B′ `3407`, Lemma C `843`, Lemma E `748`,
+Lemma F `2`, residual `0`.
+
 ## 5. Status ledger
 
 | Statement | status |
@@ -244,6 +274,9 @@ frontier**. So tightness would demand an anomalous simultaneous resonance of `v`
 | Lemma C ∪ B′ | **PROVED**, covers **99%** of multiple-of-14 configs |
 | Lemma D (exact endpoint-cover criterion + circuit positivity `P>0 ⟺ loose`) | **PROVED** (§4¾), verified 100% n=6..14 |
 | Summed corollary (tight ⟹ avg midpoint v-phase `< 1/n`) | **PROVED**; actual avg `≈0.245 ≫ 1/n` |
+| Lemma E (one small owner off lattice ⟹ loose) | **PROVED** (§4⅞), S581 route |
+| Lemma F (one pinned small owner but component longer than half-radius ⟹ loose) | **PROVED** (§4⅞), S581 route |
+| B′ ∪ C ∪ E ∪ F | **PROVED criteria**, covers **100%** of S581 sampled multiple-of-14 configs |
 | C′ residual = `P(S) > 0` always (simultaneous-resonance infeasibility) | **OPEN** (~1% at n=14; the circuit Diophantine obstruction) |
 
 So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs

@@ -136,7 +136,7 @@ large the ambient class space is.
 
 ## Handoff
 
-HYP-2105 should be read as a formalization and extension program, not a theorem.
+HYP-2111 should be read as a formalization and extension program, not a theorem.
 The best next proof attempt is endpoint-cover-circuit positivity, because it is
 where HYP-2103/HYP-2104's all-short Vitali residual and HYP-2101's sheaf residual
 meet.

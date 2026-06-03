@@ -1,0 +1,42 @@
+S581 endpoint-cover positivity: small-owner descent past Lemma C
+
+PROVED CRITERIA
+Bprime: component length > 2/(n^2 w).
+Lemma C: both endpoint owners are < n, so two pinned centres force a=b.
+Lemma E: one small endpoint owner is off the v=nw centre lattice.
+Lemma F: one small endpoint owner is pinned, but the component exceeds one half-radius 1/(n^2 w).
+
+n= 6: rows=4984; proved=4607 (92.44%); residual=377
+  routes: Bprime_long_interval=2688, LemmaC_both_small=89, LemmaE_small_pin_off_lattice=1410, LemmaF_small_pin_half_radius=420, large_owner_residual=377; example_residual=(1, 6, 8, 10, 11)
+  residual component shapes: unproved_large_large_tiny=4240, unproved_mixed_small_large_tiny=366
+n= 8: rows=5000; proved=4863 (97.26%); residual=137
+  routes: Bprime_long_interval=2894, LemmaC_both_small=132, LemmaE_small_pin_off_lattice=1336, LemmaF_small_pin_half_radius=501, large_owner_residual=137; example_residual=(1, 2, 7, 8, 12, 13, 15)
+  residual component shapes: unproved_large_large_tiny=2967, unproved_mixed_small_large_tiny=286
+n=10: rows=5000; proved=5000 (100.00%); residual=0
+  routes: Bprime_long_interval=2848, LemmaC_both_small=234, LemmaE_small_pin_off_lattice=1420, LemmaF_small_pin_half_radius=498
+n=12: rows=5000; proved=5000 (100.00%); residual=0
+  routes: Bprime_long_interval=3154, LemmaC_both_small=482, LemmaE_small_pin_off_lattice=1149, LemmaF_small_pin_half_radius=215
+n=14: rows=5000; proved=5000 (100.00%); residual=0
+  routes: Bprime_long_interval=3407, LemmaC_both_small=843, LemmaE_small_pin_off_lattice=748, LemmaF_small_pin_half_radius=2
+
+AGGREGATE ROUTES
+Bprime_long_interval: 14991
+LemmaC_both_small: 1780
+LemmaE_small_pin_off_lattice: 6063
+LemmaF_small_pin_half_radius: 1636
+large_owner_residual: 514
+
+RESIDUAL SHAPES
+unproved_large_large_tiny: 4249
+unproved_mixed_small_large_tiny: 252
+
+TOURNAMENT ANALYSIS
+vertices: proved cover criteria plus the remaining large-owner residual
+pair observable: (proof_rank, coverage); switch favors stronger proved criterion
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}; directed_3_cycles=0; hamiltonian_path=Bprime_long_interval -> LemmaC_both_small -> LemmaE_small_pin_off_lattice -> LemmaF_small_pin_half_radius -> large_owner_residual
+
+ASSUMPTION CHALLENGE
+Vertices considered: runners, endpoints, components, owner pairs, congruence windows, and proof criteria.
+Chosen vertices: proof criteria, because the predicate preserved is 'some component is certified uncoverable'.
+Destroyed data: exact endpoint positions and individual speed identities after they are summarized by route.
+Next residual: all remaining unproved components are large-owner or mixed tiny half-radius windows.

@@ -144,7 +144,7 @@ endpoint-labelled clocks above.
   surviving safe component would need to fit inside a single arc of the AP
   `{m/(nw)}`; its two endpoints are owned by other runners, so a cover imposes
   rigid pair-sum/divisor/unit congruences rather than a free time-grid search.
-- Reuse HYP-2105's gate vocabulary for the fallback order: the paper-sieve
+- Reuse HYP-2111's gate vocabulary for the fallback order: the paper-sieve
   residual is `G3_all_short_Cprime_residual`, and the desired replacement for
   exact prime fibres is `G8_endpoint_cover_circuit_positivity`.
 - Add HYP-2107's bounded multiplier-residue automaton as the next fallback
@@ -184,7 +184,8 @@ realization theorem for endpoint-owner cores.
 - Public verifier repository, https://github.com/vzsky/13-lonely-runners
 - `04-computation/lrc_paper_vs_certificate_efficiency_s580.py`
 - `07-reflections/lrc-paper-sieve-vs-certificate-compression-s580.md`
-- HYP-2105, n=14 certificate calculus / local certificate primitives
+- HYP-2111, n=14 certificate calculus / local certificate primitives
+- HYP-2108, endpoint-cover circuit positivity
 - HYP-2107, large-owner residue automaton
 - THM-398 / HYP-2103, dominance-dodge and all-short residual formalization
 - HYP-2104, Vitali handoff / arc-alignment residual
