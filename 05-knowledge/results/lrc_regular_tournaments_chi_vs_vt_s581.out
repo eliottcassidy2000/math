@@ -1,0 +1,40 @@
+==================================================================================
+REGULAR (maximally-cyclic) tournaments: does chi (dichromatic) add beyond VT?
+==================================================================================
+
+--- m = 5 vertices ---
+  # circulant regular iso classes: 1  (known TOTAL regular = 1; all regular are circulant)
+  rotational R_m and Paley_m isomorphic? False
+   aut  VT   self-conv  chi(dichromatic)  #3-cyc   label
+     5  T      T          2                5    ROTATIONAL R_m (=AP)
+  => distinct chi values among regular: [2];  VT values: [True]
+  chi within VT=True classes: [2];  within VT=False: []
+
+--- m = 7 vertices ---
+  # circulant regular iso classes: 2  (known TOTAL regular = 3; SOME regular are NON-circulant -> census is the circulant subset)
+  rotational R_m and Paley_m isomorphic? False
+   aut  VT   self-conv  chi(dichromatic)  #3-cyc   label
+    21  T      T          3               14    PALEY (QR)
+     7  T      T          2               14    ROTATIONAL R_m (=AP)
+  => distinct chi values among regular: [2, 3];  VT values: [True]
+  chi within VT=True classes: [2, 3];  within VT=False: []
+
+--- m = 9 vertices ---
+  # circulant regular iso classes: 3  (known TOTAL regular = 15; SOME regular are NON-circulant -> census is the circulant subset)
+  rotational R_m and Paley_m isomorphic? False
+   aut  VT   self-conv  chi(dichromatic)  #3-cyc   label
+    81  T      T          3               30    
+     9  T      T          2               30    ROTATIONAL R_m (=AP)
+     9  T      T          3               30    
+  => distinct chi values among regular: [2, 3];  VT values: [True]
+  chi within VT=True classes: [2, 3];  within VT=False: []
+
+==================================================================================
+READING
+==================================================================================
+  m=5: a unique regular tournament (rotational = Paley = the AP orbit), VT, one chi.
+  m=7: THREE regular tournaments -- the first level with a regular orbit BEYOND the single
+  rotational one. Whether the rotational R_7 (AP) and Paley_7 (QR) coincide, how many are
+  vertex-transitive, and whether chi (dichromatic) takes different values across them, is
+  printed above -- that is the precise answer to 'does chi add beyond VT'. The LRC tie-in
+  (next script / section): does a TIGHT config realize a non-rotational regular tournament?

@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-03-S581o - chi (dichromatic) separates regular tournaments BEYOND vertex-transitivity; the LRC tight regular orbit is the chi=2 rotational R_m (=AP), NOT Paley (HYP-2135)
+
+**Account:** Oracle (oraclebox1). **User prompt:** among maximally-cyclic (regular) tournaments, does chi add beyond vertex-transitivity -- is there a tight config regular but not the Paley/AP orbit, and does its chi differ?
+**WHY chi is needed:** ALL regular tournaments on m vertices have the SAME #3-cycles (constant regular score) -- m=7:14, m=9:30, m=11:55 -- so cyclicity can't separate them; the symmetric ones are all VT.
+**KEY (lrc_regular_tournaments_chi_vs_vt_s581.py + s581b):** rotational R_m (conn {1..(m-1)/2} = the AP at its tight time) and Paley QR_m (m=3 mod4) are NON-ISOMORPHIC, both VT, both regular, SAME #3-cycles, both self-converse -- yet **chi(R_m)=2 for ALL m (5..13) while Paley chi=3 (m=7), 4 (m=11).** chi adds STRICTLY beyond VT. m=7 has 3 regular tournaments (2 circulant), m=9 has 15 -- regular orbits beyond Paley/AP from m=7.
+**LRC:** the tight family (S576o) realizes ONLY the chi=2 orbit: n=6/n=8 AP -eps = EXACTLY R_m; n=8 sporadics = chi=2 near-R_m; NO tight config thru n=8 reaches Paley (chi=3). => the LRC extremal is the MINIMALLY-cyclic regular tournament (chi=2, the AP), not the maximally-symmetric Paley; chi=2 is a candidate characterization of the tight regular orbit.
+**ANSWER:** chi adds beyond VT = YES; tight-but-not-AP-orbit thru n<=8 = NO (all chi=2 R_m); the orbits LRC avoids are exactly chi>=3. HONEST GAPS: 3rd non-circulant regular on 7 / 12 on 9 not chi-computed (uniqueness of chi=2 conjectured); tight family only thru n=8.
+**Artifacts:** lrc_regular_tournaments_chi_vs_vt_s581.py (+.out), lrc_tight_config_regular_orbit_chi_s581b.py (+.out); reflection chi-separates-regular-tournaments-...-s581o.md; HYP-2135. **Handoff:** prove every LRC tight config is chi=2 near-R_m / regular tournaments with chi>=3 give strictly-lonely speed sets. NOTE: HYP-2132 collided w/ opus-S590 (renumbered mine to 2135).
+
+
 ## opus-2026-06-03-S590 - THM-401: the pair-sum sieve's modulus IS 2n-1 (identity, three ways); "multi-sieve = additive face" rigorous; sidesteps resonance energy (HYP-2132)
 
 **Account:** Opus (remote-control, v1410-1). **User:** always make everything rigorous; pin down that the pair-sum sieve's modulus literally is 2n−1 (or its odd part), turning "multi-sieve = additive face" from conjecture into identity; sidestep the resonance energy — the key concept.

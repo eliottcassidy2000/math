@@ -1,0 +1,35 @@
+==============================================================================
+(A) chi(R_m)=2 ?  Is the AP-rotational the unique 'barely cyclic' regular orbit?
+==============================================================================
+  m= 5: chi(R_m rotational/AP)=2  #3cyc=5;  chi(QR/Paley circulant)=1  #3cyc=0;  iso? False
+  m= 7: chi(R_m rotational/AP)=2  #3cyc=14;  chi(QR/Paley circulant)=3  #3cyc=14;  iso? False
+  m= 9: chi(R_m rotational/AP)=2  #3cyc=30;  chi(QR/Paley circulant)=3  #3cyc=30;  iso? False
+  m=11: chi(R_m rotational/AP)=2  #3cyc=55;  chi(QR/Paley circulant)=4  #3cyc=55;  iso? n/a(m>9)
+  m=13: chi(R_m rotational/AP)=2  #3cyc=91;  chi(QR/Paley circulant)=3  #3cyc=52;  iso? n/a(m>9)
+
+==============================================================================
+(B) which regular orbit do LRC TIGHT configs realize? (chi=2 AP vs chi=3 Paley)
+==============================================================================
+  n=6 AP {1..5}:  M=1/6(=0.1667), tight time 1/6
+      [+e] regular=False  chi=2  #3cyc=3  ==R_m(AP,chi2)? False
+      [-e] regular=True  chi=2  #3cyc=5  ==R_m(AP,chi2)? True
+  n=8 AP {1..7}:  M=1/8(=0.1250), tight time 1/8
+      [+e] regular=False  chi=2  #3cyc=11  ==R_m(AP,chi2)? False
+      [-e] regular=True  chi=2  #3cyc=14  ==R_m(AP,chi2)? True
+  n=8 sporadic1 {1,2,3,4,5,7,12}:  M=1/8(=0.1250), tight time 1/8
+      [+e] regular=False  chi=2  #3cyc=8  ==R_m(AP,chi2)? False
+      [-e] regular=False  chi=2  #3cyc=12  ==R_m(AP,chi2)? False
+  n=8 sporadic2 {1,4,5,6,7,11,13}:  M=1/8(=0.1250), tight time 1/8
+      [+e] regular=False  chi=2  #3cyc=11  ==R_m(AP,chi2)? False
+      [-e] regular=False  chi=2  #3cyc=8  ==R_m(AP,chi2)? False
+
+==============================================================================
+READING
+==============================================================================
+  If chi(R_m)=2 for all m while Paley/QR has chi=3, the AP-rotational is the UNIQUE
+  minimally-cyclic (chi=2) regular orbit, and Paley is a genuinely-more-cyclic (chi=3)
+  one that VT and 3-cycle-count cannot distinguish but chi can. If every LRC tight config
+  realizes the chi=2 (R_m) orbit (not chi=3 Paley), then the LRC extremal is precisely the
+  MINIMALLY-cyclic regular tournament -- not the maximally-symmetric Paley -- and chi=2 is
+  a clean characterization of the tight orbit. Any tight config landing on chi=3 would be a
+  regular-but-not-AP tight config with a DIFFERENT chi (the user's target).
