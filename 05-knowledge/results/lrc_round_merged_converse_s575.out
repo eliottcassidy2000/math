@@ -1,0 +1,31 @@
+Round LRC body under converse/merged quotient
+oraclebox1 connector, 2026-06-03 S575
+
+  m  valid-d   round  A000016  SC-round   2^floor  merged
+  3        4       2        2         2         2       2
+  4        8       2        2         2         2       2
+  5       16       4        4         4         4       4
+  6       32       6        6         4         4       5
+  7       64      10       10         8         8       9
+  8      128      16       16         8         8      12
+  9      256      30       30        16        16      23
+ 10      512      52       52        16        16      34
+ 11     1024      94       94        32        32      63
+ 12     2048     172      172        32        32     102
+ 13     4096     316      316        64        64     190
+
+Checks:
+  round == A000016 for all rows: True
+  SC-round == 2^floor((m-1)/2) through m=13: True
+  merged == (round + SC-round)/2 for all rows: True
+
+n=14 handoff (m=13 runner sub-tournament):
+  316 round/A000016 classes collapse to 190 converse-merged classes;
+  64 are fixed by converse, and 126 are non-fixed converse pairs.
+
+Connector interpretation:
+  The open LRC necklace body should enter the merged metagraph through
+  this 190-node quotient at n=14, not through all 316 round classes and
+  not through the full A000568(13) ambient set.  Boundary/fixed classes
+  are the remaining seam where HYP-2088's D/U/N blocker labels should be
+  attached before binary time-word symmetry forgets ownership.

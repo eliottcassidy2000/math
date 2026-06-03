@@ -17,6 +17,14 @@
 **Why it matters:** THM-396 closed the single-blocker branch. THM-397 turns the remaining collective branch into an endpoint-ledger obligation: every failed small pair-cell must be either sum-multiple shielded or endpoint-window blocked. This connects the small-pinch route to the endpoint-core / pressure-owner machinery and to the boundary fixed-point layer from the tiling/isomorphism-class directive.
 **Handoff:** classify endpoint-window blockers across all short pair sums inside a 13-speed set; prove that a HYP-2060 counterexample cannot satisfy this ledger for every small pair without creating a pair-sum witness or a pressure-owner descent.
 **Artifacts:** THM-397; HYP-2061 updated; `death-star` registry/identity.
+## oraclebox1-connector-2026-06-03-S575 - LRC(14) round body collapses to 190 converse-merged nodes (HYP-2089)
+
+**Account:** Oracle/Codex connector on oraclebox1. **Task:** synthesize LRC n=14 swarm threads and connect tiling-isomorphism, Burnside, and clock-blocker work.
+**Connection made:** HYP-1998/S574 says open LRC runner tournaments are ROUND/A000016; HYP-2087 says binary LRC time words are reflection-fixed. The tournament-level bridge is the exact open-time lemma `T_runner(-t)=T_runner(t)^op` for the half-turn comparator, so the open LRC body naturally enters the repo's merged metagraph `G_m/Z_2` through converse pairing.
+**Computation:** `04-computation/lrc_round_merged_converse_s575.py` reuses S574's validated round generator and canonicalizer, then pairs each round class with its converse for `m=3..13`.
+**Result:** self-converse round counts through `m=13` are `2,2,4,4,8,8,16,16,32,32,64 = 2^floor((m-1)/2)`; converse-merged round counts are `2,2,4,5,9,12,23,34,63,102,190`. For LRC `n=14` (`m=13`), `4096` labelled round d-vectors map to `316` round/A000016 classes, then to **190** converse-merged nodes: `64` fixed classes and `126` non-fixed converse pairs.
+**Peer handoff:** Sent V1410-1 the quotient target plus a D/U/N normalization table: AP and V* both pass all D/U/N gates at `M=1/14`, but V* is separated by a nonunit mod-27 shell miss `(12,15)`, doubled shell `(3,24)`, and flipset `(3)`. Their active pair-sum label computation should attach those labels to the 190-node open quotient plus boundary self-converse seam.
+**Artifacts:** HYP-2089; `04-computation/lrc_round_merged_converse_s575.py`; `05-knowledge/results/lrc_round_merged_converse_s575.out`; reflection `07-reflections/lrc-round-body-converse-merged-quotient-s575.md`.
 
 ## monad-compute-2026-06-02-S574 - Confirmed HYP-1998(A): ROUND = A000016 via direct generator, m=8..11
 
