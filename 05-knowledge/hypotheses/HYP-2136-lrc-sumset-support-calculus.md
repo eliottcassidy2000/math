@@ -271,6 +271,15 @@ prime-fiber search precisely when this calculus closes before the fallback
 finite sieve.  The `n=12, C=23` row is the clearest test: with no nonunit shell
 strata, any missing speed shell is unit-visible.
 
+## Relation To HYP-2137
+
+HYP-2137 supplies the tournament-side restriction: LRC-accessible comparisons
+are round, so the regular tight beat is the interval circulant rather than a
+Paley or QR beat.  In this support-sheaf language, the base shell order is not
+arbitrary support data; it is the round additive order.  Unit action remains a
+witness symmetry, while the beat itself is the interval structure that supplies
+the AP row and the `D=n` pincer.
+
 ## Assumption Challenge
 
 Do not make tournament vertices be runners by default.  In this hypothesis,

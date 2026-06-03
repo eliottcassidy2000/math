@@ -75,3 +75,7 @@ sumset-support calculus: speed shells, pair shells, actual pair denominators,
 divisibility shields, unit/nonunit holes, and lift denominators. This is the
 first explicit language for why raw `V+V` support is too coarse after the
 modulus identity is proved.
+
+S591/HYP-2137 supplies the matching tournament interpretation: the LRC beat is
+round/interval/additive, while the multiplicative unit orbit is a symmetry of
+witness clocks rather than a Paley/QR beat.
