@@ -4,6 +4,7 @@ title: the dual n-clock cap face should close the Cprime cover residual aggregat
 status: OPEN proof program; Lemma H cell-cap pigeonhole is proved and folded into THM-398
 sources:
   - codex-2026-06-03-S593
+  - codex-2026-06-03-S598
 related: [THM-398, HYP-2102, HYP-2105, HYP-2110, HYP-2112, HYP-2135]
 ---
 
@@ -35,21 +36,30 @@ Evidence from `lrc_dual_pigeonhole_cap_face_s593.py`:
   `0`, while the near-AP multiple rows with lower safe mass route through
   Lemma C.
 
-Rebase integration: monad-compute S595 extends the ambient Cprime evidence
-beyond the original n=14 focus.  Its exact open-safe-measure test finds
-`19600/19600` sampled/systematic multiple-of-`n` rows loose and `0` tight for
-control rows `n=12,13,14` plus new rows `n=15,16,17,18`, with minimum observed
-positive measure about `0.016..0.023`.  This does not prove the under-cap
-residual, but it makes Lemma H one aggregate certificate inside a tested
-multiple branch that appears stable through `n<=18`, not a one-row accident.
+Rebase integration: monad-compute S595/S596 extend the ambient Cprime evidence
+beyond the original n=14 focus.  Their exact open-safe-measure tests find no
+tight sampled/systematic multiple-of-`n` rows through `n<=20`, with positive
+measure margins staying around `0.016..0.023` in the new frontier rows.  This
+does not prove the under-cap residual, but it makes Lemma H/I aggregate
+certificates inside a tested multiple branch that appears stable beyond
+fourteen, not one-row accidents.
 
-Working hypothesis: the Cprime kernel should be attacked by a two-level cap
+Working hypothesis: the Cprime kernel should be attacked by a layered cap
 certificate:
 
 1. primary cell capacity `2/n^2` catches aggregate overload;
-2. if every cell is under capacity, owner congruences and `Phi` ramps should force
+2. origin-bisection capacity `1/n^2` catches one-sided overload once a small
+   endpoint owner pins components to cap centers;
+3. if every cell and one-sided cell is under capacity, owner congruences and `Phi` ramps should force
    a residual positive gap.
 
 The point is not another broad enumeration.  The cap face creates a formal
 dual to component-longness: even if all components are short, enough short
 pieces in the same primary clock cell overload the available caps.
+
+S598 refinement: the cap centers themselves are proof data.  A pinned small
+left endpoint can only use the upper half of its cap, and a pinned small right
+endpoint can only use the lower half.  Thus each primary cell has one-sided
+capacity `1/n^2`.  The named `apex_AP_replace_13_n14` row misses the total-cell
+surplus test but has upper surplus `1/1176`; this is the first clean example of
+an origin-bisection law becoming an upper cap certificate.

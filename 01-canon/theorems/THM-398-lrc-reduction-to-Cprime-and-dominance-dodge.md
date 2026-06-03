@@ -330,10 +330,58 @@ S581 local owner-descent component exit in the smaller rows (`41` at `n=6`, `26`
 `n=8`, `19` at `n=10`).  At `n=14`, the same deterministic sample has no residual:
 `2460` rows are dual-cell-cap, the remaining `40` are local S581 exits.
 
+## 4.97. Origin-bisection upper/lower cap certificates (Lemma I)
+
+Each `v=nw` danger cap is bisected by its center `j/(nw)`.  A small-owner
+endpoint congruence can therefore turn the local half-radius rule (Lemma F)
+into an aggregate one-sided capacity certificate.
+
+For a component `C=(a,b)` of `G(S')`, suppose the left endpoint has a small owner
+`u<n`, so
+```text
+a = (k n + 1)/(n u).
+```
+If the cover congruence pins it to a `v=nw` cap center, equivalently
+```text
+w(k n + 1) == 0 mod u,
+```
+then any cover of `C` by `D_{nw}` must place `C` in the upper half-cap starting
+at `a`.  Similarly, a right endpoint
+```text
+b = (k n - 1)/(n u),        u<n,
+```
+with `w(k n - 1) == 0 mod u` must place `C` in the lower half-cap ending at `b`.
+
+In each primary `n`-clock cell there are exactly `w` upper half-caps and `w`
+lower half-caps, each of length `1/(n^2 w)`, so the one-sided capacity is
+`1/n^2`.
+
+> **Lemma I (origin-bisection cap certificate).** If the total length of
+> components whose pinned small-left endpoints force them into upper half-caps
+> in some primary `n`-clock cell exceeds `1/n^2`, then
+> `S=S' union {nw}` is loose.  The analogous lower-half statement holds for
+> pinned small-right endpoints.
+
+*Proof.* Assume those components were covered by `D_{nw}`.  A connected
+component beginning at a pinned center cannot use the lower half of that cap;
+it must lie in the upper half-cap to the right of the center, otherwise it meets
+a `v`-safe gap.  The union of all upper half-caps in one primary cell has measure
+`w * 1/(n^2 w)=1/n^2`, so disjoint components of total length greater than
+`1/n^2` cannot all be covered.  The lower-half proof is the same with right
+endpoints.
+
+**Verified / calibrated** (`lrc_origin_bisection_upper_caps_s598.py`): in
+deterministic multiple-of-`n` samples, after the total-cell cap test fails this
+one-sided certificate routes `289`, `412`, `143`, `84`, and `23` rows for
+`n=6,8,10,12,14`.  The named `apex_AP_replace_13_n14` row has no total-cell
+surplus (`-5/1176`) but has an upper-cap surplus `1/1176`, so it is certified
+by the origin-bisection face rather than by total mass.
+
 ## 5. Status ledger
 
 | Statement | status |
 |---|---|
+| Lemma I (origin-bisection upper/lower cap certificate) | **PROVED** (sec 4.97), routes 23/5000 sampled multiple-of-14 rows after total-cell cap fails |
 | Lemma A (no-multiple ⟹ `M ≥ 1/n`) | **PROVED** (THM-369) |
 | Reduction **C′ ⟹ LRC(n)** | **PROVED** (§2) |
 | Lemma B / Cor B1 (dominant multiple dodge, uses LRC(n−1)) | **PROVED** (§3) |
@@ -357,5 +405,6 @@ LRC(13).
 
 **Artifacts:** `04-computation/lrc_dodge_formalization_s572.py` (+`.out`),
 `lrc_lift_Cprime_residual_s571.py`, `lrc_lift_lemma_measure_bound_s571.py`,
-`lrc_dual_pigeonhole_cap_face_s593.py` (+`.out`).
+`lrc_dual_pigeonhole_cap_face_s593.py` (+`.out`),
+`lrc_origin_bisection_upper_caps_s598.py` (+`.out`).
 See reflection `07-reflections/lrc-formalizing-the-Cprime-reduction-and-dominance-dodge-s572.md`.

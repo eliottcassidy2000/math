@@ -117,18 +117,30 @@ long.  A cell can fail by having too many individually short components.
 
 ## Handoff
 
-The remaining proof shape is now two-level:
+The remaining proof shape is now layered:
 
 1. use Lemma H to discharge aggregate cap overloads;
-2. on rows with every cell under capacity, use endpoint-owner congruences plus
+2. use origin-bisection upper/lower cap overloads when small-owner congruences
+   pin components to cap centers;
+3. on rows with every cell under capacity, use endpoint-owner congruences plus
    the exact `Phi` ramp functional to force a positive gap.
 
 This looks like the right companion to HYP-2105/HYP-2110: owner descent handles
 local pins, while the dual cap face handles aggregate mass before the full
 large-owner CRT residual is needed.
 
+The S598 follow-up makes the middle line precise.  A small-left endpoint pinned
+to a `v=nw` center cannot use the lower half of that danger cap, so a whole
+primary cell has only `1/n^2` upper-half capacity available for such components;
+right endpoints give the lower-half dual.  In the S598 deterministic samples,
+this one-sided certificate routes `23/5000` n=14 rows after the total-cell cap
+test fails, and it certifies `apex_AP_replace_13_n14` by an upper surplus
+`1/1176`.
+
 Artifacts:
 
 - `04-computation/lrc_dual_pigeonhole_cap_face_s593.py`
 - `05-knowledge/results/lrc_dual_pigeonhole_cap_face_s593.out`
+- `04-computation/lrc_origin_bisection_upper_caps_s598.py`
+- `05-knowledge/results/lrc_origin_bisection_upper_caps_s598.out`
 - `05-knowledge/hypotheses/HYP-2140-lrc-dual-pigeonhole-cap-face.md`
