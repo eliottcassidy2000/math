@@ -1,0 +1,39 @@
+================================================================================
+LRC n=14: are the 64 SELF-CONVERSE round classes the 2^6 antipodal tie-resolutions?
+================================================================================
+
+(1) The 6 antipodal pairs of the 14-gon (tight time t=1/14) and their mod-7 class:
+   pair (pos  1, pos  8)  distance 7/14 = 1/2   both = residue 1 mod 7
+   pair (pos  2, pos  9)  distance 7/14 = 1/2   both = residue 2 mod 7
+   pair (pos  3, pos 10)  distance 7/14 = 1/2   both = residue 3 mod 7
+   pair (pos  4, pos 11)  distance 7/14 = 1/2   both = residue 4 mod 7
+   pair (pos  5, pos 12)  distance 7/14 = 1/2   both = residue 5 mod 7
+   pair (pos  6, pos 13)  distance 7/14 = 1/2   both = residue 6 mod 7
+   self-antipodal: pos 7 = 1/2 = residue 0 mod 7 = the APEX (multiple of 7)
+   => 6 tie-pairs => 2^6 = 64 resolutions; 6 nonzero mod-7 classes.
+
+(2) Build all 2^6 tie-resolved tournaments, canonicalize:
+   2^6 = 64 resolutions -> 33 distinct canonical classes   (self-converse among the 64 resolutions: counted below)
+
+(3) Compare to the generator's self-converse round classes:
+   round classes (A000016) = 316;  self-converse = 64
+   tie-resolution classes  = 33
+   tie-resolution set == self-converse set ?  False
+   tie ⊆ self-converse ? False    self-converse ⊆ tie ? False
+   in tie not sc: 18;  in sc not tie: 49
+   tie classes that ARE round: 33/33
+
+(4) Are the 64 resolutions all DISTINCT classes (free 6-bit index)?
+   resolution-count per class histogram: {1: 17, 2: 8, 3: 4, 4: 2, 5: 1, 6: 1}
+   (all 1 => the 6 bits are a free coordinate; the 64 classes <-> 2^6 mod-7 orientations)
+
+================================================================================
+READING
+================================================================================
+  If the tie-resolution set equals the 64 self-converse classes, then the LRC n=14
+  worry-set is EXACTLY the 2^6 orientations of the 6 mod-7 antipodal pairs of the 14-gon
+  at the tight time t=1/14. The 'clean even ladder' (HYP-2091) is clean only at GENERIC
+  open times; the TIGHT boundary is a STRUCTURED tie-wall with 6 independent pairs = the
+  6 mod-7 CRT classes (oracle-S552o), the apex being the self-antipodal residue 0. This
+  unifies the self-converse count (HYP-2086), the parity ladder (HYP-2091), the mod-7
+  reduction, and the antipodal transversals mod 2n-1 (opus-S568): they are one object.

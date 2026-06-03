@@ -1,0 +1,28 @@
+====================================================================================
+LRC n=14: which of the 64 self-converse classes are TIGHT-realizable (M=1/14)?
+====================================================================================
+  round classes=316, self-converse=64
+
+  distinct optimal-time classes seen: 216  (self-converse among them: 33)
+  classes that are TIGHT-realizable (some realization has M=1/14): 4
+  the AP's optimal-time class(es): 2  self-converse? True
+  all tight classes self-converse? False
+  tight classes == AP classes? False
+
+  min M among classes OTHER than the AP's: 1/14 = 0.0714 (> 1/14=0.0714? False)  via (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24) [V*]
+
+  tight (M=1/14) examples by class:
+     class (1, 1, 1, 1, 1, 0, 0, 0, 0, 0, 0, ...  M=1/14  via AP (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  self-conv=True
+     class (0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, ...  M=1/14  via AP (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  self-conv=True
+     class (1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 0, ...  M=1/14  via V* (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)  self-conv=False
+     class (1, 0, 0, 0, 0, 0, 1, 1, 1, 1, 0, ...  M=1/14  via V* (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)  self-conv=True
+
+====================================================================================
+READING
+====================================================================================
+  If the only TIGHT-realizable optimal-time class is the AP's (regular) one, the worry
+  collapses 64 -> 1: every other self-converse class is realized only by configs with
+  M>1/14 (strictly lonely). The proof target becomes: (a) the regular class is lonely
+  (AP, t=1/14, proven); (b) every NON-regular self-converse class forces M>1/14 -- a
+  realization-independent strict-loneliness statement. The data here tests (b) on a
+  bounded sample; the gap to a proof is making it realization-independent + unbounded.

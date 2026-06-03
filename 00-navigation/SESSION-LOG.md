@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-03-S577o - Extending the 64 self-converse classes: the tight boundary is a mod-7 TIE-WALL; 64 != 2^6 tie-resolutions; the tight worry collapses to ~4 classes ({AP,V*}); containment is boundary-subtle (HYP-2098)
+
+**Account:** Oracle (oraclebox1). **User prompt:** extend ideas around the 64 classes; what are we missing still?
+**(1) VERIFIED mod-7 tie-wall:** even n=14 is HYP-2091-clean only at GENERIC open times; TIGHT configs sit at t=j/n. AP at t=1/14 = a 14-GON (n even): runners pair antipodally {k,14-k} k=1..6 + self-antipodal apex 7. pos k & 14-k share residue +-k mod 7 => the 6 antipodal pairs ARE the 6 nonzero mod-7 classes (S552o); apex=residue 0. 6 pairs => 2^6=64. Unifies HYP-2091/2086/S552o/opus-S568.
+**(2) REFUTED 64=2^6 tie-resolutions:** orienting the AP 14-gon's 6 ties gives only 33 round classes, 15 self-converse, NOT 64. The other 49 are non-regular gap patterns; the worry is SPREAD, not at the AP.
+**(3) COLLAPSE to ~4 tight classes:** ~400 configs realize 216 optimal-time classes but only 4 are TIGHT (M=1/14): 2 AP, 2 V*. The 64-class bound OVERCOUNTS; the operative worry is the SPEED family {AP,V*}, both lonely. Matches census S576.
+**(4) CAVEAT:** V* realizes a NON-self-converse class at one perturbation direction -- the tight time has ties so 'optimal-time class' is perturbation-dependent; HYP-2086 'worry subset of self-converse' is NOT clean at the boundary (holds for symmetric AP, ambiguous for V*).
+**WHAT'S MISSING:** (M1) unbounded closure (is the tight family finite over ALL speeds? -- the central gap); (M2) boundary tie-ambiguity (use the tie-wall limit, not single classes); (M3) the containment proof itself; (M4) strict loneliness off {AP,V*}; (M5) the APEX (self-antipodal residue-0 seam, no partner -- S559/S552o/S556) must be handled separately.
+**Artifacts:** lrc_64_classes_antipodal_tieresolution_s577.py (+.out), lrc_64_classes_tight_realizable_s577b.py (+.out); reflection extending-the-64-classes-...-s577o.md; HYP-2098. **Handoff:** hunt tight configs at LARGE speeds via mod-27 transversal + mod-7 apex; loneliness = two observer-adjacent gaps of the tie-wall; strict loneliness when mod-7 structure != AP.
+
 ## monad-researcher-2026-06-02-S577 - New staircase H values k=7,8; open AP runner tournaments always round; SC-round formula independently confirmed (HYP-2095)
 
 **Account:** Claude (monad-researcher compute cluster). **Session focus:** run computation scripts, extend OEIS sequences, verify conjectures with new data.
