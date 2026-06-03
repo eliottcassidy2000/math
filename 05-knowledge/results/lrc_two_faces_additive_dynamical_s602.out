@@ -1,0 +1,49 @@
+================================================================================================
+S602  the two faces of the worry-set: additive (mod 2n-1, survives) vs dynamical (mod n)
+================================================================================================
+
+[1] THE DOUBLING DUALITY: dynamical face mod n vs additive face mod 2n-1
+  n  | mod n (dynamical)              | mod 2n-1 (additive)            | seam
+   6  | COLLAPSE (even, 2-adic)        | mod 11: MAX-MIXING (2 prim root) | <- 2-adic seam (apex)
+   7  | perm, cosets [3, 3]            | mod 13: MAX-MIXING (2 prim root) | 
+   8  | COLLAPSE (even, 2-adic)        | mod 15: ord(2)=4/8               | <- 2-adic seam (apex)
+   9  | perm, cosets [6]               | mod 17: ord(2)=8/16              | 
+  10  | COLLAPSE (even, 2-adic)        | mod 19: MAX-MIXING (2 prim root) | <- 2-adic seam (apex)
+  11  | perm, cosets [10]              | mod 21: ord(2)=6/12              | 
+  12  | COLLAPSE (even, 2-adic)        | mod 23: ord(2)=11/22             | <- 2-adic seam (apex)
+  13  | perm, cosets [12]              | mod 25: MAX-MIXING (2 prim root) | 
+  14  | COLLAPSE (even, 2-adic)        | mod 27: MAX-MIXING (2 prim root) | <- 2-adic seam (apex)
+  15  | perm, cosets [4, 4]            | mod 29: MAX-MIXING (2 prim root) | 
+  16  | COLLAPSE (even, 2-adic)        | mod 31: ord(2)=5/30              | <- 2-adic seam (apex)
+  17  | perm, cosets [8, 8]            | mod 33: ord(2)=10/20             | 
+  18  | COLLAPSE (even, 2-adic)        | mod 35: ord(2)=12/24             | <- 2-adic seam (apex)
+  19  | perm, cosets [18]              | mod 37: MAX-MIXING (2 prim root) | 
+  20  | COLLAPSE (even, 2-adic)        | mod 39: ord(2)=12/24             | <- 2-adic seam (apex)
+  21  | perm, cosets [6, 6]            | mod 41: ord(2)=20/40             | 
+  22  | COLLAPSE (even, 2-adic)        | mod 43: ord(2)=14/42             | <- 2-adic seam (apex)
+  => n=14: dynamical mod 14 DEAD, additive mod 27=3^3 MAXIMALLY ALIVE. The static
+     rigidity survives in the additive face precisely where the dynamical one collapses.
+
+[2] THE ADDITIVE FACE IS APEX-FREE: the apex = the 2-block of mod-n; mod 2n-1 has none
+  n  | mod-n divisor blocks (2-block?) | mod-(2n-1) divisor blocks (no even ⇒ no 2-block)
+  10  | [2, 5, 10]                 2-block=True  | mod 19: [19]           2-block=False
+  14  | [2, 7, 14]                 2-block=True  | mod 27: [3, 9, 27]     2-block=False
+  18  | [2, 3, 6, 9, 18]           2-block=True  | mod 35: [5, 7, 35]     2-block=False
+  22  | [2, 11, 22]                2-block=True  | mod 43: [43]           2-block=False
+  => mod n (even) carries the rank-1 2-block = the apex obstruction (S599/HYP-2063);
+     mod 2n-1 (odd) has NO even divisor ⇒ NO 2-block ⇒ APEX-FREE. The multi-sieve lives here.
+
+[3] STATIC MODULAR RIGIDITY: the 64 = 2^((n-2)/2) self-converse flip-lattice (additive)
+  the antipodal pairs {k, n-k} mod n (k=1..(n-2)/2) + apex n/2; orienting them = the worry classes
+  n= 6: 2 antipodal pairs [(1, 5), (2, 4)] + apex 3  ⇒  2^2 = 4 self-converse classes (AP at the tight bottom, all flips loosen)
+  n= 8: 3 antipodal pairs [(1, 7), (2, 6), (3, 5)] + apex 4  ⇒  2^3 = 8 self-converse classes (AP at the tight bottom, all flips loosen)
+  n=10: 4 antipodal pairs [(1, 9), (2, 8), (3, 7), (4, 6)] + apex 5  ⇒  2^4 = 16 self-converse classes (AP at the tight bottom, all flips loosen)
+  n=14: 6 antipodal pairs [(1, 13), (2, 12), (3, 11), (4, 10), (5, 9), (6, 8)] + apex 7  ⇒  2^6 = 64 self-converse classes (AP at the tight bottom, all flips loosen)
+  => the flip-lattice is the additive-face combinatorial skeleton; rigid and survives.
+
+[4] THE SEAM FROM BOTH FACES at n=14
+  DYNAMICAL (mod 14): doubling 2-adic collapse; apex 7 = rank-1 2-block; single-corrector dies.
+  ADDITIVE  (mod 27=3^3): 2 is a primitive root ⇒ ONE max-mixing 18-cycle; no 2-block;
+                          8191 transversals all lonely; 64-flip-lattice rigid. SURVIVES.
+  verify: ord_27(2) = 18 = φ(27) = 18  ⇒  2 IS a primitive root mod 27 (max mixing).
+  SAME 2·7 seam: the 2 kills the dynamical face; the additive face (odd 2n-1) dissolves the apex.
