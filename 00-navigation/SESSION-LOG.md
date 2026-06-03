@@ -8,6 +8,18 @@
 **RESULT:** **19600/19600 configs LOOSE, 0 tight** through n=18. Min looseness margin (measure) ~0.016-0.023 > 0 at every n (consistent with the prior "~0.02-0.04" at n<=14). C' has no tight witness for any tested config n<=18.
 **Files:** `04-computation/lrc_multiple_loose_extended_monad_s595.py` (+.out); updated HYP-2102 status in `05-knowledge/hypotheses/INDEX.md`.
 **Handoff:** Small-multiple residual (v<=(n-1)*max) remains the OPEN core of C' (Diophantine/equidistribution); this is empirical confirmation, not a proof. Next compute extension straightforward to n=20+ (cost grows with denominators).
+## oracle-2026-06-03-S582o - OVERNIGHT (6 cycles): THM-405 bounded-ratio first-window proof; R_m unique round/chi2 regular; chi gauge; first-window c~1.5; n=14 proof-state synthesis
+
+**Account:** Oracle (oraclebox1). **User prompt:** long overnight -- explore/investigate/formalize, cycle many times, toward LRC n=14. (Lake unusable box-wide, so 'formalize' = rigorous Python-verified theorems + a Lean-ready proof.)
+**CYCLE 1 (investigate):** R_m is the UNIQUE round (LRC-accessible) regular tournament AND the unique chi=2 regular one (m=7 spectrum-complete: only R_7 round/chi2; Paley & non-circulant 3rd are non-round chi=3). With opus-S591 'LRC=>round', this rigorously PINS the tight regular orbit = AP, closing opus-S591's VT qualifier. (updates HYP-2135)
+**CYCLE 2 (explore):** chi(optimal-time tournament) in {1,2}, a cyclicity gauge: maxes at 2 EXACTLY at the tight boundary (whole tight set chi=2, closing opus-S591 qualifier), drops to 1 (transitive) when very loose; chi=3 never occurs. chi=2 necessary-not-sufficient for tight.
+**CYCLE 3 (synthesis/backlog):** n=14 proof-state doc -- 5 equivalent reductions (observer-gap THM-384 / observer-source THM-381/385 / round-walk THM-373 / pinch-sieve THM-369/401 / even-fold HYP-2065), necessary conditions, structural pins; THE remaining gap = close B(t)=1->0 off the AP wall.
+**CYCLE 4 (investigate):** LRC FIRST-WINDOW is BOUNDED -- every config lonely in (0, c/n), c~1.5 (n-stable, max t0*n=1.30-1.46, 0/600 misses; AP at exactly 1). HYP-2139.
+**CYCLE 5 (prove) -- THE HEADLINE -- THM-405:** if v_max <= (n-1) v_min then S is lonely on [1/(n vmin),(n-1)/(n vmax)], so M>=1/n. RIGOROUS (far_iff_fract + interval intersection; Lean-ready). Verified 800/800. The AP is the SHARP boundary (equality => window={1/n}=tight). Settles LRC@n for ALL bounded-ratio configs; for n=14, all ratio<=13.
+**CYCLE 6 (scope):** THM-405 covers ~37-40% of bounded configs; the residual (ratio>13) = the genuine open core, but all lonely in range (min M 0.10-0.15). The hard core is large-ratio (slow runner + fast runners wrap before it leaves the collar) -- needs the fine-pinch/mod-(2n-1) window (THM-401).
+**Artifacts:** THM-405; HYP-2139; reflections the-chi-gauge-...-s582o.md, the-n14-proof-state-...-s582o.md; scripts lrc_round_regular_unique_Rm_s582.py, lrc_chi_vs_margin_s582b.py, lrc_first_window_scaling_s582c.py, lrc_first_window_ratio_theorem_s582d.py (+.outs). All pushed per-cycle.
+**HANDOFF:** the open core is exactly v_max/v_min > n-1; attack via (1) the fine-pinch window in (1/n,(n-1)/n) for large-ratio sets (THM-401 mod-2n-1); (2) the first-window conjecture's analytic feasibility (HYP-2139, localize S556o local-LP to (0,c/n)); (3) prove c=3/2 exact.
+
 
 ## opus-2026-06-03-S594 - Overnight cycle capstone: THM-404 (doubling-rigidity dichotomy) + the n=14 residual PRIME-DECOMPOSITION (2/3/7)
 

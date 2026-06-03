@@ -1,0 +1,6 @@
+THM-405 coverage + residual (n=14): ratio<=13 covered; ratio>13 = open core
+  speeds<=  28: THM-405-covered 144/400 (ratio<=13); residual 256; residual lonely(M>=1/14) 256/256; min M over residual = 3/29 (=0.1034)
+  speeds<=  60: THM-405-covered 158/400 (ratio<=13); residual 242; residual lonely(M>=1/14) 242/242; min M over residual = 1/8 (=0.1250)
+  speeds<= 140: THM-405-covered 147/400 (ratio<=13); residual 253; residual lonely(M>=1/14) 253/253; min M over residual = 38/253 (=0.1502)
+=> THM-405 covers the bounded-ratio fraction; the residual (ratio>13) has NO
+   counterexample in range (all M>=1/14) -- it is the genuine open core (large ratio).
