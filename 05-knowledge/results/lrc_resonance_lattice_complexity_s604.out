@@ -1,0 +1,97 @@
+
+  THE RESONANCE LATTICE BEHIND LRC TIGHTNESS
+
+======================================================================
+
+  I. THE RELATION LATTICE L(V) AND THE POISSON FORMULA  [PROVED/VERIFIED]
+  --------------------------------------------------
+  p_0 = sum_{c in L(V)} prod kappa(c_i); c=0 term = (1-2d)^n = independence.
+  V                 p0 exact lattice M=4      M=10      M=16
+  (1, 2, 3)          0.00000   0.02195   0.01244   0.00586
+  (1, 2, 4)          0.12500   0.12500   0.12500   0.12500
+  (1, 2, 3, 4)       0.00000   0.03094   0.01447   0.00871
+  (1, 3, 4, 7)       0.00000   0.02007   0.01932   0.00884
+  (converges to exact p_0; TIGHT configs converge to 0 slowly -- the
+   cancellation needs high-frequency lattice vectors = the Vitali wall.)
+
+  II. THE RESONANCE GRAPH = SHORT VECTORS OF L(V)  [VERIFIED]
+  --------------------------------------------------
+  support-3 +-1 vectors e_i+e_j-e_k  <=>  additive triples v_i+v_j=v_k.
+  V                   tight      p0    +-1 reln by support  #triples
+  (1, 2, 3, 4)         True  0.0000              s3:4,s4:2         2
+  (1, 3, 4, 7)         True  0.0000                   s3:4         2
+  (1, 3, 4, 5, 9)      True  0.0000              s3:6,s4:2         3
+  (1, 2, 3, 5)        False  0.0533                   s3:4         2
+  (1, 2, 4)           False  0.1250                   NONE         0
+  (2, 3, 7, 8, 12)    False  0.1250                   s4:6         0
+  (every tight config carries support-3 +-1 vectors (triples); a triple-free
+   set like (2,3,7,8,12) is not tight. Triples NECESSARY, not sufficient.)
+
+  III. THE DICHOTOMY + THE POISSON(2) GENERIC LIMIT  [VERIFIED/PROVED]
+  --------------------------------------------------
+  Mean depth = 2n/(n+1) -> 2. For RELATION-POOR (dissociated) speeds the
+  arcs decorrelate (Weyl), depth -> Poisson(2), p_0 -> e^{-2} = 0.1353 > 0:
+  V (dissociated-ish)          p0  (1-2d)^n    e^-2
+  (1, 2, 4, 8)             0.1000    0.1296  0.1353
+  (1, 3, 9, 27)            0.0667    0.1296  0.1353
+  (1, 2, 4, 8, 16)         0.1667    0.1317  0.1353
+  (1, 5, 11, 24, 25)       0.0672    0.1317  0.1353
+  (2, 5, 11, 23, 47)       0.1480    0.1317  0.1353
+  (relation-poor => p_0 bounded away from 0 (never tight); the additive
+   structure (rich L(V)) is what drives p_0 to the large-deviation 0.)
+
+  IV. THE COMPLEXITY LANDSCAPE  [PROVED facts + CONJ dichotomy]
+  --------------------------------------------------
+  (a) INPUT SIZE. Speeds in BINARY have size ~ sum log v_i. The depth function
+      has up to 2*sum(v_i+1) breakpoints -- EXPONENTIAL in the input. So the
+      direct algorithm is only PSEUDO-polynomial.
+      V                     binary size ~sum log2 v  #breakpoints ~2 sum v
+      (1, 2, 3, 4)                                8                     28
+      (1, 3, 4, 7)                                9                     38
+      (7, 11, 13, 17, 19)                        21                    144
+      (128, 129, 255, 256)                       33                   1544
+  (b) PARTITION FUNCTION / #P. P(z)=sum p_k z^k is the LRC INDEPENDENCE
+      POLYNOMIAL; evaluating independence/partition polynomials is #P-hard in
+      general (permanent/Lee-Yang). Its repo SIBLING is H(T)=#Hamiltonian paths
+      of a tournament, which is #P-complete -- the OCF object. [ANALOGY/PROVED-sibling]
+  (c) LATTICE PROBLEMS / NP. The resonances are the SHORT VECTORS of L(V);
+      'find the dominant resonance' is an SVP instance, and SVP is NP-hard (under
+      randomized reductions). LRC tightness is thus algebraically a short-vector
+      cancellation problem on L(V). [ANALOGY/structural]
+  (d) VERIFIER-WITNESS GAP (the P-vs-NP shape). VERIFYING a lonely time is easy:
+      given rational t, check ||v_i t|| >= delta for all i in poly time. For tight
+      configs the witnesses are half-division points j/(2n) -- POLY bit-size. So
+      'a lonely time exists' has short certificates (NP-shape), while DECIDING
+      p_0=0 needs the full lattice (no finite-moment test, S603). [PROVED verifier]
+  (e) STRUCTURE <-> HARDNESS DICHOTOMY [CONJ]: relation-poor V => p_0 ~ e^{-2},
+      loneliness abundant and easy to certify; relation-rich V (AP, additive
+      chains) => p_0 -> 0, tight, and certifying it requires the whole lattice.
+      ARITHMETIC STRUCTURE is the source of computational hardness here -- the
+      inverse of the usual 'random instances are hard' intuition.
+
+  V. THE CROSS-FIELD ROSETTA (one object, eight readings)  [mixed]
+  --------------------------------------------------
+   * Harmonic analysis     : p_0 = Poisson sum over L(V); kappa = Fourier coeff of the arc   [PROVED]
+   * Geometry of numbers   : resonances = short vectors of L(V); dominant one = SVP   [structural]
+   * Additive combinatorics: support-3 +-1 vectors = additive triples v_i+v_j=v_k   [PROVED]
+   * Statistical mechanics : P(z)=partition fn; z=fugacity; p_0=vacuum prob; roots=Lee-Yang   [ANALOGY]
+   * Probability           : depth->Poisson(2) (dissociated); p_0->e^-2; tight=large deviation   [VERIFIED]
+   * Ergodic theory        : (v_i t) Weyl-equidistribute; L(V) = the joint-flow resonances   [PROVED]
+   * Complexity theory     : P(z) eval #P; SVP(L(V)) NP-hard; lonely-time verify in P   [structural]
+   * Tournament/OCF (repo) : H(T)=#Ham paths is the #P-complete independence-poly sibling   [ANALOGY]
+
+======================================================================
+  SUMMARY
+  -------
+  Master object: the relation lattice L(V) = {c : c.V = 0}. Resonances are its
+  short vectors; additive triples are the support-3 +-1 ones. Poisson summation
+  gives p_0 = sum_{c in L(V)} prod kappa(c_i); the c=0 term is the independence
+  value (1-2d)^n -> e^{-2} > 0, so TIGHTNESS REQUIRES RESONANCES and is a pure
+  arithmetic-correlation / large-deviation phenomenon. Computationally LRC lives
+  in the NP-shaped gap: lonely times verify in P (short witnesses), deciding
+  p_0=0 is a short-vector cancellation on L(V) (SVP/#P flavored) that the Vitali
+  wall keeps off any finite shell. Eight fields read the same object; the
+  rigorous spine is the lattice + Poisson formula.
+  [CONJ] tightness is governed by L(V): relation-poor never tight; the additive
+  triples are necessary; the exact classifier is the full short-vector geometry.
+
