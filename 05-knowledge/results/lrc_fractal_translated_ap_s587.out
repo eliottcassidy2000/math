@@ -1,0 +1,40 @@
+==============================================================================
+S587  the recursive fractal of translated APs  (rep-theory: Riesz products)
+==============================================================================
+
+[1] FACTORIZATION across scales (no-carry base):  E(S_d)=E(digits)^d, sum-free preserved
+  digits=[4, 5, 6]  base=13  E(digits)=19  3term(digits)=0
+    d=1: |S|=  3  E(S_d)=     19  E(digits)^d=     19  match=True  3term=   0  Riesz-factorization=True
+    d=2: |S|=  9  E(S_d)=    361  E(digits)^d=    361  match=True  3term=   0  Riesz-factorization=True
+    d=3: |S|= 27  E(S_d)=   6859  E(digits)^d=   6859  match=True  3term=   0  Riesz-factorization=True
+    d=4: |S|= 81  E(S_d)= 130321  E(digits)^d= 130321  match=True  3term=   0  Riesz-factorization=True
+  digits=[1, 2, 3]  base=7  E(digits)=19  3term(digits)=2
+    d=1: |S|=  3  E(S_d)=     19  E(digits)^d=     19  match=True  3term=   2  Riesz-factorization=True
+    d=2: |S|=  9  E(S_d)=    361  E(digits)^d=    361  match=True  3term=   5  Riesz-factorization=True
+    d=3: |S|= 27  E(S_d)=   6859  E(digits)^d=   6859  match=True  3term=  14  Riesz-factorization=True
+    d=4: |S|= 81  E(S_d)= 130321  E(digits)^d= 130321  match=True  3term=  41  Riesz-factorization=True
+
+[2] THE TWO REGIMES — gap G vs δ=1/(|S|+1) across fractal scales
+  UPPER-half {4,5,6}: fractal SUM-FREE → Lemma A (safe)
+    d | |S| | 3term | G       | δ        | margin G-δ | good-meas
+    1 |   3 |     0 | 0.40000 | 0.25000 | +0.15000   | 0.1251
+    2 |   9 |     0 | 0.39900 | 0.10000 | +0.29900   | 0.1522
+    3 |  27 |     0 | 0.39650 | 0.03571 | +0.36079   | 0.1518
+  LOWER {1,2,3}: fractal 3-term-rich → Lemma B (hard)
+    d | |S| | 3term | G       | δ        | margin G-δ | good-meas
+    1 |   3 |     2 | 0.25000 | 0.25000 | +0.00000   | 0.0001
+    2 |   9 |     5 | 0.25000 | 0.10000 | +0.15000   | 0.1609
+    3 |  27 |    14 | 0.24938 | 0.03571 | +0.21366   | 0.1494
+
+[3] SELF-SIMILARITY of the gap: is G(S_d) governed by the single-digit gap?
+    (G is dilation-invariant; the no-carry blocks are dilated copies at scale b^i)
+    d=1: G(S_d)=0.40000   G(digits)=0.40000   ratio G_d/G_dig=1.0000
+    d=2: G(S_d)=0.39900   G(digits)=0.40000   ratio G_d/G_dig=0.9975
+    d=3: G(S_d)=0.39650   G(digits)=0.40000   ratio G_d/G_dig=0.9913
+    => if G(S_d) stabilizes, the fractal has a scale-invariant gap (a 'fractal dimension')
+
+[4] HASKELL lens: S_d = map (base-b eval) (replicateM d digits) — a d-fold fold;
+    REP lens: p_{S_d} = Π_{i<d} D(x^{b^i}) (Riesz product / lacunary spectrum).
+    d=1: |S|=3, |S−S|=5, |S−S|/|S|²=0.556 (lacunary ⇒ near-Sidon, difference set spreads)
+    d=2: |S|=9, |S−S|=25, |S−S|/|S|²=0.309 (lacunary ⇒ near-Sidon, difference set spreads)
+    d=3: |S|=27, |S−S|=125, |S−S|/|S|²=0.171 (lacunary ⇒ near-Sidon, difference set spreads)
