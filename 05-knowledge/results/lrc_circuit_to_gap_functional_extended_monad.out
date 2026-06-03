@@ -1,0 +1,13 @@
+EXTENSION of S576 Lemma G: verify  G(v)=mu(safe) == Phi(C)  exactly
+over multiple-of-n configs, for ODD n and LARGER n.
+
+  n= 7 (odd ): 600 configs; Phi==mu(safe) exactly: 600/600; max|err|=0.00e+00
+  n= 9 (odd ): 600 configs; Phi==mu(safe) exactly: 600/600; max|err|=0.00e+00
+  n=11 (odd ): 600 configs; Phi==mu(safe) exactly: 600/600; max|err|=0.00e+00
+  n=13 (odd ): 600 configs; Phi==mu(safe) exactly: 600/600; max|err|=0.00e+00
+  n=15 (odd ): 600 configs; Phi==mu(safe) exactly: 600/600; max|err|=0.00e+00
+  n=16 (even): 300 configs; Phi==mu(safe) exactly: 300/300; max|err|=0.00e+00
+  n=18 (even): 300 configs; Phi==mu(safe) exactly: 300/300; max|err|=0.00e+00
+  n=20 (even): 300 configs; Phi==mu(safe) exactly: 300/300; max|err|=0.00e+00
+
+TOTAL: 3900/3900 exact matches (ALL EXACT)
