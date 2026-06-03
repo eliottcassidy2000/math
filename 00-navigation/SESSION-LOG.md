@@ -9,6 +9,16 @@
 **T4 FRACTIONAL HYPEROPERATION:** LRC difficulty is ONE bump at + (trivial below=succession, above=lacunary S588). USE: certify the proof is purely additive (3-term/augmentation, THM-400).
 **T5 QUASICRYSTAL:** worry-set(AP)=periodic crystal (min complexity, cyclotomic symmetry), loose=aperiodic. USE: complexity/entropy bound with the AP as minimizer.
 **META-DISCOVERY:** every frame localizes n=14 to the PRIME 2 (adelic ramified place / RG relevant eigenvalue / additive rung at 2q / doubling fragmentation S585 / parity even-prime seam S587 / the 2³ in 8·C(n,2)+1=(2n-1)² S586). USE: a robust target — attack the place 2 (prove the 2-adic defect is tame), the odd ℚ(ζ_7) carries the rest; five independent certificates to combine. Files: 07-reflections/lrc-tangent-atlas-everything-localizes-to-the-prime-2-s589.md; 04-computation/lrc_adelic_tangent_s589.py (+.out); HYP-2131.
+## claudebox-2026-06-03-S605 - The resonance energy is the key LRC concept; sidestep it via the additive-face construction (HYP-2155)
+
+**Account:** claudebox (math-research fork+PR). **User prompt:** sidestep the resonance energy — the key concept to the LRC; poke around and follow tangents.
+**Found it:** HYP-2053 (oracle-S550). |LONELY(v)| = main + Σ_{Σm_i v_i=0} Πĝ(m_i) (= my S585 relation-lattice theta) ⇒ |LONELY| ≥ main − E(v), where E(v)=Σ_{0≠m,resonance}Π|ĝ(m_i)| is the RESONANCE ENERGY; E<main ⇒ LRC. The "resonances" = the integer relations Σm_i v_i=0.
+**Verified (`lrc_resonance_energy_sidestep_s605.py`):** bulk (generic/circuit-free/transl) E<main (0.07,0.10,0.12 vs main≈0.13) ⇒ LRC proven; HIGH-ENERGY CORE (AP {1..5}=0.36, {1..6}=0.59, Fibonacci=0.26) E≫main ⇒ bound fails. E dominated by LENGTH-3 (3-term fusion) resonances (S585 grading); circuit-free has no length-3 term. THE WALL (HYP-2054): on the core measure(LONELY)=0 exactly ⇒ measure/energy is BLIND.
+**The sidestep:** every core is lonely BY CONSTRUCTION at the rational sieve t=1/n (gap exactly 1/n, the n-gon vertex), found without E. Synthesis with the two faces (HYP-2150): the resonance energy = the DYNAMICAL face (measure, relation lattice, length-3 fusions whose 2-block = apex); the SIDESTEP = the ADDITIVE face (sieve t=a/n, the 64 transversal classes mod 2n-1 all lonely), construction not measure, apex-free. Vitali boundary = the seam.
+**Architecture:** LRC = bound the resonance energy on the bulk ⊔ SIDESTEP it on the core by construction, joined at the Vitali boundary. The work is NOT to bound E on the core (immovable — length-3 maximal, measure blind) but to route around it via the additive face — exactly the human's word.
+**Handoff:** is the core (E≥main) exactly the small-minimal-resonance-length (AP-led) family ⇒ finite check per n? Bound the tail Σ_{l>L}Π|ĝ|≤Cr^L; map the dominant length-3 fusions to the 2-block (HYP-2145).
+**Artifacts:** HYP-2155; `07-reflections/lrc-resonance-energy-and-the-sidestep-s605.md`; `04-computation/lrc_resonance_energy_sidestep_s605.py` (+.out).
+
 
 ## opus-2026-06-03-S588 - exp/helix & the hyperoperation tower: the worry-set is CYCLOTOMIC (primitive roots); hardness INVERTS the hyperoperation level (HYP-2130)
 
