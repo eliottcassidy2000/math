@@ -6,6 +6,7 @@ related:
   - HYP-2088
   - HYP-2083
   - HYP-2082
+  - HYP-2153
   - HYP-2052
   - HYP-2055
   - HYP-2059
@@ -54,6 +55,19 @@ n=7: AP only
 So the bounded residual matches the known small-`n` floor-tight transversals
 from S553/S553b.
 
+**S602 additive-chain refinement.** `lrc_p0_collapse_additive_chains_s602.py`
+rechecks the primitive canonical transversals for `n=4..8`.  The only non-AP
+primitive floor transversals are exactly the flip-set `{2}` rows:
+
+```text
+n=5: (1,3,4,7)      = 1,3,1+3,3+(1+3)
+n=6: (1,3,4,5,9)    = 1,3,1+3,1+(1+3),(1+3)+(1+(1+3))
+```
+
+Both are two-seed additive chains whose top is the sum of the previous two
+chain terms.  Thus the local S572 floor-transversal residual is AP plus a
+specific sparse additive-chain flip, not AP plus arbitrary small sumset.
+
 **Important correction.** Sumset minimality is not the sharp separator. It is
 sufficient but not necessary. Example:
 
@@ -86,5 +100,6 @@ observation and a stepping stone to HYP-2088.
 **See:** `07-reflections/lrc-addition-multiplication-odd-even-second-gap-s572.md`,
 `04-computation/lrc_second_gap_transversal_audit_s572.py` (+.out),
 `04-computation/lrc_second_gap_bounds_s573.py` (+.out),
+`04-computation/lrc_p0_collapse_additive_chains_s602.py` (+.out),
 `07-reflections/lrc-2n-minus-1-summand-unit-bridge-s571.md`,
-S553/S553b, HYP-2088, HYP-2083, HYP-2082.
+S553/S553b, HYP-2088, HYP-2083, HYP-2082, HYP-2153.

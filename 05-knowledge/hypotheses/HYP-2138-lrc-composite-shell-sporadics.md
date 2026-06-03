@@ -6,6 +6,7 @@ related:
   - THM-401
   - THM-402
   - HYP-2135
+  - HYP-2153
   - HYP-2137
   - HYP-2136
   - HYP-2132
@@ -42,6 +43,23 @@ n=10, C=19 prime: AP only.
 For `n=14`, `C=27=3^3`; the known `V*` row misses/doubles only gcd-3
 shells, so the classification residual localizes to the prime-3 shell branch.
 
+## S602 Additive-Chain Refinement
+
+`lrc_p0_collapse_additive_chains_s602.py` checks the operational
+`p0`-collapse predicate in targeted primitive boxes and recovers the two known
+`n=8`, `C=15` non-transversal floor rows:
+
+```text
+(1,2,3,4,5,7,12)       misses nonunit shell 6, with 12=5+7;
+(1,4,5,6,7,11,13)      misses nonunit shell 3, with 13=6+7.
+```
+
+Both still collapse to the unit-boundary skeleton, and both are two-seed
+addition chains.  So the composite-shell branch is not only a shell-support
+phenomenon; it carries an additive-chain normal form that should be part of
+the n=14 prime-3 ledger.  HYP-2153 records this as the `p0`-collapse
+classification subproblem.
+
 ## Relation To HYP-2135
 
 HYP-2141 supplies the labelled support calculus.  HYP-2138 is the proposed
@@ -68,4 +86,6 @@ prime 3: composite C=27 shell-sporadic branch.
 `07-reflections/lrc-sporadics-iff-2n-1-composite-prime-3-at-n14-s592.md`,
 `04-computation/lrc_worryset_sporadics_s592.py`,
 `05-knowledge/results/lrc_worryset_sporadics_s592.out`,
-HYP-2141, THM-401, THM-402, HYP-2088, HYP-2083.
+`04-computation/lrc_p0_collapse_additive_chains_s602.py`,
+`05-knowledge/results/lrc_p0_collapse_additive_chains_s602.out`,
+HYP-2153, HYP-2141, THM-401, THM-402, HYP-2088, HYP-2083.
