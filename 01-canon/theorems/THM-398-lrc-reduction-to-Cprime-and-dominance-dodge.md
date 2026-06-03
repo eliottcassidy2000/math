@@ -10,6 +10,7 @@ related:
   - HYP-2102  # the reduction, discovered S571
   - HYP-2097  # the 64-class worry container
   - HYP-2095  # the lift lemma (paired/anchored split)
+  - HYP-2137  # dual n-clock cap pigeonhole face
 ---
 
 # THM-398 — LRC reduces to C′, and the dominance-dodge lemma
@@ -294,6 +295,41 @@ over the cover circuit. Consequences:
   the circuit data `{v a_i, v b_i}`; minimising `Φ` over multiple-of-`n` configs is an
   LP-flavoured problem whose optimum being `> 0` is exactly C′.
 
+## 4.96. The dual n-clock cap pigeonhole (Lemma H)
+
+Lemma B′ is a local cap obstruction: one component of `G(S')` is too long to fit
+inside one danger arc of `v=nw`.  The dual face sums all components inside one
+primary `n`-clock cell.
+
+Let
+```
+I_r = [r/n, (r+1)/n)       (r = 0,...,n-1).
+```
+Inside each `I_r`, the danger set `D_{nw}` has exactly `w` caps, each of length
+`2/(n^2 w)`, hence total capacity `2/n^2`.
+
+> **Lemma H (dual cap pigeonhole).** If for some `r`
+> ```
+> μ(G(S') ∩ I_r) > 2/n^2,
+> ```
+> then `S=S'∪{nw}` is loose.  Quantitatively,
+> ```
+> μ(G(S)) >= max_r ( μ(G(S') ∩ I_r) - 2/n^2 ).
+> ```
+> *Proof.* `D_{nw}∩I_r` has measure exactly `2/n^2`.  Any excess of `G(S')` in
+> that cell cannot be covered by `D_{nw}`, so it remains in `G(S')\D_{nw}=G(S)`. ∎
+
+This is the aggregate counterpart to B′: even when every component is short, too many
+short components may overload the caps in one `n`-clock cell.
+
+**Verified / calibrated** (`lrc_dual_pigeonhole_cap_face_s593.py`): in deterministic
+multiple-of-`n` samples, the dual-cell cap criterion routes `726/2492` rows at
+`n=6`, `1676/2499` at `n=8`, `2205/2500` at `n=10`, `2298/2500` at `n=12`, and
+`2460/2500` at `n=14`.  It also gives genuinely aggregate `cap_only` exits before any
+S581 local owner-descent component exit in the smaller rows (`41` at `n=6`, `26` at
+`n=8`, `19` at `n=10`).  At `n=14`, the same deterministic sample has no residual:
+`2460` rows are dual-cell-cap, the remaining `40` are local S581 exits.
+
 ## 5. Status ledger
 
 | Statement | status |
@@ -311,6 +347,7 @@ over the cover circuit. Consequences:
 | Lemma F (one pinned small owner but component longer than half-radius ⟹ loose) | **PROVED** (§4⅞), S581 route |
 | B′ ∪ C ∪ E ∪ F | **PROVED criteria**, covers **100%** of S581 sampled multiple-of-14 configs |
 | Lemma G (`G(v) = Φ(C)`, exact circuit-to-gap functional) | **PROVED** (§4.95), verified exact 900/900 n=6..14 |
+| Lemma H (dual n-clock cell cap pigeonhole) | **PROVED** (§4.96), routes 2460/2500 sampled multiple-of-14 rows |
 | C′ ⟺ `ker Φ` has no multiple-of-`n` config (= `Φ>0` always) | **OPEN** (the gap functional's kernel; sum-of-ReLU optimisation) |
 
 So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs
@@ -319,5 +356,6 @@ all-short case), with the long-interval/dominant case fully proved from the lite
 LRC(13).
 
 **Artifacts:** `04-computation/lrc_dodge_formalization_s572.py` (+`.out`),
-`lrc_lift_Cprime_residual_s571.py`, `lrc_lift_lemma_measure_bound_s571.py`.
+`lrc_lift_Cprime_residual_s571.py`, `lrc_lift_lemma_measure_bound_s571.py`,
+`lrc_dual_pigeonhole_cap_face_s593.py` (+`.out`).
 See reflection `07-reflections/lrc-formalizing-the-Cprime-reduction-and-dominance-dodge-s572.md`.
