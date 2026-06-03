@@ -1,0 +1,23 @@
+m   regular/dihedral D_m exists (out-deg (m-1)/2 integer)?   round=A000016
+ 2  False      --   --
+ 3   True     D_3   2
+ 4  False      --   --
+ 5   True     D_5   4
+ 6  False      --   --
+ 7   True     D_7   10
+ 8  False      --   --
+ 9   True     D_9   30
+10  False      --   --
+11   True    D_11   94
+12  False      --   --
+13   True    D_13   316
+
+=> regular/dihedral face exists EXACTLY at ODD m ('every other n').
+
+LRC AP runner-block out-degrees at t=1/n (n-gon MINUS observer => near-regular):
+  n= 7 (m= 6, even m / ODD n -> simplex): out-degrees {2: 3, 3: 3}
+  n= 9 (m= 8, even m / ODD n -> simplex): out-degrees {3: 4, 4: 4}
+  n=11 (m=10, even m / ODD n -> simplex): out-degrees {4: 5, 5: 5}
+  n=13 (m=12, even m / ODD n -> simplex): out-degrees {5: 6, 6: 6}
+  n=14 (m=13, odd m / EVEN n -> polygon face): out-degrees {5: 6, 6: 7}
+  n=15 (m=14, even m / ODD n -> simplex): out-degrees {6: 7, 7: 7}

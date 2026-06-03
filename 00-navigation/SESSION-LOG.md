@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S567 - Tournaments as simplex(mesh) + polygon(dihedral): the dihedral face is ODD-m only; the LRC worry-set's parity dichotomy (HYP-2090)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** tournaments are both simplices (dimensions) and regular polygons (dihedral) — acting like just their outside or the whole mesh; dihedral groups occur every other n; related to n+2 recursion.
+**TWO FACES (the trinity, grounded):** a tournament IS both the SIMPLEX (oriented K_n = whole mesh, A000568) and the POLYGON (permutohedron/zonotope; ROUND tournaments are reconstructible from their 'outside' = the cyclic gap-necklace, A000016 = the dual-Burnside ORBIT side, S565). Round 'acts like its outside'; general 'acts like the whole mesh'.
+**DIHEDRAL FACE = ODD m ONLY (VERIFIED):** a regular tournament (every out-degree (m-1)/2, Aut=C_m, +reversal i↦-i = dihedral D_m) exists IFF m is odd. Even m has NO regular tournament (forced irregular/simplex). So the dihedral/regular-polygon face appears at EVERY OTHER vertex count — exactly the user's claim.
+**LRC PARITY DICHOTOMY (the payoff):** the loneliest config is the geometric regular n-gon (D_n) for ALL n, but the runner TOURNAMENT lives on m=n-1 and has the dihedral/regular face IFF m odd IFF n EVEN. ⇒ EVEN n (doubled primes 10,14,22) = the POLYGON-shaped worry-set (apex (q,q) reflection, S547); ODD n = SIMPLEX/irregular tightness. The repo's even-fold/(q,q)/mod2×mod7 gears/dual-Burnside-fix all live on the even-n polygon face — THIS is why the doubled primes are the canonical hard cases.
+**PRECISION (honest):** the AP runner block at t=1/n is the n-gon MINUS the observer vertex (n-1 of n equally-spaced points) ⇒ NEAR-regular ({5:6,6:7} at n=14; {2:3,3:3} at n=7) with antipodal ties; exact symmetry = the apex REFLECTION (S547), not full D_{n-1}. 'Dihedral' lives on the full n-gon (observer+runners, D_n), marked at the observer down to the apex axis.
+**n+2 RECURSION = the parity carrier (Mode B, n→n-2 Cayley-Dickson):** the dihedral face recurs along n+2; regular tournaments = m=3,5,7,… (D_3,D_5,…); LRC polygon-tight worry = the even-n sub-sequence with doubled primes 2q as the prime-channel-clean rungs (S546). 'Dihedral every other n' and 'n+2 recursion' = the same parity skeleton. HONEST: trinity + regular⟺odd-m grounded; NEW = the LRC even/odd parity dichotomy + its n+2/Mode-B identification; precise symmetry is apex-reflection not full D; not a proof. Files: 07-reflections/lrc-tournaments-as-simplex-and-polygon-the-parity-dihedral-face-s567.md; 04-computation/lrc_simplex_polygon_parity_s567.py (+.out); HYP-2090.
+
 ## opus-2026-06-02-S566 - The LRC through the STRONG lens: observer escapes to a source, encircled by a (regular) strong block (HYP-2089)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** focus on strongly connected tournaments and their relationship to LRC; see through the strong lens.
