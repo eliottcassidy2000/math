@@ -63,3 +63,8 @@ endpoint can only use the lower half.  Thus each primary cell has one-sided
 capacity `1/n^2`.  The named `apex_AP_replace_13_n14` row misses the total-cell
 surplus test but has upper surplus `1/1176`; this is the first clean example of
 an origin-bisection law becoming an upper cap certificate.
+
+Close-out rebase integration: Opus S595/HYP-2142 names the next residual after
+these cap filters.  If total caps and one-sided origin-bisection caps are all
+under capacity, the remaining large-owner cover constraints become a 2x2
+determinant / bounded CRT feasibility problem.

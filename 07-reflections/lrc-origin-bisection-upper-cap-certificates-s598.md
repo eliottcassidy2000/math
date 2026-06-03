@@ -76,6 +76,15 @@ upper cap surplus  =  1/1176
 So it is not a total-mass overload, but it is an upper-cap overload once the
 origin-bisection law is used.
 
+## Rebase integration: HYP-2142
+
+After this note was committed locally, origin added Opus S595/HYP-2142: the
+large-owner cover residual is a 2x2 determinant / bounded CRT problem.  This
+fits the layer stack exactly.  Total-cell caps and origin-bisected one-sided
+caps are aggregate capacity exits; rows under all those caps should then pass
+to the HYP-2142 determinant language, where the remaining question is whether
+one bounded multiplier `w` can satisfy all owner/slack blocks at once.
+
 ## Tournament Analysis
 
 Vertices are proof certificates: total cell cap, upper cap, lower cap, Lemma F,
