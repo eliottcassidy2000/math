@@ -1,0 +1,4 @@
+Convergence: near-tight 3-term-rich configs -> no mult of (k+1) AND delta-clock witness?
+  k= 6 (n=7): near-tight=28; NO multiple of 7=18 (64%); delta-clock j/7 witness=18 (64%); had-multiple=10
+  k= 8 (n=9): near-tight=10; NO multiple of 9=4 (40%); delta-clock j/9 witness=4 (40%); had-multiple=6
+  k=12 (n=13): near-tight=1; NO multiple of 13=0 (0%); delta-clock j/13 witness=0 (0%); had-multiple=1

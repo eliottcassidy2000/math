@@ -1,0 +1,2 @@
+(a) M-delta binned by #3-term relations (hard configs are 3-term-rich?)
+  k=6: #3t=0: minMargin=+0.0879(n=1082); #3t=1: minMargin=+0.0446(n=2698); #3t=2: minMargin=+0.0336(n=2969); #3t=3: minMargin=+0.0110(n=1048); #3t=4: minMargin=+0.0110(n=185); #3t=5+: minMargin=+0.0110(n=18)

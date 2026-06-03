@@ -1,0 +1,4 @@
+Bridge: near-tight (M-delta<0.02) configs -- 3-term-rich AND all-small-shielded?
+  k= 6: near-tight=23; mean#3term=4.7; circuit-free among them=0 (0.0%); all-small-shielded=0 (0%)
+  k= 8: near-tight=15; mean#3term=7.7; circuit-free among them=0 (0.0%); all-small-shielded=0 (0%)
+  k=10: near-tight=2; mean#3term=12.5; circuit-free among them=0 (0.0%); all-small-shielded=0 (0%)
