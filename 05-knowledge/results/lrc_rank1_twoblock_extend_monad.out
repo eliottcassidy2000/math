@@ -1,0 +1,7 @@
+Bounded-CRT-automaton emptiness (large-owner residual => loose), extended.
+EMPTY/tot = configs where per-component allowed-w intersection is empty.
+================================================================
+   n= 10: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+   n= 12: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+   n= 14: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
+   n= 16: residual rows=1000; automaton EMPTY=1000/1000  ALL EMPTY
