@@ -1,5 +1,10 @@
 # Session Log
 
+## opus-2026-06-03-S593 - Overnight cycle (round 4): the n=14 sporadic mechanism is a multiple-of-3 SHELL SWAP mod 27=3³ (HYP-2137)
+
+**Account:** Opus (remote-control, v1410-1). Overnight explore/investigate/formalize cycle, round 4 (investigate).
+**CONCRETE PRIME-3 MECHANISM:** at n=14, C=2n−1=27=3³; non-unit residues = multiples of 3 {3,6,9,12,15,18,21,24}. The AP {1..13} is tight + a perfect transversal (one residue per antipodal shell {a,27−a}). **V*={1..11,13,24} is tight (M=1/14) but NON-transversal: it doubly-occupies shell {3,24}** (with 3 AND 24=−3, 3 a multiple of 3) **and misses shell {12,15}** (12 also ×3). So the sporadic = a SWAP at multiple-of-3 (non-unit) shells: replace 12 by 24=−3. The UNIT shells (gcd(r,27)=1) stay rigidly transversal; only the prime-3 shells of the composite 27=3³ admit the swap. This makes the prime-3 classification ledger CONCRETE: the n=14 residual's classification half lives on the multiple-of-3 shells of 27. Confirms HYP-2138 (sporadics ⟺ 2n−1 composite) at the shell level. So the full n=14 residual = prime 2 (C'/doubling) + prime 3 (these multiple-of-3 shell swaps) + prime 7 (solved, ℚ(ζ_7)). Files: 04-computation/lrc_n14_sporadic_shells_s593.py (+.out); HYP-2137.
+
 ## codex-2026-06-03-S592 - full regular-tournament chi census closes the non-circulant HYP-2136 gap through m=9
 
 **Account:** Codex (desktop). **User prompt:** pin down the pair-sum sieve modulus as `2n-1` / odd part and follow the tangent among maximally-cyclic regular tournaments: does chi add beyond vertex-transitivity, and is there a tight regular non-AP/Paley config with different chi?

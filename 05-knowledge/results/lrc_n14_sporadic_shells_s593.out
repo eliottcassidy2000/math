@@ -1,0 +1,6 @@
+n=14, C=2n-1=27=3^3. Non-unit residues mod 27 (mult of 3): [3, 6, 9, 12, 15, 18, 21, 24]
+  V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13): M=1/14=0.0714 (floor 1/14=0.0714, tight=True); transversal=True
+     doubly-occupied shells [] (mult-of-3 shell? []); missed shells []
+  V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24): M=1/14=0.0714 (floor 1/14=0.0714, tight=True); transversal=False
+     doubly-occupied shells [3] (mult-of-3 shell? [True]); missed shells [12]
+        shell {3,24} occupied by [3, 24]  (s mult of 3: True)

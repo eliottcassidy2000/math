@@ -71,4 +71,4 @@ all three types, exactly as the "χ constant" theorem predicts.
 
 **Artifacts:** `04-computation/lrc_worryset_sporadics_s592.py` (+`.out`). Builds on
 THM-401 (2n-1 modulus), THM-402 (χ=2), S570 (transversals), S589 (prime-2 localization),
-S588 (ℚ(ζ_14)=ℚ(ζ_7)). New: **HYP-2136**.
+S588 (ℚ(ζ_14)=ℚ(ζ_7)). New: **HYP-2138**.
