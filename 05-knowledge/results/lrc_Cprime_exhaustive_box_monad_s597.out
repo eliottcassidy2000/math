@@ -1,0 +1,25 @@
+========================================================================
+C' EXHAUSTIVE BOX CERTIFICATE (monad-compute-S597)
+Claim C': primitive speed set with a multiple of n  =>  LOOSE (M>1/n).
+Method: enumerate EVERY primitive (n-1)-subset of {1..B} containing a
+multiple of n; test looseness EXACTLY via open-safe-set measure > 0.
+A single tight config inside the box would REFUTE C'.
+========================================================================
+
+  n    B  K=B/n   #configs     loose  tight   cert   min_margin (smallest mu>0)
+  4   40     10       4615      4615      0   PASS   0.041667  (=1/24)  at (1, 3, 4)
+    ... n=5 B=40: scanned 50000 configs (50000 loose, 0 tight) so far
+  5   40      8      51957     51957      0   PASS   0.020000  (=1/50)  at (1, 3, 4, 5)
+    ... n=6 B=36: scanned 50000 configs (50000 loose, 0 tight) so far
+    ... n=6 B=36: scanned 100000 configs (100000 loose, 0 tight) so far
+    ... n=6 B=36: scanned 150000 configs (150000 loose, 0 tight) so far
+    ... n=6 B=36: scanned 200000 configs (200000 loose, 0 tight) so far
+  6   36      6     225915    225915      0   PASS   (positivity-only certificate)
+    ... n=7 B=28: scanned 50000 configs (50000 loose, 0 tight) so far
+    ... n=7 B=28: scanned 100000 configs (100000 loose, 0 tight) so far
+    ... n=7 B=28: scanned 150000 configs (150000 loose, 0 tight) so far
+    ... n=7 B=28: scanned 200000 configs (200000 loose, 0 tight) so far
+  7   28      4     240009    240009      0   PASS   (positivity-only certificate)
+    ... n=8 B=24: scanned 50000 configs (50000 loose, 0 tight) so far
+
+*** TIMED OUT after 1750s ***
