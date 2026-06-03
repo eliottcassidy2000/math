@@ -1,7 +1,10 @@
 ---
 id: HYP-2153
-status: S599 covering-depth master object plus exact S602 bounded audit; classification open
-source: opus-2026-06-03-S599; codex-2026-06-03-S602
+status: S599 covering-depth master object plus exact S602 bounded audit; S603 integrates the HYP-2154 anti-Poisson/large-deviation reading; classification open
+source:
+  - opus-2026-06-03-S599
+  - codex-2026-06-03-S602
+  - codex-2026-06-03-S603
 related:
   - HYP-1802
   - HYP-1810
@@ -10,10 +13,10 @@ related:
   - HYP-2138
   - HYP-2146
   - HYP-2141
+  - HYP-2154
   - HYP-2114
   - HYP-2151
   - HYP-2152
-  - HYP-2154
   - THM-358
   - THM-401
 ---
@@ -152,6 +155,33 @@ For the user's named rows, S602 records:
   C = 11, perfect_transversal = True, flipset = (2,),
   recipe = 1 seed; 3 seed; 4=1+3; 5=1+4; 9=4+5.
 ```
+
+## S603 Integration With HYP-2154
+
+S599b/HYP-2154 reframes the covering-depth distribution `{p_k}` as a
+pushforward/density-of-states object.  Under the free independent model,
+depth has Poisson baseline with mean `2n delta`, so near the LRC threshold
+one expects `p_0` to stay positive.  The additive-chain rows are therefore not
+just "extra AP-like rows"; they are the anti-Poisson, arithmetically correlated
+edge where the bulk lonely measure collapses to zero.
+
+This sharpens the subproblem:
+
+```text
+classify exactly which additive/shell correlations can force p_0 = 0
+while preserving only the unit boundary witness floor.
+```
+
+Equivalently, the proof should separate:
+
+```text
+free/generic rows      -> p_0 positive by Poisson-like independence,
+additive-chain rows    -> p_0 bulk collapse by structured correlation,
+forbidden failures     -> would also destroy the unit witness floor.
+```
+
+The user's two rows are now the first clean correlated-tail examples: they
+empty the bulk ground-state cell but retain the unit skeleton at `1/n`.
 
 ## Tournament-Analysis Reading
 

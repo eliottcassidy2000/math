@@ -114,6 +114,27 @@ the sum of the two previous chain terms.  In one n=8 row this remains true:
 previous-two form.  So "top=sum of two below" is a real marker, while
 "previous two" is too narrow for the composite branch.
 
+## S603: Relation To The Master-Object Baseline
+
+The S599b/HYP-2154 master-object pass gives this subproblem a cleaner
+probabilistic shape.  The covering-depth distribution `{p_k}` has a free
+baseline: if the danger arcs behaved independently, depth would look roughly
+Poisson with mean `2n delta`, and `p_0` would remain positive near the LRC
+threshold.  The additive chains are the opposite edge: structured arithmetic
+correlation drives the bulk `p_0` cell to zero.
+
+So the new classification problem is not "find all AP variants."  It is:
+
+```text
+which additive/shell correlations can empty p_0 without killing the unit
+boundary witness floor?
+```
+
+The two named rows are the first clean anti-Poisson examples.  They are
+correlated enough to close every open lonely interval, but not so pathological
+that the `1/n` unit skeleton disappears.  That is exactly the large-deviation
+tail that HYP-2154 says the LRC proof has to control.
+
 ## Tournament Analysis / Assumption Challenge
 
 The script makes the quotient explicit.  It does not put runners or arcs at
