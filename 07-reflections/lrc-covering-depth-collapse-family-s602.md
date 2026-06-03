@@ -6,6 +6,13 @@ tags: [LRC, covering-depth, arc-covering, tight-config, extremal, entropy, addit
 
 # LRC is a circular-arc covering problem; the depth distribution is the master object
 
+## Repository map
+
+This entry is HYP-2156 after renumbering from collisions with the determinant
+Helly logarithm HYP-2152 and S599c's THM-406/HYP-2155.  It sits between HYP-2154, the broad
+covering-depth/master-object abstraction, and HYP-2153, the concrete `p_0`
+endpoint/shell classifier for the additive-chain collapse family.
+
 ## The abstract move
 
 A loneliness certificate is a point `t ∈ ℝ/ℤ` of the clock that avoids every

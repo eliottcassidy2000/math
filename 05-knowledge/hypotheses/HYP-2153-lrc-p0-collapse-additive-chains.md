@@ -1,9 +1,11 @@
 ---
 id: HYP-2153
-status: S599 covering-depth master object plus exact S602 bounded audit; S603 integrates the HYP-2154 anti-Poisson/large-deviation reading; classification open
+status: S599/S599c covering-depth master object plus codex/claude S602 bounded audits; classification open
 source:
   - opus-2026-06-03-S599
+  - opus-2026-06-03-S599c
   - codex-2026-06-03-S602
+  - claude-2026-06-03-S602
   - codex-2026-06-03-S603
 related:
   - HYP-1802
@@ -17,8 +19,11 @@ related:
   - HYP-2114
   - HYP-2151
   - HYP-2152
+  - HYP-2155
+  - HYP-2156
   - THM-358
   - THM-401
+  - THM-406
 ---
 
 # HYP-2153: the `p0` collapse family is an additive-chain shell family, not just AP
@@ -44,7 +49,23 @@ free baseline is Poisson-like.  HYP-2153 keeps the concrete LRC zero-cell
 classifier, where arithmetic correlations can empty `p_0` even though the
 first moment remains fixed.
 
-S602 uses the equivalent endpoint-critical predicate with `n=m+1`: for a
+HYP-2155/THM-406 makes the master-object bridge rigorous: factorial moments
+are overlap volumes, and
+
+```text
+p_0 = sum_j (-1)^j S_j.
+```
+
+Thus collapse is an all-orders inclusion-exclusion cancellation.  In
+particular, `S_2` does not separate additive-chain collapse from generic rows;
+the shell classifier must control the full overlap sequence, not only a pair
+energy.
+
+HYP-2156 is the companion covering-depth/entropy audit.  It proves the same
+first-moment law, treats `p_0=0` as tight circular-arc cover, and adds the
+depth-entropy order parameter and negative Lucas/Paley evidence.
+
+Codex-S602 uses the equivalent endpoint-critical predicate with `n=m+1`: for a
 primitive row `V` with `|V|=n-1` and threshold `1/n`, call `V` `p0`-collapsed
 when:
 
@@ -82,10 +103,12 @@ visible in the bounded floor branch.  Composite `C` can add non-transversal
 sporadics through nonunit shell ramification, as in the known `n=8` rows.
 
 The precise converse remains open.  S599 verifies AP and the named chains, plus
-a non-chain control `(1,2,4,7)` with `p_0=6/35>0`.  S602 finds that every
-collapsed row in its targeted boxes is a two-seed addition chain, but also
-records many two-seed chains that are not collapsed.  The missing ingredient is
-the shell/endpoint filter.
+a non-chain control `(1,2,4,7)` with `p_0=6/35>0`.  Claude-S602/HYP-2156
+verifies additive-chain necessity in an exhaustive `n<=6` covering-depth
+census and shows Lucas/Paley continuations are coincidences.  Codex-S602 finds
+that every collapsed row in its targeted boxes is a two-seed addition chain,
+but also records many two-seed chains that are not collapsed.  The missing
+ingredient is the shell/endpoint filter.
 
 ## S599 Covering-Depth Evidence
 
@@ -112,7 +135,7 @@ p_0(delta_c - epsilon) ~ epsilon^alpha.
 For AP rows and `(1,3,4,7)`, the fitted exponent is `alpha=1`: a singleton-wall
 or one-Helly-stage collapse, tying this subproblem to HYP-2146/HYP-2151/HYP-2152.
 
-## S602 Evidence
+## Codex-S602 Endpoint/Shell Evidence
 
 `04-computation/lrc_p0_collapse_additive_chains_s602.py` reruns exact S356
 interval arithmetic in targeted primitive boxes:
@@ -164,6 +187,10 @@ depth has Poisson baseline with mean `2n delta`, so near the LRC threshold
 one expects `p_0` to stay positive.  The additive-chain rows are therefore not
 just "extra AP-like rows"; they are the anti-Poisson, arithmetically correlated
 edge where the bulk lonely measure collapses to zero.
+
+S599c/HYP-2155 corrects the heuristic baseline: actual depth is generically
+sub-Poisson, but the collapse `p_0=0` remains an all-orders cancellation rather
+than a finite-moment signature.
 
 This sharpens the subproblem:
 
@@ -247,5 +274,12 @@ the collapse family, not proof of endpoint protection itself.
 `04-computation/lrc_covering_depth_distribution_s599.py`,
 `05-knowledge/results/lrc_covering_depth_distribution_s599.out`,
 `07-reflections/lrc-covering-depth-distribution-the-master-object-s599.md`,
+`04-computation/lrc_covering_depth_s602.py`,
+`05-knowledge/results/lrc_covering_depth_s602.out`,
+`07-reflections/lrc-covering-depth-collapse-family-s602.md`,
+`01-canon/theorems/THM-406-covering-depth-master-object-factorial-moments-and-spectral-identity.md`,
+`04-computation/lrc_depth_rigor_moments_s599c.py`,
+`05-knowledge/results/lrc_depth_rigor_moments_s599c.out`,
+`07-reflections/lrc-coimage-fundamentality-made-rigorous-s599.md`,
 HYP-1802, HYP-1810, HYP-2084, HYP-2135, HYP-2138, HYP-2114,
-HYP-2146, HYP-2151, HYP-2152, HYP-2154, THM-401.
+HYP-2146, HYP-2151, HYP-2152, HYP-2154, HYP-2155, HYP-2156, THM-401, THM-406.
