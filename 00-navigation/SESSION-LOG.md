@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-03-S578 - Formalized SLEEVE SATURATION (the covering foundation): deficit=Φ, a saturation recursion, and the alignment principle (HYP-2115)
+
+**Account:** Opus (remote-control, v1410-1). **User:** formalize sleeve saturation; use the process for extension.
+**DEFINITIONS:** δ=1/(k+1). The SLEEVE of a runner is Σ_v={t:‖vt‖<δ}, measure exactly 2δ. Total sleeve U=⋃Σ_v; safe=complement; DEFICIT Δ(S)=μ(safe)=1−μ(U). **measure-saturated** (Δ=0, worry-set: safe measure-0 but nonempty); **point-saturated** (safe=∅, M<δ, a COUNTEREXAMPLE). **LRC ⟺ no point-saturation.** Total sleeve mass 2k/(k+1)≈2>1 — saturation is purely about OVERLAP.
+**EXT1 saturation recursion (rigorous given Lemma G):** peel sleeves, μ(G_j)=μ(G_{j−1})−Φ_{v_j}(G_{j−1}) where Φ is the Lemma-G ramp functional on the CURRENT safe set; Δ(S)=μ(G_k) = telescoping sum of per-sleeve ramps. The single-multiple Φ (S576) is just the last step — generalised to all runners.
+**SATURATION CURVE / critical AP:** μ_1=(k−1)/(k+1) (first sleeve removes exactly 2δ); the AP measure-saturates EXACTLY at sleeve #k — every sleeve necessary, zero slack = the extremal tight signature.
+**EXT2 alignment principle (verified, = Lemma A, open):** deficit Δ DECREASES monotone with #3-term (k=8: mean 0.140→0.103, min 0.111→0.015). Saturation needs COHERENT overlap = additive 3-term alignment (a fold makes 3 sleeves overlap coherently); circuit-free (mis-aligned) ⟹ Δ≥c≈0.11. measure-saturation REQUIRES folds; worry-set = maximally aligned.
+**WHOLE PROGRAM in saturation language:** no-mult-of-(k+1) ⟹ δ-clock points in NO sleeve (permanent point-survivors, THM-369); mult ⟹ thin periodic Vitali sleeve can't point-saturate, Δ=Φ>0 (C'); circuit-free ⟹ mis-aligned Δ≥c (Lemma A); worry-set ⟹ measure-saturated, survives on clock points. LRC = the point-survivors never vanish. Convergent w/ oracle-S578o (3-term not 4-term). Files: 07-reflections/lrc-sleeve-saturation-the-covering-foundation-s578.md; 04-computation/lrc_sleeve_saturation_s578.py (+.out); HYP-2115.
+
 ## oracle-2026-06-03-S578o - Hardness is carried by 3-TERM folds, not 4-TERM energy; 4-term energy is the TRANSLATION-INVARIANT shadow; how 3 encodes 4 (HYP-2114)
 
 **Account:** Oracle (oraclebox1). **User prompt:** same 4-term flavor no 3-term fold; understand 3 and 4, how info hides in deformation, how 3 encodes 4; go back and forth.

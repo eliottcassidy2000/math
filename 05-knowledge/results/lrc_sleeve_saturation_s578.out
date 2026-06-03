@@ -1,0 +1,9 @@
+Saturation curves mu_j (safe measure of first j sleeves, level delta=1/(k+1))
+  k= 6 AP: curve=['0.714', '0.571', '0.381', '0.238', '0.057', '0.000']; measure-saturates at sleeve #6
+  k= 8 AP: curve=['0.778', '0.667', '0.519', '0.407', '0.230', '0.170', '0.047', '0.000']; measure-saturates at sleeve #8
+  k=10 AP: curve=['0.818', '0.727', '0.606', '0.515', '0.370', '0.309', '0.167', '0.098', '0.029', '0.000']; measure-saturates at sleeve #10
+  k=12 AP: curve=['0.846', '0.769', '0.667', '0.590', '0.467', '0.415', '0.284', '0.212', '0.129', '0.086', '0.018', '0.000']; measure-saturates at sleeve #12
+
+Spread-vs-overlap tension: deficit mu(safe) vs #3-term (overlap), random configs
+  k=8: #3t=0: meanDeficit=0.1402,min=0.1110; #3t=1: meanDeficit=0.1381,min=0.0791; #3t=2: meanDeficit=0.1321,min=0.0590; #3t=3: meanDeficit=0.1218,min=0.0478; #3t=4+: meanDeficit=0.1026,min=0.0152
+  k=10: #3t=0: meanDeficit=0.1406,min=0.1406; #3t=1: meanDeficit=0.1387,min=0.1228; #3t=2: meanDeficit=0.1399,min=0.1037; #3t=3: meanDeficit=0.1289,min=0.0764; #3t=4+: meanDeficit=0.1104,min=0.0376
