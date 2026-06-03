@@ -7,6 +7,23 @@
 **THE MISINTERPRETATION (verified, lrc_perspectives_source_s582.py):** the FULL perspective recursion FAILS at n=5→6 (perspectives 48 ≠ T(6)=56, gap 8) — which sent the repo into the chirality/56-bridge rabbit hole. But the LRC-relevant slice is the **SOURCE-perspective recursion source(n)=A000568(n-1), which is EXACT with NO gap at every n** (= THM-381; deleting the source is canonical). Verified: full perspectives 4(=3+1),12(=4+4+2+2),48; source-perspectives 1,2,4 = T(2),T(3),T(4).
 **WORRY-SET = the source-LESS (regular) perspective:** at n=5 the (1,0) regular/rotational class (1 perspective, 0 sources, all out-deg 2) = the LRC tight floor; classes WITH a source-perspective ⟹ observer strict source ⟹ strictly lonely (M>1/n, easy); the regular source-less class ⟹ observer on the 1/n boundary ⟹ worry-set.
 **UNIFICATION:** structures-vs-perspectives (curiosity) = observer-blind-vs-observer-coupled (THM-400, ε=0 vs ε≠0) = unmarked-vs-source-marked (THM-381/S509 projection defect) = ROOT AT THE OBSERVER. LRC is an observer-COUPLED problem; analyzing it at the unrooted-structure level (round/self-converse iso-classes) was the misread. WHERE/WHY works-and-doesn't: the skeleton source(n)=T(n-1) is exact (no gap ever); the CONTENT is the source-less fiber, which degenerates at the composite seam 14=2·7 (S580 doubling) = where LRC is hard. Files: 07-reflections/lrc-the-perspectives-curiosity-source-slice-not-full-count-s582.md; 04-computation/lrc_perspectives_source_s582.py (+.out); HYP-2120.
+## codex-2026-06-03-S587 - Lemma B as a fold-divisibility sieve over pair denominators (HYP-2122)
+
+**Prompt lens:** focus mostly on Lemma B, keep Lemma A randomness as a control/noise source, and use the two directions to sharpen each other.
+
+**Computation:** Added `04-computation/lrc_fold_divisibility_sieve_s587.py` and stored `05-knowledge/results/lrc_fold_divisibility_sieve_s587.out`. The script computes exact maximin ledgers, unbalanced/balanced relation counts, pair-denominator shield status, deletion shadows, deterministic Lemma A/B samples, and Tournament Analysis over proof lenses rather than runners.
+
+**Core fact:** if `D=a+b` and `t=m/D`, then `a*t+b*t=m`; every speed `v` with `D|v` sits at an integer and shields the whole `D`-pinch family. The visible fold `c=a+b` is only the primitive shield `v=D`. Thus `V*`'s missing `D=12` direct fold is explained by shield `24`.
+
+**n=14 calibration:** AP and `V*` kill every appearing low denominator `D<n` but leave `D=n` unshielded, and both sit at `M=1/14`. Unit-shift AP shields `D=n` with `14` and becomes loose (`M-delta=+0.05357`); far-shift AP has no low denominator scaffold and is much looser (`+0.28571`). The doubled-apex row is close but positive, marking the stress interface to Phi/endpoint residuals.
+
+**Lemma A/B synthesis:** Lemma B should become a denominator-gate compression theorem: killed low `D<n` plus unshielded `D=n` gives the delta-clock; killed `D=n` routes to Cprime/Phi/endpoint positivity; absent denominator scaffold routes to Lemma A discrepancy. Sample controls again put hardness in observer-coupled unbalanced gates, not balanced 4-term energy.
+
+**Incoming integration:** after fetch, Opus S582 had claimed HYP-2120 for the source-perspective slice, and Codex S586 had claimed HYP-2121 for the perspective-gap/incident-payload correction. S587 was renumbered to HYP-2122 and linked to both: denominator shields are rooted observer-coupled gates carrying the threshold payload; balanced energy is the unrooted projection that forgets which clocks are killed.
+
+**Tournament Analysis:** vertices were denominator/proof lenses, not runners. The transitive ranking was `D_denominator_divisibility_shield > visible_fold_a_plus_b_eq_c > Phi_endpoint_prime_residual > D_eq_n_unshielded_delta_clock > augmentation_nonzero_count > circuit_free_A_margin > balanced_energy_background`, with no directed 3-cycles and one Hamiltonian path.
+
+**Artifacts:** HYP-2122; `07-reflections/lrc-fold-divisibility-sieve-s587.md`; `04-computation/lrc_fold_divisibility_sieve_s587.py` (+.out); concept-map row.
 
 ## opus-2026-06-03-S581 - The real LRC dichotomy is the AUGMENTATION index (not support): balanced ⟺ translation-invariant (THM-400); hardness tracks ε≠0 (HYP-2118)
 

@@ -1,0 +1,70 @@
+S587 Lemma B fold-divisibility sieve, with Lemma A as control
+
+PAIR-PINCH DIVISIBILITY FACT
+  If D=a+b and t=m/D, then a*t+b*t=m.
+  Any speed v with D|v has v*t in Z, so the D-pinch is shielded.
+  The visible fold c=a+b is the special shield v=D; V*'s 24 shielding D=12 is the same gate.
+
+TARGETED DENOMINATOR-SIEVE LEDGER
+  label                 n   M-delta   u  b   low_unshielded<D=n   low_shielded<D=n     D=n pairs/shields       best_low_survivor
+  AP_n14                14  +0.00000  42 161 []                   [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] pairs=6,shields=[]             -
+  Vstar_n14             14  +0.00000  36 121 []                   [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] pairs=5,shields=[]             -
+  unit_shift_AP_n14     14  +0.05357  36 161 []                   [5, 6, 7, 8, 9, 10, 11, 12, 13] pairs=5,shields=[14]           -
+  far_shift_AP_n14      14  +0.28571   0 161 []                   []                   pairs=0,shields=[]             -
+  doubled_apex_n14      14  +0.00265  36 125 []                   [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] pairs=5,shields=[]             -
+  hidden_S584_k9        10  +0.13529   1  21 []                   []                   pairs=0,shields=[]             -
+  AP_n10                10  +0.00000  20  50 []                   [3, 4, 5, 6, 7, 8, 9] pairs=4,shields=[]             -
+  unit_shift_AP_n10     10  +0.06667  16  50 []                   [5, 6, 7, 8, 9]      pairs=3,shields=[10]           -
+
+  reading: AP and V* kill every pair denominator D<n that appears, but leave D=n unshielded.
+  V* explains the missing D=12 direct fold by divisibility: 24 is a shield for every m/12 pinch.
+  unit-shift AP kills D=n by the multiple 14, so the delta-clock survivor is gone and the row is loose.
+
+VISIBLE-FOLD DELETION SHADOWS
+  A deleted fold c is prime/divisibility-useful when the shadow witness has c*t in the danger band.
+  AP_n14               : shadow_tests= 36, blocked= 36, exact_zero= 30, residual_denoms={1: 30, 19: 3, 23: 2, 17: 1}
+  Vstar_n14            : shadow_tests= 31, blocked= 31, exact_zero= 17, residual_denoms={1: 17, 25: 5, 17: 3, 31: 3, 35: 2}
+  unit_shift_AP_n14    : shadow_tests= 30, blocked=  7, exact_zero=  2, residual_denoms={15: 5, 1: 2}
+  far_shift_AP_n14     : shadow_tests=  0, blocked=  0, exact_zero=  0, residual_denoms={}
+  doubled_apex_n14     : shadow_tests= 30, blocked= 30, exact_zero= 24, residual_denoms={1: 24, 18: 2, 19: 2, 16: 1, 17: 1}
+  hidden_S584_k9       : shadow_tests=  0, blocked=  0, exact_zero=  0, residual_denoms={}
+  AP_n10               : shadow_tests= 16, blocked= 16, exact_zero= 14, residual_denoms={1: 14, 13: 1, 15: 1}
+  unit_shift_AP_n10    : shadow_tests= 12, blocked=  4, exact_zero=  1, residual_denoms={11: 3, 1: 1}
+
+ALTERNATING A/B SAMPLE AUDIT
+  B-axis: low denominators killed by divisibility; A-axis: u=0/balanced-only margin control.
+  n= 8, rows=160
+    A_control_u0          count= 27; min_margin=+0.12158; u=0; low_unshielded=[]; Dn_shields=[32, 40]; row=(10, 14, 27, 32, 35, 38, 40)
+    B_sieve_complete      count=  4; min_margin=+0.09451; u=3; low_unshielded=[]; Dn_shields=[]; row=(3, 5, 6, 10, 20, 31, 39)
+    D_eq_n_killed         count=  9; min_margin=+0.07500; u=4; low_unshielded=[]; Dn_shields=[8]; row=(3, 5, 8, 12, 15, 17, 18)
+    fold_rich_top20pct    count= 32; min_margin=+0.06250; u=4; low_unshielded=[7]; Dn_shields=[]; row=(1, 4, 5, 6, 11, 17, 19)
+    corr(-margin, unbalanced/balanced/low_survivors/n_shield)=+0.643/-0.396/+0.036/+0.023
+  n=10, rows=140
+    A_control_u0          count=  3; min_margin=+0.15287; u=0; low_unshielded=[]; Dn_shields=[]; row=(9, 13, 15, 17, 21, 25, 41, 43, 44)
+    B_sieve_complete      count=  8; min_margin=+0.07647; u=6; low_unshielded=[]; Dn_shields=[]; row=(1, 2, 3, 5, 7, 16, 18, 46, 48)
+    D_eq_n_killed         count= 10; min_margin=+0.06667; u=4; low_unshielded=[]; Dn_shields=[10]; row=(2, 8, 10, 18, 21, 33, 34, 44, 46)
+    fold_rich_top20pct    count= 28; min_margin=+0.07647; u=7; low_unshielded=[]; Dn_shields=[20, 40]; row=(3, 5, 6, 20, 26, 34, 40, 45, 46)
+    corr(-margin, unbalanced/balanced/low_survivors/n_shield)=+0.461/-0.009/-0.097/-0.050
+  n=14, rows=60
+    A_control_u0          count=0
+    B_sieve_complete      count=  1; min_margin=+0.08075; u=8; low_unshielded=[]; Dn_shields=[]; row=(2, 12, 13, 17, 21, 33, 38, 40, 46, 47, 52, 54, 55)
+    D_eq_n_killed         count=  9; min_margin=+0.06556; u=12; low_unshielded=[]; Dn_shields=[14]; row=(1, 13, 14, 15, 16, 17, 25, 30, 37, 39, 40, 52, 58)
+    fold_rich_top20pct    count= 12; min_margin=+0.06556; u=12; low_unshielded=[]; Dn_shields=[14]; row=(1, 13, 14, 15, 16, 17, 25, 30, 37, 39, 40, 52, 58)
+    corr(-margin, unbalanced/balanced/low_survivors/n_shield)=+0.556/-0.268/-0.065/-0.053
+
+TOURNAMENT ANALYSIS
+  vertices: proof lenses/denominator gates, not runners.
+  pair observable: (Lemma-B delivery, Lemma-A control, divisibility power, observer coupling, maturity).
+  switch: lexicographically larger observable gets the arc; declaration order is the tie Hamiltonian path.
+  ranking: ['D_denominator_divisibility_shield', 'visible_fold_a_plus_b_eq_c', 'Phi_endpoint_prime_residual', 'D_eq_n_unshielded_delta_clock', 'augmentation_nonzero_count', 'circuit_free_A_margin', 'balanced_energy_background']
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3_cycles: 0
+  Hamiltonian_path_count: 1
+  first_Hamiltonian_path: ('D_denominator_divisibility_shield', 'visible_fold_a_plus_b_eq_c', 'Phi_endpoint_prime_residual', 'D_eq_n_unshielded_delta_clock', 'augmentation_nonzero_count', 'circuit_free_A_margin', 'balanced_energy_background')
+
+ASSUMPTION CHALLENGE
+  Candidate vertices considered: runners, pair denominators D=a+b, shield speeds v with D|v, fold clauses, deleted-fold shadows, residues, endpoint components, Phi terms, balanced relations, and proof obligations.
+  Chosen quotient: denominator gates plus A/B proof buckets.
+  Preserved predicate: which low pair-pinches are killed before they can become lonely clocks, and whether D=n survives as the delta-clock.
+  Destroyed information: full endpoint-owner geometry and full prime-fiber languages; those re-enter at the Phi/endpoint residual.
+  Challenged assumption: Lemma B is only the direct relation a+b=c.  The useful structural unit is D|v at a pair denominator D=a+b.
