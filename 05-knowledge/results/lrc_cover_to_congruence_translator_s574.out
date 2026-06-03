@@ -1,0 +1,6 @@
+Translator verification: config TIGHT <=> every G(S') component coverable by congruence
+  n= 6: 2493 configs; translator agrees with direct tight/loose = 2493/2493; endpoints owned by speed<n: 1782/5478 (33%); actually tight=0
+  n= 8: 2500 configs; translator agrees with direct tight/loose = 2500/2500; endpoints owned by speed<n: 1936/5366 (36%); actually tight=0
+  n=10: 2500 configs; translator agrees with direct tight/loose = 2500/2500; endpoints owned by speed<n: 2568/5244 (49%); actually tight=0
+  n=12: 2500 configs; translator agrees with direct tight/loose = 2500/2500; endpoints owned by speed<n: 2926/5032 (58%); actually tight=0
+  n=14: 2500 configs; translator agrees with direct tight/loose = 2500/2500; endpoints owned by speed<n: 3325/5018 (66%); actually tight=0

@@ -1,0 +1,7 @@
+
+w-FREE cross-relation u_b(k_a n+1)=u_a(k_b n-1) on small-owner (<n) components
+  n= 6: small-owner components: cross-relation HOLDS 0/490 (0.00%), FAILS 490 (=> those components uncoverable for ANY w)
+  n= 8: small-owner components: cross-relation HOLDS 0/1330 (0.00%), FAILS 1330 (=> those components uncoverable for ANY w)
+  n=10: small-owner components: cross-relation HOLDS 0/2594 (0.00%), FAILS 2594 (=> those components uncoverable for ANY w)
+  n=12: small-owner components: cross-relation HOLDS 0/5298 (0.00%), FAILS 5298 (=> those components uncoverable for ANY w)
+  n=14: small-owner components: cross-relation HOLDS 0/9740 (0.00%), FAILS 9740 (=> those components uncoverable for ANY w)

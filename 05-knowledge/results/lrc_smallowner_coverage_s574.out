@@ -1,0 +1,6 @@
+Coverage of C' by PROVED criteria: small-owner-component (w-free) and B' (long interval)
+  n= 6: 1993 mult-of-n; small-owner-component=163 (8.2%); small-owner OR B' = 1462 (73.4%); residual=531  e.g.(3, 10, 11, 12, 13)
+  n= 8: 1999 mult-of-n; small-owner-component=376 (18.8%); small-owner OR B' = 1633 (81.7%); residual=366  e.g.(2, 4, 8, 12, 13, 14, 15)
+  n=10: 2000 mult-of-n; small-owner-component=667 (33.4%); small-owner OR B' = 1840 (92.0%); residual=160  e.g.(2, 4, 5, 7, 10, 11, 12, 14, 16)
+  n=12: 2000 mult-of-n; small-owner-component=1125 (56.2%); small-owner OR B' = 1920 (96.0%); residual=80  e.g.(2, 3, 4, 6, 11, 12, 13, 14, 15, 17, 18)
+  n=14: 2000 mult-of-n; small-owner-component=1626 (81.3%); small-owner OR B' = 1981 (99.0%); residual=19  e.g.(2, 3, 5, 6, 7, 11, 12, 13, 14, 15, 17, 18, 21)

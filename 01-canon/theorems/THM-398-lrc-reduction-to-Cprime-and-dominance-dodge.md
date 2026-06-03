@@ -154,6 +154,49 @@ points `k/n` (radius `1/n²`), and one must find a point in some clock gap
 half the time (773/1499 at `n=6`), so the witness genuinely ranges over the gap
 interior — confirming the residual is a true interval-search, not a fixed sub-clock.
 
+## 4½. The cover→congruence translator and Lemma C (small-owner uncoverability)
+
+Each endpoint of a component of `G(S')` carries an **owner**: a left endpoint is
+`a = (k_a n + 1)/(n u_a)` (runner `u_a` just turned safe), a right endpoint is
+`b = (k_b n − 1)/(n u_b)`. The condition "(a,b) lies in the `v=nw` arc centred at
+`j/(nw)`" *translates*, on clearing denominators (`× n u w`), into the **endpoint-owner
+congruences**
+```
+|w(k_a n + 1) − j·u_a| < u_a/n     and     |w(k_b n − 1) − j·u_b| < u_b/n.
+```
+For an owner `u < n` the right side is `< 1`, and the bracket is an integer, so it is
+**forced to 0** — the endpoint must equal the arc centre: `a = j/(nw)` (resp. `b`).
+This rigidity gives a new w-free theorem:
+
+> **Lemma C (small-owner uncoverability).** If a component `(a,b)` of `G(S')` has
+> *both* owners `u_a < n` and `u_b < n`, then `S = S' ∪ {nw}` is loose for **every**
+> `w`. *Proof.* If `(a,b)` sat inside one arc centre `c=j/(nw)`, the small-owner
+> congruences force `a=c` and `b=c`, hence `a=b`, contradicting `a<b`. So `(a,b)` is
+> not inside any arc; being connected with the arcs separated by nonempty `v`-safe
+> gaps, it contains a `v`-safe point — a point of `G(S)`. ∎
+
+(The "cross-relation" `u_b(k_a n+1) = u_a(k_b n−1)` that two small owners would need is
+exactly `a=b`: verified `0/490, 0/1330, 0/2594, 0/5298` for `n=6,8,10,12`.) The slack
+in the congruence appears **only** for owners `u ≥ n` (window `±u/n ≥ ±1`), so an
+endpoint can sit off-centre inside an arc *only* when its owner is large.
+
+**Translator verified:** the congruence-window characterisation matches direct
+tight/loose computation **100%** (`2500/2500` each `n=6..14`). **Coverage by the two
+proved criteria** (Lemma C ∪ Criterion B′), multiple-of-`n` configs:
+
+| n | small-owner-component (Lemma C) | Lemma C ∪ B′ | residual |
+|---|---|---|---|
+| 6 | 8.2% | 73.4% | 531 |
+| 8 | 18.8% | 81.7% | 366 |
+| 10 | 33.4% | 92.0% | 160 |
+| 12 | 56.2% | 96.0% | 80 |
+| **14** | **81.3%** | **99.0%** | **19** |
+
+The proved coverage **grows toward the frontier**: at `n=14` the two criteria
+discharge `99%` of multiple-of-14 configs. The residual (`~1%`) is exactly the configs
+where every component is short **and** every component has a **large** (`≥ n`) binding
+owner — the only regime where the congruence slack permits an off-centre fit.
+
 ## 5. Status ledger
 
 | Statement | status |
@@ -163,7 +206,9 @@ interior — confirming the residual is a true interval-search, not a fixed sub-
 | Lemma B / Cor B1 (dominant multiple dodge, uses LRC(n−1)) | **PROVED** (§3) |
 | Cor B2 (one dominant runner ⟹ loose) | **PROVED** (§3), verified 1500×5 |
 | Criterion B′ (long component ⟹ loose) | **PROVED** (§4) |
-| C′ in the all-short / small-multiple case | **OPEN** (the equidistribution residual) |
+| Lemma C (both-small-owner component ⟹ loose, w-free) | **PROVED** (§4½), covers 81% at n=14 |
+| Lemma C ∪ B′ | **PROVED**, covers **99%** of multiple-of-14 configs |
+| C′ residual: every component short **and** every binding owner `≥ n` | **OPEN** (~1% at n=14; needs the large-owner congruence-slack analysis) |
 
 So LRC(14) now sits on a single open assertion: *the thin evenly-spaced danger arcs
 of a multiple of 14 cannot cover the safe set of the other twelve runners* (the

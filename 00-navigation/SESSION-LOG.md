@@ -1,5 +1,13 @@
 # Session Log
 
+## opus-2026-06-03-S574 - Cover→congruence translator yields a NEW w-free theorem (Lemma C); Lemma C ∪ B' covers 99% of multiple-of-14 configs (HYP-2105)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** focus not on more prime enumeration, but a translator from all-short interval cover assignments to endpoint-owner congruences.
+**Built the translator.** For S=S'∪{v=nw} (n|v), tight ⟺ every component (a,b) of G(S') fits one v-arc (centre j/(nw), radius 1/(n²w)). Endpoints carry OWNERS: left a=(k_a n+1)/(n u_a), right b=(k_b n−1)/(n u_b). "(a,b) in arc j" TRANSLATES (×n u w) to ENDPOINT-OWNER CONGRUENCES |w(k n+ε)−j u|<u/n. **Verified 100% (2500/2500 each n=6..14)** vs direct tight/loose.
+**RIGIDITY ⟹ NEW THEOREM:** for owner u<n the RHS<1, bracket is an integer ⟹ =0 ⟹ endpoint EXACTLY at the arc centre (slack only for u≥n). **LEMMA C (PROVED, w-free):** a G(S') component with BOTH owners <n is uncoverable for EVERY w — two rigid endpoints can't be the same centre ⟹ a=b. The cross-relation u_b(k_a n+1)=u_a(k_b n−1) two small owners need IS a=b: verified 0 hold / 490,1330,2594,5298 (n=6,8,10,12). Small-owner congruences are infeasible by inspection.
+**COVERAGE (no enumeration):** Lemma C alone 8.2/18.8/33.4/56.2/**81.3%** (n=6/8/10/12/14, grows toward frontier); **Lemma C ∪ Criterion B' = 73.4/81.7/92.0/96.0/99.0%**. At n=14, 99% of mult-of-14 configs PROVED loose.
+**RESIDUAL (~1% at n=14, OPEN):** every G(S') component short AND every component has a LARGE binding owner (≥n) — only there does the congruence slack ±u/n permit an off-centre fit; now a bounded CRT/Diophantine feasibility on the large owners + w (verified never satisfiable). FRAME: translator converts geometry→arithmetic where infeasibility is PROVABLE (small=a=b immediate; large=bounded CRT) — vs enumeration's "0 in a box." Folded Lemma C + translator + coverage into THM-398. Convergent w/ codex-S580 (certificate calculus). Files: 07-reflections/lrc-cover-to-congruence-translator-and-the-small-owner-theorem-s574.md; THM-398 (updated §4½); 04-computation/lrc_cover_to_congruence_translator_s574.py (+.out), lrc_smallowner_coverage_s574.py (+.out); HYP-2105.
+
 ## opus-2026-06-03-S573 - The Vitali handoff equation is n|v: THM-398's split IS S551o's Vitali wall; Criterion B' = the Vitali-covering iff (proves 72→97% of C') (HYP-2104)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** see the connection to Vitali; search the repo for inspiration.
