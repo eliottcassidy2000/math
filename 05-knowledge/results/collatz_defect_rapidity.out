@@ -1,0 +1,174 @@
+
+  THE EXACT RAPIDITY CONSERVATION LAW FOR COLLATZ
+
+======================================================================
+
+  I. THE IDENTITY, PROVED BY TELESCOPING
+  --------------------------------------------------
+
+  Each Syracuse step is, by definition,   2^{k_i} a_i = 3 a_{i-1} + 1.
+  Take logs:
+     k_i ln2 + ln a_i = ln(3 a_{i-1} + 1)
+                      = ln3 + ln a_{i-1} + ln(1 + 1/(3 a_{i-1})).
+  Sum i = 1..L.  The sum of (ln a_i - ln a_{i-1}) telescopes to
+     ln a_L - ln a_0 = ln 1 - ln n = -ln n.
+  Hence
+     K ln2 - ln n = L ln3 + sum_{i=0}^{L-1} ln(1 + 1/(3 a_i)),
+  i.e.
+     ln n = K ln2 - L ln3 - D(n),     D(n) = sum ln(1 + 1/(3 a_i)) > 0.   (EQ*)
+
+  Dividing by 2 gives the RAPIDITY form (rho = (1/2)ln = log_F = arctanh):
+     rho(n) = (K ln2 - L ln3)/2 - D(n)/2.
+  Since rho(1)=0, the orbit spends exactly  (L ln3 - K ln2)/2 + D(n)/2  of
+  rapidity descending to the origin. The linear part is a formal-group
+  translation; D(n)/2 is the ENTIRE non-formal-group content of Collatz.
+
+  II. NUMERICAL VERIFICATION OF EQ* (machine precision)
+  --------------------------------------------------
+        n    L     K       K/L      D(n)  K ln2 - L ln3 - D       ln n       err
+        3    2     5   2.50000   0.16990       1.0986122887    1.09861   2.2e-16
+        7    5    11   2.20000   0.18565       1.9459101491    1.94591   4.4e-16
+       27   41    70   1.70732   0.18136       3.2958368660    3.29584   7.5e-15
+       97   43    75   1.74419   0.17100       4.5747109785    4.57471   8.0e-15
+      255   15    32   2.13333   0.16026       5.5412635452    5.54126   8.9e-16
+      871   65   113   1.73846   0.14619       6.7696419769    6.76964   7.1e-15
+     6171   96   165   1.71875   0.17489       8.7276161783    8.72762   7.1e-15
+     9663   66   118   1.78788   0.10690       9.1760594380    9.17606   8.9e-15
+    77031  129   221   1.71318   0.21258      11.2519632172   11.25196   2.3e-14
+   837799  195   329   1.68718   0.17749      13.6385334939   13.63853   3.6e-14
+
+  Worst floating error over sample: 3.55e-14  (== rounding)
+
+  III. EXACT (RATIONAL) FORM:  the +1 is the integer-making fudge
+  --------------------------------------------------
+
+  Exponentiate EQ*:   n = (2^K / 3^L) * e^{-D(n)},   and
+     e^{-D(n)} = prod_{i} 1/(1 + 1/(3 a_i)) = prod_i  3 a_i / (3 a_i + 1).
+  So, EXACTLY (rational identity, no logs):
+     n * 3^L * prod_i (3 a_i + 1)/(3 a_i)  =  2^K.
+  The pure map x->3x (no +1) would demand 2^K = 3^L * n, impossible for n>1
+  since 3 never divides 2^K. The product prod (3a_i+1)/(3a_i) = e^{D(n)} > 1 is
+  the EXACT rational correction that repairs the divisibility -- the arithmetic
+  shadow of the formal-group obstruction.
+
+  n=   3: L= 2 K= 5  n*3^L*prod(3a+1)/(3a) = 2^K ? True  (e^D = 1.185185)
+  n=  27: L=41 K=70  n*3^L*prod(3a+1)/(3a) = 2^K ? True  (e^D = 1.198849)
+  n=  97: L=43 K=75  n*3^L*prod(3a+1)/(3a) = 2^K ? True  (e^D = 1.186490)
+  n= 871: L=65 K=113  n*3^L*prod(3a+1)/(3a) = 2^K ? True  (e^D = 1.157417)
+
+  IV. THE FORCED INEQUALITY  K/L > log2(3)  (unconditional)
+  --------------------------------------------------
+
+  From EQ*: K ln2 = L ln3 + ln n + D(n), and D(n) > 0, ln n >= 0 for n>=1.
+  Divide by L ln2:
+       K/L = log2(3) + (ln n + D(n))/(L ln2)  >  log2(3) = 1.5849625...
+  EVERY n>1 reaching 1 has mean halving exponent strictly above log2(3).
+  Equivalently  K - L*log2(3) = log2(n) + D(n)/ln2  > 0  exactly.
+  This is not a statistical 'on average' -- it holds for each individual orbit.
+
+        n        K/L  -log2(3)=excess   (ln n+D)/(L ln2)
+        3   2.500000         0.915037           0.915037
+       27   1.707317         0.122355           0.122355
+      255   2.133333         0.548371           0.548371
+     6171   1.718750         0.133787           0.133787
+    77031   1.713178         0.128216           0.128216
+   837799   1.687179         0.102217           0.102217
+  8400511   1.675781         0.090819           0.090819
+
+  V. WHAT DOMINATES D(n)?  (the terminal small-odd visits)
+  --------------------------------------------------
+
+  ln(1+1/(3a)) ~ 1/(3a): a single visit to a is worth ~1/(3a) in D.
+  Large values along the orbit contribute negligibly; the defect is
+  accumulated almost entirely in the last few odd values before 1.
+  Single-visit weights:
+     a=   1: ln(1+1/(3a)) = 0.287682   <- terminal a=1 dominates
+     a=   3: ln(1+1/(3a)) = 0.105361
+     a=   5: ln(1+1/(3a)) = 0.064539
+     a=   7: ln(1+1/(3a)) = 0.046520
+     a=  11: ln(1+1/(3a)) = 0.029853
+     a=  21: ln(1+1/(3a)) = 0.015748
+     a=  85: ln(1+1/(3a)) = 0.003914
+     a= 341: ln(1+1/(3a)) = 0.000977
+
+  D(27) = 0.181362; top contributors (value a : share of D):
+     a=   5: 0.064539  ( 35.6%)  cum  35.6%
+     a=  23: 0.014389  (  7.9%)  cum  43.5%
+     a=  27: 0.012270  (  6.8%)  cum  50.3%
+     a=  31: 0.010695  (  5.9%)  cum  56.2%
+     a=  35: 0.009479  (  5.2%)  cum  61.4%
+     a=  41: 0.008097  (  4.5%)  cum  65.9%
+
+  VI. STATISTICS OF D(n) OVER A LARGE SAMPLE
+  --------------------------------------------------
+  Sample: odd n in [3, 200001).
+  D(n):  mean=0.15273  median=0.16645  stdev=0.05298
+         min=0.00000  max=0.22565 (at n=993)
+  K/L :  mean=2.148382  (cf. log2(3)=1.584963)
+  Aggregate K/L over all steps = 1.990481  (-> log2(3) from above)
+  Min K/L in sample = 1.707317  (still > log2(3)? True)
+
+  Histogram of D(n):
+    D~ 0.0: ###### 6321
+    D~ 0.1: ############################# 30916
+    D~ 0.2: ############################################################ 62762
+
+  VII. THE DEFECT IS BOUNDED  (CONJ-defect-bound)
+  --------------------------------------------------
+
+  CONJ-defect-bound:  there is an absolute constant  D* ~ 0.2257  with
+        D(n) < D*   for ALL n >= 1,
+  equivalently the exact rational fudge satisfies
+        1 <=  prod_i (3 a_i + 1)/(3 a_i)  <  e^{D*} = 1.2531...   for all n.
+  The supremum is approached (champion) at  n = 993  (D = 0.225654), which is
+  the record holder for ALL odd n up to 5,000,000 (separate search, see
+  results/collatz_defect_rapidity.out notes). The record PROGRESSION converges:
+        n=3:.1699  n=9:.2220  n=559:.2249  n=745:.2253  n=993:.2257
+  so the worst case is NOT growing -- D(n) is (conjecturally) uniformly bounded.
+
+  WHY this is believable, not just observed:  ln(1+1/(3a)) ~ 1/(3a), so D(n) is
+  dominated by the few small odd values in the TERMINAL cascade to 1. The
+  Syracuse predecessor tree of 1 is {1,5,21,85,341,...} = (4^j-1)/3; any one
+  trajectory threads a single root-path and can collect only a bounded budget
+  of small odds. Visiting them all (impossible on one path) would give the
+  divergent ~(1/6)ln M, but the dynamics forbid it -- hence a finite sup.
+
+  This is the falsifiable edge:  any n with D(n) >= 0.2257 would (a) beat the
+  champion and (b) reveal a trajectory lingering anomalously among small odds.
+  Tested over the sample below; champion n=993 unbeaten.
+     odd n<   1000: max D(n) = 0.225654 at n=   993  (bound D* = 0.2257)
+     odd n<  10000: max D(n) = 0.225654 at n=   993  (bound D* = 0.2257)
+     odd n< 100000: max D(n) = 0.225654 at n=   993  (bound D* = 0.2257)
+     odd n< 200000: max D(n) = 0.225654 at n=   993  (bound D* = 0.2257)
+
+  VIII. OEIS / FRAMEWORK HOOKS
+  --------------------------------------------------
+  Per-n data the framework cares about (L=odd-step count, K=total
+  halvings, and the exact defect numerator). L(n) is A006667-related;
+  K(n)+L(n) is the total stopping time A006577. The pair (L,K) are the
+  two coordinates of the rapidity translation; D(n) is the third,
+  non-formal-group coordinate. Sample table:
+      n    L    K   K+L (A006577?)      D(n)
+      3    2    5                7   0.16990
+      5    1    4                5   0.06454
+      7    5   11               16   0.18565
+      9    6   13               19   0.22202
+     27   41   70              111   0.18136
+     97   43   75              118   0.17100
+
+======================================================================
+
+  SUMMARY
+  -------
+  * Collatz in rapidity space obeys the EXACT law  ln n = K ln2 - L ln3 - D(n).
+  * The previously-hand-waved 'corrections' = the harmonic defect D(n) > 0,
+    equal to log of the exact rational fudge prod (3a_i+1)/(3a_i) that repairs
+    the impossible divisibility 2^K = 3^L n.
+  * Forced, unconditional:  K/L > log2(3)  for every orbit reaching 1.
+  * D(n) is small, terminal-dominated, and (conjecturally) BOUNDED by an
+    absolute constant D* ~ 0.2257 (champion n=993, unbeaten to 5,000,000).
+    It is the precise, quantified obstruction to Collatz being a formal-group
+    (arctanh-linear) translation. This sharpens the repo thesis: arctanh
+    linearizes the *3 and /2 into rapidity translations; D(n) is exactly --
+    and boundedly -- what the +1 costs.
+

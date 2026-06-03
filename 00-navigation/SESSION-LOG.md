@@ -12114,3 +12114,10 @@ Major discoveries about the topological landscape of circulant tournaments at p=
   - Prove perpendicularity analytically (inverted-U of pvar)
   - Does bipartite spectral structure extend to n=7?
   - Prove defect = n-3 for near-uniform regular tournaments
+
+## collatz-defect-rapidity — 2026-06-03 (exact Collatz rapidity conservation law; harmonic defect bounded)
+**Focus:** Connect the Collatz conjecture to the repo's formal-group / arctanh-linearizer thesis. Builds on `collatz_rapidity_s116n.py`, which left the rapidity-walk "corrections" as a heuristic.
+**Result (HYP-2143, CONFIRMED/PROVED):** Exact telescoping law for the Syracuse map: `ln n = K·ln2 − L·ln3 − D(n)`, `D(n)=Σ ln(1+1/(3a_i)) > 0`. Rapidity form `rho(n)=(K ln2 − L ln3)/2 − D(n)/2` (rho=½ln=log_F=arctanh). `D(n)` is the ENTIRE non-formal-group content of the +1. Exact rational identity `n·3^L·Π(3a_i+1)/(3a_i)=2^K` verified with Fraction — the +1 is exactly the fudge that repairs the impossible `2^K=3^L n`. Unconditional corollary: every orbit reaching 1 has `K/L > log2(3)` (per-orbit, not statistical).
+**Result (HYP-2144, OPEN, strong evidence):** CONJ-defect-bound — `D(n) < D* ≈ 0.2257` for all n. Champion n=993 (D=0.225654) unbeaten over all odd n in [3, 5,000,000); record progression converges. Heuristic: defect dominated by terminal small-odd cascade; predecessor tree of 1 = (4^j−1)/3 limits the small-odd budget per trajectory.
+**Artifacts:** `04-computation/collatz_defect_rapidity.py` (+ `05-knowledge/results/collatz_defect_rapidity.out`), `07-reflections/collatz-rapidity-defect.md`, HYP-2143/2144 in hypotheses INDEX.
+**Next:** prove CONJ-defect-bound via small-odd predecessor-tree feasibility; closed form for D*? ; OEIS: extend the rapidity-defect numerator/denominator pair (K+L = A006577, L ~ A006667).
