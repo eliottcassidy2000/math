@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T646** #lrc #safe-box #connection-atlas #anti-bohr #pinch-core #resonance | certainty: long repo archaeology / synthesis | source: codex-2026-06-03-S569
+Repo search collapses many LRC safe-box tangents into one primal-dual architecture: closure/rank and resonance dismiss or sort regimes; pair-sum pinch gives cheap primal witnesses; anti-Bohr endpoint protection gives dual cores; p-adic, entropy, symbolic, sector, braid, and coding lenses are useful when they preserve endpoint labels. Next scripts: witness-or-core, resonance-dual-code, sector-sandpile, vineyard stability, endpoint normal form. See `07-reflections/lrc-safe-box-connection-atlas-s569.md`.
+
 **T645** #lrc #safe-box #clocks #endpoint-core #pinch-clock | certainty: speculative synthesis | source: codex-2026-06-03-S568
 For the safe-box question, clocks have roles: closure/rank dismisses dense interior-hit cases; pinch candidates are the efficient primal witness clock; endpoint intervals give the decisive gap/wall/core certificate; resonance sorts hard closed orbits by folding; bare half-turn phase is only diagnostic unless endpoint-labelled. The clean checker is primal-dual: return a safe time or a minimal protected endpoint core. See `07-reflections/lrc-safe-box-clock-triage-and-wild-remodels-s568.md`.
 
