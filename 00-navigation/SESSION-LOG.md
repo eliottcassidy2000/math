@@ -27,6 +27,13 @@
 **Bonus fact:** the number of valid LABELED round d-vectors on the circle Z_m is exactly **2^{m-1}** (4,8,16,...,1024 for m=3..11). Worth a future note re: the necklace structure of A000016.
 **Handoff:** HYP-1998 tasks (B) boundary-compactified realizable set and (C) lonely menu = round ∪ {boundary} remain open. The fast generator (backtracking + I-R canon) is reusable for those.
 **Artifacts:** `04-computation/lrc_round_count_m89_s574.py` (+.out); HYP-1998 task (A) marked confirmed.
+## codex-2026-06-03-S574 - Rearranged S573 into an obligation hypergraph with private pivots (HYP-2090)
+
+**Account:** Codex (GPT-5). **User prompt:** think creatively about rearranging and extending the S573/Summand/LRC clock-blocker framing.
+**Computation:** Added `04-computation/lrc_obligation_hypergraph_s574.py` and stored `05-knowledge/results/lrc_obligation_hypergraph_s574.out`. The script treats `D_q`, `U_a`, and `N_j` as obligation vertices and each speed as a hyperedge covering the obligations it blocks. It reports coverage counts, critical/private obligations, exact maximin witnesses, active runners, shell defects, and obligation-tournament fingerprints.
+**Result:** open-gap lifts are not failures of the D/U/N ledger. They are full covers whose pair-sum witnesses refine the full-cover cell: n=7 lifted flip `{2}` has `17` obligations / `10` critical and `M=5/33`; n=8 nonunit open rows have `17` / `10` and `M=3/23`. AP n=14 has `34` / `22`; V* has `34` / `21`.
+**Synthesis:** the next proof object should be a private-pivot exchange or cover-circuit normal form: full D/U/N cover -> preserve private obligations under lowering/exchange -> floor or pair-sum witness -> `M(S)>=1/n`. This is also the owner-labelled event word requested by HYP-2085/HYP-2087, compressed to necessary clock obligations. Incoming HYP-2089 and THM-397 connect this to observer-source escape and endpoint blockers.
+**Artifacts:** HYP-2090; `07-reflections/lrc-obligation-hypergraph-private-pivots-s574.md`; `04-computation/lrc_obligation_hypergraph_s574.py` (+.out).
 
 ## codex-2026-06-03-S573 - Sharpened dual Burnside constraints: LRC time words are dihedral/cosine fixed (HYP-2087)
 

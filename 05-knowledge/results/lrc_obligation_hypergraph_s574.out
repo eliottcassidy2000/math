@@ -1,0 +1,153 @@
+﻿LRC clock-obligation hypergraph (codex-2026-06-03 S574)
+==============================================================================
+Rows are speed sets; columns are D/U/N clock obligations.
+A strict sub-edge row must be a full hitting set for this hypergraph.
+Private obligations are the candidate pivots for exchange/descent proofs.
+
+[AP n=7 floor]
+  speeds=(1, 2, 3, 4, 5, 6)
+  n=7 C=13 floor=1/7 edge=2/13
+  M=1/7 witness=1/7 active=(1, 6)
+  flipset=() missed_shells=- doubled_shells=-
+  obligations=17 uncovered=- critical=9 {'D': 3, 'U': 6}
+  coverage_by_layer D:min=1,max=3,avg=1.60; U:min=1,max=1,avg=1.00; N:min=2,max=2,avg=2.00
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=3   count=1  {'U': 1} U3
+    v=4   count=2  {'D': 1, 'U': 1} D4, U4
+    v=5   count=2  {'D': 1, 'U': 1} D5, U5
+    v=6   count=2  {'D': 1, 'U': 1} D6, U6
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[lifted flip {2} n=7 open-gap]
+  speeds=(1, 5, 6, 11, 16, 17)
+  n=7 C=13 floor=1/7 edge=2/13
+  M=5/33 witness=10/33 active=(16, 17)
+  flipset=(2,) missed_shells=- doubled_shells=-
+  obligations=17 uncovered=- critical=10 {'D': 4, 'U': 6}
+  coverage_by_layer D:min=1,max=2,avg=1.20; U:min=1,max=1,avg=1.00; N:min=2,max=2,avg=2.00
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=5   count=2  {'D': 1, 'U': 1} D5, U5
+    v=6   count=3  {'D': 2, 'U': 1} D3, D6, U6
+    v=11  count=1  {'U': 1} U2
+    v=16  count=2  {'D': 1, 'U': 1} D4, U3
+    v=17  count=1  {'U': 1} U4
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[AP n=8 floor]
+  speeds=(1, 2, 3, 4, 5, 6, 7)
+  n=8 C=15 floor=1/8 edge=2/15
+  M=1/8 witness=1/8 active=(1, 7)
+  flipset=() missed_shells=- doubled_shells=-
+  obligations=17 uncovered=- critical=10 {'D': 4, 'N': 2, 'U': 4}
+  coverage_by_layer D:min=1,max=3,avg=1.50; U:min=1,max=1,avg=1.00; N:min=1,max=3,avg=1.86
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=4   count=4  {'D': 1, 'N': 2, 'U': 1} D4, U4, N2, N6
+    v=5   count=1  {'D': 1} D5
+    v=6   count=1  {'D': 1} D6
+    v=7   count=2  {'D': 1, 'U': 1} D7, U7
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[n=8 nonunit floor]
+  speeds=(1, 2, 3, 4, 5, 7, 12)
+  n=8 C=15 floor=1/8 edge=2/15
+  M=1/8 witness=1/8 active=(1, 7)
+  flipset=(3,) missed_shells=((6, 9),) doubled_shells=((3, 12),)
+  obligations=17 uncovered=- critical=7 {'D': 3, 'U': 4}
+  coverage_by_layer D:min=1,max=3,avg=1.67; U:min=1,max=1,avg=1.00; N:min=2,max=3,avg=2.14
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=4   count=1  {'U': 1} U4
+    v=5   count=1  {'D': 1} D5
+    v=7   count=2  {'D': 1, 'U': 1} D7, U7
+    v=12  count=1  {'D': 1} D6
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[n=8 nonunit open A]
+  speeds=(1, 2, 3, 4, 5, 7, 18)
+  n=8 C=15 floor=1/8 edge=2/15
+  M=3/23 witness=4/23 active=(5, 18)
+  flipset=() missed_shells=((6, 9),) doubled_shells=((3, 12),)
+  obligations=17 uncovered=- critical=10 {'D': 4, 'N': 2, 'U': 4}
+  coverage_by_layer D:min=1,max=3,avg=1.50; U:min=1,max=1,avg=1.00; N:min=1,max=3,avg=1.86
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=4   count=4  {'D': 1, 'N': 2, 'U': 1} D4, U4, N2, N6
+    v=5   count=1  {'D': 1} D5
+    v=7   count=2  {'D': 1, 'U': 1} D7, U7
+    v=18  count=1  {'D': 1} D6
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[n=8 nonunit open B]
+  speeds=(1, 3, 4, 5, 7, 13, 18)
+  n=8 C=15 floor=1/8 edge=2/15
+  M=3/23 witness=4/23 active=(5, 18)
+  flipset=(2,) missed_shells=((6, 9),) doubled_shells=((3, 12),)
+  obligations=17 uncovered=- critical=10 {'D': 4, 'N': 2, 'U': 4}
+  coverage_by_layer D:min=1,max=2,avg=1.33; U:min=1,max=1,avg=1.00; N:min=1,max=3,avg=2.00
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=4   count=4  {'D': 1, 'N': 2, 'U': 1} D4, U4, N2, N6
+    v=5   count=1  {'D': 1} D5
+    v=7   count=2  {'D': 1, 'U': 1} D7, U7
+    v=13  count=1  {'U': 1} U2
+    v=18  count=1  {'D': 1} D6
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[AP n=14 floor]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  n=14 C=27 floor=1/14 edge=2/27
+  M=1/14 witness=1/14 active=(1, 13)
+  flipset=() missed_shells=- doubled_shells=-
+  obligations=34 uncovered=- critical=22 {'D': 7, 'N': 6, 'U': 9}
+  coverage_by_layer D:min=1,max=6,avg=2.00; U:min=1,max=1,avg=1.00; N:min=1,max=6,avg=1.85
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=4   count=1  {'U': 1} U4
+    v=5   count=1  {'U': 1} U5
+    v=7   count=8  {'D': 1, 'N': 6, 'U': 1} D7, U7, N2, N4, N6, N8, N10, ... (+1)
+    v=8   count=2  {'D': 1, 'U': 1} D8, U8
+    v=9   count=1  {'D': 1} D9
+    v=10  count=2  {'D': 1, 'U': 1} D10, U10
+    v=11  count=2  {'D': 1, 'U': 1} D11, U11
+    v=12  count=1  {'D': 1} D12
+    v=13  count=2  {'D': 1, 'U': 1} D13, U13
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+[V* n=14 floor]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  n=14 C=27 floor=1/14 edge=2/27
+  M=1/14 witness=1/14 active=(1, 13)
+  flipset=(3,) missed_shells=((12, 15),) doubled_shells=((3, 24),)
+  obligations=34 uncovered=- critical=21 {'D': 6, 'N': 6, 'U': 9}
+  coverage_by_layer D:min=1,max=6,avg=2.08; U:min=1,max=1,avg=1.00; N:min=1,max=6,avg=1.85
+  private_obligations
+    v=1   count=1  {'U': 1} U1
+    v=2   count=1  {'U': 1} U2
+    v=4   count=1  {'U': 1} U4
+    v=5   count=1  {'U': 1} U5
+    v=7   count=8  {'D': 1, 'N': 6, 'U': 1} D7, U7, N2, N4, N6, N8, N10, ... (+1)
+    v=8   count=1  {'U': 1} U8
+    v=9   count=1  {'D': 1} D9
+    v=10  count=2  {'D': 1, 'U': 1} D10, U10
+    v=11  count=2  {'D': 1, 'U': 1} D11, U11
+    v=13  count=2  {'D': 1, 'U': 1} D13, U13
+    v=24  count=1  {'D': 1} D12
+  obligation_tournament score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1} directed_3_cycles=0 sccs=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths_at_least=1
+
+Synthesis
+------------------------------------------------------------------------------
+The D/U/N ledger is a labelled hitting-set hypergraph.
+Open-gap lifts are not failures of the ledger; they are full covers whose
+exact pair-sum witness rises above the floor but stays below the unit-shell edge.
+Private obligations identify descent pivots: replacing or lowering a runner must
+preserve its private D/U/N labels or immediately creates a clock witness.
+This is the owner-labelled event word requested by the Burnside/Fourier framing,
+but compressed to the obligations that are provably necessary for sub-edge rows.

@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T650** #lrc #obligation-hypergraph #private-pivots #clock-blockers #open-gap #burnside-labels | certainty: prototype + synthesis | source: codex-2026-06-03-S574
+Rearrange the S573 D/U/N clock-blocker ledger as a labelled hitting-set hypergraph: obligations are vertices, speeds are hyperedges, and strict sub-edge rows are full covers. Open-gap lifts are not ledger failures; they are full covers whose pair-sum witness refines the cover cell. Private obligations become descent pivots and the missing owner-labelled event word for the Burnside/Fourier program; they also connect to HYP-2089 observer-source escape and THM-397 endpoint blockers. See HYP-2090 and `07-reflections/lrc-obligation-hypergraph-private-pivots-s574.md`.
+
 **T649** #lrc #clock-blockers #second-gap #open-gap #divisibility #unit-shells | certainty: exact bounded correction | source: codex-2026-06-03-S573
 The global floor-only reading below `2/(2n-1)` is false over lifted integer rows: S573 finds n=7 `(1,5,6,11,16,17)` with `M=5/33` and n=8 nonunit-hole lifts with `M=3/23`. Sharper bound: any strict sub-edge row must pass three independent blocker gates: every `q<=n-1` divides some speed, every unit shell mod `2n-1` is hit, and every `j/n` tick is blocked at distance `0` or `1/n`. This is a labelled obligation layer for the Burnside/Fourier time-word work in HYP-2085/HYP-2087. See HYP-2088 and `07-reflections/lrc-clock-blocker-bounds-open-gap-lifts-s573.md`.
 
