@@ -1,0 +1,21 @@
+==========================================================================
+First-window RATIO theorem: v_max <= (n-1) v_min  =>  lonely on [1/(n vmin),(n-1)/(n vmax)]
+==========================================================================
+  n= 8: bounded-ratio configs tested=200; window-lonely=200; empty-window=0; failures=0
+        AP window = [1/8, 1/8] = single point {1/n}  (1/n = 1/8); lonely=True
+  n=10: bounded-ratio configs tested=200; window-lonely=200; empty-window=0; failures=0
+        AP window = [1/10, 1/10] = single point {1/n}  (1/n = 1/10); lonely=True
+  n=12: bounded-ratio configs tested=200; window-lonely=200; empty-window=0; failures=0
+        AP window = [1/12, 1/12] = single point {1/n}  (1/n = 1/12); lonely=True
+  n=14: bounded-ratio configs tested=200; window-lonely=200; empty-window=0; failures=0
+        AP window = [1/14, 1/14] = single point {1/n}  (1/n = 1/14); lonely=True
+
+==========================================================================
+READING
+==========================================================================
+  THEOREM (verified): v_max <= (n-1) v_min => S lonely on [1/(n vmin),(n-1)/(n vmax)],
+  so M(S) >= 1/n. This rigorously settles LRC@n for ALL bounded-speed-ratio configs, with the
+  AP {1..n-1} as the exact tight boundary (window = {1/n}). The ONLY remaining configs are
+  v_max > (n-1) v_min (large speed ratio) -- where fast runners wrap before slow ones leave the
+  collar, so the first-passage window is empty and a later (fine-pinch) window is needed. This
+  is the precise residual: LRC@n is PROVEN here except for large-ratio (v_max/v_min > n-1) sets.
