@@ -1,0 +1,32 @@
+S581 large-owner residue sieve after B' + Lemma C
+sample model: primitive rows with one multiple n*w, other speeds sampled below n+10
+residue sieve: compile each large-owner component to allowed w residues, then CRT-intersect
+bounded test: require a positive allowed w below the dominance cutoff
+
+n total  B'   small  union  large-res  CRT-empty  bounded-empty  live  overflow
+11  2500  92.2%  33.4%  94.4%        141   0.0%  75.2%   0.0%       35
+   exact-classified large-owner rows had no live bounded w residues; median modulus=23940
+12  2500  92.2%  35.5%  95.2%        119   0.0%  28.6%   0.0%       85
+   exact-classified large-owner rows had no live bounded w residues; median modulus=42840
+13  2500  93.3%  44.9%  95.8%        106   0.0%  20.8%   0.0%       84
+   exact-classified large-owner rows had no live bounded w residues; median modulus=45885
+14  2500  95.2%  57.9%  97.5%         63   0.0%   6.3%   0.0%       59
+   exact-classified large-owner rows had no live bounded w residues; median modulus=88380
+
+INTERPRETATION
+- B' kills long components; Lemma C kills any component with two small owners.
+- The remaining large-owner case is naturally periodic in w, so the next proof object is a CRT residue automaton.
+- Empty residue intersection is a w-free positive-measure certificate for the whole S' family.
+- Bounded-empty means residues exist only beyond the dominance cutoff, so the row is still proved loose.
+- Live intersections are the real residual: large-owner windows that survive all components and the dominance bound.
+- Tournament vertices for the next pass should be components or residue-automaton states, not runners.
+
+TOURNAMENT ANALYSIS
+vertices: Bprime_long_interval, LemmaC_small_owner, bounded_CRT_empty, live_CRT_state, modulus_overflow, exact_fallback
+pair observable: (unproved_fraction, modulus_growth, dependency_depth, -proof_strength, tie_order)
+switch: harder residual burden beats easier certified gate
+score_hist: {0:1, 1:1, 2:1, 3:1, 4:1, 5:1}
+directed_3_cycles: 0
+sccs: 6 singleton SCCs
+hamiltonian_path_count: 1
+hardness_path: exact_fallback > modulus_overflow > live_CRT_state > bounded_CRT_empty > LemmaC_small_owner > Bprime_long_interval

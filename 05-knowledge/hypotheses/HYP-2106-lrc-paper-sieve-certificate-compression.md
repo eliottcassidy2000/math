@@ -147,6 +147,9 @@ endpoint-labelled clocks above.
 - Reuse HYP-2105's gate vocabulary for the fallback order: the paper-sieve
   residual is `G3_all_short_Cprime_residual`, and the desired replacement for
   exact prime fibres is `G8_endpoint_cover_circuit_positivity`.
+- Add HYP-2107's bounded multiplier-residue automaton as the next fallback
+  before exact fibres: large-owner cover congruences should be intersected in
+  `w` and pruned by dominance.
 - For `n=12`, exploit `C=23` prime directly: the unit action is transitive on
   all antipodal shells, so any counterexample-like object must come from
   endpoint owners rather than nonunit shell holes.
@@ -182,5 +185,6 @@ realization theorem for endpoint-owner cores.
 - `04-computation/lrc_paper_vs_certificate_efficiency_s580.py`
 - `07-reflections/lrc-paper-sieve-vs-certificate-compression-s580.md`
 - HYP-2105, n=14 certificate calculus / local certificate primitives
+- HYP-2107, large-owner residue automaton
 - THM-398 / HYP-2103, dominance-dodge and all-short residual formalization
 - HYP-2104, Vitali handoff / arc-alignment residual

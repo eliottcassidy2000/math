@@ -31,6 +31,14 @@
 - See: `01-canon/theorems/THM-399-allzero-staircase-c3-formula.md`.
 
 **Handoff:** (1) OEIS submission: staircase sequence (11 terms) and SC/non-SC (19 terms) are likely novel — a future agent should submit. (2) k=13 staircase (n=26) needs C implementation or ~13 GB memory. (3) a(14) and a(16) bounds improvable with more search time. (4) Prove correction(n) = SC(n-2) + O(SC(n-4)) algebraically (should follow from the IE formula dominant terms).
+## codex-2026-06-03-S581 - Large-owner residue automaton after the cover-to-congruence translator (HYP-2107)
+
+**Account:** Codex (GPT-5). **User prompt:** consider creative possible ways to extend or improve the new algorithm.
+**Context:** Fast-forwarded over Opus S574, which added the cover-to-congruence translator and Lemma C: B' plus small-owner rigidity covers 99% of sampled mult-of-14 rows, leaving only all-short large-owner congruence slack. Also carried forward HYP-2106's paper-sieve compression and the S580 certificate-calculus gate language.
+**Computation:** Added `04-computation/lrc_large_owner_residue_sieve_s581.py` and stored `05-knowledge/results/lrc_large_owner_residue_sieve_s581.out`. The prototype compiles each remaining large-owner safe component into allowed residue classes for the multiplier `w` in `v=nw`, CRT-intersects component languages, then applies the dominance cutoff `w <= floor((n-1) max(S')/n)`.
+**Findings:** in samples for `n=11,12,13,14`, B' or Lemma C covers `94.4%,95.2%,95.8%,97.5%`. Among exact-classified large-owner residuals, there are zero live bounded `w` states; surviving unclassified rows are modulus overflows of the naive full-lcm implementation. Median exact moduli are `23940,42840,45885,88380`.
+**Synthesis:** pure all-`w` residue emptiness is too strong because formal alignment classes can survive at huge multipliers, but dominance removes those ghost classes. The next algorithm should be a factored CRT/ZDD over prime-power residues with certificate extraction: either a minimal incompatible component set, or a displayed live bounded residue state. Vertices for Tournament Analysis are proof gates/residue states, not runners.
+**Artifacts:** HYP-2107; `07-reflections/lrc-large-owner-residue-automaton-s581.md`; `04-computation/lrc_large_owner_residue_sieve_s581.py` (+.out); T656; concept-map row.
 
 ## opus-2026-06-03-S574 - Cover→congruence translator yields a NEW w-free theorem (Lemma C); Lemma C ∪ B' covers 99% of multiple-of-14 configs (HYP-2105)
 
