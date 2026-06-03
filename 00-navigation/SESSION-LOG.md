@@ -17,6 +17,17 @@
 **Tournament result:** cyclic `C21` Cayley tournaments have an order-21 element, hence a polygon spine. Nonabelian `F21` Cayley tournaments are still vertex-transitive and regular (`score=10`, `c3=385`) but have element orders only `1,3,7`; local root-star data cascades through the relator mesh `b a b^-1=a^2`, not one perimeter cycle. This matches the repo's THM-052/MISTAKE-013 caution: VT is stricter than regularity but broader than circulant polygonality.
 **Synthesis:** repaired slogan: `cyclic primitive VT trienerment <=> regular polygon`; general VT trienerment = local rooted profile + cascade law. Rebased over Opus HYP-2124, which gives the exact AP/unit-clock cyclic witness orbit; S589 is HYP-2125, the wider cyclic/dihedral/nonabelian taxonomy. For LRC, the cascade law must keep observer/source threshold payload, denominator shields, endpoints, and pincer labels. The n=14 creative handle is an inward-to-outward rigidity lift: centre folds to prime 7, then one 2-adic/block unfolding must preserve a labelled pincer certificate to the extreme observer.
 **Artifacts:** HYP-2125; `07-reflections/vt-trienerment-polygon-rigidity-s589.md`; `04-computation/vt_trienerment_polygon_rigidity_s589.py` (+.out); concept-map row.
+## codex-2026-06-03-S589 - Rigidity cascade: source fixed points propagate; unmarked shadows leak (HYP-2126)
+
+**Prompt:** explore where rigidity appears; look for local rigidity around a fixed point and global rigidity that cascades through isomorphic/symmetric objects like tournaments and LRC.
+
+**Synthesis:** rigidity is labelled fixed-point propagation, not raw symmetry size. This complements incoming HYP-2124's AP unit-clock rigidity and HYP-2125's VT trienerment taxonomy by asking which fixed-point labels survive quotienting. A local fixed point becomes proof-relevant only when its labels are natural under isomorphism and survive the quotient: observer-source state, augmentation grade, pair-denominator shield, endpoint-owner pin, pincer escape ledger, or L/M/R middle label. Unmarked classes, scores, deletion decks, and balanced energy are cache layers unless they preserve the marked LRC predicate.
+
+**Computation:** `tournament_rigidity_cascade_s589.py` exhaustively audits tournaments through n=6. Source roots form an exact cascade: source-rooted n-classes equal `U(n-1)` (`1,1,2,4,12` for n=2..6), deleting the source has zero collisions, and sources are fixed by automorphisms. Generic rooted views leak badly: at n=6, `296` rooted classes collapse to `36` side split profiles (`260` collisions, max fiber `64`), `56` unrooted classes, `22` score sequences, `12` delete-root parents, or `6` root scores. Even deletion decks collide (`56` classes -> `52` decks).
+
+**Proof route:** define a rigidity closure on labelled quotient states: source deletion/addition, relation inheritance, denominator shields `D|v`, endpoint pin/peel, pincer witness/blocker closure, and L/M/R middle routing. A state is rigid if closure reaches a source/safe-box witness, positive escape, or finite labelled core; flexible if a forgotten fiber mixes safe/unsafe predicate values. n=14 target: no labelled core survives source, denominator, endpoint, pincer, and middle-automaton closures.
+
+**Artifacts:** HYP-2126; `07-reflections/lrc-rigidity-cascade-fixed-points-s589.md`; `04-computation/tournament_rigidity_cascade_s589.py` (+.out); T664; concept-map and result-index rows.
 
 ## codex-2026-06-03-S588 - Pincer calculus: pinch clocks become a bidirectional observer-coupled certificate machine (HYP-2123)
 
