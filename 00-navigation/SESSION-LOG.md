@@ -1,5 +1,15 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S598 - WIDENED exhaustive C' box + first n=9 box (6.24M configs, 0 tight); 40x integer engine
+
+**Account:** monad-compute (compute node). Pure computation, no proof attempts.
+**TASK:** Executed the S597 handoff verbatim -- "widen K per n / push the exhaustive n=9 box (C(27,8)~2.2M)." S597 made C' (THM-398/HYP-2102: a PRIMITIVE speed set with a multiple of n must be LOOSE) EXHAUSTIVE inside finite boxes for n=4..8; S598 enlarges every box and adds n=9.
+**ENGINE (the enabler):** S597's Fraction breakpoint scan was ~3 ms/config -> n=9 K=3 est. ~50 min (over the 30-min cap). Replaced with a pure-INTEGER arc-cover test: loose <=> the closed unsafe arcs {t:||vt||<=1/n} (v arcs/runner, endpoints (kn-+1)/(nv)) do NOT cover the circle; scale by D=n*lcm(S) to integers, sort+sweep, uncovered units/D = exact margin. ~0.07 ms/config (**~40x faster**). SELF-CHECKED at runtime vs S597's `is_loose`/`open_safe_measure`: 0 disagreements (6000 looseness + 5000 measure random configs n=4..9; AP {1..n-1} correctly TIGHT n=4..14). No floats (MISTAKE-019).
+**BOXES (all strictly wider than S597 + new n=9):** n=4 K=20, n=5 K=14, n=6 K=8, n=7 K=5, n=8 K=4, n=9 K=3.
+**RESULT:** **6,237,910 configs, 0 tight** -- n=4 (37608), n=5 (511830), n=6 (1011829), n=7 (1021756), n=8 (2171084), **n=9 (1,483,803, first ever exhaustive cert)**, all PASS. Min looseness margins, all at AP-like rows with a multiple appended: n=4 1/24 @(1,3,4); n=5 1/50 @(1,3,4,5); n=6 7/540 @(1,3,4,5,18); n=7 1/147 @(1,3,4,5,7,24); n=8 93/14560 @(2,6,7,8,10,13,14); n=9 113/12852 @(1,3,4,5,7,9,17,24).
+**Files:** `04-computation/lrc_Cprime_exhaustive_box_widen_monad_s598.py` (+`05-knowledge/results/lrc_Cprime_exhaustive_box_widen_monad_s598.out`); updated HYP-2102 (standalone + INDEX).
+**Handoff:** still EMPIRICAL inside finite boxes -- the small-multiple residual (v<=(n-1)*max(others)) is the genuine open analytic core (one AP of thin arcs vs a union of intervals; equidistribution/3-distance). The integer engine now makes bigger boxes cheap: next compute could push exhaustive n=10 (C(30,9)~14M, ~15-20 min with this engine) or widen n=8/9 K by another step. The closest-approach rows are uniformly the AP-with-one-multiple family -- the natural target for the residual analytic statement.
+
 ## opus-2026-06-03-S596 - Collatz IS the LRC residual's two-block question (2^E−3^k ↔ the S595 rank-1 two-block); shared Baker + Vitali wall (HYP-2143)
 
 **Account:** Opus (remote-control, v1410-1). **User:** consider Collatz and how it is a similar question to work in the repo.
