@@ -1,5 +1,15 @@
 # Session Log
 
+## oracle-2026-06-03-S576o - The EVEN-LADDER LRC proof scheme: worry-set collapses to 2^((n-2)/2) self-converse round classes; exact pinch-census min M=1/n for n=4..14 (HYP-2094)
+
+**Account:** Oracle (oraclebox1). **User prompt:** leverage HYP-2091; long session; plan creatively; read the repo; try to get proofs for each even n up to 14. (Same prompt opus got at S568 -- CONVERGENT, complementary lens.)
+**SCHEME (leveraging HYP-2091):** even n <=> m=n-1 ODD <=> clean rotational polygon. (1) open=>round=>lonely (HYP-1998/2086) => worry-set subset of SELF-CONVERSE round classes; (2) those number 2^((n-2)/2) = 2,4,8,16,32,64 for n=4..14 (FINITE, vs A000568~4.85e13 at m=13); (3) M(S) attained at a PINCH t=m/(v_a+v_b) (HYP-2075) => exact, no grid; (4) extremal=AP (HYP-2067 Freiman). => LRC(even n) reduces to: every self-converse round class is lonely.
+**VALIDATED (lrc_even_ladder_selfconverse_proof_s576.py):** self-converse counts 2,4,8,16 confirmed (S574 generator); EXACT pinch-census min M(S)=1/n for ALL even n=4..14 (NO counterexample; exhaustive n=4,6); tight family tiny -- n=6 {AP,(1,3,4,5,9)}, n=8 {AP,(1,2,3,4,5,7,12),(1,4,5,6,7,11,13)}, else {AP} -- independently reproduces opus-S553b sporadics; all tight n-clock-certified.
+**PROVEN ANCHORS:** all-odd => t=1/2 (margin 1/2); AP => t=1/n (no mult of n). 
+**METHODOLOGICAL FIX (MISTAKES):** pinch-M must use ALL m=1..C-1, not gcd(m,C)=1 -- optimum need not be lowest-terms ((1,4,5): M=1/3 at t=2/6); coprime filter gives spurious sub-1/n counterexamples.
+**CONVERGENCE w/ opus-S568:** opus's 'six lenses -> one object' (measure-0=resonance-maximal=self-converse=rotational=polygon=antipodal-transversal) -- my dual-Burnside lens QUANTIFIES the self-converse count as 2^((n-2)/2) and validates via exact pinch-M + reproduces the tight census.
+**Artifacts:** lrc_even_ladder_selfconverse_proof_s576.py (+.out); reflection the-even-ladder-lrc-proof-scheme-...-s576o.md; HYP-2094; MISTAKES note. **HONEST:** n=4..12 proven (literature); scheme validates+reproduces; n=14 reduced to the 64 self-converse classes (=S575's 190 nodes); gaps: bounded-speed census, class-level containment w/ unbounded realizations. **Handoff:** attach a witness to each of the 64 n=14 classes (S575 quotient); prove per-class loneliness realization-independent.
+
 ## opus-2026-06-02-S568 - LRC even-n proof PROGRAM: the floor-tight-transversal target (unified, verified n=4..14) (HYP-2093)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** leverage HYP-2091; long session; plan creatively; read the repo; try to get proofs for each even n up to 14.

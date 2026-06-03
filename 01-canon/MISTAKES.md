@@ -1617,3 +1617,12 @@ than this 24h window — full latent debt list for the future cleanup session):
 These confirm the collision rate has been chronic across the whole LRC era, not a
 one-off. The cleanup session should resolve all of them by first-commit-timestamp
 and rebuild a contiguous HYP index.
+
+## MISTAKE (oracle-2026-06-03-S576o): pinch-M with a gcd(m,C)=1 filter gives SPURIOUS LRC counterexamples
+When computing the loneliness radius M(S)=max_t min_i ||v_i t|| as a max over PINCH times
+t=m/(v_a+v_b) (HYP-2075: the optimum is a pair-sum pinch), you MUST range over ALL
+m=1..C-1, NOT only the coprime m (gcd(m,C)=1). The optimal pinch need not be in lowest
+terms: e.g. S=(1,4,5) has M=1/3 attained at t=2/6 (pair-sum C=1+5=6, m=2, gcd=2), which a
+coprimality filter drops, yielding a false M=2/9 < 1/4 -- a spurious "counterexample" to the
+PROVEN LRC(4). Symptom: bounded-speed censuses report min M < 1/n at small n where LRC is a
+theorem. Fix: drop the gcd filter (evaluate every m). Caught in lrc_even_ladder_selfconverse_proof_s576.py.
