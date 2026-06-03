@@ -14,6 +14,17 @@ Reframed LRC via the covering-depth distribution `p_k=meas{t:depth(t)=k}` (depth
 **Findings:** in targeted primitive boxes through the known `n=8` sporadics, S602 finds `9` collapsed rows: AP for `n=4..8`; `(1,3,4,7)`; `(1,3,4,5,9)`; `(1,2,3,4,5,7,12)`; `(1,4,5,6,7,11,13)`.  All nine are two-seed addition chains.  The user sporadics are the unique primitive `{2}` flip floor transversals for `n=5,6` and have top equal to the previous two chain terms; the non-AP `n=8` rows are non-transversal and miss only nonunit shells of `C=15`.
 **Subproblem:** classify `p0` collapse as unit-boundary skeleton + additive-chain generation + THM-401 shell constraints.  Prime `C` appears to leave AP plus tiny transversal flips; composite `C` adds nonunit-shell ramification, the model relevant to `n=14` where `C=27=3^3`.
 **Artifacts:** HYP-2153; `07-reflections/lrc-p0-collapse-additive-chains-s602.md`; updates to HYP-1810, HYP-2084, HYP-2135, HYP-2138, hypothesis/result indexes, T670, and this session log.
+## claudebox-2026-06-03-S617 - LRC as circular-arc covering: the covering-depth master object + the additive-chain collapse family; consolidated structure analysis (HYP-2195)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** continue the recursive-log frame; the master object is the covering-depth distribution p_k; the p₀=0 collapse family is bigger than the AP (sporadic additive chains (1,3,4,7),(1,3,4,5,9)); test that singleton-wall regimes carry (loglog)¹ not ². Then (continuation): consolidated structure analysis.
+**Master object:** loneliness certificate = clock time avoiding every forbidden arc ⟹ LRC = circular-arc covering; p_k = meas{depth=k}, p₀ = lonely measure, everything is a functional of {p_k}.
+**First moment vacuous (verified+formalized):** arc measure 2δ ⟹ E[depth]=2n/(n+1)>1; union bound p₀≥1−2nδ ≤0 ∀n≥1. Content is in correlations.
+**Collapse family = additive chains (verified):** exhaustive search ⟹ {p₀=0} = exactly the additive chains (closed under a+b=c) — AP + sporadic (1,3,4,7),(1,3,4,5,9). a+b=c = (1,1,−1) resonance ⟹ collapse family = resonance family = apex-sheaf H⁰=∅. Mechanism: clock-distance subadditivity (formalized).
+**Singleton-wall exponent test (verified):** {1,2} opens p₀~ε^0.99 = exponent 1 = (loglog)¹ ✓; multi-relation walls bend sub-linear. Exponent = #broken relations = codim = altitude.
+**Formalized (sorry-free):** Math/LonelyRunner/CoveringDepth.lean (dZ, dZ_add_le, dZ_chain_le, union_bound_vacuous), pushed to math-lean main.
+**CONSOLIDATED STRUCTURE ANALYSIS (06-writeups):** the recent arc S614–S617 is one object — STRUCTURE × 2-adic CLOCK, resonance the obstruction, altitude the depth. Four equivalent faces: measure (p₀), sheaf (H⁰), resonance (Σmᵢvᵢ=0), altitude (iterated-log depth); p₀>0 ⟺ H⁰≠∅ ⟺ trivial resonance; depth = measure-refinement of H⁰; collapse = resonance-rich = H⁰=∅. The 2q seam (apex = σ-fixed ramification lane) is the shared load-bearing wall = the perspective key consolidated. One open problem subsumes all loose ends: characterize {p₀=0} = additive-chain/resonance family, all tight never sub-δ.
+**Artifacts:** HYP-2195; reflection; consolidated-structure-analysis-s617.md; 2 computation scripts; math-lean CoveringDepth.lean.
+
 
 ## opus-2026-06-03-S598 - Helly ENTROPY ACCOUNTING: three co-monotone order parameters; the worry-set is ISOSTATIC (full Helly = n−1) (HYP-2151)
 
@@ -29,6 +40,17 @@ Reframed LRC via the covering-depth distribution `p_k=meas{t:depth(t)=k}` (depth
 **Findings:** across `1800` row attempts for each `n` and regime, the audit found `1113` extracted empty certificates, `0` high-order empties, and `0` bounded-live rows: `1084` singleton certificates and `29` pair certificates. In `BC_only`, n=14 had `25` singleton walls and no pair/high/live rows; in the full stack, n=12 and n=14 were fully preempted.
 **Payoff:** HYP-2144 is presently in a Helly-dividend regime: bounded local determinant certificates appear before the global CRT modulus. HYP-2152 records the tax that would be paid if future families force high rank or a growing live component count.
 **Artifacts:** HYP-2152; `07-reflections/helly-scale-logarithm-s601.md`; updates to HYP-2144, HYP-2146, hypothesis/result indexes, tangents, and this session log.
+## claudebox-2026-06-03-S616 - The apex-lift certificate sheaf: building the sheaf layer (restriction, gluing, apex = the H¹ obstruction) HYP-2185
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** spend a math session thinking about an apex-lift certificate sheaf.
+**Found:** the concept already exists (HYP-2101/S579, ApexCertificate.lean) but only as the STALK (line arrangement, trichotomy, count (q−1)(q−2), r/p lift). The SHEAF itself — restriction, gluing, the apex-as-obstruction — was never written. This session built and formalized it.
+**Sheaf:** `CertLocus F s = {points avoiding every forbidden line indexed by s}`. Restriction antitone; gluing law `CertLocus(s∪t)=CertLocus s ∩ CertLocus t` (a sheaf because avoidance is a conjunction — gluing is automatic; the content is nonemptiness). H⁰ = global sections; H¹ obstruction = nonemptiness failure = HYP-2101's positive-measure interval = the resonance.
+**Apex = obstruction (verified 𝔽₇ + formalized):** the multiple-of-n / self-antipodal lane forbids the whole plane ⟹ empty stalk ⟹ H⁰=∅ (12→0). The r/p lift turns its covector into (0,0,d), d≠0 — a proper hyperplane ⟹ stalk nonempty ⟹ H⁰ restored (→72).
+**Antipodal ℤ/2 = perspective key:** σ:v↦−v gives antipodal speeds the SAME forbidden hyperplane, so σ pairs the 6 nonzero lanes (3 orbits) and FIXES the apex lane 0. The obstruction is exactly the ramification point of the double cover — automorphism rigidity, not chirality. Unifies HYP-2150 (2q), HYP-2145 (2-block), HYP-2170 (multiple-of-n).
+**Formalized (sorry-free):** ApexCertificate.lean §Sheaf — 7 new defs/theorems (CertLocus … certLocus_apex_lift_nonempty), pushed to math-lean main.
+**Handoff:** formalize gluing-nonemptiness over transverse lanes (⟹ LRC(14) reduces to the single apex lift); σ-stable H⁰={AP,V*}?; H¹=resonance energy.
+**Artifacts:** HYP-2185; `07-reflections/the-apex-is-the-ramification-point-s616.md`; `04-computation/apex_lift_certificate_sheaf_s616.py`; math-lean ApexCertificate.lean §Sheaf.
+
 
 ## opus-2026-06-03-S597 - Iterated logs = the INVERSE HYPEROPERATION TOWER; worry-set obstruction primes ω(2n−1) ~ loglog n (HYP-2145)
 
