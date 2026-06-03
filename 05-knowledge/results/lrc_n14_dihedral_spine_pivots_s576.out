@@ -1,0 +1,74 @@
+S576 n=14 dihedral unit-spine private-pivot audit
+==============================================================================
+n=14; C=27; floor=1/14; edge=2/27
+mandatory unit-shell spine=(1, 2, 4, 5, 7, 8, 10, 11, 13)
+dihedral quotient obligations=28
+  D: 12 fixed denominator gates; U: 9 unit shells; N: 7 reflected n-clock gates
+
+[AP floor]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  slack=(3, 6, 9, 12) slack_shells=(3, 6, 9, 12)
+  full_DUN_quotient_cover=True uncovered=-
+  private_quotient_obligations=19 {'D': 7, 'N': 3, 'U': 9}
+  M=1/14 witness=1/14 active=(1, 13)
+
+[V* floor]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  slack=(3, 6, 9, 24) slack_shells=(3, 3, 6, 9)
+  full_DUN_quotient_cover=True uncovered=-
+  private_quotient_obligations=18 {'D': 6, 'N': 3, 'U': 9}
+  M=1/14 witness=1/14 active=(1, 13)
+
+[zero-slack variant]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 27)
+  slack=(3, 6, 9, 27) slack_shells=(0, 3, 6, 9)
+  full_DUN_quotient_cover=False uncovered=(('D', 12),)
+  private_quotient_obligations=18 {'D': 6, 'N': 3, 'U': 9}
+  M=- witness=- active=-
+
+[double-3 variant]
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13, 24, 30)
+  slack=(3, 6, 24, 30) slack_shells=(3, 3, 3, 6)
+  full_DUN_quotient_cover=False uncovered=(('D', 9),)
+  private_quotient_obligations=17 {'D': 4, 'N': 4, 'U': 9}
+  M=- witness=- active=-
+
+Canonical unit-spine slack scan
+------------------------------------------------------------------------------
+  slack_bound=42; slack_candidates=14; rows=1001
+  full_DUN_quotient_covers=531
+  below_floor=0
+  floor_rows=2 open_gap_rows=1 edge_or_above=528
+  min_M=1/14 min_count=2
+  private_count_hist={12: 6, 13: 41, 14: 75, 15: 57, 16: 49, 17: 78, 18: 109, 19: 84, 20: 29, 21: 3}
+  floor_slack_shell_hist={(3, 6, 9, 12): 1, (3, 3, 6, 9): 1}
+  common_uncovered_for_non_covers:
+      230: D12
+      140: D9
+       65: D9,D12
+       30: D6,D12
+        5: D6,D9,D12
+  min_rows_sample:
+    slack=(3, 6, 9, 12) shells=(3, 6, 9, 12) M=1/14 t=1/14 active=(1, 13)
+    slack=(3, 6, 9, 24) shells=(3, 3, 6, 9) M=1/14 t=1/14 active=(1, 13)
+  open_gap_sample:
+    slack=(3, 6, 9, 36) shells=(3, 6, 9, 9) M=3/41 t=17/41 active=(5, 36)
+
+Tournament Analysis
+------------------------------------------------------------------------------
+  vertices: full-cover slack rows over the fixed unit spine
+  observable: M, private quotient pivots, max speed, slack tuple
+  switch: harder = smaller M, fewer pivots, smaller max speed
+  fingerprints: {'sampled_vertices': [(3, 6, 9, 24), (3, 6, 9, 12), (3, 6, 9, 36), (3, 9, 12, 42), (3, 12, 18, 42), (3, 9, 12, 21), (3, 12, 18, 21), (3, 9, 12, 24), (3, 9, 12, 36), (3, 9, 12, 18), (3, 12, 18, 24), (3, 9, 12, 30), (3, 12, 18, 33), (3, 12, 18, 36), (3, 6, 18, 24), (3, 9, 12, 27), (3, 12, 18, 27), (3, 12, 18, 30), (3, 9, 12, 33), (3, 6, 18, 36), (3, 9, 12, 39), (3, 12, 18, 39), (3, 9, 12, 15), (3, 6, 12, 18)], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+
+Synthesis
+------------------------------------------------------------------------------
+The n=14 unit-shell gate forces a nine-runner polygon spine before any
+counterexample can enter the strict sub-edge residual.  In the canonical
+spine scan through slack <=42, every full D/U/N quotient cover has
+M>=1/14; the minimum rows are exactly floor rows.
+This does not prove n=14: large representatives of the nine unit shells
+are not scanned.  It does isolate a proof subproblem:
+  normalize the unit-shell spine or prove an exchange that lowers it while
+  preserving private U pivots; then the four nonunit slack runners carry
+  all remaining D/N, endpoint-blocker, and composite-hole debt.
