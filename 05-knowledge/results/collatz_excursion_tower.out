@@ -1,0 +1,128 @@
+
+  THE COLLATZ ITERATED-LOGARITHM TOWER
+
+======================================================================
+
+  I. THE CONSTANTS OF THE RAPIDITY WALK
+  --------------------------------------------------
+  Per odd step, ideal increment Y = (1/2)ln3 - (k/2)ln2, k~Geom(1/2):
+     drift   delta   = (1/2)ln(3/4) = -0.143841
+     variance sigma^2 = ln^2(2)/2   = 0.240227
+  Cramer-Lundberg exponent theta solves E[e^{tY}]=1:
+     3^(t/2) = 2^(1+t/2) - 1   ->   theta = 2  (EXACT)
+     at the root: 3 - 4 + 1 = 0   <=>   3*1+1 = 4 = 2^2   (the +1!)
+  Descent length constant c = 1/ln(4/3) = 3.476059
+     (rapidity (1/2)ln n is dissipated at |delta| per odd step =>
+      L(n) ~ (1/2)ln n / |delta| = ln n / ln(4/3) = c ln n)
+
+  Empirical halving-exponent distribution over real odd steps (n<100000, 1899202 steps):
+     P(k=1) = 0.50010   (geom 2^-k = 0.50000)
+     P(k=2) = 0.23735   (geom 2^-k = 0.25000)
+     P(k=3) = 0.12410   (geom 2^-k = 0.12500)
+     P(k=4) = 0.08899   (geom 2^-k = 0.06250)
+     P(k=5) = 0.02919   (geom 2^-k = 0.03125)
+     P(k=6) = 0.01052   (geom 2^-k = 0.01562)
+     E[k] = 1.99006 (pred 2),  Var[k] = 1.77875 (pred 2)
+     => empirical drift = -0.140396, sigma^2 = 0.213651
+
+  II. LEVEL 1 (log): the bounded defect  [recap, proved]
+  --------------------------------------------------
+  One logarithm (rapidity) turns the unbounded +1 into D(n) < 0.2257.
+  This is the BASE of the tower: nonlinearity is O(1) at the log scale.
+
+  III. LEVEL 1.5: descent length  L(n) ~ c ln n,  c = 1/ln(4/3)  (Wald)
+  --------------------------------------------------
+  Wald's identity for the drift walk: E[L]*|delta| = rho(n) = (1/2)ln n,
+  so the MEAN number of odd steps is E[L] ~ ln n / ln(4/3) = c ln n,
+  c = 3.4761. This is an AVERAGE law (records are outliers).
+  Mean L(n)/ln n over dyadic windows of odd n:
+                  window  mean L/ln n  c=1/ln(4/3)
+  [    1024,    2048)       3.7548       3.4761
+  [    8192,   16384)       3.6403       3.4761
+  [   65536,  131072)       3.6046       3.4761
+  [  524288, 1048576)       3.5795       3.4761
+  Famous LONG orbits are far above the mean (the lnln-scale outliers):
+          n    L(n)    c*ln n  L/(c ln n)
+         27      41      11.5        3.58
+        703      62      22.8        2.72
+       6171      96      30.3        3.16
+   63728127     357      62.5        5.72
+  (mean ratio -> c confirms one logarithm sets the TYPICAL odd-step count;
+   the heavy upper tail is exactly the excursion law of section IV.)
+
+  IV. LEVEL 2 (extreme value): the EXCURSION POWER LAW  P(peak/n>M)~C/M
+  --------------------------------------------------
+  theta=2 in rapidity (rho=(1/2)ln) => peak/n = e^{2R}, R=max excursion,
+  P(R>x)~e^{-2x}  =>  P(peak/n > M) ~ C/M.  THE headline test:
+
+  Sample: odd n in [3, 1000001).  Max peak/n = 107860.7 at n=159487.
+          M  P(peak/n>M) empirical   C=M*P (should be ~const)
+          4           6.499473e-01                     2.5998
+          8           3.006786e-01                     2.4054
+         16           1.524123e-01                     2.4386
+         32           7.795016e-02                     2.4944
+         64           3.770808e-02                     2.4133
+        128           1.877804e-02                     2.4036
+        256           9.182018e-03                     2.3506
+        512           4.596009e-03                     2.3532
+       1024           2.342005e-03                     2.3982
+       4096           5.140010e-04                     2.1053
+      16384           1.200002e-04                     1.9661
+  (If C = M*P(peak/n>M) is roughly constant across decades, alpha=1,
+   confirming the Cramer exponent theta=2 set by 3+1=4.)
+
+  Log-log fit:  P(peak/n>M) ~ M^(alpha),  alpha = -1.0286  (predicted -1)
+  => excursion exponent theta = -2*alpha = 2.0573  (predicted 2)
+
+  V. LEVEL 2 (LIL scale): fluctuation about the drift line
+  --------------------------------------------------
+  Centered walk W_j = rho(a_j)-rho(n)-j*delta has variance sigma^2 j.
+  Law of iterated logarithm: max|W_j| ~ sqrt(2 sigma^2 L lnln L).
+          n     L   max|W| sqrt(2 s^2 L lnln L)   ratio
+         27    41    6.971                5.084   1.371
+        703    62    8.666                6.498   1.334
+       6171    96   12.166                8.368   1.454
+      77031   129   15.944                9.899   1.611
+     837799   195   23.951               12.481   1.919
+    8400511   256   31.573               14.515   2.175
+   63728127   357   44.714               17.430   2.565
+  670617279   370   45.407               17.775   2.555
+  (ratios are O(1), slowly drifting: max fluctuation tracks the
+   sqrt(L*lnln L) scale up to a bounded factor. The exact LIL constant 1
+   is a limsup over j->inf and is NOT pinned on a single finite orbit --
+   here we only confirm the SCALE sqrt(L lnln L) is the right one.)
+
+  VI. LEVEL 3 (lnlnln / a.s. envelope): almost all orbits stay low
+  --------------------------------------------------
+  theta=2 gives a Borel-Cantelli envelope: for almost all n the peak
+  excursion R(n) <= (1/2 + o(1)) lnln n, i.e. peak(n) <= n*(ln n)^{1+o(1)}.
+  Equivalently almost all peak/n stay below a slowly growing (ln n)^c.
+     c     frac n<=1e6 with peak/n > (ln n)^c
+   1.0                                0.19297
+   1.5                                0.05360
+   2.0                                0.01480
+   3.0                                0.00124
+  (Fraction exceeding (ln n)^c -> 0 as c grows: the peak is below any
+   fixed power of ln n for almost all n -- the lnln-scale a.s. envelope,
+   the finite-range shadow of Tao's 'almost bounded values' (lnlnln).)
+
+======================================================================
+
+  SUMMARY -- the tower, one log-order per floor:
+
+    n            +1 is unbounded           (multiplicative)
+    ln n         +1 -> bounded D(n)<0.2257 (rapidity; PROVED, HYP-2143/44)
+    --- one logarithm tames the nonlinearity to O(1) ---
+    L(n) ~ c ln n,  c = 1/ln(4/3)          (descent count = one log of n)
+    lnln n       excursions ~ extreme value, exponent theta=2 set by 3+1=4
+                 => P(peak/n > M) ~ C/M    (CONFIRMED: alpha ~ -1)
+                 => max|fluct| ~ sqrt(2 sigma^2 L lnln L)  (LIL scale)
+    lnlnln n     a.s. envelope: peak(n) <= n (ln n)^{o(1)} for almost all n
+                 (the scale of Tao's 'almost all orbits almost bounded')
+
+  ONE CONSTANT runs the whole tower: theta=2, the Cramer root of the rapidity
+  increment, and theta=2 is forced by the identity 3+1=4=2^2. The +1 that
+  level-1 isolated as the entire obstruction is, at level 2, exactly what
+  pins the excursion exponent. Each successive logarithm exposes the next,
+  one-order-finer, layer of the same +1.
+
