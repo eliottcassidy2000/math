@@ -249,6 +249,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 | `self_complementary_graphs_burnside_s566.py` | [STORED] | Parallel Burnside engine for UNDIRECTED simple graphs: total=A000088, self-complementary=A000171. Swap-override modification: pair-transposition does NOT apply iota for undirected. Verified n=1..40 vs OEIS b-file (0 mismatches). Catches wrong "known" A000171(13): 5765760 → correct 5600. Supports HYP-2080. | `self_complementary_graphs_burnside_s566.out` |
 
 | `lrc_witness_or_core_s570.py` | [STORED] | Exact primal-dual LRC checker: cheap clocks (`n`-clock, pair-sum pinch, antipodes), exact gap fallback, and endpoint-core peel. In audited primitive boxes through `k=6,max_speed=11`, pair-sum/antipode recover exact `M(S)`, route histograms collapse to `{n_clock, pair_sum}`, and every core peels empty. Supports HYP-2082. | `lrc_witness_or_core_s570.out` |
+| `lrc_antipodal_summand_units_s571.py` | [STORED] | Audits the bridge between summand-graph node `C`, LRC antipodal shells `{a,C-a}`, and multiplication by units. Prime `C` has one unit-visible orbit; composite `C=27` splits into unit/gcd-3/gcd-9 shells, with `V*` missing only nonunit `{12,15}` and doubling `{3,24}`. Supports HYP-2083. | `lrc_antipodal_summand_units_s571.out` |
+| `lrc_second_gap_transversal_audit_s572.py` | [STORED] | Follow-on to S571/S570: audits bounded rows with `M(S)<2/(2n-1)`. In primitive boxes through `k=6`, every below-edge row is `n`-clock tight with `M=1/n` and a perfect antipodal transversal; flip-set menu is AP plus known `{2}` sporadics, showing transversal floor-tightness is sharper than raw sumset minimality. Supports HYP-2084. | `lrc_second_gap_transversal_audit_s572.out` |
 
 ## Convention for new scripts
 

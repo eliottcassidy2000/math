@@ -1,0 +1,97 @@
+﻿Antipodal summand pairs and multiplicative unit visibility (S571)
+==============================================================================
+Odd C=2n-1 nodes: summand pairs {a,C-a} are exactly antipodal residue pairs.
+Units modulo C are the multiplicative clocks that can move a missed pair to {+1,-1}.
+Even C nodes have a fixed midpoint C/2, the missing distinct-summand/apex pair.
+
+Modulus fingerprints
+------------------------------------------------------------------------------
+C=9  factors=3^2      summand_pairs=4  unit_pairs=3  fixed_midpoint=no
+  unit-visible      : 3  {1,8}, {2,7}, {4,5}
+  nonunit gcd=3     : 1  {3,6}
+  unit-action orbits:
+    size=3, gcds=[1], reps=['{1,8}', '{2,7}', '{4,5}']
+    size=1, gcds=[3], reps=['{3,6}']
+
+C=11 factors=11       summand_pairs=5  unit_pairs=5  fixed_midpoint=no
+  unit-visible      : 5  {1,10}, {2,9}, {3,8}, {4,7}, {5,6}
+  unit-action orbits:
+    size=5, gcds=[1], reps=['{1,10}', '{2,9}', '{3,8}', '{4,7}', '{5,6}']
+
+C=13 factors=13       summand_pairs=6  unit_pairs=6  fixed_midpoint=no
+  unit-visible      : 6  {1,12}, {2,11}, {3,10}, {4,9}, {5,8}, {6,7}
+  unit-action orbits:
+    size=6, gcds=[1], reps=['{1,12}', '{2,11}', '{3,10}', '{4,9}', '{5,8}']
+
+C=15 factors=3 * 5    summand_pairs=7  unit_pairs=4  fixed_midpoint=no
+  unit-visible      : 4  {1,14}, {2,13}, {4,11}, {7,8}
+  nonunit gcd=3     : 2  {3,12}, {6,9}
+  nonunit gcd=5     : 1  {5,10}
+  unit-action orbits:
+    size=4, gcds=[1], reps=['{1,14}', '{2,13}', '{4,11}', '{7,8}']
+    size=2, gcds=[3], reps=['{3,12}', '{6,9}']
+    size=1, gcds=[5], reps=['{5,10}']
+
+C=27 factors=3^3      summand_pairs=13 unit_pairs=9  fixed_midpoint=no
+  unit-visible      : 9  {1,26}, {2,25}, {4,23}, {5,22}, {7,20}, {8,19}, {10,17}, {11,16}, ... (+1)
+  nonunit gcd=3     : 3  {3,24}, {6,21}, {12,15}
+  nonunit gcd=9     : 1  {9,18}
+  unit-action orbits:
+    size=9, gcds=[1], reps=['{1,26}', '{2,25}', '{4,23}', '{5,22}', '{7,20}']
+    size=3, gcds=[3], reps=['{3,24}', '{6,21}', '{12,15}']
+    size=1, gcds=[9], reps=['{9,18}']
+
+C=14 factors=2 * 7    summand_pairs=6  unit_pairs=3  fixed_midpoint=yes
+  unit-visible      : 3  {1,13}, {3,11}, {5,9}
+  nonunit gcd=2     : 3  {2,12}, {4,10}, {6,8}
+  unit-action orbits:
+    size=3, gcds=[1], reps=['{1,13}', '{3,11}', '{5,9}']
+    size=3, gcds=[2], reps=['{2,12}', '{4,10}', '{6,8}']
+
+C=28 factors=2^2 * 7  summand_pairs=13 unit_pairs=6  fixed_midpoint=yes
+  unit-visible      : 6  {1,27}, {3,25}, {5,23}, {9,19}, {11,17}, {13,15}
+  nonunit gcd=2     : 3  {2,26}, {6,22}, {10,18}
+  nonunit gcd=4     : 3  {4,24}, {8,20}, {12,16}
+  nonunit gcd=7     : 1  {7,21}
+  unit-action orbits:
+    size=6, gcds=[1], reps=['{1,27}', '{3,25}', '{5,23}', '{9,19}', '{11,17}']
+    size=3, gcds=[2], reps=['{2,26}', '{6,22}', '{10,18}']
+    size=3, gcds=[4], reps=['{4,24}', '{8,20}', '{12,16}']
+    size=1, gcds=[7], reps=['{7,21}']
+
+Speed-set fingerprints
+------------------------------------------------------------------------------
+AP n=14: C=27, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  zeros=0 midpoint=0 missed=0 doubled=0
+  missed_unit=-
+  missed_nonunit=-
+  doubled=-
+  reading: perfect antipodal transversal; residual is flip-set structure.
+
+V* n=14: C=27, speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  zeros=0 midpoint=0 missed=1 doubled=1
+  missed_unit=-
+  missed_nonunit={12,15}
+  doubled={3,24}
+  reading: only nonunit pairs are missed; this is the composite-modulus hole.
+
+n=8 sporadic A: C=15, speeds=(1, 2, 3, 4, 5, 7, 12)
+  zeros=0 midpoint=0 missed=1 doubled=1
+  missed_unit=-
+  missed_nonunit={6,9}
+  doubled={3,12}
+  reading: only nonunit pairs are missed; this is the composite-modulus hole.
+
+n=8 sporadic B: C=15, speeds=(1, 4, 5, 6, 7, 11, 13)
+  zeros=0 midpoint=0 missed=1 doubled=1
+  missed_unit=-
+  missed_nonunit={3,12}
+  doubled={4,11}
+  reading: only nonunit pairs are missed; this is the composite-modulus hole.
+
+Synthesis
+------------------------------------------------------------------------------
+Addition supplies the pair shell P_a={a,C-a}.
+Multiplication by units permutes the visible shells and supplies inverse witness times.
+Odd C has no midpoint shell; even C has a fixed midpoint/apex that must be treated separately.
+Composite odd C splits shells by gcd; missed nonunit shells are invisible to the S553 inverse clock.

@@ -1,5 +1,23 @@
 # Session Log
 
+## codex-2026-06-03-S572 - Below `2/(2n-1)`, the bounded residual is already floor-tight perfect transversals (HYP-2084)
+
+**Account:** Codex (GPT-5). **User prompt:** keep pushing on the 1D periodic maximin route, the `2n-1` antipodal witnesses, the similarity to the summand graph, and the roles of addition/multiplication and odd/even.
+**Git/context:** started from clean `main` after S570/S571 were already on origin. Re-read S559o/S560o (summand vs multiplicand), S546o (doubled-prime parity hinge), S513/S514 (add/multiply stack), and S571 (summand shells acted on by units) before extending.
+**Computation:** Added `04-computation/lrc_second_gap_transversal_audit_s572.py` and stored `05-knowledge/results/lrc_second_gap_transversal_audit_s572.out`. The script scans the S570 primitive boxes and classifies only the rows with `M(S) < 2/(2n-1)` by route, antipodal-transversal status mod `2n-1`, flip-set, and distinct-pair-sum excess.
+**Exact bounded result:** every below-edge row is already `n`-clock tight with `M(S)=1/n`; every one is a perfect antipodal transversal mod `2n-1`; the bounded flip-set menu is exactly AP (empty) plus the known `{2}` sporadics at `n=5,6`. Crucially, sumset minimality is not necessary: `(1,3,4,5,9)` lies below `2/(2n-1)` with sumset excess `3`.
+**Synthesis:** addition builds the odd shells `{a,2n-1-a}`; multiplication by units turns missed unit shells into witness clocks; odd `2n-1` removes the midpoint; evenness returns only at the `n`-clock floor branch as the midpoint/apex defect. So the second-gap route should split into unit-shell witnesses, residual perfect transversals, and composite nonunit-hole closure.
+**Artifacts:** HYP-2084; `07-reflections/lrc-addition-multiplication-odd-even-second-gap-s572.md`; `04-computation/lrc_second_gap_transversal_audit_s572.py` (+.out).
+
+## codex-2026-06-03-S571 - `2n-1` antipodal witnesses as summand graph shells acted on by units (HYP-2083)
+
+**Account:** Codex (GPT-5). **User prompt:** keep thinking along the `2n-1` antipodal-witness line, note similarities to the summand graph, and understand multiplication vs addition and odd vs even.
+**BUILT:** `04-computation/lrc_antipodal_summand_units_s571.py`, an audit of the bridge between summand-graph node `C`, antipodal shells `{a,C-a}`, and multiplication by units modulo `C`. The script records orbit/gcd-stratum fingerprints instead of a runner tournament because the predicate is unit visibility of additive shells. Included follow-on `04-computation/lrc_second_gap_transversal_audit_s572.py`, checking bounded below-`2/(2n-1)` rows against transversal/flip-set structure.
+**RESULTS:** prime `C=11,13` has every shell unit-visible in one orbit. Composite `C=15` splits into unit/gcd-3/gcd-5 shells; the n=8 sporadics miss only nonunit shells. Composite `C=27` splits into unit/gcd-3/gcd-9 shells; n=14 `V*={1..11,13,24}` misses only nonunit `{12,15}` and doubles `{3,24}`.
+**SYNTHESIS:** S553's witness lemma is addition plus multiplication: addition supplies summand shells `{a,C-a}`, multiplication by a unit supplies the inverse clock moving a missed shell to `{+1,-1}`. Odd `C=2n-1` removes the midpoint; even `C` has the fixed midpoint/apex; composite odd `C` creates nonunit holes invisible to unit clocks. S572 adds that below the second floor the bounded equality stratum is perfect-transversal/n-clock tight; sumset minimality is sufficient for AP but not the exact separator.
+**HONEST:** this is a structural bridge, not a spectral-gap proof. The theorem target is to close the nonunit-hole branch by a second clock, modulus lift, or gcd-stratum descent, while perfect transversals remain the flip-set branch.
+**Artifacts:** HYP-2083; HYP-2084; `07-reflections/lrc-2n-minus-1-summand-unit-bridge-s571.md`; `07-reflections/lrc-addition-multiplication-odd-even-second-gap-s572.md`; `04-computation/lrc_antipodal_summand_units_s571.py` (+.out); `04-computation/lrc_second_gap_transversal_audit_s572.py` (+.out).
+
 ## monad-compute-2026-06-02 - PINCH-sieve completeness extends to n=15,16,17 (HYP-2075): 19,825 configs, 0 misses
 
 **Account:** Claude (monad-compute node). **Role:** pure computation — run/produce data, no proofs.

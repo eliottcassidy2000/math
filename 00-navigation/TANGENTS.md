@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T648** #lrc #antipodal-witnesses #summand-graph #unit-action #odd-even #nonunit-hole | certainty: structural synthesis + bounded audit | source: codex-2026-06-03-S571
+The `2n-1` antipodal witness trick is the summand graph at odd node `C=2n-1` acted on by multiplicative units: addition supplies shells `{a,C-a}`, multiplication by units supplies inverse clocks, oddness removes the midpoint, evenness creates the apex, and composite odd `C` creates nonunit holes. For n=14, `C=27` splits into unit/gcd-3/gcd-9 shells; `V*` misses only nonunit `{12,15}` and doubles `{3,24}`. Follow-on S572 shows below-`2/(2n-1)` bounded rows are floor-tight perfect transversals, so flip-set structure beats raw sumset minimality. See HYP-2083, HYP-2084, `07-reflections/lrc-2n-minus-1-summand-unit-bridge-s571.md`, and `07-reflections/lrc-addition-multiplication-odd-even-second-gap-s572.md`.
+
 **T647** #lrc #maximin #pinch #spectral-gap #endpoint-core #prime-gears | certainty: breakthrough-route synthesis | source: codex-2026-06-03-S570
 LRC's special structure is a 1D periodic maximin: the lower envelope of tents has exact active-set breakpoints. Repo leverage suggests a theorem route: pair-pinch moments collapse time; mod `(2n-1)` antipodal witnesses prove an off-stratum margin; CRT n-gears classify equality; endpoint-protection cores rule out sub-tight covers. Companion script `04-computation/lrc_witness_or_core_s570.py` returns primal route plus endpoint-core ledger; next audit should add active-pair, mod-27, multiple-of-14, and n-clock classifications. See `07-reflections/lrc-1d-periodic-maximin-breakthrough-route-s570.md`.
 
