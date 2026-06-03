@@ -1,0 +1,79 @@
+S573 sharpened dual Burnside constraints for LRC
+==============================================================================
+grid N=38640; threshold=1/14
+Universal constraint: 1_X(t)=1_X(-t).  The legal stabilizer is
+dihedral: cyclic folds plus their reflection cosets.
+Dual constraint: the lonely word has zero odd/sine sector.
+
+AP_wall
+  note: maximally folded wall
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  lonely=6/38640 density=1/6440 (0.000155)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=3
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=1.422e-32; top cosine pairs=42:0.0003, 154:0.0003, 294:0.0003, 322:0.0003
+V_star_wall
+  note: sporadic wall row
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  lonely=6/38640 density=1/6440 (0.000155)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=3
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=1.422e-32; top cosine pairs=42:0.0003, 154:0.0003, 294:0.0003, 322:0.0003
+near_AP_apex
+  note: near AP with apex
+  speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 14)
+  lonely=470/38640 density=47/3864 (0.012164)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=235
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.190e-32; top cosine pairs=6:0.0243, 12:0.0242, 18:0.0240, 24:0.0237
+S562_packet_n14
+  note: n=14 residual packet
+  speeds=(1, 7, 14, 21, 28, 35, 49, 56, 63, 70, 77, 84, 91)
+  lonely=276/38640 density=1/140 (0.007143)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=138
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.767e-32; top cosine pairs=21:0.0140, 42:0.0133, 483:0.0127, 504:0.0127
+S562_packet_n14_lift
+  note: dyadic packet lift
+  speeds=(1, 14, 28, 42, 56, 70, 98, 112, 126, 140, 154, 168, 182)
+  lonely=264/38640 density=11/1610 (0.006832)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=132
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.383e-32; top cosine pairs=42:0.0134, 84:0.0127, 966:0.0124, 1008:0.0124
+no_small_pinch_proxy
+  note: THM-396 proxy
+  speeds=(1, 2, 9, 26, 110, 153, 166, 170, 178, 190, 192, 196, 201)
+  lonely=4810/38640 density=481/3864 (0.124482)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=2405
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.693e-32; top cosine pairs=2:0.0200, 24:0.0145, 153:0.0123, 18:0.0114
+random_low_resonance
+  note: low-resonance sample
+  speeds=(2, 5, 11, 17, 23, 31, 37, 41, 43, 47, 53, 59, 61)
+  lonely=4966/38640 density=2483/19320 (0.128520)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=0; lonely orbits=2483
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.654e-32; top cosine pairs=34:0.0288, 2:0.0226, 63:0.0168, 62:0.0133
+all_odd_probe
+  note: tests reflection fixed half-turn
+  speeds=(1, 3, 5, 9, 11, 15, 17, 19, 23, 25, 29, 31, 33)
+  lonely=5845/38640 density=167/1104 (0.151268)
+  cyclic: period=38640; |K_cyc|=1; annihilator violations=0
+  dihedral: |K_D|=2; reflection axes=1 [0]; reflection fixed lonely total=1; lonely orbits=2923
+  dual: odd-sector L2=0.000e+00; imag Fourier L2=2.486e-32; top cosine pairs=9:0.0391, 24:0.0355, 8:0.0265, 28:0.0264
+
+Tournament Analysis
+  vertices: speed-set time words
+  observable: density, cyclic fold, dihedral orbits, odd-sector defect, top cosine mode
+  switch: harder = lower density, more fold, fewer quotient orbits, zero odd defect, stronger mode
+  fingerprints: {'vertices': ['AP_wall', 'V_star_wall', 'near_AP_apex', 'S562_packet_n14', 'S562_packet_n14_lift', 'no_small_pinch_proxy', 'random_low_resonance', 'all_odd_probe'], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}, 'directed_3_cycles': 0, 'sccs': [1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+
+Sharper constraints
+  1. Cyclic Burnside is still too small: time reversal is always legal.
+  2. A counterexample/time-boundary obstruction must live in the dihedral
+     fixed sector, hence in the real cosine Fourier subspace.
+  3. Nonzero sine/odd character mass is not merely small; it is forbidden.
+  4. When cyclic stabilizer is trivial, the binary word still quotients by
+     reflection, usually halving lonely slots into t,-t pairs.
+  5. The next labelled-event audit should test which owner/core labels remain
+     reflection-fixed and which labels break only after forgetting ownership.

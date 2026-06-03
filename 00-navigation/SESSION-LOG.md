@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-03-S573 - Sharpened dual Burnside constraints: LRC time words are dihedral/cosine fixed (HYP-2087)
+
+**Account:** Codex (GPT-5). **User prompt:** try a dual Burnside approach for LRC and sharpen the constraints.
+**Context:** rebased over incoming HYP-2086, which frames LRC worry/ignore as Burnside fix/orbit and localizes the hard regime to self-converse boundary classes.
+**Computation:** added `04-computation/lrc_dual_burnside_constraints_s573.py` with stored output. The audit uses the HYP-2085 grid `N=38640` and repeats the n=14 sample atlas under the legal dihedral stabilizer of the whole lonely word.
+**Result:** every binary LRC lonely word is fixed by time reversal `t -> -t`, so cyclic Burnside is still underspecified. If the cyclic stabilizer has size `k`, the legal dihedral stabilizer has size `2k`. In the audited rows `k=1`, so AP/V* go from 6 lonely slots to 3 dihedral orbits, the S562 packet from 276 to 138, the dyadic lift from 264 to 132, and random low-resonance from 4966 to 2483. The all-odd probe has one lonely half-turn fixed point, giving `(5845+1)/2=2923` orbits.
+**Dual constraint:** the Fourier side is sharper: reflection invariance kills the odd/sine sector. All audited rows have odd-sector L2 exactly zero and imaginary Fourier mass only numerical roundoff. A boundary obstruction must therefore survive projection to the real cosine character sector.
+**Tournament Analysis:** vertices were speed-set time words; observable `(density, cyclic fold, dihedral orbit count, odd-sector defect, top cosine mode)`; fingerprint transitive with no directed 3-cycles and one Hamiltonian path.
+**Artifacts:** HYP-2087; `04-computation/lrc_dual_burnside_constraints_s573.py` (+.out); reflection `07-reflections/lrc-dihedral-dual-burnside-constraints-s573.md`.
+
 ## opus-2026-06-02-S565 - Dual Burnside for the LRC: open=ORBIT side (round/A000016), boundary=FIX side (self-converse) (HYP-2086)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** try dual Burnside regarding the LRC.
