@@ -4890,7 +4890,7 @@ T3 PINCH ORACLE [VERIFIED, THM-369]: M(V)=max over PAIR-SUM PINCHES t=m/(v_a+v_b
 ASSEMBLED FINITE REDUCTION: by the sieve (THM-401, modulus 2n-1=27) the pinch pattern depends only on V mod 27 => FINITELY many pinch types; LRC@14 <=> every type cleared by a bounded-window pinch (each check O(n^2) on a poly nerve). Residual unbounded part = the measure-zero AP wall (S551), witnesses t=j/(2n).
 **See:** `04-computation/lrc_n14_finite_efficient_targets_s607.py` (+.out); `07-reflections/lrc-n14-finite-efficient-targets-s607.md`; HYP-2156 (twisted involutions), THM-369 (pinch witnesses), THM-401 (sieve modulus 2n-1), S556o (first window), codex-S599 (two-block Helly), HYP-2065 (even-fold).
 
-## HYP-2170: LRC@14 finite enumerations -- tight family {AP, V*}, the doubling law, zero counterexamples to speed 20 (lrc-n14-tight-census-enum, claude-2026-06-03-S608)
+## HYP-2172: LRC@14 finite enumerations -- tight family {AP, V*}, the doubling law, zero counterexamples to speed 20 (lrc-n14-tight-census-enum, claude-2026-06-03-S608)
 **Status:** VERIFIED enumerations (independent confirmation + new structure). Continues HYP-2157 (efficient finite targets). Uses the fast integer p_0-cover filter + THM-369 pinch oracle for exact M.
 EXHAUSTIVE CENSUS (primitive 13-sets, speeds <= 20 = 77520 configs, ~7s): the AP {1..13} is the ONLY tight config and there are ZERO counterexamples (M<1/14). LRC@14 holds for every config in range (strong finite evidence; reproduces & extends the repo bounded census). 
 TIGHT FAMILY = {AP, V*}, V* = {1..11,13,24} = AP[12->24], verified tight (M=1/14). V* is the UNIQUE 1-swap-of-AP tight (all single replacements to speed 40) and there are NO 2-swap tights (to 30).
@@ -4903,4 +4903,16 @@ WITNESS STRUCTURE: AP and V* share the EXACT witnesses t*=j/14 (j in {1,3,5,9,11
 LAW: for even n, the doubling AP{1..n-1} with (n-2)->2(n-2) is LRC-tight (M=1/n) <=> n=2 (mod 3) <=> 3|(2n-1). Hits n=8 ({1,2,3,4,5,7,12}), 14 (V*=AP[12->24]), 20, 26, 32, ...; misses n=4,6,10,12,16,18,24,28,30 (incl. n=18 where 2n-1=35=5*7 is composite but not divisible by 3 -- so it is the prime 3, NOT mere compositeness, that matters; refines S592). VERIFIED match for all even n in [4,32].
 MECHANISM: pair-sum pinch modulus = 2n-1 (THM-401). When 3|(2n-1), the multiples of 3 form a shell (S592 'prime 3 at n=14', S593 sporadic shells); n-2=0 mod 3 and 2(n-2)=0 mod 3 both lie in that shell, so doubling preserves the antipodal binding pairs {a,n-a} (sum n) that hold the wall M=1/n (S608 witness structure). No 3-shell (3 not dividing 2n-1) => doubling loosens (M>1/n) or unavailable.
 CAVEAT: this is the DOUBLING sporadic only; other sporadics exist off this law (n=6, 2n-1=11 prime, still has the sporadic (1,3,4,5,9); n=8 has a 2nd sporadic (1,4,5,6,7,11,13)). So 3|(2n-1) characterizes the (n-2)-doubling family, not all sporadics.
-**See:** `04-computation/lrc_doubling_sporadic_mod3_s609.py` (+.out); HYP-2168 (n=14 census, V*, doubling law), S592 (prime 3 / sporadics), S593 (sporadic shells), THM-401 (modulus 2n-1).
+**See:** `04-computation/lrc_doubling_sporadic_mod3_s609.py` (+.out); HYP-2172 (n=14 census, V*, doubling law), S592 (prime 3 / sporadics), S593 (sporadic shells), THM-401 (modulus 2n-1).
+
+## HYP-2174: proof skeleton for the doubling-sporadic mod-3 law (rigorous core + 2 verified covering lemmas) (lrc-doubling-law-proof, claude-2026-06-03-S610)
+**Status:** NEAR-PROOF of HYP-2169. Steps 1,3,4 RIGOROUS; steps 2,5,6 VERIFIED (n<=40) covering lemmas. Reduces the law to two explicit finite-flavored covering statements.
+TARGET THM: for even n>=6, V*=AP[(n-2)->2(n-2)]={1,..,n-3,n-1,2n-4} has M(V*)=1/n (tight) <=> 3|(2n-1).
+STEP 1 [PROVED] M(V*)>=1/n via witness t=1/n: antipodal pair {1,n-1} binds at 1/n; every AP runner has dist>=1/n; new runner ||(2n-4)/n||=min(4,n-4)/n>=1/n (n>=6); removed n-2 irrelevant. (n=4 degenerate: 2(n-2)=n.)
+STEP 2 [VERIFIED n<=40] M(V*)=max(1/n, P), P=max_m min_{v in V*}||v m/(2n-1)|| -- the (2n-1) pinch lattice of the mirror pair is the ONLY family that can beat 1/n.
+STEP 3 [PROVED] 2n-4=(2n-1)-3 ≡ -3 (mod 2n-1) => runner 2n-4 mirrors runner 3 on the lattice; pair pinch dist = ||3m/(2n-1)||.
+STEP 4 [PROVED, number theory] pair attains dist 2/(2n-1) <=> 2 in 3*(Z/(2n-1)) <=> gcd(3,2n-1)=1 <=> 3 nmid (2n-1) (gcd in {1,3}, 3 nmid 2).
+STEP 5 [VERIFIED] 3 nmid 2n-1 => P=2/(2n-1)>1/n => LOOSE, M(V*)=2/(2n-1) exactly (clean loose-value formula; other runners stay >=2/(2n-1)).
+STEP 6 [VERIFIED] 3|(2n-1) => P<=1/n => TIGHT: whenever the pair is far (>=3/(2n-1)), a multiple-of-3-shell runner blocks within 1/n (S592/S593; e.g. runner (2n-1)/3 in AP).
+COMBINE: M(V*)=1/n <=> P<=1/n <=> 3|(2n-1). QED modulo steps 2,5,6 (verified). BY-PRODUCT: loose configs have M=2/(2n-1) (the second-tightest gap).
+**See:** `04-computation/lrc_doubling_law_proof_s610.py` (+.out); HYP-2169 (the law), HYP-2172 (n=14 census/V*), THM-401 (modulus 2n-1), S592/S593 (prime-3 shell).
