@@ -13,6 +13,7 @@ related:
   - HYP-2114
   - HYP-2151
   - HYP-2152
+  - HYP-2154
   - THM-358
   - THM-401
 ---
@@ -33,6 +34,12 @@ p_k(delta)    = meas{t : depth_delta(t)=k}.
 Then the lonely-measure is `p_0(delta)`.  At the reduced LRC threshold
 `delta=1/(m+1)`, the worry-set is the critical stratum where `p_0=0` but
 boundary lonely points still exist.
+
+HYP-2154 abstracts this same distribution as a universal master object: a
+coverage-count pushforward, density of states, or partition-function view whose
+free baseline is Poisson-like.  HYP-2153 keeps the concrete LRC zero-cell
+classifier, where arithmetic correlations can empty `p_0` even though the
+first moment remains fixed.
 
 S602 uses the equivalent endpoint-critical predicate with `n=m+1`: for a
 primitive row `V` with `|V|=n-1` and threshold `1/n`, call `V` `p0`-collapsed
@@ -211,4 +218,4 @@ the collapse family, not proof of endpoint protection itself.
 `05-knowledge/results/lrc_covering_depth_distribution_s599.out`,
 `07-reflections/lrc-covering-depth-distribution-the-master-object-s599.md`,
 HYP-1802, HYP-1810, HYP-2084, HYP-2135, HYP-2138, HYP-2114,
-HYP-2146, HYP-2151, HYP-2152, THM-401.
+HYP-2146, HYP-2151, HYP-2152, HYP-2154, THM-401.
