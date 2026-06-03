@@ -1,0 +1,18 @@
+STRONG-tournament H-spectra (the multiplicative 'primes'):
+  m=3: strong H-values = [3]
+  m=4: strong H-values = [5]
+  m=5: strong H-values = [9, 11, 13, 15]
+  m=6: strong H-values = [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+ strong-tournament H-values (all m≤6) = [3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  is 7 a strong value? False  is 21? False  is 63? False
+ achievable (semigroup, ≤200) gaps among odds: [7, 21, 35, 47, 49, 53, 59, 61, 63, 67, 71, 73, 77, 79, 83, 89, 91, 97, 101, 103, 105, 107, 109, 113, 119]
+ => 7 impossible: True; 21 impossible: True
+
+UNIT-GRID disproof exponent: k×k grid, most-popular squared-distance count; exponent=log(U)/log(n)
+  k=  8 n=   64: maxdist-count U=168; exponent log(U)/log(n) = 1.2321
+  k= 16 n=  256: maxdist-count U=1152; exponent log(U)/log(n) = 1.2712
+  k= 32 n= 1024: maxdist-count U=5840; exponent log(U)/log(n) = 1.2512
+  k= 64 n= 4096: maxdist-count U=33080; exponent log(U)/log(n) = 1.2511
+  k=128 n=16384: maxdist-count U=181504; exponent log(U)/log(n) = 1.2478
+  k=256 n=65536: maxdist-count U=1035904; exponent log(U)/log(n) = 1.2489
