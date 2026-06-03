@@ -77,15 +77,27 @@ vectors) but lengthens the minimal relation `ℓ¹`-distance `λ₁(Λ)` from 3 
   to a subtorus; the theta sum is a delicate resonance (the `{1..6}` corrections cancel the constant
   to exactly 0). The 2025 prime-divisibility machinery plugs in here.
 
-## Formalized crux (math-lean `982473f`)
+## Formalized in Lean (math-lean `982473f`, `1e8c7a8`, sorry-free)
 
-`Math/LonelyRunner/SumFree.lean` (sorry-free): `sumFree_of_lo_add_lo_gt_hi` and
-`consecutive_block_sumFree` — a speed set above its own diameter (`hi < lo+lo`) has **no** 3-term
-relation `a+b=c`. This is the machine-checked mechanism of the AP-translation flip: translating a
-set above its length destroys all 3-term relations while preserving additive energy, so it lands
-in the circuit-free / Lemma A regime regardless of energy.
+`Math/LonelyRunner/SumFree.lean`: `sumFree_of_lo_add_lo_gt_hi`, `consecutive_block_sumFree` — a
+speed set above its own diameter (`hi < lo+lo`) has **no** 3-term relation (the AP-flip mechanism).
 
-**Artifacts:** formal — `claude-monad/math-lean` `Math/LonelyRunner/SumFree.lean` (`982473f`);
-informal — `04-computation/lrc_character_sieve_exploration_s585.py` (+`.out`),
+`Math/LonelyRunner/Fusion.lean`:
+- **the fusion rule** `speedChar_add : χ_{a+b} = χ_a · χ_b` (`speedChar ψ v := ψ.mulShift v`,
+  resting on Mathlib's `AddChar.mulShift_mul`) — a 3-term relation *is* a character fusion, the
+  rep-theory core of HYP-2120, now machine-checked; `fusion_of_three_term` the forward bridge.
+- `ThreeTermFree` (the sum-free / circuit-free predicate) + `threeTermFree_of_above_diagonal`.
+- **the symmetry mismatch (extension the formalization exposed):** `threeTermFree_image_mul` —
+  3-term-freeness is **dilation-invariant**; `addEnergy_map_addRight` — additive energy is
+  **translation-invariant**. The lonely-runner gap `G` is dilation-but-not-translation-invariant
+  (`G(cS)=G(S)`, `G(S+t)≠G(S)`), so it shares 3-term-freeness's symmetry, *not* energy's. **Energy
+  has a strictly larger symmetry group (the full affine action) than `G`, hence cannot determine
+  `G`** — this is the precise, formal reason the AP-translation flip works and the conceptual
+  upgrade of the experiment: not "energy happens to be constant here," but "energy is the wrong
+  invariant by a symmetry argument."
+
+**Artifacts:** formal — `claude-monad/math-lean` `Math/LonelyRunner/SumFree.lean` (`982473f`) +
+`Math/LonelyRunner/Fusion.lean` (`1e8c7a8`); informal —
+`04-computation/lrc_character_sieve_exploration_s585.py` (+`.out`),
 `07-reflections/lrc-two-lens-character-grading-s585.md`. Builds on HYP-2064/2065 (sieve / thin
 core = the same circuit-free/structured split), HYP-2115 (the CRT/sieve thread).
