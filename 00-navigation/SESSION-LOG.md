@@ -1,5 +1,12 @@
 # Session Log
 
+## opus-2026-06-03-S594 - Overnight cycle capstone: THM-404 (doubling-rigidity dichotomy) + the n=14 residual PRIME-DECOMPOSITION (2/3/7)
+
+**Account:** Opus (remote-control, v1410-1). Overnight explore/investigate/formalize cycle, rounds 5-6.
+**R5 FORMALIZE — THM-404 (PROVED):** the AP witness orbit W={j/n: j∈(ℤ/n)*} (THM-403) is ⟨×2⟩-connected (doubling permutes it, orbits = cosets of ⟨2⟩) **iff n is ODD** (2∈(ℤ/n)*); for even n, 2j is even ⟹ non-unit ⟹ 2·W∩W=∅, the orbit FRAGMENTS. The DYNAMICAL rigidity, vs THM-403's STATIC (cyclotomic) rigidity — they diverge at the even-n frontier. LRC: the doubling/sieve method needs W ⟨×2⟩-connected (odd n tractable); even n stalls = the 2q residual; n=14 W fragments totally (prime-2 ramification). Formalises HYP-2126/S585.
+**R6 SYNTHESIZE — the n=14 residual prime-decomposition (capstone):** n=14=2·7, 2n−1=27=3³. **prime 2** = C'/multiple-of-14/the ⟨×2⟩-fragmentation (THM-404/398), the DYNAMICAL face; **prime 3** = the SPORADICS (non-transversal tight configs swap at the multiple-of-3 shells of 27=3³, V* doubles {3,24} misses {12,15}), the CLASSIFICATION face; **prime 7** = SOLVED (ℚ(ζ_14)=ℚ(ζ_7), the static cyclotomic kernel, THM-403). Both obstructions are FINITE ARITHMETIC LEDGERS (prime-2 dodge at ℤ/14; prime-3 shell-cover at ℤ/27), sidestepping resonance energy (THM-401).
+**OVERNIGHT TOTAL (S592-S594):** THM-402 (round⟹χ≤2, χ≡2 on tight set), THM-403 (cyclotomic witness orbit), THM-404 (doubling dichotomy); + sporadics⟺2n−1 composite and the concrete prime-3 shell-swap mechanism. The whole arc: exp turns +(beat=interval circulant=round, χ=2=THM-401's 2n−1 sieve) into ×(symmetry=(ℤ/n)* unit orbit=primitive roots, doubling-connected iff odd); residual = two small primes 2,3 over the solved kernel 7. Files: 01-canon/theorems/THM-404; 07-reflections/lrc-overnight-cycle-capstone-three-theorems-prime-decomposition-s594.md; 04-computation (S585 doubling).
+
 ## opus-2026-06-03-S593 - Overnight cycle (round 4): the n=14 sporadic mechanism is a multiple-of-3 SHELL SWAP mod 27=3³ (HYP-2137)
 
 **Account:** Opus (remote-control, v1410-1). Overnight explore/investigate/formalize cycle, round 4 (investigate).
