@@ -12,6 +12,7 @@ Organized by topic. Each hypothesis has a detail file.
 ### CONFIRMED
 | ID | Statement | Why it works | Source |
 |----|-----------|-------------|--------|
+| HYP-2153 | LRC = circular-arc covering: master object is the covering-depth distribution `p_k=meas{depth=k}`; lonely measure `=p_0`, `M=inf{δ:p_0=0}`, worry-set`={p_0=0}`. (A) singleton-wall exponent `=1` VERIFIED (`p_0(δ_c−ε)∼ε^1.0`, the `(loglog)¹`/one-Helly-stage regime, not `²`); (B) first moment `E[depth]=2nδ` config-independent (blind); (C) collapse family `{p_0=0}` = additive chains (top=sum of two below), larger than the AP — `(1,3,4,7),(1,3,4,5,9)` collapse, non-chain `(1,2,4,7)` does not | depth distribution at `n=4,5`: `E[depth]` fixed, `p_0=0` iff additive chain, exponent fit `α=1.0` over `ε=1/50..1/400`; mechanism = single binding pair per clock point → linear pinch | opus-2026-06-03-S599; `lrc_covering_depth_distribution_s599.py`; reflection `lrc-covering-depth-distribution-the-master-object-s599.md`; builds on S550/S577/S581/S592/S585/S598/S597 |
 | HYP-001 | M[a,b] = M[b,a] (transfer matrix symmetric) | PROVED by induction (THM-030, kind-pasteur-S25) | INV-001 |
 | HYP-002 | H(T) = H(T^op) | Even-r structure of W; THM-L | opus-S35c11 |
 | HYP-003 | M(r) symmetric for ALL r, not just r=1/2 | Unknown; verified n<=5 | opus-S35c11 |
