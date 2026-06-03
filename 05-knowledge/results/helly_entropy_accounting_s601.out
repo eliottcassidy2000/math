@@ -1,0 +1,138 @@
+
+  HELLY ENTROPY ACCOUNTING
+
+======================================================================
+
+  I. EXACT SPINE: certificate entropy = log lcm(witness moduli)
+  --------------------------------------------------
+  A covering system {r_i mod m_i} is infeasible-as-intersection iff its
+  complements have empty intersection (the classes cover Z_M). The minimal
+  Helly witness = a minimal sub-cover. To NAME the obstruction (which residue
+  fails when the witness is incomplete) costs log2(lcm of witness moduli) bits,
+  split additively over the omega(lcm) distinct prime channels.
+
+  Erdos cover [(0, 2), (0, 3), (1, 4), (5, 6), (7, 12)] on Z_12:
+    covers Z_12? True  (intersection of complements empty)
+    Helly number h = 5 (minimal sub-cover size); #minimal witnesses = 1
+    lcm(moduli) = 12,  certificate entropy = log2(lcm) = 3.5850 bits
+    prime channels omega(lcm) = 2  -> per-channel: 2*log2(2)=2.000 + log2(3)=1.585
+    participation entropy of witnesses = 2.3219 bits
+
+  II. CHANNEL RANK omega = the loglog EXPONENT  (Mertens, opus-S597)
+  --------------------------------------------------
+  The independent scale channels of a CRT obstruction are the DISTINCT
+  primes dividing the witness modulus. Their count omega(M) is the loglog
+  exponent; certificate entropy log2(M) splits additively over them.
+        witness moduli    M=lcm  rank omega  cert H=log2 M
+                   [4]        4           1         2.0000
+                [4, 3]       12           2         3.5850
+             [4, 3, 5]       60           3         5.9069
+          [8, 9, 5, 7]     2520           4        11.2992
+  Mertens: mean omega(m) for m<=N ~ loglog N (so the channel rank of a
+  typical N-scale modulus is ~loglog N -- the universal loglog source):
+         N    mean omega(m), m<=N   loglog N
+       100                 1.7273     1.5272
+      1000                 2.1281     1.9326
+     10000                 2.4302     2.2203
+    100000                 2.6640     2.4435
+  (mean omega tracks loglog N: each prime channel is one loglog of room;
+   a rank-r obstruction occupies r of them -> (loglog)^r in the bound.)
+
+  III. THE EXPONENT LAW: surplus denominator = product of channel widths
+  --------------------------------------------------
+  The correct mechanism (NOT a scale-survival product, which would give a
+  (log)^-1, but a SECOND-MOMENT denominator): an overlap dividend is divided by
+  the WIDTH of each independent channel it spreads across. A CRT/scale channel
+  at problem-size k has width ~ omega-scale ~ loglog k (Mertens, part II). A
+  rank-r obstruction spreads over r channels, so the denominator is the PRODUCT
+  of r widths = (loglog k)^r.  Hence  surplus ~ base / (loglog k)^r.
+  channel width w(k) := loglog k;  rank-r denominator = w(k)^r:
+           k  w=loglog k        r=1  r=2 (Tao-LRC)        r=3
+        1000      1.9326     1.9326         3.7351     7.2187
+     1000000      2.6258     2.6258         6.8948    18.1043
+  1000000000      3.0313     3.0313         9.1885    27.8528
+  1000000000000      3.3189     3.3189        11.0154    36.5593
+  Tao LRC surplus c*log k/(k^2 (loglog k)^2): the exponent 2 = the two
+  independent channels of the rank-2 two-block determinant. The law is:
+  exponent on loglog = RANK = #channels (1 for a wall, 2 for two-block).
+
+  IV. WITNESS-ENTROPY SCALING across random intersection families
+  --------------------------------------------------
+  Random allowed sets on Z_M (each point kept w.p. q); measure Helly
+  number and participation entropy as the family size n grows.
+  Z_20, keep-prob q=0.6:
+      n  feasible?  Helly h  #min wit  part.entropy  log2(#wit)
+      4       True     None         0        0.0000      0.0000
+      6      False        4         1        2.0000      0.0000
+      8      False        3         1        1.5850      0.0000
+     10      False        3         1        1.5850      0.0000
+     14      False        3         4        2.6258      2.0000
+  (as n grows the family becomes infeasible at a threshold Helly number;
+   #minimal witnesses then explodes -> witness entropy log2(#wit) is the
+   redundancy of the certificate, the 'dividend' side of the ledger.)
+
+  V. FRACTIONAL HELLY / VC ENTROPY (the dual dividend)
+  --------------------------------------------------
+  The ledger has TWO DUAL entropy axes (they are NOT equal):
+   * POINT / certificate entropy = log2 lcm(moduli) -- cost to NAME the failing
+     residue (part I); additive over the omega prime channels.
+   * SET / VC-shatter entropy = log2(#membership-atoms) -- cost to name WHICH
+     constraints are violated. For n residue-classes with coprime moduli, CRT
+     independence realizes all 2^n membership patterns, so this = n bits = the
+     family shatters (full rank).
+  Fractional Helly lives on the SET axis: if a fraction beta of the r-tuples
+  intersect, some point lies in >= beta-many sets (an averaged DIVIDEND), the
+  mirror of the worst-case Helly witness on the same axis.
+  family moduli [2, 3, 5] on Z_30:
+    POINT axis: lcm=30, certificate entropy log2 lcm = 4.9069 bits
+    SET axis:   membership atoms realized = 8 (= 2^3), VC entropy = 3.0000 bits = n
+    => the two axes differ (4.907 vs 3.000); point-cost is sum log2 m_i, set-cost is the rank n.
+
+  VI. TIE-BACK: Collatz bounded defect (HYP-2148) is Helly-1 accounting
+  --------------------------------------------------
+  HYP-2148 (D(n) < D* ~ 0.2257) said: any single Collatz trajectory threads
+  ONE root-path of the predecessor tree of 1 = {1,5,21,85,...}=(4^j-1)/3, so it
+  collects only a bounded budget of small odds. In Helly language: the small-odd
+  contributions are constraints on ONE path (a chain), Helly number 1 -- no two
+  independent small-odd channels -- so the defect carries (loglog)^1 at most,
+  i.e. it is a single bounded entropy budget, not a growing (loglog)^h sum.
+  The bounded defect IS the Helly-1 / single-channel case of this ledger.
+  predecessor chain of 1 (Helly-1 backbone): [1, 5, 21, 85, 341, 1365]
+  single-channel entropy budget ~ sum 1/(3a) over one chain converges:
+    sum_{j} 1/(3*(4^j-1)/3) = 0.421098 (finite -> bounded defect).
+
+  VII. HEADLINE: LRC two-block Helly=2  <->  Tao surplus (loglog k)^2
+  --------------------------------------------------
+  HYP-2142/2144: the LRC large-owner obstruction is the rank-2 TWO-BLOCK
+  determinant det[[u_a,r_a],[u_b,r_b]]; its Helly number is 2 (pairs of owners,
+  never a singleton in the large-owner regime). By the exponent law (III), a
+  rank-2 / Helly-2 obstruction spends TWO independent loglog channels, so any
+  Tao-style surplus it admits has denominator (loglog k)^2 -- EXACTLY the shape
+  c log k / (k^2 (loglog k)^2). The exponent 2 is not analytic decoration: it is
+  the Helly number of the determinant. Predictions:
+    * a regime whose obstruction collapses to a singleton wall (Helly 1) admits
+      surplus with (loglog k)^1 -- a better bound where the wall is single;
+    * a three-block coupling (Helly 3, if it occurred) would force (loglog k)^3.
+  This converts codex-S600's rank-discounted shape into a falsifiable law:
+    loglog-EXPONENT(regime) = RANK(minimal obstruction of regime)
+                            = Helly witness size when the two coincide
+                              (as in the two-block determinant, both 2).
+
+======================================================================
+  SUMMARY
+  -------
+  Helly entropy accounting unifies the three threads:
+   * RANK r = determinant rank = #independent obstruction channels = the loglog
+     EXPONENT. (Distinct from the Helly witness SIZE h >= r; they coincide for
+     the two-block determinant, both 2.)
+   * Each channel costs one loglog (omega ~ loglog, opus-S597, part II); a
+     second-moment surplus divides by the product of r channel widths
+     => denominator ~ (loglog)^r (part III).
+   * EXACT spine (part I): CRT POINT-certificate entropy = log2 lcm(witness),
+     additive over omega(lcm) prime channels; the Helly witness is the
+     min-entropy certificate. DUAL SET-axis entropy = rank n (part V).
+  HEADLINE LAW (falsifiable): the iterated-log EXPONENT in a Tao-style bound
+  equals the RANK of the minimal infeasibility obstruction (= Helly witness
+  size when they coincide). LRC: rank-2 two-block determinant <-> Tao
+  (loglog k)^2. Collatz bounded defect (HYP-2148): rank 1, single channel.
+
