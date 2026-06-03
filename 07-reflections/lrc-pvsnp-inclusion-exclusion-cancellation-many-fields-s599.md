@@ -155,4 +155,4 @@ exponential family** and asking whether its symmetry collapses it.
 **Artifacts:** `04-computation/lrc_pvsnp_witness_and_ryser_s599d.py` (+`.out`), THM-406,
 companion `lrc-coimage-fundamentality-made-rigorous-s599.md`. Builds on THM-406 (★ and
 spectral identity), S599/S599b (master object), THM-401/S577 (resonance), S551o (Vitali wall).
-New: **HYP-2157**.
+New: **HYP-2158**.

@@ -1,0 +1,11 @@
+RÉDEI = the SOLVED GF(2)-cancellation face: #HamPaths(T) is ODD for every tournament T
+  n=3: tournaments=8; all odd = True; distinct path-counts seen = [1, 3]  (parity FIXED=1, count VARIES)
+  n=4: tournaments=64; all odd = True; distinct path-counts seen = [1, 3, 5]  (parity FIXED=1, count VARIES)
+  n=5: tournaments=1024; all odd = True; distinct path-counts seen = [1, 3, 5, 9, 11, 13, 15]  (parity FIXED=1, count VARIES)
+  n=6 (sample 4000): all odd = True; parities seen = [1]
+  n=7 (sample 4000): all odd = True; parities seen = [1]
+
+Reading: the count = a permanent-shaped sum (varies a lot); its PARITY is an
+invariant forced by cancellation (sign-reversing involution / det over GF(2)) = ⊕P.
+LRC's p_0=Σ(−1)^|S|meas(∩) and Collatz's 2^E−3^k are the UNSOLVED real/arithmetic
+face of the same (★): a signed sum whose sign must be controlled all-orders.
