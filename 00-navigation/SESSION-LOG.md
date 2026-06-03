@@ -1062,6 +1062,17 @@ Reframed LRC via the covering-depth distribution `p_k=meas{t:depth(t)=k}` (depth
 **Findings:** across `1800` row attempts for each `n` and regime, the audit found `1113` extracted empty certificates, `0` high-order empties, and `0` bounded-live rows: `1084` singleton certificates and `29` pair certificates. In `BC_only`, n=14 had `25` singleton walls and no pair/high/live rows; in the full stack, n=12 and n=14 were fully preempted.
 **Payoff:** HYP-2144 is presently in a Helly-dividend regime: bounded local determinant certificates appear before the global CRT modulus. HYP-2152 records the tax that would be paid if future families force high rank or a growing live component count.
 **Artifacts:** HYP-2152; `07-reflections/helly-scale-logarithm-s601.md`; updates to HYP-2144, HYP-2146, hypothesis/result indexes, tangents, and this session log.
+## claudebox-2026-06-03-S616 - The apex-lift certificate sheaf: building the sheaf layer (restriction, gluing, apex = the H¹ obstruction) HYP-2185
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** spend a math session thinking about an apex-lift certificate sheaf.
+**Found:** the concept already exists (HYP-2101/S579, ApexCertificate.lean) but only as the STALK (line arrangement, trichotomy, count (q−1)(q−2), r/p lift). The SHEAF itself — restriction, gluing, the apex-as-obstruction — was never written. This session built and formalized it.
+**Sheaf:** `CertLocus F s = {points avoiding every forbidden line indexed by s}`. Restriction antitone; gluing law `CertLocus(s∪t)=CertLocus s ∩ CertLocus t` (a sheaf because avoidance is a conjunction — gluing is automatic; the content is nonemptiness). H⁰ = global sections; H¹ obstruction = nonemptiness failure = HYP-2101's positive-measure interval = the resonance.
+**Apex = obstruction (verified 𝔽₇ + formalized):** the multiple-of-n / self-antipodal lane forbids the whole plane ⟹ empty stalk ⟹ H⁰=∅ (12→0). The r/p lift turns its covector into (0,0,d), d≠0 — a proper hyperplane ⟹ stalk nonempty ⟹ H⁰ restored (→72).
+**Antipodal ℤ/2 = perspective key:** σ:v↦−v gives antipodal speeds the SAME forbidden hyperplane, so σ pairs the 6 nonzero lanes (3 orbits) and FIXES the apex lane 0. The obstruction is exactly the ramification point of the double cover — automorphism rigidity, not chirality. Unifies HYP-2150 (2q), HYP-2145 (2-block), HYP-2170 (multiple-of-n).
+**Formalized (sorry-free):** ApexCertificate.lean §Sheaf — 7 new defs/theorems (CertLocus … certLocus_apex_lift_nonempty), pushed to math-lean main.
+**Handoff:** formalize gluing-nonemptiness over transverse lanes (⟹ LRC(14) reduces to the single apex lift); σ-stable H⁰={AP,V*}?; H¹=resonance energy.
+**Artifacts:** HYP-2185; `07-reflections/the-apex-is-the-ramification-point-s616.md`; `04-computation/apex_lift_certificate_sheaf_s616.py`; math-lean ApexCertificate.lean §Sheaf.
+
 
 ## opus-2026-06-03-S597 - Iterated logs = the INVERSE HYPEROPERATION TOWER; worry-set obstruction primes ω(2n−1) ~ loglog n (HYP-2145)
 
