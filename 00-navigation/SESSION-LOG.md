@@ -43,6 +43,19 @@
 **Tournament Analysis / assumption challenge:** vertices are proof certificates (total cap, upper cap, lower cap, Lemma F/E/C, Bprime, residual), not runners or raw cap centers.  Observable `(certificate_rank, sampled_route_count, name)` gives a transitive fingerprint with no directed cycles and one Hamiltonian path.  Challenged assumption: the cap quotient need not stop at primary cells; endpoint-owner laws create side-labelled half-cells that preserve forced upper/lower capacity and discard only phase order inside the cell.
 **Close-out rebase integration:** origin added Opus S595/HYP-2142 while this was being pushed.  That result identifies the under-cap large-owner residual as a 2x2 determinant / bounded CRT feasibility problem, so S598 now sits as the aggregate one-sided-cap filter immediately before the HYP-2142 determinant layer.
 **Artifacts:** THM-398 Lemma I; `07-reflections/lrc-origin-bisection-upper-cap-certificates-s598.md`; updates to HYP-2140, S593 reflection, and results/hypothesis indexes.
+## claudebox-2026-06-03-S614 - Collatz as the 2-adic/multiplicative resonance twin of the Lonely Runner; first Collatz content + 2 Lean modules (HYP-2175)
+
+**Account:** claudebox (math-research fork+PR; math-lean). **User prompt:** long session cycling explore/investigate/formalize on the Collatz conjecture and how it is similar to repo work.
+**Thesis:** Collatz = the SAME multiplicative-vs-2-adic resonance question as the repo's LRC/doubling work (HYP-2117). The repo's doubling-seam / resonance-energy / orbit-type / divisor-block machinery transfers directly.
+**R1 (explore):** v₂(3n+1) over odd n is geometric P(k)=2^-k, E[k]=2 ⇒ per-step 2-adic rigidity-height (S596 H6), drift 3/4<1 (contraction).
+**R2 (investigate):** a Syracuse L-cycle ⇒ 2^K·∏n_i=∏(3n_i+1), i.e. 2^K=3^L·∏(1+1/3n_i) ≈ 3^L — a RESONANCE, the multiplicative twin of LRC's additive Σm_iv_i=0; only the trivial L=1 cycle is small-element-feasible.
+**R3 (formalize):** `Math/Collatz/Resonance.lean` (cycle_resonance, three_pow_le_two_pow 2^K≥3^L, even_three_mul_add_one) — first Collatz content in the repo's Lean.
+**R4 (explore):** the parity vector is a 2-adic binary signature (Lagarias bijection [0,2^K)↔{0,1}^K, verified K=3..10); the shortcut map is a shift = HYP-2117 doubling + the 3x+1 +1-twist; trajectory odd-density 0.48<log_3 2=0.631 ⇒ contraction (Lemma A randomness; cycles = Lemma B structure).
+**R5/6 (formalize):** `Math/Collatz/Parity.lean` (shortcut map, branch lemmas, half_modEq, shortcut_mod_pow: n≡m mod 2^{K+1} ⇒ T(n)≡T(m) mod 2^K — the 2-adic shift / parity-bijection inductive heart).
+**R7 (synthesize, HYP-2175):** the full Collatz↔LRC dictionary. Both pit a multiplicative structure against the 2-adic and ask if they resonate; the conjecture = no nontrivial resonance, reach the base (lonely time / 1). Collatz = LRC with additive→multiplicative, static-clock→iterated-map.
+**Handoff:** full parity bijection; the no-small-cycle Diophantine (2^K≈3^L); the construction/sidestep analog (inverse doubling-IFS tree covering ℕ); the 2^a·3^b block structure.
+**Artifacts:** HYP-2175; `07-reflections/collatz-the-resonance-twin-of-the-lonely-runner-s614.md`; `04-computation/collatz_lrc_resonance_s614.py`; math-lean `Math/Collatz/{Resonance,Parity}.lean`.
+
 
 ## monad-compute-2026-06-03-S597 - EXHAUSTIVE box certificate for C' (n=4..8, 0 tight)
 
