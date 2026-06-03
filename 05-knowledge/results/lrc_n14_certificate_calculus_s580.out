@@ -1,0 +1,91 @@
+S580 LRC n=14 certificate calculus
+
+FORMAL OBJECTS
+SpeedRow := (n, S, time-site labels, owner labels, quotient labels).
+CertificateSection := witness_1_over_n | cheap_pair | positive_measure | ledger_failure | residual.
+Gate := a partial rule SpeedRow -> CertificateSection or NamedResidual, with restriction maps between rows.
+Vitali handoff := the divisibility wall n|v, where THM-398 moves from construction to measure.
+Cascade product := ordered product of conditional clearances supplied by gates G0..G10.
+Target theorem form := every row exits through a witness/positive_measure section, or every terminal residual SCC is impossible.
+
+GATES
+name | status | output | residual
+G0_no_multiple_n_clock | PROVED | closed witness t=1/n | none
+G1_Cprime_reduction | PROVED reduction | LRC(n) follows from Cprime | Cprime itself: n|v implies M(S)>1/n
+G2_dominance_or_long_interval_dodge | PROVED partial Cprime | positive measure | all-short Vitali alignment for a small multiple
+G3_all_short_Cprime_residual | OPEN | positive measure for small multiples | one AP of thin arcs is arc-aligned enough to cover a fixed open safe set
+G4_paired_or_anchored_cheap_pair | REDUCTION plus verified split | unblocked small-pair pinch witness | block-all rows must be proved positive measure
+G5_fixed_boundary_owner_functor | BOUNDED scaffold | 64 fixed fibres with speed-owner labels | unbounded realization independence
+G6_unit_lift_cheap_sieve | BOUNDED zero residual | cheap pair fires before exchange | simultaneous multi-unit no-cheap rows
+G7_apex_lift_certificate_sheaf | BOUNDED zero restriction residual | global cheap section or positive-measure restriction | unbounded apex monodromy over fixed fibres
+G8_endpoint_cover_circuit_positivity | OPEN bridge | positive measure from failed gluing | cover circuits with no private pivot/owner
+G9_tie_wall_limit_functor | OPEN formalization | boundary perturbations become a labelled tie-wall object | AP/Vstar perturbation-direction ambiguity
+G10_certificate_calculus_closure | PROPOSED | every row has a section or a named positive-measure residual | terminal residual acyclicity
+
+NAMED RESIDUALS
+- Cprime itself: n|v implies M(S)>1/n: G1_Cprime_reduction
+- all-short Vitali alignment for a small multiple: G2_dominance_or_long_interval_dodge
+- one AP of thin arcs is arc-aligned enough to cover a fixed open safe set: G3_all_short_Cprime_residual
+- block-all rows must be proved positive measure: G4_paired_or_anchored_cheap_pair
+- unbounded realization independence: G5_fixed_boundary_owner_functor
+- simultaneous multi-unit no-cheap rows: G6_unit_lift_cheap_sieve
+- unbounded apex monodromy over fixed fibres: G7_apex_lift_certificate_sheaf
+- cover circuits with no private pivot/owner: G8_endpoint_cover_circuit_positivity
+- AP/Vstar perturbation-direction ambiguity: G9_tie_wall_limit_functor
+- terminal residual acyclicity: G10_certificate_calculus_closure
+
+TOURNAMENT ANALYSIS
+vertices: proof obligations/gates, not runners and not naked round classes
+pair observable: (open_rank, residual_weight, dependency_count, -evidence_strength, tie_order)
+switch: harder unresolved proof obligation beats easier certified gate
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+directed_3_cycles: 0
+sccs: [['G10_certificate_calculus_closure'], ['G8_endpoint_cover_circuit_positivity'], ['G3_all_short_Cprime_residual'], ['G5_fixed_boundary_owner_functor'], ['G9_tie_wall_limit_functor'], ['G4_paired_or_anchored_cheap_pair'], ['G7_apex_lift_certificate_sheaf'], ['G6_unit_lift_cheap_sieve'], ['G2_dominance_or_long_interval_dodge'], ['G1_Cprime_reduction'], ['G0_no_multiple_n_clock']]
+hamiltonian_path_count: 1
+hardness_path:
+  10  G10_certificate_calculus_closure
+   9  G8_endpoint_cover_circuit_positivity
+   8  G3_all_short_Cprime_residual
+   7  G5_fixed_boundary_owner_functor
+   6  G9_tie_wall_limit_functor
+   5  G4_paired_or_anchored_cheap_pair
+   4  G7_apex_lift_certificate_sheaf
+   3  G6_unit_lift_cheap_sieve
+   2  G2_dominance_or_long_interval_dodge
+   1  G1_Cprime_reduction
+   0  G0_no_multiple_n_clock
+
+EXTENSION QUEUE
+E1_all_short_to_endpoint_cover: target=HYP-2103/HYP-2104 all-short Vitali alignment residual
+  route: turn thin AP cover of G(S') into an endpoint-owner cover circuit
+  first_test: enumerate all-short v=14 rows and record endpoint owners of every covered component
+  payoff: would prove the remaining Cprime branch for n=14 if every cover circuit peels
+  priority_key: (5, 4, -2)
+E4_component_discrepancy_bound: target=HYP-2104 Criterion Bprime all-short complement
+  route: Erdos-Turan or three-distance bound for {k/(nw)} against G(S') components
+  first_test: measure component count and endpoint denominator spectrum in bounded small-multiple rows
+  payoff: analytic proof of Cprime independent of the 64-class machinery
+  priority_key: (5, 3, -4)
+E3_residual_acyclicity: target=apex-lift monodromy
+  route: make a directed graph of certificate transports and prove terminal SCCs are positive measure
+  first_test: use S579 restrictions; add union-only rows as two-step composites
+  payoff: formal sheaf gluing proof without class-by-class guessing
+  priority_key: (4, 4, -3)
+E2_fixed_fibre_sheaf_table: target=HYP-2099/HYP-2101 bridge
+  route: attach local section data to AP, Vstar, transversal flips, and minimal gcd-3/gcd-9 lifts
+  first_test: build the promised S580 table: cheap pair, reduced sum, mod-7 owner, mod-27 shell, blockers, pivots
+  payoff: turns the 64-class overcount into labelled proof obligations
+  priority_key: (4, 3, -2)
+E5_level3_cascade_product: target=certificate product closure
+  route: model each gate as a conditional clearance factor in a cascade product
+  first_test: assign each S579 route a factor type: witness, cheap, positive_measure, ledger_failure, residual
+  payoff: connects the user's cascade language to a checkable proof ledger
+  priority_key: (3, 3, -2)
+
+ASSUMPTION CHALLENGE
+Considered vertex sets: runners, gaps, fixed sections, wall events, residues, cover arcs, Fourier modes, certificate germs, and proof obligations.
+Chosen vertices here: proof obligations/gates.
+Preserved predicate: whether every row receives a witness, cheap section, positive-measure section, or named residual.
+Destroyed data: exact speed values, full round-class identity, and most Hamiltonian-path complexity.
+Challenged assumption: the n=14 proof does not have to be a 64-class table first; the table is useful only after owner labels and section restrictions are attached.
+
