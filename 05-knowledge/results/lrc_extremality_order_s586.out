@@ -1,0 +1,76 @@
+S586 LRC extremality-order session
+Lens: separate certificate-bearing extremality from decoy extremality.
+
+TARGETED EXTREMAL FAMILY TABLE
+  label                    n  family                    M       M-delta   mu_safe  3t  energy hidden(s,r) aug_margin critical binders(v2)
+  AP_n8                     8 critical_AP               0.12500  +0.00000  0.00000  9    231         9,3   +0.01389     True [1, 7][0]
+  unit_shift_AP_n8          8 fold_rich_but_clock_blocked 0.20000  +0.07500  0.09375  6    231        11,3   +0.04678    False [7][0]
+  far_shift_AP_n8           8 raw_energy_decoy          0.37500  +0.25000  0.12015  0    231        25,3   +0.15359    False [9, 15][0]
+  AP_n10                   10 critical_AP               0.10000  +0.00000  0.00000 16    489        11,4   +0.00909     True [1, 9][0]
+  unit_shift_AP_n10        10 fold_rich_but_clock_blocked 0.16667  +0.06667  0.08000 12    489        13,4   +0.04242    False [9][0]
+  far_shift_AP_n10         10 raw_energy_decoy          0.36667  +0.26667  0.12165  0    489        31,4   +0.17100    False [11, 19][0]
+  AP_n14                   14 critical_AP               0.07143  +0.00000  0.00000 36   1469        15,6   +0.00476     True [1, 13][0]
+  unit_shift_AP_n14        14 fold_rich_but_clock_blocked 0.12500  +0.05357  0.06122 30   1469        17,6   +0.03860    False [13][0]
+  far_shift_AP_n14         14 raw_energy_decoy          0.35714  +0.28571  0.11734  0   1469        43,6   +0.19195    False [15, 27][0]
+  Vstar_n14                14 known_floor_variant       0.07143  +0.00000  0.00000 31   1169        15,5   +0.00476     True [1, 13][0]
+  doubled_apex_n14         14 apex_stress               0.07407  +0.00265  0.00549 30   1205        13,6   +0.00476    False [1][0]
+  hidden_4fold_S584_k9     10 hidden_virtual_fold       0.23529  +0.13529  0.11225  0    297        34,4   +0.06909    False [11, 19][0]
+  fixed_sum_hidden_k6       7 hidden_virtual_fold       0.25000  +0.10714  0.14195  0     90        20,3   +0.07500    False [6, 15][0, 1]
+  second_gap_lift_n8        8 open_gap_lift             0.25000  +0.12500  0.06854  4    115        25,2   +0.13889    False [1, 7, 17][0]
+
+SATURATION-CURVE EXTREMALITY
+  AP_n8                   : final_mu=0.00000, sat_at=7, last_drop=0.08750, every_sleeve_needed=True, tail=['0.333', '0.146', '0.087', '0.000']
+  unit_shift_AP_n8        : final_mu=0.09375, sat_at=None, last_drop=0.03125, every_sleeve_needed=False, tail=['0.271', '0.212', '0.125', '0.094']
+  far_shift_AP_n8         : final_mu=0.12015, sat_at=None, last_drop=0.03578, every_sleeve_needed=False, tail=['0.295', '0.208', '0.156', '0.120']
+  AP_n10                  : final_mu=0.00000, sat_at=9, last_drop=0.04929, every_sleeve_needed=True, tail=['0.247', '0.108', '0.049', '0.000']
+  unit_shift_AP_n10       : final_mu=0.08000, sat_at=None, last_drop=0.02000, every_sleeve_needed=False, tail=['0.208', '0.149', '0.100', '0.080']
+  far_shift_AP_n10        : final_mu=0.12165, sat_at=None, last_drop=0.03022, every_sleeve_needed=False, tail=['0.235', '0.179', '0.152', '0.122']
+  AP_n14                  : final_mu=0.00000, sat_at=13, last_drop=0.03410, every_sleeve_needed=True, tail=['0.138', '0.056', '0.034', '0.000']
+  unit_shift_AP_n14       : final_mu=0.06122, sat_at=None, last_drop=0.01020, every_sleeve_needed=False, tail=['0.128', '0.106', '0.071', '0.061']
+  far_shift_AP_n14        : final_mu=0.11734, sat_at=None, last_drop=0.01548, every_sleeve_needed=False, tail=['0.181', '0.153', '0.133', '0.117']
+  Vstar_n14               : final_mu=0.00000, sat_at=13, last_drop=0.01216, every_sleeve_needed=True, tail=['0.138', '0.056', '0.012', '0.000']
+  doubled_apex_n14        : final_mu=0.00549, sat_at=None, last_drop=0.02861, every_sleeve_needed=False, tail=['0.138', '0.056', '0.034', '0.005']
+  reading: AP rows have the critical signature (zero final slack, first saturation at the last sleeve).
+  shifted AP keeps the same clock binders and raw energy as AP but has positive safe measure, so clock facade/energy are decoys.
+
+DETERMINISTIC SAMPLE AUDIT
+  hardness coordinate is -margin; covering hardness is -mu_safe.
+  n= 8 rows=160
+    no_visible_3fold       count= 34; min_margin=+0.11310; min_mu=0.13869; t3=0; energy=107; row=(6, 16, 24, 27, 29, 34, 38)
+    high_4energy_no3       count=  8; min_margin=+0.15441; min_mu=0.14056; t3=0; energy=123; row=(13, 29, 30, 31, 33, 35, 39)
+    visible_fold_rich      count= 65; min_margin=+0.06855; min_mu=0.11287; t3=2; energy=107; row=(2, 7, 15, 16, 17, 29, 32)
+    corr(-margin, 3t/energy/hidden_mult)=+0.553/-0.263/-0.147; corr(-mu, 3t/energy)=+0.551/-0.126
+  n=10 rows=140
+    no_visible_3fold       count=  9; min_margin=+0.13288; min_mu=0.16478; t3=0; energy=185; row=(1, 2, 8, 19, 24, 28, 31, 44, 49)
+    high_4energy_no3       count=  3; min_margin=+0.20303; min_mu=0.12597; t3=0; energy=245; row=(20, 24, 27, 30, 32, 34, 35, 36, 46)
+    visible_fold_rich      count= 42; min_margin=+0.06667; min_mu=0.06806; t3=5; energy=205; row=(9, 10, 13, 16, 19, 28, 29, 34, 45)
+    corr(-margin, 3t/energy/hidden_mult)=+0.549/-0.246/-0.203; corr(-mu, 3t/energy)=+0.565/-0.040
+  n=14 rows=70
+    no_visible_3fold       count=0
+    high_4energy_no3       count=0
+    visible_fold_rich      count= 20; min_margin=+0.06044; min_mu=0.10754; t3=8; energy=505; row=(9, 11, 15, 23, 24, 33, 37, 41, 44, 49, 55, 64, 67)
+    corr(-margin, 3t/energy/hidden_mult)=+0.455/-0.242/-0.285; corr(-mu, 3t/energy)=+0.414/-0.022
+
+TOURNAMENT ANALYSIS: EXTREMALITY AXES
+  vertices: extremality/certificate axes, not runners.
+  pairwise observable: (certificate_power, hardness_correlation, extremal_specificity, decoy_resistance, maturity).
+  switch/gauge: lexicographically larger observable gets the arc; declaration order is the tie Hamiltonian path.
+  ranking: ['critical_sleeve_saturation', 'Phi_endpoint_gap_terminal', 'visible_low_3fold_delta_clock', 'circuit_free_margin_floor', 'hidden_virtual_fold_pressure', 'dyadic_fractal_binder_profile', 'raw_4term_energy']
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3_cycles: 0
+  Hamiltonian_path_count: 1
+  first_Hamiltonian_path: ('critical_sleeve_saturation', 'Phi_endpoint_gap_terminal', 'visible_low_3fold_delta_clock', 'circuit_free_margin_floor', 'hidden_virtual_fold_pressure', 'dyadic_fractal_binder_profile', 'raw_4term_energy')
+  transitivity reading: raw energy cannot shortcut hidden pressure or visible folds without losing certificate power.
+
+ASSUMPTION CHALLENGE
+  Candidate vertices considered: runners, gaps, fixed circle sections, section boundaries, wall crossings, residues, cover arcs, Fourier modes, matroid circuits, hidden sum nodes, sleeve-order positions, proof obligations, and extremality axes.
+  Chosen quotient: extremality axes plus calibrated witness rows.
+  Preserved LRC predicate: which coordinate can actually force M or safe measure down to the delta floor.
+  Destroyed information: exact endpoint-owner geometry, residue languages, and component-by-component Phi ramps; those must re-enter through HYP-2112/HYP-2108/HYP-2107 terminal gates.
+  Challenged assumption: an extremal scalar statistic is automatically a hard LRC statistic. Shifted AP refutes this for raw 4-term energy.
+
+EXTREMALITY PROOF PROGRAM
+  E1. Prove critical sleeve saturation implies a visible low-fold/delta-clock scaffold, not merely high additive energy.
+  E2. Prove hidden-only virtual fold pressure stays in Lemma-A territory until the virtual sum becomes a real runner or endpoint gate.
+  E3. For n=14, classify floor rows by critical saturation plus endpoint/Phi terminal gates; AP and V* are calibration rows, while unit-shift and far-shift APs are decoys.
+  E4. Treat the dyadic/tetrational-looking AP fractal as a binder filter: even layers repeat structure, but odd/unit binders carry the delta contact.
