@@ -1,0 +1,15 @@
+doubling map x->2x : CRT view of n=14 = 2*7
+  binder 1 mod 14 = (1 mod 2, 1 mod 7)
+  mod 2 coord under x->2x: [1, 0, 0] (1->0 collapse, irreversible)
+  mod 7 coord under x->2x: [1, 2, 4, 1] (clean order-3 cycle 1->2->4->1)
+
+odd-n regularity: # of cyclic components of x->2x mod n on 1..n-1
+   n= 7: 2 mod n invertible
+   n= 9: 2 mod n invertible
+   n=11: 2 mod n invertible
+   n=13: 2 mod n invertible
+   n=14: 2 mod n DEGENERATE(2|n)
+   n=15: 2 mod n invertible
+   n=16: 2 mod n DEGENERATE(2|n)
+   n=12: 2 mod n DEGENERATE(2|n)
+   n=10: 2 mod n DEGENERATE(2|n)
