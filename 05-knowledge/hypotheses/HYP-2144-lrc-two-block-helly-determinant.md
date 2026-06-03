@@ -88,6 +88,36 @@ C0 allowed={1}
 C1 allowed={3,7,10}
 ```
 
+## S601 Helly-Log Follow-Up
+
+HYP-2151 and `04-computation/helly_scale_log_laws_s601.py` turn the informal
+"Helly scale" phrase into a certificate entropy:
+
+```text
+Lambda_H(M) = log sum_{h<=H} binom(M,h),
+```
+
+where `M` is the number of live component languages and `H` is the Helly rank
+cutoff.  For fixed `H`, `Lambda_H(M) = H log M + O_H(1)`, so log, loglog, and
+logloglog factors come from how compressed the live component count already is.
+
+The S601 deterministic sample (`1800` row attempts for each `n` and regime)
+found `1113` extracted empty certificates, all rank one or two:
+
+```text
+h=1: 1084
+h=2:   29
+h>=3:   0
+high_order_empty=0
+bounded_live=0
+```
+
+This strengthens the proof-program interpretation: the sampled two-block
+determinant residual is earning a bounded local Helly dividend before the global
+CRT modulus appears.  In particular, the fresh `BC_only` n=14 sample had
+`25` singleton walls and no pair/high/live rows; the full-stack n=14 sample was
+fully preempted.
+
 Rebase integration: while S599 was being pushed, monad-compute S598 added a
 widened exhaustive Cprime box and an n=9 run, checking 6.24M configs with zero
 tight cases.  That makes the computational Cprime backdrop stronger.  HYP-2144

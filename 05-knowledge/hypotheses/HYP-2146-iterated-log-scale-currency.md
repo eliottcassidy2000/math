@@ -183,6 +183,19 @@ then the log factor comes from certificate size, not from time or denominator
 height.  If `H(M)` itself is logarithmic in the ambient scale, the proof pays a
 `log log` or `log log log` tax automatically.
 
+S601/HYP-2151 makes the accounting explicit.  For `M` live determinant
+component languages and Helly cutoff `H`, the local certificate entropy is
+
+```text
+Lambda_H(M) = log sum_{h<=H} binom(M,h).
+```
+
+For bounded `H`, this is `H log M + O_H(1)`.  Thus a Helly logarithm is paid in
+the component-count variable, not automatically in denominator height.  The
+S601 sample found only singleton and pair certificates in the S599 two-block
+determinant residual, so the present n=14 branch is in the Helly-dividend
+regime rather than a high-rank Helly-tax regime.
+
 ## LRC Payoff
 
 For the LRC n=14 program, this says:

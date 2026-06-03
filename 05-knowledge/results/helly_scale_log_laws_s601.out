@@ -1,0 +1,86 @@
+S601 Helly-scale logarithm atlas
+
+CERTIFICATE ENTROPY ATLAS
+  Lambda_H(M) = log sum_{h<=H} binom(M,h)
+  Fixed H gives Lambda_H(M) ~ H log M.
+
+ M       H=1      H=2      H=3      H=ceil(log M)
+4        1.386    2.303    2.639    1.386
+8        2.079    3.584    4.522    3.584
+16       2.773    4.913    6.545    6.545
+32       3.466    6.269    8.610    8.610
+64       4.159    7.640   10.686   13.429
+128      4.852    9.019   12.765   19.434
+
+AMBIENT SCALE TRANSLATION
+ N            log N     loglog N   logloglog N   Lambda_2(log N)   Lambda_2(loglog N)
+1e6           13.816    2.626    0.965    4.654    1.792
+1e12          27.631    3.319    1.200    6.006    1.792
+1e60         138.155    4.928    1.595    9.169    2.708
+1e600       1381.551    7.231    1.978   13.770    3.332
+
+S599/S601 TWO-BLOCK HELLY-SCALE AUDIT
+  Trials are deterministic samples of Cprime rows with one multiple of n.
+  lambda = Lambda_h(M) for the extracted minimal empty h-subfamily.
+
+regime       n  rows preempt  h1   h2   h3   h4 high live  avgM maxM  avgLam  maxLam avglogW
+BC_only      6  1793    1366 419    8    0    0    0    0  9.69   18   2.251   4.913   2.337
+BC_only      8  1800    1523 275    2    0    0    0    0 11.81   20   2.450   4.007   2.552
+BC_only     10  1800    1657 143    0    0    0    0    0 16.08   24   2.752   3.178   2.774
+BC_only     12  1800    1707  93    0    0    0    0    0 20.86   32   3.009   3.466   2.895
+BC_only     14  1800    1775  25    0    0    0    0    0 25.60   34   3.211   3.526   3.013
+
+full_stack   6  1793    1672 103   18    0    0    0    0 10.05   18   2.486   4.913   2.396
+full_stack   8  1800    1777  22    1    0    0    0    0 10.96   16   2.415   3.045   2.538
+full_stack  10  1800    1796   4    0    0    0    0    0 15.00   18   2.688   2.890   2.833
+full_stack  12  1800    1800   0    0    0    0    0    0  0.00    0   0.000   0.000   0.000
+full_stack  14  1800    1800   0    0    0    0    0    0  0.00    0   0.000   0.000   0.000
+
+AGGREGATE HELLY RANKS
+  certified_empty=1113 high_order_empty=0 bounded_live=0
+  nonpreempted_seen=1113 preempted=16873
+  h=1: 1084 (0.974 of extracted certificates)
+  h=2: 29 (0.026 of extracted certificates)
+  h=3: 0 (0.000 of extracted certificates)
+  h=4: 0 (0.000 of extracted certificates)
+
+HELLY-LOG LAWS
+1. Certificate-entropy law:
+   Lambda_H(M)=log sum_{h<=H} C(M,h).  For fixed H,
+   Lambda_H(M)=H log M + O_H(1).
+2. Ambient translation:
+   If M(N)~N^a, fixed-H Helly costs ordinary log N.
+   If M(N)~log N, fixed-H Helly costs loglog N.
+   If M(N)~loglog N, fixed-H Helly costs logloglog N.
+3. Tax/dividend split:
+   A Helly tax is a union bound over B_H(M) possible witnesses.
+   A Helly dividend is an early empty subfamily that avoids the global CRT modulus.
+4. S599/S601 reading:
+   The sampled two-block determinant residual is almost all h=1, with a few
+   h=2 rows at n=6/8.  Thus the current n=14 determinant branch has not
+   started paying a large Helly logarithm; it is earning bounded local
+   certificates before the global CRT scale appears.
+
+HARMONIC HELLY LADDER
+   If rank-h certificates remove alpha/h of the remaining residual,
+   R_H <= R_1 exp(-alpha sum_{h<=H} 1/h) <= R_1 H^{-alpha}.
+   If H itself is log N, this is the Helly-scale source of loglog N.
+
+TOURNAMENT ANALYSIS
+  vertices: proof currencies, not runners or arcs
+  observable: (certificate locality, compression depth, search entropy)
+  switch/gauge: earlier bounded certificates beat larger global log currencies
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3_cycles=0; SCCs=(1, 1, 1, 1, 1, 1); Hamiltonian_paths=1
+  tie_HP=bounded_helly_certificate > component_count_log > certificate_entropy_log > bounded_w_window_log > prime_power_CRT_modulus > ambient_denominator_height
+
+ASSUMPTION CHALLENGE
+  Candidate vertices considered: runners, safe arcs, component rows, owner
+  pairs, w residues, prime powers, determinant rows, and proof obligations.
+  Chosen vertices: Helly certificate budgets B_H(M).
+  Preserved predicate: whether a bounded common w can survive the chosen
+  component-language subfamily.
+  Destroyed information: exact phase geometry, row labels outside the
+  bounded w window, and the full CRT modulus.
+  Challenged assumption: the logarithm need not come from denominator height;
+  it can come from the number of possible local certificates.
