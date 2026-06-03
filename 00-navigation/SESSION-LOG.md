@@ -1,5 +1,14 @@
 # Session Log
 
+## opus-2026-06-02-S564 - Which clocks matter: worry/ignore split + the PRIME-GEAR n-clock + covering-system bridge (HYP-2081)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** which clocks matter? separate worry-cases from ignore-cases; find a more elegant/efficient determination of 'does the orbit hit the safe box even once'; remodel wildly.
+**WORRY vs IGNORE (grounded, measured):** IGNORE = positive safe-measure (orbit spends a positive INTERVAL in B ⇒ hits trivially) = ~ALL sets (300/302 random; ALL incommensurate by Weyl; ALL low-resonance); certified by ~30 random clocks (each safe w.p. ~(1-2/14)^13≈0.135). WORRY = measure-0 = the resonance-maximal tight family (2/302 = AP, V*). **Only the measure-0 resonance-maximal sets can fail LRC.**
+**WHICH CLOCKS:** complete family = the O(k²) PAIR-SUM clocks t=m/(v_a+v_b) (S557/S562), NOT {1..M} (incomplete, S551) nor the c=(k+1) lift. For the WORRY set, ONE clock = the n-clock t=j/n (tight ⟹ binding pair sums to n, S553/S556).
+**DRASTIC REMODEL — TIME = STACK OF PRIME GEARS:** CRT ℤ/14=ℤ/2×ℤ/7 ⇒ the n-clock is two coupled gears (parity × mod-7); a runner is at the observer iff it FULLY aligns (14|vj = aligns on EVERY gear). AP has no multiple of 14 ⇒ no runner ever fully aligns ⇒ every gear setting CLEAR (verified). LRC@14 = can the parity gear & 7-gear always be co-set so no runner fully aligns? Difficulty = the gear-coupling (apex/parity, S559).
+**WILD MENU:** (1) LRC ⇄ COVERING SYSTEMS (Erdős) — a counterexample = danger arcs EXACTLY cover; the divisibility sieve (THM-369/Rosenfeld) IS a covering system; the sieve's unbounded modulus (S551) = the Erdős minimum-modulus phenomenon; import Hough's bound — MOST PROMISING bridge, un-mined. (2) dual rhythms: pair-DIFFERENCES=collision beats (tournament flips), pair-SUMS=pinch clocks (witnesses). (3) CRT-fold 13 runners→1 super-runner. (4) orbit as cyclic code (H-spectrum). (5) reverse/box-radiates = Nullstellensatz zero set (= the polynomial method, S559). (6) Farey/Stern-Brocot dissection of time.
+**EFFICIENT DETERMINATION:** ~30 random clocks dispose of the easy 99.x%; the single n-gear check resolves the rare resonant residual; the only object a proof must control is the n-gear on the resonance-maximal family = a covering-system of coupled prime gears. HONEST: split + clocks + gear model grounded; covering-system bridge & remodels are speculation. Files: 07-reflections/lrc-which-clocks-matter-prime-gears-and-wild-remodels-s564.md; 04-computation/lrc_which_clocks_gears_s564.py (+.out); HYP-2081.
+
 ## opus-2026-06-02-S563 - Time in the LRC as an orbit: the "total reset" (commensurability) IS the hard regime; resonance-folding categorises (HYP-2080)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** how time is modeled in LRC — condense the 4D evolution to the total-reset moment (or proof they never return), and categorise speed sets by it / which families prevent it.

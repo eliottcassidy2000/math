@@ -1,0 +1,11 @@
+302 configs: IGNORE(positive measure)=300, WORRY(measure 0)=2
+  IGNORE certified by ONE random clock: 30/300 (10%)
+  WORRY caught by the single n-gear t=j/14: 2/2
+
+n-gear = mod2 x mod7 (CRT gears); runner v at observer at gear j iff vj=0 mod 14:
+   AP gear j=1: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
+   AP gear j=3: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
+   AP gear j=5: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
+   AP gear j=9: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
+   AP gear j=11: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
+   AP gear j=13: doubly-aligned (mod2 AND mod7) runners=[] -> CLEAR
