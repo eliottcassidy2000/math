@@ -261,6 +261,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 
 | `staircase_allzero_k7_s577.py` | [STORED] | Held-Karp bitmask DP computes H for the all-0 interleaved staircase tournament. NEW: H(k=7,n=14)=562685, H(k=8,n=16)=11222321. Confirms c3=k(k-1) through k=8. No order-2/3 recurrence exists; Markov equation fails for all consecutive triples. Full sequence k=2..8: 5,29,233,2489,33773,562685,11222321. Supports INV-190, HYP-2095. | `staircase_allzero_k7_s577.out` |
 | `lrc_round_extension_s577.py` | [STORED] | Extension of S575 oracle work: A000016 verification via closed form to m=14..20; SC-round=2^floor((m-1)/2) conjecture (HYP-2094 already proves this through n=14); confirms open-time AP runner tournaments are always round via systematic t=a/b audit. Supports HYP-2094/INV-190. | `lrc_round_extension_s577.out` |
+| `lrc_even_clean_lane_fibre_collapse_s577.py` | [STORED] | Merges S576/HYP-2092, Opus S568/HYP-2093, Oracle S576o/HYP-2094, Opus S569/HYP-2095, HYP-2096, HYP-2090, and THM-397 into an exact even-lane funnel. For n=14: `A000568(13)=48,542,114,686,912`, round body `316`, converse-merged seam `190`, self-converse fixed target `64`, D/U/N `12/9/13`, pair-sum cells `78`, and `4` nonunit shells mod `27`; next proof object is a 64-row fixed-round certificate table plus 126 controls. Supports HYP-2097. | `lrc_even_clean_lane_fibre_collapse_s577.out` |
 
 ## Convention for new scripts
 
