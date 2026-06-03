@@ -3,6 +3,8 @@
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
 
+**HYP-2196 / THM-411 — TIGHT FAMILY STRUCTURE (S621, CORRECTS the additive-chain story):** the collapse family `{p₀=0}` = exactly-tight (Kravitz "barely lonely") LRC instances = forbidden arcs cover the circle. **VERIFIED n=3..8:** (1) FINITE, `v_max ≤ 2n-1` (sporadics hit it); (2) count `1,2,2,1,3,1` (not in OEIS); (3) every tight set witnessed exactly on the `(ℤ/m)*` orbit `{k/m:gcd(k,m)=1}` (φ(m)/2 times) — extends THM-403 from the AP to all tights; (4) even n=6,8 give only the AP (2-adic seam). **CORRECTS HYP-2153/2195:** additive-chain ⟺ collapse is FALSE — additive structure is necessary-ish (`max(S)∈S+S`) but vastly insufficient (n=7: 3 collapse vs 364 chains vs 5858 max-in-sumset). True cause = gap pinned at 1/m across the whole witness orbit. **See:** THM-411, HYP-2196, `lrc_tight_*_s621.py`, `lrc_chain_vs_collapse_s621.py`, `07-reflections/consolidated-structure-analysis-s621.md`.
+
 **Status codes:** CONFIRMED | REFUTED | OPEN | PARTIALLY-TRUE
 
 ---
@@ -4799,3 +4801,30 @@ OBJECT: the depth generating polynomial P(z)=sum_k p_k z^k = integral z^{depth(t
 (5) P(z) has complex roots (NOT real-rooted/claw-free); tight<=>min|root|=0; non-zero roots do not classify -- no simple algebraic separator, as Vitali predicts.
 RESOLUTION: the finer invariant does NOT exist at finite order; the collapse family = {exact top-degree cancellation P(0)=0}, which the additive chain makes possible but not certain. Right next object: the witness lattice / resonance graph, not another moment.
 **See:** `04-computation/lrc_depth_polynomial_vitali_s603.py` (+.out); `07-reflections/lrc-depth-polynomial-vitali-s603.md`; HYP-2152 (depth distribution), HYP-2151 (Helly entropy accounting), HYP-2143 (Collatz/LRC two-block, density-blind), and the OCF/independence-polynomial canon.
+## HYP-2185: The apex-lift certificate sheaf — the sheaf layer (restriction, gluing, apex = H¹ obstruction) (claudebox-2026-06-03-S616)
+**Status:** EXTENSION + VERIFIED + FORMALIZED. Supplies the sheaf structure HYP-2101 named but never wrote down.
+**SHEAF:** base = lane set; `CertLocus F s = {points avoiding every forbidden line F i, i∈s}`. Restriction = antitone (s⊆t ⟹ CertLocus t ⊆ CertLocus s); gluing = `CertLocus(s∪t)=CertLocus s ∩ CertLocus t` (verified 𝔽₇, 200/200 covers). H⁰ = global section locus; H¹ obstruction = nonemptiness failure = HYP-2101's positive-measure interval = the resonance.
+**APEX:** the multiple-of-n / d=n / self-antipodal lane forbids the WHOLE plane ⟹ empty stalk ⟹ H⁰=∅ (𝔽₇: 12→0). The r/p lift makes the apex covector (0,0,d), d≠0 a proper hyperplane ⟹ stalk nonempty ⟹ H⁰ restored (𝔽₇: →72).
+**ANTIPODAL ℤ/2:** σ:v↦−v gives antipodal speeds the SAME forbidden hyperplane ⟹ σ pairs the 6 nonzero lanes into 3 orbits; the apex lane 0 is the UNIQUE σ-fixed lane. The obstruction sits exactly at the ramification point of the double cover — the automorphism-rigidity reading of the perspective key (even n=2q ⟹ ⟨−1⟩ fixed point ⟹ apex). Unifies HYP-2150 (2q fragmentation), HYP-2145 (2-block leak), HYP-2170 (multiple-of-n residual).
+**FORMALIZED (math-lean, sorry-free):** ApexCertificate.lean §Sheaf — CertLocus, certLocus_singleton, certLocus_antitone, certLocus_union, certLocus_eq_empty_of_apex, certLocus_empty_of_apex_runner, certLocus_apex_lift_nonempty.
+**OPEN:** formalize gluing-NONEMPTINESS over transverse lanes (reduces LRC(14) to the single apex stalk's lift); is σ-stable H⁰ = {AP,V*} (HYP-2098)?; identify H¹ with resonance energy (HYP-2155).
+**See:** `HYP-2185-...md`, `07-reflections/the-apex-is-the-ramification-point-s616.md`, `04-computation/apex_lift_certificate_sheaf_s616.py`, math-lean ApexCertificate.lean; HYP-2101, HYP-2145, HYP-2150, HYP-2170.
+
+## HYP-2195: LRC as circular-arc covering — the covering-depth master object + the additive-chain collapse family (claudebox-2026-06-03-S617)
+**Status:** MASTER OBJECT + VERIFIED + FORMALIZED. A loneliness certificate = a clock time avoiding every runner's forbidden arc, so LRC = circular-arc covering; the master object is the depth distribution p_k = meas{depth=k}, p₀ = lonely measure.
+**FIRST MOMENT VACUOUS:** each arc has measure 2δ ⟹ E[depth]=2n/(n+1)>1; union bound p₀≥1−2nδ ≤ 0 for all n≥1. LRC's content is in arc CORRELATIONS, not first moment. (Formalized: union_bound_vacuous.)
+**COLLAPSE FAMILY = ADDITIVE CHAINS (new sub-problem):** exhaustive small search ⟹ {p₀=0} is exactly the additive chains (closed under a+b=c): AP (1,2,..,n) AND sporadic (1,3,4,7), (1,3,4,5,9). a+b=c is a small (1,1,−1) resonance ⟹ collapse family = resonance family = HYP-2155 = apex sheaf H⁰=∅ (HYP-2185). Mechanism: clock-distance subadditivity ‖(a+b)t‖≤‖at‖+‖bt‖ pins the third arc.
+**SINGLETON-WALL EXPONENT TEST (altitude principle HYP-2180):** singleton wall {1,2} opens p₀~ε^0.99 = exponent 1 = (loglog)¹ ✓; multi-relation walls bend sub-linear (stacked-relation signature). Exponent = #relations broken = codimension = altitude.
+**FORMALIZED (math-lean, sorry-free):** Math/LonelyRunner/CoveringDepth.lean — dZ (clock distance), dZ_le_dist_int, dZ_add_le (subadditivity = resonance link), dZ_chain_le (additive-chain arc-dependence), union_bound_vacuous.
+**CONSOLIDATION:** see `06-writeups/consolidated-structure-analysis-s617.md` — the 4 faces (measure p₀ / sheaf H⁰ / resonance / altitude) are one object; p₀>0 ⟺ H⁰≠∅ ⟺ trivial resonance; the 2q seam is the shared load-bearing wall.
+**OPEN:** prove additive-chain ⟺ collapse; clean (loglog)² via simultaneous-break; p_k cumulants ↔ resonance energy; p₀ as measure-refinement of sheaf H⁰.
+**See:** `HYP-2195-...md`, `07-reflections/the-covering-depth-master-object-s617.md`, `06-writeups/consolidated-structure-analysis-s617.md`, `04-computation/covering_depth_distribution_s617.py`, `04-computation/singleton_wall_exponent_s617.py`, math-lean CoveringDepth.lean; HYP-2175, HYP-2180, HYP-2185, HYP-2155.
+
+## HYP-2200: Four lenses on the covering-depth object — Helly order / Vitali wall / Collatz two-block / partition-function sibling (claudebox-2026-06-03-S618)
+**Status:** CONSOLIDATION + VERIFIED + FORMALIZED. The four user-named lenses are four readings of ONE object: the overlap hierarchy S_k = Σ_{|I|=k} meas(∩A_i), with p₀ = Σ(−1)^k S_k (verified exact).
+**HELLY (order):** Bonferroni T_m bracket p₀; order-3 lower bound T₃=1−S₁+S₂−S₃>0 is a RIGOROUS loneliness certificate (circular-arc Helly number 3). Decides generic configs at order 3; thin boundary layer near collapse where it fails ({1,5,8,11,13}: T₃<0 yet p₀>0). Collapse always T₃≤0 (resonance at order-3 triples = sum-relations).
+**VITALI (moments):** at collapse no finite truncation m<n closes; series reaches 0 only at top order. Finite moments can't decide p₀; can't separate tight (LRC holds) from empty (fails). Measure blind, construction needed.
+**COLLATZ two-block:** the multiplicative twin — density blind to the structured residue (cycle/2-block) = the Vitali wall across the additive↔multiplicative dictionary (HYP-2175).
+**PARTITION SIBLING (lens 4):** depth GF P(z)=∫z^depth is a hard-core partition function, p₀=P(0); factors over disjoint blocks (formalized). At δ=1/(n+1) the pairwise dependency graph is COMPLETE ⟹ crude independence polynomial degenerate (1+nλ) — as vacuous as the first moment. Discriminating object = the FULL P(z)/all overlap orders. All four lenses ⟹ need the whole hierarchy.
+**FORMALIZED (math-lean, sorry-free):** Math/LonelyRunner/DepthGenerating.lean — depthGF, depthGF_one, depthGF_union (partition factorization), prod_one_sub_eq_inclusion_exclusion (overlap hierarchy), depthGF_zero (p₀=P(0)=incl-excl).
+**See:** `HYP-2200-...md`, `07-reflections/one-boundary-four-names-s618.md`, `04-computation/overlap_hierarchy_s618.py`, `four_lenses_bonferroni_partition_s618.py`, math-lean DepthGenerating.lean; HYP-2195, HYP-2185, HYP-2175, HYP-2150.
