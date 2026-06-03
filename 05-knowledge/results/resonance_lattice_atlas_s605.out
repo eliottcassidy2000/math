@@ -1,0 +1,98 @@
+
+  RESONANCE LATTICES EVERYWHERE
+
+======================================================================
+
+  I. THE UNIVERSAL OBJECT: L = ker(eval); the (star) sum lives on L
+  --------------------------------------------------
+  Given quantities x_1..x_m, the RESONANCE LATTICE is
+      L = { c in Z^m : sum c_i x_i = 0 }   (integer relations).
+  Its short vectors are the resonances. Every cancellation-family member asks
+  to control the sign / non-vanishing of a weighted sum over L:
+      Sigma = sum_{c in L} w(c).
+  LRC (S604): x_i = speeds, w(c) = prod_i kappa(c_i), Sigma = p_0. The c=0 term
+  is the independence value (1-2 delta)^n; nonzero c are resonance corrections.
+
+  II. THE SOLVED FACE: REDEI parity via a sign-reversing involution  [VERIFIED]
+  --------------------------------------------------
+  #HamPaths(T) is a permanent-shaped sum (the (star) face on the cycle
+  lattice). It VARIES, but its PARITY is forced to 1 for every tournament
+  by a sign-reversing involution over GF(2) (the determinant face):
+    n=3: counts=[1, 3]  ALL ODD = True
+    n=4: counts=[1, 3, 5]  ALL ODD = True
+    n=5: counts=[1, 3, 5, 9, 11, 13, 15]  ALL ODD = True
+  => RESOLUTION TEMPLATE: turn the permanent-shaped sum into a
+     determinant/involution-certifiable one. (Redei=GF(2) involution.)
+
+  III. WHY LRC RESISTS THE SAME TRICK: kappa is EVEN  [VERIFIED]
+  --------------------------------------------------
+  The obvious symmetry of L(V) is negation c <-> -c. But the LRC kernel
+  kappa is EVEN (kappa(-c)=kappa(c)), so negation is sign-PRESERVING:
+    c   kappa(c)  kappa(-c)
+    1   -0.27566   -0.27566
+    2   -0.13783   -0.13783
+    3   -0.00000   -0.00000
+    5    0.05513    0.05513
+  Negation DOUBLES terms, never cancels => the trivial involution fails.
+  (Also kappa((n+1)/2 * k)=0: arc-width Fourier zeros, e.g. kappa(3)=0 at
+   delta=1/6.) LRC needs a NON-obvious sign-reversing symmetry of L(V) --
+   exactly the open problem; Redei has one over GF(2), LRC does not (yet).
+
+  IV. FULL-SUPPORT RESONANCES = NOWHERE-ZERO FLOWS (S537o)  [VERIFIED]
+  --------------------------------------------------
+  A full-support c (all c_i != 0) with sum c_i v_i = 0 is a nowhere-zero
+  flow on the dipole G_v (n parallel edges, edge i weight v_i). Count
+  (|c_i|<=2) is a flow-polynomial value:
+  V                   #full-support reln (|c|<=2)
+  (1, 2, 3, 4)                                  8
+  (1, 3, 4, 7)                                  2
+  (1, 3, 4, 5, 9)                              20
+  (1, 2, 4, 8)                                  6
+  => Tutte/Seymour flow theory is the combinatorics of the resonance
+     lattice's interior (full-support) shell.
+
+  V. COLLATZ's RESONANCE LATTICE = the {log2, log3} near-lattice  [PROVED/ANALOGY]
+  --------------------------------------------------
+  Collatz (this author, HYP-2147): K log2 - L log3 = log n + D(n). The
+  relation K log2 ~ L log3 is a NEAR-resonance of {log2, log3}; since log2,log3
+  are Q-independent the exact lattice is trivial, so the controlling object is
+  the DUAL near-lattice = the convergents of log2(3), i.e. Baker's linear forms
+  in logs |K log2 - L log3| (the cycle gap |2^E - 3^k|, S596). The formal-group
+  logarithm arctanh = log_F (repo spine) is the LINEARIZER carrying the
+  MULTIPLICATIVE resonances (2^K vs 3^L) into this ADDITIVE relation lattice.
+  Best rational resonances L/K ~ log2(3) (convergents) = the dangerous
+  near-cycles; |K log2 - L log3| at convergents:
+    K=  1 L=  1  L/K=1.00000  |K log2 - L log3|=0.405465
+    K=  2 L=  1  L/K=0.50000  |K log2 - L log3|=0.287682
+    K=  3 L=  2  L/K=0.66667  |K log2 - L log3|=0.117783
+    K=  8 L=  5  L/K=0.62500  |K log2 - L log3|=0.052116
+    K= 19 L= 12  L/K=0.63158  |K log2 - L log3|=0.013551
+    K= 65 L= 41  L/K=0.63077  |K log2 - L log3|=0.011463
+  (the gap shrinks along convergents but never hits 0 -- Baker bounds it
+   below; this is Collatz's Vitali wall, the same all-orders obstruction.)
+
+  VI. THE ATLAS (one carrier, many problems)  [mixed]
+  --------------------------------------------------
+  problem    eval          resonance lattice         (star) sum            certifier                             status
+  LRC        speeds v_i    {c: c.V=0}                p_0=sum prod kappa    sign-rev involution? (kappa even=>trivial fails)OPEN
+  LRC/flows  v_i mod n*    full-support c            flow polynomial       Tutte/Seymour                         partial
+  Collatz    log2, log3    near-lattice (convergents)K log2-L log3         Baker linear forms                    OPEN
+  Redei/OCF  tournament arcscycle lattice             #HamPaths (permanent) GF(2) sign-rev involution             SOLVED
+  Riemann    log p         zeros rho (dual)          psi(x)-x=-sum x^rho/rhozero-free region                      OPEN
+  Goldbach   primes        additive a+b=n            r(n)=sum Lambda Lambdacircle method                         open*
+  P vs NP    -             -                         permanent vs determinant(barrier theory)                      OPEN
+
+======================================================================
+  SYNTHESIS
+  ---------
+  ONE carrier: the resonance lattice L = ker(evaluation). The hard problems are
+  sign/non-vanishing of a weighted sum over L (the PERMANENT face, all-orders
+  cancellation, Vitali wall). A member is SOLVED iff a SYMMETRY of L collapses
+  that sum to a DETERMINANT face: Redei = a GF(2) sign-reversing involution
+  (VERIFIED: HamPath parity == 1 always). LRC resists because its kernel kappa
+  is EVEN -- the obvious involution is sign-preserving; a genuine sign-reversing
+  symmetry of L(V) is unknown. Collatz's lattice is the {log2,log3} near-lattice
+  (Baker), linearized from multiplicative resonances by the formal-group log
+  arctanh. The repo's own Redei theorem is the Rosetta stone: every resolution
+  in the family is 'find the symmetry of the resonance lattice'.
+
