@@ -1,0 +1,3 @@
+interval vs Paley (m=1 mod... Paley needs m=3 mod 4 prime):
+  m=3: interval round=True; Paley round=True; interval~=Paley(iso)=True; QR(m)=[1] vs interval-S=[1]
+  m=7: interval round=True; Paley round=False; interval~=Paley(iso)=False; QR(m)=[1, 2, 4] vs interval-S=[1, 2, 3]
