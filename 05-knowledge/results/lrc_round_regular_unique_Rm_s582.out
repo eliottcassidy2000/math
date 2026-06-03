@@ -1,0 +1,38 @@
+==============================================================================
+Is R_m the UNIQUE round (and unique chi=2) regular tournament? (S581o/opus-S591)
+==============================================================================
+
+--- m=7: 3 regular tournaments by SPECTRUM (known total 3; spectrum-complete) ---
+   round?  chi  VT  aut  is_R_m(interval/AP)?
+   T       2    T     7  True
+   F       3    F     3  False
+   F       3    T    21  False
+  => round regular classes: 1 (R_m is round); chi=2 regular classes: 1
+     UNIQUE round regular = R_m? True;  UNIQUE chi=2 regular = R_m? True
+
+--- m=9: 12 regular tournaments by SPECTRUM (known total 15; COSPECTRAL merging -> lower bound) ---
+   round?  chi  is_R_m(interval/AP)?
+   T       2    True
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+   F       3    False
+  => round regular classes: 1 (R_m is round); chi=2 regular classes: 1
+     UNIQUE round regular = R_m? True;  UNIQUE chi=2 regular = R_m? True
+
+==============================================================================
+READING
+==============================================================================
+  If round-regular is UNIQUE (=R_m) at each m, then opus-S591's 'LRC=>round' plus
+  'regular tight' FORCES the tight regular orbit to be exactly R_m (the AP) -- a rigorous
+  pin, closing the 'VT round = interval circulant' qualifier. If chi=2-regular is ALSO
+  unique, chi=2 characterizes the AP orbit among ALL regular tournaments (not just the
+  round/accessible ones). Any non-R_m round regular, or non-R_m chi=2 regular, would be a
+  regular orbit the LRC could in principle reach beyond the AP.
