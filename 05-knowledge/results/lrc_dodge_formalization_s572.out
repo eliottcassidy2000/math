@@ -1,0 +1,12 @@
+ create mode 100644 05-knowledge/results/staircase_allzero_k12_s_monad.out
+(1) DOMINANCE lemma: v>(n-1)*max(others) => M>1/n  (general v, ANY divisibility)
+   n= 6: dominant-runner configs loose 1500/1500
+   n= 8: dominant-runner configs loose 1500/1500
+   n=10: dominant-runner configs loose 1500/1500
+   n=12: dominant-runner configs loose 1500/1500
+   n=14: dominant-runner configs loose 1500/1500
+
+(2) v=n residual: is there always a gap (k/n+1/n^2,(k+1)/n-1/n^2) with all others safe?
+   n= 6: v=n configs=1499; loose=1499; gap-MIDPOINT witness=773 (midpoint NOT always enough)
+   n= 8: v=n configs=1500; loose=1500; gap-MIDPOINT witness=394 (midpoint NOT always enough)
+Terminated

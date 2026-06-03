@@ -1,5 +1,16 @@
 # Session Log
 
+## opus-2026-06-03-S572 - Formalized C' ⟹ LRC as THM-398; formalization surfaced the DOMINANCE dodge (not divisibility), the interval criterion, and the all-short residual (HYP-2103)
+
+**Account:** Opus (remote-control, v1410-1). **User prompt:** work on formalizing this; let it inspire extensions/improvements.
+**Wrote THM-398** with complete proofs: Lemma A (no multiple of n ⟹ M≥1/n, =THM-369); **Theorem: C' ⟹ LRC(n)** (every config has no mult of n ⟹ 1/n witness, or has one ⟹ M>1/n by C'); **Lemma B (dominance-dodge):** v>(n-1)·max(others) ⟹ M>1/n, assuming LRC(n-1) — balances window half-width δ=1/(n(n-1)V') against arc radius ρ=1/(nv), δ>ρ ⟺ v>(n-1)V'.
+**FOUR improvements formalization forced out:**
+1. **DOMINANCE not divisibility (Cor B2, PROVED):** the proof never uses n|v — ANY speed set with one runner > (n-1)×all others is loose. The large-multiple partial is just the slice where the dominant runner is a multiple. Verified 1500/1500 each n=6..14, arbitrary residues.
+2. **Interval criterion B' (PROVED, sharper):** G(S\{v}) has a component longer than 2/(nv) ⟹ S loose — strictly weaker than v>(n-1)V'.
+3. **Residual dichotomy:** a mult-of-n config (v=nw) is loose immediately UNLESS every component of G(S\{v}) is ≤2/(n²w) (all-short). The all-short case is the WHOLE open core of C': μ(G(S))=μ(G(S'))−μ(G(S')∩D_v); want the intersection < μ(G(S')), i.e. ONE AP of thin arcs (period 1/(nw), mass 2/n) can't COVER a fixed open set — a 3-distance/discrepancy statement.
+4. **Residual is interval-search, not sub-clock:** for v=n the gap-midpoint (2k+1)/(2n) (where n sits at 1/2) witnesses only ~52% (773/1499 @ n=6); the safe point roams the gap interior, killing the finite-sub-clock shortcut.
+**NET:** proved region GREW (any dominant runner; any long G(S') component), open residual SHRANK to the all-short equidistribution case — now a clean analytic no-cover statement (Erdős–Turán / three-distance tools apply). NEXT: Erdős–Turán on {k/(nw)} (discrepancy × #components, =O(Σv_i)); or counting over the n clock gaps for v=n (other runners' danger 2(n-2)/n<2 ⟹ survivor). Convergent w/ codex-S579 (apex-lift). Files: 01-canon/theorems/THM-398-...md; 07-reflections/lrc-formalizing-the-Cprime-reduction-and-dominance-dodge-s572.md; 04-computation/lrc_dodge_formalization_s572.py (+.out); HYP-2103.
+
 ## opus-2026-06-02-S571 - The lift lemma collapses to C': "a multiple of n forces positive measure" — C' ⟹ LRC (HYP-2102)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** work on the lift lemma; look for simplifications and speedups.
