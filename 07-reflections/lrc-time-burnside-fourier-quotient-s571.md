@@ -67,6 +67,11 @@ which frequencies carry the lonely-time word?
 The `n`-clock, pair-sum pinch clocks, dyadic packet gears, and generic
 low-resonance clocks show up as frequency families.
 
+The incoming HYP-2083 antipodal/summand-unit bridge should be folded into this
+same clock atlas: unit-visible shells modulo `2n-1` are labelled event orbits,
+while nonunit holes are the composite-clock branch the binary lonely word
+forgets.
+
 ## What This Means For n=14
 
 The finite-time model suggests a layered proof object:
@@ -104,4 +109,5 @@ owner-event highly constrained, that tension may be exploitable: the time word
 looks generic, but the endpoint core must act resonantly.
 
 **Artifacts:** `04-computation/lrc_time_burnside_fourier_s571.py`,
-`05-knowledge/results/lrc_time_burnside_fourier_s571.out`, HYP-2083.
+`05-knowledge/results/lrc_time_burnside_fourier_s571.out`, HYP-2085; related:
+HYP-2083.

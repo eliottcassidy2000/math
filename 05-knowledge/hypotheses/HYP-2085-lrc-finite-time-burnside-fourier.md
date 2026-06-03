@@ -1,8 +1,9 @@
 ---
-id: HYP-2083
+id: HYP-2085
 status: PROGRESS - finite quotient diagnostic built; proof use open
 source: codex-2026-06-03-S571
 related:
+  - HYP-2083
   - HYP-2080
   - HYP-2081
   - HYP-2082
@@ -10,7 +11,7 @@ related:
   - HYP-2075
 ---
 
-# HYP-2083: finite time Burnside must use the lonely-word stabilizer, and Fourier modes expose clock families
+# HYP-2085: finite time Burnside must use the lonely-word stabilizer, and Fourier modes expose clock families
 
 Discretise LRC time to `Z/N` and let
 
@@ -75,6 +76,12 @@ random_low_resonance: 34, 2
 These are finite character shadows of the clocks isolated by HYP-2081 and
 HYP-2082: the `n`-clock, pair-sum pinch clocks, dyadic packet gears, and generic
 low-resonance clocks.
+
+HYP-2083 adds a complementary finite clock family: antipodal summand shells
+modulo `2n-1` acted on by unit multiplication.  In this Burnside/Fourier view,
+those shells are not merely additive residue data; they are candidate labelled
+time-event orbits whose unit-visible and nonunit-hole branches should have
+different character support.
 
 ## Interpretation
 

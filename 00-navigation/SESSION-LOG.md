@@ -17,14 +17,15 @@
 **SYNTHESIS:** S553's witness lemma is addition plus multiplication: addition supplies summand shells `{a,C-a}`, multiplication by a unit supplies the inverse clock moving a missed shell to `{+1,-1}`. Odd `C=2n-1` removes the midpoint; even `C` has the fixed midpoint/apex; composite odd `C` creates nonunit holes invisible to unit clocks. S572 adds that below the second floor the bounded equality stratum is perfect-transversal/n-clock tight; sumset minimality is sufficient for AP but not the exact separator.
 **HONEST:** this is a structural bridge, not a spectral-gap proof. The theorem target is to close the nonunit-hole branch by a second clock, modulus lift, or gcd-stratum descent, while perfect transversals remain the flip-set branch.
 **Artifacts:** HYP-2083; HYP-2084; `07-reflections/lrc-2n-minus-1-summand-unit-bridge-s571.md`; `07-reflections/lrc-addition-multiplication-odd-even-second-gap-s572.md`; `04-computation/lrc_antipodal_summand_units_s571.py` (+.out); `04-computation/lrc_second_gap_transversal_audit_s572.py` (+.out).
-## codex-2026-06-03-S571 - Finite time Burnside/Fourier quotient for LRC reset words (HYP-2083)
+
+## codex-2026-06-03-S571 - Finite time Burnside/Fourier quotient for LRC reset words (HYP-2085)
 
 **Account:** Codex. **User prompt:** model LRC time by finite Burnside on `Z/N`, dual character sums, and Mobius inversion on subgroup lattices.
 **SYNTHESIS:** implemented the finite approximation but corrected the group action. For a fixed speed set, the full cyclic group `Z/N` acts on ambient time slots, but the lonely subset `X` is usually not invariant. Thus `|X|/N` is density, not a valid full-group Burnside orbit count. The legal group is `K=Stab(1_X)`, the stabilizer of the whole lonely time word, giving `|X/K|=|X|/|K|`.
 **EXACT AUDIT (`lrc_time_burnside_fourier_s571.py`, `N=38640`):** AP/V* have 6 lonely slots (`1/6440` density); near-AP has 470; S562 n14 packet has 276; S562 lift 264; no-small-pinch proxy 4810; random low-resonance 4966. All audited primitive n14 binary lonely words have trivial stabilizer, so the binary Burnside quotient is not where the structure lives.
 **FOURIER DUAL:** dominant frequencies expose clock families anyway: near-AP `6,12`; S562 packet `21,42`; dyadic lift `42,84`; no-small-pinch proxy `2,24`; random low-resonance `34,2`. The next useful Burnside object should be owner-labelled time-event words from S564/S570, not just binary lonely slots.
 **Tournament Analysis:** vertices were speed-set time words; observable `(density, stabilizer, Fourier entropy/top mode, period)`; switch harder = lower density, more folding, lower entropy/stronger top mode. Fingerprint transitive with no directed 3-cycles and one Hamiltonian path.
-**Artifacts:** HYP-2083; `04-computation/lrc_time_burnside_fourier_s571.py` (+.out); reflection `07-reflections/lrc-time-burnside-fourier-quotient-s571.md`. **Handoff:** build labelled event words carrying runner owner, pair-sum denominator, G component, wall endpoint, and endpoint-core labels, then rerun Burnside/Fourier on that enriched object.
+**Artifacts:** HYP-2085; `04-computation/lrc_time_burnside_fourier_s571.py` (+.out); reflection `07-reflections/lrc-time-burnside-fourier-quotient-s571.md`. **Handoff:** build labelled event words carrying runner owner, pair-sum denominator, G component, wall endpoint, and endpoint-core labels, then rerun Burnside/Fourier on that enriched object.
 
 ## monad-compute-2026-06-02 - PINCH-sieve completeness extends to n=15,16,17 (HYP-2075): 19,825 configs, 0 misses
 
