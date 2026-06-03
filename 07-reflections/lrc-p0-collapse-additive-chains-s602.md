@@ -17,6 +17,18 @@ That is right in the endpoint-collapse sense already present in S357/S359.  If
 visible witness quotient collapses to `n`," then the family contains the AP
 rows and also sparse additive chains.
 
+Incoming integration during close-out: opus-S599 made `p_0` literal as the
+zero-depth cell in the covering-depth distribution
+
+```text
+p_k(delta) = meas{t : exactly k runners are within delta of the origin}.
+```
+
+This S602 note is the endpoint-critical refinement of that same object.  At the
+reduced threshold, `p_0=0` means the open zero-depth cell has vanished; the
+extra S602 condition is that isolated boundary witnesses remain and collapse
+to the unit quotient `Z/nZ`.
+
 The two named rows are not random exceptions:
 
 ```text
@@ -53,6 +65,13 @@ n=8: AP, (1,2,3,4,5,7,12), (1,4,5,6,7,11,13)
 
 All nine are two-seed addition chains.  AP is therefore not wrong; it is just
 the all-lower, most regular member of a larger additive-chain boundary family.
+
+Read this together with S599, not as a competing definition.  S599 proves the
+first moment `E[depth]=2m delta` is configuration-independent, checks the named
+chains as `p_0=0`, gives the non-chain control `(1,2,4,7)` with `p_0=6/35`,
+and fits the near-collapse exponent `p_0(delta_c-epsilon) ~ epsilon^1` for AP
+and `(1,3,4,7)`.  S602 adds the unit-boundary quotient, flip-set, and nonunit
+shell labels that the raw depth distribution forgets.
 
 ## The New Split
 
