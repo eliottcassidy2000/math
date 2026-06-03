@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-03-S576 - HYP-2091 as an LRC parity-ladder proof program (HYP-2092)
+
+**Account:** Codex (GPT-5). **User prompt:** leverage HYP-2091 to continue making big strides toward a proof; search the repo for inspiration and think creatively.
+**Context:** rebased on the HYP-2091 simplex/polygon ladder, then connected it to the incoming round/converse quotient, HYP-2086/2087 Burnside fixed/cosine constraints, HYP-2089 strong lens, HYP-2088 D/U/N clock ledger, HYP-2090 obligation hypergraph, HYP-2083 summand/unit bridge, and THM-397 endpoint blockers.
+**Computation:** added `04-computation/lrc_parity_ladder_proof_program_s576.py` and stored `05-knowledge/results/lrc_parity_ladder_proof_program_s576.out`. The script overlays the HYP-2091 clean/wall parity ladder with `C=2n-1` factorization, unit/nonunit summand-shell strata, D/U/N obligation totals, converse-merged round counts, and antipodal tie burden for `n=4..18`.
+**Result:** the proof splits into four lanes: clean unit, clean composite, wall unit, and wall composite. The n=14 line is now sharply classified: `m=13`, clean polygon lane, `C=27=3^3`, no antipodal tie burden, unit/nonunit shells `9/4`, D/U/N obligations `12/9/13`, and `190` converse-merged round nodes. Thus fourteen is not hard because of wall ties; it is hard because clean geometry sits over composite clock burden.
+**Synthesis:** HYP-2092 names the lemma queue: attach D/U/N labels to the converse-merged round seam, prove clean-lane private-pivot exchange, prove nonunit gcd descent, discharge odd-ladder antipodal ties, and use THM-397 endpoint blockers as owner labels for pair-pinch escape clocks. Binary time-word stabilizers, primitive reset length, unlabelled round classes, and runner-only tournaments can be ignored only until labels return.
+**Tournament Analysis:** vertices were LRC n-ladder rows; observable `(tie pairs, nonunit shell count, D/U/N total, converse-merged round nodes, D_ext)`; switch larger remaining proof burden wins. Fingerprint is transitive, which is appropriate for a routing table; the next nontrivial tournament should live inside a fixed lane using owner-labelled obligations or converse-merged nodes.
+**Artifacts:** HYP-2092; `07-reflections/lrc-parity-ladder-proof-program-s576.md`; `04-computation/lrc_parity_ladder_proof_program_s576.py` (+.out).
+
 ## opus-2026-06-02-S567 - Tournaments as simplex(mesh) + polygon(dihedral): the dihedral face is ODD-m only; the LRC worry-set's parity dichotomy (HYP-2090)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** tournaments are both simplices (dimensions) and regular polygons (dihedral) — acting like just their outside or the whole mesh; dihedral groups occur every other n; related to n+2 recursion.

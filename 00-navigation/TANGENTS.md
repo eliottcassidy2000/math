@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T651** #lrc #parity-ladder #proof-program #simplex-polygon #nonunit-descent #tie-discharge | certainty: synthesis + finite audit | source: codex-2026-06-03-S576
+Use HYP-2091 as a proof-routing table: split rows first by geometry (`even n` clean polygon, `odd n` wall/mesh), then by `C=2n-1` arithmetic (`unit` versus `nonunit` summand shells). S576 shows n=14 is clean geometry but composite clock burden: `C=27=3^3`, no tie pairs, unit/nonunit shells `9/4`, D/U/N total `34`, and `190` converse-merged round nodes. The next proof object is a labelled fibre table over those 190 nodes with D/U/N private pivots and THM-397 endpoint owners. See HYP-2092 and `07-reflections/lrc-parity-ladder-proof-program-s576.md`.
+
 **T650** #lrc #obligation-hypergraph #private-pivots #clock-blockers #open-gap #burnside-labels | certainty: prototype + synthesis | source: codex-2026-06-03-S574
 Rearrange the S573 D/U/N clock-blocker ledger as a labelled hitting-set hypergraph: obligations are vertices, speeds are hyperedges, and strict sub-edge rows are full covers. Open-gap lifts are not ledger failures; they are full covers whose pair-sum witness refines the cover cell. Private obligations become descent pivots and the missing owner-labelled event word for the Burnside/Fourier program; they also connect to HYP-2089 observer-source escape and THM-397 endpoint blockers. See HYP-2090 and `07-reflections/lrc-obligation-hypergraph-private-pivots-s574.md`.
 
