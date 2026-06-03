@@ -2,7 +2,7 @@
 id: HYP-2134
 status: OPEN orbit-functor atlas + finite AP-clock audit; S590 isolates n=14 as statically rigid, reflectively paired, and dynamically broken in one 2-adic bit
 source: codex-2026-06-03-S590
-related: [HYP-2141, HYP-2140, HYP-2139, HYP-2138, HYP-2137, HYP-2136, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, HYP-2118, HYP-2117, HYP-2116, HYP-2113, HYP-2112, HYP-1783, THM-401, THM-400, THM-385, THM-381]
+related: [HYP-2141, HYP-2140, HYP-2138, HYP-2137, HYP-2136, HYP-2135, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122, HYP-2121, HYP-2120, HYP-2118, HYP-2117, HYP-2116, HYP-2113, HYP-2112, HYP-1783, THM-401, THM-400, THM-385, THM-381]
 ---
 
 # HYP-2134: LRC rigidity should be classified by orbit functors, not by one local/global axis
@@ -217,6 +217,6 @@ safe/unsafe fibers, the quotient must be lifted.
 `04-computation/orbit_rigidity_functor_atlas_s590.py`,
 `05-knowledge/results/orbit_rigidity_functor_atlas_s590.out`,
 `07-reflections/lrc-orbit-functor-rigidity-s590.md`,
-HYP-2141, HYP-2140, HYP-2139, HYP-2138, HYP-2137, HYP-2136, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122,
+HYP-2141, HYP-2140, HYP-2138, HYP-2137, HYP-2136, HYP-2135, HYP-2133, HYP-2132, HYP-2131, HYP-2130, HYP-2129, HYP-2128, HYP-2127, HYP-2126, HYP-2125, HYP-2124, HYP-2123, HYP-2122,
 HYP-2121, HYP-2120, HYP-2118, HYP-2117, HYP-2116, HYP-2113,
 HYP-2112, HYP-1783, THM-401, THM-400, THM-385, THM-381.
