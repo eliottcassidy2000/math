@@ -1,0 +1,4 @@
+Scaling-invariance of the safe set under symmetry units (the rigidity mechanism)
+  n=6: AP clock-witnesses [1, 5] = the units mod n [1, 5]? permuted-by-all-units: True
+  n=8: AP clock-witnesses [1, 3, 5, 7] = the units mod n [1, 3, 5, 7]? permuted-by-all-units: True
+  n=14: AP clock-witnesses [1, 3, 5, 9, 11, 13] = the units mod n [1, 3, 5, 9, 11, 13]? permuted-by-all-units: True
