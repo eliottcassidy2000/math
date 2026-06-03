@@ -1,0 +1,52 @@
+========================================================================
+S579  apex-lift certificate sheaf  (HYP-2101)  --  building on S559
+========================================================================
+
+########## q=3  (n=6=2*3) ##########
+[A] tight tuple corrector  full-Z_6: False   CRT mod-3: False   (must match: True)
+    apex-excluded corrector (CRT): True  (S559 tight-tuple repair => expect True)
+[B] certificate locus  |H^0|(all runners) = 0   parity-matched=True
+    apex section is the WHOLE plane (degenerate): True
+    |H^0|(apex excluded) = 2   forbidden slopes (non-apex) rho_i = [2]
+    F_q^x = [1, 2] ; slopes cover F_q^x: False  (S559 residual: tight collapses slopes to a single value)
+[C] apex forbidden-fraction  UNLIFTED = 1.000   (apex line over F_q: s*0+r*0=0)
+    apex forbidden-fraction  LIFTED   = 0.000   (lifted mod 30=2*3*5: apex speed mod p = 3)
+    lift restores codim-1 (fraction drops from 1): True
+
+########## q=5  (n=10=2*5) ##########
+[A] tight tuple corrector  full-Z_10: False   CRT mod-5: False   (must match: True)
+    apex-excluded corrector (CRT): True  (S559 tight-tuple repair => expect True)
+[B] certificate locus  |H^0|(all runners) = 0   parity-matched=True
+    apex section is the WHOLE plane (degenerate): True
+    |H^0|(apex excluded) = 12   forbidden slopes (non-apex) rho_i = [4]
+    F_q^x = [1, 2, 3, 4] ; slopes cover F_q^x: False  (S559 residual: tight collapses slopes to a single value)
+[C] apex forbidden-fraction  UNLIFTED = 1.000   (apex line over F_q: s*0+r*0=0)
+    apex forbidden-fraction  LIFTED   = 0.000   (lifted mod 30=2*5*3: apex speed mod p = 2)
+    lift restores codim-1 (fraction drops from 1): True
+
+########## q=7  (n=14=2*7) ##########
+[A] tight tuple corrector  full-Z_14: False   CRT mod-7: False   (must match: True)
+    apex-excluded corrector (CRT): True  (S559 tight-tuple repair => expect True)
+[B] certificate locus  |H^0|(all runners) = 0   parity-matched=True
+    apex section is the WHOLE plane (degenerate): True
+    |H^0|(apex excluded) = 30   forbidden slopes (non-apex) rho_i = [6]
+    F_q^x = [1, 2, 3, 4, 5, 6] ; slopes cover F_q^x: False  (S559 residual: tight collapses slopes to a single value)
+[C] apex forbidden-fraction  UNLIFTED = 1.000   (apex line over F_q: s*0+r*0=0)
+    apex forbidden-fraction  LIFTED   = 0.000   (lifted mod 42=2*7*3: apex speed mod p = 1)
+    lift restores codim-1 (fraction drops from 1): True
+
+########## q=11  (n=22=2*11) ##########
+[A] tight tuple corrector  full-Z_22: False   CRT mod-11: False   (must match: True)
+    apex-excluded corrector (CRT): True  (S559 tight-tuple repair => expect True)
+[B] certificate locus  |H^0|(all runners) = 0   parity-matched=True
+    apex section is the WHOLE plane (degenerate): True
+    |H^0|(apex excluded) = 90   forbidden slopes (non-apex) rho_i = [10]
+    F_q^x = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10] ; slopes cover F_q^x: False  (S559 residual: tight collapses slopes to a single value)
+[C] apex forbidden-fraction  UNLIFTED = 1.000   (apex line over F_q: s*0+r*0=0)
+    apex forbidden-fraction  LIFTED   = 0.000   (lifted mod 66=2*11*3: apex speed mod p = 2)
+    lift restores codim-1 (fraction drops from 1): True
+
+========================================================================
+Cross-check on random tuples: CRT reduction vs full-Z_{2q} (0 mismatches expected)
+========================================================================
+trials=1200  mismatches=0  (S559 reduction theorem confirmed: True)

@@ -1,5 +1,16 @@
 # Session Log
 
+## claudebox-2026-06-02-S579 - The apex-lift certificate sheaf: the apex is the unique runner whose loneliness certificate is a whole line, not a point (HYP-2101)
+
+**Account:** claudebox (local ~/math-research, fork+PR). **User prompt:** spend this math session thinking about an apex-lift certificate sheaf.
+**Frame:** "apex-lift certificate sheaf" names three threads that are one object — the apex zero-divisor `q=n/2` (HYP-2063/S559), the polynomial-method corrector as a loneliness certificate (arXiv:2604.23906 Prop 4.1; THM-380), and sheaf/section thinking (HYP-2024). Recast S559's CRT-reduced `2q` corrector geometrically: runner `i` forbids the line `L_i={s w_i+r c_i=f_i}` in `𝔸²(𝔽_q)`; a certificate is a point off every `L_i`; the **certificate sheaf** `𝒞_v` has `H^0`=correctors, so a corrector exists ⟺ `H^0≠0`. Parity-matched, each non-apex runner deletes one slope `ρ_i∈ℙ¹(𝔽_q)` (= S559's Residual Theorem).
+**New verified fact:** the apex `i=q` (c_q≡0) is the **unique non-transverse section** — its forbidden locus is the whole plane (the `0=0` zero-divisor line), not codim 1 — so one zero section kills `H^0`. Verified `apex_whole=True`, `|H^0|=0` for the tight tuple; apex-excluded `|H^0|=2,12,30,90` at q=3,5,7,11; non-apex slopes collapse to `{q-1}`.
+**Lift (S559 open (a)):** over `M=2qp`, p=least prime∤2q, the apex speed mod p is `q mod p≠0`, restoring an `r`-slot; apex forbidden-fraction drops `1.000→0.000` (lands at `2q·(s mod p)`, strictly interior). Whole-line section becomes the zero section.
+**Cross-check:** CRT-vs-full corrector agree 0/1200 mismatches — re-confirms S559's reduction theorem.
+**Honest boundary:** lift clears the apex for the *tight tuple* only, NOT the ratio-spread residual; the `H^1`-class-at-the-apex statement is conjectured, not proved.
+**Handoff / emitted tasks:** (a) compute the LIFTED line arrangement over `𝔸²(𝔽_q)×𝔽_p` for ratio-spread parity-matched v — does the lift clear the residual or only the apex? (b) make the H^1 claim precise via the arrangement's intersection poset / characteristic polynomial; (c) feed the apex whole-line section to the THM-396 pinch/shield route as the `(q,q)` shield.
+**Artifacts:** HYP-2101; `07-reflections/lrc-apex-lift-certificate-sheaf-s579.md`; `04-computation/lrc_apex_lift_certificate_sheaf_s579.py` (+.out).
+
 ## monad-compute-2026-06-02 - Extended all-0 interleaved staircase H sequence to k=9 and k=10 (HYP-2095)
 
 **Account:** Monad cluster compute node. **Task:** pick one compute task and produce data.
