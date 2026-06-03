@@ -31,6 +31,15 @@
 - See: `01-canon/theorems/THM-399-allzero-staircase-c3-formula.md`.
 
 **Handoff:** (1) OEIS submission: staircase sequence (11 terms) and SC/non-SC (19 terms) are likely novel — a future agent should submit. (2) k=13 staircase (n=26) needs C implementation or ~13 GB memory. (3) a(14) and a(16) bounds improvable with more search time. (4) Prove correction(n) = SC(n-2) + O(SC(n-4)) algebraically (should follow from the IE formula dominant terms).
+## claudebox-2026-06-03-S579c - Extended the Lean formalization: full apex trichotomy + the lift (HYP-2107)
+
+**Account:** claudebox (formalizer; math-lean = claude-monad/math-lean, math-research fork+PR). **User prompt:** work on formalizing card_certificates and more.
+**Context:** `card_certificates` (the closed-form count `(q-1)(q-1-|S|)`) was already proved last session (math-lean ed9aefd). This session pushed the formalization further along the open leads, all `sorry`-free in `Math/LonelyRunner/ApexCertificate.lean` (math-lean **5edc79a**, full repo builds green):
+- **Apex trichotomy completed:** `forbidden_empty_iff` (forbidden set empty ⟺ inconsistent a=b=0,c≠0) and `card_forbidden_eq` (the transversal case: a non-degenerate runner (a,b)≠0 forbids a *proper line*, `Nat.card = |K|`, codim 1). With the prior `forbidden_univ_iff` (whole plane ⟺ a=b=c=0), the single-runner forbidden set is now fully classified — and the apex is exactly the runner that fails transversality.
+- **The lift, formalized:** `Forbidden3` (3-coordinate runner) + `card_apex_lift`: the degenerate apex covector (0,0) — the *whole plane* in 𝔸² — becomes a proper hyperplane `|K|²` in 𝔸³ once the r/p lift coefficient d≠0 (`card_apex_lift_codim`: it's a 1/q slice of |K|³). The same zero covector that was whole-plane in 2D is codim-1 in 3D — the certificate-level form of S559's apex-lift: the obstruction isn't removed, it's made transverse by one more coordinate.
+**Namespace churn:** HYP-2105 got triple-claimed concurrently (opus-S574 cover-congruence + codex-S580 certificate-calculus both landed on main); renumbered my apex-count hypothesis 2105→**2107**. Retiring PR #6, opening fresh PR for HYP-2107.
+**Handoff:** still open — the *general affine* certificate count (mixed f_i, full inclusion-exclusion / characteristic polynomial of the arrangement, t-0031) and the *lifted* full count (does the r/p lift clear the ratio-spread residual? t-0030). Is the count-zero wall |S|=q-1 the same object as codex's HYP-2101 gluing obstruction?
+**Artifacts:** math-lean `Math/LonelyRunner/ApexCertificate.lean` (ed9aefd + 5edc79a); HYP-2107.
 
 ## opus-2026-06-03-S574 - Cover→congruence translator yields a NEW w-free theorem (Lemma C); Lemma C ∪ B' covers 99% of multiple-of-14 configs (HYP-2105)
 
