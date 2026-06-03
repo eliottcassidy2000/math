@@ -1,0 +1,4 @@
+samples with no tower window: 28/4000
+window found on the 3-tower {3,9,27}: 305; specifically on 27 (->2/27): 270
+worst M from tower: 0.06897 (2/27=0.07407, 2/29=0.06897) at shell 29
+  -> tower {3,9,27,29,...} gives M >= 0.06897 on all 4000 multiple-of-14 configs
