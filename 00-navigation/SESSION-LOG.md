@@ -391,6 +391,19 @@ Prompt: work hard/creative on C2b (configs with a multiple of n, prove loose); m
 **Findings:** Address entropy drops from raw `Res_27` rows (`23.3102` bits) to S610 proof atoms (`3.4594`) and primitive floor atoms (`1.0000`).  Relevance entropy is not monotone with address size: pinch floor status is only `0.0016` bits, owner route is `0.9981`, scalar carry route is `0.4138`, and local carry route is `0.0000`.  In the S611 scalar probes, `carry_nonzero` has perfect mutual information with shadow route.  The information-channel tournament is transitive but proof-burden and entropy-only gauges flip `6/36` edges.
 **Leverage:** The next n=14 theorem should be a sufficiency theorem for the corrected statistic `(Res_27 proof atom, owner route, carry cocycle, Cprime window)`, not a larger raw-row scan.  This states the proof target as conditional independence of the floor predicate from the raw integer presentation given the retained coimage/side-channel data.
 **Artifacts:** HYP-2171, `07-reflections/lrc-n14-information-bottleneck-s612.md`, T678, result-index and concept-map updates.
+## claudebox-2026-06-03-S623 - The unit-distance problem (n=22) = the LRC in a CM field; the grid-conjecture disproof in our context (HYP-2235)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** work on unit distance optimal for n=22; understand its deep relation to tournaments and LRC; understand the recent grid-conjecture disproof construction in our context.
+**Grounded (web):** the "grid conjecture" = Erdős unit-distance conjecture (lattice optimal), DISPROVED May 2026 (arXiv 2605.20695) via an infinite class-field TOWER of CM fields, [K:ℚ]→∞, magnitude-1 abundance from SPLIT primes P≠c(P). n=22 = first OPEN case (u(21)=57, u(22)∈{60,61}); triangular-lattice 22-cluster = 49.
+**Chord/arc bridge (verified+formalized):** unit-circle points at arc x are at chord 2sin(π dZ x) ⟹ UNIT DISTANCE ⟺ dZ=1/6 (hexagonal 60°=2·3); triangular lattice (=Eisenstein CM ℚ(√−3)) IS the LRC at δ=1/6. Formalized UnitDistance.lean (cos_two_pi_dZ, chord_sq_eq, unit_distance_of_dZ_eq_sixth).
+**Dictionary:** magnitude-1↔roots of unity (runners); CM conjugation c↔σ (HYP-2205); split prime P≠c(P)↔free σ-orbit; ramified↔apex (HYP-2185); Galois↔(ℤ/n)* perspective; tower-beats-grid↔collapse-beats-AP (HYP-2195); Delsarte LP↔Delsarte LP (HYP-2215). Same phenomenon: free orbits of the conjugation beat the lattice.
+**n=22:** 2·11, ord_11(2)=10 (primitive root) ⟹ single 10-cycle free orbit; no apex (11 odd) — most generic, richest split-prime abundance.
+**CONVERGENCE:** independent with HYP-2230 (S624, same bridge: Eisenstein ℤ[ω], rotations, tower, u(22)∈{60,61}) — 2nd fleet re-derivation of the perspective key this month.
+**Formalized (sorry-free):** Math/LonelyRunner/UnitDistance.lean. Pushed to math-lean main.
+**Handoff:** push n=22 LB past 49 with rigid non-lattice gluings (the finite-scale tower move); formalize the roots-of-unity unit-distance graph as a circulant; the CM-tower↔collapse-family theorem.
+**Artifacts:** HYP-2235; reflection the-lonely-runner-was-a-unit-distance-problem-s623.md; computation unit_distance_n22_cyclotomic_bridge_s623.py; math-lean UnitDistance.lean.
+
+
 ## claudebox-2026-06-03-S622 - The 2→3 dictionary: ternary Krawtchouk, signed depth, and the 3-structure of n=14 (HYP-2225)
 
 **Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** look for more concepts like the diagonal Krawtchouk-positive certificate but instead of being 2, they're 3.
