@@ -1,0 +1,5 @@
+ROUND 1: symmetric trienerment / danger graph -- which points get lonely & when
+  AP n=7 {0..6}: every point lonely at some t? False; observer(0) lonely? False; #lonely-intervals per point={0: 0, 1: 2, 2: 8, 3: 12, 4: 8, 5: 2, 6: 0}
+  n=7 {0,1,2,3,5,7,11}: every point lonely at some t? True; observer(0) lonely? True; #lonely-intervals per point={0: 2, 1: 8, 2: 12, 3: 20, 4: 14, 5: 16, 6: 12}
+  n=5 {0,1,2,3,4}: every point lonely at some t? False; observer(0) lonely? False; #lonely-intervals per point={0: 0, 1: 2, 2: 6, 3: 2, 4: 0}
+  n=5 {0,2,3,5,7}: every point lonely at some t? False; observer(0) lonely? True; #lonely-intervals per point={0: 2, 1: 0, 2: 0, 3: 6, 4: 6}

@@ -1,0 +1,16 @@
+ROUND 2: M_p from every basepoint p (delta=1/n). gradient + which observer is hardest
+  AP n=7 {0..6}: delta=0.143
+     M_p - delta by basepoint: [(0, 0.0), (1, 0.0238), (2, 0.0571), (3, 0.1071), (4, 0.0571), (5, 0.0238), (6, 0.0)]
+     observer(0) margin=+0.0000; hardest basepoint=0 (margin +0.0000)
+  AP n=9 {0..8}: delta=0.111
+     M_p - delta by basepoint: [(0, 0.0), (1, 0.0139), (2, 0.0317), (3, 0.0556), (4, 0.0889), (5, 0.0556), (6, 0.0317), (7, 0.0139), (8, 0.0)]
+     observer(0) margin=+0.0000; hardest basepoint=0 (margin +0.0000)
+  n=7 {0,1,2,3,5,7,11}: delta=0.143
+     M_p - delta by basepoint: [(0, 0.1071), (1, 0.1071), (2, 0.1071), (3, 0.0571), (5, 0.1071), (7, 0.0794), (11, 0.1238)]
+     observer(0) margin=+0.1071; hardest basepoint=3 (margin +0.0571)
+  n=8 {0,1,2,3,4,5,6,7} (AP): delta=0.125
+     M_p - delta by basepoint: [(0, 0.0), (1, 0.0179), (2, 0.0417), (3, 0.075), (4, 0.075), (5, 0.0417), (6, 0.0179), (7, 0.0)]
+     observer(0) margin=+0.0000; hardest basepoint=0 (margin +0.0000)
+  n=6 {0,2,3,7,8,10}: delta=0.167
+     M_p - delta by basepoint: [(0, 0.0686), (2, 0.119), (3, 0.0152), (7, 0.0152), (8, 0.119), (10, 0.0686)]
+     observer(0) margin=+0.0686; hardest basepoint=3 (margin +0.0152)
