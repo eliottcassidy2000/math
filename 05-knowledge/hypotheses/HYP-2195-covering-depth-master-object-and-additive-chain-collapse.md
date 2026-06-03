@@ -54,9 +54,30 @@ relation) carries a `(loglog)¹` regime, a multi-relation wall `(loglog)²⁺`. 
 `dZ`, `dZ_nonneg`, `dZ_le_dist_int` (round is closest), `dZ_add_le` (subadditivity = resonance link),
 `dZ_chain_le` (additive-chain arc-dependence), `union_bound_vacuous` (first moment says nothing at δ=1/(n+1)).
 
+## CORRECTION (S621): the additive-chain ⟺ collapse conjecture is FALSE
+
+The consolidated structure analysis ([[THM-411]], `lrc_chain_vs_collapse_s621.out`) refutes the
+biconditional. The earlier "exhaustive" search was too small (max ≤ 12, sizes 2–5); with the true
+magnitude bound it is decisive:
+
+- **`additive-chain ⟹ collapse` is wildly FALSE.** Additive structure is generic; collapse is rare.
+  At `n=7`: **3** collapse sets vs **364** strict additive chains vs **5858** sets with
+  `max(S) ∈ S+S`. The pinning mechanism (`dZ_add_le`) is real but only *necessary*: one resonance
+  pins one arc; tiling the whole circle needs the entire `(ℤ/m)*` orbit pinned at once — far stronger.
+- **The clean necessary condition is `max(S) ∈ S+S`** (the largest speed is a sum of two others):
+  holds for every collapse set, n=3..7, no exceptions. (The strict single-generator chain notion is
+  too narrow — it misses `(1,3,4,7)`, whose `3` is a generator.)
+- **The true characterization is tightness, not additive combinatorics** ([[THM-411]]): the collapse
+  family is *finite* with `v_max ≤ 2n-1`, count `1,2,2,1,3,1` (n=3..8), every member witnessed
+  exactly on the `(ℤ/m)*` orbit `{k/m : gcd(k,m)=1}`. Resonance-richness is a *symptom*; the *cause*
+  is the gap staying pinned at `1/m` across the whole primitive-residue witness orbit.
+
+So the master object and the subadditivity mechanism survive; the additive-chain *characterization*
+does not (same correction applies to the parallel [[HYP-2153]]). Collapse ⟹ resonance-rich, but
+resonance-rich ⇏ collapse.
+
 ## Open
-- Prove the additive-chain ⟺ collapse characterization (forward: chain ⟹ p₀=0 via the pinning; reverse: p₀=0 ⟹
-  enough `a+b=c` relations to tile the circle).
+- Prove the finiteness / `v_max ≤ 2n-1` bound and the `(ℤ/m)*`-witness characterization ([[HYP-2196]]).
 - The clean `(loglog)²` measurement (simultaneous-break / tangential approach to a rank-2 wall).
 - Identify `{p_k}` higher cumulants with the resonance energy `E(v)` (HYP-2155); is `p₀` a theta/relation-lattice
   functional?
