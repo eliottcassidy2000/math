@@ -1,8 +1,8 @@
 ---
 id: HYP-2114
-status: SYNTHESIS -- additive-circuit lemmas (A circuit-free, B 3-term fold) + multiple/Phi share ONE residual (C'); fold=delta-clock; measure depressed only by 3-term. Lemma A verified/open, Lemma B reduces to C'.
-source: opus-2026-06-03-S577
-related: [HYP-2112, HYP-2102, THM-398, THM-369, HYP-2063]
+status: SYNTHESIS -- additive-circuit lemmas (A circuit-free, B 3-term fold) + multiple/Phi share ONE residual (C'); fold=delta-clock; measure depressed only by 3-term. Oracle S578o explains 4-term energy as translation-invariant shadow; Codex S583 adds exact fold-gate/maximin diagnostics.
+source: opus-2026-06-03-S577 + oracle-2026-06-03-S578o + codex-2026-06-03-S583
+related: [HYP-2113, HYP-2112, HYP-2102, THM-398, THM-369, HYP-2108, HYP-2075, HYP-2063]
 ---
 
 # HYP-2114: the additive-circuit lemmas meet C' -- the fold is the delta-clock
@@ -12,6 +12,8 @@ related: [HYP-2112, HYP-2102, THM-398, THM-369, HYP-2063]
 **R2 hardness<=>3-term:** M-delta drops monotone with #3-term (k=6: +0.088/+0.045/+0.034/+0.011 for #3t=0/1/2/>=3); near-tight configs are 0% circuit-free, mean #3term 4.7/7.7/12.5 (k=6/8/10).
 **R3 CONVERGENCE (the fold IS the delta-clock):** near-tight splits exactly by multiple-of-(k+1): #(no multiple)==#(delta-clock j/(k+1) witness) EXACTLY (18=18 k=6, 4=4 k=8, 0=0 k=12). The folds strip every pair-pinch except the straddle pair (a,n-a) summing to n=k+1 = the delta-clock; witness iff no multiple of k+1. Had-multiple configs loose off-clock (C'/Phi>0).
 **R4 measure depressed ONLY by 3-term:** circuit-free min safe-measure ~0.08-0.10 (4-term-rich-cf IDENTICAL: 0.0806=0.0806); 3-term-rich(>=3) ~0.004-0.018 ->0. Relevant energy = 3-term count, not 4-term.
+**ORACLE S578o translation shadow:** shifted AP `{N..N+12}` at n=14 keeps #4-term fixed at `125` while #3-term falls `36 -> 0` and `G/delta` rises `1.00 -> ~6.60`. Thus 4-term energy is the translation-invariant shadow of folds: a 4-term is a depth-2 fold in `S union (S+S)`, but hardness needs the sum to land on an actual runner in `S`.
+**CODEX S583 exact bridge:** `lrc_fold_sieve_random_bridge_s583.py` measures the local fold gate `x,y,x+y` and finds a persistent density penalty (`-0.044` at n=6, `-0.013` at n=14). It also checks exact maximin and safe measure: at n=14 AP and shifted AP have the same ordered energy `1469`, but AP has `36` folds, `M=1/14`, safe measure `0`, while shifted AP has `0` folds, `M=5/14`, safe measure about `0.117`; `V*` is also fold-rich and tight (`31` folds). In `934` 3-term rows, the exact witness denominator never equals the shielded folded sum `c=a+b`, while deletion-shadow witnesses are blocked by reattaching `c` in `446` rows.
 **2x2 SYNTHESIS:** [circuit-free vs 3-term-rich] x [no-mult vs mult-of-(k+1)]. Worry-set (M=delta) lives ONLY in [3-term-rich AND no-multiple]; tightness REQUIRES folds. Open residual = [multiple of (k+1)] = C' = ker Phi cap {n|v}, SAME under both slicings.
 **UNIFICATION:** Lemma B "fold delivers delta" = delta-clock (THM-369, PROVEN for no-mult) + C' (OPEN for mult) -- not separate. Lemma A verified (mu>=~0.08, depressed only by 3-term), proof open (discrepancy from 3-term count). All three frameworks (additive, multiple, ECCP/Phi) bottom out at C'.
-**See:** `07-reflections/lrc-additive-circuit-lemmas-meet-Cprime-the-fold-is-the-delta-clock-s577.md`, `04-computation/lrc_additive_circuit_AB_round{1,2,2b,3,4}_s577.py` (+.out); HYP-2112 (Phi), HYP-2102/THM-398 (C'), THM-369, HYP-2063 (2q apex).
+**See:** `07-reflections/lrc-additive-circuit-lemmas-meet-Cprime-the-fold-is-the-delta-clock-s577.md`, `04-computation/lrc_additive_circuit_AB_round{1,2,2b,3,4}_s577.py` (+.out), `07-reflections/three-term-folds-carry-the-hardness-four-term-energy-is-the-translation-invariant-shadow-s578o.md`, `04-computation/lrc_three_four_term_energy_encoding_s578.py` (+.out), `07-reflections/lrc-fold-sieve-randomness-bridge-s583.md`, `04-computation/lrc_fold_sieve_random_bridge_s583.py` (+.out); HYP-2113, HYP-2112 (Phi), HYP-2102/THM-398 (C'), THM-369, HYP-2075, HYP-2063 (2q apex).

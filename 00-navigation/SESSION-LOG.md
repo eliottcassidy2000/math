@@ -32,6 +32,20 @@ So Lemma G holds at every n tested, not just small even n — strengthens HYP-21
 **Handoff:** n>20 would need a faster (non-Fraction or vectorized) safe-measure; the per-config cost grows ~quadratically in the number of speeds.
 
 
+## codex-2026-06-03-S583 - Fold/sieve versus circuit-free randomness: 3-term folds, not 4-term energy, mark the LRC boundary (HYP-2114)
+
+**Account:** Codex (GPT-5). **User prompt:** focus mostly on Lemma B, but keep bouncing between Lemma A randomness and Lemma B fold+sieve, using each as noisy inspiration for the other.
+**Context:** Started from Opus S576/HYP-2112, which proves the exact circuit-to-gap functional `G(v)=Phi(C)`. S583 treats that as the value target: randomness or fold/sieve should ultimately produce a positive `Phi` summand, not just an informal witness.
+**Computation:** Added `04-computation/lrc_fold_sieve_random_bridge_s583.py` and stored `05-knowledge/results/lrc_fold_sieve_random_bridge_s583.out`. The script uses "no `a+b=c`" as a circuit-free proxy, computes exact maximin `M(S)` and safe measure, records 3-term folds and ordered additive energy, measures the local folded gate `x,y,x+y`, audits deletion-shadow blocking, and runs Tournament Analysis on proof-state buckets.
+**Findings:** the local fold gate has a persistent density penalty relative to three independent safe coordinates (`-0.044` at n=6, `-0.013` at n=14). The decisive control is AP versus shifted AP: they have identical ordered 4-term energy, but AP has many 3-term folds and is tight while shifted AP has no `a+b=c` fold and a large positive gap. For n=14, AP and shifted AP both have energy `1469`; AP has `M=1/14`, `36` folds, and safe measure `0`, while shifted AP has `M=5/14`, `0` folds, and safe measure about `0.117`. `V*` is also tight and fold-rich (`31` folds).
+**Fold/sieve signal:** in 3-term rows, the exact witness denominator never equals the shielded folded sum `c=a+b`; nevertheless a deletion-shadow witness is blocked when `c` is reattached in `446/934` relation rows. So the obvious pair-sum clock is often the thing the folded runner shields, and Lemma B should route through a different modulus, owner pin, or prime-fibre certificate.
+**Incoming convergence:** after rebasing, Opus S577 independently confirmed the literal fold-as-shield identity at the `1/(a+b)` pinch clock and found circuit-free margins safely above `delta=1/(k+1)` through `k=10`. Its round-2/3 probes sharpened this: near-tight rows are 3-term-rich with no circuit-free representatives, and they either hit the Cprime multiple branch or are handled by the `j/(k+1)` delta-clock. HYP-2113's tournament speedup stack is the right host for labelling these fold/shield exits before exact interval or CRT fallback.
+**Synthesis:** Lemma A should be a discrepancy theorem for 3-term-free rows, not a low-4-term-energy theorem. Lemma B should be a literal fold gate on `(a t,b t)` with `c t=a t+b t`, followed by sieve machinery. Four-term additive energy is noise unless it carries lower-rank fold structure.
+**Tournament Analysis:** vertices are proof buckets rather than runners: `A_circuit_free_proxy`, `A_high_4term_no3`, `B_has_3term_fold`, `B_fold_shadow_blocked`. The route ledger is transitive (`score_hist={0:1,1:1,2:1,3:1}`, no directed 3-cycles). The next nontrivial tournament should use fold gates, endpoint-cover components, residue states, or prime-fibre obligations as vertices.
+**Assumption challenge:** considered runners, 3-term relations, fold gates, additive-energy fibres, exact witnesses, endpoint-cover components, and proof buckets. The chosen quotient preserves exact threshold clearance and plausible proof route, but destroys endpoint-owner circuit and prime-fibre data, delegated to HYP-2112/HYP-2108/HYP-2106.
+**Artifacts:** supports shared HYP-2114; `05-knowledge/hypotheses/HYP-2114-lrc-additive-circuit-meets-Cprime.md`; `07-reflections/lrc-fold-sieve-randomness-bridge-s583.md`; `04-computation/lrc_fold_sieve_random_bridge_s583.py` (+.out).
+
+## opus-2026-06-03-S576 - The kernel of ECCP points at an exact circuit-to-gap functional: G(v)=Φ(C) (Lemma G), verified exact 900/900 (HYP-2112)
 
 **Account:** Opus (remote-control, v1410-1). **User idea:** kernel ECCP points at a circuit-to-gap functional Φ(C) with G(v)=Φ(C).
 **Confirmed exactly.** S575's P(S) was the SIGN of the cover deficit; refining the max to a SUM of per-component uncovered phase gives the EXACT gap.
@@ -58,6 +72,7 @@ So Lemma G holds at every n tested, not just small even n — strengthens HYP-21
 **Artifacts:** HYP-2109; `07-reflections/tournament-three-state-automaton-left-middle-right-s582.md`; `04-computation/tournament_three_state_automaton_s582.py` (+.out); T658; concept-map row.
 
 ## opus-2026-06-03-S575 - Endpoint-cover circuit positivity: exact criterion (Lemma D) + the functional P(S) (P>0 ⟺ loose), verified 100%; a PROVED summed corollary (HYP-2108)
+
 **Account:** Opus (remote-control, v1410-1). **User prompt:** work on endpoint cover circuit positivity.
 **LEMMA D (PROVED, verified 100% n=6..14):** for a component C_i=(a_i,b_i) of G(S') (midpoint m_i, length l_i), v=nw the multiple: C_i⊆D_v ⟺ ∃j∈ℤ with ‖v a_i−j‖≤1/n AND ‖v b_i−j‖≤1/n (both endpoint v-phases near ONE integer) ⟺ **‖v m_i‖ ≤ 1/n − (v/2) l_i**. So S TIGHT ⟺ every component satisfies it.
 **CIRCUIT:** the M component arc-indices j_i wind once (Σ(j_{i+1}−j_i)=v) — one integer v must SIMULTANEOUSLY bring all M midpoints within 1/n phase of an arc centre j/v; a closed circuit, not M separate problems.

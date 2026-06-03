@@ -1,0 +1,104 @@
+S583 fold+sieve versus circuit-free randomness
+
+LOCAL FOLD GATE
+delta=1/n; compare independent 3-runner clearance (1-2d)^3 with fold gate x,y,x+y safe
+  n= 6: independent=0.29630; fold_gate~=0.25208; fold_penalty=-0.04421
+  n= 7: independent=0.36443; fold_gate~=0.32823; fold_penalty=-0.03620
+  n= 8: independent=0.42188; fold_gate~=0.39323; fold_penalty=-0.02865
+  n= 9: independent=0.47051; fold_gate~=0.44167; fold_penalty=-0.02884
+  n=10: independent=0.51200; fold_gate~=0.49292; fold_penalty=-0.01908
+  n=11: independent=0.54771; fold_gate~=0.52865; fold_penalty=-0.01906
+  n=14: independent=0.62974; fold_gate~=0.61687; fold_penalty=-0.01286
+
+TARGETED 4-TERM-RICH CONTROL ROWS
+AP has many 3-term folds and is tight; shifted_AP has AP-like 4-term energy but no a+b=c.
+n= 6 k= 5
+  AP_fold_rich          : M=0.16667 margin=0.00000 mu=0.00000 rels= 4 energy=  85 row=(1, 2, 3, 4, 5)
+  shifted_AP_no3_high4  : M=0.38889 margin=0.22222 mu=0.12284 rels= 0 energy=  85 row=(7, 8, 9, 10, 11)
+n= 7 k= 6
+  AP_fold_rich          : M=0.14286 margin=0.00000 mu=0.00000 rels= 6 energy= 146 row=(1, 2, 3, 4, 5, 6)
+  shifted_AP_no3_high4  : M=0.38095 margin=0.23810 mu=0.11827 rels= 0 energy= 146 row=(8, 9, 10, 11, 12, 13)
+n= 8 k= 7
+  AP_fold_rich          : M=0.12500 margin=0.00000 mu=0.00000 rels= 9 energy= 231 row=(1, 2, 3, 4, 5, 6, 7)
+  shifted_AP_no3_high4  : M=0.37500 margin=0.25000 mu=0.12015 rels= 0 energy= 231 row=(9, 10, 11, 12, 13, 14, 15)
+n= 9 k= 8
+  AP_fold_rich          : M=0.11111 margin=0.00000 mu=0.00000 rels=12 energy= 344 row=(1, 2, 3, 4, 5, 6, 7, 8)
+  shifted_AP_no3_high4  : M=0.37037 margin=0.25926 mu=0.12277 rels= 0 energy= 344 row=(10, 11, 12, 13, 14, 15, 16, 17)
+n=10 k= 9
+  AP_fold_rich          : M=0.10000 margin=0.00000 mu=0.00000 rels=16 energy= 489 row=(1, 2, 3, 4, 5, 6, 7, 8, 9)
+  shifted_AP_no3_high4  : M=0.36667 margin=0.26667 mu=0.12165 rels= 0 energy= 489 row=(11, 12, 13, 14, 15, 16, 17, 18, 19)
+n=11 k=10
+  AP_fold_rich          : M=0.09091 margin=0.00000 mu=0.00000 rels=20 energy= 670 row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  shifted_AP_no3_high4  : M=0.36364 margin=0.27273 mu=0.11700 rels= 0 energy= 670 row=(12, 13, 14, 15, 16, 17, 18, 19, 20, 21)
+n=14 k=13
+  AP_fold_rich          : M=0.07143 margin=0.00000 mu=0.00000 rels=36 energy=1469 row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  shifted_AP_no3_high4  : M=0.35714 margin=0.28571 mu=0.11734 rels= 0 energy=1469 row=(15, 16, 17, 18, 19, 20, 21, 22, 23, 24, 25, 26, 27)
+  Vstar_fold_wall       : M=0.07143 margin=0.00000 mu=0.00000 rels=31 energy=1169 row=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+
+SAMPLE EXACT MAXIMIN BUCKETS
+circuit-free proxy = no relation a+b=c; high-4term = top quartile additive energy inside no3
+n= 6 k= 5 rows=260 delta=0.16667
+  A_circuit_free_proxy    : count=150; min(M-delta)=0.08333; avg=0.18409; min_mu=0.09289; min_row=(3, 5, 9, 16, 27)
+  A_high_4term_no3        : count= 66; min(M-delta)=0.11905; avg=0.21130; min_mu=0.10387; min_row=(2, 6, 9, 12, 22)
+  B_has_3term_fold        : count=110; min(M-delta)=0.05556; avg=0.12326; min_mu=0.05476; min_row=(1, 3, 7, 8, 28)
+  B_fold_shadow_blocked   : count= 77; min(M-delta)=0.05556; avg=0.11610; min_mu=0.05476; min_row=(1, 3, 7, 8, 28)
+
+n= 7 k= 6 rows=240 delta=0.14286
+  A_circuit_free_proxy    : count= 78; min(M-delta)=0.11801; avg=0.18765; min_mu=0.10457; min_row=(8, 15, 17, 20, 26, 30)
+  A_high_4term_no3        : count= 22; min(M-delta)=0.12381; avg=0.22438; min_mu=0.10748; min_row=(8, 13, 15, 16, 17, 22)
+  B_has_3term_fold        : count=162; min(M-delta)=0.05714; avg=0.13504; min_mu=0.05351; min_row=(4, 6, 10, 16, 19, 26)
+  B_fold_shadow_blocked   : count= 88; min(M-delta)=0.05714; avg=0.11995; min_mu=0.05351; min_row=(4, 6, 10, 16, 19, 26)
+
+n= 8 k= 7 rows=220 delta=0.12500
+  A_circuit_free_proxy    : count= 46; min(M-delta)=0.10357; avg=0.18540; min_mu=0.10100; min_row=(3, 6, 12, 20, 22, 33, 37)
+  A_high_4term_no3        : count= 12; min(M-delta)=0.16810; avg=0.21939; min_mu=0.10100; min_row=(11, 25, 26, 27, 30, 31, 33)
+  B_has_3term_fold        : count=174; min(M-delta)=0.06105; avg=0.13527; min_mu=0.07015; min_row=(1, 8, 14, 15, 22, 29, 40)
+  B_fold_shadow_blocked   : count= 89; min(M-delta)=0.06105; avg=0.11758; min_mu=0.07015; min_row=(1, 8, 14, 15, 22, 29, 40)
+
+n= 9 k= 8 rows=180 delta=0.11111
+  A_circuit_free_proxy    : count= 21; min(M-delta)=0.12618; avg=0.21411; min_mu=0.08322; min_row=(1, 5, 9, 11, 13, 21, 28, 31)
+  A_high_4term_no3        : count=  7; min(M-delta)=0.17778; avg=0.26622; min_mu=0.12382; min_row=(3, 9, 10, 11, 22, 34, 35, 36)
+  B_has_3term_fold        : count=159; min(M-delta)=0.07071; avg=0.13199; min_mu=0.06328; min_row=(6, 13, 15, 18, 19, 21, 24, 27)
+  B_fold_shadow_blocked   : count= 64; min(M-delta)=0.07071; avg=0.11198; min_mu=0.06328; min_row=(6, 13, 15, 18, 19, 21, 24, 27)
+
+n=10 k= 9 rows=150 delta=0.10000
+  A_circuit_free_proxy    : count=  8; min(M-delta)=0.14419; avg=0.18438; min_mu=0.12042; min_row=(8, 19, 26, 36, 37, 39, 40, 43, 49)
+  A_high_4term_no3        : count=  2; min(M-delta)=0.19851; avg=0.20310; min_mu=0.12042; min_row=(14, 19, 24, 25, 35, 40, 42, 45, 50)
+  B_has_3term_fold        : count=142; min(M-delta)=0.06364; avg=0.13386; min_mu=0.07740; min_row=(5, 8, 19, 20, 22, 27, 28, 32, 48)
+  B_fold_shadow_blocked   : count= 63; min(M-delta)=0.07647; avg=0.11363; min_mu=0.07938; min_row=(4, 6, 15, 19, 21, 23, 36, 37, 42)
+
+n=11 k=10 rows=120 delta=0.09091
+  A_circuit_free_proxy    : count=  3; min(M-delta)=0.13986; avg=0.17576; min_mu=0.11499; min_row=(6, 13, 16, 20, 34, 35, 37, 38, 39, 42)
+  A_high_4term_no3        : count=  1; min(M-delta)=0.20909; avg=0.20909; min_mu=0.11499; min_row=(21, 24, 29, 30, 33, 37, 39, 41, 47, 49)
+  B_has_3term_fold        : count=117; min(M-delta)=0.06294; avg=0.12764; min_mu=0.03952; min_row=(2, 9, 12, 13, 14, 20, 22, 32, 34, 38)
+  B_fold_shadow_blocked   : count= 47; min(M-delta)=0.06294; avg=0.10896; min_mu=0.03952; min_row=(2, 9, 12, 13, 14, 20, 22, 32, 34, 38)
+
+n=14 k=13 rows=70 delta=0.07143
+  A_circuit_free_proxy    : count=0
+  A_high_4term_no3        : count=0
+  B_has_3term_fold        : count= 70; min(M-delta)=0.07973; avg=0.12418; min_mu=0.07813; min_row=(9, 10, 12, 22, 23, 26, 28, 31, 37, 46, 48, 49, 61)
+  B_fold_shadow_blocked   : count= 18; min(M-delta)=0.08242; avg=0.10687; min_mu=0.10244; min_row=(3, 9, 14, 21, 27, 29, 32, 33, 35, 36, 53, 55, 56)
+
+FOLD/SIEVE DIAGNOSTICS
+  3-term rows: 934
+  exact witness denominator equals a folded c=a+b shield: 0
+  exact active bottleneck uses a relation pair (a,b): 111
+  best deletion-shadow witness blocked when c is reattached: 446
+  hardest fold rows:
+    n=6 row=(1, 3, 7, 8, 28) M=0.22222 margin=0.05556 rels=((1, 7, 8),) witness=2/9 den=9 shadow_margin=0.23333 blocked=True
+    n=7 row=(4, 6, 10, 16, 19, 26) M=0.20000 margin=0.05714 rels=((4, 6, 10), (6, 10, 16), (10, 16, 26)) witness=9/20 den=20 shadow_margin=0.25714 blocked=True
+    n=7 row=(2, 7, 14, 21, 28, 32) M=0.20000 margin=0.05714 rels=((7, 14, 21), (7, 21, 28)) witness=1/5 den=30 shadow_margin=0.19048 blocked=True
+    n=8 row=(1, 8, 14, 15, 22, 29, 40) M=0.18605 margin=0.06105 rels=((1, 14, 15), (8, 14, 22), (14, 15, 29)) witness=19/43 den=43 shadow_margin=0.20833 blocked=True
+    n=8 row=(2, 8, 15, 17, 19, 31, 39) M=0.18750 margin=0.06250 rels=((2, 15, 17), (2, 17, 19), (8, 31, 39)) witness=3/16 den=32 shadow_margin=0.17500 blocked=True
+
+TOURNAMENT ANALYSIS
+vertices: proof-state buckets, not runners
+pair observable: (cleanliness rank, coverage); switch favors easier proof state
+score_hist={0: 1, 1: 1, 2: 1, 3: 1}; directed_3_cycles=0; path=A_circuit_free_proxy -> A_high_4term_no3 -> B_has_3term_fold -> B_fold_shadow_blocked
+
+ASSUMPTION CHALLENGE
+Vertices considered: runners, 3-term relations, fold gates, additive-energy fibres, exact witnesses, proof buckets.
+Chosen quotient: proof buckets plus relation diagnostics.
+Preserved predicate: whether exact M(S) clears delta and which proof route plausibly explains the clearance.
+Destroyed information: exact endpoint-cover components and prime-fibre certificates; those re-enter via HYP-2112/Phi and the paper sieve.
+Challenged assumption: 4-term additive structure is a hard signal by itself; in this sample it is noise unless it carries a 3-term fold.
