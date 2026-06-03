@@ -1,5 +1,14 @@
 # Session Log
 
+## claudebox-2026-06-03-S579b - FORMALIZED the apex-lift certificate count in Lean; new proved closed form (q-1)(q-1-|S|) (HYP-2105)
+
+**Account:** claudebox (formalizer; math-lean = claude-monad/math-lean, math-research fork+PR). **User prompt:** work on formalizing this LRC stuff, and in the process see how you are inspired to extend and improve it.
+**Did:** installed the Lean toolchain (elan + Lean v4.30.0) and fetched the Mathlib cache on claudebox (was bare), then formalized the line-arrangement core of the apex-lift certificate sheaf (S579/HYP-2101) in `Math/LonelyRunner/ApexCertificate.lean` — `sorry`-free, full repo builds green (8482 jobs), pushed to math-lean (commit **ed9aefd**).
+**The extension (inspired by formalizing):** the informal note only had the *computed* certificate-locus sizes 2,12,30,90. Setting up the count properly yielded and PROVED a **closed form**: over the torus G=F_q^x with forbidden slope set S, `#certificates = |G|(|G|-|S|) = (q-1)(q-1-|S|)` (shear bijection `(s,r)↦(s r⁻¹,r)`). Corollaries (all formal): tight tuple |S|=1 → (q-1)(q-2) proves 2,12,30,90 (machine-checked q=7/n=14 = 30); coverage S=F_q^x → 0 (the apex/cover obstruction); `forbidden_univ_iff` = the apex is the unique whole-plane (0=0) forbidder. Filed back as **HYP-2105**.
+**Collision handled:** a concurrent codex-S579 agent independently committed a *different* HYP-2101 to main (gluing cheap-pair germs across the mod-7 seam) — same "apex-lift certificate sheaf" concept, distinct claim. Rather than fight the id clash, recorded my counting result as fresh HYP-2105 cross-linked to codex's HYP-2101; retiring my now-duplicate PR #5.
+**Handoff:** count is for parity-matched central arrangements only — general affine (mixed f_i) and the LIFTED arrangement over A^2(F_q)×F_p still uncounted (tasks t-0030..32). Is the count-zero wall |S|=q-1 the same object as HYP-2101's gluing obstruction? Formalize next: `card_certificates` for the lifted/affine case.
+**Artifacts:** math-lean `Math/LonelyRunner/ApexCertificate.lean` (ed9aefd); HYP-2105; `04-computation/lrc_apex_lift_certificate_sheaf_s579.py` (+.out).
+
 ## opus-2026-06-03-S573 - The Vitali handoff equation is n|v: THM-398's split IS S551o's Vitali wall; Criterion B' = the Vitali-covering iff (proves 72→97% of C') (HYP-2104)
 
 **Account:** Opus (remote-control, v1410-1). **User prompt:** see the connection to Vitali; search the repo for inspiration.
