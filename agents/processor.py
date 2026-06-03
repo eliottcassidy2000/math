@@ -26,6 +26,13 @@ import textwrap
 from datetime import datetime
 from pathlib import Path
 
+# Optional tsnet relay: if TS_RELAY_HOST is set (or the standard hostname resolves),
+# messages are delivered in real-time over the Tailnet in addition to git.
+# The relay hostname pattern is: math-relay-<machine-id>  (port 7373)
+# Set TS_RELAY_HOST=auto (default) to use the pattern, or a full URL to override.
+_RELAY_PORT = 7373
+_RELAY_HOST_ENV = os.environ.get("TS_RELAY_HOST", "auto")
+
 # Windows: force UTF-8 so box-drawing chars and emoji don't crash on CP1252
 if sys.stdout.encoding and sys.stdout.encoding.lower() not in ('utf-8', 'utf8'):
     sys.stdout.reconfigure(encoding='utf-8', errors='replace')
@@ -111,6 +118,58 @@ def get_unread_messages(inbox_dir: Path, read_log: set[str]) -> list[Path]:
     return [m for m in msgs if str(m.relative_to(REPO_ROOT)) not in read_log]
 
 
+# ─── tsnet relay (optional low-latency delivery) ─────────────────────────────
+
+def _relay_url(machine_id: str) -> str:
+    if _RELAY_HOST_ENV == "auto":
+        return f"http://math-relay-{machine_id}:{_RELAY_PORT}"
+    return _RELAY_HOST_ENV.rstrip("/")
+
+
+def relay_send(recipient: str, sender: str, subject: str, body: str) -> bool:
+    """Try to deliver a message via the tsnet relay. Returns True on success."""
+    try:
+        import urllib.request
+        import uuid
+        payload = json.dumps({
+            "id": str(uuid.uuid4()),
+            "from": sender,
+            "to": recipient,
+            "subject": subject,
+            "body": body,
+            "sent_at": datetime.utcnow().strftime("%Y-%m-%dT%H:%M:%SZ"),
+        }).encode()
+        url = _relay_url(recipient) + "/send"
+        req = urllib.request.Request(url, data=payload,
+                                     headers={"Content-Type": "application/json"},
+                                     method="POST")
+        with urllib.request.urlopen(req, timeout=3) as resp:
+            return resp.status in (200, 202)
+    except Exception:
+        return False
+
+
+def relay_check(machine_id: str) -> list[dict]:
+    """Pull pending messages from this machine's tsnet relay."""
+    try:
+        import urllib.request
+        url = _relay_url(machine_id) + "/messages"
+        with urllib.request.urlopen(url, timeout=3) as resp:
+            return json.loads(resp.read())
+    except Exception:
+        return []
+
+
+def relay_mark_read(machine_id: str, msg_id: str) -> None:
+    try:
+        import urllib.request
+        url = f"{_relay_url(machine_id)}/messages/{msg_id}/read"
+        req = urllib.request.Request(url, method="POST")
+        urllib.request.urlopen(req, timeout=3)
+    except Exception:
+        pass
+
+
 # ─── Commands ─────────────────────────────────────────────────────────────────
 
 def cmd_check(args):
@@ -128,9 +187,25 @@ def cmd_check(args):
     # Broadcast messages
     bc     = get_unread_messages(BROADCAST, read_log)
 
+    # Also check tsnet relay for messages not yet in git
+    relay_msgs = relay_check(machine_id)
+    if relay_msgs:
+        print(f"── tsnet relay messages ({len(relay_msgs)}) ──────────────────\n")
+        for m in relay_msgs:
+            print(f"  ⚡ [{m.get('id','')}] from {m.get('from','')} — {m.get('subject','')}")
+            body_lines = m.get("body", "").splitlines()
+            for line in body_lines[:8]:
+                print("  " + line)
+            if len(body_lines) > 8:
+                print(f"  ... ({len(body_lines) - 8} more lines)")
+            print()
+            relay_mark_read(machine_id, m.get("id", ""))
+
     total = len(direct) + len(bc)
-    if total == 0:
+    if total == 0 and not relay_msgs:
         print("No unread messages. You're up to date.\n")
+        return
+    if total == 0:
         return
 
     newly_read = set()
@@ -224,6 +299,9 @@ def cmd_send(args):
         filename = msg_filename(inbox, machine_id, subject)
         (inbox / filename).write_text(content, encoding='utf-8')
         print(f"  ✓ Delivered to {recipient}: agents/{recipient}/inbox/{filename}")
+        # Try tsnet relay for immediate delivery (non-blocking, silent on failure)
+        if relay_send(recipient, machine_id, subject, body):
+            print(f"  ⚡ Relayed to {recipient} via tsnet")
 
     print(f"\nMessage sent. Remember to git add -A && git commit && git push.\n")
 

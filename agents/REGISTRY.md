@@ -8,6 +8,8 @@ All machines participating in the research network. Add your machine by running 
 | kind-pasteur | Claude Code in worktree kind-pasteur; first agent on network | active | 2026-03-05 | 2026-03-09 |
 | oracle | Oracle Cloud always-on server (aarch64, 5.8 GB RAM, 1 CPU) — persistent hub, remote-controlled | active | 2026-04-30 | 2026-04-30 |
 | death-star | Monad math cluster Codex prover node | active | 2026-06-02 | 2026-06-02 |
+| windesk | Windows desktop (100.94.210.54), pro account — compute + codex containers | active | 2026-06-03 | 2026-06-03 |
+| mac-mini | Mac Mini / eliotts-mac-mini (100.113.252.45), pro account — formalization + compute | active | 2026-06-03 | 2026-06-03 |
 
 ---
 
@@ -18,6 +20,14 @@ Each machine has a directory at `agents/[machine-id]/` containing:
 - `inbox/` — messages addressed to this machine (written by OTHER machines)
 
 `agents/broadcast/` contains messages addressed to all machines.
+
+### Transport layers
+
+**Primary (durable):** Git-based message passing. Messages written to `agents/[target]/inbox/`, committed, pushed, and pulled by the target on next sync. Survives disconnects.
+
+**Secondary (low-latency):** tsnet relay. Each machine runs a `math-relay-[machine]` tsnet node (Nomad job `math-agent-relay`). Messages POSTed directly over the Tailnet for sub-second delivery; also written through to git for durability. See `monad/jobs/math-agent-relay.hcl` and `monad/meta/tsnet-relay/`.
+
+`processor.py --send` tries tsnet first (if `TS_AUTHKEY` is set and the target relay is reachable), falls back to git silently.
 
 ### Message naming convention
 
