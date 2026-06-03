@@ -23,6 +23,7 @@
   oracle-2026-05-31-S18.
 -/
 import Mathlib.Tactic
+import Mathlib.Algebra.BigOperators.Ring
 
 namespace LonelyRunner
 
@@ -344,6 +345,99 @@ theorem near_pair (n : ℕ) (hn : 0 < n) (x : Fin (n + 1) → ℝ) :
 
 end Cases
 
+/-! ### 3-term folds vs 4-term coincidences (oracle-2026-06-03-S578o)
+
+The Lemma A / Lemma B decomposition.  A **3-term** relation `v_c = v_a + v_b` is a
+*fold*: it makes the runner positions add, `v_c·t = v_a·t + v_b·t`.  A **4-term**
+relation `v_a + v_b = v_c + v_d` is a pair-sum *coincidence*.  These lemmas
+formalize the core algebra found computationally in S578o: the fold's distance is
+subadditive in its summands (Lemma B's mechanism — a fold cannot be cleared
+independently); 4-term relations are translation-invariant while 3-term relations
+are not (so translating a set hides its folds while preserving its additive
+energy); and both are instances of the general "positions inherit relations"
+principle (the seed of the resonance bound, S550). -/
+
+section FoldStructure
+variable {ι : Type*}
+
+/-- **The fold is a literal identity.**  A 3-term relation `v_c = v_a + v_b` makes
+the runner positions add: `v_c · t = v_a · t + v_b · t`. -/
+theorem fold_position (va vb vc : ℤ) (t : ℝ) (h : vc = va + vb) :
+    (vc : ℝ) * t = (va : ℝ) * t + (vb : ℝ) * t := by
+  subst h; push_cast; ring
+
+/-- **Fold subadditivity (Lemma B mechanism).**  For a fold `v_c = v_a + v_b` and
+any integers `ma, mb`, the distance of `v_c · t` to the integer `ma + mb` is at
+most the sum of the distances of `v_a · t, v_b · t` to `ma, mb`.  So a fold's
+loneliness is *controlled* by its summands. -/
+theorem fold_triangle (va vb : ℤ) (t : ℝ) (ma mb : ℤ) :
+    |((va + vb : ℤ) : ℝ) * t - ((ma + mb : ℤ) : ℝ)|
+      ≤ |(va : ℝ) * t - (ma : ℝ)| + |(vb : ℝ) * t - (mb : ℝ)| := by
+  have e : ((va + vb : ℤ) : ℝ) * t - ((ma + mb : ℤ) : ℝ)
+         = ((va : ℝ) * t - (ma : ℝ)) + ((vb : ℝ) * t - (mb : ℝ)) := by
+    push_cast; ring
+  rw [e]; exact abs_add _ _
+
+/-- **A fold cannot be cleared independently.**  If `v_c = v_a + v_b` and `v_c · t`
+is `θ`-far from the integer `ma + mb`, then the summand distances cannot both be
+small: `θ ≤ dist(v_a t, ma) + dist(v_b t, mb)`. -/
+theorem fold_far_needs_summands (va vb : ℤ) (t : ℝ) (ma mb : ℤ) (θ : ℝ)
+    (h : θ ≤ |((va + vb : ℤ) : ℝ) * t - ((ma + mb : ℤ) : ℝ)|) :
+    θ ≤ |(va : ℝ) * t - (ma : ℝ)| + |(vb : ℝ) * t - (mb : ℝ)| :=
+  le_trans h (fold_triangle va vb t ma mb)
+
+/-- **4-term relations are translation-invariant.**  Shifting every speed by `s`
+preserves a pair-sum coincidence `v_a + v_b = v_c + v_d`.  (Additive energy is a
+function of differences only.) -/
+theorem four_term_translation (a b c d s : ℤ) :
+    a + b = c + d ↔ (a + s) + (b + s) = (c + s) + (d + s) := by
+  omega
+
+/-- **3-term relations are NOT translation-invariant.**  Shifting a fold by `s`
+sends `v_c = v_a + v_b` to an equation carrying an extra `s`. -/
+theorem three_term_translation_shift (a b c s : ℤ) :
+    ((c + s) = (a + s) + (b + s)) ↔ c = a + b + s := by
+  omega
+
+/-- A nonzero shift breaks every fold: `v_c = v_a + v_b` and `s ≠ 0` give
+`v_c + s ≠ (v_a + s) + (v_b + s)`.  This is why translating a set up destroys all
+its 3-term folds while preserving its 4-term additive energy (S578o). -/
+theorem three_term_not_translation_invariant (a b c s : ℤ)
+    (h : c = a + b) (hs : s ≠ 0) : (c + s) ≠ (a + s) + (b + s) := by
+  omega
+
+end FoldStructure
+
+section Relations
+variable {ι : Type*}
+
+/-- **Positions inherit relations (the resonance seed, S550).**  Any integer
+relation `∑ c_i v_i = 0` among the speeds is inherited by the weighted positions:
+`∑ c_i (v_i · t) = 0`.  The 3-term fold (`c = (1,1,-1)`) and the 4-term coincidence
+(`c = (1,1,-1,-1)`) are the support-3 and support-4 cases. -/
+theorem relation_inherits (s : Finset ι) (c v : ι → ℤ) (t : ℝ)
+    (h : ∑ i ∈ s, c i * v i = 0) :
+    ∑ i ∈ s, (c i : ℝ) * ((v i : ℝ) * t) = 0 := by
+  have key : ∑ i ∈ s, (c i : ℝ) * ((v i : ℝ) * t)
+           = (∑ i ∈ s, ((c i * v i : ℤ) : ℝ)) * t := by
+    rw [Finset.sum_mul]
+    exact Finset.sum_congr rfl (fun i _ => by push_cast; ring)
+  rw [key, ← Int.cast_sum, h]
+  simp
+
+/-- **The pair-sum is the pinch denominator (S559o/S560o).**  At the pinch time
+`t = m/C` with `C = v_a + v_b ≠ 0`, the two summand positions add to the integer
+`m`: `v_a·t + v_b·t = m`.  A 4-term coincidence `v_a+v_b = v_c+v_d = C` therefore
+shares this single pinch clock; the summand graph indexes the pinch times. -/
+theorem pinch_pair_sum (va vb C m : ℤ) (hC : (C : ℝ) ≠ 0) (h : va + vb = C) :
+    (va : ℝ) * ((m : ℝ) / (C : ℝ)) + (vb : ℝ) * ((m : ℝ) / (C : ℝ)) = (m : ℝ) := by
+  have e : (va : ℝ) * ((m : ℝ) / (C : ℝ)) + (vb : ℝ) * ((m : ℝ) / (C : ℝ))
+         = ((va + vb : ℤ) : ℝ) * ((m : ℝ) / (C : ℝ)) := by push_cast; ring
+  rw [e, h]
+  field_simp
+
+end Relations
+
 /-! ### Axiom audit
 
 Each `#print axioms` should report only the foundational
@@ -366,5 +460,13 @@ project-specific axioms underlie the LRC sieve theory. -/
 #print axioms lonely_scale
 #print axioms lonely_doubled
 #print axioms near_pair
+#print axioms fold_position
+#print axioms fold_triangle
+#print axioms fold_far_needs_summands
+#print axioms four_term_translation
+#print axioms three_term_translation_shift
+#print axioms three_term_not_translation_invariant
+#print axioms relation_inherits
+#print axioms pinch_pair_sum
 
 end LonelyRunner
