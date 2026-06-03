@@ -5368,3 +5368,12 @@ THM-029, THM-115, MISTAKE-053/054.
 **TARGET:** LRC(14) ⟺ Delsarte LP optimum>0 over multiple-of-14 configs = find the off-diagonal dual certificate (= apex sheaf's glued section = four-lenses high-order bound = Krawtchouk positive transform, one object).
 **FORMALIZED (sorry-free):** Math/LonelyRunner/DelsarteLP.lean — delsarte_lower_bound, partial_alt_binom, alt_binom_dual_le_indicator.
 **See:** `HYP-2215-...md`, `06-writeups/the-one-delsarte-lp-s621.md`, `07-reflections/everything-was-one-linear-program-s621.md`, `04-computation/delsarte_lp_everything_s621.py`, math-lean DelsarteLP.lean; HYP-2210, HYP-2200, HYP-2185, HYP-2195.
+
+## HYP-2225: The 2→3 dictionary — ternary Krawtchouk, signed depth, and the 3-structure of n=14 (claudebox-2026-06-03-S622)
+**Status:** GENERALIZATION (q=2→q=3) + VERIFIED + FORMALIZED. The whole covering-depth toolkit is q=2 (binary Hamming); here is its q=3 (ternary) twin.
+**q-ARY KRAWTCHOUK (verified+formalized):** Kq(q,k,n,x)=Σ_j(−1)^j(q−1)^{k−j}C(x,j)C(n−x,k−j); q=2→binary K, q=3→ternary (factor 2^{k−j}). Genfun Σ_k Kq z^k=(1−z)^x(1+(q−1)z)^{n−x}; baseline Kq(q,k,n,0)=(q−1)^k C(n,k). Formalized Krawtchouk/Basic.lean: Kq, Kq_two_eq_K, Kq_zero_index, Kq_at_zero.
+**SIGNED (TERNARY) DEPTH:** each runner near origin is +/0/− (in (0,δ)/safe/(−δ,0)), 3 states not 2; signed depth (n₊,n₋,n₀), lonely ⟺ (n₊,n₋)=(0,0). (1−x⁺)(1−x⁻)=1−x ⟹ p₀ unchanged but the ternary enumerator has MORE moments (n₊,n₋ separate) + σ-symmetry (n₊↔n₋, HYP-2205) ⟹ ternary Delsarte LP has strictly more constraints ⟹ route to a feasible OFF-DIAGONAL dual (HYP-2215 target) the binary scheme can't express.
+**2→3 DICTIONARY:** binary K → ternary Kq(3); forbidden/safe → +/0/−; Helly-2 (line) → Helly-3 (circle, HYP-2200); pairwise S₂ → triple S₃=a+b=c (HYP-2195); 2-adic ÷2 → 3-adic ×3 (Collatz, HYP-2175); antipodal ⟨−1⟩ ord 2 (cross) → doubling ⟨2⟩ ord 3 (3-cycle); 2-block n=2q → 3-block n=3q.
+**n=14 3-STRUCTURE (verified):** 14=2·7, ord_7(2)=3 ⟹ doubling ⟨2⟩ orbits = the 3-cycles {1,2,4},{3,6,5}; σ-pairs {1,6},{2,5},{3,4} (order 2) sit INSIDE the 3-cycles. n=14 carries BOTH a 2-structure (σ cross) and a 3-structure (⟨2⟩ triple) = the 2-adic/3-adic seam.
+**FORMALIZED (sorry-free):** Math/Krawtchouk/Basic.lean — Kq, Kq_two_eq_K, Kq_zero_index, Kq_at_zero.
+**See:** `HYP-2225-...md`, `07-reflections/the-three-version-s622.md`, `04-computation/ternary_krawtchouk_n14_3structure_s622.py`, math-lean Krawtchouk/Basic.lean; HYP-2215, HYP-2210, HYP-2205, HYP-2200, HYP-2175.
