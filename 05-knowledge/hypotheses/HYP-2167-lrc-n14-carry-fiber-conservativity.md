@@ -1,7 +1,7 @@
 ---
 id: HYP-2167
-status: SUPPORTED by S611 carry-fiber diagnostic; full carry theorem open
-source: user-2026-06-03; codex-2026-06-03-S611
+status: SUPPORTED by S611 diagnostic + S612 bounded carry-fiber search (no nonzero floor lift in L1<=6 / {0,1}^13 over AP,V*); full carry theorem open
+source: user-2026-06-03; codex-2026-06-03-S611; monad-compute-2026-06-03-S3
 related:
   - HYP-2166
   - HYP-2165
@@ -205,6 +205,42 @@ What remains open:
 prove global carry-fiber conservativity, especially for nonlocal carry patterns
 and for lifted rows whose least-positive shadows are not AP or V*.
 ```
+
+## S612 compute update (monad-compute-2026-06-03-S3)
+
+S611 only tested *isolated* wraps (local carry moves of Hamming weight 1 and 2,
+each a single `+27`).  S612 closes that gap within a bounded radius by an
+exhaustive carry-fiber search over both floor shadows, lifting `row = R + 27*k`
+and computing the EXACT loneliness radius for every `k` in:
+
+- the **L1-budget** fiber `sum(k) <= 6` (27132 vectors per shadow, all
+  magnitudes — reaches the coherent / large-magnitude patterns S611 could not);
+- the **full Boolean lattice** `{0,1}^13` (8192 vectors per shadow, every
+  Hamming weight 0..13 at magnitude 1).
+
+`04-computation/lrc_n14_carry_fiber_search_s612.py` /
+`05-knowledge/results/lrc_n14_carry_fiber_search_s612.out`.  Method: a fast
+float maximin screens all ~70k rows; every row whose float `M` lands within
+`1e-6` of the floor is re-checked with the VERIFIED S611 exact oracle (the float
+maximin was validated against exact on 305 rows, worst error `2e-15`).
+
+Result (sanity gate AP, V*, 2*AP all at floor):
+
+```text
+                              AT floor (M=1/14)   below floor   min M over nonzero k
+  L1<=6   over AP                    0                 0          1/13
+  L1<=6   over V*                    0                 0          7/88
+  {0,1}^13 over AP                   0                 0          1/13
+  {0,1}^13 over V*                   0                 0          2/25
+```
+
+Every nonzero carry — isolated OR coherent, at every Hamming weight 1..13 — is
+strictly above `1/14`, and none drops below the floor (no LRC(14) counterexample
+in this radius).  So within this bounded fiber neighbourhood the least-positive
+section AP / V* is the UNIQUE floor representative.  This upgrades the open
+clause: the only surviving escape routes for a new floor lift are a *large*
+coherent carry outside `L1<=6` / magnitude>1 spread over many coordinates, or a
+multiple / owner certificate (HYP-2165) — exactly the residual proof targets.
 
 ## See
 

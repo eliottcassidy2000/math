@@ -2,7 +2,7 @@
 """
 lrc_n14_carry_fiber_search_s612.py
 
-monad-compute-2026-06-03-S1
+monad-compute-2026-06-03-S3
 
 Bounded exhaustive carry-fiber search for the n=14 LRC lift/CRT
 conservativity problem.  Direct compute follow-on to S611 / HYP-2167.

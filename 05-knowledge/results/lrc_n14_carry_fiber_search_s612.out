@@ -1,0 +1,51 @@
+==== LRC n=14 carry-fiber bounded search (S612) ====
+C=2n-1=27; floor=1/14; lift row = shadow + 27*k
+L1 carry budget L1MAX=6
+
+THM-407 shell orbits under G=<2,-1> modulo 27 (context):
+  gcd= 1: (1, 2, 4, 5, 7, 8, 10, 11, 13)
+  gcd= 3: (3, 6, 12)
+  gcd= 9: (9,)
+
+Sanity gate (must all be floor=1/14):
+  AP  M=1/14 t=1/14 OK
+  V*  M=1/14 t=1/14 OK
+  2*AP M=1/14 t=1/28 OK  (nonprimitive)
+
+Search 1: L1-budget carry vectors (sum(k) <= L1MAX), all magnitudes
+[L1<= 6] base=AP rows=27132
+  k=0 baseline M=1/14 (expect 1/14)
+  nonzero-k rows AT floor (M=1/14): 0
+  nonzero-k rows BELOW floor (M<1/14): 0
+  rows exact-verified near floor (float<=1/14+1e-06): 0
+  min M over nonzero k: 1/13 (weight=1, L1=1) via AP:carry[i12:+1] t=1/13
+  min-M by Hamming weight (exact at the min witness): w0:1/14, w1:1/13, w2:10/121, w3:2/23, w4:2/21, w5:2/21, w6:4/41
+
+[L1<= 6] base=V* rows=27132
+  k=0 baseline M=1/14 (expect 1/14)
+  nonzero-k rows AT floor (M=1/14): 0
+  nonzero-k rows BELOW floor (M<1/14): 0
+  rows exact-verified near floor (float<=1/14+1e-06): 0
+  min M over nonzero k: 7/88 (weight=1, L1=6) via V*:carry[i11:+6] t=7/88
+  min-M by Hamming weight (exact at the min witness): w0:1/14, w1:7/88, w2:11/133, w3:11/122, w4:2/21, w5:4/41, w6:4/39
+
+Search 2: Boolean carry lattice {0,1}^13 (all Hamming weights, mag 1)
+[bool{0,1}^13] base=AP rows=8192
+  k=0 baseline M=1/14 (expect 1/14)
+  nonzero-k rows AT floor (M=1/14): 0
+  nonzero-k rows BELOW floor (M<1/14): 0
+  rows exact-verified near floor (float<=1/14+1e-06): 0
+  min M over nonzero k: 1/13 (weight=1, L1=1) via AP:carry[i12:+1] t=1/13
+  min-M by Hamming weight (exact at the min witness): w0:1/14, w1:1/13, w2:1/12, w3:1/11, w4:2/21, w5:4/41, w6:4/41, w7:2/21, w8:2/21, w9:3/31, w10:2/21, w11:7/65, w12:5/34, w13:7/17
+
+[bool{0,1}^13] base=V* rows=8192
+  k=0 baseline M=1/14 (expect 1/14)
+  nonzero-k rows AT floor (M=1/14): 0
+  nonzero-k rows BELOW floor (M<1/14): 0
+  rows exact-verified near floor (float<=1/14+1e-06): 0
+  min M over nonzero k: 2/25 (weight=1, L1=1) via V*:carry[i11:+1] t=2/25
+  min-M by Hamming weight (exact at the min witness): w0:1/14, w1:2/25, w2:1/12, w3:1/11, w4:5/52, w5:1/10, w6:4/39, w7:2/21, w8:2/21, w9:4/35, w10:8/69, w11:8/69, w12:5/34, w13:28/79
+
+Conclusion:
+  No nonzero carry vector within the searched radius (L1<=6 over AP and V*, plus the full {0,1}^13 lattice) returns the lifted row to the floor M=1/14.
+  This strengthens HYP-2167: in this bounded fiber neighbourhood the least-positive section AP/V* is the ONLY floor representative; every isolated OR coherent bounded carry is strictly above the floor.  Any new floor lift must live outside this radius (large coherent carry) or route through a multiple/owner certificate.
