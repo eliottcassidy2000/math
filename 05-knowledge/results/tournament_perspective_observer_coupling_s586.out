@@ -1,0 +1,71 @@
+S586 observer-coupled tournament perspectives
+========================================================================
+Repo occurrence map
+  S25g draft/script: first literal wording, 3+1=4 and 2+2+4+4=12.
+  T075 / HTML explorer: vertex-orbit child conjecture; works 3->4, 4->5, fails 5->6.
+  S4/S92t scripts: exhaustive P(n) vs T(n+1), gap 8, extension-map attempt.
+  perspective_class_map.out: all 56 six-classes have parents; there are no orphans.
+  THM-260 rooted layer: P(n)=n*T(n)-D(n), D indexed by odd automorphism partitions.
+  S369/S370: gap 8 tied to LRC alpha stencils, chirality, 12+44 and 14+42.
+  S509/HYP-1977: unmarked and observer-pointed LRC classes can mix safe/unsafe cells.
+  T600/T629: quotient stack needs observer/source, threshold, gap/apex, and endpoint labels.
+
+Unrooted classes U(n), rooted perspectives P(n), and shifted gap
+  n  U(n)  P(n)  U(n+1)  U(n+1)-P(n)  orbit-count distribution
+  1     1     1       1             0  {1: 1}
+  2     1     2       2             0  {2: 1}
+  3     2     4       4             0  {1: 1, 3: 1}
+  4     4    12      12             0  {2: 2, 4: 2}
+  5    12    48      56             8  {1: 1, 3: 4, 5: 7}
+  6    56   296     456           160  {2: 5, 4: 10, 6: 41}
+
+The user's small counts
+  n=3 classes contribute orbit counts [3, 1], so P(3)=4=U(4).
+  n=4 classes contribute orbit counts [4, 4, 2, 2], so P(4)=12=U(5).
+  n=5 contributes distribution {1:1, 3:4, 5:7}, so P(5)=48, but U(6)=56.
+  n=6 contributes distribution {2:5, 4:10, 6:41}, so P(6)=296, but U(7)=456.
+
+Extension-map sanity check
+  This uses the old operation: fix an n-class, add a new vertex with all 2^n incident words.
+  Crucial diagnostic: the chosen root is not used by this operation.
+  n=3->n+1=4:
+    rooted=4, target=4, target-rooted gap=0
+    covered targets=4, orphans=0, root-sensitive parent classes=0
+    parents/class distribution={3: 1, 4: 3}
+    reached-classes/root distribution={3: 1, 4: 3}
+  n=4->n+1=5:
+    rooted=12, target=12, target-rooted gap=0
+    covered targets=12, orphans=0, root-sensitive parent classes=0
+    parents/class distribution={4: 2, 6: 2, 8: 5, 10: 2, 12: 1}
+    reached-classes/root distribution={6: 4, 8: 4, 9: 4}
+  n=5->n+1=6:
+    rooted=48, target=56, target-rooted gap=8
+    covered targets=56, orphans=0, root-sensitive parent classes=0
+    parents/class distribution={5: 3, 6: 3, 8: 2, 10: 1, 11: 5, 13: 2, 14: 4, 15: 6, 16: 2, 18: 2, 19: 2, 20: 5, 21: 3, 23: 10, 25: 2, 26: 2, 28: 2}
+    reached-classes/root distribution={7: 1, 13: 12, 21: 15, 23: 15, 24: 5}
+
+Interpretation
+  1. The small equality P(n)=U(n+1) is a rank-shift count, not a natural extension bijection.
+  2. The old 'orphan six-classes' reading is false for the full extension map: all 56 are covered.
+  3. The real missing datum is the incident word/cocycle that couples the observer to the extension.
+  4. In LRC, that cocycle is not merely orientation; it is threshold, endpoint, owner, and pressure data.
+  5. Therefore observer-blind clocks are useful caches, but exact safe-box hitting must stay in a labelled fiber.
+
+Safe-to-ignore versus must-keep clocks
+  Ignore for exact safety: raw unmarked A000568 class, raw H/score/c3 alone, and root-unused extension maps.
+  Keep as first lift: observer-pointed/rooted class, because the stationary runner is not symmetric noise.
+  Keep for exact LRC: observer-source threshold arcs, endpoint/gap labels, owner residues, and proof automata.
+  Remodel safe-box hitting as: quotient walk + labelled fiber + accepting observer-source state.
+
+Tournament Analysis over quotient choices
+  route strengths={'unmarked_A000568_class': 6, 'observer_pointed_class': 14, 'root_plus_incident_word': 27, 'observer_source_threshold': 41, 'endpoint_owner_sheaf': 43, 'proof_obligation_automaton': 37}
+  ranking=[(43, 'endpoint_owner_sheaf'), (41, 'observer_source_threshold'), (37, 'proof_obligation_automaton'), (27, 'root_plus_incident_word'), (14, 'observer_pointed_class'), (6, 'unmarked_A000568_class')]
+  score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3_cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+
+Assumption challenge
+  Vertices here were quotient models, not runners or tournament vertices.
+  Preserved predicate: existence of an LRC safe-box hit after projection.
+  Destroyed information: phase duration and exact arithmetic unless the endpoint/residue fiber is retained.
