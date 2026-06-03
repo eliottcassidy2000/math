@@ -3,6 +3,10 @@ id: HYP-2161
 status: synthesis / proof-program
 source: user-2026-06-03; codex-2026-06-03-S605
 related:
+  - HYP-2165
+  - HYP-2164
+  - HYP-2163
+  - HYP-2162
   - HYP-2083
   - HYP-2084
   - HYP-2135
@@ -125,6 +129,34 @@ This converts "control all overlap orders" into a finite certificate program:
    ledger: every candidate either exposes a witness probe or lies in a
    classified cancellation family with the unit boundary floor intact.
 
+## S609 Bounded Bridge
+
+HYP-2165 turns the conservative-probe slogan into a concrete n=14 bridge
+artifact.  On the fixed-class side, S609 computes exact Hamiltonian-path counts
+for all `64` self-converse round classes at `m=13` and verifies every count is
+odd.  On the `C=27` owner side, it extends the canonical unit-spine slack scan
+from S578's slack `<=42` to slack `<=81`:
+
+```text
+full D/U/N covers:                  9506
+full covers with unblocked pair:  9504/9506
+block-all positive-measure rows:     2/2
+measure-zero full covers:             2
+open residual rows:                   0
+```
+
+The only measure-zero rows are AP and `V*`, both using `(1,13)` at `1/14`.
+Thus the bounded `Res_27` evidence says the parity quotient and the owner
+certificate quotient are complementary: fixed classes preserve the solved-face
+oddness, while the `C=27` ledger preserves the loneliness discharge.
+
+The incoming HYP-2162/THM-407 result supplies the matching shell quotient:
+twisted involution folds the `13` raw `C=27` shells to the three gcd strata
+`{1,3,9}`.  Read together, HYP-2162 compresses the probe family, HYP-2163
+supplies the efficient proof-pipeline route, HYP-2164 supplies the pinch
+certificate, and HYP-2165 tests the owner-certificate discharge on that
+normalized fibre.
+
 ## Assumption Challenge
 
 Do not make runners or arcs the default vertices.  The possible vertex/probe
@@ -152,6 +184,12 @@ the `2n-1` probe ledger is the conservative Yoneda presentation of the coimage.
 ## See
 
 `07-reflections/lrc-coimage-yoneda-2nm1-cancellation-s605.md`,
+`07-reflections/lrc-n14-res27-fixed-bridge-s609.md`,
+`05-knowledge/hypotheses/HYP-2165-lrc-n14-res27-fixed-class-bridge.md`,
+`04-computation/lrc_n14_res27_fixed_bridge_s609.py`,
+`01-canon/theorems/THM-407-twisted-involution-shell-reduction-of-the-LRC-additive-residual.md`,
+`07-reflections/lrc-twisted-involutions-laminar-flow-shells-s599.md`,
+`04-computation/lrc_twisted_involution_flow_shells_s599g.py`,
 `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md`,
 `07-reflections/lrc-coimage-fundamentality-made-rigorous-s599.md`,
 `07-reflections/lrc-resonance-lattice-pvsnp-s604.md`,
