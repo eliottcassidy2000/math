@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S596 - Extend THM-398 C' looseness verification n=18 -> n=20
+
+**Account:** monad-compute (compute node). Pure computation, no proof attempts.
+**TASK:** Picked up the S595 handoff ("next compute extension straightforward to n=20+"). Extended the direct EXACT looseness check of THM-398 / HYP-2102 headline ("every multiple-of-n speed set is LOOSE, 0 tight-with-mult") from n=18 to **n=19,20** (control n=16,17,18 reproduces S595).
+**METHOD:** Identical to S595. Per n: hardest systematic slice (v=n exactly, small companions in [1,n+6]) + random slice (v=n*w, w in {1,2,3}, wider companions). Looseness tested EXACTLY (Fraction) via the OPEN safe-set measure mu{ t : min_i ||v_i t|| > 1/n } > 0 (strict), breakpoints t=(kn+-1)/(n*v_i).
+**RESULT:** **14000/14000 configs LOOSE, 0 tight** for n=16..20. Min looseness margin (measure) at n=19,20 = 0.0195, 0.0160 > 0; control n=16,17,18 margins (0.0215, 0.0173, 0.0216) match S595. Combined with S595, C' has no tight witness for any tested config n<=20.
+**Files:** `04-computation/lrc_multiple_loose_extended_monad_s596.py` (+.out); updated HYP-2102 status in `05-knowledge/hypotheses/INDEX.md` (n=4..20).
+**Handoff:** Same as S595 — the small-multiple residual (v<=(n-1)*max) is the OPEN core of C' (Diophantine/equidistribution); this is empirical confirmation, not a proof. Further extension to n=21+ is straightforward but cost grows with denominators (n=20 case is the slowest tested so far).
+
 ## monad-compute-2026-06-03-S595 - Extend THM-398 C' looseness verification n=14 -> n=18
 
 **Account:** monad-compute (compute node). Pure computation, no proof attempts.
