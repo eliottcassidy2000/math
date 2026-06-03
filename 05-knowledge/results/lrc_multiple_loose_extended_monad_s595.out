@@ -1,0 +1,15 @@
+THM-398 headline: every multiple-of-n speed set is LOOSE (M(S) > 1/n).
+Direct EXACT looseness test via open-safe-set measure. Control n=12,13,14;
+NEW extension n=15,16,17,18.
+
+  n parity  #configs   loose  tight  all_loose    min_margin(measure)
+ 12   even      2800    2800      0       True  0.01739 (=1343/77220)
+ 13    odd      2800    2800      0       True   0.01591 (=371/23322)
+ 14   even      2800    2800      0       True 0.01664 (=158611/9529520)
+ 15    odd      2800    2800      0       True 0.02331 (=3478/149175)
+ 16   even      2800    2800      0       True 0.02149 (=300857/14002560)
+ 17    odd      2800    2800      0       True 0.01725 (=5609135/325078182)
+ 18   even      2800    2800      0       True 0.02156 (=2822972/130945815)
+
+TOTAL: 19600/19600 loose, 0 tight.
+CONFIRMED: 0 tight multiple-of-n configs through n=18 (C' holds for tested configs n<=18)
