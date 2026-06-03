@@ -1,0 +1,46 @@
+S589 vertex-transitive trienerment / polygon rigidity audit
+
+POINT-SET / TRIENERMENT RIGIDITY AUDIT
+  searched: subsets P of Z/N with 0 in P, 3<=N<=18
+  dihedral_vertex_transitive=83; regular_polygons=31; imprimitive_bracelets=52
+  local_distance_profile_equal=83; local_equal_but_not_dihedral_VT=0
+
+  first imprimitive dihedral-VT point-set:
+    N=6, P=(0, 1, 3, 4), gaps=(1, 2, 1, 2), gap_period=2, stabilizer_size=4
+    reading: every vertex has the same local trienerment view, but the set is a regular polygon of blocks, not a regular polygon of points.
+
+  imprimitive gap-period histogram: {2: 52}
+  imprimitive size histogram: {4: 32, 6: 12, 8: 4, 10: 2, 12: 2}
+
+ABSTRACT VT TOURNAMENT CASCADE AUDIT
+  Cayley tournaments are vertex-transitive because left translations propagate the root star to every vertex.
+  The question is whether that propagation is cyclic-polygonal or group-relator driven.
+  C7 interval circulant:
+    |G|=7; root_star=3; score_hist={3: 7}; c3=14
+    element_order_hist={1: 1, 7: 6}; has_order_|G|_element=True
+    root_star_sample=('1', '2', '3')
+  C21 interval circulant:
+    |G|=21; root_star=10; score_hist={10: 21}; c3=385
+    element_order_hist={1: 1, 3: 2, 7: 6, 21: 12}; has_order_|G|_element=True
+    root_star_sample=('1', '10', '2', '3', '4', '5', '6', '7')
+  F21 alternating Cayley:
+    |G|=21; root_star=10; score_hist={10: 21}; c3=385
+    element_order_hist={1: 1, 3: 14, 7: 6}; has_order_|G|_element=False
+    root_star_sample=('a0b2', 'a1b0', 'a1b1', 'a3b0', 'a3b1', 'a4b2', 'a5b0', 'a5b1')
+  reading: cyclic Cayley rigidity is a regular polygon spine; F21 is still vertex-transitive, but no element has order 21, so the local star cascades through a nonabelian relator mesh.
+  warning: vertex-transitive tournament => regular polygon is true only after adding a cyclic sharp-transitivity hypothesis.
+
+TOURNAMENT ANALYSIS
+  vertices: rigidity lenses, not tournament vertices.
+  observable: (global cascade, local rigidity, LRC payload, fixed-point handling, primitive polygonality).
+  ranking: ['cyclic_regular_polygon_spine', 'nonabelian_Cayley_VT_mesh', 'dihedral_imprimitive_bracelet', 'source_root_threshold_payload', 'local_distance_profile_only', 'regular_score_sequence_only']
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3_cycles: 0
+  Hamiltonian_path_count: 1
+  first_Hamiltonian_path: ('cyclic_regular_polygon_spine', 'nonabelian_Cayley_VT_mesh', 'dihedral_imprimitive_bracelet', 'source_root_threshold_payload', 'local_distance_profile_only', 'regular_score_sequence_only')
+
+SYNTHESIS
+  cyclic VT point-set <=> regular polygon, once the transitive group is a single rotation cycle.
+  dihedral VT point-set => regular polygon or imprimitive bracelet; local views match, but block structure remains.
+  abstract VT tournament => Cayley cascade from one root star; it may be polygonal (cyclic) or relator-mesh (nonabelian).
+  LRC rigidity should keep the fixed basepoint/source payload: local isomorphism alone does not say which observer clock survives.
