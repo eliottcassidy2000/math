@@ -1,0 +1,53 @@
+==== S615 tournament obstruction / amplification scout ====
+Forbidden-H and LRC resonance ledger
+  Phi_3(2) = 2^2 + 2 + 1 = 7
+  3 * Phi_3(2) = 21
+  Repo theorem status: H(T)=7 and H(T)=21 are permanent tournament gaps;
+  HYP-2180 signal: strong-component multiplicativity explains the 7/21 gap.
+  HYP-2179 signal: robust finite-spectrum/round-LRC propagation is now recorded.
+  S612b LRC signal: tight AP single-swaps split into exceptional
+    reflection sporadics and the infinite mirror-retaining doubling family.
+
+  LRC C=2n-1 windows around the current frontier:
+    n   C      factor(C)   3|C   7|C   V* lattice cover radius
+    8  15            3*5  True False        tight            1
+    9  17             17 False False     loose/na            -
+   10  19             19 False False     loose/na            2
+   11  21            3*7  True  True     loose/na            -
+   12  23             23 False False     loose/na            2
+   13  25            5^2 False False     loose/na            -
+   14  27            3^3  True False        tight            1
+
+Exponent ledger
+  Unit distance: Sawin gives planar sets with more than n^1.014 unit pairs.
+  Carrier: high-degree algebraic number fields, small discriminant, many small-norm primes.
+  Tournament max-H literature: max H(T) is Theta(n!/2^(n-1));
+    Alon's upper-bound slack is polynomial n^(3/2), and random regular
+    tournaments give constant-factor e asymptotics over the random baseline.
+  Strong-tournament minimum HP literature has exponential base 5^(1/3),
+    again not 1.014.
+  S615 conclusion: the exact 1.014 is not yet a tournament theorem.
+    Treat it as a target carrier-amplification exponent to search for in
+    proof-obligation tournaments or arithmetic tournament carriers.
+
+Tournament Analysis on transfer routes
+  score=7 route=LRC gcd(3,2n-1) lattice law plus carry conservativity; features=(evidence=5, cross=5, action=5, side=5, exp=3, risk=1)
+  score=6 route=OCF forbidden H=7/21 as low-order obstruction; features=(evidence=5, cross=5, action=4, side=4, exp=2, risk=1)
+  score=5 route=unit-distance CM/class-field carrier gives n^1.014; features=(evidence=5, cross=4, action=3, side=5, exp=5, risk=2)
+  score=4 route=Collatz two-block Baker gap as residual template; features=(evidence=4, cross=4, action=3, side=4, exp=2, risk=2)
+  score=3 route=Paley/max-H tournament asymptotics as amplifier; features=(evidence=3, cross=3, action=3, side=3, exp=2, risk=3)
+  score=2 route=search for permanent H-gaps beyond 7 and 21; features=(evidence=3, cross=3, action=4, side=2, exp=1, risk=3)
+  score=1 route=raw numeric equality: tournament exponent = 1.014; features=(evidence=1, cross=3, action=2, side=1, exp=5, risk=5)
+  score=0 route=raw quotient forgetting without side channels; features=(evidence=2, cross=2, action=2, side=0, exp=1, risk=5)
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles: 0
+  SCC sizes: [1, 1, 1, 1, 1, 1, 1, 1]
+  Hamiltonian path count: 1
+  Reading: the winning route is not raw numeric matching.  It is the side-channel carrier route: OCF/H-gaps, LRC gcd shells, unit-distance arithmetic towers, and Collatz two-block gaps are all retained-carrier amplification or obstruction problems.
+
+Hypothesis HYP-2181:
+  H=7/21 are the visible low-order forbidden faces of the tournament OCF.
+  LRC C=21/27 and the S612b swap split propagate it into shell arithmetic.
+  Unit-distance n^1.014 is the current arithmetic-carrier amplification model.
+  Collatz supplies the two-block gap template.
+  The exact shared exponent is open; the shared structure is the retained carrier.
