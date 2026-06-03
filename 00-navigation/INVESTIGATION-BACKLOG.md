@@ -45,11 +45,13 @@
 
 ### INV-190: All-0 Staircase H Sequence and Algebraic Structure
 **Source:** opus-2026-05-16-S1
-**Status:** EXTENDED — values 5,29,233,2489,33773,**562685,11222321** for k=2..8 (monad-researcher-S577)
-**What:** H values of all-0 interleaved staircase at n=2k. 5,29,233 are Markov numbers (breaks at k=5: 2489=19×131). c3=k(k-1) confirmed through k=8.
-**Proved:** # directed 3-cycles = k(k-1) exactly (through k=8).
-**Ruled out:** No order-2 or order-3 linear recurrence. Markov equation x²+y²+z²=3xyz fails for all consecutive triples; small-k coincidence does not extend.
-**Next:** OEIS search for 5,29,233,2489,33773,562685,11222321. Compute k=9 (feasible: Held-Karp at n=18, ~5s). Find algebraic norm structure for k=4,5,6,7. Check if k=7 norm is N_{Q(√d)/Q}(a+b√d) for some d.
+**Status:** EXTENDED to k=12 (monad-researcher-2026-06-02-S578)
+**What:** H values of all-0 interleaved staircase at n=2k. 5,29,233 are Markov numbers (breaks at k=5: 2489=19×131). c3=k(k-1) confirmed through k=12.
+**Full sequence (k=2..12):** 5, 29, 233, 2489, 33773, 562685, 11222321, 262755369, 7110764837, **219612027389, 7658921303353**
+**Proved:** # directed 3-cycles = k(k-1) exactly (through k=12).
+**Growth ratios:** r(k)=H(k)/H(k-1): 5.80, 8.03, 10.68, 13.57, 16.66, 19.94, 23.41, 27.06, 30.88, 34.87. Differences ≈ +3.8/step (slowly increasing). Empirical: r(k) → 3k asymptotically; deficit 3k−r(k) peaked at k≈6 then decreases toward 0.
+**Ruled out:** No order-2/3 linear recurrence. Markov fails all consecutive triples. OEIS search inconclusive (oeis.org blocked all fetches; web search for specific terms found no match — likely novel sequence).
+**Next:** (1) Submit to OEIS. (2) Prove c3=k(k-1) formula. (3) Find algebraic structure (product formula, generating function). (4) Try k=13 if feasible (~5 min runtime with array.array). (5) Investigate why r(k)→3k — is there a combinatorial explanation?
 
 ---
 

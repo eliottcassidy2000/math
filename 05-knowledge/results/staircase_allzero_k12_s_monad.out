@@ -1,0 +1,59 @@
+================================================================
+All-0 Interleaved Staircase: H via array.array Held-Karp DP
+Running k=12..12
+================================================================
+
+k=12, n=24
+  Allocating dp array: 402,653,184 entries = 3.22 GB
+  Allocation done in 0.8s
+  Progress: 4% (mask=0x000ccccc), last 838860 masks: 6.5s
+  Progress: 9% (mask=0x00199998), last 838860 masks: 9.3s
+  Progress: 14% (mask=0x00266664), last 838860 masks: 5.7s
+  Progress: 19% (mask=0x00333330), last 838860 masks: 4.6s
+  Progress: 24% (mask=0x003ffffc), last 838860 masks: 12.7s
+  Progress: 29% (mask=0x004cccc8), last 838860 masks: 7.3s
+  Progress: 34% (mask=0x00599994), last 838860 masks: 9.3s
+  Progress: 39% (mask=0x00666660), last 838860 masks: 5.9s
+  Progress: 44% (mask=0x0073332c), last 838860 masks: 4.8s
+  Progress: 49% (mask=0x007ffff8), last 838860 masks: 12.9s
+  Progress: 54% (mask=0x008cccc4), last 838860 masks: 1.5s
+  Progress: 59% (mask=0x00999990), last 838860 masks: 1.7s
+  Progress: 64% (mask=0x00a6665c), last 838860 masks: 1.7s
+  Progress: 69% (mask=0x00b33328), last 838860 masks: 1.7s
+  Progress: 74% (mask=0x00bffff4), last 838860 masks: 1.9s
+  Progress: 79% (mask=0x00ccccc0), last 838860 masks: 12.2s
+  Progress: 84% (mask=0x00d9998c), last 838860 masks: 13.1s
+  Progress: 89% (mask=0x00e66658), last 838860 masks: 11.8s
+  Progress: 94% (mask=0x00f33324), last 838860 masks: 10.6s
+  Progress: 99% (mask=0x00fffff0), last 838860 masks: 10.8s
+
+k=12, n=24: H=7658921303353
+   expected=NEW  match=NEW  total_t=146.98s
+   score_seq=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 11, 12, 12, 13, 14, 15, 16, 17, 18, 19, 20, 21, 22]
+   c3=132  k(k-1)=132  match=True
+
+================================================================
+FULL SEQUENCE k=2..11 (known) + new:
+  k= 2: H=5
+  k= 3: H=29
+  k= 4: H=233
+  k= 5: H=2489
+  k= 6: H=33773
+  k= 7: H=562685
+  k= 8: H=11222321
+  k= 9: H=262755369
+  k=10: H=7110764837
+  k=11: H=219612027389
+  k=12: H=7658921303353  [NEW, t=146.98s]
+
+Growth ratios (all known + new):
+  k= 3: 5.800000
+  k= 4: 8.034483
+  k= 5: 10.682403
+  k= 6: 13.568903
+  k= 7: 16.660794
+  k= 8: 19.944233
+  k= 9: 23.413639
+  k=10: 27.062301
+  k=11: 30.884445
+  k=12: 34.874781
