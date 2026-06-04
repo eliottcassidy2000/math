@@ -11,9 +11,13 @@ Output is LINE-BUFFERED and TIMED per phase / per eigenspace so partial
 verified results are captured even if the full run is long. Each eigenspace's
 boundary ranks are an independently-checkable artifact.
 """
-import sys, os, time
+import sys, os, time, json
 sys.stdout.reconfigure(line_buffering=True)
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+
+RESULTS_DIR = os.path.join(os.path.dirname(os.path.abspath(__file__)),
+                           "..", "05-knowledge", "results")
+JSON_PATH = os.path.join(RESULTS_DIR, "verify_t11_betti_s_monad_ranks.json")
 
 from circulant_homology import PaleyHomology, find_nth_root_of_unity
 
@@ -51,13 +55,36 @@ omega_p = find_nth_root_of_unity(h.n, h.prime)
 boundary_ranks = {}
 print(f"\n[boundary] computing rank(d_m^(k)) for k=0..{h.n-1}, m=0..{MAXD+1}")
 sys.stdout.flush()
+# Resume support: load any eigenspaces already computed in a prior run.
+if os.path.exists(JSON_PATH):
+    with open(JSON_PATH) as f:
+        saved = json.load(f)
+    for ks, rk in saved.get("boundary_ranks", {}).items():
+        boundary_ranks[int(ks)] = rk
+    if boundary_ranks:
+        print(f"[resume] loaded eigenspaces k={sorted(boundary_ranks)} from {JSON_PATH}")
+        sys.stdout.flush()
+
 for k in range(h.n):
+    if k in boundary_ranks:
+        print(f"  k={k:2d}: ranks={boundary_ranks[k]}   [cached/resumed]")
+        sys.stdout.flush()
+        continue
+    # Clear the cross-eigenspace basis cache: entries keyed by a different
+    # omega_k are never reused and only bloat memory / slow allocation.
+    h._omega_basis_cache.clear()
     tk = time.time()
     omega_k = pow(omega_p, k, h.prime)
     ranks_k = [h._boundary_rank_k(m, omega_k) for m in range(MAXD + 2)]
     boundary_ranks[k] = ranks_k
     print(f"  k={k:2d}: ranks={ranks_k}   [{time.time()-tk:.1f}s]")
     sys.stdout.flush()
+    # Persist incrementally so each eigenspace can be committed as it lands.
+    with open(JSON_PATH, "w") as f:
+        json.dump({"p": P, "expected_omega": EXPECTED_OMEGA, "omega": omega,
+                   "boundary_ranks": {str(kk): boundary_ranks[kk]
+                                      for kk in sorted(boundary_ranks)}},
+                  f, indent=1)
 
 # ---- Phase 3: assemble Betti ----
 betti = []
