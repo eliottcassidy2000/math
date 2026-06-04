@@ -10,5 +10,8 @@ S (QR mod 11) = [1, 3, 4, 5, 9]
 [omega] MATCH=True   chi=1 (expect 1)
 
 [boundary] computing rank(d_m^(k)) for k=0..10, m=0..11
-  k= 0: ranks=[0, 0, 5, 15, 55, 150, 305, 390, 300, 150, 30, 0]   [388.3s]
-  k= 1: ranks=[0, 1, 4, 16, 54, 151, 309, 390, 300, 150, 30, 0]   [381.8s]
+[resume] loaded eigenspaces k=[0, 1] from /tmp/math-compute-1535447/math/04-computation/../05-knowledge/results/verify_t11_betti_s_monad_ranks.json
+  k= 0: ranks=[0, 0, 5, 15, 55, 150, 305, 390, 300, 150, 30, 0]   [cached/resumed]
+  k= 1: ranks=[0, 1, 4, 16, 54, 151, 309, 390, 300, 150, 30, 0]   [cached/resumed]
+  k= 2: ranks=[0, 1, 4, 16, 54, 151, 309, 390, 300, 150, 30, 0]   [385.8s]
+  k= 3: ranks=[0, 1, 4, 16, 54, 151, 309, 390, 300, 150, 30, 0]   [384.8s]
