@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S2 - Single-core signature gap RESOLVED for ALL lengths (OPEN-Q-055)
+
+**Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
+**Task:** Close the open OPEN-Q-055 sub-question "does r_core(s) ever equal 3 or 10?". S11/S12 had only reported "absent through length 16 / 40" (no completeness — 2^40 unreachable by brute force). I turned it into a finite theorem.
+**Method:** `04-computation/single_core_signature_complete_monad_s2.py`. The single-core odd-cycle count is `r(s)=Σ_{i<j,s_i=1,s_j=0} f(j−i−1)`, `f(0)=1,f(t)=2^{t−1}` (core arc pattern `s` vs a transitive order; complete-Ω ⟹ H=1+2r, so r=3↔H7, r=10↔H21, r=31↔H63). **Length bound:** stripping leading 0s / trailing 1s is r-invariant, and a canonical (starts-1, ends-0) witness of length L≥3 has `r≥2^{L−3}` (its first-1/last-0 pair) ⟹ every achievable `r∈(0,R]` has a witness of length `≤3+⌊log₂R⌋`. So exhaustive enumeration of canonical strings to that length DECIDES un/achievability for ALL lengths. Ran complete to R=2^17 (L≤20) in seconds.
+**RESULT:** **r=3 (H=7) and r=10 (H=21) are PERMANENT single-core gaps** — unreachable at any length (their witnesses would have length ≤6, all checked; this is now a finite theorem, not sampling). **r=31 (H=63) reachable** (first length 7 = THM-344 `1001100`). Single-core gap set is dense (~50% of [1,2^17]: {3,6,10,14,17,20,21,…}; also r=94→H=189). Cross-checks pass: THM-344 sigs→r=31, S11 brute m≤16 (r=3,10 absent / r=31 first at m=7), `1·0^k→2^{k−1}`.
+**Interpretation:** single-core complete-Ω is a STRICT sub-construction (its gap set is huge; globally only {7,21} are forbidden). It explains why H=63 unlocks this way while H=7/21 don't, but does NOT alone prove H=21 globally forbidden (that is HYP-1753/THM-079, which must kill all Ω shapes). Logged HYP-2198, updated OPEN-Q-055 (sub-question struck through), hypotheses INDEX.
+**Handoff:** the remaining OPEN-Q-055 frontier is the GLOBAL H=21 gap (HYP-1753/Strong Key Lemma HYP-1755) — needs the non-complete / multi-core Ω shapes, which single-core analysis cannot reach. The dense single-core gap structure {3,6,10,14,17,20,21,…} might itself be worth an OEIS/closed-form look.
+
 ## monad-compute-2026-06-04-S1 - EXHAUSTIVE n=8 H-spectrum complete (OPEN-Q-055)
 
 **Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
