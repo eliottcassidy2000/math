@@ -1159,6 +1159,8 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. H=21 remains a strong open permanent-gap candidate. H=63 is REFUTED as a universal gap: it is achieved at n=8.
 
+**EXHAUSTIVE n=8 H-SPECTRUM (monad-compute-2026-06-04-S1, `h_spectrum_n8_exhaustive_monad.py`):** the complete census over all 2^28 = 268,435,456 labeled 8-vertex tournaments (census total verified = 2^28; all H odd). 320 distinct H values, range [1, 661]. **The only low odd gaps are {7, 21}** — every odd value in [23, 609] is achieved. H=35,39,49,63 all unlock at n=8 (counts 161280/188160/604800/80640). The remaining odd gaps {611,615,617,619,623,625,635,647,655} are high-end sparseness just below max H=661 (not permanent). This makes the n=8 forbidden set ∩[1,609] = {7,21} EXACT (previously only 100k sampling, HYP-1104), and exhaustively confirms H≠7, H≠21 at n=8 (upgrades the H=21 (8,1)/(6,2) cases from "strong n≥8 sampling" to exhaustion).
+
 **Evidence:**
 - H=21: 0 occurrences at n≤7 (exhaustive as of S6). All four decompositions (10,0), (8,1,0), (6,2,0), (4,3,0) of α-vectors absent at n=6.
 - H=63: absent at n≤7, but **achievable at n=8**. THM-344 (opus-S10) gives the exact n=8 census: exactly two n=8 isomorphism classes have H=63; both have |Aut|=1, score sequences (1,2,2,3,3,5,6,6) and (1,1,2,4,4,5,5,6), and Ω(T)=K31, hence H=I(K31,2)=63.

@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S1 - EXHAUSTIVE n=8 H-spectrum complete (OPEN-Q-055)
+
+**Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
+**Task:** Fill the documented gap: `05-knowledge/results/h_spectrum_n8_exhaustive.out` held only a header — the original C n=8 census never finished, and this node has NO C compiler. Computed the full H-spectrum exhaustively in pure numpy.
+**Method:** `04-computation/h_spectrum_n8_exhaustive_monad.py` — numpy-vectorized batched Held-Karp (int32, elementwise contraction; int64 `matmul` uses a slow non-BLAS path), parallelized over 24 cores, halving via path-reversal symmetry H(T)=H(T^op)=H(bits XOR 2^m-1) so only the 2^27 lower half is processed and counts doubled. Cache-friendly batch B=768 → ~86k tournaments/s, ran in 1595 s (~27 min). Cross-checked vs scalar reference Held-Karp (4096 contiguous + 500 random, 0 mismatches); reversal symmetry + oddness verified; n=3..6 spectra reproduced.
+**RESULT (validated: census total = 2^28 = 268,435,456 EXACTLY; all H odd):** 320 distinct H values, range [1, 661]. **Only low odd gaps = {7, 21}** — every odd value in [23, 609] is achieved. H=35/39/49/63 all ACHIEVED (counts 161280/188160/604800/80640) → confirms they "unlock" by n=8. Remaining odd gaps {611,615,617,619,623,625,635,647,655} are high-end sparseness just below max H=661, NOT permanent. Transitive H=1 count=40320=8! (sanity ✓).
+**Impact:** Upgrades HYP-1104 and HYP-1027 from n=8 *sampling* to *exhaustion*: the n=8 forbidden set ∩[1,609] = {7,21} is now EXACT, and the H=21 (8,1)/(6,2) decomposition cases go from "strong n≥8 sampling" to exhaustive at n=8. Updated OPEN-Q-055, results/INDEX, hypotheses/INDEX, and redirected the stale legacy `.out`.
+**Handoff:** n=9 exhaustive (2^36) is far out of node budget; would need a smarter (iso-class / nauty or C) enumeration. The data answers OPEN-Q-055's "at what n does each value unlock?" for everything ≤ n=8.
+
 ## codex-2026-06-04-S624 - LRC/unit-distance channel-complete ledger (HYP-2197)
 
 **Prompt:** Spend a long overnight session bouncing back and forth between the LRC and unit distance problem.
