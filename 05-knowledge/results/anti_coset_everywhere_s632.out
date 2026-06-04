@@ -1,0 +1,110 @@
+S632 Anti-Coset Everywhere Atlas
+================================
+
+Definition
+----------
+For a carrier X and a dual/opposite/conjugation operation J,
+Anti(X)=Iso(X,JX). If nonempty, Anti(X) is a transporter/coset
+over Aut(X)=Iso(X,X). The recurring mistake is to choose one
+anti-map and forget the coset, or to quotient until the anti-map
+looks like an ordinary stabilizer.
+
+1. Self-converse tournament face
+--------------------------------
+n  SC classes  |Aut| histogram       |Anti| histogram      orbit-image counts
+1           1  {1: 1}               {1: 1}               {1: 1}
+2           1  {1: 1}               {1: 1}               {2: 1}
+3           2  {1: 1, 3: 1}         {1: 1, 3: 1}         {1: 1, 3: 1}
+4           2  {1: 2}               {1: 2}               {4: 2}
+5           8  {1: 5, 3: 2, 5: 1}   {1: 5, 3: 2, 5: 1}   {1: 1, 3: 2, 5: 5}
+6          12  {1: 9, 3: 2, 9: 1}   {1: 9, 3: 2, 9: 1}   {2: 3, 6: 9}
+7          88  {1: 71, 3: 11, 5: 2, 7: 1, 9: 2, 21: 1} {1: 71, 3: 11, 5: 2, 7: 1, 9: 2, 21: 1} {1: 2, 3: 7, 5: 8, 7: 71}
+coset failures: []
+H=7/21 hits inside checked SC classes: []
+global anti-cycle-type histogram: {(1,): 1, (2,): 1, (2, 1): 4, (2, 2): 2, (2, 2, 1): 16, (2, 2, 2): 16, (2, 2, 2, 1): 132, (6,): 8, (6, 1): 28}
+
+2. LRC shell transporter face
+-----------------------------
+n  C=2n-1  |<2,-1>|  shells->orbits  gcd reps       transporter sizes
+ 6      11        10   5->1   [1]            {(2, 2): 5} ok=True reflection-folds=5
+ 8      15         8   7->3   [1, 3, 5]      {(2, 2): 4, (4, 4): 2, (8, 8): 1} ok=True reflection-folds=7
+10      19        18   9->1   [1]            {(2, 2): 9} ok=True reflection-folds=9
+12      23        22  11->1   [1]            {(2, 2): 11} ok=True reflection-folds=11
+14      27        18  13->3   [1, 3, 9]      {(2, 2): 9, (6, 6): 3, (18, 18): 1} ok=True reflection-folds=13
+16      31        10  15->3   [1, 1, 1]      {(2, 2): 15} ok=True reflection-folds=15
+18      35        24  17->3   [1, 5, 7]      {(2, 2): 12, (8, 8): 3, (12, 12): 2} ok=True reflection-folds=17
+20      39        24  19->3   [1, 3, 13]     {(2, 2): 12, (4, 4): 6, (24, 24): 1} ok=True reflection-folds=19
+n=14 C=27 detail: folded shells collapse to gcd strata.
+  gcd=1: orbit=[1, 2, 4, 5, 7, 8, 10, 11, 13] Stab(rep)=[1, 26] Anti_2(rep)=[2, 25]
+  gcd=3: orbit=[3, 6, 12] Stab(rep)=[1, 8, 10, 17, 19, 26] Anti_2(rep)=[2, 7, 11, 16, 20, 25]
+  gcd=9: orbit=[9] Stab(rep)=[1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26] Anti_2(rep)=[1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26]
+Note: after folding j~-j, reflection anti-data becomes a stabilizer;
+the quotient has destroyed the orientation side channel.
+
+3. Eisenstein/unit-distance D6 face
+-----------------------------------
+n  unit_edges  Aut+  Anti  torsor  full_shell  anti maps
+ 1*          0     6     6 True    True       ['s r0', 's r1', 's r2', 's r3', 's r4', 's r5']
+ 2           1     1     1 True    False      ['s r5']
+ 3           3     1     1 True    False      ['s r4']
+ 4           5     1     1 True    False      ['s r3']
+ 5           7     1     1 True    False      ['s r2']
+ 6           9     1     1 True    False      ['s r1']
+ 7*         12     6     6 True    True       ['s r0', 's r1', 's r2', 's r3', 's r4', 's r5']
+ 8          14     1     1 True    False      ['s r0']
+ 9          16     1     0 None    False      []
+10          19     1     1 True    False      ['s r5']
+11          21     1     0 None    False      []
+12          24     1     1 True    False      ['s r4']
+13          26     1     0 None    False      []
+14          29     1     1 True    False      ['s r3']
+15          31     1     0 None    False      []
+16          34     1     1 True    False      ['s r2']
+17          36     1     0 None    False      []
+18          39     1     1 True    False      ['s r1']
+19*         42     6     6 True    True       ['s r0', 's r1', 's r2', 's r3', 's r4', 's r5']
+20          44     1     0 None    False      []
+21          47     1     1 True    False      ['s r0']
+Full centered hex shells (n=1,7,19) keep the full D6 anti-coset.
+Partial shell prefixes usually retain only a small or empty anti-coset,
+which is the finite carrier version of the 'Eisenstein pattern ends'
+warning beyond the first complete shell.
+
+4. Tournament Analysis over anti-coset lenses
+---------------------------------------------
+Vertices are carrier lenses. Pairwise observable: which lens keeps
+the transporter, side-channel, and quotient-loss data most explicitly.
+Switches/gauges: SC torsor theorem, LRC shell action, Eisenstein D6
+conjugation. Tie HP: majority tournament over the three gauges.
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 H=1
+  score=5: SC Anti(T)=Iso(T,T^op)
+  score=4: LRC shell transporter
+  score=3: Eisenstein D6 conjugation
+  score=2: coimage sign-reversing involution
+  score=1: raw complement merge
+  score=0: raw scalar 7/21 match
+
+Assumption Challenge
+--------------------
+Alternate vertices considered: tournament vertices, anti-maps,
+rooted perspectives, residue shells, folded shell orbits, unit-distance
+points, D6 symmetries, coimage cancellations, and proof obligations.
+Chosen vertices: carrier lenses. They preserve the predicate
+'Anti(X) is a transporter to JX and quotienting can hide it.'
+They destroy exact embeddings, complete LRC certificates, and raw
+Hamiltonian-path spectra beyond the checked SC range.
+Challenged assumption: an anti-coset is special to SC tournaments.
+It is the generic transporter shape behind complements, converses,
+reflections, conjugations, and sign-reversing cancellations.
+
+Interpretation
+--------------
+- SC tournaments give the clean theorem: Anti(T) is a coset over Aut(T).
+- LRC shell work already uses the same object as transporters under
+  doubling/reflection on Z/(2n-1); folding can erase reflection into Aut.
+- Eisenstein/unit-distance finite point sets keep Anti as the orientation
+  reversing D6 coset exactly at full centered shells and lose pieces on
+  partial-shell prefixes.
+- The practical next test is to replace every raw complement merge in the
+  repo by an explicit transporter: name X, name J, compute Aut(X), compute
+  Anti(X), and record what the quotient forgot.

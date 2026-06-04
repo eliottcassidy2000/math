@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S632 - anti-cosets everywhere transporter atlas (HYP-2208)
+
+**Prompt:** Look for anti-cosets everywhere.
+**Integration:** Builds directly on THM-409/HYP-2205's SC anti-coset theorem, S630/HYP-2206's `n=21` carrier split, HYP-2207's `Phi3` guardrail, S599g/THM-407's LRC shell fold, and the unit-distance Eisenstein-prefix thread.
+**Computation:** Added `04-computation/anti_coset_everywhere_s632.py` and stored `05-knowledge/results/anti_coset_everywhere_s632.out`.  The script treats `Anti(X)=Iso(X,JX)` as a transporter, then checks SC tournaments through `n=7`, LRC `<2,-1>` shell actions for even `n=6..20`, and Eisenstein/triangular point prefixes through `n=21`.
+**Findings:** SC classes have no coset failures and still no `H=7/21`; LRC doubled-shell transporters always have stabilizer-sized anti-cosets, with `n=14`, `C=27` collapsing to gcd strata `1,3,9`; full centered Eisenstein shells `n=1,7,19` keep the full `D6` anti-coset while partial shell prefixes usually keep only a small or empty shard.
+**Synthesis:** "Anti-cosets everywhere" means: name the carrier `X`, name the opposite/conjugation `J`, compute `Aut(X)` and `Anti(X)`, and record what quotienting destroys.  Folding can turn anti-data into a stabilizer, and raw complement merges lose the transporter payload.
+**Artifacts:** HYP-2208, `07-reflections/anti-cosets-everywhere-s632.md`, T701, result-index and concept-map updates.
+
 ## codex-2026-06-04-S631 - Phi3 carrier guardrail addendum (HYP-2207)
 
 **Prompt:** Preserve the Claude-snippet root-of-unity thread while keeping the S629/S630 carrier distinctions honest.
