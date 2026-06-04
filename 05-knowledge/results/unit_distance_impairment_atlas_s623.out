@@ -1,0 +1,121 @@
+S623 UNIT-DISTANCE IMPAIRMENT ATLAS
+===================================
+INSPIRATION IMPORTED FROM OTHER THREADS
+---------------------------------------
+- LRC: a quotient is useful only when side channels are retained; impairments test which labels are load-bearing.
+- Tournaments: scalar counts miss forbidden packet structure; impairments should target packets, not only totals.
+- Cauldrons: hostile turn schedules expose which resource a one-player process forgot to protect.
+- Equidecomposability: equal edge counts can be non-equivalent; keep construction class and deletion deck.
+- S617 frontier gains: update the local observable state-locally; impaired methods recompute or forget gain shape.
+
+SMALL WIDTH IMPAIRMENT: MOSER CARRIER
+-------------------------------------
+target=14, policy=healthy; width is the impaired resource.
+  width=  1: true_edges=28, span= 6, frontier_gain_hist={1: 175, 2: 9, 3: 1}
+  width=  3: true_edges=29, span= 6, frontier_gain_hist={1: 174, 2: 10}
+  width= 10: true_edges=29, span= 6, frontier_gain_hist={1: 174, 2: 10}
+  width= 30: true_edges=33, span= 4, frontier_gain_hist={1: 111, 2: 34, 3: 1, 4: 1}
+  width= 60: true_edges=33, span= 4, frontier_gain_hist={1: 111, 2: 34, 3: 1, 4: 1}
+Reading: small widths are a deliberate adversary.  If the best edge count
+stabilizes early but the gain histogram does not, the proof object should
+retain future-gain shape rather than only current edge count.
+
+POLICY IMPAIRMENTS AT SMALL SIZE
+--------------------------------
+triangular target=12 width=80
+  healthy          true_edges=24 loss_vs_healthy= 0 span= 9 gain_hist={1: 6, 2: 9}
+  edge_only        true_edges=24 loss_vs_healthy= 0 span= 9 gain_hist={1: 6, 2: 9}
+  sprawl_bias      true_edges=24 loss_vs_healthy= 0 span= 9 gain_hist={1: 6, 2: 9}
+  balance_bias     true_edges=24 loss_vs_healthy= 0 span= 9 gain_hist={1: 6, 2: 9}
+  future_gain_bias true_edges=24 loss_vs_healthy= 0 span= 9 gain_hist={1: 6, 2: 9}
+
+moser target=12 width=60
+  healthy          true_edges=27 loss_vs_healthy= 0 span= 4 gain_hist={1: 109, 2: 25, 3: 1}
+  edge_only        true_edges=27 loss_vs_healthy= 0 span=10 gain_hist={1: 110, 2: 26}
+  sprawl_bias      true_edges=24 loss_vs_healthy= 3 span= 6 gain_hist={1: 150, 2: 9}
+  balance_bias     true_edges=27 loss_vs_healthy= 0 span= 4 gain_hist={1: 109, 2: 25, 3: 1}
+  future_gain_bias true_edges=27 loss_vs_healthy= 0 span= 4 gain_hist={1: 109, 2: 25, 3: 1}
+
+DIRECTION-DROP JACKKNIFE
+------------------------
+Build with one antipodal direction removed; evaluate edges in the full shell.
+triangular: full-shell true_edges=24
+  drop (-1, 0): score_edges=16, true_edges=24, loss= 0, span= 9
+  drop (-1, 1): score_edges=16, true_edges=24, loss= 0, span= 9
+  drop (0, -1): score_edges=16, true_edges=24, loss= 0, span= 9
+
+moser: full-shell true_edges=20
+  drop (-2, 1, 2, -1): score_edges=20, true_edges=20, loss= 0, span= 4
+  drop (-1, -1, 1, 1): score_edges=20, true_edges=20, loss= 0, span= 4
+  drop (-1, 0, 0, 0): score_edges=19, true_edges=19, loss= 1, span= 4
+  drop (-1, 1, 0, 0): score_edges=19, true_edges=19, loss= 1, span= 4
+  drop (-1, 2, 1, -2): score_edges=20, true_edges=20, loss= 0, span= 4
+  drop (0, -1, 0, 0): score_edges=19, true_edges=19, loss= 1, span= 4
+  drop (0, 0, -1, 0): score_edges=19, true_edges=19, loss= 1, span= 4
+  drop (0, 0, -1, 1): score_edges=19, true_edges=19, loss= 1, span= 4
+  drop (0, 0, 0, -1): score_edges=19, true_edges=19, loss= 1, span= 4
+
+GAIN-CEILING IMPAIRMENT
+-----------------------
+Forbid high-gain extensions after size 3; this sabotages dense-core growth.
+  ceiling=1: true_edges=12, span= 5, gain_hist={1: 131, 2: 10, 3: 2, 4: 5, 5: 3}
+  ceiling=2: true_edges=21, span= 6, gain_hist={1: 152, 2: 9, 4: 1}
+  ceiling=3: true_edges=25, span= 4, gain_hist={1: 100, 2: 29, 3: 1, 5: 1}
+  ceiling=4: true_edges=27, span= 4, gain_hist={1: 109, 2: 25, 3: 1}
+Repair idea: a proof search should enumerate where gain-4/5 extensions are
+possible, then attach embeddability and unfaithful-obstruction labels there.
+
+CANONICALIZATION IMPAIRMENT
+---------------------------
+Triangular carrier target=10: translation-only canonicalization versus D6.
+  translation-only: unique_children=1797, kept=200, edges=19, span=8
+  D6 canonical:     unique_children=1428, kept=200, edges=19, span=8
+  duplicate-work ratio at last layer: 1.26x
+Repair idea: before scaling, separate mathematical impairment from symmetry
+waste.  Otherwise a beam-width failure may just be duplicate orbit traffic.
+
+TOURNAMENT ANALYSIS: IMPAIRMENT LENSES
+--------------------------------------
+Vertices: impairment/repair lenses, not points or raw graphs.
+Pairwise observable: which lens best preserves small-test signal, proof payload,
+construction payload, side-channel retention, and low scaling risk.
+Score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+Directed 3-cycles: 0
+Hamiltonian-path count: 1
+  score=7 extension gain ledger: local degree/gain packets before embedding
+  score=6 direction-drop jackknife: unit-shell indispensability by leave-one-direction-out tests
+  score=5 canonical-orbit repair: distinguish true search scarcity from duplicate state traffic
+  score=4 deletion-core impairment: which dense cores survive hostile vertex deletion
+  score=3 gain-ceiling adversary: force search to reveal where high-gain steps are necessary
+  score=2 raw wider beam: more compute without a new certificate invariant
+  score=1 triangular-only baseline: good sanity carrier but too thin for n=22
+  score=0 count-only quotient: same edge count but missing geometry and obstruction labels
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertex sets considered: points, unit directions, frontier candidates,
+gain packets, deletion cores, obstruction filters, construction classes, and
+proof obligations.  The script uses impairment lenses as Tournament Analysis
+vertices because the preserved predicate is method robustness, not a graph.
+Preserved predicate: small-size response of dense unit-distance construction
+or proof routes to controlled loss of side information.
+Destroyed information: exact planar embedding outside the carrier, full graph
+isomorphism, and proof-grade unfaithful-subgraph certificates.
+Challenged assumption: the next improvement is just a wider beam.  The small
+tests instead point to gain ledgers, direction jackknives, deletion cores, and
+canonical-orbit repair as separate load-bearing invariants.
+
+NOVEL TECHNIQUE PROGRAM
+-----------------------
+1. Damage-response ledger: run the same small carrier under controlled
+   impairments and record which missing label causes the largest loss.
+2. Direction jackknife certificates: leave out one antipodal unit direction,
+   build anyway, then evaluate in the full shell to identify essential
+   direction packets.
+3. Gain-threshold extension solver: for a dense n-core, enumerate candidate
+   gain-4/5 extensions first; only then pay for embedding and obstruction
+   checks.
+4. Deletion-core resilience score: rank clusters by the multiset of edge
+   losses under vertex deletion, not only by total edges.
+5. Orbit-budget accounting: measure duplicate work under weak canonicalization
+   before interpreting a beam-width failure as mathematical scarcity.
