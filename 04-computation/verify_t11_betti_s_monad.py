@@ -101,10 +101,17 @@ print(f"\n[betti] recomputed = {betti}")
 print(f"[betti] expected   = {EXPECTED_BETTI}")
 print(f"[betti] MATCH={betti == EXPECTED_BETTI}")
 print(f"[betti] beta_5={betti[5]} (expect 5)   beta_6={betti[6]} (expect 15)")
-print(f"[euler] chi from Betti={chi_betti}  chi from Omega={chi}  MATCH={chi_betti==chi}")
+# Euler-Poincare for this eigenspace-decomposed complex:
+# by THM-125 each of the n eigenspaces carries a FULL copy of Omega_m
+# (dim Omega_m^(k) = omega[m] for all k), so the total chain dimension at
+# degree m is n*omega[m] and chi_full = n * sum (-1)^m omega[m] = n * chi.
+# Hence chi_betti must equal n*chi (NOT chi). The single-copy chi=1; n*chi=11.
+chi_full = h.n * chi
+euler_ok = (chi_betti == chi_full)
+print(f"[euler] chi from Betti={chi_betti}  n*chi_Omega={chi_full} (n={h.n}, single-copy chi={chi})  MATCH={euler_ok}")
 
 ok = (omega == EXPECTED_OMEGA and betti == EXPECTED_BETTI
-      and chi == 1 and chi_betti == 1)
+      and chi == 1 and euler_ok)
 print("\n" + "=" * 64)
 print(f"OVERALL: {'ALL CHECKS PASS' if ok else 'MISMATCH — INVESTIGATE'}")
 print("=" * 64)
