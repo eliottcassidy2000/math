@@ -671,6 +671,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2213 | Dehn and scissors side channels extend HYP-2211/HYP-2212's rational-shadow carriers.  Cuboid/simplex comparisons show the same scalar-plus-side-channel pattern: volume or packing is weaker than scissors congruence because Dehn data must cancel.  The transfer principle is to treat Dehn/scissors data, tournament `H`, LRC `C=2n-1`, and unit-distance edge counts as scalar quotients that require retained side channels. | S637 records the rational-shadow guardrail, rationality-versus-parity closure failures, regular-tetrahedron Dehn obstruction, and a repo dictionary.  Proof-lens Tournament Analysis is transitive with `H=1`, ranking Dehn invariant, carrier compression, algebraic-dependence channel, and symmetric-polynomial trap above parity analogy, volume-only packing, and the raw exact-one rational claim. | codex-2026-06-04-S637; `HYP-2213-dehn-scissors-side-channel-addendum.md`; `dehn_scissors_shadow_s637.py`; `dehn_scissors_shadow_s637.out`; `dehn-scissors-side-channel-addendum-s637.md`; HYP-2212, HYP-2211, HYP-2210, HYP-2209, HYP-2187, HYP-2186 |
 | HYP-2214 | Algebraic `e+pi` or `e*pi` would be a lonely algebraic shadow.  The pi/e carrier has transverse fallout: if `log(pi)` is algebraic then `S=e+pi`, `P=e*pi`, and `D=e-pi` are all transcendental; if `S` is algebraic then every power sum `e^k+pi^k` for `k>=2` is transcendental; if `P` is algebraic then every such power sum for `k>=1` is transcendental. | S638 proves the log-pi gate using Lindemann-Weierstrass/Hermite-Lindemann, prints Newton power-sum polynomials through `k=10`, records the transverse symmetric-polynomial template, and runs a PSLQ sanity check detecting only `S^2-D^2-4P=0`.  The proof-route Tournament Analysis has `9` vertices, `score_hist={0:1,1:1,2:1,3:1,4:1,6:3,8:1}`, `1` directed 3-cycle, and `3` Hamiltonian paths. | codex-2026-06-04-S638; `HYP-2214-pi-e-lonely-shadow-fallout.md`; `pi_e_lonely_shadow_s638.py`; `pi_e_lonely_shadow_s638.out`; `pi-e-lonely-shadow-fallout-s638.md`; HYP-2213, HYP-2212, HYP-2211, HYP-2200 |
 | HYP-2215 | The shared transfer move across `H=21`, LRC `n=14`, unit-distance `n=21`, A000568, Schanuel/pi-e, twin primes, and Goldbach is side-channel jackknife: name the raw scalar, hidden witness, and retained channels, then delete or compress one channel at a time to measure released obstruction mass. | S639 builds a seven-row carrier atlas and finite toy ledgers for LRC `C=27` shells, twin-prime primorial survivors, and Goldbach `N=42` primorial survivors.  The transfer-method tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, `0` directed 3-cycles, and `1` Hamiltonian path, ranking `side_channel_jackknife > spine_bulk_decomposition > finite_window_extinction > local_prime_ledger > transverse_shadow_fallout > Burnside_transporters > quotient_collapse_test > Schanuel_style_completion > raw_scalar_numerology`. | codex-2026-06-04-S639; `HYP-2215-carrier-atlas-side-channel-transfer.md`; `obstruction_carrier_atlas_s639.py`; `obstruction_carrier_atlas_s639.out`; `obstruction-carrier-atlas-s639.md`; HYP-2214, HYP-2213, HYP-2212, HYP-2211, HYP-2209, HYP-2206, HYP-2200 |
+| HYP-2216 | Local obstruction product ledgers refine HYP-2215's side-channel jackknife: after naming the raw scalar, hidden witness, and retained channels, price each local prime/modulus/channel as a factor and isolate the transverse branch the product cannot decide. | S640 records the scalar/side-channel/barrier table, factors recurring integers, and ranks next proof routes; top route is a `local_obstruction_product_ledger` over local prime/modulus, forbidden residues, survivors, weight, and lost side channel. | codex-2026-06-04-S640; `HYP-2216-resonance-product-ledger.md`; `resonance_product_ledger_s640.py`; `resonance_product_ledger_s640.out`; `resonance-product-ledger-s640.md`; HYP-2215, HYP-2214, HYP-2213, HYP-2212, HYP-2211, HYP-2210, HYP-2200, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5191,6 +5192,48 @@ The concrete ledgers include LRC `C=27` shell strata `{1:[1,2,4,5,7,8,10,11,13],
 **Applications:** run residue-channel jackknives for twin/Goldbach; search unit-distance scalar twins with different spine/bulk packets; extend A000568 hard terms by fixed/merged/q/transporter companions; use `H=21` as a quotient-collapse detector when another model demands a forbidden scalar.
 
 **See:** `05-knowledge/hypotheses/HYP-2215-carrier-atlas-side-channel-transfer.md`; `04-computation/obstruction_carrier_atlas_s639.py` (+.out); `07-reflections/obstruction-carrier-atlas-s639.md`; HYP-2214, HYP-2213, HYP-2212, HYP-2211, HYP-2209, HYP-2206, HYP-2200.
+
+## HYP-2216: Local obstruction product ledgers refine side-channel jackknife (resonance-product-ledger, codex-2026-06-04-S640)
+**Status:** OPEN synthesis with a concrete helper target.
+HYP-2215 names the parent move: side-channel jackknife over a raw scalar
+quotient, hidden witness, and retained side channels.  S640 refines that move
+into a product ledger: price each local obstruction channel as a factor, record
+what scalar would be unsafe if the channel were forgotten, and isolate the
+transverse branch that the product cannot decide.  The shared background form is:
+
+```text
+scalar quotient + retained side channel + residual obstruction.
+```
+
+Under this reading, `H=21` is not just a forbidden scalar; it becomes visible
+only after retaining strong-component, directed-triangle, and OCF packet data.
+LRC `n=14` is not just `C=27=3^3`; it needs gcd strata, lift/CRT carry,
+pinch owners, and unit/nonunit shell ownership.  Unit-distance `n=21` is not
+the scalar `21`; the live object is the `57 = 20` spine `+ 37` bulk Moser
+packet with traceability and ear data.  A000568 is not just the unrooted count;
+it decomposes into Burnside fixed/merged/nonfixed and self-converse shadow
+families.  Pi/e algebraic shadows need trace/norm/discriminant sheets and
+Schanuel-style algebraic-independence side data.  Twin primes and Goldbach
+need admissibility, local congruence, major/minor arc, and singular-series
+channels rather than raw gaps or sums.
+
+The top-ranked application is a repo-native `local_obstruction_product_ledger`
+with fields `(domain, local prime/modulus, forbidden residues, surviving
+residues, local weight, lost side channel)`.  First instances should cover LRC
+`C=27` shells, Goldbach mod-p local sums, twin-prime admissible tuples,
+unit-distance direction masks, and A000568 Burnside packet loss.  The ledger is
+meant to make "same scalar, different fiber" collisions programmatic instead
+of anecdotal.
+
+Tournament Analysis in S640 uses proof routes as vertices.  The majority gauge
+is transitive with one Hamiltonian path and ranks
+`local_obstruction_product_ledger`, `scalar_twins_side_channel_atlas`, and
+`transverse_shadow_fallout_helper` above raw scalar numerology.
+
+**See:** `05-knowledge/hypotheses/HYP-2216-resonance-product-ledger.md`;
+`04-computation/resonance_product_ledger_s640.py` (+.out);
+`07-reflections/resonance-product-ledger-s640.md`; HYP-2215, HYP-2214,
+HYP-2213, HYP-2212, HYP-2211, HYP-2210, HYP-2200, HYP-2164.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

@@ -1,0 +1,109 @@
+S640 Resonance Product-Ledger Atlas
+====================================
+
+Thesis
+------
+The shared object is not a single theorem.  It is a proof-design schema: scalar quotient + retained side channel + residual obstruction.
+The failures all happen when the scalar is treated as the object.  Progress happens when the side channel is made first-class.
+
+Atlas
+-----
+- H=21 impossibility
+  scalar: Hamiltonian-path count 21
+  side channel: strong-component norm, c3/odd-cycle budget, OCF packet
+  status: closed: 7 and 21 are permanent H-gaps in repo ledger
+  instrument: finite strong-window closure plus Busch/Moon lower bounds
+  barrier: raw H forgets the strong/OCF side conditions
+- LRC n=14
+  scalar: C=2n-1=27 shell clock
+  side channel: gcd strata 1/3/9, unit/nonunit shells, carry/owner data
+  status: open in full; Res_27 least-positive quotient classified
+  instrument: THM-407 shell fold, Res_27 pinch certificate, carry conservativity
+  barrier: least-positive quotient forgets lift/CRT branch ownership
+- unit distance n=21
+  scalar: 21 vertices, 57 unit edges
+  side channel: 20-edge unit spine plus 37=C_hex(3) bulk, traceability, ears
+  status: exact stored 57-edge cores traceable; n=22 frontier open
+  instrument: Hamiltonian-spine DP and Moser carrier beam
+  barrier: raw edge count forgets embedding, direction support, spine/bulk split
+- A000568 / self-converse
+  scalar: unrooted tournament class count
+  side channel: Burnside partitions, fixed/merged/nonfixed, q-deformation, transporters
+  status: active method: extend hard sequences by companion shadows
+  instrument: Burnside q-shadow and anti-coset transporter quotient
+  barrier: raw next term forgets fixed-point and orbit side channels
+- Schanuel / pi-e
+  scalar: algebraic/rational shadow
+  side channel: algebraic independence, trace/norm/discriminant, transverse shadows
+  status: conditional completion; S636 proves at least two of S/P/D transcend
+  instrument: Vieta carrier, Lindemann-Weierstrass fallout, Schanuel conditional
+  barrier: individual transcendence does not control algebraic curves
+- twin primes
+  scalar: prime gap 2
+  side channel: admissible tuple, singular series, sieve weights, parity barrier
+  status: open; bounded gaps known, H_1 <= 246 in Polymath8b ledger
+  instrument: Maynard-Tao/Polymath sieve weights
+  barrier: parity problem: sieve sees almost-primes better than primes
+- Goldbach
+  scalar: even N as p+q; odd N as p+p+p
+  side channel: major/minor arcs, local congruences, singular series, density
+  status: weak/ternary proved by Helfgott; strong/binary open
+  instrument: circle method plus explicit minor-arc bounds
+  barrier: minor arcs and local-to-global transfer are the hard residue side
+
+Recurring small integers
+------------------------
+   2 = 2
+   3 = 3
+   7 = 7
+   9 = 3^2
+  12 = 2^2 * 3
+  14 = 2 * 7
+  20 = 2^2 * 5
+  21 = 3 * 7
+  27 = 3^3
+  37 = 37
+  56 = 2^3 * 7
+  57 = 3 * 19
+  88 = 2^3 * 11
+ 246 = 2 * 3 * 41
+ 456 = 2^3 * 3 * 19
+
+Prime-reading
+-------------
+Prime 2 is the parity/traceability seam: Redei oddness, twin gap 2, Goldbach parity, LRC even-n first-doubling, and dyadic carry data.
+Prime 3 is the first fragmentation prime: LRC n=14 has C=27=3^3, Goldbach ternary is the solved additive prime theorem, and the Phi_3/root-of-unity carrier keeps recurring around 7 and 21.
+Prime 7 is the forbidden-scalar warning: H=7 and H=21 are impossible as tournament path counts, while unit-distance n=21 is legal only because it retains spine/bulk side channels.
+
+New applications
+----------------
+- Singular-series style LRC ledger: For each prime divisor of C=2n-1, record local shell survival just as twin-prime/Goldbach singular series record local residue survival.  The n=14 row is the prime-3 test case.
+- Same-scalar twin atlas: Systematically search for pairs with the same scalar but different side channels: same H but different OCF packet, same unit-edge count but different spines, same C shell but different carry owner.
+- Transverse-shadow helper: Generalize S638: once one scalar descends, prove that transverse shadows become impossible/lonely unless the hidden source descends.
+- A000568 sieve shadow: Treat Burnside cycle types like local prime obstructions: fixed, merged, nonfixed, q-deformed, and transporter shadows are the tournament analogue of admissible residue data.
+- Unit-distance ear singular series: For candidate ears from n=21 cores, record local direction/support admissibility before embedding search, mirroring prime tuple filters.
+
+Tournament Analysis
+-------------------
+Vertices are next-proof routes, not problem domains.  Pairwise observable: which route preserves the target predicate, transfers across problems, is computable now, has proof strength, has novelty, and has lower risk. Tie Hamiltonian path is the listed route order.
+   8  local_obstruction_product_ledger
+   7  scalar_twins_side_channel_atlas
+   6  transverse_shadow_fallout_helper
+   5  discriminant_branch_labels_for_LRC
+   4  A000568_prime_sieve_shadow
+   3  H_spectrum_same_scalar_fibers
+   2  unit_distance_ear_singular_series
+   1  Schanuel_conditional_transfer
+   0  raw_scalar_numerology
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed 3-cycles: 0
+Hamiltonian paths: 1
+
+Assumption challenge
+--------------------
+Alternate vertices considered: problem domains, integers, primes, tournaments, unit-distance points, LRC shells, Burnside partitions, prime tuples, circle-method arcs, algebraic shadows, and proof routes. This lab chooses proof routes.
+Preserved predicate: whether a proposed quotient still certifies the domain's hard yes/no property.  Destroyed data: representatives, embeddings, lift choices, branch labels, local residue weights, and which transverse shadow carries the obstruction.
+
+Concrete next build
+-------------------
+Build a local_obstruction_product_ledger helper with a common schema: domain, modulus/local prime, forbidden residues, surviving residues, weight, and lost side channel.  First instances: LRC C=27 shells, Goldbach mod-p local obstructions, twin-prime admissible tuples, and unit-distance direction masks.
