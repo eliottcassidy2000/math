@@ -1,0 +1,26 @@
+======================================================================
+  H=21 FINITE WINDOW: exhaustive strong c_3<=10 tournaments
+======================================================================
+
+  [main] generating c3<=10 up to m=10:
+    m=2: iso-classes c3<=10:            1   (gen 0.0s)
+    m=3: iso-classes c3<=10:            2   (gen 0.0s)
+    m=4: iso-classes c3<=10:            4   (gen 0.0s)
+    m=5: iso-classes c3<=10:           12   (gen 0.0s)
+    m=6: iso-classes c3<=10:           56   (gen 0.0s)
+    m=7: iso-classes c3<=10:          339   (gen 0.4s)
+    m=8: iso-classes c3<=10:        1,105   (gen 3.3s)
+    m=9: iso-classes c3<=10:        2,575   (gen 22.2s)
+    m=10: iso-classes c3<=10:        5,277   (gen 127.6s)
+
+  [scan] strong + H over c3<=10 classes:
+      m=3: classes=         2  strong=        1  H=21:0  minH=3  lowestH=[3]
+      m=4: classes=         4  strong=        1  H=21:0  minH=5  lowestH=[5]
+      m=5: classes=        12  strong=        6  H=21:0  minH=9  lowestH=[9, 11, 13, 15]
+      m=6: classes=        56  strong=       35  H=21:0  minH=15  lowestH=[15, 17, 19, 23, 25, 27]
+      m=7: classes=       339  strong=      236  H=21:0  minH=25  lowestH=[25, 27, 29, 31, 33, 35]
+      m=8: classes=     1,105  strong=      467  H=21:0  minH=45  lowestH=[45, 49, 51, 53, 57, 59]
+      m=9: classes=     2,575  strong=      605  H=21:0  minH=75  lowestH=[75, 81, 85, 87, 89, 91]
+      m=10: classes=     5,277  strong=      709  H=21:0  minH=125  lowestH=[125, 135, 145, 147, 153, 155]
+
+  DONE.
