@@ -5169,3 +5169,24 @@ S637's proof-lens Tournament Analysis uses algebraic-certainty, scissors-retenti
 
 **Next tests:** edge-count-fixed unit-distance jackknives; low-`H` tournament fiber atlas by SCC/beta/c3/OCF packet; LRC `C=2n-1` side-channel damage tests; S633-style hard-sequence shadows that preserve the same scalar while changing retained side data.
 **See:** `05-knowledge/hypotheses/HYP-2213-dehn-scissors-side-channel-addendum.md`; `04-computation/dehn_scissors_shadow_s637.py` (+.out); `07-reflections/dehn-scissors-side-channel-addendum-s637.md`; HYP-2212, HYP-2211, HYP-2210, HYP-2209, HYP-2187, HYP-2186.
+
+## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
+**Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
+S5 extended the bug-fixed v2 engine one level further and pinned down the *mechanism*
+that closes the H=21 finite window. Per-level exhaustive enumeration of strong
+tournaments with c3<=10 (the only H=21 candidates, since H>=1+2c3) shows the strong
+population PEAKS then EXTINGUISHES:
+  m:        3   4   5   6    7    8    9   10   11   12   13
+  #strong:  1   1   6  35  236  467  605  709  560  256    0
+The closing fact: **min c3 over strong tournaments == n-2 EXACTLY for all m=3..12**
+(Moon 1968, here verified sharp by exhaustive enumeration). Hence at m=13, n-2=11>10,
+so NO strong tournament has c3<=10, and the strong c3<=10 population is empty for all
+m>=13. With H=21 NOWHERE for m<=12 (min strong H = ...,75,125,225,375 >> 21), the
+HYP-2193 window is CLOSED at m=13 by population extinction — a self-contained finite
+certificate that does NOT rely on Busch's recurrence (it uses only: H multiplicative
+over strong components + H=7 forbidden (THM-029); H>=1+2c3; min c3(strong)=n-2; and the
+exhaustive m<=12 scan). So H(T) != 21 for all T, and {7,21} is the complete permanent
+H-gap set (THM-115).
+**See:** `04-computation/h21_window_closure_monad_s5.py`,
+`05-knowledge/results/h21_window_closure_monad_s5.out`; HYP-2200, HYP-2193, THM-079,
+THM-029, THM-115, MISTAKE-053/054.
