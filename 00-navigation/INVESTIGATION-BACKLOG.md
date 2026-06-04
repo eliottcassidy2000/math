@@ -154,7 +154,13 @@
 **What:** Clean API for computing Omega dims and Betti numbers of circulant tournaments. Uses sparse column reduction (THM-125 eigenspace identity gives n× speedup). Verified for T_3, T_7, T_11.
 **S55 fixes:** (1) betti_numbers() had wrong formula — fixed to use correct boundary map ranks via eigenspace computation. Verified T_3=[1,1,0], T_7=[1,0,0,0,6,0,0] exactly. (2) Added 27 pytest tests (test_circulant_homology.py, all pass). (3) Added caching for omega_basis_k and face_data for performance.
 **New finding (HYP-453):** T_7 eigenspace structure: k=0 = H_0 only; k=1..6 = one H_4 generator each. T_11 eigenspace: all non-trivial homology at k=0.
-**Next steps:** Compute full T_11 Betti (use_cache=False) in background — takes ~4 min; verify beta_6=15.
+**monad-compute (2026-06-03) from-scratch re-verification (`04-computation/verify_t11_betti_s_monad.py`, results `..._s_monad.out`/`.._NOTES.md`):**
+  - Ω dims `[1,5,20,70,205,460,700,690,450,180,30]` RE-CONFIRMED from scratch (use_cache=False), χ=1. Raw |A_m| path counts = `[1,5,25,110,430,1430,3970,8735,14395,15745,8645]`. root-field prime=23.
+  - Boundary ranks rank(d_m^(k)): **k=0** `[0,0,5,15,55,150,305,390,300,150,30,0]` (388s); **k=1** `[0,1,4,16,54,151,309,390,300,150,30,0]` (382s).
+  - Per-eigenspace Betti: k=0 → `[1,0,0,0,0,5,5,..]`; k=1 → `[..,0,1,0..]` (+1 to β_6 only).
+  - **Structural finding (REFINES HYP-453):** β_5=5 lives entirely at k=0; β_6 is distributed — k=0 carries 5, each non-principal eigenspace carries +1. Predicts β_6 = 5+10·1 = **15** (matches cached). HYP-453 "all T_11 homology at k=0" holds for β_5 but NOT β_6.
+**PERFORMANCE CAVEAT (corrects "~4 min"):** On a fresh node the from-scratch full Betti is ~6.4 min/eigenspace AND slows further per eigenspace because `_omega_basis_cache` grows unboundedly (k=2 took >12 min). Full 11-eigenspace run is hours, not 4 min. **Handoff:** clear the omega-basis cache per eigenspace, or reimplement the null-basis/rank in C/LinBox (same as INV-141). beta_5=5 and the k=0,k=1 ranks are now independently re-verified; beta_6=15 confirmed structurally, pending mechanical k=2..10.
+**Next steps:** (1) Re-run with per-eigenspace cache clearing to finish k=2..10 in bounded memory; (2) verify each non-principal eigenspace gives exactly +1 to β_6.
 
 ### INV-192: Engineering Product: Odd-Cycle Disjointness Features for Tournament TDA
 **Source:** opus-2026-05-29-S11

@@ -1,5 +1,15 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S1 - T_11 GLMY Betti re-verified from scratch (INV-143)
+
+**Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
+**Environment:** Fresh node, no numpy/pip. Bootstrapped pip via get-pip.py (network OK) and installed numpy 2.2.6 to user site.
+**Task:** INV-143 next step — recompute full Paley T_11 GLMY path-homology Betti from scratch (use_cache=False), verify β_5=5, β_6=15. Guarded MISTAKE-020 (max_degree=n-1=10).
+**Script:** `04-computation/verify_t11_betti_s_monad.py` (line-buffered, per-eigenspace timed). Output `05-knowledge/results/verify_t11_betti_s_monad.out` + `..._NOTES.md`.
+**Confirmed from scratch:** Ω dims `[1,5,20,70,205,460,700,690,450,180,30]` (χ=1); raw |A_m| `[1,5,25,110,430,1430,3970,8735,14395,15745,8645]`; boundary ranks k=0 `[0,0,5,15,55,150,305,390,300,150,30,0]`, k=1 `[0,1,4,16,54,151,309,390,300,150,30,0]`.
+**Structural finding (refines HYP-453):** β_5=5 lives entirely at eigenspace k=0; β_6 is distributed — k=0 contributes 5, each non-principal eigenspace k≥1 contributes +1. Predicts β_6 = 5+10·1 = **15** (matches cached). HYP-453 "all T_11 homology at k=0" is true for β_5 but NOT β_6.
+**Handoff:** The "~4 min" estimate in INV-143 is wrong on a fresh node — ~6.4 min/eigenspace and SLOWING (k=2 >12 min) because `_omega_basis_cache` grows unboundedly per eigenspace. Full 11-eigenspace run is hours. Fix: clear omega-basis cache per eigenspace, or reimplement null-basis/rank in C/LinBox (cf. INV-141). β_6=15 confirmed structurally; mechanical k=2..10 pending.
+
 ## codex-2026-06-03-S622 - unit-distance impairment spectroscopy and small-size carrier repair techniques (HYP-2194)
 
 **Prompt:** Spend a long session drawing inspiration from other math problems and develop creative impairments to unit-distance proving/construction methods, working well at small sizes first.
