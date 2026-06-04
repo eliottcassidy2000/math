@@ -5068,3 +5068,12 @@ from conjecture to theorem.
 `07-reflections/h21-finite-window-exhausted-s4.md`; HYP-2193 (S617 reduction),
 THM-079 (Parts G/H), THM-115 (permanent-gap conj), THM-029 (H=7), THM-343 (H!=7),
 MISTAKE-053 (Busch min-Ham-paths), MISTAKE-054 (v2 bug, fixed).
+
+## HYP-2205: SC perspective flips are the right cyclotomic carrier for the unit-distance H-gap bridge (sc-perspective-flip-cyclotomic-unit-distance, codex-2026-06-04-S629)
+**Status:** OPEN synthesis, with THM-409 proved and S629 finite evidence.
+THM-409 proves the corrected self-converse flip object: `Anti(T)` is a coset over `Aut(T)`, and edge reversal induces a canonical involution on rooted perspectives (`Aut(T)`-vertex orbits).  Individual vertex motion is not the invariant; S629 finds `n=6` anti-automorphisms with vertex cycle type `(6,)`, while the perspective flip remains involutive and independent of the chosen anti-map.  This imports HYP-2121's observer-coupled correction into the SC/complement setting.
+
+On the unit-distance side, keep `Phi_3(2)=7` and `Phi_3(4)=21` as cyclotomic carrier echoes, not scalar identities between problems.  Exact `u(5)=7` is `4` unit-spine edges plus `3` tile/bulk edges; the `n=11` lattice echo `21` is `10+11`, while exact planar `u(11)=23`.  THM-408's `P_2^-` has `21` vertices, `57` unit edges, and a `20`-edge unit spine, so the `n=21` Moser object is a retained-side-channel carrier, not `H=21`.
+
+**Next tests:** extend SC perspective fingerprints beyond `n=6`; replace scalar SC fixed-point scripts by THM-409 rooted-perspective flips; classify exact `57`-edge `21`-cores by endpoint-compatible ears, gain packets, unit-spine compatibility, direction support, and obstruction labels; track `Phi_3` events as labelled carrier events rather than raw equalities.
+**See:** `05-knowledge/hypotheses/HYP-2205-sc-perspective-flip-cyclotomic-unit-distance.md`; `01-canon/theorems/THM-409-self-converse-perspective-flip-involution.md`; `04-computation/sc_perspective_flip_cyclotomic_s629.py` (+.out); `07-reflections/sc-perspective-flip-cyclotomic-carriers-s629.md`; HYP-2204, THM-408, HYP-2121, HYP-2181.

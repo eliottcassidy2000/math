@@ -1,0 +1,96 @@
+﻿S629 SC perspective flip atlas
+========================================================================
+Exact enumeration through n=6; all checks use reverse-all-arcs converse.
+
+Unrooted, rooted, and self-converse census
+n | U(n) | rooted P(n) | rooted orbit distribution | SC classes | SC rooted
+-- | --: | --: | -- | --: | --:
+1 | 1 | 1 | {1: 1} | 1 | 1
+2 | 1 | 2 | {2: 1} | 1 | 2
+3 | 2 | 4 | {1: 1, 3: 1} | 2 | 4
+4 | 4 | 12 | {2: 2, 4: 2} | 2 | 8
+5 | 12 | 48 | {1: 1, 3: 4, 5: 7} | 8 | 32
+6 | 56 | 296 | {2: 5, 4: 10, 6: 41} | 12 | 60
+
+User's small perspective counts, recomputed
+  n=3: perspective counts [3, 1], total=4, U(4)=4
+  n=4: perspective counts [4, 2, 4, 2], total=12, U(5)=12
+
+Class details at n=3 and n=4
+n | idx | H | scores | SC | Aut-orbits | anti cycle types | perspective flip
+-- | --: | --: | -- | -- | -- | -- | --
+3 | 0 | 1 | (0, 1, 2) | Y | ((0,), (1,), (2,)) | [(1, 2)] | (0, 2) (1,)
+3 | 1 | 3 | (1, 1, 1) | Y | ((0, 1, 2),) | [(1, 2)] | (0,)
+4 | 0 | 1 | (0, 1, 2, 3) | Y | ((0,), (1,), (2,), (3,)) | [(2, 2)] | (0, 3) (1, 2)
+4 | 1 | 3 | (1, 1, 1, 3) | N | ((3,), (0, 1, 2)) | [] | -
+4 | 2 | 5 | (1, 1, 2, 2) | Y | ((0,), (1,), (2,), (3,)) | [(2, 2)] | (0, 3) (1, 2)
+4 | 3 | 3 | (0, 2, 2, 2) | N | ((1,), (0, 2, 3)) | [] | -
+
+SC flip summary through n=6
+n | anti permutation cycle-type histogram | perspective fixed/transposed histogram
+-- | -- | --
+1 | {(1,): 1} | {(1, 0): 1}
+2 | {(2,): 1} | {(0, 1): 1}
+3 | {(1, 2): 4} | {(1, 0): 1, (1, 1): 1}
+4 | {(2, 2): 2} | {(0, 2): 2}
+5 | {(1, 2, 2): 16} | {(1, 0): 1, (1, 1): 2, (1, 2): 5}
+6 | {(2, 2, 2): 16, (6,): 8} | {(0, 1): 3, (0, 3): 9}
+
+Theorem audit
+  For every self-converse class through n=6:
+  * |Anti(T)|=|Aut(T)|.
+  * every anti-automorphism induces the same map on Aut(T)-vertex orbits.
+  * that rooted-perspective map is an involution.
+  Individual vertex cycles are not canonical; the perspective involution is.
+
+Cyclotomic H-gap and unit-distance carrier table
+========================================================================
+Phi_3(2)=7, Phi_3(4)=21, 3*Phi_3(2)=21
+The repo convention treats 7 and 21 as forbidden H values, not forbidden unit-edge counts.
+
+n | exact u(n) | Harborth/Eisenstein echo | spine n-1 | bulk exact | literal unit-tournament H | scalar note
+-- | --: | --: | --: | --: | --: | --
+3 | 3 | 3 | 2 | 1 | 1 | no forbidden-H scalar
+4 | 5 | 5 | 3 | 2 | 5 | no forbidden-H scalar
+5 | 7 | 7 | 4 | 3 | 15 | exact edge scalar 7, lattice echo 7
+6 | 9 | 9 | 5 | 4 | 43 | no forbidden-H scalar
+7 | 12 | 12 | 6 | 6 | 141 | no forbidden-H scalar
+8 | 14 | 14 | 7 | 7 | 513 | no forbidden-H scalar
+9 | 18 | 16 | 8 | 10 | 1605 | no forbidden-H scalar
+10 | 20 | 19 | 9 | 11 | 4915 | no forbidden-H scalar
+11 | 23 | 21 | 10 | 13 | - | lattice echo 21
+12 | 27 | 24 | 11 | 16 | - | no forbidden-H scalar
+13 | 30 | 26 | 12 | 18 | - | no forbidden-H scalar
+14 | 33 | 29 | 13 | 20 | - | no forbidden-H scalar
+
+S628 Moser spine-ladder rows
+family | m | vertices | unit edges | spine | bulk | recursion note
+-- | --: | --: | --: | --: | --: | --
+P_m^+ | 0 | 6 | 8 | 5 | 3 | cap
+P_m^- | 0 | 5 | 6 | 4 | 2 | cap
+P_m^+ | 1 | 14 | 33 | 13 | 20 | S626 n=14
+P_m^- | 1 | 13 | 30 | 12 | 18 | n=13 companion
+P_m^- | 2 | 21 | 57 | 20 | 37 | S626 exact n=21
+P_m^+ | 2 | 22 | 60 | 21 | 39 | S626 n=22 lane
+P_m^- | 3 | 29 | 84 | 28 | 56 | next minus slab
+P_m^+ | 3 | 30 | 87 | 29 | 58 | next plus slab
+  Each added full slab contributes +8 vertices, +27 unit edges,
+  i.e. +8 spine steps and +19 bulk edges.
+  Thus n=21 in S628 is P_2^- with 57 unit edges, not H=21.
+
+Tournament Analysis over S629 proof routes
+========================================================================
+route strengths={'SC anti-coset theorem': 37, 'rooted perspective flip atlas': 33, 'unit-spine carrier section': 35, 'raw H=7/H=21 scalar match': -1, 'Eisenstein edge-count echo': 17, 'n=21 Moser slab recursion': 30}
+ranking=[(37, 'SC anti-coset theorem'), (35, 'unit-spine carrier section'), (33, 'rooted perspective flip atlas'), (30, 'n=21 Moser slab recursion'), (17, 'Eisenstein edge-count echo'), (-1, 'raw H=7/H=21 scalar match')]
+score_histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3_cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1]
+hamiltonian_paths=1
+
+Assumption challenge
+  Vertices used above were proof routes and carrier obligations, not points.
+  Alternate vertices considered: tournament vertices, rooted perspectives,
+  anti-automorphism coset elements, unit spines, unit-edge packets,
+  Eisenstein shells, Moser slabs, and forbidden-H proof obligations.
+  The chosen quotient preserves the SC flip payload and the H-gap guardrail;
+  it destroys continuous embeddings and raw point coordinates.

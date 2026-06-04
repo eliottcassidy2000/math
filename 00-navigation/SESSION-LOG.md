@@ -1,5 +1,16 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S629 - SC perspective flips and cyclotomic unit-distance carriers (THM-409, HYP-2205)
+
+**Prompt:** Use the Claude snippet as a wellspring: connect `H=7` impossibility to unit-distance constructions, understand the `n=21` case and Eisenstein/root-of-unity echoes, and analyze how self-converse tournament nodes/perspectives change under edge reversal.
+**Integration:** Built on S586/HYP-2121's observer-coupled perspective correction, S627/HYP-2204's unit-distance H-gap carrier reframing, S628/THM-408's Moser spine-ladder theorem, S615/HYP-2181's `Phi_3(2)=7`/`3*Phi_3(2)=21` transfer warning, and monad S4/HYP-2200's completed permanent H-gap guardrail.
+**Theorem:** Added THM-409.  For a self-converse tournament, anti-automorphisms form a coset over `Aut(T)`, and edge reversal induces a canonical involution on rooted perspectives (`Aut(T)`-vertex orbits).  Individual vertices need not swap by an involution: S629's atlas finds `n=6` anti-automorphisms with vertex cycle type `(6,)`.
+**Computation:** Added `04-computation/sc_perspective_flip_cyclotomic_s629.py` and stored `05-knowledge/results/sc_perspective_flip_cyclotomic_s629.out`.  The script enumerates tournament classes via a fixed Redei path through `n=6`, verifies `|Anti|=|Aut|`, anti-choice independence, and perspective involutivity for every self-converse class checked, then records unit-distance `Phi_3` carrier rows.
+**Findings:** The old `P(3)=4=U(4)` and `P(4)=12=U(5)` perspective coincidence is preserved, but the SC/complement version requires the same rooted lift: edge flip acts on perspectives, not raw vertices.  On the unit-distance side, `u(5)=7` and lattice `n=11 -> 21` remain edge-count/spine-bulk echoes; THM-408's `P_2^-` has `21` vertices and `57` unit edges, so `n=21` is a retained Moser carrier, not `H=21`.
+**Tournament Analysis:** Vertices are proof routes/carrier obligations, not points.  The route tournament is transitive and ranks `SC anti-coset theorem > unit-spine carrier section > rooted perspective flip atlas > n=21 Moser slab recursion > Eisenstein edge-count echo > raw H=7/H=21 scalar match`.
+**Synthesis:** The primitive-cube-root theme is real as a carrier/conjugation pattern, but `Cl_2(pi/3)`/`1.014` remains a search light rather than a proved equality.  Next targets: extend SC perspective fingerprints beyond `n=6`, replace scalar SC fixed-point scripts by THM-409 fingerprints, and classify exact 57-edge `21`-cores by endpoint-compatible ears and unit-spine side channels.
+**Artifacts:** THM-409, HYP-2205, `07-reflections/sc-perspective-flip-cyclotomic-carriers-s629.md`, T698, result-index and concept-map updates.
+
 ## codex-2026-06-04-S627 - unit-distance H-gap carrier reframing: H=7/21 as forbidden scalar-collapse tests (HYP-2204)
 
 **Prompt:** See whether the unit-distance tournament mapping relates to `H=7` impossibility and other repo threads; make Tournament Analysis of the unit-distance problem as meaningful as it was for LRC, creatively reframing if needed.
