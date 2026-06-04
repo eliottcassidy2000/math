@@ -1,0 +1,20 @@
+Cl2(π/3) = 1.0149416   (max of the Clausen function; vol of ideal regular tetrahedron / 3... )
+  Sawin/OpenAI UD disproof exponent (stated) = 1.014;  Cl2(π/3) = 1.014942;  diff = 0.00094
+  UD EXCESS exponent δ = 0.014  vs  Cl2(π/3)-1 = 0.014942
+  tropical dominance κ_trop = Cl2(π/3)/(π·logφ) = 0.671359   (HYP-707)
+
+CYCLOTOMIC identity of the forbidden H-values (prime-3 angle):
+  Φ3(x)=x²+x+1;  Φ3(2)=7  => 7 = Φ3(2);  21 = 3·Φ3(2) = 21
+  roots of Φ3 = primitive cube roots of unity = e^{±2πi/3} = the Eisenstein ζ3 (angle 2π/3)
+  => the forbidden tournament H-values live at the SAME angle 2π/3 as the UD Eisenstein lattice ζ6 (π/3)
+
+SHAPE PARAMETER s=α1/√α2 of SC H-maximizers (α2=1 'norm-1/CM' family):
+  n=5: H=9, α1=4, α2=1; shape s=α1/√α2=4.0; roots product ρ1ρ2=1/α2=1.0 (CM norm-1)
+  n=6: H=45, α1=20, α2=1; shape s=α1/√α2=20.0; roots product ρ1ρ2=1/α2=1.0 (CM norm-1)
+  leading shape exponent = 3 (s~α1~n³/24, the 3-cycle count); the UD-analog excess 0.014
+  is a SECONDARY/tropical correction (Cl2(π/3) in the log-sin limit), NOT the leading term.
+
+HONEST corrections to S599s/p-r:
+  * forbidden H = {7,21} ONLY (sporadic, prime-7=Φ3(2)); 63,189 ACHIEVABLE at n=8 (my 7·3^k was a sampling artifact)
+  * u(22) ∈ [60,61] (Alexeev–Tikhonov); my triangular-lattice 49 = Harborth LATTICE optimum, NOT the true max
+  * 1.014 ≈ Cl2(π/3) is numerical; Sawin's is a LOWER bound (>1.014), so equality UNVERIFIED
