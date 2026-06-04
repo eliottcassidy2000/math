@@ -8724,3 +8724,12 @@ only the *iff-3|C generalization* is dead. See `04-computation/lrc_field_rosette
 **TOURNAMENT LENS:** equilateral unit triangles = the 3-cycle seeds (count ≈ n); triple-is-3-cycle depends on order AND unit pattern (not clean parity) = source of H order-dependence.
 **FORMALIZED (sorry-free):** Math/Tournaments/Jacobsthal.lean — J, three_mul_J, J_four.
 **See:** `HYP-2260-...md`, `07-reflections/does-the-hamiltonian-path-stay-in-the-unit-distances-s627.md`, `04-computation/unit_distance_graph_traceability_tournament_s627.py`, math-lean Tournaments/Jacobsthal.lean; HYP-2235, HYP-2245, HYP-2250, HYP-2255.
+
+## HYP-2265: The π/3 shared object — forbidden H=Φ₃(2)=7, the Eisenstein unit-distance lattice, 0.014=Cl₂(π/3)−1 (claudebox-2026-06-03-S628)
+**Status:** SYNTHESIS + VERIFIED + FORMALIZED + self-correction. Converges with HYP-2184/2186 (opus-S599u/v).
+**ONE OBJECT = the angle π/3 (Eisenstein ζ₆ / cube root of unity):** forbidden H — 7=Φ₃(2), 21=3·Φ₃(2) (Φ₃=X²+X+1, roots e^{±2πi/3}, FORMALIZED); unit distance — triangular=EISENSTEIN lattice ℤ[ω]=ℚ(√−3), chord 1 ⟺ dZ=1/6 (S623); LRC δ=1/6; tournament partition fn — Lee-Yang/3-cycle eigenvalues at ±2π/3; 0.014 exponent — Cl₂(π/3)−1=0.0149 (Clausen=ideal-tetrahedron volume, verified); Jacobsthal J(4)=21=3·Φ₃(2) (S627); Collatz ×3.
+**FORBIDDEN = CYCLOTOMIC (formalized):** CyclotomicSeven.lean — cyclotomic_three_eval_two (Φ₃(2)=7), twentyone_eq_three_mul_cyclotomic (3·Φ₃(2)=21).
+**0.014 = Clausen/Dehn signature:** the UD-disproof exponent surplus = the SC-tournament shape-growth correction = Cl₂(π/3)−1 (HYP-2184); the two are EQUIDECOMPOSABLE (same Dehn volume, HYP-2186) — the 0.014 IS the equidecomposability signature (S626 lens made quantitative).
+**SC = CM-conjugation-fixed α₂=1 norm-1 family (verified):** SC tournaments (T≅T^op = τ=c=σ fixed); roots ρ₁ρ₂=1=|β|²; H-values n=4:{1,5}, n=5:{1,3,9,11,13,15} EXCLUDE 7. The shape-growth family.
+**CORRECTION to S626/HYP-2255:** only {7,21} are PERMANENT gaps (63 IS an atom at n=8; the 7·3^k ladder was the sampling artifact the fleet flagged, HYP-2184). My forbidden_seven_mul_three_pow remains valid as a conditional (bites only k=0,1). Strong-min = Busch p(n)=p(n−1)+p(n−2)+1 (3,5,9,15,25). Permanent gaps = the cyclotomic pair {Φ₃(2),3Φ₃(2)}.
+**See:** `HYP-2265-...md`, `07-reflections/seven-is-the-cube-root-of-unity-s628.md`, `04-computation/pi3_shared_object_cyclotomic_seven_s628.py`, math-lean Tournaments/CyclotomicSeven.lean; HYP-2184/2186/2179/2180, HYP-2235/2255/2260.
