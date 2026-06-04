@@ -1,0 +1,23 @@
+(1) Z_n = sum_{T} H(T)  vs closed form  n! * 2^(C(n,2)-(n-1))  [the partition function]
+  n=1: Z_n=sum H=1; closed form=1; match=True; strong-sum a_n=1
+  n=2: Z_n=sum H=2; closed form=2; match=True; strong-sum a_n=0
+  n=3: Z_n=sum H=12; closed form=12; match=True; strong-sum a_n=6
+  n=4: Z_n=sum H=192; closed form=192; match=True; strong-sum a_n=120
+  n=5: Z_n=sum H=7680; closed form=7680; match=True; strong-sum a_n=6000
+
+(2) CLUSTER EXPANSION recursion b_n = sum_{k=1..n} C(n,k) a_k b_{n-k}  (b_0=1)
+  n=1: recursion gives 1; direct Z_n=1; match=True  (a=strong/connected pieces)
+  n=2: recursion gives 2; direct Z_n=2; match=True  (a=strong/connected pieces)
+  n=3: recursion gives 12; direct Z_n=12; match=True  (a=strong/connected pieces)
+  n=4: recursion gives 192; direct Z_n=192; match=True  (a=strong/connected pieces)
+  n=5: recursion gives 7680; direct Z_n=7680; match=True  (a=strong/connected pieces)
+
+(3) FREE ENERGY log Z_n is EXTENSIVE (≈ linear in #vertices => intensive free energy/vertex):
+  n=2: log Z_n=0.693; per-vertex=0.3466; (Z_n=n!2^(C(n,2)-(n-1)))
+  n=3: log Z_n=2.485; per-vertex=0.8283; (Z_n=n!2^(C(n,2)-(n-1)))
+  n=4: log Z_n=5.257; per-vertex=1.3144; (Z_n=n!2^(C(n,2)-(n-1)))
+  n=5: log Z_n=8.946; per-vertex=1.7893; (Z_n=n!2^(C(n,2)-(n-1)))
+
+(4) Rédei parity = partition function at the SIGN fugacity z=-1 (fermionic/Lee-Yang):
+    H(T) is odd for every T (Rédei) => Z evaluated mod 2 / the GF(2) 'permanent->determinant'
+    is the z=-1 slice; the H-spectrum gaps {7,21} are forbidden 'energy levels'.
