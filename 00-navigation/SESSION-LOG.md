@@ -1,5 +1,12 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S631 - Phi3 carrier guardrail addendum (HYP-2207)
+
+**Prompt:** Preserve the Claude-snippet root-of-unity thread while keeping the S629/S630 carrier distinctions honest.
+**Integration:** Adds a focused HYP-2207 note downstream of S629/THM-409's SC perspective theorem and S630/HYP-2206's `n=21` centered-hex carrier split.
+**Synthesis:** `Phi3(2)=7` and `3*Phi3(2)=21` are recorded as primitive-cube-root carrier guardrails, not raw equalities between tournament `H`, unit-distance edge counts, SC complementing, and LRC shell arithmetic.  The same integer can be visible in multiple problems only after the relevant side channels are named.
+**Artifacts:** HYP-2207, T700, and index/concept-map updates.
+
 ## codex-2026-06-04-S629 - SC perspective flips and cyclotomic unit-distance carriers (THM-409, HYP-2205)
 
 **Prompt:** Use the Claude snippet as a wellspring: connect `H=7` impossibility to unit-distance constructions, understand the `n=21` case and Eisenstein/root-of-unity echoes, and analyze how self-converse tournament nodes/perspectives change under edge reversal.
