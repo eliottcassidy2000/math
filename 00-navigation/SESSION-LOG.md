@@ -660,6 +660,14 @@ UNIFICATION: both reframes lift the binary object to a 3-valued (signed/threshol
 **Transfer:** The proof dictionary is `LRC C=27 shell quotient <-> Moser full-slab edge quantum 27`, `LRC unit-shell section <-> unit Hamiltonian spine`, and `lift/CRT conservativity <-> endpoint-compatible ear conservativity`.
 **Tournament Analysis:** Bridge-route vertices give a transitive tournament with one Hamiltonian path, ranking `27_quantum_section_bulk_ledger > lift_ear_conservativity_transfer > side_channel_jackknife_damage_table > same_scalar_twin_search > centered_hex_vs_gcd9_microchannel > raw_14_21_number_match`.
 **Artifacts:** HYP-2217, `07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md`, T710, result-index and concept-map updates.
+## claudebox-2026-06-03-S630 - Goldbach/Lemoine: even=unordered (σ-sym), odd=ordered (σ-broken), 6=2·3 the meeting point (HYP-2275)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** even = sum of two primes (unordered); odd = prime + doubled prime (ordered); which evens/odds share pairs; the duplicates (p,p) where a prime doubles to even and triples to odd.
+**Two faces (formalized):** even=Goldbach p+q=unordered (σ fixes p+q, additive); odd=Lemoine p+2q=ordered (doubling breaks σ, multiplicative). lemoine_swap_symm_iff_diagonal, lemoine_parity. = S629 add/mult complementarity + perspective key (unordered/ordered=σ-sym/broken; ×2 = the breaker).
+**Diagonal=apex:** (p,p) ⟹ 2p (even, double), 3p (odd, triple) — the 2 and 3 on the σ-fixed apex (HYP-2185).
+**Meeting point 6=2·3=3·2 (formalized double_eq_triple_unique):** 2p=3q primes ⟹ p=3,q=2,n=6 — UNIQUE doubled-prime=tripled-prime; the commutation of doubling & tripling = the SAME 6 as hexagonal/dZ=1/6/π-3/Φ₃ (S623-S628). The arc's 2&3 converge on 6=lcm(2,3).
+**Formalized (sorry-free):** Math/NumberTheory/GoldbachLemoine.lean. Pushed to math-lean main.
+**Artifacts:** HYP-2275; reflection six-is-where-the-two-and-the-three-commute-s630.md; computation goldbach_lemoine_sigma_six_meeting_s630.py; math-lean NumberTheory/GoldbachLemoine.lean.
 
 ## codex-2026-06-04-S642 - Goldbach/Lemoine same-pair projection and the 14/21 diagonal shadow (HYP-2218)
 
