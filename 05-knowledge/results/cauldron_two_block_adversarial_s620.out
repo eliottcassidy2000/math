@@ -1,0 +1,91 @@
+TWO-BLOCK ADVERSARIAL CAULDRONS S620
+
+Schedule residue filters mod 4
+- parity alternation: A,B,A,B,... (pure odd/even attack streams)
+  A stream (1, 3): pair sums (0, 2), self-hit (), pair-missing (1, 3), 2/3-term closure (0, 1, 2, 3)
+  B stream (0, 2): pair sums (0, 2), self-hit (0, 2), pair-missing (), 2/3-term closure (0, 2)
+- one-handicap two-block: A,B,B,A,A,B,B,... (period-four square wave with a one-move A start)
+  A stream (0, 1): pair sums (0, 1, 2), self-hit (0, 1), pair-missing (), 2/3-term closure (0, 1, 2, 3)
+  B stream (2, 3): pair sums (0, 1, 2), self-hit (2,), pair-missing (3,), 2/3-term closure (0, 1, 2, 3)
+- strict two-block: A,A,B,B,A,A,B,B,... (same period-four square wave without the first-turn handicap)
+  A stream (1, 2): pair sums (0, 2, 3), self-hit (2,), pair-missing (1,), 2/3-term closure (0, 1, 2, 3)
+  B stream (0, 3): pair sums (0, 2, 3), self-hit (0, 3), pair-missing (), 2/3-term closure (0, 1, 2, 3)
+
+Exact attack-only minimax table
+schedule | relation | A,B | winner | last/forced n | states
+--- | --- | --- | --- | --- | ---
+parity alternation | two-term cauldron | 1,1 | B | 6 | 7
+parity alternation | two-term cauldron | 1,2 | B | 6 | 15
+parity alternation | two-term cauldron | 2,1 | B | 14 | 164
+parity alternation | two-term cauldron | 2,2 | B | 14 | 14633
+parity alternation | two-or-three-term cauldron | 1,1 | B | 6 | 7
+parity alternation | two-or-three-term cauldron | 1,2 | B | 6 | 15
+parity alternation | two-or-three-term cauldron | 2,1 | A | 9 | 30
+parity alternation | two-or-three-term cauldron | 2,2 | B | 14 | 9632
+parity alternation | finite-sums cauldron | 1,1 | B | 6 | 7
+parity alternation | finite-sums cauldron | 1,2 | B | 6 | 15
+parity alternation | finite-sums cauldron | 2,1 | A | 9 | 30
+parity alternation | finite-sums cauldron | 2,2 | B | 14 | 9632
+one-handicap two-block | two-term cauldron | 1,1 | A | 5 | 6
+one-handicap two-block | two-term cauldron | 1,2 | B | 10 | 51
+one-handicap two-block | two-term cauldron | 2,1 | A | 5 | 9
+one-handicap two-block | two-term cauldron | 2,2 | A | 13 | 28761
+one-handicap two-block | two-or-three-term cauldron | 1,1 | A | 5 | 6
+one-handicap two-block | two-or-three-term cauldron | 1,2 | B | 10 | 51
+one-handicap two-block | two-or-three-term cauldron | 2,1 | A | 5 | 9
+one-handicap two-block | two-or-three-term cauldron | 2,2 | A | 13 | 18645
+one-handicap two-block | finite-sums cauldron | 1,1 | A | 5 | 6
+one-handicap two-block | finite-sums cauldron | 1,2 | B | 10 | 51
+one-handicap two-block | finite-sums cauldron | 2,1 | A | 5 | 9
+one-handicap two-block | finite-sums cauldron | 2,2 | A | 13 | 18480
+strict two-block | two-term cauldron | 1,1 | A | 6 | 7
+strict two-block | two-term cauldron | 1,2 | B | 7 | 28
+strict two-block | two-term cauldron | 2,1 | A | 6 | 10
+strict two-block | two-term cauldron | 2,2 | B | 15 | 34953
+strict two-block | two-or-three-term cauldron | 1,1 | A | 6 | 7
+strict two-block | two-or-three-term cauldron | 1,2 | B | 7 | 28
+strict two-block | two-or-three-term cauldron | 2,1 | A | 6 | 10
+strict two-block | two-or-three-term cauldron | 2,2 | A | 13 | 17951
+strict two-block | finite-sums cauldron | 1,1 | A | 6 | 7
+strict two-block | finite-sums cauldron | 1,2 | B | 7 | 28
+strict two-block | finite-sums cauldron | 2,1 | A | 6 | 10
+strict two-block | finite-sums cauldron | 2,2 | A | 13 | 17248
+
+Interpretation
+- Parity alternation gives A the odd stream and B the even stream.
+  In the weak two-term rule, odd+odd is even and cannot hit A's odd target stream; even+even remains even, so B has a first-order residue advantage.
+- The one-handicap two-block schedule turns the streams into {0,1} and {2,3} mod 4.
+  Now each side has at least one pair-sum self-hit residue, so the game is no longer decided by density alone.
+- The schedule is a period-four Walsh/Rademacher square wave. Generalizing the word turns the problem into additive combinatorics of a schedule set S: can r in S be represented by allowed sums from S?
+- As a positional game, the board is the Schur hypergraph with edges (a,b,a+b); cauldrons are surviving bins and a boil is a claimed hyperedge.
+- This is the cauldron analogue of the Collatz two-block lesson: correlated residue blocks can carry information that scalar density erases.
+
+Focused 2v1 weak-sum comparison
+- parity alternation: B at 14 using 164 cached states
+- one-handicap two-block: A at 5 using 9 cached states
+- strict two-block: A at 6 using 10 cached states
+
+Tournament Analysis over proof routes
+Route | score | outdegree | note
+--- | --- | --- | ---
+residue-channel sumset calculus | 23 | 6 | turn schedules are subsets S of Z/4Z and attack power is S+S hitting S
+automatic/Walsh schedule analysis | 22 | 5 | A,BB,AA is a period-four square wave / Walsh bit
+Maker-Breaker Schur hypergraph game | 21 | 4 | cauldrons are bins in a positional game on triples (a,b,a+b)
+Collatz two-block residue analogy | 21 | 3 | density is blind when moves arrive in correlated residue blocks
+adaptive adversarial cauldrons | 19 | 2 | players choose own/opponent and schedule control becomes PSPACE-like
+LRC depth/Helly cauldron analogy | 18 | 1 | boil events mimic retained overlap order rather than scalar density
+raw cauldron-label minimax | 13 | 0 | exact for small k but forgets the reusable residue mechanism
+
+directed 3-cycles: 0
+Hamiltonian path count in this score quotient: 1
+tie Hamiltonian path:
+- residue-channel sumset calculus -> automatic/Walsh schedule analysis
+- automatic/Walsh schedule analysis -> Maker-Breaker Schur hypergraph game
+- Maker-Breaker Schur hypergraph game -> Collatz two-block residue analogy
+- Collatz two-block residue analogy -> adaptive adversarial cauldrons
+- adaptive adversarial cauldrons -> LRC depth/Helly cauldron analogy
+- LRC depth/Helly cauldron analogy -> raw cauldron-label minimax
+
+Challenged assumption
+- Do not use cauldrons, players, or turns as the only vertices.
+  The useful quotient vertices here are residue channels, schedule languages, hypergraph proof obligations, and retained witness types.
