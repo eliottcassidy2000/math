@@ -1,0 +1,68 @@
+S616 infinite-game n+2 recursion scout
+Source limitation: X status text was inaccessible; public Hamkins pages
+confirm the relevant infinite-games / infinite-Go / ordinal-value context.
+
+Clean even-LRC n+2 ladder
+n  m  C=2n-1  factor(C)  Cmod3  V*_alive  shell_orbits  orbit_sizes  rank
+ 4  3       7 7             1     False            1             (3,) omega*0+0
+ 6  5      11 11            2     False            1             (5,) omega*0+1
+ 8  7      15 3*5           0      True            3        (4, 2, 1) omega*0+2
+10  9      19 19            1     False            1             (9,) omega*0+3
+12 11      23 23            2     False            1            (11,) omega*0+4
+14 13      27 3^3           0      True            3        (9, 3, 1) omega*0+5
+16 15      31 31            1     False            3        (5, 5, 5) omega*0+6
+18 17      35 5*7           2     False            3       (12, 3, 2) omega*0+7
+20 19      39 3*13          0      True            3       (12, 6, 1) omega*0+8
+22 21      43 43            1     False            3        (7, 7, 7) omega*0+9
+24 23      47 47            2     False            1            (23,) omega*0+10
+26 25      51 3*17          0      True            5  (8, 4, 8, 4, 1) omega*0+11
+28 27      55 5*11          1     False            3       (20, 5, 2) omega*0+12
+30 29      59 59            2     False            1            (29,) omega*0+13
+
+V* alive columns through n=30: [8, 14, 20, 26]
+Automaton law: n -> n+2 sends C -> C+4, hence C mod 3 advances by +1.
+Therefore V* is alive every third clean step: n = 8,14,20,26,...
+Equivalently n == 2 mod 6 on the even ladder.
+
+Two-mode denominator rank, HYP-1881/HYP-1891
+N  odd_root  row_depth  column  ordinal_rank
+ 7         7          0       3 omega*3+0
+14         7          1       3 omega*3+1
+16         1          4       0 omega*0+4
+18         9          1       4 omega*4+1
+21        21          0      10 omega*10+0
+27        27          0      13 omega*13+0
+28         7          2       3 omega*3+2
+32         1          5       0 omega*0+5
+36         9          2       4 omega*4+2
+40         5          3       2 omega*2+3
+54        27          1      13 omega*13+1
+
+Reading: odd-root motion b -> b+2 is the outer omega ladder;
+row motion N -> 2N is the inner finite/omega ladder.  A proof that
+discharges rows inside columns and then moves columns has omega^2 shape.
+This is the precise infinite-game import: use ordinal rank to prevent
+an infinite proof game from cycling through larger finite boards.
+
+Tournament Analysis over n+2 proof routes
+score=6 route=period-3 V* n+2 automaton; features=(pred=5, rank=3, automaton=5, side=4, action=5, risk=1)
+score=5 route=omega^2 two-mode proof rank; features=(pred=5, rank=5, automaton=2, side=5, action=5, risk=1)
+score=4 route=<2,-1> shell-orbit ledger; features=(pred=5, rank=3, automaton=3, side=5, action=4, risk=1)
+score=3 route=clean dihedral polygon ladder; features=(pred=4, rank=4, automaton=3, side=4, action=4, risk=1)
+score=2 route=unit-distance/infinite-game carrier analogy; features=(pred=3, rank=5, automaton=2, side=4, action=3, risk=2)
+score=1 route=raw next-n brute force; features=(pred=2, rank=1, automaton=1, side=1, action=2, risk=4)
+score=0 route=unseen X-post text as theorem; features=(pred=0, rank=0, automaton=0, side=0, action=0, risk=5)
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+Hamiltonian path count: 1
+
+Math improvements
+1. V* is a period-3 automaton under the clean n+2 ladder, not a
+   miscellaneous infinite sporadic family.
+2. HYP-1881/HYP-1891 become an omega^2 proof-rank program: columns
+   are odd roots, rows are dyadic depth.
+3. The next LRC n=14 transfer should prove a finite automaton theorem
+   for the n+2 column phases plus a rank-decreasing row discharge.
+4. Infinite-game thinking says not to seek one finite invariant only;
+   seek a well-founded rank on proof states and a periodic automaton
+   for the families that remain alive forever.
