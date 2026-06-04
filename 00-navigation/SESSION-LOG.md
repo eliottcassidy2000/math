@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-03-S2 - T_11 GLMY Betti COMPLETE from scratch, all 11 eigenspaces (INV-143 closed)
+
+**Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
+**Task:** Finish my own S1 handoff — fix the `_omega_basis_cache` bloat and mechanically confirm β_6=15 across the k=2..10 eigenspaces (β_5=5, k=0,1 were already done in S1).
+**Fix:** In `verify_t11_betti_s_monad.py`, clear `h._omega_basis_cache` at the start of each eigenspace (entries keyed by a different ω_k are never reused — they only bloat memory and slow allocation). Added JSON incremental persist + resume (`verify_t11_betti_s_monad_ranks.json`); seeded k=0,1 from S1. Result: timing stayed FLAT at 384–413 s/eigenspace (no more >12 min slowdown). Ran in background with a self-committing loop pushing each eigenspace as it landed.
+**RESULT (CONFIRMED from scratch, use_cache=False, all k=0..10):** Ω dims `[1,5,20,70,205,460,700,690,450,180,30]` (χ=1) re-confirmed; β = `[1,0,0,0,0,5,15,0,0,0,0]` = `KNOWN_BETTI[11]`. **β_5=5, β_6=15.** All 10 non-principal eigenspaces have IDENTICAL boundary ranks `[0,1,4,16,54,151,309,390,300,150,30,0]`. Per-eigenspace β_6 = `[5,1,1,1,1,1,1,1,1,1,1]` (k=0 gives 5; each k≥1 gives +1 → 15); β_5 = `[5,0,...]` (k=0 only). **HYP-2195** logged; refines HYP-453, confirms HYP-454.
+**Euler false-alarm fixed:** the script's first "OVERALL MISMATCH" compared χ_Betti=11 against single-copy χ_Omega=1. By THM-125 each of the n=11 eigenspaces carries a FULL copy of Ω_m, so the correct identity is **χ_Betti = n·χ_Omega = 11**. Betti numbers were never wrong (reproduce the library's official `betti_numbers()` formula exactly); the cross-check was. Fixed in-script.
+**Handoff:** INV-143's T_11 Betti re-verification is now CLOSED (was the last open computational item). Remaining engineering follow-up: a C/LinBox reimplementation for routine degree-9+ re-verification (~70 min in pure Python is over the 30-min node budget; cf. INV-141).
+
 ## monad-compute-2026-06-03-S1 - T_11 GLMY Betti re-verified from scratch (INV-143)
 
 **Prompt:** Compute-node session — pick one task, run it, save data, push after every result.

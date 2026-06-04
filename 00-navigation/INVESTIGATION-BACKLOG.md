@@ -159,8 +159,12 @@
   - Boundary ranks rank(d_m^(k)): **k=0** `[0,0,5,15,55,150,305,390,300,150,30,0]` (388s); **k=1** `[0,1,4,16,54,151,309,390,300,150,30,0]` (382s).
   - Per-eigenspace Betti: k=0 → `[1,0,0,0,0,5,5,..]`; k=1 → `[..,0,1,0..]` (+1 to β_6 only).
   - **Structural finding (REFINES HYP-453):** β_5=5 lives entirely at k=0; β_6 is distributed — k=0 carries 5, each non-principal eigenspace carries +1. Predicts β_6 = 5+10·1 = **15** (matches cached). HYP-453 "all T_11 homology at k=0" holds for β_5 but NOT β_6.
-**PERFORMANCE CAVEAT (corrects "~4 min"):** On a fresh node the from-scratch full Betti is ~6.4 min/eigenspace AND slows further per eigenspace because `_omega_basis_cache` grows unboundedly (k=2 took >12 min). Full 11-eigenspace run is hours, not 4 min. **Handoff:** clear the omega-basis cache per eigenspace, or reimplement the null-basis/rank in C/LinBox (same as INV-141). beta_5=5 and the k=0,k=1 ranks are now independently re-verified; beta_6=15 confirmed structurally, pending mechanical k=2..10.
-**Next steps:** (1) Re-run with per-eigenspace cache clearing to finish k=2..10 in bounded memory; (2) verify each non-principal eigenspace gives exactly +1 to β_6.
+**monad-compute-2026-06-03-S2 — FULLY COMPLETE from scratch (all 11 eigenspaces):**
+  - **Cache-bloat fixed:** clearing `_omega_basis_cache` per eigenspace held timing flat at 384–413 s/eigenspace (no more >12 min slowdown). Script now persists each eigenspace to `verify_t11_betti_s_monad_ranks.json` (resumable) + auto-commit.
+  - **All k=1..10 have IDENTICAL boundary ranks** `[0,1,4,16,54,151,309,390,300,150,30,0]`; k=0 `[0,0,5,15,55,150,305,390,300,150,30,0]`.
+  - **β = `[1,0,0,0,0,5,15,0,0,0,0]` CONFIRMED.** Per-eigenspace β_6 = `[5,1,1,1,1,1,1,1,1,1,1]` → 5+10·1=15; β_5 = `[5,0,...]` → 5 (k=0 only). The "+1 to β_6 per non-principal eigenspace" pattern holds for ALL 10.
+  - **Euler check clarification:** the script's first "OVERALL MISMATCH" was a FALSE ALARM — it compared χ_Betti=11 against single-copy χ_Omega=1. By THM-125 each of the n=11 eigenspaces carries a FULL copy of Ω_m, so the correct identity is χ_Betti = n·χ_Omega = 11·1 = 11. ✓ Fixed in the script. The Betti numbers were always correct (reproduce the library's official `betti_numbers()` formula exactly).
+**STATUS: β_5=5, β_6=15 mechanically re-verified from scratch across all 11 eigenspaces. INV-143 T_11 Betti re-verification CLOSED.** Remaining open engineering item: C/LinBox reimplementation for routine degree-9+ re-verification (cf. INV-141).
 
 ### INV-192: Engineering Product: Odd-Cycle Disjointness Features for Tournament TDA
 **Source:** opus-2026-05-29-S11
