@@ -1,5 +1,13 @@
 ﻿# Session Log
 
+## codex-2026-06-03-S622 - unit-distance impairment spectroscopy and small-size carrier repair techniques (HYP-2194)
+
+**Prompt:** Spend a long session drawing inspiration from other math problems and develop creative impairments to unit-distance proving/construction methods, working well at small sizes first.
+**Computation:** Added `04-computation/unit_distance_impairment_lab_s622.py` and stored `05-knowledge/results/unit_distance_impairment_lab_s622.out`. The lab runs controlled impairments on the S614/S617 Moser carrier: single direction-pair dropout, observed direction-support masks in exact small witnesses, and gain-cap throttling through `n=14`.
+**Findings:** Full width-260 Moser beam recovers exact values through `n=14`. The best `n=14` witness uses seven direction pairs with usage `(0,1,6,4,0,6,7,3,6)` and support mask `{1,2,3,5,6,7,8}`. Dropping pairs `0,1,4` remains exact at `33`, while dropping any of `2,3,5,6,7,8` falls to `32`. Gain cap `2` first misses exact at `n=7`; cap `3` first misses at `n=9`; cap `4` recovers exactness through `n=14`.
+**Technique program:** Imported LRC Helly/order retention, cauldron channel-closure, tournament/coimage side-channel retention, and S617 frontier-gain into a unit-distance method-development vocabulary: impaired-carrier spectroscopy, direction Helly certificates, shadow-price ledgers, gain-order sieves, and obstruction-first beams. Tournament Analysis uses impairments/side channels as vertices rather than points.
+**Artifacts:** HYP-2194, `07-reflections/unit-distance-impairment-spectroscopy-s622.md`, T691, result-index and concept-map updates.
+
 ## codex-2026-06-03-S620 - two-block adversarial cauldrons as schedule-channel sumset games (HYP-2191)
 
 **Prompt:** Consider an adversarial cauldron variant where one player goes twice and then the other player goes twice, optionally with the first turn only one move, and identify possible mathematical concepts it relates to.
