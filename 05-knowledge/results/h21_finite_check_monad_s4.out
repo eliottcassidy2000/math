@@ -1,0 +1,25 @@
+======================================================================
+  H=21 FINITE WINDOW: exhaustive strong c_3<=10 tournaments
+======================================================================
+
+  [validation] iso-class counts with NO c3 cap vs A000568:
+      n=1: generated      1  expected 1  [OK]
+      n=2: generated      1  expected 1  [OK]
+      n=3: generated      2  expected 2  [OK]
+      n=4: generated      4  expected 4  [OK]
+      n=5: generated     12  expected 12  [OK]
+      n=6: generated     56  expected 56  [OK]
+      n=7: generated    456  expected 456  [OK]
+  validation: PASS
+
+  [main] generating c3<=10 up to m=12:
+    m=2: iso-classes c3<=10:            1   (gen 0.0s)
+    m=3: iso-classes c3<=10:            2   (gen 0.0s)
+    m=4: iso-classes c3<=10:            4   (gen 0.0s)
+    m=5: iso-classes c3<=10:           12   (gen 0.0s)
+    m=6: iso-classes c3<=10:           56   (gen 0.0s)
+    m=7: iso-classes c3<=10:          339   (gen 0.4s)
+    m=8: iso-classes c3<=10:        1,105   (gen 3.3s)
+    m=9: iso-classes c3<=10:        2,575   (gen 22.2s)
+    m=10: iso-classes c3<=10:        5,277   (gen 128.6s)
+    m=11: iso-classes c3<=10:        9,989   (gen 671.5s)
