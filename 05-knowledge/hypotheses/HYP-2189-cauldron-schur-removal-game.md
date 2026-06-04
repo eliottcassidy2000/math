@@ -10,17 +10,36 @@ remove the cauldron" version is a distinct sacrifice/removal dynamic over the
 same additive predicate.
 
 For the base rule with `k=3` cauldrons and a two-term boil condition
-`A+B=C`, the first-boil variant should have safe prefix length `13` and force
-a boil at `14`, matching the classical Schur number `S(3)=13`. The removal
-variant should be treated separately because a player may sacrifice one color
-class to preserve cleaner active cauldrons later.
+`A+B=C`, the literal "three values" reading uses distinct summands. Thus the
+first-boil variant is the weak Schur problem: safe prefix `23`, forced boil at
+`24`. The classical repeated-summand comparison has safe prefix `13`, forced
+boil at `14`.
+
+The removal variant should be treated separately because a player may
+sacrifice one color class to preserve cleaner active cauldrons later. For
+`k=3` and the literal distinct two-term rule, S618's exact active-state search
+gives optimal last boil at `27`; under repeated summands, the last boil is
+`20`.
 
 ## Current Evidence
 
-Reserved during codex-2026-06-03-S618. The computation is still pending:
-`04-computation/cauldron_game_s618.py` will compare first-boil, all-boiled
-removal, fixed term-count, and finite-sums variants, then store output in
+`04-computation/cauldron_game_s618.py` stores exact small searches in
 `05-knowledge/results/cauldron_game_s618.out`.
+
+Computed first-boil thresholds for `k=3`:
+
+- distinct two-term cauldron: safe `23`, forced `24`;
+- repeated two-term classical comparison: safe `13`, forced `14`;
+- distinct two-or-three-term cauldron: safe `22`, forced `23`;
+- distinct finite-sums cauldron: safe `21`, forced `22`.
+
+Computed all-boiled/removal thresholds:
+
+- distinct two-term cauldron: `k=1,2,3` last boils at `3,10,27`;
+- repeated two-term comparison: `k=1,2,3` last boils at `2,7,20`.
+
+The exact-three-summand, three-color threshold is not brute-forced here; it is
+a higher generalized Schur/weak-Schur problem.
 
 ## Assumptions To Challenge
 
@@ -44,3 +63,7 @@ prefix of the natural numbers. The quotient destroys label history of
 interchangeable cauldrons and, in finite-sums variants, may destroy which
 specific subset witnessed the first boil unless witnesses are retained.
 
+S618's route tournament is transitive with one Hamiltonian path. It ranks
+`removal active-state DP > finite-sums subset obligations > weak Schur
+first-boil > fixed-arity generalized Schur > classical Schur comparison >
+greedy residue coloring > raw cauldron labels`.

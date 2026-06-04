@@ -1,0 +1,73 @@
+CAULDRON GAME S618
+==================
+FIRST-BOIL EXACT SCOUTS
+-----------------------
+two-term cauldron (distinct, terms 2..2), k=3: safe_prefix=23, forced_at=24, states=61217
+  witness coloring at safe prefix: {1,2,4,8,11,16,22} | {3,5,6,7,19,21,23} | {9,10,12,13,14,15,17,18,20}
+two-term classical (repeated, terms 2..2), k=3: safe_prefix=13, forced_at=14, states=805
+  witness coloring at safe prefix: {1,4,7,10,13} | {2,3,11,12} | {5,6,8,9}
+two-or-three-term cauldron (distinct, terms 2..3), k=3: safe_prefix=22, forced_at=23, states=35169
+  witness coloring at safe prefix: {1,2,4,8,15,22} | {3,5,6,7,19,20,21} | {9,10,11,12,13,14,16,17,18}
+finite-sums cauldron (distinct, terms 2..unbounded), k=3: safe_prefix=21, forced_at=22, states=28561
+  witness coloring at safe prefix: {1,2,4,8,21} | {3,5,6,7,19,20} | {9,10,11,12,13,14,15,16,17,18}
+
+SMALL k TABLES FOR TWO-TERM RULE
+--------------------------------
+two-term cauldron (distinct, terms 2..2): k=1:safe=2,force=3; k=2:safe=8,force=9; k=3:safe=23,force=24
+two-term classical (repeated, terms 2..2): k=1:safe=1,force=2; k=2:safe=4,force=5; k=3:safe=13,force=14
+
+ALL-BOILED REMOVAL EXACT SCOUTS
+-------------------------------
+two-term cauldron (distinct, terms 2..2), k=1: last_boil_at=3, states=3
+  boil at 3: cauldron=(1, 2, 3), witness=(1, 2)->3
+two-term cauldron (distinct, terms 2..2), k=2: last_boil_at=10, states=80
+  boil at 9: cauldron=(1, 2, 4, 8, 9), witness=(1, 8)->9
+  boil at 10: cauldron=(3, 5, 6, 7, 10), witness=(3, 7)->10
+two-term cauldron (distinct, terms 2..2), k=3: last_boil_at=27, states=184948
+  boil at 24: cauldron=(3, 5, 6, 7, 19, 21, 23, 24), witness=(3, 21)->24
+  boil at 26: cauldron=(1, 2, 4, 8, 11, 16, 22, 25, 26), witness=(1, 25)->26
+  boil at 27: cauldron=(9, 10, 12, 13, 14, 15, 17, 18, 20, 27), witness=(9, 18)->27
+
+two-term classical (repeated, terms 2..2), k=1: last_boil_at=2, states=2
+  boil at 2: cauldron=(1, 2), witness=(1, 1)->2
+two-term classical (repeated, terms 2..2), k=2: last_boil_at=7, states=20
+  boil at 4: cauldron=(1, 3, 4), witness=(1, 3)->4
+  boil at 7: cauldron=(2, 5, 6, 7), witness=(2, 5)->7
+two-term classical (repeated, terms 2..2), k=3: last_boil_at=20, states=6020
+  boil at 13: cauldron=(2, 6, 7, 10, 11, 13), witness=(2, 11)->13
+  boil at 19: cauldron=(1, 5, 8, 12, 14, 18, 19), witness=(1, 18)->19
+  boil at 20: cauldron=(3, 4, 9, 15, 16, 17, 20), witness=(3, 17)->20
+
+VARIANT NOTES
+-------------
+- Literal cauldrons use distinct summands: weak Schur, not classical Schur.
+- Repeated-summand output is included because many Schur-number tables use that convention.
+- Exactly three summands for three colors is a higher generalized Schur-number problem; this scout does not brute-force its threshold.
+- Finite-sums means any distinct finite subset of size at least 2 summing to another value; for k=3 it forces earlier than the weak two-term rule in the computed prefix.
+
+TOURNAMENT ANALYSIS
+-------------------
+Vertices: proof/computation lenses, not cauldrons.
+Pairwise observable: which lens better preserves the cauldron survival predicate while retaining useful witnesses.
+Switch/gauge: sum of exactness, variant separation, witness retention, and repo coimage connection scores.
+Tie Hamiltonian path: removal DP -> weak Schur -> finite-sums -> fixed-arity -> classical comparison -> residues -> raw labels.
+Ranking: removal active-state DP > finite-sums subset obligations > weak Schur first-boil > fixed-arity generalized Schur > classical Schur comparison > greedy residue coloring > raw cauldron labels
+Score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+Directed 3-cycles: 0
+Hamiltonian-path count: 1
+Out-scores:
+  removal active-state DP: 6
+  finite-sums subset obligations: 5
+  weak Schur first-boil: 4
+  fixed-arity generalized Schur: 3
+  classical Schur comparison: 2
+  greedy residue coloring: 1
+  raw cauldron labels: 0
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertex sets considered: cauldrons/colors, active-state signatures, first-boil witnesses, removal order types, fixed arities, subset-sum obligations, residue classes, and proof routes.
+Preserved predicate: survival of the selected additive boil relation over the current prefix.
+Destroyed information: canonical active-state quotients forget cauldron labels; first-boil Schur quotients forget removal timing; finite-sums quotients forget which subset size caused failure unless witnesses are retained.
+Challenged assumption: the literal game is not automatically classical Schur, because each natural is placed once and repeated summands require an extra rule.
+
