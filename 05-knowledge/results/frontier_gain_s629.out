@@ -1,0 +1,15 @@
+(1) UNIT DISTANCE — incremental frontier-gain beam vs full recount (n=22, triangular lattice)
+   beam width 40: best edges (incr 49, recount 49, agree=True)
+     edge-count-check work:  recount=4530679  incremental=54879  reduction x83
+
+(2) LRC — incremental shell-profile vs recompute gap_shells (over an enumeration)
+   flat recompute 569 ms ; incremental build 444 ms
+   (the decisive win is in DFS enumeration: clone parent profile, add one speed = O(#witnesses),
+    vs recompute O(#witnesses * depth) — a depth-fold reduction, like the unit-distance beam.)
+
+(3) RESIDUE-PROFILE REDUCTION — gap_shells depends ONLY on residues mod the shells
+    => min M / tight count are FINITE (box-independent): explains S621 range-stability.
+   n=5: shells m<=2n-1=9, lcm=2520.  gap_shells(S) = f(residues of S mod 2520).
+   [1, 3, 4, 5] and [2521, 3, 4, 5] (differ by +lcm on one speed): same residues mod 2520? True; gap_shells equal? True
+   => enumerating residue-profiles (not raw configs) gives a box-free algorithm for min M and
+      a PROOF that the tight count stabilizes (S621): the frontier is the residue profile.
