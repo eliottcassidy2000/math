@@ -1,6 +1,6 @@
-# HYP-2201: Unit-Distance Hamiltonian Paths Persist Geometrically, While Canonical Tiling Orders Flop at n=7
+# HYP-2202: Unit-Distance Carrier Scouts Separate Geometric Unit Spines From Canonical Tiling-Order Flops
 
-**Status:** OPEN, supported by S625 carrier scout.
+**Status:** OPEN, supported by S625 carrier scout; complements HYP-2201.
 
 **Claim.** In dense small unit-distance constructions, the meaningful
 Hamiltonian-path question has at least three layers:
@@ -13,6 +13,10 @@ Hamiltonian-path question has at least three layers:
 S625 suggests that the geometric unit path persists in the tested optimal or
 beam-optimal carrier representatives, while the fixed canonical tiling order
 loses an all-unit directed Hamiltonian path at `n=7`.
+
+This is the carrier-scout companion to HYP-2201: HYP-2201 records the stronger
+triangular-lattice traceability theorem/lower-bound pattern, while HYP-2202
+keeps the points-to-tournament mapping diagnostics and the Moser-carrier check.
 
 ## Evidence
 
@@ -31,9 +35,9 @@ from a unit Hamiltonian path whenever one exists.
 
 Tested rows:
 
-- triangular carrier through `n=18`, width `300`;
-- Moser carrier through `n=10`, width `60`, matching known exact values through
-  `n=10` in this scout.
+- triangular carrier through `n=22`, width `300`;
+- Moser carrier through `n=14`, width `260`, matching known exact values through
+  `n=14` in this scout.
 
 In every tested row, the undirected unit-distance graph has a Hamiltonian path.
 No graph-level unit-path flop was observed.

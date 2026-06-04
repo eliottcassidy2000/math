@@ -15,7 +15,7 @@ walk along that path. So there are two possible flops:
   directed Hamiltonian path.
 
 The scout finds the second, not the first. In the tested triangular rows through
-`n=18` and Moser rows through `n=10`, the unit graph always has a Hamiltonian
+`n=22` and Moser rows through `n=14`, the unit graph always has a Hamiltonian
 path. But under the canonical unit-flip tiling, all-unit directed Hamiltonian
 paths vanish at `n=7`.
 
