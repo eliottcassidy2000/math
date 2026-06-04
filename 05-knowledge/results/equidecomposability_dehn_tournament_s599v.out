@@ -1,0 +1,20 @@
+Cl2(π/3): series=1.014942;  log-sin integral −∫₀^{π/3}log|2sin(t/2)|dt=1.014941  (Mahler/Dehn density)
+ideal regular tetrahedron volume = 3·Λ(π/3) = 1.014942  (= the maximal hyperbolic simplex; scissors-congruence invariant)
+  the 3-cycle (smallest strong tournament) has skew eigenvalues at angle ±2π/3 = the tetrahedron dihedral angle
+
+EQUINUMEROSITY (H) vs EQUIDECOMPOSABILITY (# strong-piece multisets realizing H):
+  H | #equidecomp classes | the strong-piece multisets
+    1 |  1 | [()]
+    3 |  1 | [(3,)]
+    5 |  1 | [(5,)]
+    7 |  0 | [] <-- FORBIDDEN (no equidecomp class)
+    9 |  2 | [(3, 3), (9,)]  <-- equinumerous but NOT equidecomposable
+   15 |  2 | [(5, 3), (15,)]  <-- equinumerous but NOT equidecomposable
+   21 |  0 | [] <-- FORBIDDEN (no equidecomp class)
+   45 |  4 | [(5, 3, 3), (9, 5), (15, 3), (45,)]  <-- equinumerous but NOT equidecomposable
+   63 |  0 | [] <-- FORBIDDEN (no equidecomp class)
+  189 |  0 | [] <-- FORBIDDEN (no equidecomp class)
+
+=> H is the COUNT (equinumerosity); the strong-component multiset is the SCISSORS-CONGRUENCE
+   class (equidecomposability); same H w/ multiple multisets = Dehn-distinct; {7,21} have NONE.
+   Cl2(π/3) is the volume invariant of the basic piece (3-cycle/ideal tetrahedron, angle 2π/3).
