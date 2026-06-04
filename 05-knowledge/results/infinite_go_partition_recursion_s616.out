@@ -1,0 +1,60 @@
+==== S616 infinite Go / n+2 recursion / partition-function scout ====
+Infinite-Go finite-cutoff partition ledger
+  Hamkins update: n+2 liberties -> game value omega*n.
+  S616 reading: two terminal liberties are source/sink boundary;
+    phases = liberties - 2 are serial finite-announcement fuel cells.
+  Finite cutoff model: Z_r,K(q)=(1+q+...+q^K)^r with K=6.
+  liberties phases    ordinal  deg Z     Z(1)         top coeffs
+          3      1    omega*1      6        7    [1, 1, 1, 1, 1]
+          4      2    omega*2     12       49    [5, 4, 3, 2, 1]
+          5      3    omega*3     18      343  [15, 10, 6, 3, 1]
+          6      4    omega*4     24     2401 [35, 20, 10, 4, 1]
+          7      5    omega*5     30    16807 [70, 35, 15, 5, 1]
+          8      6    omega*6     36   117649 [126, 56, 21, 6, 1]
+  Pole-order reading: as K grows, each phase contributes one geometric factor;
+    the serial count of factors is the ordinal coefficient in omega*r.
+
+n -> n+2 boundary and LRC resonance ledger
+  inner n Go liberties Go phases new tiles   LRC C=2n-1
+        3            5         3         5            5
+        4            6         4         7            7
+        5            7         5         9            9
+        6            8         6        11           11
+        7            9         7        13           13
+        8           10         8        15           15
+        9           11         9        17           17
+       10           12        10        19           19
+       11           13        11        21           21
+       12           14        12        23           23
+       13           15        13        25           25
+       14           16        14        27           27
+  Exact identity: boundary_tiles(n -> n+2) = C(n+1,2)-C(n-1,2) = 2n-1.
+  This is the same odd shell C used by the LRC floor resonance observer.
+
+Partition-function dictionary
+  Infinite Go    Z=Z_r,K(q)=(1+...+q^K)^r               target=life/death ordinal fuel  obstruction=pole order r
+  Tournaments    Z=I(Omega(T),2)                        target=Hamiltonian path count H obstruction=forbidden H=7,21
+  LRC            Z=Z_delta(y)=sum p_k y^k               target=ground cell p0           obstruction=2n-1 shell cancellation
+  Unit distance  Z=carrier incidence / energy sum       target=many unit pairs          obstruction=CM split-prime amplification
+  Collatz        Z=two-block residue packet             target=no live cycle state      obstruction=2^E-3^k determinant wall
+
+Tournament Analysis on partition-function lenses
+  score=6 lens=Tournament n->n+2 boundary OCF; features=(evidence=5, preserve=5, recursion=5, explicitZ=5, cross=5, risk=1)
+  score=5 lens=LRC depth p0 / C=2n-1 resonance; features=(evidence=5, preserve=5, recursion=4, explicitZ=5, cross=5, risk=1)
+  score=4 lens=Infinite Go serial ladder fuel; features=(evidence=5, preserve=5, recursion=5, explicitZ=4, cross=4, risk=1)
+  score=3 lens=Strong-component H semigroup gaps; features=(evidence=5, preserve=4, recursion=4, explicitZ=4, cross=5, risk=1)
+  score=2 lens=Unit-distance arithmetic carrier; features=(evidence=4, preserve=4, recursion=3, explicitZ=4, cross=4, risk=2)
+  score=1 lens=Collatz two-block residue partition; features=(evidence=3, preserve=4, recursion=3, explicitZ=3, cross=4, risk=2)
+  score=0 lens=Raw scalar analogy without carrier; features=(evidence=1, preserve=1, recursion=1, explicitZ=0, cross=2, risk=5)
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed 3-cycles: 0
+  SCC sizes: [1, 1, 1, 1, 1, 1, 1]
+  Hamiltonian path count: 1
+  Reading: the best transfer keeps the partition function and its boundary state,
+    not the visible scalar alone.
+
+Hypothesis HYP-2185:
+  Infinite Go supplies the open-game analogue of the repo n->n+2 boundary recursion.
+  The shared invariant is a partition function with a retained boundary/coimage state.
+  The equality boundary_tiles = 2n-1 ties THM-291 to the LRC floor resonance C=2n-1.
+  Extra liberties beyond the two terminal liberties are serial fuel cells, omega*n.
