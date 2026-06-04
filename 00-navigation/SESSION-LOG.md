@@ -87,6 +87,16 @@
 **Tournament Analysis:** Bridge-route vertices give a transitive tournament with one Hamiltonian path, ranking `27_quantum_section_bulk_ledger > lift_ear_conservativity_transfer > side_channel_jackknife_damage_table > same_scalar_twin_search > centered_hex_vs_gcd9_microchannel > raw_14_21_number_match`.
 **Artifacts:** HYP-2217, `07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md`, T710, result-index and concept-map updates.
 
+## codex-2026-06-04-S642 - Goldbach/Lemoine same-pair projection and the 14/21 diagonal shadow (HYP-2218)
+
+**Prompt:** User proposed reading even numbers as sums of two primes and odd numbers as prime plus doubled prime, with evens as unordered pairs and odds as ordered pairs; asked about evens and odds mapping to the same pairs, especially duplicate pairs where a prime doubles to an even and triples to an odd.
+**Guardrail:** Full Goldbach and Lemoine/Levy remain conjectural.  S642 treats the framing as a finite carrier scout and exact projection identity over prime-pair space, not as a proof of the conjectures.
+**Computation:** Added `04-computation/goldbach_lemoine_pair_projection_s642.py` and stored `05-knowledge/results/goldbach_lemoine_pair_projection_s642.out`.  For odd primes `p,q`, the script records `E=p+q`, `O=p+2q`, inversion `q=O-E`, `p=2E-O`, swap reflection `O -> 3E-O`, and duplicate diagonal `p -> (2p,3p)`.
+**Findings:** Through `LIMIT=300`, there are no Goldbach misses among even `4..300` and no Lemoine misses among odd `7..300`; the only odd-prime-compatible Lemoine miss is `7`, the `q=2` exception channel.  Same-pair graph has `1243` odd-prime edges.  For `E=14`, same-pair shadows are `O=17` via `(11,3)`, `O=21` via duplicate `(7,7)`, and `O=25` via `(3,11)`.
+**Synthesis:** The visible `(14,21)` pair is a prime-7 Goldbach/Lemoine diagonal shadow: `7+7=14` and `7+2*7=21`.  This complements S641 without replacing it: the additive diagonal explains why `14/21` is a natural pair, while the hard LRC/unit-distance proof mechanism remains the retained `27` shell/spine-bulk carrier.
+**Tournament Analysis:** Proof-lens vertices give a transitive tournament with one Hamiltonian path, ranking `invertible_EO_pair_projection > swap_reflection_O_to_3E_minus_O > diagonal_duplicate_fixed_locus > exceptional_prime_2_channel > degree_and_shadow_price_ledger > raw_goldbach_lemoine_counts`.
+**Artifacts:** HYP-2218, `07-reflections/goldbach-lemoine-same-pair-projection-s642.md`, T711, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.

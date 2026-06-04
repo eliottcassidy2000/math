@@ -100,6 +100,26 @@ just decoration: it is a durable obstruction value in the tournament channel,
 while the LRC/unit-distance difficulty comparison is controlled by the
 `27`-quantum section/bulk ledger.
 
+## S642 Additive-Diagonal Cross-Signal
+
+S642 adds a second, compatible reading of the visible `14/21` pair.  In the
+Goldbach/Lemoine same-pair projection, odd primes `p,q` give
+
+```text
+E = p + q,    O = p + 2q.
+```
+
+The duplicate diagonal `p=q` maps `p -> (2p,3p)`, so `p=7` gives:
+
+```text
+7+7 = 14,    7+2*7 = 21.
+```
+
+This sharpens the numerical relationship without replacing the main mechanism.
+It says `14/21` is a prime-7 additive diagonal shadow, while the proof
+difficulty in this hypothesis remains the `27` shell/spine-bulk carrier and
+its retained side channels.
+
 ## Dictionary
 
 ```text
@@ -157,4 +177,4 @@ cocycles.
 `05-knowledge/results/lrc14_ud21_difficulty_bridge_s641.out`;
 `07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md`;
 HYP-2216; HYP-2215; HYP-2206; HYP-2197; HYP-2188; HYP-2167; HYP-2166;
-HYP-2164; HYP-2200; THM-408; THM-407; THM-401; THM-115.
+HYP-2164; HYP-2218; HYP-2200; THM-408; THM-407; THM-401; THM-115.

@@ -1,0 +1,94 @@
+S642 Goldbach/Lemoine same-pair projection
+==========================================
+
+Definitions
+-----------
+For odd primes p,q:
+  even projection E = p + q
+  odd projection  O = p + 2q, where q is the doubled coordinate
+The two projections invert the ordered pair:
+  q = O - E
+  p = 2E - O
+So an even E and odd O share a pair exactly when O-E and 2E-O
+are odd primes.  Necessarily E < O < 2E.
+
+Swapping the pair fixes E and reflects odd shadows:
+  (p,q) <-> (q,p) sends O <-> 3E - O.
+The duplicate diagonal p=q is the fixed locus O = 3E/2.
+
+Duplicate diagonal p -> (2p,3p)
+--------------------------------
+  p=3   even=2p=6   odd=3p=9  
+  p=5   even=2p=10  odd=3p=15 
+  p=7   even=2p=14  odd=3p=21   <== p=7 gives the 14/21 shadow
+  p=11  even=2p=22  odd=3p=33 
+  p=13  even=2p=26  odd=3p=39 
+  p=17  even=2p=34  odd=3p=51 
+  p=19  even=2p=38  odd=3p=57 
+  p=23  even=2p=46  odd=3p=69 
+  p=29  even=2p=58  odd=3p=87 
+  p=31  even=2p=62  odd=3p=93 
+  p=37  even=2p=74  odd=3p=111
+  p=41  even=2p=82  odd=3p=123
+  p=43  even=2p=86  odd=3p=129
+  p=47  even=2p=94  odd=3p=141
+  p=53  even=2p=106 odd=3p=159
+  p=59  even=2p=118 odd=3p=177
+  p=61  even=2p=122 odd=3p=183
+  p=67  even=2p=134 odd=3p=201
+
+Even targets and their odd same-pair shadows
+--------------------------------------------
+  E=6 : O=9 via (3,3) diag
+  E=8 : O=11 via (5,3) off; O=13 via (3,5) off
+  E=10: O=13 via (7,3) off; O=15 via (5,5) diag; O=17 via (3,7) off
+  E=12: O=17 via (7,5) off; O=19 via (5,7) off
+  E=14: O=17 via (11,3) off; O=21 via (7,7) diag; O=25 via (3,11) off
+  E=16: O=19 via (13,3) off; O=21 via (11,5) off; O=27 via (5,11) off; O=29 via (3,13) off
+  E=18: O=23 via (13,5) off; O=25 via (11,7) off; O=29 via (7,11) off; O=31 via (5,13) off
+  E=20: O=23 via (17,3) off; O=27 via (13,7) off; O=33 via (7,13) off; O=37 via (3,17) off
+  E=22: O=25 via (19,3) off; O=27 via (17,5) off; O=33 via (11,11) diag; O=39 via (5,17) off; O=41 via (3,19) off
+  E=24: O=29 via (19,5) off; O=31 via (17,7) off; O=35 via (13,11) off; O=37 via (11,13) off; O=41 via (7,17) off; O=43 via (5,19) off
+  E=26: O=29 via (23,3) off; O=33 via (19,7) off; O=39 via (13,13) diag; O=45 via (7,19) off; O=49 via (3,23) off
+  E=28: O=33 via (23,5) off; O=39 via (17,11) off; O=45 via (11,17) off; O=51 via (5,23) off
+  E=30: O=37 via (23,7) off; O=41 via (19,11) off; O=43 via (17,13) off; O=47 via (13,17) off; O=49 via (11,19) off; O=53 via (7,23) off
+
+Coverage and exception channels through LIMIT=300
+-------------------------------------------------
+  Goldbach misses among even 4..300: []
+  Lemoine misses among odd 7..300: []
+  Odd-prime-compatible Lemoine misses: [7]
+  q=2-only odd exceptions: [7]
+The q=2 channel is the exceptional even-prime seam: it proves small
+Lemoine rows but has no same odd-prime Goldbach pair E=p+q.
+
+Same-pair bipartite degrees, using odd-prime pairs only:
+  edges=1243
+  top even degrees: [(120, 24), (150, 24), (144, 22), (114, 20), (126, 20), (156, 20), (168, 20), (180, 19)]
+  top odd degrees : [(285, 25), (225, 21), (273, 21), (297, 20), (237, 18), (255, 18), (291, 18), (231, 17)]
+
+Reflection checks
+-----------------
+  E=14, O=17: pair=(11, 3), reflected O'=25, reflected_pair=(3, 11)
+  E=14, O=21: pair=(7, 7), reflected O'=21, reflected_pair=(7, 7)
+  E=14, O=25: pair=(3, 11), reflected O'=17, reflected_pair=(11, 3)
+  E=22, O=25: pair=(19, 3), reflected O'=41, reflected_pair=(3, 19)
+  E=22, O=33: pair=(11, 11), reflected O'=33, reflected_pair=(11, 11)
+
+Tournament Analysis over proof lenses
+-------------------------------------
+vertices=6
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+tie Hamiltonian path:
+  score=5 invertible_EO_pair_projection
+  score=4 swap_reflection_O_to_3E_minus_O
+  score=3 diagonal_duplicate_fixed_locus
+  score=2 exceptional_prime_2_channel
+  score=1 degree_and_shadow_price_ledger
+  score=0 raw_goldbach_lemoine_counts
+
+Pairwise observable: which lens better preserves the same-pair predicate
+between Goldbach and Lemoine without discarding swap, diagonal, or p=2
+side channels.  The vertices are proof lenses, not numbers.
