@@ -1,0 +1,13 @@
+================================================================
+monad-compute: from-scratch Betti verification, Paley T_11
+================================================================
+n=11  |S|=5  root-field prime=23  max_degree=10
+S (QR mod 11) = [1, 3, 4, 5, 9]
+
+[enumeration] raw |A_m| (directed path counts) = [1, 5, 25, 110, 430, 1430, 3970, 8735, 14395, 15745, 8645]   [0.2s]
+[omega] recomputed Omega dims = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]   [0.8s]
+[omega] expected             = [1, 5, 20, 70, 205, 460, 700, 690, 450, 180, 30]
+[omega] MATCH=True   chi=1 (expect 1)
+
+[boundary] computing rank(d_m^(k)) for k=0..10, m=0..11
+  k= 0: ranks=[0, 0, 5, 15, 55, 150, 305, 390, 300, 150, 30, 0]   [388.3s]
