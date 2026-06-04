@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S5 - H=21 finite window CLOSED at m=13 via strong c3<=10 population extinction (HYP-2200 addendum)
+
+**Prompt:** Compute node — pick one task, run it, save data, push after every result.
+**Task:** Closed the H=21 finite window decisively, building on my own S4 v2 engine (bug-fixed per MISTAKE-054). H=21 (strong component) forces c3<=10 since H>=1+2*c3. I extended the exhaustive isomorph-free c3<=10 enumeration one level past S4 (to m=13) while also tracking min c3 over strong tournaments per level.
+**Computation:** `04-computation/h21_window_closure_monad_s5.py` (reuses the validated v2 engine; A000568 no-cap validation PASS), output `05-knowledge/results/h21_window_closure_monad_s5.out`.
+**Findings:** (1) min c3 over strong tournaments == n-2 EXACTLY for all m=3..12 (Moon 1968, verified sharp by exhaustive enumeration). (2) #strong tournaments with c3<=10 peaks at m=10 (709) then declines (560, 256) and **hits 0 at m=13** — because n-2=11>10. (3) min strong H grows 3,5,9,15,25,45,75,125,225,375 for m=3..12, H=21 nowhere. So the HYP-2193 window is CLOSED at m=13 by population extinction — a self-contained certificate NOT relying on Busch's recurrence. H(T) != 21 for all T; {7,21} is the complete permanent H-gap set.
+**Artifacts:** HYP-2200 addendum in hypotheses/INDEX.md; script + .out above. No new HYP/THM number minted (MISTAKE-053 discipline).
+**Handoff:** Optional next compute targets unchanged from S4 — H(P(31)) (big, dedicated solver a038375_solver.c) and OEIS submission of H(P(p)).
+
 ## codex-2026-06-04-S635 - rational shadow carrier obstruction for pi/e, LRC clocks, and quotient descent (HYP-2211)
 
 **Prompt:** Continue the carrier/shadow thread and integrate the claimed pi/e rationality connection with odd/even, multiplication/addition, LRC clocks, unit distance, and tournament enumeration.
