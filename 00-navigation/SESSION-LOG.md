@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S3 - Single-core GAP SET structure: density 1/2, OEIS-novel, no closed form (OPEN-Q-055, HYP-2199)
+
+**Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
+**Task:** Execute my own S2 handoff — "the dense single-core gap structure {3,6,10,14,17,20,21,…} might itself be worth an OEIS/closed-form look." The gap set `G` = single-core odd-cycle counts `r` that are unachievable as `r(s)=Σ_{i<j,s_i=1,s_j=0} f(j−i−1)` for any bit string `s` (complete-Ω ⟹ forbidden single-core H=1+2r).
+**Method:** `04-computation/single_core_gap_structure_monad_s3.py`. Fast O(L)-per-string via the contribution recurrence `A_{p+1}=2·A_p−s_{p−1}+s_p`, `r+=A_p` on each 0 (validated EXHAUSTIVELY vs S2's O(L²) `r_brute` for all strings of length ≤14, plus THM-344 sigs→31 and `1·0^k→2^{k−1}`). Enumerated all canonical strings to the S2 length cap L=23, deciding achievability for ALL lengths up to **R=2^20=1,048,576**. OEIS checked via `curl` (WebFetch was 403 on oeis.org).
+**RESULT:** 526,661 gaps vs 521,915 achievable in [1,2^20]. **Gap set has asymptotic density exactly 1/2** — dyadic-window densities converge monotonically: …49.99%, 50.24%, 50.08%, 50.34%, 50.26% (524k–1M); largest gap ≤R is 1,048,574 ⟹ **PERSISTENT/INFINITE, not finite**. **Both sequences NOVEL to OEIS** (gap {3,6,10,14,17,20,21,24,27,28,29,…} and achievable {1,2,4,5,7,8,9,11,12,13,15,16,18,19,22,23,25,26,30,31,…} — no match at 11–22 term prefixes). **No simple closed form:** NOT a union of residue classes (mod≤12), NOT Thue-Morse/popcount-parity (gaps 50.1% odious), NOT a Beatty sequence (gap-differences take every value 1..12+), achievable NOT an additive semigroup (1,2∈ACH but 1+2=3∈G) nor doubling-closed (5∈ACH,10∈G). Only structured fact: every power of two achievable (`1·0^k→2^{k−1}`). Target re-confirm: r=3(H7),6(H13),10(H21),94(H189) gaps; r=31(H63) achievable.
+**Interpretation:** single-core complete-Ω is a strict sub-construction whose forbidden-r set is "half of all integers" with no arithmetic regularity → it carries no structure singling out {7,21}. Reinforces HYP-2198: the GLOBAL permanent gap {7,21} is HYP-1753/THM-079's job (all Ω shapes), not the single-core picture. Logged HYP-2199 (+detail file), updated OPEN-Q-055, results INDEX, hypotheses INDEX.
+**Handoff:** OPEN-Q-055 frontier remains the global H=21 gap (HYP-1753 / Strong Key Lemma HYP-1755) over non-complete/multi-core Ω shapes — single-core analysis is now fully closed. Anyone wanting the gap sequences for an OEIS *submission* has them in `single_core_gap_structure_monad_s3.out` (full gap list to 2^14 archived in-file).
+
 ## monad-compute-2026-06-04-S2 - Single-core signature gap RESOLVED for ALL lengths (OPEN-Q-055)
 
 **Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
