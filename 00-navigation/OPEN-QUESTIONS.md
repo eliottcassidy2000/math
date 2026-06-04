@@ -1157,7 +1157,7 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 
 **Added:** opus-2026-05-28-S5 (with THM-343 completion).
 
-**Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. H=21 remains a strong open permanent-gap candidate. H=63 is REFUTED as a universal gap: it is achieved at n=8.
+**Status:** THM-343 proves H(T) ≠ 7 for ALL tournaments. **H=21 — finite window now CLOSED (monad-compute-2026-06-04-S4, HYP-2200):** the HYP-2193 reduction (H=21 ⟹ a strong component with H=21 ⟹ c₃≤α₁≤10 ⟹ by Moon m≤12; THM-079 Part G killed m≤8) left only strong tournaments on m∈{9,10,11,12} with c₃≤10; these were **exhaustively enumerated (isomorph-free) and contain NO H=21** (min H = 75,125,225,375). So H(T)≠21 for all tournaments — {7,21} is the complete permanent H-gap set, modulo elevating the canon inputs to a formal THM-115 proof. (Even cleaner: the Busch lower bound p(7)=25>21, MISTAKE-053, gives H≥25 for every strong tournament on m≥7 directly.) H=63 is REFUTED as a universal gap: it is achieved at n=8.
 
 **EXHAUSTIVE n=8 H-SPECTRUM (monad-compute-2026-06-04-S1, `h_spectrum_n8_exhaustive_monad.py`):** the complete census over all 2^28 = 268,435,456 labeled 8-vertex tournaments (census total verified = 2^28; all H odd). 320 distinct H values, range [1, 661]. **The only low odd gaps are {7, 21}** — every odd value in [23, 609] is achieved. H=35,39,49,63 all unlock at n=8 (counts 161280/188160/604800/80640). The remaining odd gaps {611,615,617,619,623,625,635,647,655} are high-end sparseness just below max H=661 (not permanent). This makes the n=8 forbidden set ∩[1,609] = {7,21} EXACT (previously only 100k sampling, HYP-1104), and exhaustively confirms H≠7, H≠21 at n=8 (upgrades the H=21 (8,1)/(6,2) cases from "strong n≥8 sampling" to exhaustion).
 
@@ -1171,8 +1171,8 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 - Pattern correction: the apparent sequence {7,21,63} = {7·3⁰,7·3¹,7·3²} is a finite-n mirage. The 7·3^k universal obstruction terminates at k=1.
 
 **Sub-questions:**
-- Prove HYP-1753 (H≠21 for all n).
-- Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union).
+- ~~Prove HYP-1753 (H≠21 for all n).~~ **FINITE WINDOW CLOSED computationally** (monad-compute-S4, HYP-2200): exhaustive strong c₃≤10 enumeration on m=9..12 finds no H=21 (min H 75/125/225/375); combined with THM-079 (m≤8), Moon, THM-029, H-multiplicativity this completes the H≠21 case analysis. Remaining: a theorist should confirm the reduction chain (and/or the Busch p(7)=25>21 bound) and elevate THM-115 from conjecture to theorem.
+- Prove HYP-1755 (Strong Key Lemma: 3 pairwise-int 3-cycles force a 4th INSIDE their vertex union). [No longer needed for H≠21, but still of independent interest.]
 - ~~Prove or refute the single-core signature gap: r_core(s) never equals 3 or 10.~~ **RESOLVED** (monad-compute-S2, above): proven for ALL lengths — r∈{3,10} unreachable, r=31 reachable.
 - Explain structurally why the two THM-344 classes are the first complete-core unlocks for H=63 while H=7 (K3) and H=21 (K10) remain blocked.
 - Decide whether projection-kill/near-kill defects are the right invariant for separating complete-Ω unlocks from non-real-root residues.

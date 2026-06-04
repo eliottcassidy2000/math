@@ -1629,3 +1629,39 @@ theorem. Fix: drop the gcd filter (evaluate every m). Caught in lrc_even_ladder_
 
 ## MISTAKE (monad-compute-2026-06-03-S4): minH_strong(m)=m²−5m+9 is a 4-point coincidence; true value at m=7 is 25 not 23
 HYP-2180 (opus-S599s) fit the strong-tournament Hamiltonian-path minimum minH_strong(m)=3,5,9,15 (m=3..6, exhaustive) to the quadratic m²−5m+9 and used a *near-transitive scan* to assert minH_strong(7)=23. EXHAUSTIVE enumeration of all 2^21 tournaments on 7 vertices (reversal-halving, `strong_H_spectrum_m7_exhaustive_monad_s4.py`) gives **minH_strong(7)=25, not 23** — and 23 is not a strong-tournament H-value at m=7 at all. The quadratic matched m=3..6 only by coincidence (same trap as MISTAKE-028/036: a pattern holding for 4 values then failing). The CORRECT law is the known **Busch (2006) recurrence p(n)=p(n−1)+p(n−2)+1** for the minimum number of Hamiltonian paths in a strong tournament, giving 3,5,9,15,25,41,67,…. Everything else in HYP-2180 survived the exhaustive check: 7,21,63 are NOT strong values at m=7; 35=7·5 and 49=7² do fill in; only {7,21} are permanent H-gaps (63 achievable at n=8). Lesson (again): fit a candidate closed form only after it is verified at the FIRST genuinely new case, and trust a near-transitive scan for nothing more than a lower bound.
+
+## MISTAKE-054: Incremental 3-cycle counter swapped i-beats-j / j-beats-i (under-pruning)
+
+**Date discovered:** 2026-06-04 (monad-compute-2026-06-04-S4)
+**Found by:** monad-compute, via ground-truth disagreement with the direct-count engine
+**Affects:** the FIRST version of `h21_finite_check_v2_monad_s4.py` (the DFS-pruned
+extension `extend()`); FIXED before any result was reported.
+
+### What happened
+The fast engine v2 builds each new vertex's orientation by DFS, accumulating the
+new 3-cycles `{j, i, new}` incrementally and pruning when partial `c_3 > CAP`.
+The triple's out-degrees were coded as
+  `dj = ij + (1-nj)`,  `di = ji + (1-ni)`
+i.e. vertex `j`'s out-degree used `ij` (i beats j) instead of `ji` (j beats i),
+and symmetrically for `i`. Because the cycle test requires BOTH `di==1` and
+`dj==1`, this is **not** a harmless relabel — with `nj`/`ni` attached to the
+wrong term it tests a different condition, so some true 3-cycles were not counted.
+
+### Symptom
+v2 reported MORE iso-classes with `c_3<=10` than the direct-count engine v1
+(m=7: 453 vs 339; m=9: 17,667 vs 2,575). Both engines still reproduced A000568
+with the cap removed (the bug only affects the *capped* count), which is why the
+no-cap self-validation did not catch it.
+
+### The fix / correct framing
+For triple `{j, i, new}` with `j<i`:
+  `dj = ji + (1-nj)`  (j beats i? + j beats new?),
+  `di = ij + (1-ni)`  (i beats j? + i beats new?),
+  `dn = ni + nj`.
+3-cycle iff `dj==di==dn==1`. After the fix, v2 matches v1 EXACTLY for m<=10 and
+runs ~10x faster.
+
+### Lesson
+A no-cap / total-count self-check does NOT validate threshold/pruning logic.
+Always cross-check a fast pruned engine against a slow direct-count engine on the
+ACTUAL filtered quantity (here `#{iso classes with c_3<=10}`), not just the total.

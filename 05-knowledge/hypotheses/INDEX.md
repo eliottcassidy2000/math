@@ -12,6 +12,7 @@ Organized by topic. Each hypothesis has a detail file.
 ### CONFIRMED
 | ID | Statement | Why it works | Source |
 |----|-----------|-------------|--------|
+| HYP-2200 | **H=21 FINITE WINDOW CLOSED — H(T)≠21 case analysis complete.** S617/HYP-2193 reduced H=21 to a finite check: H multiplicative over strong components + 21=3·7 + 7 non-strong (THM-029) ⟹ a single STRONG component has H=21; H=21=1+2α₁+… ⟹ α₁≤10 ⟹ c₃≤α₁≤10; Moon (1968) c₃≥m−2 ⟹ m≤12; THM-079 Part G killed m≤8 exhaustively. This session **exhaustively enumerated ALL strong tournaments with c₃≤10 on m=9,10,11,12** (isomorph-free canonical augmentation; iso-class counts 2575/5277/9989/17947, strong 605/709/560/256) and found **H=21 NOWHERE** — min H = **75, 125, 225, 375** (≫21). At m=12, strong+c₃≤10 forces c₃=10 exactly (Moon-minimal), only 256 classes. So the entire HYP-2193 window is clear ⟹ no tournament has H=21. With THM-343 (H≠7), **{7,21} is the complete permanent H-gap set** (THM-115). NOTE (even cleaner independent finish): the repo-cited Busch lower bound p(n)=p(n−1)+p(n−2)+1 (=3,5,9,15,**25**,41,… min Ham-paths over strong tournaments, MISTAKE-053) has p(7)=25>21 and is increasing ⟹ every strong tournament on m≥7 has H≥25>21, so H=21 needs a strong component on ≤6 vertices, ruled out directly — settling H≠21 without the m=9..12 enumeration; the enumeration is independent exhaustive confirmation of the S617 window. | isomorph-free exhaustive enum (validated vs A000568 no-cap); two independent engines (direct-count v1 + DFS-prune v2) agree m≤10; c₃ monotone-pruning lossless | monad-compute-2026-06-04-S4; `04-computation/h21_finite_check_v2_monad_s4.py` (+v1 `h21_finite_check_monad_s4.py`), `05-knowledge/results/h21_finite_check_v2_monad_s4.out`; `07-reflections/h21-finite-window-exhausted-s4.md`; HYP-2193, THM-079, THM-115, THM-029, THM-343, MISTAKE-053/054, OPEN-Q-055 |
 | HYP-2199 | SINGLE-CORE GAP SET has asymptotic density **1/2** and **no simple closed form** (extends HYP-2198; resolves the S2 "OEIS/closed-form" handoff). The gap set `G={r≥1 : r≠r(s) ∀s}` of unachievable single-core odd-cycle counts, computed complete to R=2^20 (length cap L=23): 526,661 gaps vs 521,915 achievable in [1,2^20]. Gap density per dyadic window converges monotonically to **50.0%** (…49.99, 50.24, 50.08, 50.34, 50.26%) ⟹ gap set is PERSISTENT/INFINITE, not finite. **NOVEL to OEIS** (both `G`={3,6,10,14,17,20,21,24,27,28,29,33,…} and achievable={1,2,4,5,7,8,9,11,12,13,15,16,18,19,22,23,25,26,30,31,…} — no match, 11–22 term prefixes). **No closed form:** NOT a union of residue classes (mod≤12); NOT Thue-Morse/popcount-parity (gaps 50.1% odious); NOT Beatty (gap-diffs span 1..12+); achievable NOT an additive semigroup (1+2=3∈G) nor doubling-closed (5∈ACH,10∈G). Structured part: every power of two achievable (`1·0^k→2^{k-1}`). ⟹ single-core complete-Ω carries no arithmetic structure singling out {7,21}; reinforces HYP-2198 (global {7,21} = HYP-1753/THM-079, not single-core). | exhaustive enum complete to R=2^20 via O(L) recurrence `A_{p+1}=2A_p−s_{p-1}+s_p`, validated vs r_brute ∀ L≤14; OEIS checked via curl | monad-compute-2026-06-04-S3; `04-computation/single_core_gap_structure_monad_s3.py`, `05-knowledge/results/single_core_gap_structure_monad_s3.out`; HYP-2198, OPEN-Q-055, MISTAKE-024/050 |
 | HYP-2198 | SINGLE-CORE SIGNATURE GAP resolved for ALL lengths (OPEN-Q-055 sub-q). Single-core odd-cycle count `r(s)=Σ_{i<j,s_i=1,s_j=0} f(j−i−1)`, `f(0)=1,f(t)=2^{t−1}` (core arc pattern `s` vs a transitive order; complete-Ω ⟹ H=1+2r). Canonicalisation (strip leading 0s / trailing 1s) is r-invariant, and a length-`L≥3` canonical witness has `r≥2^{L−3}` ⟹ every achievable `r∈(0,R]` has a witness of length `≤3+⌊log₂R⌋`, so exhaustive enumeration to that length decides un/achievability for ALL lengths. **r=3 (H=7) and r=10 (H=21) are PERMANENT single-core gaps** (witnesses would be length ≤6, all checked — upgrades S12's "absent through length 40" to a finite theorem); **r=31 (H=63) reachable** (first length 7 = THM-344 `1001100`). Gap set dense (~50% of [1,2^17]: {3,6,10,14,17,20,21,…}, also r=94→H=189) ⟹ single-core complete-Ω is a strict sub-construction: explains the H=63-unlocks/H=7,21-don't split for THIS construction, but does NOT alone prove H=21 globally forbidden (HYP-1753/THM-079). | rigorous length bound + exhaustive enum complete to R=2^17; cross-checks THM-344 sigs→r=31, S11 brute m≤16, `1·0^k→2^{k−1}` | monad-compute-2026-06-04-S2; `04-computation/single_core_signature_complete_monad_s2.py`, `05-knowledge/results/single_core_signature_complete_monad_s2.out`; OPEN-Q-055, THM-344, MISTAKE-024/050 |
 | HYP-2187 | STATE-LOCAL FRONTIER-GAIN + BEAM (the unit-distance 211x breakthrough) transfers across problems. Make a global objective incremental from a BOUNDED FRONTIER via a precomputed gain table, then beam-search. LRC (measured): loneliness = AND of per-speed survival bitmasks over Z/(2n-1) (one AND/runner) — per-check speedup 1246x at n=14; beam over the survival frontier (keep K fewest-survivor partials) FINDS the worry-set extremal min M=1/n with reduction C(B,n-1)/K = 20x(n=6),50x(n=7), ~143x(n=8), ~10^5x at n=22 scale. KEY: the frontier-state WIDTH = the arithmetic modulus 2n-1 (THM-401) — the shell modulus IS the algorithmic state. Same pattern: unit distance (Moser-beam boundary, 211x), H (visited-mask DP, already state-local), Collatz (residue frontier mod 2^a3^b), partition fn Z (cluster expansion). WHY: state-locality = the decomposition structure (objective additive/multiplicative over the build) = the algorithmic shadow of partition-functions-everywhere (S599t) & equidecomposability (S599v); frontier = the scissors cut, gain table = the Dehn-additive update | measured s599w/x: 1246x per-check, beam finds optimum with C(B,n-1)/K reduction | opus-2026-06-03-S599w-x; reflection `state-local-frontier-gain-the-computational-decomposition-s599.md`; S599i, THM-401/406, S599t/v |
@@ -5014,3 +5015,50 @@ CORRECTION: S616/HYP-2187 used a buggy Omega reconstruction (deduped directed od
 NEW REDUCTION: H(T)=21 => (strong-component multiplicativity, H=prod over SC components; 21=3*7 and 7 is NOT a strong H-value by THM-029) => some STRONG component has H=21. For a strong tournament on m vertices: H=21 => I(Omega,2)=1+2*alpha_1+... =21 => alpha_1<=10; since 3-cycles are odd cycles, c_3 <= alpha_1 <= 10. MOON'S THEOREM: strong tournament on m vertices has c_3 >= m-2 (verified: min c_3 over strong = m-2 for m=3..7). => m-2<=10 => m<=12. With THM-079 Part G (H=21 impossible exhaustively m<=8), the ONLY remaining cases are STRONG tournaments on m in {9,10,11,12} with c_3<=10 -- FINITE. This collapses THM-079's open part (cycle-rich n>=9, open in general) to a finite n<=12 check.
 EVIDENCE: strong tournaments on m=9 with c_3<=10 (sampled) have min H=75; m=10 min H=153; m=11,12 c_3<=10 strong are near-Moon-extremal and very rare. H far from 21 (long odd cycles via Moon pancyclicity push alpha_1>>10). FULL proof = exhaust strong c_3<=10 on m=9..12, or prove strong m>=9 => alpha_1>=11.
 **See:** `04-computation/h21_moon_reduction_s617.py` (+.out); `07-reflections/h21-moon-reduction-s617.md`; THM-079 (Parts G/H/J/K/L), THM-115 (conj), THM-029 (H=7, 7 non-strong), HYP-2183 (strong-H monoid), HYP-2187 (corrected). Moon (1968): strong tournament has >= n-2 three-cycles.
+
+## HYP-2200: H=21 finite window CLOSED — exhaustive strong c_3<=10 for m=9..12, no H=21 (h21-finite-window-exhausted, monad-compute-2026-06-04-S4)
+**Status:** CONFIRMED (exhaustive). Completes the case analysis for `H(T) != 21` modulo canon inputs (THM-079 Part G, Moon 1968, THM-029, H-multiplicativity).
+S617/HYP-2193 reduced `H=21` to a finite check: `H` is multiplicative over strong
+components, `21 = 3*7`, and `7` is not a strong H-value (THM-029), so a *single
+strong* component must have `H=21`; then `H = 1 + 2*alpha_1 + 4*alpha_2 + ... = 21`
+forces `alpha_1 <= 10`, hence `c_3 <= alpha_1 <= 10`; Moon (1968) `c_3 >= m-2`
+gives `m <= 12`; THM-079 Part G already killed `m <= 8` exhaustively. The only
+remaining cases were **strong tournaments on `m in {9,10,11,12}` with `c_3 <= 10`.**
+
+THIS SESSION exhaustively enumerated them (isomorph-free canonical augmentation;
+`c_3` is monotone under vertex addition, so building vertex-by-vertex and pruning
+`c_3 > 10` is lossless; generation validated against A000568 with the cap removed):
+
+| m  | iso-classes c_3<=10 | strong | H=21? | min H |
+|----|--------------------:|-------:|:-----:|------:|
+| 9  | 2,575  | 605 | none | 75  |
+| 10 | 5,277  | 709 | none | 125 |
+| 11 | 9,989  | 560 | none | 225 |
+| 12 | 17,947 | 256 | none | 375 |
+
+`H=21` occurs NOWHERE. min H = 75/125/225/375 (>> 21). At m=12, `c_3<=10` with
+Moon `c_3 >= m-2 = 10` forces `c_3 = 10` exactly (only Moon-minimal strong
+tournaments survive -> just 256 classes). Two independent engines agree for
+m<=10 (v1 direct `c_3`-count pruning; v2 DFS incremental-`c_3` pruning, ~10x
+faster, carried the run to m=12); both reproduce A000568 no-cap.
+
+CONSEQUENCE: `H(T) != 21` for all tournaments; with THM-343 (`H != 7`), `{7,21}`
+is the complete set of permanent H-gaps (THM-115).
+
+EVEN-CLEANER INDEPENDENT FINISH (note for theorists): the repo-cited Busch
+lower bound `p(n) = p(n-1) + p(n-2) + 1` for the minimum number of Hamiltonian
+paths in a strong tournament (`= 3,5,9,15,25,41,67,...`, MISTAKE-053) has
+`p(7) = 25 > 21` and is increasing, so EVERY strong tournament on `m >= 7` has
+`H >= 25 > 21`. Thus an `H=21` strong component would need `m <= 6`, ruled out by
+direct check (THM-079). This settles `H != 21` without the m=9..12 enumeration;
+the enumeration is an independent exhaustive confirmation of the S617 window and
+also gives the exact strong-`c_3<=10` H-spectra. Worth a theorist confirming the
+Busch bound is rigorously stated, then elevating THM-115 (H=21 permanent gap)
+from conjecture to theorem.
+
+**See:** `04-computation/h21_finite_check_v2_monad_s4.py` (fast engine),
+`04-computation/h21_finite_check_monad_s4.py` (independent direct-count engine),
+`05-knowledge/results/h21_finite_check_v2_monad_s4.out`,
+`07-reflections/h21-finite-window-exhausted-s4.md`; HYP-2193 (S617 reduction),
+THM-079 (Parts G/H), THM-115 (permanent-gap conj), THM-029 (H=7), THM-343 (H!=7),
+MISTAKE-053 (Busch min-Ham-paths), MISTAKE-054 (v2 bug, fixed).

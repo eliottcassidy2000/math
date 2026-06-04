@@ -1,0 +1,14 @@
+======================================================================
+  H=21 FINITE WINDOW: exhaustive strong c_3<=10 tournaments
+======================================================================
+
+  [main] generating c3<=10 up to m=11:
+    m=2: iso-classes c3<=10:            1   (gen 0.0s)
+    m=3: iso-classes c3<=10:            2   (gen 0.0s)
+    m=4: iso-classes c3<=10:            4   (gen 0.0s)
+    m=5: iso-classes c3<=10:           12   (gen 0.0s)
+    m=6: iso-classes c3<=10:           56   (gen 0.0s)
+    m=7: iso-classes c3<=10:          339   (gen 0.4s)
+    m=8: iso-classes c3<=10:        1,105   (gen 3.3s)
+    m=9: iso-classes c3<=10:        2,575   (gen 22.1s)
+    m=10: iso-classes c3<=10:        5,277   (gen 127.6s)
