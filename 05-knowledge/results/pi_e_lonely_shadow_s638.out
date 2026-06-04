@@ -1,0 +1,73 @@
+S638 Pi/e Lonely Shadow Addendum
+================================
+
+Carrier constants
+-----------------
+S=e+pi        = 5.8598744820488384738229308546321654
+P=e*pi        = 8.5397342226735670654635508695465745
+D=e-pi        = -0.42331082513074800310235591192684039
+L=log(pi)     = 1.1447298858494001741434273513530587
+
+New unconditional implications
+------------------------------
+1. If L=log(pi) were algebraic, Lindemann-Weierstrass would make 1, e=e^1, and pi=e^L linearly independent over Qbar.  The exponents 0, 1, L are distinct because pi is neither 1 nor e.  Therefore S=e+pi and D=e-pi could not be algebraic.  Also P=e*pi=e^(1+L) would be transcendental by Hermite-Lindemann.
+   Contrapositive: algebraicity of any one of S, P, or D would prove log(pi) transcendental.
+2. If one elementary symmetric shadow descends, transverse symmetric shadows are forbidden.  If S is algebraic, then every p_k=e^k+pi^k for k>=2 is transcendental.  If P is algebraic, then every p_k for k>=1 is transcendental.
+
+Power-sum carrier p_k=e^k+pi^k in S,P
+--------------------------------------
+p_1  = S                                                deg_S=1 deg_P=0
+p_2  = S^2 - 2*P                                        deg_S=2 deg_P=1
+p_3  = S^3 - 3*S*P                                      deg_S=3 deg_P=1
+p_4  = S^4 - 4*S^2*P + 2*P^2                            deg_S=4 deg_P=2
+p_5  = S^5 - 5*S^3*P + 5*S*P^2                          deg_S=5 deg_P=2
+p_6  = S^6 - 6*S^4*P + 9*S^2*P^2 - 2*P^3                deg_S=6 deg_P=3
+p_7  = S^7 - 7*S^5*P + 14*S^3*P^2 - 7*S*P^3             deg_S=7 deg_P=3
+p_8  = S^8 - 8*S^6*P + 20*S^4*P^2 - 16*S^2*P^3 + 2*P^4  deg_S=8 deg_P=4
+p_9  = S^9 - 9*S^7*P + 27*S^5*P^2 - 30*S^3*P^3 + 9*S*P^4 deg_S=9 deg_P=4
+p_10 = S^10 - 10*S^8*P + 35*S^6*P^2 - 50*S^4*P^3 + 25*S^2*P^4 - 2*P^5 deg_S=10 deg_P=5
+
+Why the power-sum fallout is a theorem
+--------------------------------------
+- With S algebraic, p_k=f_k(S,P) algebraic for any k>=2 would make P algebraic over Qbar because f_k(S,X) is nonconstant in X.  Then T^2-S*T+P makes e and pi algebraic, impossible.
+- With P algebraic, p_k=f_k(S,P) algebraic for any k>=1 would make S algebraic over Qbar because f_k(X,P) is nonconstant in X.  Again Vieta reconstructs e and pi.
+- More generally: if S is algebraic then every symmetric polynomial F(S,P) nonconstant in P is transcendental; if P is algebraic then every symmetric polynomial nonconstant in S is transcendental.
+
+Rationality fallout table
+-------------------------
+- Assume S=e+pi algebraic: P, D, log(pi), and all p_k for k>=2 are transcendental.
+- Assume P=e*pi algebraic: S, D, log(pi), and all p_k for k>=1 are transcendental.
+- Assume D=e-pi algebraic: S, P, log(pi), and alternating power sums e^k+(-pi)^k for k>=2 are transcendental.
+- Assume log(pi) algebraic: S, P, and D are all transcendental without Schanuel.
+- Assume Schanuel for 1 and i*pi: e and pi are algebraically independent, so every nonconstant polynomial shadow is transcendental.
+
+PSLQ height sanity checks
+------------------------
+degree<=3 scalar relation for S, coeff<=1e7: none
+degree<=3 scalar relation for P, coeff<=1e7: none
+degree<=3 scalar relation for D, coeff<=1e7: none
+degree<=3 scalar relation for L, coeff<=1e7: none
+linear relation among 1,p_1,...,p_5, coeff<=1e7: none
+structural sheet PSLQ on [S^2,D^2,P]: 1*S^2 - 1*D^2 - 4*P = 0
+
+Tournament Analysis
+-------------------
+Challenged vertex assumption: the useful tournament vertices are not S, P, D, or numeric guesses.  I considered shadows, assumptions, implication arrows, theorem machines, branch sheets, and repo carrier analogies; the chosen vertices are proof routes.  The quotient preserves field-descent obstruction data and destroys decimal near-miss information.
+vertices=9
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 6: 3, 8: 1}
+directed_3cycles=1
+Hamiltonian_paths=3
+ranking:
+  1. lonely_power_sum_fallout (score=8)
+  2. log_pi_lindemann_gate (score=6)
+  3. transverse_symmetric_polynomial_template (score=6)
+  4. quadratic_trace_norm_vieta (score=6)
+  5. h21_side_condition_analogy (score=4)
+  6. known_e_to_pi_gelfond_constant (score=3)
+  7. pslq_height_sieve (score=2)
+  8. schanuel_full_completion (score=1)
+  9. raw_rational_case_split (score=0)
+
+Repo transfer
+-------------
+The new pattern mirrors the incoming H=21 window closure: scalar H=21 is decided only after retaining strongness and c3 side conditions.  For pi/e, scalar S or P is also too thin; the retained side conditions are log-commensurability, the discriminant sheet, and transverse symmetric-polynomial fallout.

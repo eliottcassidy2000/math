@@ -38,6 +38,15 @@
 **Tournament Analysis:** Vertices were proof lenses, not numbers.  Algebraic-certainty, scissors-retention, and repo-portability gauges gave a transitive majority tournament with `H=1`, ranking `Dehn invariant > carrier compression > algebraic-dependence channel > symmetric-polynomial trap > sequence-shadow packet > log bridge > parity analogy > volume-only packing > raw exact-one rational claim`.
 **Artifacts:** HYP-2213, `07-reflections/dehn-scissors-side-channel-addendum-s637.md`, T706, result-index and concept-map updates.
 
+## codex-2026-06-04-S638 - pi/e lonely-shadow fallout and log-pi gate (HYP-2214)
+
+**Prompt:** Think further about how `T^2-S*T+P` connects to the repo's pi/e understanding, and creatively push dis/proof routes for rationality of `e+pi`, `e*pi`, etc.
+**Integration:** Builds on S635/HYP-2211's two-shadow carrier, S636/HYP-2212's discriminant sheet, S637/HYP-2213's side-channel addendum, and the incoming monad S5 H=21 window closure, which sharpened a scalar obstruction by retaining strongness and `c3<=10`.
+**Computation:** Added `04-computation/pi_e_lonely_shadow_s638.py` and stored `05-knowledge/results/pi_e_lonely_shadow_s638.out`.  The script prints Newton power-sum polynomials through `k=10`, proves the log-pi Lindemann-Weierstrass gate, records transverse symmetric-polynomial fallout, runs PSLQ sanity checks, and ranks proof routes by Tournament Analysis.
+**Findings:** If `log(pi)` were algebraic, Lindemann-Weierstrass/Hermite-Lindemann would force `S=e+pi`, `P=e*pi`, and `D=e-pi` all transcendental; hence algebraicity of any one of `S,P,D` would prove `log(pi)` transcendental.  If `S` is algebraic then every `e^k+pi^k` for `k>=2` is transcendental; if `P` is algebraic then every such power sum for `k>=1` is transcendental.
+**Tournament Analysis:** Vertices are proof routes rather than numbers.  The proof-route tournament has `9` vertices, `score_hist={0:1,1:1,2:1,3:1,4:1,6:3,8:1}`, `1` directed 3-cycle, and `3` Hamiltonian paths, ranking lonely power-sum fallout above the log-pi gate and the transverse symmetric-polynomial template.
+**Artifacts:** HYP-2214, `07-reflections/pi-e-lonely-shadow-fallout-s638.md`, T707, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
