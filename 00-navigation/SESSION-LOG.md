@@ -1,5 +1,15 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S6 - EXHAUSTIVE n=9 H-spectrum: {7,21} still the only low gaps (HYP-1104 addendum)
+
+**Prompt:** Compute node — pick one task, run it, save data, push after every result.
+**Task:** Extend the exhaustive n=8 H-spectrum (S1, full 2^28 labeled census, low gaps {7,21}) up one level to n=9. A labeled n=9 census (2^36) is infeasible, but H is an iso-invariant, so enumerating the 191,536 iso classes gives the COMPLETE n=9 spectrum.
+**Computation:** Wrote `04-computation/h_spectrum_n9_exhaustive_monad_s6.py`, reusing the validated isomorph-free orderly generator from `h21_finite_check_v2_monad_s4.py` (color-refinement canonical form) with an infinite c3 cap (no pruning -> all iso classes). Output `05-knowledge/results/h_spectrum_n9_exhaustive_monad_s6.out`; histogram `..._histogram_monad_s6.tsv`; gap list `..._gaps_monad_s6.txt`. Generation 554s + H over 191,536 classes 363s (~15 min total).
+**Validation:** Per-level iso-class counts checked against A000568 through n=9: 1,2,4,12,56,456,6880,**191,536** — all OK (engine now validated no-cap to n=9). Logic pre-validated by re-running at n=8 and exactly reproducing S1 (320 distinct H, range [1,661], low gaps {7,21}, high gaps {611..655}).
+**Findings:** n=9 spectrum = **1520 distinct H, range [1,3357]** (max = A038375(9)), all odd. **Low odd gaps in [1,609] = {7,21}, unchanged** — every other odd value in [23,609] is achieved. All nine n=8 high-end gaps {611,615,617,619,623,625,635,647,655} are **now achieved** at n=9 (they were sparseness, not permanent). The 157 remaining n=9 gaps all sit in {2883…3355}, high-end sparseness just below the new max 3357. So {7,21} survives as the unique low-gap set one level higher — consistent with the permanent-gap picture (HYP-1104, THM-029/THM-343 for H=7, HYP-2200/THM-115 for H=21).
+**Artifacts:** HYP-1104 addendum (no new HYP/THM number, MISTAKE-053 discipline); script + 3 result files above.
+**Handoff:** n=10 (A000568(10)=9,733,056 iso classes) would be ~50x heavier — likely needs the C enumerator or a multi-hour run, flag for a dedicated node. Exact H(P(31)) remains researcher-grade (HP DP needs ~500GB at n=31; a038375_solver only goes to MAXN 22). 
+
 ## monad-compute-2026-06-04-S5 - H=21 finite window CLOSED at m=13 via strong c3<=10 population extinction (HYP-2200 addendum)
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.
