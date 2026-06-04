@@ -1,0 +1,62 @@
+﻿S626 unit-distance unit-spine / flip-gauge tournament lab
+Moser shell: 18 directed unit vectors, 9 antipodal pairs
+beam target=22, width=1200
+beam final: n=22, best_edges=60, target=60
+
+Unit-spine scan on Moser-carrier beam witnesses
+n | edges | target | unit spine? | unit HPs | deg hist | lex unit-flip max | lex nonunit-flip max
+--- | --- | --- | --- | --- | --- | --- | ---
+2 | 1 | 1 | True | 1 | {1: 2} | 1 | 1
+3 | 3 | 3 | True | 3 | {2: 3} | 2 | 2
+4 | 5 | 5 | True | 6 | {2: 2, 3: 2} | 3 | 3
+5 | 7 | 7 | True | 10 | {2: 2, 3: 2, 4: 1} | 4 | 4
+6 | 9 | 9 | True | 17 | {2: 2, 3: 2, 4: 2} | 5 | 5
+7 | 12 | 12 | True | 60 | {3: 6, 6: 1} | 5 | 5
+8 | 14 | 14 | True | 152 | {3: 4, 4: 4} | 6 | 6
+9 | 18 | 18 | True | 756 | {4: 9} | 6 | 6
+10 | 20 | 20 | True | 672 | {2: 1, 4: 7, 5: 2} | 7 | 7
+11 | 23 | 23 | True | 2424 | {3: 2, 4: 5, 5: 4} | 8 | 8
+12 | 27 | 27 | True | 11976 | {4: 6, 5: 6} | 9 | 9
+13 | 30 | 30 | True | 24992 | {3: 1, 4: 3, 5: 9} | 10 | 10
+14 | 33 | 33 | True | 55160 | {3: 1, 4: 4, 5: 7, 6: 2} | 11 | 11
+21 | 57 | 57 | True | not counted | {3: 1, 4: 2, 5: 9, 6: 5, 7: 4} | skip | skip
+22 | 60 | 60 | True | not counted | {3: 1, 4: 3, 5: 8, 6: 5, 7: 5} | skip | skip
+
+Representative unit spine for n=14
+path indices: (12, 10, 11, 13, 9, 7, 6, 8, 4, 2, 3, 5, 1, 0) ...
+first coordinates on path: [(1, 1, 1, -1), (1, 1, 0, -1), (1, 1, 0, 0), (1, 1, 1, 0), (1, 0, 1, 0), (1, 0, 0, 0), (1, 0, 0, -1), (1, 0, 1, -1)] ...
+n=14 spine-order point-tournament fingerprints
+spine_nonunitflip_max_unit_arcs: 13
+spine_nonunitflip_max_unit_arcs_scc: (14,)
+spine_nonunitflip_max_unit_arcs_score_hist: {3: 2, 4: 2, 5: 1, 6: 1, 7: 3, 8: 2, 9: 1, 10: 2}
+spine_nonunitflip_max_unit_arcs_triangles: 76
+spine_unitflip_max_unit_arcs: 13
+spine_unitflip_max_unit_arcs_scc: (14,)
+spine_unitflip_max_unit_arcs_score_hist: {3: 2, 4: 1, 5: 2, 6: 3, 7: 1, 8: 1, 9: 2, 10: 2}
+spine_unitflip_max_unit_arcs_triangles: 76
+
+Representative unit spine for n=22
+path indices: (20, 18, 19, 21, 17, 15, 14, 16, 12, 10, 11, 13, 9, 7, 6, 8) ...
+first coordinates on path: [(2, 1, 1, -1), (2, 1, 0, -1), (2, 1, 0, 0), (2, 1, 1, 0), (2, 0, 1, 0), (2, 0, 0, 0), (2, 0, 0, -1), (2, 0, 1, -1)] ...
+
+Tournament Analysis over unit-distance-to-tournament gauges
+rank | gauge | outscore | note
+--- | --- | --- | ---
+1 | unit graph traceability | 6 | intrinsic yes/no unit-spine predicate
+2 | frontier-gain recursion | 5 | state-local construction/deletion ledger
+3 | direction-pair quotient | 4 | retains Moser shell channels but forgets point order
+4 | spine-order flip gauge | 3 | chooses tie path from a found unit spine
+5 | proof-obligation tournament | 2 | vertices are cores, ears, directions, obstructions
+6 | lexicographic point flip | 1 | useful diagnostic, strongly order-dependent
+7 | raw pair-distance tournament | 0 | pretty but loses embedding side channels
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+SCC sizes: (1, 1, 1, 1, 1, 1, 1)
+Hamiltonian path count: 1
+Challenged assumption: tournament vertices need not be points.  For proof work the better vertices can be unit directions, dense cores, frontier ears, traceability obligations, and totally-unfaithful filters.
+
+Interpretation
+- The intrinsic question is graph traceability of the unit-distance graph.
+- A traceable unit graph lets either flip convention carry an all-unit mandatory path after choosing the tie order from the spine.
+- A fixed external order, such as lexicographic coordinates, can obscure that spine; any apparent flip/flop there is a gauge artifact.
+- A genuine flop would require an extremal unit-distance graph with no unit Hamiltonian path, likely forced by three or more essential boundary ears or separator branches.
