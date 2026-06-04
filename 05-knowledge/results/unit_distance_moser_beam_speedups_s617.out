@@ -1,0 +1,57 @@
+S617 unit-distance Moser-carrier beam speedups
+unit shell: 18 directed vectors, 9 antipodal pairs
+target=22 beam_width=1200
+
+Beam ledger
+n  kept  unique_children  frontier_evals  best_edges  span  edge_count_speedup  seconds
+ 2     9               9             18          1     1               36.0     0.00
+ 3   141             141            288          3     2               48.0     0.01
+ 4  1200            2751           6372          5     2               60.3     0.15
+ 5  1200           38756          69430          7     3               72.3     2.79
+ 6  1200           60606          83024          9     3               83.0     6.32
+ 7  1200           78042          96753         12     4               94.1     8.30
+ 8  1200           99810         108626         14     3              103.5    10.78
+ 9  1200          111472         120447         18     4              112.9    13.58
+10  1200          123149         131536         20     4              121.8    17.16
+11  1200          111392         141482         23     4              129.7    20.97
+12  1200          140775         152050         27     4              138.2    30.13
+13  1200          152247         162461         30     4              146.7    40.23
+14  1200          160341         173611         33     4              155.8    45.39
+15  1200          174292         182014         37     4              162.5    51.55
+16  1200          179152         188160         41     4              167.3    58.28
+17  1200          185847         198309         43     5              175.6    67.28
+18  1200          185101         206763         46     5              182.4    72.90
+19  1200          205879         215661         50     5              189.7    78.82
+20  1200          217582         221879         54     5              194.6    85.18
+21  1200          225103         232012         57     5              203.0    91.90
+22  1200          228629         242190         60     5              211.4    99.55
+
+best cluster at n=22: edges=60, span=5
+best cluster coordinates: ((0, 0, 0, 0), (0, 0, 1, 0), (0, 1, 0, -1), (0, 1, 0, 0), (0, 1, 1, -1), (0, 1, 1, 0), (1, 0, 0, -1), (1, 0, 0, 0), (1, 0, 1, -1), (1, 0, 1, 0), (1, 1, 0, -1), (1, 1, 0, 0), (1, 1, 1, -1), (1, 1, 1, 0), (2, 0, 0, -1), (2, 0, 0, 0), (2, 0, 1, -1), (2, 0, 1, 0), (2, 1, 0, -1), (2, 1, 0, 0), (2, 1, 1, -1), (2, 1, 1, 0))
+
+n=22 extension ledger inside retained beam
+core_edges  frontier_candidates_by_gain  max_new_edges
+        56 {1: 162157, 2: 51932, 3: 7673, 4: 1156}            60
+        57 {1: 13848, 2: 4776, 3: 648}               60
+Reading: within the retained Moser-carrier beam, 57-edge 21-cores only accept gain-3 frontier extensions, and 56-edge cores only reach gain 4.  This recovers the known 60-edge lower-bound lane but does not produce a 61-edge witness.
+
+Tournament Analysis over counting tricks
+  score=7 trick=21-core extension ledger; features=(speed=4, geom=4, side=5, n22=5, proof=4, risk=1)
+  score=6 trick=totally-unfaithful obstruction library; features=(speed=3, geom=5, side=5, n22=5, proof=5, risk=2)
+  score=5 trick=frontier-gain incremental count; features=(speed=5, geom=4, side=4, n22=5, proof=3, risk=1)
+  score=4 trick=Moser unit-shell carrier; features=(speed=4, geom=5, side=4, n22=4, proof=3, risk=2)
+  score=3 trick=bitset adjacency popcount window; features=(speed=5, geom=3, side=3, n22=4, proof=3, risk=2)
+  score=2 trick=raw F-free graph enumeration; features=(speed=1, geom=1, side=2, n22=5, proof=3, risk=4)
+  score=1 trick=triangular-lattice-only beam; features=(speed=4, geom=3, side=1, n22=1, proof=1, risk=4)
+  score=0 trick=naive pairwise distance recount; features=(speed=0, geom=2, side=0, n22=2, proof=0, risk=5)
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles: 0
+  Hamiltonian path count: 1
+
+Speedup claim
+  The frontier-gain table replaces per-candidate unit-edge recounts.
+  The displayed speedup is only for edge-count checks; canonicalization
+  and beam ordering still cost time, but the expensive count itself
+  becomes state-local rather than child-local.
+  Next heavy run: increase --width and add automorphism canonicalization
+  or bitset popcounts on a bounded Moser window.
