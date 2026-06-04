@@ -106,6 +106,15 @@
 **Tournament Analysis:** Proof-lens vertices give a transitive tournament with one Hamiltonian path, ranking `invertible_EO_pair_projection > swap_reflection_O_to_3E_minus_O > diagonal_duplicate_fixed_locus > exceptional_prime_2_channel > degree_and_shadow_price_ledger > raw_goldbach_lemoine_counts`.
 **Artifacts:** HYP-2218, `07-reflections/goldbach-lemoine-same-pair-projection-s642.md`, T711, result-index and concept-map updates.
 
+## codex-2026-06-04-S643 - Goldbach/Lemoine same-pair bridge graph and duplicate branch locus (HYP-2219)
+
+**Prompt:** Treat even numbers as unordered prime pairs and odd numbers as ordered prime+doubled-prime pairs; study which evens and odds map to the same pairs, especially duplicate pairs where a prime doubles to an even and triples to an odd.
+**Integration:** Builds on the S642/HYP-2218 same-pair projection identity, the doubled-prime bridge threads HYP-2044/HYP-2049, and the S639 carrier atlas.  The new lens is the finite even/odd companion graph induced by that projection.
+**Computation:** Added `04-computation/goldbach_lemoine_pair_bridge_s643.py` and stored `05-knowledge/results/goldbach_lemoine_pair_bridge_s643.out`.  The script builds the even/odd companion graph through even target `120`, scans Lemoine reps through odd target `121`, lists duplicate branch pairs, parent-rich odd nodes, apex `q=2` boundary rows, and runs Tournament Analysis over carrier lenses.
+**Findings:** The S642 identity becomes a graph: each unordered odd-prime pair `{p,q}` creates an even node `E=p+q` and odd companions `E+p` and `E+q`; duplicates fold to `(2p,3p)`.  The prime `2` is a boundary/apex channel: up to `121`, only `7=3+2*2` is apex-only.
+**Tournament Analysis:** Carrier-lens vertices preserve the same-pair predicate and expose what is destroyed by forgetting orientation or the `q=2` boundary.  The tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, zero directed 3-cycles, one Hamiltonian path, and ranking `linear_pair_vieta > duplicate_branch_locus > bridge_graph_even_odd > apex_prime_two_boundary > mod6_residue_wheel > side_channel_jackknife > lemoine_to_goldbach_transfer > raw_representation_counts > scalar_parity_slogan`.
+**Artifacts:** HYP-2219, `07-reflections/goldbach-lemoine-same-pair-bridge-s643.md`, T712, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.

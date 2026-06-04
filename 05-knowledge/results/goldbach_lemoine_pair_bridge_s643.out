@@ -1,0 +1,120 @@
+S643 Goldbach/Lemoine Same-Pair Bridge
+======================================
+
+Linear carrier
+--------------
+Even shadow: E = p + q, unordered for odd-prime pairs.
+Odd shadow:  O = a + 2*b, ordered because b is doubled.
+Same-pair reconstruction from (E,O): doubled prime b=O-E; single prime a=2E-O.
+Validity window: E < O < 2E, with a,b odd primes.
+For an unordered pair {p,q}, the odd companions are O=E+p and O=E+q.
+Duplicate branch p=q: E=2p, O=3p; the two odd orientations fold together.
+Boundary: q=2 Lemoine reps are apex reps and do not share an even Goldbach pair.
+
+First duplicate/branch pairs
+----------------------------
+p -> (even=2p, odd=3p): 3->(6,9), 5->(10,15), 7->(14,21), 11->(22,33), 13->(26,39), 17->(34,51), 19->(38,57), 23->(46,69), 29->(58,87), 31->(62,93), 37->(74,111), 41->(82,123), 43->(86,129), 47->(94,141), 53->(106,159)
+The prime 2 is exceptional: 2->(4,6), but 6 is even, so it exits the odd bridge.
+
+Sample even nodes and odd companions
+------------------------------------
+E=6   (3,3)->[9]:dup
+E=8   (3,5)->[11, 13]:two
+E=10  (3,7)->[13, 17]:two; (5,5)->[15]:dup
+E=12  (5,7)->[17, 19]:two
+E=14  (3,11)->[17, 25]:two; (7,7)->[21]:dup
+E=16  (3,13)->[19, 29]:two; (5,11)->[21, 27]:two
+E=18  (5,13)->[23, 31]:two; (7,11)->[25, 29]:two
+E=20  (3,17)->[23, 37]:two; (7,13)->[27, 33]:two
+E=22  (3,19)->[25, 41]:two; (5,17)->[27, 39]:two; (11,11)->[33]:dup
+E=24  (5,19)->[29, 43]:two; (7,17)->[31, 41]:two; (11,13)->[35, 37]:two
+E=26  (3,23)->[29, 49]:two; (7,19)->[33, 45]:two; (13,13)->[39]:dup
+E=28  (5,23)->[33, 51]:two; (11,17)->[39, 45]:two
+E=30  (7,23)->[37, 53]:two; (11,19)->[41, 49]:two; (13,17)->[43, 47]:two
+E=32  (3,29)->[35, 61]:two; (13,19)->[45, 51]:two
+E=34  (3,31)->[37, 65]:two; (5,29)->[39, 63]:two; (11,23)->[45, 57]:two; (17,17)->[51]:dup
+E=36  (5,31)->[41, 67]:two; (7,29)->[43, 65]:two; (13,23)->[49, 59]:two; (17,19)->[53, 55]:two
+E=38  (7,31)->[45, 69]:two; (19,19)->[57]:dup
+E=40  (3,37)->[43, 77]:two; (11,29)->[51, 69]:two; (17,23)->[57, 63]:two
+E=42  (5,37)->[47, 79]:two; (11,31)->[53, 73]:two; (13,29)->[55, 71]:two; (19,23)->[61, 65]:two
+E=44  (3,41)->[47, 85]:two; (7,37)->[51, 81]:two; (13,31)->[57, 75]:two
+E=46  (3,43)->[49, 89]:two; (5,41)->[51, 87]:two; (17,29)->[63, 75]:two; (23,23)->[69]:dup
+E=48  (5,43)->[53, 91]:two; (7,41)->[55, 89]:two; (11,37)->[59, 85]:two; (17,31)->[65, 79]:two; (19,29)->[67, 77]:two
+E=50  (3,47)->[53, 97]:two; (7,43)->[57, 93]:two; (13,37)->[63, 87]:two; (19,31)->[69, 81]:two
+E=52  (5,47)->[57, 99]:two; (11,41)->[63, 93]:two; (23,29)->[75, 81]:two
+E=54  (7,47)->[61, 101]:two; (11,43)->[65, 97]:two; (13,41)->[67, 95]:two; (17,37)->[71, 91]:two; (23,31)->[77, 85]:two
+E=56  (3,53)->[59, 109]:two; (13,43)->[69, 99]:two; (19,37)->[75, 93]:two
+E=58  (5,53)->[63, 111]:two; (11,47)->[69, 105]:two; (17,41)->[75, 99]:two; (29,29)->[87]:dup
+E=60  (7,53)->[67, 113]:two; (13,47)->[73, 107]:two; (17,43)->[77, 103]:two; (19,41)->[79, 101]:two; (23,37)->[83, 97]:two; (29,31)->[89, 91]:two
+
+Odd nodes with many even parents
+--------------------------------
+O=123 parents=11 E=64 via (5,59), E=118 via (5,113), E=116 via (7,109), E=112 via (11,101), E=110 via (13,97), E=70 via (17,53)
+O=105 parents=11 E=58 via (11,47), E=94 via (11,83), E=92 via (13,79), E=88 via (17,71), E=62 via (19,43), E=86 via (19,67)
+O=135 parents=10 E=74 via (13,61), E=76 via (17,59), E=118 via (17,101), E=116 via (19,97), E=112 via (23,89), E=82 via (29,53)
+O=129 parents=10 E=68 via (7,61), E=70 via (11,59), E=118 via (11,107), E=116 via (13,103), E=76 via (23,53), E=106 via (23,83)
+O=117 parents=10 E=112 via (5,107), E=110 via (7,103), E=64 via (11,53), E=100 via (17,83), E=98 via (19,79), E=70 via (23,47)
+O=93  parents=10 E=88 via (5,83), E=50 via (7,43), E=86 via (7,79), E=52 via (11,41), E=82 via (11,71), E=80 via (13,67)
+O=153 parents=9  E=80 via (7,73), E=82 via (11,71), E=86 via (19,67), E=92 via (31,61), E=116 via (37,79), E=112 via (41,71)
+O=111 parents=9  E=58 via (5,53), E=106 via (5,101), E=104 via (7,97), E=100 via (11,89), E=64 via (17,47), E=92 via (19,73)
+O=99  parents=9  E=52 via (5,47), E=94 via (5,89), E=56 via (13,43), E=86 via (13,73), E=58 via (17,41), E=80 via (19,61)
+O=165 parents=8  E=86 via (7,79), E=92 via (19,73), E=94 via (23,71), E=98 via (31,67), E=104 via (43,61), E=106 via (47,59)
+O=147 parents=8  E=76 via (5,71), E=80 via (13,67), E=88 via (29,59), E=118 via (29,89), E=110 via (37,73), E=94 via (41,53)
+O=141 parents=8  E=74 via (7,67), E=80 via (19,61), E=82 via (23,59), E=112 via (29,83), E=110 via (31,79), E=104 via (37,67)
+
+Lemoine reps up to 121: bridge vs apex q=2
+-------------------------------------------
+odd targets with only apex q=2 reps: [7]
+odd targets with no odd-prime bridge rep: [7]
+O=7   reps=[(3, 2)] bridge=[] apex=[(3, 2)]
+O=9   reps=[(5, 2), (3, 3)] bridge=[(3, 3)] apex=[(5, 2)]
+O=11  reps=[(7, 2), (5, 3)] bridge=[(5, 3)] apex=[(7, 2)]
+O=13  reps=[(7, 3), (3, 5)] bridge=[(7, 3), (3, 5)] apex=[]
+O=15  reps=[(11, 2), (5, 5)] bridge=[(5, 5)] apex=[(11, 2)]
+O=17  reps=[(13, 2), (11, 3), (7, 5), (3, 7)] bridge=[(11, 3), (7, 5), (3, 7)] apex=[(13, 2)]
+O=19  reps=[(13, 3), (5, 7)] bridge=[(13, 3), (5, 7)] apex=[]
+O=21  reps=[(17, 2), (11, 5), (7, 7)] bridge=[(11, 5), (7, 7)] apex=[(17, 2)]
+O=23  reps=[(19, 2), (17, 3), (13, 5)] bridge=[(17, 3), (13, 5)] apex=[(19, 2)]
+O=25  reps=[(19, 3), (11, 7), (3, 11)] bridge=[(19, 3), (11, 7), (3, 11)] apex=[]
+O=27  reps=[(23, 2), (17, 5), (13, 7), (5, 11)] bridge=[(17, 5), (13, 7), (5, 11)] apex=[(23, 2)]
+O=29  reps=[(23, 3), (19, 5), (7, 11), (3, 13)] bridge=[(23, 3), (19, 5), (7, 11), (3, 13)] apex=[]
+O=31  reps=[(17, 7), (5, 13)] bridge=[(17, 7), (5, 13)] apex=[]
+O=33  reps=[(29, 2), (23, 5), (19, 7), (11, 11), (7, 13)] bridge=[(23, 5), (19, 7), (11, 11), (7, 13)] apex=[(29, 2)]
+O=35  reps=[(31, 2), (29, 3), (13, 11)] bridge=[(29, 3), (13, 11)] apex=[(31, 2)]
+O=37  reps=[(31, 3), (23, 7), (11, 13), (3, 17)] bridge=[(31, 3), (23, 7), (11, 13), (3, 17)] apex=[]
+O=39  reps=[(29, 5), (17, 11), (13, 13), (5, 17)] bridge=[(29, 5), (17, 11), (13, 13), (5, 17)] apex=[]
+O=41  reps=[(37, 2), (31, 5), (19, 11), (7, 17), (3, 19)] bridge=[(31, 5), (19, 11), (7, 17), (3, 19)] apex=[(37, 2)]
+
+Pair recovery checks
+--------------------
+(E,O)=(10,15) -> (5, 5)
+(E,O)=(10,17) -> (3, 7)
+(E,O)=(16,21) -> (11, 5)
+(E,O)=(22,33) -> (11, 11)
+(E,O)=(34,51) -> (17, 17)
+(E,O)=(50,75) -> invalid
+
+Tournament Analysis
+-------------------
+Assumption challenge: I considered vertices as evens, odds, primes, unordered pairs, ordered pairs, gaps, residues, bridge edges, and proof lenses.  The chosen vertices are carrier lenses because they preserve the same-pair predicate and expose what is destroyed by forgetting orientation or the q=2 boundary.
+vertices=9
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+Hamiltonian_paths=1
+ranking:
+  1. linear_pair_vieta (score=8)
+  2. duplicate_branch_locus (score=7)
+  3. bridge_graph_even_odd (score=6)
+  4. apex_prime_two_boundary (score=5)
+  5. mod6_residue_wheel (score=4)
+  6. side_channel_jackknife (score=3)
+  7. lemoine_to_goldbach_transfer (score=2)
+  8. raw_representation_counts (score=1)
+  9. scalar_parity_slogan (score=0)
+
+New applications
+----------------
+1. Treat (E,O) as a linear Vieta carrier: same-pair Goldbach/Lemoine data reconstructs the ordered prime pair exactly.
+2. Use the duplicate line (2p,3p) as the ramification/branch locus, analogous to discriminant zero in the pi/e carrier.
+3. Track q=2 Lemoine reps as apex boundary terms; they are odd representations without an even same-pair companion.
+4. Build an even-odd companion graph and jackknife duplicate, twin-gap, and q=2 boundary channels separately.
