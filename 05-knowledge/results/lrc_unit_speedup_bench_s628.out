@@ -1,0 +1,8 @@
+(1) TIGHT-INSTANCE ENUMERATION  brute vs fast (gap_shells filter + v_max<=2n-1 prune)
+   n=5 R=14: brute 8.58s -> 2 tight ;  fast 0.02s -> 2 tight ;  same=True  speedup x388.4
+   n=6 R=16: brute 58.65s -> 1 tight ;  fast 0.09s -> 1 tight ;  same=True  speedup x661.1
+
+(2) UNIT-DISTANCE count on triangular lattice  brute O(k^2) vs neighbor O(k)
+   mismatches: 0/300 ;  brute 16.0 ms  neighbor 4.3 ms  speedup x3.7
+
+   CM-rotation search space: angles alpha/abar of Z[w], |height|<=4: 24 distinct rotations (vs a continuum) — search these only (HYP-2230).
