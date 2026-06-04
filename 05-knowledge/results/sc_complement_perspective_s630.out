@@ -1,0 +1,146 @@
+S630 SC COMPLEMENT PERSPECTIVE AND UNIT-DISTANCE CARRIER SCOUT
+==============================================================================
+
+Core object:
+  Anti(T) = {sigma in Sym(V): i->j in T iff sigma(j)->sigma(i) in T}.
+  If T is self-complementary and tau in Anti(T), then Anti(T)=Aut(T)*tau.
+  Programmatically, this is a complementing coset of the automorphism group.
+
+Cyclotomic guardrail
+--------------------
+Phi3(2)=2^2+2+1=7
+3*Phi3(2)=21
+centered_hex(3)=3*3*(3+1)+1=37
+Reading: Phi3 supplies a visible carrier scalar, not permission
+to identify unit-distance edge counts with forbidden H evaluations.
+
+SC class generation sanity check
+-------------------------------
+n=1: generated SC classes=1 known=1
+n=2: generated SC classes=1 known=1
+n=3: generated SC classes=2 known=2
+n=4: generated SC classes=2 known=2
+n=5: generated SC classes=8 known=8
+n=6: generated SC classes=12 known=12
+n=7: generated SC classes=88 known=88
+
+H-gap check inside exact SC classes through n=7
+----------------------------------------------
+n=1: H values=[1] contains7=False contains21=False strong_minmax=(1, 1)
+n=2: H values=[1] contains7=False contains21=False strong_minmax=-
+n=3: H values=[1, 3] contains7=False contains21=False strong_minmax=(3, 3)
+n=4: H values=[1, 5] contains7=False contains21=False strong_minmax=(5, 5)
+n=5: H values=[1, 3, 9, 11, 13, 15] contains7=False contains21=False strong_minmax=(9, 15)
+n=6: H values=[1, 5, 9, 17, 29, 33, 37, 41, 45] contains7=False contains21=False strong_minmax=(17, 45)
+n=7: H values=[1, 3, 9, 11, 13, 15, 25, 27, 31, 33, 41, 45, 49, 51]... contains7=False contains21=False strong_minmax=(25, 189)
+
+Complementing coset diagnostics
+-------------------------------
+n=3: classes=2 rigid=1
+  |Aut| distribution:  {1: 1, 3: 1}
+  |Anti| distribution: {1: 1, 3: 1}
+  anti cycle-type incidence: {(2, 1): 2}
+  coset size failures: 0
+  score-reversal vertex failures: 0
+  anti-image set is an Aut-orbit for 6/6 vertices
+n=4: classes=2 rigid=2
+  |Aut| distribution:  {1: 2}
+  |Anti| distribution: {1: 2}
+  anti cycle-type incidence: {(2, 2): 2}
+  coset size failures: 0
+  score-reversal vertex failures: 0
+  anti-image set is an Aut-orbit for 8/8 vertices
+n=5: classes=8 rigid=5
+  |Aut| distribution:  {1: 5, 3: 2, 5: 1}
+  |Anti| distribution: {1: 5, 3: 2, 5: 1}
+  anti cycle-type incidence: {(2, 2, 1): 8}
+  coset size failures: 0
+  score-reversal vertex failures: 0
+  anti-image set is an Aut-orbit for 40/40 vertices
+n=6: classes=12 rigid=9
+  |Aut| distribution:  {1: 9, 3: 2, 9: 1}
+  |Anti| distribution: {1: 9, 3: 2, 9: 1}
+  anti cycle-type incidence: {(2, 2, 2): 12, (6,): 2}
+  coset size failures: 0
+  score-reversal vertex failures: 0
+  anti-image set is an Aut-orbit for 72/72 vertices
+n=7: classes=88 rigid=71
+  |Aut| distribution:  {1: 71, 3: 11, 5: 2, 7: 1, 9: 2, 21: 1}
+  |Anti| distribution: {1: 71, 3: 11, 5: 2, 7: 1, 9: 2, 21: 1}
+  anti cycle-type incidence: {(2, 2, 2, 1): 88, (6, 1): 4}
+  coset size failures: 0
+  score-reversal vertex failures: 0
+  anti-image set is an Aut-orbit for 616/616 vertices
+
+Two n=7 perspective examples
+----------------------------
+regular cyclic R_7: H=175 c3=14
+  score=(3, 3, 3, 3, 3, 3, 3) |Aut|=7 |Anti|=7
+  Aut orbits: ((0, 1, 2, 3, 4, 5, 6),)
+  anti cycle types: {(2, 2, 2, 1): 7}
+  anti-image sets: ((0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6), (0, 1, 2, 3, 4, 5, 6))
+  v=0 profile {'score': 3, 'out_scores': (3, 3, 3), 'in_scores': (3, 3, 3)}
+  first anti sends 0->0; image profile {'score': 3, 'out_scores': (3, 3, 3), 'in_scores': (3, 3, 3)}
+rigid SC example: H=1 c3=0
+  score=(0, 1, 2, 3, 4, 5, 6) |Aut|=1 |Anti|=1
+  Aut orbits: ((0,), (1,), (2,), (3,), (4,), (5,), (6,))
+  anti cycle types: {(2, 2, 2, 1): 1}
+  anti-image sets: ((6,), (5,), (4,), (3,), (2,), (1,), (0,))
+  v=0 profile {'score': 0, 'out_scores': (), 'in_scores': (1, 2, 3, 4, 5, 6)}
+  first anti sends 0->6; image profile {'score': 6, 'out_scores': (0, 1, 2, 3, 4, 5), 'in_scores': ()}
+
+Unit-distance carrier split table
+---------------------------------
+label       n   edges  spine  bulk  shell       note
+exact       5      7      4     3 -          Phi3(2) edge echo; legal as 4 spine + 3 bulk
+exact       7     12      6     6 -          first centered hexagon; canonical unit-flip order flops
+Harborth   11     21     10    11 -          Phi3(2)*3 lattice echo; exact planar row is already 23
+exact      11     23     10    13 -          small planar optimum after the lattice 21 echo
+triangular 21     47     20    27 -          Eisenstein lattice carrier from S625
+Moser/exact 21     57     20    37 C_hex(3)   THM-408 P_2^- row; not an H=21 scalar
+Moser lane 22     60     21    39 -          known dense lane; exact 60/61 frontier remains open
+
+Tournament Analysis over proof lenses
+-------------------------------------
+Vertices are proof/carrier lenses, not tournament vertices.
+Pairwise observable: which lens preserves complement-perspective data,
+unit-distance side channels, and the H-gap guardrail with less collapse.
+Switches/gauges: SC-perspective, unit-distance carrier, H-gap guardrail.
+Ties: insertion Hamiltonian path over the majority tournament.
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 5: 3, 7: 1} directed_3cycles=1 H=3
+tie Hamiltonian path by majority score:
+  score=7: anti-coset torsor
+  score=5: vertex perspective orbits
+  score=5: OCF H-gap guardrail
+  score=5: Eisenstein Phi3 norm
+  score=3: Burnside cycle types
+  score=2: unit spine carrier
+  score=1: tile/bulk side channel
+  score=0: raw scalar 7/21
+
+Assumption Challenge
+--------------------
+Alternate vertices considered: raw tournament vertices, SC classes,
+anti-automorphisms, automorphism orbits, anti-cycle types, unit-distance
+points, unit edges, Hamiltonian paths, shell/bulk packets, and proof
+obligations.  The chosen tournament vertices are proof/carrier lenses.
+Preserved predicate: complementing-perspective duality plus the H-gap
+guardrail under unit-distance carrier decompositions.
+Destroyed data: full embeddings, all n>=8 SC classes, exact graph6
+representatives for n=21, and continuous distance inequalities.
+Challenged assumption: self-complementarity gives one canonical node swap;
+the intrinsic object is the anti-coset, with a map chosen only after
+coordinates are fixed.
+
+Interpretation
+--------------
+- The SC node-swap object is not a single permutation; it is Anti(T),
+  a coset/torsor for Aut(T). A chosen anti-map is a coordinate choice.
+- Every tested anti-map reverses scores: score(sigma(v)) = n-1-score(v).
+- The images of a vertex under all anti-maps are exactly the dual
+  automorphism orbit, so node perspectives are swapped orbit-to-orbit.
+- H=7 and H=21 remain absent in exact SC classes through n=7; unit-distance
+  sees 7/21 only as decomposed edge-carrier echoes, not as tournament H.
+- The n=21 Moser/exact row splits 57 = 20 spine + 37 bulk, and 37 is a
+  centered-hex shell number. That is a recursive carrier signal, not an
+  H=21 realization.
