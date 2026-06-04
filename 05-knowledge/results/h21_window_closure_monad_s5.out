@@ -1,0 +1,38 @@
+==============================================================================
+  H=21 WINDOW CLOSURE: strong c3<=10 population vs m  (target m=14)
+==============================================================================
+
+  [validation] no-cap iso-class counts vs A000568:
+      n=2:     1  expected 1  [OK]
+      n=3:     2  expected 2  [OK]
+      n=4:     4  expected 4  [OK]
+      n=5:    12  expected 12  [OK]
+      n=6:    56  expected 56  [OK]
+      n=7:   456  expected 456  [OK]
+  validation: PASS
+
+  [main] generate c3<=10 classes, scan strong population per level:
+
+      m      classes    strong  minc3_str  minc3_all  minH_str  H=21   gen/scan(s)
+      2            1         0       None          0      None     0     0.0/0.0  
+      3            2         1          1          0         3     0     0.0/0.0  
+      4            4         1          2          0         5     0     0.0/0.0  
+      5           12         6          3          0         9     0     0.0/0.0  
+      6           56        35          4          0        15     0     0.0/0.0  
+      7          339       236          5          0        25     0     0.3/0.1  
+      8        1,105       467          6          0        45     0     1.4/0.4  
+      9        2,575       605          7          0        75     0     4.3/0.9  
+     10        5,277       709          8          0       125     0    12.4/2.3  
+     11        9,989       560          9          0       225     0    33.0/4.2  
+     12       17,947       256         10          0       375     0    81.7/5.8  
+     13       30,987         0       None          0      None     0   194.8/6.7  
+    *** CLOSURE: no strong tournament with c3<=10 at m=13. H=21 window CLOSED for all m>=13. ***
+
+  min c3 over strong tournaments per m (expect == n-2, Moon):
+    m      :   2   3   4   5   6   7   8   9  10  11  12  13
+    minc3  : None   1   2   3   4   5   6   7   8   9  10 None
+    n-2    :   0   1   2   3   4   5   6   7   8   9  10  11
+    min c3(strong) == n-2 for all computed m with strong>0: True
+
+  RESULT: H=21 finite window CLOSED at m=13 (strong c3<=10 population empty).
+  DONE.
