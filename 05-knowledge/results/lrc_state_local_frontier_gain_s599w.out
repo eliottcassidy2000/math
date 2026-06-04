@@ -1,0 +1,7 @@
+n=14, modulus 2n-1=27, 6000 random configs:
+  BRUTE total min-evals      = 95,620,421
+  STATE-LOCAL frontier ANDs   = 76,712  (one AND per runner)
+  discrete witness RESOLVED   = 3145/6000 = 52.4% (provably lonely, no scan)
+  residual needing scan       = 2855/6000 = 47.6%
+  EDGE-COUNT-CHECK REDUCTION  = brute / (frontier-ANDs + residual-scans) = 2.0x
+  per-config fast-check speedup (avg brute ops / avg ANDs) = 1246x

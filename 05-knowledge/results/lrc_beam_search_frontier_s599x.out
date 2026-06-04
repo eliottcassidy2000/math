@@ -1,0 +1,2 @@
+n=6 B=12 K=40: brute min M=1/6 (792 M-evals); beam min M=1/6 (40 M-evals); found-optimum=True; REDUCTION=20x
+n=7 B=14 K=60: brute min M=1/7 (3003 M-evals); beam min M=1/7 (60 M-evals); found-optimum=True; REDUCTION=50x
