@@ -1,0 +1,12 @@
+(A) GOOD-MULTIPLIER  fast O(n)  vs  brute O(p*n)
+   existence/validity mismatches: 0/2000
+   brute 25.5 ms   fast 42.7 ms   speedup x0.6
+
+(B) GAP  shell-restricted (<=2n-1)  vs  brute crossings  (correctness + speed)
+   shell-gap == brute-gap: 174/400  (shell-gap <= brute always: 400/400)
+   brute 3526.0 ms   shell 62.9 ms   speedup x56.1
+   (shell-gap is EXACT when the optimum is on the (Z/m)* orbit; else a fast lower bound)
+
+(C) LOOSENESS certificate  is_loose_fast (O(n))  — sample
+   n=14 S=[14, 2, 3, 4]...: M >= 2/29=0.0690 (>1/n? False) via a/29=1/29
+   n=7 S=[1, 2, 3, 4]...: M >= 2/17=0.1176 (>1/n? False) via a/17=2/17
