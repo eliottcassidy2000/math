@@ -1,0 +1,24 @@
+
+  H=21: MOON 3-CYCLE REDUCTION TO n<=12 (+ S616 correction)
+======================================================================
+
+  (1) Moon's bound: min c_3 over STRONG tournaments = n-2  [verified m<=7]
+      m=3: min c_3 (strong) = 1 = m-2 (True)
+      m=4: min c_3 (strong) = 2 = m-2 (True)
+      m=5: min c_3 (strong) = 3 = m-2 (True)
+      m=6: min c_3 (strong) = 4 = m-2 (True)
+      m=7: min c_3 (strong) = 5 = m-2 (True)
+
+  (2) REDUCTION: H=21 => strong component with H=21 (21=3*7, 7 not strong, THM-029)
+      => alpha_1<=10 => c_3<=10 => (Moon) m<=12. With THM-079 (m<=8 exhaustive),
+      remaining = STRONG tournaments, m in {9,10,11,12}, c_3<=10. FINITE.
+
+  (3) Evidence: strong tournaments on m=9..12 with c_3<=10 have H far from 21:
+      m=9: 746 strong c_3<=10 sampled; H=21 found 0; min H = 75
+      m=10: 12 strong c_3<=10 sampled; H=21 found 0; min H = 153
+      (m=11,12: strong c_3<=10 are near-Moon-extremal and very rare.)
+
+  => H=21 reduces to a FINITE n<=12 check; sampled cases have H>=75 (m=9), 153 (m=10),
+     nowhere near 21 (long odd cycles from Moon pancyclicity push alpha_1>>10).
+     FULL proof: exhaust strong c_3<=10 on m=9..12, or prove strong m>=9 => alpha_1>=11.
+
