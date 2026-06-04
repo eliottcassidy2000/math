@@ -47,6 +47,16 @@
 **Tournament Analysis:** Vertices are proof routes rather than numbers.  The proof-route tournament has `9` vertices, `score_hist={0:1,1:1,2:1,3:1,4:1,6:3,8:1}`, `1` directed 3-cycle, and `3` Hamiltonian paths, ranking lonely power-sum fallout above the log-pi gate and the transverse symmetric-polynomial template.
 **Artifacts:** HYP-2214, `07-reflections/pi-e-lonely-shadow-fallout-s638.md`, T707, result-index and concept-map updates.
 
+## codex-2026-06-04-S639 - obstruction carrier atlas across H21, LRC, unit distance, A000568, Schanuel, twin primes, and Goldbach (HYP-2215)
+
+**Prompt:** Consider progress on H=21 impossibility, LRC `n=14`, unit-distance `n=21`, A000568, Schanuel, twin primes, Goldbach, and beyond; relate them creatively and develop new ideas/applications.
+**Integration:** Builds on monad S5/HYP-2200's H=21 window closure, HYP-2206's unit-distance `n=21` spine/bulk split, HYP-2209's A000568 shadow-recursion lab, HYP-2211/HYP-2212/HYP-2214's pi/e carriers, and the LRC `n=14` shell/owner/carry/lift ledger.
+**Computation:** Added `04-computation/obstruction_carrier_atlas_s639.py` and stored `05-knowledge/results/obstruction_carrier_atlas_s639.out`.  The script creates seven carrier rows, computes LRC `C=27` shell strata, twin-prime and Goldbach `N=42` primorial survivor ledgers, carrier tag similarities, method coverage, and a transfer-method Tournament Analysis.
+**Findings:** The common schema is `raw scalar quotient + hidden witness + retained side channels`.  The strongest shared transfer move is side-channel jackknife: delete or compress one side channel and measure the obstruction mass released.  The highest carrier similarities are twin primes/Goldbach, then the root-of-unity finite-window triad H=21/LRC n=14/unit-distance n=21.
+**Applications:** Run residue-channel jackknives for twin/Goldbach; search unit-distance scalar twins with different spine/bulk/direction packets; extend A000568 hard terms by fixed/merged/q/transporter companions; use `H=21` as a quotient-collapse detector when another model demands a forbidden scalar.
+**Tournament Analysis:** Transfer-method vertices preserve the actionable predicate "which move should be tried next across domains."  The route tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, zero directed 3-cycles, one Hamiltonian path, and ranking `side_channel_jackknife > spine_bulk_decomposition > finite_window_extinction > local_prime_ledger > transverse_shadow_fallout > Burnside_transporters > quotient_collapse_test > Schanuel_style_completion > raw_scalar_numerology`.
+**Artifacts:** HYP-2215, `07-reflections/obstruction-carrier-atlas-s639.md`, T708, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
