@@ -1,4 +1,4 @@
-# HYP-2195: Unit-Distance Progress Should Use Small Impairment Atlases To Find Load-Bearing Side Channels
+# HYP-2196: Unit-Distance Progress Should Use Small Impairment Atlases To Find Load-Bearing Side Channels
 
 **Status:** OPEN, supported by S623 small-carrier experiments.
 
@@ -10,7 +10,7 @@ frontier shape, high-gain extension packets, direction support, canonical orbit
 budget, deletion-core resilience, and obstruction labels.
 
 This complements HYP-2194's incoming impairment spectroscopy. HYP-2194 isolates
-Moser direction-pair shadow prices and gain caps through `n=14`; HYP-2195
+Moser direction-pair shadow prices and gain caps through `n=14`; HYP-2196
 adds triangular controls, beam-width starvation, ranking-policy damage,
 canonicalization damage, and a broader damage-response ledger.
 
