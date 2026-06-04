@@ -7,6 +7,13 @@
 **Findings:** The right invariant is a schedule-channel sumset. Parity gives A stream `(1,3)` mod `4`, whose weak pair sums are `(0,2)` and have no self-hit, while B stream `(0,2)` pair-sums back to `(0,2)`. One-handicap two-block changes streams to A `(0,1)` with full pair self-hit and B `(2,3)` with a missing `3` lane. Exact minimax flips weak `2v1` from parity B-at-14 to one-handicap A-at-5 and flips weak `2v2` from parity B-at-14 to one-handicap A-at-13.
 **Concept links:** The variant points to additive combinatorics of `S+S`, automatic/Walsh schedule words, Maker-Breaker games on Schur hypergraphs, Collatz two-block residue blindness, and LRC/Helly retained-overlap analogies. Tournament Analysis uses proof routes and schedule channels as vertices, not cauldrons or players; the route tournament is transitive with one Hamiltonian path.
 **Artifacts:** HYP-2191, `07-reflections/cauldron-two-block-adversarial-schedules-s620.md`, T689, result-index and concept-map updates.
+## codex-2026-06-03-S621 - adversarial block-turn cauldron minimax over the shared removal pool (HYP-2192)
+
+**Prompt:** Consider an adversarial cauldron variant where one player goes twice and then the other goes twice, with the first turn allowed to be only one move before continuing the two/two pattern.
+**Computation:** Added `04-computation/cauldron_block_turn_minimax_s621.py` and stored `05-knowledge/results/cauldron_block_turn_minimax_s621.out`. The script solves exact minimax for the shared all-boiled/removal pool under `D,S,S,D,D,...` and `D,D,S,S,...`, across weak distinct two-term, repeated/classical, two-or-three-term, and finite-sums predicates for `k<=3`.
+**Findings:** This is not S619/S620's separate-pool attack-only schedule-channel game. It is an alternating-quantifier policy on the S618 removal DP. In the weak distinct two-term rule at `k=3`, one-player removal lasts to `27`, but single-start block minimax lasts to `13`; the double-start comparison lasts to `14`. Repeated/classical `k=3` gives `20 -> 11/10`, and finite-sums gives `25 -> 13/14`.
+**Tournament Analysis:** Vertices are schedules/proof routes, not raw cauldrons. The route tournament is transitive with one Hamiltonian path and ranks `single-start block minimax > double-start block minimax > attack-only parity cauldrons > gift-or-poison cauldrons > one-player removal DP > raw first-boil Schur > raw cauldron labels`; it has zero directed 3-cycles, singleton SCCs, and `11` edge flips versus computability-only ranking.
+**Artifacts:** HYP-2192, `07-reflections/cauldron-block-turn-minimax-s621.md`, T690, result-index and concept-map updates.
 
 ## codex-2026-06-03-S619 - cauldron last-boil complexity and adversarial variant atlas (HYP-2190)
 
