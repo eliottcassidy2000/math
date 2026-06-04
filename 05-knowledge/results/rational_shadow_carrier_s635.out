@@ -1,0 +1,69 @@
+S635 Rational Shadow Carrier
+============================
+
+Correction
+----------
+The usable theorem is not 'exactly one of pi+e and pi*e is rational'.
+It is stronger in one direction and weaker in another: pi+e and pi*e cannot both be algebraic; therefore at least one is transcendental and hence irrational.  Which one, or whether both are transcendental, is not known.
+
+Algebraic carrier lemma
+-----------------------
+For any field K, if S=x+y and P=xy both lie in K, then x and y are roots of T^2 - S*T + P in K[T].
+So the pair (x,y) has descended to a quadratic carrier over K.  Contraposition: if a hidden coordinate is known transcendental over K, then the two shadows S and P cannot both be K-algebraic/tame.
+With K=Qbar and (x,y)=(e,pi), both shadows algebraic would force e and pi algebraic over Qbar and hence algebraic over Q, contradicting transcendence.
+
+Finite-field microscope
+-----------------------
+Unordered pairs in F_p show the same carrier geometry without analysis:
+sum alone and product alone have fibers, but the joint (sum, product) shadow is injective because it is exactly the monic quadratic.
+
+p  pairs  sum(dist,max,hist)        product(dist,max,hist)      joint max
+ 5     15 ( 5, 3,3:5   ) ( 5, 5,2:2, 3:2, 5:1   ) 1
+ 7     28 ( 7, 4,4:7   ) ( 7, 7,3:3, 4:3, 7:1   ) 1
+11     66 (11, 6,6:11  ) (11,11,5:5, 6:5, 11:1  ) 1
+13     91 (13, 7,7:13  ) (13,13,6:6, 7:6, 13:1  ) 1
+17    153 (17, 9,9:17  ) (17,17,8:8, 9:8, 17:1  ) 1
+
+Reading
+-------
+Rationality is a field-of-definition quotient, not merely a decimal flavor.  Odd/even is the same kind of move at the smallest possible field: a quotient to F_2.  The difference is size, not species.
+Addition versus multiplication changes role here: x+y and xy are not rival operations but complementary elementary symmetric coordinates. Each one-shadow is lossy; together they reconstruct the unordered pair.
+This is the same carrier lesson as S633/S634: a scalar shadow can look mysterious because the missing side channel is doing the work.
+
+Connections
+-----------
+- pi/e: sum S and product P; both algebraic would descend the hidden pair.
+- LRC: reset period plus relation lattice; both too tame would miss the resonance carrier.
+- unit distance: spine edge count plus bulk shell; 57 is meaningful as 20+C_hex(3), not as a bare scalar.
+- SC tournaments: rooted perspective plus converse transporter; fixed/merged/nonfixed layers replace raw complement collapse.
+- sequence work: value plus shadow family; next-term opacity becomes recursion around the missing channel.
+
+Tournament Analysis
+-------------------
+Vertices are proof-carrier lenses, not constants or runners.  The pairwise observable is which lens better preserves the target predicate, reconstructs hidden state, exposes obstruction, compresses search, and stays computable.  The switch/gauge is majority vote over those criteria, with lower quotient-loss winning one extra vote; ties follow the listed Hamiltonian path.
+Score ranking:
+   8  joint_sum_product_carrier
+   7  field_descent_obstruction
+   6  lrc_relation_lattice
+   5  anti_coset_transporter
+   4  sequence_shadow_recursion
+   3  unit_spine_bulk_split
+   2  parity_redei_shadow
+   1  product_shadow_only
+   0  sum_shadow_only
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed 3-cycles: 0
+Hamiltonian paths: 1
+SCCs: [['sum_shadow_only'], ['product_shadow_only'], ['parity_redei_shadow'], ['unit_spine_bulk_split'], ['sequence_shadow_recursion'], ['anti_coset_transporter'], ['lrc_relation_lattice'], ['field_descent_obstruction'], ['joint_sum_product_carrier']]
+
+Assumption challenge
+--------------------
+For LRC/tournament transfer, do not assume vertices must be runners, constants, or tournament vertices.  In this lab the useful vertices are proof obligations and carrier choices.  Preserved predicate: whether a quotient can still certify the target obstruction.  Destroyed data: representatives, embeddings, exact times, and individual labels.
+The challenged assumption is that rational/irrational is a terminal classification.  Here it is a warning that a field-of-definition shadow has lost a side channel.
+
+Next algorithmic tests
+----------------------
+1. Add a generic two_shadow_obstruction helper: if two quotient shadows would reconstruct a forbidden/tame hidden object, at least one shadow must carry the missing complexity.
+2. In LRC, classify speed sets by (reset period, relation lattice rank, short circuit support) before any dense time search.
+3. In unit-distance beams, store edge count as (spine, bulk, symmetry transporter) rather than a single scalar.
+4. In tournament counts, extend fixed/merged/nonfixed layers to H-spectra and strong-component norm spectra.

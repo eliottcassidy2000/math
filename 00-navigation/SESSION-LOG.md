@@ -1,5 +1,15 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S635 - rational shadow carrier obstruction for pi/e, LRC clocks, and quotient descent (HYP-2211)
+
+**Prompt:** Continue the carrier/shadow thread and integrate the claimed pi/e rationality connection with odd/even, multiplication/addition, LRC clocks, unit distance, and tournament enumeration.
+**Correction:** The usable theorem is not "exactly one of `pi+e` and `pi*e` is rational."  The known statement is that `pi+e` and `pi*e` cannot both be algebraic; hence at least one is transcendental/irrational, while which one and whether both are transcendental remains open.
+**Computation:** Added `04-computation/rational_shadow_carrier_s635.py` and stored `05-knowledge/results/rational_shadow_carrier_s635.out`.  The script checks finite-field unordered pair shadows: sum alone and product alone have fibers, while the joint `(sum, product)` carrier has max fiber `1`, exactly mirroring the quadratic/Vieta reconstruction.
+**Findings:** Rationality is a field-of-definition quotient, parallel to parity as descent to `F_2`.  Addition and multiplication are sometimes rival operation shadows, but in the pi/e problem they are complementary elementary symmetric coordinates: trace plus norm reconstructs the unordered pair.  For LRC, the analogous carrier pair is reset-period/commensurability plus relation-lattice/short-circuit data; raw time search should come after this descent audit.
+**Tournament Analysis:** Vertices are proof-carrier lenses.  The majority tournament is transitive with one Hamiltonian path, ranking `joint_sum_product_carrier > field_descent_obstruction > lrc_relation_lattice > anti_coset_transporter > sequence_shadow_recursion > unit_spine_bulk_split > parity_redei_shadow > product_shadow_only > sum_shadow_only`.
+**Synthesis:** A reusable obstruction schema emerges: if two quotient shadows together reconstruct a forbidden tame carrier, then at least one shadow must retain the hard coordinate.  Next targets are a generic `two_shadow_obstruction` helper, LRC preprocessing by `(reset period, relation lattice, short circuits)`, and unit-distance/tournament ledgers that retain spine/bulk/transporter layers instead of raw scalars.
+**Artifacts:** HYP-2211, `07-reflections/rational-shadow-carriers-s635.md`, T704, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
