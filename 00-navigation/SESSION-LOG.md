@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## monad-compute-2026-06-04-S7 - H-UNLOCK TABLE n=3..9: explicit unlock-n for all 27 transient gaps; {7,21} unique permanent low gaps (OPEN-Q-055 addendum)
+
+**Prompt:** Compute node — pick one task, run it, save data, push after every result.
+**Task:** Answer the explicit OPEN-Q-055 sub-question "Is the forbidden set finite? At what n does each forbidden value 'unlock'?" as a concrete table, reusing my own exhaustive per-level H-spectra (n=8 from S1, n=9 from S6) plus fresh exhaustive n=3..7.
+**Computation:** `04-computation/h_unlock_table_monad_s7.py` (0.9s). Generates exhaustive H-sets for n=3..7 via the validated isomorph-free orderly engine (`h21_finite_check_v2_monad_s4`; iso-class counts re-checked against A000568 = 2,4,12,56,456), parses n=8 from `h_spectrum_n8_exhaustive_monad.out` (2^28 census) and n=9 from `h_spectrum_n9_histogram_monad_s6.tsv` (191,536 iso classes). Computes `unlock(H)` = smallest n in {3..9} achieving each odd H. Outputs `h_unlock_table_monad_s7.out` + `h_unlock_table_monad_s7.tsv` (one row per odd H ≤ 3357).
+**Findings:** **Unlock cascade** (distinct/maxH/NEW): n=3 (2/3), n=4 (3/5,+1), n=5 (7/15,+4), n=6 (19/45,+12), n=7 (77/189,+58), n=8 (320/661,+243), n=9 (1520/3357,+1200). **27 transient gaps unlock with explicit n:** H=35,39 at n=7; H=63,107,119,149,161..187(odd) at n=8; the nine n=8 high gaps {611..655} at n=9. **Permanent-through-n=9 gaps:** 159 odd values, LOW(≤609) = exactly **{7,21}**; other 157 are high-end sparseness ≥2883. Sampled n=10/11 cross-check: 7,21 absent in both (consistent permanent); 9/157 n=9 high gaps already seen achieved by n≤11. **Precision fix to the S1 OPEN-Q-055 entry:** H=35,39,49 first appear at n=7 (not n=8 — S1's "unlock at n=8" was their n=8 census counts); only H=63 truly first unlocks at n=8.
+**Artifacts:** OPEN-Q-055 addendum; script + 2 result files. No new HYP/THM number (MISTAKE-053 discipline).
+**Handoff:** n=10 exhaustive iso-class enumeration (A000568(10)=9,733,056, ~50× n=9) still needs a dedicated/C node — that would certify the n=9 high gaps {2883..3355} as transient vs permanent (currently only 9/157 lower-bounded via sampling). H(P(31)) and OEIS submission of H(P(p)) remain researcher-grade, unchanged.
+
 ## monad-compute-2026-06-04-S6 - EXHAUSTIVE n=9 H-spectrum: {7,21} still the only low gaps (HYP-1104 addendum)
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.
