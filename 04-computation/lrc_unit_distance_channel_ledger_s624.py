@@ -184,11 +184,15 @@ def print_lrc_jackknife() -> list[LrcRowDamage]:
             f"survivors={row.survivor_count:2d} status={status} speeds={row.speeds}"
         )
         for damage in row.orbit_damage:
+            depth_total = sum(depth * count for depth, count in damage.depth_hist)
+            avg_depth = depth_total / len(damage.orbit)
+            redundancy_price = damage.released_residues * avg_depth
             print(
                 f"  orbit_gcd={damage.orbit_gcd:<2d} size={len(damage.orbit):2d} "
                 f"released={damage.released_residues:2d} "
                 f"depth=[{damage.min_depth},{damage.max_depth}] "
-                f"hist={dict(damage.depth_hist)}"
+                f"hist={dict(damage.depth_hist)} "
+                f"redundancy_price={redundancy_price:.1f}"
             )
         print()
 
@@ -229,7 +233,9 @@ def print_unit_distance_fingerprint() -> tuple[list[UdDirectionLoss], dict[int, 
         "healthy",
     )
     losses: list[UdDirectionLoss] = []
-    for rep in s623.antipodal_reps(s623.MOSER_UNITS):
+    reps = s623.antipodal_reps(s623.MOSER_UNITS)
+    full_profile = s623.shell_direction_profile(full.cluster, reps, s623.add4)
+    for rep in reps:
         kept = s623.drop_direction(s623.MOSER_UNITS, rep)
         result = s623.beam_search(
             "moser",
@@ -247,8 +253,11 @@ def print_unit_distance_fingerprint() -> tuple[list[UdDirectionLoss], dict[int, 
     print(f"Moser target={target} width={width}: full true_edges={full.true_edges}, span={full.span}")
     hist = Counter(loss.loss for loss in losses)
     print(f"Direction-drop loss histogram: {dict(sorted(hist.items()))}")
-    for loss in losses:
-        print(f"  drop {loss.rep}: loss={loss.loss}, true_edges={loss.true_edges}, span={loss.span}")
+    for loss, usage in zip(losses, full_profile):
+        print(
+            f"  drop {loss.rep}: usage_in_full={usage}, loss={loss.loss}, "
+            f"usage_loss_price={usage * loss.loss}, true_edges={loss.true_edges}, span={loss.span}"
+        )
     print()
 
     ceiling_results: dict[int, int] = {}

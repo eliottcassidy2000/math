@@ -8,50 +8,50 @@ Impairment: delete one <2,-1> witness orbit from the test.
 Damage: released residues that would become false survivors in the impaired quotient.
 
 n= 8 C=15 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7)
-  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8}
-  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4}
-  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2}
+  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8} redundancy_price=8.0
+  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4} redundancy_price=4.0
+  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2} redundancy_price=4.0
 
 n= 8 C=15 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 7, 12)
-  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8}
-  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4}
-  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2}
+  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8} redundancy_price=8.0
+  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4} redundancy_price=4.0
+  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2} redundancy_price=4.0
 
 n=11 C=21 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
-  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2}
+  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12} redundancy_price=12.0
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2} redundancy_price=6.0
 
 n=11 C=21 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 10, 18)
-  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2}
+  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12} redundancy_price=12.0
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2} redundancy_price=6.0
 
 n=12 C=23 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
-  orbit_gcd=1  size=22 released=22 depth=[1,1] hist={1: 22}
+  orbit_gcd=1  size=22 released=22 depth=[1,1] hist={1: 22} redundancy_price=22.0
 
 n=12 C=23 Vstar      survivors= 2 status=survives speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 20)
-  orbit_gcd=1  size=22 released=20 depth=[0,2] hist={0: 2, 1: 18, 2: 2}
+  orbit_gcd=1  size=22 released=20 depth=[0,2] hist={0: 2, 1: 18, 2: 2} redundancy_price=20.0
 
 n=14 C=27 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
-  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18} redundancy_price=18.0
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2} redundancy_price=8.0
 
 n=14 C=27 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
-  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18} redundancy_price=18.0
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2} redundancy_price=8.0
 
 n=14 C=27 doubled_AP survivors= 0 status=blocked speeds=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
-  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18} redundancy_price=18.0
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2} redundancy_price=8.0
 
 n=14 C=27 fib_chain  survivors= 2 status=survives speeds=(1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521)
-  orbit_gcd=1  size=18 released=16 depth=[0,2] hist={0: 2, 1: 12, 2: 4}
-  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
-  orbit_gcd=9  size= 2 released= 2 depth=[3,3] hist={3: 2}
+  orbit_gcd=1  size=18 released=16 depth=[0,2] hist={0: 2, 1: 12, 2: 4} redundancy_price=17.8
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6} redundancy_price=6.0
+  orbit_gcd=9  size= 2 released= 2 depth=[3,3] hist={3: 2} redundancy_price=6.0
 
 Reading:
 - Composite C shells split into wide shallow channels and narrow redundant channels.
@@ -66,15 +66,15 @@ UNIT-DISTANCE LIGHTWEIGHT MOSER FINGERPRINT
 This recomputes a small target=9 Moser jackknife and cites S623 for the heavier atlas.
 Moser target=9 width=30: full true_edges=18, span=4
 Direction-drop loss histogram: {0: 3, 2: 6}
-  drop (-2, 1, 2, -1): loss=0, true_edges=18, span=4
-  drop (-1, -1, 1, 1): loss=0, true_edges=18, span=4
-  drop (-1, 0, 0, 0): loss=2, true_edges=16, span=4
-  drop (-1, 1, 0, 0): loss=2, true_edges=16, span=4
-  drop (-1, 2, 1, -2): loss=0, true_edges=18, span=4
-  drop (0, -1, 0, 0): loss=2, true_edges=16, span=4
-  drop (0, 0, -1, 0): loss=2, true_edges=16, span=4
-  drop (0, 0, -1, 1): loss=2, true_edges=16, span=4
-  drop (0, 0, 0, -1): loss=2, true_edges=16, span=4
+  drop (-2, 1, 2, -1): usage_in_full=0, loss=0, usage_loss_price=0, true_edges=18, span=4
+  drop (-1, -1, 1, 1): usage_in_full=0, loss=0, usage_loss_price=0, true_edges=18, span=4
+  drop (-1, 0, 0, 0): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
+  drop (-1, 1, 0, 0): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
+  drop (-1, 2, 1, -2): usage_in_full=0, loss=0, usage_loss_price=0, true_edges=18, span=4
+  drop (0, -1, 0, 0): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
+  drop (0, 0, -1, 0): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
+  drop (0, 0, -1, 1): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
+  drop (0, 0, 0, -1): usage_in_full=3, loss=2, usage_loss_price=6, true_edges=16, span=4
 
 Gain-ceiling comparison at the same target:
   ceiling=1: true_edges=9, span=4, gain_hist={1: 97, 2: 10, 3: 1, 4: 6}

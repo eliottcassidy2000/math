@@ -60,7 +60,8 @@ are all blocked at the `C` tick. Their shell-channel damage is identical:
 
 Thus the gcd-9 channel has tiny mass but high redundancy. Forgetting it releases
 only two residues, yet those residues are covered four times in the intact
-ledger. This is the LRC analogue of a small but load-bearing unit-direction
+ledger, giving redundancy price `2*4=8`, larger than the gcd-3 channel's
+`6*1=6`. This is the LRC analogue of a small but load-bearing unit-direction
 packet.
 
 Controls sharpen the point. At `C=15` and `C=21`, AP/Vstar show the same
@@ -75,7 +76,9 @@ already-surviving channels rather than only blocked rows.
 S624 recomputes a lightweight Moser-carrier jackknife at target `9`, width `30`.
 The full shell reaches `18` edges. Dropping one antipodal Moser direction gives
 loss histogram `{0:3, 2:6}`: three directions are replaceable at this size and
-six are edge-critical. Gain ceilings at the same target give:
+six are edge-critical. The replaceable directions have usage `0` in the full
+cluster, while each critical direction has usage `3` and loss `2`, giving
+usage-loss price `6`. Gain ceilings at the same target give:
 
 | Gain ceiling | Best true edges |
 |--------------|-----------------|

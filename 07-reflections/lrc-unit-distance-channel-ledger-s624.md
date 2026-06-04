@@ -26,16 +26,19 @@ The LRC result is pleasantly sharp. At `n=14`, the AP row, repo `Vstar`, and
 doubled AP are all blocked on `C=27`, and their orbit damage profiles are the
 same: omit the gcd-1 orbit and release 18 shallow residues, omit gcd-3 and
 release 6 shallow residues, omit gcd-9 and release only 2 residues, but each of
-those two is killed four times in the intact ledger. Small mass, high
-redundancy: that is exactly the kind of side channel that a scalar survivor
-count can underprice.
+those two is killed four times in the intact ledger. The redundancy prices are
+therefore `18`, `6`, and `8`; gcd-9 beats gcd-3 once redundancy is retained.
+Small mass, high redundancy: that is exactly the kind of side channel that a
+scalar survivor count can underprice.
 
 The unit-distance result rhymes with it. At Moser target `9`, width `30`, the
 full shell reaches `18` edges. Direction-drop loss is `{0:3, 2:6}`: three
-antipodal directions are replaceable and six are edge-critical. Gain ceilings
-`1,2,3,4` give `9,15,16,18` edges. Again the important feature is not only the
-scalar edge total; it is which direction/gain packets the construction cannot
-afford to forget.
+antipodal directions are replaceable and six are edge-critical. The replaceable
+directions have usage `0` in the full cluster; each critical direction has
+usage `3`, loss `2`, and usage-loss price `6`. Gain ceilings `1,2,3,4` give
+`9,15,16,18` edges. Again the important feature is not only the scalar edge
+total; it is which direction/gain packets the construction cannot afford to
+forget.
 
 Tournament Analysis used channel/proof-obligation vertices, not runners, unit
 edges, or points. The pairwise observable was whether a channel preserves
