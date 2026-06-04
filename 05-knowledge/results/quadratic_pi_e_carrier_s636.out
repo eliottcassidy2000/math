@@ -1,0 +1,75 @@
+S636 Quadratic pi/e Carrier
+===========================
+
+Definitions
+-----------
+S = e + pi = 5.85987448204883847382293085463
+P = e*pi   = 8.53973422267356706546355086955
+D = e - pi = -0.423310825130748003102355911927
+
+Unconditional sharpening
+------------------------
+Any two of S, P, D reconstruct e and pi algebraically:
+- S,D: e=(S+D)/2, pi=(S-D)/2.
+- S,P: e and pi are roots of T^2 - S*T + P.
+- D,P: e and -pi are roots of T^2 - D*T - P.
+Therefore no pair among {S,P,D} can both be algebraic, since that would force e and pi algebraic.  Hence at least two of S, P, D are transcendental.
+
+Discriminant carrier
+--------------------
+S^2 - 4P = 0.179192054672874715137816721358
+D^2      = 0.179192054672874715137816721358
+So D is the hidden square-root side channel of the trace/norm pair. The quadratic carrier is not only S and P; it is S, P, and the discriminant sheet.
+
+Conditional completion
+----------------------
+If Schanuel's conjecture holds, then e and pi are algebraically independent.  Then every nonconstant polynomial f(e,pi) with algebraic coefficients is transcendental; otherwise f(e,pi)=alpha would give the nonzero relation f(X,Y)-alpha.
+Under that conditional, S, P, D are all transcendental, and the pairs (S,P), (S,D), and (P,D) are algebraically independent.
+
+Exponential lift obstruction attempts
+-------------------------------------
+If S were algebraic, then exp(S)=exp(e)*exp(pi).  Since exp(pi) is known transcendental and exp(S) is transcendental for nonzero algebraic S, this gives no contradiction without a theorem about the algebraic independence of exp(e), exp(pi), or exp(S).
+If P were algebraic, then pi=P/e and exp(pi)=exp(P/e).  Current standard theorems do not rule this out because the exponent P/e is not algebraic.
+So the direct attack still needs algebraic independence, not just individual transcendence.
+
+PSLQ height sieve
+-----------------
+This is non-proof evidence only.  It asks whether small integer polynomial relations are visible at 100 digits.
+- S: no scalar relation degree <= 8, maxcoeff <= 1e8.
+- P: no scalar relation degree <= 8, maxcoeff <= 1e8.
+- D: no scalar relation degree <= 8, maxcoeff <= 1e8.
+- (S,P): no pair relation total degree <= 4, maxcoeff <= 1e7.
+- (S,D): no pair relation total degree <= 4, maxcoeff <= 1e7.
+- (P,D): no pair relation total degree <= 4, maxcoeff <= 1e7.
+- (S,P,D), degree <= 2: -1*D^2 - 4*P + 1*S^2
+
+Repo interpretation
+-------------------
+The repo's old pi/e comma thread asks whether ln(pi) is rational: multiplicative commensurability.  S636 is the additive/quadratic sibling: whether trace S or norm P descends to Qbar.
+In LRC terms, S is like a reset/trace clock, P is like a norm or multiplicative shell, and D is the discriminant sheet that records which runner/constant lives on which branch.  Forgetting D is exactly the kind of observer-blind collapse S634 warned against.
+
+Tournament Analysis
+-------------------
+Vertices are proof routes.  Pairwise observable: which route gives a stronger and less risky obstruction while connecting back to repo carriers.  Switch/gauge: majority vote over unconditionality, strength, repo connectivity, computability, and lower risk.  Tie Hamiltonian path is the route list order.
+   7  three_shadow_pair_obstruction
+   6  quadratic_trace_norm_carrier
+   5  lrc_clock_descent_analogy
+   4  exponential_lift_relations
+   3  pslq_height_sieve
+   2  schanuel_ai_completion
+   1  log_commensurability_ln_pi
+   0  raw_decimal_near_misses
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed 3-cycles: 0
+Hamiltonian paths: 1
+
+Assumption challenge
+--------------------
+Alternate vertices considered: constants e/pi, shadows S/P/D, polynomial relations, exponential lifts, log commensurability, height-sieve searches, LRC clocks, relation lattices, and proof routes. This lab chooses proof routes as vertices.
+Preserved predicate: whether a route can rule out algebraic descent. Destroyed data: exact branch identity, individual constants, and which shadow carries transcendence.
+
+Next tests
+----------
+1. Generalize the three-shadow lemma: for a generically finite map, which coordinate pairs force algebraic descent of the hidden source?
+2. Add discriminant-sheet labels to LRC reset-period ledgers: trace/norm quotients need an observer branch.
+3. Search repo constants for other triples where any two shadows reconstruct a forbidden algebraic source.

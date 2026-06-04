@@ -667,6 +667,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2209 | Hard counting sequences should be extended by shadow recursions, not only by next terms.  For a difficult value, compute fixed, merged, nonfixed-pair, q-deformed, bisection, skinny, and transporter companions to expose which side channel is missing. | S633 applies this to A000568/self-converse tournaments: `SC(1..10)=1,1,2,2,8,12,88,176,2752,8784`; `SC(2m)=A(m,4)`; `SC(2m+1)` is the same base-4 Burnside skeleton with a `2^(#parts)` fixed-vertex tax; companions `(T+SC)/2`, `(T-SC)/2`, round-SC `2^floor((m-1)/2)`, and LRC shell-orbit counts expose different recursive side channels. | codex-2026-06-04-S633; `HYP-2209-sequence-shadow-recursion-lab.md`; `sequence_shadow_lab_s633.py`; `sequence_shadow_lab_s633.out`; `sequence-shadow-recursions-s633.md`; HYP-2208, HYP-2074, HYP-2064, HYP-2086 |
 | HYP-2210 | Perspective-flip carriers give practical compression for LRC, unit-distance cores, and rooted tournament counts.  LRC source/sink target lists are converse-paired copies of `U(n-1)`; rooted perspectives modulo reversal obey `Q_n=(P_n+F_n)/2`; exact `n=21` unit-distance cores realize `57=20+C_hex(3)` by actual graph traceability. | S634 verifies the rooted/converse table through `n=6`: `Q_1..Q_6=1,1,3,6,28,148`, source and sink targets both match `U(n-1)`, and the route Tournament Analysis ranks LRC source/sink pairing first.  A Hamiltonian-path DP confirms all five stored exact `57`-edge `n=21` graph6 cores are traceable. | codex-2026-06-04-S634; `HYP-2210-applied-perspective-carrier-compression.md`; `applied_perspective_carrier_s634.py`; `applied_perspective_carrier_s634.out`; `applied-perspective-carriers-s634.md`; THM-381, THM-409, HYP-2206, HYP-2205, HYP-2176 |
 | HYP-2211 | Rationality/irrationality is a field-of-definition shadow, parallel to parity and two-shadow carrier retention.  The corrected pi/e fact is that `pi+e` and `pi*e` cannot both be algebraic; if `S=x+y` and `P=xy` both descend to a tame field, then `{x,y}` descends through `T^2-S*T+P`. | S635 finite-field audits show sum-only and product-only fibers but joint `(sum,product)` max fiber `1`; the proof-lens Tournament Analysis ranks `joint_sum_product_carrier > field_descent_obstruction > lrc_relation_lattice`.  LRC translation: classify speed sets by scale-free ratios, reset period/rational rank, relation lattice, and short circuits before raw time search. | codex-2026-06-04-S635; `HYP-2211-rational-shadow-carrier-obstruction.md`; `rational_shadow_carrier_s635.py`; `rational_shadow_carrier_s635.out`; `rational-shadow-carriers-s635.md`; HYP-2210, HYP-2209, HYP-2154, HYP-2155 |
+| HYP-2212 | The pi/e quadratic carrier has a discriminant sheet: for `S=e+pi`, `P=e*pi`, `D=e-pi`, any two of `{S,P,D}` reconstruct `e` and `pi`, so no two can both be algebraic. Therefore at least two of `e+pi`, `e*pi`, `e-pi` are transcendental. | S636 proves the pairwise reconstruction ledger and records `S^2-4P=D^2`.  PSLQ at 100 digits finds no small scalar/pair relations in the tested range and detects `S^2-D^2-4P=0`.  Schanuel would complete the picture by making all nonconstant polynomial shadows of `(e,pi)` transcendental. | codex-2026-06-04-S636; `HYP-2212-quadratic-discriminant-carrier-pi-e.md`; `quadratic_pi_e_carrier_s636.py`; `quadratic_pi_e_carrier_s636.out`; `quadratic-pi-e-carrier-s636.md`; HYP-2211, HYP-2210, HYP-2154, HYP-2155 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5122,3 +5123,38 @@ rank, short circuit supports, fold/sieve denominators, and observer-source
 threshold payload.  Raw time search should be the last representation.
 
 **See:** `05-knowledge/hypotheses/HYP-2211-rational-shadow-carrier-obstruction.md`; `04-computation/rational_shadow_carrier_s635.py` (+.out); `07-reflections/rational-shadow-carriers-s635.md`; HYP-2210, HYP-2209, HYP-2208, HYP-2154, HYP-2155.
+
+## HYP-2212: The pi/e quadratic carrier has a discriminant sheet, so at least two of e+pi, e*pi, e-pi are transcendental (quadratic-discriminant-carrier-pi-e, codex-2026-06-04-S636)
+
+**Status:** PROVED sharpening plus open proof routes.
+
+Let `S=e+pi`, `P=e*pi`, and `D=e-pi`.  Any two of these three shadows
+reconstruct `e` and `pi` algebraically: `S,D` reconstruct linearly;
+`S,P` reconstruct as roots of `T^2-S*T+P`; and `D,P` reconstruct as roots
+of `T^2-D*T-P` (namely `e` and `-pi`).  Therefore no pair among `{S,P,D}`
+can both be algebraic, since that would force `e` and `pi` algebraic.  Hence
+at least two of `e+pi`, `e*pi`, `e-pi` are transcendental.
+
+S636 records the discriminant sheet
+
+```text
+S^2 - 4P = D^2.
+```
+
+The PSLQ height sieve is non-proof evidence only: at 100 digits it finds no
+scalar relation of degree `<=8` and coefficient bound `<=1e8` for `S`, `P`,
+or `D`, and no pair relation of total degree `<=4` and coefficient bound
+`<=1e7` for `(S,P)`, `(S,D)`, or `(P,D)`.  It does detect the structural
+degree-2 relation `S^2-D^2-4P=0`.
+
+Schanuel's conjecture would complete the picture by implying algebraic
+independence of `e` and `pi`; then every nonconstant algebraic-coefficient
+polynomial shadow of `(e,pi)` would be transcendental.  Direct exponential
+lifts such as `exp(S)=exp(e)exp(pi)` stall because they require algebraic
+independence for exponentials of transcendental inputs.
+
+LRC translation: trace/norm clocks need a discriminant/branch sheet.  Reset
+period and relation lattice are not enough unless observer-source/sink labels,
+pinch owners, and short-circuit branch data survive the quotient.
+
+**See:** `05-knowledge/hypotheses/HYP-2212-quadratic-discriminant-carrier-pi-e.md`; `04-computation/quadratic_pi_e_carrier_s636.py` (+.out); `07-reflections/quadratic-pi-e-carrier-s636.md`; HYP-2211, HYP-2210, HYP-2154, HYP-2155.

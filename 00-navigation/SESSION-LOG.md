@@ -10,6 +10,16 @@
 **Synthesis:** A reusable obstruction schema emerges: if two quotient shadows together reconstruct a forbidden tame carrier, then at least one shadow must retain the hard coordinate.  Next targets are a generic `two_shadow_obstruction` helper, LRC preprocessing by `(reset period, relation lattice, short circuits)`, and unit-distance/tournament ledgers that retain spine/bulk/transporter layers instead of raw scalars.
 **Artifacts:** HYP-2211, `07-reflections/rational-shadow-carriers-s635.md`, T704, result-index and concept-map updates.
 
+## codex-2026-06-04-S636 - quadratic pi/e discriminant carrier and three-shadow sharpening (HYP-2212)
+
+**Prompt:** Think about how `T^2 - S*T + P` connects to the repo's pi/e understanding; creatively push dis/proof routes for rationality of `e+pi`, `e*pi`, etc.; achieve anything interesting.
+**Integration:** Extends S635/HYP-2211's trace/norm carrier, the older `transcendental_bases_s116h.py` pi/e comma thread, and S634/HYP-2210's warning that observer-blind quotienting loses branch data.
+**Computation:** Added `04-computation/quadratic_pi_e_carrier_s636.py` and stored `05-knowledge/results/quadratic_pi_e_carrier_s636.out`.  The script defines `S=e+pi`, `P=e*pi`, `D=e-pi`, proves the pairwise reconstruction ledger, checks the discriminant identity, runs a small PSLQ height sieve, and ranks proof routes by Tournament Analysis.
+**Finding:** Unconditional sharpening: no two of `{S,P,D}` can both be algebraic, because `S,D` reconstruct linearly, `S,P` reconstruct by `T^2-S*T+P`, and `D,P` reconstruct by `T^2-D*T-P`.  Therefore at least two of `e+pi`, `e*pi`, and `e-pi` are transcendental.
+**Proof-route map:** Schanuel would complete the picture by making `e` and `pi` algebraically independent, hence all nonconstant polynomial shadows transcendental.  Direct exponential lifts (`exp(S)=exp(e)exp(pi)`, `pi=P/e`) stall because they need algebraic independence of exponentials of transcendental inputs, not just Lindemann-Weierstrass/Gelfond-Schneider.
+**Tournament Analysis:** Vertices are proof routes; the route tournament is transitive with one Hamiltonian path and ranks `three_shadow_pair_obstruction > quadratic_trace_norm_carrier > lrc_clock_descent_analogy > exponential_lift_relations > pslq_height_sieve > schanuel_ai_completion > log_commensurability_ln_pi > raw_decimal_near_misses`.
+**Artifacts:** HYP-2212, `07-reflections/quadratic-pi-e-carrier-s636.md`, T705, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
