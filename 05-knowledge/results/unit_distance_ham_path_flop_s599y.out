@@ -1,0 +1,31 @@
+ n | edges(Harborth) | mindeg | traceable(unit Ham path)? | UNIT-PATH split: (n-1)+tiles
+  3 |   3 (H=3) | 2 | True | 2+1
+  4 |   5 (H=5) | 2 | True | 3+2
+  5 |   7 (H=7) | 2 | True | 4+3
+  6 |   9 (H=9) | 2 | True | 5+4
+  7 |  12 (H=12) | 3 | True | 6+6
+  8 |  14 (H=14) | 2 | True | 7+7
+  9 |  16 (H=16) | 2 | True | 8+8
+ 10 |  19 (H=19) | 3 | True | 9+10
+ 11 |  21 (H=21) | 2 | True | 10+11
+ 12 |  24 (H=24) | 3 | True | 11+13
+ 13 |  26 (H=26) | 2 | True | 12+14
+ 14 |  29 (H=29) | 3 | True | 13+16
+ 15 |  31 (H=31) | 2 | True | 14+17
+ 16 |  34 (H=34) | 3 | True | 15+19
+ 17 |  36 (H=36) | 2 | True | 16+20
+ 18 |  39 (H=39) | 3 | True | 17+22
+ 19 |  42 (H=42) | 3 | True | 18+24
+ 20 |  44 (H=44) | 2 | True | 19+25
+ 21 |  47 (H=47) | 3 | True | 20+27
+ 22 |  49 (H=49) | 3 | True | 21+28
+ 23 |  52 (H=52) | 3 | True | 22+30
+ 24 |  55 (H=55) | 3 | True | 23+32
+ 25 |  57 (H=57) | 2 | True | 24+33
+ 26 |  60 (H=60) | 3 | True | 25+35
+ 27 |  63 (H=63) | 3 | True | 26+37
+ 28 |  65 (H=65) | 2 | True | 27+38
+
+Reading: traceable=True => the optimal unit-distance graph HAS a unit Ham path, so the
+tiling base path can be ALL unit. If it stays True for all n, the 'flop' never happens on
+the lattice optimum: n-1 unit edges are the base path, the rest (~2n) are unit flipped tiles.
