@@ -1,12 +1,13 @@
 ﻿# Session Log
 
-## codex-2026-06-04-S624 - LRC/unit-distance channel-complete ledger reserved (HYP-2197)
+## codex-2026-06-04-S624 - LRC/unit-distance channel-complete ledger (HYP-2197)
 
 **Prompt:** Spend a long overnight session bouncing back and forth between the LRC and unit distance problem.
-**Namespace claim:** Reserved S624/HYP-2197/T693 for a bridge packet after confirming those identifiers were unclaimed. The reservation is intentionally explicit because the prior S623 packet had to be renumbered after rebase revealed HYP-2195 was already claimed by the T_11 Betti completion.
-**Bridge thesis:** LRC and unit-distance progress should be compared through channel-complete frontier ledgers rather than raw scalar beams. LRC has the S599w-x survival-bitmask frontier over `Z/(2n-1)`, but n=14 work shows owner/carry/pinch/CRT/Cprime side channels are load-bearing. Unit distance has the S617 frontier-gain Moser carrier, but S622/S623 show direction support, width, high-gain packets, compactness, canonical orbit budget, deletion resilience, and obstruction labels are load-bearing.
-**Planned computation:** An LRC witness-orbit jackknife over `C=2n-1` survival masks, paired with the S622/S623 unit-distance impairment lanes, followed by Tournament Analysis over channel/proof-obligation vertices. Pairwise observable: whether a channel impairment changes the frontier decision. Gauges: proof relevance and scaling value, with edge flips reported.
-**Artifacts so far:** HYP-2197 stub, `07-reflections/lrc-unit-distance-channel-ledger-s624.md`, T693, concept-map entry.
+**Namespace claim:** Reserved S624/HYP-2197/T693 for a bridge packet after confirming those identifiers were unclaimed. The reservation was explicit because the prior S623 packet had to be renumbered after rebase revealed HYP-2195 was already claimed by the T_11 Betti completion.
+**Computation:** Added `04-computation/lrc_unit_distance_channel_ledger_s624.py` and stored `05-knowledge/results/lrc_unit_distance_channel_ledger_s624.out`. The script computes an LRC witness-orbit jackknife over `C=2n-1` survival masks, a lightweight Moser direction/gain impairment at target `9`, and a Tournament Analysis over channel/proof-obligation vertices.
+**Findings:** LRC n=14 AP, repo `Vstar`, and doubled AP are blocked at `C=27`; deleting gcd `1/3/9` witness orbits releases `18/6/2` residues respectively, with the tiny gcd-9 pair killed four times in the intact ledger. Prime `C=23` has one raw witness orbit, so raw shell damage disappears and lift/carry side channels become the next locus. On the Moser side, target `9`, width `30`, reaches `18` edges; direction-drop loss histogram is `{0:3,2:6}`, and gain ceilings `1,2,3,4` give `9,15,16,18` edges.
+**Tournament Analysis:** Vertices are channels/proof obligations, not runners or points. Both proof-relevance and scaling-value gauges are transitive with one Hamiltonian path, zero directed `3`-cycles, and singleton SCCs, but they flip `19/36` edges. Proof gauge ranks channel-complete ledger and LRC owner/carry/pinch fiber highest; scaling gauge ranks raw survival bitmask and canonical orbit budget highest. This separates proof relevance from scaling value.
+**Artifacts:** HYP-2197, `07-reflections/lrc-unit-distance-channel-ledger-s624.md`, T693, result-index and concept-map updates.
 
 ## monad-compute-2026-06-03-S2 - T_11 GLMY Betti COMPLETE from scratch, all 11 eigenspaces (INV-143 closed)
 

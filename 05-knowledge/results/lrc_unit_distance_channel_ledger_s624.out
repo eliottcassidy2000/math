@@ -1,0 +1,163 @@
+S624 LRC / UNIT-DISTANCE CHANNEL LEDGER
+=======================================
+
+LRC WITNESS-ORBIT JACKKNIFE
+---------------------------
+Predicate: C-tick witness survival over C=2n-1.
+Impairment: delete one <2,-1> witness orbit from the test.
+Damage: released residues that would become false survivors in the impaired quotient.
+
+n= 8 C=15 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7)
+  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8}
+  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4}
+  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2}
+
+n= 8 C=15 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 7, 12)
+  orbit_gcd=1  size= 8 released= 8 depth=[1,1] hist={1: 8}
+  orbit_gcd=3  size= 4 released= 4 depth=[1,1] hist={1: 4}
+  orbit_gcd=5  size= 2 released= 2 depth=[2,2] hist={2: 2}
+
+n=11 C=21 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2}
+
+n=11 C=21 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 10, 18)
+  orbit_gcd=1  size=12 released=12 depth=[1,1] hist={1: 12}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=7  size= 2 released= 2 depth=[3,3] hist={3: 2}
+
+n=12 C=23 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+  orbit_gcd=1  size=22 released=22 depth=[1,1] hist={1: 22}
+
+n=12 C=23 Vstar      survivors= 2 status=survives speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 20)
+  orbit_gcd=1  size=22 released=20 depth=[0,2] hist={0: 2, 1: 18, 2: 2}
+
+n=14 C=27 AP         survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+
+n=14 C=27 Vstar      survivors= 0 status=blocked speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+
+n=14 C=27 doubled_AP survivors= 0 status=blocked speeds=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
+  orbit_gcd=1  size=18 released=18 depth=[1,1] hist={1: 18}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=9  size= 2 released= 2 depth=[4,4] hist={4: 2}
+
+n=14 C=27 fib_chain  survivors= 2 status=survives speeds=(1, 3, 4, 7, 11, 18, 29, 47, 76, 123, 199, 322, 521)
+  orbit_gcd=1  size=18 released=16 depth=[0,2] hist={0: 2, 1: 12, 2: 4}
+  orbit_gcd=3  size= 6 released= 6 depth=[1,1] hist={1: 6}
+  orbit_gcd=9  size= 2 released= 2 depth=[3,3] hist={3: 2}
+
+Reading:
+- Composite C shells split into wide shallow channels and narrow redundant channels.
+- At n=14, AP/Vstar/doubled_AP release 18 unit residues, 6 gcd-3 residues,
+  and 2 gcd-9 residues when those channels are omitted; the gcd-9 residues
+  are covered four times, so small mass can still be high-certainty structure.
+- The prime C=23 control has one orbit: the raw bitmask has no shell-channel
+  choice to damage, so side-channel scarcity appears only after lift/carry data.
+
+UNIT-DISTANCE LIGHTWEIGHT MOSER FINGERPRINT
+-------------------------------------------
+This recomputes a small target=9 Moser jackknife and cites S623 for the heavier atlas.
+Moser target=9 width=30: full true_edges=18, span=4
+Direction-drop loss histogram: {0: 3, 2: 6}
+  drop (-2, 1, 2, -1): loss=0, true_edges=18, span=4
+  drop (-1, -1, 1, 1): loss=0, true_edges=18, span=4
+  drop (-1, 0, 0, 0): loss=2, true_edges=16, span=4
+  drop (-1, 1, 0, 0): loss=2, true_edges=16, span=4
+  drop (-1, 2, 1, -2): loss=0, true_edges=18, span=4
+  drop (0, -1, 0, 0): loss=2, true_edges=16, span=4
+  drop (0, 0, -1, 0): loss=2, true_edges=16, span=4
+  drop (0, 0, -1, 1): loss=2, true_edges=16, span=4
+  drop (0, 0, 0, -1): loss=2, true_edges=16, span=4
+
+Gain-ceiling comparison at the same target:
+  ceiling=1: true_edges=9, span=4, gain_hist={1: 97, 2: 10, 3: 1, 4: 6}
+  ceiling=2: true_edges=15, span=5, gain_hist={1: 115, 2: 7, 3: 1}
+  ceiling=3: true_edges=16, span=4, gain_hist={1: 93, 2: 15, 3: 1, 4: 1}
+  ceiling=4: true_edges=18, span=4, gain_hist={1: 90, 2: 18}
+
+Stored S623 parent signal: target=10 loses one edge for six of nine
+antipodal Moser directions; target=14 needs width 30 to reach 33 edges.
+
+TOURNAMENT ANALYSIS: CHANNELS AND PROOF OBLIGATIONS
+---------------------------------------------------
+Vertices: channels/proof obligations, not LRC runners or unit-distance points.
+Pairwise observable: which channel better preserves frontier decisions under impairment.
+Switches: proof-relevance gauge versus scaling-value gauge.
+
+proof gauge
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  tie Hamiltonian path:
+    score=8 channel-complete ledger: keeps both scalar frontier and side channels
+    score=7 LRC owner/carry/pinch fiber: reattaches the rare labels needed by n=14 quotient proofs
+    score=6 UD gain-threshold solver: asks for gain-4/5 extension packets before geometry checks
+    score=5 LRC witness-orbit jackknife: tests which C=2n-1 residue channels are load-bearing
+    score=4 UD direction-drop jackknife: tests unit-shell indispensability by leave-one-direction-out
+    score=3 UD canonical orbit budget: separates duplicate traffic from mathematical scarcity
+    score=2 raw survival bitmask: fast LRC scalar frontier but forgets lift/carry proof data
+    score=1 raw wider Moser beam: more compute without naming the retained invariant
+    score=0 count-only quotient: same scalar count can be non-equivalent across channels
+
+scaling gauge
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_path_count=1
+  tie Hamiltonian path:
+    score=8 raw survival bitmask: fast LRC scalar frontier but forgets lift/carry proof data
+    score=7 UD canonical orbit budget: separates duplicate traffic from mathematical scarcity
+    score=6 UD gain-threshold solver: asks for gain-4/5 extension packets before geometry checks
+    score=5 LRC witness-orbit jackknife: tests which C=2n-1 residue channels are load-bearing
+    score=4 UD direction-drop jackknife: tests unit-shell indispensability by leave-one-direction-out
+    score=3 channel-complete ledger: keeps both scalar frontier and side channels
+    score=2 raw wider Moser beam: more compute without naming the retained invariant
+    score=1 count-only quotient: same scalar count can be non-equivalent across channels
+    score=0 LRC owner/carry/pinch fiber: reattaches the rare labels needed by n=14 quotient proofs
+
+Edge flips between gauges: 19 / 36
+  flip: channel-complete ledger <> LRC witness-orbit jackknife
+  flip: channel-complete ledger <> UD direction-drop jackknife
+  flip: channel-complete ledger <> UD gain-threshold solver
+  flip: channel-complete ledger <> UD canonical orbit budget
+  flip: channel-complete ledger <> raw survival bitmask
+  flip: LRC witness-orbit jackknife <> LRC owner/carry/pinch fiber
+  flip: LRC witness-orbit jackknife <> UD canonical orbit budget
+  flip: LRC witness-orbit jackknife <> raw survival bitmask
+  flip: UD direction-drop jackknife <> LRC owner/carry/pinch fiber
+  flip: UD direction-drop jackknife <> UD canonical orbit budget
+  flip: UD direction-drop jackknife <> raw survival bitmask
+  flip: UD gain-threshold solver <> LRC owner/carry/pinch fiber
+  flip: UD gain-threshold solver <> UD canonical orbit budget
+  flip: UD gain-threshold solver <> raw survival bitmask
+  flip: LRC owner/carry/pinch fiber <> UD canonical orbit budget
+  flip: LRC owner/carry/pinch fiber <> raw survival bitmask
+  flip: LRC owner/carry/pinch fiber <> raw wider Moser beam
+  flip: LRC owner/carry/pinch fiber <> count-only quotient
+  flip: UD canonical orbit budget <> raw survival bitmask
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertices considered: LRC runners, LRC witness residues, shell/gcd
+strata, owner routes, carry cocycles, unit-distance points, unit directions,
+gain packets, deletion cores, canonical orbit classes, obstruction filters,
+and proof obligations.
+Chosen vertices: channels/proof obligations, because the preserved predicate
+is whether a damaged method changes the frontier decision.
+Information preserved: C-tick survival response, witness-orbit release mass,
+Moser direction loss, gain-ceiling loss, and channel ranking under two gauges.
+Information destroyed: exact continuous LRC time geometry, arbitrary integer
+lift provenance, full unit-distance embedding outside the finite carrier, and
+proof-grade totally-unfaithful obstruction certificates.
+Challenged assumption: widening a frontier-gain beam is the next unit of
+progress.  The bridge table says widen only after naming the side channel that
+the width is preserving.
+
