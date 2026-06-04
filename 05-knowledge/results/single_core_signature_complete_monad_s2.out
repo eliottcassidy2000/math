@@ -1,0 +1,79 @@
+[selftest] passed: THM-344 sigs -> r=31; canonicalisation r-invariant; 1·0^k -> 2^{k-1}
+
+COMPLETE single-core achievable-set audit  (monad-compute-2026-06-04-S2)
+value bound R = 131072 = 2^17;  rigorous length cap Lmax = 20
+(every achievable r in (0,131072] has a canonical witness of length <= 20)
+========================================================================
+
+TARGET VERDICTS (r -> H = 1+2r):
+  r=   3  H=    7 : UNACHIEVABLE (PERMANENT GAP: no string of any length)
+  r=  10  H=   21 : UNACHIEVABLE (PERMANENT GAP: no string of any length)
+  r=  31  H=   63 : ACHIEVABLE (first appears at length 7)
+  r=  94  H=  189 : UNACHIEVABLE (PERMANENT GAP: no string of any length)
+
+FULL GAP SET in [1,131072] : 65554 unachievable values
+  smallest 40 gaps: [3, 6, 10, 14, 17, 20, 21, 24, 27, 28, 29, 33, 35, 37, 38, 41, 44, 46, 50, 52, 54, 55, 56, 59, 62, 65, 66, 67, 68, 73, 74, 77, 80, 81, 86, 87, 88, 91, 94, 96]
+  -> as H=1+2r, smallest 40: [7, 13, 21, 29, 35, 41, 43, 49, 55, 57, 59, 67, 71, 75, 77, 83, 89, 93, 101, 105, 109, 111, 113, 119, 125, 131, 133, 135, 137, 147, 149, 155, 161, 163, 173, 175, 177, 183, 189, 193]
+
+ACHIEVABLE values in [1,64]: [1, 2, 4, 5, 7, 8, 9, 11, 12, 13, 15, 16, 18, 19, 22, 23, 25, 26, 30, 31, 32, 34, 36, 39, 40, 42, 43, 45, 47, 48, 49, 51, 53, 57, 58, 60, 61, 63, 64]
+first-appearance length for achievable r<=64:
+    r=  1 -> H=  3  first length 2
+    r=  2 -> H=  5  first length 3
+    r=  4 -> H=  9  first length 4
+    r=  5 -> H= 11  first length 4
+    r=  7 -> H= 15  first length 5
+    r=  8 -> H= 17  first length 5
+    r=  9 -> H= 19  first length 5
+    r= 11 -> H= 23  first length 5
+    r= 12 -> H= 25  first length 6
+    r= 13 -> H= 27  first length 6
+    r= 15 -> H= 31  first length 6
+    r= 16 -> H= 33  first length 6
+    r= 18 -> H= 37  first length 6
+    r= 19 -> H= 39  first length 6
+    r= 22 -> H= 45  first length 6
+    r= 23 -> H= 47  first length 6
+    r= 25 -> H= 51  first length 6
+    r= 26 -> H= 53  first length 7
+    r= 30 -> H= 61  first length 7
+    r= 31 -> H= 63  first length 7
+    r= 32 -> H= 65  first length 7
+    r= 34 -> H= 69  first length 7
+    r= 36 -> H= 73  first length 7
+    r= 39 -> H= 79  first length 7
+    r= 40 -> H= 81  first length 7
+    r= 42 -> H= 85  first length 8
+    r= 43 -> H= 87  first length 7
+    r= 45 -> H= 91  first length 8
+    r= 47 -> H= 95  first length 7
+    r= 48 -> H= 97  first length 7
+    r= 49 -> H= 99  first length 8
+    r= 51 -> H=103  first length 8
+    r= 53 -> H=107  first length 7
+    r= 57 -> H=115  first length 8
+    r= 58 -> H=117  first length 8
+    r= 60 -> H=121  first length 8
+    r= 61 -> H=123  first length 8
+    r= 63 -> H=127  first length 8
+    r= 64 -> H=129  first length 8
+
+largest gap value <= 131072: 131067
+  gaps in (0,65536]: 32631  (49.791% of that window)
+  gaps in (65536,131072]: 32923  (50.237% of that window)
+
+CROSS-CHECK vs S11 (all 2^m strings, m=2..16; targets 3,10,31):
+  m= 2: r=3:absent, r=10:absent, r=31:absent
+  m= 3: r=3:absent, r=10:absent, r=31:absent
+  m= 4: r=3:absent, r=10:absent, r=31:absent
+  m= 5: r=3:absent, r=10:absent, r=31:absent
+  m= 6: r=3:absent, r=10:absent, r=31:absent
+  m= 7: r=3:absent, r=10:absent, r=31:present
+  m= 8: r=3:absent, r=10:absent, r=31:present
+  m= 9: r=3:absent, r=10:absent, r=31:present
+  m=10: r=3:absent, r=10:absent, r=31:present
+  m=11: r=3:absent, r=10:absent, r=31:present
+  m=12: r=3:absent, r=10:absent, r=31:present
+  m=13: r=3:absent, r=10:absent, r=31:present
+  m=14: r=3:absent, r=10:absent, r=31:present
+  m=15: r=3:absent, r=10:absent, r=31:present
+  m=16: r=3:absent, r=10:absent, r=31:present
