@@ -1,0 +1,43 @@
+==============================================================================
+  EXHAUSTIVE H-SPECTRUM at n=9 via isomorph-free enumeration
+==============================================================================
+
+    n    classes   expected      mark     cum_s
+    2          1          1        OK     0.00s
+    3          2          2        OK     0.00s
+    4          4          4        OK     0.00s
+    5         12         12        OK     0.01s
+    6         56         56        OK     0.05s
+    7        456        456        OK     0.65s
+    8      6,880       6880        OK     8.88s
+    9    191,536     191536        OK   554.04s
+
+  [H] computing H over all 191,536 iso classes at n=9 ...
+      done in 363.3s
+
+==============================================================================
+  RESULTS — n=9 EXHAUSTIVE H-SPECTRUM
+==============================================================================
+  iso classes            : 191,536  (A000568(9)=191536)
+  all H odd              : True
+  distinct H values      : 1520
+  H range                : [1, 3357]
+  # strong-achieved H vals: 1482
+
+  GAP SET (odd, not achieved, in [1,3357]): 159 values
+    low gaps (<=609)     : [7, 21]
+    high gaps (>609)     : 157 values (first/last: 2883..3355)
+
+  --- comparison to exhaustive n=8 (h_spectrum_n8_exhaustive_monad) ---
+    n=8 low gaps [1,609] : [7, 21]  (permanent {7,21})
+    n=9 low gaps [1,609] : [7, 21]
+    => {7,21} REMAIN the only low gaps at n=9 (consistent with permanent gap set).
+    n=8 high gaps (>609) : [611, 615, 617, 619, 623, 625, 635, 647, 655] (max H=661)
+    of those, achieved at n=9: [611, 615, 617, 619, 623, 625, 635, 647, 655]
+
+  n=8 max H = 661; n=9 max H = 3357  (delta 2696)
+
+  histogram saved: /tmp/math-compute-160990/math/04-computation/../05-knowledge/results/h_spectrum_n9_histogram_monad_s6.tsv
+  gap list saved : /tmp/math-compute-160990/math/04-computation/../05-knowledge/results/h_spectrum_n9_gaps_monad_s6.txt
+
+  DONE.
