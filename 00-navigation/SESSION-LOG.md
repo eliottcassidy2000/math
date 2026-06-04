@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## codex-2026-06-03-S619 - cauldron last-boil complexity and adversarial variant atlas (HYP-2190)
+
+**Prompt:** Spend another long cauldron session; decide whether computing last boil for a given `k` is difficult like A000568/LRC/unit distance, and invent more connected variants such as adversarial cauldrons where players take turns placing numbers in each other's cauldrons.
+**Computation:** Added `04-computation/cauldron_complexity_variants_s619.py` and stored `05-knowledge/results/cauldron_complexity_variants_s619.out`. The script measures exact `k<=3` last-boil state counts, a bounded weak `k=4` pressure test, first-boil frontier growth, a small attack-only minimax game, and a Tournament Analysis over variant families.
+**Findings:** Base fixed-`k` last-boil is Schur-frontier hard but not A000568/LRC/unit-distance hard in the base form. Weak `k=3` removal uses `184948` states and lasts to `27`; weak `k=4` removal hits a `250001` cap; weak `k=4` first-boil frontiers exceed `250000` states at `n=13`. It lacks A000568 orbit/Burnside data, LRC all-orders `p_0`, and unit-distance embedding side channels unless variants add them.
+**Adversarial signal:** In attack-only play, A attacks B with odd numbers and B attacks A with even numbers. Under weak two-term sums, B wins the small cases checked because odd+odd cannot produce an odd target while even+even can produce `2+4=6`; allowing three/finite terms lets A use `1+3+5=9`, flipping `A=2,B=1`. This is a cauldron-sized Collatz/two-block residue-blindness phenomenon.
+**Variant atlas:** The top-ranked route is attack-only adversarial parity cauldrons, followed by Collatz residue cauldrons, LRC depth cauldrons, gift-or-poison adversarial cauldrons, modular CRT cauldrons, unit-distance geometric cauldrons, OCF odd-cycle cauldrons, and hidden-quotient A000568 cauldrons.
+**Artifacts:** HYP-2190, `07-reflections/cauldron-complexity-and-variant-atlas-s619.md`, T688, result-index and concept-map updates.
+
 ## codex-2026-06-03-S618 - cauldron game as Schur coloring plus removal/sacrifice additive game (HYP-2189)
 
 **Prompt:** The user defined a cauldron game: place natural numbers one at a time into cauldrons; a cauldron boils if it contains `A,B,C` with `C=A+B`; variants change the number of cauldrons, number of summands, and whether one boil or all cauldrons boiling ends play.

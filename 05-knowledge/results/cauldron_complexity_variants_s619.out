@@ -1,0 +1,83 @@
+S619 CAULDRON COMPLEXITY AND VARIANT ATLAS
+==========================================
+DIFFICULTY VERDICT
+------------------
+Base fixed-k last-boil is Schur-frontier hard, not A000568/LRC/unit-distance hard.
+  Reason: the state is a canonical tuple of live sum-free color classes; no S_n graph
+  isomorphism, no continuous p0 coimage, and no geometric embedding side-channel is present.
+  But k as a growing parameter inherits Schur/Rado-style frontier explosion.
+Adversarial, hidden-quotient, LRC, and geometric cauldron variants can be as hard
+  as the repo's larger problems because they add alternating quantifiers, orbit
+  side-data, all-orders coverage, or embedding obstructions.
+
+ONE-PLAYER LAST-BOIL EVIDENCE
+-----------------------------
+two-term cauldron (distinct, terms 2..2): k=1:last=3,states=3; k=2:last=10,states=80; k=3:last=27,states=184948
+two-term classical (repeated, terms 2..2): k=1:last=2,states=2; k=2:last=7,states=20; k=3:last=20,states=6020
+finite-sums cauldron (distinct, terms 2..unbounded): k=1:last=3,states=3; k=2:last=10,states=77; k=3:last=25,states=62554
+bounded k=4 weak-removal pressure test: last=None, states=250001, capped=True
+
+FIRST-BOIL FRONTIER GROWTH
+--------------------------
+weak two-term k=3 frontiers: n=5:27, n=10:920, n=15:2929, n=20:357, n=23:3, n=24:0
+weak two-term k=4 frontiers: n=5:37, n=10:12995, n=12:108640, n=13:250001+
+k=4 crossed the 250000 frontier cap already at n=13; no last-boil value claimed.
+
+ADVERSARIAL ATTACK-ONLY GAME
+----------------------------
+Rule: on odd n, A places n into one of B's cauldrons; on even n, B places n into one of A's.
+Terminal: if your cauldrons are all boiled, you lose.
+two-term cauldron (distinct, terms 2..2):
+  A=1,B=1: winner=B, at_n=6, states=7
+  A=1,B=2: winner=B, at_n=6, states=15
+  A=2,B=1: winner=B, at_n=14, states=164
+  A=2,B=2: winner=B, at_n=14, states=14633
+two-or-three-term cauldron (distinct, terms 2..3):
+  A=1,B=1: winner=B, at_n=6, states=7
+  A=1,B=2: winner=B, at_n=6, states=15
+  A=2,B=1: winner=A, at_n=9, states=30
+  A=2,B=2: winner=B, at_n=14, states=9632
+finite-sums cauldron (distinct, terms 2..unbounded):
+  A=1,B=1: winner=B, at_n=6, states=7
+  A=1,B=2: winner=B, at_n=6, states=15
+  A=2,B=1: winner=A, at_n=9, states=30
+  A=2,B=2: winner=B, at_n=14, states=9632
+Reading: with two-term sums, A attacks only with odd numbers and cannot make
+  an odd target from odd+odd, while B's even stream can make 2+4=6 and beyond.
+  Allowing three/finite terms lets A use 1+3+5=9, flipping the asymmetric 2-vs-1 case.
+
+VARIANT ATLAS / TOURNAMENT ANALYSIS
+-----------------------------------
+Vertices: cauldron variants and proof routes.
+Pairwise observable: weighted score = 2*repo_connection + 2*proof_payload +
+  difficulty + novelty + computability; ties use shorter certificate names.
+Switch/gauge: prefer variants that retain side-channel payload while still being computable.
+Score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}
+Directed 3-cycles: 0
+Hamiltonian-path count: 1
+Ranking:
+   1. attack-only adversarial parity cauldrons (score=34, log10 score=1.53)
+      turn order splits odd/even attack streams; a correlated residue can beat density
+   2. Collatz residue cauldrons (score=31, log10 score=1.49)
+      ingredients are 2/3 residue blocks; boil on correlated blind-density residues
+   3. LRC depth cauldrons (score=31, log10 score=1.49)
+      a cauldron boils when its danger arcs cover the observer circle, p0=0
+   4. gift-or-poison adversarial cauldrons (score=31, log10 score=1.49)
+      players may place n into own or opponent cauldrons; PSPACE-style finite game
+   5. modular CRT cauldrons (score=31, log10 score=1.49)
+      cauldrons live in Z/mZ and boil on zero-sum/subset-sum residues
+   6. unit-distance geometric cauldrons (score=31, log10 score=1.49)
+      points are placed into cauldrons; boil on unit edges/triangles or unfaithful embeddings
+   7. OCF odd-cycle cauldrons (score=30, log10 score=1.48)
+      odd cycles are ingredients; boil on forbidden independence-polynomial values
+   8. hidden-quotient A000568 cauldrons (score=28, log10 score=1.45)
+      state is observed only up to relabelling/orbit type, forcing Burnside-style side data
+   9. upper-cap certificate cauldrons (score=28, log10 score=1.45)
+      a boil creates a reusable certificate bounding all later safe placements
+  10. finite-sums frontier cauldrons (score=27, log10 score=1.43)
+      pair sums become subset-sum bitmasks, an all-orders overlap toy model
+  11. misere cauldrons (score=24, log10 score=1.38)
+      players try to force their own cauldrons to boil last/first under reversed payoff
+  12. base last-boil Schur removal (score=23, log10 score=1.36)
+      finite active-state DP over unlabeled sum-free color classes
+
