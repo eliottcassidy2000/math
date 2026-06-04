@@ -1,0 +1,50 @@
+S634 APPLIED PERSPECTIVE-CARRIER SCOUT
+==============================================================================
+
+LRC / rooted tournament counting
+------------------------------------------------------------------------------
+n classes rooted fixed_by_converse rooted_mod_converse source sink source_sink_merged perspective_hist
+1       1      1                 1                   1      1    1                  1 {1: 1}
+2       1      2                 0                   1      1    1                  1 {2: 1}
+3       2      4                 2                   3      1    1                  1 {1: 1, 3: 1}
+4       4     12                 0                   6      2    2                  2 {2: 2, 4: 2}
+5      12     48                 8                  28      4    4                  4 {1: 1, 3: 4, 5: 7}
+6      56    296                 0                 148     12   12                 12 {2: 5, 4: 10, 6: 41}
+
+Interpretation:
+  * THM-381 source targets are exactly U(n-1); sink targets match by
+    converse.  Merging the source/sink pair therefore keeps U(n-1)
+    marked targets instead of carrying two separate obstruction lists.
+  * Rooted perspectives modulo converse are counted by Burnside as
+    (all rooted perspectives + SC perspective-flip fixed roots)/2.
+
+Unit-distance n=21 exact-core Hamiltonian spine audit
+------------------------------------------------------------------------------
+core edges traceable spine bulk shell min/max-degree degree_hist delete_edge_deck triangles C4 endpoint_degrees
+   1    57      True    20   37 C_hex(3) 5/8 {5: 18, 8: 3} {49: 3, 52: 18}        25   288 (5, 5)
+   2    57      True    20   37 C_hex(3) 3/7 {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} {50: 3, 51: 7, 52: 8, 53: 2, 54: 1}        23   265 (6, 3)
+   3    57      True    20   37 C_hex(3) 3/7 {3: 1, 4: 2, 5: 9, 6: 5, 7: 4} {50: 4, 51: 5, 52: 9, 53: 2, 54: 1}        23   265 (7, 3)
+   4    57      True    20   37 C_hex(3) 3/7 {3: 1, 4: 2, 5: 8, 6: 7, 7: 3} {50: 3, 51: 7, 52: 8, 53: 2, 54: 1}        23   263 (6, 3)
+   5    57      True    20   37 C_hex(3) 3/7 {3: 1, 4: 3, 5: 6, 6: 8, 7: 3} {50: 3, 51: 8, 52: 6, 53: 3, 54: 1}        23   266 (7, 3)
+
+Interpretation:
+  * Every traceable 57-edge n=21 core has an actual unit Hamiltonian
+    spine, so the S630 decomposition is graph-real: 57 = 20 + 37.
+  * The 37-edge complement to a spine is C_hex(3), a centered-hex
+    carrier rather than an H=21 tournament scalar.
+
+Application route tournament
+------------------------------------------------------------------------------
+routes=['lrc_source_sink_pairing', 'rooted_converse_quotient_counts', 'n21_unit_spine_bulk_audit', 'n22_frontier_extension_constraints', 'raw_scalar_phi3_matching']
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+directed_3_cycles=0
+leaders=['lrc_source_sink_pairing']
+
+Challenged assumptions:
+  * LRC tournament vertices need not be runners; the useful quotient here
+    is marked rooted perspectives/source obligations.
+  * Unit-distance tournament vertices need not be points; the useful
+    witness is a path-plus-bulk carrier split inside the unit graph.
+  * Counting tournament classes should not count a rooted perspective and
+    its converse obstruction separately when the perspective flip already
+    gives the involution.

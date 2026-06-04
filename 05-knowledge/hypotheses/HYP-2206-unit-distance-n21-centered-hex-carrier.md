@@ -39,6 +39,25 @@ This gives a sharper recursive pattern than the raw edge count: the non-lattice
 Moser lane beats the Eisenstein triangular carrier by adding shell/bulk
 capacity while preserving the traceable unit spine.
 
+## S634 Exact-Core Update
+
+S634 completed the first next test below.  A Hamiltonian-path DP on the five
+stored exact `n=21`, `57`-edge graph6 cores from S614 found all five traceable.
+Therefore the split
+
+```text
+57 = 20 unit-spine edges + 37 bulk edges = 20 + C_hex(3)
+```
+
+is graph-real for those exact cores, not only visible in the displayed Moser
+slab family.
+
+The core profiles are not identical.  Core 1 has degree histogram `{5:18,
+8:3}`, while cores 2-5 each have a degree-3 vertex and more varied
+deletion-edge decks.  This suggests the next `n=22` test should enumerate
+endpoint-compatible Hamiltonian spines and one-vertex ears from the exact
+cores, rather than treating all `57`-edge cores as one raw scalar class.
+
 ## Relation To n=7
 
 The `n=7` row is where two different phenomena first separate:
@@ -90,8 +109,11 @@ for `H=7` or `H=21`.
 
 ## Next Tests
 
-1. Audit the five exact `n=21`, `57`-edge graph6 cores mentioned in HYP-2203
-   and compare their bulk shells.
+1. **Done in S634:** audit the five exact `n=21`, `57`-edge graph6 cores
+   mentioned in HYP-2203 and compare their bulk shells.  All five are
+   traceable and split as `20+C_hex(3)`.
 2. Add `bulk = u(n)-(n-1)` as a first-class statistic in the Moser beam ledger.
 3. Test whether `bulk` hits centered-hex values at other exact or beam-optimal
    rows, especially near `n=19`, `21`, and `22`.
+4. Enumerate endpoint-compatible ears for the five exact `n=21` cores as a
+   focused route into the `n=22` `60/61` frontier.

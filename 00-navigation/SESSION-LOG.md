@@ -24,6 +24,15 @@
 **Integration:** Adds a focused HYP-2207 note downstream of S629/THM-409's SC perspective theorem and S630/HYP-2206's `n=21` centered-hex carrier split.
 **Synthesis:** `Phi3(2)=7` and `3*Phi3(2)=21` are recorded as primitive-cube-root carrier guardrails, not raw equalities between tournament `H`, unit-distance edge counts, SC complementing, and LRC shell arithmetic.  The same integer can be visible in multiple problems only after the relevant side channels are named.
 **Artifacts:** HYP-2207, T700, and index/concept-map updates.
+## codex-2026-06-04-S634 - applied perspective-carrier compression for LRC, unit distance, and rooted tournament counts (HYP-2210)
+
+**Prompt:** Apply the new perspective/cyclotomic/unit-spine understanding to real problems: LRC, unit distance, and counting tournament isomorphism classes; search for areas in the repo where the new frame can make progress.
+**Integration:** Rebased over incoming S630/HYP-2206 and treated it as signal.  S634 applies THM-409/HYP-2205 and the S630 n=21 carrier split to three concrete work queues: LRC observer-source targets (THM-381), rooted tournament perspectives modulo converse, and the exact `57`-edge `n=21` unit-distance graph6 cores from S614/HYP-2176.
+**Computation:** Added `04-computation/applied_perspective_carrier_s634.py` and stored `05-knowledge/results/applied_perspective_carrier_s634.out`.  The script enumerates tournament classes through `n=6`, computes rooted perspectives, self-converse fixed rooted perspectives, source/sink target counts, and the Burnside quotient by converse; it also runs a Hamiltonian-path DP on the five stored exact `n=21` unit-distance cores.
+**Findings:** LRC source targets and sink targets both equal `U(n-1)` and merge under converse to one `U(n-1)` target family.  Rooted perspectives modulo all-edge reversal are `Q_n=(P_n+F_n)/2`, giving `Q_1..Q_6 = 1,1,3,6,28,148`.  All five exact `n=21`, `57`-edge unit-distance cores are traceable, so HYP-2206's `57 = 20 + 37 = 20 + C_hex(3)` split is graph-real for the stored cores.
+**Tournament Analysis:** Vertices are proof/application routes rather than runners or point sets.  The route tournament is transitive with score histogram `{0:1,1:1,2:1,3:1,4:1}` and ranks LRC source/sink pairing first, rooted-converse quotient counts second, n=21 unit-spine audit third, n=22 extension constraints fourth, and raw `Phi_3` scalar matching last.
+**Synthesis:** The useful transfer is not scalar equality; it is side-channel retention before quotienting.  LRC retains marked threshold/source payload, tournament counts retain rooted perspectives plus converse action, and unit distance retains unit Hamiltonian spine plus centered-hex bulk.  Next targets are `Q_7`, threshold-decorated LRC source/sink quotients, endpoint-compatible ears for `n=21` cores, and a bulk-shell ledger in Moser beams.
+**Artifacts:** HYP-2210, `07-reflections/applied-perspective-carriers-s634.md`, T703, result-index and concept-map updates.
 
 ## codex-2026-06-04-S629 - SC perspective flips and cyclotomic unit-distance carriers (THM-409, HYP-2205)
 
