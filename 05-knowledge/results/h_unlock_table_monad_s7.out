@@ -1,0 +1,94 @@
+==============================================================================
+  H-UNLOCK TABLE  n=3..9  (exhaustive) + n=10,11 sampled cross-check
+==============================================================================
+
+[1] exhaustive H-sets n=3..7 (orderly engine):
+  n=3: 2 iso classes (A000568 OK), 2 distinct H, range [1,3]
+  n=4: 4 iso classes (A000568 OK), 3 distinct H, range [1,5]
+  n=5: 12 iso classes (A000568 OK), 7 distinct H, range [1,15]
+  n=6: 56 iso classes (A000568 OK), 19 distinct H, range [1,45]
+  n=7: 456 iso classes (A000568 OK), 77 distinct H, range [1,189]
+
+[2] exhaustive H-sets n=8,9 (parsed from saved census):
+  n=8: parsed 320 distinct H from exhaustive census, range [1,661]
+  n=9: parsed 1520 distinct H from exhaustive iso-classes, range [1,3357]
+
+  (generation+parse done in 0.8s)
+
+==============================================================================
+  UNLOCK CASCADE — NEW odd H values first achieved at each n
+==============================================================================
+    n  distinct H    maxH   NEW @ n  cum distinct
+    3           2       3         2             2
+    4           3       5         1             3
+    5           7      15         4             7
+    6          19      45        12            19
+    7          77     189        58            77
+    8         320     661       243           320
+    9        1520    3357      1200          1520
+
+==============================================================================
+  GAP -> UNLOCK ANALYSIS
+==============================================================================
+
+  PERMANENT-through-n=9 gaps (odd, <= n=9 maxH=3357, never achieved):
+    [7, 21, 2883, 2887, 2889, 2893, 2895, 2897, 2899, 2901, 2905, 2907, 2909, 2911, 2913, 2915, 2921, 2923, 2925, 2927, 2929, 2933, 2935, 2937, 2939, 2941, 2943, 2945, 2947, 2949, 2951, 2953, 2955, 2957, 2965, 2969, 2975, 2977, 2997, 3077] ...
+    count = 159
+    of these, LOW (<=609): [7, 21]
+    => low permanent-through-9 gap set = [7, 21]
+
+  TRANSIENT gaps that UNLOCK at a later n (gap earlier, achieved by n=9):
+         H  unlock_n   (was a gap at the levels below unlock_n)
+        35         7
+        39         7
+        63         8
+       107         8
+       119         8
+       149         8
+       161         8
+       163         8
+       165         8
+       167         8
+       169         8
+       173         8
+       177         8
+       179         8
+       181         8
+       183         8
+       185         8
+       187         8
+       611         9
+       615         9
+       617         9
+       619         9
+       623         9
+       625         9
+       635         9
+       647         9
+       655         9
+    total transient-unlock values: 27
+
+==============================================================================
+  KEY VALUES
+==============================================================================
+    H=   7: NEVER unlocks through n=9 (PERMANENT gap)
+    H=  21: NEVER unlocks through n=9 (PERMANENT gap)
+    H=  35: unlocks at n=7
+    H=  39: unlocks at n=7
+    H=  49: unlocks at n=7
+    H=  63: unlocks at n=8
+
+==============================================================================
+  SAMPLED n=10 / n=11 CROSS-CHECK (achievability lower bound only)
+==============================================================================
+  sampled n=10: 80 distinct H; sampled n=11: 1430 distinct H
+    H=7: seen in sampled levels [] (absent — consistent with permanent gap)
+    H=21: seen in sampled levels [] (absent — consistent with permanent gap)
+    low permanent-through-9 gaps beyond {7,21}: []
+    n=9 (>609) gaps seen achieved in n=10/11 samples: 9/157
+      e.g. [2883, 2893, 2895, 2957, 3107, 3163, 3199, 3211, 3287]
+
+  unlock table saved: /tmp/math-compute-418349/math/04-computation/../05-knowledge/results/h_unlock_table_monad_s7.tsv
+    (column unlock_n blank = odd H <= 3357 not achieved through n=9)
+
+  DONE.  total elapsed 0.9s
