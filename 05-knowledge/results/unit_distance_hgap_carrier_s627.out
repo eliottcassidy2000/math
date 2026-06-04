@@ -1,0 +1,109 @@
+S627 UNIT-DISTANCE H-GAP CARRIER REFRAMING
+===========================================
+
+Thesis: the meaningful H=7/H=21 relation is not a literal unit-distance tournament with 7 or 21 Hamiltonian paths.  It is a forbidden-collapse test: raw unit-edge counts may hit 7 or 21 only after their spine/tile/frontier carriers have been forgotten.
+
+EDGE-COUNT ECHO TABLE
+---------------------
+literal_H is the S599z unit-spine tournament count; it is a carrier diagnostic, not the exact planar edge count.
+n exact_u harborth_u spine exact_tiles lattice_tiles literal_H echoes
+ 3       3          3     2           1             1         1 -
+ 4       5          5     3           2             2         5 -
+ 5       7          7     4           3             3        15 exact:tournament H=7 permanent gap; lattice:tournament H=7 permanent gap
+ 6       9          9     5           4             4        43 -
+ 7      12         12     6           6             6       141 -
+ 8      14         14     7           7             7       513 -
+ 9      18         16     8          10             8      1605 -
+10      20         19     9          11            10      4915 -
+11      23         21    10          13            11         - lattice:tournament H=21 permanent gap
+12      27         24    11          16            13         - -
+13      30         26    12          18            14         - -
+14      33         29    13          20            16         - -
+
+FORBIDDEN-H CARRIER SPLITS
+--------------------------
+n=5 exact unit edges: 7 = spine 4 + tile/bulk 3; literal unit-tournament H=15.
+  Reading: the H=7 obstruction is not contradicted.  The scalar 7 is
+  legal here because it is an additive edge count split across carriers,
+  not a single tournament H evaluation.
+n=11 triangular/Harborth edges: 21 = spine 10 + lattice tile/bulk 11; exact planar u(11)=23.
+  Reading: H=21 appears as a triangular-lattice lower-bound echo, while
+  the exact small planar optimum has already jumped to 23.  Again the
+  21 is an edge/carrier scalar, not a literal H=21 tournament.
+
+TOURNAMENT ANALYSIS OVER CARRIER PACKETS
+----------------------------------------
+Vertices are carrier packets/proof obligations, not points.
+Pairwise observable: which carrier better preserves traceability, the H-gap guardrail, and the exact-vs-lattice scaling channel.
+Switches: geometry, H-gap, and scaling gauges; ties use insertion HP.
+
+geometry gauge:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0 SCCs=[[0], [1], [2], [3], [4], [5], [6], [7], [8]] H=1
+  tie Hamiltonian path:
+    score=8 unit-spine Hamiltonian path: keeps the path predicate: the unit graph is traceable
+    score=7 boundary frontier shell: records the +3 gain and perimeter deficit recursion
+    score=6 literal unit-tournament H: counts directed Hamiltonian paths; odd and avoids 7,21 in S599z
+    score=5 equidecomposability ledger: records the scissors split behind same-cardinality counts
+    score=4 tile/bulk unit-edge packet: turns u(n) into spine plus non-spine unit tiles
+    score=3 Moser/non-lattice exact carrier: keeps the exact planar side beyond the triangular lattice
+    score=2 round-LRC worry-set channel: imports the known round-tournament H-gap propagation channel
+    score=1 OCF H-gap guardrail: blocks collapsing edge counts into forbidden tournament H values
+    score=0 raw edge-count quotient: forgets whether an edge count is spine, tile, or proof side-channel
+
+H-gap gauge:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0 SCCs=[[0], [1], [2], [3], [4], [5], [6], [7], [8]] H=1
+  tie Hamiltonian path:
+    score=8 OCF H-gap guardrail: blocks collapsing edge counts into forbidden tournament H values
+    score=7 equidecomposability ledger: records the scissors split behind same-cardinality counts
+    score=6 round-LRC worry-set channel: imports the known round-tournament H-gap propagation channel
+    score=5 tile/bulk unit-edge packet: turns u(n) into spine plus non-spine unit tiles
+    score=4 literal unit-tournament H: counts directed Hamiltonian paths; odd and avoids 7,21 in S599z
+    score=3 Moser/non-lattice exact carrier: keeps the exact planar side beyond the triangular lattice
+    score=2 boundary frontier shell: records the +3 gain and perimeter deficit recursion
+    score=1 unit-spine Hamiltonian path: keeps the path predicate: the unit graph is traceable
+    score=0 raw edge-count quotient: forgets whether an edge count is spine, tile, or proof side-channel
+
+scaling gauge:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0 SCCs=[[0], [1], [2], [3], [4], [5], [6], [7], [8]] H=1
+  tie Hamiltonian path:
+    score=8 Moser/non-lattice exact carrier: keeps the exact planar side beyond the triangular lattice
+    score=7 boundary frontier shell: records the +3 gain and perimeter deficit recursion
+    score=6 equidecomposability ledger: records the scissors split behind same-cardinality counts
+    score=5 raw edge-count quotient: forgets whether an edge count is spine, tile, or proof side-channel
+    score=4 tile/bulk unit-edge packet: turns u(n) into spine plus non-spine unit tiles
+    score=3 unit-spine Hamiltonian path: keeps the path predicate: the unit graph is traceable
+    score=2 OCF H-gap guardrail: blocks collapsing edge counts into forbidden tournament H values
+    score=1 literal unit-tournament H: counts directed Hamiltonian paths; odd and avoids 7,21 in S599z
+    score=0 round-LRC worry-set channel: imports the known round-tournament H-gap propagation channel
+
+edge flips geometry vs H-gap: 23/36
+edge flips geometry vs scaling: 17/36
+edge flips H-gap vs scaling: 22/36
+
+majority carrier tournament:
+  score_hist={0: 1, 1: 1, 3: 2, 4: 1, 5: 1, 6: 1, 7: 2} directed_3cycles=5 SCCs=[[0, 1, 2, 3, 4, 6, 8], [5], [7]] H=25
+  insertion Hamiltonian path:
+    score=7 equidecomposability ledger: records the scissors split behind same-cardinality counts
+    score=3 literal unit-tournament H: counts directed Hamiltonian paths; odd and avoids 7,21 in S599z
+    score=5 Moser/non-lattice exact carrier: keeps the exact planar side beyond the triangular lattice
+    score=7 boundary frontier shell: records the +3 gain and perimeter deficit recursion
+    score=6 tile/bulk unit-edge packet: turns u(n) into spine plus non-spine unit tiles
+    score=4 unit-spine Hamiltonian path: keeps the path predicate: the unit graph is traceable
+    score=3 OCF H-gap guardrail: blocks collapsing edge counts into forbidden tournament H values
+    score=1 round-LRC worry-set channel: imports the known round-tournament H-gap propagation channel
+    score=0 raw edge-count quotient: forgets whether an edge count is spine, tile, or proof side-channel
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertices considered: points, unit pairs, nonunit pairs, distance classes, Hamiltonian paths, frontier additions, centered hex shell events, OCF cycle packets, LRC residues, and proof obligations.
+Chosen vertices: carrier packets/proof obligations.  This keeps the question close to LRC-style tournament analysis, where the vertex is the retained side channel rather than the raw object being counted.
+Preserved predicate: unit-spine traceability plus the distinction between additive edge counts and forbidden tournament H evaluations.
+Destroyed information: continuous embeddings, all optimal planar graph representatives, exact less-than/greater-than-one nonunit distances, and literal H values beyond the rows already computed.
+Challenged assumption: a scalar equality like u(5)=7 means the same thing as H(T)=7.  S627 treats it as an equidecomposability question: which pieces make up the same visible number?
+
+NEXT PROBES
+-----------
+1. Compute literal unit-tournament H for exact Moser/planar rows n=9..14.
+2. Test whether known non-lattice n>=22 candidates keep a unit-spine HP.
+3. Build a shared carrier entropy variable for Sawin's n^1.014 side and
+   the feasible OCF/proof-obligation side, avoiding raw scalar matching.
