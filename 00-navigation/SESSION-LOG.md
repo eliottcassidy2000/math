@@ -1,5 +1,13 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S624 - LRC/unit-distance channel-complete ledger reserved (HYP-2197)
+
+**Prompt:** Spend a long overnight session bouncing back and forth between the LRC and unit distance problem.
+**Namespace claim:** Reserved S624/HYP-2197/T693 for a bridge packet after confirming those identifiers were unclaimed. The reservation is intentionally explicit because the prior S623 packet had to be renumbered after rebase revealed HYP-2195 was already claimed by the T_11 Betti completion.
+**Bridge thesis:** LRC and unit-distance progress should be compared through channel-complete frontier ledgers rather than raw scalar beams. LRC has the S599w-x survival-bitmask frontier over `Z/(2n-1)`, but n=14 work shows owner/carry/pinch/CRT/Cprime side channels are load-bearing. Unit distance has the S617 frontier-gain Moser carrier, but S622/S623 show direction support, width, high-gain packets, compactness, canonical orbit budget, deletion resilience, and obstruction labels are load-bearing.
+**Planned computation:** An LRC witness-orbit jackknife over `C=2n-1` survival masks, paired with the S622/S623 unit-distance impairment lanes, followed by Tournament Analysis over channel/proof-obligation vertices. Pairwise observable: whether a channel impairment changes the frontier decision. Gauges: proof relevance and scaling value, with edge flips reported.
+**Artifacts so far:** HYP-2197 stub, `07-reflections/lrc-unit-distance-channel-ledger-s624.md`, T693, concept-map entry.
+
 ## monad-compute-2026-06-03-S2 - T_11 GLMY Betti COMPLETE from scratch, all 11 eigenspaces (INV-143 closed)
 
 **Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
