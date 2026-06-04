@@ -1,5 +1,14 @@
 ﻿# Session Log
 
+## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
+
+**Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
+**Integration:** Builds on THM-283/HYP-2074's exact SC bisections, S560/S561's A000568/SC/V_merged mirror, S632/HYP-2208's transporter framing, and the LRC round/shell quotient threads.
+**Computation:** Added `04-computation/sequence_shadow_lab_s633.py` and stored `05-knowledge/results/sequence_shadow_lab_s633.out`.  The script computes `T=A000568`, `SC`, merged/nonfixed layers, q-deformed Burnside shadows `A(m,q)`, even/odd SC bisection ratios, LRC round self-converse shadows, folded shell transporter orbit counts under `<2,-1>`, and a method-level Tournament Analysis.
+**Findings:** The SC sequence is better read as one layer of a mirror packet: `T(n)`, `SC(n)`, `(T+SC)/2`, and `(T-SC)/2`.  The even bisection is `SC(2m)=A(m,4)`; the odd bisection is the same base-4 Burnside skeleton with an extra `2^(#parts)` fixed-vertex tax.  Dominant singleton partitions suggest the recursive growth currencies `4^m/(m+1)` for even SC and `2*4^m/(m+1)` for odd SC.  The LRC skinny shadow `2^floor((m-1)/2)` and shell-orbit counts keep proof side channels such as `C=27` gcd strata `[1,3,9]`.
+**Tournament Analysis:** Vertices are extension methods, not tournament vertices.  The majority tournament is transitive with `H=1`, ranking `transporter quotient > bisection factor > fixed layer > skinny quotient > merged layer > q-shadow > raw next term`.
+**Artifacts:** HYP-2209, `07-reflections/sequence-shadow-recursions-s633.md`, T702, result-index and concept-map updates.
+
 ## codex-2026-06-04-S632 - anti-cosets everywhere transporter atlas (HYP-2208)
 
 **Prompt:** Look for anti-cosets everywhere.

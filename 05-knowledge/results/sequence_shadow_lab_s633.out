@@ -1,0 +1,121 @@
+S633 Sequence Shadow Lab
+========================
+
+Principle
+---------
+When a count is hard, compute adjacent shadows: fixed layer, merged layer, nonfixed-pair layer, q-deformation, skinny quotient, and transporter quotient.
+
+1. Tournament / self-converse mirror table
+------------------------------------------
+n  T=A000568     SC=fixed      merged=(T+SC)/2  nonfixed=(T-SC)/2  SC/T
+ 1              1              1                  1                   0 1/1
+ 2              1              1                  1                   0 1/1
+ 3              2              2                  2                   0 1/1
+ 4              4              2                  3                   1 1/2
+ 5             12              8                 10                   2 2/3
+ 6             56             12                 34                  22 3/14
+ 7            456             88                272                 184 11/57
+ 8           6880            176               3528                3352 11/430
+ 9         191536           2752              97144               94392 172/11971
+10        9733056           8784            4870920             4862136 183/202772
+11      903753248         279968          452016608           451736640 8749/28242289
+12   154108311168        1492288        77054901728         77053409440 3331/343991766
+13 48542114686912       95458560     24271105072736      24271009614176 1491540/758470541983
+14 28401423719122304      872687552  14200712295904928   14200711423217376 13635743/443772245611286
+
+SC(1..10) = 1, 1, 2, 2, 8, 12, 88, 176, 2752, 8784
+Reading: SC is the fixed layer of complement/converse; merged and nonfixed layers are easier companions when SC itself is expensive.
+
+2. q-deformed odd-cycle Burnside shadows
+----------------------------------------
+m  A(m,2)=T(m)   A(m,4)=SC(2m)  A(m,6) shadow  SC(2m+1)  odd/even
+ 1              1               1               1               2 2/1
+ 2              1               2               3               8 4/1
+ 3              2              12              38              88 22/3
+ 4              4             176            1956            2752 172/11
+ 5             12            8784          504108          279968 17498/549
+ 6             56         1492288       653050728        95458560 1491540/23317
+ 7            456       872687552   4352574626712    111698291584 158662346/1239613
+ 8           6880   1787154671104 152305122284204256 457509297625088 893572846924/3490536467
+ 9         191536 13013584213369088 284237897...337072 666295198...581120 26027156204814770/50834313333473
+10        9733056 341143107...724032 286446311...280832 349330527...778944 170571546596582069228/166573782954558459
+11      903753248 325194960...585280 157457391...175200 665999277...229248 65038991912783048550455302/31757320384291227249595
+12   154108311168 113663876...020224 476042317...593472 465567238...614208 270628277416217651200777226444/66071356810898981656275507
+Reading: even SC is exactly A(m,4); odd SC is the same sum with an extra 2^(#parts) fixed-vertex factor.  A(m,6) is not a theorem target, but it is a nearby pressure count with the same Burnside skeleton.
+
+3. Dominant-term recursion feel
+-------------------------------
+m  SC(2m+2)/SC(2m)  dominant 4^m/(m+1)  SC(2m+3)/SC(2m+1)  dominant 2*4^m/(m+1)
+ 1 2/1            2/1          4/1            4/1
+ 2 6/1            16/3          11/1            32/3
+ 3 44/3            16/1          344/11           32/1
+ 4 549/11           256/5          8749/86           512/5
+ 5 93268/549          512/3          2983080/8749         1024/3
+ 6 13635743/23317        4096/7          872642903/745770       8192/7
+ 7 2538571976/1239613      2048/1          3574291387696/872642903    4096/1
+ 8 50834313333473/6981072934   65536/9          13013578102407385/893572846924 131072/9
+ 9 1332590263636467672/50834313333473 131072/5          682286186386328276912/13013578102407385 262144/5
+Dominant partition heuristic: all singleton cycles give the recursion 4^m/(m+1) on the even bisection and twice that on the odd bisection. It is crude early but points at the right growth currency.
+
+4. Skinny and transporter shadows
+---------------------------------
+n  round-SC(n)  C=2n-1  |<2,-1>|  folded shell orbits  gcd reps  hex?
+ 3           2       5        4                    1            [1] -
+ 4           2       7        6                    1            [1] -
+ 5           4       9        6                    2         [1, 3] -
+ 6           4      11       10                    1            [1] -
+ 7           8      13       12                    1            [1] C_hex(1)
+ 8           8      15        8                    3      [1, 3, 5] -
+ 9          16      17        8                    2         [1, 1] -
+10          16      19       18                    1            [1] -
+11          32      21       12                    3      [1, 3, 7] -
+12          32      23       22                    1            [1] -
+13          64      25       20                    2         [1, 5] -
+14          64      27       18                    3      [1, 3, 9] -
+15         128      29       28                    1            [1] -
+16         128      31       10                    3      [1, 1, 1] -
+17         256      33       10                    4  [1, 3, 1, 11] -
+18         256      35       24                    3      [1, 5, 7] -
+19         512      37       36                    1            [1] C_hex(2)
+20         512      39       24                    3     [1, 3, 13] -
+21        1024      41       20                    2         [1, 1] -
+22        1024      43       14                    3      [1, 1, 1] -
+23        2048      45       24                    5 [1, 3, 5, 9, 15] -
+24        2048      47       46                    1            [1] -
+Reading: the LRC round/self-converse shadow is exponentially thinner than A000568, while transporter shell-orbits expose modulus strata. Prime C often collapses to one shell orbit; composite C creates the gcd side channels seen at C=27.
+
+5. How to extend a hard sequence without only extending it
+---------------------------------------------------------
+- Fixed layer: count structures with Anti(X) nonempty.
+- Merged layer: quotient X by J, giving (total+fixed)/2 when J is an involution.
+- Nonfixed-pair layer: (total-fixed)/2, often the generic sea.
+- q-shadow: keep the Burnside skeleton but vary the color/pressure parameter.
+- Bisection: split by parity/fixed-point factor before asking for a recurrence.
+- Transporter quotient: count Aut(X), Anti(X), and what the quotient forgets.
+- Skinny quotient: restrict to round/circular/LRC-realizable carriers.
+
+6. Tournament Analysis over sequence-extension methods
+------------------------------------------------------
+Vertices are methods, not tournament vertices. Pairwise observable: which method gives a related hard sequence while preserving proof side channels. Gauges: Burnside recursion, transporter data, LRC/unit-distance portability.
+score_hist={1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0 H=1
+  score=6: transporter quotient
+  score=5: bisection factor
+  score=4: fixed layer
+  score=3: skinny quotient
+  score=2: merged layer
+  score=1: q-shadow
+  score=0: raw next term
+
+Assumption Challenge
+--------------------
+Alternate vertices considered: raw values, partitions, automorphism groups, anti-cosets, LRC shells, q-colors, unit-distance shells, and proof obligations. Chosen vertices: extension methods.
+Preserved predicate: each hard value is surrounded by fixed, merged, bisection, q-shadow, skinny, or transporter companions. Destroyed data: individual isomorphism representatives and exact LRC/unit-distance embeddings.
+Challenged assumption: progress means the next term of the original sequence. Sometimes the better next term is a neighboring sequence whose recursion exposes the missing side channel.
+
+Interpretation
+--------------
+- A000568 and SC already form a mirror pair: total versus fixed under converse.
+- SC's even bisection is A(m,4); the odd bisection is the same base with a fixed-vertex 2^(#parts) tax.
+- The merged and nonfixed layers are useful generic companions when the fixed layer is sparse.
+- LRC round counts and shell transporter orbits are much thinner shadows that preserve proof-relevant side channels.
+- This suggests a general recipe for famous hard spaces: do not only ask for A(n+1); ask for fixed(A), merged(A), transporter(A), and skinny(A) as separate recursive probes.
