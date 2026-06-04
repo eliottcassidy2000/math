@@ -7,6 +7,12 @@ equinumerosity       = same number of quotient objects
 equidecomposability = same retained invariant fiber
 ```
 
+Incoming S599v claimed HYP-2186 for the strong-component scissors-volume
+version of this theme. S617 is now HYP-2187. The two threads line up nicely:
+S599v says strong-component multisets are scissors classes for `H`; S617 says
+the Royle/even-graph side and the older `(H,beta1)` path-homology side need a
+predicate-preserving fiber map before a count becomes a proof object.
+
 The Royle-even theorem is a cardinal shadow. It says a graph world has the same
 size as the tournament world. But the repo's older false starts show why this
 cannot be used as a proof object by itself. Degree-even Euler graphs are the

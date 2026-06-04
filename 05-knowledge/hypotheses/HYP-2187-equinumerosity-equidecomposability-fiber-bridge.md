@@ -1,11 +1,16 @@
 ---
-id: HYP-2186
+id: HYP-2187
 status: OPEN synthesis from S617; small-n audits verified, constructive Royle bridge open
 source: user-2026-06-03; codex-2026-06-03-S617
 tags: [equinumerosity, equidecomposability, tournaments, even-graphs, Royle-even, Dehn-invariant, path-homology, quotient-fibers]
 ---
 
-# HYP-2186: equinumerosity is cardinal shadow; equidecomposability is retained fiber data
+# HYP-2187: equinumerosity is cardinal shadow; equidecomposability is retained fiber data
+
+Namespace note: while S617 was closing, incoming opus-S599v claimed HYP-2186
+for the strong-component/scissors-volume synthesis. This file is HYP-2187 and
+is complementary: it audits the Royle/even-graph count cautions and the
+`(H,beta1,c3-packet)` tournament fiber refinement.
 
 S617 separates two ideas that the repo had been letting touch too loosely.
 

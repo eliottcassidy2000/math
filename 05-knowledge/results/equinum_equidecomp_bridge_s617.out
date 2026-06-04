@@ -83,7 +83,7 @@ Assumption challenge
   Challenged assumption:
     A000568-sized quotients are not automatically equivalent proof objects.
 
-Hypothesis HYP-2186:
+Hypothesis HYP-2187:
   Equinumerosity is a cardinal shadow; equidecomposability is a retained
   invariant quotient.  The bridge must be a fiber functor that records which
   side channels survive: score/cut data, beta1, and odd-cycle packets.

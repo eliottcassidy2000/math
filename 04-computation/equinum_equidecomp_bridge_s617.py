@@ -529,7 +529,7 @@ def main() -> None:
     summarize_equidecomposability()
     summarize_tournament_analysis()
     assumption_challenge()
-    print("Hypothesis HYP-2186:")
+    print("Hypothesis HYP-2187:")
     print("  Equinumerosity is a cardinal shadow; equidecomposability is a retained")
     print("  invariant quotient.  The bridge must be a fiber functor that records which")
     print("  side channels survive: score/cut data, beta1, and odd-cycle packets.")
