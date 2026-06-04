@@ -86,9 +86,21 @@ The `n=22` path is the same motif with an added outer layer:
 (0,1,1,-1) -> ... -> (0,0,0,0)
 ```
 
-This suggests a **spine-ladder recursion**: dense Moser clusters may be built
-from repeated unit-traceable slabs, with frontier-gain additions preserving a
-spanning unit path.  This is a pattern, not yet a theorem.
+S628 promotes this motif to a proved subtheorem.  THM-408 defines two explicit
+rank-4 Moser slab/cap families:
+
+```text
+P_m^+ : |P_m^+| = 8m+6,  E(P_m^+) = 27m+6 for m>=1
+P_m^- : |P_m^-| = 8m+5,  E(P_m^-) = 27m+3 for m>=1
+```
+
+Both families have Hamiltonian paths made entirely of Moser unit-shell steps.
+The S626 `n=14`, `n=21`, and `n=22` witnesses are exactly
+`P_1^+`, `P_2^-`, and `P_2^+`.  Thus the ladder is no longer just a beam
+pattern for these rows; it is an infinite traceable-section theorem.  The
+remaining open part is whether every proof-relevant dense Moser extremizer
+admits a compatible slab/ear decomposition, or whether a true extremizer can
+force incompatible ears.
 
 ## What a Genuine Flop Would Require
 

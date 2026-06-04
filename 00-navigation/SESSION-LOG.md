@@ -95,6 +95,14 @@ Prompt: map points→tournament (flip tile iff dist=1); is the tournament's mand
 **Synthesis:** The invariant should be unit-graph traceability plus the retained tie-order/spine witness. If a unit spine exists, either flip convention can carry an all-unit mandatory path after choosing the tie path from the spine. The `n=14` and `n=22` spines exhibit a repeated Moser-coordinate ladder motif, suggesting a recursive boundary-ear traceability theorem for dense Moser extremizers.
 **Artifacts:** HYP-2203, `07-reflections/unit-distance-moser-unit-spine-gauge-separation-s626.md`, T695, result-index and concept-map updates.
 
+## codex-2026-06-04-S628 - Moser spine-ladder theorem and unit spines as traceable sections (THM-408)
+
+**Prompt:** Try to make the unit spine rigorously proven and explore what it relates to abstractly.
+**Theorem:** Added THM-408. In the rank-4 Moser carrier, the explicit plus slabs `P_m^+` have `8m+6` vertices and the shifted minus slabs `P_m^-` have `8m+5` vertices; both have Hamiltonian paths made entirely of unit-shell steps. The S626 rows are `P_1^+` (`n=14`, `33` edges), `P_2^-` (`n=21`, `57` edges), and `P_2^+` (`n=22`, `60` edges).
+**Computation:** Added `04-computation/unit_distance_spine_ladder_s628.py` and stored `05-knowledge/results/unit_distance_spine_ladder_s628.out`. The certifier checks the Moser step alphabet, samples both families through `m=8`, verifies the edge-count formulas, and records a proof-route Tournament Analysis with explicit layer word and traceable section above point-order gauges.
+**Synthesis:** The unit spine is a traceable section over a carrier quotient: each full fiber is an 8-vertex Gray-code slab, caps truncate the final fiber, and `(-1,1,0,0)` is the gluing morphism. This connects directly to LRC certificate sheaves, endpoint-compatible ears, and the warning that arbitrary point-order tournaments can forget the section.
+**Artifacts:** THM-408, `07-reflections/unit-spines-as-traceable-sections-s628.md`, T697, result-index and concept-map updates.
+
 ## codex-2026-06-03-S622 - unit-distance impairment spectroscopy and small-size carrier repair techniques (HYP-2194)
 
 **Prompt:** Spend a long session drawing inspiration from other math problems and develop creative impairments to unit-distance proving/construction methods, working well at small sizes first.
