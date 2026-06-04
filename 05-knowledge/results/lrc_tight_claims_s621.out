@@ -1,0 +1,12 @@
+CLAIM D (Kravitz ladder: every primitive set with gap<1/n has g=s/(ns+1), s in Z+):
+  n=3: 14 sets with gap<1/n; OFF-ladder: 0 []
+  n=4: 19 sets with gap<1/n; OFF-ladder: 0 []
+  n=5: 14 sets with gap<1/n; OFF-ladder: 0 []
+  n=6: 18 sets with gap<1/n; OFF-ladder: 1 [((1, 5, 6, 11, 16, 17), '5/33')]
+
+CLAIM B (witnesses of every tight set == (Z/m)^* orbit in (0,1/2], count phi(m)/2):
+  n=3: orbit size 1 (phi(m)/2=1); all tights match=True
+  n=4: orbit size 2 (phi(m)/2=2); all tights match=True
+  n=5: orbit size 1 (phi(m)/2=1); all tights match=True
+  n=6: orbit size 3 (phi(m)/2=3); all tights match=True
+  n=7: orbit size 2 (phi(m)/2=2); all tights match=True
