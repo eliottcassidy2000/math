@@ -76,6 +76,17 @@
 **Tournament Analysis:** Vertices are proof routes; the majority tournament is transitive with one Hamiltonian path and ranks `local_obstruction_product_ledger > scalar_twins_side_channel_atlas > transverse_shadow_fallout_helper > discriminant_branch_labels_for_LRC > A000568_prime_sieve_shadow > H_spectrum_same_scalar_fibers > unit_distance_ear_singular_series > Schanuel_conditional_transfer > raw_scalar_numerology`.
 **Artifacts:** HYP-2216, `07-reflections/resonance-product-ledger-s640.md`, T709, result-index and concept-map updates.
 
+## codex-2026-06-04-S641 - LRC n=14 / unit-distance n=21 difficulty bridge through a 27-quantum section/bulk ledger (HYP-2217)
+
+**Prompt:** See if there is a connection between the difficulty of LRC `n=14` and unit-distance `n=21`.
+**Integration:** Builds on HYP-2164/HYP-2166/HYP-2167's LRC `Res_27` quotient tower and carry seam, HYP-2197's LRC/unit-distance channel ledger, THM-408's Moser spine-ladder theorem, HYP-2206's `57=20+C_hex(3)` carrier split, HYP-2215/HYP-2216's side-channel/product-ledger frame, and the parallel monad S6 exhaustive `n=9` H-spectrum where low gaps remain exactly `[7,21]`.
+**Computation:** Added `04-computation/lrc14_ud21_difficulty_bridge_s641.py` and stored `05-knowledge/results/lrc14_ud21_difficulty_bridge_s641.out`.  The script recomputes the LRC `C=27` AP orbit packets and verifies the named THM-408 Moser rows `P_1^+`, `P_2^-`, and `P_2^+`.
+**Findings:** The connection is real but not raw numerology.  LRC `n=14` has shell modulus `C=27=3^3`, with gcd strata `1,3,9` and open lift/CRT carry.  Unit-distance `n=21` is Moser `P_2^-`, with `57=2*27+3` unit edges, `20` spine edges, and `37=C_hex(3)` bulk.  Both frontiers have an easy retained section and a small load-bearing bulk/lift side channel.
+**H-spectrum cross-signal:** Monad S6's exhaustive tournament spectrum makes `21` look durable as an H-obstruction, but S641 keeps that separate from the bridge mechanism; UD `n=21` is not treated as a literal `H=21` realization.
+**Transfer:** The proof dictionary is `LRC C=27 shell quotient <-> Moser full-slab edge quantum 27`, `LRC unit-shell section <-> unit Hamiltonian spine`, and `lift/CRT conservativity <-> endpoint-compatible ear conservativity`.
+**Tournament Analysis:** Bridge-route vertices give a transitive tournament with one Hamiltonian path, ranking `27_quantum_section_bulk_ledger > lift_ear_conservativity_transfer > side_channel_jackknife_damage_table > same_scalar_twin_search > centered_hex_vs_gcd9_microchannel > raw_14_21_number_match`.
+**Artifacts:** HYP-2217, `07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md`, T710, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.

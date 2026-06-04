@@ -672,6 +672,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2214 | Algebraic `e+pi` or `e*pi` would be a lonely algebraic shadow.  The pi/e carrier has transverse fallout: if `log(pi)` is algebraic then `S=e+pi`, `P=e*pi`, and `D=e-pi` are all transcendental; if `S` is algebraic then every power sum `e^k+pi^k` for `k>=2` is transcendental; if `P` is algebraic then every such power sum for `k>=1` is transcendental. | S638 proves the log-pi gate using Lindemann-Weierstrass/Hermite-Lindemann, prints Newton power-sum polynomials through `k=10`, records the transverse symmetric-polynomial template, and runs a PSLQ sanity check detecting only `S^2-D^2-4P=0`.  The proof-route Tournament Analysis has `9` vertices, `score_hist={0:1,1:1,2:1,3:1,4:1,6:3,8:1}`, `1` directed 3-cycle, and `3` Hamiltonian paths. | codex-2026-06-04-S638; `HYP-2214-pi-e-lonely-shadow-fallout.md`; `pi_e_lonely_shadow_s638.py`; `pi_e_lonely_shadow_s638.out`; `pi-e-lonely-shadow-fallout-s638.md`; HYP-2213, HYP-2212, HYP-2211, HYP-2200 |
 | HYP-2215 | The shared transfer move across `H=21`, LRC `n=14`, unit-distance `n=21`, A000568, Schanuel/pi-e, twin primes, and Goldbach is side-channel jackknife: name the raw scalar, hidden witness, and retained channels, then delete or compress one channel at a time to measure released obstruction mass. | S639 builds a seven-row carrier atlas and finite toy ledgers for LRC `C=27` shells, twin-prime primorial survivors, and Goldbach `N=42` primorial survivors.  The transfer-method tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, `0` directed 3-cycles, and `1` Hamiltonian path, ranking `side_channel_jackknife > spine_bulk_decomposition > finite_window_extinction > local_prime_ledger > transverse_shadow_fallout > Burnside_transporters > quotient_collapse_test > Schanuel_style_completion > raw_scalar_numerology`. | codex-2026-06-04-S639; `HYP-2215-carrier-atlas-side-channel-transfer.md`; `obstruction_carrier_atlas_s639.py`; `obstruction_carrier_atlas_s639.out`; `obstruction-carrier-atlas-s639.md`; HYP-2214, HYP-2213, HYP-2212, HYP-2211, HYP-2209, HYP-2206, HYP-2200 |
 | HYP-2216 | Local obstruction product ledgers refine HYP-2215's side-channel jackknife: after naming the raw scalar, hidden witness, and retained channels, price each local prime/modulus/channel as a factor and isolate the transverse branch the product cannot decide. | S640 records the scalar/side-channel/barrier table, factors recurring integers, and ranks next proof routes; top route is a `local_obstruction_product_ledger` over local prime/modulus, forbidden residues, survivors, weight, and lost side channel. | codex-2026-06-04-S640; `HYP-2216-resonance-product-ledger.md`; `resonance_product_ledger_s640.py`; `resonance_product_ledger_s640.out`; `resonance-product-ledger-s640.md`; HYP-2215, HYP-2214, HYP-2213, HYP-2212, HYP-2211, HYP-2210, HYP-2200, HYP-2164 |
+| HYP-2217 | LRC `n=14` and unit-distance `n=21` share a `27`-quantum section/bulk obstruction: LRC uses `C=2n-1=27` as shell modulus, while THM-408's Moser slabs use `27` as the full-layer edge quantum. | S641 recomputes LRC AP `C=27` gcd packets `1/3/9` with redundancy prices `18/6/8`, verifies Moser rows including exact `P_2^-` with `21` vertices and `57=2*27+3=20+37` unit edges, and ranks bridge routes.  The parallel monad S6 exhaustive `n=9` H-spectrum leaves low gaps exactly `[7,21]`, supporting `21` as a durable tournament obstruction while not making UD `n=21` a literal `H=21` realization.  Top route is `27_quantum_section_bulk_ledger`; the open transfer is lift/CRT conservativity vs endpoint-compatible ear conservativity. | codex-2026-06-04-S641; `HYP-2217-lrc14-unit-distance21-difficulty-bridge.md`; `lrc14_ud21_difficulty_bridge_s641.py`; `lrc14_ud21_difficulty_bridge_s641.out`; `lrc14-unit-distance21-difficulty-bridge-s641.md`; HYP-2216, HYP-2215, HYP-2206, HYP-2197, HYP-2188, HYP-2167, HYP-2166, HYP-2164, HYP-2200, THM-408, THM-407, THM-401, THM-115 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5234,6 +5235,64 @@ is transitive with one Hamiltonian path and ranks
 `04-computation/resonance_product_ledger_s640.py` (+.out);
 `07-reflections/resonance-product-ledger-s640.md`; HYP-2215, HYP-2214,
 HYP-2213, HYP-2212, HYP-2211, HYP-2210, HYP-2200, HYP-2164.
+
+## HYP-2217: LRC n=14 and unit-distance n=21 share a 27-quantum section/bulk obstruction (lrc14-unit-distance21-difficulty-bridge, codex-2026-06-04-S641)
+**Status:** OPEN synthesis / proof-design bridge.
+S641 answers the user's question by separating a real bridge from raw
+numerology.  The connection is not that `14` and `21` are magical neighbors,
+nor that unit-distance `n=21` realizes forbidden tournament `H=21`.  The
+connection is:
+
+```text
+27-quantum + retained section + bulk/lift side channel.
+```
+
+For LRC `n=14`, `27` is the THM-401 shell modulus `C=2n-1=27=3^3`.
+THM-407 folds the shell action by `<2,-1>` into gcd strata `1,3,9`; HYP-2164
+classifies the least-positive `Res_27` section; HYP-2166/HYP-2167 isolate the
+open seam as lift/CRT carry and owner data.  S641 recomputes the AP packet:
+gcd classes release `18,6,2` residues with redundancy prices `18,6,8`.
+
+For unit distance `n=21`, `27` is the Moser full-slab edge quantum from
+THM-408:
+
+```text
+E(P_m^+) = 27m+6,   E(P_m^-) = 27m+3.
+```
+
+The exact `n=21` row is `P_2^-`, so `E=2*27+3=57`, with `20` unit-spine
+edges and `37=C_hex(3)` bulk.  The open seam is not traceability, already
+retained by the unit spine; it is endpoint-compatible ears, bulk/embedding
+labels, and obstruction data for the `n=22` frontier.
+
+The parallel monad S6 exhaustive `n=9` tournament H-spectrum gives an external
+cross-signal: among odd values up to `3357`, the low gaps through `609` are
+still exactly `[7,21]`, while the old high `n=8` gaps fill in.  This supports
+`21` as a durable tournament obstruction value, but S641 keeps it separate
+from the LRC/UD mechanism: UD `n=21` is not being treated as a literal `H=21`
+object.
+
+The bridge dictionary is:
+
+```text
+LRC C=27 shell quotient       <-> Moser full-slab edge quantum 27
+LRC unit-shell section        <-> unit Hamiltonian spine section
+LRC nonunit/carry bulk        <-> unit-distance tile/bulk and ears
+lift/CRT conservativity       <-> endpoint-compatible ear conservativity
+gcd-9 tiny high-depth channel <-> direction/gain packets with small mass
+```
+
+Tournament Analysis in S641 uses bridge routes as vertices and is transitive
+with one Hamiltonian path, ranking `27_quantum_section_bulk_ledger` above
+`lift_ear_conservativity_transfer`, `side_channel_jackknife_damage_table`,
+same-scalar twin search, centered-hex/gcd-9 microchannel comparison, and raw
+`14/21` number matching.
+
+**See:** `05-knowledge/hypotheses/HYP-2217-lrc14-unit-distance21-difficulty-bridge.md`;
+`04-computation/lrc14_ud21_difficulty_bridge_s641.py` (+.out);
+`07-reflections/lrc14-unit-distance21-difficulty-bridge-s641.md`; HYP-2216,
+HYP-2215, HYP-2206, HYP-2197, HYP-2188, HYP-2167, HYP-2166, HYP-2164,
+HYP-2200, THM-408, THM-407, THM-401, THM-115.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

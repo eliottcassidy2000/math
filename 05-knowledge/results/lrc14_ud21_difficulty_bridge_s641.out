@@ -1,0 +1,77 @@
+S641 LRC n=14 / Unit-Distance n=21 Difficulty Bridge
+====================================================
+
+LRC n=14 side
+-------------
+runner count minus observer: 13
+C=2n-1=27=3^3
+THM-407 action: residues folded by <2,-1>.
+Canonical AP row packets:
+  gcd=1  orbit_size=18 shell_reps=9 released=18 depth_hist={1: 18} redundancy_price=18
+  gcd=3  orbit_size=6  shell_reps=3 released=6  depth_hist={1: 6} redundancy_price=6
+  gcd=9  orbit_size=2  shell_reps=1 released=2  depth_hist={4: 2} redundancy_price=8
+Canonical V* row has the same 18/6/2 release profile in S624.
+Open seam: arbitrary integer lifts need carry/CRT conservativity.
+Carry identity: v=r+27k gives v == r-k (mod 14), since 27 == -1 (mod 14).
+
+Unit-distance Moser side
+------------------------
+P_1^+: m=1 vertices=14 unit_edges=33 spine=13 bulk=20 formula=33 increment_from_previous=25
+P_2^-: m=2 vertices=21 unit_edges=57 spine=20 bulk=37 formula=57 increment_from_previous=27
+P_2^+: m=2 vertices=22 unit_edges=60 spine=21 bulk=39 formula=60 increment_from_previous=27
+For m>=1, the closed formulas are:
+  plus:  |P_m^+|=8m+6, E=27m+6, bulk=19m+1
+  minus: |P_m^-|=8m+5, E=27m+3, bulk=19m-1
+The exact n=21 row is P_2^-: E=2*27+3 and bulk=37=C_hex(3).
+Open seam: endpoint-compatible ears and bulk/embedding labels for n=22.
+
+Bridge thesis
+-------------
+The connection is not that 14 and 21 are numerically adjacent in some
+mystical way.  It is that both frontiers are governed by a 27-quantum
+carrier whose proof-relevant section is easy after it is named, while
+the remaining difficulty is a small retained side channel.
+
+Dictionary:
+  LRC C=27 shell quotient  <->  Moser full-slab edge quantum 27
+  LRC unit-shell section   <->  unit Hamiltonian spine section
+  LRC nonunit/carry bulk   <->  unit-distance tile/bulk and ears
+  lift/CRT conservativity  <->  endpoint-compatible ear conservativity
+  gcd-9 tiny high-depth channel <-> direction/gain packets with small mass
+
+Practical test:
+  Build one channel-complete ledger that can delete a channel, measure
+  false survivors or lost edges, and then ask whether the lost channel
+  is exactly the lift/ear data needed for the proof.
+
+External tournament-spectrum cross-signal
+-----------------------------------------
+The parallel monad S6 exhaustive n=9 H-spectrum gives:
+  iso classes=191536, distinct H values=1520, H range=[1,3357]
+  low odd gaps <=609 are still exactly [7, 21]
+  the n=8 high gaps above 609 all fill in at n=9
+This supports treating 21 as a durable obstruction value, while the
+LRC/UD bridge itself still runs through the 27-section/bulk mechanism,
+not through a literal unit-distance realization of H=21.
+
+Tournament Analysis over bridge routes
+--------------------------------------
+vertices=6
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+tie Hamiltonian path:
+  score=5 27_quantum_section_bulk_ledger
+  score=4 lift_ear_conservativity_transfer
+  score=3 side_channel_jackknife_damage_table
+  score=2 same_scalar_twin_search
+  score=1 centered_hex_vs_gcd9_microchannel
+  score=0 raw_14_21_number_match
+
+Assumption challenge
+--------------------
+Vertices considered: LRC runners, LRC residues, gcd strata, carry
+cocycles, Moser points, Moser directions, slabs, ears, exact cores,
+and proof routes.  The script uses proof routes because the preserved
+predicate is which transfer can explain both difficulties without
+forgetting the side channel.
