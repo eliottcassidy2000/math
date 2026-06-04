@@ -1,0 +1,137 @@
+S625 UNIT-DISTANCE TOURNAMENT HAMILTONIAN PATH SCOUT
+====================================================
+
+Mapping rules:
+- unit-flip: start with the transitive base order and flip exactly unit pairs.
+- nonunit-flip: start with the transitive base order and flip nonunit pairs.
+- snake-base variant: choose the base order from a unit Hamiltonian path when one exists.
+
+TRIANGULAR CARRIER
+------------------
+n  E  exact  unitHP nonunitHP  Redei(unit-flip/nonunit-flip)  unit-flip directed HP profile
+ 2  1   Y      True   False      1/1    1/1               mode=1:1 maxU=1 allU=1 allN=0
+ 3  3   Y      True   False      2/2    2/2               mode=2:1 maxU=2 allU=1 allN=0
+ 4  5   Y      True   False      3/3    2/3               mode=2:4 maxU=3 allU=1 allN=0
+ 5  7   Y      True   False      4/4    3/4               mode=3:10 maxU=4 allU=1 allN=0
+ 6  9   Y      True   True       5/5    4/5               mode=3:21 maxU=5 allU=1 allN=0
+ 7 12   Y      True   False      4/6    3/6               mode=4:89 maxU=5 allU=0 allN=0
+ 8 14   Y      True   True       5/7    4/7               mode=5:195 maxU=6 allU=0 allN=0
+ 9 16   N      True   True       6/8    5/8               mode=5:638 maxU=7 allU=0 allN=0
+10 19   N      True   True       6/9    4/9               mode=6:2094 maxU=8 allU=0 allN=0
+11 21   N      True   True       7/10   5/10              not-counted
+12 24   N      True   True       8/11   4/11              not-counted
+13 26   N      True   True       9/12   5/12              not-counted
+14 29   N      True   True      10/13   5/13              not-counted
+15 31   ?      True   True      11/14   6/14              not-counted
+16 34   ?      True   True      11/15   5/15              not-counted
+17 36   ?      True   True      12/16   6/16              not-counted
+18 39   ?      True   True      13/17   6/17              not-counted
+19 42   ?      True   True      14/18   7/18              not-counted
+20 44   ?      True   True      15/19   8/19              not-counted
+21 47   ?      True   True      16/20   8/20              not-counted
+22 49   ?      True   True      17/21   9/21              not-counted
+
+MOSER CARRIER
+-------------
+n  E  exact  unitHP nonunitHP  Redei(unit-flip/nonunit-flip)  unit-flip directed HP profile
+ 2  1   Y      True   False      1/1    1/1               mode=1:1 maxU=1 allU=1 allN=0
+ 3  3   Y      True   False      2/2    2/2               mode=2:1 maxU=2 allU=1 allN=0
+ 4  5   Y      True   False      3/3    2/3               mode=2:4 maxU=3 allU=1 allN=0
+ 5  7   Y      True   False      4/4    3/4               mode=3:10 maxU=4 allU=1 allN=0
+ 6  9   Y      True   True       5/5    4/5               mode=3:21 maxU=5 allU=1 allN=0
+ 7 12   Y      True   False      4/6    3/6               mode=4:89 maxU=5 allU=0 allN=0
+ 8 14   Y      True   True       6/7    3/7               mode=4:263 maxU=6 allU=0 allN=0
+ 9 18   Y      True   True       6/8    4/8               mode=4:842 maxU=6 allU=0 allN=0
+10 20   Y      True   True       7/9    4/9               mode=5:3795 maxU=7 allU=0 allN=0
+11 23   Y      True   True       7/10   4/10              not-counted
+12 27   Y      True   True       9/11   5/11              not-counted
+13 30   Y      True   True       8/12   6/12              not-counted
+14 33   Y      True   True       9/13   6/13              not-counted
+
+THRESHOLD READOUT
+-----------------
+triangular:
+  graph-level unit Hamiltonian path first lost: None
+  graph-level nonunit/complement Hamiltonian path first appears: 6
+  canonical unit-flip directed all-unit path first lost: 7
+moser:
+  graph-level unit Hamiltonian path first lost: None
+  graph-level nonunit/complement Hamiltonian path first appears: 6
+  canonical unit-flip directed all-unit path first lost: 7
+
+Interpretation:
+- In every tested carrier row, the undirected unit-distance graph still has a Hamiltonian path.
+- The nonunit/complement graph first supports a Hamiltonian path at n=6, fails at the compact
+  n=7 hexagon because the center is complement-isolated, and then reappears from n=8 onward
+  in the tested compact rows.
+- The canonical tiling orientation loses an all-unit directed Hamiltonian path at n=7.
+  That is an order/tiling flop, not a geometric proof that unit Hamiltonian paths vanish.
+
+RECURSIVE PATTERNS
+------------------
+1. Unit-snake persistence: compact triangular-lattice animals grow by boundary
+   additions. A Hamiltonian snake can be extended around the new perimeter,
+   so the unit graph keeps a path even after the canonical order stops being
+   that path.
+2. Hexagon complement exception: the n=7 compact hexagon has a center adjacent
+   by unit distance to all six ring points, so the center is isolated in the
+   nonunit complement. This explains the n=6/nonunit yes, n=7/no, n>=8/yes
+   pattern in the tested rows.
+3. Tournament-order flop: with a fixed lexicographic tiling base order, all-unit
+   directed Hamiltonian paths exist through n=6 and vanish at n=7. If the base
+   order is instead chosen from a unit Hamiltonian snake, the all-unit directed
+   path is restored whenever the unit graph has a Hamiltonian path.
+4. Middle-step histograms: the directed HP profiles do not rush to all-nonunit.
+   In the tested rows, their modes sit in the middle, so the meaningful object
+   is a distance-profile distribution, not a binary unit/nonunit label.
+
+TOURNAMENT ANALYSIS OVER MAPPING LENSES
+---------------------------------------
+Vertices are mapping/proof lenses, not points.
+Pairwise observable: which lens better preserves the question
+'does the Hamiltonian path live on unit pairs, nonunit pairs, or an order artifact?'
+Switches: geometry gauge versus tiling gauge; ties use insertion Hamiltonian path.
+
+geometry gauge:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} directed_3cycles=0 H=1
+  tie Hamiltonian path:
+    score=7 unit-graph Hamiltonian path: directly tests whether unit pairs can carry the path
+    score=6 boundary-shell recursion: extend compact triangular animals by a perimeter snake
+    score=5 snake-base tiling: choose the base order from a unit Hamiltonian snake
+    score=4 nonunit-complement Hamiltonian path: detects when the complement can also carry a path
+    score=3 distance-profile HP histogram: counts directed HPs by unit-step count
+    score=2 canonical unit-flip tiling: your flip rule with fixed base order; flops at n=7
+    score=1 canonical nonunit-flip tiling: reverse flip convention; same geometry, different signs
+    score=0 raw edge optimum: edge count alone forgets path category
+
+tiling gauge:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} directed_3cycles=0 H=1
+  tie Hamiltonian path:
+    score=7 distance-profile HP histogram: counts directed HPs by unit-step count
+    score=6 canonical unit-flip tiling: your flip rule with fixed base order; flops at n=7
+    score=5 canonical nonunit-flip tiling: reverse flip convention; same geometry, different signs
+    score=4 snake-base tiling: choose the base order from a unit Hamiltonian snake
+    score=3 unit-graph Hamiltonian path: directly tests whether unit pairs can carry the path
+    score=2 boundary-shell recursion: extend compact triangular animals by a perimeter snake
+    score=1 nonunit-complement Hamiltonian path: detects when the complement can also carry a path
+    score=0 raw edge optimum: edge count alone forgets path category
+
+edge flips between gauges: 14/28
+
+ASSUMPTION CHALLENGE
+--------------------
+Alternate vertices considered: points, unit pairs, nonunit pairs, distance
+classes, Hamiltonian-path obligations, boundary-shell additions, base-order
+tiles, and recursive construction moves.
+Chosen Tournament Analysis vertices: mapping/proof lenses, because the target
+predicate is whether the guaranteed path is geometric or an artifact of the
+chosen tiling order.
+Preserved information: unit graph HP, complement HP, directed HP unit-step
+histograms, and the canonical Rédei insertion path's unit-step count.
+Destroyed information: classification of all optimal point sets, continuous
+deformation families, and exact less-than-one versus greater-than-one
+nonunit distances outside the finite carriers.
+Challenged assumption: there is a single flop threshold. The scout finds a
+canonical-order flop at n=7, but no graph-level unit-HP flop in the tested
+optimal/beam-optimal constructions.
+

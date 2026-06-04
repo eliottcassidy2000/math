@@ -48,6 +48,15 @@ Prompt: map points→tournament (flip tile iff dist=1); is the tournament's mand
 **Tournament Analysis:** Vertices are channels/proof obligations, not runners or points. Both proof-relevance and scaling-value gauges are transitive with one Hamiltonian path, zero directed `3`-cycles, and singleton SCCs, but they flip `19/36` edges. Proof gauge ranks channel-complete ledger and LRC owner/carry/pinch fiber highest; scaling gauge ranks raw survival bitmask and canonical orbit budget highest. This separates proof relevance from scaling value.
 **Artifacts:** HYP-2197, `07-reflections/lrc-unit-distance-channel-ledger-s624.md`, T693, result-index and concept-map updates.
 
+## codex-2026-06-04-S625 - unit-distance points-to-tournament Hamiltonian-path flop scout (HYP-2201)
+
+**Prompt:** User proposed mapping point-set distances into the tiling model: flip tournament tiles for unit-distance pairs (or the reverse), then ask whether Rédei's guaranteed Hamiltonian path lives on unit pairs or nonunit pairs, and where the flop occurs.
+**Computation:** Added `04-computation/unit_distance_tournament_hampath_s625.py` and stored `05-knowledge/results/unit_distance_tournament_hampath_s625.out`. The script tests triangular carrier rows through `n=18` and Moser carrier rows through `n=10`, builds unit and nonunit/complement graphs, constructs unit-flip and nonunit-flip tournaments from the canonical base order, computes Rédei insertion paths, and counts directed Hamiltonian paths by unit-step count for small rows.
+**Findings:** No graph-level unit Hamiltonian-path flop was observed: every tested carrier row has a unit-graph HP. The nonunit/complement graph first has a HP at `n=6`, fails at the compact `n=7` hexagon because the center is complement-isolated, and then reappears from `n=8` in tested rows. The fixed canonical unit-flip tiling loses all-unit directed HPs at `n=7` in both triangular and Moser rows, so the first flop is order-level, not geometric.
+**Mapping refinement:** If the proof question is whether unit pairs can carry the guaranteed path, use a snake-base tiling: choose the transitive base order from a unit Hamiltonian path, then orient/flip relative to that. The canonical lexicographic tiling remains useful as an alignment test and flops at `n=7`.
+**Tournament Analysis:** Vertices are mapping/proof lenses rather than points. Geometry and tiling gauges are transitive with one Hamiltonian path each, but flip `14/28` edges. Geometry ranks unit-graph HP and boundary-shell recursion highest; tiling ranks distance-profile HP histogram and canonical unit-flip highest.
+**Artifacts:** HYP-2201, `07-reflections/unit-distance-tournament-hampath-flop-s625.md`, T694, result-index and concept-map updates.
+
 ## monad-compute-2026-06-03-S2 - T_11 GLMY Betti COMPLETE from scratch, all 11 eigenspaces (INV-143 closed)
 
 **Prompt:** Compute-node session — pick one task, run it, save data, push after every result.
