@@ -1,0 +1,25 @@
+
+  THE LAST H=21 CASE, SHARPENED + EQUIDECOMPOSABILITY FRAMING
+======================================================================
+
+  alpha_2 distribution among tournaments with EXACTLY 6 odd cycles (alpha_1=6):
+  (H=21 requires alpha_2=2, alpha_3=0 -- the only remaining case, THM-079)
+    n=5 (exhaustive): (alpha_2,alpha_3) -> count: {(0, 0): 24}  [alpha_2=2 present? False]
+    n=6 (exhaustive): (alpha_2,alpha_3) -> count: {(0, 0): 288, (1, 0): 720}  [alpha_2=2 present? False]
+    n=7 (sampled 400k, prior run): (a2,a3) in {(0,0),(1,0)} only          [alpha_2=2 present? False]
+    n=8 (sampled 150k, prior run): a2 in {0,1,5} (dist {0:17,1:76,5:33})   [alpha_2=2 present? False]
+    => (6,2,0) profile UNREALIZED; H=21 connected case blocked. OPEN: prove for all n.
+
+  SHARPENED OPEN PROBLEM: no tournament has 6 odd cycles with exactly 2
+  vertex-disjoint pairs (alpha_1=6 => alpha_2 != 2). With THM-079 A/B/C this
+  would COMPLETE the proof that H=21 is a permanent gap (=> {7,21} complete).
+
+  EQUIDECOMPOSABILITY (type-semigroup) framing:
+   * strong (SC) tournaments = atoms/primes; H multiplicative over components.
+   * achievable H = multiplicative monoid of strong H-values (the type-semigroup).
+   * 7 atomic-blocked; 21 DOUBLY blocked (product needs atom 7; single component
+     needs the unrealized (6,2,0) profile).
+   * H = equidecomposition measure; forbidden = non-realized measures.
+   * Go link = spectral analogy (recursive value spectrum with gaps), NOT a
+     functor (H multiplies, game values add => multiplicative arithmetic, not CGT).
+
