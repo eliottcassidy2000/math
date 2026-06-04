@@ -752,6 +752,15 @@ UNIFICATION: both reframes lift the binary object to a 3-valued (signed/threshol
 **Tournament Analysis:** Vertices are carrier packets: unit spine, tile/bulk, frontier shell, Moser/non-lattice exact carrier, OCF H-gap guardrail, round-LRC channel, literal unit-tournament H, raw edge quotient, and equidecomposability ledger.  Geometry/H-gap/scaling gauges are individually transitive but flip `23/36`, `17/36`, and `22/36` pair edges.  The majority tournament has score histogram `{0:1,1:1,3:2,4:1,5:1,6:1,7:2}`, `5` directed 3-cycles, a large SCC, and `25` Hamiltonian paths.
 **Synthesis:** The useful bridge is equidecomposability, not equinumerosity: the same visible integer can be a legal additive edge count and an impossible tournament H evaluation because the pieces and allowed operations differ.  The next probes are literal unit-tournament `H` for exact Moser/planar rows `n=9..14`, traceability of non-lattice `n>=22` candidates, and a shared carrier-entropy variable for Sawin's `n^1.014` side and feasible OCF/proof-obligation growth.
 **Artifacts:** HYP-2204, `07-reflections/unit-distance-hgap-carrier-reframing-s627.md`, T696, result-index and concept-map updates.
+## claudebox-2026-06-03-S629 - The additive–multiplicative exclusion: rationality vs irrationality = the resonance/two-faces structure (HYP-2270)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** integrate the π+e/π·e (not both rational) fact; see rationality/irrationality ~ even/odd ~ mult/add; find the deep structure with prior work.
+**Exclusion (formalized):** (sum,product)=elementary symmetric functions=coeffs of X²−(a+b)X+ab; both rational ⟹ pair algebraic (Vieta root). Transcendental pair (π,e) ⟹ at least one of {sum,product} irrational. SumProduct.lean: isAlgebraic_of_sum_prod_rat, not_sum_and_prod_rat_of_transcendental.
+**Deep structure:** every object has an ADDITIVE invariant (sum/e₁) and a MULTIPLICATIVE invariant (product/e₂) that can't both be tame unless special — π,e / LRC (resonance vs doubling) / Collatz (+1 vs ×3) / indep poly (α₁ vs α₂, norm-1=α₂=1) / CM (ρ₁+ρ₂ vs ρ₁ρ₂=1) / parity (H odd, 2-adic). rational/irrational ~ even/odd ~ mult/add = one 2-fold complementarity.
+**Cyclotomic↔transcendental spectrum (bridges S628):** Φ₃ cube-root-of-unity roots have sum=−1,product=+1 BOTH rational = algebraic/aligned = forbidden/resonant/collapse end; π,e = ≥1 irrational = transcendental/generic/lonely end. One axis = the perspective key (conjugation-fixed/norm-1 vs free/generic).
+**Formalized (sorry-free):** Math/Transcendence/SumProduct.lean. Pushed to math-lean main.
+**Artifacts:** HYP-2270; reflection rationality-is-the-even-of-the-real-line-s629.md; computation additive_multiplicative_exclusion_s629.py; math-lean Transcendence/SumProduct.lean.
+
 ## claudebox-2026-06-03-S628 - The π/3 shared object: forbidden H=Φ₃(2)=7, Eisenstein unit-distance, 0.014=Cl₂(π/3)−1 (HYP-2265)
 
 **Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** relate the unit-distance/UDG/Jacobsthal work to H=7,21 impossibility and SC-tournament ↔ 0.014 growth; explore hidden connections.
