@@ -1,0 +1,76 @@
+S637 Dehn / Scissors Side-Channel Addendum
+================================================
+
+1. Corrected e and pi statement
+--------------------------------
+Let s=e+pi and p=e*pi.  Since e and pi are transcendental, they cannot both be algebraic: if s and p were algebraic, e and pi would be the two roots of x^2 - s*x + p, hence algebraic over the algebraic numbers, contradiction.
+
+Status table:
+claim/status                            reading                             reason
+both s and p algebraic                  impossible                          quadratic trap x^2-s*x+p has e,pi as roots
+s rational or merely algebraic          would force p transcendental        otherwise both symmetric coordinates are algebraic
+p rational or merely algebraic          would force s transcendental        same symmetric-coordinate trap
+both s and p transcendental/irrational  open/compatible with known theorem  the theorem proves at least one, not exactly one
+exactly one rational                    not known                           possible only as a conditional branch, not a theorem
+
+Reading: addition and multiplication are the elementary symmetric coordinates of the unordered pair {e,pi}.  The theorem is not a parity statement; it is a retained-side-channel statement about algebraic dependence.
+
+2. Rationality is not parity
+----------------------------
+channel                     closed quotient?                      failure mode / useful replacement
+odd/even                    yes: Z -> Z/2                         parity is a genuine two-color ring quotient
+rational/irrational         no                                    irrationals are not closed: sqrt(2)+(-sqrt(2)) and sqrt(2)*sqrt(2)
+algebraic/transcendental    better, but subtle                    algebraic numbers form a field; transcendence is not closed either
+algebraic dependence        best channel here                     (sum,product) can trap a two-element set over a base field
+add/multiply                bridged by symmetric polynomials      for positive values logs also convert product to sum, with new side data
+
+3. Cuboids, simplices, and Dehn side channels
+----------------------------------------------
+regular tetrahedron dihedral angle theta/pi ~= 0.391826552031
+Niven check: if theta/pi were rational and cos(theta)=1/3, Niven's rational-angle theorem would force cos(theta) in {0,+/-1/2,+/-1}; contradiction.  Thus theta is nonzero in R/(pi Q).
+
+object                                  volume channel              Dehn / retained channel
+cuboid                                  ordinary volume             zero Dehn invariant: right angles vanish in R/(pi Q)
+cube triangulated into simplices        same total volume           simplex Dehn pieces cancel in pairs/families
+regular tetrahedron                     can match cuboid volume     nonzero Dehn invariant from acos(1/3)
+tetrahedra packed in a box              volume inequality only      packing is not scissors congruence unless boundary Dehn data cancels
+
+Reading: volume is the scalar quotient; Dehn data is the side channel.  A simplex can sit inside a cuboid, and a cuboid can be triangulated into simplices, but equal volume alone does not give equidecomposability.
+
+4. Repo dictionary
+------------------
+problem                     scalar quotient             side channel that must survive
+e+pi / e*pi                 two symmetric values        algebraic-dependence trap over Qbar
+cuboid vs simplex           volume                      Dehn invariant in R/(pi Q)
+tournament H                Hamiltonian-path count      strong-component multiset, beta/c3 packets, OCF fibers
+unit-distance n=21          57 edges                    20-edge unit spine plus 37-edge centered-hex bulk
+LRC pair-sum sieve          C=2n-1 shell modulus        unit/nonunit/lift/carry/owner labels
+SC tournaments              fixed-count sequence        Aut/Anti transporter and rooted-perspective flip
+hard sequences              next term                   fixed/merged/nonfixed/q-shadow/skinny/transporter packet
+
+5. Tournament Analysis over proof lenses
+-----------------------------------------
+Vertices are proof lenses, not numbers.  Pairwise observable: which lens preserves more obstruction data before quotienting.  Gauges: algebraic certainty, scissors retention, and repo portability.
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0 H=1
+  score=8: Dehn invariant
+  score=7: carrier compression
+  score=6: algebraic-dependence channel
+  score=5: symmetric-polynomial trap
+  score=4: sequence-shadow packet
+  score=3: log add-multiply bridge
+  score=2: parity analogy
+  score=1: volume-only packing
+  score=0: raw exact-one rational claim
+
+6. Assumption Challenge
+-----------------------
+Alternate vertices considered: numbers, operations, fields, proof obligations, Dehn pieces, simplex facets, cuboid boxes, unit-distance edges, LRC shells, Fourier/log modes, and tournament carriers.  Chosen vertices: proof lenses.
+Preserved predicate: whether a scalar equality/inequality remains valid after the forgotten side channel is reattached.  Destroyed data: exact embeddings, individual point coordinates, and representative-level isomorphism data.
+Challenged assumption: rational versus irrational behaves like odd versus even.  The better analogy is not a two-color quotient but a field-of-definition side channel.
+
+7. Working hypotheses
+---------------------
+1. For unit-distance proofs, deliberately construct small witnesses where edge count is unchanged but spine traceability, bulk shell, or Dehn-like packet changes; these are the geometry analogues of e+pi/e*pi side-channel traps.
+2. For LRC, C=2n-1 is the modulus identity only after the odd-shell side channel is named; unit/nonunit/lift labels play the role that Dehn invariants play for scissors congruence.
+3. For tournament H, the forbidden values 7 and 21 should be attacked as phantom scalar volumes: no strong-component scissors packet realizes them, while nearby values realize after adding the missing component-side data.
+4. For hard sequences such as A000568/SC, the useful recursion may live in the packet of shadows around the value, not in the value itself.
