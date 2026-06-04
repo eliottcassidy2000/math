@@ -250,8 +250,8 @@ def score_lenses() -> tuple[list[str], dict[tuple[str, str], int], list[str]]:
         for rank, lens in enumerate(
             [
                 "removal active-state DP",
-                "weak Schur first-boil",
                 "finite-sums subset obligations",
+                "weak Schur first-boil",
                 "fixed-arity generalized Schur",
                 "classical Schur comparison",
                 "greedy residue coloring",
@@ -345,6 +345,7 @@ def print_removal_section() -> None:
     for spec in [
         RelationSpec("two-term cauldron", 2, 2, False, "literal distinct values"),
         RelationSpec("two-term classical", 2, 2, True, "allows A=A"),
+        RelationSpec("finite-sums cauldron", 2, None, False),
     ]:
         for k in [1, 2, 3]:
             result = max_all_boiled(k, spec)
@@ -365,6 +366,7 @@ def print_variant_notes() -> None:
     print("- Repeated-summand output is included because many Schur-number tables use that convention.")
     print("- Exactly three summands for three colors is a higher generalized Schur-number problem; this scout does not brute-force its threshold.")
     print("- Finite-sums means any distinct finite subset of size at least 2 summing to another value; for k=3 it forces earlier than the weak two-term rule in the computed prefix.")
+    print("- Finite-sums removal is exact here for k<=3 and gives last boils 3,10,25.")
     print()
 
 
@@ -376,7 +378,7 @@ def print_tournament_analysis() -> None:
     print("Vertices: proof/computation lenses, not cauldrons.")
     print("Pairwise observable: which lens better preserves the cauldron survival predicate while retaining useful witnesses.")
     print("Switch/gauge: sum of exactness, variant separation, witness retention, and repo coimage connection scores.")
-    print("Tie Hamiltonian path: removal DP -> weak Schur -> finite-sums -> fixed-arity -> classical comparison -> residues -> raw labels.")
+    print("Tie Hamiltonian path: removal DP -> finite-sums -> weak Schur -> fixed-arity -> classical comparison -> residues -> raw labels.")
     print("Ranking: " + " > ".join(ranking))
     print(f"Score histogram: {fingerprints['score_hist']}")
     print(f"Directed 3-cycles: {len(fingerprints['directed_3_cycles'])}")

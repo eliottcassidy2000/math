@@ -26,7 +26,10 @@ sacrifice-game move that is invisible in a first-boil Schur number.
 
 The "more terms" variants tighten the first-boil base game in the computed
 prefix: distinct two-or-three-term cauldrons force at `23`, and distinct
-finite-sums cauldrons force at `22`.
+finite-sums cauldrons force at `22`. They also tighten the all-boiled removal
+game: finite-sums removal has exact last boils `3,10,25` for `k=1,2,3`, so
+the three-cauldron removal game loses two steps relative to the weak two-term
+rule's `27`.
 
 Literature anchor: weak Schur tables use the largest safe-prefix convention,
 with `WS(3)=23`; generalized Schur/weak-Schur numbers for more summands are

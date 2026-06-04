@@ -1,6 +1,6 @@
 # HYP-2189: Cauldron Game As Schur Coloring With Removal
 
-**Status:** OPEN
+**Status:** CONFIRMED exact small scout; OPEN higher-`k` and higher-arity variants
 
 ## Claim
 
@@ -19,7 +19,8 @@ The removal variant should be treated separately because a player may
 sacrifice one color class to preserve cleaner active cauldrons later. For
 `k=3` and the literal distinct two-term rule, S618's exact active-state search
 gives optimal last boil at `27`; under repeated summands, the last boil is
-`20`.
+`20`. Under the distinct finite-sums rule, where any previous subset of size at
+least two may sum to the new value, the exact `k=3` last boil is `25`.
 
 ## Current Evidence
 
@@ -36,10 +37,11 @@ Computed first-boil thresholds for `k=3`:
 Computed all-boiled/removal thresholds:
 
 - distinct two-term cauldron: `k=1,2,3` last boils at `3,10,27`;
-- repeated two-term comparison: `k=1,2,3` last boils at `2,7,20`.
+- repeated two-term comparison: `k=1,2,3` last boils at `2,7,20`;
+- distinct finite-sums cauldron: `k=1,2,3` last boils at `3,10,25`.
 
-The exact-three-summand, three-color threshold is not brute-forced here; it is
-a higher generalized Schur/weak-Schur problem.
+The exact-three-summand, three-color removal threshold is not brute-forced
+here; it is a higher generalized Schur/weak-Schur problem.
 
 ## Assumptions To Challenge
 
