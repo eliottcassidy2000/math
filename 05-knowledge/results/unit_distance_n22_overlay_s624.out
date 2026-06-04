@@ -1,0 +1,3 @@
+distinct small modulus-1 rotation angles (deg, mod 60) from Z[w]: [21.7868, 38.2132, 27.7958, 32.2042, 13.1736, 46.8264, 21.7868, 38.2132, 21.7868, 38.2132, 9.43, 50.57]
+best 22-pt UNION (lattice + one CM rotation) unit distances: 48 via rotation (a,b,deg)= (-3, -3, 120.0)
+vs pure-lattice baseline 49; optimum u(22) in {60,61}
