@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T736** #embedded-maximality #orders #dedekind-cuts #lrc #owner-address #res27 | certainty: finite order toy + S666 transfer atlas | source: codex-2026-06-05-S667
+Maximality is a three-place predicate: `maximal(object, ambient embedding, allowed extensions)`.  In `(Q,<)`, finite chains have internal maxima, but dense-order extensions and irrational cuts destroy them unless the cut/boundary address is named.  The LRC14 analogue is the visible `Res_27` floor shell: visible maxima leak under local carry extensions until owner-private deletion addresses are retained.  S667 ranks embedded-maximality lanes; the transitive lane tournament has `directed_3cycles=0`, singleton SCCs, one Hamiltonian path, and leader `LRC14 owner-private stability`.  See HYP-2242.
+
 **T735** #lrc #n14 #owner-derivative #no-leak #carry-cocycle #res27 | certainty: exact local atlas through carry weight 3 | source: codex-2026-06-05-S666
 Concrete HYP-2240 proof push: in the AP/Vstar/2AP `Res_27` fiber, all `858` local `+27` carry perturbations of weight `3` are strict, extending S663's weight `1..2` tax.  Visible shadow has three mixed buckets (`1` floor + `377` strict each); cheap-pair data still leaks; paired owner cover counts leak only `AP:w1:carry(11)` and `Vstar:w1:carry(11)`; adding the private-owner deletion bit gives zero mixed fibers while staying carry-free.  See HYP-2241.
 

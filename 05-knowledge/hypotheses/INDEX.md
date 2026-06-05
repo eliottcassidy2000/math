@@ -699,6 +699,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks `23` repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners.  The repair-lane tournament has `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,11:2,12:2,13:2,15:3,18:1,19:1,20:1,21:1,22:1}`, `directed_3cycles=19`, `scc_sizes=[9,1,1,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=1135`.  Finite side labs split Vieta branches over `F_17`, determinant `12` by adjugate derivatives `6` vs `4`, Goldbach/Lemoine pair projections, and turnpike homometric point sets.  External anchors include DLMF Euler products, Jacobi adjugates, graph reconstruction/Kocay matrices, explicit formulae, Ihara/Selberg, sparse phase retrieval, turnpike/beltway reconstruction, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2167, HYP-2171, HYP-2218, HYP-2212, THM-401 |
 | HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks 20 repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners; finite side labs include Vieta branch splitting over `F_17`, toy log derivatives of prime products, and Goldbach/Lemoine pair reconstruction.  The repair-lane tournament has `directed_3cycles=16`, `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=425`.  External anchors include graph reconstruction/Kocay matrices, vertex-pair parameters, explicit formulae, Ihara/Selberg trace formulae, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2236, HYP-2235, HYP-2218, HYP-2212, HYP-2171 |
 | HYP-2241 | LRC14 owner-derivative no-leak: in the AP/Vstar/2AP `Res_27` carry fiber, visible shell collisions are repaired by a paired owner-deletion bit. | S666 checks `1134` probes: `3` floor atoms and `1131` strict local carries, including all `858` weight-3 local `+27` carries.  Visible shadow has three mixed buckets (`1` floor + `377` strict each), cheap-pair data still leaks, paired owner cover counts leave exactly two singleton leaks (`AP:w1:carry(11)`, `Vstar:w1:carry(11)`), and adding the private-owner deletion flag gives `0` mixed fibers while remaining carry-free.  Repair-channel Tournament Analysis is transitive with top channel `visible+owner_private_flag`. | codex-2026-06-05-S666; `HYP-2241-lrc14-owner-derivative-no-leak.md`; `lrc14_owner_derivative_repair_s666.py`; `lrc14_owner_derivative_repair_s666.out`; `lrc14-owner-derivative-no-leak-s666.md`; HYP-2240, HYP-2239, HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164 |
+| HYP-2242 | Embedded maximality: a maximum is proof-meaningful only relative to its ambient embedding and allowed extensions. | S667 uses `(Q,<)` as the toy.  Finite chains and bounded denominator searches have internal maxima, but dense-order extensions and Dedekind cuts destroy them unless the missing cut/boundary address is named.  Transfer to LRC14: the visible `Res_27` floor shell is the finite image, local carries are ambient extensions, and S666's private-owner deletion flag is the cut address that separates all checked floor/strict fibers.  The embedded-maximality lane tournament is transitive with leader `LRC14 owner-private stability`. | codex-2026-06-05-S667; `HYP-2242-embedded-maximality-order-carrier.md`; `embedded_maximality_order_atlas_s667.py`; `embedded_maximality_order_atlas_s667.out`; `embedded-maximality-order-carrier-s667.md`; HYP-2241, HYP-2240, HYP-2239, HYP-2237, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7159,6 +7160,61 @@ patterns, and HYP-2165 owner-route lifts of the 64 fixed classes.
 `05-knowledge/results/lrc14_owner_derivative_repair_s666.out`;
 `07-reflections/lrc14-owner-derivative-no-leak-s666.md`; HYP-2240, HYP-2239,
 HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164.
+
+## HYP-2242: Embedded maximality order carrier (codex-2026-06-05-S667)
+
+**STATUS:** OPEN method hypothesis with finite order/toy evidence.
+
+**WHAT:** Treat maximality as an embedded relation:
+
+```text
+maximal(object, ambient embedding, allowed extensions)
+```
+
+rather than a unary scalar predicate.  The core toy is `(Q,<)`: finite chains
+and bounded denominator searches have internal maxima, but the dense ambient
+order and Dedekind cuts can destroy those maxima unless the missing
+cut/boundary address is named.
+
+**EVIDENCE:** S667 adds an embedded-maximality atlas.  The order labs show:
+
+- `[0,1,2]` has finite maximum `2`, but one-point dense-order extensions
+  realize cuts below, between, and above the chain;
+- denominator `<=12` lower approximants to `sqrt(2)` have best `7/5`, but
+  denominator `17` gives a better lower approximant `24/17`;
+- the same rational `1` is maximal in `{0,1/2,1}` and `[0,1]_Q`, but not in
+  `(0,1)_Q` or in all of `Q`.
+
+The LRC14 transfer is HYP-2241/S666: visible `Res_27` shadow has three mixed
+floor/strict buckets, but adding owner-private deletion addresses gives `0`
+mixed fibers.  So the visible floor shell is not yet embedded maximal; it
+becomes stable only after the owner/deletion/carry ambient address is retained.
+
+**TOURNAMENT ANALYSIS:** Vertices are embedded-maximality lanes.  The observable
+is `(exact evidence, ambient extendability, address need, derivative leverage,
+LRC transfer, actionability)`.  The lane tournament is transitive:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`,
+`directed_3cycles=0`, singleton SCCs, and `hamiltonian_paths=1`.  The top lane
+is `LRC14 owner-private stability`.
+
+**ASSUMPTION CHALLENGE:** S667 did not use runners as vertices.  Candidate
+vertices included rationals, cuts, finite chains, runners, endpoint cores, owner
+obligations, graph cards, point-set frontiers, matroid bases, forcing models,
+and proof obligations.  The selected quotient preserves the predicate "which
+ambient address makes a local maximum stable, and which extension destroys it?"
+and deliberately destroys raw speed identity, phase order, and full geometry.
+
+**NEXT:** Build the Dedekind-completion analogue for the LRC14 quotient:
+enumerate coherent carry-extension cuts over `Res_27` and attach the smallest
+owner/carry/route address that separates each from the AP/Vstar/2AP floor atoms.
+Then prove that every allowed extension either changes that address, pays
+positive tax, or is a globally coherent scalar floor lift.
+
+**See:** `05-knowledge/hypotheses/HYP-2242-embedded-maximality-order-carrier.md`;
+`04-computation/embedded_maximality_order_atlas_s667.py`;
+`05-knowledge/results/embedded_maximality_order_atlas_s667.out`;
+`07-reflections/embedded-maximality-order-carrier-s667.md`; HYP-2241, HYP-2240,
+HYP-2239, HYP-2237, HYP-2171, HYP-2167, HYP-2165, HYP-2164.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

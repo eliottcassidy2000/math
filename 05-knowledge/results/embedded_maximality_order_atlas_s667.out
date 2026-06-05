@@ -1,0 +1,146 @@
+﻿==============================================================================
+S667 embedded maximality order atlas
+==============================================================================
+
+Principle
+  maximality is not unary: maximal(object, ambient embedding, allowed extensions)
+  Q,< is the toy: finite chains have maxima; dense ambient extensions destroy them.
+
+A. Dense-order finite-chain lab
+  base_chain=[Fraction(0, 1), Fraction(1, 1), Fraction(2, 1)]
+  finite_maximum=2
+  one_point_extension_cuts=[('(-infty,0)', Fraction(-1, 1)), ('(0,1)', Fraction(1, 2)), ('(1,2)', Fraction(3, 2)), ('(2,infty)', Fraction(3, 1))]
+  ambient_maximum_after_extension=3
+  lesson=finite maximality is destroyed by the ambient DLO extension property
+
+B. Dedekind-cut address lab
+  cut={q in Q : q^2 < 2}
+  finite_denominator_limit=12
+  finite_best_lower=7/5
+  strictly_better_lower_with_larger_denominator=24/17
+  finite_best_square=49/25
+  better_square=576/289
+  lesson=finite search has a maximum; the embedded Dedekind cut has no rational maximum
+
+C. Same point, different ambient boundary
+  point=1
+  ambient_maximality={'finite subset {0,1/2,1}': True, 'closed interval [0,1]_Q': True, 'open interval (0,1)_Q': False, 'whole Q': False}
+  lesson=the same rational is maximal or not depending on the embedding boundary
+
+D. S666 embedded repair readout
+  visible_shadow={'groups': 3, 'mixed': 3, 'max_bucket': 378}
+  visible+cheap_pair={'groups': 112, 'mixed': 3, 'max_bucket': 106}
+  visible+owner_cover_count={'groups': 976, 'mixed': 2, 'max_bucket': 2}
+  visible+owner_private_flag={'groups': 1067, 'mixed': 0, 'max_bucket': 2}
+  visible+owner_private_count={'groups': 1134, 'mixed': 0, 'max_bucket': 1}
+  lesson=embedded maximality appears when the visible maximum is tested in the owner-deletion ambient
+
+E. Embedded-maximality lanes
+lane                                 family                 total vector
+LRC14 owner-private stability        LRC exact                 30 (5, 5, 5, 5, 5, 5)
+Dedekind cut completion              order toy                 28 (5, 5, 5, 4, 4, 5)
+Endpoint protection core             LRC endpoint              28 (4, 5, 5, 5, 5, 4)
+Q,< finite-chain maximum             order toy                 28 (5, 5, 5, 4, 4, 5)
+Tournament endpoint private child    tournaments               27 (4, 5, 5, 5, 4, 4)
+A000568 marked observer fiber        tournaments/LRC           25 (4, 4, 5, 4, 4, 4)
+Graph reconstruction rooted deck     graphs                    25 (4, 4, 5, 5, 3, 4)
+Matroid basis activity               matroids                  24 (3, 4, 5, 5, 3, 4)
+Unit-distance frontier owner         unit distance             24 (3, 5, 4, 4, 4, 4)
+Forcing model maximality             logic                     22 (3, 5, 5, 3, 3, 3)
+Rado/Fraisse extension property      homogeneous structures    22 (3, 5, 5, 3, 3, 3)
+
+F. Lane details
+  Q,< finite-chain maximum
+    local maximum:       a finite embedded chain has a last element
+    ambient embedding:   countable dense linear order without endpoints
+    missing address:     which open cut / endpoint boundary the chain occupies
+    destructive extension:insert a rational above the finite maximum or inside any gap
+    derivative readout:  extension-count ledger over n+1 cuts
+  Dedekind cut completion
+    local maximum:       finite denominator search has a best lower approximation
+    ambient embedding:   Q embedded in its completion R
+    missing address:     cut address: lower set with no rational maximum
+    destructive extension:raise the best approximation inside the same irrational cut
+    derivative readout:  cut-improvement sequence / endpoint-loss sum
+  LRC14 owner-private stability
+    local maximum:       AP/Vstar/2AP are floor atoms in the visible Res_27 shell
+    ambient embedding:   local +27 carry space over the same visible shell
+    missing address:     paired owner-private deletion flag
+    destructive extension:nonzero local carry preserving the visible shell
+    derivative readout:  owner-deletion loss ledger; S666 mixed fibers drop to zero
+  Endpoint protection core
+    local maximum:       an all-protected endpoint set is a maximal obstruction core
+    ambient embedding:   endpoint incidence graph inside the quotient denominator
+    missing address:     protector owner for each endpoint
+    destructive extension:peel an endpoint with no remaining private protector
+    derivative readout:  core-peeling derivative / exposed endpoint sum
+  Tournament endpoint private child
+    local maximum:       private endpoint child is a pivot-maximal witness
+    ambient embedding:   endpoint-extension matrix n -> n+1
+    missing address:     parent owner row and child column address
+    destructive extension:complement merging creates non-private SC collision columns
+    derivative readout:  rank/private-pivot deletion ledger
+  Graph reconstruction rooted deck
+    local maximum:       deck-derived scalar/subgraph counts look maximal
+    ambient embedding:   graph embedded in its rooted/deleted-card deck
+    missing address:     deleted vertex / card-to-boundary address
+    destructive extension:unrooted deck collision with different rooted assignment
+    derivative readout:  rooted Kelly/Kocay constraint sums
+  Unit-distance frontier owner
+    local maximum:       edge/direction support can be extremal in a fixed point set
+    ambient embedding:   point set embedded in extension/deletion frontier
+    missing address:     ear/frontier owner and unit-spine endpoint address
+    destructive extension:add/delete a point while preserving coarse direction support
+    derivative readout:  frontier edge-loss and spine-loss sums
+  A000568 marked observer fiber
+    local maximum:       unmarked isomorphism class is maximal as a quotient object
+    ambient embedding:   class embedded in rooted/observer perspectives
+    missing address:     observer root and endpoint threshold address
+    destructive extension:change root while preserving unmarked class
+    derivative readout:  observer-source deletion sums
+  Rado/Fraisse extension property
+    local maximum:       finite pattern is maximal inside its induced substructure
+    ambient embedding:   universal homogeneous limit
+    missing address:     one-point extension type
+    destructive extension:realize every compatible extension type
+    derivative readout:  extension-type count / age derivative
+  Matroid basis activity
+    local maximum:       a basis is maximal independent inside the matroid
+    ambient embedding:   basis embedded in an ordered matroid / activity expansion
+    missing address:     edge/order activity address
+    destructive extension:exchange an active element without changing coarse rank
+    derivative readout:  deletion-contraction activity sum
+  Forcing model maximality
+    local maximum:       a cardinal or truth value is maximal inside one model
+    ambient embedding:   model embedded in forcing/generic extension
+    missing address:     generic filter / forcing-name address
+    destructive extension:force an extension where the scalar statement changes
+    derivative readout:  truth-value ledger over model boundary
+
+G. Tournament Analysis
+  vertices=embedded-maximality lanes
+  observable=(exact, ambient extension, address need, derivative, LRC transfer, action)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  top_order:
+    LRC14 owner-private stability
+    Q,< finite-chain maximum
+    Dedekind cut completion
+    Endpoint protection core
+    Tournament endpoint private child
+    Graph reconstruction rooted deck
+    A000568 marked observer fiber
+    Unit-distance frontier owner
+    Matroid basis activity
+    Rado/Fraisse extension property
+    Forcing model maximality
+
+H. Synthesis
+  Embedded maximality turns 'maximal' into a boundary-sensitive predicate.
+  Q,< says finite maxima are real inside a finite image but unstable in the
+  dense ambient order; Dedekind completion names the missing cut address.
+  For LRC14, S666 suggests the analogous ambient is the owner-deletion
+  ledger: visible Res_27 maxima remain stable only when their private-owner
+  addresses survive every allowed carry extension.

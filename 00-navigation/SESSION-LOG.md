@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-05-S667 - Embedded maximality order carrier (HYP-2242)
+
+**Prompt:** Merge in embedded maximality, with `(Q,<)` as the starting model, and extend beyond that.
+**Claimed namespace:** HYP-2242 and T736 reserved as the conceptual continuation of HYP-2241/S666's owner-private no-leak evidence.
+**Integration:** Treated S666's private-owner deletion flag as an embedded-maximality address rather than another scalar repair.  Connected HYP-2240's address-coordinate derivative grammar to the order-theoretic distinction between internal maximum, boundary maximum, and maximum stable under allowed ambient extensions.
+**Computation:** Added `04-computation/embedded_maximality_order_atlas_s667.py` and stored `05-knowledge/results/embedded_maximality_order_atlas_s667.out`.  The script runs finite `(Q,<)` chain labs, a `sqrt(2)` Dedekind-cut approximation lab, an ambient-boundary lab for the point `1`, the S666 projection readout, and an embedded-maximality lane tournament.
+**Findings:** Finite chains and bounded denominator searches have maxima that disappear in denser ambients; completion works by naming the cut address.  The LRC14 analogue is the visible `Res_27` shell: visible shadow has three mixed floor/strict buckets, while adding owner-private deletion addresses gives zero mixed fibers.  Top transfer lane is `LRC14 owner-private stability` with vector `(5,5,5,5,5,5)`.
+**Tournament Analysis:** Vertices are embedded-maximality lanes, with observable `(exact evidence, ambient extendability, address need, derivative leverage, LRC transfer, actionability)`.  The tournament is transitive: `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`, `directed_3cycles=0`, singleton SCCs, and `hamiltonian_paths=1`.
+**Synthesis:** The LRC14 proof target should be phrased as an embedded-extension theorem: every allowed extension inside the visible `Res_27` fiber either changes an owner/deletion/carry address, pays positive maximin tax, or is a globally coherent scalar floor lift.
+**Artifacts:** HYP-2242, T736, `04-computation/embedded_maximality_order_atlas_s667.py`, `05-knowledge/results/embedded_maximality_order_atlas_s667.out`, `07-reflections/embedded-maximality-order-carrier-s667.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Build the Dedekind-completion analogue for LRC14: enumerate coherent carry-extension cuts over the `Res_27` quotient and attach the smallest owner/carry/route address that separates each from the floor atoms.
+
 ## codex-2026-06-05-S666 - LRC14 owner-derivative no-leak push (HYP-2241)
 
 **Prompt:** Spend a session trying to make progress on the LRC `n=14` proof.
