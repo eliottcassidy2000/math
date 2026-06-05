@@ -1,0 +1,128 @@
+S660 tournament deck derivative side-channel atlas
+========================================================================
+
+A. Isomorphism classes
+  n=3 classes=2
+  n=4 classes=4
+  n=5 classes=12
+  n=6 classes=56
+
+B. Repair-channel bucket statistics
+  n=3
+    full_deck                    buckets=   1 max= 2 colliding_buckets=  1 colliding_classes=  2
+    kelly_subcounts              buckets=   1 max= 2 colliding_buckets=  1 colliding_classes=  2
+    scalar                       buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    scalar_deck                  buckets=   1 max= 2 colliding_buckets=  1 colliding_classes=  2
+    full_deck_plus_H             buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_score         buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_H_score       buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_scalar        buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    unpaired_deleted_score       buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_deleted_score         buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_c3_loss               buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_H_loss                buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_score_c3_loss         buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_all_derivatives       buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    S658_loss_deck               buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+    card_scalar_all_derivatives  buckets=   2 max= 1 colliding_buckets=  0 colliding_classes=  0
+  n=4
+    full_deck                    buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    kelly_subcounts              buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    scalar                       buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    scalar_deck                  buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    full_deck_plus_H             buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    full_deck_plus_score         buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_H_score       buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_scalar        buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    unpaired_deleted_score       buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_deleted_score         buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_c3_loss               buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    paired_H_loss                buckets=   3 max= 2 colliding_buckets=  1 colliding_classes=  2
+    paired_score_c3_loss         buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_all_derivatives       buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    S658_loss_deck               buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+    card_scalar_all_derivatives  buckets=   4 max= 1 colliding_buckets=  0 colliding_classes=  0
+  n=5
+    full_deck                    buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    kelly_subcounts              buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    scalar                       buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    scalar_deck                  buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    full_deck_plus_H             buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_score         buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    full_deck_plus_H_score       buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    full_deck_plus_scalar        buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    unpaired_deleted_score       buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    paired_deleted_score         buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_c3_loss               buckets=  11 max= 2 colliding_buckets=  1 colliding_classes=  2
+    paired_H_loss                buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_score_c3_loss         buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_all_derivatives       buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    S658_loss_deck               buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+    card_scalar_all_derivatives  buckets=  12 max= 1 colliding_buckets=  0 colliding_classes=  0
+  n=6
+    full_deck                    buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    kelly_subcounts              buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    scalar                       buckets=  40 max= 4 colliding_buckets= 14 colliding_classes= 30
+    scalar_deck                  buckets=  51 max= 2 colliding_buckets=  5 colliding_classes= 10
+    full_deck_plus_H             buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    full_deck_plus_score         buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    full_deck_plus_H_score       buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    full_deck_plus_scalar        buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    unpaired_deleted_score       buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    paired_deleted_score         buckets=  56 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_c3_loss               buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    paired_H_loss                buckets=  52 max= 2 colliding_buckets=  4 colliding_classes=  8
+    paired_score_c3_loss         buckets=  56 max= 1 colliding_buckets=  0 colliding_classes=  0
+    paired_all_derivatives       buckets=  56 max= 1 colliding_buckets=  0 colliding_classes=  0
+    S658_loss_deck               buckets=  56 max= 1 colliding_buckets=  0 colliding_classes=  0
+    card_scalar_all_derivatives  buckets=  56 max= 1 colliding_buckets=  0 colliding_classes=  0
+
+C. Full-deck collision anatomy
+  n=3 collision_buckets=1 shown=1
+    deck_cards=('0x0', '0x0', '0x0') members=('0x0', '0x2')
+      pair={'pair': ('0x0', '0x2'), 'H': (1, 3), 'scores': ((0, 1, 2), (1, 1, 1)), 'c3': (0, 1), 'scc': ((1, 1, 1), (3,)), 'converse': False, 'min_flip_distance': 1, 'paired_score_c3_separates': True, 'paired_H_loss_separates': True}
+  n=4 collision_buckets=1 shown=1
+    deck_cards=('0x0', '0x0', '0x0', '0x2') members=('0x2', '0x5')
+      pair={'pair': ('0x2', '0x5'), 'H': (3, 3), 'scores': ((1, 1, 1, 3), (0, 2, 2, 2)), 'c3': (1, 1), 'scc': ((3, 1), (3, 1)), 'converse': True, 'min_flip_distance': 2, 'paired_score_c3_separates': True, 'paired_H_loss_separates': False}
+  n=5 collision_buckets=1 shown=1
+    deck_cards=('0x2', '0x4', '0x4', '0x4', '0x5') members=('0x28', '0x29')
+      pair={'pair': ('0x28', '0x29'), 'H': (15, 13), 'scores': ((1, 2, 2, 2, 3), (1, 2, 2, 2, 3)), 'c3': (4, 4), 'scc': ((5,), (5,)), 'converse': False, 'min_flip_distance': 1, 'paired_score_c3_separates': True, 'paired_H_loss_separates': True}
+  n=6 collision_buckets=4 shown=4
+    deck_cards=('0x0', '0x8', '0x8', '0xc', '0xc', '0xc') members=('0x18', '0x1c')
+      pair={'pair': ('0x18', '0x1c'), 'H': (23, 23), 'scores': ((1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)), 'c3': (6, 6), 'scc': ((6,), (6,)), 'converse': True, 'min_flip_distance': 1, 'paired_score_c3_separates': True, 'paired_H_loss_separates': False}
+    deck_cards=('0x4', '0x9', '0xa', '0xa', '0x28', '0x29') members=('0x92', '0x95')
+      pair={'pair': ('0x92', '0x95'), 'H': (31, 31), 'scores': ((1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)), 'c3': (6, 6), 'scc': ((6,), (6,)), 'converse': True, 'min_flip_distance': 2, 'paired_score_c3_separates': True, 'paired_H_loss_separates': False}
+    deck_cards=('0x5', '0x8', '0xa', '0xa', '0xc', '0x29') members=('0xb1', '0xb5')
+      pair={'pair': ('0xb1', '0xb5'), 'H': (29, 29), 'scores': ((1, 2, 2, 3, 3, 4), (1, 2, 2, 3, 3, 4)), 'c3': (6, 6), 'scc': ((6,), (6,)), 'converse': True, 'min_flip_distance': 1, 'paired_score_c3_separates': True, 'paired_H_loss_separates': False}
+    deck_cards=('0xa', '0xc', '0x28', '0x29', '0x29', '0x4c') members=('0x158', '0x159')
+      pair={'pair': ('0x158', '0x159'), 'H': (43, 43), 'scores': ((2, 2, 2, 3, 3, 3), (2, 2, 2, 3, 3, 3)), 'c3': (8, 8), 'scc': ((6,), (6,)), 'converse': True, 'min_flip_distance': 1, 'paired_score_c3_separates': True, 'paired_H_loss_separates': False}
+
+D. Deck-visible formula checks
+  {'n': 4, 'kelly_c3_formula_ok': True, 'distinct_sum_card_H': 3, 'most_common_sum_card_H': [(6, 2), (4, 1), (8, 1)]}
+  {'n': 5, 'kelly_c3_formula_ok': True, 'distinct_sum_card_H': 6, 'most_common_sum_card_H': [(9, 3), (21, 3), (13, 2), (17, 2)]}
+  {'n': 6, 'kelly_c3_formula_ok': True, 'distinct_sum_card_H': 21, 'most_common_sum_card_H': [(54, 6), (66, 5), (12, 4), (18, 4)]}
+
+E. Repair-channel Tournament Analysis
+  metrics={'paired_deleted_score': (5, 1, 5, 5), 'paired_score_c3_loss': (5, 1, 5, 4), 'full_deck_plus_H': (3, 2, 4, 5), 'paired_H_loss': (3, 1, 4, 3), 'full_deck_plus_score': (3, 2, 3, 5), 'full_deck': (3, 5, 2, 5), 'kelly_subcounts': (3, 5, 2, 4), 'scalar': (1, 4, 1, 5)}
+  top_order=['paired_deleted_score', 'paired_score_c3_loss', 'full_deck', 'kelly_subcounts', 'full_deck_plus_H', 'full_deck_plus_score', 'paired_H_loss', 'scalar']
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles=0
+  hamiltonian_paths=1
+  edges=[('paired_deleted_score', 'paired_score_c3_loss'), ('paired_deleted_score', 'full_deck_plus_H'), ('paired_deleted_score', 'paired_H_loss'), ('paired_deleted_score', 'full_deck_plus_score'), ('paired_deleted_score', 'full_deck'), ('paired_deleted_score', 'kelly_subcounts'), ('paired_deleted_score', 'scalar'), ('paired_score_c3_loss', 'full_deck_plus_H'), ('paired_score_c3_loss', 'paired_H_loss'), ('paired_score_c3_loss', 'full_deck_plus_score'), ('paired_score_c3_loss', 'full_deck'), ('paired_score_c3_loss', 'kelly_subcounts'), ('paired_score_c3_loss', 'scalar'), ('full_deck_plus_H', 'paired_H_loss'), ('full_deck_plus_H', 'full_deck_plus_score'), ('full_deck', 'full_deck_plus_H'), ('kelly_subcounts', 'full_deck_plus_H'), ('full_deck_plus_H', 'scalar'), ('full_deck_plus_score', 'paired_H_loss'), ('full_deck', 'paired_H_loss'), ('kelly_subcounts', 'paired_H_loss'), ('paired_H_loss', 'scalar'), ('full_deck', 'full_deck_plus_score'), ('kelly_subcounts', 'full_deck_plus_score'), ('full_deck_plus_score', 'scalar'), ('full_deck', 'kelly_subcounts'), ('full_deck', 'scalar'), ('kelly_subcounts', 'scalar')]
+
+F. Synthesis
+  The ordinary full deck is a deletion projection; through n=6 it still
+  has small collision buckets.  Kelly-style subtournament counts match
+  the full-deck collision strength in this range but do not repair it.
+  The useful repairs are marked derivative channels.  The cleanest one
+  checked here is paired deleted score: attach to each card the outdegree
+  of the missing vertex.  Unpaired deleted-score multisets do not suffice
+  at n=6, and global H or score sequences do not repair the n=6 collision
+  buckets.  Paired score+C3-loss and S658's stronger H/C3/score loss deck
+  also resolve every checked collision.  This is the tournament analogue
+  of retaining owner/carry
+  in LRC, point-deletion degree/gain in unit distance, set pressure in
+  union-closed families, and pinned/concurrency labels in finite-field
+  Kakeya/Falconer carriers.
+  The n=7 extension should use canonical augmentation or nauty-style
+  automorphism pruning rather than raw permutation canonicalization.
