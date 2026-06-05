@@ -10,6 +10,7 @@ All machines participating in the research network. Add your machine by running 
 | death-star | Monad math cluster Codex prover node | active | 2026-06-02 | 2026-06-02 |
 | windesk | Windows desktop (100.94.210.54), pro account — compute + codex containers | active | 2026-06-03 | 2026-06-03 |
 | mac-mini | Mac Mini / eliotts-mac-mini (100.113.252.45), pro account — formalization + compute | active | 2026-06-03 | 2026-06-03 |
+| monad-formalizer | Monad math cluster Codex formalization node bridging math-lean to research | active | 2026-06-04 | 2026-06-04 |
 
 ---
 
