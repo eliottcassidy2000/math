@@ -695,7 +695,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2237 | LRC `n=14` should be attacked by a no-leak owner-derivative theorem: fixed odd wall + `C=27` gcd shell + paired carry/owner/deletion derivatives force AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | S661 searched the core LRC quotient tower and adjacent Kakeya/Falconer, tournament deck, union-closed, pincer, rigidity, automaton, sheaf, unit-distance, forcing, coimage, and anti-Poisson threads.  The strategy atlas scans `6629` research files and ranks fifteen proof routes; the proof-route tournament is transitive with `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Majority leaders are `carry_deletion_derivative`, `owner_concurrency_jackknife`, `apex_sheaf_gluing`, `two_block_helly_extractor`, `three_state_middle_automaton`, and `pincer_grip_ledger`.  Incoming HYP-2236/S660 reinforces the pairing rule: `(card, deleted score)` resolves all checked deck collisions through `n=6`, while unpaired/global scalar repairs leak. | codex-2026-06-05-S661; `HYP-2237-lrc14-wild-proof-strategy-atlas.md`; `lrc14_wild_strategy_atlas_s661.py`; `lrc14_wild_strategy_atlas_s661.out`; `lrc14-wild-proof-strategy-atlas-s661.md`; HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2164 |
 | HYP-2238 | Pi should be carried as a representation trinity: infinite sums expose additive packet/moment data, infinite products expose local factor/norm data, and infinite fractions expose recursive boundary/owner state. | S662 compares Leibniz, Machin, and Basel sums; the Wallis product; Brouncker's continued fraction; and cotangent partial fractions.  The numerical audit is only a sanity check; the carrier result is a representation-face tournament over `sum`, `product`, `fraction`, and `raw_decimal`.  Majority over additive-packet, local-factor, and recursive-boundary preservation gives the nontransitive cycle `sum -> product -> fraction -> sum`, while all three beat `raw_decimal` (`score_hist={0:1,2:3}`, `directed_3cycles=1`, SCCs `{sum,product,fraction}` plus `{raw_decimal}`, `3` Hamiltonian paths).  Transfer: LRC14 should retain odd-wall sums, `C=27` product/gcd shells, and fraction-like carry-owner continuants together; for the current no-leak seam, the global cycle becomes a task-specific fraction-first readout.  HYP-2239/S663 now owns the concrete application lane. | codex-2026-06-05-S662; `HYP-2238-pi-sum-product-fraction-trinity.md`; `pi_sum_product_fraction_s662.py`; `pi_sum_product_fraction_s662.out`; `pi-sum-product-fraction-trinity-s662.md`; HYP-2239, HYP-2229, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2212, HYP-2211, HYP-2186, HYP-2184, HYP-2167 |
 | HYP-2239 | HYP-2238's triune value method transfers to LRC and sibling problems by pairing additive packets, local product/gcd obstruction shells, and recursive carry/owner boundary state; globally this forms the projection-repair cycle `sum -> product -> fraction -> sum`. | S663 builds LRC14 triune records for AP, `Vstar`, and `2AP`.  All three are floor atoms with `M=1/14` and product face `C=27` gcd shells `((1,9),(3,3),(9,1))`, mass `27`.  Every one/two-coordinate `+27` carry perturbation over these atoms is strict.  Projection-collision audit: keeping only the Res27 additive/product shadow leaves three mixed groups (`1` floor + `91` strict each), while adding the carry-continuant/fraction face leaves `0` mixed groups.  S664 scans `10381` repo files and builds a domain-weighted face tournament with `score_hist={0:1,2:3}`, one directed 3-cycle on `(sum,product,fraction)`, SCCs `{sum,product,fraction}` plus `{raw_scalar}`, and `3` Hamiltonian paths.  Strongest repair lanes: LRC14, pi representations, tournament decks, OCF/H(T), pi/e trace-norm, unit distance, finite-field Kakeya/Falconer, perfect/aliquot, Goldbach/Lemoine, A000568, cauldrons, Heegner, and CH/forcing. | codex-2026-06-05-S663/S664; `HYP-2239-triune-carrier-applications-lrc.md`; `triune_carrier_applications_s663.py`; `triune_carrier_applications_s663.out`; `triune-carrier-applications-lrc-s663.md`; `triune_cycle_everywhere_s664.py`; `triune_cycle_everywhere_s664.out`; `triune-cycle-everywhere-s664.md`; HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, THM-401 |
-| HYP-2240 | STUB: The S664 triune cycle should be sharpened into the operational pattern: find a scalar/product collision, attach the missing fraction/address coordinate, then unroll it back into a derivative sum. | Claimed for S665.  Candidate address coordinates: carry words, deleted-card owners, branch sheets, Weyl `m`-functions, continued-fraction coefficients, generic/model states, activity marks, and point-deletion owners.  Evidence pending: repo/web source scan, candidate atlas, finite side labs, and route Tournament Analysis. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; HYP-2239, HYP-2238, HYP-2236, HYP-2235, HYP-2218, HYP-2212, HYP-2171 |
+| HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks 20 repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners; finite side labs include Vieta branch splitting over `F_17`, toy log derivatives of prime products, and Goldbach/Lemoine pair reconstruction.  The repair-lane tournament has `directed_3cycles=16`, `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=425`.  External anchors include graph reconstruction/Kocay matrices, vertex-pair parameters, explicit formulae, Ihara/Selberg trace formulae, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2236, HYP-2235, HYP-2218, HYP-2212, HYP-2171 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7018,6 +7018,74 @@ triune impairment lab.
 `07-reflections/triune-cycle-everywhere-s664.md`; HYP-2238, HYP-2237,
 HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, HYP-2165,
 HYP-2164, THM-401.
+
+## HYP-2240: Address-coordinate derivative repair (codex-2026-06-05-S665)
+
+**STATUS:** OPEN method hypothesis with atlas and finite side labs.
+
+**WHAT:** Sharpen HYP-2239's triune projection-repair cycle into the local
+grammar:
+
+```text
+find a scalar/product collision
+attach the missing fraction/address coordinate
+unroll it back into a derivative sum
+```
+
+The address coordinate is the derivative variable: carry word, deleted-card
+owner, branch sheet, Weyl `m`-function, continued-fraction coefficient,
+generic/model state, activity mark, pin owner, point-deletion owner, or
+set-pressure coordinate.
+
+**EVIDENCE:** S665 scans repo lanes and web theorem templates, then builds a
+20-lane repair atlas.  Exact repo leaders:
+
+- LRC14 `Res_27` carry state: additive/product shadows mix floor and strict
+  rows, while the carry-continuant/fraction state separates them.
+- Tournament decks: full decks and global scalar repairs collide through `n=6`,
+  while paired `(card isomorphism type, deleted vertex outdegree)` separates
+  all checked classes.
+- Finite Vieta branch sheets: over `F_17`, `(sum, product)` has max fiber `2`,
+  while adding the branch coordinate gives max fiber `1`.
+- Goldbach/Lemoine: `E=p+q`, `O=p+2q` reconstruct the ordered address by
+  `q=O-E`, `p=2E-O`.
+- Finite-field Kakeya/Falconer, union-closed pressure, and A000568 marked
+  observer fibers all show scalar support/counts are too coarse unless
+  owner/pressure/marking coordinates survive.
+
+**WEB TRANSFER:** Graph reconstruction supplies Kocay covering matrices and
+vertex-pair parameters; explicit formulae and Ihara/Selberg trace formulae
+turn products into prime/zero/geodesic derivative sums; Weyl `m`-functions and
+Stieltjes/J-fractions are fraction-address reconstruction tools; Tutte
+activities and matroid Hodge/Chow-ring data are deletion/intersection address
+systems for scalar polynomial coefficients.
+
+**TOURNAMENT ANALYSIS:** Vertices are repair lanes.  The pairwise observable is
+`(collision_evidence, address_clarity, derivative_sum_clarity,
+finite_actionability, repo_leverage, source_confidence)`, with majority switch
+and curated-source tie order.  Fingerprints: `directed_3cycles=16`,
+`scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`, `hamiltonian_paths=425`.  The
+nontrivial SCC shows that the strongest transfer family is a cluster, not a
+linear metaphor.
+
+**ASSUMPTION CHALLENGE:** For LRC/Tournament Analysis, S665 did not assume
+vertices must be runners or arcs.  Candidate vertices included formulas,
+domains, files, invariants, graph cards, deleted vertices, residues, roots,
+eigenvalues, moments, bases, models, proof obligations, pins, sets, and
+activity marks.  The selected quotient preserves the predicate "which missing
+coordinate repairs a collision and yields a derivative ledger?" while
+deliberately discarding raw object identity.
+
+**NEXT:** Build (1) an LRC14 owner-derivative script attaching HYP-2165 owner
+routes to S663 carry groups, (2) a tournament `n=7` paired-deck augmentation,
+(3) an OCF noncommutative address projection toy, and (4) a unit-distance
+deletion-owner lab near the Moser `n=21/22` rows.
+
+**See:** `05-knowledge/hypotheses/HYP-2240-address-coordinate-derivative-repair.md`;
+`04-computation/address_coordinate_derivative_repair_s665.py`;
+`05-knowledge/results/address_coordinate_derivative_repair_s665.out`;
+`07-reflections/address-coordinate-derivative-repair-s665.md`; HYP-2239,
+HYP-2238, HYP-2236, HYP-2235, HYP-2234, HYP-2218, HYP-2212, HYP-2171.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

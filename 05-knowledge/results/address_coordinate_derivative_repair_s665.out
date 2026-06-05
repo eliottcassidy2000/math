@@ -1,0 +1,193 @@
+==============================================================================
+S665 address-coordinate derivative repair atlas
+==============================================================================
+
+Grammar
+  1. find a scalar/product collision
+  2. attach the missing fraction/address coordinate
+  3. unroll it back into a derivative sum
+
+A. Source anchors
+  explicit formulae for L-functions: Euler product/log-derivative prime-power sums plus zero sums
+    https://en.wikipedia.org/wiki/Explicit_formulae_for_L-functions
+  graph reconstruction algebraic formulation: deck collisions, Kocay linear constraints, covering-number matrices
+    https://arxiv.org/abs/1301.4121
+  graph reconstruction pair parameters: new reconstructible vertex-pair address parameters
+    https://arxiv.org/abs/2601.00620
+  inverse spectral Weyl m-function: m-function/spectral measure determines potential and has A-equation
+    https://arxiv.org/abs/math/9906118
+  structured matrices and continued fractions: Hankel matrices, moment problems, J-fractions, root localization
+    https://epubs.siam.org/doi/10.1137/090781127
+  continued fractions and Hankel determinants: continued fractions generate Hankel determinant formulae and Lax pairs
+    https://arxiv.org/abs/1907.05204
+  Tutte polynomial deletion-contraction: deletion-contraction and activity-address expansions
+    https://networkx.org/documentation/stable/reference/algorithms/generated/networkx.algorithms.polynomials.tutte_polynomial.html
+  Hodge theory for combinatorial geometries: matroid Chow-ring address proves log-concavity of characteristic coefficients
+    https://arxiv.org/abs/1511.02888
+  Selberg trace formula: spectrum/geodesic trace formula as closed-orbit derivative sum
+    https://mathworld.wolfram.com/SelbergTraceFormula.html
+
+B. Repo artifact availability
+  S509/S512/S586/HYP-1977            3/3 artifacts present
+  S618-S621                          3/3 artifacts present
+  S622/S626/S628/HYP-2203            3/3 artifacts present
+  S635/S636/HYP-2211/HYP-2212        2/2 artifacts present
+  S642/S643/HYP-2218/HYP-2219        2/2 artifacts present
+  S644/S645/HYP-2220                 1/2 artifacts present
+  S656/HYP-2232                      2/2 artifacts present
+  S658/HYP-2234                      2/2 artifacts present
+  S659/HYP-2235                      2/2 artifacts present
+  S660/HYP-2236                      2/2 artifacts present
+  S663/HYP-2239                      2/2 artifacts present
+
+C. Candidate repair lanes
+lane                                   family                 total vector
+LRC14 Res27 carry                      repo/LRC                  30 (5, 5, 5, 5, 5, 5)
+Tournament deck paired owner           repo/tournaments          30 (5, 5, 5, 5, 5, 5)
+Graph reconstruction Kocay matrix      web/graphs                27 (4, 5, 5, 4, 4, 5)
+A000568 marked observer fiber          repo/tournaments LRC      26 (4, 5, 4, 4, 5, 4)
+Goldbach/Lemoine pair plane            repo/number theory        26 (4, 5, 4, 5, 4, 4)
+OCF noncommutative address             repo/tournaments          26 (4, 5, 5, 3, 5, 4)
+Pi/e Vieta branch sheet                repo/number theory        26 (4, 5, 4, 5, 4, 4)
+Finite-field Kakeya pinned owner       repo/finite field         25 (4, 4, 4, 5, 4, 4)
+Ihara/Selberg graph zeta               web/graphs                25 (4, 4, 5, 4, 4, 4)
+Inverse spectral Weyl m-function       web/spectral              25 (4, 5, 5, 3, 3, 5)
+Riemann/Weil explicit formula          web/number theory         25 (4, 5, 5, 3, 4, 4)
+Stieltjes moment J-fraction            web/moments               25 (4, 5, 5, 4, 3, 4)
+Tutte deletion-contraction activities  web/combinatorics         25 (3, 4, 5, 5, 4, 4)
+Perfect/aliquot orbit owner            repo/number theory        24 (3, 4, 4, 5, 4, 4)
+Union-closed frequency pressure        repo/set systems          24 (4, 4, 4, 5, 3, 4)
+Unit distance deletion owner           repo/unit distance        24 (3, 4, 4, 4, 5, 4)
+Cauldron schedule word                 repo/games                23 (3, 4, 4, 5, 3, 4)
+CH forcing generic address             repo/set theory           21 (3, 5, 3, 2, 3, 5)
+Matroid Hodge characteristic polynomial web/matroids              21 (3, 4, 4, 2, 3, 5)
+Heegner reduced-form cycle             repo/web number theory    19 (2, 4, 3, 3, 3, 4)
+
+D. Exact-ish lanes
+  LRC14 Res27 carry
+    collision:  same Res27 additive/product shadow mixes floor and strict rows
+    address:    carry word k in v=r+27k plus owner/continuant state
+    derivative: carry-deletion derivative deck: M, wall pairs, gcd mass, apex and owner losses
+    next:       attach HYP-2165 owner routes and test deeper carry perturbations
+  Tournament deck paired owner
+    collision:  full decks and global scalar repairs collide through n=6
+    address:    paired card address (card isomorphism type, deleted vertex outdegree)
+    derivative: deleted-score, H-loss, and c3-loss sums paired to each card
+    next:       extend paired derivative minimality to n=7 with canonical augmentation
+  Graph reconstruction Kocay matrix
+    collision:  many graphs may share coarse deck-derived product/scalar shadows
+    address:    covering-number or vertex-pair parameter address rows
+    derivative: Kocay-style linear constraints and recursive pair-parameter equations
+    next:       port paired derivative deck tests from tournaments to ordinary graphs
+  Riemann/Weil explicit formula
+    collision:  Euler product alone hides zero/gamma/infinity address data
+    address:    zeros, gamma factor, and test-function/Fourier address
+    derivative: logarithmic derivative turns products into prime-power and zero sums
+    next:       use as the model for product-ledger -> derivative-sum transformations
+  Ihara/Selberg graph zeta
+    collision:  determinant/product zeta can collide at spectral level
+    address:    primitive closed geodesic or scattering/geodesic-length address
+    derivative: log derivative/trace formula expands product into closed-orbit sums
+    next:       compute Ihara/Bartholdi zeta for small tournament-derived graphs
+  Stieltjes moment J-fraction
+    collision:  moment/Hankel scalar data can be indeterminate or too coarse
+    address:    continued-fraction coefficients and Hankel determinant address
+    derivative: J-fraction/orthogonal-polynomial recurrence unrolls into moment sums
+    next:       build a finite moment-collision toy beside OCF independence packets
+  Inverse spectral Weyl m-function
+    collision:  spectrum/product data alone needs norming or spectral measure address
+    address:    Weyl m-function or spectral measure
+    derivative: m-function expansion and A-equation unroll potential into derivative/integral sums
+    next:       use m-function as archetype for LRC owner address, not just analogy
+  Pi/e Vieta branch sheet
+    collision:  trace/norm pair leaves root order or branch sheet unresolved
+    address:    discriminant D=e-pi or finite-field branch x-y
+    derivative: Newton power sums and branch derivative split the two sheets
+    next:       reuse finite-field branch lab as a generic collision detector
+  OCF noncommutative address
+    collision:  commutative OCF H=I(Omega,2) forgets vertex/set-partition addresses
+    address:    noncommuting variables and set partitions
+    derivative: deletion-contraction in the richer W_X unrolls to OCF packet sums
+    next:       test transfer-matrix symmetry by projecting NC identities downward
+  Finite-field Kakeya pinned owner
+    collision:  full distance support saturates while union size and pinned minima vary
+    address:    pin owner, line-choice recursion, concurrency label
+    derivative: pinned-distance and concurrency derivative sums
+    next:       classify full-distance-support twins by owner labels
+  Union-closed frequency pressure
+    collision:  frequency vectors collide at m=4
+    address:    set pressure address sum_B |A union B|
+    derivative: pressure-loss derivative over added/deleted sets
+    next:       classify frequency collision buckets by pressure derivative profile
+  Goldbach/Lemoine pair plane
+    collision:  even E=p+q and odd O=p+2q are separate scalar columns
+    address:    ordered pair address q=O-E, p=2E-O
+    derivative: parent-rich odd/even companion sums and swap-reflection derivative
+    next:       rank shared prime-pair columns by local sieve plus reconstruction address
+  A000568 marked observer fiber
+    collision:  unmarked tournament classes and scalar counts mix LRC status
+    address:    rooted/marked observer fiber and endpoint threshold labels
+    derivative: source/deletion/gap-threshold derivative sums
+    next:       use address-coordinate grammar for every quotient count
+
+E. Tournament Analysis over repair lanes
+  vertices=repair lanes
+  observable=(collision, address, derivative, finite, repo, source)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 11: 2, 12: 2, 13: 2, 14: 2, 17: 1, 18: 1, 19: 1}
+  directed_3cycles=16
+  scc_sizes=[8, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=425
+  top_order:
+    LRC14 Res27 carry
+    Tournament deck paired owner
+    Graph reconstruction Kocay matrix
+    OCF noncommutative address
+    Riemann/Weil explicit formula
+    Pi/e Vieta branch sheet
+    Inverse spectral Weyl m-function
+    Goldbach/Lemoine pair plane
+    Stieltjes moment J-fraction
+    A000568 marked observer fiber
+    Ihara/Selberg graph zeta
+    Tutte deletion-contraction activities
+
+F. Family summary
+  repo/LRC                 count=1 total=30 best=LRC14 Res27 carry
+  repo/finite field        count=1 total=25 best=Finite-field Kakeya pinned owner
+  repo/games               count=1 total=23 best=Cauldron schedule word
+  repo/number theory       count=3 total=76 best=Pi/e Vieta branch sheet
+  repo/set systems         count=1 total=24 best=Union-closed frequency pressure
+  repo/set theory          count=1 total=21 best=CH forcing generic address
+  repo/tournaments         count=2 total=56 best=Tournament deck paired owner
+  repo/tournaments LRC     count=1 total=26 best=A000568 marked observer fiber
+  repo/unit distance       count=1 total=24 best=Unit distance deletion owner
+  repo/web number theory   count=1 total=19 best=Heegner reduced-form cycle
+  web/combinatorics        count=1 total=25 best=Tutte deletion-contraction activities
+  web/graphs               count=2 total=52 best=Graph reconstruction Kocay matrix
+  web/matroids             count=1 total=21 best=Matroid Hodge characteristic polynomial
+  web/moments              count=1 total=25 best=Stieltjes moment J-fraction
+  web/number theory        count=1 total=25 best=Riemann/Weil explicit formula
+  web/spectral             count=1 total=25 best=Inverse spectral Weyl m-function
+
+G. Finite side labs
+  Vieta branch over F_17
+    sum_product_max_fiber=2
+    full_address_max_fiber=1
+    collision_example=((1, 0), [(0, 1), (1, 0)])
+    branch_power_sums=[(16, (1, 1, 1, 1, 1, 1)), (1, (1, 1, 1, 1, 1, 1))]
+  Toy log derivative of product prod_p (1 - x^p)^-1
+    primes=[2, 3, 5, 7, 11, 13]
+    coeffs(n, sum_p|n p, prime_power_marker)=[(1, 0, 0), (2, 2, 2), (3, 3, 3), (4, 2, 2), (5, 5, 5), (6, 5, 0), (7, 7, 7), (8, 2, 2), (9, 3, 3), (10, 7, 0), (11, 11, 11), (12, 5, 0), (13, 13, 13), (14, 9, 0), (15, 8, 0), (16, 2, 2), (17, 0, 0), (18, 5, 0), (19, 0, 0), (20, 7, 0)]
+  Goldbach/Lemoine reconstruction
+    shared_pair_rows=212
+    first_rows=[(2, 2, 4, 6, 2, 2), (2, 3, 5, 8, 3, 2), (2, 5, 7, 12, 5, 2), (2, 7, 9, 16, 7, 2), (2, 11, 13, 24, 11, 2), (2, 13, 15, 28, 13, 2), (2, 17, 19, 36, 17, 2), (2, 19, 21, 40, 19, 2), (2, 23, 25, 48, 23, 2), (2, 29, 31, 60, 29, 2)]
+    diagonals=[(2, 4, 6), (3, 6, 9), (5, 10, 15), (7, 14, 21), (11, 22, 33), (13, 26, 39), (17, 34, 51), (19, 38, 57), (23, 46, 69), (29, 58, 87)]
+
+H. Synthesis
+  Address coordinates are not decorations.  They are the derivative variable.
+  In exact repo cases, unpaired/global scalar repairs fail; paired/addressed
+  derivatives split the collision.  In external theorem families, the same
+  mechanism appears as log derivatives, Weyl m-functions, J-fractions,
+  Kocay matrices, activity expansions, trace formulas, and Hodge operators.
+  Best next builds: LRC owner derivative, tournament n=7 paired deck, OCF
+  noncommutative address projection, and unit-distance deletion-owner lab.

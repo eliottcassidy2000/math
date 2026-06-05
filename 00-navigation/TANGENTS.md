@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T734** #address-coordinate #projection-repair #derivative-sums #triune-cycle #web-atlas | certainty: stub claimed + search in progress | source: codex-2026-06-05-S665
-Search the sharper S664 pattern: find a scalar/product collision, attach the missing fraction/address coordinate, then unroll it as a derivative sum.  Candidate address coordinates include carry words, deleted-card owners, branch sheets, Weyl `m`-functions, continued-fraction coefficients, generic/model states, activity marks, and point-deletion owners.  See HYP-2240.
+**T734** #address-coordinate #projection-repair #derivative-sums #triune-cycle #web-atlas | certainty: atlas + finite exact toys + theorem-transfer anchors | source: codex-2026-06-05-S665
+Sharpen HYP-2239 into the grammar: scalar/product collision -> missing fraction/address coordinate -> derivative sum.  S665 ranks 20 repair lanes; exact leaders are LRC14 carry state and tournament deck paired owners, while graph reconstruction, explicit formulae, Ihara/Selberg, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge give theorem-transfer templates.  Tournament fingerprints: `directed_3cycles=16`, SCCs `[8,1,...]`, `425` Hamiltonian paths.  See HYP-2240.
 
 **T733** #triune-cycle #sum-product-fraction #lrc #tournaments #side-channels | certainty: broad atlas + exact sibling repairs | source: codex-2026-06-05-S664
 The cycle is a projection-repair grammar: sums aggregate packets; products localize factor/shell data; fraction faces remember the lift/owner/branch that turns products back into additive ledgers.  S664 scans `10381` repo files and builds a face tournament with `score_hist={0:1,2:3}`, one directed cycle `(sum,product,fraction)`, SCC `{sum,product,fraction}` plus `{raw_scalar}`, and `3` Hamiltonian paths.  Strong exact lanes: LRC14 carry state and tournament decks; next probes: OCF continuants and unit-distance edge/direction/deletion-owner ledgers.  See HYP-2239.
