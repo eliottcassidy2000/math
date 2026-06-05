@@ -36,6 +36,12 @@ with all three beating `raw_decimal`.  The tournament has one directed
 Hamiltonian paths.  So the representation trinity is not a ranking.  It is a
 small nontransitive proof lens: each face repairs what another forgets.
 
+The cotangent pole expansion adds a useful variant of the fraction face.  A
+continued fraction remembers convergents; a partial fraction remembers poles.
+Both are recursive/boundary ledgers.  They are bad if you only want the fastest
+digits of `pi`, and good if you want to know which boundary contribution was
+responsible for the scalar.
+
 The LRC `n=14` transfer is the best immediate use.  S661 asks for a no-leak
 owner-derivative theorem, and S660 says unpaired derivative decks leak.  The pi
 trinity says what to keep:
@@ -52,6 +58,19 @@ be a triune record:
 ```text
 (additive walls, local product shells, recursive owner state).
 ```
+
+Globally, the three faces form a cycle.  Locally, for the current LRC carry
+seam, the fraction face should be read first:
+
+```text
+fraction branch = carry word / owner derivative
+product card    = Res_27 atom / C=27 gcd shell
+sum shadow      = odd-wall and Poisson/inclusion-exclusion aggregate
+```
+
+That is the S662 refinement of the S661 handoff.  HYP-2239/S663 now owns the
+application lane: build the next derivative table as `(sum shadow, product
+card, fraction branch)`, but expect the last coordinate to do the separating.
 
 This also gives a way to revisit OCF.  `H(T)` is the scalar evaluation, the
 independence polynomial is the retained packet object, and a continued

@@ -42,6 +42,7 @@ Machin sum:       pi/4 = 4 arctan(1/5) - arctan(1/239)
 Basel sum:        pi^2/6 = sum_{n>=1} 1/n^2
 Wallis product:   pi/2 = product_{n>=1} (2n)^2/((2n-1)(2n+1))
 Brouncker frac:   4/pi = 1 + 1^2/(2 + 3^2/(2 + 5^2/(2 + ...)))
+Cot pole frac:    pi*cot(pi*z)=1/z+sum_{n>=1}(1/(z+n)+1/(z-n))
 ```
 
 The convergence table is not the main theorem, but it gives a useful sanity
@@ -74,6 +75,11 @@ state.  This is the missing face in HYP-2229's Basel note: it looks less like a
 moment identity and more like a finite owner ledger.  Each convergent remembers
 which boundary state was last retained, making it a natural analogue of S661's
 desired paired carry/owner/deletion derivative.
+
+The cotangent partial-fraction form is the same warning in pole language.  It
+is a scalar identity only after one forgets which pole supplied which boundary
+contribution; for LRC, that forgotten assignment is exactly the kind of
+owner/carry side channel HYP-2237 is trying to retain.
 
 Raw decimal digits are useful as checksums, but they are not proof carriers.
 
@@ -158,6 +164,16 @@ continued-fraction-like boundary state of the carry recursion:
 Res_27/certificate card + attached carry/owner derivative.
 ```
 
+So there are two compatible readings:
+
+```text
+global representation audit: sum -> product -> fraction -> sum
+LRC14 carry-seam task:       fraction/carry first, product/gcd second, sum third
+```
+
+The first says no face globally dominates.  The second says that the current
+`n=14` proof obstruction is specifically a branch/carry reconstruction problem.
+
 For OCF/tournament work, the analogous warning is: `H(T)` is a scalar sum over
 packets, the independence polynomial is the retained packet object, and a
 continued-fraction/continuant encoding may be the right way to remember a
@@ -185,6 +201,10 @@ fraction face into actual convergent states or owner/carry derivatives.
   list, product/local factor list, continued-fraction boundary data.
 - Apply the template to LRC `n=14` floor atoms: odd-wall sums, `C=27` gcd
   products, and carry-owner continuants.
+- HYP-2239/S663 now owns the concrete application lane.  Its first LRC script
+  should use columns `(sum shadow, product card, fraction branch)` and test
+  whether identical scalar/wall/product data but different carry-owner
+  derivatives can disagree on floor-vs-strict status.
 - Test an OCF continuant analogue: can a deletion sequence or substitution
   macro-word encode `H(T)` with a fraction-style boundary state rather than a
   raw scalar?

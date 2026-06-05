@@ -142,7 +142,7 @@ the predicate invariant.
 The next computation should be narrow and ruthless:
 
 ```text
-lrc14_carry_derivative_reconstruction_s662.py
+lrc14_carry_derivative_reconstruction_s663.py
 ```
 
 It should start with AP, `Vstar`, and `2AP`, then generate one- and two-carry

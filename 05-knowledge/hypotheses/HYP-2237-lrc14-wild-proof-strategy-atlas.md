@@ -261,7 +261,7 @@ current theorem actually needs.
 The next script should be something like:
 
 ```text
-04-computation/lrc14_carry_derivative_reconstruction_s662.py
+04-computation/lrc14_carry_derivative_reconstruction_s663.py
 ```
 
 Minimum contents:

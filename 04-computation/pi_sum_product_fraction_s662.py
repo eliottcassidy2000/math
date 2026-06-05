@@ -87,6 +87,17 @@ def brouncker_pi(depth: int) -> Decimal:
     return Decimal(4) / four_over_pi
 
 
+def cot_partial_fraction_pi(terms: int) -> Decimal:
+    """Use pi*cot(pi*z)=1/z+sum_n(1/(z+n)+1/(z-n)) at z=1/4."""
+
+    z = Decimal(1) / Decimal(4)
+    total = Decimal(1) / z
+    for n in range(1, terms + 1):
+        nd = dec(n)
+        total += Decimal(1) / (z + nd) + Decimal(1) / (z - nd)
+    return total
+
+
 def sci(x: Decimal, digits: int = 4) -> str:
     return f"{x:.{digits}E}"
 
@@ -267,6 +278,8 @@ def approximation_rows() -> list[tuple[str, str, Decimal]]:
         rows.append(("product: Wallis", f"N={factors}", wallis_pi(factors)))
     for depth in (3, 5, 10, 20, 50, 100):
         rows.append(("fraction: Brouncker", f"depth={depth}", brouncker_pi(depth)))
+    for terms in (10, 100, 1000, 10000):
+        rows.append(("fraction: cot poles", f"N={terms}", cot_partial_fraction_pi(terms)))
     return rows
 
 
@@ -281,6 +294,7 @@ def main() -> None:
     print("  sum       pi^2/6 = sum_{n>=1} 1/n^2")
     print("  product   pi/2 = product_{n>=1} (2n)^2/((2n-1)(2n+1))")
     print("  fraction  4/pi = 1 + 1^2/(2 + 3^2/(2 + 5^2/(2 + ...)))")
+    print("  fraction  pi*cot(pi*z)=1/z+sum_n(1/(z+n)+1/(z-n)); set z=1/4")
     print()
 
     print("Approximation ledger")
@@ -325,6 +339,9 @@ def main() -> None:
     print("    sum packets + product factors + fraction boundary state.")
     print("  HYP-2229 already supplies the product-to-sum bridge through the sine product;")
     print("  S662 adds the missing fraction face as a recursive owner/convergent channel.")
+    print("  For LRC14 specifically, read the same trinity as:")
+    print("    odd-wall sums + C=27 product/gcd card + paired carry-owner fraction branch.")
+    print("  The trinity is globally cyclic, but the carry-seam task is fraction-first.")
 
 
 if __name__ == "__main__":
