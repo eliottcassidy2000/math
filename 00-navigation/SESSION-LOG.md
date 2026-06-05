@@ -1,5 +1,10 @@
 # Session Log
 
+## codex-2026-06-05-S652 - THM-410 and square-node tournament enumeration speedups (HYP-2228)
+
+**Prompt:** Use THM-410 and related structure to think creatively about speeding tournament isomorphism-class enumeration, H-spectrum sequences, and new square-node constructions where each node becomes a tournament of the original size.
+**Status:** Reserved.  Planned artifacts: HYP-2228, T721, `04-computation/thm410_square_blowup_speedups_s652.py`, `05-knowledge/results/thm410_square_blowup_speedups_s652.out`, and `07-reflections/thm410-square-blowup-enumeration-speedups-s652.md`.
+
 ## monad-compute-2026-06-04-S9 - ALL 157 n=9 HIGH gaps [2883,3355] unlock at n=10; {7,21} stand alone as candidate permanent low gaps
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.
