@@ -169,6 +169,15 @@
 **Tournament Analysis:** Vertices are carrier lenses rather than runners, after explicitly considering runners, residues, antipodal shells, gcd strata, pair pinches, boundary events, carry fibers, and proof obligations.  The majority tournament is transitive with one Hamiltonian path, ranking `pillai_fixed_clock > gcd_shell_carrier > single_swap_zero_defect > mod3_doubling_law > pair_pinch_oracle > carry_lift_conservativity > scalar_gap_M > raw_tuple_scan`.
 **Artifacts:** HYP-2222, `07-reflections/lrc-pillai-fixed-clock-carrier-s646.md`, T715, result-index and concept-map updates.
 
+## codex-2026-06-04-S648 - unit-distance Moser fixed quantum (HYP-2224)
+
+**Prompt:** Do the same fixed-carrier move for the unit-distance problem.
+**Integration:** Builds on S646/HYP-2222's fixed-clock carrier, S641/HYP-2217's LRC14/UD21 `27`-quantum bridge, S628/THM-408's Moser spine ladder, S626/HYP-2203's unit-spine gauge separation, S617/HYP-2188's Moser beam speedups, and S614/HYP-2176's `n=22` deletion-core reduction.
+**Computation:** Added `04-computation/unit_distance_moser_fixed_quantum_s648.py` and stored `05-knowledge/results/unit_distance_moser_fixed_quantum_s648.out`.  The script imports THM-408's symbolic Moser families, computes total/spine/bulk direction-pair ledgers, verifies the stable add-one-slab quantum, decomposes the `n=21/22` frontier rows, records deletion-degree ledgers, and runs Tournament Analysis.
+**Findings:** After the cap transient, both Moser families have stable direction increment `(0,1,8,4,0,4,4,2,4)`, sum `27`, split as `8` unit-spine section edges plus `19` hidden bulk edges.  At `P_2^-`, `n=21,E=57,spine=20,bulk=37,pure_bulk=20`; at `P_2^+`, `n=22,E=60,spine=21,bulk=39,pure_bulk=21`.  The `n=22` row has one degree-3 cap vertex, so a hypothetical `61`-edge row inside this carrier must repair the cap endpoint or leave the fixed Moser quantum.
+**Tournament Analysis:** Vertices are carrier lenses after explicitly considering points, unit edges, direction pairs, slabs, caps, ears, deletion cores, obstruction labels, and proof obligations.  The majority tournament is transitive with one Hamiltonian path, ranking `fixed_27_edge_quantum > spine_bulk_direction_split > cap_endpoint_repair_channel > pure_bulk_direction_jackknife > degree_deletion_core_ledger > traceable_section_word > triangular_lattice_baseline > raw_edge_count_only`.
+**Artifacts:** HYP-2224, `07-reflections/unit-distance-moser-fixed-quantum-s648.md`, T717, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.

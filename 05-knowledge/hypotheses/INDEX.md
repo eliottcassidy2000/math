@@ -679,6 +679,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2221 | Perfect numbers are fixed points of the aliquot/divisor carrier: `D(n) -> sigma(n) -> s(n)=sigma(n)-n`, with fixed predicate `s(n)=n` or `sigma(n)/n=2`.  This complements HYP-2220's triangular/Vieta aliquot carrier by scanning the divisor-sum dynamics directly; the scalar fixed equation is usable only with divisor-lattice side channels: prime-power products, parity, Mersenne primality in the even section, and odd-perfect obstruction data. | S645 scans `n<=100000`, finding fixed points `[6,28,496,8128]`, `13` length-2 amicable cycles, one length-5 sociable cycle, no defect `+1` quasi-perfect rows, powers of two as defect `-1` almost-perfect rows, and closest odd near-fixed row `32445=3^2*5*7*103` with `sigma(n)-2n=6`.  The carrier-lens Tournament Analysis is transitive with one Hamiltonian path and ranks `divisor_lattice_fixed_point` above aliquot graph, sigma product, odd-perfect side channel, Euclid-Euler section, local prime-power ledger, near-fixed defect scout, and raw sequence list. | codex-2026-06-04-S645; `HYP-2221-perfect-aliquot-fixed-point-carrier.md`; `aliquot_fixed_point_carrier_s645.py`; `aliquot_fixed_point_carrier_s645.out`; `perfect-aliquot-fixed-point-carrier-s645.md`; HYP-2220, HYP-2216, HYP-2215, HYP-2211, HYP-2208 |
 | HYP-2222 | The LRC shell clock `C=2n-1` has a divisor-carrier analogue of the perfect-number fixed equation: `A(C)=sum_{1<=a<=(C-1)/2} gcd(a,C)` is fixed when `A(C)=C`, equivalently Pillai's gcd-sum satisfies `P(C)=3C`.  The only odd fixed clocks are `C=15` and `C=27`, so the only LRC total denominators with a Pillai-fixed pair-sum clock are `n=8` and `n=14`. | S646 proves the clock-classification lemma from the multiplicative local factor `1+a*(1-1/p)`, then scans AP single-swaps through `n=14` using the THM-369 pair-sum pinch oracle.  Every tight non-AP single-swap preserves weighted gcd-shell mass: `2->7` at `n=5`, `2->9` at `n=6`, `6->12` at `n=8`, and `12->24` at `n=14`; the n=14 `Vstar` row moves shell `12` to shell `3` but preserves gcd counts `{1:9,3:3,9:1}`.  The open proof target is a no-leak lemma: fixed gcd carrier plus pair-pinch/carry-owner labels force AP, Vstar, or strict looseness. | codex-2026-06-04-S646; `HYP-2222-lrc-pillai-fixed-clock-carrier.md`; `lrc_pillai_fixed_clock_s646.py`; `lrc_pillai_fixed_clock_s646.out`; `lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220, HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369 |
 | HYP-2223 | Perfect triangular tournament controls split into Hamiltonian spine and off-path deformation fiber.  Every `m`-vertex tournament has `C(m,2)` arcs, and fixing one Hamiltonian path leaves `C(m-1,2)` free off-path arcs; at the second perfect control this is `C(8,2)=28=7+21`. | S647 enumerates fixed-base-path fibers through `n=7` and reconstructs the exact `n=8` fixed-path fiber from the full labelled H-spectrum by `fixed_count_h=h*L_h/8!`.  The `n=8` fiber has size `2^21`, `320` H-values in `[1,661]`, mean `388.6875`, and fixed-fiber counts `H=7:0`, `H=21:0`.  Thus `{7,21}` are section/fiber dimensions of the perfect arc carrier while remaining forbidden Hamiltonian-path counts. | codex-2026-06-04-S647; `HYP-2223-triangular-fixed-tournament-controls.md`; `triangular_fixed_tournament_controls_s647.py`; `triangular_fixed_tournament_controls_s647.out`; `triangular-fixed-tournament-controls-s647.md`; HYP-2220, HYP-2200, HYP-2202, HYP-2203, HYP-2217, THM-115 |
+| HYP-2224 | Unit-distance Moser slabs have a fixed edge-channel carrier under the THM-408 add-one-slab operation: after the cap transient, both `P_m^+` and `P_m^-` have stable direction increment `Delta_total=(0,1,8,4,0,4,4,2,4)` with sum `27`, split as `8` unit-spine section edges plus `19` hidden bulk edges. | S648 computes total/spine/bulk direction-pair ledgers for both Moser families through `m=5`.  At the current frontier rows, `P_2^-` has `n=21,E=57,spine=20,bulk=37,pure_bulk=20`, and `P_2^+` has `n=22,E=60,spine=21,bulk=39,pure_bulk=21`, so pure-bulk direction mass equals the unit-spine length at `m=2`.  The `n=22` row has degree histogram `{3:1,4:3,5:8,6:5,7:5}`; by S614, a 61-edge row cannot keep a degree-3 vertex, so a one-edge improvement inside this carrier must repair the cap endpoint channel or leave the fixed Moser quantum. | codex-2026-06-04-S648; `HYP-2224-unit-distance-moser-fixed-quantum-carrier.md`; `unit_distance_moser_fixed_quantum_s648.py`; `unit_distance_moser_fixed_quantum_s648.out`; `unit-distance-moser-fixed-quantum-s648.md`; HYP-2222, HYP-2221, HYP-2217, HYP-2204, HYP-2203, HYP-2188, HYP-2176, THM-408 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5615,6 +5616,85 @@ scalar_gap_M > raw_tuple_scan`.
 `04-computation/lrc_pillai_fixed_clock_s646.py` (+.out);
 `07-reflections/lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220,
 HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369.
+
+## HYP-2224: Unit distance has a Moser fixed-quantum carrier (unit-distance-moser-fixed-quantum, codex-2026-06-04-S648)
+**Status:** OPEN proof-use hypothesis with exact THM-408 carrier scout.
+
+S648 ports the fixed-carrier idea to the unit-distance side.  The analogue is
+not a divisor equation on `u(n)`; it is the fixed edge-channel increment of the
+THM-408 Moser spine ladder.  For both `P_m^+` and `P_m^-`, after the cap
+transient, adding one full slab has stable direction-pair increment
+
+```text
+Delta_total = (0,1,8,4,0,4,4,2,4), sum 27.
+```
+
+The fixed quantum splits as
+
+```text
+Delta_spine = (0,0,0,1,0,1,4,0,2), sum 8
+Delta_bulk  = (0,1,8,3,0,3,0,2,2), sum 19
+```
+
+so
+
+```text
+27 = 8 + 19.
+```
+
+There are `9` antipodal direction pairs in the rank-4 Moser unit shell, hence
+`27=3*9`, but the quantum is not direction-uniform:
+
+```text
+Delta_total - (3,3,3,3,3,3,3,3,3)
+= (-3,-2,5,1,-3,1,1,-1,1).
+```
+
+The scalar `27` hides a direction defect, so a proof carrier should retain
+spine/bulk/direction labels.
+
+For the exact `n=21` Moser row `P_2^-`, S648 records
+
+```text
+vertices=21, edges=57, spine_edges=20, bulk_edges=37, pure_bulk_edges=20.
+```
+
+For the `n=22` Moser lane `P_2^+`, it records
+
+```text
+vertices=22, edges=60, spine_edges=21, bulk_edges=39, pure_bulk_edges=21.
+```
+
+Thus at the current `n=21/22` frontier, pure-bulk direction mass equals the
+unit-spine length.  This equality is not a general `m` identity; it singles out
+the `m=2` rows as balanced section/bulk fixed pockets.
+
+The `n=22` row has degree histogram `{3:1,4:3,5:8,6:5,7:5}`.  By S614's
+deletion reduction, a `61`-edge `22`-point row cannot have degree `<=3`,
+because deleting such a vertex would leave more than `u(21)=57` edges.
+Therefore any `61`-edge improvement inside this carrier must repair the
+degree-`3` cap endpoint channel or leave the fixed Moser carrier.
+
+The no-leak target is:
+
+```text
+fixed 27 quantum + unrepaired cap endpoint -> at most 60 edges
+61 edges -> cap endpoint repaired or different carrier
+```
+
+Tournament Analysis in S647 uses carrier lenses rather than points or unit
+edges.  Alternate vertex sets considered include points, unit edges, direction
+pairs, slabs, caps, ears, deletion cores, obstruction labels, and proof
+obligations.  The majority tournament is transitive with one Hamiltonian path,
+ranking `fixed_27_edge_quantum > spine_bulk_direction_split >
+cap_endpoint_repair_channel > pure_bulk_direction_jackknife >
+degree_deletion_core_ledger > traceable_section_word >
+triangular_lattice_baseline > raw_edge_count_only`.
+
+**See:** `05-knowledge/hypotheses/HYP-2224-unit-distance-moser-fixed-quantum-carrier.md`;
+`04-computation/unit_distance_moser_fixed_quantum_s648.py` (+.out);
+`07-reflections/unit-distance-moser-fixed-quantum-s648.md`; HYP-2222,
+HYP-2221, HYP-2217, HYP-2204, HYP-2203, HYP-2188, HYP-2176, THM-408.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
