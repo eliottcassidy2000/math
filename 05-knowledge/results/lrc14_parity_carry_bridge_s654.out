@@ -1,0 +1,306 @@
+S654 LRC n=14 parity/carry bridge
+========================================================================
+A. Exact parity/carry identities
+  n=14, C=2n-1=27, floor=1/14
+  v_i = r_i + 27*k_i
+  parity(v_i) = parity(r_i + k_i)       because 27 is odd
+  v_i mod 14  = r_i - k_i mod 14        because 27 == -1 mod 14
+  14 | v_i    iff k_i == r_i mod 14     (apex / zero-divisor carry)
+  14 | v_i+v_j iff k_i+k_j == r_i+r_j mod 14 (pair-sum carry)
+
+B. Minimal apex carries for the two primitive floor shadows
+  AP:
+    i= 0 r= 1 k0= 1 v= 28 v/14= 2 parity=even
+    i= 1 r= 2 k0= 2 v= 56 v/14= 4 parity=even
+    i= 2 r= 3 k0= 3 v= 84 v/14= 6 parity=even
+    i= 3 r= 4 k0= 4 v=112 v/14= 8 parity=even
+    i= 4 r= 5 k0= 5 v=140 v/14=10 parity=even
+    i= 5 r= 6 k0= 6 v=168 v/14=12 parity=even
+    i= 6 r= 7 k0= 7 v=196 v/14=14 parity=even
+    i= 7 r= 8 k0= 8 v=224 v/14=16 parity=even
+    i= 8 r= 9 k0= 9 v=252 v/14=18 parity=even
+    i= 9 r=10 k0=10 v=280 v/14=20 parity=even
+    i=10 r=11 k0=11 v=308 v/14=22 parity=even
+    i=11 r=12 k0=12 v=336 v/14=24 parity=even
+    i=12 r=13 k0=13 v=364 v/14=26 parity=even
+  V*:
+    i= 0 r= 1 k0= 1 v= 28 v/14= 2 parity=even
+    i= 1 r= 2 k0= 2 v= 56 v/14= 4 parity=even
+    i= 2 r= 3 k0= 3 v= 84 v/14= 6 parity=even
+    i= 3 r= 4 k0= 4 v=112 v/14= 8 parity=even
+    i= 4 r= 5 k0= 5 v=140 v/14=10 parity=even
+    i= 5 r= 6 k0= 6 v=168 v/14=12 parity=even
+    i= 6 r= 7 k0= 7 v=196 v/14=14 parity=even
+    i= 7 r= 8 k0= 8 v=224 v/14=16 parity=even
+    i= 8 r= 9 k0= 9 v=252 v/14=18 parity=even
+    i= 9 r=10 k0=10 v=280 v/14=20 parity=even
+    i=10 r=11 k0=11 v=308 v/14=22 parity=even
+    i=11 r=13 k0=13 v=364 v/14=26 parity=even
+    i=12 r=24 k0=10 v=294 v/14=21 parity=even
+  Every minimal apex speed is even, as the doubled-prime bridge predicts.
+
+C. Exact single-apex carry sweep
+  AP:
+    apex at r= 1: M=  2/15 margin= 13/210 t=   1/15 pairs14= 5 even= 7
+    apex at r= 2: M=  2/17 margin= 11/238 t=   8/17 pairs14= 5 even= 6
+    apex at r= 3: M=  2/17 margin= 11/238 t=   6/17 pairs14= 5 even= 7
+    apex at r= 4: M=  2/19 margin=  9/266 t=   5/19 pairs14= 5 even= 6
+    apex at r= 5: M=  2/19 margin=  9/266 t=   4/19 pairs14= 5 even= 7
+    apex at r= 6: M=  2/23 margin=  5/322 t=   4/23 pairs14= 5 even= 6
+    apex at r= 7: M=  7/51 margin= 47/714 t= 29/204 pairs14= 6 even= 7
+    apex at r= 8: M=  4/33 margin= 23/462 t= 29/231 pairs14= 5 even= 6
+    apex at r= 9: M=28/257 margin=135/3598 t= 57/257 pairs14= 5 even= 7
+    apex at r=10: M=  4/41 margin= 15/574 t= 86/287 pairs14= 5 even= 6
+    apex at r=11: M=28/311 margin=81/4354 t=113/311 pairs14= 5 even= 7
+    apex at r=12: M=28/341 margin=51/4774 t=142/341 pairs14= 5 even= 6
+    apex at r=13: M=28/365 margin=27/5110 t= 28/365 pairs14= 5 even= 7
+    best single-apex tax: 28/365 (margin 27/5110) via AP:r13->k13
+  V*:
+    apex at r= 1: M=  2/15 margin= 13/210 t=   1/15 pairs14= 5 even= 7
+    apex at r= 2: M=  2/17 margin= 11/238 t=   8/17 pairs14= 6 even= 6
+    apex at r= 3: M=  2/17 margin= 11/238 t=   6/17 pairs14= 5 even= 7
+    apex at r= 4: M=  2/19 margin=  9/266 t=   5/19 pairs14= 4 even= 6
+    apex at r= 5: M=  2/17 margin= 11/238 t=   7/17 pairs14= 5 even= 7
+    apex at r= 6: M=  4/35 margin=   3/70 t=   6/35 pairs14= 5 even= 6
+    apex at r= 7: M=28/201 margin=191/2814 t= 86/201 pairs14= 6 even= 7
+    apex at r= 8: M=  3/31 margin= 11/434 t=   4/31 pairs14= 5 even= 6
+    apex at r= 9: M=28/257 margin=135/3598 t= 57/257 pairs14= 5 even= 7
+    apex at r=10: M=  4/41 margin= 15/574 t= 86/287 pairs14= 5 even= 6
+    apex at r=11: M=28/309 margin=83/4326 t= 28/309 pairs14= 5 even= 7
+    apex at r=13: M=  2/25 margin=  3/350 t=   2/25 pairs14= 5 even= 7
+    apex at r=24: M=  1/12 margin=   1/84 t=   1/12 pairs14= 5 even= 6
+    best single-apex tax: 2/25 (margin 3/350) via V*:r13->k13
+
+D. Apex plus up to 2 extra +27 parity/carry toggles
+  rows screened: 2054
+  approximate near-floor rows exact-checked: 0
+  exact floor rows in checked set: 0
+  exact below-floor rows in checked set: 0
+  exact group minima by base, apex residue, and extra-toggle count:
+    AP apex= 1 extra=0: M=  2/15 margin= 13/210 t=   1/15 l1= 1 even= 7 pairs14= 5
+    AP apex= 1 extra=1: M=  4/33 margin= 23/462 t=   2/33 l1= 2 even= 6 pairs14= 5
+    AP apex= 1 extra=2: M=   1/9 margin=  5/126 t=   1/18 l1= 3 even= 7 pairs14= 6
+    AP apex= 2 extra=0: M=  2/17 margin= 11/238 t=   8/17 l1= 2 even= 6 pairs14= 5
+    AP apex= 2 extra=1: M=  5/49 margin=   3/98 t=  23/49 l1= 3 even= 7 pairs14= 5
+    AP apex= 2 extra=2: M=  2/21 margin=   1/42 t=   4/21 l1= 4 even= 8 pairs14= 6
+    AP apex= 3 extra=0: M=  2/17 margin= 11/238 t=   6/17 l1= 3 even= 7 pairs14= 5
+    AP apex= 3 extra=1: M=  2/19 margin=  9/266 t=   6/19 l1= 4 even= 6 pairs14= 5
+    AP apex= 3 extra=2: M=  2/19 margin=  9/266 t=   5/19 l1= 5 even= 5 pairs14= 6
+    AP apex= 4 extra=0: M=  2/19 margin=  9/266 t=   5/19 l1= 4 even= 6 pairs14= 5
+    AP apex= 4 extra=1: M=  2/19 margin=  9/266 t=   4/19 l1= 5 even= 7 pairs14= 5
+    AP apex= 4 extra=2: M=  2/19 margin=  9/266 t=   5/19 l1= 6 even= 6 pairs14= 6
+    AP apex= 5 extra=0: M=  2/19 margin=  9/266 t=   4/19 l1= 5 even= 7 pairs14= 5
+    AP apex= 5 extra=1: M=  2/21 margin=   1/42 t=   4/21 l1= 6 even= 6 pairs14= 5
+    AP apex= 5 extra=2: M=  2/19 margin=  9/266 t=   5/19 l1= 7 even= 5 pairs14= 5
+    AP apex= 6 extra=0: M=  2/23 margin=  5/322 t=   4/23 l1= 6 even= 6 pairs14= 5
+    AP apex= 6 extra=1: M=  4/41 margin= 15/574 t=   9/41 l1= 7 even= 7 pairs14= 4
+    AP apex= 6 extra=2: M=  5/49 margin=   3/98 t=  23/49 l1= 8 even= 6 pairs14= 4
+    AP apex= 7 extra=0: M=  7/51 margin= 47/714 t= 29/204 l1= 7 even= 7 pairs14= 6
+    AP apex= 7 extra=1: M= 13/99 margin=83/1386 t= 13/198 l1= 8 even= 8 pairs14= 6
+    AP apex= 7 extra=2: M=  4/33 margin= 23/462 t=   2/33 l1= 9 even= 7 pairs14= 6
+    AP apex= 8 extra=0: M=  4/33 margin= 23/462 t= 29/231 l1= 8 even= 6 pairs14= 5
+    AP apex= 8 extra=1: M=  2/19 margin=  9/266 t=   4/19 l1= 9 even= 7 pairs14= 5
+    AP apex= 8 extra=2: M=  4/39 margin= 17/546 t=   5/39 l1=10 even= 6 pairs14= 6
+    AP apex= 9 extra=0: M=28/257 margin=135/3598 t= 57/257 l1= 9 even= 7 pairs14= 5
+    AP apex= 9 extra=1: M=28/257 margin=135/3598 t= 57/257 l1=10 even= 6 pairs14= 5
+    AP apex= 9 extra=2: M=  4/37 margin= 19/518 t=115/259 l1=11 even= 7 pairs14= 5
+    AP apex=10 extra=0: M=  4/41 margin= 15/574 t= 86/287 l1=10 even= 6 pairs14= 5
+    AP apex=10 extra=1: M=  4/43 margin= 13/602 t=  13/43 l1=11 even= 7 pairs14= 5
+    AP apex=10 extra=2: M=  4/43 margin= 13/602 t=  13/43 l1=12 even= 6 pairs14= 5
+    AP apex=11 extra=0: M=28/311 margin=81/4354 t=113/311 l1=11 even= 7 pairs14= 5
+    AP apex=11 extra=1: M=14/155 margin=41/2170 t=141/310 l1=12 even= 8 pairs14= 5
+    AP apex=11 extra=2: M=28/309 margin=83/4326 t= 28/309 l1=13 even= 7 pairs14= 5
+    AP apex=12 extra=0: M=28/341 margin=51/4774 t=142/341 l1=12 even= 6 pairs14= 5
+    AP apex=12 extra=1: M=28/337 margin=55/4718 t= 28/337 l1=13 even= 7 pairs14= 5
+    AP apex=12 extra=2: M=  1/11 margin=  3/154 t=   1/11 l1=14 even= 8 pairs14= 5
+    AP apex=13 extra=0: M=28/365 margin=27/5110 t= 28/365 l1=13 even= 7 pairs14= 5
+    AP apex=13 extra=1: M=  1/12 margin=   1/84 t=   1/12 l1=14 even= 6 pairs14= 5
+    AP apex=13 extra=2: M=  1/11 margin=  3/154 t=   1/11 l1=15 even= 7 pairs14= 5
+    V* apex= 1 extra=0: M=  2/15 margin= 13/210 t=   1/15 l1= 1 even= 7 pairs14= 5
+    V* apex= 1 extra=1: M=  4/33 margin= 23/462 t=   2/33 l1= 2 even= 6 pairs14= 4
+    V* apex= 1 extra=2: M=  6/53 margin= 31/742 t=   3/53 l1= 3 even= 5 pairs14= 5
+    V* apex= 2 extra=0: M=  2/17 margin= 11/238 t=   8/17 l1= 2 even= 6 pairs14= 6
+    V* apex= 2 extra=1: M=  5/49 margin=   3/98 t=  23/49 l1= 3 even= 7 pairs14= 6
+    V* apex= 2 extra=2: M=  2/21 margin=   1/42 t=  10/21 l1= 4 even= 6 pairs14= 6
+    V* apex= 3 extra=0: M=  2/17 margin= 11/238 t=   6/17 l1= 3 even= 7 pairs14= 5
+    V* apex= 3 extra=1: M=  2/19 margin=  9/266 t=   6/19 l1= 4 even= 6 pairs14= 5
+    V* apex= 3 extra=2: M=  5/48 margin= 11/336 t=  17/48 l1= 5 even= 5 pairs14= 5
+    V* apex= 4 extra=0: M=  2/19 margin=  9/266 t=   5/19 l1= 4 even= 6 pairs14= 4
+    V* apex= 4 extra=1: M=  2/19 margin=  9/266 t=   5/19 l1= 5 even= 7 pairs14= 4
+    V* apex= 4 extra=2: M=  2/19 margin=  9/266 t=   5/19 l1= 6 even= 6 pairs14= 4
+    V* apex= 5 extra=0: M=  2/17 margin= 11/238 t=   7/17 l1= 5 even= 7 pairs14= 5
+    V* apex= 5 extra=1: M=  2/19 margin=  9/266 t=   4/19 l1= 6 even= 6 pairs14= 4
+    V* apex= 5 extra=2: M=  2/19 margin=  9/266 t=   4/19 l1= 7 even= 7 pairs14= 3
+    V* apex= 6 extra=0: M=  4/35 margin=   3/70 t=   6/35 l1= 6 even= 6 pairs14= 5
+    V* apex= 6 extra=1: M=  4/37 margin= 19/518 t=   6/37 l1= 7 even= 5 pairs14= 6
+    V* apex= 6 extra=2: M=  1/10 margin=   1/35 t=   1/10 l1= 8 even= 4 pairs14= 6
+    V* apex= 7 extra=0: M=28/201 margin=191/2814 t= 86/201 l1= 7 even= 7 pairs14= 6
+    V* apex= 7 extra=1: M= 13/99 margin=83/1386 t= 13/198 l1= 8 even= 8 pairs14= 6
+    V* apex= 7 extra=2: M=  4/33 margin= 23/462 t=   2/33 l1= 9 even= 7 pairs14= 5
+    V* apex= 8 extra=0: M=  3/31 margin= 11/434 t=   4/31 l1= 8 even= 6 pairs14= 5
+    V* apex= 8 extra=1: M=22/227 margin=81/3178 t= 83/227 l1= 9 even= 7 pairs14= 5
+    V* apex= 8 extra=2: M=  3/31 margin= 11/434 t=   4/31 l1=10 even= 6 pairs14= 5
+    V* apex= 9 extra=0: M=28/257 margin=135/3598 t= 57/257 l1= 9 even= 7 pairs14= 5
+    V* apex= 9 extra=1: M=28/257 margin=135/3598 t= 57/257 l1=10 even= 6 pairs14= 4
+    V* apex= 9 extra=2: M=28/257 margin=135/3598 t= 57/257 l1=11 even= 7 pairs14= 3
+    V* apex=10 extra=0: M=  1/12 margin=   1/84 t=   1/12 l1=10 even= 6 pairs14= 5
+    V* apex=10 extra=1: M=  1/12 margin=   1/84 t=   1/12 l1=11 even= 7 pairs14= 5
+    V* apex=10 extra=2: M=  1/11 margin=  3/154 t=   1/11 l1=12 even= 8 pairs14= 5
+    V* apex=11 extra=0: M=28/309 margin=83/4326 t= 28/309 l1=11 even= 7 pairs14= 5
+    V* apex=11 extra=1: M=28/309 margin=83/4326 t= 28/309 l1=12 even= 8 pairs14= 5
+    V* apex=11 extra=2: M=28/309 margin=83/4326 t= 28/309 l1=13 even= 7 pairs14= 5
+    V* apex=13 extra=0: M=  2/25 margin=  3/350 t=   2/25 l1=13 even= 7 pairs14= 5
+    V* apex=13 extra=1: M=  1/12 margin=   1/84 t=   1/12 l1=14 even= 6 pairs14= 5
+    V* apex=13 extra=2: M=  1/11 margin=  3/154 t=   1/11 l1=15 even= 7 pairs14= 5
+
+E. Boolean carry lattice parity profile
+  AP: rows=8192, groups=98
+    approximate near-floor rows exact-checked: 1
+    exact floor/below among checked: 1/0
+    selected exact minima by (apex_count, odd_carries, even_speeds):
+      (0, 0, 6): count=   1 minM=  1/14 margin=      0 label=AP:zero
+      (0, 1, 5): count=   6 minM=  1/12 margin=   1/84 label=AP:r12->k1
+      (0, 1, 7): count=   6 minM=  1/13 margin=  1/182 label=AP:r13->k1
+      (0, 6, 0): count=   1 minM=   1/2 margin=    3/7 label=AP:r2->k1,r4->k1,r6->k1,r8->k1,r10->k1,r12->k1
+      (0, 6, 2): count=  36 minM=   1/8 margin=   3/56 label=AP:r2->k1,r6->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (0, 6, 4): count= 225 minM=  2/17 margin= 11/238 label=AP:r2->k1,r5->k1,r6->k1,r8->k1,r9->k1,r10->k1
+      (0, 6, 6): count= 400 minM=  4/41 margin= 15/574 label=AP:r3->k1,r4->k1,r9->k1,r10->k1,r11->k1,r12->k1
+      (0, 6, 8): count= 225 minM=  5/46 margin=  6/161 label=AP:r3->k1,r4->k1,r5->k1,r11->k1,r12->k1,r13->k1
+      (0, 6, 10): count=  36 minM=   1/7 margin=   1/14 label=AP:r2->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1
+      (0, 6, 12): count=   1 minM=   1/7 margin=   1/14 label=AP:r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (0, 7, 1): count=   6 minM= 16/71 margin=153/994 label=AP:r2->k1,r4->k1,r5->k1,r6->k1,r8->k1,r10->k1,r12->k1
+      (0, 7, 3): count=  90 minM=  2/17 margin= 11/238 label=AP:r2->k1,r5->k1,r6->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (0, 7, 5): count= 300 minM=  5/46 margin=  6/161 label=AP:r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1
+      (0, 7, 7): count= 300 minM=  5/46 margin=  6/161 label=AP:r3->k1,r4->k1,r5->k1,r9->k1,r10->k1,r11->k1,r12->k1
+      (0, 7, 9): count=  90 minM=  4/33 margin= 23/462 label=AP:r5->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (0, 7, 11): count=   6 minM=   1/7 margin=   1/14 label=AP:r3->k1,r4->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (0, 12, 6): count=   1 minM=  5/23 margin= 47/322 label=AP:r2->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 1, 7): count=   1 minM=  2/15 margin= 13/210 label=AP:r1->k1
+      (1, 2, 6): count=   6 minM=  4/33 margin= 23/462 label=AP:r1->k1,r4->k1
+      (1, 2, 8): count=   6 minM=   1/8 margin=   3/56 label=AP:r1->k1,r3->k1
+      (1, 3, 5): count=  15 minM=  4/35 margin=   3/70 label=AP:r1->k1,r4->k1,r6->k1
+      (1, 3, 7): count=  36 minM=   1/9 margin=  5/126 label=AP:r1->k1,r4->k1,r7->k1
+      (1, 3, 9): count=  15 minM=  2/17 margin= 11/238 label=AP:r1->k1,r3->k1,r5->k1
+      (1, 4, 4): count=  20 minM=  4/35 margin=   3/70 label=AP:r1->k1,r4->k1,r6->k1,r10->k1
+      (1, 4, 6): count=  90 minM=  2/19 margin=  9/266 label=AP:r1->k1,r4->k1,r6->k1,r9->k1
+      (1, 4, 8): count=  90 minM=   1/9 margin=  5/126 label=AP:r1->k1,r3->k1,r4->k1,r7->k1
+      (1, 4, 10): count=  20 minM=   1/9 margin=  5/126 label=AP:r1->k1,r3->k1,r5->k1,r7->k1
+      (1, 5, 3): count=  15 minM=   1/8 margin=   3/56 label=AP:r1->k1,r4->k1,r6->k1,r8->k1,r10->k1
+      (1, 5, 5): count= 120 minM=   1/9 margin=  5/126 label=AP:r1->k1,r4->k1,r6->k1,r7->k1,r10->k1
+      (1, 5, 7): count= 225 minM=  2/19 margin=  9/266 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r9->k1
+      (1, 5, 9): count= 120 minM=   1/9 margin=  5/126 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1
+      (1, 5, 11): count=  15 minM=  2/19 margin=  9/266 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1
+      (1, 6, 2): count=   6 minM=  3/19 margin= 23/266 label=AP:r1->k1,r2->k1,r4->k1,r8->k1,r10->k1,r12->k1
+      (1, 6, 4): count=  90 minM=   1/8 margin=   3/56 label=AP:r1->k1,r4->k1,r6->k1,r7->k1,r8->k1,r10->k1
+      (1, 6, 6): count= 300 minM=   1/9 margin=  5/126 label=AP:r1->k1,r4->k1,r7->k1,r10->k1,r12->k1,r13->k1
+      (1, 6, 8): count= 300 minM=   1/9 margin=  5/126 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r13->k1
+      (1, 6, 10): count=  90 minM=  2/19 margin=  9/266 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r9->k1
+      (1, 6, 12): count=   6 minM=  1/10 margin=   1/35 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1
+      (1, 7, 1): count=   1 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r6->k1,r8->k1,r10->k1,r12->k1
+      (1, 7, 3): count=  36 minM=   1/8 margin=   3/56 label=AP:r1->k1,r4->k1,r6->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (1, 7, 5): count= 225 minM=  5/42 margin=   1/21 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r8->k1,r9->k1,r12->k1
+      (1, 7, 7): count= 400 minM=  6/59 margin= 25/826 label=AP:r1->k1,r4->k1,r7->k1,r9->k1,r10->k1,r12->k1,r13->k1
+      (1, 7, 9): count= 225 minM=  8/71 margin= 41/994 label=AP:r1->k1,r4->k1,r5->k1,r7->k1,r10->k1,r11->k1,r13->k1
+      (1, 7, 11): count=  36 minM=  1/10 margin=   1/35 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1
+      (1, 7, 13): count=   1 minM=  2/21 margin=   1/42 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (1, 8, 2): count=   6 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r8->k1,r10->k1,r12->k1
+      (1, 8, 4): count=  90 minM=   1/8 margin=   3/56 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (1, 8, 6): count= 300 minM=  8/65 margin= 47/910 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r10->k1,r13->k1
+      (1, 8, 8): count= 300 minM=  8/71 margin= 41/994 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r10->k1,r11->k1,r13->k1
+      (1, 8, 10): count=  90 minM=   1/9 margin=  5/126 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r11->k1,r13->k1
+      (1, 8, 12): count=   6 minM=  2/21 margin=   1/42 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r12->k1,r13->k1
+      (1, 9, 3): count=  15 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r10->k1,r12->k1
+      (1, 9, 5): count= 120 minM=  5/46 margin=  6/161 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (1, 9, 7): count= 225 minM=  8/67 margin= 45/938 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r13->k1
+      (1, 9, 9): count= 120 minM=  2/19 margin=  9/266 label=AP:r1->k1,r4->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 9, 11): count=  15 minM=  3/31 margin= 11/434 label=AP:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 10, 4): count=  20 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r12->k1
+      (1, 10, 6): count=  90 minM=  7/65 margin= 33/910 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1
+      (1, 10, 8): count=  90 minM=  8/69 margin= 43/966 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (1, 10, 10): count=  20 minM=  2/21 margin=   1/42 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 11, 5): count=  15 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1
+      (1, 11, 7): count=  36 minM=  7/65 margin= 33/910 label=AP:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 11, 9): count=  15 minM=  2/17 margin= 11/238 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (1, 12, 6): count=   6 minM= 14/67 margin=129/938 label=AP:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 12, 8): count=   6 minM=  5/34 margin=  9/119 label=AP:r1->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+      (1, 13, 7): count=   1 minM=  7/17 margin= 81/238 label=AP:r1->k1,r2->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r12->k1,r13->k1
+  V*: rows=8192, groups=98
+    approximate near-floor rows exact-checked: 1
+    exact floor/below among checked: 1/0
+    selected exact minima by (apex_count, odd_carries, even_speeds):
+      (0, 0, 6): count=   1 minM=  1/14 margin=      0 label=V*:zero
+      (0, 1, 5): count=   6 minM=  1/12 margin=   1/84 label=V*:r24->k1
+      (0, 1, 7): count=   6 minM=  2/25 margin=  3/350 label=V*:r13->k1
+      (0, 6, 0): count=   1 minM=   1/2 margin=    3/7 label=V*:r2->k1,r4->k1,r6->k1,r8->k1,r10->k1,r24->k1
+      (0, 6, 2): count=  36 minM=   1/8 margin=   3/56 label=V*:r2->k1,r6->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (0, 6, 4): count= 225 minM=  3/28 margin=   1/28 label=V*:r2->k1,r6->k1,r9->k1,r10->k1,r11->k1,r24->k1
+      (0, 6, 6): count= 400 minM=  7/67 margin= 31/938 label=V*:r3->k1,r4->k1,r9->k1,r10->k1,r11->k1,r24->k1
+      (0, 6, 8): count= 225 minM= 10/89 margin=51/1246 label=V*:r3->k1,r4->k1,r5->k1,r9->k1,r11->k1,r24->k1
+      (0, 6, 10): count=  36 minM=   1/7 margin=   1/14 label=V*:r3->k1,r5->k1,r7->k1,r8->k1,r9->k1,r11->k1
+      (0, 6, 12): count=   1 minM=   1/7 margin=   1/14 label=V*:r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (0, 7, 1): count=   6 minM= 16/83 margin=141/1162 label=V*:r2->k1,r4->k1,r5->k1,r6->k1,r8->k1,r10->k1,r24->k1
+      (0, 7, 3): count=  90 minM=  7/64 margin= 17/448 label=V*:r2->k1,r5->k1,r6->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (0, 7, 5): count= 300 minM=  3/28 margin=   1/28 label=V*:r6->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (0, 7, 7): count= 300 minM=  4/39 margin= 17/546 label=V*:r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1
+      (0, 7, 9): count=  90 minM=  4/35 margin=   3/70 label=V*:r5->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (0, 7, 11): count=   6 minM=   1/7 margin=   1/14 label=V*:r2->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (0, 12, 6): count=   1 minM=  5/27 margin= 43/378 label=V*:r2->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 1, 7): count=   1 minM=  2/15 margin= 13/210 label=V*:r1->k1
+      (1, 2, 6): count=   6 minM=  4/33 margin= 23/462 label=V*:r1->k1,r4->k1
+      (1, 2, 8): count=   6 minM=   1/8 margin=   3/56 label=V*:r1->k1,r3->k1
+      (1, 3, 5): count=  15 minM=  6/53 margin= 31/742 label=V*:r1->k1,r4->k1,r24->k1
+      (1, 3, 7): count=  36 minM=  2/17 margin= 11/238 label=V*:r1->k1,r4->k1,r5->k1
+      (1, 3, 9): count=  15 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r5->k1
+      (1, 4, 4): count=  20 minM=  9/82 margin= 11/287 label=V*:r1->k1,r4->k1,r10->k1,r24->k1
+      (1, 4, 6): count=  90 minM=  9/82 margin= 11/287 label=V*:r1->k1,r4->k1,r9->k1,r24->k1
+      (1, 4, 8): count=  90 minM=  6/53 margin= 31/742 label=V*:r1->k1,r3->k1,r5->k1,r24->k1
+      (1, 4, 10): count=  20 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r5->k1,r9->k1
+      (1, 5, 3): count=  15 minM=  5/42 margin=   1/21 label=V*:r1->k1,r4->k1,r6->k1,r8->k1,r10->k1
+      (1, 5, 5): count= 120 minM=  9/82 margin= 11/287 label=V*:r1->k1,r3->k1,r4->k1,r10->k1,r24->k1
+      (1, 5, 7): count= 225 minM=  2/19 margin=  9/266 label=V*:r1->k1,r4->k1,r5->k1,r9->k1,r24->k1
+      (1, 5, 9): count= 120 minM=  2/19 margin=  9/266 label=V*:r1->k1,r3->k1,r5->k1,r9->k1,r24->k1
+      (1, 5, 11): count=  15 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r5->k1,r9->k1,r11->k1
+      (1, 6, 2): count=   6 minM=  3/19 margin= 23/266 label=V*:r1->k1,r2->k1,r4->k1,r8->k1,r10->k1,r24->k1
+      (1, 6, 4): count=  90 minM=  8/65 margin= 47/910 label=V*:r1->k1,r4->k1,r6->k1,r7->k1,r8->k1,r10->k1
+      (1, 6, 6): count= 300 minM=  4/39 margin= 17/546 label=V*:r1->k1,r4->k1,r7->k1,r10->k1,r13->k1,r24->k1
+      (1, 6, 8): count= 300 minM=  2/19 margin=  9/266 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r9->k1,r24->k1
+      (1, 6, 10): count=  90 minM=  2/19 margin=  9/266 label=V*:r1->k1,r3->k1,r5->k1,r9->k1,r13->k1,r24->k1
+      (1, 6, 12): count=   6 minM=   1/9 margin=  5/126 label=V*:r1->k1,r3->k1,r5->k1,r7->k1,r11->k1,r13->k1
+      (1, 7, 1): count=   1 minM=  4/21 margin=   5/42 label=V*:r1->k1,r2->k1,r4->k1,r6->k1,r8->k1,r10->k1,r24->k1
+      (1, 7, 3): count=  36 minM=  5/39 margin= 31/546 label=V*:r1->k1,r4->k1,r6->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (1, 7, 5): count= 225 minM=  5/42 margin=   1/21 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r8->k1,r9->k1,r24->k1
+      (1, 7, 7): count= 400 minM=  9/77 margin=   1/22 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r10->k1,r13->k1
+      (1, 7, 9): count= 225 minM=  8/71 margin= 41/994 label=V*:r1->k1,r4->k1,r5->k1,r7->k1,r10->k1,r11->k1,r13->k1
+      (1, 7, 11): count=  36 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r9->k1,r11->k1,r13->k1
+      (1, 7, 13): count=   1 minM=  2/21 margin=   1/42 label=V*:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1
+      (1, 8, 2): count=   6 minM= 14/79 margin=117/1106 label=V*:r1->k1,r2->k1,r4->k1,r6->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (1, 8, 4): count=  90 minM=  5/39 margin= 31/546 label=V*:r1->k1,r4->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (1, 8, 6): count= 300 minM=  6/49 margin=   5/98 label=V*:r1->k1,r3->k1,r4->k1,r6->k1,r7->k1,r8->k1,r13->k1,r24->k1
+      (1, 8, 8): count= 300 minM=  8/65 margin= 47/910 label=V*:r1->k1,r4->k1,r5->k1,r7->k1,r8->k1,r10->k1,r11->k1,r13->k1
+      (1, 8, 10): count=  90 minM=  7/61 margin= 37/854 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r9->k1,r13->k1,r24->k1
+      (1, 8, 12): count=   6 minM=  2/21 margin=   1/42 label=V*:r1->k1,r3->k1,r5->k1,r7->k1,r9->k1,r11->k1,r13->k1,r24->k1
+      (1, 9, 3): count=  15 minM= 14/79 margin=117/1106 label=V*:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (1, 9, 5): count= 120 minM=  5/39 margin= 31/546 label=V*:r1->k1,r4->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r13->k1,r24->k1
+      (1, 9, 7): count= 225 minM=  8/67 margin= 45/938 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r13->k1
+      (1, 9, 9): count= 120 minM=  3/25 margin= 17/350 label=V*:r1->k1,r4->k1,r5->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (1, 9, 11): count=  15 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (1, 10, 4): count=  20 minM= 14/79 margin=117/1106 label=V*:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r24->k1
+      (1, 10, 6): count=  90 minM=  8/67 margin= 45/938 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r13->k1,r24->k1
+      (1, 10, 8): count=  90 minM=  8/69 margin= 43/966 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1
+      (1, 10, 10): count=  20 minM=  2/17 margin= 11/238 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 11, 5): count=  15 minM= 14/79 margin=117/1106 label=V*:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r24->k1
+      (1, 11, 7): count=  36 minM=  8/69 margin= 43/966 label=V*:r1->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 11, 9): count=  15 minM=  4/33 margin= 23/462 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 12, 6): count=   6 minM= 14/79 margin=117/1106 label=V*:r1->k1,r2->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 12, 8): count=   6 minM=  5/34 margin=  9/119 label=V*:r1->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+      (1, 13, 7): count=   1 minM= 28/79 margin=313/1106 label=V*:r1->k1,r2->k1,r3->k1,r4->k1,r5->k1,r6->k1,r7->k1,r8->k1,r9->k1,r10->k1,r11->k1,r13->k1,r24->k1
+
+F. Tournament Analysis over proof channels
+  top_order=['no-multiple t=1/14 exit', 'carry parity word', 'apex congruence k=r mod 14', 'pair-sum congruence k_i+k_j=r_i+r_j', 'minimal-apex tax sweep', 'owner/Cprime certificate reattachment', 'raw Res_27 row identity']
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  hamiltonian_paths=1
+
+Conclusion
+  The same carry coordinate toggles even/odd parity and decides the n=14 apex obstruction.  Non-multiple rows are already discharged by t=1/14; the required multiple-of-14 branch is the congruence k_i == r_i mod 14.  Every minimal apex lift over AP/V*, and every one/two extra-toggle neighbourhood screened here, is strictly above the floor in exact group minima, with no near-floor or below-floor rows detected.
+  This does not prove LRC(14), but it moves the carry-conservativity seam: a new primitive floor lift would need a larger globally coherent carry cocycle or an owner/Cprime route, not merely the first parity/apex bridge.

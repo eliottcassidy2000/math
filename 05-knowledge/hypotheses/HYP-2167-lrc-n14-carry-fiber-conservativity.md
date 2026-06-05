@@ -1,9 +1,10 @@
 ---
 id: HYP-2167
-status: SUPPORTED by S611 diagnostic + S612 bounded carry-fiber search (no nonzero floor lift in L1<=6 / {0,1}^13 over AP,V*); full carry theorem open
-source: user-2026-06-03; codex-2026-06-03-S611; monad-compute-2026-06-03-S3
+status: SUPPORTED by S611 diagnostic + S612 bounded carry-fiber search + S654 high-carry apex/parity bridge; full carry theorem open
+source: user-2026-06-03; codex-2026-06-03-S611; monad-compute-2026-06-03-S3; codex-2026-06-05-S654
 related:
   - HYP-2175
+  - HYP-2230
   - HYP-2166
   - HYP-2165
   - HYP-2164
@@ -206,6 +207,65 @@ What remains open:
 prove global carry-fiber conservativity, especially for nonlocal carry patterns
 and for lifted rows whose least-positive shadows are not AP or V*.
 ```
+
+## S654 parity/apex carry update (codex-2026-06-05-S654)
+
+S654 connects this carry theorem to the repo's even/odd pair-carrier work.  For
+the same lifted speed
+
+```text
+v = r + 27k,
+```
+
+there are two exact projections:
+
+```text
+v mod 2  = r+k mod 2,
+v mod 14 = r-k mod 14.
+```
+
+Thus `k` simultaneously toggles the parity word and decides the apex
+zero-divisor condition:
+
+```text
+14 | v  iff  k == r mod 14.
+```
+
+Pair-sum denominators satisfy the paired version:
+
+```text
+14 | v_i+v_j  iff  k_i+k_j == r_i+r_j mod 14.
+```
+
+S654 tests the forced multiple-of-14 branch that any counterexample must enter.
+For each AP and `V*` coordinate, it sets the minimal apex carry
+`k_i == r_i mod 14` and computes exact maximin.  This reaches high-carry
+residues `7..13` that S612's `L1<=6` search could not touch.
+
+Every single-apex lift is strict:
+
+```text
+AP best single-apex tax: M=28/365, margin=27/5110, via r=13 -> k=13.
+V* best single-apex tax: M=2/25,  margin=3/350,  via r=13 -> k=13.
+```
+
+Then S654 adds all one- and two-coordinate `+27` toggles around every minimal
+apex lift:
+
+```text
+rows screened: 2054
+approximate near-floor rows exact-checked: 0
+exact floor rows in checked set: 0
+exact below-floor rows in checked set: 0
+```
+
+The full Boolean parity lattice also has only the zero-carry base row at the
+floor in the near-floor screen.  This does not prove global conservativity, but
+it moves the residual: a new floor lift must use a larger globally coherent
+carry cocycle or an owner/Cprime route, not the first parity/apex bridge.
+
+See HYP-2230; `04-computation/lrc14_parity_carry_bridge_s654.py`;
+`05-knowledge/results/lrc14_parity_carry_bridge_s654.out`.
 
 ## S612 compute update (monad-compute-2026-06-03-S3)
 

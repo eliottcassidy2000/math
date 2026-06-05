@@ -1,5 +1,14 @@
 # Session Log
 
+## codex-2026-06-05-S654 - LRC14 parity/carry bridge to even/odd pair carriers (HYP-2230)
+
+**Prompt:** Connect the repo's even/odd number work to LRC 14 and use it to make progress.
+**Integration:** Rebased over incoming S652 square-blowup work and used it as a side-channel-retention warning, then connected HYP-2229 Basel packet/moment carriers, HYP-2218 Goldbach/Lemoine same-pair projection, and HYP-2167 LRC14 carry conservativity.
+**Computation:** Added `04-computation/lrc14_parity_carry_bridge_s654.py` and stored `05-knowledge/results/lrc14_parity_carry_bridge_s654.out`.
+**Findings:** For `v=r+27k`, `k` simultaneously toggles parity (`v mod2=r+k`) and controls the n-clock (`v mod14=r-k`), so `14|v iff k=r mod14`; pair sums satisfy the analogous carry equation.  S654 exact-apex sweep over AP and `V*` shows every minimal forced multiple-of-14 carry is strict (closest AP `28/365`, closest `V*` `2/25`).  The `2054` one/two-toggle apex neighborhoods have no near-floor or below-floor rows, and the Boolean parity lattice only returns the zero-carry floor row in the near-floor screen.
+**Handoff:** Prove an apex carry tax lemma: first apex carries over AP/`V*` pay positive slack, so any floor-preserving lift must be a larger coherent carry cocycle, scalar AP/`V*` route, or owner/Cprime certificate.
+**Artifacts:** HYP-2230, T723, script/out, reflection, HYP-2167 update, index/concept-map updates.
+
 ## codex-2026-06-05-S653 - Basel-type pi identities as a period carrier (HYP-2229)
 
 **Prompt:** Think about the infinite family of basil/Basel-type identities for pi.
