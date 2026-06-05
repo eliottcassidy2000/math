@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-05-S675b - Merged line parity n7 addendum (HYP-2251)
+
+**Prompt:** The merged tournament metagraph's black-line portion seems to be an even graph; ask whether the blue-line portion is always odd, and connect this to tournaments/even graphs and even/odd numbers.
+**Integration:** Rebasing revealed incoming S675/HYP-2250/T747 on the same prompt.  This addendum keeps that boundary-vector audit as the parent and sharpens the corrected complement-line-lift identity through `n=7`.  It also uses HYP-2245's metagraph-ultrafilter correction: blue/black must mean complement tiling inside the fixed-base-path cube when proving line parity, while older SC/NS edge coloring is a separate simple-graph projection.
+**Claimed namespace:** HYP-2251 and T748.
+**Computation:** Added `04-computation/merged_line_parity_even_odd_s675b.py` and stored `05-knowledge/results/merged_line_parity_even_odd_s675b.out`.  The script enumerates fixed-base tiling cubes through `n=7`, canonicalizes tournament classes, checks A000568 and known `E(G_n/Z_2)` values, audits complement-line parity, audits the simple SC/NS-colored merged-edge projection, attaches a labelled even-graph carrier, and runs Tournament Analysis over parity carriers.
+**Finding:** In the corrected complement-line lift, active blue degrees are all odd and black degrees are all even through `n=7`; at `n=7` the line counts are `256` blue and `16128` black over `272` merged nodes.  In the simple SC/NS-colored merged-edge graph, black-even fails at `n=4` and active-blue-odd fails at `n=5`.
+**Synthesis:** Black is a boundary-zero even graph/Eulerian carrier; blue is an affine odd-boundary coset supported on SC nodes.  The simple metagraph forgets line multiplicity and loop half-edges, so parity requires the complement-line address.
+**Artifacts:** HYP-2251, T748, `04-computation/merged_line_parity_even_odd_s675b.py`, `05-knowledge/results/merged_line_parity_even_odd_s675b.out`, `07-reflections/merged-line-parity-even-odd-s675b.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Promote the proof sketch next to THM-345/346; compute cycle bases and Euler circuits for the black line graph; search for LRC14 owner/carry line lifts where black-even is a certificate and blue-odd marks floor atoms.
+
 ## codex-2026-06-05-S674 - Signed LRC and unit-threshold tournaments (HYP-2249)
 
 **Prompt:** Explore two reframes: LRC runners moving in opposite directions/negative speeds, and unit-distance tournaments where lengths `<1`, `=1`, and `>1` define signed edge states.

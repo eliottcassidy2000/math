@@ -1,0 +1,102 @@
+
+==============================================================================
+Merged line parity audit, S675b
+==============================================================================
+HYP-2251 / T748
+Question: black-line portion even? blue-line portion odd?
+Answer preview: yes for the complement-line lift; no for the simple
+SC/NS-colored merged edge projection.
+
+==============================================================================
+Exact table
+==============================================================================
+n  m  cls  merged  E  blueL blackL  blueOdd  blackEven  simpleBlackEven simpleBlueOdd
+-------------------------------------------------------------------------------------
+3  1    2  ok      2    1  ok      1      0     True       True            True          True
+4  3    4  ok      3    3  ok      2      2     True       True           False          True
+5  6   12  ok     10   21  ok      8     24     True       True           False         False
+6 10   56  ok     34  143  ok     32    480     True       True           False         False
+7 15  456  ok    272 2123  ok    256  16128     True       True           False         False
+
+==============================================================================
+Witnesses against the simple projected version
+==============================================================================
+n=4: simple SC/NS edge split has black_odd_witnesses=[0, 2] and blue_even_active_witnesses=[]
+n=5: simple SC/NS edge split has black_odd_witnesses=[1, 2, 3, 8] and blue_even_active_witnesses=[1, 2, 3, 6, 8, 9]
+n=6: simple SC/NS edge split has black_odd_witnesses=[2, 3, 4, 6, 7, 11, 17, 23] and blue_even_active_witnesses=[2, 4, 5, 6, 9, 11, 14, 16]
+n=7: simple SC/NS edge split has black_odd_witnesses=[3, 5, 7, 8, 35, 43, 56, 58] and blue_even_active_witnesses=[4, 9, 11, 17, 18, 19, 21, 22]
+
+==============================================================================
+Line-lift parity details
+==============================================================================
+n=3: grid-symmetric tilings=2, blue active nodes=2, black active nodes=0, blue loops=0, black loops=0
+     blue parity={1: 2}, black parity={0: 2}, SC merged nodes=2, NS merged nodes=0
+     even-graph carrier dim=1, complement toggler edges=3, degree seq=(2, 2, 2), constant translation sample=True
+n=4: grid-symmetric tilings=4, blue active nodes=2, black active nodes=2, blue loops=1, black loops=0
+     blue parity={1: 2}, black parity={0: 3}, SC merged nodes=2, NS merged nodes=1
+     even-graph carrier dim=3, complement toggler edges=3, degree seq=(0, 2, 2, 2), constant translation sample=True
+n=5: grid-symmetric tilings=16, blue active nodes=8, black active nodes=7, blue loops=0, black loops=4
+     blue parity={1: 8}, black parity={0: 10}, SC merged nodes=8, NS merged nodes=2
+     even-graph carrier dim=6, complement toggler edges=10, degree seq=(4, 4, 4, 4, 4), constant translation sample=True
+n=6: grid-symmetric tilings=64, blue active nodes=12, black active nodes=32, blue loops=2, black loops=24
+     blue parity={1: 12}, black parity={0: 34}, SC merged nodes=12, NS merged nodes=22
+     even-graph carrier dim=10, complement toggler edges=10, degree seq=(0, 4, 4, 4, 4, 4), constant translation sample=True
+n=7: grid-symmetric tilings=512, blue active nodes=88, black active nodes=268, blue loops=0, black loops=114
+     blue parity={1: 88}, black parity={0: 272}, SC merged nodes=88, NS merged nodes=184
+     even-graph carrier dim=15, complement toggler edges=21, degree seq=(6, 6, 6, 6, 6, 6, 6), constant translation sample=True
+
+==============================================================================
+Proof sketch
+==============================================================================
+Let Q_m be the fixed-base-path tiling cube, and let C(x)=x+1 be
+all-free-tile complement.  The blue/black line graph has one line
+for each pair {x,C(x)}.
+
+Blue side: grid-reflection-fixed tilings occur only over SC merged
+nodes.  In an SC class the non-fixed tilings pair under reflection,
+while the total fixed-base tiling count is odd, so the blue endpoint
+count in each active node is odd.  With loops counted twice, the
+blue multigraph has odd degree at every active node.
+
+Black side: in an SC node, black = odd total - odd blue, hence even.
+In an NS merged pair, black = odd class A + odd class B, also even.
+Thus the black line graph is Eulerian: a genuine even graph.
+
+The simple merged metagraph forgets the line multiplicity/address.
+That projection is exactly where the parity theorem fails.
+
+==============================================================================
+Assumption challenge
+==============================================================================
+Considered vertex sets: merged tournament nodes, tiling-complement
+pairs, single-flip edges, even-graph cycle coordinates, and proof
+obligation addresses.  The quotient predicate preserved by the line
+lift is degree parity of complement-pair endpoints.  The simple
+merged graph preserves adjacency but destroys multiplicity and loop
+half-edge data.  Challenged assumption: metagraph edges themselves
+need not be the right vertices for parity; the lines are.
+
+Tournament Analysis over parity carriers
+  Pairwise observable: lexicographic preservation of parity, multiplicity,
+  quotient descent, cycle-space meaning, and LRC transfer value.
+  score_hist={5: 1, 3: 1, 4: 1, 1: 1, 0: 1, 2: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  Hamiltonian order:
+    5  tiling_line_lift
+    4  line_multiplicity_address
+    3  even_graph_cycle_space
+    2  lrc_owner_filter_transfer
+    1  simple_sc_type_edges
+    0  raw_node_cardinality
+
+==============================================================================
+Synthesis
+==============================================================================
+Even numbers/graphs are kernel objects: boundary zero.  Odd line
+graphs are affine boundary objects: boundary one on the SC support.
+So the useful identity is not just 'tournaments are equinumerous with
+even graphs'; it is 'the black complement-line lift is already an
+even graph, while the blue lift is the odd coset whose boundary tells
+which SC nodes kept a grid-symmetric witness.'
