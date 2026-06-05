@@ -1,7 +1,7 @@
 ---
 id: HYP-2239
-status: OPEN method hypothesis with S663 LRC perturbation evidence
-source: codex-2026-06-05-S663
+status: OPEN method hypothesis with S663 LRC perturbation evidence and S664 cycle atlas
+source: codex-2026-06-05-S663/S664
 related:
   - HYP-2238
   - HYP-2237
@@ -142,13 +142,89 @@ The ranking is not a claim that the later routes are unimportant.  It says the
 first routes have the best combination of exact finite tests and immediate
 repo payoff.
 
+## S664 Everywhere-Cycle Upgrade
+
+`04-computation/triune_cycle_everywhere_s664.py` upgrades the trinity from a
+static record to a projection-repair loop:
+
+```text
+sum -> product -> fraction -> sum.
+```
+
+Here:
+
+```text
+sum      = additive aggregation: packets, traces, walls, counts, moments
+product  = local factorization: gcd/norm shells, components, sieves
+fraction = boundary memory: carry, owner, branch, lift, deletion, recursion
+```
+
+The three arrows mean:
+
+```text
+sum -> product
+  additive packets expose or localize factor data;
+
+product -> fraction
+  local factors are still a quotient and need a lift/owner/branch;
+
+fraction -> sum
+  boundary state re-expands into the next additive packet ledger.
+```
+
+The S664 face-dependency tournament uses vertices
+
+```text
+sum, product, fraction, raw_scalar
+```
+
+and domain-weighted dependency support as the observable.  It recovers the
+same nontransitive core as S662:
+
+```text
+score_hist={0: 1, 2: 3}
+directed_3cycles=1 [('sum', 'product', 'fraction')]
+sccs=[['fraction', 'product', 'sum'], ['raw_scalar']]
+hamiltonian_paths=3
+```
+
+with weights:
+
+```text
+sum -> product       support 54
+product -> fraction  support 52
+fraction -> sum      support 51
+```
+
+All three faces beat `raw_scalar`.
+
+S664's strongest exact projection-repair instances are:
+
+| Domain | Projection Leak | Fraction Repair |
+|---|---|---|
+| LRC14 | `Res_27` sum/product shadow mixes floor and strict rows | carry-continuant / owner state |
+| Tournament decks | full deck plus global scalar repairs collide through `n=6` | paired `(card, deleted score)` |
+| Pi/e trace-norm | trace/norm leaves the two-root branch unresolved | discriminant or branch sheet |
+
+It also adds weaker but actionable labs:
+
+| Domain | Next finite probe |
+|---|---|
+| OCF / `H(T)` | encode deletion/substitution macro-words as continuants |
+| Unit distance | compare edge sums + direction/norm products + point-deletion owners on `n=21/22` cores |
+| Goldbach/Lemoine | track shared prime-pair columns under `E=p+q`, `O=p+2q`, `q=O-E`, `p=2E-O` |
+| Perfect/aliquot | attach aliquot orbit/preperiod owner to divisor-sum/product shadows |
+| A000568/LRC quotient | treat every quotient count as needing its marked observer fiber |
+
 ## Assumption Challenge
 
 Candidate vertices considered for Tournament Analysis:
 
 ```text
 runners, residues, wall pairs, gcd shells, carry words, proof atoms,
-owner routes, problem domains, and application routes.
+owner routes, problem domains, application routes, representation faces,
+files, deleted vertices, unit-distance points, prime pairs, models, generics,
+and proof obligations.
 ```
 
 S663 uses application routes as vertices for the cross-problem tournament, but
@@ -156,13 +232,21 @@ uses LRC rows as objects in the projection-collision audit.  Raw runners are
 not the right vertex set for the proof theorem; the load-bearing object is the
 triune record.
 
+S664 uses faces as vertices for the cycle tournament and domains as vertices
+for the route tournament.  The preserved predicate is not raw truth of each
+problem.  It is:
+
+```text
+which carrier repairs a projection collision?
+```
+
 The bounded test destroys full owner/certificate detail: it keeps only carry,
 apex, pair-apex, parity, and continuant data.  Future work should attach the
 HYP-2165 owner route explicitly.
 
 ## Next Experiments
 
-- Build `lrc14_triune_owner_derivative_s664.py`: add HYP-2165 owner routes to
+- Build `lrc14_triune_owner_derivative_s665.py`: add HYP-2165 owner routes to
   the carry-continuant state and test whether any mixed floor/strict groups
   survive deeper perturbations.
 - Build an OCF continuant toy: encode deletion or substitution macro-words as
@@ -171,9 +255,14 @@ HYP-2165 owner route explicitly.
   direction/norm product support, and point-deletion frontier owners.
 - Revisit pi/e trace-norm shadows with a branch-sheet/fraction face rather
   than only the Vieta trace/norm pair.
+- Build a unit-distance `n=21/22` triune impairment lab: hold edge counts and
+  direction/norm support fixed while changing point-deletion owner state.
 
 **See:** `04-computation/triune_carrier_applications_s663.py`;
 `05-knowledge/results/triune_carrier_applications_s663.out`;
-`07-reflections/triune-carrier-applications-lrc-s663.md`; HYP-2238, HYP-2237,
+`07-reflections/triune-carrier-applications-lrc-s663.md`;
+`04-computation/triune_cycle_everywhere_s664.py`;
+`05-knowledge/results/triune_cycle_everywhere_s664.out`;
+`07-reflections/triune-cycle-everywhere-s664.md`; HYP-2238, HYP-2237,
 HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, HYP-2165,
 HYP-2164, THM-401.

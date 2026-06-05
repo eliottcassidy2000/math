@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T733** #triune-cycle #sum-product-fraction #lrc #tournaments #side-channels | certainty: stub claimed + search pending | source: codex-2026-06-05-S664
-Search for the nontransitive `sum -> product -> fraction -> sum` carrier cycle across the repo.  Planned readout: where additive packet sums force/localize product factors, where product factors require recursive owner/fraction state, and where fraction recursion unfolds back into additive sums.  First application target remains HYP-2239's LRC14 triune record.
+**T733** #triune-cycle #sum-product-fraction #lrc #tournaments #side-channels | certainty: broad atlas + exact sibling repairs | source: codex-2026-06-05-S664
+The cycle is a projection-repair grammar: sums aggregate packets; products localize factor/shell data; fraction faces remember the lift/owner/branch that turns products back into additive ledgers.  S664 scans `10381` repo files and builds a face tournament with `score_hist={0:1,2:3}`, one directed cycle `(sum,product,fraction)`, SCC `{sum,product,fraction}` plus `{raw_scalar}`, and `3` Hamiltonian paths.  Strong exact lanes: LRC14 carry state and tournament decks; next probes: OCF continuants and unit-distance edge/direction/deletion-owner ledgers.  See HYP-2239.
 
 **T732** #triune-carriers #lrc #n14 #continuants #owner-carry #side-channels | certainty: exact perturbation atlas + method transfer | source: codex-2026-06-05-S663
 Applying HYP-2238's trinity to LRC gives sum=odd-wall/pair packets, product=`C=27` gcd shell, fraction=carry-owner state `k` in `v=r+27k`.  S663 checks AP, `Vstar`, and `2AP`: all are floor with product mass `27`; every one/two `+27` carry perturbation is strict.  Sum/product shadows alone leave three mixed groups (`1` floor + `91` strict); adding the carry-continuant face leaves zero mixed groups.  Transfer targets: OCF continuants, paired tournament decks, unit-distance deletion owners, finite-field pin owners, Goldbach/Lemoine reconstruction, CH generics, pi/e branch sheets.  See HYP-2239.
