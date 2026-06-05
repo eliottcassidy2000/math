@@ -705,6 +705,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2245 | The metagraph-ultrafilter slogan should be read as a descent/sheaf claim: principal ultrafilters are literal on Boolean tiling/address cubes, while tournament isomorphism quotients leak unless the missing address is retained. | S670 proves the divisor lattice of `210=2*3*5*7` has exactly the four principal prime ultrafilters, each deciding `d <-> 210/d`.  Fixed-base-path tiling cubes have the same exact principal-filter behavior under complement tiling, but the iso quotient leaks: best coordinates have mixed classes `1,5,35` at `n=4,5,6`, and leaked complement pairs `4/4,30/32,512/512`.  Thus the metagraph is not literally an ultrafilter; it is the quotient base for an ultrafilter sheaf.  LRC14 should search for owner/carry/proof-obligation filters that descend. | codex-2026-06-05-S670; `HYP-2245-metagraph-ultrafilter-sheaf.md`; `metagraph_ultrafilter_divisor210_s670.py`; `metagraph_ultrafilter_divisor210_s670.out`; `metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241, HYP-2240, HYP-2187, HYP-2167 |
 | HYP-2246 | Endpoint half-filter traces may recursively enumerate A000568: `Phi(T)=multiset_v(class(T-v), L/M/U side of outdeg(v))` is injective on tournament classes through `n=8`. | S671 builds A000568 through `n=8` by endpoint extension: enumerate `Aut(parent)`-orbits in the incident Boolean cube, then audit deletion/filter traces on raw child candidates.  For `7->8`, endpoint orbits give `54,256` candidates versus `2,097,152` fixed-path tilings and `268,435,456` labelled tournaments.  At `n=8`, scalar `(score,c3,SCC)` has `136` mixed buckets, unpaired card-deck has `2`, while half-filter, paired-score, and paired-c3-loss traces have `0`.  The two card-deck collision buckets are regular strong classes with identical `c3=20`, identical score histograms, and paired Hamiltonian counts `633` and `645`; the missing coordinate is an `L/U` owner address.  Candidate fallback audit shows zero mixed half-filter buckets through `7->8`, so full child canonicalization is needed only for future mixed trace buckets. | codex-2026-06-05-S671; `HYP-2246-endpoint-half-filter-enumeration.md`; `ultrafilter_endpoint_enumeration_s671.py`; `ultrafilter_endpoint_enumeration_s671.out`; `endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236, HYP-2228, HYP-2187, HYP-2209 |
 | HYP-2247 | Paris-Harrington adds an extension-rank derivative to ultrafilter side-choice: bad colorings are an outer-extension tree, and relative largeness blocks tail escape by killing coherent bad branches. | S672 exact pair-coloring miniature for `x=2` gives bad counts `1,2,6,18,12,0` for `N=1..6`; at `N=4`, only the middle edge-count shell `e=3` extends (`12` nodes), while upper/lower shells `e=2,4` are dead, and at `N=5` the middle shell `e=5` has no children.  The ternary scout shows random pressure collapses by `N=10..12`, but local repair still finds bad colorings through `N=20`, emphasizing tail-escape rank rather than raw density.  Transfer route: `upper/lower filter side -> L/M/U owner address -> bad-child extension profile`; LRC14 target is a rank drop after HYP-2241's owner-private deletion filter on coherent `+27` carry/owner lifts. | codex-2026-06-05-S672; `HYP-2247-paris-harrington-ultrafilter-coloring.md`; `paris_harrington_ultrafilter_coloring_s672.py`; `paris_harrington_ultrafilter_coloring_s672.out`; `paris-harrington-ultrafilter-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2244, HYP-2243, HYP-2241, HYP-2232, HYP-2189 |
+| HYP-2247 | Recursion is the fourth representation face: split `fraction=boundary/address state` from `recursion=transition law under iteration, descent, or outer extension`. | S672 anchors the split in Zhou-Markov's recurrent integral irrationality proofs and Paris-Harrington colorings, integrating the incoming S671 Paris-Harrington ultrafilter-coloring stub as an addendum.  The sharper carrier is `sum -> product -> fraction -> recursion -> sum`: sum aggregates visible packets, product localizes factors, fraction attaches owner/boundary/branch state, and recursion proves that state survives extension or unrolls into a new additive ledger.  A baby PH edge-coloring scout finds large-homogeneous-avoiding counts `6,18,12,0` for `N=3..6`; face Tournament Analysis is transitive with `recursion > fraction > product > sum > raw_scalar`.  Transfer targets: LRC14 coherent `+27` carry recursion, A000568 endpoint half-filter purity under `n->n+1`, unit-distance point-deletion recursion owners, and PH hypergraph-coloring micro-labs. | codex-2026-06-05-S672; `HYP-2247-recursive-fourth-face.md`; `HYP-2247-paris-harrington-ultrafilter-coloring-addendum.md`; `recursive_fourth_face_coloring_s672.py`; `recursive_fourth_face_coloring_s672.out`; `recursive-fourth-face-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2243, HYP-2240, HYP-2239, HYP-2238, HYP-2189 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7687,6 +7688,96 @@ fibers; add a SAT/CP exact lower-bound search for the `x=3` miniature; test
 `05-knowledge/results/paris_harrington_ultrafilter_coloring_s672.out`;
 `07-reflections/paris-harrington-ultrafilter-coloring-s672.md`; HYP-2246,
 HYP-2245, HYP-2241, HYP-2243, HYP-2189.
+## HYP-2247: Recursion is the fourth representation face (codex-2026-06-05-S672)
+
+**STATUS:** OPEN carrier-method conjecture with finite scouts.
+
+**WHAT:** Split the repo's old sum/product/fraction trichotomy into:
+
+```text
+sum       = additive packets, moments, walls, counts
+product   = local factors, shells, obstructions, automorphism orbits
+fraction  = boundary/address state: owner, branch, lift, deleted card
+recursion = transition law under iteration, descent, or outer extension
+```
+
+The distinction is:
+
+```text
+fraction remembers a boundary state;
+recursion proves how that state survives, shrinks, or explodes.
+```
+
+Thus the old loop `sum -> product -> fraction -> sum` becomes:
+
+```text
+sum -> product -> fraction -> recursion -> sum.
+```
+
+**SOURCE ANCHORS:** Zhou-Markov arXiv:0911.1933 uses recurrent integral
+sequences as irrationality proof engines.  In the `pi` proof,
+`I_0=2`, `I_1=4`, and
+
+```text
+I_n = (4n-2) I_{n-1} - pi^2 I_{n-2}.
+```
+
+Under `pi=a/b`, denominator clearing gives integers, the integral estimate
+makes them tend to `0`, and recurrence/descent keeps a nonzero subsequence
+alive, forcing a nonzero integer in `(-1,1)`.
+
+Paris-Harrington is the coloring extreme: adding the relative-largeness boundary
+`|H| >= min(H)` to finite Ramsey colorings makes the minimal witness function
+eventually dominate PA-provably total functions, with proof-length refinements
+using `F_{epsilon_0}`.  This is a small observer-boundary becoming a
+proof-strength recursion.
+
+**COMPUTATION:** S672 adds
+`04-computation/recursive_fourth_face_coloring_s672.py` and stores
+`05-knowledge/results/recursive_fourth_face_coloring_s672.out`.  It computes
+Zhou-Markov recurrence polynomials `P_n(t)`, a baby PH edge-coloring
+backtracking scout, a domain atlas, and a face tournament.
+
+Baby PH edge-coloring counts:
+
+| N | avoiding colorings | search nodes |
+|---:|---:|---:|
+| 3 | 6 | 13 |
+| 4 | 18 | 63 |
+| 5 | 12 | 265 |
+| 6 | 0 | 987 |
+
+**TOURNAMENT ANALYSIS:** Vertices are `sum`, `product`, `fraction`,
+`recursion`, and `raw_scalar`; observable is `(static exactness, local factor
+leverage, boundary memory, outer-extension survival, growth witness,
+algorithmic use, coloring transfer)`.  The face tournament is transitive:
+
+```text
+recursion > fraction > product > sum > raw_scalar
+score_hist={0:1,1:1,2:1,3:1,4:1}
+directed_3cycles=0
+hamiltonian_paths=1
+```
+
+**REPO TRANSFERS:** For LRC14, the carry-owner continuant is the fraction state
+and the desired coherent `+27` no-leak theorem is the recursion law.  For
+A000568, HYP-2246's half-filter trace is the fraction state and the target is
+endpoint purity under `n -> n+1`.  For unit distance, edge/direction support is
+static, point-deletion frontier owners are fraction state, and Moser slab/ear
+extension is recursion.  For cauldrons/Schur and Paris-Harrington, colorings
+become proof-useful only once active extension/removal/relative-largeness state
+is retained.
+
+**NEXT:** Push HYP-2246 to `n=9`; separate LRC14 carry-owner state from coherent
+carry recursion; build a 3-uniform/3-color PH micro-lab; test unit-distance
+point-deletion recursion owners; search OCF deletion/substitution continuants.
+
+**See:** `05-knowledge/hypotheses/HYP-2247-recursive-fourth-face.md`;
+`05-knowledge/hypotheses/HYP-2247-paris-harrington-ultrafilter-coloring-addendum.md`;
+`04-computation/recursive_fourth_face_coloring_s672.py`;
+`05-knowledge/results/recursive_fourth_face_coloring_s672.out`;
+`07-reflections/recursive-fourth-face-coloring-s672.md`; HYP-2246, HYP-2245,
+HYP-2243, HYP-2240, HYP-2239, HYP-2238, HYP-2189.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

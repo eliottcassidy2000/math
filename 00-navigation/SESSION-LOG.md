@@ -1,5 +1,18 @@
 # Session Log
 
+## codex-2026-06-05-S672 - Recursive fourth representation face and colorings (HYP-2247)
+
+**Prompt:** The repo studied the sum/product/fraction trichotomy, but a fourth recursive representation is lurking; use arXiv:0911.1933, Paris-Harrington colorings, and repo concepts such as colorings to think abstractly and recursively.
+**Source integration:** Opened arXiv:0911.1933 (Zhou-Markov, "Recurrent proofs of the irrationality of certain trigonometric values") and extracted the recurrent integral proof pattern.  Cross-checked Paris-Harrington proof-strength facts with the proof-length literature: the witness function `sigma(n,k)` eventually dominates PA-provably total functions and is tied to `F_{epsilon_0}` bounds.
+**Claimed namespace:** HYP-2247 and T742.
+**Computation:** Added `04-computation/recursive_fourth_face_coloring_s672.py` and stored `05-knowledge/results/recursive_fourth_face_coloring_s672.out`.  The script computes Zhou-Markov pi-recurrence polynomials `P_n(t)`, runs a baby Paris-Harrington edge-coloring backtracking scout, builds a cross-domain four-face carrier atlas, and runs Tournament Analysis over representation faces.
+**Main finding:** The old fraction face should be split: `fraction=boundary/address state`, while `recursion=transition law under iteration, descent, or outer extension`.  The sharpened grammar is `sum -> product -> fraction -> recursion -> sum`.  The final arrow means "unroll the transition into the next additive ledger."
+**Coloring scout:** In the baby 2-color edge case, avoiding large homogeneous sets with `|H|>=3` and `|H|>=min(H)` gives counts `N=3:6`, `N=4:18`, `N=5:12`, `N=6:0`.  This small case collapses at ordinary `R(3,3)=6`, but it records the state-machine view that becomes proof-theoretically huge in full Paris-Harrington.
+**Tournament Analysis:** Vertices are representation faces with observable `(static exactness, local factor leverage, boundary memory, outer-extension survival, growth witness, algorithmic use, coloring transfer)`.  Splitting recursion out of fraction makes the face tournament transitive: `recursion > fraction > product > sum > raw_scalar`, with `directed_3cycles=0` and one Hamiltonian path.
+**Synthesis:** Zhou-Markov recurrences are proof machines, not static expressions; Paris-Harrington shows that a small observer-boundary in a coloring can change proof-strength class; S668 outer-extension usability is the finite repo form; S671 half-filter enumeration supplies the A000568 recursion target; LRC14 needs a coherent `+27` carry recursion theorem above the carry-owner fraction state.
+**Artifacts:** HYP-2247, T742, `04-computation/recursive_fourth_face_coloring_s672.py`, `05-knowledge/results/recursive_fourth_face_coloring_s672.out`, `07-reflections/recursive-fourth-face-coloring-s672.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Push HYP-2246 to `n=9`; separate LRC14 carry-owner state from the coherent carry recursion law; build a stronger PH micro-lab for 3-uniform/3-color relative-largeness states; test unit-distance point-deletion recursion owners.
+
 ## codex-2026-06-05-S671 - Endpoint half-filter enumeration for A000568 (HYP-2246)
 
 **Prompt:** Spend a long creative session on using the metagraph/ultrafilter framing to efficiently enumerate A000568 or other tournament properties.
@@ -26,6 +39,12 @@
 **Synthesis:** HYP-2247 adds an extension-rank coordinate above the HYP-2245/HYP-2246 side filters: `upper/lower filter side -> L/M/U owner address -> bad-child extension profile`.  For LRC14, the proof target is a PH-style rank that strictly decreases after HYP-2241's owner-private deletion filter on coherent `+27` carry/owner lifts.  For unit distance, the analogous rank is a spine-owner deletion profile measuring whether bad constructions can keep postponing unit-spine witnesses into bulk/slab tails.
 **Artifacts:** HYP-2247, T741, `04-computation/paris_harrington_ultrafilter_coloring_s672.py`, `05-knowledge/results/paris_harrington_ultrafilter_coloring_s672.out`, `07-reflections/paris-harrington-ultrafilter-coloring-s672.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
 **Handoff:** Define the LRC14 bad-child rank over HYP-2241's AP/Vstar/2AP carry fibers; add a SAT/CP exact lower-bound search for the `x=3` Paris-Harrington miniature; test `half-filter trace + child-count profile` as a tournament endpoint enumerator refinement.
+## codex-2026-06-05-S671 - Paris-Harrington ultrafilter coloring recursion stub (superseded by HYP-2247)
+
+**Prompt:** Extend the metagraph-ultrafilter/divisor-210 picture through colorings, recursion theory, Paris-Harrington unprovability, initial segments/models of PA, and domination of PA-provably recursive functions.
+**Original claimed namespace:** HYP-2246 and T740, later found to collide with the endpoint half-filter enumeration lane.
+**Starting thesis:** A coloring is a side-choice over tuple atoms; bad colorings form an outer-extension tree; a relatively-large homogeneous set is a finite filter trace that cannot be postponed indefinitely into the tail.
+**Status:** Stub content integrated into S672/HYP-2247/T741.  The exact `x=2` pair-coloring miniature was added there, with follow-up moved to the recursive fourth-face lane.
 
 ## codex-2026-06-05-S670 - Metagraph ultrafilter and divisor-210 descent (HYP-2245)
 

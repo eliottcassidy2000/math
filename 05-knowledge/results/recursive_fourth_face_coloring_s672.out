@@ -1,0 +1,131 @@
+﻿
+==============================================================================
+S672 recursive fourth face scout
+==============================================================================
+Thesis: fraction is a boundary state; recursion is the transition law
+that proves the state survives, shrinks, or explodes under extension.
+
+==============================================================================
+A. Zhou-Markov recurrence face
+==============================================================================
+arXiv:0911.1933 uses recurrences of integrals as proof engines.
+For the pi proof, with t=pi^2:
+  P_0(t) = 2
+  P_1(t) = 4
+  P_2(t) = 24 - 2*t
+  P_3(t) = 240 - 24*t
+  P_4(t) = 3360 - 360*t + 2*t^2
+  P_5(t) = 60480 - 6720*t + 60*t^2
+  P_6(t) = 1330560 - 151200*t + 1680*t^2 - 2*t^3
+  P_7(t) = 34594560 - 3991680*t + 50400*t^2 - 112*t^3
+  P_8(t) = 1037836800 - 121080960*t + 1663200*t^2 - 5040*t^3 + 2*t^4
+The contradiction shape is: denominator clearing makes an integer;
+the integral bound makes it tend to 0; recurrence/descent keeps a
+nonzero subsequence alive.  That is a recursive representation.
+
+==============================================================================
+B. Baby Paris-Harrington coloring recursion
+==============================================================================
+2-color edge case: avoid homogeneous H with |H|>=3 and |H|>=min(H).
+This baby case collapses at N=6, but the state-machine viewpoint is
+the same one that becomes proof-theoretically huge in full PH.
+  N   avoiding_colorings   search_nodes
+  3                    6             13
+  4                   18             63
+  5                   12            265
+  6                    0            987
+
+==============================================================================
+C. Four-face carrier atlas
+==============================================================================
+- Zhou-Markov trig irrationality
+    sum:       small positive/oscillatory integral packets
+    product:   rational denominator clearing b^n or b^(2n+1)
+    fraction:  Lambert-style continued fractions become optional boundary memory
+    recursion: I_n=(4n-2)I_{n-1}-r^2 I_{n-2}; four-state cos recurrence plus descent
+    test:      nonzero integer forced into (-1,1)
+- Paris-Harrington colorings
+    sum:       finite coloring/counting of x-tuples
+    product:   Ramsey parameter product: arity, colors, size, horizon
+    fraction:  relative largeness |H| >= min(H) is a boundary/observer state
+    recursion: minimal witness sigma(n,k) eventually dominates PA-provably total functions
+    test:      finite coloring theorem with proof-strength growth
+- LRC14 carry-owner seam
+    sum:       odd-wall and pair-sum danger packets
+    product:   C=27 gcd shells and local residue factors
+    fraction:  carry-owner continuant v=r+27k
+    recursion: coherent +27 outer extensions must preserve no-leak or pay strict tax
+    test:      floor vs strict fiber purity
+- A000568 endpoint enumeration
+    sum:       class counts and streamed H/c3/SCC payloads
+    product:   Aut(parent)-orbit incident cubes
+    fraction:  deleted-card with L/M/U owner side
+    recursion: n -> n+1 endpoint extension purity conjecture
+    test:      Phi injective through n=8
+- Friedman/outer-extension toy
+    sum:       finite tree/color histograms
+    product:   embedding/downset probes as local factors
+    fraction:  outer insertion address
+    recursion: one-leaf extension preserving homeomorphic color-chain predicates
+    test:      coarse quotients leak; embedding profiles pure
+- unit-distance carrier
+    sum:       unit-edge spine and edge-gain counts
+    product:   Eisenstein direction/norm support
+    fraction:  point-deletion frontier owner
+    recursion: Moser slab/ear extension ledger
+    test:      n=21/22 edge optimality obstruction search
+- cauldron/Schur coloring
+    sum:       A+B=C additive witnesses
+    product:   color-class residue/sieve patterns
+    fraction:  active cauldron/removal state
+    recursion: online placement game and first-boil/last-boil dynamics
+    test:      finite-sums and removal variants split ordinary Schur shadows
+
+==============================================================================
+D. Face tournament
+==============================================================================
+vertices=representation faces
+observable=(static exactness, local factors, boundary memory,
+            outer-extension survival, growth witness, algorithmic use,
+            coloring transfer)
+criteria=('static_exactness', 'local_factor_leverage', 'boundary_memory', 'outer_extension_survival', 'growth_witness', 'algorithmic_use', 'coloring_transfer')
+         sum: (5, 2, 1, 1, 1, 3, 4)
+     product: (3, 5, 2, 2, 2, 4, 4)
+    fraction: (2, 3, 5, 3, 3, 4, 3)
+   recursion: (4, 4, 4, 5, 5, 5, 5)
+  raw_scalar: (1, 1, 0, 0, 1, 1, 1)
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+top_order:
+   recursion score=4 beats=['fraction', 'product', 'raw_scalar', 'sum']
+    fraction score=3 beats=['product', 'raw_scalar', 'sum']
+     product score=2 beats=['raw_scalar', 'sum']
+         sum score=1 beats=['raw_scalar']
+  raw_scalar score=0 beats=[]
+
+==============================================================================
+E. New grammar
+==============================================================================
+Old useful loop:
+  sum -> product -> fraction -> sum
+Sharper recursive loop:
+  sum -> product -> fraction -> recursion -> sum
+
+Read it as:
+  sum: aggregate what is visible
+  product: localize obstruction factors
+  fraction: attach owner/boundary/branch state
+  recursion: prove the state is stable under all allowed extensions
+  recursion -> sum: unroll the transition into the next additive ledger
+
+==============================================================================
+F. Concrete next tests
+==============================================================================
+1. A000568 n=9: test whether half-filter Phi remains pure under endpoint recursion.
+2. LRC14: separate carry-owner continuant state from the recursion law of coherent +27 lifts.
+3. Unit distance n=21/22: keep edge/direction product fixed and vary point-deletion recursion owners.
+4. Cauldron/Schur: record active removal state as fraction, then enumerate game recursion.
+5. OCF/H(T): turn deletion/substitution continuants into a recursive representation of H payloads.
+6. PH micro-lab: build stronger small hypergraph-coloring backtracking with relative-largeness states.
+
