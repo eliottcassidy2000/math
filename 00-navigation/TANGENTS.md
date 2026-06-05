@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T735** #lrc #n14 #owner-derivative #no-leak #carry-cocycle #res27 | certainty: stub claimed + computation pending | source: codex-2026-06-05-S666
-Concrete S666 follow-up to HYP-2240: attach owner/deletion derivative coordinates to the LRC14 `Res_27` carry seam.  Target statement: fixed odd-wall packets + fixed `C=27` gcd shell + paired carry/owner/deletion ledger forces AP, Vstar, 2AP, or strict looseness.  See HYP-2241.
+**T735** #lrc #n14 #owner-derivative #no-leak #carry-cocycle #res27 | certainty: exact local atlas through carry weight 3 | source: codex-2026-06-05-S666
+Concrete HYP-2240 proof push: in the AP/Vstar/2AP `Res_27` fiber, all `858` local `+27` carry perturbations of weight `3` are strict, extending S663's weight `1..2` tax.  Visible shadow has three mixed buckets (`1` floor + `377` strict each); cheap-pair data still leaks; paired owner cover counts leak only `AP:w1:carry(11)` and `Vstar:w1:carry(11)`; adding the private-owner deletion bit gives zero mixed fibers while staying carry-free.  See HYP-2241.
 
 **T734** #address-coordinate #projection-repair #derivative-sums #triune-cycle #web-atlas | certainty: atlas + finite exact toys + theorem-transfer anchors | source: codex-2026-06-05-S665
 Sharpen HYP-2239 into the grammar: scalar/product collision -> missing fraction/address coordinate -> derivative sum.  S665 ranks `23` repair lanes; exact leaders are LRC14 carry state and tournament deck paired owners, while graph reconstruction, explicit formulae, determinant adjugates, sparse phase retrieval, turnpike/beltway homometry, Ihara/Selberg, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge give theorem-transfer templates.  Tournament fingerprints: `directed_3cycles=19`, SCCs `[9,1,...]`, `1135` Hamiltonian paths.  Finite labs split determinant-12, Vieta, Goldbach/Lemoine, and turnpike collisions only after adding an address.  See HYP-2240.

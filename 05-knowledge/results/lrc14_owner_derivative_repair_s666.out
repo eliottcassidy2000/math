@@ -1,0 +1,74 @@
+==============================================================================
+S666 LRC14 owner-derivative repair over the Res_27 carry seam
+==============================================================================
+
+n=14; C=2n-1=27; floor=1/14
+Visible scalar/product key = sorted Res_27 residues + C=27 gcd-shell counts.
+Owner derivative bit = whether deleting a speed would uncover a D/U/N obligation.
+
+A. Exhaustive local +27 carry tax through weight 3
+  probes=1134 route_hist={'floor': 3, 'strict': 1131}
+  AP    weight=0 count=  1 routes={'floor': 1} min_M= 1/14 margin=     0 t= 1/14 moved=-
+  AP    weight=1 count= 13 routes={'strict': 13} min_M= 1/13 margin= 1/182 t= 1/13 moved=(13,)
+  AP    weight=2 count= 78 routes={'strict': 78} min_M= 1/12 margin=  1/84 t= 1/12 moved=(12, 13)
+  AP    weight=3 count=286 routes={'strict': 286} min_M= 1/11 margin= 3/154 t= 1/11 moved=(11, 12, 13)
+  Vstar weight=0 count=  1 routes={'floor': 1} min_M= 1/14 margin=     0 t= 1/14 moved=-
+  Vstar weight=1 count= 13 routes={'strict': 13} min_M= 2/25 margin= 3/350 t= 2/25 moved=(13,)
+  Vstar weight=2 count= 78 routes={'strict': 78} min_M= 1/12 margin=  1/84 t= 1/12 moved=(13, 24)
+  Vstar weight=3 count=286 routes={'strict': 286} min_M= 1/11 margin= 3/154 t= 1/11 moved=(11, 13, 24)
+  2AP   weight=0 count=  1 routes={'floor': 1} min_M= 1/14 margin=     0 t= 1/28 moved=-
+  2AP   weight=1 count= 13 routes={'strict': 13} min_M= 1/13 margin= 1/182 t= 1/13 moved=(26,)
+  2AP   weight=2 count= 78 routes={'strict': 78} min_M= 1/12 margin=  1/84 t= 1/24 moved=(24, 26)
+  2AP   weight=3 count=286 routes={'strict': 286} min_M= 1/11 margin= 3/154 t= 1/22 moved=(22, 24, 26)
+  New S666 evidence: all 858 weight-3 local carries are strict.
+
+B. Owner-deletion projection audit
+channel                            groups  mixed max_bucket separates
+visible_shadow                          3      3        378 False
+    mixed routes={'floor': 1, 'strict': 377} examples=('AP', 'AP:w1:carry(1,)', 'AP:w1:carry(2,)', 'AP:w1:carry(3,)', 'AP:w1:carry(4,)', 'AP:w1:carry(5,)', 'AP:w1:carry(6,)', 'AP:w1:carry(7,)')
+    mixed routes={'floor': 1, 'strict': 377} examples=('Vstar', 'Vstar:w1:carry(1,)', 'Vstar:w1:carry(2,)', 'Vstar:w1:carry(3,)', 'Vstar:w1:carry(4,)', 'Vstar:w1:carry(5,)', 'Vstar:w1:carry(6,)', 'Vstar:w1:carry(7,)')
+visible+cheap_pair                    112      3        106 False
+    mixed routes={'floor': 1, 'strict': 86} examples=('AP', 'AP:w1:carry(2,)', 'AP:w1:carry(3,)', 'AP:w1:carry(4,)', 'AP:w1:carry(5,)', 'AP:w1:carry(6,)', 'AP:w1:carry(9,)', 'AP:w2:carry(2, 3)')
+    mixed routes={'floor': 1, 'strict': 105} examples=('Vstar', 'Vstar:w1:carry(2,)', 'Vstar:w1:carry(3,)', 'Vstar:w1:carry(4,)', 'Vstar:w1:carry(5,)', 'Vstar:w1:carry(6,)', 'Vstar:w1:carry(8,)', 'Vstar:w1:carry(9,)')
+visible+owner_cover_count             976      2          2 False
+    mixed routes={'floor': 1, 'strict': 1} examples=('AP', 'AP:w1:carry(11,)')
+    mixed routes={'floor': 1, 'strict': 1} examples=('Vstar', 'Vstar:w1:carry(11,)')
+visible+owner_private_flag           1067      0          2 True
+visible+owner_private_count          1134      0          1 True
+visible+carry_l1_support             1134      0          1 True
+
+  Key repair:
+    visible+owner_cover_count still leaks AP:w1:carry(11) and Vstar:w1:carry(11).
+    Adding only the private-owner deletion bit gives 0 mixed fibers while
+    remaining carry-free; it does not use the full carry vector.
+
+C. Targeted terminal-carry leads beyond the exhaustive radius
+  AP    terminal weight=4 moved=(10, 11, 12, 13) M= 4/41 margin=15/574 t= 4/41
+  AP    terminal weight=5 moved=(9, 10, 11, 12, 13) M= 4/41 margin=15/574 t= 4/41
+  AP    terminal weight=6 moved=(8, 9, 10, 11, 12, 13) M= 5/41 margin=29/574 t= 5/41
+  Vstar terminal weight=4 moved=(10, 11, 13, 24) M= 5/52 margin= 9/364 t= 5/52
+  Vstar terminal weight=5 moved=(9, 10, 11, 13, 24) M= 4/39 margin=17/546 t= 4/39
+  Vstar terminal weight=6 moved=(8, 9, 10, 11, 13, 24) M= 5/41 margin=29/574 t= 5/41
+  2AP   terminal weight=4 moved=(20, 22, 24, 26) M= 1/10 margin=  1/35 t= 1/20
+  2AP   terminal weight=5 moved=(18, 20, 22, 24, 26) M= 6/55 margin=29/770 t= 3/55
+  2AP   terminal weight=6 moved=(16, 18, 20, 22, 24, 26) M=  1/8 margin=  3/56 t= 7/16
+  These are leads only; S666's exhaustive certificate stops at weight 3.
+
+D. Tournament Analysis over repair channels
+  vertices=repair channels
+  observable=(mixed fibers, compression, owner alignment, pairedness, carry independence)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  top_order:
+    visible+owner_private_flag
+    visible+owner_private_count
+    visible+carry_l1_support
+    visible+owner_cover_count
+    visible_shadow
+    visible+cheap_pair
+
+E. Proof consequence
+  The visible Res_27/product shell has three mixed buckets, each containing one floor atom and 377 strict local carries.  Cheap-pair existence does not repair the leak.  Paired owner cover counts almost repair it, failing only on AP/Vstar carry(11).  The single extra private-owner deletion bit repairs every checked local carry through weight 3.
+  This suggests a concrete no-leak lemma: in the Res_27 fiber, any nonzero local carry that preserves the visible shell must change the paired owner-deletion ledger, unless it belongs to a globally coherent scalar floor lift.

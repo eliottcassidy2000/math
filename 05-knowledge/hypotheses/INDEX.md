@@ -697,6 +697,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2239 | HYP-2238's triune value method transfers to LRC and sibling problems by pairing additive packets, local product/gcd obstruction shells, and recursive carry/owner boundary state; globally this forms the projection-repair cycle `sum -> product -> fraction -> sum`. | S663 builds LRC14 triune records for AP, `Vstar`, and `2AP`.  All three are floor atoms with `M=1/14` and product face `C=27` gcd shells `((1,9),(3,3),(9,1))`, mass `27`.  Every one/two-coordinate `+27` carry perturbation over these atoms is strict.  Projection-collision audit: keeping only the Res27 additive/product shadow leaves three mixed groups (`1` floor + `91` strict each), while adding the carry-continuant/fraction face leaves `0` mixed groups.  S664 scans `10381` repo files and builds a domain-weighted face tournament with `score_hist={0:1,2:3}`, one directed 3-cycle on `(sum,product,fraction)`, SCCs `{sum,product,fraction}` plus `{raw_scalar}`, and `3` Hamiltonian paths.  Strongest repair lanes: LRC14, pi representations, tournament decks, OCF/H(T), pi/e trace-norm, unit distance, finite-field Kakeya/Falconer, perfect/aliquot, Goldbach/Lemoine, A000568, cauldrons, Heegner, and CH/forcing. | codex-2026-06-05-S663/S664; `HYP-2239-triune-carrier-applications-lrc.md`; `triune_carrier_applications_s663.py`; `triune_carrier_applications_s663.out`; `triune-carrier-applications-lrc-s663.md`; `triune_cycle_everywhere_s664.py`; `triune_cycle_everywhere_s664.out`; `triune-cycle-everywhere-s664.md`; HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, THM-401 |
 | HYP-2241 | STUB: LRC14 owner-derivative no-leak should make HYP-2240 concrete over the `Res_27` carry seam. | Claimed for S666.  Target: fixed odd-wall packets + fixed `C=27` gcd/product shell + paired carry/owner/deletion derivatives force AP, Vstar, 2AP, or strict looseness.  Evidence pending: script inspection, finite owner-deletion atlas, Tournament Analysis over retained address coordinates, and HYP upgrade. | codex-2026-06-05-S666; `HYP-2241-lrc14-owner-derivative-no-leak.md`; HYP-2240, HYP-2239, HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks `23` repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners.  The repair-lane tournament has `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,11:2,12:2,13:2,15:3,18:1,19:1,20:1,21:1,22:1}`, `directed_3cycles=19`, `scc_sizes=[9,1,1,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=1135`.  Finite side labs split Vieta branches over `F_17`, determinant `12` by adjugate derivatives `6` vs `4`, Goldbach/Lemoine pair projections, and turnpike homometric point sets.  External anchors include DLMF Euler products, Jacobi adjugates, graph reconstruction/Kocay matrices, explicit formulae, Ihara/Selberg, sparse phase retrieval, turnpike/beltway reconstruction, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2167, HYP-2171, HYP-2218, HYP-2212, THM-401 |
+| HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks 20 repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners; finite side labs include Vieta branch splitting over `F_17`, toy log derivatives of prime products, and Goldbach/Lemoine pair reconstruction.  The repair-lane tournament has `directed_3cycles=16`, `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=425`.  External anchors include graph reconstruction/Kocay matrices, vertex-pair parameters, explicit formulae, Ihara/Selberg trace formulae, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2236, HYP-2235, HYP-2218, HYP-2212, HYP-2171 |
+| HYP-2241 | LRC14 owner-derivative no-leak: in the AP/Vstar/2AP `Res_27` carry fiber, visible shell collisions are repaired by a paired owner-deletion bit. | S666 checks `1134` probes: `3` floor atoms and `1131` strict local carries, including all `858` weight-3 local `+27` carries.  Visible shadow has three mixed buckets (`1` floor + `377` strict each), cheap-pair data still leaks, paired owner cover counts leave exactly two singleton leaks (`AP:w1:carry(11)`, `Vstar:w1:carry(11)`), and adding the private-owner deletion flag gives `0` mixed fibers while remaining carry-free.  Repair-channel Tournament Analysis is transitive with top channel `visible+owner_private_flag`. | codex-2026-06-05-S666; `HYP-2241-lrc14-owner-derivative-no-leak.md`; `lrc14_owner_derivative_repair_s666.py`; `lrc14_owner_derivative_repair_s666.out`; `lrc14-owner-derivative-no-leak-s666.md`; HYP-2240, HYP-2239, HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7092,6 +7094,71 @@ deletion-owner lab near the Moser `n=21/22` rows.
 `05-knowledge/results/address_coordinate_derivative_repair_s665.out`;
 `07-reflections/address-coordinate-derivative-repair-s665.md`; HYP-2239,
 HYP-2238, HYP-2236, HYP-2235, HYP-2234, HYP-2218, HYP-2212, HYP-2171.
+
+## HYP-2241: LRC14 owner-derivative no-leak (codex-2026-06-05-S666)
+
+**STATUS:** OPEN finite evidence for an LRC14 local no-leak lemma.
+
+**WHAT:** Make HYP-2240 concrete over the LRC `n=14` `Res_27` carry seam.  The
+visible scalar/product key is the sorted `Res_27` shadow plus `C=27` gcd-shell
+counts.  The checked owner-deletion key pairs each residue with:
+
+```text
+(number of D/U/N obligations covered,
+ whether the speed privately owns at least one D/U/N obligation)
+```
+
+The private-owner bit is a deletion derivative: deleting that speed uncovers a
+certificate obligation exactly when the bit is true.
+
+**EVIDENCE:** S666 builds an exact local carry atlas around AP, Vstar, and
+`2AP`.  It exhaustively adds `+27` to every subset of one, two, or three
+coordinates and computes exact maximin scores.
+
+- Total probes: `1134`.
+- Floor atoms: `3`.
+- Strict local carries: `1131`.
+- New S666 radius: all `858` weight-3 local carries are strict.
+- AP weight `1,2,3` minima: `1/13`, `1/12`, `1/11`.
+- Vstar weight `1,2,3` minima: `2/25`, `1/12`, `1/11`.
+- `2AP` weight `1,2,3` minima: `1/13`, `1/12`, `1/11`.
+
+Projection audit:
+
+- visible shadow + gcd shell: `3` mixed buckets, each `1` floor + `377` strict;
+- visible + cheap pair: still `3` mixed buckets;
+- visible + paired owner cover count: `2` singleton leaks,
+  `AP:w1:carry(11)` and `Vstar:w1:carry(11)`;
+- visible + paired private-owner flag: `0` mixed buckets, max bucket `2`;
+- visible + paired private-owner count and visible + carry support are also
+  separating, but the private-owner flag is the smallest checked carry-free
+  repair.
+
+**TOURNAMENT ANALYSIS:** Vertices are repair channels with observable
+`(mixed fibers, compression, owner alignment, pairedness, carry independence)`.
+The repair-channel tournament is transitive: `score_hist={0:1,1:1,2:1,3:1,4:1,5:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  The top channel
+is `visible+owner_private_flag`.
+
+**ASSUMPTION CHALLENGE:** S666 did not assume vertices must be runners.  It
+considered runners, residues, gaps, fixed circle sections, section boundaries,
+wall-crossing events, pair-sum denominators, owner obligations, deleted-speed
+cards, carry coordinates, and proof obligations.  The chosen quotient preserves
+the finite predicate "does this side channel separate known floor atoms from
+bounded local carry perturbations?" and deliberately destroys phase order and
+raw speed identity.
+
+**NEXT:** Prove/extend the local no-leak lemma: in the AP/Vstar/2AP `Res_27`
+fiber, any nonzero local carry preserving the visible shell must change the
+paired owner-deletion ledger, unless it belongs to a globally coherent scalar
+floor lift.  Next computational targets are scalar unit lifts, two-block carry
+patterns, and HYP-2165 owner-route lifts of the 64 fixed classes.
+
+**See:** `05-knowledge/hypotheses/HYP-2241-lrc14-owner-derivative-no-leak.md`;
+`04-computation/lrc14_owner_derivative_repair_s666.py`;
+`05-knowledge/results/lrc14_owner_derivative_repair_s666.out`;
+`07-reflections/lrc14-owner-derivative-no-leak-s666.md`; HYP-2240, HYP-2239,
+HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
