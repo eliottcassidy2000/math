@@ -1,0 +1,96 @@
+SIGNED LRC GAUGE PROBE
+total n=14, moving runners=13, C=2n-1=27, sample_times=756
+
+AP13: speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  all_plus: observer_invariant=True, unique_tournaments=100, unique_fingerprints=18, c3_values={0:64, 11:6, 29:6, 50:9, 66:1, 69:1, 70:11, 78:1, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):64, (13,):692}
+    pair clocks: same=78, opposite=0, abs={1:12, 2:11, 3:10, 4:9, 5:8, 6:7, 7:6, 8:5, 9:4, 10:3, 11:2, 12:1}, mod27={1:12, 2:11, 3:10, 4:9, 5:8, 6:7, 7:6, 8:5, 9:4, 10:3, 11:2, 12:1}
+  all_minus: observer_invariant=True, unique_tournaments=100, unique_fingerprints=18, c3_values={0:64, 11:6, 29:6, 50:9, 66:1, 69:1, 70:11, 78:1, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):64, (13,):692}
+    pair clocks: same=78, opposite=0, abs={1:12, 2:11, 3:10, 4:9, 5:8, 6:7, 7:6, 8:5, 9:4, 10:3, 11:2, 12:1}, mod27={15:1, 16:2, 17:3, 18:4, 19:5, 20:6, 21:7, 22:8, 23:9, 24:10, 25:11, 26:12}
+  alternating_plus: observer_invariant=True, unique_tournaments=355, unique_fingerprints=29, c3_values={0:92, 11:4, 20:2, 29:2, 36:7, 43:2, 48:1, 50:2, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):92, (13,):664}
+    pair clocks: same=36, opposite=42, abs={2:11, 3:1, 4:9, 5:2, 6:7, 7:3, 8:5, 9:4, 10:3, 11:5, 12:1, 13:6, 15:6, 17:5, 19:4, 21:3, ...}, mod27={2:6, 4:6, 5:1, 6:5, 7:1, 8:5, 9:2, 10:4, 11:2, 12:4, 13:3, 14:3, 15:3, 16:3, 17:4, 18:2, ...}
+    alternating split: same-sign differences={2:11, 4:9, 6:7, 8:5, 10:3, 12:1}; opposite-sign sums={3:1, 5:2, 7:3, 9:4, 11:5, 13:6, 15:6, 17:5, 19:4, 21:3, 23:2, 25:1}
+  alternating_minus: observer_invariant=True, unique_tournaments=355, unique_fingerprints=29, c3_values={0:92, 11:4, 20:2, 29:2, 36:7, 43:2, 48:1, 50:2, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):92, (13,):664}
+    pair clocks: same=36, opposite=42, abs={2:11, 3:1, 4:9, 5:2, 6:7, 7:3, 8:5, 9:4, 10:3, 11:5, 12:1, 13:6, 15:6, 17:5, 19:4, 21:3, ...}, mod27={2:6, 3:1, 4:5, 5:1, 6:5, 7:2, 8:4, 9:2, 10:4, 11:3, 12:3, 13:3, 14:3, 15:4, 16:2, 17:4, ...}
+    alternating split: same-sign differences={2:11, 4:9, 6:7, 8:5, 10:3, 12:1}; opposite-sign sums={3:1, 5:2, 7:3, 9:4, 11:5, 13:6, 15:6, 17:5, 19:4, 21:3, 23:2, 25:1}
+  all_plus vs alternating_plus: fingerprint_mismatches=588/756, c3_delta={-91:60, -80:2, -70:2, -54:6, -47:1, -42:1, -35:2, -21:4, -11:28, -9:12, -8:4, -7:56, -6:1, -5:19, -4:11, -3:45, ...}
+
+Vstar: speeds=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  all_plus: observer_invariant=True, unique_tournaments=354, unique_fingerprints=30, c3_values={0:34, 11:6, 20:18, 27:4, 32:6, 35:5, 36:12, 55:11, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):34, (13,):722}
+    pair clocks: same=78, opposite=0, abs={1:10, 2:10, 3:9, 4:8, 5:7, 6:6, 7:5, 8:4, 9:3, 10:2, 11:2, 12:1, 13:1, 14:1, 15:1, 16:1, ...}, mod27={1:10, 2:10, 3:9, 4:8, 5:7, 6:6, 7:5, 8:4, 9:3, 10:2, 11:2, 12:1, 13:1, 14:1, 15:1, 16:1, ...}
+  all_minus: observer_invariant=True, unique_tournaments=354, unique_fingerprints=30, c3_values={0:34, 11:6, 20:18, 27:4, 32:6, 35:5, 36:12, 55:11, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):34, (13,):722}
+    pair clocks: same=78, opposite=0, abs={1:10, 2:10, 3:9, 4:8, 5:7, 6:6, 7:5, 8:4, 9:3, 10:2, 11:2, 12:1, 13:1, 14:1, 15:1, 16:1, ...}, mod27={4:1, 5:1, 6:1, 7:1, 8:1, 9:1, 10:1, 11:1, 12:1, 13:1, 14:1, 15:1, 16:2, 17:2, 18:3, 19:4, ...}
+  alternating_plus: observer_invariant=True, unique_tournaments=515, unique_fingerprints=42, c3_values={0:33, 11:11, 20:9, 27:4, 32:6, 35:6, 36:6, 41:3, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):33, (13,):723}
+    pair clocks: same=36, opposite=42, abs={2:9, 3:2, 4:7, 5:3, 6:5, 7:4, 8:3, 9:5, 10:1, 11:6, 13:6, 14:1, 15:5, 16:1, 17:4, 18:1, ...}, mod27={1:1, 2:5, 3:2, 4:4, 5:3, 6:3, 7:3, 8:3, 9:3, 10:3, 11:3, 12:2, 13:5, 14:2, 15:3, 16:4, ...}
+    alternating split: same-sign differences={2:9, 3:1, 4:7, 5:1, 6:5, 7:1, 8:3, 9:1, 10:1, 11:1, 13:1, 15:1, ...}; opposite-sign sums={3:1, 5:2, 7:3, 9:4, 11:5, 13:5, 14:1, 15:4, 16:1, 17:3, 18:1, 19:2, 20:1, 21:1, 22:1, 24:1, ...}
+  alternating_minus: observer_invariant=True, unique_tournaments=515, unique_fingerprints=42, c3_values={0:33, 11:11, 20:9, 27:4, 32:6, 35:6, 36:6, 41:3, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):33, (13,):723}
+    pair clocks: same=36, opposite=42, abs={2:9, 3:2, 4:7, 5:3, 6:5, 7:4, 8:3, 9:5, 10:1, 11:6, 13:6, 14:1, 15:5, 16:1, 17:4, 18:1, ...}, mod27={1:1, 2:4, 3:2, 4:4, 5:2, 6:4, 7:3, 8:3, 9:3, 10:3, 11:4, 12:3, 13:2, 14:5, 15:2, 16:3, ...}
+    alternating split: same-sign differences={2:9, 3:1, 4:7, 5:1, 6:5, 7:1, 8:3, 9:1, 10:1, 11:1, 13:1, 15:1, ...}; opposite-sign sums={3:1, 5:2, 7:3, 9:4, 11:5, 13:5, 14:1, 15:4, 16:1, 17:3, 18:1, 19:2, 20:1, 21:1, 22:1, 24:1, ...}
+  all_plus vs alternating_plus: fingerprint_mismatches=644/756, c3_delta={-86:3, -85:8, -75:6, -74:3, -68:1, -67:4, -65:4, -60:1, -58:1, -56:4, -55:2, -54:6, -46:2, -45:3, -39:2, -34:2, ...}
+
+2AP13: speeds=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
+  all_plus: observer_invariant=True, unique_tournaments=94, unique_fingerprints=16, c3_values={0:64, 11:8, 29:4, 50:10, 70:10, 78:2, 80:88, 82:2, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):64, (13,):692}
+    pair clocks: same=78, opposite=0, abs={2:12, 4:11, 6:10, 8:9, 10:8, 12:7, 14:6, 16:5, 18:4, 20:3, 22:2, 24:1}, mod27={2:12, 4:11, 6:10, 8:9, 10:8, 12:7, 14:6, 16:5, 18:4, 20:3, 22:2, 24:1}
+  all_minus: observer_invariant=True, unique_tournaments=94, unique_fingerprints=16, c3_values={0:64, 11:8, 29:4, 50:10, 70:10, 78:2, 80:88, 82:2, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):64, (13,):692}
+    pair clocks: same=78, opposite=0, abs={2:12, 4:11, 6:10, 8:9, 10:8, 12:7, 14:6, 16:5, 18:4, 20:3, 22:2, 24:1}, mod27={3:1, 5:2, 7:3, 9:4, 11:5, 13:6, 15:7, 17:8, 19:9, 21:10, 23:11, 25:12}
+  alternating_plus: observer_invariant=True, unique_tournaments=289, unique_fingerprints=24, c3_values={0:92, 11:4, 20:4, 36:6, 43:4, 48:2, 68:8, 70:8, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):92, (13,):664}
+    pair clocks: same=36, opposite=42, abs={4:11, 6:1, 8:9, 10:2, 12:7, 14:3, 16:5, 18:4, 20:3, 22:5, 24:1, 26:6, 30:6, 34:5, 38:4, 42:3, ...}, mod27={1:3, 3:3, 4:6, 5:3, 7:4, 8:6, 9:2, 10:1, 11:4, 12:5, 13:2, 14:1, 15:5, 16:5, 17:1, 18:2, ...}
+    alternating split: same-sign differences={4:11, 8:9, 12:7, 16:5, 20:3, 24:1}; opposite-sign sums={6:1, 10:2, 14:3, 18:4, 22:5, 26:6, 30:6, 34:5, 38:4, 42:3, 46:2, 50:1}
+  alternating_minus: observer_invariant=True, unique_tournaments=289, unique_fingerprints=24, c3_values={0:92, 11:4, 20:4, 36:6, 43:4, 48:2, 68:8, 70:8, ...}, scc_shapes={(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1):92, (13,):664}
+    pair clocks: same=36, opposite=42, abs={4:11, 6:1, 8:9, 10:2, 12:7, 14:3, 16:5, 18:4, 20:3, 22:5, 24:1, 26:6, 30:6, 34:5, 38:4, 42:3, ...}, mod27={1:3, 3:4, 4:6, 5:2, 6:1, 7:4, 8:5, 9:2, 10:1, 11:5, 12:5, 13:1, 14:2, 15:5, 16:4, 17:1, ...}
+    alternating split: same-sign differences={4:11, 8:9, 12:7, 16:5, 20:3, 24:1}; opposite-sign sums={6:1, 10:2, 14:3, 18:4, 22:5, 26:6, 30:6, 34:5, 38:4, 42:3, 46:2, 50:1}
+  all_plus vs alternating_plus: fingerprint_mismatches=592/756, c3_delta={-91:60, -70:4, -54:4, -47:2, -42:2, -21:4, -11:28, -9:16, -8:4, -7:52, -6:2, -5:22, -4:10, -3:46, -2:50, -1:48, ...}
+
+LRC reading: signed direction is a gauge symmetry for the observer,
+but alternating signs convert many runner-runner clocks from differences
+into pair sums.  For AP13 the opposite-sign clocks are exactly the odd
+interior sums 3,5,...,25 inside C=27; the missing boundary shells 1 and
+27 are the address tax that the observer projection erases.
+
+UNIT-DISTANCE SHORT/UNIT/LONG TRIENERMENT PROBE
+Rule: S(<1) follows base order, L(>1) reverses base order, U(=1) is a tie layer.
+
+square_center_short_unit_long: n=5, order=no_unit_spine_found, pair_states={L:2, S:4, U:4}, base_path_states={S:1, U:3}
+  unit_positive: score_hist=((0, 1), (2, 2), (3, 2)), c3=2, scc=(4, 1), H=5, redei_path_states={L:2, S:1, U:1}
+  unit_negative: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1)), c3=0, scc=(1, 1, 1, 1, 1), H=1, redei_path_states={S:1, U:3}
+
+eisenstein_hex7: n=7, order=base_order_is_unit_spine, pair_states={L:9, U:12}, base_path_states={U:6}
+  unit spine in original labels: (1, 2, 4, 6, 5, 3, 0)
+  unit_positive: score_hist=((0, 1), (2, 1), (3, 2), (4, 2), (5, 1)), c3=6, scc=(6, 1), H=29, redei_path_states={L:2, U:4}
+  unit_negative: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1)), c3=0, scc=(1, 1, 1, 1, 1, 1, 1), H=1, redei_path_states={U:6}
+
+eisenstein_hex19: n=19, order=base_order_is_unit_spine, pair_states={L:129, U:42}, base_path_states={U:18}
+  unit spine in original labels: (13, 7, 14, 9, 16, 11, 18, 12, 17, 10, 15, 8, 1, 2, 4, 6, 0, 3, 5)
+  unit_positive: score_hist=((3, 3), (5, 2), (7, 2), (9, 2), (11, 4), (12, 3), (13, 2), (14, 1)), c3=161, scc=(19,), redei_path_states={L:8, U:10}
+  unit_negative: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 1), (17, 1), (18, 1)), c3=0, scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), redei_path_states={U:18}
+
+eisenstein_hex19_plus_two_fringe_n21: n=21, order=base_order_is_unit_spine, pair_states={L:166, U:44}, base_path_states={U:20}
+  unit spine in original labels: (19, 18, 11, 6, 12, 17, 10, 15, 8, 13, 7, 14, 9, 2, 1, 3, 5, 0, 4, 16, 20)
+  unit_positive: score_hist=((1, 1), (3, 1), (4, 2), (5, 1), (6, 1), (8, 2), (10, 2), (12, 4), (13, 3), (14, 2), (17, 1), (19, 1)), c3=157, scc=(21,), redei_path_states={L:10, U:10}
+  unit_negative: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1), (7, 1), (8, 1), (9, 1), (10, 1), (11, 1), (12, 1), (13, 1), (14, 1), (15, 1), (16, 1), (17, 1), (18, 1), (19, 1), (20, 1)), c3=0, scc=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1), redei_path_states={U:20}
+
+Unit-distance reading: the equality layer behaves like a wall, not like
+ordinary nonunit mass.  On Eisenstein patches, the U layer can carry a
+unit spine all the way to the n=21 fringe toy.  In the square-center toy,
+short edges isolate the center from the U graph, so any mandatory path
+must pay a short/long address.  This is the small-size impairment to use
+before asking whether non-lattice optimal rows keep a unit spine.
+
+CROSS-LENS TOURNAMENT ANALYSIS
+Observable vector: predicate preservation, side-channel exposure, exact evidence, transfer to LRC14/UD21, overclaim safety.
+fingerprint: score_hist=((0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1)), c3=0, scc=(1, 1, 1, 1, 1, 1), H=1
+outscore order:
+  signed_observer_gauge -> 5
+  short_unit_long_trienerment -> 4
+  alternating_pair_sum_clock -> 3
+  owner_address_derivative -> 2
+  unit_spine_order -> 1
+  raw_phase_or_edge_count -> 0
+
+SESSION THESIS
+1. Negative speeds do not change LRC loneliness; they change the pair-clock
+   address.  Alternating signs are a controlled way to inject the pair-sum
+   sieve into a runner-runner tournament while leaving the observer shadow
+   identical.
+2. Unit distance should keep S/U/L as a trienerment object.  Collapsing U
+   into either side erases exactly the wall that decides whether a unit
+   Hamiltonian spine is geometric or just a tiling-order artifact.

@@ -709,6 +709,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2248 | Borel antidiagonalization, constructive mathematics, tangible incompleteness, and embedded maximality share one proof-design rule: retain the embedded address that computes the witness. | S673 exact antidiagonal audit over all binary `m x m` matrices through `m=4` shows scalar summaries leak the antiword badly: at `m=4`, row weight multiset has `68` mixed buckets, row weight sequence `609`, column weight sequence `609`, and row+column weights `8769`, while the diagonal vector has `0`.  A finite regressive shift-collision toy has a unique predecessor escape `f(t)=min(t)-1` for tested `k=1,2,3`; forbidding that boundary collapses the toy, showing endpoint/no-endpoint embedding is load-bearing.  Transfer: LRC14 needs owner/cut addresses that construct strict-tax witnesses, A000568 needs a constructive half-filter child-selection theorem, and unit distance needs unit-spine/point-deletion owner addresses beyond bulk counts. | codex-2026-06-05-S673; `HYP-2248-borel-constructive-embedded-maximality.md`; `borel_constructive_embedded_maximality_s673.py`; `borel_constructive_embedded_maximality_s673.out`; `borel-constructive-embedded-maximality-s673.md`; HYP-2247, HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241 |
 | HYP-2248 addendum | Borel anti-diagonalization is the invariant-selector face of embedded maximality: raw diagonalization chooses outside, while an invariant outside selector requires address data and can still be recursively captured by outer extension. | S673b finite selector audit complements the HYP-2248 antidiagonal-channel lane by modeling states `A subset U`, outside choices `y in U\A`, and symmetry groups on `U`.  A choice is invariantly available only when some outside point is fixed by the stabilizer of `A`; naming anchors gives an address tax.  At `n=6`, ordered/trivial selectors have `63/63` selectable states and tax `0`, path reflection `56/63` tax `1`, cyclic rotations `54/63` tax `1`, dihedral `36/63` tax `2`, and full symmetric only `6/63` tax `5`.  After anchors are named, least-outside constructive selectors are captured stage by stage by outer extension.  Selector-lane Tournament Analysis is transitive with leader `embedded_address_tax`, then `lrc_owner_carry_rank`. | codex-2026-06-05-S673b; `HYP-2248-borel-antidiagonal-embedded-selector.md`; `borel_antidiagonal_embedded_maximality_s673.py`; `borel_antidiagonal_embedded_maximality_s673.out`; `borel-antidiagonal-embedded-maximality-s673.md`; T744; HYP-2247, HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241, HYP-2240 |
 | HYP-2249 | Signed LRC and unit-threshold tournaments: independent negative-speed signs preserve observer loneliness while exposing difference-versus-sum pair clocks; unit-distance lengths should be modeled as `<1`, `=1`, `>1` threshold states. | S674 proves/uses `dist(v*t)=dist(-v*t)` and audits AP/Vstar/`2AP` on the `q=756` grid: all tested sign gauges keep the observer-safe mask.  Pair clocks change under signs; Vstar alone exposes a signed zero pair clock at `3+24=27`, with best sign lifts showing one zero, eleven gcd-9 clocks, thirty gcd-3 clocks, and forty-two sum pairs.  Unit-distance threshold tournaments show normalized triangular spines through `n=10` have no close state and keep all-unit directed Hamiltonian paths under both unit signs, while compressed toys reveal the close/pressure state. | codex-2026-06-05-S674; `HYP-2249-signed-lrc-unit-threshold-tournaments.md`; `signed_lrc_unit_threshold_s674.py`; `signed_lrc_unit_threshold_s674.out`; `signed-lrc-unit-threshold-tournaments-s674.md`; T745; HYP-2241, HYP-2203, HYP-2135, THM-401 |
+| HYP-2249 addendum | Signed LRC directions are an observer-gauge symmetry but a pair-clock side channel; unit distance should keep `S<1`, `U=1`, and `L>1` as a trienerment object before binary tournament collapse. | S674b complements the signed unit-threshold scout by sampling pair-tournament churn and an `n=21` unit-spine impurity toy.  For AP13 at total `n=14`, `C=27`, all-plus has `100` unique tournaments and `18` fingerprints while alternating-plus has `355` and `29`; fingerprints differ at `588/756` sampled times.  Alternating AP13 splits same-sign differences `{2,4,6,8,10,12}` from opposite-sign sums `{3,5,...,25}`, exposing the odd interior pair-sum sieve while leaving the observer shadow identical.  Unit-distance `S/U/L` probes show square+center has no unit spine, while Eisenstein hex7/hex19/`n=21` fringe toys retain pure unit spines. | codex-2026-06-05-S674b; `HYP-2249-signed-lrc-unit-distance-trienerment-addendum.md`; `signed_lrc_unit_distance_trienerment_s674b.py`; `signed_lrc_unit_distance_trienerment_s674b.out`; `signed-lrc-unit-distance-trienerment-s674b.md`; T746; HYP-2248, HYP-2241, HYP-2240, HYP-2202, HYP-2201, HYP-2132, THM-401 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7971,6 +7972,125 @@ spine-owner profiles in `n=21/22` carriers.
 `05-knowledge/results/borel_antidiagonal_embedded_maximality_s673.out`;
 `07-reflections/borel-antidiagonal-embedded-maximality-s673.md`; HYP-2247,
 HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241, HYP-2240.
+
+## HYP-2249 addendum: Signed LRC gauges and unit-distance trienerment edges (codex-2026-06-05-S674b)
+
+**STATUS:** OPEN method hypothesis with exact finite gauge/trienerment evidence.
+
+**WHAT:** LRC signed directions and unit-distance equality edges are both
+gauge/equality layers that preserve the target predicate while changing the
+proof address.
+
+For LRC, independent signs leave observer loneliness unchanged:
+
+```text
+||v_i t|| = ||-v_i t||.
+```
+
+But runner-runner clocks change:
+
+```text
+relative clock = eps_j v_j - eps_i v_i.
+```
+
+Same signs give differences; opposite signs give sums.  Thus negative speeds
+are not a new LRC predicate.  They are a quotient stress test for whether the
+pair-sum address survived projection.
+
+For unit distance, pair states should be kept as:
+
+```text
+S = distance < 1
+U = distance = 1
+L = distance > 1
+```
+
+with `U` treated as a trienerment/tie layer.  The Hamiltonian-path flop should
+be measured by the `S/U/L` impurity word along a path, not only by a binary
+unit/nonunit flip.
+
+**COMPUTATION:** S674b adds
+`04-computation/signed_lrc_unit_distance_trienerment_s674b.py` and stores
+`05-knowledge/results/signed_lrc_unit_distance_trienerment_s674b.out`.
+
+The signed LRC probe samples `756` times for total `n=14`, moving runners
+`13`, and shell modulus:
+
+```text
+C = 2n - 1 = 27.
+```
+
+Families tested are AP13, `Vstar`, and `2AP13`.  For all tested sign patterns
+the observer clearance sequence is exactly invariant.  Pair tournaments change
+substantially.  For AP13:
+
+```text
+all-plus:         100 unique tournaments, 18 fingerprints
+alternating-plus: 355 unique tournaments, 29 fingerprints
+fingerprint mismatches: 588/756 sampled times
+```
+
+The AP13 alternating split is:
+
+```text
+same-sign differences = {2:11,4:9,6:7,8:5,10:3,12:1}
+opposite-sign sums    = {3:1,5:2,7:3,9:4,11:5,13:6,
+                         15:6,17:5,19:4,21:3,23:2,25:1}
+```
+
+So alternating direction exposes the odd interior pair-sum sieve
+`3,5,...,25` inside `C=27`, while the observer projection sees the same
+LRC movie.
+
+The unit-distance trienerment probe orients `S<1` with the base order,
+`L>1` against it, and resolves `U=1` positive or negative.  Square+center has
+`S=4,U=4,L=2` and no unit spine; any Hamiltonian path must pay short/long
+impurity.  Eisenstein hex7, hex19, and a simple hex19+two-fringe `n=21` toy
+have pure unit base spines.  For the `n=21` toy:
+
+```text
+pair states: U=44, L=166
+base path states: U=20
+unit-positive: c3=157, SCC=(21,)
+unit-negative: c3=0, transitive SCCs
+```
+
+**TOURNAMENT ANALYSIS:** Proof-lens vertices are
+`signed_observer_gauge`, `alternating_pair_sum_clock`,
+`short_unit_long_trienerment`, `unit_spine_order`,
+`owner_address_derivative`, and `raw_phase_or_edge_count`.  Observable is
+predicate preservation, side-channel exposure, exact evidence, transfer to
+LRC14/unit-distance `n=21`, and overclaim safety.  The lens tournament is
+transitive:
+
+```text
+signed_observer_gauge
+> short_unit_long_trienerment
+> alternating_pair_sum_clock
+> owner_address_derivative
+> unit_spine_order
+> raw_phase_or_edge_count
+```
+
+with `c3=0` and `H=1`.
+
+**REPO TRANSFERS:** For LRC14, use sign gauges as a quotient stress test:
+same observer shadow, different pair-clock address.  A proposed pair-sum or
+owner/carry invariant should distinguish all-plus AP13 from alternating AP13
+if it claims to retain additive shell data.  For unit distance, build a
+spine-impurity scanner: classify all pairs as `S/U/L`, search Hamiltonian
+paths, and record the minimum nonunit impurity profile plus deletion-owner
+labels.
+
+**NEXT:** Formalize the alternating-sign pair-sum lemma over `C=2n-1`; test
+signed gauges inside HYP-2241 owner/carry fibers; run `S/U/L` impurity scans on
+known `n=21/22` Moser and non-lattice candidate sets.
+
+**See:** `05-knowledge/hypotheses/HYP-2249-signed-lrc-unit-distance-trienerment-addendum.md`;
+`04-computation/signed_lrc_unit_distance_trienerment_s674b.py`;
+`05-knowledge/results/signed_lrc_unit_distance_trienerment_s674b.out`;
+`07-reflections/signed-lrc-unit-distance-trienerment-s674b.md`; HYP-2248,
+HYP-2241, HYP-2240, HYP-2202, HYP-2201, HYP-2132, THM-401.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
