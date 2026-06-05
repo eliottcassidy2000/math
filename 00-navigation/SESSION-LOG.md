@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S656 - Continuum Hypothesis as cardinal-shadow carrier (HYP-2232)
+
+**Prompt:** Consider the Continuum Hypothesis from set theory, understand its importance, and connect it across the repo.
+**Claimed namespace:** HYP-2232 and T725 reserved with honest stubs before the full session artifacts.  The working thesis is that CH is the set-theory version of the repo's scalar-collapse warnings: `2^aleph_0` is a cardinal shadow, while forcing/inner-model/generic side channels decide which intermediate-cardinal structure is visible.
+**Status:** In progress.  Initial anchors are HYP-2187 equinumerosity/equidecomposability, HYP-2185 infinite-game ordinal boundary state, HYP-2171 LRC quotient side-channel sufficiency, and HYP-2230/HYP-2231 parity/wall carrier lessons.
+
 ## codex-2026-06-05-S655 - LRC sin/cos even-odd wall carrier and n=14 no-leak target (HYP-2231)
 
 **Prompt:** Connect the sine/cos/cot odd/even prompt with the repo's even/odd number work, then use it to make progress on LRC 14.
