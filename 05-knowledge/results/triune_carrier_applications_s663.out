@@ -1,0 +1,81 @@
+==============================================================================
+S663 triune carrier applications: LRC first, then sibling problems
+==============================================================================
+
+Triune translation
+  sum face      = additive wall / pair-sum packets
+  product face  = C=27 gcd-shell / local obstruction product
+  fraction face = carry-owner boundary state k in v = r + 27k
+
+A. Base floor triune records
+  AP: M=1/14 t=1/14 route=floor
+    shadow=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    sum active key=((14, (14,)), (14, (14,)), (14, (14,)), (14, (14,))) ...
+    product gcd shells=((1, 9), (3, 3), (9, 1)) mass=27
+    fraction carry_support=() l1=0 span=0 continuant=377 pair_apex_count=6
+  Vstar: M=1/14 t=1/14 route=floor
+    shadow=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+    sum active key=((14, (14,)), (14, (14,)), (14, (14,)), (14, (14,))) ...
+    product gcd shells=((1, 9), (3, 3), (9, 1)) mass=27
+    fraction carry_support=() l1=0 span=0 continuant=377 pair_apex_count=6
+  2AP: M=1/14 t=1/28 route=floor
+    shadow=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
+    sum active key=((28, (28,)), (28, (28,)), (28, (28,)), (28, (28,))) ...
+    product gcd shells=((1, 9), (3, 3), (9, 1)) mass=27
+    fraction carry_support=() l1=0 span=0 continuant=377 pair_apex_count=12
+
+B. Local +27 carry perturbation atlas
+  2AP   weight=1 count= 13 routes={'strict': 13} min_M=1/13 margin=1/182 via 2AP+27(26)
+  2AP   weight=2 count= 78 routes={'strict': 78} min_M=1/12 margin=1/84 via 2AP+27(24,26)
+  AP    weight=1 count= 13 routes={'strict': 13} min_M=1/13 margin=1/182 via AP+27(13)
+  AP    weight=2 count= 78 routes={'strict': 78} min_M=1/12 margin=1/84 via AP+27(12,13)
+  Vstar weight=1 count= 13 routes={'strict': 13} min_M=2/25 margin=3/350 via Vstar+27(13)
+  Vstar weight=2 count= 78 routes={'strict': 78} min_M=1/12 margin=1/84 via Vstar+27(13,24)
+
+C. Projection-collision audit
+  using only shadow additive packets + product/gcd shell: 3 mixed floor/strict groups
+    mixed routes={'floor': 1, 'strict': 91} examples=['AP', 'AP+27(1)', 'AP+27(2)', 'AP+27(3)', 'AP+27(4)', 'AP+27(5)', 'AP+27(6)', 'AP+27(7)']
+    mixed routes={'floor': 1, 'strict': 91} examples=['Vstar', 'Vstar+27(1)', 'Vstar+27(2)', 'Vstar+27(3)', 'Vstar+27(4)', 'Vstar+27(5)', 'Vstar+27(6)', 'Vstar+27(7)']
+    mixed routes={'floor': 1, 'strict': 91} examples=['2AP', '2AP+27(2)', '2AP+27(4)', '2AP+27(6)', '2AP+27(8)', '2AP+27(10)', '2AP+27(12)', '2AP+27(14)']
+  using full triune key including carry-continuant state: 0 mixed groups
+  Interpretation: +27 perturbations preserve the Res_27 sum/product shadow,
+  but the carry/fraction face splits floor atoms from strict carries.
+
+D. Cross-problem triune application table
+application                        | sum face                           | product face                           | fraction face
+LRC14 carry-owner theorem          | odd-wall and pair-sum packets      | C=27 gcd shells, Pillai mass, local obstructions | carry word k in v=r+27k, owner route, continuant
+OCF / H(T)                         | odd-cycle packet coefficients      | strong-component product and local forbidden H packets | deletion/substitution boundary continuant for Hamiltonian paths
+Tournament decks                   | deleted-card loss sums             | deck product/scissors component packets | paired card-owner derivative
+Unit distance                      | unit-edge spine plus tile/bulk packets | direction support and norm/unit-shell factors | point-deletion frontier/ear owner state
+Finite-field Kakeya/Falconer       | distance sums and pinned-distance packets | line-direction local products and concurrency factors | owner of pins / line-choice recursion
+Goldbach/Lemoine                   | prime-pair sums E=p+q, O=p+2q      | singular-series local obstruction products | ordered pair reconstruction q=O-E, p=2E-O
+CH / forcing                       | cardinal/equinumerosity sums       | model-local consistency factors        | generic extension boundary state
+pi/e trace-norm                    | trace S=e+pi and power sums        | norm P=e*pi and discriminant products  | branch sheet of T^2-S*T+P
+
+E. Tournament Analysis over application routes
+  vertices=application routes
+  observable=triune fit, finite testability, proof leverage
+  outscores={'LRC14 carry-owner theorem': 7, 'OCF / H(T)': 6, 'Tournament decks': 5, 'Unit distance': 4, 'Finite-field Kakeya/Falconer': 3, 'Goldbach/Lemoine': 1, 'CH / forcing': 0, 'pi/e trace-norm': 2}
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  top_order:
+    LRC14 carry-owner theorem
+    OCF / H(T)
+    Tournament decks
+    Unit distance
+    Finite-field Kakeya/Falconer
+    pi/e trace-norm
+    Goldbach/Lemoine
+    CH / forcing
+
+F. Working hypotheses
+  1. LRC14: fixed odd-wall packets + fixed C=27 product shell are not enough;
+     the carry/owner continuant is the fraction face that restores sufficiency.
+  2. OCF/tournaments: search for a continuant encoding of deletion/substitution
+     boundary state beside the independence-polynomial packet carrier.
+  3. Unit distance: pair edge-count sums and direction/norm products with
+     point-deletion frontier owners before trusting a candidate core.
+  4. Number theory: Goldbach/Lemoine pair reconstruction and pi/e branch sheets
+     are fraction-face analogues, not just algebraic afterthoughts.

@@ -692,12 +692,9 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2234 | HYP-2233's frontier lanes should be advanced by small predicate-preserving carrier atlases before any broad proof attempt. | S658 builds exact small atlases for tournament reconstruction decks, union-closed frequency carriers, and finite-field Kakeya/Falconer incidence toys.  Raw tournament vertex-decks and scalar `(H,score,c3,SCC)` signatures collide through `n=6`, but sorted `(H-H_card,c3-c3_card,deleted score)` loss profiles resolve every checked collision; union-closed sorted frequency vectors first collide at `m=4`, where set pressure separates all `366` canonical families; finite-field line-choice Kakeya sets over `F_p^2` for `p=3,5,7` have minimum sizes `7,17,31`, fitting `(p^2+2p-1)/2`.  S659 extends the finite-field lane as HYP-2235 with full distance/pinned/unit ledgers and an LRC `n=14` no-leak transfer. | codex-2026-06-05-S658/S659; `HYP-2234-frontier-small-carrier-atlases.md`; `frontier_small_carriers_s658.py`; `frontier_small_carriers_s658.out`; `frontier-small-carrier-atlases-s658.md`; HYP-2235, HYP-2233, HYP-2228, HYP-2227, HYP-2197, HYP-2187, HYP-2176 |
 | HYP-2235 | Finite-field Kakeya/Falconer gives an LRC no-leak carrier: direction cover and distance support are scalar shadows, while concurrency, pinned distances, unit-direction spine, and owner labels are the proof data. | S659 builds a finite-field incidence ledger over `F_p^2`.  Exact branch-and-bound gives Kakeya one-line-per-direction minima `p=3:7`, `p=5:17`, `p=7:31`, matching the odd-prime parabola carrier `(p^2+2p-1)/2`; the same carriers have full quadratic distance support for `p=3,5,7,11,13`.  Exhaustively over all `5^6` line families in `F_5^2`, every row has full distance support, but union size and pinned minima vary (`union_size_hist={17:3000,18:4000,19:8000,21:600,25:25}`, `pinned_min_hist={4:3600,5:12025}`).  Tournament Analysis ranks pinned fibers and concurrency multiplicity highest, with raw cardinality last.  LRC transfer: after the `n=14` scalar wall is fixed, retain odd wall pairs plus `C=27` shell/carry/owner labels to prove AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | codex-2026-06-05-S659; `HYP-2235-finite-field-kakeya-falconer-carrier.md`; `finite_field_kakeya_falconer_s659.py`; `finite_field_kakeya_falconer_s659.out`; `finite-field-kakeya-falconer-lrc-carrier-s659.md`; HYP-2234, HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197, HYP-2176, HYP-1804 |
 | HYP-2236 | Tournament deck collisions are marked-projection failures repaired by paired derivative side channels. | S660 extends the HYP-2234 tournament deck lane after incoming S659 claimed HYP-2235 for finite-field Kakeya/Falconer, and incoming S661 confirms the same deletion-derivative/no-leak pattern is active in LRC14 strategy search.  Through `n=6`, ordinary full decks collide (`n=6`: `52` buckets, max `2`, four collision buckets), Kelly subtournament counts have the same collision strength, and global repairs `full_deck+H`, `full_deck+score`, and `full_deck+scalar` still collide.  The clean repair is the paired deleted-score deck `(card iso type, deleted vertex outdegree)`, which separates every checked class through `n=6`; unpaired deleted-score multisets do not.  All `n=6` full-deck collision pairs are converse pairs with the same `H`, score sequence, `c3`, and SCC shape, so the missing data is the card-to-boundary assignment. | codex-2026-06-05-S660; `HYP-2236-tournament-deck-derivative-carrier.md`; `tournament_deck_derivative_s660.py`; `tournament_deck_derivative_s660.out`; `tournament-deck-derivative-carrier-s660.md`; HYP-2237, HYP-2235, HYP-2234, HYP-2233, HYP-2228, HYP-2187, HYP-2176, HYP-2171 |
-| HYP-2237 | STUB: The LRC `n=14` proof should be attacked by a wild strategy atlas centered on no-leak owner/carry/deletion-derivative reconstruction rather than raw scalar search. | Claimed for S661 after S660 reserved HYP-2236/T729.  Evidence still pending: broad repo search, strategy Tournament Analysis, and a concrete experiment list for the `Res_27` carry-owner seam. | codex-2026-06-05-S661; `HYP-2237-lrc14-wild-proof-strategy-atlas.md`; HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2164 |
-| HYP-2236 | STUB: Tournament deck collisions should be repaired by derivative side channels: deletion losses, boundary/owner labels, and vertex influence profiles. | Claimed for S660 after incoming S659 used HYP-2235 for finite-field Kakeya/Falconer.  The deck angle is a marked-projection problem: a vertex-deleted deck forgets how each missing vertex attached to its card, so repairs should track `H`, `c3`, score, SCC, or boundary changes under deletion and reattachment. | codex-2026-06-05-S660; `HYP-2236-tournament-deck-derivative-carrier.md`; HYP-2235, HYP-2234, HYP-2233, HYP-2228, HYP-2187, HYP-2176, HYP-2171 |
 | HYP-2237 | LRC `n=14` should be attacked by a no-leak owner-derivative theorem: fixed odd wall + `C=27` gcd shell + paired carry/owner/deletion derivatives force AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | S661 searched the core LRC quotient tower and adjacent Kakeya/Falconer, tournament deck, union-closed, pincer, rigidity, automaton, sheaf, unit-distance, forcing, coimage, and anti-Poisson threads.  The strategy atlas scans `6629` research files and ranks fifteen proof routes; the proof-route tournament is transitive with `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Majority leaders are `carry_deletion_derivative`, `owner_concurrency_jackknife`, `apex_sheaf_gluing`, `two_block_helly_extractor`, `three_state_middle_automaton`, and `pincer_grip_ledger`.  Incoming HYP-2236/S660 reinforces the pairing rule: `(card, deleted score)` resolves all checked deck collisions through `n=6`, while unpaired/global scalar repairs leak. | codex-2026-06-05-S661; `HYP-2237-lrc14-wild-proof-strategy-atlas.md`; `lrc14_wild_strategy_atlas_s661.py`; `lrc14_wild_strategy_atlas_s661.out`; `lrc14-wild-proof-strategy-atlas-s661.md`; HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2164 |
-| HYP-2238 | Pi should be carried as a representation trinity: infinite sums expose additive packet/moment data, infinite products expose local factor/norm data, and infinite fractions expose recursive boundary/owner state. | S662 compares Leibniz, Machin, and Basel sums; the Wallis product; and Brouncker's continued fraction.  The numerical audit is only a sanity check; the carrier result is a representation-face tournament over `sum`, `product`, `fraction`, and `raw_decimal`.  Majority over additive-packet, local-factor, and recursive-boundary preservation gives the nontransitive cycle `sum -> product -> fraction -> sum`, while all three beat `raw_decimal` (`score_hist={0:1,2:3}`, `directed_3cycles=1`, SCCs `{sum,product,fraction}` plus `{raw_decimal}`, `3` Hamiltonian paths).  Transfer: LRC14 should retain odd-wall sums, `C=27` product/gcd shells, and fraction-like carry-owner continuants together. | codex-2026-06-05-S662; `HYP-2238-pi-sum-product-fraction-trinity.md`; `pi_sum_product_fraction_s662.py`; `pi_sum_product_fraction_s662.out`; `pi-sum-product-fraction-trinity-s662.md`; HYP-2229, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2212, HYP-2211, HYP-2186, HYP-2184 |
-| HYP-2239 | STUB: HYP-2238's triune value method should transfer to LRC and sibling problems by pairing additive packets, local product/gcd obstruction shells, and recursive carry/owner boundary state. | Claimed for S663 after S662 introduced the pi trinity.  Immediate evidence still pending: concrete LRC14 triune records for AP, `Vstar`, and `2AP`; carry/owner perturbation atlas; and a cross-problem transfer table to OCF, tournament decks, unit distance, finite-field incidence, Goldbach/Lemoine, CH/forcing, and pi/e trace-norm carriers. | codex-2026-06-05-S663; `HYP-2239-triune-carrier-applications-lrc.md`; HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, THM-401 |
 | HYP-2238 | Pi should be carried as a representation trinity: infinite sums expose additive packet/moment data, infinite products expose local factor/norm data, and infinite fractions expose recursive boundary/owner state. | S662 compares Leibniz, Machin, and Basel sums; the Wallis product; Brouncker's continued fraction; and cotangent partial fractions.  The numerical audit is only a sanity check; the carrier result is a representation-face tournament over `sum`, `product`, `fraction`, and `raw_decimal`.  Majority over additive-packet, local-factor, and recursive-boundary preservation gives the nontransitive cycle `sum -> product -> fraction -> sum`, while all three beat `raw_decimal` (`score_hist={0:1,2:3}`, `directed_3cycles=1`, SCCs `{sum,product,fraction}` plus `{raw_decimal}`, `3` Hamiltonian paths).  Transfer: LRC14 should retain odd-wall sums, `C=27` product/gcd shells, and fraction-like carry-owner continuants together; for the current no-leak seam, the global cycle becomes a task-specific fraction-first readout.  HYP-2239/S663 now owns the concrete application lane. | codex-2026-06-05-S662; `HYP-2238-pi-sum-product-fraction-trinity.md`; `pi_sum_product_fraction_s662.py`; `pi_sum_product_fraction_s662.out`; `pi-sum-product-fraction-trinity-s662.md`; HYP-2239, HYP-2229, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2212, HYP-2211, HYP-2186, HYP-2184, HYP-2167 |
+| HYP-2239 | HYP-2238's triune value method transfers to LRC and sibling problems by pairing additive packets, local product/gcd obstruction shells, and recursive carry/owner boundary state. | S663 builds LRC14 triune records for AP, `Vstar`, and `2AP`.  All three are floor atoms with `M=1/14` and product face `C=27` gcd shells `((1,9),(3,3),(9,1))`, mass `27`.  Every one/two-coordinate `+27` carry perturbation over these atoms is strict.  Projection-collision audit: keeping only the Res27 additive/product shadow leaves three mixed groups (`1` floor + `91` strict each), while adding the carry-continuant/fraction face leaves `0` mixed groups.  Cross-problem Tournament Analysis ranks LRC14 carry-owner theorem, OCF/H(T), tournament decks, unit distance, finite-field Kakeya/Falconer, pi/e trace-norm, Goldbach/Lemoine, and CH/forcing. | codex-2026-06-05-S663; `HYP-2239-triune-carrier-applications-lrc.md`; `triune_carrier_applications_s663.py`; `triune_carrier_applications_s663.out`; `triune-carrier-applications-lrc-s663.md`; HYP-2238, HYP-2237, HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, THM-401 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6881,6 +6878,90 @@ owner state differs.
 `05-knowledge/results/pi_sum_product_fraction_s662.out`;
 `07-reflections/pi-sum-product-fraction-trinity-s662.md`; HYP-2229, HYP-2237,
 HYP-2239, HYP-2236, HYP-2231, HYP-2230, HYP-2212, HYP-2211, HYP-2186, HYP-2184, HYP-2167.
+
+## HYP-2239: Triune carriers applied to LRC and sibling problems (codex-2026-06-05-S663)
+
+**Status:** OPEN method hypothesis with exact bounded LRC perturbation atlas.
+
+**WHAT:** Apply HYP-2238's trinity to LRC:
+
+```text
+sum face      = additive wall / pair-sum packets
+product face  = C=27 gcd-shell / local obstruction product
+fraction face = carry-owner boundary state k in v=r+27k.
+```
+
+The fraction face is the lift/CRT datum.  Because `27 == -1 mod 14`, the carry
+word `k` controls the `n=14` clock residue; because `27` is odd, it also
+controls parity.  Forgetting `k` is therefore exactly the scalar-collapse leak.
+
+**EVIDENCE:** `triune_carrier_applications_s663.py` builds records for the
+floor atoms AP, `Vstar`, and `2AP`.  All have exact `M=1/14` and product face:
+
+```text
+C=27 gcd shells = ((1,9), (3,3), (9,1))
+gcd-shell mass = 27.
+```
+
+It then adds one/two `+27` carries to each atom.  Every checked perturbation is
+strict:
+
+```text
+AP:    13 weight-1 strict, 78 weight-2 strict
+Vstar: 13 weight-1 strict, 78 weight-2 strict
+2AP:   13 weight-1 strict, 78 weight-2 strict
+```
+
+The projection-collision audit is the key result:
+
+```text
+sum/product shadow only:
+  AP group    = 1 floor + 91 strict
+  Vstar group = 1 floor + 91 strict
+  2AP group   = 1 floor + 91 strict
+
+full triune key including carry-continuant state:
+  0 mixed groups.
+```
+
+**PAYOFF:** The next LRC theorem should be triune:
+
+```text
+fixed odd-wall packets
++ fixed C=27 product/gcd shell
++ fixed carry-owner continuant
+  => AP, Vstar, 2AP, or strict looseness.
+```
+
+For sibling problems, S663 identifies fraction-face targets: OCF deletion or
+substitution continuants, tournament deck paired card-boundary states,
+unit-distance point-deletion frontier owners, finite-field pin/line owners,
+Goldbach/Lemoine pair reconstruction, CH forcing generics, and pi/e branch
+sheets.
+
+The application-route tournament is transitive and ranks:
+
+```text
+LRC14 carry-owner theorem
+> OCF / H(T)
+> Tournament decks
+> Unit distance
+> Finite-field Kakeya/Falconer
+> pi/e trace-norm
+> Goldbach/Lemoine
+> CH / forcing.
+```
+
+**NEXT:** Attach HYP-2165 owner/certificate routes to the S663 carry-continuant
+state and test deeper perturbations.  In parallel, build the OCF continuant toy
+for deletion/substitution boundary state.
+
+**See:** `05-knowledge/hypotheses/HYP-2239-triune-carrier-applications-lrc.md`;
+`04-computation/triune_carrier_applications_s663.py`;
+`05-knowledge/results/triune_carrier_applications_s663.out`;
+`07-reflections/triune-carrier-applications-lrc-s663.md`; HYP-2238, HYP-2237,
+HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2171, HYP-2167, HYP-2165,
+HYP-2164, THM-401.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

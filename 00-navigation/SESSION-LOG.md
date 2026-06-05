@@ -10,7 +10,12 @@
 
 **Prompt:** Apply the pi sum/product/fraction trinity to LRC and other problems; spend a long creative session.
 **Claimed namespace:** HYP-2239 and T732 reserved after S662's pi trinity carrier used HYP-2238/T731.
-**Status:** Stub claimed.  Pending: build concrete LRC14 triune records, test carry/owner perturbations, and synthesize cross-problem applications.
+**Integration:** Used HYP-2238's `triune_value=(sum packets, product factors, fraction boundary state)` as the method and applied it directly to the S611/S654 carry seam `v=r+27k`.  Folded in S661's no-leak owner-derivative target, S660's paired derivative lesson, HYP-2231's odd-wall/gcd-shell carrier, HYP-2230's parity/carry identities, and HYP-2171's information-bottleneck sufficient-statistic framing.
+**Computation:** Added `04-computation/triune_carrier_applications_s663.py` and stored `05-knowledge/results/triune_carrier_applications_s663.out`.  The script builds triune records for AP, `Vstar`, and `2AP`, audits one/two-coordinate `+27` carry perturbations, runs a projection-collision test, and ranks cross-problem application routes by Tournament Analysis.
+**Findings:** AP, `Vstar`, and `2AP` are floor atoms with `M=1/14` and product face `C=27` gcd shells `((1,9),(3,3),(9,1))` of mass `27`.  Every tested local carry perturbation is strict: AP/`2AP` weight-1 min `1/13`, `Vstar` weight-1 min `2/25`, and all weight-2 minima at least `1/12`.  Keeping only the `Res_27` additive/product shadow leaves three mixed groups (`1` floor + `91` strict each); adding the carry-continuant fraction state leaves `0` mixed groups.
+**Synthesis:** The LRC14 target becomes a triune no-leak theorem: fixed odd-wall packets + fixed `C=27` product/gcd shell + fixed carry-owner continuant imply AP, `Vstar`, `2AP`, or strict looseness.  Sibling applications: OCF needs a deletion/substitution continuant next to the independence-polynomial packet carrier; decks need paired card-boundary state; unit distance needs point-deletion frontier owners; number theory uses pair reconstruction or branch sheets as the fraction face.
+**Artifacts:** HYP-2239, T732, `04-computation/triune_carrier_applications_s663.py`, `05-knowledge/results/triune_carrier_applications_s663.out`, `07-reflections/triune-carrier-applications-lrc-s663.md`, plus result-index, concept-map, tangent, hypothesis-index, and session-log updates.
+**Handoff:** Build `lrc14_triune_owner_derivative_s664.py`: attach HYP-2165 owner/certificate routes to the S663 carry-continuant state, then test deeper carry perturbations for any remaining mixed floor/strict triune groups.
 
 ## codex-2026-06-05-S662 - Pi sum/product/fraction trinity carrier (HYP-2238)
 
