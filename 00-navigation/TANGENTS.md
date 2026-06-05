@@ -2164,3 +2164,18 @@ Remarkable rigidity at n=5: #kings=5→H=15 (64 tourn, all SC); #kings=4→H=13 
 **Observation:** At n=5, score (1,2,2,2,3) is the ONLY score sequence that doesn't uniquely determine H. H∈{11,13,15} with counts (120,120,40).
 **Connection:** This is the "near-regular" score class — one step from the regular tournament (2,2,2,2,2). The H variation comes from 5-cycle structure.
 **See:** THM-338, seq8 in sequence_exploration.py
+
+**T747** #metagraph #blue-black #even-odd #boundary-vector #Royle-even | certainty: HIGH (computed n=3..6) | source: codex-2026-06-05-S675
+The visible blue/black layers of the merged tournament metagraph are not
+intrinsically even/odd simple graphs.  Under the SC-type wiggly convention
+(`SC=self-converse`), black has nonzero simple boundary at `n=4,5,6`; under the
+explorer complement-line convention, pure-black also has nonzero simple
+boundary at `n=4,5,6`, and pure-blue stops being incident-all-odd at `n=6`.
+The surviving version of the user's observation is weighted: explorer
+pure-black complement-line multiplicities have zero GF(2) boundary through
+`n=6`.  Therefore color layers should be treated as GF(2) 1-chains; evenness
+is zero boundary, oddness is a boundary-defect packet.  Connects HYP-2245
+quotient leakage to HYP-2187/Royle-even equinumerosity and S674b's
+trienerment warning against premature binary collapse.
+See `04-computation/metagraph_blue_black_parity_s675.py`,
+`05-knowledge/results/metagraph_blue_black_parity_s675.out`, HYP-2250.

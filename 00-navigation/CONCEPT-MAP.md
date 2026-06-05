@@ -829,3 +829,15 @@ These are speculative high-level connections proposed for future investigation. 
 | 40 | **Fractional cascades** | Tournament arc-flip graph as cascade lattice. The number of "downward paths" in the cascade = H(T). |
 | 41 | **Renormalization group** | Tournament coarsening (contract cycles into super-vertices) as RG flow. H(T) is an RG invariant. Fixed points = regular tournaments. |
 | 42 | **Random matrix universality** | Skew-adjacency eigenvalue distribution → GUE for random tournaments. Correlation functions of eigenvalues relate to cycle counts. Phase transition at eigenvalue gap ↔ H-gap. |
+
+### S675 Blue/Black Boundary Parity Addendum
+
+`metagraph_blue_black_parity_s675.py` audits the merged metagraph's
+blue/black layers through `n=6` under both active conventions.  The simple
+visible-edge theorem is false: black is not always even and blue is not always
+odd.  The useful object is the GF(2) boundary of the color layer.  The strongest
+surviving claim is weighted: explorer pure-black complement-line multiplicities
+have zero GF(2) boundary through `n=6`.  This links the HYP-2245 quotient-leak
+picture to HYP-2187/Royle-even equinumerosity and S674b's trienerment warning:
+the even graph is probably the line-address-retaining chain or a Royle-even
+functor target, not the raw black simple subgraph.

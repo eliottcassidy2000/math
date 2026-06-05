@@ -13184,3 +13184,27 @@ Major discoveries about the topological landscape of circulant tournaments at p=
 **Result (HYP-2193, rigorous reduction):** H=21 => strong component with H=21 (21=3*7, 7 not strong by THM-029) => alpha_1<=10 => c_3<=10; MOON (verified min c_3 over strong = m-2, m<=7) => m<=12. With THM-079 Part G (m<=8 exhaustive), remaining = STRONG tournaments m in {9,10,11,12}, c_3<=10 -- FINITE. Collapses THM-079's open cycle-rich-n>=9 to a finite n<=12 check. Evidence: strong c_3<=10 has min H=75 (m=9), 153 (m=10); m=11,12 near-Moon-extremal rare. Long odd cycles (Moon pancyclicity) push alpha_1>>10. FULL proof = exhaust strong c_3<=10 on m=9..12, or prove strong m>=9 => alpha_1>=11.
 **Artifacts:** `04-computation/h21_moon_reduction_s617.py` (+.out), `07-reflections/h21-moon-reduction-s617.md`, HYP-2193; corrected HYP-2187.
 **Next:** exhaust strong c_3<=10 tournaments m=9..12 (near-extremal family) to FINISH H=21; or prove strong m>=9 => alpha_1>=11 via pancyclic long-odd-cycle count.
+
+## codex-2026-06-05-S675 - blue/black metagraph parity is boundary data
+**Focus:** Test whether the merged metagraph's black portion is always an even
+graph and whether the blue portion is always odd; connect the result to
+Royle-even/even-odd structure.
+**Result (HYP-2250):** Naive simple-graph statement refuted through `n=6` under
+both active blue-black conventions.  In the SC-type wiggly convention
+(`SC=self-converse`), black has nonzero simple boundary at `n=4,5,6`; in the
+explorer complement-line convention, pure-black has nonzero simple boundary at
+`n=4,5,6`, and pure-blue's incident-all-odd pattern fails at `n=6`.  Strong
+survivor: explorer pure-black weighted complement-line parity has zero
+GF(2) boundary through `n=6`; SC-type weighted layers are also zero-boundary in
+the audited range.  Corrected invariant: color layer = GF(2) 1-chain, even =
+empty boundary, odd = boundary defect packet.  Royle-even warning retained:
+A000568 equinumerosity is not degree-even graph parity.  After rebasing over
+S674b, integrated the parallel trienerment lesson: signed pair-clock addresses,
+unit-distance `S/U/L` equality layers, and blue/black line multiplicities all
+say to keep the third/address coordinate until the boundary is measured.
+**Artifacts:** `04-computation/metagraph_blue_black_parity_s675.py` (+.out),
+`05-knowledge/hypotheses/HYP-2250-metagraph-blue-black-boundary-parity.md`,
+`07-reflections/metagraph-blue-black-even-odd-s675.md`.
+**Next:** Prove/refute weighted pure-black zero boundary at `n=7`; derive
+orbit-stabilizer explanation for SC-type weighted zero-boundary; search for a
+Royle-even functor preserving boundary vectors and `H`/odd-cycle side channels.
