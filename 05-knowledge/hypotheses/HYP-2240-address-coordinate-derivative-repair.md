@@ -35,7 +35,7 @@ sum.
 
 ## S665 Evidence
 
-S665 searched the repo and web, then built a 20-lane repair atlas in
+S665 searched the repo and web, then built a 23-lane repair atlas in
 `04-computation/address_coordinate_derivative_repair_s665.py`, with stored
 output in
 `05-knowledge/results/address_coordinate_derivative_repair_s665.out`;
@@ -61,6 +61,11 @@ Strongest exact repo lanes:
   split after attaching pressure/loss coordinates.
 - **A000568 marked observer fiber:** unmarked tournament classes forget the
   observer/threshold address needed by LRC-style predicates.
+- **Determinant adjugate toy:** `diag(2,6)` and `diag(3,4)` share determinant
+  `12`, but their `E11` derivatives are `6` and `4`; the adjugate is the
+  missing address.
+- **Turnpike homometry:** two six-point sets share every pairwise distance but
+  split after retaining coordinate/gap or pair-owner addresses.
 
 External theorem-transfer lanes:
 
@@ -69,6 +74,11 @@ External theorem-transfer lanes:
   derivative sums.
 - Explicit formulae and Ihara/Selberg trace formulae: Euler or orbit products
   become prime-power, zero, or closed-geodesic sums after log differentiation.
+- Jacobi determinant derivatives: a determinant/eigenvalue product becomes a
+  cofactor trace sum after the adjugate row/column address is attached.
+- Sparse phase retrieval and turnpike/beltway reconstruction: Fourier
+  magnitudes or distance multisets need phase/support or pair/end-owner
+  addresses before Prony/placement sums reconstruct the object.
 - Stieltjes/J-fraction and Weyl `m`-function theory: moment or spectral scalar
   data needs continued-fraction/spectral-measure address coordinates before it
   reconstructs the underlying object.
@@ -86,16 +96,17 @@ majority, with curated source order as tie Hamiltonian path.
 
 S665 fingerprints:
 
-- `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,11:2,12:2,13:2,14:2,17:1,18:1,19:1}`
-- `directed_3cycles=16`
-- `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`
-- `hamiltonian_paths=425`
+- `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,11:2,12:2,13:2,15:3,18:1,19:1,20:1,21:1,22:1}`
+- `directed_3cycles=19`
+- `scc_sizes=[9,1,1,1,1,1,1,1,1,1,1,1,1,1,1]`
+- `hamiltonian_paths=1135`
 
 The nontrivial SCC is useful: it says the best transfer lanes are not linearly
 ordered by "importance".  LRC carry, tournament decks, graph reconstruction,
-OCF noncommutative addresses, explicit formulae, pi/e branch sheets, Weyl
-`m`-functions, Goldbach/Lemoine, J-fractions, A000568, Ihara/Selberg, and Tutte
-activities all beat each other along different criteria.
+OCF noncommutative addresses, explicit formulae, determinant adjugates, sparse
+phase retrieval, turnpike owner maps, pi/e branch sheets, Weyl `m`-functions,
+Goldbach/Lemoine, J-fractions, A000568, Ihara/Selberg, and Tutte activities all
+beat each other along different criteria.
 
 ## Assumption Challenge
 

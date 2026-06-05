@@ -21,6 +21,10 @@ A scalar/product collision happens when a quotient forgets assignment data:
 - a deck is known but the deleted boundary value is not paired to the card;
 - an Euler product is known but the zero/gamma/test-function address is missing;
 - a trace/norm pair is known but the branch sheet is missing;
+- a determinant/eigenvalue product is known but the adjugate direction is
+  missing;
+- a Fourier intensity or distance multiset is known but the phase/support or
+  pair/end owner is missing;
 - a frequency vector is known but the set-pressure owner is missing;
 - a full distance support is known but the pinned/concurrency owner is missing;
 - a `Res_27` LRC shadow is known but the carry/owner state is missing.
@@ -76,6 +80,13 @@ of adding/deleting a set, not another global frequency scalar.
 for LRC predicates.  Root, threshold, source, and endpoint addresses are the
 missing coordinates; deletion/source/gap-threshold sums are the derivatives.
 
+**Determinant and turnpike toys.**  The merged finite labs add two sharp
+address witnesses: `diag(2,6)` and `diag(3,4)` have determinant `12` but
+different `E11` derivatives (`6` versus `4`), and the point sets
+`(0,1,2,6,8,11)` and `(0,1,6,7,9,11)` share the same distance multiset while
+their coordinate sums and adjacent gaps differ.  Product/distance shadows are
+not enough; adjugate and pair-owner addresses split them.
+
 ## External Anchors
 
 The web scan produced theorem-shaped versions of the same grammar:
@@ -84,6 +95,12 @@ The web scan produced theorem-shaped versions of the same grammar:
   matrices and by reconstructible vertex-pair parameters.
 - Explicit formulae: Euler products become prime-power and zero sums after log
   differentiation once zeros/gamma/test functions are in the address.
+- Jacobi determinant formula: determinant products become cofactor/trace sums
+  once the adjugate address is retained.
+- Sparse phase retrieval: Fourier magnitude/autocorrelation data needs phase
+  and support-difference addresses before Prony reconstruction works.
+- Turnpike/beltway reconstruction: unassigned distance data needs pair/end
+  addresses before placement sums are meaningful.
 - Ihara/Selberg: determinant/product zeta data unrolls into primitive
   closed-orbit or geodesic sums.
 - Stieltjes and J-fraction theory: moments/Hankel data become reconstructive
@@ -99,19 +116,20 @@ recoverable.
 
 ## Tournament Analysis
 
-S665 ranks 20 repair lanes by
+S665 ranks 23 repair lanes by
 `(collision evidence, address clarity, derivative clarity, finite actionability,
 repo leverage, source confidence)`.  The resulting repair-lane tournament has:
 
-- `directed_3cycles=16`
-- `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`
-- `hamiltonian_paths=425`
+- `directed_3cycles=19`
+- `scc_sizes=[9,1,1,1,1,1,1,1,1,1,1,1,1,1,1]`
+- `hamiltonian_paths=1135`
 
 The large SCC is the important signal.  There is no single best metaphor.
-LRC carry, tournament decks, graph reconstruction, explicit formulae, OCF,
-Vieta branch sheets, Weyl `m`-functions, Goldbach/Lemoine, J-fractions,
-A000568, Ihara/Selberg, and Tutte activities are mutually strong under
-different criteria.
+LRC carry, tournament decks, graph reconstruction, determinant adjugates,
+sparse phase retrieval, turnpike homometry, explicit formulae, OCF, Vieta
+branch sheets, Weyl `m`-functions, Goldbach/Lemoine, J-fractions, A000568,
+Ihara/Selberg, and Tutte activities are mutually strong under different
+criteria.
 
 ## Assumption Challenge
 

@@ -148,6 +148,22 @@ LANES = [
         4,
     ),
     Lane(
+        "Determinant adjugate derivative",
+        "web/linear algebra",
+        "classical external",
+        "Jacobi determinant formula",
+        "same determinant/product of eigenvalues can hide directional response",
+        "adjugate/inverse row-column address for the perturbation",
+        "Jacobi trace/cofactor formula gives the derivative sum",
+        "use adjugate-style owner cofactors for tournament path determinant toys",
+        4,
+        5,
+        5,
+        5,
+        3,
+        5,
+    ),
+    Lane(
         "Ihara/Selberg graph zeta",
         "web/graphs",
         "external theorem family",
@@ -162,6 +178,38 @@ LANES = [
         4,
         4,
         4,
+    ),
+    Lane(
+        "Sparse phase retrieval Prony",
+        "web/signal",
+        "external inverse problem",
+        "sparse phase retrieval via Prony",
+        "Fourier magnitude/product spectrum forgets phase and pair assignment",
+        "phase/support-difference owner from Prony reconstruction",
+        "inverse Fourier/Prony step reconstructs spike coefficient sums",
+        "model LRC Res27 wall packets as a sparse phase-retrieval problem",
+        4,
+        5,
+        5,
+        4,
+        3,
+        5,
+    ),
+    Lane(
+        "Turnpike/beltway homometry",
+        "web/inverse geometry",
+        "external inverse problem",
+        "turnpike and beltway reconstruction",
+        "unassigned pairwise distances collide between point sets",
+        "which distance belongs to which pair/end owner",
+        "placed points re-expand into coordinate and interval sums",
+        "use homometric point-set collisions as unit-distance owner stress tests",
+        4,
+        4,
+        4,
+        5,
+        4,
+        5,
     ),
     Lane(
         "Stieltjes moment J-fraction",
@@ -459,9 +507,19 @@ REPO_ARTIFACTS = {
 
 WEB_SOURCES = [
     (
+        "DLMF Euler products and logarithmic derivatives",
+        "https://dlmf.nist.gov/27.4",
+        "Euler products unroll into prime-power/Mangoldt-style derivative sums",
+    ),
+    (
         "explicit formulae for L-functions",
         "https://en.wikipedia.org/wiki/Explicit_formulae_for_L-functions",
         "Euler product/log-derivative prime-power sums plus zero sums",
+    ),
+    (
+        "Jacobi determinant formula",
+        "https://people.eecs.berkeley.edu/~wkahan/MathH110/jacobi.pdf",
+        "determinant products differentiate through adjugate/cofactor addresses",
     ),
     (
         "graph reconstruction algebraic formulation",
@@ -472,6 +530,16 @@ WEB_SOURCES = [
         "graph reconstruction pair parameters",
         "https://arxiv.org/abs/2601.00620",
         "new reconstructible vertex-pair address parameters",
+    ),
+    (
+        "sparse phase retrieval with Prony",
+        "https://www.frontiersin.org/articles/10.3389/fams.2017.00005/full",
+        "Fourier intensity/autocorrelation data needs phase and support addresses",
+    ),
+    (
+        "turnpike and beltway reconstruction",
+        "https://arxiv.org/abs/1804.02465",
+        "unassigned distance products need pair/end-owner addresses",
     ),
     (
         "inverse spectral Weyl m-function",
@@ -652,6 +720,46 @@ def log_derivative_lab(limit: int = 13, terms: int = 20) -> dict[str, object]:
     }
 
 
+def determinant_adjugate_lab() -> dict[str, object]:
+    rows = []
+    for a, b in [(2, 6), (3, 4)]:
+        rows.append(
+            {
+                "diag": (a, b),
+                "determinant": a * b,
+                "derivative_in_E11_direction": b,
+                "adjugate_diagonal": (b, a),
+            }
+        )
+    return {
+        "collision": "diag(2,6) and diag(3,4) both have determinant 12",
+        "rows": rows,
+        "lesson": "the adjugate row/column address splits the determinant collision",
+    }
+
+
+def turnpike_homometric_lab() -> dict[str, object]:
+    a = (0, 1, 2, 6, 8, 11)
+    b = (0, 1, 6, 7, 9, 11)
+
+    def distances(points: tuple[int, ...]) -> tuple[int, ...]:
+        return tuple(
+            sorted(points[j] - points[i] for i, j in combinations(range(len(points)), 2))
+        )
+
+    def adjacent_gaps(points: tuple[int, ...]) -> tuple[int, ...]:
+        return tuple(points[i + 1] - points[i] for i in range(len(points) - 1))
+
+    return {
+        "sets": (a, b),
+        "same_distance_multiset": distances(a) == distances(b),
+        "distance_multiset": distances(a),
+        "coordinate_sums": (sum(a), sum(b)),
+        "adjacent_gaps": (adjacent_gaps(a), adjacent_gaps(b)),
+        "lesson": "distance product shadows need pair/end-owner addresses",
+    }
+
+
 def goldbach_lemoine_lab(limit: int = 100) -> dict[str, object]:
     primes = primes_upto(limit)
     shared = []
@@ -751,6 +859,18 @@ def main() -> None:
     ld = log_derivative_lab()
     print(f"    primes={ld['primes']}")
     print(f"    coeffs(n, sum_p|n p, prime_power_marker)={ld['coefficients_n_sum_p_dividing_n_and_prime_power_marker']}")
+    print("  Determinant/adjugate collision")
+    da = determinant_adjugate_lab()
+    print(f"    collision={da['collision']}")
+    print(f"    rows={da['rows']}")
+    print(f"    lesson={da['lesson']}")
+    print("  Turnpike homometric collision")
+    th = turnpike_homometric_lab()
+    print(f"    sets={th['sets']}")
+    print(f"    same_distance_multiset={th['same_distance_multiset']}")
+    print(f"    distance_multiset={th['distance_multiset']}")
+    print(f"    coordinate_sums={th['coordinate_sums']}")
+    print(f"    adjacent_gaps={th['adjacent_gaps']}")
     print("  Goldbach/Lemoine reconstruction")
     gl = goldbach_lemoine_lab()
     print(f"    shared_pair_rows={gl['shared_pair_rows']}")
@@ -762,8 +882,9 @@ def main() -> None:
     print("  Address coordinates are not decorations.  They are the derivative variable.")
     print("  In exact repo cases, unpaired/global scalar repairs fail; paired/addressed")
     print("  derivatives split the collision.  In external theorem families, the same")
-    print("  mechanism appears as log derivatives, Weyl m-functions, J-fractions,")
-    print("  Kocay matrices, activity expansions, trace formulas, and Hodge operators.")
+    print("  mechanism appears as log derivatives, adjugates, Weyl m-functions,")
+    print("  J-fractions, Prony reconstructions, turnpike owner maps, Kocay matrices,")
+    print("  activity expansions, trace formulas, and Hodge operators.")
     print("  Best next builds: LRC owner derivative, tournament n=7 paired deck, OCF")
     print("  noncommutative address projection, and unit-distance deletion-owner lab.")
 
