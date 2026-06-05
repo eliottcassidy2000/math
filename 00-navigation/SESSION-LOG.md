@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S665 - Address-coordinate derivative repair atlas (HYP-2240)
+
+**Prompt:** Search across the web and repo for the pattern: find a scalar/product collision, attach the missing fraction/address coordinate, then unroll it back into a derivative sum.
+**Claimed namespace:** HYP-2240 and T734 reserved after S664 completed HYP-2239's triune cycle atlas.
+**Status:** Stub claimed.  Pending: repo/web source scan, candidate atlas, finite side labs, Tournament Analysis over transfer routes, and HYP-2240 upgrade.
+
 ## codex-2026-06-05-S664 - Triune cycle everywhere atlas (HYP-2239)
 
 **Prompt:** Look for the `sum -> product -> fraction -> sum` cycle everywhere, poke around creatively, and reframe insights across the repo.
