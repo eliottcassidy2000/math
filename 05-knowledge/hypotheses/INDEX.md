@@ -682,6 +682,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2224 | Unit-distance Moser slabs have a fixed edge-channel carrier under the THM-408 add-one-slab operation: after the cap transient, both `P_m^+` and `P_m^-` have stable direction increment `Delta_total=(0,1,8,4,0,4,4,2,4)` with sum `27`, split as `8` unit-spine section edges plus `19` hidden bulk edges. | S648 computes total/spine/bulk direction-pair ledgers for both Moser families through `m=5`.  At the current frontier rows, `P_2^-` has `n=21,E=57,spine=20,bulk=37,pure_bulk=20`, and `P_2^+` has `n=22,E=60,spine=21,bulk=39,pure_bulk=21`, so pure-bulk direction mass equals the unit-spine length at `m=2`.  The `n=22` row has degree histogram `{3:1,4:3,5:8,6:5,7:5}`; by S614, a 61-edge row cannot keep a degree-3 vertex, so a one-edge improvement inside this carrier must repair the cap endpoint channel or leave the fixed Moser quantum. | codex-2026-06-04-S648; `HYP-2224-unit-distance-moser-fixed-quantum-carrier.md`; `unit_distance_moser_fixed_quantum_s648.py`; `unit_distance_moser_fixed_quantum_s648.out`; `unit-distance-moser-fixed-quantum-s648.md`; HYP-2222, HYP-2221, HYP-2217, HYP-2204, HYP-2203, HYP-2188, HYP-2176, THM-408 |
 | HYP-2225 | Euler/Heegner prime-generating windows have a source/interior/square-sink carrier: for `p in {2,3,5,11,17,41}`, `f_p(x)=x^2+x+p` is prime for `x=0..p-2` and fails at `x=p-1` with `p^2`; the Heegner side channel is `d=4p-1`. | S649 searches primes `p<=500` and recovers exactly `[2,3,5,11,17,41]` as rows whose first composite is the forced endpoint square.  The Heegner projection sends `{7,11,19,43,67,163}` to these primes, while `{1,2,3}` are outside/degenerate for `d=4p-1`.  The tournament dictionary is: zero-based run length `p-1` equals a fixed Hamiltonian spine, interior count `p-2` equals Moon's strong-tournament `c3` floor, and the hidden deformation fiber is `C(p-1,2)`. | codex-2026-06-04-S649; `HYP-2225-prime-heegner-tournament-boundary.md`; `prime_heegner_tournament_boundary_s649.py`; `prime_heegner_tournament_boundary_s649.out`; `prime-heegner-tournament-boundary-s649.md`; HYP-2224, HYP-2223, HYP-2222, HYP-2217, HYP-2215, HYP-2200, THM-115 |
 | HYP-2226 | Euler/Rabinowitsch prime-generating quadratics carry a tournament-like `p-2` interior witness horizon.  For `Q_p(x)=x^2+x+p`, the six primes `{2,3,5,11,17,41}` map by `d=4p-1` to the Heegner tail `{7,11,19,43,67,163}` and have `Q_p(0)=p`, `Q_p(1..p-2)` prime, and forced boundary composite `Q_p(p-1)=p^2`. | S650 refines HYP-2225 by adding the THM-410 long-edge model.  It checks primes `p<=500` and finds exactly `{2,3,5,11,17,41}` have first positive composite at `x=p-1`; reversing the long edge in a `p`-vertex transitive tournament creates exactly `p-2` cyclic triangles, one per interior vertex, with pair-witness split `sigma=0, lambda=p-2, delta=0`.  This is a typed boundary/interior witness bridge, not a Hamiltonian-path-count identity. | codex-2026-06-04-S650; `HYP-2226-heegner-prime-horizon-tournament.md`; `heegner_prime_horizon_tournament_s650.py`; `heegner_prime_horizon_tournament_s650.out`; `heegner-prime-horizon-tournament-s650.md`; THM-410, HYP-2225, HYP-2224, HYP-2223, HYP-2222, HYP-1220, HYP-1202 |
+| HYP-2227 | Number-theory tournaments are local-witness carrier quotients: useful vertices are residues, local primes, characters, valuations, zero terms, class groups, proof obligations, or side channels rather than raw integers alone. | S651 builds a finite atlas.  Paley tournaments are literal finite-field character orientations (`p=7` has `c3=14,H=189`; `p=11` has `c3=55,H=95095`).  Local-prime obstruction tournaments reorder under side-channel changes: twin gap `2` vs Goldbach `N=210` has `3` edge flips, vs Goldbach `N=2110` has `1`, Goldbach `210` vs `2110` has `4`, and twin gap `2` vs Euler polynomial `p=41` has `62`.  The hard-problem transfer tournament is transitive and ranks local sieve, Paley/character, and endpoint-horizon carriers above raw conjecture numerology. | codex-2026-06-05-S651; `HYP-2227-number-theory-tournament-carrier.md`; `number_theory_tournament_atlas_s651.py`; `number_theory_tournament_atlas_s651.out`; `number-theory-tournament-carriers-s651.md`; HYP-2226, HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5864,6 +5865,111 @@ criterion.
 `04-computation/heegner_prime_horizon_tournament_s650.py` (+.out);
 `07-reflections/heegner-prime-horizon-tournament-s650.md`; THM-410,
 HYP-2225, HYP-2224, HYP-2223, HYP-2222, HYP-1220, HYP-1202.
+
+## HYP-2227: Number theory tournaments are local-witness carrier quotients (number-theory-tournament-atlas, codex-2026-06-05-S651)
+**Status:** OPEN method hypothesis with finite atlas evidence.
+
+S651 generalizes the S649/S650 Heegner boundary work.  The main claim is that
+tournaments fit number theory when vertices are local witnesses, residues,
+characters, valuations, zero terms, class groups, proof obligations, or
+side-channel labels, not raw integers alone.
+
+The useful edge observable is:
+
+```text
+which local witness preserves more obstruction information?
+which local prime is the stronger bottleneck?
+which proof obligation explains the other without scalar collapse?
+```
+
+The finite atlas has three parts.
+
+First, Paley tournaments are literal finite-field character tournaments:
+
+```text
+i -> j iff j-i is a quadratic residue mod p.
+```
+
+S651 records:
+
+```text
+p=3:  score_hist={1:3},  c3=1,   H=3
+p=7:  score_hist={3:7},  c3=14,  H=189
+p=11: score_hist={5:11}, c3=55,  H=95095
+p=19: score_hist={9:19}, c3=285, H skipped
+```
+
+Second, local sieve obstruction tournaments orient local primes by
+`-log(survivors/prime)`.  The same local-prime vertex set reorders when the
+side channel changes:
+
+```text
+twin gap 2 ranking:       [3,2,5,7,11,13,17,19,...]
+Goldbach N=210 ranking:   [2,3,5,11,13,7,17,19,...]
+Goldbach N=2110 ranking:  [3,2,7,5,11,13,17,19,...]
+Euler p=41 ranking:       [41,43,47,53,61,2,3,5,...]
+```
+
+Edge-flip counts:
+
+```text
+twin gap 2 vs Goldbach N=210:  3
+twin gap 2 vs Goldbach N=2110: 1
+Goldbach 210 vs Goldbach 2110: 4
+twin gap 2 vs Euler p=41:      62
+```
+
+Third, the hard-problem transfer tournament ranks proof-carrier methods.  It
+is transitive with one Hamiltonian path:
+
+```text
+local_sieve_obstruction_tournaments
+> character_phase_paley_tournaments
+> endpoint_horizon_witness_tournaments
+> valuation_drift_tournaments
+> explicit_formula_balance_tournaments
+> local_global_rank_tournaments
+> raw_conjecture_numerology
+```
+
+Fingerprints:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1]
+hamiltonian_paths=1
+```
+
+The morale-progress interpretation is intentionally modest.  This does not
+solve RH, BSD, twin primes, Goldbach, Collatz, or Heegner uniqueness.  It
+turns each into a finite carrier question:
+
+```text
+Twin primes -> compare local-prime obstruction tournaments across gaps.
+Goldbach    -> track one-lane vs two-lane primes for each target N.
+RH          -> orient prime-power/zero phase terms in explicit-formula windows.
+BSD         -> orient bad-prime/root-number/Selmer obligations.
+Collatz     -> orient residue classes by accelerated valuation drift.
+Heegner     -> extend S650 endpoint-horizon failure profiles.
+LRC/UD      -> keep shell/spine/bulk/carry/endpoint side channels attached.
+```
+
+Assumption challenge: the tempting vertex set is "numbers" or "primes," but
+S651 treats that as only one possible quotient.  It records residues, local
+primes, residue lanes, valuations, characters, prime powers, zero terms,
+class groups, discriminants, boundary/interior witness slots, local-global
+proof obligations, and quotient-loss side channels as alternatives.
+
+The quotient preserved by the atlas is local obstruction order.  It can
+destroy actual arithmetic dependence across primes, analytic cancellation, and
+global existence data.  Therefore the tournament is a side-channel audit, not
+a theorem replacement.
+
+**See:** `05-knowledge/hypotheses/HYP-2227-number-theory-tournament-carrier.md`;
+`04-computation/number_theory_tournament_atlas_s651.py` (+.out);
+`07-reflections/number-theory-tournament-carriers-s651.md`; HYP-2226,
+HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

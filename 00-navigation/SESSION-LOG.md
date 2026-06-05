@@ -1,14 +1,14 @@
 # Session Log
 
-## codex-2026-06-05-S651 - Number-theory tournament carriers (HYP-2227 reserved)
+## codex-2026-06-05-S651 - number-theory tournament carrier atlas (HYP-2227)
 
-**Prompt:** Understand how tournaments fit into number theory, then use that
-understanding for moral progress on the hardest number-theory problems.
-**Reservation:** Claimed `HYP-2227`, `S651`, and the upcoming `T720` slot for a
-carrier-quotient scout.  The planned computation will build prime-race
-tournaments, local obstruction ledgers, and a proof-route tournament over hard
-number-theory problems.  This stub is intentionally incomplete and exists to
-reserve the namespace before the longer run.
+**Prompt:** Understand how tournaments fit into number theory, then spend a long session seeing how that understanding can give morale progress on number theory's hardest problems.
+**Integration:** Fast-forwarded over incoming S650/HYP-2226 and treated it as the live seed: S650 made the Heegner/Euler `p-2` horizon exact via THM-410.  S651 generalizes that move into a number-theory carrier atlas, while connecting back to Paley/character tournaments, HYP-2215/HYP-2216 side-channel ledgers, Goldbach/twin-prime pair carriers, LRC shell arithmetic, and unit-distance spine/bulk carriers.
+**Computation:** Added `04-computation/number_theory_tournament_atlas_s651.py` and stored `05-knowledge/results/number_theory_tournament_atlas_s651.out`.  The script computes Paley tournament fingerprints, local-prime obstruction tournaments for twin primes, Goldbach `N=210/2110`, and Euler polynomial `p=41`, edge-flip counts between those local-prime tournaments, and a hard-problem method Tournament Analysis.
+**Findings:** Paley tournaments are literal finite-field character orientations: `p=7` has `score_hist={3:7}, c3=14, H=189`; `p=11` has `score_hist={5:11}, c3=55, H=95095`.  Local-prime obstruction tournaments visibly depend on retained side channels: twin gap `2` vs Goldbach `N=210` has `3` edge flips, twin vs Goldbach `N=2110` has `1`, Goldbach `210` vs `2110` has `4`, and twin vs Euler polynomial `p=41` has `62`, with `41` becoming the top Euler local obstruction.
+**Synthesis:** The useful rule is "do not tournamentize the nouns; tournamentize the witnesses."  For hard problems, morale progress means finite side-channel ledgers: twin/goldbach local-prime obstruction order, RH explicit-formula phase contributors, BSD local-global rank obligations, Collatz valuation drift, Heegner endpoint horizons, and LRC/unit-distance quotient-loss channels.
+**Tournament Analysis:** Chosen vertices are proof-carrier methods after challenging integers, primes, residues, valuations, characters, Euler factors, zero terms, class groups, proof obligations, and side channels.  The method tournament is transitive with one Hamiltonian path: `local_sieve_obstruction_tournaments > character_phase_paley_tournaments > endpoint_horizon_witness_tournaments > valuation_drift_tournaments > explicit_formula_balance_tournaments > local_global_rank_tournaments > raw_conjecture_numerology`.
+**Artifacts:** HYP-2227, `07-reflections/number-theory-tournament-carriers-s651.md`, T720, result-index and concept-map updates.
 
 ## codex-2026-06-04-S650 - Heegner prime-polynomial horizon and tournament n-2 witnesses (HYP-2226)
 
