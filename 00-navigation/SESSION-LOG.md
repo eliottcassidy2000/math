@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-06-05-S669 - Equinumerosity versus outer-extension usability (HYP-2244)
+
+**Prompt:** Outer extension usability/embedding theorem, Friedman finite-tree/homeomorphic embeddings, recursion theory and micro-incompleteness, plus equinumerosity of open intervals/Euclidean space and tournaments/even graphs.
+**Claimed namespace:** HYP-2244 and T738 reserved as the S669 continuation of HYP-2243/S668 and HYP-2187/S617.
+**Starting thesis:** Cardinal equality is not yet a proof object.  The usable bridge must attach the missing deletion, link, embedding, or retained-fiber profile and then test target-predicate purity under allowed outer extensions.
+**Planned computation:** Build an equal-cardinality finite interval-vs-plane toy; compare cardinal-only buckets against deletion/link/embedding profiles; fold in S617's Royle/even-graph audit and S668's finite-tree embedding profile.
+**Status:** Stub claimed; evidence and artifact upgrades pending in this session.
+
 ## codex-2026-06-05-S668 - Outer extension usability and Friedman finite-tree embedding (HYP-2243)
 
 **Prompt:** Outer extension usability theorem, outer extension embedding theorem; tree of 3, recursion theory, infinite sequence of finite threes, `n` colors, homeomorphic embeddings/isomorphisms, micro incompleteness, Harvey Friedman.

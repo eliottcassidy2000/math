@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T738** #equinumerosity #outer-extension #homeomorphism #friedman #tournaments #Royle-even #dimension-profile | certainty: stub claimed for finite audit | source: codex-2026-06-05-S669
+Reserve the bridge from the user's interval/R^n and tournament/even-graph equinumerosity prompts into HYP-2243.  Working thesis: equinumerosity is the count/cardinal shadow, while outer-extension usability requires a retained deletion, link, embedding, or fiber profile.  Planned finite audit: equal-size path/grid carriers collide under cardinality but split by deletion/link profiles; Royle-even/tournament count equality remains unusable until a predicate-preserving fiber functor retains `H`, `beta1`, packet, or embedding data.  See HYP-2244.
+
 **T737** #outer-extension #friedman #finite-trees #homeomorphic-embedding #usability #micro-incompleteness #lrc | certainty: bounded finite-tree toy + source-anchored synthesis | source: codex-2026-06-05-S668
 Outer extension = grow the ambient while preserving internal bonds.  S668 uses Friedman finite-tree/homeomorphic-embedding/invariant-maximality anchors and a bounded 3-colored rooted-tree toy: coarse extension quotients leak for the `0->1->2` homeomorphic path predicate (`size_height` 6 mixed, `color_hist` 10, `frontier` 46, raw `outer_address` 55), but `small_embedding_profile`, `full_embedding_profile`, and `address_plus_small_embedding` have zero mixed fibers.  LRC translation: visible `Res_27` is the internal tree, `+27` carry/owner lifts are outer extensions, and owner-private deletion is the first small proof-obligation embedding address.  See HYP-2243.
 
