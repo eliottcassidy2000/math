@@ -1,0 +1,67 @@
+==============================================================================
+S652 THM-410 / square-node tournament enumeration speedups
+==============================================================================
+
+THM-410 validation
+  exhaustive matching validation through n=8: failures=0
+  theorem kernel: c3(T_M) = sum_{(a,b) in M} (b-a-1)
+
+Interval-matching low-c3 carrier
+  c3<=10 is the H=21-relevant cap from H >= 1+2*c3.
+   n  all_matchings       c3<=10                                dist[0..10]
+   3              4            4          [3, 1, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+   4             10           10          [5, 2, 3, 0, 0, 0, 0, 0, 0, 0, 0]
+   5             26           26          [8, 5, 6, 5, 2, 0, 0, 0, 0, 0, 0]
+   6             76           76     [13, 10, 16, 10, 15, 4, 8, 0, 0, 0, 0]
+   7            232          232 [21, 20, 33, 31, 32, 29, 30, 16, 14, 6, 0]
+   8            764          722 [34, 38, 69, 68, 94, 66, 111, 64, 88, 40, 50]
+   9          2,620        2,062 [55, 71, 136, 155, 207, 209, 256, 245, 272, 226, 230]
+  10          9,496        5,538 [89, 130, 264, 326, 476, 482, 708, 610, 859, 696, 898]
+  11         35,696       13,962 [144, 235, 501, 675, 1014, 1170, 1599, 1747, 2116, 2213, 2548]
+  12        140,152       34,284 [233, 420, 938, 1356, 2137, 2598, 3771, 4112, 5642, 5666, 7411]
+  13        568,504       80,987 [377, 744, 1734, 2678, 4374, 5707, 8298, 10013, 13161, 15251, 18650]
+  14      2,390,480      188,273 [610, 1308, 3174, 5200, 8817, 12114, 18170, 22678, 31442, 36498, 48262]
+
+Square-substitution Burnside templates
+  A=A000568(n); template = sum_[base B] (1/|Aut(B)|) sum_g A^cycles(g).
+  This counts fiber-class assignments to base vertices, modulo base symmetry.
+   n     A  A^2 uniform      raw A^(n+1)        templates  aut_order_hist
+   1     1            1                1                1  {1: 1}
+   2     1            1                1                1  {1: 1}
+   3     2            4               16               12  {1: 1, 3: 1}
+   4     4           16            1,024              704  {1: 2, 3: 2}
+   5    12          144        2,985,984        2,127,984  {1: 7, 3: 4, 5: 1}
+
+Block path-cover formula for H on lexicographic products
+  H(base[fibers]) = sum_run_counts macro_words(base,r) * prod_i PathCovers(F_i,r_i).
+  The naive product H(base)*prod H(fiber_i) fails once the outer base has cycles.
+  chain3[chain3,chain3,chain3]       direct=1        formula=1        naive=1      ok=True
+  cycle3[chain3,chain3,chain3]       direct=2721     formula=2721     naive=3      ok=True
+  cycle3[cycle3,chain3,cycle3]       direct=2961     formula=2961     naive=27     ok=True
+  chain3[cycle3,chain3,cycle3]       direct=9        formula=9        naive=9      ok=True
+
+Scale reading
+  n=3: n^2 vertices=9, log2(raw labeled tournaments)=36, log2(square templates)=3.58, A(n)^2=4
+  n=4: n^2 vertices=16, log2(raw labeled tournaments)=120, log2(square templates)=9.46, A(n)^2=16
+  n=5: n^2 vertices=25, log2(raw labeled tournaments)=300, log2(square templates)=21.02, A(n)^2=144
+
+Tournament Analysis over speedup methods
+  thm410_interval_matching_kernel    beats=6
+  block_path_cover_macro_dp          beats=5
+  substitution_square_cycle_index    beats=4
+  tiling_succession_dp               beats=3
+  crt_burnside_partition             beats=2
+  generic_canonical_augmentation     beats=1
+  raw_labeled_held_karp              beats=0
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+
+Assumption challenge
+  Vertices need not be the original tournament vertices.
+  Useful vertex sets here include reversed intervals, block modules, macro-runs,
+  ordered path-cover segments, automorphism cycles, H-values, and proof obligations.
+  THM-410 preserves exact cyclic-triangle witnesses but destroys nonmatching flips.
+  Square substitution preserves modular decomposition and block H-data but destroys
+  prime/indecomposable tournaments outside the imprimitive slice.

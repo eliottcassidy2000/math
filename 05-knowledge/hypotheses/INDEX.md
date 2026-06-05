@@ -683,6 +683,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2225 | Euler/Heegner prime-generating windows have a source/interior/square-sink carrier: for `p in {2,3,5,11,17,41}`, `f_p(x)=x^2+x+p` is prime for `x=0..p-2` and fails at `x=p-1` with `p^2`; the Heegner side channel is `d=4p-1`. | S649 searches primes `p<=500` and recovers exactly `[2,3,5,11,17,41]` as rows whose first composite is the forced endpoint square.  The Heegner projection sends `{7,11,19,43,67,163}` to these primes, while `{1,2,3}` are outside/degenerate for `d=4p-1`.  The tournament dictionary is: zero-based run length `p-1` equals a fixed Hamiltonian spine, interior count `p-2` equals Moon's strong-tournament `c3` floor, and the hidden deformation fiber is `C(p-1,2)`. | codex-2026-06-04-S649; `HYP-2225-prime-heegner-tournament-boundary.md`; `prime_heegner_tournament_boundary_s649.py`; `prime_heegner_tournament_boundary_s649.out`; `prime-heegner-tournament-boundary-s649.md`; HYP-2224, HYP-2223, HYP-2222, HYP-2217, HYP-2215, HYP-2200, THM-115 |
 | HYP-2226 | Euler/Rabinowitsch prime-generating quadratics carry a tournament-like `p-2` interior witness horizon.  For `Q_p(x)=x^2+x+p`, the six primes `{2,3,5,11,17,41}` map by `d=4p-1` to the Heegner tail `{7,11,19,43,67,163}` and have `Q_p(0)=p`, `Q_p(1..p-2)` prime, and forced boundary composite `Q_p(p-1)=p^2`. | S650 refines HYP-2225 by adding the THM-410 long-edge model.  It checks primes `p<=500` and finds exactly `{2,3,5,11,17,41}` have first positive composite at `x=p-1`; reversing the long edge in a `p`-vertex transitive tournament creates exactly `p-2` cyclic triangles, one per interior vertex, with pair-witness split `sigma=0, lambda=p-2, delta=0`.  This is a typed boundary/interior witness bridge, not a Hamiltonian-path-count identity. | codex-2026-06-04-S650; `HYP-2226-heegner-prime-horizon-tournament.md`; `heegner_prime_horizon_tournament_s650.py`; `heegner_prime_horizon_tournament_s650.out`; `heegner-prime-horizon-tournament-s650.md`; THM-410, HYP-2225, HYP-2224, HYP-2223, HYP-2222, HYP-1220, HYP-1202 |
 | HYP-2227 | Number-theory tournaments are local-witness carrier quotients: useful vertices are residues, local primes, characters, valuations, zero terms, class groups, proof obligations, or side channels rather than raw integers alone. | S651 builds a finite atlas plus a carrier supplement.  Paley tournaments are literal finite-field character orientations (`p=7` has `c3=14,H=189`; `p=11` has `c3=55,H=95095`).  Local-prime obstruction tournaments reorder under side-channel changes: twin gap `2` vs Goldbach `N=210` has `3` edge flips, vs Goldbach `N=2110` has `1`, Goldbach `210` vs `2110` has `4`, and twin gap `2` vs Euler polynomial `p=41` has `62`.  The dynamic prime-race majority supplement at `q=11`, `X=100000` has `15` flips versus final count, `1` directed 3-cycle, SCC sizes `[3,1,1,1,1,1,1,1]`, and `H=3`. | codex-2026-06-05-S651; `HYP-2227-number-theory-tournament-carrier.md`; `number_theory_tournament_atlas_s651.py`; `number_theory_tournament_atlas_s651.out`; `number_theory_tournament_carriers_s651.py`; `number_theory_tournament_carriers_s651.out`; `number-theory-tournament-carriers-s651.md`; HYP-2226, HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115 |
+| HYP-2228 | THM-410 interval matchings and square-node tournament substitution are enumeration speedup carriers for near-transitive and imprimitive tournament slices. | S652 validates THM-410's matching formula through `n=8`, counts interval-matching states with `c3<=10` (`188273` of `2390480` matchings at `n=14`), defines the square-template Burnside companion sequence `1,1,12,704,2127984`, and verifies an exact block path-cover/macro-word formula for `H` on 9-vertex lexicographic products where naive multiplicativity fails (`2721` vs `3`). | codex-2026-06-05-S652; `HYP-2228-thm410-square-blowup-enumeration-speedups.md`; `thm410_square_blowup_enumeration_s652.py`; `thm410_square_blowup_enumeration_s652.out`; `thm410-square-blowup-enumeration-speedups-s652.md`; THM-410, HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5991,6 +5992,67 @@ a theorem replacement.
 `04-computation/number_theory_tournament_carriers_s651.py` (+.out);
 `07-reflections/number-theory-tournament-carriers-s651.md`; HYP-2226,
 HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115.
+
+## HYP-2228: THM-410 and square-node blowups give enumeration speedup carriers (thm410-square-blowup-enumeration, codex-2026-06-05-S652)
+**Status:** OPEN method hypothesis with finite computation evidence.
+
+S652 treats THM-410 interval witnesses and square-node substitution as
+enumeration carriers rather than analogies.  The interval side is exact for
+matching reversals from a transitive tournament:
+
+```text
+c3(T_M) = sum_{(a,b) in M} (b-a-1).
+```
+
+The script validates this formula exhaustively through `n=8` matchings.  A
+weighted matching DP then counts the H=21-relevant cap `c3<=10`; at `n=14`,
+there are `2,390,480` total matchings but only `188,273` with interval weight at
+most `10`.  This is a cheap theorem-certified near-transitive slice, not a
+complete low-`c3` tournament census.
+
+The square-node side is lexicographic substitution: replace each vertex of an
+`n`-vertex base tournament by an `n`-vertex tournament block.  The imprimitive
+template count is the Burnside companion
+
+```text
+SqTempl(n) =
+  sum_[B in A000568(n)] (1/|Aut(B)|) sum_{g in Aut(B)} A000568(n)^{cycles(g)}.
+```
+
+Values through `n=5` are:
+
+```text
+1, 1, 12, 704, 2127984
+```
+
+This sequence counts block templates modulo base automorphisms; it does not
+claim to be A000568 on `n^2` vertices.
+
+For Hamiltonian paths, S652 replaces the false naive product rule by an exact
+path-cover/macro-word formula:
+
+```text
+H(B[F_i]) =
+  sum_r MacroWords_B(r) * product_i OrderedPathCovers(F_i, r_i).
+```
+
+Direct 9-vertex checks agree with the formula.  In particular,
+`cycle3[chain3,chain3,chain3]` has `H=2721`, while naive
+`H(base)*prod H(fiber_i)` predicts only `3`; the missing mass is block-run
+interleaving.
+
+Assumption challenge: the useful vertices are not necessarily tournament
+vertices.  They can be reversed intervals, matching arcs, block modules,
+macro-runs, ordered path-cover segments, automorphism cycles, H-values, or
+proof obligations.  The quotient preserved by THM-410 is exact cyclic-triangle
+witness accounting for matching flips; the quotient preserved by square
+substitution is modular decomposition and block `H` data.
+
+**See:** `05-knowledge/hypotheses/HYP-2228-thm410-square-blowup-enumeration-speedups.md`;
+`04-computation/thm410_square_blowup_enumeration_s652.py`;
+`05-knowledge/results/thm410_square_blowup_enumeration_s652.out`;
+`07-reflections/thm410-square-blowup-enumeration-speedups-s652.md`; THM-410,
+HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
