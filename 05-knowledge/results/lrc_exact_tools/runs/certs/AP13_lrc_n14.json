@@ -1,0 +1,227 @@
+{
+  "candidate_count": 213,
+  "contact_graph": {
+    "components": 10,
+    "connected": false,
+    "contact_count": 6,
+    "cyclomatic_rank": 3,
+    "edge_count": 12,
+    "f2_rank": 3,
+    "runner_count": 13
+  },
+  "contact_profile": {
+    "D": [
+      14
+    ],
+    "contacts": [
+      {
+        "active": [
+          {
+            "index": 0,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 1
+          },
+          {
+            "index": 12,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 13
+          }
+        ],
+        "denominator": 14,
+        "time": "1/14"
+      },
+      {
+        "active": [
+          {
+            "index": 4,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 5
+          },
+          {
+            "index": 8,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 9
+          }
+        ],
+        "denominator": 14,
+        "time": "3/14"
+      },
+      {
+        "active": [
+          {
+            "index": 2,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 3
+          },
+          {
+            "index": 10,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 11
+          }
+        ],
+        "denominator": 14,
+        "time": "5/14"
+      },
+      {
+        "active": [
+          {
+            "index": 2,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 3
+          },
+          {
+            "index": 10,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 11
+          }
+        ],
+        "denominator": 14,
+        "time": "9/14"
+      },
+      {
+        "active": [
+          {
+            "index": 4,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 5
+          },
+          {
+            "index": 8,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 9
+          }
+        ],
+        "denominator": 14,
+        "time": "11/14"
+      },
+      {
+        "active": [
+          {
+            "index": 0,
+            "phase": "13/14",
+            "side": "+",
+            "speed": 1
+          },
+          {
+            "index": 12,
+            "phase": "1/14",
+            "side": "-",
+            "speed": 13
+          }
+        ],
+        "denominator": 14,
+        "time": "13/14"
+      }
+    ],
+    "denominator_classes": {
+      "14": [
+        [
+          [
+            0,
+            "+"
+          ],
+          [
+            12,
+            "-"
+          ]
+        ],
+        [
+          [
+            0,
+            "-"
+          ],
+          [
+            12,
+            "+"
+          ]
+        ],
+        [
+          [
+            2,
+            "+"
+          ],
+          [
+            10,
+            "-"
+          ]
+        ],
+        [
+          [
+            2,
+            "-"
+          ],
+          [
+            10,
+            "+"
+          ]
+        ],
+        [
+          [
+            4,
+            "+"
+          ],
+          [
+            8,
+            "-"
+          ]
+        ],
+        [
+          [
+            4,
+            "-"
+          ],
+          [
+            8,
+            "+"
+          ]
+        ]
+      ]
+    }
+  },
+  "margin": "0",
+  "maximin": "1/14",
+  "moving_runners": 13,
+  "n_total": 14,
+  "schema": "lrc_exact_certificate_v1",
+  "speeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13
+  ],
+  "threshold": "1/14",
+  "tournament_at_first_witness": {
+    "entropy_log2_H": 21.333042307684977,
+    "hamiltonian_paths": 2641713,
+    "scc_sizes": [
+      13
+    ]
+  },
+  "witnesses": [
+    "1/14",
+    "3/14",
+    "5/14",
+    "9/14",
+    "11/14",
+    "13/14"
+  ]
+}

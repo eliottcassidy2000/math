@@ -1,0 +1,182 @@
+[
+  {
+    "D(A)": [
+      14
+    ],
+    "F2_rank": 3,
+    "M": "1/14",
+    "SCC": [
+      13
+    ],
+    "contact_denominators": 1,
+    "cyclomatic_rank": 3,
+    "label": "AP13",
+    "margin": "0",
+    "speeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13
+    ],
+    "tournament_entropy_log2H": 21.333042,
+    "witnesses": [
+      "1/14",
+      "3/14",
+      "5/14",
+      "9/14",
+      "11/14",
+      "13/14"
+    ]
+  },
+  {
+    "D(A)": [
+      14
+    ],
+    "F2_rank": 3,
+    "M": "1/14",
+    "SCC": [
+      13
+    ],
+    "contact_denominators": 1,
+    "cyclomatic_rank": 3,
+    "label": "Vstar_AP12_to_24",
+    "margin": "0",
+    "speeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      13,
+      24
+    ],
+    "tournament_entropy_log2H": 20.76379,
+    "witnesses": [
+      "1/14",
+      "3/14",
+      "5/14",
+      "9/14",
+      "11/14",
+      "13/14"
+    ]
+  },
+  {
+    "D(A)": [
+      25
+    ],
+    "F2_rank": 1,
+    "M": "2/25",
+    "SCC": [
+      13
+    ],
+    "contact_denominators": 1,
+    "cyclomatic_rank": 1,
+    "label": "AP13_11_to_22",
+    "margin": "3/350",
+    "speeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      12,
+      13,
+      22
+    ],
+    "tournament_entropy_log2H": 21.600306,
+    "witnesses": [
+      "9/25",
+      "16/25"
+    ]
+  },
+  {
+    "D(A)": [
+      27
+    ],
+    "F2_rank": 1,
+    "M": "2/27",
+    "SCC": [
+      13
+    ],
+    "contact_denominators": 1,
+    "cyclomatic_rank": 1,
+    "label": "AP13_13_to_26",
+    "margin": "1/378",
+    "speeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      26
+    ],
+    "tournament_entropy_log2H": 21.759828,
+    "witnesses": [
+      "2/27",
+      "25/27"
+    ]
+  },
+  {
+    "D(A)": [
+      8
+    ],
+    "F2_rank": 2,
+    "M": "1/8",
+    "SCC": [
+      13
+    ],
+    "contact_denominators": 1,
+    "cyclomatic_rank": 5,
+    "label": "seven_ladder",
+    "margin": "3/56",
+    "speeds": [
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      14,
+      21,
+      28,
+      35,
+      42,
+      49
+    ],
+    "tournament_entropy_log2H": 20.460649,
+    "witnesses": [
+      "1/8",
+      "3/8",
+      "5/8",
+      "7/8"
+    ]
+  }
+]

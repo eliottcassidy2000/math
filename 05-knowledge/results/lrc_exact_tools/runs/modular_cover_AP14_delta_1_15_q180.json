@@ -1,0 +1,146 @@
+{
+  "delta": "1/15",
+  "last_q": 180,
+  "minimal_certified_q": null,
+  "near_misses": [
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "73/180",
+        "37/90"
+      ],
+      "midpoint": "49/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "71/90",
+        "143/180"
+      ],
+      "midpoint": "19/24",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "7/18",
+        "71/180"
+      ],
+      "midpoint": "47/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "53/90",
+        "107/180"
+      ],
+      "midpoint": "71/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 11,
+      "cert_value": "5/72",
+      "interval": [
+        "4/45",
+        "17/180"
+      ],
+      "midpoint": "11/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "37/180",
+        "19/90"
+      ],
+      "midpoint": "5/24",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "29/36",
+        "73/90"
+      ],
+      "midpoint": "97/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 5,
+      "cert_value": "5/72",
+      "interval": [
+        "17/90",
+        "7/36"
+      ],
+      "midpoint": "23/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 7,
+      "cert_value": "5/72",
+      "interval": [
+        "17/20",
+        "77/90"
+      ],
+      "midpoint": "307/360",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 11,
+      "cert_value": "5/72",
+      "interval": [
+        "163/180",
+        "41/45"
+      ],
+      "midpoint": "109/120",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 1,
+      "cert_value": "5/72",
+      "interval": [
+        "14/15",
+        "169/180"
+      ],
+      "midpoint": "337/360",
+      "slack": "-1/360"
+    },
+    {
+      "best_speed": 7,
+      "cert_value": "5/72",
+      "interval": [
+        "13/90",
+        "3/20"
+      ],
+      "midpoint": "53/360",
+      "slack": "-1/360"
+    }
+  ],
+  "qmax": 180,
+  "schema": "lrc_modular_cover_scan_v1",
+  "speeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    7,
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14
+  ],
+  "uncovered_count_at_last_q": 102
+}

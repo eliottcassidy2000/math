@@ -1,0 +1,543 @@
+{
+  "candidate_count": 491,
+  "contact_graph": {
+    "components": 5,
+    "connected": false,
+    "contact_count": 14,
+    "cyclomatic_rank": 13,
+    "edge_count": 36,
+    "f2_rank": 6,
+    "runner_count": 14
+  },
+  "contact_profile": {
+    "D": [
+      11,
+      22
+    ],
+    "contacts": [
+      {
+        "active": [
+          {
+            "index": 0,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 1
+          },
+          {
+            "index": 7,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 10
+          },
+          {
+            "index": 8,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 12
+          }
+        ],
+        "denominator": 11,
+        "time": "1/11"
+      },
+      {
+        "active": [
+          {
+            "index": 6,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 8
+          },
+          {
+            "index": 9,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 14
+          }
+        ],
+        "denominator": 22,
+        "time": "3/22"
+      },
+      {
+        "active": [
+          {
+            "index": 4,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 5
+          },
+          {
+            "index": 5,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 6
+          },
+          {
+            "index": 10,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 16
+          }
+        ],
+        "denominator": 11,
+        "time": "2/11"
+      },
+      {
+        "active": [
+          {
+            "index": 3,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 4
+          },
+          {
+            "index": 11,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 18
+          }
+        ],
+        "denominator": 22,
+        "time": "5/22"
+      },
+      {
+        "active": [
+          {
+            "index": 3,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 4
+          },
+          {
+            "index": 11,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 18
+          }
+        ],
+        "denominator": 11,
+        "time": "3/11"
+      },
+      {
+        "active": [
+          {
+            "index": 2,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 3
+          },
+          {
+            "index": 6,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 8
+          },
+          {
+            "index": 9,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 14
+          },
+          {
+            "index": 12,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 19
+          }
+        ],
+        "denominator": 11,
+        "time": "4/11"
+      },
+      {
+        "active": [
+          {
+            "index": 1,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 2
+          },
+          {
+            "index": 13,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 20
+          }
+        ],
+        "denominator": 11,
+        "time": "5/11"
+      },
+      {
+        "active": [
+          {
+            "index": 1,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 2
+          },
+          {
+            "index": 13,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 20
+          }
+        ],
+        "denominator": 11,
+        "time": "6/11"
+      },
+      {
+        "active": [
+          {
+            "index": 2,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 3
+          },
+          {
+            "index": 6,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 8
+          },
+          {
+            "index": 9,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 14
+          },
+          {
+            "index": 12,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 19
+          }
+        ],
+        "denominator": 11,
+        "time": "7/11"
+      },
+      {
+        "active": [
+          {
+            "index": 3,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 4
+          },
+          {
+            "index": 11,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 18
+          }
+        ],
+        "denominator": 11,
+        "time": "8/11"
+      },
+      {
+        "active": [
+          {
+            "index": 3,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 4
+          },
+          {
+            "index": 11,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 18
+          }
+        ],
+        "denominator": 22,
+        "time": "17/22"
+      },
+      {
+        "active": [
+          {
+            "index": 4,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 5
+          },
+          {
+            "index": 5,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 6
+          },
+          {
+            "index": 10,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 16
+          }
+        ],
+        "denominator": 11,
+        "time": "9/11"
+      },
+      {
+        "active": [
+          {
+            "index": 6,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 8
+          },
+          {
+            "index": 9,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 14
+          }
+        ],
+        "denominator": 22,
+        "time": "19/22"
+      },
+      {
+        "active": [
+          {
+            "index": 0,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 1
+          },
+          {
+            "index": 7,
+            "phase": "1/11",
+            "side": "-",
+            "speed": 10
+          },
+          {
+            "index": 8,
+            "phase": "10/11",
+            "side": "+",
+            "speed": 12
+          }
+        ],
+        "denominator": 11,
+        "time": "10/11"
+      }
+    ],
+    "denominator_classes": {
+      "11": [
+        [
+          [
+            0,
+            "+"
+          ],
+          [
+            7,
+            "-"
+          ],
+          [
+            8,
+            "+"
+          ]
+        ],
+        [
+          [
+            0,
+            "-"
+          ],
+          [
+            7,
+            "+"
+          ],
+          [
+            8,
+            "-"
+          ]
+        ],
+        [
+          [
+            1,
+            "+"
+          ],
+          [
+            13,
+            "-"
+          ]
+        ],
+        [
+          [
+            1,
+            "-"
+          ],
+          [
+            13,
+            "+"
+          ]
+        ],
+        [
+          [
+            2,
+            "+"
+          ],
+          [
+            6,
+            "-"
+          ],
+          [
+            9,
+            "+"
+          ],
+          [
+            12,
+            "-"
+          ]
+        ],
+        [
+          [
+            2,
+            "-"
+          ],
+          [
+            6,
+            "+"
+          ],
+          [
+            9,
+            "-"
+          ],
+          [
+            12,
+            "+"
+          ]
+        ],
+        [
+          [
+            3,
+            "+"
+          ],
+          [
+            11,
+            "-"
+          ]
+        ],
+        [
+          [
+            3,
+            "-"
+          ],
+          [
+            11,
+            "+"
+          ]
+        ],
+        [
+          [
+            4,
+            "+"
+          ],
+          [
+            5,
+            "-"
+          ],
+          [
+            10,
+            "+"
+          ]
+        ],
+        [
+          [
+            4,
+            "-"
+          ],
+          [
+            5,
+            "+"
+          ],
+          [
+            10,
+            "-"
+          ]
+        ]
+      ],
+      "22": [
+        [
+          [
+            3,
+            "+"
+          ],
+          [
+            11,
+            "-"
+          ]
+        ],
+        [
+          [
+            3,
+            "-"
+          ],
+          [
+            11,
+            "+"
+          ]
+        ],
+        [
+          [
+            6,
+            "+"
+          ],
+          [
+            9,
+            "-"
+          ]
+        ],
+        [
+          [
+            6,
+            "-"
+          ],
+          [
+            9,
+            "+"
+          ]
+        ]
+      ]
+    }
+  },
+  "margin": "4/165",
+  "maximin": "1/11",
+  "moving_runners": 14,
+  "n_total": 15,
+  "schema": "lrc_exact_certificate_v1",
+  "speeds": [
+    1,
+    2,
+    3,
+    4,
+    5,
+    6,
+    8,
+    10,
+    12,
+    14,
+    16,
+    18,
+    19,
+    20
+  ],
+  "threshold": "1/15",
+  "tournament_at_first_witness": {
+    "entropy_log2_H": 24.25663421350007,
+    "hamiltonian_paths": 20043543,
+    "scc_sizes": [
+      14
+    ]
+  },
+  "witnesses": [
+    "1/11",
+    "3/22",
+    "2/11",
+    "5/22",
+    "3/11",
+    "4/11",
+    "5/11",
+    "6/11",
+    "7/11",
+    "8/11",
+    "17/22",
+    "9/11",
+    "19/22",
+    "10/11"
+  ]
+}

@@ -1,0 +1,136 @@
+{
+  "best_margin": "1/75",
+  "best_rows": [
+    {
+      "D": [
+        25
+      ],
+      "active_count": 2,
+      "candidate_count": 461,
+      "contact_graph": {
+        "components": 13,
+        "connected": false,
+        "contact_count": 2,
+        "cyclomatic_rank": 1,
+        "edge_count": 4,
+        "f2_rank": 1,
+        "runner_count": 14
+      },
+      "contact_matrix": [
+        {
+          "active": [
+            {
+              "index": 0,
+              "phase": "2/25",
+              "side": "-",
+              "speed": 1
+            },
+            {
+              "index": 13,
+              "phase": "23/25",
+              "side": "+",
+              "speed": 24
+            }
+          ],
+          "denominator": 25,
+          "time": "2/25"
+        },
+        {
+          "active": [
+            {
+              "index": 0,
+              "phase": "23/25",
+              "side": "+",
+              "speed": 1
+            },
+            {
+              "index": 13,
+              "phase": "2/25",
+              "side": "-",
+              "speed": 24
+            }
+          ],
+          "denominator": 25,
+          "time": "23/25"
+        }
+      ],
+      "exact_candidate_format": "0,1,(2m+1)/(2v_i),m/(v_i+v_j),m/|v_i-v_j|",
+      "first_witness": "2/25",
+      "margin": "1/75",
+      "max_denominator_bits": 5,
+      "max_numerator_bits": 2,
+      "max_speed": 24,
+      "maximin": "2/25",
+      "moving_runners": 14,
+      "n_total": 15,
+      "rank_signature": {
+        "F2": 1,
+        "beta1": 1,
+        "contacts": 2,
+        "edges": 4
+      },
+      "run_id": "20260605Tpilot-v1410-B24-rankfields",
+      "schema": "lrc_primitive_pilot_row_v1",
+      "shard_index": 0,
+      "shards": 256,
+      "speeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        14,
+        19,
+        24
+      ],
+      "status": "strict",
+      "threshold": "1/15",
+      "verifier": {
+        "hash_blake2b_12": "cc1ef7bad927e06117e0f04e",
+        "tool": "lrc_exact_tools.py",
+        "version": "lrc_exact_tools_v1"
+      },
+      "witness_count": 2
+    }
+  ],
+  "certificate_format": "lrc_exact_certificate_v1",
+  "counterexample_count": 0,
+  "exact_candidate_format": "0,1,(2m+1)/(2v_i),m/(v_i+v_j),m/|v_i-v_j|",
+  "failure_mode": "time_budget_exhausted",
+  "max_denominator_bits": 6,
+  "max_numerator_bits": 4,
+  "output_jsonl": "runs/20260605Tpilot-v1410-B24-rankfields/primitive_n14/0000.jsonl",
+  "overflow_count": 0,
+  "parameter_slice": {
+    "canonicalization": "sorted primitive gcd-normal form",
+    "delta": "1/15",
+    "max_speed": 24,
+    "moving_runners": 14,
+    "n_total": 15,
+    "pruning": "stable blake2b shard filter; gcd primitive filter",
+    "shard_index": 0,
+    "shards": 256,
+    "time_budget_s": 30.0
+  },
+  "primitive_skipped": 0,
+  "processed_rows": 280,
+  "run_id": "20260605Tpilot-v1410-B24-rankfields",
+  "schema": "lrc_primitive_pilot_summary_v1",
+  "shard_combinations_seen": 281,
+  "throughput_rows_per_s": 9.323878268410702,
+  "tight_count": 0,
+  "timeout_count": 1,
+  "total_combinations_seen": 70837,
+  "verifier": {
+    "hash_blake2b_12": "cc1ef7bad927e06117e0f04e",
+    "tool": "lrc_exact_tools.py",
+    "version": "lrc_exact_tools_v1"
+  },
+  "walltime_s": 30.030422098992858
+}

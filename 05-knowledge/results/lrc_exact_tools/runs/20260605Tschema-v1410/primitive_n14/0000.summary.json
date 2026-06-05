@@ -1,0 +1,136 @@
+{
+  "best_margin": "11/285",
+  "best_rows": [
+    {
+      "D": [
+        19
+      ],
+      "active_count": 2,
+      "candidate_count": 325,
+      "contact_graph": {
+        "components": 13,
+        "connected": false,
+        "contact_count": 2,
+        "cyclomatic_rank": 1,
+        "edge_count": 4,
+        "f2_rank": 1,
+        "runner_count": 14
+      },
+      "contact_matrix": [
+        {
+          "active": [
+            {
+              "index": 2,
+              "phase": "2/19",
+              "side": "-",
+              "speed": 3
+            },
+            {
+              "index": 13,
+              "phase": "17/19",
+              "side": "+",
+              "speed": 16
+            }
+          ],
+          "denominator": 19,
+          "time": "7/19"
+        },
+        {
+          "active": [
+            {
+              "index": 2,
+              "phase": "17/19",
+              "side": "+",
+              "speed": 3
+            },
+            {
+              "index": 13,
+              "phase": "2/19",
+              "side": "-",
+              "speed": 16
+            }
+          ],
+          "denominator": 19,
+          "time": "12/19"
+        }
+      ],
+      "exact_candidate_format": "0,1,(2m+1)/(2v_i),m/(v_i+v_j),m/|v_i-v_j|",
+      "first_witness": "7/19",
+      "margin": "11/285",
+      "max_denominator_bits": 5,
+      "max_numerator_bits": 3,
+      "max_speed": 16,
+      "maximin": "2/19",
+      "moving_runners": 14,
+      "n_total": 15,
+      "rank_signature": {
+        "F2": 1,
+        "beta1": 1,
+        "contacts": 2,
+        "edges": 4
+      },
+      "run_id": "20260605Tschema-v1410",
+      "schema": "lrc_primitive_pilot_row_v1",
+      "shard_index": 0,
+      "shards": 256,
+      "speeds": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        9,
+        10,
+        12,
+        13,
+        14,
+        15,
+        16
+      ],
+      "status": "strict",
+      "threshold": "1/15",
+      "verifier": {
+        "hash_blake2b_12": "cc1ef7bad927e06117e0f04e",
+        "tool": "lrc_exact_tools.py",
+        "version": "lrc_exact_tools_v1"
+      },
+      "witness_count": 2
+    }
+  ],
+  "certificate_format": "lrc_exact_certificate_v1",
+  "counterexample_count": 0,
+  "exact_candidate_format": "0,1,(2m+1)/(2v_i),m/(v_i+v_j),m/|v_i-v_j|",
+  "failure_mode": "completed",
+  "max_denominator_bits": 5,
+  "max_numerator_bits": 3,
+  "output_jsonl": "runs/20260605Tschema-v1410/primitive_n14/0000.jsonl",
+  "overflow_count": 0,
+  "parameter_slice": {
+    "canonicalization": "sorted primitive gcd-normal form",
+    "delta": "1/15",
+    "max_speed": 16,
+    "moving_runners": 14,
+    "n_total": 15,
+    "pruning": "stable blake2b shard filter; gcd primitive filter",
+    "shard_index": 0,
+    "shards": 256,
+    "time_budget_s": 1.0
+  },
+  "primitive_skipped": 0,
+  "processed_rows": 1,
+  "run_id": "20260605Tschema-v1410",
+  "schema": "lrc_primitive_pilot_summary_v1",
+  "shard_combinations_seen": 1,
+  "throughput_rows_per_s": 13.780686572203951,
+  "tight_count": 0,
+  "timeout_count": 0,
+  "total_combinations_seen": 120,
+  "verifier": {
+    "hash_blake2b_12": "cc1ef7bad927e06117e0f04e",
+    "tool": "lrc_exact_tools.py",
+    "version": "lrc_exact_tools_v1"
+  },
+  "walltime_s": 0.07256532501196489
+}
