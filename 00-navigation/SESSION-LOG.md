@@ -15,6 +15,12 @@
 **Synthesis:** The old left/right/middle automaton becomes a concrete enumeration invariant: below/middle/above half-score attached to deletion-card owners.  A000568 may be recursively enumerable by feasible half-filter decks.  For LRC14, test the same `L/M/U` owner-state trace on carry/owner fibers.
 **Artifacts:** HYP-2246, T740, `04-computation/ultrafilter_endpoint_enumeration_s671.py`, `05-knowledge/results/ultrafilter_endpoint_enumeration_s671.out`, `07-reflections/endpoint-half-filter-a000568-s671.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
 **Handoff:** Push to `n=9` with a faster canonical engine; prove or refute the local collision anatomy lemma ("card-deck collisions are repaired by an `L/U` owner address"); combine half-filter traces with modular decomposition and THM-410 interval ledgers; port the `L/M/U` owner state to LRC14.
+## codex-2026-06-05-S671 - Paris-Harrington ultrafilter coloring recursion (HYP-2246)
+
+**Prompt:** Extend the metagraph-ultrafilter/divisor-210 picture through colorings, recursion theory, Paris-Harrington unprovability, initial segments/models of PA, and domination of PA-provably recursive functions.
+**Claimed namespace:** HYP-2246 and T740 reserved as the S671 continuation of HYP-2245/S670 and HYP-2244/S669.
+**Starting thesis:** A coloring is a side-choice over tuple atoms; bad colorings form an outer-extension tree; a relatively-large homogeneous set is a finite filter trace that cannot be postponed indefinitely into the tail.
+**Status:** Stub claimed; evidence and artifacts pending in this session.
 
 ## codex-2026-06-05-S670 - Metagraph ultrafilter and divisor-210 descent (HYP-2245)
 
