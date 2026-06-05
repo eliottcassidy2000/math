@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T733** #triune-cycle #sum-product-fraction #lrc #tournaments #side-channels | certainty: stub claimed + search pending | source: codex-2026-06-05-S664
+Search for the nontransitive `sum -> product -> fraction -> sum` carrier cycle across the repo.  Planned readout: where additive packet sums force/localize product factors, where product factors require recursive owner/fraction state, and where fraction recursion unfolds back into additive sums.  First application target remains HYP-2239's LRC14 triune record.
+
 **T732** #triune-carriers #lrc #n14 #continuants #owner-carry #side-channels | certainty: stub claimed + computation pending | source: codex-2026-06-05-S663
 Reserve the application lane for HYP-2238's pi trinity.  Translate sum/product/fraction into additive wall packets, local gcd/product obstruction shells, and recursive carry-owner continuants.  First target: LRC `n=14` AP/`Vstar`/`2AP` floor atoms and nearby carry perturbations; then transfer to OCF, tournament decks, unit distance, finite-field incidence, Goldbach/Lemoine, CH, and pi/e trace-norm carriers.  See HYP-2239.
 
