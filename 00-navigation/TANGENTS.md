@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T735** #lrc #n14 #owner-derivative #no-leak #carry-cocycle #res27 | certainty: stub claimed + computation pending | source: codex-2026-06-05-S666
+Concrete S666 follow-up to HYP-2240: attach owner/deletion derivative coordinates to the LRC14 `Res_27` carry seam.  Target statement: fixed odd-wall packets + fixed `C=27` gcd shell + paired carry/owner/deletion ledger forces AP, Vstar, 2AP, or strict looseness.  See HYP-2241.
+
 **T734** #address-coordinate #projection-repair #derivative-sums #triune-cycle #web-atlas | certainty: atlas + finite exact toys + theorem-transfer anchors | source: codex-2026-06-05-S665
 Sharpen HYP-2239 into the grammar: scalar/product collision -> missing fraction/address coordinate -> derivative sum.  S665 ranks 20 repair lanes; exact leaders are LRC14 carry state and tournament deck paired owners, while graph reconstruction, explicit formulae, Ihara/Selberg, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge give theorem-transfer templates.  Tournament fingerprints: `directed_3cycles=16`, SCCs `[8,1,...]`, `425` Hamiltonian paths.  See HYP-2240.
 

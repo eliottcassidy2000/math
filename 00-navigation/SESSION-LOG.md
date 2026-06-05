@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S666 - LRC14 owner-derivative no-leak push (HYP-2241)
+
+**Prompt:** Spend a session trying to make progress on the LRC `n=14` proof.
+**Claimed namespace:** HYP-2241 and T735 reserved as the concrete S666 follow-up to HYP-2240/S665's address-coordinate derivative repair atlas and HYP-2237/S661's owner-derivative proof target.
+**Status:** Stub claimed.  Pending: inspect HYP-2164/HYP-2165/HYP-2167/HYP-2237/HYP-2239/HYP-2240 scripts, build an owner-deletion derivative atlas over AP/Vstar/2AP, run Tournament Analysis over retained address coordinates, and upgrade HYP-2241.
+
 ## codex-2026-06-05-S665 - Address-coordinate derivative repair atlas (HYP-2240)
 
 **Prompt:** Search across the web and repo for the pattern: find a scalar/product collision, attach the missing fraction/address coordinate, then unroll it back into a derivative sum.
