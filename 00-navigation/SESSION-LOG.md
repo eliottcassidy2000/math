@@ -1,5 +1,19 @@
 # Session Log
 
+## codex-2026-06-05-S670 - Metagraph ultrafilter and divisor-210 descent (HYP-2245)
+
+**Prompt:** Treat open intervals/reals/Euclidean spaces and tournaments/even graphs as equinumerosity shadows, then develop the user's ultrafilter picture: the tournament metagraph resembles the divisor lattice of `210`, with upper/lower sets corresponding to black/blue lines.
+**Integration:** Fast-forwarded over incoming S669/HYP-2244 and used it as the parent warning: equinumerosity becomes usable only after attaching a retained profile.  Also used MISTAKE-033's correction that blue/black is complement tiling inside the fixed-base-path cube, not tournament complement `T^op`.
+**Claimed namespace:** HYP-2245 and T739 reserved for the ultrafilter/descent continuation.
+**Computation:** Added `04-computation/metagraph_ultrafilter_divisor210_s670.py` and stored `05-knowledge/results/metagraph_ultrafilter_divisor210_s670.out`.  The script brute-forces ultrafilters on the divisor lattice of `210`, audits principal tile-coordinate filters on fixed-base-path tournament tiling cubes, compares fixed-path tiling counts with degree-even graph counts, and runs Tournament Analysis over interpretations of the analogy.
+**Findings:** The divisor lattice of `210=2*3*5*7` is `B_4`; the only ultrafilters are the four principal prime filters `U_p={d:p|d}`.  Each has 8 upper and 8 lower elements, decides every complement pair `d <-> 210/d`, and splits Hasse edges as lower-lower `12`, lower-upper `8`, upper-upper `12`.
+**Tiling quotient audit:** Raw tiling cubes have exact principal ultrafilters: choosing tile bit `k` decides every complement-tiling pair.  But this does not descend to tournament isomorphism classes.  Best principal coordinates have mixed iso classes at `n=4,5,6` equal to `1,5,35`; leaked complement pairs are `4/4`, `30/32`, and `512/512`.  Complement-tiling lines cross iso classes heavily: `3/4`, `28/32`, and `504/512` pairs cross for `n=4,5,6`.
+**Tournament/even synthesis:** Fixed-path tilings and labelled degree-even graphs both have `2^C(n-1,2)` elements, but degree-even graph iso counts are `3,7,16` at `n=4,5,6` versus tournament iso counts `4,12,56`.  This keeps the Royle-even theorem in the HYP-2244 bucket: a deeper count match still needs a predicate-preserving fiber functor.
+**Tournament Analysis:** Vertices are interpretations: LRC owner-filter profile, tiling-cube principal ultrafilter, divisor-210 principal ultrafilter, iso-metagraph filter sheaf, degree-even cycle space, Royle-even equinumerosity, and raw cardinality.  Fingerprints: `score_hist={0:1,1:1,2:1,3:1,5:3}`, `directed_3cycles=1`, `scc_sizes=[3,1,1,1,1]`, and `hamiltonian_paths=3`.  The top SCC contains the LRC owner-filter, tiling cube, and divisor-210 interpretations.
+**Synthesis:** The metagraph is not literally an ultrafilter.  It is a quotient base for ultrafilter side choices living on a richer cube/address space.  The proof obligation is descent: find a side choice that stays pure after quotienting, or add the smallest owner/carry/tile address that makes it pure.
+**Artifacts:** HYP-2245, T739, `04-computation/metagraph_ultrafilter_divisor210_s670.py`, `05-knowledge/results/metagraph_ultrafilter_divisor210_s670.out`, `07-reflections/metagraph-ultrafilter-divisor210-s670.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Search for quotient-pure filters on LRC14 owner/carry fibers and on isomorphism-invariant tile families; test whether any Royle-even graph functor preserves upper/lower filter membership together with `H`, `beta1`, and `c3` packet data.
+
 ## codex-2026-06-05-S669 - Equinumerosity versus outer-extension usability (HYP-2244)
 
 **Prompt:** Outer extension usability/embedding theorem, Friedman finite-tree/homeomorphic embeddings, recursion theory and micro-incompleteness, plus equinumerosity of open intervals/Euclidean space and tournaments/even graphs.

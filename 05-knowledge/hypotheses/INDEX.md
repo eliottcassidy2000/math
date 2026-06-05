@@ -702,6 +702,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2242 | Embedded maximality: a maximum is proof-meaningful only relative to its ambient embedding and allowed extensions. | S667 uses `(Q,<)` as the toy.  Finite chains and bounded denominator searches have internal maxima, but dense-order extensions and Dedekind cuts destroy them unless the missing cut/boundary address is named.  Transfer to LRC14: the visible `Res_27` floor shell is the finite image, local carries are ambient extensions, and S666's private-owner deletion flag is the cut address that separates all checked floor/strict fibers.  The embedded-maximality lane tournament is transitive with leader `LRC14 owner-private stability`. | codex-2026-06-05-S667; `HYP-2242-embedded-maximality-order-carrier.md`; `embedded_maximality_order_atlas_s667.py`; `embedded_maximality_order_atlas_s667.out`; `embedded-maximality-order-carrier-s667.md`; HYP-2241, HYP-2240, HYP-2239, HYP-2237, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2243 | Outer-extension usability: a quotient is usable only if allowed ambient growth has retained embedding/downset addresses that keep target fibers pure. | S668 source-anchors the idea in Harvey Friedman's finite-tree insertion, homeomorphic-embedding reverse mathematics, and invariant maximality/usability chapters, while using "outer extension" as local repo terminology.  Bounded toy: 3-colored rooted trees through 5 nodes, one-leaf outer extensions, target predicate `0 -> 1 -> 2`.  Coarse channels leak (`size_height` 6 mixed, `color_hist` 10, `frontier` 46, raw `outer_address` 55), while `small_embedding_profile`, `full_embedding_profile`, and `address_plus_small_embedding` all have `0` mixed fibers.  Tournament Analysis ranks `address_plus_small_embedding` first. | codex-2026-06-05-S668; `HYP-2243-outer-extension-usability-embedding.md`; `outer_extension_usability_friedman_s668.py`; `outer_extension_usability_friedman_s668.out`; `outer-extension-usability-friedman-s668.md`; HYP-2242, HYP-2241, HYP-2240, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2244 | Equinumerosity is not outer-extension usability; cardinal/count equality must be repaired by deletion, link, embedding, or retained-fiber profiles before it can transfer predicates. | S669 builds equal-cardinality carriers `line_P27`, `plane_3x9`, and `space_3x3x3`, all with `|V|=27`.  Cardinality gives one mixed dimension bucket, deletion splits only `1D` from higher dimensions, and degree/growth/small-embedding profiles separate all three.  Outer layer extension changes size and some boundary/growth data while the dimension signature stays stable.  The Royle/even-graph side is the same warning: count equality needs a functor preserving `H`, `beta1`, packet, or embedding data before it is proof-usable. | codex-2026-06-05-S669; `HYP-2244-equinumerosity-outer-extension-usability.md`; `equinumerosity_outer_extension_s669.py`; `equinumerosity_outer_extension_s669.out`; `equinumerosity-outer-extension-usability-s669.md`; HYP-2243, HYP-2242, HYP-2187, HYP-2186, HYP-2236 |
+| HYP-2245 | The metagraph-ultrafilter slogan should be read as a descent/sheaf claim: principal ultrafilters are literal on Boolean tiling/address cubes, while tournament isomorphism quotients leak unless the missing address is retained. | S670 proves the divisor lattice of `210=2*3*5*7` has exactly the four principal prime ultrafilters, each deciding `d <-> 210/d`.  Fixed-base-path tiling cubes have the same exact principal-filter behavior under complement tiling, but the iso quotient leaks: best coordinates have mixed classes `1,5,35` at `n=4,5,6`, and leaked complement pairs `4/4,30/32,512/512`.  Thus the metagraph is not literally an ultrafilter; it is the quotient base for an ultrafilter sheaf.  LRC14 should search for owner/carry/proof-obligation filters that descend. | codex-2026-06-05-S670; `HYP-2245-metagraph-ultrafilter-sheaf.md`; `metagraph_ultrafilter_divisor210_s670.py`; `metagraph_ultrafilter_divisor210_s670.out`; `metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241, HYP-2240, HYP-2187, HYP-2167 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7395,6 +7396,99 @@ preserving `H`, `beta1`, and packet data.
 `05-knowledge/results/equinumerosity_outer_extension_s669.out`;
 `07-reflections/equinumerosity-outer-extension-usability-s669.md`; HYP-2243,
 HYP-2242, HYP-2187, HYP-2186, HYP-2236.
+
+## HYP-2245: Metagraph ultrafilter as quotient sheaf (codex-2026-06-05-S670)
+
+**STATUS:** OPEN descent/sheaf hypothesis with finite quotient-leak evidence.
+
+**WHAT:** The useful version of the user's "the tournament metagraph is an
+ultrafilter" slogan is:
+
+```text
+Boolean tiling cube + principal side-choice = literal ultrafilter
+isomorphism quotient = observer shadow
+mixed quotient fibers = missing address/proof-obligation coordinate
+```
+
+So the metagraph is not literally an ultrafilter in general. It is the quotient
+base over which ultrafilter side choices need descent data.
+
+**DIVISOR-210 MODEL:** S670 proves by brute force that the divisor lattice of
+`210=2*3*5*7`, ordered by divisibility, is the Boolean lattice `B_4` and has
+exactly four ultrafilters:
+
+```text
+U_p = {d : p divides d}, p in {2,3,5,7}.
+```
+
+Each `U_p` has 8 upper and 8 lower elements and decides every complement pair
+`d <-> 210/d`. For every prime choice the Hasse edge split is:
+
+```text
+lower -> lower : 12
+lower -> upper : 8
+upper -> upper : 12
+```
+
+This is the clean upper/lower, black/blue toy model.
+
+**TILING-CUBE AUDIT:** In the fixed-base-path tiling cube `Q_m`, choosing tile
+coordinate `k` gives the principal filter `{b : b_k=1}`. Complement tiling
+`b -> b XOR (2^m-1)` decides every raw pair exactly. This uses MISTAKE-033's
+correct rule: blue/black is complement tiling inside `Q_m`, not tournament
+complement `T^op`.
+
+**QUOTIENT LEAK:** The principal filters do not descend to tournament
+isomorphism classes. Best-coordinate audits:
+
+```text
+n=4: mixed classes=1,  leaked complement pairs=4/4
+n=5: mixed classes=5,  leaked complement pairs=30/32
+n=6: mixed classes=35, leaked complement pairs=512/512
+```
+
+Complement-tiling pairs cross iso classes heavily:
+
+```text
+n=4: same 1, different 3
+n=5: same 4, different 28
+n=6: same 8, different 504
+```
+
+**EQUINUMEROSITY CAUTION:** Fixed-path tilings and labelled degree-even graphs
+both have `2^C(n-1,2)` elements, but degree-even graph iso counts are `3,7,16`
+at `n=4,5,6`, while tournament iso counts are `4,12,56`. The Royle-even
+theorem is the deeper count equality, but HYP-2244 still applies: count equality
+needs retained fiber data to transfer predicates.
+
+**TOURNAMENT ANALYSIS:** Vertices are interpretations of the analogy:
+`LRC_owner_filter_profile`, `tiling_cube_principal_ultrafilter`,
+`divisor210_principal_ultrafilter`, `iso_metagraph_filter_sheaf`,
+`degree_even_cycle_space`, `Royle_even_equinumerosity`, and `raw_cardinality`.
+Observable:
+`(literal filter law, complement decision, quotient descent, retained address
+profile, LRC actionability)`. The tournament has
+`score_hist={0:1,1:1,2:1,3:1,5:3}`, `directed_3cycles=1`,
+`scc_sizes=[3,1,1,1,1]`, and `hamiltonian_paths=3`.
+
+**LRC14 TRANSFER:** Do not assume vertices are runners/arcs. Candidate vertex
+sets include runners, gaps, fixed circle sections, boundaries, wall-crossing
+events, residues, cover arcs, Fourier modes, matroid circuits, owner bits,
+carry cocycles, and proof obligations. A usable LRC14 filter is an upper/lower
+choice that remains pure for floor-vs-strict status over the `Res_27`
+carry-owner lift. If it leaks, add the smallest address coordinate that repairs
+descent.
+
+**NEXT:** Search for quotient-pure filters on HYP-2241 owner/carry fibers and
+on isomorphism-invariant tile families; test whether any Royle-even graph
+functor preserves upper/lower membership together with `H`, `beta1`, and `c3`
+packet data.
+
+**See:** `05-knowledge/hypotheses/HYP-2245-metagraph-ultrafilter-sheaf.md`;
+`04-computation/metagraph_ultrafilter_divisor210_s670.py`;
+`05-knowledge/results/metagraph_ultrafilter_divisor210_s670.out`;
+`07-reflections/metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241,
+HYP-2240, HYP-2187, HYP-2167.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

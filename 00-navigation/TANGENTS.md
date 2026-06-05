@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T739** #ultrafilter #metagraph #divisor-lattice #blue-black #quotient-descent #lrc | certainty: finite divisor/cube proof + n=4..6 quotient-leak audit | source: codex-2026-06-05-S670
+The divisor lattice of `210=2*3*5*7` is `B_4`; its only ultrafilters are the four principal prime filters, each splitting `d <-> 210/d` into one upper and one lower element.  The fixed-base-path tiling cube has the same exact principal-filter behavior under complement tiling, but the tournament iso quotient leaks immediately: best principal coordinates have mixed iso classes at `n=4,5,6` equal to `1,5,35`, and complement-pair leaks `4/4,30/32,512/512`.  So the metagraph is not literally an ultrafilter; it is a quotient base for an ultrafilter sheaf, and LRC14 should search for owner/carry filters that descend.  See HYP-2245.
+
 **T738** #equinumerosity #outer-extension #homeomorphism #friedman #tournaments #Royle-even #dimension-profile | certainty: finite cardinal-collision toy + repo synthesis | source: codex-2026-06-05-S669
 Equinumerosity is the count/cardinal shadow; outer-extension usability requires a retained deletion, link, embedding, or fiber profile.  S669's equal-cardinality carriers `line_P27`, `plane_3x9`, and `space_3x3x3` all have `|V|=27`; cardinality gives one mixed dimension bucket, deletion only splits `1D` from higher dimensions, and degree/growth/small-embedding profiles separate all three.  Royle-even/tournament count equality remains a proof shadow until a functor preserves `H`, `beta1`, packet, or embedding data.  See HYP-2244.
 
