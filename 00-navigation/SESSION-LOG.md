@@ -3,8 +3,12 @@
 ## codex-2026-06-05-S658 - Small carrier atlases for missed frontier lanes (HYP-2234)
 
 **Prompt:** Spend a long session working on some of the HYP-2233 missed-frontier lanes.
-**Claimed namespace:** HYP-2234 and T727 reserved with honest stubs before the full computations.  Target lanes are tournament reconstruction decks, union-closed frequency carriers, and finite-field Kakeya/Falconer incidence toys.
-**Status:** In progress.  Goal is small predicate-preserving carrier atlases, not external conjecture proof claims.
+**Integration:** Claimed HYP-2234/T727 and checkpointed before computation.  Followed HYP-2233's small-first work queue, plus older reflection requests for toy projection-residue tables for graph decks and union-closed families.
+**Computation:** Added `04-computation/frontier_small_carriers_s658.py` and stored `05-knowledge/results/frontier_small_carriers_s658.out`.  The script recursively generates tournament isomorphism classes through `n=6`, enumerates union-closed families up to coordinate permutation through `m=4`, and scans all one-line-per-direction Kakeya choices over `F_p^2` for `p=3,5,7`.
+**Findings:** Tournament scalar signatures `(H,score,c3,SCC)` collide and raw vertex-decks also collide through `n=6`; adding sorted `(H-H_card,c3-c3_card,deleted score)` loss profiles resolves every checked bucket.  Union-closed sorted frequency vectors separate canonical families through `m=3` but collide at `m=4`; set pressure `sum_B |A union B|` separates all `366` canonical `m=4` families.  Finite-field Kakeya line-choice minima are `7,17,31` for `p=3,5,7`, fitting `(p^2+2p-1)/2`, with stable multiplicity profiles and sampled distance-fiber side channels.
+**Tournament Analysis:** Vertices are worked lanes, with observable `(finite_exactness, ambiguity_reduction, side_channel_visibility, near_term_actionability)`.  The route tournament is transitive: `union_closed_frequency > tournament_decks > finite_field_incidence`, with `score_hist={0:1,1:1,2:1}`, `directed_3cycles=0`, and one Hamiltonian path.
+**Artifacts:** HYP-2234, T727, `04-computation/frontier_small_carriers_s658.py`, `05-knowledge/results/frontier_small_carriers_s658.out`, `07-reflections/frontier-small-carrier-atlases-s658.md`, plus hypothesis-index, result-index, concept-map, and tangent updates.
+**Handoff:** Audit whether the tournament loss profile is deck-visible; classify the `m=4` union-closed frequency collision buckets; affine-classify minimum finite-field Kakeya line-choice sets and compare distance fibers; then apply the scalar-collision/side-channel-repair template to finite unit-distance coloring.
 
 ## codex-2026-06-05-S657 - Missed important problem frontier scout (HYP-2233)
 

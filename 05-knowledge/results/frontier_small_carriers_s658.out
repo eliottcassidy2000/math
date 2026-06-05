@@ -1,0 +1,70 @@
+S658 frontier small-carrier atlases
+========================================================================
+
+A. Tournament reconstruction deck atlas
+  n=3 classes=2 scalar=(2, 1, 0) full_deck=(1, 2, 1) scalar_deck=(1, 2, 1) loss_deck=(2, 1, 0)
+    worst_scalar_bucket=['0x0']
+    worst_full_deck_bucket=['0x0', '0x2']
+    worst_scalar_deck_bucket=['0x0', '0x2']
+  n=4 classes=4 scalar=(4, 1, 0) full_deck=(3, 2, 1) scalar_deck=(3, 2, 1) loss_deck=(4, 1, 0)
+    worst_scalar_bucket=['0x0']
+    worst_full_deck_bucket=['0x2', '0x5']
+    worst_scalar_deck_bucket=['0x2', '0x5']
+  n=5 classes=12 scalar=(11, 2, 1) full_deck=(11, 2, 1) scalar_deck=(11, 2, 1) loss_deck=(12, 1, 0)
+    worst_scalar_bucket=['0x8', '0xa']
+    worst_full_deck_bucket=['0x28', '0x29']
+    worst_scalar_deck_bucket=['0x28', '0x29']
+  n=6 classes=56 scalar=(40, 4, 14) full_deck=(52, 2, 4) scalar_deck=(51, 2, 5) loss_deck=(56, 1, 0)
+    worst_scalar_bucket=['0x99', '0x9a', '0xb1', '0xb5']
+    worst_full_deck_bucket=['0x18', '0x1c']
+    worst_scalar_deck_bucket=['0x18', '0x1c']
+
+B. Union-closed frequency atlas
+  m=1 canonical_families=2 failures=0 tight=1 min_ratio=1/2
+    witness_count_hist={1: 2}
+    freq_buckets=(2, 1, 0) freq+size=(2, 1, 0) freq+pressure=(2, 1, 0)
+    min_examples=['0x3']
+  m=2 canonical_families=8 failures=0 tight=3 min_ratio=1/2
+    witness_count_hist={1: 3, 2: 5}
+    freq_buckets=(8, 1, 0) freq+size=(8, 1, 0) freq+pressure=(8, 1, 0)
+    min_examples=['0x3', '0x9', '0xf']
+  m=3 canonical_families=36 failures=0 tight=6 min_ratio=1/2
+    witness_count_hist={1: 5, 2: 14, 3: 17}
+    freq_buckets=(36, 1, 0) freq+size=(36, 1, 0) freq+pressure=(36, 1, 0)
+    min_examples=['0x3', '0x9', '0xf', '0x81', '0x99', '0xff']
+  m=4 canonical_families=366 failures=0 tight=11 min_ratio=1/2
+    witness_count_hist={1: 8, 2: 63, 3: 153, 4: 142}
+    freq_buckets=(297, 4, 58) freq+size=(336, 3, 22) freq+pressure=(366, 1, 0)
+    min_examples=['0x3', '0x9', '0xf', '0x81', '0x99', '0xff']
+
+C. Finite-field Kakeya/Falconer toy atlas
+  p=3 choices=81 min_size=7 min_count=72
+    size_hist={7: 72, 9: 9}
+    min_multiplicity_profiles={'((1, 3), (2, 3), (3, 1))': 72}
+    sampled_min_distance_stats={'(2, 2, 2, ((2, 7),))': 72}
+  p=5 choices=15625 min_size=17 min_count=3000
+    size_hist={17: 3000, 18: 4000, 19: 8000, 21: 600, 25: 25}
+    min_multiplicity_profiles={'((1, 6), (2, 9), (3, 2))': 3000}
+    sampled_min_distance_stats={'(5, 4, 5, ((4, 1), (5, 16)))': 171, '(5, 5, 5, ((5, 17),))': 85}
+  p=7 choices=5764801 min_size=31 min_count=16464
+    size_hist={31: 16464, 32: 98784, 33: 889056, 34: 1646400, 35: 1580544, 36: 987840, 37: 493920, 39: 49392, 43: 2352, 49: 49}
+    min_multiplicity_profiles={'((1, 9), (2, 19), (3, 3))': 16464}
+    sampled_min_distance_stats={'(6, 6, 6, ((6, 31),))': 144, '(6, 5, 6, ((5, 2), (6, 29)))': 74, '(6, 5, 6, ((5, 1), (6, 30)))': 38}
+
+D. Cross-lane Tournament Analysis
+  lane=tournament_decks metric=(5, 2, 5, 5) note=raw vertex-decks collide through n=6, but the H/c3/deleted-score loss lift resolves all checked buckets
+  lane=union_closed_frequency metric=(5, 3, 4, 5) note=Frankl holds through m=4 but frequency vectors are visibly lossy
+  lane=finite_field_incidence metric=(4, 4, 5, 4) note=Kakeya line-choice carriers expose multiplicity and distance side channels
+  tournament={'top_order': ['union_closed_frequency', 'tournament_decks', 'finite_field_incidence'], 'score_hist': {0: 1, 1: 1, 2: 1}, 'directed_3cycles': 0, 'hamiltonian_paths': 1, 'edges': [('tournament_decks', 'finite_field_incidence'), ('union_closed_frequency', 'tournament_decks'), ('union_closed_frequency', 'finite_field_incidence')]}
+
+E. Practical synthesis
+  Reconstruction: raw vertex-decks and H/score/c3/SCC scalars collide
+  through n=6; scalar card-decks help, and the H/c3/deleted-score loss
+  profile resolves every checked collision.  That loss profile is the
+  first side-channel lift to test before broader graph decks.
+  Union-closed: the half-frequency witness is easy at m<=4, but sorted
+  frequency vectors forget many closure systems; set-pressure is a cheap
+  reattachment channel.
+  Finite-field incidence: line-choice Kakeya sets give a small exact
+  direction carrier where multiplicity profiles and distance fibers can be
+  tracked together before touching Euclidean Kakeya/Falconer questions.
