@@ -704,7 +704,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2244 | Equinumerosity is not outer-extension usability; cardinal/count equality must be repaired by deletion, link, embedding, or retained-fiber profiles before it can transfer predicates. | S669 builds equal-cardinality carriers `line_P27`, `plane_3x9`, and `space_3x3x3`, all with `|V|=27`.  Cardinality gives one mixed dimension bucket, deletion splits only `1D` from higher dimensions, and degree/growth/small-embedding profiles separate all three.  Outer layer extension changes size and some boundary/growth data while the dimension signature stays stable.  The Royle/even-graph side is the same warning: count equality needs a functor preserving `H`, `beta1`, packet, or embedding data before it is proof-usable. | codex-2026-06-05-S669; `HYP-2244-equinumerosity-outer-extension-usability.md`; `equinumerosity_outer_extension_s669.py`; `equinumerosity_outer_extension_s669.out`; `equinumerosity-outer-extension-usability-s669.md`; HYP-2243, HYP-2242, HYP-2187, HYP-2186, HYP-2236 |
 | HYP-2245 | The metagraph-ultrafilter slogan should be read as a descent/sheaf claim: principal ultrafilters are literal on Boolean tiling/address cubes, while tournament isomorphism quotients leak unless the missing address is retained. | S670 proves the divisor lattice of `210=2*3*5*7` has exactly the four principal prime ultrafilters, each deciding `d <-> 210/d`.  Fixed-base-path tiling cubes have the same exact principal-filter behavior under complement tiling, but the iso quotient leaks: best coordinates have mixed classes `1,5,35` at `n=4,5,6`, and leaked complement pairs `4/4,30/32,512/512`.  Thus the metagraph is not literally an ultrafilter; it is the quotient base for an ultrafilter sheaf.  LRC14 should search for owner/carry/proof-obligation filters that descend. | codex-2026-06-05-S670; `HYP-2245-metagraph-ultrafilter-sheaf.md`; `metagraph_ultrafilter_divisor210_s670.py`; `metagraph_ultrafilter_divisor210_s670.out`; `metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241, HYP-2240, HYP-2187, HYP-2167 |
 | HYP-2246 | Endpoint half-filter traces may recursively enumerate A000568: `Phi(T)=multiset_v(class(T-v), L/M/U side of outdeg(v))` is injective on tournament classes through `n=8`. | S671 builds A000568 through `n=8` by endpoint extension: enumerate `Aut(parent)`-orbits in the incident Boolean cube, then audit deletion/filter traces on raw child candidates.  For `7->8`, endpoint orbits give `54,256` candidates versus `2,097,152` fixed-path tilings and `268,435,456` labelled tournaments.  At `n=8`, scalar `(score,c3,SCC)` has `136` mixed buckets, unpaired card-deck has `2`, while half-filter, paired-score, and paired-c3-loss traces have `0`.  The two card-deck collision buckets are regular strong classes with identical `c3=20`, identical score histograms, and paired Hamiltonian counts `633` and `645`; the missing coordinate is an `L/U` owner address.  Candidate fallback audit shows zero mixed half-filter buckets through `7->8`, so full child canonicalization is needed only for future mixed trace buckets. | codex-2026-06-05-S671; `HYP-2246-endpoint-half-filter-enumeration.md`; `ultrafilter_endpoint_enumeration_s671.py`; `ultrafilter_endpoint_enumeration_s671.out`; `endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236, HYP-2228, HYP-2187, HYP-2209 |
-| HYP-2246 | STUB: Paris-Harrington turns ultrafilter side-choice into a bad-coloring outer-extension tree; the largeness condition blocks tail escape and the least forced stage outruns PA-provably recursive bounds. | Claimed for S671.  Target: exact small pair-coloring miniature, small arity-3 search-pressure scout, and repo translation to metagraph quotient descent, LRC owner/carry filters, color-critical unit-distance, and CH/generic side channels. | codex-2026-06-05-S671; `HYP-2246-paris-harrington-ultrafilter-coloring.md`; HYP-2245, HYP-2244, HYP-2243, HYP-2232, HYP-2189 |
+| HYP-2247 | Paris-Harrington adds an extension-rank derivative to ultrafilter side-choice: bad colorings are an outer-extension tree, and relative largeness blocks tail escape by killing coherent bad branches. | S672 exact pair-coloring miniature for `x=2` gives bad counts `1,2,6,18,12,0` for `N=1..6`; at `N=4`, only the middle edge-count shell `e=3` extends (`12` nodes), while upper/lower shells `e=2,4` are dead, and at `N=5` the middle shell `e=5` has no children.  The ternary scout shows random pressure collapses by `N=10..12`, but local repair still finds bad colorings through `N=20`, emphasizing tail-escape rank rather than raw density.  Transfer route: `upper/lower filter side -> L/M/U owner address -> bad-child extension profile`; LRC14 target is a rank drop after HYP-2241's owner-private deletion filter on coherent `+27` carry/owner lifts. | codex-2026-06-05-S672; `HYP-2247-paris-harrington-ultrafilter-coloring.md`; `paris_harrington_ultrafilter_coloring_s672.py`; `paris_harrington_ultrafilter_coloring_s672.out`; `paris-harrington-ultrafilter-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2244, HYP-2243, HYP-2241, HYP-2232, HYP-2189 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7595,6 +7595,98 @@ LRC14 carry/owner fibers.
 `05-knowledge/results/ultrafilter_endpoint_enumeration_s671.out`;
 `07-reflections/endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236,
 HYP-2228, HYP-2187, HYP-2209.
+
+## HYP-2247: Paris-Harrington ultrafilter coloring recursion (codex-2026-06-05-S672)
+
+**STATUS:** OPEN recursion/filter-rank hypothesis with exact pair-coloring
+miniature.
+
+**WHAT:** Treat Paris-Harrington as a recursion-rank layer over the
+metagraph-ultrafilter thread:
+
+```text
+coloring of tuple atoms = side-choice on a Boolean atom cube
+bad coloring = no relatively-large homogeneous filter trace
+outer extension = add a point and extend side choices coherently
+least PH witness stage = first height where every bad branch dies
+```
+
+This adds the missing derivative coordinate:
+
+```text
+upper/lower side membership + extension rank/profile.
+```
+
+**EXACT PAIR MINIATURE:** For `x=2`, color pairs into two colors and seek a
+relatively-large homogeneous triple.  Exact bad-coloring counts for `N=1..6`
+are:
+
+```text
+1, 2, 6, 18, 12, 0
+```
+
+The tiny forced stage is `N=6`.  The outer-extension tree is sharper than the
+counts:
+
+```text
+N=4: extension distribution {0: 6, 1: 12}
+N=5: extension distribution {0: 12}
+```
+
+At `N=4`, only the middle edge shell extends:
+
+```text
+edge count 2: dead
+edge count 3: alive once
+edge count 4: dead
+```
+
+At `N=5`, the surviving middle shell `edge_count=5` dies.
+
+**TERNARY SCOUT:** For triples colored into three colors and a relatively-large
+4-set target, random `2000`-trial pressure sees avoid counts
+`1921,1679,1131,499,130,25,0,0,0` for `N=4..12`, but heuristic local repair
+still finds explicit bad colorings for every `N=10..20` tested.  This is not a
+proof frontier; it is the tail-escape signal.  Raw density can collapse while a
+coherent bad branch persists.
+
+**ROUTE TOURNAMENT:** Vertices are transfer routes:
+`PH_initial_segment_filter`, `bad_coloring_outer_extension_tree`,
+`endpoint_half_filter_trace`, `metagraph_ultrafilter_sheaf`,
+`LRC_owner_carry_filter_rank`, `unit_distance_spine_bulk_filter`,
+`ordinary_Ramsey_shadow`, `raw_coloring_count`, and
+`generic_ultrafilter_CH_analogy`.  The majority route tournament is transitive:
+`score_histogram={0:1,...,8:1}`, `directed_3cycles=0`, singleton SCCs, and one
+Hamiltonian path.  Top route: `PH_initial_segment_filter`.
+
+**TRANSFER:** The chain is:
+
+```text
+HYP-2245: upper/lower filter side on cube, quotient leak on metagraph
+HYP-2246: L/M/U deletion-owner address repairs endpoint enumeration
+HYP-2247: bad-child extension profile repairs recursive tail escape
+```
+
+**LRC14 TARGET:** Define a bad node as an owner/carry fiber over the `C=27`
+shell with no lonely witness.  Outer extensions are coherent `+27` carry-owner
+lifts.  After attaching the HYP-2241 owner-private deletion bit, try to prove
+a strict drop in bad-child rank on every local carry extension preserving the
+visible `Res_27` floor shadow.
+
+**UNIT-DISTANCE TARGET:** Treat the unit Hamiltonian spine as the named initial
+segment and bulk/slab/cap coordinates as the tail.  A useful obstruction rank
+is the spine-owner deletion profile plus remaining bad-extension count, not
+edge count alone.
+
+**NEXT:** Define the LRC14 bad-child rank on HYP-2241 AP/Vstar/2AP carry
+fibers; add a SAT/CP exact lower-bound search for the `x=3` miniature; test
+`half-filter trace + child-count profile` as an endpoint enumerator refinement.
+
+**See:** `05-knowledge/hypotheses/HYP-2247-paris-harrington-ultrafilter-coloring.md`;
+`04-computation/paris_harrington_ultrafilter_coloring_s672.py`;
+`05-knowledge/results/paris_harrington_ultrafilter_coloring_s672.out`;
+`07-reflections/paris-harrington-ultrafilter-coloring-s672.md`; HYP-2246,
+HYP-2245, HYP-2241, HYP-2243, HYP-2189.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
