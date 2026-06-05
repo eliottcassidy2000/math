@@ -700,6 +700,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2240 | Address-coordinate derivative repair: scalar/product collisions should be repaired by attaching the missing fraction/address coordinate and then unrolling the repaired object into a derivative sum. | S665 ranks 20 repo/web repair lanes.  Exact leaders are LRC14 carry state and tournament deck paired owners; finite side labs include Vieta branch splitting over `F_17`, toy log derivatives of prime products, and Goldbach/Lemoine pair reconstruction.  The repair-lane tournament has `directed_3cycles=16`, `scc_sizes=[8,1,1,1,1,1,1,1,1,1,1,1,1]`, and `hamiltonian_paths=425`.  External anchors include graph reconstruction/Kocay matrices, vertex-pair parameters, explicit formulae, Ihara/Selberg trace formulae, Weyl `m`-functions, J-fractions, Tutte activities, and matroid Hodge address data. | codex-2026-06-05-S665; `HYP-2240-address-coordinate-derivative-repair.md`; `address_coordinate_derivative_repair_s665.py`; `address_coordinate_derivative_repair_s665.out`; `address-coordinate-derivative-repair-s665.md`; HYP-2239, HYP-2238, HYP-2236, HYP-2235, HYP-2218, HYP-2212, HYP-2171 |
 | HYP-2241 | LRC14 owner-derivative no-leak: in the AP/Vstar/2AP `Res_27` carry fiber, visible shell collisions are repaired by a paired owner-deletion bit. | S666 checks `1134` probes: `3` floor atoms and `1131` strict local carries, including all `858` weight-3 local `+27` carries.  Visible shadow has three mixed buckets (`1` floor + `377` strict each), cheap-pair data still leaks, paired owner cover counts leave exactly two singleton leaks (`AP:w1:carry(11)`, `Vstar:w1:carry(11)`), and adding the private-owner deletion flag gives `0` mixed fibers while remaining carry-free.  Repair-channel Tournament Analysis is transitive with top channel `visible+owner_private_flag`. | codex-2026-06-05-S666; `HYP-2241-lrc14-owner-derivative-no-leak.md`; `lrc14_owner_derivative_repair_s666.py`; `lrc14_owner_derivative_repair_s666.out`; `lrc14-owner-derivative-no-leak-s666.md`; HYP-2240, HYP-2239, HYP-2237, HYP-2231, HYP-2230, HYP-2222, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2242 | Embedded maximality: a maximum is proof-meaningful only relative to its ambient embedding and allowed extensions. | S667 uses `(Q,<)` as the toy.  Finite chains and bounded denominator searches have internal maxima, but dense-order extensions and Dedekind cuts destroy them unless the missing cut/boundary address is named.  Transfer to LRC14: the visible `Res_27` floor shell is the finite image, local carries are ambient extensions, and S666's private-owner deletion flag is the cut address that separates all checked floor/strict fibers.  The embedded-maximality lane tournament is transitive with leader `LRC14 owner-private stability`. | codex-2026-06-05-S667; `HYP-2242-embedded-maximality-order-carrier.md`; `embedded_maximality_order_atlas_s667.py`; `embedded_maximality_order_atlas_s667.out`; `embedded-maximality-order-carrier-s667.md`; HYP-2241, HYP-2240, HYP-2239, HYP-2237, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
+| HYP-2243 | Outer-extension usability: a quotient is usable only if allowed ambient growth has retained embedding/downset addresses that keep target fibers pure. | S668 source-anchors the idea in Harvey Friedman's finite-tree insertion, homeomorphic-embedding reverse mathematics, and invariant maximality/usability chapters, while using "outer extension" as local repo terminology.  Bounded toy: 3-colored rooted trees through 5 nodes, one-leaf outer extensions, target predicate `0 -> 1 -> 2`.  Coarse channels leak (`size_height` 6 mixed, `color_hist` 10, `frontier` 46, raw `outer_address` 55), while `small_embedding_profile`, `full_embedding_profile`, and `address_plus_small_embedding` all have `0` mixed fibers.  Tournament Analysis ranks `address_plus_small_embedding` first. | codex-2026-06-05-S668; `HYP-2243-outer-extension-usability-embedding.md`; `outer_extension_usability_friedman_s668.py`; `outer_extension_usability_friedman_s668.out`; `outer-extension-usability-friedman-s668.md`; HYP-2242, HYP-2241, HYP-2240, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7215,6 +7216,95 @@ positive tax, or is a globally coherent scalar floor lift.
 `05-knowledge/results/embedded_maximality_order_atlas_s667.out`;
 `07-reflections/embedded-maximality-order-carrier-s667.md`; HYP-2241, HYP-2240,
 HYP-2239, HYP-2237, HYP-2171, HYP-2167, HYP-2165, HYP-2164.
+
+## HYP-2243: Outer extension usability and embedding (codex-2026-06-05-S668)
+
+**STATUS:** OPEN method hypothesis with bounded finite-tree evidence.
+
+**WHAT:** Extend embedded maximality into a usability theorem for ambient growth:
+
+```text
+outer extension = allowed growth of the ambient object while preserving the
+                  internal bonds of the current object;
+
+usable quotient = a quotient/address channel whose fibers remain pure for the
+                  target predicate after every allowed outer extension;
+
+embedding address = the retained finite downset/profile of probes embedding
+                    into the extension, plus the extension address.
+```
+
+Repo-form theorem target:
+
+```text
+Outer Extension Usability Theorem:
+  a quotient is usable only if every allowed outer extension has a retained
+  address that keeps the target predicate pure.
+
+Outer Extension Embedding Theorem:
+  for tree-like or proof-obligation-like carriers, the natural retained address
+  is a bounded embedding/downset profile plus the insertion/extension address.
+```
+
+**WEB/SOURCE ANCHORS:** The prompt linked Harvey Friedman's publication page and
+downloadable manuscripts:
+`https://u.osu.edu/friedman.8/foundational-adventures/publications/` and
+`https://u.osu.edu/friedman.8/foundational-adventures/downloadable-manuscripts/`.
+Relevant anchors include `Reverse Mathematics of Homeomorphic Embeddings`,
+`Internal finite tree embeddings`, `Finite Trees and the Necessary Use of Large
+Cardinals`, `Invariant Maximality and Incompleteness`, and the 2025 invariant
+maximality derivation/reversal chapters.  S668 did not find the exact phrase
+"outer extension" in the opened PDFs, so the phrase is repo terminology.
+
+**EVIDENCE:** S668 builds a bounded colored rooted-tree universe under rooted
+homeomorphic embedding.  One-step outer extension adds a colored leaf and
+records `(parent_path_colors, new_leaf_color, parent_degree_before)`.  Target
+predicate: the extended tree contains the rooted homeomorphic color chain
+`0 -> 1 -> 2`.
+
+Main `3`-color, `max_nodes=5` audit:
+
+- `tree_count=1788`;
+- `outer_extension_rows=3204`;
+- `tree_of_3_extensions=295`;
+- `size_height`: `10` groups, `6` mixed fibers, max bucket `1215`;
+- `color_hist`: `52` groups, `10` mixed, max bucket `332`;
+- `frontier`: `633` groups, `46` mixed, max bucket `21`;
+- `outer_address`: `1899` groups, `55` mixed, max bucket `9`;
+- `small_embedding_profile`: `1500` groups, `0` mixed, max bucket `14`;
+- `full_embedding_profile`: `1785` groups, `0` mixed, max bucket `3`;
+- `address_plus_small_embedding`: `3120` groups, `0` mixed, max bucket `2`.
+
+The raw outer insertion address leaks; the embedding/downset profile is what
+repairs the predicate.
+
+**N-COLOR SWEEP:** Through `max_nodes=4`, colors `1,2` have no `0->1->2` rows.
+At `3` colors, the first target rows appear (`21`) and `size_height` has `3`
+mixed fibers while `small_embedding_profile` has `0`.  At `4` colors, target
+rows rise to `29`, `size_height` still has `3` mixed, and `small_embedding_profile`
+still has `0`.  This is the bounded "tree of 3" threshold.
+
+**TOURNAMENT ANALYSIS:** Vertices are quotient/address channels.  The observable
+is `(exactness, max_bucket score, compression, embedding naturality, LRC
+transfer, actionability)`.  The channel tournament is transitive:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `directed_3cycles=0`, singleton
+SCCs, and `hamiltonian_paths=1`.  Top channel:
+`address_plus_small_embedding`.
+
+**LRC14 TRANSFER:** Translate internal tree to visible `Res_27` shell; outer
+leaf insertion to coherent `+27` carry/owner-route lift; homeomorphic embedding
+downset to a bounded proof-obligation profile over D/U/N owners, endpoint
+protectors, pair-pinches, and carry cocycles.  HYP-2241's private-owner deletion
+bit is the first small proof-obligation embedding address.
+
+**NEXT:** Build the LRC14 proof-obligation embedding profile and test it on
+coherent carry subspaces rather than local Hamming balls.
+
+**See:** `05-knowledge/hypotheses/HYP-2243-outer-extension-usability-embedding.md`;
+`04-computation/outer_extension_usability_friedman_s668.py`;
+`05-knowledge/results/outer_extension_usability_friedman_s668.out`;
+`07-reflections/outer-extension-usability-friedman-s668.md`; HYP-2242,
+HYP-2241, HYP-2240, HYP-2171, HYP-2167, HYP-2165, HYP-2164.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

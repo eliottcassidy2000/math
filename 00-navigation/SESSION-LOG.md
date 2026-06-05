@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-05-S668 - Outer extension usability and Friedman finite-tree embedding (HYP-2243)
+
+**Prompt:** Outer extension usability theorem, outer extension embedding theorem; tree of 3, recursion theory, infinite sequence of finite threes, `n` colors, homeomorphic embeddings/isomorphisms, micro incompleteness, Harvey Friedman.
+**Claimed namespace:** HYP-2243 and T737 reserved as the S668 continuation of HYP-2242/S667 embedded maximality.
+**Web/source integration:** Read Friedman's official publication and downloadable-manuscript pages.  Anchors used: `Reverse Mathematics of Homeomorphic Embeddings`, `Internal finite tree embeddings`, `Finite Trees and the Necessary Use of Large Cardinals`, `Invariant Maximality and Incompleteness`, `Concrete Mathematical Incompleteness: Basic Emulation Theory`, and the 2025 invariant-maximality derivation/reversal chapters.  The exact phrase "outer extension" was not found in the opened PDFs, so S668 uses it as repo terminology for allowed ambient growth preserving internal bonds.
+**Computation:** Added `04-computation/outer_extension_usability_friedman_s668.py` and stored `05-knowledge/results/outer_extension_usability_friedman_s668.out`.  The script generates 3-colored rooted finite trees through 5 nodes, defines rooted homeomorphic embedding, adds one colored leaf as an outer extension, and audits quotients for the predicate "contains a homeomorphic color chain `0 -> 1 -> 2`".
+**Findings:** The bounded universe has `1788` trees and `3204` one-step extension rows, with `295` target-positive extensions.  Coarse channels leak (`size_height` 6 mixed fibers, `color_hist` 10, `frontier` 46, raw `outer_address` 55).  Embedding/downset channels repair the leak: `small_embedding_profile`, `full_embedding_profile`, and `address_plus_small_embedding` all have `0` mixed fibers.  The `n`-color sweep through max size 4 shows the first nontrivial leaks at `3` colors, matching the user's "tree of 3" prompt.
+**Tournament Analysis:** Vertices are quotient/address channels.  The tournament is transitive: `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `directed_3cycles=0`, singleton SCCs, and `hamiltonian_paths=1`.  Top channel is `address_plus_small_embedding`.
+**Synthesis:** Outer-extension usability theorem (repo form): a quotient is usable only if every allowed outer extension has a retained address that keeps the predicate pure.  Outer-extension embedding theorem (repo form): the natural address is a bounded embedding/downset profile plus the extension address.  LRC14 translation: `Res_27` is the internal tree, `+27` carry is outer extension, and owner-private deletion is the first small embedding address.
+**Artifacts:** HYP-2243, T737, `04-computation/outer_extension_usability_friedman_s668.py`, `05-knowledge/results/outer_extension_usability_friedman_s668.out`, `07-reflections/outer-extension-usability-friedman-s668.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Build the LRC14 proof-obligation embedding profile: small D/U/N owner fragments, endpoint protector fragments, pair-pinch fragments, and carry-cocycle fragments under coherent `+27` carry/owner-route lifts.
+
 ## codex-2026-06-05-S667 - Embedded maximality order carrier (HYP-2242)
 
 **Prompt:** Merge in embedded maximality, with `(Q,<)` as the starting model, and extend beyond that.
