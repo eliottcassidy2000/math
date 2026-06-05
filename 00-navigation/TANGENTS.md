@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T732** #triune-carriers #lrc #n14 #continuants #owner-carry #side-channels | certainty: stub claimed + computation pending | source: codex-2026-06-05-S663
+Reserve the application lane for HYP-2238's pi trinity.  Translate sum/product/fraction into additive wall packets, local gcd/product obstruction shells, and recursive carry-owner continuants.  First target: LRC `n=14` AP/`Vstar`/`2AP` floor atoms and nearby carry perturbations; then transfer to OCF, tournament decks, unit distance, finite-field incidence, Goldbach/Lemoine, CH, and pi/e trace-norm carriers.  See HYP-2239.
+
 **T731** #pi #sum-product-fraction #continued-fractions #Wallis #Brouncker #side-channels | certainty: finite audit + method hypothesis | source: codex-2026-06-05-S662
 Pi should be carried as a trinity record: sums expose additive packets/moments, products expose local factors/norm channels, and fractions expose recursive boundary/owner state.  S662 compares Leibniz/Machin/Basel sums, Wallis product, and Brouncker fraction, then builds a representation-face tournament with the desired cycle `sum -> product -> fraction -> sum`; all three beat raw decimal.  Transfer: LRC14 should keep odd-wall sums, `C=27` product/gcd shells, and carry-owner continuants together.  See HYP-2238.
 
