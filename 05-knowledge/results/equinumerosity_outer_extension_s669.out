@@ -1,0 +1,86 @@
+==============================================================================
+S669 equinumerosity versus outer-extension usability
+==============================================================================
+
+Source anchors
+  Friedman official pages: homeomorphic embeddings, internal finite tree embeddings, finite functions / large cardinals, invariant maximality.
+  Royle et al.: tournaments and even graphs are equinumerous.
+  Topology anchor: cardinality does not preserve dimension/homeomorphism; deletion/link profiles are finite shadows.
+
+A. Equal-cardinality Euclidean toy
+  line_P27       dim=1 |V|=27 degree=((1, 2), (2, 25)) deletion=((1, 2), (2, 25)) profile=(('P3', True), ('branch3', False), ('branch5', False), ('C4', False), ('puncture_splits', True), ('max_ball2', 5))
+  plane_3x9      dim=2 |V|=27 degree=((2, 4), (3, 16), (4, 7)) deletion=((1, 27),) profile=(('P3', True), ('branch3', True), ('branch5', False), ('C4', True), ('puncture_splits', False), ('max_ball2', 11))
+  space_3x3x3    dim=3 |V|=27 degree=((3, 8), (4, 12), (5, 6), (6, 1)) deletion=((1, 27),) profile=(('P3', True), ('branch3', True), ('branch5', True), ('C4', True), ('puncture_splits', False), ('max_ball2', 19))
+
+  Interpretation: all three carriers have the same finite cardinal shadow |V|=27.
+  The 1D carrier is puncture-disconnected; 2D/3D are not.  Degree and growth profiles separate all three.
+
+B. Usability audit for the dimension predicate
+channel                        groups  mixed max_bucket
+cardinality                         1      1          3
+cardinality+deletion                2      1          2
+cardinality+degree                  3      0          1
+growth_profile                      3      0          1
+small_embedding_profile             3      0          1
+  Reading: cardinality alone has one mixed bucket containing dimensions 1,2,3.
+  Deletion repairs the 1D-vs-higher split but still mixes 2D/3D; local growth or embedding profiles repair the toy completely.
+
+C. Outer-extension check
+  extension operation=add an outer layer while preserving the internal carrier type
+  line_P27       -> line_P29       |V| 27->29 dim=1 full_profile_changed=False dimension_signature_changed=False
+  plane_3x9      -> plane_5x9      |V| 27->45 dim=2 full_profile_changed=True dimension_signature_changed=False
+  space_3x3x3    -> space_5x3x3    |V| 27->45 dim=3 full_profile_changed=True dimension_signature_changed=False
+  Reading: extension changes raw size and sometimes boundary/growth counts.
+  The dimension signature remains stable, which is the usability coordinate the cardinal shadow lacked.
+
+D. Royle/even-graph count shadow, imported from S617
+   n       graphs  tournaments  degree_even   naive_even
+   3            4            2            2            2
+   4           11            4            3            7
+   5           34           12            7           22
+   6          156           56           16          100
+   7         1044          456            -          588
+   8        12346         6880            -         5466
+   9       274668       191536            -        83132
+  10     12005168      9733056            -      2272112
+  11   1018997864    903753248            -    115244616
+  12 165091172592 154108311168            -  10982861424
+  S617 finding: degree-even and naive Burnside-even are not the Royle-even theorem.
+  Even when a true equinumerous class exists, HYP-2187 still asks for a fiber functor preserving H/beta1/packet data.
+  H splits by beta1 in the stored audit:
+    n=5: {9: [0, 1]}
+    n=6: {17: [0, 1], 23: [0, 1], 33: [0, 1], 37: [0, 1], 45: [0, 1]}
+
+E. S668 Friedman-tree compatibility
+  S668 finite-tree target=contains rooted homeomorphic color chain 0 -> 1 -> 2.
+  Coarse channels leaked: size_height mixed=6, color_hist=10, frontier=46, raw outer_address=55.
+  Embedding channels repaired: small_embedding_profile=0, full_embedding_profile=0, address_plus_small_embedding=0 mixed fibers.
+  S669 reading: cardinal/count equality is exactly the wrong level for outer-extension theorem transfer.
+
+F. Tournament Analysis over transfer channels
+  vertices=proof-transfer channels
+  observable=(cardinal fidelity, extension purity, dimension retention, tournament fiber retention, Friedman embedding fit, actionability)
+  switch=majority; tie Hamiltonian path=listed priority order
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  top_order:
+    address_plus_embedding             score=7 vector=(4, 5, 5, 4, 5, 5)
+    small_embedding_profile            score=6 vector=(4, 5, 5, 3, 5, 5)
+    local_growth_profile               score=5 vector=(3, 5, 5, 1, 3, 4)
+    (H,beta1,packet)_fiber             score=4 vector=(4, 4, 1, 5, 3, 4)
+    deletion_profile                   score=3 vector=(3, 3, 4, 1, 2, 4)
+    Royle_even_cardinal_theorem        score=2 vector=(5, 1, 0, 1, 0, 3)
+    bijection_without_profile          score=1 vector=(5, 1, 0, 1, 0, 2)
+    raw_cardinality                    score=0 vector=(5, 0, 0, 0, 0, 1)
+
+G. Repo theorem shape
+  Equinumerosity-to-usability repair:
+    A count-equivalent quotient can transfer a predicate only after attaching
+    the smallest deletion/link/embedding/fiber profile that is pure under
+    the allowed outer extensions.
+  LRC14 use:
+    visible Res_27/cardinal shadows are allowed to guide search, but proof
+    transfer must live in owner-private deletion, carry cocycle, endpoint
+    protector, and bounded proof-obligation embedding profiles.
