@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-05-S655 - LRC sin/cos even-odd wall carrier and n=14 no-leak target (HYP-2231)
+
+**Prompt:** Connect the sine/cos/cot odd/even prompt with the repo's even/odd number work, then use it to make progress on LRC 14.
+**Integration:** Treated the trigonometric split as typed proof data rather than formula analogy: `sin` is odd boundary/active-wall data, `cos` is derivative/slack response, and `cot` is a scalar log-derivative ledger that hides composite side channels.  Merged this with incoming HYP-2230/S654's parity/carry coordinate, HYP-2116's n=14 parity tower, HYP-2222's C=27 Pillai/gcd fixed clock, and S642/S643's Goldbach/Lemoine duplicate branch.
+**Computation:** Added `04-computation/lrc_sin_cos_parity_carrier_s655.py` and stored `05-knowledge/results/lrc_sin_cos_parity_carrier_s655.out`.  The script computes AP parity strata, exact AP/`Vstar` floor signatures, the even/odd bridge, an AP single-swap pinch census, a cotangent half-product side check, and Tournament Analysis over proof carriers.
+**Findings:** For AP at sampled even `n`, the active pair at `t=1/n` is always odd/odd `[1,n-1]`.  At `n=14`, odd speeds bind at `1/14`, while even strata have slack `2*delta`, `2*delta`, and `6*delta`.  AP and Vstar have exact `M=1/14`, the same six best times, active odd complement pairs `(1,13),(5,9),(3,11)` and reverses, and C=27 gcd-shell counts `{1:9,3:3,9:1}`.  The AP single-swap census has `195` primitive rows, `0` below-floor rows, only `12->24` tight, and `194` loose.
+**Synthesis:** The even/odd Goldbach/Lemoine diagonal `7+7=14` and `7+2*7=21` is a real scalar echo, but the actual LRC floor wall is off-diagonal odd complement pairs summing to `14`, together with slopes and C=27 shell labels.  The new proof target is an odd-wall no-leak lemma: odd boundary + even slack + C=27 gcd fixed pocket + owner/carry implies AP, Vstar, nonprimitive 2AP, or strict looseness.
+**Tournament Analysis:** Vertices are proof carriers rather than runners.  The majority tournament has `score_hist={0:1,1:1,2:1,3:1,5:3}`, one directed 3-cycle, SCC sizes `[3,1,1,1,1]`, and `3` Hamiltonian paths, ranking pair-sum pinch, odd boundary, and C=27 gcd shell as the top tied carriers.
+**Artifacts:** HYP-2231, T724, `04-computation/lrc_sin_cos_parity_carrier_s655.py`, `05-knowledge/results/lrc_sin_cos_parity_carrier_s655.out`, `07-reflections/lrc14-sin-cos-even-odd-wall-carrier-s655.md`, plus concept-map, result-index, and hypothesis-index updates.
+**Handoff:** Extend S655 from AP single swaps to a fixed-wall-pair search: enumerate rows preserving the odd complement wall, refine by `C=27` gcd-shell mass, then apply S611/S612 carry visibility.  Any surviving floor row should either be AP/`Vstar` or expose the missing owner/carry leak.
+
 ## codex-2026-06-05-S654 - LRC14 parity/carry bridge to even/odd pair carriers (HYP-2230)
 
 **Prompt:** Connect the repo's even/odd number work to LRC 14 and use it to make progress.

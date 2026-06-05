@@ -686,6 +686,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2228 | THM-410 interval witnesses, fixed-order upset bitsets, and square-node tournament substitution are enumeration speedup carriers for near-transitive and imprimitive tournament slices. | S652 validates THM-410's matching formula through `n=8`, counts interval-matching states with `c3<=10` (`188273` of `2390480` matchings at `n=14`), verifies the general upset identity `r_xy=r_yz!=r_xz` through labelled `n=6`, defines the square-template Burnside companion sequence `1,1,12,704,2127984`, verifies `Sq(T)=T[T]` score/`c3` formulas through labelled `n=5`, and checks exact block path-cover/macro-word formulas where naive H multiplicativity fails (`2721` vs `3`; `3159` vs `81`). | codex-2026-06-05-S652; `HYP-2228-thm410-square-blowup-enumeration-speedups.md`; `thm410_square_blowup_enumeration_s652.py`; `thm410_square_blowup_enumeration_s652.out`; `thm410_square_blowup_speedups_s652.py`; `thm410_square_blowup_speedups_s652.out`; `thm410-square-blowup-enumeration-speedups-s652.md`; THM-410, HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115, OPEN-Q-055 |
 | HYP-2229 | Basel-type pi identities form a three-face period carrier: disjoint elementary packets, power-sum moments, and Bernoulli/von-Staudt local denominator data. | S653 computes `zeta(2k)/pi^(2k)` for `k<=12` from both Euler's Bernoulli formula and Newton identities applied to `zeta({2}^m)/pi^(2m)=1/(2m+1)!`; all entries agree.  The same scout records the disjoint-packet family `1/(2m+1)!`, rechecks the von Staudt chain `6->42->1806->1806`, and ranks proof lenses by Tournament Analysis with sine-product elementary packets first. | codex-2026-06-05-S653; `HYP-2229-basel-pi-family-carrier.md`; `basel_pi_family_carrier_s653.py`; `basel_pi_family_carrier_s653.out`; `basel-pi-family-carrier-s653.md`; HYP-2228, HYP-2227, HYP-2214, HYP-2211, HYP-1627, T252, THM-002 |
 | HYP-2230 | LRC14 parity and apex obstructions are one carry coordinate over the `C=27` lift: for `v=r+27k`, `v mod 2 = r+k` and `v mod 14 = r-k`, so `k` toggles even/odd parity while `14|v` iff `k=r mod 14`. | S654 uses the S611 exact maximin oracle to test the forced multiple-of-14 branch over AP and `V*`.  Every minimal apex carry is even and strict; closest AP is `28/365`, closest `V*` is `2/25`.  All one/two extra `+27` toggle neighborhoods around minimal apex carries (`2054` rows screened) have no near-floor/below-floor rows, and the Boolean parity lattice only has the zero-carry floor row in the near-floor screen.  Connects HYP-2218 even/odd same-pair projection and HYP-2229 Basel packet-vs-moment lesson to HYP-2167 carry conservativity. | codex-2026-06-05-S654; `HYP-2230-lrc14-parity-carry-bridge.md`; `lrc14_parity_carry_bridge_s654.py`; `lrc14_parity_carry_bridge_s654.out`; `lrc14-parity-carry-bridge-s654.md`; HYP-2167, HYP-2218, HYP-2229, THM-401 |
+| HYP-2231 | LRC `n=14` uses a sin/cos even-odd wall carrier: odd active walls are the sin-like boundary, even strata are cos-like derivative/slack, and the visible `(14,21)` Goldbach/Lemoine diagonal is only a scalar shadow. | S655 computes AP and `Vstar` at `n=14`, finding exact `M=1/14`, shared best times `1/14,3/14,5/14,9/14,11/14,13/14`, active odd wall pairs `(1,13),(5,9),(3,11)` and mirrors, and shared `C=27` gcd-shell counts `{1:9,3:3,9:1}`.  The AP single-swap census has `195` rows, `0` below, and one tight non-AP row `12->24`; cotangent half-products collapse to `1/C`, confirming that scalar trig products forget composite shell side channels.  The next proof target is an odd-wall/gcd-shell/carry-owner no-leak lemma downstream of HYP-2230's parity/carry coordinate. | codex-2026-06-05-S655; `HYP-2231-lrc14-sin-cos-even-odd-wall-carrier.md`; `lrc_sin_cos_parity_carrier_s655.py`; `lrc_sin_cos_parity_carrier_s655.out`; `lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230, HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164, HYP-2116, THM-401, THM-369 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6232,6 +6233,75 @@ coherent carry cocycle, scalar AP/`V*` route, or owner/Cprime certificate.
 `05-knowledge/results/lrc14_parity_carry_bridge_s654.out`;
 `07-reflections/lrc14-parity-carry-bridge-s654.md`; HYP-2167, HYP-2218,
 HYP-2229, THM-401.
+
+## HYP-2231: LRC n=14 uses a sin/cos even-odd wall carrier (lrc14-sin-cos-even-odd-wall-carrier, codex-2026-06-05-S655)
+**Status:** OPEN LRC proof-use hypothesis with exact finite scout.
+
+S655 translates the user's trigonometric split into typed LRC data:
+
+```text
+sin  -> odd boundary carrier: zeros / active floor constraints
+cos  -> even derivative/slack carrier: adjacent wall response
+cot  -> log-derivative scalar ledger that forgets composite side channels
+```
+
+This sits downstream of HYP-2230/S654.  HYP-2230 identifies the carry coordinate
+`k` in `v=r+27k` as the shared even/odd and `mod 14` obstruction; S655 adds the
+odd wall-pair and derivative-slack labels that the carry coordinate has to
+preserve.
+
+For AP at `t=1/n`, every sampled even `n` has active pair `[1,n-1]`, both odd.
+At `n=14`, the parity-depth minima are
+
+```text
+v2=0: 1/14 = 1*delta
+v2=1: 1/7  = 2*delta
+v2=2: 1/7  = 2*delta
+v2=3: 3/7  = 6*delta.
+```
+
+AP and `Vstar={1,2,3,4,5,6,7,8,9,10,11,13,24}` both have exact `M=1/14`,
+with best times
+
+```text
+1/14, 3/14, 5/14, 9/14, 11/14, 13/14.
+```
+
+At those floor times the active pairs are off-diagonal odd complement pairs:
+
+```text
+(1,13), (5,9), (3,11), (3,11), (5,9), (1,13).
+```
+
+All sum to the even row `14`.  Thus the Goldbach/Lemoine diagonal
+`7+7=14` and `7+2*7=21` is a real scalar echo, but the LRC wall is carried by
+off-diagonal odd pairs plus their slopes and C=27 shell labels.
+
+The AP single-swap census has `195` primitive rows, `0` below-floor rows, one
+tight non-AP row (`12->24`, Vstar), and `194` loose rows.  AP and Vstar share
+C=27 gcd-shell counts `{1:9,3:3,9:1}`.  The cotangent half-product collapses to
+`1/C` for odd clocks, showing why scalar log-derivative data must not replace
+the composite gcd side channel.
+
+The proposed proof move is an odd-wall no-leak lemma:
+
+```text
+odd boundary wall + even slack + C=27 gcd fixed pocket + owner/carry
+  => AP, Vstar, nonprimitive 2AP, or strict looseness.
+```
+
+Tournament Analysis uses proof carriers as vertices, not runners.  The majority
+tournament has `score_hist={0:1,1:1,2:1,3:1,5:3}`, one directed 3-cycle,
+SCC sizes `[3,1,1,1,1]`, and `3` Hamiltonian paths; the top tied carriers are
+`pair_sum_pinch_oracle`, `odd_boundary_sin_carrier`, and
+`C27_gcd_shell_carrier`.
+
+**See:** `05-knowledge/hypotheses/HYP-2231-lrc14-sin-cos-even-odd-wall-carrier.md`;
+`04-computation/lrc_sin_cos_parity_carrier_s655.py`;
+`05-knowledge/results/lrc_sin_cos_parity_carrier_s655.out`;
+`07-reflections/lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230,
+HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164,
+THM-401, THM-369.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
