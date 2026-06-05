@@ -1,0 +1,97 @@
+S657 missed important problem frontier carrier atlas
+========================================================================
+
+A. Ranked frontier candidates
+ 1. hadwiger_nelson
+    label=Hadwiger-Nelson / chromatic unit-distance graphs
+    repo_hits=33 undercoverage=3
+    metric=(5, 5, 3, 5, 5, -2)
+    source=MathWorld and Polymath16 records: plane chromatic number is 5, 6, or 7
+    carrier_match=unit-distance work already has Moser carriers, traceable spines, direction support, and chi questions
+    first_experiment=compute color-critical side-channel fingerprints for Moser/Sawin-style finite carriers: direction support, traceability, independence ratio, and tournament flip gauges
+ 2. graph_reconstruction
+    label=Graph reconstruction / deck invariants
+    repo_hits=69 undercoverage=3
+    metric=(5, 5, 3, 5, 5, -2)
+    source=RIT reconstruction-number data and the classical Ulam graph reconstruction conjecture
+    carrier_match=repo already has deletion profiles, endpoint transfer, old-projection kill/near-kill ledgers
+    first_experiment=build a deck-to-carrier table for tournaments: which of H, OCF alpha, beta, SCC, score, and deletion-loss profiles are reconstructible from cards
+ 3. kakeya_falconer
+    label=Kakeya / Falconer distance-incidence geometry
+    repo_hits=28 undercoverage=3
+    metric=(5, 4, 3, 5, 5, -3)
+    source=IPAM Kakeya overview and finite-field Kakeya references
+    carrier_match=direction tubes, finite-field lines, unit-distance energy, LRC forbidden arcs, and Paley/finite-field carriers all align
+    first_experiment=make a finite-field Kakeya/Falconer toy atlas over F_p^2: direction coverage, distance fibers, Paley character orientations, and tournament fingerprints
+ 4. sunflower_extractors
+    label=Sunflower / robust sunflower / extractor set systems
+    repo_hits=59 undercoverage=3
+    metric=(5, 4, 3, 4, 5, -2)
+    source=Theory of Computing robust sunflower/extractor paper
+    carrier_match=OCF is already a disjoint odd-cycle packing partition function; sunflower cores are a natural missing hypergraph side channel
+    first_experiment=scan odd-cycle support hypergraphs for sunflower cores and robust-sunflower thresholds; compare H=63 exact-core rows with THM-025 near-kill rows
+ 5. caccetta_haggkvist
+    label=Caccetta-Haggkvist short directed cycles
+    repo_hits=89 undercoverage=2
+    metric=(5, 3, 2, 5, 5, -2)
+    source=arXiv:math/0605646 AIM-linked Caccetta-Haggkvist survey
+    carrier_match=repo already has CH residue probes, LRC clock-return analogues, and directed-cycle obstruction language
+    first_experiment=consolidate a CH-vs-LRC return-residue atlas and test r=3 extremal oriented graphs through deletion/owner side channels
+ 6. union_closed
+    label=Union-closed sets / Frankl frequency carriers
+    repo_hits=36 undercoverage=3
+    metric=(4, 5, 3, 4, 4, -2)
+    source=arXiv:2208.03803 notes on union-closed set frequencies
+    carrier_match=closure under union matches cauldron finite-sums, divisor/aliquot fixed carriers, and observer-source frequency predicates
+    first_experiment=enumerate small closure systems as tournaments whose vertices are elements or sets; rank carriers by majority-frequency witness retention
+ 7. erdos_hajnal
+    label=Erdos-Hajnal for tournaments and blow-ups
+    repo_hits=17 undercoverage=4
+    metric=(4, 4, 4, 5, 5, -2)
+    source=Open Problem Garden EH page and tournament EH papers
+    carrier_match=THM410 and S652 square-node substitution are literal blow-up/tournament carriers; H-mass can be a soft transitivity statistic
+    first_experiment=test H-mass and OCF alpha spectra on H-free tournament families and lexicographic blow-ups before searching for exact transitive-subtournament bounds
+ 8. erdos_distinct_distances
+    label=Erdos distinct distances and pinned distances
+    repo_hits=17 undercoverage=4
+    metric=(4, 3, 4, 5, 5, -3)
+    source=Guth-Katz Annals distinct distances theorem and active pinned-distance variants
+    carrier_match=unit-distance energy work sees the opposite extremal face: many repeated distances rather than many distinct distances
+    first_experiment=run dual energy ledgers on finite point sets: unit-distance support, distinct-distance support, pinned-distance distribution, and tournament flips between them
+ 9. rota_ryser_rainbow
+    label=Rota basis / Ryser-Brualdi-Stein rainbow transversals
+    repo_hits=611 undercoverage=1
+    metric=(4, 3, 1, 4, 4, -3)
+    source=SIAM Rota basis paper and Latin/rainbow transversal problem pages
+    carrier_match=matroid circuits, endpoint-transfer matrices, cauldron schedules, and Latin/rainbow parity are underused in the repo
+    first_experiment=build a rainbow-basis obstruction tournament where vertices are color/base obligations; report SCCs, Hall deficits, and Hamiltonian transversals
+10. graceful_tree
+    label=Graceful tree labeling / difference-set carriers
+    repo_hits=7 undercoverage=4
+    metric=(3, 4, 4, 3, 3, -2)
+    source=standard graph-theory open problem lists
+    carrier_match=difference labels resemble LRC shell witnesses and pair-sum/discriminant carriers, but tree structure is not central here yet
+    first_experiment=prototype a graceful-labeling carrier for caterpillars and spiders using pair-difference tournaments and endpoint-transfer checks
+11. clay_control
+    label=Clay Millennium controls
+    repo_hits=83 undercoverage=2
+    metric=(2, 1, 2, 5, 5, -5)
+    source=Clay Mathematics Institute official list
+    carrier_match=too broad for near-term repo progress except as analogy/control rows
+    first_experiment=use only as negative controls: if a candidate ranks below Clay controls, it is probably not actionable
+
+B. Tournament Analysis
+  top_order=['hadwiger_nelson', 'graph_reconstruction', 'kakeya_falconer', 'sunflower_extractors', 'caccetta_haggkvist', 'union_closed', 'erdos_hajnal', 'erdos_distinct_distances', 'rota_ryser_rainbow', 'graceful_tree', 'clay_control']
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+
+C. Practical interpretation
+  The best missed targets are not the most famous targets.  They are
+  problems where the repo already has a carrier but has not built the
+  correct finite toy model: decks for reconstruction, color-critical
+  unit-distance graphs, Kakeya/Falconer finite-field incidence ledgers,
+  sunflower cores inside OCF hypergraphs, and union-closed frequency
+  carriers.  Clay-scale problems remain useful as negative controls,
+  not as first attack surfaces.

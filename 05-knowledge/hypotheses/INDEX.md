@@ -688,7 +688,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2230 | LRC14 parity and apex obstructions are one carry coordinate over the `C=27` lift: for `v=r+27k`, `v mod 2 = r+k` and `v mod 14 = r-k`, so `k` toggles even/odd parity while `14|v` iff `k=r mod 14`. | S654 uses the S611 exact maximin oracle to test the forced multiple-of-14 branch over AP and `V*`.  Every minimal apex carry is even and strict; closest AP is `28/365`, closest `V*` is `2/25`.  All one/two extra `+27` toggle neighborhoods around minimal apex carries (`2054` rows screened) have no near-floor/below-floor rows, and the Boolean parity lattice only has the zero-carry floor row in the near-floor screen.  Connects HYP-2218 even/odd same-pair projection and HYP-2229 Basel packet-vs-moment lesson to HYP-2167 carry conservativity. | codex-2026-06-05-S654; `HYP-2230-lrc14-parity-carry-bridge.md`; `lrc14_parity_carry_bridge_s654.py`; `lrc14_parity_carry_bridge_s654.out`; `lrc14-parity-carry-bridge-s654.md`; HYP-2167, HYP-2218, HYP-2229, THM-401 |
 | HYP-2231 | LRC `n=14` uses a sin/cos even-odd wall carrier: odd active walls are the sin-like boundary, even strata are cos-like derivative/slack, and the visible `(14,21)` Goldbach/Lemoine diagonal is only a scalar shadow. | S655 computes AP and `Vstar` at `n=14`, finding exact `M=1/14`, shared best times `1/14,3/14,5/14,9/14,11/14,13/14`, active odd wall pairs `(1,13),(5,9),(3,11)` and mirrors, and shared `C=27` gcd-shell counts `{1:9,3:3,9:1}`.  The AP single-swap census has `195` rows, `0` below, and one tight non-AP row `12->24`; cotangent half-products collapse to `1/C`, confirming that scalar trig products forget composite shell side channels.  The next proof target is an odd-wall/gcd-shell/carry-owner no-leak lemma downstream of HYP-2230's parity/carry coordinate. | codex-2026-06-05-S655; `HYP-2231-lrc14-sin-cos-even-odd-wall-carrier.md`; `lrc_sin_cos_parity_carrier_s655.py`; `lrc_sin_cos_parity_carrier_s655.out`; `lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230, HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164, HYP-2116, THM-401, THM-369 |
 | HYP-2232 | The set-theoretic Continuum Hypothesis is the archetypal cardinal-shadow carrier problem: `2^aleph_0` is the scalar shadow, while forcing/inner-model/generic side channels decide which continuum structure is visible. | S656 records the standard facts (Godel: CH in `L`; Cohen: relative consistency of not-CH by forcing) and turns them into a finite repo protocol.  The carrier atlas compares `L`, Cohen-style forcing extensions, forcing-axiom worlds, and bare ZFC; the proof-route tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `c3=0`, SCC sizes all singleton, and raw cardinal numerology last.  Transfer rule: before trusting a count/residue/H/edge scalar, ask which model, lift, fiber, packet, owner, or boundary state was forgotten. | codex-2026-06-05-S656; `HYP-2232-continuum-hypothesis-cardinal-shadow-carrier.md`; `continuum_hypothesis_carrier_s656.py`; `continuum_hypothesis_carrier_s656.out`; `continuum-hypothesis-cardinal-shadow-carrier-s656.md`; HYP-2187, HYP-2185, HYP-2182, HYP-2171, HYP-2231, HYP-2230, HYP-2213, HYP-2212 |
-| HYP-2233 | STUB: Important missed math frontiers should be ranked by external importance, low repo coverage, and strong local carrier match rather than fame alone. | Claimed for S657 after repo/web scouting.  Candidate clusters under audit include Kakeya/Falconer incidence geometry, Hadwiger-Nelson coloring, union-closed families, graph reconstruction decks, Ryser-Brualdi-Stein/Rota rainbow bases, sunflower/extractor set systems, Caccetta-Haggkvist short cycles, and Erdős-Hajnal blow-up tournaments. | codex-2026-06-05-S657; `HYP-2233-missed-problem-frontier-carrier-atlas.md`; HYP-2232, HYP-2227, HYP-2215, HYP-2216, HYP-2197, HYP-2187, HYP-2176, HYP-2171 |
+| HYP-2233 | Important missed math frontiers should be ranked by repo leverage, near-term finite actionability, undercoverage, external importance, and source confidence, with raw fame-chasing risk penalized. | S657's repo/web scout ranks Hadwiger-Nelson finite unit-distance coloring, graph reconstruction decks, Kakeya/Falconer finite-field incidence, sunflower/extractor set-system cores, Caccetta-Haggkvist consolidation, union-closed frequency carriers, Erdos-Hajnal blow-ups, distinct-distance dual energy, Rota/Ryser rainbow transversals, graceful labels, and Clay controls.  The route tournament is transitive with `score_hist={0:1,...,10:1}`, `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  The work queue is S657a finite unit-distance color-critical fingerprints, S657b tournament deck invariants, S657c finite-field incidence ledgers, S657d OCF sunflower cores, and S657e union-closed frequency tournaments. | codex-2026-06-05-S657; `HYP-2233-missed-problem-frontier-carrier-atlas.md`; `missed_problem_frontier_s657.py`; `missed_problem_frontier_s657.out`; `missed-important-problem-frontier-s657.md`; HYP-2232, HYP-2227, HYP-2197, HYP-2188, HYP-2187, HYP-2176, HYP-2171 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6394,6 +6394,75 @@ coefficients, beta fibers, and endpoint-transfer labels.
 `07-reflections/continuum-hypothesis-cardinal-shadow-carrier-s656.md`;
 `04-computation/category_logic_23.py`; HYP-2187, HYP-2185, HYP-2182,
 HYP-2171, HYP-2231, HYP-2230, HYP-2213, HYP-2212, THM-401.
+
+## HYP-2233: Missed important problems should be ranked by repo-leverage carriers (missed-problem-frontier-carrier-atlas, codex-2026-06-05-S657)
+**Status:** OPEN synthesis / frontier-selection hypothesis; no external conjecture solved.
+
+S657 searches repo navigation, hypothesis, result, and reflection ledgers plus
+web/source anchors to find important math problems that are not yet central as
+finite repo carriers.  The selection rule is:
+
+```text
+repo leverage + near-term finite action + undercoverage + external importance
+  - raw fame-chasing risk.
+```
+
+This makes the best next targets small/restricted shadows rather than the most
+famous statements.  The source anchors include Clay's Millennium Problems,
+MathWorld's Hadwiger-Nelson page, IPAM's Kakeya overview, Open Problem Garden's
+Erdos-Hajnal entry, Annals/ToC sunflower sources, union-closed frequency notes,
+the Caccetta-Haggkvist survey, Rota basis sources, and graph reconstruction
+number data.
+
+Ranked candidates:
+
+```text
+1. Hadwiger-Nelson finite unit-distance coloring
+2. graph reconstruction / deletion decks
+3. Kakeya-Falconer finite-field incidence geometry
+4. sunflower / robust sunflower / extractor set systems
+5. Caccetta-Haggkvist short directed cycles
+6. union-closed / Frankl frequency carriers
+7. Erdos-Hajnal tournaments and blow-ups
+8. distinct / pinned distance dual energy
+9. Rota basis / Ryser-Brualdi-Stein rainbow transversals
+10. graceful tree labeling
+11. Clay Millennium controls.
+```
+
+The first five concrete work lanes are:
+
+```text
+S657a: color-critical fingerprints for finite unit-distance carriers.
+S657b: tournament deck reconstruction atlas for H/OCF/SCC/score/beta/deletion loss.
+S657c: finite-field Kakeya-Falconer incidence ledger over F_p^2.
+S657d: sunflower-core scan inside OCF odd-cycle support hypergraphs.
+S657e: union-closed frequency tournaments on elements versus sets.
+```
+
+Tournament Analysis uses external problem clusters as vertices, after
+challenging named conjectures, proof techniques, invariant families, finite toy
+models, and local carrier programs as possible vertex sets.  The pairwise
+observable is
+`(repo_leverage, near_term_actionability, undercoverage, external_importance, source_confidence, -raw_fame_chasing_risk)`.
+The quotient preserves "could this workspace make a concrete stride soon?" and
+destroys fine-grained literature status, so focused literature checks remain
+mandatory before proof claims.
+
+Fingerprint:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1,1,1,1,1]
+hamiltonian_paths=1.
+```
+
+**See:** `05-knowledge/hypotheses/HYP-2233-missed-problem-frontier-carrier-atlas.md`;
+`04-computation/missed_problem_frontier_s657.py`;
+`05-knowledge/results/missed_problem_frontier_s657.out`;
+`07-reflections/missed-important-problem-frontier-s657.md`; HYP-2232,
+HYP-2227, HYP-2197, HYP-2188, HYP-2187, HYP-2176, HYP-2171.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

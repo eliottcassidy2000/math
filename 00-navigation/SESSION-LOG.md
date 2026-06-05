@@ -3,8 +3,12 @@
 ## codex-2026-06-05-S657 - Missed important problem frontier scout (HYP-2233)
 
 **Prompt:** Search around the repo and web for possible important math problems we have missed and could make strides on.
-**Claimed namespace:** HYP-2233 and T726 reserved with honest stubs before the full atlas.  Early scout targets are Kakeya/Falconer incidence geometry, Hadwiger-Nelson coloring, union-closed families, graph reconstruction decks, Ryser-Brualdi-Stein/Rota rainbow bases, sunflower/extractor set systems, Caccetta-Haggkvist short cycles, and Erdős-Hajnal blow-up tournaments.
-**Status:** In progress.  Ranking criterion is external importance plus low repo coverage plus strong match to existing carrier methods, not fame alone.
+**Integration:** S657 audited repo navigation/hypothesis/result/reflection ledgers and refreshed web/source anchors for Clay controls, Hadwiger-Nelson, Kakeya, Erdos-Hajnal, sunflowers, robust sunflowers/extractors, union-closed frequencies, Caccetta-Haggkvist, Rota basis, and graph reconstruction decks.
+**Computation:** Added `04-computation/missed_problem_frontier_s657.py` and stored `05-knowledge/results/missed_problem_frontier_s657.out`.  The scanner uses curated repo directories, ranks external problem clusters by `(repo_leverage, near_term_actionability, undercoverage, external_importance, source_confidence, -raw_fame_chasing_risk)`, and reports Tournament Analysis.
+**Findings:** The highest-value missed frontiers are not the most famous frontiers.  They are problems where this repo already has a finite carrier but has not built the right small model: Hadwiger-Nelson finite unit-distance coloring, graph reconstruction decks, Kakeya/Falconer finite-field incidence geometry, sunflower/extractor set-system cores, Caccetta-Haggkvist consolidation, and union-closed frequency carriers.  Clay-scale problems are useful as negative controls rather than immediate attack surfaces.
+**Tournament Analysis:** Vertices are external problem clusters, after challenging named conjectures, proof techniques, invariant families, finite toy models, and local carrier programs as vertex sets.  The route tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1,10:1}`, `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.
+**Artifacts:** HYP-2233, T726, `04-computation/missed_problem_frontier_s657.py`, `05-knowledge/results/missed_problem_frontier_s657.out`, `07-reflections/missed-important-problem-frontier-s657.md`, plus hypothesis-index, result-index, concept-map, and tangent updates.
+**Handoff:** Run S657a color-critical fingerprints for finite unit-distance carriers; S657b tournament deck reconstruction for `H`/OCF/SCC/score/beta/deletion-loss invariants; S657c finite-field Kakeya/Falconer incidence ledgers; S657d OCF sunflower-core scans; S657e union-closed frequency tournaments.
 
 ## codex-2026-06-05-S656 - Continuum Hypothesis as cardinal-shadow carrier (HYP-2232)
 
