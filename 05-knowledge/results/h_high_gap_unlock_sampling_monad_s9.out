@@ -1,0 +1,74 @@
+==============================================================================
+  HIGH-GAP UNLOCK SAMPLING  (monad-compute-2026-06-04-S9)
+==============================================================================
+  targets: 157 HIGH permanent-through-n=9 gaps in [2883, 3355]
+  levels: n=[10, 11, 12]   seed=20260604   wall budget=1500s
+  bias window of interest: H in [2883, 3355]
+
+  [n=10] t=    21s  samples=    6,000  window_hits=    285  targets_unlocked=115/157
+  [n=10] t=    42s  samples=   11,200  window_hits=    582  targets_unlocked=142/157
+  [n=10] t=    62s  samples=   16,800  window_hits=    851  targets_unlocked=154/157
+  [n=10] t=    83s  samples=   22,000  window_hits=  1,159  targets_unlocked=156/157
+  [n=10] t=   104s  samples=   27,600  window_hits=  1,452  targets_unlocked=156/157
+  [n=10] t=   125s  samples=   33,200  window_hits=  1,758  targets_unlocked=157/157
+  [n=10] t=   146s  samples=   38,800  window_hits=  2,049  targets_unlocked=157/157
+  [n=10] t=   167s  samples=   44,400  window_hits=  2,362  targets_unlocked=157/157
+  [n=10] t=   188s  samples=   50,000  window_hits=  2,690  targets_unlocked=157/157
+  [n=10] t=   208s  samples=   55,600  window_hits=  2,997  targets_unlocked=157/157
+  [n=10] t=   229s  samples=   60,800  window_hits=  3,313  targets_unlocked=157/157
+  [n=10] t=   249s  samples=   66,400  window_hits=  3,616  targets_unlocked=157/157
+  [n=10] t=   269s  samples=   71,600  window_hits=  3,959  targets_unlocked=157/157
+  [n=10] t=   291s  samples=   77,600  window_hits=  4,254  targets_unlocked=157/157
+  [n=10] t=   311s  samples=   82,800  window_hits=  4,580  targets_unlocked=157/157
+  [n=10] t=   331s  samples=   88,400  window_hits=  4,884  targets_unlocked=157/157
+  [n=10] t=   352s  samples=   93,600  window_hits=  5,174  targets_unlocked=157/157
+  [n=10] t=   372s  samples=   99,200  window_hits=  5,465  targets_unlocked=157/157
+  [n=10] t=   393s  samples=  104,800  window_hits=  5,795  targets_unlocked=157/157
+  [n=10] t=   414s  samples=  110,400  window_hits=  6,092  targets_unlocked=157/157
+  [n=10] t=   435s  samples=  116,000  window_hits=  6,420  targets_unlocked=157/157
+  [n=10] t=   455s  samples=  121,200  window_hits=  6,705  targets_unlocked=157/157
+  [n=10] t=   476s  samples=  126,800  window_hits=  7,004  targets_unlocked=157/157
+  [n=10] t=   497s  samples=  132,000  window_hits=  7,355  targets_unlocked=157/157
+  [n=10] t=   518s  samples=  138,000  window_hits=  7,635  targets_unlocked=157/157
+  [n=10] t=   539s  samples=  143,200  window_hits=  7,970  targets_unlocked=157/157
+  [n=10] t=   559s  samples=  148,800  window_hits=  8,227  targets_unlocked=157/157
+  [n=10] t=   580s  samples=  154,000  window_hits=  8,589  targets_unlocked=157/157
+  [n=10] t=   600s  samples=  159,600  window_hits=  8,888  targets_unlocked=157/157
+  [n=10] t=   622s  samples=  165,200  window_hits=  9,210  targets_unlocked=157/157
+  [n=10] DONE  samples=167,600  window_hits=9,365  cum targets unlocked=157/157  (631s)
+
+  [n=11] t=   652s  samples=    3,200  window_hits=    104  targets_unlocked=157/157
+  [n=11] t=   675s  samples=    6,400  window_hits=    233  targets_unlocked=157/157
+  [n=11] t=   697s  samples=    9,200  window_hits=    342  targets_unlocked=157/157
+  [n=11] t=   721s  samples=   12,000  window_hits=    445  targets_unlocked=157/157
+  [n=11] t=   741s  samples=   15,200  window_hits=    531  targets_unlocked=157/157
+  [n=11] t=   762s  samples=   18,000  window_hits=    647  targets_unlocked=157/157
+  [n=11] t=   783s  samples=   20,800  window_hits=    753  targets_unlocked=157/157
+
+==============================================================================
+  FINALIZATION (monad-compute-2026-06-04-S9)
+==============================================================================
+  Run STOPPED after the conclusive n=10 phase + partial n=11 confirmation
+  (n=12 phase not needed; the result was already complete).
+
+  RESULT:  ALL 157 HIGH "permanent-through-n=9" gaps in [2883, 3355] are
+           ACHIEVED at n=10 (concrete biased-sampling witnesses).
+           => every one is TRANSIENT, NOT a permanent gap.
+           first_n_achieved = 10 for all 157 (n=10 phase reached 157/157).
+
+  n=10 phase: 167,600 biased samples, 9,365 landed in-window, 157/157 unlocked
+              (all 157 already hit by t=125s / ~33k samples).
+  n=11 phase (partial): 20,800 samples, 157/157 confirmed still achieved.
+
+  Sanity: H=7 and H=21 were NEVER produced in any sample (consistent with
+          their status as the permanent low gaps).
+
+  CONSEQUENCE for OPEN-Q-055:
+    The n=9 forbidden/gap set's only LOW members {7,21} remain the sole
+    candidate permanent low gaps. The 157 high-end "gaps" at n=9 were pure
+    finite-level sparseness just below maxH9=3357 and ALL unlock by n=10.
+    Sampling certifies achievability (witnesses) — a rigorous TRANSIENT proof;
+    it never certifies permanence.
+
+  Per-target table: h_high_gap_unlock_sampling_monad_s9.tsv
+==============================================================================
