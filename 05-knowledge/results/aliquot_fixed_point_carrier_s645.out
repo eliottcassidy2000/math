@@ -1,0 +1,73 @@
+S645 Perfect Numbers as Aliquot Fixed Points
+============================================
+
+Carrier
+-------
+divisor lattice D(n) -> sigma(n) -> aliquot map s(n)=sigma(n)-n
+perfect means s(n)=n, equivalently sigma(n)=2n or abundancy A(n)=2
+the side channel is the prime-power product for sigma(n)/n
+
+Fixed points
+------------
+aliquot fixed points n<= 100000: [6, 28, 496, 8128]
+  n=6     factors=2 * 3            tau=4  sigma=12     s(n)=6     A=2
+  n=28    factors=2^2 * 7          tau=6  sigma=56     s(n)=28    A=2
+  n=496   factors=2^4 * 31         tau=10 sigma=992    s(n)=496   A=2
+  n=8128  factors=2^6 * 127        tau=14 sigma=16256  s(n)=8128  A=2
+
+Euclid-Euler even section
+-------------------------
+  p=2  M=2^p-1=3        n=2^(p-1)M=6            in window
+  p=3  M=2^p-1=7        n=2^(p-1)M=28           in window
+  p=5  M=2^p-1=31       n=2^(p-1)M=496          in window
+  p=7  M=2^p-1=127      n=2^(p-1)M=8128         in window
+  p=13 M=2^p-1=8191     n=2^(p-1)M=33550336     beyond window
+  p=17 M=2^p-1=131071   n=2^(p-1)M=8589869056   beyond window
+  p=19 M=2^p-1=524287   n=2^(p-1)M=137438691328 beyond window
+  p=31 M=2^p-1=2147483647 n=2^(p-1)M=2305843008139952128 beyond window
+  identity: sigma(2^(p-1))*sigma(M) = (2^p-1)*2^p = 2n
+
+Aliquot cycles in the finite window
+-----------------------------------
+  length 1: count=4, sample=[(6,), (28,), (496,), (8128,)]
+  length 2: count=13, sample=[(220, 284), (1184, 1210), (2620, 2924), (5020, 5564), (6232, 6368), (10744, 10856), (12285, 14595), (17296, 18416)]
+  length 5: count=1, sample=[(12496, 14288, 15472, 14536, 14264)]
+  fixed points are length-1 cycles; amicable pairs are length-2 cycles.
+
+Defect and near-fixed rows
+--------------------------
+status counts n<= 100000: {'deficient': 75201, 'perfect': 4, 'abundant': 24795}
+  defect -1 rows (almost-perfect in this window): [2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384, 32768, 65536] ...
+  defect +1 rows (quasi-perfect candidates in this window): []
+  closest odd rows to A=2 by |sigma-2n|/n:
+    n=32445 defect=6     sigma=64896  s(n)=32451  ratio=2/10815 factors=3^2 * 5 * 7 * 103
+    n=78975 defect=26    sigma=157976 s(n)=79001  ratio=2/6075 factors=3^5 * 5^2 * 13
+    n=33705 defect=-18   sigma=67392  s(n)=33687  ratio=2/3745 factors=3^2 * 5 * 7 * 107
+    n=31815 defect=18    sigma=63648  s(n)=31833  ratio=2/3535 factors=3^2 * 5 * 7 * 101
+    n=8925  defect=6     sigma=17856  s(n)=8931   ratio=2/2975 factors=3 * 5^2 * 7 * 17
+    n=34335 defect=-30   sigma=68640  s(n)=34305  ratio=2/2289 factors=3^2 * 5 * 7 * 109
+    n=30555 defect=42    sigma=61152  s(n)=30597  ratio=2/1455 factors=3^2 * 5 * 7 * 97
+    n=91455 defect=-126  sigma=182784 s(n)=91329  ratio=6/4355 factors=3 * 5 * 7 * 13 * 67
+    n=55335 defect=-78   sigma=110592 s(n)=55257  ratio=26/18445 factors=3 * 5 * 7 * 17 * 31
+    n=83265 defect=126   sigma=166656 s(n)=83391  ratio=6/3965 factors=3 * 5 * 7 * 13 * 61
+
+Tournament Analysis
+-------------------
+Pairwise observable: carrier lens quality for proving or exploiting s(n)=n.
+Switch/gauge: fixed-point proof, aliquot dynamics, and transfer-to-repo side channels.
+Tie Hamiltonian path: divisor_lattice_fixed_point > sigma_product_abundancy > aliquot_function_graph > euclid_euler_mersenne_section > local_prime_power_ledger > odd_perfect_side_channel > near_fixed_defect_scout > raw_sequence_list
+majority ranking: divisor_lattice_fixed_point > aliquot_function_graph > sigma_product_abundancy > odd_perfect_side_channel > euclid_euler_mersenne_section > local_prime_power_ledger > near_fixed_defect_scout > raw_sequence_list
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed_3_cycles=0
+sccs=[['divisor_lattice_fixed_point'], ['aliquot_function_graph'], ['sigma_product_abundancy'], ['odd_perfect_side_channel'], ['euclid_euler_mersenne_section'], ['local_prime_power_ledger'], ['near_fixed_defect_scout'], ['raw_sequence_list']]
+hamiltonian_paths=1
+edge_flips[fixed,dynamics]=3
+edge_flips[fixed,transfer]=3
+edge_flips[dynamics,transfer]=0
+
+Synthesis
+---------
+Perfect numbers are not merely special values of sigma; they are loops in
+the aliquot dynamical graph.  The scalar fixed equation sigma(n)=2n is
+usable only with divisor side channels: prime powers, parity, Mersenne
+primality for the even section, and the still-missing odd-perfect packet.

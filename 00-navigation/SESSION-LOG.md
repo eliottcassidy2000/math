@@ -114,6 +114,7 @@
 **Findings:** The S642 identity becomes a graph: each unordered odd-prime pair `{p,q}` creates an even node `E=p+q` and odd companions `E+p` and `E+q`; duplicates fold to `(2p,3p)`.  The prime `2` is a boundary/apex channel: up to `121`, only `7=3+2*2` is apex-only.
 **Tournament Analysis:** Carrier-lens vertices preserve the same-pair predicate and expose what is destroyed by forgetting orientation or the `q=2` boundary.  The tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, zero directed 3-cycles, one Hamiltonian path, and ranking `linear_pair_vieta > duplicate_branch_locus > bridge_graph_even_odd > apex_prime_two_boundary > mod6_residue_wheel > side_channel_jackknife > lemoine_to_goldbach_transfer > raw_representation_counts > scalar_parity_slogan`.
 **Artifacts:** HYP-2219, `07-reflections/goldbach-lemoine-same-pair-bridge-s643.md`, T712, result-index and concept-map updates.
+
 ## codex-2026-06-04-S644 - Vieta/perfect/aliquot carriers and the 91 -> 21 shadow (HYP-2220)
 
 **Prompt:** Think Vieta carriers; `6` is the only number that is a doubled prime and a tripled prime; merge perfect numbers into the proof-facing session without losing progress toward the repo's main proofs.
@@ -123,6 +124,15 @@
 **Synthesis:** Perfect numbers are fixed controls of the aliquot side channel inside the same triangular carrier whose discriminant root is the LRC shell.  Incoming S643 names `(2p,3p)` as the Goldbach/Lemoine duplicate branch; S644 adds that, on the semiprime triangular row `C(2p,2)`, the aliquot shadow is also `3p`.  This does not prove LRC `n=14`; it gives a cheap arithmetic observer showing that `21` is an exact side-shadow of the `n=14` pair-count carrier, while the live proof burden remains the `27` lift/CRT/owner channel.
 **Tournament Analysis:** Proof-lens vertices give a transitive tournament with one Hamiltonian path, ranking `aliquot_shadow_C14_pair_count_to_21 > triangular_vieta_square_root_C_2n_minus_1 > even_perfect_numbers_as_triangular_fixed_controls > semiprime_n_2p_family_s_Cn2_equals_3p > doubled_tripled_prime_six_seam > goldbach_lemoine_diagonal_packet > raw_perfect_number_numerology`.
 **Artifacts:** HYP-2220, `07-reflections/vieta-perfect-aliquot-carriers-s644.md`, T713, result-index and concept-map updates.
+
+## codex-2026-06-04-S645 - perfect numbers as aliquot/divisor fixed points (HYP-2221)
+
+**Prompt:** Think of perfect numbers as fixed points of the aliquot/divisor carrier.
+**Integration:** Builds on incoming S644/HYP-2220's Vieta/perfect aliquot carrier, the recent carrier packets HYP-2215/HYP-2216, the pi/e two-shadow carrier HYP-2211, anti-coset/side-channel framing HYP-2208, and the Goldbach/Lemoine S642/S643 habit of replacing raw scalar slogans by retained witness data.
+**Computation:** Added `04-computation/aliquot_fixed_point_carrier_s645.py` and stored `05-knowledge/results/aliquot_fixed_point_carrier_s645.out`.  The script scans `n<=100000`, computes `sigma(n)`, the aliquot map `s(n)=sigma(n)-n`, fixed points, finite aliquot cycles, defect shells, odd near-fixed rows, Euclid-Euler rows, and a carrier-lens Tournament Analysis.
+**Findings:** Perfect numbers are length-1 cycles of the aliquot map: fixed points `s(n)=n`, equivalently `sigma(n)=2n` or abundancy `A(n)=2`.  The window gives fixed points `[6,28,496,8128]`, `13` amicable pairs, and one length-5 sociable cycle.  Powers of two are defect `-1` almost-perfect rows; no defect `+1` quasi-perfect rows appear.  The closest odd near-fixed row is `32445=3^2*5*7*103` with `sigma(n)-2n=6`, showing scalar proximity to `2` is not enough without divisor side channels.
+**Tournament Analysis:** Carrier lenses use the pairwise observable "quality for proving/exploiting `s(n)=n`" under fixed-point, dynamics, and transfer gauges.  The majority tournament is transitive with one Hamiltonian path, ranking `divisor_lattice_fixed_point > aliquot_function_graph > sigma_product_abundancy > odd_perfect_side_channel > euclid_euler_mersenne_section > local_prime_power_ledger > near_fixed_defect_scout > raw_sequence_list`.
+**Artifacts:** HYP-2221, `07-reflections/perfect-aliquot-fixed-point-carrier-s645.md`, T714, result-index and concept-map updates.
 
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
