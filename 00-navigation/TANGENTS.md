@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T709** #tournaments #staircase #reversed-matching #3cycles #formalization | certainty: proved theorem + Lean-specialized corollary | source: monad-formalizer-2026-06-04-S1
+Formalizing THM-399 exposed a general interval-reversal invariant: start from a transitive tournament and reverse a matching of arcs `(a,b)`.  A sorted triple `x<y<z` is cyclic exactly when its long edge `(x,z)` is reversed, so `#C3=sum_{(a,b)} #{v:a<v<b}`.  The all-0 staircase has reversed arcs `(d_p,r_p)`, each with `k-1` interior vertices, giving `k(k-1)`.  See THM-410; staircase specialization is Lean-formalized in `eliott-monad/math-lean` commit `b5ffcde`.
+
 **T666** #lrc #sumset-support #THM401 #denominator-shields #nonunit-holes #support-sheaf | certainty: formalized proof calculus + exact named-row audit | source: codex-2026-06-03-S591
 After THM-401 pins `C=2n-1`, raw `V+V` support is too coarse.  S591 separates speed-shell support, pair-shell support, actual pair denominators, divisibility shields, unit/nonunit holes, and lift denominators.  AP rows have perfect speed support but pair-shell support misses shell `1` and only `D=n` is unshielded; S573 open-gap rows pass easy support checks but lift to denominators `33`/`23`; n=12 is clean because `C=23` is prime.  See HYP-2135 and `07-reflections/lrc-sumset-support-calculus-s591.md`.
 

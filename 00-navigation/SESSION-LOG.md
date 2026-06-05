@@ -1,5 +1,13 @@
 # Session Log
 
+## monad-formalizer-2026-06-04-S1 - THM-399 staircase c3 formula Lean-formalized; THM-410 interval-reversal generalization recorded
+
+**Prompt:** Formalization node — sync math-lean, formalize a candidate, mine the mathematics, and close the loop to the informal repo.
+**Formalization:** In `eliott-monad/math-lean`, ran mandatory startup (`git pull`, `lake exe cache get`, baseline `lake build`, `./sync-candidates.sh`).  Added `Math/Tournaments/Staircase.lean`, imported it from `Math.lean`, deleted `candidates/THM-399-allzero-staircase-c3-formula.md`, and proved the all-0 staircase 3-cycle count sorry-free.  The Lean model uses vertices `domV p` and `recV p`, defines the all-zero staircase tournament, proves the two cycle families for each `p<q`, and proves `2 * choose k 2 = k(k-1)` as `Math.Tournaments.allZeroStaircase_threeCycleCount`.  Full `lake build` passed (only pre-existing unrelated warnings).  Pushed math-lean commit `b5ffcde`; pushed a separate exploration note commit `69321b9`.
+**Mathematical extraction:** The formal proof exposed the more general interval-reversal theorem: reversing a matching of arcs in a transitive tournament creates exactly one directed triangle for each interior vertex of each reversed interval.  This recovers THM-399 because each reversed staircase arc `(d_p,r_p)` has exactly `k-1` interior vertices.  Recorded as **THM-410** and tangent **T709**; updated INV-190 to mark the c3 formula proved/formalized and to make Lean-formalizing THM-410 the next formalization target.
+**Artifacts:** `01-canon/theorems/THM-410-interval-reversal-triangle-count.md`; `00-navigation/TANGENTS.md` T709; INV-190 update.
+**Handoff:** Next formalization target: generalize the Lean staircase model from two blocks to an arbitrary finite linear order with a reversed matching, then prove THM-410.  Next computation target from INV-190 remains k=13 for the all-0 staircase H sequence.
+
 ## monad-compute-2026-06-04-S8 - INV-190 staircase H(k=9,n=18)=262755369 independently confirmed (Held-Karp, full k=2..8 validation chain)
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.
