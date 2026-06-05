@@ -1,4 +1,4 @@
-﻿# Session Log
+# Session Log
 
 ## monad-compute-2026-06-04-S7 - H-UNLOCK TABLE n=3..9: explicit unlock-n for all 27 transient gaps; {7,21} unique permanent low gaps (OPEN-Q-055 addendum)
 
@@ -114,6 +114,15 @@
 **Findings:** The S642 identity becomes a graph: each unordered odd-prime pair `{p,q}` creates an even node `E=p+q` and odd companions `E+p` and `E+q`; duplicates fold to `(2p,3p)`.  The prime `2` is a boundary/apex channel: up to `121`, only `7=3+2*2` is apex-only.
 **Tournament Analysis:** Carrier-lens vertices preserve the same-pair predicate and expose what is destroyed by forgetting orientation or the `q=2` boundary.  The tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, zero directed 3-cycles, one Hamiltonian path, and ranking `linear_pair_vieta > duplicate_branch_locus > bridge_graph_even_odd > apex_prime_two_boundary > mod6_residue_wheel > side_channel_jackknife > lemoine_to_goldbach_transfer > raw_representation_counts > scalar_parity_slogan`.
 **Artifacts:** HYP-2219, `07-reflections/goldbach-lemoine-same-pair-bridge-s643.md`, T712, result-index and concept-map updates.
+## codex-2026-06-04-S644 - Vieta/perfect/aliquot carriers and the 91 -> 21 shadow (HYP-2220)
+
+**Prompt:** Think Vieta carriers; `6` is the only number that is a doubled prime and a tripled prime; merge perfect numbers into the proof-facing session without losing progress toward the repo's main proofs.
+**Integration:** Builds on S642/HYP-2218's prime-pair diagonal `(2p,3p)`, incoming HYP-2219/S643's Goldbach/Lemoine companion graph and duplicate branch locus, S641/HYP-2217's LRC14/UD21 `27` carrier, HYP-2216's product-ledger framing, HYP-2211's Vieta/two-shadow carrier, THM-401's `2n-1` shell, and THM-361's distinct product-sum resonance.
+**Computation:** Added `04-computation/vieta_perfect_aliquot_carriers_s644.py` and stored `05-knowledge/results/vieta_perfect_aliquot_carriers_s644.out`.  The script verifies `6` as the unique doubled/tripled-prime crossing, computes triangular/Vieta rows `A=C(n,2)`, records `sqrt(8A+1)=2n-1`, checks even perfect numbers as triangular aliquot fixed controls, and ranks proof lenses by Tournament Analysis.
+**Findings:** `C(14,2)=91=7*13` has proper-divisor/aliquot shadow `s(91)=21`, while `sqrt(8*91+1)=27=2*14-1`.  More generally, if `p` and `2p-1` are prime, then `C(2p,2)=p(2p-1)` and `s(C(2p,2))=3p`; the `p=7` row gives `n=14` and shadow `21`.  The number `6` is also `C(4,2)`, the first perfect number, and the THM-361 product-sum resonance `1+2+3=1*2*3`.
+**Synthesis:** Perfect numbers are fixed controls of the aliquot side channel inside the same triangular carrier whose discriminant root is the LRC shell.  Incoming S643 names `(2p,3p)` as the Goldbach/Lemoine duplicate branch; S644 adds that, on the semiprime triangular row `C(2p,2)`, the aliquot shadow is also `3p`.  This does not prove LRC `n=14`; it gives a cheap arithmetic observer showing that `21` is an exact side-shadow of the `n=14` pair-count carrier, while the live proof burden remains the `27` lift/CRT/owner channel.
+**Tournament Analysis:** Proof-lens vertices give a transitive tournament with one Hamiltonian path, ranking `aliquot_shadow_C14_pair_count_to_21 > triangular_vieta_square_root_C_2n_minus_1 > even_perfect_numbers_as_triangular_fixed_controls > semiprime_n_2p_family_s_Cn2_equals_3p > doubled_tripled_prime_six_seam > goldbach_lemoine_diagonal_packet > raw_perfect_number_numerology`.
+**Artifacts:** HYP-2220, `07-reflections/vieta-perfect-aliquot-carriers-s644.md`, T713, result-index and concept-map updates.
 
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 

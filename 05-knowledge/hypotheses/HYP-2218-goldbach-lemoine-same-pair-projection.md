@@ -124,6 +124,10 @@ HYP-2217, the current picture is two-layered:
    channels: `C=27` shell/carry on the LRC side and `57=20+37` spine/bulk on
    the unit-distance side.
 
+HYP-2220 adds a third compatible shadow: in the triangular pair-count carrier,
+`C(14,2)=91=7*13` has aliquot shadow `s(91)=21`, while the same row has Vieta
+shell root `sqrt(8*91+1)=27`.
+
 ## Tournament Analysis
 
 S642 uses proof lenses as vertices.  The tournament is transitive with one
@@ -158,5 +162,5 @@ invertible pair projection plus the swap/reflection side channel.
 `04-computation/goldbach_lemoine_pair_projection_s642.py`;
 `05-knowledge/results/goldbach_lemoine_pair_projection_s642.out`;
 `07-reflections/goldbach-lemoine-same-pair-projection-s642.md`;
-HYP-2217; HYP-2216; HYP-2215; HYP-2211; HYP-2208; HYP-2051; HYP-2049;
-HYP-2044.
+HYP-2220; HYP-2217; HYP-2216; HYP-2215; HYP-2211; HYP-2208; HYP-2051;
+HYP-2049; HYP-2044.

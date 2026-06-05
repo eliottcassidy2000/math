@@ -1,4 +1,4 @@
-﻿# Hypothesis Log — Index
+# Hypothesis Log — Index
 
 Every hypothesis tested in this project, whether confirmed, refuted, or open.
 Organized by topic. Each hypothesis has a detail file.
@@ -675,6 +675,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2217 | LRC `n=14` and unit-distance `n=21` share a `27`-quantum section/bulk obstruction: LRC uses `C=2n-1=27` as shell modulus, while THM-408's Moser slabs use `27` as the full-layer edge quantum. | S641 recomputes LRC AP `C=27` gcd packets `1/3/9` with redundancy prices `18/6/8`, verifies Moser rows including exact `P_2^-` with `21` vertices and `57=2*27+3=20+37` unit edges, and ranks bridge routes.  The parallel monad S6 exhaustive `n=9` H-spectrum leaves low gaps exactly `[7,21]`, supporting `21` as a durable tournament obstruction while not making UD `n=21` a literal `H=21` realization.  Top route is `27_quantum_section_bulk_ledger`; the open transfer is lift/CRT conservativity vs endpoint-compatible ear conservativity. | codex-2026-06-04-S641; `HYP-2217-lrc14-unit-distance21-difficulty-bridge.md`; `lrc14_ud21_difficulty_bridge_s641.py`; `lrc14_ud21_difficulty_bridge_s641.out`; `lrc14-unit-distance21-difficulty-bridge-s641.md`; HYP-2216, HYP-2215, HYP-2206, HYP-2197, HYP-2188, HYP-2167, HYP-2166, HYP-2164, HYP-2200, THM-408, THM-407, THM-401, THM-115 |
 | HYP-2218 | Goldbach and Lemoine share an invertible same-pair projection: `E=p+q`, `O=p+2q` reconstruct `q=O-E`, `p=2E-O`; swapping the prime pair reflects `O -> 3E-O`, and the duplicate diagonal maps `p -> (2p,3p)`. | S642 verifies the finite same-pair graph through `300`: no Goldbach/Lemoine misses, the only odd-prime-compatible Lemoine miss is the `q=2` exception `7`, and the duplicate `p=7` gives the visible `(14,21)` shadow.  The proof-lens tournament is transitive and ranks `invertible_EO_pair_projection` above swap reflection, diagonal fixed locus, prime-2 exception channel, degree ledger, and raw counts. | codex-2026-06-04-S642; `HYP-2218-goldbach-lemoine-same-pair-projection.md`; `goldbach_lemoine_pair_projection_s642.py`; `goldbach_lemoine_pair_projection_s642.out`; `goldbach-lemoine-same-pair-projection-s642.md`; HYP-2217, HYP-2216, HYP-2215, HYP-2211, HYP-2208, HYP-2051, HYP-2049, HYP-2044 |
 | HYP-2219 | The S642 Goldbach/Lemoine same-pair projection induces a finite even/odd bridge graph: each unordered odd-prime pair `{p,q}` creates an even node `E=p+q` and odd companions `E+p`, `E+q`; duplicate pairs `p=q` form the branch locus `(E,O)=(2p,3p)`, while doubled-prime `2` is an apex boundary without an even same-pair companion. | S643 computes the bridge graph through even target `120` and odd target `121`.  Duplicates fold to one odd companion; up to `121`, only `7=3+2*2` is apex-only.  The carrier-lens Tournament Analysis is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, `0` directed 3-cycles, and `1` Hamiltonian path, ranking `linear_pair_vieta` above duplicate branch and bridge graph lenses. | codex-2026-06-04-S643; `HYP-2219-goldbach-lemoine-same-pair-bridge.md`; `goldbach_lemoine_pair_bridge_s643.py`; `goldbach_lemoine_pair_bridge_s643.out`; `goldbach-lemoine-same-pair-bridge-s643.md`; HYP-2218, HYP-2215, HYP-2049, HYP-2044, HYP-1984 |
+| HYP-2220 | The triangular pair-count carrier `A=C(n,2)` has Vieta square-root shadow `sqrt(8A+1)=2n-1`; perfect numbers are aliquot fixed controls in this carrier, and `C(14,2)=91` has exact proper-divisor shadow `s(91)=21`. | S644 proves `6` is the unique doubled/tripled-prime crossing and records it as first perfect/product-sum resonance; verifies even perfect numbers as triangular fixed controls; and identifies the semiprime family `n=2p`, `2p-1` prime, where `s(C(2p,2))=3p`, with `p=7` giving the `(14,21)` shadow.  This adds a divisor-sum observer to HYP-2219/S643's companion-graph duplicate branch.  The proof-lens tournament ranks `aliquot_shadow_C14_pair_count_to_21` above the triangular Vieta square root, perfect controls, semiprime family, `6` seam, S642 diagonal, and raw perfect-number numerology. | codex-2026-06-04-S644; `HYP-2220-vieta-perfect-aliquot-carriers.md`; `vieta_perfect_aliquot_carriers_s644.py`; `vieta_perfect_aliquot_carriers_s644.out`; `vieta-perfect-aliquot-carriers-s644.md`; HYP-2219, HYP-2218, HYP-2217, HYP-2216, HYP-2211, THM-401, THM-361 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5363,6 +5364,72 @@ For an unordered pair `{p,q}`, the odd companions are `E+p` and `E+q`; their sum
 **Applications:** build the even/odd companion graph; jackknife duplicate, twin-gap, and `q=2` boundary channels; use `(E,O)` recovery as a toy model for owner/carry inversion in LRC ledgers.
 
 **See:** `05-knowledge/hypotheses/HYP-2219-goldbach-lemoine-same-pair-bridge.md`; `04-computation/goldbach_lemoine_pair_bridge_s643.py` (+.out); `07-reflections/goldbach-lemoine-same-pair-bridge-s643.md`; HYP-2218, HYP-2215, HYP-2049, HYP-2044, HYP-1984.
+## HYP-2220: Vieta/perfect/aliquot carriers expose a 14/21 shadow (vieta-perfect-aliquot-carriers, codex-2026-06-04-S644)
+**Status:** OPEN synthesis / exact carrier identities.
+S644 adds a divisor-sum side channel to the carrier thread.  For the triangular
+pair count
+
+```text
+A = C(n,2)
+```
+
+the Vieta/discriminant identity is exact:
+
+```text
+8A + 1 = (2n - 1)^2.
+```
+
+So the LRC shell clock `C=2n-1` is the odd square root of the pair-count
+carrier, equivalently the discriminant root of `x^2+x-2A=0`.
+
+Perfect numbers enter as fixed controls, not as a replacement proof.  Even
+perfect numbers are triangular pair counts
+
+```text
+2^(p-1)(2^p-1) = C(2^p,2)
+```
+
+when `2^p-1` is prime, and they satisfy `s(A)=A` for the proper-divisor-sum
+map `s(A)=sigma(A)-A`.
+
+The LRC `n=14` row is not perfect, but it has the exact aliquot shadow:
+
+```text
+C(14,2)=91=7*13
+s(91)=1+7+13=21
+sqrt(8*91+1)=27=2*14-1.
+```
+
+S644 also proves the user's `6` seam exactly: the only number that is both a
+doubled prime and a tripled prime is `6`, since `2p=3q` forces `p=3` and
+`q=2`.  The same `6` is the first perfect number, the triangular row
+`C(4,2)`, and the THM-361 distinct product-sum resonance
+`6=2*3=1+2+3=1*2*3`.
+
+The family extension is:
+
+```text
+if p and 2p-1 are prime:
+  C(2p,2)=p(2p-1)
+  s(C(2p,2))=1+p+(2p-1)=3p.
+```
+
+The `p=7` member gives `n=14`, `C(n,2)=91`, and `s=21`, matching
+HYP-2219/S643's duplicate branch packet `(2p,3p)=(14,21)`.  The LRC proof
+burden remains the `C=27` lift/CRT/owner carrier from HYP-2217/HYP-2167;
+HYP-2220 adds a cheap arithmetic observer for classifying which rows are genuine
+carrier crossings.
+
+Tournament Analysis in S644 uses proof lenses as vertices and is transitive
+with one Hamiltonian path, ranking `aliquot_shadow_C14_pair_count_to_21` above
+the triangular Vieta square-root carrier, perfect fixed controls, the
+`n=2p,2p-1` semiprime family, the `6` seam, the S642 diagonal packet, and raw
+perfect-number numerology.
+
+**See:** `05-knowledge/hypotheses/HYP-2220-vieta-perfect-aliquot-carriers.md`;
+`04-computation/vieta_perfect_aliquot_carriers_s644.py` (+.out);
+`07-reflections/vieta-perfect-aliquot-carriers-s644.md`; HYP-2219, HYP-2218,
+HYP-2217, HYP-2216, HYP-2211, THM-401, THM-361.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

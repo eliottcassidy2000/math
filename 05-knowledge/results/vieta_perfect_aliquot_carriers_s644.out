@@ -1,0 +1,112 @@
+S644 Vieta-perfect aliquot carriers
+===================================
+
+Carrier identities
+------------------
+Triangular pair count: A = C(n,2)
+Vieta/discriminant carrier: 8A + 1 = (2n - 1)^2
+LRC shell clock: C = 2n - 1 = sqrt(8A + 1)
+Aliquot map: s(A) = sigma(A) - A, the sum of proper divisors
+
+The unique doubled/tripled-prime crossing
+-----------------------------------------
+Search n<= 20000: [6]
+Proof: if 2p = 3q with p,q prime, then 3 divides p, so p=3.
+Then 6 = 3q, hence q=2 and the common value is 6.
+The same 6 is the unique distinct product-sum resonance:
+  6 = 2*3 = 1+2+3 = 1*2*3
+  sigma(6)=12, aliquot(6)=6, 8*6+1=49=7^2
+
+Even perfect numbers as triangular fixed controls
+-------------------------------------------------
+Euclid-Euler rows with Mersenne prime M=2^p-1:
+  p   M        n=2^p     A=C(n,2)        shell      s(A)
+  2   3        4         6               7          6
+  3   7        8         28              15         28
+  5   31       32        496             63         496
+  7   127      128       8128            255        8128
+  13  8191     8192      33550336        16383      33550336
+  17  131071   131072    8589869056      262143     8589869056
+  19  524287   524288    137438691328    1048575    137438691328
+Here s(A)=A, so perfect numbers are fixed points of the aliquot
+map inside the same triangular/Vieta carrier used by LRC clocks.
+
+LRC triangular rows and aliquot shadows
+--------------------------------------
+  n    A=C(n,2)   factor(A)        shell=2n-1   s(A)   class
+  4    6          2*3              7            6      perfect
+  6    15         3*5              11           9      deficient
+  8    28         2^2*7            15           28     perfect
+  10   45         3^2*5            19           33     deficient
+  12   66         2*3*11           23           78     abundant
+  14   91         7*13             27           21     deficient  <== n=14 gives s(91)=21
+  16   120        2^3*3*5          31           240    abundant
+  18   153        3^2*17           35           81     deficient
+  20   190        2*5*19           39           170    deficient
+  21   210        2*3*5*7          41           366    abundant
+  22   231        3*7*11           43           153    deficient
+  32   496        2^4*31           63           496    perfect
+  38   703        19*37            75           57     deficient
+  62   1891       31*61            123          93     deficient
+  128  8128       2^6*127          255          8128   perfect
+
+Key row:
+  C(14,2) = 91 = 7*13
+  s(91) = 21
+  sqrt(8*91+1) = 27 = 2*14-1
+So 21 is an exact divisor-sum shadow of the n=14 pair-count carrier.
+
+Semiprime family n=2p with 2p-1 prime
+-------------------------------------
+If p and q=2p-1 are prime, then C(2p,2)=p*q and
+  s(C(2p,2)) = 1 + p + q = 3p.
+This is a whole family where the triangular pair count casts a
+tripled-prime aliquot shadow.
+
+  p    q=2p-1   n=2p   A=C(n,2)   s(A)=3p   diagonal packet
+  2    3        4      6           6         (2p,3p)=(4,6)
+  3    5        6      15          9         (2p,3p)=(6,9)
+  7    13       14     91          21        (2p,3p)=(14,21)  <== p=7 gives n=14, shadow 21
+  19   37       38     703         57        (2p,3p)=(38,57)
+  31   61       62     1891        93        (2p,3p)=(62,93)
+  37   73       74     2701        111       (2p,3p)=(74,111)
+  79   157      158    12403       237       (2p,3p)=(158,237)
+  97   193      194    18721       291       (2p,3p)=(194,291)
+  139  277      278    38503       417       (2p,3p)=(278,417)
+  157  313      314    49141       471       (2p,3p)=(314,471)
+  199  397      398    79003       597       (2p,3p)=(398,597)
+  211  421      422    88831       633       (2p,3p)=(422,633)
+
+Vieta/discriminant examples
+---------------------------
+  A=6     factor=2*3          8A+1=49      sqrt=7    n=4    s(A)=6
+  A=15    factor=3*5          8A+1=121     sqrt=11   n=6    s(A)=9
+  A=28    factor=2^2*7        8A+1=225     sqrt=15   n=8    s(A)=28
+  A=91    factor=7*13         8A+1=729     sqrt=27   n=14   s(A)=21
+  A=231   factor=3*7*11       8A+1=1849    sqrt=43   n=22   s(A)=153
+  A=496   factor=2^4*31       8A+1=3969    sqrt=63   n=32   s(A)=496
+  A=703   factor=19*37        8A+1=5625    sqrt=75   n=38   s(A)=57
+  A=8128  factor=2^6*127      8A+1=65025   sqrt=255  n=128  s(A)=8128
+
+This is the Vieta carrier x^2+x-2A=0.  For A=C(n,2),
+the positive root is x=n-1 and the discriminant root is 2n-1.
+
+Tournament Analysis over proof lenses
+-------------------------------------
+vertices=7
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+tie Hamiltonian path:
+  score=6 aliquot_shadow_C14_pair_count_to_21
+  score=5 triangular_vieta_square_root_C_2n_minus_1
+  score=4 even_perfect_numbers_as_triangular_fixed_controls
+  score=3 semiprime_n_2p_family_s_Cn2_equals_3p
+  score=2 doubled_tripled_prime_six_seam
+  score=1 goldbach_lemoine_diagonal_packet
+  score=0 raw_perfect_number_numerology
+
+Pairwise observable: which lens better preserves the hidden carrier
+needed for LRC-style proof transfer: pair-count square root, aliquot
+fixed/shadow data, prime 2/3/7 seams, and side-channel risk.
+Vertices are proof lenses, not runners, primes, or perfect numbers.
