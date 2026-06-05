@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S661 - LRC14 wild proof strategy atlas (HYP-2237)
+
+**Prompt:** Spend a long session brainstorming possible strategies for the LRC 14 proof, search creatively through repo threads, and look for the missing insight.
+**Claimed namespace:** HYP-2237 and T730 reserved after S660's tournament deck derivative lane claimed HYP-2236/T729.
+**Status:** In progress.  Initial lens: LRC `n=14` likely needs a no-leak theorem for owner/carry/deletion derivatives rather than another raw scalar wall search.
+
 ## codex-2026-06-05-S659 - finite-field Kakeya/Falconer carrier ledger for LRC no-leak (HYP-2235)
 
 **Prompt:** Integrate finite-field Kakeya/Falconer into the investigation.
