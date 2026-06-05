@@ -2,87 +2,55 @@
 
 ## Task Chosen
 
-I chose a tiny exhaustive sanity check of the odd-cycle formula for labeled
-tournaments on `n = 5` vertices.
+I chose a tiny exhaustive sanity check connected to the local `TournamentH7`
+thread: verify directly, for all labeled tournaments on `n <= 5` vertices, that
+no tournament has exactly `H(T) = 7` Hamiltonian paths.
 
-At `n = 5`, no two odd directed cycles can be vertex-disjoint, so the conflict
-graph independence polynomial has only the empty set and singleton odd-cycle
-terms. Thus OCF specializes to
-
-```text
-H(T) = I(Omega(T), 2) = 1 + 2 * (c3(T) + c5(T)).
-```
+This is only a low-order verification of the stronger `H(T) != 7` theorem
+recorded in `04-computation/lean/TournamentH7/README.md`, not a proof of the
+general theorem.
 
 ## What I Did
 
-I ran a transient Python enumeration over all `2^10 = 1024` labeled
-tournaments on five vertices. For each tournament I:
-
-- counted Hamiltonian paths directly over all `5!` vertex permutations;
-- counted directed 3-cycles and directed 5-cycles directly from cyclic orders;
-- checked `H(T) = 1 + 2 * (c3(T) + c5(T))`;
-- recorded small tournament fingerprints.
+I ran a transient brute-force Python enumeration. For each `n = 1, 2, 3, 4, 5`,
+I enumerated all `2^(n choose 2)` labeled tournament orientations. For each
+tournament I counted Hamiltonian paths independently by testing all `n!`
+vertex permutations against the directed edges.
 
 Tournament Analysis declaration:
 
 - Pairwise observable: the orientation of each unordered vertex pair.
-- Switch/gauge: the 10-bit labeled tournament mask, with each bit selecting one
-  of the two possible arc orientations.
-- Tie Hamiltonian path: not needed; the relation is already a tournament with no
-  ties.
-- Assumption challenge: I kept tournament vertices as the vertex set because the
-  claim being checked is exactly about `H(T)` and odd directed cycles of `T`.
-  Replacing vertices by arcs or cycle-objects would preserve some local conflict
-  information but destroy the direct Hamiltonian-path count being tested.
+- Switch/gauge: the labeled bit mask over unordered pairs, with each bit
+  choosing one of the two possible arc directions.
+- Tie Hamiltonian path: not needed, since every pairwise comparison is already
+  decisive in a tournament.
+- Fingerprints recorded: full `H(T)` value histograms for each `n <= 5`.
+
+Assumption challenge:
+
+- I kept tournament vertices as the vertex set because the claim being checked
+  is directly about Hamiltonian paths in `T`.
+- Alternate vertices such as arcs, odd cycles, score gaps, residues, or proof
+  obligations could preserve local orientation or obstruction data, but would
+  destroy the direct one-to-one permutation test for `H(T)`.
 
 ## Concrete Result
 
-No failures were found:
+No failures were found. The exhaustive distributions were:
 
 ```text
-n=5, labeled_tournaments=1024, failures=0
+n=1, labeled_tournaments=1,    H=7 count=0, distribution={1: 1}
+n=2, labeled_tournaments=2,    H=7 count=0, distribution={1: 2}
+n=3, labeled_tournaments=8,    H=7 count=0, distribution={1: 6, 3: 2}
+n=4, labeled_tournaments=64,   H=7 count=0, distribution={1: 24, 3: 16, 5: 24}
+n=5, labeled_tournaments=1024, H=7 count=0, distribution={1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
 ```
 
-The Hamiltonian-path count distribution was:
-
-```text
-H=1:  120
-H=3:  120
-H=5:  240
-H=9:  240
-H=11: 120
-H=13: 120
-H=15: 64
-```
-
-Equivalently, the distribution of `c3+c5` was:
-
-```text
-0: 120
-1: 120
-2: 240
-4: 240
-5: 120
-6: 120
-7: 64
-```
-
-The sorted score-sequence fingerprint distribution was:
-
-```text
-(0, 1, 2, 3, 4): 120
-(0, 1, 3, 3, 3): 40
-(0, 2, 2, 2, 4): 40
-(0, 2, 2, 3, 3): 120
-(1, 1, 1, 3, 4): 40
-(1, 1, 2, 2, 4): 120
-(1, 1, 2, 3, 3): 240
-(1, 2, 2, 2, 3): 280
-(2, 2, 2, 2, 2): 24
-```
+Thus the direct exhaustive check confirms `H(T) != 7` for every labeled
+tournament with `n <= 5`.
 
 ## Confidence Note
 
-Confidence is high for this bounded check. The enumeration is exhaustive over
-all labeled `n=5` tournaments, and both sides were counted independently by
-direct brute force rather than by using the claimed identity.
+Confidence is high for the bounded claim. The enumeration is exhaustive over
+all labeled tournaments for `n <= 5`, and `H(T)` was counted directly from
+permutations rather than inferred from the forbidden-value theorem.
