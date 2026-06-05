@@ -678,6 +678,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2220 | The triangular pair-count carrier `A=C(n,2)` has Vieta square-root shadow `sqrt(8A+1)=2n-1`; perfect numbers are aliquot fixed controls in this carrier, and `C(14,2)=91` has exact proper-divisor shadow `s(91)=21`. | S644 proves `6` is the unique doubled/tripled-prime crossing and records it as first perfect/product-sum resonance; verifies even perfect numbers as triangular fixed controls; and identifies the semiprime family `n=2p`, `2p-1` prime, where `s(C(2p,2))=3p`, with `p=7` giving the `(14,21)` shadow.  This adds a divisor-sum observer to HYP-2219/S643's companion-graph duplicate branch.  The proof-lens tournament ranks `aliquot_shadow_C14_pair_count_to_21` above the triangular Vieta square root, perfect controls, semiprime family, `6` seam, S642 diagonal, and raw perfect-number numerology. | codex-2026-06-04-S644; `HYP-2220-vieta-perfect-aliquot-carriers.md`; `vieta_perfect_aliquot_carriers_s644.py`; `vieta_perfect_aliquot_carriers_s644.out`; `vieta-perfect-aliquot-carriers-s644.md`; HYP-2219, HYP-2218, HYP-2217, HYP-2216, HYP-2211, THM-401, THM-361 |
 | HYP-2221 | Perfect numbers are fixed points of the aliquot/divisor carrier: `D(n) -> sigma(n) -> s(n)=sigma(n)-n`, with fixed predicate `s(n)=n` or `sigma(n)/n=2`.  This complements HYP-2220's triangular/Vieta aliquot carrier by scanning the divisor-sum dynamics directly; the scalar fixed equation is usable only with divisor-lattice side channels: prime-power products, parity, Mersenne primality in the even section, and odd-perfect obstruction data. | S645 scans `n<=100000`, finding fixed points `[6,28,496,8128]`, `13` length-2 amicable cycles, one length-5 sociable cycle, no defect `+1` quasi-perfect rows, powers of two as defect `-1` almost-perfect rows, and closest odd near-fixed row `32445=3^2*5*7*103` with `sigma(n)-2n=6`.  The carrier-lens Tournament Analysis is transitive with one Hamiltonian path and ranks `divisor_lattice_fixed_point` above aliquot graph, sigma product, odd-perfect side channel, Euclid-Euler section, local prime-power ledger, near-fixed defect scout, and raw sequence list. | codex-2026-06-04-S645; `HYP-2221-perfect-aliquot-fixed-point-carrier.md`; `aliquot_fixed_point_carrier_s645.py`; `aliquot_fixed_point_carrier_s645.out`; `perfect-aliquot-fixed-point-carrier-s645.md`; HYP-2220, HYP-2216, HYP-2215, HYP-2211, HYP-2208 |
 | HYP-2222 | The LRC shell clock `C=2n-1` has a divisor-carrier analogue of the perfect-number fixed equation: `A(C)=sum_{1<=a<=(C-1)/2} gcd(a,C)` is fixed when `A(C)=C`, equivalently Pillai's gcd-sum satisfies `P(C)=3C`.  The only odd fixed clocks are `C=15` and `C=27`, so the only LRC total denominators with a Pillai-fixed pair-sum clock are `n=8` and `n=14`. | S646 proves the clock-classification lemma from the multiplicative local factor `1+a*(1-1/p)`, then scans AP single-swaps through `n=14` using the THM-369 pair-sum pinch oracle.  Every tight non-AP single-swap preserves weighted gcd-shell mass: `2->7` at `n=5`, `2->9` at `n=6`, `6->12` at `n=8`, and `12->24` at `n=14`; the n=14 `Vstar` row moves shell `12` to shell `3` but preserves gcd counts `{1:9,3:3,9:1}`.  The open proof target is a no-leak lemma: fixed gcd carrier plus pair-pinch/carry-owner labels force AP, Vstar, or strict looseness. | codex-2026-06-04-S646; `HYP-2222-lrc-pillai-fixed-clock-carrier.md`; `lrc_pillai_fixed_clock_s646.py`; `lrc_pillai_fixed_clock_s646.out`; `lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220, HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369 |
+| HYP-2223 | Perfect triangular tournament controls split into Hamiltonian spine and off-path deformation fiber.  Every `m`-vertex tournament has `C(m,2)` arcs, and fixing one Hamiltonian path leaves `C(m-1,2)` free off-path arcs; at the second perfect control this is `C(8,2)=28=7+21`. | S647 enumerates fixed-base-path fibers through `n=7` and reconstructs the exact `n=8` fixed-path fiber from the full labelled H-spectrum by `fixed_count_h=h*L_h/8!`.  The `n=8` fiber has size `2^21`, `320` H-values in `[1,661]`, mean `388.6875`, and fixed-fiber counts `H=7:0`, `H=21:0`.  Thus `{7,21}` are section/fiber dimensions of the perfect arc carrier while remaining forbidden Hamiltonian-path counts. | codex-2026-06-04-S647; `HYP-2223-triangular-fixed-tournament-controls.md`; `triangular_fixed_tournament_controls_s647.py`; `triangular_fixed_tournament_controls_s647.out`; `triangular-fixed-tournament-controls-s647.md`; HYP-2220, HYP-2200, HYP-2202, HYP-2203, HYP-2217, THM-115 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5480,6 +5481,72 @@ prime-power ledger, near-fixed defect scout, and raw sequence list.
 `04-computation/aliquot_fixed_point_carrier_s645.py` (+.out);
 `07-reflections/perfect-aliquot-fixed-point-carrier-s645.md`; HYP-2220, HYP-2216,
 HYP-2215, HYP-2211, HYP-2208.
+## HYP-2223: Perfect tournament controls turn 7/21 into spine/fiber dimensions (triangular-fixed-tournament-controls, codex-2026-06-04-S647)
+**Status:** OPEN exact finite carrier / proof guardrail.
+S647 translates HYP-2220's triangular fixed controls into tournament language.
+Every tournament on `m` vertices has
+
+```text
+A_m = C(m,2)
+```
+
+arcs.  If one Hamiltonian path is fixed as a base section, then `m-1` arcs are
+forced and the remaining off-path orientation variables form a smaller
+triangular fiber:
+
+```text
+C(m,2) = (m-1) + C(m-1,2).
+```
+
+The second even-perfect tournament control is the key row:
+
+```text
+C(8,2) = 28 = 7 + 21.
+```
+
+Here `7` is the fixed Hamiltonian-path spine length and `21` is the off-path
+triangular deformation dimension.  They are not Hamiltonian-path counts in
+this role.
+
+S647 makes this exact by reconstructing the fixed-base-path `n=8` fiber from
+the full labelled `n=8` H-spectrum.  If `L_h` is the number of labelled
+8-vertex tournaments with `H(T)=h`, then double-counting pairs `(T,P)` with
+`P` a Hamiltonian path gives:
+
+```text
+fixed_count_h = h * L_h / 8!.
+```
+
+The reconstructed fixed-path fiber has:
+
+```text
+total fixed-path tournaments = 2097152 = 2^21
+distinct H values = 320
+H range = [1,661]
+mean H = 388.6875
+fixed_count(H=7) = 0
+fixed_count(H=21) = 0
+```
+
+So the perfect `28` control sees `7` and `21` exactly as section/fiber
+dimensions while THM-115 still forbids them as path-count values.
+
+The proof lesson is a role-mismatch guardrail: before transferring a visible
+scalar across H-gaps, LRC, or unit-distance, classify whether it is a count,
+section length, deformation dimension, shell modulus, aliquot shadow, bulk
+mass, or owner/carry residue.  For LRC `n=14`, this supports a cautious
+section/fiber rewriting of the current `27` shell/owner/carry program rather
+than a raw `7/21/28` scalar analogy.
+
+Tournament Analysis in S647 uses proof lenses as vertices and is transitive
+with one Hamiltonian path, ranking `off_path_triangular_fiber` above the
+`n8_perfect_control_28_equals_7_plus_21`, fixed-section, H-gap guardrail,
+weighted fixed-path fiber, Euclid-Euler controls, and raw `7/21` numerology.
+
+**See:** `05-knowledge/hypotheses/HYP-2223-triangular-fixed-tournament-controls.md`;
+`04-computation/triangular_fixed_tournament_controls_s647.py` (+.out);
+`07-reflections/triangular-fixed-tournament-controls-s647.md`; HYP-2220,
+HYP-2200, HYP-2202, HYP-2203, HYP-2217, THM-115.
 
 ## HYP-2222: LRC n=14 uses a Pillai-fixed gcd-shell clock (lrc-pillai-fixed-clock-carrier, codex-2026-06-04-S646)
 **Status:** OPEN LRC proof-use hypothesis with proved clock classification.
