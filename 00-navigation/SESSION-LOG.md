@@ -10,6 +10,11 @@
 **Tournament Analysis:** Vertices are proof carriers, not points or runners.  The majority tournament has `score_hist={0:1,2:3,4:1,6:2,7:2}`, `3` directed 3-cycles, SCC sizes `[4,3,1,1]`, and `15` Hamiltonian paths, ranking pinned distance fibers and concurrency multiplicity highest while raw cardinality is last.
 **Artifacts:** HYP-2235, T728, `04-computation/finite_field_kakeya_falconer_s659.py`, `05-knowledge/results/finite_field_kakeya_falconer_s659.out`, `07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`, plus HYP-2234, hypothesis-index, result-index, tangent, concept-map, and session-log updates.
 **Handoff:** Implement the LRC analogue of the finite-field intercept jackknife: hold the odd wall-pair support fixed, vary `C=27` shell/carry labels inside bounded owner fibers, and measure which labels are necessary for the floor predicate.
+## codex-2026-06-05-S659 - Tournament deck derivative side-channel atlas (HYP-2235)
+
+**Prompt:** Think creatively and explore deeply among many tangents the tournament deck angle; see how it applies and connects.
+**Claimed namespace:** HYP-2235 and T728 reserved with honest stubs before the deeper computation.  The working lens is that deck collisions are marked-projection failures repaired by deletion derivatives, boundary labels, and influence profiles.
+**Status:** In progress.  Goal is a deeper deck atlas and cross-repo synthesis, not an external reconstruction theorem.
 
 ## codex-2026-06-05-S658 - Small carrier atlases for missed frontier lanes (HYP-2234)
 
