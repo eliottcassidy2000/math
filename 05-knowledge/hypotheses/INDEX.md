@@ -684,6 +684,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2226 | Euler/Rabinowitsch prime-generating quadratics carry a tournament-like `p-2` interior witness horizon.  For `Q_p(x)=x^2+x+p`, the six primes `{2,3,5,11,17,41}` map by `d=4p-1` to the Heegner tail `{7,11,19,43,67,163}` and have `Q_p(0)=p`, `Q_p(1..p-2)` prime, and forced boundary composite `Q_p(p-1)=p^2`. | S650 refines HYP-2225 by adding the THM-410 long-edge model.  It checks primes `p<=500` and finds exactly `{2,3,5,11,17,41}` have first positive composite at `x=p-1`; reversing the long edge in a `p`-vertex transitive tournament creates exactly `p-2` cyclic triangles, one per interior vertex, with pair-witness split `sigma=0, lambda=p-2, delta=0`.  This is a typed boundary/interior witness bridge, not a Hamiltonian-path-count identity. | codex-2026-06-04-S650; `HYP-2226-heegner-prime-horizon-tournament.md`; `heegner_prime_horizon_tournament_s650.py`; `heegner_prime_horizon_tournament_s650.out`; `heegner-prime-horizon-tournament-s650.md`; THM-410, HYP-2225, HYP-2224, HYP-2223, HYP-2222, HYP-1220, HYP-1202 |
 | HYP-2227 | Number-theory tournaments are local-witness carrier quotients: useful vertices are residues, local primes, characters, valuations, zero terms, class groups, proof obligations, or side channels rather than raw integers alone. | S651 builds a finite atlas plus a carrier supplement.  Paley tournaments are literal finite-field character orientations (`p=7` has `c3=14,H=189`; `p=11` has `c3=55,H=95095`).  Local-prime obstruction tournaments reorder under side-channel changes: twin gap `2` vs Goldbach `N=210` has `3` edge flips, vs Goldbach `N=2110` has `1`, Goldbach `210` vs `2110` has `4`, and twin gap `2` vs Euler polynomial `p=41` has `62`.  The dynamic prime-race majority supplement at `q=11`, `X=100000` has `15` flips versus final count, `1` directed 3-cycle, SCC sizes `[3,1,1,1,1,1,1,1]`, and `H=3`. | codex-2026-06-05-S651; `HYP-2227-number-theory-tournament-carrier.md`; `number_theory_tournament_atlas_s651.py`; `number_theory_tournament_atlas_s651.out`; `number_theory_tournament_carriers_s651.py`; `number_theory_tournament_carriers_s651.out`; `number-theory-tournament-carriers-s651.md`; HYP-2226, HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115 |
 | HYP-2228 | THM-410 interval matchings and square-node tournament substitution are enumeration speedup carriers for near-transitive and imprimitive tournament slices. | S652 validates THM-410's matching formula through `n=8`, counts interval-matching states with `c3<=10` (`188273` of `2390480` matchings at `n=14`), defines the square-template Burnside companion sequence `1,1,12,704,2127984`, and verifies an exact block path-cover/macro-word formula for `H` on 9-vertex lexicographic products where naive multiplicativity fails (`2721` vs `3`). | codex-2026-06-05-S652; `HYP-2228-thm410-square-blowup-enumeration-speedups.md`; `thm410_square_blowup_enumeration_s652.py`; `thm410_square_blowup_enumeration_s652.out`; `thm410-square-blowup-enumeration-speedups-s652.md`; THM-410, HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115 |
+| HYP-2229 | Basel-type pi identities form a three-face period carrier: disjoint elementary packets, power-sum moments, and Bernoulli/von-Staudt local denominator data. | S653 computes `zeta(2k)/pi^(2k)` for `k<=12` from both Euler's Bernoulli formula and Newton identities applied to `zeta({2}^m)/pi^(2m)=1/(2m+1)!`; all entries agree.  The same scout records the disjoint-packet family `1/(2m+1)!`, rechecks the von Staudt chain `6->42->1806->1806`, and ranks proof lenses by Tournament Analysis with sine-product elementary packets first. | codex-2026-06-05-S653; `HYP-2229-basel-pi-family-carrier.md`; `basel_pi_family_carrier_s653.py`; `basel_pi_family_carrier_s653.out`; `basel-pi-family-carrier-s653.md`; HYP-2228, HYP-2227, HYP-2214, HYP-2211, HYP-1627, T252, THM-002 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6053,6 +6054,73 @@ substitution is modular decomposition and block `H` data.
 `05-knowledge/results/thm410_square_blowup_enumeration_s652.out`;
 `07-reflections/thm410-square-blowup-enumeration-speedups-s652.md`; THM-410,
 HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115.
+
+## HYP-2229: Basel-type pi identities are a period-carrier duality (basel-pi-family-carrier, codex-2026-06-05-S653)
+**Status:** OPEN method hypothesis with exact classical identity audit.
+
+S653 reads the user's "basil" prompt as Basel-type identities for pi.  The main
+claim is that the infinite Basel family has three coupled faces:
+
+```text
+disjoint elementary packets <-> power-sum moments <-> Bernoulli/p-adic sieve.
+```
+
+The sine product is the carrier:
+
+```text
+sin(pi*x)/(pi*x) = product_{n>=1} (1 - x^2/n^2).
+```
+
+Its coefficients give the elementary/disjoint family
+
+```text
+zeta({2}^m) = pi^(2m)/(2m+1)!,
+```
+
+while the logarithmic derivative and Newton identities recover the power sums
+
+```text
+zeta(2k) = c_k * pi^(2k).
+```
+
+`04-computation/basel_pi_family_carrier_s653.py` computes `c_k` through `k=12`
+in two ways: Euler's Bernoulli formula and Newton identities from
+`e_m=1/(2m+1)!`.  The coefficients agree exactly:
+
+```text
+1/6, 1/90, 1/945, 1/9450, 1/93555,
+691/638512875, ...
+```
+
+The same scout rechecks the repo's von Staudt denominator chain:
+
+```text
+6 -> 42 -> 1806 -> 1806.
+```
+
+The conceptual bridge to tournaments is OCF.  Basel's elementary coefficients
+are disjoint reciprocal-square packets; OCF's `alpha_j` count disjoint odd-cycle
+packets.  In both settings the scalar is downstream of a retained product /
+independence object.  Bernoulli denominators add a local-prime side channel via
+von Staudt-Clausen, parallel to the repo's obstruction-product ledgers.
+
+Tournament Analysis over proof lenses is transitive and ranks:
+
+```text
+sine_product_elementary_packets
+> newton_log_derivative_power_sums
+> bernoulli_von_staudt_sieve
+> fourier_parseval_boundary
+> dirichlet_L_modular_periods
+> p_adic_zeta_denominator_audit
+> raw_numeric_pslq
+```
+
+**See:** `05-knowledge/hypotheses/HYP-2229-basel-pi-family-carrier.md`;
+`04-computation/basel_pi_family_carrier_s653.py`;
+`05-knowledge/results/basel_pi_family_carrier_s653.out`;
+`07-reflections/basel-pi-family-carrier-s653.md`; HYP-2228, HYP-2227,
+HYP-2214, HYP-2211, HYP-1627, T252, THM-002.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

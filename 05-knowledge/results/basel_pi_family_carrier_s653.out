@@ -1,0 +1,62 @@
+==============================================================================
+S653 Basel-type pi identities: power sums, disjoint sums, Bernoulli sieve
+==============================================================================
+
+Core carrier identities
+  sin(pi*x)/(pi*x) = product_{n>=1} (1 - x^2/n^2)
+  zeta({2}^m)      = pi^(2m)/(2m+1)!        [elementary/disjoint face]
+  zeta(2k)         = c_k * pi^(2k)           [power-sum/moment face]
+  Newton identities recover c_k from e_m=1/(2m+1)!.
+
+Table: even-zeta coefficients and von Staudt sieve
+ k       zeta(2k)/pi^(2k)                 Newton             B_2k                VS primes
+ 1                    1/6                    1/6              1/6                   [2, 3] OK
+ 2                   1/90                   1/90            -1/30                [2, 3, 5] OK
+ 3                  1/945                  1/945             1/42                [2, 3, 7] OK
+ 4                 1/9450                 1/9450            -1/30                [2, 3, 5] OK
+ 5                1/93555                1/93555             5/66               [2, 3, 11] OK
+ 6          691/638512875          691/638512875        -691/2730         [2, 3, 5, 7, 13] OK
+ 7             2/18243225             2/18243225              7/6                   [2, 3] OK
+ 8      3617/325641566250      3617/325641566250        -3617/510            [2, 3, 5, 17] OK
+ 9   43867/38979295480125   43867/38979295480125        43867/798            [2, 3, 7, 19] OK
+10 174611/1531329465290625 174611/1531329465290625      -174611/330            [2, 3, 5, 11] OK
+11 155366/13447856940643125 155366/13447856940643125       854513/138               [2, 3, 23] OK
+12 236364091/201919571963756521875 236364091/201919571963756521875  -236364091/2730         [2, 3, 5, 7, 13] OK
+
+Elementary/disjoint Basel family
+ m          zeta({2}^m)/pi^(2m)          denominator
+ 1                          1/6                    6
+ 2                        1/120                  120
+ 3                       1/5040                5,040
+ 4                     1/362880              362,880
+ 5                   1/39916800           39,916,800
+ 6                 1/6227020800        6,227,020,800
+ 7              1/1307674368000    1,307,674,368,000
+ 8            1/355687428096000  355,687,428,096,000
+ 9         1/121645100408832000 121,645,100,408,832,000
+10       1/51090942171709440000 51,090,942,171,709,440,000
+11    1/25852016738884976640000 25,852,016,738,884,976,640,000
+12 1/15511210043330985984000000 15,511,210,043,330,985,984,000,000
+
+Von Staudt denominator chain
+  step 0: weight=6      primes=[2, 3, 7]                denom=42
+  step 1: weight=42     primes=[2, 3, 7, 43]            denom=1806
+  step 2: weight=1806   primes=[2, 3, 7, 43]            denom=1806 fixed
+  step 3: weight=1806   primes=[2, 3, 7, 43]            denom=1806 fixed
+
+Carrier interpretation
+  elementary face = disjoint packet counts, like OCF collections of disjoint odd cycles
+  power-sum face  = moments/log-derivative, like scalar H or aggregate spectra
+  Bernoulli face  = rational descent and p-adic/von-Staudt side-channel
+  pi is the period that makes the elementary and power-sum faces agree.
+
+Tournament Analysis over proof lenses
+  top_order=['sine_product_elementary_packets', 'newton_log_derivative_power_sums', 'bernoulli_von_staudt_sieve', 'fourier_parseval_boundary', 'dirichlet_L_modular_periods', 'p_adic_zeta_denominator_audit', 'raw_numeric_pslq']
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  hamiltonian_paths=1
+
+Hypothesis
+  Treat Basel identities as a period-carrier duality:
+  disjoint elementary packets <-> power-sum moments <-> Bernoulli/p-adic sieve.
+  This is the analytic cousin of the repo's OCF identity H(T)=I(Omega(T),2).

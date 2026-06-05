@@ -1,5 +1,13 @@
 # Session Log
 
+## codex-2026-06-05-S653 - Basel-type pi identities as a period carrier (HYP-2229)
+
+**Prompt:** Think about the infinite family of basil/Basel-type identities for pi.
+**Integration:** Treated the prompt as the Basel problem family and connected it to the repo's existing Bernoulli/von-Staudt, zeta/tournament, and pi/e trace-norm carrier threads.  The key move is to keep the product/elementary side channel before collapsing to scalar zeta values.
+**Findings:** The sine product packages two infinite families at once: `zeta({2}^m)=pi^(2m)/(2m+1)!` on the disjoint elementary-packet face, and `zeta(2k)=c_k*pi^(2k)` on the power-sum/moment face.  Newton identities recover the even-zeta coefficients from the elementary coefficients, agreeing with Euler's Bernoulli formula through `k=12`.  The Bernoulli/von-Staudt side rechecks the denominator chain `6 -> 42 -> 1806 -> 1806`.  The repo analogy is OCF: Basel's disjoint reciprocal-square packets parallel disjoint odd-cycle collections before scalar evaluation.
+**Artifacts:** HYP-2229, T722, `04-computation/basel_pi_family_carrier_s653.py`, `05-knowledge/results/basel_pi_family_carrier_s653.out`, `07-reflections/basel-pi-family-carrier-s653.md`, plus concept-map, result-index, and hypothesis-index updates.
+**Handoff:** Build a Basel-OCF dictionary with three columns: sine-product packets / disjoint odd-cycle packets, log-derivative zeta / H-spectra, and Bernoulli denominators / local obstruction product ledgers.  Test whether the companion elementary-packet sequences suggest useful finite tournament analogues beyond the scalar `H`.
+
 ## codex-2026-06-05-S652 - THM-410 and square-node tournament enumeration speedups (HYP-2228)
 
 **Prompt:** Use THM-410 and related structure to think creatively about speeding tournament isomorphism-class enumeration, H-spectrum sequences, and new square-node constructions where each node becomes a tournament of the original size.
