@@ -1,0 +1,92 @@
+﻿S652 THM-410 / Square-Blowup Enumeration Speedups
+========================================================================
+
+Thesis: enumeration gets faster when the quotient remembers the
+witness carrier.  THM-410 remembers reversed intervals; square-node
+substitution remembers modules.  Forget either carrier and the task
+falls back toward raw edge masks or raw S_N canonicalization.
+
+THM-410 Matching Cache
+----------------------
+n=2: matchings=2, mismatches=0, first c3 bins=0:2
+n=3: matchings=4, mismatches=0, first c3 bins=0:3, 1:1
+n=4: matchings=10, mismatches=0, first c3 bins=0:5, 1:2, 2:3
+n=5: matchings=26, mismatches=0, first c3 bins=0:8, 1:5, 2:6, 3:5, 4:2
+n=6: matchings=76, mismatches=0, first c3 bins=0:13, 1:10, 2:16, 3:10, 4:15, 5:4, 6:8
+n=7: matchings=232, mismatches=0, first c3 bins=0:21, 1:20, 2:33, 3:31, 4:32, 5:29, 6:30, 7:16
+n=8: matchings=764, mismatches=0, first c3 bins=0:34, 1:38, 2:69, 3:68, 4:94, 5:66, 6:111, 7:64
+
+Interval-Matching Search Lane
+-----------------------------
+The cap c3<=B becomes the additive bound sum(b-a-1)<=B over reversed matching intervals.
+ n  matchings  labelled tournaments  A000568(n)  c3-values  <=10  <=20
+ 5         26                  1024          12          5    26    26
+ 6         76                 32768          56          7    76    76
+ 7        232             2.097e+06         456         10   232   232
+ 8        764             2.684e+08        6880         13   722   764
+ 9       2620             6.872e+10      191536         17  2062  2620
+10       9496             3.518e+13     9733056         21  5538  9496
+
+Upset Deformation Formula
+-------------------------
+n=3: labelled=8, mismatches=0
+n=4: labelled=64, mismatches=0
+n=5: labelled=1024, mismatches=0
+n=6: labelled=32768, mismatches=0
+n=96 random upset: triple-scan=0.0115s, bitset=0.0021s, equal=True
+Formula: for x<y<z, cyclic iff r_xy=r_yz and r_xz is opposite.
+
+Lexicographic Square Sq(T)=T[T]
+-------------------------------
+n=2->N=4: labelled=2, iso=1, mismatches=0, c3_multiplier=10
+  distinct base c3=1, square(score,c3) fingerprints=1, structured images<=1 inside 2^6 labelled N-space
+n=3->N=9: labelled=8, iso=2, mismatches=0, c3_multiplier=30
+  distinct base c3=2, square(score,c3) fingerprints=2, structured images<=2 inside 2^36 labelled N-space
+n=4->N=16: labelled=64, iso=4, mismatches=0, c3_multiplier=68
+  distinct base c3=3, square(score,c3) fingerprints=4, structured images<=4 inside 2^120 labelled N-space
+n=5->N=25: labelled=1024, iso=12, mismatches=0, c3_multiplier=130
+  distinct base c3=6, square(score,c3) fingerprints=9, structured images<=12 inside 2^300 labelled N-space
+Exact: score(i,a)=n*score_T(i)+score_T(a); c3(Sq(T))=(n^3+n)c3(T).
+
+Module H Dynamic Program
+------------------------
+n=3 substitution combos checked directly: 16, failures=0
+n=4 total-16-vertex samples checked directly: 8, failures=0
+C3[C3]: H_module=3159, H_direct=3159, naive_multiplicative=81, c3=30
+C3[T2,T2,T2]: H=45, naive_multiplicative=3
+Consequence: H multiplies safely over transitive condensation/direct sums, but strong outer quotients need macro-word interleavings.
+
+State-Count Proxy
+-----------------
+ n  total vertices  raw Held-Karp states  module-state proxy  raw/module
+ 3               9                   4608                 273       16.88
+ 4              16              1.049e+06                2824      371.31
+ 5              25              8.389e+08               40095    20921.83
+ 6              36              2.474e+12              710268  3483053.10
+ 7              49              2.758e+16           1.470e+07 1877090681.38
+
+Tournament Analysis
+-------------------
+vertices=raw_labelled_scan, iso_canonical_augmentation, Burnside_cycle_type_count, c3_pruned_extension, THM410_interval_matching_cache, upset_bitset_deformation_formula, modular_substitution_decomposition, lexicographic_square_subsequence, quotient_word_H_automaton
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 5: 2, 6: 2, 8: 1}
+c3=2
+scc_sizes=[4, 1, 1, 1, 1, 1]
+H=5
+ranking:
+  8: modular_substitution_decomposition
+  6: THM410_interval_matching_cache
+  6: lexicographic_square_subsequence
+  5: Burnside_cycle_type_count
+  5: quotient_word_H_automaton
+  3: upset_bitset_deformation_formula
+  2: c3_pruned_extension
+  1: iso_canonical_augmentation
+  0: raw_labelled_scan
+Challenged assumption: vertices need not be tournaments themselves; proof routes, interval witnesses, quotient states, modular fibers, and run-cover packets can be the more faithful vertex set.
+
+Actionable Synthesis
+--------------------
+1. For low-c3 and near-transitive probes, seed by THM-410 intervals and then widen to general upsets using r_xy=r_yz!=r_xz bitsets.
+2. For A000568-like enumeration, detect modular substitution before full canonicalization: prime quotient plus decorated fibers should replace many raw S_N searches.
+3. For the user's square operation, Sq(T)=T[T] maps n to n^2 while keeping score and c3 in base-n arithmetic; H is handled by run-cover polynomials and macro words.
+4. For the n=10 H-spectrum bottleneck, S9 already showed all 157 high gaps unlock by biased n=10 witnesses.  The next exact win is a certified structured-witness menu plus module/c3 pruning, not blind flattening of every side channel.

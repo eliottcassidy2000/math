@@ -1,55 +1,71 @@
 # HYP-2228: THM-410 and Square-Node Blowups Give Enumeration Speedup Carriers
 
-**Status:** OPEN method hypothesis with finite computation evidence
-(codex-2026-06-05-S652).
+**Status:** OPEN method hypothesis with S652 computational evidence.
 
 ## Claim
 
-THM-410 interval-reversal matchings and square-node tournament substitution are
-enumeration carriers.  They do not replace full tournament isomorphism
-enumeration, but they expose two compressed slices that raw labelled search sees
-only after paying for too many labels.
+Tournament enumeration gets faster when the quotient remembers the witness
+carrier.  THM-410 remembers reversed intervals.  Arbitrary upsets around a
+linear order remember a bitset deformation carrier.  Square-node substitution
+remembers modules, automorphism cycles, and block-run words.  If those carriers
+are flattened into raw edge masks or raw `S_N` canonicalization too early, the
+computation loses the structure that made it small.
 
-The two carriers are:
+S652 records two compatible speedup lanes.
 
-1. **Interval matching kernel.**  Start from the transitive tournament on a
-   linear order and reverse a matching `M` of arcs.  By THM-410,
+1. **Interval and upset carrier.**  Start from the transitive tournament on a
+   linear order.  If a matching `M` of arcs is reversed, THM-410 gives
 
    ```text
    c3(T_M) = sum_{(a,b) in M} (b-a-1).
    ```
 
-   Thus a low-`c3` near-transitive branch can carry an additive interval weight,
-   instead of recomputing all triples at every node.
-
-2. **Square substitution kernel.**  Given an `n`-vertex base tournament `B`,
-   replace each vertex by an `n`-vertex tournament block.  The resulting
-   tournament has `n^2` vertices, but the imprimitive template count is
+   For a general upset set relative to the same order, each `x<y<z` is cyclic
+   exactly when
 
    ```text
-   SqTempl(n) =
-     sum_[B in A000568(n)] (1/|Aut(B)|) sum_{g in Aut(B)} A000568(n)^{cycles(g)}.
+   r_xy = r_yz != r_xz.
    ```
 
-   For Hamiltonian paths, naive multiplicativity fails for cyclic bases, but an
-   exact formula survives:
+   Thus low-`c3` and near-transitive searches can keep interval ledgers or
+   bitset side channels before scanning all triples.
+
+2. **Square substitution carrier.**  Given an `n`-vertex base tournament `A`,
+   replace each vertex `i` by an `n`-vertex tournament block `B_i`.  Between
+   blocks, all arcs follow `A`.  The result has `n^2` vertices, but still has a
+   visible module carrier.
+
+   For the uniform square `Sq(T)=T[T]`, S652 verifies
 
    ```text
-   H(B[F_i]) =
-     sum_r MacroWords_B(r) * product_i OrderedPathCovers(F_i, r_i).
+   score((i,a)) = n * score_T(i) + score_T(a)
+   c3(Sq(T)) = (n^3 + n) * c3(T).
    ```
 
-   Here `r_i` is the number of runs of block `i`; `MacroWords_B(r)` counts
-   directed block-word paths in the base; and `OrderedPathCovers(F_i,r_i)` counts
-   ordered covers of the fiber by `r_i` directed paths.
+   For general substitution,
+
+   ```text
+   c3(A[B_i]) =
+     sum_i c3(B_i)
+     + sum_{directed 3-cycles abc in A} |B_a| |B_b| |B_c|.
+   ```
+
+   Hamiltonian paths require an additional run carrier:
+
+   ```text
+   H(A[B_i]) =
+     sum_r MacroWords_A(r) * product_i OrderedPathCovers(B_i, r_i).
+   ```
+
+   Here `r_i` is the number of runs of block `i`; `MacroWords_A(r)` counts
+   directed block-word paths in the base; and `OrderedPathCovers(B_i,r_i)`
+   counts ordered covers of the fiber by `r_i` directed paths.
 
 ## S652 Evidence
 
-`04-computation/thm410_square_blowup_enumeration_s652.py` validates the THM-410
-matching formula exhaustively through `n=8` matchings, with zero failures.
-
-The low-`c3` matching DP gives the following cap sizes for the H=21-relevant
-bound `c3<=10`:
+`04-computation/thm410_square_blowup_enumeration_s652.py` validates the
+THM-410 matching formula exhaustively through `n=8` and uses a weighted matching
+DP to count the H=21-relevant cap `c3<=10`:
 
 ```text
 n   all matchings   c3<=10
@@ -59,77 +75,105 @@ n   all matchings   c3<=10
 14  2,390,480       188,273
 ```
 
-These are not all low-`c3` tournaments; they are a cheap theorem-certified
+These are not all low-`c3` tournaments.  They are a cheap theorem-certified
 near-transitive carrier.
 
-The square-substitution Burnside companion sequence through `n=5` is:
+The same script adds a Burnside companion sequence for square-substitution
+templates.  It chooses an `n`-vertex base tournament and assigns an `n`-vertex
+tournament class to each base vertex, modulo base automorphisms:
 
 ```text
-n  A000568(n)  A(n)^2 uniform pairs  raw A(n)^(n+1)  square templates
-1  1           1                     1               1
-2  1           1                     1               1
-3  2           4                     16              12
-4  4           16                    1,024           704
-5  12          144                   2,985,984       2,127,984
+SqTempl(n) =
+  sum_[B in A000568(n)] (1/|Aut(B)|) sum_{g in Aut(B)} A000568(n)^{cycles(g)}.
 ```
 
-So the new related sequence is:
+The first values through `n=5` are:
 
 ```text
 1, 1, 12, 704, 2127984, ...
 ```
 
-It counts imprimitive square templates, not all isomorphism classes on `n^2`
+This counts imprimitive square templates, not all isomorphism classes on `n^2`
 vertices.
 
-The block path-cover formula was checked against direct Held-Karp on 9-vertex
-lexicographic products:
+`04-computation/thm410_square_blowup_speedups_s652.py` adds a supplemental
+bounded scout.  It verifies the THM-410 matching cache through `n=8`, verifies
+the arbitrary-upset rule over all labelled tournaments through `n=6`, and
+checks the uniform-square score and `c3` formulas over all labelled tournaments
+through `n=5`.
+
+The two Hamiltonian-path scouts agree on the key warning: naive multiplication
+fails for strong outer quotients, and the missing mass is block-run
+interleaving.
 
 ```text
-chain3[chain3,chain3,chain3]       H=1     naive product=1
-cycle3[chain3,chain3,chain3]       H=2721  naive product=3
-cycle3[cycle3,chain3,cycle3]       H=2961  naive product=27
-chain3[cycle3,chain3,cycle3]       H=9     naive product=9
+cycle3[chain3,chain3,chain3]: H=2721, naive product=3
+C3[C3]:                         H=3159, naive product=81
+C3[T2,T2,T2]:                    H=45,   naive product=3
 ```
 
-Thus the exact block formula catches the large run-interleaving contribution
-that simple product heuristics miss.
+The supplemental scout also records the square-module state proxy:
 
-## Enumeration Use
+```text
+n  total vertices  raw Held-Karp states  module-state proxy  raw/module
+3               9                   4608                 273       16.88
+4              16              1.049e+06                2824      371.31
+5              25              8.389e+08               40095    20921.83
+6              36              2.474e+12              710268  3483053.10
+7              49              2.758e+16           1.470e+07 1877090681.38
+```
 
-The practical speedup thesis is:
+The proxy is not a generic speedup for random unmarked tournaments.  It is the
+payoff for retaining the substitution carrier.
 
-- use THM-410's interval weight as a branch-and-bound key for near-transitive
-  `c3`-capped searches, including H-spectrum gap work;
-- use modular decomposition and base automorphism cycle-index data before
-  canonicalizing large blowups;
+## Enumeration Program
+
+For H-spectrum gap hunting:
+
+- use S9's lesson that sampling proves achievability but not permanence;
+- build certified witness menus: THM-410 intervals, general upset bitsets,
+  square/module substitutions, and other modular decompositions;
 - compute `H` of substitution products by path-cover polynomials and a
   macro-word DP, not by Held-Karp on all `n^2` vertices;
-- treat A000568 as one layer in a family of companion counts: rooted,
-  self-converse, q-Burnside, and now square-substitution templates.
+- record which quotient proves the count, rather than recording only the final
+  `H`.
 
-## Assumption Challenge
+For A000568-style isomorphism-class enumeration:
+
+- run modular decomposition before full canonicalization;
+- canonicalize the prime quotient and decorated fiber types before falling back
+  to `S_N`;
+- cache base automorphism cycle indices and decorated-fiber Burnside counts;
+- use score, `c3`, block path-cover polynomials, macro-word automata, and
+  upset bitsets as fast reject/cache keys.
+
+## Tournament Analysis
 
 The vertices of the analysis need not be the original tournament vertices.
-Useful vertex sets here include reversed intervals, matching arcs, block
-modules, macro-runs, ordered path-cover segments, automorphism cycles, H-values,
-and proof obligations.
+Useful vertex sets here include reversed intervals, matching arcs, upset
+patterns, block modules, macro-runs, ordered path-cover segments, automorphism
+cycles, H-values, and proof obligations.
 
 The interval quotient preserves exact cyclic-triangle witnesses for matching
-flips, but destroys interactions among nonmatching flip sets.  The square
-substitution quotient preserves modular decomposition and block `H` data, but
-destroys the prime/indecomposable tournaments outside the imprimitive slice.
+flips, but destroys interactions among nonmatching flip sets.  The upset
+bitset quotient preserves a fixed-order deformation ledger, but destroys
+order-free canonical information.  The square substitution quotient preserves
+modular decomposition and block `H` data, but destroys prime/indecomposable
+tournaments outside the imprimitive slice.
 
 ## Limits
 
 This is a carrier, not a full enumeration theorem.  THM-410 is exact for
-matching reversals; arbitrary flip sets need higher-order corrections.  The
-Burnside formula counts square templates modulo base automorphisms; it does not
-claim that these are all distinct `n^2`-vertex isomorphism classes.  The block
-path-cover formula is exact for substitution products, but its path-cover
-polynomials still need their own optimized implementation for larger fibers.
+matching reversals; arbitrary flip sets need the broader upset rule or
+higher-order bookkeeping.  The Burnside formula counts square templates modulo
+base automorphisms; it does not claim that these are all distinct `n^2`-vertex
+isomorphism classes.  The block path-cover formula is exact for substitution
+products, but its path-cover polynomials still need optimized production
+implementations for larger fibers.
 
 **See:** `04-computation/thm410_square_blowup_enumeration_s652.py`;
 `05-knowledge/results/thm410_square_blowup_enumeration_s652.out`;
+`04-computation/thm410_square_blowup_speedups_s652.py`;
+`05-knowledge/results/thm410_square_blowup_speedups_s652.out`;
 `07-reflections/thm410-square-blowup-enumeration-speedups-s652.md`; THM-410,
-HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115.
+HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115, OPEN-Q-055.

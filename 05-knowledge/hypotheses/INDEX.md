@@ -685,6 +685,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2227 | Number-theory tournaments are local-witness carrier quotients: useful vertices are residues, local primes, characters, valuations, zero terms, class groups, proof obligations, or side channels rather than raw integers alone. | S651 builds a finite atlas plus a carrier supplement.  Paley tournaments are literal finite-field character orientations (`p=7` has `c3=14,H=189`; `p=11` has `c3=55,H=95095`).  Local-prime obstruction tournaments reorder under side-channel changes: twin gap `2` vs Goldbach `N=210` has `3` edge flips, vs Goldbach `N=2110` has `1`, Goldbach `210` vs `2110` has `4`, and twin gap `2` vs Euler polynomial `p=41` has `62`.  The dynamic prime-race majority supplement at `q=11`, `X=100000` has `15` flips versus final count, `1` directed 3-cycle, SCC sizes `[3,1,1,1,1,1,1,1]`, and `H=3`. | codex-2026-06-05-S651; `HYP-2227-number-theory-tournament-carrier.md`; `number_theory_tournament_atlas_s651.py`; `number_theory_tournament_atlas_s651.out`; `number_theory_tournament_carriers_s651.py`; `number_theory_tournament_carriers_s651.out`; `number-theory-tournament-carriers-s651.md`; HYP-2226, HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215, THM-410, THM-115 |
 | HYP-2228 | THM-410 interval matchings and square-node tournament substitution are enumeration speedup carriers for near-transitive and imprimitive tournament slices. | S652 validates THM-410's matching formula through `n=8`, counts interval-matching states with `c3<=10` (`188273` of `2390480` matchings at `n=14`), defines the square-template Burnside companion sequence `1,1,12,704,2127984`, and verifies an exact block path-cover/macro-word formula for `H` on 9-vertex lexicographic products where naive multiplicativity fails (`2721` vs `3`). | codex-2026-06-05-S652; `HYP-2228-thm410-square-blowup-enumeration-speedups.md`; `thm410_square_blowup_enumeration_s652.py`; `thm410_square_blowup_enumeration_s652.out`; `thm410-square-blowup-enumeration-speedups-s652.md`; THM-410, HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115 |
 | HYP-2229 | Basel-type pi identities form a three-face period carrier: disjoint elementary packets, power-sum moments, and Bernoulli/von-Staudt local denominator data. | S653 computes `zeta(2k)/pi^(2k)` for `k<=12` from both Euler's Bernoulli formula and Newton identities applied to `zeta({2}^m)/pi^(2m)=1/(2m+1)!`; all entries agree.  The same scout records the disjoint-packet family `1/(2m+1)!`, rechecks the von Staudt chain `6->42->1806->1806`, and ranks proof lenses by Tournament Analysis with sine-product elementary packets first. | codex-2026-06-05-S653; `HYP-2229-basel-pi-family-carrier.md`; `basel_pi_family_carrier_s653.py`; `basel_pi_family_carrier_s653.out`; `basel-pi-family-carrier-s653.md`; HYP-2228, HYP-2227, HYP-2214, HYP-2211, HYP-1627, T252, THM-002 |
+| HYP-2228 | THM-410 interval witnesses, fixed-order upset bitsets, and square-node tournament substitution are enumeration speedup carriers for near-transitive and imprimitive tournament slices. | S652 validates THM-410's matching formula through `n=8`, counts interval-matching states with `c3<=10` (`188273` of `2390480` matchings at `n=14`), verifies the general upset identity `r_xy=r_yz!=r_xz` through labelled `n=6`, defines the square-template Burnside companion sequence `1,1,12,704,2127984`, verifies `Sq(T)=T[T]` score/`c3` formulas through labelled `n=5`, and checks exact block path-cover/macro-word formulas where naive H multiplicativity fails (`2721` vs `3`; `3159` vs `81`). | codex-2026-06-05-S652; `HYP-2228-thm410-square-blowup-enumeration-speedups.md`; `thm410_square_blowup_enumeration_s652.py`; `thm410_square_blowup_enumeration_s652.out`; `thm410_square_blowup_speedups_s652.py`; `thm410_square_blowup_speedups_s652.out`; `thm410-square-blowup-enumeration-speedups-s652.md`; THM-410, HYP-2227, HYP-2226, HYP-2209, HYP-2200, THM-115, OPEN-Q-055 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5867,6 +5868,117 @@ criterion.
 `04-computation/heegner_prime_horizon_tournament_s650.py` (+.out);
 `07-reflections/heegner-prime-horizon-tournament-s650.md`; THM-410,
 HYP-2225, HYP-2224, HYP-2223, HYP-2222, HYP-1220, HYP-1202.
+
+## HYP-2228: THM-410 and square-node blowups are enumeration speedup carriers (thm410-square-blowup-speedups, codex-2026-06-05-S652)
+**Status:** OPEN method hypothesis with bounded computational scout.
+
+S652 treats speedups as retained side channels.  THM-410 gives an additive
+interval witness for near-transitive tournaments, while the user's square-node
+operation gives a modular substitution carrier.
+
+The THM-410 lane starts from a transitive tournament and reverses a matching of
+long edges.  The `c3` count is:
+
+```text
+c3 = sum_{(a,b)} #{v : a < v < b}.
+```
+
+The scout verifies the formula over all matchings through `n=8`.  At `n=10`,
+there are only `9496` interval matchings, with `5538` satisfying `c3<=10`,
+inside `2^45` labelled tournaments and `A000568(10)=9733056` unlabelled
+classes.  This is not exhaustive enumeration; it is a typed witness generator
+for low-`c3` and near-transitive H-gap probes.
+
+The Burnside square-template lane asks for imprimitive `n^2`-vertex templates
+before flattening to raw labels: choose an `n`-vertex base tournament and assign
+an `n`-vertex tournament class to each base vertex, modulo base automorphisms.
+Its companion sequence through `n=5` is:
+
+```text
+1, 1, 12, 704, 2127984
+```
+
+This is not A000568 on `n^2` vertices; it is the modular-decomposition shadow
+that should be peeled before full canonicalization.
+
+The broader upset formula is also verified through labelled `n=6`: relative to
+a fixed linear order, a triple `x<y<z` is cyclic exactly when the adjacent upset
+indicators agree and the long-edge indicator disagrees, written in the scout as
+`r_xy=r_yz!=r_xz`.  This gives a bitset `c3` side channel for biased or
+near-transitive search.
+
+For the square operation `Sq(T)=T[T]`, S652 verifies through labelled `n=5`:
+
+```text
+score((i,a)) = n*score_T(i) + score_T(a)
+c3(Sq(T)) = (n^3+n)c3(T)
+```
+
+For general lexicographic substitution `A[B_i]`, the `c3` formula is:
+
+```text
+c3(A[B_i]) =
+  sum_i c3(B_i)
+  + sum_{directed 3-cycles abc in A} |B_a||B_b||B_c|.
+```
+
+Hamiltonian paths are not naively multiplicative through strong outer
+quotients.  The correct count uses ordered path-run covers inside each block
+and macro-word counts in the outer tournament:
+
+```text
+H(A[B_i]) =
+  sum_{r_1,...,r_n}
+    Macro_A(r_1,...,r_n) * product_i Covers_{B_i}(r_i).
+```
+
+Direct checks:
+
+```text
+n=3 substitution combos checked directly: 16, failures=0
+n=4 total-16-vertex samples checked directly: 8, failures=0
+cycle3[chain3,chain3,chain3]: H=2721, naive_multiplicative=3
+C3[C3]: H_module=3159, H_direct=3159, naive_multiplicative=81
+C3[T2,T2,T2]: H=45, naive_multiplicative=3
+```
+
+State-count proxy for square substitutions:
+
+```text
+n  total vertices  raw Held-Karp states  module-state proxy  raw/module
+3               9                   4608                 273       16.88
+4              16              1.049e+06                2824      371.31
+5              25              8.389e+08               40095    20921.83
+6              36              2.474e+12              710268  3483053.10
+7              49              2.758e+16           1.470e+07 1877090681.38
+```
+
+The speedup stack proposed by S652 is:
+
+```text
+THM-410 interval ledgers
+> general upset bitsets
+> modular decomposition before full canonicalization
+> path-cover polynomials and quotient-word H automata
+> prime residual canonicalization
+> raw labelled scan
+```
+
+Tournament Analysis over speedup routes has `score_hist={0:1,1:1,2:1,3:1,5:2,6:2,8:1}`,
+`c3=2`, SCC sizes `[4,1,1,1,1,1]`, and `H=5`; it ranks
+`modular_substitution_decomposition` first, followed by
+`THM410_interval_matching_cache` and `lexicographic_square_subsequence`.
+
+**Caveat:** module speedups are exact when the module carrier is retained; a
+generic unmarked tournament need not have useful modules.  The point is to use
+these carriers as certified witness families and exact subroutines, not as a
+claim that A000568(10) is solved.
+
+**See:** `05-knowledge/hypotheses/HYP-2228-thm410-square-blowup-enumeration-speedups.md`;
+`04-computation/thm410_square_blowup_enumeration_s652.py` (+.out);
+`04-computation/thm410_square_blowup_speedups_s652.py` (+.out);
+`07-reflections/thm410-square-blowup-enumeration-speedups-s652.md`; THM-410,
+HYP-2227, HYP-2226, HYP-2209, HYP-2200, OPEN-Q-055.
 
 ## HYP-2227: Number theory tournaments are local-witness carrier quotients (number-theory-tournament-atlas, codex-2026-06-05-S651)
 **Status:** OPEN method hypothesis with finite atlas evidence.
