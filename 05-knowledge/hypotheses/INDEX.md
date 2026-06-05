@@ -706,6 +706,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2246 | Endpoint half-filter traces may recursively enumerate A000568: `Phi(T)=multiset_v(class(T-v), L/M/U side of outdeg(v))` is injective on tournament classes through `n=8`. | S671 builds A000568 through `n=8` by endpoint extension: enumerate `Aut(parent)`-orbits in the incident Boolean cube, then audit deletion/filter traces on raw child candidates.  For `7->8`, endpoint orbits give `54,256` candidates versus `2,097,152` fixed-path tilings and `268,435,456` labelled tournaments.  At `n=8`, scalar `(score,c3,SCC)` has `136` mixed buckets, unpaired card-deck has `2`, while half-filter, paired-score, and paired-c3-loss traces have `0`.  The two card-deck collision buckets are regular strong classes with identical `c3=20`, identical score histograms, and paired Hamiltonian counts `633` and `645`; the missing coordinate is an `L/U` owner address.  Candidate fallback audit shows zero mixed half-filter buckets through `7->8`, so full child canonicalization is needed only for future mixed trace buckets. | codex-2026-06-05-S671; `HYP-2246-endpoint-half-filter-enumeration.md`; `ultrafilter_endpoint_enumeration_s671.py`; `ultrafilter_endpoint_enumeration_s671.out`; `endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236, HYP-2228, HYP-2187, HYP-2209 |
 | HYP-2247 | Paris-Harrington adds an extension-rank derivative to ultrafilter side-choice: bad colorings are an outer-extension tree, and relative largeness blocks tail escape by killing coherent bad branches. | S672 exact pair-coloring miniature for `x=2` gives bad counts `1,2,6,18,12,0` for `N=1..6`; at `N=4`, only the middle edge-count shell `e=3` extends (`12` nodes), while upper/lower shells `e=2,4` are dead, and at `N=5` the middle shell `e=5` has no children.  The ternary scout shows random pressure collapses by `N=10..12`, but local repair still finds bad colorings through `N=20`, emphasizing tail-escape rank rather than raw density.  Transfer route: `upper/lower filter side -> L/M/U owner address -> bad-child extension profile`; LRC14 target is a rank drop after HYP-2241's owner-private deletion filter on coherent `+27` carry/owner lifts. | codex-2026-06-05-S672; `HYP-2247-paris-harrington-ultrafilter-coloring.md`; `paris_harrington_ultrafilter_coloring_s672.py`; `paris_harrington_ultrafilter_coloring_s672.out`; `paris-harrington-ultrafilter-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2244, HYP-2243, HYP-2241, HYP-2232, HYP-2189 |
 | HYP-2247 | Recursion is the fourth representation face: split `fraction=boundary/address state` from `recursion=transition law under iteration, descent, or outer extension`. | S672 anchors the split in Zhou-Markov's recurrent integral irrationality proofs and Paris-Harrington colorings, integrating the incoming S671 Paris-Harrington ultrafilter-coloring stub as an addendum.  The sharper carrier is `sum -> product -> fraction -> recursion -> sum`: sum aggregates visible packets, product localizes factors, fraction attaches owner/boundary/branch state, and recursion proves that state survives extension or unrolls into a new additive ledger.  A baby PH edge-coloring scout finds large-homogeneous-avoiding counts `6,18,12,0` for `N=3..6`; face Tournament Analysis is transitive with `recursion > fraction > product > sum > raw_scalar`.  Transfer targets: LRC14 coherent `+27` carry recursion, A000568 endpoint half-filter purity under `n->n+1`, unit-distance point-deletion recursion owners, and PH hypergraph-coloring micro-labs. | codex-2026-06-05-S672; `HYP-2247-recursive-fourth-face.md`; `HYP-2247-paris-harrington-ultrafilter-coloring-addendum.md`; `recursive_fourth_face_coloring_s672.py`; `recursive_fourth_face_coloring_s672.out`; `recursive-fourth-face-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2243, HYP-2240, HYP-2239, HYP-2238, HYP-2189 |
+| HYP-2248 | Borel antidiagonalization, constructive mathematics, tangible incompleteness, and embedded maximality share one proof-design rule: retain the embedded address that computes the witness. | S673 exact antidiagonal audit over all binary `m x m` matrices through `m=4` shows scalar summaries leak the antiword badly: at `m=4`, row weight multiset has `68` mixed buckets, row weight sequence `609`, column weight sequence `609`, and row+column weights `8769`, while the diagonal vector has `0`.  A finite regressive shift-collision toy has a unique predecessor escape `f(t)=min(t)-1` for tested `k=1,2,3`; forbidding that boundary collapses the toy, showing endpoint/no-endpoint embedding is load-bearing.  Transfer: LRC14 needs owner/cut addresses that construct strict-tax witnesses, A000568 needs a constructive half-filter child-selection theorem, and unit distance needs unit-spine/point-deletion owner addresses beyond bulk counts. | codex-2026-06-05-S673; `HYP-2248-borel-constructive-embedded-maximality.md`; `borel_constructive_embedded_maximality_s673.py`; `borel_constructive_embedded_maximality_s673.out`; `borel-constructive-embedded-maximality-s673.md`; HYP-2247, HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7778,6 +7779,100 @@ point-deletion recursion owners; search OCF deletion/substitution continuants.
 `05-knowledge/results/recursive_fourth_face_coloring_s672.out`;
 `07-reflections/recursive-fourth-face-coloring-s672.md`; HYP-2246, HYP-2245,
 HYP-2243, HYP-2240, HYP-2239, HYP-2238, HYP-2189.
+
+## HYP-2248: Borel antidiagonalization needs embedded constructive addresses (codex-2026-06-05-S673)
+
+**STATUS:** OPEN method hypothesis with finite antidiagonal and regressive
+toys.
+
+**WHAT:** Diagonalization is proof-usable only after the quotient retains the
+address that computes the witness:
+
+```text
+diagonal escape exists
+  -> constructive witness needs a named address
+  -> embedded maximality names the ambient extension/cut where it lives
+  -> tangible incompleteness appears when the uniform extension law exceeds
+     the local quotient's proof strength
+```
+
+In HYP-2247 terms, the fraction face is the diagonal/cut/owner/Borel-code
+address, and the recursion face is the transition law that constructs,
+preserves, or diagonalizes past it.
+
+**ANTIDIAGONAL AUDIT:** For an `m x m` binary matrix `M`, define the antiword:
+
+```text
+a_i = 1 - M_ii.
+```
+
+S673 exhausts all binary matrices for `m<=4`.  At `m=4`:
+
+| Channel | Groups | Mixed antiword buckets | Max bucket | Pure? |
+|---|---:|---:|---:|---|
+| row weight multiset | 70 | 68 | 6912 | no |
+| row weight sequence | 625 | 609 | 1296 | no |
+| column weight sequence | 625 | 609 | 1296 | no |
+| row and column weights | 16145 | 8769 | 90 | no |
+| diagonal vector | 16 | 0 | 4096 | yes |
+| diagonal plus row weights | 4096 | 0 | 81 | yes |
+| full matrix | 65536 | 0 | 1 | yes |
+
+Thus exact row/column scalar summaries can forget the witness program.  The
+diagonal vector is the minimal embedded address in this toy.
+
+**REGRESSIVE SHIFT TOY:** For increasing `k`-tuples `t` in `[N]`, finite
+regressive maps have `f(t)<min(t)`.  The shifted-collision target on a
+`(k+1)`-block is:
+
+```text
+f(b_1,...,b_k) = f(b_2,...,b_{k+1}).
+```
+
+Through the tested windows for `k=1,2,3`, there is exactly one avoiding branch:
+
+```text
+f(t)=min(t)-1.
+```
+
+Forbidding the predecessor value makes domains empty and collapses the toy
+immediately.  This is not Friedman's theorem; it is a finite warning that the
+endpoint/predecessor boundary is the whole escape branch, so no-endpoint and
+embedded-boundary hypotheses are load-bearing.
+
+**TOURNAMENT ANALYSIS:** Vertices are proof-design lanes: Cantor
+antidiagonal, Borel diagonalization, constructive mathematics, tangible
+incompleteness, embedded maximality, LRC14 owner/carry rank, A000568 endpoint
+recursion, unit-distance spine recursion, and raw quotient/cardinality.
+Observable is `(constructive witness, embedded address need, recursion
+strength, repo transfer, risk control, classical existence strength)`.
+The route tournament is transitive with `score_histogram={0:1,...,8:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Leaders:
+A000568 endpoint recursion, Cantor antidiagonal, embedded maximality, and
+tangible incompleteness.
+
+**TRANSFER:** Constructivism becomes a practical invariant test:
+
+```text
+Can this quotient construct the next witness without hidden labels?
+```
+
+For LRC14, define owner/cut diagonal addresses over the `C=27` carry fiber and
+construct strict-tax witnesses.  For A000568, turn half-filter purity into a
+constructive child-selection theorem.  For unit distance, retain unit-spine and
+point-deletion owner addresses; bulk edge/direction counts are row/column
+weights.
+
+**NEXT:** Implement HYP-2246 child-selection audit; build an LRC14 diagonal/cut
+address table over HYP-2241 carry extensions; build a unit-distance Moser-spine
+antiword lab; replace the finite regressive interval toy with a no-endpoint
+finite surrogate.
+
+**See:** `05-knowledge/hypotheses/HYP-2248-borel-constructive-embedded-maximality.md`;
+`04-computation/borel_constructive_embedded_maximality_s673.py`;
+`05-knowledge/results/borel_constructive_embedded_maximality_s673.out`;
+`07-reflections/borel-constructive-embedded-maximality-s673.md`; HYP-2247,
+HYP-2246, HYP-2243, HYP-2242, HYP-2241.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

@@ -1,0 +1,102 @@
+
+==============================================================================
+S673 Borel antidiagonalization and constructive embedded maximality
+==============================================================================
+HYP-2248 / T743.
+Working synthesis: diagonalization is constructive only after the diagonal address is embedded; incompleteness becomes tangible when a finite-looking extension law asks for a uniform bound beyond the local quotient.
+
+==============================================================================
+Antidiagonal witness channel audit
+==============================================================================
+{'m': 1, 'channel': 'row_weight_multiset', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'row_weight_sequence', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'column_weight_sequence', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'row_and_column_weights', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'diagonal_vector', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'diagonal_plus_row_weights', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 1, 'channel': 'full_matrix', 'matrices': 2, 'groups': 2, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 2, 'channel': 'row_weight_multiset', 'matrices': 16, 'groups': 6, 'mixed': 4, 'max_bucket': 4, 'pure': False}
+{'m': 2, 'channel': 'row_weight_sequence', 'matrices': 16, 'groups': 9, 'mixed': 5, 'max_bucket': 4, 'pure': False}
+{'m': 2, 'channel': 'column_weight_sequence', 'matrices': 16, 'groups': 9, 'mixed': 5, 'max_bucket': 4, 'pure': False}
+{'m': 2, 'channel': 'row_and_column_weights', 'matrices': 16, 'groups': 15, 'mixed': 1, 'max_bucket': 2, 'pure': False}
+{'m': 2, 'channel': 'diagonal_vector', 'matrices': 16, 'groups': 4, 'mixed': 0, 'max_bucket': 4, 'pure': True}
+{'m': 2, 'channel': 'diagonal_plus_row_weights', 'matrices': 16, 'groups': 16, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 2, 'channel': 'full_matrix', 'matrices': 16, 'groups': 16, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 3, 'channel': 'row_weight_multiset', 'matrices': 512, 'groups': 20, 'mixed': 18, 'max_bucket': 81, 'pure': False}
+{'m': 3, 'channel': 'row_weight_sequence', 'matrices': 512, 'groups': 64, 'mixed': 56, 'max_bucket': 27, 'pure': False}
+{'m': 3, 'channel': 'column_weight_sequence', 'matrices': 512, 'groups': 64, 'mixed': 56, 'max_bucket': 27, 'pure': False}
+{'m': 3, 'channel': 'row_and_column_weights', 'matrices': 512, 'groups': 328, 'mixed': 98, 'max_bucket': 6, 'pure': False}
+{'m': 3, 'channel': 'diagonal_vector', 'matrices': 512, 'groups': 8, 'mixed': 0, 'max_bucket': 64, 'pure': True}
+{'m': 3, 'channel': 'diagonal_plus_row_weights', 'matrices': 512, 'groups': 216, 'mixed': 0, 'max_bucket': 8, 'pure': True}
+{'m': 3, 'channel': 'full_matrix', 'matrices': 512, 'groups': 512, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+{'m': 4, 'channel': 'row_weight_multiset', 'matrices': 65536, 'groups': 70, 'mixed': 68, 'max_bucket': 6912, 'pure': False}
+{'m': 4, 'channel': 'row_weight_sequence', 'matrices': 65536, 'groups': 625, 'mixed': 609, 'max_bucket': 1296, 'pure': False}
+{'m': 4, 'channel': 'column_weight_sequence', 'matrices': 65536, 'groups': 625, 'mixed': 609, 'max_bucket': 1296, 'pure': False}
+{'m': 4, 'channel': 'row_and_column_weights', 'matrices': 65536, 'groups': 16145, 'mixed': 8769, 'max_bucket': 90, 'pure': False}
+{'m': 4, 'channel': 'diagonal_vector', 'matrices': 65536, 'groups': 16, 'mixed': 0, 'max_bucket': 4096, 'pure': True}
+{'m': 4, 'channel': 'diagonal_plus_row_weights', 'matrices': 65536, 'groups': 4096, 'mixed': 0, 'max_bucket': 81, 'pure': True}
+{'m': 4, 'channel': 'full_matrix', 'matrices': 65536, 'groups': 65536, 'mixed': 0, 'max_bucket': 1, 'pure': True}
+Mixed examples for m=4:
+{'m': 4, 'channel': 'row_weight_sequence', 'key': (1, 0, 0, 0), 'antiwords': [(0, 1, 1, 1), (1, 1, 1, 1)], 'matrices': [((1, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 1, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))]}
+{'m': 4, 'channel': 'column_weight_sequence', 'key': (1, 0, 0, 0), 'antiwords': [(0, 1, 1, 1), (1, 1, 1, 1)], 'matrices': [((1, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((0, 0, 0, 0), (1, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))]}
+{'m': 4, 'channel': 'row_and_column_weights', 'key': ((1, 1, 0, 0), (1, 1, 0, 0)), 'antiwords': [(1, 1, 1, 1), (0, 0, 1, 1)], 'matrices': [((0, 1, 0, 0), (1, 0, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0)), ((1, 0, 0, 0), (0, 1, 0, 0), (0, 0, 0, 0), (0, 0, 0, 0))]}
+Conclusion: row/column summaries can be exact scalar data and still fail to construct the antiword.  The diagonal vector is the embedded address.
+
+==============================================================================
+Regressive shift-collision toy
+==============================================================================
+{'N': 2, 'k': 1, 'forbid_predecessor': False, 'variables': 1, 'constraints': 0, 'avoiders': 1, 'nodes': 2, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 3, 'k': 1, 'forbid_predecessor': False, 'variables': 2, 'constraints': 1, 'avoiders': 1, 'nodes': 3, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 4, 'k': 1, 'forbid_predecessor': False, 'variables': 3, 'constraints': 3, 'avoiders': 1, 'nodes': 4, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 5, 'k': 1, 'forbid_predecessor': False, 'variables': 4, 'constraints': 6, 'avoiders': 1, 'nodes': 5, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 6, 'k': 1, 'forbid_predecessor': False, 'variables': 5, 'constraints': 10, 'avoiders': 1, 'nodes': 6, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 7, 'k': 1, 'forbid_predecessor': False, 'variables': 6, 'constraints': 15, 'avoiders': 1, 'nodes': 7, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 3, 'k': 2, 'forbid_predecessor': False, 'variables': 1, 'constraints': 0, 'avoiders': 1, 'nodes': 2, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 4, 'k': 2, 'forbid_predecessor': False, 'variables': 3, 'constraints': 1, 'avoiders': 1, 'nodes': 4, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 5, 'k': 2, 'forbid_predecessor': False, 'variables': 6, 'constraints': 4, 'avoiders': 1, 'nodes': 8, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 6, 'k': 2, 'forbid_predecessor': False, 'variables': 10, 'constraints': 10, 'avoiders': 1, 'nodes': 21, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 7, 'k': 2, 'forbid_predecessor': False, 'variables': 15, 'constraints': 20, 'avoiders': 1, 'nodes': 83, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 8, 'k': 2, 'forbid_predecessor': False, 'variables': 21, 'constraints': 35, 'avoiders': 1, 'nodes': 571, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 4, 'k': 3, 'forbid_predecessor': False, 'variables': 1, 'constraints': 0, 'avoiders': 1, 'nodes': 2, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 5, 'k': 3, 'forbid_predecessor': False, 'variables': 4, 'constraints': 1, 'avoiders': 1, 'nodes': 5, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 6, 'k': 3, 'forbid_predecessor': False, 'variables': 10, 'constraints': 5, 'avoiders': 1, 'nodes': 13, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 7, 'k': 3, 'forbid_predecessor': False, 'variables': 20, 'constraints': 15, 'avoiders': 1, 'nodes': 45, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 8, 'k': 3, 'forbid_predecessor': False, 'variables': 35, 'constraints': 35, 'avoiders': 1, 'nodes': 398, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 9, 'k': 3, 'forbid_predecessor': False, 'variables': 56, 'constraints': 70, 'avoiders': 1, 'nodes': 17642, 'cutoff': False, 'empty_domain': False, 'predecessor_avoids': True}
+{'N': 2, 'k': 1, 'forbid_predecessor': True, 'variables': 1, 'constraints': 0, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 3, 'k': 1, 'forbid_predecessor': True, 'variables': 2, 'constraints': 1, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 4, 'k': 1, 'forbid_predecessor': True, 'variables': 3, 'constraints': 3, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 5, 'k': 1, 'forbid_predecessor': True, 'variables': 4, 'constraints': 6, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 3, 'k': 2, 'forbid_predecessor': True, 'variables': 1, 'constraints': 0, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 4, 'k': 2, 'forbid_predecessor': True, 'variables': 3, 'constraints': 1, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 5, 'k': 2, 'forbid_predecessor': True, 'variables': 6, 'constraints': 4, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 6, 'k': 2, 'forbid_predecessor': True, 'variables': 10, 'constraints': 10, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 4, 'k': 3, 'forbid_predecessor': True, 'variables': 1, 'constraints': 0, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 5, 'k': 3, 'forbid_predecessor': True, 'variables': 4, 'constraints': 1, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 6, 'k': 3, 'forbid_predecessor': True, 'variables': 10, 'constraints': 5, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+{'N': 7, 'k': 3, 'forbid_predecessor': True, 'variables': 20, 'constraints': 15, 'avoiders': 0, 'nodes': 1, 'cutoff': False, 'empty_domain': True}
+Finite intervals have a constructive predecessor escape f(t)=min(t)-1, so the shifted diagonal collision is avoided in every tested interval.  Forbidding that predecessor boundary collapses the toy immediately.  This is the finite shadow of why endpoint/no-endpoint embedding matters in k-critical linear-order diagonalization.
+
+==============================================================================
+Constructive status table and Tournament Analysis
+==============================================================================
+{'principle': 'Cantor antidiagonal', 'classical_existence': 2, 'constructive_witness': 2, 'needs_embedded_address': 2, 'recursion_strength': 1, 'repo_transfer': 2, 'risk_control': 2, 'note': 'Explicit witness if diagonal bits are named.'}
+{'principle': 'Borel diagonalization', 'classical_existence': 2, 'constructive_witness': 1, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 1, 'note': 'Needs Borel code plus invariant embedding/selection address.'}
+{'principle': 'Constructive mathematics', 'classical_existence': 1, 'constructive_witness': 2, 'needs_embedded_address': 2, 'recursion_strength': 1, 'repo_transfer': 2, 'risk_control': 2, 'note': 'Existence claims become witness-producing programs.'}
+{'principle': 'Tangible incompleteness', 'classical_existence': 2, 'constructive_witness': 1, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 2, 'note': 'Concrete finite statements expose proof-strength cost.'}
+{'principle': 'Embedded maximality', 'classical_existence': 1, 'constructive_witness': 2, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 2, 'note': 'A maximum is stable only relative to allowed extensions.'}
+{'principle': 'LRC14 owner/carry rank', 'classical_existence': 1, 'constructive_witness': 1, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 1, 'note': 'Need rank drop after owner-private deletion.'}
+{'principle': 'A000568 endpoint recursion', 'classical_existence': 2, 'constructive_witness': 2, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 2, 'note': 'Half-filter state should survive n->n+1.'}
+{'principle': 'Unit-distance spine recursion', 'classical_existence': 1, 'constructive_witness': 1, 'needs_embedded_address': 2, 'recursion_strength': 2, 'repo_transfer': 2, 'risk_control': 1, 'note': 'Spine owner must beat bulk tail escape.'}
+{'principle': 'Raw quotient/cardinality', 'classical_existence': 2, 'constructive_witness': 0, 'needs_embedded_address': 0, 'recursion_strength': 0, 'repo_transfer': 0, 'risk_control': 1, 'note': 'Counts prove too little without a selected address.'}
+{'score_histogram': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}, 'directed_3cycles': 0, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1], 'sccs': [('A000568 endpoint recursion',), ('Cantor antidiagonal',), ('Embedded maximality',), ('Tangible incompleteness',), ('Borel diagonalization',), ('Constructive mathematics',), ('LRC14 owner/carry rank',), ('Unit-distance spine recursion',), ('Raw quotient/cardinality',)], 'hamiltonian_paths': 1, 'ranking': [(8, 'A000568 endpoint recursion'), (7, 'Cantor antidiagonal'), (6, 'Embedded maximality'), (5, 'Tangible incompleteness'), (4, 'Borel diagonalization'), (3, 'Constructive mathematics'), (2, 'LRC14 owner/carry rank'), (1, 'Unit-distance spine recursion'), (0, 'Raw quotient/cardinality')]}
+
+==============================================================================
+Repo transfer notes
+==============================================================================
+HYP-2242: embedded maximality names the ambient extension before calling something maximal.
+HYP-2243: outer-extension usability says a quotient is useful only if its retained address keeps target fibers pure under growth.
+HYP-2247/T742: recursion is the transition law; constructive witness extraction asks whether that transition is programmatic.
+LRC14 next move: define diagonal/cut addresses for the C=27 owner-carry fiber, then prove the local rank drop constructively rather than by post-hoc classification.
+A000568 next move: pair the half-filter deck with a constructive child selection rule; without selection, purity can be true but unusable.
+Unit distance next move: treat a unit-spine owner as the diagonal address; bulk edge counts alone are row/column weights.
