@@ -677,6 +677,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2219 | The S642 Goldbach/Lemoine same-pair projection induces a finite even/odd bridge graph: each unordered odd-prime pair `{p,q}` creates an even node `E=p+q` and odd companions `E+p`, `E+q`; duplicate pairs `p=q` form the branch locus `(E,O)=(2p,3p)`, while doubled-prime `2` is an apex boundary without an even same-pair companion. | S643 computes the bridge graph through even target `120` and odd target `121`.  Duplicates fold to one odd companion; up to `121`, only `7=3+2*2` is apex-only.  The carrier-lens Tournament Analysis is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1}`, `0` directed 3-cycles, and `1` Hamiltonian path, ranking `linear_pair_vieta` above duplicate branch and bridge graph lenses. | codex-2026-06-04-S643; `HYP-2219-goldbach-lemoine-same-pair-bridge.md`; `goldbach_lemoine_pair_bridge_s643.py`; `goldbach_lemoine_pair_bridge_s643.out`; `goldbach-lemoine-same-pair-bridge-s643.md`; HYP-2218, HYP-2215, HYP-2049, HYP-2044, HYP-1984 |
 | HYP-2220 | The triangular pair-count carrier `A=C(n,2)` has Vieta square-root shadow `sqrt(8A+1)=2n-1`; perfect numbers are aliquot fixed controls in this carrier, and `C(14,2)=91` has exact proper-divisor shadow `s(91)=21`. | S644 proves `6` is the unique doubled/tripled-prime crossing and records it as first perfect/product-sum resonance; verifies even perfect numbers as triangular fixed controls; and identifies the semiprime family `n=2p`, `2p-1` prime, where `s(C(2p,2))=3p`, with `p=7` giving the `(14,21)` shadow.  This adds a divisor-sum observer to HYP-2219/S643's companion-graph duplicate branch.  The proof-lens tournament ranks `aliquot_shadow_C14_pair_count_to_21` above the triangular Vieta square root, perfect controls, semiprime family, `6` seam, S642 diagonal, and raw perfect-number numerology. | codex-2026-06-04-S644; `HYP-2220-vieta-perfect-aliquot-carriers.md`; `vieta_perfect_aliquot_carriers_s644.py`; `vieta_perfect_aliquot_carriers_s644.out`; `vieta-perfect-aliquot-carriers-s644.md`; HYP-2219, HYP-2218, HYP-2217, HYP-2216, HYP-2211, THM-401, THM-361 |
 | HYP-2221 | Perfect numbers are fixed points of the aliquot/divisor carrier: `D(n) -> sigma(n) -> s(n)=sigma(n)-n`, with fixed predicate `s(n)=n` or `sigma(n)/n=2`.  This complements HYP-2220's triangular/Vieta aliquot carrier by scanning the divisor-sum dynamics directly; the scalar fixed equation is usable only with divisor-lattice side channels: prime-power products, parity, Mersenne primality in the even section, and odd-perfect obstruction data. | S645 scans `n<=100000`, finding fixed points `[6,28,496,8128]`, `13` length-2 amicable cycles, one length-5 sociable cycle, no defect `+1` quasi-perfect rows, powers of two as defect `-1` almost-perfect rows, and closest odd near-fixed row `32445=3^2*5*7*103` with `sigma(n)-2n=6`.  The carrier-lens Tournament Analysis is transitive with one Hamiltonian path and ranks `divisor_lattice_fixed_point` above aliquot graph, sigma product, odd-perfect side channel, Euclid-Euler section, local prime-power ledger, near-fixed defect scout, and raw sequence list. | codex-2026-06-04-S645; `HYP-2221-perfect-aliquot-fixed-point-carrier.md`; `aliquot_fixed_point_carrier_s645.py`; `aliquot_fixed_point_carrier_s645.out`; `perfect-aliquot-fixed-point-carrier-s645.md`; HYP-2220, HYP-2216, HYP-2215, HYP-2211, HYP-2208 |
+| HYP-2222 | The LRC shell clock `C=2n-1` has a divisor-carrier analogue of the perfect-number fixed equation: `A(C)=sum_{1<=a<=(C-1)/2} gcd(a,C)` is fixed when `A(C)=C`, equivalently Pillai's gcd-sum satisfies `P(C)=3C`.  The only odd fixed clocks are `C=15` and `C=27`, so the only LRC total denominators with a Pillai-fixed pair-sum clock are `n=8` and `n=14`. | S646 proves the clock-classification lemma from the multiplicative local factor `1+a*(1-1/p)`, then scans AP single-swaps through `n=14` using the THM-369 pair-sum pinch oracle.  Every tight non-AP single-swap preserves weighted gcd-shell mass: `2->7` at `n=5`, `2->9` at `n=6`, `6->12` at `n=8`, and `12->24` at `n=14`; the n=14 `Vstar` row moves shell `12` to shell `3` but preserves gcd counts `{1:9,3:3,9:1}`.  The open proof target is a no-leak lemma: fixed gcd carrier plus pair-pinch/carry-owner labels force AP, Vstar, or strict looseness. | codex-2026-06-04-S646; `HYP-2222-lrc-pillai-fixed-clock-carrier.md`; `lrc_pillai_fixed_clock_s646.py`; `lrc_pillai_fixed_clock_s646.out`; `lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220, HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5479,6 +5480,74 @@ prime-power ledger, near-fixed defect scout, and raw sequence list.
 `04-computation/aliquot_fixed_point_carrier_s645.py` (+.out);
 `07-reflections/perfect-aliquot-fixed-point-carrier-s645.md`; HYP-2220, HYP-2216,
 HYP-2215, HYP-2211, HYP-2208.
+
+## HYP-2222: LRC n=14 uses a Pillai-fixed gcd-shell clock (lrc-pillai-fixed-clock-carrier, codex-2026-06-04-S646)
+**Status:** OPEN LRC proof-use hypothesis with proved clock classification.
+
+S646 transfers the perfect-number fixed-point idea from `sigma(N)=2N` to the
+LRC pair-sum clock `C=2n-1`.  For odd `C`, define the antipodal gcd-shell mass
+
+```text
+A(C) = sum_{1 <= a <= (C-1)/2} gcd(a,C).
+```
+
+If `P(C)=sum_{r=1}^C gcd(r,C)` is Pillai's arithmetical function, then
+`A(C)=(P(C)-C)/2`.  So the LRC clock is fixed when
+
+```text
+A(C)=C, equivalently P(C)=3C.
+```
+
+S646 proves the clock-classification lemma: the only odd Pillai-fixed clocks
+are
+
+```text
+C=15 and C=27,
+```
+
+so the only LRC total denominators with `2n-1` Pillai-fixed are `n=8` and
+`n=14`.  The proof uses multiplicativity of `P(C)/C`, whose local factor at
+`p^a || C` is `1+a*(1-1/p)`.  If `3` does not divide `C`, one prime power cannot
+solve the equation and the two smallest odd-prime factors already overshoot:
+`(9/5)*(13/7)>3`.  If `3^a || C`, then `a=1` forces the remaining factor
+`9/5`, hence `5`; `a=2` undershoots below any possible extra odd-prime factor;
+`a=3` gives `27`; and `a>3` overshoots.
+
+For `n=14`, `C=27` has gcd-shell counts `{1:9,3:3,9:1}` and weighted mass
+`9+9+9=27`.  The AP row is shell-fixed.  The known `Vstar` floor row is not
+shell-fixed, because it moves shell `12` to shell `3`; however it is fixed by
+the coarser gcd/divisor carrier, since both shells are gcd-`3`.
+
+The AP single-swap scan through `n=14`, using the THM-369 pair-sum pinch
+oracle, finds zero tight rows with changed weighted gcd-shell mass.  The tight
+non-AP swaps are:
+
+```text
+n=5:   2 -> 7    shell 2 -> 2, gcd 1 -> 1
+n=6:   2 -> 9    shell 2 -> 2, gcd 1 -> 1
+n=8:   6 -> 12   shell 6 -> 3, gcd 3 -> 3
+n=14: 12 -> 24   shell 12 -> 3, gcd 3 -> 3
+```
+
+This gives a new no-leak target for LRC `n=14`:
+
+```text
+mass-changing row -> strictly loose
+mass-fixed row -> AP/Vstar or killed by pair-pinch/carry-owner labels
+```
+
+Tournament Analysis in S646 uses carrier lenses rather than runners.  Alternate
+vertex sets considered include runners, residues, antipodal shells, gcd strata,
+pair pinches, boundary events, carry fibers, and proof obligations.  The
+majority tournament is transitive with one Hamiltonian path, ranking
+`pillai_fixed_clock > gcd_shell_carrier > single_swap_zero_defect >
+mod3_doubling_law > pair_pinch_oracle > carry_lift_conservativity >
+scalar_gap_M > raw_tuple_scan`.
+
+**See:** `05-knowledge/hypotheses/HYP-2222-lrc-pillai-fixed-clock-carrier.md`;
+`04-computation/lrc_pillai_fixed_clock_s646.py` (+.out);
+`07-reflections/lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220,
+HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

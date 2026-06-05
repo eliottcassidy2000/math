@@ -143,6 +143,15 @@
 **Tournament Analysis:** Carrier lenses use the pairwise observable "quality for proving/exploiting `s(n)=n`" under fixed-point, dynamics, and transfer gauges.  The majority tournament is transitive with one Hamiltonian path, ranking `divisor_lattice_fixed_point > aliquot_function_graph > sigma_product_abundancy > odd_perfect_side_channel > euclid_euler_mersenne_section > local_prime_power_ledger > near_fixed_defect_scout > raw_sequence_list`.
 **Artifacts:** HYP-2221, `07-reflections/perfect-aliquot-fixed-point-carrier-s645.md`, T714, result-index and concept-map updates.
 
+## codex-2026-06-04-S646 - LRC Pillai fixed-clock carrier (HYP-2222)
+
+**Prompt:** Use the perfect-number aliquot/divisor fixed-point understanding to make progress on LRC.
+**Integration:** Builds directly on S645/HYP-2221 and S644/HYP-2220, while reconnecting to THM-401's `C=2n-1` pair-sum modulus, S641/HYP-2217's `27` carrier, HYP-2177's mod-3 doubling law, HYP-2167's carry conservativity target, and the repo-wide side-channel jackknife program HYP-2215/HYP-2216.
+**Computation:** Added `04-computation/lrc_pillai_fixed_clock_s646.py` and stored `05-knowledge/results/lrc_pillai_fixed_clock_s646.out`.  The script defines the antipodal gcd-shell mass `A(C)=sum_{1<=a<=(C-1)/2} gcd(a,C)`, relates it to Pillai's gcd-sum `P(C)`, classifies odd fixed clocks, runs an exact AP single-swap scan through `n=14` with the THM-369 pair-sum pinch oracle, and records Tournament Analysis.
+**Findings:** The LRC fixed-clock equation `A(C)=C` is equivalent to `P(C)=3C`, and the only odd fixed clocks are `C=15` and `C=27`, i.e. LRC `n=8` and `n=14`.  At `n=14`, AP is shell-fixed while `Vstar` is gcd-carrier-fixed: it moves shell `12` to shell `3` but preserves gcd counts `{1:9,3:3,9:1}`.  Through the AP single-swap scan, every tight non-AP row preserves weighted gcd-shell mass; there are zero tight rows with changed mass and zero below-floor rows.
+**Tournament Analysis:** Vertices are carrier lenses rather than runners, after explicitly considering runners, residues, antipodal shells, gcd strata, pair pinches, boundary events, carry fibers, and proof obligations.  The majority tournament is transitive with one Hamiltonian path, ranking `pillai_fixed_clock > gcd_shell_carrier > single_swap_zero_defect > mod3_doubling_law > pair_pinch_oracle > carry_lift_conservativity > scalar_gap_M > raw_tuple_scan`.
+**Artifacts:** HYP-2222, `07-reflections/lrc-pillai-fixed-clock-carrier-s646.md`, T715, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.
