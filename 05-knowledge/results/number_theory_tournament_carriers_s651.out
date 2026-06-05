@@ -1,0 +1,272 @@
+﻿S651 Number-Theory Tournament Carriers
+======================================
+
+Thesis
+------
+A tournament fits number theory when a pairwise arithmetic observable is
+collapsed to a binary orientation while the side channel that made the
+observable meaningful is kept nearby.
+
+Assumption Challenge
+--------------------
+I did not assume tournament vertices must be primes, runners, or arcs.
+Alternate vertex sets considered: residue classes, gaps, local primes,
+Dirichlet characters, zero modes, Frobenius classes, Selmer local
+conditions, divisor/valuation strata, height packets, circle-method arcs,
+and proof obligations.
+
+Preserved predicates: pairwise lead in prime races; local admissibility for
+linear prime forms; and route quality under retained side channels.
+Destroyed data: exact prime locations, zero ordinates, analytic estimates,
+global primality, Selmer arithmetic, height inequalities, and embeddings.
+
+Prime-Race Tournaments
+----------------------
+Observable: pi(X;q,a)-pi(X;q,b) for reduced residue classes a,b mod q.
+Switch/gauge: orient a -> b when pi(X;q,a) > pi(X;q,b); ties go to lower residue.
+Tie Hamiltonian path: residue classes sorted by (-count, residue).
+Dynamic variant: orient a -> b when a led b at more prime checkpoints up to X.
+
+q=3, vertices=[1, 2]
+  X=1000   ranking=[2, 1] counts={2: 87, 1: 80} ties=0 flips=- score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  X=10000  ranking=[2, 1] counts={2: 617, 1: 611} ties=0 flips=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  X=100000 ranking=[2, 1] counts={2: 4807, 1: 4784} ties=0 flips=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  strongest dynamic pair margins: 1/2:-9592
+
+q=4, vertices=[1, 3]
+  X=1000   ranking=[3, 1] counts={3: 87, 1: 80} ties=0 flips=- score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  X=10000  ranking=[3, 1] counts={3: 619, 1: 609} ties=0 flips=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  X=100000 ranking=[3, 1] counts={3: 4808, 1: 4783} ties=0 flips=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=0 score_hist={0: 1, 1: 1} c3=0 scc=[1, 1] H=1
+  strongest dynamic pair margins: 1/3:-9568
+
+q=5, vertices=[1, 2, 3, 4]
+  X=1000   ranking=[2, 3, 1, 4] counts={2: 47, 3: 42, 1: 40, 4: 38} ties=0 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  X=10000  ranking=[3, 2, 1, 4] counts={3: 310, 2: 309, 1: 306, 4: 303} ties=0 flips=1 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  X=100000 ranking=[2, 3, 4, 1] counts={2: 2412, 3: 2402, 4: 2390, 1: 2387} ties=0 flips=2 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=1 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  strongest dynamic pair margins: 2/4:9584, 1/2:-9504, 1/3:-9318, 3/4:8990, 2/3:3524, 1/4:1444
+
+q=7, vertices=[1, 2, 3, 4, 5, 6]
+  X=1000   ranking=[3, 5, 1, 2, 6, 4] counts={3: 30, 5: 29, 1: 28, 2: 27, 6: 27, 4: 26} ties=1 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 scc=[1, 1, 1, 1, 1, 1] H=1
+  X=10000  ranking=[5, 3, 1, 2, 4, 6] counts={5: 211, 3: 209, 1: 203, 2: 203, 4: 202, 6: 200} ties=1 flips=2 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 scc=[1, 1, 1, 1, 1, 1] H=1
+  X=100000 ranking=[3, 5, 4, 6, 1, 2] counts={3: 1613, 5: 1604, 4: 1601, 6: 1596, 1: 1593, 2: 1584} ties=0 flips=5 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 scc=[1, 1, 1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=3 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} c3=0 scc=[1, 1, 1, 1, 1, 1] H=1
+  strongest dynamic pair margins: 3/4:9178, 1/5:-9152, 1/3:-8930, 4/5:-8596, 1/6:-7890, 4/6:-7082
+
+q=8, vertices=[1, 3, 5, 7]
+  X=1000   ranking=[3, 5, 7, 1] counts={3: 44, 5: 43, 7: 43, 1: 37} ties=1 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  X=10000  ranking=[5, 3, 7, 1] counts={5: 314, 3: 311, 7: 308, 1: 295} ties=0 flips=1 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  X=100000 ranking=[3, 5, 7, 1] counts={3: 2409, 5: 2399, 7: 2399, 1: 2384} ties=1 flips=1 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=2 score_hist={0: 1, 1: 1, 2: 1, 3: 1} c3=0 scc=[1, 1, 1, 1] H=1
+  strongest dynamic pair margins: 1/3:-9590, 1/5:-9588, 1/7:-9582, 5/7:2066, 3/5:-1086, 3/7:-642
+
+q=11, vertices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  X=1000   ranking=[2, 3, 6, 1, 5, 7, 4, 10, 8, 9] counts={2: 18, 3: 18, 6: 18, 1: 17, 5: 17, 7: 17, 4: 16, 10: 16, 8: 15, 9: 15} ties=8 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=10000  ranking=[9, 1, 6, 7, 8, 10, 3, 5, 2, 4] counts={9: 126, 1: 125, 6: 125, 7: 124, 8: 124, 10: 123, 3: 122, 5: 121, 2: 120, 4: 118} ties=2 flips=28 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=100000 ranking=[10, 6, 3, 5, 4, 8, 2, 7, 9, 1] counts={10: 969, 6: 966, 3: 963, 5: 963, 4: 962, 8: 958, 2: 957, 7: 955, 9: 953, 1: 945} ties=1 flips=28 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=15 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 7: 3, 9: 1} c3=1 scc=[3, 1, 1, 1, 1, 1, 1, 1] H=3
+  strongest dynamic pair margins: 1/6:-8346, 1/2:-8150, 5/6:-8080, 1/8:-8036, 2/5:7096, 1/7:-7066
+
+q=13, vertices=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  X=1000   ranking=[2, 6, 10, 3, 5, 7, 8, 1, 4, 9, 11, 12] counts={2: 17, 6: 15, 10: 15, 3: 14, 5: 14, 7: 14, 8: 14, 1: 13, 4: 13, 9: 13, 11: 13, 12: 12} ties=13 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=10000  ranking=[2, 3, 4, 11, 5, 6, 7, 8, 9, 10, 12, 1] counts={2: 105, 3: 105, 4: 104, 11: 104, 5: 103, 6: 102, 7: 102, 8: 102, 9: 102, 10: 100, 12: 100, 1: 99} ties=9 flips=22 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=100000 ranking=[11, 6, 4, 2, 5, 7, 1, 3, 10, 9, 12, 8] counts={11: 808, 6: 807, 4: 806, 2: 801, 5: 800, 7: 799, 1: 798, 3: 798, 10: 797, 9: 794, 12: 793, 8: 790} ties=1 flips=20 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=14 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] H=1
+  strongest dynamic pair margins: 5/12:9406, 5/10:9264, 7/10:9252, 7/9:9074, 6/10:8760, 7/12:8610
+
+q=16, vertices=[1, 3, 5, 7, 9, 11, 13, 15]
+  X=1000   ranking=[7, 3, 5, 11, 13, 1, 15, 9] counts={7: 24, 3: 22, 5: 22, 11: 22, 13: 21, 1: 19, 15: 19, 9: 18} ties=4 flips=- score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=10000  ranking=[5, 11, 3, 15, 7, 13, 9, 1] counts={5: 162, 11: 156, 3: 155, 15: 155, 7: 153, 13: 152, 9: 151, 1: 144} ties=1 flips=9 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1] H=1
+  X=100000 ranking=[3, 11, 5, 7, 13, 15, 9, 1] counts={3: 1208, 11: 1201, 5: 1200, 7: 1200, 13: 1199, 15: 1199, 9: 1196, 1: 1188} ties=2 flips=5 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1] H=1
+  dynamic-majority X=100000 flips_vs_final=7 score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} c3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1] H=1
+  strongest dynamic pair margins: 5/9:9592, 7/9:9576, 1/7:-9498, 3/9:9422, 1/11:-9342, 9/13:-9326
+
+Local Obstruction Ledgers
+-------------------------
+Observable: survivor-factor comparison across local prime channels.
+Switch/gauge for the local-problem tournament: larger partial normalized product wins.
+Tie Hamiltonian path: descending partial product, then name.
+
+twin_primes_gap_2
+  preserved predicate: n and n+2 survive every local prime channel
+  destroyed data: global primality, parity barrier, distribution level
+  p=2  survivors=1  forbidden=0        factor=2.000000 partial=2.000000
+  p=3  survivors=1  forbidden=0,1      factor=0.750000 partial=1.500000
+  p=5  survivors=3  forbidden=0,3      factor=0.937500 partial=1.406250
+  p=7  survivors=5  forbidden=0,5      factor=0.972222 partial=1.367187
+  p=11 survivors=9  forbidden=0,9      factor=0.990000 partial=1.353516
+  p=13 survivors=11 forbidden=0,11     factor=0.993056 partial=1.344116
+  p=17 survivors=15 forbidden=0,15     factor=0.996094 partial=1.338866
+  partial product through p=31: 1.328799
+
+prime_triplet_0_2_6
+  preserved predicate: n,n+2,n+6 is locally admissible
+  destroyed data: global primality and higher-order correlations
+  p=2  survivors=1  forbidden=0        factor=4.000000 partial=4.000000
+  p=3  survivors=1  forbidden=0,1      factor=1.125000 partial=4.500000
+  p=5  survivors=2  forbidden=0,3,4    factor=0.781250 partial=3.515625
+  p=7  survivors=4  forbidden=0,1,5    factor=0.907407 partial=3.190104
+  p=11 survivors=8  forbidden=0,5,9    factor=0.968000 partial=3.088021
+  p=13 survivors=10 forbidden=0,7,11   factor=0.978009 partial=3.020113
+  p=17 survivors=14 forbidden=0,11,15  factor=0.987793 partial=2.983246
+  partial product through p=31: 2.914267
+
+prime_quadruplet_0_2_6_8
+  preserved predicate: prime quadruplet pattern is locally admissible
+  destroyed data: global primality and tuple-count asymptotics
+  p=2  survivors=1  forbidden=0        factor=8.000000 partial=8.000000
+  p=3  survivors=1  forbidden=0,1      factor=1.687500 partial=13.500000
+  p=5  survivors=1  forbidden=0,2,3,4  factor=0.488281 partial=6.591797
+  p=7  survivors=3  forbidden=0,1,5,6  factor=0.793981 partial=5.233765
+  p=11 survivors=7  forbidden=0,3,5,9  factor=0.931700 partial=4.876299
+  p=13 survivors=9  forbidden=0,5,7,11 factor=0.953559 partial=4.649838
+  p=17 survivors=13 forbidden=0,9,11,15 factor=0.974564 partial=4.531563
+  partial product through p=31: 4.317399
+
+sophie_germain
+  preserved predicate: n and 2n+1 survive every local prime channel
+  destroyed data: global primality and safe-prime density
+  p=2  survivors=1  forbidden=0        factor=2.000000 partial=2.000000
+  p=3  survivors=1  forbidden=0,1      factor=0.750000 partial=1.500000
+  p=5  survivors=3  forbidden=0,2      factor=0.937500 partial=1.406250
+  p=7  survivors=5  forbidden=0,3      factor=0.972222 partial=1.367187
+  p=11 survivors=9  forbidden=0,5      factor=0.990000 partial=1.353516
+  p=13 survivors=11 forbidden=0,6      factor=0.993056 partial=1.344116
+  p=17 survivors=15 forbidden=0,8      factor=0.996094 partial=1.338866
+  partial product through p=31: 1.328799
+
+goldbach_N_210
+  preserved predicate: a and 210-a survive every local prime channel
+  destroyed data: major/minor arcs and representation count
+  p=2  survivors=1  forbidden=0        factor=2.000000 partial=2.000000
+  p=3  survivors=2  forbidden=0        factor=1.500000 partial=3.000000
+  p=5  survivors=4  forbidden=0        factor=1.250000 partial=3.750000
+  p=7  survivors=6  forbidden=0        factor=1.166667 partial=4.375000
+  p=11 survivors=9  forbidden=0,1      factor=0.990000 partial=4.331250
+  p=13 survivors=11 forbidden=0,2      factor=0.993056 partial=4.301172
+  p=17 survivors=15 forbidden=0,6      factor=0.996094 partial=4.284370
+  partial product through p=31: 4.252156
+
+goldbach_N_2110
+  preserved predicate: a and 2110-a survive every local prime channel
+  destroyed data: major/minor arcs and representation count
+  p=2  survivors=1  forbidden=0        factor=2.000000 partial=2.000000
+  p=3  survivors=1  forbidden=0,1      factor=0.750000 partial=1.500000
+  p=5  survivors=4  forbidden=0        factor=1.250000 partial=1.875000
+  p=7  survivors=5  forbidden=0,3      factor=0.972222 partial=1.822917
+  p=11 survivors=9  forbidden=0,9      factor=0.990000 partial=1.804687
+  p=13 survivors=11 forbidden=0,4      factor=0.993056 partial=1.792155
+  p=17 survivors=15 forbidden=0,2      factor=0.996094 partial=1.785154
+  partial product through p=31: 1.771732
+
+Local-problem Tournament Analysis
+vertices=6
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1]
+Hamiltonian_paths=1
+ranking:
+  1. prime_quadruplet_0_2_6_8 score=5 partial=4.317399
+  2. goldbach_N_210 score=4 partial=4.252156
+  3. prime_triplet_0_2_6 score=3 partial=2.914267
+  4. goldbach_N_2110 score=2 partial=1.771732
+  5. sophie_germain score=1 partial=1.328799
+  6. twin_primes_gap_2 score=0 partial=1.328799
+
+Hard-Problem Carrier Atlas
+--------------------------
+- Riemann_Hypothesis
+  raw scalar: all nontrivial zeta zeros on Re(s)=1/2
+  hidden witness: cancellation in primes via explicit formula
+  retained side channels: zero spectrum, prime races, Mellin/Fourier modes, Euler product
+  plausible tournament vertices: residue classes, zeros, Fourier modes, proof obligations
+- Generalized_RH_Chebotarev
+  raw scalar: zeros / Frobenius equidistribution
+  hidden witness: character and conjugacy-class cancellation
+  retained side channels: Dirichlet characters, Frobenius classes, Artin L-functions, prime races
+  plausible tournament vertices: characters, conjugacy classes, residue classes, zeros
+- Twin_Primes
+  raw scalar: gap 2 occurs infinitely often
+  hidden witness: admissible pair survives local obstructions and parity barrier
+  retained side channels: local residues, singular series, sieve weights, level of distribution
+  plausible tournament vertices: local primes, residue classes, gaps, sieve weights
+- Goldbach
+  raw scalar: every large even N has p+q=N
+  hidden witness: additive convolution of primes stays positive
+  retained side channels: local residues, major arcs, minor arcs, representation counts
+  plausible tournament vertices: residue pairs, prime-pair edges, circle arcs, proof obligations
+- BSD
+  raw scalar: analytic rank equals algebraic rank
+  hidden witness: L-function vanishing order matches Mordell-Weil/Selmer data
+  retained side channels: Frobenius traces, local root numbers, Selmer groups, regulators, Tamagawa factors
+  plausible tournament vertices: primes of good reduction, Frobenius traces, Selmer classes, local conditions
+- abc
+  raw scalar: height controlled by radical up to epsilon
+  hidden witness: valuation-side channel prevents too much additive/multiplicative alignment
+  retained side channels: prime valuations, radical, height, conductor/discriminant, Szpiro channel
+  plausible tournament vertices: prime divisors, valuation strata, height packets, elliptic curve conductors
+- Euler_Heegner_Rabinowitsch
+  raw scalar: finite lucky prime horizon
+  hidden witness: class-number-one/no-early-collapse side channel
+  retained side channels: discriminant, class group, norm factorization, boundary square
+  plausible tournament vertices: input slots, boundary positions, class group states, proof obligations
+- Collatz
+  raw scalar: all orbits reach 1
+  hidden witness: 2-adic/3-adic carry defect remains controlled
+  retained side channels: parity word, rapidity defect, 2-adic state, 3-adic inverse tree
+  plausible tournament vertices: parity states, defect packets, residue classes, proof obligations
+
+Problem tag similarities
+  0.600 abc <-> Euler_Heegner_Rabinowitsch: ['discriminant', 'local-global', 'side-channel']
+  0.600 Generalized_RH_Chebotarev <-> BSD: ['Frobenius', 'local-global', 'zero-spectrum']
+  0.333 abc <-> Collatz: ['height-valuation', 'side-channel']
+  0.333 Twin_Primes <-> Goldbach: ['local-obstruction', 'prime-tuples']
+  0.333 Riemann_Hypothesis <-> Generalized_RH_Chebotarev: ['prime-race', 'zero-spectrum']
+  0.333 Euler_Heegner_Rabinowitsch <-> Collatz: ['finite-window', 'side-channel']
+  0.143 Riemann_Hypothesis <-> BSD: ['zero-spectrum']
+  0.143 Generalized_RH_Chebotarev <-> abc: ['local-global']
+  0.143 Generalized_RH_Chebotarev <-> Euler_Heegner_Rabinowitsch: ['local-global']
+  0.143 BSD <-> abc: ['local-global']
+  0.143 BSD <-> Euler_Heegner_Rabinowitsch: ['local-global']
+
+Proof-Route Tournament
+----------------------
+Vertices: proof routes/carriers, not integers or conjectures.
+Observable: majority over predicate retention, computability, cross-problem transfer, proof strength, and lower risk.
+Switch/gauge: A -> B when A wins the majority of criteria.
+Tie Hamiltonian path: route score descending.
+vertices=9
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_paths=1
+ranking:
+  1. side_channel_jackknife score=8 (preserve=5, compute=5, transfer=5, proof=4, risk=1)
+  2. local_obstruction_product_ledger score=7 (preserve=5, compute=5, transfer=4, proof=4, risk=1)
+  3. Frobenius_trace_tournament score=6 (preserve=5, compute=3, transfer=5, proof=5, risk=2)
+  4. zero_mode_spectral_packet score=5 (preserve=5, compute=3, transfer=5, proof=5, risk=3)
+  5. two_shadow_trace_norm_carrier score=4 (preserve=4, compute=5, transfer=4, proof=4, risk=1)
+  6. prime_race_tournament score=3 (preserve=4, compute=5, transfer=4, proof=3, risk=2)
+  7. height_valuation_ledger score=2 (preserve=4, compute=4, transfer=4, proof=4, risk=2)
+  8. finite_exception_window score=1 (preserve=4, compute=4, transfer=3, proof=4, risk=1)
+  9. raw_scalar_numerology score=0 (preserve=1, compute=5, transfer=2, proof=1, risk=5)
+
+Reading
+-------
+Prime races are the cleanest literal tournament: residue classes compete,
+and edge flips are zero-driven wall crossings.  This is a finite shadow of
+GRH/explicit-formula data, not a replacement for it.
+
+Twin primes, Goldbach, Sophie Germain primes, and prime tuples become local
+obstruction tournaments only after the local product ledger is retained.
+The product says which quotient survives local tests; it does not decide
+the global conjecture because parity barriers and minor-arc/global
+correlations are destroyed by the quotient.
+
+For RH/BSD/abc, the tournament move is moral progress rather than proof:
+choose vertices as zeros, Frobenius traces, local conditions, valuations,
+or proof obligations, then ask which quotient preserves the hard predicate.
+The route tournament says the strongest transferable first move remains
+side-channel jackknife/local ledgers, with raw scalar numerology last.

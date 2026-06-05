@@ -39,7 +39,10 @@ only then ask for a global theorem.
 ## Evidence From S651
 
 `04-computation/number_theory_tournament_atlas_s651.py` builds three concrete
-families.
+families.  Supplemental scout
+`04-computation/number_theory_tournament_carriers_s651.py` adds dynamic
+prime-race majority tournaments, local product ledgers, a broader
+hard-problem carrier atlas, and a proof-route tournament.
 
 ### Paley Character Tournaments
 
@@ -60,6 +63,28 @@ p=19: score_hist={9:19}, c3=285, H skipped
 
 This is not analogy.  It is number theory making a tournament from a
 multiplicative character.
+
+### Prime-Race Dynamic Supplement
+
+Final-count prime races on reduced residue classes give transitive tournaments
+in the S651 supplement, because one scalar count orders every class.  The more
+useful quotient keeps pairwise time history: orient `a -> b` when `a` led `b`
+at more prime checkpoints up to `X`.
+
+At `q=11`, `X=100000`, this dynamic majority tournament differs from the final
+count race:
+
+```text
+flips_vs_final=15
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,7:3,9:1}
+directed_3cycles=1
+scc_sizes=[3,1,1,1,1,1,1,1]
+hamiltonian_paths=3
+```
+
+That is a small finite shadow of explicit-formula wall crossing: the final
+leaderboard collapses the history, while the pairwise majority tournament
+keeps some zero-driven crossing information.
 
 ### Local Sieve Obstruction Tournaments
 
@@ -84,6 +109,20 @@ twin gap 2 vs Euler p=41:      62
 
 The large twin-vs-Euler flip count is the point: the primes are not the whole
 object.  The side channel changes the tournament.
+
+The supplement also prices normalized local survivor products through
+`p<=31` for twin primes, Sophie Germain primes, prime triplets, prime
+quadruplets, and Goldbach targets.  The resulting local-problem tournament is
+transitive with ranking:
+
+```text
+prime_quadruplet_0_2_6_8
+> goldbach_N_210
+> prime_triplet_0_2_6
+> goldbach_N_2110
+> sophie_germain
+> twin_primes_gap_2
+```
 
 ### Hard-Problem Transfer Tournament
 
@@ -199,6 +238,8 @@ side-channel audit, not as a replacement for the theorem.
 
 `04-computation/number_theory_tournament_atlas_s651.py`;
 `05-knowledge/results/number_theory_tournament_atlas_s651.out`;
+`04-computation/number_theory_tournament_carriers_s651.py`;
+`05-knowledge/results/number_theory_tournament_carriers_s651.out`;
 `07-reflections/number-theory-tournament-carriers-s651.md`;
 HYP-2226, HYP-2225, HYP-2224, HYP-2223, HYP-2217, HYP-2216, HYP-2215,
 THM-410, THM-115.

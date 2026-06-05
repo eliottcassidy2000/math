@@ -17,6 +17,14 @@ finite-field character table with the diagonal removed and the sign made
 complete.  It has regular scores, strong connectivity, and the spectral
 flatness that the repo has been circling for months.
 
+The prime-race supplement adds the next warning.  If the vertices are reduced
+residue classes and the edge uses only the final count `pi(X;q,a)`, every
+finite race is transitive.  But if the edge remembers which class led at more
+prime checkpoints, the same data can become cyclic: at `q=11`, `X=100000`,
+the dynamic majority tournament flips `15` edges versus the final-count race
+and has one directed 3-cycle.  So even in a familiar prime race, the useful
+tournament is the one that keeps the history side channel.
+
 The harder lesson comes from the sieve rows.  Twin primes, Goldbach, and the
 Euler polynomial can all use the same local-prime vertex set, but the
 tournaments are different because the side channel changes:
@@ -40,6 +48,12 @@ For twin primes, `3` is the top bottleneck because gap `2` kills two lanes mod
 forbidden lane rather than two, so the tournament reorders.  For the Euler
 polynomial `p=41`, the boundary prime `41` suddenly becomes the leading
 obstruction, exactly matching the endpoint-square story from S649/S650.
+
+The supplemental product ledger makes the same point across problem carriers:
+prime quadruplets, Goldbach `210`, prime triplets, Goldbach `2110`, Sophie
+Germain primes, and twin primes form a transitive local-problem tournament
+through `p<=31`.  That ranking is not a theorem about infinitude; it is a
+finite price list for which local survivor channel remains after quotienting.
 
 This gives a real kind of morale progress on hard problems.  Not the fake kind
 where we announce that RH is "just" a tournament.  The useful kind is smaller:
