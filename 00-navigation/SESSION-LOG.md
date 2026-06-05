@@ -1,5 +1,16 @@
 # Session Log
 
+## codex-2026-06-05-S659 - finite-field Kakeya/Falconer carrier ledger for LRC no-leak (HYP-2235)
+
+**Prompt:** Integrate finite-field Kakeya/Falconer into the investigation.
+**Integration:** Treated S657's Kakeya/Falconer lane and S658's HYP-2234 stub as live handoff.  Used primary theorem anchors from Dvir's finite-field Kakeya polynomial method and Iosevich-Rudnev/Hart-Iosevich finite-field Falconer/pinned-distance work, then connected the finite incidence carrier to HYP-2231 odd-wall labels, HYP-2230 parity/carry, HYP-2222 `C=27` fixed shell, HYP-2197 unit-distance channel ledgers, and HYP-2176 coimage side-channel discipline.
+**Computation:** Added `04-computation/finite_field_kakeya_falconer_s659.py` and stored `05-knowledge/results/finite_field_kakeya_falconer_s659.out`.  The script builds one-line-per-direction families in `F_p^2`, computes exact Kakeya minima for `p=3,5,7`, profiles parabola carriers for `p=3,5,7,11,13`, exhaustively audits all `F_5^2` line families, samples larger primes, and reports Tournament Analysis over proof carriers.
+**Findings:** Exact minima are `7,17,31` for `p=3,5,7`, matching the odd-prime parabola carrier `(p^2+2p-1)/2`.  Parabola carriers at `p=3,5,7,11,13` have full quadratic distance support.  Over all `15625` `F_5^2` one-line-per-direction families, every row has full distance support, but union sizes and pinned minima vary (`union_size_hist={17:3000,18:4000,19:8000,21:600,25:25}`, `pinned_min_hist={4:3600,5:12025}`).
+**Synthesis:** Direction coverage and Falconer distance support saturate too early; the transferable proof data is pinned distance fibers, concurrency multiplicity, unit-direction spine, and owner labels.  LRC `n=14` should therefore be attacked by a Kakeya-style no-leak lemma: fixed scalar odd-wall/pair-sum support plus `C=27` gcd shell/carry/owner labels forces AP, `Vstar`, nonprimitive `2AP`, or strict looseness.
+**Tournament Analysis:** Vertices are proof carriers, not points or runners.  The majority tournament has `score_hist={0:1,2:3,4:1,6:2,7:2}`, `3` directed 3-cycles, SCC sizes `[4,3,1,1]`, and `15` Hamiltonian paths, ranking pinned distance fibers and concurrency multiplicity highest while raw cardinality is last.
+**Artifacts:** HYP-2235, T728, `04-computation/finite_field_kakeya_falconer_s659.py`, `05-knowledge/results/finite_field_kakeya_falconer_s659.out`, `07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`, plus HYP-2234, hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Implement the LRC analogue of the finite-field intercept jackknife: hold the odd wall-pair support fixed, vary `C=27` shell/carry labels inside bounded owner fibers, and measure which labels are necessary for the floor predicate.
+
 ## codex-2026-06-05-S658 - Small carrier atlases for missed frontier lanes (HYP-2234)
 
 **Prompt:** Spend a long session working on some of the HYP-2233 missed-frontier lanes.

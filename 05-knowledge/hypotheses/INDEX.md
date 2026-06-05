@@ -689,7 +689,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2231 | LRC `n=14` uses a sin/cos even-odd wall carrier: odd active walls are the sin-like boundary, even strata are cos-like derivative/slack, and the visible `(14,21)` Goldbach/Lemoine diagonal is only a scalar shadow. | S655 computes AP and `Vstar` at `n=14`, finding exact `M=1/14`, shared best times `1/14,3/14,5/14,9/14,11/14,13/14`, active odd wall pairs `(1,13),(5,9),(3,11)` and mirrors, and shared `C=27` gcd-shell counts `{1:9,3:3,9:1}`.  The AP single-swap census has `195` rows, `0` below, and one tight non-AP row `12->24`; cotangent half-products collapse to `1/C`, confirming that scalar trig products forget composite shell side channels.  The next proof target is an odd-wall/gcd-shell/carry-owner no-leak lemma downstream of HYP-2230's parity/carry coordinate. | codex-2026-06-05-S655; `HYP-2231-lrc14-sin-cos-even-odd-wall-carrier.md`; `lrc_sin_cos_parity_carrier_s655.py`; `lrc_sin_cos_parity_carrier_s655.out`; `lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230, HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164, HYP-2116, THM-401, THM-369 |
 | HYP-2232 | The set-theoretic Continuum Hypothesis is the archetypal cardinal-shadow carrier problem: `2^aleph_0` is the scalar shadow, while forcing/inner-model/generic side channels decide which continuum structure is visible. | S656 records the standard facts (Godel: CH in `L`; Cohen: relative consistency of not-CH by forcing) and turns them into a finite repo protocol.  The carrier atlas compares `L`, Cohen-style forcing extensions, forcing-axiom worlds, and bare ZFC; the proof-route tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `c3=0`, SCC sizes all singleton, and raw cardinal numerology last.  Transfer rule: before trusting a count/residue/H/edge scalar, ask which model, lift, fiber, packet, owner, or boundary state was forgotten. | codex-2026-06-05-S656; `HYP-2232-continuum-hypothesis-cardinal-shadow-carrier.md`; `continuum_hypothesis_carrier_s656.py`; `continuum_hypothesis_carrier_s656.out`; `continuum-hypothesis-cardinal-shadow-carrier-s656.md`; HYP-2187, HYP-2185, HYP-2182, HYP-2171, HYP-2231, HYP-2230, HYP-2213, HYP-2212 |
 | HYP-2233 | Important missed math frontiers should be ranked by repo leverage, near-term finite actionability, undercoverage, external importance, and source confidence, with raw fame-chasing risk penalized. | S657's repo/web scout ranks Hadwiger-Nelson finite unit-distance coloring, graph reconstruction decks, Kakeya/Falconer finite-field incidence, sunflower/extractor set-system cores, Caccetta-Haggkvist consolidation, union-closed frequency carriers, Erdos-Hajnal blow-ups, distinct-distance dual energy, Rota/Ryser rainbow transversals, graceful labels, and Clay controls.  The route tournament is transitive with `score_hist={0:1,...,10:1}`, `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  The work queue is S657a finite unit-distance color-critical fingerprints, S657b tournament deck invariants, S657c finite-field incidence ledgers, S657d OCF sunflower cores, and S657e union-closed frequency tournaments. | codex-2026-06-05-S657; `HYP-2233-missed-problem-frontier-carrier-atlas.md`; `missed_problem_frontier_s657.py`; `missed_problem_frontier_s657.out`; `missed-important-problem-frontier-s657.md`; HYP-2232, HYP-2227, HYP-2197, HYP-2188, HYP-2187, HYP-2176, HYP-2171 |
-| HYP-2234 | HYP-2233's frontier lanes should be advanced by small predicate-preserving carrier atlases before any broad proof attempt. | S658 builds exact small atlases for tournament reconstruction decks, union-closed frequency carriers, and finite-field Kakeya/Falconer incidence toys.  Raw tournament vertex-decks and scalar `(H,score,c3,SCC)` signatures collide through `n=6`, but adding the sorted `(H-H_card,c3-c3_card,deleted score)` loss profile resolves every checked collision.  Union-closed sorted frequency vectors separate canonical families through `m=3` but collide at `m=4`; adding set pressure `sum_B |A union B|` separates all `366` canonical `m=4` families.  Finite-field line-choice Kakeya sets over `F_p^2` for `p=3,5,7` have minimum sizes `7,17,31`, fitting `(p^2+2p-1)/2`, with stable multiplicity profiles and distance-fiber side channels. | codex-2026-06-05-S658; `HYP-2234-frontier-small-carrier-atlases.md`; `frontier_small_carriers_s658.py`; `frontier_small_carriers_s658.out`; `frontier-small-carrier-atlases-s658.md`; HYP-2233, HYP-2228, HYP-2227, HYP-2197, HYP-2187, HYP-2176 |
+| HYP-2234 | HYP-2233's frontier lanes should be advanced by small predicate-preserving carrier atlases before any broad proof attempt. | S658 builds exact small atlases for tournament reconstruction decks, union-closed frequency carriers, and finite-field Kakeya/Falconer incidence toys.  Raw tournament vertex-decks and scalar `(H,score,c3,SCC)` signatures collide through `n=6`, but sorted `(H-H_card,c3-c3_card,deleted score)` loss profiles resolve every checked collision; union-closed sorted frequency vectors first collide at `m=4`, where set pressure separates all `366` canonical families; finite-field line-choice Kakeya sets over `F_p^2` for `p=3,5,7` have minimum sizes `7,17,31`, fitting `(p^2+2p-1)/2`.  S659 extends the finite-field lane as HYP-2235 with full distance/pinned/unit ledgers and an LRC `n=14` no-leak transfer. | codex-2026-06-05-S658/S659; `HYP-2234-frontier-small-carrier-atlases.md`; `frontier_small_carriers_s658.py`; `frontier_small_carriers_s658.out`; `frontier-small-carrier-atlases-s658.md`; HYP-2235, HYP-2233, HYP-2228, HYP-2227, HYP-2197, HYP-2187, HYP-2176 |
+| HYP-2235 | Finite-field Kakeya/Falconer gives an LRC no-leak carrier: direction cover and distance support are scalar shadows, while concurrency, pinned distances, unit-direction spine, and owner labels are the proof data. | S659 builds a finite-field incidence ledger over `F_p^2`.  Exact branch-and-bound gives Kakeya one-line-per-direction minima `p=3:7`, `p=5:17`, `p=7:31`, matching the odd-prime parabola carrier `(p^2+2p-1)/2`; the same carriers have full quadratic distance support for `p=3,5,7,11,13`.  Exhaustively over all `5^6` line families in `F_5^2`, every row has full distance support, but union size and pinned minima vary (`union_size_hist={17:3000,18:4000,19:8000,21:600,25:25}`, `pinned_min_hist={4:3600,5:12025}`).  Tournament Analysis ranks pinned fibers and concurrency multiplicity highest, with raw cardinality last.  LRC transfer: after the `n=14` scalar wall is fixed, retain odd wall pairs plus `C=27` shell/carry/owner labels to prove AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | codex-2026-06-05-S659; `HYP-2235-finite-field-kakeya-falconer-carrier.md`; `finite_field_kakeya_falconer_s659.py`; `finite_field_kakeya_falconer_s659.out`; `finite-field-kakeya-falconer-lrc-carrier-s659.md`; HYP-2234, HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197, HYP-2176, HYP-1804 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6569,6 +6570,78 @@ finite unit-distance coloring.
 `05-knowledge/results/frontier_small_carriers_s658.out`;
 `07-reflections/frontier-small-carrier-atlases-s658.md`; HYP-2233, HYP-2228,
 HYP-2227, HYP-2197, HYP-2187, HYP-2176.
+## HYP-2235: Finite-field Kakeya/Falconer gives an LRC no-leak carrier (finite-field-kakeya-falconer-carrier, codex-2026-06-05-S659)
+**Status:** OPEN finite-field carrier transfer hypothesis with exact scout.
+
+S659 specializes the HYP-2234 frontier atlas to finite-field Kakeya/Falconer.
+The finite carrier is a one-line-per-projective-direction family in `F_p^2`.
+The preserved predicates are direction coverage, quadratic distance support,
+pinned distance fibers, unit-distance direction support, and concurrency
+multiplicity.  The destroyed side channel is exact embedding/intercept data.
+
+The external anchors are Dvir's polynomial-method finite-field Kakeya theorem
+(`arXiv:0803.2336`) and the Iosevich-Rudnev/Hart-Iosevich finite-field
+Falconer and pinned-distance programs (`arXiv:math/0509005`,
+`arXiv:0804.3036`).  The repo transfer is not a proof of those external
+statements; it is the side-channel lesson they make clean at finite scale.
+
+Exact branch-and-bound over all one-line-per-direction families gives:
+
+```text
+p=3: exact_min=7,  min_family_count=72,    branch_nodes=121
+p=5: exact_min=17, min_family_count=3000,  branch_nodes=16781
+p=7: exact_min=31, min_family_count=16464, branch_nodes=2221668.
+```
+
+These match the odd-prime parabola carrier size `(p^2+2p-1)/2`.
+For the same parabola carriers at `p=3,5,7,11,13`, quadratic Falconer
+distance support is already full:
+
+```text
+3/3, 5/5, 7/7, 11/11, 13/13.
+```
+
+The scalar leak is sharp over `F_5^2`: all `5^6=15625` one-line-per-direction
+families have full distance support, while other side channels vary:
+
+```text
+union_size_hist={17:3000,18:4000,19:8000,21:600,25:25}
+pinned_min_hist={4:3600,5:12025}.
+```
+
+Thus Falconer support alone is too coarse.  The useful proof data is pinned
+fibers plus concurrency/multiplicity, with unit-distance directions and Paley
+characters as secondary carriers.
+
+Tournament Analysis ranks proof carriers rather than points or lines:
+
+```text
+score_hist={0:1,2:3,4:1,6:2,7:2}
+directed_3cycles=3
+scc_sizes=[4,3,1,1]
+hamiltonian_paths=15.
+```
+
+The top carriers are pinned distance fibers and concurrency multiplicity
+packets; raw cardinality density is last.
+
+The LRC `n=14` transfer is a Kakeya-style no-leak lemma.  HYP-2231 identifies
+the active odd wall pairs `(1,13),(3,11),(5,9)`, HYP-2230 identifies the
+parity/`mod 14` carry coordinate, and HYP-2222 identifies the `C=27` gcd fixed
+clock.  HYP-2235 says the scalar wall/pair-sum support should be treated like
+full finite-field distance support: necessary but lossy.  The proof should
+retain odd wall pairs, `C=27` shells, carry labels, and owner routes, then prove:
+
+```text
+fixed odd wall + fixed C=27 shell + visible carry/owner
+  => AP, Vstar, nonprimitive 2AP, or strict looseness.
+```
+
+**See:** `05-knowledge/hypotheses/HYP-2235-finite-field-kakeya-falconer-carrier.md`;
+`04-computation/finite_field_kakeya_falconer_s659.py`;
+`05-knowledge/results/finite_field_kakeya_falconer_s659.out`;
+`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`; HYP-2234,
+HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197, HYP-2176, HYP-1804.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

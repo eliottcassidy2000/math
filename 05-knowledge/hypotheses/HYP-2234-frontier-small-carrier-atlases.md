@@ -4,6 +4,7 @@ status: OPEN synthesis / small finite carrier evidence
 source: codex-2026-06-05-S658
 related:
   - HYP-2233
+  - HYP-2235
   - HYP-2228
   - HYP-2227
   - HYP-2197
@@ -193,7 +194,15 @@ common pattern is the repo's recurring scalar-shadow lesson: raw counts,
 decks, frequency vectors, and direction coverage become useful only after the
 destroyed side channel is named and reattached.
 
+S659 extends the finite-field Kakeya/Falconer lane as HYP-2235, adding a
+dedicated distance/pinned/unit ledger, exact `p<=7` minima, and an LRC `n=14`
+no-leak transfer statement.  Tournament reconstruction decks and union-closed
+frequency carriers remain open lanes under this atlas.
+
 **See:** `04-computation/frontier_small_carriers_s658.py`;
 `05-knowledge/results/frontier_small_carriers_s658.out`;
-`07-reflections/frontier-small-carrier-atlases-s658.md`; HYP-2233, HYP-2228,
-HYP-2227, HYP-2197, HYP-2187, HYP-2176.
+`07-reflections/frontier-small-carrier-atlases-s658.md`;
+`04-computation/finite_field_kakeya_falconer_s659.py`;
+`05-knowledge/results/finite_field_kakeya_falconer_s659.out`;
+`07-reflections/finite-field-kakeya-falconer-lrc-carrier-s659.md`; HYP-2235,
+HYP-2233, HYP-2228, HYP-2227, HYP-2197, HYP-2187, HYP-2176.
