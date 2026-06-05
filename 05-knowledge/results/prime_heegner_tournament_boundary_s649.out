@@ -1,0 +1,60 @@
+Euler/Heegner prime-window boundary scout (S649)
+
+Exact identity:
+  f_p(x) = x^2 + x + p = ((2x+1)^2 + d)/4 with d=4p-1
+  f_p(p-1) = p^2, so x=p-1 is the forced square endpoint
+
+Lucky-prime search p<=500: [2, 3, 5, 11, 17, 41]
+Matches expected set: True
+
+Heegner projection through d=4p-1
+  d | p=(d+1)/4 |                              role
+----+-----------+----------------------------------
+  1 |         - | outside d=4p-1 Euler-family shape
+  2 |         - | outside d=4p-1 Euler-family shape
+  3 |         1 |           degenerate p, not prime
+  7 |         2 |                 Euler lucky prime
+ 11 |         3 |                 Euler lucky prime
+ 19 |         5 |                 Euler lucky prime
+ 43 |        11 |                 Euler lucky prime
+ 67 |        17 |                 Euler lucky prime
+163 |        41 |                 Euler lucky prime
+
+Prime window and tournament boundary dictionary
+ p |   d | prime x | run | interior | fail x | fail value | spine | Moon floor | off-path fiber
+---+-----+---------+-----+----------+--------+------------+-------+------------+---------------
+ 2 |   7 |    0..0 |   1 |        0 |      1 |          4 |     1 |          0 |              0
+ 3 |  11 |    0..1 |   2 |        1 |      2 |          9 |     2 |          1 |              1
+ 5 |  19 |    0..3 |   4 |        3 |      4 |         25 |     4 |          3 |              6
+11 |  43 |    0..9 |  10 |        9 |     10 |        121 |    10 |          9 |             45
+17 |  67 |   0..15 |  16 |       15 |     16 |        289 |    16 |         15 |            120
+41 | 163 |   0..39 |  40 |       39 |     40 |       1681 |    40 |         39 |            780
+
+Boundary reading
+  zero-based run length p-1 == Hamiltonian spine length on p vertices
+  interior inputs x=1..p-2 have count p-2 == Moon c3 floor for strong p-tournaments
+  endpoint x=p-1 folds to p^2, a square sink rather than another prime
+  after fixing the spine, the tournament deformation budget is C(p-1,2)
+
+Tournament Analysis
+  challenged vertices: primes, Heegner discriminants, input positions, residues,
+    Hamiltonian-path arcs, directed 3-cycles, off-path arcs, and proof obligations
+  chosen vertices: carrier lenses; quotient preserves the p-1/p-2 boundary
+    and destroys the class-number-one proof channel if scalarized
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3_cycles=0
+  hamiltonian_paths=1
+  majority ranking:
+    1. endpoint_square_failure_p2
+    2. heegner_class_number_one_side_channel
+    3. norm_line_d_equals_4p_minus_1
+    4. interior_length_p_minus_2_moon_floor
+    5. spine_length_p_minus_1
+    6. off_path_fiber_choose_p_minus_1_2
+    7. input_positions_as_vertices
+    8. raw_lucky_prime_list
+
+Hypothesis generated
+  HYP-2225: The lucky-prime window is a spine/interior/end-square carrier.
+  The exact arithmetic is Heegner/Rabinowitsch; the repo-useful transfer is
+  to keep both side channels: class-number-one norms and tournament spine/fiber labels.

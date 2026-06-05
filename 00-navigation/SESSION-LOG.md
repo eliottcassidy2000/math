@@ -178,6 +178,15 @@
 **Tournament Analysis:** Vertices are carrier lenses after explicitly considering points, unit edges, direction pairs, slabs, caps, ears, deletion cores, obstruction labels, and proof obligations.  The majority tournament is transitive with one Hamiltonian path, ranking `fixed_27_edge_quantum > spine_bulk_direction_split > cap_endpoint_repair_channel > pure_bulk_direction_jackknife > degree_deletion_core_ledger > traceable_section_word > triangular_lattice_baseline > raw_edge_count_only`.
 **Artifacts:** HYP-2224, `07-reflections/unit-distance-moser-fixed-quantum-s648.md`, T717, result-index and concept-map updates.
 
+## codex-2026-06-04-S649 - Euler/Heegner prime-window tournament boundary (HYP-2225)
+
+**Prompt:** The prime-generating sets `{2,3,5,11,17,41}` and `{1,2,3,7,11,19,43,67,163}` are important; Heegner numbers are the unique-factorization cases; the first set generating primes for their first `n-2` inputs sounds tournament-related.
+**Integration:** Builds on S647/HYP-2223's fixed Hamiltonian spine plus off-path fiber split, S648/HYP-2224's unit-spine/bulk carrier discipline, S646/HYP-2222's fixed-clock side-channel habit, and the H=21/Moon floor thread in HYP-2200/THM-115.
+**Computation:** Added `04-computation/prime_heegner_tournament_boundary_s649.py` and stored `05-knowledge/results/prime_heegner_tournament_boundary_s649.out`.  The script searches primes `p<=500` for exact Euler-Rabinowitsch boundary rows, projects Heegner numbers through `d=4p-1`, records the spine/interior/square-sink ledger, and runs Tournament Analysis over carrier lenses.
+**Findings:** The search recovers exactly `[2,3,5,11,17,41]` as rows where `f_p(x)=x^2+x+p` is prime through `x=p-2` and first fails at `x=p-1` with `p^2`.  The Heegner projection sends `{7,11,19,43,67,163}` to the lucky primes; `{1,2,3}` are outside or degenerate for this Euler-family shape.  The indexing split is the useful tournament signal: full zero-based prime run length `p-1` equals a fixed Hamiltonian spine, interior count `p-2` equals Moon's strong `c3` floor, and the hidden off-path deformation budget is `C(p-1,2)`.
+**Tournament Analysis:** Vertices are carrier lenses after considering primes, Heegner discriminants, input positions, residues, Hamiltonian-path arcs, directed 3-cycles, off-path arcs, and proof obligations.  The majority tournament is transitive with one Hamiltonian path, ranking `endpoint_square_failure_p2 > heegner_class_number_one_side_channel > norm_line_d_equals_4p_minus_1 > interior_length_p_minus_2_moon_floor > spine_length_p_minus_1 > off_path_fiber_choose_p_minus_1_2 > input_positions_as_vertices > raw_lucky_prime_list`.
+**Artifacts:** HYP-2225, `07-reflections/prime-heegner-tournament-boundary-s649.md`, T718, result-index and concept-map updates.
+
 ## codex-2026-06-04-S633 - sequence-shadow recursion lab for hard counts (HYP-2209)
 
 **Prompt:** Think creatively and abstractly about ways to extend difficult sequences like `1,1,2,2,8,12,88,...`; when a value is hard, look for related hard sequences, recursive feel, and connections to repo structures such as A000568 and famous conjectural spaces.

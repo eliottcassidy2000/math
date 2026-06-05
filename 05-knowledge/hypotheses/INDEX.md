@@ -680,6 +680,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2222 | The LRC shell clock `C=2n-1` has a divisor-carrier analogue of the perfect-number fixed equation: `A(C)=sum_{1<=a<=(C-1)/2} gcd(a,C)` is fixed when `A(C)=C`, equivalently Pillai's gcd-sum satisfies `P(C)=3C`.  The only odd fixed clocks are `C=15` and `C=27`, so the only LRC total denominators with a Pillai-fixed pair-sum clock are `n=8` and `n=14`. | S646 proves the clock-classification lemma from the multiplicative local factor `1+a*(1-1/p)`, then scans AP single-swaps through `n=14` using the THM-369 pair-sum pinch oracle.  Every tight non-AP single-swap preserves weighted gcd-shell mass: `2->7` at `n=5`, `2->9` at `n=6`, `6->12` at `n=8`, and `12->24` at `n=14`; the n=14 `Vstar` row moves shell `12` to shell `3` but preserves gcd counts `{1:9,3:3,9:1}`.  The open proof target is a no-leak lemma: fixed gcd carrier plus pair-pinch/carry-owner labels force AP, Vstar, or strict looseness. | codex-2026-06-04-S646; `HYP-2222-lrc-pillai-fixed-clock-carrier.md`; `lrc_pillai_fixed_clock_s646.py`; `lrc_pillai_fixed_clock_s646.out`; `lrc-pillai-fixed-clock-carrier-s646.md`; HYP-2221, HYP-2220, HYP-2217, HYP-2177, HYP-2167, THM-401, THM-369 |
 | HYP-2223 | Perfect triangular tournament controls split into Hamiltonian spine and off-path deformation fiber.  Every `m`-vertex tournament has `C(m,2)` arcs, and fixing one Hamiltonian path leaves `C(m-1,2)` free off-path arcs; at the second perfect control this is `C(8,2)=28=7+21`. | S647 enumerates fixed-base-path fibers through `n=7` and reconstructs the exact `n=8` fixed-path fiber from the full labelled H-spectrum by `fixed_count_h=h*L_h/8!`.  The `n=8` fiber has size `2^21`, `320` H-values in `[1,661]`, mean `388.6875`, and fixed-fiber counts `H=7:0`, `H=21:0`.  Thus `{7,21}` are section/fiber dimensions of the perfect arc carrier while remaining forbidden Hamiltonian-path counts. | codex-2026-06-04-S647; `HYP-2223-triangular-fixed-tournament-controls.md`; `triangular_fixed_tournament_controls_s647.py`; `triangular_fixed_tournament_controls_s647.out`; `triangular-fixed-tournament-controls-s647.md`; HYP-2220, HYP-2200, HYP-2202, HYP-2203, HYP-2217, THM-115 |
 | HYP-2224 | Unit-distance Moser slabs have a fixed edge-channel carrier under the THM-408 add-one-slab operation: after the cap transient, both `P_m^+` and `P_m^-` have stable direction increment `Delta_total=(0,1,8,4,0,4,4,2,4)` with sum `27`, split as `8` unit-spine section edges plus `19` hidden bulk edges. | S648 computes total/spine/bulk direction-pair ledgers for both Moser families through `m=5`.  At the current frontier rows, `P_2^-` has `n=21,E=57,spine=20,bulk=37,pure_bulk=20`, and `P_2^+` has `n=22,E=60,spine=21,bulk=39,pure_bulk=21`, so pure-bulk direction mass equals the unit-spine length at `m=2`.  The `n=22` row has degree histogram `{3:1,4:3,5:8,6:5,7:5}`; by S614, a 61-edge row cannot keep a degree-3 vertex, so a one-edge improvement inside this carrier must repair the cap endpoint channel or leave the fixed Moser quantum. | codex-2026-06-04-S648; `HYP-2224-unit-distance-moser-fixed-quantum-carrier.md`; `unit_distance_moser_fixed_quantum_s648.py`; `unit_distance_moser_fixed_quantum_s648.out`; `unit-distance-moser-fixed-quantum-s648.md`; HYP-2222, HYP-2221, HYP-2217, HYP-2204, HYP-2203, HYP-2188, HYP-2176, THM-408 |
+| HYP-2225 | Euler/Heegner prime-generating windows have a source/interior/square-sink carrier: for `p in {2,3,5,11,17,41}`, `f_p(x)=x^2+x+p` is prime for `x=0..p-2` and fails at `x=p-1` with `p^2`; the Heegner side channel is `d=4p-1`. | S649 searches primes `p<=500` and recovers exactly `[2,3,5,11,17,41]` as rows whose first composite is the forced endpoint square.  The Heegner projection sends `{7,11,19,43,67,163}` to these primes, while `{1,2,3}` are outside/degenerate for `d=4p-1`.  The tournament dictionary is: zero-based run length `p-1` equals a fixed Hamiltonian spine, interior count `p-2` equals Moon's strong-tournament `c3` floor, and the hidden deformation fiber is `C(p-1,2)`. | codex-2026-06-04-S649; `HYP-2225-prime-heegner-tournament-boundary.md`; `prime_heegner_tournament_boundary_s649.py`; `prime_heegner_tournament_boundary_s649.out`; `prime-heegner-tournament-boundary-s649.md`; HYP-2224, HYP-2223, HYP-2222, HYP-2217, HYP-2215, HYP-2200, THM-115 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -5682,7 +5683,7 @@ fixed 27 quantum + unrepaired cap endpoint -> at most 60 edges
 61 edges -> cap endpoint repaired or different carrier
 ```
 
-Tournament Analysis in S647 uses carrier lenses rather than points or unit
+Tournament Analysis in S648 uses carrier lenses rather than points or unit
 edges.  Alternate vertex sets considered include points, unit edges, direction
 pairs, slabs, caps, ears, deletion cores, obstruction labels, and proof
 obligations.  The majority tournament is transitive with one Hamiltonian path,
@@ -5695,6 +5696,82 @@ triangular_lattice_baseline > raw_edge_count_only`.
 `04-computation/unit_distance_moser_fixed_quantum_s648.py` (+.out);
 `07-reflections/unit-distance-moser-fixed-quantum-s648.md`; HYP-2222,
 HYP-2221, HYP-2217, HYP-2204, HYP-2203, HYP-2188, HYP-2176, THM-408.
+
+## HYP-2225: Euler-Heegner prime windows have a spine/interior/square-sink carrier (prime-heegner-tournament-boundary, codex-2026-06-04-S649)
+**Status:** OPEN transfer hypothesis with exact arithmetic scout.
+
+For the Euler-Rabinowitsch quadratics
+
+```text
+f_p(x) = x^2 + x + p,
+```
+
+the lucky primes
+
+```text
+p in {2,3,5,11,17,41}
+```
+
+have the exact boundary
+
+```text
+f_p(x) prime for x=0..p-2,
+f_p(p-1)=p^2.
+```
+
+The Heegner side channel is
+
+```text
+d = 4p - 1,
+f_p(x) = ((2x+1)^2 + d)/4.
+```
+
+S649 searches all primes `p<=500` for rows where the first composite appears
+exactly at the forced endpoint square.  It recovers precisely
+`[2,3,5,11,17,41]`.  Projecting Heegner numbers through `p=(d+1)/4` sends
+`{7,11,19,43,67,163}` to this lucky-prime set; `d=1,2` are outside the
+`d=4p-1` Euler-family shape and `d=3` gives degenerate `p=1`.
+
+The tournament dictionary is:
+
+```text
+zero-based prime run length p-1 = fixed Hamiltonian spine length;
+interior inputs x=1..p-2 have count p-2 = Moon c3 floor for strong p-tournaments;
+endpoint x=p-1 is a forced square sink p^2;
+after fixing the spine, the off-path deformation fiber is C(p-1,2).
+```
+
+This makes the user's `n-2` signal real but indexed: the full prime window
+including `x=0` has length `p-1`, while the interior window has length `p-2`.
+The base term and square endpoint must remain attached.
+
+Tournament Analysis challenges vertices as primes, Heegner discriminants,
+input positions, residues, Hamiltonian-path arcs, directed 3-cycles, off-path
+arcs, and proof obligations.  The chosen vertices are carrier lenses.  The
+majority tournament is transitive with one Hamiltonian path, ranking
+`endpoint_square_failure_p2 > heegner_class_number_one_side_channel >
+norm_line_d_equals_4p_minus_1 > interior_length_p_minus_2_moon_floor >
+spine_length_p_minus_1 > off_path_fiber_choose_p_minus_1_2 >
+input_positions_as_vertices > raw_lucky_prime_list`.
+
+The proposed proof-use technique is an endpoint-square carrier:
+
+```text
+long clean prefix + forced square/failure endpoint
+-> source/interior/sink decomposition
+-> compare interior count to strong-tournament floor invariants
+-> compare full prefix length to fixed Hamiltonian spines
+-> retain off-path deformation fibers as hidden side channels.
+```
+
+This does not prove Heegner unique factorization.  It records the exact
+arithmetic bridge and a repo-facing carrier dictionary for LRC, unit-distance,
+and H-gap transfers where raw scalar equality would forget the side channel.
+
+**See:** `05-knowledge/hypotheses/HYP-2225-prime-heegner-tournament-boundary.md`;
+`04-computation/prime_heegner_tournament_boundary_s649.py` (+.out);
+`07-reflections/prime-heegner-tournament-boundary-s649.md`; HYP-2224,
+HYP-2223, HYP-2222, HYP-2217, HYP-2215, HYP-2200, THM-115.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
