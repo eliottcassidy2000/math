@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T720** #number-theory #tournament-analysis #prime-races #local-obstructions #RH #Goldbach #BSD #abc | certainty: reserved active scout | source: codex-2026-06-05-S651
+Reserved for S651: treat number-theory tournaments as pairwise quotients of retained arithmetic carriers, not as raw problem scalars.  Planned vertices include residue classes, local moduli, zero/Frobenius modes, divisor strata, height packets, and proof obligations.  See HYP-2227.
+
 **T709** #tournaments #staircase #reversed-matching #3cycles #formalization | certainty: proved theorem + Lean-specialized corollary | source: monad-formalizer-2026-06-04-S1
 Formalizing THM-399 exposed a general interval-reversal invariant: start from a transitive tournament and reverse a matching of arcs `(a,b)`.  A sorted triple `x<y<z` is cyclic exactly when its long edge `(x,z)` is reversed, so `#C3=sum_{(a,b)} #{v:a<v<b}`.  The all-0 staircase has reversed arcs `(d_p,r_p)`, each with `k-1` interior vertices, giving `k(k-1)`.  See THM-410; staircase specialization is Lean-formalized in `eliott-monad/math-lean` commit `b5ffcde`.
 

@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-05-S651 - Number-theory tournament carriers (HYP-2227 reserved)
+
+**Prompt:** Understand how tournaments fit into number theory, then use that
+understanding for moral progress on the hardest number-theory problems.
+**Reservation:** Claimed `HYP-2227`, `S651`, and the upcoming `T720` slot for a
+carrier-quotient scout.  The planned computation will build prime-race
+tournaments, local obstruction ledgers, and a proof-route tournament over hard
+number-theory problems.  This stub is intentionally incomplete and exists to
+reserve the namespace before the longer run.
+
 ## codex-2026-06-04-S650 - Heegner prime-polynomial horizon and tournament n-2 witnesses (HYP-2226)
 
 **Prompt:** Connect `{2,3,5,11,17,41}` and `{1,2,3,7,11,19,43,67,163}` for prime-generating polynomials, Heegner unique factorization, and the tournament-like `n-2` prime-run horizon.
