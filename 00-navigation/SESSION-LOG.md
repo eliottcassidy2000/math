@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S658 - Small carrier atlases for missed frontier lanes (HYP-2234)
+
+**Prompt:** Spend a long session working on some of the HYP-2233 missed-frontier lanes.
+**Claimed namespace:** HYP-2234 and T727 reserved with honest stubs before the full computations.  Target lanes are tournament reconstruction decks, union-closed frequency carriers, and finite-field Kakeya/Falconer incidence toys.
+**Status:** In progress.  Goal is small predicate-preserving carrier atlases, not external conjecture proof claims.
+
 ## codex-2026-06-05-S657 - Missed important problem frontier scout (HYP-2233)
 
 **Prompt:** Search around the repo and web for possible important math problems we have missed and could make strides on.
