@@ -1,0 +1,72 @@
+==============================================================================
+S662 pi trinity: infinite sum, infinite product, infinite fraction
+==============================================================================
+
+Core formulas
+  sum       pi/4 = sum_{k>=0} (-1)^k/(2k+1)
+  sum-fast  pi/4 = 4*atan(1/5) - atan(1/239), with atan by power series
+  sum       pi^2/6 = sum_{n>=1} 1/n^2
+  product   pi/2 = product_{n>=1} (2n)^2/((2n-1)(2n+1))
+  fraction  4/pi = 1 + 1^2/(2 + 3^2/(2 + 5^2/(2 + ...)))
+
+Approximation ledger
+face                     cutoff                      pi estimate      abs error
+sum: Leibniz             N=10               3.041839618929402211      9.9753E-2
+sum: Leibniz             N=100              3.131592903558552764      9.9998E-3
+sum: Leibniz             N=1000             3.140592653839792926      1.0000E-3
+sum: Leibniz             N=10000            3.141492653590043238      1.0000E-4
+sum: Machin/arctan       terms=3            3.141621029325034425      2.8376E-5
+sum: Machin/arctan       terms=5            3.141592682404399517      2.8815E-8
+sum: Machin/arctan       terms=10           3.141592653589791697     1.5415E-15
+sum: Machin/arctan       terms=20           3.141592653589793238     8.2663E-30
+sum: Basel sqrt          N=10               3.049361635982069632      9.2231E-2
+sum: Basel sqrt          N=100              3.132076531809105904      9.5161E-3
+sum: Basel sqrt          N=1000             3.140638056205993123      9.5460E-4
+sum: Basel sqrt          N=10000            3.141497163947209203      9.5490E-5
+product: Wallis          N=10               3.067703806643498971      7.3889E-2
+product: Wallis          N=100              3.133787490628162241      7.8052E-3
+product: Wallis          N=1000             3.140807746030394560      7.8491E-4
+product: Wallis          N=10000            3.141514118681922047      7.8535E-5
+fraction: Brouncker      depth=3            2.895238095238095238      2.4635E-1
+fraction: Brouncker      depth=5            2.976046176046176046      1.6555E-1
+fraction: Brouncker      depth=10           3.232315809405592687      9.0723E-2
+fraction: Brouncker      depth=20           3.189184782277594729      4.7592E-2
+fraction: Brouncker      depth=50           3.161198612987050082      1.9606E-2
+fraction: Brouncker      depth=100          3.151493401070990575      9.9007E-3
+
+Representation side-channel ledger
+face         metric triple    payload                                          transfer
+sum          (3, 1, 2)        terms, moments, cancellation order               Basel power sums; LRC pair sums; OCF coefficient sums
+product      (2, 3, 1)        local factors, zeros, norm/sieve channels        sine/Wallis factors; Euler products; p-adic obstruction ledgers
+fraction     (1, 2, 3)        convergents, continuants, boundary owner state   continued-fraction clocks; carry/owner derivatives; Euclidean descent
+raw_decimal  (0, 0, 0)        scalar digits only                               diagnostic checksum; not a proof carrier
+
+Tournament Analysis over representation faces
+  vertices=sum, product, fraction, raw_decimal
+  pairwise observable=which side channel is preserved better
+  switch=gauge majority over additive_packet, local_factor, recursive_boundary
+  tie Hamiltonian path=sum -> product -> fraction -> raw_decimal
+  outscores={'sum': 2, 'product': 2, 'fraction': 2, 'raw_decimal': 0}
+  score_hist={0: 1, 2: 3}
+  directed_3cycles=1 [('sum', 'product', 'fraction')]
+  sccs=[['fraction', 'product', 'sum'], ['raw_decimal']]
+  hamiltonian_paths=3
+  edges:
+    sum -> product
+    fraction -> sum
+    sum -> raw_decimal
+    product -> fraction
+    product -> raw_decimal
+    fraction -> raw_decimal
+
+Assumption challenge
+  Vertex candidates considered: values, formulas, terms, factors, convergents,
+  proof lenses, side-channel types, LRC residues, OCF packets, and owner states.
+  This script uses representation faces because the predicate is not numerical
+  equality; it is which information survives scalar collapse.
+
+Hypothesis update
+  A scalar value should be stored as a trinity record when possible:
+    sum packets + product factors + fraction boundary state.
+  HYP-2229 already supplies the product-to-sum bridge through the sine product;
+  S662 adds the missing fraction face as a recursive owner/convergent channel.

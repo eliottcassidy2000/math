@@ -4,7 +4,12 @@
 
 **Prompt:** Understand pi as an infinite sum, an infinite product, and an infinite fraction; keep the trinity of representations in mind for values.
 **Claimed namespace:** HYP-2238 and T731 reserved after incoming S661's LRC14 wild strategy atlas used HYP-2237/T730.
-**Status:** Stub claimed.  Pending: compute classical approximation ledgers, build Tournament Analysis over the three representation faces, and connect the trinity to HYP-2229, S661 owner-derivatives, OCF packet carriers, and LRC/unit-distance side-channel discipline.
+**Integration:** Treated HYP-2229's Basel period carrier as the existing sum/product bridge and incoming S661 as the immediate proof-method target: LRC14 needs owner/carry/deletion derivatives, which are the fraction-like recursive boundary state missing from a scalar or product-only ledger.
+**Computation:** Added `04-computation/pi_sum_product_fraction_s662.py` and stored `05-knowledge/results/pi_sum_product_fraction_s662.out`.  The script compares classical pi sums (Leibniz, Machin, Basel), the Wallis product, and Brouncker's continued fraction, then runs Tournament Analysis over representation faces.
+**Findings:** The representation-face tournament is intentionally nontransitive: `sum -> product -> fraction -> sum`, while all three beat `raw_decimal`.  Fingerprints: `score_hist={0:1,2:3}`, `directed_3cycles=1`, SCCs `{sum, product, fraction}` plus `{raw_decimal}`, and `3` Hamiltonian paths.
+**Synthesis:** Store scalar values as a triune carrier when possible: `(sum packets, product factors, fraction boundary state)`.  For LRC14 this reads as odd-wall/pair-sum packets, `C=27` gcd/local product shells, and carry-owner derivative recursion.  For OCF it suggests looking for continued-fraction/continuant encodings of deletion/substitution boundary state alongside the independence-polynomial packet carrier.
+**Artifacts:** HYP-2238, T731, `04-computation/pi_sum_product_fraction_s662.py`, `05-knowledge/results/pi_sum_product_fraction_s662.out`, `07-reflections/pi-sum-product-fraction-trinity-s662.md`, plus result-index, concept-map, tangent, hypothesis-index, and session-log updates.
+**Handoff:** Build the first concrete `triune_value` template on an LRC14 floor atom: record additive wall packets, product/gcd shell factors, and a fraction-like carry-owner continuant; then test whether the triune record separates floor from strict perturbations better than scalar wall support alone.
 
 ## codex-2026-06-05-S661 - LRC14 wild proof strategy atlas (HYP-2237)
 

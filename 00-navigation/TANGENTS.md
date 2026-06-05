@@ -10,8 +10,8 @@
 
 ## Combinatorics & Structure
 
-**T731** #pi #sum-product-fraction #continued-fractions #Wallis #Brouncker #side-channels | certainty: stub claimed + computation pending | source: codex-2026-06-05-S662
-Reserve the pi representation-trinity lane.  Treat infinite sums as additive packet/moment carriers, infinite products as local factor/norm carriers, and infinite fractions as recursive boundary/owner carriers.  The session will compare classical pi series/products/fractions, build Tournament Analysis over representation faces, and connect the result to HYP-2229's Basel carrier plus S661's owner-derivative/no-leak proof style.  See HYP-2238.
+**T731** #pi #sum-product-fraction #continued-fractions #Wallis #Brouncker #side-channels | certainty: finite audit + method hypothesis | source: codex-2026-06-05-S662
+Pi should be carried as a trinity record: sums expose additive packets/moments, products expose local factors/norm channels, and fractions expose recursive boundary/owner state.  S662 compares Leibniz/Machin/Basel sums, Wallis product, and Brouncker fraction, then builds a representation-face tournament with the desired cycle `sum -> product -> fraction -> sum`; all three beat raw decimal.  Transfer: LRC14 should keep odd-wall sums, `C=27` product/gcd shells, and carry-owner continuants together.  See HYP-2238.
 
 **T709** #tournaments #staircase #reversed-matching #3cycles #formalization | certainty: proved theorem + Lean-specialized corollary | source: monad-formalizer-2026-06-04-S1
 Formalizing THM-399 exposed a general interval-reversal invariant: start from a transitive tournament and reverse a matching of arcs `(a,b)`.  A sorted triple `x<y<z` is cyclic exactly when its long edge `(x,z)` is reversed, so `#C3=sum_{(a,b)} #{v:a<v<b}`.  The all-0 staircase has reversed arcs `(d_p,r_p)`, each with `k-1` interior vertices, giving `k(k-1)`.  See THM-410; staircase specialization is Lean-formalized in `eliott-monad/math-lean` commit `b5ffcde`.
