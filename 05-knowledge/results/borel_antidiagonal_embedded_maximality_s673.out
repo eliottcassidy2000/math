@@ -1,0 +1,115 @@
+
+==============================================================================
+Finite invariant outside-selector audit
+==============================================================================
+
+n=3
+  ordered/trivial   | |G|=    1 | selectable=  7/  7 | blocked=  0 | address_tax=0 anchors=()
+  path_reflection   | |G|=    2 | selectable=  6/  7 | blocked=  1 | address_tax=1 anchors=(0,)
+  cyclic_rotations  | |G|=    3 | selectable=  6/  7 | blocked=  1 | address_tax=1 anchors=(0,)
+  dihedral_cycle    | |G|=    6 | selectable=  3/  7 | blocked=  4 | address_tax=2 anchors=(0, 1)
+  full_symmetric    | |G|=    6 | selectable=  3/  7 | blocked=  4 | address_tax=2 anchors=(0, 1)
+
+n=4
+  ordered/trivial   | |G|=    1 | selectable= 15/ 15 | blocked=  0 | address_tax=0 anchors=()
+  path_reflection   | |G|=    2 | selectable= 12/ 15 | blocked=  3 | address_tax=1 anchors=(0,)
+  cyclic_rotations  | |G|=    4 | selectable= 12/ 15 | blocked=  3 | address_tax=1 anchors=(0,)
+  dihedral_cycle    | |G|=    8 | selectable=  8/ 15 | blocked=  7 | address_tax=2 anchors=(0, 1)
+  full_symmetric    | |G|=   24 | selectable=  4/ 15 | blocked= 11 | address_tax=3 anchors=(0, 1, 2)
+
+n=5
+  ordered/trivial   | |G|=    1 | selectable= 31/ 31 | blocked=  0 | address_tax=0 anchors=()
+  path_reflection   | |G|=    2 | selectable= 28/ 31 | blocked=  3 | address_tax=1 anchors=(0,)
+  cyclic_rotations  | |G|=    5 | selectable= 30/ 31 | blocked=  1 | address_tax=1 anchors=(0,)
+  dihedral_cycle    | |G|=   10 | selectable= 15/ 31 | blocked= 16 | address_tax=2 anchors=(0, 1)
+  full_symmetric    | |G|=  120 | selectable=  5/ 31 | blocked= 26 | address_tax=4 anchors=(0, 1, 2, 3)
+
+n=6
+  ordered/trivial   | |G|=    1 | selectable= 63/ 63 | blocked=  0 | address_tax=0 anchors=()
+  path_reflection   | |G|=    2 | selectable= 56/ 63 | blocked=  7 | address_tax=1 anchors=(0,)
+    blocked examples: [(), (2, 3), (1, 4), (1, 2, 3, 4), (0, 5), (0, 2, 3, 5)]
+  cyclic_rotations  | |G|=    6 | selectable= 54/ 63 | blocked=  9 | address_tax=1 anchors=(0,)
+    blocked examples: [(), (0, 3), (1, 4), (0, 2, 4), (0, 1, 3, 4), (2, 5)]
+  dihedral_cycle    | |G|=   12 | selectable= 36/ 63 | blocked= 27 | address_tax=2 anchors=(0, 1)
+    blocked examples: [(), (0, 1), (1, 2), (0, 3), (2, 3), (0, 1, 2, 3)]
+  full_symmetric    | |G|=  720 | selectable=  6/ 63 | blocked= 57 | address_tax=5 anchors=(0, 1, 2, 3, 4)
+    blocked examples: [(), (0,), (1,), (0, 1), (2,), (0, 2)]
+
+n=7
+  ordered/trivial   | |G|=    1 | selectable=127/127 | blocked=  0 | address_tax=0 anchors=()
+  path_reflection   | |G|=    2 | selectable=120/127 | blocked=  7 | address_tax=1 anchors=(0,)
+  cyclic_rotations  | |G|=    7 | selectable=126/127 | blocked=  1 | address_tax=1 anchors=(0,)
+  dihedral_cycle    | |G|=   14 | selectable= 77/127 | blocked= 50 | address_tax=2 anchors=(0, 1)
+  full_symmetric    | |G|= 5040 | selectable=  7/127 | blocked=120 | address_tax=6 anchors=(0, 1, 2, 3, 4, 5)
+
+==============================================================================
+Constructive selector captured by recursive outer extension
+==============================================================================
+
+ordered/trivial: closure length 6
+  A=() -> select 0; outer extension names 0
+  A=(0,) -> select 1; outer extension names 1
+  A=(0, 1) -> select 2; outer extension names 2
+  A=(0, 1, 2) -> select 3; outer extension names 3
+  A=(0, 1, 2, 3) -> select 4; outer extension names 4
+  A=(0, 1, 2, 3, 4) -> select 5; outer extension names 5
+
+path_reflection + anchor 0: closure length 6
+  A=() -> select 0; outer extension names 0
+  A=(0,) -> select 1; outer extension names 1
+  A=(0, 1) -> select 2; outer extension names 2
+  A=(0, 1, 2) -> select 3; outer extension names 3
+  A=(0, 1, 2, 3) -> select 4; outer extension names 4
+  A=(0, 1, 2, 3, 4) -> select 5; outer extension names 5
+
+dihedral + anchors 0,1: closure length 6
+  A=() -> select 0; outer extension names 0
+  A=(0,) -> select 1; outer extension names 1
+  A=(0, 1) -> select 2; outer extension names 2
+  A=(0, 1, 2) -> select 3; outer extension names 3
+  A=(0, 1, 2, 3) -> select 4; outer extension names 4
+  A=(0, 1, 2, 3, 4) -> select 5; outer extension names 5
+
+symmetric + anchors 0..4: closure length 6
+  A=() -> select 0; outer extension names 0
+  A=(0,) -> select 1; outer extension names 1
+  A=(0, 1) -> select 2; outer extension names 2
+  A=(0, 1, 2) -> select 3; outer extension names 3
+  A=(0, 1, 2, 3) -> select 4; outer extension names 4
+  A=(0, 1, 2, 3, 4) -> select 5; outer extension names 5
+
+==============================================================================
+Tournament Analysis over selector/proof lanes
+==============================================================================
+coordinate order:
+  invariance_respect, constructive_witness, needs_address, recursion_rank, embedded_maximality_fit, lrc_transfer, overclaim_safety
+  embedded_address_tax           vector=(5, 5, 5, 5, 5, 5, 5) total=35
+    Names the least coordinate needed before outside-selection is usable.
+  borel_invariant_antiselector   vector=(5, 3, 5, 4, 5, 4, 5) total=31
+    Invariant selectors cannot simply choose a new outside point.
+  ph_bad_branch_rank             vector=(4, 4, 4, 5, 4, 5, 5) total=31
+    Bad colorings are killed by extension rank rather than raw density.
+  lrc_owner_carry_rank           vector=(4, 4, 5, 5, 5, 5, 4) total=32
+    Owner/carry address should become a rank drop under +27 extension.
+  a000568_half_filter_rank       vector=(4, 5, 4, 4, 4, 4, 5) total=30
+    Deleted-card L/M/U owner address repairs quotient leakage.
+  constructive_named_order       vector=(2, 5, 2, 3, 3, 3, 5) total=23
+    A least-outside rule works after an order is named, then gets captured.
+  raw_cantor_diagonal            vector=(1, 4, 1, 2, 2, 2, 3) total=15
+    Builds an outside object but ignores invariance and extension purity.
+  raw_count_shadow               vector=(1, 2, 1, 1, 1, 1, 4) total=11
+    Counts states but does not know which selector survives extension.
+
+Tournament fingerprints:
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3cycles=0
+  hamiltonian_path=['embedded_address_tax', 'lrc_owner_carry_rank', 'borel_invariant_antiselector', 'ph_bad_branch_rank', 'a000568_half_filter_rank', 'constructive_named_order', 'raw_cantor_diagonal', 'raw_count_shadow']
+
+==============================================================================
+Repo-facing claims
+==============================================================================
+1. Raw diagonalization is a missing-object move; Borel-style anti-diagonalization is an invariant-selector obstruction.
+2. Constructive mathematics enters as named finite procedures: least outside point, bounded search, and explicit closure sequences.
+3. Tangible incompleteness is the uniform version: finite stages are transparent, but the extension bound/rank can outrun the base theory.
+4. Embedded maximality is the repair: state which ambient extensions are allowed and which address makes the selector/maximal object stable.
+5. LRC14 transfer: owner-private deletion is an address tax already paid; the next theorem is a recursive rank drop on coherent +27 carry lifts.
