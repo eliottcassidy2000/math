@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-05-S674 - Signed LRC and unit-threshold tournaments (HYP-2249)
+
+**Prompt:** Explore two reframes: LRC runners moving in opposite directions/negative speeds, and unit-distance tournaments where lengths `<1`, `=1`, and `>1` define signed edge states.
+**Integration:** Started from HYP-2241's LRC14 owner/carry no-leak seam, THM-401/HYP-2135 pair-sum support, HYP-2203 unit-spine traceability, and S625/S626 unit/nonunit tournament flip work.
+**Claimed namespace:** HYP-2249 and T745.
+**Computation:** Added `04-computation/signed_lrc_unit_threshold_s674.py` and stored `05-knowledge/results/signed_lrc_unit_threshold_s674.out`.  The script audits independent sign flips for AP/Vstar/`2AP`, searches sign gauges that expose pair-sum clocks modulo `C=27`, builds three-state unit-distance threshold tournaments, and runs route Tournament Analysis.
+**Signed LRC finding:** Negative speed is a gauge: `dist(v*t)=dist(-v*t)`, so observer loneliness is invariant under independent sign flips.  Pair clocks are not invariant: same signs expose differences and opposite signs expose sums.  In the `n=14` floor rows, all tested signs preserve the observer-safe grid mask, but Vstar alone has a signed zero pair clock from `3+24=27`; best sign lifts expose one zero, eleven gcd-9 clocks, thirty gcd-3 clocks, and forty-two opposite-sign/sum pairs.
+**Unit-distance finding:** The meaningful tournament has three states: `<1` close/pressure, `=1` unit wall/trienerment, and `>1` far/slack.  Triangular spine rows through `n=10` have no close pairs, are unit-traceable, and retain directed all-unit Hamiltonian paths under both unit signs, so the old binary flip is the normalized-face collapse.  Compressed-line and square-with-center toys have genuine close states and lose all-unit directed paths.
+**Tournament Analysis:** Proof-route tournament is transitive with one Hamiltonian path.  Leaders are `opposite_pair_sum_clock`, `owner_carry_rank`, `alternating_sign_search`, `unit_threshold_tristate`, and `unit_spine_tie_order`.
+**Artifacts:** HYP-2249, T745, `04-computation/signed_lrc_unit_threshold_s674.py`, `05-knowledge/results/signed_lrc_unit_threshold_s674.out`, `07-reflections/signed-lrc-unit-threshold-tournaments-s674.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Run sign-lift optimization over all HYP-2164/HYP-2241 `Res_27` survivors with owner-private deletion labels; formulate sign choice as an Ising/MaxCut residue problem; run the threshold tournament on Moser `n=21/22` witnesses before and after deletion/perturbation.
+
 ## codex-2026-06-05-S673 - Borel constructive embedded maximality (HYP-2248)
 
 **Prompt:** Spend a long session contemplating and integrating Borel antidiagonalization, constructive mathematics, tangible incompleteness, and embedded maximality.

@@ -708,6 +708,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2247 | Recursion is the fourth representation face: split `fraction=boundary/address state` from `recursion=transition law under iteration, descent, or outer extension`. | S672 anchors the split in Zhou-Markov's recurrent integral irrationality proofs and Paris-Harrington colorings, integrating the incoming S671 Paris-Harrington ultrafilter-coloring stub as an addendum.  The sharper carrier is `sum -> product -> fraction -> recursion -> sum`: sum aggregates visible packets, product localizes factors, fraction attaches owner/boundary/branch state, and recursion proves that state survives extension or unrolls into a new additive ledger.  A baby PH edge-coloring scout finds large-homogeneous-avoiding counts `6,18,12,0` for `N=3..6`; face Tournament Analysis is transitive with `recursion > fraction > product > sum > raw_scalar`.  Transfer targets: LRC14 coherent `+27` carry recursion, A000568 endpoint half-filter purity under `n->n+1`, unit-distance point-deletion recursion owners, and PH hypergraph-coloring micro-labs. | codex-2026-06-05-S672; `HYP-2247-recursive-fourth-face.md`; `HYP-2247-paris-harrington-ultrafilter-coloring-addendum.md`; `recursive_fourth_face_coloring_s672.py`; `recursive_fourth_face_coloring_s672.out`; `recursive-fourth-face-coloring-s672.md`; HYP-2246, HYP-2245, HYP-2243, HYP-2240, HYP-2239, HYP-2238, HYP-2189 |
 | HYP-2248 | Borel antidiagonalization, constructive mathematics, tangible incompleteness, and embedded maximality share one proof-design rule: retain the embedded address that computes the witness. | S673 exact antidiagonal audit over all binary `m x m` matrices through `m=4` shows scalar summaries leak the antiword badly: at `m=4`, row weight multiset has `68` mixed buckets, row weight sequence `609`, column weight sequence `609`, and row+column weights `8769`, while the diagonal vector has `0`.  A finite regressive shift-collision toy has a unique predecessor escape `f(t)=min(t)-1` for tested `k=1,2,3`; forbidding that boundary collapses the toy, showing endpoint/no-endpoint embedding is load-bearing.  Transfer: LRC14 needs owner/cut addresses that construct strict-tax witnesses, A000568 needs a constructive half-filter child-selection theorem, and unit distance needs unit-spine/point-deletion owner addresses beyond bulk counts. | codex-2026-06-05-S673; `HYP-2248-borel-constructive-embedded-maximality.md`; `borel_constructive_embedded_maximality_s673.py`; `borel_constructive_embedded_maximality_s673.out`; `borel-constructive-embedded-maximality-s673.md`; HYP-2247, HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241 |
 | HYP-2248 addendum | Borel anti-diagonalization is the invariant-selector face of embedded maximality: raw diagonalization chooses outside, while an invariant outside selector requires address data and can still be recursively captured by outer extension. | S673b finite selector audit complements the HYP-2248 antidiagonal-channel lane by modeling states `A subset U`, outside choices `y in U\A`, and symmetry groups on `U`.  A choice is invariantly available only when some outside point is fixed by the stabilizer of `A`; naming anchors gives an address tax.  At `n=6`, ordered/trivial selectors have `63/63` selectable states and tax `0`, path reflection `56/63` tax `1`, cyclic rotations `54/63` tax `1`, dihedral `36/63` tax `2`, and full symmetric only `6/63` tax `5`.  After anchors are named, least-outside constructive selectors are captured stage by stage by outer extension.  Selector-lane Tournament Analysis is transitive with leader `embedded_address_tax`, then `lrc_owner_carry_rank`. | codex-2026-06-05-S673b; `HYP-2248-borel-antidiagonal-embedded-selector.md`; `borel_antidiagonal_embedded_maximality_s673.py`; `borel_antidiagonal_embedded_maximality_s673.out`; `borel-antidiagonal-embedded-maximality-s673.md`; T744; HYP-2247, HYP-2246, HYP-2245, HYP-2243, HYP-2242, HYP-2241, HYP-2240 |
+| HYP-2249 | Signed LRC and unit-threshold tournaments: independent negative-speed signs preserve observer loneliness while exposing difference-versus-sum pair clocks; unit-distance lengths should be modeled as `<1`, `=1`, `>1` threshold states. | S674 proves/uses `dist(v*t)=dist(-v*t)` and audits AP/Vstar/`2AP` on the `q=756` grid: all tested sign gauges keep the observer-safe mask.  Pair clocks change under signs; Vstar alone exposes a signed zero pair clock at `3+24=27`, with best sign lifts showing one zero, eleven gcd-9 clocks, thirty gcd-3 clocks, and forty-two sum pairs.  Unit-distance threshold tournaments show normalized triangular spines through `n=10` have no close state and keep all-unit directed Hamiltonian paths under both unit signs, while compressed toys reveal the close/pressure state. | codex-2026-06-05-S674; `HYP-2249-signed-lrc-unit-threshold-tournaments.md`; `signed_lrc_unit_threshold_s674.py`; `signed_lrc_unit_threshold_s674.out`; `signed-lrc-unit-threshold-tournaments-s674.md`; T745; HYP-2241, HYP-2203, HYP-2135, THM-401 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7991,3 +7992,50 @@ H-gap set (THM-115).
 **See:** `04-computation/h21_window_closure_monad_s5.py`,
 `05-knowledge/results/h21_window_closure_monad_s5.out`; HYP-2200, HYP-2193, THM-079,
 THM-029, THM-115, MISTAKE-053/054.
+
+## HYP-2249: Signed LRC and unit-threshold tournaments (codex-2026-06-05-S674)
+
+**Status:** OPEN.
+
+**Statement:** The negative-speed LRC reframe is a sign gauge, not a new
+observer geometry.  Independent signs preserve all observer distances, but
+they change pair clocks from differences to sums.  Thus the `C=2n-1` pair-sum
+support calculus can be studied as ordinary relative motion in a signed
+double cover.  The unit-distance companion is a three-state threshold
+tournament with states `<1`, `=1`, and `>1`; the unit state is a trienerment
+wall whose sign resolves a tie.
+
+**Evidence:** S674 proves/uses `dist(v*t)=dist(-v*t)` and audits the `n=14`
+floor atoms AP, Vstar, and `2AP` on the `q=756` grid.  All tested sign gauges
+preserve the observer-safe mask.  Pair clocks differ: same signs expose
+differences, opposite signs expose sums.  Vstar alone exposes a signed zero
+clock from `3+24=27`; best sign lifts have one zero, eleven gcd-9 clocks,
+thirty gcd-3 clocks, and forty-two opposite-sign/sum pairs.  This turns the
+old nonunit Vstar seam into a literal zero relative-clock event in the signed
+cover.
+
+**Unit-distance side:** Triangular spine rows through `n=10` have no `<1`
+state, are unit-traceable, and keep directed all-unit Hamiltonian paths under
+both unit signs.  The sign only chooses the spine direction.  Compressed-line
+and square-with-center toys have genuine close/pressure states and no all-unit
+directed Hamiltonian path, showing where the three-state threshold gauge
+contains information that binary unit/nonunit flips erase.
+
+**Tournament Analysis:** The route tournament is transitive with one
+Hamiltonian path:
+`opposite_pair_sum_clock > owner_carry_rank > alternating_sign_search >
+unit_threshold_tristate > unit_spine_tie_order > signed_observer_gauge >
+raw_negative_speed > raw_unit_flip`.
+
+**NEXT:** Run sign-lift optimization over all HYP-2164/HYP-2241 `Res_27`
+survivors, attach owner-private deletion labels to every zero/high-gcd signed
+pair clock, and formulate sign choice as an Ising/MaxCut residue problem.
+For unit distance, run the threshold tournament on Moser `n=21/22` witnesses
+before and after deletion/perturbation, where close states can appear before
+rescaling.
+
+**See:** `05-knowledge/hypotheses/HYP-2249-signed-lrc-unit-threshold-tournaments.md`;
+`04-computation/signed_lrc_unit_threshold_s674.py`;
+`05-knowledge/results/signed_lrc_unit_threshold_s674.out`;
+`07-reflections/signed-lrc-unit-threshold-tournaments-s674.md`; T745,
+HYP-2241, HYP-2203, HYP-2135, THM-401.
