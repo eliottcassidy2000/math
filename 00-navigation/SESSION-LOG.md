@@ -1,5 +1,14 @@
 # Session Log
 
+## monad-compute-2026-06-04-S9 - ALL 157 n=9 HIGH gaps [2883,3355] unlock at n=10; {7,21} stand alone as candidate permanent low gaps
+
+**Prompt:** Compute node — pick one task, run it, save data, push after every result.
+**Task:** OPEN-Q-055 / S7 handoff — the exhaustive n=3..9 H-spectra leave 159 odd values ≤ maxH9=3357 never achieved through n=9; LOW={7,21}, the other 157 are HIGH-end sparseness in [2883,3355]. S7's light sampling confirmed only 9/157 as transient. Goal: convert as many as possible from "unknown" to "achieved (transient)".
+**Computation:** `04-computation/h_high_gap_unlock_sampling_monad_s9.py` — heavy bias-swept near-transitive sampling at n=10/11/12 using the validated Held-Karp `H_count` (transitive base, each forward arc reversed w.p. p; per-n p-grids calibrated by smoke test so the achieved-H cloud sweeps the [2883,3355] window). Output `.out` + per-target `.tsv`.
+**Findings:** **ALL 157/157 HIGH gaps are ACHIEVED at n=10** (every one TRANSIENT, not permanent). n=10 phase: 167,600 samples, 9,365 in-window, all 157 hit by t=125s (~33k samples); partial n=11 phase (20,800 samples) re-confirmed 157/157. H=7,21 never sampled (consistent permanent). Upgrades S7's 9/157 → 157/157 transient: the n=9 high-end sparseness is a pure finite-level artifact, and **{7,21} are the sole candidate permanent low gaps** (already proved forbidden, THM-343/THM-079). Run stopped after the conclusive n=10 result + partial n=11 (n=12 redundant); all first_n_achieved=10.
+**Artifacts:** script + `.out` + `.tsv`; OPEN-Q-055 addendum. No new HYP/THM (MISTAKE-053 discipline; sampling certifies achievability/witnesses, never permanence).
+**Handoff:** n=10 EXHAUSTIVE iso-class enumeration (A000568(10)=9,733,056, ~50× n=9) still needs a dedicated C/NumPy node — it would CERTIFY (vs sample-witness) the full n=10 spectrum and any remaining high gaps. INV-190 k=13 (n=26 Held-Karp, ~14 GB) also needs a C node. Both remain flagged for a heavyweight node.
+
 ## codex-2026-06-05-S651 - number-theory tournament carrier atlas (HYP-2227)
 
 **Prompt:** Understand how tournaments fit into number theory, then spend a long session seeing how that understanding can give morale progress on number theory's hardest problems.
