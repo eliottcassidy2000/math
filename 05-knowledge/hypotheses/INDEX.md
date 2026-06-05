@@ -693,6 +693,8 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2235 | Finite-field Kakeya/Falconer gives an LRC no-leak carrier: direction cover and distance support are scalar shadows, while concurrency, pinned distances, unit-direction spine, and owner labels are the proof data. | S659 builds a finite-field incidence ledger over `F_p^2`.  Exact branch-and-bound gives Kakeya one-line-per-direction minima `p=3:7`, `p=5:17`, `p=7:31`, matching the odd-prime parabola carrier `(p^2+2p-1)/2`; the same carriers have full quadratic distance support for `p=3,5,7,11,13`.  Exhaustively over all `5^6` line families in `F_5^2`, every row has full distance support, but union size and pinned minima vary (`union_size_hist={17:3000,18:4000,19:8000,21:600,25:25}`, `pinned_min_hist={4:3600,5:12025}`).  Tournament Analysis ranks pinned fibers and concurrency multiplicity highest, with raw cardinality last.  LRC transfer: after the `n=14` scalar wall is fixed, retain odd wall pairs plus `C=27` shell/carry/owner labels to prove AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | codex-2026-06-05-S659; `HYP-2235-finite-field-kakeya-falconer-carrier.md`; `finite_field_kakeya_falconer_s659.py`; `finite_field_kakeya_falconer_s659.out`; `finite-field-kakeya-falconer-lrc-carrier-s659.md`; HYP-2234, HYP-2233, HYP-2231, HYP-2230, HYP-2222, HYP-2197, HYP-2176, HYP-1804 |
 | HYP-2236 | Tournament deck collisions are marked-projection failures repaired by paired derivative side channels. | S660 extends the HYP-2234 tournament deck lane after incoming S659 claimed HYP-2235 for finite-field Kakeya/Falconer, and incoming S661 confirms the same deletion-derivative/no-leak pattern is active in LRC14 strategy search.  Through `n=6`, ordinary full decks collide (`n=6`: `52` buckets, max `2`, four collision buckets), Kelly subtournament counts have the same collision strength, and global repairs `full_deck+H`, `full_deck+score`, and `full_deck+scalar` still collide.  The clean repair is the paired deleted-score deck `(card iso type, deleted vertex outdegree)`, which separates every checked class through `n=6`; unpaired deleted-score multisets do not.  All `n=6` full-deck collision pairs are converse pairs with the same `H`, score sequence, `c3`, and SCC shape, so the missing data is the card-to-boundary assignment. | codex-2026-06-05-S660; `HYP-2236-tournament-deck-derivative-carrier.md`; `tournament_deck_derivative_s660.py`; `tournament_deck_derivative_s660.out`; `tournament-deck-derivative-carrier-s660.md`; HYP-2237, HYP-2235, HYP-2234, HYP-2233, HYP-2228, HYP-2187, HYP-2176, HYP-2171 |
 | HYP-2237 | STUB: The LRC `n=14` proof should be attacked by a wild strategy atlas centered on no-leak owner/carry/deletion-derivative reconstruction rather than raw scalar search. | Claimed for S661 after S660 reserved HYP-2236/T729.  Evidence still pending: broad repo search, strategy Tournament Analysis, and a concrete experiment list for the `Res_27` carry-owner seam. | codex-2026-06-05-S661; `HYP-2237-lrc14-wild-proof-strategy-atlas.md`; HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2164 |
+| HYP-2236 | STUB: Tournament deck collisions should be repaired by derivative side channels: deletion losses, boundary/owner labels, and vertex influence profiles. | Claimed for S660 after incoming S659 used HYP-2235 for finite-field Kakeya/Falconer.  The deck angle is a marked-projection problem: a vertex-deleted deck forgets how each missing vertex attached to its card, so repairs should track `H`, `c3`, score, SCC, or boundary changes under deletion and reattachment. | codex-2026-06-05-S660; `HYP-2236-tournament-deck-derivative-carrier.md`; HYP-2235, HYP-2234, HYP-2233, HYP-2228, HYP-2187, HYP-2176, HYP-2171 |
+| HYP-2237 | LRC `n=14` should be attacked by a no-leak owner-derivative theorem: fixed odd wall + `C=27` gcd shell + paired carry/owner/deletion derivatives force AP, `Vstar`, nonprimitive `2AP`, or strict looseness. | S661 searched the core LRC quotient tower and adjacent Kakeya/Falconer, tournament deck, union-closed, pincer, rigidity, automaton, sheaf, unit-distance, forcing, coimage, and anti-Poisson threads.  The strategy atlas scans `6629` research files and ranks fifteen proof routes; the proof-route tournament is transitive with `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Majority leaders are `carry_deletion_derivative`, `owner_concurrency_jackknife`, `apex_sheaf_gluing`, `two_block_helly_extractor`, `three_state_middle_automaton`, and `pincer_grip_ledger`.  Incoming HYP-2236/S660 reinforces the pairing rule: `(card, deleted score)` resolves all checked deck collisions through `n=6`, while unpaired/global scalar repairs leak. | codex-2026-06-05-S661; `HYP-2237-lrc14-wild-proof-strategy-atlas.md`; `lrc14_wild_strategy_atlas_s661.py`; `lrc14_wild_strategy_atlas_s661.out`; `lrc14-wild-proof-strategy-atlas-s661.md`; HYP-2236, HYP-2235, HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6755,6 +6757,61 @@ should use canonical augmentation or nauty-style automorphism pruning.
 `05-knowledge/results/tournament_deck_derivative_s660.out`;
 `07-reflections/tournament-deck-derivative-carrier-s660.md`; HYP-2237,
 HYP-2235, HYP-2234, HYP-2228, HYP-2187, HYP-2176, HYP-2171.
+## HYP-2237: LRC14 no-leak owner-derivative strategy atlas (codex-2026-06-05-S661)
+
+**Status:** OPEN strategy theorem with repo-search atlas.
+
+**WHAT:** S661 asks what kind of theorem could close the remaining LRC `n=14`
+lift/CRT seam after HYP-2164 classifies the least-positive `Res_27` quotient,
+HYP-2165 supplies bounded owner/certificate evidence, HYP-2167 identifies the
+carry cocycle `v=r+27k`, HYP-2230 ties carry to parity/apex congruences, and
+HYP-2231 names the active odd wall pairs.  The proposed target is:
+
+```text
+fixed odd wall + fixed C=27 gcd shell + visible carry/owner/deletion derivatives
+  => AP, Vstar, nonprimitive 2AP, or strict looseness.
+```
+
+**EVIDENCE:** `lrc14_wild_strategy_atlas_s661.py` scans `6629` research files
+after excluding vendored/build directories, ranks fifteen proof routes, and
+builds a Tournament Analysis over strategies rather than runners.  The majority
+tournament is transitive: `score_hist={0:1,...,14:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  Majority
+leaders are:
+
+```text
+carry_deletion_derivative
+owner_concurrency_jackknife
+apex_sheaf_gluing
+two_block_helly_extractor
+three_state_middle_automaton
+pincer_grip_ledger
+```
+
+**PAYOFF:** The wild cross-thread search does not point toward a new raw search.
+It points toward differentiating the proof certificate.  The next computation
+should record how exact `M`, active wall pairs, gcd-shell mass, n-clock residue
+word, pair-sum apex congruences, and owner route change under deletion or small
+carry perturbation.  If the derivative deck reconstructs the carry cocycle, the
+global lift theorem becomes a reconstruction/no-leak theorem.
+
+Incoming HYP-2236/S660 strengthens the exact form of "derivative deck": through
+tournament `n=6`, paired `(card, deleted score)` separates deck collisions while
+unpaired deleted-score multisets and global scalar repairs do not.  The LRC
+analogue should therefore pair each carry/owner derivative with the
+`Res_27`/certificate card it modifies.
+
+**NEXT:** Build `lrc14_carry_derivative_reconstruction_s662.py`: start from AP,
+`Vstar`, and `2AP`; generate one- and two-coordinate carry derivatives including
+minimal apex carries; compute exact derivative packets; then test whether rows
+with identical scalar/wall decks but different derivative decks can disagree on
+floor-vs-strict status.
+
+**See:** `05-knowledge/hypotheses/HYP-2237-lrc14-wild-proof-strategy-atlas.md`;
+`04-computation/lrc14_wild_strategy_atlas_s661.py`;
+`05-knowledge/results/lrc14_wild_strategy_atlas_s661.out`;
+`07-reflections/lrc14-wild-proof-strategy-atlas-s661.md`; HYP-2236, HYP-2235,
+HYP-2231, HYP-2230, HYP-2222, HYP-2171, HYP-2167, HYP-2166, HYP-2165, HYP-2164.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
