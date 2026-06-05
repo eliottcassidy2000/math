@@ -1,0 +1,184 @@
+﻿
+==============================================================================
+S671 endpoint ultrafilter enumeration audit
+==============================================================================
+Goal: use HYP-2245 side-choice/descent language as an A000568 speedup.
+Build exact vertex-extension tower through n=8 by Aut(parent) pattern orbits.
+
+==============================================================================
+A. Aut(parent)-orbit endpoint generation
+==============================================================================
+child  A000568  orbit_candidates  duplicate  raw_patterns/orbit  fixed_path/orbit  labeled/orbit  time_s
+    2        1                 2     2.000             1.000            0.500          1.000   0.000
+    3        2                 4     2.000             1.000            0.500          2.000   0.000
+    4        4                12     3.000             1.333            0.667          5.333   0.000
+    5       12                48     4.000             1.333            1.333         21.333   0.002
+    6       56               296     5.286             1.297            3.459        110.703   0.024
+    7      456              3040     6.667             1.179           10.779        689.853   0.730
+    8     6880             54256     7.886             1.076           38.653       4947.572  27.268
+
+One-step estimate without building n=9: from A(8)=6880, Aut-orbit endpoint candidates=1716608, known A(9)=191536
+candidate/known ratio=8.962; raw pattern count=1761280
+
+==============================================================================
+B. Deletion/filter signatures on finished classes
+==============================================================================
+n=3 classes=2
+  score_c3_scc           groups=    2 mixed=   0 max=  1 singletons=    2 colliding_classes=    0
+  card_multiset          groups=    1 mixed=   1 max=  2 singletons=    0 colliding_classes=    2
+  half_filter_trace      groups=    2 mixed=   0 max=  1 singletons=    2 colliding_classes=    0
+  paired_score_trace     groups=    2 mixed=   0 max=  1 singletons=    2 colliding_classes=    0
+  paired_c3_loss_trace   groups=    2 mixed=   0 max=  1 singletons=    2 colliding_classes=    0
+n=4 classes=4
+  score_c3_scc           groups=    4 mixed=   0 max=  1 singletons=    4 colliding_classes=    0
+  card_multiset          groups=    3 mixed=   1 max=  2 singletons=    2 colliding_classes=    2
+  half_filter_trace      groups=    4 mixed=   0 max=  1 singletons=    4 colliding_classes=    0
+  paired_score_trace     groups=    4 mixed=   0 max=  1 singletons=    4 colliding_classes=    0
+  paired_c3_loss_trace   groups=    4 mixed=   0 max=  1 singletons=    4 colliding_classes=    0
+n=5 classes=12
+  score_c3_scc           groups=    9 mixed=   2 max=  3 singletons=    7 colliding_classes=    5
+  card_multiset          groups=   11 mixed=   1 max=  2 singletons=   10 colliding_classes=    2
+  half_filter_trace      groups=   12 mixed=   0 max=  1 singletons=   12 colliding_classes=    0
+  paired_score_trace     groups=   12 mixed=   0 max=  1 singletons=   12 colliding_classes=    0
+  paired_c3_loss_trace   groups=   12 mixed=   0 max=  1 singletons=   12 colliding_classes=    0
+n=6 classes=56
+  score_c3_scc           groups=   22 mixed=  11 max= 12 singletons=   11 colliding_classes=   45
+  card_multiset          groups=   52 mixed=   4 max=  2 singletons=   48 colliding_classes=    8
+  half_filter_trace      groups=   56 mixed=   0 max=  1 singletons=   56 colliding_classes=    0
+  paired_score_trace     groups=   56 mixed=   0 max=  1 singletons=   56 colliding_classes=    0
+  paired_c3_loss_trace   groups=   56 mixed=   0 max=  1 singletons=   56 colliding_classes=    0
+n=7 classes=456
+  score_c3_scc           groups=   59 mixed=  41 max= 47 singletons=   18 colliding_classes=  438
+  card_multiset          groups=  456 mixed=   0 max=  1 singletons=  456 colliding_classes=    0
+  half_filter_trace      groups=  456 mixed=   0 max=  1 singletons=  456 colliding_classes=    0
+  paired_score_trace     groups=  456 mixed=   0 max=  1 singletons=  456 colliding_classes=    0
+  paired_c3_loss_trace   groups=  456 mixed=   0 max=  1 singletons=  456 colliding_classes=    0
+n=8 classes=6880
+  score_c3_scc           groups=  167 mixed= 136 max=577 singletons=   31 colliding_classes= 6849
+  card_multiset          groups= 6878 mixed=   2 max=  2 singletons= 6876 colliding_classes=    4
+  half_filter_trace      groups= 6880 mixed=   0 max=  1 singletons= 6880 colliding_classes=    0
+  paired_score_trace     groups= 6880 mixed=   0 max=  1 singletons= 6880 colliding_classes=    0
+  paired_c3_loss_trace   groups= 6880 mixed=   0 max=  1 singletons= 6880 colliding_classes=    0
+
+==============================================================================
+B2. Card-deck collision anatomy at n=8
+==============================================================================
+collision bucket 1:
+  cid=2236 H= 633 c3=20 scores=((3, 4), (4, 4)) scc=(8,)
+  cid=4236 H= 633 c3=20 scores=((3, 4), (4, 4)) scc=(8,)
+  half-filter symmetric delta:
+    (138, 'L'): +1
+    (138, 'U'): -1
+    (230, 'L'): -3
+    (230, 'U'): +3
+    (232, 'L'): +3
+    (232, 'U'): -3
+    (367, 'L'): -1
+    (367, 'U'): +1
+collision bucket 2:
+  cid=3426 H= 645 c3=20 scores=((3, 4), (4, 4)) scc=(8,)
+  cid=3556 H= 645 c3=20 scores=((3, 4), (4, 4)) scc=(8,)
+  half-filter symmetric delta:
+    (126, 'L'): +1
+    (126, 'U'): -1
+    (135, 'L'): -1
+    (135, 'U'): +1
+    (137, 'L'): +1
+    (137, 'U'): -1
+    (207, 'L'): -1
+    (207, 'U'): +1
+    (230, 'L'): -1
+    (230, 'U'): +1
+    (232, 'L'): +1
+    (232, 'U'): -1
+    (300, 'L'): +1
+    (300, 'U'): -1
+    (337, 'L'): -1
+    (337, 'U'): +1
+
+==============================================================================
+C. Candidate pre-canonicalization fallback audit
+==============================================================================
+For each endpoint-orbit candidate, compute traces directly from the candidate.  In production, only mixed trace buckets need full child canonical fallback.
+transition 2->3: candidates=4
+  score_c3_scc           groups=     2 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    1 avoid=     4 (100.0%)
+  card_multiset          groups=     1 mixed_buckets=   1 mixed_candidates=     4 pure_dup=    0 avoid=     0 (  0.0%)
+  half_filter_trace      groups=     2 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    1 avoid=     4 (100.0%)
+  paired_score_trace     groups=     2 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    1 avoid=     4 (100.0%)
+  paired_c3_loss_trace   groups=     2 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    1 avoid=     4 (100.0%)
+transition 3->4: candidates=12
+  score_c3_scc           groups=     4 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    4 avoid=    12 (100.0%)
+  card_multiset          groups=     3 mixed_buckets=   1 mixed_candidates=     4 pure_dup=    2 avoid=     8 ( 66.7%)
+  half_filter_trace      groups=     4 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    4 avoid=    12 (100.0%)
+  paired_score_trace     groups=     4 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    4 avoid=    12 (100.0%)
+  paired_c3_loss_trace   groups=     4 mixed_buckets=   0 mixed_candidates=     0 pure_dup=    4 avoid=    12 (100.0%)
+transition 4->5: candidates=48
+  score_c3_scc           groups=     9 mixed_buckets=   2 mixed_candidates=    23 pure_dup=    6 avoid=    25 ( 52.1%)
+  card_multiset          groups=    11 mixed_buckets=   1 mixed_candidates=     8 pure_dup=    9 avoid=    40 ( 83.3%)
+  half_filter_trace      groups=    12 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   11 avoid=    48 (100.0%)
+  paired_score_trace     groups=    12 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   11 avoid=    48 (100.0%)
+  paired_c3_loss_trace   groups=    12 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   11 avoid=    48 (100.0%)
+transition 5->6: candidates=296
+  score_c3_scc           groups=    22 mixed_buckets=  11 mixed_candidates=   250 pure_dup=   11 avoid=    46 ( 15.5%)
+  card_multiset          groups=    52 mixed_buckets=   4 mixed_candidates=    48 pure_dup=   48 avoid=   248 ( 83.8%)
+  half_filter_trace      groups=    56 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   56 avoid=   296 (100.0%)
+  paired_score_trace     groups=    56 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   56 avoid=   296 (100.0%)
+  paired_c3_loss_trace   groups=    56 mixed_buckets=   0 mixed_candidates=     0 pure_dup=   56 avoid=   296 (100.0%)
+transition 6->7: candidates=3040
+  score_c3_scc           groups=    59 mixed_buckets=  41 mixed_candidates=  2952 pure_dup=   18 avoid=    88 (  2.9%)
+  card_multiset          groups=   456 mixed_buckets=   0 mixed_candidates=     0 pure_dup=  454 avoid=  3040 (100.0%)
+  half_filter_trace      groups=   456 mixed_buckets=   0 mixed_candidates=     0 pure_dup=  454 avoid=  3040 (100.0%)
+  paired_score_trace     groups=   456 mixed_buckets=   0 mixed_candidates=     0 pure_dup=  454 avoid=  3040 (100.0%)
+  paired_c3_loss_trace   groups=   456 mixed_buckets=   0 mixed_candidates=     0 pure_dup=  454 avoid=  3040 (100.0%)
+transition 7->8: candidates=54256
+  score_c3_scc           groups=   167 mixed_buckets= 136 mixed_candidates= 54084 pure_dup=   31 avoid=   172 (  0.3%)
+  card_multiset          groups=  6878 mixed_buckets=   2 mixed_candidates=    24 pure_dup= 6876 avoid= 54232 (100.0%)
+  half_filter_trace      groups=  6880 mixed_buckets=   0 mixed_candidates=     0 pure_dup= 6880 avoid= 54256 (100.0%)
+  paired_score_trace     groups=  6880 mixed_buckets=   0 mixed_candidates=     0 pure_dup= 6880 avoid= 54256 (100.0%)
+  paired_c3_loss_trace   groups=  6880 mixed_buckets=   0 mixed_candidates=     0 pure_dup= 6880 avoid= 54256 (100.0%)
+
+==============================================================================
+D. Other property payloads available while enumerating
+==============================================================================
+n=3: H distinct=2 c3 distinct=2 SCC profiles=2 H_range=(1,3) c3_range=(0,1)
+n=4: H distinct=3 c3 distinct=3 SCC profiles=3 H_range=(1,5) c3_range=(0,2)
+n=5: H distinct=7 c3 distinct=6 SCC profiles=4 H_range=(1,15) c3_range=(0,5)
+n=6: H distinct=19 c3 distinct=9 SCC profiles=6 H_range=(1,45) c3_range=(0,8)
+n=7: H distinct=77 c3 distinct=15 SCC profiles=8 H_range=(1,189) c3_range=(0,14)
+n=8: H distinct=320 c3 distinct=21 SCC profiles=11 H_range=(1,661) c3_range=(0,20)
+
+==============================================================================
+E. Tournament Analysis over enumeration routes
+==============================================================================
+vertices=enumeration/speedup routes
+observable=(exactness, canonical-work avoidance, invariant retention, scaling, readiness, LRC transfer)
+switch=majority; tie Hamiltonian path=listed priority order
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths=1
+top_order:
+  paired_deletion_filter_trace       score=6 vector=(5, 5, 5, 4, 4, 5)
+  endpoint_aut_orbit_generation      score=5 vector=(5, 4, 4, 5, 5, 4)
+  modular_substitution_dp            score=4 vector=(5, 5, 4, 5, 3, 3)
+  half_filter_trace                  score=3 vector=(4, 4, 4, 4, 5, 5)
+  THM410_interval_ledger             score=2 vector=(4, 4, 3, 5, 5, 4)
+  raw_fixed_path_cube                score=1 vector=(5, 1, 2, 2, 4, 2)
+  raw_labeled_enumeration            score=0 vector=(5, 0, 1, 0, 2, 1)
+
+==============================================================================
+F. Algorithmic theorem shape
+==============================================================================
+Endpoint-ultrafilter enumerator:
+  1. Keep class reps and Aut(parent).
+  2. Enumerate Aut(parent)-orbits in the incident Boolean cube.
+  3. Attach deletion/filter trace: (deleted-card id, owner score/side).
+  4. If trace bucket is pure, accept one representative without full child
+     canonicalization; use canonical fallback only on mixed trace buckets.
+  5. Cache H, c3, SCC, and OCF payloads at the same time.
+
+Interpretation:
+  The incident cube has literal ultrafilters.  The paired deletion trace is
+  the address that makes much of that side choice descend through the
+  isomorphism quotient.  This is HYP-2245 as an enumerator design rule.
+

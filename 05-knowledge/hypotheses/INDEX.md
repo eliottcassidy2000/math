@@ -703,6 +703,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2243 | Outer-extension usability: a quotient is usable only if allowed ambient growth has retained embedding/downset addresses that keep target fibers pure. | S668 source-anchors the idea in Harvey Friedman's finite-tree insertion, homeomorphic-embedding reverse mathematics, and invariant maximality/usability chapters, while using "outer extension" as local repo terminology.  Bounded toy: 3-colored rooted trees through 5 nodes, one-leaf outer extensions, target predicate `0 -> 1 -> 2`.  Coarse channels leak (`size_height` 6 mixed, `color_hist` 10, `frontier` 46, raw `outer_address` 55), while `small_embedding_profile`, `full_embedding_profile`, and `address_plus_small_embedding` all have `0` mixed fibers.  Tournament Analysis ranks `address_plus_small_embedding` first. | codex-2026-06-05-S668; `HYP-2243-outer-extension-usability-embedding.md`; `outer_extension_usability_friedman_s668.py`; `outer_extension_usability_friedman_s668.out`; `outer-extension-usability-friedman-s668.md`; HYP-2242, HYP-2241, HYP-2240, HYP-2171, HYP-2167, HYP-2165, HYP-2164 |
 | HYP-2244 | Equinumerosity is not outer-extension usability; cardinal/count equality must be repaired by deletion, link, embedding, or retained-fiber profiles before it can transfer predicates. | S669 builds equal-cardinality carriers `line_P27`, `plane_3x9`, and `space_3x3x3`, all with `|V|=27`.  Cardinality gives one mixed dimension bucket, deletion splits only `1D` from higher dimensions, and degree/growth/small-embedding profiles separate all three.  Outer layer extension changes size and some boundary/growth data while the dimension signature stays stable.  The Royle/even-graph side is the same warning: count equality needs a functor preserving `H`, `beta1`, packet, or embedding data before it is proof-usable. | codex-2026-06-05-S669; `HYP-2244-equinumerosity-outer-extension-usability.md`; `equinumerosity_outer_extension_s669.py`; `equinumerosity_outer_extension_s669.out`; `equinumerosity-outer-extension-usability-s669.md`; HYP-2243, HYP-2242, HYP-2187, HYP-2186, HYP-2236 |
 | HYP-2245 | The metagraph-ultrafilter slogan should be read as a descent/sheaf claim: principal ultrafilters are literal on Boolean tiling/address cubes, while tournament isomorphism quotients leak unless the missing address is retained. | S670 proves the divisor lattice of `210=2*3*5*7` has exactly the four principal prime ultrafilters, each deciding `d <-> 210/d`.  Fixed-base-path tiling cubes have the same exact principal-filter behavior under complement tiling, but the iso quotient leaks: best coordinates have mixed classes `1,5,35` at `n=4,5,6`, and leaked complement pairs `4/4,30/32,512/512`.  Thus the metagraph is not literally an ultrafilter; it is the quotient base for an ultrafilter sheaf.  LRC14 should search for owner/carry/proof-obligation filters that descend. | codex-2026-06-05-S670; `HYP-2245-metagraph-ultrafilter-sheaf.md`; `metagraph_ultrafilter_divisor210_s670.py`; `metagraph_ultrafilter_divisor210_s670.out`; `metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241, HYP-2240, HYP-2187, HYP-2167 |
+| HYP-2246 | Endpoint half-filter traces may recursively enumerate A000568: `Phi(T)=multiset_v(class(T-v), L/M/U side of outdeg(v))` is injective on tournament classes through `n=8`. | S671 builds A000568 through `n=8` by endpoint extension: enumerate `Aut(parent)`-orbits in the incident Boolean cube, then audit deletion/filter traces on raw child candidates.  For `7->8`, endpoint orbits give `54,256` candidates versus `2,097,152` fixed-path tilings and `268,435,456` labelled tournaments.  At `n=8`, scalar `(score,c3,SCC)` has `136` mixed buckets, unpaired card-deck has `2`, while half-filter, paired-score, and paired-c3-loss traces have `0`.  The two card-deck collision buckets are regular strong classes with identical `c3=20`, identical score histograms, and paired Hamiltonian counts `633` and `645`; the missing coordinate is an `L/U` owner address.  Candidate fallback audit shows zero mixed half-filter buckets through `7->8`, so full child canonicalization is needed only for future mixed trace buckets. | codex-2026-06-05-S671; `HYP-2246-endpoint-half-filter-enumeration.md`; `ultrafilter_endpoint_enumeration_s671.py`; `ultrafilter_endpoint_enumeration_s671.out`; `endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236, HYP-2228, HYP-2187, HYP-2209 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -7489,6 +7490,110 @@ packet data.
 `05-knowledge/results/metagraph_ultrafilter_divisor210_s670.out`;
 `07-reflections/metagraph-ultrafilter-divisor210-s670.md`; HYP-2244, HYP-2241,
 HYP-2240, HYP-2187, HYP-2167.
+
+## HYP-2246: Endpoint half-filter traces enumerate tournament classes (codex-2026-06-05-S671)
+
+**STATUS:** OPEN enumeration/invariant conjecture with exact evidence through
+`n=8`.
+
+**WHAT:** Define the three-state side of a vertex `v` in an `n`-vertex
+tournament:
+
+```text
+side_T(v) =
+  L if 2*outdeg_T(v) < n-1
+  M if 2*outdeg_T(v) = n-1
+  U if 2*outdeg_T(v) > n-1
+```
+
+Then define:
+
+```text
+Phi(T) = multiset_v ( iso_class(T-v), side_T(v) ).
+```
+
+S671 verifies that `Phi` is injective on tournament isomorphism classes through
+`n=8`.  This gives the user's left/middle/right automaton a concrete
+enumeration role.
+
+**ENDPOINT ENUMERATION:** S671 builds the class tower through `n=8` by
+one-vertex endpoint extension.  For each parent class, it enumerates
+`Aut(parent)`-orbits in the incident bit cube `{0,1}^n`, extends the parent, and
+canonicalizes only for the audit.  It recovers known A000568 values through
+`n=8`.
+
+| child n | A000568 | endpoint-orbit candidates | duplicate factor | fixed-path tilings / candidates | labelled tournaments / candidates |
+|---:|---:|---:|---:|---:|---:|
+| 2 | 1 | 2 | 2.000 | 0.500 | 1.000 |
+| 3 | 2 | 4 | 2.000 | 0.500 | 2.000 |
+| 4 | 4 | 12 | 3.000 | 0.667 | 5.333 |
+| 5 | 12 | 48 | 4.000 | 1.333 | 21.333 |
+| 6 | 56 | 296 | 5.286 | 3.459 | 110.703 |
+| 7 | 456 | 3040 | 6.667 | 10.779 | 689.853 |
+| 8 | 6880 | 54256 | 7.886 | 38.653 | 4947.572 |
+
+The `n=8 -> 9` estimate is `1,716,608` endpoint-orbit candidates for known
+`A000568(9)=191,536`.
+
+**TRACE COLLISIONS:** On finished classes:
+
+| n | classes | `score,c3,SCC` mixed | card multiset mixed | half-filter mixed | paired-score mixed |
+|---:|---:|---:|---:|---:|---:|
+| 3 | 2 | 0 | 1 | 0 | 0 |
+| 4 | 4 | 0 | 1 | 0 | 0 |
+| 5 | 12 | 2 | 1 | 0 | 0 |
+| 6 | 56 | 11 | 4 | 0 | 0 |
+| 7 | 456 | 41 | 0 | 0 | 0 |
+| 8 | 6880 | 136 | 2 | 0 | 0 |
+
+At `n=8`, the scalar `(score,c3,SCC)` signature has only `167` groups and a
+max bucket of `577`.  Unpaired card-deck has two mixed buckets.  The
+half-filter side bit repairs all tested card-deck collisions.
+
+The two `n=8` card-deck collision buckets are regular strong classes with
+score histogram `((3,4),(4,4))`, `c3=20`, and paired Hamiltonian-path counts
+`633` and `645`.  Their visible scalar payloads match; the half-filter separates
+them by recording which side, `L` or `U`, owns each deleted card.
+
+**CANDIDATE FALLBACK AUDIT:** For each raw endpoint-orbit candidate, S671
+computes traces before child canonicalization and checks which trace buckets mix
+true child classes.  Through `7->8`, half-filter, paired-score, and
+paired-c3-loss traces have zero mixed buckets.  Card multiset alone has `24`
+mixed candidates at `7->8`; scalar signatures avoid full child canonicalization
+on only `0.3%`.
+
+**ALGORITHM TARGET:**
+
+```text
+parent class
+  -> Aut(parent)-orbit incident patterns
+  -> raw child candidate
+  -> Phi(raw child), using only n-vertex card canonicalization
+  -> full (n+1)-canonicalization only if Phi bucket is mixed.
+```
+
+The audit used full child canonicalization to prove purity.  The proposed
+production use computes `Phi` directly from raw children.
+
+**TOURNAMENT ANALYSIS:** Vertices are enumeration routes:
+paired deletion filter trace, endpoint automorphism-orbit generation, modular
+substitution DP, half-filter trace, THM-410 interval ledger, raw fixed-path
+cube, and raw labelled enumeration.  Observable:
+`(exactness, canonical-work avoidance, invariant retention, scaling, readiness,
+LRC transfer)`.  The route tournament is transitive:
+`score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `directed_3cycles=0`, singleton
+SCCs, and one Hamiltonian path.  Top route: paired deletion filter trace.
+
+**NEXT:** Push to `n=9` with a faster canonical engine; inspect the two `n=8`
+card-multiset collision pairs; combine half-filter traces with modular
+decomposition and THM-410 interval ledgers; port the `L/M/U` owner state to
+LRC14 carry/owner fibers.
+
+**See:** `05-knowledge/hypotheses/HYP-2246-endpoint-half-filter-enumeration.md`;
+`04-computation/ultrafilter_endpoint_enumeration_s671.py`;
+`05-knowledge/results/ultrafilter_endpoint_enumeration_s671.out`;
+`07-reflections/endpoint-half-filter-a000568-s671.md`; HYP-2245, HYP-2236,
+HYP-2228, HYP-2187, HYP-2209.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).
