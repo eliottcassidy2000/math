@@ -687,7 +687,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2229 | Basel-type pi identities form a three-face period carrier: disjoint elementary packets, power-sum moments, and Bernoulli/von-Staudt local denominator data. | S653 computes `zeta(2k)/pi^(2k)` for `k<=12` from both Euler's Bernoulli formula and Newton identities applied to `zeta({2}^m)/pi^(2m)=1/(2m+1)!`; all entries agree.  The same scout records the disjoint-packet family `1/(2m+1)!`, rechecks the von Staudt chain `6->42->1806->1806`, and ranks proof lenses by Tournament Analysis with sine-product elementary packets first. | codex-2026-06-05-S653; `HYP-2229-basel-pi-family-carrier.md`; `basel_pi_family_carrier_s653.py`; `basel_pi_family_carrier_s653.out`; `basel-pi-family-carrier-s653.md`; HYP-2228, HYP-2227, HYP-2214, HYP-2211, HYP-1627, T252, THM-002 |
 | HYP-2230 | LRC14 parity and apex obstructions are one carry coordinate over the `C=27` lift: for `v=r+27k`, `v mod 2 = r+k` and `v mod 14 = r-k`, so `k` toggles even/odd parity while `14|v` iff `k=r mod 14`. | S654 uses the S611 exact maximin oracle to test the forced multiple-of-14 branch over AP and `V*`.  Every minimal apex carry is even and strict; closest AP is `28/365`, closest `V*` is `2/25`.  All one/two extra `+27` toggle neighborhoods around minimal apex carries (`2054` rows screened) have no near-floor/below-floor rows, and the Boolean parity lattice only has the zero-carry floor row in the near-floor screen.  Connects HYP-2218 even/odd same-pair projection and HYP-2229 Basel packet-vs-moment lesson to HYP-2167 carry conservativity. | codex-2026-06-05-S654; `HYP-2230-lrc14-parity-carry-bridge.md`; `lrc14_parity_carry_bridge_s654.py`; `lrc14_parity_carry_bridge_s654.out`; `lrc14-parity-carry-bridge-s654.md`; HYP-2167, HYP-2218, HYP-2229, THM-401 |
 | HYP-2231 | LRC `n=14` uses a sin/cos even-odd wall carrier: odd active walls are the sin-like boundary, even strata are cos-like derivative/slack, and the visible `(14,21)` Goldbach/Lemoine diagonal is only a scalar shadow. | S655 computes AP and `Vstar` at `n=14`, finding exact `M=1/14`, shared best times `1/14,3/14,5/14,9/14,11/14,13/14`, active odd wall pairs `(1,13),(5,9),(3,11)` and mirrors, and shared `C=27` gcd-shell counts `{1:9,3:3,9:1}`.  The AP single-swap census has `195` rows, `0` below, and one tight non-AP row `12->24`; cotangent half-products collapse to `1/C`, confirming that scalar trig products forget composite shell side channels.  The next proof target is an odd-wall/gcd-shell/carry-owner no-leak lemma downstream of HYP-2230's parity/carry coordinate. | codex-2026-06-05-S655; `HYP-2231-lrc14-sin-cos-even-odd-wall-carrier.md`; `lrc_sin_cos_parity_carrier_s655.py`; `lrc_sin_cos_parity_carrier_s655.out`; `lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230, HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164, HYP-2116, THM-401, THM-369 |
-| HYP-2232 | STUB: The set-theoretic Continuum Hypothesis should be read as a cardinal-shadow carrier problem, not as raw infinity numerology: `2^aleph_0` is the scalar shadow, while forcing/inner-model/generic side channels decide which intermediate cardinal structure is visible. | Claimed for S656.  Planned synthesis connects HYP-2187 equinumerosity vs equidecomposability, HYP-2185/HYP-2182 ordinal boundary state, HYP-2171 quotient side-channel sufficiency, and HYP-2230/HYP-2231 parity/wall carrier lessons.  Full CH atlas and proof-route tournament still in progress. | codex-2026-06-05-S656; `HYP-2232-continuum-hypothesis-cardinal-shadow-carrier.md`; HYP-2187, HYP-2185, HYP-2182, HYP-2171, HYP-2231, HYP-2230 |
+| HYP-2232 | The set-theoretic Continuum Hypothesis is the archetypal cardinal-shadow carrier problem: `2^aleph_0` is the scalar shadow, while forcing/inner-model/generic side channels decide which continuum structure is visible. | S656 records the standard facts (Godel: CH in `L`; Cohen: relative consistency of not-CH by forcing) and turns them into a finite repo protocol.  The carrier atlas compares `L`, Cohen-style forcing extensions, forcing-axiom worlds, and bare ZFC; the proof-route tournament is transitive with `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`, `c3=0`, SCC sizes all singleton, and raw cardinal numerology last.  Transfer rule: before trusting a count/residue/H/edge scalar, ask which model, lift, fiber, packet, owner, or boundary state was forgotten. | codex-2026-06-05-S656; `HYP-2232-continuum-hypothesis-cardinal-shadow-carrier.md`; `continuum_hypothesis_carrier_s656.py`; `continuum_hypothesis_carrier_s656.out`; `continuum-hypothesis-cardinal-shadow-carrier-s656.md`; HYP-2187, HYP-2185, HYP-2182, HYP-2171, HYP-2231, HYP-2230, HYP-2213, HYP-2212 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -6303,6 +6303,96 @@ SCC sizes `[3,1,1,1,1]`, and `3` Hamiltonian paths; the top tied carriers are
 `07-reflections/lrc14-sin-cos-even-odd-wall-carrier-s655.md`; HYP-2230,
 HYP-2229, HYP-2228, HYP-2222, HYP-2219, HYP-2218, HYP-2167, HYP-2164,
 THM-401, THM-369.
+
+## HYP-2232: Continuum Hypothesis is a cardinal-shadow carrier problem (continuum-hypothesis-cardinal-shadow-carrier, codex-2026-06-05-S656)
+**Status:** OPEN synthesis / method hypothesis; set-theory background is classical.
+
+S656 treats the set-theoretic Continuum Hypothesis as the repo's cleanest
+example of scalar data requiring a retained universe/model side channel:
+
+```text
+CH: 2^aleph_0 = aleph_1?
+```
+
+The exact set-theory facts used are standard: in Godel's constructible universe
+`L`, CH holds; Cohen forcing gives relative consistency of not-CH; therefore CH
+is independent of ZFC, assuming ZFC is consistent.  This session explicitly
+distinguishes set-theory CH from older repo `CH` entries for
+Caccetta-Haggkvist cycle-return work.
+
+The carrier atlas compares four worlds:
+
+```text
+Constructible universe L: CH yes, continuum=aleph_1,
+  retained channel = definability / canonical well-order of reals.
+Cohen-style forcing extension: CH no in standard extensions,
+  retained channel = generic reals added while ordinals are preserved.
+Forcing-axiom worlds: often continuum=aleph_2,
+  retained channel = maximality / compatibility side conditions.
+ZFC alone: continuum undetermined,
+  retained channel = insufficient model data.
+```
+
+The finite powerset table in the script is only a toy warning, not an analogy
+that proves CH.  Its role is to remind the repo that powerset/cardinality growth
+is a scalar projection.  The proof-relevant object is the model/generic channel.
+
+The bridge dictionary is:
+
+```text
+HYP-2187: same count is weak; H/beta/packet fibers matter.
+HYP-2185: finite Z(1) loses ordinal boundary fuel omega*r.
+HYP-2171: Res_27 row address loses owner/carry/Cprime side data.
+HYP-2230: least-positive residue loses parity/apex carry k.
+HYP-2231: (14,21) diagonal loses odd-wall/even-slack/C=27 shell labels.
+OCF/H: same H can split by polynomial/SCC/beta packets.
+```
+
+Tournament Analysis uses proof routes as vertices, after challenging candidate
+vertex sets including reals, subsets of `N`, ordinals, cardinals, Boolean
+algebras, forcing notions, generic filters, inner models, quotient maps, proof
+obligations, and repo carriers.  The pairwise observable is
+`(side-channel retention, repo transfer value, foundational centrality,
+low scalar-misleading risk)`.  The resulting tournament is transitive:
+
+```text
+forcing/generic side-channel
+> inner-model canonical section
+> absoluteness audit
+> equinumerosity-vs-fiber bridge
+> LRC sufficient-statistic program
+> ordinal boundary-state transfer
+> raw cardinal numerology.
+```
+
+Fingerprint:
+
+```text
+score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}
+directed_3cycles=0
+scc_sizes=[1,1,1,1,1,1,1]
+hamiltonian_paths=1.
+```
+
+The useful finite technique is a "forcing jackknife": hold a scalar fixed,
+perturb the side channel (carry bits, owner labels, endpoint decorations,
+direction masks, OCF packets, model/generic data), and test whether the target
+predicate is absolute.  If it changes, the scalar was too coarse.  If it
+survives a rich lift family, the next target is a conservativity theorem.
+
+For LRC `n=14`, this reinforces the candidate sufficient statistic
+`(Res_27 proof atom, owner route, carry cocycle, Cprime window)` with S655's
+odd-wall/gcd-shell labels.  For unit distance, it says edge count must be
+paired with direction support, spine traceability, embedding faithfulness, and
+obstruction cores.  For tournaments, `H` must be paired with SCC packets, OCF
+coefficients, beta fibers, and endpoint-transfer labels.
+
+**See:** `05-knowledge/hypotheses/HYP-2232-continuum-hypothesis-cardinal-shadow-carrier.md`;
+`04-computation/continuum_hypothesis_carrier_s656.py`;
+`05-knowledge/results/continuum_hypothesis_carrier_s656.out`;
+`07-reflections/continuum-hypothesis-cardinal-shadow-carrier-s656.md`;
+`04-computation/category_logic_23.py`; HYP-2187, HYP-2185, HYP-2182,
+HYP-2171, HYP-2231, HYP-2230, HYP-2213, HYP-2212, THM-401.
 
 ## HYP-2200 addendum (monad-compute-2026-06-04-S5): window closure computationally witnessed at m=13
 **Status:** CONFIRMED — strengthens HYP-2200 (no new HYP number minted; see MISTAKE-053).

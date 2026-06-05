@@ -1,0 +1,85 @@
+S656 Continuum Hypothesis carrier atlas
+========================================================================
+
+A. Baseline facts, typed
+  CH: 2^aleph_0 = aleph_1?
+  Godel: if ZFC is consistent, ZFC + CH is consistent via L.
+  Cohen: if ZFC is consistent, ZFC + not-CH is consistent via forcing.
+  Importance: CH made independence, forcing, and model side-channels unavoidable.
+  Repo caution: this is set-theory CH, not Caccetta-Haggkvist CH.
+
+B. Finite powerset shadow: why raw 2^n is too coarse
+  n  2^n  n+1  overshoot  intermediate finite sizes
+  0    1    1          0                          0
+  1    2    2          0                          0
+  2    4    3          1                          1
+  3    8    4          4                          4
+  4   16    5         11                         11
+  5   32    6         26                         26
+  6   64    7         57                         57
+  7  128    8        120                        120
+  8  256    9        247                        247
+  9  512   10        502                        502
+  Finite analogy is not CH; it is a warning that powerset growth is a scalar jump.
+
+C. Model/forcing carrier table
+  Constructible universe L:
+    method=inner model
+    continuum=aleph_1  CH=yes
+    retained_channel=definability / canonical well-order of reals
+    repo_echo=least-positive section with enough labels retained
+  Cohen-style forcing extension:
+    method=generic extension
+    continuum=can be aleph_2 or larger  CH=no
+    retained_channel=generic reals added while ordinals are preserved
+    repo_echo=lift/carry fiber changes scalar floor behavior
+  Forcing-axiom worlds:
+    method=axiom-extension program
+    continuum=often aleph_2  CH=no
+    retained_channel=maximality/compatibility side conditions
+    repo_echo=owner/Cprime certificate saturates residual cases
+  ZFC alone:
+    method=base theory
+    continuum=undetermined  CH=independent
+    retained_channel=not enough model data to decide
+    repo_echo=raw quotient before sufficient statistic
+
+D. Repo bridge table
+  HYP-2187 equinumerosity/equidecomposability:
+    scalar_shadow=same number of objects
+    missing_middle=same count need not preserve H/beta/packet fibers
+    retained_channel=(H, beta1, odd-cycle packets)
+  HYP-2185 infinite Go:
+    scalar_shadow=finite cutoff count Z(1)
+    missing_middle=ordinal value/pole order invisible after scalarization
+    retained_channel=boundary fuel depth omega*r
+  HYP-2171 LRC information bottleneck:
+    scalar_shadow=Res_27 row address
+    missing_middle=floor predicate not determined by row address alone
+    retained_channel=owner route + carry cocycle + Cprime window
+  HYP-2230 parity/carry:
+    scalar_shadow=least-positive residue r
+    missing_middle=parity and apex obstruction live in carry k
+    retained_channel=v=r+27k, parity/apex/pair-sum congruences
+  HYP-2231 sin/cos wall:
+    scalar_shadow=(14,21) diagonal echo
+    missing_middle=active LRC wall is off-diagonal odd complement pairs
+    retained_channel=odd wall pairs + even slack + C=27 gcd shells
+  OCF / H gaps:
+    scalar_shadow=H=I(Omega,2)
+    missing_middle=same H can split by packet fibers; gaps can be structural
+    retained_channel=independence polynomial coefficients / SCC packets
+
+E. Tournament Analysis over CH transfer routes
+  top_order=['forcing/generic side-channel', 'inner-model canonical section', 'absoluteness audit', 'equinumerosity-vs-fiber bridge', 'LRC sufficient-statistic program', 'ordinal boundary-state transfer', 'raw cardinal numerology']
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+
+Conclusion
+  CH is important here because it is the archetype of a quotient being
+  too weak: the scalar cardinal 2^aleph_0 does not determine the universe
+  of reals without a model/generic side channel.  The repo analogue is to
+  stop treating counts, residues, H-values, or wall scalars as complete
+  proof objects until the predicate-preserving fiber is named.
