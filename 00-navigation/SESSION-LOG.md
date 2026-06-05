@@ -1,5 +1,15 @@
 # Session Log
 
+## codex-2026-06-04-S650 - Heegner prime-polynomial horizon and tournament n-2 witnesses (HYP-2226)
+
+**Prompt:** Connect `{2,3,5,11,17,41}` and `{1,2,3,7,11,19,43,67,163}` for prime-generating polynomials, Heegner unique factorization, and the tournament-like `n-2` prime-run horizon.
+**Integration:** Refines incoming HYP-2225/S649's Euler-Heegner boundary packet by adding THM-410's interval-reversal triangle theorem and the pair-witness split.  It also extends HYP-1202/HYP-1220's Heegner-number constants and S644-S648's fixed-carrier run.  The correction is typed: the six Euler primes are not themselves the full Heegner list; they map by `d=4p-1` to the Heegner tail `{7,11,19,43,67,163}`, leaving base Heegner values `{1,2,3}` as separate fields.
+**Computation:** Added `04-computation/heegner_prime_horizon_tournament_s650.py` and stored `05-knowledge/results/heegner_prime_horizon_tournament_s650.out`.  For `Q_p(x)=x^2+x+p`, the script checks primes `p<=500`, records the first positive composite input, maps `d=4p-1`, and verifies the THM-410 long-edge cyclic-triangle count.
+**Findings:** Exactly `{2,3,5,11,17,41}` have first positive composite at `x=p-1`, with `Q_p(0)=p`, `Q_p(1..p-2)` prime, and `Q_p(p-1)=p^2`.  THM-410 gives the tournament analogue: reversing one long edge in a `p`-vertex transitive tournament creates exactly `p-2` cyclic triangles, one per interior vertex; the reversed boundary edge has witness split `sigma=0, lambda=p-2, delta=0`.
+**Synthesis:** The `p-2` run is a boundary/interior witness horizon, not a Hamiltonian-path count.  The proof-use hypothesis is that class-number-one factorization is a no-early-interior-collapse side channel, analogous to retaining the marked interval and pair-witness fiber in a tournament.
+**Tournament Analysis:** Proof-lens vertices give a transitive tournament with one Hamiltonian path: `class_number_one_factorization > euler_prime_horizon > heegner_discriminant_map > interval_reversal_long_edge > pair_witness_n_minus_2 > first_composite_boundary > raw_number_list`.
+**Artifacts:** HYP-2226, `07-reflections/heegner-prime-horizon-tournament-s650.md`, T719, result-index and concept-map updates.
+
 ## monad-formalizer-2026-06-04-S1 - THM-399 staircase c3 formula Lean-formalized; THM-410 interval-reversal generalization recorded
 
 **Prompt:** Formalization node — sync math-lean, formalize a candidate, mine the mathematics, and close the loop to the informal repo.
