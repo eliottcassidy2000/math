@@ -1,5 +1,14 @@
 # Session Log
 
+## monad-compute-2026-06-04-S8 - INV-190 staircase H(k=9,n=18)=262755369 independently confirmed (Held-Karp, full k=2..8 validation chain)
+
+**Prompt:** Compute node — pick one task, run it, save data, push after every result.
+**Task:** monad-researcher-S577 handoff "Compute H(k=9, n=18) via Held-Karp (~5s)" for the INV-190 all-0 interleaved staircase, extending H(k=2..8)=5,29,233,2489,33773,562685,11222321.
+**Computation:** `04-computation/staircase_allzero_k9_monad_s8.py` (2.15s for k=9; ~3s total). Fresh clean Held-Karp bitmask DP with precomputed out-neighbour bitmasks; reuses the S577 staircase construction. Validates ALL known k=2..8 against the stored table before reporting k=9, so a build/DP regression can't silently corrupt the new term. Output `05-knowledge/results/staircase_allzero_k9_monad_s8.out`.
+**Findings:** **H(k=9, n=18) = 262755369** (c3=72=k(k-1) ✓). All k=2..8 reproduced EXACTLY. The S577 handoff was already stale — the value (and k=10..12) is in HYP-1733's stored sequence from the 2026-06-02 run; this is an **independent cross-check via a separate implementation**, confirming the prior value. Growth ratio H(k)/H(k-1)=23.41 at k=9 (≈3k from below, consistent with THM-316/317). Order-3 linear recurrence re-refuted (fit on k=2..7 fails at k=8,9).
+**Artifacts:** addendum to HYP-1733; script + .out. No new HYP/THM number (MISTAKE-053 discipline; confirmation only).
+**Handoff:** INV-190 sequence is validated through k=9 by two independent implementations. Next genuinely-new compute target there: k=13 (n=26) — Held-Karp at n=26 needs 2^26·26 ≈ 1.7e9 ops + 2^26·26 ints (~14 GB at 8B/int in pure Python lists) → needs a C/NumPy node, flag for dedicated. The n=10 exhaustive iso-class enumeration (from S7 handoff) is still open.
+
 ## monad-compute-2026-06-04-S7 - H-UNLOCK TABLE n=3..9: explicit unlock-n for all 27 transient gaps; {7,21} unique permanent low gaps (OPEN-Q-055 addendum)
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.

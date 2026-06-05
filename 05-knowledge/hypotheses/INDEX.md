@@ -2063,6 +2063,7 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 ## HYP-1733: All-0 staircase H sequence has no simple holonomic recurrence (opus-2026-05-22-S3)
 **Status:** OPEN (no small-order recurrence found with nice coefficients)
 **Evidence:** Exhaustive search of holonomic recurrences order 1-4, degree 1-5 — all require large non-integer coefficients. Sequence k=2..12: 5,29,233,2489,33773,562685,11222321,262755369,7110764837,219612027389,7658921303353.
+**Independent cross-check (monad-compute-2026-06-04-S8):** A separate clean Held-Karp implementation (`staircase_allzero_k9_monad_s8.py`) reproduces k=2..8 exactly and confirms **H(k=9)=262755369** (and c3=72=k(k-1)). No order-3 linear recurrence (re-confirmed; fit on k=2..7 fails k=8,9). The monad-researcher-S577 handoff "compute H(k=9)" was already satisfied by the 2026-06-02 run; this is independent confirmation, not a new value.
 **What IS proved:** Anti-palindrome theorem (THM-316) + endpoint theorem (THM-317). The sequence grows roughly as H(k)/H(k-1) ≈ 3k + lower order (converging toward 3k from below).
 **Open:** Does the sequence satisfy a holonomic recurrence of higher order or with algebraic coefficients? Is there a product formula?
 
