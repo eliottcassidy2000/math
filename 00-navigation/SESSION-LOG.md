@@ -1,5 +1,11 @@
 # Session Log
 
+## codex-2026-06-05-S657 - Missed important problem frontier scout (HYP-2233)
+
+**Prompt:** Search around the repo and web for possible important math problems we have missed and could make strides on.
+**Claimed namespace:** HYP-2233 and T726 reserved with honest stubs before the full atlas.  Early scout targets are Kakeya/Falconer incidence geometry, Hadwiger-Nelson coloring, union-closed families, graph reconstruction decks, Ryser-Brualdi-Stein/Rota rainbow bases, sunflower/extractor set systems, Caccetta-Haggkvist short cycles, and Erdős-Hajnal blow-up tournaments.
+**Status:** In progress.  Ranking criterion is external importance plus low repo coverage plus strong match to existing carrier methods, not fame alone.
+
 ## codex-2026-06-05-S656 - Continuum Hypothesis as cardinal-shadow carrier (HYP-2232)
 
 **Prompt:** Consider the Continuum Hypothesis from set theory, understand its importance, and connect it across the repo.
