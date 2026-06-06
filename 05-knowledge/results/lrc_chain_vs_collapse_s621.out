@@ -1,0 +1,30 @@
+HYP-2195 test:  collapse (p0=0)  vs  additive-chain  over primitive n-sets
+==========================================================================
+
+ n=3 (range 1..9): #collapse=1  #strict-chains=2  #max-in-sumset=23
+   [necessary] collapse ⟹ max(S)∈S+S? True   (exceptions: [])
+   [biconditional?] strict-chain ⟹ collapse? False   (chains NOT collapse: 1)
+   so additive structure is NECESSARY-ish but vastly INSUFFICIENT: 1 collapse vs 23 max-in-sumset
+
+ n=4 (range 1..11): #collapse=2  #strict-chains=6  #max-in-sumset=165
+   [necessary] collapse ⟹ max(S)∈S+S? True   (exceptions: [])
+   [biconditional?] strict-chain ⟹ collapse? False   (chains NOT collapse: 5)
+   so additive structure is NECESSARY-ish but vastly INSUFFICIENT: 2 collapse vs 165 max-in-sumset
+
+ n=5 (range 1..13): #collapse=2  #strict-chains=24  #max-in-sumset=849
+   [necessary] collapse ⟹ max(S)∈S+S? True   (exceptions: [])
+   [biconditional?] strict-chain ⟹ collapse? False   (chains NOT collapse: 23)
+   so additive structure is NECESSARY-ish but vastly INSUFFICIENT: 2 collapse vs 849 max-in-sumset
+
+ n=6 (range 1..13): #collapse=1  #strict-chains=87  #max-in-sumset=1459
+   [necessary] collapse ⟹ max(S)∈S+S? True   (exceptions: [])
+   [biconditional?] strict-chain ⟹ collapse? False   (chains NOT collapse: 86)
+   so additive structure is NECESSARY-ish but vastly INSUFFICIENT: 1 collapse vs 1459 max-in-sumset
+
+ n=7 (range 1..15): #collapse=3  #strict-chains=364  #max-in-sumset=5858
+   [necessary] collapse ⟹ max(S)∈S+S? True   (exceptions: [])
+   [biconditional?] strict-chain ⟹ collapse? False   (chains NOT collapse: 362)
+   so additive structure is NECESSARY-ish but vastly INSUFFICIENT: 3 collapse vs 5858 max-in-sumset
+
+VERDICT: collapse ⟹ additive-chain is the true (one-way) implication;
+         additive-chain ⟹ collapse is FALSE (chains vastly outnumber collapses).
