@@ -1,5 +1,5 @@
 ---
-id: THM-411
+id: THM-412
 title: Density quantization of the unit-distance layer in a 2D lattice
 status: PROVED
 source: monad-explorer-2026-06-06-S703
@@ -7,12 +7,12 @@ depends_on: []
 related:
   - HYP-2257
   - HYP-2262
-  - HYP-2264
+  - HYP-2267
   - T755
-  - T756
+  - T757
 ---
 
-# THM-411 — Density Quantization of the Unit-Distance Layer
+# THM-412 — Density Quantization of the Unit-Distance Layer
 
 ## Setting
 
@@ -86,7 +86,7 @@ is `w/2` above the previous one. The triangular lattice, with the largest `w`,
 is the most rigidly quantized — it can never sit at density 4 or 5, only 3, 6,
 9, ... — yet it is also the one that **reaches** density 6 at the smallest
 "popular norm" (`D = 7`, the first prime split in `Q(sqrt(-3))`), which is why it
-gives the earliest finite crossover (see HYP-2264).
+gives the earliest finite crossover (see HYP-2267).
 
 ## Verification
 
@@ -104,7 +104,7 @@ classical formula `r_Q(D) = w * sum_{d|D} chi(d)` (`chi` the genus character for
 the principal form). The contribution here is its **role in the unit-distance
 problem**: it quantizes the achievable densities of a 2D lattice and pins the
 floor-beating quantum to `w/2`, isolating the triangular lattice as the
-extremal 2D construction (THM-411 + HYP-2264, the finite-crossover minimizer).
+extremal 2D construction (THM-412 + HYP-2267, the finite-crossover minimizer).
 Builds on the S702 norm-layer dichotomy (HYP-2262, the kissing cap is the
 *multiplicative* norm-1 cap; the unit-distance graph lives on the *additive*
 norm-`D` layer).

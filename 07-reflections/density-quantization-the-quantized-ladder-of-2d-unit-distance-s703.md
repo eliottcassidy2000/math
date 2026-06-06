@@ -1,7 +1,7 @@
 ---
 source: monad-explorer-2026-06-06-S703 (deep-research; lattice/norm-form lane)
-status: THEOREM (density quantization, THM-411) + CONFIRMED-computationally (triangular =
-  finite-crossover minimizer, HYP-2264). Sharpens S702's "no 2D bridge group" (HYP-2262)
+status: THEOREM (density quantization, THM-412) + CONFIRMED-computationally (triangular =
+  finite-crossover minimizer, HYP-2267). Sharpens S702's "no 2D bridge group" (HYP-2262)
   into a QUANTIZED LADDER: 2D unit-distance density takes values in (w/2)*Z_{>0}, and the
   question opus-S699 posed ("a group BETWEEN triangular and CM") has the answer: the 2D
   spectrum is a discrete root-of-unity ladder, not a continuum, and triangular is its top.
@@ -22,7 +22,7 @@ unit-distance density at radius `sqrt(D)` is
    density(D) = r_Q(D)/2 = (number of essentially-distinct reps of D) * (w/2),
 ```
 
-an integer multiple of `w/2` (THM-411: the cyclic order-`w` rotation group acts
+an integer multiple of `w/2` (THM-412: the cyclic order-`w` rotation group acts
 FREELY on the norm-`D` vectors, so `w | r_Q(D)`). The achievable densities form a
 **quantized ladder** `{ (w/2)*k : k >= 1 }`, NOT a continuum.
 
@@ -58,7 +58,7 @@ density-5 forms (e.g. disc `-15`, the `(1,1,4)` lattice) ARE the long-sought
 "between triangular and square" objects — but they are discrete rungs, not a
 bridge, and none of them is optimal.
 
-## The finite crossover and the minimizer (HYP-2264)
+## The finite crossover and the minimizer (HYP-2267)
 
 Counting unit distances exactly in growing disk patches `P(T) = {g : Q(g) <= T}`,
 at each lattice's best radius, the smallest `N` with `U(N) > 3N` is:
@@ -106,7 +106,7 @@ contributing `w/2` unordered edge-directions. So
 
 This is the same skeleton as the project's two other root-of-unity packings:
 
-- **Kissing / Harborth `3n`** (THM-411 remark): the minimal layer is one rosette,
+- **Kissing / Harborth `3n`** (THM-412 remark): the minimal layer is one rosette,
   density `kappa/2 <= 3`. The `3` is `w_max/2 = 6/2`.
 - **LRC worry-set** (THM-401/403): anchored on the `(2n-1)`-th roots of unity; the
   geometric floor is the rosette of `(2n-1)`-th roots, escaped arithmetically by
@@ -131,10 +131,10 @@ frontier gain (HYP-2201). The kissing cap 3, the density quantum 3, and the
 
 ## Honest status
 
-- **THEOREM (THM-411):** `w | r_Q(D)` for all `D`; density quantized in `w/2`.
+- **THEOREM (THM-412):** `w | r_Q(D)` for all `D`; density quantized in `w/2`.
   Elementary (free action of the cyclic automorph group); verified exhaustively
   to disc `< -200`.
-- **CONFIRMED (computational, HYP-2264):** triangular is the finite-crossover
+- **CONFIRMED (computational, HYP-2267):** triangular is the finite-crossover
   minimizer (`N=43` / `N=61`), exact integer arithmetic, all competitive forms
   checked. The *global* 2D claim (over ALL lattices, ALL patch shapes) is a
   well-supported **conjecture**: only the small-`D*` forms were exact-checked, and
@@ -147,5 +147,5 @@ frontier gain (HYP-2201). The kissing cap 3, the density quantum 3, and the
   proved.
 
 Artifacts: `04-computation/lrc_density_quantization_crossover_s703.py` (+.out),
-THM-411, HYP-2264, T756. Builds on S702 (HYP-2262, T755), opus-S699 (HYP-2257),
+THM-412, HYP-2267, T757. Builds on S702 (HYP-2262, T755), opus-S699 (HYP-2257),
 THM-401/403, HYP-2186/2201, the Erdos/Harborth unit-distance problem.

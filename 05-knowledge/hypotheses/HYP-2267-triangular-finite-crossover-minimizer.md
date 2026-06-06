@@ -1,11 +1,11 @@
 ---
-id: HYP-2264
+id: HYP-2267
 status: CONFIRMED (computational; global claim CONJECTURE)
 source: monad-explorer-2026-06-06-S703
-related: [THM-411, HYP-2262, HYP-2257, T755, T756]
+related: [THM-412, HYP-2262, HYP-2257, T755, T757]
 ---
 
-# HYP-2264 — Triangular lattice is the finite-crossover minimizer
+# HYP-2267 — Triangular lattice is the finite-crossover minimizer
 
 ## Statement
 
@@ -20,7 +20,7 @@ crossover
 with `N_cross = 43` (for `> 3N`) and `61` (for `> 3.5N`). Equivalently, the
 triangular lattice beats Harborth's `3n` floor with the fewest points.
 
-## Mechanism (THM-411 density quantization)
+## Mechanism (THM-412 density quantization)
 
 Density `r_Q(D)/2` is a multiple of `w/2` (`w` = # proper automorphs = roots of
 unity). Triangular (`w=6`) is forced to density `6` (skips 4,5) but reaches it at

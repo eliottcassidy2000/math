@@ -1,9 +1,9 @@
 """
 monad-explorer-2026-06-06-S703b
 ===============================
-ROBUSTNESS of the triangular finite-crossover minimizer (HYP-2264) to PATCH SHAPE.
+ROBUSTNESS of the triangular finite-crossover minimizer (HYP-2267) to PATCH SHAPE.
 
-HYP-2264's honest caveat: the crossover N_cross was measured with disk patches
+HYP-2267's honest caveat: the crossover N_cross was measured with disk patches
 {Q(g)<=T}. Does triangular still win under DIFFERENT patch shapes?  We re-measure
 N_cross (smallest N with U>3N, best radius) under three nested-patch families:
   (disk)  P = {g : Q(g) <= T}                      -- Q-metric ball (S703 default)
