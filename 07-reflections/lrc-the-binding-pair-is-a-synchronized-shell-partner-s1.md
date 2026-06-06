@@ -73,12 +73,19 @@ complement to S700's residual.
 
 ## Handoff
 
-- **HYP-2290 (new).** Is the signed second clock (`q=2n−1`) the `j=2` (additive-energy / `S_2`) face
-  of the covering-depth distribution (THM-406)? L0 says a shell-partner makes two danger arcs
-  coincide on `L_{2n−1}` ⟹ an `S_2` spike; so the `n=8` worry-set split (S708b) should be a
-  *measurable* `S_2` excess on the shell-partner-carrying configs `(1,2,3,4,5,7,12)` and
-  `(1,4,5,6,7,11,13)`. Falsifier: equal `S_2` ⟹ the split is purely combinatorial. Testable with the
-  THM-406 moment machinery (`lrc_depth_rigor_moments_s599c.py`).
+- **HYP-2290 — TESTED THIS SESSION, REFUTED (informatively).** I asked whether the signed second
+  clock (`q=2n−1`) is the continuous `j=2` (`S_2`) face of the covering-depth distribution (THM-406):
+  do shell-partner configs carry an `S_2` excess? Exact computation on the `n=8` worry-set says **no
+  — backwards.** `AP_8` (shell-FREE) has the *largest* `S_2 = 157/105` (excess `+0.183`); the two
+  shell-partner configs have *lower* `S_2` (`+0.092`; and `−0.032`, sub-independent); the shell-partner
+  pairs `(3,12),(4,11)` each have danger-arc overlap **exactly `(2δ)² = 1/16`** (the *independent*
+  value). The reason sharpens L0: **synchronization holds only on the measure-zero lattice `L_{2n−1}`**;
+  the continuous overlap `μ(D_i∩D_j)` is gcd / three-distance arithmetic, not the mod-`C` sum (broad
+  sweep: shell-partners are exactly-independent only `36%` vs `21%` — weak, no law). So the *discrete*
+  second clock (`L_{2n−1}`) and the *continuous* second moment `S_2` are **distinct and here
+  anti-correlated**; the floating "pair-clocks = additive-energy face" (S674) must mean the *discrete*
+  additive energy on `L_C`, not `S_2`. This is a clean negative that reinforces the theme:
+  synchronization is a lattice fact, invisible to the continuous moment hierarchy.
 - **The real frontier is S700's residual `R(n)`** (divisibility-complete, shell-free). Synchronization
   folds it but does not yet prove it loose — that is the open core (and Lemma B's coprime hypothesis
   still excludes the `n=14` prime-3 strata). The next reduction is to make "fold then certify the
@@ -86,5 +93,6 @@ complement to S700's residual.
 
 **Honest status.** L0/L1 proved (6669/6669 exact + the worry-set configs). The transfer *headline*
 (no-go, witness hierarchy, `n=8` split) is opus-S700 + monad-explorer-S708b, credited throughout;
-my contribution is the synchronization lemma and the binding-pair = shell-partner bridge, plus the
-hard-core folding and HYP-2290.
+my contribution is the synchronization lemma and the binding-pair = shell-partner bridge, the
+hard-core folding, and the refutation (HYP-2290) showing the second clock is a measure-zero lattice
+object decoupled from the continuous covering-depth moments.
