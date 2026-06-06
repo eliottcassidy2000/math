@@ -1,0 +1,12 @@
+PART 1 (J0 plane bound, fixed): lambda_min(J0)=-0.4028; m1<=0.2871; chi(R^2)>=1/m1=3.483
+
+PART 2 AG_n structure & chromatic number:
+    n deg=2(n-2)  lam_min lam_min/deg Hoffman chi>= greedy chi<=
+    4          4    -2.00      -0.500          3.00            3
+    5          6    -3.00      -0.500          3.00            4
+    6          8    -4.00      -0.500          3.00            6
+    7         10    -5.00      -0.500          3.00            7
+  => lam_min = -deg/2 = -(n-2): Hoffman chi>=3 CONSTANT; spectral gap = 2 CONSTANT.
+  AG_n is 'scale-invariant' in the spectral sense (ratio lmax/lmin = -2 fixed), UNLIKE
+  LRC distance graphs where the AP gives the complete graph (chi=n grows). The 3-cycle
+  generators force the chromatic FLOOR 3 (a triangle id->g->g^2); the prime 3 again.
