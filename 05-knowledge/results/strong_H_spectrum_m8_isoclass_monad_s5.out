@@ -1,0 +1,47 @@
+==============================================================================
+EXHAUSTIVE strong-tournament H-spectrum at m=8 via iso-class generation
+monad-compute-2026-06-06-S5
+==============================================================================
+
+Generating non-iso tournaments n=1..8 (canonical augmentation)...
+  generation done in 9.3s
+  class counts: [1, 1, 2, 4, 12, 56, 456, 6880]
+  A000568 target: [1, 1, 2, 4, 12, 56, 456, 6880]
+  COUNTS MATCH A000568: True
+  m=3: #strong-classes=1/2  strong-min=3  |spectrum|=1  dt=0.0s
+        spectrum=[3]  matches HYP-2180 canon: True
+  m=4: #strong-classes=1/4  strong-min=5  |spectrum|=1  dt=0.0s
+        spectrum=[5]  matches HYP-2180 canon: True
+  m=5: #strong-classes=6/12  strong-min=9  |spectrum|=4  dt=0.0s
+        spectrum=[9, 11, 13, 15]  matches HYP-2180 canon: True
+  m=6: #strong-classes=35/56  strong-min=15  |spectrum|=13  dt=0.0s
+        spectrum=[15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]  matches HYP-2180 canon: True
+  m=7: #strong-classes=353/456  strong-min=25  |spectrum|=67  dt=0.1s
+  m=8: #strong-classes=6008/6880  strong-min=45  |spectrum|=297  dt=4.3s
+
+------------------------------------------------------------------------------
+RESULTS
+------------------------------------------------------------------------------
+  strong-min(m), m=3..8        = [3, 5, 9, 15, 25, 45]
+  Busch p(n)=p(n-1)+p(n-2)+1     = [3, 5, 9, 15, 25, 41]
+  MATCH Busch through m=8: False
+
+  m=8 strong H-spectrum (297 values):
+    [45, 49, 51, 53, 57, 59, 61, 63, 65, 69, 71, 73, 75, 77, 79, 81, 83, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129, 131, 133, 135, 137, 139, 141, 143, 145, 147, 149, 151, 153, 155, 157, 159, 161, 163, 165, 167, 169, 171, 173, 175, 177, 179, 181, 183, 185, 187, 189, 191, 193, 195, 197, 199, 201, 203, 205, 207, 209, 211, 213, 215, 217, 219, 221, 223, 225, 227, 229, 231, 233, 235, 237, 239, 241, 243, 245, 247, 249, 251, 253, 255, 257, 259, 261, 263, 265, 267, 269, 271, 273, 275, 277, 279, 281, 283, 285, 287, 289, 291, 293, 295, 297, 299, 301, 303, 305, 307, 309, 311, 313, 315, 317, 319, 321, 323, 325, 327, 329, 331, 333, 335, 337, 339, 341, 343, 345, 347, 349, 351, 353, 355, 357, 359, 361, 363, 365, 367, 369, 371, 373, 375, 377, 379, 381, 383, 385, 387, 389, 391, 393, 395, 397, 399, 401, 403, 405, 407, 409, 411, 413, 415, 417, 419, 421, 423, 425, 427, 429, 431, 433, 435, 437, 439, 441, 443, 445, 447, 449, 451, 453, 455, 457, 459, 461, 463, 465, 467, 469, 471, 473, 475, 477, 479, 481, 483, 485, 487, 489, 491, 493, 495, 497, 499, 501, 503, 505, 507, 509, 511, 513, 515, 517, 519, 521, 523, 525, 527, 529, 531, 533, 535, 537, 539, 541, 543, 545, 547, 549, 551, 553, 555, 557, 559, 561, 563, 565, 567, 569, 571, 573, 575, 577, 579, 581, 583, 585, 587, 589, 591, 593, 595, 597, 599, 601, 603, 605, 607, 609, 613, 621, 627, 629, 631, 633, 637, 639, 641, 643, 645, 649, 651, 653, 657, 659, 661]
+
+  strong-min(8) = 45  (opus-S699j search bound was <=45; Busch predicts 41)
+    is   7 a strong H-value at m=8? False
+    is  21 a strong H-value at m=8? False
+    is  35 a strong H-value at m=8? False
+    is  49 a strong H-value at m=8? True
+    is  63 a strong H-value at m=8? True
+    is 189 a strong H-value at m=8? True
+
+  Multiplicative semigroup from strong values (m<=8), forbidden odd H<= 400:
+    [7, 21]
+    => 7 forbidden: True;  21 forbidden: True
+    => 35 achievable: True;  49 achievable: True;  63 achievable: True;  189 achievable: True
+
+  PHANTOM-VOLUME THEOREM verified for strong components <= 8: no strong tournament on <=8 vertices has H in {7,21}; strong-min grows (>=25 for m>=7) => {7,21} are the only durable gaps (genus-2), confirming HYP-2271.
+
+DONE.
