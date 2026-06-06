@@ -1,0 +1,50 @@
+
+=== C=9 = 3x3  n=5 ===
+  subgroups d|C (1<d<C): [3]   |V|=2 (dim 1)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [3]                          decomp H_(3,)   A=2
+  class-size histogram (size -> #classes): {1: 6, 2: 1}
+  deficiency (model, exact) = 1
+
+=== C=27 = 3x3x3  n=14 ===
+  subgroups d|C (1<d<C): [3, 9]   |V|=4 (dim 2)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [9]                          decomp H_(3,)   A=16
+      [3, 6, 12]                   decomp H_(3, 9)   A=112
+      [3, 6, 9, 12]                decomp H_(9,)   A=16
+  class-size histogram (size -> #classes): {1: 3960, 2: 66, 4: 1}
+  deficiency (model, exact) = 69
+
+=== C=15 = 3x5  n=8 ===
+  subgroups d|C (1<d<C): [3, 5]   |V|=4 (dim 2)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [5]                          decomp H_(3,)   A=4
+      [3, 6]                       decomp H_(5,)   A=4
+      [3, 5, 6]                    decomp H_(3, 5)   A=0
+  class-size histogram (size -> #classes): {1: 56, 2: 4}
+  deficiency (model, exact) = 4
+
+=== C=21 = 3x7  n=11 ===
+  subgroups d|C (1<d<C): [3, 7]   |V|=4 (dim 2)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [7]                          decomp H_(3,)   A=8
+      [3, 6, 9]                    decomp H_(7,)   A=8
+      [3, 6, 7, 9]                 decomp H_(3, 7)   A=0
+  class-size histogram (size -> #classes): {1: 496, 2: 8}
+  deficiency (model, exact) = 8
+
+=== C=25 = 5x5  n=13 ===
+  subgroups d|C (1<d<C): [5]   |V|=2 (dim 1)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [5, 10]                      decomp H_(5,)   A=8
+  class-size histogram (size -> #classes): {1: 2040, 2: 4}
+  deficiency (model, exact) = 4
+
+=== C=35 = 5x7  n=18 ===
+  subgroups d|C (1<d<C): [5, 7]   |V|=4 (dim 2)
+  A(D) per generator (D as sorted magnitudes -> count):
+      [7, 14]                      decomp H_(5,)   A=16
+      [5, 10, 15]                  decomp H_(7,)   A=16
+      [5, 7, 10, 14, 15]           decomp H_(5, 7)   A=0
+  class-size histogram (size -> #classes): {1: 65504, 2: 16}
+  deficiency (model, exact) = 16
