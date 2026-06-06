@@ -1,0 +1,4 @@
+n=5: global max H=15; local-maximum H-values: {15: 64}
+   METASTABLE local maxima (H<global): 0  => rugged/spin-glass landscape: False
+n=6: global max H=45; local-maximum H-values: {37: 720, 45: 480}
+   METASTABLE local maxima (H<global): 720  => rugged/spin-glass landscape: True
