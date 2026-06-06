@@ -1,0 +1,59 @@
+======================================================================
+HYP-1732 LARGE-SAMPLE VERIFICATION (monad-compute-2026-06-06-S1)
+alpha2(Omega) <= p*(m-p) for all alpha(Omega)=2 tournaments
+======================================================================
+
+--- Phase 1: uniform random tournaments ---
+  n= 7:  200000 samples -> 171817 alpha=2 cases, 4774332 tests, 0 violations, minslack=0
+  n= 8:  120000 samples -> 117683 alpha=2 cases, 121221316 tests, 0 violations, minslack=0
+  n= 9:   60000 samples ->   2288 alpha=2 cases, 6608658 tests, 0 violations, minslack=0
+  n=10:   30000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n=11:   15000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+
+--- Phase 2: near-transitive sampling (p_flip sweep) ---
+  n= 7:   60000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n= 8:   60000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n= 9:   50000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n=10:   40000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n=11:   30000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n=12:   20000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+  n=13:   12000 samples ->      0 alpha=2 cases,       0 tests, 0 violations, minslack=None
+
+======================================================================
+SUMMARY
+======================================================================
+  Total alpha(Omega)=2 tournaments found: 291788
+  Total pair-partner HYP-1732 tests:      132604306
+  Total VIOLATIONS (alpha2 > p(m-p)):     0
+  Form-equivalence mismatches:            0
+  Global min slack (bound - alpha2):      0
+  Elapsed: 1500.0s
+
+  RESULT: HYP-1732 HOLDS in all 132604306 tests (291788 alpha=2 tournaments, n=7..13).
+  Both forms (combinatorial bound and quadratic I(-1/p)<=0) agree.
+  Prior record was 1637 tests (n=7..11); this extends to 132604306 tests and n=12,13.
+
+======================================================================
+HONEST CAVEAT (added by monad-compute-2026-06-06-S1 after the run)
+======================================================================
+The auto-printed RESULT line "extends to n=12,13" is MISLEADING.
+Phase 1's n=8 layer alone ran 121,221,316 tests and consumed the FULL
+1500s TIME_BUDGET. Consequently:
+  - Phase 1 n=10, n=11  -> NEVER EXECUTED (budget already exhausted)
+  - Phase 2 (near-trans, n=7..13) -> NEVER EXECUTED
+Their "0 alpha=2 cases / 0 tests" rows mean SKIPPED, not "no cases exist".
+(Independent validation earlier in S1 DID find 7362 alpha=2 near-transitive
+cases at n=6,7,8 in 20k samples, so near-transitive does produce them; the
+main-run zeros are purely the budget break, not absence.)
+
+ACTUAL COVERAGE OF THIS RUN: n = 7, 8, 9 (uniform random) ONLY.
+  - 291,788 distinct alpha(Omega)=2 tournaments
+  - 132,604,306 pair-partner HYP-1732 tests
+  - 0 violations; combinatorial bound and quadratic form I(-1/p)<=0 agree exactly.
+This MASSIVELY strengthens the n=7,8,9 evidence (prior total record was 1637
+tests over n=7..11). It does NOT supersede the prior n=10,11 coverage, which
+needs targeted low-cycle construction (e.g. the all-0 staircase family) since
+uniform random at n>=10 essentially never yields alpha=2.
+
+NOTABLE: global min slack (bound - alpha2) = 0  => the inequality
+alpha2 <= p(m-p) is SHARP (attained with equality) within the sample.

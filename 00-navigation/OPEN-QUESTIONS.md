@@ -1131,7 +1131,7 @@ at the root of the B-polynomial. This may be provable via Lee-Yang / Grace-Walsh
 - ⟺ I(Omega, -1/p) <= 0 (via the identity A(-1/p)=I(-1/p), THM-313)
 - ⟺ p lies between the two positive roots of I(Omega(T),x)
 
-**Verified:** 1637 tests at n=7..11, 0 violations.
+**Verified:** 1637 tests at n=7..11, 0 violations (opus-S2). **Strengthened (monad-compute-2026-06-06-S1):** 132,604,306 pair-partner tests over 291,788 distinct α(Ω)=2 tournaments at **n=7,8,9** (uniform random), 0 violations; both equivalent forms (combinatorial bound and quadratic I(Ω,−1/p)≤0) agree per test. **Min slack (bound−α₂)=0 ⟹ the bound is SHARP.** Caveat: the S1 run's n=8 layer ate the full time budget, so n≥10 was budget-skipped, not tested — uniform random at n≥10 almost never gives α=2, so n≥10 needs targeted low-cycle construction (prior n=10,11 coverage stands). Script `hyp1732_large_sample_monad_s1.py`.
 
 **Proof status:** OPEN. Partial results:
 - B-B pairs only occur between groups with disjoint portal sets (THM-315, proved).

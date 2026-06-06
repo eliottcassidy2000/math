@@ -2112,8 +2112,9 @@ Source: alpha_full_n9.out, alpha_full_n11.out, alpha_full_n13.out, alpha_full_n1
 **All roots real negative** confirmed at all k.
 **See:** script `markov_staircase_h.py`, results `markov_staircase_h.out`
 
-## HYP-1732: Pair-partner count p satisfies α₂ ≤ p(m-p) for tournament Omega(T) with d=2 (opus-2026-05-21-S1, updated opus-2026-05-22-S2)
-**Status:** OPEN (computationally verified 1637 tests n=7..11, 0 violations)
+## HYP-1732: Pair-partner count p satisfies α₂ ≤ p(m-p) for tournament Omega(T) with d=2 (opus-2026-05-21-S1, updated opus-2026-05-22-S2; large-sample monad-compute-2026-06-06-S1)
+**Status:** OPEN (computationally verified — prior 1637 tests n=7..11; **now 132,604,306 pair-partner tests over 291,788 distinct α(Ω)=2 tournaments at n=7,8,9, 0 violations**, monad-compute-S1)
+**Large-sample verification (monad-compute-2026-06-06-S1, `hyp1732_large_sample_monad_s1.py`):** uniform-random sweep, DFS odd-cycle enumerator validated 0-mismatch vs `tournament_lib.find_odd_cycles` (4000 cases) and α/α₂ validated vs brute independence polynomial (20k cases, 7362 α=2). **132,604,306 tests, 0 violations.** BOTH equivalent forms agree exactly per test: the combinatorial bound α₂≤p(m-p) and the quadratic I(Ω,−1/p)≤0 (⟺ p²−mp+α₂≤0). **Global min slack (bound−α₂)=0 ⟹ the inequality is SHARP** (attained with equality on real tournaments). **Honest scope:** this run covered **n=7,8,9 only** — the n=8 uniform layer alone consumed the 1500s budget, so the planned n=10..13 / near-transitive layers were budget-skipped (NOT empty; an in-run validation found 7362 α=2 near-transitive cases at n=6,7,8). Uniform random at n≥10 essentially never yields α=2, so n≥10 still needs targeted low-cycle construction (e.g. the all-0 staircase) — prior n=10,11 coverage NOT superseded. See `05-knowledge/results/hyp1732_large_sample_monad_s1.out` (HONEST CAVEAT section).
 **Statement:** For any tournament T with alpha(Omega)=2 and C* chosen by pair-partner construction, the count p = |cycles disjoint from C*| satisfies α₂(Omega) ≤ p(m-p).
 **Equivalences (all proved):** B interlaces A (HB condition) ⟺ I(Omega,-1/p)≤0 (via THM-313 identity) ⟺ α₂ ≤ p(m-p).
 **Portal structure (THM-315, proved):** B-B pairs only between groups with DISJOINT portal sets. Same-portal pairs impossible (sharing a V(C*) vertex = conflict).
