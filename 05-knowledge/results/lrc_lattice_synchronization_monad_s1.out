@@ -94,3 +94,10 @@ pair; it is dominated by the floor pinch (q=n) and CANNOT lower M below 1/n.
 A signed zero-clock => an unsigned counterexample only if it is ALSO a floor
 binding pair, i.e. v_i+v_j≡0 mod n — a DIFFERENT modulus. So the signed split of
 the worry-set (AP vs V*) is invisible to M: a structural-reduction NO-GO.
+
+=== APPENDIX: synchronization folding on the hard core (2AP, n=14) ===
+2AP=[2,4,...,26]: primary L_14 collapses (14|14 => λ_14=0).
+On L_28: shell-partners mod 28 = (2,26),(4,24),(6,22),(8,20),(10,18),(12,16); 14 self.
+13 runners FOLD to 7 shells {2,4,6,8,10,12,14}.
+λ_28(2AP)=1/14 at k=1  ==  λ_28(transversal {2,4,6,8,10,12,14})=1/14 at k=1.
+=> floor recovered on L_28 with 7 effective runners (synchronization reduction).
