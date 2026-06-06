@@ -1,0 +1,17 @@
+=== PART 1: orientation-free SUPPORT is necessary for M(g,e) != 0 ===
+    (M != 0  =>  g,e jointly coverable by disjoint odd cycles in K_n)
+n=4 (all 63 T): P(M!=0|share)=1.000  P(M!=0|disjoint)=0.000
+        necessary-condition violations (M!=0 but support empty): 0/960  [support empty <=> disjoint arcs at n=4; matches HYP-1165]
+n=5 (all 1023 T): P(M!=0|share)=1.000  P(M!=0|disjoint)=0.516
+        necessary-condition violations (M!=0 but support empty): 0/46080  [support empty <=> disjoint arcs at n=4; matches HYP-1165]
+n=6 (all 4000 T): P(M!=0|share)=1.000  P(M!=0|disjoint)=0.689
+        necessary-condition violations (M!=0 but support empty): 0/420000  [support empty <=> disjoint arcs at n=4; matches HYP-1165]
+
+=== PART 2: is the arc-interaction graph A(T) a finer invariant than H? ===
+n=5: 1024 labeled tournaments
+  distinct H-values:                 7
+  distinct (H, A(T)-degree-seq):      10
+  => A(T) degree sequence REFINES H.
+     H=3: split into 2 A(T)-classes (sizes [80, 40])
+     H=9: split into 2 A(T)-classes (sizes [120, 120])
+     H=15: split into 2 A(T)-classes (sizes [40, 24])

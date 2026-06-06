@@ -1,0 +1,8 @@
+DELTA + INTERACTION (verified):
+  n=4: delta even? True; lands on 7/21? False; P(M!=0|share)=1.000, P(M!=0|disjoint)=0.000
+  n=5: delta even? True; lands on 7/21? False; P(M!=0|share)=1.000, P(M!=0|disjoint)=0.516
+  => delta=discrete derivative (even); {7,21} forbid deltas h-7,h-21; M=odd-cycle
+     co-occurrence: vertex-sharing arcs ALWAYS interact, disjoint iff a common odd cycle.
+
+FLOOR-vs-GADGET invariant rho=chi_true/chi_Hoffman: AG_n & metagraph ->inf (gadget),
+LRC AP ~1 (spectrally tight), HN ~1.4 (mixed). Hard = gadget-dominated.
