@@ -1,0 +1,23 @@
+(1) chi DIMENSION-LADDER of unit-distance Cayley graphs
+   1D  Cay(Z/m,{±1}) = C_m (LRC tie-graph):
+        m=5: chi=3  (2 even / 3 odd = the sieve arity, 2-adic seam)
+        m=6: chi=2  (2 even / 3 odd = the sieve arity, 2-adic seam)
+        m=7: chi=3  (2 even / 3 odd = the sieve arity, 2-adic seam)
+        m=8: chi=2  (2 even / 3 odd = the sieve arity, 2-adic seam)
+        m=9: chi=3  (2 even / 3 odd = the sieve arity, 2-adic seam)
+   2D  triangular (Eisenstein) unit-distance patches:
+        triangular disk R=1 (7 pts, 12 unit edges): chi=3
+        triangular disk R=2 (19 pts, 42 unit edges): chi=3
+        triangular disk R=3 (37 pts, 90 unit edges): chi=3
+
+(2) MOSER SPINDLE = a '2D multiplier': two unit rhombi glued by a rotation of arccos(5/6)
+   spindle: |D-D'|=1.0000 (=1 unit edge), 11 unit edges, chi=4  (=4: forces a 4th color)
+   the gluing rotation cos(th)=5/6 is the CM/multiplier 'perspective' in 2D — exactly the role
+   the LRC multiplier a in (Z/m)* plays on the shell (S625): rotated copies create the obstruction.
+
+(3) TRANSFER: rigidity raises chi in BOTH — odd cycle (1D) and spindle (2D) are the same move
+   1D: C_m odd  => not 2-colorable => chi=3  (single->multi sieve, S632)
+   2D: spindle  => not 3-colorable => chi=4  (Moser; the 2D 'odd structure')
+   => 'multi-sieve necessary' (LRC) and 'chi(plane)>=k' (Hadwiger-Nelson) are the SAME method:
+      exhibit a finite rigid subgraph whose chi is forced up. LRC circulants ARE such finite
+      unit-distance graphs; HN's spindle/rotation IS the LRC multiplier/perspective trick.
