@@ -1,0 +1,78 @@
+==============================================================================
+S702: LOWER-HALF DELETION LAW  M(AP_n\{a}) = 2/D*,  D*=min{D>=n+a: gcd(D,a)=1}
+==============================================================================
+
+  law:     551/551 exact matches (ALL PASS)  [n=4..48]
+  witness: 551/551 lower-bound witnesses realize 2/D* (ALL PASS)
+
+==============================================================================
+Minimal UPPER-BOUND witness subset  W <= AP_n\{a}  with M(W)=2/D*
+==============================================================================
+  n= 6 a= 1 (coprime): D*= 7  min witness W=(2, 3, 5)
+  n= 6 a= 2 (  gcd=2): D*= 9  min witness W=(1, 3, 4, 5)
+  n= 7 a= 1 (coprime): D*= 8  min witness W=(2, 4, 6)
+  n= 7 a= 2 (coprime): D*= 9  min witness W=(1, 3, 4, 5)
+  n= 7 a= 3 (coprime): D*=10  min witness W=None
+  n= 8 a= 1 (coprime): D*= 9  min witness W=None
+  n= 8 a= 2 (  gcd=2): D*=11  min witness W=None
+  n= 8 a= 3 (coprime): D*=11  min witness W=None
+  n= 9 a= 1 (coprime): D*=10  min witness W=(2, 4, 6, 8)
+  n= 9 a= 2 (coprime): D*=11  min witness W=None
+  n= 9 a= 3 (  gcd=3): D*=13  min witness W=None
+  n= 9 a= 4 (coprime): D*=13  min witness W=None
+  n=10 a= 1 (coprime): D*=11  min witness W=None
+  n=10 a= 2 (  gcd=2): D*=13  min witness W=None
+  n=10 a= 3 (coprime): D*=13  min witness W=None
+  n=10 a= 4 (  gcd=2): D*=15  min witness W=None
+  n=11 a= 1 (coprime): D*=12  min witness W=None
+  n=11 a= 2 (coprime): D*=13  min witness W=None
+  n=11 a= 3 (coprime): D*=14  min witness W=None
+  n=11 a= 4 (coprime): D*=15  min witness W=None
+  n=11 a= 5 (coprime): D*=16  min witness W=None
+  n=12 a= 1 (coprime): D*=13  min witness W=None
+  n=12 a= 2 (  gcd=2): D*=15  min witness W=None
+  n=12 a= 3 (  gcd=3): D*=16  min witness W=None
+  n=12 a= 4 (  gcd=4): D*=17  min witness W=None
+  n=12 a= 5 (coprime): D*=17  min witness W=None
+  n=13 a= 1 (coprime): D*=14  min witness W=None
+  n=13 a= 2 (coprime): D*=15  min witness W=None
+  n=13 a= 3 (coprime): D*=16  min witness W=None
+  n=13 a= 4 (coprime): D*=17  min witness W=None
+  n=13 a= 5 (coprime): D*=18  min witness W=None
+  n=13 a= 6 (coprime): D*=19  min witness W=None
+  n=14 a= 1 (coprime): D*=15  min witness W=None
+  n=14 a= 2 (  gcd=2): D*=17  min witness W=None
+  n=14 a= 3 (coprime): D*=17  min witness W=None
+  n=14 a= 4 (  gcd=2): D*=19  min witness W=None
+  n=14 a= 5 (coprime): D*=19  min witness W=None
+  n=14 a= 6 (  gcd=2): D*=23  min witness W=None
+  n=15 a= 1 (coprime): D*=16  min witness W=None
+  n=15 a= 2 (coprime): D*=17  min witness W=None
+  n=15 a= 3 (  gcd=3): D*=19  min witness W=None
+  n=15 a= 4 (coprime): D*=19  min witness W=None
+  n=15 a= 5 (  gcd=5): D*=21  min witness W=None
+  n=15 a= 6 (  gcd=3): D*=23  min witness W=None
+  n=15 a= 7 (coprime): D*=22  min witness W=None
+  n=16 a= 1 (coprime): D*=17  min witness W=None
+  n=16 a= 2 (  gcd=2): D*=19  min witness W=None
+  n=16 a= 3 (coprime): D*=19  min witness W=None
+  n=16 a= 4 (  gcd=4): D*=21  min witness W=None
+  n=16 a= 5 (coprime): D*=21  min witness W=None
+  n=16 a= 6 (  gcd=2): D*=23  min witness W=None
+  n=16 a= 7 (coprime): D*=23  min witness W=None
+  n=17 a= 1 (coprime): D*=18  min witness W=None
+  n=17 a= 2 (coprime): D*=19  min witness W=None
+  n=17 a= 3 (coprime): D*=20  min witness W=None
+  n=17 a= 4 (coprime): D*=21  min witness W=None
+  n=17 a= 5 (coprime): D*=22  min witness W=None
+  n=17 a= 6 (coprime): D*=23  min witness W=None
+  n=17 a= 7 (coprime): D*=24  min witness W=None
+  n=17 a= 8 (coprime): D*=25  min witness W=None
+  n=18 a= 1 (coprime): D*=19  min witness W=None
+  n=18 a= 2 (  gcd=2): D*=21  min witness W=None
+  n=18 a= 3 (  gcd=3): D*=22  min witness W=None
+  n=18 a= 4 (  gcd=2): D*=23  min witness W=None
+  n=18 a= 5 (coprime): D*=23  min witness W=None
+  n=18 a= 6 (  gcd=6): D*=25  min witness W=None
+  n=18 a= 7 (coprime): D*=25  min witness W=None
+  n=18 a= 8 (  gcd=2): D*=27  min witness W=None

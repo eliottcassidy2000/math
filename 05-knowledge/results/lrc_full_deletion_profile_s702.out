@@ -1,0 +1,27 @@
+==============================================================================
+S702: UNIFIED single-deletion profile of AP_n  (both halves)
+==============================================================================
+
+  unified closed form: 777/777 (ALL PASS)  [n=4..40]
+  lower-half c=2 two-binder (b1+b2=D*): ALL PASS
+
+  Deletion-criticality spread (argmax = guard, argmin = load-bearing):
+   n= 6: max M=1/3 at a=3 (=n/2 guard); min M=1/5 at a=5 (=n-1 fastest)
+   n= 7: max M=1/4 at a=1; min M=1/6 at a=6 (=n-1 fastest)
+   n= 8: max M=1/4 at a=4 (=n/2 guard); min M=1/7 at a=7 (=n-1 fastest)
+   n= 9: max M=1/5 at a=1; min M=1/8 at a=8 (=n-1 fastest)
+   n=10: max M=1/5 at a=5 (=n/2 guard); min M=1/9 at a=9 (=n-1 fastest)
+   n=11: max M=1/6 at a=1; min M=1/10 at a=10 (=n-1 fastest)
+   n=12: max M=1/6 at a=6 (=n/2 guard); min M=1/11 at a=11 (=n-1 fastest)
+   n=13: max M=1/7 at a=1; min M=1/12 at a=12 (=n-1 fastest)
+   n=14: max M=1/7 at a=7 (=n/2 guard); min M=1/13 at a=13 (=n-1 fastest)
+   n=15: max M=1/8 at a=1; min M=1/14 at a=14 (=n-1 fastest)
+   n=16: max M=1/8 at a=8 (=n/2 guard); min M=1/15 at a=15 (=n-1 fastest)
+   n=17: max M=1/9 at a=1; min M=1/16 at a=16 (=n-1 fastest)
+   n=18: max M=1/9 at a=9 (=n/2 guard); min M=1/17 at a=17 (=n-1 fastest)
+   n=19: max M=1/10 at a=1; min M=1/18 at a=18 (=n-1 fastest)
+   n=20: max M=1/10 at a=10 (=n/2 guard); min M=1/19 at a=19 (=n-1 fastest)
+   n=21: max M=1/11 at a=1; min M=1/20 at a=20 (=n-1 fastest)
+   n=22: max M=1/11 at a=11 (=n/2 guard); min M=1/21 at a=21 (=n-1 fastest)
+   n=23: max M=1/12 at a=1; min M=1/22 at a=22 (=n-1 fastest)
+   n=24: max M=1/12 at a=12 (=n/2 guard); min M=1/23 at a=23 (=n-1 fastest)
