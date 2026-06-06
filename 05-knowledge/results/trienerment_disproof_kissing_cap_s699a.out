@@ -1,0 +1,25 @@
+TRIERNEMENT '=1' LAYER = NORM-1 LAYER. For 2D LATTICES, per-point unit degree = kissing # κ:
+  square ℤ² (Gaussian)          : kissing κ =  4  ⟹  unit distances ≈ κ·n/2 = 2.0·n  (LINEAR, exponent 1)
+  triangular (Eisenstein ζ6)    : kissing κ =  6  ⟹  unit distances ≈ κ·n/2 = 3.0·n  (LINEAR, exponent 1)
+  hexagonal-dual/other          : kissing κ =  6  ⟹  unit distances ≈ κ·n/2 = 3.0·n  (LINEAR, exponent 1)
+  rectangular 1x2               : kissing κ =  2  ⟹  unit distances ≈ κ·n/2 = 1.0·n  (LINEAR, exponent 1)
+
+  2D-lattice kissing CAP = 6 (triangular/Eisenstein) ⟹ ANY 2D lattice gives ≤ 3n unit distances.
+  Harborth ⌊3n−√(12n−3)⌋ = exactly this cap minus the √ perimeter — the BEST 2D lattice is triangular.
+
+WHY THE GRID/LATTICE IS NOT OPTIMAL (the trienerment reading of the disproof):
+  The '=1' layer of a 2D lattice is CAPPED by the Euclidean kissing number κ≤6.
+  The CM construction is NOT a 2D lattice — it is a 2D image of a high-rank unit group, where
+  '=1' means FIELD-norm 1 (β·β̄=1), which has UNBOUNDEDLY many solutions (Hilbert 90 + class-
+  field towers, Golod–Shafarevich). The trienerment tie-layer is then arithmetic, NOT geometric,
+  so it is not capped at 6 ⟹ n^{1.014} unit distances. The trienerment localizes the disproof to:
+    'replace the Euclidean-kissing =1 layer (cap 6) by a field-norm =1 layer (no cap).'
+
+TOY: # roots of unity (norm-1, |ζ|=1) in ℚ(ζ_m) = 2m grows with m — the unbounded =1 layer:
+   ℚ(ζ_4): 8 roots of unity on |z|=1  (vs 2D lattice cap 6)
+   ℚ(ζ_6): 12 roots of unity on |z|=1  (vs 2D lattice cap 6)
+   ℚ(ζ_12): 24 roots of unity on |z|=1  (vs 2D lattice cap 6)
+   ℚ(ζ_24): 48 roots of unity on |z|=1  (vs 2D lattice cap 6)
+   ℚ(ζ_60): 120 roots of unity on |z|=1  (vs 2D lattice cap 6)
+  (Real CM construction packs these into the plane via class-field towers; the point is the
+   tie-layer is no longer kissing-bounded.)
