@@ -1,0 +1,32 @@
+(1) The MOSER rotation is a unit-norm element of ℚ(√−11):
+   γ=11+√−11: β=γ/γ̄ = 5/6 + 1/6·√−11  = (5+√−11)/6 ; |β|²=1.000000
+   angle=33.5573°; cosθ=Re(β)=0.8333333333333334=5/6; root of unity? None (None ⟹ NON-torsion, the Moser/√−11 rotation)
+   minimal poly 3z²−5z+3 (disc −11, Mahler measure 3 ≠ 1 ⟹ non-cyclotomic).
+
+(2) ℚ(√−11) has INFINITELY MANY independent unit-norm rotations (Hilbert 90, β=γ/γ̄):
+   γ=11+1√−11: β angle=33.557°  cos=0.8333  root-of-unity?=None
+   γ=1+1√−11: β angle=146.443°  cos=-0.8333  root-of-unity?=None
+   γ=2+1√−11: β angle=117.818°  cos=-0.4667  root-of-unity?=None
+   γ=3+1√−11: β angle=95.739°  cos=-0.1000  root-of-unity?=None
+   γ=4+1√−11: β angle=79.328°  cos=0.1852  root-of-unity?=None
+   γ=5+1√−11: β angle=67.115°  cos=0.3889  root-of-unity?=None
+   γ=1+2√−11: β angle=162.854°  cos=-0.9556  root-of-unity?=None
+   γ=3+2√−11: β angle=131.329°  cos=-0.6604  root-of-unity?=None
+   ⟹ many DISTINCT non-torsion unit-norm rotations, ALL in the single field ℚ(√−11).
+   The unit-norm group is infinite rank ⟹ you can pack many INDEPENDENT rotations WITHOUT new fields.
+
+(3) ANSWER to 'does de Grey force ≥3 distinct √−d?': almost certainly NO (the field COUNT
+    is the wrong invariant — Minkowski sums preserve the field; de Grey plausibly lives in
+    ℚ(√−3,√−11), 2 imaginary fields). The RIGHT invariant is the ROTATION RANK:
+    χ=3 (cyclotomic floor, rank 0 = torsion/roots of unity); Moser χ=4 (rank 1, the √−11
+    rotation); de Grey χ=5 forces rank ≥2 (two independent unit-norm rotations). χ = 3 + rank.
+
+(4) CROSS-PROBLEM (the shared object = unit-norm elements |β|=1 of imag-quadratic/CM fields):
+   LRC   : the WITNESSES = n-th roots of unity = the TORSION unit-norm (THM-403); the cyclotomic
+           FLOOR. LRC hardness = the torsion ARITHMETIC (shells mod 2n−1, prime-3) — rank 0.
+   UD    : Sawin's n^1.014 = COUNT of unit-norm elements in a ball (CM field + class-field tower)
+           — the non-torsion group's DENSITY. Escapes the lattice (kissing 6) via non-torsion.
+   HN    : χ = 3 + rank of forced non-torsion rotations (Moser, de Grey). Escapes χ=3 floor.
+   ⟹ LRC = the TORSION (cyclotomic) member; UD & HN = the NON-TORSION escape members; the
+      'escape from the cyclotomic floor' = USING non-torsion unit-norm elements. Same object,
+      three readings: torsion clock (LRC), ball-count (UD), independent-rank (HN).
