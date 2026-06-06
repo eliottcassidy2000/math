@@ -1,0 +1,17 @@
+Each config: C=2n−1; shell-partners (v_i+v_j≡0 mod C); over ALL 2^(n-1) signs:
+  #distinct pair-clock multisets (sign-orbit), max #zero-clocks exposable, maxcut sum-count
+  n=3 V=(1, 2): C=5; shell-partners=none; sign-orbit=2 (of 2^2=4); max zero-clocks=0; maxcut=1
+  n=4 V=(1, 2, 3): C=7; shell-partners=none; sign-orbit=4 (of 2^3=8); max zero-clocks=0; maxcut=2
+  n=5 V=(1, 2, 3, 4): C=9; shell-partners=none; sign-orbit=7 (of 2^4=16); max zero-clocks=0; maxcut=4
+  n=5 V=(1, 2, 4, 7): C=9; shell-partners=[(2, 7)]; sign-orbit=6 (of 2^4=16); max zero-clocks=1; maxcut=4
+  n=6 V=(1, 2, 3, 4, 5): C=11; shell-partners=none; sign-orbit=16 (of 2^5=32); max zero-clocks=0; maxcut=6
+  n=6 V=(2, 3, 4, 5, 9): C=11; shell-partners=[(2, 9)]; sign-orbit=12 (of 2^5=32); max zero-clocks=1; maxcut=6
+  n=7 V=(1, 2, 3, 4, 5, 6): C=13; shell-partners=none; sign-orbit=32 (of 2^6=64); max zero-clocks=0; maxcut=9
+  n=7 V=(1, 2, 3, 4, 9, 12): C=13; shell-partners=[(1, 12), (4, 9)]; sign-orbit=18 (of 2^6=64); max zero-clocks=2; maxcut=9
+  n=8 V=(1, 2, 3, 4, 5, 6, 7): C=15; shell-partners=none; sign-orbit=60 (of 2^7=128); max zero-clocks=0; maxcut=12
+  n=8 V=(1, 2, 5, 6, 9, 12, 13): C=15; shell-partners=[(2, 13), (6, 9)]; sign-orbit=36 (of 2^7=128); max zero-clocks=2; maxcut=12
+
+RIGOROUS: sign=2-coloring; sum-clock iff bichromatic (cut edge), diff-clock iff mono.
+Zero clock mod C ⟺ shell-partner (v_i+v_j≡0 mod 2n-1, THM-401). AP {1..n-1}: max sum 2n-3<C,
+so AP has NO shell-partner / NO zero clock. Configs with a shell-partner expose a zero clock
+under the cut separating that pair — a sign-orbit invariant FINER than the observer M.

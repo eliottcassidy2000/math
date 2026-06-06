@@ -1,0 +1,13 @@
+AP    V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+      M≈0.071429 (1/14=0.071429, tight=True); shell-partners (sum≡0 mod 27) = NONE
+V*    V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+      M≈0.071429 (1/14=0.071429, tight=True); shell-partners (sum≡0 mod 27) = [(3, 24)]
+2*AP  V=(2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26)
+      M≈0.071429 (1/14=0.071429, tight=True); shell-partners (sum≡0 mod 27) = NONE
+
+V* shell-partner 3+24=27=C ; note 24 = 2*12 (DOUBLING) — V* replaces AP's 12 by 24.
+So the worry-set SPLITS by signed structure:
+  AP-type (n≤7 all tight rows, AP at all n): NO shell-partner (max sum 2n-3 < 2n-1) — no signed zero-clock.
+  V*-type (first at n=14): HAS shell-partner via the doubling 24=2·12 hitting C=27=3³ — a signed zero-clock.
+The signed LRC is thus STRICTLY FINER than M: it separates the n=14 floor {AP, V*} that M cannot.
+n=14 is exactly where C=2n-1=27 first admits a doubled-speed shell-partner (prime-2 × prime-3).

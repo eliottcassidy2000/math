@@ -1,0 +1,18 @@
+WORRY-SET signed signature: tight configs (M=1/n), their shell-partners & sign-orbit
+ n=4 (C=7): 1 tight configs in [1,8]
+    (1, 2, 3): shell-partners=NONE; sign-orbit=4
+    => tight with shell-partner: 0, without: 1
+ n=5 (C=9): 2 tight configs in [1,10]
+    (1, 2, 3, 4): shell-partners=NONE; sign-orbit=7
+    (1, 3, 4, 7): shell-partners=NONE; sign-orbit=7
+    => tight with shell-partner: 0, without: 2
+ n=6 (C=11): 2 tight configs in [1,12]
+    (1, 2, 3, 4, 5): shell-partners=NONE; sign-orbit=16
+    (1, 3, 4, 5, 9): shell-partners=NONE; sign-orbit=16
+    => tight with shell-partner: 0, without: 2
+ n=7 (C=13): 1 tight configs in [1,14]
+    (1, 2, 3, 4, 5, 6): shell-partners=NONE; sign-orbit=32
+    => tight with shell-partner: 0, without: 1
+
+Reading: if ALL tight configs have NO shell-partner, that's a worry-set theorem candidate
+(tight ⟹ no pair sums to 2n-1). If some do, the signed structure splits the worry-set.
