@@ -1,0 +1,20 @@
+SHARED TECHNIQUE — Fourier/spectral (Hoffman) bound on the chromatic number:
+  TRIANGULAR LATTICE (UD/Eisenstein): adjacency symbol range [-3.000,6.000];
+    Hoffman χ ≥ 1 − λmax/λmin = 1 − 6.0/(-3.0) = 3.000  ⟹ χ ≥ 3 (TIGHT: χ=3, Eisenstein (i−j) mod 3)
+  PLANE (Hadwiger–Nelson): the unit-circle measure's transform is the Bessel J0;
+    min J0 = -0.4028 at x≈3.83; spectral (fractional) χ ≥ 1 − 1/min(J0) = 3.483
+    (the same Hoffman/Lovász method; the true χ(ℝ²)∈[5,7] needs the combinatorial Moser/deGrey graphs.)
+
+SHARED STRUCTURE — Eisenstein ζ6 / π/3 (the extremal configs of all three):
+  UD optimum = triangular/Eisenstein lattice (κ=6, S699a);
+  LRC worry-set witnesses = roots of unity (THM-403); n=14 prime-3 C=27=3³ = Eisenstein norm-3 (HYP-2170);
+  HN: the Moser spindle (χ=4) & de Grey graph (χ=5) live on the Eisenstein lattice rotated by
+      INCOMMENSURATE angles arccos(5/6)/arcsin(1/(2√3)) — the Diophantine/irrational structure = LRC's home.
+
+  Moser-spindle rotation θ = 2·arcsin(1/(2√3)) = 0.58569 rad = 33.557° (irrational multiple of π) — an
+  INCOMMENSURATE rotation, the same resonance/Diophantine phenomenon LRC studies (the speeds' irrationality).
+
+THE THREE INVARIANTS OF ONE GRAPH FAMILY:
+  HN  = χ (chromatic number)            of Cay(ℝ², unit circle)  ∈ [5,7]
+  UD  = max edges (edge density)         of Cay(lattice, unit vectors)  ≈ κ n/2 (κ≤6) or n^1.014 (CM)
+  LRC = independence/covering density p0 of Cay(circle, danger arcs); worry-set tournament dichromatic χ=2
