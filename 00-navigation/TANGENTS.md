@@ -2227,3 +2227,24 @@ a=1 and a=(n+1)/2; all n -> fastest runner n-1 is the most load-bearing
 does the ladder (not just the guard) generalize to V*/2AP; double-deletion D*.
 See `04-computation/lrc_full_deletion_profile_s702.py`,
 `05-knowledge/results/lrc_full_deletion_profile_s702.out`, HYP-2261, HYP-2260.
+
+**T759** #signed-LRC #additive-face #multiplicative-energy #CM-field #formal-group #Krawtchouk #density-quantization-mirror #matching-cap | certainty: HIGH (THM-414 proved + verified) | source: monad-explorer-2026-06-06-S704
+The signed-LRC ADDITIVE FACE (pair-sums a_i+a_j mod C=2n-1, the face the sign
+group exposes, S699-T2/T3) = the MULTIPLICATIVE ENERGY of the runners' roots of
+unity w_i=zeta_C^{a_i} in the CM field Q(zeta_C): r_+(s)=#{i<j:a_i+a_j=s} = coeff
+of zeta^s in sum w_i w_j; shell-partner <=> conjugate pair w_i w_j=1; in tangent
+coord x_i=tan(pi a_i/C) the face is the spherical formal group
+F_-(x,y)=(x+y)/(1-xy) (sibling of HYP-1992's hyperbolic F on the time axis), with
+shell-partner = additive inverse x_i=-x_j. On the sign hypercube the zero-clock
+count Z=cut(shell-matching) is a PURE degree-2 Krawtchouk (K_2) observable (Walsh
+support = the shell edges, ZERO linear mass). RESOLVES the repeated S699/S702/S703
+handoff (the LRC mirror of density quantization THM-412) in the NEGATIVE: the
+matching cap r_+(s)<=floor(N/2) (pairs summing to a fixed s are vertex-disjoint)
+means the cyclic side has NO popular-norm escape, unlike the unbounded lattice
+popular norm r_Q(D). Secondary: additive energy E_+ is dilation-invariant and
+splits the n=14 floor (AP,2AP: E_+=328,shell=0; V*: E_+=290,shell=1). OPEN
+(HYP-2272): is (E_+,r_+(0)) a complete worry-set invariant; is the 3-fold sum the
+cyclic image of S702's rank jump; is the V* deficit 38 a carry.
+See `01-canon/theorems/THM-414-...md`,
+`07-reflections/the-signed-lrc-additive-face-is-multiplicative-energy-s704.md`,
+`04-computation/signed_lrc_multiplicative_energy_s704.py`, HYP-2272.
