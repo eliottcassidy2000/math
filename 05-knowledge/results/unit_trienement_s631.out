@@ -1,0 +1,18 @@
+TRIANGULAR (Eisenstein CM Q(sqrt-3)) patch, 37 points:
+   trienement: <1 arrows=0, =1 TIES(unit dist)=90, >1 arrows=576
+   tie-degree distribution: {3: 6, 4: 12, 6: 19} (interior deg=6 = #units of Z[w])
+   => the tie-graph is the Cayley graph of the lattice; tie-degree = #norm-1 vectors = #roots of unity in Q(sqrt-3) = 6
+
+SQUARE (Gaussian CM Q(i)) lattice: norm-1 vectors = units of Z[i] = {+-1,+-i} = 4 -> interior tie-degree 4
+   triangular (6) > square (4): MORE ties per point = denser unit-distance graph (why triangular wins at small n)
+
+DISPROOF restated in trienement terms:
+   grid: tie-degree bounded by lattice units (4 or 6) + a few extra rotations -> u(n)=n^{1+o(1)}
+   CM tower: tie-degree = #modulus-1 algebraic numbers of bounded height, GROWS with field degree
+   => 'CM beats grid' = 'the tie-graph (unit-distance graph) is a Cayley graph of a CM lattice
+      whose automorphism/unit supply is superlinear' — the symmetry (perspective/rigidity) IS the count.
+
+norm-form representation counts r(m) for x^2+xy+y^2 (Eisenstein) — the tie-degree at distance sqrt(m):
+   [(1, 6), (3, 6), (7, 12), (13, 12), (21, 12), (31, 12), (37, 12), (43, 12), (49, 18), (91, 24)]
+   (high r(m) at m with many prime factors p=1 mod 3 = the unit-distance 'rich radii' = max ties;
+    the disproof pushes this multiplicity up via class field towers = many split primes.)
