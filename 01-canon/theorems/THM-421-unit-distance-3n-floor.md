@@ -1,17 +1,17 @@
 ---
-id: THM-420
+id: THM-421
 name: unit-distance-3n-common-neighbour-floor
-status: PROVED (lower bound) + VERIFIED construction (upper bound 39)
+status: PROVED (lower bound 17) + VERIFIED construction (upper bound 32)
 date: 2026-06-06
 session: monad-explorer-2026-06-06-S709
 depends_on:
   - HYP-2262   # kissing cap is not the unit-distance cap (S702): two norm-1 layers
-  - HYP-2267   # triangular sqrt(7) DISK patch beats 3N at N=43 (S703), now sharpened to 39
+  - HYP-2267   # triangular sqrt(7) DISK patch beats 3N at N=43 (S703), now sharpened to 32
   - THM-412    # density quantization (the quantized 2D unit-distance density ladder)
   - HYP-2170   # UD graph = Cay(Z[zeta6],U6); the "3" = kissing/2 = Eisenstein rosette
 ---
 
-# THM-420: The common-neighbour floor for beating 3N unit distances
+# THM-421: The common-neighbour floor for beating 3N unit distances
 
 ## Setup
 
@@ -41,12 +41,17 @@ satisfies `N ≥ 17`. More generally, in *any* graph in which every two vertices
 For the unit-distance threshold `U > 3N` (average degree `> 6 = κ`) this gives
 `N ≥ C(6,2)+2 = 17`. **No configuration of 16 or fewer points beats 3N.**
 
-**(B) Upper bound [VERIFIED].** A 39-point subset of the Eisenstein lattice (the
-unit² = 7 disk patch centred at the edge-midpoint `(½,0)`) has `U = 118 > 117 = 3·39`.
-This **improves HYP-2267's N = 43** (a lattice disk centred at a lattice point).
+**(B) Upper bound [VERIFIED].** Two improvements over HYP-2267's `N = 43` (a √7
+Eisenstein disk centred at a lattice point), all in the same unit² = 7 Eisenstein
+graph (layer `r_Q(7)=12`):
+ - **best disk:** the √7 disk centred at the edge-midpoint `(½,0)` gives `N = 39`,
+   `U = 118 > 117` (off-lattice centre balances the boundary deficit);
+ - **best overall:** a 32-point **non-disk** subset gives `U = 97 > 96 = 3·32`
+   (found by multistart anneal/shrink-repair, re-verified by independent exact
+   integer recount; vertex list in `unit_distance_3n_minsearch_s709e.out`).
 
 **(C) Consequence.** The true minimum `N*` over *all* planar point sets satisfies
-`17 ≤ N* ≤ 39`.
+`17 ≤ N* ≤ 32`.
 
 ## Proof of (A) [PROVED]
 
@@ -95,20 +100,29 @@ centre, shaving 4 points off HYP-2267's disk. A fine center sweep (1/6 grid) and
 boundary add/remove + swap local search find nothing below 39
 (`unit_distance_3n_{search_s709b, verify_s709c}.py`). ∎
 
-## Why the gap 17 vs 39 (interpretation)
+## Local structure (why small balls fail; `unit_distance_3n_anneal_s709d.py`)
+
+In the √7 Eisenstein graph **every adjacent pair has *exactly* 2 common neighbours**
+(saturating the CN bound — each edge sits in 2 triangles), yet the 12 neighbours of
+a vertex span only **12 internal edges**, so a "flower" (centre + 12 neighbours,
+N=13) has just `U = 24`, average degree `3.69 < 6`. Density must be *built up over a
+chunk*, not found in a single ball — which is why the minimiser is a 32-vertex blob,
+not a tiny cluster, and why the floor (17) is not met.
+
+## Why the gap 17 vs 32 (interpretation)
 
 The floor `C(κ,2)+2 = 17` is a pure **design-theoretic** bound: it would be met by a
 near-regular graph in which essentially *every* pair realises its full 2 common
 neighbours (a 2-(N,…) design flavour). Euclidean geometry cannot pack common
 neighbours that efficiently — most pairs of a planar set are too far apart to share
 *any* unit-neighbour — so realizability inflates the floor up to the high-30s. The
-gap **17 → 39 is the cost of Euclidean realizability**. The kissing cap `κ = 6`
+gap **17 → 32 is the cost of Euclidean realizability**. The kissing cap `κ = 6`
 appears in BOTH ends: the threshold to beat is `(κ/2)·N = 3N`, and the floor is
 `C(κ,2)+2`.
 
-## Open (handed to HYP-2284)
+## Open (handed to HYP-2285)
 
-Exact value of `N*` in `[17, 39]`; whether a non-lattice config beats 39; whether
+Exact value of `N*` in `[17, 32]`; whether a non-lattice config beats 39; whether
 the floor can be pushed above 17 using the additional **K₄-free** property
 (no 4 mutually unit-distant points → max clique 3) together with (CN).
 

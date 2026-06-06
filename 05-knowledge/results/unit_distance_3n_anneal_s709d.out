@@ -1,0 +1,18 @@
+====================================================================
+1.  Local structure of the sqrt(7)-Eisenstein unit graph (12-regular)
+====================================================================
+   degree (interior)          : 12
+   edges among the 12 nbrs    : 12
+   flower (center+12) N=13    : U = 24, avg deg = 3.692  (need >6 => U>39)
+   common-nbr count over ADJACENT pairs : {2: 484}
+   common-nbr count over ALL pairs      : {0: 4824, 1: 286, 2: 2150}
+   (<=2 always, confirming the CN bound; adjacent pairs realise up to 2)
+
+====================================================================
+2.  Multistart local search for smallest induced subgraph, avg deg > 6
+====================================================================
+   NEW best N=37 U=112 (seed disk k=30 @(0.00,0.00))
+   NEW best N=33 U=100 (seed disk k=39 @(0.00,0.00))
+   NEW best N=32 U=97 (seed disk k=70 @(0.00,0.00))
+
+   annealing found N=32 (improves 39)

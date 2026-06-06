@@ -1,0 +1,10 @@
+verify SOL32: 32 U= 97 3N= 96
+Eisenstein sqrt7 best after shrink-repair: N=32 U=97
+
+Other lattices (annealing from disks):
+     disc-7 R=8 layer 8: best N=118
+     disc-8 R=9 layer 6: best N=None
+     square R=5 layer 8: best N=97
+
+============================================================
+FINAL RECORD: N=32.  THM-420: 17 <= N* <= 32
