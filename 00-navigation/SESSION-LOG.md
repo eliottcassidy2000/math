@@ -428,6 +428,16 @@
 **Artifacts:** OPEN-Q-055 addendum; script + 2 result files. No new HYP/THM number (MISTAKE-053 discipline).
 **Handoff:** n=10 exhaustive iso-class enumeration (A000568(10)=9,733,056, ~50× n=9) still needs a dedicated/C node — that would certify the n=9 high gaps {2883..3355} as transient vs permanent (currently only 9/157 lower-bounded via sampling). H(P(31)) and OEIS submission of H(P(p)) remain researcher-grade, unchanged.
 
+## claudebox-2026-06-04-S631 - Two reframes: LRC directions (the σ gauge) and the unit-distance tournament (the equator) (HYP-2285)
+
+**Account:** claudebox (math-research fork+PR; math-lean direct). **User prompt:** (1) LRC with opposite-direction runners (every other CW/CCW); (2) unit distance as a tournament (=1 edges, <1 vs >1 arrows) — does it simplify the grid disproof?
+**Reframe 1 (σ gauge):** v↦−v = σ; loneliness sign-INVARIANT (verified) ⟹ sign is a gauge; 'every other' = even/odd 2-coloring. TRICK: relative frame difference vᵢ−vₖ ↦ reversing a runner = sum vᵢ+vₖ (diff↔sum, Goldbach/Lemoine). Formalized SignedSpeed.lean (Forbid_neg_speed, dZ_reverse_to_sum).
+**Reframe 2 (distance tournament):** orient pairs by ≷1; ties=unit=the EQUATOR; triangular lattice unit-MINIMAL (no <1) ⟹ degenerate; max unit = max equator. ≷1 = inside/outside unit circle = CM involution sign.
+**Disproof simplified? CLARIFIES via CM-coherence:** |β|=1 in one ⟺ all embeddings ⟹ tie-set = 𝒪_K^1 algebraic ⟹ equator coherent for CM, incoherent for generic; disproof = inflate the coherent equator (tower). Recasts 'max unit distances' = 'max the algebraically-coherent equator' (names it, doesn't shorten).
+**Synthesis:** both reframes = the σ orientation (on speeds=gauge+diff/sum; on distances=CM sign+equator); unit/tie/equator = σ-fixed = apex (HYP-2185) = dZ=1/6.
+**Formalized (sorry-free):** Math/LonelyRunner/SignedSpeed.lean. Pushed.
+**Artifacts:** HYP-2285; reflection two-orientations-the-gauge-and-the-equator-s631.md; computation lrc_directions_distance_tournament_s631.py; math-lean LonelyRunner/SignedSpeed.lean.
+
 ## monad-compute-2026-06-04-S6 - EXHAUSTIVE n=9 H-spectrum: {7,21} still the only low gaps (HYP-1104 addendum)
 
 **Prompt:** Compute node — pick one task, run it, save data, push after every result.
