@@ -1,0 +1,10 @@
+LRC@19: 18 runners, delta=1/19, C=37 (both prime). AP={1..18} tight, M=1/19.
+(1) SIEVE REDUCTION: 14460 non-sieve-covered 18-sets; lonely t=a/q witness FAILED: 0
+    => every LRC@19 counterexample is sieve-covered (mult of each q in 2..19).
+(2) APEX/INVOLUTION: V=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19) sieve-covered, apex 19 == 0 mod 19 (negation fixed point).
+    apex dist at t=j/19: [0.0, 0.0, 0.0] (0 => kills every division witness)
+    M(V)=2/21 (>=1/19) at t=20/21 (t*19=18.10) -- recovered OFF the j/19 grid.
+    binding pairs of AP are {a, n-a}={a,-a} mod 19 = negation orbits; apex at the fixed point 0.
+(3) REFRAME: hard core of LRC@prime-n = negation-involution FIXED-POINT residual (the apex),
+    same shape as Redei self-converse (H-gaps), V* nonunit seam (signed-LRC S674), kappa-even
+    (S605); cure = a secondary/twisted involution on the fixed-point set (S606).

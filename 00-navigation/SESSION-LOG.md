@@ -13255,3 +13255,9 @@ say to keep the third/address coordinate until the boundary is measured.
 **Next:** Prove/refute weighted pure-black zero boundary at `n=7`; derive
 orbit-stabilizer explanation for SC-type weighted zero-boundary; search for a
 Royle-even functor preserving boundary vectors and `H`/odd-cycle side channels.
+
+## claude-2026-06-06-S679 — 2026-06-06 (LRC@19 prime frontier: clean sieve reduction + apex=negation-fixed-point reframe)
+**Focus:** try LRC@19; on hitting the wall, explore creatively for a reframe.
+**Result (HYP-2255):** n=19,C=37 both prime = "no side-channel" frontier (S678); AP unique tight. PROVED sieve reduction: t=a/q lonely unless q|some speed (q<19, a unit) => every counterexample SIEVE-COVERED (mult of each q in 2..19; 8 primes <=19 each force a multiple). WALL: sieve-covered infinite, needs polynomial method. REFRAME (gem): AP binding pairs {a,n-a}={a,-a} = negation-involution orbits on F_19; sieve APEX (mult of 19 == 0) = unique FIXED POINT; apex kills every division witness, antipodal pairs block local recovery, loneliness recovered off-grid ({2..19}: M=2/21 at 20/21). HARD CORE = negation-involution fixed-point residual -- SAME shape as Redei self-converse (H-gaps), V* nonunit seam (signed-LRC S674), kappa-even (S605); cure = secondary/twisted involution on the fixed-point set (S606). Unifies LRC@prime-n, H=21, signed-LRC.
+**Artifacts:** `04-computation/lrc19_sieve_apex_involution_s679.py` (+.out), `07-reflections/lrc19-sieve-apex-involution-s679.md`, HYP-2255.
+**Next:** build the twisted involution on the apex residual (shared cure with H=21 self-converse); off-grid witness density bound (apex tiny arcs can't cover V''s lonely set, prime analogue of even-fold).
