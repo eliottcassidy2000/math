@@ -1,0 +1,45 @@
+==============================================================================
+S620  HELLY-ENTROPY ACCOUNTING FOR THE LONELY RUNNER CONJECTURE
+==============================================================================
+
+[R1+R3]  depth distribution per speed set  (delta = 1/(n+1))
+
+ n=4:  conserved mean depth = 2n/(n+1) = 1.6000
+  AP 1..n  (tight extremal)        mean=1.6000 p0=0.00000 (incl-excl -0.00000) indep=0.12960 H_depth=0.9725
+  geometric 1,2,4,..               mean=1.6000 p0=0.10000 (incl-excl +0.10000) indep=0.12960 H_depth=1.3443
+  random A (10,21,26,..)           mean=1.6000 p0=0.13128 (incl-excl +0.13128) indep=0.12960 H_depth=1.4104
+  random B (4,5,35,..)             mean=1.6000 p0=0.13159 (incl-excl +0.13159) indep=0.12960 H_depth=1.3904
+
+ n=5:  conserved mean depth = 2n/(n+1) = 1.6667
+  AP 1..n  (tight extremal)        mean=1.6667 p0=0.00000 (incl-excl +0.00000) indep=0.13169 H_depth=1.0175
+  geometric 1,2,4,..               mean=1.6667 p0=0.16667 (incl-excl +0.16667) indep=0.13169 H_depth=1.5383
+  random A (10,21,26,..)           mean=1.6667 p0=0.14526 (incl-excl +0.14526) indep=0.13169 H_depth=1.4759
+  random B (4,5,35,..)             mean=1.6667 p0=0.14533 (incl-excl +0.14533) indep=0.13169 H_depth=1.4719
+
+ n=6:  conserved mean depth = 2n/(n+1) = 1.7143
+  AP 1..n  (tight extremal)        mean=1.7143 p0=0.00000 (incl-excl -0.00000) indep=0.13281 H_depth=1.0901
+  geometric 1,2,4,..               mean=1.7143 p0=0.23214 (incl-excl +0.23214) indep=0.13281 H_depth=1.6521
+  random A (10,21,26,..)           mean=1.7143 p0=0.14474 (incl-excl +0.14474) indep=0.13281 H_depth=1.5087
+  random B (4,5,35,..)             mean=1.7143 p0=0.13302 (incl-excl +0.13302) indep=0.13281 H_depth=1.4655
+
+ n=7:  conserved mean depth = 2n/(n+1) = 1.7500
+  AP 1..n  (tight extremal)        mean=1.7500 p0=0.00000 (incl-excl -0.00000) indep=0.13348 H_depth=1.1032
+  geometric 1,2,4,..               mean=1.7500 p0=0.21484 (incl-excl +0.21484) indep=0.13348 H_depth=1.6831
+  random A (10,21,26,..)           mean=1.7500 p0=0.14857 (incl-excl +0.14857) indep=0.13348 H_depth=1.5459
+  random B (4,5,35,..)             mean=1.7500 p0=0.11800 (incl-excl +0.11800) indep=0.13348 H_depth=1.4684
+
+==============================================================================
+[R2]  moment-sieve identity:  S_k == direct pairwise/triple intersection,
+      and  p_0 == sum_k (-1)^k S_k   (free measure = alternating sieve)
+==============================================================================
+  (1, 2, 3, 4)  S1=1.6000 S2=0.9333 (direct 0.9333) p0=0.00000  alt-sum=-0.00000  match=True
+  (1, 2, 4, 8)  S1=1.6000 S2=0.9500 (direct 0.9500) p0=0.10000  alt-sum=+0.10000  match=True
+  (1, 3, 5, 6)  S1=1.6000 S2=1.0133 (direct 1.0133) p0=0.10667  alt-sum=+0.10667  match=True
+  (2, 3, 4, 5)  S1=1.6000 S2=0.9800 (direct 0.9800) p0=0.12000  alt-sum=+0.12000  match=True
+
+==============================================================================
+[EXTREMAL FAMILY]  which primitive n-sets COLLAPSE (p_0 = 0)?  AP is not alone.
+==============================================================================
+  n=3: 1 primitive collapse-sets; examples [(1, 2, 3)]; min positive p_0=0.03571 at (1, 6, 7)
+  n=4: 2 primitive collapse-sets; examples [(1, 2, 3, 4), (1, 3, 4, 7)]; min positive p_0=0.01667 at (1, 7, 8, 9)
+  n=5: 2 primitive collapse-sets; examples [(1, 2, 3, 4, 5), (1, 3, 4, 5, 9)]; min positive p_0=0.01190 at (1, 3, 4, 5, 7)
