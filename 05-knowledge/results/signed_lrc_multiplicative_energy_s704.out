@@ -1,0 +1,124 @@
+========================================================================
+PART A — Krawtchouk / matching-cut structure of signed zero-clocks
+========================================================================
+--- (A) n=4 AP: N=3 C=7 speeds=[1, 2, 3]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 8}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=5 AP: N=4 C=9 speeds=[1, 2, 3, 4]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 16}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=5 sporadic: N=4 C=9 speeds=[1, 3, 4, 7]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 16}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=6 AP: N=5 C=11 speeds=[1, 2, 3, 4, 5]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 32}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=6 sporadic: N=5 C=11 speeds=[1, 3, 4, 5, 9]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 32}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=7 AP: N=6 C=13 speeds=[1, 2, 3, 4, 5, 6]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 64}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=6 with shell (5+6=11): N=5 C=11 speeds=[1, 2, 3, 4, 6]
+    shell-partner edges E(Gamma) = []  (t=0); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 32}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 0, 0, 0, 0, 0]
+    (iii) Walsh: Zhat(0)=0, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+--- (A) n=7 multi-shell: N=6 C=13 speeds=[2, 3, 5, 6, 8, 9]
+    shell-partner edges E(Gamma) = [(2, 4)]  (t=1); partial matching? True
+    (i)   gen.fn  sum_eps x^Z = 2^{N-t}(1+x)^t : OK
+          Z-distribution {0: 32, 1: 32}
+    (ii)  weight-grade sum_{|T|=k}Z = 2t C(N-2,k-1): OK
+          wsum=[0, 2, 8, 12, 8, 2, 0]
+    (iii) Walsh: Zhat(0)=1/2, linear all 0? True, edges all -1/2? True, non-edges 0? True -> OK
+
+PART A overall: ALL OK
+
+========================================================================
+PART B/C — cyclotomic, multiplicative-energy, formal-group bridges
+========================================================================
+--- (B) n=7 AP: roots of unity in mu_13 ⊂ Q(zeta_13)
+    shell-partner <=> conjugate pair w_i w_j=1: OK
+    pair-sum rep r_+ = multiplicative convolution of {w_i}: OK
+--- (C) n=7 AP: formal group F_-(x,y)=(x+y)/(1-xy) on tangent coords
+    tan(pi(a_i+a_j)/C)=F_-(x_i,x_j): OK; shell-partner => x_i=-x_j: OK
+--- (B) n=7 multi-shell: roots of unity in mu_13 ⊂ Q(zeta_13)
+    shell-partner <=> conjugate pair w_i w_j=1: OK
+    pair-sum rep r_+ = multiplicative convolution of {w_i}: OK
+--- (C) n=7 multi-shell: formal group F_-(x,y)=(x+y)/(1-xy) on tangent coords
+    tan(pi(a_i+a_j)/C)=F_-(x_i,x_j): OK; shell-partner => x_i=-x_j: OK
+--- (B) n=14 AP: roots of unity in mu_27 ⊂ Q(zeta_27)
+    shell-partner <=> conjugate pair w_i w_j=1: OK
+    pair-sum rep r_+ = multiplicative convolution of {w_i}: OK
+--- (C) n=14 AP: formal group F_-(x,y)=(x+y)/(1-xy) on tangent coords
+    tan(pi(a_i+a_j)/C)=F_-(x_i,x_j): OK; shell-partner => x_i=-x_j: OK
+--- (B) n=14 V*: roots of unity in mu_27 ⊂ Q(zeta_27)
+    shell-partner <=> conjugate pair w_i w_j=1: OK
+    pair-sum rep r_+ = multiplicative convolution of {w_i}: OK
+--- (C) n=14 V*: formal group F_-(x,y)=(x+y)/(1-xy) on tangent coords
+    tan(pi(a_i+a_j)/C)=F_-(x_i,x_j): OK; shell-partner => x_i=-x_j: OK
+--- (B) n=14 2AP: roots of unity in mu_27 ⊂ Q(zeta_27)
+    shell-partner <=> conjugate pair w_i w_j=1: OK
+    pair-sum rep r_+ = multiplicative convolution of {w_i}: OK
+--- (C) n=14 2AP: formal group F_-(x,y)=(x+y)/(1-xy) on tangent coords
+    tan(pi(a_i+a_j)/C)=F_-(x_i,x_j): OK; shell-partner => x_i=-x_j: OK
+
+PART B/C overall: ALL OK
+
+========================================================================
+PART D — popular pair-sum census (LRC mirror of density quantization)
+========================================================================
+--- (D) n=14 AP: N=13 C=27  pairs=78
+    pair-sum r_+(s): [0, 0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 6, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 0]
+    additive energy E_+ = 328; mean mult = 78/27 = 2.889; max mult = 6 at s=[13, 14, 15]; r_+(0)=shell-partners=0
+    popular-residue excess (max - mean) = 3.111
+--- (D) n=14 V*: N=13 C=27  pairs=78
+    pair-sum r_+(s): [1, 1, 1, 2, 2, 3, 3, 4, 4, 4, 5, 5, 5, 5, 5, 5, 4, 4, 3, 3, 2, 2, 1, 1, 1, 1, 1]
+    additive energy E_+ = 290; mean mult = 78/27 = 2.889; max mult = 5 at s=[10, 11, 12, 13, 14, 15]; r_+(0)=shell-partners=1
+    popular-residue excess (max - mean) = 2.111
+--- (D) n=14 2AP: N=13 C=27  pairs=78
+    pair-sum r_+(s): [0, 6, 0, 6, 0, 5, 1, 5, 1, 4, 2, 4, 2, 3, 3, 3, 3, 2, 4, 2, 4, 1, 5, 1, 5, 0, 6]
+    additive energy E_+ = 328; mean mult = 78/27 = 2.889; max mult = 6 at s=[1, 3, 26]; r_+(0)=shell-partners=0
+    popular-residue excess (max - mean) = 3.111
+--- (D) n=7 AP: N=6 C=13  pairs=15
+    pair-sum r_+(s): [0, 0, 0, 1, 1, 2, 2, 3, 2, 2, 1, 1, 0]
+    additive energy E_+ = 29; mean mult = 15/13 = 1.154; max mult = 3 at s=[7]; r_+(0)=shell-partners=0
+    popular-residue excess (max - mean) = 1.846
+
+========================================================================
+PART E — matching CAP r_+(s) <= floor(N/2) and dilation-invariance of E_+
+   (the rigorous resolution of the 'popular pair-sum' mirror: NO escape)
+========================================================================
+    matching cap  max_s r_+(s) <= floor(N/2)  over 4000 random configs: HOLDS (0 fails)
+    dilation invariance  E_+(uS)=E_+(S), gcd(u,C)=1, 4000 trials: HOLDS (0 fails)
+    CONTRAST: lattice popular norm r_Q(D)=w*sum_d chi(d) is UNBOUNDED
+    (divisor-rate, S702); cyclic pair-sum r_+ is MATCHING-capped at floor(N/2).
+    => the LRC additive face has NO 'popular-norm escape' (rank-2 ceiling).
+
+DONE.
