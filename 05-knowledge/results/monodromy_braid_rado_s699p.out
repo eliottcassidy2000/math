@@ -1,0 +1,26 @@
+(1) MONODROMY: loop the input around the discriminant ⟹ the two roots SWAP.
+    z² − t : roots ±√t. Loop t = e^{iθ}, θ: 0→2π, track the root starting at +1:
+      θ=0.000: tracked root = 1.000+0.000j
+      θ=1.571: tracked root = 0.707+0.707j
+      θ=3.142: tracked root = 0.000+1.000j
+      θ=4.712: tracked root = -0.707+0.707j
+      θ=6.283: tracked root = -1.000+0.000j
+    ⟹ started at +1, returned at -1.000+0.000j = −1: the two roots SWAPPED (a Galois transposition / braid half-twist).
+    The branch point t=0 is the DISCRIMINANT (roots collide) = the worry-set analog (S699l: roots collide = multiplicities).
+
+(2) LRC SPACETIME BRAID: runners v_i t mod 1 are strands; crossings (v_i−v_j)t∈ℤ are the swaps.
+    V=[1, 2, 3]: crossings (t, pair) over one period = [(0.5, (1, 3)), (1.0, (1, 2)), (1.0, (1, 3)), (1.0, (2, 3))]
+    each crossing = a transposition of two runners (a braid generator); the pair-clock=0 of S699.
+    # crossings = Σ|v_i−v_j| = 4 (the braid's length / the writhe).
+
+(3) RADO = the countable RANDOM tournament (Fraïssé limit); EXTENSION PROPERTY = 'always a witness':
+    n=10: P(∃ witness beating A, beaten by B) ≈ 0.340  → 1 (the extension property, the Rado/random tournament limit)
+    n=20: P(∃ witness beating A, beaten by B) ≈ 0.655  → 1 (the extension property, the Rado/random tournament limit)
+    n=40: P(∃ witness beating A, beaten by B) ≈ 0.930  → 1 (the extension property, the Rado/random tournament limit)
+    n=80: P(∃ witness beating A, beaten by B) ≈ 0.985  → 1 (the extension property, the Rado/random tournament limit)
+
+=> SYNTHESIS: witness-finding is a COVERING MAP; 'loop input ⟹ swap outputs' is its MONODROMY
+   (Galois/braid, transpositions at the discriminant = worry-set). The Rado/random tournament
+   is the GENERIC FIBER (extension property = always a witness, full symmetry); the worry-set is
+   the SPECIAL fiber (witnesses collide, branch points). LRC 'always lonely' = the extension property;
+   the worry-set = where it degenerates (measure-0, the discriminant/branch).
