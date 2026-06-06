@@ -8795,3 +8795,12 @@ only the *iff-3|C generalization* is dead. See `04-computation/lrc_field_rosette
 **UNIFICATION:** AG_n is vertex-transitive (discrete unit-distance graph of a homogeneous space, HYP-2300); the three questions (max edges/χ/max indep) transfer, χ·α=|V| tight; generators=cube-root resonance, χ=cube-root 3, indep sets=lonely sets.
 **FORMALIZED (sorry-free):** Math/Combinatorics/AlternatingGroupGraph.lean.
 **See:** `HYP-2305-...md`, `07-reflections/the-alternating-group-graph-is-built-from-cube-roots-s635.md`, `04-computation/alternating_group_graph_cube_root_s635.py`, math-lean Combinatorics/AlternatingGroupGraph.lean; HYP-2300, HYP-2299, HYP-2265, HYP-2245.
+
+## HYP-2310: Degree = #roots — the n+1↔n↔n−1 off-by-one map, the master correspondence (claudebox-2026-06-04-S636)
+**Status:** SYNTHESIS + VERIFIED + FORMALIZED. The polynomial degree/roots/coefficients correspondence as the arc's master off-by-one.
+**THE MAP:** degree-n poly has n+1 coefficients (incl constant = the base/+1) and n roots over ℂ (FTA, with mult); monic ⟹ Vieta is a bijection n coefficients ↔ n roots (symmetric functions; S629 sum/product = n=2). Constant term = (−1)^n·∏roots = the vacuum/ground state.
+**ACROSS THE ARC:** polynomial (n roots / n+1 coeffs / n−1 critical points via Gauss-Lucas); Hamiltonian path (n vertices / n−1 edges, H counts); LRC (n runners / gap 1/(n+1), the +1 = stationary origin); perspective key (persp(n)=#struct(n+1)); independence/partition poly H (degree n / n+1 counts α₀..α_n, α₀=1=empty set=base / roots=resonance-Lee-Yang spectrum); cyclotomic Φ_n; Euler char/Tutte (S633).
+**PRINCIPLE:** the +1 (constant/vacuum/base/apex/stationary runner/α₀=1/identity) = ground state; the n roots/objects = excitations. The partition function IS this polynomial; coefficients↔roots (Vieta) = counts↔spectrum.
+**CUBE-ROOT INSTANCE (formalized):** X³−1 (deg 3) has 3 roots 1,ω,ω²=e^{±2πi/3} = the 3-cycle eigenvalues = AG_n generators (S635) = π/3 resonance; sum=0 (Vieta, n roots → vacuum), product=1 (constant=base). RootCount.lean: card_nthRoots_complex (X^n−1 has n roots over ℂ, FTA), card_cube_roots (=3).
+**FORMALIZED (sorry-free):** Math/Polynomial/RootCount.lean.
+**See:** `HYP-2310-...md`, `07-reflections/the-plus-one-is-the-vacuum-s636.md`, `04-computation/degree_roots_coefficients_n_off_by_one_s636.py`, math-lean Polynomial/RootCount.lean; HYP-2305, HYP-2270, HYP-2245, HYP-2299.
