@@ -1,0 +1,96 @@
+==============================================================================
+(L0) SYNCHRONIZATION LEMMA: v_a+v_b ≡ 0 mod q  =>  ||v_a k/q||=||v_b k/q|| ∀k
+==============================================================================
+  q in [2,40): 6669 synchronization tests, FAILURES = 0
+  => synchronization lemma HOLDS (verified)
+
+==============================================================================
+(L1) BINDING PAIR = SHELL-PARTNER SYNCHRONIZED AT WITNESS
+==============================================================================
+
+ AP n=4: n=4, 3 speeds, floor 1/n=1/4
+   M(S) = 1/4  (= 1/4? True);  witness t*=1/4 (denom q=4)
+   binders at distance M: [1, 3]
+   binding pair (a,b)=(1,3); a+b=4 ≡ 0 mod q=4 (shell-partner)
+   ||a t*||=1/4 == ||b t*||=1/4  (synchronized = M)
+
+ AP n=5: n=5, 4 speeds, floor 1/n=1/5
+   M(S) = 1/5  (= 1/5? True);  witness t*=4/5 (denom q=5)
+   binders at distance M: [1, 4]
+   binding pair (a,b)=(1,4); a+b=5 ≡ 0 mod q=5 (shell-partner)
+   ||a t*||=1/5 == ||b t*||=1/5  (synchronized = M)
+
+ sporadic n=5: n=5, 4 speeds, floor 1/n=1/5
+   M(S) = 1/5  (= 1/5? True);  witness t*=1/5 (denom q=5)
+   binders at distance M: [1, 4]
+   binding pair (a,b)=(1,4); a+b=5 ≡ 0 mod q=5 (shell-partner)
+   ||a t*||=1/5 == ||b t*||=1/5  (synchronized = M)
+
+ AP n=7: n=7, 6 speeds, floor 1/n=1/7
+   M(S) = 1/7  (= 1/7? True);  witness t*=6/7 (denom q=7)
+   binders at distance M: [1, 6]
+   binding pair (a,b)=(1,6); a+b=7 ≡ 0 mod q=7 (shell-partner)
+   ||a t*||=1/7 == ||b t*||=1/7  (synchronized = M)
+
+==============================================================================
+(L4) n=14 FLOOR: AP vs V* vs 2AP — fold identically mod 14, differ mod 27
+==============================================================================
+
+ AP: n=14, 13 speeds, floor 1/n=1/14
+   M(S) = 1/14  (= 1/14? True);  witness t*=13/14 (denom q=14)
+   binders at distance M: [1, 13]
+   binding pair (a,b)=(1,13); a+b=14 ≡ 0 mod q=14 (shell-partner)
+   ||a t*||=1/14 == ||b t*||=1/14  (synchronized = M)
+
+ V*: n=14, 13 speeds, floor 1/n=1/14
+   M(S) = 1/14  (= 1/14? True);  witness t*=3/14 (denom q=14)
+   binders at distance M: [5, 9]
+   binding pair (a,b)=(5,9); a+b=14 ≡ 0 mod q=14 (shell-partner)
+   ||a t*||=1/14 == ||b t*||=1/14  (synchronized = M)
+
+ 2AP: n=14, 13 speeds, floor 1/n=1/14
+   M(S) = 1/14  (= 1/14? True);  witness t*=13/28 (denom q=28)
+   binders at distance M: [2, 26]
+   binding pair (a,b)=(2,26); a+b=28 ≡ 0 mod q=28 (shell-partner)
+   ||a t*||=1/14 == ||b t*||=1/14  (synchronized = M)
+
+  -- fold mod n=14 (PRIMARY lattice, floor) --
+   AP   shells mod 14: {1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2, 7: 1}
+        λ_14 = 1/14 at k=1   (floor certificate 1/14? True)
+   V*   shells mod 14: {1: 2, 2: 1, 3: 2, 4: 3, 5: 2, 6: 2, 7: 1}
+        λ_14 = 1/14 at k=1   (floor certificate 1/14? True)
+   2AP  shells mod 14: {0: 1, 2: 4, 4: 4, 6: 4}
+        λ_14 = 0 at k=1   (floor certificate 1/14? False)
+
+  -- fold mod 2n-1=27 (SECONDARY lattice, opus shell-partner) --
+   AP   shells mod 27: {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}
+        shell-partners (v_i+v_j≡0 mod27): [];  λ_27=1/27 at k=1
+   V*   shells mod 27: {1: 1, 2: 1, 3: 2, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 13: 1}
+        shell-partners (v_i+v_j≡0 mod27): [(3, 24)];  λ_27=1/27 at k=1
+   2AP  shells mod 27: {1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}
+        shell-partners (v_i+v_j≡0 mod27): [];  λ_27=1/27 at k=1
+
+==============================================================================
+(L2) LOSSLESS: M(S) = max over pinch denominators q of λ_q(S)
+==============================================================================
+   300 random configs: M == max_q λ_q in 300/300
+   => lattice frame is LOSSLESS (verified)
+
+==============================================================================
+(L2b) REACH of the SINGLE primary lattice L_n: which configs certified by t=1/n?
+  (LRC holds for S as soon as no v_i ≡ 0 mod n; gcd-with-n is the obstruction)
+  THEOREM: λ_n(S) >= 1/n  <=>  ∃k: v_i·k ≢ 0 (mod n) ∀i.  Certified by k=1 when
+  all gcd(v_i,n)=1.  Below = exact via the residue criterion (no float).
+==============================================================================
+  n= 6: L_n single-lattice certifies  2348/5000 (47.0%);  uncertified need a non-floor pinch lattice
+  n= 8: L_n single-lattice certifies  2265/5000 (45.3%);  uncertified need a non-floor pinch lattice
+  n=12: L_n single-lattice certifies  2193/5000 (43.9%);  uncertified need a non-floor pinch lattice
+  n=14: L_n single-lattice certifies  2186/5000 (43.7%);  uncertified need a non-floor pinch lattice
+  n=15: L_n single-lattice certifies  2186/5000 (43.7%);  uncertified need a non-floor pinch lattice
+  n=30: L_n single-lattice certifies  2197/5000 (43.9%);  uncertified need a non-floor pinch lattice
+
+CONCLUSION: the signed/shell datum (v_i+v_j≡0 mod 2n-1) is a SECOND-gap binding
+pair; it is dominated by the floor pinch (q=n) and CANNOT lower M below 1/n.
+A signed zero-clock => an unsigned counterexample only if it is ALSO a floor
+binding pair, i.e. v_i+v_j≡0 mod n — a DIFFERENT modulus. So the signed split of
+the worry-set (AP vs V*) is invisible to M: a structural-reduction NO-GO.
