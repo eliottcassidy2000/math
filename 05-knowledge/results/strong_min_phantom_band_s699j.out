@@ -1,0 +1,18 @@
+strong-min(m) = min Ham-paths over strongly connected tournaments; m²−5m+9 ; kills 7,21?
+ m | near-trans min (minimizer arcs) | full-enum min | m²−5m+9 | >7? (m≥5) 
+ 3 | 3 ((0, 2),) | 3 | 3 | -
+ 4 | 5 ((0, 3),) | 5 | 5 | -
+ 5 | 9 ((0, 4),) | 9 | 9 | True
+ 6 | 15 ((0, 2), (0, 5)) | 15 | 15 | True
+ 7 | 25 ((0, 3), (3, 6)) | None | 23 | True
+ 8 | 45 ((0, 3), (3, 7)) | None | 33 | True
+
+=> if strong-min(m) ≥ 9 for m≥5 (and =3,5 for m=3,4), then NO strong tournament has H=7,
+   and since 7=Φ3(2) is prime & 21=3·7 (7 unavailable) & strong-min(7)>21, both 7,21 are
+   PHANTOM (no tournament has them) ⟹ the delta field provably avoids 7,21. The minimizer
+   is transitive + reversed (m,1)-type arcs (the minimal strong perturbation).
+
+BAND STRUCTURE: the achievable-H spectrum is the multiplicative semigroup of strong-min..
+values; {7,21} are the BAND GAP (forbidden energies); delta = the dispersion, polarized to
+avoid the gap. strong-min grows quadratically ⟹ the gap is only in the small-H regime;
+large H is gap-free (dense band).

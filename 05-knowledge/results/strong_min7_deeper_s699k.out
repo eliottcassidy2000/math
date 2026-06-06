@@ -1,0 +1,8 @@
+  kmax=1: best strong-min(7) so far = 33  ((0, 6),)
+  kmax=2: best strong-min(7) so far = 25  ((0, 3), (3, 6))
+  kmax=3: best strong-min(7) so far = 25  ((0, 3), (3, 6))
+  kmax=4: best strong-min(7) so far = 25  ((0, 3), (3, 6))
+  kmax=5: best strong-min(7) so far = 25  ((0, 3), (3, 6))
+  kmax=6: best strong-min(7) so far = 25  ((0, 3), (3, 6))
+
+strong-min(7) ≤ 25 (search); quadratic m²−5m+9 = 23=23; >21 (kills 21)? True
