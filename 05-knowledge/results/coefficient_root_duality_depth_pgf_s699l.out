@@ -1,0 +1,31 @@
+Covering-depth POLYNOMIAL P(z)=Σ p_k z^k : n+1 coeffs (p_0=lonely measure) ↔ m roots.
+WORRY-SET ⟺ p_0=0 ⟺ z=0 is a root (constant term vanishes).
+
+AP n=5 (worry-set): V=(1, 2, 3, 4), gap 1/5; p_0=0=WORRY (z=0 root)
+   coeffs (p_0..p_4) = [0.0, 0.6333, 0.2333, 0.0333, 0.1]; Σp_k=1.0
+   roots = [(-1.525+0j), 0j, (0.596-1.948j), (0.596+1.948j)]
+   |roots| = [0.0, 1.525, 2.038, 2.038]  (all-equal ⟺ 'free/independent'; spread ⟺ correlated/worry)
+
+chain (worry): V=(1, 3, 4, 7), gap 1/5; p_0=0=WORRY (z=0 root)
+   coeffs (p_0..p_4) = [0.0, 0.6238, 0.2095, 0.1095, 0.0571]; Σp_k=1.0
+   roots = [(-2.342+0j), 0j, (0.213-2.149j), (0.213+2.149j)]
+   |roots| = [0.0, 2.159, 2.159, 2.342]  (all-equal ⟺ 'free/independent'; spread ⟺ correlated/worry)
+
+loose: V=(1, 4, 6, 9), gap 1/5; p_0=1/9=loose
+   coeffs (p_0..p_4) = [0.1111, 0.2889, 0.5333, 0.0222, 0.0444]; Σp_k=1.0
+   roots = [(-0.275-0.368j), (-0.275+0.368j), (0.025-3.437j), (0.025+3.437j)]
+   |roots| = [0.46, 0.46, 3.438, 3.438]  (all-equal ⟺ 'free/independent'; spread ⟺ correlated/worry)
+
+AP n=6 (worry): V=(1, 2, 3, 4, 5), gap 1/6; p_0=0=WORRY (z=0 root)
+   coeffs (p_0..p_5) = [0.0, 0.5944, 0.2944, 0.0278, 0.0167, 0.0667]; Σp_k=1.0
+   roots = [(-1.263-0.853j), (-1.263+0.853j), 0j, (1.138-1.596j), (1.138+1.596j)]
+   |roots| = [0.0, 1.524, 1.524, 1.96, 1.96]  (all-equal ⟺ 'free/independent'; spread ⟺ correlated/worry)
+
+loose n=6: V=(2, 3, 7, 8, 12), gap 1/6; p_0=1/8=loose
+   coeffs (p_0..p_5) = [0.125, 0.2599, 0.5079, 0.0655, 0.0139, 0.0278]; Σp_k=1.0
+   roots = [(-2.308+0j), (-0.256-0.443j), (-0.256+0.443j), (1.16-2.472j), (1.16+2.472j)]
+   |roots| = [0.511, 0.511, 2.308, 2.731, 2.731]  (all-equal ⟺ 'free/independent'; spread ⟺ correlated/worry)
+
+So: the constant term p_0 (the lonely measure / the OBSERVER's safe mass) is the '+1';
+its vanishing = the worry-set = z=0 root = the n+1→n degree collapse. Root multiplicity
+= degeneracy: free dangers ⟹ a single repeated root; correlation spreads the roots.
