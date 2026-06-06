@@ -1,0 +1,59 @@
+==============================================================================
+1.  Density of primes represented by the PRINCIPAL form (= split & principal)
+==============================================================================
+  -3 triangular h=1   :  1125/2262 primes represented  density=0.4973   (predict 1/(2h))
+  -4 square     h=1   :  1126/2262 primes represented  density=0.4978   (predict 1/(2h))
+  -7  h=1             :  1128/2262 primes represented  density=0.4987   (predict 1/(2h))
+  -8  h=1             :  1128/2262 primes represented  density=0.4987   (predict 1/(2h))
+  -15 h=2             :   552/2262 primes represented  density=0.2440   (predict 1/(2h))
+  -20 h=2             :   556/2262 primes represented  density=0.2458   (predict 1/(2h))
+  -23 h=3             :   367/2262 primes represented  density=0.1622   (predict 1/(2h))
+  -24 h=2             :   549/2262 primes represented  density=0.2427   (predict 1/(2h))
+  -47 h=5             :   218/2262 primes represented  density=0.0964   (predict 1/(2h))
+
+==============================================================================
+2.  Max additive layer  max_{R<=X} r_Q(R)  vs X  (the growth that drives U/N)
+    class-1 (square/triangular) share the leading growth; class>1 lag.
+==============================================================================
+  form\X                   100    1000    5000   20000
+  -4 square     h=1         16      24      36      48
+  -3 triangular h=1         24      36      48      72
+  -7  h=1                   16      28      40      56
+  -20 h=2                   10      18      30      40
+  -23 h=3                    8      16      24      32
+  -47 h=5                    4      12      16      24
+  (normalise by w to compare exponents: divide square/triangular rows by 4/6.)
+  Normalised max layer (r_Q / w), same X grid:
+  -4 square     h=1          4       6       9      12
+  -3 triangular h=1          4       6       8      12
+  -7  h=1                    8      14      20      28
+  -20 h=2                    5       9      15      20
+  -23 h=3                    4       8      12      16
+  -47 h=5                    2       6       8      12
+
+==============================================================================
+3.  EXACT finite patch: smallest N with U>3N, at each form's smallest layer>=12
+    (genuinely moderate n for every 2D form; the constant w sets how moderate)
+==============================================================================
+  -3 triangular h=1   : layer-12 radius^2=   7  ->  first U>3N at N=  43 (U=132, U/N=3.07)
+  -4 square h=1       : layer-12 radius^2=  25  ->  first U>3N at N= 121 (U=368, U/N=3.04)
+  -7 h=1              : layer-12 radius^2=  32  ->  first U>3N at N= 117 (U=352, U/N=3.01)
+  -20 h=2             : layer-12 radius^2= 126  ->  first U>3N at N= 275 (U=832, U/N=3.03)
+
+==============================================================================
+VERDICT
+==============================================================================
+  - Representable-prime density is EXACTLY 1/(2h) (verified: 0.498 for h=1; 0.244 h=2;
+    0.162 h=3; 0.096 h=5) -- a clean Chebotarev theorem.  But its effect on the layer
+    is SUBLEADING: the LEADING growth exponent (ln2/lnln X) is UNIVERSAL across all forms
+    (any h, any w).  So every 2D lattice has the SAME unit-distance growth exponent
+    n^{1+(ln2+o(1))/lnln n} -- the Erdos grid exponent.  h and w only move the curve at
+    moderate n (class 1 + large w => beats 3n earliest: triangular N=43 < square 121).
+  => There is NO 2D group with a power-of-n exponent strictly between 1 and CM's 1.014:
+     the 2D world is a SINGLE exponent regime.  kappa<=6 governs only the multiplicative
+     (root-of-unity/minimal) layer = the constant, not the unit-distance count.
+  This pins opus-S699's probe with a TWO-STEP ladder (no 2D 'bridge' group exists):
+     3n      = minimal/kissing layer, kappa<=6                       [multiplicative cap]
+     n^{1+o(1)} = ANY 2D lattice at a NON-minimal radius (Erdos)     [change of RADIUS]
+     n^{1.014} = CM field, leave 2D (rank>2 / class tower)           [change of DIMENSION]
+  The 'bridge' is a change of RADIUS inside ZZ^2, then a change of DIMENSION 2D->CM.
