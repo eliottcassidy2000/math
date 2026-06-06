@@ -1,0 +1,33 @@
+====================================================================
+(A) Paley/QR tournament on F_7  (the finite Rado-tournament avatar)
+====================================================================
+  nonzero squares mod 7  QR        = [1, 2, 4]
+  cube roots of unity   {x: x^3=1} = [1, 2, 4]
+  QR == mu_3 (cube roots of unity)? True
+  -1 mod 7 = 6; is it a residue? False  (7=3 mod 4 -> NO)
+  -QR = [3, 5, 6];  QR and -QR disjoint? True;  QR u -QR = F_7*? True
+  irreflexive? True;  exactly-one-of(x->y, y->x)? True  => TOURNAMENT
+  antipode sigma:x->-x reverses every arc  (adj(-x,-y)==adj(y,x))? True
+    => sigma is an ANTI-automorphism: it swaps every vertex's two outputs
+       (out-set<->in-set). 'A loop of the input swaps the two outputs.'
+  out-degrees = [3, 3, 3, 3, 3, 3, 3]  (regular = (7-1)/2 = 3: doubly-regular Paley)
+
+====================================================================
+(B) Extension property: for disjoint U,V exists w with U->w->V
+====================================================================
+  Paley-7 satisfies the (|U|+|V|<=2) extension axiom on 98/98 disjoint pairs  (ALL)
+  (the countable random tournament satisfies it for ALL finite U,V =
+   the defining axiom of the universal homogeneous 'Rado' tournament.)
+
+====================================================================
+(C) Perspectives = Aut-orbits on k-subsets = iso-types of k-tournaments
+====================================================================
+  k=1: #iso-types of k-vertex tournaments = A000568(1) = 1  = #orbits of Aut(T_rado) on k-subsets
+  k=2: #iso-types of k-vertex tournaments = A000568(2) = 1  = #orbits of Aut(T_rado) on k-subsets
+  k=3: #iso-types of k-vertex tournaments = A000568(3) = 2  = #orbits of Aut(T_rado) on k-subsets
+  k=4: #iso-types of k-vertex tournaments = A000568(4) = 4  = #orbits of Aut(T_rado) on k-subsets
+  k=5: #iso-types of k-vertex tournaments = A000568(5) = 12  = #orbits of Aut(T_rado) on k-subsets
+  By homogeneity + Ryll-Nardzewski, the universal tournament's orbit
+  counts ARE the tournament iso-type counts -- the 'perspective' numbers
+  (lrc-perspective-key) made EXACT, with no finite coincidence-breaking.
+  n=3: the 2 types = transitive vs 3-CYCLE (the cube-root resonance).
