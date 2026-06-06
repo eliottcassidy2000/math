@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T749** #lrc #n14 #lebesgue-measure #p0 #endpoint-wall #res27 #carry-owner | certainty: exact rational audit through local carry weight 3 | source: codex-2026-06-05-S676
+Lebesgue safe measure is a proof filter for LRC14: `p_0>0` gives an open interval witness, while `p_0=0` is only an endpoint wall.  S676 computes exact rational danger-arc subdivisions.  AP, Vstar, and `2AP` have `p_0=0` with endpoint witnesses, and all three share wall-opening slope `23324/6435`; local `+27` carries through weight `3` have `1131/1131` positive-measure nonzero carries; one-swap AP rows through new speed `60` have only `12->24` at `p_0=0`.  Proof target: no new normalized `p_0=0` wall in the `Res_27` carry/owner fiber beyond scalar floor orbits.  See HYP-2252.
+
 **T748** #metagraph #blue-black #even-graphs #parity #tiling-lines #quotient-address | certainty: exact n<=7 audit + line-lift proof sketch | source: codex-2026-06-05-S675b
 Black-even / blue-odd is true in the corrected complement-line lift and false in the simple SC/NS-colored merged-edge projection.  S675b checks `n=3..7` with A000568 and merged-edge count checksums: in the line lift active blue degrees are all odd and black degrees all even (`n=7`: `256` blue lines, `16128` black lines), while the simple projection has black odd-degree witnesses from `n=4` and active-blue even witnesses from `n=5`.  Interpretation: black is a boundary-zero even graph; blue is the odd-boundary SC-support coset.  The missing data is line multiplicity/loop half-edges, exactly the HYP-2245 quotient-address warning.  See HYP-2251 as the n7 addendum to HYP-2250.
 

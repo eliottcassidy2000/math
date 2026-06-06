@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-05-S676 - LRC14 Lebesgue wall certificate (HYP-2252)
+
+**Prompt:** Consider Lebesgue measure and work on the LRC `n=14` proof.
+**Integration:** Continued the HYP-2241 owner-derivative no-leak seam and reframed its strictness conclusion as exact Lebesgue safe measure.  Reused HYP-2164's `Res_27` floor atoms, HYP-2167's carry/CRT warning, and THM-406/HYP-2155's covering-depth master object: `p_0` is useful as a filter, but the wall itself is measure-zero and needs endpoint witnesses.
+**Claimed namespace:** HYP-2252 and T749.
+**Computation:** Added `04-computation/lrc14_lebesgue_wall_s676.py` and stored `05-knowledge/results/lrc14_lebesgue_wall_s676.out`.  The script computes exact rational danger-arc subdivisions for `delta=1/14`, endpoint witnesses, one-sided wall openings, local `+27` carry perturbations through weight `3`, one-swap AP rows through new speed `60`, global scalar floor orbits, and a proof-route Tournament Analysis.
+**Findings:** AP, Vstar, and `2AP` have `p_0=0` but explicit endpoint witnesses (`6`, `6`, `12`).  All three share exact wall-opening slope `p_0(1/14-eps)/eps=23324/6435` for the checked exact epsilons.  Local `+27` carries give `1134` probes: only the three unperturbed floor atoms are walls, and all `1131` nonzero carries have positive safe measure.  The one-swap AP scan has `611` rows and only `12->24` at `p_0=0`.
+**Tournament Analysis:** Vertices are proof routes, not runners.  The route tournament is transitive with one Hamiltonian path: `endpoint_wall_certificate > local_carry_measure_tax > res27_floor_quotient > global_scalar_floor_orbit > one_swap_wall_sieve > positive_measure_interval > raw_first_moment`.
+**Synthesis:** Lebesgue measure is not the final proof, because the extremal examples have measure zero.  Its real job is to discard positive-measure rows and leave a named endpoint-wall residual.  The sharpened target is a no-new-wall theorem: every normalized `Res_27` carry/owner row outside scalar floor orbits of AP/Vstar/`2AP` has `p_0(V,1/14)>0`.
+**Artifacts:** HYP-2252, T749, `04-computation/lrc14_lebesgue_wall_s676.py`, `05-knowledge/results/lrc14_lebesgue_wall_s676.out`, `07-reflections/lrc14-lebesgue-wall-certificate-s676.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Audit coherent carry subspaces next: scalar unit lifts as the floor control, two-block carry patterns, HYP-2165 owner-route lifts of the 64 fixed classes, and HYP-2241 private-owner fibers.
+
 ## codex-2026-06-05-S675b - Merged line parity n7 addendum (HYP-2251)
 
 **Prompt:** The merged tournament metagraph's black-line portion seems to be an even graph; ask whether the blue-line portion is always odd, and connect this to tournaments/even graphs and even/odd numbers.

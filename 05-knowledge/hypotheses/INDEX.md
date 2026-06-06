@@ -712,6 +712,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2249 addendum | Signed LRC directions are an observer-gauge symmetry but a pair-clock side channel; unit distance should keep `S<1`, `U=1`, and `L>1` as a trienerment object before binary tournament collapse. | S674b complements the signed unit-threshold scout by sampling pair-tournament churn and an `n=21` unit-spine impurity toy.  For AP13 at total `n=14`, `C=27`, all-plus has `100` unique tournaments and `18` fingerprints while alternating-plus has `355` and `29`; fingerprints differ at `588/756` sampled times.  Alternating AP13 splits same-sign differences `{2,4,6,8,10,12}` from opposite-sign sums `{3,5,...,25}`, exposing the odd interior pair-sum sieve while leaving the observer shadow identical.  Unit-distance `S/U/L` probes show square+center has no unit spine, while Eisenstein hex7/hex19/`n=21` fringe toys retain pure unit spines. | codex-2026-06-05-S674b; `HYP-2249-signed-lrc-unit-distance-trienerment-addendum.md`; `signed_lrc_unit_distance_trienerment_s674b.py`; `signed_lrc_unit_distance_trienerment_s674b.out`; `signed-lrc-unit-distance-trienerment-s674b.md`; T746; HYP-2248, HYP-2241, HYP-2240, HYP-2202, HYP-2201, HYP-2132, THM-401 |
 | HYP-2250 | Blue/black metagraph parity is boundary data, not color essence. The simple visible-edge claims `black=even` and `blue=odd` fail under both active repo conventions; the meaningful invariant is the GF(2) boundary of the color layer. | S675 audits SC-type wiggly colors and explorer complement-line colors through `n=6`.  Black has nonzero simple boundary in both conventions, and pure-blue stops being incident-all-odd at `n=6`.  Strong survivor: explorer pure-black weighted complement-line parity has zero GF(2) boundary through `n=6`; SC-type weighted layers also have zero boundary in range.  S674b integration: the same rule appears in signed LRC/unit-distance trienerment, where the equality/address layer must be retained before binary collapse. Warns that A000568 uses Royle-even graphs, not degree-even graph classes. | codex-2026-06-05-S675; `HYP-2250-metagraph-blue-black-boundary-parity.md`; `metagraph_blue_black_parity_s675.py`; `metagraph_blue_black_parity_s675.out`; `metagraph-blue-black-even-odd-s675.md`; T747; HYP-2245, HYP-2187, HYP-2249 |
 | HYP-2251 | Black-even / blue-odd parity is a complement-line-lift theorem, not a simple merged-edge theorem. | S675b sharpens HYP-2250 by separating the corrected tiling-complement line convention from the older simple SC/NS edge coloring and carrying the exact audit through `n=7`.  Known A000568 and `E(G_n/Z_2)` counts match; in the complement-line lift active blue degrees are all odd and black degrees all even (`n=7`: `256` blue lines, `16128` black lines), while the simple projection fails black-even at `n=4` and active-blue-odd at `n=5`.  The even/odd reading is boundary-zero black graph versus odd-boundary SC-support blue coset. | codex-2026-06-05-S675b; `HYP-2251-merged-line-parity-even-odd-addendum.md`; `merged_line_parity_even_odd_s675b.py`; `merged_line_parity_even_odd_s675b.out`; `merged-line-parity-even-odd-s675b.md`; T748; HYP-2250, HYP-2245, HYP-2244, HYP-2240, HYP-2187 |
+| HYP-2252 | LRC14 Lebesgue measure is a proof filter: `p_0>0` gives an interval certificate, while `p_0=0` is an endpoint wall requiring set-level witnesses. | S676 computes exact rational safe measure.  AP, Vstar, and `2AP` have `p_0=0` with endpoint witnesses; all three share the exact wall-opening slope `23324/6435`.  Local `+27` carry perturbations through weight `3` have `1131/1131` positive-measure nonzero carries, and the one-swap AP scan through new speed `60` has only `12->24` at `p_0=0`.  The proof target becomes: no new normalized `p_0=0` wall in the `Res_27` carry/owner fiber beyond scalar floor orbits of AP/Vstar/`2AP`. | codex-2026-06-05-S676; `HYP-2252-lrc14-lebesgue-wall-certificate.md`; `lrc14_lebesgue_wall_s676.py`; `lrc14_lebesgue_wall_s676.out`; `lrc14-lebesgue-wall-certificate-s676.md`; T749; HYP-2241, HYP-2164, HYP-2167, HYP-2155, THM-406 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -8190,3 +8191,61 @@ degree-even graphs; through `n=3..6`, tournament/Royle counts are
 `04-computation/metagraph_blue_black_parity_s675.py`;
 `05-knowledge/results/metagraph_blue_black_parity_s675.out`;
 `07-reflections/metagraph-blue-black-even-odd-s675.md`; HYP-2245, HYP-2187.
+
+## HYP-2252: LRC14 Lebesgue wall certificate (codex-2026-06-05-S676)
+
+**Status:** OPEN proof-partition evidence.
+
+**Statement:** For total runner count `n=14`, Lebesgue safe measure should be
+used as a proof filter:
+
+```text
+p_0(V,1/14)>0  => open interval of lonely times
+p_0(V,1/14)=0  => endpoint-only wall needing set-level witnesses
+```
+
+After quotienting by scalar symmetry and the `Res_27` floor ledger, the
+checked zero-measure wall atoms are AP, Vstar, and nonprimitive `2AP`.
+Therefore the next theorem should be a no-new-wall theorem in the normalized
+carry/owner fiber, not a universal positive-measure lower bound.
+
+**Evidence:** S676 computes exact rational danger-arc subdivisions, not grid
+samples.  AP and Vstar have `p_0=0` and the same six endpoint witnesses
+`1/14,3/14,5/14,9/14,11/14,13/14`; `2AP` has twelve doubling-preimage
+witnesses.  All three wall atoms share exact one-sided opening
+`p_0(1/14-eps)/eps=23324/6435` for the checked small exact `eps`.
+
+Local `+27` carry perturbations through Hamming weight `3` over AP, Vstar, and
+`2AP` give `1134` probes: exactly `3` have `p_0=0`, the unperturbed wall atoms,
+and all `1131` nonzero local carries have positive safe measure.  The one-swap
+AP audit with new speed `<=60` checks `611` rows; the only `p_0=0` row is
+`12->24`, namely Vstar.  Global AP/Vstar unit scalar lifts modulo `27` all
+remain walls by measure-preserving scaling, so the finite claim must be
+normalized.
+
+**Tournament Analysis:** Vertices are proof routes, not runners.  Candidate
+vertex sets considered include runners, danger arcs, breakpoints, safe
+components, endpoint witnesses, `Res_27` rows, carry vectors, owner
+obligations, and proof obligations.  The route tournament is transitive with
+one Hamiltonian path:
+
+```text
+endpoint_wall_certificate
+> local_carry_measure_tax
+> res27_floor_quotient
+> global_scalar_floor_orbit
+> one_swap_wall_sieve
+> positive_measure_interval
+> raw_first_moment
+```
+
+**NEXT:** Audit coherent carry subspaces: scalar unit lifts as the coherent
+control, two-block carry patterns, HYP-2165 owner-route lifts of the 64 fixed
+classes, and HYP-2241 private-owner fibers.  Prove that every normalized row
+outside AP/Vstar/`2AP` scalar floor orbits has `p_0(V,1/14)>0`.
+
+**See:** `05-knowledge/hypotheses/HYP-2252-lrc14-lebesgue-wall-certificate.md`;
+`04-computation/lrc14_lebesgue_wall_s676.py`;
+`05-knowledge/results/lrc14_lebesgue_wall_s676.out`;
+`07-reflections/lrc14-lebesgue-wall-certificate-s676.md`; T749, HYP-2241,
+HYP-2164, HYP-2167, HYP-2155, THM-406.
