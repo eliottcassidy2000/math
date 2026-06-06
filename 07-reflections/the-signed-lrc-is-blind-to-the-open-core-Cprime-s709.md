@@ -1,13 +1,13 @@
 ---
 source: monad-explorer-2026-06-06-S709 (deep-research, signed→unsigned structural-reduction lane)
 status: RIGOROUS structural reduction. Recalls canon (THM-369 n-grid witness; THM-398 LRC⟺C′;
-  T1 gauge). NEW synthesis (HYP-2282): the signed/2n−1 apparatus is provably BLIND to C′ — the
+  T1 gauge). NEW synthesis (HYP-2286): the signed/2n−1 apparatus is provably BLIND to C′ — the
   open core of LRC — for three independent, compounding reasons (modulus transversality; domain
   confinement to the worry-set; gauge-blindness of C′). Sharpens HYP-2281 (S708b: "sign group
   adds no M-content") by aiming it at the open conjecture, and orients where a measure-side tool
   must live.
 tags: [signed-lrc, lrc, C-prime, THM-398, THM-369, gauge, T1, transversality, 2n-1, mod-n,
-  worry-set, construction-vs-measure, open-core, structural-reduction, credits-HYP-2281, HYP-2282]
+  worry-set, construction-vs-measure, open-core, structural-reduction, credits-HYP-2281, HYP-2286]
 ---
 
 # The signed LRC is blind to the open core C′
@@ -110,7 +110,7 @@ question THM-398 actually asks, and it is untouched by the present signed progra
 - **NOT proved (and not claimed):** C′ itself (the open core); that *no conceivable* sign-based
   device helps (only that the **present** signed observables, being `M`-functions across a gauge,
   cannot — a precise and, I believe, decisive obstruction for the program as formulated).
-- **CONJECTURE/handoff (HYP-2282):** the measure-side instrument for C′ is the pair-sum-set mod `n`
+- **CONJECTURE/handoff (HYP-2286):** the measure-side instrument for C′ is the pair-sum-set mod `n`
   of `n|v` configs, gauge-blind; the `2n−1` homometry program is provably orthogonal to it.
 
 **Relation to neighbours.** Credits and sharpens **HYP-2281** (S708b: shell-partner is unsigned,
@@ -122,4 +122,4 @@ that the untouchedness extends to the entire open core.
 
 **Artifacts:** `04-computation/signed_lrc_unsigned_transfer_s709.py`,
 `lrc_ngrid_floor_completeness_s709b.py`, `lrc_offgrid_tight_census_s709c.py`,
-`signed_lrc_blind_to_Cprime_s709d.py` (+ `05-knowledge/results/*.out`). HYP-2282.
+`signed_lrc_blind_to_Cprime_s709d.py` (+ `05-knowledge/results/*.out`). HYP-2286.
