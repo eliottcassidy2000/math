@@ -118,10 +118,12 @@ longer a constraint — `φ(2n−1)` is precisely large enough to hold all of `�
 Verified `C = 5, 7, 9` directly (the `Z[ζ_5], Z[ζ_7], Z[ζ_9]` rows below give
 quanta `5, 7, 9 = C`); the identity `w/2 = C` is immediate from Part (I) and
 `#μ(Q(ζ_C)) = 2C`. The campaign's critical case `n = 14`, `C = 27 = 3³`, sits in
-degree `φ(27) = 18`, where it is the **maximal-quantum** field (`M(18) = 54`,
-quantum `27`); the `3`-richness of `C = 27` that drives the V* split (THM-413,
-HYP-2262) is the same `3`-richness that makes `Q(ζ_27)` rosette-maximal in its
-dimension.
+degree `φ(27) = 18`, where it happens to be the **maximal-quantum** field
+(`M(18) = 54`, quantum `27`). (Caveat: *which* `C = 2n−1` are rosette-maximal in
+their own dimension is governed by the sparsely/highly-totient structure of
+`φ(C)`, **not** by `3 | C` — the tempting "maximal ⟺ 3 | C" guess is REFUTED;
+e.g. `C = 11, 23, 29` are maximal without `3`, and `C = 39, 51, 57` have `3 | C`
+but are not. See HYP-2274 refutation note.)
 
 ## Verification
 

@@ -111,8 +111,14 @@ degree `φ(2n−1)` — has Euclidean density quantum `w/2 = C = 2n−1`, the ve
 of the cyclic worry-set rosette. The dimension `φ(2n−1)` is exactly large enough
 to hold all of `μ_C` as free isometries, so the "all-roots-at-once" is not a
 limit to be taken but a fact already true in the right field. The campaign's
-critical `n = 14` (`C = 27 = 3³`, degree 18) is even the **rosette-maximal** field
-of its dimension — the same `3`-richness that drives the V* split (THM-413).
+critical `n = 14` (`C = 27 = 3³`, degree 18) even happens to be a
+**rosette-maximal** field of its dimension (`M(18) = 54`). I had hoped this was
+the `3`-richness that drives the V* split (THM-413) showing up again — but I
+tested it and it is **not**: "rosette-maximal ⟺ `3 | C`" is false (`C = 11, 23,
+29` are maximal with no factor `3`; `C = 39, 51, 57` have `3 | C` but are not).
+Which `C` are maximal is the sparsely-totient structure of `φ(C)`, a different
+arithmetic. A clean guess, killed by the next ten cases — logged as a refutation
+(HYP-2274 note), not smuggled into the theorem.
 
 That is the same asymmetry THM-414 found from the other direction: the cyclic
 *degree-2 additive* face (`r_+(s)`, pair-sums) is matching-capped and has no

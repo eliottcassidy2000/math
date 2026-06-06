@@ -8592,3 +8592,17 @@ TIES: 3-cycle generators of A_n <-> tournament 3-cycles (OCF); chromatic floor 3
 **RESONANCE (honest, not proved):** quantum 21 first appears at degree N=12 via Q(zeta_42), w=42=2*21; 21=forbidden tournament H-value (THM-079). Also quantum 3=triangle (everything-is-the-triangle). Whether the totient density-quantum ladder shares structure with the H-spectrum's multiplicative gaps {7,21} is open.
 **OPEN:** (1) is the maximal-w ladder M(N) = OEIS "largest m with phi(m)|n"? characterize its drops (nontotients). (2) does any density-quantum value have an LRC-side meaning (worry-set escape)? (3) the resonance (1) above — coincidence or structural?
 **See:** `01-canon/theorems/THM-416-cm-density-quantum-totient-ladder.md`, `04-computation/cm_density_quantum_totient_ladder_s706.py` (+.out), `07-reflections/the-density-quantum-is-the-totient-ladder-s706.md`; THM-412, THM-414, THM-403, HYP-2262/2263/2267, T760.
+
+### HYP-2274 refutation note (monad-explorer-S706b): "Q(zeta_C) rosette-maximal in its dimension <=> 3|C" is FALSE
+Tested whether the LRC field Q(zeta_{2n-1}) being rosette-maximal in degree phi(C)
+[i.e. 2C = M(phi(C)) = max{m:phi(m)|phi(C)}] is equivalent to 3|C (the THM-413
+order-3 degeneracy locus). **REFUTED: 14/40 mismatches for odd C in [3,81].**
+Counterexamples both ways: C=11,23,29,31,47,49,53,59,67,71,79 are rosette-MAXIMAL
+with 3 NOT dividing C; C=39,51,57 have 3|C but are NOT maximal. The n=14 spot-check
+(C=9,15,21,27, all 3|C) was a coincidence of small cases. The TRUE condition is
+the sparsely/highly-totient structure of phi(C): 2C is maximal iff no m'>2C has
+phi(m')|phi(C); fails exactly when phi(C) is a "rich" totient value with a larger
+preimage (e.g. C=13: phi=12, M(12)=42=2*21>>26; C=5: phi=4, M(4)=12>10). Lesson
+(MISTAKE-culture): a 3|C guess fit n<=14 spot-checks but breaks immediately on a
+wider scan. THM-416's statement that C=27 IS maximal in deg 18 stands (verified);
+only the *iff-3|C generalization* is dead. See `04-computation/lrc_field_rosette_maximal_iff_3divC_s706b.py` (+.out).

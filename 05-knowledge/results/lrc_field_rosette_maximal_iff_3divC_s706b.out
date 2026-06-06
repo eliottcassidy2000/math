@@ -1,0 +1,53 @@
+Probe: is Q(zeta_C) rosette-maximal in dim phi(C)  <=>  3 | C ?
+ C  | n=(C+1)/2 | phi(C) | 2C | M(phi(C)) | maximal? | 3|C ? | match
+  3 |      2    |    2   |   6|      6    | YES     | YES  | ok
+  5 |      3    |    4   |  10|     12    | no      | no   | ok
+  7 |      4    |    6   |  14|     18    | no      | no   | ok
+  9 |      5    |    6   |  18|     18    | YES     | YES  | ok
+ 11 |      6    |   10   |  22|     22    | YES     | no   | NO  <<< MISMATCH
+ 13 |      7    |   12   |  26|     42    | no      | no   | ok
+ 15 |      8    |    8   |  30|     30    | YES     | YES  | ok
+ 17 |      9    |   16   |  34|     60    | no      | no   | ok
+ 19 |     10    |   18   |  38|     54    | no      | no   | ok
+ 21 |     11    |   12   |  42|     42    | YES     | YES  | ok
+ 23 |     12    |   22   |  46|     46    | YES     | no   | NO  <<< MISMATCH
+ 25 |     13    |   20   |  50|     66    | no      | no   | ok
+ 27 |     14    |   18   |  54|     54    | YES     | YES  | ok
+ 29 |     15    |   28   |  58|     58    | YES     | no   | NO  <<< MISMATCH
+ 31 |     16    |   30   |  62|     62    | YES     | no   | NO  <<< MISMATCH
+ 33 |     17    |   20   |  66|     66    | YES     | YES  | ok
+ 35 |     18    |   24   |  70|     90    | no      | no   | ok
+ 37 |     19    |   36   |  74|    126    | no      | no   | ok
+ 39 |     20    |   24   |  78|     90    | no      | YES  | NO  <<< MISMATCH
+ 41 |     21    |   40   |  82|    150    | no      | no   | ok
+ 43 |     22    |   42   |  86|     98    | no      | no   | ok
+ 45 |     23    |   24   |  90|     90    | YES     | YES  | ok
+ 47 |     24    |   46   |  94|     94    | YES     | no   | NO  <<< MISMATCH
+ 49 |     25    |   42   |  98|     98    | YES     | no   | NO  <<< MISMATCH
+ 51 |     26    |   32   | 102|    120    | no      | YES  | NO  <<< MISMATCH
+ 53 |     27    |   52   | 106|    106    | YES     | no   | NO  <<< MISMATCH
+ 55 |     28    |   40   | 110|    150    | no      | no   | ok
+ 57 |     29    |   36   | 114|    126    | no      | YES  | NO  <<< MISMATCH
+ 59 |     30    |   58   | 118|    118    | YES     | no   | NO  <<< MISMATCH
+ 61 |     31    |   60   | 122|    198    | no      | no   | ok
+ 63 |     32    |   36   | 126|    126    | YES     | YES  | ok
+ 65 |     33    |   48   | 130|    210    | no      | no   | ok
+ 67 |     34    |   66   | 134|    134    | YES     | no   | NO  <<< MISMATCH
+ 69 |     35    |   44   | 138|    138    | YES     | YES  | ok
+ 71 |     36    |   70   | 142|    142    | YES     | no   | NO  <<< MISMATCH
+ 73 |     37    |   72   | 146|    270    | no      | no   | ok
+ 75 |     38    |   40   | 150|    150    | YES     | YES  | ok
+ 77 |     39    |   60   | 154|    198    | no      | no   | ok
+ 79 |     40    |   78   | 158|    158    | YES     | no   | NO  <<< MISMATCH
+ 81 |     41    |   54   | 162|    162    | YES     | YES  | ok
+
+mismatches (maximal != (3|C)): 14
+CONJECTURE FAILS
+
+Mechanism check: is M(phi(C)) typically 2*C*(extra 3-factor) when 3 does NOT divide C?
+  C= 5: phi= 4, 2C= 10, M(phi)= 12, ratio M/(2C)=1.200, M/C=2.400
+  C= 7: phi= 6, 2C= 14, M(phi)= 18, ratio M/(2C)=1.286, M/C=2.571
+  C=11: phi=10, 2C= 22, M(phi)= 22, ratio M/(2C)=1.000, M/C=2.000
+  C=13: phi=12, 2C= 26, M(phi)= 42, ratio M/(2C)=1.615, M/C=3.231
+  C=25: phi=20, 2C= 50, M(phi)= 66, ratio M/(2C)=1.320, M/C=2.640
+  C=35: phi=24, 2C= 70, M(phi)= 90, ratio M/(2C)=1.286, M/C=2.571
