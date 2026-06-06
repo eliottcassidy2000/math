@@ -1,0 +1,27 @@
+==============================================================================
+strong-min via iso-class generation up to n=9  (monad-compute-S6)
+==============================================================================
+  n=2: 1 classes (A000568=1, ok=True)  t=0.0s
+  n=3: 2 classes (A000568=2, ok=True)  t=0.0s
+  n=4: 4 classes (A000568=4, ok=True)  t=0.0s
+  n=5: 12 classes (A000568=12, ok=True)  t=0.0s
+  n=6: 56 classes (A000568=56, ok=True)  t=0.0s
+  n=7: 456 classes (A000568=456, ok=True)  t=0.5s
+  n=8: 6880 classes (A000568=6880, ok=True)  t=5.7s
+  n=9: 191536 classes (A000568=191536, ok=True)  t=474.3s
+
+------------------------------------------------------------------------------
+  m=9: #strong-classes=178133/191536  strong-min=75  |spectrum|=1482  dt=305.5s
+  strong-min(m) sequence so far: 3,5,9,15,25,45 (m=3..8, from S5); strong-min(9)=75
+  smallest 25 strong H-values at m=9: [75, 81, 85, 87, 89, 91, 93, 95, 97, 99, 101, 103, 105, 107, 109, 111, 113, 115, 117, 119, 121, 123, 125, 127, 129]
+    is   7 a strong H-value at m=9? False
+    is  21 a strong H-value at m=9? False
+    is  35 a strong H-value at m=9? False
+    is  49 a strong H-value at m=9? False
+    is  63 a strong H-value at m=9? False
+    is 189 a strong H-value at m=9? True
+
+  candidate sequence m=3..9: [3, 5, 9, 15, 25, 45, 75]
+    p(n)=p(n-1)+p(n-2)+1 predicts: [3, 5, 9, 15, 25, 41, 67]  (BROKE at n=8)
+    last ratio 75/45 = 1.6667
+DONE.
