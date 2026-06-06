@@ -94,6 +94,25 @@ Together: **`n/2` is the unique argmax of the single-deletion profile** — prov
 on the upper half, verified on the lower. The self-conjugate runner is exactly the
 crossover where the `1/a` law tops out.
 
+## The guard generalizes across the whole n=14 tight family
+
+The doubling and the unique-maximal-guard property are **not** an `AP` artifact.
+For all three known `n=14` tight families (`M=1/14`), deleting the self-conjugate
+runner doubles the gap to `1/7` and is the **unique** maximal single deletion:
+
+| family | self-conj runner | `M` | after deleting sc | unique max deletion? |
+|---|---|---|---|---|
+| `AP_14` | `7` | `1/14` | `1/7` (×2) | yes, at `7` |
+| `V*` (`12→24`) | `7` | `1/14` | `1/7` (×2) | yes, at `7` |
+| `2·AP` (doubled) | `14 = 2·7` | `1/14` | `1/7` (×2) | yes, at `14` |
+
+So the self-conjugate runner is the maximal guard of the *family*, not just of the
+arithmetic progression. (In `2·AP` the role passes to `14 = 2·(n/2)`, the image of
+`n/2` under the speed-doubling that defines the family — consistent with the
+scaling-invariance of `M`.) This is direct evidence for the handoff question: *the
+maximal-slack self-conjugate runner appears to be the maximal guard for any tight
+config*, not merely for `AP_n`.
+
 ## The genuine even→odd link (what survives of the S700 dream)
 
 The reduction even→odd does **not** go by deleting `n/2`. But an even→odd link
