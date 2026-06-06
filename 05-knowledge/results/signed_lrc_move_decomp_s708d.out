@@ -1,0 +1,46 @@
+=== C=9 (3x3) total=8 defic=1 size-hist={1: 6, 2: 1}
+    generators (prime-power half-systems) [3]
+      move (3,)  occ=1
+    sum occ = 1  (== defic? True)
+
+=== C=15 (3x5) total=64 defic=4 size-hist={1: 56, 2: 4}
+    generators (prime-power half-systems) [3, 5]
+      move (3,)  occ=2
+      move (5,)  occ=2
+    sum occ = 4  (== defic? True)
+
+=== C=21 (3x7) total=512 defic=8 size-hist={1: 496, 2: 8}
+    generators (prime-power half-systems) [3, 7]
+      move (3,)  occ=4
+      move (7,)  occ=4
+    sum occ = 8  (== defic? True)
+
+=== C=25 (5x5) total=2048 defic=4 size-hist={1: 2040, 2: 4}
+    generators (prime-power half-systems) [5]
+      move (5,)  occ=4
+    sum occ = 4  (== defic? True)
+
+=== C=27 (3x3x3) total=4096 defic=69 size-hist={1: 3960, 2: 66, 4: 1}
+    generators (prime-power half-systems) [3, 9]
+      move (3, 9)  occ=55
+      move (3,)  occ=7
+      move (9,)  occ=7
+    sum occ = 69  (== defic? True)
+
+=== C=45 (3x3x5) total=2097152 defic=8728 size-hist={1: 2079768, 2: 8620, 4: 36}
+    generators (prime-power half-systems) [3, 5, 9, 15]
+      move (5, 15)  occ=4472
+      move (3, 9)  occ=3104
+      move (3, 15)  occ=974
+      move (3,)  occ=60
+      move (15,)  occ=60
+      move (3, 5, 9, 15)  occ=30
+      move (5,)  occ=14
+      move (9,)  occ=14
+    sum occ = 8728  (== defic? True)
+
+=== C=49 (7x7) total=8388608 defic=16 size-hist={1: 8388576, 2: 16}
+    generators (prime-power half-systems) [7]
+      move (7,)  occ=16
+    sum occ = 16  (== defic? True)
+

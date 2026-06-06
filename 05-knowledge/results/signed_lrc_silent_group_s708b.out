@@ -1,0 +1,45 @@
+C=9 (3x3) total=8 defic=1 defic_formula=4.500 GROUPTEST=False
+   prime-power divisors [3, 9]   N(H_d)={3: 2, 9: 8}
+   class-size hist={1: 6, 2: 1}   #cuts by s(silent count)={1: 6, 2: 2}
+   pairwise joint (both silent) = {(3, 9): 2}
+
+C=15 (3x5) total=64 defic=4 defic_formula=4.000 GROUPTEST=True
+   prime-power divisors [3, 5]   N(H_d)={3: 4, 5: 4}
+   class-size hist={1: 56, 2: 4}   #cuts by s(silent count)={0: 56, 1: 8}
+
+C=21 (3x7) total=512 defic=8 defic_formula=8.000 GROUPTEST=True
+   prime-power divisors [3, 7]   N(H_d)={3: 8, 7: 8}
+   class-size hist={1: 496, 2: 8}   #cuts by s(silent count)={0: 496, 1: 16}
+
+C=25 (5x5) total=2048 defic=4 defic_formula=1026.000 GROUPTEST=False
+   prime-power divisors [5, 25]   N(H_d)={5: 8, 25: 2048}
+   class-size hist={1: 2040, 2: 4}   #cuts by s(silent count)={1: 2040, 2: 8}
+   pairwise joint (both silent) = {(5, 25): 8}
+
+C=27 (3x3x3) total=4096 defic=69 defic_formula=2055.500 GROUPTEST=False
+   prime-power divisors [3, 9, 27]   N(H_d)={3: 16, 9: 16, 27: 4096}
+   class-size hist={1: 3960, 2: 66, 4: 1}   #cuts by s(silent count)={1: 4068, 2: 24, 3: 4}
+   pairwise joint (both silent) = {(3, 27): 16, (9, 27): 16, (3, 9): 4}
+
+C=33 (3x11) total=32768 defic=32 defic_formula=32.000 GROUPTEST=True
+   prime-power divisors [3, 11]   N(H_d)={3: 32, 11: 32}
+   class-size hist={1: 32704, 2: 32}   #cuts by s(silent count)={0: 32704, 1: 64}
+
+C=35 (5x7) total=65536 defic=16 defic_formula=16.000 GROUPTEST=True
+   prime-power divisors [5, 7]   N(H_d)={5: 16, 7: 16}
+   class-size hist={1: 65504, 2: 16}   #cuts by s(silent count)={0: 65504, 1: 32}
+
+C=39 (3x13) total=262144 defic=64 defic_formula=64.000 GROUPTEST=True
+   prime-power divisors [3, 13]   N(H_d)={3: 64, 13: 64}
+   class-size hist={1: 262016, 2: 64}   #cuts by s(silent count)={0: 262016, 1: 128}
+
+C=45 (3x3x5) total=2097152 defic=8728 defic_formula=94.000 GROUPTEST=False
+   prime-power divisors [3, 5, 9]   N(H_d)={3: 128, 5: 32, 9: 32}
+   class-size hist={1: 2079768, 2: 8620, 4: 36}   #cuts by s(silent count)={0: 2096968, 1: 176, 2: 8}
+   pairwise joint (both silent) = {(3, 9): 8}
+
+C=49 (7x7) total=8388608 defic=16 defic_formula=4194312.000 GROUPTEST=False
+   prime-power divisors [7, 49]   N(H_d)={7: 32, 49: 8388608}
+   class-size hist={1: 8388576, 2: 16}   #cuts by s(silent count)={1: 8388576, 2: 32}
+   pairwise joint (both silent) = {(7, 49): 32}
+

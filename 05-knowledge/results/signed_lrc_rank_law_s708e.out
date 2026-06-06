@@ -1,0 +1,55 @@
+=== C=9 (3x3) total=8 defic=1 classes=7  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 6, 1: 2}
+    deficiency from rank formula = 1.0000  (matches True)
+    class-size hist = {1: 6, 2: 1}
+
+=== C=15 (3x5) total=64 defic=4 classes=60  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 56, 1: 8}
+    deficiency from rank formula = 4.0000  (matches True)
+    class-size hist = {1: 56, 2: 4}
+
+=== C=21 (3x7) total=512 defic=8 classes=504  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 496, 1: 16}
+    deficiency from rank formula = 8.0000  (matches True)
+    class-size hist = {1: 496, 2: 8}
+
+=== C=25 (5x5) total=2048 defic=4 classes=2044  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 2040, 1: 8}
+    deficiency from rank formula = 4.0000  (matches True)
+    class-size hist = {1: 2040, 2: 4}
+
+=== C=27 (3x3x3) total=4096 defic=69 classes=4027  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 3960, 1: 132, 2: 4}
+    deficiency from rank formula = 69.0000  (matches True)
+    class-size hist = {1: 3960, 2: 66, 4: 1}
+
+=== C=33 (3x11) total=32768 defic=32 classes=32736  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 32704, 1: 64}
+    deficiency from rank formula = 32.0000  (matches True)
+    class-size hist = {1: 32704, 2: 32}
+
+=== C=35 (5x7) total=65536 defic=16 classes=65520  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 65504, 1: 32}
+    deficiency from rank formula = 16.0000  (matches True)
+    class-size hist = {1: 65504, 2: 16}
+
+=== C=39 (3x13) total=262144 defic=64 classes=262080  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 262016, 1: 128}
+    deficiency from rank formula = 64.0000  (matches True)
+    class-size hist = {1: 262016, 2: 64}
+
+=== C=45 (3x3x5) total=2097152 defic=8728 classes=2088424  class_size==2^rank? True
+    rank distribution (rank:#cuts) = {0: 2079768, 1: 17240, 2: 144}
+    deficiency from rank formula = 8728.0000  (matches True)
+    class-size hist = {1: 2079768, 2: 8620, 4: 36}
+
+SUMMARY (C: defic, rank_dist, size_hist):
+  9 (3x3): defic=1 rank={0: 6, 1: 2} sizes={1: 6, 2: 1}
+  15 (3x5): defic=4 rank={0: 56, 1: 8} sizes={1: 56, 2: 4}
+  21 (3x7): defic=8 rank={0: 496, 1: 16} sizes={1: 496, 2: 8}
+  25 (5x5): defic=4 rank={0: 2040, 1: 8} sizes={1: 2040, 2: 4}
+  27 (3x3x3): defic=69 rank={0: 3960, 1: 132, 2: 4} sizes={1: 3960, 2: 66, 4: 1}
+  33 (3x11): defic=32 rank={0: 32704, 1: 64} sizes={1: 32704, 2: 32}
+  35 (5x7): defic=16 rank={0: 65504, 1: 32} sizes={1: 65504, 2: 16}
+  39 (3x13): defic=64 rank={0: 262016, 1: 128} sizes={1: 262016, 2: 64}
+  45 (3x3x5): defic=8728 rank={0: 2079768, 1: 17240, 2: 144} sizes={1: 2079768, 2: 8620, 4: 36}
