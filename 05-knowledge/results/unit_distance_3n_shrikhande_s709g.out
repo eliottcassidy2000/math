@@ -1,0 +1,17 @@
+SHRIKHANDE graph srg check
+  N = 16, degrees = {6} (6-regular: True)
+  U (edges) = 48,  3N = 48,  U == 3N: True
+  adjacent-pair common-nbr values lambda = {2}
+  non-adjacent-pair common-nbr values mu = {2}
+  max common neighbours over all pairs = 2  (<=2 required: True)
+  contains K4? False   (K4-free: True)
+
+INTERPRETATION:
+  Shrikhande is K4-free, <=2-common-nbr, 6-regular => U = 3N exactly at N=16,
+  saturating the cherry bound maxU(16)=48 = 3*16. It is the combinatorial object
+  sitting one rung below 'beats 3N'. It is NOT a planar unit-distance graph
+  (Shrikhande is not 2-embeddable as a UD graph). So:
+    combinatorial minimum for U>3N  ~  17  (floor, near-tight)
+    planar-realizable minimum        =  32  (THM-421(B) record)
+  => the gap 17->32 is the COST OF EUCLIDEAN REALIZABILITY (geometric, not
+     combinatorial). The floor itself is combinatorially essentially tight.

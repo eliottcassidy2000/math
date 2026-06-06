@@ -92,12 +92,19 @@ design** for this extremal task. Closing it (HYP-2285) is the live question.
   worth-chasing transfer (the worry-set's "≤2 common neighbours" is the
   shell-partner pairing `v_i+v_j ≡ 0 mod 2n−1`, also a ≤2-incidence structure).
 
-- **K₄-free is the unused second lever.** Planar unit-distance graphs are also
-  `K₄`-free (no regular tetrahedron in the plane; max clique = the equilateral
-  triangle). THM-421's floor uses only (CN); folding in K₄-freeness (bounding
-  triangles: `3T = Σ_edge #commonNbr ≤ 2U`) is the natural next attempt to lift the
-  floor above 17 — mirroring how the LRC worry-set's odd-3-cycle (Rédei/OCR, the
-  *triangle* count) is the live invariant there too.
+- **K₄-freeness does NOT lift the floor — the Shrikhande witness.** Planar
+  unit-distance graphs are also `K₄`-free (no regular tetrahedron in the plane; max
+  clique = the equilateral triangle). One might hope to fold this in to push the floor
+  past 17. It cannot be done with these counting properties: the **Shrikhande graph**
+  `srg(16,6,2,2)` is `K₄`-free, has *exactly* 2 common neighbours per pair, and is
+  6-regular ⇒ `U = 48 = 3·16` — it saturates the cherry bound at `N = 16`, one rung
+  below the target, satisfying *both* levers. So `C(κ,2)+2 = 17` is the genuine
+  combinatorial floor, and — since Shrikhande is not realizable as a planar
+  unit-distance graph — the entire gap `[17, 32]` is the cost of Euclidean
+  realizability. (The LRC parallel: there the live invariant is the odd-3-cycle
+  count (Rédei/OCR); the analogue of "Shrikhande saturates but isn't realizable"
+  would be a worry-set design that meets the additive-energy bound but isn't a
+  speed multiset — worth chasing.)
 
 ## The transferable shape
 

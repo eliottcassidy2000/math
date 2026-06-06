@@ -109,6 +109,23 @@ N=13) has just `U = 24`, average degree `3.69 < 6`. Density must be *built up ov
 chunk*, not found in a single ball — which is why the minimiser is a 32-vertex blob,
 not a tiny cluster, and why the floor (17) is not met.
 
+## The floor is combinatorially TIGHT: the Shrikhande witness (`..._shrikhande_s709g.py`)
+
+The **Shrikhande graph** `srg(16, 6, 2, 2)` is `6`-regular, `K₄`-free, and has
+**exactly 2 common neighbours for every pair** (λ = μ = 2), so `U = 48 = 3·16` — it
+*saturates* the cherry bound (max-U(16) = 48) and sits exactly one rung below "beats
+3N", at `N = 16`. Two consequences:
+
+- **The floor `C(κ,2)+2 = 17` cannot be raised by adding `K₄`-freeness.** Both levers
+  available here (≤2 common neighbours *and* `K₄`-free) are already satisfied by an
+  object reaching `U = 3N` at `N = 16`; the counting argument is tight. This settles
+  the "can K₄-freeness lift the floor?" question **negatively** for these two
+  properties — any improvement must use finer / genuinely geometric information.
+- **Shrikhande is not a planar unit-distance graph.** The combinatorial extremum
+  lives at `N = 16`, while the planar-realizable minimum is `N* ≤ 32`. So the whole
+  gap `[17, 32]` is the **cost of Euclidean realizability**, made precise by a named
+  witness — not a combinatorial obstruction.
+
 ## Why the gap 17 vs 32 (interpretation)
 
 The floor `C(κ,2)+2 = 17` is a pure **design-theoretic** bound: it would be met by a
