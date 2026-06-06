@@ -1,0 +1,20 @@
+(1) THE LOOP SWAPS THE TWO OUTPUTS: x|->g*x (g a non-residue) maps T_p -> T_p^op
+   p=7: non-residue g=3; x->g*x sends T->T^op (arc-reversal/self-complement)? True; g^2 a QR? True (g generates the Z/2 QR cover)
+   p=11: non-residue g=2; x->g*x sends T->T^op (arc-reversal/self-complement)? True; g^2 a QR? True (g generates the Z/2 QR cover)
+   p=19: non-residue g=2; x->g*x sends T->T^op (arc-reversal/self-complement)? True; g^2 a QR? True (g generates the Z/2 QR cover)
+   p=23: non-residue g=5; x->g*x sends T->T^op (arc-reversal/self-complement)? True; g^2 a QR? True (g generates the Z/2 QR cover)
+
+(2) EXTENSION PROPERTY (k-existential closure): the finite Rado/random structure.
+    k-EC = for every disjoint U,V with |U|+|V|<=k, EXISTS x with x->U and V->x.
+   p=7: min #extenders by |U|+|V|: [(1, 3), (2, 1), (3, 0)]  => 2-EC ;  Weil pred p/2^s (±s√p): [(1, 3.5, 2.6), (2, 1.8, 5.3), (3, 0.9, 7.9)]
+   p=11: min #extenders by |U|+|V|: [(1, 5), (2, 2), (3, 0)]  => 2-EC ;  Weil pred p/2^s (±s√p): [(1, 5.5, 3.3), (2, 2.8, 6.6), (3, 1.4, 9.9)]
+   p=19: min #extenders by |U|+|V|: [(1, 9), (2, 4), (3, 1)]  => 3-EC ;  Weil pred p/2^s (±s√p): [(1, 9.5, 4.4), (2, 4.8, 8.7), (3, 2.4, 13.1)]
+   p=23: min #extenders by |U|+|V|: [(1, 11), (2, 5), (3, 1)]  => 3-EC ;  Weil pred p/2^s (±s√p): [(1, 11.5, 4.8), (2, 5.8, 9.6), (3, 2.9, 14.4)]
+   p=31: min #extenders by |U|+|V|: [(1, 15), (2, 7), (3, 2)]  => 3-EC ;  Weil pred p/2^s (±s√p): [(1, 15.5, 5.6), (2, 7.8, 11.1), (3, 3.9, 16.7)]
+   p=43: min #extenders by |U|+|V|: [(1, 21), (2, 10), (3, 3)]  => 3-EC ;  Weil pred p/2^s (±s√p): [(1, 21.5, 6.6), (2, 10.8, 13.1), (3, 5.4, 19.7)]
+
+  => Paley tournaments are k-EC for p >> 4^k (Weil/√p); as p->inf they converge to the unique
+     countable homogeneous RANDOM TOURNAMENT (the Rado graph's tournament analogue), which is
+     k-EC for ALL k. The √p error = the Gauss sum = the character-ratio spectrum (S638) = the
+     monodromy: the non-residue 'loop' that swaps T<->T^op is the Z/2 whose Weil bound is the
+     rate of approach to the universal limit.
