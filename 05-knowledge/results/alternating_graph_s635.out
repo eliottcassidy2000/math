@@ -1,0 +1,12 @@
+ALTERNATING GROUP GRAPH AG_n vs the bipartite transposition graph of S_n
+========================================================================
+  AG_3: |A_n|=3 vertices, (2n-4)=2-regular, bipartite=False, odd-girth=3, chi=3
+  AG_4: |A_n|=12 vertices, (2n-4)=4-regular, bipartite=False, odd-girth=3, chi=3
+  AG_5: |A_n|=60 vertices, (2n-4)=6-regular, bipartite=False, odd-girth=3, chi=3
+  AG_6: |A_n|=360 vertices, (2n-4)=8-regular, bipartite=False, odd-girth=(skip), chi=(skip)
+
+  contrast: Cay(S_n, transpositions) is bipartite (sign map) => chi=2.
+  S_4 transposition graph: |S_4|=24, bipartite=True (chi=2, the sign 2-coloring)
+
+  => AG_n is the PERMANENTLY-ODD (non-bipartite) rung: A_n = ker(sign), no parity 2-coloring,
+     so chi(AG_n)>=3 for all n. The alternating group is where parity runs out (S587 odd sector).
