@@ -1,0 +1,25 @@
+(1) LOESCHIAN numbers (a²+ab+b² = Eisenstein norms) up to 30; which give hexagonal colorings:
+   Loeschian: [1, 3, 4, 7, 9, 12, 13, 16, 19, 21, 25, 27, 28]
+   5 Loeschian? False; 6 Loeschian? False; 7 = N(1, 2) = (2+ζ6) prime norm
+   ⟹ NO Eisenstein-hexagonal periodic coloring has 5 or 6 colors (5,6 not norms);
+      7 is the smallest Loeschian > 4 ⟹ the Isbell hexagonal 7-coloring is index-7 = ℤ[ζ6]/(2+ζ6)≅𝔽₇.
+      [So improving the UPPER bound to 6 REQUIRES a non-Eisenstein (aperiodic/non-hexagonal) coloring.]
+
+(2) SPECTRAL / FRACTIONAL CAP (why the 5,6,7 distinctions are combinatorial, not spectral):
+   m₁ (1-avoiding density) ∈ [0.2293,0.2598] ⟹ χ_f = 1/m₁ ∈ [3.85,4.36]
+   χ_f < 5 (≈4.36 at the best m₁) ⟹ the FRACTIONAL/spectral bound CANNOT reach 5.
+   ⟹ χ≥5 (de Grey) is IRREDUCIBLY COMBINATORIAL = the integrality gap χ−χ_f = the LRC 'Vitali wall' (S699g).
+   ⟹ NO spectral/measure argument can narrow {5,6,7}; only combinatorial gadgets (Moser/de Grey-type) can.
+
+(3) FIELD-TOWER chromatic growth (S687 extended): χ climbs along the number-field tower:
+   χ(ℚ²)            = 2   (rational plane bipartite)
+   χ(ℤ[ζ6]=√−3)     = 3   (Eisenstein lattice; W6 forces 3, lattice 3-colors via mod √−3 = 𝔽₃)
+   χ(ℚ(√−3,√−11))  ≥ 4   (contains the Moser spindle; √−11 = the non-cyclotomic rotation)
+   χ(ℝ²)            ∈ {5,6,7}
+   ⟹ the cyclotomic FLOOR is 3; [5,7] is the POST-CYCLOTOMIC regime. BOTH ends escape the lattice:
+      LOWER bound (χ≥5) escapes via Heegner rotations (S687); UPPER bound (≤6) would need a
+      NON-Eisenstein coloring (1). The lattice pins only χ=3; the true value is an ESCAPE statement.
+
+(4) HEEGNER ROADMAP (conjectural, S699m): χ=3↦√−3, χ=4↦√−11, χ=5↦√−19? (next Heegner).
+   If a finite UD graph can force at most k independent Heegner rotations, χ(ℝ²)=2+k. Narrowing
+   {5,6,7} ⟺ counting the max Heegner-rotation rank of a finite unit-distance graph.
