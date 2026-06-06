@@ -1,0 +1,8 @@
+[1] correlation: fold-count vs gap_shells over multiple-of-19 configs
+   configs: 8000;  mean gap_shells when folds>=12: 0.1127 (n=8000)
+Traceback (most recent call last):
+  File "/home/claude/math-research/04-computation/lrc19_foldrich_s630.py", line 38, in <module>
+    print(f"                          when folds<=3 : {statistics.mean(lo):.4f} (n={len(lo)})")
+  File "/usr/lib/python3.10/statistics.py", line 328, in mean
+    raise StatisticsError('mean requires at least one data point')
+statistics.StatisticsError: mean requires at least one data point
