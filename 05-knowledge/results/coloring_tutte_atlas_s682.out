@@ -1,0 +1,11 @@
+TIE-INDUCTION = DELETION-CONTRACTION (Tutte recursion):
+  H(T) == H(T del e) + H(T contract e):  2932/2932 hold  [delete e = introduce a TIE]
+
+EVERYTHING AS COLORING -- node / edge / both (see docstring Rosetta):
+  LRC = node circular-coloring (tension) <-> edge nowhere-zero flow (Tutte duality, S537o)
+  Tournament/H = edge {->,<-} coloring; H deletion-contraction [verified]
+  metagraph chi=n-1, unit-distance Hadwiger-Nelson chi in {5,6,7}: node chromatic
+  conflict graph Omega / partition functions: Potts/Tutte (q-coloring) specializations
+
+GEM: tie-induction + everything-as-coloring = ONE object: the Tutte/Potts polynomial
+  under deletion-contraction. node/edge/both = chromatic/flow/full Tutte.
