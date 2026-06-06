@@ -1,0 +1,22 @@
+Layered-visibility lemma (odd prime powers):
+  C=9=3^2: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+  C=27=3^3: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+  C=81=3^4: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+  C=25=5^2: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+  C=125=5^3: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+  C=49=7^2: layer-lemma sin=0 <=> v_q(t)+v_q(x)>=k : OK
+
+Order-block decomposition of the silent-flip space V:
+  C=9: order-blocks {e:|O_e|} = {3: 1, 9: 3};  H_d = union_(e|d) O_e : OK
+  C=15: order-blocks {e:|O_e|} = {3: 1, 5: 2, 15: 4};  H_d = union_(e|d) O_e : OK
+  C=21: order-blocks {e:|O_e|} = {3: 1, 7: 3, 21: 6};  H_d = union_(e|d) O_e : OK
+  C=25: order-blocks {e:|O_e|} = {5: 2, 25: 10};  H_d = union_(e|d) O_e : OK
+  C=27: order-blocks {e:|O_e|} = {3: 1, 9: 3, 27: 9};  H_d = union_(e|d) O_e : OK
+  C=35: order-blocks {e:|O_e|} = {5: 2, 7: 3, 35: 12};  H_d = union_(e|d) O_e : OK
+  C=45: order-blocks {e:|O_e|} = {3: 1, 5: 2, 9: 3, 15: 4, 45: 12};  H_d = union_(e|d) O_e : OK
+  C=63: order-blocks {e:|O_e|} = {3: 1, 7: 3, 9: 3, 21: 6, 63: 18};  H_d = union_(e|d) O_e : OK
+  C=75: order-blocks {e:|O_e|} = {3: 1, 5: 2, 15: 4, 25: 10, 75: 20};  H_d = union_(e|d) O_e : OK
+  C=81: order-blocks {e:|O_e|} = {3: 1, 9: 3, 27: 9, 81: 27};  H_d = union_(e|d) O_e : OK
+  C=105: order-blocks {e:|O_e|} = {3: 1, 5: 2, 7: 3, 15: 4, 21: 6, 35: 12, 105: 24};  H_d = union_(e|d) O_e : OK
+  C=121: order-blocks {e:|O_e|} = {11: 5, 121: 55};  H_d = union_(e|d) O_e : OK
+  C=125: order-blocks {e:|O_e|} = {5: 2, 25: 10, 125: 50};  H_d = union_(e|d) O_e : OK
