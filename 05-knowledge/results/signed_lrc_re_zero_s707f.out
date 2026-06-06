@@ -1,0 +1,61 @@
+LEMMA 1: Re(Sigma_hat(t)) = 0 for q nmid t  (max over 200 random half-system selections)
+   C   q        maxRe
+   9   3     1.39e-15
+  15   3     5.86e-15
+  15   5     5.69e-15
+  21   3     1.60e-14
+  21   7     1.28e-14
+  25   5     3.24e-14
+  27   3     2.74e-14
+  33   3     4.35e-14
+  33  11     3.48e-14
+  35   5     4.95e-14
+  35   7     5.95e-14
+  39   3     4.87e-14
+  39  13     4.51e-14
+  45   3     8.59e-14
+  45   5     8.86e-14
+  49   7     1.02e-13
+  51   3     9.12e-14
+  51  17     7.33e-14
+  55   5     1.15e-13
+  55  11     1.06e-13
+  57   3     1.20e-13
+  57  19     9.13e-14
+  63   3     1.22e-13
+  63   7     1.41e-13
+  65   5     1.20e-13
+  65  13     1.88e-13
+  69   3     1.51e-13
+  69  23     1.43e-13
+  75   3     1.50e-13
+  75   5     1.43e-13
+  77   7     1.74e-13
+  77  11     1.89e-13
+
+LEMMA 2: #fullcoset = 2^{(m-1)/2}, m=C/q  (compare with s707e enumerated values)
+   C   q    m  formula  enum(s707e)  match
+   9   3    3        2            2   True
+  15   3    5        4            4   True
+  15   5    3        2            2   True
+  21   3    7        8            8   True
+  21   7    3        2            2   True
+  25   5    5        4            4   True
+  27   3    9       16           16   True
+  33   3   11       32           32   True
+  35   5    7        8            8   True
+  35   7    5        4            4   True
+
+COUNT LAW (squarefree pq):  pairs(H_q) = 2^{(C/q-1)/2 + (q-1)/2 - 2};  deficiency = sum over primes.
+    C=pq  pred deficiency    2^((p+q)/2-2)
+      15                4                4   OK
+      21                8                8   OK
+      35               16               16   OK
+      33               32               32   OK
+      39               64               64   OK
+      55               64               64   OK
+      65              128              128   OK
+      77              128              128   OK
+      51              256              256   OK
+      57              512              512   OK
+      91              256              256   OK
