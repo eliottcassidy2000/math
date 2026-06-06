@@ -1,0 +1,75 @@
+======================================================================
+(A) SYMMETRIC-CLOSURE IDENTITY: sym(AP)=Z/(2n-1); shells=gauge orbits
+======================================================================
+ n= 3 C= 5: |sym(AP)|= 5 (=C? True); sym==Z/C: True; #shells=2 (=n-1? True)
+ n= 4 C= 7: |sym(AP)|= 7 (=C? True); sym==Z/C: True; #shells=3 (=n-1? True)
+ n= 5 C= 9: |sym(AP)|= 9 (=C? True); sym==Z/C: True; #shells=4 (=n-1? True)
+ n= 6 C=11: |sym(AP)|=11 (=C? True); sym==Z/C: True; #shells=5 (=n-1? True)
+ n= 7 C=13: |sym(AP)|=13 (=C? True); sym==Z/C: True; #shells=6 (=n-1? True)
+ n= 8 C=15: |sym(AP)|=15 (=C? True); sym==Z/C: True; #shells=7 (=n-1? True)
+ n= 9 C=17: |sym(AP)|=17 (=C? True); sym==Z/C: True; #shells=8 (=n-1? True)
+
+======================================================================
+(B) GLOBAL ADDITIVE-ENERGY MAX over ALL (n-1)-subsets of (Z/C)\{0}
+======================================================================
+ n= 4 C= 7 k=3: #subsets=20, E_+(AP)=3, globalmax=3, AP is max? True
+          #maximizers=20, |AP dilate-orbit|=6, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[2, 3, 4], [1, 2, 4], [1, 3, 6]]
+ n= 5 C= 9 k=4: #subsets=70, E_+(AP)=8, globalmax=8, AP is max? True
+          #maximizers=30, |AP dilate-orbit|=6, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[2, 4, 7, 8], [1, 4, 6, 8], [2, 3, 5, 6]]
+ n= 6 C=11 k=5: #subsets=252, E_+(AP)=16, globalmax=16, AP is max? True
+          #maximizers=30, |AP dilate-orbit|=10, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[4, 5, 6, 7, 8], [1, 3, 5, 7, 10], [3, 4, 5, 6, 7]]
+ n= 7 C=13 k=6: #subsets=924, E_+(AP)=29, globalmax=29, AP is max? True
+          #maximizers=42, |AP dilate-orbit|=12, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[1, 3, 5, 7, 10, 12], [6, 7, 8, 9, 10, 11], [3, 4, 5, 10, 11, 12]]
+ n= 8 C=15 k=7: #subsets=3432, E_+(AP)=47, globalmax=47, AP is max? True
+          #maximizers=32, |AP dilate-orbit|=8, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[1, 3, 5, 7, 9, 11, 14], [3, 4, 5, 6, 11, 12, 13], [1, 3, 6, 8, 10, 12, 14]]
+ n= 9 C=17 k=8: #subsets=12870, E_+(AP)=72, globalmax=72, AP is max? True
+          #maximizers=72, |AP dilate-orbit|=16, maximizers==AP-orbit? False, maximizers ⊆ AP-orbit? False
+          NON-AP maximizers exist, e.g.: [[1, 3, 6, 8, 10, 11, 13, 15], [4, 5, 6, 7, 13, 14, 15, 16], [1, 2, 5, 8, 9, 11, 12, 15]]
+
+======================================================================
+(C) TIGHT-CONFIG SEARCH (exact M): additive invariants of the worry-set
+======================================================================
+ n= 5 C= 9 thr=1/5, box[1,15]: #tight integer configs=2
+     E_+(AP)=8; distinct (E_+, r_+(0)) signatures among tight:
+        (E_+=   8, r_+(0)=0) : 1 configs <-- AP energy
+        (E_+=   6, r_+(0)=0) : 1 configs
+     max E_+ among TIGHT = 8; equals E_+(AP)? True; AP is tight-energy-max? True
+        example (E_+=8,r0=0): speeds=(1, 2, 3, 4) -> res mod 9=[1, 2, 3, 4]
+        example (E_+=6,r0=0): speeds=(1, 3, 4, 7) -> res mod 9=[1, 3, 4, 7]
+ n= 6 C=11 thr=1/6, box[1,18]: #tight integer configs=2
+     E_+(AP)=16; distinct (E_+, r_+(0)) signatures among tight:
+        (E_+=  16, r_+(0)=0) : 1 configs <-- AP energy
+        (E_+=  10, r_+(0)=0) : 1 configs
+     max E_+ among TIGHT = 16; equals E_+(AP)? True; AP is tight-energy-max? True
+        example (E_+=16,r0=0): speeds=(1, 2, 3, 4, 5) -> res mod 11=[1, 2, 3, 4, 5]
+        example (E_+=10,r0=0): speeds=(1, 3, 4, 5, 9) -> res mod 11=[1, 3, 4, 5, 9]
+ n= 7 C=13 thr=1/7, box[1,21]: #tight integer configs=1
+     E_+(AP)=29; distinct (E_+, r_+(0)) signatures among tight:
+        (E_+=  29, r_+(0)=0) : 1 configs <-- AP energy
+     max E_+ among TIGHT = 29; equals E_+(AP)? True; AP is tight-energy-max? True
+        example (E_+=29,r0=0): speeds=(1, 2, 3, 4, 5, 6) -> res mod 13=[1, 2, 3, 4, 5, 6]
+
+======================================================================
+(D) REDUCTION: shell clock (mod 2n-1, SIGNED) vs witness clock (mod n)
+======================================================================
+ AP   : res mod 27=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        E_+=328, r_+(0)=shell-collisions=0; empty shells=[]; doubled shells=[]
+        mod n=14: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; #(==0)=0; #witness-collisions=0
+ 2*AP : res mod 27=[2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+        E_+=328, r_+(0)=shell-collisions=0; empty shells=[]; doubled shells=[]
+        mod n=14: residues=[0, 2, 2, 4, 4, 6, 6, 8, 8, 10, 10, 12, 12]; #(==0)=1; #witness-collisions=6
+ V*   : res mod 27=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]
+        E_+=290, r_+(0)=shell-collisions=1; empty shells=[(12, 15)]; doubled shells=[(3, 24)]
+        mod n=14: residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]; #(==0)=0; #witness-collisions=1
+
+ Interpretation:
+  * shell-perfect (r_+(0)=0) <=> one runner per summand shell <=> sym-closure
+    is a transversal; AP & 2*AP are shell-perfect, V* has the 3+24=27 collision.
+  * BUT all three are tight (gap 1/14) -- so shell structure does NOT change M;
+    it refines the tight set.  The witness clock mod n only forbids residue 0;
+    it is BLIND to the shell collision.  => signed face is strictly finer.

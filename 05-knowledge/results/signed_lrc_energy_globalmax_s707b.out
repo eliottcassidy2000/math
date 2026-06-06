@@ -1,0 +1,11 @@
+n= 4 C= 7 k= 3: E_+(AP)=   3 globalmax=   3 AP_is_max=True  #maximizers=  20 |AP-orbit|= 6 #nonAP_maximizers=14
+n= 5 C= 9 k= 4: E_+(AP)=   8 globalmax=   8 AP_is_max=True  #maximizers=  30 |AP-orbit|= 6 #nonAP_maximizers=24
+n= 6 C=11 k= 5: E_+(AP)=  16 globalmax=  16 AP_is_max=True  #maximizers=  30 |AP-orbit|=10 #nonAP_maximizers=20
+n= 7 C=13 k= 6: E_+(AP)=  29 globalmax=  29 AP_is_max=True  #maximizers=  42 |AP-orbit|=12 #nonAP_maximizers=30
+n= 8 C=15 k= 7: E_+(AP)=  47 globalmax=  47 AP_is_max=True  #maximizers=  32 |AP-orbit|= 8 #nonAP_maximizers=24
+n= 9 C=17 k= 8: E_+(AP)=  72 globalmax=  72 AP_is_max=True  #maximizers=  72 |AP-orbit|=16 #nonAP_maximizers=56
+n=10 C=19 k= 9: E_+(AP)= 104 globalmax= 104 AP_is_max=True  #maximizers=  90 |AP-orbit|=18 #nonAP_maximizers=72
+n=11 C=21 k=10: E_+(AP)= 145 globalmax= 145 AP_is_max=True  #maximizers=  66 |AP-orbit|=12 #nonAP_maximizers=54
+n=12 C=23 k=11: E_+(AP)= 195 globalmax= 195 AP_is_max=True  #maximizers= 132 |AP-orbit|=22 #nonAP_maximizers=110
+
+CONCLUSION: AP is global additive-energy max at every n tested; but maximizer set is far larger than the AP dilation-orbit.
