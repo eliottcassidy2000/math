@@ -1,0 +1,21 @@
+THM-402 dichromatic 2-coloring (diameter split) = balanced sign-cut (S699)?
+ n | semicircle split (color classes) | both transitive(2-dichromatic)? | balanced/maxcut? | cut=#sum-clocks
+  4 | A=[1] B=[2, 3] | True | True (cut=2,max=2) | 2
+  5 | A=[1, 2] B=[3, 4] | True | True (cut=4,max=4) | 4
+  6 | A=[1, 2] B=[3, 4, 5] | True | True (cut=6,max=6) | 6
+  7 | A=[1, 2, 3] B=[4, 5, 6] | True | True (cut=9,max=9) | 9
+  8 | A=[1, 2, 3] B=[4, 5, 6, 7] | True | True (cut=12,max=12) | 12
+  9 | A=[1, 2, 3, 4] B=[5, 6, 7, 8] | True | True (cut=16,max=16) | 16
+ 10 | A=[1, 2, 3, 4] B=[5, 6, 7, 8, 9] | True | True (cut=20,max=20) | 20
+ 11 | A=[1, 2, 3, 4, 5] B=[6, 7, 8, 9, 10] | True | True (cut=25,max=25) | 25
+
+=> the worry-set's round-tournament 2-coloring (THM-402 diameter split) IS the balanced
+   sign-cut: the VERTEX 2-coloring that induces the MAXIMAL pair-sum EDGE-coloring (S699).
+   Vertex coloring (dichromatic) determines edge coloring (pair-clocks): 'some both'.
+
+TIE INDUCTION (Rédei): #Ham-paths is ODD, preserved when a vertex is INSERTED at a 'tie'
+position of a Ham path. Verify parity n->n+1 by inserting a new sink/source/middle vertex:
+   n=3: every tournament has ODD #Ham-paths = True  (Rédei, the tie-induction invariant)
+   n=4: every tournament has ODD #Ham-paths = True  (Rédei, the tie-induction invariant)
+   n=5: every tournament has ODD #Ham-paths = True  (Rédei, the tie-induction invariant)
+   n=6: every tournament has ODD #Ham-paths = True  (Rédei, the tie-induction invariant)
