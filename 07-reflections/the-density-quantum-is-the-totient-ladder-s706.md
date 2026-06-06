@@ -105,6 +105,15 @@ once, with no ambient-dimension constraint to satisfy. The LRC/cyclic side is th
 **`degree → ∞`, all-roots-at-once limit** of the Euclidean totient ladder. Same
 rosette skeleton; one is dimension-capped, the other is not.
 
+And it lands on an exact identity (the THM-416 corollary): for the LRC modulus
+`C = 2n−1`, the cyclotomic lattice `Z[ζ_C]` — the worry-set's *own* field, of
+degree `φ(2n−1)` — has Euclidean density quantum `w/2 = C = 2n−1`, the very order
+of the cyclic worry-set rosette. The dimension `φ(2n−1)` is exactly large enough
+to hold all of `μ_C` as free isometries, so the "all-roots-at-once" is not a
+limit to be taken but a fact already true in the right field. The campaign's
+critical `n = 14` (`C = 27 = 3³`, degree 18) is even the **rosette-maximal** field
+of its dimension — the same `3`-richness that drives the V* split (THM-413).
+
 That is the same asymmetry THM-414 found from the other direction: the cyclic
 *degree-2 additive* face (`r_+(s)`, pair-sums) is matching-capped and has no
 escape, while the lattice *degree-2 norm form* over `Z²` (an infinite group) has

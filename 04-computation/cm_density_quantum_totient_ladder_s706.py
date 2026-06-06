@@ -170,6 +170,17 @@ for N,M,q in ladder:
     if q == 3:
         pass
 
+# ---- (D) LRC corollary: quantum(Z[zeta_{2n-1}]) = 2n-1 = worry-set rosette order ----
+print("\n[D] LRC corollary: quantum of the worry-set field Z[zeta_C], C=2n-1:")
+print("    n  | C=2n-1 | deg=phi(C) | w=2C | quantum=w/2 | == C ?")
+for n in range(3, 15):
+    C = 2*n - 1
+    d = euler_phi(C)
+    w = w_of_cyclotomic(C)        # C odd -> 2C
+    q = w // 2
+    print(f"   {n:2d}  |  {C:3d}   |    {d:3d}     | {w:3d}  |    {q:3d}      | {'YES' if q==C else 'NO'}"
+          + ("   <- n=14, C=27=3^3 (V* split)" if n == 14 else ""))
+
 print("\n" + "="*78)
 print(f"TOTAL FAILURES: {fail}")
 print("PASS" if fail == 0 else "SOME FAILED")

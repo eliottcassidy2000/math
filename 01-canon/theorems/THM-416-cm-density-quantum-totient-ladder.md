@@ -99,6 +99,30 @@ containing `μ_m`. Roots of unity in a CM field form `μ_m` for a single even `m
 realizable `w = #μ(K)` are exactly the even `m` with `φ(m) | N`, and the maximum
 is `M(N) = max{m : φ(m) | N}` (finite because `φ(m) → ∞`). ∎
 
+## Corollary (the LRC worry-set field) — the cyclic rosette IS a density quantum
+
+For the **LRC modulus** `C = 2n − 1` (always odd), the worry-set witnesses are the
+`C`-th roots of unity (THM-401/403), living in the cyclotomic field `Q(ζ_C)`. Its
+roots of unity number `w = #μ(Q(ζ_C)) = 2C` (for odd `C`, `Q(ζ_C) = Q(ζ_{2C})`),
+so by Part (I) the cyclotomic lattice `Z[ζ_C]`, of degree `φ(2n−1)`, has
+
+```text
+   unit-distance density quantum  =  w/2  =  C  =  2n − 1.
+```
+
+The **Euclidean** density quantum of the LRC's *own* cyclotomic field equals the
+order of the **cyclic** worry-set rosette. This is the exact realization of the
+"all `(2n−1)`-th roots at once" intuition: inside `Q(ζ_{2n−1})` the full
+`(2n−1)`-rosette is present as a free isometry group, so the dimension is no
+longer a constraint — `φ(2n−1)` is precisely large enough to hold all of `μ_C`.
+Verified `C = 5, 7, 9` directly (the `Z[ζ_5], Z[ζ_7], Z[ζ_9]` rows below give
+quanta `5, 7, 9 = C`); the identity `w/2 = C` is immediate from Part (I) and
+`#μ(Q(ζ_C)) = 2C`. The campaign's critical case `n = 14`, `C = 27 = 3³`, sits in
+degree `φ(27) = 18`, where it is the **maximal-quantum** field (`M(18) = 54`,
+quantum `27`); the `3`-richness of `C = 27` that drives the V* split (THM-413,
+HYP-2262) is the same `3`-richness that makes `Q(ζ_27)` rosette-maximal in its
+dimension.
+
 ## Verification
 
 `04-computation/cm_density_quantum_totient_ladder_s706.py`

@@ -38,6 +38,21 @@ THM-416 verification: density quantization w | r(D) for CM orders
 
   [RESONANCE, honest] quantum 21 first appears at degree N=12 (w=42=2*21, Q(zeta_42)). 21 = forbidden tournament H-value (THM-079).
 
+[D] LRC corollary: quantum of the worry-set field Z[zeta_C], C=2n-1:
+    n  | C=2n-1 | deg=phi(C) | w=2C | quantum=w/2 | == C ?
+    3  |    5   |      4     |  10  |      5      | YES
+    4  |    7   |      6     |  14  |      7      | YES
+    5  |    9   |      6     |  18  |      9      | YES
+    6  |   11   |     10     |  22  |     11      | YES
+    7  |   13   |     12     |  26  |     13      | YES
+    8  |   15   |      8     |  30  |     15      | YES
+    9  |   17   |     16     |  34  |     17      | YES
+   10  |   19   |     18     |  38  |     19      | YES
+   11  |   21   |     12     |  42  |     21      | YES
+   12  |   23   |     22     |  46  |     23      | YES
+   13  |   25   |     20     |  50  |     25      | YES
+   14  |   27   |     18     |  54  |     27      | YES   <- n=14, C=27=3^3 (V* split)
+
 ==============================================================================
 TOTAL FAILURES: 0
 PASS
