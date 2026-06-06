@@ -1,0 +1,23 @@
+(A) SHARP QUESTION — depth-PGF roots of the worry-set: at ±2π/3 (=120°)?
+   AP-ish V=(1, 2, 3, 4) (n=5): nonzero-root angles(deg)=[-73.0, 73.0, 180.0]  (±120°? False)
+   AP-ish V=(1, 2, 3, 4, 5) (n=6): nonzero-root angles(deg)=[-146.0, -54.5, 54.5, 146.0]  (±120°? False)
+   => depth-PGF roots NOT at ±120°. The LRC cyclotomic/±2π/3 lives elsewhere:
+   WITNESS clock points = n-th roots of unity (THM-403): for 3|n, t=1/3 ↔ angle 2π/3 IS a
+   worry-set lonely time; and the worry-set ROUND tournament's F(T,x) Lee-Yang zeros cluster
+   at ±2π/3 (opus-S44). So the Eisenstein angle is the WITNESS/tournament face, not the PGF.
+
+(B) z^7−z KEYSTONE (the W6 / 7-coloring / Φ3(2) unification, extending S687):
+   7 = N(2+ζ6) = a²+ab+b² at (2,1) = 7  ⟹ (2+ζ6) is an Eisenstein PRIME of norm 7
+   ⟹ ℤ[ζ6]/(2+ζ6) ≅ 𝔽₇  = the HEXAGONAL 7-COLORING palette (Isbell χ≤7) — color = residue mod the norm-7 prime
+   z^7−z = z(z^6−1): over ℂ the roots = {0}∪{6th roots} = W6 (center+hexagon, χ=3 gadget),
+          hexagon root angles(deg)=[-120.0, -60.0, 0.0, 60.0, 120.0, 180.0] — INCLUDES ±120°=±2π/3 (the Eisenstein angle);
+   over 𝔽₇ the roots = all of 𝔽₇ (Fermat) = the 7 colors. ONE polynomial, two readings.
+   ⟹ the HN UPPER BOUND 7 = the FORBIDDEN tournament H-value 7 = Φ3(2) = N(2+ζ6) = |PG(2,2)| — the SAME 7.
+
+(C) FIELD / HEEGNER TOWER (extending S687's conjecture):
+   χ=3: ℚ(√−3) (Eisenstein ℤ[ζ6], roots of unity, Mahler measure 1)  — d=3 Heegner
+   χ=4: +ℚ(√−11) (Moser spindle: cosθ=5/6, e^{iθ} root of 3z²−5z+3, disc −11, Mahler measure 3) — d=11 Heegner
+   Heegner numbers (class number 1): [1, 2, 3, 7, 11, 19, 43, 67, 163]; χ=3↦d=3, χ=4↦d=11 (both Heegner).
+   CONJECTURE (sharpening S687): each chromatic step adjoins a new class-number-1 (Heegner)
+   imaginary-quadratic rotation field; χ(ℝ²)=5 would adjoin √−19 (next Heegner). The class
+   number 1 = the rigidity (unique factorization of rotations) needed to FORCE a new color.
