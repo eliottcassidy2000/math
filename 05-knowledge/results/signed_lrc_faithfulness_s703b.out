@@ -1,0 +1,45 @@
+========================================================================================
+PART 1 (extended): AP_n folded sign-orbit vs 2^{n-2}, and factorization of C=2n-1
+========================================================================================
+  n    C    factor(C)   2^(n-2)   folded   coll  prime?
+  3    5            5         2        2      0    True
+  4    7            7         4        4      0    True
+  5    9          3^2         8        7      1   False
+  6   11           11        16       16      0    True
+  7   13           13        32       32      0    True
+  8   15          3*5        64       60      4   False
+  9   17           17       128      128      0    True
+ 10   19           19       256      256      0    True
+ 11   21          3*7       512      504      8   False
+ 12   23           23      1024     1024      0    True
+ 13   25          5^2      2048     2044      4   False
+ 14   27          3^3      4096     4027     69   False
+ 15   29           29      8192     8192      0    True
+ 16   31           31     16384    16384      0    True
+ 17   33         3*11     32768    32736     32   False
+ 18   35          5*7     65536    65520     16   False
+ 19   37           37    131072   131072      0    True
+ 20   39         3*13    262144   262080     64   False
+
+========================================================================================
+PART 2: GENERAL configs whose UNFOLDED cut-spectrum is NOT faithful (genuine collisions)
+========================================================================================
+Searching all size-(n-1) speed sets with speeds in [1,B]; report unfolded-non-faithful ones.
+
+ n=3 (k=2 runners, speeds in [1,12], 2^(n-2)=2): 0 primitive unfolded-non-faithful configs
+
+ n=4 (k=3 runners, speeds in [1,12], 2^(n-2)=4): 0 primitive unfolded-non-faithful configs
+
+ n=5 (k=4 runners, speeds in [1,12], 2^(n-2)=8): 0 primitive unfolded-non-faithful configs
+
+ n=6 (k=5 runners, speeds in [1,11], 2^(n-2)=16): 0 primitive unfolded-non-faithful configs
+
+========================================================================================
+PART 3: is unfolded-faithfulness EXACTLY 'Sidon (B2) set'?  test the correspondence
+========================================================================================
+ n=4: faithful&Sidon=220  faithful&non-Sidon=0  NONfaithful&Sidon=0  NONfaithful&non-Sidon=0
+ n=5: faithful&Sidon=400  faithful&non-Sidon=95  NONfaithful&Sidon=0  NONfaithful&non-Sidon=0
+ n=6: faithful&Sidon=214  faithful&non-Sidon=578  NONfaithful&Sidon=0  NONfaithful&non-Sidon=0
+
+(If 'NONfaithful&Sidon'=0 always: Sidon => faithful. If 'faithful&non-Sidon'>0:
+ non-Sidon configs can still be faithful, so faithfulness is STRICTLY WEAKER than Sidon.)

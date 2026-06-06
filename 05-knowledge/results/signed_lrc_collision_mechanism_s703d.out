@@ -1,0 +1,30 @@
+================================================================================
+MECHANISM of AP_n fold-collisions: single-flip? Eulerian-value-multigraph?
+================================================================================
+  n    C  prime  #collGrp  allSingleFlip          hamDist
+  3    5   True         0           True               {}
+  4    7   True         0           True               {}
+  5    9  False         1           True           {1: 1}
+  6   11   True         0           True               {}
+  7   13   True         0           True               {}
+  8   15  False         4          False     {1: 2, 2: 2}
+  9   17   True         0           True               {}
+ 10   19   True         0           True               {}
+ 11   21  False         8          False     {1: 4, 3: 4}
+ 12   23   True         0           True               {}
+ 13   25  False         4          False           {2: 4}
+ 14   27  False        67          False {3: 56, 1: 8, 4: 8}
+
+Silent-flip runners (Eulerian value-multigraph) and which elements flip in collisions:
+ n=5 C=9=composite: Eulerian-silent runners x = [3];  flipped-in-collisions = {3: 1}
+ n=8 C=15=composite: Eulerian-silent runners x = [5];  flipped-in-collisions = {5: 2}
+ n=11 C=21=composite: Eulerian-silent runners x = [7];  flipped-in-collisions = {7: 4}
+ n=13 C=25=composite: Eulerian-silent runners x = [];  flipped-in-collisions = {}
+ n=14 C=27=composite: Eulerian-silent runners x = [9];  flipped-in-collisions = {9: 8}
+
+Divisor check: for each composite C, do the Eulerian-silent runners x relate to d|C?
+ n=5 C=9 divisors=[3]: Eulerian-silent x=[3]  (x mod small divisors: [(3, [0])])
+ n=8 C=15 divisors=[3, 5]: Eulerian-silent x=[5]  (x mod small divisors: [(5, [2, 0])])
+ n=11 C=21 divisors=[3, 7]: Eulerian-silent x=[7]  (x mod small divisors: [(7, [1, 0])])
+ n=13 C=25 divisors=[5]: Eulerian-silent x=[]  (x mod small divisors: [])
+ n=14 C=27 divisors=[3, 9]: Eulerian-silent x=[9]  (x mod small divisors: [(9, [0, 0])])

@@ -1,0 +1,32 @@
+Verify x=(2n-1)/3 is Eulerian-silent for ALL n with 3|(2n-1):
+  n=2 C=3 x=C/3=1 (<= n-1=1? True) Eulerian-silent=True
+  n=5 C=9 x=C/3=3 (<= n-1=4? True) Eulerian-silent=True
+  n=8 C=15 x=C/3=5 (<= n-1=7? True) Eulerian-silent=True
+  n=11 C=21 x=C/3=7 (<= n-1=10? True) Eulerian-silent=True
+  n=14 C=27 x=C/3=9 (<= n-1=13? True) Eulerian-silent=True
+  n=17 C=33 x=C/3=11 (<= n-1=16? True) Eulerian-silent=True
+  n=20 C=39 x=C/3=13 (<= n-1=19? True) Eulerian-silent=True
+  n=23 C=45 x=C/3=15 (<= n-1=22? True) Eulerian-silent=True
+  n=26 C=51 x=C/3=17 (<= n-1=25? True) Eulerian-silent=True
+  n=29 C=57 x=C/3=19 (<= n-1=28? True) Eulerian-silent=True
+ALL 3|C cases (n=2..199) Eulerian-silent at x=C/3: True
+
+Full scan of Eulerian-silent runners (composite C, n=5..40):
+  n=5 C=9 factor-has-3=True: Eulerian-silent x=[3]
+  n=8 C=15 factor-has-3=True: Eulerian-silent x=[5]
+  n=11 C=21 factor-has-3=True: Eulerian-silent x=[7]
+  n=13 C=25 factor-has-3=False: Eulerian-silent x=[]
+  n=14 C=27 factor-has-3=True: Eulerian-silent x=[9]
+  n=17 C=33 factor-has-3=True: Eulerian-silent x=[11]
+  n=18 C=35 factor-has-3=False: Eulerian-silent x=[]
+  n=20 C=39 factor-has-3=True: Eulerian-silent x=[13]
+  n=23 C=45 factor-has-3=True: Eulerian-silent x=[15]
+  n=25 C=49 factor-has-3=False: Eulerian-silent x=[]
+  n=26 C=51 factor-has-3=True: Eulerian-silent x=[17]
+  n=28 C=55 factor-has-3=False: Eulerian-silent x=[]
+  n=29 C=57 factor-has-3=True: Eulerian-silent x=[19]
+  n=32 C=63 factor-has-3=True: Eulerian-silent x=[21]
+  n=33 C=65 factor-has-3=False: Eulerian-silent x=[]
+  n=35 C=69 factor-has-3=True: Eulerian-silent x=[23]
+  n=38 C=75 factor-has-3=True: Eulerian-silent x=[25]
+  n=39 C=77 factor-has-3=False: Eulerian-silent x=[]
