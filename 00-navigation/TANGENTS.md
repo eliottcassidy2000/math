@@ -2248,3 +2248,22 @@ cyclic image of S702's rank jump; is the V* deficit 38 a carry.
 See `01-canon/theorems/THM-414-...md`,
 `07-reflections/the-signed-lrc-additive-face-is-multiplicative-energy-s704.md`,
 `04-computation/signed_lrc_multiplicative_energy_s704.py`, HYP-2272.
+
+**T760** #density-quantization #roots-of-unity #CM-field #totient-ladder #unit-distance #dimension-jump #everything-is-the-triangle #forbidden-21 | certainty: HIGH (THM-416 proved + verified 0 fails) | source: monad-explorer-2026-06-06-S706
+THM-412's 2D unit-distance density quantum w/2 (w=#roots of unity in {2,4,6})
+generalizes to EVERY CM field: a root of unity is an isometry of the canonical
+embedding fixing only 0, so mu(K) of order w acts FREELY on each norm-shell =>
+w | r(D), density quantum = w/2 = #mu(K)/2. The SPECTRUM of achievable quanta in
+dimension N=2d is the EULER-TOTIENT LADDER {m/2: m even, phi(m)|N}, maximal
+quantum M(N)/2 with M(N)=max{m:phi(m)|N}. 2D caps at M(2)=6 (quantum 3 =
+triangular/Eisenstein = the max roots of unity in an imaginary quadratic field).
+Quanta >3 need a DIMENSION JUMP: M(4)=12 (quantum 6). The densities 4,5 SKIPPED by
+the special 2D lattices become RIGID quanta of Q(zeta_8) (w=8) and Q(zeta_5)
+(w=10) one dimension up — so the "2D group between triangular and CM" (opus-S699
+probe) is a discrete totient ladder, NOT a continuum (rigorously confirms S702's
+"the real axis is rank/degree"). LADDER non-monotone (drops at nontotients:
+M(14)=6). Maximal quanta N=2..24: 3,6,9,15,11,21,3,30,27,33,23,45 — quantum 21 at
+degree 12 via Q(zeta_42)=2*21 (RESONANCE with forbidden H=21, honest/unproved).
+Euclidean rosette is totient-CAPPED by dimension; the LRC cyclic (2n-1)-rosette
+(THM-403) is realized intrinsically = the "all-roots-at-once" limit.
+See: THM-416, HYP-2274, cm_density_quantum_totient_ladder_s706.py, T755/T757/T759.
