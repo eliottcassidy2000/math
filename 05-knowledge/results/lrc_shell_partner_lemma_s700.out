@@ -1,0 +1,5 @@
+SHELL-PARTNER LEMMA test: shell-partner ⟹ good discrete witness ⟹ M≥2/(2n-1)?
+ n | #shell-partner configs | all have a good m (|F|<C)? | all M≥2/(2n-1)?
+ 5 | 121 | good-m exists: True | M≥2/(2n-1): True
+ 6 | 572 | good-m exists: True | M≥2/(2n-1): True
+ 7 | 2470 | good-m exists: True | M≥2/(2n-1): True

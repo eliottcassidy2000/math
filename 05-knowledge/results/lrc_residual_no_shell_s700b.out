@@ -1,0 +1,8 @@
+RESIDUAL: multiple of n, NO shell-partner, gcd 1.  n | count | min M | ≥2/(2n-1)? | discrete-witness fails
+ 5 | 57 | minM=3/13=0.2308 | loose(≥2/(2n-1)): True | discrete-fails=0 []
+ 6 | 150 | minM=1/5=0.2000 | loose(≥2/(2n-1)): True | discrete-fails=30 [(1, 2, 3, 4, 6), (1, 2, 3, 6, 7)]
+ 7 | 383 | minM=3/19=0.1579 | loose(≥2/(2n-1)): True | discrete-fails=63 [(1, 2, 3, 4, 5, 7), (1, 2, 3, 4, 7, 8)]
+
+=> If minM ≥ 2/(2n-1) on the residual, then ALL multiples configs are loose (C' holds):
+   shell-partner ones by the LEMMA (discrete witness), no-shell ones by a coarse witness.
+   The discrete-fails are exactly where the 2n-1 tick can't fire (need the coarse t=1/k).

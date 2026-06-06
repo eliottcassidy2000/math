@@ -1,0 +1,10 @@
+LRC residual after k-clock + shell-partner: every k∈{2..n} divides a speed AND no shell-partner.
+ n | window | total gcd1 | residual size | residual min M | loose(>1/n)? | examples
+ 5 | [1,10] | 205 | 18 | minM=3/13=0.2308 | loose: True | [(1, 3, 4, 10), (1, 4, 6, 10), (1, 4, 9, 10)]
+ 6 | [1,12] | 786 | 50 | minM=1/5=0.2000 | loose: True | [(1, 2, 3, 5, 12), (1, 2, 4, 5, 12), (1, 2, 5, 7, 12)]
+ 7 | [1,14] | 2996 | 62 | minM=3/19=0.1579 | loose: True | [(1, 2, 4, 5, 6, 14), (1, 2, 4, 6, 10, 14), (1, 2, 6, 8, 10, 14)]
+ 8 | [1,16] | 11432 | 233 | minM=3/20=0.1500 | loose: True | [(1, 2, 3, 5, 6, 7, 16), (1, 2, 3, 6, 7, 10, 16), (1, 2, 3, 6, 7, 15, 16)]
+
+=> The k-clock witness (any k≤n with no multiple) + the shell-partner lemma cover almost
+   everything; the residual (all-clocks-fail AND shell-free) is tiny/empty in the window —
+   the irreducible core of LRC, all verified loose. This is the refined reduction.
