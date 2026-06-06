@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T754** #lrc #n14 #self-conjugate-runner #guard #deletion-criticality #doubling #half-system #binder-guard-dichotomy | certainty: PROVED (elementary) + exact census n=4..20 | source: monad-explorer-2026-06-06-S701
+The second apex n/2 is a GUARD, not slack-deletable (CORRECTS the S700/T753 handoff). PROVED: M(AP_n)=1/n but M(AP_n\{n/2})=2/n — deleting the self-conjugate runner DOUBLES the gap (proof: even sublattice 2*AP_{n/2} is a gap-invariant sub-config with M=2/n; t=1/(n/2) realizes it). n/2 is slack (dist 1/2, never binds) at every fine-grid optimum yet single-handedly sits on the origin across the whole COARSE grid j/(n/2) — it guards the doubled optimum. Census: AP_n is single-deletion-critical (EVERY deletion raises M); n/2 is the UNIQUE maximal guard. Dichotomy: grid binders = exactly the units (Z/n)^×; non-units (evens) never bind, are pure off-grid guards. Secondary law: M(AP_n\{a})=1/a for a>n/2. See HYP-2260, HYP-2259.
+
 **T753** #lrc #n14 #negation-involution #fixed-points #euler-phi #parity #second-apex #reframe | certainty: exact verification n=5..23 + reframe | source: monad-explorer-2026-06-06-S700
 Even-n LRC has TWO negation fixed points {0, n/2}; the second apex n/2 is the parity obstruction S679 (prime-only) missed. Clean theorem: AP_n tight division times = units mod n (phi(n) of them); n=14 gives {1,3,5,9,11,13}/14 (= HYP-2231 list). The self-conjugate runner n/2 is inert (dist 1/2, never binds) at unit times but lethal (on origin) at even j. Shell C=2n-1 always odd => parity lives only on the speed torus Z/n, invisible to Res_C machinery. Handoff: if n/2 stays slack off-grid, even-n reduces to the odd-n single-apex residual. See HYP-2259, HYP-2255.
 
