@@ -1,0 +1,109 @@
+==============================================================================
+PART K -- KISSING LAYER (minimal norm).  GEOMETRIC, capped at 6.
+==============================================================================
+  rhombic angle= 90     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 80     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 75     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 70     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 65     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 61     : kappa = 4  ->  <= 2.0 n unit (min-dist) pairs
+  rhombic angle= 60     : kappa = 6  ->  <= 3.0 n unit (min-dist) pairs  <-- HEXAGONAL/triangular, the unique 2D maximum
+  rhombic angle= 59     : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  rhombic angle= 55     : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  rhombic angle= 50     : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  rhombic angle= 45     : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  rectangular 1x2       : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  rectangular 1x1.3     : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+  oblique generic       : kappa = 2  ->  <= 1.0 n unit (min-dist) pairs
+
+  MAX kissing over all tested 2D lattices = 6  (classical cap: kappa<=6, =6 iff hexagonal).
+  => the MINIMAL-distance graph on n lattice pts has <= 3n edges, ANY 2D lattice.
+  This is the ONLY sense in which '3n' is a cap.  It is geometric (kissing), not
+  arithmetic.  No 2D lattice has kappa>6, so there is NO kissing-spectrum above 6.
+
+==============================================================================
+PART P -- POPULAR-NORM LAYER (a fixed norm with many reps).  ARITHMETIC, unbounded.
+==============================================================================
+  [check] divisor closed-forms vs brute force, D=1..120:
+    square  r(D)=4(d1-d3 mod4): OK
+    eisen.  r(D)=6(d1-d2 mod3): OK
+
+  [beats 3n  <=>  r(D) > 6  (>3n unit pairs at distance sqrt(D))]
+    SQUARE  Z^2  (kappa=4): least D with r(D)>6 is D=5, r=8  ->  > 3n at distance sqrt(5)
+    TRIANG. Z[w] (kappa=6): least D with r(D)>6 is D=7, r=12  ->  > 3n at distance sqrt(7)
+    *** The SQUARE lattice (kappa=4 < 6) beats 3n -- the LOW-kissing lattice. ***
+    => the escape from 3n is ORTHOGONAL to the kissing number. 'Between triangular
+       and CM' is the wrong axis: the escape is a LAYER change, not a GROUP change.
+
+  [moderate n: smallest square window that realizes the beating distance fully]
+    Z^2: beating distance^2 = 5, r=8.  small windows:
+       side  4: n=  16, pairs@sqrt(D)=  24, 3n=  48, not yet (boundary loss)
+       side  6: n=  36, pairs@sqrt(D)=  80, 3n= 108, not yet (boundary loss)
+       side  8: n=  64, pairs@sqrt(D)= 168, 3n= 192, not yet (boundary loss)
+       side 10: n= 100, pairs@sqrt(D)= 288, 3n= 300, not yet (boundary loss)
+       side 12: n= 144, pairs@sqrt(D)= 440, 3n= 432, BEATS 3n
+       side 14: n= 196, pairs@sqrt(D)= 624, 3n= 588, BEATS 3n
+       side 16: n= 256, pairs@sqrt(D)= 840, 3n= 768, BEATS 3n
+       side 20: n= 400, pairs@sqrt(D)=1368, 3n=1200, BEATS 3n
+       -> Z^2 crosses 3n at side 12 (n=144): bulk density r/2=4n beats 3n once perimeter loss ~c*sqrt(n) is dominated.
+    Z[w]: beating distance^2 = 7, r=12.  small windows:
+       side  4: n=  16, pairs@sqrt(D)=  22, 3n=  48, not yet (boundary loss)
+       side  6: n=  36, pairs@sqrt(D)=  94, 3n= 108, not yet (boundary loss)
+       side  8: n=  64, pairs@sqrt(D)= 214, 3n= 192, BEATS 3n
+       side 10: n= 100, pairs@sqrt(D)= 382, 3n= 300, BEATS 3n
+       side 12: n= 144, pairs@sqrt(D)= 598, 3n= 432, BEATS 3n
+       side 14: n= 196, pairs@sqrt(D)= 862, 3n= 588, BEATS 3n
+       side 16: n= 256, pairs@sqrt(D)=1174, 3n= 768, BEATS 3n
+       side 20: n= 400, pairs@sqrt(D)=1942, 3n=1200, BEATS 3n
+       -> Z[w] crosses 3n at side 8 (n=64): bulk density r/2=6n beats 3n once perimeter loss ~c*sqrt(n) is dominated.
+
+==============================================================================
+PART S -- THE REAL SPECTRUM: popular-norm GROWTH RATE.
+==============================================================================
+  Both lattices' popular counts are governed by a divisor sum (Dirichlet character).
+  max_{D<=X} r(D) grows like a power of X with exponent -> 0 (Wigert/divisor bound):
+  max_{m<=X} d(m) = X^{(log2+o(1))/loglogX}.  SAME rate for square AND triangular.
+
+         X |  max r_sq(D), D<=X |  argmax |  max r_ei(D), D<=X |  argmax
+  ----------------------------------------------------------------------
+        50 |                 12 |      25 |                 18 |      49
+       200 |                 16 |      65 |                 24 |      91
+      1000 |                 24 |     325 |                 36 |     637
+      5000 |                 36 |    4225 |                 48 |    1729
+     20000 |                 48 |    5525 |                 72 |   12103
+    200000 |                 96 |  160225 |                108 |  157339
+
+  Both columns are the SAME superlinear-by-loglog growth (highly-composite argmax).
+  The popular-distance count among n=X lattice pts is ~ (max r)/2 * n = n^{1+o(1)}.
+  This exponent 1+o(1) is IDENTICAL for every 2D lattice = imaginary quadratic order:
+  it is the 1-DIMENSIONAL divisor function, independent of discriminant/class number.
+
+  ==> CONCLUSION (rigorous part): among 2D lattices there is NO spectrum 'between
+      triangular and CM'.  Kissing is universally <=6 (geometric); popular-norm
+      exponent is universally 1+o(1) (arithmetic, divisor-function).  Both axes are
+      FLAT across 2D lattices.  The CM construction's claimed higher exponent (external
+      seed: n^{1.014}) requires a rank>=3 module / degree>=3 CM field -- NOT a 2D
+      lattice.  The 'gap' is a DIMENSION jump, not a continuous 2D group spectrum.
+
+==============================================================================
+PART D -- DICTIONARY: 2D lattice  <->  imaginary quadratic order
+==============================================================================
+  square Z[i]   : disc -4, h=1, units 4  (kappa=4); norm form x^2+y^2,   chi_-4
+  triang Z[w]   : disc -3, h=1, units 6  (kappa=6); norm form x^2+xy+y^2, chi_-3
+  the +6 vs +4 kissing = the +6 vs +4 ROOTS OF UNITY in the order (units = kissing!).
+  => kappa of the lattice = #roots of unity (units) of its order: 4 for Z[i], 6 for
+     Z[w].  The 2D cap kappa<=6 IS the fact that an imaginary quadratic field has
+     at most 6 roots of unity (only Q(w) has 6, only Q(i) has 4, all others 2).
+  The CM escape = a higher-degree field with MORE roots of unity on |z|=1, i.e. a
+     rank-(>2) unit group -- exactly the 'unbounded =1 layer' of S699, now pinned as
+     'roots of unity = kissing = units, capped at 6 in degree 2'.
+
+  [check] kissing(square)=4 = #units Z[i]=4 ? True
+  [check] kissing(triang)=6 = #units Z[w]=6 ? True
+
+==============================================================================
+HEADLINE (S702): kissing kappa = #roots of unity of the order, capped at 6 in degree 2;
+the popular-norm layer (NOT kissing) is what beats 3n, and Z^2 (kappa=4) already does it
+at distance sqrt(5).  No 2D group lies 'between triangular and CM' -- the CM jump is a
+degree/rank jump (more roots of unity), orthogonal to the (flat) 2D kissing & exponent axes.
+==============================================================================
