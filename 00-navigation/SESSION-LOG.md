@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-06-S677 - LRC14 apex-debt positive measure (HYP-2253)
+
+**Prompt:** Improve the next target from S676: prove no new normalized `p_0=0` wall exists in the `Res_27` carry/owner fiber.
+**Integration:** Started from HYP-2252's Lebesgue wall certificate and HYP-2241's owner-private no-leak seam, then noticed the proof-risk split: AP/Vstar are `p_0=0` but no-multiple rows, hence witnessed by `t=1/14`; `2AP` is a nonprimitive gcd-scaled wall; only primitive rows with a multiple of `14` can be hidden endpoint walls.  In carry coordinates `v=r+27k`, this primitive residual is apex debt, with exact congruence `14|v iff k==r (mod 14)`.
+**Claimed namespace:** HYP-2253 and T750.
+**Computation:** Added `04-computation/lrc14_apex_debt_lebesgue_s677.py` and stored `05-knowledge/results/lrc14_apex_debt_lebesgue_s677.out`.  The script computes exact rational `p_0` for `720` coherent carry probes over AP/Vstar: single-apex carries, apex plus one side carry, interval carry blocks of height `1` or `2`, and small affine laws `k=a*r+b mod 14`.
+**Findings:** Among `414` primitive multiple rows there are `0` walls and `414` positive-measure rows.  The minimum primitive-multiple `p_0` is `181/28028`, achieved by AP with speed `6` carried to `168`, row `(1,2,3,4,5,7,8,9,10,11,12,13,168)`.  That row has gcd `1`, no `n`-clock endpoints, no gcd-scaled endpoint rescue, and still has four positive safe components.
+**Tournament Analysis:** Vertices are proof filters, not runners.  The filter tournament is transitive with one Hamiltonian path: `apex_congruence_debt > primitive_multiple_positive_measure > owner_private_derivative > gcd_scaled_endpoint_wall > no_multiple_n_clock > raw_res27_shadow > raw_first_moment`.
+**Synthesis:** The next theorem target is no longer broad "no new wall."  It is: primitive apex debt pays positive measure.  Equivalently, every normalized primitive `Res_27` carry/owner row with a carry site satisfying `k_i==r_i mod 14` has `p_0(V,1/14)>0`, unless gcd reduction makes it a scalar endpoint wall.
+**Artifacts:** HYP-2253, T750, `04-computation/lrc14_apex_debt_lebesgue_s677.py`, `05-knowledge/results/lrc14_apex_debt_lebesgue_s677.out`, `07-reflections/lrc14-apex-debt-positive-measure-s677.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Attach HYP-2241's owner-private deletion bit directly to apex-debt sites; prove an apex-debt deletion/ownership lemma that opens a positive safe interval or routes to a cheap-pair certificate.
+
 ## codex-2026-06-05-S676 - LRC14 Lebesgue wall certificate (HYP-2252)
 
 **Prompt:** Consider Lebesgue measure and work on the LRC `n=14` proof.

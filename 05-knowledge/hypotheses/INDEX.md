@@ -713,6 +713,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2250 | Blue/black metagraph parity is boundary data, not color essence. The simple visible-edge claims `black=even` and `blue=odd` fail under both active repo conventions; the meaningful invariant is the GF(2) boundary of the color layer. | S675 audits SC-type wiggly colors and explorer complement-line colors through `n=6`.  Black has nonzero simple boundary in both conventions, and pure-blue stops being incident-all-odd at `n=6`.  Strong survivor: explorer pure-black weighted complement-line parity has zero GF(2) boundary through `n=6`; SC-type weighted layers also have zero boundary in range.  S674b integration: the same rule appears in signed LRC/unit-distance trienerment, where the equality/address layer must be retained before binary collapse. Warns that A000568 uses Royle-even graphs, not degree-even graph classes. | codex-2026-06-05-S675; `HYP-2250-metagraph-blue-black-boundary-parity.md`; `metagraph_blue_black_parity_s675.py`; `metagraph_blue_black_parity_s675.out`; `metagraph-blue-black-even-odd-s675.md`; T747; HYP-2245, HYP-2187, HYP-2249 |
 | HYP-2251 | Black-even / blue-odd parity is a complement-line-lift theorem, not a simple merged-edge theorem. | S675b sharpens HYP-2250 by separating the corrected tiling-complement line convention from the older simple SC/NS edge coloring and carrying the exact audit through `n=7`.  Known A000568 and `E(G_n/Z_2)` counts match; in the complement-line lift active blue degrees are all odd and black degrees all even (`n=7`: `256` blue lines, `16128` black lines), while the simple projection fails black-even at `n=4` and active-blue-odd at `n=5`.  The even/odd reading is boundary-zero black graph versus odd-boundary SC-support blue coset. | codex-2026-06-05-S675b; `HYP-2251-merged-line-parity-even-odd-addendum.md`; `merged_line_parity_even_odd_s675b.py`; `merged_line_parity_even_odd_s675b.out`; `merged-line-parity-even-odd-s675b.md`; T748; HYP-2250, HYP-2245, HYP-2244, HYP-2240, HYP-2187 |
 | HYP-2252 | LRC14 Lebesgue measure is a proof filter: `p_0>0` gives an interval certificate, while `p_0=0` is an endpoint wall requiring set-level witnesses. | S676 computes exact rational safe measure.  AP, Vstar, and `2AP` have `p_0=0` with endpoint witnesses; all three share the exact wall-opening slope `23324/6435`.  Local `+27` carry perturbations through weight `3` have `1131/1131` positive-measure nonzero carries, and the one-swap AP scan through new speed `60` has only `12->24` at `p_0=0`.  The proof target becomes: no new normalized `p_0=0` wall in the `Res_27` carry/owner fiber beyond scalar floor orbits of AP/Vstar/`2AP`. | codex-2026-06-05-S676; `HYP-2252-lrc14-lebesgue-wall-certificate.md`; `lrc14_lebesgue_wall_s676.py`; `lrc14_lebesgue_wall_s676.out`; `lrc14-lebesgue-wall-certificate-s676.md`; T749; HYP-2241, HYP-2164, HYP-2167, HYP-2155, THM-406 |
+| HYP-2253 | LRC14 no-new-wall should be split into harmless no-multiple endpoint walls, gcd-scaled walls, and the real residual: primitive apex debt. | S677 records the exact carry identity `14|v` iff `k==r (mod 14)` for `v=r+27k` and computes exact `p_0` on `720` coherent carry probes over AP/Vstar.  Among `414` primitive multiple rows there are `0` walls and `414` positive-measure rows; the minimum primitive-multiple `p_0` is `181/28028` at AP with speed `6` carried to `168`.  The improved proof target is: every normalized primitive apex-debt row has `p_0(V,1/14)>0`, unless gcd reduction makes it a scalar endpoint wall. | codex-2026-06-06-S677; `HYP-2253-lrc14-apex-debt-positive-measure.md`; `lrc14_apex_debt_lebesgue_s677.py`; `lrc14_apex_debt_lebesgue_s677.out`; `lrc14-apex-debt-positive-measure-s677.md`; T750; HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -8249,3 +8250,70 @@ outside AP/Vstar/`2AP` scalar floor orbits has `p_0(V,1/14)>0`.
 `05-knowledge/results/lrc14_lebesgue_wall_s676.out`;
 `07-reflections/lrc14-lebesgue-wall-certificate-s676.md`; T749, HYP-2241,
 HYP-2164, HYP-2167, HYP-2155, THM-406.
+
+## HYP-2253: LRC14 apex-debt positive measure (codex-2026-06-06-S677)
+
+**Status:** OPEN sharpened proof target.
+
+**Statement:** HYP-2252's no-new-wall target should be split into:
+
+1. no-multiple rows, where the six `n`-clock endpoints witness immediately;
+2. gcd-scaled walls such as `2AP`, which reduce to a smaller endpoint wall;
+3. primitive apex debt, where `gcd(V)=1` and some speed is divisible by `14`.
+
+In carry coordinates `v=r+27k`, the apex-debt identity is
+
+```text
+14 | v  <=>  k == r (mod 14).
+```
+
+The improved target is therefore:
+
+```text
+primitive apex debt => p_0(V,1/14)>0.
+```
+
+**Evidence:** S677 computes exact rational `p_0` over `720` coherent carry
+probes in AP/Vstar fibers: `single_apex`, `apex_plus_one`, `interval_block`,
+and small `affine_mod14` carry laws.  Among `414` primitive multiple rows,
+there are `0` walls and `414` positive-measure rows.  The minimum
+primitive-multiple `p_0` is `181/28028`, achieved by carrying AP speed `6` to
+`168`:
+
+```text
+(1,2,3,4,5,7,8,9,10,11,12,13,168).
+```
+
+This row has no `n`-clock endpoint and no gcd-scaled endpoint rescue, but it
+still has four positive safe components.
+
+**Endpoint split:** S677's endpoint buckets make the case split visible:
+no-multiple rows have `n_clock=6`; primitive multiple rows have `n_clock=0`
+but positive measure; the one wall in the coherent audit is nonprimitive
+`gcd=28`, a scalar endpoint wall rather than a primitive residual.
+
+**Tournament Analysis:** Vertices are proof filters, not runners.  The filter
+tournament is transitive:
+
+```text
+apex_congruence_debt
+> primitive_multiple_positive_measure
+> owner_private_derivative
+> gcd_scaled_endpoint_wall
+> no_multiple_n_clock
+> raw_res27_shadow
+> raw_first_moment
+```
+
+with `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.
+
+**NEXT:** Attach HYP-2241's owner-private deletion bit directly to apex-debt
+sites.  Test whether apex-debt rows with the same visible `Res_27` shadow but
+different private-owner ledgers ever have small `p_0`, then try to prove that
+private ownership or a forced cheap-pair opens a positive safe interval.
+
+**See:** `05-knowledge/hypotheses/HYP-2253-lrc14-apex-debt-positive-measure.md`;
+`04-computation/lrc14_apex_debt_lebesgue_s677.py`;
+`05-knowledge/results/lrc14_apex_debt_lebesgue_s677.out`;
+`07-reflections/lrc14-apex-debt-positive-measure-s677.md`; T750,
+HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164.

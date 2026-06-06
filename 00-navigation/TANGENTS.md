@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T750** #lrc #n14 #apex-debt #lebesgue-measure #carry-congruence #primitive-multiple | certainty: exact rational audit on 720 coherent carry probes | source: codex-2026-06-06-S677
+HYP-2252's no-new-wall target sharpens to primitive apex debt: no-multiple `p_0=0` rows are harmless `n`-clock endpoint walls, and gcd-scaled walls reduce, so the real residual is primitive rows with a multiple of `14`.  In carry coordinates `v=r+27k`, apex debt is exactly `14|v <=> k==r (mod 14)`.  S677 exact `p_0` audit over single-apex, apex+side, interval-block, and affine carry laws finds `414/414` primitive multiple rows positive measure, `0` walls; min primitive-multiple `p_0=181/28028` at AP with `6->168`.  Next: attach HYP-2241 owner-private deletion directly to apex-debt sites.  See HYP-2253.
+
 **T749** #lrc #n14 #lebesgue-measure #p0 #endpoint-wall #res27 #carry-owner | certainty: exact rational audit through local carry weight 3 | source: codex-2026-06-05-S676
 Lebesgue safe measure is a proof filter for LRC14: `p_0>0` gives an open interval witness, while `p_0=0` is only an endpoint wall.  S676 computes exact rational danger-arc subdivisions.  AP, Vstar, and `2AP` have `p_0=0` with endpoint witnesses, and all three share wall-opening slope `23324/6435`; local `+27` carries through weight `3` have `1131/1131` positive-measure nonzero carries; one-swap AP rows through new speed `60` have only `12->24` at `p_0=0`.  Proof target: no new normalized `p_0=0` wall in the `Res_27` carry/owner fiber beyond scalar floor orbits.  See HYP-2252.
 
