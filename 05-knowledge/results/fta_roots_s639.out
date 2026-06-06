@@ -1,0 +1,16 @@
+(1) chromatic roots of the tie-graph C_n  =?  1 + (n-1)th roots of unity (= character ratios, THM-403)
+   C_5: 5 roots; |root-1|=1 (on unit circle centered at 1)? 4/5 ;  k=1 a root? True
+      roots-1 (should be (n-1)th roots of unity): -1.00+0.00j, 0.00-1.00j, 0.00+0.00j, 0.00+1.00j, 1.00+0.00j
+   C_6: 6 roots; |root-1|=1 (on unit circle centered at 1)? 5/6 ;  k=1 a root? True
+      roots-1 (should be (n-1)th roots of unity): -1.00+0.00j, -0.31-0.95j, -0.31+0.95j, 0.00+0.00j, 0.81-0.59j, 0.81+0.59j
+   C_7: 7 roots; |root-1|=1 (on unit circle centered at 1)? 6/7 ;  k=1 a root? True
+      roots-1 (should be (n-1)th roots of unity): -1.00+0.00j, -0.50-0.87j, -0.50+0.87j, 0.00+0.00j, 0.50-0.87j, 0.50+0.87j, 1.00+0.00j
+
+(2) Lee-Yang/fugacity zeros of the covering-depth Z(z)=sum p_k z^k (LRC partition function)
+   (1, 2, 3, 4) (p0=0.000): Z-zeros min|Im|=0.000  zeros=['0.60-1.95j', '0.60+1.95j', '-1.53+0.00j', '0.00+0.00j']
+   (1, 3, 4, 7) (p0=0.000): Z-zeros min|Im|=0.000  zeros=['0.21-2.15j', '0.21+2.15j', '-2.34+0.00j', '0.00+0.00j']
+   (1, 2, 4, 8) (p0=0.100): Z-zeros min|Im|=0.000  zeros=['-0.33-2.38j', '-0.33+2.38j', '-0.35+0.00j', '-1.00+0.00j']
+
+(3) FTA duality: coeffs = combinatorial spectrum (H, independence counts); roots = char ratios.
+    Newton's identities map power-sums (traces/H-moments) <-> elementary symmetric (coeffs) <-> roots.
+    chromatic roots of C_n = roots of unity = the (Z/n)* witness orbit (THM-403) = character ratios.
