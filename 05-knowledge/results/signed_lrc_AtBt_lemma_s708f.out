@@ -1,0 +1,57 @@
+=== C=9 (3x3) divisors [3]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3,)               A=2        [CHAIN]
+
+=== C=15 (3x5) divisors [3, 5]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3,)               A=4        [CHAIN]
+      H_(5,)               A=4        [CHAIN]
+   NEVER-silent moves (A=0): [((3, 5), 'FULLGEN')]
+
+=== C=21 (3x7) divisors [3, 7]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3,)               A=8        [CHAIN]
+      H_(7,)               A=8        [CHAIN]
+   NEVER-silent moves (A=0): [((3, 7), 'FULLGEN')]
+
+=== C=25 (5x5) divisors [5]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(5,)               A=8        [CHAIN]
+
+=== C=27 (3x3x3) divisors [3, 9]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3, 9)             A=112      [CHAIN]
+      H_(3,)               A=16       [CHAIN]
+      H_(9,)               A=16       [CHAIN]
+
+=== C=33 (3x11) divisors [3, 11]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3,)               A=32       [CHAIN]
+      H_(11,)              A=32       [CHAIN]
+   NEVER-silent moves (A=0): [((3, 11), 'FULLGEN')]
+
+=== C=35 (5x7) divisors [5, 7]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(5,)               A=16       [CHAIN]
+      H_(7,)               A=16       [CHAIN]
+   NEVER-silent moves (A=0): [((5, 7), 'FULLGEN')]
+
+=== C=39 (3x13) divisors [3, 13]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(3,)               A=64       [CHAIN]
+      H_(13,)              A=64       [CHAIN]
+   NEVER-silent moves (A=0): [((3, 13), 'FULLGEN')]
+
+=== C=45 (3x3x5) divisors [3, 5, 9, 15]  LEMMA A_t*B_t=0 matches Phi^2: True
+   silent-able moves (A>0):
+      H_(5, 15)            A=9008     [CHAIN]
+      H_(3, 9)             A=6272     [CHAIN]
+      H_(3, 15)            A=1952     [CHAIN]
+      H_(3,)               A=128      [CHAIN]
+      H_(15,)              A=128      [CHAIN]
+      H_(3, 5, 9, 15)      A=120      [FULLGEN]
+      H_(5,)               A=32       [CHAIN]
+      H_(9,)               A=32       [CHAIN]
+   NEVER-silent moves (A=0): [((3, 5), 'non-chain'), ((3, 5, 9), 'non-chain'), ((3, 5, 15), 'non-chain'), ((3, 9, 15), 'non-chain'), ((5, 9), 'non-chain'), ((5, 9, 15), 'non-chain'), ((9, 15), 'non-chain')]
+
+LEMMA verified for all tested C: True

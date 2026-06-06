@@ -1,0 +1,4 @@
+chains H3+H15 & H7+H21: minviol=1.58e+02 both-silent=False product-also-silent(=>size4)=False
+chains H3+H15 & H7+H35: minviol=1.21e+03 both-silent=False product-also-silent(=>size4)=False
+chains H5+H15 & H7+H21: minviol=2.62e+02 both-silent=False product-also-silent(=>size4)=False
+chains H3+H21 & H5+H15: minviol=3.15e+02 both-silent=False product-also-silent(=>size4)=False

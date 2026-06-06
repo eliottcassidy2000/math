@@ -1,0 +1,15 @@
+C=105=3x5x7, n1=52, 2^(n-2)=2^51 (enumeration infeasible; verify via A_t*B_t lemma)
+   H_3: constructed full-coset cut; flip-H_3 silent (A_t*B_t=0)? True
+   H_5: constructed full-coset cut; flip-H_5 silent (A_t*B_t=0)? True
+   H_7: constructed full-coset cut; flip-H_7 silent (A_t*B_t=0)? True
+   H_15: constructed full-coset cut; flip-H_15 silent (A_t*B_t=0)? True
+   H_21: constructed full-coset cut; flip-H_21 silent (A_t*B_t=0)? True
+   H_35: constructed full-coset cut; flip-H_35 silent (A_t*B_t=0)? True
+
+   Chain combined moves (local search for a silent cut):
+      H_(3)(+)H_(15) [chain 3|15]: min violation=1.818e-25  silent-cut found? True
+      H_(5)(+)H_(15) [chain 5|15]: min violation=1.457e-25  silent-cut found? True
+      H_(7)(+)H_(35) [chain 7|35]: min violation=3.675e+02  silent-cut found? False
+      H_(3)(+)H_(21) [chain 3|21]: min violation=1.692e-25  silent-cut found? True
+      H_(5)(+)H_(35) [chain 5|35]: min violation=5.250e+02  silent-cut found? False
+      H_(7)(+)H_(21) [chain 7|21]: min violation=1.096e-25  silent-cut found? True

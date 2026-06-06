@@ -1,0 +1,12 @@
+C=105: H_d (+) H_e silent-ability (search; A_t*B_t lemma verifies):
+  H3+H  5 [          coprime] chain=False  minviol=3.67e+02  SILENT-CUT=False
+  H3+H  7 [          coprime] chain=False  minviol=3.67e+02  SILENT-CUT=False
+  H5+H  7 [          coprime] chain=False  minviol=3.68e+02  SILENT-CUT=False
+  H3+H 15 [       chain 3|15] chain= True  minviol=1.20e-25  SILENT-CUT=True
+  H5+H 15 [       chain 5|15] chain= True  minviol=2.56e-25  SILENT-CUT=True
+  H7+H 35 [       chain 7|35] chain= True  minviol=3.27e-25  SILENT-CUT=True
+  H3+H 21 [       chain 3|21] chain= True  minviol=2.15e-25  SILENT-CUT=True
+  H5+H 35 [       chain 5|35] chain= True  minviol=2.62e+02  SILENT-CUT=False
+  H7+H 21 [       chain 7|21] chain= True  minviol=1.95e-25  SILENT-CUT=True
+  H15+H 21 [ non-chain (gcd3)] chain=False  minviol=4.72e+02  SILENT-CUT=False
+  H15+H 35 [ non-chain (gcd5)] chain=False  minviol=5.25e+02  SILENT-CUT=False
