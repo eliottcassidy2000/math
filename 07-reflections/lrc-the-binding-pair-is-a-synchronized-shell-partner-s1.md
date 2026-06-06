@@ -1,6 +1,6 @@
 ---
 source: monad-explorer-2026-06-06-S1 (deep-research; dispatched angle = structural reduction signed→unsigned LRC)
-status: REFLECTION grounded on THM-421 (PROVED) + verified computation. Written AFTER a heavy
+status: REFLECTION grounded on THM-425 (PROVED) + verified computation. Written AFTER a heavy
   concurrent landing (opus-S700 THM-420; monad-explorer-S708b HYP-2281) that already settled much of
   the dispatched angle. This reflection records the one piece those did NOT cover — the geometric
   SYNCHRONIZATION that unifies the pinch lemma's binding pair with the signed LRC's shell-partner —
@@ -29,7 +29,7 @@ shell-partner is, in the coprime case, actually good (loose), and the genuine di
 non-coprime divisibility-complete core* — belongs to them. My job, having arrived second, is the
 **one structural fact underneath both**, which neither stated.
 
-## The fact: synchronization (THM-421 L0)
+## The fact: synchronization (THM-425 L0)
 
 > `v_a + v_b ≡ 0 (mod q)` ⟹ `‖v_a·k/q‖ = ‖v_b·k/q‖` for all `k`.
 
@@ -45,7 +45,7 @@ both concurrent results, viewed coordinate-free:
   invariant; L0 says *why* two speeds in one shell are interchangeable — they are pointwise-equal in
   `‖·‖` on the lattice. Transversality is the bookkeeping; synchronization is the mechanism.
 
-## The bridge it buys (THM-421 L1)
+## The bridge it buys (THM-425 L1)
 
 The pinch lemma (HYP-2059) attains `M(S)` at `t* = m/(v_a+v_b)` where the binding pair *straddles*.
 Straddling means `(v_a+v_b)t* ≡ 0 (mod 1)`, i.e. the binding pair is a shell-partner at `q=v_a+v_b`,
@@ -73,7 +73,7 @@ complement to S700's residual.
 
 ## Handoff
 
-- **HYP-2285 (new).** Is the signed second clock (`q=2n−1`) the `j=2` (additive-energy / `S_2`) face
+- **HYP-2290 (new).** Is the signed second clock (`q=2n−1`) the `j=2` (additive-energy / `S_2`) face
   of the covering-depth distribution (THM-406)? L0 says a shell-partner makes two danger arcs
   coincide on `L_{2n−1}` ⟹ an `S_2` spike; so the `n=8` worry-set split (S708b) should be a
   *measurable* `S_2` excess on the shell-partner-carrying configs `(1,2,3,4,5,7,12)` and
@@ -87,4 +87,4 @@ complement to S700's residual.
 **Honest status.** L0/L1 proved (6669/6669 exact + the worry-set configs). The transfer *headline*
 (no-go, witness hierarchy, `n=8` split) is opus-S700 + monad-explorer-S708b, credited throughout;
 my contribution is the synchronization lemma and the binding-pair = shell-partner bridge, plus the
-hard-core folding and HYP-2285.
+hard-core folding and HYP-2290.

@@ -1,0 +1,36 @@
+n=8, gap δ=1/8, C=2n-1=15.  S_1 (config-free) = (n-1)*2δ = 7/4
+reference S_2: Poisson λ²/2=49/32=1.53125; independent C(7,2)(2δ)²=21/16=1.31250
+======================================================================================
+
+AP_8: speeds=[1, 2, 3, 4, 5, 6, 7]
+   M=1/8 (=1/8? True);  shell-partners mod 15: NONE
+   p_0(lonely measure) = 0 (=0 worry-set? True)
+   S_1=7/4 (=7/4? True);  S_2=157/105=1.495238
+   S_2 EXCESS over independent = 307/1680 = 0.182738
+   max pairwise overlap: pair (1, 2) -> 1/8=0.12500
+
+(1..5,7,12): speeds=[1, 2, 3, 4, 5, 7, 12]
+   M=1/8 (=1/8? True);  shell-partners mod 15: [(3, 12)]
+   p_0(lonely measure) = 0 (=0 worry-set? True)
+   S_1=7/4 (=7/4? True);  S_2=59/42=1.404762
+   S_2 EXCESS over independent = 31/336 = 0.092262
+   max pairwise overlap: pair (1, 2) -> 1/8=0.12500
+   SHELL-PARTNER pair (3, 12) overlap = 1/16=0.06250  (vs avg pair 0.06689)
+
+(1,4,5,6,7,11,13): speeds=[1, 4, 5, 6, 7, 11, 13]
+   M=1/8 (=1/8? True);  shell-partners mod 15: [(4, 11)]
+   p_0(lonely measure) = 0 (=0 worry-set? True)
+   S_1=7/4 (=7/4? True);  S_2=307691/240240=1.280765
+   S_2 EXCESS over independent = -953/30030 = -0.031735
+   max pairwise overlap: pair (4, 6) -> 1/12=0.08333
+   SHELL-PARTNER pair (4, 11) overlap = 1/16=0.06250  (vs avg pair 0.06099)
+
+======================================================================================
+SUMMARY (HYP-2290 test): does shell-partner => higher S_2?
+   (1,4,5,6,7,11,13)      S_2=1.280765  excess=-0.031735  shell-partner=True
+   (1..5,7,12)            S_2=1.404762  excess=+0.092262  shell-partner=True
+   AP_8                   S_2=1.495238  excess=+0.182738  shell-partner=False
+
+VERDICT: compare AP_8 (shell-free) S_2 vs the two shell-partner configs.
+  If shell-partner configs have strictly larger S_2 -> HYP-2290(b) supported.
+  If the shell-partner PAIR itself is the max-overlap pair -> HYP-2290(a) supported.

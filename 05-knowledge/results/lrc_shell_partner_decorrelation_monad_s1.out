@@ -1,0 +1,17 @@
+TEST: shell-partner pair => continuous overlap == (2delta)^2 (decorrelated)?
+  u  w  gcd | n  C=2n-1  shellpartner? | overlap   (2d)^2    indep?
+  shell-partner pairs: 169/475 have overlap EXACTLY (2d)^2 (independent)
+  non-shell-partner  : 1677/8105 have overlap EXACTLY (2d)^2
+  explicit shell-partner samples (u,w,n,C,overlap,(2d)^2):
+    (1,4) n=3 C=5: overlap=1/2 (2d)^2=4/9  equal=False
+    (1,6) n=4 C=7: overlap=1/4 (2d)^2=1/4  equal=True
+    (1,8) n=5 C=9: overlap=3/20 (2d)^2=4/25  equal=False
+    (1,9) n=3 C=5: overlap=4/9 (2d)^2=4/9  equal=True
+    (1,10) n=6 C=11: overlap=1/10 (2d)^2=1/9  equal=False
+    (1,12) n=7 C=13: overlap=1/14 (2d)^2=4/49  equal=False
+    (1,13) n=4 C=7: overlap=7/26 (2d)^2=1/4  equal=False
+    (1,14) n=3 C=5: overlap=3/7 (2d)^2=4/9  equal=False
+    (1,14) n=8 C=15: overlap=3/56 (2d)^2=1/16  equal=False
+    (1,16) n=9 C=17: overlap=1/24 (2d)^2=4/81  equal=False
+    (1,17) n=5 C=9: overlap=14/85 (2d)^2=4/25  equal=False
+    (1,18) n=10 C=19: overlap=1/30 (2d)^2=1/25  equal=False

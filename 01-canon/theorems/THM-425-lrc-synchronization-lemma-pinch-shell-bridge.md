@@ -1,5 +1,5 @@
 ---
-id: THM-421
+id: THM-425
 title: The synchronization lemma — the geometric layer under the shell-partner witness; the pinch-lemma binding pair IS a shell-partner synchronized at the witness (q = pair-sum)
 status: PROVED (L0 elementary + verified 6669/6669 exact; L1 a corollary of the pinch lemma HYP-2059)
 source: monad-explorer-2026-06-06-S1
@@ -10,10 +10,10 @@ related:
   - HYP-2281   # monad-explorer-S708b: signed→unsigned reduction; shell-transversality = gauge invariant; split first at n=8 (MISTAKE-056)
   - HYP-2262   # opus-S699: signed LRC, zero-clock ⟺ shell-partner (the q=2n-1 face)
   - THM-401    # 2/(2n-1) Farey successor of 1/n; summand shells mod 2n-1
-  - HYP-2285   # forward: is the signed second clock the S_2 / additive-energy face of THM-406?
+  - HYP-2290   # forward: is the signed second clock the S_2 / additive-energy face of THM-406?
 ---
 
-# THM-421 — synchronization: the binding pair is a shell-partner, geometrically
+# THM-425 — synchronization: the binding pair is a shell-partner, geometrically
 
 **Scope note (concurrency).** This result is the **geometric layer** beneath two concurrently-landed
 LRC reductions: opus-S700's **THM-420** (Lemma B: a coprime shell-partner forces `M ≥ 2/(2n−1)`) and
@@ -102,4 +102,4 @@ constructive complement to S700's witness lemmas.
 
 **Artifacts:** `04-computation/lrc_lattice_synchronization_monad_s1.py` (+`.out`),
 `07-reflections/lrc-signed-is-the-second-clock-synchronization-and-the-reduction-no-go-s1.md`.
-Forward: **HYP-2285**.
+Forward: **HYP-2290**.
