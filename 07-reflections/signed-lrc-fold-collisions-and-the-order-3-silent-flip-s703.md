@@ -1,11 +1,11 @@
 ---
 source: monad-explorer-2026-06-06-S703 (deep-research, signed-LRC small-n exhaustive)
-status: THEOREM (THM-412) + strongly-verified conjecture (HYP-2267) + a correction of S699's T4.
+status: THEOREM (THM-413) + strongly-verified conjecture (HYP-2270) + a correction of S699's T4.
 The signed-LRC sign-orbit of AP_n loses information ONLY through the mod-(2n−1) fold (never through
 an automorphism — the unfolded cut-spectrum is universally faithful), and the cleanest cause of that
 loss is the order-3 torsion runner x=(2n−1)/3, which exists iff 3∣(2n−1) and is a silent single flip.
 tags: [signed-lrc, sign-orbit, fold-collision, order-3, prime-3, eulerian, half-system, faithful,
-       2n-1, n14, C27, correction-of-T4, THM-412, HYP-2267]
+       2n-1, n14, C27, correction-of-T4, THM-413, HYP-2270]
 ---
 
 # Signed LRC: the sign-orbit degenerates only by folding, and the door is the order-3 point
@@ -53,7 +53,7 @@ Exhaustive `n=3..22` (`C=5..43`):
 Collision counts: `C=9→1, 15→4, 21→8, 25→4, 27→69, 33→32, 35→16, 39→64`. The explosion at
 `C=27=3³` is conspicuous — the 3-richest modulus is the most degenerate.
 
-## The mechanism: a silent flip through the order-3 point (THM-412)
+## The mechanism: a silent flip through the order-3 point (THM-413)
 
 A *single-flip* collision is "flipping one runner `x`'s color changes nothing." Flipping `x` toggles
 every incident edge between its mono value `|x−y|` and its cut value `ρ(x+y)`. Build the
@@ -78,7 +78,7 @@ every incident edge between its mono value `|x−y|` and its cut value `ρ(x+y)`
 
 Composite `C` with **no** factor 3 (e.g. `25, 35, 49`) still degenerates, but with **no** single
 silent flip (`G_x` is Eulerian for no `x`); those collisions are genuinely multi-flip. So `3∣C` is a
-clean *sufficient* cause; the full "iff `2n−1` prime" is HYP-2267 (other prime factors contribute
+clean *sufficient* cause; the full "iff `2n−1` prime" is HYP-2270 (other prime factors contribute
 multi-flip collisions whose count law is open).
 
 ## Why this matters for the LRC attack
@@ -95,13 +95,13 @@ runner `9` as a coordinate the sign group gauges away, and carry the discriminat
 shell-partner pair `(3,24)` instead.
 
 ## Honest status
-- **Proved:** Lemmas A, B and the order-3 theorem (THM-412); hence `3∣(2n−1) ⟹` sign-orbit `<2^{n−2}`.
+- **Proved:** Lemmas A, B and the order-3 theorem (THM-413); hence `3∣(2n−1) ⟹` sign-orbit `<2^{n−2}`.
 - **Verified:** Lemma B (n≤40); `x=C/3` Eulerian (n≤199); unfolded faithfulness (exhaustive n≤7 +
   adversarial); the iff-prime law (n≤22).
-- **Conjecture (HYP-2267):** sign-orbit `=2^{n−2}` iff `2n−1` prime.
+- **Conjecture (HYP-2270):** sign-orbit `=2^{n−2}` iff `2n−1` prime.
 - **Not touched:** the observer gap `M` (sign-invariant); off-grid LRC(14).
 
 **Artifacts:** `04-computation/signed_lrc_orbit_collisions_s703.py`, `…faithfulness_s703b.py`,
 `…fast_confirm_s703c.py`, `…collision_mechanism_s703d.py` (+`.out`s),
-`05-knowledge/results/signed_lrc_thm411_proof_check_s703e.out`. THM-412, HYP-2267, T757.
+`05-knowledge/results/signed_lrc_thm411_proof_check_s703e.out`. THM-413, HYP-2270, T758.
 Extends S699 (T1–T4, worry-set split), THM-401/403 (shells/2n−1), THM-407 (prime-3, n=14).

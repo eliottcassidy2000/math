@@ -1,4 +1,4 @@
-# THM-412 — Signed-LRC order-3 silent flip: the AP_n sign-orbit degenerates through the point x=(2n−1)/3
+# THM-413 — Signed-LRC order-3 silent flip: the AP_n sign-orbit degenerates through the point x=(2n−1)/3
 
 **Status:** PROVED (degree-parity lemma + Euler-decomposition corollary; both verified exhaustively).
 **Source:** monad-explorer-2026-06-06-S703. Sharpens and corrects S699's T4 ("sign-orbit
@@ -64,7 +64,7 @@ cancel, leaving all degrees even. (Consistent with the handshake lemma: a multig
 even number of odd-degree vertices.) ∎
 
 **Verified:** Lemma B checked for all `(n,x)`, `n=4..40` (777 pairs, 0 mismatches),
-`signed_lrc_thm411_proof_check_s703e.out` [filename predates the THM-411→412 renumber].
+`signed_lrc_thm411_proof_check_s703e.out` [filename predates the THM-411→413 renumber].
 
 ## Theorem (order-3 silent flip) — PROVED
 
@@ -87,12 +87,12 @@ groups; the 8 single-flip collisions all flip `x=9`).
   with no mod-`C` fold) is **faithful for every config tested** (all `2^{n−2}` cuts distinct;
   verified exhaustively `n≤7` all speed-sets in `[1,14]`, plus adversarial symmetric/Sidon-violating
   sets). So no automorphism is involved — *every* collision is a **fold-only** artifact created by
-  reducing clocks mod `C=2n−1`. THM-412 is the clean sufficient cause when `3∣C`.
+  reducing clocks mod `C=2n−1`. THM-413 is the clean sufficient cause when `3∣C`.
 
 - **Sufficient, not necessary, for orbit degeneration.** `3∣C` ⟹ orbit `< 2^{n−2}` via a *single*
   silent flip. Composite `C` with **no** factor 3 (e.g. `C=25` at `n=13`, `C=35` at `n=18`,
   `C=49`) still has a smaller orbit, but those collisions are all **multi-flip** (no single runner
-  has `G_x` Eulerian — verified `eulx=∅` for `3∤C`). The full law is conjectural: see HYP-2267.
+  has `G_x` Eulerian — verified `eulx=∅` for `3∤C`). The full law is conjectural: see HYP-2270.
 
 ---
 
@@ -102,8 +102,8 @@ groups; the 8 single-flip collisions all flip `x=9`).
   the order-3 theorem `G_x` Eulerian ⟺ `x=(2n−1)/3`. Hence `3∣(2n−1) ⟹` orbit `<2^{n−2}`.
 - **Verified:** Lemma B (n≤40); the `x=C/3` Eulerian property (n≤199, all `3∣C`); unfolded
   faithfulness (exhaustive n≤7 + adversarial).
-- **Conjecture (HYP-2267):** `AP_n` folded sign-orbit `= 2^{n−2}` **iff `2n−1` is prime**
-  (verified n=3..22, C=5..43). The `3∣C` direction is THM-412; other composite factors give
+- **Conjecture (HYP-2270):** `AP_n` folded sign-orbit `= 2^{n−2}` **iff `2n−1` is prime**
+  (verified n=3..22, C=5..43). The `3∣C` direction is THM-413; other composite factors give
   multi-flip collisions whose count law is open.
 - **Not claimed:** any statement about the observer gap `M` (which is sign-invariant by T1); this is
   purely about the finer signed (pair-clock) invariant.
@@ -112,4 +112,4 @@ groups; the 8 single-flip collisions all flip `x=9`).
 `signed_lrc_faithfulness_s703b.py`, `signed_lrc_fast_confirm_s703c.py`,
 `signed_lrc_collision_mechanism_s703d.py` (+`.out`s),
 `05-knowledge/results/signed_lrc_thm411_proof_check_s703e.out`,
-`07-reflections/signed-lrc-fold-collisions-and-the-order-3-silent-flip-s703.md`. HYP-2267, T757.
+`07-reflections/signed-lrc-fold-collisions-and-the-order-3-silent-flip-s703.md`. HYP-2270, T758.
