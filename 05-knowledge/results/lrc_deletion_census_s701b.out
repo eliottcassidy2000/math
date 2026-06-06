@@ -1,0 +1,107 @@
+============================================================================
+S701b: single-runner deletion census of AP_n (which deletions raise M?)
+============================================================================
+
+--- n=4  (1/n=1/4, 2/n=1/2, n/2=2) ---
+  delete a= 1: M=2/5  RAISED to 2/5=0.4000 @t=4/5
+  delete a= 2: M=1/2  RAISED to 1/2=0.5000 @t=1/2  <== self-conjugate n/2
+  delete a= 3: M=1/3  RAISED to 1/3=0.3333 @t=2/3
+  >> max gap after a single deletion: 1/2=0.50000 at a=[2]  (2/n=1/2)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=6  (1/n=1/6, 2/n=1/3, n/2=3) ---
+  delete a= 1: M=2/7  RAISED to 2/7=0.2857 @t=6/7
+  delete a= 2: M=2/9  RAISED to 2/9=0.2222 @t=5/9
+  delete a= 3: M=1/3  RAISED to 1/3=0.3333 @t=2/3  <== self-conjugate n/2
+  delete a= 4: M=1/4  RAISED to 1/4=0.2500 @t=1/4
+  delete a= 5: M=1/5  RAISED to 1/5=0.2000 @t=1/5
+  >> max gap after a single deletion: 1/3=0.33333 at a=[3]  (2/n=1/3)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=8  (1/n=1/8, 2/n=1/4, n/2=4) ---
+  delete a= 1: M=2/9  RAISED to 2/9=0.2222 @t=8/9
+  delete a= 2: M=2/11  RAISED to 2/11=0.1818 @t=6/11
+  delete a= 3: M=2/11  RAISED to 2/11=0.1818 @t=4/11
+  delete a= 4: M=1/4  RAISED to 1/4=0.2500 @t=1/4  <== self-conjugate n/2
+  delete a= 5: M=1/5  RAISED to 1/5=0.2000 @t=1/5
+  delete a= 6: M=1/6  RAISED to 1/6=0.1667 @t=1/6
+  delete a= 7: M=1/7  RAISED to 1/7=0.1429 @t=6/7
+  >> max gap after a single deletion: 1/4=0.25000 at a=[4]  (2/n=1/4)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=10  (1/n=1/10, 2/n=1/5, n/2=5) ---
+  delete a= 1: M=2/11  RAISED to 2/11=0.1818 @t=10/11
+  delete a= 2: M=2/13  RAISED to 2/13=0.1538 @t=7/13
+  delete a= 3: M=2/13  RAISED to 2/13=0.1538 @t=4/13
+  delete a= 4: M=2/15  RAISED to 2/15=0.1333 @t=11/15
+  delete a= 5: M=1/5  RAISED to 1/5=0.2000 @t=4/5  <== self-conjugate n/2
+  delete a= 6: M=1/6  RAISED to 1/6=0.1667 @t=1/6
+  delete a= 7: M=1/7  RAISED to 1/7=0.1429 @t=3/7
+  delete a= 8: M=1/8  RAISED to 1/8=0.1250 @t=1/8
+  delete a= 9: M=1/9  RAISED to 1/9=0.1111 @t=5/9
+  >> max gap after a single deletion: 1/5=0.20000 at a=[5]  (2/n=1/5)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=12  (1/n=1/12, 2/n=1/6, n/2=6) ---
+  delete a= 1: M=2/13  RAISED to 2/13=0.1538 @t=12/13
+  delete a= 2: M=2/15  RAISED to 2/15=0.1333 @t=8/15
+  delete a= 3: M=1/8  RAISED to 1/8=0.1250 @t=5/16
+  delete a= 4: M=2/17  RAISED to 2/17=0.1176 @t=13/17
+  delete a= 5: M=2/17  RAISED to 2/17=0.1176 @t=10/17
+  delete a= 6: M=1/6  RAISED to 1/6=0.1667 @t=1/6  <== self-conjugate n/2
+  delete a= 7: M=1/7  RAISED to 1/7=0.1429 @t=3/7
+  delete a= 8: M=1/8  RAISED to 1/8=0.1250 @t=1/8
+  delete a= 9: M=1/9  RAISED to 1/9=0.1111 @t=5/9
+  delete a=10: M=1/10  RAISED to 1/10=0.1000 @t=3/10
+  delete a=11: M=1/11  RAISED to 1/11=0.0909 @t=8/11
+  >> max gap after a single deletion: 1/6=0.16667 at a=[6]  (2/n=1/6)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=14  (1/n=1/14, 2/n=1/7, n/2=7) ---
+  delete a= 1: M=2/15  RAISED to 2/15=0.1333 @t=14/15
+  delete a= 2: M=2/17  RAISED to 2/17=0.1176 @t=8/17
+  delete a= 3: M=2/17  RAISED to 2/17=0.1176 @t=11/17
+  delete a= 4: M=2/19  RAISED to 2/19=0.1053 @t=5/19
+  delete a= 5: M=2/19  RAISED to 2/19=0.1053 @t=15/19
+  delete a= 6: M=2/23  RAISED to 2/23=0.0870 @t=4/23
+  delete a= 7: M=1/7  RAISED to 1/7=0.1429 @t=3/7  <== self-conjugate n/2
+  delete a= 8: M=1/8  RAISED to 1/8=0.1250 @t=1/8
+  delete a= 9: M=1/9  RAISED to 1/9=0.1111 @t=5/9
+  delete a=10: M=1/10  RAISED to 1/10=0.1000 @t=3/10
+  delete a=11: M=1/11  RAISED to 1/11=0.0909 @t=8/11
+  delete a=12: M=1/12  RAISED to 1/12=0.0833 @t=5/12
+  delete a=13: M=1/13  RAISED to 1/13=0.0769 @t=4/13
+  >> max gap after a single deletion: 1/7=0.14286 at a=[7]  (2/n=1/7)
+  >> n/2 is the UNIQUE maximal guard? True
+
+--- n=16  (1/n=1/16, 2/n=1/8, n/2=8) ---
+  delete a= 1: M=2/17  RAISED to 2/17=0.1176 @t=16/17
+  delete a= 2: M=2/19  RAISED to 2/19=0.1053 @t=10/19
+  delete a= 3: M=2/19  RAISED to 2/19=0.1053 @t=6/19
+  delete a= 4: M=2/21  RAISED to 2/21=0.0952 @t=5/21
+  delete a= 5: M=2/21  RAISED to 2/21=0.0952 @t=17/21
+  delete a= 6: M=2/23  RAISED to 2/23=0.0870 @t=4/23
+  delete a= 7: M=2/23  RAISED to 2/23=0.0870 @t=10/23
+  delete a= 8: M=1/8  RAISED to 1/8=0.1250 @t=1/8  <== self-conjugate n/2
+  delete a= 9: M=1/9  RAISED to 1/9=0.1111 @t=5/9
+  delete a=10: M=1/10  RAISED to 1/10=0.1000 @t=3/10
+  delete a=11: M=1/11  RAISED to 1/11=0.0909 @t=8/11
+  delete a=12: M=1/12  RAISED to 1/12=0.0833 @t=5/12
+  delete a=13: M=1/13  RAISED to 1/13=0.0769 @t=4/13
+  delete a=14: M=1/14  RAISED to 1/14=0.0714 @t=13/14
+  delete a=15: M=1/15  RAISED to 1/15=0.0667 @t=14/15
+  >> max gap after a single deletion: 1/8=0.12500 at a=[8]  (2/n=1/8)
+  >> n/2 is the UNIQUE maximal guard? True
+
+============================================================================
+Elementary proof check: M(AP_n\{n/2}) = 2/n via even sub-AP skeleton
+============================================================================
+  n= 4 m= 2: minDist(R,1/m)=1/2=0.5000  M(evens=2*AP_m)=1/2  M(AP_m)=1/2  M(R)=1/2@1/2  2/n=1/2  OK
+  n= 6 m= 3: minDist(R,1/m)=1/3=0.3333  M(evens=2*AP_m)=1/3  M(AP_m)=1/3  M(R)=1/3@2/3  2/n=1/3  OK
+  n= 8 m= 4: minDist(R,1/m)=1/4=0.2500  M(evens=2*AP_m)=1/4  M(AP_m)=1/4  M(R)=1/4@1/4  2/n=1/4  OK
+  n=10 m= 5: minDist(R,1/m)=1/5=0.2000  M(evens=2*AP_m)=1/5  M(AP_m)=1/5  M(R)=1/5@4/5  2/n=1/5  OK
+  n=12 m= 6: minDist(R,1/m)=1/6=0.1667  M(evens=2*AP_m)=1/6  M(AP_m)=1/6  M(R)=1/6@1/6  2/n=1/6  OK
+  n=14 m= 7: minDist(R,1/m)=1/7=0.1429  M(evens=2*AP_m)=1/7  M(AP_m)=1/7  M(R)=1/7@3/7  2/n=1/7  OK
+  n=16 m= 8: minDist(R,1/m)=1/8=0.1250  M(evens=2*AP_m)=1/8  M(AP_m)=1/8  M(R)=1/8@1/8  2/n=1/8  OK
+  n=18 m= 9: minDist(R,1/m)=1/9=0.1111  M(evens=2*AP_m)=1/9  M(AP_m)=1/9  M(R)=1/9@2/9  2/n=1/9  OK
+  n=20 m=10: minDist(R,1/m)=1/10=0.1000  M(evens=2*AP_m)=1/10  M(AP_m)=1/10  M(R)=1/10@7/10  2/n=1/10  OK
