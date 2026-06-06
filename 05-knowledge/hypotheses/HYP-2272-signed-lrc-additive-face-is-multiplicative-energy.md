@@ -31,7 +31,14 @@ its rosette; the cyclic (degree-2 additive) one is capped.
 > `E_+=Σ_s r_+(s)^2` is dilation-invariant and, together with the shell-partner count `r_+(0)`,
 > separates the exact `n=14` floor: `AP=(328,0)`, `2·AP=(328,0)`, `V*=(290,1)`. **Conjecture:** at
 > every `n`, `(r_+(0), E_+)` (or a short list of moments of `r_+`) distinguishes the distinct
-> dilation-classes of tight (`M=1/n`) configs. *Status: OPEN; verified only at the `n=14` floor.*
+> dilation-classes of tight (`M=1/n`) configs. *Status: OPEN; positive evidence at every tight row
+> on record:* n=5 `AP=(8,0)` vs sporadic `(1,3,4,7)=(6,0)`; n=6 `AP=(16,0)` vs sporadic
+> `(1,3,4,5,9)=(10,0)`; n=14 `AP/2·AP=(328,0)` vs `V*=(290,1)`. The only `(E_+,shell)` collision is
+> `AP`↔`2·AP`, which is a *genuine* dilation equivalence (correct behavior). **Sharper pattern
+> (new):** the `AP` carries the *maximal* additive energy among tight configs at each `n` (the
+> interval is the most additively-structured set of its size); every irregular tight row (sporadics,
+> `V*`) sits strictly below. Candidate refinement: "tight ⟹ `E_+ ≤ E_+(AP_n)`, equality iff a
+> dilate of `AP`."
 
 > **(C2) Cyclic image of the rank jump.** To exceed the `⌊N/2⌋` cap one must pass to a higher-degree
 > additive form. **Conjecture:** the 3-fold sum `r_3(s)=#{i<j<k: a_i+a_j+a_k≡s}` (or the `d`-fold

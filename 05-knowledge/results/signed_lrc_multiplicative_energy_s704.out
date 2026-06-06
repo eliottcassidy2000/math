@@ -121,4 +121,21 @@ PART E — matching CAP r_+(s) <= floor(N/2) and dilation-invariance of E_+
     (divisor-rate, S702); cyclic pair-sum r_+ is MATCHING-capped at floor(N/2).
     => the LRC additive face has NO 'popular-norm escape' (rank-2 ceiling).
 
+========================================================================
+PART F — (E_+, shell) on known tight (M=1/n) configs  [evidence for HYP-2272 C1]
+========================================================================
+  n=5 (C=9):
+    AP        -> (E_+=8, shell=r_+(0)=0, max r_+=2)
+    sporadic  -> (E_+=6, shell=r_+(0)=0, max r_+=1)
+    AP has max E_+ among these tight rows? True
+  n=6 (C=11):
+    AP        -> (E_+=16, shell=r_+(0)=0, max r_+=2)
+    sporadic  -> (E_+=10, shell=r_+(0)=0, max r_+=1)
+    AP has max E_+ among these tight rows? True
+  n=14 (C=27):
+    AP        -> (E_+=328, shell=r_+(0)=0, max r_+=6)
+    V*        -> (E_+=290, shell=r_+(0)=1, max r_+=5)
+    2AP       -> (E_+=328, shell=r_+(0)=0, max r_+=6)
+    AP has max E_+ among these tight rows? True
+
 DONE.

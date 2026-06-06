@@ -350,6 +350,30 @@ def main():
     print(f"    => the LRC additive face has NO 'popular-norm escape' (rank-2 ceiling).")
 
     print()
+    print("="*72)
+    print("PART F — (E_+, shell) on known tight (M=1/n) configs  [evidence for HYP-2272 C1]")
+    print("="*72)
+    tight = {
+        5:  [((1, 2, 3, 4), 'AP'), ((1, 3, 4, 7), 'sporadic')],
+        6:  [((1, 2, 3, 4, 5), 'AP'), ((1, 3, 4, 5, 9), 'sporadic')],
+        14: [(tuple(range(1, 14)), 'AP'),
+             ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24), 'V*'),
+             (tuple(2*k for k in range(1, 14)), '2AP')],
+    }
+    for nn, rows in tight.items():
+        C = 2*nn - 1
+        print(f"  n={nn} (C={C}):")
+        APenergy = None
+        for sp, lab in rows:
+            r = pair_sum_rep(list(sp), C)
+            E = sum(x*x for x in r)
+            if lab == 'AP':
+                APenergy = E
+            print(f"    {lab:9s} -> (E_+={E}, shell=r_+(0)={r[0]}, max r_+={max(r)})")
+        leq = all(sum(x*x for x in pair_sum_rep(list(sp), C)) <= APenergy for sp, _ in rows)
+        print(f"    AP has max E_+ among these tight rows? {leq}")
+
+    print()
     print("DONE.")
 
 if __name__ == "__main__":
