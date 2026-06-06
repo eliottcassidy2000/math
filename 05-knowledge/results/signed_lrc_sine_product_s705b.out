@@ -1,0 +1,31 @@
+============================================================================================
+PART A: verify  |f_hat|^2 = |F|^2 - 4 sigma_P sigma_N  (exhaustive over cuts)
+============================================================================================
+  n= 4 C=  7: formula holds for all 4 cuts: True
+  n= 5 C=  9: formula holds for all 8 cuts: True
+  n= 6 C= 11: formula holds for all 16 cuts: True
+  n= 7 C= 13: formula holds for all 32 cuts: True
+  n= 8 C= 15: formula holds for all 64 cuts: True
+  n= 9 C= 17: formula holds for all 128 cuts: True
+  n=10 C= 19: formula holds for all 256 cuts: True
+  n=11 C= 21: formula holds for all 512 cuts: True
+
+============================================================================================
+PART B: collision <=> equal sine-product vector; deficiency by Hamming distance
+============================================================================================
+  n    C    C-fact  defic sine=fold?   Hamming-dist histogram of colliding pairs
+  5    9       3x3      1       True   {1: 1}
+  6   11       11P      0       True   {}
+  7   13       13P      0       True   {}
+  8   15       3x5      4       True   {1: 2, 2: 2}
+  9   17       17P      0       True   {}
+ 10   19       19P      0       True   {}
+ 11   21       3x7      8       True   {1: 4, 3: 4}
+ 12   23       23P      0       True   {}
+ 13   25       5x5      4       True   {2: 4}
+ 14   27     3x3x3     69     (skip)   {1: 8, 3: 56, 4: 8}
+ 15   29       29P      0     (skip)   {}
+ 16   31       31P      0     (skip)   {}
+ 17   33      3x11     32     (skip)   {1: 16, 5: 16}
+ 18   35       5x7     16     (skip)   {2: 8, 3: 8}
+ 19   37       37P      0     (skip)   {}
