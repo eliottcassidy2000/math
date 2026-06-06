@@ -1,0 +1,60 @@
+==============================================================================
+(A) FINITENESS BOUND v_max <= 2n-1
+==============================================================================
+ n=3: v_max over all tights = 3  (2n-1=5)  within bound=True; sets hitting 2n-1: []
+ n=4: v_max over all tights = 7  (2n-1=7)  within bound=True; sets hitting 2n-1: [(1, 3, 4, 7)]
+ n=5: v_max over all tights = 9  (2n-1=9)  within bound=True; sets hitting 2n-1: [(1, 3, 4, 5, 9)]
+ n=6: v_max over all tights = 6  (2n-1=11)  within bound=True; sets hitting 2n-1: []
+ n=7: v_max over all tights = 13  (2n-1=13)  within bound=True; sets hitting 2n-1: [(1, 4, 5, 6, 7, 11, 13)]
+ ==> bound holds for all n=3..7: True
+
+==============================================================================
+(B) WITNESS TIMES and witness multiset (positions k where t=k/m)
+==============================================================================
+ n=3 (1, 2, 3)                gap=1/4 witnesses(t)=['1/4']  (x4: ['1'])
+ n=4 (1, 2, 3, 4)             gap=1/5 witnesses(t)=['1/5', '2/5']  (x5: ['1', '2'])
+ n=4 (1, 3, 4, 7)             gap=1/5 witnesses(t)=['1/5', '2/5']  (x5: ['1', '2'])
+ n=5 (1, 2, 3, 4, 5)          gap=1/6 witnesses(t)=['1/6']  (x6: ['1'])
+ n=5 (1, 3, 4, 5, 9)          gap=1/6 witnesses(t)=['1/6']  (x6: ['1'])
+ n=6 (1, 2, 3, 4, 5, 6)       gap=1/7 witnesses(t)=['1/7', '2/7', '3/7']  (x7: ['1', '2', '3'])
+ n=7 (1, 2, 3, 4, 5, 6, 7)    gap=1/8 witnesses(t)=['1/8', '3/8']  (x8: ['1', '3'])
+ n=7 (1, 2, 3, 4, 5, 7, 12)   gap=1/8 witnesses(t)=['1/8', '3/8']  (x8: ['1', '3'])
+ n=7 (1, 4, 5, 6, 7, 11, 13)  gap=1/8 witnesses(t)=['1/8', '3/8']  (x8: ['1', '3'])
+
+==============================================================================
+(C) GENERATING RULE: single-element lifts v_i -> v_i + k*m of the AP that stay tight
+==============================================================================
+ n=3: AP single-lifts that stay tight: NONE (only the AP)
+ n=4: AP single-lifts that stay tight: [('2->7', (1, 3, 4, 7))]
+ n=5: AP single-lifts that stay tight: NONE (only the AP)
+ n=6: AP single-lifts that stay tight: NONE (only the AP)
+ n=7: AP single-lifts that stay tight: NONE (only the AP)
+
+==============================================================================
+(D) KRAVITZ LADDER: gap spectrum vs {s/(ns+1)} and 1/n
+==============================================================================
+
+ n=3 (1/n=1/3); ladder s/(ns+1): ['1/4', '2/7', '3/10', '4/13']
+    gap=1/4     =0.2500  count=   1  on-ladder=True
+    gap=2/7     =0.2857  count=   4  on-ladder=True
+    gap=3/10    =0.3000  count=   3  on-ladder=True
+    gap=4/13    =0.3077  count=   5  on-ladder=True
+    gap=5/16    =0.3125  count=   2  on-ladder=False
+    gap=6/19    =0.3158  count=   2  on-ladder=False
+    (#distinct gaps >= 1/n: 18)
+
+ n=4 (1/n=1/4); ladder s/(ns+1): ['1/5', '2/9', '3/13', '4/17']
+    gap=1/5     =0.2000  count=   2  on-ladder=True
+    gap=2/9     =0.2222  count=   4  on-ladder=True
+    gap=3/13    =0.2308  count=   6  on-ladder=True
+    gap=4/17    =0.2353  count=   6  on-ladder=True
+    gap=5/21    =0.2381  count=   2  on-ladder=False
+    gap=6/25    =0.2400  count=   3  on-ladder=False
+    (#distinct gaps >= 1/n: 44)
+
+ n=5 (1/n=1/5); ladder s/(ns+1): ['1/6', '2/11', '3/16', '4/21']
+    gap=1/6     =0.1667  count=   2  on-ladder=True
+    gap=2/11    =0.1818  count=   5  on-ladder=True
+    gap=3/16    =0.1875  count=   5  on-ladder=True
+    gap=4/21    =0.1905  count=   2  on-ladder=True
+    (#distinct gaps >= 1/n: 79)

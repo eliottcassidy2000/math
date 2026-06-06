@@ -1,0 +1,22 @@
+(A)/(B) LRC tight tie-graph = C_n: sieve=chi, corrector=alpha, chromatic poly P(C_n,k)
+     P(C_n,k)=(k-1)^n+(-1)^n (k-1)  [the zero-temp Potts partition function]
+   n=3: chi(C_n)=3 (sieve arity, =2 if n even else 3) alpha=1=floor(n/2) (corrector size)  P(C_n,2)=0 P(C_n,3)=6
+   n=4: chi(C_n)=2 (sieve arity, =2 if n even else 3) alpha=2=floor(n/2) (corrector size)  P(C_n,2)=2 P(C_n,3)=18
+   n=5: chi(C_n)=3 (sieve arity, =2 if n even else 3) alpha=2=floor(n/2) (corrector size)  P(C_n,2)=0 P(C_n,3)=30
+   n=6: chi(C_n)=2 (sieve arity, =2 if n even else 3) alpha=3=floor(n/2) (corrector size)  P(C_n,2)=2 P(C_n,3)=66
+   n=7: chi(C_n)=3 (sieve arity, =2 if n even else 3) alpha=3=floor(n/2) (corrector size)  P(C_n,2)=0 P(C_n,3)=126
+   n=8: chi(C_n)=2 (sieve arity, =2 if n even else 3) alpha=4=floor(n/2) (corrector size)  P(C_n,2)=2 P(C_n,3)=258
+
+(C) EDGE coloring: K_n edges labeled by pair-sum (v_i+v_j) mod (2n-1) [THM-401].
+   n=5 (mod 9): 10 edges, 7 distinct pair-sum labels; proper-edge-coloring=True
+      label multiplicities: {1: 1, 2: 1, 3: 2, 4: 2, 5: 2, 6: 1, 7: 1}
+   n=6 (mod 11): 15 edges, 9 distinct pair-sum labels; proper-edge-coloring=True
+      label multiplicities: {1: 1, 2: 1, 3: 2, 4: 2, 5: 3, 6: 2, 7: 2, 8: 1, 9: 1}
+   n=7 (mod 13): 21 edges, 11 distinct pair-sum labels; proper-edge-coloring=True
+      label multiplicities: {1: 1, 2: 1, 3: 2, 4: 2, 5: 3, 6: 3, 7: 3, 8: 2, 9: 2, 10: 1, 11: 1}
+
+(D) UNIT DISTANCE = vertex coloring (Hadwiger-Nelson): chi of small unit-distance graphs
+   unit triangle K3: chi=3 (=3)
+   Moser-spindle-like (7 pts): chi=3 (target 4; coords approximate)
+   => unit distance is NATIVELY a vertex-coloring problem; the disproof maximizes edge density
+      (chi-forcing) = the chromatic-number-of-the-plane (Hadwiger-Nelson) family.
