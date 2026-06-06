@@ -1,0 +1,42 @@
+C'(14): multiple-of-14 configs must be loose (M>1/14=0.07143).
+Probing near-tight worry configs (AP with one speed -> a multiple of 14).
+
+AP[0=1]->14: M=1/8=0.12500 LOOSE t*=['1/16'] v=14(w=1) Bprime_long=1/28 vs 2/nv=1/98 all_short=False
+AP[1=2]->14: M=2/17=0.11765 LOOSE t*=['8/17'] v=14(w=1) Bprime_long=11/728 vs 2/nv=1/98 all_short=False
+AP[2=3]->14: M=2/19=0.10526 LOOSE t*=['6/19'] v=14(w=1) Bprime_long=1/84 vs 2/nv=1/98 all_short=False
+AP[3=4]->14: M=2/19=0.10526 LOOSE t*=['5/19'] v=14(w=1) Bprime_long=9/1232 vs 2/nv=1/98 all_short=True
+AP[4=5]->14: M=2/21=0.09524 LOOSE t*=['4/21'] v=14(w=1) Bprime_long=1/140 vs 2/nv=1/98 all_short=True
+AP[5=6]->14: M=2/23=0.08696 LOOSE t*=['4/23'] v=14(w=1) Bprime_long=5/1848 vs 2/nv=1/98 all_short=True
+AP[6=7]->14: M=1/11=0.09091 LOOSE t*=['3/22'] v=14(w=1) Bprime_long=3/208 vs 2/nv=1/98 all_short=False
+AP[7=8]->14: M=1/8=0.12500 LOOSE t*=['1/8', '3/8'] v=14(w=1) Bprime_long=2/147 vs 2/nv=1/98 all_short=False
+AP[8=9]->14: M=1/9=0.11111 LOOSE t*=['1/9', '2/9', '4/9'] v=14(w=1) Bprime_long=1/91 vs 2/nv=1/98 all_short=False
+AP[9=10]->14: M=1/10=0.10000 LOOSE t*=['1/10', '3/10'] v=14(w=1) Bprime_long=4/637 vs 2/nv=1/98 all_short=True
+AP[10=11]->14: M=1/11=0.09091 LOOSE t*=['1/11', '2/11', '3/11', '4/11', '5/11'] v=14(w=1) Bprime_long=1/112 vs 2/nv=1/98 all_short=True
+AP[11=12]->14: M=1/12=0.08333 LOOSE t*=['1/12', '5/12'] v=14(w=1) Bprime_long=1/245 vs 2/nv=1/98 all_short=True
+AP[12=13]->14: M=1/13=0.07692 LOOSE t*=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13'] v=14(w=1) Bprime_long=1/168 vs 2/nv=1/98 all_short=True
+AP[0=1]->28: M=2/15=0.13333 LOOSE t*=['1/15'] v=28(w=2) Bprime_long=1/28 vs 2/nv=1/196 all_short=False
+AP[1=2]->28: M=2/17=0.11765 LOOSE t*=['8/17'] v=28(w=2) Bprime_long=11/728 vs 2/nv=1/196 all_short=False
+AP[2=3]->28: M=2/17=0.11765 LOOSE t*=['6/17'] v=28(w=2) Bprime_long=1/84 vs 2/nv=1/196 all_short=False
+AP[3=4]->28: M=2/19=0.10526 LOOSE t*=['5/19'] v=28(w=2) Bprime_long=9/1232 vs 2/nv=1/196 all_short=False
+AP[4=5]->28: M=2/19=0.10526 LOOSE t*=['4/19'] v=28(w=2) Bprime_long=1/140 vs 2/nv=1/196 all_short=False
+AP[5=6]->28: M=2/23=0.08696 LOOSE t*=['4/23'] v=28(w=2) Bprime_long=5/1848 vs 2/nv=1/196 all_short=True
+AP[6=7]->28: M=1/9=0.11111 LOOSE t*=['5/36'] v=28(w=2) Bprime_long=3/208 vs 2/nv=1/196 all_short=False
+AP[7=8]->28: M=1/8=0.12500 LOOSE t*=['1/8', '3/8'] v=28(w=2) Bprime_long=2/147 vs 2/nv=1/196 all_short=False
+AP[8=9]->28: M=1/9=0.11111 LOOSE t*=['1/9', '2/9', '4/9'] v=28(w=2) Bprime_long=1/91 vs 2/nv=1/196 all_short=False
+AP[9=10]->28: M=1/10=0.10000 LOOSE t*=['1/10', '3/10'] v=28(w=2) Bprime_long=4/637 vs 2/nv=1/196 all_short=False
+AP[10=11]->28: M=1/11=0.09091 LOOSE t*=['1/11', '2/11', '3/11', '4/11', '5/11'] v=28(w=2) Bprime_long=1/112 vs 2/nv=1/196 all_short=False
+AP[11=12]->28: M=1/12=0.08333 LOOSE t*=['1/12', '5/12'] v=28(w=2) Bprime_long=1/245 vs 2/nv=1/196 all_short=True
+AP[12=13]->28: M=1/13=0.07692 LOOSE t*=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13'] v=28(w=2) Bprime_long=1/168 vs 2/nv=1/196 all_short=False
+AP[0=1]->42: M=2/15=0.13333 LOOSE t*=['1/15'] v=42(w=3) Bprime_long=1/28 vs 2/nv=1/294 all_short=False
+AP[1=2]->42: M=2/17=0.11765 LOOSE t*=['8/17'] v=42(w=3) Bprime_long=11/728 vs 2/nv=1/294 all_short=False
+AP[2=3]->42: M=2/17=0.11765 LOOSE t*=['6/17'] v=42(w=3) Bprime_long=1/84 vs 2/nv=1/294 all_short=False
+AP[3=4]->42: M=5/53=0.09434 LOOSE t*=['14/53'] v=42(w=3) Bprime_long=9/1232 vs 2/nv=1/294 all_short=False
+AP[4=5]->42: M=2/19=0.10526 LOOSE t*=['4/19'] v=42(w=3) Bprime_long=1/140 vs 2/nv=1/294 all_short=False
+AP[5=6]->42: M=2/23=0.08696 LOOSE t*=['4/23'] v=42(w=3) Bprime_long=5/1848 vs 2/nv=1/294 all_short=True
+AP[6=7]->42: M=3/25=0.12000 LOOSE t*=['7/50'] v=42(w=3) Bprime_long=3/208 vs 2/nv=1/294 all_short=False
+AP[7=8]->42: M=1/8=0.12500 LOOSE t*=['1/8', '3/8'] v=42(w=3) Bprime_long=2/147 vs 2/nv=1/294 all_short=False
+AP[8=9]->42: M=1/9=0.11111 LOOSE t*=['1/9', '2/9', '4/9'] v=42(w=3) Bprime_long=1/91 vs 2/nv=1/294 all_short=False
+AP[9=10]->42: M=1/10=0.10000 LOOSE t*=['1/10', '3/10'] v=42(w=3) Bprime_long=4/637 vs 2/nv=1/294 all_short=False
+AP[10=11]->42: M=1/11=0.09091 LOOSE t*=['1/11', '2/11', '3/11', '4/11', '5/11'] v=42(w=3) Bprime_long=1/112 vs 2/nv=1/294 all_short=False
+AP[11=12]->42: M=1/12=0.08333 LOOSE t*=['1/12', '5/12'] v=42(w=3) Bprime_long=1/245 vs 2/nv=1/294 all_short=False
+AP[12=13]->42: M=1/13=0.07692 LOOSE t*=['1/13', '2/13', '3/13', '4/13', '5/13', '6/13'] v=42(w=3) Bprime_long=1/168 vs 2/nv=1/294 all_short=False
