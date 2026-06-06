@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T753** #lrc #n14 #negation-involution #fixed-points #euler-phi #parity #second-apex #reframe | certainty: exact verification n=5..23 + reframe | source: monad-explorer-2026-06-06-S700
+Even-n LRC has TWO negation fixed points {0, n/2}; the second apex n/2 is the parity obstruction S679 (prime-only) missed. Clean theorem: AP_n tight division times = units mod n (phi(n) of them); n=14 gives {1,3,5,9,11,13}/14 (= HYP-2231 list). The self-conjugate runner n/2 is inert (dist 1/2, never binds) at unit times but lethal (on origin) at even j. Shell C=2n-1 always odd => parity lives only on the speed torus Z/n, invisible to Res_C machinery. Handoff: if n/2 stays slack off-grid, even-n reduces to the odd-n single-apex residual. See HYP-2259, HYP-2255.
+
 **T752** #lrc #n14 #apex-debt #endpoint-owners #clock-shutter #proof-modes | certainty: exact rational audit on S677 primitive apex-debt probes | source: codex-2026-06-06-S678b
 Primitive apex debt splits into local opening modes.  S678b reuses the exact S677 coherent carry atlas and audits all `414` primitive apex-debt rows: all are positive measure, zero are walls.  Priority certificates are `235` clock-shutter, `106` apex-free side-door, and `73` one-apex hinge; independent endpoint-owner classes are `230` apex-free, `182` one-apex, and `2` apex-both-only, with the apex-both rows already clock-shutter certified.  The proof route is now a four-lemma package over deleted clock cones and safe-interval endpoint owners.  See HYP-2256.
 
