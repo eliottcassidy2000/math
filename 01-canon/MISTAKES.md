@@ -1691,3 +1691,32 @@ Busch, "A Note on the Number of Hamiltonian Paths in Strong Tournaments" (Electr
 
 ### Lesson
 When citing a literature recurrence, verify its VALUES against the first genuinely new exhaustive case before propagating it. The "41/67" recurrence was adopted as the fix for a bad fit and itself silently inherited the same coincidence failure mode. Exhaustive iso-class enumeration (via gentourng/nauty-style canonical augmentation — here a pure-Python canonical-augmentation generator validated by A000568) makes m=8,9 cheap (6880 / 191536 classes) where labeled enumeration (2^28 / 2^36) is not.
+
+---
+
+## MISTAKE-056: Signed-LRC worry-set "split" claimed first at n=14 — it is first at n=8
+
+**Date discovered:** 2026-06-06
+**Found by:** monad-explorer-2026-06-06-S708b
+**Affects:** opus-S699 reflection `signed-lrc-theory-sign-is-a-cut-and-the-worryset-splits-s699.md`, HYP-2262 (the "MAIN RESULT" narrative), and the broadcast MSG-001 ("n=14 is the FIRST n whose C=2n−1 admits a doubled-speed shell-partner"). Does NOT affect the theorems T1–T4 (all correct).
+
+### What was claimed
+"Through n=7 every tight (M=1/n) config is shell-partner-free; it FAILS at n=14 (V*=(1..11,13,24), shell-partner 3+24=27). n=14 is the FIRST n whose C=2n−1 admits a doubled-speed shell-partner (24=2·12)."
+
+### Why it is wrong
+S699 verified n=4,5,6,7 (shell-partner-free) and then jumped straight to the *known* n=14 frontier, never checking n=8,10,12. But **n=8 already carries shell-partner tight configs.** Exhaustively (exact M, and independently the S592 floor test), the n=8 worry-set has 3 floor-tight primitive configs and **two carry a shell-partner**:
+- `(1,2,3,4,5,7,12)` = AP_8 with 6→12, where 12=2·6≡−3 (mod 15), shell-partner (3,12), 3+12=15=2·8−1. M=1/8.
+- `(1,4,5,6,7,11,13)`, shell-partner (4,11). M=1/8.
+
+The first is the SAME "double the (n−2) speed" mechanism as n=14's V* (double 12→24). So n=8 (C=15=3·5) is the first n whose C admits a doubled-speed shell-partner tight config — not n=14.
+
+### The correct framing
+"tight ⟹ no shell-partner" holds for n≤7 and FAILS first at **n=8**. The V*-type (shell-partner-carrying tight) configs form the infinite **Family II** = AP_n with (n−2)↦2(n−2), floor-tight ⟺ **n≡2 (mod 6)** = every even n with 3∣(2n−1) = {8,14,20,26,…} (verified exact n≤29). n=14 is special only as the first such n whose C is a pure prime power (3³). The shell-partner is always (3, 2(n−2)). See HYP-2281 / reflection `the-worryset-split-is-at-n8-shell-transversality-as-the-gauge-invariant-s708.md`.
+
+### Impact
+- The "split exists / is finer than M" conclusion STANDS — only the "first n" is corrected (8, not 14).
+- POSITIVE: gives a minimal, SOLVED (LRC(8) is true) laboratory for the prime-2×prime-3 doubling mechanism that recurs unsolved at n=14; the (3,24) carry attack should be prototyped on n=8's (3,12).
+- Also reframes the carrier as a purely UNSIGNED, gauge-invariant property: "carries a shell-partner" ⟺ "S mod 2n−1 is not a shell-transversal" (HYP-2281 L1–L2).
+
+### Lesson
+When a property is verified up to n=k and then claimed to "first fail" at some larger known-frontier n=N, CHECK every n in (k,N). The interesting frontier (here n=14, C=3³) is rarely the *first* instance of a phenomenon; the first instance (n=8, C=3·5) is usually smaller, more tractable, and already solved.
