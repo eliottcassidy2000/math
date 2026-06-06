@@ -1,0 +1,80 @@
+==============================================================================
+Q1: M(S) >= 1/n   <=>   exists m in 1..n-1 : all m*v_i ≢ 0 (mod n) ?
+    (exhaustive over (n-1)-subsets of [1..W], gcd=1)
+==============================================================================
+ n=3 (W=8): both=12  M-only(M>=1/n,NO grid)=9  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 3)  M=1/2
+       (1, 6)  M=3/7
+       (2, 3)  M=2/5
+       (3, 4)  M=3/7
+       (3, 5)  M=1/2
+       (3, 7)  M=1/2
+ n=4 (W=10): both=54  M-only(M>=1/n,NO grid)=55  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 2, 4)  M=1/3
+       (1, 2, 8)  M=1/3
+       (1, 3, 4)  M=2/7
+       (1, 3, 8)  M=4/11
+       (1, 4, 5)  M=1/3
+       (1, 4, 6)  M=2/5
+ n=5 (W=12): both=204  M-only(M>=1/n,NO grid)=275  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 2, 3, 5)  M=1/4
+       (1, 2, 3, 10)  M=1/4
+       (1, 2, 4, 5)  M=1/3
+       (1, 2, 4, 10)  M=1/3
+       (1, 2, 5, 6)  M=2/7
+       (1, 2, 5, 7)  M=1/3
+ n=6 (W=14): both=791  M-only(M>=1/n,NO grid)=1190  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 2, 3, 4, 6)  M=1/5
+       (1, 2, 3, 4, 12)  M=1/5
+       (1, 2, 3, 5, 6)  M=1/4
+       (1, 2, 3, 5, 12)  M=1/5
+       (1, 2, 3, 6, 7)  M=1/4
+       (1, 2, 3, 6, 8)  M=2/9
+ n=7 (W=16): both=2996  M-only(M>=1/n,NO grid)=4984  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 2, 3, 4, 5, 7)  M=1/6
+       (1, 2, 3, 4, 5, 14)  M=1/6
+       (1, 2, 3, 4, 6, 7)  M=1/5
+       (1, 2, 3, 4, 6, 14)  M=1/5
+       (1, 2, 3, 4, 7, 8)  M=1/5
+       (1, 2, 3, 4, 7, 9)  M=1/5
+ n=8 (W=18): both=11439  M-only(M>=1/n,NO grid)=20349  grid-only(should be 0)=0  neither=0
+    NECESSITY-BREAKING (M>=1/n but no grid witness):
+       (1, 2, 3, 4, 5, 6, 8)  M=1/7
+       (1, 2, 3, 4, 5, 6, 16)  M=1/7
+       (1, 2, 3, 4, 5, 7, 8)  M=1/6
+       (1, 2, 3, 4, 5, 7, 16)  M=1/6
+       (1, 2, 3, 4, 5, 8, 9)  M=1/6
+       (1, 2, 3, 4, 5, 8, 10)  M=1/6
+
+==============================================================================
+Q2: tight configs: active maximizing pair a mod-n shell-partner (a+b≡0 mod n)?
+    vs signed-LRC (2n-1) shell-partner
+==============================================================================
+ n=4 V=(1, 2, 3): t*=1/4 active=[1, 3]
+      mod-4 shell(active)=[(1, 3)];  mod-7 shell(all)=NONE
+ n=5 V=(1, 2, 3, 4): t*=1/5 active=[1, 4]
+      mod-5 shell(active)=[(1, 4)];  mod-9 shell(all)=NONE
+ n=5 V=(1, 3, 4, 7): t*=1/5 active=[1, 4]
+      mod-5 shell(active)=[(1, 4)];  mod-9 shell(all)=NONE
+ n=6 V=(1, 2, 3, 4, 5): t*=1/6 active=[1, 5]
+      mod-6 shell(active)=[(1, 5)];  mod-11 shell(all)=NONE
+ n=6 V=(1, 3, 4, 5, 9): t*=1/6 active=[1, 5]
+      mod-6 shell(active)=[(1, 5)];  mod-11 shell(all)=NONE
+ n=7 V=(1, 2, 3, 4, 5, 6): t*=1/7 active=[1, 6]
+      mod-7 shell(active)=[(1, 6)];  mod-13 shell(all)=NONE
+ n=8 V=(1, 2, 3, 4, 5, 6, 7): t*=1/8 active=[1, 7]
+      mod-8 shell(active)=[(1, 7)];  mod-15 shell(all)=NONE
+ n=8 V=(1, 2, 3, 4, 5, 7, 12): t*=1/8 active=[1, 7]
+      mod-8 shell(active)=[(1, 7)];  mod-15 shell(all)=[(3, 12)]
+ n=8 V=(1, 4, 5, 6, 7, 11, 13): t*=1/8 active=[1, 7]
+      mod-8 shell(active)=[(1, 7)];  mod-15 shell(all)=[(4, 11)]
+
+==============================================================================
+Q3: mod-n mirror redundancy (a+b≡0 mod n => ||a k/n||=||b k/n|| all k)
+==============================================================================
+  323121 checks, 0 violations => HOLDS

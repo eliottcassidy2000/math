@@ -1,0 +1,18 @@
+ n=4 (W=24): 1 primitive tight configs
+    with a multiple of n: 0
+    M NOT on n-grid (t* denom ∤ n): 0
+ n=5 (W=25): 2 primitive tight configs
+    with a multiple of n: 0
+    M NOT on n-grid (t* denom ∤ n): 0
+ n=6 (W=24): 2 primitive tight configs
+    with a multiple of n: 0
+    M NOT on n-grid (t* denom ∤ n): 0
+ n=7 (W=21): 1 primitive tight configs
+    with a multiple of n: 0
+    M NOT on n-grid (t* denom ∤ n): 0
+ n=8 (W=24): 3 primitive tight configs
+    with a multiple of n: 0
+    M NOT on n-grid (t* denom ∤ n): 0
+
+Lemma spot-check: grid-witness(S) exists  <=>  no v in S with v % n == 0
+   200000 random (n,S): grid-witness == no-multiple-of-n  mismatches = 0
