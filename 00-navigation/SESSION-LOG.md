@@ -11,6 +11,17 @@
 **Synthesis:** The useful question is not "what is the next n?" but "which side channel is the proof trying to learn?"  Use `n=19` as a shared clean symmetry control: prime `C` on the LRC side and centered Eisenstein shell on the unit-distance side.
 **Artifacts:** HYP-2254, T751, `04-computation/lrc_ud_easier_frontier_targets_s678.py`, `05-knowledge/results/lrc_ud_easier_frontier_targets_s678.out`, `07-reflections/easier-frontier-targets-lrc-unit-distance-s678.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
 **Handoff:** Prove a prime-`C` no-new-wall lemma first in cleaner LRC lanes, then run the clause at `C=27` to isolate the triadic/apex failure.  For unit distance, prove a one-slab side-channel ledger at `n=13,14`, then add the second slab and identify the first invariant that is no longer local.
+## codex-2026-06-06-S678b - LRC14 apex opening modes (HYP-2256)
+
+**Prompt:** Improve proof routes to LRC `n=14` creatively and outside the box.
+**Integration:** Fast-forwarded over S676/HYP-2252, S677/HYP-2253, incoming S678/HYP-2254/T751 easier-frontier work, and incoming S679/HYP-2255 on the LRC@19 prime-frontier apex fixed point.  The active LRC14 residual is primitive apex debt: in `v=r+27k`, `14|v iff k==r mod 14`, and the exact coherent atlas had `414/414` primitive multiple rows with `p_0>0`.  S678b keeps that target but asks for local opening certificates rather than another scalar measure check.
+**Claimed namespace:** HYP-2256 and T752.
+**Computation:** Added `04-computation/lrc14_apex_opening_modes_s678b.py` and stored `05-knowledge/results/lrc14_apex_opening_modes_s678b.out`.  The script reuses S677 probes, computes exact deleted-clock cone widths and full safe-interval endpoint owners, and classifies each primitive apex-debt row by proof-certificate mode.
+**Findings:** All `414` primitive apex-debt rows remain positive measure and zero are walls.  Priority routes split as `235` clock-shutter, `106` apex-free side-door, and `73` one-apex hinge.  Independent endpoint-owner classes are `230` apex-free, `182` one-apex, and `2` apex-both-only; the apex-both-only rows are already clock-shutter certified.  The smallest clock surplus is `1/2352` at `Vstar/interval_block/[0,4]:h1`.
+**Tournament Analysis:** Vertices are certificate modes, not runners.  The mode tournament is transitive with one Hamiltonian path: `clock_shutter > apex_free_side_door > one_apex_hinge > apex_period_aperture > raw_p0_scalar > raw_res27_shadow`.
+**Synthesis:** Owner-private deletion becomes a boundary-owner question: do not ask whether the apex is globally harmless; ask which boundary of a specific safe interval it owns.  The proof route is a four-lemma package: deleted clock shutter, apex-free side door, one-apex hinge, and apex-period aperture.
+**Artifacts:** HYP-2256, T752, `04-computation/lrc14_apex_opening_modes_s678b.py`, `05-knowledge/results/lrc14_apex_opening_modes_s678b.out`, `07-reflections/lrc14-apex-opening-modes-s678b.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Prove the four opening lemmas abstractly, then build a normalized `Res_27` carry-owner classifier showing every primitive apex-debt row falls into at least one mode; any row outside all four modes should reduce to a scalar endpoint wall and hence fail primitiveness.
 
 ## codex-2026-06-06-S677 - LRC14 apex-debt positive measure (HYP-2253)
 

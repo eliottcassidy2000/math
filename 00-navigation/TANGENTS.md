@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T752** #lrc #n14 #apex-debt #endpoint-owners #clock-shutter #proof-modes | certainty: exact rational audit on S677 primitive apex-debt probes | source: codex-2026-06-06-S678b
+Primitive apex debt splits into local opening modes.  S678b reuses the exact S677 coherent carry atlas and audits all `414` primitive apex-debt rows: all are positive measure, zero are walls.  Priority certificates are `235` clock-shutter, `106` apex-free side-door, and `73` one-apex hinge; independent endpoint-owner classes are `230` apex-free, `182` one-apex, and `2` apex-both-only, with the apex-both rows already clock-shutter certified.  The proof route is now a four-lemma package over deleted clock cones and safe-interval endpoint owners.  See HYP-2256.
+
 **T750** #lrc #n14 #apex-debt #lebesgue-measure #carry-congruence #primitive-multiple | certainty: exact rational audit on 720 coherent carry probes | source: codex-2026-06-06-S677
 HYP-2252's no-new-wall target sharpens to primitive apex debt: no-multiple `p_0=0` rows are harmless `n`-clock endpoint walls, and gcd-scaled walls reduce, so the real residual is primitive rows with a multiple of `14`.  In carry coordinates `v=r+27k`, apex debt is exactly `14|v <=> k==r (mod 14)`.  S677 exact `p_0` audit over single-apex, apex+side, interval-block, and affine carry laws finds `414/414` primitive multiple rows positive measure, `0` walls; min primitive-multiple `p_0=181/28028` at AP with `6->168`.  Next: attach HYP-2241 owner-private deletion directly to apex-debt sites.  See HYP-2253.
 

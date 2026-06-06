@@ -715,6 +715,7 @@ Organized by topic. Each hypothesis has a detail file.
 | HYP-2252 | LRC14 Lebesgue measure is a proof filter: `p_0>0` gives an interval certificate, while `p_0=0` is an endpoint wall requiring set-level witnesses. | S676 computes exact rational safe measure.  AP, Vstar, and `2AP` have `p_0=0` with endpoint witnesses; all three share the exact wall-opening slope `23324/6435`.  Local `+27` carry perturbations through weight `3` have `1131/1131` positive-measure nonzero carries, and the one-swap AP scan through new speed `60` has only `12->24` at `p_0=0`.  The proof target becomes: no new normalized `p_0=0` wall in the `Res_27` carry/owner fiber beyond scalar floor orbits of AP/Vstar/`2AP`. | codex-2026-06-05-S676; `HYP-2252-lrc14-lebesgue-wall-certificate.md`; `lrc14_lebesgue_wall_s676.py`; `lrc14_lebesgue_wall_s676.out`; `lrc14-lebesgue-wall-certificate-s676.md`; T749; HYP-2241, HYP-2164, HYP-2167, HYP-2155, THM-406 |
 | HYP-2253 | LRC14 no-new-wall should be split into harmless no-multiple endpoint walls, gcd-scaled walls, and the real residual: primitive apex debt. | S677 records the exact carry identity `14|v` iff `k==r (mod 14)` for `v=r+27k` and computes exact `p_0` on `720` coherent carry probes over AP/Vstar.  Among `414` primitive multiple rows there are `0` walls and `414` positive-measure rows; the minimum primitive-multiple `p_0` is `181/28028` at AP with speed `6` carried to `168`.  The improved proof target is: every normalized primitive apex-debt row has `p_0(V,1/14)>0`, unless gcd reduction makes it a scalar endpoint wall. | codex-2026-06-06-S677; `HYP-2253-lrc14-apex-debt-positive-measure.md`; `lrc14_apex_debt_lebesgue_s677.py`; `lrc14_apex_debt_lebesgue_s677.out`; `lrc14-apex-debt-positive-measure-s677.md`; T750; HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164 |
 | HYP-2254 | Easier LRC/unit-distance targets split by predicate: smaller values are easier for full theorem work, while several later values are cleaner local-carrier labs. | S678 ranks LRC values by `C=2n-1` factorization, folded `<2,-1>` orbits, gcd strata, odd-prime `n`, prime `C`, triadic shell, and Vstar wall.  Later LRC local-carrier labs cleaner than `n=14` include `n=15,16,18,19,22,24`, with `n=19` cleanest (`n` prime and `C=37` prime).  Unit-distance `n=13=P_1^-` and `n=14=P_1^+` are easier one-slab THM-408 spine targets than `n=21=P_2^-`; `n=19` is a centered Eisenstein shell control; `n=22` is not easier for exact upper bounds because the `60/61` ear side channel remains. | codex-2026-06-06-S678; `HYP-2254-easier-frontier-targets-lrc-unit-distance.md`; `lrc_ud_easier_frontier_targets_s678.py`; `lrc_ud_easier_frontier_targets_s678.out`; `easier-frontier-targets-lrc-unit-distance-s678.md`; T751; HYP-2253, HYP-2217, THM-408, HYP-2177 |
+| HYP-2256 | Primitive apex debt should be proved by local opening modes: clock shutter, apex-free side door, one-apex hinge, or apex-period aperture. | S678b reuses the exact S677 coherent carry atlas and audits all `414` primitive apex-debt rows, after rebasing over S678/HYP-2254's easier-frontier atlas and S679/HYP-2255's LRC19 apex fixed-point lane.  All are positive measure and none are walls.  Priority certificates split as `235` clock-shutter, `106` apex-free side-door, and `73` one-apex hinge.  Independent endpoint-owner classes are `230` apex-free, `182` one-apex, and `2` apex-both-only; the two apex-both-only rows are already clock-shutter certified.  The proof target becomes a four-lemma package over deleted clock cones and safe-interval endpoint owners. | codex-2026-06-06-S678b; `HYP-2256-lrc14-apex-opening-modes.md`; `lrc14_apex_opening_modes_s678b.py`; `lrc14_apex_opening_modes_s678b.out`; `lrc14-apex-opening-modes-s678b.md`; T752; HYP-2255, HYP-2254, HYP-2253, HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164 |
 | HYP-2203 | Moser-carrier Hamiltonian-path questions should separate intrinsic traceability from flip-gauge artifacts. HYP-2201 gives the lattice traceability theorem, and HYP-2202 separates graph-level unit HPs from canonical tiling-order flops; HYP-2203 checks the non-lattice Moser lane. If the unit graph has a spanning unit spine, either flip convention can make a mandatory all-unit path after choosing the tie order from that spine. | S626 width-1200 Moser beam recovers exact witnesses through `n=14`, exact `n=21` with `57` edges, and the `n=22` `60`-edge lane; every checked witness has a unit spine, and `n=14` has `55160` unit Hamiltonian paths. S628/THM-408 proves the displayed Moser ladder for two infinite slab/cap families, including those three named rows. But lexicographic point-order flip tournaments first lose an all-unit directed HP at `n=7` (`5/6` unit arcs), even though the unit graph has `60` unit HPs. Route Tournament Analysis ranks unit graph traceability above frontier-gain recursion, direction-pair quotients, and point-flip gauges. | codex-2026-06-04-S626/S628; `HYP-2203-unit-distance-moser-unit-spine-gauge-separation.md`; `THM-408-moser-layered-slabs-have-unit-spines.md`; `unit_distance_unit_spine_tournament_s626.py`; `unit_distance_spine_ladder_s628.py`; `unit_distance_spine_ladder_s628.out`; `unit-spines-as-traceable-sections-s628.md`; HYP-2204; HYP-2202; HYP-2201 |
 | HYP-2189 | The cauldron game is an online additive-coloring problem: the literal first-boil base rule with `k=3` and `A+B=C` is weak Schur (distinct summands), safe through `23` and forced at `24`; the repeated-summand/classical comparison is safe through `13` and forced at `14`. The all-boiled removal rule is a separate sacrifice dynamic over active sum-free resources, with exact `k=3` last boil `27` in the literal rule, `20` in the repeated comparison, and `25` in the finite-sums rule. | S618 exact search: first-boil variants `23/24`, `13/14`, two-or-three-term `22/23`, finite-sums `21/22`; removal variants `3,10,27` distinct, `2,7,20` repeated, and `3,10,25` finite-sums for `k=1,2,3`. Tournament Analysis uses proof routes / active-state quotients rather than raw cauldrons and is transitive with one Hamiltonian path. | codex-2026-06-03-S618; `HYP-2189-cauldron-schur-removal-game.md`; `cauldron_game_s618.py`; `cauldron_game_s618.out`; `cauldron-schur-removal-game-s618.md` |
 | HYP-2156 | Anti-Poisson coimage atlas: residual branches where a free/independent pushforward baseline predicts a positive ground cell, but structured arithmetic correlation forces coimage-level all-orders cancellation while preserving a witness floor. Strong tournament SCCs are the proof-obligation subset where no scalar/transitive certificate order remains. S605 adds the category/number theory refinement: coimage+Yoneda gives the canonical quotient, and `2n-1` unit-shell resonances are the floor probes whose coverage makes cancellation possible. | S604/S605 synthesis grounded in THM-406 (`p_0=sum (-1)^j S_j`, `{p_k}` spectral/coimage), HYP-2153 additive-chain `p_0=0` rows larger than AP, HYP-2154/2155 free baseline/coimage, HYP-2151/2152 Helly certificate entropy, and THM-401/S571 `C=2n-1` witness exits. | codex-2026-06-03-S604/S605; `05-knowledge/hypotheses/HYP-2156-anti-poisson-coimage-atlas.md`; `07-reflections/anti-poisson-coimage-atlas-s604.md`; `07-reflections/coimage-yoneda-2n-minus-1-resonance-s605.md` |
@@ -8386,3 +8387,71 @@ CLEAN SIEVE REDUCTION [PROVED/verified 0 failures / 14460+19297]: at t=a/q (gcd(
 THE WALL: sieve-covered family infinite; needs the polynomial method.
 THE REFRAME (gem): at prime n the AP binding pairs are {a, n-a}={a,-a} mod n = NEGATION-INVOLUTION orbits on F_n; the sieve APEX (mult of 19 == 0 mod 19) sits at the UNIQUE FIXED POINT of negation. [verified] the apex kills EVERY division-point witness (apex dist 0 at all t=j/19); the antipodal pairs prevent local recovery; loneliness must be found OFF the j/19 grid (e.g. {2..19}: M=2/21 at t=20/21). => HARD CORE of LRC@prime-n = the negation-involution FIXED-POINT residual. SAME SHAPE as: Redei self-converse tournaments (reversal fixed points = the H-impossibility residual, HYP-2187/2193); the V* nonunit seam (signed-LRC S674, 3+24=27 zero pair-clock); the kappa-even obstruction (S605, negation sign-preserving). UNIFYING: in each problem the hard residual = the fixed-point set of a natural involution; the cure = a SECONDARY/twisted involution on that set (S606). 
 **See:** `04-computation/lrc19_sieve_apex_involution_s679.py` (+.out); `07-reflections/lrc19-sieve-apex-involution-s679.md`; S678 (easier frontiers, n=19), S674 (signed-LRC), S605 (kappa-even / resonance lattice), S606 (twisted involutions), HYP-2193 (H=21 Moon reduction / Redei residual), THM-369 (pinch witnesses).
+## HYP-2256: LRC14 apex opening modes (codex-2026-06-06-S678b)
+
+**Status:** OPEN proof-route refinement.
+
+**Statement:** HYP-2253's primitive apex-debt target should be proved by a
+local opening-mode package rather than by one global covering estimate:
+
+```text
+primitive apex debt
+  -> clock shutter OR endpoint-owner interval
+  -> local opening lemma
+  -> p_0(V,1/14)>0.
+```
+
+The four certificate modes are:
+
+1. deleted-apex clock shutter;
+2. apex-free side door;
+3. one-apex hinge;
+4. apex-period aperture.
+
+**Evidence:** S678b reuses S677's exact coherent carry atlas and audits all
+`414` primitive apex-debt rows.  All are positive measure and none are walls.
+Priority certificates split as:
+
+```text
+clock_shutter             235
+apex_free_side_door       106
+one_apex_hinge             73
+apex_period_aperture        0
+```
+
+The independent endpoint-owner classes are:
+
+```text
+apex_free                 230
+one_apex                  182
+apex_both_only              2
+```
+
+The two `apex_both_only` rows are already clock-shutter certified.  The
+smallest clock surplus is `1/2352` at
+`Vstar/interval_block/[0,4]:h1`.
+
+**Tournament Analysis:** Vertices are certificate modes, not runners.  The
+mode tournament is transitive:
+
+```text
+clock_shutter
+> apex_free_side_door
+> one_apex_hinge
+> apex_period_aperture
+> raw_p0_scalar
+> raw_res27_shadow
+```
+
+with `directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.
+
+**NEXT:** Prove the four opening lemmas abstractly, then build a normalized
+`Res_27` carry-owner classifier showing every primitive apex-debt row falls
+into at least one mode.  A row outside all four modes should reduce to a scalar
+endpoint wall and therefore fail primitiveness.
+
+**See:** `05-knowledge/hypotheses/HYP-2256-lrc14-apex-opening-modes.md`;
+`04-computation/lrc14_apex_opening_modes_s678b.py`;
+`05-knowledge/results/lrc14_apex_opening_modes_s678b.out`;
+`07-reflections/lrc14-apex-opening-modes-s678b.md`; T752, HYP-2255,
+HYP-2254, HYP-2253, HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164.

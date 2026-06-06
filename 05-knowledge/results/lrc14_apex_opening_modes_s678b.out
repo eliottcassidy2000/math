@@ -1,0 +1,71 @@
+==============================================================================
+S678b LRC14 primitive apex-debt opening modes
+==============================================================================
+HYP-2256 / T752
+n=14; C=27; delta=1/14
+Parent route: HYP-2253 primitive apex debt positive measure.
+
+A. Primitive apex-debt opening modes
+  primitive apex-debt rows audited: 414
+  p0-positive rows: 414
+  p0-wall rows: 0
+
+  priority route histogram:
+    clock_shutter             235
+    apex_free_side_door       106
+    one_apex_hinge             73
+
+  endpoint owner classes, independent of clock priority:
+    apex_free                 230
+    one_apex                  182
+    apex_both_only              2
+
+  clock-shutter rows: 235
+  smallest clock surplus: 1/2352 via Vstar/interval_block/[0,4]:h1
+    apex=28; clock=11/14; shutter=1/392; left=0; right=1/336; side=right
+
+B. Endpoint-owner geometry
+  safe interval endpoint-owner histogram:
+    one_apex      5410
+    apex_free     3502
+    apex_both     2494
+
+  widest representative by priority route:
+    clock_shutter            p0=            3/49 width=        3/98 row=AP/single_apex/i0:v1:+1
+      interval=(365/392, 377/392) left_owners=(28,) right_owners=(28,)
+      clock=13/14 apex=28 surplus=13/392
+    apex_free_side_door      p0=      4850/55419 width=     71/3248 row=Vstar/apex_plus_one/apex0:v1:+1;side1:+1
+      interval=(379/406, 107/112) left_owners=(29,) right_owners=(24,)
+    one_apex_hinge           p0=      1567/15288 width=   141/10192 row=AP/apex_plus_one/apex1:v2:+2;side0:+1
+      interval=(407/784, 97/182) left_owners=(56,) right_owners=(13,)
+
+  narrowest safe component by endpoint class:
+    apex_free    min_width=        1/497952 p0=560920409873669418809/4013201544000484648176 Vstar/affine_mod14/k=2r+1 mod14
+    one_apex     min_width=        1/244608 p0=560920409873669418809/4013201544000484648176 Vstar/affine_mod14/k=2r+1 mod14
+    apex_both    min_width=          1/4704 p0=     7487/120120 AP/apex_plus_one/apex11:v12:+12;side0:+1
+
+C. Tournament Analysis over certificate modes
+  vertices=certificate modes, not runners
+  observable=(locality,exactness,coverage,deletion-owner,quotient-stability,action)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+  outdegree order:
+    clock_shutter            out=5 scores=(5, 5, 4, 5, 4, 5)
+    apex_free_side_door      out=4 scores=(4, 5, 5, 3, 5, 4)
+    one_apex_hinge           out=3 scores=(4, 5, 4, 4, 4, 4)
+    apex_period_aperture     out=2 scores=(5, 4, 2, 3, 3, 3)
+    raw_p0_scalar            out=1 scores=(5, 1, 5, 1, 2, 2)
+    raw_res27_shadow         out=0 scores=(2, 1, 1, 1, 5, 1)
+
+D. Proof-route synthesis
+  The S677 primitive apex-debt branch is not one phenomenon.  It splits into local opening modes.  Clock shutter covers rows whose deleted-apex unit-clock cone outlives the apex collar.  Rows not caught there still expose endpoint-owner intervals: an apex-free side door, a one-apex hinge, or a pure apex-period aperture.
+
+  Lemma package suggested by the audit:
+    L1 clock shutter: deleted-apex cone width > 1/(14a) opens p0.
+    L2 side door: a safe interval with non-apex owners on both ends survives apex debt.
+    L3 hinge: one apex owner plus one non-apex owner gives a transversal opening.
+    L4 aperture: two apex endpoints still leave an apex-period gap if non-apex depth is zero.
+
+  This is the owner-private deletion idea in a usable form: do not ask whether the apex is globally harmless.  Ask which boundary of a specific safe interval it owns.
