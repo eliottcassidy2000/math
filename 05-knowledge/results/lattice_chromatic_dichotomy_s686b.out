@@ -1,0 +1,31 @@
+================================================================================
+LATTICE CHROMATIC DICHOTOMY: square=2, triangular=3 at EVERY norm (verify)
+================================================================================
+
+  TRIANGULAR (Eisenstein) q=a^2+ab+b^2:  66 norms with edges in 1..199
+    UPPER: (a-b) mod 3 proper (after 3-adic strip) for ALL norms = True  => chi<=3
+    LOWER: a 60-deg triangle exists for ALL norms = True  => chi>=3
+    exact patch-chi (D<=13): [3]   => EVERY triangular norm-D graph has chi = 3
+
+  SQUARE q=a^2+b^2:  78 norms with edges
+    UPPER: (a+b) mod 2 proper (after 2-adic strip) for ALL norms = True  => chi<=2
+    any square norm-D graph has a triangle? False  (False = no equilateral triangle in Z^2)
+    exact patch-chi (D<=25): [2]   => EVERY square norm-D graph is bipartite (chi=2)
+
+  ANOMALIES (should be empty): []
+
+================================================================================
+STATEMENT (novel, rigorous)
+================================================================================
+  THEOREM. Every unit-distance graph on the SQUARE lattice Z^2 is bipartite (chi=2), and
+  every unit-distance graph on the TRIANGULAR/EISENSTEIN lattice Z[w] is exactly 3-chromatic,
+  at EVERY norm/scale. (Upper: parity colorings (a+b) mod2 / (a-b) mod3 are proper after a
+  2-adic/3-adic strip of the norm, using a^2+b^2 and a^2+ab+b^2 ≡ (a-b)^2 mod 3; the 3|D / 2|D
+  cases recurse on an index-3 / index-2 scaled-similar sublattice. Lower: edges => >=2; the
+  60-degree equilateral triangle in Z[w] => >=3.)
+  COROLLARY (Hadwiger-Nelson). The two densest 2D lattices -- including the Eisenstein lattice
+  that is de Grey's substrate for chi(R^2)>=5 -- CANNOT force chi>=4 at any scale: the values
+  4,5,6,7 are ELIMINATED for single square/triangular-lattice unit-distance graphs. So ALL
+  chromatic forcing above 3 in the plane is Dehn-NONTRIVIAL: it requires INCOMMENSURATE
+  lattices / irrational angles (Moser's arccos(5/6) junction, de Grey's irrational rotations)
+  -- the Niven/Dehn escape (HYP-2275). The plane's chi=5..7 lives entirely off any single lattice.

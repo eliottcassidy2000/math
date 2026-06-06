@@ -1,0 +1,30 @@
+==================================================================================
+Chromatic number of 2D-LATTICE unit-distance graphs (Dehn-trivial regime)
+==================================================================================
+
+(1) MINIMAL-norm (kissing) lattice graphs -- the Dehn-trivial 'low' cases:
+   square Z^2 (D=1, kissing 4): 81 vtx, conn-deg 4, clique 2, chi(patch) = 2
+   triangular Z[w] (D=1, kissing 6): 81 vtx, conn-deg 6, clique 3, chi(patch) = 3
+
+(2) POPULAR-norm (denser) lattice graphs -- can Dehn-trivial reach chi>=4?
+   square Z^2  D=5  (deg 8): 81 vtx, conn-deg 8, clique 2, chi(patch) = 2
+   square Z^2  D=25 (deg 12): 81 vtx, conn-deg 12, clique 2, chi(patch) = 2
+   square Z^2  D=65 (deg 16): 121 vtx, conn-deg 16, clique 2, chi(patch) = 2
+   triangular  D=7  (deg 12): 81 vtx, conn-deg 12, clique 3, chi(patch) = 3
+   triangular  D=13 (deg 12): 81 vtx, conn-deg 12, clique 3, chi(patch) = 3
+   triangular  D=49 (deg 18): 121 vtx, conn-deg 18, clique 3, chi(patch) = 3
+   triangular  D=91 (deg 24): 121 vtx, conn-deg 4, clique 2, chi(patch) = 2
+
+==================================================================================
+READING
+==================================================================================
+  Minimal-norm (kissing) 2D-lattice unit-distance graphs are chi=2 (square, bipartite)
+  or chi=3 (triangular) -- they CANNOT reach 4 (kissing<=6 in 2D, the 3 cases give 2,2,3).
+  So among lattice KISSING graphs, the values 4,5,6,7 are eliminated (Dehn-trivial floor).
+  The popular-norm (denser) lattice graphs above test whether a single 2D lattice can reach
+  chi>=4 WITHOUT any irrational angle (Dehn-trivial). Max chi(patch) found here = 3.
+  If >=4, a 2D lattice ALONE forces chi=4 (Dehn-trivial chi=4 exists -- refines HYP-2275: the
+  chi>=4 threshold is NOT exclusively Dehn-nontrivial; dense rational-angle lattices reach it).
+  If capped at 3, lattices are uniformly <=3 and the Moser spindle's irrational junction is the
+  genuine first escape. Either way is a clean novel statement about the lattice (Dehn-trivial)
+  chromatic regime of the plane.
