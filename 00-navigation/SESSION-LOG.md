@@ -1,5 +1,17 @@
 # Session Log
 
+## codex-2026-06-06-S678 - Easier LRC/unit-distance frontier targets (HYP-2254)
+
+**Prompt:** See if there are values of the LRC or unit-distance problem that would be easier to prove than `14` or `21` respectively.
+**Integration:** Built directly on S641/HYP-2217's LRC14/UD21 `27`-quantum bridge, S628/THM-408's Moser spine ladder, HYP-2177's Vstar doubling-sporadic law, and S677/HYP-2253's sharpened apex-debt residual.  The main conceptual move is to split full-theorem difficulty from local-carrier difficulty.
+**Claimed namespace:** HYP-2254 and T751.
+**Computation:** Added `04-computation/lrc_ud_easier_frontier_targets_s678.py` and stored `05-knowledge/results/lrc_ud_easier_frontier_targets_s678.out`.  The script ranks LRC `n=3..24` by `C=2n-1` factorization, folded `<2,-1>` orbits, `gcd` strata, odd-prime `n`, prime `C`, triadic shell, and Vstar wall.  It ranks unit-distance `n=3..30` by THM-408 Moser family membership, slab count, unit-spine lower-bound score, exact-upper score, and centered Eisenstein shell status.
+**Findings:** For full LRC work, `n<=13` remains the honest easier/proved window.  For local LRC carrier lemmas, later labs cleaner than `n=14` include `n=15,16,18,19,22,24`; `n=19` is the standout because both `n` and `C=37` are prime.  For unit distance, one-slab spine rows `n=13=P_1^-` and `n=14=P_1^+` are easier than `n=21=P_2^-`; `n=19` is a centered Eisenstein shell control.  `n=22=P_2^+` is not easier for exact upper-bound work because the `60/61` endpoint-compatible ear side channel remains.
+**Tournament Analysis:** Vertices are proof obligations, not runners or point sets.  The route tournament is transitive with one Hamiltonian path: `split_local_carrier_from_full_theorem > LRC_clean_C_later_values > UD_one_slab_spine_values > UD_centered_Eisenstein_shells > raw_smaller_n_is_easier > literal_14_21_numerology`.
+**Synthesis:** The useful question is not "what is the next n?" but "which side channel is the proof trying to learn?"  Use `n=19` as a shared clean symmetry control: prime `C` on the LRC side and centered Eisenstein shell on the unit-distance side.
+**Artifacts:** HYP-2254, T751, `04-computation/lrc_ud_easier_frontier_targets_s678.py`, `05-knowledge/results/lrc_ud_easier_frontier_targets_s678.out`, `07-reflections/easier-frontier-targets-lrc-unit-distance-s678.md`, plus hypothesis-index, result-index, tangent, concept-map, and session-log updates.
+**Handoff:** Prove a prime-`C` no-new-wall lemma first in cleaner LRC lanes, then run the clause at `C=27` to isolate the triadic/apex failure.  For unit distance, prove a one-slab side-channel ledger at `n=13,14`, then add the second slab and identify the first invariant that is no longer local.
+
 ## codex-2026-06-06-S677 - LRC14 apex-debt positive measure (HYP-2253)
 
 **Prompt:** Improve the next target from S676: prove no new normalized `p_0=0` wall exists in the `Res_27` carry/owner fiber.

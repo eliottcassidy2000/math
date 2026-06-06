@@ -1,0 +1,122 @@
+S678 easier frontier target atlas
+=================================
+
+LRC target atlas
+----------------
+baseline n=14: C=27=3^3, local_score=19, full_score=24
+
+n | C | C factor | orbits | gcd strata | odd-prime n | C prime | 3-shell | Vstar wall | local | full | note
+-- | -- | -- | -- | -- | -- | -- | -- | -- | -- | -- | --
+3 | 5 | 5 | 1 | 1 | yes | yes | no | no | -4 | -12 | already in proved window; odd-prime n keeps the paper-style tight shortcut alive; C=5 prime gives no gcd-strata side channel
+4 | 7 | 7 | 1 | 1 | no | yes | no | no | 2 | -6 | already in proved window; C=7 prime gives no gcd-strata side channel
+5 | 9 | 3^2 | 2 | 2 | yes | no | yes | no | 6 | -2 | already in proved window; odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell
+6 | 11 | 11 | 1 | 1 | no | yes | no | no | 2 | -6 | already in proved window; C=11 prime gives no gcd-strata side channel
+7 | 13 | 13 | 1 | 1 | yes | yes | no | no | -4 | -12 | already in proved window; odd-prime n keeps the paper-style tight shortcut alive; C=13 prime gives no gcd-strata side channel
+8 | 15 | 3 * 5 | 3 | 3 | no | no | yes | yes | 19 | 11 | already in proved window; C has a 3-shell; Vstar doubling-sporadic wall is present
+9 | 17 | 17 | 2 | 1 | no | yes | no | no | 1 | -7 | already in proved window; C=17 prime gives no gcd-strata side channel
+10 | 19 | 19 | 1 | 1 | no | yes | no | no | 2 | -6 | already in proved window; C=19 prime gives no gcd-strata side channel
+11 | 21 | 3 * 7 | 3 | 3 | yes | no | yes | no | 8 | 0 | already in proved window; odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell
+12 | 23 | 23 | 1 | 1 | no | yes | no | no | 2 | -6 | already in proved window; C=23 prime gives no gcd-strata side channel
+13 | 25 | 5^2 | 2 | 2 | yes | no | no | no | 3 | -5 | already in proved window; odd-prime n keeps the paper-style tight shortcut alive
+14* | 27 | 3^3 | 3 | 3 | no | no | yes | yes | 19 | 24 | C=27=3^3 is the active Res_27 wall; Vstar doubling-sporadic wall is present
+15 | 29 | 29 | 1 | 1 | no | yes | no | no | 1 | 3 | C=29 prime gives no gcd-strata side channel
+16 | 31 | 31 | 3 | 1 | no | yes | no | no | 2 | 5 | C=31 prime gives no gcd-strata side channel
+17 | 33 | 3 * 11 | 4 | 3 | yes | no | yes | no | 8 | 12 | odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell
+18 | 35 | 5 * 7 | 3 | 3 | no | no | no | no | 11 | 16 | mixed but not carrying the n=14 triadic wall
+19 | 37 | 37 | 1 | 1 | yes | yes | no | no | -4 | 2 | odd-prime n keeps the paper-style tight shortcut alive; C=37 prime gives no gcd-strata side channel
+20 | 39 | 3 * 13 | 3 | 3 | no | no | yes | yes | 19 | 26 | C has a 3-shell; Vstar doubling-sporadic wall is present
+21 | 41 | 41 | 2 | 1 | no | yes | no | no | 1 | 9 | C=41 prime gives no gcd-strata side channel
+22 | 43 | 43 | 3 | 1 | no | yes | no | no | 2 | 11 | C=43 prime gives no gcd-strata side channel
+23 | 45 | 3^2 * 5 | 5 | 5 | yes | no | yes | no | 11 | 21 | odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell
+24 | 47 | 47 | 1 | 1 | no | yes | no | no | 2 | 13 | C=47 prime gives no gcd-strata side channel
+
+Locally cleaner later LRC carriers than n=14
+n | C | local_score | why it is interesting | warning
+-- | -- | -- | -- | --
+19 | 37=37 | -4 | odd-prime n keeps the paper-style tight shortcut alive; C=37 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+15 | 29=29 | 1 | C=29 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+21 | 41=41 | 1 | C=41 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+16 | 31=31 | 2 | C=31 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+22 | 43=43 | 2 | C=43 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+24 | 47=47 | 2 | C=47 prime gives no gcd-strata side channel | larger full LRC theorem, not an immediate frontier shortcut
+17 | 33=3 * 11 | 8 | odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell | larger full LRC theorem, not an immediate frontier shortcut
+18 | 35=5 * 7 | 11 | mixed but not carrying the n=14 triadic wall | larger full LRC theorem, not an immediate frontier shortcut
+23 | 45=3^2 * 5 | 11 | odd-prime n keeps the paper-style tight shortcut alive; C has a 3-shell | larger full LRC theorem, not an immediate frontier shortcut
+
+Unit-distance target atlas
+--------------------------
+baseline n=21: family=P_m^-, m=2, edges=57, lower_spine_score=6, exact_upper_score=17
+
+n | family | m | edges | spine | bulk | hex shell | lower-spine | exact-upper | note
+-- | -- | -- | -- | -- | -- | -- | -- | -- | --
+3 | none | - | - | - | - | - | 4 | 5 | 2 vertices from nearest Moser row P_0^-; small exact-witness regime already heavily audited
+4 | none | - | - | - | - | - | 3 | 3 | 1 vertices from nearest Moser row P_0^-; small exact-witness regime already heavily audited
+5 | P_m^- | 0 | 6 | 4 | 2 | - | -3 | -5 | explicit THM-408 P_m^- row; only one full slab or less; small exact-witness regime already heavily audited
+6 | P_m^+ | 0 | 8 | 5 | 3 | - | -3 | -5 | explicit THM-408 P_m^+ row; only one full slab or less; small exact-witness regime already heavily audited
+7 | none | - | - | - | - | 1 | 0 | 2 | 1 vertices from nearest Moser row P_0^+; centered Eisenstein shell radius 1; small exact-witness regime already heavily audited
+8 | none | - | - | - | - | - | 4 | 5 | 2 vertices from nearest Moser row P_0^+; small exact-witness regime already heavily audited
+9 | none | - | - | - | - | - | 5 | 7 | 3 vertices from nearest Moser row P_0^+; small exact-witness regime already heavily audited
+10 | none | - | - | - | - | - | 5 | 7 | 3 vertices from nearest Moser row P_1^-; small exact-witness regime already heavily audited
+11 | none | - | - | - | - | - | 4 | 5 | 2 vertices from nearest Moser row P_1^-; small exact-witness regime already heavily audited
+12 | none | - | - | - | - | - | 3 | 3 | 1 vertices from nearest Moser row P_1^-; small exact-witness regime already heavily audited
+13 | P_m^- | 1 | 30 | 12 | 18 | - | -1 | -2 | explicit THM-408 P_m^- row; only one full slab or less; small exact-witness regime already heavily audited
+14 | P_m^+ | 1 | 33 | 13 | 20 | - | -1 | -2 | explicit THM-408 P_m^+ row; only one full slab or less; small exact-witness regime already heavily audited
+15 | none | - | - | - | - | - | 6 | 8 | 1 vertices from nearest Moser row P_1^+
+16 | none | - | - | - | - | - | 7 | 10 | 2 vertices from nearest Moser row P_1^+
+17 | none | - | - | - | - | - | 8 | 12 | 3 vertices from nearest Moser row P_1^+
+18 | none | - | - | - | - | - | 8 | 12 | 3 vertices from nearest Moser row P_2^-
+19 | none | - | - | - | - | 2 | 4 | 9 | 2 vertices from nearest Moser row P_2^-; centered Eisenstein shell radius 2
+20 | none | - | - | - | - | - | 6 | 8 | 1 vertices from nearest Moser row P_2^-
+21* | P_m^- | 2 | 57 | 20 | 37 | - | 6 | 17 | explicit THM-408 P_m^- row; two-or-more slabs expose ear/core side channels; frontier two-slab exact-upper obstruction
+22 | P_m^+ | 2 | 60 | 21 | 39 | - | 6 | 28 | explicit THM-408 P_m^+ row; two-or-more slabs expose ear/core side channels; frontier two-slab exact-upper obstruction
+23 | none | - | - | - | - | - | 6 | 20 | 1 vertices from nearest Moser row P_2^+
+24 | none | - | - | - | - | - | 7 | 23 | 2 vertices from nearest Moser row P_2^+
+25 | none | - | - | - | - | - | 9 | 26 | 3 vertices from nearest Moser row P_2^+
+26 | none | - | - | - | - | - | 9 | 27 | 3 vertices from nearest Moser row P_3^-
+27 | none | - | - | - | - | - | 8 | 26 | 2 vertices from nearest Moser row P_3^-
+28 | none | - | - | - | - | - | 7 | 25 | 1 vertices from nearest Moser row P_3^-
+29 | P_m^- | 3 | 84 | 28 | 56 | - | 10 | 33 | explicit THM-408 P_m^- row; two-or-more slabs expose ear/core side channels
+30 | P_m^+ | 3 | 87 | 29 | 58 | - | 10 | 34 | explicit THM-408 P_m^+ row; two-or-more slabs expose ear/core side channels
+
+Easier unit-distance values than n=21 by predicate
+predicate | values | reading
+-- | -- | --
+explicit/lower-bound unit spine | [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 19] | n=13 and n=14 are the clean one-slab Moser rows; n=19 is a symmetric Eisenstein shell
+exact-upper style proof | [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] | smaller audited rows are easier; n=22 is not easier here because the 60/61 side channel remains
+
+Synthesis
+---------
+LRC: n<=13 are the genuinely easier/proved values.  Among later values,
+n=15,16,18,19,22,24 have cleaner local C=2n-1 carriers than n=14 in
+this scorecard; n=19 is the prettiest because n and C=37 are both prime.
+The caution is that this is local-carrier ease, not a proof that LRC(19)
+is globally easier than finishing the immediate n=14 frontier.
+
+Unit distance: for lower-bound or unit-spine certificates, n=13 and n=14
+are easier than n=21 because they are the one-slab THM-408 rows.  The
+centered Eisenstein shell n=19 is a promising symmetric side target.
+For exact upper-bound work, n=22 is not easier than n=21 despite having
+an explicit P_2^+ spine, because the repo's n=22 obstacle is precisely
+the extra endpoint/ear side channel.
+
+Tournament Analysis over target-selection routes
+------------------------------------------------
+vertices=6
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3cycles=0
+hamiltonian_paths=1
+tie Hamiltonian path:
+  outdegree=5 route_score=39 split_local_carrier_from_full_theorem
+  outdegree=4 route_score=33 LRC_clean_C_later_values
+  outdegree=3 route_score=33 UD_one_slab_spine_values
+  outdegree=2 route_score=25 UD_centered_Eisenstein_shells
+  outdegree=1 route_score=21 raw_smaller_n_is_easier
+  outdegree=0 route_score=-3 literal_14_21_numerology
+
+Assumption challenge
+--------------------
+This session does not use runners or points as tournament vertices.
+It uses proof obligations: clean C-shells, odd-prime shortcut rows,
+Moser slab count, Eisenstein symmetry, and exact-upper side channels.
+The quotient preserves which theorem route becomes simpler and destroys
+the raw continuous LRC orbit and the concrete planar embedding.
