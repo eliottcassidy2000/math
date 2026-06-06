@@ -1,0 +1,20 @@
+LRC(19): 2n-1=37 prime, 2 primitive root (unramified). good mult @37 => M>=2/37>1/19.
+
+[A] Near-AP multiple-of-19 configs — the crux (do they pass shell-37 or need a higher shell?)
+   AP {1..18} (tight, no mult of 19): mult19=False gcd=1 dodge@37=None | best shell witness M>=1/19=0.05263 at 1/19 (>1/19? False)
+   {1..17,19} = AP w/ 18->19: mult19=True gcd=1 dodge@37=None | best shell witness M>=1/18=0.05556 at 1/18 (>1/19? True)
+   {1..18,19}\{1}? {2..19}: mult19=True gcd=1 dodge@37=1 | best shell witness M>=2/21=0.09524 at 1/21 (>1/19? True)
+   {1..17,38}: mult19=True gcd=1 dodge@37=2 | best shell witness M>=1/18=0.05556 at 1/18 (>1/19? True)
+   {1..16,18,19}: mult19=True gcd=1 dodge@37=13 | best shell witness M>=1/17=0.05882 at 1/17 (>1/19? True)
+
+[B] Among multiple-of-19 configs, find shell-37-dodge FAILURES that are NOT dominant
+   tested 60000 multiple-of-19 configs; shell-37-fail AND non-dominant: 26126
+     (5, 6, 7, 10, 13, 15, 16, 19, 20, 21, 22, 29, 32, 33, 35, 36, 37, 40)  -> best higher-shell witness M>=1/7=0.14286 at 5/14 (>1/19? True)
+     (3, 6, 8, 12, 13, 14, 16, 19, 21, 22, 25, 29, 35, 36, 37, 38, 39, 40)  -> best higher-shell witness M>=2/17=0.11765 at 5/17 (>1/19? True)
+     (2, 3, 4, 7, 8, 10, 11, 13, 15, 16, 18, 19, 22, 24, 28, 32, 37, 38)  -> best higher-shell witness M>=3/29=0.10345 at 5/29 (>1/19? True)
+     (2, 3, 4, 6, 7, 8, 12, 13, 14, 19, 24, 26, 28, 31, 35, 37, 39, 40)  -> best higher-shell witness M>=4/33=0.12121 at 2/33 (>1/19? True)
+     (3, 4, 5, 7, 12, 13, 15, 17, 20, 23, 26, 28, 30, 31, 33, 37, 38, 39)  -> best higher-shell witness M>=1/8=0.12500 at 1/8 (>1/19? True)
+     (1, 4, 8, 11, 12, 14, 17, 19, 20, 22, 23, 27, 29, 31, 33, 34, 37, 39)  -> best higher-shell witness M>=3/28=0.10714 at 13/28 (>1/19? True)
+
+[C] the structural failure set: residues mod 37 cover all 18 +-pairs.
+   (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19) residues mod37=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19];  pairs hit 18/18 (cover all => dodge fails)
