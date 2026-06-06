@@ -1,0 +1,8 @@
+Completeness boundary: achievable H over oriented graphs (ties allowed), n=5:
+  achievable H: [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 15]  (tournaments give only odd, no 7)
+  H=7 reachable at min ties = 1 (tournament minus 1 edge); even H present (Redei broken).
+  => {7,21} are obstructions of COMPLETENESS; the tournament stratum is special.
+
+Relevant families (see docstring): strong components (atoms / multiplicative),
+the conflict graph Omega (ties=disjoint cycles; where H=I(Omega,2) lives),
+1-tie neighbors (dissolve gaps; induction), LRC threshold-tie antipodal matchings.
