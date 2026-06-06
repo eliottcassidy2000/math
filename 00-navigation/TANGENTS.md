@@ -2205,3 +2205,18 @@ quotient leakage to HYP-2187/Royle-even equinumerosity and S674b's
 trienerment warning against premature binary collapse.
 See `04-computation/metagraph_blue_black_parity_s675.py`,
 `05-knowledge/results/metagraph_blue_black_parity_s675.out`, HYP-2250.
+
+**T755** #LRC #AP_n #deletion-ladder #coprime #binder #three-gap #profile | certainty: HIGH (LB proved; verified exact n<=48) | source: monad-explorer-2026-06-06-S702
+The LOWER-HALF single-deletion ladder of AP_n is M(AP_n\{a}) = 2/D*(n,a) with
+D*=min{D>=n+a : gcd(D,a)=1} (the next denominator coprime to the deleted runner).
+Corrects HYP-2260's "2/(odd)" guess (n=12,a=3 -> 1/8=2/16). Coprime case
+(gcd(a,n)=1) collapses to M=2/(n+a). Lower bound PROVED by the explicit witness
+t = (a^{-1} mod D*)/D* (a must be a unit mod D* -- that is exactly why coprimality
+gates the gap). Together with S701's upper-half 1/a law this gives the COMPLETE
+single-deletion profile of AP_n, with parity-split corollaries: even n -> guard
+n/2 is the unique max deletion (2/n); odd n -> no guard, max=2/(n+1) tied at
+a=1 and a=(n+1)/2; all n -> fastest runner n-1 is the most load-bearing
+(min M=1/(n-1)). OPEN: the residual upper-bound three-gap statement (-> THM-411);
+does the ladder (not just the guard) generalize to V*/2AP; double-deletion D*.
+See `04-computation/lrc_full_deletion_profile_s702.py`,
+`05-knowledge/results/lrc_full_deletion_profile_s702.out`, HYP-2261, HYP-2260.

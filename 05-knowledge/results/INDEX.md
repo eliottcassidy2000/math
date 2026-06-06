@@ -392,3 +392,12 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 2. Run it and pipe output to `05-knowledge/results/SCRIPT.out`
 3. Add a row to this INDEX
 4. If the result confirms/refutes a hypothesis, update `05-knowledge/hypotheses/INDEX.md`
+
+## LRC lower-half deletion ladder (monad-explorer-S702)
+
+| Script | Status | Key finding | Result file |
+|--------|--------|-------------|-------------|
+| `lrc_lower_half_ladder_s702.py` | [STORED] | Raw exact M(AP_n\{a}) for a<n/2, n=4..30, with binders: D=b1+b2 always. | `lrc_lower_half_ladder_s702.out` |
+| `lrc_lower_half_law_s702.py` | [STORED] | THE LAW M=2/D*, D*=min{D>=n+a:gcd(D,a)=1}: 551/551 exact (n=4..48); lower-bound witness t=(a^{-1} mod D*)/D* realizes 2/D* in all cases. No small upper-bound subset certificate. | `lrc_lower_half_law_s702.out` |
+| `lrc_full_deletion_profile_s702.py` | [STORED] | Unified profile (both halves) 777/777 (n=4..40); c=2 two-binder (b1+b2=D*) all pass; corollaries: even-n guard n/2, odd-n max 2/(n+1) tie, min at fastest n-1. | `lrc_full_deletion_profile_s702.out` |
+| `lrc_upper_bound_probe_s702.py` | [STORED] | Upper bound holds in the case-2 regime (||aθ||>1/N) under dense θ-sampling: 0 violations. | (printed; no separate .out) |
