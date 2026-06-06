@@ -1,0 +1,41 @@
+=== the rotation-field law:  norm-N Eisenstein rhombus ⟹ rotation ∈ ℚ(√−(4N−1)) ===
+
+   N  Eis?   4N−1  sqfree   rotation field  escapes ℚ(√−3)?  Heegner?
+   1   yes      3       3           ℚ(√−3)   no — stays Eis       yes
+   2    no      7       7           ℚ(√−7)              YES       yes
+   3   yes     11      11          ℚ(√−11)              YES       yes  <-- MOSER
+   4   yes     15      15          ℚ(√−15)              YES        no
+   5    no     19      19          ℚ(√−19)              YES       yes
+   6    no     23      23          ℚ(√−23)              YES        no
+   7   yes     27       3           ℚ(√−3)   no — stays Eis       yes
+   8    no     31      31          ℚ(√−31)              YES        no
+   9   yes     35      35          ℚ(√−35)              YES        no
+  10    no     39      39          ℚ(√−39)              YES        no
+  11    no     43      43          ℚ(√−43)              YES       yes
+  12   yes     47      47          ℚ(√−47)              YES        no
+  13   yes     51      51          ℚ(√−51)              YES        no
+  14    no     55      55          ℚ(√−55)              YES        no
+  15    no     59      59          ℚ(√−59)              YES        no
+  16   yes     63       7           ℚ(√−7)              YES       yes
+  21   yes     83      83          ℚ(√−83)              YES        no
+  25   yes     99      11          ℚ(√−11)              YES       yes
+  27   yes    107     107         ℚ(√−107)              YES        no
+  28   yes    111     111         ℚ(√−111)              YES        no
+
+smallest representable Eisenstein norm that ESCAPES ℚ(√−3): N = 3 ⟹ ℚ(√−11)  (= the Moser spindle, √−11)
+(N=2 would give the smaller √−7, but 2 ∉ Eisenstein norms {1,3,4,7,9,12,13,...})
+
+non-escaping Eisenstein norms (rotation stays in ℚ(√−3), no new field):
+  N ∈ [1, 7, 19, 37]   (4N−1 = 3·odd² : [3, 27, 75, 147] = 3·[1, 9, 25, 49])
+
+=== why χ≤3 inside ℤ[ζ6]: the explicit lattice 3-coloring c(a,b)=(a−b) mod 3 ===
+  the 6 unit neighbours = [(1, 0), (0, 1), (-1, 1), (-1, 0), (0, -1), (1, -1)]
+  colour changes to neighbours (mod 3) = [1, 2]  (0 absent ⟹ proper)  proper 3-colouring? True
+  ⟹ the triangular lattice ℤ[ζ6] unit-distance graph is 3-colourable, so EVERY
+     unit-distance graph drawn inside it has χ ≤ 3. χ≥4 must leave the lattice — via (★).
+
+=== upshot ===
+  rotation field = ℚ(√−(4N−1)); the Moser spindle (N=3) is the minimal field-escape,
+  forced to √−11. The χ=3→χ=4 jump is exactly 'acquire a 2nd imaginary-quadratic field'.
+  Heegner −d appear early (N=3→−11, N=4→−15(no), N=9→−35(no)...); √−7,√−11,√−19,√−43,√−67
+  reachable as 4N−1 squarefree parts — a target list for the field-tower conjecture (HYP-2276).

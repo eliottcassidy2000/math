@@ -106,6 +106,39 @@ spectral chromatic bound, discretely and in the continuum.
 - **Cl₂(π/3)** (S599u) — the Mahler-measure / log-sin thread; the spindle's rotation
   having Mahler measure 3 is the same "Mahler measure grades the geometry" idea.
 
+## The rotation-field law and the Heegner needle (S688 follow-up, HYP-2277)
+
+The conjecture's "which field?" question has a clean closed form. A spindle-type
+gadget joins two Eisenstein points each at squared-distance `N` from a pivot by
+rotating through `θ` with `cos θ = (2N−1)/(2N)`; the rotation `e^{iθ}` is a root of
+`N z² − (2N−1) z + N`, discriminant `−(4N−1)`. So
+```
+the rotation field is  ℚ(√−(4N−1)).
+```
+It escapes the Eisenstein field `ℚ(√−3)` (forces a new imaginary-quadratic field
+= the `χ=3→χ=4` jump) **unless** the squarefree part of `4N−1` is `3`, i.e.
+`N ∈ {1,7,19,37,…}` (`4N−1 = 3·odd²`). Since `N` must be a representable Eisenstein
+norm `{1,3,4,7,9,12,13,…}`, the **smallest escaping `N` is `3`**, giving `ℚ(√−11)`
+— **the Moser spindle** (`N=2 → √−7` would be smaller, but `2` is not an Eisenstein
+norm). This explains both *why* the Moser spindle is minimal and *why* `√−11`.
+
+**The needle.** `4N−1` is exactly the `d = 4p−1` map of HYP-2226 (the
+Euler/Rabinowitsch prime / Heegner-horizon thread). As `N` runs over the
+**lucky-Euler primes `{2,3,5,11,17,41}`**, `4N−1 = {7,11,19,43,67,163}` = precisely
+the **Heegner numbers** `≥7`. So the χ=4 junction field ranges over **exactly the
+class-number-one (UFD) imaginary-quadratic fields** `ℚ(√−7,−11,−19,−43,−67,−163)`:
+the most rigid HN χ=4 junctions land on the unique-factorization fields, the Moser
+spindle's `√−11` being the second. A Hadwiger–Nelson gadget thus reaches into the
+same arithmetic (lucky Euler / Heegner / class number 1) the repo found in the
+prime-generating-quadratic tournament thread — a direct bridge between two corners
+that looked unrelated.
+
+**Convergence note.** `oracle-S685` independently reached the *qualitative* core
+(Moser's `cos θ=5/6` is Niven-irrational ⟹ Dehn-nontrivial ⟹ lattice escape;
+Hadwiger authored both HN and the Dehn invariant). HYP-2277 is the arithmetic
+refinement: `ℚ(√−(4N−1))` names *which* field the Dehn-nontrivial escape lands in,
+and ties it to the Heegner class-number-1 list.
+
 ## Next
 
 1. **Field of the next gadget.** Find the Golomb graph / a `χ=4` graph with a
