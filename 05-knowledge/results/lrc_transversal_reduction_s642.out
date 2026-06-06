@@ -1,0 +1,8 @@
+
+=== n=15, 2n-1=29 (prime, unramified) ===
+  non-transversal configs: 4277; of these LOOSE via shell-29 dodge (M>=2/29): 4277  (theorem: ALL)
+  ±-transversal configs (the RESIDUAL): 0  (0.0% of configs)
+
+=== n=19, 2n-1=37 (prime, unramified) ===
+  non-transversal configs: 4147; of these LOOSE via shell-37 dodge (M>=2/37): 4147  (theorem: ALL)
+  ±-transversal configs (the RESIDUAL): 0  (0.0% of configs)
