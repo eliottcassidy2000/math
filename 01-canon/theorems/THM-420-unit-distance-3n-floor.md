@@ -106,7 +106,7 @@ gap **17 → 39 is the cost of Euclidean realizability**. The kissing cap `κ = 
 appears in BOTH ends: the threshold to beat is `(κ/2)·N = 3N`, and the floor is
 `C(κ,2)+2`.
 
-## Open (handed to HYP-2283)
+## Open (handed to HYP-2284)
 
 Exact value of `N*` in `[17, 39]`; whether a non-lattice config beats 39; whether
 the floor can be pushed above 17 using the additional **K₄-free** property
