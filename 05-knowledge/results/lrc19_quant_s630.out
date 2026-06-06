@@ -1,0 +1,9 @@
+[1] min M over multiple-of-19 configs — is it 2/37? (gap_shells, exact for near-tight)
+    2/(2n-1)=2/37=0.05405   1/19=0.05263
+    min gap_shells found = 1/18=0.05556  ==2/37? False  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 19)
+
+[2] residual: shell-dodge(m<=37) ∪ B'(dominant) over multiple-of-19 configs
+    tested 20000: covered 20000  residual 0
+    dodge(m<=37)-only 20000  B'-only 0
+
+    => shell-dodge(m<=2n-1=37) ∪ B' covers 100.00% of multiple-of-19 configs
