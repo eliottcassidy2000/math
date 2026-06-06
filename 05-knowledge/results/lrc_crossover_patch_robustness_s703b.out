@@ -1,0 +1,18 @@
+==============================================================================
+PATCH-SHAPE ROBUSTNESS of N_cross (smallest N with U>3N, best radius)
+==============================================================================
+            form   D*  dens   disk    box   eucl
+  triangular(-3)    7     6     43     49     43
+      square(-4)    5     4    101    169    101
+         disc-12   28     6     79    121     79
+     disc-15(d5)   16     5     71     81     71
+          disc-7   16     5     97    121     97
+  disc-15(2,1,2)   32     6     83     81     83
+
+  minimizer under  disk patch: triangular(-3) at N=43
+  minimizer under   box patch: triangular(-3) at N=49
+  minimizer under  eucl patch: triangular(-3) at N=43
+
+Note: for a binary quadratic form Q, Q(i,j) IS the squared Euclidean length of
+the embedded lattice vector, so the 'eucl' round disk == the 'disk' Q-ball
+(they should agree exactly). The 'box' patch is the genuinely different shape.

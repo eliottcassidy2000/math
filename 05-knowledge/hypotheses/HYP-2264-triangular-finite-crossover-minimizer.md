@@ -45,11 +45,27 @@ arithmetic, disk patches `Q(g) <= T`):
 Density quantization `w | r_Q(D)` verified for ALL reduced primitive forms to
 disc `< -200`.
 
+## Patch-shape robustness (S703b)
+
+`04-computation/lrc_crossover_patch_robustness_s703b.py`: triangular wins under
+ALL three patch families (the main caveat below is thereby resolved):
+
+| form | disk `N` | box `N` | euclidean `N` |
+|------|----------|---------|----------------|
+| triangular | **43** | **49** | **43** |
+| square     | 101 | 169 | 101 |
+| disc-12    | 79  | 121 | 79  |
+| disc-15 (density 5) | 71 | 81 | 71 |
+
+(`disk` = Q-ball, `eucl` = true round Euclidean disk in the embedded plane —
+these agree exactly since `Q(i,j)` IS the squared Euclidean length; `box` =
+index-box, the genuinely different shape.)
+
 ## Honest limits
 
-- CONFIRMED for all competitive forms (smallest `D*`/model) by exact enumeration.
-- The **global** minimality (over every lattice and every patch shape) is a
-  well-supported CONJECTURE: only small-model forms were exact-checked, and
-  `N_cross` is mildly patch-shape dependent. No form came within `28` of
-  triangular's model and none beat its exact `43`.
+- CONFIRMED for all competitive forms (smallest `D*`/model) by exact enumeration,
+  ROBUST across disk / box / euclidean patches (S703b).
+- The **global** minimality (over EVERY lattice) is a well-supported CONJECTURE:
+  only small-model forms were exact-checked. No form came within `28` of
+  triangular's model and none beat its exact `43` under any patch.
 - Corrects S702: square crosses at `N=101` (radius `sqrt5`), not `121`.
