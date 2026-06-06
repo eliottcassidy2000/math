@@ -1,0 +1,16 @@
+RIGOROUS lower bound: strong tournament (Moon vertex-pancyclic) => #L-cycles >= ceil(n/L);
+c3 >= n-2 (Moon). So alpha_1 = sum_{odd L} #L >= (n-2) + sum_{odd L>=5} ceil(n/L).
+    n  c3>=n-2 +sum ceil(n/L), L odd 5..n  = a1 lower bound  >10?
+    9        7                          5                12   YES
+   10        8                          6                14   YES
+   11        9                          8                17   YES
+   12       10                          9                19   YES
+   13       11                         10                21   YES
+   14       12                         11                23   YES
+   15       13                         13                26   YES
+
+Sanity: per-odd-length cycle counts of the Moon-extremal strong tournament (a real strong T):
+  n=9: odd-cycle counts {3: 7, 5: 35, 7: 21, 9: 1}; alpha_1=64 (>>10). #5>=ceil(n/5)? True
+  n=10: odd-cycle counts {3: 8, 5: 56, 7: 56, 9: 8}; alpha_1=128 (>>10). #5>=ceil(n/5)? True
+  n=11: odd-cycle counts {3: 9, 5: 84, 7: 126, 9: 36, 11: 1}; alpha_1=256 (>>10). #5>=ceil(n/5)? True
+  n=12: odd-cycle counts {3: 10, 5: 120, 7: 252, 9: 120, 11: 10}; alpha_1=512 (>>10). #5>=ceil(n/5)? True

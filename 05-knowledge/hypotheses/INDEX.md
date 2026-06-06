@@ -8456,3 +8456,14 @@ endpoint wall and therefore fail primitiveness.
 `05-knowledge/results/lrc14_apex_opening_modes_s678b.out`;
 `07-reflections/lrc14-apex-opening-modes-s678b.md`; T752, HYP-2255,
 HYP-2254, HYP-2253, HYP-2252, HYP-2241, HYP-2168, HYP-2167, HYP-2164.
+
+## HYP-2258: H=21 is impossible for ALL tournaments -- PROVED (resolves THM-115) (h21-proof-complete, claude-2026-06-06-S680)
+**Status:** PROVED (pending peer verification). Closes THM-115 (open since S31). The missing general-n step is the pancyclic odd-cycle lower bound.
+THEOREM: no tournament has exactly 21 Hamiltonian paths.
+PROOF: H(T)=I(Omega,2)=1+2 alpha_1+4 alpha_2+... (OCF, THM-029), alpha_1=#directed odd cycles, so H>=1+2 alpha_1.
+(A) STRONG-COMPONENT REDUCTION: H multiplicative over SC components; odd factorizations of 21 are 21 and 3*7; 7 is not an H-value of any tournament (THM-029/200) hence not of any strong component, so 21=3*7 impossible => H=21 forces a SINGLE strong component with H=21. WLOG T strong.
+(B) BASE m<=8: H=21 impossible exhaustively (THM-079 Part G, 268M tournaments at m=8).
+(C) m>=9: a strong tournament is VERTEX-PANCYCLIC (Moon 1966) -- every vertex on a cycle of each length 3..m. So for each L the L-cycles cover all m vertices => L*(#L-cycles)>=m => #L-cycles >= ceil(m/L). With c_3 >= m-2 (Moon's strong minimum; verified m<=7), summing over odd L: alpha_1 >= (m-2) + sum_{odd L,5<=L<=m} ceil(m/L). For every m>=9 this is >10 (=12,14,17,19,21,23,26,... for m=9..15), so alpha_1>=11 and H>=1+2*11=23>21.
+By (A) H=21 needs a strong component with H=21; (B) not on m<=8; (C) not on m>=9 (H>=23). Contradiction. QED.
+DEPENDENCIES (all established): Moon (1966) vertex-pancyclicity; Moon c_3>=n-2 for strong (classical, verified m<=7 here); THM-029/200 (H=7 impossible => 7 not strong); THM-079 Part G (m<=8 exhaustive). Note: the n=9 case is the binding one -- c_3 alone (>=7) is not >10; the longer odd cycles (#5>=2,#7>=2,#9>=1 by covering) push alpha_1>=12. CONSEQUENCE: {7,21} are PROVED the complete set of permanent H-gaps (Part I: only gaps <=200; 35,63,189 fill at higher n).
+**See:** `04-computation/h21_proof_complete_s680.py` (+.out); `07-reflections/h21-proof-complete-s680.md`; THM-115 (now PROVED), THM-079 (Part G base + framework), THM-029/200 (H=7), HYP-2193 (S617 Moon reduction to n<=12 -- this S680 bound is the sharper completion), HYP-2183 (strong-H monoid).

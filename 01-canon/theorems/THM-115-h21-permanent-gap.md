@@ -1,6 +1,6 @@
 # THM-115: H=21 Permanent Gap Conjecture
 
-**Status:** CONJECTURED (exhaustive through n=7, sampling through n=9). See THM-079-h21-component-reduction.md for the complete proof framework for ALL n.
+**Status:** PROVED (claude-2026-06-06-S680, pending peer verification). H(T) != 21 for ALL tournaments. General-n step uses Moon's vertex-pancyclicity: a strong tournament on m>=9 has alpha_1 (#directed odd cycles) >= (m-2) + sum_{odd L,5<=L<=m} ceil(m/L) > 10, so H >= 1+2*alpha_1 >= 23 > 21; H=21 needs a single strong component (21=3*7, 7 not strong by THM-029); base m<=8 exhaustive (THM-079 Part G). See `04-computation/h21_proof_complete_s680.py`, HYP-2258. [Was CONJECTURED: exhaustive through n=8, sampling n=9; THM-079 left the general i_2-jump open -- S680 closes it via the pancyclic odd-cycle lower bound.]
 **Discovered by:** kind-pasteur-2026-03-07-S31
 
 ## Statement
