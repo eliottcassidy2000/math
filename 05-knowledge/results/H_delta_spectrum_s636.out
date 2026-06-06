@@ -1,0 +1,20 @@
+n=5: H-spectrum over all 2^10 tournaments (OCF = I(Omega,2))
+   H counts: {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+   7 realizable? NO (forbidden); all H odd? True
+
+sample T (H=11): delta per arc (ΔH on flip):
+   arc 0->1 (or rev): delta=2 (even? True)
+   arc 0->2 (or rev): delta=0 (even? True)
+   arc 0->3 (or rev): delta=-6 (even? True)
+   arc 0->4 (or rev): delta=4 (even? True)
+   arc 1->2 (or rev): delta=-2 (even? True)
+   arc 1->3 (or rev): delta=-2 (even? True)
+   arc 1->4 (or rev): delta=0 (even? True)
+   arc 2->3 (or rev): delta=-2 (even? True)
+   arc 2->4 (or rev): delta=2 (even? True)
+   arc 3->4 (or rev): delta=-6 (even? True)
+
+flip arc (0, 1): delta-values that CHANGED for OTHER arcs: [(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (3, 4)]
+   (#changed = 8 of 9 other arcs => NOT all; propagation is local)
+
+dichromatic number of sample T: 2 (round/LRC-tight => 2, THM-402)
