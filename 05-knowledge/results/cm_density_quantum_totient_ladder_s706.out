@@ -1,0 +1,44 @@
+==============================================================================
+THM-416 verification: density quantization w | r(D) for CM orders
+==============================================================================
+
+[A] 2D lattices (re-confirm THM-412):
+  disc -3 (triangular, Eisenstein)       w=6  shells(first6)=[(1, 6), (3, 6), (4, 6), (7, 12), (9, 6), (12, 6)]  -> OK
+  disc -4 (square, Gaussian)             w=4  shells(first6)=[(1, 4), (2, 4), (4, 4), (5, 8), (8, 4), (9, 4)]  -> OK
+  disc -7                                w=2  shells(first6)=[(1, 2), (2, 4), (4, 6), (7, 2), (8, 8), (9, 2)]  -> OK
+  disc -8                                w=2  shells(first6)=[(1, 2), (2, 2), (3, 4), (4, 2), (6, 4), (8, 2)]  -> OK
+  disc -11                               w=2  shells(first6)=[(1, 2), (3, 4), (4, 2), (5, 4), (9, 6), (11, 2)]  -> OK
+  disc -15 (h=2, the density-5 rung)     w=2  shells(first6)=[(1, 2), (4, 6), (6, 4), (9, 2), (10, 4), (15, 2)]  -> OK
+  disc -23 (h=3)                         w=2  shells(first6)=[(1, 2), (4, 2), (6, 4), (8, 4), (9, 2), (12, 4)]  -> OK
+
+[B] CM cyclotomic lattices Z[zeta_m] (degree phi(m) > 2 -- NEW):
+  Z[zeta_5 ] deg=4  w(#roots of unity)=10  quantum w/2=5  stable-shells=7 first6=[(4, 10), (6, 20), (10, 20), (14, 60), (16, 50), (20, 30)] -> OK
+  Z[zeta_8 ] deg=4  w(#roots of unity)=8   quantum w/2=4  stable-shells=25 first6=[(4, 8), (8, 24), (12, 32), (16, 24), (20, 48), (24, 96)] -> OK
+  Z[zeta_12] deg=4  w(#roots of unity)=12  quantum w/2=6  stable-shells=12 first6=[(4, 12), (8, 36), (12, 12), (16, 84), (20, 72), (24, 36)] -> OK
+  Z[zeta_7 ] deg=6  w(#roots of unity)=14  quantum w/2=7  stable-shells=1 first6=[(6, 14)] -> OK
+  Z[zeta_9 ] deg=6  w(#roots of unity)=18  quantum w/2=9  stable-shells=4 first6=[(6, 18), (12, 108), (18, 234), (24, 234)] -> OK
+
+[C] Density-quantum ladder  M(N)=max{m: phi(m)|N},  quantum=M(N)/2:
+    N=2d (dim/degree) | M(N)=max #roots of unity | quantum M(N)/2 | witness field
+      N= 2  M(N)=  6  quantum=  3   Q(zeta_6)  [phi=2]
+      N= 4  M(N)= 12  quantum=  6   Q(zeta_12)  [phi=4]
+      N= 6  M(N)= 18  quantum=  9   Q(zeta_18)  [phi=6]
+      N= 8  M(N)= 30  quantum= 15   Q(zeta_30)  [phi=8]
+      N=10  M(N)= 22  quantum= 11   Q(zeta_22)  [phi=10]
+      N=12  M(N)= 42  quantum= 21   Q(zeta_42)  [phi=12]
+      N=14  M(N)=  6  quantum=  3   Q(zeta_6)  [phi=2]
+      N=16  M(N)= 60  quantum= 30   Q(zeta_60)  [phi=16]
+      N=18  M(N)= 54  quantum= 27   Q(zeta_54)  [phi=18]
+      N=20  M(N)= 66  quantum= 33   Q(zeta_66)  [phi=20]
+      N=22  M(N)= 46  quantum= 23   Q(zeta_46)  [phi=22]
+      N=24  M(N)= 90  quantum= 45   Q(zeta_90)  [phi=24]
+
+  Maximal-quantum sequence by degree 2,4,6,8,10,12,...: [3, 6, 9, 15, 11, 21, 3, 30, 27, 33, 23, 45]
+  Maximal-w (roots of unity) sequence:                [6, 12, 18, 30, 22, 42, 6, 60, 54, 66, 46, 90]
+
+  [RESONANCE, honest] quantum 21 first appears at degree N=12 (w=42=2*21, Q(zeta_42)). 21 = forbidden tournament H-value (THM-079).
+
+==============================================================================
+TOTAL FAILURES: 0
+PASS
+==============================================================================
