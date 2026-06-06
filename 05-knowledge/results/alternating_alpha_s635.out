@@ -1,0 +1,3 @@
+AG_3: |A_n|=3, alpha(independence)=1, alpha/N=0.333, 3-colorable=True
+AG_4: |A_n|=12, alpha(independence)=4, alpha/N=0.333, 3-colorable=True
+AG_5: |A_n|=60, alpha(independence)=20, alpha/N=0.333, 3-colorable=True
