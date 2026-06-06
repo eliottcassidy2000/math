@@ -1,0 +1,45 @@
+==========================================================================
+PART 1.  Cherry/common-neighbour floor:  max U(N) under sum C(d,2) <= N(N-1)
+         (>=2-common-neighbour property of the unit-distance graph)
+==========================================================================
+   N  maxU(cherry)     3N   closed-form U<=N(1+sqrt(8N-7))/4  beats3N?
+   3             3      9                               3.84     False
+   4             6     12                               6.00     False
+   5             8     15                               8.43     False
+   6            11     18                              11.10     False
+   7            14     21                              14.00     False
+   8            17     24                              17.10     False
+   9            20     27                              20.39     False
+  10            23     30                              23.86     False
+  11            27     33                              27.50     False
+  12            31     36                              31.30     False
+  13            35     39                              35.26     False
+  14            39     42                              39.36     False
+  15            43     45                              43.61     False
+  16            48     48                              48.00     False
+  17            52     51                              52.52      True
+  18            57     54                              57.17      True
+  19            61     57                              61.95      True
+  20            66     60                              66.85      True
+  21            71     63                              71.87      True
+  22            77     66                              77.00      True
+
+  => integer cherry-floor: max U(N) first exceeds 3N at N = 17
+  => THEOREM: U > 3N is impossible for N <= 16; first possible at N = 17.
+
+==========================================================================
+PART 2.  Smallest induced subgraph with U > 3N (avg degree > 6), by (lattice,R)
+==========================================================================
+  triangular(-3)  R=  7 (layer 12):  smallest U>3N induced subgraph k= 59, U= 178  (3k=177)
+  triangular(-3)  R= 13 (layer 12):  smallest U>3N induced subgraph k= 59, U= 178  (3k=177)
+  triangular(-3)  R= 19 (layer 12):  smallest U>3N induced subgraph k= 70, U= 211  (3k=210)
+  triangular(-3)  R= 21 (layer 12):  smallest U>3N induced subgraph k= 65, U= 198  (3k=195)
+      square(-4)  R=  5 (layer  8):  none up to k=80
+      square(-4)  R= 10 (layer  8):  none up to k=80
+      square(-4)  R= 13 (layer  8):  none up to k=80
+      square(-4)  R= 25 (layer 12):  none up to k=80
+        disc(-7)  R=  8 (layer  8):  none up to k=80
+        disc(-7)  R= 16 (layer 10):  none up to k=80
+
+  *** smallest construction found: triangular(-3) radius^2=7 (layer 12): N=59, U=178 > 3N=177 ***
+  => true minimum N* (over ALL planar sets) satisfies  17 <= N* <= 59

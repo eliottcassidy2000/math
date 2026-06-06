@@ -1,0 +1,37 @@
+==============================================================================
+Smallest unit-distance config with U > 3N: disk-ordering + shrink refinement
+==============================================================================
+
+--- triangular(-3) ---
+  R=  7 layer 12: disk N= 39 U= 118 (3N=117) @c=(0.5, 0) | shrink-> N= 39 U= 118 (3N=117)
+  R= 13 layer 12: disk N= 73 U= 220 (3N=219) @c=(0.3333333333333333, 0.3333333333333333) | shrink-> N= 73 U= 220 (3N=219)
+  R= 19 layer 12: disk N=105 U= 316 (3N=315) @c=(0, 0) | shrink-> N=105 U= 316 (3N=315)
+  R= 21 layer 12: disk N=117 U= 352 (3N=351) @c=(0, 0) | shrink-> N=117 U= 352 (3N=351)
+  R= 28 layer 12: disk N=155 U= 466 (3N=465) @c=(0, 0) | shrink-> N=155 U= 466 (3N=465)
+  R= 31 layer 12: disk N=173 U= 520 (3N=519) @c=(0, 0) | shrink-> N=173 U= 520 (3N=519)
+  R= 37 layer 12: disk N=205 U= 616 (3N=615) @c=(0.3333333333333333, 0.3333333333333333) | shrink-> N=205 U= 616 (3N=615)
+  R= 39 layer 12: disk N=216 U= 650 (3N=648) @c=(0.5, 0) | shrink-> N=215 U= 646 (3N=645)
+  R= 43 layer 12: disk N=236 U= 709 (3N=708) @c=(0.3333333333333333, 0.3333333333333333) | shrink-> N=236 U= 709 (3N=708)
+  R= 49 layer 18: disk N=145 U= 437 (3N=435) @c=(0.3333333333333333, 0.3333333333333333) | shrink-> N=137 U= 412 (3N=411)
+  R= 61 layer 12: disk N=339 U=1018 (3N=1017) @c=(0, 0) | shrink-> N=339 U=1018 (3N=1017)
+  R= 63 layer 12: disk N=351 U=1054 (3N=1053) @c=(0, 0) | shrink-> N=351 U=1054 (3N=1053)
+  R= 67 layer 12: disk N=372 U=1117 (3N=1116) @c=(0, 0) | shrink-> N=372 U=1117 (3N=1116)
+  R= 73 layer 12: disk N=405 U=1216 (3N=1215) @c=(0, 0) | shrink-> N=405 U=1216 (3N=1215)
+  R= 79 layer 12: disk N=437 U=1312 (3N=1311) @c=(0, 0) | shrink-> N=437 U=1312 (3N=1311)
+  R= 84 layer 12: disk N=467 U=1402 (3N=1401) @c=(0, 0) | shrink-> N=467 U=1402 (3N=1401)
+  R= 91 layer 24: disk N=205 U= 618 (3N=615) @c=(0, 0) | shrink-> N=147 U= 442 (3N=441)
+  R= 93 layer 12: disk N=517 U=1553 (3N=1551) @c=(0.3333333333333333, 0.3333333333333333) | shrink-> N=516 U=1549 (3N=1548)
+  R= 97 layer 12: disk N=539 U=1618 (3N=1617) @c=(0.5, 0) | shrink-> N=539 U=1618 (3N=1617)
+
+--- square(-4) ---
+  R=  5 layer  8: disk N= 99 U= 298 (3N=297) @c=(0.5, 0.5) | shrink-> N= 98 U= 295 (3N=294)
+  R= 10 layer  8: disk N=197 U= 592 (3N=591) @c=(0, 0) | shrink-> N=197 U= 592 (3N=591)
+  R= 13 layer  8: disk N=261 U= 784 (3N=783) @c=(0, 0) | shrink-> N=245 U= 736 (3N=735)
+  R= 25 layer 12: disk N=119 U= 358 (3N=357) @c=(0, 0) | shrink-> N=119 U= 358 (3N=357)
+  R= 50 layer 12: disk N=239 U= 718 (3N=717) @c=(0, 0) | shrink-> N=239 U= 718 (3N=717)
+  R= 65 layer 16: disk N=192 U= 578 (3N=576) @c=(0, 0) | shrink-> N=189 U= 568 (3N=567)
+  R= 85 layer 16: disk N=253 U= 760 (3N=759) @c=(0, 0) | shrink-> N=251 U= 755 (3N=753)
+
+==============================================================================
+BEST small config: triangular(-3) radius^2=7 (layer 12) via disk: N = 39
+=> minimum N* over all planar sets:  17 <= N* <= 39   (THM-420 floor 17)

@@ -1,0 +1,30 @@
+======================================================================
+1.  VERIFY: triangular sqrt(7) disk, center (1/2,0), exact integer count
+======================================================================
+   N= 35  U=  99  3N= 105  surplus(U-3N)=-6
+   N= 36  U= 104  3N= 108  surplus(U-3N)=-4
+   N= 37  U= 109  3N= 111  surplus(U-3N)=-2
+   N= 38  U= 114  3N= 114  surplus(U-3N)=+0
+   N= 39  U= 118  3N= 117  surplus(U-3N)=+1  <-- U>3N
+   N= 40  U= 122  3N= 120  surplus(U-3N)=+2  <-- U>3N
+   N= 41  U= 126  3N= 123  surplus(U-3N)=+3  <-- U>3N
+   N= 42  U= 130  3N= 126  surplus(U-3N)=+4  <-- U>3N
+   N= 43  U= 134  3N= 129  surplus(U-3N)=+5  <-- U>3N
+   N= 44  U= 139  3N= 132  surplus(U-3N)=+7  <-- U>3N
+
+======================================================================
+2.  FINE center sweep (cx,cy on a 1/6 grid in the fundamental cell)
+    report smallest k with U>3N for each center
+======================================================================
+   best disk over center grid: N=39 at center=(0.000,0.500) U=118 (3N=117)
+
+======================================================================
+3.  Local search (boundary add/remove + swaps) to push N below the disk
+======================================================================
+   seed N=39 U=118
+   after greedy deletion: N=39 U=118 (3N=117)
+   after perturbation search: best N=39 U=118 (3N=117)
+
+======================================================================
+CONCLUSION: smallest verified config N = 39 (beats HYP-2267's N=43). THM-420 floor: N>=17. So 17 <= N* <= 39.
+======================================================================
