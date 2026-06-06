@@ -1,0 +1,15 @@
+n=5, 10 arcs, 1024 tournaments
+(1) delta always even: True; Hessian always divisible by 4: False
+(2) per-flip #other-arcs-whose-delta-changes: max=9 (of 9); ever ALL 9? True
+    (so flipping an arc NEVER changes every other delta — the interaction is sparse)
+(3) interaction support vs share-a-vertex: shareV&interact=30, shareV&no=0, disjoint&interact=15, disjoint&no=0
+    (interaction ⟺ share an odd cycle; sharing a vertex ⟹ a common triangle ⟹ interact)
+
+(4) 7,21 FORBIDDEN-VALUE NAVIGATION: from each achievable H, which signed deltas land where?
+    H= 1: deltas=[0, 2, 4, 8]; lands on H'=[1, 3, 5, 9]  (7,21 in lands? False)
+    H= 3: deltas=[-2, 0, 2, 6, 12]; lands on H'=[1, 3, 5, 9, 15]  (7,21 in lands? False)
+    H= 5: deltas=[-4, -2, 0, 4, 6, 8]; lands on H'=[1, 3, 5, 9, 11, 13]  (7,21 in lands? False)
+    H= 9: deltas=[-8, -6, -4, 0, 2, 4, 6]; lands on H'=[1, 3, 5, 9, 11, 13, 15]  (7,21 in lands? False)
+    H=11: deltas=[-6, -2, 0, 2, 4]; lands on H'=[5, 9, 11, 13, 15]  (7,21 in lands? False)
+    H=13: deltas=[-8, -4, -2, 2]; lands on H'=[5, 9, 11, 15]  (7,21 in lands? False)
+    H=15: deltas=[-12, -6, -4, -2]; lands on H'=[3, 9, 11, 13]  (7,21 in lands? False)
