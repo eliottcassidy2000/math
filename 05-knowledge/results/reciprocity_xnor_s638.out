@@ -1,0 +1,29 @@
+(1) Legendre = multiplicative XNOR on ±1, with 0-middle. (ab/p)=(a/p)(b/p):
+   p=11: multiplicativity violations=0; (0/p)=0 (the always-on middle)
+
+(2) Quadratic reciprocity (p/q)(q/p)=(-1)^((p-1)/2 (q-1)/2); governed by p,q mod 4:
+   reciprocity holds for all prime pairs <40: violations=0
+   (-1/p): p≡1 mod4 => +1 (−1 is a QR, character EVEN/symmetric); p≡3 => −1 (odd/skew):
+      p=5 (≡1 mod4): (-1/p)=1
+      p=7 (≡3 mod4): (-1/p)=-1
+      p=11 (≡3 mod4): (-1/p)=-1
+      p=13 (≡1 mod4): (-1/p)=1
+
+(3) Gauss sum phase g_p = Σ_a (a/p) ζ^a  (ζ=e^{2πi/p}): √p vs i√p by p mod 4
+   p=5 (≡1): g=+2.236-0.000i  |g|=2.236(√p=2.236) arg=-0.0°  => REAL (in phase, p≡1)
+   p=7 (≡3): g=+0.000+2.646i  |g|=2.646(√p=2.646) arg=90.0°  => IMAGINARY (out of phase, p≡3)
+   p=11 (≡3): g=+0.000+3.317i  |g|=3.317(√p=3.317) arg=90.0°  => IMAGINARY (out of phase, p≡3)
+   p=13 (≡1): g=+3.606-0.000i  |g|=3.606(√p=3.606) arg=-0.0°  => REAL (in phase, p≡1)
+
+(4) Paley conference matrix C_{ij}=(j-i/p): skew (p≡3=tournament) vs symmetric (p≡1=graph)
+   p=7 (≡3): skew=True symm=False diag0(always-on middle)=True; C Cᵀ=(p-1)I-J off+... conf-matrix=True
+   p=11 (≡3): skew=True symm=False diag0(always-on middle)=True; C Cᵀ=(p-1)I-J off+... conf-matrix=True
+   p=13 (≡1): skew=False symm=True diag0(always-on middle)=True; C Cᵀ=(p-1)I-J off+... conf-matrix=True
+
+(5) Paley TOURNAMENT (p≡3 mod4): self-complementary; H=#ham paths; round=>chi_di=2; spectrum imaginary
+   Paley T_3: H(#ham paths)=3 (odd? True); skew-conference => purely imaginary skew-spectrum (±i√p Gauss)
+   Paley T_7: H(#ham paths)=189 (odd? True); skew-conference => purely imaginary skew-spectrum (±i√p Gauss)
+   Paley T_11: H(#ham paths)=95095 (odd? True); skew-conference => purely imaginary skew-spectrum (±i√p Gauss)
+
+  => the 'out of phase middle' = the imaginary Gauss sum i√p = the SKEW (tournament) p≡3 case;
+     p≡1 is the in-phase symmetric graph. Reciprocity's parity ((p-1)/2) = the 2-adic seam.
