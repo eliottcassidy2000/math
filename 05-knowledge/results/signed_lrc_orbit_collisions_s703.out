@@ -1,0 +1,68 @@
+==========================================================================================
+PART 1: AP_n sign-orbit -- reproduce + extend T4, split FOLD-ONLY vs UNFOLDED collisions
+==========================================================================================
+  n    C  2^(n-2)  folded  unfold fold_coll  unf_coll
+  3    5        2       2       2         0         0
+  4    7        4       4       4         0         0
+  5    9        8       7       8         1         0
+  6   11       16      16      16         0         0
+  7   13       32      32      32         0         0
+  8   15       64      60      64         4         0
+  9   17      128     128     128         0         0
+ 10   19      256     256     256         0         0
+ 11   21      512     504     512         8         0
+ 12   23     1024    1024    1024         0         0
+ 13   25     2048    2044    2048         4         0
+ 14   27     4096    4027    4096        69         0
+ 15   29     8192    8192    8192         0         0
+ 16   31    16384   16384   16384         0         0
+
+folded sign-orbit sequence (n=3..10): [2, 4, 7, 16, 32, 60, 128, 256, 504, 1024, 2044, 4027, 8192, 16384]
+S699 T4 claimed: 2,4,7,16,32,60 for n=3..8
+
+==========================================================================================
+PART 2: the n=5 AP collision dissected (which cuts collide, and WHY)
+==========================================================================================
+V=[1, 2, 3, 4] C=9 folded_orbit=7 (= 8 - 1)
+  [FOLD-ONLY] colliding cuts (+ class shown): [(0, 2, 3), (0, 3)]
+      A+=[1, 3, 4]        folded=(1, 2, 3, 3, 3, 4)  unfolded=(1, 2, 3, 3, 5, 6)
+      A+=[1, 4]           folded=(1, 2, 3, 3, 3, 4)  unfolded=(1, 3, 3, 4, 6, 7)
+
+==========================================================================================
+PART 3: where do collisions FIRST appear -- AP, and is it fold-only or a real automorphism?
+==========================================================================================
+n=3: C=  5 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=4: C=  7 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=5: C=  9 [composite] fold_coll=   1 unf_coll=   0 types={'FOLD-ONLY': 1}
+n=6: C= 11 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=7: C= 13 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=8: C= 15 [composite] fold_coll=   4 unf_coll=   0 types={'FOLD-ONLY': 4}
+n=9: C= 17 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=10: C= 19 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=11: C= 21 [composite] fold_coll=   8 unf_coll=   0 types={'FOLD-ONLY': 8}
+n=12: C= 23 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=13: C= 25 [composite] fold_coll=   4 unf_coll=   0 types={'FOLD-ONLY': 4}
+n=14: C= 27 [composite] fold_coll=  69 unf_coll=   0 types={'FOLD-ONLY': 67}
+n=15: C= 29 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+n=16: C= 31 [    PRIME] fold_coll=   0 unf_coll=   0 types=none
+
+==========================================================================================
+PART 4: exhaustive worry-set (tight M=1/n) census at small n + signed signatures
+==========================================================================================
+
+ n=3 C=5: tight configs (M=1/3) with speeds in [1,8]:
+   V=[1, 2] prim=(1, 2): sign-orbit=2/2 shell-partners=none max-zero-clocks=0 [free]
+
+ n=4 C=7: tight configs (M=1/4) with speeds in [1,10]:
+   V=[1, 2, 3] prim=(1, 2, 3): sign-orbit=4/4 shell-partners=none max-zero-clocks=0 [free]
+
+ n=5 C=9: tight configs (M=1/5) with speeds in [1,12]:
+   V=[1, 2, 3, 4] prim=(1, 2, 3, 4): sign-orbit=7/8 shell-partners=none max-zero-clocks=0 [free]
+   V=[1, 3, 4, 7] prim=(1, 3, 4, 7): sign-orbit=7/8 shell-partners=none max-zero-clocks=0 [free]
+
+ n=6 C=11: tight configs (M=1/6) with speeds in [1,14]:
+   V=[1, 2, 3, 4, 5] prim=(1, 2, 3, 4, 5): sign-orbit=16/16 shell-partners=none max-zero-clocks=0 [free]
+   V=[1, 3, 4, 5, 9] prim=(1, 3, 4, 5, 9): sign-orbit=16/16 shell-partners=none max-zero-clocks=0 [free]
+
+ n=7 C=13: tight configs (M=1/7) with speeds in [1,16]:
+   V=[1, 2, 3, 4, 5, 6] prim=(1, 2, 3, 4, 5, 6): sign-orbit=32/32 shell-partners=none max-zero-clocks=0 [free]
