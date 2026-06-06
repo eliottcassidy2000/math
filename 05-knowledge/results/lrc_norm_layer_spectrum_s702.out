@@ -1,0 +1,63 @@
+==============================================================================
+1.  r_Q(R) IS UNBOUNDED (additive norm-R layer) -- closed-form check
+==============================================================================
+Square ZZ^2 (disc -4): r2(5^k) = 4(k+1) -> infinity
+   R=5^0=1         r2=  4   (formula 4(k+1)=4)
+   R=5^1=5         r2=  8   (formula 4(k+1)=8)
+   R=5^2=25        r2= 12   (formula 4(k+1)=12)
+   R=5^3=125       r2= 16   (formula 4(k+1)=16)
+   R=5^4=625       r2= 20   (formula 4(k+1)=20)
+   R=5^5=3125      r2= 24   (formula 4(k+1)=24)
+   R=5^6=15625     r2= 28   (formula 4(k+1)=28)
+Triangular ZZ[w] (disc -3): r(7^k) = 6(k+1) -> infinity
+   R=7^0=1         r =  6   (formula 6(k+1)=6)
+   R=7^1=7         r = 12   (formula 6(k+1)=12)
+   R=7^2=49        r = 18   (formula 6(k+1)=18)
+   R=7^3=343       r = 24   (formula 6(k+1)=24)
+   R=7^4=2401      r = 30   (formula 6(k+1)=30)
+=> BOTH 2D lattices have UNBOUNDED additive norm-R layers; kappa<=6 caps ONLY R=Rmin.
+
+==============================================================================
+2.  SPECTRUM over the 9 class-number-1 forms
+    minimal(kissing) layer vs roots-of-unity vs MAX additive layer (R<=20000)
+==============================================================================
+ disc             form kappa(min)  #roots1  maxLayer      @R        R>6        R>12        R>24
+   -3      1x2+1xy+1y2          6        6        72   12103    (7, 12)    (49, 18)   (637, 36)
+   -4          1x2+1y2          4        4        48    5525     (5, 8)    (65, 16)  (1105, 32)
+   -7      1x2+1xy+2y2          2        2        56   16192     (8, 8)    (64, 14)   (704, 28)
+   -8          1x2+2y2          2        2        40   15147    (27, 8)   (297, 16)  (5049, 32)
+  -11      1x2+1xy+3y2          2        2        48   15525    (15, 8)   (135, 16)  (2025, 30)
+  -19      1x2+1xy+5y2          2        2        36   13475    (35, 8)   (385, 16)  (6545, 32)
+  -43     1x2+1xy+11y2          2        2        16    2431   (143, 8)  (2431, 16) (None, None)
+  -67     1x2+1xy+17y2          2        2        16    7429   (323, 8)  (7429, 16) (None, None)
+ -163     1x2+1xy+41y2          2        2         8    1763  (1763, 8) (None, None) (None, None)
+kappa(min) = additive MINIMAL layer (kissing).  #roots1 = MULTIPLICATIVE norm-1
+(roots of unity).  maxLayer = largest additive norm-R layer found (still growing).
+
+==============================================================================
+3.  EXACT finite-patch threshold: smallest disk patch N with U(N) > 3N
+    (the explicit 'beats 3n at MODERATE n', at a NON-minimal radius)
+==============================================================================
+
+  square ZZ^2 (disc -4): non-minimal radius sqrt(25), infinite-lattice degree = 12 (=> infinite density 6n >> 3n)
+     FIRST N with U>3N:  patch radius^2= 37  N= 121  U=  368  U/N=3.041  (3N=363)
+     at radius^2=500: N=1581  U=  8144  U/N=5.151  (ratio -> 6)
+
+  triangular  (disc -3): non-minimal radius sqrt(7), infinite-lattice degree = 12 (=> infinite density 6n >> 3n)
+     FIRST N with U>3N:  patch radius^2= 12  N=  43  U=  132  U/N=3.070  (3N=129)
+     at radius^2=500: N=1813  U= 10056  U/N=5.547  (ratio -> 6)
+
+==============================================================================
+4.  VERDICT on opus-S699's probe
+==============================================================================
+  No 2D group BETWEEN triangular and CM is required to beat 3n.  The square lattice
+  ZZ^2 ITSELF beats 3n at moderate N, using a NON-minimal radius (additive norm-R layer).
+  The kappa<=6 cap binds ONLY the minimal-vector / root-of-unity (MULTIPLICATIVE) layer.
+
+  The genuine distinction of the CM field is the GROWTH RATE, not the 3n line:
+    - 2D lattice, radius FIXED (best non-min): degree = const K>6  => Theta(K/2 * n)  [linear, > 3n]
+    - 2D lattice, radius GROWS with n (Erdos grid): n^{1 + Theta(1/loglog n)}          [super-linear]
+    - CM field (Sawin/OpenAI):                       n^{1.0+ }  (> n^{1.014})           [larger exponent]
+  All three exceed 3n.  The spectrum is a spectrum of EXPONENTS (1, 1+o(1), 1.014+),
+  NOT a threshold of 'crossing 3n'.  opus's kissing-cap statement is about the MINIMAL
+  layer; the unit-distance graph lives on the (unbounded) ADDITIVE layer.
