@@ -1,0 +1,44 @@
+================================================================================
+THE H DELTA-FIELD: arc-flip gradient/Hessian of H = #Ham paths (odd; forbidden 7,21)
+================================================================================
+
+(1) Realizable H values (odd) per n, and the 7 / 21 GAPS:
+   n=3: H in [1, 3]  (max 3);  7 present=False, 21 present=False  [forbidden gaps: []]
+   n=4: H in [1, 3, 5]  (max 5);  7 present=False, 21 present=False  [forbidden gaps: []]
+   n=5: H in [1, 3, 5, 9, 11, 13, 15]  (max 15);  7 present=False, 21 present=False  [forbidden gaps: [7]]
+   n=6: H in [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31]...  (max 45);  7 present=False, 21 present=False  [forbidden gaps: [7, 21]]
+   n=7: H in [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31]...  (max 189);  7 present=False, 21 present=False  [forbidden gaps: [7, 21]]
+
+(2-3) DELTA FIELD (even?) and COUPLING (flip arc a -> how many other deltas change?):
+   n=4 (6 arcs): deltas all even = True;  per flip, #other-deltas-changed: min=4 max=4 (of 5) avg=4.0;  EVER all 5? False
+   n=5 (10 arcs): deltas all even = True;  per flip, #other-deltas-changed: min=6 max=9 (of 9) avg=7.6;  EVER all 9? True
+   n=6 (15 arcs): deltas all even = True;  per flip, #other-deltas-changed: min=8 max=14 (of 14) avg=12.1;  EVER all 14? True
+
+(4) Coupling structure on one tournament (which arc-pairs are coupled, M[a][b]!=0):
+   n=5, H=5; delta field: [((0, 1), 4), ((0, 2), 6), ((0, 3), 8), ((0, 4), 4), ((1, 2), -4), ((1, 3), 0), ((1, 4), -2), ((2, 3), -2), ((2, 4), 0), ((3, 4), 0)]
+   coupling matrix M[a][b] (rows=flipped arc a, cols=affected arc b); diag=-2 delta_a:
+       (0, 1) (0, 2) (0, 3) (0, 4) (1, 2) (1, 3) (1, 4) (2, 3) (2, 4) (3, 4)
+   (0, 1):    -8    -4    -2    -4    -4    +2    +2    -2    +0    +0
+   (0, 2):    -4   -12    -4    -2    +2    +2    +0    -4    -2    +0
+   (0, 3):    -2    -4   -16    -6    -4    -4    -2    +4    -2    -4
+   (0, 4):    -4    -2    -6    -8    -2    +0    -4    -2    +4    +4
+   (1, 2):    -4    +2    -4    -2    +8    +2    +2    +2    +2    +0
+   (1, 3):    +2    +2    -4    +0    +2    +0    -2    +2    +0    -2
+   (1, 4):    +2    +0    -2    -4    +2    -2    +4    +0    +2    +2
+   (2, 3):    -2    -4    +4    -2    +2    +2    +0    +4    -2    +2
+   (2, 4):    +0    -2    -2    +4    +2    +0    +2    -2    +0    -2
+   (3, 4):    +0    +0    -4    +4    +0    -2    +2    +2    -2    +0
+
+================================================================================
+READING
+================================================================================
+  H is odd (Redei); the delta field (arc-flip gradient) is EVEN-valued; the discrete
+  Hessian M[a][b] (how flipping a moves delta_b) is symmetric, even, with diagonal -2 delta_a.
+  The H-spectrum SKIPS 7 and 21 (verified gaps). The coupling is SPARSE: flipping one arc
+  changes only SOME other deltas, never all (per the max count above) -- the support is exactly
+  the arc-pairs that co-occur in a directed odd cycle (PROP-001: delta_a is a signed sum over
+  odd cycles through a, so flipping a moves delta_b only when a and b share an odd cycle). The
+  delta-field is thus governed by the ODD-CYCLE INCIDENCE structure (Omega(T)) -- the same OCF
+  object that makes H odd and forbids 7,21.
+
+CORRECTION (interpretation): the script READING above was patched. KEY DATA: min affected = 2n-4 (the endpoint-star), and EVER-all = True for n>=5 (so flipping CAN change all deltas; the user/earlier "never all" is FALSE for n>=5). At n=4 only the star (never all).

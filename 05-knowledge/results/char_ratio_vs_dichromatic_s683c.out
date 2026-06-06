@@ -1,0 +1,30 @@
+================================================================================
+Character-ratio (Hermitian) spectrum vs DICHROMATIC number of the LRC tournament
+================================================================================
+
+  m   tournament        dichromatic  Hoffman-ratio(1-lmax/lmin)  max-transitive  n/maxtrans
+   5  R_5 (interval/LRC)   2            2.000  (lmax=3.08,lmin=-3.08)        3            1.67
+   7  R_7 (interval/LRC)   2            2.000  (lmax=4.38,lmin=-4.38)        4            1.75
+   7  Paley QR_7          3            2.000  (lmax=2.65,lmin=-2.65)        3            2.33
+   9  R_9 (interval/LRC)   2            2.000  (lmax=5.67,lmin=-5.67)        5            1.80
+  11  R_11 (interval/LRC)   2            2.000  (lmax=6.96,lmin=-6.96)        6            1.83
+  11  Paley QR_11          4            2.000  (lmax=3.32,lmin=-3.32)        4            2.75
+  13  R_13 (interval/LRC)   2            2.000  (lmax=8.24,lmin=-8.24)        7            1.86
+
+  --- random tournaments (do Hoffman-ratio and dichromatic ever exceed 2 / disagree?) ---
+  over 400 random tournaments: distinct Hoffman-ratio values = [np.float64(2.0)];  max dichromatic seen = 2
+
+================================================================================
+ANSWER
+================================================================================
+  The Hermitian adjacency iS of ANY tournament has a spectrum SYMMETRIC about 0 (S is
+  real skew-symmetric => eigenvalues ±mu_k), so lam_max = -lam_min and the character-ratio
+  Hoffman bound is IDENTICALLY 2 for every tournament. Therefore:
+   * It bounds the LRC tournament R_m's dichromatic number EXACTLY (=2, S582) -- TIGHT.
+   * But it is the SAME 2 for Paley (dichromatic 3) and every tournament -- it CANNOT certify
+     any dichromatic number > 2; it is blind to the R_m(2) vs Paley(3) distinction.
+  So: YES it bounds the LRC tournament's dichromatic number (and tightly, =2), but only because
+  the bound is trivially 2 everywhere. The dichromatic number is NOT a character-ratio-spectral
+  invariant; the R_m-vs-Paley structure (and LRC's chi) lives in the COMBINATORICS (arc flips /
+  OCF / the delta-field), not the spectrum. The better spectral handle is the Delsarte/max-
+  transitive bound n/max-transitive (a real, non-trivial lower bound), reported above.
