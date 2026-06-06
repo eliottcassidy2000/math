@@ -1,0 +1,12 @@
+AG_n = Cayley(A_n, {(1 2 i),(1 i 2): 3<=i<=n}):  n | |A_n| | deg | triangles | χ(greedy) | α | spectrum bounds
+  3 |   3 | 2 | tri=1 | χ≈3 | α≈1 | λmin=-1.000 λmax=2.000; Hoffman χ≥3.00, α≤1.0
+  4 |  12 | 4 | tri=8 | χ≈5 | α≈3 | λmin=-2.000 λmax=4.000; Hoffman χ≥3.00, α≤4.0
+  5 |  60 | 6 | tri=60 | χ≈7 | α≈12 | λmin=-3.000 λmax=6.000; Hoffman χ≥3.00, α≤20.0
+  6 | 360 | 8 | tri=None | χ≈9 | α≈60 | λmin=-4.000 λmax=8.000; Hoffman χ≥3.00, α≤120.0
+
+FULL 3-CYCLE Cayley graph of A_n (g~h iff gh^{-1} a 3-cycle): spectrum = REPRESENTATION THEORY
+  n | |A_n| | deg=2C(n,3) | λmin | Hoffman χ≥ | (eigenvalues = |C|·χ_ρ(3cyc)/dim ρ)
+  3 |   3 | 2 | λmin=-1.000 | χ≥3.00 | distinct eigs=[-1.0, 2.0]
+  4 |  12 | 8 | λmin=-4.000 | χ≥3.00 | distinct eigs=[-4.0, -0.0, 8.0]
+  5 |  60 | 20 | λmin=-4.000 | χ≥6.00 | distinct eigs=[-4.0, -0.0, 5.0, 20.0]
+  6 | 360 | 40 | λmin=-8.000 | χ≥6.00 | distinct eigs=[-8.0, -5.0, -0.0, 4.0, 16.0, 40.0]
