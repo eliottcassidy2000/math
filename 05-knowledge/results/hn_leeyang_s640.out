@@ -1,0 +1,14 @@
+W6 (Eisenstein floor, chi=3): chi=3
+   rightmost REAL chromatic zero = 2.0000  (= chi-1 = 2? True)
+   rightmost COMPLEX-zero real part = 2.8090  (the Lee-Yang bulk, > chi-1)
+   all zeros: [0j, (1+0j), (1.691+0.951j), (1.691-0.951j), (2+0j), (2.809+0.588j), (2.809-0.588j)]
+
+Moser spindle (chi=4): chi=4
+   rightmost REAL chromatic zero = 3.0000  (= chi-1 = 3? True)
+   rightmost COMPLEX-zero real part = 3.0000  (the Lee-Yang bulk, > chi-1)
+   all zeros: [0j, (1+0j), (1.5-1.323j), (1.5+1.323j), (2+0j), (2-0j), (3+0j)]
+
+READING: chi(plane) = 1 + (rightmost REAL chromatic-zero edge of UD graphs).
+  de Grey: real edge >= 4 (chi>=5). {5,6,7} = real edge in {4,5,6}. Complex Lee-Yang bulk
+  reaches the fractional/measure value (~chi_f<=4.36, S699): the integrality gap = the REAL
+  Lee-Yang edge lagging the COMPLEX accumulation = the Vitali wall, in zero-locus language.
