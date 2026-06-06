@@ -42,3 +42,5 @@ AG_4: 8 triangles, 6 squares (4-cycles), 12 vtx, 4-regular  == CUBOCTAHEDRON
 cuboctahedron vertices = (+-1,+-1,0) & perms = FCC/A_3 kissing config (kissing number 12),
 all edges equal length => genuine UNIT-DISTANCE graph. So AG_4 is simultaneously the A_4
 Cayley graph, a unit-distance graph, and the chi=3 odd-cycle parity object.
+
+RIGOROUS: nx.is_isomorphic(AG_4, cuboctahedron-from-unit-coords) = True (graph isomorphism, not just invariants).
