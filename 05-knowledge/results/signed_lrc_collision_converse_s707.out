@@ -1,0 +1,32 @@
+====================================================================================================
+PART A: exact collision pairs + flip-sets for small composite C (extract silent condition)
+====================================================================================================
+
+C=9 (n=5) fact=3x3  deficiency=1  sizes={1: 6, 2: 1}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(3,)  gcd-content=[3]  (subgroup order q=C/gcd=3)  pairs=1
+
+C=15 (n=8) fact=3x5  deficiency=4  sizes={1: 56, 2: 4}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(5,)  gcd-content=[5]  (subgroup order q=C/gcd=3)  pairs=2
+      T=(3, 6)  gcd-content=[3]  (subgroup order q=C/gcd=5)  pairs=2
+
+C=21 (n=11) fact=3x7  deficiency=8  sizes={1: 496, 2: 8}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(7,)  gcd-content=[7]  (subgroup order q=C/gcd=3)  pairs=4
+      T=(3, 6, 9)  gcd-content=[3]  (subgroup order q=C/gcd=7)  pairs=4
+
+C=25 (n=13) fact=5x5  deficiency=4  sizes={1: 2040, 2: 4}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(5, 10)  gcd-content=[5]  (subgroup order q=C/gcd=5)  pairs=4
+
+C=27 (n=14) fact=3x3x3  deficiency=69  sizes={1: 3960, 2: 66, 4: 1}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(9,)  gcd-content=[9]  (subgroup order q=C/gcd=3)  pairs=7
+      T=(3, 6, 12)  gcd-content=[3]  (subgroup order q=C/gcd=9)  pairs=55
+      T=(3, 6, 9, 12)  gcd-content=[3, 9]  (subgroup order q=C/gcd=9)  pairs=7
+
+C=33 (n=17) fact=3x11  deficiency=32  sizes={1: 32704, 2: 32}
+   distinct flip-sets (runner labels) -> #pairs:
+      T=(11,)  gcd-content=[11]  (subgroup order q=C/gcd=3)  pairs=16
+      T=(3, 6, 9, 12, 15)  gcd-content=[3]  (subgroup order q=C/gcd=11)  pairs=16

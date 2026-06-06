@@ -1,0 +1,55 @@
+
+=== C=9  q=3  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, 1, -1]
+  R_sigma rounded? max|R - round(R)| = 3.333e-01
+
+=== C=15  q=3  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, 1, -1, -1, 1, -1]
+  R_sigma rounded? max|R - round(R)| = 3.333e-01
+
+=== C=15  q=5  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, 1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 4.000e-01
+
+=== C=21  q=3  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, 1, -1, -1, 1, -1, -1, 1, -1]
+  R_sigma rounded? max|R - round(R)| = 3.333e-01
+
+=== C=21  q=7  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 2.857e-01
+
+=== C=25  q=5  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 4.000e-01
+
+=== C=27  q=3  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1]
+  R_sigma rounded? max|R - round(R)| = 3.333e-01
+
+=== C=33  q=3  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1, -1, 1, -1]
+  R_sigma rounded? max|R - round(R)| = 3.333e-01
+
+=== C=33  q=11  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 1.818e-01
+
+=== C=35  q=5  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 4.000e-01
+
+=== C=35  q=7  (subgroup order q, points multiples of C/q) ===
+  runners H = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+  sigma (freq signs, +1 iff q|t) = [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+  R_sigma rounded? max|R - round(R)| = 2.857e-01

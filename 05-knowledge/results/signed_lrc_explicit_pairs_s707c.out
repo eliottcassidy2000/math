@@ -1,0 +1,114 @@
+
+===== C=9 (n=5) : 1 nontrivial classes =====
+  class size 2:
+     +--+   (flip vs first: runners [])
+     +-++   (flip vs first: runners [3])
+     flip-set runners=[3] subgroup-order q in [3]
+     per-freq sign s_t (t=1..4): [-1, -1, 1, -1]
+        q=3: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, 1, -1]]
+
+===== C=15 (n=8) : 4 nontrivial classes =====
+  class size 2:
+     +--+--+   (flip vs first: runners [])
+     +-++-++   (flip vs first: runners [3, 6])
+     flip-set runners=[3, 6] subgroup-order q in [5]
+     per-freq sign s_t (t=1..7): [-1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1]]
+  class size 2:
+     +--+-++   (flip vs first: runners [])
+     +-++--+   (flip vs first: runners [3, 6])
+     flip-set runners=[3, 6] subgroup-order q in [5]
+     per-freq sign s_t (t=1..7): [-1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1]]
+  class size 2:
+     +-+--+-   (flip vs first: runners [])
+     +-+-++-   (flip vs first: runners [5])
+     flip-set runners=[5] subgroup-order q in [3]
+     per-freq sign s_t (t=1..7): [-1, -1, 1, -1, -1, 1, -1]
+        q=3: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, 1, -1, -1, 1, -1]]
+  class size 2:
+     ++---++   (flip vs first: runners [])
+     ++--+++   (flip vs first: runners [5])
+     flip-set runners=[5] subgroup-order q in [3]
+     per-freq sign s_t (t=1..7): [-1, -1, 1, -1, -1, 1, -1]
+        q=3: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, 1, -1, -1, 1, -1]]
+
+===== C=21 (n=11) : 8 nontrivial classes =====
+  class size 2:
+     +--+--+--+   (flip vs first: runners [])
+     +-++-++-++   (flip vs first: runners [3, 6, 9])
+     flip-set runners=[3, 6, 9] subgroup-order q in [7]
+     per-freq sign s_t (t=1..10): [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+        q=7: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]]
+  class size 2:
+     +--+--+-++   (flip vs first: runners [])
+     +-++-++--+   (flip vs first: runners [3, 6, 9])
+     flip-set runners=[3, 6, 9] subgroup-order q in [7]
+     per-freq sign s_t (t=1..10): [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+        q=7: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]]
+  class size 2:
+     +--+-++--+   (flip vs first: runners [])
+     +-++--+-++   (flip vs first: runners [3, 6, 9])
+     flip-set runners=[3, 6, 9] subgroup-order q in [7]
+     per-freq sign s_t (t=1..10): [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+        q=7: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]]
+  class size 2:
+     +--+-++-++   (flip vs first: runners [])
+     +-++--+--+   (flip vs first: runners [3, 6, 9])
+     flip-set runners=[3, 6, 9] subgroup-order q in [7]
+     per-freq sign s_t (t=1..10): [-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]
+        q=7: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, 1, -1, -1, -1]]
+   ... (8 classes total)
+
+===== C=25 (n=13) : 4 nontrivial classes =====
+  class size 2:
+     +-+--+-+--+-   (flip vs first: runners [])
+     +-+-++-+-++-   (flip vs first: runners [5, 10])
+     flip-set runners=[5, 10] subgroup-order q in [5]
+     per-freq sign s_t (t=1..12): [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]]
+  class size 2:
+     +-+--+-+-++-   (flip vs first: runners [])
+     +-+-++-+--+-   (flip vs first: runners [5, 10])
+     flip-set runners=[5, 10] subgroup-order q in [5]
+     per-freq sign s_t (t=1..12): [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]]
+  class size 2:
+     ++---++---++   (flip vs first: runners [])
+     ++--+++--+++   (flip vs first: runners [5, 10])
+     flip-set runners=[5, 10] subgroup-order q in [5]
+     per-freq sign s_t (t=1..12): [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]]
+  class size 2:
+     ++---++--+++   (flip vs first: runners [])
+     ++--+++---++   (flip vs first: runners [5, 10])
+     flip-set runners=[5, 10] subgroup-order q in [5]
+     per-freq sign s_t (t=1..12): [-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]
+        q=5: s_t == (+1 iff q|t) ? True   [+1-iff-q|t pattern=[-1, -1, -1, -1, 1, -1, -1, -1, -1, 1, -1, -1]]
+
+===== C=27 (n=14) : 67 nontrivial classes =====
+  class size 2:
+     +----+------+   (flip vs first: runners [])
+     +-+--------++   (flip vs first: runners [3, 6, 12])
+     flip-set runners=[3, 6, 12] subgroup-order q in [9]
+     per-freq sign s_t (t=1..13): [1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1]
+        q=9: s_t == (+1 iff q|t) ? False   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]]
+  class size 2:
+     +----+--+---+   (flip vs first: runners [])
+     +-+-----+--++   (flip vs first: runners [3, 6, 12])
+     flip-set runners=[3, 6, 12] subgroup-order q in [9]
+     per-freq sign s_t (t=1..13): [1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1]
+        q=9: s_t == (+1 iff q|t) ? False   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]]
+  class size 2:
+     +----+-+--+--   (flip vs first: runners [])
+     +-+----+--++-   (flip vs first: runners [3, 6, 12])
+     flip-set runners=[3, 6, 12] subgroup-order q in [9]
+     per-freq sign s_t (t=1..13): [1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1]
+        q=9: s_t == (+1 iff q|t) ? False   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]]
+  class size 2:
+     +----+-+-+--+   (flip vs first: runners [])
+     +-+----+-+-++   (flip vs first: runners [3, 6, 12])
+     flip-set runners=[3, 6, 12] subgroup-order q in [9]
+     per-freq sign s_t (t=1..13): [1, 1, -1, 1, 1, -1, 1, 1, 1, 1, 1, -1, 1]
+        q=9: s_t == (+1 iff q|t) ? False   [+1-iff-q|t pattern=[-1, -1, -1, -1, -1, -1, -1, -1, 1, -1, -1, -1, -1]]
+   ... (67 classes total)
