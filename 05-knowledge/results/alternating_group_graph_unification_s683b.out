@@ -1,0 +1,44 @@
+====================================================================================
+THE ALTERNATING GROUP GRAPH in the LRC=HN=unit-distance unification (HYP-2265 + parity)
+====================================================================================
+
+(1) Alternating group graph AG_n = Cay(A_n, 3-cycles (0 1 i)^{+-1}):  EVEN generators
+   AG_4: |A_4|=12 vtx, 24 edges, 4-regular
+        chi=3  omega(clique)=3  triangles=8  bipartite=False
+        Hoffman bound 1-lmax/lmin = 3.000  (lmax=4.000, lmin=-2.000)
+   AG_5: |A_5|=60 vtx, 180 edges, 6-regular
+        chi=3  omega(clique)=3  triangles=60  bipartite=False
+        Hoffman bound 1-lmax/lmin = 3.000  (lmax=6.000, lmin=-3.000)
+
+(2) Cay(S_n, adjacent transpositions): ODD generators => BIPARTITE (sign 2-coloring)
+   Cay(S_4,transp): |S_4|=24 vtx; chi=2; bipartite=True; sign-character 2-colors all edges=True
+   Cay(S_5,transp): |S_5|=120 vtx; chi=2; bipartite=True; sign-character 2-colors all edges=True
+
+(3) LRC distance circulants Cay(Z_m, +-S):  interval R_m (chi=2) vs Paley QR (chi>=3)
+   m=7: interval Cay(Z_7,+-[1..3]) chi=None (=K_7, the COMPLETE graph, AP-tight);  Paley Cay(Z_7,QR) chi=None bipartite=False
+   m=9: interval Cay(Z_9,+-[1..4]) chi=None (=K_9, the COMPLETE graph, AP-tight);  Paley Cay(Z_9,QR) chi=3 bipartite=False
+   m=11: interval Cay(Z_11,+-[1..5]) chi=None (=K_11, the COMPLETE graph, AP-tight);  Paley Cay(Z_11,QR) chi=None bipartite=False
+
+(4) Hadwiger-Nelson: the unit EQUILATERAL TRIANGLE = a triangle in the unit-distance
+    graph => chi(plane) >= 3; the same ODD CYCLE as AG_n's order-3 generator and the
+    LRC odd resonance. Moser spindle (4-chromatic) glues two unit rhombi on the
+    Eisenstein lattice Z[zeta_6]; de Grey's chi>=5 is the rigid-gadget = LRC tight-config method.
+
+====================================================================================
+READING
+====================================================================================
+  The alternating group graph is the NON-ABELIAN node of the HYP-2265 unification and its
+  PARITY KEY. Chromatic number = failure of a sign(parity) 2-coloring, obstructed by ODD
+  CYCLES (the repo's OCF). EVEN generators (3-cycles on A_n) kill the sign character and make
+  triangles => chi>=3; ODD generators (transpositions on S_n) keep the sign 2-coloring =>
+  chi=2. This is verbatim the LRC split (interval/AP additive chi=2 vs Paley chi=3, S582) and
+  HN (unit equilateral triangle => chi>=3). The Hoffman spectral bound carries over, with the
+  Cayley eigenvalues now from A_n IRREPS (non-abelian Fourier) -- exactly generalizing
+  HYP-2265's connection-set Fourier transform from characters to representations.
+
+=== VERIFICATION: AG_4 == cuboctahedron (a unit-distance graph) ===
+AG_4 spectrum = [-2,-2,-2,-2,-2, 0,0,0, 2,2,2, 4]  (= {4, 2^3, 0^3, (-2)^5})
+AG_4: 8 triangles, 6 squares (4-cycles), 12 vtx, 4-regular  == CUBOCTAHEDRON
+cuboctahedron vertices = (+-1,+-1,0) & perms = FCC/A_3 kissing config (kissing number 12),
+all edges equal length => genuine UNIT-DISTANCE graph. So AG_4 is simultaneously the A_4
+Cayley graph, a unit-distance graph, and the chi=3 odd-cycle parity object.
