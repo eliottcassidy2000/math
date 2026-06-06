@@ -1,0 +1,128 @@
+==============================================================================
+GENERIC 2D LATTICE CHROMATIC NUMBERS — imaginary quadratic orders (w=2)
+==============================================================================
+
+--- Q(sqrt(-2)), disc=-8, form (1,0,2), w=2 ---
+    popular norms (D:r(D)): [(297, 16), (99, 12), (153, 12), (171, 12), (198, 12)]
+    D= 297 r=16: chi=2  [bipartite (mod-2 functional)] 
+    D=  99 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 153 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 171 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 198 r=12: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-5)), disc=-20, form (1,0,5), w=2 ---
+    popular norms (D:r(D)): [(189, 16), (126, 12), (261, 12), (294, 12), (369, 12)]
+    D= 189 r=16: chi=2  [bipartite (mod-2 functional)] 
+    D= 126 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 261 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 294 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D= 369 r=12: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-6)), disc=-24, form (1,0,6), w=2 ---
+    popular norms (D:r(D)): [(385, 16), (175, 12), (55, 8), (70, 8), (105, 8)]
+    D= 385 r=16: chi=2  [bipartite (mod-2 functional)] 
+    D= 175 r=12: chi=2  [bipartite (mod-2 functional)] 
+    D=  55 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D=  70 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 105 r= 8: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-7)), disc=-7, form (1,1,2), w=2 ---
+    popular norms (D:r(D)): [(352, 24), (176, 20), (368, 20), (256, 18), (88, 16)]
+    D= 352 r=24: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 176 r=20: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 368 r=20: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 256 r=18: chi=3  [non-bip + linear mod-3 coloring] 
+    D=  88 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+
+--- Q(sqrt(-10)), disc=-40, form (1,0,10), w=2 ---
+    popular norms (D:r(D)): [(91, 8), (154, 8), (161, 8), (209, 8), (259, 8)]
+    D=  91 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 154 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 161 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 209 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 259 r= 8: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-11)), disc=-11, form (1,1,3), w=2 ---
+    popular norms (D:r(D)): [(225, 18), (135, 16), (345, 16), (375, 16), (45, 12)]
+    D= 225 r=18: chi=3  [non-bip + torus Z_3^2 3-coloring] 
+    D= 135 r=16: chi=3  [non-bip + torus Z_3^2 3-coloring] 
+    D= 345 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 375 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+    D=  45 r=12: chi=3  [non-bip + torus Z_3^2 3-coloring] 
+
+--- Q(sqrt(-13)), disc=-52, form (1,0,13), w=2 ---
+    popular norms (D:r(D)): [(77, 8), (133, 8), (209, 8), (217, 8), (238, 8)]
+    D=  77 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 133 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 209 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 217 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 238 r= 8: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-14)), disc=-56, form (1,0,14), w=2 ---
+    popular norms (D:r(D)): [(225, 10), (135, 8), (270, 8), (345, 8), (351, 8)]
+    D= 225 r=10: chi=2  [bipartite (mod-2 functional)] 
+    D= 135 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 270 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 345 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 351 r= 8: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-15)), disc=-15, form (1,1,4), w=2 ---
+    popular norms (D:r(D)): [(304, 20), (256, 18), (136, 16), (184, 16), (376, 16)]
+    D= 304 r=20: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 256 r=18: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 136 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 184 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 376 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+
+--- Q(sqrt(-19)), disc=-19, form (1,1,5), w=2 ---
+    popular norms (D:r(D)): [(385, 16), (175, 12), (245, 12), (275, 12), (35, 8)]
+    D= 385 r=16: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 175 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 245 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 275 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D=  35 r= 8: chi=3  [non-bip + linear mod-3 coloring] 
+
+--- Q(sqrt(-21)), disc=-84, form (1,0,21), w=2 ---
+    popular norms (D:r(D)): [(85, 8), (165, 8), (190, 8), (205, 8), (253, 8)]
+    D=  85 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 165 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 190 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 205 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 253 r= 8: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-22)), disc=-88, form (1,0,22), w=2 ---
+    popular norms (D:r(D)): [(247, 8), (377, 8), (169, 6), (361, 6), (23, 4)]
+    D= 247 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 377 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 169 r= 6: chi=2  [bipartite (mod-2 functional)] 
+    D= 361 r= 6: chi=2  [bipartite (mod-2 functional)] 
+    D=  23 r= 4: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-23)), disc=-23, form (1,1,6), w=2 ---
+    popular norms (D:r(D)): [(216, 12), (288, 12), (312, 12), (384, 12), (144, 10)]
+    D= 216 r=12: chi=3  [non-bip + torus Z_2^2 3-coloring] 
+    D= 288 r=12: chi=3  [non-bip + torus Z_2^2 3-coloring] 
+    D= 312 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 384 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 144 r=10: chi=3  [non-bip + torus Z_2^2 3-coloring] 
+
+--- Q(sqrt(-30)), disc=-120, form (1,0,30), w=2 ---
+    popular norms (D:r(D)): [(286, 8), (319, 8), (391, 8), (121, 6), (169, 6)]
+    D= 286 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 319 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 391 r= 8: chi=2  [bipartite (mod-2 functional)] 
+    D= 121 r= 6: chi=2  [bipartite (mod-2 functional)] 
+    D= 169 r= 6: chi=2  [bipartite (mod-2 functional)] 
+
+--- Q(sqrt(-31)), disc=-31, form (1,1,8), w=2 ---
+    popular norms (D:r(D)): [(280, 12), (400, 10), (80, 8), (112, 8), (140, 8)]
+    D= 280 r=12: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 400 r=10: chi=3  [non-bip + linear mod-3 coloring] 
+    D=  80 r= 8: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 112 r= 8: chi=3  [non-bip + linear mod-3 coloring] 
+    D= 140 r= 8: chi=3  [non-bip + linear mod-3 coloring] 
+
+==============================================================================
+OVERALL max certified chi among tested orders/popular-norms: 3
+NO chi>=4 found: every tested generic-order popular norm is chi<=3.
+grep RESULT: ALL_LE_3
