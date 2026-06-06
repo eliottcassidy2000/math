@@ -1,0 +1,76 @@
+M = sine-transform invertibility (det should be nonzero):
+  C=  7: |det| = 2.315e+00  (h=3)
+  C=  9: |det| = 5.063e+00  (h=4)
+  C= 11: |det| = 1.254e+01  (h=5)
+  C= 13: |det| = 3.433e+01  (h=6)
+  C= 15: |det| = 1.021e+02  (h=7)
+  C= 17: |det| = 3.263e+02  (h=8)
+  C= 19: |det| = 1.109e+03  (h=9)
+  C= 21: |det| = 3.988e+03  (h=10)
+  C= 23: |det| = 1.507e+04  (h=11)
+  C= 25: |det| = 5.960e+04  (h=12)
+  C= 27: |det| = 2.457e+05  (h=13)
+  C= 29: |det| = 1.053e+06  (h=14)
+
+GALOIS-STABILITY test of zero set {t: Phi(delta)_t=0} under t->a*t (a in (Z/C)*):
+  (for random delta supported on a subset Diff; zero set must be a union of gcd-classes)
+  C= 21: zero-set (in 1..10) = []  gcd-classes=[]  Galois-closed=True
+  C= 25: zero-set (in 1..12) = []  gcd-classes=[]  Galois-closed=True
+  C= 27: zero-set (in 1..13) = []  gcd-classes=[]  Galois-closed=True
+  C= 35: zero-set (in 1..17) = []  gcd-classes=[]  Galois-closed=True
+
+ANATOMY: every collision pair, Diff set, and gcd(Diff,C) content:
+
+  C=9 (n=5): 1 collision classes, deficiency=1
+      Diff(flip)=[3]  |Diff|=1  gcd-content=(3,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(1, (3,)): 1}
+
+  C=15 (n=8): 4 collision classes, deficiency=4
+      Diff(flip)=[3, 6]  |Diff|=2  gcd-content=(3,)
+      Diff(flip)=[3, 6]  |Diff|=2  gcd-content=(3,)
+      Diff(flip)=[5]  |Diff|=1  gcd-content=(5,)
+      Diff(flip)=[5]  |Diff|=1  gcd-content=(5,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(2, (3,)): 2, (1, (5,)): 2}
+
+  C=21 (n=11): 8 collision classes, deficiency=8
+      Diff(flip)=[3, 6, 9]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[7]  |Diff|=1  gcd-content=(7,)
+      Diff(flip)=[7]  |Diff|=1  gcd-content=(7,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(3, (3,)): 4, (1, (7,)): 4}
+
+  C=25 (n=13): 4 collision classes, deficiency=4
+      Diff(flip)=[5, 10]  |Diff|=2  gcd-content=(5,)
+      Diff(flip)=[5, 10]  |Diff|=2  gcd-content=(5,)
+      Diff(flip)=[5, 10]  |Diff|=2  gcd-content=(5,)
+      Diff(flip)=[5, 10]  |Diff|=2  gcd-content=(5,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(2, (5,)): 4}
+
+  C=27 (n=14): 67 collision classes, deficiency=69
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff(flip)=[3, 6, 12]  |Diff|=3  gcd-content=(3,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(3, (3,)): 55, (1, (9,)): 7, (4, (3, 9)): 7}
+
+  C=33 (n=17): 32 collision classes, deficiency=32
+      Diff(flip)=[11]  |Diff|=1  gcd-content=(11,)
+      Diff(flip)=[11]  |Diff|=1  gcd-content=(11,)
+      Diff(flip)=[3, 6, 9, 12, 15]  |Diff|=5  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9, 12, 15]  |Diff|=5  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9, 12, 15]  |Diff|=5  gcd-content=(3,)
+      Diff(flip)=[3, 6, 9, 12, 15]  |Diff|=5  gcd-content=(3,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(1, (11,)): 16, (5, (3,)): 16}
+
+  C=35 (n=18): 16 collision classes, deficiency=16
+      Diff(flip)=[7, 14]  |Diff|=2  gcd-content=(7,)
+      Diff(flip)=[7, 14]  |Diff|=2  gcd-content=(7,)
+      Diff(flip)=[5, 10, 15]  |Diff|=3  gcd-content=(5,)
+      Diff(flip)=[5, 10, 15]  |Diff|=3  gcd-content=(5,)
+      Diff(flip)=[5, 10, 15]  |Diff|=3  gcd-content=(5,)
+      Diff(flip)=[5, 10, 15]  |Diff|=3  gcd-content=(5,)
+      Diff-stats {(|Diff|,gcd-set): count} = {(2, (7,)): 8, (3, (5,)): 8}
