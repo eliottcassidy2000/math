@@ -1,0 +1,44 @@
+==================================================================================
+THE HADWIGER NEEDLE: Niven = Dehn-triviality = THM-416 2D-cap = HN lattice-escape
+==================================================================================
+
+(1) NIVEN: angles with cos RATIONAL and theta/pi RATIONAL (= Dehn-trivial = root of unity):
+     cos(theta)=   1  -> theta = 0.0000 pi  (root of unity order 1)
+     cos(theta)= 1/2  -> theta = 0.3333 pi  (root of unity order 6)
+     cos(theta)=   0  -> theta = 0.5000 pi  (root of unity order 4)
+     cos(theta)=-1/2  -> theta = 0.6667 pi  (root of unity order 3)
+     cos(theta)=  -1  -> theta = 1.0000 pi  (root of unity order 2)
+     => the ONLY rational-cos rational-angle rotations are the w<=6 roots of unity
+        (Eisenstein/triangular w=6, square w=4, generic w=2) = THM-416's 2D quantum cap.
+        Every OTHER rational-cos angle (e.g. cos=5/6, 1/3, 3/4...) is theta/pi IRRATIONAL
+        (Dehn-NONTRIVIAL): the rotation has INFINITE order, escaping every lattice.
+
+(2) MOSER SPINDLE (chi=4): Dehn-trivial rhombi + Dehn-nontrivial junction cos=5/6
+     7 points; unit-distance edges = 11; chi = 4
+     spindle junction angle phi = arccos(5/6) = 0.18643 pi  (cos=5/6 NOT in {0,+-1/2,+-1}
+     => Niven-IRRATIONAL multiple of pi => Dehn-NONTRIVIAL: this is the forcing angle.
+     rhombi use pi/3 (cos=1/2, Niven-rational, Dehn-trivial). So chi=4 lives at the junction.
+
+(3) LATTICE (Dehn-trivial / Niven-rational) unit-distance patches are few-chromatic:
+     triangular lattice patch (37 vtx): chi = 3  (Eisenstein, w=6, pi/3)
+     square lattice patch     (29 vtx): chi = 2  (Z^2, w=4, pi/2)
+     => angles confined to roots of unity (Dehn-trivial) keep chi small/bounded; the
+        Hadwiger-Nelson escape to chi>=5 (de Grey) REQUIRES Niven-irrational/Dehn-nontrivial
+        rotations to leave the lattice = THM-416's rank/dimension jump.
+
+==================================================================================
+STATEMENT
+==================================================================================
+  HADWIGER-NELSON via DEHN/NIVEN (the needle, unifying s637 + THM-416):
+   * A unit-distance graph all of whose generating rotations are NIVEN-RATIONAL (cos and
+     angle/pi both rational) is confined to a 2D lattice with w<=6 roots of unity (THM-416
+     M(2)=6 cap = Niven's theorem) -- DEHN-TRIVIAL, hence chromatically bounded (triangular
+     chi=3, square chi=2; hexagonal 7-coloring caps the lattice at <=7).
+   * Forcing chi>=4 (Moser, junction cos=5/6) and chi>=5 (de Grey) REQUIRES a NIVEN-IRRATIONAL
+     (Dehn-NONTRIVIAL) junction angle -- an infinite-order rotation that escapes every lattice.
+     The Dehn invariant is the precise obstruction to scissors-reducing the gadget back to a
+     lattice; nonzero Dehn = the gadget cannot be a lattice = the chromatic forcing.
+   * So the "5" of Hadwiger-Nelson is a DEHN-INVARIANT / Niven phenomenon -- the SAME Hugo
+     Hadwiger dichotomy as Dehn-Hadwiger scissors congruence -- and THM-416's "escape needs a
+     rank jump" IS Dehn-nontriviality. The needle: chromatic forcing = irrational-angle =
+     nonzero Dehn = infinite rotation group = lattice escape.
