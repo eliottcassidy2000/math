@@ -1,0 +1,20 @@
+Single sign-flip invisibility (observer gap):
+   [1, 2, 3, 4]: M=1/5, M(flip one)=1/5, equal=True
+   [1, 3, 4, 7]: M=1/5, M(flip one)=1/5, equal=True
+
+MUTUAL gap over all direction assignments e (tournament orientations), AP {1..n-1}:
+  n=4 (2n-1=7): #distinct mutual-gaps over orientations = 2; range [2/7,1/3]
+     all-same-direction (pure differences): gap=1/3 rel-speeds=[1, 2]
+     BEST orientation e=(1, 1, 1) gap=1/3 rel-speeds=(1, 2)
+     WORST orientation e=(1, -1, 1) gap=2/7 rel-speeds=(2, 3, 5)
+     witness-denominators across orientations: [3, 7]  (contains 2n-1=7? True)
+  n=5 (2n-1=9): #distinct mutual-gaps over orientations = 4; range [1/6,1/4]
+     all-same-direction (pure differences): gap=1/4 rel-speeds=[1, 2, 3]
+     BEST orientation e=(1, 1, 1, 1) gap=1/4 rel-speeds=(1, 2, 3)
+     WORST orientation e=(1, 1, -1, 1) gap=1/6 rel-speeds=(1, 2, 3, 4, 5, 7)
+     witness-denominators across orientations: [4, 5, 6, 9]  (contains 2n-1=9? True)
+  n=6 (2n-1=11): #distinct mutual-gaps over orientations = 6; range [1/8,1/5]
+     all-same-direction (pure differences): gap=1/5 rel-speeds=[1, 2, 3, 4]
+     BEST orientation e=(1, 1, 1, 1, 1) gap=1/5 rel-speeds=(1, 2, 3, 4)
+     WORST orientation e=(1, 1, 1, -1, 1) gap=1/8 rel-speeds=(1, 2, 3, 4, 5, 6, 7, 9)
+     witness-denominators across orientations: [5, 6, 7, 8, 11, 13]  (contains 2n-1=11? True)
