@@ -1,0 +1,82 @@
+cnp_lee_yang_chromatic_roots_s689.py — the chromatic number of the plane through
+the Lee-Yang lens: chromatic roots = Lee-Yang/Fisher zeros of the zero-temperature
+antiferromagnetic Potts model on unit-distance graphs.
+
+THE LEE-YANG REFORMULATION OF CNP.
+The chromatic polynomial P(G,q) is exactly the zero-temperature antiferromagnetic
+Potts partition function Z_G(q, v=−1) = Σ_{S⊆E}(−1)^{|S|} q^{c(S)}. Its complex
+roots are the chromatic / Lee-Yang-Fisher zeros. By de Bruijn-Erdős (AC),
+        χ(ℝ²) = sup over finite unit-distance graphs G of χ(G).
+χ(G) = the least integer q with P(G,q) > 0 (and no larger integer root). So:
+        χ(ℝ²) = 1 + max{ integer q that is a chromatic root of some UD graph }.
+Hence the {5,6,7} question is a Lee-Yang-zero question:
+   • χ ≥ 5  (de Grey 2018):  q = 4 IS a chromatic root of some UD graph.   [KNOWN]
+   • χ ≥ 6 :  q = 5 is a chromatic root of some UD graph.                   [OPEN]
+   • χ ≥ 7 :  q = 6 is a chromatic root of some UD graph.                   [OPEN]
+   • χ ≤ 6  (ELIMINATE 7):  q = 6 is NEVER a chromatic root — i.e. q=6 lies in the
+     zero-free region of the entire UD-graph family (P(G,6) > 0 ∀ UD G).   [OPEN]
+So 'eliminating 7' = a Lee-Yang ZERO-FREENESS statement at q=6 for unit-distance
+graphs; 'eliminating 5' = a zero-FORCING statement (a UD graph with a root at q=5).
+
+THE LEE-YANG CIRCLE OF THE BASIC HN GADGET (verified below).
+The minimal Eisenstein gadget is the wheel W6 = unit hexagon + center (χ=3).
+P(W_n,q) = q·P(C_n,q−1) = q[(q−2)^n + (−1)^n(q−2)] = q(q−2)[(q−2)^{n−1} + (−1)^{n+1}].
+Its 'rim' roots solve (q−2)^{n−1} = ±1 ⟹ |q−2| = 1: the chromatic/Lee-Yang zeros of
+EVERY wheel lie on the CIRCLE |q−2|=1 (an antiferromagnetic Lee-Yang circle centred
+at q=2). So the canonical HN gadget's Lee-Yang zeros are confined to a circle — and
+the chromatic number is read off where that zero-locus crosses the real axis.
+
+This file: builds K3, W6, a triangular patch (χ=3), the Moser spindle (χ=4); gets
+their exact chromatic polynomials (Whitney rank sum, exact integers) and chromatic
+roots; verifies the W6 Lee-Yang circle; tracks the largest real root and the root
+cloud as gadgets force higher χ.
+
+
+==============================================================================
+
+--- K3 (triangle): 3 vertices, 3 unit edges ---
+  χ = 3;  P(3)=6, P(4)=24, P(5)=60, P(6)=120, P(7)=210
+  real chromatic roots = [np.float64(0.0), np.float64(1.0), np.float64(2.0)];  largest real root = 2.0000
+  |root − 2| for the 1 non-degenerate roots: min=1.0000, max=1.0000, mean=1.0000
+
+--- W6 = hexagon+center (basic HN gadget): 7 vertices, 12 unit edges ---
+  χ = 3;  P(3)=6, P(4)=264, P(5)=3660, P(6)=24600, P(7)=109410
+  real chromatic roots = [np.float64(0.0), np.float64(1.0), np.float64(2.0)];  largest real root = 2.0000
+  |root − 2| for the 5 non-degenerate roots: min=1.0000, max=1.0000, mean=1.0000
+
+--- triangular patch R=1 (Eisenstein, χ=3): 9 vertices, 16 unit edges ---
+  χ = 3;  P(3)=6, P(4)=1056, P(5)=32940, P(6)=393600, P(7)=2735250
+  real chromatic roots = [np.float64(0.0), np.float64(1.0), np.float64(2.0002)];  largest real root = 2.0002
+  |root − 2| for the 8 non-degenerate roots: min=0.0002, max=1.0000, mean=0.6251
+
+--- Moser spindle (χ=4, needs √−11): 7 vertices, 11 unit edges ---
+  χ = 4;  P(3)=0, P(4)=384, P(5)=5040, P(6)=31680, P(7)=134400
+  real chromatic roots = [np.float64(0.0), np.float64(1.0), np.float64(3.0)];  largest real root = 3.0000
+  |root − 2| for the 6 non-degenerate roots: min=0.0000, max=1.4142, mean=0.8047
+
+==============================================================================
+LEE-YANG CIRCLE CHECK (W6): rim roots solve (q−2)^5 = −1 ⟹ |q−2| = 1
+   q = +0.00000+0.00000i   |q−2| = 2.00000   [q=0/center]
+   q = +1.00000+0.00000i   |q−2| = 1.00000   [ON |q−2|=1]
+   q = +1.69098-0.95106i   |q−2| = 1.00000   [ON |q−2|=1]
+   q = +1.69098+0.95106i   |q−2| = 1.00000   [ON |q−2|=1]
+   q = +2.00000+0.00000i   |q−2| = 0.00000   [q=0/center]
+   q = +2.80902-0.58779i   |q−2| = 1.00000   [ON |q−2|=1]
+   q = +2.80902+0.58779i   |q−2| = 1.00000   [ON |q−2|=1]
+   ⟹ the 5 rim roots lie exactly on the circle |q−2|=1; the real one (q=1) is where
+     the Lee-Yang locus meets the real axis below χ=3. The HN gadget's zeros are circular.
+
+==============================================================================
+THE TREND (Lee-Yang zeros marching toward the integers):
+   χ=3: K3 (triangle)                              largest real root = 2.0000
+   χ=3: W6 = hexagon+center (basic HN gadget)      largest real root = 2.0000
+   χ=3: triangular patch R=1 (Eisenstein, χ=3)     largest real root = 2.0002
+   χ=4: Moser spindle (χ=4, needs √−11)            largest real root = 3.0000
+
+ READING: χ(ℝ²) = 1 + (largest integer chromatic root attainable by a UD graph).
+ W6/K3/patch (χ=3): largest integer root = 2.  Moser (χ=4): integer root q=3 (P(3)=0).
+ de Grey's graph (χ=5, not built here — 1581 vtx): integer root q=4 (P(G,4)=0).
+ ELIMINATE 7  ⟺  q=6 is in the UD-family Lee-Yang ZERO-FREE region (P(G,6)>0 ∀ UD G).
+ ELIMINATE 5  ⟺  some UD graph FORCES a chromatic root at q=5 (P(G,5)=0).
+ Both are open; the Lee-Yang lens says: it is about whether the chromatic-zero locus
+ of the UD family pinches the real axis at q=5 and q=6.
