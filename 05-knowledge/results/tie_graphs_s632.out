@@ -1,0 +1,19 @@
+LRC TIE GRAPHS (binding pairs at the optimal witness, incl. observer)
+======================================================================
+  AP n=5 {1,2,3,4}: gap=1/5 witness a/m=1/5 residues(incl obs)=[0, 1, 2, 3, 4]
+     TIE graph: 5 edges, degree-dist {2: 5}, chromatic(ub)=3, is-cycle=True
+  AP n=6 {1..5}: gap=1/6 witness a/m=1/6 residues(incl obs)=[0, 1, 2, 3, 4, 5]
+     TIE graph: 6 edges, degree-dist {2: 6}, chromatic(ub)=2, is-cycle=True
+  AP n=7 {1..6}: gap=1/7 witness a/m=1/7 residues(incl obs)=[0, 1, 2, 3, 4, 5, 6]
+     TIE graph: 7 edges, degree-dist {2: 7}, chromatic(ub)=3, is-cycle=True
+  sporadic tight (1,3,4,7) n=5: gap=1/5 witness a/m=1/5 residues(incl obs)=[0, 1, 2, 3, 4]
+     TIE graph: 5 edges, degree-dist {2: 5}, chromatic(ub)=3, is-cycle=True
+  loose (1,2,4,8) n=5: gap=1/3 witness a/m=1/3 residues(incl obs)=[0, 1, 1, 2, 2]
+     TIE graph: 10 edges, degree-dist {4: 5}, chromatic(ub)=5, is-cycle=False
+
+INTERPRETATION:
+  AP tie graph = the CYCLE C_n (consecutive runners on the clock) = circulant <±1>.
+  General config tie graph = circular-arc proximity graph of residues on Z/m (a CIRCULANT
+  when residues are an AP). This is the discrete unit-distance graph on the circle Z/m.
+  Relevant invariants: chromatic number (= Hadwiger-Nelson on Z/m / the sieve coloring)
+  and independence number (= the simultaneously-lonely set = the corrector).
