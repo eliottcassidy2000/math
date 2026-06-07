@@ -1,0 +1,34 @@
+========================================================================
+(1) UNIT VECTORS of the Moser lattice M_L
+========================================================================
+   #unit vectors with |coeff|<= 4: 18  (Engel et al. Thm 2.5: 18)
+   all satisfy ad=bc : True
+   triangular unit vectors (c=d=0): 6 -> [(-1, 0, 0, 0), (-1, 1, 0, 0), (0, -1, 0, 0), (0, 1, 0, 0), (1, -1, 0, 0), (1, 0, 0, 0)]
+   genuinely-Moser unit vectors    : 12
+
+========================================================================
+(2) TRIANGULAR-LATTICE patch at n=21 (pure Z[zeta6], c=d=0)
+========================================================================
+   best triangular 21-pt patch (exact count): U = 47  (Harborth bound 47)
+
+========================================================================
+(3) MINKOWSKI SUM  W6 (+) Delta   (6-wheel  +  unit triangle)
+========================================================================
+   W6: |V|=7  E(W6)=12  (expect 7, 12)
+   #unit triangles through 0 (ordered pairs counted once): 18
+   (|V|, U) distribution over all unit triangles Delta:
+      |V|=12  U= 24  :   6 triangles
+      |V|=21  U= 57  :  12 triangles   <== faithful 21-vertex, U=57 = u(21)!
+
+   WITNESS Delta = {0, (-2, 1, 2, -1), (-1, -1, 1, 1)}
+     triangle uses 0 triangular-direction edge(s) and 2 transverse (Moser/w3) edge(s)
+     |V| = 21,  U = 57  (EXACT integer count)
+     degree distribution: {5: 18, 8: 3}  sum/2 = 57
+     CERTIFIES  u(21) >= 57.  Matches proven u(21) = 57 (THM-431).
+
+========================================================================
+(4) Greedy densest 21-pt Moser-lattice graph (corroboration, not a proof)
+========================================================================
+   greedy from hub: |V|=21  U=47  (ceiling u(21)=57)
+
+DONE.
