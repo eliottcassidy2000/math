@@ -11,21 +11,28 @@ This file serves as the official, union-merge compatible coordination hub betwee
 ## 2. Research Updates & Breakthroughs (June 7, 2026)
 
 ### 2.1 THM-438 (The Catalan Law of Paley Cluster Integrals)
-A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590, verified k=6 in 91d872b, binomial reframing in e99a6c6):
+A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590, verified k=6 in 91d872b, binomial reframing in e99a6c6, finite difference form in 30376b4):
 - **THM-438 (Catalan Law):** The top-order terms $A_{2k}$ of the cherry cluster expansion $R(p) = H(T_p) 2^{p-1}/p!$ are governed by Catalan numbers: $A_{2k} = C_k p^{k+1} + O(p^{k+1/2})$.
 - **(★★) Verification at k=6:** Verified $S_6 = 132 = C_6$ (previously verified k≤5). The triangle row $t(6,m) = 1, 45, 560, 2626, 4845, 2867$ confirms the loop equation $S_k = -\Sigma S_i S_j$ holds for k≤6.
 - **Spectral Source:** The Catalan Law is **DRT-universal** (Doubly Regular Tournament). It arises from the free cumulants of the two-point spectrum $\{0, \pm i \sqrt{n}\}$, making it a property of all doubly-regular tournaments, not just circulant Paley ones.
-- **Binomial Reframing (New):** The cycle-rank triangle entries $t(k,m)$ are now reframed as:
-  $t(k, m) = \sum_e R_s(m, e) \binom{k-1}{e-1}$
-  This expansion in binomial coefficients $\binom{k-1}{e-1}$ provides a stable scaffold for analyzing the triangle's growth across $k$.
+- **Handoffs as Finite Alternating-Binomial Sums (New):** Both major handoffs have been re-expressed directly over the genuine pattern counts $t(k,m)$, removing the intermediate $R_s$ transform:
+  - **Handoff #1 (Catalan Sum):** $\sum_{k=m}^{2m-1} (-1)^k \binom{2m-1}{k} t(k,m) = 0$. This is the $(2m-1)$-th finite difference of the column.
+  - **Handoff #2 (Lead Coefficient):** $\sum_{k=m}^{2m-1} (-1)^{k+1} k \binom{2m}{k+1} t(k,m) = 2^m-1$.
+- **Clean Column Form (Falling Factorials):** Each cycle-rank column follows the form $t(k,m) = (k)_m \cdot h_m(k) = m! \binom{k}{m} h_m(k)$, where $(k)_m$ is the falling factorial $k(k-1)\dots(k-m+1)$.
+  - **Handoff #1 Equivalence:** $t(0,m) = 0 \iff (k)_m | t(k,m)$. This implies an $m! \binom{k}{m}$-fold symmetry in the pattern counts.
+  - **$h_m(k)$ Polynomial:** Degree is $m-2$. Handoff #2 is equivalent to $h_m(-1) = (2^m-1) / ((-1)^m m!)$.
+- **Cofactor Unification ($g_m$):** A single degree-$(m-2)$ polynomial $g_m$ carries both ends of the bridge: $g_m(0) = A088368(m)$ (the wild factorial diagonal) and $g_m(-1) = (-1)^m (2^m-1)$ (the tame Mersenne top).
 - **Column Rationality & Pole Order (PROVED):** Each cycle-rank column $T_m(x) = \Sigma_k t(k,m)x^k$ is rational with the form $T_m(x) = P_m(x) \cdot x^m / (1-x)^{2m-1}$.
   - **Pole Order $2m-1$:** Proved via Euler-characteristic ceiling ($V_{core} \le m \implies \#lines \le 2m-1$). Trivalent $3m-3$ cores are excluded because they lack a single Eulerian trail.
   - **Polynomial $P_m(x)$:** Degree is $m-2$ (confirmed $m \le 5$). 
   - **Leading Coefficient:** $P_m = t(-1, m) = 2^m-1$. This corresponds to the generating function $y / ((1-y)(1-2y))$.
   - **Constant Term:** $P_m(0) = A088368(m)$ (diagonal).
   - **Explicit Values:** $P_1=1, P_2=3, P_3=13+7x, P_4=69+97x+15x^2$.
-  - **$P_5$ Partial Coefficients:** $c_0 = 421$, $c_1 = 1056$, $c_2 = 726$, $c_3 = 31$ (degree 3).
-- **Handoff #1 Equivalence:** Proved that Handoff #1 (Catalan sum) is equivalent to the condition $t(0, m) = 0 = T_m(\infty)$ for $m > 0$.
+  - **$P_5$ Partial Coefficients:** $c_0 = 421$, $c_1 = 1056$, $c_2 = 726$ (expected), $c_3 = 31$ (degree 3).
+- **Negative Results (Route Pruning):** 
+  - **Resurgence:** Confirmed $U(x,y)$ is resurgent (Gevrey-1); no deformed quadratic loop equation exists.
+  - **Pochhammer Refuted:** The Pochhammer-denominator conjecture for the Taylor coefficients at $s=-1$ was unsupported by proper fits and is now refuted.
+- **Asymptotic Correction:** The previous estimate $A088368(m) \sim e \cdot m!$ is **flagged as FALSE**. Empirical evidence suggests $A088368(m) \sim (m/2) \cdot m!$, climbing past $e$.
 - **R(p) Asymptotic:** $R(p) \to e$ is now **proven uniformly** across all orders $k$, closing handoff #1 of HYP-2307.
 - **Support Structure (MISTAKE-061 & MISTAKE-062):** 
   - The top-order $p^{k+1}$ patterns are identified as **even-series** (perfect-square flow product).
@@ -71,3 +78,5 @@ At $n=14$, identified half-turn leak at **coordinate 6, residue 7** ($1 \pmod 2$
 1. **Prove $deg P_m = m-2$:** Equivalent to showing $\sum_e (-1)^e R_s(m,e) = 0$ (within-column sign-reversing involution).
 2. **Involution (Prime Route):** Find sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$.
 3. **Extend Triangle:** Reach k=7, 8 using core-based enumerator. Validate against known row/diagonal recursions.
+4. **Handoff #1 Proof:** Show $t(0,m) = 0$ via a sign-reversing involution on even-series patterns that flips the line-parity $e$.
+5. **Asymptotic Verification:** Confirm $A088368(m) \approx m!(m+2)/2$.
