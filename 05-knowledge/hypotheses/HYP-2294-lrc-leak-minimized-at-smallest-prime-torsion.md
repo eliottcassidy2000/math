@@ -49,6 +49,11 @@ down it — `n=8`: `24,24,16` (g=1,2,4); `n=16`: `224,224,192,128` (g=1,2,4,8); 
 isolates the mechanism: composite `n` is the CRT product of these chains, leak classes indexed by the
 full divisor lattice, minimum at the smallest prime.
 
+**n=22, 24** (`lrc_torsion_leakage_n22_24_monad_s3.out`, via the PROVED formula): min at `g=n/p*`
+again. n=24=2³·3 exhibits the richest divisor lattice and is monotone non-increasing across **all**
+of it: `g=1,2,3,4,6,8,12 → 616,616,588,560,504,448,336`. So the support-1 law now holds for every
+composite `n ≤ 24`.
+
 ## Why it is not yet proved
 
 THM-427 reduces it to: `g·W_i(g)` is maximized at the largest proper divisor `g=n/p*`, where

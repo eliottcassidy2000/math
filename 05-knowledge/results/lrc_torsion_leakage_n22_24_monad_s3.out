@@ -1,0 +1,4 @@
+n=22 {2: 1, 11: 1} p*=2 cells=3080 i*=10 minleak=220 at g=11 (n/p*=11) MATCH=True
+   leak by g: {1: 400, 2: 400, 11: 220}
+n=24 {2: 3, 3: 1} p*=2 cells=4128 i*=10 minleak=336 at g=12 (n/p*=12) MATCH=True
+   leak by g: {1: 616, 2: 616, 3: 588, 4: 560, 6: 504, 8: 448, 12: 336}
