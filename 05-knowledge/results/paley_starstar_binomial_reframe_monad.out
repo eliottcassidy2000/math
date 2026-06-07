@@ -1,0 +1,73 @@
+==============================================================================
+PART 1 — verify the binomial reframing  t(k,m) = Sum_e R_s(m,e) C(k-1,e-1)
+==============================================================================
+  t(1,1): binom=1  triangle=1
+  t(2,1): binom=1  triangle=1
+  t(2,2): binom=3  triangle=3
+  t(3,1): binom=1  triangle=1
+  t(3,2): binom=9  triangle=9
+  t(3,3): binom=13  triangle=13
+  t(4,1): binom=1  triangle=1
+  t(4,2): binom=18  triangle=18
+  t(4,3): binom=72  triangle=72
+  t(4,4): binom=69  triangle=69
+  t(5,1): binom=1  triangle=1
+  t(5,2): binom=30  triangle=30
+  t(5,3): binom=230  triangle=230
+  t(5,4): binom=580  triangle=580
+  t(6,1): binom=1  triangle=1
+  t(6,2): binom=45  triangle=45
+  t(6,3): binom=560  triangle=560
+  t(6,4): binom=2626  triangle=2626
+
+  ALL MATCH: True
+
+==============================================================================
+PART 2 — forced zeros at k=1..m-1, and the single nontrivial value t(0,m)
+==============================================================================
+  m=1: t(1..0,m)=[]  t(0,m)=1  Q_m(-1)=-1  (deg P_m=m-2  <=> both 0)
+  m=2: t(1..1,m)=['0']  t(0,m)=0  Q_m(-1)=0  (deg P_m=m-2  <=> both 0)
+  m=3: t(1..2,m)=['0', '0']  t(0,m)=0  Q_m(-1)=0  (deg P_m=m-2  <=> both 0)
+  m=4: t(1..3,m)=['0', '0', '0']  t(0,m)=0  Q_m(-1)=0  (deg P_m=m-2  <=> both 0)
+
+==============================================================================
+PART 3 — deg P_m and lead P_m from the binomial form
+==============================================================================
+  m=1: t(-1,m)=lead P_m = 1   2^m-1 = 1   match=True   (deg P_m=0, m-2=-1)
+  m=2: t(-1,m)=lead P_m = 3   2^m-1 = 3   match=True   (deg P_m=0, m-2=0)
+  m=3: t(-1,m)=lead P_m = 7   2^m-1 = 7   match=True   (deg P_m=1, m-2=1)
+  m=4: t(-1,m)=lead P_m = 15   2^m-1 = 15   match=True   (deg P_m=2, m-2=2)
+
+==============================================================================
+PART 4 — the DUAL sequence t(-j, m) for j>=1  (reciprocity candidates)
+==============================================================================
+  m=1: t(-j,m), j=0..8 = [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  m=2: t(-j,m), j=0..8 = [0, 3, 9, 18, 30, 45, 63, 84, 108]
+  m=3: t(-j,m), j=0..8 = [0, 7, 48, 170, 440, 945, 1792, 3108, 5040]
+  m=4: t(-j,m), j=0..8 = [0, 15, 202, 1168, 4459, 13230, 33096, 73164, 147246]
+  (t(0,m)=0 expected for m>=2; t(-1,m)=2^m-1)
+
+==============================================================================
+PART 5 — P_m read TOP-DOWN = Taylor of V(t,y) at t=-1 (per-column coeffs)
+==============================================================================
+  P_m coefficients high->low degree (top = lead = 2^m-1, bottom = A088368(m)):
+   m=1: [1]   [lead=1=2^m-1?, const=1=A088368(1)=1]
+   m=2: [3]   [lead=3=2^m-1?, const=3=A088368(2)=3]
+   m=3: [7, 13]   [lead=7=2^m-1?, const=13=A088368(3)=13]
+   m=4: [15, 97, 69]   [lead=15=2^m-1?, const=69=A088368(4)=69]
+
+  Top-down coefficient columns across m (the Taylor-at-(-1) sequences):
+   distance 0 [lead (2^m-1)]: [(1, 1), (2, 3), (3, 7), (4, 15)]
+   distance 1 [2nd-from-top]: [(3, 13), (4, 97)]
+   distance 2 [3rd-from-top]: [(4, 69)]
+
+==============================================================================
+PART 6 — sequences for OEIS lookup
+==============================================================================
+  top pole residue R_s(m,2m-1)=P_m(1):  [1, 3, 20, 181]
+  diagonal A088368(m):                  [1, 3, 13, 69, 421, 2867]
+  lead P_m = 2^m-1:                     [1, 3, 7, 15, 31, 63]
+  GF check Sum(2^m-1)y^m = y/((1-y)(1-2y))
+     y/((1-y)(1-2y)) coeffs m=1..6: [1, 3, 7, 15, 31, 63]
+  dual t(-j,3): [7, 48, 170, 440, 945, 1792, 3108, 5040]
+  dual t(-j,4): [15, 202, 1168, 4459, 13230, 33096, 73164, 147246]
