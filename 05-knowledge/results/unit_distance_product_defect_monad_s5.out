@@ -1,0 +1,96 @@
+==============================================================================
+PART A.  Product-defect delta(N) = u(N) - best Erdos product, N<=21
+==============================================================================
+  N  u(N)  prodLB  delta  alpha=2u/N >kappa?  factorization witness(es)
+------------------------------------------------------------------------------
+  4     5       4      1         5/2      no  2x2->4  [IRREDUC-opt]
+  5     7      --     --        14/5      no  (prime: irreducible by definition)
+  6     9       9      0           3      no  2x3->9  [PRODUCT-opt]
+  7    12      --     --        24/7      no  (prime: irreducible by definition)
+  8    14      14      0         7/2      no  2x4->14  [PRODUCT-opt]
+  9    18      18      0           4      no  3x3->18  [PRODUCT-opt]
+ 10    20      19      1           4      no  2x5->19  [IRREDUC-opt]
+ 11    23      --     --       46/11      no  (prime: irreducible by definition)
+ 12    27      27      0         9/2      no  3x4->27  [PRODUCT-opt]
+ 13    30      --     --       60/13      no  (prime: irreducible by definition)
+ 14    33      31      2        33/7      no  2x7->31  [IRREDUC-opt]
+ 15    37      36      1       74/15      no  3x5->36  [IRREDUC-opt]
+ 16    41      40      1        41/8      no  4x4->40  [IRREDUC-opt]
+ 17    43      --     --       86/17      no  (prime: irreducible by definition)
+ 18    46      45      1        46/9      no  2x9->45; 3x6->45  [IRREDUC-opt]
+ 19    50      --     --      100/19      no  (prime: irreducible by definition)
+ 20    54      53      1        27/5      no  4x5->53  [IRREDUC-opt]
+ 21    57      57      0        38/7      no  3x7->57  [PRODUCT-opt]
+
+PRODUCT-OPTIMAL (delta=0): [6, 8, 9, 12, 21]
+IRREDUCIBLE-OPTIMAL (delta>0): [4, 10, 14, 15, 16, 18, 20]
+primes (no product structure): [5, 7, 11, 13, 17, 19]
+
+3-rich / 2-rich split among COMPOSITE N (does delta=0 track 3-content?):
+  N  delta  v2  v3  has3      verdict
+  6      0   1   1   yes  PRODUCT-opt
+  8      0   3   0    no  PRODUCT-opt
+  9      0   0   2   yes  PRODUCT-opt
+ 12      0   2   1   yes  PRODUCT-opt
+ 21      0   0   1   yes  PRODUCT-opt
+  4      1   2   0    no  IRREDUC-opt
+ 10      1   1   0    no  IRREDUC-opt
+ 14      2   1   0    no  IRREDUC-opt
+ 15      1   0   1   yes  IRREDUC-opt
+ 16      1   4   0    no  IRREDUC-opt
+ 18      1   1   2   yes  IRREDUC-opt
+ 20      1   2   0    no  IRREDUC-opt
+
+==============================================================================
+PART B.  alpha(N)=2u(N)/N is SUPERADDITIVE over multiplication:
+         alpha(a*b) >= alpha(a)+alpha(b)  (<=> Erdos product bound).
+==============================================================================
+  alpha( 4) =    5/2  vs alpha(2)+alpha(2) =      2   [ok]
+  alpha( 6) =      3  vs alpha(2)+alpha(3) =      3   [TIGHT]
+  alpha( 8) =    7/2  vs alpha(2)+alpha(4) =    7/2   [TIGHT]
+  alpha(10) =      4  vs alpha(2)+alpha(5) =   19/5   [ok]
+  alpha(12) =    9/2  vs alpha(2)+alpha(6) =      4   [ok]
+  alpha(14) =   33/7  vs alpha(2)+alpha(7) =   31/7   [ok]
+  alpha(16) =   41/8  vs alpha(2)+alpha(8) =    9/2   [ok]
+  alpha(18) =   46/9  vs alpha(2)+alpha(9) =      5   [ok]
+  alpha(20) =   27/5  vs alpha(2)+alpha(10) =      5   [ok]
+  alpha( 9) =      4  vs alpha(3)+alpha(3) =      4   [TIGHT]
+  alpha(12) =    9/2  vs alpha(3)+alpha(4) =    9/2   [TIGHT]
+  alpha(15) =  74/15  vs alpha(3)+alpha(5) =   24/5   [ok]
+  alpha(18) =   46/9  vs alpha(3)+alpha(6) =      5   [ok]
+  alpha(21) =   38/7  vs alpha(3)+alpha(7) =   38/7   [TIGHT]
+  superadditivity violations over all a*b<=21: 0  (expect 0)
+
+Principal product line  N = 3^j  (K3^[]j, the j-fold triangle product):
+ j  N=3^j   2j avgdeg K3^[]j                 note
+ 1      3    2             2                u(3)=3, alpha=2
+ 2      9    4             4               u(9)=18, alpha=4
+ 3     27    6             6 realizable LB u(27)>=81=(6/2)*27
+ 4     81    8             8 realizable LB u(81)>=324=(8/2)*81
+  => alpha(3^j)=2j crosses kappa=6 EXACTLY at j=3 (N=27): the principal
+     product line is TANGENT to the kissing threshold at the cube 3^3.
+     N=81=3^4 gives alpha>=8>6 (K3^[]4 is a planar UD graph, 8-regular):
+     products DO eventually beat 3N, but only at >=32 (THM-433-E), while
+     the IRREDUCIBLE crossover N* is at <=28 -- earlier than any product.
+
+==============================================================================
+PART D.  Exact K3^[]3 in Q(sqrt3): unit count, regularity, and the
+         'H(3,3)+1' probe (max # of the 27 pts on a common unit circle).
+==============================================================================
+distinct points realized: 27  (want 27)
+unit distances (edges): 81  (want 81 = 3*27)
+degree sequence: {6: 27}  (want all 6 => 6-regular)
+3*N = 81; alpha = 6  (TIE at kappa=6)
+
+H(3,3)+1 probe (EXACT, circumcircle method):
+  unit-circle centers coinciding with an existing vertex, deg 6: 27  (these are the 27 hexagon centers = the points
+     themselves -- a NEW 28th point CANNOT sit here)
+  NEW (off-vertex) unit-circle centers through >=3 pts: 0
+  their degree distribution: {}
+  => MAX degree of a genuinely NEW added 28th point = 0
+  => H(3,3)+1 new pt gives only u(28) >= 81 (< 85=Engel).
+     The generic K3^[]3 has NO off-vertex point unit-distant from >=4
+     of its 27 vertices: every full hexagon is centered ON a vertex.
+     ==> the n=28 crosser is NOT 'H(3,3) + one boundary point'; it is
+     a genuinely DIFFERENT irreducible blob (consistent with THM-433).
+DONE.
