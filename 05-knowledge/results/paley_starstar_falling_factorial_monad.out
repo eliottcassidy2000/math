@@ -1,0 +1,28 @@
+Verify t(k,m) = (k)_m * h_m(k), deg h_m = m-2:
+
+ m=2: p_m(k) deg=2 (want 2)
+        p_m(k) = 3*k**2/2 - 3*k/2
+        (k)_m divides? remainder = 0  (0 <=> handoff#1)
+        h_m(k) = 3/2   deg=0 (want 0)
+        p_m(0)=0 (handoff#1 wants 0);  p_m(-1)=3 (handoff#2 wants 2^m-1=3)
+        h_m(-1)=3/2  vs (2^m-1)/((-1)^m m!)=3/2
+        h_m(m)=3/2  =A088368(m)/m! = 3/2 (->e)
+
+ m=3: p_m(k) deg=4 (want 4)
+        p_m(k) = 5*k**4/6 - 17*k**3/6 + 8*k**2/3 - 2*k/3
+        (k)_m divides? remainder = 0  (0 <=> handoff#1)
+        h_m(k) = 5*k/6 - 1/3   deg=1 (want 1)
+        p_m(0)=0 (handoff#1 wants 0);  p_m(-1)=7 (handoff#2 wants 2^m-1=7)
+        h_m(-1)=-7/6  vs (2^m-1)/((-1)^m m!)=-7/6
+        h_m(m)=13/6  =A088368(m)/m! = 13/6 (->e)
+
+ m=4: p_m(k) deg=6 (want 6)
+        p_m(k) = 181*k**6/720 - 29*k**5/16 + 671*k**4/144 - 253*k**3/48 + 233*k**2/90 - 5*k/12
+        (k)_m divides? remainder = 0  (0 <=> handoff#1)
+        h_m(k) = 181*k**2/720 - 73*k/240 + 5/72   deg=2 (want 2)
+        p_m(0)=0 (handoff#1 wants 0);  p_m(-1)=15 (handoff#2 wants 2^m-1=15)
+        h_m(-1)=5/8  vs (2^m-1)/((-1)^m m!)=5/8
+        h_m(m)=23/8  =A088368(m)/m! = 23/8 (->e)
+
+WILD-END limit check: A088368(m)/m! for m=1..5: [1, 3/2, 13/6, 23/8, 421/120]  (-> e = 2.718...)
+ floats: [1.0, 1.5, 2.1666666666666665, 2.875, 3.5083333333333333]

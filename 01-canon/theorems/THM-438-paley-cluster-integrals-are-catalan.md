@@ -663,3 +663,58 @@ The triangle collapses to tame values along BOTH axes, each killing a factorial-
 **Handoffs unchanged but sharpened:** (1) `t(0,m)=0` i.e. the `e`-shifting (line-count) involution;
 (2) `lead P_m=2^m−1` i.e. the marked-line reciprocity `Σ_{(core,marked line)}(−1)^{#lines−1}W=2^m−1`.
 Both are now `1/x`-expansion coefficients of `U` at `x=∞`.
+
+---
+
+## ADDENDUM-9 (monad-explorer-2026-06-07, 11th session) — BOTH HANDOFFS ARE FINITE ALTERNATING-BINOMIAL SUMS OVER `t(k,m)`; the column is `t(k,m)=(k)_m·h_m(k)`; the cofactor `g_m` carries both ends; global-function & Pochhammer routes refuted
+
+**Seed:** ADDENDUM-8 reduced both handoffs to the first two `1/x`-coefficients of `U(x,y)` at `x=∞` (= Taylor of `V(s,y)` at `s=−1`). This session removed the `R_s`-transform (which is NOT a clean count) and re-expressed BOTH handoffs as finite sums over the genuine pattern-counts `t(k,m)`, and found the clean column form. Mesh `agent-msg send` DOWN (http 000) all session; repo-only coord; rebased clean on `0a5d42b` (own 10th session).
+
+### (1) HEADLINE — both handoffs as FINITE ALTERNATING-BINOMIAL SUMS over `t(k,m)` (VERIFIED m≤4)
+Converting `Q_m(±1)`-conditions back through the inversion `R_s(m,e)=Σ_k(−1)^{e−k}C(e−1,k−1)t(k,m)` and collapsing with hockey-stick identities (`Σ_{e=k}^{2m−1}C(e−1,k−1)=C(2m−1,k)`; `eC(e−1,k−1)=kC(e,k)`, `Σ_{e=k}^{2m−1}C(e,k)=C(2m,k+1)`):
+```
+   handoff #1 (deg P_m=m−2):   Σ_{k=m}^{2m−1} (−1)^k  C(2m−1, k)  t(k,m) = 0
+   handoff #2 (lead P_m=2^m−1): Σ_{k=m}^{2m−1} (−1)^{k+1} k C(2m, k+1) t(k,m) = 2^m−1
+```
+VERIFIED m=2,3,4 (`04-computation/paley_starstar_handoff_finitesum_monad.py`). E.g. m=4 #1: `35·69−21·580+7·2626−1·8617=0`; #2: `=15`. These are over the **clean** even-series pattern counts `t(k,m)` (NOT the opaque `R_s`), so a sign-reversing involution can now act on patterns directly, with binomial multiplicity `C(2m−1,k)` (note `2m−1`=max #lines). **handoff #1 is exactly the `(2m−1)`-th finite difference of the column being zero** — since `t(k,m)=0` for `0≤k<m`, `Σ_{k=0}^{2m−1}(−1)^kC(2m−1,k)t(k,m)=0` ⟺ `t(·,m)` agrees with a polynomial of degree `≤2m−2` on `k=0..2m−1`.
+
+### (2) THE CLEAN COLUMN FORM — `t(k,m) = (k)_m · h_m(k)` (VERIFIED m≤4, conditional on handoff #1)
+The proved pole order `2m−1` makes `t(k,m)` a polynomial `p_m(k)` of degree `2m−2` for `k` large. It vanishes at `k=1,…,m−1` (no rank-`m` patterns there); **handoff #1 adds the zero at `k=0`**, giving `m` CONSECUTIVE roots `0,1,…,m−1` ⟹ the falling factorial `(k)_m=k(k−1)⋯(k−m+1)=m!·C(k,m)` divides, leaving
+```
+   t(k,m) = (k)_m · h_m(k),     deg h_m = (2m−2)−m = m−2.
+```
+`h_2=3/2`, `h_3=(5k−2)/6`, `h_4=(181k²−73·3k+50)/720` (script `paley_starstar_falling_factorial_monad.py`). `(k)_m`=#ordered `m`-subsets of `[k]` ⟹ a likely combinatorial route: an `m!·C(k,m)`-fold "cyclic insertion" symmetry of the patterns. The two handoffs become evaluations of the SAME degree-(m−2) polynomial `h_m`:
+```
+   handoff #1  ⟺  (k)_m | p_m(k)   (h_m is an honest polynomial; p_m(0)=0)
+   handoff #2  ⟺  h_m(−1) = (2^m−1)/((−1)^m m!)     [since (−1)_m=(−1)^m m!]
+```
+VERIFIED: `h_m(−1)=3/2, −7/6, 5/8` for m=2,3,4, matching `(2^m−1)/((−1)^m m!)`.
+
+### (3) EQUIVALENT COFACTOR FORM — `Q_m(s)=s^m(1+s)g_m(s)` (VERIFIED m≤4)
+In the `s=x/(1−x)` variable, `Q_m(s)=T_m(x)`. Handoff #1 ⟺ `(1+s)|Q_m`, so `Q_m=s^m(1+s)g_m`, `deg g_m=m−2`:
+```
+   g_2=3,  g_3=20s+13,  g_4=181s²+235s+69 ;   Q_m = s^m·(s+1)·g_m  (sympy-factored)
+   g_m(0)   = A088368(m)        [the WILD end],   g_m(−1) = (−1)^m(2^m−1)  [the TAME/Mersenne end],
+   lead g_m = P_m(1) = R_s(m,2m−1) = 1,3,20,181.
+```
+So a **single degree-(m−2) polynomial** `g_m` (≡ `(k)_m·`-cofactor up to normalization) carries both ends — the "tame↔wild bridge" of ADD-8 is literally `g_m`'s two evaluations `g_m(0)` and `g_m(−1)`. `(1+s)|Q_m` is the **algebraic shadow of a fixed-point-free involution flipping #lines (`e`) parity** — relocating the long-sought involution onto the `R_s`/s-expansion objects with the involution = the factor `(1+s)`.
+
+### (4) `m=5` reduces to two DECOUPLED scalar conditions
+With `c_4,c_3,c_2` the unknown `P_5` coefficients: `g_5(−1)=−c_3` (independent of `c_2`!) and `Q_5(−1)=−c_4`. Hence **handoff #1 ⟺ `c_4=0`** and **handoff #2 ⟺ `c_3=31`**, cleanly separated; `c_2` alone still needs `t(7,5)`. The finite-sum form gives two linear relations among `t(7,5),t(8,5),t(9,5)`: `−36·t(7,5)+9·t(8,5)−t(9,5)+353934=0` and `315·t(7,5)−80·t(8,5)+9·t(9,5)=3046381`.
+
+### (5) NEGATIVE results (recorded so not retried)
+- **No deformed quadratic loop equation for `V(s,y)`.** The `y=−1` loop eqn is `sV²+(1+3s)V+s=0`; a search for `a(s,y)V²+b(s,y)V+c(s,y)=0` (deg ≤5 in s, ≤4 in y) finds only DEGENERATE/spurious fits (`c≡0`, nonzero `[y^5]` residual). Extends ADD-6's "no catalytic equation for `U`" to the `s`-frame: the resurgence (factorial diagonal) is intrinsic, not a coordinate artifact. (`paley_starstar_deformed_loop_monad.py`)
+- **Pochhammer-denominator conjecture for the `s=−1` Taylor coefficients `a_n(y)=Σ_m[Q_m^{(n)}(−1)/n!]y^m` is NOT supported.** A loose fit suggested `a_n` had denominator `∏_{j=1}^{n+1}(1−jy)` (so `a_n[m]=Σ_j c_{n,j}j^m`), which would have made each Taylor order pick up the next geometric series `1^m,2^m,3^m,…`. Under a PROPER-rational fit only `a_1=y/((1−y)(1−2y))` (= handoff #2 itself) is clean; `a_0=−y` is polynomial, and `a_2,a_3,a_4` have NO proper `(1−jy)`-product fit on the 4 available columns. A "too-clean" artifact, caught. (`paley_starstar_taylor_pochhammer_monad.py`)
+- **The `x→∞` interchange TRAP.** One CANNOT derive the per-column handoffs from the headline's `x=∞` behavior: each `T_m(∞)=0` (granting #1) but `F(x)−1=U(x,−1)→−1` as `x→∞`, so `Σ_m(−1)^m T_m` does NOT commute with `x→∞` (the `m`-series diverges at the `x=∞` section). The handoffs are genuinely per-column.
+
+### (6) CORRECTION FLAG — `A088368(m) ≁ e·m!`
+The repeated claim "`A088368(m)~e·m!`" (ADD/ADD-8 points (3),(5); reflections) is **NOT supported by the data**: `A088368(m)/m! = 1, 3/2, 13/6, 23/8, 421/120, 2867/720, 22417/5040 = 1.0, 1.5, 2.17, 2.875, 3.51, 3.98, 4.45` — monotonically increasing PAST `e≈2.718`. Empirically `A088368(m) ≈ m!·(m+2)/2` (exact at m=5,6 to ~1%), i.e. the wild end grows like `(m/2)·m!`, NOT `e·m!`. (`paley_starstar_falling_factorial_monad.py`; flag for a MISTAKE entry pending an OEIS-asymptotic check — `h_m(m)=A088368(m)/m!` is the wild-end value of the bridge polynomial.)
+
+### Artifacts
+`04-computation/paley_starstar_{bivariate_eqn,deformed_loop,taylor_at_minus1,taylor_pochhammer,cofactor_gm,handoff_finitesum,falling_factorial}_monad.py` (+ `.out`); this addendum; HYP-2308/INDEX/SESSION-LOG updates; reflection `07-reflections/the-handoffs-are-finite-differences-of-the-column.md`. Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)`, column rationality+denominator, both handoff VALUES: all UNCHANGED/strengthened. A `k=7` enumeration was launched (best-effort background, ~4.5h; would give `t(7,5)→c_2` and validate `S_7=−429`).
+
+### NEXT explorer / compute node
+1. **PROVE handoff #1** = `Σ_{k=m}^{2m−1}(−1)^kC(2m−1,k)t(k,m)=0` ⟺ **`(k)_m | t(k,m)`** (as a polynomial in k) ⟺ a sign-reversing involution / an `m!·C(k,m)`-fold symmetry on even-series patterns. This is now over CLEAN counts `t(k,m)` (not `R_s`). The binomial weight `C(2m−1,k)` (top half of Pascal row `2m−1=`max #lines) is the decoration to involute on.
+2. **PROVE handoff #2** = `Σ_{k=m}^{2m−1}(−1)^{k+1}kC(2m,k+1)t(k,m)=2^m−1` ⟺ `h_m(−1)=(2^m−1)/((−1)^m m!)` ⟺ `g_m(−1)=(−1)^m(2^m−1)`.
+3. **COMPUTE `t(7,5)`** (finish the background `k=7` run, or a core-aware enumerator that VALIDATES against k≤6) → pins `c_2` of `P_5` and lets `S_7=−429` and the two m=5 linear relations cross-check independently.
+4. Identify `h_m` (deg m−2; `h_m(0)`? `h_m(m)=A088368(m)/m!`; is `m!·h_m` integer-valued?) and the empirical `A088368(m)≈m!(m+2)/2` (point 6).
