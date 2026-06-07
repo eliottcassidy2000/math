@@ -1,0 +1,26 @@
+total oriented overlapping pairs (flags): 60
+#distinct commutator 3-cycles hit: 20 (expect 20)
+fiber sizes: min=2 max=4 (expect all 3): [2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4]
+
+Sample fibers (commutator 3-cycle  <-  its 3 preimage oriented pairs):
+  c=(0, 1, 2): [013|024 sh=0]  [014|023 sh=0]  [032|142 sh=2]  [042|132 sh=2]
+  c=(0, 1, 3): [012|034 sh=0]  [014|032 sh=0]  [023|143 sh=3]  [043|123 sh=3]
+  c=(0, 1, 4): [012|043 sh=0]  [013|042 sh=0]  [024|134 sh=4]  [034|124 sh=4]
+  c=(0, 2, 1): [031|124 sh=1]  [041|123 sh=1]
+  c=(0, 2, 3): [021|034 sh=0]  [013|243 sh=3]  [043|132 sh=3]
+  c=(0, 2, 4): [021|043 sh=0]  [014|234 sh=4]  [034|142 sh=4]
+
+(2a) Is {shared vertices of the 3 preimages} = the support {a,b,c} of c?
+   matches support: 8/20  => NO
+
+(2b) distribution of (sorted shared-vertex multiset) across fibers:
+   (#distinct shared=1, equals-support=False): 3 fibers
+   (#distinct shared=2, equals-support=False): 9 fibers
+   (#distinct shared=3, equals-support=True): 8 fibers
+
+(3) icosahedral flag arithmetic cross-check:
+   faces F=20  vertices/face=3  -> face-vertex flags = 60 = |A_5| = 60
+   3-cycles = 20 = F ;  flag->face is 3-to-1 ;  commutator-cover is 3-to-1 -> MATCH
+   each 3-fold axis carries 2 three-cycles (abc),(acb) = 2 antipodal faces;
+   #3-fold axes = 10 = 20/2 = pairs of antipodal faces.
+   antipodal 3-cycle pairs {c, c^-1}: 10 (expect 10 three-fold axes): OK

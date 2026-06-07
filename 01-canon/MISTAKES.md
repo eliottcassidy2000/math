@@ -1782,3 +1782,34 @@ its asymptotic question). First-claimant rule again: gcd-torsion keeps THM-427; 
 **THM-429**, its HYP-2294 forward-ref → **HYP-2296** (free). Three independent S3 instances,
 three THM-427 claims, all within 20 minutes — the strongest evidence yet for per-instance id
 suffixes when one agent line is fanned out in parallel.
+
+---
+
+## MISTAKE-059: "Exactly 3-to-1" inferred from a count ratio without checking the map (caught + corrected same session)
+
+**Date discovered:** 2026-06-07 (monad-explorer-S6, self-caught)
+**Affects:** THM-436 ADDENDUM (2″) as first checkpointed; HYP-2305; reflection `the-icosahedral-fifteen-s6.md` (all corrected before any agent built on them)
+
+### What was assumed
+The commutator map {60 oriented overlapping cyclic-triangle pairs on a 5-set} → {20 three-cycles of A_5}
+was stated as "**onto and exactly 3-to-1**" — inferred purely from `60 / 20 = 3`, and dressed up as the
+icosahedral **face-vertex flag** incidence (`20` faces × `3` vertices = `60` flags, flag→face uniformly
+3-to-1).
+
+### Why it was wrong
+The fibers are **not uniform**. Direct enumeration (`04-computation/icosahedral_flag_fibers_monad_s6.py`)
+gives fiber sizes `{2 (×3), 3 (×14), 4 (×3)}` (sum 60 over 20 three-cycles). The `3`-to-`1` holds only
+on average. So `60 = |A₅|` is the group order, NOT a flag count, and the commutator covering is NOT the
+icosahedral flag map.
+
+### The correct framing
+What is actually true and robust: **every one of the 60 oriented overlapping pairs has a commutator of
+cycle-type a 3-cycle** (conjugation/inversion-invariant ⇒ order-convention-independent), and the 60
+commutators are **onto all 20** three-cycles. That type-uniformity — not any multiplicity-uniformity — is
+the real content of "A_n perfect realized by overlapping triangle pairs."
+
+### Lesson
+A matching TOTAL (`60 = 20·3`) does not certify a uniform MAP. When a count coincides "too cleanly" with
+a known structure (here, icosahedral flags), verify the **fibers / the map**, not just the cardinality.
+This is the project's own "too clean ⇒ test it" rule applied to itself; the test refuted the clean story
+and left the honest one (type-uniformity + a 15-fold canonical bijection) standing.

@@ -98,13 +98,20 @@ All counts verified in `04-computation/icosahedral_fifteen_monad_s6.py` (+`.out`
 > 5-subset contributes exactly `15` unoriented (`60 = |A₅|` oriented) overlapping pairs.** The
 > "engine of perfectness" is assembled 5-points-at-a-time, one copy of `A₅` per 5-set.
 >
-> **(2″) Commutator uniformity (PROVED).** For *every* one of the `60` oriented overlapping pairs on a
-> 5-set, the commutator `[σ_X, σ_Y]` (where `σ_X, σ_Y` are the chosen 3-cycles) is a **3-cycle** — never
-> the identity, never a double-transposition, never a 5-cycle. The map `{oriented overlapping pairs} →
-> {3-cycles}` is **onto and exactly 3-to-1** (`60 ↦ 20`). Since the commutator is supported on `X∪Y`
-> (5 points), this holds for all `n` by locality. **This is the full content of "`A_n` perfect": not one
-> witnessing commutator (the classical `[(123),(345)]=(032)`) but a uniform 3-to-1 covering of all
-> `A_n` generators by overlapping triangle pairs.**
+> **(2″) Commutator type-uniformity (PROVED) + a refuted over-reading.** For *every* one of the `60`
+> oriented overlapping pairs on a 5-set, the commutator `[σ_X, σ_Y]` (where `σ_X, σ_Y` are the chosen
+> 3-cycles) has cycle-type a **3-cycle** — never the identity, never a double-transposition, never a
+> 5-cycle (robust: "is a 3-cycle" is conjugation- and inversion-invariant, so independent of order
+> convention). The `60` commutators are **onto all `20` three-cycles**. Since the commutator is supported
+> on `X∪Y` (5 points), this holds for all `n` by locality. **So "`A_n` perfect" is realized not by one
+> witnessing commutator (`[(123),(345)]=(032)`) but uniformly in type: every overlapping triangle pair
+> regenerates a 3-cycle, covering all `A_n` generators.**
+> *Negative result (same session, `…flag_fibers_monad_s6.py`):* the covering is `3`-to-`1` **only on
+> average** — the fibers are **non-uniform**, sizes `{2 (×3), 3 (×14), 4 (×3)}` (sum `60` over `20`
+> three-cycles). Hence the tempting reading "`60 = 20·3 =` icosahedral face-vertex flags, flag→face
+> uniformly 3-to-1" is **REFUTED**: the commutator covering is *not* the icosahedral flag incidence;
+> the `60 = |A₅|` is the group order, not a flag count. (The `15`-bijection (5′) and the class↔axis
+> dictionary are unaffected — those are exact.)
 >
 > **(5′) The `15` is the icosahedron (PROVED group side + classical geometry).** There is a *canonical*
 > (choice-free) bijection

@@ -66,16 +66,24 @@ means. The number 1728 = `12³`, the `5` of `f⁵`, the `2,3` of `T², H³`: the
 ## 3. Commutator uniformity: the *whole* of "A_n perfect"
 
 The classical proof of `A_n = [A_n, A_n]` exhibits **one** commutator that is a 3-cycle
-(`[(123),(345)] = (032)`). The computation shows something cleaner and complete: **every one of the
-60 oriented overlapping pairs has a 3-cycle commutator** — never the identity, never a
-double-transposition, never a 5-cycle. The map
+(`[(123),(345)] = (032)`). The computation shows something cleaner: **every one of the 60 oriented
+overlapping pairs has a 3-cycle commutator** — never the identity, never a double-transposition, never a
+5-cycle (robust, since "is a 3-cycle" is conjugation/inversion-invariant). The map
 ```
-   {60 oriented overlapping pairs}  ──[ , ]──▶  {20 three-cycles}
+   {60 oriented overlapping pairs}  ──[ , ]──▶  {20 three-cycles}   (onto)
 ```
-is **onto and exactly 3-to-1**. Because the commutator is supported on the 5-point union `X∪Y`, this is
-universal in `n`. So "A_n is perfect" is not one lucky commutator; it is a uniform `3`-to-`1` covering of
-*all* the generators (3-cycles) by overlapping triangle pairs. The perfect core is built with perfect
-regularity.
+is universal in `n` (the commutator is supported on `X∪Y`, 5 points). So "A_n is perfect" is not one
+lucky commutator; it is *type-uniform* — every overlapping pair regenerates a 3-cycle, and these cover
+all `A_n` generators.
+
+**A clean over-reading, tested and refuted.** `60 = 20·3` and `60 = 12·5 = 20·3` is also the icosahedral
+**face-vertex flag** count (`20` faces `× 3` vertices), with flag→face canonically 3-to-1 — so it was
+tempting to declare the commutator covering *is* the icosahedral flag incidence. I tested it
+(`04-computation/icosahedral_flag_fibers_monad_s6.py`): the fibers are **not** uniform — sizes
+`{2 (×3), 3 (×14), 4 (×3)}`. The `3`-to-`1` is only an average; the covering is **not** the flag map,
+and the `60` here is `|A₅|`, not a flag count. A reminder of the project's own rule: when a count
+matches "too cleanly," verify the *map*, not just the *total*. (The `15`-bijection and the class↔axis
+dictionary below are exact and unaffected.)
 
 ## 4. `C₅` *is* the generator — the tournament reading
 
