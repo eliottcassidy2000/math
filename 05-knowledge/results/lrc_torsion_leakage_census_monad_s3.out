@@ -1,0 +1,171 @@
+==============================================================================
+TORSION-LEAKAGE CENSUS (S367 full-cell model), support-1 defects
+==============================================================================
+
+### n=6  factor={2: 1, 3: 1}  p*=2  cells=60 cands=360  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  2  [(3, 2)]   (r mod base = [0])
+      r=  3  [(2, 3)]   (r mod base = [0])
+      r=  4  [(3, 2)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 12
+     achieved at (coord,res): [(2, 3)]
+     minimizing residues = [3]
+     n/p* = 3.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  3  leak=   12  @coord  2  [TORSION[(2, 3)]]
+      res=  1  leak=   16  @coord  2  [non-tors]
+      res=  2  leak=   16  @coord  2  [TORSION[(3, 2)]]
+      res=  4  leak=   16  @coord  2  [TORSION[(3, 2)]]
+      res=  5  leak=   16  @coord  2  [non-tors]
+
+### n=10  factor={2: 1, 5: 1}  p*=2  cells=280 cands=2800  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  2  [(5, 2)]   (r mod base = [0])
+      r=  4  [(5, 2)]   (r mod base = [0])
+      r=  5  [(2, 5)]   (r mod base = [0])
+      r=  6  [(5, 2)]   (r mod base = [0])
+      r=  8  [(5, 2)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 30
+     achieved at (coord,res): [(4, 5)]
+     minimizing residues = [5]
+     n/p* = 5.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  5  leak=   30  @coord  4  [TORSION[(2, 5)]]
+      res=  1  leak=   48  @coord  4  [non-tors]
+      res=  2  leak=   48  @coord  4  [TORSION[(5, 2)]]
+      res=  3  leak=   48  @coord  4  [non-tors]
+      res=  4  leak=   48  @coord  4  [TORSION[(5, 2)]]
+      res=  6  leak=   48  @coord  4  [TORSION[(5, 2)]]
+      res=  7  leak=   48  @coord  4  [non-tors]
+      res=  8  leak=   48  @coord  4  [TORSION[(5, 2)]]
+      res=  9  leak=   48  @coord  4  [non-tors]
+
+### n=12  factor={2: 2, 3: 1}  p*=2  cells=504 cands=6048  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  4  [(3, 4)]   (r mod base = [0])
+      r=  6  [(2, 6)]   (r mod base = [0])
+      r=  8  [(3, 4)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 72
+     achieved at (coord,res): [(6, 6), (10, 6)]
+     minimizing residues = [6]
+     n/p* = 6.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  6  leak=   72  @coord  6  [TORSION[(2, 6)]]
+      res=  4  leak=   96  @coord  6  [TORSION[(3, 4)]]
+      res=  8  leak=   96  @coord  6  [TORSION[(3, 4)]]
+      res=  3  leak=  108  @coord  6  [non-tors]
+      res=  9  leak=  108  @coord  6  [non-tors]
+      res=  1  leak=  120  @coord  6  [non-tors]
+      res=  2  leak=  120  @coord  6  [non-tors]
+      res=  5  leak=  120  @coord  6  [non-tors]
+      res=  7  leak=  120  @coord  6  [non-tors]
+      res= 10  leak=  120  @coord  6  [non-tors]
+
+### n=14  factor={2: 1, 7: 1}  p*=2  cells=812 cands=11368  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  2  [(7, 2)]   (r mod base = [0])
+      r=  4  [(7, 2)]   (r mod base = [0])
+      r=  6  [(7, 2)]   (r mod base = [0])
+      r=  7  [(2, 7)]   (r mod base = [0])
+      r=  8  [(7, 2)]   (r mod base = [0])
+      r= 10  [(7, 2)]   (r mod base = [0])
+      r= 12  [(7, 2)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 56
+     achieved at (coord,res): [(6, 7)]
+     minimizing residues = [7]
+     n/p* = 7.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  7  leak=   56  @coord  6  [TORSION[(2, 7)]]
+      res=  1  leak=   96  @coord  6  [non-tors]
+      res=  2  leak=   96  @coord  6  [TORSION[(7, 2)]]
+      res=  3  leak=   96  @coord  6  [non-tors]
+      res=  4  leak=   96  @coord  6  [TORSION[(7, 2)]]
+      res=  5  leak=   96  @coord  6  [non-tors]
+      res=  6  leak=   96  @coord  6  [TORSION[(7, 2)]]
+      res=  8  leak=   96  @coord  6  [TORSION[(7, 2)]]
+      res=  9  leak=   96  @coord  6  [non-tors]
+      res= 10  leak=   96  @coord  6  [TORSION[(7, 2)]]
+
+### n=15  factor={3: 1, 5: 1}  p*=3  cells=960 cands=14400  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  3  [(5, 3)]   (r mod base = [0])
+      r=  5  [(3, 5)]   (r mod base = [0])
+      r=  6  [(5, 3)]   (r mod base = [0])
+      r=  9  [(5, 3)]   (r mod base = [0])
+      r= 10  [(3, 5)]   (r mod base = [0])
+      r= 12  [(5, 3)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 120
+     achieved at (coord,res): [(6, 5), (6, 10), (14, 5), (14, 10)]
+     minimizing residues = [5, 10]
+     n/p* = 5.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  5  leak=  120  @coord  6  [TORSION[(3, 5)]]
+      res= 10  leak=  120  @coord  6  [TORSION[(3, 5)]]
+      res=  3  leak=  144  @coord  6  [TORSION[(5, 3)]]
+      res=  6  leak=  144  @coord  6  [TORSION[(5, 3)]]
+      res=  9  leak=  144  @coord  6  [TORSION[(5, 3)]]
+      res= 12  leak=  144  @coord  6  [TORSION[(5, 3)]]
+      res=  1  leak=  156  @coord  6  [non-tors]
+      res=  2  leak=  156  @coord  6  [non-tors]
+      res=  4  leak=  156  @coord  6  [non-tors]
+      res=  7  leak=  156  @coord  6  [non-tors]
+
+### n=18  factor={2: 1, 3: 2}  p*=2  cells=1728 cands=31104  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  6  [(3, 6)]   (r mod base = [0])
+      r=  9  [(2, 9)]   (r mod base = [0])
+      r= 12  [(3, 6)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 198
+     achieved at (coord,res): [(8, 9)]
+     minimizing residues = [9]
+     n/p* = 9.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res=  9  leak=  198  @coord  8  [TORSION[(2, 9)]]
+      res=  6  leak=  264  @coord  8  [TORSION[(3, 6)]]
+      res= 12  leak=  264  @coord  8  [TORSION[(3, 6)]]
+      res=  3  leak=  330  @coord  8  [non-tors]
+      res= 15  leak=  330  @coord  8  [non-tors]
+      res=  1  leak=  352  @coord  8  [non-tors]
+      res=  2  leak=  352  @coord  8  [non-tors]
+      res=  4  leak=  352  @coord  8  [non-tors]
+      res=  5  leak=  352  @coord  8  [non-tors]
+      res=  7  leak=  352  @coord  8  [non-tors]
+
+### n=20  factor={2: 2, 5: 1}  p*=2  cells=2400 cands=48000  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  4  [(5, 4)]   (r mod base = [0])
+      r=  8  [(5, 4)]   (r mod base = [0])
+      r= 10  [(2, 10)]   (r mod base = [0])
+      r= 12  [(5, 4)]   (r mod base = [0])
+      r= 16  [(5, 4)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 180
+     achieved at (coord,res): [(18, 10)]
+     minimizing residues = [10]
+     n/p* = 10.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):
+      res= 10  leak=  180  @coord 18  [TORSION[(2, 10)]]
+      res=  5  leak=  270  @coord 18  [non-tors]
+      res= 15  leak=  270  @coord 18  [non-tors]
+      res=  4  leak=  288  @coord 18  [TORSION[(5, 4)]]
+      res=  8  leak=  288  @coord 18  [TORSION[(5, 4)]]
+      res= 12  leak=  288  @coord 18  [TORSION[(5, 4)]]
+      res= 16  leak=  288  @coord 18  [TORSION[(5, 4)]]
+      res=  1  leak=  324  @coord 18  [non-tors]
+      res=  2  leak=  324  @coord 18  [non-tors]
+      res=  3  leak=  324  @coord 18  [non-tors]
+
+### n=21  factor={3: 1, 7: 1}  p*=3  cells=2688 cands=56448  base(all-0) leak=0
+  predicted torsion leak-residues (r: [(p,base)]):
+      r=  3  [(7, 3)]   (r mod base = [0])
+      r=  6  [(7, 3)]   (r mod base = [0])
+      r=  7  [(3, 7)]   (r mod base = [0])
+      r=  9  [(7, 3)]   (r mod base = [0])
+      r= 12  [(7, 3)]   (r mod base = [0])
+      r= 14  [(3, 7)]   (r mod base = [0])
+      r= 15  [(7, 3)]   (r mod base = [0])
+      r= 18  [(7, 3)]   (r mod base = [0])
+  GLOBAL min support-1 leak = 224
+     achieved at (coord,res): [(20, 7), (20, 14)]
+     minimizing residues = [7, 14]
+     n/p* = 7.  min-res all torsion? True.  n/p* among minimizers? True
+  best leak per residue (top 10 smallest):

@@ -1,0 +1,93 @@
+==============================================================================
+TORSION-LEAKAGE PROOF BACKBONE
+==============================================================================
+
+### n=6 factor={2: 1, 3: 1} p*=2 cells=60 cand=360
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=1 (1-based 2), N_i*=4
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=    16   
+      g=  2  leak=    16   = n/3 torsion
+      g=  3  leak=    12   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=3, n/p*=3  -> min at smallest prime: True
+
+### n=10 factor={2: 1, 5: 1} p*=2 cells=280 cand=2800
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=3 (1-based 4), N_i*=6
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=    48   
+      g=  2  leak=    48   = n/5 torsion
+      g=  5  leak=    30   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=5, n/p*=5  -> min at smallest prime: True
+
+### n=12 factor={2: 2, 3: 1} p*=2 cells=504 cand=6048
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=5 (1-based 6), N_i*=12
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=   120   
+      g=  2  leak=   120   
+      g=  3  leak=   108   
+      g=  4  leak=    96   = n/3 torsion
+      g=  6  leak=    72   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=6, n/p*=6  -> min at smallest prime: True
+
+### n=14 factor={2: 1, 7: 1} p*=2 cells=812 cand=11368
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=5 (1-based 6), N_i*=8
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=    96   
+      g=  2  leak=    96   = n/7 torsion
+      g=  7  leak=    56   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=7, n/p*=7  -> min at smallest prime: True
+
+### n=15 factor={3: 1, 5: 1} p*=3 cells=960 cand=14400
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=5 (1-based 6), N_i*=12
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=   156   
+      g=  3  leak=   144   = n/5 torsion
+      g=  5  leak=   120   = n/3 torsion
+  (C) leak strictly decreasing in g: True;  argmin g=5, n/p*=5  -> min at smallest prime: True
+
+### n=18 factor={2: 1, 3: 2} p*=2 cells=1728 cand=31104
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=7 (1-based 8), N_i*=22
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=   352   
+      g=  2  leak=   352   
+      g=  3  leak=   330   
+      g=  6  leak=   264   = n/3 torsion
+      g=  9  leak=   198   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=9, n/p*=9  -> min at smallest prime: True
+
+### n=20 factor={2: 2, 5: 1} p*=2 cells=2400 cand=48000
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=17 (1-based 18), N_i*=18
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=   324   
+      g=  2  leak=   324   
+      g=  4  leak=   288   = n/5 torsion
+      g=  5  leak=   270   
+      g= 10  leak=   180   = n/2 torsion
+  (C) leak strictly decreasing in g: False;  argmin g=10, n/p*=10  -> min at smallest prime: True
+
+### n=21 factor={3: 1, 7: 1} p*=3 cells=2688 cand=56448
+  (A) leak depends only on gcd(r,n): True
+  (B) closed form leak=N_i*n - g*W_i(g) exact for all (i,r): True
+  extremal coord (0-based) i*=19 (1-based 20), N_i*=16
+  leak(i*, g) by proper divisor g of n  (g=n/p are the torsion classes):
+      g=  1  leak=   304   
+      g=  3  leak=   288   = n/7 torsion
+      g=  7  leak=   224   = n/3 torsion
+  (C) leak strictly decreasing in g: True;  argmin g=7, n/p*=7  -> min at smallest prime: True
+
+==============================================================================
+OVERALL:  (A) gcd-class law: True   (B) closed form: True   (C) min at n/p*: True
+==============================================================================
