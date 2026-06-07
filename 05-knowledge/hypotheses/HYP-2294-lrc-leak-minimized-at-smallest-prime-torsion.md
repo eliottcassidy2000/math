@@ -42,6 +42,13 @@ EXACT for every `(i,r)`. Extremal-coordinate leak as a function of the gcd-class
 In every case argmin = largest proper divisor `g = n/p*`. The leak is **weakly non-increasing** in
 `g` (ties only at `g=1 ↔ g=2`, which is the THM-427 C2 identity). 0 exceptions.
 
+**Prime-power confirmation** (`lrc_torsion_leakage_primepower_monad_s3.out`): for `n = p^a` the
+gcd-classes form a single **valuation chain** `g ∈ {1,p,…,p^{a-1}}` and the leak drops monotonically
+down it — `n=8`: `24,24,16` (g=1,2,4); `n=16`: `224,224,192,128` (g=1,2,4,8); `n=9`: `42,36`;
+`n=27`: `600,576,432` (g=1,3,9); `n=25`: `368,320`. Minimum always at order `p` (g=n/p). This
+isolates the mechanism: composite `n` is the CRT product of these chains, leak classes indexed by the
+full divisor lattice, minimum at the smallest prime.
+
 ## Why it is not yet proved
 
 THM-427 reduces it to: `g·W_i(g)` is maximized at the largest proper divisor `g=n/p*`, where

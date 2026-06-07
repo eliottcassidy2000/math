@@ -1,0 +1,10 @@
+n=8 {2: 3} p*=2 cells=144 i*=6 minleak=16 at res=4 (ord=2)
+   leak by g(=n/ord): {1: 24, 2: 24, 4: 16}
+n=9 {3: 2} p*=3 cells=198 i*=4 minleak=36 at res=3 (ord=3)
+   leak by g(=n/ord): {1: 42, 3: 36}
+n=16 {2: 4} p*=2 cells=1152 i*=15 minleak=128 at res=8 (ord=2)
+   leak by g(=n/ord): {1: 224, 2: 224, 4: 192, 8: 128}
+n=25 {5: 2} p*=5 cells=4500 i*=24 minleak=320 at res=5 (ord=5)
+   leak by g(=n/ord): {1: 368, 5: 320}
+n=27 {3: 3} p*=3 cells=5724 i*=26 minleak=432 at res=9 (ord=3)
+   leak by g(=n/ord): {1: 600, 3: 576, 9: 432}
