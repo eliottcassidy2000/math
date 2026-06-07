@@ -83,11 +83,18 @@ upgrades "flagged" to "tested and refuted."
 The honest structure of `r(p)` (and of `H(T_p)`) is **analytic, not arithmetic**:
 
 `H(T_p) / (p!/2^{p−1}) = 2.000, 2.400, 2.440, 2.527, 2.557` for `p = 3,7,11,19,23` — a
-slow monotone climb toward **`e = 2.718…`** (Szele / Alon / Friedland: random-tournament
-Hamiltonian-path asymptotics, with Paley as the explicit `H`-maximizer, A038375). That
-limit, not any genus / j-invariant / `ℚ(√−3)` story, is where the sequence's regularity
-lives. The factorizations of `r(p)` are, as OPEN-Q-013 already records, "erratic" — and
-now we know *why* they must be: smoothness is a small-`p` artifact.
+slow, smooth climb. The normalizer `p!/2^{p−1}` is exactly `E[H]` for a *random*
+tournament (each vertex-ordering is a directed path with probability `2^{−(p−1)}`), and
+Paley is the explicit `H`-maximizer (A038375). The ratio is the maximizer's multiplicative
+edge over average. *(Caveat — do not over-read the limit: OPEN-Q-013 records this as
+"converging toward `e`", but Alon's permanent/Brégman upper bound allows the maximizer
+ratio to grow as much as `~p^{3/2}`, so whether these five points approach `e`, a larger
+constant, or a slow polynomial factor is itself unsettled. The robust statement is only
+that the regularity is **analytic/asymptotic in character — a smooth function of `p`** —
+not arithmetic/modular.)* That analytic axis, not any genus / j-invariant / `ℚ(√−3)`
+story, is where the sequence's regularity lives. The factorizations of `r(p)` are, as
+OPEN-Q-013 already records, "erratic" — and now we know *why* they must be: smoothness
+is a small-`p` artifact, so the ratio carries no stable arithmetic signature at all.
 
 ## The meta-lesson (and where it does NOT reach)
 
