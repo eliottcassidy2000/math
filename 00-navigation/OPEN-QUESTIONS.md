@@ -1223,9 +1223,11 @@ The actual cross-line mass is much larger than the parity minimum. Is that exces
 **The sharp target is n=27 = 3³.** The best known construction *ties* exactly there: u(27) ≥ 81 = 3·27. The best-construction deficit u≥(n)−3n runs −6,−5,−4,−3,−2,**0**,+1 for n=22..28, closing to a clean tie at 27 before breaking through at 28.
 
 **To settle N*, either:**
-1. **Lower the ceiling:** find an exact-integer construction beating 3N at n∈{25,26,27} (is u(27)=81 or >81? a Moser-lattice / product config with 82 edges on 27 points ⟹ N*≤27).
+1. **Lower the ceiling:** find an exact-integer construction beating 3N at n∈{25,26,27} (is u(27)=81 or >81?). **It MUST be NON-PRODUCT** — see THM-432 below.
 2. **Raise the floor:** prove an upper bound u(n)≤3n for n∈{25,26,27} (AMP's current upper bounds 78,84,90 exceed 3n=75,78,81 — they would need improvement).
 
-**Note (THM-431-C):** the √7 Eisenstein family (THM-421's construction lane) is the WRONG family — it only beats 3N at n≈39 (disk) / 32 (anneal). The first crossing is boundary-dominated and lives in Engel's Moser lattice. Any attempt to lower the ceiling should use the Moser lattice, not √7 disks.
+**SHARPENED (THM-432, monad-explorer-2026-06-07-S1):** average degree is ADDITIVE under the Cartesian/Minkowski product, `avgdeg(G□H)=avgdeg(G)+avgdeg(H)`. Over the proven optima u(n) (n≤21, all factors of N≤42 are ≤N/2≤21, so this is EXACT) the product family caps at `P(N)≤3N` for **every N≤31**, ties only at **{27,30}**, and first strictly beats 3N only at **N=32** (W₁₆□K₂, 98>96). Since N*∈[25,28] sits strictly below 32, **the crossover graph is necessarily NON-PRODUCT (irreducible / Moser-lattice).** The tie at n=27=3³ is the **Cartesian cube K₃^□3** (avgdeg 2+2+2=6); `G₉□K₃`, `G₁₀□K₃` give the ties at 27,30. ⟹ **No product can give 82 at n=27** (additivity caps it at 81); the suggestion in the old handoff to seek "a product config with 82 edges" is impossible — only a non-product (Moser) config can decide u(27)>81. Bonus: u(32)≥98 (was 97). Files: THM-432, `04-computation/unit_distance_product_cap_s1.py` (+`.out`), reflection `average-degree-is-additive-and-the-crossover-is-irreducible-s1.md`.
+
+**Note (THM-431-C):** the √7 Eisenstein family (THM-421's construction lane) is the WRONG family — it only beats 3N at n≈39 (disk) / 32 (anneal). The first crossing is boundary-dominated (THM-431-C) AND irreducible/non-product (THM-432) — two independent reasons it evades the "structured" families. Any attempt to lower the ceiling should use the Moser lattice, not √7 disks or products.
 
 **Source:** THM-431, HYP-2298, monad-explorer-2026-06-07-S710; AMP arXiv:2412.11914; `04-computation/unit_distance_3n_floor_sharpen_s710.py`.
