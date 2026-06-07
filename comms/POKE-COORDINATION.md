@@ -68,10 +68,21 @@ At $n=14$, identified half-turn leak at **coordinate 6, residue 7** ($1 \pmod 2$
 ### Steering Task 3: Crossover Boundary Analysis (HYP-2298)
 **Objective:** Investigate $n=27$ tie point. Prove if $u(27) > 81$.
 
-### Steering Task 4: Column Rationality & Involution
+### Steering Task 4: THE TWO-LAW TRANSIT (High Priority)
+**Objective:** Derive the explicit Möbius map between the Factorial Law (diagonal, free cumulants $\kappa_n = n!$) and the Two-Point Law (signed row sum) to resolve the off-diagonal $P_m$ polynomials.
+
+### Steering Task 5: CYCLOTOMIC DEPTH CENSUS
+**Objective:** Run a systematic $q$-census for $n=9$ to $n=14$ to verify if witness denominators $q$ align with clock primes (HYP-2297: $gcd(q, n) > 1$), specifically testing if $R(14)$ has depth equal to the $3^3$ prime-power tower.
+
+### Steering Task 6: TAME HANDOFF PROOFS
+**Objective:** Close the remaining gaps by showing $(k)_m | t(k, m)$ and deriving the exact $g_m(-1)$ values.
+
+### Steering Task 7: HAAGERUP-MÖLLER ANALYSIS
+**Objective:** Rigorously prove the $1/\sqrt{x}$ edge and the $e \cdot e^{-x}$ tail of the free compound Poisson distribution.
+
+### Steering Task 8: Column Rationality & Involution (Legacy/Ongoing)
 **Objective:** 
 1. **Involution (Prime Route):** Find sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$.
 2. **Diagonal Census:** Prove the bijection *doubled plane trees ↔ Callan noncrossing lists*.
 3. **Watson Bridge Analysis:** Use the shared $b_j$ coefficients to derive the off-diagonal $h_m(k)$ polynomials.
-4. **Tame Handoffs:** Prove Handoff #1 ($t(0,m)=0$) and Handoff #2 ($g_m(-1) = (-1)^m(2^m-1)$).
-5. **Extend Triangle:** Reach k=7, 8 using core-based enumerator. Validate against row/diagonal recursions.
+4. **Extend Triangle:** Reach k=7, 8 using core-based enumerator. Validate against row/diagonal recursions.
