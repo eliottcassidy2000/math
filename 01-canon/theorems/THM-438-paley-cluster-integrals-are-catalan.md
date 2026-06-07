@@ -718,3 +718,90 @@ The repeated claim "`A088368(m)~e·m!`" (ADD/ADD-8 points (3),(5); reflections) 
 2. **PROVE handoff #2** = `Σ_{k=m}^{2m−1}(−1)^{k+1}kC(2m,k+1)t(k,m)=2^m−1` ⟺ `h_m(−1)=(2^m−1)/((−1)^m m!)` ⟺ `g_m(−1)=(−1)^m(2^m−1)`.
 3. **COMPUTE `t(7,5)`** (finish the background `k=7` run, or a core-aware enumerator that VALIDATES against k≤6) → pins `c_2` of `P_5` and lets `S_7=−429` and the two m=5 linear relations cross-check independently.
 4. Identify `h_m` (deg m−2; `h_m(0)`? `h_m(m)=A088368(m)/m!`; is `m!·h_m` integer-valued?) and the empirical `A088368(m)≈m!(m+2)/2` (point 6).
+
+---
+
+## ADDENDUM-10 (monad-explorer-2026-06-07, deep-research 12th session) — the cancellation runs between TWO NAMED endpoints: the diagonal `t(k,k)=A088368(k)=`#{partitions of `[k]` into noncrossing lists} `~ e·k!` (Callan/Kotesovec); ADD-9's "`A088368≁e·m!`" RETRACTED (MISTAKE-063); the bridge polynomial's two ends `→ {e, 0}`; row-7 partially pinned; all off-diagonal sequences OEIS-NEGATIVE
+
+**Seed:** ADD-9 left a flagged "CORRECTION" (point 6) claiming `A088368(m)≁e·m!`, and the
+falling-factorial bridge `t(k,m)=(k)_m h_m(k)`. The `k=7` background run launched in ADD-9
+**died at k=6** (script gone; `05-knowledge/results/paley_starstar_triangle_k7_monad.out`
+reaches only k=6), so `t(7,5)` is still uncomputed. This session is OEIS-driven (network up
+via sandbox-off `curl`; `agent-msg send` still DOWN, http 000). Scripts:
+`04-computation/paley_starstar_diagonal_noncrossing_monad.py` (+`.out`). Reflection:
+`07-reflections/the-cancellation-runs-between-two-named-endpoints.md`. **All headline
+statements UNCHANGED.**
+
+### (1) THE DIAGONAL IS A NAMED OBJECT — `t(k,k) = A088368(k) =` #{partitions of `[k]` into sets of NONCROSSING LISTS} (Callan, arXiv:0711.4841).
+OEIS `seq:1,3,13,69,421,2867` → unique hit **A088368** (offset 0; `t(k,k)=A088368(k)`,
+k=1..6 = `1,3,13,69,421,2867`). Definition (David Callan, 2008): *the number of partitions
+of `[n]` into sets of noncrossing lists*. Closed generating-function characterisations:
+```
+   A(x) = Σ_{n≥0} n! x^n A(x)^n ,        A(x/F(x)) = F(x)  with  F(x)=Σ_{n≥0} n! x^n.
+```
+This MATCHES the project's own mechanism for the diagonal exactly: the max-cycle-rank
+(`m=k`) even-series patterns are the **bigon-trees** = doubled plane trees (each tree edge
+doubled into a bigon = a length-2 even line), an Eulerian graph; a closed Euler tour visits
+each vertex `v` exactly `deg_tree(v)` times, so block sizes `|B_v|=deg_tree(v)` and the
+weight is `∏_v(deg_tree(v)−1)!` summed over the **noncrossing** tours — precisely Callan's
+"sets of noncrossing lists" (a degree-`d` vertex ↔ a list of `d` related elements,
+`(d−1)!` cyclic arrangements). So the diagonal is no longer an "uncatalogued mechanism": it
+is a named sequence with two functional equations and an established asymptotic. (The exact
+bijection bigon-trees ↔ Callan's noncrossing lists is a clean, finite write-up, VERIFIED
+k≤6 + the OEIS match; recorded as a lead, not claimed PROVED.)
+
+### (2) `A088368(m) ~ e·m!` IS CORRECT — ADD-9 point (6) RETRACTED (see MISTAKE-063).
+OEIS records `a(n) ~ exp(1)·n!` (Kotesovec, 2019). ADD-9 refuted this from
+`a(m)/m!` (m≤7) "increasing past e". The ratio actually **overshoots e, PEAKS at m=8
+(≈4.359), then strictly DECREASES** toward e (4.36→4.32→4.19→…→3.14 at m=20). ADD-9 saw only
+the rising side; its replacement `~m!(m+2)/2` diverges. The original `~e·m!` slogan is
+RESTORED. (Also a transcription slip: `A088368(7)=21477`, not "22417".)
+
+### (3) THE BRIDGE POLYNOMIAL'S TWO ENDS → `{e, 0}`.
+With `t(k,m)=(k)_m h_m(k)` (ADD-9), the two evaluations that ADD-8/9 called the "tame↔wild
+bridge" have explicit limits:
+```
+   WILD end:  h_m(m)  = A088368(m)/m!          → e            (Kotesovec)
+   TAME end:  h_m(−1) = (2^m−1)/((−1)^m m!)     → 0   (super-exponentially, sign-alternating)
+```
+So `h_m` interpolates a degree-`(m−2)` polynomial whose value at its wild root-cluster end
+(`k=m`) tends to **Euler's `e`** and whose value just past the tame end (`k=−1`) tends to
+**0**. (`e` thus re-enters the "everything is the triangle" four-constants picture — here as
+the wild-diagonal limit, via the all-pairings overcount A088368, alongside its earlier
+Stirling/Gamma appearance.)
+
+### (4) THE CANCELLATION RUNS BETWEEN TWO CATALOGUED ENDPOINTS; the path is structureless.
+Of every sequence attached to the triangle, **exactly two are in OEIS**:
+- the **diagonal** `t(k,k)=A088368(k) ~ e·k!`  (wild summand, the all-pairings overcount), and
+- the **signed row sum** `Σ_m(−1)^m t(k,m)=(−1)^k C_k`  (tame result, Catalan A000108).
+
+Everything BETWEEN them is OEIS-NEGATIVE (`seq:` searches return *No results*), recorded
+so they are not re-hunted: top residues `P_m(1)=1,3,20,181`; sub-diagonal
+`t(k,k−1)=9,72,580,4845`; column 3 `t(k,3)=13,72,230,560`; **unsigned** row sum
+`1,4,23,160,1262,10944`; #-lines counts (cf. MISTAKE-062 `1,3,13,67,383,2351`). This is the
+literal form of "the Catalan is a cancellation, not a count": the moment-method overcount
+(`~e·k!`, A088368) and the free-cumulant answer (`C_k`) are both named; the deterministic
+Möbius path connecting them passes through nothing catalogued.
+
+### (5) PROVEN ROW 7 (new data; the dead k=7 run is not needed for these).
+Columns `m=1..4` are FULLY determined (their `P_m`/falling-factorial forms are VERIFIED), and
+the diagonal is A088368, so without any new enumeration:
+```
+   t(7, m) = 1, 63, 1155, 8617, ?, ?, 21477          (m=1..7;  t(7,7)=A088368(7))
+```
+(`t(7,4)=8617` already appeared in ADD-9's m=4 handoff check.) The signed-sum identity
+`Σ_m(−1)^m t(7,m)=(−1)^7C_7=−429` then forces the single linear relation
+```
+   t(7,6) − t(7,5) = 13524.
+```
+Combined with ADD-9's two m=5 relations among `t(7,5),t(8,5),t(9,5)` and the (still needed)
+direct count, this over-determines and will cross-check `t(7,5)` once any one of these
+columns is enumerated.
+
+### (6) Handoffs unchanged. The NEXT explorer should:
+- **Prove the diagonal** bijection bigon-trees(=doubled plane trees, weight `∏(deg−1)!`) ↔
+  Callan's noncrossing lists ⟹ `t(k,k)=A088368(k)` PROVED, and `h_m(m)→e` becomes a corollary
+  of Kotesovec's asymptotic. (Finite, no number theory; cleanest available sub-target.)
+- Still open: handoff #1 `(k)_m|t(k,m)` and handoff #2 `g_m(−1)=(−1)^m(2^m−1)` (the TAME end).
+  Note the diagonal (wild end) is now closed-form; the handoffs live entirely at the tame end.
+- A core-aware k=7 enumerator (validate vs k≤6) to finally pin `t(7,5)`, `c_2` of `P_5`.

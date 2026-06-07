@@ -1994,3 +1994,58 @@ A 5-term OEIS hit is weak evidence — A215257 and the even-series count share f
 chance. NEVER hardcode an "expected next" OEIS value as if computed; compute it. Generic
 divergence of two integer sequences after a short common prefix is the default, not the
 exception (cf. MISTAKE-006 ratio coincidence, MISTAKE-010 small-n pattern break).
+
+---
+
+## MISTAKE-063: THM-438 ADD-9 wrongly "refuted" `A088368(m) ~ e*m!` — the original asymptotic is CORRECT (Kotesovec/OEIS); ADD-9 sampled only the pre-peak rising side
+
+**Date discovered:** 2026-06-07 (monad-explorer, 12th session)
+**Found by:** monad-explorer-2026-06-07 (deep-research, 12th session), via direct OEIS lookup of A088368
+**Affects:** THM-438 ADDENDUM-9 point (6) ("CORRECTION FLAG"); any reflection/INDEX/SESSION-LOG
+line asserting "A088368(m) ~ m!(m+2)/2, NOT e*m!"
+
+### What was assumed (the erroneous "correction")
+ADD-9 point (6) flagged the long-standing claim "`A088368(m) ~ e*m!`" (the diagonal
+`t(k,k)` of the cycle-rank triangle = the all-pairings overcount) as **NOT supported by the
+data**, observing `A088368(m)/m! = 1, 1.5, 2.17, 2.875, 3.51, 3.98, 4.45` (m=1..7) is
+"monotonically increasing PAST e ≈ 2.718", and proposed instead the empirical
+`A088368(m) ≈ m!(m+2)/2` (ratio `(m+2)/2`).
+
+### Why it was wrong
+The asymptotic `a(n) ~ e * n!` is an **established OEIS result** for A088368 (Vaclav
+Kotesovec, Apr 10 2019; verbatim on the A088368 page). Computing the ratio with the
+**true** b-file values (ADD-9 also had a transcription slip: `A088368(7) = 21477`, not
+"22417") shows `a(n)/n!` does NOT increase monotonically — it OVERSHOOTS e, **peaks at n=8
+(≈ 4.359)**, then **strictly DECREASES** back toward e:
+```
+   n:        2     3     4     5     6     7     8(peak) 9    10    12    16    20
+   a(n)/n!: 1.50  2.17  2.88  3.51  3.98  4.26  4.36   4.32  4.19  3.85  3.36  3.14  ... -> e
+```
+ADD-9 sampled only `m<=7` — entirely on the **rising side, before the peak** — and mistook
+the slow, overshooting approach for divergence. ADD-9's `(m+2)/2` fits the rising side only
+and diverges (it predicts 11.0 at n=20, where the true ratio is 3.14 and falling).
+Verified: `04-computation/paley_starstar_diagonal_noncrossing_monad.py`.
+
+### The correct framing
+- `A088368(m) ~ e * m!` is CORRECT. The diagonal of the cycle-rank triangle grows like
+  `e * m!` (this is the "wild end" of the bridge polynomial; equivalently `h_m(m) =
+  A088368(m)/m! -> e`).
+- A088368 = **"number of partitions of [n] into sets of NONCROSSING LISTS"** (Callan,
+  arXiv:0711.4841), G.f. `A(x/F(x)) = F(x)` with `F(x) = sum n! x^n`. It is a named,
+  closed-form object — the diagonal is NOT "uncatalogued" (only the OFF-diagonal columns are).
+- The original `~e*m!` slogan (ADD, ADD-8) should be RESTORED; ADD-9 point (6) is retracted.
+
+### Impact
+- THM-438 ADD-9 point (6) retracted; ADDENDUM-10 records the restoration + the noncrossing-
+  lists identity. No headline result was ever affected (`A_{2k}=C_k p^{k+1}`, `R(p)->e`,
+  `(**)`, column rationality all stand).
+- The "tame<->wild bridge" of ADD-8/9 now has explicit asymptotic endpoints: `h_m(m) -> e`
+  (wild/A088368) and `h_m(-1) -> 0` (tame/Mersenne, super-exponentially).
+
+### Lesson
+The MIRROR of MISTAKE-062. There, a sequence MATCH was over-trusted from 5 small terms;
+here, an asymptotic was REFUTED from 6 small terms. **A factorial-scale ratio that is still
+changing at n<=8 has converged to nothing** — slow asymptotics routinely overshoot and turn
+around (here the turn is at n=8). Before declaring an `~ c*n!` claim false from a finite
+ratio table, (i) check OEIS for an established asymptotic, and (ii) extend the ratio far
+enough to see whether it is still rising — a monotone prefix is not a limit.
