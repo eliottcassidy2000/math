@@ -1,0 +1,6 @@
+--- quad s<= 2, y<= 2: degA_s=2,degA_y=2, #unknowns=27, #eqs=31 ---
+   a = 3*s**2*y**2 + 3*s*y**2 - y
+   b = s*y**2
+   c = 0
+   at y=-1: a,b,c = 3*s**2 + 3*s + 1 s 0  (loop wants prop to s,1+3s,s)
+   [y^5] residual (should be 0; constrains c2,c3,c4): -11*s**6 - 15*s**5 - 4*s**4

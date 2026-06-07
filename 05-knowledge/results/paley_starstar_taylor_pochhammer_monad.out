@@ -1,0 +1,20 @@
+a_n[m] table (m=1..4 exact; m=5 carries c2,c3,c4):
+  a_0: [-1, 0, 0, 0]   | a_0[5] = -c4
+  a_1: [1, 3, 7, 15]   | a_1[5] = c3 + 9*c4
+  a_2: [0, -6, -41, -187]   | a_2[5] = -c2 - 8*c3 - 36*c4
+  a_3: [0, 3, 81, 779]   | a_3[5] = 7*c2 + 28*c3 + 84*c4 + 1056
+  a_4: [0, 0, -67, -1546]   | a_4[5] = -21*c2 - 56*c3 - 126*c4 - 6757
+
+--- PROPER rational fit a_n(y)=N(y)/D(y), D=prod (1-jy), deg N < deg D ---
+  a_0: NO proper (1-jy)-product fit found (search r<=4)
+  a_1(y) = (y) / (1-1y)(1-2y)
+        PROPER, denom-degree 2; predicts a_1[5]=31, [6]=63, [7]=127
+        partial fractions: -1/(2*y - 1) + 1/(y - 1)
+  a_2: NO proper (1-jy)-product fit found (search r<=4)
+  a_3: NO proper (1-jy)-product fit found (search r<=4)
+  a_4: NO proper (1-jy)-product fit found (search r<=4)
+
+--- CROSS-TEST: pin c2 from a_n[5] predictions (set c4=0, c3=31 from handoffs) ---
+
+(If all three give the SAME integer c2, the Pochhammer law + c2 are corroborated;
+ the background k=7 run (t(7,5)) provides the independent confirmation.)

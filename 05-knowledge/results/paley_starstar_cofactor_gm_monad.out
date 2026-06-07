@@ -1,0 +1,43 @@
+==========================================================================
+Q_m(s) = s^m (1+s) g_m(s) ;  g_m = cofactor (deg m-2)
+==========================================================================
+
+m=1:  Q_m = s
+     remainder of Q_m/(s^m(1+s)) = s  (0 <=> handoff#1 holds)
+     g_m(s) = 0   (deg 0)
+       g_m(0)   = 0   (A088368(m)=1)
+       g_m(-1)  = 0   (want (-1)^m(2^m-1)=-1)
+       lead g_m = 0   (P_m(1)=R_s(m,2m-1))
+
+m=2:  Q_m = 3*s**2*(s + 1)
+     remainder of Q_m/(s^m(1+s)) = 0  (0 <=> handoff#1 holds)
+     g_m(s) = 3   (deg 0)
+       g_m(0)   = 3   (A088368(m)=3)
+       g_m(-1)  = 3   (want (-1)^m(2^m-1)=3)
+       lead g_m = 3   (P_m(1)=R_s(m,2m-1))
+
+m=3:  Q_m = s**3*(s + 1)*(20*s + 13)
+     remainder of Q_m/(s^m(1+s)) = 0  (0 <=> handoff#1 holds)
+     g_m(s) = 20*s + 13   (deg 1)
+       g_m(0)   = 13   (A088368(m)=13)
+       g_m(-1)  = -7   (want (-1)^m(2^m-1)=-7)
+       lead g_m = 20   (P_m(1)=R_s(m,2m-1))
+
+m=4:  Q_m = s**4*(s + 1)*(181*s**2 + 235*s + 69)
+     remainder of Q_m/(s^m(1+s)) = 0  (0 <=> handoff#1 holds)
+     g_m(s) = 181*s**2 + 235*s + 69   (deg 2)
+       g_m(0)   = 69   (A088368(m)=69)
+       g_m(-1)  = 15   (want (-1)^m(2^m-1)=15)
+       lead g_m = 181   (P_m(1)=R_s(m,2m-1))
+
+==========================================================================
+m=5 (symbolic c2,c3,c4): the handoffs PIN the cofactor
+==========================================================================
+Q_5(-1) = -c4  => handoff#1 <=> c4 = 0
+with c4=0: remainder = 0  (0 confirms (1+s)|Q_5)
+g_5(s) = c2*s**3 + c2*s**2 + c3*s**3 + 1477*s**3 + 3375*s**2 + 2319*s + 421
+g_5(0) = 421 (=A088368(5)=421)
+g_5(-1) = -c3  ; handoff#2 wants (-1)^5(2^5-1) = -31
+   handoff#2 => c3 = [31]  (predicts c3=31 if independent of c2? check:)
+   NOTE: g_5(-1) = -c3 depends on c2,c3 -> ONE eqn, not enough alone.
+   lead g_5 = P_5(1) = c2 + c3 + 1477

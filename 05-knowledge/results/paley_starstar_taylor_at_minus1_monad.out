@@ -1,0 +1,24 @@
+Taylor coefficients a_n(y) = sum_m Q_m^{(n)}(-1)/n!  y^m  (m=1..4 exact)
+  a_0: [m=1..4] = [-1, 0, 0, 0]
+  a_1: [m=1..4] = [1, 3, 7, 15]
+  a_2: [m=1..4] = [0, -6, -41, -187]
+  a_3: [m=1..4] = [0, 3, 81, 779]
+  a_4: [m=1..4] = [0, 0, -67, -1546]
+
+Fit each a_n(y) to rational num/prod(1-j y):
+  a_0(y) = (-y) / [1]   [verify: matches y^1..y^4]
+        PREDICT a_0[m=5]=0, a_0[m=6]=0
+  a_1(y) = (y) / [(1-1y)*(1-2y)]   [verify: matches y^1..y^4]
+        PREDICT a_1[m=5]=31, a_1[m=6]=63
+  a_2(y) = (-7*y**4 - 5*y**3 - 6*y**2) / [(1-1y)*(1-2y)*(1-3y)]   [verify: matches y^1..y^4]
+        PREDICT a_2[m=5]=-707, a_2[m=6]=-2431
+  a_3(y) = (326*y**4 + 63*y**3 + 3*y**2) / [(1-1y)*(1-2y)*(1-3y)]   [verify: matches y^1..y^4]
+        PREDICT a_3[m=5]=3801, a_3[m=6]=14723
+  a_4(y) = (-1144*y**4 - 67*y**3) / [(1-1y)*(1-2y)*(1-3y)]   [verify: matches y^1..y^4]
+        PREDICT a_4[m=5]=-8539, a_4[m=6]=-34630
+
+Now connect a_n to P_m TOP-DOWN coefficients.
+lead P_m = a_1[m]; we want to know which P_m coeff each a_n controls.
+  m=2: P_m(x) = 3  (coeffs low->high [3])
+  m=3: P_m(x) = 7*x + 13  (coeffs low->high [13, 7])
+  m=4: P_m(x) = 15*x**2 + 97*x + 69  (coeffs low->high [69, 97, 15])
