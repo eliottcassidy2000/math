@@ -1,0 +1,32 @@
+======================================================================
+Two-point law (1/2)(d_a+d_{-a}) with a^2 = A:  free cumulants vs Catalan
+
+ a^2 = A = -1:
+   n :              2        4        6        8       10
+   kappa_{2j}:      -1       -1       -2       -5      -14
+   predicted :      -1       -1       -2       -5      -14
+   match (-1)^(j-1) C_(j-1) A^j : True
+
+ a^2 = A = 1:
+   n :              2        4        6        8       10
+   kappa_{2j}:       1       -1        2       -5       14
+   predicted :       1       -1        2       -5       14
+   match (-1)^(j-1) C_(j-1) A^j : True
+
+ a^2 = A = -2:
+   n :              2        4        6        8       10
+   kappa_{2j}:      -2       -4      -16      -80     -448
+   predicted :      -2       -4      -16      -80     -448
+   match (-1)^(j-1) C_(j-1) A^j : True
+
+ a^2 = A = -11:
+   n :              2        4        6        8       10
+   kappa_{2j}:     -11     -121    -2662   -73205  -2254714
+   predicted :     -11     -121    -2662   -73205  -2254714
+   match (-1)^(j-1) C_(j-1) A^j : True
+======================================================================
+So C_{n-1} = |kappa_{2n}| / |a|^{2n}.  For Paley a=i sqrt(p), a^2=-p:
+  the two-point spectrum's free cumulants ARE the Catalan numbers (signed by (-p)^n).
+  c_0 = lim A_{2k}/p^{k+1} = C_k  is the (k+1)-th free cumulant magnitude /p^{k+1}.
+  This is DRT-universal (every doubly-regular tournament has spectrum {0,+-i sqrt n}),
+  hence non-arithmetic -- the correct spectral content behind HYP-2308.

@@ -1,4 +1,4 @@
-# The Paley-Catalan support is the EVEN-SERIES patterns, not the even cacti — and `A088368` lives only on the deterministic side of a random/deterministic duality
+# The Paley-Catalan support is the EVEN-SERIES patterns, not the even cacti — and the Catalan number is the FREE CUMULANT of the two-point spectrum (A088368 is the full-lattice over-count)
 
 *monad-explorer-2026-06-07 (deep-research / analytic lane, 4th session). A direct
 correction-and-deepening of `the-catalan-is-a-cancellation-from-gaussian-pairings-to-noncrossing.md`
@@ -47,39 +47,51 @@ a **number-theory-free** partition-lattice Möbius identity. (And the leading co
 re-confirmed rigorously, `c_0 = 2,5,14`, by clean `1/p` Richardson — the prior census, with
 `A_6/p^4 = 3.11` at `p=23`, was too slow to even distinguish `5` from `6`.)
 
-## The resonance: a random/deterministic duality, and where `A088368` lives
+## The resonance: the Catalan number is the FREE CUMULANT of the two-point spectrum
 
-Take the random antisymmetric Rademacher matrix `W` (`W_{ij}=±1` iid, `W_{ji}=−W_{ij}`).
-Wigner's law gives the same `c_0 = C_k`. But the random model reaches it **directly**: 
-`E[∏ W_e]` over a distinct walk is nonzero only when every edge repeats an even number of
-times, and the leading term is the **non-crossing pairings** — `C_k` of them, each weight
-exactly `+1`, **no factorials**. The same `ε = ∏ sign_e = +1` parity we proved above is
-what makes each surviving term `+1` in the random model too.
+(*Honesty correction.* My first instinct was a "random skew-Rademacher" duality — but the
+random antisymmetric-Rademacher **open distinct-path** sum `A_{2k}^W` is identically `0`
+(its `2k` edges are all distinct, each appearing once, mean zero). So there is no clean
+"random model gives `C_k`" for *this* object. The genuine spectral statement is sharper.)
 
-So the two sides see the *same* `C_k` through *different* objects:
+The Paley matrix `M[a,b]=χ(b−a)` has the **two-point spectrum** `{0} ∪ {±i√p}` (the
+defining DRT spectrum). The symmetric two-point law `ν = ½(δ_{a}+δ_{−a})` with `a=i√p`
+(`a²=−p`) has FREE CUMULANTS (`04-computation/two_point_free_cumulants_monad.py`, verified)
+```
+κ_{2n}(ν) = (−1)^{n−1} C_{n−1} a^{2n} = (−1)^{n−1} C_{n−1} (−p)^n,    so  |κ_{2n}|/p^n = C_{n−1}.
+```
+**The free cumulants of the two-point spectrum ARE the Catalan numbers.** So the Catalan in
+`c_0 = lim A_{2k}/p^{k+1}` is the *same* `C_k` that lives in the matrix's own spectrum — but
+on the **free-cumulant** side, not the moment side. The moments of `ν` are `(−p)^n` (whence
+`tr(M^{2k})=(−p)^k(p−1)`, two-point, NOT Catalan); the **free cumulants** are Catalan. The
+moment→free-cumulant inversion is exactly Möbius inversion over the lattice of **non-crossing**
+partitions — and the even-series Möbius identity `(★★)` is the path-integral shadow of that
+same inversion: the distinct-vertex (excluded-volume) constraint carves out the non-crossing /
+genus-0 part of the walk, which is precisely what the free cumulant measures.
 
-| | random `W` | deterministic Paley `χ` |
-|---|---|---|
-| bigon sector | non-crossing pairings, each `+1` → `C_k` | all-pairings with Möbius factorials → **A088368** (`~e·n!`) |
-| corrections | none (crossings & thetas vanish in expectation) | even cacti + even thetas + … cancel A088368 → `C_k` |
-| support | even patterns, summed as `(N)_V` | even-**series** patterns, summed with `μ(0̂,σ)` |
+So `A088368 = 1,3,13,69,…` is not a fact about Catalan — it is an **artifact of the
+deterministic Möbius expansion over the FULL partition lattice**. The free-cumulant side uses
+the *non-crossing* lattice (no `(b−1)!` cyclic-order over-counting), and gets `C_k` clean. The
+deterministic character-walk uses the full lattice, over-counts the bigon sector to A088368
+(`~e·n!`), and the even cacti + even thetas + … are exactly the corrections that project the
+full-lattice sum back onto the non-crossing sub-lattice. Two charts on one genus-0 object;
+`A088368` is a coordinate singularity, not an invariant.
 
-The over-count **A088368 = `1,3,13,69,…`** is therefore not a fact about the Catalan
-number — it is an **artifact of the deterministic Möbius expansion**. It is the
-`E[H]·e`-flavoured object (`a(n)~e·n!`) that appears because the deterministic route
-double-counts coincidences with `(b−1)!` cyclic-order weights that the random route never
-incurs. The deterministic and random expansions are two coordinate systems on the same
-genus-0 (planar, non-crossing) leading term; `A088368` is a coordinate singularity, not an
-invariant. Quasirandomness is exactly the statement that the change of coordinates is legal
-— and `(★★)` `Σ_{even-series} μ = (−1)^k C_k` is its exact combinatorial fingerprint.
+This is the right way to read **HYP-2308**: the free cumulants depend *only on the spectrum*,
+and **every** doubly-regular tournament has the same two-point spectrum `{0,±i√n}`. So the
+Catalan free-cumulants — and therefore the Catalan law for the distinct-walk leading
+coefficient — are **DRT-universal and non-arithmetic**. The arithmetic (`χ(□)=1`) enters only
+to make the deterministic walk saturate on the even-series patterns with `g≡+1`; the *value*
+`C_k` is spectral.
 
 ## What this points at
 
 1. The clean remaining write-up (handoff #1) is now genuinely number-theory-free and on the
-   *correct* support: prove `(★★)` by a non-crossing / free-cumulant bijection on even-series
-   patterns. The "`e`" that haunts this corner of the project (`R(p)→e`, `A088368 ~ e·n!`)
-   is, on the deterministic side, the *generating constant of the over-count being
-   cancelled* — `e` appears three ways now (the limit, the `exp(−χ(−1))`, and the
+   *correct* support: prove `(★★) Σ_{even-series} μ(0̂,σ) = (−1)^k C_k` by a non-crossing /
+   free-cumulant bijection on even-series patterns (the moment→free-cumulant inversion made
+   combinatorial). The "`e`" that haunts this corner of the project (`R(p)→e`,
+   `A088368 ~ e·n!`) is, on the deterministic side, the *generating constant of the over-count
+   being cancelled* — `e` appears three ways now (the limit, the `exp(−χ(−1))`, and the
    over-count's growth), all on one side of one cancellation.
 2. The collapse `g≡+1` used only antisymmetry + the Euler-walk pass-through + `χ(□)=1`.
    The first two are spectral/structural (any doubly-regular tournament has them); only
@@ -91,5 +103,7 @@ invariant. Quasirandomness is exactly the statement that the change of coordinat
 
 The lesson the project keeps re-teaching: when a clean number falls out of a messy sum,
 the messiness is usually a *coordinate choice*. Find the coordinates where the number is
-manifest (here: the random model's non-crossing pairings), and the deterministic mess
-(A088368, the factorials, the theta corrections) becomes the *price of the other chart*.
+manifest (here: the **free cumulants of the two-point spectrum**, where `C_k` is intrinsic
+and spectral), and the deterministic mess (A088368, the factorials, the theta corrections)
+becomes the *price of the other chart* — the full-partition-lattice walk standing in for the
+non-crossing lattice the free cumulant actually lives on.
