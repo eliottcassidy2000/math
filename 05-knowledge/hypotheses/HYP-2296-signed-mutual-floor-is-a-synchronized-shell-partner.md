@@ -92,7 +92,10 @@ proven exhaustive search (`signed_lrc_inf_highB.search`) at a **common B=13** fo
 
 The `n·inf` column is **1, 9/10, 5/6, 4/5** = `30/30, 27/30, 25/30, 24/30`: decrements `3,2,1` — a
 **decelerating** decrease, not a plunge. Per-n ceilings (best feasible B) tell the same story:
-`n·inf ≤` 1.000 (n=5, robust B≤22), 0.889 (n=6, B17), 0.833 (n=7, **stable** B13=B14), 0.842 (n=8, B12).
+`n·inf ≤` 1.000 (n=5, robust B≤22), 0.889 (n=6, B17), 0.833 (n=7, **stable** B13=B14),
+0.800 (n=8, 1/10 **stable** B13=B14). Firmed-up series `n·inf` = **1.000, 0.889, 0.833, 0.800**,
+decrements `0.111, 0.056, 0.033` (≈halving each step) ⟹ consistent with convergence to a
+positive constant (`≈ 0.75`), not to 0.
 
 **Reading (NOT a proof):** across `n=5..8` the best-known `n·inf` stays in `[0.80, 1.0]` and sits
 `~20–30×` **above** the `2/n²` unconditional lower bound, with the gap to that bound *widening* in `n`,
