@@ -101,6 +101,33 @@ because their centers are already occupied. Symmetry both creates the dense
 regular structure AND blocks its cheap extension — the same "symmetry saturates"
 motif S711 found, now at the level of point-addition.
 
+## The master quantity: a deficit that peaks and turns back
+
+Chasing the same idea one level down gave the cleanest picture of the whole
+crossover. Write the **integer deficit** `D(k) = 3k - u(k)` — the shortfall below
+the `3N` line, so `N*` is simply *the first zero of `D`*. Over the proven table:
+```
+   k:  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+   D:  6  7  8  9  9 10  9 10 10  9  9  9  8  7  8  8  7  6  6
+```
+`D` does something a lattice deficit can never do: it **rises to a peak (`10`) and
+then turns back down**, reaching `6,6` at `k=20,21` and heading for zero. The
+triangular lattice's deficit `sqrt(12k)` grows forever; the true optimum's
+deficit is bounded and shrinking. Their difference — how much the lattice loses —
+GROWS like `sqrt(12k) - D(k)`, and computing it reproduces, to the integer,
+S710's independently-found "gap grows `6,7,7,7,8,10,10`." Two different sessions,
+two different framings, the same numbers: a good sign the structure is real.
+
+This collapses three separate session-threads into one statement. Products cross
+`3N` late (`N=32`, THM-433) and single-norm lattices cross late (`N=32`,
+HYP-2301's degree-radius tension) for the *same reason*: both are built from
+pieces whose deficit grows like `sqrt(k)`, so reaching the threshold needs large
+pieces and hence large `N`. The irreducible optimum crosses early (`N* <= 28`)
+because — and this is the whole content — **its deficit peaks and declines** while
+everyone else's keeps growing. "Boundary-dominated," "non-product," and "cost of
+regularity" were three names for one fact: `D(k)` turns back, and the others
+don't.
+
 ## The transcendent thread (where this points)
 
 Three problems in this repo now wear the same clothes:

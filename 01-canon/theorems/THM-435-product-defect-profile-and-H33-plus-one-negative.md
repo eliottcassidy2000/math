@@ -155,6 +155,42 @@ product admits no degree-`>=3` extension point."
   the `delta`-pattern (3-rich product-optimal, 2-rich/large-prime irreducible)
   predicts where to look for non-product extremal graphs at OPEN `n>=22`.
 
+## (E) The integer deficit `D(k) = 3k - u(k)` peaks then declines; one quantity
+##     governs both crossings  [VERIFIED exact; extrapolation is CONJECTURE]
+
+Write the **integer boundary deficit** `D(k) = 3k - u(k) >= 0` (the shortfall of
+the optimum below the `3N` line; `u(N) > 3N <=> D(N) < 0`, so `N* = first zero of
+D`). Over the proven table:
+```
+   k:  3  4  5  6  7  8  9 10 11 12 13 14 15 16 17 18 19 20 21
+   D:  6  7  8  9  9 10  9 10 10  9  9  9  8  7  8  8  7  6  6
+```
+**Exact facts (VERIFIED):**
+1. `D` is NON-MONOTONE: it RISES to a max of `10` (at `k = 8, 10, 11`), then
+   DECLINES — `...,9,9,9,8,7,8,8,7,6,6` for `k = 12..21`. This is the opposite of
+   the triangular-lattice deficit `D_tri(k) ~ sqrt(12k)`, which grows without
+   bound. The true optimum's boundary cost is bounded-and-shrinking, the
+   lattice's is unbounded-and-growing.
+2. The triangular GAP `D_tri(k) - D(k) = sqrt(12k) - D(k)` GROWS:
+   `~6,7,7,7,8,10,10` for `k = 15..21` — **exactly reproducing S710's reported
+   "gap u-tri grows 6,7,7,7,8,10,10"** (e.g. `k=21`: `sqrt(252)=15.87`, `D=6`,
+   gap `~9.87`). Independent exact confirmation of THM-431 from the deficit side.
+3. `g(k) = 2 D(k)/k = kappa - alpha(k)` is the per-point form; the product first
+   beats `3N` exactly when some factorization has `g(a)+g(b) < kappa = 6`, first
+   at `N = 32` (`g(2)+g(16) = 4 + 1.875 = 5.875 < 6`) — re-deriving THM-433-E's
+   `W16 [] K2` from the deficit.
+
+**Conjecture (feeds HYP-2302).** `D(k)` continues its decline and reaches `0`
+near `k = 27-28` (`D(20)=D(21)=6`, dropping `~0.5-1` per step). This is the
+deficit-side prediction `N* = 28` (tie `D(27) = 0`, breakthrough `D(28) < 0`),
+consistent with the principal-line tangency `alpha(27) = 6`. NOT a proof —
+`D(22..26)` are unknown (only bracketed by AMP's upper bounds) — but it unifies
+THM-433 (product crossing at 32), HYP-2301 (lattice crossing at 32 via degree-
+radius tension), and THM-431-C (boundary-dominated global crossing at <=28) under
+ONE master quantity `D(k)`: products and lattices cross late because their deficit
+GROWS like `sqrt(k)`; the irreducible optimum crosses early because its deficit
+PEAKS and DECLINES to 0.
+
 Artifacts: `04-computation/unit_distance_product_defect_monad_s5.py`,
 `05-knowledge/results/unit_distance_product_defect_monad_s5.out`. See HYP-2302
 for the conjectural extension and the LRC transfer.

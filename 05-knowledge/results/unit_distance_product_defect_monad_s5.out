@@ -94,3 +94,39 @@ H(3,3)+1 probe (EXACT, circumcircle method):
      ==> the n=28 crosser is NOT 'H(3,3) + one boundary point'; it is
      a genuinely DIFFERENT irreducible blob (consistent with THM-433).
 DONE.
+
+==============================================================================
+PART E.  Atomic deficit g(k)=6-2u/k = 2(3k-u(k))/k  and its 1/sqrt(k) law
+==============================================================================
+  k  u(k)  3k-u  g(k)=2(3k-u)/k  sqrt(k)*g Harborth sqrt(12k)
+  3     3     6          4.0000     6.9282             6.0000
+  4     5     7          3.5000     7.0000             6.9282
+  5     7     8          3.2000     7.1554             7.7460
+  6     9     9          3.0000     7.3485             8.4853
+  7    12     9          2.5714     6.8034             9.1652
+  8    14    10          2.5000     7.0711             9.7980
+  9    18     9          2.0000     6.0000            10.3923
+ 10    20    10          2.0000     6.3246            10.9545
+ 11    23    10          1.8182     6.0302            11.4891
+ 12    27     9          1.5000     5.1962            12.0000
+ 13    30     9          1.3846     4.9923            12.4900
+ 14    33     9          1.2857     4.8107            12.9615
+ 15    37     8          1.0667     4.1312            13.4164
+ 16    41     7          0.8750     3.5000            13.8564
+ 17    43     8          0.9412     3.8806            14.2829
+ 18    46     8          0.8889     3.7712            14.6969
+ 19    50     7          0.7368     3.2118            15.0997
+ 20    54     6          0.6000     2.6833            15.4919
+ 21    57     6          0.5714     2.6186            15.8745
+  sqrt(k)*g(k) drifts toward a constant ~ the optimum's boundary const
+  (< 4sqrt3=6.93, the triangular value, since the TRUE optimum beats the
+   lattice on boundary economy -- exactly THM-431-C / HYP-2301's point).
+
+Product-crossing test: smallest N=a*b with g(a)+g(b) < kappa=6
+  first product factorization with combined deficit < 6: (32, 2, 16, 5.875)
+  (matches THM-433-E's first product BEAT at N=32 within proven range)
+  symmetric heuristic with triangular c=6.928: N_prod* ~ (c/3)^4 = 28.4
+  => BOTH crossings (product ~32, global ~28) are set by the SAME atomic
+     deficit decay g(k)~c/sqrt(k); the global one is EARLIER because an
+     irreducible blob realizes a SMALLER effective c (better boundary).
+ALL DONE.
