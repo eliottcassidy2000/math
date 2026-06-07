@@ -1,0 +1,19 @@
+predicted asymptotic average rosette size = 12 + 2pi/sqrt3 = 15.627599
+       T    avg #units (all t)   avg (non-degen t)
+    1000             15.639640           15.427699
+   10000             15.629163           15.534701
+  100000             15.627936           15.591753
+ 1000000             15.627556           15.613881
+
+Record rungs (new max #unit-vectors as t increases), t<=200000:
+  t=     2  #units=  12  B=  0  t={2: 1}
+  t=     3  #units=  18  B=  1  t={3: 1}
+  t=    13  #units=  24  B=  2  t={13: 1}
+  t=    49  #units=  30  B=  3  t={7: 2}
+  t=   133  #units=  36  B=  4  t={7: 1, 19: 1}
+  t=   637  #units=  48  B=  6  t={7: 2, 13: 1}
+  t=  1729  #units=  60  B=  8  t={7: 1, 13: 1, 19: 1}
+  t=  8281  #units=  66  B=  9  t={7: 2, 13: 2}
+  t= 12103  #units=  84  B= 12  t={7: 2, 13: 1, 19: 1}
+  t= 53599  #units= 108  B= 16  t={7: 1, 13: 1, 19: 1, 31: 1}
+  t=157339  #units= 120  B= 18  t={7: 2, 13: 2, 19: 1}

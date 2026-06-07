@@ -165,6 +165,30 @@ and `h′=−d` (→ M=t). Either route gives valid-`M` set `= {1, t}` exactly.
   non-degenerate `t ∈ [2,400]`**; valid-`M`-set `= {1,t}` confirmed for all `t ≤ 500`.
   Output: `05-knowledge/results/moser_ladder_unit_count_law_monad_s5.out`.
 
+## Corollary — ladder average is a Gauss-circle constant; record rungs  *(second S5 session)*
+
+Since `#units(L_t) = 12 + r_E(t)` and `Σ_{t ≤ T} r_E(t)` counts nonzero Eisenstein
+integers of norm `≤ T` (the **hexagonal Gauss-circle problem**) `~ (2π/√3)·T`, the
+**average rosette size over the Moser ladder is exactly**
+
+> `(1/T) Σ_{t≤T} #units(L_t) → 12 + 2π/√3 = 15.62759…`
+
+(verified numerically: 15.62756 at `T=10⁶`). This is the precise analytic sense in which
+`#units` is "the local factor of `ζ_{ℚ(√−3)}`": its Cesàro mean is the residue-type
+constant `2π/√3` of the triangular lattice — **π enters the unit-distance count through the
+triangular lattice's point density**, a new instance of the project's `π`-from-the-triangle
+motif (`07-reflections/everything-is-the-triangle.md`).
+
+**Record rungs** (densest rosettes; new max as `t` grows) are the *split-rich* indices —
+products of primes `≡ 1 mod 3`:
+`t = 3, 13, 49, 133, 637, 1729, …` giving `#units = 18, 24, 30, 36, 48, 60, …`. Notably
+`t = 1729 = 7·13·19` (all `≡ 1 mod 3`, all split in `ℤ[ζ₆]`) gives a **60-unit-vector
+rosette** — and `1729 = H(T₁₁)/|Aut(T₁₁)|` of the core tournament theory (OPEN-Q-013).
+*Flagged resonance (honest):* both expose `1729` as "completely split in `ℚ(√−3)`"; the
+Moser-ladder appearance is structural (8 ideals of norm 1729 → `B=8`), the tournament
+appearance is the taxicab number arising from Paley `T₁₁` — the shared content is only the
+factorization `1729 = 7·13·19`, not (yet) a proven structural bridge.
+
 ## Honest scope
 
 - PROVED in full (the `Q(u,w)=t(u−w)²+uw` rigidity needs no computation); the
