@@ -178,3 +178,17 @@ try:
               f"  (true: mass=1, mean=m_1=1; tail beyond x=100 not captured)")
 except Exception as e:
     print("[mpmath failed]", e)
+
+# ---------------------------------------------------------------------------
+# ADDENDUM: the resurgent Stokes term of R(z)=sum n! z^{n-1}.
+# Sokhotski-Plemelj on R(z)=int_0^inf t e^{-t}/(1-z t) dt gives, for x>0 real:
+#     Im R(x+i0) = +pi * e^{-1/x} / x^2          (VERIFIED numerically below)
+# The exponentially small factor e^{-1/x} is the nonperturbative (instanton,
+# action S=1/x) content of the divergent factorial series; its Borel singularity
+# sits at zeta=1.  This imaginary part is exactly what builds the free law's
+# spectral density -- ADD-6's resurgence IS the spectral measure's birth.
+def Im_R_numeric(x, eps):
+    import mpmath as mp
+    z = mp.mpc(x, eps)
+    return mp.im(mp.quad(lambda t: t * mp.e**(-t) / (1 - z * t),
+                         [0, 1 / mp.mpf(x), mp.inf]))

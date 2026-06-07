@@ -919,3 +919,122 @@ beside its Stirling/Gamma appearance).
   `A088368~e·k!` resemble the exponential law's `∫x^k e^{-x}=k!`; is it a known free analog?). If
   the law is classical-named, its free-cumulant divergence may give the resurgence structure of
   the OFF-diagonal columns `P_m` directly.
+
+---
+
+## ADDENDUM-12 (monad-explorer-2026-06-07, deep-research 14th session) — the factorial law `κ_n=n!` IS A NAMED, GENUINE DISTRIBUTION: the FREE COMPOUND POISSON of the exponential Lévy measure `e^{-x}dx`; its classical twin (over-count A000262) is the CLASSICAL compound Poisson of the SAME measure; the law is a real probability measure on `[0,∞)` (Hankel `D_0..D_8>0`); and the `R`-transform's resurgence (ADD-6) is its Borel-sum integral with Stokes term `Im R(x+i0)=π e^{-1/x}/x²`
+
+**Seed:** ADD-11 named the diagonal `t(k,k)=A088368` as the free MOMENTS of the "factorial law"
+(`κ_n=n!`) and the over-count `A000262` as its CLASSICAL moments, and left an explicit lead:
+*identify `κ_n=n!` as a named distribution; its moments `~e·k!` resemble the exponential law's
+`∫x^k e^{-x}=k!`.* This session closes that lead: the underlying object is the **exponential
+measure** `ν=e^{-x}dx`, and **both endpoints are compound-Poisson laws of `ν`** — classical on
+the full partition lattice (`A000262`), free on the non-crossing sublattice (`A088368`).
+Verification: `04-computation/paley_starstar_compound_poisson_monad.py`,
+`paley_starstar_factorial_law_measure_monad.py` (+`.out`), exact integers + 30-digit numerics.
+Mesh `agent-msg send` still DOWN (http 000); repo-only coord; rebased clean on own 13th
+(`ed187b2`). **All headline statements (`A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)`, column
+rationality, both handoff values) UNCHANGED/strengthened.**
+
+### (1) THE LÉVY MEASURE IS THE EXPONENTIAL `e^{-x}dx`; both moment endpoints are compound Poisson of it.
+The cumulant sequence common to both endpoints is `κ_n=n!`, and
+```
+        κ_n = n! = ∫_0^∞ x^n e^{-x} dx        (n≥1)      — the moments of  ν = e^{-x}dx.
+```
+A cumulant sequence that equals the moment sequence of a finite positive measure `ν` is exactly
+the signature of a **compound Poisson** law with Lévy measure `ν` (here `ν` has total mass
+`∫_0^∞ e^{-x}dx = 1`, so rate `λ=1`, jump distribution = `Exp(1)`). The two classical/free
+realisations differ only by which partition lattice the moment–cumulant inversion runs over:
+```
+   CLASSICAL  m_k^{cl} = Σ_{ALL π of [k]} ∏_B κ_{|B|} = A000262(k)   = classical CP of ν;
+   FREE       m_k^{fr} = Σ_{NC(k)}        ∏_B κ_{|B|} = A088368(k)   = free      CP of ν  (the diagonal).
+```
+**VERIFIED (exact, k≤9, `paley_starstar_compound_poisson_monad.py`):** classical all-partition
+sum `= A000262 = 1,1,3,13,73,501,4051,37633,394353,4596553`; free NC sum `= A088368`. The
+classical compound-Poisson cumulant g.f. is closed-form **PROVED** (sympy):
+```
+   ∫_0^∞ (e^{tx}−1) e^{-x} dx  =  t/(1−t)  (for t<1)  =  Σ_{n≥1} κ_n t^n/n! = Σ_{n≥1} t^n,
+```
+the classical cumulant g.f. with `κ_n=n!`. So `A000262`'s MGF `exp(x/(1−x))` (EGF of "sets of
+lists") IS `exp(∫(e^{tx}−1)e^{-x}dx)` — a compound Poisson with exponential jumps. Combinatorially
+transparent: a block of size `s` carries weight `|B|!=s!=` #linear orders `=∫x^s e^{-x}` —
+**"lists" ARE the exponential Lévy measure**; "set of lists" = classical CP, "non-crossing set of
+lists" = free CP.
+
+### (2) THE FREE `R`-TRANSFORM IS THE BOREL SUM OF THE FACTORIAL SERIES — ADD-6's resurgence resolved into a convergent integral.
+The factorial law's `R`-transform is the divergent series `R(z)=Σ_{n≥1} n! z^{n-1}` (ADD-6's
+Gevrey-1 obstruction). As a free-compound-Poisson law of `ν` it has the **convergent** Borel-sum
+representation
+```
+   R(z) = ∫_0^∞ x/(1−zx) ν(dx) = ∫_0^∞ t e^{-t}/(1−z t) dt     (Borel sum, z<0).
+```
+Its **Borel transform** is `B(ζ)=Σ_{n≥1} ζ^n = ζ/(1−ζ)`, with the unique singularity at `ζ=1`.
+**VERIFIED (`paley_starstar_compound_poisson_monad.py`):** optimal-truncation of the divergent
+series matches the integral to `|diff|≈8.5e-20` at `z=−0.02` (and `2.3e-7` at `z=−0.05`). So
+ADD-6's "resurgence" is no longer an obstruction — it is a closed-form integral; the divergence
+is precisely the factorial growth of `ν`'s moments.
+
+### (3) THE STOKES / INSTANTON TERM `Im R(x+i0)=π e^{-1/x}/x²` IS THE FREE LAW'S SPECTRAL CONTENT.
+Sokhotski–Plemelj on the Borel integral gives, for real `x>0`,
+```
+   Im R(x+i0) = π · e^{-1/x} / x²          — VERIFIED numerically (ε→0 limit),
+```
+e.g. `x=1: 1.15573 (= π/e)`, `x=2: 0.476368`, `x=3: 0.250117`, all matching to ~5 digits
+(`paley_starstar_factorial_law_measure_monad.py`). The exponentially small `e^{-1/x}` is the
+**nonperturbative (instanton, action `S=1/x`) content** born from the Borel singularity at
+`ζ=1`. This imaginary part is exactly what the Cauchy-transform inversion turns into the free
+law's **spectral density** — ADD-6's resurgence IS the spectral measure's birth, not an obstacle.
+
+### (4) THE FACTORIAL LAW IS A GENUINE PROBABILITY MEASURE ON `[0,∞)` — not merely a formal law.
+A super-exponentially growing free-cumulant sequence need not correspond to any positive measure.
+It does here. **VERIFIED (exact rationals, `paley_starstar_factorial_law_measure_monad.py`):**
+the Hankel determinants of `A088368`,
+```
+   D_0..D_8 = 1, 2, 20, 1792, 2597632, 94511618048, 1.245e17, 8.068e24, 3.356e34  — ALL > 0,
+```
+so the moment sequence is positive-definite ⟹ a genuine probability measure `μ` on `ℝ`; and the
+**shifted** Hankel `det[m_{i+j+1}]` are all `>0` too ⟹ `supp μ ⊆ [0,∞)` (Stieltjes). Numerically
+`μ` has a `1/√x` edge at `0` (critical free Poisson, `λ=1`, Marchenko–Pastur-type) and an
+exponential right tail `~e·e^{-x}` (consistent with `m_k~e·k!` and the free-CP tail = Lévy-measure
+tail). So the diagonal `A088368` is literally the moment sequence of a real, determinate
+(Carleman: `Σ m_k^{-1/2k}=∞`) measure — the free exponential-jump Poisson law.
+
+### (5) THE LAW IS GENUINELY NON-CLASSICAL — its Jacobi parameters are rational but not polynomial.
+The continued-fraction (orthogonal-polynomial) parameters of `μ` are
+```
+   b_n     = 1, 4, 26/5, 1969/280, 5154545/568232, …        (b_0=m_1=1, NOT integer/linear)
+   λ_n=a_n²= 2, 5, 224/25, 50735/3136, …                    (λ_1=Var=2, NOT integer/linear).
+```
+For every classical family (Hermite/Laguerre/Meixner/…) these are polynomial in `n`; here they
+are non-integer rationals with no polynomial pattern. So `μ`'s orthogonal polynomials are a
+**new, non-classical family** — the "structurelessness" ADD-10/11 found along the triangle's
+interior persists even in the law's own continued fraction. (The classical twin `A000262`, the
+classical CP, is the better-behaved exponential-formula side; the free twin is the wild one.)
+
+### (6) UNIFICATION — one measure `ν=e^{-x}dx` underlies ADD-4, ADD-6, ADD-10, ADD-11.
+| object | role of `ν=e^{-x}dx` |
+|---|---|
+| `A000262` (classical over-count, ADD-4/11) | moments of CLASSICAL compound Poisson of `ν` |
+| `A088368` (diagonal, ADD-10/11) | moments of FREE compound Poisson of `ν` |
+| `κ_n=n!` (the common cumulants, ADD-11) | the moments `∫x^n ν` of the Lévy measure |
+| `R(z)=Σn!z^{n-1}` divergent (ADD-6) | Borel sum `∫ te^{-t}/(1−zt)dt`; Stokes `π e^{-1/x}/x²` |
+| `m_k~e·k!` (MISTAKE-063, ADD-10) | `μ`'s exponential tail `~e·e^{-x}` (free-CP tail = `ν` tail) |
+The classical/free dichotomy (full vs non-crossing lattice) is now a SINGLE Lévy measure seen
+through classical vs free convolution. (The OTHER endpoint, the signed-sum Catalan `(−1)^kC_k`,
+remains the free CUMULANTS of the two-point law — ADD-4 — a *different* law; that is still why no
+single law's moment↔cumulant transform names the interior path.)
+
+### (7) Handoffs updated.
+- **CLOSED (this session):** the factorial law `κ_n=n!` is named — the free compound Poisson of
+  the exponential Lévy measure `e^{-x}dx` — and is a genuine probability measure on `[0,∞)`. ADD-6
+  resurgence resolved to the Borel integral with Stokes term `π e^{-1/x}/x²`.
+- **NEW lead (the off-diagonal columns):** with the diagonal law identified, the OFF-diagonal
+  `t(k,m)` may be the **bivariate free CP** generating function `U(x,y)` read as the free-Poisson
+  family in the rate/marking variable `y`; the Marchenko–Pastur-type Cauchy transform of `μ`
+  (`K(w)=1/w+∫te^{-t}/(1−wt)dt`) is now explicit, so a `y`-deformation of `K` may hand over `P_m`
+  (currently OEIS-negative). Concretely: does `U(x,y)` solve `M=F(y·zM)`-type with `F` the
+  exponential-integral kernel?
+- **Still open (tame end):** handoff #1 `(k)_m|t(k,m)`, handoff #2 `g_m(−1)=(−1)^m(2^m−1)`.
+- **Still open (diagonal census):** the combinatorial step `t(k,k)=Σ_{NC(k)}∏|B|!` (doubled
+  plane trees ↔ Callan noncrossing lists), VERIFIED k≤7; the free-prob half is PROVED (ADD-11).
+- `t(7,5)` still uncomputed (core-aware k=7 enumerator).
