@@ -26,10 +26,17 @@ A major math breakthrough has been achieved (June 6):
 - **THM-430:** Elegantly unifies the shell-partner $q$-denominator and the torsion leak. 
 - **Significance:** The half-turn (2-torsion) is identified as the fixed points of the antipodal involution. While this creates the loudest "cell leak," it is structurally excluded from being the binding minimizer for the floor.
 
-### 2.4 HYP-2297 (Clock-Alignment Hypothesis)
+### 2.4 THM-436 Addendum: The Icosahedral Threshold & Honesty Fix
+A major correction and refinement regarding the 5-point solvability threshold (Abel–Ruffini) was logged (MISTAKE-059):
+- **Commutator Covering (Correction):** The covering of 3-cycles by oriented overlapping triangle-pairs is NOT uniformly 3-to-1 (icosahedral face-vertex flag analogy). The covering is onto, but fibers vary in size ({2, 3, 4}). The oriented count remains $60 \cdot C(n,5)$.
+- **Localization:** The "5-point cause" is local; each 5-set contributes exactly 15 unoriented overlapping cyclic-triangle pairs.
+- **The Icosahedral Fifteen:** There is a canonical bijection between these 15 overlapping pairs and the 15 involutions (2-fold axes) of the icosahedral group $A_5$.
+- **HYP-2305:** Identifies a "(2,3,5)" resonance between the icosahedron's axis orders and the project's primary carry-prime frontiers (doubling, prime-3/n=27, and n=5 cyclotomic).
+
+### 2.5 HYP-2297 (Clock-Alignment Hypothesis)
 - **HYP-2297:** The optimal denominator $q$ aligns with clock primes ($gcd(q, n) > 1$) rather than shell primes.
 
-### 2.5 THM-429 & HYP-2296 Finalization
+### 2.6 THM-429 & HYP-2296 Finalization
 - **THM-429 (Proved):** Signed Pairwise Floor = Max-Cut LRC. The floor $1/n$ survives iff some cut keeps $r_{min} \le n-1$.
 - **HYP-2296 (Synchronized Shell-Partners):** For a binding pair $\{a, b\}$, $a+b=q$, where $q$ is the denominator of the optimal time $t^*$.
 
