@@ -1,0 +1,33 @@
+=== validate value-pairing silent(H_3) construction vs brute (3|C, C<=39) ===
+  C=  9 m= 3: |constructed|=    2 |brute|=    2 dim=1 OK
+  C= 15 m= 5: |constructed|=    4 |brute|=    4 dim=2 OK
+  C= 21 m= 7: |constructed|=    8 |brute|=    8 dim=3 OK
+  C= 27 m= 9: |constructed|=   16 |brute|=   16 dim=4 OK
+  C= 33 m=11: |constructed|=   32 |brute|=   32 dim=5 OK
+  C= 39 m=13: |constructed|=   64 |brute|=   64 dim=6 OK
+  ALL MATCH: True
+
+=== C=27 (n=14, m=C/3=9) : silent(H_3) has 16 cuts (dim 4) ===
+  other single moves H_d, d|C: [9]
+  H_9 co-silent with H_3 at 4 of 16 cuts => SIZE->=4 classes EXIST. example neg-mags=[2, 5, 6, 8, 11]
+
+=== C=45 (n=23, m=C/3=15) : silent(H_3) has 128 cuts (dim 7) ===
+  other single moves H_d, d|C: [5, 9, 15]
+  H_9 co-silent with H_3 at 8 of 128 cuts => SIZE->=4 classes EXIST. example neg-mags=[3, 4, 8, 9, 10, 13, 14, 18, 19]
+  H_15 co-silent with H_3 at 8 of 128 cuts => SIZE->=4 classes EXIST. example neg-mags=[2, 5, 8, 9, 11, 12, 14, 17, 20]
+
+=== C=63 (n=32, m=C/3=21) : silent(H_3) has 1024 cuts (dim 10) ===
+  other single moves H_d, d|C: [7, 9, 21]
+  H_9 co-silent with H_3 at 16 of 1024 cuts => SIZE->=4 classes EXIST. example neg-mags=[4, 5, 6, 11, 12, 13, 14, 18, 19, 20, 25, 26, 27]
+  H_21 co-silent with H_3 at 16 of 1024 cuts => SIZE->=4 classes EXIST. example neg-mags=[2, 5, 8, 11, 12, 14, 15, 17, 18, 20, 23, 26, 29]
+
+=== C=81 (n=41, m=C/3=27) : silent(H_3) has 8192 cuts (dim 13) ===
+  other single moves H_d, d|C: [9, 27]
+  H_9 co-silent with H_3 at 32 of 8192 cuts => SIZE->=4 classes EXIST. example neg-mags=[5, 6, 7, 8, 14, 15, 16, 17, 18, 23, 24, 25, 26, 32, 33, 34, 35]
+  H_27 co-silent with H_3 at 32 of 8192 cuts => SIZE->=4 classes EXIST. example neg-mags=[2, 5, 8, 11, 14, 15, 17, 18, 20, 21, 23, 24, 26, 29, 32, 35, 38]
+
+=== C=99 (n=50, m=C/3=33) : silent(H_3) has 65536 cuts (dim 16) ===
+  other single moves H_d, d|C: [9, 11, 33]
+  H_9 co-silent with H_3 at 64 of 65536 cuts => SIZE->=4 classes EXIST. example neg-mags=[6, 7, 8, 9, 10, 17, 18, 19, 20, 21, 22, 28, 29, 30, 31, 32, 39, 40, 41, 42, 43]
+  H_33 co-silent with H_3 at 64 of 65536 cuts => SIZE->=4 classes EXIST. example neg-mags=[2, 5, 8, 11, 14, 17, 18, 20, 21, 23, 24, 26, 27, 29, 30, 32, 35, 38, 41, 44, 47]
+

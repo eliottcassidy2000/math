@@ -1,0 +1,22 @@
+=== C=27=3x3x3 n=14: silent(H_3) has 16 cuts, dimV=2 ===
+  |G_eps|=2: 12 cuts  (=> 6 classes of size 2 touching silent(H_3))
+  |G_eps|=4: 4 cuts  (=> 1 classes of size 4 touching silent(H_3))
+    size-4 example: silent moves (besides H_3) = [[9], [3, 6, 12], [3, 6, 9, 12]]
+
+=== C=45=3x3x5 n=23: silent(H_3) has 128 cuts, dimV=4 ===
+  |G_eps|=2: 112 cuts  (=> 56 classes of size 2 touching silent(H_3))
+  |G_eps|=4: 16 cuts  (=> 4 classes of size 4 touching silent(H_3))
+    size-4 example: silent moves (besides H_3) = [[15], [5, 10, 20], [5, 10, 15, 20]]
+
+=== C=63=3x3x7 n=32: silent(H_3) has 1024 cuts, dimV=4 ===
+  |G_eps|=2: 992 cuts  (=> 496 classes of size 2 touching silent(H_3))
+  |G_eps|=4: 32 cuts  (=> 8 classes of size 4 touching silent(H_3))
+    size-4 example: silent moves (besides H_3) = [[21], [7, 14, 28], [7, 14, 21, 28]]
+
+=== C=81=3x3x3x3 n=41: silent(H_3) has 8192 cuts, dimV=3 ===
+  |G_eps|=2: 7920 cuts  (=> 3.96e+03 classes of size 2 touching silent(H_3))
+  |G_eps|=4: 264 cuts  (=> 66 classes of size 4 touching silent(H_3))
+  |G_eps|=8: 8 cuts  (=> 1 classes of size 8 touching silent(H_3))
+    size-4 example: silent moves (besides H_3) = [[27], [3, 6, 12, 15, 21, 24, 30, 33, 39], [3, 6, 12, 15, 21, 24, 27, 30, 33, 39]]
+    size-8 example: silent moves (besides H_3) = [[27], [9, 18, 36], [9, 18, 27, 36], [3, 6, 12, 15, 21, 24, 30, 33, 39], [3, 6, 12, 15, 21, 24, 27, 30, 33, 39], [3, 6, 9, 12, 15, 18, 21, 24, 30, 33, 36, 39], [3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 39]]
+
