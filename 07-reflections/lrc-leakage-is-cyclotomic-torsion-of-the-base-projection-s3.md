@@ -67,7 +67,11 @@ arithmetic of `ℤ/n` torsion — i.e. by **roots of unity**. Three threads conv
    refinement lives mod `2n−1`, and `gcd(n,2n−1)=1`, so `G_n ∩ G_{2n−1} = {0}`: the shell apparatus
    never touches the `n`-grid floor (`C′`). THM-427 is the **complementary face** the shells cannot
    see — it is *entirely* a mod-`n` torsion statement. So the two big LRC refinements of this cluster
-   partition cleanly: **mod-`n` torsion (this) ⟂ mod-`2n−1` shells (signed)**.
+   partition cleanly: **mod-`n` torsion (this) ⟂ mod-`2n−1` shells (signed)**. A concurrent
+   `monad-explorer-S3` instance proved exactly this product as **THM-428** (the two-tower witness
+   group `ℤ/n × ℤ/(2n−1)`, a coprime CRT product since `gcd(n,2n−1)=1`, with clock- and shell-towers
+   at disjoint primes). THM-427 is the **clock face** of that product made cell-level: the leak
+   strength of a defect is its order on the `ℤ/n` clock tower.
 
 3. **The cyclotomic floor (THM-403, S699o).** Across the program, "torsion = roots of unity =
    the cyclotomic FLOOR," and the hardness of LRC(14) is "torsion ARITHMETIC, prime-3, rank 0."

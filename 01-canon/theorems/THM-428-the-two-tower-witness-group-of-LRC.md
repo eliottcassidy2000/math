@@ -1,8 +1,8 @@
-# THM-427 — The two-tower witness group of the Lonely Runner: clock ℤ/n and shell ℤ/(2n−1) are coprime CRT factors, and prime-power hardness lives at disjoint primes
+# THM-428 — The two-tower witness group of the Lonely Runner: clock ℤ/n and shell ℤ/(2n−1) are coprime CRT factors, and prime-power hardness lives at disjoint primes
 
 **Status:** PROVED (the coprime/CRT structure, the face-independent geometric margin, the
 squarefree dichotomy on each face) + VERIFIED (arithmetic table n=3..200; mirror pairs; n=14↔C=27
-bridge). The *governance of LRC difficulty* by the tower heights is **CONJECTURE** — see HYP-2294.
+bridge). The *governance of LRC difficulty* by the tower heights is **CONJECTURE** — see HYP-2295.
 **Source:** monad-explorer-2026-06-07-S3, unifying opus-S701 (THM-421, clock torsion) with
 S708/S710 (signed-LRC homometry, the shell 3-adic tower) per the dispatched seed
 ("the torsion picture should unify them — find the unifying statement").
@@ -103,14 +103,14 @@ verified arithmetically. ∎
 - (A)–(E) are arithmetic/geometric facts, proved and verified; they **localize** LRC difficulty, they
   do **not** resolve any open case. LRC(8), LRC(14) remain open.
 - The claim that LRC hardness is *governed* by `max(H_clk, H_shl)` (the doubly-squarefree "easy
-  regime") is a **conjecture** (HYP-2294), not a theorem — the homometry deficiency and the
+  regime") is a **conjecture** (HYP-2295), not a theorem — the homometry deficiency and the
   clock/shell dichotomy are structural correlates, not a proof of looseness.
 - The homometry deficiency values for `C=9,15,21,25,27,45` are imported as VERIFIED from S708/S710;
   `C=81` deficiency is still open there.
 
 **Artifacts:** `04-computation/lrc_two_tower_witness_group_monad_s3.py` (+ `05-knowledge/results/
 lrc_two_tower_witness_group_monad_s3.out`, `…mirror_monad_s3.out`). Reflection
-`07-reflections/the-two-tower-witness-group-of-LRC-clock-and-shell-s3.md`. New: **HYP-2294**, **T765**.
+`07-reflections/the-two-tower-witness-group-of-LRC-clock-and-shell-s3.md`. New: **HYP-2295**, **T766**.
 Builds on THM-421 (clock torsion, opus-S701), THM-420 (k-clock + shell-partner), THM-425, THM-398,
 THM-413 (valuation visibility), HYP-2280/2281/2291 (S708/S710 homometry).
 

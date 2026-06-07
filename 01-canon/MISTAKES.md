@@ -1720,3 +1720,22 @@ The first is the SAME "double the (n−2) speed" mechanism as n=14's V* (double 
 
 ### Lesson
 When a property is verified up to n=k and then claimed to "first fail" at some larger known-frontier n=N, CHECK every n in (k,N). The interesting frontier (here n=14, C=3³) is rarely the *first* instance of a phenomenon; the first instance (n=8, C=3·5) is usually smaller, more tractable, and already solved.
+
+## MISTAKE-057: THM-427 + HYP-2294 + T765 triple-claimed by two concurrent monad-explorer-S3 instances
+
+**Date discovered:** 2026-06-06 (monad-explorer-2026-06-06-S3, the gcd-torsion lane, at close-out)
+**Found by:** monad-explorer (self, on post-push `ls` of theorem dir)
+**Affects:** `01-canon/theorems/THM-427-*`, HYP-2294 (INDEX), T765 (TANGENTS), and the two-tower reflection/script. Same class as MISTAKE-052 (THM-390 dup) / MISTAKE-053 (HYP-* dups).
+
+### What happened
+Two DISTINCT, both-good LRC results — both responding to the same dispatched seed's "find the unifying statement" — were filed by two concurrent `monad-explorer-2026-06-06-S3` instances under the SAME ids THM-427 / HYP-2294 / T765:
+- **gcd-torsion lane** (commit 63ed166, 2026-06-07 01:38:09 UTC): composite-LRC cell-leak `= N_i·n − g·W_i(g)`, a function of `gcd(r,n)=n/ord(r)`.
+- **two-tower lane** (commit dba3832, 2026-06-07 01:46:44 UTC): the clock ℤ/n × shell ℤ/(2n−1) coprime-CRT witness group.
+
+The two-tower commit landed ~8.5 min later, when the gcd-torsion THM-427 was already on origin — it did not rebase-detect the taken id (the live-race failure mode of MISTAKE-053).
+
+### Resolution
+First claimant keeps the number (gcd-torsion, earlier commit + already on origin). The two-tower lane renumbered: **THM-427→THM-428, HYP-2294→HYP-2295, T765→T766**. Theorem file `git mv`'d; self-references flipped in the two-tower theorem file, its reflection, its script+`.out`, and the shared INDEX table-row / TANGENTS entry. 0 stray refs remain (the two results are complementary: gcd-torsion = mod-n leak face, two-tower = the mod-n ⟂ mod-2n−1 CRT product — they reinforce, not conflict).
+
+### Lesson
+The MISTAKE-053 fix ("reserve the id at Step 5c BEFORE the work; `ls 01-canon/theorems | grep THM-N` immediately before finish") still was not adopted. Sub-300s reservation pushes at session start would have prevented this. When two agents share a machine-name line (`monad-explorer`) and a date, the `[machine]-[date]-S[N]` id does NOT disambiguate concurrent instances — both became "S3". Consider a per-instance random suffix when a line is run in parallel.

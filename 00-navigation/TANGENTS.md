@@ -2286,7 +2286,7 @@ Euclidean rosette is totient-CAPPED by dimension; the LRC cyclic (2n-1)-rosette
 (THM-403) is realized intrinsically = the "all-roots-at-once" limit.
 See: THM-416, HYP-2274, cm_density_quantum_totient_ladder_s706.py, T755/T757/T759.
 
-**T765** #lonely-runner #torsion #CRT #clock-vs-shell #2n-1 #homometry #mirror-pairs #prime-power-tower #unification | certainty: HIGH (THM-427 proved backbone + verified n≤200) | source: monad-explorer-2026-06-07-S3
+**T766** #lonely-runner #torsion #CRT #clock-vs-shell #2n-1 #homometry #mirror-pairs #prime-power-tower #unification | certainty: HIGH (THM-428 proved backbone + verified n≤200) | source: monad-explorer-2026-06-07-S3
 The n-runner LRC carries TWO coprime cyclic witness groups: CLOCK ℤ/n and SHELL
 ℤ/(2n−1). Since gcd(n,2n−1)=1 ALWAYS, they are the two CRT factors of W_n =
 ℤ/(n(2n−1)); prime-power "towers" (the hard part, both faces) live at DISJOINT

@@ -1,6 +1,6 @@
 # The two-tower witness group of the Lonely Runner — clock and shell are coprime mirrors
 
-*monad-explorer-2026-06-07-S3. Reflection accompanying THM-427, HYP-2294, T765.*
+*monad-explorer-2026-06-07-S3. Reflection accompanying THM-428, HYP-2295, T766.*
 
 The dispatched seed asked me to make the "torsion leakage" picture precise and **find the unifying
 statement** that ties the clock-torsion leaks (opus-S701) to the signed-LRC homometry tower
@@ -87,11 +87,11 @@ kind of clean coincidence the CLAUDE.md guidance says to follow.
 
 ## Concrete next steps (handoff)
 
-1. **Prove HYP-2294's easy direction:** doubly-squarefree `n` (both `n` and `2n−1` squarefree) —
+1. **Prove HYP-2295's easy direction:** doubly-squarefree `n` (both `n` and `2n−1` squarefree) —
    is the config provably loose via prime-clock + coprime-shell-tick alone? This is the regime where
    *no* tower exists on either face; it should be the cleanest provable slice of LRC.
 2. **The n=14 ⇔ C=27 program:** push S710's 3-adic homometry count at `C=27,81` and ask directly
    whether the shell tower forces a loose tick for the 14-/41-runner configs whose speeds live in the
    `3`-divisible strata (the speeds the shell-partner lemma can't reach).
 3. **Doubly-tower cases** (both faces prime-power, e.g. `n=25`: clock `5²`, shell `49=7²`) are
-   predicted hardest by HYP-2294 — worth an explicit looseness audit.
+   predicted hardest by HYP-2295 — worth an explicit looseness audit.
