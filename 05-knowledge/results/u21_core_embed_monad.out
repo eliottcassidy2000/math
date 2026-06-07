@@ -1,0 +1,58 @@
+======================================================================
+u(21)=57 core audit + unit-distance embedding (monad-explorer)
+======================================================================
+
+--- Core 1: n=21, |E|=57 ---
+  degree histogram: {5: 18, 8: 3}
+  max common neighbours (need <=2): 2   witness (0, 6, 2)
+  contains K4 (must be False): False  
+  passes NECESSARY planar-UDG conditions: True
+  best edge residual over 8 starts: 0.00e+00
+    unit distances at tol=1e-03: 0
+    unit distances at tol=1e-04: 0
+    min pairwise distance: inf
+    edges realized at unit (faithful embed?): YES
+
+--- Core 2: n=21, |E|=57 ---
+  degree histogram: {3: 1, 4: 2, 5: 8, 6: 7, 7: 3}
+  max common neighbours (need <=2): 2   witness (0, 7, 2)
+  contains K4 (must be False): False  
+  passes NECESSARY planar-UDG conditions: True
+  best edge residual over 8 starts: 0.00e+00
+    unit distances at tol=1e-03: 0
+    unit distances at tol=1e-04: 0
+    min pairwise distance: inf
+    edges realized at unit (faithful embed?): YES
+
+--- Core 3: n=21, |E|=57 ---
+  degree histogram: {3: 1, 4: 2, 5: 9, 6: 5, 7: 4}
+  max common neighbours (need <=2): 2   witness (0, 8, 2)
+  contains K4 (must be False): False  
+  passes NECESSARY planar-UDG conditions: True
+  best edge residual over 8 starts: 0.00e+00
+    unit distances at tol=1e-03: 0
+    unit distances at tol=1e-04: 0
+    min pairwise distance: inf
+    edges realized at unit (faithful embed?): YES
+
+--- Core 4: n=21, |E|=57 ---
+  degree histogram: {3: 1, 4: 2, 5: 8, 6: 7, 7: 3}
+  max common neighbours (need <=2): 2   witness (0, 4, 2)
+  contains K4 (must be False): False  
+  passes NECESSARY planar-UDG conditions: True
+  best edge residual over 8 starts: 0.00e+00
+    unit distances at tol=1e-03: 0
+    unit distances at tol=1e-04: 0
+    min pairwise distance: inf
+    edges realized at unit (faithful embed?): YES
+
+--- Core 5: n=21, |E|=57 ---
+  degree histogram: {3: 1, 4: 3, 5: 6, 6: 8, 7: 3}
+  max common neighbours (need <=2): 2   witness (0, 12, 2)
+  contains K4 (must be False): False  
+  passes NECESSARY planar-UDG conditions: True
+  best edge residual over 8 starts: 0.00e+00
+    unit distances at tol=1e-03: 0
+    unit distances at tol=1e-04: 0
+    min pairwise distance: inf
+    edges realized at unit (faithful embed?): YES

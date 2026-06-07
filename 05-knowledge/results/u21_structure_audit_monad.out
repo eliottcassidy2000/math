@@ -1,0 +1,42 @@
+==========================================================================
+u(21)=57 STRUCTURAL AUDIT vs the repo's '57 = 20 spine + 37 hex bulk'
+(genuine AMP arXiv:2412.11914 graphs; author = Alexeev-MIXON-PARSHALL,
+ NOT 'Alexeev-Tikhonov' as the repo repeatedly states)
+==========================================================================
+centered-hex numbers C_hex(k)=3k(k+1)+1: {1: 7, 2: 19, 3: 37, 4: 61}
+NOTE: the repo reads 37 as C_hex(3). But C_hex(3)=37 is the number of
+POINTS in a 3-ring hexagon, whose unit-distance EDGE count is 9*3^2+3*3=90,
+not 37.  So '37 bulk edges = centered-hex' conflates a POINT count with an
+EDGE count from the start.
+
+--- Core 1 ---
+  |V|=21 |E|=57  degree hist={5: 18, 8: 3}
+  triangles=25  4-cycles=54  girth=3
+  degree-6 vertices with hexagonal (W6) nbhd: NONE
+  traceable (Ham path exists): True
+
+--- Core 2 ---
+  |V|=21 |E|=57  degree hist={3: 1, 4: 2, 5: 8, 6: 7, 7: 3}
+  triangles=23  4-cycles=50  girth=3
+  degree-6 vertices with hexagonal (W6) nbhd: NONE
+  traceable (Ham path exists): True
+
+--- Core 3 ---
+  |V|=21 |E|=57  degree hist={3: 1, 4: 2, 5: 9, 6: 5, 7: 4}
+  triangles=23  4-cycles=50  girth=3
+  degree-6 vertices with hexagonal (W6) nbhd: NONE
+  traceable (Ham path exists): True
+
+--- Core 4 ---
+  |V|=21 |E|=57  degree hist={3: 1, 4: 2, 5: 8, 6: 7, 7: 3}
+  triangles=23  4-cycles=49  girth=3
+  degree-6 vertices with hexagonal (W6) nbhd: NONE
+  traceable (Ham path exists): True
+
+--- Core 5 ---
+  |V|=21 |E|=57  degree hist={3: 1, 4: 3, 5: 6, 6: 8, 7: 3}
+  triangles=23  4-cycles=49  girth=3
+  degree-6 vertices with hexagonal (W6) nbhd: NONE
+  traceable (Ham path exists): True
+
+VERDICT printed in analysis below.

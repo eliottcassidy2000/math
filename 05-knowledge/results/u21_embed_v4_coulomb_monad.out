@@ -1,0 +1,6 @@
+SELF-TEST (Coulomb-anneal):
+[hexagon+center u7=12] edge_res=0.00e+00 min_dist=1.00000 units=12 extra=0 REALIZABLE=True FAITHFUL=True
+
+CORES:
+[core 1] edge_res=2.22e-16 min_dist=0.51764 units=57 extra=0 REALIZABLE=True FAITHFUL=True
+   -> coords saved for core 1

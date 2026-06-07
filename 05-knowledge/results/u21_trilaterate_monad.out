@@ -1,0 +1,22 @@
+==========================================================================
+Trilateration realization of the 5 AMP extremal u(21)=57 graphs
+(monad-explorer; cores verified == AMP arXiv:2412.11914 Table 2)
+==========================================================================
+
+--- Core 1: n=21 |E|=57 (graph6 len 36) ---
+  trilateration: no-trilateration-order
+
+--- Core 2: n=21 |E|=57 (graph6 len 36) ---
+  trilateration: no-trilateration-order
+
+--- Core 3: n=21 |E|=57 (graph6 len 36) ---
+  trilateration: no-trilateration-order
+
+--- Core 4: n=21 |E|=57 (graph6 len 36) ---
+  trilateration: no-trilateration-order
+
+--- Core 5: n=21 |E|=57 (graph6 len 36) ---
+  trilateration: no-trilateration-order
+
+At least one core realized as a genuine 21-point UDG with >=57 units: False
+=> u(21) >= 57 has a constructive realization (numeric); exact follow-up next.

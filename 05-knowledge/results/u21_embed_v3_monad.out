@@ -1,0 +1,49 @@
+========================================================================
+SELF-TEST: embedder on KNOWN-realizable unit-distance graphs
+========================================================================
+
+[hexagon+center (u7=12)] n=7 |E|=12
+   edge residual:   2.29e-14
+   min pair dist:   1.00000  (DISTINCT)
+   total unit dist: 12   (extra non-edge unit pairs: 0)
+   REALIZABLE: True   FAITHFUL: True
+
+[triangular patch] n=19 |E|=42
+   edge residual:   4.44e-16
+   min pair dist:   1.00000  (DISTINCT)
+   total unit dist: 42   (extra non-edge unit pairs: 0)
+   REALIZABLE: True   FAITHFUL: True
+
+========================================================================
+THE 5 STORED u(21)=57 CORES
+========================================================================
+
+[core 1] n=21 |E|=57
+   edge residual:   1.53e-02
+   min pair dist:   0.52134  (DISTINCT)
+   total unit dist: 0   (extra non-edge unit pairs: 0)
+   REALIZABLE: False   FAITHFUL: False
+
+[core 2] n=21 |E|=57
+   edge residual:   7.70e-02
+   min pair dist:   0.40055  (DISTINCT)
+   total unit dist: 0   (extra non-edge unit pairs: 0)
+   REALIZABLE: False   FAITHFUL: False
+
+[core 3] n=21 |E|=57
+   edge residual:   5.21e-02
+   min pair dist:   0.50184  (DISTINCT)
+   total unit dist: 0   (extra non-edge unit pairs: 0)
+   REALIZABLE: False   FAITHFUL: False
+
+[core 4] n=21 |E|=57
+   edge residual:   9.68e-02
+   min pair dist:   0.44947  (DISTINCT)
+   total unit dist: 0   (extra non-edge unit pairs: 0)
+   REALIZABLE: False   FAITHFUL: False
+
+[core 5] n=21 |E|=57
+   edge residual:   5.44e-02
+   min pair dist:   0.50261  (DISTINCT)
+   total unit dist: 0   (extra non-edge unit pairs: 0)
+   REALIZABLE: False   FAITHFUL: False

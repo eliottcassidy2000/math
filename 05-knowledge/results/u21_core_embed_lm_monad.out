@@ -1,0 +1,32 @@
+========================================================================
+u(21)=57 cores: robust LM unit-distance embedding (monad-explorer)
+========================================================================
+
+--- Core 1: n=21, |E|=57 ---
+  best edge residual over starts: 2.902e-13
+  total unit distances (tol=1e-06): 145
+  total unit distances (tol=1e-04): 145
+  min pairwise distance: 0.00000
+  FAITHFUL embedding: NO -- 88 accidental extra unit pairs
+  ==> REALIZABLE: u(21) >= 145
+  coords saved to 05-knowledge/results/u21_core1_coords.npy
+
+--- Core 2: n=21, |E|=57 ---
+  best edge residual over starts: 1.968e-01
+  did NOT converge to a unit-distance embedding from these starts
+  (inconclusive: either non-realizable or needs more starts)
+
+--- Core 3: n=21, |E|=57 ---
+  best edge residual over starts: 2.247e-01
+  did NOT converge to a unit-distance embedding from these starts
+  (inconclusive: either non-realizable or needs more starts)
+
+--- Core 4: n=21, |E|=57 ---
+  best edge residual over starts: 2.389e-01
+  did NOT converge to a unit-distance embedding from these starts
+  (inconclusive: either non-realizable or needs more starts)
+
+--- Core 5: n=21, |E|=57 ---
+  best edge residual over starts: 2.323e-01
+  did NOT converge to a unit-distance embedding from these starts
+  (inconclusive: either non-realizable or needs more starts)
