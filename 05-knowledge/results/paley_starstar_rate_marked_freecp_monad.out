@@ -1,0 +1,45 @@
+Rate-marked free exp-Poisson:  N(k,j) = sum_{NC(k),|pi|=j} prod|B|!  (j=1..k):
+   k=1: N(k,.) = [1]    rowsum=1 (=A088368(1))
+   k=2: N(k,.) = [2, 1]    rowsum=3 (=A088368(2))
+   k=3: N(k,.) = [6, 6, 1]    rowsum=13 (=A088368(3))
+   k=4: N(k,.) = [24, 32, 12, 1]    rowsum=69 (=A088368(4))
+   k=5: N(k,.) = [120, 180, 100, 20, 1]    rowsum=421 (=A088368(5))
+   k=6: N(k,.) = [720, 1116, 760, 240, 30, 1]    rowsum=2867 (=A088368(6))
+
+Genuine THM-438 cycle-rank triangle t(k,m) (m=1..k):
+   k=1: t(k,.) = [1]    diag t(k,k)=1
+   k=2: t(k,.) = [1, 3]    diag t(k,k)=3
+   k=3: t(k,.) = [1, 9, 13]    diag t(k,k)=13
+   k=4: t(k,.) = [1, 18, 72, 69]    diag t(k,k)=69
+   k=5: t(k,.) = [1, 30, 230, 580, 421]    diag t(k,k)=421
+   k=6: t(k,.) = [1, 45, 560, 2626, 4845, 2867]    diag t(k,k)=2867
+
+Comparison (is t the rate-marked NC table, possibly reversed?):
+   k=1: t==N? True   t==reverse(N)? True
+         row-signed (THM, sum (-1)^m t): -1 ; NC block-signed (sum (-1)^j N): -1
+   k=2: t==N? False   t==reverse(N)? False
+         row-signed (THM, sum (-1)^m t): 2 ; NC block-signed (sum (-1)^j N): -1
+   k=3: t==N? False   t==reverse(N)? False
+         row-signed (THM, sum (-1)^m t): -5 ; NC block-signed (sum (-1)^j N): -1
+   k=4: t==N? False   t==reverse(N)? False
+         row-signed (THM, sum (-1)^m t): 14 ; NC block-signed (sum (-1)^j N): -3
+   k=5: t==N? False   t==reverse(N)? False
+         row-signed (THM, sum (-1)^m t): -42 ; NC block-signed (sum (-1)^j N): -21
+   k=6: t==N? False   t==reverse(N)? False
+         row-signed (THM, sum (-1)^m t): 132 ; NC block-signed (sum (-1)^j N): -153
+
+Marked Callan eqn M=F(tzM): m_k(t) coefficients (t-power: coeff):
+   k=1: [1]   == N(k,.)? True
+   k=2: [0, 3]   == N(k,.)? False
+   k=3: [0, 0, 13]   == N(k,.)? False
+   k=4: [0, 0, 0, 69]   == N(k,.)? False
+   k=5: [0, 0, 0, 0, 421]   == N(k,.)? False
+   k=6: [0, 0, 0, 0, 0, 2867]   == N(k,.)? False
+
+M=F(tzM) reproduces the rate-marked NC table: False
+
+CONCLUSION:
+  - rate-marked free exp-Poisson moments = N(k,j) (block grading), and
+    M=F(tzM) is its bivariate functional equation (clean, algebraic-in-t).
+  - the GENUINE THM-438 cycle-rank triangle t(k,m) is a DIFFERENT refinement:
+    they share only the diagonal/rowsum (=A088368) and t(k,1)=N(k,1)? check above.

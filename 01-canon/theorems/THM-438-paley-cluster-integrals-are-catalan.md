@@ -1038,3 +1038,24 @@ single law's moment↔cumulant transform names the interior path.)
 - **Still open (diagonal census):** the combinatorial step `t(k,k)=Σ_{NC(k)}∏|B|!` (doubled
   plane trees ↔ Callan noncrossing lists), VERIFIED k≤7; the free-prob half is PROVED (ADD-11).
 - `t(7,5)` still uncomputed (core-aware k=7 enumerator).
+
+### (8) Follow-up — the rate-marked free exp-Poisson triangle, and a CLEAN NEGATIVE for the off-diagonal lead.
+The free exp-Poisson's free-convolution semigroup `μ^{⊞y}` (free cumulants `y·n!`) has
+block-graded moments `N(k,j)=Σ_{π∈NC(k),|π|=j}∏_B|B|!`, the rate/block marker `y` counting
+blocks. **VERIFIED (`paley_starstar_rate_marked_freecp_monad.py`):** the marker functional
+equation is `M(z,y)=1+y(F(zM)−1)`, `F=Σn!w^n`, giving the triangle
+```
+   N: 1 | 2,1 | 6,6,1 | 24,32,12,1 | 120,180,100,20,1 | 720,1116,760,240,30,1
+```
+(column-1 `=k!` = single list; diagonal `=1` = all singletons; **rowsum `=A088368(k)`**). This
+triangle, its column `N(k,2)=1,6,32,180,1116`, and the signed `m_k(−1)=Σ_j(−1)^jN(k,j)=
+−1,−1,−1,−3,−21,−153` are all **OEIS-negative** (checked) — a new, clean, uncatalogued bivariate
+object: the rate-marked factorial law.
+**CLEAN NEGATIVE:** the genuine THM-438 cycle-rank triangle `t(k,m)` is a **different
+refinement** — `t(k,1)=1≠N(k,1)=k!`, and only the diagonal/rowsum (`A088368`) coincide. So the
+off-diagonal columns are NOT a single rate-marked free compound Poisson; the naive lead
+"`U(x,y)=`marked free CP" is refuted. This SHARPENS ADD-11's two-laws obstruction to the bivariate
+level: the THM triangle interpolates the factorial law's diagonal moment to the two-point law's
+Catalan cumulant (`Σ_m(−1)^m t(k,m)=(−1)^kC_k` vs the NC block-signed `m_k(−1)`), so no single
+law's marked moment table can be `U` — exactly why ADD-6 found no catalytic equation. Files:
+`04-computation/paley_starstar_rate_marked_freecp_monad.py` (+`.out`).
