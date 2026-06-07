@@ -60,4 +60,7 @@ matches brute NC-partition sum 1,1,3,13,69,421,2867,21477,175769: True
    k=50: best partial sum at J=12, |err|=0.00279 (rel 0.000982)
    k=60: best partial sum at J=12, |err|=0.00185 (rel 0.000656)
 
+(E) Lagrange-Burmann cross-check of b_j (independent of the reversion):
+   Lagrange-Burmann b_j == reversion b_j for all j<=12 : True
+
 DONE.

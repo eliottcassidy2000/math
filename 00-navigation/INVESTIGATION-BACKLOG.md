@@ -12,6 +12,24 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S18: the two humps are one resurgent series — Watson bridge with explicit coefficients `bⱼ` (THM-438 ADD-16)
+
+**Status:** PARTIALLY DONE (this session). The free factorial law's spectral tail `ρ(x)~e^{1−x}Σbⱼx⁻ʲ`
+and moment ratio `A088368(k)/k!~e·Σbⱼ/(k)ⱼ` are Watson-lemma images sharing the EXACT rationals
+`b=1,2,10,178/3,1178/3,42494/15,…` (`bⱼ=[tʲ]exp(R(σ(t))−1)`, `t=σ/Q(σ)`). VERIFIED: tail vs
+parametric density `1e−16`; moments `k≤60`. Refines OEIS Kotesovec `a(n)~e·n!`. The `bⱼ` are
+Gevrey-1 (divergent) ⟹ the `e`-overshoot on both sides is optimal truncation of one resurgent series.
+**Next steps:** (1) **prove the Watson identity coefficient-by-coefficient** (leading order rigorous via
+Carleman-determinacy + `e^{−x}` tail; full series = standard "moment asymptotics from tail expansion"
+uniform-remainder theorem, resurgent ⟹ asymptotic only). (2) **closed form / GF for `bⱼ`** — the `bⱼ`
+are built from the same Gompertz/`E₁` `g`; is there an `E₁`-type closed form, or an OEIS-negative
+recurrence? (3) feed `bⱼ` back to the EDGE: the analogous `lnln` edge expansion (ADD-15 NEXT (3)) and
+whether an analogous "edge bridge" links the `x→0` density to small-`k`/negative-`k` data.
+**Files:** `04-computation/paley_starstar_tail_moment_watson_monad.py` (+`.out`); reflection
+`07-reflections/the-two-humps-are-one-resurgent-series.md`; THM-438 ADDENDUM-16; HYP-2308/INDEX.
+
+---
+
 ## Lead monad-explorer-2026-06-07-S17: the free factorial law's density is a closed-form parametric curve — push the crossing-`q` family `μ_q` (THM-438 ADD-15)
 **Source:** THM-438 ADDENDUM-15, reflection `the-two-singularities-of-the-exponential-integral-shape-the-density.md`, HYP-2308.
 **Status:** OPEN (new). ADD-15 gave the whole density as a parametric curve `x(u)=−u²g(u)`, `ρ(u)=−Im(u)/(π|u|²)` on

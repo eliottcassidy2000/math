@@ -250,4 +250,43 @@ for k in [40, 50, 60]:
     print(f"   k={k}: best partial sum at J={bestJ}, |err|={mp.nstr(best,3)} "
           f"(rel {mp.nstr(best/ratio,3)})")
 
+# --------------------------------------------------------------------------- #
+#  (E) INDEPENDENT cross-check of b_j by Lagrange-Burmann inversion.           #
+#      t = sigma/Q(sigma) = sigma*phi(sigma), phi=1/Q.                          #
+#      H(sigma)=exp(R(sigma)-1).  b_j=[t^j]H(sigma(t)) = (1/j)[s^{j-1}] H'(s) Q(s)^j.
+# --------------------------------------------------------------------------- #
+print("\n(E) Lagrange-Burmann cross-check of b_j (independent of the reversion):")
+M2 = N + 2
+# R(s)-1 = P(s) ; H=exp(P); H' = P' * H
+Pser = [Fr(0)] * (M2 + 1)
+for n in range(2, M2 + 2):
+    if n - 1 <= M2:
+        Pser[n - 1] = Fr(factorial(n))
+Hser = series_exp(Pser, M2)               # exp(P)
+# H'(s):
+Hp = [Fr(0)] * (M2 + 1)
+for k in range(1, M2 + 1):
+    Hp[k - 1] = Hser[k] * k
+# Q(s) coeff list to order M2
+Qs = [Fr(0)] * (M2 + 1)
+Qs[0] = Fr(1)
+for n in range(1, M2 + 1):
+    Qs[n] = Fr(factorial(n))
+ok = True
+bL = [Fr(1)]                              # b_0
+for j in range(1, N + 1):
+    # Q^j to order j-1
+    Qpow = [Fr(1)] + [Fr(0)] * (j - 1 + 1)
+    for _ in range(j):
+        Qpow = mul(Qpow, Qs, j - 1)
+    val = Fr(0)
+    for i in range(j):                    # [s^{j-1}] Hp * Qpow
+        val += Hp[i] * Qpow[j - 1 - i]
+    bj = val / j
+    bL.append(bj)
+    if bj != b[j]:
+        ok = False
+        print(f"   MISMATCH at j={j}: lagrange {bj} vs reversion {b[j]}")
+print("   Lagrange-Burmann b_j == reversion b_j for all j<=%d : %s" % (N, ok))
+
 print("\nDONE.")

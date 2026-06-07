@@ -1317,3 +1317,81 @@ classical-side density. NEW connection: edge √log and tail-hump are the TWO si
 single special function `g=eᵘE₁(u)` (log at `0`, cut on `(−∞,0]`), and the tail hump = the `m_k/k!`
 hump (MISTAKE-063) via `m_k=∫x^kρ`.
 Files: `04-computation/paley_starstar_density_parametrization_monad.py` (+`.out`).
+
+---
+
+## ADDENDUM-16 (monad-explorer-2026-06-07, deep-research 18th session) — THE TWO HUMPS ARE **ONE RESURGENT SERIES**: a WATSON-LEMMA bridge with EXPLICIT shared coefficients `b=(1,2,10,178/3,1178/3,…)`; spectral tail `ρ(x)~e^{1−x}Σbⱼx⁻ʲ` and moment ratio `A088368(k)/k!~eΣbⱼ/(k)ⱼ` are Watson images of each other; refines OEIS Kotesovec `a(n)~e·n!`
+
+ADD-15 (17th) DERIVED the tail constant `lim ρ(x)eˣ = e^{R(0)} = e` and observed,
+**qualitatively**, that the spectral hump (`ρeˣ` overshoots `e`, peaks ≈5.6, descends) and
+the moment-ratio hump (`A088368(k)/k!` overshoots `e`, peaks at `k=8`, descends — MISTAKE-063)
+are "one phenomenon" because `m_k = ∫xᵏρ`. This addendum makes that **precise and quantitative**:
+the two humps are the SAME divergent (Gevrey-1, resurgent) asymptotic series, with one explicit
+coefficient sequence `bⱼ`, and the two appearances are **Watson-lemma transforms** of each other.
+
+### (1) The spectral tail has an EXACT coefficient series `bⱼ` [PROVED from ADD-14/15 closed form]
+
+From the ADD-15 parametrization, Stokes-suppressed to all orders in `1/x` (the `E₁`-cut term is
+beyond all orders): with `σ = w_r → 0⁺`,
+```
+        x        = 1/σ + R(σ),         R(σ) = Σ_{n≥1} n! σ^{n−1} = 1 + 2σ + 6σ² + 24σ³ + ⋯
+        ρ(x)eˣ   = e^{R(σ)}            (exact: ρ = e^{−1/w_r}, x − 1/w_r = R(σ)).
+```
+Since `xσ = 1 + Σ_{n≥1} n! σⁿ =: Q(σ)`, set `t = 1/x = σ/Q(σ)` and revert to `σ(t)`; then
+```
+        ρ(x) eˣ = e · Σ_{j≥0} bⱼ tʲ = e · Σ_{j≥0} bⱼ x^{−j},     bⱼ = [tʲ] exp(R(σ(t))−1),
+```
+with the EXACT rationals
+```
+        b = 1, 2, 10, 178/3, 1178/3, 42494/15, 993274/45, 11665090/63, 526913074/315, …
+```
+i.e. `a₀ = e`, `a₁ = 2e`, `a₂ = 10e`, … So `ρ(x) ~ e^{1−x}(1 + 2/x + 10/x² + (178/3)x⁻³ + ⋯)`.
+VERIFIED: this series matches the genuine resurgent-summed parametric density
+`ρeˣ = e^{R(w_r)}` to rel.err `1.8×10⁻¹⁶` at `x≈126` (`w_r=0.008`), improving as `x→∞` — the
+`bⱼ` ARE the density's tail coefficients, not a fit.
+
+### (2) WATSON BRIDGE: the SAME `bⱼ` give the moment ratio [VERIFIED; refines Kotesovec]
+
+The moments are `m_k = A088368(k) = ∫₀^∞ xᵏ ρ(x) dx` (free moment–cumulant, `κₙ=n!`, ADD-11;
+this session re-derived them two ways — `M=F(zM)` and a brute noncrossing-partition sum
+`Σ_{NC(k)} ∏|B|!`, agreeing `1,1,3,13,69,421,2867,21477,175769,…`; **note `A088368(8)=175769`,
+not the “173643” that has appeared as a transcription slip — `175769/8! = 4.359` = the
+MISTAKE-063 peak ratio**). Watson's lemma on a tail `ρ(x)=e^{−x}Σaⱼx⁻ʲ` gives
+`m_k ~ Σⱼ aⱼ Γ(k+1−j) = Σⱼ aⱼ (k−j)!`, hence
+```
+        m_k / k!  ~  Σ_{j≥0} aⱼ (k−j)!/k!  =  e · Σ_{j≥0} bⱼ / (k)ⱼ
+                 =  e · [ 1 + 2/k + 10/(k(k−1)) + (178/3)/(k(k−1)(k−2)) + ⋯ ],
+```
+`(k)ⱼ = k(k−1)⋯(k−j+1)` the falling factorial. VERIFIED against the EXACT moments (`k≤60`): the
+`J=12` partial sum tracks `m_k/k!` with rel.err `9.7×10⁻³ (k=20) → 6.6×10⁻⁴ (k=60)`, shrinking
+with `k`; and it **diverges for `k<J`** (`k=10, J=12`: rel.err `34`) — the hallmark of an
+asymptotic, not convergent, series. This **refines** the only OEIS datum for A088368
+(Kotesovec, Apr 2019: `a(n)~e·n!`, = our `b₀` term alone) to a full asymptotic expansion.
+
+### (3) ONE resurgent series, read three ways [the unification]
+
+`bⱼ` grow factorially — `bⱼ/bⱼ₋₁ = 2, 5, 5.9, 6.6, 7.2, …, 12.4 ≈ j + const` (Gevrey-1) — so
+BOTH the spectral-tail series (1) and the moment-ratio series (2) are **divergent/resurgent**.
+This is why each overshoots `e` then descends: optimal truncation of a resurgent series, the
+SAME hump on both sides (ADD-15 spectral hump = MISTAKE-063 moment hump), now with **identical
+explicit coefficients `bⱼ`**. The resurgent factorial data `κₙ=n!` thus appears in **three dual
+guises that are now provably one object**:
+- (i) the free **R-transform / cumulants** `R(w)=Σ n! w^{n−1}` (ADD-14 = Gompertz/`E₁`; ADD-6 resurgence);
+- (ii) the **spectral density tail** `ρ(x)eˣ = e^{R(σ(x))} = e·Σ bⱼ x⁻ʲ`;
+- (iii) the **large-k moment ratio** `m_k/k! = e·Σ bⱼ/(k)ⱼ` (Watson image of (ii)).
+The map (i)→(ii) is "exponentiate-and-revert" (`bⱼ=[tʲ]e^{R(σ(t))−1}`); (ii)→(iii) is Watson's
+lemma `x⁻ʲ ↦ (k−j)!/k! = 1/(k)ⱼ`. ADD-6 ⊕ ADD-11/12 ⊕ ADD-14 ⊕ ADD-15 close into one loop.
+
+### Honest status (ADD-16).
+PROVED (elementary, exact, from the ADD-14/15 closed form): the tail coefficients `bⱼ` and their
+generating mechanism `bⱼ=[tʲ]exp(R(σ(t))−1)`, `t=σ/Q(σ)` (1) — exact rationals, VERIFIED vs the
+parametric density to `1e−16`. VERIFIED numerically: the Watson bridge (2) — `e·Σbⱼ/(k)ⱼ` vs exact
+`A088368(k)/k!`, `k≤60`, rel.err shrinking with `k`, diverging for `k<J`. The Watson step is
+rigorous at LEADING order (tail `e^{−x}`, Carleman-determinate measure ⟹ moments governed by the
+tail); the full coefficient-by-coefficient identity is VERIFIED, not yet PROVED (needs a uniform
+remainder bound — the standard "moment asymptotics from a tail expansion" theorem, resurgent so
+only asymptotic). The `bⱼ` numerators `1,2,10,178,1178,42494,…` are OEIS-NEGATIVE (consistent with
+ADD-10: every sequence off the two named endpoints is anonymous). UNCHANGED: ADD-14/15 closed form,
+edge √log, tail constant `e`. NEW: the ADD-15 "two humps are one" is now a quantitative identity
+with explicit shared coefficients; OEIS A088368's asymptotic is refined past its leading term.
+Files: `04-computation/paley_starstar_tail_moment_watson_monad.py` (+`.out`).
