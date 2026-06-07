@@ -1,0 +1,52 @@
+====================================================================
+(A) p-clock base-section margin for n=2p  (non-mult-of-p is >= 1/p safe)
+====================================================================
+  n=2p | delta=1/2p | p-clock margin 1/p | ratio (margin/delta) | OK?
+     6 | 1/6      | 1/3              |     2            | True
+    10 | 1/10     | 1/5              |     2            | True
+    14 | 1/14     | 1/7              |     2            | True
+    22 | 1/22     | 1/11             |     2            | True
+    26 | 1/26     | 1/13             |     2            | True
+  => every non-mult-of-p runner clears delta with a factor-2 margin.
+     LRC(p) (proven, p<=7 well within frontier) is the BASE SECTION.
+
+====================================================================
+(B) the recursive fiber: mult-of-p runners reduce to LRC on {v/p}
+====================================================================
+  n=14: mult-of-7 speeds in 1..13 = [7]  (reduced speeds v/7 = [1])
+  near t=b/7+eps:  ||(7w)t|| = ||7w*eps||  => the fiber IS an LRC on {w}.
+  So LRC(14) <= [LRC(7) base clears non-mult-of-7] AND [the {v/7}-LRC fits
+  the perturbation window].  depth-1 protection chain 14 -> 7 (the bundle).
+  For speeds 1..13 the fiber is a SINGLE runner (v=7 -> w=1): trivially
+  dodgeable; the hardness is only for speed-SETS with many mult-of-7.
+
+====================================================================
+(C) fiber automorphism: doubling x->2x on Z/7 = the cube-root 3-cycles
+====================================================================
+  doubling-orbit of 1 mod 7: [1, 2, 4]
+  doubling-orbit of 3 mod 7: [3, 6, 5]
+  QR mod 7 = [1, 2, 4] = cube roots of unity mu_3 = paleySet (S638)
+  doubling-orbit of 1 == QR? True
+  ord_7(2) = 3 = (7-1)/2 = |QR|  -> <2> = QR exactly
+
+====================================================================
+(D) connection sweep: for which odd primes p is <2> = QR (doubling=Paley)?
+====================================================================
+  p | ord_p(2) | (p-1)/2 | 2 a QR? (p=+-1 mod8) | <2>=QR? | p=3 mod4 (Paley)?
+   3 |       2  |      1  | False                | False   | True
+   5 |       4  |      2  | False                | False   | False
+   7 |       3  |      3  |  True                |  True   | True
+  11 |      10  |      5  | False                | False   | True
+  13 |      12  |      6  | False                | False   | False
+  17 |       8  |      8  |  True                |  True   | False
+  19 |      18  |      9  | False                | False   | True
+  23 |      11  |     11  |  True                |  True   | True
+  29 |      28  |     14  | False                | False   | False
+  31 |       5  |     15  |  True                | False   | True
+  37 |      36  |     18  | False                | False   | False
+  41 |      20  |     20  |  True                |  True   | False
+  43 |      14  |     21  | False                | False   | True
+  47 |      23  |     23  |  True                |  True   | True
+  p=7 is special: <2>=QR (2 is a QR AND generates the QR subgroup) AND
+  p=3 mod4 (Paley tournament exists, S638).  The doubling fiber-symmetry
+  and the Paley/cube-root structure COINCIDE at the n=14 prime.
