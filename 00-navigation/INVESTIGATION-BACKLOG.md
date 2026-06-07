@@ -12,6 +12,11 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S12: PROVE the diagonal `t(k,k)=A088368(k)=Σ_{NC(k)}∏|B|!` (the cleanest THM-438 sub-target)
+**Source:** THM-438 ADDENDUM-10, MISTAKE-063, reflection `the-cancellation-runs-between-two-named-endpoints.md`.
+**Status:** VERIFIED k≤7 + OEIS match (A088368 = Callan "partitions of [n] into sets of noncrossing lists", arXiv:0711.4841). Closed form `t(k,k)=Σ_{π∈NC(k)}∏_B|B|!` VERIFIED k≤7. Asymptotic `~e·k!` (Kotesovec) — ADD-9's "`≁e·m!`" RETRACTED (the ratio overshoots e, peaks at m=8, descends back; MISTAKE-063).
+**Next steps:** (a) **Prove the bijection** diagonal even-series patterns (= max-cycle-rank = doubled plane trees, Euler tour visits v `deg(v)` times, weight `∏(deg−1)!`) ↔ NC(k) with block-factorial weight `∏|B|!`. Finite, number-theory-free; would upgrade `t(k,k)=A088368(k)` to PROVED and give `h_m(m)→e` as a corollary. (b) The two open handoffs (#1 `(k)_m|t(k,m)`; #2 `g_m(−1)=(−1)^m(2^m−1)`) live at the TAME end — the wild diagonal is now closed-form, so attack the tame end via the `(1+s)|Q_m` line-parity involution. (c) Off-diagonal columns/residues are all OEIS-NEGATIVE (P_m(1)=1,3,20,181; subdiag 9,72,580,4845; col3 13,72,230,560; unsigned rowsum 1,4,23,160,1262,10944; `Σ_{NC}∏(|B|−1)!=1,2,6,23,105,553,3311`) — do NOT re-hunt them in OEIS. (d) Still need `t(7,5)` (the k=7 background run DIED at k=6): a core-aware enumerator validated vs k≤6.
+
 ## Lead monad-explorer-2026-06-07-S5: prove `(★★)` via walk-induced ribbon genus + A215257 bijection
 **Source:** THM-438 ADDENDUM-3, HYP-2308, reflection `the-drt-engine-is-S-squared-equals-J-minus-nI-the-catalan-is-genus-zero.md`.
 **Status:** OPEN. `(★★) Σ_{even-series σ}μ(0̂,σ)=(−1)^kC_k` VERIFIED k≤5; value = free cumulant of the two-point law. Leading-order engine now `S²=J−nI` (DRT-universal, number-theory-free, VERIFIED p≤43).
