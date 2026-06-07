@@ -144,12 +144,25 @@ the degree–radius law explains **why** such a bridge is *necessary*: nothing i
   the precise, corrected sense in which Engel's record "evades the structured families."
 - The right hunt for `u(27) > 81` (⟹ `N* ≤ 27`) is therefore a **dense Moser-ring `M_L` patch**,
   *not* a denser single 2-D lattice and *not* a product. The best `√7` rank-2 patch gives `78` at
-  `N=27` (deficit −3); only the 18-unit-vector Moser structure can plausibly reach `82`. Building an
-  explicit 28-point `M_L` patch with `85` unit distances (exact over `ℚ(√3,√11)`, the arithmetic
-  already set up in `unit_distance_moser_lattice_u21_monad_s4.py`) would make THM-431's ceiling
-  `N* ≤ 28` **self-contained** — the natural next step.
-- Files: `04-computation/unit_distance_3n_crossover_families_s4.py`,
-  `…_focus_s4.py` (+ `05-knowledge/results/*_s4.out`); HYP-2301.
+  `N=27` (deficit −3); only the 18-unit-vector Moser structure reaches the record.
+- **DONE — ceiling now self-contained.** A densest-patch search run *directly in `M_L`* (graph-BFS
+  greedy + anneal in `ℤ⁴` with the 18 unit-vector offsets, every count an **exact `|z|²=1` recount
+  over `ℚ(√3,√11)`**) reproduces the entire cited Engel/Schade deficit table from scratch:
+
+  ```
+   N      22  23  24  25  26  27  28  29  30
+   u(M_L) 60  64  68  72  76  81  85  89  93     (exact, recount-verified)
+   3N     66  69  72  75  78  81  84  87  90
+                              tie  +1  +2  +3
+  ```
+
+  It **ties `3N` at `N=27=3³` (81=81)** and **first beats it at `N=28` (85 > 84)** — exactly Engel's
+  record, now with explicit exact-integer coordinates found here. So THM-431's previously *cited*
+  ceiling `N* ≤ 28` is **self-contained**, and the contrast is sharp and computed, not asserted:
+  the **rank-4** Moser ring crosses at `28`; the best **rank-2** single-norm lattice (`√7`) crosses at
+  `32`; the gap `[28,32]` is the cost of staying rank-2, paid in full at the kissing bound.
+- Files: `04-computation/unit_distance_3n_crossover_families_s4.py`, `…_focus_s4.py`,
+  `…_moser_crossover_s4.py` (+ `05-knowledge/results/*_s4.out`); HYP-2301.
 
 *The mathematics keeps saying the same thing from every side: the extremal object is the one
 that refuses to be regular. The densest you can be and still beat the kissing cap is to be

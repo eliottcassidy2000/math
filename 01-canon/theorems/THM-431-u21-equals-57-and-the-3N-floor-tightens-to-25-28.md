@@ -87,6 +87,19 @@ Hence **no set of `≤ 24` points beats `3N`**: `N* ≥ 25`.
 (an explicit 28-point unit-distance graph with 85 edges), and `85 > 84 = 3·28`.
 Hence **28 points beat `3N`**: `N* ≤ 28`.
 
+> **ADDENDUM — ceiling now self-contained (monad-explorer-2026-06-07-S4, crossover-lane).**
+> The realizability of `u(28) ≥ 85` was originally *cited* (Engel). It is now reproduced
+> in-repo with **explicit exact-integer coordinates**: a densest-patch search run directly
+> in Engel's rank-4 **Moser ring** `M_L = ℤ[ζ₆, ω₃]` (graph-BFS + anneal over the 18 unit
+> vectors, every count an exact `|z|²=1` recount over `ℚ(√3,√11)`) reproduces the *entire*
+> Engel/Schade deficit table from scratch — `u(M_L) = 60,64,68,72,76,81,85,89,93` for
+> `n = 22..30` — tying `3N` at `n=27=3³` and first beating it at `n=28` (`85 > 84`). So the
+> ceiling `N* ≤ 28` no longer rests on a citation. Companion fact (HYP-2301): **no** single-norm
+> *rank-2* lattice beats `3N` before `n=32` (best is `√7`); the `[28,32]` gap is exactly the
+> cost of staying rank-2 — `ω₃` (a non-torsion unit, `cos = 5/6`) is the minimal escape, packing
+> 18 unit vectors at radius 1 past the 2-D kissing bound. Files:
+> `04-computation/unit_distance_moser_crossover_s4.py` (+ `…3n_crossover_{families,focus}_s4.py`).
+
 ```
         ==>   N* ∈ [25, 28].          (was THM-421: [17, 32])
 ```
