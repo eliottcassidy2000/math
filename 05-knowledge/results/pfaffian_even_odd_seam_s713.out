@@ -1,0 +1,29 @@
+================================================================================
+S713 — Even/Odd and the Pfaffian: the algebraic incarnation of the 2-adic seam
+================================================================================
+
+(A) PARITY LAW: Pf(S_T) is ALWAYS ODD (even n) — the Pfaffian sibling of Redei's H-odd
+  n=4: 64 tournaments | Pf odd: 64/64 | det(S)=Pf^2: 64/64 | |Pf| values: {1: 48, 3: 16}
+  n=6: 32768 tournaments | Pf odd: 32768/32768 | det(S)=Pf^2: 32768/32768 | |Pf| values: {1: 15360, 3: 7680, 5: 4608, 7: 3840, 9: 1280}
+  (n=6 |Pf| in {1,3,5,7,9} reproduces THM-120; all odd.)
+
+(B) ODD-n KERNEL LADDER: w_i=(-1)^i Pf(S_hat_i) spans ker S; entries are even-subtournament
+    Pfaffians => ALL ODD; 1^T w odd; det(I+2A)=(1^T w)^2.
+  n=3: 8 | S.w=0: 8/8 | all w_i odd: 8/8 | 1^Tw odd: 8/8 | det(I+2A)=(1^Tw)^2: 8/8
+  n=5: 1024 | S.w=0: 1024/1024 | all w_i odd: 1024/1024 | 1^Tw odd: 1024/1024 | det(I+2A)=(1^Tw)^2: 1024/1024
+
+(C) UNIFIED: det(I+2A) is an ODD PERFECT SQUARE (=> = 1 mod 8) for all n
+  n=3: det(I+2A) perfect square 8/8 | =1 mod 8: 8/8
+  n=4: det(I+2A) perfect square 64/64 | =1 mod 8: 64/64
+  n=5: det(I+2A) perfect square 1024/1024 | =1 mod 8: 1024/1024
+  n=6: det(I+2A) perfect square 32768/32768 | =1 mod 8: 32768/32768
+
+(D) COMPLEMENT MOD-4 PHASE: Pf(-S)=(-1)^(n/2) Pf(S)  (T->T^op)
+  n=4: Pf(-S)=(-1)^(n/2)Pf(S) holds 64/64; phase=(-1)^2 => invariant (n=0 mod4)
+  n=6: Pf(-S)=(-1)^(n/2)Pf(S) holds 32768/32768; phase=(-1)^3 => SIGN-FLIP (n=2 mod4)
+
+(E) Pf vs H (#Hamiltonian paths, Redei-odd): joint law / congruences
+  n=4 (64): both odd 64/64; (|Pf|,H) joint {(1, 1): 24, (1, 5): 24, (3, 3): 16}
+        (|Pf| mod4, H mod4) distribution: {(1, 1): 48, (3, 3): 16}
+  n=6 (sample 4000): both odd 4000/4000; (|Pf|, H mod 8) joint {(1, 1): 536, (1, 3): 337, (1, 5): 599, (1, 7): 357, (3, 1): 411, (3, 3): 367, (3, 5): 181, (5, 1): 179, (5, 5): 176, (5, 7): 200, (7, 1): 88, (7, 5): 222, (7, 7): 185, (9, 1): 12, (9, 5): 104, (9, 7): 46}
+================================================================================
