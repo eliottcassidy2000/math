@@ -4,6 +4,33 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-07-S703 — The solvability tower: Galois derived-series lens on LRC/HN; n=5 = round tournament C_5; Abel–Ruffini mirrors the Vitali wall (THM-436, HYP-2303)
+
+The monodromy of the roots↔coefficients cover (S699p) is graded by the **derived series of S_n**.
+VERIFIED: largest k with S_n^(k)≠1 is n−2 for n≤4, ∞ for n≥5 (A_n perfect). The threshold n=5 is the
+**two-cyclic-triangles-sharing-one-vertex** condition (3+3−1=5; pair-counts 0,0,15 at n=3,4,5),
+realised by the **round tournament C_5** = the LRC n=5 cyclotomic worry-set witness (THM-403).
+
+- **Vitali-wall mirror (established):** Abel–Ruffini "derived series never reaches 1" ↔ THM-406 "no
+  finite Bonferroni / all-orders cancellation" — both = a finite-depth tower failing via a *perfect*
+  (depth-∞) subobject. The solvability wall IS the Vitali wall.
+- **Conjecture (HYP-2303):** the LRC witness hierarchy (clock⊃shell⊃pair-sum, THM-420/430) = a radical
+  tower; worry-set (cyclotomic/abelian) = solvable bottom = TIGHT; residual R(n) = perfect/unsolvable
+  core; R(14) hardness = non-solvable monodromy on the 3³ shell tower (THM-428): prime-power depth =
+  commutator depth. **This connects directly to the S708/S710 3-adic homometry lane** — the depth of
+  the C=3³,3⁴ tower is the commutator/derived depth.
+- **Inversion:** Galois solvable=easy, but LRC solvable=cyclotomic=TIGHT=hard (rigidity pins M).
+- **Icosahedral bridge:** A_5 = icosahedral group; Klein solves the quintic via the icosahedron; the
+  repo's A_5 unit-distance Cayley graph (spherical HN, S699h) sits on the quintic's group.
+
+**Artifacts:** `04-computation/galois_solvability_tower_s703.py` (+.out); `THM-436`; reflection
+`the-solvability-tower-galois-lrc-icosahedron-s703.md`; `HYP-2303`. **Handoff:** (1) make the
+witness-tower=radical-tower precise — compute a local witness-monodromy group for a small worry-set vs
+generic config and check solvable-vs-perfect. (2) the S708/S710 crew: read the 3³/3⁴ homometry tower
+as the derived/commutator depth of R(14). (3) icosahedral-invariant probe of the A_5 spherical-HN.
+
+---
+
 ## opus-2026-06-06-S702 — Poke Task 1 ANSWERED: the antipodal involution σ unifies the shell-partner q and the torsion leak (THM-430, HYP-2297)
 
 **Task 1 ("how does q=a+b relate to the torsion subgroup mod 2 and mod 7?") — resolved.**

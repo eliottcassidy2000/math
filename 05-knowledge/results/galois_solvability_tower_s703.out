@@ -1,0 +1,35 @@
+==========================================================================
+(1) DERIVED SERIES of S_n  (|G|, |G'|, |G''|, ...) and solvability
+==========================================================================
+ S_2: orders [2, 1]  -> reaches 1 (solvable);  largest k with G^(k)!=1: 0  (user's k=n-2=0)
+ S_3: orders [6, 3, 1]  -> reaches 1 (solvable);  largest k with G^(k)!=1: 1  (user's k=n-2=1)
+ S_4: orders [24, 12, 4, 1]  -> reaches 1 (solvable);  largest k with G^(k)!=1: 2  (user's k=n-2=2)
+ S_5: orders [120, 60, 60]  -> STABILIZES (unsolvable);  largest k with G^(k)!=1: INFINITE  (user's k=n-2=3)
+ S_6: orders [720, 360, 360]  -> STABILIZES (unsolvable);  largest k with G^(k)!=1: INFINITE  (user's k=n-2=4)
+
+==========================================================================
+(2) A_5 is PERFECT, via overlapping 3-cycles (the 5-point obstruction)
+==========================================================================
+ <(123),(345)> has order 60 (=60 => A_5)
+ [A_5,A_5] order 60  =>  A_5 perfect: True
+ [(123),(345)] = [(0, 3, 2)]  (a nontrivial even perm = commutator; 3-cycles ARE commutators in A_5)
+
+==========================================================================
+(3) Pairs of 3-subsets of [n] sharing EXACTLY one element — first nonzero at n=5
+==========================================================================
+ n=3:    0 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+ n=4:    0 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+ n=5:   15 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+ n=6:   90 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+ n=7:  315 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+ n=8:  840 pairs of triangles meeting in one vertex  (need 3+3-1=5 points)
+
+==========================================================================
+(4) TOURNAMENT MAP: cyclic triangles (3-cycles) on 5 vertices sharing one vertex
+==========================================================================
+ round C_3: 1/1 triples are CYCLIC triangles (3-cycles); C_5 is the smallest round tournament where two 3-cycles can share exactly one vertex
+ round C_5: 5/10 triples are CYCLIC triangles (3-cycles); C_5 is the smallest round tournament where two 3-cycles can share exactly one vertex
+ round C_7: 14/35 triples are CYCLIC triangles (3-cycles); C_5 is the smallest round tournament where two 3-cycles can share exactly one vertex
+
+=> the 'no quintic' obstruction (A_5 perfect, two overlapping triangles) FIRST appears at 5
+   points = 5 runners = the round tournament C_5 = the LRC n=5 cyclotomic worry-set witness.
