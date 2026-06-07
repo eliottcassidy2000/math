@@ -1,0 +1,17 @@
+==========================================================================
+S711 — anatomy of the u(21)=57 extremal unit-distance graph
+==========================================================================
+points                 : 21
+coincident point pairs : 0  (faithful iff 0)
+unit distances (|d-1|<1e-09) : 57   <-- the certificate u(21)>=57
+next-closest non-unit gap        : 2.393e-01  (well-separated => robust)
+degree sequence (sorted) : [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 8, 8, 8]
+  sum deg = 114 = 2E = 114;  max deg = 8, min deg = 5, avg = 5.429
+clique number omega      : 3   (UDG forbids K_4 => must be <= 3)
+triangles                : 25
+4-cycles (C_4)           : 54
+K_2,3 copies             : 0   (faithful UDG forbids K_2,3 => should be 0)
+--------------------------------------------------------------------------
+Context: u(20)=54, u(21)=57, u(22) in [60,61] (Alexeev-Tikhonov 2024).
+Increments u(n)-u(n-1): ...,54->57 = +3 at n=21; the AT upper bound matches this cert.
+==========================================================================
