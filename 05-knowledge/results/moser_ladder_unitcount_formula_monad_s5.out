@@ -1,0 +1,43 @@
+==================================================================================
+VERIFY  #units(L_t) = 12 + r_E(t)   (exact integer arithmetic, box R)
+==================================================================================
+    t  d=4t-1  deg?  #units   12+rE  rE(t)  both  match
+    2       7    no      12      12      0     0     OK
+    3      11    no      18      18      6     6     OK
+    4      15    no      18      18      6     6     OK
+    5      19    no      12      12      0     0     OK
+    6      23    no      12      12      0     0     OK
+    7      27   YES   rank2      --     --    --  (w_t in Q(sqrt-3))
+    8      31    no      12      12      0     0     OK
+    9      35    no      18      18      6     6     OK
+   10      39    no      12      12      0     0     OK
+   11      43    no      12      12      0     0     OK
+   12      47    no      18      18      6     6     OK
+   13      51    no      24      24     12    12     OK
+   14      55    no      12      12      0     0     OK
+   15      59    no      12      12      0     0     OK
+   16      63    no      18      18      6     6     OK
+   17      67    no      12      12      0     0     OK
+   18      71    no      12      12      0     0     OK
+   19      75   YES   rank2      --     --    --  (w_t in Q(sqrt-3))
+   20      79    no      12      12      0     0     OK
+   21      83    no      24      24     12    12     OK
+   22      87    no      12      12      0     0     OK
+   23      91    no      12      12      0     0     OK
+   24      95    no      12      12      0     0     OK
+   25      99    no      18      18      6     6     OK
+   26     103    no      12      12      0     0     OK
+   27     107    no      18      18      6     6     OK
+   28     111    no      24      24     12    12     OK
+   29     115    no      12      12      0     0     OK
+   30     119    no      12      12      0     0     OK
+   31     123    no      24      24     12    12     OK
+
+ALL MATCH: True
+
+k in (#units = 6 + 6k):  k = 1 + r_E(t)/6 = 1 + (#zeta6-orbits of norm-t Eisenstein ints).
+ r_E(t)=0  (t has a prime =2 mod3 to ODD power; t NOT Loeschian) -> 12 units (k=1)
+ r_E(t)=6  (t Loeschian, single orbit: 3,4,9,12,...)             -> 18 units (k=2)
+ r_E(t)=12 (t has a SPLIT prime =1 mod3, e.g. 13,21,31)          -> 24 units (k=3)
+ => the unit-vector count is a TRIANGULAR-SIDE (Q(sqrt-3)) invariant of t,
+    independent of the second CM direction sqrt(4t-1).
