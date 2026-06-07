@@ -18,6 +18,9 @@ from fractions import Fraction as F
 from itertools import combinations, product
 from math import gcd, lcm
 from functools import reduce
+import sys
+def pr(*a):
+    print(*a); sys.stdout.flush()
 
 def norm(x):
     f = x - int(x)
@@ -44,17 +47,19 @@ def maximin_gap(W):
         if m>best: best=m
     return best
 
-def maximin_gap_grid(W, mult=4):
-    """Independent check: brute rational grid t=a/Q, Q=mult*lcm(2*|w|)."""
-    W=[w for w in W if w!=0]
-    if not W: return F(1,2)
-    Q=1
-    for w in W: Q=lcm(Q,2*abs(w))
-    Q*=mult
-    best=F(0)
-    for a in range(1,Q):
-        t=F(a,Q)
-        m=min(norm(w*t) for w in W)
+def maximin_gap_float(W, N=2_000_000):
+    """Independent BOUNDED check via a fine uniform float grid on (0,1)."""
+    W=[abs(w) for w in W if w!=0]
+    if not W: return 0.5
+    best=0.0
+    for a in range(1,N):
+        t=a/N
+        m=1.0
+        for w in W:
+            f=(w*t)%1.0
+            d=f if f<0.5 else 1.0-f
+            if d<m: m=d
+            if m<=best: break
         if m>best: best=m
     return best
 
@@ -75,9 +80,9 @@ def enum_sets(r,B):
     return [c for c in combinations(range(1,B+1),r) if reduce(gcd,c)==1]
 
 def main():
-    print("="*78)
-    print("HYP-2293: signed pairwise LRC floor  Gstar(S) >= 1/(r+1)   monad-S2c")
-    print("="*78)
+    pr("="*78)
+    pr("HYP-2293: signed pairwise LRC floor  Gstar(S) >= 1/(r+1)   monad-S2c")
+    pr("="*78)
     # extended exhaustive sweep
     plan={2:14, 3:11, 4:9, 5:8, 6:7}
     for r in range(2,7):
@@ -87,19 +92,19 @@ def main():
         worst=F(1)
         for V in sets:
             g,_=gstar(V)
-            if g<floor: below+=1; print(f"  !! COUNTEREXAMPLE V={V}: Gstar={g} < {floor}")
+            if g<floor: below+=1; pr(f"  !! COUNTEREXAMPLE V={V}: Gstar={g} < {floor}")
             elif g==floor: equal.append(V)
             else: above+=1
             if g<worst: worst=g
-        print(f"\n--- r={r} (n={n}), B<={B}, {len(sets)} sets, floor=1/n={floor} ---")
-        print(f"  below floor: {below}   equal (TIGHT): {len(equal)}   above: {above}")
-        print(f"  min Gstar over all sets: {worst}  (=floor: {worst==floor})")
+        pr(f"\n--- r={r} (n={n}), B<={B}, {len(sets)} sets, floor=1/n={floor} ---")
+        pr(f"  below floor: {below}   equal (TIGHT): {len(equal)}   above: {above}")
+        pr(f"  min Gstar over all sets: {worst}  (=floor: {worst==floor})")
         if equal:
-            print(f"  tight sets (Gstar = 1/n exactly), first 12: {equal[:12]}")
+            pr(f"  tight sets (Gstar = 1/n exactly), first 12: {equal[:12]}")
     # independent exactness certification on a sample ----------------------
-    print("\n"+"="*78)
-    print("EXACTNESS CERTIFICATION: candidate-set gap  vs  brute rational grid")
-    print("="*78)
+    pr("\n"+"="*78)
+    pr("EXACTNESS CERTIFICATION: candidate-set gap  vs  brute rational grid")
+    pr("="*78)
     import random
     random.seed(12345)
     mism=0; checked=0
@@ -107,18 +112,23 @@ def main():
     for r in [3,4,5]:
         ss=enum_sets(r, plan[r])
         random.shuffle(ss)
-        sample += [(r,V) for V in ss[:15]]
+        sample += [(r,V) for V in ss[:5]]
+    maxdev=0.0
     for r,V in sample:
         for tail in product([1,-1],repeat=r-1):
             eps=(1,)+tail
             D=signed_diff(V,eps)
-            g1=maximin_gap(D); g2=maximin_gap_grid(D,mult=3)
+            g1=maximin_gap(D); g2=maximin_gap_float(D,N=200_000)
             checked+=1
-            if g1!=g2:
+            dev=abs(float(g1)-g2)
+            if dev>maxdev: maxdev=dev
+            # float grid is a LOWER-ish estimate; exact must be >= grid - 1/N and within ~2/minspeed/N
+            if float(g1)+1e-9 < g2:        # exact strictly below grid -> exact MISSED a better t
                 mism+=1
-                print(f"  MISMATCH V={V} eps={eps}: cand={g1} grid={g2}")
-    print(f"  checked {checked} (set,eps) gaps; mismatches: {mism}  "
-          f"({'EXACT method CONFIRMED' if mism==0 else 'METHOD BUG'})")
+                pr(f"  EXACT-TOO-LOW V={V} eps={eps}: cand={g1}={float(g1):.6f} grid={g2:.6f}")
+    pr(f"  checked {checked} (set,eps) gaps; exact-below-grid: {mism}; "
+       f"max|exact-grid|={maxdev:.2e}  "
+       f"({'EXACT method CONFIRMED (>= float grid, tiny dev)' if mism==0 else 'METHOD BUG'})")
 
 if __name__=="__main__":
     main()

@@ -1,0 +1,15 @@
+V=(2, 3, 4, 6, 8)  gcd=1  n=6  floor 1/n=1/6=0.16667
+
+Gstar (exact, max over all cuts) = 3/19 = 0.15789
+  optimal sign pattern eps = (1, 1, 1, -1, -1)
+  cut: A(+)=[2, 3, 4]  B(-)=[6, 8]
+  relative-speed multiset D = [1, 1, 2, 2, 8, 9, 10, 10, 11, 12]
+  gcd of |D| = 1
+
+independent float grid (N=5e6) on optimal cut: 0.157894  (exact 0.157895)
+3/19 = 0.157895
+
+VERDICT: Gstar=3/19 < 1/n=1/6  => HYP-2293 REFUTED
+
+per-cut |D| gcd (shows imprimitivity of relative-speed set):
+  distribution of gcd(|D|) over the 16 cuts: {1: 16}

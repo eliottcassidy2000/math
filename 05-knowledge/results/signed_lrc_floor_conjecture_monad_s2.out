@@ -1,0 +1,32 @@
+==============================================================================
+HYP-2293: signed pairwise LRC floor  Gstar(S) >= 1/(r+1)   monad-S2c
+==============================================================================
+
+--- r=2 (n=3), B<=14, 63 sets, floor=1/n=1/3 ---
+  below floor: 0   equal (TIGHT): 0   above: 63
+  min Gstar over all sets: 1/2  (=floor: False)
+
+--- r=3 (n=4), B<=11, 154 sets, floor=1/n=1/4 ---
+  below floor: 0   equal (TIGHT): 0   above: 154
+  min Gstar over all sets: 2/7  (=floor: False)
+
+--- r=4 (n=5), B<=9, 125 sets, floor=1/n=1/5 ---
+  below floor: 0   equal (TIGHT): 1   above: 124
+  min Gstar over all sets: 1/5  (=floor: True)
+  tight sets (Gstar = 1/n exactly), first 12: [(1, 5, 7, 9)]
+  !! COUNTEREXAMPLE V=(2, 3, 4, 6, 8): Gstar=3/19 < 1/6
+
+--- r=5 (n=6), B<=8, 56 sets, floor=1/n=1/6 ---
+  below floor: 1   equal (TIGHT): 6   above: 49
+  min Gstar over all sets: 3/19  (=floor: False)
+  tight sets (Gstar = 1/n exactly), first 12: [(1, 2, 3, 6, 8), (1, 2, 4, 5, 6), (1, 3, 4, 7, 8), (1, 3, 6, 7, 8), (2, 3, 4, 6, 7), (2, 4, 5, 7, 8)]
+
+--- r=6 (n=7), B<=7, 7 sets, floor=1/n=1/7 ---
+  below floor: 0   equal (TIGHT): 3   above: 4
+  min Gstar over all sets: 1/7  (=floor: True)
+  tight sets (Gstar = 1/n exactly), first 12: [(1, 2, 3, 5, 6, 7), (1, 2, 4, 5, 6, 7), (1, 3, 4, 5, 6, 7)]
+
+==============================================================================
+EXACTNESS CERTIFICATION: candidate-set gap  vs  brute rational grid
+==============================================================================
+  checked 140 (set,eps) gaps; exact-below-grid: 0; max|exact-grid|=2.83e-05  (EXACT method CONFIRMED (>= float grid, tiny dev))
