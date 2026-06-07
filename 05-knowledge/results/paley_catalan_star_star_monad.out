@@ -1,0 +1,12 @@
+================================================================
+(**)  sum_{even-series sigma} mu(0,sigma) = (-1)^k C_k   [NO number theory]
+    k     sum mu   (-1)^k C_k   match  #even-series
+    1         -1           -1    True  1
+    2          2            2    True  3
+    3         -5           -5    True  13
+    4         14           14    True  67
+    5        -42          -42    True  383
+================================================================
+Confirms THM-438 ADDENDUM-2: the Catalan leading coefficient is the pure
+partition-lattice Moebius sum over EVEN-SERIES patterns (even theta included),
+with NO characters/primes.  Remaining: a bijective/GF proof of (**).
