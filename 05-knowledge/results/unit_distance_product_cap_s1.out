@@ -1,0 +1,84 @@
+==============================================================================
+AVERAGE DEGREE IS ADDITIVE UNDER [] :  avgdeg(G[]H) = avgdeg(G)+avgdeg(H)
+Atomic avg degrees a(n) = 2u(n)/n  (proven u(n), AMP):
+   a( 3) = 2*3/3 =    2/1  = 2.0000
+   a( 4) = 2*5/4 =    5/2  = 2.5000
+   a( 5) = 2*7/5 =   14/5  = 2.8000
+   a( 6) = 2*9/6 =    3/1  = 3.0000
+   a( 7) = 2*12/7 =   24/7  = 3.4286
+   a( 8) = 2*14/8 =    7/2  = 3.5000
+   a( 9) = 2*18/9 =    4/1  = 4.0000
+   a(10) = 2*20/10 =    4/1  = 4.0000
+   a(11) = 2*23/11 =  46/11  = 4.1818
+   a(12) = 2*27/12 =    9/2  = 4.5000
+   a(13) = 2*30/13 =  60/13  = 4.6154
+   a(14) = 2*33/14 =   33/7  = 4.7143
+   a(15) = 2*37/15 =  74/15  = 4.9333
+   a(16) = 2*41/16 =   41/8  = 5.1250
+
+==============================================================================
+PRODUCT-ONLY construction cap vs 3N  (factors are proven small optima, n<=21):
+  N   3N  prod_cap  def=cap-3N  factorization (best)
+  3    9         3          -6  u3
+  4   12         5          -7  u4
+  5   15         7          -8  u5
+  6   18         9          -9  u6
+  7   21        12          -9  u7
+  8   24        14         -10  u8
+  9   27        18          -9  u9
+ 10   30        20         -10  u10
+ 11   33        23         -10  u11
+ 12   36        27          -9  u12
+ 13   39        30          -9  u13
+ 14   42        33          -9  u14
+ 15   45        37          -8  u15
+ 16   48        41          -7  u16
+ 17   51        43          -8  u17
+ 18   54        46          -8  u18
+ 19   57        50          -7  u19
+ 20   60        54          -6  u20
+ 21   63        57          -6  u21
+ 22   66        57          -9  u11[]u2
+ 23   69 ?(prime>21)
+ 24   72        66          -6  u12[]u2
+ 25   75        70          -5  u5[]u5
+ 26   78        73          -5  u13[]u2
+ 27   81        81          +0  u9[]u3  (TIE)
+ 28   84        83          -1  u7[]u4
+ 29   87 ?(prime>21)
+ 30   90        90          +0  u10[]u3  (TIE)
+ 31   93 ?(prime>21)
+ 32   96        98          +2  u16[]u2  <== FIRST PRODUCT BEAT
+ 33   99       102          +3  u11[]u3
+ 34  102       103          +1  u17[]u2
+ 35  105       109          +4  u7[]u5
+ 36  108       117          +9  u12[]u3
+ 37  111 ?(prime>21)
+ 38  114       119          +5  u19[]u2
+ 39  117       129         +12  u13[]u3
+ 40  120       130         +10  u10[]u4
+ 41  123 ?(prime>21)
+ 42  126       141         +15  u14[]u3
+
+First N where a PRODUCT construction strictly beats 3N: 32
+Product TIES (cap == 3N) at N = [27, 30]
+
+==============================================================================
+THE N=27 = 3^3 TIE, explicitly:
+   K3 [] K3 [] K3  (Cartesian CUBE of the triangle)  N=27, edges=81=3*27, avgdeg=6/1
+   G9 [] K3        (optimal 9-pt graph x triangle)   N=27, edges=81=3*27, avgdeg=6/1
+
+Both hit avgdeg = 6 EXACTLY (=3+3 or 2+2+2) -> u(27) >= 81 by products,
+and NO product can exceed it (additivity caps avgdeg at 2+2+2=6 for 3^3).
+
+==============================================================================
+CONSEQUENCE for N* in [25,28] (THM-431):
+   N=25: product cap = 70 <= 3N=75   | proven u(N) lower bound (Moser, NON-product) = 75
+   N=26: product cap = 73 <= 3N=78   | proven u(N) lower bound (Moser, NON-product) = 78
+   N=27: product cap = 81 <= 3N=81   | proven u(N) lower bound (Moser, NON-product) = 81
+   N=28: product cap = 83 <= 3N=84   | proven u(N) lower bound (Moser, NON-product) = 85
+
+Since the product cap <= 3N for every N <= 32 (tie at most), ANY graph with
+u(N) > 3N at N <= 32 -- in particular at the crossover N* in [25,28] -- is
+NECESSARILY NON-PRODUCT (irreducible).  N* is a Moser-lattice phenomenon;
+the Erdos product family alone first beats 3N only at N = 32 .
