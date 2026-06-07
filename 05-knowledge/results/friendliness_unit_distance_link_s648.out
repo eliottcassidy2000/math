@@ -1,0 +1,42 @@
+====================================================================
+(A) unit-distance FRIENDLINESS (degree) of the triangular lattice = 6
+====================================================================
+  a point of the Eisenstein lattice has 6 unit-distance neighbours (the hexagon, 6=2*3)
+  = exactly the formalized eisenstein_unit_neighbours (S641): a^2-ab+b^2=1 has 6 solutions.
+  -> 'max friendliness' in unit distance is bounded by this rigid degree-6 (Harborth ~3n);
+     u(n) ESCAPES it via the Moser/sqrt(-11) slab to be friendlier on the boundary (S641).
+
+====================================================================
+(B) the FIRST-PASSAGE analog: 'first friendly radius' as r grows (never isolated yet)
+====================================================================
+  random 40-point cloud; 'isolation-survival' S(r)=frac with NO neighbour within r:
+    r=0.05: still-isolated fraction = 0.53
+    r=0.10: still-isolated fraction = 0.23
+    r=0.15: still-isolated fraction = 0.03
+    r=0.20: still-isolated fraction = 0.00
+    r=0.30: still-isolated fraction = 0.00
+  -> EXACTLY the friendliness-survival shape of S647 (flat at 1, then ->0): in LRC the scan
+     is TIME and the floor is 1/n; in unit distance the scan is RADIUS and the floor is the
+     minimum inter-point distance. 'Never lonely yet' = 'never isolated yet'.
+
+====================================================================
+(C) the shared RESONANCE: LRC gap 1/n  <->  unit distance dZ = 1/6 (hexagon)
+====================================================================
+    clock-dist d=0.0714: chord=2 sin(pi d)=0.4450
+    clock-dist d=0.1429: chord=2 sin(pi d)=0.8678
+    clock-dist d=0.1667: chord=2 sin(pi d)=1.0000 <- UNIT DISTANCE (hexagon, dZ=1/6)
+    clock-dist d=0.3333: chord=2 sin(pi d)=1.7321
+    clock-dist d=0.5000: chord=2 sin(pi d)=2.0000
+  -> LRC asks for d >= 1/n (a BAND, far from 0); unit distance asks for d = 1/6 EXACTLY
+     (a sharp resonance = the cube root / hexagon). Both are 'friendliness in a covering';
+     LRC = band-friendly, unit distance = resonance-friendly. Same graph (S634), different
+     target distance. The friendliness/survival machinery transfers directly.
+
+====================================================================
+SUMMARY: friendliness <-> unit distance
+====================================================================
+  loneliness=independent set=alpha ; friendliness=degree=EDGES=unit distances ; max=u(n).
+  first-lonely-time tau (scan=time, floor 1/n) <-> first-friendly-radius (scan=radius, floor=
+  min distance). Same survival curve. The unit-distance graph's friendliness is bounded by the
+  hexagon (degree 6, S641); LRC friendliness is bounded below by 1/n (S647). One covering, two
+  scans, one cube-root resonance (1/6 = hexagon = the 6=2*3 the whole arc converges on).
