@@ -1,0 +1,48 @@
+==============================================================================
+OPTIMAL SIGN-PATTERN LAW for the signed pairwise gap  monad-S2b
+==============================================================================
+
+--- r=3 (n=4), 79 sets, floor 1/n=1/4 ---
+  C1 (a min|rel|-maximizer is also a G_pair-maximizer): 39/79 hold, 40 fail
+  C2 (all-+ G-optimal  <=>  all-+ min|rel|-optimal):    51/79 hold, 28 fail
+  C3 max_eps G_pair  vs observer floor 1/n: above=79, equal=0, below=0
+  #optimal-pattern distribution: {1: 34, 2: 44, 3: 1}
+  biggest improvements gmax/allpos:
+     V=(1, 2, 4): 1/4 -> 1/3   (x1.333)
+     V=(1, 3, 4): 1/4 -> 1/3   (x1.333)
+     V=(1, 3, 7): 1/4 -> 1/3   (x1.333)
+     V=(1, 5, 7): 1/4 -> 1/3   (x1.333)
+
+--- r=4 (n=5), 69 sets, floor 1/n=1/5 ---
+  C1 (a min|rel|-maximizer is also a G_pair-maximizer): 39/69 hold, 30 fail
+  C2 (all-+ G-optimal  <=>  all-+ min|rel|-optimal):    52/69 hold, 17 fail
+  C3 max_eps G_pair  vs observer floor 1/n: above=69, equal=0, below=0
+  #optimal-pattern distribution: {1: 29, 2: 13, 3: 3, 4: 24}
+  biggest improvements gmax/allpos:
+     V=(1, 3, 6, 7): 1/7 -> 4/17   (x1.647)
+     V=(2, 4, 7, 8): 1/7 -> 4/17   (x1.647)
+     V=(1, 2, 5, 7): 1/7 -> 3/13   (x1.615)
+     V=(2, 3, 6, 8): 1/7 -> 3/13   (x1.615)
+
+--- r=5 (n=6), 21 sets, floor 1/n=1/6 ---
+  C1 (a min|rel|-maximizer is also a G_pair-maximizer): 15/21 hold, 6 fail
+  C2 (all-+ G-optimal  <=>  all-+ min|rel|-optimal):    15/21 hold, 6 fail
+  C3 max_eps G_pair  vs observer floor 1/n: above=19, equal=2, below=0
+  #optimal-pattern distribution: {1: 5, 2: 2, 4: 10, 5: 3, 8: 1}
+  biggest improvements gmax/allpos:
+     V=(1, 2, 4, 5, 7): 1/7 -> 1/5   (x1.400)
+     V=(1, 2, 5, 6, 7): 1/7 -> 1/5   (x1.400)
+     V=(1, 3, 5, 6, 7): 1/7 -> 1/5   (x1.400)
+     V=(1, 2, 3, 4, 7): 1/7 -> 3/16   (x1.312)
+
+==============================================================================
+C1 FAILURE INSPECTION (r=4, where min|rel| proxy fails)
+==============================================================================
+  V=(1, 2, 5, 6): G-opt (1, 1, -1, -1) G=3/13 minrel=1 | minrel-opt (1, -1, 1, -1) G=2/9 minrel=3
+  V=(1, 2, 5, 7): G-opt (1, 1, -1, 1) G=3/13 minrel=1 | minrel-opt (1, -1, 1, -1) G=1/5 minrel=3
+  V=(1, 3, 4, 5): G-opt (1, -1, -1, 1) G=3/13 minrel=1 | minrel-opt (1, 1, -1, 1) G=3/14 minrel=2
+  V=(1, 3, 4, 6): G-opt (1, 1, 1, -1) G=1/4 minrel=1 | minrel-opt (1, -1, 1, -1) G=4/17 minrel=3
+  V=(1, 3, 4, 8): G-opt (1, 1, -1, 1) G=4/17 minrel=2 | minrel-opt (1, -1, 1, -1) G=1/5 minrel=3
+  V=(1, 3, 5, 6): G-opt (1, 1, 1, -1) G=3/13 minrel=2 | minrel-opt (1, -1, 1, -1) G=3/14 minrel=3
+  V=(1, 3, 6, 8): G-opt (1, 1, 1, -1) G=1/4 minrel=2 | minrel-opt (1, -1, 1, -1) G=3/13 minrel=4
+  V=(1, 3, 7, 8): G-opt (1, -1, -1, -1) G=3/13 minrel=1 | minrel-opt (1, -1, 1, -1) G=4/19 minrel=4

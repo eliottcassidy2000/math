@@ -1,0 +1,50 @@
+==============================================================================
+SIGNED LRC PAIRWISE-GAP CENSUS (exact)  monad-explorer-S2
+==============================================================================
+
+--- r=1 movers (repo n=2), B<= 9, 1 gcd-1 sets, floor 1/n=1/2 ---
+  M_obs sign-invariance violations (all eps, all sets): 0  (CONFIRMED invariant)
+
+--- r=2 movers (repo n=3), B<= 9, 27 gcd-1 sets, floor 1/n=1/3 ---
+  M_obs sign-invariance violations (all eps, all sets): 0  (CONFIRMED invariant)
+  G_pair: all-+ is optimal in 27/27 sets; sign-flip BEATS all-+ in 0/27 sets
+
+--- r=3 movers (repo n=4), B<= 9, 79 gcd-1 sets, floor 1/n=1/4 ---
+  M_obs sign-invariance violations (all eps, all sets): 0  (CONFIRMED invariant)
+  G_pair: all-+ is optimal in 28/79 sets; sign-flip BEATS all-+ in 51/79 sets
+    V=(1, 2, 4): G_pair(all+)=1/4  -> max over signs=1/3 (min=1/4), best eps (eps0=+): (1, -1, 1)
+    V=(1, 2, 5): G_pair(all+)=2/7  -> max over signs=1/3 (min=2/7), best eps (eps0=+): (1, -1, -1)
+    V=(1, 2, 7): G_pair(all+)=2/7  -> max over signs=4/13 (min=1/4), best eps (eps0=+): (1, -1, -1)
+    V=(1, 2, 8): G_pair(all+)=4/13  -> max over signs=6/19 (min=1/4), best eps (eps0=+): (1, 1, -1)
+    V=(1, 3, 4): G_pair(all+)=1/4  -> max over signs=1/3 (min=1/4), best eps (eps0=+): (1, 1, -1)
+    V=(1, 3, 6): G_pair(all+)=2/7  -> max over signs=5/16 (min=2/7), best eps (eps0=+): (1, 1, -1)
+
+--- r=4 movers (repo n=5), B<= 8, 69 gcd-1 sets, floor 1/n=1/5 ---
+  M_obs sign-invariance violations (all eps, all sets): 0  (CONFIRMED invariant)
+  G_pair: all-+ is optimal in 17/69 sets; sign-flip BEATS all-+ in 52/69 sets
+    V=(1, 2, 3, 5): G_pair(all+)=1/5  -> max over signs=2/9 (min=2/11), best eps (eps0=+): (1, 1, 1, -1)
+    V=(1, 2, 3, 6): G_pair(all+)=1/6  -> max over signs=3/13 (min=1/6), best eps (eps0=+): (1, 1, -1, 1)
+    V=(1, 2, 3, 7): G_pair(all+)=1/5  -> max over signs=3/13 (min=1/5), best eps (eps0=+): (1, 1, -1, -1)
+    V=(1, 2, 4, 5): G_pair(all+)=1/5  -> max over signs=1/4 (min=2/13), best eps (eps0=+): (1, 1, 1, -1)
+    V=(1, 2, 4, 6): G_pair(all+)=1/6  -> max over signs=3/13 (min=2/13), best eps (eps0=+): (1, -1, 1, -1)
+    V=(1, 2, 4, 8): G_pair(all+)=1/5  -> max over signs=3/13 (min=3/17), best eps (eps0=+): (1, 1, -1, 1)
+
+--- r=5 movers (repo n=6), B<= 7, 21 gcd-1 sets, floor 1/n=1/6 ---
+  M_obs sign-invariance violations (all eps, all sets): 0  (CONFIRMED invariant)
+  G_pair: all-+ is optimal in 6/21 sets; sign-flip BEATS all-+ in 15/21 sets
+    V=(1, 2, 3, 4, 6): G_pair(all+)=1/6  -> max over signs=2/11 (min=1/10), best eps (eps0=+): (1, 1, 1, 1, -1)
+    V=(1, 2, 3, 4, 7): G_pair(all+)=1/7  -> max over signs=3/16 (min=1/8), best eps (eps0=+): (1, 1, -1, -1, 1)
+    V=(1, 2, 3, 5, 6): G_pair(all+)=1/6  -> max over signs=1/5 (min=1/10), best eps (eps0=+): (1, 1, 1, 1, -1)
+    V=(1, 2, 3, 5, 7): G_pair(all+)=1/7  -> max over signs=2/11 (min=1/8), best eps (eps0=+): (1, 1, 1, 1, -1)
+    V=(1, 2, 3, 6, 7): G_pair(all+)=1/7  -> max over signs=2/11 (min=1/8), best eps (eps0=+): (1, 1, 1, -1, -1)
+    V=(1, 2, 4, 5, 7): G_pair(all+)=1/7  -> max over signs=1/5 (min=2/15), best eps (eps0=+): (1, 1, 1, 1, -1)
+
+==============================================================================
+SUMMARY
+==============================================================================
+ r  n  #sets  obs_viol  flip_beats  allpos_opt
+ 1  2      1         0        None        None
+ 2  3     27         0           0          27
+ 3  4     79         0          51          28
+ 4  5     69         0          52          17
+ 5  6     21         0          15           6
