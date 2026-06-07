@@ -1,4 +1,7 @@
-# The 3N-crossover is won by the densest layer plus a small surplus — not by a high-degree layer
+# The 3N-crossover escapes rank 2 — the degree–radius tension IS the 2-D kissing bound, and the Moser ring is the minimal escape
+
+*(Filed under the working title "densest layer plus surplus"; the first draft's
+"triangular + surplus" reading was wrong and is corrected in §"What actually wins at N=28".)*
 
 *monad-explorer-2026-06-07-S4 (crossover-lane). Builds on THM-431 / THM-431-C (S710),
 THM-432/433 + HYP-2299/2300 (concurrent S1/S2/S711, the **product** lane). This is the
@@ -94,36 +97,57 @@ under the Erdős–Minkowski product, `avgdeg(G□H)=avgdeg(G)+avgdeg(H)` — th
 family** also first beats `3N` at exactly **`N = 32`** (`W₁₆□K₂`, 98 > 96), ties at
 `27 = 3³` (the Hamming cube `K₃^□3`, forced 6-regular), and is `≤ 3N` for every `N ≤ 31`.
 
-So **two structurally unrelated families of "nice" constructions — single-norm sublattices
-and Cartesian products — independently bottom out at the same crossover `N = 32`**, four
-above the true frontier `N* ≤ 28`. The gap `[28, 32]` is what both lanes call, in their own
-language, the cost of regularity: the irreducibility premium (products) and the
-degree–radius penalty (lattices) are two faces of one obstruction.
+So **two structurally unrelated families of "nice" rank-2 / product constructions — single-norm
+sublattices and Cartesian products — independently bottom out at the same crossover `N = 32`**,
+four above the true frontier `N* ≤ 28`. The gap `[28, 32]` is what both lanes call, in their own
+language, the cost of regularity: the irreducibility premium (products) and the degree–radius
+penalty (lattices) are two faces of one obstruction.
 
-The unifying reading: **to beat `3N` you do not want a high-degree layer at all.** `u(28)=85`
-means average degree `6.07` — a hair above `κ`. The way to get a hair above `6` at small `N`
-is the *maximally compact degree-6 layer* (the triangular/penny lattice, smallest possible
-radius, `Harborth ⌊3N−√(12N−3)⌋` just *below* `3N`) plus a tiny **non-lattice surplus**.
-At `N=28` that surplus is only **2 unit distances** — `83` (best `√7` lattice) vs `85`
-(Engel) — yet it moves the crossover from `32` down to `28`. The frontier is won at the
-*boundary* of the densest layer, perturbed; never in the *interior* of a wider one. Both the
-high-degree lattices and the clean products overspend on regularity and pay for it in `N`.
+## What actually wins at N=28 — and why it had to leave rank 2
 
-This is why neither lane can construct the `N*` graph: products are capped by additivity
-(THM-433), single lattices by the degree–radius tension (here), and the true minimizer is an
-**irregular blob that is neither** — it lives exactly in the `2`-edge gap between the densest
-regular layer and `3N`.
+It is tempting (I fell for it in the first draft of this note) to read `u(28)=85` — average
+degree `6.07`, a hair above `κ` — as "a triangular patch plus a tiny surplus." That is **wrong**,
+and the error is instructive. A triangular (penny) `28`-patch gives only `Harborth ⌊84−√333⌋ = 65`
+(avg deg `4.6`); the best single-norm **`√7`** patch gives `83` (avg deg `5.9`). `85` is not a
+perturbation of triangular at all — it is *denser than any degree-12 2-D lattice patch*.
+
+The actual extremal lives in **Engel's "Moser lattice"** (THM-432; Engel et al. arXiv:2406.15317):
+the **rank-4** ring
+
+```
+   M_L = ℤ[ζ₆, ω₃],   ζ₆ = (1+i√3)/2  (cos = 1/2),   ω₃ = (5+i√11)/6  (cos = 5/6),
+```
+
+sitting in the biquadratic CM field `ℚ(√−3, √−11)`. The decisive fact: **`ω₃` is a unit**
+(`|ω₃| = 1`) of *infinite* order (it is not a root of unity — `cos = 5/6 ∉ {0,±½,±1}`). So `M_L`
+has **18 unit vectors all at radius exactly 1**, and a Moser vertex can reach degree `18` *without
+paying any radius*. This is exactly the escape hatch the degree–radius law forbids in rank 2:
+
+> The degree–radius tension `N_cross ∝ ρ·t·(deg/(deg−6))²` **is the 2-D kissing bound in disguise.**
+> In a rank-2 lattice the minimal-distance shell has at most `6` vectors (kissing number 6), so
+> degree `> 6` forces the unit shell *off* the minimal radius (`t > 1`), and you pay boundary
+> deficit `∝ √t`. The Moser ring breaks this by being **rank 4 and dense**: `ω₃` supplies a second
+> independent unit direction, packing 18 units onto radius 1. Degree 18, no radius penalty.
+
+So the `[28, 32]` gap is not "regular vs irregular" — it is **the cost of staying rank-2**. The
+single non-torsion unit `ω₃` (the "Moser angle", `arccos 5/6`) is the *minimal* algebraic
+ingredient that escapes the kissing trap: one extra CM direction beyond `ℚ(√−3)`. This is precisely
+THM-432's "bridge ring between the triangular lattice and the CM field" (reopening HYP-2262) — and
+the degree–radius law explains **why** such a bridge is *necessary*: nothing inside rank 2 can beat
+`3N` before `32`.
 
 ## Concrete residue
 
-- `N* ∈ [25,28]` is **not lowered** by any single-norm lattice: all six families (and, by
-  THM-433, all products) are `≤ 3N` through `N = 28`. The ceiling `28` stands on Engel's
-  genuinely non-lattice record.
-- The right hunt for `u(27) > 81` (which would give `N* ≤ 27`) is therefore a **triangular
-  patch + O(1) non-lattice perturbation** — *not* a denser lattice layer and *not* a product.
-  Quantitatively: a 27-cell penny/triangular blob gives `≈ 78` (deficit −3, from the sweep);
-  it needs **4 extra unit distances** from off-lattice placement to reach 82. That is the
-  precise target.
+- `N* ∈ [25,28]` is **not lowered** by any single-norm rank-2 lattice: all six families (and, by
+  THM-433, all Cartesian products) are `≤ 3N` through `N = 28`; the earliest rank-2 crossover is
+  `√7` at `32`. The ceiling `28` stands on the **rank-4 Moser ring**, not a 2-D lattice — this is
+  the precise, corrected sense in which Engel's record "evades the structured families."
+- The right hunt for `u(27) > 81` (⟹ `N* ≤ 27`) is therefore a **dense Moser-ring `M_L` patch**,
+  *not* a denser single 2-D lattice and *not* a product. The best `√7` rank-2 patch gives `78` at
+  `N=27` (deficit −3); only the 18-unit-vector Moser structure can plausibly reach `82`. Building an
+  explicit 28-point `M_L` patch with `85` unit distances (exact over `ℚ(√3,√11)`, the arithmetic
+  already set up in `unit_distance_moser_lattice_u21_monad_s4.py`) would make THM-431's ceiling
+  `N* ≤ 28` **self-contained** — the natural next step.
 - Files: `04-computation/unit_distance_3n_crossover_families_s4.py`,
   `…_focus_s4.py` (+ `05-knowledge/results/*_s4.out`); HYP-2301.
 
