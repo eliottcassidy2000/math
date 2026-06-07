@@ -1,0 +1,51 @@
+free moments A088368 (M=F(zM)), k=0..: [1, 1, 3, 13, 69, 421, 2867, 21477, 175769, 1567273, 15213955]
+k=8,9,10: 175769 1567273 15213955
+
+Hankel determinants D_n (n=0..8):
+   D_0 = 1   >0
+   D_1 = 2   >0
+   D_2 = 20   >0
+   D_3 = 1792   >0
+   D_4 = 2597632   >0
+   D_5 = 94511618048   >0
+   D_6 = 124530312432140288   >0
+   D_7 = 8068310040064647979073536   >0
+   D_8 = 33563253295484937514053202748637184   >0
+ALL POSITIVE (genuine probability measure on R): True
+
+Shifted Hankel det[m_{i+j+1}] (support in [0,infty) test):
+   D'_0 = 1   >0
+   D'_1 = 4   >0
+   D'_2 = 108   >0
+   D'_3 = 35936   >0
+   D'_4 = 245599232   >0
+   D'_5 = 51141834647552   >0
+   D'_6 = 452507025606972653568   >0
+   D'_7 = 226385793268894191439260418048   >0
+ALL shifted POSITIVE (=> support in [0,infty)): True
+
+Jacobi parameters of the factorial law:
+   b_n     : ['1', '4', '26/5', '1969/280', '5154545/568232', '5172889545562/468266302897', '4574904955959168866495/350760260939137602407', '879849146175015567938253794518142/58484098995606469537074760610627']
+   lambda_n: ['2', '5', '224/25', '50735/3136', '2584302056/102961609', '77124577651912079/2129661070359001', '2840716528890407037085939688/57771052101427592231202649']
+   b_n all integer?  False
+   lam_n all integer? False
+
+Compound-Poisson cgf  int_0^inf (e^{tx}-1)e^{-x}dx  (t<1 branch):
+   = -t/(t - 1)   equals t/(1-t)?  True
+
+Numeric spectral density rho(x) = -Im G(x+i0)/pi:
+   x=   0.20   rho=0.73495681
+   x=   0.50   rho=0.3679896
+   x=   1.00   rho=0.20254641
+   x=   1.50   rho=0.13559258
+   x=   2.00   rho=0.098162959
+   x=   3.00   rho=0.056829356
+   x=   4.00   rho=0.034243323
+   x=   6.00   rho=n/a
+   x=   9.00   rho=n/a
+   x=  14.00   rho=n/a
+   x=  22.00   rho=n/a
+   x=  35.00   rho=n/a
+   x=  60.00   rho=n/a
+   x= 100.00   rho=n/a
+   [crude trapezoid over sampled range] mass~0.5741, mean~0.6848  (true: mass=1, mean=m_1=1; tail beyond x=100 not captured)

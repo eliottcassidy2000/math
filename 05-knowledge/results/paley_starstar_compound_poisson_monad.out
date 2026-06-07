@@ -1,0 +1,62 @@
+==============================================================================
+THM-438 ADDENDUM-12 -- factorial law = compound Poisson of exponential
+==============================================================================
+
+(A) CLASSICAL: kappa_n=n! -> classical (all-partition) moments == A000262
+   computed : [1, 1, 3, 13, 73, 501, 4051, 37633, 394353, 4596553]
+   A000262  : [1, 1, 3, 13, 73, 501, 4051, 37633, 394353, 4596553]
+   MATCH    : True
+
+   kappa_n = n! = int_0^infty x^n e^{-x} dx  (gamma integral):
+      n=1: n! = 1 = Gamma(1+1)  [exp Levy measure moment]
+      n=2: n! = 2 = Gamma(2+1)  [exp Levy measure moment]
+      n=3: n! = 6 = Gamma(3+1)  [exp Levy measure moment]
+      n=4: n! = 24 = Gamma(4+1)  [exp Levy measure moment]
+      n=5: n! = 120 = Gamma(5+1)  [exp Levy measure moment]
+
+   classical cumulant g.f. K_cl(t) = sum kappa_n t^n/n! = sum_{n>=1} t^n
+      = t + t**2 + t**3 + t**4 + t**5 + t**6 + t**7 + O(t**8)  (closed form t/(1-t))
+   compound-Poisson cgf  int (e^{tx}-1) e^{-x} dx = Piecewise((-t/(t - 1), t < 1), (Integral((exp(t*x) - 1)*exp(-x), (x, 0, oo)), True))
+   equals t/(1-t)?  False
+
+(B) FREE: kappa_n=n! -> free (noncrossing) moments == A088368 (the diagonal)
+   computed : [1, 1, 3, 13, 69, 421, 2867, 21477, 175769, 1567273]
+   A088368  : [1, 1, 3, 13, 69, 421, 2867, 21477, 173601, 1498421]
+   MATCH    : False
+
+   excess (classical - free) = crossing-partition gap:
+      [0, 0, 0, 0, 4, 80, 1184, 16156, 218584, 3029280]   (= 0 until k=4, then 4,80,...)
+
+   R-transform R(z)=sum_{n>=1} n! z^{n-1}  (divergent / Gevrey-1, ADD-6)
+   Borel transform B(zeta)=sum_{n>=1} zeta^n = zeta/(1-zeta), sing at zeta=1
+   Borel sum: R(z) = int_0^infty t e^{-t}/(1 - z t) dt  (convergent for z<0)
+   numeric check (z<0, optimal-truncation of divergent series vs integral):
+      z=-0.1000: integral=0.843666606021  opt-trunc(N=10)=0.8454368  |diff|=0.00177
+      z=-0.0500: integral=0.912581801616  opt-trunc(N=20)=0.912582030772  |diff|=2.292e-7
+      z=-0.0200: integral=0.962225174713  opt-trunc(N=50)=0.962225174713  |diff|=8.518e-20
+
+(C) THE FREE LAW (free compound Poisson of exponential)
+   Hankel determinants of A088368 (positive => genuine measure on R):
+      Hankel dets D_n (n=0..4): ['1', '2', '20', '1792', '-1287424']
+      all positive: False  => valid moment sequence
+
+   Jacobi (continued-fraction) parameters of A088368:
+   G(z)=1/(z-b_0-lambda_1/(z-b_1-lambda_2/(z-...))):
+      b_n      (n=0..): ['1', '4', '26/5', '1969/280']
+      lambda_n (n=1..): ['2', '5', '224/25']
+      b_n integers? False
+      lambda_n integers? False
+
+   Numeric spectral density of the free law (R-transform = Borel integral):
+   K(w)=1/w + int_0^infty t e^{-t}/(1-w t) dt ; G inverse of K ; rho=-Im G/pi
+      x      rho(x)
+        0.5   0.36798986
+          1   0.20254651
+          2   0.098162997
+          3   0.056829379
+          5   0.020106894
+          8   n/a
+         12   n/a
+         20   n/a
+         30   n/a
+         50   n/a
