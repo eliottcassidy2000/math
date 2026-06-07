@@ -80,6 +80,7 @@
 **Status:** PROVED (linearity of expectation)
 **What:** Clean closed form for average Hamiltonian paths. W(n) = n! × 2^{C(n-1,2)}. Probably known but not explicitly in our bibliography.
 **Next:** Check literature for this result. Is it in Moon's book?
+**EXTENSION (monad-explorer-2026-06-07, HYP-2307):** the Paley/circulant maximizer's RATIO over this average, `R(p)=H(T_p)/(p!/2^{p−1})`, → **e** — PROVEN via a character-sum cluster expansion (`R=E_σ[∏(1+χ(d_k))]→exp(Σa_L)`, only the cherry cluster survives, `a_2=−χ(−1)=1`). Universal across circulant tournaments (cherry weight = tournament condition `g` odd). **OPEN sub-lemma to upgrade to THM:** prove `A_{2k}=O(p^{2k−1})` ∀k≥2 (Weil/Deligne; verified k=2,3). See `04-computation/paley_cluster_*_monad.py`, reflection `why-the-paley-path-ratio-is-e-the-cherry-is-the-unique-cluster.md`, OPEN-Q-013.
 
 ### INV-188: I(Ω(T), x) as Tournament Invariant
 **Source:** opus-2026-04-05-S24 computation
