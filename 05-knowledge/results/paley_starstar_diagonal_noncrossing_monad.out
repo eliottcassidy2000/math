@@ -55,3 +55,17 @@
   m=7: h_m(m)= 4.2613   h_m(-1)=-0.02520
   m=8: h_m(m)= 4.3594   h_m(-1)=+0.00632
   => h_m interpolates the bridge from 0 (tame/Mersenne) to e (wild/noncrossing-lists).
+
+========================================================================
+(F) EXACT CLOSED FORM FOR THE DIAGONAL:  t(k,k)=A088368(k)=Sum_{NC(k)} prod |B|!
+========================================================================
+  k : Sum_NC prod|B|! (=A088368, 'sets of noncrossing lists') | Sum_NC prod(|B|-1)!
+  1 :        1  =A088368(1)=1        match=True   [(|B|-1)!: 1]
+  2 :        3  =A088368(2)=3        match=True   [(|B|-1)!: 2]
+  3 :       13  =A088368(3)=13       match=True   [(|B|-1)!: 6]
+  4 :       69  =A088368(4)=69       match=True   [(|B|-1)!: 23]
+  5 :      421  =A088368(5)=421      match=True   [(|B|-1)!: 105]
+  6 :     2867  =A088368(6)=2867     match=True   [(|B|-1)!: 553]
+  7 :    21477  =A088368(7)=21477    match=True   [(|B|-1)!: 3311]
+  => diagonal closed form CONFIRMED k<=7:  t(k,k)=Sum_{pi in NC(k)} prod_{B} |B|!
+  => the prod(|B|-1)! variant 1,2,6,23,105,553,3311 is NOT in OEIS (only prod|B|! is).

@@ -36,8 +36,10 @@ anonymous. That is what "a cancellation, not a count" means, stated as a fact ab
 The diagonal — long described in this thread only by its mechanism ("the bigon-tree /
 all-pairings over-count") — is **A088368: partitions of `[n]` into sets of noncrossing
 lists** (Callan, 2007). It is not uncatalogued at all. It carries two functional equations,
-`A(x)=Σ n!x^n A(x)^n` and `A(x/F(x))=F(x)` with `F=Σ n!x^n`, and a rigorous asymptotic
-`a(n) ~ e·n!` (Kotesovec). The thread's own model recovers Callan's exactly: max-rank
+`A(x)=Σ n!x^n A(x)^n` and `A(x/F(x))=F(x)` with `F=Σ n!x^n`, a rigorous asymptotic
+`a(n) ~ e·n!` (Kotesovec), and the crisp closed form (verified k≤7)
+`t(k,k) = Σ_{π∈NC(k)} ∏_{B} |B|!` — the sum over noncrossing partitions with each block read
+as a linear list. The thread's own model recovers Callan's exactly: max-rank
 patterns are **doubled plane trees**, the Euler tour visits each vertex `deg(v)` times so the
 weight is `∏(deg(v)−1)!` over noncrossing tours = sets of noncrossing lists.
 

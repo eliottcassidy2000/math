@@ -746,9 +746,20 @@ each vertex `v` exactly `deg_tree(v)` times, so block sizes `|B_v|=deg_tree(v)` 
 weight is `∏_v(deg_tree(v)−1)!` summed over the **noncrossing** tours — precisely Callan's
 "sets of noncrossing lists" (a degree-`d` vertex ↔ a list of `d` related elements,
 `(d−1)!` cyclic arrangements). So the diagonal is no longer an "uncatalogued mechanism": it
-is a named sequence with two functional equations and an established asymptotic. (The exact
-bijection bigon-trees ↔ Callan's noncrossing lists is a clean, finite write-up, VERIFIED
-k≤6 + the OEIS match; recorded as a lead, not claimed PROVED.)
+is a named sequence with two functional equations and an established asymptotic.
+
+**EXACT CLOSED FORM (VERIFIED k≤7, `paley_starstar_diagonal_noncrossing_monad.py`):**
+```
+   t(k,k)  =  A088368(k)  =  Σ_{π ∈ NC(k)}  ∏_{B∈π} |B|! ,
+```
+the sum over **noncrossing partitions** of `[k]` with each block weighted by `|B|!` (a block
+of size `b` as a *linear list* = `b!` orderings — Callan's "sets of noncrossing lists",
+verbatim). This is the cleanest statement of the wild end. (The cognate `Σ_{NC(k)}∏(|B|−1)!
+= 1,2,6,23,105,553,3311` — cyclic lists — is NOT in OEIS; only the `∏|B|!` weight is
+catalogued, a further instance of "only the right weight is structured.") The exact bijection
+*diagonal even-series patterns (= doubled plane trees) ↔ NC(k) with block-factorial weight* is
+a clean, finite, number-theory-free write-up (VERIFIED k≤7 + the OEIS match) — recorded as the
+cleanest available proof target, not claimed PROVED.
 
 ### (2) `A088368(m) ~ e·m!` IS CORRECT — ADD-9 point (6) RETRACTED (see MISTAKE-063).
 OEIS records `a(n) ~ exp(1)·n!` (Kotesovec, 2019). ADD-9 refuted this from

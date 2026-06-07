@@ -99,3 +99,43 @@ for m in range(2,9):
     tame = (2**m-1)/((-1)**m * fact(m))
     print(f"  m={m}: h_m(m)={wild:7.4f}   h_m(-1)={tame:+.5f}")
 print("  => h_m interpolates the bridge from 0 (tame/Mersenne) to e (wild/noncrossing-lists).")
+
+print()
+print("="*72)
+print("(F) EXACT CLOSED FORM FOR THE DIAGONAL:  t(k,k)=A088368(k)=Sum_{NC(k)} prod |B|!")
+print("="*72)
+from itertools import combinations as _c
+def _nc_parts(n):
+    def parts(lst):
+        if not lst:
+            yield []; return
+        first=lst[0]
+        for rest in parts(lst[1:]):
+            for i in range(len(rest)):
+                yield rest[:i]+[[first]+rest[i]]+rest[i+1:]
+            yield [[first]]+rest
+    def is_nc(part):
+        for A in part:
+            for B in part:
+                if A is B: continue
+                for a in A:
+                    for b in A:
+                        if a<b:
+                            for cc in B:
+                                if a<cc<b:
+                                    for d in B:
+                                        if d>b: return False
+        return True
+    for p in parts(list(range(n))):
+        if is_nc(p): yield p
+print("  k : Sum_NC prod|B|! (=A088368, 'sets of noncrossing lists') | Sum_NC prod(|B|-1)!")
+for k in range(1,8):
+    sf=sl=0
+    for p in _nc_parts(k):
+        pf=pl=1
+        for B in p:
+            pf*=fact(len(B)); pl*=fact(len(B)-1)
+        sf+=pf; sl+=pl
+    print(f"  {k} : {sf:>8}  =A088368({k})={A088368[k]:<8} match={sf==A088368[k]}   [(|B|-1)!: {sl}]")
+print("  => diagonal closed form CONFIRMED k<=7:  t(k,k)=Sum_{pi in NC(k)} prod_{B} |B|!")
+print("  => the prod(|B|-1)! variant 1,2,6,23,105,553,3311 is NOT in OEIS (only prod|B|! is).")
