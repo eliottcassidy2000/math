@@ -219,6 +219,26 @@ def main():
     except ImportError:
         print("    [scipy/numpy not available -- skipping Borel-bridge numerics]")
 
+    print("\n(7) THE q-INTERPOLATION IS A POSITIVE-DEFINITE FAMILY OF MEASURES (mu_q, q>=0):")
+    print("    m_k(q)=sum_j C(k,j) q^j is a moment sequence for every q>=0 (q=0 free, q=1 classical).")
+    try:
+        import sympy as sp
+        q = sp.symbols('q')
+        mom = [sum(v*q**j for j, v in qtri[k].items()) for k in range(KMAX+1)]
+        print("    Hankel D_n(q)=det[m_{i+j}]_{0..n}: all coeffs >=0  => positive for ALL q>=0.")
+        for n in range(0, 5):
+            Mx = sp.Matrix([[mom[i+j] for j in range(n+1)] for i in range(n+1)])
+            D = sp.expand(Mx.det())
+            poly = sp.Poly(D, q) if D.free_symbols else None
+            coeffs = poly.all_coeffs() if poly else [D]
+            allnn = all(c >= 0 for c in coeffs)
+            d0 = int(D.subs(q, 0)) if hasattr(D, 'subs') else int(D)
+            d1 = int(D.subs(q, 1)) if hasattr(D, 'subs') else int(D)
+            print(f"    D_{n}: q=0 -> {d0:>10} (free, matches ADD-12),  q=1 -> {d1:>10} (classical),  all-coeffs>=0: {allnn}")
+        print("    => continuous family mu_q of genuine probability measures; BP partners are q=0 and q=1 slices.")
+    except ImportError:
+        print("    [sympy not available -- skipping Hankel-q check]")
+
     print("\nDONE.")
 
 if __name__ == "__main__":

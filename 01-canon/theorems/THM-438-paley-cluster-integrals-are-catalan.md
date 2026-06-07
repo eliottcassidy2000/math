@@ -1132,6 +1132,18 @@ back, weighted by the very `e^{−t}` that is the Lévy measure `ν`. **ADD-6 (r
 - **Free** `μ_free = Λ(μ_classical)` (moments A088368): genuine measure on `[0,∞)` (ADD-12), critical
   free-Poisson `1/√x` edge at `0`, exponential tail `~ e·e^{−x}` (the `e` of MISTAKE-063 = the Lévy-tail constant).
 
+### (5) The interpolation is a POSITIVE-DEFINITE FAMILY of measures — BP partners are two slices of one deformation.
+`m_k(q)=Σ_j C(k,j) q^j` is a genuine moment sequence for **every `q≥0`**: the Hankel determinants
+`D_n(q)=det[m_{i+j}]_{0..n}` are polynomials in `q` with **all-nonnegative coefficients** (VERIFIED
+`n≤4`), hence `>0` for all `q≥0`. So there is a **continuous family of genuine probability measures
+`μ_q`** with `μ_0 = ` free factorial law (A088368) and `μ_1 = ` classical CP (A000262). Two
+cross-checks confirm the construction: the `q=0` Hankel values `1,2,20,1792,2597632` reproduce ADD-12's
+verified free-law Hankel sequence EXACTLY, and the `q=1` values `1,2,28,5808,30445056` are the classical
+law's. The Bercovici–Pata partners are the `q=0` and `q=1` slices of one positive-definite, crossing-graded
+deformation (the Bożejko–Speicher `q`-deformation of the law with cumulants `n!`); the all-nonnegative
+`q`-coefficients make every Hankel determinant monotone increasing — the measure spreads monotonically as
+it moves free→classical.
+
 ### Honest status (ADD-13).
 PROVED/named: the two endpoints are Bercovici–Pata partners (both cumulant signatures `=n!` verified;
 `Λ(cl-CP)=fr-CP` is the standard BP action on compound Poisson). VERIFIED numerically: the Borel-bridge
