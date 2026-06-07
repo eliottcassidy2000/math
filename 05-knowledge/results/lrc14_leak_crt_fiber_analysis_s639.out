@@ -1,0 +1,51 @@
+n=14 k=13 patterns=812 candidates=11368
+
+==================================================================
+(A) coordinate-6 half-turn: CRT split of the leaked shifts
+==================================================================
+  missed cells = 56   (S367 reported 56)
+  shift mod 2 distribution: {1: 56}
+  shift mod 7 distribution: {0: 8, 1: 8, 2: 8, 3: 8, 4: 8, 5: 8, 6: 8}
+  distinct shifts present:  [1, 3, 5, 7, 9, 11, 13]
+  => leak CONFINED to odd mod-2 fiber? True
+  => leak CONFINED to a single mod-7 fiber? False  (hits 7/7 mod-7 classes)
+  VERDICT: the divisor that organizes the leak is 2, NOT 7.
+  (the half-turn at an even coord is the sigma:v->-v involution on the
+   even sublattice; it is blind exactly on the odd/mod-2 coset = the
+   2-adic seam, and spreads across ALL mod-7 classes.)
+
+==================================================================
+(B) every single-coordinate half-turn: leak size + CRT signature
+==================================================================
+  coord | missed | shift mod2 {0,1} | #mod7-classes-hit
+       1 |    406 | even=0,odd=406 | 7
+       2 |    196 | even=0,odd=196 | 7
+       3 |    224 | even=0,odd=224 | 7
+       4 |    126 | even=0,odd=126 | 7
+       5 |    154 | even=0,odd=154 | 7
+       6 |     56 |  even=0,odd=56 | 7
+       7 |    294 | even=0,odd=294 | 7
+       8 |    280 | even=0,odd=280 | 7
+       9 |    336 | even=0,odd=336 | 7
+      10 |    168 | even=0,odd=168 | 7
+      11 |    350 | even=0,odd=350 | 7
+      12 |     84 |  even=0,odd=84 | 7
+      13 |    168 | even=0,odd=168 | 7
+
+==================================================================
+(C) LLM proposal: are two half-turn leaks 'mutually exclusive', and
+    would that PREVENT a cover (=> prove LRC(14))?  [HONEST: it inverts]
+==================================================================
+  coords whose half-turn leak is DISJOINT from coord-6's: [2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+  => the vector (v[6]=7, v[2]=7) covers ALL 11368 cells (missed=0).
+  So mutual-exclusivity of the leaks does NOT prevent a cover -- it ENABLES
+  one. The LLM's logic is inverted: disjoint fibers => a FULL quotient
+  cover, joining the scalar ramp as a SPURIOUS full blocker.
+  total half-turn PAIRS giving a full quotient cover: 74
+
+  CONCLUSION (honest): the codex quotient model is a LOSSY relaxation --
+  it already admits full covers (scalar ramp; many half-turn pairs) that
+  do NOT disprove LRC(14). So covering-this-quotient is the wrong target;
+  the real LRC(14) content is in the finer (non-quotiented) torus, where
+  the half-turn is a pure mod-2 detector and the mod-7 structure is the
+  part the 2-torsion blockers literally cannot see.
