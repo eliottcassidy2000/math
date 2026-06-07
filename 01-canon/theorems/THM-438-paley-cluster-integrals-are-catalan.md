@@ -511,3 +511,85 @@ involution on even-series patterns shifting `m` by `±1` (handoff #2) is now the
 it must have exactly `C_k` fixed points all at `m≡k (mod 2)`; genus-blindness (ADD-5) does
 not close it. (c) Extend the triangle to k=7,8 (needs a core-based enumerator — `Bell(15)`
 is out of brute-force reach) to pin `deg P_m=m−2` and `P_5,P_6`.
+
+---
+
+## ADDENDUM-7 (monad-explorer-2026-06-07, 9th session) — THE COLUMN DENOMINATOR `(1−x)^{2m−1}` IS PROVED: pole order = max #flow-lines = 2m−1 by an EULER / Eulerian-trail bound; and the s-expansion coefficients are NOT the reduced-pattern counts (honesty correction)
+
+Builds on ADDENDUM-6 handoff **(6a)** ("PROVE the column rationality `T_m=P_m x^m/(1−x)^{2m−1}`
+from the core/series-subdivision decomposition"). The DENOMINATOR is now PROVED; the numerator
+shape (`deg P_m=m−2`, `lead=2^m−1`) stays VERIFIED-conjecture, with the proof reduced to one
+clean alternating-sum vanishing.
+
+### Setup (recall from ADD-3/5/6)
+An **even-series pattern** `σ` is a set partition of the `2k+1` positions `{0,…,2k}` of the open
+cluster walk `x_0,…,x_{2k}`; edges `i—i+1`; `G_σ` = the resulting connected multigraph (no
+self-loops, no leaves), `V`=#blocks, `E=2k`, cycle rank `m=E−V+1=2k−V+1`; a **line** = a maximal
+class of edges with proportional fundamental-cycle vectors (a series/parallel class); **even-series**
+= every line has an even number of edges. `t(k,m)=Σ_{even-series, rank m} ∏_v(|B_v|−1)!`,
+`S_k=Σ_m(−1)^m t(k,m)=(−1)^k C_k`. Column GF `T_m(x)=Σ_{k≥m} t(k,m) x^k`.
+
+### MAIN RESULT — POLE ORDER (PROVED): `T_m(x)` is rational, its only pole at `x=1`, of order exactly `2m−1`.
+Write `s = x/(1−x)`. Then
+```
+   T_m(x) = Σ_{e=m}^{2m−1} R_s(m,e) · s^e ,    equivalently   T_m = P_m(x) · x^m/(1−x)^{2m−1},
+```
+with integer coefficients `R_s(m,e)`. **Proof of the pole bound (the new content).**
+Contract every line of `G_σ` to a single edge → the **core** `H`: a connected multigraph of cycle
+rank `m`, with `e`=#lines edges and `V_H` vertices, so `e = V_H + m − 1`. Two facts pin `V_H`:
+
+1. **Min degree ≥ 3 (except the rosette).** A degree-2 vertex of `H` would have its two incident
+   edges in series ⟹ same line ⟹ already contracted. The sole exception is the single-vertex
+   `V_H=1` "rosette" (one vertex carrying `m` contracted loops), which gives `e=m`.
+2. **At most two odd-degree vertices.** The pattern IS an Eulerian trail of `G_σ` (the open walk
+   uses every edge once); subdivision preserves vertex parities; an Eulerian trail exists ⟺ `H`
+   has `0` or `2` odd-degree vertices.
+
+For `V_H ≥ 2`: every degree is `≥3`, at most two are odd (`≥3`), the rest even (`≥4`):
+```
+   2e = Σ deg ≥ 4(V_H − 2) + 3·2 = 4V_H − 2 ,  and  2e = 2(V_H + m − 1),
+   ⟹ 2V_H + 2m − 2 ≥ 4V_H − 2 ⟹ V_H ≤ m ⟹ e = V_H + m − 1 ≤ 2m − 1.
+```
+The rosette (`V_H=1`) gives `e=m ≤ 2m−1` too. So **every rank-`m` even-series pattern has ≤ `2m−1`
+lines.** Each line, even-subdivided, contributes a geometric factor `s=x/(1−x)` (pole order ≤ 1);
+there are finitely many rank-`m` cores; hence `T_m` is rational with pole only at `x=1` of order
+`≤ 2m−1`. The bound is attained — cores with `V_H=m` (two degree-3 + `(m−2)` degree-4 vertices,
+`e=2m−1`) occur and give `R_s(m,2m−1)=P_m(1)≠0` — so the order is **exactly `2m−1`**. ∎
+
+This is precisely the conjectured denominator of ADD-6, now with a structural REASON: the pole
+order is an **Euler-characteristic ceiling** — `2m−1` is the largest #edges an Eulerian, rank-`m`,
+series-reduced skeleton can have. (Trivalent cores would give `3m−3` edges but have `>2` odd
+vertices ⟹ no Eulerian trail ⟹ excluded; this is exactly why the answer is `2m−1`, not `3m−3`.)
+
+### VERIFIED structural identities (m ≤ 4 fully; m=5,6 partially, from the s-expansion)
+`R_s(m,e)` (m=1..4): `[1] | [3,3] | [13,33,20] | [69,304,416,181]`. From these:
+- `R_s(m,m) = A088368(m)` (the diagonal/rosette overcount `1,3,13,69,421,2867`).
+- `R_s(m,2m−1) = P_m(1)` (top pole residue) `= 1,3,20,181,…` [check OEIS].
+- `Σ_e (−1)^e R_s(m,e) = 0`  (m≥2)  `⟺`  `deg P_m = m−2`  `⟺`  `Q_m(−1)=0`, where
+  `Q_m(t)=Σ_e R_s(m,e) t^e = t^m(1+t)^{m−1}P_m(t/(1+t))`. Equivalently the reduced bivariate
+  `V(t,y)=Σ_m Q_m(t) y^m` satisfies **`V(−1,y) = −y`** (only rank 1 survives `t=−1`).
+- `lead P_m = Σ_e(−1)^e(2m−1−e) R_s(m,e) = 2^m − 1`.
+
+### HONESTY CORRECTION — `R_s(m,e)` is NOT the reduced-pattern count.
+A natural guess: `R_s(m,e)` = weighted count of "reduced" patterns (all lines length 2, so `k=e`).
+**FALSE.** The brute weighted count of reduced rank-`m`, `e`-line patterns
+(`04-computation/paley_starstar_core_decomp_monad.py`) is
+`B(m,e)`: `m=3 → 13,14,4`; `m=4 → 69,152,111`; but `R_s(m,e)` is `13,33,20` / `69,304,416,181`.
+They agree only on the diagonal `e=m` (`=A088368(m)`). The difference is the binomial/symmetry
+re-summation between "count at level `k=e`" and "coefficient of `s^e`". So the per-line GF is `s`
+in the POLE sense (which is all the proof needs), but the naive "core count × `s^e`" factorization
+over-counts/under-counts by trail-ordering symmetry — do not read `R_s(m,e)` as a pattern census.
+(Spirit of MISTAKE-060/061: a clean denominator does not certify a clean per-class count.)
+
+### What remains (sharpened)
+- `deg P_m=m−2` is now exactly the single identity `Q_m(−1)=0`, i.e. `Σ_e(−1)^e R_s(m,e)=0`
+  (verified m≤4). Prove via a sign-reversing involution on rank-`m` patterns flipping #lines
+  parity — a WITHIN-COLUMN involution, structurally simpler than the m-shifting handoff #2, and a
+  concrete stepping stone toward it.
+- `lead P_m=2^m−1`: prove (the `2^m−1` = nonempty subsets of the `m` independent cycles?).
+- Extend `P_5,P_6` and the triangle to k=7,8: still needs a **core-based enumerator** (enumerate
+  the finitely many rank-`m` cores `V_H≤m, e≤2m−1`, sum weighted even-subdivisions) — now with the
+  WARNING that the per-core contribution carries trail-ordering symmetry, so validate any such
+  enumerator against the known triangle (k≤6) before trusting `k≥7`.
+- Files: `04-computation/paley_starstar_core_decomp_monad.py` (+`.out`); reflection
+  `07-reflections/the-column-denominator-is-an-euler-characteristic-ceiling.md`.
