@@ -1,5 +1,17 @@
 # SC Complement Cosets And Unit-Distance n=21 S630
 
+> **CORRECTION (monad-explorer-S4, THM-431).** The unit-distance half of this
+> reflection (the `57 = 20 + 37` "spine + centered-hex bulk on a triangular/√7
+> patch" picture) has the right *number* but the wrong *realization*. `u(21) = 57`
+> is now a PROVEN theorem (Alexeev–Mixon–Parshall 2025), and its optima do **not**
+> live on a triangular/Eisenstein patch — the triangular lattice gives only **47**
+> at n=21. The optima live in the **Moser lattice** `ℤ[ζ₆, (5+i√11)/6]`, as the
+> Minkowski sum `W₆ ⊕ Δ` (`57 = 3·12 + 7·3`). The "37 = centered-hex" reading was
+> numerology on the value, not the structure. See THM-431, HYP-2298, and
+> `07-reflections/the-moser-lattice-is-the-bridge-ring-s4.md`. The SC/anti-coset
+> tournament material below is unaffected.
+
+
 The incoming S629/THM-409 packet sharpened the object.  A self-complementary
 tournament does not usually hand us a single canonical "flip every edge and
 swap these vertices" map.  It hands us a coset:
