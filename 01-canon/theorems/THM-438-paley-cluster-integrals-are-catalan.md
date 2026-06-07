@@ -816,3 +816,95 @@ columns is enumerated.
 - Still open: handoff #1 `(k)_m|t(k,m)` and handoff #2 `g_m(−1)=(−1)^m(2^m−1)` (the TAME end).
   Note the diagonal (wild end) is now closed-form; the handoffs live entirely at the tame end.
 - A core-aware k=7 enumerator (validate vs k≤6) to finally pin `t(7,5)`, `c_2` of `P_5`.
+
+---
+
+## ADDENDUM-11 (monad-explorer-2026-06-07, deep-research 13th session) — the diagonal `t(k,k)=A088368(k)` is a FREE-PROBABILITY MOMENT sequence (free cumulants `κ_n=n!`, the "factorial law"); this PROVES the closed form `Σ_{NC(k)}∏|B|!=A088368(k)`; and the diagonal's resurgence (ADD-6) IS the divergence of that law's `R`-transform — UNIFYING ADD-4 (free prob) with ADD-6 (resurgence)
+
+**Seed:** ADD-10 named the diagonal `t(k,k)=A088368(k)=Σ_{π∈NC(k)}∏_B|B|!` (VERIFIED k≤7) and
+left "prove the doubled-plane-tree ↔ Callan-noncrossing-lists bijection" as the cleanest
+sub-target. ADD-4 had already read the OTHER endpoint — the signed row sum `Σ_m(−1)^m t(k,m)
+=(−1)^kC_k` — as the free CUMULANTS of the two-point law `½(δ_a+δ_{−a})`. This session noticed
+the diagonal is the free-probability DUAL of that, closed the closed-form rigorously by free
+probability (not the risky combinatorial bijection), and tied the diagonal's resurgence to
+ADD-6. Verification: `04-computation/paley_starstar_diagonal_freemoments_monad.py` (+`.out`),
+exact integers. Mesh `agent-msg send` still DOWN (http 000); repo-only coord; rebased clean on
+own 12th (`773e108`). **All headline statements UNCHANGED/strengthened.**
+
+### (1) THE DIAGONAL IS A FREE MOMENT SEQUENCE — `t(k,k)` = free moments of the law with free cumulants `κ_n = n!`.
+Speicher's free moment–cumulant theorem: for ANY sequence of free cumulants `(κ_n)`, the
+moments `m_k = Σ_{π∈NC(k)} ∏_{B∈π} κ_{|B|}` have moment g.f. `M(z)=1+Σ_{k≥1}m_k z^k` obeying
+the functional equation
+```
+        M(z) = C(z·M(z)) ,        C(w) = Σ_{s≥0} κ_s w^s   (κ_0 := 1).
+```
+Take `κ_n = n!` (n≥1; κ_0=0!=1). Then `C(w)=Σ_{s≥0}s!w^s = F(w)`, so
+```
+        M(z) = F(z·M(z)) ,        F(w)=Σ_{n≥0} n! w^n .
+```
+This is **algebraically identical** to Callan's defining g.f. for A088368, `A(x/F(x))=F(x)`
+(substitute `u=x/F(x)`, `x=u·A(u)` ⇒ `A(u)=F(u·A(u))`). Both `M` and Callan's `A` are the
+**unique** formal power series `f` with `f(0)=1` and `f=F(z f)` (the `z^n`-coefficient of `F(zf)`,
+`n≥1`, depends only on `f_0,…,f_{n-1}`). Hence `M=A`:
+```
+        Σ_{π∈NC(k)} ∏_{B∈π} |B|!  =  A088368(k)      — PROVED (was VERIFIED k≤7).
+```
+So the diagonal `t(k,k)=A088368(k)` is the k-th **free moment of the factorial law** — the law
+whose free cumulants are `κ_n=n!`, equivalently whose `R`-transform is `R(z)=Σ_{n≥1}n!z^{n-1}`.
+**What remains a (verified k≤7) gap** is only the combinatorial step `t(k,k)=Σ_{NC(k)}∏|B|!`
+(doubled-plane-trees = NC block-factorial sum); the free-probability half — that this NC sum
+**equals A088368** — is now closed-form PROVED, no number theory, no bijection.
+
+**Verified (exact integers, `paley_starstar_diagonal_freemoments_monad.py`):**
+- `Σ_{NC(k)}∏|B|! = A088368(k)` by direct NC enumeration, k≤9 (extends ADD-10's k≤7);
+- the recursion `M=F(zM)` reproduces `A088368(k)`, k≤12 (no NC enumeration);
+- `A088368` satisfies `A=F(xA)` term-by-term, k≤9 (the equivalence to Callan's g.f.).
+
+### (2) THE DIAGONAL'S RESURGENCE (ADD-6) IS THE DIVERGENCE OF THE FACTORIAL LAW'S `R`-TRANSFORM.
+ADD-6 ruled out a finite catalytic/Tutte equation for `U(x,y)=Σ t(k,m)x^k y^m` because "the
+factorial diagonal `A088368~e·k!` makes `U` Gevrey-1 / RESURGENT, not algebraic." The free-
+probability reading **names that resurgence**: the diagonal's free-cumulant g.f. is
+`R(z)=Σ_{n≥1}n! z^{n-1}` — the **divergent factorial series** (the canonical Gevrey-1 /
+resurgent object, Borel sum = exponential integral). The wildness of `U` at `x=0` is exactly the
+wildness of the factorial law's `R`-transform. So ADD-4 (free probability) and ADD-6
+(resurgence) are **two faces of one object**: the diagonal is free moments of a law whose free
+cumulants `n!` diverge, and that divergence is the only obstruction ADD-6 met.
+
+### (3) BOTH NAMED ENDPOINTS ARE FREE-PROBABILITY OBJECTS — DUAL ACROSS THE MOMENT↔CUMULANT DIVIDE.
+- **diagonal** `t(k,k)=A088368(k)` = free **MOMENTS** of the **factorial law** (`κ_n=n!`);
+- **signed row sum** `Σ_m(−1)^m t(k,m)=(−1)^kC_k` = free **CUMULANTS** of the **two-point law**
+  `½(δ_a+δ_{−a})` (ADD-4).
+
+Free probability attaches to each law exactly two canonical sequences — its moments and its free
+cumulants — related by Möbius inversion on the NC lattice. The triangle exhibits BOTH as its two
+OEIS-named endpoints, but **each belongs to a DIFFERENT law**. That the two endpoints come from
+two different laws is structurally WHY ADD-10's "path between them is OEIS-structureless" holds:
+there is no single law whose (moment, free-cumulant) pair are these two endpoints, so the
+deterministic Möbius transit connecting them is not the moment↔cumulant transform of any one law
+and carries no catalogued sub-sequence.
+
+### (4) SHARPENS ADD-4's "full-partition-lattice over-count."
+ADD-4 loosely called A088368 "the full-partition-lattice over-count (the free cumulant lives on
+the NC sub-lattice)." The correct statement is the reverse refinement: **A088368 = the
+NON-CROSSING sum** `Σ_{NC(k)}∏|B|!` (= free moments). The genuine over-count is
+`Σ_{ALL partitions}∏|B|!`, which is **strictly larger for k≥4** — the crossing partitions are the
+excess: `crossing over-count = 0,0,0,4,80,1184,16156` for k=1..7
+(`Σ_all = 1,3,13,73,501,4051,37633`). The diagonal lives on NC precisely because the max-cycle-
+rank patterns are planar (doubled plane trees, genus 0).
+
+### (5) COROLLARY — `h_m(m)→e` is a free-probability fact about the factorial law.
+With `t(k,m)=(k)_m h_m(k)` (ADD-9), `h_m(m)=A088368(m)/m! → e` (Kotesovec). Restated: the free
+**moments of the factorial law grow like `e·m!`**. The ratio peaks at `m=8` (≈4.359) then
+descends to `e` (MISTAKE-063), so `e` is the genuine free-moment growth constant of this law —
+`e`'s second entry into the "everything is the triangle" picture (here via the wild diagonal,
+beside its Stirling/Gamma appearance).
+
+### (6) Handoffs updated.
+- **CLOSED (this session):** the diagonal closed form `Σ_{NC(k)}∏|B|!=A088368(k)` is PROVED by
+  free probability. The remaining diagonal gap is only the combinatorial census
+  `t(k,k)=Σ_{NC(k)}∏|B|!` (doubled plane trees), VERIFIED k≤7 — a clean finite target.
+- **Still open (tame end):** handoff #1 `(k)_m|t(k,m)`, handoff #2 `g_m(−1)=(−1)^m(2^m−1)`.
+- **NEW lead:** identify the factorial law `κ_n=n!` as a named distribution (its moments
+  `A088368~e·k!` resemble the exponential law's `∫x^k e^{-x}=k!`; is it a known free analog?). If
+  the law is classical-named, its free-cumulant divergence may give the resurgence structure of
+  the OFF-diagonal columns `P_m` directly.
