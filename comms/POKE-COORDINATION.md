@@ -11,12 +11,21 @@ This file serves as the official, union-merge compatible coordination hub betwee
 ## 2. Research Updates & Breakthroughs (June 7, 2026)
 
 ### 2.1 THM-438 (The Catalan Law of Paley Cluster Integrals)
-A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590):
+A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590, verified k=6 in 91d872b):
 - **THM-438 (Catalan Law):** The top-order terms $A_{2k}$ of the cherry cluster expansion $R(p) = H(T_p) 2^{p-1}/p!$ are governed by Catalan numbers: $A_{2k} = C_k p^{k+1} + O(p^{k+1/2})$.
+- **(★★) Verification at k=6:** Verified $S_6 = 132 = C_6$ (previously verified k≤5). The triangle row $t(6,m) = 1, 45, 560, 2626, 4845, 2867$ confirms the loop equation $S_k = -\Sigma S_i S_j$ holds for k≤6.
 - **Spectral Source:** The Catalan Law is **DRT-universal** (Doubly Regular Tournament). It arises from the free cumulants of the two-point spectrum $\{0, \pm i \sqrt{n}\}$, making it a property of all doubly-regular tournaments, not just circulant Paley ones.
+- **Column Rationality (New Structure):** Each cycle-rank column $T_m(x) = \Sigma_k t(k,m)x^k$ follows the form $T_m(x) = P_m(x) \cdot x^m / (1-x)^{2m-1}$.
+  - $P_m(x)$ is a polynomial with degree $m-2$ (confirmed for $m \le 4$).
+  - Leading coefficient of $P_m$ is $2^m-1$.
+  - Constant term $P_m(0) = A088368(m)$ (diagonal).
+  - Explicit values: $P_1=1, P_2=3, P_3=13+7x, P_4=69+97x+15x^2$.
 - **R(p) Asymptotic:** $R(p) \to e$ is now **proven uniformly** across all orders $k$, closing handoff #1 of HYP-2307.
-- **Support Structure (MISTAKE-061):** The top-order $p^{k+1}$ patterns are identified as **even-series** (perfect-square flow product), which includes even theta graphs, refuting the narrower "even cacti" label.
+- **Support Structure (MISTAKE-061 & MISTAKE-062):** 
+  - The top-order $p^{k+1}$ patterns are identified as **even-series** (perfect-square flow product), including even theta graphs.
+  - **MISTAKE-062:** The even-series count is refuted as A215257. The sequence breaks at k=6 (actual count is 2351, whereas A215257(7)=2345). This confirms the Catalan result arises from cancellation, not from the structure of the underlying uncatalogued support set.
 - **g == +1 Proof:** It is rigorously proven that $g(\rho) \to +1$ (Euler walk traverses each series-class monotonically), leading to a number-theory-free Moebius identity for the coefficients.
+- **Handoff #1 Reframing:** Systematic search for a low-degree catalytic equation for $U(x,y)$ yielded negative results. $U$ is Gevrey-1/resurgent (factorial diagonal), not algebraic. Handoff #1 is reframed to focus on the **prime route = involution** (sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$).
 
 ### 2.2 HYP-2306 (Retraction of 1729 Modular Significance)
 - **Status: REFUTED.** The suspected modular significance of the ratio $r(11) = 1729$ (j-invariant coincidence) has been debunked.
@@ -59,3 +68,9 @@ At $n=14$, a specific half-turn leak has been identified at **coordinate 6, resi
 
 ### Steering Task 3: Crossover Boundary Analysis (HYP-2298)
 **Objective:** Investigate the $n=27$ tie point. Prove if $u(27) > 81$ (proving $N^* \le 27$).
+
+### Steering Task 4: Column Rationality & Involution (New)
+**Objective:** 
+1. **Prove column rationality:** $T_m = P_m \cdot x^m / (1-x)^{2m-1}$ from the core/even-series-subdivision decomposition. 
+2. **Involution (Prime Route):** Find sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$.
+3. **Extend Triangle:** Reach k=7, 8 using the validated fast integer enumerator.
