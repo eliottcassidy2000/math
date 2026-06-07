@@ -1,0 +1,47 @@
+
+=== validate C=9=3x3 n=5 dimV=1 ===
+  D=[3]=H_3: brute=2 sigma=2 OK
+  ALL MATCH: True
+
+=== validate C=15=3x5 n=8 dimV=2 ===
+  D=[5]=H_3: brute=4 sigma=4 OK
+  D=[3, 6]=H_5: brute=4 sigma=4 OK
+  D=[3, 5, 6]: brute=0 sigma=8 *** MISMATCH ***
+  ALL MATCH: False
+
+=== validate C=21=3x7 n=11 dimV=2 ===
+  D=[7]=H_3: brute=8 sigma=8 OK
+  D=[3, 6, 9]=H_7: brute=8 sigma=8 OK
+  D=[3, 6, 7, 9]: brute=0 sigma=16 *** MISMATCH ***
+  ALL MATCH: False
+
+=== validate C=25=5x5 n=13 dimV=1 ===
+  D=[5, 10]=H_5: brute=8 sigma=8 OK
+  ALL MATCH: True
+
+=== validate C=27=3x3x3 n=14 dimV=2 ===
+  D=[9]=H_3: brute=16 sigma=16 OK
+  D=[3, 6, 12]: brute=112 sigma=262 *** MISMATCH ***
+  D=[3, 6, 9, 12]=H_9: brute=16 sigma=16 OK
+  ALL MATCH: False
+
+=== validate C=33=3x11 n=17 dimV=2 ===
+  D=[11]=H_3: brute=32 sigma=32 OK
+  D=[3, 6, 9, 12, 15]=H_11: brute=32 sigma=32 OK
+  D=[3, 6, 9, 11, 12, 15]: brute=0 sigma=64 *** MISMATCH ***
+  ALL MATCH: False
+
+=== validate C=35=5x7 n=18 dimV=2 ===
+  D=[7, 14]=H_5: brute=16 sigma=16 OK
+  D=[5, 10, 15]=H_7: brute=16 sigma=16 OK
+  D=[5, 7, 10, 14, 15]: brute=0 sigma=32 *** MISMATCH ***
+  ALL MATCH: False
+
+=== validate C=39=3x13 n=20 dimV=2 ===
+  D=[13]=H_3: brute=64 sigma=64 OK
+  D=[3, 6, 9, 12, 15, 18]=H_13: brute=64 sigma=64 OK
+  D=[3, 6, 9, 12, 13, 15, 18]: brute=0 sigma=128 *** MISMATCH ***
+  ALL MATCH: False
+
+
+###### VALIDATION (sigma-decomp == brute) ALL C<=39: False ######
