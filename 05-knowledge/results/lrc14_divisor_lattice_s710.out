@@ -1,0 +1,45 @@
+==============================================================================
+S710 — DIVISOR-LATTICE COVER of LRC(14): extending the poke fiber-bundle suggestion
+==============================================================================
+
+(A) DIVISOR-CLOCK THEOREM  (n=14, divisors of 14 = {1,2,7,14})
+    Claim: at every d-clock t=b/d, danger set == {v : d|v}; non-mult margin >= 1/d.
+  d= 1 (1/d=1.0000 vs 1/n=0.0714): danger==mult 400/400   margin>=1/d 400/400
+  d= 2 (1/d=0.5000 vs 1/n=0.0714): danger==mult 400/400   margin>=1/d 400/400
+  d= 7 (1/d=0.1429 vs 1/n=0.0714): danger==mult 2400/2400   margin>=1/d 2400/2400
+  d=14 (1/d=0.0714 vs 1/n=0.0714): danger==mult 2400/2400   margin>=1/d 2400/2400
+
+(B) CRT TOWER  14 = 2.7,  ZZ/14 = ZZ/2 x ZZ/7
+  7-clock residual (mult-of-7 sub-config) size distribution over 1500: {1: 348, 2: 675, 3: 391, 4: 86}
+  parity split of the mult-of-7 speeds (the fiber coordinate): {'even(=0 mod14)': 2077, 'odd(=7 mod14)': 1138}
+  half-turn t=1/2 isolates exactly the even speeds: 1500/1500
+  => residual mult-of-7, divided by 7, splits by parity = the mod-2 half-turn world.
+
+(C) THE 56  (A000568: #tournaments on m vertices = the LRC(m+1) base type-space)
+  brute #tournaments on m vertices, m=1..6: [1, 1, 2, 4, 12, 56]
+  A000568(6) = 56  <-- the 56;  base of LRC(7) (7 runners = 6 movers)
+  v_2(56) = 3 = (7-1)/2 = 3   [THM-305: 2-adic val = |QR_7|, QR connection]
+  v_2 of #tournaments on m vertices m=3,5: v2(T(3))=1=(3-1)/2, v2(T(5))=2=(5-1)/2  [odd-m QR law]
+  Reading: LRC(14) is a bundle over the LRC(7) base; the base's full combinatorial
+  type-space has exactly 56 cells = A000568(6); the half-turn (mod-2) fiber is the
+  parity coordinate ON each of those 56 base cells. The leak 'misses 56 cells' = it
+  rides the WHOLE base (the cover always leaves a section over every base type).
+
+(D) PRIME-vs-COMPOSITE DICHOTOMY  (the divisor-clock method's reach)
+    Best proper-divisor clock = n/p (p=smallest prime|n): peels the SPARSE mult-of-(n/p);
+    residual lives mod p. Prime n has NO proper divisor>1 => method EMPTY (needs 2n-1 shell).
+  n=11  PRIME      -> divisor-clock EMPTY; use THM-420 (2n-1=21 shell)
+  n=12  composite  -> 12/2-clock peels mult-of- 6; avg residual 2.13, fiber mod 2; dist {1: 132, 2: 282, 3: 161, 4: 25}
+  n=13  PRIME      -> divisor-clock EMPTY; use THM-420 (2n-1=25 shell)
+  n=14  composite  -> 14/2-clock peels mult-of- 7; avg residual 2.20, fiber mod 2; dist {1: 120, 2: 272, 3: 174, 4: 34}
+  n=15  composite  -> 15/3-clock peels mult-of- 5; avg residual 3.02, fiber mod 3; dist {1: 35, 2: 152, 3: 225, 4: 149, 5: 34, 6: 5}
+  n=16  composite  -> 16/2-clock peels mult-of- 8; avg residual 2.18, fiber mod 2; dist {1: 129, 2: 261, 3: 182, 4: 28}
+  n=18  composite  -> 18/2-clock peels mult-of- 9; avg residual 2.21, fiber mod 2; dist {1: 126, 2: 267, 3: 165, 4: 42}
+  n=19  PRIME      -> divisor-clock EMPTY; use THM-420 (2n-1=37 shell)
+  n=20  composite  -> 20/2-clock peels mult-of-10; avg residual 2.23, fiber mod 2; dist {1: 114, 2: 270, 3: 177, 4: 39}
+  n=21  composite  -> 21/3-clock peels mult-of- 7; avg residual 3.11, fiber mod 3; dist {1: 30, 2: 148, 3: 206, 4: 167, 5: 39, 6: 10}
+  n=22  composite  -> 22/2-clock peels mult-of-11; avg residual 2.26, fiber mod 2; dist {1: 116, 2: 252, 3: 194, 4: 38}
+  SYNTHESIS: composite n -> divisor-clock tower (this session); prime n -> 2n-1 shell
+  (THM-420, S642). n=14 is TWO-HEADED: composite (clock works) AND 2n-1=27=3^3 ramified
+  (shell fails). The two methods partition the C'(n) frontier by primality of n.
+==============================================================================
