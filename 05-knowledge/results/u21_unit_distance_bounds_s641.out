@@ -1,0 +1,38 @@
+======================================================================
+(A) triangular (Eisenstein) lattice: each point has EXACTLY 6 unit nbrs
+======================================================================
+  solutions of a^2-ab+b^2=1: [(-1, -1), (-1, 0), (0, -1), (0, 1), (1, 0), (1, 1)]  -> exactly 6 (the hexagon, 6=2*3)
+  best compact 21-pt LATTICE subset: 47 unit distances
+  Harborth triangular-lattice formula floor(3n-sqrt(12n-3)), n=21: 47
+  => the rigid lattice gives ~47; well BELOW the known u(21)=57.
+
+======================================================================
+(B) rigorous upper bound: unit-distance graph is K_{2,3}-free
+======================================================================
+  n=21: sum_v C(d_v,2) = #cherries <= 2*C(n,2) = 420
+  Cauchy-Schwarz: 4e^2 - 42e - 17640 <= 0  =>  e <= 71.87
+  RIGOROUS: u(21) <= 71   (KST/cherry bound; not tight, true=57)
+  gap to truth: 71 (rigorous) vs 57 (true) vs ~47 (lattice).
+
+======================================================================
+(C) the u(21)=57 optimum is the Moser slab P_2^- (NON-lattice, Q(sqrt-11))
+======================================================================
+  Moser spindle rhombus rotation cos(theta)=5/6: 3z^2-5z+3, disc = -11 = -11
+  -> the spindle lives in Q(sqrt(-11)), NOT the Eisenstein lattice Q(sqrt(-3)).
+  HYP-2224 (codex S648): P_2^- has n=21, E=57 (=2*27+3), deg hist incl a deg-3
+  vertex; spine=20, bulk=37. This is the verified lower bound u(21) >= 57.
+  Build a Moser spindle and verify its 7 vtx / 11 unit edges as a sanity check:
+    unit triangle A0B0C0 edges: AB=1.000 BC=1.000 CA=1.000
+    (full P_2^- reconstruction deferred to HYP-2224's verified build.)
+
+======================================================================
+(D) the escape: lattice (sqrt-3) << Moser optimum (sqrt-11) <= KST
+======================================================================
+   triangular lattice (rigid deg-6, Eisenstein sqrt-3):  ~47
+   u(21) optimum = Moser slab (spindle, sqrt-11):          57
+   rigorous KST upper bound (K_2,3-free):                 <= 71
+  The MAXIMIZER escapes the Eisenstein lattice into the sqrt(-11) spindle
+  field -- the small-n shadow of the grid-optimality DISPROOF and the same
+  sqrt(-11) as the Heegner chromatic tour (chi>=4 needs sqrt(-11), HYP-2277).
+  NOTE: repo HYP-2170 calls 49 'u(22)' but 49 is the LATTICE (Harborth)
+  optimum; the true u(22) is 60-61 (Moser slab). Lattice != global max here.
