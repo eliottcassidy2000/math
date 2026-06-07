@@ -1,0 +1,68 @@
+==============================================================================
+SIGNED-LRC PAIRWISE INF FLOOR  inf_S Gstar(S)  vs n   (monad-S3, exact)
+==============================================================================
+
+--- n=3 (r=2 movers), B<=16, 79 gcd-1 sets, floor 1/n=1/3=0.3333 ---
+  inf_S Gstar = 1/2 = 0.50000   (n*inf = 1.5000)
+     minimizer V=(1, 2): best cut A=[1, 2]|B=[], t*=1/2; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+     minimizer V=(1, 3): best cut A=[1, 3]|B=[], t*=1/4; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+     minimizer V=(1, 4): best cut A=[1, 4]|B=[], t*=1/2; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+     minimizer V=(1, 5): best cut A=[1, 5]|B=[], t*=1/8; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+     minimizer V=(1, 6): best cut A=[1, 6]|B=[], t*=1/2; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+     minimizer V=(1, 7): best cut A=[1, 7]|B=[], t*=1/4; r_min=1, LB 1/(2 r_min)=1/2=0.5000, 1/(r_min+1)=0.5000
+  #below floor (Gstar<1/n): 0;  #tight (Gstar=1/n): 0
+
+--- n=4 (r=3 movers), B<=14, 325 gcd-1 sets, floor 1/n=1/4=0.2500 ---
+  inf_S Gstar = 2/7 = 0.28571   (n*inf = 1.1429)
+     minimizer V=(1, 3, 9): best cut A=[1, 3, 9]|B=[], t*=3/14; r_min=3, LB 1/(2 r_min)=1/6=0.1667, 1/(r_min+1)=0.2500
+  #below floor (Gstar<1/n): 0;  #tight (Gstar=1/n): 0
+
+--- n=5 (r=4 movers), B<=11, 325 gcd-1 sets, floor 1/n=1/5=0.2000 ---
+  inf_S Gstar = 1/5 = 0.20000   (n*inf = 1.0000)
+     minimizer V=(1, 5, 7, 9): best cut A=[1, 5, 7, 9]|B=[], t*=1/5; r_min=4, LB 1/(2 r_min)=1/8=0.1250, 1/(r_min+1)=0.2000
+     minimizer V=(1, 6, 7, 10): best cut A=[1, 7, 10]|B=[6], t*=4/5; r_min=6, LB 1/(2 r_min)=1/12=0.0833, 1/(r_min+1)=0.1429
+  #below floor (Gstar<1/n): 0;  #tight (Gstar=1/n): 2
+     tight sets: 2 total, 0 are consecutive blocks
+        (1, 5, 7, 9) 
+        (1, 6, 7, 10) 
+
+--- n=6 (r=5 movers), B<=9, 126 gcd-1 sets, floor 1/n=1/6=0.1667 ---
+  inf_S Gstar = 3/19 = 0.15789   (n*inf = 0.9474)
+     minimizer V=(1, 3, 6, 8, 9): best cut A=[1, 3, 8]|B=[6, 9], t*=5/19; r_min=7, LB 1/(2 r_min)=1/14=0.0714, 1/(r_min+1)=0.1250
+     minimizer V=(2, 3, 4, 6, 8): best cut A=[2, 3, 4]|B=[6, 8], t*=6/19; r_min=6, LB 1/(2 r_min)=1/12=0.0833, 1/(r_min+1)=0.1429
+     minimizer V=(2, 3, 4, 6, 9): best cut A=[2, 3, 4, 6]|B=[9], t*=15/19; r_min=7, LB 1/(2 r_min)=1/14=0.0714, 1/(r_min+1)=0.1250
+     minimizer V=(2, 4, 7, 8, 9): best cut A=[2, 4, 8]|B=[7, 9], t*=11/19; r_min=7, LB 1/(2 r_min)=1/14=0.0714, 1/(r_min+1)=0.1250
+     minimizer V=(3, 4, 6, 8, 9): best cut A=[3, 4, 8, 9]|B=[6], t*=7/19; r_min=6, LB 1/(2 r_min)=1/12=0.0833, 1/(r_min+1)=0.1429
+  #below floor (Gstar<1/n): 5;  #tight (Gstar=1/n): 8
+     tight sets: 8 total, 0 are consecutive blocks
+        (1, 2, 3, 6, 8) 
+        (1, 2, 4, 5, 6) 
+        (1, 3, 4, 7, 8) 
+        (1, 3, 6, 7, 8) 
+        (1, 5, 6, 8, 9) 
+        (2, 3, 4, 6, 7) 
+        (2, 4, 5, 7, 8) 
+        (3, 6, 7, 8, 9) 
+     lowest below-floor sets:
+        (1, 3, 6, 8, 9): Gstar=3/19=0.1579
+        (2, 3, 4, 6, 8): Gstar=3/19=0.1579
+        (2, 3, 4, 6, 9): Gstar=3/19=0.1579
+        (2, 4, 7, 8, 9): Gstar=3/19=0.1579
+        (3, 4, 6, 8, 9): Gstar=3/19=0.1579
+
+--- n=7 (r=6 movers), B<=8, 28 gcd-1 sets, floor 1/n=1/7=0.1429 ---
+  inf_S Gstar = 4/29 = 0.13793   (n*inf = 0.9655)
+     minimizer V=(1, 2, 4, 6, 7, 8): best cut A=[1, 4, 6, 7]|B=[2, 8], t*=8/29; r_min=7, LB 1/(2 r_min)=1/14=0.0714, 1/(r_min+1)=0.1250
+  #below floor (Gstar<1/n): 1;  #tight (Gstar=1/n): 9
+     tight sets: 9 total, 0 are consecutive blocks
+        (1, 2, 3, 4, 5, 8) 
+        (1, 2, 3, 5, 6, 7) 
+        (1, 2, 3, 5, 7, 8) 
+        (1, 2, 4, 5, 6, 7) 
+        (1, 3, 4, 5, 6, 7) 
+        (1, 4, 5, 6, 7, 8) 
+        (2, 3, 4, 5, 6, 8) 
+        (2, 3, 4, 5, 7, 8) 
+        (2, 4, 5, 6, 7, 8) 
+     lowest below-floor sets:
+        (1, 2, 4, 6, 7, 8): Gstar=4/29=0.1379
