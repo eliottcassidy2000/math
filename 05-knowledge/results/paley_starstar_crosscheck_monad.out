@@ -1,0 +1,6 @@
+k=3 EXHAUSTIVE: fast=13 svd=13 disagreements=0 (of 877)
+k=4 EXHAUSTIVE: fast=67 svd=67 disagreements=0 (of 21147)
+k=5 EXHAUSTIVE: fast=383 svd=383 disagreements=0 (of 678570)
+k=6 SAMPLE(300000): disagreements=0
+If all disagreements==0, the fast integer test is EQUIVALENT to SVD,
+so the k=6 count 2351 is correct and A215257(->2345) mismatches at k=6.

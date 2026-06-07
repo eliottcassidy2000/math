@@ -1,0 +1,33 @@
+========================================================================
+FAST cycle-rank triangle for (**)  S_k = sum_{even-series} mu = (-1)^k C_k
+========================================================================
+k=1: S_k=-1  target=-1  match=True   #even-series=1 (A215257(k+1)? True)
+      t(k,m) m=1..1: 1
+      check sum_m (-1)^m t(k,m) = -1
+      Psi(k,e) signed-by-#lines: e=1:-1
+      #patterns by #lines e:     e=1:1
+k=2: S_k=+2  target=+2  match=True   #even-series=3 (A215257(k+1)? True)
+      t(k,m) m=1..2: 1 3
+      check sum_m (-1)^m t(k,m) = +2
+      Psi(k,e) signed-by-#lines: e=1:-1, e=2:+3
+      #patterns by #lines e:     e=1:1, e=2:2
+k=3: S_k=-5  target=-5  match=True   #even-series=13 (A215257(k+1)? True)
+      t(k,m) m=1..3: 1 9 13
+      check sum_m (-1)^m t(k,m) = -5
+      Psi(k,e) signed-by-#lines: e=1:-1, e=2:+8, e=3:-12
+      #patterns by #lines e:     e=1:1, e=2:6, e=3:6
+k=4: S_k=+14  target=+14  match=True   #even-series=67 (A215257(k+1)? True)
+      t(k,m) m=1..4: 1 18 72 69
+      check sum_m (-1)^m t(k,m) = +14
+      Psi(k,e) signed-by-#lines: e=1:-1, e=2:+15, e=3:-55, e=4:+55
+      #patterns by #lines e:     e=1:1, e=2:12, e=3:31, e=4:23
+k=5: S_k=-42  target=-42  match=True   #even-series=383 (A215257(k+1)? True)
+      t(k,m) m=1..5: 1 30 230 580 421
+      check sum_m (-1)^m t(k,m) = -42
+      Psi(k,e) signed-by-#lines: e=1:-1, e=2:+24, e=3:-156, e=4:+364, e=5:-273
+      #patterns by #lines e:     e=1:1, e=2:20, e=3:96, e=4:164, e=5:102
+k=6: S_k=+132  target=+132  match=True   #even-series=2351 (A215257(k+1)? False)
+      t(k,m) m=1..6: 1 45 560 2626 4845 2867
+      check sum_m (-1)^m t(k,m) = +132
+      Psi(k,e) signed-by-#lines: e=1:-1, e=2:+35, e=3:-350, e=4:+1400, e=5:-2380, e=6:+1428
+      #patterns by #lines e:     e=1:1, e=2:30, e=3:230, e=4:680, e=5:910, e=6:500

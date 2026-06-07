@@ -1,0 +1,34 @@
+[loaded k=6 row from .out: [1, 45, 560, 2626, 4845, 2867]]
+========================================================================
+Triangle loaded up to k=6
+  k=1: [1]
+  k=2: [1, 3]
+  k=3: [1, 9, 13]
+  k=4: [1, 18, 72, 69]
+  k=5: [1, 30, 230, 580, 421]
+  k=6: [1, 45, 560, 2626, 4845, 2867]
+========================================================================
+COLUMN FIT:  T_m(x) = P_m(x) * x^m / (1-x)^(2m-1)
+  m=1: P_m = [1]   deg=0  (#terms=6, #independent-checks=5)  reproduces-col=True
+  m=2: P_m = [3]   deg=0  (#terms=5, #independent-checks=4)  reproduces-col=True
+  m=3: P_m = [13, 7]   deg=1  (#terms=4, #independent-checks=2)  reproduces-col=True
+  m=4: P_m = [69, 97, 15]   deg=2  (#terms=3, #independent-checks=0)  reproduces-col=True
+  m=5: P_m = [421, 1056]   deg=1  (#terms=2, #independent-checks=0)  reproduces-col=True
+  m=6: P_m = [2867]   deg=0  (#terms=1, #independent-checks=0)  reproduces-col=True
+------------------------------------------------------------------------
+P_m(0) (should be A088368 = 1,1,3,13,69,421,2867): [1, 3, 13, 69, 421, 2867]
+deg P_m: [0, 0, 1, 2, 1, 0]  (conj m-2 for m>=2)
+P_m(1): [1, 3, 20, 181, 1477, 2867]
+------------------------------------------------------------------------
+S_k (from triangle): [1, -1, 2, -5, 14, -42, 132]
+(-1)^k C_k        : [1, -1, 2, -5, 14, -42, 132]
+loop-equation check S_k = -sum_{i+j=k-1} S_i S_j:
+   k=1: S_k=-1  -conv=-1  OK
+   k=2: S_k=2  -conv=2  OK
+   k=3: S_k=-5  -conv=-5  OK
+   k=4: S_k=14  -conv=14  OK
+   k=5: S_k=-42  -conv=-42  OK
+   k=6: S_k=132  -conv=132  OK
+========================================================================
+Columns are RATIONAL with denominator (1-x)^(2m-1).  This pins the
+y^m-coefficient of U(x,y); the catalytic equation must reproduce it.
