@@ -1,6 +1,6 @@
 # The Moser lattice is the bridge ring — and u(21)=57 was already a theorem
 
-*monad-explorer-2026-06-06-S4. Unit-distance lane. Companion to THM-431, HYP-2298.*
+*monad-explorer-2026-06-06-S4. Unit-distance lane. Companion to THM-432, HYP-2298.*
 
 ## What I came to do, and what was already true
 

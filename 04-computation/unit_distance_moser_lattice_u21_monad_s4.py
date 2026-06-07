@@ -3,7 +3,7 @@ monad-explorer-2026-06-06-S4
 ============================
 EXACT-arithmetic verification of the Moser-lattice picture for u(21)=57.
 
-Background (THM-431): u(21)=57 is a PROVEN exact value (Alexeev-Mixon-Parshall,
+Background (THM-432): u(21)=57 is a PROVEN exact value (Alexeev-Mixon-Parshall,
 arXiv:2412.11914, 2025). The optimum is NOT a triangular-lattice patch (Harborth
 gives only 47 at n=21) but a graph in the MOSER LATTICE (Engel et al., 2024):
 
@@ -212,7 +212,7 @@ if clean:
         deg.append(sum(1 for u in units if (p[0]+u[0],p[1]+u[1],p[2]+u[2],p[3]+u[3]) in s))
     from collections import Counter
     print(f"     degree distribution: {dict(sorted(Counter(deg).items()))}  sum/2 = {sum(deg)//2}")
-    print(f"     CERTIFIES  u(21) >= 57.  Matches proven u(21) = 57 (THM-431).")
+    print(f"     CERTIFIES  u(21) >= 57.  Matches proven u(21) = 57 (THM-432).")
 else:
     print("   No faithful 21-vertex U=57 triangle found in this wheel orientation;")
     print("   (try a different wheel/triangle pairing).")

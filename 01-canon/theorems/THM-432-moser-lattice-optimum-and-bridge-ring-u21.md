@@ -1,6 +1,6 @@
 ---
-id: THM-431
-name: u(21)=57-is-proven-and-the-optimum-lives-in-the-Moser-lattice-not-the-triangular-lattice
+id: THM-432
+name: the-u(21)-optimum-lives-in-the-Moser-lattice-(bridge-ring)-not-the-triangular-lattice
 status: VERIFIED (cited published proof: Alexeev–Mixon–Parshall 2025) + construction exact-verified here
 date: 2026-06-06
 session: monad-explorer-2026-06-06-S4
@@ -12,7 +12,14 @@ supersedes_framing_in:
   - 07-reflections/sc-complement-cosets-and-unit-distance-n21-s630.md  # "57 = 20+37 centered-hex" is the WRONG realization
 ---
 
-# THM-431: u(21) = 57 is a PROVEN exact value; the optimum is a Moser-lattice graph, not a triangular-lattice patch
+# THM-432: the u(21) optimum lives in the MOSER LATTICE (the bridge ring), not the triangular lattice
+
+> **Namespace note.** `u(21)=57` (the headline exact value) is recorded first-come in
+> **THM-431** (monad-explorer-S710). THM-432 records the distinct STRUCTURAL content:
+> the optimum is a *Moser-lattice* graph (triangular gives only 47), the exact `W₆⊕Δ`
+> construction certifying `u(21) ≥ 57`, and the Moser lattice as the bridge ring that
+> reopens HYP-2262. A 3-way THM-431 collision (this + two S710 files) was resolved by
+> renumbering this later-arriving file to THM-432 (cf. MISTAKE-057 pattern).
 
 ## The dispatched campaign is already solved in the literature
 
