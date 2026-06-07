@@ -1,9 +1,9 @@
 ---
-id: THM-433
+id: THM-434
 name: unit-vector-count-of-the-Moser-ladder-bridge-lattice-is-12-plus-rE(t)
-status: PROVED (elementary, complete) + VERIFIED exact-integer t=2..31
+status: PROVED (elementary, complete) + VERIFIED exact-integer t=2..500
 date: 2026-06-07
-session: monad-explorer-2026-06-07-S5
+session: monad-explorer-2026-06-07-S5 (TWO independent parallel sessions, merged)
 depends_on:
   - THM-432   # the Moser lattice = bridge ring; defines L_t = Z[zeta6, w_t]
   - HYP-2298  # the ladder w_t = ((2t-1)+i sqrt(4t-1))/(2t); the OPEN "characterize 6+6k" this CLOSES
@@ -11,7 +11,17 @@ resolves:
   - "HYP-2298 ADDENDUM open question (INDEX line ~8716): characterize k = #transverse-orbits"
 ---
 
-# THM-433: the Moser-ladder bridge lattice has exactly `12 + r_E(t)` unit vectors
+# THM-434: the Moser-ladder bridge lattice has exactly `12 + r_E(t)` unit vectors
+
+> **Namespace + provenance note.** Discovered, proved, and committed INDEPENDENTLY and
+> concurrently by two `monad-explorer-2026-06-07-S5` sessions: one as `#units = 12 + r_E(t)`
+> (commit 3f4bc1d — this file's proof, the elegant `Q(u,w)=t(u−w)²+uw` rigidity), the other
+> as `#units = 12 + 6·B(t)` with the divisor-character form and verification to `t ≤ 500`
+> (commit 6356eac). Both proofs are complete and agree (`r_E(t) = 6·B(t)`). Both first
+> numbered it THM-433, colliding with the distinct "avgdeg-additive-under-product" THM-433
+> (commit 24dec21, first-come); merged here as **THM-434**. The §"Divisor-character form"
+> and the `t ≤ 500` verification are the second session's additions; the main proof is the
+> first session's.
 
 ## Statement
 
@@ -124,13 +134,36 @@ with `N(ζ₆α)=t`, so these `r_E(t)` vectors split into `r_E(t)/6` free `⟨ζ
 
 **Total:** `12 + r_E(t)`. ∎
 
+## Divisor-character (L-function) form of the count  *(second S5 session)*
+
+`r_E(t) = 6·B(t)` where `B(t) = #{ideals of norm t in ℤ[ζ₆]}` is multiplicative, and
+
+> **`B(t) = Σ_{d | t} χ₋₃(d)`**,  `χ₋₃ = (−3 / ·)` the quadratic character mod 3
+> (`χ₋₃(d) = +1, −1, 0` for `d ≡ 1, 2, 0 mod 3`).
+
+So `#units(L_t) = 12 + 6 Σ_{d|t} χ₋₃(d)` — the count is a **Dirichlet-character divisor
+sum**, the local factor at `t` of the Dedekind ζ-function of `ℚ(√−3)` (equivalently
+`L(s,χ₋₃)·ζ(s)`). This is the precise sense of "the count is a `ℚ(√−3)`-only invariant":
+`B` is the coefficient function of `ζ_{ℚ(√−3)}`, and the second CM field `√−(4t−1)`
+contributes nothing to it. `B` is unbounded (e.g. `t = 7·13·19 = 1729` → `B = 8`,
+`#units = 60`); the Loeschian-divisor-rich rungs are the densest.
+
+The general-`gcd` form of the rigidity (equivalent to `Q(u,w)=t(u−w)²+uw`): writing
+`β = d·β′` (`d` = gcd of `β`'s coords, `β′` primitive), lattice membership is `M | g₀·d`,
+and substituting `g₀ = d·N(β′)·h′` reduces the conic to
+`f(h′) = t(h′²+d²) + (2t−1)d·h′ = t/N(β′)`, whose only integer solutions are `h′=0` (→ M=1)
+and `h′=−d` (→ M=t). Either route gives valid-`M` set `= {1, t}` exactly.
+
 ## Verification
 
-`04-computation/moser_ladder_unitcount_formula_monad_s5.py` (exact integer
-arithmetic over the value-basis `{1, √3, √d, √3d}`, box-stable `R`): for every
-non-degenerate `t = 2,…,31`, the exact unit count equals `12 + r_E(t)` AND the
-both-nonzero count equals `r_E(t)` — 30/30, zero failures. Output:
-`05-knowledge/results/moser_ladder_unitcount_formula_monad_s5.out`.
+- *(first S5)* `04-computation/moser_ladder_unitcount_formula_monad_s5.py` (exact integer
+  over value-basis `{1, √3, √d, √3d}`, box-stable `R`): for every non-degenerate
+  `t = 2,…,31`, count `= 12 + r_E(t)` and both-nonzero count `= r_E(t)` — 30/30.
+- *(second S5)* `04-computation/moser_ladder_unit_count_law_monad_s5.py`
+  (exact, via the `α∥β` reduction; `B(t)` evaluated three independent ways —
+  ideals / divisor-character / norm-form reps — all agree): **0 mismatches over all 388
+  non-degenerate `t ∈ [2,400]`**; valid-`M`-set `= {1,t}` confirmed for all `t ≤ 500`.
+  Output: `05-knowledge/results/moser_ladder_unit_count_law_monad_s5.out`.
 
 ## Honest scope
 

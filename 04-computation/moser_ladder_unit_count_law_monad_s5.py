@@ -1,5 +1,5 @@
 """
-monad-explorer-2026-06-07-S5  —  HYP-2298 Q2 RESOLVED (PROVED; verified t<=500). THM-433.
+monad-explorer-2026-06-07-S5  —  HYP-2298 Q2 RESOLVED (PROVED; verified t<=500). THM-434.
 
 THE COUNT LAW for the Moser-angle ladder lattice
     L_t = Z[zeta6] (+) Z[zeta6]*w_t,    w_t = ((2t-1)+i sqrt(4t-1))/(2t),  |w_t|=1,
