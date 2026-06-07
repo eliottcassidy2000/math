@@ -1,0 +1,45 @@
+==============================================================================
+CLAIM E: MIRROR PAIRS.  A p-adic tower of height h appears as a SHELL at
+n=(p^h+1)/2  (since 2n-1=p^h) and as a CLOCK at n=p^h.  Same group Z/p^h,
+opposite faces.  S708/S710 studied C=3^h homometry = the SHELL-face family.
+==============================================================================
+   p^h |  shell n=(p^h+1)/2 (2n-1=p^h) |  clock n=p^h | same group
+----------------------------------------------------------------------
+3^2=   9 | shell n=5     (2*5-1=9) | clock n=9      | Z/9
+3^3=  27 | shell n=14    (2*14-1=27) | clock n=27     | Z/27
+3^4=  81 | shell n=41    (2*41-1=81) | clock n=81     | Z/81
+5^2=  25 | shell n=13    (2*13-1=25) | clock n=25     | Z/25
+5^3= 125 | shell n=63    (2*63-1=125) | clock n=125    | Z/125
+5^4= 625 | shell n=313   (2*313-1=625) | clock n=625    | Z/625
+7^2=  49 | shell n=25    (2*25-1=49) | clock n=49     | Z/49
+7^3= 343 | shell n=172   (2*172-1=343) | clock n=343    | Z/343
+7^4=2401 | shell n=1201  (2*1201-1=2401) | clock n=2401   | Z/2401
+  => 3-adic mirror pairs:  (shell n=5, clock n=9) h=2 ;  (shell n=14, clock n=27) h=3 ;
+     (shell n=41, clock n=81) h=4.   S710's '3-adic homometry tower at C=9,27,81'
+     IS the SHELL face of the LRC mirror family n=5,14,41.
+
+==============================================================================
+CLAIM F: the geometric margin 1/p is FACE-INDEPENDENT (same valuation law).
+A p-torsion element of Z/N (N=n clock OR N=2n-1 shell) sits at an order-p
+rotation j/p at the full tick t=1/N, so ||x/N|| >= 1/p on BOTH faces.
+==============================================================================
+  N= 14 (clock n=14  ): p-torsion margin 1/p holds = True
+  N= 27 (shell n=14  ): p-torsion margin 1/p holds = True
+  N=  9 (clock n=9   ): p-torsion margin 1/p holds = True
+  N=  9 (shell n=5   ): p-torsion margin 1/p holds = True
+  N=  8 (clock n=8   ): p-torsion margin 1/p holds = True
+  N= 15 (shell n=8   ): p-torsion margin 1/p holds = True
+  N= 25 (shell n=13  ): p-torsion margin 1/p holds = True
+  N= 49 (shell n=25  ): p-torsion margin 1/p holds = True
+
+==============================================================================
+CLAIM G: the n/2 GUARD = the 2-torsion of the CLOCK group.
+For even n, the half-turn speed n/2 is the UNIQUE order-2 element of Z/n
+(2*(n/2)=n=0). The seed's 'half-turn leak residue 7' at n=14 is 7=14/2,
+the 2-torsion generator. M(AP_n \ {n/2})=2/n (seed) = deleting this 2-torsion.
+==============================================================================
+  n= 6: n/2= 3  order-2 in Z/6: True  (2*3=6==0 mod 6)
+  n= 8: n/2= 4  order-2 in Z/8: True  (2*4=8==0 mod 8)
+  n=10: n/2= 5  order-2 in Z/10: True  (2*5=10==0 mod 10)
+  n=12: n/2= 6  order-2 in Z/12: True  (2*6=12==0 mod 12)
+  n=14: n/2= 7  order-2 in Z/14: True  (2*7=14==0 mod 14)
