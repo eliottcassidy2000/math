@@ -1,0 +1,34 @@
+====================================================================
+(A) divisor / doubling structure: 19 (prime) vs 14 (composite)
+====================================================================
+  n=14: prime? False; divisors [1, 2, 7, 14]; 2n-1=27 (prime? False)
+        14=2*7: CRT Z/14=Z/2 x Z/7; ord_7(2)=3 -> doubling = TWO 3-cycles
+        => a FIBER bundle over the 7-clock (S640); reducible.
+  n=19: prime? True; divisors [1, 19]; 2n-1=37 (prime? True)
+        19 prime: ord_19(2)=18 = 18 = 19-1 -> 2 is a PRIMITIVE ROOT
+        => doubling = a SINGLE 18-cycle; NO fiber, NO sub-shell. IRREDUCIBLE by
+           the n=14 method. The hard case for divisor/CRT reductions.
+
+====================================================================
+(B) the provable corner: {1,..,18} is lonely EXACTLY at t=1/19 (tight)
+====================================================================
+  {1,..,18} at t=1/19: min clock distance over runners = 1/19 = 1/19 ? True
+  -> all 18 runners are >= 1/19 away; the unit runners (k=1,18) are EXACTLY 1/19.
+     So loneliness holds with EQUALITY: the bound 1/19 is achieved, not beaten (tight).
+  random 18-speed search (rational witnesses): best achievable gap found = 0.2162
+  (LRC(19): EVERY 18-speed set should reach gap >= 1/19=0.0526; this is OPEN
+   in general -- proven only up to 7 runners. We prove the {1,..,18} corner.)
+
+====================================================================
+(C) where 19's real structure lives: CM / Heegner, not fibers
+====================================================================
+  19 is a HEEGNER number (True); 19 = 4*5-1; Q(sqrt(-19)) class number 1.
+  -> the rotation field for Eisenstein norm N=5 (HYP-2277) = Q(sqrt(-19)); the
+     conjectural chi=5 chromatic step (Moser tower: sqrt(-3)->sqrt(-11)->sqrt(-19)).
+  19 = 1+6+12 = hex(2) (centered hexagonal); 2n-1=37=hex(3). Eisenstein-lattice radius-2.
+  19 = 3 mod 4 -> Paley-19 tournament EXISTS (self-converse, S638); QR mod 19 = [1, 4, 5, 6, 7, 9, 11, 16, 17]
+  but 2 is a NON-residue (2 in QR? False) and <2>=all of (Z/19)* (primitive root),
+  so <2> != QR: 19 is NOT in the p=7 mod 8 'doubling=Paley' family (S640). 19 = 3 mod 8.
+  => n=19's leverage is the CM/Heegner/cube-root side (sqrt(-19), the chi=5 frontier),
+     NOT the divisor-fiber side. The full LRC(19) wants the cyclotomic-depth q* attack
+     (opus S704) at the prime modulus, with witnesses t=j/19 and t=j/37.
