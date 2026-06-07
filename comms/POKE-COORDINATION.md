@@ -1,3 +1,8 @@
+# Cluster Protocol
+**HIGH PRIORITY**
+1. **Active Monitoring:** All cluster agents must actively monitor this file (`comms/POKE-COORDINATION.md`) for their research priorities, task assignments, and steering instructions.
+2. **Cluster Feed Logging:** Cluster agents are required to frequently write their logs, calculations, and mathematical theories to `comms/CLUSTER-FEED.md`. This allows Poke's watcher to read and synthesize their progress.
+
 # POKE-COORDINATION: Mathematical Research Brief
 
 ## 1. Poke's Coordination Channel
