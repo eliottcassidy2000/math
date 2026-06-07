@@ -1,0 +1,51 @@
+====================================================================
+(A) falling-factorial coeffs = signed cycle counts; rising = unsigned
+====================================================================
+  n | (x)_n coeffs (signed s)        | x^(n) coeffs (unsigned c) | check vs perms
+  0 | [1]                            | [1]                      | rising=c:True falling=s:True
+  1 | [0, 1]                         | [0, 1]                   | rising=c:True falling=s:True
+  2 | [0, -1, 1]                     | [0, 1, 1]                | rising=c:True falling=s:True
+  3 | [0, 2, -3, 1]                  | [0, 2, 3, 1]             | rising=c:True falling=s:True
+  4 | [0, -6, 11, -6, 1]             | [0, 6, 11, 6, 1]         | rising=c:True falling=s:True
+  5 | [0, 24, -50, 35, -10, 1]       | [0, 24, 50, 35, 10, 1]   | rising=c:True falling=s:True
+  6 | [0, -120, 274, -225, 85, -15, 1] | [0, 120, 274, 225, 85, 15, 1] | rising=c:True falling=s:True
+
+====================================================================
+(B) evaluate at x=1:  rising -> n! = |Sn|;  falling -> 0 = #even-#odd
+====================================================================
+  n | x^(n)|_1 (=sum c) | n!=|Sn| | (x)_n|_1 (=#even-#odd) | #even | #odd | |An|
+  0 |                1 |       1 |                      1 |     1 |    0 | 1
+  1 |                1 |       1 |                      1 |     1 |    0 | 1
+  2 |                2 |       2 |                      0 |     1 |    1 | 1
+  3 |                6 |       6 |                      0 |     3 |    3 | 3
+  4 |               24 |      24 |                      0 |    12 |   12 | 12
+  5 |              120 |     120 |                      0 |    60 |   60 | 60
+  6 |              720 |     720 |                      0 |   360 |  360 | 360
+  7 |             5040 |    5040 |                      0 |  2520 | 2520 | 2520
+  -> rising@1 = n! = |Sn| (all perms, the generic Galois group);
+     falling@1 = 0 for n>=2  <=>  #even=#odd  <=>  |An|=n!/2 (the sign/index-2).
+     (n=0,1: falling@1 = 1, no balance yet -- below the An threshold, like S2,S3
+      being solvable; the '0' switches on exactly when the sign map is onto.)
+
+====================================================================
+(C) the antipode sigma:x->-x exchanges rising<->falling
+====================================================================
+  n=0: (x)_n = (-1)^n (-x)^(n) ? True
+  n=1: (x)_n = (-1)^n (-x)^(n) ? True
+  n=2: (x)_n = (-1)^n (-x)^(n) ? True
+  n=3: (x)_n = (-1)^n (-x)^(n) ? True
+  n=4: (x)_n = (-1)^n (-x)^(n) ? True
+  n=5: (x)_n = (-1)^n (-x)^(n) ? True
+  -> the arc's antipodal involution sigma (S638/S643) IS the rising<->falling
+     duality. Sn(all=rising) and An(sign=falling) are exchanged by sigma:x->-x;
+     on tournaments sigma is the exiled anti-automorphism (S643) -- same sigma.
+
+====================================================================
+(D) tie to S643: |An| = n!/2 is the index of the sign map; Aut(T) <= An always
+====================================================================
+  falling@1=0 (n>=2)  <=>  sign:Sn->{+-1} is ONTO  <=>  [Sn:An]=2.
+  S643: every tournament Aut(T) lands in An (odd-order => even perms). So the
+  perspective group sits in the kernel of the sign map = the falling-factorial's
+  'even half'. The discriminant (square <=> Galois<=An) is the sign map's invariant;
+  the falling factorial vanishing at 1 is its global count. Rising = the whole Sn
+  (Abel-Ruffini side), falling = the An/sign half (Feit-Thompson side).
