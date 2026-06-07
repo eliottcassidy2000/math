@@ -83,7 +83,7 @@ def main():
     print("="*78)
     print("SIGNED-LRC r_min LOWER BOUNDS + refined inf   (monad-S3)")
     print("="*78)
-    configs = {2:18, 3:16, 4:13, 5:11, 6:10, 7:9}   # r:B
+    configs = {2:14, 3:12, 4:11, 5:10, 6:9, 7:8}   # r:B
     for r in range(2,8):
         B = configs[r]; n = r+1; floor = F(1,n)
         sets = enum_sets(r,B)

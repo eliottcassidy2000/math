@@ -1,0 +1,9 @@
+n=5 B<=24 (10061 sets): inf Gstar=1/5=0.200000  n*inf=1.0000
+   minimizer (1, 2, 9, 14)
+   minimizer (1, 5, 7, 9)
+   minimizer (1, 5, 11, 13)
+   minimizer (1, 5, 15, 23)
+   minimizer (1, 6, 7, 10)
+   minimizer (2, 11, 14, 19)
+   minimizer (3, 11, 13, 15)
+   minimizer (5, 13, 17, 19)
