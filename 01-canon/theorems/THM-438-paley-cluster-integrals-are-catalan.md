@@ -1144,10 +1144,28 @@ deformation (the Bożejko–Speicher `q`-deformation of the law with cumulants `
 `q`-coefficients make every Hankel determinant monotone increasing — the measure spreads monotonically as
 it moves free→classical.
 
+### (6) The free density, computed (validates ADD-12; refines the edge constant).
+With the explicit R-transform now in hand, the free law's density is obtained by Cauchy-transform
+inversion: solve `K(G)=x+i0`, `K(w)=1/w+∫_0^∞ te^{-t}/(1−wt)dt`, then `ρ(x)=−Im G/π`
+(`04-computation/paley_starstar_free_density_monad.py`, mpmath, 241-node continuation). **The inverted
+density reproduces the A088368 moments** — `∫x^k ρ = 0.99981, 2.997, 12.96, 68.48` for `k=1..4` (rel.err
+`<1%`; total mass `0.96` and `m_5` low by `1.7%`, the expected loss from the `x^{-1/2}` edge and the
+`x≤49` tail cut). This is the first direct confirmation that the Bercovici–Pata R-transform inverts to a
+measure with the right moments. **Edge:** `ρ(x)·√x` is finite and slowly varying near `0`, confirming the
+`x^{-1/2}` exponent, but its value is `≈0.4–0.6` near `x∼10^{-3}` — **NOT** the bare `1/π≈0.318` of a
+critical free-Poisson; ADD-12's "critical free-Poisson `1/π` edge" was a loose analogy — the exponential
+jump law shifts the edge constant (precise constant deferred; the root-finder degrades in the edge region).
+**Tail:** consistent with exponential-type decay; the constant `e` (`m_k/k!→e`, MISTAKE-063) is asymptotic
+and not cleanly resolved at `x≤8` (where `ρ·e^x` is still pre-asymptotic). Density samples (for the record):
+`ρ(0.1)≈1.17, ρ(0.5)≈0.376, ρ(1)≈0.207, ρ(2)≈0.097, ρ(4)≈0.034, ρ(8)≈0.0020`.
+
 ### Honest status (ADD-13).
 PROVED/named: the two endpoints are Bercovici–Pata partners (both cumulant signatures `=n!` verified;
 `Λ(cl-CP)=fr-CP` is the standard BP action on compound Poisson). VERIFIED numerically: the Borel-bridge
 identity `z R(z)=∫e^{−t}C(zt)dt`, the crossing `q`-triangle `k≤9`, the closed-form classical density's
-moments `k≤6`. NOT changed: the off-diagonal `t(k,m)` columns remain anonymous — the crossing triangle is
-a DIFFERENT (canonical) refinement, not `t(k,m)`. Tame-end handoffs `#1/#2` and `t(7,5)` STILL OPEN.
+moments `k≤6`, and the free density via Cauchy inversion (recovers A088368 moments `k≤4` to `<1%`).
+REFINED (honesty): ADD-12's free-law edge constant `1/π` is NOT confirmed — numerics give `≈0.4–0.6`; the
+`x^{-1/2}` EXPONENT holds but the jump law shifts the constant. NOT changed: the off-diagonal `t(k,m)`
+columns remain anonymous — the crossing triangle is a DIFFERENT (canonical) refinement, not `t(k,m)`.
+Tame-end handoffs `#1/#2` and `t(7,5)` STILL OPEN.
 Files: `04-computation/paley_starstar_bercovici_pata_monad.py` (+`.out`).

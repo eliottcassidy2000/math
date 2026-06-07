@@ -1,0 +1,39 @@
+==========================================================================
+Free factorial law mu_free: Cauchy-transform inversion + moment validation
+==========================================================================
+
+Inverting K(G)=x+i1.0e-6 on 241 nodes x in [0.0009, 49.0] ...
+  root-finder fallbacks: 115
+
+Moment recovery  \int x^k rho(x) dx  vs  A088368(k):
+   k          numeric    A088368    rel.err
+   0      0.958368927          1     0.0416
+   1     0.9998100083          1    0.00019
+   2      2.997408994          3   0.000864
+   3      12.96294417         13    0.00285
+   4      68.48086051         69    0.00752
+   5      413.7887677        421     0.0171
+
+Edge  rho(x)*sqrt(x) near 0  (expect -> 1/pi = 0.31831):
+   x=  0.0009  rho*sqrt(x)=0.622875
+   x=0.003486  rho*sqrt(x)=0.56143
+   x=0.007759  rho*sqrt(x)=0.522078
+   x= 0.02136  rho*sqrt(x)=0.468292
+   x= 0.06882  rho*sqrt(x)=0.399436
+
+Tail  rho(x)*e^{x} for large x  (expect -> e = 2.71828):
+   x=    49.0  rho*e^x=0.0
+   x=   45.02  rho*e^x=0.0
+   x=   39.36  rho*e^x=0.0
+   x=   30.78  rho*e^x=0.0
+
+Density samples rho(x):
+   x~  0.1027  rho=1.16693
+   x~  0.4871  rho=0.375766
+   x~  0.9769  rho=0.206992
+   x~   2.028  rho=0.0965505
+   x~   4.019  rho=0.0339069
+   x~   7.941  rho=0.00196008
+   x~   16.07  rho=0.0
+
+DONE.
