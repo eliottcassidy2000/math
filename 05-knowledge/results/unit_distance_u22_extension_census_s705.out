@@ -1,0 +1,50 @@
+#unit vectors of M_L: 18 (expect 18)
+distinct 57-edge 21-vertex M_L cores (W6(+)Delta family): 12
+
+==========================================================================
+EXTENSION CENSUS on 57-edge cores: how many core points does a new centre
+see at unit distance?  (=4  <=>  u(22)=61 in M_L;  max is provably <=4)
+==========================================================================
+ core#0: centre unit-neighbour-count distribution {1: 165, 2: 48, 3: 1}   -> max extension degree = 3  => best U(22) here = 60
+ core#1: centre unit-neighbour-count distribution {1: 165, 2: 48, 3: 1}   -> max extension degree = 3  => best U(22) here = 60
+ core#2: centre unit-neighbour-count distribution {1: 165, 2: 48, 3: 1}   -> max extension degree = 3  => best U(22) here = 60
+ core#3: centre unit-neighbour-count distribution {1: 165, 2: 48, 3: 1}   -> max extension degree = 3  => best U(22) here = 60
+
+ MAX extension degree over sampled 57-cores = 3  =>  best U(22) reachable by +1 on a 57-core in M_L = 60
+  No degree-4 extension on any sampled 57-core: the delta=4 route is EMPTY in M_L
+  (every candidate centre sees <= 3 core points) => core+1 gives at most U=60.
+
+==========================================================================
+Broad M_L search for any 22-point set with U=61 (would PROVE u(22)=61)
+==========================================================================
+  best U over greedy 22-pt M_L sets = 49  (Engel et al. lower bound: u(22)>=60)
+  (greedy is heuristic; finding 61 would prove u(22)=61, finding only 60 proves nothing)
+
+==========================================================================
+UNIT-COCYCLIC obstruction: centres seeing exactly k core points, k distribution,
+and whether a 'k=4' centre is forced toward k>=5 (hexagon completion) — the crux.
+==========================================================================
+  core#0 centre k-distribution: {1: 165, 2: 48, 3: 1}
+  (k = number of core points on the candidate centre's unit circle)
+
+DONE.
+Broad M_L search for any 22-point set with U=61 (would PROVE u(22)=61)
+==========================================================================
+  best U over greedy 22-pt M_L sets = 49  (Engel et al. lower bound: u(22)>=60)
+  (greedy is heuristic; finding 61 would prove u(22)=61, finding only 60 proves nothing)
+
+==========================================================================
+UNIT-COCYCLIC obstruction: centres seeing exactly k core points, k distribution,
+and whether a 'k=4' centre is forced toward k>=5 (hexagon completion) — the crux.
+==========================================================================
+  core#0 centre k-distribution: {1: 165, 2: 48, 3: 1}
+  (k = number of core points on the candidate centre's unit circle)
+
+==========================================================================
+Vertex-swap hill-climb for max U(22) in M_L (start = 57-core + best extension)
+==========================================================================
+  hill-climb best U(22) in M_L (box 3) = 60
+  => within this M_L patch the densest 22-set found has U=60
+  consistent with the Engel lower bound u(22)>=60; no 61 found in M_L patch.
+
+DONE.
