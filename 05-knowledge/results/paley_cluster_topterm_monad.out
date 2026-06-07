@@ -1,0 +1,28 @@
+========================================================================
+k=2: assembling c0 = lim A_4/p^3 from per-pattern top densities g(rho)
+   g estimated at primes 37,53 (Richardson 1/p); #patterns with g!=0: 3; unresolved: 0
+   c0 = 2 = 2.000000      Catalan C_2 = 2   MATCH=True
+   breakdown by (V, cyclerank m, g) [#patterns]:
+      V=3 m=2 g=+1.000  [  2 patt]  signed contrib = +3.000
+      V=4 m=1 g=+1.000  [  1 patt]  signed contrib = -1.000
+========================================================================
+k=3: assembling c0 = lim A_6/p^4 from per-pattern top densities g(rho)
+   g estimated at primes 31,43 (Richardson 1/p); #patterns with g!=0: 13; unresolved: 0
+   c0 = 5 = 5.000000      Catalan C_3 = 5   MATCH=True
+   breakdown by (V, cyclerank m, g) [#patterns]:
+      V=4 m=3 g=+1.000  [  5 patt]  signed contrib = +13.000
+      V=5 m=2 g=+1.000  [  7 patt]  signed contrib = -9.000
+      V=6 m=1 g=+1.000  [  1 patt]  signed contrib = +1.000
+========================================================================
+k=4: assembling c0 = lim A_8/p^5 from per-pattern top densities g(rho)
+   g estimated at primes 19,23 (Richardson 1/p); #patterns with g!=0: 67; unresolved: 0
+   c0 = 14 = 14.000000      Catalan C_4 = 14   MATCH=True
+   breakdown by (V, cyclerank m, g) [#patterns]:
+      V=5 m=4 g=+1.000  [ 14 patt]  signed contrib = +69.000
+      V=6 m=3 g=+1.000  [ 37 patt]  signed contrib = -72.000
+      V=7 m=2 g=+1.000  [ 15 patt]  signed contrib = +18.000
+      V=8 m=1 g=+1.000  [  1 patt]  signed contrib = -1.000
+========================================================================
+If c0=C_k and the breakdown shows g!=0 for NON-cactus even patterns (e.g. m=2
+with V<k+1 'theta'), then the prior 'only even cacti' top-order census was
+INCOMPLETE -- the extra even (non-cactus) patterns correct 6,25,132 -> Catalan.

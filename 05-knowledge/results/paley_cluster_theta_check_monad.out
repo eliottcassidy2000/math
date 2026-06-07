@@ -1,0 +1,22 @@
+========================================================================
+k=3: classify the V=5, m=2 top-order patterns (cactus {2,4} vs even theta)
+     and verify BOTH reach full order p^{k+1} (density g=+1).
+========================================================================
+  blocks=[[1], [2], [3], [5], [0, 4, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+2  g~+0.999  <-- TOP ORDER
+  blocks=[[1], [2], [4], [3, 5], [0, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+1  g~+0.999  <-- TOP ORDER
+  blocks=[[1], [3], [2, 4], [5], [0, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+1  g~+0.999  <-- TOP ORDER
+  blocks=[[1], [3], [0, 4], [5], [2, 6]]  biconn=(6,)  THETA(even)   mu=+1  g~+0.998  <-- TOP ORDER
+  blocks=[[1], [3], [4], [5], [0, 2, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+2  g~+0.999  <-- TOP ORDER
+  blocks=[[2], [1, 3], [4], [5], [0, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+1  g~+0.999  <-- TOP ORDER
+  blocks=[[2], [3], [4], [1, 5], [0, 6]]  biconn=(2, 4)  CACTUS{2,4}   mu=+1  g~+0.999  <-- TOP ORDER
+------------------------------------------------------------------------
+  V=5,m=2 TOP-ORDER (g=1) split:  even-cactus{2,4}: 6 patt (sum mu=+8),  even-THETA(2,2,2): 1 patt (sum mu=+1)
+  => the even THETA (NON-cactus, biconnected block is NOT a cycle) carries
+     mu-mass +1; the prior 'even cacti only' characterization MISSED it.
+  signed contributions (-1)^k mu g:  cacti -8, theta -1, sum -9  (matches topterm V=5,m=2 = -9)
+========================================================================
+CONCLUSION: top-order patterns = connected patterns with EVERY series-class
+even (=> P=prod ell_e is a perfect square Q^2 => chi(P)=+1 => g=+1).  This is
+STRICTLY LARGER than even cacti (theta graphs included).  THM-438 ADDENDUM /
+MISTAKE-060 'F saturates iff even cactus' is INCOMPLETE.  Catalan law UNCHANGED
+(c0=C_k verified k<=4); only the class of top-order patterns is corrected.
