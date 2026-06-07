@@ -22,7 +22,7 @@ survives on 27 distinct points, `u(27) ≥ 82` and `N* ≤ 27`.
 It can't be done — and the reason is clean enough to be a one-line slogan:
 
 > **In the equilateral cube, an accidental unit distance and 27 distinct points are
-> mutually exclusive.** (THM-435)
+> mutually exclusive.** (THM-437)
 
 The 81 product edges are angle-*independent*: changing one triangle coordinate by an
 edge vector is always a unit step, for every rotation. An *extra* edge must come from
@@ -48,7 +48,7 @@ point. So distinctness pins `U = 81`. (Verified three ways: the trig solution se
 
 There are two ways to "rule out a construction." The weak way is to *search and fail*
 (the anneal got 81; the grid got 81). The strong way is to exhibit the **obstruction
-identity** that forces failure. THM-435 is the second kind: the obstruction is the
+identity** that forces failure. THM-437 is the second kind: the obstruction is the
 coincidence of two algebraic loci — `accidental-edge = collision` — and it is forced
 by the *equilateral* geometry (60° direction quantization). A non-equilateral product
 would not have this exact coincidence; but a non-equilateral product is a different,
@@ -62,7 +62,7 @@ lane. Read together:
 |---|---|---|---|
 | product (THM-433) | `G□H` | avgdeg is additive ⟹ `≤ 6` until a factor clears it | `N=32` |
 | lattice (HYP-2301) | single-norm sublattice | degree–radius tension `∝ ρt(deg/(deg−6))²` | `N=32` |
-| **tuning (THM-435)** | **angle-tuned `K₃^□3`** | **accidental edge ⟺ collision (60° quantization)** | **stuck at 27** |
+| **tuning (THM-437)** | **angle-tuned `K₃^□3`** | **accidental edge ⟺ collision (60° quantization)** | **stuck at 27** |
 
 All three "nice" handles on the problem fail for *structurally the same* reason: the
 crossover graph refuses to be regular, refuses to be a product, and refuses to be a
@@ -83,7 +83,7 @@ prescription was scaled off the wrong base. The honest target is harder: beat th
 
 ## Concrete residue
 
-- `u(27) > 81` is **not** achievable by any angle-tuning of `K₃^□3` (THM-435). The
+- `u(27) > 81` is **not** achievable by any angle-tuning of `K₃^□3` (THM-437). The
   ceiling `N* ≤ 28` and the conjecture `u(27)=81, N*=28` (HYP-2299) both stand —
   strengthened, not proved.
 - The cube's augmentation budget is small: `H(3,3)+1` adds only `+2` (⟹ `u(28) ≥ 83`

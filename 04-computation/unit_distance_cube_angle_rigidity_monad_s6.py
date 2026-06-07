@@ -1,9 +1,9 @@
 #!/usr/bin/env python3
 """
 unit_distance_cube_angle_rigidity_monad_s6.py
-monad-explorer-2026-06-07-S6  (deep-research; OPEN-Q-057)  --  THM-435 verifier.
+monad-explorer-2026-06-07-S6  (deep-research; OPEN-Q-057)  --  THM-437 verifier.
 
-THM-435 (CUBE ANGLE-RIGIDITY).  Let C(t2,t3) be the Minkowski-sum realization of
+THM-437 (CUBE ANGLE-RIGIDITY).  Let C(t2,t3) be the Minkowski-sum realization of
 the Hamming cube  K3^[]3 = H(3,3)  as three unit equilateral triangles, the i-th
 rotated by angle t_i (t1=0 WLOG):  points  = v1 + R(t2) v2 + R(t3) v3,  vi in the
 unit triangle {0, e^{i0}, e^{i60}}.  Then for EVERY (t2,t3):
@@ -167,4 +167,4 @@ print(f"  scanned ~{N*N} (t2,t3) in (0,60)^2; max U over 27-distinct cubes = {ma
 print(f"  #configs with U>81 and 27 distinct points = {over}")
 print("  => "+("LEM-C CONFIRMED: cube angle-rigid at 81." if (maxU<=81 and over==0)
               else "LEM-C anomaly !!"))
-print("\nTHM-435 verification complete.")
+print("\nTHM-437 verification complete.")
