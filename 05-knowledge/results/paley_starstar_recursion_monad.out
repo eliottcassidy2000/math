@@ -1,0 +1,33 @@
+======================================================================
+(**) S_k = sum_{even-series} mu(0,sigma);  target (-1)^k C_k
+ k      S_k  (-1)^kC_k  match    #es  A215257?
+ 1       -1         -1   True      1  count==A215257(k+1): True
+ 2        2          2   True      3  count==A215257(k+1): True
+ 3       -5         -5   True     13  count==A215257(k+1): True
+ 4       14         14   True     67  count==A215257(k+1): True
+ 5      -42        -42   True    383  count==A215257(k+1): True
+======================================================================
+Breakdown of S_k by CYCLE RANK m  (m=k bigon-trees ... m=1 single 2k-cycle):
+  k=1: m=1:-1
+  k=2: m=1:-1, m=2:+3
+  k=3: m=1:-1, m=2:+9, m=3:-13
+  k=4: m=1:-1, m=2:+18, m=3:-72, m=4:+69
+  k=5: m=1:-1, m=2:+30, m=3:-230, m=4:+580, m=5:-421
+Breakdown of S_k by FIRST-RETURN index r of block(0):
+  k=1: r=2:-1
+  k=2: r=2:+2, r=4:+0
+  k=3: r=2:-6, r=4:+1, r=6:+0
+  k=4: r=2:+22, r=4:-6, r=6:-2, r=8:+0
+  k=5: r=2:-94, r=4:+35, r=6:+12, r=8:+5, r=10:+0
+Breakdown of S_k by block(0) SIZE (revisits of start):
+  k=1: |b0|=2:-1
+  k=2: |b0|=2:+0, |b0|=3:+2
+  k=3: |b0|=2:+1, |b0|=3:+0, |b0|=4:-6
+  k=4: |b0|=2:-4, |b0|=3:-6, |b0|=4:+0, |b0|=5:+24
+  k=5: |b0|=2:+14, |b0|=3:+28, |b0|=4:+36, |b0|=5:+0, |b0|=6:-120
+COUNTS by first-return r (unsigned, structure check):
+  k=1: r=2:1
+  k=2: r=2:1, r=4:2
+  k=3: r=2:3, r=4:3, r=6:7
+  k=4: r=2:13, r=4:11, r=6:12, r=8:31
+  k=5: r=2:67, r=4:53, r=6:48, r=8:57, r=10:158
