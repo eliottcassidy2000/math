@@ -1237,3 +1237,83 @@ finite edge constant exists*; the `x^{-1/2}` exponent carries a `√log` factor.
 density (`e⁻¹δ₀ + e^{−1−x}I₁(2√x)/√x`) and the tail `~e·e^{−x}` (ADD-12) are unchanged.
 Files: `04-computation/paley_starstar_Ki_closed_form_monad.py`, `paley_starstar_edge_loglaw_monad.py`
 (+`.out`).
+
+---
+
+## ADDENDUM-15 (monad-explorer-2026-06-07, deep-research 17th session) — THE FREE FACTORIAL LAW HAS A **CLOSED-FORM PARAMETRIC DENSITY** (exponential-integral parametrization); and the tail constant `e` is DERIVED as `e^{R(0)}=e^{κ₁}`, overshooting then descending — the SAME resurgent hump as `m_k/k!→e` (MISTAKE-063)
+
+ADD-14 (16th) gave the K-transform (inverse Cauchy transform) of `μ_free` in closed form
+`K(w) = −(1/w²)g(−1/w)`, `g(u)=eᵘE₁(u)` (Gompertz fn), but the density `ρ(x)=−(1/π)Im G(x+i0)`
+was still obtained by NUMERICAL root-finding `G=K⁻¹(x+iη)` with an artificial regulator `η`
+(ADD-13). This addendum removes both: because `K` is explicit, the density is an **exact
+parametric curve** — no root-finding, no `η` — and the whole profile (edge + bulk + tail) is
+read off a single real condition.
+
+### (1) Closed-form parametric density [VERIFIED vs ADD-14 root-found density to `1e−12`]
+
+Substitute `u = −1/w` (so `w = G = −1/u`); then `K(w) = −u²g(u)`. On the support `x = K(G(x+i0))`
+is REAL, so the support+density are the single-real-condition curve
+
+```
+        x(u)   = − u² g(u)                         (real on the curve)
+        ρ(u)   = − Im(u) / ( π |u|² )
+        on  C = { u ∈ lower half-plane : Im( u² g(u) ) = 0 },   g(u)=eᵘE₁(u).
+```
+
+This is the free factorial law's density in closed form. Tracing `C` (for each modulus `ε=|u|`,
+solve `arg u∈(−π,0)` of `Im(u²g(u))=0`) reproduces the ADD-13/14 root-found `ρ(x)` to `<4×10⁻¹²`
+at every tested `x`, with **no regulator and no inversion of `G`**. VERIFIED: the parametric
+density integrates to the moments `A088368=1,1,3,13,69,421` to rel.err `<0.3%` (`k=1..5`; the
+total mass `k=0` is `0.8%`, more truncation-sensitive at both ends) — limited only by trapezoid +
+edge/tail truncation, not by the parametrization.
+The two ends of the support are the two singular features of the exp-integral `E₁`:
+**edge `x→0⁺` ⟺ `u→0`** (the `E₁` log), **tail `x→∞` ⟺ `u→−∞`** (the `E₁` cut `(−∞,0]`).
+
+### (2) Edge `u→0`: the constraint forces `arg u → −π/2`; `x ~ ε²(ln(1/ε)−γ)` [VERIFIED]
+
+As `u=εe^{iφ}→0`, `g(u) ~ −γ−ln u`, and `Im(u²g(u))=0` forces `φ→−π/2` (= ADD-14's `2θ→π`), with
+deviation `δ=φ+π/2 ~ π/(4(γ+ln ε))` (VERIFIED, ratio→1). Then `x = −Re(u²g(u)) ~ ε²(ln(1/ε)−γ)`
+(VERIFIED, ratio→1.004 at `ε=10⁻⁸`) and `ρ ~ 1/(πε)`, recovering ADD-14's
+`π ρ√x → √(ln(1/ε)) ~ √(½ln(1/x)) → ∞` (no finite edge constant). The parametrization gives this
+as a clean two-line consequence and exposes the sub-leading `ln ln` corrections explicitly
+(`πρ√x/√(ln1/ε)` rises `0.955→0.985` over `ε=10⁻¹…10⁻⁸`).
+
+### (3) Tail `u→−∞` (E₁ cut): `ρ(x) e^x = e^{R(G(x))} → e^{R(0)} = e^{κ₁} = e`, with a resurgent hump [VERIFIED]
+
+For `w=G→0⁺` write `s=1/w→+∞`; the closed form splits into its asymptotic (real-coefficient)
+series and the **Stokes term** from the `E₁` cut:
+
+```
+        K(w) = [ 1/w + R(w) ]  −  iπ w⁻² e^{−1/w},      R(w)=1+2w+6w²+⋯ (the R-transform).
+```
+
+Imposing `Im K(w)=0` on the curve gives `w_i = −π e^{−1/w_r}`, hence the **derived tail law**
+
+```
+        ρ(x) = −w_i/π = e^{−1/w_r},      ⟹   ρ(x) e^x = e^{x − 1/w_r} = e^{R(w_r)},   w_r=Re G(x).
+```
+
+Since `w_r=G_r(x) → 0` as `x→∞` and `R(0)=κ₁=1`, the tail constant is `lim ρ(x)e^x = e^{R(0)} = e`
+— the `e` of ADD-12/MISTAKE-063, now **derived** (not fitted) from the Stokes term of the closed form.
+But `R` is the **resurgent** (Gevrey-1, divergent) factorial series, so at finite `x` the prefactor
+`e^{R(G(x))}` does NOT sit at `e`: VERIFIED, `x+ln ρ = R(w_r)` rises to a **peak `≈1.72` at `x≈7.5`,
+then descends** (`1.72→1.64→1.49` over `x=7.5→10`) toward `1`; equivalently `ρe^x` overshoots `e`,
+peaks `≈5.6`, and descends back. The Stokes prediction `ρ ≈ e^{−1/Re G}` holds (ratio `0.99–1.12`).
+
+**This overshoot-then-descend is the SAME hump as `A088368(m)/m! → e`** (MISTAKE-063: overshoots,
+peaks at `m=8`, descends): the moments `m_k=∫x^kρ` are governed at large `k` by the tail of `ρ`,
+so the `m_k/k!` hump and the `ρe^x` hump are one phenomenon — the resurgent `R`-transform read in
+two dual ways (cumulant-side vs spectral-side).
+
+### Honest status (ADD-15).
+PROVED (elementary, from the ADD-14 closed form): the parametric density (1); the edge forcing
+`arg u→−π/2` and `x~ε²(ln(1/ε)−γ)` (2); the tail Stokes law `ρ=e^{−1/w_r}`, `ρe^x=e^{R(w_r)}` and
+its limit `e^{R(0)}=e^{κ₁}=e` (3). VERIFIED numerically: parametric `ρ` vs root-found to `1e−12`;
+moments `A088368` `k≤5` to `<0.3%`; edge ratios → 1; tail hump (peak `≈1.72` at `x≈7.5`, descending)
+and Stokes consistency. The tail LIMIT `e` is rigorous (`R(0)=1`); the finite-`x` overshoot is the
+resurgent `R` and is only ASYMPTOTICALLY → `e` (not reachable numerically — a feature, the same as
+the edge √log and as MISTAKE-062/063). UNCHANGED: ADD-14's closed form and edge √log; ADD-12's
+classical-side density. NEW connection: edge √log and tail-hump are the TWO singularities of the
+single special function `g=eᵘE₁(u)` (log at `0`, cut on `(−∞,0]`), and the tail hump = the `m_k/k!`
+hump (MISTAKE-063) via `m_k=∫x^kρ`.
+Files: `04-computation/paley_starstar_density_parametrization_monad.py` (+`.out`).

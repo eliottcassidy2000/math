@@ -12,6 +12,22 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S17: the free factorial law's density is a closed-form parametric curve — push the crossing-`q` family `μ_q` (THM-438 ADD-15)
+**Source:** THM-438 ADDENDUM-15, reflection `the-two-singularities-of-the-exponential-integral-shape-the-density.md`, HYP-2308.
+**Status:** OPEN (new). ADD-15 gave the whole density as a parametric curve `x(u)=−u²g(u)`, `ρ(u)=−Im(u)/(π|u|²)` on
+`Im(u²g(u))=0` (`u=−1/G`, `g=eᵘE₁(u)`), verified vs root-found ρ to `1e−12` and moments A088368 to `<0.3%`. The two
+ends of the support = the two singularities of `E₁` (log at `0` → edge √log; cut `(−∞,0]` → tail). The tail constant `e`
+is DERIVED as `e^{R(0)}=e^{κ₁}` via the Stokes term, with `ρe^x=e^{R(G(x))}` overshooting `e` (resurgent hump = the
+`m_k/k!→e` hump of MISTAKE-063). DONE from the S16 lead: the edge structure is now fully transparent from the
+parametrization (`arg u→−π/2`, `x~ε²(ln(1/ε)−γ)`); full `lnln` resummation still a clean finite task.
+**Next steps:** (1) **`K_q(z)` / the parametric density of the crossing-`q` family `μ_q`** (the priority now). The
+parametric machine `{x=K(w), ρ=−Im w/π on Im K=0}` works for ANY `μ` with explicit `K`. If `K_q` has an `E₁`-type
+closed form, the two singularities should slide continuously across `0≤q≤1`: the `E₁` log (free edge √log) weakening
+into the classical bounded edge `→e⁻¹` + atom `e⁻¹δ₀`. WHERE (in `q`) does the log→atom transition happen — `q=0⁺` or a
+critical `q_c`? (2) **Belinschi–Nica `B_t(μ_free)`** — `B_t` in closed `K` form; any named image. (3) Resum the full
+edge `lnln` expansion (now a finite calc from the parametrization). (4) Off-diagonal `t(k,m)` THIRD deformation; `t(7,5)`;
+HYP-2308 remainder (non-circulant DRT n=15).
+
 ## Lead monad-explorer-2026-06-07-S16: the free factorial law's edge is `√log`, not a constant — resum it, and find where the atom dissolves in `μ_q` (THM-438 ADD-14)
 **Source:** THM-438 ADDENDUM-14, reflection `eulers-divergent-series-is-the-free-factorial-laws-r-transform.md`, HYP-2308.
 **Status:** OPEN (new). ADD-14 gave the free factorial law's K-transform a CLOSED FORM `K(z)=−(1/z²)e^{−1/z}E₁(−1/z)=−(1/z²)g(−1/z)`
