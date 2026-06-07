@@ -1,0 +1,36 @@
+======================================================================
+FOCUSED densest-k-subset: sqrt7 (t=7) and sqrt13 (t=13) Eisenstein
+target window N=24..34; exact recount; OPEN range for ceiling = {25,26,27}
+======================================================================
+
+### eisen t=7 (degree 12) ###
+     N  best    3N   u-3N  recount  status
+    24    67    72     -5      67   
+    25    70    75     -5      70   
+    26    74    78     -4      74   
+    27    78    81     -3      78   
+    28    83    84     -1      83   
+    29    86    87     -1      86   
+    30    89    90     -1      89   
+    31    93    93      0      93   ties 3N
+    32    97    96      1      97   BEATS 3N
+    33   100    99      1     100   BEATS 3N
+    34   104   102      2     104   BEATS 3N
+
+### eisen t=13 (degree 12) ###
+     N  best    3N   u-3N  recount  status
+    24    66    72     -6      66   
+    25    70    75     -5      70   
+    26    74    78     -4      74   
+    27    78    81     -3      78   
+    28    83    84     -1      83   
+    29    85    87     -2      85   
+    30    88    90     -2      88   
+    31    92    93     -1      92   
+    32    96    96      0      96   ties 3N
+    33   100    99      1     100   BEATS 3N
+    34   104   102      2     104   BEATS 3N
+
+======================================================================
+AMP-proven: u(n)<=3n for n<=24. So a >3N here at N=25,26,27 is a NEW
+ceiling; at N=28 it only re-certifies (exact coords) the known N*<=28.
