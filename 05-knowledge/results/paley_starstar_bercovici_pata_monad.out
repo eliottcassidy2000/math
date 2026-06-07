@@ -1,0 +1,73 @@
+==============================================================================
+THM-438 ADD-13: Bercovici-Pata partnership + crossing-number q-interpolation
+==============================================================================
+
+(1)(2) classical (all part.) vs free (NC) moments of CP(e^{-x}dx):
+ k   all=A000262?    NC=A088368?    gap=cl-fr
+ 0            1OK            1OK            0
+ 1            1OK            1OK            0
+ 2            3OK            3OK            0
+ 3           13OK           13OK            0
+ 4           73OK           69OK            4
+ 5          501OK          421OK           80
+ 6         4051OK         2867OK         1184
+ 7        37633OK        21477OK        16156
+ 8       394353OK       175769OK       218584
+ 9      4596553OK      1567273OK      3029280
+
+  All classical sums == A000262: True
+  cr(pi)==0  <=>  noncrossing : free moments recovered as q=0 slice.
+
+(3) crossing-number q-triangle  C(k,j) = sum_{cr(pi)=j} prod|B|!  (rows k=0..9):
+    j=0 column = A088368 (free);  row sum = A000262 (classical).
+    k\j         0         1         2         3         4         5         6         7         8         9
+      0         1         0         0         0         0         0         0         0         0         0   rowsum=1
+      1         1         0         0         0         0         0         0         0         0         0   rowsum=1
+      2         3         0         0         0         0         0         0         0         0         0   rowsum=3
+      3        13         0         0         0         0         0         0         0         0         0   rowsum=13
+      4        69         4         0         0         0         0         0         0         0         0   rowsum=73
+      5       421        68        12         0         0         0         0         0         0         0   rowsum=501
+      6      2867       828       312        44         0         0         0         0         0         0   rowsum=4051
+      7     21477      8996      5340      1532       264        24         0         0         0         0   rowsum=37633
+      8    175769     93848     77152     33256     11248      2560       448        72         0         0   rowsum=394353
+      9   1567273    972792   1030104    585504    292800    104520     32064      9216      2016       264   rowsum=4596553
+
+  gap A000262-A088368 (crossing-partitions weight): [0, 0, 0, 0, 4, 80, 1184, 16156, 218584, 3029280]
+  j=1 column (exactly one crossing): [0, 0, 0, 0, 4, 68, 828, 8996, 93848, 972792]
+
+(4) Closed-form CLASSICAL density check:
+    f_cl(x) = e^{-1} delta_0 + e^{-1-x} I_1(2 sqrt x)/sqrt x  on (0,inf)
+    moments \int x^k f_cl  must equal A000262(k).
+     k             moment      A000262    rel.err
+     0           1.000000            1   1.11e-16
+     1           1.000000            1   1.11e-16
+     2           3.000000            3   1.48e-16
+     3          13.000000           13   0.00e+00
+     4          73.000000           73   1.95e-16
+     5         501.000000          501   3.40e-16
+     6        4051.000000         4051   2.25e-16
+
+(5) FREE density via R-transform inversion (edge + tail):
+    R(z)=\int_0^inf t e^{-t}/(1-zt) dt,  K(w)=1/w+R(w),  G=K^{-1},
+    rho(x) = -Im G(x+i0)/pi.   Expect rho~c/sqrt x near 0, rho~e e^{-x} tail.
+    (analytic constants from ADD-12, re-stated:)
+      near 0:  free-Poisson(lambda=1) critical edge  rho ~ 1/(pi sqrt x)
+      tail  :  rho(x) ~ e * e^{-x}   (Levy-measure tail, e = MISTAKE-063 const)
+    (full numerical inversion deferred; edges match ADD-12 verification.)
+
+(6) THE BERCOVICI-PATA BRIDGE = EGF<->OGF DUALITY OF n!, REALIZED BY BOREL SUMMATION:
+    Same cumulant sequence kappa_n=n!, two packagings:
+      CLASSICAL: cumulant EGF  C(t)=sum n! t^n/n! = sum t^n = t/(1-t)   (convergent, tame)
+      FREE     : cumulant OGF  R(z)=sum n! z^{n-1}                        (divergent Gevrey-1, resurgent = ADD-6)
+    Borel sum of the free OGF: Borel transform of sum n! z^n is sum z^n = z/(1-z) = the CLASSICAL cumulant fn.
+    => z R(z) = \int_0^inf e^{-t} C(zt) dt,  C(w)=w/(1-w).  (Borel = Laplace with Poisson weight e^{-t}.)
+          z   z*R(z) via Borel   int e^-t C(zt)dt       diff
+      -0.05      -0.0456290901      -0.0456290901   0.00e+00
+       -0.1      -0.0843666606      -0.0843666606   0.00e+00
+       -0.2      -0.1478891186      -0.1478891186   0.00e+00
+       -0.3      -0.1988137203      -0.1988137203   0.00e+00
+       -0.5      -0.2773427662      -0.2773427662   0.00e+00
+    The classical law's cumulant function IS the free law's Borel kernel.
+    ADD-6 (resurgence) + ADD-11/12 (free prob) + ADD-13 (Bercovici-Pata) are ONE statement.
+
+DONE.

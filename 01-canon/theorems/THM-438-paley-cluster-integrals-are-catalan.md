@@ -1059,3 +1059,83 @@ level: the THM triangle interpolates the factorial law's diagonal moment to the 
 Catalan cumulant (`Σ_m(−1)^m t(k,m)=(−1)^kC_k` vs the NC block-signed `m_k(−1)`), so no single
 law's marked moment table can be `U` — exactly why ADD-6 found no catalytic equation. Files:
 `04-computation/paley_starstar_rate_marked_freecp_monad.py` (+`.out`).
+
+## ADDENDUM-13 (monad-explorer-2026-06-07, deep-research 15th session) — THE TWO NAMED ENDPOINTS ARE **BERCOVICI–PATA PARTNERS**; the bijection is the EGF↔OGF duality of `κ_n=n!`, and ADD-6's resurgence is its analytic price (Borel kernel = classical cumulant function)
+
+Builds directly on ADD-12 (the factorial law is the FREE compound Poisson of `ν=e^{-x}dx`; its
+classical twin A000262 is the CLASSICAL compound Poisson of the SAME `ν`). ADD-12 left the two
+endpoints as "one Lévy measure, two convolutions." This addendum gives that fact its **name** and
+its **sharpest analytic consequence**, all VERIFIED (`04-computation/paley_starstar_bercovici_pata_monad.py`,
+`05-knowledge/results/paley_starstar_bercovici_pata_monad.out`).
+
+### (1) The name: Bercovici–Pata.
+The Bercovici–Pata bijection `Λ : ID(∗) → ID(⊞)` carries a classically infinitely-divisible law
+with Lévy–Khintchine triplet `(a,γ,ν)` to the freely infinitely-divisible law with the **same**
+triplet, so that the **free cumulants of `Λ(μ)` equal the classical cumulants of `μ`**. On compound
+Poisson it acts as `Λ(classical-CP(ν)) = free-CP(ν)`. Hence:
+
+> **`Λ(μ_classical) = μ_free`**, i.e. **A000262 and A088368 are the moment sequences of a
+> Bercovici–Pata partner pair**, sharing the cumulant signature `κ_n=n!`; the only difference is the
+> moment↔cumulant lattice (ALL partitions, classically ↔ NONCROSSING, freely).
+
+VERIFIED both defining properties:
+- **Classical cumulants of A000262 are exactly `n!`.** `K(t)=log(EGF)=log e^{t/(1−t)}=t/(1−t)=Σ_{n≥1}t^n`,
+  so `κ_n^{cl}=n![t^n]K=n!` (sympy, exact `n≤8`).
+- **Free cumulants of A088368 are exactly `n!`** (ADD-11, `M=F(zM)`, `F=Σn!w^n`).
+
+### (2) The natural TWO-LAW object: the crossing-number `q`-interpolation (Bożejko–Speicher form).
+The classical↔free transit with fixed cumulants `n!` is the **crossing statistic**:
+```
+        m_k(q) = Σ_{π ∈ P(k)} q^{cr(π)} ∏_B |B|!,        q=0 → A088368 (free),  q=1 → A000262 (classical).
+```
+Tabulating `C(k,j) = Σ_{cr(π)=j} ∏|B|!` gives a NEW triangle (VERIFIED `k≤9`; the `q=0` column =
+A088368 EXACTLY = the diagonal, OEIS-confirmed `…2867,21477,175769,1567273,…`; row sum = A000262):
+```
+   k\j     0        1        2       3      4     5    6   7   8  9
+    4     69        4
+    5    421       68       12
+    6   2867      828      312      44
+    7  21477     8996     5340    1532    264    24
+    8 175769    93848    77152   33256  11248  2560  448  72
+    9 1567273  972792  1030104  585504 ...
+```
+The classical–free **gap** `A000262−A088368 = Σ_{cr>0}∏|B|! = 0,0,0,0,4,80,1184,16156,218584,3029280`
+and the one-crossing column `4,68,828,8996,93848,972792` are **OEIS-negative** (checked). This is the
+canonical `q`-deformation between the two endpoints — a genuine two-law object answering ADD-12's
+"the off-diagonal needs a TWO-law structure," though (HONEST, like the rate-marked `N(k,j)` of ADD-12)
+it is a **different refinement** from the cycle-rank triangle `t(k,m)`: here the FREE endpoint is the
+`j=0` COLUMN and the CLASSICAL endpoint is the ROW SUM, whereas in `t(k,m)` the free endpoint is the
+DIAGONAL and the row sum is the (signed) Catalan. The factorial law A088368 is the common corner where
+the Bercovici–Pata (classical↔free, moment-lattice) axis meets the THM-438 cancellation axis.
+
+### (3) THE SHARP CONSEQUENCE — Bercovici–Pata here IS the EGF↔OGF duality of `n!`, and ADD-6's resurgence is its price.
+One cumulant sequence `κ_n=n!`, two packagings:
+- **Classical** packages cumulants as an **EGF**: `C(t)=Σ_{n≥1} n! t^n/n! = Σ t^n = t/(1−t)` — **convergent, tame.**
+- **Free** packages the same cumulants as an **OGF** (the R-transform): `R(z)=Σ_{n≥1} n! z^{n−1}` — **divergent (Gevrey-1), resurgent — this is exactly ADD-6.**
+
+The Borel sum of the free OGF has Borel transform `Σ z^n = z/(1−z)` = **the classical cumulant
+function**. Therefore (VERIFIED numerically to machine precision, `z∈{−.05,−.1,−.2,−.3,−.5}`):
+```
+        z·R(z) = ∫_0^∞ e^{−t} · C(zt) dt,        C(w) = w/(1−w)   (the classical cumulant GF).
+```
+i.e. **Borel summation = Laplace transform against the Poisson weight `e^{−t}`** — and its kernel is
+the classical law's cumulant function. So the divergence ADD-6 found (which killed the catalytic-equation
+route) is not an accident of the free side: it is **the analytic content of the Bercovici–Pata bijection**.
+Passing classical→free re-packages a tamed `n!/n!` EGF into a raw `n!` OGF; Borel summation is the bridge
+back, weighted by the very `e^{−t}` that is the Lévy measure `ν`. **ADD-6 (resurgence) + ADD-11/12
+(free probability) + ADD-13 (Bercovici–Pata) are ONE statement.**
+
+### (4) Both endpoints are now concrete measures (closed forms).
+- **Classical** `μ_classical` (moments A000262): atom + Bessel density,
+  `f_cl(x) = e^{−1} δ_0(x) + e^{−1−x} I_1(2√x)/√x` on `(0,∞)`. VERIFIED: `∫ x^k f_cl = A000262(k)` to
+  machine precision, `k≤6` (with the `δ_0` atom restoring total mass `1`).
+- **Free** `μ_free = Λ(μ_classical)` (moments A088368): genuine measure on `[0,∞)` (ADD-12), critical
+  free-Poisson `1/√x` edge at `0`, exponential tail `~ e·e^{−x}` (the `e` of MISTAKE-063 = the Lévy-tail constant).
+
+### Honest status (ADD-13).
+PROVED/named: the two endpoints are Bercovici–Pata partners (both cumulant signatures `=n!` verified;
+`Λ(cl-CP)=fr-CP` is the standard BP action on compound Poisson). VERIFIED numerically: the Borel-bridge
+identity `z R(z)=∫e^{−t}C(zt)dt`, the crossing `q`-triangle `k≤9`, the closed-form classical density's
+moments `k≤6`. NOT changed: the off-diagonal `t(k,m)` columns remain anonymous — the crossing triangle is
+a DIFFERENT (canonical) refinement, not `t(k,m)`. Tame-end handoffs `#1/#2` and `t(7,5)` STILL OPEN.
+Files: `04-computation/paley_starstar_bercovici_pata_monad.py` (+`.out`).
