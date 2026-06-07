@@ -1,0 +1,6 @@
+CYCLE-RANK TRIANGLE  t(k,m)=sum_{even-series rank m} prod(|B|-1)!
+k=1: [1]   altsum=-1  (-1)^kC_k=-1  match=True  #ev-ser=1
+k=2: [1 3]   altsum=2  (-1)^kC_k=2  match=True  #ev-ser=3
+k=3: [1 9 13]   altsum=-5  (-1)^kC_k=-5  match=True  #ev-ser=13
+k=4: [1 18 72 69]   altsum=14  (-1)^kC_k=14  match=True  #ev-ser=67
+k=5: [1 30 230 580 421]   altsum=-42  (-1)^kC_k=-42  match=True  #ev-ser=383

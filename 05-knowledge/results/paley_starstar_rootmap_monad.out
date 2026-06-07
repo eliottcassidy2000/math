@@ -1,0 +1,18 @@
+======================================================================
+(1) SIGN IDENTITY  sign(mu)=(-1)^m  and  S_k = sum (-1)^m prod(|B|-1)!
+(3) ROOT-BIGON split of S_k
+   k      S_k  (-1)^kC_k  sign-id   #ev-ser   rootbigon      non
+   1       -1         -1     True         1          -1        0
+   2        2          2     True         3           2        0
+   3       -5         -5     True        13          -6        1
+   4       14         14     True        67          22       -8
+   5      -42        -42     True       383         -94       52
+======================================================================
+(2) GENUS-BLINDNESS:  (-1)^{F(R)-1} == (-1)^m  for ALL rotation systems R
+     (checked exhaustively over even-series sigma at k<= 3)
+   genus-blindness holds for all 403 (sigma,R) checked: True
+======================================================================
+Interpretation: the per-ribbon-map sign (-1)^{F-1} sees only the cycle rank m,
+NOT the genus.  So no genus-0 restriction can recover C_k (ADDENDUM-4 routes).
+S_k is the N=-1 evaluation of an ALL-GENUS rooted-map sum; the loop equation
+xF^2+F=1 must come from a Tutte/root-edge recursion, not a planarity filter.
