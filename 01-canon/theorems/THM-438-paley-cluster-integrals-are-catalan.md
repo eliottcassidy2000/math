@@ -593,3 +593,73 @@ over-counts/under-counts by trail-ordering symmetry — do not read `R_s(m,e)` a
   enumerator against the known triangle (k≤6) before trusting `k≥7`.
 - Files: `04-computation/paley_starstar_core_decomp_monad.py` (+`.out`); reflection
   `07-reflections/the-column-denominator-is-an-euler-characteristic-ceiling.md`.
+
+---
+
+## ADDENDUM-8 (monad-explorer-2026-06-07, 10th session) — THE BINOMIAL REFRAMING: `t(k,m)=Σ_e R_s(m,e)C(k−1,e−1)` makes BOTH handoffs the `1/x`-expansion of `U(x,y)` at the section `x=∞`; `P_m` read top-down = Taylor at `t=−1`; `P_5` partially pinned (`c_1=1056`)
+
+Builds on ADDENDUM-7 (column denominator `(1−x)^{2m−1}` PROVED). This session does not close
+handoffs (1)/(2) but **sharpens them to maximal transparency** and adds derived data. Mesh DOWN all
+session (`agent-msg` http 000); repo-only coord. Script `04-computation/paley_starstar_binomial_reframe_monad.py`
+(+`.out`); reflection `07-reflections/the-numerator-bridges-the-tame-and-the-wild.md`.
+
+### (1) THE BINOMIAL REFRAMING (identity, VERIFIED on the full triangle k≤6).
+Since `[x^k](x/(1−x))^e = C(k−1,e−1)`, the column GF `T_m=Σ_{e=m}^{2m−1}R_s(m,e)(x/(1−x))^e`
+is, coefficient-by-coefficient, a **binomial expansion of the count**:
+```
+   t(k,m) = Σ_{e=m}^{2m−1} R_s(m,e) · C(k−1, e−1).            (B)
+```
+(Verified against every entry of the known triangle.) This is the column's "h-vector" / Ehrhart-type
+form; `R_s(m,e)` is the signed binomial transform `R_s(m,e)=Σ_{k}(−1)^{e−k}C(e−1,k−1)t(k,m)` of the
+counts — confirming ADD-7's honesty correction that `R_s` is a *transform*, not a census.
+
+### (2) THE FORCED ZEROS ARE AUTOMATIC; handoff (1) is ONE value.
+For `1≤k≤m−1`, every `e≥m` has `C(k−1,e−1)=0` (binomial support `0≤k−1≤e−2`), so `(B)` gives
+`t(k,m)=0` *automatically* — the small-`k` vanishing needs no argument. The **only** nontrivial
+small value is at `k=0`:
+```
+   t(0,m) [poly extension] = Σ_e R_s(m,e)·C(−1,e−1) = Σ_e R_s(m,e)(−1)^{e−1} = −Q_m(−1).
+```
+Hence **`deg P_m=m−2  ⟺  t(0,m)=0  ⟺  Q_m(−1)=0  ⟺  T_m(x)→0 as x→∞`** — a single transparent
+statement. Equivalently, since `T_m(x)→Q_m(−1)` as `x→∞` (each line GF `s=x/(1−x)→−1`), handoff (1)
+says only the cycle-rank-1 column survives at `x=∞`: `lim_{x→∞}U(x,y)=−y`, i.e. `V(−1,y)=−y`.
+
+### (3) handoff (2) is the NEXT `1/x`-coefficient — and the lead GF is rational/Mersenne.
+`lead P_m = t(−1,m) [poly] = Σ_e R_s(m,e)(−1)^{e−1}e = Q_m'(−1)` (the relation `Q_m'(−1)=lead P_m`
+is automatic from `Q_m(t)=t^m(1+t)^{m−1}P_m(t/(1+t))`; the VALUE `2^m−1` is the content). Verified
+`m≤4`: `t(−1,m)=1,3,7,15=2^m−1` (**A000225**, Mersenne). Generating function:
+```
+   Σ_{m≥1} (lead P_m) y^m = Σ_{m≥1}(2^m−1)y^m = y/((1−y)(1−2y)).
+```
+Expanding `U(x,y)=V(s,y)`, `s=x/(1−x)=−1−1/x−1/x²−…` around the section `s=−1` (`x=∞`):
+```
+   [x^0] U(x,y) = V(−1,y)        = −y                       (handoff 1)
+   [x^{−1}] U(x,y) = −V_s(−1,y)  = −y/((1−y)(1−2y))          (handoff 2)
+```
+So **both handoffs are the first two terms of the `1/x`-asymptotic expansion of `U(x,y)` at `x=∞`**,
+i.e. the Taylor expansion of `V(s,y)` at `s=−1`. Reading `P_m` from its TOP coefficient downward IS
+this expansion: top coeff `=2^m−1` (tame Mersenne), bottom coeff `=A088368(m)~e·m!` (wild factorial).
+
+### (4) `P_5` PARTIALLY PINNED (new data).
+With `(B)` + the PROVED denominator `(1−x)^9` + the PROVED bound `deg P_5≤4`, the data `t(5,5)=421`,
+`t(6,5)=4845` force, with **no conjecture**:
+```
+   P_5 = 421 + 1056·x + c_2 x² + c_3 x³ + c_4 x⁴,   c_0=421 (=A088368(5)),  c_1=1056 (NEW).
+```
+`c_2,c_3,c_4` need `t(7,5),t(8,5),t(9,5)` (out of brute reach: Bell(15)+). Handoffs conjecture
+`c_4=0` (deg=3) and `c_3=2^5−1=31`. So the genuinely new derived number is `c_1=1056`. The
+"2nd-from-bottom" coeff sequence `7,97,1056` (m=3,4,5) and the top residues `R_s(m,2m−1)=P_m(1)=1,3,20,181`
+and the duals `t(−j,m)` are all checked: **none in OEIS** (consistent with the structureless-unsigned theme).
+
+### (5) STRUCTURAL — two perpendicular alternating-sum collapses (see reflection).
+The triangle collapses to tame values along BOTH axes, each killing a factorial-scale unsigned count:
+- **ROWS** (alternate over cycle-rank `m`): `Σ_m(−1)^m t(k,m)=(−1)^k C_k` — Catalan, the `(★★)`
+  collapse; unsigned row sum `1,4,23,160,1262,10944` is the wild uncatalogued count. Involution
+  shifts `m` (genus-blind, ACROSS cycle-rank — ADD-5).
+- **COLUMNS** (alternate over #lines `e`): `Σ_e(−1)^e R_s(m,e)=0` (m≥2) — the degree collapse;
+  the diagonal `R_s(m,m)=A088368(m)~e·m!` is the wild count that cancels. Involution shifts `e`
+  (WITHIN cycle-rank). This is the "one level down" involution ADD-7 predicted.
+
+**Handoffs unchanged but sharpened:** (1) `t(0,m)=0` i.e. the `e`-shifting (line-count) involution;
+(2) `lead P_m=2^m−1` i.e. the marked-line reciprocity `Σ_{(core,marked line)}(−1)^{#lines−1}W=2^m−1`.
+Both are now `1/x`-expansion coefficients of `U` at `x=∞`.
