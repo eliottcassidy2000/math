@@ -1,1 +1,5 @@
 C=105 size-4 existence (answers S708b open Q):
+=== C=105 (n=53, m=C/3=35) : silent(H_3) has 131072 cuts (dim 17) ===
+  other single moves H_d, d|C: [5, 7, 15, 21, 35]
+  H_15 co-silent with H_3 at 32 of 131072 cuts => SIZE->=4 classes EXIST. example neg-mags=[4, 5, 6, 11, 12, 13, 18, 19, 20, 21, 25, 26, 27, 28, 32, 33, 34, 39, 40, 41, 46, 47, 48]
+  H_21 co-silent with H_3 at 32 of 131072 cuts => SIZE->=4 classes EXIST. example neg-mags=[3, 4, 8, 9, 13, 14, 18, 19, 20, 23, 24, 25, 28, 29, 30, 33, 34, 38, 39, 43, 44, 48, 49]

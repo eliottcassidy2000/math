@@ -67,6 +67,14 @@ The tower (rigorous for k=2,3,4):
 > attained by **exactly one** class (the full-`V`, all-moves-silent class). Its `2^{k−1}` cuts are
 > the orbit of `silent(H_3)∩silent(H_9)∩…∩silent(H_{3^{k-1}})`.
 
+**Also answers S708b's second open handoff — "does C=105 have rank-2/size-4 classes?"** (their
+joint *local* search found none): **YES.** Systematic enumeration of `silent(H_3)` (131072 cuts)
+finds `H_3` co-silent with `H_15` (32 cuts) and with `H_21` (32 cuts) — size-≥4 classes exist. The
+co-silent partners are exactly the `3∣d` nested chains (`H_15`,`H_21`), NOT the coprime primes
+`H_5`,`H_7` (which give no joint silence, as S708b correctly noted). So the size-4 classes at the
+3-prime modulus are the 3-divisible nesting `H_3⊗H_{15}`, `H_3⊗H_{21}` — the local search simply
+missed the right coset; the affine structure makes them inevitable.
+
 Companion clean pattern across `9∣C` (verified C=27,45,63,81,99): the count of cuts where `H_3`
 and `H_9` are **both** silent is `2^{(C/9+1)/2}` (4,8,16,32,64), i.e.
 `dim(silent(H_3)∩silent(H_9)) = (C/9+1)/2` — a growing affine intersection, the engine of the
