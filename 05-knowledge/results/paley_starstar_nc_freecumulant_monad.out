@@ -1,0 +1,28 @@
+========================================================================
+TRUE genus-0 object: free cumulants of two-point law (NC even-partition sum)
+========================================================================
+
+ free cumulants kappa_{2j} (A=1):
+   kappa_2 =     1   (−1)^(j−1)C_(j−1) =     1  OK
+   kappa_4 =    -1   (−1)^(j−1)C_(j−1) =    -1  OK
+   kappa_6 =     2   (−1)^(j−1)C_(j−1) =     2  OK
+   kappa_8 =    -5   (−1)^(j−1)C_(j−1) =    -5  OK
+   kappa_10 =    14   (−1)^(j−1)C_(j−1) =    14  OK
+   kappa_12 =   -42   (−1)^(j−1)C_(j−1) =   -42  OK
+
+ (★★) as NC-even free cumulant:  S_k = kappa_{2k+2} = (−1)^k C_k
+   k=1: S_k=   -1  target=   -1  OK   #NC-even-part[4]=3
+   k=2: S_k=    2  target=    2  OK   #NC-even-part[6]=12
+   k=3: S_k=   -5  target=   -5  OK   #NC-even-part[8]=55
+   k=4: S_k=   14  target=   14  OK   #NC-even-part[10]=273
+   k=5: S_k=  -42  target=  -42  OK   #NC-even-part[12]=1428
+
+ COMPARISON of gradings (all summing/relating to (−1)^k C_k = −1,2,−5,14,−42):
+   even-series pattern count (A215257):     1, 3, 13, 67, 383   [full lattice, 2k+1 pts]
+   #NC-even partitions of [2k+2]:           (printed above)     [NC lattice, 2k+2 pts]
+   REFUTED laminar / canonical-ribbon sum:  −1, 2, −6, 25, −132 [wrong non-crossing notion]
+========================================================================
+Conclusion: the genus-0 truth lives on NC-even partitions of 2k+2 points, a
+DIFFERENT ground set & lattice from the even-series patterns (2k+1 path pts,
+full lattice).  The proof of (★★) = an explicit bridge between them — NOT the
+laminarity of σ, NOT the walk-ribbon genus, NOT naive first-return (all ruled out).

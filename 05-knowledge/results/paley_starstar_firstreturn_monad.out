@@ -1,0 +1,40 @@
+========================================================================
+(1) S_k = Σ_{even-series} μ   vs   free-cumulant recursion (REC)
+    S_0..S_5 = [1, -1, 2, -5, 14, -42]   (target (−1)^k C_k)
+    k=1: S_k=   -1  −ΣS_iS_j=   -1  (−1)^kC_k=   -1  OK
+    k=2: S_k=    2  −ΣS_iS_j=    2  (−1)^kC_k=    2  OK
+    k=3: S_k=   -5  −ΣS_iS_j=   -5  (−1)^kC_k=   -5  OK
+    k=4: S_k=   14  −ΣS_iS_j=   14  (−1)^kC_k=   14  OK
+    k=5: S_k=  -42  −ΣS_iS_j=  -42  (−1)^kC_k=  -42  OK
+    (REC) holds for k≤5: True.  GF: x F² + F − 1 = 0,  F=(−1+√(1+4x))/(2x).
+
+========================================================================
+(2) FIRST-RETURN decomposition.  Split at first r>0 with block(r)=block(0).
+    i = #edges in first excursion (0..r) / 2 's role ... we grade by
+    (a,b) = (positions in excursion interior structure).  CLEAN = excursion
+    {0..r} and remainder {r..2k} share only vertex block(0).
+    Compare CLEAN sum to the recursion −S_i·S_j.
+
+  k=1:  S_k=-1   CLEAN Σμ=-1   CROSSING Σμ=0
+        clean by first-return r: {2: -1}
+        cross by first-return r: {}
+
+  k=2:  S_k=2   CLEAN Σμ=2   CROSSING Σμ=0
+        clean by first-return r: {2: 2, 4: 0}
+        cross by first-return r: {}
+
+  k=3:  S_k=-5   CLEAN Σμ=-6   CROSSING Σμ=1
+        clean by first-return r: {2: -6, 4: 0, 6: 0}
+        cross by first-return r: {4: 1}
+
+  k=4:  S_k=14   CLEAN Σμ=22   CROSSING Σμ=-8
+        clean by first-return r: {2: 22, 4: 0, 6: 0, 8: 0}
+        cross by first-return r: {4: -6, 6: -2}
+
+  k=5:  S_k=-42   CLEAN Σμ=-94   CROSSING Σμ=52
+        clean by first-return r: {2: -94, 4: 0, 6: 0, 8: 0, 10: 0}
+        cross by first-return r: {4: 35, 6: 12, 8: 5}
+========================================================================
+Reading: if CLEAN Σμ factored as −Σ_{i+j=k−1}S_iS_j the first-return would
+prove (★★) directly.  The CROSSING remainder is the precise obstruction —
+it must cancel (a sign-reversing involution on shared-vertex excursions).

@@ -1,0 +1,37 @@
+========================================================================
+(★★) FATGRAPH genus expansion: Σ over ribbon maps (rotation systems)
+  μ(0̂,σ)=∏(−1)^{|b|−1}(|b|−1)!  expanded over (|b|−1)! rotations/vertex.
+  TEST: Σ_{genus 0} sign = (−1)^k C_k ; higher genus cancels.
+========================================================================
+
+k=1: S_k=-1  target=-1  OK   (total maps=1)
+    genus 0: Σsign=    -1   (#maps=1)
+    >>> genus-min Σ = -1 (at g=0)
+    >>> genus-0   Σ = -1   target=-1   LOCALIZES
+
+k=2: S_k=2  target=2  OK   (total maps=4)
+    genus 0: Σsign=     1   (#maps=3)
+    genus 1: Σsign=     1   (#maps=1)
+    >>> genus-min Σ = 1 (at g=0)
+    >>> genus-0   Σ = 1   target=2   NO
+
+k=3: S_k=-5  target=-5  OK   (total maps=23)
+    genus 0: Σsign=     0   (#maps=12)
+    genus 1: Σsign=    -5   (#maps=11)
+    >>> genus-min Σ = 0 (at g=0)
+    >>> genus-0   Σ = 0   target=-5   NO
+
+k=4: S_k=14  target=14  OK   (total maps=160)
+    genus 0: Σsign=    -3   (#maps=55)
+    genus 1: Σsign=     7   (#maps=95)
+    genus 2: Σsign=    10   (#maps=10)
+    >>> genus-min Σ = -3 (at g=0)
+    >>> genus-0   Σ = -3   target=14   NO
+
+k=5: S_k=-42  target=-42  OK   (total maps=1262)
+    genus 0: Σsign=     7   (#maps=273)
+    genus 1: Σsign=    28   (#maps=748)
+    genus 2: Σsign=   -77   (#maps=241)
+    >>> genus-min Σ = 7 (at g=0)
+    >>> genus-0   Σ = 7   target=-42   NO
+========================================================================
