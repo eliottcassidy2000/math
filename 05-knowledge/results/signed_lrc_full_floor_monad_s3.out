@@ -1,0 +1,16 @@
+inf_S Gstar_full vs 2/(4n-5)  (monad-S3)
+
+=== n=4  predicted 2/(4n-5)=2/11=0.181818 ===
+  B<=12 (  196 sets): inf=2/11=0.181818  MATCH  n*inf=0.7273  min e.g. [(2, 7, 10), (3, 4, 5)]
+  B<=16 (  493 sets): inf=2/11=0.181818  MATCH  n*inf=0.7273  min e.g. [(2, 7, 10), (3, 4, 5)]
+  B<=20 (  997 sets): inf=2/11=0.181818  MATCH  n*inf=0.7273  min e.g. [(2, 7, 10), (3, 4, 5)]
+
+=== n=5  predicted 2/(4n-5)=2/15=0.133333 ===
+  B<=10 (  205 sets): inf=2/15=0.133333  MATCH  n*inf=0.6667  min e.g. [(4, 5, 6, 7)]
+  B<=13 (  699 sets): inf=2/15=0.133333  MATCH  n*inf=0.6667  min e.g. [(4, 5, 6, 7)]
+  B<=16 ( 1745 sets): inf=2/15=0.133333  MATCH  n*inf=0.6667  min e.g. [(4, 5, 6, 7)]
+
+=== n=6  predicted 2/(4n-5)=2/19=0.105263 ===
+  B<= 9 (  126 sets): inf=2/19=0.105263  MATCH  n*inf=0.6316  min e.g. [(3, 5, 7, 8, 9), (5, 6, 7, 8, 9)]
+  B<=11 (  461 sets): inf=3/29=0.103448  LOWER  n*inf=0.6207  min e.g. [(5, 7, 8, 9, 11)]
+  B<=13 ( 1281 sets): inf=3/29=0.103448  LOWER  n*inf=0.6207  min e.g. [(5, 7, 8, 9, 11)]
