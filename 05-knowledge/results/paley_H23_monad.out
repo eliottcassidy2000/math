@@ -1,0 +1,7 @@
+[computing H(T_23) ...]
+H(T_23) = 15760206976379349   [61.7s]
+   |Aut|=253  r(p)=62293308207033
+   factor(r)={3: 1, 167: 1, 4567: 1, 27225299: 1}
+   classes mod3={3: 'ramified', 167: 'inert', 4567: 'split', 27225299: 'inert'}
+   completely split in Q(sqrt-3)? False   smooth(<=100)? False
+   factor(H)={3: 1, 11: 1, 23: 1, 167: 1, 4567: 1, 27225299: 1}

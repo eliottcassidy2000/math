@@ -1,0 +1,15 @@
+[computing H(T_19) via Held-Karp ...]
+[H(T_19) = 1172695746915  in 11.9s]
+[validation vs known: PASS]
+
+=== p=19  (X_0(19) genus 1) ===
+  H(T_19)     = 1172695746915   factor={3: 2, 5: 1, 7: 1, 11: 1, 19: 1, 23: 1, 774463: 1}
+  |Aut(T_19)| = 171
+  ratio r(19) = 6857869865
+  factor r(19) = {5: 1, 7: 1, 11: 1, 23: 1, 774463: 1}
+  prime classes in Q(sqrt-3): {5: 'inert', 7: 'split', 11: 'inert', 23: 'inert', 774463: 'split'}
+  -> completely split in Q(sqrt-3)? False
+  -> smooth (all primes <=100)?    False
+
+=== VERDICT ===
+  p=19: completely-split=False, smooth=False

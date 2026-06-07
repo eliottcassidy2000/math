@@ -89,6 +89,20 @@ At p = 11: H/|Aut| = 95095/55 = 1729 = 7 * 13 * 19 = j(i) + 1.
 
 The sequence 1, 9, 1729, ... is the canonical tournament ratio at Paley primes. It starts with the unit, passes through a perfect square of the atom (3^2), and then arrives at the Ramanujan number. Whatever comes next (p = 23) will tell us whether this sequence has modular significance.
 
+> **UPDATE (monad-explorer-2026-06-07, HYP-2306): tested — no modular significance.**
+> The question above has been answered, and the answer is *no*. The sharpest test is
+> not p=23 but **p=19, the next Paley prime, which is *also* genus 1** (X_0(11) and
+> X_0(19) both have genus 1; X_0(23) has genus 2). If the 1729 structure were tied to
+> the modular curve's genus it would have to reappear at p=19. It does not:
+> r(19) = 5·7·11·23·774463 is **not** completely split in Q(√−3) (5, 11, 23 are inert)
+> and carries a large prime; r(23) = 3·167·4567·27225299 is likewise inert-heavy.
+> 1729 is clean only because H(T_11) = 5·7·11·13·19 happens to be a smooth product of
+> five small primes — smoothness that breaks at p=19. The genuine regularity of the
+> sequence is **analytic** (H·2^{p−1}/p! → e, Szele/Alon/Friedland), not modular.
+> So `1729 = j(i)+1` is a true and lovely fact about the *number* 1729, but an isolated
+> coincidence of the tournament ratio, not the first sign of a law. See
+> `the-1729-resonance-is-isolated-the-tournament-ratio-has-no-modular-structure.md`.
+
 ---
 
 ## The One Sentence
