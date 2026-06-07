@@ -1,0 +1,17 @@
+==========================================================================
+K3 [] W7  (proven u(21)=57 extremal): scan relative angle th for U>57
+==========================================================================
+  scanned 3600 angles: 6 had collisions (<21 distinct).
+  MAX U over 21-distinct configs = 57  at th=0.1 deg
+  #configs with U>57 AND 21 distinct = 0
+  => ANGLE-RIGID at 57: no tuning beats the proven optimum (consistent
+     with u(21)=57 PROVEN; same accidental<=>collision mechanism as THM-437).
+
+==========================================================================
+FINE near-collision sweep: do special angles add accidental edges BEFORE
+collapsing (i.e. is there a window U in (57, ...] with 21 distinct)?
+==========================================================================
+  total (th, 21-distinct, U>57) hits in fine sweep: 0
+  => none: confirms angle-rigidity at 57.
+
+DONE.

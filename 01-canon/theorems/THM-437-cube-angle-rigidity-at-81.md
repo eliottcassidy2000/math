@@ -121,8 +121,29 @@ Cases (A) and (B) show every extra unit distance lives on a locus where some
   exactly the collision condition. Accidental density and point-distinctness are in
   direct conflict for the equilateral cube.
 
+## Corollary (the PROVEN optimum u(21)=57 is angle-rigid too)
+
+The same mechanism governs the **proven-optimal** `u(21) = 57` extremal
+`K₃ □ W₇` (`W₇ =` hub + unit hexagon; THM-431/432, AMP). Scanning the relative
+angle `θ` over `[0,360°)` (3600 steps + a 0.01°-resolution sweep near every degree):
+the only collision angles are the 6 multiples of `60°`, and at *every* other angle
+the realization has **21 distinct points and exactly 57 unit distances — never more**.
+
+This is subtler than the cube: `W₇` has *non-unit* internal pair-vectors (lengths
+`√3` and `2`), so an accidental edge could a priori be `(triangle unit) + R(θ)(√3
+vector)` of total length 1, which needs a `150°` angle between them — achievable at a
+*non-aligned* `θ`. But the `√3` vectors of `W₇` point along `30° + 60°ℤ` (not
+`60°ℤ`), so the `150°` condition reduces to `θ ≡ 0 (mod 60°)` again — the collision
+locus. The `30°` offset of the long Eisenstein diagonals routes every accidental
+edge back to alignment. So `K₃□W₇` is **angle-rigid at 57**, consistent with
+`u(21)=57` being proven optimal, and showing THM-437's "accidental ⟺ collision"
+mechanism is not special to `n=27` — it governs the small Eisenstein-product optima
+generally. (Verification: `04-computation/unit_distance_proven_optimum_rigidity_monad_s6.py`,
+`05-knowledge/results/…_s6.out`: max U = 57 over 21-distinct, 0 configs with U > 57.)
+
 ## Files
 - `04-computation/unit_distance_cube_angle_rigidity_monad_s6.py` (+ `.out`)
+- `04-computation/unit_distance_proven_optimum_rigidity_monad_s6.py` (+ `.out`) — the u(21)=57 corollary
 - `04-computation/unit_distance_augment_cube_monad_s6.py`,
   `04-computation/unit_distance_augment_cube_monad_s6c.py` (landscape: augmentation
   `H(3,3)+1` adds only `+2` ⟹ `u(28) ≥ 83` via this realization; greedy growth
