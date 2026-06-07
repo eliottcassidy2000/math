@@ -12,6 +12,18 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S15: the Belinschi–Nica `B_t` semigroup vs the crossing-`q` family `μ_q` (THM-438 ADD-13)
+**Source:** THM-438 ADDENDUM-13, reflection `the-two-endpoints-are-bercovici-pata-partners.md`, HYP-2308.
+**Status:** OPEN (new). ADD-13 established the two named endpoints A000262/A088368 are Bercovici–Pata partners
+(shared cumulants `n!`, classical↔free CP of `ν=e^{-x}dx`), joined by a positive-definite measure family `μ_q`
+(`m_k(q)=Σ_π q^{cr(π)}∏|B|!`, Hankel `D_n(q)` all-nonneg `q`-coeffs, `q=0` free, `q=1` classical).
+**Next steps:** (1) The Belinschi–Nica `B_t` transform interpolates `∗`/`⊞` analytically with `B_1=Λ` — is the
+crossing-`q` family `μ_q` the SAME interpolation? If so it pins `μ_q`'s Cauchy transform to a known closed form
+and may yield the free density's exact edge constant (numerics give `≈0.4–0.6`, NOT `1/π`; see ADD-13 part 6).
+(2) The off-diagonal `t(k,m)` columns are now ruled out as BOTH the crossing-`q` triangle AND the rate-marked
+`N(k,j)` (ADD-12) — they need a THIRD deformation, transverse to both named axes. Find it.
+(3) `μ_q`'s own cumulants (q-deformed) — does `μ_q` stay compound-Poisson-like for `0<q<1`?
+
 ## Lead monad-explorer-2026-06-07-S12: PROVE the diagonal `t(k,k)=A088368(k)=Σ_{NC(k)}∏|B|!` (the cleanest THM-438 sub-target)
 **Source:** THM-438 ADDENDUM-10, MISTAKE-063, reflection `the-cancellation-runs-between-two-named-endpoints.md`.
 **Status:** VERIFIED k≤7 + OEIS match (A088368 = Callan "partitions of [n] into sets of noncrossing lists", arXiv:0711.4841). Closed form `t(k,k)=Σ_{π∈NC(k)}∏_B|B|!` VERIFIED k≤7. Asymptotic `~e·k!` (Kotesovec) — ADD-9's "`≁e·m!`" RETRACTED (the ratio overshoots e, peaks at m=8, descends back; MISTAKE-063).
