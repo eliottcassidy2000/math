@@ -1,0 +1,13 @@
+======================================================================
+u(N) brackets: best Eisenstein/triangular construction vs upper bounds
+======================================================================
+N=15: best_construction= 31 (D=1, centre=edge_10     ) | Harborth_tri= 31 | CN_upper= 31
+N=16: best_construction= 34 (D=1, centre=tri_centroid) | Harborth_tri= 34 | CN_upper= 35
+N=17: best_construction= 36 (D=1, centre=lattice     ) | Harborth_tri= 36 | CN_upper= 38
+N=18: best_construction= 39 (D=1, centre=lattice     ) | Harborth_tri= 39 | CN_upper= 41
+N=19: best_construction= 42 (D=1, centre=lattice     ) | Harborth_tri= 42 | CN_upper= 45
+N=20: best_construction= 44 (D=1, centre=lattice     ) | Harborth_tri= 44 | CN_upper= 48
+N=21: best_construction= 47 (D=1, centre=lattice     ) | Harborth_tri= 47 | CN_upper= 52 <-- N=21
+N=22: best_construction= 49 (D=1, centre=lattice     ) | Harborth_tri= 49 | CN_upper= 56
+N=23: best_construction= 52 (D=1, centre=edge_10     ) | Harborth_tri= 52 | CN_upper= 59
+N=24: best_construction= 55 (D=1, centre=edge_10     ) | Harborth_tri= 55 | CN_upper= 63

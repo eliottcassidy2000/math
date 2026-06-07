@@ -1,0 +1,27 @@
+==============================================================================
+u(N): proven value vs elementary bounds.  [AMP24 = Alexeev-Mixon-Parshall 2024]
+==============================================================================
+  N  tri(Harborth)    u(N) PROVEN  cherry-upper  gap(u-tri)  gap(cherry-u)
+ 15             31             37            43          6            6
+ 16             34             41            48          7            7
+ 17             36             43            52          7            9
+ 18             39             46            57          7           11
+ 19             42             50            61          8           11
+ 20             44             54            66         10           12
+ 21             47             57            71         10           14  <== N=21 (SETTLED: u=57)
+ 22             49        [60,61]            77     11..12       16..17
+ 23             52        [64,66]            82     12..14       16..18
+ 24             55        [68,72]            87     13..17       15..19
+
+Key: triangular lattice gives 47 at N=21; the PROVEN maximum is 57 (gap 10).
+     => triangular/Eisenstein single-norm lattice is NOT optimal at N=21.
+     The elementary cherry bound (71) is far above 57: AMP24 needed heavy
+     forbidden-subgraph + embedding machinery to close it.
+
+==============================================================================
+INDEPENDENT numerical witness (relaxation, FLOAT) on N=21 points:
+  best near-unit pair count over random restarts (tol 0.01 / 0.003)
+==============================================================================
+  best over 40 restarts: 1 pairs at tol 0.01 (tight 1 at 0.003), seed 3
+  triangular lattice gives 47; proven max u(21)=57.
+  (relaxation is a heuristic witness, NOT an exact construction.)
