@@ -1,0 +1,55 @@
+==================================================================================
+S712 — unit-distance certificate anatomy n<=21 via products; the n=22 obstruction
+==================================================================================
+(A) PRODUCT/MINKOWSKI LOWER BOUND  u(ab) >= u(a)*b + a*u(b)  vs the true u(n)
+    n  : u(n)  u_prod  gap   best factorization
+     4 :   5     4    +1   2x2
+     5 :   7   (prime)   -   indecomposable
+     6 :   9     9    +0   2x3  <== PRODUCT-OPTIMAL
+     7 :  12   (prime)   -   indecomposable
+     8 :  14    14    +0   2x4  <== PRODUCT-OPTIMAL
+     9 :  18    18    +0   3x3  <== PRODUCT-OPTIMAL
+    10 :  20    19    +1   2x5
+    11 :  23   (prime)   -   indecomposable
+    12 :  27    27    +0   3x4  <== PRODUCT-OPTIMAL
+    13 :  30   (prime)   -   indecomposable
+    14 :  33    31    +2   2x7
+    15 :  37    36    +1   3x5
+    16 :  41    40    +1   4x4
+    17 :  43   (prime)   -   indecomposable
+    18 :  46    45    +1   2x9
+    19 :  50   (prime)   -   indecomposable
+    20 :  54    53    +1   4x5
+    21 :  57    57    +0   3x7  <== PRODUCT-OPTIMAL
+    22 : [60,61]  57   >= +3  2x11  <== ONLY 2x11; product caps at 57 << known LB 60
+  product-optimal composites (gap 0): [6, 8, 9, 12, 21]
+  Reading: the product reaches the optimum exactly when n has a STRONG small factor
+  (3=K3/triangle, the densest piece). 22=2.11 is forced to K2-doubling (weak) times an
+  indecomposable prime 11 => its optimum CANNOT be a 2-factor Minkowski sum (those cap at 57).
+
+(B) K3 [] W7 as a generic-angle Minkowski sum (the proven u(21)=57 extremal)
+  vertices 21 (coincident pairs 0), edges 57  (target 21 / 57)
+  degree sequence [5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 5, 8, 8, 8]
+  degree multiset {5: 18, 8: 3}   (expect 5x18, 8x3)
+  triangles 25, K_2,3 copies 0  (expect K_2,3-free)
+  MATCHES S711 anatomy => the extremal IS the product K3 [] W7.
+
+(C) EXTENSION SEARCH toward u(22): max vertices on a common unit circle in K3 [] W7
+    (= max degree of a 22nd extension vertex; degree 4 anywhere => u(22)>=61)
+  swept 2000 angles in (0, pi/3) (192 degenerate skipped)
+  21-core edge-count histogram across angles: {57: 1808}  (57=generic)
+  max-extension-degree histogram: {2: 1808}
+  GLOBAL max extension degree (non-degenerate angles): 2  (at theta=0.05053)
+  => K3 [] W7 cores admit at most a degree-2 extension.
+  EXPLICIT 22-vertex certificate at theta=0.05053: 22 points, 59 unit edges, 0 coincidences
+     => u(22) >= 59 verified by construction (edges=59).
+  No degree-4 single-vertex extension of K3 [] W7 found in 2000 angles => reaching 61
+  is NOT a one-vertex extension of the product 21-extremal; it needs a 56-edge sibling
+  core or a genuinely non-product (Moser-lattice / Engel) configuration.
+
+(D) EXTENSION SEARCH on the ACTUAL stored AMP extremal certificate (u21_core1_coords.txt)
+  loaded 21 pts, 57 unit edges (AMP 'core 1').
+  max single-vertex extension degree on this exact certificate: 2  => 57+2=59
+  same conclusion as the reconstructed family: the maximum 21-graph does NOT extend to 61
+  (nor to 60) by a single vertex; the record u(22)>=60 is non-product-extendable.
+==================================================================================
