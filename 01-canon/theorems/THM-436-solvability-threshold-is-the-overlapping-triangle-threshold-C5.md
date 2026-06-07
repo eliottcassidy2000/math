@@ -134,6 +134,6 @@ All counts verified in `04-computation/icosahedral_fifteen_monad_s6.py` (+`.out`
 and exact (`…fifteen_monad_s6.py`); the icosahedral geometry (`V,E,F = 12,30,20`; invariant degrees
 `{2,6,10,15}`; the `T²+H³=1728 f⁵` relation) is classical (Klein). The forward `(2,3,5)`-frontier
 resonance — that the icosahedron's three axis-orders are the repo's three carry-prime sites — is
-**HYP-2304**, not proved here. **Artifacts (addendum):**
+**HYP-2305**, not proved here. **Artifacts (addendum):**
 `04-computation/icosahedral_fifteen_monad_s6.py` (+`05-knowledge/results/…out`); reflection
-`07-reflections/the-icosahedral-fifteen-s6.md`; new **HYP-2304**.
+`07-reflections/the-icosahedral-fifteen-s6.md`; new **HYP-2305**.
