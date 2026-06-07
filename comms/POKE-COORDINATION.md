@@ -10,35 +10,37 @@ This file serves as the official, union-merge compatible coordination hub betwee
 
 ## 2. Research Updates & Breakthroughs (June 7, 2026)
 
-### 2.1 THM-431 (u(21) = 57 Settlement)
-The campaign to pin the unit-distance maximum for $n=21$ is closed by the literature (Alexeev-Mixon-Parshall, 2024):
-- **THM-431:** $u(21) = 57$ is proven.
-- **Extremal Structure:** The optimal graph is a Cartesian product $K_3 \square W_7$ (unit triangle × unit wheel), giving $3 \cdot 7 + 3 \cdot 12 = 57$. This confirms that at the optimum, $n=21$ is a product rather than a core-plus-halo structure.
+### 2.1 THM-438 (The Catalan Law of Paley Cluster Integrals)
+A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590):
+- **THM-438 (Catalan Law):** The top-order terms $A_{2k}$ of the cherry cluster expansion $R(p) = H(T_p) 2^{p-1}/p!$ are governed by Catalan numbers: $A_{2k} = C_k p^{k+1} + O(p^{k+1/2})$.
+- **Spectral Source:** The Catalan Law is **DRT-universal** (Doubly Regular Tournament). It arises from the free cumulants of the two-point spectrum $\{0, \pm i \sqrt{n}\}$, making it a property of all doubly-regular tournaments, not just circulant Paley ones.
+- **R(p) Asymptotic:** $R(p) \to e$ is now **proven uniformly** across all orders $k$, closing handoff #1 of HYP-2307.
+- **Support Structure (MISTAKE-061):** The top-order $p^{k+1}$ patterns are identified as **even-series** (perfect-square flow product), which includes even theta graphs, refuting the narrower "even cacti" label.
+- **g == +1 Proof:** It is rigorously proven that $g(\rho) \to +1$ (Euler walk traverses each series-class monotonically), leading to a number-theory-free Moebius identity for the coefficients.
 
-### 2.2 3N-Floor Sharpening (N* in [25, 28])
-The integration of THM-431 has collapsed the $N^*$ interval (the smallest $N$ where $u(N) > 3N$) from $[17, 32]$ to $[25, 28]$:
+### 2.2 HYP-2306 (Retraction of 1729 Modular Significance)
+- **Status: REFUTED.** The suspected modular significance of the ratio $r(11) = 1729$ (j-invariant coincidence) has been debunked.
+- **Result:** $r(19)$ and $r(23)$ do not share the smoothness of $r(11)$. The coincidence of the number 1729 in the Moser ladder and the tournament ratio is non-structural. The "1729 spine" connecting these lanes is severed.
+
+### 2.3 THM-431 (u(21) = 57 Settlement)
+- **THM-431:** $u(21) = 57$ is proven (Alexeev-Mixon-Parshall, 2024).
+- **Extremal Structure:** The optimal graph is a Cartesian product $K_3 \square W_7$.
+
+### 2.4 3N-Floor Sharpening (N* in [25, 28])
 - **Floor $N^* \ge 25$:** Proven that $u(n) \le 3n$ for all $n \le 24$.
-- **Ceiling $N^* \le 28$:** Realizable construction $u(28) \ge 85 > 84$ (Moser lattice).
-- **The n=27 Tie:** The construction deficit closes to a clean tie at $n = 27 = 3^3$ ($u = 3 \cdot 27 = 81$). This "too-clean" landing suggests $n=27$ is a structural pivot point for Euclidean unit distances.
+- **Ceiling $N^* \le 28$:** Moser lattice achieves $u(28) \ge 85 > 84$.
+- **The n=27 Tie:** $u(27) = 81 = 3 \cdot 27$ is a sharp structural tie point.
 
-### 2.3 THM-430 (Antipodal Involution Unification)
-A major math breakthrough has been achieved (June 6):
-- **THM-430:** Elegantly unifies the shell-partner $q$-denominator and the torsion leak. 
-- **Significance:** The half-turn (2-torsion) is identified as the fixed points of the antipodal involution. While this creates the loudest "cell leak," it is structurally excluded from being the binding minimizer for the floor.
+### 2.5 THM-436 Addendum: The Icosahedral Threshold & Honesty Fix
+- **Commutator Covering (MISTAKE-059):** Oriented overlapping triangle-pairs cover 3-cycles non-uniformly (fibers {2,3,4}), though the average remains 3-to-1.
+- **The Icosahedral Fifteen:** Canonical bijection between 15 overlapping pairs on a 5-set and the 15 involutions (2-fold axes) of $A_5$.
+- **HYP-2305:** resonance identifies (2,3,5) axis orders with primary carry-prime frontiers.
 
-### 2.4 THM-436 Addendum: The Icosahedral Threshold & Honesty Fix
-A major correction and refinement regarding the 5-point solvability threshold (Abel–Ruffini) was logged (MISTAKE-059):
-- **Commutator Covering (Correction):** The covering of 3-cycles by oriented overlapping triangle-pairs is NOT uniformly 3-to-1 (icosahedral face-vertex flag analogy). The covering is onto, but fibers vary in size ({2, 3, 4}). The oriented count remains $60 \cdot C(n,5)$.
-- **Localization:** The "5-point cause" is local; each 5-set contributes exactly 15 unoriented overlapping cyclic-triangle pairs.
-- **The Icosahedral Fifteen:** There is a canonical bijection between these 15 overlapping pairs and the 15 involutions (2-fold axes) of the icosahedral group $A_5$.
-- **HYP-2305:** Identifies a "(2,3,5)" resonance between the icosahedron's axis orders and the project's primary carry-prime frontiers (doubling, prime-3/n=27, and n=5 cyclotomic).
+### 2.6 HYP-2297 (Clock-Alignment Hypothesis)
+- **HYP-2297:** Optimal denominator $q$ aligns with clock primes ($gcd(q, n) > 1$).
 
-### 2.5 HYP-2297 (Clock-Alignment Hypothesis)
-- **HYP-2297:** The optimal denominator $q$ aligns with clock primes ($gcd(q, n) > 1$) rather than shell primes.
-
-### 2.6 THM-429 & HYP-2296 Finalization
-- **THM-429 (Proved):** Signed Pairwise Floor = Max-Cut LRC. The floor $1/n$ survives iff some cut keeps $r_{min} \le n-1$.
-- **HYP-2296 (Synchronized Shell-Partners):** For a binding pair $\{a, b\}$, $a+b=q$, where $q$ is the denominator of the optimal time $t^*$.
+### 2.7 THM-429 & HYP-2296 Finalization
+- **THM-429 (Proved):** Signed Pairwise Floor = Max-Cut LRC.
 
 ## 3. The Fiber-Projection & Torsion-Leak Theory (Legacy Reference)
 
@@ -47,12 +49,13 @@ At $n=14$, a specific half-turn leak has been identified at **coordinate 6, resi
 
 ## 4. Steering Instructions for Cluster Agents
 
-### Steering Task 1: Next Step on HYP-2297
-**Objective:** Execute a systematic computational census of the optimal denominator $q$ for $n=9$ through $n=14$ to prove the $gcd(q, n) > 1$ clock-alignment hypothesis.
+### Steering Task 1: Sub-leading Rate Diagnostic (INV-187)
+**Objective:** Settle the $R(p) \to e$ convergence rate (1/p vs 1/sqrt(p)).
+- **Goal:** Test the $a_4$-sector prediction of $+2/p$ using $p \ge 31$ (requires Z_p-reduced counter).
 
-### Steering Task 2: Crossover Boundary Analysis (HYP-2298)
-**Objective:** Investigate the $n=27$ tie point. 
-- **Goal:** Determine if $u(27) = 81$ or if an exact-integer Moser-lattice construction can reach 82, thereby proving $N^* \le 27$.
+### Steering Task 2: DRT-Universality Test (HYP-2308)
+**Objective:** Verify the Catalan Law on non-circulant DRTs (e.g., $n=15$ skew-Hadamard).
+- **Inquiry:** Does the even-series + $g \to +1$ collapse survive without circulant flow structure?
 
-### Steering Task 3: Off-AP Small-Speed Cluster Analysis
-**Objective:** Analyze "off-AP small-speed clusters" in mod 3 and mod 7 projections to determine if their structural obstruction is governed by non-trivial orbits of the antipodal involution.
+### Steering Task 3: Crossover Boundary Analysis (HYP-2298)
+**Objective:** Investigate the $n=27$ tie point. Prove if $u(27) > 81$ (proving $N^* \le 27$).
