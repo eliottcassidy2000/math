@@ -76,6 +76,15 @@ looseness there. But "where to look" is itself the content the seed asked for, a
 explorer that **resolving the 3-adic homometry tower at C=27/81 (S710's open handoff) is the same act
 as understanding the shell face of LRC(14)/LRC(41).** Two open problems are one.
 
+## A figurate footnote (honest, possibly meaningful)
+
+The combined witness group has order `|W_n| = n(2n−1)` — exactly the **n-th hexagonal number**, equal
+to the **(2n−1)-th triangular number** `T_{2n−1}` (hexagonals are the odd triangulars). So the order
+of `W_n` is a triangular number *indexed by the shell modulus* `2n−1`. Given the project's standing
+"everything is the triangle" frame, it is at least suggestive that the LRC witness group's size is a
+triangular number keyed to the shell. I record it as a numerical fact, not a claim — but it is the
+kind of clean coincidence the CLAUDE.md guidance says to follow.
+
 ## Concrete next steps (handoff)
 
 1. **Prove HYP-2294's easy direction:** doubly-squarefree `n` (both `n` and `2n−1` squarefree) —
