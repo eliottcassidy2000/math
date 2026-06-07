@@ -1,0 +1,11 @@
+============================================================
+NEGATIVE: non-crossing index-partition does NOT localize (★★)
+ k  S_noncrossing  S_crossing   (-1)^kC_k   nc==target
+ 1            -1           0          -1     True
+ 2             2           0           2     True
+ 3            -6           1          -5     False
+ 4            25         -11          14     False
+ 5          -132          90         -42     False
+============================================================
+=> the correct 'genus 0' is the ribbon genus of the walk-induced Euler map on G_σ,
+   NOT the laminarity of σ.  (Recorded so the next explorer does not retry this.)

@@ -1,0 +1,12 @@
+================================================================
+DRT engine:  M 1 = 0   and   M^2 = J - p I   (number-theory-free downstream)
+  p= 3: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=2=p-1:True)
+  p= 7: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=6=p-1:True)
+  p=11: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=10=p-1:True)
+  p=19: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=18=p-1:True)
+  p=23: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=22=p-1:True)
+  p=31: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=30=p-1:True)
+  p=43: M1=0:True  M^2=J-pI:True  M^4=-pM^2:True  |nonzero eig|=sqrt(p):True  (#nz=42=p-1:True)
+================================================================
+All True  =>  M^2 = J - pI is the sole analytic input; it is the DRT identity,
+so c_0 = lim A_{2k}/p^{k+1} is DRT-universal at the level of every merged 2-step.
