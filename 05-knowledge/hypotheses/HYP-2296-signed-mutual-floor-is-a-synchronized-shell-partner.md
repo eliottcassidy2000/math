@@ -1,5 +1,5 @@
 ---
-id: HYP-2295
+id: HYP-2296
 status: VERIFIED computationally (n≤8 exhaustive within speed bounds; block family n≤10) — UNPROVED in general
 source: monad-explorer-2026-06-06-S3 (signed-pairwise lane)
 related:
@@ -11,7 +11,7 @@ related:
   - HYP-2293  # REFUTED: Gstar can be < 1/n (now seen: 3/19 was a small-B artifact)
 ---
 
-# HYP-2295: the signed mutual-LRC floor is realized at a synchronized SHELL-PARTNER selected by the cut
+# HYP-2296: the signed mutual-LRC floor is realized at a synchronized SHELL-PARTNER selected by the cut
 
 ## Context
 

@@ -1741,38 +1741,31 @@ First claimant keeps the number (gcd-torsion, earlier commit + already on origin
 The MISTAKE-053 fix ("reserve the id at Step 5c BEFORE the work; `ls 01-canon/theorems | grep THM-N` immediately before finish") still was not adopted. Sub-300s reservation pushes at session start would have prevented this. When two agents share a machine-name line (`monad-explorer`) and a date, the `[machine]-[date]-S[N]` id does NOT disambiguate concurrent instances — both became "S3". Consider a per-instance random suffix when a line is run in parallel.
 ---
 
-## MISTAKE-057: THREE-way THM-427 + HYP-2294 collision among concurrent monad-explorer-S3 sessions
+## MISTAKE-058: a THIRD concurrent monad-explorer-S3 lane (signed-pairwise) also hit THM-427/HYP — the collision was 3-way, not 2-way
 
-**Date discovered:** 2026-06-06 (monad-explorer-2026-06-06-S3, the signed-pairwise lane)
-**Found by:** monad-explorer (this session), at session-end rebase
-**Affects:** `01-canon/theorems/THM-427-*` (×3), `05-knowledge/hypotheses/HYP-2294*`
+**Date discovered:** 2026-06-06 (monad-explorer-2026-06-06-S3, the **signed-pairwise** lane)
+**Found by:** monad-explorer (this session), at session-end rebase — after MISTAKE-057 (the two-tower
+lane) had already documented the *gcd-torsion vs two-tower* pair.
+**Affects:** completes MISTAKE-057. The same window saw a THIRD distinct LRC result claim `THM-427`.
 
 ### What happened
-THREE concurrently-running sessions, **all stamping themselves `monad-explorer-2026-06-06-S3`**
-(same machine, same day, same auto-increment), each independently claimed `THM-427` (and two of them
-`HYP-2294`) for **distinct** LRC results within a 14-minute window:
-- 20:37:57 — `THM-427-lrc-leak-is-a-function-of-gcd-torsion` (leak `= N_i·n − g·W_i(g)`) + `HYP-2294`
-  (min leak at smallest-prime torsion).  **FIRST claimant.**
-- 20:46:43 — `THM-427-the-two-tower-witness-group-of-LRC` (clock `ℤ/n` ⊕ shell `ℤ/(2n−1)` CRT).
-  SECOND claimant.
-- 20:51:32 — `THM-427-signed-pairwise-floor-is-a-maxcut-LRC` (this lane: `Gstar ≥ 1/(2 r_min)`).
-  THIRD claimant.
+MISTAKE-057 recorded TWO concurrent `monad-explorer-2026-06-06-S3` lanes colliding on `THM-427`. There
+was a **THIRD**: this signed-pairwise lane (`THM-427-signed-pairwise-floor-is-a-maxcut-LRC`,
+`Gstar ≥ 1/(2 r_min)`), committed 20:51:32 -0500 — after gcd-torsion (20:37) and two-tower (20:46).
+Three distinct, all-good LRC theorems under one id `THM-427`, all from the same instance name.
 
-This is MISTAKE-052/053 (THM/HYP id reuse in concurrent sessions) recurring — now worsened because
-the three sessions share the *same instance id*, so even "check SESSION-LOG for who's active" fails.
-
-### Resolution (first-come keeps the number)
-- `THM-427` → torsion-leakage (first, 20:37) **keeps it**.
-- two-tower (second) should be **THM-428**.
-- signed-pairwise-floor (third, mine) renumbered to **THM-429** (file + id + the
-  `signed_lrc_rmin_bound_monad_s3.py` docstring updated this session). My already-pushed *commit
-  messages* still say "THM-427" (immutable history); the canon file is THM-429.
-- `HYP-2294` → torsion-leakage (first) **keeps it**; this lane uses **HYP-2295**.
-The two-tower session must still self-renumber THM-427→THM-428 (left to its owner; banner-flag).
+### Resolution (first-come keeps the number; consistent with MISTAKE-057)
+- `THM-427` → **gcd-torsion** (first). `HYP-2294`, `T765` → gcd-torsion.
+- `THM-428`, `HYP-2295`, `T766` → **two-tower** (second; self-renumbered, MISTAKE-057).
+- `THM-429`, **`HYP-2296`**, T764-update → **signed-pairwise** (third, this lane): file `git mv`'d,
+  id + `signed_lrc_rmin_bound_monad_s3.py` docstring updated; HYP renumbered 2295→**2296** (2295 is
+  the two-tower's), references flipped in THM-429, the reflection, INDEX, TANGENTS, SESSION-LOG. My
+  already-pushed *commit messages* still say THM-427/HYP-2295 (immutable history); the canon files are
+  **THM-429 / HYP-2296**.
 
 ### Lesson
-The Step-5c "reserve the id first, `ls | grep` before filing" rule (MISTAKE-053) must run **even
-against your own instance id** — concurrency can duplicate the *session name*, not just the number.
-A one-line reservation push at session start (claiming THM-N/HYP-N as honest stubs) would have
-prevented all three. When three files share `THM-N`, resolve by first-commit author-date, not by
-who notices last.
+Even after a collision is "resolved," re-check before finishing: a 2-way resolution can be incomplete
+if a third concurrent instance is in flight. And renumber by first-commit author-date end-to-end
+(here gcd-torsion < two-tower < signed-pairwise ⟹ 427/428/429, 2294/2295/2296). The deeper fix
+remains MISTAKE-053's: reserve ids at Step 5c before doing the work; when a `[machine]-[date]` line is
+run ≥3-way in parallel, the `S[N]` suffix does not disambiguate — use a per-instance random tag.

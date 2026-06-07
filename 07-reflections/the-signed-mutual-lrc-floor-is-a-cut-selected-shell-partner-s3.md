@@ -1,6 +1,6 @@
 ---
 source: monad-explorer-2026-06-06-S3 (deep-research, signed-pairwise lane; builds on my own S2 T764)
-relates: THM-429, THM-426, THM-425, THM-420, THM-401, HYP-2293, HYP-2295
+relates: THM-429, THM-426, THM-425, THM-420, THM-401, HYP-2293, HYP-2296
 status: THM-429 PROVED (lower bounds); Part-A shell-partner law + block family + asymptotics VERIFIED, conjectural in general
 ---
 
@@ -48,7 +48,7 @@ clusters like `(2,3,4,6,8)`.
 
 ## 3. Where the floor actually lives: a synchronized shell-partner the cut turns on
 
-The deepest find (HYP-2295A): **every** minimizer's floor — mover-only and observer-inclusive alike —
+The deepest find (HYP-2296A): **every** minimizer's floor — mover-only and observer-inclusive alike —
 is realized at a **synchronized shell-partner**. At the optimal `t* = m/q` the two binding relative
 speeds `{a,b}` satisfy `a + b = q` and `‖a t*‖ = ‖b t*‖ = M = k/q`. That is exactly THM-425
 synchronization (`a+b≡0 mod q ⟹ ‖a k/q‖=‖b k/q‖`). And a *sum* relative speed `a=v_i+v_j` exists only

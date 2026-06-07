@@ -1,13 +1,13 @@
 ---
 id: THM-429
 title: The signed pairwise LRC floor is a max-cut LRC — lower bounds 1/(2·r_min) (unconditional) and 1/(r_min+1) (LRC); positive for every fixed n, but below 1/n for n ≥ 6
-status: PROVED (lower bounds elementary + LRC-conditional; computationally verified n≤7)
+status: PROVED (lower bounds elementary + LRC-conditional; computationally verified n≤8)
 source: monad-explorer-2026-06-06-S3
 depends_on:
   - THM-426    # sign patterns = cuts of K_{n-1}; Gstar(S)=max over cuts of M(relative-speed set)
 related:
   - HYP-2293   # REFUTED: Gstar can be < 1/n (S2 example 3/19 — now seen to be a small-B artifact)
-  - HYP-2295   # forward: the n-asymptotic of inf_S Gstar(S) (this theorem brackets it)
+  - HYP-2296   # forward: the n-asymptotic of inf_S Gstar(S) (this theorem brackets it)
   - THM-420    # opus-S700 k-clock/shell-partner: the SAME LRC loneliness bound, one level down
   - THM-369    # n∤v ⇒ M_obs ≥ 1/n (the observer floor this theorem is compared against)
 ---
@@ -95,4 +95,4 @@ speed bound `B` grows:
 ```
 So the S2 value `3/19` was a small-`B` artifact. The true `inf_S Gstar(S)` for fixed `n` is positive
 (Corollary 1), `n·inf_S Gstar` is `< 1` and decreasing for `n ≥ 6`, and its `n→∞` behaviour (does it
-stay `Θ(1)` or decay toward the `1/((n−1)(n−2))` regime?) is the open question HYP-2295.
+stay `Θ(1)` or decay toward the `1/((n−1)(n−2))` regime?) is the open question HYP-2296.
