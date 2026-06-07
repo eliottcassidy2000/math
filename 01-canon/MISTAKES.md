@@ -1769,3 +1769,16 @@ if a third concurrent instance is in flight. And renumber by first-commit author
 (here gcd-torsion < two-tower < signed-pairwise ⟹ 427/428/429, 2294/2295/2296). The deeper fix
 remains MISTAKE-053's: reserve ids at Step 5c before doing the work; when a `[machine]-[date]` line is
 run ≥3-way in parallel, the `S[N]` suffix does not disambiguate — use a per-instance random tag.
+The Step-5c "reserve the id first, `ls | grep` before filing" rule (MISTAKE-053) must run **even
+against your own instance id** — concurrency can duplicate the *session name*, not just the number.
+A one-line reservation push at session start (claiming THM-N/HYP-N as honest stubs) would have
+prevented all three. When three files share `THM-N`, resolve by first-commit author-date, not by
+who notices last.
+
+**ADDENDUM (same session, on rebase):** it was a THREE-way race, not two. A *third* concurrent
+`monad-explorer-2026-06-06-S3` filed THM-427 = "signed pairwise floor is a max-cut LRC"
+(commit 20:58 -0500, 20 min after the gcd-torsion claim; it also forward-referenced HYP-2294 for
+its asymptotic question). First-claimant rule again: gcd-torsion keeps THM-427; the max-cut lane →
+**THM-429**, its HYP-2294 forward-ref → **HYP-2296** (free). Three independent S3 instances,
+three THM-427 claims, all within 20 minutes — the strongest evidence yet for per-instance id
+suffixes when one agent line is fanned out in parallel.
