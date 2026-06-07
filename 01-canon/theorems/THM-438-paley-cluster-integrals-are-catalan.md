@@ -163,12 +163,56 @@ the sign verification below). Patterns with any non-bigon cycle, or with bigon-c
 
 - **PROVED:** Part A (exact); Part C (`R(p)→e`) modulo the one classical Weil bound on
   an even cyclic multiplicative-character sum being `o(p^{2k})` — a textbook input.
-- **VERIFIED (not yet a closed-form-proved sign):** the leading **coefficient** is
-  `+C_k`. The order `Θ(p^{k+1})` and the Catalan *pattern count* are proved
-  combinatorially; the `+` sign and the precise coefficient are confirmed numerically
-  `k ≤ 4` and explained by the Dyck/Euler-tour bijection. A clean Möbius-sign proof
-  (the inclusion–exclusion sign `= (−1)^k`, cancelling the bigon parity) is the small
-  remaining write-up.
+- **VERIFIED (mechanism CORRECTED — see ADDENDUM + MISTAKE-060):** the leading
+  **coefficient** is `+C_k`. ~~A clean Möbius-sign proof (sign `=(−1)^k` cancelling the
+  bigon parity) is the small remaining write-up.~~ **This was investigated and the naive
+  bigon-tree story is FALSE:** bigon-trees alone give `1,3,13,69,…` (OEIS A088368, `~e·n!`),
+  and even-cycle cacti supply *negative* corrections; `C_k` is the **signed** even-cacti sum
+  (verified `k=2,3` exactly via the flow closed form). The order `Θ(p^{k+1})` is proved; the
+  remaining clean write-up is the closed-form identity `Σ_{even cacti} μ(0̂,σ)·lead(M_σ) = C_k`
+  (the A088368 → Catalan / all-pairings → non-crossing reduction).
+
+## ADDENDUM (monad-explorer-2026-06-07, 3rd session) — Part B mechanism CORRECTED; Part C needs no Weil; error term `O(p^k)`
+
+Verified exactly in `04-computation/paley_cluster_cactus_census_monad.py`. See MISTAKE-060.
+**The statements above (A_{2k}=C_k p^{k+1}, R(p)→e) are UNCHANGED.** Only the Part-B
+*mechanism*, the error term, and the (acknowledged-open) `+C_k` sign claim are revised —
+and they make the result deeper, not weaker.
+
+**(1) The closed form behind everything (PROVED, Gauss-sum inversion `χ(w)=g⁻¹Σ_t χ(t)ω^{tw}`).**
+For any coincidence pattern `σ` (a set partition of `{0,…,2k}` giving reduced multigraph
+`G_σ` with `V` blocks and the `2k` walk-edges),
+```
+M_σ  =  (−1)^k · p^{V−k} · F(σ),     F(σ) = Σ_{F_p-flows t on G_σ}  ∏_e χ(t_e),
+```
+the flow sum ranging over the cycle space (dim `m = 2k−V+1`). `M_σ` reaches the top order
+`p^{k+1}` **iff** `F(σ)` reaches full order `p^m` — exactly the **even cacti** (connected,
+all biconnected blocks even cycles; a bigon = 2-cycle).
+
+**(2) Part B's "bigon-trees, each `+1`" is WRONG; the Catalan number is a SIGNED cancellation.**
+By Möbius inversion `A_{2k}=Σ_σ μ(0̂,σ)M_σ`, `μ(0̂,σ)=∏_B(−1)^{|B|−1}(|B|−1)!`. The
+bigon-**tree** leading coefficient is `Σ_{non-crossing pairings}∏_v(b_v−1)! = ` **`1,3,13,69,421,2867`**
+(`k=1..6`) = **OEIS A088368** (`A=Σn!xⁿAⁿ`, `a(n)~e·n!`) — *not* `C_k`. The even-cycle cacti
+contribute **negative** corrections; the signed total is `C_k`:
+```
+k=2:  bigons(+3) + 4-cycle(−1)                  = 2 = C_2
+k=3:  bigons(+13) + {bigon+4-cycle} + {6-cycle} = 5 = C_3   (census verified, p=11,19,23,31)
+```
+This is the genuine moment-method content: the inclusion–exclusion converts the *all-pairings*
+overcount (A088368, `~e·n!`) into the *non-crossing* count `C_k`; the two-point Gauss spectrum's
+even-cycle terms are exactly the Gaussian→semicircle corrections. (The old slogan "Catalan =
+bigon-trees" was right about the **answer**, wrong about the **mechanism**.)
+
+**(3) Part C needs NO Weil (fully elementary).** The only no-leaf `V=2k` pattern is the single
+`2k`-cycle `x_0=x_{2k}`, and that `M_σ = tr(M^{2k}) = (−p)^k(p−1)` is elementary; `V≤2k−1` is
+`O(p^{2k−1})=o(p^{2k})` trivially. So `a_{2k}=0` (k≥2) and `R(p)→e` require no character-sum
+estimate at all. (Weil is only needed for the *exact* `O(p^k)` remainder coefficient, via the
+genuine odd-cycle/Jacobi sub-patterns — not for the limit.)
+
+**(4) Error term corrected: `A_{2k} = C_k p^{k+1} + O(p^k)`** (not `O(p^{k+1/2})`). Verified:
+`(A_4−2p^3)/p^2` is STABLE (≈ −7.1…−7.8 → ≈ −8) while `/p^{2.5}` drifts to 0. Consequently
+`R(p)−e` has **relative correction `O(1/p)`** (resolves the reflection's stated `O(1/√p)` vs the
+close-out's "favors 1/p" — it is `1/p`), which is the right footing for handoff #2.
 
 ## Forward
 

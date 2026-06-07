@@ -1,0 +1,37 @@
+======================================================================
+(0) VERIFY  M_sigma = (-1)^k p^{V-k} * flow-char-sum   (k=2, p=11,13)
+  all match: True
+======================================================================
+(2) CACTUS CENSUS  k=2  (C_k=2)   contributions / p^3
+   cactus-block-sizes  @p=11  @p=19  @p=23  @p=31
+   (2, 2)                2.4793    2.6925    2.7448    2.8096
+   (4,)                 -1.1570   -1.0970   -1.0813   -1.0614
+   TOTAL -> C_k          1.3223    1.5956    1.6635    1.7482
+   bigon-trees ONLY      2.4793    2.6925    2.7448    2.8096
+======================================================================
+(3) CACTUS CENSUS  k=3  (C_k=5)   contributions / p^4
+   cactus-block-sizes  @p=11  @p=19  @p=23
+   (2, 2, 2)             9.7671   11.0535   11.3770
+   (2, 4)               -9.3914   -8.9278   -8.7913
+   (6,)                  1.1871    0.6456    0.5244
+   TOTAL -> C_k          1.5627    2.7712    3.1101
+   bigon-trees ONLY      9.7671   11.0535   11.3770
+======================================================================
+BIGON-TREE leading coeff = sum over non-crossing edge-pairings of prod (b_v-1)!
+  k:               1      2      3      4      5      6
+  bigon coeff:     1      3     13     69    421   2867   (OEIS-worthy; NOT Catalan)
+  Catalan C_k:     1      2      5     14     42    132   (the SIGNED total after cycle-cacti)
+======================================================================
+(3) ERROR TERM:  A_4 = 2 p^3 + ?   (Paley primes)
+   p    A_4/p^3   (A_4-2p^3)/p^2 [O(p^k), STABLE]   /p^2.5 [drifts->0]
+    7  0.97959      -7.1429                  -2.6997
+   11  1.32231      -7.4545                  -2.2476
+   19  1.59557      -7.6842                  -1.7629
+   23  1.66352      -7.7391                  -1.6137
+   31  1.74818      -7.8065                  -1.4021
+======================================================================
+CONCLUSION: top order p^{k+1} of A_{2k} is a SIGNED sum over EVEN CACTI
+(all biconnected blocks even cycles), NOT a +1-per-bigon-tree count.
+Bigon-trees over-count (1,3,13,69,...); even-cycle cacti correct to C_k.
+R(p)->e (Part C) needs NO Weil: V=2k case is tr(M^{2k})=(-p)^k(p-1), exact.
+Error is O(p^k); R-e relative correction O(1/p), supporting 1/p rate.

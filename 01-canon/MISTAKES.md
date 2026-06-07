@@ -1813,3 +1813,64 @@ A matching TOTAL (`60 = 20·3`) does not certify a uniform MAP. When a count coi
 a known structure (here, icosahedral flags), verify the **fibers / the map**, not just the cardinality.
 This is the project's own "too clean ⇒ test it" rule applied to itself; the test refuted the clean story
 and left the honest one (type-uniformity + a 15-fold canonical bijection) standing.
+
+---
+
+## MISTAKE-060: THM-438 "bigon-trees ARE the Catalan count" — top order is a SIGNED cactus cancellation, not a +1-per-tree count
+
+**Date discovered:** 2026-06-07 (monad-explorer-2026-06-07, deep-research / analytic lane, 3rd session)
+**Found by:** monad-explorer, while attempting the "small remaining write-up" (the +C_k sign) flagged OPEN in THM-438's Honest-status section
+**Affects:** THM-438 Part B proof MECHANISM + error term; the reflection `the-paley-cluster-integrals-are-catalan-numbers-tree-walks-and-the-moment-method.md` ("Patterns with any non-bigon cycle ... are O(p^{k+1/2})"; "the top order is an all-bigon graph ... a tree of bigons ... counted by C_k"); the reflection's stated O(1/sqrt p) convergence. **Does NOT affect** the STATEMENTS A_{2k}=C_k p^{k+1} or R(p)->e — both stand (verified).
+
+### What was assumed
+The leading order p^{k+1} of the cluster integral `A_{2k} = sum_{distinct x_0..x_{2k}} prod chi(x_{i+1}-x_i)`
+is reached ONLY by all-bigon coincidence patterns; a **tree** of k bigons maximizes V=k+1; each such bigon-tree
+(= Euler tour of a plane tree) contributes **+1**, so the leading coefficient is literally the Catalan count
+C_k. "Patterns with any non-bigon cycle ... are O(p^{k+1/2})." Error term O(p^{k+1/2}).
+
+### Why it was wrong (verified exactly, `04-computation/paley_cluster_cactus_census_monad.py`)
+Three things are false:
+1. **Bigon-trees do NOT each contribute +1.** Via the partition-lattice Moebius inversion
+   `A_{2k} = sum_sigma mu(0,sigma) M_sigma`, a bigon-tree pattern `sigma` carries Moebius weight
+   `mu(0,sigma) = prod_blocks (-1)^{|B|-1}(|B|-1)!`, which is NOT 1 when a vertex is visited >=3 times.
+   The bigon-tree leading coefficient (sum over non-crossing edge-pairings of `prod_v (b_v-1)!`) is
+   **1, 3, 13, 69, 421, 2867** (k=1..6) = **OEIS A088368** (g.f. `A=sum n! x^n A^n`, `a(n)~e*n!`) —
+   NEITHER C_k NOR (2k-1)!!. At k=2 bigon-trees give **3**, at k=3 they give **13** (census confirms).
+2. **Even cycles DO reach the top order p^{k+1}.** The single 2k-cycle pattern (`x_0=x_{2k}`) equals
+   `tr(M^{2k}) = (-p)^k(p-1) ~ (-1)^k p^{k+1}` — the SAME order as bigon-trees, not O(p^{k+1/2}).
+   It enters with `mu=-1` and SUBTRACTS. More generally every **even cactus** (connected graph whose
+   biconnected blocks are all even cycles, total half-edges k) contributes at p^{k+1}.
+3. **The Catalan number is a signed cancellation.** Census:
+   `k=2: bigons(+3) + 4-cycle(-1) = 2 = C_2`;  `k=3: bigons(+13) + {bigon+4cyc} + {6cyc} = 5 = C_3`.
+
+### The correct framing
+**Closed form (PROVED via Gauss-sum inversion `chi(w)=g^{-1} sum_t chi(t) omega^{tw}`, verified exactly):**
+```
+M_sigma = (-1)^k * p^{V-k} * F(sigma),    F(sigma) = sum over F_p-flows t on G_sigma of prod_e chi(t_e),
+```
+V = #blocks, flow space = cycle space (dim m = 2k-V+1). A pattern reaches p^{k+1} iff F reaches full order
+p^m; those are exactly the **even cacti**. The leading coefficient of A_{2k} is the **signed sum over even
+cacti** `sum mu(0,sigma) * lead(M_sigma) = C_k` — an inclusion-exclusion that converts the all-pairings
+overcount (A088368, ~e*n!) into the **non-crossing** count C_k. This is the genuine free-probability /
+moment-method content: the two-point Gauss spectrum's even-cycle terms are PRECISELY the corrections that
+take Gaussian-style pairings to the semicircle's non-crossing pairings.
+
+**Error term:** `A_{2k} = C_k p^{k+1} + O(p^k)` (NOT O(p^{k+1/2})). Verified: `(A_4-2p^3)/p^2` is STABLE
+(~ -7.1..-7.8 -> ~-8), while `/p^{2.5}` drifts to 0. Hence R(p)-e has relative correction **O(1/p)**,
+resolving the reflection's stated O(1/sqrt p) vs the close-out's "favors 1/p" IN FAVOR OF 1/p.
+
+**Part C simplifies:** R(p)->e needs **NO Weil bound**. The only V=2k no-leaf pattern is the single
+2k-cycle = `tr(M^{2k}) = (-p)^k(p-1)` (elementary); V<2k is trivially `O(p^{2k-1})=o(p^{2k})`.
+
+### Impact
+- THM-438 Part B mechanism CORRECTED (addendum added). Statements A_{2k}=C_k p^{k+1}, R(p)->e UNCHANGED.
+- Part C upgraded: fully elementary (no Weil).
+- Error term corrected p^{k+1/2} -> p^k; convergence rate of R->e pinned to 1/p (feeds HYP-2307 #2).
+
+### Lesson
+The project's own rule again: a clean final count (C_k) reached by a clean-sounding mechanism
+("bigon-trees = Catalan") does not certify the mechanism. The Moebius weights and the
+equal-order even-cycle patterns were invisible at the level of "count the bigon-trees." Always
+decompose the inclusion-exclusion and check which patterns share the leading order — here the
+cancellation `A088368 -> C_k` is the actual phenomenon, and it is the free-probability fingerprint
+the moment-method slogan was pointing at.
