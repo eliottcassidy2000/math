@@ -1,0 +1,136 @@
+========================================================================
+TORSION-LOCALIZATION OF CLOCK LEAKS  (verifies the S701 claim)
+========================================================================
+
+n=14 = 2 * 7   [squarefree]
+  p=2: 2-torsion=[0, 7] (gen n/p=7, order 2)
+        nonzero die in cofactor base 7: True; survive mod 2: True
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [2] (= p (clean plug, margin 1/p))
+  p=7: 7-torsion=[0, 2, 4, 6, 8, 10, 12] (gen n/p=2, order 7)
+        nonzero die in cofactor base 2: True; survive mod 7: True
+        at t=1/n sit at ['1/7', '2/7', '3/7', '4/7', '5/7', '6/7'] (order-7 rotations); ||.||>=1/7: True
+        smallest controlling clock(s) k: [3, 4, 5] (> p (deeper p-adic clock needed))
+
+n=15 = 3 * 5   [squarefree]
+  p=3: 3-torsion=[0, 5, 10] (gen n/p=5, order 3)
+        nonzero die in cofactor base 5: True; survive mod 3: True
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [2, 3] (> p (deeper p-adic clock needed))
+  p=5: 5-torsion=[0, 3, 6, 9, 12] (gen n/p=3, order 5)
+        nonzero die in cofactor base 3: True; survive mod 5: True
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [2, 4, 5] (> p (deeper p-adic clock needed))
+
+n=12 = 2^2 * 3   [has prime power]
+  p=2: 2-torsion=[0, 6] (gen n/p=6, order 2)
+        nonzero die in cofactor base 3: True; survive mod 2: False  <-- prime power: socle is DIVISIBLE by p, needs deeper clock
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [4] (> p (deeper p-adic clock needed))
+  p=3: 3-torsion=[0, 4, 8] (gen n/p=4, order 3)
+        nonzero die in cofactor base 4: True; survive mod 3: True
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [3] (= p (clean plug, margin 1/p))
+
+n=20 = 2^2 * 5   [has prime power]
+  p=2: 2-torsion=[0, 10] (gen n/p=10, order 2)
+        nonzero die in cofactor base 5: True; survive mod 2: False  <-- prime power: socle is DIVISIBLE by p, needs deeper clock
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [3] (> p (deeper p-adic clock needed))
+  p=5: 5-torsion=[0, 4, 8, 12, 16] (gen n/p=4, order 5)
+        nonzero die in cofactor base 4: True; survive mod 5: True
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [3, 5] (> p (deeper p-adic clock needed))
+
+n=21 = 3 * 7   [squarefree]
+  p=3: 3-torsion=[0, 7, 14] (gen n/p=7, order 3)
+        nonzero die in cofactor base 7: True; survive mod 3: True
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [2, 3] (> p (deeper p-adic clock needed))
+  p=7: 7-torsion=[0, 3, 6, 9, 12, 15, 18] (gen n/p=3, order 7)
+        nonzero die in cofactor base 3: True; survive mod 7: True
+        at t=1/n sit at ['1/7', '2/7', '3/7', '4/7', '5/7', '6/7'] (order-7 rotations); ||.||>=1/7: True
+        smallest controlling clock(s) k: [2, 4, 5] (> p (deeper p-adic clock needed))
+
+n=18 = 2 * 3^2   [has prime power]
+  p=2: 2-torsion=[0, 9] (gen n/p=9, order 2)
+        nonzero die in cofactor base 9: True; survive mod 2: True
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [2] (= p (clean plug, margin 1/p))
+  p=3: 3-torsion=[0, 6, 12] (gen n/p=6, order 3)
+        nonzero die in cofactor base 2: True; survive mod 3: False  <-- prime power: socle is DIVISIBLE by p, needs deeper clock
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [4, 5] (> p (deeper p-adic clock needed))
+
+n=30 = 2 * 3 * 5   [squarefree]
+  p=2: 2-torsion=[0, 15] (gen n/p=15, order 2)
+        nonzero die in cofactor base 15: True; survive mod 2: True
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [2] (= p (clean plug, margin 1/p))
+  p=3: 3-torsion=[0, 10, 20] (gen n/p=10, order 3)
+        nonzero die in cofactor base 10: True; survive mod 3: True
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [3] (= p (clean plug, margin 1/p))
+  p=5: 5-torsion=[0, 6, 12, 18, 24] (gen n/p=6, order 5)
+        nonzero die in cofactor base 6: True; survive mod 5: True
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [4, 5] (> p (deeper p-adic clock needed))
+
+n=33 = 3 * 11   [squarefree]
+  p=3: 3-torsion=[0, 11, 22] (gen n/p=11, order 3)
+        nonzero die in cofactor base 11: True; survive mod 3: True
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [2, 3] (> p (deeper p-adic clock needed))
+  p=11: 11-torsion=[0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 30] (gen n/p=3, order 11)
+        nonzero die in cofactor base 3: True; survive mod 11: True
+        at t=1/n sit at ['1/11', '2/11', '3/11', '4/11', '5/11', '6/11', '7/11', '8/11', '9/11', '10/11'] (order-11 rotations); ||.||>=1/11: True
+        smallest controlling clock(s) k: [2, 4, 5] (> p (deeper p-adic clock needed))
+
+n=35 = 5 * 7   [squarefree]
+  p=5: 5-torsion=[0, 7, 14, 21, 28] (gen n/p=7, order 5)
+        nonzero die in cofactor base 7: True; survive mod 5: True
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [2, 3] (> p (deeper p-adic clock needed))
+  p=7: 7-torsion=[0, 5, 10, 15, 20, 25, 30] (gen n/p=5, order 7)
+        nonzero die in cofactor base 5: True; survive mod 7: True
+        at t=1/n sit at ['1/7', '2/7', '3/7', '4/7', '5/7', '6/7'] (order-7 rotations); ||.||>=1/7: True
+        smallest controlling clock(s) k: [2, 3, 4] (> p (deeper p-adic clock needed))
+
+n=45 = 3^2 * 5   [has prime power]
+  p=3: 3-torsion=[0, 15, 30] (gen n/p=15, order 3)
+        nonzero die in cofactor base 5: True; survive mod 3: False  <-- prime power: socle is DIVISIBLE by p, needs deeper clock
+        at t=1/n sit at ['1/3', '2/3'] (order-3 rotations); ||.||>=1/3: True
+        smallest controlling clock(s) k: [2, 4] (> p (deeper p-adic clock needed))
+  p=5: 5-torsion=[0, 9, 18, 27, 36] (gen n/p=9, order 5)
+        nonzero die in cofactor base 9: True; survive mod 5: True
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [2, 4, 5] (> p (deeper p-adic clock needed))
+
+n=50 = 2 * 5^2   [has prime power]
+  p=2: 2-torsion=[0, 25] (gen n/p=25, order 2)
+        nonzero die in cofactor base 25: True; survive mod 2: True
+        at t=1/n sit at ['1/2'] (order-2 rotations); ||.||>=1/2: True
+        smallest controlling clock(s) k: [2] (= p (clean plug, margin 1/p))
+  p=5: 5-torsion=[0, 10, 20, 30, 40] (gen n/p=10, order 5)
+        nonzero die in cofactor base 2: True; survive mod 5: False  <-- prime power: socle is DIVISIBLE by p, needs deeper clock
+        at t=1/n sit at ['1/5', '2/5', '3/5', '4/5'] (order-5 rotations); ||.||>=1/5: True
+        smallest controlling clock(s) k: [3, 4] (> p (deeper p-adic clock needed))
+
+------------------------------------------------------------------------
+Explicit CRT reading of the user's instances:
+  n=14: residue 7 -> (7 mod 2, 7 mod 7) = (7%2=1, 7%7=0)  = 2-torsion gen, 0 in 7-base
+  n=15: residue 5 -> (5 mod 3, 5 mod 5) = (2, 0)  = 3-torsion, 0 in 5-base
+  n=15: residue 10 -> (10 mod 3, 10 mod 5) = (1, 0)  = 3-torsion, 0 in 5-base
+
+------------------------------------------------------------------------
+Union of prime-torsion subgroups (single-prime-surviving leaks) & hard core:
+  n=14: U(T_p\0)=[2, 4, 6, 7, 8, 10, 12]; hard core (0 in all primes, mod n) = [0] (incl 0)
+  n=15: U(T_p\0)=[3, 5, 6, 9, 10, 12]; hard core (0 in all primes, mod n) = [0] (incl 0)
+  n=30: U(T_p\0)=[6, 10, 12, 15, 18, 20, 24]; hard core (0 in all primes, mod n) = [0] (incl 0)
+  n=12: U(T_p\0)=[4, 6, 8]; hard core (0 in all primes, mod n) = [0, 6] (incl 0)
+
+GEOMETRIC localization (torsion sits at order-p rotations, ||.||>=1/p) holds for ALL n: True
+SQUAREFREE clean plug (socle survives mod p, plugged by t=1/p):  True
+=> squarefree primes: leak plugged by the prime clock (margin 1/p);
+   prime-power factors: socle torsion is itself ≡0 mod p, needs the deeper p-adic clock
+   -- this is the prime-power hardness (cf. n=14: 2n-1=27=3^3, no coprime plug).
