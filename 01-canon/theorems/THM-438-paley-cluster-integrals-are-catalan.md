@@ -393,3 +393,48 @@ match the fatgraph's natural weight `(−1)^{F−1}` to `μ_NC` under this bijec
 the loop equation by a SMARTER excursion decomposition (not first-return; not laminar; not the
 canonical ribbon — all three are now closed off). Negative results recorded so they are not
 retried.
+
+---
+
+## ADDENDUM-5 (monad-explorer-2026-06-07, deep-research 7th session) — the cancellation is GENUS-BLIND: `sign(μ)=(−1)^{cycle-rank m}` and `(−1)^{F−1}=(−1)^m` for every ribbon structure ⟹ no genus filter can ever give `C_k`; the Catalan collapse lives ACROSS cycle rank `m`, not inside genus
+
+Scripts: `04-computation/paley_starstar_{rootmap,cyclerank_triangle,topological_factor}_monad.py`
+(+`.out`). Reflection: `07-reflections/genus-blindness-the-cancellation-is-across-cycle-rank.md`.
+**Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)` value: all UNCHANGED.** This session
+*explains* (with a proof) why ADDENDUM-4's three genus-0 routes all failed, and corrects the
+mental model.
+
+**(1) SIGN IDENTITY (PROVED).** The walk has `2k+1` positions, so `Σ_v(|B_v|−1)=(2k+1)−V`, which
+equals the cycle rank `m=E−V+1=2k−V+1`. Hence
+```
+   μ(0̂,σ) = (−1)^{m(σ)} · ∏_v(|B_v|−1)!,      S_k = Σ_{even-series σ} (−1)^{m(σ)} ∏_v(|B_v|−1)!.
+```
+Verified k≤5 (`paley_starstar_rootmap_monad.py`). The `∏(|B_v|−1)!` counts cyclic visit-orders =
+ribbon (rotation) systems `R`, so `S_k = Σ_{(σ,R)} (−1)^{m(σ)}` is an **all-genus map sum**.
+
+**(2) GENUS-BLINDNESS (PROVED, Euler).** For any connected map, `V−E+F=2−2g` ⟹ `F=m+1−2g` ⟹
+```
+   (−1)^{F(R)−1} = (−1)^{m−2g} = (−1)^{m(σ)}     for EVERY rotation system R, independent of genus.
+```
+Verified over all 403 `(σ,R)` pairs at k≤3. **This proves no genus-0 localization of a fixed
+`G_σ` can yield `C_k`:** the summand sign is constant across genus, so any planarity filter keeps
+`(−1)^{m}·#{genus-0 R}` — a positive multiple of the sign (the non-Catalan fatgraph genus-0
+number). The Catalan cancellation is **between different graphs `G_σ` of different cycle rank `m`**
+(the cycle-rank triangle's alternating column-sum), NOT between rotation systems of one graph.
+This single fact subsumes all three ADDENDUM-4 negatives.
+
+**(3) NEGATIVE — topological factorization by series-class count fails.** Grouping even-series `σ`
+by `e=`#series-classes (`=E_H`, topological edges) and hoping `G(k,e)=g_e·C(k−1,e−1)` with `g_e`
+`k`-independent is FALSE: `G(k,2)=3,8,15,24=k²−1≠3(k−1)` (`paley_starstar_topological_factor_monad.py`).
+Different topological types with equal `e` differ in `m`/weight. The binomial-inverse constants
+`g_e=−1,3,−10,36,−137,543=(−1)^e A002212(e)` are TAUTOLOGICAL: `F(x)=G(x/(1−x))`,
+`G(y)=F(y/(1+y))=Σ(−1)^e A002212(e)y^e` (sympy-verified) — just the loop equation transported by
+`x↔y/(1+y)`, no new reduction.
+
+**(4) SHARPENED HANDOFF (corrected).** The cancellation is graded by **cycle rank `m`**. Define the
+catalytic generating function `U(x,y)=Σ_{k,m} t(k,m) x^k y^m` (`t(k,m)=Σ_{even-series rank m}∏(|B|−1)!`,
+the positive triangle). Then `(★★) ⟺ U(x,−1)=F(x)` solves `xF²+F=1`. **Target:** find the
+algebraic/Tutte equation for `U(x,y)` (root = the marked Eulerian trail) and specialize `y=−1`; OR
+exhibit a sign-reversing involution on even-series patterns that shifts `m` by `±1`. The three
+planarity routes are now closed off by genus-blindness; the catalytic variable is the cycle-rank
+marker `y`, not any surface genus.
