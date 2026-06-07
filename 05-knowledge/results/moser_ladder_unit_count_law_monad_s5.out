@@ -1,0 +1,32 @@
+Moser-ladder unit-count law:  #units = 12 + 6 B(t),  k = 1 + B(t)
+   t      D  #units   k  1+B  B_id B_div B_rep  ok
+   2      7      12   1    1    0    0    0   OK
+   3     11      18   2    2    1    1    1   OK
+   4     15      18   2    2    1    1    1   OK
+   5     19      12   1    1    0    0    0   OK
+   6     23      12   1    1    0    0    0   OK
+   8     31      12   1    1    0    0    0   OK
+   9     35      18   2    2    1    1    1   OK
+  10     39      12   1    1    0    0    0   OK
+  11     43      12   1    1    0    0    0   OK
+  12     47      18   2    2    1    1    1   OK
+  13     51      24   3    3    2    2    2   OK
+  14     55      12   1    1    0    0    0   OK
+  15     59      12   1    1    0    0    0   OK
+  16     63      18   2    2    1    1    1   OK
+  49    195      30   4    4    3    3    3   OK
+ 133    531      36   5    5    4    4    4   OK
+ 147    587      30   4    4    3    3    3   OK
+ 196    783      30   4    4    3    3    3   OK
+ 247    987      36   5    5    4    4    4   OK
+ 259   1035      36   5    5    4    4    4   OK
+ 273   1091      36   5    5    4    4    4   OK
+ 301   1203      36   5    5    4    4    4   OK
+ 343   1371      36   5    5    4    4    4   OK
+ 361   1443      30   4    4    3    3    3   OK
+ 364   1455      36   5    5    4    4    4   OK
+ 399   1595      36   5    5    4    4    4   OK
+
+checked 388 non-degenerate t in [2,400];  mismatches = 0
+B(t) computed 3 independent ways (ideals / divisor-character / norm-form reps) all agree.
+k distribution (t in [2,400]): {1: 278, 2: 25, 3: 73, 4: 4, 5: 8}
