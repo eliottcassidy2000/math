@@ -1169,3 +1169,71 @@ REFINED (honesty): ADD-12's free-law edge constant `1/π` is NOT confirmed — n
 columns remain anonymous — the crossing triangle is a DIFFERENT (canonical) refinement, not `t(k,m)`.
 Tame-end handoffs `#1/#2` and `t(7,5)` STILL OPEN.
 Files: `04-computation/paley_starstar_bercovici_pata_monad.py` (+`.out`).
+
+---
+
+## ADDENDUM-14 (monad-explorer-2026-06-07, deep-research 16th session) — THE FREE FACTORIAL LAW'S K-TRANSFORM IS THE **GOMPERTZ / EXPONENTIAL-INTEGRAL FUNCTION** (closed form); and the `x→0` edge has NO finite constant — a `√log` enhancement (corrects ADD-12/ADD-13)
+
+ADD-13 inverted the Cauchy transform of the free factorial law `μ_free` (= free compound
+Poisson of `ν=e^{-x}dx`; free cumulants `κ_n=n!`; moments `A088368=1,1,3,13,69,421,…`)
+**numerically**, via the convergent Borel integral `R(z)=∫₀^∞ t e^{-t}/(1−zt)dt`,
+`K(z)=1/z+R(z)`, and left the edge constant loose at "`≈0.4–0.6`". This addendum closes both:
+the K-transform has a **closed form**, and the edge has **no finite constant**.
+
+### (1) Closed form: `K(z) = −(1/z²) e^{−1/z} E₁(−1/z) = −(1/z²) g(−1/z)`  [VERIFIED to `1e−16`]
+
+Reduce the Borel integrand `t/(1−zt) = −1/z + 1/(z(1−zt))`, integrate, and identify the
+exponential integral `∫₀^∞ e^{-t}/(1−zt)dt = −(1/z)e^{-1/z}E₁(−1/z)`:
+
+```
+        R(z) = −1/z − (1/z²) e^{−1/z} E₁(−1/z),
+        K(z) = 1/z + R(z) = −(1/z²) e^{−1/z} E₁(−1/z)             (★)
+             = (1/z²) e^{−1/z} Ei(1/z)        (on the negative real axis; same value)
+             = −(1/z²) g(−1/z),     g(x) := eˣ E₁(x) = ∫₀^∞ e^{−t}/(x+t) dt  (Gompertz fn).
+```
+
+`E₁` (principal branch) is the **correct analytic continuation off the support** `[0,∞)`: `E₁`
+is analytic on `ℂ∖(−∞,0]`, and `−1/z` lands off that cut exactly when `z∉[0,∞)`. (Using `Ei(1/z)`
+instead fails for complex `z` — wrong branch; this was caught and fixed.) The asymptotic series of
+`g` is **Euler's divergent factorial series** `Σ(−1)ⁿn!/xⁿ⁺¹`, so (★) says: **the R-transform of
+the free factorial law is the Gompertz/exponential-integral function — Euler's divergent series
+resummed.** This unifies ADD-6 (resurgence), ADD-11/12 (free prob), ADD-13 (Borel/BP): the resummed
+object is a single named special function.
+VERIFIED: `K_closed` vs the convergent Borel integral `1/z+R(z)` agrees to `<7×10⁻¹⁷` at 9 complex
+test points; the `1/z+1+2z+6z²+…` (i.e. `1/z+Σn!z^{n-1}`) asymptotic matches.
+
+**Corollary (Gompertz constant).** `K(−1) = −g(1) = −δ`, where `δ = −e·Ei(−1) = e·E₁(1) =
+∫₀^∞ e^{−t}/(1+t)dt = 0.5963473623…` is the **Gompertz constant**. Equivalently the Cauchy
+transform satisfies `G(−δ) = −1`: at the real point `w=−δ` (left of the support) the resolvent
+equals `−1`. VERIFIED exactly. (This is *why* a stray `≈0.596` appears in edge numerics near
+`x≈1.6×10⁻³` — it is `K(−1)`, a coincidental crossing of the `√log` below, **not** the edge constant.)
+
+### (2) NO finite edge constant: a logarithmic enhancement `ρ(x) ~ (1/π)·√(½ln(1/x))·x^{−1/2}`
+
+The closed form makes the `x→0` analysis transparent. As `x→0⁺`, `z=G(x+i0)→∞`, and (★) has a
+**logarithmic singularity** (the `Ei`/`E₁` log — itself the analytic fingerprint of the zero-radius
+factorial cumulants): `K(z) ~ (γ−ln z)/z²`. Inverting with `z=r e^{−iθ}` forces `2θ→π` (real-`x`
+condition), so `ρ=−Im G/π ~ r/π`, `x ~ (ln r−γ)/r²`, hence `ln r ~ ½ln(1/x)` and
+
+```
+        π·ρ(x)·√x  →  √(ln r − γ) = √(ln|G| − γ)  ~  √( ½ ln(1/x) )  →  ∞.
+```
+
+So `ρ(x)·√x` **diverges** (slowly, like `√log`): there is NO finite edge constant. ADD-12's "`1/π`"
+and ADD-13's "`≈0.4–0.6`" were both reading this slowly-growing `√log` at different `x` (indeed
+`ρ√x` ranges `0.4–0.62` over `x∈[0.001,0.05]`, precisely ADD-13's window).
+VERIFIED (`04-computation/paley_starstar_edge_loglaw_monad.py`, dps=40, **0 fallbacks**, asymptotic
+seeds): over `x=10⁻²…10⁻¹⁵`, the ratio `π·ρ·√x / √(ln|G|−γ) → 1` cleanly (`1.067, 1.029, …, 1.001`);
+`π·ρ·√x` itself rises monotonically `1.60→4.26`. The cruder pure-in-`x` form `√(½ln(1/x))` is approached
+more slowly (ratio `~1.026`, the `ln ln` corrections).
+
+### Honest status (ADD-14).
+PROVED (elementary calculus + verified to machine precision): the closed form (★), the `g`-function
+identity, and `K(−1)=−δ`. The edge law `π ρ √x ~ √(ln|G|−γ) ~ √(½ln(1/x))` is a derived asymptotic
+**VERIFIED numerically** to `0.1%` over 13 decades of `x` (the leading-order coefficient is rigorous
+from `K~(γ−ln z)/z²`; the sub-leading `ln ln`/`γ` corrections are not fully resummed). **CORRECTS**
+ADD-12 ("`1/π` edge constant") and ADD-13 ("edge constant `≈0.4–0.6`"): both are superseded — *no
+finite edge constant exists*; the `x^{-1/2}` exponent carries a `√log` factor. The classical-side
+density (`e⁻¹δ₀ + e^{−1−x}I₁(2√x)/√x`) and the tail `~e·e^{−x}` (ADD-12) are unchanged.
+Files: `04-computation/paley_starstar_Ki_closed_form_monad.py`, `paley_starstar_edge_loglaw_monad.py`
+(+`.out`).
