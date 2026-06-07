@@ -1,0 +1,21 @@
+====================================================================
+MOSER RING M_L = Z[zeta6,omega3] densest-patch crossover (rank 4, 18 units)
+exact |z|^2==1 over Q(√3,√11); target: reach u(28)>=85 (>84) self-contained
+====================================================================
+#unit vectors = 18 (6 triangular c=d=0, 12 Moser); all ad=bc: True
+
+     N  best    3N   u-3N  recount  status
+    22    60    66     -6      60   
+    23    64    69     -5      64   
+    24    68    72     -4      68   
+    25    72    75     -3      72   
+    26    76    78     -2      76   
+    27    81    81      0      81   ties
+    28    85    84      1      85   BEATS 3N
+    29    89    87      2      89   BEATS 3N
+    30    93    90      3      93   BEATS 3N
+====================================================================
+Moser ring first beats 3N at N=28.
+=> reproduces Engel's N*<=28 with EXACT integer coords (self-contained).
+Compare HYP-2301: best RANK-2 single-norm lattice (sqrt7) first beats at N=32.
+The rank-4 Moser ring (18 units at radius 1) crosses EARLIER — the escape.
