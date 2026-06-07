@@ -1,0 +1,20 @@
+==========================================================================
+PART A -- validate machinery against PROVEN values
+==========================================================================
+H(3,3) generic: pts=27 distinct=True U=81 (expect 27, True, 81); degset=[6]
+K3[]W7 generic: pts=21 distinct=True U=57 (expect 21, True, 57)
+
+==========================================================================
+PART B -- best triangular(Eisenstein) lattice patch, n=22..28
+         resolve S4 'triangular blob ~78 @ 27' vs Harborth floor(3n-sqrt(12n-3))
+==========================================================================
+  n |  greedy tri-patch U | Harborth floor(3n-sqrt(12n-3)) | 3n | AMP u>=
+ 22 |          49         |            49                | 66 | 60
+ 23 |          52         |            52                | 69 | 64
+ 24 |          55         |            55                | 72 | 68
+ 25 |          57         |            57                | 75 | 72
+ 26 |          60         |            60                | 78 | 76
+ 27 |          63         |            63                | 81 | 81
+ 28 |          65         |            65                | 84 | 85
+
+DONE PART A/B. (PART C/D in next block.)

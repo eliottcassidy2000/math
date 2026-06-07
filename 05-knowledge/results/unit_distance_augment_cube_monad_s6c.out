@@ -1,0 +1,29 @@
+==========================================================================
+PART C0 -- DIRECT u(27)>81: scan cube angles for accidental unit distances
+==========================================================================
+  scanned 56882 distinct-angle cubes (239 had collisions).
+  MAX U over 27-point cubes = 81  at (th2,th3)=(0.004363323129985824, 0.008726646259971648)
+  => NO special angle gives U>81 on the 27-pt cube (in this scan):
+     either 27 distinct pts with U=81, or angle specialization collapses
+     points (collision) BEFORE adding extra unit distances. Strong
+     evidence the cube cannot be tuned past the 81 tie.
+
+==========================================================================
+PART C1 -- AUGMENTATION H(3,3)+k : extra unit distances from added points
+==========================================================================
+  best single-point augmentation of an 81-edge cube: +2 edges
+     => u(28) >= 81 + 2 = 83  (need +4=>85 to BEAT 84)
+     (realization: generic(0.7,1.93))
+  greedy growth from the cube (n, U, 3n, U-3n):
+     n=27  U= 81  3n= 81  U-3n=+0
+     n=28  U= 83  3n= 84  U-3n=-1
+     n=29  U= 86  3n= 87  U-3n=-1
+     n=30  U= 90  3n= 90  U-3n=+0
+
+==========================================================================
+PART D -- from-scratch anneal: densest 27 and 28 point unit-distance graph
+==========================================================================
+  anneal densest n=27: U≈81  (3n=81, U-3n=+0)  [float, lower bound only]
+  anneal densest n=28: U≈87  (3n=84, U-3n=+3)  [float, lower bound only]
+
+DONE PART C/D.

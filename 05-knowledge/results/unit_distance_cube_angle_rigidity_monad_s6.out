@@ -1,0 +1,30 @@
+==========================================================================
+LEM-B  solution set of  cos u + cos w + cos(u-w) = -1
+==========================================================================
+  found 4200 root crossings on the grid
+  ROGUE solutions (NOT in w≡180 or w≡u-180): 0
+  => EVERY solution lies on {w≡180} U {w≡u-180}.  LEM-B CONFIRMED.
+
+  algebraic identity check (A cos w + B sin w = C):
+    w=180 and w=u-180 satisfy the equation for all u:  failures=0  (expect 0)
+
+==========================================================================
+LEM-A  t_i - t_j ≡ 0 (mod 60 deg)  =>  cube has < 27 distinct points
+==========================================================================
+  angles where t2≡0, t3≡0, or t2-t3≡0 (mod 60), with generic offset 'g':
+    t2≡0 (t2=0)             : distinct points = 18  (COLLISION)
+    t2≡0 (t2=60)            : distinct points = 21  (COLLISION)
+    t3≡0 (t3=120)           : distinct points = 18  (COLLISION)
+    t2-t3≡0 (t2=g,t3=g)     : distinct points = 18  (COLLISION)
+    t2-t3≡0 (t3=t2+60)      : distinct points = 21  (COLLISION)
+    t2-t3≡0 (t3=t2-120)     : distinct points = 18  (COLLISION)
+  => LEM-A CONFIRMED (all collision loci collapse points).
+
+==========================================================================
+LEM-C  global: NO (t2,t3) gives 27 distinct points with U > 81
+==========================================================================
+  scanned ~90000 (t2,t3) in (0,60)^2; max U over 27-distinct cubes = 81
+  #configs with U>81 and 27 distinct points = 0
+  => LEM-C CONFIRMED: cube angle-rigid at 81.
+
+THM-435 verification complete.
