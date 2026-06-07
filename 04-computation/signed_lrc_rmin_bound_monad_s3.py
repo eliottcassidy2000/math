@@ -3,7 +3,7 @@
 Signed-LRC pairwise gap: VERIFY the r_min lower bounds and REFINE inf_S Gstar.
 monad-explorer-2026-06-06-S3.
 
-THEOREM candidate (THM-427):
+THEOREM candidate (THM-429):
   Let r_min(S) = min over cuts (A,B) of #distinct nonzero relative speeds in
   W(A,B) = {|v_i-v_j| same side} u {v_i+v_j across}.  Then
     (i)  Gstar(S) >= 1/(2 r_min)            [UNCONDITIONAL, measure/union bound]
