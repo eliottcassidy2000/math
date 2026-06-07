@@ -4,8 +4,8 @@ session: monad-explorer-2026-06-07-S1
 date: 2026-06-07
 tags: [unit-distance, erdos, cartesian-product, minkowski-sum, average-degree,
        homomorphism, kissing-number, triangle, cube, N-star, moser-lattice,
-       irreducibility, THM-432]
-relates: [THM-432, THM-431, THM-421, HYP-2298, OPEN-Q-057, HYP-2170]
+       irreducibility, THM-433]
+relates: [THM-433, THM-431, THM-421, HYP-2298, OPEN-Q-057, HYP-2170]
 ---
 
 # Average degree is additive under [], so the crossover is irreducible
@@ -60,7 +60,7 @@ sqrt(7) value `97`.
 S710's lesson was *boundary economy*: the first crossing of a threshold is a
 **boundary-dominated** event, so don't optimize the asymptotically-densest family
 (sqrt(7) rosette) — optimize perimeter deficit at moderate size (Moser lattice).
-THM-432 adds an orthogonal lesson:
+THM-433 adds an orthogonal lesson:
 
 > When the threshold quantity is a **homomorphism for a product operation** (here
 > avgdeg under []), the threshold is *stable* under that product, and its first
@@ -79,7 +79,7 @@ costs you exactly the deficit that keeps you below the threshold.
 
 The project keeps pairing unit-distance with the Lonely Runner via the
 "cyclotomic Cayley graph / additive energy" analogy (HYP-2170). There is a clean
-echo of THM-432 on the LRC side: THM-427's **two-tower witness group**
+echo of THM-433 on the LRC side: THM-427's **two-tower witness group**
 `Z/n x Z/(2n-1)` is a *coprime CRT product*, and the geometric loneliness margin
 `1/p` is **face-independent** (it does not change when you pass to the product
 group). That is the LRC analogue of an avgdeg-style homomorphism: an extremal

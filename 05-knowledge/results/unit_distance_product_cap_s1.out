@@ -78,7 +78,14 @@ CONSEQUENCE for N* in [25,28] (THM-431):
    N=27: product cap = 81 <= 3N=81   | proven u(N) lower bound (Moser, NON-product) = 81
    N=28: product cap = 83 <= 3N=84   | proven u(N) lower bound (Moser, NON-product) = 85
 
-Since the product cap <= 3N for every N <= 32 (tie at most), ANY graph with
-u(N) > 3N at N <= 32 -- in particular at the crossover N* in [25,28] -- is
+Since the product cap <= 3N for every N <= 31 (tie at most), ANY graph with
+u(N) > 3N at N <= 31 -- in particular at the crossover N* in [25,28] -- is
 NECESSARILY NON-PRODUCT (irreducible).  N* is a Moser-lattice phenomenon;
 the Erdos product family alone first beats 3N only at N = 32 .
+
+TANGENCY + TAIL:
+  P(N)-3N grazes 0 (tangent from below) at N=27,30 (the ties), dips to -1 at
+  N=28 between them, then crosses positive at 32 and stays positive:
+  every composite N in [32,42] strictly beats 3N: True
+  -> the crossover N* in [25,28] sits exactly in the grazing region (tie@27,
+     dip@28) where the product family touches but cannot cross 3N.

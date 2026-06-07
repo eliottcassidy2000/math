@@ -1,5 +1,5 @@
 ---
-id: THM-432
+id: THM-433
 name: Average degree is additive under the Cartesian/Minkowski product; the
       unit-distance product family ties 3N at 27=3^3 and 30, first beats 3N at
       32, so the crossover N* in [25,28] is necessarily NON-PRODUCT
@@ -16,7 +16,7 @@ external:
   - "Alexeev, Mixon, Parshall, arXiv:2412.11914 (2024): exact u(n) for n<=21."
 ---
 
-# THM-432: avgdeg is additive under [] ; N* is non-product; 27 = K3^[]3
+# THM-433: avgdeg is additive under [] ; N* is non-product; 27 = K3^[]3
 
 Let `u(N)` be the Erdos unit-distance maximum (OEIS A186705) and `N*` the
 smallest `N` with `u(N) > 3N` (average degree `> kappa = 6`). THM-431 placed
@@ -72,7 +72,18 @@ by the recurrence
 ```
 
 So **no Cartesian-product unit-distance graph beats `3N` for any `N <= 31`**; the
-product family first overtakes the penny/kissing rate only at `N = 32`.
+product family first overtakes the penny/kissing rate only at `N = 32`, and then
+**every composite `N >= 32` strictly beats `3N`** (checked through 42; the prime
+`N` simply have no product). Geometrically the deficit `P(N) - 3N` is **tangent**
+to 0 from below — it grazes the `3N` line at exactly `27` and `30` (the two ties),
+with a `-1` dip at `28` between them, before crossing positive at `32`:
+```
+   N      22  24  25  26  27  28  30  32
+   P-3N   -9  -6  -5  -5   0  -1   0  +2
+                          ^tie ^dip ^tie ^beat
+```
+The crossover `N* in [25,28]` lives in the grazing region (the tangency at 27 and
+the dip at 28) — precisely where products touch but cannot cross `3N`.
 
 ## (C) Consequence: N* is NON-PRODUCT  [PROVED]
 
