@@ -1,0 +1,39 @@
+==============================================================================
+DOUBLE-GLUED BRIDGE LATTICE  L_{a,b}  unit-vector counts (float-find R, then
+structural exact-match each vector to alpha*prod(1-w) ).
+  predicted: #units = 24 + r_E(a) + r_E(b) + r_E(ab)
+==============================================================================
+  L_{2,3} (d_a=7,d_b=11):  #units= 36  predicted= 30  r_E(2)=0,r_E(3)=6,r_E(6)=0  extra=6  MISMATCH
+        classes: (1-wb):6, 1:6, wa:6, wb:6, wawb:6
+  L_{3,4} (d_a=11,d_b=15):  #units= 62  predicted= 42  r_E(3)=6,r_E(4)=6,r_E(12)=6  extra=24  MISMATCH
+        classes: (1-wa)(1-wb):2, (1-wb):6, (1-wa):6, 1:6, wa:6, wb:6, wawb:6
+  L_{2,5} (d_a=7,d_b=19):  #units= 36  predicted= 24  r_E(2)=0,r_E(5)=0,r_E(10)=0  extra=12  MISMATCH
+        classes: 1:6, wa:6, wb:6, wawb:6
+  L_{3,5} (d_a=11,d_b=19):  #units= 52  predicted= 30  r_E(3)=6,r_E(5)=0,r_E(15)=0  extra=22  MISMATCH
+        classes: (1-wa):6, 1:6, wa:6, wb:6, wawb:6
+  L_{3,13} (d_a=11,d_b=51):  #units= 44  predicted= 54  r_E(3)=6,r_E(13)=12,r_E(39)=12  extra=10  MISMATCH
+        classes: (1-wb):4, (1-wa):6, 1:6, wa:6, wb:6, wawb:6
+  L_{4,9} (d_a=15,d_b=35):  #units= 48  predicted= 42  r_E(4)=6,r_E(9)=6,r_E(36)=6  extra=12  MISMATCH
+        classes: (1-wb):6, (1-wa):6, 1:6, wa:6, wb:6, wawb:6
+  L_{2,4} (d_a=7,d_b=15):  #units= 48  predicted= 30  r_E(2)=0,r_E(4)=6,r_E(8)=0  extra=18  MISMATCH
+        classes: (1-wb):6, 1:6, wa:6, wb:6, wawb:6
+
+================================================================================
+DIAGNOSTIC ADDENDUM (moser_tower_extras_diagnostic_monad_s5.py)
+================================================================================
+- L_{2,3} is BOX-STABLE: 36 unit vectors at R=2, R=3, AND R=4 -> the double-glued
+  tower lattice is FINITE (the rank-4 finiteness survives one extra gluing here).
+- The 6 "extra" vectors of L_{2,3} are EXACTLY  alpha * w_a*(1-w_b),  N(alpha)=3.
+  i.e. the divider (1-w_b) multiplied by the unit-generator w_a (|w_a|=1), which
+  STAYS in the lattice because w_a*w_b is a generator.  This family is impossible
+  in rank-4 L_t (there w_t*(1-w_t) leaves the lattice: w_t^2 not in Z[zeta6]+Z[zeta6]w_t).
+- CORRECTED count (the divider*unit-generator mechanism): a divider (1-w_x) may be
+  multiplied by each u in {1,w_a,w_b,w_a w_b} that keeps u*(1-w_x) in the lattice
+  AND a unit; for L_{2,3}:
+     #units = 24 + 2*r_E(2) + 2*r_E(3) + r_E(6) = 24 + 0 + 12 + 0 = 36.  MATCHES.
+- BUT L_{3,4} (both indices Loeschian) has 62 != 24+2*6+2*6+6=54: additional
+  families appear when BOTH r_E(a),r_E(b)>0 (e.g. product-divider * unit-generator
+  combinations, and possibly (w_a-w_b)-type dividers). General tower formula OPEN.
+- HONEST: float-find (tol 1e-9) + exact structural identification of each vector
+  (coords are integers; the divider form is exact). L_{2,3} stability checked to R=4.
+  L_{3,4}/others NOT stability-checked beyond R=3; their raw counts are provisional.
