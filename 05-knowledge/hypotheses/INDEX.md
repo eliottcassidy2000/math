@@ -8703,3 +8703,14 @@ So M_L = Z[zeta6] (triangular lattice) EXTENDED by a √−11 CM direction; it s
 **3N-CROSSOVER BRIDGE (new):** true optimum u(N)>3N first at **n=28** (u(28)≥85>84; u(27)≥81=3·27 ties), from AMP24 lower bounds. Nests the repo's lattice ladder: combinatorial floor 17 (THM-421) < true optimum 28 < best lattice blob 32 (THM-421) < lattice disk 43 (HYP-2267). Gaps = costs of {realizability, lattice-ness, round-shape}. AMP24 optimal embeddings use (1/√13)(1,ω,ω²) = the √13 Eisenstein layer (r_Q(13)=12, density 6, THM-412) as a RIGID non-lattice graph — same Eisenstein density-6 target as the repo's √7, unshackled from the lattice (boundary deficit O(1) vs Harborth √(12n)).
 **NEGATIVE result (logged):** a naive float gradient-relaxation on a soft unit-well did NOT find dense configs on 21 points (best ≈1 pair). Dense unit-distance graphs require constraint/rigidity-based search (Schade/AMP24), not gradient descent. Do not retry naive relaxation.
 **See:** `01-canon/theorems/THM-431-unit-distance-u21-equals-57.md`; reflection `07-reflections/the-3N-crossover-is-nested-floor-optimum-lattice-disk-s710.md`; `04-computation/unit_distance_u21_{constructions,bounds_and_relax}_s710.py` (+.outs); builds on THM-421/THM-412/HYP-2267; refs AMP24 arXiv:2412.11914, Schade 1993, Globus-Parshall 2021, rigidity arXiv:2507.15679.
+
+### HYP-2298 — ADDENDUM (S4, exact ladder computation): 18 is NOT special; the count is 6 + (multiple of 6)
+`moser_angle_ladder_unitvectors_monad_s4.py` (exact integer arithmetic, box-stable R=5 vs R=8) computes #unit vectors of L_t = Z[zeta6, w_t] across the ladder disc=sqrt(4t-1):
+- t=1: rank-2 = Z[zeta6], 6 units (triangular rosette). Degenerate (rank-2 collapse): 4t-1 in {3, 27, 75, ...} = 3·(odd)^2 (w_t falls back into Q(sqrt-3)).
+- **rank-4 counts (= 6 triangular + transverse, transverse always a multiple of 6):**
+  - **18** (transv 12): 4t-1 in {11, 15, 35, 47}  (t=3,4,9,12)
+  - **12** (transv 6):  4t-1 in {7, 19, 23, 31, 39, 43, 55} (t=2,5,6,8,10,11,14)
+  - **24** (transv 18): 4t-1 = 51 (t=13)
+- **So the Moser lattice's "18" is NOT a maximum and NOT unique** — t=4,9,12 also give 18, and **t=13 (disc sqrt51) gives 24** (a HIGHER max-degree lattice than the Moser lattice). Engel et al.'s choice of t=3 is dictated by the spindle geometry (cos=5/6) / small-graph density, not by unit-vector count.
+- The 6-fold structure (count = 6 + 6k) reflects multiplication by zeta6 acting on the unit-circle lattice elements.
+**OPEN (number-theoretic):** characterize k=#transverse-orbits as a function of the discriminant sqrt(4t-1) — almost surely governed by the splitting of small primes (2,3) in the biquadratic CM field Q(sqrt-3, sqrt(4t-1)) (subfields Q(sqrt-3), Q(sqrt(4t-1)) real, Q(sqrt-(3(4t-1))) imaginary). No clean residue pattern mod 12 found. The disc=51 (k=3) case is a LEAD: L_13 has max degree 24 > 18, possibly denser UD graphs at OPEN n>=22.
