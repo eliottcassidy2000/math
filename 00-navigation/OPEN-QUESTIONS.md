@@ -1213,3 +1213,19 @@ The actual cross-line mass is much larger than the parity minimum. Is that exces
 **Source:** THM-345, THM-346, INV-194, `04-computation/merged_bucket_constraints_s5.py`, `04-computation/tiling_quotient_bucket_balance_s5.py`.
 
 **Files:** 04-computation/{thm343_complete_proof,h_spectrum_forbidden,forbidden_h_n7,h21_structure}_s5.py; `04-computation/h63_counterexample_audit_s8.py`; `04-computation/omega_extreme_fingerprints_s11.py`; `04-computation/projection_defect_bridge_s12.py`; `05-knowledge/results/omega_extreme_fingerprints_s11.out`; `05-knowledge/results/single_core_signature_targets_s11.out`; `05-knowledge/results/projection_defect_bridge_s12.out`
+
+---
+
+## OPEN-Q-057 🟢 Exact value of N* — the smallest N whose unit-distance maximum beats 3N
+
+**Status:** N* ∈ [25, 28] (THM-431, sharpening THM-421's [17,32]). PROVEN floor N*≥25 (u(n)≤3n for all n≤24, via AMP arXiv:2412.11914 exact n≤21 + upper bounds u(22)≤61,u(23)≤66,u(24)≤72); PROVEN ceiling N*≤28 (realizable u(28)≥85>84). The dispatched n=21 campaign is itself SETTLED: **u(21)=57** (AMP, proven optimal; extremal graph = K₃□W₇, the unit-triangle × unit-wheel Cartesian product, 57=3·7+3·12).
+
+**The sharp target is n=27 = 3³.** The best known construction *ties* exactly there: u(27) ≥ 81 = 3·27. The best-construction deficit u≥(n)−3n runs −6,−5,−4,−3,−2,**0**,+1 for n=22..28, closing to a clean tie at 27 before breaking through at 28.
+
+**To settle N*, either:**
+1. **Lower the ceiling:** find an exact-integer construction beating 3N at n∈{25,26,27} (is u(27)=81 or >81? a Moser-lattice / product config with 82 edges on 27 points ⟹ N*≤27).
+2. **Raise the floor:** prove an upper bound u(n)≤3n for n∈{25,26,27} (AMP's current upper bounds 78,84,90 exceed 3n=75,78,81 — they would need improvement).
+
+**Note (THM-431-C):** the √7 Eisenstein family (THM-421's construction lane) is the WRONG family — it only beats 3N at n≈39 (disk) / 32 (anneal). The first crossing is boundary-dominated and lives in Engel's Moser lattice. Any attempt to lower the ceiling should use the Moser lattice, not √7 disks.
+
+**Source:** THM-431, HYP-2298, monad-explorer-2026-06-07-S710; AMP arXiv:2412.11914; `04-computation/unit_distance_3n_floor_sharpen_s710.py`.
