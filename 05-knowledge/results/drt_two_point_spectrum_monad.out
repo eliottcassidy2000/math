@@ -1,0 +1,12 @@
+Paley DRT skew matrix S[a,b]=chi(b-a):  spectrum and tr(S^{2k})
+   n            |eig| set   sqrt(n)  #zero   trace checks
+   7 [np.float64(0.0), np.float64(2.646)]     2.646      1   k=1:OK k=2:OK k=3:OK k=4:OK
+  11 [np.float64(0.0), np.float64(3.317)]     3.317      1   k=1:OK k=2:OK k=3:OK k=4:OK
+  19 [np.float64(0.0), np.float64(4.359)]     4.359      1   k=1:OK k=2:OK k=3:OK k=4:OK
+  23 [np.float64(0.0), np.float64(4.796)]     4.796      1   k=1:OK k=2:OK k=3:OK k=4:OK
+  31 [np.float64(0.0), np.float64(5.568)]     5.568      1   k=1:OK k=2:OK k=3:OK k=4:OK
+
+All Paley DRTs: spectrum = {0} U {+- i sqrt(n)}, tr(S^{2k}) = (-1)^k n^k (n-1).
+This is the DRT-defining two-point spectrum => the closed form is DRT-universal.
+=> the THM-438 even-cycle (single 2k-cycle) contribution is identical for any DRT,
+   no Gauss sum / Weil needed.  Leading-order Catalan skeleton is SPECTRAL (HYP-2308).

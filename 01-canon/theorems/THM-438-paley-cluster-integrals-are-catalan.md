@@ -216,10 +216,15 @@ close-out's "favors 1/p" — it is `1/p`), which is the right footing for handof
 
 ## Forward
 
-1. **Sub-leading term `C` in `R(p) = e(1 − C/p + …)`** (HYP-2307 handoff #2). With the
-   leading orders now Catalan, `C` is governed by `A_4`'s `O(p^{2.5})` tail + finite-`p`
-   cherry-placement and cross-cherry exclusion. This is the smooth, predictable Paley
-   signature HYP-2306 asked for — and the compute node's `p=31,43,47` would now *test
-   a prediction*, not blind-extrapolate.
-2. **Non-circulant quasirandom (doubly-regular) tournaments** (handoff #3): does the
-   Catalan skeleton survive without the circulant/odd-`χ` structure?
+1. **Sub-leading term `C` in `R(p) = e(1 − C/p + …)`** (HYP-2307 handoff #2). The error
+   is `O(p^k)` (ADDENDUM (4)), so `R−e` is relative `O(1/p)` — the ansatz `R=e(1−C/p+…)`
+   is now *justified* (not assumed), `C` fed by `A_4`'s integer `p^2` remainder + finite-`p`
+   cherry-placement. The compute node's `p=31,43,47` would *pin* `C≈1.4`, testing a
+   prediction.
+2. **Non-circulant doubly-regular tournaments** (handoff #3) → **HYP-2308**. The
+   leading-order Catalan skeleton is now shown to be **spectral, not arithmetic**: the
+   engine needs only regularity (no-leaf), antisymmetry (bigon `−1`), and the two-point
+   `{0}∪{±i√n}` spectrum (`tr(S^{2k})=(−1)^k n^k(n−1)`) — all DRT properties, none
+   circulant/Weil. So the Catalan law and `R→e` should hold for EVERY DRT; the only open
+   part is the `o(n^{k+1})` remainder for non-circulant DRTs (a tight-spectral
+   expander-mixing estimate replacing Weil). See HYP-2308 for the test recipe.
