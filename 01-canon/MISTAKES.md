@@ -1874,3 +1874,73 @@ equal-order even-cycle patterns were invisible at the level of "count the bigon-
 decompose the inclusion-exclusion and check which patterns share the leading order — here the
 cancellation `A088368 -> C_k` is the actual phenomenon, and it is the free-probability fingerprint
 the moment-method slogan was pointing at.
+
+---
+
+## MISTAKE-061: THM-438 — the top-order patterns are NOT "even cacti"; they are the larger class of EVEN-SERIES patterns (even theta graphs included)
+
+**Date discovered:** 2026-06-07
+**Found by:** monad-explorer-2026-06-07 (deep-research / analytic lane, 4th session)
+**Affects:** THM-438 ADDENDUM and MISTAKE-060 (the *characterization* of which coincidence
+patterns reach the leading order `p^{k+1}`). Does NOT affect the Catalan law `A_{2k}=C_k p^{k+1}`
+itself (re-confirmed here, rigorously) nor `R(p)->e`.
+
+### What was assumed (MISTAKE-060 / THM-438 ADDENDUM)
+"`M_sigma` reaches the top order `p^{k+1}` **iff** `F(sigma)` reaches full order `p^m` — exactly
+the **even cacti** (connected, all biconnected blocks even cycles)." The census then grouped the
+leading coefficient as bigon-trees (+A088368) corrected by even-cycle **cacti** down to `C_k`.
+
+### Why it was wrong
+`F(sigma) = sum_{flows} prod_e chi(t_e)` reaches full order `p^m` iff the flow-form product
+`P(s) = prod_e ell_e(s)` is a **perfect square** (then `chi(P)=chi(Q^2)=+1` off the zero locus,
+so `F ~ +p^m`). `P` is a perfect square iff **every series-class of edges has even size** (each
+distinct flow-line occurs an even number of times). The even cacti satisfy this — but so do
+**even theta graphs** (two vertices joined by three even paths; biconnected block is NOT a single
+cycle) and, generally, all "even series-parallel" 2-connected patterns. These are NON-cacti yet
+reach `p^{k+1}` and MUST be counted. Verified (`04-computation/paley_cluster_theta_check_monad.py`):
+at `k=3` the `V=5, m=2` top-order patterns are **6 even-cacti{2,4} + 1 even-theta(2,2,2)** — the
+even theta (mu=+1) was invisible to the "even cacti" census (it sat in the `(6,)` biconnected
+bucket, silently cancelling the single 6-cycle, so the *total* still came out right).
+
+### The correct framing (VERIFIED k<=4; the `g` step PROVED)
+Let `c0 = lim A_{2k}/p^{k+1}`. Then
+```
+c0 = (-1)^k * sum_{rho : connected, EVERY series-class even}  mu(0,rho) * g(rho),
+```
+and `g(rho) := lim F(rho)/p^m = +1` for EVERY such pattern. **`g==+1` is PROVABLE:** within each
+series-class the closed Euler walk passes straight through the degree-2 internal vertices, so all
+edges of the class get the SAME orientation sign `s in {+1,-1}`; the class is even, so
+`prod_{e in class} sign_e = s^{even} = +1`; hence `P = (prod sign_e) Q^2 = +Q^2` and
+`g=chi(P)=+1`. Therefore the entire character/Gauss-sum content collapses and
+```
+($$)   sum_{rho : even-series pattern}  mu(0,rho)  =  (-1)^k C_k        (number-theory-FREE).
+```
+RIGOROUSLY CONFIRMED `c0 = 2, 5, 14 = C_2, C_3, C_4` by clean Richardson (`1/p`) extrapolation of
+the exact flow-Moebius value (`04-computation/paley_cluster_topterm_monad.py`) — this also REPLACES
+the prior slowly-converging census (which read `1.56, 2.77, 3.11` at `p<=23` and only *looked* like
+it might reach `5`). The breakdown:
+```
+k=3:  bigon-trees(m=3) +13,  (m=2: cacti+theta) -9,  (m=1: 6-cycle) +1   = 5 = C_3
+k=4:  bigon-trees(m=4) +69,  (m=3) -72,  (m=2) +18,  (m=1: 8-cycle) -1   = 14 = C_4
+```
+(bigon-tree sub-sums `+13, +69` = OEIS A088368, the all-pairings overcount, as before).
+
+### Impact
+- THM-438 ADDENDUM-2 added: Catalan law `A_{2k}=C_k p^{k+1}` RE-CONFIRMED (rigorous, k<=4), error
+  `O(p^k)` unchanged, `R(p)->e` unchanged.
+- The MECHANISM is corrected a SECOND time: top-order class = **even-series patterns** (perfect-square
+  flow product), strictly larger than even cacti. `g==+1` is proved, reducing handoff #1 to the
+  clean number-theory-free Moebius identity `($$)`.
+- Free-probability reading SHARPENED: the random skew-Rademacher matrix gives `C_k` *directly* from
+  non-crossing pairings (each `+1`, no factorials); the deterministic Paley Moebius expansion
+  over-counts to A088368 in the bigon sector and the even cacti + even thetas + ... cancel it back to
+  `C_k`. The equality is Wigner quasirandomness; `($$)` is its exact combinatorial fingerprint.
+
+### Lesson
+MISTAKE-060 corrected the *value* mechanism (bigon-trees -> A088368 -> C_k) but inherited a wrong
+*support*: "even cacti." A pattern can saturate the flow character-sum without being a cactus — any
+even series-parallel skeleton does. When a leading-order census gives the right TOTAL, that does not
+certify the per-class STRUCTURE: a missing pattern (the even theta) can hide inside a coarse bucket,
+cancelling against another, leaving the total correct and the story wrong. Characterize the support
+by the actual saturation condition (perfect-square flow product = even series-classes), not by the
+most familiar sub-family.

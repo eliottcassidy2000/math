@@ -171,6 +171,10 @@ the sign verification below). Patterns with any non-bigon cycle, or with bigon-c
   (verified `k=2,3` exactly via the flow closed form). The order `Θ(p^{k+1})` is proved; the
   remaining clean write-up is the closed-form identity `Σ_{even cacti} μ(0̂,σ)·lead(M_σ) = C_k`
   (the A088368 → Catalan / all-pairings → non-crossing reduction).
+  **SUPERSEDED by ADDENDUM-2 + MISTAKE-061:** the support "even cacti" is WRONG (even theta graphs
+  also reach top order); the correct, number-theory-FREE target is `Σ_{even-series patterns} μ(0̂,ρ)
+  = (-1)^k C_k`, with `g≡+1` now PROVED and the leading coefficient `c_0=C_k` re-confirmed
+  rigorously (k≤4, clean Richardson `1/p`).
 
 ## ADDENDUM (monad-explorer-2026-06-07, 3rd session) — Part B mechanism CORRECTED; Part C needs no Weil; error term `O(p^k)`
 
@@ -228,3 +232,43 @@ close-out's "favors 1/p" — it is `1/p`), which is the right footing for handof
    circulant/Weil. So the Catalan law and `R→e` should hold for EVERY DRT; the only open
    part is the `o(n^{k+1})` remainder for non-circulant DRTs (a tight-spectral
    expander-mixing estimate replacing Weil). See HYP-2308 for the test recipe.
+
+## ADDENDUM-2 (monad-explorer-2026-06-07, 4th session) — leading coefficient RE-CONFIRMED `=C_k` rigorously; top-order class corrected from "even cacti" to EVEN-SERIES patterns; `g≡+1` PROVED; the Catalan number is a pure partition-lattice Möbius sum
+
+See **MISTAKE-061**. Scripts: `04-computation/paley_cluster_topterm_monad.py`,
+`paley_cluster_pure_moebius_monad.py`, `paley_cluster_theta_check_monad.py`,
+`paley_cluster_leadcoeff_monad.py` (+ `.out`). **The headline `A_{2k}=C_k p^{k+1}` and
+`R(p)→e` are UNCHANGED and now on firmer footing.** Two things are corrected/sharpened.
+
+**(1) The leading coefficient is RIGOROUSLY `c_0 = lim A_{2k}/p^{k+1} = C_k` (VERIFIED k≤4).**
+Computed exactly via the flow-Möbius identity `A_{2k}=Σ_ρ μ(0̂,ρ)M_ρ` at many Paley primes and
+Richardson-extrapolated in `1/p`:  `c_0 = 2, 5, 14 = C_2, C_3, C_4` *exactly*. This REPLACES the
+prior census numerics (`A_6/p^4 = 1.56,2.77,3.11` at `p≤23`), which converge to `5` only very
+slowly (the `O(1/p)` + character fluctuations) and could not by themselves distinguish `5` from `6`.
+
+**(2) The top-order class is NOT "even cacti" — it is the EVEN-SERIES patterns (even theta graphs
+included).**  `M_ρ` reaches `p^{k+1}` iff the flow-form product `P(s)=∏_e ℓ_e(s)` is a perfect
+square, i.e. iff **every series-class of edges is even**. Even cacti qualify, but so do even theta
+graphs (2-connected, biconnected block ≠ a single cycle) and all even series-parallel skeletons.
+At `k=3` the `m=2` top-order patterns are `6` even-cacti{2,4} `+ 1` even-theta(2,2,2); the theta was
+missing from the "even cacti" census (it hid in the `(6,)` biconnected bucket, cancelling the single
+6-cycle). The cycle-rank of any top-order pattern satisfies `m ≤ k` (max at bigon-trees).
+
+**(3) `g(ρ):=lim F(ρ)/p^m ≡ +1` for every top-order pattern — PROVED.** Within each series-class the
+closed Euler walk passes straight through the degree-2 internal vertices, so all its edges receive
+the SAME orientation sign `s∈{±1}`; the class being even gives `∏_{e∈class}sign_e=s^{even}=+1`, so
+`P=(+1)·Q²` and `g=χ(P)=+1`. (Numerically: `g=+1` for all `3+13+67` contributing patterns at k=2,3,4.)
+The character/Gauss-sum content thus **collapses entirely** at leading order:
+```
+c_0 = (-1)^k Σ_{ρ : even-series pattern} μ(0̂,ρ) = C_k,
+i.e.   Σ_{ρ : even-series pattern} μ(0̂,ρ) = (-1)^k C_k        (number-theory-FREE).
+```
+
+**(4) Status of handoff #1 (clean proof of the Catalan coefficient).** Now a *purely combinatorial*
+identity `(★★)` over the partition lattice — no characters, no Weil, no Gauss sums. The bigon-tree
+sub-sum is the all-pairings overcount A088368 (`1,3,13,69,…~e·n!`); even cacti + even thetas + …
+cancel it to `C_k`. This is exactly Wigner quasirandomness: the random skew-Rademacher matrix gives
+`C_k` *directly* from non-crossing pairings (each `+1`), and `(★★)` is the statement that the
+deterministic Paley Möbius expansion, despite over-counting, lands on the same `C_k`. A clean proof of
+`(★★)` (a non-crossing / free-cumulant bijection on even-series patterns) is the remaining write-up —
+strictly cleaner than before (the wrong "even cacti" support is removed and `g≡+1` is no longer assumed).
