@@ -1,0 +1,28 @@
+written
+==========================================================================
+CORE/SUBDIVISION DECOMPOSITION  T_m = sum_e R(m,e) (x/(1-x))^e
+==========================================================================
+
+R(m,e) table (brute, k=e slice):  e = m .. 2m-1
+  m=1: R(m,1)=1
+  m=2: R(m,2)=3  R(m,3)=1
+  m=3: R(m,3)=13  R(m,4)=14  R(m,5)=4
+  m=4: R(m,4)=69  R(m,5)=152  R(m,6)=111
+  m=5: R(m,5)=421  R(m,6)=1550
+  m=6: R(m,6)=2867
+
+Structural checks:
+  m=1: R(m,m)=1  A088368=1  diag-match=True  | sum_e(-1)^e R = -1 (want 0)  | P_m=[1]  deg=0(want -1)  lead=1(want 1)
+  m=2: R(m,m)=3  A088368=3  diag-match=True  | sum_e(-1)^e R = 2 (want 0)  | P_m=[3, -2]  deg=1(want 0)  lead=-2(want 3)
+  m=3: R(m,m)=13  A088368=13  diag-match=True  | sum_e(-1)^e R = -3 (want 0)  | P_m=[13, -12, 3]  deg=2(want 1)  lead=3(want 7)
+  m=4: R(m,m)=69  A088368=69  diag-match=True
+  m=5: R(m,m)=421  A088368=421  diag-match=True
+  m=6: R(m,m)=2867  A088368=2867  diag-match=True
+
+Reconstruct columns from R and cross-check known triangle:
+  m=1: P_m=[1]  predicts t(k,m) k=1..6: [1, 1, 1, 1, 1, 1]  match-triangle=True
+  m=2: P_m=[3, -2]  predicts t(k,m) k=2..6: [3, 7, 12, 18, 25]  match-triangle=False
+  m=3: P_m=[13, -12, 3]  predicts t(k,m) k=3..6: [13, 53, 138, 290]  match-triangle=False
+  m=4: need e up to 7>EMAX=6 -- partial
+  m=5: need e up to 9>EMAX=6 -- partial
+  m=6: need e up to 11>EMAX=6 -- partial
