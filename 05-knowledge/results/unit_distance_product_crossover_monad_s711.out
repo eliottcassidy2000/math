@@ -1,0 +1,63 @@
+==========================================================================
+PART 1 — exact verification of the product edge formula e=e(G)n(H)+n(G)e(H)
+==========================================================================
+K3 (unit triangle):  n=3, e=3, rho=e/n=1  (avgdeg 2)
+W7 (hex rosette):    n=7, e=12, rho=12/7  (avgdeg 24/7)
+
+ K3[]K3            (=u(9) maximizer)
+   N=9 (expect 9), U=18 (expect 18),  3N=27,  U < 3N,  REGULAR deg 4
+
+ W7[]K3            (=AMP u(21) extremal K3#W7)
+   N=21 (expect 21), U=57 (expect 57),  3N=63,  U < 3N,  deg 5..8
+
+ K3[]K3[]K3 = H(3,3) (the n=27 tie)
+   N=27 (expect 27), U=81 (expect 81),  3N=81,  U = 3N,  REGULAR deg 6
+
+ W7[]W7            (product that BEATS 3N)
+   N=49 (expect 49), U=168 (expect 168),  3N=147,  U > 3N,  deg 6..12
+
+  => product formula e(G[]H)=e(G)n(H)+n(G)e(H) verified exactly (Q(sqrt3)).
+  => K3^[]3 = Hamming H(3,3): 27 pts, 6-REGULAR, U=81=3*27 EXACTLY (the tie).
+
+==========================================================================
+PART 2 — product census: smallest N where a product TIES / BEATS 3N
+==========================================================================
+ criterion: product on N=a*b (best factors=u-maximizers) gives U=u(a)b+a u(b),
+            U/N = rho(a)+rho(b);  TIE iff rho(a)+rho(b)=3, BEAT iff >3.
+
+ first TIES (U=3N), N<=60:
+   N= 27 = 3x9: U = u(3)*9+3*u(9) = 81 = 3N  [rho 1+2=3]
+   N= 30 = 3x10: U = u(3)*10+3*u(10) = 90 = 3N  [rho 1+2=3]
+ first BEATS (U>3N), N<=60:
+   N= 32 = 2x16: U = 98 > 96 = 3N  [rho 1/2+41/16=49/16]
+   N= 33 = 3x11: U = 102 > 99 = 3N  [rho 1+23/11=34/11]
+   N= 34 = 2x17: U = 103 > 102 = 3N  [rho 1/2+43/17=103/34]
+   N= 35 = 5x7: U = 109 > 105 = 3N  [rho 7/5+12/7=109/35]
+   N= 36 = 3x12: U = 117 > 108 = 3N  [rho 1+9/4=13/4]
+   N= 38 = 2x19: U = 119 > 114 = 3N  [rho 1/2+50/19=119/38]
+
+  => smallest product TIE  at N = 27  (and 30)
+  => smallest product BEAT at N = 32  (G2[]K16)
+  => N* in [25,28] < 32  =>  N* is NOT a product (a rigid 2D blob).
+
+==========================================================================
+PART 3 — independent reconstruction of the AMP lower-bound deficit pattern
+         via the BEST product on each N (n=22..30), vs Schade/Engel u>=
+==========================================================================
+  n | bestproduct U | 3n | prod-3n | AMP u>= | AMP-3n
+ 22 |            57 | 66 |   -9    |    60  | -6
+ 23 |             0 | 69 |  -69    |    64  | -5
+ 24 |            66 | 72 |   -6    |    68  | -4
+ 25 |            70 | 75 |   -5    |    72  | -3
+ 26 |            73 | 78 |   -5    |    76  | -2
+ 27 |            81 | 81 |   +0    |    81  | +0
+ 28 |            83 | 84 |   -1    |    85  | +1
+ 29 |             0 | 87 |  -87    |    89  | +2
+ 30 |            90 | 90 |   +0    |    93  | +3
+
+  Note: products are defined only at composite n; where n is prime (23,29)
+  no nontrivial product exists. The product's clean +0 tie at n=27 (3^3) and
+  n=32 (=2^5, via G8[]G4) are exactly the structured rungs; AMP's blob does
+  marginally better off-product (e.g. n=28 blob 85 vs product 84).
+
+DONE.
