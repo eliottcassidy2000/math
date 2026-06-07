@@ -1,0 +1,22 @@
+==================================================================
+(A) first lonely time tau, and the friendliness floor tau >= 1/(n*vmin)
+==================================================================
+  n=14 wall {1..11,13,14}   : tau=0.0824  floor 1/(n*vmin)=1/14=0.0714  friendly-for=0.082 of lap;  tau>=floor? True
+  n=7  {1,2,3,4,5,6}        : tau=NONE -> lonely only at isolated TIGHT instants (measure 0); friendly a.e. the WHOLE lap (the extremal {1..n-1} case). floor 1/7=0.1429
+  n=6  {1,2,3,4,5}          : tau=NONE -> lonely only at isolated TIGHT instants (measure 0); friendly a.e. the WHOLE lap (the extremal {1..n-1} case). floor 1/6=0.1667
+  n=5  {1,2,3,4}            : tau=NONE -> lonely only at isolated TIGHT instants (measure 0); friendly a.e. the WHOLE lap (the extremal {1..n-1} case). floor 1/5=0.2000
+  -> you stay FRIENDLY (never lonely yet) at least until 1/(n*vmin); with the unit
+     speed present that floor is 1/n (formalized friendly_until_inv_n).
+  -> the TIGHT extremal {1,..,n-1}: lonely set is MEASURE ZERO (a single instant 1/n),
+     so you are 'never lonely yet' a.e. the whole lap -- friendliness survives maximally.
+
+==================================================================
+(B) survival S(t)=P(never lonely yet by t) over random configs, per n
+==================================================================
+  n= 5: median first-lonely tau ~ 0.240;  S(1/n)=  ~1; all lonely by t<1 (LRC)? True
+  n= 8: median first-lonely tau ~ 0.133;  S(1/n)=  ~1; all lonely by t<1 (LRC)? True
+  n=12: median first-lonely tau ~ 0.091;  S(1/n)=  ~1; all lonely by t<1 (LRC)? True
+  -> survival starts at 1 (everyone friendly at t=0+), decays to 0 as loneliness
+     'catches' each config at its tau; LRC <=> every curve reaches 0 within the lap.
+
+wrote friendliness_survival_s647.svg and .png
