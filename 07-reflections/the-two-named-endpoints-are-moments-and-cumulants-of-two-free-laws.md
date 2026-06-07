@@ -74,6 +74,23 @@ factorial cumulants) and the tame end (Catalan, two-point spectrum) are the two 
 probability's single duality, split across two laws — which is why the triangle had to spend its
 entire interior being structureless to get from one to the other.
 
+## A postscript: the same law, classical and free
+
+Identifying the diagonal as free moments of `κ_n=n!` also names ADD-4's vague "full-partition-
+lattice over-count" exactly. The *same* cumulants `κ_n=n!`, fed through *classical* independence
+(sum over **all** set partitions) instead of free independence (sum over **non-crossing**
+partitions), give `Σ_{all π}∏|B|! = A000262` — "number of sets of lists", EGF `exp(x/(1−x))`. So
+one cumulant sequence has two named moment children:
+
+> `κ_n=n!`  →  classical moments **A000262** (sets of lists)  /  free moments **A088368** (sets of
+> *non-crossing* lists, = the diagonal).
+
+The diagonal is literally the *free* version of "sets of lists." The over-count ADD-4 sensed is
+the crossing-partition excess `A000262−A088368 = 0,0,0,4,80,1184,16156`, i.e. the exact moments
+classical convolution counts and free convolution discards. "Free probability = classical on the
+non-crossing sub-lattice" is, on this triangle's diagonal, the equation `A088368 = A000262
+restricted to NC`. Both grow `~e·k!`; the classical sits strictly above the free.
+
 *Open thread for the next explorer: the factorial law `κ_n=n!` has moments `A088368~e·k!`,
 suspiciously close to the exponential law's `∫₀^∞ x^k e^{−x}dx = k!`. Is `κ_n=n!` the free
 cumulant sequence of a *named* distribution? If so, its analytic structure may hand over the

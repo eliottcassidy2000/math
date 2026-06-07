@@ -883,14 +883,25 @@ there is no single law whose (moment, free-cumulant) pair are these two endpoint
 deterministic Möbius transit connecting them is not the moment↔cumulant transform of any one law
 and carries no catalogued sub-sequence.
 
-### (4) SHARPENS ADD-4's "full-partition-lattice over-count."
+### (4) SHARPENS ADD-4's "full-partition-lattice over-count" — it is the CLASSICAL moment sequence A000262.
 ADD-4 loosely called A088368 "the full-partition-lattice over-count (the free cumulant lives on
-the NC sub-lattice)." The correct statement is the reverse refinement: **A088368 = the
-NON-CROSSING sum** `Σ_{NC(k)}∏|B|!` (= free moments). The genuine over-count is
-`Σ_{ALL partitions}∏|B|!`, which is **strictly larger for k≥4** — the crossing partitions are the
-excess: `crossing over-count = 0,0,0,4,80,1184,16156` for k=1..7
-(`Σ_all = 1,3,13,73,501,4051,37633`). The diagonal lives on NC precisely because the max-cycle-
-rank patterns are planar (doubled plane trees, genus 0).
+the NC sub-lattice)." The precise statement: the **same** cumulant sequence `κ_n=n!` generates
+TWO named moment sequences, one classical and one free, related exactly by the non-crossing
+restriction that *defines* free independence:
+```
+   CLASSICAL moments  m_k^{cl} = Σ_{ALL partitions of [k]} ∏_B |B|!  =  A000262(k)
+                       = "number of sets of lists", EGF  exp(x/(1−x));
+   FREE moments       m_k^{fr} = Σ_{NC(k)}            ∏_B |B|!  =  A088368(k)  (the diagonal).
+```
+(VERIFIED exact, `paley_starstar_diagonal_freemoments_monad.py`: `Σ_all = 1,3,13,73,501,4051,
+37633 = A000262`; `n!·[x^n]exp(x/(1−x)) = A000262` confirmed via series.) So ADD-4's "over-count"
+is **A000262**, the classical-independence moments of the factorial law, and the diagonal A088368
+is its **free** shadow. The excess `A000262−A088368 = 0,0,0,4,80,1184,16156` (k=1..7) is exactly
+the **crossing-partition = classical−free gap**: the moments classical convolution counts but free
+convolution drops. The diagonal lands on the free side because the max-cycle-rank patterns are
+planar (doubled plane trees, genus 0) — the NC restriction is the genus-0 restriction. In one
+line: `κ_n=n!` ↦ classical "sets of lists" **A000262**, free "sets of NONcrossing lists"
+**A088368** (the diagonal). Both moment sequences `~ e·k!`; the classical exceeds the free.
 
 ### (5) COROLLARY — `h_m(m)→e` is a free-probability fact about the factorial law.
 With `t(k,m)=(k)_m h_m(k)` (ADD-9), `h_m(m)=A088368(m)/m! → e` (Kotesovec). Restated: the free

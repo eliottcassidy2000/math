@@ -55,15 +55,17 @@
       [z^5] R = 720
       [z^6] R = 5040
 
-(5) SHARPEN ADD-4: the over-count lives on the FULL lattice; free moments use NC only.
-   k=1:  NC-sum=       1=A088368   ALL-sum=        1   crossing over-count=        0
-   k=2:  NC-sum=       3=A088368   ALL-sum=        3   crossing over-count=        0
-   k=3:  NC-sum=      13=A088368   ALL-sum=       13   crossing over-count=        0
-   k=4:  NC-sum=      69=A088368   ALL-sum=       73   crossing over-count=        4
-   k=5:  NC-sum=     421=A088368   ALL-sum=      501   crossing over-count=       80
-   k=6:  NC-sum=    2867=A088368   ALL-sum=     4051   crossing over-count=     1184
-   k=7:  NC-sum=   21477=A088368   ALL-sum=    37633   crossing over-count=    16156
-   crossing partitions give a strictly larger 'full-lattice over-count' for k>=4: True
+(5) SHARPEN ADD-4: the over-count IS the CLASSICAL moments A000262 (sets of lists).
+    SAME cumulants kappa_n=n!:  classical moments = Sum_{ALL partitions} prod|B|!
+    = A000262 (EGF exp(x/(1-x)), 'sets of lists');  free moments = Sum_{NC} = A088368
+    ('sets of NONcrossing lists').  The crossing partitions = the classical<->free gap.
+   k=1:  free NC-sum=       1=A088368   classical ALL-sum=        1=A000262   crossing(class-free)=        0
+   k=2:  free NC-sum=       3=A088368   classical ALL-sum=        3=A000262   crossing(class-free)=        0
+   k=3:  free NC-sum=      13=A088368   classical ALL-sum=       13=A000262   crossing(class-free)=        0
+   k=4:  free NC-sum=      69=A088368   classical ALL-sum=       73=A000262   crossing(class-free)=        4
+   k=5:  free NC-sum=     421=A088368   classical ALL-sum=      501=A000262   crossing(class-free)=       80
+   k=6:  free NC-sum=    2867=A088368   classical ALL-sum=     4051=A000262   crossing(class-free)=     1184
+   k=7:  free NC-sum=   21477=A088368   classical ALL-sum=    37633=A000262   crossing(class-free)=    16156
 
 (6) THE e-ASYMPTOTIC IS A FREE-PROBABILITY STATEMENT ABOUT THE FACTORIAL LAW:
     m_k / k! = A088368(k)/k! -> e  (Kotesovec). The factorial law's free moments

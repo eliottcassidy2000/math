@@ -265,16 +265,18 @@ print("    Gevrey-1 / Borel sum = exp-integral; this IS the wildness ADD-6 saw i
 for n in range(1, 8):
     print(f"      [z^{n-1}] R = {fact(n)}")
 
-print("\n(5) SHARPEN ADD-4: the over-count lives on the FULL lattice; free moments use NC only.")
-ok5 = True
+print("\n(5) SHARPEN ADD-4: the over-count IS the CLASSICAL moments A000262 (sets of lists).")
+print("    SAME cumulants kappa_n=n!:  classical moments = Sum_{ALL partitions} prod|B|!")
+print("    = A000262 (EGF exp(x/(1-x)), 'sets of lists');  free moments = Sum_{NC} = A088368")
+print("    ('sets of NONcrossing lists').  The crossing partitions = the classical<->free gap.")
+A000262 = [1, 1, 3, 13, 73, 501, 4051, 37633, 394353]
 for k in range(1, 8):
     nc = nc_block_factorial_sum(k)
     al = all_block_factorial_sum(k)
-    cross = al - nc           # contribution of crossing partitions
-    print(f"   k={k}:  NC-sum={nc:>8}=A088368   ALL-sum={al:>9}   crossing over-count={cross:>9}")
-    if k >= 4 and cross == 0:
-        ok5 = False
-print(f"   crossing partitions give a strictly larger 'full-lattice over-count' for k>=4: {True}")
+    cross = al - nc           # contribution of crossing partitions = classical - free
+    tagc = "=A000262" if al == A000262[k] else "  (!=A000262)"
+    print(f"   k={k}:  free NC-sum={nc:>8}=A088368   classical ALL-sum={al:>9}{tagc}   "
+          f"crossing(class-free)={cross:>9}")
 
 print("\n(6) THE e-ASYMPTOTIC IS A FREE-PROBABILITY STATEMENT ABOUT THE FACTORIAL LAW:")
 print("    m_k / k! = A088368(k)/k! -> e  (Kotesovec). The factorial law's free moments")
