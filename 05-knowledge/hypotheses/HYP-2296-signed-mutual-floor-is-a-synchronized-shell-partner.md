@@ -78,6 +78,33 @@ small-speed cluster forcing `r_min ≥ n` (THM-429 Cor 2), with the floor a sum-
 (Part A) — so the asymptotic question is: *how small can the gap of the best forced shell-partner be,
 minimized over speed sets?*
 
+### Matched-B evidence — leans toward the `Θ(1/n)` floor (monad-compute-2026-06-07)
+
+The prior table mixes B per n, so `n·inf` was not comparable across `n`. Running the **same**
+proven exhaustive search (`signed_lrc_inf_highB.search`) at a **common B=13** for `n=5..8`:
+
+| n | inf Gstar (B=13) | `n·inf` | `2/n²` (lower bd) |
+|---|------------------|---------|-------------------|
+| 5 | 1/5  | 1.0000 = 1   | 0.0800 |
+| 6 | 3/20 | 0.9000 = 9/10 | 0.0556 |
+| 7 | 5/42 | 0.8333 = 5/6 | 0.0408 |
+| 8 | 1/10 | 0.8000 = 4/5 | 0.0313 |
+
+The `n·inf` column is **1, 9/10, 5/6, 4/5** = `30/30, 27/30, 25/30, 24/30`: decrements `3,2,1` — a
+**decelerating** decrease, not a plunge. Per-n ceilings (best feasible B) tell the same story:
+`n·inf ≤` 1.000 (n=5, robust B≤22), 0.889 (n=6, B17), 0.833 (n=7, **stable** B13=B14), 0.842 (n=8, B12).
+
+**Reading (NOT a proof):** across `n=5..8` the best-known `n·inf` stays in `[0.80, 1.0]` and sits
+`~20–30×` **above** the `2/n²` unconditional lower bound, with the gap to that bound *widening* in `n`,
+not closing. `n·inf` is decreasing but decelerating. This is computational evidence **for** a true
+`Θ(1/n)` second floor (`n·inf → c > 0`, plausibly `c ≈ 0.8`) and **against** decay to the `Θ(1/n²)`
+regime. Caveat: upper bounds only (true inf may dip lower; n=8 reached only B≤14), and `n≤8` cannot
+settle an asymptotic — but no minimizer found drives `n·Gstar` anywhere near `0`. The `Θ(1/n²)` decay
+would require an explicit cluster family with `q→∞`, `k` bounded *and* `r_min` blowing up; none of the
+exhaustive minimizers (all near-consecutive small blocks, `q ≤ 42`) exhibit that.
+Files: `04-computation/signed_lrc_inf_matchedB_monad.py`, `…inf_n8_firmup_monad…`
+(+ `05-knowledge/results/*.out`).
+
 ## Sources
 - `04-computation/signed_lrc_pairwise_inf_floor_monad_s3.py`, `…rmin_bound_…`, `…inf_highB_…`,
   `…families_…`, `…full_floor_…`, `…block_certificate_…` (+ `05-knowledge/results/*.out`)
