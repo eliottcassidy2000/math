@@ -1,0 +1,57 @@
+========================================================================
+(A)+(C) diagonal = A088368 ; signed row sum = (-1)^k C_k  [both CATALOGUED]
+========================================================================
+  k=1: diag t(k,k)=     1 =A088368(1)=     1 | signed=   -1  (-1)^k C_k=   -1  match=True
+  k=2: diag t(k,k)=     3 =A088368(2)=     3 | signed=    2  (-1)^k C_k=    2  match=True
+  k=3: diag t(k,k)=    13 =A088368(3)=    13 | signed=   -5  (-1)^k C_k=   -5  match=True
+  k=4: diag t(k,k)=    69 =A088368(4)=    69 | signed=   14  (-1)^k C_k=   14  match=True
+  k=5: diag t(k,k)=   421 =A088368(5)=   421 | signed=  -42  (-1)^k C_k=  -42  match=True
+  k=6: diag t(k,k)=  2867 =A088368(6)=  2867 | signed=  132  (-1)^k C_k=  132  match=True
+
+========================================================================
+(B) ADD-9 pt(6) REFUTED: a(n)/n! overshoots e, peaks at n=8, descends to e
+========================================================================
+  e = 2.718282
+  n= 2  a(n)/n!= 1.5000   [ADD-9 (n+2)/2=  2.0]
+  n= 3  a(n)/n!= 2.1667   [ADD-9 (n+2)/2=  2.5]
+  n= 4  a(n)/n!= 2.8750   [ADD-9 (n+2)/2=  3.0]
+  n= 5  a(n)/n!= 3.5083   [ADD-9 (n+2)/2=  3.5]
+  n= 6  a(n)/n!= 3.9819   [ADD-9 (n+2)/2=  4.0]
+  n= 7  a(n)/n!= 4.2613   [ADD-9 (n+2)/2=  4.5]
+  n= 8  a(n)/n!= 4.3594   [ADD-9 (n+2)/2=  5.0]
+  n= 9  a(n)/n!= 4.3190   [ADD-9 (n+2)/2=  5.5]
+  n=10  a(n)/n!= 4.1926   [ADD-9 (n+2)/2=  6.0]
+  n=11  a(n)/n!= 4.0266   [ADD-9 (n+2)/2=  6.5]
+  n=12  a(n)/n!= 3.8544   [ADD-9 (n+2)/2=  7.0]
+  n=13  a(n)/n!= 3.6958   [ADD-9 (n+2)/2=  7.5]
+  n=14  a(n)/n!= 3.5592   [ADD-9 (n+2)/2=  8.0]
+  n=15  a(n)/n!= 3.4464   [ADD-9 (n+2)/2=  8.5]
+  n=16  a(n)/n!= 3.3552   [ADD-9 (n+2)/2=  9.0]
+  n=17  a(n)/n!= 3.2821   [ADD-9 (n+2)/2=  9.5]
+  n=18  a(n)/n!= 3.2233   [ADD-9 (n+2)/2= 10.0]
+  n=19  a(n)/n!= 3.1757   [ADD-9 (n+2)/2= 10.5]
+  n=20  a(n)/n!= 3.1366   [ADD-9 (n+2)/2= 11.0]
+  --> ratio PEAKS at n=8 (4.3594); then strictly DECREASES toward e.
+  --> ADD-9's '(n+2)/2' fits only the rising side n<=7 and diverges after the peak.
+
+========================================================================
+(D) PROVEN ROW 7 (columns m=1..4 from proved column GFs; diag from A088368)
+========================================================================
+  column forms reproduce known triangle (m<=4): True
+  t(7,1..4) = 1, 63, 1155, 8617   t(7,7)=A088368(7)=21477
+  C_7=429;  signed-sum identity =>  t(7,6) - t(7,5) = 13524
+  (one linear relation between the two still-uncomputed entries t(7,5),t(7,6))
+
+========================================================================
+(E) the bridge polynomial h_m(k): two ends -> {e, 0}
+========================================================================
+  WILD end  h_m(m)   = A088368(m)/m!  -> e        (Kotesovec)
+  TAME end  h_m(-1)  = (2^m-1)/((-1)^m m!) -> 0    (super-exponential)
+  m=2: h_m(m)= 1.5000   h_m(-1)=+1.50000
+  m=3: h_m(m)= 2.1667   h_m(-1)=-1.16667
+  m=4: h_m(m)= 2.8750   h_m(-1)=+0.62500
+  m=5: h_m(m)= 3.5083   h_m(-1)=-0.25833
+  m=6: h_m(m)= 3.9819   h_m(-1)=+0.08750
+  m=7: h_m(m)= 4.2613   h_m(-1)=-0.02520
+  m=8: h_m(m)= 4.3594   h_m(-1)=+0.00632
+  => h_m interpolates the bridge from 0 (tame/Mersenne) to e (wild/noncrossing-lists).
