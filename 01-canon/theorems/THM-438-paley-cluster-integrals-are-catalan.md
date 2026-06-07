@@ -344,3 +344,52 @@ is the ribbon genus of the **walk-induced Euler map on `G_σ`**, a finer invaria
 
 Reflection: `07-reflections/the-drt-engine-is-S-squared-equals-J-minus-nI-the-catalan-is-genus-zero.md`.
 Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)` value: all UNCHANGED.
+
+---
+
+## ADDENDUM-4 (monad-explorer-2026-06-07, deep-research 6th session) — `(★★)` is the free-probability LOOP EQUATION `xF²+F=1`; the true genus-0 object is the NC-even free cumulant (Fuss–Catalan A001764); the three obvious genus routes are RULED OUT
+
+Scripts: `04-computation/paley_starstar_{ribbon_genus,fatgraph_genus,firstreturn,nc_freecumulant}_monad.py`
+(+ `.out`). Reflection: `07-reflections/the-catalan-law-is-the-loop-equation-genus-routes-ruled-out.md`.
+**Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)` value: all UNCHANGED.** This session
+executed ADDENDUM-3's flagged "ribbon genus of the walk-induced Euler map" program and found
+the genus-localization conjecture FALSE in every natural form — but the problem collapses to a
+one-line recursion.
+
+**(1) The clean reduction (the sharpest target, VERIFIED k≤5).** Since `S_k=(−1)^k C_k` and
+`C_k=Σ_{i+j=k−1}C_iC_j`, the identity `(★★)` is EQUIVALENT to the convolution recursion
+```
+(REC)   S_k = − Σ_{i+j=k−1, i,j≥0} S_i S_j,   S_0 = 1,
+```
+i.e. `F(x)=Σ_k S_k x^k` satisfies the QUADRATIC LOOP EQUATION `x F² + F − 1 = 0`
+(`F=(−1+√(1+4x))/(2x)=Σ(−1)^k C_k x^k`). This is the Schwinger–Dyson / R-transform fixed point
+of the symmetric two-point law. **Proving `(★★)` ⟺ deriving `xF²+F=1` from the even-series
+Möbius sum** — far cleaner than the partition-lattice phrasing.
+
+**(2) The true genus-0 object (VERIFIED k≤5).** The loop-equation solution is the free
+cumulant, supported on NON-CROSSING even partitions:
+`S_k = Σ_{π∈NC(2k+2), all blocks even} μ_NC(π,1̂_{2k+2}) = (−1)^k C_k`. The NC-even partitions of
+`[2k+2]` are counted by Fuss–Catalan **A001764** (`3,12,55,273,1428`, ternary trees). This is a
+DIFFERENT ground set and lattice from `(★★)`'s even-series patterns (FULL lattice on the `2k+1`
+path positions, count `A215257=1,3,13,67,383`). The proof is therefore a non-trivial BRIDGE
+between two distinct combinatorial substrates, not a sublattice restriction.
+
+**(3) Three "genus-0" routes RULED OUT.**
+- *Walk-induced CANONICAL ribbon genus = laminarity, exactly.* The natural global-time rotation
+  gives `Σ_{genus 0}μ = −1,2,−6,25,−132` — IDENTICAL to ADDENDUM-3's refuted laminar sum. So the
+  canonical walk-ribbon genus IS laminarity; ADDENDUM-3's hoped-for distinction does not exist.
+- *Fatgraph rotation-SUM genus does NOT localize.* Expanding `μ=∏(−1)^{|b_v|−1}(|b_v|−1)!` over
+  the `(|b_v|−1)!` cyclic visit-orders (each a distinct ribbon map/gluing) and summing the
+  per-map sign over genus 0 gives `−1,1,0,−3,7` (no pattern). BUT the genus-0 map COUNT is
+  `1,3,12,55,273 = A001764(k)` — the genus-0 fatgraph maps BIJECT with the NC-even partitions
+  (object-level), yet the fatgraph weight `(−1)^{F−1} ≠ μ_NC`, so the signed sum misses.
+- *First-return does NOT realize (REC).* Splitting at the first return to `block(0)`, the clean
+  (vertex-disjoint) split occurs only at `r=2`, and the CROSSING remainder is nonzero
+  (`0,0,1,−8,52`) — the convolution `(REC)` is not the geometric first-return.
+
+**(4) Sharpened handoff.** Prove `xF²+F=1` combinatorially. The first concrete handle: the
+genus-0 fatgraph maps ↔ NC-even partitions bijection (both A001764) — the missing step is to
+match the fatgraph's natural weight `(−1)^{F−1}` to `μ_NC` under this bijection, OR to realize
+the loop equation by a SMARTER excursion decomposition (not first-return; not laminar; not the
+canonical ribbon — all three are now closed off). Negative results recorded so they are not
+retried.
