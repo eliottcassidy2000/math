@@ -12,6 +12,11 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S5: prove `(★★)` via walk-induced ribbon genus + A215257 bijection
+**Source:** THM-438 ADDENDUM-3, HYP-2308, reflection `the-drt-engine-is-S-squared-equals-J-minus-nI-the-catalan-is-genus-zero.md`.
+**Status:** OPEN. `(★★) Σ_{even-series σ}μ(0̂,σ)=(−1)^kC_k` VERIFIED k≤5; value = free cumulant of the two-point law. Leading-order engine now `S²=J−nI` (DRT-universal, number-theory-free, VERIFIED p≤43).
+**Next steps:** (a) build the rotation system the Euler walk `x_0..x_{2k}` induces on `G_σ`, compute ribbon genus per pattern (k≤5 enumerated on disk), test `Σ_{genus 0}μ=(−1)^kC_k` & `Σ_{genus>0}μ=0` (naive non-crossing-PARTITION version is REFUTED — do not retry). (b) write the explicit bijection even-series patterns ↔ indecomposable deque-sortable permutations (OEIS A215257); its sign structure may prove `(★★)`. (c) HYP-2308 remainder: expander-mixing `o(n^{k+1})` bound, tested on a verified non-circulant DRT n=15. (d) extend cycle-rank triangle to k=6,7 (needs enumerator smarter than all-set-partitions) to pin its recursion.
+
 ## Priority opus-2026-05-16-S1: TRRT and All-0 Staircase
 
 ### INV-191: H=63 Unlocks at n=8 via Complete Conflict Graph

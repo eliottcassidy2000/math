@@ -291,3 +291,56 @@ law: the free cumulants of the two-point spectrum ARE Catalan, hence the law is
 R-transform recursion (a first-return decomposition of the closed even-series walk) — i.e. the
 moment→free-cumulant inversion realized combinatorially. This is a strictly sharper, fully
 number-theory-free target than the (incorrect) "even cacti = C_k".
+
+---
+
+## ADDENDUM-3 (monad-explorer-2026-06-07, deep-research 5th session) — the engine is `S²=J−nI`; even-series count = A215257; the cycle-rank triangle
+
+**(1) ALL of THM-438's leading order follows from the single relation `S²=J−nI` — no number
+theory.** The Paley skew matrix `M[x,y]=χ(y−x)` (`p≡3 mod4`) satisfies, by one elementary
+character sum (`Σ_y χ((y−x)(z−y)) = +1` if `x≠z`, `−(p−1)` if `x=z`):
+```
+        M·1 = 0          M² = J − pI.
+```
+These are *exactly* the defining relations of a doubly-regular-tournament skew matrix
+(`Sᵀ=−S, S1=0, S Sᵀ=nI−J ⟺ S²=J−nI`). VERIFIED `M²=J−pI` for every Paley prime `p≤43`
+(`04-computation/drt_engine_M2_monad.py`). From `S²=J−nI` *alone* (Gauss sums, characters and the
+Weil bound all removed):
+- a length-`ℓ` series-chain summed over its free internal values is `S^ℓ`, and `S^{2t}=(−n)^t(I−J/n)`
+  while `S^{2t+1}=(−n)^t S` (order 1) — so **odd chains kill the leading order ⟹ the even-series
+  support is re-derived**, not imported (even thetas included, MISTAKE-061);
+- expanding `∏_{chains}(−n)^{ℓ/2}(δ−1/n)` and summing free hub values gives top power `n^{k+1}` with
+  per-pattern sign `(−1)^k·g(σ)`, `g(σ)=+1` — so **`g≡+1` is re-derived** (`S^{even}` is a scalar
+  times a projector; no character survives);
+- hence `c_0 = lim A_{2k}/n^{k+1} = (−1)^k Σ_{even-series}μ(0̂,σ)` is a **single matrix identity that
+  every DRT satisfies**, so the leading coefficient is the SAME rational for every DRT (circulant or
+  not). This is the leading-order half of HYP-2308, now essentially free. Only the `o(n^{k+1})`
+  remainder (uniform subleading-ness of odd/non-even-series patterns) is circulant-specific (one Weil
+  bound; for general DRT an expander-mixing estimate using `|λ|=√n` exactly).
+
+**(2) The even-series pattern count is OEIS A215257.** `1,3,13,67,383` (k=1..5) `= A215257(k+1)` =
+the number of **indecomposable permutations sortable by a double-ended queue (deque)** (INVERTi of
+A182216; "indecomposable" ↔ our "connected `G_σ`"). This is a genuinely hard sequence — Elvey-Price &
+Guttmann (arXiv:1508.02273) give evidence its g.f. is *not* D-finite — yet the **Möbius-signed** sum
+collapses it to `(−1)^k C_k`. The Catalan really is a *cancellation*, not a count.
+
+**(3) The cycle-rank (genus-like) grading.** Writing `S_k=Σ_m (−1)^m t(k,m)` by cycle rank
+`m=2k−V+1` (`04-computation/paley_starstar_recursion_monad.py`):
+```
+   k=1: 1 | k=2: 1 3 | k=3: 1 9 13 | k=4: 1 18 72 69 | k=5: 1 30 230 580 421
+```
+`t(k,1)=1` (single 2k-cycle), `t(k,2)=3·C(k,2)`, diagonal `t(k,k)=A088368(k)=1,3,13,69,421`
+(`~e·n!`, the all-pairings overcount). Row-alternating-sum `=(−1)^k C_k`. The triangle is **new**
+(not in OEIS). Shape = a two-point matrix-model genus expansion: A088368 is the all-genus total,
+`μ(0̂,σ)=∏(−1)^{|B|−1}(|B|−1)!` is the signed cyclic-interleaving (ribbon) freedom at each hub, and
+the signed sum should localize to genus 0 = `C_k`.
+
+**(4) NEGATIVE result (recorded so it is not retried):** the *naive* genus-0 reading — localize onto
+even-series `σ` whose **index partition is non-crossing (laminar)** — is FALSE
+(`04-computation/paley_starstar_noncrossing_monad.py`): the non-crossing-restricted sum is
+`−1,2,−6,25,−132` (not Catalan), crossing remainder `0,0,+1,−11,+90` (not zero). The correct "planar"
+is the ribbon genus of the **walk-induced Euler map on `G_σ`**, a finer invariant than laminarity of
+`σ`. Sharpened handoff #1: build that ribbon/rotation structure, test `Σ_{genus 0}μ=(−1)^kC_k`.
+
+Reflection: `07-reflections/the-drt-engine-is-S-squared-equals-J-minus-nI-the-catalan-is-genus-zero.md`.
+Statements `A_{2k}=C_k p^{k+1}`, `R(p)→e`, `(★★)` value: all UNCHANGED.
