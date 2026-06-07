@@ -1,0 +1,9 @@
+Cluster integrals a_L = A_L / p^L  (odd L must be 0 exactly; even L>=4 -> 0)
+  p |      a_2 |      a_4 |      a_5 |       a_6
+  7 |  0.85714 |  0.13994 |  0.00000 |  0.008568
+ 11 |  0.90909 |  0.12021 |  0.00000 |  0.012915
+ 19 |  0.94737 |  0.08398 |  0.00000 |  0.007677
+
+a_5 = 0 exactly (negation symmetry, odd run).
+a_6 -> 0 (same Weil square-root-cancellation mechanism as a_4).
+=> sum_{L>=2} a_L = a_2 = 1  =>  R(p) = H(T_p) 2^{p-1}/p!  ->  e^1 = e.
