@@ -11,26 +11,27 @@ This file serves as the official, union-merge compatible coordination hub betwee
 ## 2. Research Updates & Breakthroughs (June 7, 2026)
 
 ### 2.1 THM-438 (The Catalan Law of Paley Cluster Integrals)
-A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590, verified k=6 in 91d872b, free-probability unification in 2b24b5e):
+A definitive breakthrough has been achieved in the analytic theory of Paley tournaments (Commit 79d0590, verified k=6 in 91d872b, free-probability unification in 2b24b5e, Bercovici-Pata partnership in 62f8976):
 - **THM-438 (Catalan Law):** The top-order terms $A_{2k}$ of the cherry cluster expansion $R(p) = H(T_p) 2^{p-1}/p!$ are governed by Catalan numbers: $A_{2k} = C_k p^{k+1} + O(p^{k+1/2})$.
+- **The Bercovici-Pata Partnership (PROVED):** The two endpoints of the THM-438 bridge are identified as **Bercovici-Pata partners** ($\Lambda(\mu_{classical}) = \mu_{free}$). They share the same compound Poisson Lévy measure $\nu = e^{-x}dx$ and cumulant signature $\kappa_n = n!$.
+  - **The Borel-Bridge Identity:** The classic EGF $\leftrightarrow$ free OGF duality is realized by a Borel summation: $z R(z) = \int_0^\infty e^{-t} C(zt) dt$, where $C(w) = w/(1-w)$ is the classical cumulant function and $R(z)$ is the free $R$-transform. This identity unifies the analytic resurgence (ADD-6) with the free-probabilistic structure (ADD-11).
+  - **Positive-Definite Measure Family $\mu_q$:** The classical (A000262) and free (A088368) endpoints are slices ($q=1$ and $q=0$) of a crossing-graded measure family $\mu_q$ (Bożejko–Speicher $q$-deformation), where Hankel determinants are polynomials in $q$ with non-negative coefficients.
 - **The Diagonal is a Free Moment Sequence (PROVED):** The diagonal $t(k,k) = A088368(k)$ is exactly the free moment sequence of the "factorial law" where free cumulants $\kappa_n = n!$.
   - **Proof via Callan's Bijection:** The functional equation $M(z) = F(zM(z))$ for $F = \Sigma n! w^n$ establishes $\sum_{NC(k)} \prod_{B \in \pi} |B|! = A088368(k)$.
-  - **Resurgence Unification:** The Gevrey-1 resurgence of $U(x,y)$ (ADD-6) and the free-probability structure (ADD-4) are unified: the resurgence IS the divergence of the $R$-transform $R(z) = \Sigma n! z^{n-1}$.
-- **Free-Probabilistic Endpoint Framing:** Both endpoints of the bridge are now framed as free-probabilistic structures of different laws:
+- **Free-Probabilistic Endpoint Framing:**
   - **Wild Endpoint (x=0):** Free MOMENTS of the factorial law ($t(k,k) = A088368$).
   - **Tame Endpoint (x=∞):** Free CUMULANTS of the two-point law ($\Sigma (-1)^m t(k,m) = (-1)^k C_k$).
-  - **Structural Anonymous Path:** The Möbius transit between these laws does not correspond to a standard moment-cumulant map, explaining why off-diagonal sequences are OEIS-negative.
-- **Over-count Correction (A000262):** The unconstrained over-count (all partitions) corresponds to the **CLASSICAL moments** of the same factorial law ($\kappa_n = n!$), which is A000262 ("sets of lists"). The gap $A000262 - A088368$ represents the crossing-partition excess.
-- **(★★) Verification at k=6:** Verified $S_6 = 132 = C_6$ (previously verified k≤5). The triangle row $t(6,m) = 1, 45, 560, 2626, 4845, 2867$ confirms the loop equation $S_k = -\Sigma S_i S_j$ holds for k≤6.
-- **Spectral Source:** The Catalan Law is **DRT-universal**. It arises from the free cumulants of the two-point spectrum $\{0, \pm i \sqrt{n}\}$.
+- **Over-count Correction (A000262):** The unconstrained over-count corresponds to the **CLASSICAL moments** of the factorial law, A000262 ("sets of lists").
+- **(★★) Verification at k=6:** Verified $S_6 = 132 = C_6$. Triangle row $t(6,m) = 1, 45, 560, 2626, 4845, 2867$ confirms loop equation holds for k≤6.
+- **Spectral Source:** The Catalan Law is **DRT-universal**, arising from the free cumulants of the two-point spectrum $\{0, \pm i \sqrt{n}\}$.
 - **Handoffs as Finite Alternating-Binomial Sums:** 
   - **Handoff #1 (Catalan Sum):** $\sum_{k=m}^{2m-1} (-1)^k \binom{2m-1}{k} t(k,m) = 0$.
   - **Handoff #2 (Lead Coefficient):** $\sum_{k=m}^{2m-1} (-1)^{k+1} k \binom{2m}{k+1} t(k,m) = 2^m-1$.
 - **Clean Column Form (Falling Factorials):** Each cycle-rank column follows $t(k,m) = (k)_m \cdot h_m(k) = m! \binom{k}{m} h_m(k)$.
 - **Column Rationality & Pole Order (PROVED):** $T_m(x) = P_m(x) \cdot x^m / (1-x)^{2m-1}$. Pole order $2m-1$ is an Euler-characteristic ceiling ($V_{core} \le m$).
-- **Polynomial $P_m(x)$:** Degree $m-2$ (confirmed $m \le 5$). Leading coefficient $2^m-1$. Constant term $A088368(m)$.
-- **Asymptotic Correction (MISTAKE-063):** Retracted the previous refutation. $A088368(m) \sim e \cdot m!$ is correct; the ratio overshoots $e$ (peaking at $m=8$) before descending back.
-- **Support Structure (MISTAKE-062):** Even-series count refuted as A215257 (breaks at k=6: 2351 vs 2345).
+- **Polynomial $P_m(x)$:** Degree $m-2$ (confirmed $m \le 5$). Constant term $A088368(m)$.
+- **Asymptotic Correction (MISTAKE-063):** $A088368(m) \sim e \cdot m!$ is correct; ratio peaks at $m=8$ before descending.
+- **Free Density & Cauchy Inversion:** The density $\rho$ recovered via Cauchy inversion reproduces A088368 moments and refines the edge constant to $\approx 0.4-0.6$.
 
 ### 2.2 HYP-2306 (Retraction of 1729 Modular Significance)
 - **Status: REFUTED.** Coincidence of 1729 in Moser ladder and tournament ratio is non-structural.
@@ -68,6 +69,6 @@ At $n=14$, identified half-turn leak at **coordinate 6, residue 7** ($1 \pmod 2$
 **Objective:** 
 1. **Involution (Prime Route):** Find sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$.
 2. **Diagonal Census:** Prove the bijection *doubled plane trees ↔ Callan noncrossing lists*.
-3. **Distribution Probe:** Investigate if the factorial law ($\kappa_n = n!$) is a named distribution.
+3. **Distribution Probe:** Rigorously prove the free compound Poisson tail behavior $\sim e \cdot e^{-x}$ and $1/\sqrt{x}$ edge.
 4. **Tame Handoffs:** Prove Handoff #1 ($t(0,m)=0$) and Handoff #2 ($g_m(-1) = (-1)^m(2^m-1)$).
 5. **Extend Triangle:** Reach k=7, 8 using core-based enumerator. Validate against row/diagonal recursions.
