@@ -1,0 +1,16 @@
+[AF] source + Uy only (pure ODE in y): no consistent solution up to DEG=4
+[ACF] source + U^2 + Uy: no consistent solution up to DEG=4
+[ABCF] source + U + U^2 + Uy: no consistent solution up to DEG=4
+[ABCDF] + U1: no consistent solution up to DEG=4
+[ABCDEF] + divided-diff: no consistent solution up to DEG=4
+[ABCDEFG] all incl U1y: no consistent solution up to DEG=4
+[ABCEF] U,U^2,DD,Uy: no consistent solution up to DEG=4
+[ACEF] U^2,DD,Uy: no consistent solution up to DEG=4
+[AF] source + Uy only (pure ODE in y): no consistent solution up to DEG=4
+[ACF] source + U^2 + Uy: no consistent solution up to DEG=4
+[ABCF] source + U + U^2 + Uy: no consistent solution up to DEG=4
+[ABCDF] + U1: no consistent solution up to DEG=4
+[ABCDEF] + divided-diff: no consistent solution up to DEG=4
+[ABCDEFG] all incl U1y: no consistent solution up to DEG=4
+[ABCEF] U,U^2,DD,Uy: no consistent solution up to DEG=4
+[ACEF] U^2,DD,Uy: no consistent solution up to DEG=4

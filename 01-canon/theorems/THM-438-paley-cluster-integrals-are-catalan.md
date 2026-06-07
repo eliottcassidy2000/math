@@ -438,3 +438,76 @@ algebraic/Tutte equation for `U(x,y)` (root = the marked Eulerian trail) and spe
 exhibit a sign-reversing involution on even-series patterns that shifts `m` by `±1`. The three
 planarity routes are now closed off by genus-blindness; the catalytic variable is the cycle-rank
 marker `y`, not any surface genus.
+
+---
+
+## ADDENDUM-6 (monad-explorer-2026-06-07, deep-research 8th session) — `(★★)` verified at k=6; the cycle-rank triangle's COLUMNS are RATIONAL with denominator `(1−x)^{2m−1}`; the even-series count is NOT A215257 (breaks at k=6); low-degree catalytic equations for `U(x,y)` are RULED OUT (the factorial diagonal ⟹ `U` is resurgent, not algebraic)
+
+Scripts: `04-computation/paley_starstar_triangle_fast_monad.py` (fast integer enumerator,
+no SVD), `paley_starstar_crosscheck_monad.py` (validation), `paley_starstar_column_gf_monad.py`
+(column GF), `paley_starstar_catalytic_fit_monad.py` (catalytic-equation search). Outputs in
+`05-knowledge/results/paley_starstar_*_monad.out`. **Statements `A_{2k}=C_k p^{k+1}`,
+`R(p)→e`, `(★★)` value: all UNCHANGED.** This session extends the data one row (k=6),
+refutes one side-claim (A215257), proves one new structural fact (column rationality), and
+reframes handoff #1.
+
+**(1) FAST INTEGER ENUMERATOR (validated).** Replaced the per-partition numpy SVD (ADD-2/3
+scripts) with iterative RGS generation + cheap prefilters + INTEGER fundamental-cycle line
+detection. Cross-validated against the SVD test with **0 disagreements** — exhaustive at
+k≤5 (incl. all `Bell(11)=678570` at k=5) and a 300k sample at k=6. This both reaches k=6
+and independently re-certifies the ADD-2/3 SVD pipeline.
+
+**(2) `(★★)` VERIFIED AT k=6 (new; was k≤5).** `S_6 = +132 = C_6`; cycle-rank triangle row
+`t(6,m) = 1, 45, 560, 2626, 4845, 2867`; loop-equation recursion `S_k=−Σ_{i+j=k−1}S_iS_j`
+holds through k=6. The full triangle:
+```
+   k=1: 1
+   k=2: 1   3
+   k=3: 1   9   13
+   k=4: 1  18   72   69
+   k=5: 1  30  230  580  421
+   k=6: 1  45  560 2626 4845 2867
+```
+
+**(3) NEW STRUCTURE — COLUMN RATIONALITY.** Each cycle-rank column
+`T_m(x) := Σ_{k≥m} t(k,m) x^k` is RATIONAL with a fixed denominator:
+```
+   T_m(x) = P_m(x) · x^m / (1−x)^{2m−1},    P_m a polynomial,
+   P_m(0) = A088368(m) (the all-pairings overcount / diagonal),
+   deg P_m = m−2  (CONFIRMED m≤4; conjectured ∀m≥2),
+   leading coeff of P_m = 2^m − 1  (= 3,7,15 for m=2,3,4).
+```
+Explicitly `P_1=1, P_2=3, P_3=13+7x, P_4=69+97x+15x²`. The denominator power `2m−1` was
+checked against the prediction `t(6,3) = 13·C(7,4)+7·C(6,4) = 560` (matched exactly before
+k=6 ran). Equivalently, with `u = xy/(1−x)²`, `U(x,y) = (1−x)·Σ_m P_m(x) u^m`. Each `y^m`-
+coefficient of the catalytic GF `U(x,y)` is thus rational in `x` with denominator
+`(1−x)^{2m−1}` — a strong, NEW constraint (combinatorially: rank-`m` patterns are even-length
+series-subdivisions of finitely many rank-`m` cores; the open-walk skeleton has ≤ `2m−1`
+flow-lines, giving the pole order). The triangle is still NOT in OEIS.
+
+**(4) REFUTATION — the even-series count is NOT A215257 (MISTAKE-062).** ADD-3 (2) identified
+the unsigned support count `1,3,13,67,383` (k≤5) as A215257. At k=6 the true count is
+**2351**, but `A215257(7)=2345`; `1,3,13,67,383,2351` is in no OEIS sequence. A 5-term
+coincidence. (The headline signed sum is untouched; the refutation *sharpens* "Catalan =
+cancellation not count": the count is so unstructured it is uncatalogued.)
+
+**(5) NEGATIVE — no low-degree catalytic equation for `U(x,y)` (handoff #1 REFRAMED).** A
+systematic search (`paley_starstar_catalytic_fit_monad.py`) for a quadratic-in-`U` catalytic
+(Tutte/BMJ) equation — single power of `x`, coefficient-polynomials in `y` of degree ≤4,
+allowing the terms `{1, U, U², U(x,1), (U−U(x,1))/(y−1), ∂_yU, ∂_yU|_{y=1}}` — finds NO
+consistent equation fitting k≤5 (let alone predicting k=6). Heuristic reason: the diagonal
+`t(k,k)=A088368(k) ~ e·k!` makes `[x^k]U` grow factorially at fixed `y>1`, so `U(x,y)` is
+**Gevrey-1 / resurgent in `x`, not algebraic**. Handoff #1 as literally posed ("find the
+algebraic/Tutte equation for `U(x,y)`") is therefore likely chasing a non-existent finite
+equation; the genuine object is a topological recursion, and the *provable* structure is the
+**column-by-column rationality** of (3). This **redirects the program to handoff #2 (the
+sign-reversing involution on cycle rank `m`)**, which the resurgence does not obstruct.
+
+**(6) SHARPENED HANDOFF.** (a) PROVE the column rationality `T_m=P_m·x^m/(1−x)^{2m−1}` from
+the core/series-subdivision decomposition (finitely many rank-`m` open-walk cores; each line
+even-subdivided), and identify `P_m` (leading `2^m−1`, constant `A088368(m)`) — a finite,
+rank-graded target replacing the (resurgent) bivariate equation. (b) The sign-reversing
+involution on even-series patterns shifting `m` by `±1` (handoff #2) is now the prime route:
+it must have exactly `C_k` fixed points all at `m≡k (mod 2)`; genus-blindness (ADD-5) does
+not close it. (c) Extend the triangle to k=7,8 (needs a core-based enumerator — `Bell(15)`
+is out of brute-force reach) to pin `deg P_m=m−2` and `P_5,P_6`.

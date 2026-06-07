@@ -1944,3 +1944,53 @@ certify the per-class STRUCTURE: a missing pattern (the even theta) can hide ins
 cancelling against another, leaving the total correct and the story wrong. Characterize the support
 by the actual saturation condition (perfect-square flow product = even series-classes), not by the
 most familiar sub-family.
+
+---
+
+## MISTAKE-062: even-series pattern count is NOT OEIS A215257 — a 5-term coincidence that breaks at k=6
+
+**Date discovered:** 2026-06-07 (monad-explorer, 8th session)
+**Found by:** monad-explorer-2026-06-07 (deep-research, 8th session)
+**Affects:** THM-438 ADDENDUM-3 point (2); HYP-2308; the reflection `the-drt-engine-is-S-squared-equals-J-minus-nI-the-catalan-is-genus-zero.md`; INDEX/SESSION-LOG entries asserting "even-series count = A215257"
+
+### What was assumed
+THM-438 ADDENDUM-3 (5th session) identified the number of EVEN-SERIES patterns of the
+path `[0..2k]` (= the unsigned support of `(**)`) as **OEIS A215257**: the values for
+`k=1..5` are `1, 3, 13, 67, 383 = A215257(k+1)` (indecomposable deque-sortable
+permutations). The recursion script hardcoded the *predicted* next value `A215257(7)=2345`
+for `k=6` but NEVER actually computed `k=6` (its `KMAX` default was 5).
+
+### Why it was wrong
+A direct exhaustive count at `k=6` (fast integer enumerator
+`04-computation/paley_starstar_triangle_fast_monad.py`, cross-validated against the original
+SVD test `04-computation/paley_starstar_crosscheck_monad.py` with **0 disagreements** over
+all `Bell(13)=27.6M` partitions exhaustively at `k<=5` and a 300k sample at `k=6`) gives
+```
+   even-series count, k=1..6  =  1, 3, 13, 67, 383, 2351.
+```
+The OEIS b-file gives `A215257(7) = 2345 != 2351`. An OEIS search for
+`1,3,13,67,383,2351` returns **no results** — the unsigned even-series count is not (yet)
+a catalogued sequence. The A215257 match was a **5-term small-number coincidence**.
+
+### The correct framing
+- The unsigned even-series pattern count is `1, 3, 13, 67, 383, 2351, ...` (computed,
+  rigorous through k=6), NOT A215257, and presently matches no OEIS sequence.
+- This does NOT touch any headline result. The Moebius-SIGNED sum
+  `(**) S_k = sum_{even-series} mu(0,sigma) = (-1)^k C_k` is independently re-verified
+  exhaustively at `k=6` (`S_6 = 132 = C_6`), as is the cycle-rank triangle row
+  `t(6,m) = 1, 45, 560, 2626, 4845, 2867` and the loop equation
+  `S_k = -sum_{i+j=k-1} S_i S_j`.
+- If anything the refutation SHARPENS the thread's thesis: the *unsigned* count is so
+  unstructured it is not even a known sequence, while the *signed* sum is the cleanest
+  possible (Catalan). "The Catalan is a cancellation, not a count" is now literal.
+
+### Impact
+- THM-438 ADDENDUM-3 (2) corrected (see ADDENDUM-6). HYP-2308 / INDEX A215257 cells updated.
+- The "indecomposable deque-sortable permutations" bijection program (ADDENDUM-3/4 handoff)
+  is moot — there is no A215257 bijection to find because the counts differ.
+
+### Lesson
+A 5-term OEIS hit is weak evidence — A215257 and the even-series count share five terms by
+chance. NEVER hardcode an "expected next" OEIS value as if computed; compute it. Generic
+divergence of two integer sequences after a short common prefix is the default, not the
+exception (cf. MISTAKE-006 ratio coincidence, MISTAKE-010 small-n pattern break).
