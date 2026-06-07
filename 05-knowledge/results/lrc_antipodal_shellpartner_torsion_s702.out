@@ -1,0 +1,68 @@
+==============================================================================
+POKE TASK 1 — antipodal (sigma) structure of the signed-floor shell-partner q=a+b
+==============================================================================
+
+--- n=5 (B<=14): inf Gstar = 1/5 = 0.2000, n*inf=1.000, 4 minimizer(s) ---
+   S=(1, 2, 9, 14)  cut A=[1]|B=[2, 9, 14]  t*=12/25  M=1/5  binding=[10, 15]  pair=(10, 15)
+      q=25 [odd]  factor={5: 2}  sigma-orbit:True self-partner:False  2-torsion(fixed)=[0]
+      gcd(q,n)=5  gcd(q,2n-1)=1  per-prime(a,b,sum0?,self?)={25: (10, 15, True, False)}
+   S=(1, 5, 7, 9)  cut A=[1, 7]|B=[5, 9]  t*=1/20  M=1/5  binding=[4, 16]  pair=(4, 16)
+      q=20 [even]  factor={2: 2, 5: 1}  sigma-orbit:True self-partner:False  2-torsion(fixed)=[0, 10]
+      gcd(q,n)=5  gcd(q,2n-1)=1  per-prime(a,b,sum0?,self?)={4: (0, 0, True, True), 5: (4, 1, True, False)}
+   S=(1, 5, 11, 13)  cut A=[1]|B=[5, 11, 13]  t*=1/5  M=1/5  binding=[6, 14]  pair=None
+   S=(1, 6, 7, 10)  cut A=[1]|B=[6, 7, 10]  t*=1/5  M=1/5  binding=[1, 4, 11]  pair=(1, 4)
+      q=5 [odd]  factor={5: 1}  sigma-orbit:True self-partner:False  2-torsion(fixed)=[0]
+      gcd(q,n)=5  gcd(q,2n-1)=1  per-prime(a,b,sum0?,self?)={5: (1, 4, True, False)}
+
+--- n=6 (B<=11): inf Gstar = 3/20 = 0.1500, n*inf=0.900, 1 minimizer(s) ---
+   S=(2, 3, 4, 8, 11)  cut A=[2]|B=[3, 4, 8, 11]  t*=9/20  M=3/20  binding=[7, 13]  pair=(7, 13)
+      q=20 [even]  factor={2: 2, 5: 1}  sigma-orbit:True self-partner:False  2-torsion(fixed)=[0, 10]
+      gcd(q,n)=2  gcd(q,2n-1)=1  per-prime(a,b,sum0?,self?)={4: (3, 1, True, False), 5: (2, 3, True, False)}
+
+--- n=7 (B<=10): inf Gstar = 1/8 = 0.1250, n*inf=0.875, 1 minimizer(s) ---
+   S=(3, 4, 5, 7, 9, 10)  cut A=[3, 5]|B=[4, 7, 9, 10]  t*=1/8  M=1/8  binding=[1, 7, 9, 15]  pair=(1, 7)
+      q=8 [even]  factor={2: 3}  sigma-orbit:True self-partner:False  2-torsion(fixed)=[0, 4]
+      gcd(q,n)=1  gcd(q,2n-1)=1  per-prime(a,b,sum0?,self?)={8: (1, 7, True, False)}
+
+==============================================================================
+Published HYP-2296 minimizers (mover-only & observer-inclusive) — sigma/torsion table
+==============================================================================
+
+ mover (2,3,4,6,8): binding {9,10}  q=19 [odd] factor={19: 1}
+    sigma-orbit:True  self-partner:False  2-torsion=[0]
+    gcd(q,n)=1 gcd(q,2n-1)=1  per-prime(a%pe,b%pe,sum≡0,self):{19: (9, 10, True, False)}
+
+ mover (4,5,8,10,15): binding {4,23}  q=27 [odd] factor={3: 3}
+    sigma-orbit:True  self-partner:False  2-torsion=[0]
+    gcd(q,n)=3 gcd(q,2n-1)=1  per-prime(a%pe,b%pe,sum≡0,self):{27: (4, 23, True, False)}
+
+ mover (2,4,7,10,11,12): binding {19,23}  q=42 [even] factor={2: 1, 3: 1, 7: 1}
+    sigma-orbit:True  self-partner:False  2-torsion=[0, 21]
+    gcd(q,n)=7 gcd(q,2n-1)=1  per-prime(a%pe,b%pe,sum≡0,self):{2: (1, 1, True, True), 3: (1, 2, True, False), 7: (5, 2, True, False)}
+
+ obs   (5,6,7,8,9): binding {6,13}  q=19 [odd] factor={19: 1}
+    sigma-orbit:True  self-partner:False  2-torsion=[0]
+    gcd(q,n)=1 gcd(q,2n-1)=1  per-prime(a%pe,b%pe,sum≡0,self):{19: (6, 13, True, False)}
+
+ obs   (5,7,8,9,11): binding {11,18}  q=29 [odd] factor={29: 1}
+    sigma-orbit:True  self-partner:False  2-torsion=[0]
+    gcd(q,n)=1 gcd(q,2n-1)=1  per-prime(a%pe,b%pe,sum≡0,self):{29: (11, 18, True, False)}
+
+==============================================================================
+FACE SPLIT: clock Z/n half-turn (2-torsion) vs shell Z/(2n-1) antipodal-freeness
+==============================================================================
+ n | n even? | clock half-turn n/2 (sigma-fixed 2-torsion) | shell 2n-1 | (2n-1) odd => no fixed pt | block q=4n-5 [odd]
+  5 | False   | none (n odd: only 0 fixed)               |   9      | True (always)            | 15
+  6 | True    | r=3  (= n/2, the half-turn leak)         |  11      | True (always)            | 19
+  7 | False   | none (n odd: only 0 fixed)               |  13      | True (always)            | 23
+  8 | True    | r=4  (= n/2, the half-turn leak)         |  15      | True (always)            | 27
+  9 | False   | none (n odd: only 0 fixed)               |  17      | True (always)            | 31
+ 10 | True    | r=5  (= n/2, the half-turn leak)         |  19      | True (always)            | 35
+ 11 | False   | none (n odd: only 0 fixed)               |  21      | True (always)            | 39
+ 12 | True    | r=6  (= n/2, the half-turn leak)         |  23      | True (always)            | 43
+ 13 | False   | none (n odd: only 0 fixed)               |  25      | True (always)            | 47
+ 14 | True    | r=7  (= n/2, the half-turn leak)         |  27      | True (always)            | 51
+ 15 | False   | none (n odd: only 0 fixed)               |  29      | True (always)            | 55
+
+=> shell 2n-1 and block q=4n-5 are ALWAYS ODD: antipodally free (genuine 2-orbits, no self-partner).
+   The clock n carries the half-turn self-partner n/2 exactly when n is EVEN (n=14: r=7).
