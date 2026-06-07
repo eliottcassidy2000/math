@@ -1,0 +1,49 @@
+==================================================================
+(A) derived length of S_n (= commutator depth = solvability)
+==================================================================
+  n | |S_n| | derived length | solvable? (radical formula?)
+  2 |    2  |              1 | YES (formula)
+  3 |    6  |              2 | YES (formula)
+  4 |   24  |              3 | YES (formula)
+  5 |  120  |       infinity | NO (A_5 perfect)
+  6 |  720  |       infinity | NO (A_6 perfect)
+  -> der^2(S3)=1 (cubic: 1 commutator), der^3(S4)=1 (quartic: 2),
+     S5 NEVER terminates (quintic: no formula) -- Abel-Ruffini.
+
+==================================================================
+(B) the engine: A5 perfect, built from 3-cycles sharing ONE point
+==================================================================
+  <(012),(234)> has order 60  (= |A5| = 60? True)
+  [A5,A5] order = 60; A5 perfect ([A5,A5]=A5)? True
+  [s,t]     : NONTRIVIAL  (3, 1, 0, 2, 4)
+  depth-2   : NONTRIVIAL  (2, 3, 0, 1, 4)
+  depth-3   : NONTRIVIAL  (1, 4, 0, 2, 3)
+  depth-4   : NONTRIVIAL  (2, 1, 4, 3, 0)
+  depth-5   : NONTRIVIAL  (4, 1, 3, 2, 0)
+  depth-6   : NONTRIVIAL  (2, 0, 3, 4, 1)
+  -> two 3-cycles overlapping in one point: commutators never vanish.
+  A3 = <(012)> order 3; [A3,A3] order 1 (=1 => cube-root group abelian)
+
+==================================================================
+(C) arc connections
+==================================================================
+  * 3-cycle = CUBE ROOT of unity (s^3=1, eigenvalues 1,w,w^2); the atom of A_n (S635).
+  * solvable by radicals = tower of CYCLIC (root-of-unity) layers; the derived
+    series = peeling abelian (cyclotomic) shells -- the same shell-tower as the arc.
+  * monodromy (opus S699p): a physical root-swap = a transposition picked up looping
+    the coefficients around the DISCRIMINANT (= the worry-set / branch locus); the
+    Galois group = the monodromy group of the FTA covering. Solvable = the monodromy
+    is built from abelian loops.
+  * CONSTRUCTIBILITY corner (Gauss-Wantzel): the regular 7-gon is NOT constructible
+    because [Q(zeta_7):Q] = phi(7) = 6 = 2*3 is divisible by 3 (a CUBE root), not a
+    power of 2. The same 7 = Phi_3(2) = N(3+w) the arc converges on (S637/8/40): the
+    cube-root obstruction to the heptagon. (7-gon IS solvable by radicals -- Galois
+    group Z/6 cyclic -- but needs a cube root, so ruler+compass cannot reach it.)
+    3-gon: [Q(zeta_3):Q]=phi(3)=2  power-of-2? True  constructible? True
+    5-gon: [Q(zeta_5):Q]=phi(5)=4  power-of-2? True  constructible? True
+    7-gon: [Q(zeta_7):Q]=phi(7)=6  power-of-2? False  constructible? False
+    9-gon: [Q(zeta_9):Q]=phi(9)=6  power-of-2? False  constructible? False
+    15-gon: [Q(zeta_15):Q]=phi(15)=8  power-of-2? True  constructible? True
+    17-gon: [Q(zeta_17):Q]=phi(17)=16  power-of-2? True  constructible? True
+    257-gon: [Q(zeta_257):Q]=phi(257)=256  power-of-2? True  constructible? True
+  3-gon,5-gon constructible (phi=2,4); 7-gon,9-gon NOT (phi=6 has a 3).
