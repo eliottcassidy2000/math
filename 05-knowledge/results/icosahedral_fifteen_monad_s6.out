@@ -47,3 +47,13 @@ non-identity commutators: 60/60
 pairs of cyclic triangles sharing exactly 1 vertex = 5
    sharing 0 vertices = 0, sharing 2 vertices = 5, total pairs C(5,2)=10
 => the C_5 tournament realises 5 overlapping cyclic-triangle pairs (the on-tournament shadow of the 15 abstract ones).
+
+======================================================================
+(G)  icosahedral axis-counts {6,10,15} as Sylow / involution counts of A_5
+======================================================================
+  n_5 = #Sylow-5 subgroups = 6  (icosa 5-fold axes = 6)  OK
+  n_3 = #Sylow-3 subgroups = 10  (icosa 3-fold axes = 10) OK
+  n_2 = #Sylow-2 (V4) subgroups = 5  (icosa 2-fold axes = 15 = #involutions, NOT n_2)
+  #involutions = 15  (icosa 2-fold axes = 15) OK
+  => {6,10,15} = {n_5, n_3, #involutions}; cyclic Sylows (p=3,5): axes = #subgroups;
+     p=2 deviates because Sylow-2 = V4 is non-cyclic (5 subgroups x 3 involutions = 15).

@@ -276,3 +276,38 @@ print(f"   sharing 0 vertices = {share0}, sharing 2 vertices = {share2}, "
       f"total pairs C(5,2)={comb(5,2)}")
 print(f"=> the C_5 tournament realises {ov} overlapping cyclic-triangle pairs"
       f" (the on-tournament shadow of the 15 abstract ones).")
+
+# ---------- (G) Sylow / axis-count refinement ----------
+print()
+print("=" * 70)
+print("(G)  icosahedral axis-counts {6,10,15} as Sylow / involution counts of A_5")
+print("=" * 70)
+def subgroup_from(gens):
+    allp = {tuple(sorted({x:x for x in S}.items())): {x:x for x in S}}
+    changed = True
+    while changed:
+        changed = False
+        for e in list(allp.values()):
+            for g in gens:
+                ne = compose(g, e); k = tuple(sorted(ne.items()))
+                if k not in allp:
+                    allp[k] = ne; changed = True
+    return frozenset(allp.keys())
+five  = [p for p in A5 if cycle_type(p) == (5,)]
+three = [p for p in A5 if cycle_type(p) == (3,)]
+invs  = [p for p in A5 if cycle_type(p) == (2, 2)]
+syl5 = set(subgroup_from([g]) for g in five)
+syl3 = set(subgroup_from([g]) for g in three)
+syl2 = set()
+for i in range(len(invs)):
+    for j in range(len(invs)):
+        if i != j and compose(invs[i], invs[j]) == compose(invs[j], invs[i]):
+            syl2.add(subgroup_from([invs[i], invs[j]]))
+print(f"  n_5 = #Sylow-5 subgroups = {len(syl5)}  (icosa 5-fold axes = 6)  "
+      f"{'OK' if len(syl5)==6 else '??'}")
+print(f"  n_3 = #Sylow-3 subgroups = {len(syl3)}  (icosa 3-fold axes = 10) "
+      f"{'OK' if len(syl3)==10 else '??'}")
+print(f"  n_2 = #Sylow-2 (V4) subgroups = {len(syl2)}  (icosa 2-fold axes = 15 = #involutions, NOT n_2)")
+print(f"  #involutions = {len(invs)}  (icosa 2-fold axes = 15) {'OK' if len(invs)==15 else '??'}")
+print("  => {6,10,15} = {n_5, n_3, #involutions}; cyclic Sylows (p=3,5): axes = #subgroups;")
+print("     p=2 deviates because Sylow-2 = V4 is non-cyclic (5 subgroups x 3 involutions = 15).")

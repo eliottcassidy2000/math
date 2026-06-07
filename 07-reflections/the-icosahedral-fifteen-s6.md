@@ -114,6 +114,40 @@ icosahedron sits at the seam — it is simultaneously the *most symmetric* `ℝ�
 and the bearer of the *first unsolvable* group (high complexity). The two readings of the
 symmetry↔complexity axis cross exactly here, on the 5-point set both problems keep returning to.
 
+## 6. Two icosahedra at n=5 — and they are NOT the same one (a guard against false unification)
+
+The repo already had an icosahedron at `n=5`. `the-five-platonic-tournaments` (kind-pasteur-S20bh, §IV)
+showed the metagraph `G₅` of tournament iso-classes has **f-vector `(12, 30, 20)` = the icosahedron**
+(12 iso-classes, 30 flip-edges, 20 faces), dual to the dodecahedron. So with THM-436's `A₅`/icosahedron
+there are now *two* icosahedra on five points, and the seductive move is to declare them the same. **They
+are not.** `five-as-bridge` (opus-S97, pt 2) already records that `G₅`'s flip graph shares `(V,E)=(12,30)`
+but has a **different degree sequence** — so it is *not* the (5-regular) icosahedral graph. And the `12`
+iso-classes are `S₅`-orbits, on which relabeling acts *trivially*: there is **no natural `A₅` action** on
+`G₅`. By contrast THM-436's icosahedron literally *is* the `A₅` symmetry. So:
+
+> **`G₅` ≅ icosahedron is an f-vector coincidence (no `A₅`-action, wrong degree sequence); THM-436's is
+> the genuine `A₅`-equivariant icosahedron.** The two "5-point icosahedra" agree on `(12,30,20)` and
+> nowhere structurally deeper.
+
+This is the same lesson as §3, one level up: a matching *f-vector* (like a matching *total*) is not an
+isomorphism. The honest shared object is `A₅` itself — and *there* the match is exact.
+
+## 6′. The `{6,10,15}` are Sylow counts (`n₅, n₃,` #involutions) — verified
+
+A clean true refinement of §2's dictionary (`…fifteen_monad_s6.py` Sylow check): the three nontrivial
+icosahedral axis-counts are exactly
+```
+   6  five-fold axes  = n₅ = #Sylow-5 subgroups of A₅   (cyclic C₅; 24 five-cycles = 6·4)
+   10 three-fold axes = n₃ = #Sylow-3 subgroups of A₅   (cyclic C₃; 20 three-cycles = 10·2)
+   15 two-fold axes   = #involutions of A₅               (NOT n₂ = 5)
+```
+For the **cyclic** Sylows (`p = 3, 5`) the axis count *equals the subgroup count*; for `p = 2` it does
+**not**, because the Sylow-2 of `A₅` is the **non-cyclic** `V₄` (5 of them, 3 involutions each, `5·3 = 15`).
+So the deviation of the deg-15 invariant from a "subgroup count" is precisely the Klein-four-ness of the
+icosahedron's 2-fold rotations — the only place the axis/Sylow dictionary bends. The `6` connects onward
+(classically) to the `6` Sylow-5's that `A₅` permutes to give `A₅ ↪ S₆` and the outer automorphism of
+`S₆` — the same `6` as the icosahedron's 6 vertex-axes.
+
 ## Honest status
 
 - **Proved/verified** (`…fifteen_monad_s6.py`): the `15·C(n,5)`/`60·C(n,5)` counts (n=3..8); the
@@ -125,6 +159,10 @@ symmetry↔complexity axis cross exactly here, on the 5-point set both problems 
 - **Speculative** (HYP-2305): the `(2,3,5)` ↔ (prime-2, prime-3, `n=5`) frontier identification and its
   LRC/HN transfer. Resolves no open case.
 
-**Artifacts:** `04-computation/icosahedral_fifteen_monad_s6.py` (+`05-knowledge/results/…out`); canon
-addendum on `THM-436`; new **HYP-2305**. Builds on THM-436/THM-403/THM-406/HYP-2303 and the reflection
-`the-solvability-tower-galois-lrc-icosahedron-s703.md` (opus-S703).
+**Artifacts:** `04-computation/icosahedral_fifteen_monad_s6.py` (counts + 15-bijection + class/axis +
+Sylow check; +`05-knowledge/results/…out`); `04-computation/icosahedral_flag_fibers_monad_s6.py` (the
+refuted flag-incidence test); canon addendum on `THM-436`; new **HYP-2305**; **MISTAKE-059** (the
+"too-clean total" lesson). Builds on THM-436/THM-403/THM-406/HYP-2303 and the reflection
+`the-solvability-tower-galois-lrc-icosahedron-s703.md` (opus-S703). Cross-links the *earlier* n=5
+icosahedra: `the-five-platonic-tournaments` (G₅ f-vector 12,30,20) and `five-as-bridge` (G₅ shares
+(V,E) but different degree sequence) — shown here to be a *distinct* icosahedron from the A₅/Galois one.
