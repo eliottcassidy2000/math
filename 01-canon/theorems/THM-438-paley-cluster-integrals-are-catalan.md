@@ -272,3 +272,22 @@ cancel it to `C_k`. This is exactly Wigner quasirandomness: the random skew-Rade
 deterministic Paley Möbius expansion, despite over-counting, lands on the same `C_k`. A clean proof of
 `(★★)` (a non-crossing / free-cumulant bijection on even-series patterns) is the remaining write-up —
 strictly cleaner than before (the wrong "even cacti" support is removed and `g≡+1` is no longer assumed).
+
+**(5) `(★★)` VERIFIED `k≤5` purely combinatorially (no primes), and IDENTIFIED as a free
+cumulant.** `04-computation/paley_catalan_star_star_monad.py` checks `(★★)` with NO number
+theory (even-series detection via flow-line multiplicities): `Σμ = −1, 2, −5, 14, −42 =
+(−1)^k C_k` for `k=1..5` (even-series pattern counts `1, 3, 13, 67, 383`). Moreover
+`(★★)` is exactly a FREE CUMULANT of the matrix's own two-point spectrum
+(`04-computation/two_point_free_cumulants_monad.py`): the symmetric two-point law
+`ν=½(δ_a+δ_{−a})`, `a²=A`, has `κ_{2n}(ν)=(−1)^{n−1}C_{n−1}A^n` (the R-transform is
+`R(z)=(−1+√(1+4a²z²))/(2z)`), so
+```
+T_k := Σ_{even-series σ} μ(0̂,σ) = (−1)^k C_k = κ_{2k+2}(ν)/A^{k+1}.
+```
+With `A=a²=−p` (Paley/DRT spectrum `{0,±i√p}`) this is the **spectral** source of the Catalan
+law: the free cumulants of the two-point spectrum ARE Catalan, hence the law is
+**DRT-universal and non-arithmetic** (every doubly-regular tournament shares the spectrum).
+**Sharpened handoff #1:** prove `(★★)` by showing the even-series Möbius sum satisfies the
+R-transform recursion (a first-return decomposition of the closed even-series walk) — i.e. the
+moment→free-cumulant inversion realized combinatorially. This is a strictly sharper, fully
+number-theory-free target than the (incorrect) "even cacti = C_k".
