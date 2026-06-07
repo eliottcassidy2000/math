@@ -1,0 +1,90 @@
+==========================================================================
+ THM-438 ADD-11: the diagonal t(k,k)=A088368(k) is a FREE MOMENT sequence
+==========================================================================
+
+(1) DIRECT: Sum_{NC(k)} prod|B|!  ==  A088368(k)   [extends VERIFIED k<=7 to k<=9]
+   k=1:  Sum_NC prod|B|! =          1   A088368(1) =          1   match=True
+   k=2:  Sum_NC prod|B|! =          3   A088368(2) =          3   match=True
+   k=3:  Sum_NC prod|B|! =         13   A088368(3) =         13   match=True
+   k=4:  Sum_NC prod|B|! =         69   A088368(4) =         69   match=True
+   k=5:  Sum_NC prod|B|! =        421   A088368(5) =        421   match=True
+   k=6:  Sum_NC prod|B|! =       2867   A088368(6) =       2867   match=True
+   k=7:  Sum_NC prod|B|! =      21477   A088368(7) =      21477   match=True
+   k=8:  Sum_NC prod|B|! =     175769   A088368(8) =     175769   match=True
+   k=9:  Sum_NC prod|B|! =    1567273   A088368(9) =    1567273   match=True
+   ALL MATCH: True
+
+(2) FREE MOMENT-CUMULANT RECURSION with kappa_n=n!  (no NC enumeration):
+    m_k from M(z)=F(zM(z)), F(w)=sum n! w^n  -- the functional equation IS Callan's.
+   m_1  =              1   A088368(1) =              1   match=True
+   m_2  =              3   A088368(2) =              3   match=True
+   m_3  =             13   A088368(3) =             13   match=True
+   m_4  =             69   A088368(4) =             69   match=True
+   m_5  =            421   A088368(5) =            421   match=True
+   m_6  =           2867   A088368(6) =           2867   match=True
+   m_7  =          21477   A088368(7) =          21477   match=True
+   m_8  =         175769   A088368(8) =         175769   match=True
+   m_9  =        1567273   A088368(9) =        1567273   match=True
+   m_10 =       15213955   A088368(10) =       15213955   match=True
+   m_11 =      160727997   A088368(11) =      160727997   match=True
+   m_12 =     1846282381   A088368(12) =     1846282381   match=True
+   moments(kappa_n=n!) == A088368 for all checked k: True
+   => Sum_{NC(k)} prod|B|! = A088368(k) PROVED: both are the unique f, f(0)=1, f=F(zf).
+
+(3) FUNCTIONAL-EQUATION RESIDUAL CHECK: does A=A088368 satisfy A=F(xA) exactly?
+   x^0: F(xA)|n =          1   A_0 =          1   match=True
+   x^1: F(xA)|n =          1   A_1 =          1   match=True
+   x^2: F(xA)|n =          3   A_2 =          3   match=True
+   x^3: F(xA)|n =         13   A_3 =         13   match=True
+   x^4: F(xA)|n =         69   A_4 =         69   match=True
+   x^5: F(xA)|n =        421   A_5 =        421   match=True
+   x^6: F(xA)|n =       2867   A_6 =       2867   match=True
+   x^7: F(xA)|n =      21477   A_7 =      21477   match=True
+   x^8: F(xA)|n =     175769   A_8 =     175769   match=True
+   x^9: F(xA)|n =    1567273   A_9 =    1567273   match=True
+   A satisfies A=F(xA) (=> equals Callan's A088368 g.f.): True
+
+(4) THE R-TRANSFORM IS THE DIVERGENT FACTORIAL SERIES (ADD-6 resurgence source):
+    R(z) = sum_{n>=1} kappa_n z^{n-1} = sum_{n>=1} n! z^{n-1} = 1 + 2z + 6z^2 + 24z^3 + ...
+    Gevrey-1 / Borel sum = exp-integral; this IS the wildness ADD-6 saw in U(x,y).
+      [z^0] R = 1
+      [z^1] R = 2
+      [z^2] R = 6
+      [z^3] R = 24
+      [z^4] R = 120
+      [z^5] R = 720
+      [z^6] R = 5040
+
+(5) SHARPEN ADD-4: the over-count lives on the FULL lattice; free moments use NC only.
+   k=1:  NC-sum=       1=A088368   ALL-sum=        1   crossing over-count=        0
+   k=2:  NC-sum=       3=A088368   ALL-sum=        3   crossing over-count=        0
+   k=3:  NC-sum=      13=A088368   ALL-sum=       13   crossing over-count=        0
+   k=4:  NC-sum=      69=A088368   ALL-sum=       73   crossing over-count=        4
+   k=5:  NC-sum=     421=A088368   ALL-sum=      501   crossing over-count=       80
+   k=6:  NC-sum=    2867=A088368   ALL-sum=     4051   crossing over-count=     1184
+   k=7:  NC-sum=   21477=A088368   ALL-sum=    37633   crossing over-count=    16156
+   crossing partitions give a strictly larger 'full-lattice over-count' for k>=4: True
+
+(6) THE e-ASYMPTOTIC IS A FREE-PROBABILITY STATEMENT ABOUT THE FACTORIAL LAW:
+    m_k / k! = A088368(k)/k! -> e  (Kotesovec). The factorial law's free moments
+    grow like e*k!: a clean meaning for the 'wild end' constant e.
+      k= 2  m_k/k! =  1.5000   (e=2.7183)
+      k= 3  m_k/k! =  2.1667   (e=2.7183)
+      k= 4  m_k/k! =  2.8750   (e=2.7183)
+      k= 5  m_k/k! =  3.5083   (e=2.7183)
+      k= 6  m_k/k! =  3.9819   (e=2.7183)
+      k= 7  m_k/k! =  4.2613   (e=2.7183)
+      k= 8  m_k/k! =  4.3594   (e=2.7183)
+      k= 9  m_k/k! =  4.3190   (e=2.7183)
+      k=10  m_k/k! =  4.1926   (e=2.7183)
+      k=11  m_k/k! =  4.0266   (e=2.7183)
+      k=12  m_k/k! =  3.8544   (e=2.7183)
+
+==========================================================================
+ SUMMARY: both NAMED endpoints of the cycle-rank triangle are FREE-PROBABILITY
+ objects of the SAME triangle, dual across the moment<->cumulant divide:
+   * diagonal t(k,k)=A088368(k)  = free MOMENTS  (kappa_n = n!,  factorial law)
+   * signed row sum (-1)^k C_k   = free CUMULANTS (two-point law, ADD-4)
+ The path between them is OEIS-structureless (ADD-10): the moment-cumulant
+ Mobius transit over the partition lattice carries no catalogued sub-sequence.
+==========================================================================
