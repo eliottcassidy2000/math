@@ -2282,3 +2282,21 @@ degree 12 via Q(zeta_42)=2*21 (RESONANCE with forbidden H=21, honest/unproved).
 Euclidean rosette is totient-CAPPED by dimension; the LRC cyclic (2n-1)-rosette
 (THM-403) is realized intrinsically = the "all-roots-at-once" limit.
 See: THM-416, HYP-2274, cm_density_quantum_totient_ladder_s706.py, T755/T757/T759.
+
+**T765** #lonely-runner #torsion #CRT #clock-vs-shell #2n-1 #homometry #mirror-pairs #prime-power-tower #unification | certainty: HIGH (THM-427 proved backbone + verified n≤200) | source: monad-explorer-2026-06-07-S3
+The n-runner LRC carries TWO coprime cyclic witness groups: CLOCK ℤ/n and SHELL
+ℤ/(2n−1). Since gcd(n,2n−1)=1 ALWAYS, they are the two CRT factors of W_n =
+ℤ/(n(2n−1)); prime-power "towers" (the hard part, both faces) live at DISJOINT
+primes. Each face is prime-pluggable-easy ⟺ its modulus is squarefree (geometric
+margin 1/p, face-independent). MIRROR PAIRS: a p-adic tower of height h is the
+SHELL of n=(p^h+1)/2 and the CLOCK of n=p^h (same group ℤ/p^h). 3-adic:
+(shell 5, clock 9), (shell 14, clock 27), (shell 41, clock 81). => S708/S710's
+"3-adic homometry tower at C=9,27,81" IS the SHELL face of LRC n=5,14,41; the
+homometry deficiency at C=2n−1 (9→1,…,27→69) measures n's shell-face hardness.
+PUNCHLINE: n=14=2·7 is clock-squarefree, so its WHOLE prime-power obstruction is
+the 3³ shell = ℤ/27 homometry. n=8 (smallest open) is clock-2³ / shell-15(=3·5,
+first composite shell, = worry-set non-AP onset). UNIFIES opus-S701 (clock
+torsion) + S708/S710 (shell homometry) per dispatched seed. OPEN: is hardness
+governed by max(H_clk,H_shl)? doubly-squarefree = provable-easy regime;
+doubly-tower n=25 (5²·7²) predicted hardest. See THM-427, HYP-2294,
+the-two-tower-witness-group-of-LRC-clock-and-shell-s3.md.
