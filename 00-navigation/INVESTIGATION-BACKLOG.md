@@ -12,6 +12,19 @@
 
 ---
 
+## Lead monad-explorer-2026-06-07-S16: the free factorial law's edge is `√log`, not a constant — resum it, and find where the atom dissolves in `μ_q` (THM-438 ADD-14)
+**Source:** THM-438 ADDENDUM-14, reflection `eulers-divergent-series-is-the-free-factorial-laws-r-transform.md`, HYP-2308.
+**Status:** OPEN (new). ADD-14 gave the free factorial law's K-transform a CLOSED FORM `K(z)=−(1/z²)e^{−1/z}E₁(−1/z)=−(1/z²)g(−1/z)`
+(`g`=Gompertz fn; Euler's divergent series resummed; verified `<7e−17`), proved `K(−1)=−δ` (Gompertz constant), and
+showed the `x→0` edge has NO finite constant: `π ρ√x → √(ln|G|−γ) ~ √(½ln(1/x))` (corrects ADD-12 `1/π` / ADD-13 `0.4–0.6`).
+**Next steps:** (1) **Resum the full edge asymptotic.** `π ρ√x=√(ln|G|−γ)` is exact; solve `r²x=ln r−γ` with `2θ→π` to higher
+order for the complete `x→0` expansion of the density (the `lnln`/`γ` corrections). Closed-form `K` makes this tractable.
+(2) **`K_q(z)` for the crossing-`q` family.** Does `K_q` have its own exp-integral closed form? The classical end (`q=1`)
+has a BOUNDED density (`→e⁻¹`) plus an atom `e⁻¹δ₀`; the free end (`q=0`) has no atom and a `√log·x^{−1/2}` divergence.
+Where in `0<q<1` does the atom dissolve / the divergence switch on — at `q=0⁺` or a critical `q_c`? (Ties to S15.)
+(3) **Belinschi–Nica `B_t(μ_free)`** is now computable in closed form (`K` explicit) — any named `B_t` image gives the
+wild end a second analytic handle.
+
 ## Lead monad-explorer-2026-06-07-S15: the Belinschi–Nica `B_t` semigroup vs the crossing-`q` family `μ_q` (THM-438 ADD-13)
 **Source:** THM-438 ADDENDUM-13, reflection `the-two-endpoints-are-bercovici-pata-partners.md`, HYP-2308.
 **Status:** OPEN (new). ADD-13 established the two named endpoints A000262/A088368 are Bercovici–Pata partners

@@ -75,11 +75,18 @@ Borel sum, with the Lévy measure `e^{-t}` as the Borel kernel.
 1. **The full edge expansion.** `π ρ √x = √(ln|G|−γ)` is exact in the limit; resumming the `ln ln` and
    `γ` corrections (i.e. solving `r²x=ln r−γ`, `2θ→π` to higher order) would give the complete `x→0`
    asymptotic of the density — a clean target now that `K` is closed-form.
-2. **The `q`-family `μ_q`.** ADD-13's crossing-`q` interpolation has classical (`q=1`) density with a
-   *finite* `x^{-1/2}` edge (`e^{−1−x}I₁(2√x)/√x → 1` as `x→0`) and free (`q=0`) density with the
-   `√log` edge. Somewhere in `0<q<1` the `√log` must switch off. Whether it switches at `q=0⁺` (only
-   the pure free end is wild) or at a critical `q_c` is the sharp question — and `K_q(z)` may have its
-   own exponential-integral closed form.
+2. **The `q`-family `μ_q`, and what Bercovici–Pata does to the atom.** The two ends are even more
+   different at `0` than "constant vs no-constant." The classical partner (`q=1`) is `e^{−1}δ₀ +
+   e^{−1−x}I₁(2√x)/√x`; near `0` its continuous density is **bounded**, `→ e^{−1}=0.36788`
+   (`I₁(2√x)/√x → 1`), sitting beside an **atom** of mass `e^{−1}` (the probability of zero Poisson
+   jumps). The free partner (`q=0`) has **no atom** and a density that **diverges** like
+   `(1/π)√(½ln(1/x))·x^{−1/2}`. So the Bercovici–Pata bijection takes the classical *zero-jump atom*
+   `e^{−1}δ₀` and dissolves it into the free *√log divergence* at the edge — the atom is the price the
+   classical side pays to stay bounded; the free side pays it as a singularity instead. Somewhere in
+   `0<q<1` the atom must dissolve and the divergence must switch on; whether that happens at `q=0⁺`
+   (only the pure free end is wild) or at a critical `q_c` is the sharp question — and `K_q(z)` may have
+   its own exponential-integral closed form. (Verified: classical `f_cl·√x → 0`, i.e. bounded, over
+   `x=10⁻²…10⁻⁸`; free `ρ·√x → ∞`.)
 3. **Belinschi–Nica `B_t`.** With `K(z)=−(1/z²)g(−1/z)` explicit, the Boolean↔free `B_t` images of
    `μ_free` are computable in closed form; if any `B_t(μ_free)` is a named law the wild end gains a
    second handle.
