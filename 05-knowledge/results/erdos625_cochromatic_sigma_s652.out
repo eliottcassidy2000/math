@@ -1,0 +1,42 @@
+======================================================================
+(A) sigma-symmetry: zeta(G)=zeta(G^c), but chi(G)!=chi(G^c) in general
+======================================================================
+  n | chi(G) | chi(G^c) | chi sym? | zeta(G) | zeta(G^c) | zeta sym? | chi-zeta
+  3 |      2 |        2 |    True |       2 |         2 |     True | 0
+  4 |      3 |        2 |   False |       2 |         2 |     True | 1
+  5 |      3 |        3 |    True |       2 |         2 |     True | 1
+  6 |      3 |        3 |    True |       3 |         3 |     True | 0
+  7 |      3 |        4 |   False |       3 |         3 |     True | 0
+  8 |      5 |        3 |   False |       3 |         3 |     True | 2
+  -> zeta is ALWAYS complement-invariant (sigma-fixed); chi is NOT. [formalized cochrom_compl]
+     chi-zeta = the sigma-asymmetry of coloring.
+
+======================================================================
+(B) the chi - zeta gap on G(n,1/2), averaged
+======================================================================
+  n | avg chi | avg zeta | avg(chi-zeta) | (Erdos 625: does chi-zeta -> oo ?)
+  4 |    2.58 |     1.95 |          0.62 |
+  5 |    2.67 |     2.00 |          0.68 |
+  6 |    2.73 |     2.42 |          0.30 |
+  7 |    3.35 |     2.67 |          0.68 |
+  8 |    3.55 |     2.90 |          0.65 |
+  9 |    3.83 |     3.00 |          0.83 |
+  -> small n: gap is tiny/noisy (it grows only slowly; conjectured ~ n/(log n)^3).
+     The gap is a LOWER-ORDER effect: chi ~ zeta ~ n/(2 log2 n); the difference is subtle.
+
+======================================================================
+(C) repo reframes of zeta and chi-zeta
+======================================================================
+  ISING / two ground states: a clique = all-edges (ferromagnetic 'up'), an independent set =
+  no-edges ('down'). zeta = min #pieces each in a PURE PHASE (one of the two Ising ground
+  states). chi = min #pieces each 'down' only. chi-zeta = the cost of forbidding the 'up' phase.
+  Under sigma=complement, up<->down, so zeta is sigma-symmetric; chi is not. (Coloring-partition
+  unification, S626-633: zeta = partition into the two pure phases of the conflict graph.)
+
+  chi.alpha >= n (S634): chi >= n/alpha. zeta >= n/max(alpha,omega) (each pure piece <= max(a,w)).
+  For G(n,1/2): alpha ~ omega ~ 2 log2 n (sigma-symmetric!), chi ~ n/(2 log2 n). So zeta and chi
+  share the SAME leading term; Erdos 625 is about the SUBLEADING gap = where sigma-symmetry
+  (zeta) and sigma-asymmetry (chi) first diverge.
+
+  G(n,1/2) = the finite RADO graph (S638 did the random TOURNAMENT). zeta = its sigma-symmetric
+  coloring invariant. The cube in n/(log n)^3 (Heckel's conjecture) echoes the arc's 3 (cube root).
