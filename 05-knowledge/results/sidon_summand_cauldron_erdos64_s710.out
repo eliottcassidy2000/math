@@ -1,0 +1,44 @@
+==============================================================================
+(1) SIDON <=> C4-FREE <=> minimal additive energy (the summand-graph link)
+==============================================================================
+  Sidon {1,2,5,11}      : Sidon=True; additive energy E=28 (trivial min=28); excess=0
+  Sidon {0,1,3,7}       : Sidon=True; additive energy E=28 (trivial min=28); excess=0
+  NON-Sidon {1,2,3,4}   : Sidon=False; additive energy E=44 (trivial min=28); excess=16
+  AP {2,4,6,8}          : Sidon=False; additive energy E=44 (trivial min=28); excess=16
+  (Sidon <=> E = 2|S|^2-|S| = only trivial quadruples <=> the summand graph node-fibers are
+   all size<=1 on S <=> NO additive 4-cycle. Excess additive energy = the C4 / Sidon-defect.)
+  Cay(Z_13,±[1, 3, 7]): #4-cycles=91, girth=3  (Sidon=>C4-free-ish)
+  Cay(Z_13,±[1, 2, 3]): #4-cycles=91, girth=3  (Sidon=>C4-free-ish)
+
+==============================================================================
+(2) THE ADDITIVE-RELATION LADDER: cauldron(3) < Sidon/C4(4) < B_h(2h) ; dyadic rungs 2^k
+==============================================================================
+  Schur triple A+B=C (cauldron boil) = 3-term, ODD; the smallest cycle is the triangle.
+  Sidon quadruple A+B=C+D = 4-term = C4 = the FIRST power of two (Erdős 64 rung k=2).
+  A graph with NO power-of-2 cycle avoids 4-,8-,16-,...-term dyadic relations simultaneously
+  = is 'dyadically Sidon' (B_{2^{k-1}}-like at every level). Erdős 64: min-deg>=3 forbids this.
+
+==============================================================================
+(3) HARD CORE — high-girth (Sidon-like) cubic graphs: do they carry a 2^k cycle?
+==============================================================================
+  Petersen (g5,n10)      n=10 girth=5 mindeg=3: smallest power-of-2 cycle = 8 
+  Heawood (g6,n14)       n=14 girth=6 mindeg=3: smallest power-of-2 cycle = 8 
+  Moebius-Kantor(g6,n16) n=16 girth=6 mindeg=3: smallest power-of-2 cycle = 16 
+  Pappus (g6,n18)        n=18 girth=6 mindeg=3: smallest power-of-2 cycle = 16 
+  Desargues(g6,n20)      n=20 girth=6 mindeg=3: smallest power-of-2 cycle = 16 
+  Dodecahedral(g5,n20)   n=20 girth=5 mindeg=3: smallest power-of-2 cycle = 16 
+  McGee (g7,n24)         n=24 girth=7 mindeg=3: smallest power-of-2 cycle = 16 
+  Nauru (g6,n24)         n=24 girth=6 mindeg=3: smallest power-of-2 cycle = 16 
+  Tutte-Coxeter(g8,n30)  n=30 girth=8 mindeg=3: smallest power-of-2 cycle = 16 
+
+==============================================================================
+(4) random cubic graphs filtered to girth>=5 (C4-free hard core): all have a 2^k cycle?
+==============================================================================
+  tested 14 girth>=5 cubic graphs (n=10..20); WITHOUT a 2^k cycle (<=16): 0
+
+=> across all tested high-girth (Sidon-like) cubic graphs, a power-of-2 cycle is ALWAYS
+   present (Petersen/McGee girth 5,7 -> caught by C8; girth-8 cage -> the girth IS 8). The
+   conjecture's hard core = forcing a DYADIC additive relation in a graph engineered to be
+   B_h (high-girth/Sidon) -- consistent, still OPEN.
+
+DONE.

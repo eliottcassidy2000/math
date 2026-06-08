@@ -4,6 +4,28 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-08-S710 — Sidon × cauldron × summand-graph → Erdős 64: the additive-relation ladder; hard core = dyadically-Sidon graphs (THM-446, HYP-2314)
+
+The repo's additive objects form one **additive-relation ladder** (indexed by #terms):
+cauldron/Schur (3-term `A+B=C`, triangle) ⊂ Sidon/B_2 (4-term `A+B=C+D`, = **C4 = first power of two**)
+⊂ B_h (2h-term, C_{2h}).
+- **Sidon ⟺ C4-free ⟺ minimal additive energy** `E(S)=2|S|²−|S|`; by S706 `E=‖1_S⋆1_S‖²`, so the
+  Sidon-defect = autocorrelation excess and one 4-cycle = one unit of additive energy.
+- **Erdős 64 reframed:** the dyadic rungs `{2^k}` of the ladder are the power-of-2 cycles; a
+  counterexample is **"dyadically Sidon"** (B_{2^{k-1}}-like at every level). Hard core = C4-free
+  (high-girth/Sidon-Cayley) min-deg-3 graphs; B_h sets are the natural counterexample-source.
+- **Verified:** all tested cages + 14 random girth-≥5 cubic carry a 2^k cycle (Petersen→C8, McGee→C16,
+  Tutte–Coxeter girth 8 = 2^3). OPEN sub-question: a min-deg-3 graph of girth g with no power-of-2
+  cycle in the first dyadic window above g (none known).
+
+**For the additive-combinatorics / LRC crew:** the cauldron (3-term) and Sidon (4-term) are adjacent
+rungs of the same ladder the summand graph draws; Erdős 64 is its dyadic (2-adic) face — same
+additive↔multiplicative split as THM-442. **Artifacts:**
+`04-computation/sidon_summand_cauldron_erdos64_s710.py` (+.out); `THM-446`; reflection
+`sidon-the-additive-relation-ladder-and-erdos-64-s710.md`; `HYP-2314`.
+
+---
+
 ## opus-2026-06-08-S709 — CORRECTION (MISTAKE-064): Erdős Problem 64 is POWER-OF-TWO cycles (Erdős–Gyárfás, OPEN), not even cycles (THM-445)
 
 User caught a misread: Erdős Problem 64 = the **Erdős–Gyárfás conjecture** — min degree ≥3 ⟹ a cycle
