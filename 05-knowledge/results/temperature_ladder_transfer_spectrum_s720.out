@@ -1,0 +1,40 @@
+======================================================================================
+S720 — the transfer spectrum: A+B+C-D-E-F+G and the twistors are one structure at two temperatures
+======================================================================================
+
+(1) THE TEMPERATURE FAMILY  Lambda(a): x^3 - 3 x^2 + a x - 1
+    FROZEN: e1=sum=3 (corners/geometry), e3=product=1 (parity/unimodular determinant)
+    RUNNING: e2=a = temperature.  a=3 -> (x-1)^3 (additive); a=-1 -> THM-337 (multiplicative)
+       a | dominant root lambda(a) | regime
+       3 | 1.000000             | CRYSTALLINE (all roots 1, polynomial)  <- (x-1)^3 = A+B+C-D-E-F+G
+       2 | 2.324718             | exponential (|c|^2=1/lambda=0.430)
+       1 | 2.769292             | exponential (|c|^2=1/lambda=0.361)
+       0 | 3.103803             | exponential (|c|^2=1/lambda=0.322)
+      -1 | 3.382976             | exponential (|c|^2=1/lambda=0.296)  <- THM-337 base-path H
+      -2 | 3.627365             | exponential (|c|^2=1/lambda=0.276)
+      -3 | 3.847322             | exponential (|c|^2=1/lambda=0.260)
+    => a=3 is the UNIQUE crystalline point (sum 3 + product 1 + all |root|=1 forces roots=1);
+       any a<3 heats it to exponential. Additivity = the perfectly-tuned inclusion-exclusion.
+
+(2) ENDPOINTS from real sequences
+    additive (#tiles): recurrence order 3, coeffs ['3', '-3', '1'] = (x-1)^3 char x^3-3x^2+3x-1 (a=3)
+    multiplicative (base-path H [1, 5, 17, 57, 193, 653]...): order 3, coeffs ['3', '1', '1']
+      => char x^3-3x^2-x-1 (a=-1), constant term -1 => |product of eigenvalues|=1 (UNIMODULAR transfer)
+
+(3) UNIMODULAR TRANSFER = parity (the Pfaffian face): product of eigenvalues = 1 along the ladder
+    both endpoints have constant term -1 (monic) => e3 = product of roots = 1, FROZEN.
+    This is the recursion-level shadow of S713: det(I+2A)=Pf^2 with Pf odd (a unimodular/parity
+    invariant). The transfer matrix of a bounded-width tournament family is unimodular (det +-1).
+
+(4) THE TWISTOR (log) IS THE COOLING MAP: multiplicative root g  -->  additive root 1
+    multiplicative g^n=[1, 3, 9, 27, 81, 243]: order 1, coeffs ['3'] (root g=3, HOT)
+    its discrete log ell=n=[0, 1, 2, 3, 4, 5]: order 2, coeffs ['2', '-1'] (char (x-1)^2, root 1, COLD)
+    => the discrete-log twistor (S718) / angle twistor (S719) literally moves a structure from the
+       hot (multiplicative, root != 1) end toward the cold (additive, root 1) end of the ladder.
+
+(5) d-SIMPLEX GENERALIZATION: order d+1; additive crystalline pt = (x-1)^(d+1) (binomial middle coeffs)
+    d=1 (1-simplex, 2 corners): crystalline char (x-1)^2 = [1, -2, 1]; e1=2 (corners), e_last=+-1 (parity); middle coeffs = TEMPERATURE coordinates
+    d=2 (2-simplex, 3 corners): crystalline char (x-1)^3 = [1, -3, 3, -1]; e1=3 (corners), e_last=+-1 (parity); middle coeffs = TEMPERATURE coordinates
+    d=3 (3-simplex, 4 corners): crystalline char (x-1)^4 = [1, -4, 6, -4, 1]; e1=4 (corners), e_last=+-1 (parity); middle coeffs = TEMPERATURE coordinates
+    d=4 (4-simplex, 5 corners): crystalline char (x-1)^5 = [1, -5, 10, -10, 5, -1]; e1=5 (corners), e_last=+-1 (parity); middle coeffs = TEMPERATURE coordinates
+======================================================================================
