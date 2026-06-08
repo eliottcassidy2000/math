@@ -1,0 +1,65 @@
+========================================================================
+(A) the fiberable-vs-prime-hard catalogue of LRC(n)  (LRC proven for <=7 runners)
+========================================================================
+  n  | factor | smallest odd p | LRC(p) proven? | ord_p(2) | reducible? | type
+   8 | 2^3    |              - |             no |        - |   (2-adic) | 2^k (fully 2-adic)
+   9 | 3^2    |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  10 | 2*5    |              5 |            YES |        4 |        YES | fiber/5 (base proven)
+  11 | 11     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  12 | 2^2*3  |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  13 | 13     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  14 | 2*7    |              7 |            YES |        3 |        YES | fiber/7 (base proven)
+  15 | 3*5    |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  16 | 2^4    |              - |             no |        - |   (2-adic) | 2^k (fully 2-adic)
+  17 | 17     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  18 | 2*3^2  |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  19 | 19     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  20 | 2^2*5  |              5 |            YES |        4 |        YES | fiber/5 (base proven)
+  21 | 3*7    |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  22 | 2*11   |             11 |             no |       10 |       weak | fiber/11 (base open)
+  23 | 23     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  24 | 2^3*3  |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  25 | 5^2    |              5 |            YES |        4 |        YES | fiber/5 (base proven)
+  26 | 2*13   |             13 |             no |       12 |       weak | fiber/13 (base open)
+  27 | 3^3    |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  28 | 2^2*7  |              7 |            YES |        3 |        YES | fiber/7 (base proven)
+  29 | 29     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  30 | 2*3*5  |              3 |            YES |        2 |        YES | fiber/3 (base proven)
+  31 | 31     |              - |              - |        - |         NO | PRIME (no fiber, hard)
+  32 | 2^5    |              - |             no |        - |   (2-adic) | 2^k (fully 2-adic)
+  -> n=2p with p<=7 (n=6,10,14) reduce to a PROVEN base (S640). n=2p with p>7 (22,26) reduce to
+     an OPEN base. PRIMES (11,13,17,19,23,29,31) have NO fiber = the hard end. 19 is prime-hard.
+
+========================================================================
+(B) the sqrt(-19) / chi=5 CM handle on prime n=19
+========================================================================
+  19 = 3 mod 4 (True); QR mod 19 = [1, 4, 5, 6, 7, 9, 11, 16, 17]  (|QR|=(19-1)/2=9)
+  -1 a residue? False  (NO -> Gauss sum gives sqrt(-19), Paley-19 exists, S638)
+  2  a residue? False  (NO -> 2 primitive root, ord_19(2)=18; <2>!=QR)
+
+  quadratic Gauss sum g = sum_a (a|19) zeta_19^a:
+    g  = +0.0000+4.3589i   (should be purely imaginary = i*sqrt(19))
+    g^2= -19.0000+0.0000i   -> = -19 ? True
+    => sqrt(-19) = the Gauss sum LIVES in Q(zeta_19): the quadratic subfield of the field where
+       the 19-runner witnesses t=j/19 live. Q(sqrt(-19)) is the index-2 (Paley/QR) level.
+
+  Q(zeta_19): degree phi(19)=18 over Q; Galois (Z/19)* = Z/18 (cyclic, ABELIAN, solvable).
+  subfields <-> divisors of 18 (1,2,3,6,9,18); the degree-2 one = Q(sqrt(-19)) (the QR level).
+  So the witness tower (opus S704) is the cyclotomic/abelian tower; sqrt(-19) is its QUADRATIC
+  rung = where the Paley/Gauss/QR structure lives.
+
+  THE HEEGNER / chi-tower:
+    sqrt(-  3): class no. 1 (Heegner True); chi=3 step; Eisenstein lattice
+    sqrt(- 11): class no. 1 (Heegner True); chi=4 step; Moser spindle
+    sqrt(- 19): class no. 1 (Heegner True); chi=5 step; 19-runner / hex(2)
+  19=4*5-1 (HYP-2277 rotation field N=5); 19=1+6+12=hex(2); 2n-1=37=hex(3).
+
+========================================================================
+HONEST SUMMARY
+========================================================================
+  (A) Reducibility is a DIVISOR property: n=2p (p<=7) reduce to proven LRC(p); primes don't
+      reduce at all. 19 prime => prime-hard for fibers (verified: 2 primitive root, single cycle).
+  (B) 19's leverage is the CM field sqrt(-19) = the Gauss sum = the quadratic subfield of Q(zeta_19)
+      = the index-2 Paley/QR level of the abelian witness tower; Heegner (class 1) = the chi=5 rung.
+      This ORGANIZES the 19-runner witnesses (their exact field) -- it does NOT prove LRC(19) (open);
+      the genuine attack is the cyclotomic depth q* (S704) at q=19,37, with sqrt(-19) the CM handle.
