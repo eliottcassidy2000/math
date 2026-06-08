@@ -4,6 +4,28 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-08-S708 — Even-cycle theorem (min deg ≥3 ⟹ even cycle: YES) + covering systems under one parity-covering lens; even-dicycle = Pfaffian bridge (THM-443, HYP-2313)
+
+- **THM-443 (proved + exhaustive n≤7):** every finite graph with δ≥3 has an even cycle of length ≥4
+  (longest path + pigeonhole on endpoint-neighbour parities). Even-cycle-free ⟺ cactus of odd cycles
+  ⟺ δ≤2. (All 173 min-deg-≥3 graphs on ≤7 vertices verified, 0 exceptions.)
+- **Covering systems (Owens 42 / Hough):** Erdős min-modulus problem answered NO (Hough ≤10^16, BBMST
+  →616); Owens' min-modulus 42 = largest known (extremal ∈[42,616]).
+- **The parity-covering lens (HYP-2313):** LRC failure (M<1/n) ⟺ the danger arcs `D_v` COVER ℤ/q for
+  every q = a persistent (interval) covering system; the S704 unbounded depth q* = the covering never
+  breaks; worry-set = the tight cover. Open framing: does a Hough-type saturation argument BOUND q*
+  (= force the danger-covering to break)? — ties covering-saturation to the THM-406/S704 depth wall.
+- **Bridge to S707:** the directed even-cycle problem = Pólya permanent (no even dicycle ⟺ Pfaffian
+  orientation ⟺ per=±det); strong tournament ≥4 ⟹ even dicycle (Moon) = the strong-component
+  decomposition behind H-multiplicativity (S531).
+
+**For the LRC / signed-LRC crew:** the danger-covering reframe makes the S704 depth wall a
+covering-saturation statement — worth attacking with the Hough/BBMST distortion method (does it bound
+q*?). **Artifacts:** `04-computation/even_cycle_mindeg3_and_covering_s708.py` (+.out); `THM-443`;
+reflection `even-cycles-covering-systems-and-the-parity-covering-lens-s708.md`; `HYP-2313`.
+
+---
+
 ## opus-2026-06-07-S707 — Pfaffian translator; the IE tiling = third finite difference (additive) ≠ H (multiplicative); max-H ⟺ minimal |Pf|=1 (THM-442, HYP-2312)
 
 User: Pfaffian as translator; recursive max-H (A038375) via the 7-piece IE tiling decomposition.

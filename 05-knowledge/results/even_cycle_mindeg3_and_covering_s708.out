@@ -1,0 +1,43 @@
+==============================================================================
+(1) THEOREM (exhaustive, all graphs n<=7 via the graph atlas):
+    min degree >= 3  =>  has an even cycle of length >= 4
+==============================================================================
+  graphs tested: 1252;  with min-degree>=3: 173;  min-deg>=3 WITHOUT an even cycle: 0
+  => theorem holds with 0 counterexamples for all graphs on <=7 vertices.
+  even-cycle-free graphs that DO contain a cycle: max min-degree among them = 2  (must be <= 2)
+
+==============================================================================
+(2) PROOF witness: longest path endpoint has 3 nbrs on the path; two share parity
+==============================================================================
+  wheel W5 (min deg 3): even cycle length 4 via nbrs at endpoints 1,3; has_even_cycle=True
+  Petersen (3-regular, girth 5): has_even_cycle=True (shortest even cycle length = None)
+
+==============================================================================
+(3) THETA lemma: 3 internally-disjoint u-v paths of lengths a,b,c give cycles
+    a+b, b+c, a+c; their sum 2(a+b+c) is even => an even number are odd => >=1 even
+==============================================================================
+  every theta (a,b,c in 1..5) has an even cycle among {a+b,b+c,a+c}: True
+
+==============================================================================
+(4) DIRECTED even cycles in tournaments (strong comp size>=4 => even dicycle, Moon)
+    -- the directed even-cycle problem ties to Pfaffian orientations / Polya permanent
+==============================================================================
+  strong tournament n=3: directed cycle lengths [3]; even ones: [] (Moon: vertex-pancyclic, lengths 3..n)
+  strong tournament n=4: directed cycle lengths [3, 4]; even ones: [4] (Moon: vertex-pancyclic, lengths 3..n)
+  strong tournament n=5: directed cycle lengths [3, 4, 5]; even ones: [4] (Moon: vertex-pancyclic, lengths 3..n)
+  strong tournament n=6: directed cycle lengths [3, 4, 5, 6]; even ones: [4, 6] (Moon: vertex-pancyclic, lengths 3..n)
+  => strong tournament on n>=4 has a directed 4-cycle (even); transitive (no cycle) has none.
+     'no even directed cycle' <-> Pfaffian orientation exists <-> permanent = +-det (Polya).
+
+==============================================================================
+(5) COVERING SYSTEMS (Owens min-modulus 42) and LRC = a danger-covering mod q
+==============================================================================
+  covering system [(0, 2), (0, 3), (1, 4), (5, 6), (7, 12)]: covers Z/12: True  (min modulus 2)
+  Erdos min-modulus problem: can min modulus be arbitrarily large? NO (Hough 2015,
+  min modulus <= 10^16; improved to 616, BBMST). Largest KNOWN min modulus = 42 (Owens).
+  AP_5 worry-set: danger residues cover Z/5: False  (lonely tick exists: True)
+  loose (1,2,4,8): danger residues cover Z/5: False  (lonely tick exists: True)
+  => LRC FAILURE = the danger residues COVER Z/q for every q = a persistent covering
+     system (the S704 'unbounded depth q*' = the covering never breaks). Worry-set = tight cover.
+
+DONE.
