@@ -1,0 +1,45 @@
+======================================================================
+(A) A038375(n) = max #Hamiltonian paths over tournaments on n nodes
+======================================================================
+  n:        [1, 2, 3, 4, 5, 6]
+  max H:    [1, 1, 3, 5, 15, 45]
+  (Redei: min H = 1 (transitive), every H odd; these are the MAXIMA.)
+
+======================================================================
+(B) test recurrences for max H against the data
+======================================================================
+  ratios max H(n)/max H(n-1): [1.0, 3.0, 1.667, 3.0, 3.0]
+  user's inclusion-exclusion signature is +3(n-1) -3(n-2) +1(n-3) (the 3-set IE coeffs).
+  test a(n) =? 3 a(n-1) - 3 a(n-2) + a(n-3):
+    n=4: predicted 7, actual 5  no
+    n=5: predicted 7, actual 15  no
+    n=6: predicted 33, actual 45  no
+  (the literal 3,-3,1 inclusion-exclusion does NOT reproduce max H -- max H is irregular,
+   an extremal sequence with no simple linear recurrence; the user's tiling is a DICTIONARY,
+   not a closed formula for the maximum. But the SIGN STRUCTURE is the real content -- see (C).)
+
+======================================================================
+(C) the recursive truths that DO hold (the Pfaffian alternating-sign angle)
+======================================================================
+  C1 ALGEBRA: det(skew-adj) = Pf^2; Pf(M_n) = sum_j (-1)^j M_1j Pf(M_{1,j}^) -- a n->n-2
+     recursion with ALTERNATING signs (the same +/-/+ as the triangle). discriminant=0 (odd n)
+     / odd-square (even n); the parity is the n->n-1 (Mode A) part.
+  C2 GRAPHS/TOURNAMENTS: H(T)=I(Omega,2)=independence poly of the 3-cycle conflict graph at 2;
+     I(Omega,x)=I(Omega-v,x)+x I(Omega-N[v],x) -- a clean n->(n-1, n-1-deg) recursion (S625).
+  C3 TOPOLOGY/GEOMETRY: the user's triangle = 3-set inclusion-exclusion
+     |A u B u C| = (A+B+C) - (AB+AC+BC) + ABC  [+,-,+ = corners(0-cell) - edges(1-cell) + face(2-cell)]
+     chi = 3 - 3 + 1 = 1 (a disk). FORMALIZED card_union_three.
+     verified |AuBuC|+|AB|+|AC|+|BC| = |A|+|B|+|C|+|ABC| on 2000 random triples: True
+
+======================================================================
+THE CROSS-DOMAIN DICTIONARY (one alternating-sign recursion, five faces)
+======================================================================
+  ALGEBRA   : Pfaffian (det = sum of signed perfect matchings); det = Pf^2.
+  COMBINAT. : perfect matchings (Pf), Hamiltonian paths (H = indep. poly at 2).
+  GEOMETRY  : the staircase/triangle tiling; corners/edges/interior.
+  TOPOLOGY  : Euler characteristic chi = V - E + F; the chain-complex signs.
+  TOURNAMENTS: sub-tournaments at n-1,n-2,n-3 (the user's A,B,C / D,E,F / G).
+  -> the UNIFYING object is the ALTERNATING SUM over a graded structure: +dim0 -dim1 +dim2.
+     Pfaffian, inclusion-exclusion, Euler characteristic, and the user's triangle are ONE
+     signed-sum recursion seen in five languages. Max-H is irregular (no closed recurrence),
+     but H itself recurses cleanly by deletion-contraction (C2); the SIGNS are universal.
