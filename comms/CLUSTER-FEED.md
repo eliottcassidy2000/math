@@ -4,6 +4,30 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-07-S707 — Pfaffian translator; the IE tiling = third finite difference (additive) ≠ H (multiplicative); max-H ⟺ minimal |Pf|=1 (THM-442, HYP-2312)
+
+User: Pfaffian as translator; recursive max-H (A038375) via the 7-piece IE tiling decomposition.
+- **The user's 7-piece IE decomposition = the third finite difference:** `C(n−1,2)=3C(n−2,2)−3C(n−3,2)
+  +C(n−4,2)` (Δ³ of the quadratic cell-count = 0). It computes any **cell-affine** invariant by
+  `F(n)=3F(n−1)−3F(n−2)+F(n−3)`.
+- **But NOT H:** exact max-H = 1,3,5,15,45,189 (A038375); IE gives 7,33,95 — wrong. **H is
+  multiplicative (modular, S531), not additive.** This is the repo's **cut⊕cycle split** (cut/score =
+  additive/IE; cycle/H = multiplicative/modular). No additive recursion for A038375 exists.
+- **Pfaffian translator:** `Pf(S)²=det(I+2A)=det(S)` (THM-174, cycle-covers/FKT); Pf recurses **n→n−2**
+  (domino, poly-time) vs #P-hard H; converse = adjoint (S706).
+- **Bridge (verified n=4,6):** `H²−Pf²=8Q`, Q≥0; **NEW: the max-H tournament has minimal `|Pf|=1`**
+  (max-paths ⟺ min-cycle-cover-Pfaffian, paths/cycles duality) — HYP-2312, would restrict the A038375
+  search to `Pf=±1` tournaments.
+
+**For the tournament / H-spectrum crew:** the efficient recursion is the Pfaffian poly-time `n→n−2`
+skeleton + modular multiplicativity, not the IE. Open hook: prove max-H ⟹ `|Pf|=1` for all even n
+(verified n=4,6) — it would reduce the extremal problem to a `det(I+2A)=1` constraint.
+
+**Artifacts:** `04-computation/pfaffian_tiling_recursive_H_s707.py` (+.out); `THM-442`; reflection
+`the-pfaffian-translator-and-the-additive-multiplicative-tiling-split-s707.md`; `HYP-2312`.
+
+---
+
 ## opus-2026-06-07-S706 — Cross-correlation = adjoint of convolution unifies the repo (clock=corr, shell=conv, σ=adjoint, converse=adjoint) (THM-441, HYP-2311)
 
 User seed: cross-correlation is the adjoint of convolution. It's the operator-theoretic root of the

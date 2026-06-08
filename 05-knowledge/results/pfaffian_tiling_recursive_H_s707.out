@@ -1,0 +1,62 @@
+============================================================================
+(3a) EXACT max Hamiltonian-path count (A038375) by brute force, small n
+============================================================================
+  n=2: max H =     1   Szele n!/2^(n-1) =     1   max/Szele = 1.000
+  n=3: max H =     3   Szele n!/2^(n-1) =     1   max/Szele = 3.000
+  n=4: max H =     5   Szele n!/2^(n-1) =     3   max/Szele = 1.667
+  n=5: max H =    15   Szele n!/2^(n-1) =     7   max/Szele = 2.143
+  n=6: max H =    45   Szele n!/2^(n-1) =    22   max/Szele = 2.045
+
+============================================================================
+(3b) n=7 max-H: hill-climb from regular/random (best found, not proven exact)
+============================================================================
+  n=7: best H found = 189   Szele = 78   ratio = 2.423
+
+============================================================================
+(3c) the max-H sequence and recursion tests
+============================================================================
+  max-H: {2: 1, 3: 3, 4: 5, 5: 15, 6: 45, 7: 189}
+  ratios m(n)/m(n-1): {3: 3.0, 4: 1.667, 5: 3.0, 6: 3.0, 7: 4.2}
+  n=5: m=  15 | 3m(n-1)-3m(n-2)+m(n-3)=   7 | 3*m(n-1)=  15 | n!/2^(n-2)=   15
+  n=6: m=  45 | 3m(n-1)-3m(n-2)+m(n-3)=  33 | 3*m(n-1)=  45 | n!/2^(n-2)=   45
+  n=7: m= 189 | 3m(n-1)-3m(n-2)+m(n-3)=  95 | 3*m(n-1)= 135 | n!/2^(n-2)=  157
+
+============================================================================
+(2) IE TILING IDENTITY  C(n-1,2) = 3C(n-2,2) - 3C(n-3,2) + C(n-4,2)
+    (the user's A,B,C - D,E,F + G ;  third finite diff of a quadratic = 0)
+============================================================================
+  identity holds n=4..29: True
+  test max-invariant(n) =? 3*inv(n-1)-3*inv(n-2)+inv(n-3):
+    max cyclic triangles: {3: 1, 4: 2, 5: 5, 6: 8}
+      n=6: c=8 vs 3c(n-1)-3c(n-2)+c(n-3)=10
+
+============================================================================
+(1) PFAFFIAN: Pf(S)^2 = det(I+2A) = det(S) (THM-174); H odd, Pf odd; n->n-2 recursion
+============================================================================
+  n=4: Pf(S)=-1  Pf^2=1  det(I+2A)=1  det(S)=1  H=1 (H odd:True, Pf odd:True)
+  n=6: Pf(S)=7  Pf^2=49  det(I+2A)=49  det(S)=49  H=13 (H odd:True, Pf odd:True)
+  => Pf(S)^2=det(I+2A)=det(S) verified; both H and Pf are ODD (Redei / even-n Pfaffian).
+
+============================================================================
+(extra) single apex-block H=1+2^(s-2); H multiplicative over disjoint modules
+============================================================================
+  size-3 apex block: H=3  (1+2^(s-2)=3)
+  size-4 apex block: H=5  (1+2^(s-2)=5)
+  size-5 apex block: H=9  (1+2^(s-2)=9)
+  size-6 apex block: H=17  (1+2^(s-2)=17)
+  size-7 apex block: H=33  (1+2^(s-2)=33)
+  two disjoint apex blocks [0,2]&[3,5] in n=6: H=9 (3*3=9 expected)
+
+DONE.
+  size-7 apex block: H=33  (1+2^(s-2)=33)
+  two disjoint apex blocks [0,2]&[3,5] in n=6: H=9 (3*3=9 expected)
+
+============================================================================
+(bridge) H^2 - Pf^2 = 8Q  exhaustive: always a NON-NEG integer multiple of 8?
+============================================================================
+  n=4: all (H^2-Pf^2) divisible by 8: True; all >=0: True; Q in [0,3]; at max-H=5: |Pf|=1
+  n=6: all (H^2-Pf^2) divisible by 8: True; all >=0: True; Q in [0,253]; at max-H=45: |Pf|=1
+  => H=sqrt(Pf^2+8Q): the poly-time Pfaffian(det) is the SKELETON, Q the correction;
+     Pf recurses n->n-2 (domino removal); H is #P-hard but pinned mod 8 by Pf (both odd).
+
+DONE.
