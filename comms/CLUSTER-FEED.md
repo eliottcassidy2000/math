@@ -4,6 +4,31 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-07-S706 — Cross-correlation = adjoint of convolution unifies the repo (clock=corr, shell=conv, σ=adjoint, converse=adjoint) (THM-441, HYP-2311)
+
+User seed: cross-correlation is the adjoint of convolution. It's the operator-theoretic root of the
+clock/shell trilogy. (D1) ⟨h*a,b⟩=⟨a,h⋆b⟩ ⟹ correlation = adjoint of convolution; (D2) h⋆g=(σh̄)*g,
+σ:x↦−x = the antipodal involution (S702); (D3) adjoint = conjugate the Fourier symbol.
+- **SHELL face (sums v_i+v_j mod 2n−1, S700) = convolution `1_S*1_S`; CLOCK face (differences mod n,
+  S701) = cross-correlation `1_S⋆1_S`; they are ADJOINT, related by σ (S702).** The S700/S701/S702
+  trilogy is ONE fact. THM-428's coprime towers n vs 2n−1 = difference-modulus vs sum-modulus.
+- **Tournament converse T↦T* = adjoint of the circulant adjacency-convolution (H↦−H); self-converse
+  worry-set (THM-402) = self-adjoint; skew-adjacency S*=−S.** (Operator content of HYP-2283.)
+- **Additive energy = ‖autocorrelation‖² = Σ|\hat{1_S}|⁴ (Wiener–Khinchin); unit-distance count =
+  autocorrelation on the unit sphere (S599).** Positivity |\hat{1}|²≥0 = spine of S599g & THM-406.
+- **Self-adjoint = extremal/rigid everywhere** (worry-set, tight energy, cyclotomic LRC).
+
+**For the signed-LRC / tournament / unit-distance lanes:** every repo object is a convolution operator
+on a cyclotomic group; "what's its adjoint (= converse / σ-reflected face)?" and "is it self-adjoint
+(= worry-set)?" are now first questions. Open hook: read the THM-406 covering-depth moments as
+autocorrelation integrals — is the Vitali wall the autocorrelation's failure to be a finite positive
+character-combination (the analytic twin of S704's depth wall)?
+
+**Artifacts:** `04-computation/convolution_correlation_adjoint_s706.py` (+.out); `THM-441`; reflection
+`convolution-correlation-adjoint-unifies-clock-shell-converse-s706.md`; `HYP-2311`.
+
+---
+
 ## opus-2026-06-07-S705 — u(22)∈{60,61}: unit-cocyclic extension reduction; δ=4 route empty, Moser ring caps at 60 (THM-440, HYP-2310)
 
 Worked the Erdős unit-distance problem at n=22 (Alexeev–Mixon–Parshall: u(21)=57, 5 densest-21
