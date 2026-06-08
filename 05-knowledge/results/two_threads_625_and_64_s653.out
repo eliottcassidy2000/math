@@ -1,0 +1,58 @@
+========================================================================
+THREAD A (625): zeta <= min(chi, chi_c);  chi - zeta >= chi(G) - chi(G^c)
+========================================================================
+  n | chi(G) | chi(G^c) | zeta | zeta<=min? | chi-zeta | chi(G)-chi(G^c) | bound ok?
+  4 |      2 |        3 |    2 |      True |        0 |              -1 | True
+  5 |      2 |        3 |    2 |      True |        0 |              -1 | True
+  6 |      3 |        3 |    3 |      True |        0 |               0 | True
+  7 |      3 |        4 |    3 |      True |        0 |              -1 | True
+  8 |      3 |        4 |    3 |      True |        0 |              -1 | True
+  -> zeta<=min(chi,chi_c) ALWAYS (formalized); so chi-zeta >= chi(G)-chi(G^c) = the chromatic
+     sigma-asymmetry. 625's gap is driven by how non-self-complementary chi is.
+
+========================================================================
+THREAD B (64=Erdos-Gyarfas): the cycle=additive-relation dictionary, done HONESTLY
+========================================================================
+  CAUTION/CORRECTION: a 4-cycle of length L = an L-term +/- relation among generators -- BUT an
+  abelian Cayley graph Cay(Z/n,{a,b,...}) ALWAYS has the PARALLELOGRAM 4-cycle (0,a,a+b,b), so it
+  is the WRONG model for 'no short cycle'. (Verified below.) The Sidon<->C4-free statement lives
+  in the BIPARTITE SUMMAND/incidence graph, not the Cayley graph.
+  abelian-Cayley parallelogram check: Z/13[1, 5]:C4=True, Z/31[1, 5, 11]:C4=True, Z/41[1, 8, 14]:C4=True
+  -> always True (the parallelogram). So Cayley is NOT the place Sidon kills C4.
+
+  THE CORRECT OBJECT = the SUMMAND GRAPH (repo): S is SIDON  <=>  no two distinct pairs in S have
+  the same sum  <=>  the summand graph on S has NO 4-cycle. (a+b=c+d is the 4-cycle.)
+  set S                  | Sidon? | #repeated-sums (=#summand-C4s) | match?
+  [1, 2, 4, 8]           |  True  |                              0 | True
+  [1, 2, 3, 5]           |  True  |                              0 | True
+  [1, 2, 5, 11, 22]      |  True  |                              0 | True
+  [1, 3, 7, 12]          |  True  |                              0 | True
+  [0, 1, 3, 7]           |  True  |                              0 | True
+  [1, 2, 3, 4, 5]        | False  |                              3 | True
+  -> Sidon <=> summand-graph C4-free, EXACTLY. The summand graph IS the Sidon/C4 detector.
+     Sidon sets give the EXTREMAL C4-free graphs (Erdos-Renyi/Brown) -- the densest graphs with
+     NO 4-cycle. THESE are the HARD instances of Erdos-Gyarfas: a C4-free min-deg-3 graph still
+     must (conjecturally) have an 8- or 16-cycle. Markstrom's near-counterexamples (only a 16-cycle)
+     live exactly here. To DISPROVE 64 you must avoid C4 AND C8 AND C16 AND ... simultaneously =
+     a Sidon-type condition at EVERY doubling level, at min degree >=3 -- conjecturally impossible.
+
+========================================================================
+THE SUMMAND GRAPH & CAULDRON (repo) = the additive-relation detectors
+========================================================================
+  SUMMAND GRAPH (repo): a->n,b->n iff a+b=n. A 4-CYCLE there (two pairs a+b=c+d=n with {a,b}!={c,d})
+  IS a Sidon violation. So 'Sidon' = 'the summand graph has no parallel pairs' = no 4-cycle.
+  CAULDRON GAME (repo, S618): color [1,N] avoiding a monochromatic sum a+b (a Schur 'boil'). A boil
+  = a 3-term additive relation; Schur's theorem = you cannot avoid boils forever. Erdos-Gyarfas is
+  the cycle/2^k analogue: you cannot avoid power-of-2 additive relations forever at min degree 3.
+
+========================================================================
+CROSS-CONNECTION: both threads live on the 2-ADIC SEAM
+========================================================================
+  625: sigma = COMPLEMENT, the ORDER-2 involution; zeta = the sigma-fixed chromatic number;
+       chi-zeta = the sigma-asymmetry. (the 2 = the involution.)
+  64 : the target cycle length is a POWER OF 2 = the DOUBLING tower (S640: ord_p(2), the 2-adic
+       seam); a 2^k cycle = a doubling-closed additive relation. (the 2 = the doubling.)
+  -> 625 is the order-2 (involution) face and 64 is the 2^k (doubling) face of the SAME prime 2.
+     The arc's 2-adic seam (half-turn sigma + doubling tower) is exactly where both Erdos problems
+     sit. Back-and-forth payoff: the cube-root/odd machinery (S637-651) is orthogonal to both;
+     these two are the project's PURE 2-ADIC problems.
