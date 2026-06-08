@@ -1,0 +1,36 @@
+======================================================================================
+S725 — Erdos 592 (omega^beta -> (omega^beta,3)^2), bridged to the repo
+======================================================================================
+
+(B) FINITE SEED (in the repo): R(3,3)=6; extremal coloring of K_5 = C_5 = Paley graph P_5
+   blue=P_5 edges [(0, 1), (0, 4), (1, 2), (2, 3), (3, 4)]
+   blue triangle-free: True; red (complement) triangle-free: True
+   => K_5 has a 2-coloring with NO monochromatic triangle (C_5); K_6 does NOT (R(3,3)=6).
+   This C_5/Paley extremal is THM-130/309/436 in the repo: the finite floor of 592's blue-K_3.
+
+(A) REFRAME: blue triangle-free  <=>  red graph independence number <= 2
+   for C_5: red independence number = 2 (=2, since red is also C_5)
+   => 592 = 'every triangle-free graph on omega^beta has an independent set of order type omega^beta'.
+   (independence = the repo's H = I(Omega,2), THM-209.)
+
+(D) ULTRAMETRIC TREE coloring on b-ary depth-n tree (model of omega^n truncated to branching b):
+    d(x,y)=first differing level in {1..n}; color a pair by chi(level). KEY ultrametric fact:
+    for x<y<z lex, d(x,z)=min(d(x,y),d(y,z)) => every triangle's 3 levels are {p,p,q}, p<=q.
+   branching b=2, level-2 BLUE: blue triangle present? False  (b=2: no blue triangle, but branching truncated to 2 (not omega))
+   branching b=3, level-2 BLUE: blue triangle present? True  (b>=3 at a blue level => blue triangle (cannot use omega-branching at a blue level))
+   branching b=4, level-2 BLUE: blue triangle present? True  (b>=3 at a blue level => blue triangle (cannot use omega-branching at a blue level))
+   CONCLUSION: any BLUE level with omega-branching forces a blue triangle; so to avoid blue K_3
+   an ultrametric coloring must keep blue levels finite-branching -- it cannot realize the
+   omega^n counterexamples (n>=3). Hence Specker's NO-constructions are NON-ultrametric: they
+   exploit the ORDER WITHIN levels, not just the tree. (Correct structural insight into 592.)
+
+(C) THE TOWER (heuristic): omega^beta = a shell tower (CNF) = LRC cyclotomic tower (THM-439) /
+    covering smooth-modulus tower (S724). beta-pattern YES(1,2) NO(3..finite) YES(omega):
+    - finite beta: 'hot/generic' -- a (non-ultrametric) obstruction coloring exists for beta>=3;
+    - limit omega: 'cold crystalline fixed point' -- the obstruction cannot be sustained across
+      ALL finite levels at once (a compactness flip), so the relation is restored (Chang).
+    Conjectural reading of OPEN beta=omega^2: it is a SECOND limit (limit of limits); if the
+    'fixed point restores at limits' principle iterates, omega^2 should be YES (like omega), with
+    the FALSE band sitting at the successor/finite levels between limits. (Matches Schipperus-type
+    positive results at limit ordinals; a tower-renormalization heuristic, NOT a proof.)
+======================================================================================
