@@ -1,0 +1,47 @@
+==================================================================================
+S715 — Pfaffian translator + the triangular inclusion-exclusion (7-piece tiling)
+==================================================================================
+
+(1) THE 7-PIECE IE IS A PARTITION OF UNITY (triangular grid)
+  3*Tri(n-1) - 3*Tri(n-2) + Tri(n-3) == Tri(n) for n=3..39: True
+  coefficients (1,-3,3,-1) = (x-1)^3 = the 3rd finite difference Delta^3; per-cell net mult:
+    corner cell: in 1 big triangle  -> 1
+    edge cell:   in 2 big, 1 overlap -> 2-1 = 1
+    interior:    3 big, 3 overlap, 1 center -> 3-3+1 = 1   (Mobius reconstruction)
+
+(2) RECURSIVE TRUTH A: tile-additive invariant => Delta^3 F = 0 (quadratic in n)
+  #tiles C(n-1,2):  [1, 3, 6, 10, 15, 21, 28, 36, 45]   Delta^3=[0, 0, 0, 0, 0, 0]
+  #arcs  C(n,2):    [3, 6, 10, 15, 21, 28, 36, 45, 55]   Delta^3=[0, 0, 0, 0, 0, 0]
+  #verts n:         [3, 4, 5, 6, 7, 8, 9, 10, 11]   Delta^3=[0, 0, 0, 0, 0, 0]
+  => all tile-additive (degree<=2) invariants are killed by Delta^3: the user's IE recursion.
+
+(3) RECURSIVE TRUTH B: H is multiplicative (I(Omega,2)) — NOT (x-1)^3; base-path = THM-337
+  A038375 max-H (n=2..6, exact): [1, 3, 5, 15, 45]  (OEIS 1,1,3,5,15,45; n=7..13: 189,661,3357,15745,103605,531205,3719831 — THM-329)
+  Delta^3 of A038375 (n=1..13): [-2, 8, 12, 94, 214, 1896, 7468, 65780, 264268, 2421286]  (NOT zero => H not tile-additive)
+  base-path staircase H (k=1..9, n=2..18): [1, 5, 17, 57, 193, 653, 2209, 7473, 25281]
+  THM-337 recurrence H(k)=3H(k-1)+H(k-2)+H(k-3) holds k=4..9: True
+  char poly x^3-3x^2-x-1 (lambda~3.383): the leading '3' = the 3 corners survives;
+  signs are + (multiplicative), NOT the additive IE's alternating (x-1)^3.
+
+(4) PFAFFIAN = the signed n->n-2 (Mode-B) deletion: minors are (n-2)-subtournaments, ALTERNATING sign
+  Pf(S)=sum_j (-1)^(j-1) S_0j Pf(S_minor[0,j]) verified on 2000/2000 random n=6 tournaments
+  the (n-2) minors enter with ALTERNATING SIGN = the user's 'D,E,F size n-2 are NEGATIVE'.
+  Mode-B (THM-291) is this same n->n-2 step; the Pfaffian makes it an exact SIGNED recursion.
+
+(5) max-H 'edge over random' R(n)=a(n)*2^(n-1)/n!  (the recursive-efficiency handle)
+   n= 1: a(n)=       1   R(n)=1.0000
+   n= 2: a(n)=       1   R(n)=1.0000
+   n= 3: a(n)=       3   R(n)=2.0000
+   n= 4: a(n)=       5   R(n)=1.6667
+   n= 5: a(n)=      15   R(n)=2.0000
+   n= 6: a(n)=      45   R(n)=2.0000
+   n= 7: a(n)=     189   R(n)=2.4000
+   n= 8: a(n)=     661   R(n)=2.0984
+   n= 9: a(n)=    3357   R(n)=2.3683
+   n=10: a(n)=   15745   R(n)=2.2215
+   n=11: a(n)=  103605   R(n)=2.6578
+   n=12: a(n)=  531205   R(n)=2.2712
+   n=13: a(n)= 3719831   R(n)=2.4468
+  R(n) grows SLOWLY (~sqrt(n)-ish), oscillating by parity: max-H = (n!/2^(n-1)) * slow factor;
+  the maximizers are Paley/circulant (THM-336/338), not the base-path family (17 vs 45 at n=6).
+==================================================================================
