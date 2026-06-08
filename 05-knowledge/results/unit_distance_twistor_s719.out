@@ -1,0 +1,38 @@
+======================================================================================
+S719 — the unit-distance momentum twistor (angle = log U(1)); the n=22 bleeding edge
+======================================================================================
+
+(1) TWISTOR = angle (log of U(1)): global rotation -> additive shift of all edge-angles
+  rotating the config by phi shifts every edge-angle by phi (angles match after un-shift): True
+  => rotation = additive translation in the angle-twistor (the dual conformal symmetry, linear).
+
+(2) ANGLE-TWISTOR AUTOCORRELATION: u = sum over line-directions of m(direction)
+  K3 [] W7 (u=57): #line-directions = 6, per-direction counts = [12, 12, 12, 7, 7, 7]
+    => few directions, high multiplicity = the rotation-group (rosette) structure; sum = 57 = u
+  triangular 22-blob (norm-1): u=49; the 6 neighbor vectors => 3 line-directions, all parallel families
+
+(3) CM LAYERS: r_Q(D) = #unit-neighbors (degree) = rotation-group order = the twistor Z/r_Q(D)
+   D=  1: r_Q(D)= 6 unit-neighbors  (3 line-directions)  <- triangular
+   D=  3: r_Q(D)= 6 unit-neighbors  (3 line-directions)
+   D=  7: r_Q(D)=12 unit-neighbors  (6 line-directions)
+   D= 13: r_Q(D)=12 unit-neighbors  (6 line-directions)  <- AMP sqrt(13) layer, deg 12 (S710/THM-431)
+   D= 19: r_Q(D)=12 unit-neighbors  (6 line-directions)
+   D= 21: r_Q(D)=12 unit-neighbors  (6 line-directions)
+   D= 31: r_Q(D)=12 unit-neighbors  (6 line-directions)
+   D= 37: r_Q(D)=12 unit-neighbors  (6 line-directions)
+   D= 49: r_Q(D)=18 unit-neighbors  (9 line-directions)
+   D= 91: r_Q(D)=24 unit-neighbors  (12 line-directions)
+   => the optimum uses sqrt(13) (deg 12) not sqrt(1) (deg 6): more directions = denser; the
+      discrete log of the rotation group (Z/r_Q(D)) is the unit-distance analog of the LRC twistor.
+
+(4) n=22 SEARCH: densest 22-point subset in Eisenstein norm-D layers (lattice lower bounds)
+   norm- 1 layer: densest 22-subset has 49 unit distances
+   norm- 3 layer: densest 22-subset has 49 unit distances
+   norm- 7 layer: densest 22-subset has 48 unit distances
+   norm-13 layer: densest 22-subset has 57 unit distances
+   Known: u(22) in [60,61] (open); triangular/lattice patches under-perform because the OPTIMUM
+   is a NON-LATTICE RIGID graph (S710): a lattice DISK only crosses 3N at N=43, the true optimum
+   at N=28. The twistor reading: the record 60/61 needs MORE saturated directions than any single
+   lattice patch supplies at n=22; reaching it = a rigid multi-direction (CM-rotation) graph,
+   i.e. a NON-PRODUCT config (S712: 22=2*11 caps products at 57) with a rich rotation group.
+======================================================================================
