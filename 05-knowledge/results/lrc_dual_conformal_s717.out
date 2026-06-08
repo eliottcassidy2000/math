@@ -1,0 +1,40 @@
+====================================================================================
+S717 — Dual conformal symmetry of the LRC: what can / cannot be expressed in spacetime
+====================================================================================
+
+(A) ORDINARY (spacetime) conformal symmetries of M(S): dilation, reflection, permutation
+  dilation M(lambda S)=M(S): 300/300 | reflection M(-S)=M(S): 300/300  (S_n trivial)
+  => these act on the WORLDLINES (rescale/reverse time, relabel strands): the visible conformal group.
+
+(B) DUAL conformal symmetry: multiplier a in (Z/m)* — orbit-M(a.S mod m) = orbit-M(S)
+  multiplier invariance orbit-M(a.S mod m)=orbit-M(S): 300/300 (EXACT)  [the hidden symmetry]
+  INVERSION (special conformal) v->v^-1 mod 13: a=v^-1 sends v->1 (central band) = the bad
+    v=2: a=v^-1=7 mod 13, a*v mod m = 1 (=1, on the band) => bad multiplier (THM-420)
+    v=3: a=v^-1=9 mod 13, a*v mod m = 1 (=1, on the band) => bad multiplier (THM-420)
+    v=5: a=v^-1=8 mod 13, a*v mod m = 1 (=1, on the band) => bad multiplier (THM-420)
+  => the multiplier scrambles worldlines (no spacetime picture) yet preserves loneliness:
+     dual conformal symmetry. Inversions are the dangerous generators; the transversal/Paley
+     core is hard precisely because inversions {+-v_i^-1} cover ALL multipliers (no dodge).
+
+(C) WHAT CANNOT be in the dual: the OBSERVER/origin. M is NOT translation-invariant,
+    but the dual (distance multiset) IS.
+  S+c has the SAME distance multiset but DIFFERENT M in 265/300 trials
+  e.g. S=(1, 2) M=1/3 vs S+2=(3, 4) M=3/7; dual data identical True
+  => the observer (origin 0, the fixed worldline) breaks translation: pure spacetime, dual-invisible.
+
+(D) WHAT CANNOT be in the dual: M itself. Homometric (same autocorrelation) configs differ in M.
+  homometric pair (same dist multiset, non-congruent): (0, 1, 2, 6, 8, 11) vs (0, 1, 6, 7, 9, 11)
+    distance multiset (1, 1, 2, 2, 3, 4, 5, 5, 6, 6, 7, 8, 9, 10, 11)
+    M (shifted +1): (1, 2, 3, 7, 9, 12)->1/5  vs  (1, 2, 7, 8, 10, 12)->2/9   DIFFERENT => M not dual-determined
+  homometric pair (same dist multiset, non-congruent): (0, 1, 2, 6, 10, 13) vs (0, 1, 4, 5, 11, 13)
+    distance multiset (1, 1, 2, 3, 4, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    M (shifted +1): (1, 2, 3, 7, 11, 14)->1/4  vs  (1, 2, 5, 6, 12, 14)->3/13   DIFFERENT => M not dual-determined
+
+====================================================================================
+CAN be expressed in SPACETIME (worldlines on the cylinder): loneliness, the gap M, covering
+  depth, the braid topology, the observer/origin. Local & geometric.
+CANNOT (DUAL-only / hidden): the multiplier-perspective symmetry (preserves M, scrambles
+  worldlines), homometry (configs the dual cannot tell apart), the autocorrelation flatness
+  of the hard Paley/transversal core. The OBSTRUCTION lives in the dual; the OBSERVER lives
+  in spacetime; M needs BOTH. Ordinary(spacetime) + dual conformal = the 'perspective' Yangian.
+====================================================================================
