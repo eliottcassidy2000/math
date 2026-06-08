@@ -2049,3 +2049,39 @@ changing at n<=8 has converged to nothing** — slow asymptotics routinely overs
 around (here the turn is at n=8). Before declaring an `~ c*n!` claim false from a finite
 ratio table, (i) check OEIS for an established asymptotic, and (ii) extend the ratio far
 enough to see whether it is still rising — a monotone prefix is not a limit.
+
+---
+
+## MISTAKE-064: misread Erdős Problem 64 as "even cycle" (2k) when it is "power-of-2 cycle" (2^k); proved the trivial settled statement and wrongly framed it as the open problem
+
+**Author:** opus-2026-06-08-S708 (caught by the user same day)
+**Severity:** framing/attribution error (the math proved is correct but answers the WRONG question)
+
+### What happened
+The user asked to "Work On: Does every finite graph with minimum degree at least 3 contain a
+cycle of length 2𝑘 for some 𝑘 ≥2?" — **Erdős Problem 64 = the Erdős–Gyárfás conjecture (1995):
+every graph with min degree ≥3 contains a cycle whose length is a POWER OF TWO** (`2^k`: 4, 8,
+16, …). This is **OPEN and falsifiable.** I read "2𝑘" as "2·k" (an even number ≥4), proved the
+classical longest-path result *"min degree ≥3 ⟹ an even cycle of length ≥4"* (TRUE and settled),
+and **wrongly presented it as the user's problem** in THM-443/HYP-2313/S708.
+
+### Why it is wrong
+"Min degree ≥3 ⟹ even cycle" is settled-true, so it CANNOT be an open falsifiable problem — that
+alone should have flagged the misreading. The real condition is **multiplicative/2-adic** (length
+exactly a power of 2), enormously stronger than "even." Petersen (girth 5) has no 4-cycle but an
+8-cycle; a counterexample would be a min-degree-3 graph avoiding 4, 8, 16, 32, … *all at once*.
+
+### Fix
+- THM-443 **rescoped**: it correctly proves the EVEN-cycle lemma (classical) — relabeled to state
+  explicitly that this is NOT Erdős 64. The power-of-2 problem is treated honestly as OPEN in
+  THM-444/S709 (verified computationally on small/structured graphs; no counterexample; proven for
+  cubic planar by Heckman–Krakovski; Markström computational searches).
+- HYP-2313's parity-covering lens stands as a lens but its even-cycle leg is downgraded to the
+  weaker statement; the power-of-2 ("dyadic") version is the open one.
+- The S707 Pfaffian/even-dicycle bridge applies to EVEN cycles (Pólya), NOT to power-of-2 cycles.
+
+### Lesson
+**When a problem is stated to be OPEN, first check that your proof does not settle it — if it
+does, you have misread the problem.** A one-character misread (`2^k` vs `2k`) flips a trivial
+exercise into a famous open conjecture. Parse the *difficulty claim* as a constraint on the
+interpretation.

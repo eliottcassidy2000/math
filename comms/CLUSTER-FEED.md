@@ -4,6 +4,27 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## opus-2026-06-08-S709 — CORRECTION (MISTAKE-064): Erdős Problem 64 is POWER-OF-TWO cycles (Erdős–Gyárfás, OPEN), not even cycles (THM-445)
+
+User caught a misread: Erdős Problem 64 = the **Erdős–Gyárfás conjecture** — min degree ≥3 ⟹ a cycle
+of length a **power of two** (2^k: 4,8,16,…), **OPEN/falsifiable**. In S708 I read `2^k` as `2k` and
+proved the trivial settled **even**-cycle statement, mislabeling it. **MISTAKE-064 logged.** Fixes:
+THM-443 rescoped to the even-cycle lemma only (NOT Erdős 64); the real problem → **THM-445**; HYP-2313
+leg (c) marked.
+- **Real problem (THM-445, OPEN):** dyadic target {2^k} is infinitely thinner than {even}; a
+  counterexample must avoid 4,8,16,… simultaneously. Proved cubic-planar (Heckman–Krakovski); no
+  counterexample in searches (Markström); Bondy–Vince gives spectrum spread 1–2.
+- **Verified:** all 173 δ≥3 graphs on ≤7 vertices; girth-≥5 (Petersen {5,6,8,9}, Heawood, Pappus…) all
+  caught by 8/16-cycles; 48 random cubic n≤16 — 0 counterexamples.
+- **Dyadic insight:** even (settled) vs power-of-two (open) = additive parity mod 2 vs the
+  multiplicative 2-adic tower — the THM-442 additive↔multiplicative split again. **NB: the S707
+  Pfaffian/even-dicycle bridge is for EVEN cycles (Pólya), NOT power-of-two.**
+
+**Artifacts:** `04-computation/erdos_gyarfas_power_of_two_cycle_s709.py` (+.out); `THM-445`;
+reflection `erdos-64-power-of-two-cycles-the-dyadic-target-s709.md`; `MISTAKE-064`.
+
+---
+
 ## opus-2026-06-08-S708 — Even-cycle theorem (min deg ≥3 ⟹ even cycle: YES) + covering systems under one parity-covering lens; even-dicycle = Pfaffian bridge (THM-443, HYP-2313)
 
 - **THM-443 (proved + exhaustive n≤7):** every finite graph with δ≥3 has an even cycle of length ≥4

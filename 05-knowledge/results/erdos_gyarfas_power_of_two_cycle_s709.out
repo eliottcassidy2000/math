@@ -1,0 +1,34 @@
+==============================================================================
+(1) EXHAUSTIVE n<=7 (graph atlas): does every min-degree>=3 graph have a
+    cycle of length a power of two (here necessarily length 4, since 8>7)?
+==============================================================================
+  min-degree>=3 graphs on <=7 vertices: 173; with a power-of-2 cycle: 173; without: 0
+  (on <=7 vertices the only available power of two is 4; min-deg>=3 forces girth<=4 here,
+   so all have a 4-cycle. The conjecture's substance appears only at girth>=5, n>=10.)
+
+==============================================================================
+(2) girth>=5 cubic/structured graphs (no 4-cycle): do they have an 8- or 16-cycle?
+==============================================================================
+  Petersen (3-reg, girth5)   n=10 girth=5 cycle-lens(<=16)=[5, 6, 8, 9]  power-of-2: [8]  => OK
+  Heawood (3-reg, girth6)    n=14 girth=6 cycle-lens(<=16)=[6, 8, 10, 12, 14]  power-of-2: [8]  => OK
+  Pappus (3-reg, girth6)     n=18 girth=6 cycle-lens(<=16)=[6, 8, 10, 12, 14, 16]  power-of-2: [8, 16]  => OK
+  Desargues (3-reg,girth6)   n=20 girth=6 cycle-lens(<=16)=[6, 8, 10, 12, 14, 16]  power-of-2: [8, 16]  => OK
+  Dodecahedral (3-reg)       n=20 girth=5 cycle-lens(<=16)=[5, 8, 9, 10, 11, 12, 13, 14, 15, 16]  power-of-2: [8, 16]  => OK
+  Moebius-Kantor (girth6)    n=16 girth=6 cycle-lens(<=16)=[6, 8, 10, 12, 14, 16]  power-of-2: [8, 16]  => OK
+
+==============================================================================
+(3) random 3-regular graphs, several sizes: all contain a power-of-2 cycle?
+==============================================================================
+  tested 48 random cubic graphs (n=6..16); WITHOUT a power-of-2 cycle (<=16): 0
+
+==============================================================================
+(4) the dyadic structure of the problem
+==============================================================================
+  A counterexample must avoid EVERY length in {4,8,16,32,...} simultaneously -- a
+  2-ADIC (dyadic) constraint, far stronger than 'no even cycle'. Min degree >=3 forces
+  MANY cycle lengths (e.g. Bondy-Vince: two cycles whose lengths differ by 1 or 2);
+  the open content is whether that spread must HIT a power of two.
+  Status: OPEN; proved for cubic PLANAR (Heckman-Krakovski 2013); no counterexample known
+  (Markström computational searches). Verified above on all <=7-vertex and many cubic graphs.
+
+DONE.

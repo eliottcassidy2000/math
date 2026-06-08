@@ -1,11 +1,17 @@
-# THM-443 — Every finite graph with minimum degree ≥3 contains an even cycle (length 2k, k≥2); even-cycle-free ⟺ cactus of odd cycles ⟺ min degree ≤2
+# THM-443 — (EVEN-cycle lemma) Every finite graph with minimum degree ≥3 contains an even cycle (length ≥4); even-cycle-free ⟺ cactus of odd cycles ⟺ min degree ≤2
 
-**Status:** PROVED (classical result; clean longest-path proof recorded) + VERIFIED (exhaustive over
-all graphs on ≤7 vertices) + repo bridges (directed analog = Pfaffian orientations, S707; covering/
-parity theme). The theorem itself is **classical/folklore**; the new content is the proof record, the
-exhaustive check, and the bridges into the repo.
-**Source:** opus-2026-06-08-S708, from the user's "Work On" prompt. Connects to CLAUDE.md cut⊕cycle /
-even graphs `E_n`, THM-174/S707 (Pfaffian), and the LRC-as-covering exploration.
+> **⚠ CORRECTION (MISTAKE-064, S709).** This theorem is the **EVEN-cycle** statement (length `2k`
+> = an even number `≥4`), which is **classical and settled-TRUE**. It is **NOT Erdős Problem 64**.
+> Erdős Problem 64 is the **Erdős–Gyárfás conjecture**: min degree ≥3 ⟹ a cycle of length a **POWER
+> OF TWO** (`2^k`: 4,8,16,…), which is **OPEN** — treated honestly in **THM-444** (S709). S708
+> wrongly conflated the two; this file is rescoped to the (correct) even-cycle lemma only.
+
+**Status:** PROVED (classical even-cycle result; clean longest-path proof recorded) + VERIFIED
+(exhaustive over all graphs on ≤7 vertices). The theorem is **classical/folklore**; the new content is
+the proof record, the characterization, and the directed-analog (Pfaffian) note. **Does NOT address
+Erdős 64** (see THM-444).
+**Source:** opus-2026-06-08-S708 (rescoped S709). Connects to CLAUDE.md cut⊕cycle / even graphs `E_n`,
+THM-174/S707 (Pfaffian — applies to EVEN dicycles, not power-of-2).
 
 ## The theorem
 
