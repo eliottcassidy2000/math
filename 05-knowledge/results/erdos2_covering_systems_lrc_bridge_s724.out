@@ -1,0 +1,29 @@
+========================================================================================
+S724 — Erdos 2 (covering systems, min modulus) <-> LRC covering-depth (THM-406)
+========================================================================================
+
+(1) classic min-modulus-2 covering: {0(2),0(3),1(4),5(6),7(12)}
+   covers Z: True; uncovered density (direct)=0; inclusion-exclusion rho=0; match=True
+   naive density Sum 1/n_i = 4/3 (>1: overlap 1/3 wasted)
+   => uncovered density = S561's rho = THM-406's p_0-form (Sum_I (-1)^|I|/lcm). Covers <=> rho=0.
+
+(2) density > 1 but does NOT cover (the obstruction is OVERLAP structure, not density)
+   moduli [3, 4, 5, 6, 8, 9, 10, 12] (min 3): Sum 1/n_i = 493/360 (~1.369); covers=False; uncovered density=89/360 (~0.2472)
+   => even with density >~1, large-ish min modulus leaves a positive uncovered density: the LEAK.
+
+(3) STRUCTURE of large-min-modulus coverings: moduli must be SMOOTH (lcm has many small primes)
+   record min moduli: 2 (Erdos) -> 3,4,... -> 40 (Nielsen 2009, ~10^50 congruences) ->
+   42 (Owens, BYU) = 2*3*7; the moduli are divisors of a highly composite L; HOUGH(2015): min
+   modulus <= 10^16; BBMST(2022): <= 616000 (distortion method) + no all-odd-squarefree covering.
+   => Erdos 2 is DISPROVED: the minimum modulus is BOUNDED. 'Spread-out pieces always leak.'
+
+(4) LRC BRIDGE: continuous covering. THM-406 p_0 = Sum_j (-1)^j S_j (danger-arc overlaps) has the
+   SAME form as the covering-system rho = Sum_I (-1)^|I|/lcm (S561). The covering system is the
+   rational/CRT SKELETON of the LRC danger arcs. 'Multiple-of-n LRC config is loose' (p_0>0, S643)
+   is the continuous sibling of Hough's 'large-min-modulus covering leaks' -- both: spread pieces
+   leave a positive gap. The DISTORTION / density-increment method (Hough/BBMST) is exactly the
+   structural tool the LRC needs (S561: density alone can't close it; cut by structure).
+
+(5) 42 in the repo: incidental (a(42) in A038375; a Paley-table entry). The COVERING is central:
+    THM-406 covering-depth = LRC master object; S561 rho = covering density; THM-439 witness tower.
+========================================================================================
