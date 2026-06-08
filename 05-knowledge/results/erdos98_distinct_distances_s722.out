@@ -1,0 +1,31 @@
+========================================================================================
+S722 — Erdos problem 98: distinct distances under no-3-collinear, no-4-concyclic
+========================================================================================
+
+(1) MECHANISM: no 4 concyclic => every distance-graph has max degree <= 3
+  verified on random 7-pt no-4-concyclic configs: max distance-graph degree <= 3 : True
+  (a point with 4 others at one distance => those 4 lie on a circle centered at it => 4 concyclic)
+
+(2) LOWER BOUND: each point sees each distance <=3 times => >= ceil((n-1)/3) distinct distances
+   n=  5: h(n) >= ceil((n-1)/3) = 2   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+   n=  8: h(n) >= ceil((n-1)/3) = 3   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+   n= 11: h(n) >= ceil((n-1)/3) = 4   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+   n= 15: h(n) >= ceil((n-1)/3) = 5   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+   n= 22: h(n) >= ceil((n-1)/3) = 7   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+   n= 50: h(n) >= ceil((n-1)/3) = 17   (Erdos wants h(n)>=n, conj h(n)/n->inf; OPEN)
+
+(3) CONSTRUCTIONS (upper bounds on h(n)): general-position integer configs, fewest distinct distances
+   n=5: fewest distinct distances found = 4  (lower bound ceil((n-1)/3)=2); config=[(-3, -1), (0, 0), (1, -3), (1, 2), (2, -1)]
+   n=6: fewest distinct distances found = 6  (lower bound ceil((n-1)/3)=2); config=[(1, -1), (1, 1), (2, 0), (2, 1), (3, -2), (3, 0)]
+   n=7: fewest distinct distances found = 9  (lower bound ceil((n-1)/3)=2); config=[(-1, 3), (0, -4), (0, 2), (1, 3), (2, -1), (3, -2), (4, -1)]
+   n=8: fewest distinct distances found = 12  (lower bound ceil((n-1)/3)=3); config=[(-1, -1), (0, -3), (1, -4), (1, -2), (2, 0), (2, 1), (3, -1), (3, 1)]
+
+(4) CM TENSION: a CM lattice point has r_Q(D) others per circle => >=4 concyclic = FORBIDDEN by 98
+   Eisenstein norm-1: r_Q(1)=6 points on each such circle (>=4 => 4-CONCYCLIC, forbidden by problem 98)
+   Eisenstein norm-3: r_Q(3)=6 points on each such circle (>=4 => 4-CONCYCLIC, forbidden by problem 98)
+   Eisenstein norm-7: r_Q(7)=12 points on each such circle (>=4 => 4-CONCYCLIC, forbidden by problem 98)
+   Eisenstein norm-13: r_Q(13)=12 points on each such circle (>=4 => 4-CONCYCLIC, forbidden by problem 98)
+   => few-distinct-distance CM/lattice configs (S719) are EXACTLY what problem 98 forbids:
+      the unit-distance OPTIMUM (peaked, concyclic) and the problem-98 OPTIMUM (spread, general
+      position) are the two opposite extremizations of the SAME radial autocorrelation.
+========================================================================================
