@@ -1,0 +1,36 @@
+======================================================================================
+S718 — a momentum twistor for the LRC: the discrete log linearizes dual conformal symmetry
+======================================================================================
+
+(1) THE TWISTOR ell=dlog_g LINEARIZES dual conformal: multiplier->translation, inversion->negation
+  m= 7 (g=3, phi=6, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  m=11 (g=2, phi=10, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  m=13 (g=2, phi=12, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  m=19 (g=2, phi=18, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  m=23 (g=5, phi=22, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  m=27 (g=2, phi=18, cyclic=True): mul->add True | inv->neg True | ell(-1)=phi/2 True
+  => exactly like Hodges momentum twistors: the hidden (dual conformal) symmetry is now LINEAR.
+
+(2) TRANSVERSAL CORE in twistor coords: bad-multiplier set B=(-L)U(c-L); no dodge <=> half-system
+  n= 4, m=7 (phi=6, c=ell(-1)=3): twistor predicts dodge 600/600; no-dodge<=>half-system 600/600
+  n= 6, m=11 (phi=10, c=ell(-1)=5): twistor predicts dodge 600/600; no-dodge<=>half-system 600/600
+  n= 7, m=13 (phi=12, c=ell(-1)=6): twistor predicts dodge 600/600; no-dodge<=>half-system 600/600
+  n=10, m=19 (phi=18, c=ell(-1)=9): twistor predicts dodge 600/600; no-dodge<=>half-system 600/600
+  n=12, m=23 (phi=22, c=ell(-1)=11): twistor predicts dodge 600/600; no-dodge<=>half-system 600/600
+  n=14, m=27 (phi=18, c=ell(-1)=9): twistor predicts dodge 600/600; no-dodge<=>half-system 325/600
+  => THM-420 transversal core = L is a HALF-SYSTEM (transversal of {0,c}) = {-L,c-L} tiles Z/phi.
+     The multiplicative dodge becomes ADDITIVE COVERING on Z/phi(m); inversion=negation is manifest.
+
+(3) EXPLICIT (n=7, m=13, phi=12, c=6): a transversal-core config and a dodgeable one
+   half-system L=[0, 1, 2, 3, 4, 5] -> residues [1, 2, 3, 4, 6, 8] : dodge? False (expect False = transversal core); B covers Z/12: True
+   non-half-system L=[0, 1, 2, 3, 4, 6] -> residues [1, 2, 3, 4, 8, 12] : dodge? True (expect True); |B|=10<12
+
+(4) MULTI-SHELL twistor: a config is hard (no shell dodge) only if it is a half-system at every shell
+    (shells m=2n-1 prime/prime-power give a 1D twistor; composite (Z/m)* -> higher-dim twistor)
+   n= 4: shell m=7, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+   n= 6: shell m=11, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+   n= 7: shell m=13, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+   n=10: shell m=19, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+   n=12: shell m=23, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+   n=14: shell m=27, (Z/m)* cyclic=True, #prime factors(m)=1 => twistor dim ~ 1 (P^1-like)
+======================================================================================
