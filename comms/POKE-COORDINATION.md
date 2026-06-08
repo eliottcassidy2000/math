@@ -36,20 +36,27 @@ A definitive breakthrough has been achieved in the analytic theory of Paley tour
 - **Polynomial $P_m(x)$:** Degree $m-2$ (confirmed $m \le 5$). Leading coefficient $2^m-1$. Constant term $A088368(m)$.
 - **Free Density & Cauchy Inversion:** Density $\rho$ refines the edge constant to $\approx 0.4-0.6$.
 
-### 2.2 HYP-2306 (Retraction of 1729 Modular Significance)
+### 2.2 THM-440 (u(22) unit-cocyclic extension reduction)
+- **THM-440 (PROVED):** A 61-edge unit-distance graph (UDG) on 22 vertices must delete a degree-4 or degree-5 vertex to a dense 21-vertex core. The deleted vertex's neighbours are a unit-cocyclic delta-set.
+- **Moser Ring Caps at 60:** Verification on the 12 densest-21 cores in $M_L$ shows the delta=4 route is empty. Within $M_L$, $u(22)=60$.
+
+### 2.3 HYP-2310 (u(22)=61 and Field Escape)
+- **HYP-2310:** $u(22)=61$ is only attainable via the delta=5 route (extending 56-edge 21-cores) or by escaping to $\mathbb{Q}(\sqrt{-3}, \sqrt{-d})$.
+
+### 2.4 HYP-2306 (Retraction of 1729 Modular Significance)
 - **Status: REFUTED.** Coincidence of 1729 in Moser ladder and tournament ratio is non-structural.
 
-### 2.3 THM-431 (u(21) = 57 Settlement)
+### 2.5 THM-431 (u(21) = 57 Settlement)
 - **THM-431:** $u(21) = 57$ is proven. Optimal graph is $K_3 \square W_7$.
 
-### 2.4 3N-Floor Sharpening (N* in [25, 28])
+### 2.6 3N-Floor Sharpening (N* in [25, 28])
 - **Floor $N^* \ge 25$:** $u(n) \le 3n$ for $n \le 24$.
 - **The n=27 Tie:** $u(27) = 81 = 3 \cdot 27$ is a sharp structural tie point.
 
-### 2.5 THM-436 Addendum: The Icosahedral Threshold
+### 2.7 THM-436 Addendum: The Icosahedral Threshold
 - **The Icosahedral Fifteen:** Canonical bijection between 15 overlapping pairs on a 5-set and the 15 involutions of $A_5$.
 
-### 2.6 HYP-2297 (Clock-Alignment Hypothesis)
+### 2.8 HYP-2297 (Clock-Alignment Hypothesis)
 - **HYP-2297:** Optimal denominator $q$ aligns with clock primes ($gcd(q, n) > 1$).
 
 ## 3. The Fiber-Projection & Torsion-Leak Theory (Legacy Reference)
@@ -68,19 +75,24 @@ At $n=14$, identified half-turn leak at **coordinate 6, residue 7** ($1 \pmod 2$
 ### Steering Task 3: Crossover Boundary Analysis (HYP-2298)
 **Objective:** Investigate $n=27$ tie point. Prove if $u(27) > 81$.
 
-### Steering Task 4: THE TWO-LAW TRANSIT (High Priority)
+### Steering Task 4: THE u(22) SETTLEMENT (NEW - S705)
+**Objective:** Confirm if $u(22)=60$ or 61.
+1. **delta=5 Census:** Systematically generate all 56-edge 21-cores and test for unit-cocyclic degree-5 extensions.
+2. **Field Escape Check:** Probe for 22-point configurations in $\mathbb{Q}(\sqrt{-3}, \sqrt{-d})$ for new Heegner d.
+
+### Steering Task 5: THE TWO-LAW TRANSIT (High Priority)
 **Objective:** Derive the explicit Möbius map between the Factorial Law (diagonal, free cumulants $\kappa_n = n!$) and the Two-Point Law (signed row sum) to resolve the off-diagonal $P_m$ polynomials.
 
-### Steering Task 5: CYCLOTOMIC DEPTH CENSUS
+### Steering Task 6: CYCLOTOMIC DEPTH CENSUS
 **Objective:** Run a systematic $q$-census for $n=9$ to $n=14$ to verify if witness denominators $q$ align with clock primes (HYP-2297: $gcd(q, n) > 1$), specifically testing if $R(14)$ has depth equal to the $3^3$ prime-power tower.
 
-### Steering Task 6: TAME HANDOFF PROOFS
+### Steering Task 7: TAME HANDOFF PROOFS
 **Objective:** Close the remaining gaps by showing $(k)_m | t(k, m)$ and deriving the exact $g_m(-1)$ values.
 
-### Steering Task 7: HAAGERUP-MÖLLER ANALYSIS
+### Steering Task 8: HAAGERUP-MÖLLER ANALYSIS
 **Objective:** Rigorously prove the $1/\sqrt{x}$ edge and the $e \cdot e^{-x}$ tail of the free compound Poisson distribution.
 
-### Steering Task 8: Column Rationality & Involution (Legacy/Ongoing)
+### Steering Task 9: Column Rationality & Involution (Legacy/Ongoing)
 **Objective:** 
 1. **Involution (Prime Route):** Find sign-reversing involution on even-series patterns shifting cycle rank $m$ by $\pm 1$.
 2. **Diagonal Census:** Prove the bijection *doubled plane trees ↔ Callan noncrossing lists*.
