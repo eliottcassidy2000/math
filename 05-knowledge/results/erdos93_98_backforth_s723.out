@@ -1,0 +1,35 @@
+==========================================================================================
+S723 — Erdos 93 (convex, SOLVED) and 98 (general position, OPEN), worked back and forth
+==========================================================================================
+
+[93] Altman: convex => >= floor(n/2) distinct distances; regular n-gon is TIGHT and ALL-concyclic
+   regular 4-gon: distinct distances = 2  (floor(n/2)=2)  all 4 concyclic => 98-FORBIDDEN for n>=4
+   regular 5-gon: distinct distances = 2  (floor(n/2)=2)  all 5 concyclic => 98-FORBIDDEN for n>=4
+   regular 6-gon: distinct distances = 3  (floor(n/2)=3)  all 6 concyclic => 98-FORBIDDEN for n>=4
+   regular 7-gon: distinct distances = 3  (floor(n/2)=3)  all 7 concyclic => 98-FORBIDDEN for n>=4
+   regular 8-gon: distinct distances = 4  (floor(n/2)=4)  all 8 concyclic => 98-FORBIDDEN for n>=4
+   regular 9-gon: distinct distances = 4  (floor(n/2)=4)  all 9 concyclic => 98-FORBIDDEN for n>=4
+   regular 10-gon: distinct distances = 5  (floor(n/2)=5)  all 10 concyclic => 98-FORBIDDEN for n>=4
+   regular 11-gon: distinct distances = 5  (floor(n/2)=5)  all 11 concyclic => 98-FORBIDDEN for n>=4
+   regular 12-gon: distinct distances = 6  (floor(n/2)=6)  all 12 concyclic => 98-FORBIDDEN for n>=4
+
+[93->98] hull-size bound: a D-distinct-distance set has convex hull on h <= 2D+1 vertices
+   verified h <= 2D+1 on 3000 random integer configs: True
+   => few distinct distances FORCES a small convex hull (the regular-polygon ring is the only
+      way to a big hull with few distances, and 98 bans it).
+
+[93->98] onion peeling: each convex layer (by 93) has size <= 2D+1 => few distances => many layers
+   regular 10-gon (98-forbidden): D=5, #convex layers=1, layer sizes=[10]
+   general-position 10-set (no 3 collinear, no 4 concyclic): D=26, layers sizes=[7, 3]
+      layer size 7 (convex): distinct distances 18 >= floor/2=3
+      layer size 3 (convex): distinct distances 3 >= floor/2=1
+
+[98->93] reverse: no-4-concyclic caps per-vertex distance multiplicity at 3 => every vertex sees
+   >= ceil((n-1)/3) distinct distances -- a clean toehold on the OPEN strong-93 (one vertex >= n/2).
+   The gap (n-1)/3 -> n/2 is exactly the convex structure 93 exploits but 98 cannot.
+
+==========================================================================================
+THE PIVOT: 93's optimizer (regular polygon, 1 concyclic ring, floor(n/2)) = 98's forbidden config.
+98 = 93 with the ring banned => must use many thin NON-circular convex layers => candidate route
+to superlinearity: bound how few distinct distances many-non-circular-layers can share.
+==========================================================================================
