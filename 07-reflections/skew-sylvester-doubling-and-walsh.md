@@ -1,6 +1,6 @@
 # The Skew-Sylvester Doubling: One Cayley-Dickson Step, Seen Five Ways
 
-**Source:** kind-pasteur-2026-06-09-S1 (THM-447..452, T767, HYP-2332..2343, MISTAKE-065)
+**Source:** kind-pasteur-2026-06-09-S1 (THM-447..448, 450..453, T767, HYP-2332..2337 + 2344..2349, MISTAKE-065)
 **Seed:** the human's directive — "three copies of the original and one negated copy; skew-Hadamard
 matrices normalized with first row all 1s are analogous to the tiling model with the Hamiltonian
 path fixed."
@@ -101,11 +101,11 @@ the doubling do to the waggly LAYER decomposition as a whole?
 
 ## What to do next (ranked)
 
-1. **HYP-2340:** prove Aut ≡ F_21 and the labeled link recursion from the closed-form arc law
+1. **HYP-2346:** prove Aut ≡ F_21 and the labeled link recursion from the closed-form arc law
    (both look inductive; the closed form makes them finite-check-per-level).
-2. **HYP-2341:** n=7 stress test — separate cycle-spectrum from pair statistics in THM-449(5);
+2. **HYP-2347:** n=7 stress test — separate cycle-spectrum from pair statistics in THM-453(5);
    also first nonzero-c7 test of the 128 coefficient.
-3. **HYP-2339:** is H(T15) the n=15 maximum? Needs the score-class reduction (SC maximizer
+3. **HYP-2345:** is H(T15) the n=15 maximum? Needs the score-class reduction (SC maximizer
    theorem machinery) — brute force is out of reach.
-4. **HYP-2338:** the consecutive-circulant K₂≅SCblow coincidence — find the bijection, test n=9.
+4. **HYP-2344:** the consecutive-circulant K₂≅SCblow coincidence — find the bijection, test n=9.
 5. Waggly-layer transport under doubling (the parity-mixer question above).

@@ -69,7 +69,7 @@ NOT the H-maximizing one.** T[K₂]/SCblow orbits are fully op-equivariant (PROV
 those orbits g3 = g1∘g2); the D_skew orbit is the ONLY non-op-equivariant doubling — its H
 splits exactly on op-paired classes (189/333 at n=4; 1809/3561, 2817/5289 at n=5).
 
-## (7) The consecutive-circulant coincidence (NEW LEAD → HYP-2338)
+## (7) The consecutive-circulant coincidence (NEW LEAD → HYP-2344, renumbered from 2338)
 
 All three orbits send C₃ to H = 45 = the n=6 maximum (scores (2,2,2,3,3,3)), but to TWO iso
 classes: T[K₂](C₃) ≅ SCblow(C₃), while D(C₃) is distinct. More: T[K₂](U_n) ≅ SCblow(U_n) for

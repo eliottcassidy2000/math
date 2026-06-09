@@ -2339,5 +2339,5 @@ unique transpose-split Hadamard pair had.16.3/had.16.4 — CHIRALITY, matching D
 op-asymmetry (THM-451); (iv) family trichotomy projector/mixer/projector, D = one
 Cayley-Dickson step, skew-Hadamard preservation iff trP = 0 (THM-450); (v) H(T[K2]) =
 product over strong components + twin-lift laws c3'=8c3, c5'=32c5+32c4+6c3; even cycles
-of T control odd cycles of T[K2] — the doubling is a PARITY MIXER (THM-449); (vi) the
+of T control odd cycles of T[K2] — the doubling is a PARITY MIXER (THM-453, renumbered from 449); (vi) the
 tower's canonical Ham path = binary reflected GRAY CODE, fractal all-ones hypotenuse.

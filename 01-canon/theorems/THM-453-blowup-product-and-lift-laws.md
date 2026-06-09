@@ -1,11 +1,11 @@
-# THM-449 — H(T[K₂]): strong-component product law, twin-lift cycle laws, and the failure of odd-cycle determination
+# THM-453 (renumbered from THM-449; that number was concurrently reserved by mac-mini-2026-06-09-S1) — H(T[K₂]): strong-component product law, twin-lift cycle laws, and the failure of odd-cycle determination
 
 **Status:** Product law PROVED (sketch below) + VERIFIED 74/74 iso classes n=3..6. Lift laws
 VERIFIED 74/74 (c7' coefficient 128 analytic-only — c7=0 at n≤6, flagged). IP-determination
 REFUTED with exact counterexample. Adversarially re-verified with three independent Hamiltonian
 counters including a full 10! permutation scan (`verify_A_H_formula_kps1.out`).
 **Source:** kind-pasteur-2026-06-09-S1 (branch A + verifier). Directly answers OPEN-Q-045 Q1.
-**Related:** THM-447, OPEN-Q-045, OCF (THM-002), HYP-2334 (resolved into this), HYP-2341.
+**Related:** THM-447, OPEN-Q-045, OCF (THM-002), HYP-2334 (resolved into this), HYP-2347.
 
 ## (1) REFUTED: I(Ω(T), x) does NOT determine H(T[K₂])
 
@@ -64,7 +64,7 @@ cycle spectrum ⟹ equal H(T[K₂]), and in fact equal ENTIRE independence polyn
 (13/13 same-spectrum strong pairs at n=6 have identical c3'..c11' and (i1..i4) at 12 vertices).
 CAVEAT (verifier): at n ≤ 6 spectrum-equal classes also share pair-intersection features, so
 "spectrum alone" vs "spectrum + pair statistics" is NOT yet separated — n=7 stress test needed
-(HYP-2341). No global polynomial functional exists (disjoint-union multiplicativity forbids it).
+(HYP-2347). No global polynomial functional exists (disjoint-union multiplicativity forbids it).
 
 ## (6) Contrast: H(D_skew(T)) is NOT determined by any cycle statistic
 

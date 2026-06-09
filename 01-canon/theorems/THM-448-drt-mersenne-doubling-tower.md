@@ -5,7 +5,7 @@ certificates; conjectures flagged. Adversarially re-verified (66/66 independent 
 `verify_B_tower_kps1.out`).
 **Source:** kind-pasteur-2026-06-09-S1 (branch B of the doubling fan-out + verifier).
 **Related:** THM-447 (the doubling), THM-451 (Hadamard chirality), THM-452 (tiling coset law),
-HYP-2333 (now resolved into this), HYP-2339/2340 (successor conjectures), THM-067 (Mersenne
+HYP-2333 (now resolved into this), HYP-2345/2346 (successor conjectures, renumbered from 2339/2340), THM-067 (Mersenne
 vanishing), S18h BIBD trichotomy (links reappear in T15's vertex links).
 
 ## The tower
@@ -41,7 +41,7 @@ S-sets are QR and NQR (both = Paley up to op).
 |Aut| = 21 with element orders {1:1, 3:14, 7:6} at T_7, T_15, T_31, AND T_63. Doubling adds
 vertices but never adds or loses symmetry past level 7. Orbits: blocks of 7 (core labels
 [8k..8k+6]); fixed points are exactly core labels ≡ 7 (mod 8), counts 0, 1, 3, 7 at levels
-7, 15, 31, 63. (Conjecture HYP-2340: F_21 for all k.)
+7, 15, 31, 63. (Conjecture HYP-2346: F_21 for all k.)
 
 **(e) Perfect link self-similarity — the tower is its own vertex-link recursion:**
 B_0(T_{2m−1}) = T_{m−1} EXACTLY as a labeled submatrix (identity map), verified:
@@ -56,7 +56,7 @@ at each level IS the previous level. (Strengthened by the verifier from "isomorp
   prompt's guess 105 was wrong).
 - **H(T15) = 198,335,025** = 2.4850 × (15!/2^14 = 79,814,109 = E[H]). Five random 15-tournaments
   gave 43.4M..109.8M (mean 81.6M). Paley T_11's ratio is ≈ 2.44 — T15 is the natural
-  H-maximizer candidate at n = 15 (HYP-2339, conjectural).
+  H-maximizer candidate at n = 15 (HYP-2345, conjectural).
 - **NO circulant DRT(15) exists at all** (0 of 128 antisymmetric S-sets of Z_15) — at the
   Mersenne order 15, the tower provides a DRT where Z_15 provides none.
 - |Aut(T15)| = 21, orbits [7,7,1]; NOT vertex-transitive, NOT self-converse — T15 has ZERO
