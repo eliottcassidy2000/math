@@ -1,0 +1,9 @@
+=== cross-validation: structural tower finder vs brute force ===
+   s=2 C=3 M=2: 25 trials, OK
+   s=3 C=2 M=2: 25 trials, OK
+   s=3 C=3 M=2: 12 trials, OK
+
+=== M=2 Chang-shadow sweep (Chang's theorem forces UNSAT at some (s,C)) ===
+   SAT    M=2 s=2 C=3  (5 edges, towers=6, 0.0s)
+   SAT    M=2 s=3 C=2  (5 edges, towers=5, 0.0s)
+   SAT    M=2 s=2 C=4  (31 edges, towers=44, 0.0s)
