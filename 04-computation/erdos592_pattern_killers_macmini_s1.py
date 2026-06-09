@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Erdős 592 lab, part 2 — hunting GRID-KILLER pattern sets at n=3 (omega^3 level).
-mac-mini-2026-06-09-S1  (T768, HYP-2339/2340, follows erdos592_shuffle_pattern_lab)
+mac-mini-2026-06-09-S1  (T768, HYP-2345/2346, follows erdos592_shuffle_pattern_lab)
 
 Goal: decide whether Specker's negative witness for omega^3 -/-> (omega^3,3) can be
 PATTERN-MEASURABLE: a triangle-free set S of pair-patterns (all 31, shared values
@@ -15,7 +15,7 @@ Method:
  3. report killers (bounded t) vs avoidable (growing t).
 
 If NO pattern set kills grids while Specker's theorem says a witness exists, then the
-witness is NOT pattern-measurable (refutes the strong form of HYP-2339 at n=3) and must
+witness is NOT pattern-measurable (refutes the strong form of HYP-2345 at n=3) and must
 use scheme/value arithmetic — itself a sharp finding.
 """
 

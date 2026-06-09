@@ -12,6 +12,19 @@
 
 ---
 
+## Lead mac-mini-2026-06-09-S1: Erdős 592 — the R(n,t) tree-grid ladder and the rank-3 graded-relation frontier (THM-453, T768, HYP-2344..2346)
+
+**Source:** Erdős 592 session (ω^β → (ω^β,3)²; open case α=ω^(ω³) = exponent with three CNF summands).
+**Status:** ACTIVE — exact finite results at n≤2, n=3 partially computed, ω^(ω^γ) lift not started.
+**What is established (THM-453):** witness frame (triangle-free graphs, no full-type independent set); grid characterization of full-type subsets; the compactness bridge Q(n,t)-SAT-∀t ⟹ ω^n ↛ (ω^n,3)² (strong witness), hence positive relations force finite cutoffs R(n,2); computed **R(1,2)=3, R(2,2)=5 (exact)**, Q(3,3) SAT (35 edges), Q(3,4) SAT (346 edges, complete verifier, 692s); no pure order-pattern witness exists at ω³ (all 13 maximal triangle-free pattern sets grid-avoidable); the unique triangle-free pattern class at ω² is the SHIFT GRAPH.
+**Next steps, in order of leverage:**
+1. Decide Q(3,5) (was running at session close; CEGAR + complete verifier; needs either patience or a smarter verifier — bitset adjacency, subgrid search ordered by solver phase).
+2. Hand-prove R(2,2)=5 (UNSAT certificate is small: 532 CEGAR clauses; extract a human Zarankiewicz/Mantel argument — would make THM-453 D+E a self-contained finite theorem with a clean constant under Specker's theorem).
+3. Prove Q(3,t) SAT for all t by a UNIFORM rule (extract from the t=3,4 witnesses; the invariant quotient (R,{B_g}) format is the right ansatz) ⟹ via THM-453 D1 a NEW constructive proof of Specker's ω³ ↛ (ω³,3)², SAT-discovered.
+4. Lift F1 to ω^(ω^γ): write the graded-relation algebra over the gap semigroup (CNF of γ; summand count = grading rank); recover Schipperus's ≤2-summand impossibility / ≥4-summand constructions as the two regimes; instantiate rank 3 = the open $1000 case.
+5. Import literature exacts: Darby (JCTB, "Negative partition relations for ordinals ω^(ω^α)"), Larson "pentagram" (JSL 2000), Schipperus APAL 2010 constructions; EHMR's presentation of Specker's witness — compare with the SAT-discovered structure.
+**Files:** 04-computation/erdos592_*.py (6 scripts), 05-knowledge/results/erdos592_*.out, 03-artifacts/drafts/erdos-592-survey-and-reframes-macmini-s1.md, 07-reflections/the-additive-ladder-reaches-the-ordinals-macmini-s1.md. Mistakes: MISTAKE-066 (bridge direction), MISTAKE-067 (incomplete CEGAR verifier — read the witness).
+
 ## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448, T767, HYP-2332..2337)
 
 **Source:** user directive (n*2 doubling, three copies + one negated, skew-Hadamard normalization = tiling frame).

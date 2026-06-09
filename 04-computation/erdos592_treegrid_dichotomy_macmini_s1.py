@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Erdős 592 lab, part 3 — THE FINITE TREE-GRID DICHOTOMY (the abstract core).
-mac-mini-2026-06-09-S1  (T768, HYP-2340, THM-449)
+mac-mini-2026-06-09-S1  (T768, HYP-2346, THM-453)
 
 QUESTION Q(n,t): on the leaf set L = [t]^n of the complete t-ary tree of height n,
 does there exist a TRIANGLE-FREE graph G such that EVERY binary subgrid contains an
@@ -13,7 +13,7 @@ WHY THIS IS THE FINITE SHADOW OF ERDŐS 592 AT omega^n:
   * X ⊆ omega^n has order type omega^n  <=>  X contains a full (omega-branching) grid.
   * alpha -/-> (alpha,3) witness = triangle-free graph killing all full grids.
   [CORRECTED BRIDGE — the original docstring had the implication BACKWARDS
-   (see MISTAKES.md MISTAKE-065 and THM-449 part D for the proved version):
+   (see MISTAKES.md MISTAKE-066 and THM-453 part D for the proved version):
      * Q(n,t) SAT for ALL t  ==>  omega^n -/-> (omega^n,3)   (König/compactness:
        coherent restrictions glue to a triangle-free graph on the full grid with no
        independent binary subgrid; full-type sets contain binary subgrids).

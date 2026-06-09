@@ -2,13 +2,13 @@
 # -*- coding: utf-8 -*-
 """
 Erdős Problem 592 lab — the shuffle-pattern calculus for ordinal partition relations.
-mac-mini-2026-06-09-S1  (T768, HYP-2338..2340, THM-449)
+mac-mini-2026-06-09-S1  (T768, HYP-2344..2346, THM-453)
 
 PROBLEM (Erdős, $1000, OPEN): characterise countable ordinals alpha with
     alpha -> (alpha, 3)^2
 i.e. every red/blue colouring of [alpha]^2 has a red set of full type alpha or a blue triangle.
 
-REFRAME (THM-449 part 1): alpha -> (alpha,3)^2  <=>  every TRIANGLE-FREE graph on alpha
+REFRAME (THM-453 part 1): alpha -> (alpha,3)^2  <=>  every TRIANGLE-FREE graph on alpha
 has an independent set of order type alpha.  Negative witness = triangle-free graph
 killing all full-type independent sets.
 
@@ -16,7 +16,7 @@ MODEL: omega^n = W(n) = strictly increasing n-tuples from omega, ordered lexicog
 (Larson's model; order type omega^n).
 
 PATTERN of a pair {x,y} of increasing n-tuples: the order/equality pattern of the 2n
-values (rank-collapsed).  Every known witness colouring is PATTERN-MEASURABLE (HYP-2339).
+values (rank-collapsed).  Every known witness colouring is PATTERN-MEASURABLE (HYP-2345).
 
 A pattern set S (blue patterns) defines graph G_S on W(n).
   * Triangle-freeness of G_S = a FINITE check (no triple of n-tuples with all three
@@ -34,7 +34,7 @@ KNOWN ANSWERS THE LAB MUST REPRODUCE (literature; Specker):
   n=2: omega^2 -> (omega^2, 3): EVERY triangle-free S must be avoidable.
   n=3: omega^3 -/-> (omega^3, 3): SOME triangle-free S is unavoidable.
 
-Part 5 records the tile-pair dictionary at n=2 (HYP-2338): patterns <-> the repo's
+Part 5 records the tile-pair dictionary at n=2 (HYP-2344): patterns <-> the repo's
 staircase tile-pair classes.
 
 All sections print exhaustive counts; nothing is sampled unless labelled SEARCH.
@@ -193,7 +193,7 @@ def max_grid_branching(n, V, S, tmax=8):
     return best
 
 # ----------------------------------------------------------------------------------
-# Pretty names for n=2 patterns (the tile dictionary, HYP-2338)
+# Pretty names for n=2 patterns (the tile dictionary, HYP-2344)
 # ----------------------------------------------------------------------------------
 
 NAME2 = {
@@ -279,13 +279,13 @@ def main():
             interesting.append((S, caps))
         print(f"   |S|={len(S)} S={sorted(S)} maxt(V=8,11,14)={caps}{tag}")
 
-    section("PART 5 — the tile dictionary (HYP-2338): n=2 patterns = staircase tile-pair classes")
+    section("PART 5 — the tile dictionary (HYP-2344): n=2 patterns = staircase tile-pair classes")
     print("""
 A tile in the repo = an arc (a,b), a>=b+2, i.e. an ordered pair — the staircase cell.
 Two tiles t1=(x,y), t2=(x',y') stand in exactly one of the relations:
   share upper vertex / share lower vertex / chain (y=x' or y'=x) / cross / nest / disjoint.
 The n=2 pair patterns above are EXACTLY these classes (with Larson's forms 0,1,2,3 the
-ones surviving her thinning).  This is the content of HYP-2338 at level n=2: the pattern
+ones surviving her thinning).  This is the content of HYP-2344 at level n=2: the pattern
 calculus of omega^2-partitions IS the staircase tile-pair geometry.
 """)
     # mechanical check: classification function on tile pairs matches pattern classes

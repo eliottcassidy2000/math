@@ -2118,7 +2118,7 @@ Whenever a claim involves "negated copy" at the tiling level, track ALL involuti
 ### Impact
 None propagated: corrected in THM-447(5-CORRECTED), THM-452(1), HYP-2335 status, T767 note,
 all within the same session.
-## MISTAKE-065: Erdős 592 finite-bridge direction stated BACKWARDS in first tree-grid script
+## MISTAKE-066: Erdős 592 finite-bridge direction stated BACKWARDS in first tree-grid script
 
 **Date:** 2026-06-09
 **Found by:** mac-mini-2026-06-09-S1 (same session, caught while writing the pysat version)
@@ -2136,7 +2136,7 @@ A finite binary subgrid is not of full type, so nothing forces any finite subgri
 contain a blue edge: the restriction of an infinite witness to a finite grid can be
 empty. The implication as stated is unsupported in BOTH directions at the finite level.
 
-### The correct framing (THM-449 part D)
+### The correct framing (THM-453 part D)
 The true bridge runs the other way and is a compactness statement:
 - Q(n,t) SAT for ALL t ⟹ (König) a triangle-free graph on the full grid with no
   independent binary subgrid ⟹ ω^n ↛ (ω^n,3) with a STRONG witness.
@@ -2155,7 +2155,7 @@ statement before proving the wrong one).
 
 ---
 
-## MISTAKE-066: incomplete subgrid-verifier falsely certified Q(n,t) SAT — R(2,2) is actually 5, not >14
+## MISTAKE-067: incomplete subgrid-verifier falsely certified Q(n,t) SAT — R(2,2) is actually 5, not >14
 
 **Date:** 2026-06-09 (same session, caught by structure-reading the "witnesses")
 **Found by:** mac-mini-2026-06-09-S1

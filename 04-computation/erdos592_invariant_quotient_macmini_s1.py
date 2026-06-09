@@ -2,19 +2,19 @@
 # -*- coding: utf-8 -*-
 """
 Erdős 592 lab, part 5 — TRANSLATION-INVARIANT Q(n,t): the graded-relation quotient.
-mac-mini-2026-06-09-S1  (T768, HYP-2340, THM-449 part F)
+mac-mini-2026-06-09-S1  (T768, HYP-2346, THM-453 part F)
 
 Same question as Q(n,t) (triangle-free graph on [t]^n leaves hitting every binary
 subgrid) but the graph is forced TRANSLATION-INVARIANT in the top-level coordinate:
 the edge variable for {x,y} depends only on (a'-a, (suffix of x), (suffix of y)) where
-a,a' are the first coordinates — i.e. exactly the data (R, {B_g}) of THM-449 part F1:
+a,a' are the first coordinates — i.e. exactly the data (R, {B_g}) of THM-453 part F1:
   within-row graph R on [t]^{n-1} (a'=a), and gap-graded cross relations
   B_g ⊆ [t]^{n-1} × [t]^{n-1} (g = a'-a >= 1).
 Triangle-freeness on the grid then encodes the graded composition-freeness
   B_{g1} ∘ B_{g2} ∩ B_{g1+g2} = ∅   (+ mixed R conditions, + R triangle-free),
 and subgrid-hitting is the rectangle/subgrid density floor.
 
-PREDICTION (THM-449 F2/F3): invariant Q(2,t) dies EARLY (additive Schur-type
+PREDICTION (THM-453 F2/F3): invariant Q(2,t) dies EARLY (additive Schur-type
 obstruction: density vs composition-freeness over (N,+)); invariant Q(3,t) survives
 longer (columns are hierarchical, density demand drops to column-subgrids only).
 

@@ -2,7 +2,7 @@
 # -*- coding: utf-8 -*-
 """
 Erdős 592 lab, part 4 — Q(n,t) decided exactly with a real SAT solver (pysat/Glucose3).
-mac-mini-2026-06-09-S1  (T768, HYP-2340, THM-449)
+mac-mini-2026-06-09-S1  (T768, HYP-2346, THM-453)
 
 Q(n,t): does a triangle-free graph exist on the leaves [t]^n of the complete t-ary
 tree of height n hitting EVERY binary subgrid (= no independent binary subgrid)?

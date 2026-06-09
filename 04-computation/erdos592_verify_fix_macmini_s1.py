@@ -4,7 +4,7 @@
 Erdős 592 lab, part 6 — FIXED exhaustive subgrid verifier + full rerun of Q(n,t)
 and invariant Q(n,t).   mac-mini-2026-06-09-S1
 
-BUG FOUND (would-be MISTAKE-066): find_independent_binary_subgrid in part 4 committed
+BUG FOUND (would-be MISTAKE-067): find_independent_binary_subgrid in part 4 committed
 greedily to the FIRST consistent subtree under each chosen child and never explored
 alternative subtrees for the same child; an incomplete search can return "no independent
 subgrid" when one exists, invalidating CEGAR's final SAT certificates. (Spotted because

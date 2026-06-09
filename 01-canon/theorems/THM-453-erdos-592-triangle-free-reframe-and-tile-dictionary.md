@@ -1,10 +1,10 @@
-# THM-449: Erdős 592 — the triangle-free reframe, the tile dictionary, and the finite tree-grid bridge
+# THM-453: Erdős 592 — the triangle-free reframe, the tile dictionary, and the finite tree-grid bridge
 
 **Status:** PARTIAL — parts A–D are PROVED (proofs written out below); part E is exact
 finite computation (verified, scripts + outputs in repo); part F is a proof sketch at
 the infinite level for the translation-invariant case (labelled as such). The ordinal
 open problem itself (ω^(ω³)) is untouched.
-**Source:** mac-mini-2026-06-09-S1 (T768, HYP-2338..2340)
+**Source:** mac-mini-2026-06-09-S1 (T768, HYP-2344..2346)
 **Companion code:** `04-computation/erdos592_shuffle_pattern_lab_macmini_s1.py`,
 `erdos592_pattern_killers_macmini_s1.py`, `erdos592_treegrid_dichotomy_macmini_s1.py`,
 `erdos592_treegrid_pysat_macmini_s1.py` (+ .out files in 05-knowledge/results/)
@@ -52,7 +52,7 @@ exactly ω^{n-1}, then beyond a bound every section has type < ω^{n-1}, i.e.
 contradiction. So infinitely many sections have full type; choose a₀ < a₁ < ⋯ among
 them, recurse inside each, assemble the grid. ∎
 
-## D. The finite tree-grid bridge (PROVED — compactness; corrects MISTAKE-065)
+## D. The finite tree-grid bridge (PROVED — compactness; corrects MISTAKE-066)
 
 On the ABSTRACT complete t-ary tree of height n with leaves [t]^n define:
 
@@ -86,7 +86,7 @@ out of the compactness proof — quantifying it is a fresh finite combinatorics 
 **Asymmetry note.** ω^n ↛ (ω^n,3)² does NOT formally imply Q(n,t) SAT for all t
 (a witness may admit independent binary subgrids while killing all full-type sets).
 "R(n,2) = ∞" = existence of *strong* witnesses, a priori stronger than the negative
-relation. (MISTAKE-065 was asserting the false converse direction in an early
+relation. (MISTAKE-066 was asserting the false converse direction in an early
 docstring; caught and corrected the same session.)
 
 ## E. Computed values and structure (exact; Glucose3 + CEGAR, and exhaustive DPLL)
@@ -105,7 +105,7 @@ docstring; caught and corrected the same session.)
   meet-level-1 ('<') classes, again gap-graded. The witnesses are NOT order-pattern
   functions: gap magnitudes are used essentially (cf. part E.3 below).
 
-### E.1 Patterns = tile-pair geometry (HYP-2338, VERIFIED)
+### E.1 Patterns = tile-pair geometry (HYP-2344, VERIFIED)
 The order/equality patterns of pairs of increasing 2-tuples are exactly the repo's
 staircase tile-pair classes {DISJOINT, CROSS, NEST, SAME-LEFT, SAME-RIGHT, ADJACENT};
 mechanical check over all pairs in [0,8)²: 0 mismatches. Larson's interaction forms
@@ -124,7 +124,7 @@ pattern sets** (sizes 3–5) — and ALL 13 are grid-avoidable (exact backtracki
 S-free 3-grids by V ≤ 24 in every case). Consequence (computational, V ≤ 24):
 **Specker's ω³ witness is not measurable in the pure order-pattern algebra of pairs**;
 it must use value/length arithmetic (gap magnitudes / Larson-scheme partial sums =
-staircase profiles). This corrects the naive form of HYP-2339.
+staircase profiles). This corrects the naive form of HYP-2345.
 
 ## F. The graded-relation (additive-ladder) reformulation — invariant witnesses
 
@@ -172,7 +172,7 @@ semigroup of γ; **the number of CNF summands of γ = the rank of the grading
 semigroup**, and Schipperus's dichotomy (≤2 summands positive, ≥4 negative, =3 OPEN)
 becomes: at which grading rank does density-vs-composition-freeness flip? The open
 case ω^(ω³) is the rank-3 instance. (Framing — precise at n=2,3 via F1–F3; the
-ω^(ω^γ) lift is the program of HYP-2340.)
+ω^(ω^γ) lift is the program of HYP-2346.)
 
 ## Known results recorded (literature, not ours)
 
