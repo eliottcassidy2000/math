@@ -1,0 +1,69 @@
+
+==============================================================================
+PART 1 — n=2 pattern algebra (omega^2; Specker POSITIVE level)
+==============================================================================
+all patterns of pairs of increasing 2-tuples: 6
+    ((0, 1), (0, 2)) = SAME-LEFT  (Larson form 3; tiles sharing upper vertex)
+    ((0, 1), (1, 2)) = ADJACENT   (chain b=c; consecutive tiles)
+    ((0, 1), (2, 3)) = DISJOINT   (Larson form 0)
+    ((0, 2), (1, 2)) = SAME-RIGHT (tiles sharing lower vertex)
+    ((0, 2), (1, 3)) = CROSS      (Larson form 1)
+    ((0, 3), (1, 2)) = NEST       (Larson form 2)
+realizable (P_xy,P_yz,P_xz) triples: 62
+
+single patterns P with a monochromatic-P triangle (P o P ∋ P realizable):
+    SAME-LEFT  (Larson form 3; tiles sharing upper vertex)  mono-triangle: True
+    ADJACENT   (chain b=c; consecutive tiles)               mono-triangle: False
+    DISJOINT   (Larson form 0)                              mono-triangle: True
+    SAME-RIGHT (tiles sharing lower vertex)                 mono-triangle: True
+    CROSS      (Larson form 1)                              mono-triangle: True
+    NEST       (Larson form 2)                              mono-triangle: True
+
+maximal triangle-free pattern sets at n=2: 1
+    {ADJACENT   (chain b=c; consecutive tiles)}
+
+==============================================================================
+PART 2 — n=2 grid avoidability (Specker positive shadow): for EVERY triangle-free S there should be S-free grids of growing branching
+==============================================================================
+   S={ADJACENT}: V=6:t<= 2 V=9:t<= 2 V=12:t<= 3 V=16:t<= 3 V=20:t<= 4
+
+==============================================================================
+PART 3 — n=3 pattern algebra (omega^3; Specker NEGATIVE level)
+==============================================================================
+all patterns: 31   strict (12 distinct values... actually 6): 10
+building triangle table over [0,9) (exhaustive; C(9,3)=84 tuples)...
+realizable pattern-triples: 2649
+
+mono-triangle status of the 10 strict patterns:
+    ((0, 1, 2), (3, 4, 5))   mono-triangle: True
+    ((0, 1, 3), (2, 4, 5))   mono-triangle: False
+    ((0, 1, 4), (2, 3, 5))   mono-triangle: True
+    ((0, 1, 5), (2, 3, 4))   mono-triangle: True
+    ((0, 2, 3), (1, 4, 5))   mono-triangle: True
+    ((0, 2, 4), (1, 3, 5))   mono-triangle: True
+    ((0, 2, 5), (1, 3, 4))   mono-triangle: True
+    ((0, 3, 4), (1, 2, 5))   mono-triangle: True
+    ((0, 3, 5), (1, 2, 4))   mono-triangle: True
+    ((0, 4, 5), (1, 2, 3))   mono-triangle: True
+
+enumerating maximal triangle-free subsets of the STRICT patterns (witness colourings can be taken strict-measurable after thinning)...
+maximal triangle-free strict sets: 1
+
+==============================================================================
+PART 4 — n=3 grid hunt: which triangle-free S kill grids (Specker negative shadow: expect SOME S with bounded t)
+==============================================================================
+(exact backtracking; t-grid has t^3 leaves; V up to 14)
+   |S|=1 S=[((0, 1, 3), (2, 4, 5))] maxt(V=8,11,14)=[2, 2, 3]
+
+==============================================================================
+PART 5 — the tile dictionary (HYP-2338): n=2 patterns = staircase tile-pair classes
+==============================================================================
+
+A tile in the repo = an arc (a,b), a>=b+2, i.e. an ordered pair — the staircase cell.
+Two tiles t1=(x,y), t2=(x',y') stand in exactly one of the relations:
+  share upper vertex / share lower vertex / chain (y=x' or y'=x) / cross / nest / disjoint.
+The n=2 pair patterns above are EXACTLY these classes (with Larson's forms 0,1,2,3 the
+ones surviving her thinning).  This is the content of HYP-2338 at level n=2: the pattern
+calculus of omega^2-partitions IS the staircase tile-pair geometry.
+
+tile-relation vs pattern-class mechanical check over [0,8)^2 pairs: 0 mismatches — DICTIONARY VERIFIED

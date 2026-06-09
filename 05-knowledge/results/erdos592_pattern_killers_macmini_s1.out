@@ -1,0 +1,111 @@
+n=3: 31 patterns total
+triple table: 2649 realizable pattern-triples
+
+maximal triangle-free sets over ALL patterns: 13
+size distribution: {3: 2, 4: 4, 5: 7}
+
+--- grid hunt (exact backtracking) ---
+t-grid = full t-branching height-3 tree, values increasing along branches.
+[0] |S|=5 caps(V=8,11,14)=[2, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (0, 2, 3))
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 2, 3), (1, 3, 4))
+       ((0, 3, 4), (1, 2, 3))
+[1] |S|=5 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (0, 2, 3))
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 3), (2, 3, 4))
+       ((0, 2, 3), (1, 3, 4))
+       ((0, 3, 4), (1, 2, 3))
+[2] |S|=5 caps(V=8,11,14)=[2, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 2), (1, 3, 4))
+       ((0, 1, 3), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 1, 4), (1, 2, 3))
+[3] |S|=5 caps(V=8,11,14)=[2, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 2), (1, 3, 4))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 1, 4), (1, 2, 3))
+       ((0, 3, 4), (1, 2, 3))
+[4] |S|=5 caps(V=8,11,14)=[2, 2, 3]
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 1, 4), (1, 2, 3))
+       ((0, 2, 3), (1, 3, 4))
+[5] |S|=5 caps(V=8,11,14)=[2, 2, 3]
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 1, 4), (1, 2, 3))
+       ((0, 2, 3), (1, 3, 4))
+       ((0, 3, 4), (1, 2, 3))
+[6] |S|=5 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 3), (2, 3, 4))
+       ((0, 1, 4), (1, 2, 3))
+       ((0, 2, 3), (1, 3, 4))
+       ((0, 3, 4), (1, 2, 3))
+[7] |S|=4 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (0, 2, 3))
+       ((0, 1, 3), (1, 2, 3))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 2, 3), (1, 3, 4))
+[8] |S|=4 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 2, 3))
+       ((0, 1, 2), (1, 3, 4))
+       ((0, 1, 3), (2, 3, 4))
+       ((0, 1, 3), (2, 4, 5))
+[9] |S|=4 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 3, 4))
+       ((0, 1, 2), (2, 3, 4))
+       ((0, 1, 3), (1, 2, 4))
+       ((0, 1, 4), (1, 2, 3))
+[10] |S|=4 caps(V=8,11,14)=[2, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (2, 3, 4))
+       ((0, 1, 3), (2, 3, 4))
+       ((0, 2, 3), (1, 3, 4))
+       ((0, 3, 4), (1, 2, 3))
+[11] |S|=3 caps(V=8,11,14)=[1, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (1, 3, 4))
+       ((0, 1, 2), (2, 3, 4))
+       ((0, 1, 3), (2, 4, 5))
+[12] |S|=3 caps(V=8,11,14)=[2, 2, 2]  <-- candidate (capped at t=2 thru V=14)
+       ((0, 1, 2), (2, 3, 4))
+       ((0, 1, 3), (2, 3, 4))
+       ((0, 1, 3), (2, 4, 5))
+
+KILLER/candidate sets: 11
+Pushing the best candidates to larger V to test boundedness...
+   S(size 5) V=18 t=2: S-free grid exists = True
+   S(size 5) V=18 t=3: S-free grid exists = True
+   S(size 5) V=24 t=2: S-free grid exists = True
+   S(size 5) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (0, 2, 3)), ((0, 1, 2), (1, 2, 3)), ((0, 1, 3), (1, 2, 4)), ((0, 2, 3), (1, 3, 4)), ((0, 3, 4), (1, 2, 3))]
+   S(size 5) V=18 t=2: S-free grid exists = True
+   S(size 5) V=18 t=3: S-free grid exists = True
+   S(size 5) V=24 t=2: S-free grid exists = True
+   S(size 5) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (0, 2, 3)), ((0, 1, 2), (1, 2, 3)), ((0, 1, 3), (2, 3, 4)), ((0, 2, 3), (1, 3, 4)), ((0, 3, 4), (1, 2, 3))]
+   S(size 5) V=18 t=2: S-free grid exists = True
+   S(size 5) V=18 t=3: S-free grid exists = True
+   S(size 5) V=24 t=2: S-free grid exists = True
+   S(size 5) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (1, 2, 3)), ((0, 1, 2), (1, 3, 4)), ((0, 1, 3), (1, 2, 3)), ((0, 1, 3), (1, 2, 4)), ((0, 1, 4), (1, 2, 3))]
+   S(size 5) V=18 t=2: S-free grid exists = True
+   S(size 5) V=18 t=3: S-free grid exists = True
+   S(size 5) V=24 t=2: S-free grid exists = True
+   S(size 5) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (1, 2, 3)), ((0, 1, 2), (1, 3, 4)), ((0, 1, 3), (1, 2, 4)), ((0, 1, 4), (1, 2, 3)), ((0, 3, 4), (1, 2, 3))]
+   S(size 5) V=18 t=2: S-free grid exists = True
+   S(size 5) V=18 t=3: S-free grid exists = True
+   S(size 5) V=24 t=2: S-free grid exists = True
+   S(size 5) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (1, 2, 3)), ((0, 1, 3), (2, 3, 4)), ((0, 1, 4), (1, 2, 3)), ((0, 2, 3), (1, 3, 4)), ((0, 3, 4), (1, 2, 3))]
+   S(size 4) V=18 t=2: S-free grid exists = True
+   S(size 4) V=18 t=3: S-free grid exists = True
+   S(size 4) V=24 t=2: S-free grid exists = True
+   S(size 4) V=24 t=3: S-free grid exists = True
+   S = [((0, 1, 2), (0, 2, 3)), ((0, 1, 3), (1, 2, 3)), ((0, 1, 3), (1, 2, 4)), ((0, 2, 3), (1, 3, 4))]
