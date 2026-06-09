@@ -2341,3 +2341,20 @@ Cayley-Dickson step, skew-Hadamard preservation iff trP = 0 (THM-450); (v) H(T[K
 product over strong components + twin-lift laws c3'=8c3, c5'=32c5+32c4+6c3; even cycles
 of T control odd cycles of T[K2] — the doubling is a PARITY MIXER (THM-454, renumbered twice from 449); (vi) the
 tower's canonical Ham path = binary reflected GRAY CODE, fractal all-ones hypotenuse.
+
+**T769** #erdos-moser #transitive-subtournament #doubling-tower #erdos-64 #parity-mixer #cycle-spectrum-interval | certainty: framing+derivations (lab starting) | source: kind-pasteur-2026-06-09-S2
+TWO ERDOS ANGLES FROM THE DOUBLING MACHINERY. (I) ERDOS-MOSER x MERSENNE TOWER: the
+labeled link recursion B_0(T_{2m-1}) = T_{m-1} (THM-448e) turns trans(T) = 1 + max_v
+trans(N+(v)) into a tower recursion; DERIVED: trans(D(T)) >= trans(T) + 1 (append the
+source's twin: if S transitive with source s, S u {s'} is transitive). T7 = Paley T_7 is
+the KNOWN extremal tournament without TT_4 (n=7 max). Question: does the tower meet the
+minimum growth rate (trans(T_{2^k-1}) ~ k = log2 n) making it an explicit Erdos-Moser
+lower-bound family with a PROVABLE recursion? Compute trans exactly for T7,T15,T31,T63 +
+Paley31 control. Bridges mac-mini's THM-453 Part A (592 red target = order-faithful
+transitive subtournament; finite shadow = Erdos-Moser). (II) ERDOS 64 x PARITY MIXER:
+twin insertion (THM-454 lift laws) converts a k-cycle of G into cycles of EVERY length in
+[k, 2k] in the blowup G[K2] - an interval that always contains a power of 2 => ALL
+blowups of non-forests satisfy Erdos-Gyarfas trivially; counterexamples must be TWIN-FREE
+in a strong sense. Plus the S710 dyadic-gap hunt: cubic girth>=5 graphs avoiding 8- AND
+16-cycles (n<32 would be a counterexample; Markstrom floor). See THM-455/456 stubs,
+HYP-2356..2362 (claimed), scripts *_kps2.py.

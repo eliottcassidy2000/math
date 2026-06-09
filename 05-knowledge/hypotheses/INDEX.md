@@ -8819,3 +8819,11 @@ New hypotheses:
 - **HYP-2354 (SNF closed form):** SNF(skew tower order n) = (1, 2^{n/2−1}, (n/2)^{n/2−1}, n) and GF(2)-rank((S+J)/2) = n/2 for all n = 2^k ≥ 16. Verified n=16,32. Status: OPEN.
 - **HYP-2355 (new sequences):** H(D(transitive_n)) = 13, 95, 1033, 15611, 313285 (n=3..7) and H(SCblow(transitive_n)) = 41, 629, 14937, 513669, 24104937 — both NOT in OEIS (live-checked). Find formulas/recurrences; candidate OEIS submissions. D-sequence mod 8 pattern: 5,?,1,?,5. Status: OPEN.
 **See:** THM-447..448, THM-450..452, THM-454, T767, MISTAKE-065, 07-reflections/skew-sylvester-doubling-and-walsh.md.
+
+## HYP-2356..2362: Erdős–Moser × tower + Erdős 64 × parity mixer block (kind-pasteur-2026-06-09-S2) — CLAIMED, lab in progress
+- **HYP-2356 (tower trans values):** trans(T_{2^k−1}) for the skew-Sylvester tower = minimum-possible-ish growth: trans(T7)=3 (known extremal), conjecture trans(T15)=5, trans(T31)=6, trans(T63)=7 (matching/near the forcing floors ST(5)=13ish, n=28⟹6). Compute exactly. Status: CLAIMED.
+- **HYP-2357 (doubling trans bounds):** trans(T)+1 ≤ trans(D(T)) ≤ 2·trans(T)+1; lower DERIVED (source-twin append); upper to determine; tower recursion trans = 1 + max over link classes (uses THM-448e + 12-class link structure). Status: lower PROVED-sketch, rest OPEN.
+- **HYP-2358 (blowup interval lemma):** if a graph G has a cycle of length k, then G[K₂] (twin blowup) has cycles of every length in [k, 2k]; hence every blowup of a non-forest contains a power-of-2 cycle (Erdős 64 trivially true on blowups; counterexamples are twin-obstructed). Status: DERIVED via twin insertion, to prove cleanly + check literature (folklore?).
+- **HYP-2359 (dyadic gap):** no cubic graph of girth ≥ 5 on n < 32 vertices avoids both 8-cycles and 16-cycles (Markström-consistent); annealing/SAT hunt for the smallest girth-≥5 cubic graph avoiding {8,16} at any n. Status: OPEN, computational.
+- **HYP-2360..2362: reserved** (this session's discoveries). Status: RESERVED.
+**See:** T769, THM-455/456 (stubs pending), 04-computation/*_kps2.py.
