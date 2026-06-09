@@ -1,0 +1,15 @@
+==============================================================================
+Q(n,t): triangle-free graph on [t]^n leaves hitting all binary subgrids?
+==============================================================================
+n=1 t=2: #leaves=2 SAT=True   (expect SAT iff t<=2; Ramsey shadow)
+n=1 t=3: #leaves=3 SAT=False   (expect SAT iff t<=2; Ramsey shadow)
+
+--- n=2 (omega^2: Specker POSITIVE => expect UNSAT from some small t) ---
+n=2 t=2: leaves=4 subgrids=1
+   greedy WITNESS found: 1 edges; meet-level histogram: {0: 1}
+n=2 t=3: leaves=9 subgrids=27
+   greedy WITNESS found: 8 edges; meet-level histogram: {0: 3, 1: 5}
+n=2 t=4: leaves=16 subgrids=216
+   greedy WITNESS found: 32 edges; meet-level histogram: {0: 20, 1: 12}
+n=2 t=5: leaves=25 subgrids=1000
+   greedy failed; DPLL on 300 vars, 3300 clauses...

@@ -1,0 +1,21 @@
+==============================================================================
+RERUN with complete verifier — Q(n,t) free and invariant
+==============================================================================
+
+--- free n=2 ---
+Q(2,2):
+   SAT (verified by COMPLETE search): 1 edges (1 lazy clauses, 0.0s)
+Q(2,3):
+   SAT (verified by COMPLETE search): 11 edges (12 lazy clauses, 0.0s)
+Q(2,4):
+   SAT (verified by COMPLETE search): 35 edges (137 lazy clauses, 0.0s)
+Q(2,5):
+   UNSAT (exact; 532 lazy clauses, 0.8s)
+   *** R(2,2) = 5 (exact, complete verifier) ***
+
+--- free n=3 ---
+Q(3,2):
+   SAT (verified by COMPLETE search): 1 edges (1 lazy clauses, 0.0s)
+Q(3,3):
+   SAT (verified by COMPLETE search): 35 edges (49 lazy clauses, 0.0s)
+Q(3,4):

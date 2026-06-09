@@ -2118,3 +2118,78 @@ Whenever a claim involves "negated copy" at the tiling level, track ALL involuti
 ### Impact
 None propagated: corrected in THM-447(5-CORRECTED), THM-452(1), HYP-2335 status, T767 note,
 all within the same session.
+## MISTAKE-065: Erdős 592 finite-bridge direction stated BACKWARDS in first tree-grid script
+
+**Date:** 2026-06-09
+**Found by:** mac-mini-2026-06-09-S1 (same session, caught while writing the pysat version)
+**Affects:** `04-computation/erdos592_treegrid_dichotomy_macmini_s1.py` original docstring
+(corrected in place); draft doc §3.2 v1 (corrected)
+
+### What was assumed
+"An infinite witness for ω^n ↛ (ω^n,3) restricts to finite witnesses on every finite
+grid, so the negative relation implies Q(n,t) SAT for all t; UNSAT at some t is evidence
+for the positive direction."
+
+### Why it was wrong
+An infinite witness only guarantees that no FULL-TYPE (infinite) independent set exists.
+A finite binary subgrid is not of full type, so nothing forces any finite subgrid to
+contain a blue edge: the restriction of an infinite witness to a finite grid can be
+empty. The implication as stated is unsupported in BOTH directions at the finite level.
+
+### The correct framing (THM-449 part D)
+The true bridge runs the other way and is a compactness statement:
+- Q(n,t) SAT for ALL t ⟹ (König) a triangle-free graph on the full grid with no
+  independent binary subgrid ⟹ ω^n ↛ (ω^n,3) with a STRONG witness.
+- Hence positive relations FORCE finite cutoffs: ω^n → (ω^n,3) ⟹ R(n,2) < ∞.
+  Specker at n=2 forces R(2,2) < ∞ even though SAT witnesses persist through t=10:
+  the cutoff is real but large.
+- A negative ordinal relation does NOT formally imply Q(n,t) SAT for all t
+  ("strong witness" is a priori stronger than "witness").
+
+### Lesson
+For infinite-to-finite shadows, check WHICH quantifier compactness actually transports.
+"Kill all full-type sets" has no finite trace on a single finite configuration; only
+the universal finite family (all t at once) carries ordinal content, and it does so in
+the direction finite-SAT-everywhere ⟹ infinite negative. Cf. MISTAKE-064 (parse the
+statement before proving the wrong one).
+
+---
+
+## MISTAKE-066: incomplete subgrid-verifier falsely certified Q(n,t) SAT — R(2,2) is actually 5, not >14
+
+**Date:** 2026-06-09 (same session, caught by structure-reading the "witnesses")
+**Found by:** mac-mini-2026-06-09-S1
+**Affects:** `erdos592_treegrid_pysat_macmini_s1.py` (find_independent_binary_subgrid),
+`erdos592_invariant_quotient_macmini_s1.py` (imports it), results files
+`erdos592_treegrid_pysat_*.out`, `erdos592_treegrid_push_*.out`,
+`erdos592_invariant_quotient_*.out` (their SAT lines beyond the corrected thresholds);
+fixed + fully re-run in `erdos592_verify_fix_macmini_s1.py`
+
+### What happened
+The CEGAR loop's final certificate ("no independent binary subgrid exists in the model")
+used a backtracking search that committed to the FIRST consistent subtree under each
+chosen child and never explored alternative subtrees of the same child. The search was
+therefore incomplete: it could return "none found" when an independent subgrid existed,
+falsely certifying SAT. Q(2,t) was reported SAT through t=14 ("R(2,2)>14"); with a
+complete generator-based search, **Q(2,5) is UNSAT: R(2,2) = 5 exactly**
+(Q(2,4) SAT with 35 edges).
+
+### How it was caught
+Reading the structure of the t=11 "invariant witness": its printed B_1 visibly missed
+rectangles like {2,3}×{4,5}, which a genuine witness must hit — the certificate and the
+object contradicted each other on inspection.
+
+### What was NOT affected
+- All UNSAT results (solver-side, sound): the n=1 calibration, and the corrected runs.
+- Labs 1–2 avoidability conclusions: those used POSITIVE results of exists_S_free_grid,
+  which constructs explicit grids whose pairwise pattern-checks happen at append time —
+  sound. (exists_S_free_grid has the same incompleteness on its FALSE answers; its
+  False-derived "caps" are lower bounds only — none were used for headline claims.)
+
+### Lessons
+1. In a CEGAR loop the FINAL "no counterexample" check is a proof obligation — it must
+   be a complete decision procedure, not the same heuristic used to generate clauses.
+2. Read the witness, not just the verdict: printing the (R, B_g) structure exposed the
+   hole immediately (cf. MISTAKE-015's "the error was visible in the output").
+3. Greedy-commit backtracking (commit to first consistent subtree, never revisit) is a
+   recurring trap in tree searches — both grid searchers this session had it.
