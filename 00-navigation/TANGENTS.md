@@ -2304,3 +2304,25 @@ torsion) + S708/S710 (shell homometry) per dispatched seed. OPEN: is hardness
 governed by max(H_clk,H_shl)? doubly-squarefree = provable-easy regime;
 doubly-tower n=25 (5²·7²) predicted hardest. See THM-427, HYP-2294,
 the-two-tower-witness-group-of-LRC-clock-and-shell-s3.md.
+
+**T767** #doubling #skew-hadamard #walsh #sylvester #chebyshev #mersenne #tiling-frame | certainty: HIGH (block algebra derived; computations in progress) | source: kind-pasteur-2026-06-09-S1
+SKEW-SYLVESTER DOUBLING. Define D(T) on 2n vertices by the dominance-matrix blocks
+M' = [[M, M+I],[M-I, -M]] (M = A - A^T, skew +-1). This is "THREE COPIES OF T AND ONE
+NEGATED COPY" — the exact skew analog of Sylvester/Walsh doubling H_2m = [[H,H],[H,-H]].
+Distinct from T[K_2] (OPEN-Q-045: all four blocks positive) and from the SC blowup
+(OPEN-Q-044: transposed cross blocks). Derived: (1) S' = M'+I satisfies S'+S'^T = 2I and
+if S is skew-Hadamard of order n then S' is skew-Hadamard of order 2n (block algebra);
+(2) SPECTRAL LAW M'^2 = I_2 (x) (2M^2 - I): eigenvalue map mu'^2 = T_2(mu) — CHEBYSHEV
+T_2 = the Walsh doubling polynomial; skew form lambda -> sqrt(2 lambda^2 + 1), so the
+quantity lambda^2 + 1 (= Hadamard order) EXACTLY DOUBLES — a conserved doubling charge;
+asymptotic stretch sqrt(2) = the triangle's hypotenuse ratio; (3) scores of D(T) =
+{2s_i+1} u {n-1 x n} (second copy near-regular regardless of T); (4) canonical Ham path
+n,...,1,1',2',...,n' (path + twin arc + REVERSED path = Gray/Walsh reflection), making the
+tiling of D(T) decompose as (x | cross-block = T thrice | grid-transposed NEGATED x) —
+the Sylvester sign pattern at the TILE level, linking to blue/grid-sym structure;
+(5) NORMALIZED skew-Hadamard (first row all 1s) + fixed superdiagonal = THE TILING MODEL
+FRAME: border vertex = dominating source, base path = cut space, free C(n-1,2) bits =
+tiles. Iterating D from the 1-vertex tournament should give the skew-Walsh tower of
+orders 2^k whose cores are DRTs on Mersenne 2^k - 1 vertices (C_3 -> Paley T_7 -> DRT_15
+-> ...), resonating with THM-067 Mersenne vanishing and the Cayley-Dickson tower
+(2^k + 1, the dual). See HYP-2332..2337, THM-447/448, skew_doubling_core_kps1.py.
