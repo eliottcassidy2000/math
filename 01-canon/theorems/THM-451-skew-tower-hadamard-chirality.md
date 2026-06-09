@@ -4,7 +4,7 @@
 backtracking searches that TERMINATED; three independent equivalence invariants). SNF closed
 form CONJECTURED for n ≥ 64. Adversarially re-verified (`verify_D_equivalence_kps1.out`).
 **Source:** kind-pasteur-2026-06-09-S1 (branch D + verifier).
-**Related:** THM-447/448, THM-453(6) (op-asymmetry of D — the same chirality at tournament level).
+**Related:** THM-447/448, THM-454(6) (op-asymmetry of D — the same chirality at tournament level).
 
 ## (1) Equivalence verdicts
 
@@ -27,7 +27,7 @@ order-16 classes** (had.16.0/1/2 are self-transpose, witnesses found) — and th
 tower lands exactly in it. Per-class Hall counts 140/76/44/28/28; GF(2) ranks 5/6/7/8/8.
 
 This is the SAME chirality seen at the tournament level: D is the unique non-op-equivariant
-doubling (THM-450(6)), H(D(T)) ≠ H(D(T^op)) in 50/74 classes (THM-453(6)), and the tower cores
+doubling (THM-450(6)), H(D(T)) ≠ H(D(T^op)) in 50/74 classes (THM-454(6)), and the tower cores
 are never self-converse past level 7 (THM-448). Transposing the Hadamard matrix = op on the
 tournament; the doubling breaks that symmetry and the Hadamard classification SEES it.
 

@@ -26,7 +26,7 @@
 **Files:** 04-computation/erdos592_*.py (6 scripts), 05-knowledge/results/erdos592_*.out, 03-artifacts/drafts/erdos-592-survey-and-reframes-macmini-s1.md, 07-reflections/the-additive-ladder-reaches-the-ordinals-macmini-s1.md. Mistakes: MISTAKE-066 (bridge direction), MISTAKE-067 (incomplete CEGAR verifier — read the witness).
 
 ## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448, T767, HYP-2332..2337)
-## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448/450..453, T767, HYP-2332..2337+2344..2349)
+## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448/450..452/454, T767, HYP-2332..2337+2350..2355)
 
 **Source:** user directive (n*2 doubling, three copies + one negated, skew-Hadamard normalization = tiling frame).
 **Status:** ACTIVE — THM-447 proved + verified n=3..5; D(border(C3)) core ≅ Paley T_7 (iso verified); branch fan-out in progress (H-formula, Mersenne tower, tiling σ-eigenspaces, Hadamard equivalence, Clifford family classification).
