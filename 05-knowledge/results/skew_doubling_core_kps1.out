@@ -1,0 +1,62 @@
+=== skew_doubling_core_kps1 — THM-447 base verification ===
+
+n=3: total=8  C1 tournament+scores=8  C2 M'^2 law=8  C3 skew-type=8  C4 canonical-path=8
+n=4: total=64  C1 tournament+scores=64  C2 M'^2 law=64  C3 skew-type=64  C4 canonical-path=64
+n=5: total=1024  C1 tournament+scores=1024  C2 M'^2 law=1024  C3 skew-type=1024  C4 canonical-path=1024
+C1-C4 exhaustive n=3..5: ALL PASS
+
+--- skew-Hadamard tower from order-1 seed [1] ---
+order 2: skew-Hadamard = True
+order 4: skew-Hadamard = True
+order 8: skew-Hadamard = True
+order 16: skew-Hadamard = True
+order 32: skew-Hadamard = True
+
+--- C_3 doubling tower (bordered) ---
+bordered C_3: order 4 skew-Hadamard = True
+doubled: order 8 skew-Hadamard = True
+normalized order 8 still skew-Hadamard = True
+core on 7 vertices: scores=(3, 3, 3, 3, 3, 3, 3)  DRT=True  H=189
+Paley T_7: H=189  iso(core, Paley) = True
+
+--- C5: eigenvalue map lambda -> sqrt(2 lambda^2 + 1) (sample n=5) ---
+lambda(T)      = [0.       1.732051 1.732051 2.645751 2.645751]
+lambda(D(T))   = [1.       1.       2.645751 2.645751 2.645751 2.645751 3.872983 3.872983
+ 3.872983 3.872983]
+predicted      = [1.       1.       2.645751 2.645751 2.645751 2.645751 3.872983 3.872983
+ 3.872983 3.872983]
+match = True
+
+--- C6: family M'^2 structure (n=5 sample) ---
+D_skew    : M'^2 block-diagonal = True; S' skew-Hadamard from bordered-C3 seed = True
+T[K2]     : M'^2 block-diagonal = False; S' skew-Hadamard from bordered-C3 seed = n/a
+SC-blowup : M'^2 block-diagonal = False; S' skew-Hadamard from bordered-C3 seed = n/a
+T[K2]     : S'(C_3) S'(C_3)^T == 6I ? False
+SC-blowup : S'(C_3) S'(C_3)^T == 6I ? False
+
+--- C7: H(T), H(D(T)), H(T[K2]), H(SCblow) on iso classes ---
+ n idx             scores   H(T)     H(D)    H(K2)    H(SC)
+ 3   0          (0, 1, 2)      1       13        1       41
+ 3   1          (1, 1, 1)      3       45       45       45
+ 4   0       (0, 1, 2, 3)      1       95        1      629
+ 4   1       (1, 1, 3, 1)      3      189       45      633
+ 4   2       (1, 1, 2, 2)      5      523      393      653
+ 4   3       (0, 2, 2, 2)      3      333       45      633
+ 5   0    (0, 1, 2, 3, 4)      1     1033        1    14937
+ 5   1    (1, 1, 3, 4, 1)      3     1809       45    14961
+ 5   2    (1, 1, 2, 4, 2)      5     2817      393    15109
+ 5   3    (0, 2, 2, 4, 2)      3     1809       45    14973
+ 5   4    (1, 1, 2, 3, 3)      9     8137     3225    15313
+ 5   5    (0, 2, 2, 3, 3)      5     5289      393    15109
+ 5   6    (1, 1, 3, 3, 2)      9     8145     2785    15201
+ 5   7    (0, 1, 3, 3, 3)      3     3561       45    14961
+ 5   8    (1, 2, 2, 3, 2)     11    11017     6069    15461
+ 5   9    (1, 2, 2, 2, 3)     15    12129    10773    15261
+ 5  10    (1, 2, 2, 3, 2)     13    11625     8097    15305
+ 5  11    (2, 2, 2, 2, 2)     15    15505    15565    15565
+
+--- C8: D(T)^op ~ D(T^op)? (iso probe, n=3,4) ---
+n=3: D(T)^op iso D(T^op) in 1/2 classes
+n=4: D(T)^op iso D(T^op) in 0/4 classes
+
+=== done ===
