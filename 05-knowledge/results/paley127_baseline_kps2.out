@@ -1,0 +1,14 @@
+=== paley127_baseline_kps2 — order-127 head-to-head ===
+reference: trans(T127 tower core) = 15 (tower_step_structure_kps2)
+
+trans(Paley_107) = 9   (nodes=2553184, 8.1s)
+trans(Paley_127) = 11   (nodes=7904644, 29.2s)
+
+trans(random_127 #0) = 15   (nodes=10909705, 41.6s)
+trans(random_127 #1) = 14   (nodes=10328987, 40.6s)
+trans(random_127 #2) = 14   (nodes=10520832, 41.2s)
+trans(random_127 #3) = 14   (nodes=10757743, 47.2s)
+trans(random_127 #4) = 14   (nodes=10822444, 47.3s)
+random n=127 summary: [14, 14, 14, 14, 15]  mean=14.20  [2*log2(127)+1 = 14.98]
+
+=== done in 255.2s ===

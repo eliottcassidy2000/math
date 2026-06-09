@@ -1,0 +1,6 @@
+=== tower_t255_probe_kps2 — trans(T255) bracket (prediction: 23) ===
+T255 built: 255 vertices, regular score check: [127]
+has_TT(T255, 23) = True   (nodes=1059129, 7.3s)
+has_TT(T255, 24) = False   (nodes=4144648, 25.1s)
+
+=== done in 32.4s ===

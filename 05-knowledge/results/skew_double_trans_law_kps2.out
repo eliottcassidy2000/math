@@ -1,0 +1,68 @@
+=== skew_double_trans_law_kps2 — trans under the skew-Sylvester double (HYP-2357) ===
+
+--- PART 1: all iso classes n=3..5 ---
+ n idx           scores  SC?  trans  transD  delta
+ 3   0        (0, 1, 2)    N      3       4      1
+ 3   1        (1, 1, 1)    Y      2       3      1
+ 4   0     (0, 1, 2, 3)    N      4       5      1
+ 4   1     (1, 1, 3, 1)    N      3       4      1
+ 4   2     (1, 1, 2, 2)    Y      3       4      1
+ 4   3     (0, 2, 2, 2)    N      3       4      1
+ 5   0  (0, 1, 2, 3, 4)    N      5       6      1
+ 5   1  (1, 1, 3, 4, 1)    N      4       5      1
+ 5   2  (1, 1, 2, 4, 2)    N      4       5      1
+ 5   3  (0, 2, 2, 4, 2)    N      4       5      1
+ 5   4  (1, 1, 2, 3, 3)    Y      4       5      1
+ 5   5  (0, 2, 2, 3, 3)    N      4       5      1
+ 5   6  (1, 1, 3, 3, 2)    Y      4       5      1
+ 5   7  (0, 1, 3, 3, 3)    N      4       5      1
+ 5   8  (1, 2, 2, 3, 2)    Y      4       5      1
+ 5   9  (1, 2, 2, 2, 3)    Y      3       4      1
+ 5  10  (1, 2, 2, 3, 2)    Y      3       5      2
+ 5  11  (2, 2, 2, 2, 2)    Y      3       4      1
+
+L1 (trans(D) >= trans+1) violations: 0
+L2 (trans(D) <= 2*trans) violations: 0
+delta histogram by (n, delta, strongly_connected): {(3, 1, False): 1, (3, 1, True): 1, (4, 1, False): 3, (4, 1, True): 1, (5, 1, False): 6, (5, 1, True): 5, (5, 2, True): 1}
+
+--- PART 2: exhaustive labeled n=6 (32768 tournaments) ---
+L1 violations: 0   L2 violations: 0   (3.7s)
+ trans  delta  strong   count   example (upper-tri bits, scores)
+     3      2       Y     240   bits=1332 scores=(2, 3, 2, 2, 3, 3)
+     4      1       N     848   bits=72 scores=(1, 2, 2, 2, 3, 5)
+     4      1       Y   13200   bits=80 scores=(1, 2, 2, 2, 4, 4)
+     4      2       N    1440   bits=73 scores=(2, 1, 2, 2, 3, 5)
+     4      2       Y    3840   bits=89 scores=(3, 1, 2, 2, 3, 4)
+     5      1       N    7440   bits=2 scores=(1, 1, 1, 3, 4, 5)
+     5      1       Y    5040   bits=16 scores=(1, 1, 2, 3, 4, 4)
+     6      1       N     720   bits=0 scores=(0, 1, 2, 3, 4, 5)
+
+deltas over STRONGLY CONNECTED n=6 tournaments: [1, 2]
+deltas over all n=6: [1, 2]
+
+--- PART 3: specific tournaments ---
+                                         name    n  trans  transD  delta   2n
+                  QR7 (=ST7, unique TT4-free)    7      3       5      2   14   (nodes=91, 0.0s)
+ST13 (unique TT5-free, circulant from script A)   13      4       7      3   26   (nodes=820, 0.0s)
+           Galois_27 (=ST27, unique TT6-free)   27      5       8      3   54   (nodes=30948, 0.1s)
+                              T7 (tower core)    7      3       5      2   14   (nodes=92, 0.0s)
+                             T15 (tower core)   15      5       7      2   30   (nodes=1471, 0.0s)
+                             T31 (tower core)   31      7      11      4   62   (nodes=42987, 0.1s)
+
+--- D(T63) on 126 vertices (bracketed) ---
+has_TT(D(T63), 12) = True   (nodes=209, 0.0s)
+has_TT(D(T63), 13) = True   (nodes=398, 0.0s)
+has_TT(D(T63), 14) = True   (nodes=2824, 0.0s)
+has_TT(D(T63), 15) = True   (nodes=42392, 0.1s)
+has_TT(D(T63), 16) = False   (nodes=298189, 1.1s)
+trans(D(T63)) = 15 exactly
+
+--- PART 4: D(T_m) (2m vertices) vs tower step T_{2m+1} ---
+tower step n -> 2n+1 is the BORDERED double (skew-Hadamard order doubling);
+D(T) is the unbordered skew double on 2n vertices. Compare trans growth:
+  T3: trans=2   D(T3) [n=6]: trans=3 (delta 1)   T7 [n=7]: trans=3 (delta 1)
+  T7: trans=3   D(T7) [n=14]: trans=5 (delta 2)   T15 [n=15]: trans=5 (delta 2)
+  T15: trans=5   D(T15) [n=30]: trans=7 (delta 2)   T31 [n=31]: trans=7 (delta 2)
+  T31: trans=7   D(T31) [n=62]: trans=11 (delta 4)   T63 [n=63]: trans=11 (delta 4)
+
+=== done in 9.4s ===

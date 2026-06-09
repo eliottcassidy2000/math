@@ -1,0 +1,34 @@
+=== t511_witness_lift_kps2 — certifying trans(T511) >= 31 via D(D(X)) ===
+trans(T127) = 15;  witness chain C15 = [23, 56, 32, 97, 121, 94, 70, 4, 28, 59, 35, 101, 125, 90, 66]
+witness verifies as transitive chain: True
+
+trans(D(D(TT15 chain))) [60 vertices] = 30   (0.0s)
+
+--- X = C15 + v (one extra, trans(X) must stay 15) ---
+v= 44: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 37: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v=100: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 40: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 16: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 72: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 71: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v=111: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 42: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v=118: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 75: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+v= 92: trans(X)=15, trans(D(D(X))) [64 vertices] = 30   (0.1s)
+
+--- X = C15 + {u, v} (two extras, trans(X) = 15) ---
+u= 44 v= 37: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v=100: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v= 40: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v= 16: trans(D(D(X))) [68 v.] = 30 (0.1s)
+u= 44 v= 72: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v= 71: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v=111: trans(D(D(X))) [68 v.] = 30 (0.2s)
+u= 44 v= 42: trans(D(D(X))) [68 v.] = 30 (0.2s)
+
+BEST trans(D(D(X))) found = 30
+=> certified lower bound trans(T511) >= 30 only (plus >= 24 via D(T255)+1).
+
+=== done in 14.5s ===

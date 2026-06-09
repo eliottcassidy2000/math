@@ -2193,3 +2193,30 @@ object contradicted each other on inspection.
    hole immediately (cf. MISTAKE-015's "the error was visible in the output").
 3. Greedy-commit backtracking (commit to first consistent subtree, never revisit) is a
    recurring trap in tree searches — both grid searchers this session had it.
+
+---
+
+## MISTAKE-068: Cycle-Anchored Subset DP Reused for Longest-Path Problems
+
+**Date discovered:** 2026-06-09 (caught in-session by branch-II self-check P3; never propagated)
+**Found by:** kind-pasteur-2026-06-09-S2 branch II (blowup spectrum lab)
+**Affects:** any script computing longest paths with a min-vertex-anchored subset DP
+
+### What was assumed
+A subset DP that anchors each cycle at its minimum-label vertex (correct for cycle enumeration:
+every cycle can be rooted at its minimum) was reused for LONGEST PATHS by anchoring paths at
+their minimum vertex.
+
+### Why it was wrong
+A path's minimum-label vertex can be INTERIOR — such paths are never generated when extending
+only from the anchor. Symptom: longest path of P3 reported as 2 vertices; downstream, the
+circumference law c(G[K2]) = 2p showed 275 fake "beaters" (true count after fix: 56).
+
+### The correct framing
+Cycles: min-anchoring is safe (rotation moves the minimum to the start). Paths: must allow
+two-sided extension from the anchor, or run DP from every start vertex. Cycle spectra computed
+with the anchored DP were NEVER affected.
+
+### Lesson
+"Anchor at the minimum" is a CYCLE symmetry (rotation), not a PATH symmetry (paths only have
+reversal). Check which group acts before porting a canonical-form trick between objects.

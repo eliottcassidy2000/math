@@ -1,0 +1,30 @@
+====================================================================================================
+HIGH-GIRTH CUBIC CAGES: dyadic cycle profiles (girth>=9 => C8-free for free)
+====================================================================================================
+file                      n girth  c8    c16  c32exists   time
+cage-k3.g10-00.dr        70    10   0   3855        YES   0.1s
+cage-k3.g10-01.dr        70    10   0   3855        YES   0.0s
+cage-k3.g10-02.dr        70    10   0   3900        YES   0.1s
+cage-k3.g11.dr          112    11   0   1956        YES   0.0s
+cage-k3.g12.dr          126    12   0   3780        YES   0.1s
+cage-k3.g9-00.dr         58     9   0   1988        YES   0.1s
+cage-k3.g9-01.dr         58     9   0   2088        YES   0.0s
+cage-k3.g9-02.dr         58     9   0   2193   inconcl.   8.3s
+cage-k3.g9-03.dr         58     9   0   1925   inconcl.   8.0s
+cage-k3.g9-04.dr         58     9   0   1966   inconcl.   8.4s
+cage-k3.g9-05.dr         58     9   0   1989   inconcl.   7.6s
+cage-k3.g9-06.dr         58     9   0   2062        YES   0.0s
+cage-k3.g9-07.dr         58     9   0   2050        YES   0.0s
+cage-k3.g9-08.dr         58     9   0   2081        YES   0.0s
+cage-k3.g9-09.dr         58     9   0   1964        YES   0.0s
+cage-k3.g9-10.dr         58     9   0   1967        YES   0.0s
+cage-k3.g9-11.dr         58     9   0   2074        YES   0.0s
+cage-k3.g9-12.dr         58     9   0   2041   inconcl.   7.5s
+cage-k3.g9-13.dr         58     9   0   1923   inconcl.   7.5s
+cage-k3.g9-14.dr         58     9   0   1961   inconcl.   7.5s
+cage-k3.g9-15.dr         58     9   0   1946   inconcl.   7.6s
+cage-k3.g9-16.dr         58     9   0   1989        YES   0.0s
+cage-k3.g9-17.dr         58     9   0   1929        YES   0.0s
+
+Interpretation: every (3,9)-cage avoids C4+C8 by girth; the c16 column decides
+whether any is a {4,8,16}-avoider on n=58 (then c32 would be the last gate <64).

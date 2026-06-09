@@ -1,0 +1,288 @@
+=== PAGE 1 ===
+Extremalgraphsforsomeproblemsoncyclesin
+graphs
+KlasMarkstr¨ om
+Abstract.Thispapercontainacollectionofextremalgraphsfor
+somequestionsoncyclesingraphs.Thegraphshavebeenfoundb y
+exhaustivecomputersearch.
+I list the extremal graphs and values for the maximum and
+minumnumerofcyclesinagraph,graphswithoutcyclesoflengt h4
+and8relatingtoaconjectureofErd¨ osandGyarfasandthesmalle st
+3-connectednon-hamiltoniancubicgraphsofclassI.
+1. Introduction
+Manybasicquestionsregardingthecyclestructureofgraph singeneral,
+andcubicgraphsinparticular,areverypoorlyunderstood. Intheliterat-
+ureweﬁndunsolvedproblemsofalldegreeofsophistication ,fromthecycle
+doublecoverconjecturetothehamiltonicityofvariouscla ssesofgraphs.
+InthispaperIlistextremalgraphsandvaluesforsomegraph properties
+relatedtocyclesingraphswhichIhavehappendtobeworking onduring
+thelastfewyears. Nexttomoretraditionalpenandpaperwor kIhave
+donesomecomputationalworkwhichhasbeencollectedinthi snote.
+Thefourdiﬀerentproblemstreatedarebrieﬂy:themaximumn umber
+ofcycles,theminimumnumberofcycles,theexistenceofcyc lesoflength
+apowerof2,andﬁndingnonhamiltonian3-connected,3-edge colourable
+cubicgraphs.
+2. Graphswithmanycycles
+In[ES81]EntringerandSlaterstudiedgraphswiththemaximum possible
+number ofcyclesamongallgraphson nverticesand medges. More
+speciﬁcallytheydeﬁned ψ(G)tobethenumberofcyclesinthegraph G
+andψ(k)asthemaximumnumberofcyclesinagraphwith n+k−1
+edges.Furthermoretheyshowedthatgivenanyvalueof kthereisacubic
+graphGon2(k−1)verticessuchthat ψ(G)=ψ(k),i.e.thereisalwaysa
+reasonablysmallextremalgraphforagiven k.
+Sincekisthedimensionofthecyclespaceofagraphon n+k−1
+edgesweﬁndthat ψ(k)<2k. EntringerandSlaterprovedthat ψ(k)≥
+1
+=== PAGE 2 ===
+2k−1+k2−3k+3bycalculatingthenumberofcyclesintheM¨obius
+wheels.Usinganexhaustivecomputersearchtheyfoundthev alueofψ(k)
+fork≤8andbasedonthesevaluesconjecturedthat ψ(k)∼2k−1.
+Ihaveextendedthecomputersearchforcubicgraphson2( k−1)vertices
+forwhichψ(G)=ψ(k).Ihavefoundtheextremalgraphsfor k≤11.For
+12≤k≤22Ihavecomputedlowerboundsfor ψ(k)bynarrowingour
+searchtographswithhighgirth.TheresultsaregiveninTab le1.
+In[ES81]itwasconjecturedthatallcubicgraphswhichareex tremal
+forψwouldhaveaslargegirthasispossibleforacubicgraphon2( k−1).
+Thisconjecturewasdisprovedin[Gui96],howeveritstills eemstobetrue
+thattheextremalgraphstendtohaveagirthwhichiscloseto thelargest
+possibleone. Thusitisnotunreasonabletoexpectthelower boundsfor
+ψ(k)givenheretoactuallybethevalueof ψ(k).
+ThegeneralisedPetersengraphGP( n,m),n≥3,1≤m < n/2,isa
+cubicgraphwithvertex-set {ui;i∈Zn}∪{vi;i∈Zn},andedge-set
+{uiui+1,uivi,vivi+m;i∈Zn}.
+Fork=6wehaveseenthat GP(6−1,2),theordinaryPetersengraph,
+isextremalwithrespectto ψ(G),likewisefor k=5thegraph GP(5−
+1,2),thecube,isextremal.Motivatedbythesetoinitialcoin cidenceswe
+computedthenumberofcyclesinallsmallgeneralisedPeter sengraphs
+andfoundthatforsuitable mtheycomeverycloseindeedtotheextremal
+valueofψ(n−1),seeTable2.Wethusmakethefollowingconjecture.
+Conjecture2.1. Letp(k)=maxmψ(GP(k−1,m)).
+(1)p(k)=2k−1+f(k),wheref(k)isafunctionnotboundedbyany
+polynomial.
+(2)ψ(k)−2k−1=O(p(k)−2k−1).
+Fromourdataforsmall koneﬁndadecentﬁtwith f(k) =O(klnk).
+Howeverthereislittleelseinsupportforasharperconject ure.
+Thatp(k)isgreaterthan2k−1isimmediatesince GP(k−1,1)isthe
+familyofordinarycyclicladdersandforthesewehavethat
+ψ(GP(k−1,2))≥2k−1+(k−1)(k−2)+2.
+2
+=== PAGE 3 ===
+kψ(k)ψ(k)/2k−1girthExtremalgraphs
+371.753/3 K4,3-cage
+4151.8753/4 K3,3,4-cage
+5291.8133/4TheM¨ obiusladder.
+6571.78133/5ThePetersengraph,5-cage
+71091.7033/5 Figure1
+82131.6643/6TheHeawoodgraph,6-cage
+94011.5663/5 Figure2
+107831.5293/6 Figure2
+1114841.4493/5,6 Figure3
+1228761.4043/6 Figure4
+13≥5608≥1.3696/7TheMcGeegraph,7-cage
+14≥10872≥1.3277/7 Figure4
+15≥21192≥1.2937/7TheCoxetergraph,snark
+16≥41400≥1.2637/8TheTutte-Coxetergraph,8-cage
+17≥80211≥1.2237/7 Figure5
+18≥157134≥1.1988/8 Figure5
+19≥306373≥1.1688/8 Figure6
+20≥600054≥1.1448/8 Figure6
+21≥1182592≥1.1278/8 Figure7
+22≥2324532≥1.1088/8 Figure7
+Table 1.Valuesandboundsfor ψ(k). Inthecolumn
+labelledgirttheﬁrstvalueistheminimumgirthofthe
+graphssearchedtogiveourboundandaftertheslash
+markwelistthegirthsoftheextremalgraphsfound.
+Figure1.Graphsmaximising ψ(G)fork=12.
+3
+=== PAGE 4 ===
+kψ(k)p(k)
+41514
+52928
+65757
+710994
+8213205
+9401400
+10783704
+1114841456
+1228762818
+13≥56085442
+14≥1087210818
+15≥2119219767
+16≥4140040099
+17≥8021172656
+Table2.Valuesofp(k)fork≤17comparedtoourbest
+lowerboundsfor ψ(k)
+Figure2.Graphsmaximising ψ(G)fork=16,18.
+Figure3.Graphsmaximising ψ(G)fork=20.
+4
+=== PAGE 5 ===
+Figure4.Graphsgivingourvalueandlowerboundfor
+ψ(k)fork=22,26.
+Figure5.Graphsgivingourlowerboundfor ψ(k)for
+k=32,34.
+Figure6.Graphsgivingourlowerboundfor ψ(k)for
+k=36,38.
+5
+=== PAGE 6 ===
+Figure7.Graphsgivingourlowerboundfor ψ(k)for
+k=40,42.
+6
+=== PAGE 7 ===
+3. Graphswithfewcycles
+In[BCE86]BarefootClarkandEntringerstudiedwhatismoreor lessto
+oppositequestionoftheprevioussection,namelyhowmanyc yclesagraph
+onnatleastmusthave.Sincetreesbydeﬁnitiondonothaveanycy cleswe
+mustrestrictourgraphinordertogetameaningfulquestion .Barefootet
+aldeﬁnedfk(n)asthesmallestnumberofcyclesinany k-connectedcubic
+graphonnvertices.
+Barefootetaldeterminedtheexactvalueof f1(n)andfoundthefamily
+ofextremalgraphssatisfyingthisbound, f1turnsouttobelinearin n.
+Theyalsofoundthevalue f2(n),whichisquadraticin n,anfoundthe
+correspondingextremalgraphs.
+Fork=3fk(n)hasnotyetbeendetermined.In[BCE86]itwasshown
+thatf3(n)isboundedfromaboveby n2nc,c=log8
+log9,anditwasconjectured
+thatf3(n)islargerthananypolynomial. Thisconjecturewasprovedb y
+AldredandThomassen[AT97]whoshowedthat2n0.17< f3(n)forlarge
+n.Theseboundsaretothisdatethebestfoundfor f3(n).
+Obviouslynofamilyofextremalgraphsfor f3(n)hasbeenfound,butin
+[BCE86]theextremalgraphsfor n≤14wasfoundbycomparingasimple
+familyofplanargraphswithvaluesof ψ(G)fromacomputergenerated
+table.Thefamily Gnmentionedisconstructedasfollows.Let Gn={K4}.
+AgraphG2∈Gn+1isconstructedfromagraph G1inGnbyexpandinga
+vertexv,containedinasfewcyclesof G1aspossible,intoatriangle. It
+wasalsonotedwithoutproofthatif G∈Gnthenψ(G)=Fn/2+5−n/2+4,
+whereFnisthenthFibonaccinumber.
+Wehaveveriﬁedandextendedthesearchforextremalgraphsf orf3(n)
+toalln≤20andwefoundthatalltheextremalgraphsthusfarbelong
+toGn. Asnotedin[BCE86]thiscannotcontinuetoholdforall n,the
+Fibonaccinumbergrowexponentially,andaninterestingch allengeisthus
+toﬁndthesmallest nforsuchthat f3(n)<Fn/2+5−n/2+4.
+Theextremalgraphsfor n≤20aredisplayedinFigures8to13.
+7
+=== PAGE 8 ===
+Figure8.Graphsminimising ψ(G)forn=8,10.
+Figure9.Graphsminimising ψ(G)forn=12.
+Figure10.Graphsminimising ψ(G)forn=14.
+8
+=== PAGE 9 ===
+Figure11.Graphsminimising ψ(G)forn=16.
+Figure12.Graphsminimising ψ(G)forn=18.
+9
+=== PAGE 10 ===
+Figure13.Graphsminimising ψ(G)forn=20.
+10
+=== PAGE 11 ===
+n
+244
+2623
+28251
+Table3.Thenumberofcubicgraphswithno C4andC8.
+4. Graphswithfewcyclesoflength 2k
+In1995Erd¨ osandGyarfasmadethefollowingconjecture.
+Conjecture4.1. Everygraphwithminimumdegreeatleast3containsa
+cyclewhoselengthisapowerof2.
+Erd¨ osoﬀered$100foraproofand$50foracounterexample.Ap artfrom
+Shauger’sresultsonclaw-freegraphs[Sha98,DS01]theres eemstobevery
+littlepublishedonthisconjecture.
+Assumethat Gisa,edgeandvertex,minimalcounterexampletothis
+conjectureand that uandvare twoverticesof G. Ifd(u)≥3and
+d(v)≥3then{u,v}cannotbeanedge;ifitwasthen G\{u,v}would
+beacounterexamplewithfeweredgesthan G. Thusacounterexample
+mustconsistofanindependentset V1ofverticesofdegreeatleast4,and
+anonemptyset V2=V\V1ofverticesofdegree3.
+Using this observation Gordon Royle [Roy] used a modiﬁed ver sion
+ofBrendanMcKay’sgraphgenerator makeg[McK]togenerategraphs
+withoutC4’sandthedescribeddegreestructure.Roylegeneratedallr el-
+evantgraphsonlessthan16verticesandfoundnocounterexa mples.
+Inordertoextendthissearchfurtherwechoosetolookatgra phswith
+V1=∅,i.ecubicgraphs.WeusedGunnarBrinkman’scubicgraphgen er-
+atorminibaum[Bri96]togenerateallcubicgraphsonlessth an29vertices
+andasimplefortranprogramtocheckfortheexistenceofcyc lesoflength
+4,8and16.Nocounterexamplestotheconjecturewasfound.H oweveron
+24verticeswefoundthesmallestcubicgraphswithoutcycle soflengths4
+and8.ThesegraphsaredisplayedinFig.14.Wenotethatthel owerright
+ofthefourgraphscanbeconstructedfrom K4berepeatedlyexpanding
+verticesintotriangles,itisalsotheonlyplanargraphamo ngthefour.
+InTable3wedisplaythenumberofcubicgraphson nverticeshaving
+nocyclesoflength4or8.Fromthedistributionofshortcycl esinrandom
+cubicgraphs,seee.g. thenicesurveyin[Wor99],weﬁndthat forthese
+smallnthenumberofgraphswithoutanycyclesoflength4and8ismuc h
+largerthantheasymptoticproportionofsuchgraphsamongt hecubic
+graphs.
+11
+=== PAGE 12 ===
+Figure 14.The cubic graphs on 24 which contains
+neitheraC4noraC8
+12
+=== PAGE 13 ===
+5. NonhamiltoniancubicgraphsofclassI
+Thehamiltonicityofcubicgraphsisawellinvestigatedpro perty. Itis
+ofcourseeasytoconstructanonhamiltonian1-connectedcu bicgraphs
+anditisonlyslightlyhardertoﬁnda2-connectednonhamilt oniangraph.
+Amongthe3-connectedcubicgraphsthesmallestnonahmilto niangraph
+isthewellknownPetersen-graph,andfromitthereisanumbe rofways
+toconstructfamiliesoflargernonhamiltoniangraphs.Gra phsconstructed
+inthiswayaretypicallyofclassII,i.e.theyarenot3-edge -colourable.
+AmongcubicgraphsofclassItheplanargraphshavereceived alotof
+attention,ﬁrstinconnectionwiththe4-colourtheorem. Th eﬁrstnon-
+hamiltonianexamplewasfoundbyTuttein[Tut46]. Laterons everal
+examplesofnon-hamiltoniancubicgraphson38verticeswer efoundby
+Lederberg,Barnette,andBosk. HoltonandMcKayprovedthat all3-
+connectedplanarcubicgraphsonatmost36verticesarehami ltonian,
+thusprovingtheminimalityoftheexampleson38vertices.
+Herewehavesearchedfor3-connected,non-planar,non-ham iltonian,
+cubic graphs of class I. We used a fortran program to sieve for non-
+hamiltoniangraphsamongallcubicgraphson nverticesandamongthose
+weusedMathematicatocheckwetherthefoundgraphswerecla ssIand
+3-connected. Thecubicgraphsweregeneratedusingminibau m[Bri96].
+Alltrianglefreecubicgraphsonatmost22verticesweretes ted,there-
+strictiontotrianglefreegraphscomingfromthefactthati fwecontract
+atriangleinacubicgraphwepreserveboththechromaticind exandthe
+hamiltonicityofthegraph.
+InFigure15weshowthesmallestsuchgraphsandinFigure16w eshow
+allsuchgraphson22vertices. TheﬁrstfourgraphsinFigure 16canbe
+constructedfromthegraphinFigure15,theﬁfthgraphisthe generalised
+Petersengraph GP(11,2).
+13
+=== PAGE 14 ===
+Figure15.The3-connectedclass-Inonhamiltoniancu-
+bicgraphon20vertices.
+Figure16
+14
+=== PAGE 15 ===
+References
+[AT97] R. E. L. Aldred and Carsten Thomassen, On the number of cycles in 3-
+connectedcubicgraphs ,J.Combin.TheorySer.B 71(1997),no.1,79–84.
+[BCE86] C.A.Barefoot,LaneClark,andRogerEntringer, Cubicgraphswiththemin-
+imumnumberofcycles ,ProceedingsoftheseventeenthSoutheasterninter-
+national conference on combinatorics, graph theory, and comput ing (Boca
+Raton,Fla.,1986),vol.53,1986,pp.49–62.
+[Bri96] GunnarBrinkmann, Fast generationof cubicgraphs , J.GraphTheory 23
+(1996),no.2,139–149.
+[DS01] DaleDanielandStephenE.Shauger, AresultontheErd˝ os-Gy´ arf´ asconjecture
+inplanargraphs,ProceedingsoftheThirty-secondSoutheasternInternational
+ConferenceonCombinatorics,GraphTheoryandComputing(Baton Rouge,
+LA,2001),vol.153,2001,pp.129–139.
+[ES81] R.C.EntringerandP.J.Slater, Onthemaximumnumberofcyclesina
+graph,ArsCombin.11(1981),289–294.
+[Gui96] DavidR.Guichard, Themaximumnumberofcyclesingraphs ,Proceedings
+oftheTwenty-seventhSoutheasternInternationalConference onCombinator-
+ics,GraphTheoryandComputing(BatonRouge,LA,1996),vol.1 21,1996,
+pp.211–215.
+[McK] BrendanMcKay,TheprogramgengisavailablefromBrendanMc Kayshome
+pageathttp://cs.anu.edu.au/people/bdm.
+[Roy] GordonRoyle, The2ˆnconjecture ,
+http://www.cs.uwa.edu.au/˜gordon/remote/erdosconj.html .
+[Sha98] StephenE.Shauger, ResultsontheErd˝ os-Gy´ arf´ asconjecturein K1,m-free
+graphs,ProceedingsoftheTwenty-ninthSoutheasternInternational Confer-
+ence on Combinatorics, Graph Theory and Computing (Boca Raton, FL,
+1998),vol.134,1998,pp.61–65.
+[Tut46] W.T.Tutte, OnHamiltoniancircuits ,J.LondonMath.Soc. 21(1946),98–
+101.
+[Wor99] N.C.Wormald, Modelsofrandomregulargraphs ,Surveysincombinatorics,
+1999(Canterbury),LondonMath.Soc.LectureNoteSer.,vol.267 ,Cambridge
+Univ.Press,Cambridge,1999,pp.239–298.
+E-mailaddress:Klas.Markstrom@math.umu.se
+DepartmentofMathematics,Ume ˚aUniversity,SE-90187Ume ˚a,Sweden
+15

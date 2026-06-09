@@ -1,0 +1,39 @@
+Connected atlas graphs with >=1 edge, n<=7: 995
+
+Graphs with at least one cycle: 971
+Explicit detour constructions validated (all t in [0,k]): 971
+Explicit path-doubling constructions validated (all r): 995
+
+LAW-1 (per-cycle interval [k,2k] in spec(G[K2])): failures = 0
+LAW-2 (path floor [3,2p] in spec(G[K2])):          failures = 0
+LAW-3 (spec(G[K2]) gap-free = [3, c(B)]):          failures = 0
+LAW-5 (deg u^i = 2 deg_G(u) + 1):                  failures = 0
+Constructive-lemma validation failures:            0
+
+Circumference law: c(G[K2]) == 2*p(G) for 939 graphs; c(G[K2]) > 2*p(G) for 56 graphs; blowup Hamiltonian (c = 2n) for 896 of 995
+Examples where theta/jellyfish structure beats path doubling (g6, n, e, p, c(B), spec(G)):
+  ('E@dW', 6, 6, 5, 12, [3])
+  ('EQKo', 6, 6, 5, 12, [4])
+  ('EhX_', 6, 7, 5, 12, [3, 4])
+  ('EXSg', 6, 7, 5, 12, [4])
+  ('EzW_', 6, 8, 5, 12, [3, 4])
+  ('E?~o', 6, 8, 5, 12, [4])
+  ('E?~w', 6, 9, 5, 12, [3, 4])
+  ('FkoK?', 7, 7, 5, 12, [3])
+  ('FbW`?', 7, 7, 5, 12, [4])
+  ('FMoG_', 7, 7, 6, 14, [4])
+  ('Fg?hg', 7, 7, 6, 14, [3])
+  ('FpQO_', 7, 7, 6, 14, [4])
+  ('FXAGg', 7, 7, 6, 14, [5])
+  ('FupA?', 7, 8, 5, 12, [3, 4])
+  ('F\\CoG', 7, 8, 6, 14, [3, 4])
+
+NET graph (C3 + 3 pendants, n=6): spec(G) = [3], p(G) = 5, 2p = 10
+  spec(NET[K2]) = [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (c = 12; sun walk c1p1c1c2p2c2c3p3c3 predicts 12)
+
+K_{2,3} (= theta(2,2,2)): spec(G) = [4], p(G) = 5, 2p = 10
+  spec(K_{2,3}[K2]) = [3, 4, 5, 6, 7, 8, 9, 10]  (c = 10 = 2n; theta(2,2,2) has a Ham path, so c = 2p here -- the strict beats come from sun/jellyfish supports like NET)
+
+Total time: 18.4 s
+
+VERDICT: Blowup Interval Lemma PROVED (constructive) and verified exhaustively on all connected graphs n <= 7.

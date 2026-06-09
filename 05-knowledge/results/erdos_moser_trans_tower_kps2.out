@@ -1,0 +1,70 @@
+=== erdos_moser_trans_tower_kps2 — Branch I: Erdos-Moser trans on the Mersenne tower ===
+Anchors (literature): R(3)=4, R(4)=8, R(5)=14, R(6)=28; 34 <= R(7) <= 47 (NMH 2022).
+Forcing floor f(n) >= floor(log2 n) + 1 (Stearns): n=7:3  n=15:4  n=31:5  n=63:6.
+Since 63 >= 47 >= R(7): trans(T63) >= 7 guaranteed. Since 31 >= 28 = R(6): trans(T31) >= 6.
+
+--- PART 1: algorithm anchors ---
+trans(transitive_n) == n for n=1..10: PASS
+trans(C3) = 2 (expect 2): PASS
+trans(Paley_7) = 3 (expect 3, unique TT4-free of order 7): PASS
+exhaustive n=4: tournaments with trans < 3: 0/64 (expect 0, R(3)=4): PASS
+exhaustive n=7 (2^21 labeled): no-TT4 count = 240 (expect 240 = 5040/21, uniqueness of ST7): PASS  (18.0s)
+  exact trans histogram on first 50000 labeled: {4: 6815, 5: 32907, 6: 9900, 7: 378}
+trans(Paley_23) = 5 (expect 5: QR23 is TT6-free, NMH sec. 3.1): PASS
+trans(Galois_27) = 5 (expect 5: ST27 unique TT6-free of order 27): PASS
+
+--- PART 2: Mersenne tower cores ---
+trans(T3) = 2   (floor(log2 n)+1 = 2; nodes=2, memo=2, 0.0s)
+trans(T7) = 3   (floor(log2 n)+1 = 3; nodes=12, memo=12, 0.0s)
+trans(T15) = 5   (floor(log2 n)+1 = 4; nodes=115, memo=115, 0.0s)
+trans(T31) = 7   (floor(log2 n)+1 = 5; nodes=1625, memo=1625, 0.0s)
+trans(T63) = 11   (floor(log2 n)+1 = 6; nodes=46410, memo=46410, 0.1s)
+
+tower trans sequence (n=3,7,15,31,63): [2, 3, 5, 7, 11]
+per-tower-step growth: [1, 2, 2, 4]
+
+--- PART 3: link recursion trans(T) = 1 + max_v trans(N+(v)) ---
+T31: link trans values (per out-neighborhood): {5: 9, 6: 22}
+T31: trans = 1 + max(link) = 7 (direct: 7)  consistent=True
+T31: B_0 (N+(0), size 15) == T15 as labeled submatrix: True
+T31: trans(B_0) = 5  vs trans(T15) = 5  (max link trans = 6; attained at B_0: False)
+T31: vertices attaining max link trans: 22 of 31 (first few: [8, 9, 10, 11, 12, 13, 14, 16, 17, 18])
+
+T63: link trans values (per out-neighborhood): {7: 10, 8: 36, 9: 14, 10: 3}
+T63: trans = 1 + max(link) = 11 (direct: 11)  consistent=True
+T63: B_0 (N+(0), size 31) == T31 as labeled submatrix: True
+T63: trans(B_0) = 7  vs trans(T31) = 7  (max link trans = 10; attained at B_0: False)
+T63: vertices attaining max link trans: 3 of 63 (first few: [23, 39, 47])
+
+--- PART 4: Paley (quadratic residue) tournament controls ---
+trans(Paley_7) = 3   (nodes=12, 0.0s)
+trans(Paley_11) = 4   (nodes=32, 0.0s)
+trans(Paley_19) = 5   (nodes=341, 0.0s)
+trans(Paley_23) = 5   (nodes=548, 0.0s)
+trans(Paley_31) = 7   (nodes=2202, 0.0s)
+trans(Paley_43) = 7   (nodes=9072, 0.0s)
+trans(Paley_47) = 7   (nodes=18049, 0.0s)
+trans(Paley_59) = 9   (nodes=45569, 0.1s)
+trans(Paley_67) = 8   (nodes=132460, 0.3s)
+
+NMH claim check: Galois tournaments on 31, 43, 47 all contain TT7 => trans >= 7: Paley31=7, Paley43=7, Paley47=7
+
+--- PART 5: random baselines ---
+n=31: 20 random tournaments trans = [9, 9, 9, 9, 9, 9, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 10, 11]  min=9 max=11 mean=9.75  (0.1s)  [2*log2(n)+1 = 10.91]
+n=63: 20 random tournaments trans = [11, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 12, 13, 13, 13]  min=11 max=13 mean=12.10  (5.5s)  [2*log2(n)+1 = 12.95]
+
+--- PART 6: circulant scans ---
+Z13 scan (64 circulants): TT5-free (trans=4) symbol sets: 4 (0.0s)
+  S = [1, 3, 7, 8, 9, 11]
+  S = [4, 7, 8, 10, 11, 12]
+  S = [1, 2, 3, 5, 6, 9]
+  S = [2, 4, 5, 6, 10, 12]
+  => ST13 IS circulant (by Sanchez-Flores uniqueness, all of these are ST13).
+  saved ST13 adjacency to 05-knowledge/results/st13_adj_kps2.npy
+
+Z31 scan: 32768/32768 symbol sets checked in 2.1s; TT7-free circulants found: 10 (1 up to multiplier equivalence)
+  S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 13, 14, 15, 19, 20, 25]  trans = 6
+
+Z33 scan: 65536/65536 symbol sets checked in 5.2s; TT7-free circulants found: 0 (0 up to multiplier equivalence)
+
+=== done in 31.5s ===

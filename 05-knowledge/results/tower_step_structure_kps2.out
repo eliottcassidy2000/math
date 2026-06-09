@@ -1,0 +1,29 @@
+=== tower_step_structure_kps2 — T_{2m+1} = D(T_m) + border-twin ===
+
+tower cores built: [1, 3, 7, 15, 31, 63, 127]
+
+--- 1+2: labeled submatrix identity ---
+m= 3: T7 minus border-twin == D(T3): True   border-twin out-arcs: 3/3 into copy1, 0/3 into copy2
+m= 7: T15 minus border-twin == D(T7): True   border-twin out-arcs: 7/7 into copy1, 0/7 into copy2
+m=15: T31 minus border-twin == D(T15): True   border-twin out-arcs: 15/15 into copy1, 0/15 into copy2
+m=31: T63 minus border-twin == D(T31): True   border-twin out-arcs: 31/31 into copy1, 0/31 into copy2
+m=63: T127 minus border-twin == D(T63): True   border-twin out-arcs: 63/63 into copy1, 0/63 into copy2
+
+--- 3: largest transitive set CONTAINING the border twin ---
+T7: trans = 3   max chain through border-twin = 3   twin on a maximum chain: True
+T15: trans = 5   max chain through border-twin = 4   twin on a maximum chain: False
+T31: trans = 7   max chain through border-twin = 6   twin on a maximum chain: False
+T63: trans = 11   max chain through border-twin = 8   twin on a maximum chain: False
+
+--- 4: trans(T127) ---
+lower bound: T127 contains D(T63) (identity above), trans(D(T63)) = 15  =>  trans(T127) >= 15
+has_TT(T127, 16) = False   (nodes=262909, 1.2s)
+trans(T127) = 15 exactly
+
+--- 5: Paley record table extension ---
+trans(Paley_71) = 9   (nodes=165781, 0.4s)
+trans(Paley_79) = 9   (nodes=329600, 0.9s)
+trans(Paley_83) = 8   (nodes=471338, 1.4s)
+trans(Paley_103) = 11   (nodes=1826238, 6.2s)
+
+=== done in 10.3s ===

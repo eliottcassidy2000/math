@@ -1,0 +1,24 @@
+==========================================================================================
+INDEPENDENT VERIFICATION (networkx.simple_cycles) of hunt specimens
+==========================================================================================
+n28-spec0 (girth5): cubic=True connected=True nx-counts c3=0 c4=0 c5=4 c6=12 c7=8 c8=0 c9=44
+   my-checker  c3=0 c4=0 c5=4 c6=12 c7=8 c8=0 c9=44   girth=5
+n28-spec1 (girth5): cubic=True connected=True nx-counts c3=0 c4=0 c5=5 c6=12 c7=12 c8=0 c9=34
+   my-checker  c3=0 c4=0 c5=5 c6=12 c7=12 c8=0 c9=34   girth=5
+n28-spec2 (girth5): cubic=True connected=True nx-counts c3=0 c4=0 c5=5 c6=12 c7=12 c8=0 c9=34
+   my-checker  c3=0 c4=0 c5=5 c6=12 c7=12 c8=0 c9=34   girth=5
+n24-M0 (C4free): cubic=True connected=True nx-counts c3=6 c4=0 c5=2 c6=4 c7=2 c8=0 c9=10
+   my-checker  c3=6 c4=0 c5=2 c6=4 c7=2 c8=0 c9=10   girth=3
+n24-M1 (C4free,planar): cubic=True connected=True nx-counts c3=7 c4=0 c5=3 c6=6 c7=3 c8=0 c9=4
+   my-checker  c3=7 c4=0 c5=3 c6=6 c7=3 c8=0 c9=4   girth=3
+n24-M2 (C4free): cubic=True connected=True nx-counts c3=4 c4=0 c5=0 c6=9 c7=12 c8=0 c9=14
+   my-checker  c3=4 c4=0 c5=0 c6=9 c7=12 c8=0 c9=14   girth=3
+
+isomorphism tests:
+  n28-spec1 ~ n28-spec2 ? True
+  n28-spec0 ~ n28-spec1 ? False
+  n24-M0 (C4free) ~ McGee ? False
+  n24-M1 (C4free,planar) ~ McGee ? False
+  n24-M2 (C4free) ~ McGee ? False
+  n24-M1 planar? True (Markstrom graph is THE planar one: n=24, 36 edges, girth 3)
+  n24-M1: |Aut| = 3 (MathWorld: Markstrom graph has 3 automorphisms)

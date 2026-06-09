@@ -1,0 +1,27 @@
+collector n=26 classes: 21; walk classes: 2
+MERGED distinct classes: 23 / 23 (Markstrom Table 3)
+girth histogram: [3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3]
+classes with girth >= 4: 0
+  class  1: girth=3 c3=7 c16=161 planar=False |Aut|=2 conn=True
+  class  2: girth=3 c3=7 c16=197 planar=False |Aut|=2 conn=True
+  class  3: girth=3 c3=4 c16=372 planar=False |Aut|=2 conn=True
+  class  4: girth=3 c3=8 c16=181 planar=False |Aut|=2 conn=True
+  class  5: girth=3 c3=5 c16=287 planar=False |Aut|=4 conn=True
+  class  6: girth=3 c3=6 c16=286 planar=False |Aut|=1 conn=True
+  class  7: girth=3 c3=5 c16=281 planar=False |Aut|=1 conn=True
+  class  8: girth=3 c3=8 c16=192 planar=False |Aut|=4 conn=True
+  class  9: girth=3 c3=6 c16=283 planar=False |Aut|=2 conn=True
+  class 10: girth=3 c3=5 c16=294 planar=False |Aut|=1 conn=True
+  class 11: girth=3 c3=5 c16=314 planar=False |Aut|=2 conn=True
+  class 12: girth=3 c3=2 c16=421 planar=False |Aut|=2 conn=True
+  class 13: girth=3 c3=3 c16=351 planar=False |Aut|=3 conn=True
+  class 14: girth=3 c3=6 c16=183 planar=False |Aut|=4 conn=True
+  class 15: girth=3 c3=5 c16=304 planar=False |Aut|=2 conn=True
+  class 16: girth=3 c3=6 c16=247 planar=False |Aut|=2 conn=True
+  class 17: girth=3 c3=4 c16=330 planar=False |Aut|=2 conn=True
+  class 18: girth=3 c3=1 c16=454 planar=False |Aut|=1 conn=True
+  class 19: girth=3 c3=3 c16=363 planar=False |Aut|=6 conn=True
+  class 20: girth=3 c3=6 c16=255 planar=False |Aut|=4 conn=True
+  class 21: girth=3 c3=3 c16=351 planar=False |Aut|=4 conn=True
+  class 22: girth=3 c3=7 c16=165 planar=False |Aut|=12 conn=True
+  class 23: girth=3 c3=6 c16=213 planar=False |Aut|=12 conn=True

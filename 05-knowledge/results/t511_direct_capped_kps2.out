@@ -1,0 +1,7 @@
+=== t511_direct_capped_kps2 — has_TT(T511, 31) with capped memo ===
+has_TT(T511, 31): KILLED MANUALLY after ~10 min, ~13.9 GB RSS, no result.
+Direct depth-31 decision search on 511 vertices is out of reach for this
+session (both uncapped and 12M-capped memo attempts died on memory).
+Certified instead: trans(T511) in [30, 47] via witness lift (>=30, see
+t511_witness_lift_kps2.out) and trans(D(T255))+1 <= 2*23+1 = 47.
+Two-step-law prediction: trans(T511) = 31.

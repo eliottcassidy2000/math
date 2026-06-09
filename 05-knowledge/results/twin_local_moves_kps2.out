@@ -1,0 +1,21 @@
+Connected atlas graphs n<=7 with a cycle: 971
+M1 (+1 edge-dominating vertex):  111358 instances, 0 failures
+M1' (general fan, d+2 & k-d+2):  201181 instances, 0 failures
+M2 (+2 edge detour):             94567 instances, 0 failures
+M3 (chord split a+1/b+1):        143523 instances, 0 failures
+TWIN (+1 from adjacent true twin pair on/off cycle): 23860 instances, 0 failures
+M5 (sunlet interval [k,k+t], t = max disjoint edge-dominators): 29956 cycle instances, 0 failures; t-histogram {1: 16003, 2: 10831, 3: 3122}
+Graphs (with cycle) containing at least one adjacent true twin pair: 411 / 971
+
+Theta law: spec(theta(a,b,c)) == {a+b, a+c, b+c} exactly
+  checked 30 theta graphs (1<=a<=b<=c<=5, b>=2): 0 failures []
+  -> theta graphs are the lacunary extreme: 3 cycle lengths, all sums of two of three path lengths. But every internal vertex has degree 2: proper subdivisions NEVER have min degree 3. This is exactly why E-G needs delta >= 3.
+
+Bondy-Vince check (delta>=3 => two cycles differing by 1 or 2):
+  delta>=3 connected graphs n<=7: 173; failures: 0 []
+  graphs achieving only difference 2 (never 1, i.e. bipartite-like): 2; only difference 1: 2
+  K_3,3 spectrum: [4, 6] -- difference 2 only: the '1 or 2' in Bondy-Vince cannot be improved to '1' (bipartite graphs have all-even spectra).
+
+Total time: 6.0 s
+
+VERDICT: all four local moves verified with zero failures; the weakest +1-forcing structure is a vertex dominating a cycle edge (one adjacent-true-twin pair suffices); chords give the +1/+2 of Bondy-Vince; subdivisions (theta) are the lacunary extreme excluded by the delta>=3 hypothesis.

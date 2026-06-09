@@ -1,0 +1,35 @@
+=== double_double_trans_kps2 — trans(D(D(T))) vs 2*trans(T) ===
+
+ n idx           scores   t   tD  tDD  tDD-2t
+ 3   0        (0, 1, 2)   3    4    6       0
+ 3   1        (1, 1, 1)   2    3    5       1
+ 4   0     (0, 1, 2, 3)   4    5    8       0
+ 4   1     (1, 1, 3, 1)   3    4    6       0
+ 4   2     (1, 1, 2, 2)   3    4    6       0
+ 4   3     (0, 2, 2, 2)   3    4    6       0
+ 5   0  (0, 1, 2, 3, 4)   5    6   10       0
+ 5   1  (1, 1, 3, 4, 1)   4    5    8       0
+ 5   2  (1, 1, 2, 4, 2)   4    5    8       0
+ 5   3  (0, 2, 2, 4, 2)   4    5    8       0
+ 5   4  (1, 1, 2, 3, 3)   4    5    8       0
+ 5   5  (0, 2, 2, 3, 3)   4    5    8       0
+ 5   6  (1, 1, 3, 3, 2)   4    5    8       0
+ 5   7  (0, 1, 3, 3, 3)   4    5    8       0
+ 5   8  (1, 2, 2, 3, 2)   4    5    8       0
+ 5   9  (1, 2, 2, 2, 3)   3    4    7       1
+ 5  10  (1, 2, 2, 3, 2)   3    5    7       1
+ 5  11  (2, 2, 2, 2, 2)   3    4    6       0
+
+tDD - 2t values over all iso classes n=3..5: [0, 1]
+claim trans(D(D(T))) >= 2*trans(T): violations = 0
+
+--- tower cores ---
+T3: t=2  trans(D(D(T3)))=5  2t+1=5  [tower T15: trans=5 on 15 vertices]
+T7: t=3  trans(D(D(T7)))=7  2t+1=7  [tower T31: trans=7 on 31 vertices]
+T15: t=5  trans(D(D(T15)))=11  2t+1=11  [tower T63: trans=11 on 63 vertices]
+
+CONCLUSION: D(D(.)) always doubles trans (within +1) at n<=5; equals 2t+1 on
+tower cores; T_{4m+3} = D(D(T_m)) + 3 pivots and the pivots add nothing,
+giving the exact two-step recursion trans(level k) = 2*trans(level k-2) + 1.
+
+=== done in 5.2s ===

@@ -1,0 +1,30 @@
+====================================================================================================
+DYADIC CYCLE CHECKER -- verification on known graphs (kind-pasteur-S2, Branch III)
+====================================================================================================
+
+graph                      n girth   c4   c5   c6    c7    c8     c16 pow2-status
+Petersen      (n=10)      10     5    0   12   10     0    15       0 has C8
+Heawood       (n=14)      14     6    0    0   28     0    21       0 has C8
+MoebiusKantor (n=16)      16     6    0    0   24     0    30       6 has C8
+Pappus        (n=18)      18     6    0    0   18     0    54     216 has C8
+Desargues     (n=20)      20     6    0    0   20     0    30     360 has C8
+Dodecahedron  (n=20)      20     5    0   12    0     0    30      90 has C8
+McGee         (n=24)      24     7    0    0    0    32    34     492 has C8
+Nauru         (n=24)      24     6    0    0   12     0    54    1062 has C8
+Coxeter       (n=28)      28     7    0    0    0    24    21     609 has C8
+TutteCoxeter  (n=30)      30     8    0    0    0     0    90    1620 has C8
+
+----------------------------------------------------------------------------------------------------
+FULL CYCLE SPECTRA (verification against Markstrom 2004 Table 1 psi values)
+----------------------------------------------------------------------------------------------------
+Petersen      (n=10): total cycles = 57  [psi target 57: MATCH]  (0.0s)
+   spectrum: c5=12, c6=10, c8=15, c9=20
+Heawood       (n=14): total cycles = 213  [psi target 213: MATCH]  (0.0s)
+   spectrum: c6=28, c8=21, c10=84, c12=56, c14=24
+McGee         (n=24): total cycles = 5608  [psi target 5608: MATCH]  (0.2s)
+   spectrum: c7=32, c8=34, c9=16, c10=48, c11=64, c12=164, c13=304, c14=248, c15=320, c16=492, c17=656, c18=936, c19=736, c20=468, c21=480, c22=360, c23=208, c24=42
+TutteCoxeter  (n=30): total cycles = 41400  [psi target 41400: MATCH]  (2.3s)
+   spectrum: c8=90, c10=72, c12=300, c14=1080, c16=1620, c18=3840, c20=7524, c22=8280, c24=9450, c26=7560, c28=1440, c30=144
+
+Petersen literature check: c5=12 c6=10 c8=15 c9=20 expected.
+McGee c8 == 0  <=>  McGee is one of Markstrom's 4 cubic n=24 graphs w/o C4,C8.

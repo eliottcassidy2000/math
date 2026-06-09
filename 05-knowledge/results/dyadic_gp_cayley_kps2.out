@@ -1,0 +1,100 @@
+====================================================================================================
+(A) GENERALIZED PETERSEN GRAPHS GP(n,k), 3<=n<=40, 1<=k<n/2  (2n vertices)
+====================================================================================================
+GP(n= 3): k=1:g3,c4=3,c8=0,c16=0
+GP(n= 4): k=1:g4,c4=6,c8=6
+GP(n= 5): k=1:g4,c4=5,c8=5  k=2:g5,c4=0,c8=15
+GP(n= 6): k=1:g4,c4=6,c8=36  k=2:g3,c4=0,c8=15
+GP(n= 7): k=1:g4,c4=7,c8=7  k=2:g5,c4=0,c8=21  k=3:g5,c4=0,c8=21
+GP(n= 8): k=1:g4,c4=8,c8=10  k=2:g4,c4=2,c8=25  k=3:g6,c4=0,c8=30
+GP(n= 9): k=1:g4,c4=9,c8=9  k=2:g5,c4=0,c8=36  k=3:g3,c4=0,c8=9  k=4:g5,c4=0,c8=36
+GP(n=10): k=1:g4,c4=10,c8=10  k=2:g5,c4=0,c8=30  k=3:g6,c4=0,c8=30  k=4:g5,c4=0,c8=15
+GP(n=11): k=1:g4,c4=11,c8=11  k=2:g5,c4=0,c8=33  k=3:g6,c4=0,c8=11  k=4:g6,c4=0,c8=11  k=5:g5,c4=0,c8=33
+GP(n=12): k=1:g4,c4=12,c8=12  k=2:g5,c4=0,c8=24  k=3:g4,c4=3,c8=24  k=4:g3,c4=0,c8=24  k=5:g6,c4=0,c8=54
+GP(n=13): k=1:g4,c4=13,c8=13  k=2:g5,c4=0,c8=26  k=3:g6,c4=0,c8=13  k=4:g6,c4=0,c8=13  k=5:g7,c4=0,c8=39  k=6:g5,c4=0,c8=26
+GP(n=14): k=1:g4,c4=14,c8=14  k=2:g5,c4=0,c8=28  k=3:g6,c4=0,c8=42  k=4:g7,c4=0,c8=28  k=5:g6,c4=0,c8=42  k=6:g6,c4=0,c8=21
+GP(n=15): k=1:g4,c4=15,c8=15  k=2:g5,c4=0,c8=30  k=3:g5,c4=0,c8=15  k=4:g7,c4=0,c8=30  k=5:g3,c4=0,c8=30  k=6:g5,c4=0,c8=30  k=7:g5,c4=0,c8=30
+GP(n=16): k=1:g4,c4=16,c8=16  k=2:g5,c4=0,c8=34  k=3:g6,c4=0,c8=32  k=4:g4,c4=4,c8=16  k=5:g6,c4=0,c8=32  k=6:g7,c4=0,c8=34  k=7:g6,c4=0,c8=24
+GP(n=17): k=1:g4,c4=17,c8=17  k=2:g5,c4=0,c8=34  k=3:g6,c4=0,c8=17  k=4:g7,c4=0,c8=17  k=5:g7,c4=0,c8=34  k=6:g6,c4=0,c8=17  k=7:g7,c4=0,c8=34  k=8:g5,c4=0,c8=34
+GP(n=18): k=1:g4,c4=18,c8=18  k=2:g5,c4=0,c8=36  k=3:g6,c4=0,c8=18  k=4:g7,c4=0,c8=36  k=5:g8,c4=0,c8=72  k=6:g3,c4=0,c8=18  k=7:g8,c4=0,c8=72  k=8:g6,c4=0,c8=27
+GP(n=19): k=1:g4,c4=19,c8=19  k=2:g5,c4=0,c8=38  k=3:g6,c4=0,c8=19  k=4:g7,c4=0,c8=38  k=5:g7,c4=0,c8=38  k=6:g6,c4=0,c8=19  k=7:g7,c4=0,c8=19  k=8:g7,c4=0,c8=19  k=9:g5,c4=0,c8=38
+GP(n=20): k=1:g4,c4=20,c8=20  k=2:g5,c4=0,c8=40  k=3:g6,c4=0,c8=20  k=4:g5,c4=0,c8=20  k=5:g4,c4=5,c8=40  k=6:g7,c4=0,c8=20  k=7:g6,c4=0,c8=20  k=8:g5,c4=0,c8=40  k=9:g6,c4=0,c8=30
+GP(n=21): k=1:g4,c4=21,c8=21  k=2:g5,c4=0,c8=42  k=3:g6,c4=0,c8=21  k=4:g7,c4=0,c8=42  k=5:g7,c4=0,c8=42  k=6:g7,c4=0,c8=42  k=7:g3,c4=0,c8=21  k=8:g8,c4=0,c8=42  k=9:g7,c4=0,c8=21  k=10:g5,c4=0,c8=42
+GP(n=22): k=1:g4,c4=22,c8=22  k=2:g5,c4=0,c8=44  k=3:g6,c4=0,c8=22  k=4:g7,c4=0,c8=22  k=5:g8,c4=0,c8=66  k=6:g8,c4=0,c8=44  k=7:g6,c4=0,c8=22  k=8:g7,c4=0,c8=22  k=9:g8,c4=0,c8=66  k=10:g6,c4=0,c8=33
+GP(n=23): k=1:g4,c4=23,c8=23  k=2:g5,c4=0,c8=46  k=3:g6,c4=0,c8=23  k=4:g7,c4=0,c8=23  k=5:g8,c4=0,c8=46  k=6:g7,c4=0,c8=23  k=7:g7,c4=0,c8=23  k=8:g6,c4=0,c8=23  k=9:g8,c4=0,c8=46  k=10:g7,c4=0,c8=23  k=11:g5,c4=0,c8=46
+GP(n=24): k=1:g4,c4=24,c8=24  k=2:g5,c4=0,c8=48  k=3:g6,c4=0,c8=27  k=4:g6,c4=0,c8=24  k=5:g8,c4=0,c8=72  k=6:g4,c4=6,c8=24  k=7:g8,c4=0,c8=48  k=8:g3,c4=0,c8=24  k=9:g8,c4=0,c8=51  k=10:g8,c4=0,c8=48  k=11:g6,c4=0,c8=36
+GP(n=25): k=1:g4,c4=25,c8=25  k=2:g5,c4=0,c8=50  k=3:g6,c4=0,c8=25  k=4:g7,c4=0,c8=25  k=5:g5,c4=0,c8=50  k=6:g7,c4=0,c8=25  k=7:g8,c4=0,c8=25  k=8:g6,c4=0,c8=25  k=9:g7,c4=0,c8=25  k=10:g5,c4=0,c8=25  k=11:g7,c4=0,c8=25  k=12:g5,c4=0,c8=50
+GP(n=26): k=1:g4,c4=26,c8=26  k=2:g5,c4=0,c8=52  k=3:g6,c4=0,c8=26  k=4:g7,c4=0,c8=26  k=5:g8,c4=0,c8=78  k=6:g8,c4=0,c8=52  k=7:g8,c4=0,c8=52  k=8:g7,c4=0,c8=26  k=9:g6,c4=0,c8=26  k=10:g8,c4=0,c8=26  k=11:g8,c4=0,c8=52  k=12:g6,c4=0,c8=39
+GP(n=27): k=1:g4,c4=27,c8=27  k=2:g5,c4=0,c8=54  k=3:g6,c4=0,c8=27  k=4:g7,c4=0,c8=27  k=5:g8,c4=0,c8=54  k=6:g8,c4=0,c8=27  k=7:g7,c4=0,c8=27  k=8:g8,c4=0,c8=54  k=9:g3,c4=0,c8=27  k=10:g8,c4=0,c8=54  k=11:g8,c4=0,c8=54  k=12:g7,c4=0,c8=27  k=13:g5,c4=0,c8=54
+GP(n=28): k=1:g4,c4=28,c8=28  k=2:g5,c4=0,c8=56  k=3:g6,c4=0,c8=28  k=4:g7,c4=0,c8=28  k=5:g8,c4=0,c8=56  k=6:g8,c4=0,c8=28  k=7:g4,c4=7,c8=28  k=8:g7,c4=0,c8=28  k=9:g6,c4=0,c8=28  k=10:g7,c4=0,c8=28  k=11:g8,c4=0,c8=56  k=12:g7,c4=0,c8=56  k=13:g6,c4=0,c8=42
+GP(n=29): k=1:g4,c4=29,c8=29  k=2:g5,c4=0,c8=58  k=3:g6,c4=0,c8=29  k=4:g7,c4=0,c8=29  k=5:g8,c4=0,c8=58  k=6:g8,c4=0,c8=58  k=7:g7,c4=0,c8=29  k=8:g8,c4=0,c8=29  k=9:g7,c4=0,c8=29  k=10:g6,c4=0,c8=29  k=11:g8,c4=0,c8=29  k=12:g8,c4=0,c8=29  k=13:g7,c4=0,c8=29  k=14:g5,c4=0,c8=58
+GP(n=30): k=1:g4,c4=30,c8=30  k=2:g5,c4=0,c8=60  k=3:g6,c4=0,c8=30  k=4:g7,c4=0,c8=30  k=5:g6,c4=0,c8=60  k=6:g5,c4=0,c8=30  k=7:g8,c4=0,c8=60  k=8:g8,c4=0,c8=60  k=9:g8,c4=0,c8=60  k=10:g3,c4=0,c8=30  k=11:g8,c4=0,c8=60  k=12:g5,c4=0,c8=30  k=13:g8,c4=0,c8=60  k=14:g6,c4=0,c8=45
+GP(n=31): k=1:g4,c4=31,c8=31  k=2:g5,c4=0,c8=62  k=3:g6,c4=0,c8=31  k=4:g7,c4=0,c8=31  k=5:g8,c4=0,c8=62  k=6:g8,c4=0,c8=62  k=7:g8,c4=0,c8=31  k=8:g7,c4=0,c8=31  k=9:g8,c4=0,c8=31  k=10:g6,c4=0,c8=31  k=11:g7,c4=0,c8=31  k=12:g8,c4=0,c8=31  k=13:g8,c4=0,c8=31  k=14:g7,c4=0,c8=31  k=15:g5,c4=0,c8=62
+GP(n=32): k=1:g4,c4=32,c8=32  k=2:g5,c4=0,c8=64  k=3:g6,c4=0,c8=32  k=4:g7,c4=0,c8=36  k=5:g8,c4=0,c8=64  k=6:g8,c4=0,c8=32  k=7:g8,c4=0,c8=32  k=8:g4,c4=8,c8=32  k=9:g8,c4=0,c8=32  k=10:g7,c4=0,c8=32  k=11:g6,c4=0,c8=32  k=12:g8,c4=0,c8=36  k=13:g8,c4=0,c8=64  k=14:g8,c4=0,c8=64  k=15:g6,c4=0,c8=48
+GP(n=33): k=1:g4,c4=33,c8=33  k=2:g5,c4=0,c8=66  k=3:g6,c4=0,c8=33  k=4:g7,c4=0,c8=33  k=5:g8,c4=0,c8=66  k=6:g8,c4=0,c8=33  k=7:g8,c4=0,c8=33  k=8:g7,c4=0,c8=33  k=9:g8,c4=0,c8=33  k=10:g8,c4=0,c8=66  k=11:g3,c4=0,c8=33  k=12:g8,c4=0,c8=66  k=13:g8,c4=0,c8=66  k=14:g8,c4=0,c8=33  k=15:g7,c4=0,c8=33  k=16:g5,c4=0,c8=66
+GP(n=34): k=1:g4,c4=34,c8=34  k=2:g5,c4=0,c8=68  k=3:g6,c4=0,c8=34  k=4:g7,c4=0,c8=34  k=5:g8,c4=0,c8=68  k=6:g8,c4=0,c8=34  k=7:g8,c4=0,c8=68  k=8:g8,c4=0,c8=68  k=9:g8,c4=0,c8=68  k=10:g8,c4=0,c8=34  k=11:g6,c4=0,c8=34  k=12:g7,c4=0,c8=34  k=13:g8,c4=0,c8=34  k=14:g8,c4=0,c8=34  k=15:g8,c4=0,c8=68  k=16:g6,c4=0,c8=51
+GP(n=35): k=1:g4,c4=35,c8=35  k=2:g5,c4=0,c8=70  k=3:g6,c4=0,c8=35  k=4:g7,c4=0,c8=35  k=5:g7,c4=0,c8=70  k=6:g8,c4=0,c8=35  k=7:g5,c4=0,c8=35  k=8:g8,c4=0,c8=35  k=9:g7,c4=0,c8=35  k=10:g7,c4=0,c8=35  k=11:g7,c4=0,c8=35  k=12:g6,c4=0,c8=35  k=13:g8,c4=0,c8=35  k=14:g5,c4=0,c8=35  k=15:g7,c4=0,c8=35  k=16:g7,c4=0,c8=35  k=17:g5,c4=0,c8=70
+GP(n=36): k=1:g4,c4=36,c8=36  k=2:g5,c4=0,c8=72  k=3:g6,c4=0,c8=36  k=4:g7,c4=0,c8=36  k=5:g8,c4=0,c8=72  k=6:g6,c4=0,c8=36  k=7:g8,c4=0,c8=72  k=8:g8,c4=0,c8=36  k=9:g4,c4=9,c8=36  k=10:g8,c4=0,c8=36  k=11:g8,c4=0,c8=72  k=12:g3,c4=0,c8=36  k=13:g8,c4=0,c8=72  k=14:g8,c4=0,c8=36  k=15:g8,c4=0,c8=36  k=16:g8,c4=0,c8=72  k=17:g6,c4=0,c8=54
+GP(n=37): k=1:g4,c4=37,c8=37  k=2:g5,c4=0,c8=74  k=3:g6,c4=0,c8=37  k=4:g7,c4=0,c8=37  k=5:g8,c4=0,c8=74  k=6:g8,c4=0,c8=37  k=7:g8,c4=0,c8=37  k=8:g8,c4=0,c8=37  k=9:g7,c4=0,c8=37  k=10:g8,c4=0,c8=37  k=11:g8,c4=0,c8=37  k=12:g6,c4=0,c8=37  k=13:g7,c4=0,c8=37  k=14:g8,c4=0,c8=37  k=15:g8,c4=0,c8=74  k=16:g8,c4=0,c8=37  k=17:g7,c4=0,c8=37  k=18:g5,c4=0,c8=74
+GP(n=38): k=1:g4,c4=38,c8=38  k=2:g5,c4=0,c8=76  k=3:g6,c4=0,c8=38  k=4:g7,c4=0,c8=38  k=5:g8,c4=0,c8=76  k=6:g8,c4=0,c8=38  k=7:g8,c4=0,c8=38  k=8:g8,c4=0,c8=38  k=9:g8,c4=0,c8=76  k=10:g8,c4=0,c8=76  k=11:g8,c4=0,c8=38  k=12:g7,c4=0,c8=38  k=13:g6,c4=0,c8=38  k=14:g8,c4=0,c8=38  k=15:g8,c4=0,c8=76  k=16:g8,c4=0,c8=38  k=17:g8,c4=0,c8=76  k=18:g6,c4=0,c8=57
+GP(n=39): k=1:g4,c4=39,c8=39  k=2:g5,c4=0,c8=78  k=3:g6,c4=0,c8=39  k=4:g7,c4=0,c8=39  k=5:g8,c4=0,c8=78  k=6:g8,c4=0,c8=39  k=7:g8,c4=0,c8=39  k=8:g8,c4=0,c8=78  k=9:g8,c4=0,c8=39  k=10:g7,c4=0,c8=39  k=11:g8,c4=0,c8=39  k=12:g8,c4=0,c8=78  k=13:g3,c4=0,c8=39  k=14:g8,c4=0,c8=78  k=15:g8,c4=0,c8=39  k=16:g8,c4=0,c8=39  k=17:g8,c4=0,c8=39  k=18:g7,c4=0,c8=39  k=19:g5,c4=0,c8=78
+GP(n=40): k=1:g4,c4=40,c8=40  k=2:g5,c4=0,c8=80  k=3:g6,c4=0,c8=40  k=4:g7,c4=0,c8=40  k=5:g8,c4=0,c8=85  k=6:g8,c4=0,c8=40  k=7:g8,c4=0,c8=40  k=8:g5,c4=0,c8=40  k=9:g8,c4=0,c8=40  k=10:g4,c4=10,c8=40  k=11:g8,c4=0,c8=40  k=12:g8,c4=0,c8=40  k=13:g6,c4=0,c8=40  k=14:g7,c4=0,c8=40  k=15:g8,c4=0,c8=45  k=16:g5,c4=0,c8=40  k=17:g8,c4=0,c8=40  k=18:g8,c4=0,c8=80  k=19:g6,c4=0,c8=60
+
+[380 GP graphs checked]
+
+GP graphs with NO 8-cycle:
+  GP(3,1): girth=3 c4=3 c8=0 c16=0 c32=None
+
+====================================================================================================
+(B) CUBIC CAYLEY GRAPHS (order <= 80)
+====================================================================================================
+
+(B1) circulants Cay(Z_n, {+-a, n/2}), n even:
+  checked 779; C8-free: 45
+    Cay(Z_6,{+-1,3}): n=6 girth=4 c4=9 c16=0 c32=None conn=True
+    Cay(Z_6,{+-2,3}): n=6 girth=3 c4=3 c16=0 c32=None conn=True
+    Cay(Z_8,{+-2,4}): n=8 girth=3 c4=6 c16=None c32=None conn=False
+    Cay(Z_12,{+-2,6}): n=12 girth=4 c4=18 c16=None c32=None conn=False
+    Cay(Z_12,{+-3,6}): n=12 girth=3 c4=9 c16=None c32=None conn=False
+    Cay(Z_12,{+-4,6}): n=12 girth=3 c4=6 c16=None c32=None conn=False
+    Cay(Z_16,{+-4,8}): n=16 girth=3 c4=12 c16=None c32=None conn=False
+    Cay(Z_18,{+-3,9}): n=18 girth=4 c4=27 c16=None c32=None conn=False
+    Cay(Z_18,{+-6,9}): n=18 girth=3 c4=9 c16=None c32=None conn=False
+    Cay(Z_20,{+-5,10}): n=20 girth=3 c4=15 c16=None c32=None conn=False
+    Cay(Z_24,{+-4,12}): n=24 girth=4 c4=36 c16=None c32=None conn=False
+    Cay(Z_24,{+-6,12}): n=24 girth=3 c4=18 c16=None c32=None conn=False
+    Cay(Z_24,{+-8,12}): n=24 girth=3 c4=12 c16=None c32=None conn=False
+    Cay(Z_28,{+-7,14}): n=28 girth=3 c4=21 c16=None c32=None conn=False
+    Cay(Z_30,{+-5,15}): n=30 girth=4 c4=45 c16=None c32=None conn=False
+    Cay(Z_30,{+-10,15}): n=30 girth=3 c4=15 c16=None c32=None conn=False
+    Cay(Z_32,{+-8,16}): n=32 girth=3 c4=24 c16=None c32=None conn=False
+    Cay(Z_36,{+-6,18}): n=36 girth=4 c4=54 c16=None c32=None conn=False
+    Cay(Z_36,{+-9,18}): n=36 girth=3 c4=27 c16=None c32=None conn=False
+    Cay(Z_36,{+-12,18}): n=36 girth=3 c4=18 c16=None c32=None conn=False
+    Cay(Z_40,{+-10,20}): n=40 girth=3 c4=30 c16=None c32=None conn=False
+    Cay(Z_42,{+-7,21}): n=42 girth=4 c4=63 c16=None c32=None conn=False
+    Cay(Z_42,{+-14,21}): n=42 girth=3 c4=21 c16=None c32=None conn=False
+    Cay(Z_44,{+-11,22}): n=44 girth=3 c4=33 c16=None c32=None conn=False
+    Cay(Z_48,{+-8,24}): n=48 girth=4 c4=72 c16=None c32=None conn=False
+    Cay(Z_48,{+-12,24}): n=48 girth=3 c4=36 c16=None c32=None conn=False
+    Cay(Z_48,{+-16,24}): n=48 girth=3 c4=24 c16=None c32=None conn=False
+    Cay(Z_52,{+-13,26}): n=52 girth=3 c4=39 c16=None c32=None conn=False
+    Cay(Z_54,{+-9,27}): n=54 girth=4 c4=81 c16=None c32=None conn=False
+    Cay(Z_54,{+-18,27}): n=54 girth=3 c4=27 c16=None c32=None conn=False
+    Cay(Z_56,{+-14,28}): n=56 girth=3 c4=42 c16=None c32=None conn=False
+    Cay(Z_60,{+-10,30}): n=60 girth=4 c4=90 c16=None c32=None conn=False
+    Cay(Z_60,{+-15,30}): n=60 girth=3 c4=45 c16=None c32=None conn=False
+    Cay(Z_60,{+-20,30}): n=60 girth=3 c4=30 c16=None c32=None conn=False
+    Cay(Z_64,{+-16,32}): n=64 girth=3 c4=48 c16=None c32=None conn=False
+    Cay(Z_66,{+-11,33}): n=66 girth=4 c4=99 c16=None c32=None conn=False
+    Cay(Z_66,{+-22,33}): n=66 girth=3 c4=33 c16=None c32=None conn=False
+    Cay(Z_68,{+-17,34}): n=68 girth=3 c4=51 c16=None c32=None conn=False
+    Cay(Z_72,{+-12,36}): n=72 girth=4 c4=108 c16=None c32=None conn=False
+    Cay(Z_72,{+-18,36}): n=72 girth=3 c4=54 c16=None c32=None conn=False
+    Cay(Z_72,{+-24,36}): n=72 girth=3 c4=36 c16=None c32=None conn=False
+    Cay(Z_76,{+-19,38}): n=76 girth=3 c4=57 c16=None c32=None conn=False
+    Cay(Z_78,{+-13,39}): n=78 girth=4 c4=117 c16=None c32=None conn=False
+    Cay(Z_78,{+-26,39}): n=78 girth=3 c4=39 c16=None c32=None conn=False
+    Cay(Z_80,{+-20,40}): n=80 girth=3 c4=60 c16=None c32=None conn=False
+
+(B2) dihedral D_m, three reflections {s, s r^j, s r^k} (0<j<k<m), 2m<=80:
