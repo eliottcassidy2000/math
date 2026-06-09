@@ -1,0 +1,20 @@
+=== OEIS lookups for doubling sequences (kind-pasteur-2026-06-09-S1, BRANCH A) ===
+Method: Invoke-RestMethod https://oeis.org/search?q=<terms>&fmt=json (2026-06-09).
+"null" JSON response = zero matching sequences.
+
+[13,95,1033,15611]          -> NO HITS
+[95,1033,15611,313285]      -> NO HITS
+[13,95,1033]                -> NO HITS (even 3-term miss)
+[41,629,14937,513669]       -> NO HITS
+[629,14937,513669,24104937] -> NO HITS
+[45,393,2785,3225]          -> NO HITS
+[45,393,3225]               -> NO HITS
+
+Conclusions:
+  H(D(transitive_n)),  n=3..7 = 13, 95, 1033, 15611, 313285   : NOT in OEIS (new-sequence candidate)
+  H(SC(transitive_n)), n=3..7 = 41, 629, 14937, 513669, 24104937 : NOT in OEIS (new-sequence candidate)
+  H(K2) strong-class values 45, 393, 2785, 3225, ...           : NOT in OEIS
+
+Factorizations (from k2_spectrum_functional_kps1.out S5):
+  13 | 5*19 | 1033 (prime) | 67*233 | 5*7*8951
+  41 | 17*37 | 3*13*383 | 3*13*13171 | 3*47*170957

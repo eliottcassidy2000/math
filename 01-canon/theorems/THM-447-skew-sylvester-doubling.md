@@ -84,10 +84,26 @@ n → n−1 → ⋯ → 1 → 1' → 2' → ⋯ → n'
 
 is a Hamiltonian path of D(T): the twin arc 1 → 1' exists by construction, and k' → (k+1)' in
 copy 2 = T^op iff k+1 → k in T, which is the base-path arc. The doubled base path = (path,
-twin-arc, REVERSED path) — the reflect-and-append of Gray/Walsh ordering. Consequently the tiling
-model of D(T) in this frame splits into (tiles of T | cross block carrying T's full arc data |
-grid-transposed negated tiles of T) — the Sylvester sign pattern [[H,H],[H,−H]] at the tile
-level (HYP-2335, verification pending).
+twin-arc, REVERSED path) — the reflect-and-append of Gray/Walsh ordering.
+
+**(5-CORRECTED, in-session; see MISTAKE-065 and THM-452.)** In this frame the tiling of D(T)
+splits as: copy-1 block = tiles x of T (identity copy); copy-2 block = **grid transpose of x
+WITHOUT negation** — the T^op negation is exactly absorbed by traversing copy 2 along the
+reversed path (the original claim "grid-transposed negated" was wrong); cross block = T's full
+ordered arc matrix A[i][j], whose σ-partner pairs (i,j)↔(j,i) carry **complementary** bits —
+this is where the single negated Sylvester copy lives — plus an all-ones twin anti-diagonal
+(the hypotenuse). Net: three positive copies + one negated copy, exactly [[H,H],[H,−H]] at tile
+level, with the negation in the cross block, not the copy-2 block. Verified 100% (1098 framed +
+1096 labeled cases, n=3..6). Full statement: THM-452 (σ-coset law).
+
+## Verification record (this session)
+
+- C1–C4 (tournament+scores, M'² law, skew-type, canonical path): exhaustive n=3,4,5 — ALL PASS
+  (`skew_doubling_core_kps1.out`).
+- Skew-Hadamard tower clean orders 2..64 (`drt_mersenne_tower_kps1.out`).
+- Eigenvalue map λ → √(2λ²+1) numerically exact (sample + tower spectra: T15 has
+  spec {0, ±i√15 ×7}, M² = J − 15I exact).
+- D(border(C_3)) normalized core ≅ Paley T_7, H = 189 (explicit isomorphism found).
 
 ## The normalization dictionary (skew-Hadamard ↔ tiling model)
 

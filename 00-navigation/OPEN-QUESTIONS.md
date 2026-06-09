@@ -966,6 +966,17 @@ tournament). The blowup operation is exactly the row step in the 2-adic grid.
 
 **Source:** kind-pasteur-2026-04-16-S1, `alpha_full_ssc_fast_n23.out`, `alpha_full_ssc_fast_n21.out`
 
+**MAJOR UPDATE (kind-pasteur-2026-06-09-S1, THM-449/450):**
+- **Q1 ANSWERED (negative + repaired):** H(T[K₂]) is NOT a function of (H(T), n) — not even of
+  I(Ω(T),x) (n=5 counterexample: equal typed IP, H(K₂) 3225 vs 2785; the missing data is EVEN
+  cycles, which twin-insertion converts to odd). What IS true: **strong-component product law**
+  H(T[K₂]) = ∏_C H(C[K₂]) (PROVED); twin-lift laws c3'=8c3, c5'=32c5+32c4+6c3 (+c7' law);
+  cycle-spectrum (c3..c6) determines H(T[K₂]) at n≤6 (n=7 separation test open, HYP-2341);
+  congruence H(T[K₂]) ≡ 2H(T)−1 (mod 8).
+- **Q2 partial:** T[K₂] is op-equivariant (PROVED via orbit symmetries, THM-450(6)).
+- T[K₂] is one of exactly THREE 2×2-block doublings (THM-450 trichotomy); the skew-Sylvester
+  member D (THM-447) is the spectral/Hadamard-clean one; SCblow is the H-maximizing one.
+
 ---
 
 ## OPEN-Q-047 🟡 Characterize Real-Rootedness of I(Ω(T), x)

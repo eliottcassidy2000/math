@@ -1,0 +1,31 @@
+=== consecutive_circulant_iso_kps1 ===
+
+--- identify the two circulant regular n=7 classes ---
+U_7 = C_7({1,2,3}): H=175 DRT=False
+P_7 = C_7({1,2,4}) (Paley): H=189 DRT=True
+=> the K2==SC coinciding class (H=175) IS the consecutive circulant U_7;
+   the splitting DRT class (H=189) is Paley.
+
+--- sanity: backtracking iso agrees on known n<=10 cases ---
+n=3 U_3: iso(K2, SCblow) at order 6 = True (expected True)
+n=3 U_3: iso(Dskew, K2) at order 6 = False (expected False)
+U_5 = C_5({1,2}) is regular T_5: H=15 scores=(2, 2, 2, 2, 2)
+n=5 U_5: iso(K2, SCblow) at order 10 = True (expected True)
+
+--- main test: iso(T[K2](U_7), SCblow(U_7)) at order 14 ---
+H(K2(U_7)) = 24855901, H(SCblow(U_7)) = 24855901, equal = True
+iso(K2(U_7), SCblow(U_7)) = True   (0.00s)
+
+--- contrast: Paley T_7 (H already differs => non-iso) ---
+H(K2(P_7)) = 24589929, H(SCblow(P_7)) = 24453597  => NOT isomorphic
+
+--- D_skew vs K2 on U_7 (different H => non-iso, listed for completeness) ---
+H(Dskew(U_7)) = 24540117
+
+VERDICT: T[K2](U_n) ~ SCblow(U_n) for the consecutive circulants U_3, U_5, U_7
+(iso verified at orders 6, 10, 14). Criterion is NOT regularity, NOT DRT, NOT
+Paley (Paley T_7 splits 24589929 vs 24453597), NOT self-complementarity
+(all non-regular SC n=5 classes split). Consecutive circulant structure is the
+surviving candidate.
+
+=== done ===

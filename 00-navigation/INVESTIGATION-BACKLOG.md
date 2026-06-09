@@ -12,6 +12,15 @@
 
 ---
 
+## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448, T767, HYP-2332..2337)
+
+**Source:** user directive (n*2 doubling, three copies + one negated, skew-Hadamard normalization = tiling frame).
+**Status:** ACTIVE — THM-447 proved + verified n=3..5; D(border(C3)) core ≅ Paley T_7 (iso verified); branch fan-out in progress (H-formula, Mersenne tower, tiling σ-eigenspaces, Hadamard equivalence, Clifford family classification).
+**Key objects:** D(T) = [[M, M+I],[M−I, −M]]; spectral law M'² = I₂⊗(2M²−I) (Chebyshev T₂, λ²+1 doubles = Hadamard order); canonical Ham path (p, twin, reversed p); twin arcs saturate the anti-diagonal (hypotenuse) of the doubled staircase; tiling splits into σ-symmetric copy blocks + σ-antisymmetric cross block.
+**Next steps:** (1) H(D(T)) / H(T[K₂]) functional in I(Ω(T),x) — would answer OPEN-Q-045 Q1; (2) identify tower DRT_15 and DRT_31 vs Paley; (3) Ω(D(T)) structure theorem; (4) engineering: skew-Walsh butterfly transform O(m log m).
+
+---
+
 ## Lead monad-explorer-2026-06-07-S18: the two humps are one resurgent series — Watson bridge with explicit coefficients `bⱼ` (THM-438 ADD-16)
 
 **Status:** PARTIALLY DONE (this session). The free factorial law's spectral tail `ρ(x)~e^{1−x}Σbⱼx⁻ʲ`

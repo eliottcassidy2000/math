@@ -1,0 +1,222 @@
+=== block_doubling_classification_kps1 — BRANCH E (HYP-2337) ===
+Family: M' = [[aM, bM+beta I],[bM-beta I, dM]] = P(x)M + Q(x)I,
+        P=[[a,b],[b,d]], Q=beta*J, (a,b,d,beta) in {+-1}^4 : 16 members.
+
+--- E1a: validity — every member yields a tournament (exhaustive n=3,4) ---
+n=3: 8 tournaments x 16 members: invalid doubles = 0
+n=4: 64 tournaments x 16 members: invalid doubles = 0
+
+--- E1b: broken variants fail (shape is forced) — demo at n=3 ---
+alpha=+1 diagonal correction : tournament? False
+gamma=+beta (same I-sign)    : tournament? False
+c=-b (opposite cross M-sign) : tournament? False
+
+--- E1c: symmetry identities (exhaustive over all 64 labeled n=4) ---
+g1: conj-by-swap identity   SW M' SW == M'_{g1(s)}        : True
+g2: global reversal         -M'      == M'_{g2(s)}        : True
+g3: pre-op                  M'(T^op) == M'_{g3(s)}(T)     : True
+
+--- E1d: ORBITS under <g1,g2,g3> ---
+number of orbits: 3   sizes: [4, 8, 4]   (total 16)
+orbit 0 (size 4): rep (+1,+1,+1,+1) = T[K2]
+   members: (+1,+1,+1,+1), (+1,+1,+1,-1), (-1,-1,-1,+1), (-1,-1,-1,-1)
+orbit 1 (size 8): rep (+1,+1,-1,+1) = D_skew
+   members: (+1,+1,-1,+1), (+1,+1,-1,-1), (+1,-1,-1,+1), (+1,-1,-1,-1), (-1,+1,+1,+1), (-1,+1,+1,-1), (-1,-1,+1,+1), (-1,-1,+1,-1)
+orbit 2 (size 4): rep (+1,-1,+1,+1) = SCblow
+   members: (+1,-1,+1,+1), (+1,-1,+1,-1), (-1,+1,-1,+1), (-1,+1,-1,-1)
+=> 16 members collapse to 3 genuinely distinct doublings;
+   the three named members D_skew, T[K2], SCblow are in pairwise distinct orbits.
+
+--- E2a: Kron square law  M'^2 = P^2(x)M^2 + {P,Q}(x)M + Q^2(x)I  (exh. n=4) ---
+Kron square law exact for all 64 x 16: True
+
+--- E2b: per-member algebra table ---
+member     P                      trP detP  P^2                    {P,Q}                  orbit       
+(+1,+1,+1,+1) [[ 1, 1],[ 1, 1]]        2    0  [[ 2, 2],[ 2, 2]]      [[ 0, 2],[-2, 0]]      T[K2]       
+(+1,+1,+1,-1) [[ 1, 1],[ 1, 1]]        2    0  [[ 2, 2],[ 2, 2]]      [[ 0,-2],[ 2, 0]]      T[K2]       
+(+1,+1,-1,+1) [[ 1, 1],[ 1,-1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(+1,+1,-1,-1) [[ 1, 1],[ 1,-1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(+1,-1,+1,+1) [[ 1,-1],[-1, 1]]        2    0  [[ 2,-2],[-2, 2]]      [[ 0, 2],[-2, 0]]      SCblow      
+(+1,-1,+1,-1) [[ 1,-1],[-1, 1]]        2    0  [[ 2,-2],[-2, 2]]      [[ 0,-2],[ 2, 0]]      SCblow      
+(+1,-1,-1,+1) [[ 1,-1],[-1,-1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(+1,-1,-1,-1) [[ 1,-1],[-1,-1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(-1,+1,+1,+1) [[-1, 1],[ 1, 1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(-1,+1,+1,-1) [[-1, 1],[ 1, 1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(-1,+1,-1,+1) [[-1, 1],[ 1,-1]]       -2    0  [[ 2,-2],[-2, 2]]      [[ 0,-2],[ 2, 0]]      SCblow      
+(-1,+1,-1,-1) [[-1, 1],[ 1,-1]]       -2    0  [[ 2,-2],[-2, 2]]      [[ 0, 2],[-2, 0]]      SCblow      
+(-1,-1,+1,+1) [[-1,-1],[-1, 1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(-1,-1,+1,-1) [[-1,-1],[-1, 1]]        0   -2  [[ 2, 0],[ 0, 2]]      [[ 0, 0],[ 0, 0]]      D_skew      
+(-1,-1,-1,+1) [[-1,-1],[-1,-1]]       -2    0  [[ 2, 2],[ 2, 2]]      [[ 0,-2],[ 2, 0]]      T[K2]       
+(-1,-1,-1,-1) [[-1,-1],[-1,-1]]       -2    0  [[ 2, 2],[ 2, 2]]      [[ 0, 2],[-2, 0]]      T[K2]       
+Q^2 = -I2 always. {P,Q} = beta*(trP)*J  (verified above row-by-row).
+
+--- E2c: block-diagonality of M'^2 (exhaustive n=4; off-diag block formula) ---
+off-diag (1,2) block of M'^2 = (a+d) * (b M^2 + beta M); diag of that = -b(a+d)(n-1)
+(+1,+1,+1,+1)  a+d=+2  formula exact: True   never block-diag
+(+1,+1,+1,-1)  a+d=+2  formula exact: True   never block-diag
+(+1,+1,-1,+1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(+1,+1,-1,-1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(+1,-1,+1,+1)  a+d=+2  formula exact: True   never block-diag
+(+1,-1,+1,-1)  a+d=+2  formula exact: True   never block-diag
+(+1,-1,-1,+1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(+1,-1,-1,-1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(-1,+1,+1,+1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(-1,+1,+1,-1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(-1,+1,-1,+1)  a+d=-2  formula exact: True   never block-diag
+(-1,+1,-1,-1)  a+d=-2  formula exact: True   never block-diag
+(-1,-1,+1,+1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(-1,-1,+1,-1)  a+d=+0  formula exact: True   BLOCK-DIAG (all T)
+(-1,-1,-1,+1)  a+d=-2  formula exact: True   never block-diag
+(-1,-1,-1,-1)  a+d=-2  formula exact: True   never block-diag
+=> M'^2 block-diagonal <=> a+d=0 <=> trP=0: exactly the D_skew orbit (8 members).
+
+--- E2d: orbit laws for M'^2 (exhaustive n=4) ---
+orbit B  (trP=0):  M'^2 = I2 (x) (2M^2 - I)            [Chebyshev T2]: True
+orbits A,C (trP=+-2): M'^2 = (trP)*(I2 (x) M)*M' - I   [boost pencil]: True
+   (I2(x)M commutes with M'; quadratic relation M'^2 - (trP)(I2(x)M)M' + I = 0)
+
+--- E2e: skew-Hadamard preservation test (seed: bordered C_3, order-4 SH) ---
+seed order-4 skew-Hadamard: True
+(+1,+1,+1,+1)  orbit=T[K2]    S' (order 8) skew-Hadamard: False
+(+1,+1,+1,-1)  orbit=T[K2]    S' (order 8) skew-Hadamard: False
+(+1,+1,-1,+1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(+1,+1,-1,-1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(+1,-1,+1,+1)  orbit=SCblow   S' (order 8) skew-Hadamard: False
+(+1,-1,+1,-1)  orbit=SCblow   S' (order 8) skew-Hadamard: False
+(+1,-1,-1,+1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(+1,-1,-1,-1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(-1,+1,+1,+1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(-1,+1,+1,-1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(-1,+1,-1,+1)  orbit=SCblow   S' (order 8) skew-Hadamard: False
+(-1,+1,-1,-1)  orbit=SCblow   S' (order 8) skew-Hadamard: False
+(-1,-1,+1,+1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(-1,-1,+1,-1)  orbit=D_skew   S' (order 8) skew-Hadamard: True
+(-1,-1,-1,+1)  orbit=T[K2]    S' (order 8) skew-Hadamard: False
+(-1,-1,-1,-1)  orbit=T[K2]    S' (order 8) skew-Hadamard: False
+=> 8/16 preserve skew-Hadamard: exactly the trP=0 (D_skew) orbit.
+
+--- E2f: tower iteration for two distinct orbit-B members (orders 16, 32) ---
+  member (+1,+1,-1,+1):  order 8 SH=True  order 16 SH=True  order 32 SH=True
+  member (-1,+1,+1,+1):  order 8 SH=True  order 16 SH=True  order 32 SH=True
+
+--- E2g: PROOF (block algebra) ---
+S'S'^T = (M'+I)(I-M') = I - M'^2  (M' skew).
+Input skew-Hadamard of order n: M^2 = (1-n)I.
+trP=0:    M'^2 = I2(x)(2M^2-I) = (2(1-n)-1) I = (1-2n) I  => S'S'^T = 2n I. QED
+trP=+-2:  off-diag block of M'^2 = (a+d)(b M^2 + beta M) = +-2(b(1-n)I + beta M),
+          diagonal entries -2ab(n-1) != 0 for n>=2 => M'^2 not scalar => fails. QED
+
+--- E3: 2x2 DNA — sign-matrix trichotomy ---
+P_A(T[K2])  = [[1,1],[1,1]]   = e e^T (e=(1,1)) : True, rank 1, det 0
+P_C(SCblow) = [[1,-1],[-1,1]] = f f^T (f=(1,-1)): True, rank 1, det 0
+P_B(D_skew) = [[1,1],[1,-1]]  = 2x2 Hadamard    : PP^T=2I True, det -2
+P_A P_C = 0: True;  P_A + P_C = 2I: True;  H2 e = 2e1, H2 f = 2e2: [2, 0] [0, 2]
+
+TRICHOTOMY: the three orbits = the three symmetric +-1 matrices mod symmetry:
+  orbit A: P = +-e e^T  (2x projector on the SYMMETRIC line of the copy-swap)
+  orbit C: P = +-f f^T  (2x projector on the ANTISYMMETRIC line)
+  orbit B: P = 2x2 Hadamard (EXCHANGES the two swap-eigenlines), det = -2.
+Equivalences (all verified above): rows of P orthogonal <=> trP=0 <=> detP=-2
+  <=> P Hadamard <=> {P,Q}=0 <=> M'^2 block-diagonal <=> skew-Hadamard preserved.
+Sing. members (det 0) are rank-1; the Hadamard is the UNIQUE invertible class.
+
+--- E3b: spectral pencil — spec(M') = U_{lambda in spec M} spec(lambda P + Q) ---
+(proof: M normal; on C^2 (x) eigvec(lambda), M' restricts to lambda P + Q;
+ char poly check: det(xI - M') = prod_lambda [x^2 - (trP) lambda x + (detP lambda^2 + 1)])
+pencil law (char-poly product) for all 16 members x 7 sample n=5 tournaments: True
+det(lambda P + Q) = detP*lambda^2 + 1: lift-pair products are
+  orbit A/C (detP=0):  product = 1   (unimodular 'boost' pair, lifts l' = a*l +- sqrt(l^2-1))
+  orbit B  (detP=-2):  product = 1 - 2 lambda^2;  trace 0 => l'^2 = 2 lambda^2 - 1 = T2(lambda).
+
+--- E4: H-spectra of the three orbit representatives ---
+
+n=3 (2 iso classes), doubles on 6 vertices
+  H-relations: g1 (iso, equal H): True | g2 (op-double, equal H): True | g3 (H of op-class): True
+  idx             scores   H(T) | H(Dskew)   H(TK2)  H(SCbl) | argmax
+    0          (0, 1, 2)      1 |       13        1       41 | SCblow
+    1          (1, 1, 1)      3 |       45       45       45 | D_skew/T[K2]/SCblow
+  MEAN over 2 classes:        |     29.0     23.0     43.0
+  orbit 0 (T[K2]): classes with >1 H value across its 4 members: none (full collapse)
+  orbit 1 (D_skew): classes with >1 H value across its 8 members: none (full collapse)
+  orbit 2 (SCblow): classes with >1 H value across its 4 members: none (full collapse)
+
+n=4 (4 iso classes), doubles on 8 vertices
+  H-relations: g1 (iso, equal H): True | g2 (op-double, equal H): True | g3 (H of op-class): True
+  idx             scores   H(T) | H(Dskew)   H(TK2)  H(SCbl) | argmax
+    0       (0, 1, 2, 3)      1 |       95        1      629 | SCblow
+    1       (1, 1, 3, 1)      3 |      189       45      633 | SCblow
+    2       (1, 1, 2, 2)      5 |      523      393      653 | SCblow
+    3       (0, 2, 2, 2)      3 |      333       45      633 | SCblow
+  MEAN over 4 classes:        |    285.0    121.0    637.0
+  orbit 0 (T[K2]): classes with >1 H value across its 4 members: none (full collapse)
+  orbit 1 (D_skew): classes with >1 H value across its 8 members: [(1, [189, 333]), (3, [189, 333])]
+  orbit 2 (SCblow): classes with >1 H value across its 4 members: none (full collapse)
+
+n=5 (12 iso classes), doubles on 10 vertices
+  H-relations: g1 (iso, equal H): True | g2 (op-double, equal H): True | g3 (H of op-class): True
+  idx             scores   H(T) | H(Dskew)   H(TK2)  H(SCbl) | argmax
+    0    (0, 1, 2, 3, 4)      1 |     1033        1    14937 | SCblow
+    1    (1, 1, 3, 4, 1)      3 |     1809       45    14961 | SCblow
+    2    (1, 1, 2, 4, 2)      5 |     2817      393    15109 | SCblow
+    3    (0, 2, 2, 4, 2)      3 |     1809       45    14973 | SCblow
+    4    (1, 1, 2, 3, 3)      9 |     8137     3225    15313 | SCblow
+    5    (0, 2, 2, 3, 3)      5 |     5289      393    15109 | SCblow
+    6    (1, 1, 3, 3, 2)      9 |     8145     2785    15201 | SCblow
+    7    (0, 1, 3, 3, 3)      3 |     3561       45    14961 | SCblow
+    8    (1, 2, 2, 3, 2)     11 |    11017     6069    15461 | SCblow
+    9    (1, 2, 2, 2, 3)     15 |    12129    10773    15261 | SCblow
+   10    (1, 2, 2, 3, 2)     13 |    11625     8097    15305 | SCblow
+   11    (2, 2, 2, 2, 2)     15 |    15505    15565    15565 | T[K2]/SCblow
+  MEAN over 12 classes:        |   6906.3   3953.0  15179.7
+  orbit 0 (T[K2]): classes with >1 H value across its 4 members: none (full collapse)
+  orbit 1 (D_skew): classes with >1 H value across its 8 members: [(1, [1809, 3561]), (2, [2817, 5289]), (5, [2817, 5289]), (7, [1809, 3561])]
+  orbit 2 (SCblow): classes with >1 H value across its 4 members: none (full collapse)
+
+--- E4b: C_3 doubles at n=6 — all three hit H=45; are they isomorphic? ---
+  D_skew(C3): H=45 scores=[2, 2, 2, 3, 3, 3]
+  T[K2](C3): H=45 scores=[2, 2, 2, 3, 3, 3]
+  SCblow(C3): H=45 scores=[2, 2, 2, 3, 3, 3]
+  iso(D_skew(C3), T[K2](C3)) = False
+  iso(D_skew(C3), SCblow(C3)) = False
+  iso(T[K2](C3), SCblow(C3)) = True
+
+--- E4c: K2(T) ?= SCblow(T) up to iso, for all SELF-COMPLEMENTARY n=5 classes ---
+(score-class-restricted backtracking iso on 10 vertices)
+  SC class  0 scores=(0, 1, 2, 3, 4) H(T)=1 : H(K2)=1 H(SC)=14937 equal=False iso=False
+  SC class  3 scores=(0, 2, 2, 4, 2) H(T)=3 : H(K2)=45 H(SC)=14973 equal=False iso=False
+  SC class  4 scores=(1, 1, 2, 3, 3) H(T)=9 : H(K2)=3225 H(SC)=15313 equal=False iso=False
+  SC class  6 scores=(1, 1, 3, 3, 2) H(T)=9 : H(K2)=2785 H(SC)=15201 equal=False iso=False
+  SC class  8 scores=(1, 2, 2, 3, 2) H(T)=11 : H(K2)=6069 H(SC)=15461 equal=False iso=False
+  SC class  9 scores=(1, 2, 2, 2, 3) H(T)=15 : H(K2)=10773 H(SC)=15261 equal=False iso=False
+  SC class 10 scores=(1, 2, 2, 3, 2) H(T)=13 : H(K2)=8097 H(SC)=15305 equal=False iso=False
+  SC class 11 scores=(2, 2, 2, 2, 2) H(T)=15 : H(K2)=15565 H(SC)=15565 equal=True iso=True
+  (non-SC classes have H(K2) != H(SCblow) at n=5 except none — see table)
+  n=4 SC class 0 scores=(0, 1, 2, 3) H(T)=1 : H(K2)=1 H(SC)=629 iso=False
+  n=4 SC class 2 scores=(1, 1, 2, 2) H(T)=5 : H(K2)=393 H(SC)=653 iso=False
+
+--- E5: Clifford / Cayley-Dickson statement ---
+THEOREM (2x2 DNA / Clifford classification). Every valid span{M,I} block
+doubling is M' = P(x)M + Q(x)I with P symmetric +-1, Q = beta*J, beta=+-1.
+M'^2 = P^2(x)M^2 + {P,Q}(x)M - I, with {P,Q} = beta*(trP)*J. The following are
+equivalent: (i) {P,Q}=0; (ii) trP=0; (iii) P^2=2I (rows orthogonal, P Hadamard,
+detP=-2); (iv) M'^2 = I2(x)(2M^2-I) for all T; (v) M'(T) preserves skew-Hadamard.
+The pair (gamma+ = P/sqrt2, gamma- = Q) then satisfies gamma+^2=+1, gamma-^2=-1,
+{gamma+,gamma-}=0: a real representation of the Clifford algebra Cl(1,1) ~ M2(R).
+
+CAYLEY-DICKSON reading: M skew = 'purely imaginary' (zbar = -z). The CD twist
+law j z = zbar j becomes Q(P(x)M) = (P(x)(-M))Q, i.e. {P(x)M, Q} = 0, i.e.
+{P,Q} = 0 — the SAME condition. So the good doublings are exactly the CD steps
+M' = sqrt2 * gamma+ (x) M + j (x) I, with j^2 = -1. D_skew = (1,1,-1,1) uses
+P = H2 = [[1,1],[1,-1]] (standard unnormalized Hadamard/Sylvester convention)
+and Q = +J (counterclockwise j); beta=-1 is the conjugate orientation -j;
+a<->d swap = relabeling the two CD sheets; global negation = the opposite
+algebra. The 8 orbit-B members = 2(orientation) x 2(sheet) x 2(op) copies of
+ONE CD step. Repo connection (07-reflections/lrc-cayley-dickson-tower-s387.md:
+'each recursive doubling closes one old freedom and exposes a new defect'):
+the skew-Hadamard tower 1->2->4->8->... with tournament cores on 0,1,3,7,...
+vertices is the R->C->H->O dimension ladder; D_skew is its matrix shadow, and
+the rank-1 members (T[K2], SCblow) are the DEGENERATE pencils that stay inside
+one swap-eigenline — they keep the boost (product-1) spectrum but lose the
+Hadamard mixing, exactly a CD-style property loss.
+
+=== done ===

@@ -2329,3 +2329,15 @@ orders 2^k whose cores are DRTs on Mersenne 2^k - 1 vertices (C_3 -> Paley T_7 -
 
 **T768** #erdos592 #ordinal-partition-calculus #ramsey #triangle #staircase #oscillation #shuffle-patterns | certainty: framing+verified-small (lab in progress) | source: mac-mini-2026-06-09-S1
 ERDŐS PROBLEM 592 ($1000): characterise countable α with α→(α,3)² (every red/blue colouring of K_α has a red K_α or blue triangle). STATE OF ART (verified vs erdosproblems.com/592, Paulson-Dzamonja-Koutsoukou-Argyraki arXiv:2011.13218, Schipperus APAL 2010): α must be ω^β; for β≥3 must have β=ω^γ (Galvin); positive for α=ω,ω² (Ramsey/Specker), ω^n NEGATIVE 3≤n<ω (Specker), ω^(ω^γ) POSITIVE for γ = sum of ≤2 indecomposables (Schipperus; γ=1 Chang/Milner, γ=2 also Darby), NEGATIVE for γ = sum of ≥4 indecomposables (Schipperus, refuting Galvin–Larson conjecture). OPEN: γ = sum of EXACTLY 3 indecomposables; smallest open α = ω^(ω³). REPO REFRAMES: (1) α→(α,3) ⟺ every TRIANGLE-FREE graph on α has an independent set of full type α — the blue graph is the object; Galvin's decomposable negative IS the bipartite split (Z₂ grading; indecomposability = no 2-split has small both parts). (2) Pairs (a,b), a<b = TILES: Specker's U = the infinite staircase; Larson's interaction-scheme FORMS (her ω² and ω^ω proofs) = tile-pair geometry classes (disjoint/crossing/nested/same-coordinate) + block-shuffle patterns with partial-sum cut data — the repo's crossing/nesting tile classification and cut⊕cycle split (CNF split-level = cut/strip data; within-level shuffle = cycle data). (3) Form index k (Larson's 2k-1/2k forms) = OSCILLATION count = analog of waggly Hamming layers. (4) THE FINITE CORE: pattern-set calculus — a negative coloring = a SHUFFLE-PATTERN SET P that is (i) self-composition-free (P∘P ∩ P = ∅ ⟹ triangle-free) and (ii) unavoidable in full-type subsets; positive theorems = no such P exists. The 2-vs-3-vs-4-summand dichotomy should be a finite composition-algebra statement about block-shuffle patterns. Lab: 04-computation/erdos592_*_macmini_s1.py. See HYP-2338..2340, THM-449 (dictionary).
+T767 END-OF-SESSION CORRECTIONS + RESULTS: (i) copy-2 tile block is grid transpose WITHOUT
+negation (MISTAKE-065; the negated Sylvester copy lives in the cross sigma-pairs; exact
+coset law THM-452: sigma(t) = t XOR c_n, defect CONSTANT independent of T); (ii) tower
+verified to order 64: T31 is NOT Paley (|Aut| 21 vs 465), Aut frozen at F_21 for levels
+7..63, link recursion B_0(T_{2m-1}) = T_{m-1} as labeled submatrix, H(T15) = 198335025
+(n=15 max candidate), NO circulant DRT(15) exists (0/128); (iii) skew_16 lands in the
+unique transpose-split Hadamard pair had.16.3/had.16.4 — CHIRALITY, matching D's
+op-asymmetry (THM-451); (iv) family trichotomy projector/mixer/projector, D = one
+Cayley-Dickson step, skew-Hadamard preservation iff trP = 0 (THM-450); (v) H(T[K2]) =
+product over strong components + twin-lift laws c3'=8c3, c5'=32c5+32c4+6c3; even cycles
+of T control odd cycles of T[K2] — the doubling is a PARITY MIXER (THM-449); (vi) the
+tower's canonical Ham path = binary reflected GRAY CODE, fractal all-ones hypotenuse.

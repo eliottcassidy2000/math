@@ -1,0 +1,128 @@
+=== BRANCH C: tiling / Walsh decomposition of D(T) (HYP-2335, BLUE conjecture) ===
+Bit convention: bit=1 iff arc x->y (explorer stores complement; grid-sym unaffected).
+Relabeling: u_i -> n+i, v_j -> n+1-j  (path position t gets label 2n-t).
+
+--- S2: exhaustive verification of block transform + BLUE verdict ---
+n=3: tilings=2  BLUE(D)=0/2  block-formula exact=2/2  defect==cross-offtwin=2/2  weight law 2|x|+(n-1)+C(n,2)=2/2  [|defect| = n(n-1) = 6 tiles = 3 sigma-pairs of 4]
+n=4: tilings=8  BLUE(D)=0/8  block-formula exact=8/8  defect==cross-offtwin=8/8  weight law 2|x|+(n-1)+C(n,2)=8/8  [|defect| = n(n-1) = 12 tiles = 6 sigma-pairs of 9]
+n=5: tilings=64  BLUE(D)=0/64  block-formula exact=64/64  defect==cross-offtwin=64/64  weight law 2|x|+(n-1)+C(n,2)=64/64  [|defect| = n(n-1) = 20 tiles = 10 sigma-pairs of 16]
+n=6: tilings=1024  BLUE(D)=0/1024  block-formula exact=1024/1024  defect==cross-offtwin=1024/1024  weight law 2|x|+(n-1)+C(n,2)=1024/1024  [|defect| = n(n-1) = 30 tiles = 15 sigma-pairs of 25]
+
+--- S2b: same over ALL labeled tournaments (insertion-path frame), n=3..5 ---
+n=3: labeled=8  BLUE(D)=0/8  formula=8/8  defect-const=8/8
+n=4: labeled=64  BLUE(D)=0/64  formula=64/64  defect-const=64/64
+n=5: labeled=1024  BLUE(D)=0/1024  formula=1024/1024  defect-const=1024/1024
+
+--- S3: sigma-image identification ---
+n=3: sigma(t)=t^c (const coset) 2/2;  sigma(t) = tiling(swap-relabeled D(T)^op) 2/2;  sigma(t) != t always (so sigma-image never a D-image) 2/2
+n=4: sigma(t)=t^c (const coset) 8/8;  sigma(t) = tiling(swap-relabeled D(T)^op) 8/8;  sigma(t) != t always (so sigma-image never a D-image) 8/8
+n=5: sigma(t)=t^c (const coset) 64/64;  sigma(t) = tiling(swap-relabeled D(T)^op) 64/64;  sigma(t) != t always (so sigma-image never a D-image) 64/64
+sigma(t(D(T))) IS the canonical tiling of D(T)^op (copy-swap relabeled = path-reversal frame).
+
+--- S4: Walsh schema at tile level, example n=4 (frame size 8) ---
+Region map (rows X=8..2, cols Y=1..7; 1/0 = tile bit, P = base path, . = none):
+   regions: X,Y in 5..8 -> COPY-1 = x ; X,Y in 1..4 -> COPY-2 = sigma_4(x) ;
+            X in 5..8, Y in 1..4 -> CROSS = A(T) full arc matrix, anti-diag X+Y=9 twins=1
+     Y=1 Y=2 Y=3 Y=4 Y=5 Y=6 Y=7
+X=8:   1   1   1   1   1   1   P
+X=7:   0   1   1   0   0   P   .
+X=6:   0   0   1   1   P   .   .
+X=5:   0   1   0   P   .   .   .
+X=4:   1   0   P   .   .   .   .
+X=3:   1   P   .   .   .   .   .
+X=2:   P   .   .   .   .   .   .
+x(T) = [1, 0, 1] (tiles A=(4,1),B=(3,1),C=(4,2));  A(T) arcs include base path 4->3->2->1
+Tile-level Walsh schema [[H,H],[H,-H]] reading:
+  +copy 1: copy-1 block = x ;  +copy 2: copy-2 block = sigma(x) (grid transpose, NO negation);
+  cross block = +copy 3 and -copy 4 INTERLEAVED: pair {i,j} appears as A[i][j] AND A[j][i]=NOT A[i][j];
+  the all-ones twin anti-diagonal (X+Y=2n+1) is the identity/border (the "+I" of the matrix schema).
+
+--- S5: x -> t(D(x)) is an injective AFFINE-LINEAR map over GF(2) ---
+n=3: affine law holds 2/2 (sampled);  GF(2) rank of linear part = 1 (= C(n-1,2) = 1 => injective);  blue-subspace dim at 2n = n(n-1) = 6;  density of D-image in its coset = 2^-5
+n=4: affine law holds 8/8 (sampled);  GF(2) rank of linear part = 3 (= C(n-1,2) = 3 => injective);  blue-subspace dim at 2n = n(n-1) = 12;  density of D-image in its coset = 2^-9
+n=5: affine law holds 64/64 (sampled);  GF(2) rank of linear part = 6 (= C(n-1,2) = 6 => injective);  blue-subspace dim at 2n = n(n-1) = 20;  density of D-image in its coset = 2^-14
+
+--- S6: does D(T) admit ANY blue frame (some Ham path with grid-symmetric tiling)? ---
+  n=3 (D on 6 vertices), per iso class of T:
+    T#0 scores=(0, 1, 2) H(T)=1: H(D)=13, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#1 scores=(1, 1, 1) H(T)=3: H(D)=45, blue Ham paths of D = 9  (20.00%)  anti-involutions(D)=1  method-agrees=True
+  n=4 (D on 8 vertices), per iso class of T:
+    T#0 scores=(0, 1, 2, 3) H(T)=1: H(D)=95, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#1 scores=(1, 1, 3, 1) H(T)=3: H(D)=189, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#2 scores=(1, 1, 2, 2) H(T)=5: H(D)=523, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#3 scores=(0, 2, 2, 2) H(T)=3: H(D)=333, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+  n=5 (D on 10 vertices), per iso class of T:
+    T#0 scores=(0, 1, 2, 3, 4) H(T)=1: H(D)=1033, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#1 scores=(1, 1, 3, 4, 1) H(T)=3: H(D)=1809, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#2 scores=(1, 1, 2, 4, 2) H(T)=5: H(D)=2817, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#3 scores=(0, 2, 2, 4, 2) H(T)=3: H(D)=1809, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#4 scores=(1, 1, 2, 3, 3) H(T)=9: H(D)=8137, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#5 scores=(0, 2, 2, 3, 3) H(T)=5: H(D)=5289, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#6 scores=(1, 1, 3, 3, 2) H(T)=9: H(D)=8145, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#7 scores=(0, 1, 3, 3, 3) H(T)=3: H(D)=3561, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#8 scores=(1, 2, 2, 3, 2) H(T)=11: H(D)=11017, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#9 scores=(1, 2, 2, 2, 3) H(T)=15: H(D)=12129, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#10 scores=(1, 2, 2, 3, 2) H(T)=13: H(D)=11625, blue Ham paths of D = 0  (0.00%)  anti-involutions(D)=0  method-agrees=True
+    T#11 scores=(2, 2, 2, 2, 2) H(T)=15: H(D)=15505, blue Ham paths of D = 185  (1.19%)  anti-involutions(D)=1  method-agrees=True
+
+--- S7: tower W_{2^k} = D^k(point); Gray-code canonical frame; Walsh structure ---
+order 2: closed-form arc formula errors = 0/2;  canonical recursive path == Gray code: True;  path valid: True
+order 4: closed-form arc formula errors = 0/12;  canonical recursive path == Gray code: True;  path valid: True
+order 8: closed-form arc formula errors = 0/56;  canonical recursive path == Gray code: True;  path valid: True
+order 16: closed-form arc formula errors = 0/240;  canonical recursive path == Gray code: True;  path valid: True
+
+  W16 tiling in canonical (Gray) frame: label X <-> vertex gray(16-X)
+  m = 105 tiles; weight(t16) = 61  (predicted by recursion 2w+(n-1)+C(n,2) from 0: 0,0,2,13,61 -> True)
+  grid-symmetric: False;  violated tiles = 56 (predicted top-level cross off-twin = 56: True);  sigma-fixed tiles (anti-diag) = 7, all bits 1: True
+  105-bit vector (explorer order, bit=1 iff arc x->y):
+  100000001111111101100101100111000110011101101010101011101010111011001110101101000111100011110101110101101
+  ASCII grid (rows X=16..2, cols Y=1..15; P=base path, .=upper triangle):
+   X=16: 1 1 1 1 1 1 1 1 1 1 1 1 1 1 P
+   X=15: 0 1 1 0 0 1 1 0 0 1 1 0 0 P .
+   X=14: 0 0 1 1 1 1 0 0 0 0 1 1 P . .
+   X=13: 0 1 0 1 1 0 1 0 0 1 0 P . . .
+   X=12: 0 1 0 0 1 1 0 1 1 0 P . . . .
+   X=11: 0 0 0 1 0 1 1 1 1 P . . . . .
+   X=10: 0 0 1 0 1 0 1 1 P . . . . . .
+   X= 9: 0 1 1 1 0 0 0 P . . . . . . .
+   X= 8: 1 0 0 0 1 1 P . . . . . . . .
+   X= 7: 1 1 0 1 0 P . . . . . . . . .
+   X= 6: 1 1 1 0 P . . . . . . . . . .
+   X= 5: 1 0 1 P . . . . . . . . . . .
+   X= 4: 1 0 P . . . . . . . . . . . .
+   X= 3: 1 P . . . . . . . . . . . . .
+   X= 2: P . . . . . . . . . . . . . .
+
+  Walsh battery on the 105 tiling bits (a=gray(16-X), b=gray(16-Y)):
+    exact skew-Walsh ((b_L) ^ par(pc((a&b)>>(L+1))))    : 105/105
+    pure Walsh par(pc(a&b))                             : 52/105
+    frame Walsh par(pc((X-1)&(Y-1)))                    : 49/105
+    frame Walsh par(pc((16-X)&(16-Y)))                  : 41/105
+    Thue-Morse TM(a)^TM(b)                              : 61/105
+    TM(a|b)                                             : 53/105
+    twin-direction only (b_L)                           : 68/105
+    sign only par(pc((a&b)>>(L+1)))                     : 49/105
+
+  Blue-framability of tower tournaments (anti-involutions + reversed Ham path):
+    W4: anti-involutions=0;  no blue frame found => class PURE BLACK
+    W8: anti-involutions=0;  no blue frame found => class PURE BLACK
+    W16: anti-involutions=0;  no blue frame found => class PURE BLACK
+
+--- S8: T15 (core of normalized S16 from iterated S-doubling of [1]) ---
+S16 skew-Hadamard: True
+normalized S16 skew-Hadamard: True
+T15: scores = (7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7)  DRT = True
+H(T15) = 198335025   (0.1s)
+variant (normalize at 8 first): scores=[7] DRT=True H=198335025  (0.1s)  same H as T15: True
+insertion-frame Ham path p = [14, 13, 10, 12, 8, 9, 11, 7, 6, 4, 5, 3, 2, 1, 0]
+T15 tiling (insertion frame), m=91: weight=48  gridsym=False  violated tiles=32 of 84 non-fixed (=42 sigma-pairs)
+  91-bit vector: 0100011100110101000111001000110110101101000111001101010100011010110100111111001010101101011
+  Walsh battery on insertion-frame T15 bits (frame labels only):
+    par(pc((X-1)&(Y-1)))      : 45/91
+    par(pc((15-X)&(15-Y)))    : 45/91
+    par(pc(X&Y))              : 40/91
+    constant 1                : 48/91
+anti-involutions of T15: 0 (complete)  (0.0s)
+NO blue frame of T15 found => T15 class PURE BLACK (no involutive anti-automorphism reverses a Ham path)
+
+=== done ===

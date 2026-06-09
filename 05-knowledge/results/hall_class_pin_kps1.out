@@ -1,0 +1,46 @@
+==============================================================================
+HALL CLASS PINNING: skew_16 vs Sloane had.16.0..4 (5 classes) + had.16.syl
+==============================================================================
+loaded had.16.0: valid Hadamard, |Aut| = 10321920
+loaded had.16.1: valid Hadamard, |Aut| = 294912
+loaded had.16.2: valid Hadamard, |Aut| = 49152
+loaded had.16.3: valid Hadamard, |Aut| = 86016
+loaded had.16.4: valid Hadamard, |Aut| = 86016
+loaded had.16.syl: valid Hadamard, |Aut| = None
+
+Invariant table:
+matrix                 profile (|sum|:count)                  SNF((H+J)/2)                 gf2rk
+had.16.0               {0: 1680, 16: 140}                     1^5 2^6 4^4 8                    5   SNF(H)=1 2^4 4^6 8^4 16
+had.16.1               {0: 1488, 8: 256, 16: 76}              1^6 2^4 4^5 8                    6   SNF(H)=1 2^5 4^4 8^5 16
+had.16.2               {0: 1392, 8: 384, 16: 44}              1^7 2^2 4^6 8                    7   SNF(H)=1 2^6 4^2 8^6 16
+had.16.3               {0: 1344, 8: 448, 16: 28}              1^8 4^7 8                        8   SNF(H)=1 2^7 8^7 16
+had.16.4               {0: 1344, 8: 448, 16: 28}              1^8 4^7 8                        8   SNF(H)=1 2^7 8^7 16
+had.16.syl             {0: 1680, 16: 140}                     1^5 2^6 4^4 8                    5   SNF(H)=1 2^4 4^6 8^4 16
+SKEW_TOWER_16          {0: 1344, 8: 448, 16: 28}              1^8 4^7 8                        8   SNF(H)=1 2^7 8^7 16
+SYLVESTER_TOWER_16     {0: 1680, 16: 140}                     1^5 2^6 4^4 8                    5   SNF(H)=1 2^4 4^6 8^4 16
+
+Invariant matching:
+  SKEW_TOWER_16: invariant-matching Sloane reps: ['had.16.3', 'had.16.4']
+  SYLVESTER_TOWER_16: invariant-matching Sloane reps: ['had.16.0', 'had.16.syl']
+
+Witness searches (monomial equivalence, exact):
+  SYLVESTER_TOWER_16 ~ had.16.0: FOUND  nodes=16  time=0.0s
+     row perm:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+     row signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     col perm:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+     col signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  SKEW_TOWER_16 ~ had.16.3: FOUND  nodes=2057  time=0.0s
+     row perm:  [0, 1, 2, 3, 7, 4, 6, 5, 8, 13, 15, 14, 12, 9, 11, 10]
+     row signs: [1, 1, 1, -1, 1, -1, -1, 1, 1, -1, 1, -1, -1, 1, -1, 1]
+     col perm:  [5, 2, 7, 4, 1, 6, 3, 8, 13, 10, 15, 12, 9, 14, 11, 0]
+     col signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  SKEW_TOWER_16 ~ had.16.4: NONE  nodes=10188512  time=145.3s
+  SYLVESTER_TOWER_16 ~ had.16.syl: FOUND  nodes=16  time=0.0s
+     row perm:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+     row signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+     col perm:  [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+     col signs: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+
+  SKEW_TOWER_16 ~ its transpose: NONE  nodes=10188512  time=145.3s
+
+DONE.

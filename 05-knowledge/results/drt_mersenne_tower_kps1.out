@@ -1,0 +1,88 @@
+=== drt_mersenne_tower_kps1 — Branch B: the DRT/Mersenne tower (HYP-2333, THM-448) ===
+
+--- PART 1: bordered tower from S_2 = [[1,1],[-1,1]], doubling S -> [[S,S],[S-2I,2I-S]] ---
+order   2: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T1: DRT=False  score set=[0]
+order   4: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T3: DRT=True  score set=[1]
+order   8: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T7: DRT=True  score set=[3]
+order  16: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T15: DRT=True  score set=[7]
+order  32: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T31: DRT=True  score set=[15]
+order  64: skew-Hadamard=True  row0-all-ones=True (normalize no-op=True)  core T63: DRT=True  score set=[31]
+
+T7 (order-8 core) iso to Paley T_7: True
+T3 (order-4 core) = C_3: scores=(1, 1, 1)  c3=1
+
+--- PART 2: T15 deep dive ---
+scores(T15) = (7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7, 7)  (7-regular: True)
+c3(T15) = 140  [note: ANY 7-regular 15-tournament has c3 = C(15,3) - 15*C(7,2) = 140;
+        max possible for n=15 (n=3 mod 4, DRT-attained) — NOT 105]
+M^2 == J - 15I exactly: True
+eigenvalues of M (multiplicity): {(np.float64(0.0), np.float64(-3.872983)): 7, (np.float64(-0.0), np.float64(0.0)): 1, (np.float64(0.0), np.float64(3.872983)): 7}
+sqrt(15) = 3.872983
+|Aut(T15)| = 21  (search nodes=39978, 0.0s)
+orbit sizes = [7, 7, 1]  vertex-transitive = False
+T15 self-converse (iso to T15^op): False  (nodes=39894, aborted=False, 0.0s)
+rank(A) mod 2,3,5 = 8, 15, 15
+triple |N+ cap N+ cap N+| distribution (455 triples): {0: 28, 1: 336, 2: 84, 3: 7}
+
+--- PART 3: circulant DRT(15) enumeration (all 128 antisymmetric S-sets of Z_15) ---
+circulant DRT(15) count (labeled S-sets): 0
+circulant DRT(15) iso classes: 0
+  NO circulant DRT exists on Z_15 — T15 is automatically non-circulant.
+
+--- PART 4: H comparisons at n=15 ---
+H(T15) = 198335025   (0.1s)
+H(transitive T15) = 1   (0.0s)
+H(random 15-tournament #0) = 109769603   (0.1s)
+H(random 15-tournament #1) = 67332641   (0.1s)
+H(random 15-tournament #2) = 43367801   (0.1s)
+H(random 15-tournament #3) = 85850621   (0.1s)
+H(random 15-tournament #4) = 101556555   (0.1s)
+random sample: min=43367801 max=109769603 mean=81575444.2
+scale: 15!/2^14 = 79814109  (Alon max-H order of magnitude Theta(n!/2^(n-1)))
+H(T15)/ (15!/2^14) = 2.4850
+
+--- PART 5: Walsh indexing — S_tower vs Sylvester H ---
+order   2: nnz(C = S_tower - H_sylvester) = 2  (claim N*log2(N) = 2: True; claim N^2/2 = 2: True)  C values in [-2, 0, 2]
+order   4: nnz(C = S_tower - H_sylvester) = 8  (claim N*log2(N) = 8: True; claim N^2/2 = 8: True)  C values in [-2, 0, 2]
+order   8: nnz(C = S_tower - H_sylvester) = 32  (claim N*log2(N) = 24: False; claim N^2/2 = 32: True)  C values in [-2, 0, 2]
+order  16: nnz(C = S_tower - H_sylvester) = 128  (claim N*log2(N) = 64: False; claim N^2/2 = 128: True)  C values in [-2, 0, 2]
+order  32: nnz(C = S_tower - H_sylvester) = 512  (claim N*log2(N) = 160: False; claim N^2/2 = 512: True)  C values in [-2, 0, 2]
+order  64: nnz(C = S_tower - H_sylvester) = 2048  (claim N*log2(N) = 384: False; claim N^2/2 = 2048: True)  C values in [-2, 0, 2]
+W tower (order 16) == Sylvester H2^kron4: True
+
+16x16 row-correlation profile: D = S16 @ H16 (H16 symmetric; D[i,j] = <S16 row i, Walsh char j>)
+row  diag dot  max|dot|  argmax  argmax==row  Hamming to best
+  0        16        16       0         True                0
+  1       -16        16       1         True                0
+  2         0        16       3        False                0
+  3         0        16       2        False                0
+  4         8         8       4         True                4
+  5        -8         8       4        False                4
+  6         8         8       4        False                4
+  7        -8         8       4        False                4
+  8        12        12       8         True                2
+  9       -12        12       9         True                2
+ 10         4        12      11        False                2
+ 11        -4        12      10        False                2
+ 12        12        12      12         True                2
+ 13       -12        12      13         True                2
+ 14         4        12      15        False                2
+ 15        -4        12      14        False                2
+rows where best Walsh char is its OWN index: 7/16
+|dot| value histogram over all 256 pairs: {0: 172, 4: 56, 8: 16, 12: 8, 16: 4}
+
+order 32: per-row max|dot| histogram {16: 4, 20: 8, 24: 8, 28: 8, 32: 4}; diag dot histogram {-32: 1, -28: 2, -24: 2, -20: 2, -16: 2, -12: 2, -8: 2, -4: 2, 0: 2, 4: 2, 8: 2, 12: 2, 16: 2, 20: 2, 24: 2, 28: 2, 32: 1}; argmax==row for 15/32 rows
+order 64: per-row max|dot| histogram {32: 4, 36: 8, 40: 8, 44: 8, 48: 8, 52: 8, 56: 8, 60: 8, 64: 4}; diag dot histogram {-64: 1, -60: 2, -56: 2, -52: 2, -48: 2, -44: 2, -40: 2, -36: 2, -32: 2, -28: 2, -24: 2, -20: 2, -16: 2, -12: 2, -8: 2, -4: 2, 0: 2, 4: 2, 8: 2, 12: 2, 16: 2, 20: 2, 24: 2, 28: 2, 32: 2, 36: 2, 40: 2, 44: 2, 48: 2, 52: 2, 56: 2, 60: 2, 64: 1}; argmax==row for 31/64 rows
+
+Twin structure: row 0 of S_tower is all-ones at every order (verified above as
+normalize no-op), so core T_{2^k-1} vertex v (1..2^k-1) carries the BINARY index
+of the tower: twins at the last doubling are (v, v+2^(k-1)); vertex 2^(k-1) is the
+border's twin.
+VERDICT on "Walsh plus low-weight correction": REFUTED in the entrywise sense —
+nnz(C_N) = N^2/2 exactly (HALF of all entries differ; the naive N log2 N recursion
+argument fails because the -2I/+2I corrections cancel/seed on diagonals).
+PARTIAL in the spectral sense: every row of S_tower has |<row, some Walsh char>| >= N/2;
+per-row max|dot| histogram is the exact ladder {N/2: 4 rows, N/2+4: 8, ..., N-4: 8, N: 4};
+diagonal dot spectrum = full arithmetic progression -N..N step 4, each value x2 (+-N x1).
+
+=== done in 0.8s ===

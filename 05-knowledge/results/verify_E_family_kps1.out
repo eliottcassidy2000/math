@@ -1,0 +1,86 @@
+=== verify_E_family_kps1 — adversarial independent verification ===
+
+--- V0: anchors (brute force AND fresh dp) ---
+  [PASS] H(C3) = 3 brute=3 dp=3
+  [PASS] H(regT5) = 15 brute=15 dp=15
+  [PASS] H(Paley T7) = 189 brute=189 dp=189
+  [PASS] U7 = C7({1,2,3}): H=175 (expect 175), DRT=False (expect False)
+  [PASS] P7 DRT = True
+
+--- V1: 16-member validity, symmetry identities, orbits ---
+  [PASS] validity n=3: 8 tournaments x 16, invalid = 0
+  [PASS] validity n=4: 64 tournaments x 16, invalid = 0
+  [PASS] g1 swap identity (exh n=3)
+  [PASS] g2 negate identity (exh n=3)
+  [PASS] g3 pre-op identity (exh n=3)
+  [PASS] 3 orbits, sizes [4, 4, 8] (expect [4,4,8])
+  [PASS] named reps in pairwise distinct orbits {'D_skew': 1, 'TK2': 0, 'SCblow': 2}
+  [PASS] D_skew rep in the size-8 orbit
+  [PASS] D_skew orbit = exactly the a+d=0 members
+
+--- V2: square law + block-diagonality (exhaustive n=4) ---
+  [PASS] Kron square law M'^2 = P^2(x)M^2 + {P,Q}(x)M - I (64x16)
+  [PASS] block-diag(M'^2) <=> a+d = 0 (64x16)
+  [PASS] off-diag block = (a+d)(b M^2 + beta M) (64x16)
+
+--- V3: skew-Hadamard preservation (bordered C3 seed) ---
+  [PASS] seed order-4 skew-Hadamard
+  [PASS] preservers = 8/16 (got 8)
+  [PASS] preservers are EXACTLY the a+d=0 set
+  [PASS] tower (1, 1, -1, 1): orders 8,16,32 SH = [True, True, True]
+  [PASS] tower (-1, 1, 1, 1): orders 8,16,32 SH = [True, True, True]
+
+--- V4: H tables n=3,4 (dp vs brute vs published) ---
+  [PASS] n=3: dp == brute on all 6 doubles (order 6)
+  [PASS] n=3: table matches published
+      (1, (0, 1, 2), 13, 1, 41)
+      (3, (1, 1, 1), 45, 45, 45)
+  [PASS] n=4: dp == brute on all 12 doubles (order 8)
+  [PASS] n=4: table matches published
+      (1, (0, 1, 2, 3), 95, 1, 629)
+      (3, (0, 2, 2, 2), 333, 45, 633)
+      (3, (1, 1, 1, 3), 189, 45, 633)
+      (5, (1, 1, 2, 2), 523, 393, 653)
+
+--- V4b: full n=5 table (order-10 dp; brute spot check on regular class) ---
+  [PASS] n=5 has 12 iso classes (got 12)
+  [PASS] n=5 table matches published (12 rows, all 3 columns)
+  [PASS] column sums (D,K2,SC) = (82876, 47436, 182156) expect (82876, 47436, 182156)
+      => means 6906.3 3953.0 15179.7 (published 6906.3 / 3953.0 / 15179.7)
+  [PASS] SCblow is argmax (with ties) in all 12 classes
+  [PASS] order-10 BRUTE D_skew(regT5) = 15505 expect 15505 (0.5s)
+  [PASS] order-10 BRUTE TK2(regT5) = 15565 expect 15565 (0.5s)
+  [PASS] order-10 BRUTE SCblow(regT5) = 15565 expect 15565 (0.5s)
+  [PASS] only D_skew orbit splits, and only on non-SC classes
+      splits: [('D_skew', 1, [1809, 3561]), ('D_skew', 2, [2817, 5289]), ('D_skew', 5, [2817, 5289]), ('D_skew', 7, [1809, 3561])]
+  [PASS] split values are {1809,3561} x2 and {2817,5289} x2
+      (n=5 block done in 1.9s)
+
+--- V5: n=6 exhaustive max H over all 32768 labeled tournaments ---
+  [PASS] max H at n=6 = 45 (expect 45); attained by 480 labeled tournaments
+      (1.5s)
+  [PASS] D_skew(C3): H=45 (expect 45), scores=(2, 2, 2, 3, 3, 3)
+  [PASS] TK2(C3): H=45 (expect 45), scores=(2, 2, 2, 3, 3, 3)
+  [PASS] SCblow(C3): H=45 (expect 45), scores=(2, 2, 2, 3, 3, 3)
+
+--- V6: the three regular n=7 classes, doubles at order 14 ---
+  [PASS] found exactly 3 distinct regular n=7 classes in 14728 tries
+  [PASS] classes have H = 171, 175, 189 (got [171, 175, 189])
+  [PASS] H=175 class is U7; H=189 class is Paley
+    H(T)=171 (third): D=24577581 K2=24392325 SC=24485541  expect (24577581, 24392325, 24485541)  [PASS] (last dp 0.0s)
+    H(T)=175 (U7): D=24540117 K2=24855901 SC=24855901  expect (24540117, 24855901, 24855901)  [PASS] (last dp 0.0s)
+    H(T)=189 (Paley): D=24793755 K2=24589929 SC=24453597  expect (24793755, 24589929, 24453597)  [PASS] (last dp 0.0s)
+  [PASS] all 9 order-14 H values match published
+  [PASS] U7 coincidence: K2 == SC == 24855901
+
+--- V7: isomorphism claims with explicit certificates ---
+  [PASS] K2(C3) ~ SCblow(C3): certificate found and verified
+  [PASS] D_skew(C3) !~ K2(C3) (exhaustive 720 perms)
+  [PASS] D_skew(C3) !~ SCblow(C3) (exhaustive 720 perms)
+  [PASS] K2(regT5) ~ SCblow(regT5) at order 10: certificate verified
+  [PASS] K2(U7) ~ SCblow(U7) at order 14: certificate verified (0.00s)
+      certificate permutation: [0, 1, 2, 3, 4, 5, 6, 11, 12, 13, 7, 8, 9, 10]
+
+=== SUMMARY ===
+ALL CHECKS PASSED — no discrepancy found with the branch-E claims.
+total time 5.5s

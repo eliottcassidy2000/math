@@ -1,0 +1,12 @@
+=== regular7_doubling_Htest_kps1 — H(K2) vs H(SCblow) vs H(Dskew), regular n=7 ===
+found regular class 1 after 895 tries (H=175, DRT=False)
+found regular class 2 after 1479 tries (H=171, DRT=False)
+found regular class 3 after 6186 tries (H=189, DRT=True)
+sampling time 0.8s; 3 distinct regular n=7 classes
+
+  H(T)  DRT |     H(Dskew)       H(TK2)      H(SCbl) | K2==SC?
+   171 False |     24577581     24392325     24485541 | False   (0.2s)
+   175 False |     24540117     24855901     24855901 | True   (0.2s)
+   189 True |     24793755     24589929     24453597 | False   (0.2s)
+
+=== done ===

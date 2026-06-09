@@ -1,0 +1,201 @@
+==============================================================================
+PART 1: BUILD TOWERS, VERIFY HADAMARD + SKEW-TYPE
+==============================================================================
+order   2: skew tower Hadamard=True skew-type(S+S^T=2I)=True | Sylvester Hadamard=True symmetric=True
+order   4: skew tower Hadamard=True skew-type(S+S^T=2I)=True | Sylvester Hadamard=True symmetric=True
+order   8: skew tower Hadamard=True skew-type(S+S^T=2I)=True | Sylvester Hadamard=True symmetric=True
+order  16: skew tower Hadamard=True skew-type(S+S^T=2I)=True | Sylvester Hadamard=True symmetric=True
+order  32: skew tower Hadamard=True skew-type(S+S^T=2I)=True | Sylvester Hadamard=True symmetric=True
+
+skew tower S_16 (+/- form):
+++++++++++++++++
+-+-+-+-+-+-+-+-+
+-++--++--++--++-
+--++--++--++--++
+-++++----++++---
+---++++----++++-
+-+--+-++-+--+-++
+--+-++-+--+-++-+
+-++++++++-------
+---+-+-++++-+-+-
+-+---++-+-+++--+
+--+---++++-+++--
+-+++----+---++++
+---++-+-+++--+-+
+-+--+--++-++-++-
+--+-++--++-+--++
+
+skew tower S_32 (+/- form):
+++++++++++++++++++++++++++++++++
+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+-++--++--++--++--++--++--++--++-
+--++--++--++--++--++--++--++--++
+-++++----++++----++++----++++---
+---++++----++++----++++----++++-
+-+--+-++-+--+-++-+--+-++-+--+-++
+--+-++-+--+-++-+--+-++-+--+-++-+
+-++++++++--------++++++++-------
+---+-+-++++-+-+----+-+-++++-+-+-
+-+---++-+-+++--+-+---++-+-+++--+
+--+---++++-+++----+---++++-+++--
+-+++----+---++++-+++----+---++++
+---++-+-+++--+-+---++-+-+++--+-+
+-+--+--++-++-++--+--+--++-++-++-
+--+-++--++-+--++--+-++--++-+--++
+-++++++++++++++++---------------
+---+-+-+-+-+-+-++++-+-+-+-+-+-+-
+-+---++--++--++-+-+++--++--++--+
+--+---++--++--++++-+++--++--++--
+-+++-----++++---+---+++++----+++
+---++-+----++++-+++--+-++++----+
+-+--+--+-+--+-+++-++-++-+-++-+--
+--+-++----+-++-+++-+--++++-+--+-
+-+++++++--------+-------++++++++
+---+-+-++-+-+-+-+++-+-+--+-+-+-+
+-+---++-+--++--++-+++--+-++--++-
+--+---++++--++--++-+++----++--++
+-+++----+----++++---++++-++++---
+---++-+-+++----++++--+-+---++++-
+-+--+--++-++-+--+-++-++--+--+-++
+--+-++--++-+--+-++-+--++--+-++-+
+
+==============================================================================
+PART 2: EXPLICIT MONOMIAL EQUIVALENCE AT ORDERS 2, 4, 8 (skew_k ~ sylvester_k)
+==============================================================================
+
+order 2: status=FOUND  nodes=2  time=0.000s
+  row perm sigma (target i <- source sigma[i]): [0, 1]
+  row signs eps:  [1, 1]
+  col perm tau  (target j <- source tau[j]):   [1, 0]
+  col signs delta:[1, 1]
+  verified: sylvester[i,j] = eps[i]*delta[j]*skew[sigma[i],tau[j]]  EXACT
+
+order 4: status=FOUND  nodes=5  time=0.000s
+  row perm sigma (target i <- source sigma[i]): [0, 1, 2, 3]
+  row signs eps:  [1, 1, 1, -1]
+  col perm tau  (target j <- source tau[j]):   [1, 2, 3, 0]
+  col signs delta:[1, 1, 1, 1]
+  verified: sylvester[i,j] = eps[i]*delta[j]*skew[sigma[i],tau[j]]  EXACT
+
+order 8: status=FOUND  nodes=15  time=0.000s
+  row perm sigma (target i <- source sigma[i]): [0, 1, 2, 3, 4, 7, 5, 6]
+  row signs eps:  [1, 1, 1, -1, 1, -1, -1, 1]
+  col perm tau  (target j <- source tau[j]):   [1, 2, 3, 4, 5, 6, 7, 0]
+  col signs delta:[1, 1, 1, 1, 1, 1, 1, 1]
+  verified: sylvester[i,j] = eps[i]*delta[j]*skew[sigma[i],tau[j]]  EXACT
+
+==============================================================================
+PART 3: ORDER-16 INVARIANTS — skew_16 vs sylvester_16
+==============================================================================
+
+sylvester_16:
+  row-quadruple profile (|sum| -> count, total C(16,4)=1820): {0: 1680, 16: 140}
+  col-quadruple profile (transpose):                          {0: 1680, 16: 140}
+  SNF(H)        own: 1 2^4 4^6 8^4 16   sympy: 1 2^4 4^6 8^4 16  agree=True
+  SNF((H+J)/2)  own: 1^5 2^6 4^4 8   sympy: 1^5 2^6 4^4 8  agree=True
+  GF(2) rank of (H+J)/2: 5
+
+skew_16:
+  row-quadruple profile (|sum| -> count, total C(16,4)=1820): {0: 1344, 8: 448, 16: 28}
+  col-quadruple profile (transpose):                          {0: 1344, 8: 448, 16: 28}
+  SNF(H)        own: 1 2^7 8^7 16   sympy: 1 2^7 8^7 16  agree=True
+  SNF((H+J)/2)  own: 1^8 4^7 8   sympy: 1^8 4^7 8  agree=True
+  GF(2) rank of (H+J)/2: 8
+
+Hall-set counts (quadruples with |sum|=16):
+  sylvester_16: 140   skew_16: 28
+VERDICT order 16: DIFFERENT profile -> INEQUIVALENT Hadamard matrices
+
+==============================================================================
+PART 4: ORDER-32 FULL QUADRUPLE PROFILE (C(32,4)=35960 quadruples, exact, no sampling)
+==============================================================================
+sylvester_32 profile: {0: 34720, 32: 1240}
+skew_32      profile: {0: 26656, 8: 7056, 16: 1568, 24: 624, 32: 56}
+profile equal: False   (computed in 0.1s)
+GF(2) rank of (H+J)/2: sylvester_32 = 6, skew_32 = 16
+SNF(H) order 32 (sympy): sylvester: 1 2^5 4^10 8^10 16^5 32
+                         skew:      1 2^15 16^15 32
+SNF((H+J)/2) order 32: sylvester: 1^6 2^10 4^10 8^5 16
+                       skew:      1^16 8^15 16
+
+==============================================================================
+PART 5: WALSH-DOMAIN SHAPE OF S — N = W_k^T S (C = N / 2^k), k = 3, 4
+==============================================================================
+
+k=3 (m=8): N = W^T S, C = N/8
+  nonzeros: 64/64 (100.0%)   entry histogram of N: {-6: 2, -2: 18, 2: 38, 6: 6}
+  diag(N): [np.int64(-6), np.int64(6), np.int64(-2), np.int64(2), np.int64(-6), np.int64(6), np.int64(-2), np.int64(2)]
+  N lower-triangular: False   upper-triangular: False
+  N monomial (1 nonzero/row): False
+  N matrix:
+     -6    2    2    2    2    2    2    2
+      2    6    2   -2    2   -2    2   -2
+      2    2   -2    6    2    2   -2   -2
+      2   -2    6    2    2   -2   -2    2
+      2    2    2    2   -6    2    2    2
+      2   -2    2   -2    2    6    2   -2
+      2    2   -2   -2    2    2   -2    6
+      2   -2   -2    2    2   -2    6    2
+  nnz per row: [8, 8, 8, 8, 8, 8, 8, 8]
+  nnz per col: [8, 8, 8, 8, 8, 8, 8, 8]
+  conjugation (W^T S W)/8: nnz 64/64, histogram {-1: 28, 1: 36}, lower-tri=False, upper-tri=False
+
+k=4 (m=16): N = W^T S, C = N/16
+  nonzeros: 256/256 (100.0%)   entry histogram of N: {-14: 2, -10: 2, -6: 6, -2: 86, 2: 130, 6: 18, 10: 6, 14: 6}
+  diag(N): [np.int64(-14), np.int64(14), np.int64(-2), np.int64(2), np.int64(-10), np.int64(10), np.int64(-6), np.int64(6), np.int64(-14), np.int64(14), np.int64(-2), np.int64(2), np.int64(-10), np.int64(10), np.int64(-6), np.int64(6)]
+  N lower-triangular: False   upper-triangular: False
+  N monomial (1 nonzero/row): False
+  N matrix:
+    -14    2    2    2    2    2    2    2    2    2    2    2    2    2    2    2
+      2   14    2   -2    2   -2    2   -2    2   -2    2   -2    2   -2    2   -2
+      2    2   -2   14    2    2   -2   -2    2    2   -2   -2    2    2   -2   -2
+      2   -2   14    2    2   -2   -2    2    2   -2   -2    2    2   -2   -2    2
+      2    2    2    2  -10    6    6    6    2    2    2    2   -2   -2   -2   -2
+      2   -2    2   -2    6   10    6   -6    2   -2    2   -2   -2    2   -2    2
+      2    2   -2   -2    6    6   -6   10    2    2   -2   -2   -2   -2    2    2
+      2   -2   -2    2    6   -6   10    6    2   -2   -2    2   -2    2    2   -2
+      2    2    2    2    2    2    2    2  -14    2    2    2    2    2    2    2
+      2   -2    2   -2    2   -2    2   -2    2   14    2   -2    2   -2    2   -2
+      2    2   -2   -2    2    2   -2   -2    2    2   -2   14    2    2   -2   -2
+      2   -2   -2    2    2   -2   -2    2    2   -2   14    2    2   -2   -2    2
+      2    2    2    2   -2   -2   -2   -2    2    2    2    2  -10    6    6    6
+      2   -2    2   -2   -2    2   -2    2    2   -2    2   -2    6   10    6   -6
+      2    2   -2   -2   -2   -2    2    2    2    2   -2   -2    6    6   -6   10
+      2   -2   -2    2   -2    2    2   -2    2   -2   -2    2    6   -6   10    6
+  nnz per row: [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  nnz per col: [16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16, 16]
+  conjugation (W^T S W)/16: nnz 256/256, histogram {-1: 120, 1: 136}, lower-tri=False, upper-tri=False
+
+k=5 (m=32): N = W^T S, C = N/32
+  nonzeros: 1024/1024 (100.0%)   entry histogram of N: {-30: 2, -26: 2, -22: 2, -18: 2, -14: 6, -10: 6, -6: 30, -2: 382, 2: 474, 6: 58, 10: 18, 14: 18, 18: 6, 22: 6, 26: 6, 30: 6}
+  diag(N): [np.int64(-30), np.int64(30), np.int64(-2), np.int64(2), np.int64(-18), np.int64(18), np.int64(-14), np.int64(14), np.int64(-26), np.int64(26), np.int64(-6), np.int64(6), np.int64(-22), np.int64(22), np.int64(-10), np.int64(10), np.int64(-30), np.int64(30), np.int64(-2), np.int64(2), np.int64(-18), np.int64(18), np.int64(-14), np.int64(14), np.int64(-26), np.int64(26), np.int64(-6), np.int64(6), np.int64(-22), np.int64(22), np.int64(-10), np.int64(10)]
+  N lower-triangular: False   upper-triangular: False
+  N monomial (1 nonzero/row): False
+  nnz per row: [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+  nnz per col: [32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32, 32]
+  conjugation (W^T S W)/32: nnz 1024/1024, histogram {-1: 496, 1: 528}, lower-tri=False, upper-tri=False
+
+Structural check: S_m = W_m + Corr_m with Corr_{2m}=[[C,C],[C-2I,2I-C]], C_1=0:
+  order 2: S = W + Corr exact: True
+  order 4: S = W + Corr exact: True
+  order 8: S = W + Corr exact: True
+  order 16: S = W + Corr exact: True
+  order 32: S = W + Corr exact: True
+
+==============================================================================
+PART 6: SKEW-WALSH BUTTERFLY — verify + time at order 1024 (and 4096)
+==============================================================================
+  butterfly EXACT match vs dense matvec at m = 2,4,8,16,64,256,1024 (int64 vectors): True
+  block identity S_2m x = [S_m(x1+x2); S_m(x1-x2)-2(x1-x2)] EXACT at m=8,64,512: True
+
+  m=1024: dense matvec (BLAS, prebuilt):      96.7 us | recursive butterfly:    2949.1 us | iterative butterfly:      67.5 us
+         matrix build time: 6.7 ms, memory: 8 MB (float64) | speedup iter vs dense: 1.43x, rec vs dense: 0.03x
+
+  m=4096: dense matvec (BLAS, prebuilt):    4330.2 us | recursive butterfly:   11913.3 us | iterative butterfly:     158.2 us
+         matrix build time: 131.8 ms, memory: 134 MB (float64) | speedup iter vs dense: 27.37x, rec vs dense: 0.36x
+  m=16384: recursive butterfly    50.15 ms | iterative butterfly     0.46 ms  (dense matvec impossible/impractical: 2 GB matrix)
+  m=1048576: recursive butterfly  3288.32 ms | iterative butterfly    82.52 ms  (dense matvec impossible/impractical: 8796 GB matrix)
+
+  pure-Python naive O(m^2) matvec at m=1024 (reference): 63.1 ms
+
+DONE.

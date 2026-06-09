@@ -1,0 +1,130 @@
+==============================================================================
+PART A: skew_tower recursion vs ACTUAL Branch-D doubling D_skew (core library)
+==============================================================================
+  order   2: S(D^1(T1)) == skew_tower(2): True | Hadamard: True | skew-type: True
+  order   4: S(D^2(T1)) == skew_tower(4): True | Hadamard: True | skew-type: True
+  order   8: S(D^3(T1)) == skew_tower(8): True | Hadamard: True | skew-type: True
+  order  16: S(D^4(T1)) == skew_tower(16): True | Hadamard: True | skew-type: True
+  order  32: S(D^5(T1)) == skew_tower(32): True | Hadamard: True | skew-type: True
+  [PASS] A1 skew_tower == iterated D_skew, Hadamard+skew at 2,4,8,16,32
+  [PASS] A2 anchors H(C3)=3, H(D(C3))=45, H(regularT5)=15  (got 3,45,15)
+
+==============================================================================
+PART B: Sloane order-16 library -- authenticity and structure
+==============================================================================
+  had.16.0: saved file == web-refetched matrix: True
+  had.16.1: saved file == web-refetched matrix: True
+  had.16.2: saved file == web-refetched matrix: True
+  had.16.3: saved file == web-refetched matrix: True
+  had.16.4: saved file == web-refetched matrix: True
+  [PASS] B1 all five saved Sloane representatives authentic (== web refetch)
+  [PASS] B2 all six saved matrices are valid Hadamard of order 16
+  [PASS] B3 had.16.4 == had.16.3^T entrywise (the literal transpose pair)
+  [PASS] B4 sylvester tower == had.16.0 verbatim
+  [PASS] B5 sylvester tower == had.16.syl verbatim
+  [PASS] B6 had.16.0 is symmetric (self-transpose with identity witness)
+
+==============================================================================
+PART C: independent profile + GF(2)-rank recomputation (direct 4-row products)
+==============================================================================
+  had.16.0       profile={0: 1680, 16: 140}  (claimed match: True)   gf2rank((H+J)/2)=5 (claimed 5: True)
+  had.16.1       profile={0: 1488, 8: 256, 16: 76}  (claimed match: True)   gf2rank((H+J)/2)=6 (claimed 6: True)
+  had.16.2       profile={0: 1392, 8: 384, 16: 44}  (claimed match: True)   gf2rank((H+J)/2)=7 (claimed 7: True)
+  had.16.3       profile={0: 1344, 8: 448, 16: 28}  (claimed match: True)   gf2rank((H+J)/2)=8 (claimed 8: True)
+  had.16.4       profile={0: 1344, 8: 448, 16: 28}  (claimed match: True)   gf2rank((H+J)/2)=8 (claimed 8: True)
+  sylvester_16   profile={0: 1680, 16: 140}  (claimed match: True)   gf2rank((H+J)/2)=5 (claimed 5: True)
+  skew_16        profile={0: 1344, 8: 448, 16: 28}  (claimed match: True)   gf2rank((H+J)/2)=8 (claimed 8: True)
+  [PASS] C1 all order-16 quadruple profiles match claims (incl. Hall counts 140/76/44/28/28)
+  [PASS] C2 all order-16 GF(2) ranks of (H+J)/2 match claims (5/6/7/8/8; skew=8, syl=5)
+  skew_32      profile={0: 26656, 8: 7056, 16: 1568, 24: 624, 32: 56}
+  sylvester_32 profile={0: 34720, 32: 1240}   (0.2s)
+  [PASS] C3 skew_32 profile == {0:26656, 8:7056, 16:1568, 24:624, 32:56}
+  [PASS] C4 sylvester_32 profile == {0:34720, 32:1240} (and 1240 == C(32,3)-theory 32*31*30/24)
+  [PASS] C5 GF(2) rank (H+J)/2 at 32: skew=16, sylvester=6  (got 16,6)
+
+==============================================================================
+PART D: entrywise re-verification of every printed witness
+==============================================================================
+  [PASS] D1 order-8 witness: sylvester8[i,j]=eps[i]*delta[j]*skew8[sigma[i],tau[j]]
+  [PASS] D2 witness skew_16 ~ had.16.3 (from hall_class_pin out)
+  [PASS] D3 witness skew_16^T ~ had.16.4 (from skew16_transpose_pair out)
+  [PASS] D4 witness had.16.1^T ~ had.16.1 (self-transpose)
+  [PASS] D5 witness had.16.2^T ~ had.16.2 (self-transpose)
+
+==============================================================================
+PART E: independent exhaustive monomial-equivalence search (bitmask, fresh code)
+==============================================================================
+  selftest scramble(skew_16) ~ skew_16:        FOUND  nodes=3702 time=0.0s (expect FOUND)
+  selftest scramble(had.16.3) ~ skew_16:       FOUND  nodes=1769 time=0.0s (expect FOUND)
+  selftest had.16.0 vs had.16.1 (known noneq): CAP  nodes=60000001 time=150.2s (expect NONE)
+  [FAIL] E0 checker self-tests (2x FOUND on scrambles, 1x NONE on known-inequivalent)
+  skew_16 ~ had.16.3:   FOUND  nodes=2357  time=0.0s
+  [PASS] E1 skew_16 ~ had.16.3 (independent search FOUND + witness verified)
+  skew_16 ~ had.16.4:   NONE  nodes=10188512  time=23.0s   (sibling: NONE @ 10,188,512 nodes)
+  [PASS] E2 skew_16 NOT ~ had.16.4 (independent exhaustive NONE)  (nodes=10188512)
+  skew_16 ~ skew_16^T:  NONE  nodes=10188512  time=23.1s   (sibling: NONE @ 10,188,512 nodes)
+  [PASS] E3 skew_16 NOT ~ its own transpose (independent exhaustive NONE)  (nodes=10188512)
+
+==============================================================================
+PART F: Walsh-domain claims
+==============================================================================
+  m=  2: all entries of W^T S == 2 (mod 4): False   nonzeros 2/4
+  m=  4: all entries of W^T S == 2 (mod 4): True   nonzeros 16/16
+  m=  8: all entries of W^T S == 2 (mod 4): True   nonzeros 64/64
+  m= 16: all entries of W^T S == 2 (mod 4): True   nonzeros 256/256
+  m= 32: all entries of W^T S == 2 (mod 4): True   nonzeros 1024/1024
+  m= 64: all entries of W^T S == 2 (mod 4): True   nonzeros 4096/4096
+  [PASS] F1 every entry of W^T S == 2 (mod 4) at m=8,16,32 (=> 100% dense, no zeros possible)
+  m=  8: (W^T S W)/m integral=True, +-1 entries=True, Hadamard=True, hist={-1: 28, 1: 36}
+  m= 16: (W^T S W)/m integral=True, +-1 entries=True, Hadamard=True, hist={-1: 120, 1: 136}
+  m= 32: (W^T S W)/m integral=True, +-1 entries=True, Hadamard=True, hist={-1: 496, 1: 528}
+  [PASS] F2 (W^T S W)/m is +-1 Hadamard at m=8,16,32 with claimed histograms
+  [PASS] F3 Corr := S - W satisfies Corr_2m = [[C,C],[C-2I,2I-C]] (orders 4..32)
+  [PASS] F4 butterfly block identity S_2m x = [S_m(x1+x2); S_m(x1-x2)-2(x1-x2)] at m=8,64,512
+
+==============================================================================
+PART G: own 2-adic SNF (modular, K=40 bits) + odd-part exclusion via slogdet
+==============================================================================
+  skew_16 H : 2-adic SNF = 1 2^7 8^7 16                 log2|det|=32.000000 (sum log2 facs=32)  match claim+no odd part: True
+  syl_16 H  : 2-adic SNF = 1 2^4 4^6 8^4 16             log2|det|=32.000000 (sum log2 facs=32)  match claim+no odd part: True
+  skew_16 B : 2-adic SNF = 1^8 4^7 8                    log2|det|=17.000000 (sum log2 facs=17)  match claim+no odd part: True
+  syl_16 B  : 2-adic SNF = 1^5 2^6 4^4 8                log2|det|=17.000000 (sum log2 facs=17)  match claim+no odd part: True
+  skew_32 H : 2-adic SNF = 1 2^15 16^15 32              log2|det|=80.000000 (sum log2 facs=80)  match claim+no odd part: True
+  syl_32 H  : 2-adic SNF = 1 2^5 4^10 8^10 16^5 32      log2|det|=80.000000 (sum log2 facs=80)  match claim+no odd part: True
+  skew_32 B : 2-adic SNF = 1^16 8^15 16                 log2|det|=49.000000 (sum log2 facs=49)  match claim+no odd part: True
+  syl_32 B  : 2-adic SNF = 1^6 2^10 4^10 8^5 16         log2|det|=49.000000 (sum log2 facs=49)  match claim+no odd part: True
+  [PASS] G1 all eight SNFs match claims; |det| fully accounted (no odd invariant parts)
+
+==============================================================================
+SUMMARY
+==============================================================================
+  [PASS] A1 skew_tower == iterated D_skew, Hadamard+skew at 2,4,8,16,32
+  [PASS] A2 anchors H(C3)=3, H(D(C3))=45, H(regularT5)=15
+  [PASS] B1 all five saved Sloane representatives authentic (== web refetch)
+  [PASS] B2 all six saved matrices are valid Hadamard of order 16
+  [PASS] B3 had.16.4 == had.16.3^T entrywise (the literal transpose pair)
+  [PASS] B4 sylvester tower == had.16.0 verbatim
+  [PASS] B5 sylvester tower == had.16.syl verbatim
+  [PASS] B6 had.16.0 is symmetric (self-transpose with identity witness)
+  [PASS] C1 all order-16 quadruple profiles match claims (incl. Hall counts 140/76/44/28/28)
+  [PASS] C2 all order-16 GF(2) ranks of (H+J)/2 match claims (5/6/7/8/8; skew=8, syl=5)
+  [PASS] C3 skew_32 profile == {0:26656, 8:7056, 16:1568, 24:624, 32:56}
+  [PASS] C4 sylvester_32 profile == {0:34720, 32:1240} (and 1240 == C(32,3)-theory 32*31*30/24)
+  [PASS] C5 GF(2) rank (H+J)/2 at 32: skew=16, sylvester=6
+  [PASS] D1 order-8 witness: sylvester8[i,j]=eps[i]*delta[j]*skew8[sigma[i],tau[j]]
+  [PASS] D2 witness skew_16 ~ had.16.3 (from hall_class_pin out)
+  [PASS] D3 witness skew_16^T ~ had.16.4 (from skew16_transpose_pair out)
+  [PASS] D4 witness had.16.1^T ~ had.16.1 (self-transpose)
+  [PASS] D5 witness had.16.2^T ~ had.16.2 (self-transpose)
+  [FAIL] E0 checker self-tests (2x FOUND on scrambles, 1x NONE on known-inequivalent)
+  [PASS] E1 skew_16 ~ had.16.3 (independent search FOUND + witness verified)
+  [PASS] E2 skew_16 NOT ~ had.16.4 (independent exhaustive NONE)
+  [PASS] E3 skew_16 NOT ~ its own transpose (independent exhaustive NONE)
+  [PASS] F1 every entry of W^T S == 2 (mod 4) at m=8,16,32 (=> 100% dense, no zeros possible)
+  [PASS] F2 (W^T S W)/m is +-1 Hadamard at m=8,16,32 with claimed histograms
+  [PASS] F3 Corr := S - W satisfies Corr_2m = [[C,C],[C-2I,2I-C]] (orders 4..32)
+  [PASS] F4 butterfly block identity S_2m x = [S_m(x1+x2); S_m(x1-x2)-2(x1-x2)] at m=8,64,512
+  [PASS] G1 all eight SNFs match claims; |det| fully accounted (no odd invariant parts)
+
+26/27 checks passed, 1 failed.
+DONE.

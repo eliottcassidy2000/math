@@ -2085,3 +2085,36 @@ exactly a power of 2), enormously stronger than "even." Petersen (girth 5) has n
 does, you have misread the problem.** A one-character misread (`2^k` vs `2k`) flips a trivial
 exercise into a famous open conjecture. Parse the *difficulty claim* as a constraint on the
 interpretation.
+
+---
+
+## MISTAKE-065: Tile-Bit Negation Under Path Reversal — T^op Along a Reversed Path is a Grid Transpose WITHOUT Negation
+
+**Date discovered:** 2026-06-09 (caught in-session by branch-C verification before propagating)
+**Found by:** kind-pasteur-2026-06-09-S1 (hand derivation wrong; computational branch corrected it)
+**Affects:** THM-447(5) original wording, HYP-2335 original wording, T767 original wording (all corrected in place)
+
+### What was assumed
+In the canonical frame of the skew-Sylvester double D(T) (path, twin, reversed path), the copy-2
+tile block was claimed to be the "grid-transposed NEGATED" copy of T's tiling x — reasoning:
+copy 2 is T^op (all arcs reversed), so its tile bits must be complemented.
+
+### Why it was wrong
+Copy 2 is traversed along the REVERSED base path. Reversing the path also reverses the
+upper/lower convention of every tile, which complements each bit a second time. The two
+negations cancel exactly: t(X,Y) = x(σ_n(X,Y)) — grid transpose with NO negation. Verified in
+100% of 1098 framed + 1096 labeled cases (n=3..6).
+
+### The correct framing
+The single negated Sylvester copy in the tile schema [[H,H],[H,−H]] lives in the CROSS block:
+σ-partner cross tiles (i,j) ↔ (j,i) carry complementary bits A[i][j] vs A[j][i]. See THM-452.
+
+### Lesson (same family as MISTAKE-033)
+Arc reversal (T^op), path reversal, and tile-bit complementation are THREE involutions that
+compose in non-obvious ways. T^op + reversed path = grid transpose, NOT complement-transpose.
+Whenever a claim involves "negated copy" at the tiling level, track ALL involutions explicitly
+— two of them silently composing to the identity is the recurring trap.
+
+### Impact
+None propagated: corrected in THM-447(5-CORRECTED), THM-452(1), HYP-2335 status, T767 note,
+all within the same session.

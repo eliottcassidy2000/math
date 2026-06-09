@@ -1,0 +1,94 @@
+=== verify_A_H_formula_kps1 — adversarial verification of branch A-H-formula ===
+All constructions/counters written independently; doublings use INTERLEAVED order.
+
+--- T0: anchors ---
+  H(C3) backtrack          =      3  expect      3  OK
+  H(C3) dp                 =      3  expect      3  OK
+  H(C3) perm               =      3  expect      3  OK
+  H(regular T5) dp         =     15  expect     15  OK
+  H(regular T5) perm       =     15  expect     15  OK
+  H(trans5) dp             =      1  expect      1  OK
+  H(D(C3)) dp              =     45  expect     45  OK
+  H(D(C3)) backtrack       =     45  expect     45  OK
+  H(D(trans3)) dp          =     13  expect     13  OK
+  H(SC(trans3)) dp         =     41  expect     41  OK
+  H(K2(C3)) dp             =     45  expect     45  OK
+  H(SC(C3)) dp             =     45  expect     45  OK
+  D(C3) is a tournament: True
+  K2(C3) is a tournament: True
+  SC(C3) is a tournament: True
+T0 verdict: PASS
+
+--- T1: CE pair n=5 idx4 (0001000000) vs idx6 (0101000000) [claim 1] ---
+  idx4 scores=(1, 1, 2, 3, 3) (claimed (1,1,2,3,3));  idx6 scores=(2, 1, 1, 3, 3) (claimed (2,1,1,3,3))
+  idx4: spec=(3, 3, 1, 0)  odd-cycle lengths=[3, 3, 3, 5]  disjoint-odd-pair=False  IP=[1, 4]  H(T) bt/dp/perm=9/9/9
+        H(K2) backtrack=3225  dp=3225
+  idx6: spec=(3, 2, 1, 0)  odd-cycle lengths=[3, 3, 3, 5]  disjoint-odd-pair=False  IP=[1, 4]  H(T) bt/dp/perm=9/9/9
+        H(K2) backtrack=2785  dp=2785
+  raw permutation scan (10! = 3628800) on both doubles:
+    H(K2(idx4)) perm-scan = 3225   (claimed 3225)   [1.0s]
+    H(K2(idx6)) perm-scan = 2785   (claimed 2785)
+  idx4 iso idx6? False  (must be False; c4 differs 3 vs 2)
+T1 verdict: CONFIRMED — IP (and typed IP) does NOT determine H(K2)
+
+--- T2-T6: independent 74-class sweep (n=3..6) ---
+  n=3: 2 iso classes
+  n=4: 4 iso classes
+  n=5: 12 iso classes
+  n=6: 56 iso classes
+  sweep done [5.1s]; P1-table spot mismatches: 0 (n<=5 full) + 0 (n=6 spots)
+
+T2: spectrum groups: 32 distinct (claimed 32), 22 multi (claimed 22)
+    spectrum -> H(K2): 0 broken (claimed 0)
+    spectrum -> H(D): 22 broken (claimed 22); spectrum -> H(SC): 9 broken (claimed 9)
+T2 verdict: CONFIRMED
+
+T3: product law H(K2): 74/74 (claimed 74/74)
+    product law H(D): 43/74 (claimed 43);  H(SC): 43/74 (claimed 43); strong classes: 43 (claimed 43)
+    n=6 idx26 comps=(3, 3) H(K2)=2025 (claimed 2025=45^2)
+T3 verdict: CONFIRMED
+
+T4: c3'(K2) == 8 c3: 74/74;   c5'(K2) == 32c5+32c4+6c3: 74/74
+    c7'(K2) == 128c7+192c6+80c5+8c4+64p331+48p332+64p341+32p342: 74/74
+    NOTE: c7 of base == 0 for ALL n<=6, so the 128c7 coefficient is UNTESTED here.
+    classes with p341 > 0 (testing the 64*p341 coefficient): 34
+    p(3,4,3) == 2*p(3,3,2): 74/74
+T4 verdict: CONFIRMED
+
+T5: H(K2) == 2H(T)-1 (mod 8): 74/74 (claimed 74)
+    (H(K2)-(2H(T)-1)) mod 16 census: {0: 39, 8: 35} (claimed {0:39, 8:35})
+    H(SC) == 1 (mod 4): 74/74 (claimed 74)
+T5 verdict: CONFIRMED
+
+T6: H(D(T)) != H(D(T^op)): 50/74 (claimed 50)
+    n=4 idx1: H(D)=189 H(D(op))=333 (claimed 189 vs 333)
+    n=5 H(D) mod 8 values: [1] (claimed all 1);  n=3 mod 8: [5] (claimed all 5)
+T6 verdict: CONFIRMED
+
+--- T7: transitive towers (independent constructions + fresh DP) ---
+  n=3: H(D)=13  H(SC)=41  H(K2)=1   [0.0s]
+  n=4: H(D)=95  H(SC)=629  H(K2)=1   [0.0s]
+  n=5: H(D)=1033  H(SC)=14937  H(K2)=1   [0.0s]
+  n=6: H(D)=15611  H(SC)=513669  H(K2)=1   [0.0s]
+  n=7: H(D)=313285  H(SC)=24104937  H(K2)=1   [0.1s]
+  H(D(trans_n)) n=3..7: [13, 95, 1033, 15611, 313285] (claimed [13, 95, 1033, 15611, 313285])
+  H(SC(trans_n)) n=3..7: [41, 629, 14937, 513669, 24104937] (claimed [41, 629, 14937, 513669, 24104937])
+T7 verdict: CONFIRMED
+
+--- T8: spec (6,7,6,3) strong pair n=6 idx42 vs idx45: full odd profile + IP of Omega(K2) ---
+    claimed: both profile'=(48,452,3016,10148,9856), IP'=(1,23520,14664,1520,16), H(K2)=118113
+  idx42: profile'=(48, 452, 3016, 10148, 9856) IP'=(1,23520,14664,1520,16) I'(2)=118113 H(K2)=118113 match=True   [0.2s]
+  idx45: profile'=(48, 452, 3016, 10148, 9856) IP'=(1,23520,14664,1520,16) I'(2)=118113 H(K2)=118113 match=True   [0.2s]
+T8 verdict: CONFIRMED (identical, matches claim)
+
+--- cross-validation: perm-method vs subset-DP cycle counts on K2(idx4), K2(idx6) ---
+  idx4 c3'(K2): dp=24 perm=24 OK
+  idx4 c5'(K2): dp=146 perm=146 OK
+  idx4 c7'(K2): dp=344 perm=344 OK
+  idx4 c9'(K2): dp=370 perm=370 OK
+  idx6 c3'(K2): dp=24 perm=24 OK
+  idx6 c5'(K2): dp=114 perm=114 OK
+  idx6 c7'(K2): dp=320 perm=320 OK
+  idx6 c9'(K2): dp=266 perm=266 OK
+
+=== done in 6.8s ===

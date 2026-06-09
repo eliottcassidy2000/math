@@ -1,0 +1,78 @@
+=== ADVERSARIAL VERIFICATION of branch C-tiling ===
+
+--- V1: independent D(T) construction vs core D_skew ---
+n=3: my_D == D_skew in 8/8 labeled tournaments
+n=4: my_D == D_skew in 64/64 labeled tournaments
+n=5 spot checks (every 37th): mismatches = 0
+
+--- anchors (own path enumeration) ---
+H(C3) = 3 (expect 3)
+H(regular T5) = 15 (expect 15)
+H(Paley T7) = 189 (expect 189)
+H(D(C3)) = 45 (expect 45)
+
+--- V2: BLUE / defect / block formula / weight over ALL (labeled T, Ham path) pairs ---
+n=3: (T,frame) pairs = 12  canonical-D-path failures = 0  BLUE = 0  defect!=c_n = 0  formula fails = 0  weight fails = 0
+n=4: (T,frame) pairs = 192  canonical-D-path failures = 0  BLUE = 0  defect!=c_n = 0  formula fails = 0  weight fails = 0
+n=5: (T,frame) pairs = 7680  canonical-D-path failures = 0  BLUE = 0  defect!=c_n = 0  formula fails = 0  weight fails = 0
+
+--- V3: blue Ham paths of D(T), brute force over ALL Ham paths of D, per iso class ---
+    structural necessary condition: anti-aut of D needs score multiset of D invariant
+    under s -> 2n-1-s, which forces n odd AND T regular.
+  n=3 T#0 scores=[0, 1, 2] H(T)=1: H(D)=13  blue=0  struct-possible=False
+  n=3 T#1 scores=[1, 1, 1] H(T)=3: H(D)=45  blue=9  struct-possible=True
+  n=4 T#0 scores=[0, 1, 2, 3] H(T)=1: H(D)=95  blue=0  struct-possible=False
+  n=4 T#1 scores=[1, 1, 1, 3] H(T)=3: H(D)=189  blue=0  struct-possible=False
+  n=4 T#2 scores=[1, 1, 2, 2] H(T)=5: H(D)=523  blue=0  struct-possible=False
+  n=4 T#3 scores=[0, 2, 2, 2] H(T)=3: H(D)=333  blue=0  struct-possible=False
+  n=5 T#0 scores=[0, 1, 2, 3, 4] H(T)=1: H(D)=1033  blue=0  struct-possible=False
+  n=5 T#1 scores=[1, 1, 1, 3, 4] H(T)=3: H(D)=1809  blue=0  struct-possible=False
+  n=5 T#2 scores=[1, 1, 2, 2, 4] H(T)=5: H(D)=2817  blue=0  struct-possible=False
+  n=5 T#3 scores=[0, 2, 2, 2, 4] H(T)=3: H(D)=1809  blue=0  struct-possible=False
+  n=5 T#4 scores=[1, 1, 2, 3, 3] H(T)=9: H(D)=8137  blue=0  struct-possible=False
+  n=5 T#5 scores=[0, 2, 2, 3, 3] H(T)=5: H(D)=5289  blue=0  struct-possible=False
+  n=5 T#6 scores=[1, 1, 2, 3, 3] H(T)=9: H(D)=8145  blue=0  struct-possible=False
+  n=5 T#7 scores=[0, 1, 3, 3, 3] H(T)=3: H(D)=3561  blue=0  struct-possible=False
+  n=5 T#8 scores=[1, 2, 2, 2, 3] H(T)=11: H(D)=11017  blue=0  struct-possible=False
+  n=5 T#9 scores=[1, 2, 2, 2, 3] H(T)=15: H(D)=12129  blue=0  struct-possible=False
+  n=5 T#10 scores=[1, 2, 2, 2, 3] H(T)=13: H(D)=11625  blue=0  struct-possible=False
+  n=5 T#11 scores=[2, 2, 2, 2, 2] H(T)=15: H(D)=15505  blue=185  struct-possible=True
+
+--- V4: tower W_{2^k}, own doubling; closed form at 2..32; Gray path; W16 frame ---
+order-32 tower: my_D-built == D_skew-built: True
+order 2: closed-form errors = 0/2; Gray path valid = True
+order 4: closed-form errors = 0/12; Gray path valid = True
+order 8: closed-form errors = 0/56; Gray path valid = True
+order 16: closed-form errors = 0/240; Gray path valid = True
+order 32: closed-form errors = 0/992; Gray path valid = True   <-- EXTENSION beyond sibling claim (they tested <=16)
+
+  canonical (Gray) frame tilings of W4, W8, W16:
+  W4: weight = 2  gridsym = False  violations = 2 (== top cross-offtwin: True)  fractal anti-diagonals all-ones at every scale: True
+  W8: weight = 13  gridsym = False  violations = 12 (== top cross-offtwin: True)  fractal anti-diagonals all-ones at every scale: True
+  W16: weight = 61  gridsym = False  violations = 56 (== top cross-offtwin: True)  fractal anti-diagonals all-ones at every scale: True  105-bit == sibling string: True
+
+  Walsh battery recount on W16 canonical-frame bits:
+    exact skew-Walsh            : 105/105
+    pure Walsh par(pc(a&b))     : 52/105
+    Thue-Morse TM(a)^TM(b)      : 61/105
+    twin-direction only (b_L)   : 68/105
+    sign only                   : 49/105
+
+--- V5: T15 (core of normalized order-16 S-tower) ---
+S16 skew-Hadamard (own check): True
+normalized S16 skew-Hadamard: True  first row all +1: True
+T15 scores: [7] x 15  (expect all 7)
+common out-neighbour counts over pairs: [3]  DRT = True
+H(T15) core DP        = 198335025   (0.1s)
+H(T15) inclusion-excl = 198335025   (0.6s)   match = True   sibling value 198335025 match = True
+
+ALL anti-automorphisms (isos T15 -> T15^op): 0  (backtrack nodes = 4195, 0.0s)
+  involutive among them: 0   => T15 self-converse: False;  anti-involutions = 0 (sibling claims 0)
+  pure-black verdict (no blue frame in ANY Ham-path frame): True
+sibling insertion path valid in T15: True
+insertion-frame tiling: weight = 48/91 (claim 48)  gridsym = False (claim False)  violated tiles = 32 (claim 32)
+
+D(C3): anti-automorphisms = 3, involutive = 1 (sibling claims 1)
+D(regT5): anti-automorphisms = 5, involutive = 1 (sibling claims 1)
+
+=== done (4.9s total) ===
