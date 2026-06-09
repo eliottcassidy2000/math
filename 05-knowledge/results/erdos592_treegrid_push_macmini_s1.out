@@ -1,3 +1,6 @@
+# WARNING (MISTAKE-067): the SAT certificates in this file used an INCOMPLETE independent-subgrid verifier and are INVALID beyond the corrected thresholds.
+# Corrected exact results: see erdos592_verify_fix_macmini_s1.out (R(1,2)=3, R(2,2)=5, Q(3,3) SAT, Q(3,4) SAT).
+
 n=2 t=9: leaves=81
    SAT: witness with 313 edges (746 lazy clauses, 747 rounds, 0.3s)
    [Q(2,9) witness] meet-level histogram: {0: 271, 1: 42}

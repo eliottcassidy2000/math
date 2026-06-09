@@ -180,7 +180,10 @@ verifier — see MISTAKE-067 for the incomplete-verifier episode this corrects):
 |---|--------|--------------|
 | 1 | **3** | Ramsey shadow: triangle-free ∧ meet-every-pair dies at K₃ |
 | 2 | **5** | Q(2,4) SAT (35-edge witness); **Q(2,5) UNSAT** (532 CEGAR clauses, <1s) |
-| 3 | Q(3,3) SAT (35 edges); t ≥ 4 [running] | strong-witness shadow hunt |
+| 3 | **> 4** | Q(3,3) SAT (35 edges); Q(3,4) SAT (346 edges, 140,840 CEGAR clauses, 692s, complete verification); Q(3,5) running at write-up |
+
+The n=2 vs n=3 contrast at t = 4→5 (UNSAT vs a hard-fought 346-edge SAT) is the
+Specker ω²-vs-ω³ dichotomy forming its finite shadow.
 
 **R(2,2) = 5** is, to our knowledge, a new finite Ramsey-type number: *every
 triangle-free graph on the 5×5 grid leaves some binary subgrid (2 rows × 2+2 cells)

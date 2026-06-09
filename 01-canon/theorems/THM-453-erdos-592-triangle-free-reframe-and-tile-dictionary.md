@@ -89,21 +89,26 @@ out of the compactness proof — quantifying it is a fresh finite combinatorics 
 relation. (MISTAKE-066 was asserting the false converse direction in an early
 docstring; caught and corrected the same session.)
 
-## E. Computed values and structure (exact; Glucose3 + CEGAR, and exhaustive DPLL)
+## E. Computed values (exact; Glucose3 + CEGAR with a COMPLETE independent-subgrid
+verifier — `erdos592_verify_fix_macmini_s1.py`; the first CEGAR runs used an
+incomplete verifier and overstated SAT badly: MISTAKE-067)
 
-* **R(1,2) = 3** (calibration: "triangle-free + meet every pair" dies at 3 vertices —
-  the Ramsey ω → (ω,3) shadow).
-* **R(2,2) > 10** (witnesses found at every t ≤ 10; run continuing): despite Specker
-  FORCING R(2,2) < ∞, finite witnesses persist with edge counts
-  1, 6, 18, 40, 77, 143, 208, 313, 420 at t = 2..10. The hidden finite threshold is
-  large — the Mantel/Zarankiewicz pressure (see F) has constant-factor slack ≈ 2.
-* **Q(3,t) SAT for t ≤ 5** (witness edge counts 1, 18, 90, 223), consistent with ω³'s
-  negative relation having strong witnesses.
-* Witness structure: at n=2 edges concentrate on cross classes (meet level 0) with
-  second-coordinate increase, spread over ALL root-gaps with declining frequency; at
-  n=3 dominated by meet-level-0, suffix-profile ('<','<') (domination-type) plus
-  meet-level-1 ('<') classes, again gap-graded. The witnesses are NOT order-pattern
-  functions: gap magnitudes are used essentially (cf. part E.3 below).
+| n | result | witness data |
+|---|--------|--------------|
+| 1 | **R(1,2) = 3** | Ramsey shadow ("triangle-free ∧ meet every pair" dies at K₃); exhaustive DPLL |
+| 2 | **R(2,2) = 5** | Q(2,4) SAT (35 edges); **Q(2,5) UNSAT** (532 CEGAR clauses, <1s) |
+| 3 | **R(3,2) > 4** | Q(3,3) SAT (35 edges); Q(3,4) SAT (346 edges, 140,840 CEGAR clauses, 692s); Q(3,5) running at write-up |
+
+**R(2,2) = 5** is, to our knowledge, a new finite Ramsey-type number: every
+triangle-free graph on the 5×5 grid leaves some binary subgrid independent, while a
+35-edge triangle-free graph dominates all binary subgrids of the 4×4 grid. Its
+finiteness is forced by Specker's theorem (D2); its value is NOT — the compactness
+proof is bound-free, and the first (buggy) computation's "R(2,2) > 14" shows how
+unconstrained the a priori range was. The n=2 vs n=3 contrast at t=4→5 (UNSAT vs SAT
+with a hard-fought 346-edge witness) is the Specker dichotomy's finite shadow forming.
+Witness structure at both n: edges concentrate on meet-level-0 cross classes with
+coordinate-increasing suffixes, graded by root-gap, with gap magnitudes used
+essentially — NOT order-pattern functions (E.3).
 
 ### E.1 Patterns = tile-pair geometry (HYP-2344, VERIFIED)
 The order/equality patterns of pairs of increasing 2-tuples are exactly the repo's

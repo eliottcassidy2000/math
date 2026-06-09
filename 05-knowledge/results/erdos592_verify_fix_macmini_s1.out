@@ -19,3 +19,5 @@ Q(3,2):
 Q(3,3):
    SAT (verified by COMPLETE search): 35 edges (49 lazy clauses, 0.0s)
 Q(3,4):
+
+# Q(3,5) undecided at session close (CEGAR verifier-bound after ~30min; see backlog handoff 1). Invariant reruns not reached.

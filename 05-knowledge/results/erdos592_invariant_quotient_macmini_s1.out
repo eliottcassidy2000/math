@@ -1,3 +1,6 @@
+# WARNING (MISTAKE-067): the SAT certificates in this file used an INCOMPLETE independent-subgrid verifier and are INVALID beyond the corrected thresholds.
+# Corrected exact results: see erdos592_verify_fix_macmini_s1.out (R(1,2)=3, R(2,2)=5, Q(3,3) SAT, Q(3,4) SAT).
+
 ==============================================================================
 TRANSLATION-INVARIANT Q(n,t): the (R,{B_g}) graded-relation quotient
 ==============================================================================
