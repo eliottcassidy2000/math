@@ -1,0 +1,33 @@
+==============================================================================
+MOSER-LADDER RUNG STRUCTURE: unit-vector count and unit-triangle count tau
+==============================================================================
+  t  D=4t-1  #units   (tri,wt,trans)  tau(t)  note
+  3      11      18          (6,6,6)      18  <- Moser lattice (all repo constructions)
+  4      15      18          (6,6,6)      18  
+  9      35      18          (6,6,6)      18  
+ 12      47      18          (6,6,6)      18  
+ 13      51      24         (6,6,12)      24  24-unit rung (split prime =1 mod3)
+ 16      63      18          (6,6,6)      18  
+ 21      83      24         (6,6,12)      24  24-unit rung (split prime =1 mod3)
+ 28     111      24         (6,6,12)      24  24-unit rung (split prime =1 mod3)
+ 49     195      30         (6,6,18)      30  30-unit RECORD rung (t=49=7^2)
+
+==============================================================================
+DENSEST PATCH PER RUNG (greedy multistart + hill-climb; EXACT recount)
+Same search budget every rung. KNOWN = Engel/AMP best (t=3).
+==============================================================================
+  N |    t=3    t=4    t=9   t=12   t=13   t=16   t=21   t=28   t=49 | KNOWN
+----------------------------------------------------------------------------
+  9 |     16     16     16     16     16     16     16     16     16 | 18
+ 12 |     24     24     24     24     24     24     24     24     24 | 27
+ 16 |     34     34     34     34     34     34     34     34     34 | 41
+ 21 |     47     47     47     47     47     47     47     47     47 | 57
+ 24 |     55     55     55     55     55     55     55     55     55 | 72
+ 27 |     63     63     63     63     63     63     63     63     63 | 81
+ 28 |     65     65     65     65     65     65     65     65     65 | 85
+ 30 |     70     70     70     70     70     70     70     70     70 | 93
+
+Reading: if any t>3 column EXCEEDS the t=3 column (and KNOWN) at some N,
+that rung supports a denser patch -> potential new record. If t=3 dominates,
+the Moser lattice is special for DENSITY, not merely unit-vector count.
+DONE.
