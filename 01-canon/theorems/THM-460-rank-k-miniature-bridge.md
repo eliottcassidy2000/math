@@ -124,10 +124,26 @@ elements below it.
 | (2,3) | 9 | SAT, 5-edge witness |
 | (3,2) | 8 | SAT, 5-edge witness |
 | (2,4) | 16 | SAT, 34-edge witness |
-| (3,3) | 27 | grinding at session close (tens of thousands of CEGAR rounds — UNSAT-convergence-shaped; result lands in `erdos592_chang_towers_v2_macmini_s2.out`) |
+| (4,2) | 16 | SAT, 36-edge witness |
+| (2,5) | 25 | **SAT, 83-edge witness — hard-fought (18,806 CEGAR clauses, 916 s)** |
+| (3,3) | 27 | UNDECIDED (timeout 2408 s, 32,498 clauses) |
+| (2,6),(3,4),(2,7),(4,3),(2,8),(5,2),(3,5) | 36–125 | UNDECIDED (timeouts, 43k–148k clauses) |
 
-* Chang's theorem GUARANTEES the sweep hits UNSAT (C2); the first UNSAT (s,C) is
-  the first computed "Chang number".
+* **The (2,5) contrast datum:** at the SAME 25-vertex ambient where the grid game
+  dies (Q(2,5) UNSAT = R(2,2)=5), the tower game still has a witness — towers
+  (6 leaves, any of 15 pairs may hit) are weaker constraints per object, so Chang
+  numbers sit strictly deeper than Specker numbers. Chang's theorem GUARANTEES
+  the sweep hits UNSAT eventually (C2); the first Chang number is beyond this
+  session's compute (needs symmetry breaking / incremental encodings — handoff).
+* M=3 spot checks: SAT at (3,3) [28 edges] and (4,2) [5 edges]; (2,C) instances
+  are VACUOUS (a binary 3-grid needs 3 split positions, so s ≥ 3 — a
+  miniature-design guard for future sweeps). For FIXED ambient, larger M is the
+  WEAKER finite demand; C2's forcing is per-M over growing (s,C).
+* Q(2,5) UNSAT was independently re-derived by the persistent-SAT-verifier
+  implementation (705 lazy clauses, 2589 s) — R(2,2)=5 is now double-certified
+  by two different complete verifiers. Q(3,5): TIMEOUT at 3605 s with 80,111
+  lazy clauses (free), 62,854 (invariant) — undecided either way; Q(4,3) SAT
+  (115 edges).
 * Minimal grid-witness sizes for the THM-453 game (new sequence, certified
   optimal at t ≤ 3): **f_grid(2)=1, f_grid(3)=7, f_grid(4)≤30** (35-edge and
   30-edge witnesses known; optimality run timed out below 30).

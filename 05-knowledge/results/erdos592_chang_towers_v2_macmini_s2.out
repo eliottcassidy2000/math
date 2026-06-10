@@ -11,3 +11,34 @@
    [ambient 16 vertices, 216 2-grids]
    SAT    M=2 s=2 C=4  (34 edges, lazy=43, 0.0s)
    [ambient 27 vertices, 3969 2-grids]
+   TIMEOUT M=2 s=3 C=3 (32498 cls, 2408s)
+   [ambient 25 vertices, 1000 2-grids]
+   SAT    M=2 s=2 C=5  (83 edges, lazy=18806, 915.7s)
+   [ambient 16 vertices, 860 2-grids]
+   SAT    M=2 s=4 C=2  (36 edges, lazy=49, 0.0s)
+   [ambient 36 vertices, 3375 2-grids]
+   TIMEOUT M=2 s=2 C=6 (48295 cls, 2404s)
+   [ambient 64 vertices, 87264 2-grids]
+   TIMEOUT M=2 s=3 C=4 (145099 cls, 2400s)
+   [ambient 49 vertices, 9261 2-grids]
+   TIMEOUT M=2 s=2 C=7 (94076 cls, 2401s)
+   [ambient 81 vertices, 381510 2-grids]
+   TIMEOUT M=2 s=4 C=3 (64529 cls, 2400s)
+   [ambient 64 vertices, 21952 2-grids]
+   TIMEOUT M=2 s=2 C=8 (148013 cls, 2400s)
+   [ambient 32 vertices, 16120 2-grids]
+   TIMEOUT M=2 s=5 C=2 (84533 cls, 2400s)
+   [ambient 125 vertices, 905000 2-grids]
+   TIMEOUT M=2 s=3 C=5 (43228 cls, 2400s)
+
+first UNSAT in sweep: None
+
+=== M=3 spot checks ===
+   [ambient 27 vertices, 3969 2-grids, 2187 3-grids]
+   SAT    M=3 s=3 C=3  (28 edges, lazy=29, 3.1s)
+   [ambient 25 vertices, 1000 2-grids, 0 3-grids]
+   SAT    M=3 s=2 C=5  (0 edges, lazy=0, 0.0s)
+   [ambient 16 vertices, 860 2-grids, 1446 3-grids]
+   SAT    M=3 s=4 C=2  (5 edges, lazy=5, 0.2s)
+   [ambient 36 vertices, 3375 2-grids, 0 3-grids]
+   SAT    M=3 s=2 C=6  (0 edges, lazy=0, 0.0s)

@@ -1,0 +1,44 @@
+=== cross-validation: SAT verifier vs exhaustive DFS verifier ===
+   n=2 t=3: 40 random graphs, verdicts agree, witnesses valid
+   n=2 t=4: 40 random graphs, verdicts agree, witnesses valid
+   n=3 t=2: 40 random graphs, verdicts agree, witnesses valid
+   n=3 t=3: 40 random graphs, verdicts agree, witnesses valid
+   CROSS-VALIDATION: PASS
+
+=== sanity re-derive (must match part 6): ===
+   SAT  (n=2,t=4; 33 edges, seed=27, lazy=120, 0.0s)
+   Q(2,4) = True  (expected True)  OK
+   UNSAT (n=2,t=5; seed=64, lazy=705, 2588.6s)
+   Q(2,5) = False  (expected False)  OK
+   SAT  (n=3,t=3; 26 edges, seed=128, lazy=23, 0.0s)
+   Q(3,3) = True  (expected True)  OK
+
+=== THE FRONTIER: Q(3,5) free ===
+   TIMEOUT (80111 lazy clauses, 3605s)
+
+=== invariant cutoffs ===
+   SAT  (inv n=2,t=2; 2 edges, seed=1, lazy=0, 0.0s)
+   invQ(2,2) = True
+   SAT  (inv n=2,t=3; 9 edges, seed=8, lazy=2, 0.0s)
+   invQ(2,3) = True
+   SAT  (inv n=2,t=4; 37 edges, seed=27, lazy=26, 0.0s)
+   invQ(2,4) = True
+   UNSAT (inv n=2,t=5; seed=64, lazy=178, 0.1s)
+   invQ(2,5) = False
+   --> invariant n=2 cutoff = 5
+   SAT  (inv n=3,t=2; 2 edges, seed=1, lazy=0, 0.0s)
+   invQ(3,2) = True
+   SAT  (inv n=3,t=3; 30 edges, seed=128, lazy=11, 0.0s)
+   invQ(3,3) = True
+   SAT  (inv n=3,t=4; 317 edges, seed=2187, lazy=26128, 91.6s)
+   invQ(3,4) = True
+   TIMEOUT (62854 lazy clauses, 1801s)
+   invQ(3,5) = None
+   TIMEOUT (30835 lazy clauses, 1801s)
+   invQ(3,6) = None
+
+=== curiosity: n=4 ===
+   SAT  (n=4,t=2; 1 edges, seed=1, lazy=0, 0.0s)
+   Q(4,2) = True
+   SAT  (n=4,t=3; 115 edges, seed=32768, lazy=119, 0.1s)
+   Q(4,3) = True
