@@ -1,0 +1,27 @@
+n = 1729 = 7 * 13 * 19 ; all primes == 1 mod 3: True
+divisors (8 = tau): [1, 7, 13, 19, 91, 133, 247, 1729]
+     d  3d|(d^3-n)  s=(d^3-n)/3d      Delta  square? roots
+     1         yes          -576       2305       no 
+     7         yes           -66        313       no 
+    13         yes            12        121      YES {12,1} gcd=1 cofactor=133
+    19         yes            90          1      YES {10,9} gcd=1 cofactor=91
+    91         yes          2754      -2735       no 
+   133         yes          5892      -5879       no 
+   247         yes         20334     -20327       no 
+  1729         yes        996480    -996479       no 
+good divisors: [13, 19] (worker claims exactly [13, 19])
+cofactors: 133 = 7*19 -> True; 91 = 7*13 -> True
+gcd(13,19) = 1
+r_E(1729): x^2+xy+y^2 count = 48, x^2-xy+y^2 count = 48 (worker: 48); 12 + r_E = 60 (worker/THM-434: 60 units)
+B(1729) = 8 (worker: 8); tau(1729) = 8
+sieve vs brute force r=6B, t<=200: 0 mismatches
+B-records over all t in [1,1729]: [(1, 1), (7, 2), (49, 3), (91, 4), (637, 6), (1729, 8)] (worker: (1,1)(7,2)(49,3)(91,4)(637,6)(1729,8))
+t < 7^6 with B(t) = 7: 0; B(7^6) = 7
+degenerate (4t-1 = 3*sq): 1:True, 7:True, 91:True, 3:False, 13:False, 49:False, 133:False, 637:False, 1729:False
+B-records over non-degenerate t in [2,1729]: [(3, 1), (13, 2), (49, 3), (133, 4), (637, 6), (1729, 8)]
+matches THM-434 published rungs 3,13,49,133,637,1729: True
+smallest n with two positive reps (brute force x,y<=13): [1729]
+no n < 1729 with two positive reps: True
+9^3 + 10^3 - 12^3 = 1 (Klein: 12^3 = 1728)
+1729 = 9^3+10^3 = True; = 12^3+1 = True
+VERDICT(A6 computational side): PASS

@@ -1395,3 +1395,14 @@ ADD-10: every sequence off the two named endpoints is anonymous). UNCHANGED: ADD
 edge √log, tail constant `e`. NEW: the ADD-15 "two humps are one" is now a quantitative identity
 with explicit shared coefficients; OEIS A088368's asymptotic is refined past its leading term.
 Files: `04-computation/paley_starstar_tail_moment_watson_monad.py` (+`.out`).
+
+---
+
+## ADDENDUM-8 (2026-06-10, kind-pasteur-2026-06-10-S1, Thread E): finite-p resurgence confirmed in the multi-run sector; new exact integers; odd-run joint lemma
+
+1. **New exact values** (Möbius/partition-contraction engine; brute-force- and stored-value-validated; independently re-verified by a C DFS engine with affine symmetry reduction): `A₆(31) = 3281040`, `A₈(19) = 10243584`, `A₈(23) = 34327040`, `A₈(31) = 202487040`; joint collision corrections `δ(2,2) = A_{(2,2)} − A₂² = −2100, −10340, −62244, −114356, −292020` at `p = 7, 11, 19, 23, 31` (so `δ22/p³ → ≈ −10`), `δ(2,4)/p⁴ → ≈ −28`, genuine cherry-triple `δ3/p⁴ → ≈ +262`. These factorially-growing coefficients are ADDENDUM-6's Gevrey-1 growth biting at finite p: exact depth/collision-order truncations of R(p) oscillate with O(0.2–4.7) residuals at p ≤ 31 and CANNOT be sharpened termwise (full ladder: `paley_R31_prediction_kpc1.out`). The asymptotic FORM `R = e(1 − C/p − D/p² − …)` of ADDENDUM-4 remains the usable finite-p handle; fitted `C ≈ 1.30–1.62`, consistent with forward #2's `C ≈ 1.4` — the p=31 run (HYP-2371) will pin it. *Implementation caveat (verifier, recorded with HYP-2371): the ladder's placement DP caps pending marked runs at 2, truncating its documented "all matchings ≤ 3 pairs" spec for p ≥ 19; conclusions hold under both semantics.*
+2. **NEW LEMMA (PROVED, one line).** Reversing a single run of a multi-run joint integral is a distinctness-preserving involution multiplying the sum by `(−1)^{L_j}` (each of that run's edge-differences negates; `χ(−1) = −1` at `p ≡ 3 mod 4`); hence **any joint containing an odd-length run vanishes exactly** — e.g. `A_{(3,3)} = 0` identically (verified p ≤ 31), strictly stronger than HYP-2307's global-negation argument (J(3,3) has EVEN total edge count, so the global argument is silent there).
+3. **The cluster decomposition with exact joints is an IDENTITY**, exact at p=7: `R(7) = 1 + 1 + 2/5 + 1/5 − 1/5 = 12/5` assembled purely from character sums (cherry + 4-run + 6-run + (2,2)-joint), verified against all 5040 orderings including the `T(S) = A_joint·(p−n)!` identity on every slot-subset. Truncation only bites via omitted/factorized joints.
+
+Statements `A_{2k} = C_k·p^{k+1}` and `R(p) → e`: UNCHANGED.
+

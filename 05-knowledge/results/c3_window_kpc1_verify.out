@@ -1,0 +1,18 @@
+=== (a) exact algebra n<=5000 ===
+algebra: PASS
+
+=== (b) threshold sqrt(W(n)) <= h-2 ===
+sqrt(W)<=h-2 first holds: odd n=17, even n=12; so all n>=16 covered: PASS
+
+=== (c) canonical construction, n=8..100, every t in [0, W(n)] ===
+total (n,t) pairs checked: 41729
+  n=8: 7 failing t values ([0, 1, 2, 3, 4, 5, 6])
+  n=10: 11 failing t values ([0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10])
+  n=12: 16 failing t values ([0, 1, 2, 3, 4, 5] ... [13, 14, 15])
+  n=14: 22 failing t values ([0, 1, 2, 3, 4, 5] ... [19, 20, 21])
+no failures for n>=16: PASS
+
+=== (d) ALL four-square decompositions, n=16..40, every t ===
+(n,t,quad) triples checked: 9306; all pass: PASS
+
+OVERALL window-step verification: PASS

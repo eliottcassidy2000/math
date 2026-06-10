@@ -197,3 +197,17 @@ factorization `1729 = 7·13·19`, not (yet) a proven structural bridge.
   these are `t = 1, 7, 19, 37, … = (3m²+1)/4`, `m` odd).
 - This counts unit **vectors** (max possible vertex degree), not the densest
   unit-distance graph the lattice supports — that is a separate (harder) question.
+
+---
+
+> **ADDENDUM (2026-06-10, kind-pasteur-2026-06-10-S1, THM-463).** The §Record-rungs
+> "flagged resonance" is now resolved on BOTH sides. Tournament side: COINCIDENCE
+> (HYP-2306 + `the-1729-resonance-is-isolated` reflection — r(p) has no splitting law at
+> p = 19, 23). Taxicab side: STRUCTURAL — **THM-463** proves n = x³+y³ factors as
+> d·N(x+yω) through THIS theorem's Eisenstein norm form, with every primitive cofactor
+> forced onto the split axis (3^{0,1}·primes ≡ 1 mod 3), hence 1729 heads the taxicab
+> list and this ladder's 60-unit record list for one reason: 7·13·19 = product of the
+> three smallest split primes, B = τ = 8. Verified to 10¹²: all 10931 primitive reps of
+> all 5464 doubly-primitive taxicab numbers, 0 violations (inert primes occur in 1952 of
+> them but are confined to gcd(d₁,d₂) with full multiplicity — never in a cofactor).
+

@@ -1,0 +1,78 @@
+=== Part 1: brute backtracking n=3..14 (every-prefix Landau check) ===
+n=3: #Landau=2 (A000571 match=True), c3 range [0,1], |A|=2, gaps=NONE, max==formula:True, minf==nearreg:True
+n=4: #Landau=4 (A000571 match=True), c3 range [0,2], |A|=3, gaps=NONE, max==formula:True, minf==nearreg:True
+n=5: #Landau=9 (A000571 match=True), c3 range [0,5], |A|=6, gaps=NONE, max==formula:True, minf==nearreg:True
+n=6: #Landau=22 (A000571 match=True), c3 range [0,8], |A|=9, gaps=NONE, max==formula:True, minf==nearreg:True
+n=7: #Landau=59 (A000571 match=True), c3 range [0,14], |A|=15, gaps=NONE, max==formula:True, minf==nearreg:True
+n=8: #Landau=167 (A000571 match=True), c3 range [0,20], |A|=21, gaps=NONE, max==formula:True, minf==nearreg:True
+n=9: #Landau=490 (A000571 match=True), c3 range [0,30], |A|=31, gaps=NONE, max==formula:True, minf==nearreg:True
+n=10: #Landau=1486 (A000571 match=True), c3 range [0,40], |A|=41, gaps=NONE, max==formula:True, minf==nearreg:True
+n=11: #Landau=4639 (A000571 match=True), c3 range [0,55], |A|=56, gaps=NONE, max==formula:True, minf==nearreg:True
+n=12: #Landau=14805 (A000571 match=True), c3 range [0,70], |A|=71, gaps=NONE, max==formula:True, minf==nearreg:True
+n=13: #Landau=48107 (A000571 match=True), c3 range [0,91], |A|=92, gaps=NONE, max==formula:True, minf==nearreg:True
+n=14: #Landau=158808 (A000571 match=True), c3 range [0,112], |A|=113, gaps=NONE, max==formula:True, minf==nearreg:True
+
+=== Part 2: independent layered DP n=3..60 ===
+n=3: maxc3=1 (formula:True), minc3=0 (==0:True), |A|=2 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=4: maxc3=2 (formula:True), minc3=0 (==0:True), |A|=3 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=5: maxc3=5 (formula:True), minc3=0 (==0:True), |A|=6 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=6: maxc3=8 (formula:True), minc3=0 (==0:True), |A|=9 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=7: maxc3=14 (formula:True), minc3=0 (==0:True), |A|=15 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=8: maxc3=20 (formula:True), minc3=0 (==0:True), |A|=21 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=9: maxc3=30 (formula:True), minc3=0 (==0:True), |A|=31 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=10: maxc3=40 (formula:True), minc3=0 (==0:True), |A|=41 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=11: maxc3=55 (formula:True), minc3=0 (==0:True), |A|=56 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=12: maxc3=70 (formula:True), minc3=0 (==0:True), |A|=71 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=13: maxc3=91 (formula:True), minc3=0 (==0:True), |A|=92 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=14: maxc3=112 (formula:True), minc3=0 (==0:True), |A|=113 (==M+1:True), gapfree=True, minf==nearreg:True, DPset==brute:True
+n=15: maxc3=140 (formula:True), minc3=0 (==0:True), |A|=141 (==M+1:True), gapfree=True, minf==nearreg:True
+n=16: maxc3=168 (formula:True), minc3=0 (==0:True), |A|=169 (==M+1:True), gapfree=True, minf==nearreg:True
+n=17: maxc3=204 (formula:True), minc3=0 (==0:True), |A|=205 (==M+1:True), gapfree=True, minf==nearreg:True
+n=18: maxc3=240 (formula:True), minc3=0 (==0:True), |A|=241 (==M+1:True), gapfree=True, minf==nearreg:True
+n=19: maxc3=285 (formula:True), minc3=0 (==0:True), |A|=286 (==M+1:True), gapfree=True, minf==nearreg:True
+n=20: maxc3=330 (formula:True), minc3=0 (==0:True), |A|=331 (==M+1:True), gapfree=True, minf==nearreg:True
+n=21: maxc3=385 (formula:True), minc3=0 (==0:True), |A|=386 (==M+1:True), gapfree=True, minf==nearreg:True
+n=22: maxc3=440 (formula:True), minc3=0 (==0:True), |A|=441 (==M+1:True), gapfree=True, minf==nearreg:True
+n=23: maxc3=506 (formula:True), minc3=0 (==0:True), |A|=507 (==M+1:True), gapfree=True, minf==nearreg:True
+n=24: maxc3=572 (formula:True), minc3=0 (==0:True), |A|=573 (==M+1:True), gapfree=True, minf==nearreg:True
+n=25: maxc3=650 (formula:True), minc3=0 (==0:True), |A|=651 (==M+1:True), gapfree=True, minf==nearreg:True
+n=26: maxc3=728 (formula:True), minc3=0 (==0:True), |A|=729 (==M+1:True), gapfree=True, minf==nearreg:True
+n=27: maxc3=819 (formula:True), minc3=0 (==0:True), |A|=820 (==M+1:True), gapfree=True, minf==nearreg:True
+n=28: maxc3=910 (formula:True), minc3=0 (==0:True), |A|=911 (==M+1:True), gapfree=True, minf==nearreg:True
+n=29: maxc3=1015 (formula:True), minc3=0 (==0:True), |A|=1016 (==M+1:True), gapfree=True, minf==nearreg:True
+n=30: maxc3=1120 (formula:True), minc3=0 (==0:True), |A|=1121 (==M+1:True), gapfree=True, minf==nearreg:True
+n=31: maxc3=1240 (formula:True), minc3=0 (==0:True), |A|=1241 (==M+1:True), gapfree=True, minf==nearreg:True
+n=32: maxc3=1360 (formula:True), minc3=0 (==0:True), |A|=1361 (==M+1:True), gapfree=True, minf==nearreg:True
+n=33: maxc3=1496 (formula:True), minc3=0 (==0:True), |A|=1497 (==M+1:True), gapfree=True, minf==nearreg:True
+n=34: maxc3=1632 (formula:True), minc3=0 (==0:True), |A|=1633 (==M+1:True), gapfree=True, minf==nearreg:True
+n=35: maxc3=1785 (formula:True), minc3=0 (==0:True), |A|=1786 (==M+1:True), gapfree=True, minf==nearreg:True
+n=36: maxc3=1938 (formula:True), minc3=0 (==0:True), |A|=1939 (==M+1:True), gapfree=True, minf==nearreg:True
+n=37: maxc3=2109 (formula:True), minc3=0 (==0:True), |A|=2110 (==M+1:True), gapfree=True, minf==nearreg:True
+n=38: maxc3=2280 (formula:True), minc3=0 (==0:True), |A|=2281 (==M+1:True), gapfree=True, minf==nearreg:True
+n=39: maxc3=2470 (formula:True), minc3=0 (==0:True), |A|=2471 (==M+1:True), gapfree=True, minf==nearreg:True
+n=40: maxc3=2660 (formula:True), minc3=0 (==0:True), |A|=2661 (==M+1:True), gapfree=True, minf==nearreg:True
+n=41: maxc3=2870 (formula:True), minc3=0 (==0:True), |A|=2871 (==M+1:True), gapfree=True, minf==nearreg:True
+n=42: maxc3=3080 (formula:True), minc3=0 (==0:True), |A|=3081 (==M+1:True), gapfree=True, minf==nearreg:True
+n=43: maxc3=3311 (formula:True), minc3=0 (==0:True), |A|=3312 (==M+1:True), gapfree=True, minf==nearreg:True
+n=44: maxc3=3542 (formula:True), minc3=0 (==0:True), |A|=3543 (==M+1:True), gapfree=True, minf==nearreg:True
+n=45: maxc3=3795 (formula:True), minc3=0 (==0:True), |A|=3796 (==M+1:True), gapfree=True, minf==nearreg:True
+n=46: maxc3=4048 (formula:True), minc3=0 (==0:True), |A|=4049 (==M+1:True), gapfree=True, minf==nearreg:True
+n=47: maxc3=4324 (formula:True), minc3=0 (==0:True), |A|=4325 (==M+1:True), gapfree=True, minf==nearreg:True
+n=48: maxc3=4600 (formula:True), minc3=0 (==0:True), |A|=4601 (==M+1:True), gapfree=True, minf==nearreg:True
+n=49: maxc3=4900 (formula:True), minc3=0 (==0:True), |A|=4901 (==M+1:True), gapfree=True, minf==nearreg:True
+n=50: maxc3=5200 (formula:True), minc3=0 (==0:True), |A|=5201 (==M+1:True), gapfree=True, minf==nearreg:True
+n=51: maxc3=5525 (formula:True), minc3=0 (==0:True), |A|=5526 (==M+1:True), gapfree=True, minf==nearreg:True
+n=52: maxc3=5850 (formula:True), minc3=0 (==0:True), |A|=5851 (==M+1:True), gapfree=True, minf==nearreg:True
+n=53: maxc3=6201 (formula:True), minc3=0 (==0:True), |A|=6202 (==M+1:True), gapfree=True, minf==nearreg:True
+n=54: maxc3=6552 (formula:True), minc3=0 (==0:True), |A|=6553 (==M+1:True), gapfree=True, minf==nearreg:True
+n=55: maxc3=6930 (formula:True), minc3=0 (==0:True), |A|=6931 (==M+1:True), gapfree=True, minf==nearreg:True
+n=56: maxc3=7308 (formula:True), minc3=0 (==0:True), |A|=7309 (==M+1:True), gapfree=True, minf==nearreg:True
+n=57: maxc3=7714 (formula:True), minc3=0 (==0:True), |A|=7715 (==M+1:True), gapfree=True, minf==nearreg:True
+n=58: maxc3=8120 (formula:True), minc3=0 (==0:True), |A|=8121 (==M+1:True), gapfree=True, minf==nearreg:True
+n=59: maxc3=8555 (formula:True), minc3=0 (==0:True), |A|=8556 (==M+1:True), gapfree=True, minf==nearreg:True
+n=60: maxc3=8990 (formula:True), minc3=0 (==0:True), |A|=8991 (==M+1:True), gapfree=True, minf==nearreg:True
+
+max-c3 terms n=3..18 (for OEIS value search): [1, 2, 5, 8, 14, 20, 30, 40, 55, 70, 91, 112, 140, 168, 204, 240]
+spectrum-size terms n=3..15: [2, 3, 6, 9, 15, 21, 31, 41, 56, 71, 92, 113, 141]
+elapsed 4.4 s
+VERDICT(A2 spectrum n=3..60 gap-free + formulas): PASS

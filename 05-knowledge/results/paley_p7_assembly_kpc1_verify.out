@@ -1,0 +1,24 @@
+H(T_7) by full enumeration over 5040 orderings = 189  (claimed 189: CONFIRMED)
+identity T(S) = A_joint(runs) * (7-n)!  for ALL 64 subsets: CONFIRMED
+
+per-run-class contributions to R(7) (exact Fractions):
+  runs=        ():  sum T =     5040   contributes 1
+  runs=      (1,):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=      (2,):  sum T =     5040   contributes 1
+  runs=      (3,):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=      (4,):  sum T =     2016   contributes 2/5
+  runs=      (5,):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=      (6,):  sum T =     1008   contributes 1/5
+  runs=    (1, 1):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=    (1, 2):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=    (1, 3):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=    (1, 4):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs=    (2, 2):  sum T =    -1008   contributes -1/5
+  runs=    (2, 3):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs= (1, 1, 1):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+  runs= (1, 1, 2):  sum T =        0   contributes 0   (odd run -> 0 by E2 lemma: OK)
+
+sum over all classes = 12/5
+H * 2^6 / 7!         = 12/5
+equal and == 12/5:    CONFIRMED
+claimed decomposition 1 + 1 + 2/5 + 1/5 - 1/5 (and all else 0): CONFIRMED

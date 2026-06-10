@@ -1,0 +1,85 @@
+========================================================================
+PART 1+2: exhaustive |Aut| | H + freeness, all labeled tournaments n=3..6
+========================================================================
+--- n=3 : 8 labeled tournaments ---
+  divisibility |Aut| | H failures : 0
+  H=0 cases                      : 0
+  H even cases (Redei says 0)    : 0
+  Burnside sum |Aut| = 12  (expected n!*A000568 = 12, classes = 2 vs A000568 2)
+  masks with |Aut|>1             : 2
+  freeness failures (all |Aut|>1 masks, explicit orbits): 0
+  |Aut| values occurring         : [1, 3]
+  max H                          : 3
+  (|Aut|,H,#orbits) profile over |Aut|>1 masks (with multiplicities):
+      (3, 3, 1) x 2
+  PART VERDICT: PASS
+--- n=4 : 64 labeled tournaments ---
+  divisibility |Aut| | H failures : 0
+  H=0 cases                      : 0
+  H even cases (Redei says 0)    : 0
+  Burnside sum |Aut| = 96  (expected n!*A000568 = 96, classes = 4 vs A000568 4)
+  masks with |Aut|>1             : 16
+  freeness failures (all |Aut|>1 masks, explicit orbits): 0
+  |Aut| values occurring         : [1, 3]
+  max H                          : 5
+  (|Aut|,H,#orbits) profile over |Aut|>1 masks (with multiplicities):
+      (3, 3, 1) x 16
+  PART VERDICT: PASS
+--- n=5 : 1024 labeled tournaments ---
+  divisibility |Aut| | H failures : 0
+  H=0 cases                      : 0
+  H even cases (Redei says 0)    : 0
+  Burnside sum |Aut| = 1440  (expected n!*A000568 = 1440, classes = 12 vs A000568 12)
+  masks with |Aut|>1             : 184
+  freeness failures (all |Aut|>1 masks, explicit orbits): 0
+  |Aut| values occurring         : [1, 3, 5]
+  max H                          : 15
+  (|Aut|,H,#orbits) profile over |Aut|>1 masks (with multiplicities):
+      (3, 3, 1) x 120
+      (3, 15, 5) x 40
+      (5, 15, 3) x 24
+  PART VERDICT: PASS
+--- n=6 : 32768 labeled tournaments ---
+  divisibility |Aut| | H failures : 0
+  H=0 cases                      : 0
+  H even cases (Redei says 0)    : 0
+  Burnside sum |Aut| = 40320  (expected n!*A000568 = 40320, classes = 56 vs A000568 56)
+  masks with |Aut|>1             : 3248
+  freeness failures (all |Aut|>1 masks, explicit orbits): 0
+  |Aut| values occurring         : [1, 3, 5, 9]
+  max H                          : 45
+  (|Aut|,H,#orbits) profile over |Aut|>1 masks (with multiplicities):
+      (3, 3, 1) x 960
+      (3, 15, 5) x 480
+      (3, 27, 9) x 480
+      (3, 33, 11) x 480
+      (3, 45, 15) x 480
+      (5, 15, 3) x 288
+      (9, 9, 1) x 80
+  PART VERDICT: PASS
+
+worker-claim cross-checks:
+  [PASS] n=5 masks with |Aut|>1 == 184
+  [PASS] n=6 masks with |Aut|>1 == 3248
+  [PASS] n=6 |Aut| values == {1,3,5,9}
+  [PASS] n=6 max H == 45
+  [PASS] n=6 profile keys == {(3,3,1),(3,15,5),(3,27,9),(3,33,11),(3,45,15),(5,15,3),(9,9,1)}
+  [PASS] n=5 Burnside sum == 1440
+  [PASS] n=6 Burnside sum == 40320
+
+========================================================================
+PART 3: cycle caveat (B3) -- C3 and RQ5, Ham CYCLES vs Ham PATHS
+========================================================================
+C3: |Aut| = 3 (expect 3), #Ham cycles = 1 (expect 1), rotation-fixed cycles = 1
+C3: 3 divides 1?  False  (expect False -> caveat real)
+  C3 caveat verdict: PASS
+RQ5: |Aut| = 5 (expect 5; rotations only: True)
+RQ5: #Ham cycles = 2 (expect 2), they are the +1/+2 step cycles: True
+RQ5: rotation-fixed cycles = 2 (expect 2), orbit sizes = [1, 1] (expect [1,1])
+RQ5: 5 divides 2?  False  (expect False -> maximally non-free)
+RQ5 PATHS: H = 15 (expect 15), orbit sizes = [5, 5, 5] (expect [5,5,5])
+  RQ5 caveat verdict: PASS
+
+========================================================================
+OVERALL: ALL CHECKS PASS   (0.2s)
+========================================================================

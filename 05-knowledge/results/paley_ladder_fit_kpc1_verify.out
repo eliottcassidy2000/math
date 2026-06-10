@@ -1,0 +1,124 @@
+==============================================================================
+VALIDATION (i): sum of closed-form placements over compositions = 2^N - 1
+==============================================================================
+  N= 4: sum placements = 15  ?= 2^N-1 = 15  OK
+  N= 7: sum placements = 127  ?= 2^N-1 = 127  OK
+  N=10: sum placements = 1023  ?= 2^N-1 = 1023  OK
+  N=13: sum placements = 8191  ?= 2^N-1 = 8191  OK
+  N=16: sum placements = 65535  ?= 2^N-1 = 65535  OK
+
+==============================================================================
+VALIDATION (ii): composition assembly vs exhaustive 2^(p-1) subsets
+==============================================================================
+  p= 7: composition == exhaustive (real weights)  OK   (0s)
+  p=11: composition == exhaustive (real weights)  OK   (0s)
+  p=13: composition == exhaustive (FAKE weights (exercises (3,3) pairs, d33 nonzero))  OK   (0s)
+  p=17: composition == exhaustive (FAKE weights (exercises (3,3) pairs, d33 nonzero))  OK   (0s)
+  p=19: composition == exhaustive (real weights)  OK   (2s)
+  NOTE: at p=19 six cherry runs fit (span 17 <= 18), so the two
+  semantics genuinely differ there and BOTH were validated exhaustively.
+
+==============================================================================
+E4/E5: predictor ladder, exact Fractions, both pair-matching semantics
+==============================================================================
+
+--- semantics: spec (all matchings <=3 (stated spec)) ---
+  p |    R exact |         L2 |         L4 |         L6 |         L8 |      L8+pp |       L8+P |     L8+P+T
+  3 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000
+  7 |   2.400000 |   3.050000 |   3.450000 |   3.650000 |   3.650000 |   2.400000 |   2.400000 |   2.400000
+ 11 |   2.439506 |   3.430776 |   6.068342 |   6.515432 |   6.538713 |   2.808554 |  -1.249647 |  -0.153968
+ 19 |   2.527148 |   3.365396 |   5.063244 |   5.865167 |   6.112536 |   2.218449 |   1.598844 |   6.378721
+ 23 |   2.556980 |   3.163855 |   4.203407 |   4.699890 |   4.883358 |   2.597174 |   2.615956 |   6.474405
+ 31 |          ? |   2.981956 |   3.382206 |   3.487541 |   3.523052 |   2.475817 |   1.978745 |   3.114347
+residuals eps = R_exact - R_pred:
+  p |          L2 |          L4 |          L6 |          L8 |       L8+pp |        L8+P |      L8+P+T
+  3 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+  7 |  -6.500e-01 |  -1.050e+00 |  -1.250e+00 |  -1.250e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+ 11 |  -9.913e-01 |  -3.629e+00 |  -4.076e+00 |  -4.099e+00 |  -3.690e-01 |   3.689e+00 |   2.593e+00
+ 19 |  -8.382e-01 |  -2.536e+00 |  -3.338e+00 |  -3.585e+00 |   3.087e-01 |   9.283e-01 |  -3.852e+00
+ 23 |  -6.069e-01 |  -1.646e+00 |  -2.143e+00 |  -2.326e+00 |  -4.019e-02 |  -5.898e-02 |  -3.917e+00
+
+--- semantics: dp (pending<=2 replica of worker DP) ---
+  p |    R exact |         L2 |         L4 |         L6 |         L8 |      L8+pp |       L8+P |     L8+P+T
+  3 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000
+  7 |   2.400000 |   3.050000 |   3.450000 |   3.650000 |   3.650000 |   2.400000 |   2.400000 |   2.400000
+ 11 |   2.439506 |   3.430776 |   6.068342 |   6.515432 |   6.538713 |   2.808554 |  -1.249647 |  -0.153968
+ 19 |   2.527148 |   3.365396 |   5.063244 |   5.865167 |   6.112536 |   2.301711 |   1.682106 |   6.461983
+ 23 |   2.556980 |   3.163855 |   4.203407 |   4.699890 |   4.883358 |   2.754105 |   3.398212 |   7.256661
+ 31 |          ? |   2.981956 |   3.382206 |   3.487541 |   3.523052 |   2.618984 |   2.675747 |   3.811349
+residuals eps = R_exact - R_pred:
+  p |          L2 |          L4 |          L6 |          L8 |       L8+pp |        L8+P |      L8+P+T
+  3 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+  7 |  -6.500e-01 |  -1.050e+00 |  -1.250e+00 |  -1.250e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+ 11 |  -9.913e-01 |  -3.629e+00 |  -4.076e+00 |  -4.099e+00 |  -3.690e-01 |   3.689e+00 |   2.593e+00
+ 19 |  -8.382e-01 |  -2.536e+00 |  -3.338e+00 |  -3.585e+00 |   2.254e-01 |   8.450e-01 |  -3.935e+00
+ 23 |  -6.069e-01 |  -1.646e+00 |  -2.143e+00 |  -2.326e+00 |  -1.971e-01 |  -8.412e-01 |  -4.700e+00
+
+difference (dp - spec) at the pair variants (implementation-semantics gap):
+  p=19: L8+pp: +0.08326  L8+P: +0.08326  L8+P+T: +0.08326
+  p=23: L8+pp: +0.15693  L8+P: +0.78226  L8+P+T: +0.78226
+  p=31: L8+pp: +0.14317  L8+P: +0.69700  L8+P+T: +0.69700
+
+E4 checks (worker numbers come from THEIR dp semantics):
+  [spec] L8+P+T eps(19)=-3.8516 eps(23)=-3.9174 gamma-hat(19,23) = -0.09   (claimed ~ -0.9)
+  [spec] |residual| range over p=7..23, all variants: 0.000 .. 4.099   (claimed oscillation O(0.2-4.7))
+  [dp] L8+P+T eps(19)=-3.9348 eps(23)=-4.6997 gamma-hat(19,23) = -0.93   (claimed ~ -0.9)
+  [dp] |residual| range over p=7..23, all variants: 0.000 .. 4.700   (claimed oscillation O(0.2-4.7))
+
+E5 checks: L8+pp bracket
+  [spec] residuals(11,19,23) = ['0.369', '0.309', '0.040'], bar = 0.369, R31_bt = 2.476, bracket = [2.107, 2.845]
+  [dp] residuals(11,19,23) = ['0.369', '0.225', '0.197'], bar = 0.369, R31_bt = 2.619, bracket = [2.250, 2.988]
+  claimed: bar 0.369, R31_bt 2.619, bracket [2.250, 2.988]
+
+==============================================================================
+E6: fit 1 - R/e = sum_{j=1..m} c_j p^-j  (exact-Fraction solve)
+==============================================================================
+holdout at p=23 (fit on smaller points, predict 23):
+  m=1 on [19]: R23_pred = 2.560389  err = -0.00341  coeffs = ['1.336']
+  m=2 on [11, 19]: R23_pred = 2.554514  err = +0.00247  coeffs = ['1.622', '-5.430']
+  m=3 on [7, 11, 19]: R23_pred = 2.554803  err = +0.00218  coeffs = ['1.595', '-4.622', '-5.632']
+  claimed: m=1 -0.0034, m=2 +0.0025, m=3 +0.0022, max |err| <= 3.4e-3
+
+predictions at p=31 (the worker's five anchor sets):
+            m=1 (23): R31 = 2.598607  coeffs = ['1.365']
+         m=2 (19,23): R31 = 2.595507  coeffs = ['1.502', '-3.150']
+         m=2 (11,23): R31 = 2.593697  coeffs = ['1.582', '-4.990']
+      m=3 (11,19,23): R31 = 2.596470  coeffs = ['1.392', '1.469', '-48.065']
+    m=4 (7,11,19,23): R31 = 2.596972  coeffs = ['1.303', '6.177', '-127.920', '426.985']
+  claimed: predictions across all 5 fits in 2.5937 - 2.5986;
+  claimed coefficients (m=4): C~1.4-1.6, then -5, -48, +427
+
+model spread (5 fits)      = 0.00491   (claimed 0.0049)
+projected holdout to 31    = 0.00188
+central (mean of 2 core)   = 2.59599   (claimed 2.59599)
+half-bar (spread/2+proj)*1.5 = 0.00650  (claimed 0.00650)
+interval                   = [2.58949, 2.60249]   (claimed [2.58949, 2.60249])
+consistency: 2.55698 < lo and hi < e: OK
+  (e - R(19)) * 19 = 3.6315
+  (e - R(23)) * 23 = 3.7099
+  (e - R31_central) * 31 = 3.79   (claimed 3.79, continuing 3.63 / 3.71)
+
+==============================================================================
+E7: orbit parity + exact H(T_31) interval
+==============================================================================
+parity on the 5 known values (Redei: H odd; |Aff| = p(p-1)/2 odd at p=3 mod 4):
+  p= 3: |Aff|=   3  H/|Aff|=1  rem=0  odd=True
+  p= 7: |Aff|=  21  H/|Aff|=9  rem=0  odd=True
+  p=11: |Aff|=  55  H/|Aff|=1729  rem=0  odd=True
+  p=19: |Aff|= 171  H/|Aff|=6857869865  rem=0  odd=True
+  p=23: |Aff|= 253  H/|Aff|=62293308207033  rem=0  odd=True
+  claimed quotients 1, 9, 1729, 6857869865, 62293308207033 all odd: [1, 9, 1729, 6857869865, 62293308207033]
+
+31!/2^30 = 7.658115e+24
+MY interval : [19830629617139608462365775, 19930130881568868002912737]
+   width    : 99501264429259540546962  (9.950e+22)
+   admissible (465*odd): 106990606913182301663  (1.0699e+20)
+   H central ~ 1.9880e+25;  H/465 ~ 4.2754e+22
+   relative half-width 2.50e-03
+
+WORKER claimed interval [19830629617139608462365775, 19930130881568868002912737], count 106990606913182301663
+  my endpoints equal claimed: True
+  internal consistency of claimed numbers: count from claimed endpoints = 106990606913182301663  ?= 106990606913182301663  OK
+  claimed-implied R bounds: lo/fac = 2.5894921829, hi/fac = 2.6024851010
+
+[elapsed 11.0s]

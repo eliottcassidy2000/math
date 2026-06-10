@@ -348,7 +348,7 @@ Key proven results (see `07-reflections/everything-is-the-triangle.md` for full 
 - Burnside: Fix(sigma) = 0 for even cycles, 2^{orbit-pairs} for all-odd (A000568 exact through n=10)
 - Fiber fraction: f(n) = (1/2)_{n-2}/(n-2)!, GF = (1-x)^{-1/2} (two-sheeted branched cover)
 - Width of G_n: C(n-2, floor((n-2)/2)) at n=3..6 only. FAILS at n≥7 (predicted 10, actual 15 at n=7; predicted 20, actual 49 at n=8). Not a general formula.
-- Tilings * |Aut| = H for every iso class (orbit-stabilizer on tiling fibration)
+- Tilings * |Aut| = H for every iso class (orbit-stabilizer on tiling fibration; the underlying freeness is now PROVED universally for any digraph — LEM-003, 2026-06-10; see MISTAKE-070)
 - The meta-graph G_n has a strong H-gradient: most edges are H-increasing, but it is NOT a strict DAG. Level edges (same H, different class): 0, 0, 1, 15, 136 for n=3..7. At n≥7 there are also H-decreasing edges (962 at n=7). See MISTAKE-035.
 - Cayley-Dickson tower: R(n=2)->C(n=3)->H(n=5)->O(n=9)->S(n=17), each level loses a property
 - The merged graph G_n/Z_2: V_merged = (A000568 + SC)/2 -> A000568/2

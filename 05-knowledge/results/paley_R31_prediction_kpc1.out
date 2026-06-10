@@ -1,0 +1,150 @@
+==============================================================================
+PART 0: exact engine -- build partition tables and self-test
+==============================================================================
+  A2: N=3 Bell=     5 surviving-patterns=    1  (0.0s)
+  A4: N=5 Bell=    52 surviving-patterns=    7  (0.0s)
+  A6: N=7 Bell=   877 surviving-patterns=  114  (0.0s)
+  A8: N=9 Bell= 21147 surviving-patterns= 2589  (0.0s)
+  J22: N=6 Bell=   203 surviving-patterns=   19  (0.0s)
+  J24: N=8 Bell=  4140 surviving-patterns=  389  (0.0s)
+  J33: N=8 Bell=  4140 surviving-patterns=  389  (0.0s)
+  J222: N=9 Bell= 21147 surviving-patterns= 1527  (0.0s)
+  A5: N=6 Bell=   203 surviving-patterns=   27  (0.0s)
+  J23: N=7 Bell=   877 surviving-patterns=   82  (0.0s)
+  self-test p=7 A2: brute=42 engine=42  OK
+  self-test p=7 A4: brute=336 engine=336  OK
+  self-test p=7 J22: brute=-336 engine=-336  OK
+  self-test p=7 A5: brute=0 engine=0  OK
+
+==============================================================================
+PART 1: exact cluster integrals at p = 3,7,11,19,23,31 (exact integers)
+==============================================================================
+  (elapsed 4.3s)
+  cross-checks vs monad-stored A_4 (p<=31), A_6 (p<=23), A_8 (p<=11): ALL OK
+  negation-symmetry exact zeros A_5 = J(2,3) = 0: OK at all primes
+
+  p |    A_2      A_4        A_6           A_8 |          d22            d24          d33        d3(222)
+--------------------------------------------------------------------------------------------------------
+  3 |      6        0          0             0 |          -36              0            0            432
+  7 |     42      336       1008             0 |        -2100         -14112            0         190512
+ 11 |    110     1760      22880        154880 |       -10340        -207680            0        2186800
+ 19 |    342    10944     361152      10243584 |       -62244       -2954880            0       28457136
+ 23 |    506    20240     870320      34327040 |      -114356       -7003040            0       66383152
+ 31 |    930    52080    3281040     202487040 |      -292020      -25935840            0      241614000
+
+scaled (orders):   d22/p^3      d24/p^4      d33/p^4      d3/p^4   (expected O(1))
+  7 |     -6.12245     -5.87755      0.00000     79.34694
+ 11 |     -7.76860    -14.18482      0.00000    149.36138
+ 19 |     -9.07479    -22.67386      0.00000    218.36186
+ 23 |     -9.39887    -25.02507      0.00000    237.21739
+ 31 |     -9.80229    -28.08365      0.00000    261.62264
+
+==============================================================================
+PART 2: placement DP -- unit test vs exhaustive slot-subset enumeration
+==============================================================================
+  p=7: DP == brute-force over all 2^6 slot subsets (incl. pair matchings <=3 and cherry triples)  OK
+  p=11: DP == brute-force over all 2^10 slot subsets (incl. pair matchings <=3 and cherry triples)  OK
+  p=13: DP == brute-force over all 2^12 slot subsets (incl. pair matchings <=3 and cherry triples)  OK
+
+==============================================================================
+PART 3: predictor ladder vs exact R(p) (OUT-OF-SAMPLE validation)
+==============================================================================
+  p |    R exact |         L2 |         L4 |         L6 |         L8 |      L8+pp |       L8+P |     L8+P+T
+  3 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000 |   2.000000
+  7 |   2.400000 |   3.050000 |   3.450000 |   3.650000 |   3.650000 |   2.400000 |   2.400000 |   2.400000
+ 11 |   2.439506 |   3.430776 |   6.068342 |   6.515432 |   6.538713 |   2.808554 |  -1.249647 |  -0.153968
+ 19 |   2.527148 |   3.365396 |   5.063244 |   5.865167 |   6.112536 |   2.301711 |   1.682106 |   6.461983
+ 23 |   2.556980 |   3.163855 |   4.203407 |   4.699890 |   4.883358 |   2.754105 |   3.398212 |   7.256661
+ 31 |          ? |   2.981956 |   3.382206 |   3.487541 |   3.523052 |   2.618984 |   2.675747 |   3.811349
+
+residuals eps = R_exact - R_pred:
+  p |          L2 |          L4 |          L6 |          L8 |       L8+pp |        L8+P |      L8+P+T
+  3 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+  7 |  -6.500e-01 |  -1.050e+00 |  -1.250e+00 |  -1.250e+00 |   0.000e+00 |   0.000e+00 |   0.000e+00
+ 11 |  -9.913e-01 |  -3.629e+00 |  -4.076e+00 |  -4.099e+00 |  -3.690e-01 |   3.689e+00 |   2.593e+00
+ 19 |  -8.382e-01 |  -2.536e+00 |  -3.338e+00 |  -3.585e+00 |   2.254e-01 |   8.450e-01 |  -3.935e+00
+ 23 |  -6.069e-01 |  -1.646e+00 |  -2.143e+00 |  -2.326e+00 |  -1.971e-01 |  -8.412e-01 |  -4.700e+00
+
+residual scalings for the FINAL variant (L8+P+T):  eps*p, eps*p^2, eps*p^3
+  p |         eps |     eps*p |   eps*p^2 |    eps*p^3
+  3 |   0.000e+00 |    0.0000 |    0.0000 |      0.000
+  7 |   0.000e+00 |    0.0000 |    0.0000 |      0.000
+ 11 |   2.593e+00 |   28.5282 |  313.8104 |   3451.914
+ 19 |  -3.935e+00 |  -74.7619 | -1420.4756 | -26989.037
+ 23 |  -4.700e+00 | -108.0926 | -2486.1309 | -57181.010
+
+local empirical order gamma-hat = log(eps(p1)/eps(p2)) / log(p2/p1):
+  ( 7,11): SIGN CHANGE (eps 0.00e+00 -> 2.59e+00)
+  (11,19): SIGN CHANGE (eps 2.59e+00 -> -3.93e+00)
+  (19,23): gamma-hat = -0.93
+
+==============================================================================
+PART 4: verdict on truncation; proven-form asymptotic fit; R(31) prediction
+==============================================================================
+
+VERDICT ON THE FINITE-p TRUNCATED CLUSTER SUMS (the out-of-sample answer):
+the depth-L / collision-order ladder does NOT converge at p <= 31. The exact
+collision corrections have rapidly growing coefficients
+   d22/p^3 -> ~-10,   d24/p^4 -> ~-28,   d3(222)/p^4 -> ~+262,
+i.e. the multi-run inclusion-exclusion series in 1/p is ASYMPTOTIC with
+factorially growing coefficients -- the same A088368 ~ e*k! growth that
+THM-438 ADDENDUM-6 proved makes the cluster generating function Gevrey-1 /
+resurgent, NOT algebraic. Successive truncations oscillate (L8: eps ~ -4;
+L8+pp: eps ~ +-0.2-0.4; L8+P, L8+P+T: divergent oscillation). The expansion
+PROVES the limit e but cannot deliver 1e-3 accuracy at p=31 by termwise
+truncation. This is recorded as the honest negative half of HYP-2371.
+
+cluster-only coarse bracket (best truncation L8+pp, bar = max |residual|
+  over p=11,19,23 = 0.369):   R(31) in [2.250, 2.988]
+
+PRIMARY PREDICTOR: the PROVEN functional form. THM-438 ADDENDUM (4) proves
+A_{2k} = C_k p^{k+1} + O(p^k), hence R(p) - e is RELATIVE O(1/p); the
+asymptotic ansatz R(p) = e(1 - C/p - D/p^2 - E/p^3 - ...) is justified.
+We fit the first m coefficients on the m largest exact points (exact data,
+float solve), with an ORDER-LADDERED HOLDOUT at p=23 to calibrate the bar.
+
+HOLDOUT at p=23 (fit on points < 23, predict R(23) = 2.556980):
+  m=1 fit on [19]: R(23)_pred = 2.560389  err = -0.00341  coeffs = [1.336]
+  m=2 fit on [11, 19]: R(23)_pred = 2.554514  err = +0.00247  coeffs = [ 1.622 -5.43 ]
+  m=3 fit on [7, 11, 19]: R(23)_pred = 2.554803  err = +0.00218  coeffs = [ 1.595 -4.622 -5.632]
+  (coefficient growth |C|~1.6, |D|~5, |E|~30+ confirms the asymptotic/
+   resurgent character; adding orders does not monotonically help)
+
+PREDICTIONS at p=31:
+            m=1 (23): R(31) = 2.598607   coeffs = [1.365]
+         m=2 (19,23): R(31) = 2.595507   coeffs = [ 1.502 -3.15 ]
+         m=2 (11,23): R(31) = 2.593697   coeffs = [ 1.582 -4.99 ]
+      m=3 (11,19,23): R(31) = 2.596470   coeffs = [  1.392   1.469 -48.065]
+    m=4 (7,11,19,23): R(31) = 2.596972   coeffs = [   1.303    6.177 -127.92   426.985]
+
+model spread (all 5 fits)         = 0.00491
+max holdout error projected to 31 = 0.00188
+==> R(31) PREDICTED = 2.59599 +/- 0.00650   i.e.  R(31) in [2.58949, 2.60249]
+    (bar = (spread/2 + projected holdout) x 1.5 safety; e - R(31) ~ 0.1223; (e-R)*31 = 3.79, cf. 3.71 at p=23,
+     monotone-increase consistency: R(23)=2.55698 < R(31) < e REQUIRED: OK)
+    cluster-only coarse bracket contains the fit prediction: YES
+
+==============================================================================
+PART 5: integrality -- H(T_31) = 465 * ODD, and the predicted interval
+==============================================================================
+orbit-parity re-verification (HYP-1713 PROVED: H odd by Redei; |Aff(QR)| =
+p(p-1)/2 odd since v2(p-1)=1 at p=3 mod 4; hence H/|Aff| is an ODD integer):
+  p= 3: |Aff|=   3  H/|Aff| = 1  remainder=0  odd=True
+  p= 7: |Aff|=  21  H/|Aff| = 9  remainder=0  odd=True
+  p=11: |Aff|=  55  H/|Aff| = 1729  remainder=0  odd=True
+  p=19: |Aff|= 171  H/|Aff| = 6857869865  remainder=0  odd=True
+  p=23: |Aff|= 253  H/|Aff| = 62293308207033  remainder=0  odd=True
+  all 5 known values: H/|Aff| is an odd integer -- CONFIRMED
+
+31!/2^30 = 7.658115e+24 (exact: 122529844256906551386796875/16)
+|Aff(QR_31)| = 465  (= 465 = 3*5*31; divides H by freeness/THM-F3)
+H(T_31) = 465 * ODD  <=>  H == 465 (mod 930)
+
+PREDICTED:  H(T_31) ~= 1.9880e+25
+  interval  [19830629617139608462365775, 19930130881568868002912737]
+  width     99501264429259540546962  (9.950e+22)
+  admissible integers (465*odd) inside: 106990606913182301663  (1.070e+20)
+  predicted H/465 ('1729-analog') ~= 4.2754e+22  (must be ODD)
+  relative half-width: 2.50e-03  => ~2 significant digits honestly supported
+
+[total elapsed 4.4s]

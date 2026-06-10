@@ -1,0 +1,9 @@
+p=7: QR = [1, 2, 4]
+p=7: |Aut(T_7)| brute force over S_7 = 21  (claim p(p-1)/2 = 21)
+p=7: H(T_7) = 189 (canon: 189), orbits = 9, all of size 21: True
+p=7 verdict: PASS
+p=11: affine maps x->ax+b, a in QR, that are automorphisms: 55 of 55  (claim all 55 = p(p-1)/2)
+p=11: canon H(T_11) = 95095 = 5*7*11*13*19: True
+p=11: H/55 = 1729 (= 1729, the documented r(11)): True
+p=11 verdict: PASS (lower bound |Aut|>=55 independent; |Aut|=55 exactly is canon-consistent)
+OVERALL: PASS

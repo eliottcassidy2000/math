@@ -230,6 +230,11 @@ OEIS A038375 gives max H(T) over all n-vertex tournaments: 1, 1, 3, 5, 15, 45, 1
 
 ---
 
+### UPDATE (2026-06-10, kind-pasteur-2026-06-10-S1): falsifiable H(T_31) prediction + freeness settled
+- **HYP-2371 PREDICTION:** `R(31) = H(T_31)·2^30/31! = 2.59599 ± 0.00650` ⟹ `H(T_31) ∈ [19830629617139608462365775, 19930130881568868002912737]` with `H ≡ 465 (mod 930)` (freeness LEM-003 + Rédei parity; H/465 odd, ≈ 4.275e22 — the "next 1729"). Method: the PROVEN form R = e(1−C/p−…) (THM-438 ADD-4) fit with p=23 holdout; the naive truncated cluster sums are PROVABLY non-predictive at finite p (THM-438 ADD-8 resurgence). Compute-run spec: `05-knowledge/results/paley_H31_compute_design_kpc1.md` (see backlog [COMPUTE-NODE] lead).
+- **The integrality r(p) ∈ ℤ is now a one-paragraph universal fact:** LEM-003 — Aut acts freely on directed Ham paths of ANY digraph; nothing Paley/QR/Eisenstein about it (the QR content is only |Aut| = p(p−1)/2).
+- The 1729 cross-lane ledger is closed: tournament side coincidence (HYP-2306), taxicab–Moser side theorem (THM-463).
+
 ## OPEN-Q-015 -- RESOLVED (DISPROVED at n=9)
 **Prove I(Omega(T), x) has all real negative roots for all n**
 

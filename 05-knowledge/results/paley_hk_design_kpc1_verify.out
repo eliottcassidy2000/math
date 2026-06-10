@@ -1,0 +1,41 @@
+==============================================================================
+E8 part 1: independent recomputation of H(T_p)
+==============================================================================
+  H(7)  brute force over 7! orderings          = 189
+  H(7)  start-fixed layered DP * 7             = 189   OK
+  H(11) all-starts dict DP                     = 95095
+  H(11) start-fixed layered DP * 11            = 95095   OK  (claimed 95095)
+  H(19) start-fixed layered DP * 19            = 1172695746915   (claimed 1172695746915: CONFIRMED)   [0s]
+  max intermediate count check: N0(19) = 61720828785 < 2^63 OK
+
+==============================================================================
+E8 part 2: design-doc arithmetic, recomputed exactly
+==============================================================================
+  (a) freeness of Z_31 on states (S,v), S nonempty: (S+r, v+r) = (S,v)
+      forces r = 0 from the v-component alone. PROVED (trivially).
+  (b) k*C(31,k) = 31*C(30,k-1) for k=1..31: OK  => orbit count at layer k EXACTLY C(30,k-1) (by freeness)
+      peak layer count = C(30,15) = 155117520 (claimed 155,117,520: OK)
+      uint128 bytes at peak = 2481880320 = 2.3114 GiB (claimed ~2.31 GiB: OK)
+  (c) unreduced QR-transitions = 31*15*2^29 = 249644974080
+      sum_k 31*15*C(29,k-1) (k=1..30)       = 249644974080  OK
+      rotation-reduced = /31 = 15*2^29 = 8053063680
+      claimed 8,053,063,680 = 31*30*2^29/62 = 8053063680  OK
+  (d) (k-1)!/2^(k-1) vs 2^64 = 18446744073709551616:
+      k=26: ~4.623e+17  < 2^64
+      k=27: ~6.010e+18  < 2^64
+      k=28: ~8.113e+19  > 2^64
+      k=29: ~1.136e+21  > 2^64
+      first crossing at k = 28 (claimed ~28: OK); skewed states overflow earlier, so
+      uint128/CRT needed from some earlier layer (~24 is a design margin call).
+  (e) subsets of Z_31 up to rotation (Burnside) = (2^31 + 30*2)/31 = 69273668
+      claimed 6.93e7: OK  (exact 69273668 = 6.927e+07)
+  (f) total canonical states sum_k C(30,k-1) = 1073741824 = 2^30: OK
+
+[elapsed 0.5s]
+
+==============================================================================
+BONUS: independent recomputation of H(T_23) (canon value check)
+==============================================================================
+  H(23) start-fixed layered DP * 23 = 15760206976379349
+  canon/brief value                 = 15760206976379349  CONFIRMED
+  N0(23) = 685226390277363 < 2^63 OK   [15s]

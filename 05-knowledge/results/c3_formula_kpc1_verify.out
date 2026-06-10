@@ -1,0 +1,8 @@
+n=4: exhaustive over all 64 labeled tournaments, mismatches=0
+n=5: exhaustive over all 1024 labeled tournaments, mismatches=0
+n=6: exhaustive over all 32768 labeled tournaments, mismatches=0
+n=7: 800 random tournaments (seed 999), mismatches=0
+n=8: 800 random tournaments (seed 999), mismatches=0
+n=9: 800 random tournaments (seed 999), mismatches=0
+TOTAL MISMATCHES: 0
+VERDICT(A1 formula): PASS

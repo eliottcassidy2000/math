@@ -1,0 +1,62 @@
+======================================================================
+PART 1: forward triples from direct series division
+======================================================================
+  n= 0  (a,b,c) = (1, 2, 2)
+  n= 1  (a,b,c) = (135, 138, 172)
+  n= 2  (a,b,c) = (11161, 11468, 14258)
+  n= 3  (a,b,c) = (926271, 951690, 1183258)
+  n= 4  (a,b,c) = (76869289, 78978818, 98196140)
+  n= 5  (a,b,c) = (6379224759, 6554290188, 8149096378)
+PASS D7: (a,b,c)_0 == (1,2,2)
+PASS D7: (a,b,c)_1 == (135,138,172)
+PASS D7: (a,b,c)_2 == (11161,11468,14258)
+PASS D7: n=10 entries have 20 digits  |  a_10=25109790452983538281
+
+======================================================================
+PART 2: cubic identity a^3+b^3-c^3 = (-1)^n on n = -15..45
+======================================================================
+PASS D7: d_n == 0 exactly for all 61 indices n in [-15,45]  |  violations: []
+
+======================================================================
+PART 3: backward extension and 1729 (D8)
+======================================================================
+  n=-1  (a,b,c) = (-9, 12, 10)
+  n=-2  (a,b,c) = (-791, 1010, 812)
+  n=-3  (a,b,c) = (-65601, 83802, 67402)
+PASS D8: (a,b,c)_{-1} == (-9, 12, 10)
+PASS D8: (a,b,c)_{-2} == (-791, 1010, 812)
+PASS D8: (a,b,c)_{-3} == (-65601, 83802, 67402)
+PASS D8: (-9)^3 + 12^3 == 10^3 - 1 == 999
+PASS D8: rearranged: 9^3 + 10^3 == 1729 == 12^3 + 1
+
+======================================================================
+PART 4: order-7 annihilator route for the all-n proof (D7)
+======================================================================
+PASS chi_C factorization: (x+1)(x^2-83x+1) == 1 - 82x - 82x^2 + x^3 (ascending coeffs)  |  got [1, -82, -82, 1]
+PASS g = x^2-83x+1: disc = 6885 > 0 and NOT a perfect square (phi != psi, irrational)
+PASS g(-1) = 85 != 0 (so -1 is not a root of g; 3 distinct eigenvalues)
+PASS symmetric data: phi^2+psi^2 == 6887
+PASS symmetric data: phi^3+psi^3 == 571538
+PASS q monic of degree 7 with q(0) = 1 (unit ends => reversible over Z)  |  q = [1, -564733, -3889880904, 322812677460, 322812677460, -3889880904, -564733, 1]
+PASS q(-1) == 0 (annihilates (-1)^n)
+PASS q-recurrence annihilates a_n^3 on n in [-15,45]  |  violations at n=[]
+PASS q-recurrence annihilates b_n^3 on n in [-15,45]  |  violations at n=[]
+PASS q-recurrence annihilates c_n^3 on n in [-15,45]  |  violations at n=[]
+PASS q-recurrence annihilates (-1)^n on n in [-15,45]  |  violations at n=[]
+
+======================================================================
+PART 5: Bareiss cross-check of chi_M(0), chi_M(-1), det M (worker route)
+======================================================================
+PASS Cayley-Hamilton for C: C^3 - 82C^2 - 82C + I == 0
+PASS det C == -1 (reversible state map)
+PASS companion state map reproduces a_n (n=0..19)
+PASS companion state map reproduces b_n (n=0..19)
+PASS companion state map reproduces c_n (n=0..19)
+PASS M = C tensor C tensor C is 27x27
+PASS chi_M(0) == 1 (worker claim; => det M = -1, 27 odd)  |  det(-M) = 1
+PASS chi_M(-1) == 0 (worker claim; (-1)^n inside the order-27 recurrence)  |  det(-I-M) = 0
+PASS det M == -1
+
+======================================================================
+VERIFIER SUMMARY: ALL CHECKS PASS (0 failures)
+======================================================================

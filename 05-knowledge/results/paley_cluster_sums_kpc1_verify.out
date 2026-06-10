@@ -1,0 +1,79 @@
+==============================================================================
+STEP 1: build + run the C enumerator (independent method)
+==============================================================================
+  C run done (5.8s)
+
+==============================================================================
+STEP 2: validate C engine vs pure-Python brute force
+==============================================================================
+  p=7     A2: brute(full)=        42  C=        42  OK
+  p=7     A4: brute(full)=       336  C=       336  OK
+  p=7     A5: brute(full)=         0  C=         0  OK
+  p=7     A6: brute(full)=      1008  C=      1008  OK
+  p=7     A8: brute(full)=         0  C=         0  OK
+  p=7    J22: brute(full)=      -336  C=      -336  OK
+  p=7    J23: brute(full)=         0  C=         0  OK
+  p=7    J24: brute(full)=         0  C=         0  OK
+  p=7    J33: brute(full)=         0  C=         0  OK
+  p=7   J222: brute(full)=         0  C=         0  OK
+  p=11    A2: brute(trans)=       110  C=       110  OK  (6s)
+  p=11    A4: brute(trans)=      1760  C=      1760  OK  (6s)
+  p=11    A5: brute(trans)=         0  C=         0  OK  (6s)
+  p=11    A6: brute(trans)=     22880  C=     22880  OK  (6s)
+  p=11   J22: brute(trans)=      1760  C=      1760  OK  (6s)
+  p=11   J23: brute(trans)=         0  C=         0  OK  (6s)
+  p=11   J24: brute(trans)=    -14080  C=    -14080  OK  (6s)
+  p=11   J33: brute(trans)=         0  C=         0  OK  (7s)
+  p=11    A8: brute(trans)=    154880  C=    154880  OK  (8s)
+  p=11  J222: brute(trans)=    105600  C=    105600  OK  (8s)
+  C engine validated (incl. scaling reduction + last-level trick).
+
+==============================================================================
+STEP 3: full table of exact integrals (independent values)
+==============================================================================
+  p |            A2 |            A4 |            A5 |            A6 |            A8 |           J22 |           J23 |           J24 |           J33 |          J222
+  3 |             6 |             0 |             0 |             0 |             0 |             0 |             0 |             0 |             0 |             0
+  7 |            42 |           336 |             0 |          1008 |             0 |          -336 |             0 |             0 |             0 |             0
+ 11 |           110 |          1760 |             0 |         22880 |        154880 |          1760 |             0 |        -14080 |             0 |        105600
+ 19 |           342 |         10944 |             0 |        361152 |      10243584 |         54720 |             0 |        787968 |             0 |       4596480
+ 23 |           506 |         20240 |             0 |        870320 |      34327040 |        141680 |             0 |       3238400 |             0 |      22344960
+ 31 |           930 |         52080 |             0 |       3281040 |     202487040 |        572880 |             0 |      22498560 |             0 |     231235200
+
+deltas: d22=J22-A2^2, d24=J24-A2*A4, d33=J33, d3=J222-A2^3-3*d22*A2
+  p |          d22 |             d24 |      d33 |              d3
+  3 |          -36 |               0 |        0 |             432
+  7 |        -2100 |          -14112 |        0 |          190512
+ 11 |       -10340 |         -207680 |        0 |         2186800
+ 19 |       -62244 |        -2954880 |        0 |        28457136
+ 23 |      -114356 |        -7003040 |        0 |        66383152
+ 31 |      -292020 |       -25935840 |        0 |       241614000
+
+scaled coefficients (E4 claim: d22/p^3 -> ~-10, d24/p^4 -> ~-28, d3/p^4 -> ~+262):
+  p= 7: d22/p^3=  -6.1224  d24/p^4=  -5.8776  d3/p^4=  79.3469
+  p=11: d22/p^3=  -7.7686  d24/p^4= -14.1848  d3/p^4= 149.3614
+  p=19: d22/p^3=  -9.0748  d24/p^4= -22.6739  d3/p^4= 218.3619
+  p=23: d22/p^3=  -9.3989  d24/p^4= -25.0251  d3/p^4= 237.2174
+  p=31: d22/p^3=  -9.8023  d24/p^4= -28.0836  d3/p^4= 261.6226
+
+==============================================================================
+STEP 4: check WORKER CLAIMS (computed independently above)
+==============================================================================
+  [CONFIRMED] A2 = p(p-1) at all p
+  [CONFIRMED] A6(31) = 3281040
+  [CONFIRMED] A8(19) = 10243584
+  [CONFIRMED] A8(23) = 34327040
+  [CONFIRMED] A8(31) = 202487040
+  [CONFIRMED] d22(31) = -292020
+  [CONFIRMED] d24(31) = -25935840
+  [CONFIRMED] d3(31) = +241614000
+  [CONFIRMED] A5 = 0 at all p
+  [CONFIRMED] J23 = 0 at all p
+  [CONFIRMED] J33 = 0 at all p (E2 lemma)
+  [CONFIRMED] p=7 anchors A2=42,A4=336,J22=-336
+  [CONFIRMED] monad A4 {7:336,11:1760,19:10944,23:20240,31:52080}
+  [CONFIRMED] monad A6 {7:1008,11:22880,19:361152,23:870320}
+  [CONFIRMED] monad A8 {7:0,11:154880}
+
+  exact integers dumped to C:\Users\Eliott\Documents\GitHub\math\05-knowledge\results\paley_cluster_sums_kpc1_verify.json
+  VERDICT STEP 4: ALL CONFIRMED
+  [elapsed 8.3s]

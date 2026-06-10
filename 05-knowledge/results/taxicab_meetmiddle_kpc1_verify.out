@@ -1,0 +1,44 @@
+[enum] pairs (1<=y<=x, n<=10^12): 44164746
+[enum] n with >= 2 positive reps: 40426
+[enum] Ta(2) candidate (smallest multi-rep n): 1729
+[enum] rep-multiplicity histogram: Counter({2: 40190, 3: 236})
+[dp] doubly-primitive n (>=2 primitive reps): 5464
+[dp] total primitive reps across them: 10931
+[dp] gcd of primitive d's > 1: 3406
+[dp] n with an inert prime (p==2 mod 3): 1952
+[dp] first inert carrier: 4342914 = 2 * 3^2 * 31 * 43 * 181
+[audit CorC] v_p(d) != v_p(n) violations: 0
+[audit CorC] v3(d) < v3(n)-1 violations: 0
+[audit CorC] p^(v_p(n)) not dividing gcd(d's): 0
+[audit CorC] inert p not dividing BOTH d's: 0
+[hist] inert-prime membership counts (top 10): [(2, 649), (5, 561), (11, 224), (17, 160), (23, 117), (29, 95), (41, 45), (47, 39), (59, 34), (53, 33)]
+[hist] minimal-inert-prime counts (top 10): [(2, 649), (5, 514), (11, 179), (17, 139), (23, 104), (29, 86), (41, 39), (47, 34), (53, 32), (59, 31)]
+[dp] first 25 doubly-primitive n with factorizations:
+   1729 = 7 * 13 * 19   reps [(10, 9), (12, 1)]   [completely split]
+   20683 = 13 * 37 * 43   reps [(24, 19), (27, 10)]   [completely split]
+   40033 = 7^2 * 19 * 43   reps [(33, 16), (34, 9)]   [completely split]
+   149389 = 31 * 61 * 79   reps [(50, 29), (53, 8)]   [completely split]
+   195841 = 37 * 67 * 79   reps [(57, 22), (58, 9)]   [completely split]
+   327763 = 31 * 97 * 109   reps [(58, 51), (67, 30)]   [completely split]
+   443889 = 3^2 * 31 * 37 * 43   reps [(73, 38), (76, 17)]   [has 3/inert]
+   684019 = 7 * 19 * 37 * 139   reps [(75, 64), (82, 51)]   [completely split]
+   704977 = 7 * 13 * 61 * 127   reps [(86, 41), (89, 2)]   [completely split]
+   1845649 = 13^2 * 67 * 163   reps [(120, 49), (121, 42)]   [completely split]
+   2048391 = 3^2 * 43 * 67 * 79   reps [(106, 95), (127, 2)]   [has 3/inert]
+   2418271 = 73 * 157 * 211   reps [(116, 95), (134, 23)]   [completely split]
+   2691451 = 7 * 31 * 79 * 157   reps [(123, 94), (139, 18)]   [completely split]
+   3242197 = 7 * 31 * 67 * 223   reps [(138, 85), (141, 76)]   [completely split]
+   3375001 = 7 * 31 * 103 * 151   reps [(144, 73), (150, 1)]   [completely split]
+   4342914 = 2 * 3^2 * 31 * 43 * 181   reps [(137, 121), (163, 23)]   [has 3/inert]
+   4931101 = 7 * 37 * 79 * 241   reps [(157, 102), (165, 76)]   [completely split]
+   5318677 = 7 * 13 * 211 * 277   reps [(141, 136), (174, 37)]   [completely split]
+   5772403 = 7 * 13 * 229 * 277   reps [(162, 115), (178, 51)]   [completely split]
+   5799339 = 3^2 * 7 * 13 * 73 * 97   reps [(166, 107), (179, 40)]   [has 3/inert]
+   6058747 = 79 * 271 * 283   reps [(163, 120), (172, 99)]   [completely split]
+   7620661 = 103 * 241 * 307   reps [(174, 133), (196, 45)]   [completely split]
+   8872487 = 13 * 17 * 19 * 2113   reps [(183, 140), (207, 14)]   [has 3/inert]
+   9443761 = 103 * 277 * 331   reps [(185, 146), (209, 68)]   [completely split]
+   10702783 = 7 * 13 * 337 * 349   reps [(183, 166), (202, 135)]   [completely split]
+[dp] first five doubly-primitive all completely split: True
+[dp] first five: [1729, 20683, 40033, 149389, 195841]
+VERDICT(CorC audits): PASS

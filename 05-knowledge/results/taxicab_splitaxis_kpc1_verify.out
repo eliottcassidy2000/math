@@ -1,0 +1,10 @@
+[split] primitive pairs 1<=y<=x<=2000: 1216588
+[split] identity x^3+y^3=(x+y)q violations: 0
+[split] q even (should be 0): 0
+[split] prime p!=3, p==2 mod 3 dividing q (should be 0): 0
+[split] v3(q) >= 2 (should be 0): 0
+[split] (v3==1) <-> (3|x+y) violations (should be 0): 0
+[forms] m<=400: #(r(x^2+xy+y^2) != r(x^2-xy+y^2)): 0
+[forms] m<=400: #(r != 6*B(m)): 0
+[forms] split-axis m <= 400 with r_E(m) < 6: 0
+VERDICT(A3): PASS
