@@ -1,0 +1,83 @@
+==============================================================================
+CROSS-CHECK: DP bitset vs full backtracking enumeration, n = 3..13
+==============================================================================
+n= 3: DP f-set size=   2  brute=   2  MATCH
+n= 4: DP f-set size=   3  brute=   3  MATCH
+n= 5: DP f-set size=   6  brute=   6  MATCH
+n= 6: DP f-set size=   9  brute=   9  MATCH
+n= 7: DP f-set size=  15  brute=  15  MATCH
+n= 8: DP f-set size=  21  brute=  21  MATCH
+n= 9: DP f-set size=  31  brute=  31  MATCH
+n=10: DP f-set size=  41  brute=  41  MATCH
+n=11: DP f-set size=  56  brute=  56  MATCH
+n=12: DP f-set size=  71  brute=  71  MATCH
+n=13: DP f-set size=  92  brute=  92  MATCH
+
+==============================================================================
+EXACT c3 SPECTRUM, n = 3..30 (+ extension while budget lasts)
+==============================================================================
+n= 3: max c3=    1  spectrum size=    2  gaps=NONE (gap-free)  [0.00s]
+n= 4: max c3=    2  spectrum size=    3  gaps=NONE (gap-free)  [0.00s]
+n= 5: max c3=    5  spectrum size=    6  gaps=NONE (gap-free)  [0.00s]
+n= 6: max c3=    8  spectrum size=    9  gaps=NONE (gap-free)  [0.00s]
+n= 7: max c3=   14  spectrum size=   15  gaps=NONE (gap-free)  [0.00s]
+n= 8: max c3=   20  spectrum size=   21  gaps=NONE (gap-free)  [0.00s]
+n= 9: max c3=   30  spectrum size=   31  gaps=NONE (gap-free)  [0.00s]
+n=10: max c3=   40  spectrum size=   41  gaps=NONE (gap-free)  [0.00s]
+n=11: max c3=   55  spectrum size=   56  gaps=NONE (gap-free)  [0.00s]
+n=12: max c3=   70  spectrum size=   71  gaps=NONE (gap-free)  [0.00s]
+n=13: max c3=   91  spectrum size=   92  gaps=NONE (gap-free)  [0.00s]
+n=14: max c3=  112  spectrum size=  113  gaps=NONE (gap-free)  [0.00s]
+n=15: max c3=  140  spectrum size=  141  gaps=NONE (gap-free)  [0.00s]
+n=16: max c3=  168  spectrum size=  169  gaps=NONE (gap-free)  [0.00s]
+n=17: max c3=  204  spectrum size=  205  gaps=NONE (gap-free)  [0.00s]
+n=18: max c3=  240  spectrum size=  241  gaps=NONE (gap-free)  [0.00s]
+n=19: max c3=  285  spectrum size=  286  gaps=NONE (gap-free)  [0.01s]
+n=20: max c3=  330  spectrum size=  331  gaps=NONE (gap-free)  [0.01s]
+n=21: max c3=  385  spectrum size=  386  gaps=NONE (gap-free)  [0.01s]
+n=22: max c3=  440  spectrum size=  441  gaps=NONE (gap-free)  [0.01s]
+n=23: max c3=  506  spectrum size=  507  gaps=NONE (gap-free)  [0.01s]
+n=24: max c3=  572  spectrum size=  573  gaps=NONE (gap-free)  [0.02s]
+n=25: max c3=  650  spectrum size=  651  gaps=NONE (gap-free)  [0.02s]
+n=26: max c3=  728  spectrum size=  729  gaps=NONE (gap-free)  [0.03s]
+n=27: max c3=  819  spectrum size=  820  gaps=NONE (gap-free)  [0.03s]
+n=28: max c3=  910  spectrum size=  911  gaps=NONE (gap-free)  [0.04s]
+n=29: max c3= 1015  spectrum size= 1016  gaps=NONE (gap-free)  [0.06s]
+n=30: max c3= 1120  spectrum size= 1121  gaps=NONE (gap-free)  [0.06s]
+n=31: max c3= 1240  spectrum size= 1241  gaps=NONE (gap-free)  [0.08s]
+n=32: max c3= 1360  spectrum size= 1361  gaps=NONE (gap-free)  [0.09s]
+n=33: max c3= 1496  spectrum size= 1497  gaps=NONE (gap-free)  [0.11s]
+n=34: max c3= 1632  spectrum size= 1633  gaps=NONE (gap-free)  [0.14s]
+n=35: max c3= 1785  spectrum size= 1786  gaps=NONE (gap-free)  [0.17s]
+n=36: max c3= 1938  spectrum size= 1939  gaps=NONE (gap-free)  [0.20s]
+n=37: max c3= 2109  spectrum size= 2110  gaps=NONE (gap-free)  [0.23s]
+n=38: max c3= 2280  spectrum size= 2281  gaps=NONE (gap-free)  [0.25s]
+n=39: max c3= 2470  spectrum size= 2471  gaps=NONE (gap-free)  [0.30s]
+n=40: max c3= 2660  spectrum size= 2661  gaps=NONE (gap-free)  [0.35s]
+n=41: max c3= 2870  spectrum size= 2871  gaps=NONE (gap-free)  [0.39s]
+n=42: max c3= 3080  spectrum size= 3081  gaps=NONE (gap-free)  [0.46s]
+n=43: max c3= 3311  spectrum size= 3312  gaps=NONE (gap-free)  [0.53s]
+n=44: max c3= 3542  spectrum size= 3543  gaps=NONE (gap-free)  [0.61s]
+n=45: max c3= 3795  spectrum size= 3796  gaps=NONE (gap-free)  [0.70s]
+n=46: max c3= 4048  spectrum size= 4049  gaps=NONE (gap-free)  [0.79s]
+n=47: max c3= 4324  spectrum size= 4325  gaps=NONE (gap-free)  [0.95s]
+n=48: max c3= 4600  spectrum size= 4601  gaps=NONE (gap-free)  [1.08s]
+n=49: max c3= 4900  spectrum size= 4901  gaps=NONE (gap-free)  [1.23s]
+n=50: max c3= 5200  spectrum size= 5201  gaps=NONE (gap-free)  [1.46s]
+n=51: max c3= 5525  spectrum size= 5526  gaps=NONE (gap-free)  [1.56s]
+n=52: max c3= 5850  spectrum size= 5851  gaps=NONE (gap-free)  [1.81s]
+n=53: max c3= 6201  spectrum size= 6202  gaps=NONE (gap-free)  [2.03s]
+n=54: max c3= 6552  spectrum size= 6553  gaps=NONE (gap-free)  [2.17s]
+n=55: max c3= 6930  spectrum size= 6931  gaps=NONE (gap-free)  [2.41s]
+n=56: max c3= 7308  spectrum size= 7309  gaps=NONE (gap-free)  [2.73s]
+n=57: max c3= 7714  spectrum size= 7715  gaps=NONE (gap-free)  [3.07s]
+n=58: max c3= 8120  spectrum size= 8121  gaps=NONE (gap-free)  [3.46s]
+n=59: max c3= 8555  spectrum size= 8556  gaps=NONE (gap-free)  [3.90s]
+n=60: max c3= 8990  spectrum size= 8991  gaps=NONE (gap-free)  [4.33s]
+
+Completed n = 3..60 in 37.9s total.
+
+OEIS lookup material (search by VALUES):
+  max c3   (n=3..60): [1, 2, 5, 8, 14, 20, 30, 40, 55, 70, 91, 112, 140, 168, 204, 240, 285, 330, 385, 440, 506, 572, 650, 728, 819, 910, 1015, 1120, 1240, 1360, 1496, 1632, 1785, 1938, 2109, 2280, 2470, 2660, 2870, 3080, 3311, 3542, 3795, 4048, 4324, 4600, 4900, 5200, 5525, 5850, 6201, 6552, 6930, 7308, 7714, 8120, 8555, 8990]
+  size     (n=3..60): [2, 3, 6, 9, 15, 21, 31, 41, 56, 71, 92, 113, 141, 169, 205, 241, 286, 331, 386, 441, 507, 573, 651, 729, 820, 911, 1016, 1121, 1241, 1361, 1497, 1633, 1786, 1939, 2110, 2281, 2471, 2661, 2871, 3081, 3312, 3543, 3796, 4049, 4325, 4601, 4901, 5201, 5526, 5851, 6202, 6553, 6931, 7309, 7715, 8121, 8556, 8991]
+  size == max+1 everywhere: True

@@ -1,0 +1,138 @@
+
+==============================================================================
+(a) BIJECTION  reps <-> good divisors,  n in [1, 10^6]
+==============================================================================
+reps side: 12442 unordered integer pairs (x>=y) with x^3+y^3 in [1,10^6]
+max |coordinate| over all reps found: 577 (proven bound 577; box 1000 -> box completeness CONFIRMED)
+divisor side: 12442 good divisors over all n in [1,10^6]
+#n in [1,10^6] that are sums of two integer cubes: 11899
+max #reps = 3, first attaining n: [728, 3367, 4104, 5824, 5859]
+parity condition sqrt(Delta) == d (mod 2): 0 violations (0 expected -- the condition is automatic)
+BIJECTION MISMATCHES: 0
+(a) PASS   [0.6s]
+
+==============================================================================
+(b) SPLIT LEMMA  on all primitive pairs 1 <= y <= x <= 2000
+==============================================================================
+primitive pairs checked: 1216588
+violations -- q even: 0; prime p != 3 of q with p !== 1 (mod 3): 0; v3 law: 0
+(b) PASS   [2.2s]
+(harvested 78498 primes <= 10^6 for part (c) trial division)
+
+==============================================================================
+(c) PRIMITIVE positive 2-rep numbers <= 10^12  (meet-in-the-middle)
+==============================================================================
+positive pairs y <= x with x^3+y^3 <= 10^12: 44164746
+values with >= 2 positive representations: 40426
+values with >= 2 positive reps (re-derived exactly): 40426
+DOUBLY-PRIMITIVE (>= 2 reps with gcd(x,y) = 1): 5464
+
+first 25 doubly-primitive taxicab numbers with factorizations:
+              n  reps (x,y) | d = x+y | cofactor m = n/d (all m split-axis by THM-461.B)
+           1729  = 7[split] * 13[split] * 19[split]
+                 10^3+9^3, d=19, m=91; 12^3+1^3, d=13, m=133
+          20683  = 13[split] * 37[split] * 43[split]
+                 24^3+19^3, d=43, m=481; 27^3+10^3, d=37, m=559
+          40033  = 7^2[split] * 19[split] * 43[split]
+                 33^3+16^3, d=49, m=817; 34^3+9^3, d=43, m=931
+         149389  = 31[split] * 61[split] * 79[split]
+                 50^3+29^3, d=79, m=1891; 53^3+8^3, d=61, m=2449
+         195841  = 37[split] * 67[split] * 79[split]
+                 57^3+22^3, d=79, m=2479; 58^3+9^3, d=67, m=2923
+         327763  = 31[split] * 97[split] * 109[split]
+                 58^3+51^3, d=109, m=3007; 67^3+30^3, d=97, m=3379
+         443889  = 3^2[ram] * 31[split] * 37[split] * 43[split]
+                 73^3+38^3, d=111, m=3999; 76^3+17^3, d=93, m=4773
+         684019  = 7[split] * 19[split] * 37[split] * 139[split]
+                 75^3+64^3, d=139, m=4921; 82^3+51^3, d=133, m=5143
+         704977  = 7[split] * 13[split] * 61[split] * 127[split]
+                 86^3+41^3, d=127, m=5551; 89^3+2^3, d=91, m=7747
+        1845649  = 13^2[split] * 67[split] * 163[split]
+                 120^3+49^3, d=169, m=10921; 121^3+42^3, d=163, m=11323
+        2048391  = 3^2[ram] * 43[split] * 67[split] * 79[split]
+                 106^3+95^3, d=201, m=10191; 127^3+2^3, d=129, m=15879
+        2418271  = 73[split] * 157[split] * 211[split]
+                 116^3+95^3, d=211, m=11461; 134^3+23^3, d=157, m=15403
+        2691451  = 7[split] * 31[split] * 79[split] * 157[split]
+                 123^3+94^3, d=217, m=12403; 139^3+18^3, d=157, m=17143
+        3242197  = 7[split] * 31[split] * 67[split] * 223[split]
+                 138^3+85^3, d=223, m=14539; 141^3+76^3, d=217, m=14941
+        3375001  = 7[split] * 31[split] * 103[split] * 151[split]
+                 144^3+73^3, d=217, m=15553; 150^3+1^3, d=151, m=22351
+        4342914  = 2[INERT] * 3^2[ram] * 31[split] * 43[split] * 181[split]
+                 137^3+121^3, d=258, m=16833; 163^3+23^3, d=186, m=23349   <<< CONTAINS INERT PRIME
+        4931101  = 7[split] * 37[split] * 79[split] * 241[split]
+                 157^3+102^3, d=259, m=19039; 165^3+76^3, d=241, m=20461
+        5318677  = 7[split] * 13[split] * 211[split] * 277[split]
+                 141^3+136^3, d=277, m=19201; 174^3+37^3, d=211, m=25207
+        5772403  = 7[split] * 13[split] * 229[split] * 277[split]
+                 162^3+115^3, d=277, m=20839; 178^3+51^3, d=229, m=25207
+        5799339  = 3^2[ram] * 7[split] * 13[split] * 73[split] * 97[split]
+                 166^3+107^3, d=273, m=21243; 179^3+40^3, d=219, m=26481
+        6058747  = 79[split] * 271[split] * 283[split]
+                 163^3+120^3, d=283, m=21409; 172^3+99^3, d=271, m=22357
+        7620661  = 103[split] * 241[split] * 307[split]
+                 174^3+133^3, d=307, m=24823; 196^3+45^3, d=241, m=31621
+        8872487  = 13[split] * 17[INERT] * 19[split] * 2113[split]
+                 183^3+140^3, d=323, m=27469; 207^3+14^3, d=221, m=40147   <<< CONTAINS INERT PRIME
+        9443761  = 103[split] * 277[split] * 331[split]
+                 185^3+146^3, d=331, m=28531; 209^3+68^3, d=277, m=34093
+       10702783  = 7[split] * 13[split] * 337[split] * 349[split]
+                 183^3+166^3, d=349, m=30667; 202^3+135^3, d=337, m=31759
+
+inert-prime test over ALL 5464 doubly-primitive n <= 10^12:
+  n with gcd of primitive d's > 1: 3406
+  n = 443889 = 3^2[ram] * 31[split] * 37[split] * 43[split]  d's = [111, 93]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  n = 2048391 = 3^2[ram] * 43[split] * 67[split] * 79[split]  d's = [201, 129]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  n = 4342914 = 2[INERT] * 3^2[ram] * 31[split] * 43[split] * 181[split]  d's = [258, 186]  gcd = 6 = 2[INERT] * 3[ram]  inert in gcd: [2]
+  n = 5799339 = 3^2[ram] * 7[split] * 13[split] * 73[split] * 97[split]  d's = [273, 219]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  n = 8872487 = 13[split] * 17[INERT] * 19[split] * 2113[split]  d's = [323, 221]  gcd = 17 = 17[INERT]  inert in gcd: [17]
+  n = 16983854 = 2[INERT] * 139[split] * 199[split] * 307[split]  d's = [398, 278]  gcd = 2 = 2[INERT]  inert in gcd: [2]
+  n = 17045567 = 7[split] * 11[INERT] * 31[split] * 37[split] * 193[split]  d's = [407, 341]  gcd = 11 = 11[INERT]  inert in gcd: [11]
+  n = 24767171 = 11[INERT] * 13[split] * 31[split] * 37[split] * 151[split]  d's = [407, 341]  gcd = 11 = 11[INERT]  inert in gcd: [11]
+  n = 26122131 = 3^2[ram] * 7[split] * 19[split] * 139[split] * 157[split]  d's = [471, 399]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  n = 32973759 = 3^2[ram] * 7[split] * 13^2[split] * 19[split] * 163[split]  d's = [489, 399]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  n = 38253878 = 2[INERT] * 13[split] * 19[split] * 211[split] * 367[split]  d's = [494, 422]  gcd = 2 = 2[INERT]  inert in gcd: [2]
+  n = 40183262 = 2[INERT] * 7[split] * 61[split] * 211[split] * 223[split]  d's = [446, 422]  gcd = 2 = 2[INERT]  inert in gcd: [2]
+  n = 40354119 = 3^4[ram] * 13[split] * 19[split] * 2017[split]  d's = [513, 351]  gcd = 27 = 3^3[ram]  inert in gcd: NONE
+  n = 40519115 = 5[INERT] * 7[split] * 13[split] * 19[split] * 43[split] * 109[split]  d's = [545, 455]  gcd = 5 = 5[INERT]  inert in gcd: [5]
+  n = 41258737 = 13[split] * 31[split] * 37[split] * 2767[split]  d's = [481, 403]  gcd = 13 = 13[split]  inert in gcd: NONE
+  n = 41301953 = 7^2[split] * 11[INERT] * 19[split] * 37[split] * 109[split]  d's = [539, 407]  gcd = 11 = 11[INERT]  inert in gcd: [11]
+  n = 41892515 = 5[INERT] * 7[split] * 79[split] * 109[split] * 139[split]  d's = [545, 395]  gcd = 5 = 5[INERT]  inert in gcd: [5]
+  n = 44409995 = 5[INERT] * 7[split] * 97[split] * 103[split] * 127[split]  d's = [515, 485]  gcd = 5 = 5[INERT]  inert in gcd: [5]
+  n = 52739288 = 2^3[INERT] * 7^2[split] * 19[split] * 73[split] * 97[split]  d's = [584, 392]  gcd = 8 = 2^3[INERT]  inert in gcd: [2]
+  n = 53226297 = 3^2[ram] * 139[split] * 157[split] * 271[split]  d's = [471, 417]  gcd = 3 = 3[ram]  inert in gcd: NONE
+  => doubly-primitive n containing an inert prime (p == 2 mod 3): 1952 of 5464
+  (theory THM-461.C: inert p | n forces p^v_p(n) | every primitive d, hence p | gcd of the d's)
+(c) done   [7.5s]
+
+==============================================================================
+(d) THE 1729 SLICE
+==============================================================================
+1729 = 7[split] * 13[split] * 19[split]   divisors: [1, 7, 13, 19, 91, 133, 247, 1729]
+
+    d  3d | d^3-n?     s=xy     Delta  square?      rep {x,y}
+    1          yes     -576      2305       no              -
+    7          yes      -66       313       no              -
+   13          yes       12       121      YES        {1, 12}
+   19          yes       90         1      YES        {9, 10}
+   91          yes     2754     -2735  (<0) no              -
+  133          yes     5892     -5879  (<0) no              -
+  247          yes    20334    -20327  (<0) no              -
+ 1729          yes   996480   -996479  (<0) no              -
+
+good divisors of 1729: [13, 19]  (expected [13, 19])
+cofactors: 1729/13 = 133 = 7[split] * 19[split];  1729/19 = 91 = 7[split] * 13[split]  (both split products)
+gcd(d1, d2) = gcd(13, 19) = 1  -> no inert prime can divide 1729 (and indeed 1729 = 7*13*19 is completely split)
+r_E(1729) = 48 (expected 48);  B(1729) = sum chi_-3(d) = 8 (expected 8);  r_E = 6B: True
+THM-434 rosette: #units(L_1729) = 12 + r_E = 60 (expected 60)
+B-records up to 1729: [(1, 1), (7, 2), (49, 3), (91, 4), (637, 6), (1729, 8)]
+1729 is the FIRST t with B = 8 (60-unit rosette): True;  any t <= 1729 with B = 7: False (expected False; B = 7 needs p^6, min 7^6 = 117649)
+n < 1729 with two positive reps: [] (expected []) -> Ta(2) = 1729
+reps of 1729: 1^3 + 12^3 = 1729;  9^3 + 10^3 = 1729;  both primitive: True
+Ramanujan near-miss: 9^3 + 10^3 - 12^3 = 1 (= 1: first taxicab number is one above Klein's 1728 = j(i))
+(d) PASS   [0.0s]
+
+==============================================================================
+TOTAL [10.3s]
+==============================================================================

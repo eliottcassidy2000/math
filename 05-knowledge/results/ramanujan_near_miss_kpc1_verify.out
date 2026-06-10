@@ -1,0 +1,72 @@
+========================================================================
+PART 1: series coefficients by direct division against D(x)
+========================================================================
+  a_0..a_3 = [1, 135, 11161, 926271]
+  b_0..b_3 = [2, 138, 11468, 951690]
+  c_0..c_3 = [2, 172, 14258, 1183258]
+[PASS] first triples match claim (1,2,2), (135,138,172), (11161,11468,14258)
+[PASS] D(x)*a(x) == numerator (back-multiplication, n<41)
+[PASS] D(x)*b(x) == numerator (back-multiplication, n<41)
+[PASS] D(x)*c(x) == numerator (back-multiplication, n<41)
+[PASS] a: homogeneous recurrence u_n=82u_(n-1)+82u_(n-2)-u_(n-3) for 3<=n<=40
+[PASS] b: homogeneous recurrence u_n=82u_(n-1)+82u_(n-2)-u_(n-3) for 3<=n<=40
+[PASS] c: homogeneous recurrence u_n=82u_(n-1)+82u_(n-2)-u_(n-3) for 3<=n<=40
+
+========================================================================
+PART 2: canonical backward extension (trailing coefficient of D is 1)
+========================================================================
+  n=-1 triple: (-9, 12, 10)
+  n=-2 triple: (-791, 1010, 812)
+  n=-3 triple: (-65601, 83802, 67402)
+[PASS] D8: n=-1 triple is (-9, 12, 10)
+[PASS] D8: n=-2 triple is (-791, 1010, 812)
+[PASS] D8: n=-3 triple is (-65601, 83802, 67402)
+[PASS] D8: (-9)^3 + 12^3 == 10^3 + (-1)^(-1)
+[PASS] D8: 9^3 + 10^3 == 12^3 + 1 == 1729 (taxicab reading)
+
+========================================================================
+PART 3: d_n = a_n^3 + b_n^3 - c_n^3 - (-1)^n on n = -12..40 (53 values)
+========================================================================
+  n= -3: (a,b,c)=(-65601,83802,67402)  d_n=0
+  n= -2: (a,b,c)=(-791,1010,812)  d_n=0
+  n= -1: (a,b,c)=(-9,12,10)  d_n=0
+  n=  0: (a,b,c)=(1,2,2)  d_n=0
+  n=  1: (a,b,c)=(135,138,172)  d_n=0
+  n=  2: (a,b,c)=(11161,11468,14258)  d_n=0
+  n=  3: (a,b,c)=(926271,951690,1183258)  d_n=0
+[PASS] d_n == 0 exactly for ALL n in [-12, 40] (53 consecutive integers)
+  digit lengths at n=40: a has 77 digits
+
+========================================================================
+PART 4: independent PROOF that d_n == 0 for all n in Z
+========================================================================
+[PASS] f(t) == (t+1)(t^2-83t+1) exactly  product coeffs (high->low) = [1, -82, -82, 1]
+[PASS] disc(t^2-83t+1) = 6885 > 0 and not a perfect square  isqrt(6885)=82, 82^2=6724
+[PASS] t=1 is not a root of the quadratic (so mu != 1, mu > 1 > 1/mu > 0)  q(1) = -81
+[PASS] t=-1 is not a root of the quadratic (eigenvalue -1 is simple)  q(-1) = 85
+
+PROOF (independent of the worker's 27x27 Cayley-Hamilton route):
+  f has three DISTINCT nonzero roots: -1, mu, 1/mu  (mu = (83+9*sqrt(85))/2,
+  real, mu > 1; note 6885 = 81*85).  Each extended sequence a,b,c is defined
+  on ALL of Z by the homogeneous order-3 recurrence (leading AND trailing
+  coefficients of f are 1, so it runs both directions over Z), hence each is
+  an exponential polynomial  A1(-1)^n + A2 mu^n + A3 mu^(-n)  on all of Z
+  (distinct roots => no polynomial-in-n terms).  Cubing, every term of
+  a_n^3 + b_n^3 - c_n^3 has base a product of three roots, i.e. of the form
+  (-1)^e * mu^j with j in {-3..3}; together with the lone (-1)^n term
+  (base -1 = -mu^0, already in the list), d_n is an exponential polynomial
+  with at most 14 DISTINCT NONZERO real bases  {+-mu^j : j = -3..3}
+  (distinct because mu > 1 => the mu^j are 7 distinct positives, and a
+  positive never equals a negative).  An exponential polynomial with N
+  distinct nonzero bases vanishing at N CONSECUTIVE integers is identically
+  zero: the N x N matrix (lambda_i^(n0+k)) = diag(lambda_i^n0) * Vandermonde
+  is invertible.  PART 3 exhibits 53 >= 14 consecutive exact zeros
+  (n = -12..40), so d_n = 0 for ALL n in Z.   QED (claims D7, D8).
+
+[PASS] 53 consecutive verified zeros >= 14 required by the Vandermonde bound
+[PASS] f(-1) == 0 (so (-1)^n already satisfies the order-3 recurrence)  f(-1) = 0
+[PASS] f(0) == 1 (trailing coefficient 1: backward extension is integral and canonical)
+
+========================================================================
+VERIFIER SUMMARY: ALL CHECKS PASS
+========================================================================

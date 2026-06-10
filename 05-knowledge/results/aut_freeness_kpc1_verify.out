@@ -1,0 +1,32 @@
+=== n=5: 1024 labeled tournaments ===
+  H=0 count: 0   (Redei: expect 0)
+  all H odd: True   (Redei: expect True)
+  max H: 15
+  divisibility |Aut| | H failures: 0
+  sum |Aut| over all masks: 1440  (Burnside check: 120*12 = 1440, match=True)
+  |Aut| value set: [1, 3, 5]
+  masks with |Aut|>1: 184
+  freeness failures over all 184 nontrivial-Aut masks: 0
+  (|Aut|, H, #orbits) profile (nontrivial masks): [((3, 3, 1), 120), ((3, 15, 5), 40), ((5, 15, 3), 24)]
+=== n=6: 32768 labeled tournaments ===
+  H=0 count: 0   (Redei: expect 0)
+  all H odd: True   (Redei: expect True)
+  max H: 45
+  divisibility |Aut| | H failures: 0
+  sum |Aut| over all masks: 40320  (Burnside check: 720*56 = 40320, match=True)
+  |Aut| value set: [1, 3, 5, 9]
+  masks with |Aut|>1: 3248
+  freeness failures over all 3248 nontrivial-Aut masks: 0
+  (|Aut|, H, #orbits) profile (nontrivial masks): [((3, 3, 1), 960), ((3, 15, 5), 480), ((3, 27, 9), 480), ((3, 33, 11), 480), ((3, 45, 15), 480), ((5, 15, 3), 288), ((9, 9, 1), 80)]
+=== CYCLE CAVEAT ===
+  C3: |Aut|=3, #HamCycles=1, 3 divides 1: False
+  C3: rotation (0 1 2) fixes the unique Ham cycle: True
+  RQ5: |Aut|=5, aut group = rotations only: True
+  RQ5: #HamCycles=2 (claim: 2), 5 divides 2: False
+  RQ5: cycle-orbit sizes under Aut: [1, 1] (claim: [1, 1])
+  RQ5: cycles fixed by rotation +1: 2 of 2
+    cycle arc-steps (mod 5): [1, 1, 1, 1, 1]
+    cycle arc-steps (mod 5): [2, 2, 2, 2, 2]
+  RQ5 paths: H=15 (claim 15), stabilizer violations=0, path-orbit sizes=[5, 5, 5] (claim [5,5,5])
+
+VERDICT: n=5 ok=True, n=6 ok=True

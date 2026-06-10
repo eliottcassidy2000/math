@@ -1,0 +1,30 @@
+==============================================================================
+PART 1: SANITY -- c3(T) = C(n,3) - sum C(s_v,2) vs direct count
+==============================================================================
+n=4: ALL 64 labeled tournaments checked, mismatches=0, c3 values seen=[0, 1, 2]
+n=5: ALL 1024 labeled tournaments checked, mismatches=0, c3 values seen=[0, 1, 2, 3, 4, 5]
+n=6: 500 random tournaments checked, mismatches=0
+n=7: 500 random tournaments checked, mismatches=0
+n=8: 500 random tournaments checked, mismatches=0
+PART 1 RESULT: ALL IDENTITY CHECKS PASS
+
+==============================================================================
+PART 2: BRUTE SPECTRUM via full Landau-sequence enumeration, n=3..13
+==============================================================================
+n= 3: #LandauSeqs=      2  min c3=0  max c3=1 (formula 1 OK)  spectrum size=2  gaps=NONE
+n= 4: #LandauSeqs=      4  min c3=0  max c3=2 (formula 2 OK)  spectrum size=3  gaps=NONE
+n= 5: #LandauSeqs=      9  min c3=0  max c3=5 (formula 5 OK)  spectrum size=6  gaps=NONE
+n= 6: #LandauSeqs=     22  min c3=0  max c3=8 (formula 8 OK)  spectrum size=9  gaps=NONE
+n= 7: #LandauSeqs=     59  min c3=0  max c3=14 (formula 14 OK)  spectrum size=15  gaps=NONE
+n= 8: #LandauSeqs=    167  min c3=0  max c3=20 (formula 20 OK)  spectrum size=21  gaps=NONE
+n= 9: #LandauSeqs=    490  min c3=0  max c3=30 (formula 30 OK)  spectrum size=31  gaps=NONE
+n=10: #LandauSeqs=   1486  min c3=0  max c3=40 (formula 40 OK)  spectrum size=41  gaps=NONE
+n=11: #LandauSeqs=   4639  min c3=0  max c3=55 (formula 55 OK)  spectrum size=56  gaps=NONE
+n=12: #LandauSeqs=  14805  min c3=0  max c3=70 (formula 70 OK)  spectrum size=71  gaps=NONE
+n=13: #LandauSeqs=  48107  min c3=0  max c3=91 (formula 91 OK)  spectrum size=92  gaps=NONE
+
+OEIS lookup material:
+  #Landau sequences (n=3..13)   : [2, 4, 9, 22, 59, 167, 490, 1486, 4639, 14805, 48107]
+    (expect A000571: 2,4,9,22,59,167,490,1486,4639,14805,48107)
+  max c3 sequence  (n=3..13)    : [1, 2, 5, 8, 14, 20, 30, 40, 55, 70, 91]
+  spectrum size    (n=3..13)    : [2, 3, 6, 9, 15, 21, 31, 41, 56, 71, 92]

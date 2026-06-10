@@ -1,0 +1,10 @@
+primes <= 10^6: 78498   [0.0s]
+doubly-primitive 2-rep n <= 10^12: 5464 (expect 5464)   [7.2s]
+
+primitive representations audited: 10931 over 5464 numbers
+AUDIT-1 (cofactor m = 3^(0|1) * split primes, eps=1 iff 3|d): 0 violations
+AUDIT-2 (v_p(d) = v_p(n) for every inert p | n, every primitive rep): 0 violations
+AUDIT-3 (v_3(n) - v_3(d) <= 1): 0 violations
+AUDIT-4 direct count of doubly-primitive n containing an inert prime: 1952 (gcd-derived count in bridge script: 1952)
+inert primes occurring (p: #n): [(2, 649), (5, 561), (11, 224), (17, 160), (23, 117), (29, 95), (41, 45), (47, 39), (53, 33), (59, 34), (71, 22), (83, 18), (89, 15), (101, 13), (107, 11)] ...
+ALL AUDITS PASS   [7.3s total]

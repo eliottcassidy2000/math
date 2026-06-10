@@ -2246,3 +2246,21 @@ of S occur), or at minimum the smallest. Exact anchor census now in canon (THM-4
 
 ### Lesson
 "Found one" ≠ "found the smallest". Enumeration order silently masquerades as minimality.
+
+## MISTAKE-070: Circular Proof Inventoried as PROVED (|Aut| | H "by tiling-count integrality")
+
+**Date discovered:** 2026-06-10
+**Found by:** kind-pasteur-2026-06-10-S1 Thread B (adversarially verified: independent canon sweep + line-by-line re-read of every cited source)
+**Affects:** `gap_inventory_s196.out` item 15 ("|Aut| divides H for all tournaments: PROVED (opus S182)"); downstream confidence in THM-048 Step 3 and CLAUDE.md's tiling-fibration line
+
+### What was assumed
+That the universal divisibility |Aut(T)| | H(T) had been PROVED (opus-S182), so later artifacts cited it freely: THM-048 Step 3 says "by orbit-counting" with no proof; CLAUDE.md line ~351 states "Tilings * |Aut| = H for every iso class (orbit-stabilizer on tiling fibration)".
+
+### Why it was wrong
+S182's argument (`aut_H_deep_s182.out` Part 5) derives the divisibility from the integrality of the tiling count H/|Aut| — which is the SAME statement (it even hedges: "orbit size divides |Aut|, and different orbits may have different sizes"). The S20bt tiling formula behind the CLAUDE.md line was verified only at n=4,5 and implicitly ASSUMED freeness ("|Aut| are related by automorphisms"); `forbidden_tiling_counts.out` line ~241 even flags freeness as an assumption. The fact WAS true — but no proof existed anywhere in canon, while the inventory said PROVED.
+
+### The fix
+**LEM-003** (kind-pasteur-2026-06-10-S1): for ANY finite digraph, an automorphism fixing a directed Hamiltonian path's arc set is the identity (a directed Ham path's arc set determines its vertex sequence — the unique in-degree-0 source anchors an induction), so Aut acts freely on directed Ham paths, all orbits have size exactly |Aut|, and |Aut| | H. One paragraph, zero tournament structure. Exhaustively verified n≤6 (all 2^10+2^15 labeled tournaments, explicit orbits for all 3432 masks with |Aut|>1) + independently re-verified with different machinery. Honest boundary: FAILS for Hamiltonian CYCLES (no distinguished start): C3 has 1 Ham cycle and |Aut|=3 ∤ 1; circulant RQ5 has BOTH its Ham cycles rotation-fixed.
+
+### Lesson
+"X is an integer because it counts something" requires proving the count is well-defined — here, that all orbit sizes equal |Aut| (freeness), which was the entire content. An asserted proof citation can be as hollow as an extrapolated pattern (cf. MISTAKE-028/036/055). When an inventory says PROVED, spot-check the cited argument before building on it.

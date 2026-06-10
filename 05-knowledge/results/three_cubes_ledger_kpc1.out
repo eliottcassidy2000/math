@@ -1,0 +1,93 @@
+==============================================================================
+PART 1 -- BIGINT VERIFICATION OF THE 2019 SOLUTIONS (exact integer arithmetic)
+==============================================================================
+42: x=-80538738812075974, y=80435758145817515, z=12602123297335631
+    x^3+y^3+z^3 = 42
+  [PASS] 42 = x^3+y^3+z^3 (Booker-Sutherland 2019): residual = 0
+33: x=8866128975287528, y=-8778405442862239, z=-2736111468807040
+    x^3+y^3+z^3 = 33
+  [PASS] 33 = x^3+y^3+z^3 (Booker 2019): residual = 0
+3:  x=569936821221962380720, y=-569936821113563493509, z=-472715493453327032
+    x^3+y^3+z^3 = 3
+  [PASS] 3 = x^3+y^3+z^3 (Booker-Sutherland 2019, third rep): residual = 0
+
+==============================================================================
+PART 3a -- MOD 9 FORBIDDEN-VALUES LAW (PROVED by finite exhaustion)
+==============================================================================
+cube residues mod 9 = [0, 1, 8]  (i.e. {0, +1, -1} mod 9)
+attainable residues of x^3+y^3+z^3 mod 9 = [0, 1, 2, 3, 6, 7, 8]
+FORBIDDEN residues mod 9 = [4, 5]  (i.e. +-4 mod 9)
+  [PASS] forbidden set mod 9 == {4,5}: got [4, 5], expected [4, 5]
+PROVED: x^3+y^3+z^3 is never == 4 or 5 (mod 9).  Proof: cube map factors
+through Z/9 (in fact (x+3)^3 == x^3 mod 9), so the 9-case + 27-triple
+exhaustion above is a complete case analysis, not a sampled pattern.
+
+==============================================================================
+PART 3b -- +-3 MOD 9 RIGIDITY LAW (why the stubborn k all look alike)
+==============================================================================
+  [PASS] sum == 3 (mod 9)  ==>  x == y == z == 1 (mod 3)   [729/729 triples]
+  [PASS] sum == 6 (mod 9)  ==>  x == y == z == 2 (mod 3)   [729/729 triples]
+PROVED: for k == +-3 (mod 9) every solution is 'rigid': all of x,y,z lie in
+a single residue class mod 3.  This kills ~26/27 of the naive search space
+and is the standard explanation of why the hard cases concentrate there.
+
+==============================================================================
+PART 3c -- MOD 7 GIVES NO OBSTRUCTION (PROVED)
+==============================================================================
+cube residues mod 7 = [0, 1, 6]  (i.e. {0, +1, -1} mod 7)
+attainable residues of x^3+y^3+z^3 mod 7 = [0, 1, 2, 3, 4, 5, 6]
+  [PASS] all 7 residues attained mod 7: got [0, 1, 2, 3, 4, 5, 6], expected [0, 1, 2, 3, 4, 5, 6]
+PROVED, with the clean reason: cube residues mod 7 are {0,+1,-1}, so sums of
+three of them realize every integer in [-3,3] -- that is 7 consecutive values,
+hence ALL of Z/7.  (Contrast mod 9: [-3,3] is only 7 of the 9 classes, and the
+two missed classes are exactly +-4.)  Same {0,+-1} cube image, opposite verdict:
+the modulus size decides.  Mod 7 imposes nothing.
+
+==============================================================================
+PART 2 -- THE 2026 OPEN LEDGER FOR x^3+y^3+z^3 = k, k < 1000  [WEB-VERIFIED]
+==============================================================================
+OPEN (no representation known), k < 1000: [114, 390, 627, 633, 732, 921, 975]
+smallest open k = 114
+Source (accessed 2026-06-10): Wikipedia 'Sums of three cubes', verbatim:
+  'The only remaining unsolved cases up to 1,000 are the seven numbers
+   114, 390, 627, 633, 732, 921, and 975, and there are no known primitive
+   solutions (i.e. gcd(x,y,z)=1) for 192, 375, and 600.'
+NOTE: 579 is NOT open -- it fell in September 2019 (Booker-Sutherland, same
+Charity Engine run as 42; Wikipedia verbatim: '...as well as solutions for
+several other previously unknown cases including n=165 and 579 for n<=1000.')
+The human dispatch's candidate list included 579: corrected here.
+
+mod-9 audit of the open list (and the famous fallen cases):
+  k =  114: k mod 9 = 6  [-3 (==6)]
+  k =  390: k mod 9 = 3  [+3]
+  k =  627: k mod 9 = 6  [-3 (==6)]
+  k =  633: k mod 9 = 3  [+3]
+  k =  732: k mod 9 = 3  [+3]
+  k =  921: k mod 9 = 3  [+3]
+  k =  975: k mod 9 = 3  [+3]
+  [PASS] every open k < 1000 is == +-3 (mod 9): residual = 0
+  fallen k =    3: k mod 9 = 3
+  fallen k =   33: k mod 9 = 6
+  fallen k =   42: k mod 9 = 6
+  fallen k =  165: k mod 9 = 3
+  fallen k =  579: k mod 9 = 3
+  fallen k =  906: k mod 9 = 6
+VERIFIED(list of 7): all seven open values are == +-3 (mod 9) -- exactly the
+rigid class of PART 3b.  The famous fallen cases 3, 33, 42, 165, 579, 906 were
+also all == +-3 (mod 9).  This is a structural observation about a finite list,
+NOT a law about which k are hard (MISTAKE-028/036/055 discipline).
+
+==============================================================================
+HEATH-BROWN COMPLETENESS -- status: CONJECTURE
+==============================================================================
+CONJECTURE (Heath-Brown 1992, 'The density of zeros of forms for which weak
+approximation fails', Math. Comp. 59):  every k != +-4 (mod 9) has a
+representation x^3+y^3+z^3 = k, and in fact infinitely many.
+Status 2026: open.  No representation is known for k = 114; no algorithm is
+even known to decide representability for a single given k.
+Mod 9 is the only known congruence obstruction: the form x^3+y^3+z^3 - k has
+zeros in every Z_p (p != 3) and in Z_3 iff k != +-4 (mod 9); failure for
+k == +-4 (mod 9) is a pure 3-adic (mod 9) phenomenon, cf. PART 3a.
+
+==============================================================================
+ALL CHECKS PASS (0 failures)

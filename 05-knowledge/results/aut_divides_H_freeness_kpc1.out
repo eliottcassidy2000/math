@@ -1,0 +1,73 @@
+======================================================================
+PART 0: SELF-TEST — bit-table transform vs naive (n=5, 300 random)
+======================================================================
+  300/300 random (mask, sigma) pairs agree. Self-test PASSED.
+
+======================================================================
+PART 1: ALL 2^10 LABELED n=5 TOURNAMENTS — assert |Aut| | H
+======================================================================
+  tournaments checked : 1024
+  divisibility failures: 0
+  H = 0 cases          : 0  (Redei: impossible for tournaments)
+  all H odd (Redei)    : True
+  |Aut| values seen    : [1, 3, 5]
+  Burnside check: sum |Aut| = 1440 = 120 * 12  (A000568(5) = 12: True)
+  PART 1 PASSED in 0.0s
+
+======================================================================
+PART 2: ALL 2^15 LABELED n=6 TOURNAMENTS — assert |Aut| | H
+======================================================================
+  Aut counts done in 2.4s
+  Held-Karp H for all masks done in 1.3s
+  tournaments checked : 32768
+  divisibility failures: 0
+  H = 0 cases          : 0  (Redei: impossible for tournaments)
+  all H odd (Redei)    : True
+  max H at n=6         : 45
+  |Aut| values seen    : [1, 3, 5, 9]
+  masks with |Aut| > 1 : 3248
+  Burnside check: sum |Aut| = 40320 = 720 * 56  (A000568(6) = 56: True)
+  PART 2 PASSED in 3.7s total
+
+======================================================================
+PART 3: EXPLICIT ORBITS — freeness (orbit size == |Aut| exactly)
+======================================================================
+  3a: all 184 labeled n=5 tournaments with |Aut|>1: freeness failures = 0
+  3b: all 3248 labeled n=6 tournaments with |Aut|>1: freeness failures = 0
+      (|Aut|, H, #orbits) profile (orbits = H/|Aut| exactly):
+        |Aut|=3 H= 3 orbits= 1 : 960 tournaments
+        |Aut|=3 H=15 orbits= 5 : 480 tournaments
+        |Aut|=3 H=27 orbits= 9 : 480 tournaments
+        |Aut|=3 H=33 orbits=11 : 480 tournaments
+        |Aut|=3 H=45 orbits=15 : 480 tournaments
+        |Aut|=5 H=15 orbits= 3 : 288 tournaments
+        |Aut|=9 H= 9 orbits= 1 : 80 tournaments
+  3c: 100 random n=6 masks: freeness failures = 0 (13 had |Aut|>1)
+  PART 3 PASSED in 0.9s
+
+======================================================================
+PART 4: THE CYCLE CAVEAT — freeness FAILS for Hamiltonian CYCLES
+======================================================================
+  C3 cyclic triangle (0->1->2->0):
+    |Aut| = 3, #HamCycles (arc sets) = 1
+    |Aut| divides #HC ? False  (1 % 3 = 1)
+    (non-identity sigma, fixed cycle) incidences: 2  -> action NOT FREE
+    orbit sizes: [1]  (free would force all = 3)
+  RQ5 circulant (i -> i+1, i+2 mod 5):
+    |Aut| = 5, #HamCycles (arc sets) = 2
+    |Aut| divides #HC ? False  (2 % 5 = 2)
+    (non-identity sigma, fixed cycle) incidences: 8  -> action NOT FREE
+    orbit sizes: [1, 1]  (free would force all = 5)
+  CONTRAST (paths on RQ5): |Aut|=5, H=15, orbits=3, all of size |Aut|: True
+
+======================================================================
+SUMMARY
+======================================================================
+  LEM (universal freeness): Aut acts FREELY on directed Ham PATHS;
+  |Aut| | H verified for ALL 1024 labeled n=5 and ALL 32768 labeled
+  n=6 tournaments; orbit sizes == |Aut| verified explicitly for every
+  tournament with |Aut|>1 at n=5,6 plus 100 random n=6 masks.
+  CYCLE caveat confirmed: C3 has 1 Ham cycle, |Aut|=3, 3 does not
+  divide 1 (rotation fixes the cycle). Paths are order-rigid; cycles
+  are not. Zero Paley/QR/Eisenstein content anywhere in the proof.
+  Total runtime: 4.6s
