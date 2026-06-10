@@ -1,0 +1,17 @@
+====================================================================================================
+C32 EXISTENCE in dihedral 3-reflection Cayley specimens (cap=0 early-exit)
+====================================================================================================
+  D_18 refl(0,1,9): n=36 girth=4 conn=True c4=9 c8=0 c16=0 C32:EXISTS (0s)  [n=36 c4=9 c8=0 c16=0]
+  D_18 refl(0,2,9): n=36 girth=4 conn=True c4=9 c8=0 c16=0 C32:EXISTS (0s)  [n=36 c4=9 c8=0 c16=0]
+  D_18 refl(0,4,9): n=36 girth=4 conn=True c4=9 c8=0 c16=0 C32:EXISTS (0s)  [n=36 c4=9 c8=0 c16=0]
+  D_20 refl(0,1,10): n=40 girth=4 conn=True c4=10 c8=0 c16=0 C32:EXISTS (0s)  [n=40 c4=10 c8=0 c16=0]
+  D_20 refl(0,3,10): n=40 girth=4 conn=True c4=10 c8=0 c16=0 C32:EXISTS (0s)  [n=40 c4=10 c8=0 c16=0]
+  D_22 refl(0,1,11): n=44 girth=4 conn=True c4=11 c8=0 c16=0 C32:EXISTS (0s)  [n=44 c4=11 c8=0 c16=0]
+  D_24 refl(0,1,12): n=48 girth=4 conn=True c4=12 c8=0 c16=0 C32:EXISTS (2s)  [n=48 c4=12 c8=0 c16=0]
+  D_24 refl(0,5,12): n=48 girth=4 conn=True c4=12 c8=0 c16=0 C32:EXISTS (0s)  [n=48 c4=12 c8=0 c16=0]
+  D_26 refl(0,1,13): n=52 girth=4 conn=True c4=13 c8=0 c16=0 C32:EXISTS (0s)  [n=52 c4=13 c8=0 c16=0]
+  D_28 refl(0,1,14): n=56 girth=4 conn=True c4=14 c8=0 c16=0 C32:EXISTS (0s)  [n=56 c4=14 c8=0 c16=0]
+  D_30 refl(0,1,15): n=60 girth=4 conn=True c4=15 c8=0 c16=0 C32:EXISTS (0s)  [n=60 c4=15 c8=0 c16=0]
+  D_19 refl(0,1,8): n=38 girth=6 conn=True c4=0 c8=0 c16=1995 C32:EXISTS (0s)  [n=38 girth=6 c4=0 c8=0 c16=1995 (smallest C4+C8-free in family)]
+  D_22 refl(0,1,5): n=44 girth=6 conn=True c4=0 c8=0 c16=2464 C32:EXISTS (0s)  [n=44 girth=6 c4=0 c8=0 c16=2464]
+total time 2s

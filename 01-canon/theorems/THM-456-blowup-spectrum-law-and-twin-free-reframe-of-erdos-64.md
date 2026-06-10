@@ -48,7 +48,8 @@ and opens at n = 10 — E-G counterexamples live within O(1) edges of C₄-Turá
 ## (4) Exhaustive census n ≤ 12 (0 counterexamples, with the structural reason)
 
 Connected δ≥3 graphs: 1, 3, 19, 150, 2589 at n=4..8 (all contain C₄ for n ≤ 9).
-ALL C₄-free δ≥3 graphs: 5 at n=10 (incl. Petersen; 3 of the 5 have girth 3 — C₄-free ≠ girth 5),
+ALL C₄-free δ≥3 graphs: 5 at n=10 (incl. Petersen; 4 of the 5 have girth 3 — C₄-free ≠ girth 5,
+and girth 4 is impossible in a C₄-free graph; count corrected by the re-audit verifier),
 9 at n=11, 57 at n=12. **Every one of the 71 has dyadic profile EXACTLY {8}** — uniformly
 killed by a forced C₈, none even needs C₁₆. (First C₁₆-only kills appear at 24 vertices:
 Markström's four cubic graphs, one planar.) Consistent with Royle–Markström: counterexamples

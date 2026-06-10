@@ -1,0 +1,35 @@
+=== verify_trans_tower_kps2 ===
+
+T7: source=3 sink=3 agree=True
+T15: source=5 sink=5 agree=True
+T31: source=7 sink=7 agree=True
+T63: source=11 sink=11 agree=True
+Paley_31: source=7 sink=7
+
+T31: witness TT7 chain=[8, 25, 22, 4, 11, 29, 18] valid=True
+T63: witness TT11 chain=[23, 56, 32, 2, 26, 61, 37, 6, 30, 57, 33] valid=True
+
+--- brute force trans(D(T)) n=3..5 ---
+n=3 idx=0: brute (3,4) vs fast (3,4) OK
+n=3 idx=1: brute (2,3) vs fast (2,3) OK
+n=4 idx=0: brute (4,5) vs fast (4,5) OK
+n=4 idx=1: brute (3,4) vs fast (3,4) OK
+n=4 idx=2: brute (3,4) vs fast (3,4) OK
+n=4 idx=3: brute (3,4) vs fast (3,4) OK
+n=5 idx=0: brute (5,6) vs fast (5,6) OK
+n=5 idx=1: brute (4,5) vs fast (4,5) OK
+n=5 idx=2: brute (4,5) vs fast (4,5) OK
+n=5 idx=3: brute (4,5) vs fast (4,5) OK
+n=5 idx=4: brute (4,5) vs fast (4,5) OK
+n=5 idx=5: brute (4,5) vs fast (4,5) OK
+n=5 idx=6: brute (4,5) vs fast (4,5) OK
+n=5 idx=7: brute (4,5) vs fast (4,5) OK
+n=5 idx=8: brute (4,5) vs fast (4,5) OK
+n=5 idx=9: brute (3,4) vs fast (3,4) OK
+n=5 idx=10: brute (3,5) vs fast (3,5) OK   <-- EXCEPTION CLASS
+n=5 idx=11: brute (3,4) vs fast (3,4) OK
+mismatches: 0
+exception class n=5 idx10: D(T) TT5 witness [6, 3, 7, 0, 9] valid=True
+  base T arcs (i beats j): [(0, 4), (1, 0), (1, 3), (2, 0), (2, 1), (3, 0), (3, 2), (3, 4), (4, 1), (4, 2)]
+
+=== done ===

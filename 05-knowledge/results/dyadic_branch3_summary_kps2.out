@@ -72,3 +72,81 @@ simultaneously even in the most favorable (girth-5..7) strata; C16 abundance gro
 is suppressed. Structured families (GP, circulant, dihedral Cayley, snarks, cages) are
 uniformly WORSE than SA-optimized graphs at avoiding C8. Everything found is consistent
 with Erdos-Gyarfas; the quantitative 'rigidity' of the C8-free stratum is the new signal.
+
+====================================================================================================
+PART 2 -- COMPLETION SUB-SESSION (same day; the original run was interrupted during the
+dihedral Cayley scan). New scripts: dyadic_cayley_b2b4_kps2, dyadic_exoo_h7_k4_kps2,
+dyadic_exoo_g78_kps2, dyadic_dihedral_c32_kps2.
+====================================================================================================
+
+LITERATURE LOCKED (exact, fetched this sub-session):
+  * Markstrom, K., 'Extremal graphs for some problems on cycles in graphs',
+    Congressus Numerantium 171 (2004) 179-192 (Wikipedia pagination; Exoo's reference
+    list misprints it as 2179-2192). Author PDF (abel.math.umu.se/~klasm/Uppsatser/
+    cycex.pdf) was parsed by Part 1 but the host now refuses connections (ECONNREFUSED)
+    -- Table 1/3 numbers stand on Part 1's parse plus our recomputations.
+  * Wikipedia 'Erdos-Gyarfas conjecture' (citing Royle + Markstrom searches): any
+    counterexample needs >= 17 vertices; any CUBIC counterexample needs >= 30 vertices;
+    Markstrom found four graphs on 24 vertices whose only power-of-two cycles are
+    16-cycles, one of them planar. (CORRECTS Part 1's 'Royle <16' phrasing.)
+  * Exoo, G., 'Three Graphs and the Erdos-Gyarfas Conjecture', arXiv:1403.5636 (2014):
+    define f(k) = min order of a cubic graph with no 2^m-cycle for all m <= k. Then
+    f(2)=10 (3 graphs, incl. Petersen -- matches our mindeg3 census exactly), f(3)=24
+    (Markstrom's 4), 54 <= f(4) <= 78 (lower bound = UNPUBLISHED Markstrom computation;
+    upper = Exoo's G78), f(5) <= 450 (Tutte-Coxeter blown up by H15); plus G420 =
+    3-connected cubic PLANAR {4,8,16}-free graph (buckyball with H7 gadgets), which
+    forces m >= 5 in the Heckman-Krakovski planar bound.
+  * Heckman-Krakovski, Electron. J. Combin. 20(2) (2013) P7: every 3-connected cubic
+    planar graph has a 2^m-cycle with m <= 7.
+  * Liu-Montgomery, arXiv:2010.15802 (J. AMS 2023): there is d such that average degree
+    >= d forces a power-of-2 cycle (dense regime of Erdos-Gyarfas SOLVED; min-deg-3 open).
+  * Carr, A., arXiv:2605.22844 (May 2026): >= 4/7 of the vertices of any minimal
+    counterexample have degree exactly 3; a regular minimal counterexample must be cubic.
+  => CONTEXT FOR TABLE 3: f(4) >= 54 means NO {4,8,16}-avoider exists at n <= 40; our SA
+     floors (c16=271 @ n=30 etc.) probe exactly the regime the bound says is empty, and
+     the first open {4,8,16} territory is 54 <= n <= 76 (Exoo holds 78).
+
+EXOO H7 / MARKSTROM PLANAR GRAPH TRIPLE-LOCK (dyadic_exoo_h7_k4_kps2):
+  H7 verified (9 edges, deg seq 2,2,2,3,3,3,3; cycles c3=2,c5=1,c6=2,c7=1 -- no 2^m-cycle;
+  d(u,v)=d(u,w)=2, d(v,w)=3). K4 with three H7s + one K3: of all 216 attachment wirings,
+  EXACTLY 16 are {C4,C8}-free and they form ONE iso class = planar, |Aut|=3, c3=7,
+  c16=228 = ISOMORPHIC to the planar n=24 class our SA hunt rediscovered blind.
+  Literature construction, SA search, and explicit gadget assembly all agree.
+
+McGEE RECHECK (dyadic_cayley_b2b4_kps2 B0): networkx.simple_cycles independently gives
+  c7=32, c8=34, c9=16, girth 7, |Aut|=32 -- the S710 correction stands twice-verified.
+
+CAYLEY COMPLETION (dyadic_cayley_b2b4_kps2 B2-B4) -- REVISES Part 1's 'uniformly worse':
+  * B2 dihedral D_m, three reflections {s, s r^j, s r^k} (1841 gap-classes, 2m <= 80):
+    672 C8-free, 638 connected specimens on >= 8 vertices. TWO clean strata:
+    - girth-6 stratum: 577 connected C4+C8-FREE cubic Cayley graphs, orders 38-80
+      (smallest: D_19 refl(0,1,8), n=38), c16 in [1739, 3159] -- {4,8}-avoidance is
+      GENERIC in this bipartite family, but the C16 mass is enormous and C32 exists
+      (spot checks D_19(0,1,8), D_22(0,1,5)).
+    - even-m stratum D_m refl(0,j,m/2): 54 specimens with c8 = c16 = 0 (girth 4),
+      orders 36..80: dyadic spectrum EXACTLY {4, 32} (C32 exists in every one checked,
+      dyadic_dihedral_c32_kps2; n < 64 excludes C64). A min-deg-3 family whose only
+      dyadic contact below 32 is C4.
+  * B3 dihedral {s, r^a, r^-a} (380 checked): every connected one on >= 8 vertices has C8.
+  * B4 Z2 x Zm (190 checked): same -- all C8-free hits are disconnected.
+  => the bipartite 3-reflection family is the ONLY structured family found that opens
+     the {4,8} gap; it pays with c16 ~ 2000-3000, mirroring the SA frontier's C16 wall.
+
+EXOO G78 RECONSTRUCTED + NEW DYADIC DATA (dyadic_exoo_g78_kps2):
+  Petersen -> replace one vertex by K3 (G12: c3=1, c5=6, c6=10, matching Exoo's counts)
+  -> replace 11 of 12 vertices by H7; SA over (bare vertex) x (6^11 wirings).
+  * {4,8,16}-free wirings found ONLY when the bare vertex is one of the three K3
+    vertices (matches Exoo's Figure 5 solid vertex); non-triangle bares floor at
+    c16 = 38-48. Found 3 wirings, forming 2 iso classes; both n=78 cubic connected,
+    girth 3, c3=22, c4=c8=c16=0. This independently CONFIRMS f(4) <= 78.
+  * NEW (not in Exoo's paper): both classes CONTAIN 32-cycles (found instantly), and
+    class 1 also contains 64-cycles; so G78-type graphs die at the NEXT dyadic gate --
+    an Erdos-Gyarfas counterexample at n=78 < 128 must also avoid {32, 64}. The
+    {4,8,16}-free stratum at n=78 sits hard against the C32 wall.
+
+REVISED INTERPRETATION (HYP-2359): the dyadic gaps close in a LADDER: opening {8} costs
+c16 ~ 600-1000 (girth 5, n=28-40) or ~2000-3000 (Cayley girth 6); opening {8,16}
+(possible only at n >= 54 by Markstrom's unpublished bound, realized at n = 78 by Exoo)
+costs immediate C32 (verified on both reconstructed G78 classes). Every stratum we can
+reach pays the next power of two. Erdos-Gyarfas unchallenged; the new quantitative signal
+is the geometric growth of the next-gate cycle mass as each gate is closed.

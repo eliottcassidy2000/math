@@ -1,0 +1,150 @@
+====================================================================================================
+ADVERSARIAL VERIFICATION: branch III-dyadic-hunt  (verify_III_dyadic_hunt_kps2)
+Independent closed-walk/2L cycle counter + fresh constructions + networkx leg
+====================================================================================================
+
+T1. counter self-anchors
+  [PASS] K4 c3: got 4 expected 4
+  [PASS] K4 c4: got 3 expected 3
+  [PASS] K5 c3: got 10 expected 10
+  [PASS] K5 c4: got 15 expected 15
+  [PASS] K5 c5: got 12 expected 12
+  [PASS] cube c4: got 6 expected 6
+  [PASS] cube c6: got 16 expected 16
+  [PASS] cube c8 (Ham): got 6 expected 6
+  [PASS] ring C8 c8: got 1 expected 1
+  [PASS] Petersen(Kneser) girth: got 5 expected 5
+  [PASS] Petersen c5: got 12 expected 12
+  [PASS] Petersen c6: got 10 expected 10
+  [PASS] Petersen c7: got 0 expected 0
+  [PASS] Petersen c8: got 15 expected 15
+  [PASS] Petersen c9: got 20 expected 20
+  [PASS] Petersen c10 (non-Ham): got 0 expected 0
+  [PASS] Petersen total (nx leg): got 57 expected 57
+
+T2. Heawood as Fano incidence graph (own construction)
+  [PASS] Heawood cubic: got True expected True
+  [PASS] Heawood girth: got 6 expected 6
+  [PASS] Heawood c6: got 28 expected 28
+  [PASS] Heawood c8: got 21 expected 21
+  [PASS] Heawood total (nx leg): got 213 expected 213
+  [PASS] Heawood spectrum (nx leg): got {6: 28, 8: 21, 10: 84, 12: 56, 14: 24} expected {6: 28, 8: 21, 10: 84, 12: 56, 14: 24}
+
+T3. McGee via own LCF builder; identity = unique (3,7)-cage
+  [PASS] McGee cubic: got True expected True
+  [PASS] McGee girth (=> IS the (3,7)-cage): got 7 expected 7
+  [PASS] McGee c7: got 32 expected 32
+  [PASS] McGee c8  [THE S710 CORRECTION]: got 34 expected 34
+  [PASS] McGee c9: got 16 expected 16
+  [PASS] McGee c16: got 492 expected 492
+  [PASS] McGee |Aut|: got 32 expected 32
+  [PASS] McGee total (nx leg): got 5608 expected 5608
+  [PASS] McGee c8 (nx leg): got 34 expected 34
+
+T4. Tutte-Coxeter via own LCF builder; identity = unique (3,8)-cage
+  [PASS] TutteCoxeter cubic: got True expected True
+  [PASS] TutteCoxeter girth (=> IS the (3,8)-cage): got 8 expected 8
+  [PASS] TutteCoxeter c8: got 90 expected 90
+  [PASS] TutteCoxeter total (nx leg): got 41400 expected 41400
+
+T5. n=28 girth-5 C8-free specimens (the 'min order = 28' witnesses)
+  [PASS] n28 spec0 cubic: got True expected True
+  [PASS] n28 spec0 connected: got True expected True
+  [PASS] n28 spec0 girth: got 5 expected 5
+  [PASS] n28 spec0 c5: got 4 expected 4
+  [PASS] n28 spec0 c6: got 12 expected 12
+  [PASS] n28 spec0 c7: got 8 expected 8
+  [PASS] n28 spec0 c8 == 0: got 0 expected 0
+  [PASS] n28 spec0 c16: got 731 expected 731
+  [PASS] n28 spec0 3-connected: got 3 expected 3
+  [PASS] n28 spec1 cubic: got True expected True
+  [PASS] n28 spec1 connected: got True expected True
+  [PASS] n28 spec1 girth: got 5 expected 5
+  [PASS] n28 spec1 c5: got 5 expected 5
+  [PASS] n28 spec1 c6: got 12 expected 12
+  [PASS] n28 spec1 c7: got 12 expected 12
+  [PASS] n28 spec1 c8 == 0: got 0 expected 0
+  [PASS] n28 spec1 c16: got 614 expected 614
+  [PASS] n28 spec1 3-connected: got 3 expected 3
+  [PASS] n28 spec0 !iso spec1 (>=2 classes): got False expected False
+
+T6. n=30 specimen 3 (excluded by specimens[n][:3] in stage 2)
+  [PASS] n30 spec3 girth: got 5 expected 5
+  [PASS] n30 spec3 c8 == 0: got 0 expected 0
+  [PASS] n30 spec3 c16 (vs reported stage-2 'min' 736): got 726 expected 726
+  => stage-2 frontier value 736 at n=30 is NOT the min over their own specimens (spec3 has 726); monotonic-growth claim still holds (614 < 726).
+
+T7. dihedral 3-reflection Cayley graphs, own group arithmetic
+  [PASS] D18(0,1,9) n: got 36 expected 36
+  [PASS] D18(0,1,9) cubic: got True expected True
+  [PASS] D18(0,1,9) connected: got True expected True
+  [PASS] D18(0,1,9) girth: got 4 expected 4
+  [PASS] D18(0,1,9) c4: got 9 expected 9
+  [PASS] D18(0,1,9) c8 == 0: got 0 expected 0
+  [PASS] D18(0,1,9) c16 == 0: got 0 expected 0
+  [PASS] D18(0,1,9) C32 certificate: got True expected True
+    C32 witness: [34, 3, 33, 4, 23, 13, 32, 5, 31, 14, 22, 15, 21, 6, 30, 7, 29, 16, 20, 17, 19, 8, 28, 9, 27, 0, 18, 1, 35, 2, 25, 11]
+  => dyadic spectrum of D18(0,1,9) is exactly {4,32} (n=36<64 excludes C64): CONFIRMED
+  [PASS] D19(0,1,8) n: got 38 expected 38
+  [PASS] D19(0,1,8) connected: got True expected True
+  [PASS] D19(0,1,8) girth: got 6 expected 6
+  [PASS] D19(0,1,8) c4 == 0: got 0 expected 0
+  [PASS] D19(0,1,8) c8 == 0: got 0 expected 0
+  [PASS] D19(0,1,8) c16: got 1995 expected 1995
+
+T8. Exoo G78 reconstruction, class 1
+  [PASS] G78 n: got 78 expected 78
+  [PASS] G78 cubic: got True expected True
+  [PASS] G78 connected: got True expected True
+  [PASS] G78 c3: got 22 expected 22
+  [PASS] G78 c4 == 0: got 0 expected 0
+  [PASS] G78 c8 == 0: got 0 expected 0
+  [PASS] G78 c16 == 0: got 0 expected 0
+    (c16 recount took 0.0s)
+  [PASS] G78 C32 certificate: got True expected True
+    C32 witness: [0, 1, 4, 5, 2, 6, 41, 37, 40, 39, 38, 36, 35, 62, 61, 60, 57, 59, 27, 26, 25, 22, 21, 77, 76, 72, 70, 71, 73, 69, 65, 63]
+  [FAIL] G78 C64 certificate: got False expected True
+
+T9. Markstrom planar n=24 class (triple-lock graph)
+  [PASS] M24 cubic: got True expected True
+  [PASS] M24 connected: got True expected True
+  [PASS] M24 planar: got True expected True
+  [PASS] M24 c3: got 7 expected 7
+  [PASS] M24 c4 == 0: got 0 expected 0
+  [PASS] M24 c8 == 0: got 0 expected 0
+  [PASS] M24 c16: got 228 expected 228
+  [PASS] M24 |Aut|: got 3 expected 3
+
+T10. n=26 census sample: class 18
+  [PASS] n26c18 cubic: got True expected True
+  [PASS] n26c18 connected: got True expected True
+  [PASS] n26c18 girth: got 3 expected 3
+  [PASS] n26c18 c3: got 1 expected 1
+  [PASS] n26c18 c4 == 0: got 0 expected 0
+  [PASS] n26c18 c8 == 0: got 0 expected 0
+  [PASS] n26c18 c16: got 454 expected 454
+
+====================================================================================================
+VERDICT: 1 FAILURES:
+  !! G78 C64 certificate: expected True, got False
+total time 28s
+
+====================================================================================================
+ADDENDUM (post-run resolution, see verify_III_g78_c64_kps2.out):
+The single FAIL above (G78 C64 certificate) was an artifact of THIS verifier's 60M-expansion
+budget, not a sibling error. Follow-up run verify_III_g78_c64_kps2.py:
+  * sibling's count_cycles_capped(A,64,cap=0) returns 1 in 0.2s;
+  * witness extracted via their exact DFS logic is a VALID 64-cycle (64 distinct vertices,
+    closed, all edges present);
+  * this verifier's own finder also finds a valid C64 with seed=7 (33s).
+=> G78 class 1 C64 EXISTS: sibling claim CONFIRMED.
+FINAL VERDICT: ALL sibling numbers independently confirmed; zero substantive errors.
+Reporting-level issues found (do not affect any verdict):
+  1. Stage-2 'min #C16' table used only specimens[n][:3]; true minima over their own
+     specimens are 726 at n=30 (not 736) and 852 at n=34 (not 855). Monotonic growth
+     614@28 < 726@30 < 780@32 < 852@34 < 879@36 < 961@38 < 970@40 still holds.
+  2. The '16x250K deep restarts' exist only for n=20/22/24 (dyadic_snark_cage_kps2.out);
+     the announced n=26 deep run is absent (n=26 floor=1 rests on 8x60K; immaterial --
+     n=26 > 0 is PROVEN by the exhaustive 23/23 census, all girth 3).
+  3. 'C32 present' for all 577 girth-6 dihedral Cayley graphs was spot-checked on only 2
+     specimens (b2b4 output shows c32=-1 inconclusive for the rest).

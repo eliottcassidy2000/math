@@ -2220,3 +2220,29 @@ with the anchored DP were NEVER affected.
 ### Lesson
 "Anchor at the minimum" is a CYCLE symmetry (rotation), not a PATH symmetry (paths only have
 reversal). Check which group acts before porting a canonical-form trick between objects.
+
+---
+
+## MISTAKE-069: "First Power-of-2 Cycle in Enumeration Order" Reported as "Smallest"
+
+**Date discovered:** 2026-06-09
+**Found by:** kind-pasteur-2026-06-09-S2 branch III (double-checked: own DFS checker ≡ networkx)
+**Affects:** S710's Erdős-64 verification table (THM-446 context): "McGee → C16" and the cage list
+
+### What was assumed
+S710's cage battery reported, per graph, "the" power-of-2 cycle found — implicitly the smallest.
+
+### Why it was wrong
+The search reported the FIRST 2^k cycle encountered in enumeration order, not the smallest k.
+McGee (girth 7) was reported as "→ C16" but in fact contains 34 EIGHT-cycles. (Petersen has 15
+eight-cycles, not the 10 sometimes quoted.) The Erdős–Gyárfás CONCLUSIONS are unaffected (a
+2^k cycle exists either way), but any downstream use of "McGee is C8-free" would be wrong —
+e.g. it would corrupt the girth ladder of THM-457 (the true min order of a girth-7-or-more
+cubic C8-free graph is > 46 by SA floors, not 24).
+
+### The correct framing
+When verifying "∃ cycle of length in S", always record the FULL dyadic profile (which members
+of S occur), or at minimum the smallest. Exact anchor census now in canon (THM-457(1)).
+
+### Lesson
+"Found one" ≠ "found the smallest". Enumeration order silently masquerades as minimality.

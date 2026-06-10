@@ -1,0 +1,33 @@
+==============================================================================
+(1) UNIVERSAL AVOIDANCE: every edge length 3  =>  all cycle sums in 3Z,
+    and 3k is never a power of 2.  DP verification on the actual graphs:
+==============================================================================
+  theta3 (2 vertices, triple edge): subdivision n=8, predicted sums [6], DP spectrum [6], dyadic hits []  -> OK
+  K4: subdivision n=16, predicted sums [9, 12], DP spectrum [9, 12], dyadic hits []  -> OK
+  L4 ladder (C4 with two opposite edges doubled): subdivision n=16, predicted sums [6, 12], DP spectrum [6, 12], dyadic hits []  -> OK
+
+==============================================================================
+(2) SMALLEST SIMPLE SUBDIVISION of each cubic multigraph with ALL cycle
+    sums avoiding {4,8,16,32,...}   (exhaustive over length vectors)
+==============================================================================
+  theta3 (2 vertices, triple edge): searched 200 simple assignments (l_e <= 6)
+     minimum subdivision order n = 6, lengths (1, 2, 4), cycle spectrum [3, 5, 6] (DP re-check [3, 5, 6]: OK)
+     degree-2 vertices: 4/6  -> min degree 2, NOT an E-G graph
+  K4: searched 46656 simple assignments (l_e <= 6)
+     minimum subdivision order n = 7, lengths (1, 1, 2, 1, 2, 2), cycle spectrum [3, 5, 6] (DP re-check [3, 5, 6]: OK)
+     degree-2 vertices: 3/7  -> min degree 2, NOT an E-G graph
+  L4 ladder (C4 with two opposite edges doubled): searched 44100 simple assignments (l_e <= 6)
+     minimum subdivision order n = 7, lengths (1, 2, 1, 2, 1, 2), cycle spectrum [3, 5, 6, 7] (DP re-check [3, 5, 6, 7]: OK)
+     degree-2 vertices: 3/7  -> min degree 2, NOT an E-G graph
+
+GLOBAL MINIMUM: theta3 (2 vertices, triple edge) with lengths (1, 2, 4): a SIMPLE graph on 6 vertices
+  whose full cycle spectrum [3, 5, 6] avoids every power of 2 -- this is the
+  generalized theta graph theta(1, 2, 4).
+
+CONTRAST (THM-456 census): among genuine min-degree-3 graphs, NO graph on
+n <= 12 avoids {4,8,16} (exhaustive); Royle-Markstrom: none on n <= 16.
+Subdivisions dodge dyadic lengths with 6 vertices; delta>=3 graphs cannot
+even at 16. The entire difficulty of Erdos-Gyarfas problem 64 lives in the
+degree-2-free gap between these two worlds.
+
+total time 0.4 s

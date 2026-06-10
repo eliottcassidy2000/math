@@ -1,0 +1,97 @@
+==============================================================================
+P0: validate fresh spectrum/path/walk machinery
+==============================================================================
+  [OK] 995 connected atlas graphs with an edge, 2<=n<=7
+  [OK] fresh DP == nx.simple_cycles on all connected graphs n<=6
+  [OK] fresh DP == nx.simple_cycles on blowups of all connected n<=4 (9 blowups, up to 8 vertices)
+  [OK] closed-form anchors: C_k={k}, K_m=[3..m], K33={4,6}, Petersen={5,6,8,9}, theta(1,2,4)={3,5,6}
+  [OK] Petersen girth 5 (anchor)
+  [OK] fresh longest-path DP == brute DFS on all connected n<=5
+P0 time 0.1 s
+
+==============================================================================
+P1: blowup laws on all 995 connected atlas graphs (fresh recompute)
+==============================================================================
+  [OK] LAW-1 interval [k,2k] subset spec(B): 0 failures
+  [OK] LAW-2 path floor [3,2p] subset spec(B): 0 failures
+  [OK] LAW-3 spec(B) gap-free = [3,c]: 0 failures
+  [OK] degree law deg(u^i)=2deg(u)+1: 0 failures
+  [OK] EXACT LAW c(G[K2]) = 2*s'(G) on ALL 995 (independent walk-based s')
+  [OK] c = 2p for 939 graphs
+  [OK] c > 2p for 56 graphs
+  [OK] c < 2p never
+  [OK] Hamiltonian blowups: 896
+  [OK] NET: spec={3}, p=5, s'=6, spec(NET[K2])=[3..12]
+  [OK] smallest beaters have n=6 (none at n<=5)
+  beaters at n=6: [(6, 6, 'E@dW', 5, 12), (6, 6, 'EQKo', 5, 12), (6, 7, 'EXSg', 5, 12), (6, 7, 'EhX_', 5, 12), (6, 8, 'E?~o', 5, 12), (6, 8, 'EzW_', 5, 12), (6, 9, 'E?~w', 5, 12)]
+  [OK] NET graph is among the (n=6,e=6) beaters
+P1 time 18.0 s
+
+==============================================================================
+P2: n=8 delta>=3 census (own augmentation + own dedup)
+==============================================================================
+  [OK] atlas-direct delta>=3 counts n=4..7 = 1,3,19,150
+  [OK] augmentation sanity at n=7: 150
+  raw n=8 candidates: 27528
+  [OK] n=8 connected delta>=3 census = 2589
+  [OK] n=8: C4-free count = 0
+  [OK] n=8: C8-avoiders = 36
+  [OK] n=8: power-of-2 avoiders = 0
+  [OK] n=8: largest C8-avoider spectrum = [3,4,5,6,7]
+  [OK] n=8: cubic graphs in census = 5
+P2 time 8.5 s
+
+==============================================================================
+P3: own degree-sequence generator + cubic spectra
+==============================================================================
+  [OK] generator full delta>=3 census n=6 = 19
+  [OK] generator full delta>=3 census n=7 = 150
+  [OK] cubic counts n=4,6,8,10 = 1,2,5,19 (A002851)
+  [OK] Petersen among the 19 cubic-10 graphs
+  [OK] exactly 1 cubic-10 C8-avoider
+  [OK] cubic-10 C8-avoider spectrum {3,4,5} and iso to IsTX@?B?w
+P3 time 0.7 s
+
+==============================================================================
+P4: ex(n;C4) chain re-derivation
+==============================================================================
+  [OK] ex(n;C4) n=2..7 = 1,3,4,6,7,9 (atlas direct, own C4 test)
+  [OK] no C4-free cubic graph on 8 vertices => ex(8;C4) <= 11
+  [OK] no C4-free (4,3^8) graph on 9 vertices => ex(9;C4) <= 13
+  [OK] n=11 e=19: 7 degree sequences (claim 7), all empty => ex(11;C4) <= 18
+  [OK] Turan corridor margins n=4..12 = [-2,-2,-2,-2,-1,-1,+1,+1,+3]
+P4 time 0.1 s
+
+==============================================================================
+P5: ALL C4-free delta>=3 graphs n=10,11,12 (own generator)
+==============================================================================
+  n=10: 5 C4-free delta>=3 connected graphs (e in [15,16])
+  n=11: 9 C4-free delta>=3 connected graphs (e in [17,18])
+  n=12: 57 C4-free delta>=3 connected graphs (e in [18,21])
+  [OK] C4-free delta>=3 counts n=10,11,12 = 5, 9, 57
+  [OK] all 71 C4-free graphs have dyadic profile exactly {8}
+  [OK] girth-5 counts at n=10,11,12 = [1,0,2]
+  [OK] Erdos-Gyarfas counterexamples n<=12: 0
+  [OK] their five published n=10 g6 codes match my census 1-1
+  [OK] Petersen in n=10 census
+  [OK] n=10: girth-3 count is 4 (THM-456 text says '3 of the 5' -- drift?)
+  [OK] two n=10 avoiders at e=16=ex(10;C4) with degseq (4,4,3^8)
+P5 time 5.5 s
+
+==============================================================================
+P6: local-move instance recounts (M1, M3, TWIN) + Bondy-Vince
+==============================================================================
+  [OK] 971 cyclic connected graphs
+  [OK] M1 instances = 111358, failures 0
+  [OK] M3 instances = 143523, failures 0
+  [OK] TWIN instances = 23860, failures 0
+  [OK] Bondy-Vince holds on all 173 delta>=3 graphs n<=7
+  [OK] exactly 2 graphs achieve only difference 2, incl. K_{3,3}
+P6 time 0.8 s
+
+  [OK] [k,2k] contains a power of 2 >= 4 for all 3<=k<=100000
+
+==============================================================================
+TOTAL TIME 33.8 s
+ISSUES FOUND: 0
+ALL RECHECKED CLAIMS CONFIRMED by second independent implementation.

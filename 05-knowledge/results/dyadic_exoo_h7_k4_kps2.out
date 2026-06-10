@@ -1,0 +1,19 @@
+====================================================================================================
+EXOO H7 GADGET VERIFICATION (arXiv:1403.5636 Fig. 2)
+====================================================================================================
+  H7: 7 vertices, 9 edges, degree seq [2, 2, 2, 3, 3, 3, 3] (need three 2s, four 3s)
+  cycles: c3=2 c4=0 c5=1 c6=2 c7=1
+  no 2^m-cycle for any m: True
+  d(u,v)=2 d(u,w)=2 d(v,w)=3  (Exoo: 2, 2, 3)
+
+====================================================================================================
+K4 CONSTRUCTION: three H7 copies + one K3, all 216 attachment wirings
+====================================================================================================
+  216 wirings -> (c4,c8) histogram: {(0, 0): 16, (0, 1): 120, (0, 2): 72, (0, 3): 8}
+  {C4,C8}-free wirings: 16; distinct iso classes among them: 1
+
+COMPARISON with SA-rediscovered planar n=24 class (markstrom_rediscovery class 1):
+  construction class 0: planar=True |Aut|=3 girth=3 c3=7 c16=228 iso-to-rediscovered-planar=True
+
+f(3)=24 structural confirmation: Exoo's K4/H7/K3 description REPRODUCES the planar Markstrom graph our SA hunt rediscovered independently.
+total time 0s
