@@ -1,0 +1,13 @@
+=== v2 cross-validation vs brute (M=2) ===
+   s=2 C=3: 30 trials OK
+   s=3 C=2: 30 trials OK
+   s=2 C=4: 30 trials OK
+
+=== M=2 Chang sweep (fast verifier) ===
+   [ambient 9 vertices, 27 2-grids]
+   SAT    M=2 s=2 C=3  (5 edges, lazy=6, 0.0s)
+   [ambient 8 vertices, 38 2-grids]
+   SAT    M=2 s=3 C=2  (5 edges, lazy=5, 0.0s)
+   [ambient 16 vertices, 216 2-grids]
+   SAT    M=2 s=2 C=4  (34 edges, lazy=43, 0.0s)
+   [ambient 27 vertices, 3969 2-grids]
