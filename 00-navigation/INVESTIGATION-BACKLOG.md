@@ -12,6 +12,17 @@
 
 ---
 
+## Lead mac-mini-2026-06-10-S1: Erdős 592 session 3 — Q(3,5)/Q(3,6) SETTLED, the algebra ladder is strict, the seam is 2-adic at n=3; cubic lens placed (THM-464/465, T770, HYP-2373..2376)
+
+**Done:** Q(3,5) = SAT and Q(3,6) = SAT, settled by explicit bi-dyadic (sign+v₂ per coordinate) witnesses, independently verified — the 80k-clause timeout instance falls in 2.8s in the feature quotient (POKE Task 2 progressed, Task 1.3 advanced: R(3,2) > 6). Uniform-table SAT over t=4..7 is feature-UNSAT (0.3s) ⟹ NO infinite (sign,v₂)-measurable strong witness: the ladder signs ⊊ signs+v₂ ⊊ (open) is strict. Triadic control: sign+v₃ (equal-size algebra) is feature-UNSAT at (3,4) instantly ⟹ the 2-adic seam is real at n=3; at n=2 ALL gradings share cutoff 5 (v₃ control). R_b(1) = R(3,b) proved+verified (classical Ramsey = height-1 row). Cubic lens (HYP-2376 census): cubes sum-free forever / non-Sidon from 1729 = first C4 of the cubic summand graph; signed from (3,4,5,6); cites kind-pasteur THM-462/463 + HYP-2370.
+**Live at close:** batched (3,3) Chang (first Chang number) and ternary free sweep t≥7 — outputs stream to 05-knowledge/results/erdos592_{chang33_batched,ternary_seam}_macmini_s3.out.
+**Next:**
+1. Harvest the two live runs; R_3(2) exact; first Chang number.
+2. CLIMB THE ALGEBRA LADDER: find the next rung past sign+v₂ that admits a t-uniform table (candidates: unbounded-v₂ with tail conditions, Larson partial-sum/scheme features, mixed row-grading × column-algebra) — a uniform rung + König = constructive strong Specker at ω³.
+3. Explain the v₂/v₃ asymmetry algebraically (parity closure odd+odd→even vs the mod-3 escape; THM-464 D open note).
+4. m≥2 tower enumerator (THM-460 B3 grammar) — still the open-case probe (POKE Task 1.2).
+5. THM-459 hand closure; f_grid(4) optimality.
+
 ## Lead mac-mini-2026-06-09-S2: Erdős 592 session 2 — Chang towers, dyadic witnesses, R(2,2)=5 lemma layer (THM-459/460, HYP-2363..2366)
 
 **Source:** second 592 session; continues the S1 lead below.
