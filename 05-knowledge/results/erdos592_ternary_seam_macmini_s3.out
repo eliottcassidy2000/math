@@ -1,0 +1,20 @@
+=== BVerifier cross-validation (b=3) vs brute ===
+   n=1 t=4: 25 trials OK
+   n=1 t=5: 25 trials OK
+   n=2 t=3: 25 trials OK
+   n=2 t=4: 25 trials OK
+
+=== calibration: R_3(1) should be R(3,3) = 6 ===
+   SAT   b=3 free n=1 t=4 (3 edges, lazy=3, 0.0s)
+   SAT   b=3 free n=1 t=5 (5 edges, lazy=6, 0.0s)
+   UNSAT b=3 free n=1 t=6 (lazy=17, 0.0s)
+
+=== binary game n=2: the v3 CONTROL (free/inv/v2 known = 5) ===
+   SAT   b=2 v3   n=2 t=4 (30 edges, lazy=12, 0.0s)
+   UNSAT b=2 v3   n=2 t=5 (lazy=67, 0.0s)
+
+=== ternary game n=2: free / inv / v2 / v3 sweep ===
+   SAT   b=3 free n=2 t=3 (3 edges, lazy=1, 0.0s)
+   SAT   b=3 free n=2 t=4 (12 edges, lazy=3, 0.0s)
+   SAT   b=3 free n=2 t=5 (31 edges, lazy=11, 0.0s)
+   SAT   b=3 free n=2 t=6 (70 edges, lazy=47, 0.0s)

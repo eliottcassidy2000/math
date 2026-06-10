@@ -1,0 +1,8 @@
+=== (a) re-derive a t=5 table, freeze, test at t=6,7,8 ===
+   frozen table from t=5: 42 blue classes
+   [frozen-T5] t=5: VERIFIED witness (1272 edges)
+   [frozen-T5] t=6: independent subgrid exists — rule fails domination
+   [frozen-T5] t=7: TRIANGLE — rule fails triangle-freeness
+
+=== (b) simultaneous-t SAT for one uniform table (t=4,5,6,7) ===
+   simultaneous over t=(4, 5, 6, 7): feature-UNSAT (lazy=37, 0.3s)
