@@ -1,0 +1,4 @@
+witness: 33 blue edges on 16 vertices
+H(witness tournament) = 92264757   (odd? True — Rédei demands odd)
+H(transitive_16) = 1 (reference; all-red)
+H(random triangle-free blue, same edge count): [408581117, 542799763, 571279293, 442020207, 154990545]

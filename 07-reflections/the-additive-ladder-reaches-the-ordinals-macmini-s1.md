@@ -91,3 +91,38 @@ structurally finite) question about composition-free graded relation families, w
 both Schipperus's positive machinery (≤2 summands) and his negative constructions
 (≥4) should appear as the two regimes of one density/composition trade-off. That is
 the handoff (HYP-2346).
+
+---
+
+## Session 2 addendum (mac-mini-2026-06-09-S2)
+
+Three tightenings of the picture:
+
+1. **The Erdős–Szekeres face.** Through the tournament dictionary, R(2,2) = 5 says:
+   every tournament on the lex-ordered 5×5 grid without an order-reversed transitive
+   triple contains an order-faithful transitive binary subgrid. The finite shadow of
+   Specker's theorem is a monotone-substructure forcing statement — Erdős–Szekeres
+   with grid structure in the conclusion. (And the open ω^(ω³) case is the same
+   species of statement three exponential levels up.)
+
+2. **Towers, not grids, carry the limit.** Crossing the first limit exponent
+   (ω^ω and beyond) the right finite objects flip from grids to STACKED TOWERS
+   (THM-460): full-type ⟺ contains a full tower, by indecomposability of the type.
+   The König bridge then makes Chang's 1972 theorem — an infinitary statement with
+   a notoriously hard proof — FORCE a family of finite tower-Ramsey numbers that
+   appear never to have been computed. The positive theorems of partition calculus
+   each cast a shadow of new finite Ramsey numbers; Specker's was R(2,2) = 5,
+   Chang's are being computed as this session runs.
+
+3. **Witness tournaments are transitive-leaning.** A Q(2,4) witness, read as a
+   tournament (blue = order-reversing arcs), has H = 92,264,757 Hamiltonian paths —
+   odd, as Rédei requires, and well below five random triangle-free reversal sets of
+   the same size (155M–571M). One data point, but the direction matches the theory:
+   witnesses are gap-graded, hierarchical, *order-respecting-but-for-structured-
+   reversals* — closer to layered/transitive than random. The repo's core invariant
+   H sees the hierarchy. (Exploratory; needs witness ensembles before it is a claim.)
+
+The relation-Schur reading also sharpened: the invariant cutoff numbers being
+computed are Schur numbers for GRADED RELATIONS — the composition-freeness
+B_{g₁}∘B_{g₂} ∩ B_{g₁+g₂} = ∅ is the cauldron's boil-avoidance one category up,
+with Zarankiewicz density as the antagonist instead of interval-covering.
