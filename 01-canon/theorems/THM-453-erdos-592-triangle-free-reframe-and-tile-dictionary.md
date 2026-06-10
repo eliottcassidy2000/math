@@ -190,3 +190,26 @@ exactly 3 summands; smallest open case α = ω^(ω³). m-spectrum refinements: L
 relations for ordinals ω^(ω^α)" (JCTB) — exact statements not yet imported (paywalled).
 (Sources verified this session: erdosproblems.com/592 via reader proxy;
 arXiv:2011.13218 read in PDF, Thm 2.2 / Obs 2.2.)
+
+---
+
+## G. Session-2 addendum (mac-mini-2026-06-09-S2): invariant and dyadic cutoffs
+
+Computed exactly with the persistent SAT verifier (complete; cross-validated):
+
+* **Invariant cutoff = free cutoff at n=2.** The translation-invariant family
+  (part F1's (R, {B_g})) dies at exactly t = 5: invQ(2,4) SAT (37 edges),
+  invQ(2,5) UNSAT. Invariance costs nothing — the graded relation-Schur/
+  Zarankiewicz clash of F2 is the binding obstruction, and the invariant cutoff
+  is a **Schur number for graded relations** equal to R(2,2) = 5.
+* **Dyadic sufficiency.** Constraining B_g to depend only on v₂(g) (the 2-adic
+  valuation of the gap) leaves all computed answers unchanged: dyadic cutoff 5
+  at n=2; dyadic invQ(3,4) SAT (358 edges, complete verification), alongside
+  invariant invQ(3,4) SAT (317 edges) and free Q(3,4) SAT (346 edges). Within
+  the computed range, all the gap structure a witness needs factors through the
+  2-adic valuation — the Erdős-64 "dyadic rungs" (THM-446) appearing inside
+  Erdős-592 witnesses. (HYP-2364 records the refinement; closed-form rule
+  extraction open.)
+* **Witness tournaments lean transitive** (exploratory, 1 witness + 5 baselines):
+  a Q(2,4) witness read as a tournament has H = 92,264,757 (odd — Rédei check
+  passes), well below equal-size random triangle-free reversal sets (155–571M).

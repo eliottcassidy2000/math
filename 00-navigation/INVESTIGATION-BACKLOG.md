@@ -12,6 +12,18 @@
 
 ---
 
+## Lead mac-mini-2026-06-09-S2: Erdős 592 session 2 — Chang towers, dyadic witnesses, R(2,2)=5 lemma layer (THM-459/460, HYP-2363..2366)
+
+**Source:** second 592 session; continues the S1 lead below.
+**Done this session:** THM-459 (R(2,2)=5: lemma layer L1–L5 — doubly-dark clique, C₅/triple dichotomy, trace cliques, composition-freeness — + machine closure; hand closure open); THM-460 (tower miniature for ω^(ω^m): full-type ⟺ stacked towers PROVED, recursive binary shape grammar, König bridge ⟹ Chang/Schipperus FORCE finite tower-Ramsey cutoffs; m=1 sweep partial); invariant cutoff = free cutoff = 5 at n=2; DYADIC sufficiency (B_g through v₂(g)) verified through (3,4) — the 2-adic seam shows up inside 592 witnesses; f_grid = 1, 7, ≤30; witness-tournament H flier (odd, transitive-leaning).
+**Live at close (outputs land via tee):** free Q(3,5) (`erdos592_satverifier_frontier_macmini_s2.out`, buffered — appears when the process exits); Chang M=2 at (3,3) (`erdos592_chang_towers_v2_macmini_s2.out`, streaming).
+**Next steps:**
+1. Harvest Q(3,5) and the (3,3) Chang number; extend the Chang sweep to first UNSAT (guaranteed to exist by THM-460 C2).
+2. Implement the THM-460 B3 general-shape enumerator (towers of towers) ⟹ run m=2 (Schipperus-forced cutoffs) and the **m=3 probe of the open $1000 case** — the designated centerpiece.
+3. Extract a closed-form dyadic rule from the invQ(3,t)/dyadic witnesses (B_g via v₂(g) + within-row R) and try to prove it works for all t ⟹ via THM-453 D1, a constructive strong form of Specker's ω³ negative.
+4. Hand-close THM-459 (the two regimes are bounded case analyses; SAT core is small).
+5. Witness-ensemble statistics for the H-flier before claiming anything (HYP-2364 note).
+
 ## Lead mac-mini-2026-06-09-S1: Erdős 592 — the R(n,t) tree-grid ladder and the rank-3 graded-relation frontier (THM-453, T768, HYP-2344..2346)
 
 **Source:** Erdős 592 session (ω^β → (ω^β,3)²; open case α=ω^(ω³) = exponent with three CNF summands).

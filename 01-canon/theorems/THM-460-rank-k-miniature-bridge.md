@@ -110,14 +110,30 @@ makes persistence possible (if his witness is strong); **at m = 3 the behaviour
 of Q^(3) for growing (s,c) is a computational probe of the open $1000 case**:
 persistence + a uniform rule would PROVE ω^(ω³) ↛ (ω^(ω³),3)² via C1.
 
-## D. Computations (statuses updated as runs complete)
+## D. Computations (exact; structural tower verifier cross-validated against brute
+force, 0 disagreements; `erdos592_chang_towers{,_v2}_macmini_s2.py`)
 
-* m=1, M=2: [pending this session]
-* m=1, M=3: [pending]
-* m=2 first instances: [pending]
-* Cross-check: the m-ladder at M=1 degenerates to single grids = THM-453's Q(n,t)
-  family up to ambient bookkeeping (binary 1-towers of shape (1,…,1) = binary
-  grids of height m).
+m=1, M=2 tower game on ambient [C]^s (kill all binary 2-towers = independent pair
+below an independent binary 2-grid). Equivalent form used by the fast verifier:
+since models are triangle-free, ANY 3 below-candidates contain an independent
+pair, so a witness must leave every independent 2-grid with ≤ 2 surviving
+elements below it.
+
+| (s,C) | vertices | result |
+|-------|----------|--------|
+| (2,3) | 9 | SAT, 5-edge witness |
+| (3,2) | 8 | SAT, 5-edge witness |
+| (2,4) | 16 | SAT, 34-edge witness |
+| (3,3) | 27 | grinding at session close (tens of thousands of CEGAR rounds — UNSAT-convergence-shaped; result lands in `erdos592_chang_towers_v2_macmini_s2.out`) |
+
+* Chang's theorem GUARANTEES the sweep hits UNSAT (C2); the first UNSAT (s,C) is
+  the first computed "Chang number".
+* Minimal grid-witness sizes for the THM-453 game (new sequence, certified
+  optimal at t ≤ 3): **f_grid(2)=1, f_grid(3)=7, f_grid(4)≤30** (35-edge and
+  30-edge witnesses known; optimality run timed out below 30).
+* m ≥ 2 instances require the general-shape recursive enumerator (the B3
+  grammar); not yet implemented — the m=3 instance is the open case's probe and
+  the designated next-session centerpiece.
 
 ## Honesty
 
