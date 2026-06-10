@@ -1,0 +1,61 @@
+========================================================================
+(A) DELETION LADDER  u(n) <= floor(n*u(n-1)/(n-2))  from u(22)<=61
+========================================================================
+  n   3n ladder bd AMP cited  match? L(n) constr
+ 22   66        61        61    True          60
+ 23   69        66        66    True          64
+ 24   72        72        72    True          68
+ 25   75        78        78    True          72
+ 26   78        84        84    True          76
+ 27   81        90        90    True          81
+
+  ALL AMP bounds (n=23..27) == deletion ladder from u(22)<=61 ?  True
+  => only u(21)=57 (exact) and u(22)<=61 need heavy machinery;
+     the entire ladder above 22 is elementary averaging.
+
+  ladder from u(21)=57 gives u(22) <= 62  (AMP's 61 is 1 sharper)
+
+========================================================================
+(B) FLOOR ADVANCEMENT THRESHOLDS  (exact-integer)
+========================================================================
+  u(25) <= 3*25=75  via averaging  <==  u(24) <= 69   [check floor(25*69/23)=75 <= 75: True];  construction L(24)=68  gap=1
+  u(26) <= 3*26=78  via averaging  <==  u(25) <= 72   [check floor(26*72/24)=78 <= 78: True];  construction L(25)=72  gap=0
+  u(27) <= 3*27=81  via averaging  <==  u(26) <= 75   [check floor(27*75/25)=81 <= 81: True];  construction L(26)=76  gap=-1
+
+  Interpretation:
+  * u(24) <= 69  ==> u(25) <= 75 = 3*25  (floor advances to N*>=26).
+    Construction L(24)=68, AMP bound 72; truth in [68,72]; need <=69.
+  * u(25) <= 72  ==> u(26) <= 78 = 3*26  (=> N*>=27).  L(25)=72 (tight!).
+  * u(26) <= 78  ==> u(27) <= 81 = 3*27  (=> N*>=28, settling u(27)=81).
+    L(26)=76; need <=78.
+
+  Even the OPTIMISTIC anchor u(22)=60 (=construction) propagates to:
+    u(25) <= 76   (3n=75;  beats 3n floor? True)
+    u(26) <= 82   (3n=78;  beats 3n floor? True)
+    u(27) <= 88   (3n=81;  beats 3n floor? True)
+  => averaging from n=22 CANNOT reach 3n at 25/26/27 (blocked by L(22)>=60).
+  => advancing the floor REQUIRES a non-averaging (geometric) bound at
+     one of n in {24,25,26} -- the targets are only 1-3 below current bds.
+
+========================================================================
+(C) TRIPLE CONFLUENCE AT n=27 = 3^3
+========================================================================
+  kissing number of the plane kappa = 6,  kappa/2 = 3
+  3n  at n=27         = 81
+  n^(4/3) at n=27     = 81   (exact: 27^(4/3)=(3^3)^(4/3)=3^4)
+  3^4                 = 81
+  3^(kappa/2)         = 27   (size of triangle-cube K3^[]^3)
+  (kappa/2)^3         = 27   (crossover of line 3n and curve n^4/3)
+  line 3n = curve n^(4/3)  <==>  n^(1/3) = kappa/2 = 3  <==>  n = 27
+  FIXED-POINT: 3^(kappa/2) == (kappa/2)^3 holds because kappa/2 = 3.
+  All four benchmarks (cube tie, incidence crossover, 3^4, 3*27) = 81 at 27.
+
+  sign of (3n)^3 - n^4  (=27 n^3 - n^4 = n^3(27-n)):  >0 for n<27, =0 at 27, <0 n>27
+    n=24: (3n)^3-n^4 =    41472  => 3n > n^(4/3)
+    n=25: (3n)^3-n^4 =    31250  => 3n > n^(4/3)
+    n=26: (3n)^3-n^4 =    17576  => 3n > n^(4/3)
+    n=27: (3n)^3-n^4 =        0  => 3n = n^(4/3)
+    n=28: (3n)^3-n^4 =   -21952  => 3n < n^(4/3)
+    n=29: (3n)^3-n^4 =   -48778  => 3n < n^(4/3)
+
+DONE.
