@@ -1,0 +1,2 @@
+trans(P7)=3; D_skew=5; K2=6; SC=5
+Reid-Parker R(5)=14 forces every 14-vertex tournament to contain TT5, so ALL doublings of the TT4-free Paley_7 must gain >= +2. Verified.

@@ -37,7 +37,13 @@
 5. Import literature exacts: Darby (JCTB, "Negative partition relations for ordinals ω^(ω^α)"), Larson "pentagram" (JSL 2000), Schipperus APAL 2010 constructions; EHMR's presentation of Specker's witness — compare with the SAT-discovered structure.
 **Files:** 04-computation/erdos592_*.py (6 scripts), 05-knowledge/results/erdos592_*.out, 03-artifacts/drafts/erdos-592-survey-and-reframes-macmini-s1.md, 07-reflections/the-additive-ladder-reaches-the-ordinals-macmini-s1.md. Mistakes: MISTAKE-066 (bridge direction), MISTAKE-067 (incomplete CEGAR verifier — read the witness).
 
-## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448, T767, HYP-2332..2337)
+## Lead kind-pasteur-2026-06-09-S2: Erdős problems through the doubling lens (THM-455/456/457, T769, HYP-2356..2361, MISTAKE-068/069)
+
+**Status:** ACTIVE — all branches adversarially verified.
+**Erdős 64 (#64, Erdős–Gyárfás):** THM-456 (blowup spectrum law spec(G[K₂]) = gap-free [3, 2s(G)]; a single edge plants a twin C₄ ⟹ blowups never counterexamples; Turán corridor closed n≤9; all 71 C₄-free δ≥3 graphs n=10–12 killed by forced C₈) + THM-457 (dyadic gate ladder: girth ladder 24 / 28 (NEW EXACT) / ≤32 / >46 / 58; ladder principle: closing each dyadic gate inflates the next; dihedral 3-reflection Cayley family with dyadic spectrum exactly {4,32}; Exoo G78 reconstructed — contains C32, new beyond the 2014 paper). MISTAKE-069: McGee HAS 34 C8s (S710 enumeration-order artifact corrected).
+**Erdős–Moser (#1216):** THM-455 — tower trans = 3,5,7,11 (extremality window 7–31, closes by 63); sandwich trans(D(T)) − trans(T) ∈ {1,2} over all 32768 n=6 tournaments (HYP-2360); Reid–Parker FORCES the Paley₇ +2 exception (verified trans(D(Paley₇)) = 5); T31 ties published trans(QR₃₁) = 7 (solver externally validated vs Momihara–Suda Table 2).
+**Next steps:** half-life ladder prediction at order 128 (HYP-2361); 2-adic character condition for the {4,32} dihedral family; classify alternating-chain +2 exceptions; hand trans data to mac-mini's 592 thread (THM-453 Part A bridge).
+
 ## Lead kind-pasteur-2026-06-09-S1: the skew-Sylvester doubling D(T) — Walsh/skew-Hadamard recursion on tournaments (THM-447/448/450..452/454, T767, HYP-2332..2337+2350..2355)
 
 **Source:** user directive (n*2 doubling, three copies + one negated, skew-Hadamard normalization = tiling frame).

@@ -1,3 +1,6 @@
-n=6 ALL 32768 labeled tournaments: trans(D)-trans(T) distribution {1: 27248, 2: 5520}
-(t,tD) exception census {(4, 6): 5280, (3, 5): 240}
-first examples: [([(0, 1), (0, 4), (1, 3), (2, 0), (2, 1), (3, 0), (3, 2), (4, 1), (4, 2), (4, 3), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4)], 4, 6), ([(0, 2), (0, 4), (1, 0), (1, 3), (2, 1), (3, 0), (3, 2), (4, 1), (4, 2), (4, 3), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4)], 4, 6), ([(0, 3), (0, 4), (1, 0), (1, 3), (2, 0), (2, 1), (3, 2), (4, 1), (4, 2), (4, 3), (5, 0), (5, 1), (5, 2), (5, 3), (5, 4)], 4, 6)]
+n=6 56 classes delta distribution {1: 47, 2: 9}
+exceptions [(22, 4, 6), (28, 4, 6), (31, 4, 6), (36, 4, 6), (37, 4, 6), (44, 4, 6), (47, 4, 6), (54, 4, 6), (55, 3, 5)]
+CONSISTENCY CHECK (independent slow iso-class run, completed after the labeled run):
+n=6: 56 classes, trans(D)-trans(T) distribution: {1: 47, 2: 9}
+exception classes (idx, t, tD): [(22,4,6),(28,4,6),(31,4,6),(36,4,6),(37,4,6),(44,4,6),(47,4,6),(54,4,6),(55,3,5)]
+Agrees with labeled census {+1: 27248, +2: 5520}; no delta >= 3 in either run.
