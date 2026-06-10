@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 taxicab_inert_audit_kpc1.py
-THREAD A (kind-pasteur-2026-06-10-S1): HYP-2367 / THM-461 -- full independent audit.
+THREAD A (kind-pasteur-2026-06-10-S1): HYP-2367 / THM-463 -- full independent audit.
 
 Companion to taxicab_moser_bridge_kpc1.py.  That script established the
 doubly-primitive 2-rep list <= 10^12 and tested inert primes THROUGH the
@@ -10,7 +10,7 @@ it regenerates the list, then DIRECTLY factors every doubly-primitive n and
 every cofactor, and audits, for every primitive representation n = x^3 + y^3
 (gcd(x,y) = 1, d = x + y, m = n/d = x^2 - xy + y^2):
 
-  AUDIT-1 (split lemma, THM-461.B): m = 3^eps * (split primes only), eps <= 1,
+  AUDIT-1 (split lemma, THM-463.B): m = 3^eps * (split primes only), eps <= 1,
           and eps = 1 iff 3 | d.
   AUDIT-2 (Cor C exact form): for every inert prime p (p == 2 mod 3) of n,
           v_p(d) = v_p(n)  (the FULL inert content of n sits in EVERY

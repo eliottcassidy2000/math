@@ -1,5 +1,5 @@
 ---
-id: THM-461
+id: THM-463
 name: two-cube-representations-are-a-divisor-property-on-the-split-axis
 status: PROVED (elementary, complete) + VERIFIED exact-integer (bijection all n <= 10^6; split lemma all primitive pairs <= 2000; full audit of all 5464 doubly-primitive taxicab numbers <= 10^12)
 date: 2026-06-10
@@ -11,7 +11,15 @@ resolves:
   - "HYP-2367 (the taxicab-Moser bridge is structural): PROVED"
 ---
 
-# THM-461: two-cube representations are a divisor property on the split axis
+# THM-463: two-cube representations are a divisor property on the split axis
+
+> **Namespace + provenance note.** Originally claimed and written as THM-461
+> (kind-pasteur-2026-06-10-S1 reservation commit e465dea6); the reservation push was
+> blocked by a network outage, and `monad-explorer-2026-06-10`'s distinct THM-461
+> (unit-distance deletion ladder + floor reduction, commit c335323d) reached origin
+> first. Renumbered THM-463 per first-come convention (cf. the THM-433/434 collision
+> note in THM-434). All `_kpc1` scripts/outputs renumbered consistently. THM-462
+> (cubic spectrum, same session) is unaffected.
 
 > **One-sentence punchline.** 1729 sits at the bottom of both lists because both
 > lists reward complete splitting in `ℤ[ζ₆]` — the taxicab–Moser resonance is

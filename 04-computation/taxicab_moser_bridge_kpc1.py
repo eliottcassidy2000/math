@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """
 taxicab_moser_bridge_kpc1.py
-THREAD A (kind-pasteur-2026-06-10-S1): HYP-2367 / THM-461
+THREAD A (kind-pasteur-2026-06-10-S1): HYP-2367 / THM-463
 The taxicab--Moser Eisenstein bridge: two-cube representations are a divisor
 property on the split axis.
 
@@ -27,7 +27,7 @@ re-derived and re-checked in pure Python ints before being reported.
 
 (c) PRIMITIVE positive 2-representation numbers (both reps gcd(x,y) = 1)
     up to 10^12, meet-in-the-middle on x <= 10^4. First 25 listed with
-    factorizations. Empirical inert-prime test: theory (THM-461 Cor C)
+    factorizations. Empirical inert-prime test: theory (THM-463 Cor C)
     says an inert prime p == 2 (mod 3) dividing n must divide
     gcd(d_1, d_2) of the primitive divisors d_i = x_i + y_i; we check
     every doubly-primitive n in range for gcd(d_i, d_j) > 1.
@@ -313,7 +313,7 @@ print(f"values with >= 2 positive reps (re-derived exactly): {two_rep_all}")
 print(f"DOUBLY-PRIMITIVE (>= 2 reps with gcd(x,y) = 1): {len(doubly_primitive)}")
 print()
 print("first 25 doubly-primitive taxicab numbers with factorizations:")
-print(f"{'n':>15}  reps (x,y) | d = x+y | cofactor m = n/d (all m split-axis by THM-461.B)")
+print(f"{'n':>15}  reps (x,y) | d = x+y | cofactor m = n/d (all m split-axis by THM-463.B)")
 inert_in_first25 = 0
 for n, prr in doubly_primitive[:25]:
     fac = factorize(n)
@@ -323,7 +323,7 @@ for n, prr in doubly_primitive[:25]:
     rep_desc = "; ".join(f"{x}^3+{y}^3, d={x+y}, m={n // (x + y)}" for (x, y) in prr)
     print(f"{n:>15}  = {fac_str(fac)}")
     print(f"{'':>15}  {rep_desc}{'   <<< CONTAINS INERT PRIME' if has_inert else ''}")
-    # exact split-axis check of each cofactor (verifies THM-461.B at 10^12 scale)
+    # exact split-axis check of each cofactor (verifies THM-463.B at 10^12 scale)
     for (x, y) in prr:
         m = n // (x + y)
         mf = factorize(m)
@@ -350,7 +350,7 @@ else:
 # So if no gcd > 1 contains an inert prime, NO doubly-primitive n in range has one.
 print(f"  => doubly-primitive n containing an inert prime (p == 2 mod 3): "
       f"{n_inert_total} of {len(doubly_primitive)}")
-print(f"  (theory THM-461.C: inert p | n forces p^v_p(n) | every primitive d, "
+print(f"  (theory THM-463.C: inert p | n forces p^v_p(n) | every primitive d, "
       f"hence p | gcd of the d's)")
 print(f"(c) done   [{time.time()-tc:.1f}s]")
 
