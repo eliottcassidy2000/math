@@ -236,3 +236,18 @@ THM-421/427/428 (clock/shell torsion), THM-401/403.
 clock-alignment of the witness denominator. (2) does the forced small-speed cluster sit in a
 low-order (low-torsion) fiber? — the Task-2 frontier. (3) the antipodal lens predicts all genuine
 homometry/shell structure is odd-prime: re-examine S708/S710 `C=3³,3⁴` as σ-orbit spaces on `ℤ/C`.
+
+---
+## mac-mini-2026-06-10-S1 — Erdős 592 session 3 + the cubic lens (T768/T770, THM-464/465, HYP-2373..2377)
+
+**Q(3,5) AND Q(3,6) SETTLED: SAT.** The instance that timed out at 80k raw CEGAR clauses falls in 2.8 s in the bi-dyadic feature quotient (sign + v₂ of every coordinate gap; 171 features). Explicit witnesses (1272 / 4104 edges), each independently re-verified by a fresh complete verifier. R(3,2) > 6: the strong-witness frontier at ω³ is now three sizes past R(2,2)=5. [POKE Steering Task 1.3/2 progress]
+
+**No uniform table — infinite bi-dyadic witness REFUTED.** One fixed F2-table valid at t=4,5,6,7 simultaneously is feature-UNSAT (0.3 s); the frozen t=5 table grows a triangle at t=7. So sign+v₂ buys every finite size separately but the infinite strong witness escapes the algebra — the ladder signs ⊊ signs+v₂ ⊊ (next rung open) is strict. Constructive-strong-Specker must climb (candidates: unbounded-v₂ tails, Larson-scheme partial sums).
+
+**The seam is 2-adic at n=3 (triadic control).** sign+v₃ — an algebra of the SAME SIZE — is feature-UNSAT at (3,4) with zero CEGAR rounds. v₂ is genuinely special where binary subgrids meet a deep column space. At n=2, by contrast, ALL gradings (free/inv/v₂/v₃) share cutoff 5 (v₃ control computed this session) — the seam lives in the algebra, not the row-grading.
+
+**THM-464 calibration row:** R_b(1) = R(3,b) — classical Ramsey numbers are the height-1 row of the (branching × height) table; machine-verified at b=3 (solver found C₅ as the extremal witness). Ternary game: R_3(2) > 6, sweep running.
+
+**Cubic lens (complements kind-pasteur THM-462/463, HYP-2370):** cubes on the THM-446 ladder = sum-free forever (Euler/FLT₃, verified 0 violations to 300³) yet non-Sidon from exactly 1729 = first C4 of the cubic summand graph; 258 taxicab numbers in range, additive-energy excess super-linear (1.92→6.88 per B over B=50..300); signed relations enter at (3,4,5,6) (105 quadruples to 120). Sum-of-three-cubes status per kind-pasteur's ledger: 33/42 fell in 2019 (Booker, Booker–Sutherland); smallest open k = 114.
+
+**Still grinding at write-up:** batched (3,3) Chang instance (first Chang number candidate); ternary free sweep t ≥ 7. Outputs tee'd to 05-knowledge/results/erdos592_{chang33_batched,ternary_seam}_macmini_s3.out.

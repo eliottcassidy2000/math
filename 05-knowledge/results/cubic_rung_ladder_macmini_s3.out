@@ -1,0 +1,21 @@
+=== 3-term: sum-free check (Euler/FLT3 sanity) ===
+   a^3+b^3=c^3 solutions with a,b <= 300: 0   (FLT n=3 => 0)
+=== 4-term: taxicab census (pair-sums with >=2 representations) ===
+   pair-sums up to 2*300^3: 44892 distinct; with >=2 reps: 258
+   FIRST: 1729  (should be 1729)
+   first 8 taxicab numbers: [1729, 4104, 13832, 20683, 32832, 39312, 40033, 46683]
+   first with 3 representations (Ta(3)=87539319 if in range): beyond range
+   additive energy E = 181764, Sidon floor = 179700, EXCESS = 2064
+   B=50: excess = 96  (excess/B: 1.920)
+   B=100: excess = 360  (excess/B: 3.600)
+   B=200: excess = 1088  (excess/B: 5.440)
+   B=300: excess = 2064  (excess/B: 6.880)
+=== signed 4-term: x^3+y^3+z^3 = w^3, 0<x<=y<=z<w<=120 ===
+   solutions: 105; first: [(3, 4, 5, 6), (1, 6, 8, 9), (6, 8, 10, 12), (2, 12, 16, 18), (9, 12, 15, 18)]
+   (3,4,5,6) present: True
+
+LADDER PLACEMENT: cubes are sum-free (3-term rung: SAFE forever, Euler/FLT3)
+but non-Sidon from 1729 (4-term rung: first C4 of the cubic summand graph);
+signed relations enter at (3,4,5,6). Cross-refs: THM-446 ladder, THM-441 energy,
+kind-pasteur THM-463 (divisor criterion for two-cube reps = the split axis),
+HYP-2370 ledger (mod-9 law; 2026 open-list: smallest open k=114; 33/42 fell 2019).
