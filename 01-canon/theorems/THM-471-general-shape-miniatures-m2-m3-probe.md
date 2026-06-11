@@ -90,17 +90,25 @@ Calibrations (all match THM-460 D / THM-453):
 * XOR consistency: m=2 M=1 (2,2) is raw-UNSAT and xor-feature-UNSAT (no clash).
 
 **New numbers (first of their kind):**
-* **m=2 M=1 j1: UNSAT at (2,2) (N=16, 2.2s) and (2,3) (N=81, 9611 shape clauses,
-  23s)** — the first finite cutoff data points forced by Schipperus's positive
-  ω^(ω²) theorem (THM-460 C2 predicted their existence; these are the first ever
-  computed). Sweep at (2,4), (2,5), (3,2), (2,6): see .out (in flight).
-* **m=2 M=2 j0: SAT at (2,2)** via a 5-class XOR table (40 edges, re-verified) —
-  after M=1 dies, the M-ladder (longer towers = weaker demands) reopens, so the
-  (M; s, c) cube has genuine structure at m=2.
+* **m=2 M=1 j1: UNSAT at (2,2) (N=16, 2.2s), (2,3) (N=81, 9611 shape clauses,
+  23s), and (2,4) (N=256, 64,455 shape clauses, 772s)** — the first finite cutoff
+  data forced by Schipperus's positive ω^(ω²) theorem (THM-460 C2 predicted their
+  existence; these are the first ever computed). The M=1 j1 shape Bin((1,1)) is
+  UNSAT across the whole computed s-row at c=2,3,4 — consistent with a uniform
+  (no surviving witness) M=1 cutoff. (3,2): TIMEOUT (138k clauses, 900s).
+* **m=2 M=2 j0: SAT at (2,2)** (raw 35 edges; the XOR quotient found a 5-class /
+  40-edge witness, both re-verified) — after M=1 dies, the M-ladder (longer
+  towers = weaker demands) reopens, so the (M; s, c) cube has genuine structure
+  at m=2. (2,3),(3,2): TIMEOUT.
 * **m=3 probes at (2,2)** (M=1 j1, 16-leaf shape, N=256; M=2 j0, 43-leaf shape):
-  raw + XOR-quotient runs in flight at write-up — outputs stream to
-  `05-knowledge/results/erdos592_shape_{miniatures,xor_quotient}_kp0611.out`.
-  These are the first finite data of any kind on the ω^(ω³) open case's miniature.
+  ALL cells honest TIMEOUTs ([NOT SAT certificates]). RAW: M=1 j1 ran 58 CEGAR
+  rounds before the node budget tripped (1264s). XOR-quotient (anchored,
+  translation-WLOG, valid by XOR-invariance of the shape family): M=1 reached
+  3657 hitting clauses before a 30M-node trip; M=2-j0 tripped at round 3.
+  The m=3 cells are a genuine compute frontier (like the m=1 (3,3) Chang cell):
+  machinery validated, verdicts open. Next-session handles: deeper/streaming
+  budgets, search reformulated over the 255 XOR classes (a sum-free-set
+  enumeration) rather than the 256-point graph, and incremental clause reuse.
 
 ## Honesty
 

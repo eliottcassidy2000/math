@@ -64,12 +64,20 @@ Question: t_dead(Finv) — the full translation-invariant algebra at (3,7);
 by A3 this bounds EVERY gap-determined rung (jet towers of any depth, cross-gap,
 leading-digit, all of them at once).
 
-**VERDICT: [PENDING — run in flight at write-up; see
-`05-knowledge/results/erdos592_invariant_wall_kp0611.out`; the session-close
-message will carry the result. If feature-UNSAT: no translation-invariant strong
-witness exists on [7]³ and the entire gap-determined ladder is decided (alive
-t ≤ 6, dead t ≥ 7); if SAT: the wall is jet-specific and the invariant witness's
-structure is the next rung.]**
+**VERDICT: TIMEOUT — UNDECIDED.** 7200 s, 4985 CEGAR hitting clauses, solves
+hardening monotonically (UNSAT-convergence-shaped), no dominating model ever
+found. Plumbing control INV(3,4) SAT (446 edges, independently re-verified;
+agrees with mac-mini's independent invQ(3,4) implementation). Instance shape:
+1098 features (= the lex-positive gap vectors, exactly (13³−1)/2), 170,235
+triangle + 4026 seed clauses, 19 s build. Circumstantial evidence for UNSAT:
+both strict refinement quotients computed this session (F2J, F2X) are
+feature-UNSAT at (3,7), and no model survived ~5000 rounds. Status of the
+ladder: every COMPUTED rung is decided (alive t ≤ 6, dead t ≥ 7); the finest
+gap-determined rung is open at (3,7). RERUN NOTE for the harvest session: the
+4985 CEGAR clauses are not persisted — add clause-logging to disk so reruns
+resume instead of rediscovering (the run is deterministic up to solver seeds);
+or attack UNSAT directly with symmetry breaking over the gap-negation/coordinate
+symmetries of the invariant instance.
 
 **HYP-2396 (the 2n+1 conjecture), claimed on this evidence:** R(n,2) = 2n+1.
 Data: R(1,2) = 3, R(2,2) = 5 (THM-459), and at n=3 the gap-determined wall sits
