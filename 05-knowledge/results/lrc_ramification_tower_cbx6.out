@@ -1,0 +1,17 @@
+== Part 1: the ramification tower + Pisano signature ==
+  27 ->(/3) 9 ->(/3) 3 : non-unit (p|v) core of shell p^k = shell p^{k-1}
+  Pisano tower pi(3,9,27) = 8,24,72 = 8,24,72 (p^{k-1}*pi(p))
+  ramified n<=200 (depth=v_p(2n-1)): 5(3^2), 13(5^2), 14(3^3), 25(7^2), 41(3^4), 61(11^2), 63(5^3), 85(13^2), 122(3^5), 145(17^2), 172(7^3), 181(19^2)
+  => n=14 (27=3^3) is the SMALLEST depth-3 shell
+
+== Part 2: the freed-clock formula (exact Q) ==
+  n=14: drop j frees to 1/j for j in [8, 9, 10, 11, 12, 13]; divisor-blocked j (j|n): [2, 7]
+  n=19: drop j frees to 1/j for j in [10, 11, 12, 13, 14, 15, 16, 17, 18]; divisor-blocked j (j|n): none (n prime)
+
+== Part 3: n=19 cyclotomic core + Goldbach-comet local-global ==
+  n=19: transversals among 4000 random 18-subsets mod 37 = 0 (THM-420: non-transversal=>loose)
+  AP {1..18} tight 1/19; skip-18 frees to 1/18 (exact)
+  Goldbach singular factor: n=14 -> 6/5 (7-wing 6/5); n=19 -> 18/17 (18/17);
+    n=27=3^3 -> 2 = SAME as n=3 (2): comet reads RADICAL, blind to the tower
+
+all checks passed
