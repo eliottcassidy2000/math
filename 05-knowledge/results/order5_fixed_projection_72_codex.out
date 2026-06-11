@@ -1,0 +1,41 @@
+Order-5 fixed projection gate for the putative Type II [72,36,16] code
+A16(W72)=249849, so fixed minimum words must be congruent to 4 mod 5
+Assumed cycle shape: 5^14 1^2; fixed projection length = 14+2 = 16
+Extremal obstruction: no nonzero fixed word may lift to weighted length < 16
+
+== e8+e8 ==
+dimension check: |C|=256 = 2^8
+weight distribution: {0: 1, 4: 28, 8: 198, 12: 28, 16: 1}
+tetrads A4=28
+covered coordinate pairs by tetrads: 56/120
+  class same-e8-block: pairs=56, valid=0, pair-cover={3: 56}, min-nonzero={12: 56}, fixed-A16={8: 56}
+  class split-e8-block: pairs=64, valid=64, pair-cover={0: 64}, min-nonzero={16: 64}, fixed-A16={14: 64}
+    sample valid pair (0, 8): lifted distribution {0: 1, 16: 14, 20: 14, 32: 49, 36: 100, 40: 49, 52: 14, 56: 14, 72: 1}
+  sample fatal pair (0, 1) has min lift 12 and tetrad-pair cover 3
+
+== d16+ ==
+dimension check: |C|=256 = 2^8
+weight distribution: {0: 1, 4: 28, 8: 198, 12: 28, 16: 1}
+tetrads A4=28
+covered coordinate pairs by tetrads: 120/120
+  class different-dplus-pairs: pairs=112, valid=0, pair-cover={1: 112}, min-nonzero={12: 112}, fixed-A16={12: 112}
+  class same-dplus-pair: pairs=8, valid=0, pair-cover={7: 8}, min-nonzero={12: 8}, fixed-A16={0: 8}
+  sample fatal pair (0, 1) has min lift 12 and tetrad-pair cover 7
+
+== Derived order-5 gate ==
+e8+e8 survives exactly when the two fixed coordinates lie in different e8 blocks: 64 valid marked pairs, each with fixed_A16=14 congruent to W72 A16 mod 5.
+d16+ has every coordinate pair covered by a tetrad, so every marking creates a fixed word of lifted weight 12; d16+ is excluded from an extremal order-5 fixed projection.
+Therefore any order-5 automorphism of an extremal [72,36,16] code with shape 5^14 1^2 forces a partition of the fourteen 5-cycles into two heptads, one heptad plus one fixed point in each e8 block.
+The fixed weight-16 words are exactly 14, leaving 249835 nonfixed minimum words = 49967 orbits of size 5.
+
+== Tournament Analysis: marked-pair branch quotient ==
+observable: valid weighted-min>=16 branch wins; then A16 mod-5 match; then larger min lift; then fewer weight-12 leaks; then more valid markings
+tie Hamiltonian path: lexicographic vertex name after the numeric keys
+  d16+::different-dplus-pairs: pairs=112, valid=0, min_lift=12, fixed_A16_values=(12,), congruent_valid=0, weight12_total=112
+  d16+::same-dplus-pair: pairs=8, valid=0, min_lift=12, fixed_A16_values=(0,), congruent_valid=0, weight12_total=56
+  e8+e8::same-e8-block: pairs=56, valid=0, min_lift=12, fixed_A16_values=(8,), congruent_valid=0, weight12_total=168
+  e8+e8::split-e8-block: pairs=64, valid=64, min_lift=16, fixed_A16_values=(14,), congruent_valid=64, weight12_total=0
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1}
+directed 3-cycles: 0
+Hamiltonian path by score: e8+e8::split-e8-block > d16+::same-dplus-pair > d16+::different-dplus-pairs > e8+e8::same-e8-block
+SCCs: singleton under this transitive quotient; the loss of cycles is a warning that the next TA should add nonfixed-eigenspace/coset-glue observables.

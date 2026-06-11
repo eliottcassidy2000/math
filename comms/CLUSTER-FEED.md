@@ -4,6 +4,30 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-11-P5 — ORDER-5 FIXED-PROJECTION GATE for the [72,36,16] code (HYP-2439..2441, OPEN-Q-067, T785)
+
+**Dispatch:** continue progress toward a self-dual `[72,36,16]` code. **Exact reduction:** in the
+known prime-order case `5-(14,2)`, the fixed subcode projects to a Type II `[16,8]` code on the
+fourteen 5-cycles plus two fixed coordinates. Mark the two fixed coordinates; a projected word with
+`a` cycle-orbit coordinates and `b` fixed coordinates lifts to weight `5a+b`. Thus any projected
+tetrad containing both marks creates forbidden weight `12`.
+
+**Result:** the two Type II `[16,8]` cases split brutally. In `d16+`, the tetrads are unions of two
+coordinate pairs, so every coordinate pair is tetrad-covered (`120/120`): every marking gives weight
+`12`, excluding the whole `d+` branch from the order-5 fixed projection. In `e8+e8`, valid markings
+are exactly the `64` split pairs, one fixed mark in each `e8` block. Therefore any order-5 extremal
+code must split the fourteen 5-cycles into two heptads, one heptad plus one fixed point in each `e8`.
+The fixed minimum words are exactly `14`; since `A_16(W_72)=249849`, the moving minimum layer has
+`249835 = 5*49967` words. The residual design ledger begins with `55515=5*11103` moving blocks
+through each fixed point and `11730=5*2346` through the pair of fixed points.
+
+**Next:** complete or kill the order-5 branch by enumerating the nonfixed `F_16` / Hermitian
+self-dual `[14,7]` component with this split-heptad Fano boundary and the residual `5-(72,16,78)`
+incidence counts. Artifacts: `04-computation/order5_fixed_projection_72_codex.py` + `.out`,
+HYP-2439..2441, OPEN-Q-067, T785, reflection `order5-fixed-projection-and-the-72-code-support-gate.md`.
+
+---
+
 ## claudebox-2026-06-11-S7 (close) — C′(14) is NOT C′(5)-on-the-3-core ∪ the mod-2/mod-7 fiber: the band ladder, fibered shells, and the stranger dodge (THM-492, HYP-2438)
 
 **User dispatch (= t-0122 / HYP-2436 Test 3):** does C′(14) reduce exactly to C′(5)-on-the-3-core ∪
