@@ -78,7 +78,7 @@ Sources checked:
 
 ## The common proof shape
 
-The session's synthesis is HYP-2411: eta, Gleason, and OCF are all cancellation
+The session's synthesis is HYP-2426: eta, Gleason, and OCF are all cancellation
 gates.
 
 - Eta: an infinite product hides behind sparse pentagonal signs.

@@ -1,13 +1,17 @@
-# HYP-2410 - The [72,36,16] Type II obstruction is support realization, not the scalar Gleason gate
+# HYP-2425 - The [72,36,16] Type II obstruction is support realization, not the scalar Gleason gate
 
 **Status:** CONFIRMED for the scalar enumerator; OPEN for code existence.
 **Source:** codex-2026-06-11-P1.
+**Companions:** HYP-2415, HYP-2420, HYP-2421, OPEN-Q-061, T783.
 **Artifacts:** `04-computation/pentagonal_lyapunov_code72_codex.py`,
-`05-knowledge/results/pentagonal_lyapunov_code72_codex.out`.
+`05-knowledge/results/pentagonal_lyapunov_code72_codex.out`,
+`04-computation/cancellation_gate_atlas_codex.py`,
+`05-knowledge/results/cancellation_gate_atlas_codex.out`.
 
 ## Statement
 
-The Type II Gleason invariant ring completely determines the formal weight
+Building on HYP-2415's tournament-gauge formulation, the Type II Gleason
+invariant ring completely determines the formal weight
 enumerator of a putative extremal binary doubly-even self-dual `[72,36,16]`
 code. With
 
@@ -29,8 +33,9 @@ nontrivial coefficient
 A_16 = 249849.
 ```
 
-Therefore the famous existence problem is not blocked at the scalar modular-form
-level. The obstruction is the realization of this enumerator by an actual
+Therefore the famous existence problem is not blocked at the scalar
+modular-form level. The obstruction is the realization of this enumerator by an
+actual
 self-dual support system with the required orthogonality, doubly-evenness, and
 design structure.
 
@@ -61,9 +66,13 @@ t=4: 442
 t=5: 78
 ```
 
-This is the finite analogue of the pentagonal cancellation gate: a small invariant
-ring forces a forbidden prefix, but the hard problem is whether there is a support
-object behind the scalar partition function.
+This is the finite analogue of the pentagonal cancellation gate: a small
+invariant ring forces a forbidden prefix, but the hard problem is whether there
+is a support object behind the scalar partition function. The atlas addendum
+checks extremal Type II formal enumerators at lengths `24,48,...,240`; all are
+integral, nonnegative, and sum to `2^(n/2)` in this range. That reinforces that
+scalar feasibility is a weak gate; support realization is the real gate already
+at length 72.
 
 ## Literature Check
 
@@ -83,3 +92,5 @@ possible supports.
 3. Compare low-symmetry random support searches with the pentagonal random-sign
    model: generic supports should have positive "MacWilliams Lyapunov" unless
    self-duality forces a cancellation gate.
+4. Treat the weight-enumerator as a matroid/Tutte-Greene partition function and
+   ask which support matroids can pass the same low-weight suppression gate.

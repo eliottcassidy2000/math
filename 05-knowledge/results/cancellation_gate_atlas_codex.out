@@ -1,0 +1,45 @@
+Cancellation-gate atlas: eta powers and Type II formal enumerators
+ETA_N=120; Type II lengths=24..240
+
+[1] Eta-power cancellation gates
+  eta^1 : support<=q^120:  18/121 density=0.149 max|coeff|=1
+    first nonzero: [(0, 1), (1, -1), (2, -1), (5, 1), (7, 1), (12, -1), (15, -1), (22, 1), (26, 1), (35, -1), (40, -1), (51, 1)]
+  eta^3 : support<=q^120:  16/121 density=0.132 max|coeff|=31
+    first nonzero: [(0, 1), (1, -3), (3, 5), (6, -7), (10, 9), (15, -11), (21, 13), (28, -15), (36, 17), (45, -19), (55, 21), (66, -23)]
+  eta^8 : support<=q^120:  68/121 density=0.562 max|coeff|=11914
+    first nonzero: [(0, 1), (1, -8), (2, 20), (4, -70), (5, 64), (6, 56), (8, -125), (9, -160), (10, 308), (12, 110), (14, -520), (16, 57)]
+  eta^24: support<=q^120: 121/121 density=1.000 max|coeff|=225755128648
+    first nonzero: [(0, 1), (1, -24), (2, 252), (3, -1472), (4, 4830), (5, -6048), (6, -16744), (7, 84480), (8, -113643), (9, -115920), (10, 534612), (11, -370944)]
+  Jacobi eta^3 triangular formula verified through q^120: True
+  Delta/q = eta^24 is dense: modular control replaces literal sparsity.
+
+[2] Extremal Type II formal weight-enumerator ladder
+  n    d    A_d                 Gleason coeffs c_j (first few)        nonneg sum-ok
+   24    8                 759  1,-42                                    True   True
+   48   12               17296  1,-84,246                                True   True
+   72   16              249849  1,-126,3015,-4398                        True   True
+   96   20             3217056  1,-168,7548,-75920,28086                 True   True
+  120   24            39703755  1,-210,13845,-305950,1571490,-492372     True   True
+  144   28           481008528  1,-252,21906,-768576,9698823,-28753884,...   True   True
+  168   32          5776211364  1,-294,31731,-1537886,32840241,-259474110,...   True   True
+  192   36         69065734464  1,-336,43320,-2687968,82537596,-1161959328,...   True   True
+  216   40        824142912363  1,-378,56673,-4292910,173444436,-3634040808,...   True   True
+  240   44       9826364199840  1,-420,71790,-6426800,323326005,-9132766044,...   True   True
+
+  Landmarks:
+    n=24: formal extremal d=8, A_d=759
+    n=48: formal extremal d=12, A_d=17296
+    n=72: formal extremal d=16, A_d=249849
+    n=96: formal extremal d=20, A_d=3217056
+    n=120: formal extremal d=24, A_d=39703755
+  n=24 gives the Golay octad number 759; n=72 gives 249849.
+  The scalar gate stays open through this ladder; support realization is separate.
+
+[3] Cross-domain reading
+  eta^1: sparse infinite product gate -> partition reciprocal.
+  eta^3: Jacobi triangular gate -> still sparse, now weighted by 2k+1.
+  eta^24: Delta gate -> dense tau coefficients but modularly controlled.
+  Type II W_n: finite invariant-ring gate -> low-weight zeros by Gleason.
+  Tutte/Greene direction: code weight enumerators are matroid partition
+  functions, so support realization should be audited as a matroid gate,
+  not just as a polynomial gate.

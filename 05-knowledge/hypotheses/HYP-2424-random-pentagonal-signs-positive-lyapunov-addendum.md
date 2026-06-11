@@ -1,8 +1,11 @@
-# HYP-2409 - Random pentagonal signs have positive reciprocal Lyapunov exponent
+# HYP-2424 - Random pentagonal sign families have positive reciprocal Lyapunov addenda
 
-**Status:** OPEN. Euler side is theorem-level; random side is computational evidence plus a
-clear proof target.
+**Status:** OPEN addendum. Euler side is theorem-level; THM-485/HYP-2416-2417
+already give the stronger paired-sign Lyapunov/sign-rigidity mainline. This
+file records the reciprocal-denominator zero-locus formulation, independent
+term-sign scout, and deterministic zero-Lyapunov classification target.
 **Source:** codex-2026-06-11-P1.
+**Companions:** THM-485, HYP-2416, HYP-2417, OPEN-Q-064, T783.
 **Artifacts:** `04-computation/pentagonal_lyapunov_code72_codex.py`,
 `05-knowledge/results/pentagonal_lyapunov_code72_codex.out`.
 
@@ -30,12 +33,16 @@ For random signs, conjecturally
 lambda(eps) = limsup_n log |a_eps(n)| / n > 0
 ```
 
-almost surely. Equivalently, `D_eps` almost surely has at least one zero in the
-open unit disk, and `lambda(eps)` is controlled by the nearest such zero.
+almost surely in the reciprocal-denominator model. Equivalently, `D_eps` almost
+surely has at least one zero in the open unit disk, and `lambda(eps)` is
+controlled by the nearest such zero. THM-485 attacks the paired-sign recurrence
+temperature directly; this addendum asks for the analytic zero theorem and the
+larger independent-term sign law.
 
 ## Evidence
 
-The script computes exact reciprocal coefficients through `n=650`.
+The script computes exact reciprocal coefficients through `n=650`, using a
+model complementary to the THM-485 transfer-operator computation.
 
 - Euler: finite regression still sees the Hardy-Ramanujan sqrt scale; this is not
   a limiting Lyapunov estimate.
@@ -47,9 +54,11 @@ The script computes exact reciprocal coefficients through `n=650`.
   late flips beyond the sampled window become indistinguishable from Euler at
   this cutoff.
 
-The all-plus deterministic control has low finite-window slope, so the claim is
-not "every non-Euler law is obviously exponential." The honest target is a
-random analytic-function/interior-zero theorem, not a regression theorem.
+The all-plus deterministic control has low finite-window slope, while THM-485
+separately identifies a large fixed-sign rate. Thus the claim is not "every
+non-Euler law is obviously exponential." The honest target is a random
+analytic-function/interior-zero theorem and a deterministic zero-Lyapunov
+classification, not a regression theorem.
 
 ## Proof Route
 

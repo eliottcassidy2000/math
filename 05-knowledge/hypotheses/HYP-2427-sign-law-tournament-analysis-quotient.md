@@ -1,13 +1,16 @@
-# HYP-2412 - Sign-law Tournament Analysis ranks cancellation quotients
+# HYP-2427 - Sign-law Tournament Analysis ranks cancellation quotients
 
 **Status:** METHOD CONFIRMED on the pilot set; mathematical content OPEN.
 **Source:** codex-2026-06-11-P1.
+**Companions:** THM-485, HYP-2424, HYP-2425, HYP-2426, T783.
 **Artifacts:** `04-computation/pentagonal_lyapunov_code72_codex.py`,
 `05-knowledge/results/pentagonal_lyapunov_code72_codex.out`.
 
 ## Setup
 
-Tournament vertices are sign laws on generalized pentagonal support:
+Tournament vertices are sign laws on generalized pentagonal support. This is a
+lossy quotient of THM-485's richer transfer-operator picture, retained because
+it gives a compact way to compare cancellation signatures:
 
 ```text
 Euler, all-plus, all-minus, period-3 paired, Thue-Morse paired,
@@ -31,7 +34,8 @@ Hamiltonian path count: 1
 
 The pilot tournament is transitive because the observable is a scalar. This is a
 feature, not a theorem: it gives a clean ranking of cancellation quotients while
-advertising that the quotient has forgotten root geometry and support design.
+advertising that the quotient has forgotten root geometry, sign-rigidity proof
+structure, and support design.
 
 ## Next Upgrade
 

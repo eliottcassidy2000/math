@@ -1,0 +1,38 @@
+Euler-product ghost atlas
+N=180, SEED=20260611
+
+[1] Product coefficient and ghost fingerprints
+  eta_all          b_hist={1: 180} coeff_support= 22/181 slope=0.00000 max|a|=1 ghost_support=180/180 max|G|=546
+    coeff first nonzero: [(0, 1), (1, -1), (2, -1), (5, 1), (7, 1), (12, -1), (15, -1), (22, 1), (26, 1), (35, -1)]
+    ghost first nonzero: [(1, 1), (2, 3), (3, 4), (4, 7), (5, 6), (6, 12), (7, 8), (8, 15), (9, 13), (10, 18)]
+  prime_only       b_hist={0: 139, 1: 41} coeff_support=158/181 slope=0.03013 max|a|=93 ghost_support=179/180 max|G|=179
+    coeff first nonzero: [(0, 1), (2, -1), (3, -1), (8, 1), (9, 1), (11, -1), (16, 1), (19, -1), (23, -1), (24, 1)]
+    ghost first nonzero: [(2, 2), (3, 3), (4, 2), (5, 5), (6, 5), (7, 7), (8, 2), (9, 3), (10, 7), (11, 11)]
+  squarefree_only  b_hist={0: 71, 1: 109} coeff_support=170/181 slope=0.03927 max|a|=7100 ghost_support=180/180 max|G|=360
+    coeff first nonzero: [(0, 1), (1, -1), (2, -1), (4, 1), (6, -1), (7, 1), (8, 2), (10, -3), (12, 2), (14, -3)]
+    ghost first nonzero: [(1, 1), (2, 3), (3, 4), (4, 3), (5, 6), (6, 12), (7, 8), (8, 3), (9, 4), (10, 18)]
+  mobius           b_hist={-1: 56, 0: 71, 1: 53} coeff_support=163/181 slope=0.03268 max|a|=120 ghost_support=180/180 max|G|=178
+    coeff first nonzero: [(0, 1), (1, -1), (2, 1), (5, 1), (6, -1), (7, 2), (8, -1), (9, 1), (11, 1), (13, 1)]
+    ghost first nonzero: [(1, 1), (2, -1), (3, -2), (4, -1), (5, -4), (6, 2), (7, -6), (8, -1), (9, -2), (10, 4)]
+  liouville        b_hist={-1: 96, 1: 84} coeff_support=168/181 slope=0.02167 max|a|=132 ghost_support=180/180 max|G|=178
+    coeff first nonzero: [(0, 1), (1, -1), (2, 1), (4, -1), (5, 2), (6, -2), (7, 2), (9, -2), (10, 3), (11, -2)]
+    ghost first nonzero: [(1, 1), (2, -1), (3, -2), (4, 3), (5, -4), (6, 2), (7, -6), (8, -5), (9, 7), (10, 4)]
+  random_prime_pm  b_hist={-1: 26, 0: 139, 1: 15} coeff_support=172/181 slope=0.01775 max|a|=86 ghost_support=173/180 max|G|=179
+    coeff first nonzero: [(0, 1), (2, -1), (3, -1), (5, 2), (8, -1), (9, -1), (10, 1), (11, 1), (12, 1), (13, -3)]
+    ghost first nonzero: [(2, 2), (3, 3), (4, 2), (5, -5), (6, 5), (7, -7), (8, 2), (9, 3), (10, -3), (11, -11)]
+  random_pm        b_hist={-1: 104, 1: 76} coeff_support=174/181 slope=0.03315 max|a|=1971 ghost_support=180/180 max|G|=354
+    coeff first nonzero: [(0, 1), (1, -1), (2, -1), (3, 2), (5, -1), (6, 1), (9, -1), (10, 2), (11, 2), (12, -4)]
+    ghost first nonzero: [(1, 1), (2, 3), (3, -2), (4, -1), (5, -4), (6, -6), (7, -6), (8, -9), (9, 7), (10, -12)]
+
+[2] Tournament Analysis over exponent schedules
+  observable: lower coefficient slope wins; tie by lower ghost support
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed 3-cycles: 0
+  order: eta_all -> random_prime_pm -> liouville -> prime_only -> mobius -> random_pm -> squarefree_only
+
+[3] Reading
+  b_m are Witt/product coordinates; G(n)=sum_{d|n} d b_d are ghost
+  coordinates.  Eta_all has dense ghost sigma_1 but sparse coefficients.
+  Prime_only has sparse exponents but dense ghost on multiples of primes.
+  Mobius/Liouville convert multiplicative signs into ordinary product
+  gates; coefficient growth and ghost support separate cleanly.

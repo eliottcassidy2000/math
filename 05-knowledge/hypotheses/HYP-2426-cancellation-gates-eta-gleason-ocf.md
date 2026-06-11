@@ -1,8 +1,9 @@
-# HYP-2411 - Eta, Gleason, and OCF are three cancellation gates
+# HYP-2426 - Eta, Gleason, and OCF are three cancellation gates
 
 **Status:** OPEN synthesis / proof program.
 **Source:** codex-2026-06-11-P1.
-**Companions:** HYP-2409, HYP-2410, THM-466, THM-478, T780.
+**Companions:** THM-485, HYP-2415, HYP-2419, HYP-2420, HYP-2421,
+HYP-2424, HYP-2425, THM-466, THM-478, T783.
 
 ## Statement
 
@@ -23,7 +24,9 @@ Conjectural common principle: a hard counting object becomes proof-facing only
 after one identifies the cancellation gate that keeps the reciprocal/partition
 function from generic exponential behavior. The gate may be an infinite product
 (eta), a finite invariant ring (Gleason), or an odd-cycle independence polynomial
-(OCF).
+(OCF). THM-485 supplies the strongest current pentagonal evidence: Euler's
+signs are the structured zero-temperature point while random or mismatched signs
+open a positive Lyapunov channel.
 
 ## What the Quotient Preserves and Destroys
 
@@ -52,6 +55,7 @@ Candidate test cases:
 
 - eta vs random pentagonal signs;
 - Gleason degree-72 gate vs random Type II-looking signed support;
+- the eta-discriminant dictionary of HYP-2419 and the MOS crossover of HYP-2420;
 - `H mod 4` Reed-Muller flat recurrences vs random Boolean functions on the
   tiling cube.
 
