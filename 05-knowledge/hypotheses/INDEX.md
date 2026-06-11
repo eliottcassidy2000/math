@@ -7,6 +7,10 @@ Organized by topic. Each hypothesis has a detail file.
 
 ---
 
+## Recent Open Additions
+
+- **HYP-2442 (Erdos-Moser tower two-step recurrence is a support gate):** exact tower data now read `trans(T3..T255)=2,3,5,7,11,15,23`, matching `a_{k+2}=2a_k+1`; `T511` is bracketed `[30,47]` and predicted `31`. P5 verifies full tower cores through `T31` have `trans(D(D(T_m)))=2trans(T_m)+1`, while pure chains through `t=15` have `trans(D(D(TT_t)))=2t`. Thus the failed `T511` `TT15` lift to `30` is not an accident: the missing `+1` lives in support outside a naked maximum chain. Next proof target: find or refute a packet `X subset T127` with `trans(X)=15` and `q(X)=trans(D(D(X)))-30 >= 1`. Status: OPEN support-realization target. File: `HYP-2442-erdos-moser-tower-support-gate.md`.
+
 ## By Status
 
 ### CONFIRMED
@@ -8920,6 +8924,7 @@ Also reserving: **THM-466** (2-adic digit tower + n<=8 exact identity), **THM-46
 - **HYP-2411 (order-32 trichotomy): CONFIRMED → THM-481 C.** Tower → d₃₂⁺ (A₄=120), Paley₃₁ → q₃₂ = eQR₃₂ (A₄=0, A₈=620, identified BY CONSTRUCTION since q₃₂/RM(2,5) are isospectral), Sylvester → RM(1,5) low end. Verifier bonus: 4-profiles prove the Paley₃₂/tower₃₂ HADAMARD MATRICES inequivalent (not even transpose-equivalent). Status: CONFIRMED.
 - **HYP-2412 (Erdős bridge target): INSTANTIATED as Erdős–Moser #1216 → THM-483.** The dictionary's d⁺/pair-doubling face, read on the trans side, yields the zigzag law trans(D(T)) = z(T) and the REFUTATION of HYP-2360 (the +2 sandwich) by the unbounded alternating family A_l — closing the bounded-increment route to explicit low-trans constructions and correcting THM-455's program. Status: RESOLVED (see THM-483, HYP-2360).
 - **HYP-2413 (tower zigzag numbers):** the skew-Sylvester tower's zigzag numbers stay O(log n) — equivalently tower trans stays Θ(log n) (THM-483 C: tower step growth = z of the previous level; the +4 jump at 63 = z(T₃₁) = 11). Next datum: z(T₆₃) = trans(T₁₂₇), needs structure-aware search (closed-form skew-Walsh arc law + frozen F₂₁ Aut), not brute force. Two-sided: if z grows superlogarithmically the tower leaves the Erdős–Moser-relevant regime entirely. Status: CLAIMED, open.
+- **Codex P5 update to HYP-2413:** the next-datum target is stale. Stored exact computations now give `trans(T127)=15` and `trans(T255)=23`, so the live frontier is `T511`, bracketed `[30,47]` with prediction `31`. HYP-2442 sharpens the proof target to a support gate: classify `X subset T127` with `trans(X)=15` by `q(X)=trans(D(D(X)))-30`. Chain-only packets have `q=0`; a packet with `q>=1` proves the predicted lower bound.
 - **HYP-2414: released unused.**
 **Mistake guards:** MISTAKE-062 (never hardcode expected values — build eQR independently and compare), MISTAKE-067 (identification claims need rigorous separators: g₂₄ unique [24,12,8] Type II; eQR vs RM(2,5) isospectral — equality by construction only), MISTAKE-064 (verify the Erdős problem statement from source before claiming progress).
 - **HYP-2415 (CLAIMED claudebox-2026-06-11-S4, the [72,36,16] tournament-gauge problem):** the eQR tournament-gauge ladder (THM-481) is EXTREMAL Type II at q=7,23,31,47 (lengths 8,24,32,48; d=4,8,8,12) and FIRST FAILS at q=71 (eQR(72) has d=12 < extremal 16) — exactly the famous open extremal [72,36,16] self-dual code problem. Reframe: does ANY skew-Hadamard matrix of order 72 (≅ a tournament on 72 vertices in skew gauge) have an extremal [72,36,16] tournament-gauge code? Paley fails; many other skew-Hadamard 72 exist. A sharp tournament handle on a famous coding open problem.

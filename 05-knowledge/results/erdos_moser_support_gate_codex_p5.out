@@ -1,0 +1,51 @@
+=== erdos_moser_support_gate_codex_p5 ===
+Question: where does the two-step +1 in the Mersenne tower live?
+
+--- 1. Exact tower table after recent agents ---
+k  n=2^k-1  known trans(T_n)  two-step prediction  source
+2        3                2                    2  OK: anchor T3
+3        7                3                    3  OK: anchor T7
+4       15                5                    5  OK: stored exact T15
+5       31                7                    7  OK: stored exact T31
+6       63               11                   11  OK: stored exact T63
+7      127               15                   15  OK: tower_step_structure_kps2.out
+8      255               23                   23  OK: tower_t255_probe_kps2.out
+9      511          [30,47]                   31  OPEN: t511_witness/direct capped; prediction open
+
+Progress: HYP-2413's old next datum T127 is now known. The live frontier is T511: prove or refute the predicted value 31.
+
+--- 2. Support gate: full core vs chain-only two-step lift ---
+m   trans(T_m)  trans(D(D(T_m)))  full_bonus  max_chain_size  trans(D(D(chain)))  chain_bonus  seconds
+ 3           2                  5           1               2                   4            0     0.00  nodes(full=61, chain=13)
+ 7           3                  7           1               3                   6            0     0.00  nodes(full=1206, chain=35)
+15           5                 11           1               5                  10            0     0.08  nodes(full=37902, chain=116)
+31           7                 15           1               7                  14            0     8.82  nodes(full=2561210, chain=269)
+
+--- 3. Pure-chain control ---
+t  trans(D(D(TT_t)))  defect
+ 2                   4       0
+ 3                   6       0
+ 5                  10       0
+ 7                  14       0
+11                  22       0
+15                  30       0
+
+--- 4. T511 reading ---
+The stored T511 witness lift used a maximum TT15 chain C in T127 and found trans(D(D(C))) = 30. Twelve one-extra packets and eight two-extra packets with trans(X)=15 also stayed at 30.
+Therefore the predicted T511=31 cannot be proved by a naked maximum chain. One must find a marked T127 support packet X with trans(X)=15 and trans(D(D(X)))>=31, or prove no such packet exists and look for a nonlocal witness.
+
+--- 5. Tournament Analysis of proof routes ---
+Vertices: proof routes/support packets, not runners. Observable vector = (support locality, proof leverage, computational tractability, reuse). Switch: lexicographic domination. Tie Hamiltonian path: insertion path.
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed triangles: 0
+Hamiltonian path count H: 1
+tie path: marked_support_gate -> two_step_recurrence -> border_twin_accounting -> chain_only_lift -> direct_T511_sat -> random_baseline
+
+--- 6. Challenged assumption ---
+Do not assume tournament vertices are the original vertices of T_m. For this proof, the useful vertices are support packets: chains, marked chains, border-twin packets, orbit packets, and two-step-lift obligations.
+Preserved predicate: existence of a transitive witness after two skew doublings. Destroyed data: the full tower arc algebra outside the chosen support packet. The T511 failure says that destroyed data may contain exactly the missing +1.
+
+Conclusion: replace the next target by a support-realization problem:
+  classify packets X subset T127 with trans(X)=15 by q(X)=trans(D(D(X)))-30.
+  A packet with q(X)>=1 proves trans(T511)>=31; q(X)=0 for every local packet
+  would refute the naive recurrence mechanism and force a global witness search.

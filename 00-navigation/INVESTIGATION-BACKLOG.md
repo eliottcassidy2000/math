@@ -31,7 +31,7 @@ Gleason-generation framing novel. THM-483: zigzag law trans(D(T)) = z(T); HYP-23
 sandwich REFUTED by the alternating family A_l (δ = l unbounded, counterexample at n = 7,
 one past the n=6 census); THM-455 addendum; Erdős–Moser bounded-increment route closed.
 **Next:**
-1. HYP-2413: tower zigzag numbers — z(T₆₃) = trans(T₁₂₇) via the skew-Walsh closed form + frozen F₂₁ Aut (not brute force).
+1. HYP-2413/HYP-2442: tower support gates - `trans(T127)=15` and `trans(T255)=23` are now exact, so the frontier is `T511`. Do not brute-force first; mine marked packets `X subset T127` with `trans(X)=15` and `q(X)=trans(D(D(X)))-30`. A packet with `q>=1` proves the predicted `trans(T511)>=31`; chain-only packets have `q=0`.
 2. HYP-2409 claims 2–3 (dictionary glue map; check claudebox THM-482's even-row hypothesis covers all tower levels).
 3. Is RM(2,5) a tournament gauge of ANY order-32 skew-Hadamard? (finite sharp question, THM-481 remark).
 4. GF(p) Kim–Solé: p-ary Paley tournament codes vs the Gleason–Pierce self-dual rings.
