@@ -1,0 +1,14 @@
+==============================================================================
+ADVERSARIAL RE-CHECK OF THM-477 (fresh code, independent tile order)
+==============================================================================
+n=3: m= 1 f=1 dimB= 1 dimB_perp= 0 defect=1  blue=2/2=2^0  isGridSym==ker: EXACT  affine-set==linear-set: True
+n=4: m= 3 f=1 dimB= 2 dimB_perp= 1 defect=1  blue=4/8=2^-1  isGridSym==ker: EXACT  affine-set==linear-set: False
+n=5: m= 6 f=2 dimB= 4 dimB_perp= 2 defect=2  b(5)=b(3)+3: True  blue=16/64=2^-2  isGridSym==ker: EXACT  affine-set==linear-set: False
+n=6: m=10 f=2 dimB= 6 dimB_perp= 4 defect=2  b(6)=b(4)+4: True  blue=64/1024=2^-4  isGridSym==ker: EXACT  affine-set==linear-set: False
+n=7: m=15 f=3 dimB= 9 dimB_perp= 6 defect=3  b(7)=b(5)+5: True  blue=512/32768=2^-6  isGridSym==ker: EXACT  affine-set==linear-set: False
+n=8: m=21 f=3 dimB=12 dimB_perp= 9 defect=3  b(8)=b(6)+6: True  blue=4096/2097152=2^-9  isGridSym==ker: EXACT  affine-set==linear-set: False
+n=9: m=28 f=4 dimB=16 dimB_perp=12 defect=4  b(9)=b(7)+7: True
+
+ALL ASSERTIONS PASSED — THM-477 claims (1)-(4) verified with independent code.
+Note: the coordinate sort in rm_digit_ladder sigma_perm() is DEAD CODE
+(sx - sy = x - y >= 2 always; asserted above for every tile, n=3..9).

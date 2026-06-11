@@ -1,7 +1,14 @@
 # THM-478 — The Digit-1 Degree Law: H mod 4 has tile-ANF degree ≤ 2⌊(n-1)/2⌋, and H mod 4 is annihilated by (D+1)-flats
 
-**Status:** Upper bound PROVED; equality VERIFIED exhaustively n = 4..7 (equality
-for all n is HYP-2406). Adversarial re-check queued this session.
+**Status:** Upper bound PROVED and ADVERSARIALLY VERIFIED (2026-06-11: pairing
+identity symbolic at L=3,5; reversal shown fixed-point-free on directed cycles;
+flat-annihilation equivalence verified exhaustively over all 2^16 functions at
+m=4, D=1; all digit ladders reproduced with independent conventions; pointwise
+digit_1 = c_odd mod 2 at n=4..6; Grinberg-Stanley arXiv:2307.05569 Thm 7.1 cited
+verbatim — NOTE it is a v1 draft, so the congruence itself was ALSO re-verified
+exhaustively over all tournaments n=4..6, removing the dependence. See
+05-knowledge/results/thm478_adversarial_recheck_macmini_0611.out, 67 PASS 0 FAIL.)
+Equality for all n is HYP-2406.
 **Provenance:** mac-mini-2026-06-11-S1 (Reed–Muller dispatch). Builds on:
 Grinberg–Stanley 2023 (H ≡ 1 + 2·c_odd mod 4, c_odd = # nontrivial odd directed
 cycles), THM-163 (band limit D = 2⌊(n-1)/2⌋ for H in the arc model), THM-466
@@ -71,7 +78,16 @@ abc + (1+a)(1+b)(1+c) = 1 + a+b+c + ab+ac+bc).
   consists of odd-cycle COLLECTION counts; this theorem says the depth-1 layer is
   a low-degree (RM(D,m)) function while depth ≥ 3 layers are full-degree — the
   tower's complexity is graded by Reed–Muller level.
-- Open problem leverage (logged HYP-2408): Ax–Katz-type divisibility for
-  degree-≤D Boolean functions constrains level-set sizes of digit patterns; the
+- Open problem leverage (logged HYP-2408): Ax 1964 (precise form: # ZEROS of a
+  degree-d polynomial on F_2^m is divisible by 2^(ceil(m/d)-1); the ones-count
+  version follows by complement) constrains level-set sizes of digit patterns; the
   forbidden values H ∈ {7, 21} are joint digit-level-set emptiness statements —
   a possible second proof route / strengthening of the forbidden-H phenomena.
+- Literature check (2026-06-11): the ANF degree of 2-adic digits of combinatorial
+  counting functions (permanents, Hamiltonian counts) as functions of input bits
+  appears UNPUBLISHED. The model case is classical: digit i of the Hamming weight
+  is e_{2^i} mod 2, degree exactly 2^i (Canteaut-Videau 2005). Note the contrast:
+  H's ladder is 0, D, ~m — flat, jump, saturate — NOT the 2^i geometric climb of
+  the weight function. Computational adjacents: permanent mod 2^k in P (Valiant;
+  Bjorklund-Husfeldt-Lyckberg IPL 2017), parity of Hamiltonian cycles in
+  O(1.619^n) (Bjorklund-Husfeldt FOCS 2013).

@@ -1,7 +1,11 @@
 # THM-477 — The Blue Code: grid-symmetric tilings are a dual-containing code whose self-dual defect is the hypotenuse
 
-**Status:** PROVED (mac-mini-2026-06-11-S1; elementary linear algebra, every claim
-verified computationally n = 3..9). Adversarial re-check queued this session.
+**Status:** PROVED and ADVERSARIALLY VERIFIED (2026-06-11: independent re-derivation;
+fresh-code recheck with a DIFFERENT tile enumeration at n = 3..9 including the
+linear-vs-affine risk — explorer isGridSym semantics (pure bit equality, no negation,
+all-zeros tiling is blue) coincides with ker(1+sigma) with ZERO mismatches over all
+2^21 tilings at n = 8; B^perp = im(1+sigma) confirmed by fresh GF(2) elimination.
+See 05-knowledge/results/thm477_adversarial_recheck_0611.out.)
 **Provenance:** mac-mini-2026-06-11-S1, dispatch: Reed–Muller duality
 (RM(r,m)^⊥ = RM(m−r−1,m); repetition↔SPC, k = n/2 self-dual) as a lens on the
 tiling model. Related: THM-474 (tilings = switching classes), THM-163 (H Walsh
@@ -64,3 +68,8 @@ n = 3..9 (dimensions, defect = f, recursion, fractions).
 - Via THM-474 (tilings = switching classes), B_n is a distinguished linear
   subfamily of switching classes; the blue/black dichotomy of lines is the coset
   geometry of B_n inside F_2^m.
+- Prior art for the coset framing: Sole-Zaslavsky, "A Coding Approach to Signed
+  Graphs," SIAM J. Discrete Math. 7 (1994) 544-553, treat switching classes of
+  SIGNED GRAPHS as cosets of the cocycle (cut-space) code; Cameron 1977 is the
+  cohomological original. THM-474's tournament version (base-path gauge) and this
+  file's sigma-code layer are the project's additions on top of that frame.

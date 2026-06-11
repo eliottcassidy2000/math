@@ -1,0 +1,91 @@
+========================================================================
+P1: pairing identity  prod z + prod(1+z) = sum_{S proper} prod_S z mod 2
+PASS  L=3: symbolic LHS == sum over proper subsets
+PASS  L=3: degree == L-1 = 2
+PASS  L=3: brute-force evaluation matches on all 2^3 points
+PASS  L=5: symbolic LHS == sum over proper subsets
+PASS  L=5: degree == L-1 = 4
+PASS  L=5: brute-force evaluation matches on all 2^5 points
+========================================================================
+P2: directed odd cycles pair up under reversal, no fixed points
+PASS  L=3: a vertex triple carries exactly (3-1)! = 2 directed cycles
+PASS  L=3: the two orientations are distinct and mutually reversed
+PASS  n=6,L=3: count = C(n,L)*(L-1)! = 40
+PASS  n=6,L=3: reversal has NO fixed points
+PASS  n=6,L=3: reversal is an involution onto the same set, so cycles group into 20 disjoint pairs
+PASS  n=7,L=5: count = C(n,L)*(L-1)! = 504
+PASS  n=7,L=5: reversal has NO fixed points
+PASS  n=7,L=5: reversal is an involution onto the same set, so cycles group into 252 disjoint pairs
+PASS  L=3: C-> and C<- never simultaneously present (distinct directed cycles, exclusive indicators)
+PASS  L=5: C-> and C<- never simultaneously present (distinct directed cycles, exclusive indicators)
+========================================================================
+P3: RM flat-annihilation equivalence at m=4, D=1
+PASS  number of 2-dim subspaces of F_2^4 == Gaussian[4,2]_2 == 35
+PASS  number of 2-dim affine flats == 35 * 4 == 140
+PASS  for ALL 65536 functions:  (deg <= 1)  <=>  (XOR over every 2-flat = 0)
+PASS  dim RM(2,4) == 11
+PASS  |RM(2,4)| == 2^11
+PASS  min weight of RM(2,4) == 4
+PASS  ALL weight-4 codewords are 2-flat indicators and vice versa (140 == 140)
+PASS  2-flat indicators span RM(2,4)  (GF(2) rank == 11)
+========================================================================
+P4: Grinberg-Stanley Thm 7.1 over ALL tournaments (independent check)
+PASS  n=4: Redei (H odd) for all 64 tournaments
+PASS  n=4: H mod 4 == (1 + 2*c_odd) mod 4 for ALL 64 tournaments
+PASS  n=5: Redei (H odd) for all 1024 tournaments
+PASS  n=5: H mod 4 == (1 + 2*c_odd) mod 4 for ALL 1024 tournaments
+PASS  n=6: Redei (H odd) for all 32768 tournaments
+PASS  n=6: H mod 4 == (1 + 2*c_odd) mod 4 for ALL 32768 tournaments
+========================================================================
+P5: tiling-cube digit ladder (fresh conventions)
+PASS  n=4: H odd on entire tiling cube (digit_0 == 1, Redei)
+  n=4  m=3  D=2*floor((n-1)/2)=2   max H=5
+      ANF degrees of digits 0..2: [0, 2, 3]
+      real multilinear (Walsh) degree of H: 2
+PASS  n=4: digit_0 ANF degree == 0
+PASS  n=4: digit_1 ANF degree == D == 2  (claimed equality)
+PASS  n=4: digit_1 ANF degree <= D (the PROVED bound)
+PASS  n=4: real Walsh degree of H == D == 2
+PASS  n=4: pointwise digit_1 == c_odd mod 2 on all 8 tilings
+PASS  n=4: pointwise H mod 4 == 1 + 2*c_odd mod 4 on the cube
+PASS  n=4: digit_1 degree invariant under bit-convention flip
+PASS  n=5: H odd on entire tiling cube (digit_0 == 1, Redei)
+  n=5  m=6  D=2*floor((n-1)/2)=4   max H=15
+      ANF degrees of digits 0..3: [0, 4, 6, 5]
+      real multilinear (Walsh) degree of H: 4
+PASS  n=5: digit_0 ANF degree == 0
+PASS  n=5: digit_1 ANF degree == D == 4  (claimed equality)
+PASS  n=5: digit_1 ANF degree <= D (the PROVED bound)
+PASS  n=5: real Walsh degree of H == D == 4
+PASS  n=5: digits k>=3 all have ANF degree >= m-1 = 5
+PASS  n=5: pointwise digit_1 == c_odd mod 2 on all 64 tilings
+PASS  n=5: pointwise H mod 4 == 1 + 2*c_odd mod 4 on the cube
+PASS  n=5: digit_1 degree invariant under bit-convention flip
+PASS  n=6: H odd on entire tiling cube (digit_0 == 1, Redei)
+  n=6  m=10  D=2*floor((n-1)/2)=4   max H=45
+      ANF degrees of digits 0..5: [0, 4, 7, 9, 9, 10]
+      real multilinear (Walsh) degree of H: 4
+PASS  n=6: digit_0 ANF degree == 0
+PASS  n=6: digit_1 ANF degree == D == 4  (claimed equality)
+PASS  n=6: digit_1 ANF degree <= D (the PROVED bound)
+PASS  n=6: real Walsh degree of H == D == 4
+PASS  n=6: digits k>=3 all have ANF degree >= m-1 = 9
+PASS  n=6: pointwise digit_1 == c_odd mod 2 on all 1024 tilings
+PASS  n=6: pointwise H mod 4 == 1 + 2*c_odd mod 4 on the cube
+PASS  n=6: digit_1 degree invariant under bit-convention flip
+PASS  n=7: H odd on entire tiling cube (digit_0 == 1, Redei)
+  n=7  m=15  D=2*floor((n-1)/2)=6   max H=189
+      ANF degrees of digits 0..7: [0, 6, 11, 15, 15, 14, 15, 15]
+      real multilinear (Walsh) degree of H: 6
+PASS  n=7: digit_0 ANF degree == 0
+PASS  n=7: digit_1 ANF degree == D == 6  (claimed equality)
+PASS  n=7: digit_1 ANF degree <= D (the PROVED bound)
+PASS  n=7: real Walsh degree of H == D == 6
+PASS  n=7: digits k>=3 all have ANF degree >= m-1 = 14
+========================================================================
+PASS  n=4: claimed digit degrees [0, 2, 3] match computed [0, 2, 3], claimed Walsh 2 == 2
+PASS  n=5: claimed digit degrees [0, 4, 6, 5] match computed [0, 4, 6, 5], claimed Walsh 4 == 4
+PASS  n=6: claimed digit degrees [0, 4, 7] match computed [0, 4, 7], claimed Walsh 4 == 4
+PASS  n=7: claimed digit degrees [0, 6, 11] match computed [0, 6, 11], claimed Walsh 6 == 6
+
+OVERALL: ALL CHECKS PASSED

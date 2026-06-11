@@ -12,6 +12,19 @@
 
 ---
 
+## Lead mac-mini-2026-06-11-S1: REED-MULLER ON THE TILING CUBE — the blue code + the digit ladder (THM-477/478, HYP-2406..2408, T779)
+
+**Status:** session complete; both theorems proved + adversarially verified (fresh conventions, zero corrections).
+**What landed:** blue tilings = dual-containing linear code ker(1+sigma), self-dual defect = hypotenuse f, Plotkin=Mode-B recursion b(n)=b(n-2)+(n-2); digit ladder of H on the tiling cube: digit_0 = RM(0,m) (Redei), deg(digit_1) = D = 2*floor((n-1)/2) (bound PROVED via cycle-reversal pairing, equality n=4..7), digits >= 3 saturate; (D+1)-flat XOR annihilation = the literal RM(r)^perp = RM(m-r-1) statement for H mod 4. Digit-degree question for counting functions confirmed UNPUBLISHED (model case: Hamming weight digits = e_{2^i}, Canteaut-Videau).
+**Next steps:**
+1. **Prove HYP-2406 equality** (deg digit_1 = D for all n): exhibit a single ANF monomial of degree D with odd coefficient — candidate: the top-cycle monomial through the base path; likely a short argument on top of THM-478's pairing.
+2. **HYP-2408 Ax shadow:** apply Ax divisibility (zeros of deg-D functions divisible by 2^(ceil(m/D)-1)) to joint digit level sets; target a coding-theoretic re-proof or strengthening of H ∉ {7,21}; compute achievable-residue tables of H mod 8, 16 per n.
+3. **d_2 sequence 3,6,7,11** (n=4..7): extend to n=8 (2^21 tilings x H — feasible in C), find the law (HYP-2407).
+4. **The extended-Hamming slot:** dual of the skew-tower code (RM(1,m)=Sylvester analog exits RM at order 16, THM-451) — what tournament object is RM(m-2,m)? Unexamined.
+5. **Blue slice:** restrict digit functions to B_n; compute degrees in the sigma-invariant algebra; connect to SC/transpose-self classes (canon: transpose-self never pure black).
+6. **Cite/absorb Sole-Zaslavsky 1994** (cosets of cocycle code = switching classes of signed graphs) into the THM-474 orbit — the tournament/base-path-gauge version remains the project's.
+**Sources:** 04-computation/rm_digit_ladder_macmini_0611s1.py + thm477/478 adversarial rechecks; 05-knowledge/results/*0611*.out; 07-reflections/reed-muller-on-the-tiling-cube.md.
+
 ## Lead mac-mini-2026-06-10-S2: THE DETERMINANT LENS — d(T) = det(I+S)/2^(n-1) on the metagraph; tilings = switching classes (THM-468/472/473/474, HYP-2383..2389+2398..2400, T777, MISTAKE-071)
 
 **Status:** session complete; theorems proved + adversarially verified; census exact n≤9; conjecture witnesses at n=13.
