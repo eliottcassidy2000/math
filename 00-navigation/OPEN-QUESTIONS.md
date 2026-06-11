@@ -1273,3 +1273,23 @@ The actual cross-line mass is much larger than the parity minimum. Is that exces
 ## OPEN-Q-060 🟢 The odd Mallows–Sloane partner: what does A049313 count, the way A002854 counts Euler graphs?
 
 **Status:** OPEN — sharpened by THM-479 (claudebox-2026-06-11-S2): the count splits as A049313(n) = N_odd(n) + N_lev(n) (odd-order branch + even-level branch, both separately integral for n ≥ 3, N_lev = 0 at odd n; values in switching_classes_level_burnside_cbx2.out; neither branch in OEIS). Any "second incarnation" must respect this 2-adic branch split — graphs:Euler graphs :: tournaments:(odd-branch object ⊔ even-level object)? Note Babai–Cameron Lemma 3.1: the even-level branch is symmetry WITHOUT fixed member tournaments, so the partner object cannot be "a distinguished member per class" at even n (Mallows–Sloane's even-n non-bijectivity, verified quote, is the same wall). (Originally flagged by the two-graphs literature sweep, 2026-06-11.) Mallows–Sloane: #two-graphs = #switching classes of graphs = #EULER GRAPHS (A002854 — which equals the project's even-graph metagraph node counts V(E_n)). The tournament analog A049313 (#switching classes of tournaments up to iso = #oriented two-graphs: 1,1,2,2,6,12,79 for n=2..8, Babai–Cameron Thm 7.2, summed over LEVEL permutations — constant 2-adic valuation across cycles) has NO known second combinatorial incarnation. Find the natural class of "odd directed objects" equinumerous with it. The project owns the natural toolkit: THM-474 (tilings = labeled switching classes), the even-graph metagraph E_n, and the level-permutation 2-adic seam. A bijective answer would complete the even/odd duality square: graphs:even-graphs :: tournaments:???.
+
+## OPEN-Q-061 🟡 The extremal [72,36,16] code as a tournament-gauge problem
+
+**Status:** OPEN (claudebox-2026-06-11-S4, HYP-2415). One of the most famous open problems in
+coding theory — does an extremal Type II self-dual [72,36,16] binary code exist? (Sloane 1973;
+$\$$-history; still open 2026.) THM-481's eQR tournament-gauge ladder C(I+S(Paley_q)) is
+EXTREMAL Type II at q = 7, 23, 31, 47 (lengths 8, 24, 32, 48; minimum distances 4, 8, 8, 12 =
+4⌊n/24⌋+4, all verified exactly) and FIRST FAILS at **q = 71**: eQR(72) has d = 12 < extremal
+16. Since order 72 ≡ 8 (mod 16), the tournament gauge C(I+S(H)) of EVERY skew-Hadamard matrix
+H of order 72 is a Type II [72,36] code (M. Hall §17.3). **Sufficient route (not an
+equivalence):** if any order-72 skew-Hadamard / doubly-regular-tournament-switching has gauge
+minimum distance 16, the famous code exists. Paley (the highest-symmetry tournament) gives only
+12; there are very many other skew-Hadamard matrices of order 72 (Đoković–Kotsireas catalogues).
+**Program:** compute (or bound below, via partial-distance / coset-leader methods) the gauge
+minimum distance of known order-72 skew-Hadamard classes; characterize which tournament
+spectral feature of H lifts d from 12 to 16. A sharp tournament-theoretic handle on a famous
+coding open problem, and the natural continuation of the THM-480/481/482 gauge line. Repo
+bridge: THM-484 (24 = involution modulus; the eQR ladder is extremal exactly while the Gleason
+extremal d = 4⌊n/24⌋+4 stays at the Golay/√-ramped value, jumping to 16 at the 3rd multiple of
+24 where Paley loses it). Task t-0120.

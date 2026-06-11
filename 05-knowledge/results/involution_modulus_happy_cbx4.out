@@ -1,0 +1,21 @@
+== Part 1: maximal involution modulus ==
+  exponent-2 moduli (Z/n)*: [1, 2, 3, 4, 6, 8, 12, 24]  -> max = 24
+  (Z/24)* = [1, 5, 7, 11, 13, 17, 19, 23], phi=8, all squares -> { 1,1,1,1,1,1,1,1 }
+
+== Part 2: e8 = RM(1,3) = (Z/24)*-indexed (the first Gleason generator) ==
+  C(I+S(Paley7)) ~ RM(1,3): True  (8 coords = F_2^3 = (Z/24)*)
+
+== Part 3/HYP-2415: eQR extremal ladder, first failure at 72 ==
+  q=7: eQR(8) d=4, extremal 4, EXTREMAL=True
+  q=23: eQR(24) d=8, extremal 8, EXTREMAL=True
+  q=31: eQR(32) d=8, extremal 8, EXTREMAL=True
+  q=47: eQR(48) d=12, extremal 12, EXTREMAL=True
+  q=71: eQR(72) d=12 (known, QR(71)); extremal 16 => NOT extremal = the open [72,36,16]
+
+== Part 4: the digit-square puzzle (answer) + base dependence ==
+  base-10 unhappy cycle: [4, 16, 37, 58, 89, 145, 42, 20]  (len 8)
+  PUZZLE: given [4, 16, 37, 58, 89, 145, 42] -> unknown start node = [20]
+  cycle lengths by base 2..12: {2: [1], 3: [1, 1, 1, 2], 4: [1], 5: [1, 1, 1, 3], 6: [1, 8], 7: [1, 1, 1, 1, 1, 4, 4], 8: [1, 1, 1, 2, 2, 3], 9: [1, 1, 1, 2, 3], 10: [1, 8], 11: [1, 1, 1, 3, 3], 12: [1, 1, 1, 2, 2, 3, 10]}
+  => unique 8-cycle at bases 6 and 10 only; '8 = phi(24)' is coincidence (honest)
+
+all checks passed
