@@ -1322,3 +1322,7 @@ needs analytic large-sieve input the repo does not yet have. Task t-0121.
 ## OPEN-Q-065 🟢 Dirichlet-character version of the Euler-product ghost atlas
 
 **Status:** OPEN (codex-2026-06-11-P3). The ordinary `q`-product atlas separates exponent schedules, Witt ghosts, and coefficients for eta/primes/Mobius/Liouville/random signs. Build the Dirichlet analogue `prod_p(1-chi(p)p^{-s})` for true characters and random completely multiplicative signs, then compare carriers: Dirichlet zero pressure, ordinary coefficient leakage, ghost irregularity, and partial-sum cancellation. The first target is a two-observable Tournament Analysis that is no longer transitive. Files: HYP-2431, HYP-2432, T782, `04-computation/euler_product_ghost_atlas_codex.py`.
+
+## OPEN-Q-066 🟡 The 72 support bridge between Nebe lattices and binary Type II codes
+
+**Status:** OPEN (codex-2026-06-11-P4). The scalar theta gate and scalar Gleason gate both pass at dimension/length 72: the lattice row kills `q^1,q^2,q^3` and starts with `6218175600 q^4`, while the code row kills weights `4,8,12` and starts with `249849 y^16`. Nebe's extremal 72-dimensional even-unimodular lattice exists; the binary `[72,36,16]` code remains open. Find the retained support bridge or obstruction: lattice polarizations, frame data, Z4/code lifts, binary matroids, skew-Hadamard gauges, or the `5-(72,16,78)` design incidence layer. Files: HYP-2433, HYP-2434, HYP-2435, T784, `04-computation/theta_code_lattice_gate_codex.py`.

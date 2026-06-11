@@ -1,0 +1,27 @@
+Theta/code lattice gate atlas
+QMAX=18; lengths=[24, 48, 72, 96, 120]
+
+[1] Extremal even-unimodular theta gates
+  dim= 24 kill q^1..q^1 min_norm= 4 first=q^2:196560 coeffs=[1,-720] nonneg<=q^18:True
+  dim= 48 kill q^1..q^2 min_norm= 6 first=q^3:52416000 coeffs=[1,-1440,125280] nonneg<=q^18:True
+  dim= 72 kill q^1..q^3 min_norm= 8 first=q^4:6218175600 coeffs=[1,-2160,965520,-27302400] nonneg<=q^18:True
+  dim= 96 kill q^1..q^4 min_norm=10 first=q^5:565866362880 coeffs=[1,-2880,2324160,-465638400,5611550400] nonneg<=q^18:True
+  dim=120 kill q^1..q^5 min_norm=12 first=q^6:45792819072000 coeffs=[1,-3600,4201200,-1740672000,186755382000,-1172065593600] nonneg<=q^18:True
+
+[2] Type II code gate comparison
+  len= 24 kill weights [4] d= 8 A_d=759 nonneg:True
+  len= 48 kill weights [4,8] d=12 A_d=17296 nonneg:True
+  len= 72 kill weights [4,8,12] d=16 A_d=249849 nonneg:True
+  len= 96 kill weights [4,8,12,16] d=20 A_d=3217056 nonneg:True
+  len=120 kill weights [4,8,12,16,20] d=24 A_d=39703755 nonneg:True
+
+[3] Dimension/length 72 split
+  lattice scalar gate: kill q^1,q^2,q^3 -> q^4 shell 6218175600 (minimum norm 8; Nebe support exists)
+  code scalar gate: kill weights 4,8,12 -> weight 16 shell 249849 (binary support still open)
+  Same modular cancellation level, different support-realization outcome.
+
+[4] Tournament Analysis
+  Pairwise observable: larger killed prefix, then stronger support status, then lower log(first)/n.
+  score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3_cycles: 0
+  Hamiltonian tie path: typeII_120 > theta_120 > typeII_96 > theta_96 > theta_72 > typeII_72 > typeII_48 > theta_48 > typeII_24 > theta_24
