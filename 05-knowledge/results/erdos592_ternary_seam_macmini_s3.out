@@ -18,3 +18,29 @@
    SAT   b=3 free n=2 t=4 (12 edges, lazy=3, 0.0s)
    SAT   b=3 free n=2 t=5 (31 edges, lazy=11, 0.0s)
    SAT   b=3 free n=2 t=6 (70 edges, lazy=47, 0.0s)
+   TIMEOUT b=3 free n=2 t=7
+   SAT   b=3 inv  n=2 t=3 (3 edges, lazy=1, 0.0s)
+   SAT   b=3 inv  n=2 t=4 (12 edges, lazy=3, 0.0s)
+   SAT   b=3 inv  n=2 t=5 (35 edges, lazy=8, 0.0s)
+   SAT   b=3 inv  n=2 t=6 (72 edges, lazy=16, 0.0s)
+   TIMEOUT b=3 inv n=2 t=7
+   SAT   b=3 v3   n=2 t=3 (3 edges, lazy=1, 0.0s)
+   SAT   b=3 v3   n=2 t=4 (12 edges, lazy=3, 0.0s)
+   SAT   b=3 v3   n=2 t=5 (33 edges, lazy=7, 0.0s)
+   SAT   b=3 v3   n=2 t=6 (84 edges, lazy=12, 0.0s)
+   SAT   b=3 v3   n=2 t=7 (245 edges, lazy=137, 0.2s)
+   SAT   b=3 v3   n=2 t=8 (373 edges, lazy=1164, 1.7s)
+   SAT   b=3 v3   n=2 t=9 (576 edges, lazy=9023, 21.7s)
+   SAT   b=3 v3   n=2 t=10 (981 edges, lazy=25674, 100.4s)
+   SAT   b=3 v3   n=2 t=11 (1335 edges, lazy=88910, 697.6s)
+   SAT   b=3 v3   n=2 t=12 (1887 edges, lazy=97172, 1724.6s)
+   SAT   b=3 v2   n=2 t=3 (3 edges, lazy=1, 0.0s)
+   SAT   b=3 v2   n=2 t=4 (12 edges, lazy=3, 0.0s)
+   SAT   b=3 v2   n=2 t=5 (37 edges, lazy=8, 0.0s)
+   SAT   b=3 v2   n=2 t=6 (103 edges, lazy=29, 0.0s)
+   SAT   b=3 v2   n=2 t=7 (255 edges, lazy=3575, 3.6s)
+   SAT   b=3 v2   n=2 t=8 (308 edges, lazy=10504, 19.8s)
+   SAT   b=3 v2   n=2 t=9 (545 edges, lazy=50381, 553.1s)
+   TIMEOUT b=3 v2 n=2 t=10
+
+SUMMARY ternary cutoffs: {'free': '>6 (timeout)', 'inv': '>6 (timeout)', 'v2': '>9 (timeout)'}
