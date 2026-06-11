@@ -1,0 +1,21 @@
+=== A. The Golay rung: C(I+S(Paley_23)) — HYP-2409.4 ===
+   Paley_23 bordered, tournament gauge: [24,12] self-orth=True doubly-even=True d=8 dist={8: 759, 12: 2576, 16: 759, 24: 1}
+   => Type II [24,12,8] (unique = g24): True
+   Gleason generator check: W == {0:1, 8:759, 12:2576, 16:759, 24:1}: True
+
+=== control: p=7 reproduces THM-480's e8 ===
+   Paley_7 bordered: [8,4] self-orth=True doubly-even=True d=4 dist={4: 14, 8: 1}
+   W == {0:1, 4:14, 8:1}: True
+
+=== B. eQR unification (HYP-2410): row-space EQUALITY at p=7,23,31,47,71 ===
+   p=7: dim C(H)=4 (target 4); eQR row-space equality: [False, True]
+   p=23: dim C(H)=12 (target 12); eQR row-space equality: [False, True]
+   p=31: dim C(H)=16 (target 16); eQR row-space equality: [False, True]
+   p=47: dim C(H)=24 (target 24); eQR row-space equality: [False, True]
+   p=71: dim C(H)=36 (target 36); eQR row-space equality: [False, True]
+
+=== C. order-32 trichotomy (HYP-2411) ===
+   Paley_31 bordered (= eQR_32 by part B): [32,16] self-orth=True doubly-even=True d=8 dist={8: 620, 12: 13888, 16: 36518, 20: 13888, 24: 620, 32: 1}
+   A4=0 A8=620 (d32+ has A4=120; RM(2,5)/eQR32 isospectral A4=0,A8=620)
+
+=== TOTAL 0.0s ===

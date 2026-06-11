@@ -106,3 +106,16 @@ an ADDITIVE-increment doubling, a different species from anything in this litera
 
 `trans_tower_erdos_moser_kps2.py`, `verify_trans_tower_kps2.py`,
 `trans_doubling_n6_kps2.out` (n=6 census), `trans_paley7_doubles_kps2.out` (forced exception).
+
+---
+
+## ADDENDUM (kind-pasteur-2026-06-11-S2): HYP-2360 REFUTED; the sandwich is replaced by the zigzag law
+
+THM-482 refutes the +2 sandwich with the unbounded alternating family A_l
+(trans(A_l) = l+1, trans(D(A_l)) ≥ 2l+1; A_2 = this file's n=5 idx10 exception;
+delta = 3 already at n = 7, one vertex past the n=6 census). The exact law is
+trans(D(T)) = z(T), the zigzag number (THM-482 B). Consequences for this file:
+(2b)'s conditional remark "the sandwich would give R(k+2) ≥ 2R(k)−1" is moot;
+the tower's step pattern +2, +2, +4 is now read as the zigzag numbers of the
+levels (z(T₃₁) = 11). The trivial bound trans(D(T)) ≤ 2·trans(T) is
+asymptotically tight. See THM-482.

@@ -1,0 +1,151 @@
+ADVERSARIAL AUDIT of THM-481 eQR proof sketch
+main cases p = 7, 23 (p = 7 mod 8); controls p = 11 (3 mod 8: kills idempotency), p = 17 (1 mod 8: kills skewness AND parity step)
+
+========================================================================
+AUDIT p = 7   (p mod 8 = 7, p mod 4 = 3)
+========================================================================
+QR  = [1, 2, 4]
+QNR = [3, 5, 6]
+[PASS] (1) chi(j-i) = -1  <=>  j-i in QNR (definition of chi)
+[PASS] chi(-1) = -1; skewness needs chi(-1)=-1, i.e. p=3 mod 4 (here p%4=3)
+[PASS] H + H^T = 2I (skew)
+[PASS] H H^T = 8 I (Hadamard)
+[PASS] (1) core(H) = I + A - A^T for repo Paley tournament A[i][j]=1 iff (j-i) in QR
+[PASS] (a) row inf of (J-H)/2 is zero
+[PASS] (a) row i of (J-H)/2 has support (i+QNR) u {inf}
+    note: with repo convention i->j iff chi(j-i)=+1, the core of (J-H)/2 is A^T (the LOSS matrix), support of row i = in-nbrs of i.
+[PASS] (b) |QNR| = (p-1)/2 = 3 is ODD; odd <=> p=3 mod 4 (here p%4=3)
+[PASS] (b) inf-bit of every generator = parity of its core
+dim C(H) = 4
+[PASS] (2) 2 in QR is True; expected (p=+-1 mod 8) = True
+[PASS] (2) 2*QNR == QNR  <=>  2 in QR  (here 2*QNR = QNR)
+[PASS] (3) theta^2 = theta mod (x^p - 1) over GF(2): True; must equal '2 in QR' = True
+[PASS] (3) dim <theta> = (p+1)/2 = 4  -- dim = 4
+[PASS] (b) C(H) = parity-extension of <theta>  [exact subspace equality]
+[PASS] (4) every codeword of C(H) has EVEN total weight (inf coordinate is an overall parity check -- matches the literature's extension)
+[PASS] (4) puncturing C(H) at inf gives exactly <theta>
+(x^p-1)/(x+1) factors into irreducibles of degrees [3, 3]
+GF(2^3) = GF(2)[y]/(x^3 + x + 1),  alpha = y
+[PASS] alpha is a primitive p-th root of unity (alpha^p = 1, alpha != 1)
+[PASS] (2)+(3) q(x)=prod_{QR}(x-alpha^r) has GF(2) coefficients (needs QR closed under doubling, i.e. 2 in QR)
+[PASS] (2)+(3) n(x)=prod_{QNR}(x-alpha^s) has GF(2) coefficients
+q(x) = x^3 + x + 1
+n(x) = x^3 + x^2 + 1
+[PASS] (x+1) q(x) n(x) = x^p - 1
+zeros of theta_QNR among alpha^e: e in [3, 5, 6]
+zeros of theta_QR  among alpha^e: e in [1, 2, 4]
+[PASS] (3) WHICH CODE: theta_QNR vanishes exactly on the NONRESIDUE powers of alpha  =>  <theta_QNR> = N = <n(x)>, dim (p+1)/2
+[PASS] (3) control: theta_QR vanishes exactly on the RESIDUE powers  =>  <theta_QR> = Q = <q(x)>
+[PASS] (3) divisibility cross-check: n(x) | theta_QNR and q(x) !| theta_QNR
+Gauss periods: eta_R = 0, eta_N = 1 (in GF(2^3); eta_R + eta_N must be 1)
+[PASS] eta_R + eta_N = 1 and {eta_R, eta_N} = {0, 1} (p = -1 mod 8: periods are RATIONAL, i.e. in GF(2) -- this is '2 in QR' again)
+[PASS] (3) <theta_QNR> = <n(x)> as subspaces (theta is THE idempotent generator of N)
+[PASS] dim N = dim Q = (p+1)/2
+[PASS] MAIN: C(H) = extended QR code ext(N) (the QNR/theta one) [exact subspace equality]
+[PASS] ext(N) != ext(Q) as subspaces (so 'THE extended QR code' is only defined up to equivalence; the sketch should name ext(N))
+    C(H) == ext(Q)? False
+[PASS] equivalence: coordinate map j -> 3*j (inf fixed) maps ext(N) onto ext(Q)
+weight distribution of C(H): {0: 1, 4: 14, 8: 1}
+[PASS] dim C(H) = (p+1)/2 = 4
+[PASS] self-dual: dim = n/2 and all basis inner products even
+[PASS] doubly even (all weights = 0 mod 4) => Type II for p = -1 mod 8
+[PASS] p=7: C(H) is the [8,4,4] code e8-hat, wd {0:1,4:14,8:1}
+
+========================================================================
+AUDIT p = 23   (p mod 8 = 7, p mod 4 = 3)
+========================================================================
+QR  = [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+QNR = [5, 7, 10, 11, 14, 15, 17, 19, 20, 21, 22]
+[PASS] (1) chi(j-i) = -1  <=>  j-i in QNR (definition of chi)
+[PASS] chi(-1) = -1; skewness needs chi(-1)=-1, i.e. p=3 mod 4 (here p%4=3)
+[PASS] H + H^T = 2I (skew)
+[PASS] H H^T = 24 I (Hadamard)
+[PASS] (1) core(H) = I + A - A^T for repo Paley tournament A[i][j]=1 iff (j-i) in QR
+[PASS] (a) row inf of (J-H)/2 is zero
+[PASS] (a) row i of (J-H)/2 has support (i+QNR) u {inf}
+    note: with repo convention i->j iff chi(j-i)=+1, the core of (J-H)/2 is A^T (the LOSS matrix), support of row i = in-nbrs of i.
+[PASS] (b) |QNR| = (p-1)/2 = 11 is ODD; odd <=> p=3 mod 4 (here p%4=3)
+[PASS] (b) inf-bit of every generator = parity of its core
+dim C(H) = 12
+[PASS] (2) 2 in QR is True; expected (p=+-1 mod 8) = True
+[PASS] (2) 2*QNR == QNR  <=>  2 in QR  (here 2*QNR = QNR)
+[PASS] (3) theta^2 = theta mod (x^p - 1) over GF(2): True; must equal '2 in QR' = True
+[PASS] (3) dim <theta> = (p+1)/2 = 12  -- dim = 12
+[PASS] (b) C(H) = parity-extension of <theta>  [exact subspace equality]
+[PASS] (4) every codeword of C(H) has EVEN total weight (inf coordinate is an overall parity check -- matches the literature's extension)
+[PASS] (4) puncturing C(H) at inf gives exactly <theta>
+(x^p-1)/(x+1) factors into irreducibles of degrees [11, 11]
+GF(2^11) = GF(2)[y]/(x^11 + x^9 + x^7 + x^6 + x^5 + x + 1),  alpha = y
+[PASS] alpha is a primitive p-th root of unity (alpha^p = 1, alpha != 1)
+[PASS] (2)+(3) q(x)=prod_{QR}(x-alpha^r) has GF(2) coefficients (needs QR closed under doubling, i.e. 2 in QR)
+[PASS] (2)+(3) n(x)=prod_{QNR}(x-alpha^s) has GF(2) coefficients
+q(x) = x^11 + x^9 + x^7 + x^6 + x^5 + x + 1
+n(x) = x^11 + x^10 + x^6 + x^5 + x^4 + x^2 + 1
+[PASS] (x+1) q(x) n(x) = x^p - 1
+zeros of theta_QNR among alpha^e: e in [5, 7, 10, 11, 14, 15, 17, 19, 20, 21, 22]
+zeros of theta_QR  among alpha^e: e in [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+[PASS] (3) WHICH CODE: theta_QNR vanishes exactly on the NONRESIDUE powers of alpha  =>  <theta_QNR> = N = <n(x)>, dim (p+1)/2
+[PASS] (3) control: theta_QR vanishes exactly on the RESIDUE powers  =>  <theta_QR> = Q = <q(x)>
+[PASS] (3) divisibility cross-check: n(x) | theta_QNR and q(x) !| theta_QNR
+Gauss periods: eta_R = 0, eta_N = 1 (in GF(2^11); eta_R + eta_N must be 1)
+[PASS] eta_R + eta_N = 1 and {eta_R, eta_N} = {0, 1} (p = -1 mod 8: periods are RATIONAL, i.e. in GF(2) -- this is '2 in QR' again)
+[PASS] (3) <theta_QNR> = <n(x)> as subspaces (theta is THE idempotent generator of N)
+[PASS] dim N = dim Q = (p+1)/2
+[PASS] MAIN: C(H) = extended QR code ext(N) (the QNR/theta one) [exact subspace equality]
+[PASS] ext(N) != ext(Q) as subspaces (so 'THE extended QR code' is only defined up to equivalence; the sketch should name ext(N))
+    C(H) == ext(Q)? False
+[PASS] equivalence: coordinate map j -> 5*j (inf fixed) maps ext(N) onto ext(Q)
+weight distribution of C(H): {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+[PASS] dim C(H) = (p+1)/2 = 12
+[PASS] self-dual: dim = n/2 and all basis inner products even
+[PASS] doubly even (all weights = 0 mod 4) => Type II for p = -1 mod 8
+[PASS] p=23: C(H) is [24,12,8] (extended Golay; unique by Pless 1968)
+
+========================================================================
+AUDIT p = 11   (p mod 8 = 3, p mod 4 = 3)
+========================================================================
+QR  = [1, 3, 4, 5, 9]
+QNR = [2, 6, 7, 8, 10]
+[PASS] (1) chi(j-i) = -1  <=>  j-i in QNR (definition of chi)
+[PASS] chi(-1) = -1; skewness needs chi(-1)=-1, i.e. p=3 mod 4 (here p%4=3)
+[PASS] H + H^T = 2I (skew)
+[PASS] H H^T = 12 I (Hadamard)
+[PASS] (1) core(H) = I + A - A^T for repo Paley tournament A[i][j]=1 iff (j-i) in QR
+[PASS] (a) row inf of (J-H)/2 is zero
+[PASS] (a) row i of (J-H)/2 has support (i+QNR) u {inf}
+    note: with repo convention i->j iff chi(j-i)=+1, the core of (J-H)/2 is A^T (the LOSS matrix), support of row i = in-nbrs of i.
+[PASS] (b) |QNR| = (p-1)/2 = 5 is ODD; odd <=> p=3 mod 4 (here p%4=3)
+[PASS] (b) inf-bit of every generator = parity of its core
+dim C(H) = 11
+[PASS] (2) 2 in QR is False; expected (p=+-1 mod 8) = False
+[PASS] (2) 2*QNR == QNR  <=>  2 in QR  (here 2*QNR = QR)
+[PASS] (3) theta^2 = theta mod (x^p - 1) over GF(2): False; must equal '2 in QR' = False
+[PASS] CONTROL: theta^2 = theta_QR instead (Frobenius sends QNR-sum to QR-sum when 2 in QNR)
+[PASS] CONTROL: dim <theta> = 11 != (p+1)/2 = 6 (no QR code without 2 in QR)
+[PASS] (b) C(H) = parity-extension of <theta>  [exact subspace equality]
+[PASS] (4) every codeword of C(H) has EVEN total weight (inf coordinate is an overall parity check -- matches the literature's extension)
+[PASS] (4) puncturing C(H) at inf gives exactly <theta>
+CONTROL p=11: weight distribution of C(H): {0: 1, 2: 66, 4: 495, 6: 924, 8: 495, 10: 66, 12: 1}
+[PASS] CONTROL p=11 (p=3 mod 8): C(H) is the FULL even-weight [12,11] code, NOT an extended QR code
+
+========================================================================
+AUDIT p = 17   (p mod 8 = 1, p mod 4 = 1)
+========================================================================
+QR  = [1, 2, 4, 8, 9, 13, 15, 16]
+QNR = [3, 5, 6, 7, 10, 11, 12, 14]
+[PASS] (1) chi(j-i) = -1  <=>  j-i in QNR (definition of chi)
+[PASS] chi(-1) = 1; skewness needs chi(-1)=-1, i.e. p=3 mod 4 (here p%4=1)
+[PASS] CONTROL p=1 mod 4: H as defined is NOT skew and NOT Hadamard  -- skew=False, hadamard=False
+[PASS] CONTROL p=1 mod 4: A is NOT a tournament (chi(-1)=+1, arcs doubled) so core(H) != I + A - A^T
+[PASS] (a) row inf of (J-H)/2 is zero
+[PASS] (a) row i of (J-H)/2 has support (i+QNR) u {inf}
+    note: with repo convention i->j iff chi(j-i)=+1, the core of (J-H)/2 is A^T (the LOSS matrix), support of row i = in-nbrs of i.
+[PASS] (b) |QNR| = (p-1)/2 = 8 is EVEN; odd <=> p=3 mod 4 (here p%4=1)
+[PASS] CONTROL p=1 mod 4: inf-bit != core parity (|QNR| even) -- the parity-extension step of the sketch FAILS here
+    (stopping this control here: premise 'H skew-Hadamard' already failed)
+
+========================================================================
+RESULT: ALL CHECKS PASSED -- sketch confirmed at p=7, 23 with the
+discrepancies/clarifications noted in the printout (which-code,
+loss-matrix orientation, controls showing where each congruence
+hypothesis is needed).

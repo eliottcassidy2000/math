@@ -1,0 +1,62 @@
+QR  mod 23: [1, 2, 3, 4, 6, 8, 9, 12, 13, 16, 18]
+QNR mod 23: [5, 7, 10, 11, 14, 15, 17, 19, 20, 21, 22]
+[PASS] |QR| = |QNR| = 11
+[PASS] chi(-1) = -1 (23 = 3 mod 4, needed for skewness)
+[PASS] H is Hadamard: H H^T = 24 I
+[PASS] H is skew: H + H^T = 2 I
+[PASS] row inf of (J-H)/2 is all-zero
+[PASS] each field row of (J-H)/2 has weight 12
+[PASS] dim C_paley = 12  -- dim = 12
+[PASS] exactly two degree-11 factors of x^23+1  -- found 2
+g1 = x^11 + x^9 + x^7 + x^6 + x^5 + x + 1   (mask 0xae3)
+g2 = x^11 + x^10 + x^6 + x^5 + x^4 + x^2 + 1   (mask 0xc75)
+[PASS] (x+1)*g1*g2 = x^23+1
+[PASS] g1, g2 are reciprocals of each other
+[PASS] dim <g1> = dim <g2> = 12
+[PASS] <g1> is a [23,12,7] code
+[PASS] <g2> is a [23,12,7] code
+[PASS] E_N = sum_{n in QNR} x^n is idempotent mod x^23-1
+[PASS] E_Q = sum_{r in QR} x^r is idempotent mod x^23-1
+E_N in <g1>: False;  E_N in <g2>: True
+E_Q in <g1>: True;  E_Q in <g2>: False
+[PASS] E_N lies in exactly one of <g1>, <g2>
+[PASS] <E_N> = <g2> (E_N generates the QNR-idempotent QR code)  -- dim <E_N> = 12
+QNR-idempotent QR code generator: g2 = x^11 + x^10 + x^6 + x^5 + x^4 + x^2 + 1
+[PASS] C_paley = parity-extended QNR-idempotent QR code  <-- MAIN CLAIM
+  (C_paley == extended <g1> [the QR-idempotent one]: False)
+  negation j->-j maps extended <g2> to extended <g1>: True
+[PASS] negation permutation swaps the two extended QR codes
+[PASS] the two extended QR codes are distinct subspaces
+weight distribution of C_paley: {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+[PASS] weight distribution = {0:1, 8:759, 12:2576, 16:759, 24:1}  -- got {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+[PASS] minimum distance d = 8
+[PASS] doubly-even (all weights = 0 mod 4)
+[PASS] self-dual (dim 12, all basis inner products = 0 over GF(2))
+[PASS] extended QNR-idempotent QR code has the same weight distribution
+
+UNIQUENESS CITATION
+-------------------
+The precise classical result: any binary LINEAR [24,12,8] code is
+equivalent (up to coordinate permutation) to the extended binary Golay
+code.  This is due to:
+
+  V. Pless, "On the uniqueness of the Golay codes,"
+  Journal of Combinatorial Theory 5 (1968), 215-228.
+  (Proves uniqueness of the [23,12,7] and [24,12,8] binary linear codes.)
+
+A Type II (doubly-even self-dual) [24,12] code with d=8 is in particular
+a binary linear [24,12,8] code, so Pless (1968) already gives uniqueness;
+no Type II hypothesis is needed.  The stronger NONLINEAR statement --
+any binary (24, 2^12, 8) code, linear or not, is equivalent to the
+extended Golay code -- is due to:
+
+  S. L. Snover, "The uniqueness of the Nordstrom-Robinson and the Golay
+  binary codes," Ph.D. thesis, Michigan State University, 1973;
+  see also P. Delsarte and J.-M. Goethals, "Unrestricted codes with the
+  Golay parameters are unique," Discrete Mathematics 12 (1975), 211-224.
+
+(Within the Type II world: Pless and Sloane, JCTA 18 (1975) 313-335,
+classify all nine Type II [24,12] codes; only the Golay code has d=8.)
+
+======================================================================
+RESULT: ALL CHECKS PASSED -- claim CONFIRMED, refutation FAILED.

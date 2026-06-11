@@ -1,0 +1,8 @@
+=== A_l: alternating configuration vs HYP-2360 (delta <= 2?) ===
+   l=2 (n=5): trans(A_l)=3 [brute confirms: True], designed 5-chain in D verifies=True, trans(D)=5, delta=2
+   l=3 (n=7): trans(A_l)=4 [brute confirms: True], designed 7-chain in D verifies=True, trans(D)=7, delta=3   *** REFUTES HYP-2360 ***
+   l=4 (n=9): trans(A_l)=5 [brute confirms: True], designed 9-chain in D verifies=True, trans(D)=9, delta=4   *** REFUTES HYP-2360 ***
+   l=5 (n=11): trans(A_l)=6 [brute confirms: True], designed 11-chain in D verifies=True, trans(D)=11, delta=5   *** REFUTES HYP-2360 ***
+   l=6 (n=13): trans(A_l)=7 [brute confirms: True], designed 13-chain in D verifies=True, trans(D)=None, delta=None   *** chain alone gives delta >= 6 ***
+
+=== TOTAL 0.0s ===
