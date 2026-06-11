@@ -1,0 +1,30 @@
+== Part A: direct F2 verification (law + Burnside) ==
+n=1: count=1 (OEIS 1) law-violations=0
+n=2: count=1 (OEIS 1) law-violations=0
+n=3: count=1 (OEIS 1) law-violations=0
+n=4: count=2 (OEIS 2) law-violations=0
+n=5: count=2 (OEIS 2) law-violations=0
+n=6: count=6 (OEIS 6) law-violations=0
+n=7: count=12 (OEIS 12) law-violations=0
+n=8: count=79 (OEIS 79) law-violations=0
+
+== Part B: closed form, branch split, graph control ==
+n : total | N_odd | N_lev | graphs(A002854)
+1 : 1 | 1 | 0 | 1
+2 : 1 | 1/2 | 1/2 | 1
+3 : 1 | 1 | 0 | 2
+4 : 2 | 1 | 1 | 3
+5 : 2 | 2 | 0 | 7
+6 : 6 | 4 | 2 | 16
+7 : 12 | 12 | 0 | 54
+8 : 79 | 64 | 15 | 243
+9 : 792 | 792 | 0 | 2038
+10 : 19576 | 19296 | 280 | 33120
+11 : 886288 | 886288 | 0 | 1182004
+12 : 75369960 | 75346496 | 23464 | 87723296
+13 : 11856006240 | 11856006240 | 0 | 12886193064
+14 : 3467430423264 | 3467423603904 | 6819360 | 3633057074584
+15 : 1893448825054528 | 1893448825054528 | 0 | 1944000150734320
+16 : 1938818712501985736 | 1938818705520727296 | 6981258440 | 1967881448329407496
+
+all checks passed (A049313 and A002854 reproduced; branches integral for n>=3)
