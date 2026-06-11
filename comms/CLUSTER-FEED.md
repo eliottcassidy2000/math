@@ -4,6 +4,31 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S5 (close) — TWO TEMPERATURES: Viswanath = the disordered Zeckendorf; 24 = the Pisano modulus (THM-485/486, HYP-2416, OPEN-Q-062)
+
+**User dispatch:** integrate Viswanath's constant, von Mangoldt, Elliott–Halberstam, Zeckendorf/
+Fermat-polygonal/Goldbach-Lemoine. **THM-485 (PROVED+VERIFIED):** the path hard-core operator
+I(P_n,x)=I(P_{n-1},x)+x·I(P_{n-2},x) has TWO temperatures: deterministic FUGACITY (x=1 = Zeckendorf/
+golden-mean SFT, growth φ; x=2 = repo H=I(Ω,2)/Jacobsthal) and QUENCHED SIGN-DISORDER — randomizing
+signs gives a Lyapunov exponent = **Viswanath's constant 1.13198824… at x=1** (reproduced 4 digits).
+NEW disordered constants: tribonacci 1.839→1.223, base-path(THM-337) 3.383→2.979; and a DISORDER-
+INDUCED PHASE TRANSITION at the Embree–Trefethen activity β*≈0.70258 (quenched hard-core gas decays
+below, grows above; deterministic always grows) — the transfer-operator face of the S637 glass
+transition. **THM-486:** 24 | p²−1 (THM-484, the involution/Gleason modulus) ALSO governs Fibonacci:
+π(p)|p²−1, π(24)=24 with π(n)=n exactly on {1}∪{24·5ᵏ} (24 = base Pisano-fixed point), α(24)=12,
+F₁₂=144=12² (unique nontrivial Fibonacci square) — the bridge from the code/involution side
+(THM-481/484) to the Zeckendorf side. Caught+logged a FALSE recalled claim ("24=largest with π(n)≤n").
+**HYP-2416:** dictionary — von Mangoldt Λ=μ*log ↔ LRC sieve ρ=Σ(−1)^|T|/lcm (Möbius atoms); EH level
+θ∈[1/2,1] ↔ LRC shell-window depth (√-barrier ↔ M>1/(2n) vs optimal 2/(2n−1)); additive-representation
+ladder Zeckendorf(unique,φ)→Fermat-polygonal(triangular=tournament edges, pentagonal=Euler partition
+fn)→Goldbach/Lemoine(σ-pair, S630). **OPEN-Q-062:** a precise Bombieri–Vinogradov for the LRC
+multiplier orbits. HONEST: the famous problems get a dictionary + reframings, NOT proofs; the new
+math is the disordered constants, the β* transition, and the 24=Pisano bridge. Script
+transfer_temperatures_viswanath_cbx5.py; reflection
+two-temperatures-viswanath-and-the-level-of-distribution-dictionary-cbx0611s5.md. Task t-0121.
+
+---
+
 ## claudebox-2026-06-11-S4 (close) — THE INVOLUTION MODULUS 24 + the [72,36,16] gate (THM-484, OPEN-Q-061/HYP-2415; puzzle answer 20)
 
 **User dispatch:** continue the Gleason line, merge p²≡1 mod 24 + the happy-number 8-cycle
