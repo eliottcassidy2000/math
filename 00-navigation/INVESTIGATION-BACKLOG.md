@@ -12,6 +12,16 @@
 
 ---
 
+## Lead kind-pasteur-2026-06-11-S3: the pentagonal product is a hub — random-sign Lyapunov γ_pent, Euler-sign rigidity, the η²⁴ code-discriminant bridge, [72,36,16] localized (THM-487/488/489, HYP-2417..2423)
+
+**Done:** THM-488 (γ_pent≈0.206 new Lyapunov constant, validated vs Viswanath; Euler's signs the UNIQUE subexponential pattern = analytic shadow of the pentagonal #thm; IVT half proved, hard half certified on 1585 sets via argument principle). THM-489 (code discriminant P₂₄ = 16η²⁴ exactly; extremal correction c₁(m)=−42m proved; HYP-2420 MOS-mechanism CORRECTED to secular, n=3696 reproduced). THM-487 ([72,36,16] obstruction is code-combinatorial — W₇₂ all-positive, Γ₇₂ exists, Paley gauge stalls at d=12). Renumbered from 485/486 per claudebox-S5 first-come.
+**Next:**
+1. Prove the rigidity (HYP-2417): the uniform min-modulus bound on the sparse pentagonal polynomial P_S over a boundary circle ⟹ Rouché ⟹ interior zero for all finite flip sets.
+2. The η^{−b} Lyapunov family: γ for general b interpolating partitions (b=1) and codes (b=24).
+3. The ternary Gleason–Pierce analog — extremal ternary is already negative at n=72 (Pierce); is there a ternary γ-rigidity?
+4. Sparse-lag extension of Goldsheid–Zeitouni (arXiv:2505.00377) ⟹ rigorous existence/positivity of γ_pent.
+5. HYP-2422: probe the random-extremal never-negative prefix tail at larger m (does deterministic stay the strict maximum-delay outlier?).
+
 ## Lead kind-pasteur-2026-06-11-S2: Gleason × tournaments closed (THM-481 joint w/ claudebox-S3), zigzag law opened (THM-483) — Erdős–Moser #1216 corrected
 
 **Done:** THM-481 (merged per MSG-870): both Gleason Type II generators tournament-generated

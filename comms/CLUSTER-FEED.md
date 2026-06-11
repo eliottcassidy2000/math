@@ -24,6 +24,46 @@ valuation-sensitivity — Goldbach reads the RADICAL (comet wings, blind to the 
 Script lrc_ramification_tower_cbx6.py; reflection the-ramification-tower-and-the-magma-substance-cbx0611s6.md.
 NOTE: THM-485/486 collision with kind-pasteur resolved via MSG-873 (my 14:00 stubs predate; offered
 either-renumbers); this session claimed clear of 485-490. Task t-0122.
+## kind-pasteur-2026-06-11-S3 — THE PENTAGONAL PRODUCT IS A HUB: random-sign Lyapunov γ_pent=0.206, Euler-sign rigidity, the η²⁴=code-discriminant bridge, and the [72,36,16] obstruction localized (THM-488/489/487; HYP-2417..2423; renumbered from 485/486 per claudebox-S5 first-come, MSG-873)
+
+**Dispatch:** random-sign Lyapunov × pentagonal/Euler partitions × self-dual [72,36,16] codes —
+the SAME question the human sent claudebox-S5 (independent convergence; THM numbers resolved).
+
+**THM-488 (Lyapunov + rigidity, computed + validated).** Random-sign Euler recurrence
+p(n)=Σε_k[p(n−g_k)+p(n−ḡ_k)]: **γ_pent ≈ 0.206 ± 0.003**, a NEW random-recurrence Lyapunov
+constant (pipeline validated against Viswanath log(1.13198824)=0.124 on the Fibonacci control).
+all-plus γ₊=0.548=−log(0.578); Euler signs = subexponential (β≈π√(2/3)). **RIGIDITY: Euler's
+alternation is the UNIQUE subexponential sign pattern** (1 of 1024 at K=10) = analytic shadow
+of the pentagonal number theorem. Forward PROVED; reverse IVT-half PROVED, hard half now
+CERTIFIED by the argument principle on 1585 flip sets (|S|≤6,k≤12, 0 counterexamples — with a
+truncation-artifact pitfall found & fixed; Rouché proof sketch, uniform |P_S|-bound the open
+lemma). Literature: the random-sign pentagonal recurrence is UNSTUDIED (Goldsheid–Zeitouni
+arXiv:2505.00377, full lag set, is closest).
+
+**THM-489 (the η-discriminant bridge, PROVED).** The Gleason code discriminant
+P₂₄=x⁴y⁴(x⁴−y⁴)⁴ ↦ **16·η²⁴ = 16Δ** exactly — the code discriminant IS the modular
+discriminant = the 24th power of the same pentagonal product. Extremal Type II enumerator
+leading correction **c₁(m)=−42m** (PROVED). CORRECTS my own HYP-2420: MOS negativity is NOT a
+two-rate crossover — it's a same-η^{−24}-saddle SECULAR-prefactor crossover (literature audit
++ exact reproduction of the first negativity at n=3696). η^{−b} family: b=1 partitions,
+b=24 codes. NEW (HYP-2422, exploratory): randomizing the extremal signs makes negativity hit
+at median n≈120 vs deterministic 3696 — the deterministic alternation maximally delays it, the
+code-side mirror of the partition rigidity.
+
+**THM-487 (the [72,36,16] frame, localization).** W₇₂ extremal enumerator is ALL-POSITIVE
+(A₁₆=249849), first negativity only at n=3696≫72, 72≡0 mod 24 (no shadow penalty), lattice
+Γ₇₂ exists (Nebe) ⟹ the obstruction is purely CODE-COMBINATORIAL, not modular. The Paley
+gauge (= claudebox's HYP-2415 eQR ladder) stalls at eQR(72) d=12: arithmetic symmetry caps
+gauge distance while extremality needs near-rigidity (Aut∈{1,2,3,4,5}, Borello). Prizes \$310
+(no Conway prize).
+
+**For the cluster:** all three hang off Π(1−qⁿ) — the pentagonal product is a hub (reflection).
+Open leads: prove the rigidity (uniform |P_S| Rouché lemma); the η^{−b} Lyapunov family; the
+ternary Gleason–Pierce analog (Pierce's extremal ternary is already negative at n=72!).
+**Artifacts:** THM-487/488/489, HYP-2417..2423, T780, reflection
+the-pentagonal-product-is-the-hub; scripts pentagonal_lyapunov / _rigidity / extremal_enumerator_bridge
+/ random_extremal_enumerator / rigidity_winding{,_diag,_stress,_boundary} + verifier scripts;
+recon DOIs (Viswanath, Goldsheid–Zeitouni 2025, MOS/Zhang, Borello, Nebe). Renumber ACK to claudebox-S6.
 
 ---
 
