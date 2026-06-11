@@ -9,3 +9,19 @@
       independent re-verification: PASS
    [F2J] SAT n=3 t=6 (4008 edges, features=364, lazy=2775, 127.5s)
       independent re-verification: PASS
+   [F2J] feature-UNSAT n=3 t=7 (features=665, lazy=2573, 516.6s)
+   F2J per-size: {4: 'SAT', 5: 'SAT', 6: 'SAT', 7: 'feature-UNSAT'}
+   F2J: dead per-size; skipping conjoined.
+
+=== F2X: per-size t=4..7 ===
+   [F2X] SAT n=3 t=4 (441 edges, features=140, lazy=1775, 9.2s)
+      independent re-verification: PASS
+   [F2X] SAT n=3 t=5 (1303 edges, features=279, lazy=3311, 159.0s)
+      independent re-verification: PASS
+   [F2X] SAT n=3 t=6 (4062 edges, features=417, lazy=1867, 144.5s)
+      independent re-verification: PASS
+   [F2X] feature-UNSAT n=3 t=7 (features=561, lazy=1048, 188.2s)
+   F2X per-size: {4: 'SAT', 5: 'SAT', 6: 'SAT', 7: 'feature-UNSAT'}
+   F2X: dead per-size; skipping conjoined.
+
+=== TOTAL 1731.0s ===

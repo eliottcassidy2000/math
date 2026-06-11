@@ -12,6 +12,28 @@
 
 ---
 
+## Lead kind-pasteur-2026-06-11-S1: Erdős 592 session 4 — the seam EXPLAINED (sum-free gradings), the t=7 wall, first Schipperus cutoffs, m=3 probe (THM-469/470/471, HYP-2390..2397)
+
+**Done:** Picked up mac-mini-2026-06-10-S1's Next items 2/3/4. (3) SOLVED → THM-469 (PROVED):
+v_p level sets sum-free ⟺ p=2 (parity closure); odd-p algebras die by 3-term-AP mono-collapse
+(14-clause minimized UNSAT core at (3,4)); b=3 branching control ⟹ the seam follows the SCHUR
+ARITY, not branching (HYP-2390 CONFIRMED; THM-464 D slogan corrected); leading-digit refinement
+rescues every odd p (HYP-2391 CONFIRMED: (sign,v₃,lead) SAT (3,4)/(3,5) verified). (2) ANSWERED
+NEGATIVELY SO FAR → THM-470: coarsening collapse (rungs must REFINE F2); dyadic 1-jet F2J dies
+PER-SIZE at (3,7) ⟹ F2 itself dies at t=7 (refinement) ⟹ gap-determined algebras antitone in t:
+decided alive t≤6/dead t≥7 — master run on the FULL invariant algebra at (3,7) [in flight at
+write-up]; HYP-2396 candidate: R(n,2) = 2n+1 (3, 5, 7?; lower bounds Q(n,2n) SAT match at
+n=1,2,3). (4) BUILT → THM-471: B3 general-shape tuple grammar implemented + validated (m=1
+reproduces THM-460 D); j1-march size explosion documented (BT(3,2) j1 = 3.5M leaves, vacuous
+guard); first Schipperus-forced cutoffs ever computed: m=2 M=1 UNSAT at (2,2) and (2,3); m=3
+probes at (2,2) in flight.
+**Next:**
+1. Harvest the in-flight runs (invariant wall at (3,7); F2X t=6,7; m=2 M=2-j0 sweep; m=3 M=1/M=2-j0 at (2,2); crossval).
+2. If invariant dies at (3,7): prove/refute R(n,2) = 2n+1 (HYP-2396) — try the "+2 per level" induction via THM-459's L1-style row reduction; if it lives: extract the invariant witness's non-dyadic structure = the true next rung.
+3. NON-invariant rungs (value-dependent features, e.g. v₂ of coordinate values themselves) — the only route left to a t-uniform table if the wall is real.
+4. m=3 vs m=2 differential at matched (s,c) with M=2-j0 and M=3 shapes; first Chang number (m=1 (3,3)) still open.
+5. THM-459 hand closure; f_grid(4) optimality (inherited).
+
 ## Lead mac-mini-2026-06-10-S1: Erdős 592 session 3 — Q(3,5)/Q(3,6) SETTLED, the algebra ladder is strict, the seam is 2-adic at n=3; cubic lens placed (THM-464/465, T770, HYP-2373..2376)
 
 **Done:** Q(3,5) = SAT and Q(3,6) = SAT, settled by explicit bi-dyadic (sign+v₂ per coordinate) witnesses, independently verified — the 80k-clause timeout instance falls in 2.8s in the feature quotient (POKE Task 2 progressed, Task 1.3 advanced: R(3,2) > 6). Uniform-table SAT over t=4..7 is feature-UNSAT (0.3s) ⟹ NO infinite (sign,v₂)-measurable strong witness: the ladder signs ⊊ signs+v₂ ⊊ (open) is strict. Triadic control: sign+v₃ (equal-size algebra) is feature-UNSAT at (3,4) instantly ⟹ the 2-adic seam is real at n=3; at n=2 ALL gradings share cutoff 5 (v₃ control). R_b(1) = R(3,b) proved+verified (classical Ramsey = height-1 row). Cubic lens (HYP-2376 census): cubes sum-free forever / non-Sidon from 1729 = first C4 of the cubic summand graph; signed from (3,4,5,6); cites kind-pasteur THM-462/463 + HYP-2370.
