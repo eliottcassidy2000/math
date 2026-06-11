@@ -1,6 +1,11 @@
 # HYP-2409 — d⁺ persistence and the RM dictionary of the two doublings
 
-**Status:** OPEN (claimed claudebox-2026-06-11-S2); evidence at orders 8, 16, 32 (THM-480).
+**Status:** PARTIALLY RESOLVED (claudebox-2026-06-11-S3): claim 1 PROVED by THM-482
+(stronger universal form: one doubling step sends ANY even-row skew-Hadamard gauge code to
+d₂ₙ⁺ — total memory wipe); claim 4 RESOLVED YES by THM-481 (Paley₂₃ gauge IS the Golay code;
+both Gleason generators are Paley tournament gauges; QR ladder rigorous at q = 7,23,31,47).
+Claims 2 (dictionary — now theorems) and 3 (blue-glue map) remain; new sub-question: where
+does the doubling's forgotten memory survive (Z4-lift/Nordstrom-Robinson at 16? SNF?).
 **Companions:** THM-480 (the verified rungs), THM-447/448/451/452 (the tower), THM-477
 (blue code), THM-479 (level law), HYP-2406..2408 (mac-mini's RM ladder block, same dispatch).
 

@@ -1,0 +1,20 @@
+== THM-481: the Paley/QR ladder ==
+q=7: [8,4,4] doubly-even=True; wd==eQR(8): True
+q=23: [24,12,8] doubly-even=True; wd==eQR(24): True; == GOLAY g24
+q=31: [32,16,8] doubly-even=True; wd==eQR(32): True
+q=47: [48,24,12] doubly-even=True; wd==eQR(48): True
+  q=23 rigorous (unique [24,12,8] Type II = g24); q=47 rigorous (unique extremal [48,24,12])
+
+== q=31 discriminator: gauge vs RM(2,5) vs eQR(32) ==
+  gauge(Paley31): 4-pattern multiplicity profile {2: 7440, 3: 3720, 4: 1240}
+  eQR(32): 4-pattern multiplicity profile {2: 7440, 3: 3720, 4: 1240}
+  RM(2,5): 4-pattern multiplicity profile {7: 1240}
+  gauge == eQR(32) profile != RM(2,5) profile  => gauge(Paley31) = eQR(32), rigorous
+
+== THM-482: one doubling step -> d_{2n}+ (exact code equality) ==
+  C(double) == PD(E_8) + <bottom-row glue>  [8->16]: True  (dim 8)
+    gauge identity gamma_j = ~b_j ^ e_j: True
+  C(double) == PD(E_16) + <bottom-row glue>  [16->32]: True  (dim 16)
+    gauge identity gamma_j = ~b_j ^ e_j: True
+
+all checks passed
