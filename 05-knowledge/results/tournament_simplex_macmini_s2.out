@@ -1,0 +1,362 @@
+THE TOURNAMENT SIMPLEX — macmini-2026-06-10-S2
+M = I + S rows = cube vertices; vol = det(M)/n!; Gram = I + SS^T
+d2_ij = 4(1 + disagree(i,j)) = 4(n-1) - 4(cod+ + cod-) = 4*Hamming(row_i,row_j)
+
+==============================================================================
+QR_7 (Paley) SPOT CHECK
+==============================================================================
+det(M) = 512 (DRT ceiling (n+1)^3 = 512); vol = 512/5040
+Gram off-diagonal values: {-1}  => Gram = 8I - J: True
+pairwise squared distances: {16}  => all = 2n+2 = 16, edge = 4 = sqrt(2n+2)
+REGULAR simplex: True; edge sqrt(2n)=sqrt(14) does NOT fit at odd n.
+Pfaffian vector w = [7, 7, 7, 7, 7, 7, 7] (vertex-transitivity => w ∝ 1)
+SS^T = 7I - J (DRT): True
+
+==============================================================================
+n = 4
+==============================================================================
+iso classes: 4
+
+PART 1 — VOLUME SPECTRUM  (vol = det(M)/n!, det(M) = 2^(n-1) d(T))
+  distinct det values (2): [8, 16]
+  distinct d(T) values: [1, 2]
+  det multiplicities: {8: 2, 16: 2}
+  tournament max det = 16;  ceiling n^(n/2) = 16 [skew-conference ceiling]; attained: True
+  max-vol simplex {center + n cube vertices}: maxdet_pm1(4) = 16  -> tournament/maxdet ratio = 16/16 = 1.0000
+  true max-vol inscribed simplex (n+1 cube vertices): maxdet_pm1(5)/n! -> ratio = 16/48 = 0.3333
+  regular-simplex ratio (b): det/n^(n/2): max class = 16/16 = 1.0000  (edge sqrt(2n)=2.8284 regular simplex fits iff skew-conference exists)
+
+  SWITCHING (M -> D M D, D = diag(+-1)):
+  det(M) invariant under ALL 2^(n-1) switchings of ALL classes: VERIFIED
+  classes where some switching changes the distance spectrum: 2/4
+  example: class 0, switch-set mask 1: spectrum (1, 1, 1, 2, 2, 3) -> (1, 2, 2, 3, 3, 3)
+
+PART 2 — GRAM / SHAPE GEOMETRY  (Gram = I + S S^T; d2_ij = 4(1+disagree))
+  regular row-simplex: 2/4 classes
+  orthocentric row-simplex (n rows): 2/4
+  orthocentric cone simplex (0 + rows): 2/4   [derived: cone orthocentric <=> rows regular: CONSISTENT]
+  equifacetal row-simplex: 2/4
+  equifacetal but NOT regular: none
+  orthocentric rows but NOT regular: none
+  distinct shape spectra: 3 over 4 classes  (shape spectrum does NOT separate iso classes)
+  largest spectrum collision: 2 classes share one spectrum  (1 colliding spectra)
+  (spectrum, det) pairs: 3 distinct (still collides)
+
+  per-class table (Ham spectrum = d2/4 multiset):
+  cid scores             det d(T) reg orth equi  spectrum
+    0 (3, 2, 1, 0)         8    1   .    .    .  (1, 1, 1, 2, 2, 3)
+    1 (3, 1, 1, 1)        16    2   Y    Y    Y  (2, 2, 2, 2, 2, 2)
+    2 (2, 2, 2, 0)        16    2   Y    Y    Y  (2, 2, 2, 2, 2, 2)
+    3 (1, 2, 2, 1)         8    1   .    .    .  (1, 2, 2, 3, 3, 3)
+
+PART 3 — ODD TANGENT FIELD x -> Sx
+  even n: det(S) = Pf(S)^2 odd => ker S = 0 for ALL classes:
+    verified S nonsingular on all 4 classes: True
+  projected field P(Sx) on sum-zero sphere S^2 (EVEN-dim) must vanish (hairy ball).
+  unique antipodal zero pair: x* ∝ S^(-1) 1  (in 1^perp automatically since 1^T S^-1 1 = 0).
+  harmonic direction u = adj(S)·1: sum(u)=0 verified; S u = det(S)·1 verified.
+  Pearson corr(u_i, s_i) over all (class,vertex): -0.7454
+  zero entries of u: 0 of 16
+  gcd(u) distribution: {1: 2, 3: 2}
+  parity patterns of u (per class): {(1, 1, 1, 1): 4}
+  classes where u_i is a well-defined affine function of score s_i: 2/4
+  per-class u:
+    cid  0 scores (3, 2, 1, 0) det(S)=   1 u=[-1, 1, -1, 1]
+    cid  1 scores (3, 1, 1, 1) det(S)=   9 u=[-9, 3, 3, 3]
+    cid  2 scores (2, 2, 2, 0) det(S)=   9 u=[-3, -3, -3, 9]
+    cid  3 scores (1, 2, 2, 1) det(S)=   1 u=[-1, 1, -3, 3]
+  index of zero x* (sign det of linearized field on tangent space): {1: 4}  [each antipodal zero same index; sum must be chi(S^2) = 2]
+
+==============================================================================
+n = 5
+==============================================================================
+iso classes: 12
+
+PART 1 — VOLUME SPECTRUM  (vol = det(M)/n!, det(M) = 2^(n-1) d(T))
+  distinct det values (2): [16, 32]
+  distinct d(T) values: [1, 2]
+  det multiplicities: {16: 4, 32: 8}
+  tournament max det = 32;  ceiling (n+1)^((n-1)/2) = 36 [DRT ceiling]; attained: False
+  max-vol simplex {center + n cube vertices}: maxdet_pm1(5) = 48  -> tournament/maxdet ratio = 32/48 = 0.6667
+  true max-vol inscribed simplex (n+1 cube vertices): maxdet_pm1(6)/n! -> ratio = 32/160 = 0.2000
+  NOTE: at odd n the regular tournament simplex has edge sqrt(2n+2)=3.4641, NOT sqrt(2n) — Gram = (n+1)I - J (DRT), d2 = 2n+2.
+
+  SWITCHING (M -> D M D, D = diag(+-1)):
+  det(M) invariant under ALL 2^(n-1) switchings of ALL classes: VERIFIED
+  classes where some switching changes the distance spectrum: 12/12
+  example: class 0, switch-set mask 1: spectrum (1, 1, 1, 1, 2, 2, 2, 3, 3, 4) -> (1, 1, 2, 2, 2, 3, 3, 4, 4, 4)
+
+PART 2 — GRAM / SHAPE GEOMETRY  (Gram = I + S S^T; d2_ij = 4(1+disagree))
+  regular row-simplex: 0/12 classes
+  orthocentric row-simplex (n rows): 1/12
+  orthocentric cone simplex (0 + rows): 0/12   [derived: cone orthocentric <=> rows regular: CONSISTENT]
+  equifacetal row-simplex: 1/12
+  equifacetal but NOT regular: [7]
+  orthocentric rows but NOT regular: [9]
+  distinct shape spectra: 9 over 12 classes  (shape spectrum does NOT separate iso classes)
+  largest spectrum collision: 2 classes share one spectrum  (3 colliding spectra)
+  (spectrum, det) pairs: 9 distinct (still collides)
+
+  per-class table (Ham spectrum = d2/4 multiset):
+  cid scores             det d(T) reg orth equi  spectrum
+    0 (4, 3, 2, 1, 0)     16    1   .    .    .  (1, 1, 1, 1, 2, 2, 2, 3, 3, 4)
+    1 (4, 3, 1, 1, 1)     32    2   .    .    .  (1, 2, 2, 2, 2, 2, 2, 3, 3, 3)
+    2 (3, 3, 2, 2, 0)     32    2   .    .    .  (1, 2, 2, 2, 2, 3, 3, 3, 3, 3)
+    3 (2, 3, 2, 2, 1)     16    1   .    .    .  (1, 1, 2, 3, 3, 3, 3, 4, 4, 4)
+    4 (3, 2, 2, 2, 1)     32    2   .    .    .  (2, 2, 2, 3, 3, 3, 3, 3, 3, 4)
+    5 (3, 3, 1, 2, 1)     32    2   .    .    .  (2, 2, 2, 2, 2, 3, 3, 3, 3, 4)
+    6 (3, 3, 2, 1, 1)     16    1   .    .    .  (1, 1, 2, 2, 2, 3, 3, 4, 4, 4)
+    7 (2, 2, 2, 2, 2)     16    1   .    .    Y  (2, 2, 2, 2, 2, 4, 4, 4, 4, 4)
+    8 (4, 2, 2, 2, 0)     32    2   .    .    .  (2, 2, 2, 2, 2, 2, 2, 2, 2, 4)
+    9 (3, 2, 2, 2, 1)     32    2   .    Y    .  (2, 2, 2, 3, 3, 3, 3, 3, 3, 4)
+   10 (4, 1, 2, 2, 1)     32    2   .    .    .  (1, 2, 2, 2, 2, 3, 3, 3, 3, 3)
+   11 (3, 3, 3, 1, 0)     32    2   .    .    .  (1, 2, 2, 2, 2, 2, 2, 3, 3, 3)
+
+PART 3 — ODD TANGENT FIELD x -> Sx
+  odd n: rank(S) = n-1 always; ker S = span(w), adj(S) = w w^T (Pfaffian vector).
+  full sphere S^4 is EVEN-dim: hairy ball forces a zero; zeros are exactly ±w/|w|.
+  sum-zero sphere S^3 is ODD-dim: field x->Sx NONVANISHING there because
+  sum(w) = sqrt(det(I+2A)) is ODD (never 0) => w not in 1^perp. Verify below.
+  all w_i odd (never zero): True  [w_i = ±Pf(S minus i), Pf odd]
+  sum(w) values (odd, = sqrt(det(I+2A))): [1, 3, 5, 7, 9]
+  gcd(w) distribution: {1: 12}
+  SIGN-SCORE LAW  sign(w_i)·(-1)^(s_i) constant per class: {'constant': 4, 'mixed': 8}
+  MOD-4 LAW  w_i ≡ ±(-1)^(s_i) (mod 4) with one global sign: {'w_i ≡ ±(-1)^s_i mod 4 (global sign)': 12}
+  Pearson corr(|w_i|, s_i): +0.0000
+  Pearson corr(|w_i|, (s_i-mean)^2): +0.2384
+  flow balance (S w = 0): for every vertex i, sum of w over out-neighbors
+    equals sum of w over in-neighbors — w is the unique 'parity-balanced' weighting.
+  per-class w (sum(w)>0 normalization):
+    cid  0 scores (4, 3, 2, 1, 0) w=[1, -1, 1, -1, 1] sum=1 det(I+2A)=1
+    cid  1 scores (4, 3, 1, 1, 1) w=[3, -3, 1, 1, 1] sum=3 det(I+2A)=9
+    cid  2 scores (3, 3, 2, 2, 0) w=[-1, 3, -3, 1, 1] sum=1 det(I+2A)=1
+    cid  3 scores (2, 3, 2, 2, 1) w=[1, -1, 1, 1, -1] sum=1 det(I+2A)=1
+    cid  4 scores (3, 2, 2, 2, 1) w=[1, 3, -1, 3, 1] sum=7 det(I+2A)=49
+    cid  5 scores (3, 3, 1, 2, 1) w=[3, -1, 3, 1, -1] sum=5 det(I+2A)=25
+    cid  6 scores (3, 3, 2, 1, 1) w=[1, 1, -1, 1, 1] sum=3 det(I+2A)=9
+    cid  7 scores (2, 2, 2, 2, 2) w=[1, 1, 1, 1, 1] sum=5 det(I+2A)=25
+    cid  8 scores (4, 2, 2, 2, 0) w=[3, -1, -1, -1, 3] sum=3 det(I+2A)=9
+    cid  9 scores (3, 2, 2, 2, 1) w=[3, 1, 1, 1, 3] sum=9 det(I+2A)=81
+    cid 10 scores (4, 1, 2, 2, 1) w=[1, -1, 1, -3, 3] sum=1 det(I+2A)=1
+    cid 11 scores (3, 3, 3, 1, 0) w=[1, 1, 1, -3, 3] sum=3 det(I+2A)=9
+
+==============================================================================
+n = 6
+==============================================================================
+iso classes: 56
+
+PART 1 — VOLUME SPECTRUM  (vol = det(M)/n!, det(M) = 2^(n-1) d(T))
+  distinct det values (5): [32, 64, 96, 128, 160]
+  distinct d(T) values: [1, 2, 3, 4, 5]
+  det multiplicities: {32: 6, 64: 32, 96: 8, 128: 6, 160: 4}
+  tournament max det = 160;  ceiling n^(n/2) = 216 [skew-conference ceiling]; attained: False
+  max-vol simplex {center + n cube vertices}: maxdet_pm1(6) = 160  -> tournament/maxdet ratio = 160/160 = 1.0000
+  true max-vol inscribed simplex (n+1 cube vertices): maxdet_pm1(7)/n! -> ratio = 160/576 = 0.2778
+  regular-simplex ratio (b): det/n^(n/2): max class = 160/216 = 0.7407  (edge sqrt(2n)=3.4641 regular simplex fits iff skew-conference exists)
+
+  SWITCHING (M -> D M D, D = diag(+-1)):
+  det(M) invariant under ALL 2^(n-1) switchings of ALL classes: VERIFIED
+  classes where some switching changes the distance spectrum: 56/56
+  example: class 0, switch-set mask 1: spectrum (1, 1, 1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5) -> (1, 1, 1, 2, 2, 2, 2, 3, 3, 3, 4, 4, 5, 5, 5)
+
+PART 2 — GRAM / SHAPE GEOMETRY  (Gram = I + S S^T; d2_ij = 4(1+disagree))
+  regular row-simplex: 0/56 classes
+  orthocentric row-simplex (n rows): 0/56
+  orthocentric cone simplex (0 + rows): 0/56   [derived: cone orthocentric <=> rows regular: CONSISTENT]
+  equifacetal row-simplex: 3/56
+  equifacetal but NOT regular: [27, 36, 49]
+  orthocentric rows but NOT regular: none
+  distinct shape spectra: 26 over 56 classes  (shape spectrum does NOT separate iso classes)
+  largest spectrum collision: 5 classes share one spectrum  (19 colliding spectra)
+  (spectrum, det) pairs: 28 distinct (still collides)
+
+  spectrum histogram (top 12 by multiplicity):
+    x  5  (1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5)
+    x  5  (2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4)
+    x  4  (2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4)
+    x  4  (1, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5)
+    x  3  (2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4)
+    x  2  (1, 1, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4)
+    x  2  (1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 4, 4, 4, 4, 4)
+    x  2  (1, 1, 1, 2, 2, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5)
+    x  2  (1, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 5)
+    x  2  (1, 1, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4)
+    x  2  (2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4)
+    x  2  (1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 3, 3, 3, 4, 5)
+  special class 27: scores (3, 3, 2, 3, 2, 2) det 32 reg=False ortho=False equif=True spec (1, 1, 1, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5)
+  special class 36: scores (3, 3, 2, 3, 2, 2) det 128 reg=False ortho=False equif=True spec (3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4)
+  special class 49: scores (4, 4, 4, 1, 1, 1) det 160 reg=False ortho=False equif=True spec (2, 2, 2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3)
+
+PART 3 — ODD TANGENT FIELD x -> Sx
+  even n: det(S) = Pf(S)^2 odd => ker S = 0 for ALL classes:
+    verified S nonsingular on all 56 classes: True
+  projected field P(Sx) on sum-zero sphere S^4 (EVEN-dim) must vanish (hairy ball).
+  unique antipodal zero pair: x* ∝ S^(-1) 1  (in 1^perp automatically since 1^T S^-1 1 = 0).
+  harmonic direction u = adj(S)·1: sum(u)=0 verified; S u = det(S)·1 verified.
+  Pearson corr(u_i, s_i) over all (class,vertex): -0.4305
+  zero entries of u: 0 of 336
+  gcd(u) distribution: {1: 22, 3: 14, 5: 8, 7: 5, 9: 5, 49: 1, 27: 1}
+  parity patterns of u (per class): {(1, 1, 1, 1, 1, 1): 56}
+  classes where u_i is a well-defined affine function of score s_i: 5/56
+  index of zero x* (sign det of linearized field on tangent space): {1: 56}  [each antipodal zero same index; sum must be chi(S^4) = 2]
+
+==============================================================================
+n = 7
+==============================================================================
+iso classes: 456
+
+PART 1 — VOLUME SPECTRUM  (vol = det(M)/n!, det(M) = 2^(n-1) d(T))
+  distinct det values (7): [64, 128, 192, 256, 320, 384, 512]
+  distinct d(T) values: [1, 2, 3, 4, 5, 6, 8]
+  det multiplicities: {64: 10, 128: 120, 192: 80, 256: 144, 320: 32, 384: 64, 512: 6}
+  tournament max det = 512;  ceiling (n+1)^((n-1)/2) = 512 [DRT ceiling]; attained: True
+  max-vol simplex {center + n cube vertices}: maxdet_pm1(7) = 576  -> tournament/maxdet ratio = 512/576 = 0.8889
+  true max-vol inscribed simplex (n+1 cube vertices): maxdet_pm1(8)/n! -> ratio = 512/4096 = 0.1250
+  NOTE: at odd n the regular tournament simplex has edge sqrt(2n+2)=4.0000, NOT sqrt(2n) — Gram = (n+1)I - J (DRT), d2 = 2n+2.
+
+  SWITCHING (M -> D M D, D = diag(+-1)):
+  det(M) invariant under ALL 2^(n-1) switchings of ALL classes: VERIFIED
+  classes where some switching changes the distance spectrum: 456/456
+  example: class 0, switch-set mask 1: spectrum (1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6) -> (1, 1, 1, 1, 2, 2, 2, 2, 2, 3, 3, 3, 3, 4, 4, 4, 5, 5, 6, 6, 6)
+
+PART 2 — GRAM / SHAPE GEOMETRY  (Gram = I + S S^T; d2_ij = 4(1+disagree))
+  regular row-simplex: 1/456 classes
+  orthocentric row-simplex (n rows): 2/456
+  orthocentric cone simplex (0 + rows): 1/456   [derived: cone orthocentric <=> rows regular: CONSISTENT]
+  equifacetal row-simplex: 2/456
+  equifacetal but NOT regular: [85]
+  orthocentric rows but NOT regular: [433]
+  distinct shape spectra: 155 over 456 classes  (shape spectrum does NOT separate iso classes)
+  largest spectrum collision: 12 classes share one spectrum  (113 colliding spectra)
+  (spectrum, det) pairs: 179 distinct (still collides)
+
+  spectrum histogram (top 12 by multiplicity):
+    x 12  (1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5)
+    x 12  (2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5)
+    x 12  (2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5)
+    x 12  (2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5)
+    x 10  (2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 6)
+    x  9  (2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5)
+    x  9  (2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 5, 5, 5, 5)
+    x  8  (1, 1, 2, 2, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6)
+    x  8  (2, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 5, 5, 5, 5, 5, 6)
+    x  8  (1, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5)
+    x  8  (1, 2, 2, 2, 3, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 5, 5)
+    x  8  (2, 2, 3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 5, 5, 5, 5, 5, 5)
+  special class 85: scores (3, 3, 3, 3, 3, 3, 3) det 64 reg=False ortho=False equif=True spec (2, 2, 2, 2, 2, 2, 2, 4, 4, 4, 4, 4, 4, 4, 6, 6, 6, 6, 6, 6, 6)
+  special class 351: scores (3, 3, 3, 3, 3, 3, 3) det 512 reg=True ortho=True equif=True spec (4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+  special class 433: scores (4, 4, 4, 3, 2, 2, 2) det 512 reg=False ortho=True equif=False spec (3, 3, 3, 3, 3, 3, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4, 4)
+
+PART 3 — ODD TANGENT FIELD x -> Sx
+  odd n: rank(S) = n-1 always; ker S = span(w), adj(S) = w w^T (Pfaffian vector).
+  full sphere S^6 is EVEN-dim: hairy ball forces a zero; zeros are exactly ±w/|w|.
+  sum-zero sphere S^5 is ODD-dim: field x->Sx NONVANISHING there because
+  sum(w) = sqrt(det(I+2A)) is ODD (never 0) => w not in 1^perp. Verify below.
+  all w_i odd (never zero): True  [w_i = ±Pf(S minus i), Pf odd]
+  sum(w) values (odd, = sqrt(det(I+2A))): [1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31, 33, 35, 49]
+  gcd(w) distribution: {1: 434, 3: 16, 7: 6}
+  SIGN-SCORE LAW  sign(w_i)·(-1)^(s_i) constant per class: {'constant': 56, 'mixed': 400}
+  MOD-4 LAW  w_i ≡ ±(-1)^(s_i) (mod 4) with one global sign: {'w_i ≡ ±(-1)^s_i mod 4 (global sign)': 456}
+  Pearson corr(|w_i|, s_i): +0.0000
+  Pearson corr(|w_i|, (s_i-mean)^2): +0.0280
+  flow balance (S w = 0): for every vertex i, sum of w over out-neighbors
+    equals sum of w over in-neighbors — w is the unique 'parity-balanced' weighting.
+  largest |w_i| at n=7: class 18 scores (6, 4, 3, 3, 2, 2, 1) w=[1, 1, 3, -9, 9, -3, -1]
+  regular tournament class 85: w=[1, 1, 1, 1, 1, 1, 1]  (constant iff arc-transitive-ish)
+  regular tournament class 306: w=[1, 1, 1, 1, 1, 1, 1]  (constant iff arc-transitive-ish)
+  regular tournament class 351: w=[7, 7, 7, 7, 7, 7, 7]  (constant iff arc-transitive-ish)
+
+==============================================================================
+ADDENDUM — LAW VERIFICATION & SPECIAL CLASSES
+==============================================================================
+A. odd n=5: adj(S)_ij ≡ (-1)^(s_i+s_j) (mod 4), ALL entries incl diagonal, ALL classes: True
+A. odd n=7: adj(S)_ij ≡ (-1)^(s_i+s_j) (mod 4), ALL entries incl diagonal, ALL classes: True
+B. even n=4: u_i ≡ +(-1)^(s_i) mod 4 globally: 4; ≡ -(-1)^(s_i): 0; neither: 0
+   (adj is SKEW at even n; off-diag adj_ij mod 4 vs parity(s_i+s_j): {(1, 0): 13, (1, 1): 1, (3, 0): 3, (3, 1): 7})
+B. even n=6: u_i ≡ +(-1)^(s_i) mod 4 globally: 56; ≡ -(-1)^(s_i): 0; neither: 0
+   (adj is SKEW at even n; off-diag adj_ij mod 4 vs parity(s_i+s_j): {(1, 0): 350, (1, 1): 63, (3, 0): 82, (3, 1): 345})
+C. odd n=5: residue r_i = eps*w_i*(-1)^s_i mod 8 contingency:
+   vs c3(i) mod 2:        {(1, 0): 22, (1, 1): 22, (5, 0): 8, (5, 1): 8}
+   vs s_i mod 4:          {(1, 0): 4, (1, 1): 10, (1, 2): 20, (1, 3): 10, (5, 0): 4, (5, 1): 4, (5, 2): 4, (5, 3): 4}
+   vs C(s_i,2) mod 2:     {(1, 0): 14, (1, 1): 30, (5, 0): 8, (5, 1): 8}
+C. odd n=7: residue r_i = eps*w_i*(-1)^s_i mod 8 contingency:
+   vs c3(i) mod 2:        {(1, 0): 1100, (1, 1): 876, (5, 0): 552, (5, 1): 664}
+   vs s_i mod 4:          {(1, 0): 492, (1, 1): 360, (1, 2): 492, (1, 3): 632, (5, 0): 304, (5, 1): 248, (5, 2): 304, (5, 3): 360}
+   vs C(s_i,2) mod 2:     {(1, 0): 852, (1, 1): 1124, (5, 0): 552, (5, 1): 664}
+D. orthocentric-not-regular classes: exact t_i (d2_ij = t_i + t_j):
+   n=5 class 9: scores (3, 2, 2, 2, 1) det 32 t = ['8', '4', '4', '4', '8']
+   n=7 class 433: scores (4, 4, 4, 3, 2, 2, 2) det 512 t = ['8', '8', '8', '4', '8', '8', '8']
+E. switching class of QR_7 vs det=512 classes at n=7:
+   switching orbit of QR_7 hits 6 iso classes; det-512 classes: [138, 343, 351, 385, 428, 433]; sets EQUAL: True
+F. equifacetal-not-regular classes (Hamming distance matrices d2/4):
+   n=5 class 7 scores (2, 2, 2, 2, 2) det 16:
+      [0, 2, 4, 4, 2]
+      [2, 0, 2, 4, 4]
+      [4, 2, 0, 2, 4]
+      [4, 4, 2, 0, 2]
+      [2, 4, 4, 2, 0]
+   n=6 class 27 scores (3, 3, 2, 3, 2, 2) det 32:
+      [0, 4, 5, 4, 3, 1]
+      [4, 0, 1, 4, 5, 3]
+      [5, 1, 0, 3, 4, 4]
+      [4, 4, 3, 0, 1, 5]
+      [3, 5, 4, 1, 0, 4]
+      [1, 3, 4, 5, 4, 0]
+   n=6 class 36 scores (3, 3, 2, 3, 2, 2) det 128:
+      [0, 4, 3, 4, 3, 3]
+      [4, 0, 3, 4, 3, 3]
+      [3, 3, 0, 3, 4, 4]
+      [4, 4, 3, 0, 3, 3]
+      [3, 3, 4, 3, 0, 4]
+      [3, 3, 4, 3, 4, 0]
+   n=6 class 49 scores (4, 4, 4, 1, 1, 1) det 160:
+      [0, 2, 2, 3, 3, 3]
+      [2, 0, 2, 3, 3, 3]
+      [2, 2, 0, 3, 3, 3]
+      [3, 3, 3, 0, 2, 2]
+      [3, 3, 3, 2, 0, 2]
+      [3, 3, 3, 2, 2, 0]
+   n=7 class 85 scores (3, 3, 3, 3, 3, 3, 3) det 64:
+      [0, 2, 4, 6, 6, 4, 2]
+      [2, 0, 2, 4, 6, 6, 4]
+      [4, 2, 0, 2, 4, 6, 6]
+      [6, 4, 2, 0, 2, 4, 6]
+      [6, 6, 4, 2, 0, 2, 4]
+      [4, 6, 6, 4, 2, 0, 2]
+      [2, 4, 6, 6, 4, 2, 0]
+G. mod-4 laws on RANDOM tournaments at larger n (200 samples each):
+   n=8: u_i = (adj(S)·1)_i ≡ (-1)^(s_i) mod 4, sign forced +: violations = 0/200 samples
+   n=9: adj_ij ≡ (-1)^(s_i+s_j) mod 4: violations = 0/200 samples
+   n=10: u_i = (adj(S)·1)_i ≡ (-1)^(s_i) mod 4, sign forced +: violations = 0/200 samples
+   n=11: adj_ij ≡ (-1)^(s_i+s_j) mod 4: violations = 0/200 samples
+
+==============================================================================
+SUMMARY OF FINDINGS (exploratory, no canon claims)
+==============================================================================
+
+1. SWITCHING GEOMETRY (verified exhaustively n=4..7):
+   Switching at vertex set X maps M -> DMD whose i-th row is d_i * R(row_i),
+   where R reflects the cube coordinates in X. I.e. the simplex is reflected
+   (a cube isometry) and then each SWITCHED vertex is replaced by its antipode.
+   Reflection preserves everything; the per-vertex antipodal moves preserve
+   det (volume) but change pairwise distances: VOLUME is the switching-class
+   invariant, SHAPE is not.
+
+2. DISTANCE DICTIONARY (verified exhaustively n=4..7):
+   |row_i - row_j|^2 = 4 * (1 + #{k : exactly one of i,j beats k})
+                     = 4(n-1) - 4*(common out-neighbors + common in-neighbors)
+                     = 4 * Hamming(row_i, row_j).
+   Simplex geometry IS co-degree combinatorics, scaled by 4.
+
+3. REGULARITY: cone simplex orthocentric <=> row simplex regular <=>
+   SS^T has constant off-diagonal <=> (odd n) DRT switching class
+   [edge sqrt(2n+2)], (even n) skew-conference [edge sqrt(2n)].
+
+4. ODD MAPS: every tournament's x -> Sx is an odd tangent field.
+   Odd n: zeros on S^(n-1) are exactly ±w (Pfaffian vector) — the hairy-ball
+   singularity HAS a name. On the sum-zero sphere the field never vanishes
+   because sum(w) = sqrt(det(I+2A)) is odd.
+   Even n: ker S = 0, but the projected field on the sum-zero sphere S^(n-2)
+   (even-dim) vanishes exactly at ±adj(S)·1 — a canonical 'harmonic direction'
+   every even tournament carries.
+

@@ -20,8 +20,11 @@ computes:
   3. Floor: count d=1 classes; verify per-class equivalence with local
      transitivity (no 3-cycle in any in/out-neighborhood).
   4. Pearson(d, H) over all classes; d of the H-maximizer class.
-  5. Monte Carlo labeled average of d at n=9 (200k samples) vs I(9) = 2620
-     (involution number).
+  5. Monte Carlo labeled average at n=9 (200k samples): E[det(I+S)] should
+     approach I(9) = 2620 (involution number), i.e. E[d] = 2620/256.
+  6. Exact characteristic polynomials of S for all maximizers (spectrum of S
+     is switching+iso invariant since switching is D S D similarity) -> lower
+     bound on the number of switching classes among the maximizers.
 
 MISTAKE-028 discipline: primary determinant path is batched numpy float det
 with integer rounding, VERIFIED by exact fraction-free Bareiss (Python ints)
@@ -264,6 +267,9 @@ for dv in sorted(spec):
     print(f"    {dv:>5} | {spec[dv]:>9}")
 print(f"    total classes = {sum(spec.values())}")
 print(f"    parity check: all d odd? {all(dv % 2 == 1 for dv in spec)}")
+dmax_tmp = max(spec)
+print(f"    missing d values in [1, {dmax_tmp}]: "
+      f"{[v for v in range(1, dmax_tmp + 1) if v not in spec]}")
 
 # --- 2. ceiling --------------------------------------------------------------
 dmax = int(d_all.max())
@@ -303,6 +309,66 @@ for rank, idx in enumerate(maximizers, 1):
     print(f"        upper-triangle arc bits (gentourng line) = "
           f"{''.join(str(int(b)) for b in bits[idx])}")
 
+# --- 2b. exact char polys of S for maximizers (switching-spectral classes) ---
+from fractions import Fraction
+
+
+def charpoly_S_exact(idx: int) -> tuple[int, ...]:
+    """Exact integer coefficients of p(x) = det(xI - S), degree 9, monic.
+    Computed by exact Bareiss interpolation at 10 integer points."""
+    Sm = S_all[idx].astype(np.int64)
+    xs = list(range(-5, 5))  # 10 points
+    ys = []
+    for x in xs:
+        mat = (x * np.eye(N, dtype=np.int64) - Sm).tolist()
+        ys.append(bareiss_det([[int(v) for v in row] for row in mat]))
+    # Lagrange interpolation with Fractions
+    coeffs = [Fraction(0)] * (N + 1)
+    for i, (xi, yi) in enumerate(zip(xs, ys)):
+        # basis poly prod_{j!=i} (x - xj)/(xi - xj)
+        num = [Fraction(1)]
+        den = Fraction(1)
+        for j, xj in enumerate(xs):
+            if j == i:
+                continue
+            # multiply num by (x - xj)
+            num = [Fraction(0)] + num
+            for k in range(len(num) - 1):
+                num[k] -= xj * num[k + 1]
+            den *= (xi - xj)
+        w = Fraction(yi) / den
+        for k in range(len(num)):
+            coeffs[k] += w * num[k]
+    out = []
+    for c in coeffs:
+        assert c.denominator == 1, "charpoly coefficient not integral"
+        out.append(int(c))
+    assert out[N] == 1, "charpoly not monic"
+    # skew-symmetric: even-power coefficients (below leading... parity) vanish:
+    # p(x) = x^9 + c7 x^7 + c5 x^5 + c3 x^3 + c1 x  -> coeffs of x^0,x^2,... = 0
+    for k in range(0, N, 2):
+        assert out[k] == 0, "even-power charpoly coefficient nonzero for skew S"
+    return tuple(out)
+
+
+print()
+print(f"[2b] EXACT S-SPECTRA OF THE {len(maximizers)} MAXIMIZERS")
+print(f"     (charpoly of S is invariant under switching = DSD similarity,")
+print(f"      iso, and reversal; distinct charpolys lower-bound the number of")
+print(f"      switching classes among the maximizers)")
+poly_groups: dict[tuple[int, ...], list[int]] = {}
+for idx in maximizers:
+    p = charpoly_S_exact(int(idx))
+    # consistency: det(I+S) = -p(-1) for odd n=9
+    assert -sum(c * (-1) ** k for k, c in enumerate(p)) == det_max
+    poly_groups.setdefault(p, []).append(int(idx))
+print(f"     distinct S-charpolys among maximizers: {len(poly_groups)}")
+for p, members in sorted(poly_groups.items()):
+    terms = " + ".join(f"{p[k]}x^{k}" for k in range(N, -1, -1) if p[k])
+    print(f"     p(x) = {terms}")
+    print(f"        {len(members)} classes, first/last index: "
+          f"{members[0]}/{members[-1]}")
+
 # --- 3. floor ----------------------------------------------------------------
 d1 = np.flatnonzero(d_all == 1)
 lt = np.flatnonzero(loc_trans)
@@ -335,6 +401,10 @@ print(f"    H range: [{int(H_all.min())}, {hmax}]")
 print(f"    H-maximizer classes ({len(hmax_idx)}): "
       f"{[(int(i), int(d_all[i])) for i in hmax_idx]}  (class, d)")
 print(f"    d of H-maximizer class(es): {sorted(set(int(d_all[i]) for i in hmax_idx))}")
+for i in hmax_idx:
+    sc = tuple(sorted(int(x) for x in A[int(i)].sum(axis=1)))
+    print(f"      H-maximizer class {int(i)}: H={hmax}, d={int(d_all[i])}, "
+          f"det={int(dets[i])}, scores={sc}, regular={sc == tuple([4]*9)}")
 print(f"    H of d-maximizer class(es): {sorted(set(int(H_all[i]) for i in maximizers))}")
 hmin_idx = np.flatnonzero(H_all == int(H_all.min()))
 print(f"    H-minimizer: H = {int(H_all.min())} on {len(hmin_idx)} class(es), "
@@ -368,9 +438,13 @@ sem = float(d_samples.std(ddof=1) / np.sqrt(NS))
 inv = [1, 1]
 for k in range(2, 10):
     inv.append(inv[-1] + (k - 1) * inv[-2])
+print(f"    identity under test: E[det(I+S)] = I(n) over labeled tournaments,")
+print(f"    i.e. E[d] = I(9)/2^8 = {inv[9]}/256 = {inv[9]/256:.6f}")
 print(f"    I(9) (involution number) = {inv[9]}")
-print(f"    Monte Carlo mean d = {mean_d:.3f}  +- {sem:.3f} (SEM)")
-print(f"    z-score vs I(9)={inv[9]}: {(mean_d - inv[9]) / sem:+.2f}")
+print(f"    Monte Carlo mean d   = {mean_d:.4f}  +- {sem:.4f} (SEM)")
+print(f"    Monte Carlo mean det = {mean_d * POW:.2f}  +- {sem * POW:.2f} (SEM)")
+print(f"    z-score of mean det vs I(9)={inv[9]}: "
+      f"{(mean_d * POW - inv[9]) / (sem * POW):+.2f}")
 print(f"    sample d range: [{int(d_samples.min())}, {int(d_samples.max())}]")
 
 # --- labeled-weighted check of E[d] from the class census (exact, via Aut) ---
@@ -380,9 +454,10 @@ print()
 stamp("ALL DONE")
 print()
 print("Summary line: "
-      f"B_t(9)={det_max} (d={dmax}, {len(maximizers)} classes), "
+      f"B_t(9)={det_max} (d={dmax}, {len(maximizers)} classes, "
+      f"{len(poly_groups)} distinct S-spectra), "
       f"floor d=1 on {len(d1)} classes = loc-trans count {len(lt)} "
       f"(set-equal: {same_set}), "
       f"Pearson(d,H)={r:.4f}, "
-      f"MC mean d={mean_d:.1f} vs I(9)={inv[9]}, "
+      f"MC mean det={mean_d * POW:.1f}+-{sem * POW:.1f} vs I(9)={inv[9]}, "
       f"distinct d values={len(spec)}")
