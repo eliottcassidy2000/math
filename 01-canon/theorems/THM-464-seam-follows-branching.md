@@ -48,3 +48,16 @@ branching through the algebra needed to win, not through which quotient of the
 row-gaps you grade by. Sharp open note: identify the algebraic property of the
 v₂ class structure (the forced parity closure odd+odd→even = the ℤ→ℤ/2 quotient)
 that the v₃ classes lack with respect to the Schur/composition constraints.
+
+---
+
+## ADDENDUM (kind-pasteur-2026-06-11-S1): part D's sharp open note ANSWERED, slogan corrected
+
+THM-469 proves the algebraic property: the v₂ classes are SUM-FREE (parity
+closure = triviality of (Z/2)^×), the v_p classes for odd p contain Schur triples
+(d, d, 2d) at every scale, and the game detects this through 3-term APs (the
+mono-collapse theorem, hand proof). The branching control (b=3 game at n=3:
+(sign,v₂) SAT t=4..6 verified, (sign,v₃) feature-UNSAT) shows the seam follows
+the SCHUR ARITY of triangle composition, not the subgrid branching: part D's
+"seam follows the branching through the algebra" is superseded. Data above
+unchanged. See THM-469.

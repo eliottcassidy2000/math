@@ -1,0 +1,86 @@
+=== A. sum-freeness of valuation classes, range [1,4096] ===
+   bare v_2 level sets sum-free: YES (no violation)
+   bare v_3 level sets sum-free: NO  e.g. (1, 1, 2)
+   bare v_5 level sets sum-free: NO  e.g. (1, 1, 2)
+   v_3+leading-digit classes sum-free: YES (no violation)
+   v_5+leading-digit classes sum-free: YES (no violation)
+   (hand proof: L_v sum-free <=> u1+u2 = 0 mod p for ALL units <=> |units|=1 <=> p=2;
+    refined classes: u+u = 2u != u mod p whenever u != 0 — sum-free for every p)
+
+=== B. realizable triangle feature-triples, (sign,v_p) quotient, n=3 ===
+   p=2 t=3:   547 realizable triples,   0 mono classes (f,f,f)
+   p=2 t=4:  1957 realizable triples,   0 mono classes (f,f,f)
+   p=2 t=5:  9135 realizable triples,   0 mono classes (f,f,f)
+   p=3 t=3:   183 realizable triples,  13 mono classes (f,f,f)   e.g. (('+', 0), ('+', 0), ('+', 0))
+   p=3 t=4:  1302 realizable triples,  13 mono classes (f,f,f)   e.g. (('+', 0), ('+', 0), ('+', 0))
+   p=3 t=5:  3372 realizable triples,  13 mono classes (f,f,f)   e.g. (('+', 0), ('+', 0), ('+', 0))
+
+=== C. UNSAT core of the (sign,v3) instance at (3,4) ===
+   minimized core: 14 clauses (of 1467 total)
+   [tri ] ((0, 0, 0), (0, 0, 1), (0, 0, 2)) forbids together:
+          (('=',), ('=',), ('+', 0))
+   [tri ] ((0, 0, 0), (0, 1, 0), (0, 2, 0)) forbids together:
+          (('=',), ('+', 0), ('=',))
+   [tri ] ((0, 0, 0), (0, 1, 1), (0, 2, 2)) forbids together:
+          (('=',), ('+', 0), ('+', 0))
+   [tri ] ((0, 0, 0), (1, 0, 0), (2, 0, 0)) forbids together:
+          (('+', 0), ('=',), ('=',))
+   [tri ] ((0, 0, 0), (1, 0, 1), (2, 0, 2)) forbids together:
+          (('+', 0), ('=',), ('+', 0))
+   [tri ] ((0, 0, 0), (1, 1, 0), (2, 2, 0)) forbids together:
+          (('+', 0), ('+', 0), ('=',))
+   [tri ] ((0, 0, 0), (1, 1, 1), (2, 2, 2)) forbids together:
+          (('+', 0), ('+', 0), ('+', 0))
+   [tri ] ((0, 0, 2), (0, 1, 1), (0, 2, 0)) forbids together:
+          (('=',), ('+', 0), ('-', 0))
+   [tri ] ((0, 0, 2), (1, 0, 1), (2, 0, 0)) forbids together:
+          (('+', 0), ('=',), ('-', 0))
+   [tri ] ((0, 0, 2), (1, 1, 1), (2, 2, 0)) forbids together:
+          (('+', 0), ('+', 0), ('-', 0))
+   [tri ] ((0, 2, 0), (1, 1, 0), (2, 0, 0)) forbids together:
+          (('+', 0), ('-', 0), ('=',))
+   [tri ] ((0, 2, 0), (1, 1, 1), (2, 0, 2)) forbids together:
+          (('+', 0), ('-', 0), ('+', 0))
+   [tri ] ((0, 2, 2), (1, 1, 1), (2, 0, 0)) forbids together:
+          (('+', 0), ('-', 0), ('-', 0))
+   [hit ] subgrid root (0, 0, 0)..(1, 1, 1) -> one of 13 classes:
+          (('+', 0), ('+', 0), ('+', 0))
+          (('+', 0), ('+', 0), ('-', 0))
+          (('+', 0), ('+', 0), ('=',))
+          (('+', 0), ('-', 0), ('+', 0))
+          (('+', 0), ('-', 0), ('-', 0))
+          (('+', 0), ('-', 0), ('=',))
+          (('+', 0), ('=',), ('+', 0))
+          (('+', 0), ('=',), ('-', 0))
+          (('+', 0), ('=',), ('=',))
+          (('=',), ('+', 0), ('+', 0))
+          (('=',), ('+', 0), ('-', 0))
+          (('=',), ('+', 0), ('=',))
+          (('=',), ('=',), ('+', 0))
+
+=== D. HYP-2390: b=3 game at n=3 — does the v2/v3 asymmetry persist? ===
+   (Schur-arity prediction: YES — triangles are 2-sums regardless of b)
+   SAT F2  b=3 (3,4) (32 edges, 62 features, lazy=1, 0.0s)
+      independent re-verification: PASS
+   SAT F2  b=3 (3,5) (240 edges, 171 features, lazy=3, 0.0s)
+      independent re-verification: PASS
+   SAT F2  b=3 (3,6) (1910 edges, 171 features, lazy=2121, 66.2s)
+      independent re-verification: PASS
+   feature-UNSAT F3v b=3 (3,4) (62 features, lazy=5, 0.0s)
+   D summary: {('F2', 4): 'SAT', ('F2', 5): 'SAT', ('F2', 6): 'SAT', ('F3v', 4): 'feature-UNSAT'}
+
+=== E. HYP-2391: leading-digit rescue (binary game, n=3) ===
+   bare (sign,v3) controls (expected feature-UNSAT, re-run of THM-465 C):
+   [F3v] feature-UNSAT n=3 t=4 (features=62, lazy=0, 0.0s)
+   (sign,v3,leading-digit) — sum-free classes for p=3:
+   [F3LD] SAT n=3 t=4 (474 edges, features=171, lazy=2022, 6.4s)
+      independent re-verification: PASS
+   [F3LD] SAT n=3 t=5 (1625 edges, features=171, lazy=1116, 15.1s)
+      independent re-verification: PASS
+   (sign,v5) control at (3,6) (odd p, bare valuation — expected feature-UNSAT):
+   [F5v] feature-UNSAT n=3 t=6 (features=62, lazy=0, 0.0s)
+   E summary: {('F3v', 4): 'feature-UNSAT', ('F3LD', 4): 'SAT', ('F3LD', 5): 'SAT', ('F5v', 6): 'feature-UNSAT'}
+
+=== TOTAL 111.8s ===
+FINAL: D(branching)= {('F2', 4): 'SAT', ('F2', 5): 'SAT', ('F2', 6): 'SAT', ('F3v', 4): 'feature-UNSAT'}
+FINAL: E(rescue)  = {('F3v', 4): 'feature-UNSAT', ('F3LD', 4): 'SAT', ('F3LD', 5): 'SAT', ('F5v', 6): 'feature-UNSAT'}

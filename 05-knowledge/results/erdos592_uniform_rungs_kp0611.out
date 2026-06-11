@@ -1,0 +1,11 @@
+=== control: F2 conjoined t=4..7 (expected feature-UNSAT, THM-465 B) ===
+   [F2 conjoined (4, 5, 6, 7): 171 features, build 38.3s]
+   feature-UNSAT F2 conjoined (4, 5, 6, 7) (lazy=52, 0.3s)
+
+=== F2J: per-size t=4..7 ===
+   [F2J] SAT n=3 t=4 (474 edges, features=171, lazy=2022, 5.8s)
+      independent re-verification: PASS
+   [F2J] SAT n=3 t=5 (1740 edges, features=364, lazy=5931, 424.9s)
+      independent re-verification: PASS
+   [F2J] SAT n=3 t=6 (4008 edges, features=364, lazy=2775, 127.5s)
+      independent re-verification: PASS
