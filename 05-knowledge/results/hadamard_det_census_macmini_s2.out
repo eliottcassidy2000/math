@@ -1,0 +1,120 @@
+THE DETERMINANT LENS: tournament det(I+S) census  [mac-mini-2026-06-10-S2]
+involution numbers I(n), n=2..10: [2, 4, 10, 26, 76, 232, 764, 2620, 9496]
+
+========================================================================
+  n = 3
+========================================================================
+  iso classes: 2   (0.0s)
+  d-spectrum (per class): {1: 2}
+  d-spectrum (labeled):   {1: 8}
+  HYP-2383 involution average: E[det] = 32/8 = 4.000000 vs I(3) = 4  -> CONFIRMED
+  HYP-2384 floor: d=1 classes = 2, locally-transitive = 2, all-predicates-agree = True
+    labeled local orders = 8 vs (2n-2)!! = 8  OK
+  HYP-2385 ceiling (odd): max det = 4 vs bound (n+1)^((n-1)/2) = 4   attained=True
+    classes attaining max: 2; all switchings-of-DRT: True
+  HYP-2386 alignment: H_max = 3 (1 classes), d_max = 1 (2 classes); argmax sets equal: False; Pearson(d,H) per class = nan
+    d of H-maximizers: [1]; H of d-maximizers: [1, 3]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  HYP-2387 Hermite: E[det(xI+S)] coeffs = [1.0, 0.0, 3.0, 0.0]
+             matching poly K_3    = [1, 0, 3, 0]   -> CONFIRMED
+  [0.0s]
+
+========================================================================
+  n = 4
+========================================================================
+  iso classes: 4   (0.0s)
+  d-spectrum (per class): {1: 2, 2: 2}
+  d-spectrum (labeled):   {1: 48, 2: 16}
+  HYP-2383 involution average: E[det] = 640/64 = 10.000000 vs I(4) = 10  -> CONFIRMED
+  HYP-2384 floor: d=1 classes = 2, locally-transitive = 2, all-predicates-agree = True
+    labeled local orders = 48 vs (2n-2)!! = 48  OK
+  HYP-2385 ceiling (even): max det = 16 vs bound n^(n/2) = 16   attained=True
+    classes attaining max: 2; all skew-conference: True
+  HYP-2386 alignment: H_max = 5 (1 classes), d_max = 2 (2 classes); argmax sets equal: False; Pearson(d,H) per class = 0.0000
+    d of H-maximizers: [1]; H of d-maximizers: [3]
+    |Pf(S)| of H-maximizers: [1] (HYP-2312 says 1); |Pf(S)| of d-maximizers: [3]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  HYP-2387 Hermite: E[det(xI+S)] coeffs = [1.0, 0.0, 6.0, 0.0, 3.0]
+             matching poly K_4    = [1, 0, 6, 0, 3]   -> CONFIRMED
+  [0.1s]
+
+========================================================================
+  n = 5
+========================================================================
+  iso classes: 12   (0.0s)
+  d-spectrum (per class): {1: 4, 2: 8}
+  d-spectrum (labeled):   {1: 384, 2: 640}
+  HYP-2383 involution average: E[det] = 26624/1024 = 26.000000 vs I(5) = 26  -> CONFIRMED
+  HYP-2384 floor: d=1 classes = 4, locally-transitive = 4, all-predicates-agree = True
+    labeled local orders = 384 vs (2n-2)!! = 384  OK
+  HYP-2385 ceiling (odd): max det = 32 vs bound (n+1)^((n-1)/2) = 36   attained=False
+  HYP-2386 alignment: H_max = 15 (2 classes), d_max = 2 (8 classes); argmax sets equal: False; Pearson(d,H) per class = -0.1971
+    d of H-maximizers: [1, 2]; H of d-maximizers: [3, 5, 9, 13, 15]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  HYP-2387 Hermite: E[det(xI+S)] coeffs = [1.0, 0.0, 10.0, 0.0, 15.0, 0.0]
+             matching poly K_5    = [1, 0, 10, 0, 15, 0]   -> CONFIRMED
+  [1.0s]
+
+========================================================================
+  n = 6
+========================================================================
+  iso classes: 56   (0.0s)
+  d-spectrum (per class): {1: 6, 2: 32, 3: 8, 4: 6, 5: 4}
+  d-spectrum (labeled):   {1: 3840, 2: 19200, 3: 4608, 4: 3840, 5: 1280}
+  HYP-2383 involution average: E[det] = 2490368/32768 = 76.000000 vs I(6) = 76  -> CONFIRMED
+  HYP-2384 floor: d=1 classes = 6, locally-transitive = 6, all-predicates-agree = True
+    labeled local orders = 3840 vs (2n-2)!! = 3840  OK
+  HYP-2385 ceiling (even): max det = 160 vs bound n^(n/2) = 216   attained=False
+    (no skew conference at n=6: max-d classes = 4, d_max = 5, scores of maxers: [(0, 2, 3, 3, 3, 4), (1, 1, 1, 4, 4, 4), (1, 2, 2, 2, 3, 5), (1, 2, 2, 3, 3, 4)])
+  HYP-2386 alignment: H_max = 45 (2 classes), d_max = 5 (4 classes); argmax sets equal: False; Pearson(d,H) per class = -0.0626
+    d of H-maximizers: [1, 4]; H of d-maximizers: [9, 15, 29]
+    |Pf(S)| of H-maximizers: [1, 7] (HYP-2312 says 1); |Pf(S)| of d-maximizers: [9]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  HYP-2387 Hermite: E[det(xI+S)] coeffs = [1.0, 0.0, 15.0, 0.0, 45.0, 0.0, 15.0]
+             matching poly K_6    = [1, 0, 15, 0, 45, 0, 15]   -> CONFIRMED
+  [59.9s]
+
+========================================================================
+  n = 7
+========================================================================
+  iso classes: 456   (0.0s)
+  d-spectrum (per class): {1: 10, 2: 120, 3: 80, 4: 144, 5: 32, 6: 64, 8: 6}
+  d-spectrum (labeled):   {1: 46080, 2: 537600, 3: 387072, 4: 680960, 5: 107520, 6: 322560, 8: 15360}
+  HYP-2383 involution average: E[det] = 486539264/2097152 = 232.000000 vs I(7) = 232  -> CONFIRMED
+  HYP-2384 floor: d=1 classes = 10, locally-transitive = 10, all-predicates-agree = True
+    labeled local orders = 46080 vs (2n-2)!! = 46080  OK
+  HYP-2385 ceiling (odd): max det = 512 vs bound (n+1)^((n-1)/2) = 512   attained=True
+    classes attaining max: 6; all switchings-of-DRT: True
+  HYP-2386 alignment: H_max = 189 (1 classes), d_max = 8 (6 classes); argmax sets equal: False; Pearson(d,H) per class = 0.0028
+    d of H-maximizers: [8]; H of d-maximizers: [45, 69, 87, 135, 189]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  [1.4s]
+
+========================================================================
+  QR_7 detail (THM-213 cross-check + Pfaffian minor census)
+========================================================================
+  det(I+S) = 512 = 8^3 = 512; d = 8
+  |K|=0: Pf^2 distribution {1: 1}
+  |K|=2: Pf^2 distribution {1: 21}
+  |K|=4: Pf^2 distribution {1: 21, 9: 14}
+  |K|=6: Pf^2 distribution {49: 7}
+  sum of Pf^2 over even subsets = 512  (should equal det(I+S) = 512)
+  |Pf(S minus vertex 0)| = 7  (THM-213 predicts 7)
+
+========================================================================
+  n = 8
+========================================================================
+  iso classes: 6880   (0.0s)
+  d-spectrum (per class): {1: 16, 2: 400, 3: 544, 4: 1572, 5: 600, 6: 1664, 7: 320, 8: 872, 9: 224, 10: 256, 12: 256, 13: 80, 17: 16, 18: 32, 20: 24, 32: 4}
+  HYP-2384 floor: d=1 classes = 16, locally-transitive = 16, all-predicates-agree = True
+  HYP-2385 ceiling (even): max det = 4096 vs bound n^(n/2) = 4096   attained=True
+    classes attaining max: 4; all skew-conference: True
+  HYP-2386 alignment: H_max = 661 (6 classes), d_max = 32 (4 classes); argmax sets equal: False; Pearson(d,H) per class = -0.0002
+    d of H-maximizers: [2, 6, 8, 9]; H of d-maximizers: [189, 333]
+    |Pf(S)| of H-maximizers: [1, 9, 17] (HYP-2312 says 1); |Pf(S)| of d-maximizers: [49]
+  complement-invariance d(T)=d(T^op): violations in first 200 classes: 0
+  [8.2s]
+
+  n=8 Monte Carlo E[det(I+S)] over 200000 samples: 763.400 vs I(8) = 764 (proof says exact)
+
+DONE.

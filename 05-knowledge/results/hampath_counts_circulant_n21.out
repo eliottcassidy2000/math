@@ -1,0 +1,22 @@
+== consecutive rotational tournaments R_n (arc i->i+r, 1<=r<=(n-1)/2) ==
+R_3  : hampaths =                    3   hamcycles =                    1
+R_5  : hampaths =                   15   hamcycles =                    2
+R_7  : hampaths =                  175   hamcycles =                   17
+R_9  : hampaths =                 3267   hamcycles =                  222
+R_11 : hampaths =                93027   hamcycles =                 5109
+R_13 : hampaths =              3711175   hamcycles =               166562
+R_15 : hampaths =            198464295   hamcycles =              7604433
+R_17 : hampaths =          13689269499   hamcycles =            455248142
+R_19 : hampaths =        1184212824763   hamcycles =          34841356485
+R_21 : hampaths =      125547534942879   hamcycles =        3308451983362
+== Paley (quadratic residue) tournaments QR_p, p = 3 mod 4 ==
+QR_3 : hampaths =                    3   hamcycles =                    1
+QR_7 : hampaths =                  189   hamcycles =                   24
+QR_11: hampaths =                95095   hamcycles =                 5505
+QR_19: hampaths =        1172695746915   hamcycles =          34358763933
+== other 9-vertex circulants (connection sets) ==
+Z9{1,2,3,4}: hampaths =         3267 hamcycles =          222
+Z9{1,2,3,5}: hampaths =         3357 hamcycles =          249
+BRUTE n=5 : max #hampaths = 15 ; achieved by 64 labeled tournaments ; example mask=40
+BRUTE n=6 : max #hampaths = 45 ; achieved by 480 labeled tournaments ; example mask=408
+BRUTE n=7 : max #hampaths = 189 ; achieved by 240 labeled tournaments ; example mask=85298
