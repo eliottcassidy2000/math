@@ -1,0 +1,39 @@
+==============================================================================
+Q2: explicit constructions
+==============================================================================
+strong4 (+) C3   [n=7]       n=7 bylen={3: 3} alpha=[1, 3, 2] H=15 I(2)=15[OK] I(-2)=3 I(-1)=0 I(1)=6 H-4a1=3
+  expected: ([1, 3, 2], 3)  ->  MATCH
+C3 (+) strong4   [n=7]       n=7 bylen={3: 3} alpha=[1, 3, 2] H=15 I(2)=15[OK] I(-2)=3 I(-1)=0 I(1)=6 H-4a1=3
+  expected: ([1, 3, 2], 3)  ->  MATCH
+C3 (+) C3 (+) pt [n=7]       n=7 bylen={3: 2} alpha=[1, 2, 1] H=9 I(2)=9[OK] I(-2)=1 I(-1)=0 I(1)=4 H-4a1=1
+  expected: ([1, 2, 1], 1)  ->  MATCH
+C3 (+) C3        [n=6]       n=6 bylen={3: 2} alpha=[1, 2, 1] H=9 I(2)=9[OK] I(-2)=1 I(-1)=0 I(1)=4 H-4a1=1
+  expected: ([1, 2, 1], 1)  ->  MATCH
+C3 x3 blocks     [n=9]       n=9 bylen={3: 3} alpha=[1, 3, 3, 1] H=27 I(2)=27[OK] I(-2)=-1 I(-1)=0 I(1)=8 H-4a1=15
+  expected: ([1, 3, 3, 1], -1)  ->  MATCH
+
+CAND-H explicit n=9 counterexample: for C3(+)C3(+)C3,
+  I(-2) = -1 but H - 4*alpha_1 = 27 - 12 = 15.  (alpha_3 = 1 > 0)
+
+==============================================================================
+Q1: n=7 larger sample (5000) -- positive I(-2) and I(-1)=1 anatomy
+==============================================================================
+n=7 sample 5000: sign I(-2): neg=4977 zero=0 pos=23
+positive-I(-2) cases by (alpha, I(-2)):
+   alpha=[1] I(-2)=1 : 9 samples
+   alpha=[1, 2, 1] I(-2)=1 : 4 samples
+   alpha=[1, 3, 2] I(-2)=3 : 10 samples
+I(-1)=+1 cases by alpha: {(1,): 9}
+max I(-1) seen: (1, (1,), 98307)
+max I(-2) seen: (3, (1, 3, 2), 504159)
+
+==============================================================================
+Q3: n=8 random sample (400)
+==============================================================================
+n=8 sample 400: I(2)=H: 400/400 | exact mirror I(-2)=H-4a1: ALL OK | disc>=0: ALL OK
+  sign I(-2): neg=400 zero=0 pos=0
+  positive-I(-2) cases: {}
+  max I(-1): (-5, (1, 9, 3)) | max I(-2): (-5, (1, 9, 3))
+  I(-1) > 1 occurrences: 0
+
+done.

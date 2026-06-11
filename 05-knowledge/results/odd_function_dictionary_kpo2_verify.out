@@ -1,0 +1,163 @@
+========================================================================
+A1: dictionary bijection, counts, T^op, relabeling, even n
+========================================================================
+PASS A1 count n=3 | #circ-tourn=2, #odd-sigma=2, expect=2
+PASS A1 roundtrip n=3
+PASS A1 A+A^T=J-I n=3
+PASS A1 T^op=-sigma n=3
+PASS A1 count n=5 | #circ-tourn=4, #odd-sigma=4, expect=4
+PASS A1 roundtrip n=5
+PASS A1 A+A^T=J-I n=5
+PASS A1 T^op=-sigma n=5
+PASS A1 count n=7 | #circ-tourn=8, #odd-sigma=8, expect=8
+PASS A1 roundtrip n=7
+PASS A1 A+A^T=J-I n=7
+PASS A1 T^op=-sigma n=7
+PASS A1 count n=9 | #circ-tourn=16, #odd-sigma=16, expect=16
+PASS A1 roundtrip n=9
+PASS A1 A+A^T=J-I n=9
+PASS A1 T^op=-sigma n=9
+PASS A1 count n=11 | #circ-tourn=32, #odd-sigma=32, expect=32
+PASS A1 roundtrip n=11
+PASS A1 A+A^T=J-I n=11
+PASS A1 T^op=-sigma n=11
+PASS A1 count n=4 | #circ-tourn=0, #odd-sigma=0, expect=0
+PASS A1 count n=6 | #circ-tourn=0, #odd-sigma=0, expect=0
+PASS A1 count n=8 | #circ-tourn=0, #odd-sigma=0, expect=0
+PASS A1 relabel sigma'(d)=sigma(u^-1 d) n=7 (all units x all tournaments)
+PASS A1 relabel sigma'(d)=sigma(u^-1 d) n=9 (all units x all tournaments)
+========================================================================
+A2: completely multiplicative +-1 functions on F_p^*
+========================================================================
+PASS A2 exhaustive p=3: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=5: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=7: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=11: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=13: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=17: CM survivors == {triv,chi} | #survivors=2
+PASS A2 exhaustive p=19: CM survivors == {triv,chi} | #survivors=2
+PASS A2 p= 3 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p= 5 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p= 7 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=11 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=13 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=17 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=19 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=23 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=29 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=31 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=37 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=41 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=43 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=47 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+PASS A2 p=53 (1 mod 4) | chi odd=False, QR tourn=False, chi(-1)=1
+PASS A2 p=59 (3 mod 4) | chi odd=True, QR tourn=True, chi(-1)=-1
+========================================================================
+A3/A4/A5: cluster integrals A_1..A_4 (distinct-tuple def, translation-reduced)
+========================================================================
+PASS conv-trace == direct matrix-power trace (all fams n<=13, L=2,3,4)
+          family |  A_1    A_3 |    A_2 =n(n-1)? -tr(M^2)? |       A_4   tr(M^4)   E/n^3
+         paley_7 |    0      0 |     42     True      True |       336       294   1.837
+PASS A3 A_1=A_3=0 [paley_7]
+PASS A4 A_2=n(n-1)=-trM^2 [paley_7]
+PASS A5 |A_4+trM^4| <= 3 n^3 [paley_7] | E/n^3=1.837
+        paley_11 |    0      0 |    110     True      True |      1760      1210   2.231
+PASS A3 A_1=A_3=0 [paley_11]
+PASS A4 A_2=n(n-1)=-trM^2 [paley_11]
+PASS A5 |A_4+trM^4| <= 3 n^3 [paley_11] | E/n^3=2.231
+        paley_19 |    0      0 |    342     True      True |     10944      6498   2.543
+PASS A3 A_1=A_3=0 [paley_19]
+PASS A4 A_2=n(n-1)=-trM^2 [paley_19]
+PASS A5 |A_4+trM^4| <= 3 n^3 [paley_19] | E/n^3=2.543
+        paley_23 |    0      0 |    506     True      True |     20240     11638   2.620
+PASS A3 A_1=A_3=0 [paley_23]
+PASS A4 A_2=n(n-1)=-trM^2 [paley_23]
+PASS A5 |A_4+trM^4| <= 3 n^3 [paley_23] | E/n^3=2.620
+           rot_9 |    0      0 |     72     True      True |      -576      2088   2.074
+PASS A3 A_1=A_3=0 [rot_9]
+PASS A4 A_2=n(n-1)=-trM^2 [rot_9]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rot_9] | E/n^3=2.074
+          rot_13 |    0      0 |    156     True      True |     -4160      9308   2.343
+PASS A3 A_1=A_3=0 [rot_13]
+PASS A4 A_2=n(n-1)=-trM^2 [rot_13]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rot_13] | E/n^3=2.343
+          rot_15 |    0      0 |    210     True      True |     -8400     16590   2.427
+PASS A3 A_1=A_3=0 [rot_15]
+PASS A4 A_2=n(n-1)=-trM^2 [rot_15]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rot_15] | E/n^3=2.427
+          rot_21 |    0      0 |    420     True      True |    -40320     64260   2.585
+PASS A3 A_1=A_3=0 [rot_21]
+PASS A4 A_2=n(n-1)=-trM^2 [rot_21]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rot_21] | E/n^3=2.585
+          rot_31 |    0      0 |    930     True      True |   -225680    306590   2.716
+PASS A3 A_1=A_3=0 [rot_31]
+PASS A4 A_2=n(n-1)=-trM^2 [rot_31]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rot_31] | E/n^3=2.716
+block9={1,2,5,6} |    0      0 |     72     True      True |      -576      2088   2.074
+PASS A3 A_1=A_3=0 [block9={1,2,5,6}]
+PASS A4 A_2=n(n-1)=-trM^2 [block9={1,2,5,6}]
+PASS A5 |A_4+trM^4| <= 3 n^3 [block9={1,2,5,6}] | E/n^3=2.074
+    rand_15_s101 |    0      0 |    210     True      True |      1200      6990   2.427
+PASS A3 A_1=A_3=0 [rand_15_s101]
+PASS A4 A_2=n(n-1)=-trM^2 [rand_15_s101]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rand_15_s101] | E/n^3=2.427
+    rand_21_s202 |    0      0 |    420     True      True |     -1344     25284   2.585
+PASS A3 A_1=A_3=0 [rand_21_s202]
+PASS A4 A_2=n(n-1)=-trM^2 [rand_21_s202]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rand_21_s202] | E/n^3=2.585
+    rand_27_s303 |    0      0 |    702     True      True |     -9504     62154   2.675
+PASS A3 A_1=A_3=0 [rand_27_s303]
+PASS A4 A_2=n(n-1)=-trM^2 [rand_27_s303]
+PASS A5 |A_4+trM^4| <= 3 n^3 [rand_27_s303] | E/n^3=2.675
+PASS A6 exact A_4(rot_31) == -225680 (claimed) | A_4(rot_31)=-225680
+PASS A5 Paley tr(M^4)=p^2(p-1) p=7 | tr=294
+PASS A5 Paley tr(M^4)=p^2(p-1) p=11 | tr=1210
+PASS A5 Paley tr(M^4)=p^2(p-1) p=19 | tr=6498
+PASS A5 Paley tr(M^4)=p^2(p-1) p=23 | tr=11638
+PASS A5 Paley tr(M^4)=p^2(p-1) p=31 | tr=28830
+PASS A5 Paley tr(M^4)=p^2(p-1) p=43 | tr=77658
+PASS A6 Paley A_4>0, A_4/2p^3 in (0.5,1.5) p=19 | A_4=10944, A_4/2p^3=0.798
+PASS A6 Paley A_4>0, A_4/2p^3 in (0.5,1.5) p=23 | A_4=20240, A_4/2p^3=0.832
+========================================================================
+A6: rotation-family generators = tanh Taylor coefficients (exact + numeric)
+========================================================================
+PASS A6 tanh coeffs (series division) = 1,-1/3,2/15,-17/315,62/2835,-1382/155925
+  k=1: zeta-formula=1 vs [x^1]tanh=1
+  k=2: zeta-formula=-1/3 vs [x^3]tanh=-1/3
+  k=3: zeta-formula=2/15 vs [x^5]tanh=2/15
+  k=4: zeta-formula=-17/315 vs [x^7]tanh=-17/315
+  k=5: zeta-formula=62/2835 vs [x^9]tanh=62/2835
+  k=6: zeta-formula=-1382/155925 vs [x^11]tanh=-1382/155925
+PASS A6 zeta/Bernoulli formula == tanh coefficients, k=1..6 (exact Fractions)
+  n=101: -tr(M^4)/n^4 = -0.333204   -tr(M^6)/n^6 = +0.133268
+  n=201: -tr(M^4)/n^4 = -0.333300   -tr(M^6)/n^6 = +0.133317
+  n=401: -tr(M^4)/n^4 = -0.333325   -tr(M^6)/n^6 = +0.133329
+  Richardson(1/n): a_4 ~ -0.333350 (target -1/3 = -0.333333); a_6 ~ +0.133342 (target 2/15 = +0.133333)
+PASS A6 numeric a_4 -> -1/3 (Richardson within 0.002) | -0.333350
+PASS A6 numeric a_6 -> +2/15 (Richardson within 0.002) | +0.133342
+========================================================================
+A10: F(x,y)=(x+y)/(1+xy) is an odd formal group (exact Fraction series)
+========================================================================
+PASS A10 Cayley F: only odd total degrees
+PASS A10 Cayley F: F(-x,-y) = -F(x,y)
+PASS A10 Cayley F: [-1](x) = -x exactly (deg<=13, generic solver) | i = ['-1', '0', '0', '0', '0']
+PASS A10 Cayley F: integer coefficients
+PASS A10 arctanh(F(x,y)) = arctanh x + arctanh y (deg<=13 exact)
+PASS A10 arctanh has only odd powers (definitionally)
+PASS A10 tanh(arctanh(x)) = x (deg<=13 exact)
+PASS A10 mult FGL x+y+xy fails all three | [-1] = ['-1', '1', '-1', '1'] (expect -1,1,-1,1)
+PASS A10 mult FGL [-1] = -x+x^2-x^3+... 
+PASS A10 tangent FGL (x+y)/(1-xy) passes all three (log=arctan analogue)
+PASS A10 random odd log #0 passes all three
+PASS A10 random odd log #1 passes all three
+PASS A10 random odd log #2 passes all three
+PASS A10 random non-odd log #0 fails all three
+PASS A10 random non-odd log #1 fails all three
+PASS A10 random non-odd log #2 fails all three
+========================================================================
+A11: unit-relabel set identities (H equality checked in census verify script)
+========================================================================
+PASS A11 5*rot_9 = {1,2,5,6} (a tournament set) | [1, 2, 5, 6]
+PASS A11 7*rot_13 = {1,2,3,7,8,9} (a tournament set) | [1, 2, 3, 7, 8, 9]
+========================================================================
+TOTAL 119 checks, 0 failures

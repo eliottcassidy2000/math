@@ -1,0 +1,49 @@
+==============================================================================
+PART A: n=7 FULL labeled census (2097152 tournaments), vectorized alpha census
+==============================================================================
+  [t=0s] c3 census done
+  [t=3s] c5 census done
+  [t=7s] c7 census done
+  [t=7s] alpha2 census done (70 disjoint triple pairs; expect 70)
+  PASS  exactly 70 disjoint (3,3) subset pairs at n=7
+  PASS  Sum c3 == C(7,3)*2^19 == 18350080
+  PASS  Sum c5 == C(7,5)*24*2^16 == 33030144
+  PASS  Sum c7 == 720*2^14 == 11796480
+  PASS  Sum alpha2 == 70*4*2^15 == 70*2^17 == 9175040
+  PASS  GLOBAL: Sum(1+2*a1+4*a2) == 7!*2^15 == 165150720 (known Sum H), got 165150720
+  PASS  FULL-census reversal invariance at n=7: alpha1 and alpha2 are palindromes under T -> T^op
+  PASS  #(alpha-vector == 0) == 7! == 5040 (transitive)
+  v2(H-1) distribution n=7 (full census): v2=1: 939392, v2=2: 539520, v2=3: 302400, v2=4: 141120, v2=5: 82320, v2=6: 55440, v2=7: 31920, inf: 5040
+  P(alpha1 odd) = 939392/2097152 = 0.447937
+  PASS  #(v2(H-1)==1) == #(alpha1 odd)
+  #((c5+c7) odd) = 989568/2097152 = 0.471863
+  #(c5 odd) = 1003520/2097152;  #(c7 odd) = 944768/2097152
+  PASS  Kendall: c3 == C(7,3) - sum C(s_i,2) on all 2^21
+  score classes at n=7: 59 (expect 59 = A000571(7))
+  non-constant parity classes: alpha1: 28/59, c5: 24/59, c7: 20/59, c3: 0/59
+  PASS  59 distinct sorted score sequences at n=7
+  PASS  c3 parity constant on every score class
+  [t=8s] PART A done
+==============================================================================
+PART B: n=7 identity spot-verification: H by inclusion-exclusion on 20,002 codes
+==============================================================================
+  PASS  H == 1+2*alpha1+4*alpha2 on all 19896 sampled n=7 codes (incl. both transitive extremes; failures=0)
+  PASS  sampled H odd, min == 1 (transitive included)
+  PASS  8 random sampled codes: IE walk-count H == pure 7!-permutation brute force
+  [t=9s] PART B done
+==============================================================================
+PART C: n=8, 20,000 random tournaments (REDUCED from worker's 200,000; seed 271828)
+==============================================================================
+  PASS  280 disjoint (3,3) subset pairs at n=8 (got 280); 56 (3,5) pairs by complement
+  [t=9s] n=8 cycle censuses done; computing IE H for 20,000 codes...
+  PASS  H == 1+2*alpha1+4*alpha2 on all 20000 sampled n=8 tournaments (failures=0)
+  PASS  all sampled n=8 H odd (Redei)
+  (3,5)-pair channel ACTIVE (alpha2_35>0) in 17444/20000 = 0.8722 (worker: 174495/200000 = 0.8725)
+  (c5+c7) odd in 9905/20000 = 0.4953 (worker: 98802/200000 = 0.4940)
+  PASS  3 random n=8 codes: IE H == pure 8!-permutation brute force
+  PASS  alpha1(T) == alpha1(T^op) on 200 random n=8 pairs
+  n=8 sample: 149 score classes seen, alpha1-parity non-constant in >= 111 (LOWER BOUND from 20k sample; worker: 114/166 from 200k)
+  [t=12s] PART C done
+==============================================================================
+SUMMARY (n7n8): ALL CHECKS PASSED
+==============================================================================

@@ -1,0 +1,19 @@
+symmetric-function verification of GS Thm 1.39 / omega-invariance (fresh code)
+n=3: done (8 tournaments x 2 Des conventions)
+n=4: done (64 tournaments x 2 Des conventions)
+n=5: done (5 random)
+
+Des convention match counts (which convention satisfies Thm 1.39 expansion):
+  A:in-D: 77
+  B:not-in-D: 77
+
+check tallies:
+  cor140: 154
+  negspec==I(-2): 154
+  omega_invariant: 154
+  ps1==H: 154
+  thm139_allodd: 154
+  zeta==H: 154
+
+TOTAL FAILURES: 0
+done

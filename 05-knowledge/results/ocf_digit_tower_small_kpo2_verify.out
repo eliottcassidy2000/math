@@ -1,0 +1,82 @@
+==============================================================================
+PART 0: edge cases n = 1, 2, 3 (pure Python, definitions only)
+==============================================================================
+  PASS  n=1: H == 1+2*a1+4*a2 on all 1 tournaments (a2==0 trivially)
+  PASS  n=2: H == 1+2*a1+4*a2 on all 2 tournaments (a2==0 trivially)
+  PASS  n=3: H == 1+2*a1+4*a2 on all 8 tournaments (a2==0 trivially)
+==============================================================================
+PART n=4: FULL labeled census, 2^6 tournaments
+==============================================================================
+  PASS  H == 1 + 2*alpha1 + 4*alpha2 EXACTLY on all 64 tournaments (failures=0)
+  PASS  alpha2 == 0 everywhere (n<=5, so H == 1+2*alpha1 exactly)
+  PASS  H always odd and >= 1 (Redei; H=0 impossible)
+  PASS  Sum H == n!*2^(m-n+1) == 192
+  PASS  #(H==1) == n! == 24 (transitive)
+  PASS  Sum c3 == C(n,3)*2^(m-2) == 64
+  PASS  c3 == C(n,3) - sum C(s_i,2) (Kendall) everywhere
+  PASS  FULL-census reversal invariance: alpha1, alpha2, H are palindromes under T -> T^op
+  v2(H-1) distribution n=4: v2=1: 16, v2=2: 24, inf: 24
+  P(alpha1 odd) = 16/64 = 0.250000
+  PASS  v2(H-1)=inf exactly on the n! transitive tournaments
+  PASS  #(v2(H-1)==1) == #(alpha1 odd)  [digit-lemma corollary]
+  #(c5 odd) = 0/64
+  score classes: 4; non-constant alpha1-parity classes: 0; c5-parity: 0; c3-parity: 0
+  PASS  c3 parity constant on every score class (it is score-determined)
+  PASS  alpha1 parity and H mod 4 agree class-by-class (digit lemma)
+  PASS  n=4: alpha1 parity (hence H) IS score-determined
+  PASS  12 random codes: numpy census == pure-Python permutation brute force (H, alpha1, alpha2)
+==============================================================================
+PART n=5: FULL labeled census, 2^10 tournaments
+==============================================================================
+  PASS  H == 1 + 2*alpha1 + 4*alpha2 EXACTLY on all 1024 tournaments (failures=0)
+  PASS  alpha2 == 0 everywhere (n<=5, so H == 1+2*alpha1 exactly)
+  PASS  H always odd and >= 1 (Redei; H=0 impossible)
+  PASS  Sum H == n!*2^(m-n+1) == 7680
+  PASS  #(H==1) == n! == 120 (transitive)
+  PASS  Sum c3 == C(n,3)*2^(m-2) == 2560
+  PASS  Sum c5 == C(n,5)*24*2^(m-5) == 768
+  PASS  c3 == C(n,3) - sum C(s_i,2) (Kendall) everywhere
+  PASS  FULL-census reversal invariance: alpha1, alpha2, H are palindromes under T -> T^op
+  v2(H-1) distribution n=5: v2=1: 304, v2=2: 360, v2=3: 240, inf: 120
+  P(alpha1 odd) = 304/1024 = 0.296875
+  PASS  v2(H-1)=inf exactly on the n! transitive tournaments
+  PASS  #(v2(H-1)==1) == #(alpha1 odd)  [digit-lemma corollary]
+  #(c5 odd) = 400/1024
+  score classes: 9; non-constant alpha1-parity classes: 1; c5-parity: 1; c3-parity: 0
+  PASS  c3 parity constant on every score class (it is score-determined)
+  PASS  alpha1 parity and H mod 4 agree class-by-class (digit lemma)
+  PASS  12 random codes: numpy census == pure-Python permutation brute force (H, alpha1, alpha2)
+==============================================================================
+PART n=6: FULL labeled census, 2^15 tournaments
+==============================================================================
+  PASS  H == 1 + 2*alpha1 + 4*alpha2 EXACTLY on all 32768 tournaments (failures=0)
+  PASS  H always odd and >= 1 (Redei; H=0 impossible)
+  PASS  Sum H == n!*2^(m-n+1) == 737280
+  PASS  #(H==1) == n! == 720 (transitive)
+  PASS  Sum c3 == C(n,3)*2^(m-2) == 163840
+  PASS  Sum c5 == C(n,5)*24*2^(m-5) == 147456
+  PASS  c3 == C(n,3) - sum C(s_i,2) (Kendall) everywhere
+  PASS  FULL-census reversal invariance: alpha1, alpha2, H are palindromes under T -> T^op
+  v2(H-1) distribution n=6: v2=1: 12288, v2=2: 10560, v2=3: 5120, v2=4: 1440, v2=5: 2640, inf: 720
+  P(alpha1 odd) = 12288/32768 = 0.375000
+  PASS  v2(H-1)=inf exactly on the n! transitive tournaments
+  PASS  #(v2(H-1)==1) == #(alpha1 odd)  [digit-lemma corollary]
+  #(c5 odd) = 15360/32768
+  score classes: 22; non-constant alpha1-parity classes: 5; c5-parity: 5; c3-parity: 0
+  PASS  c3 parity constant on every score class (it is score-determined)
+  PASS  alpha1 parity and H mod 4 agree class-by-class (digit lemma)
+  PASS  12 random codes: numpy census == pure-Python permutation brute force (H, alpha1, alpha2)
+==============================================================================
+PART CE: the claimed n=5 counterexample pair (explicit arcs, brute force only)
+==============================================================================
+  PASS  T1 arc list is a tournament (every pair oriented exactly once)
+  PASS  T1 has the directed 3-cycle 0->3->1->0 on {0,1,3}
+  PASS  both have sorted score sequence (1,2,2,2,3); got [1, 2, 2, 2, 3] and [1, 2, 2, 2, 3]
+  T1: c3=4, c5=1, H=11 (H mod 4 = 3);  T2: c3=4, c5=2, H=13 (H mod 4 = 1)
+  PASS  T1 matches claim: c3=4, c5=1, H=11 == 3 (mod 4)
+  PASS  T2 matches claim: c3=4, c5=2, H=13 == 1 (mod 4)
+  PASS  both satisfy H == 1+2*alpha1 (n=5)
+  PASS  H mod 4 differs on the same score sequence => alpha1 parity NOT score-determined
+==============================================================================
+SUMMARY (small): ALL CHECKS PASSED
+==============================================================================

@@ -1,0 +1,212 @@
+==============================================================================
+PART A -- (a) circulant tournaments on Z_n  <->  ODD +-1 functions (n odd)
+==============================================================================
+  [PASS] n=3 count both ways = 2^((n-1)/2) -- #sets=2 #odd-sigmas=2 expected=2
+  [PASS] n=3 bijection roundtrip (S -> sigma -> S, oddness both ways)
+  [PASS] n=3 every connection set gives a genuine tournament (A+A^T=J-I)
+  [PASS] n=3 T^op corresponds to -sigma (ALL circulant tournaments)
+  [PASS] n=3 relabel x->ux acts as sigma(d)->sigma(u^{-1}d) (ALL u, ALL T)
+  [PASS] n=5 count both ways = 2^((n-1)/2) -- #sets=4 #odd-sigmas=4 expected=4
+  [PASS] n=5 bijection roundtrip (S -> sigma -> S, oddness both ways)
+  [PASS] n=5 every connection set gives a genuine tournament (A+A^T=J-I)
+  [PASS] n=5 T^op corresponds to -sigma (ALL circulant tournaments)
+  [PASS] n=5 relabel x->ux acts as sigma(d)->sigma(u^{-1}d) (ALL u, ALL T)
+  [PASS] n=7 count both ways = 2^((n-1)/2) -- #sets=8 #odd-sigmas=8 expected=8
+  [PASS] n=7 bijection roundtrip (S -> sigma -> S, oddness both ways)
+  [PASS] n=7 every connection set gives a genuine tournament (A+A^T=J-I)
+  [PASS] n=7 T^op corresponds to -sigma (ALL circulant tournaments)
+  [PASS] n=7 relabel x->ux acts as sigma(d)->sigma(u^{-1}d) (ALL u, ALL T)
+  [PASS] n=9 count both ways = 2^((n-1)/2) -- #sets=16 #odd-sigmas=16 expected=16
+  [PASS] n=9 bijection roundtrip (S -> sigma -> S, oddness both ways)
+  [PASS] n=9 every connection set gives a genuine tournament (A+A^T=J-I)
+  [PASS] n=9 T^op corresponds to -sigma (ALL circulant tournaments)
+  [PASS] n=9 relabel x->ux acts as sigma(d)->sigma(u^{-1}d) (ALL u, ALL T)
+  [PASS] n=11 count both ways = 2^((n-1)/2) -- #sets=32 #odd-sigmas=32 expected=32
+  [PASS] n=11 bijection roundtrip (S -> sigma -> S, oddness both ways)
+  [PASS] n=11 every connection set gives a genuine tournament (A+A^T=J-I)
+  [PASS] n=11 T^op corresponds to -sigma (ALL circulant tournaments)
+  [PASS] n=11 relabel x->ux acts as sigma(d)->sigma(u^{-1}d) (ALL u, ALL T)
+  [PASS] n=4 (even): NO circulant tournament, NO odd sigma (d=n/2 obstruction) -- #sets=0 #odd=0
+  [PASS] n=6 (even): NO circulant tournament, NO odd sigma (d=n/2 obstruction) -- #sets=0 #odd=0
+  [PASS] n=8 (even): NO circulant tournament, NO odd sigma (d=n/2 obstruction) -- #sets=0 #odd=0
+
+==============================================================================
+PART B -- (b) multiplicative +-1 functions on F_p^* = {trivial, Legendre};
+          tournament <=> chi odd <=> p == 3 mod 4; unique = Paley
+==============================================================================
+  [PASS] p= 3: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p= 5: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p= 7: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=11: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=13: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=17: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=19: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=23: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=29: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=31: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=37: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=41: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=43: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=47: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+  [PASS] p=53: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=1 chi(-1)=+1 QR-set tournament=False #mult-and-odd=0
+  [PASS] p=59: CM functions = {triv, chi}; triv EVEN; chi odd<=>p=3(4); Paley iff p=3(4) -- p%4=3 chi(-1)=-1 QR-set tournament=True #mult-and-odd=1
+
+  Exhaustive verification (ALL 2^(p-2) sign functions with f(1)=1):
+  [PASS] p= 3 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p= 5 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p= 7 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p=11 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p=13 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p=17 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+  [PASS] p=19 exhaustive: exactly 2 completely multiplicative functions, = {triv,chi} -- count=2
+
+==============================================================================
+PART C -- (c) the cherry localizes to the oddness identity; honest boundary
+==============================================================================
+
+  C1. Oddness identities + exact cluster integrals A_1, A_2, A_3 -- every family
+  [PASS] paley7   n= 7: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=42  n(n-1)=42
+  [PASS] paley11  n=11: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=110  n(n-1)=110
+  [PASS] paley19  n=19: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=342  n(n-1)=342
+  [PASS] paley23  n=23: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=506  n(n-1)=506
+  [PASS] rot9     n= 9: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=72  n(n-1)=72
+  [PASS] rot13    n=13: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=156  n(n-1)=156
+  [PASS] rot17    n=17: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=272  n(n-1)=272
+  [PASS] rot21    n=21: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=420  n(n-1)=420
+  [PASS] block13  n=13: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=156  n(n-1)=156
+  [PASS] block21  n=21: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=420  n(n-1)=420
+  [PASS] rand11   n=11: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=110  n(n-1)=110
+  [PASS] rand17   n=17: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=272  n(n-1)=272
+  [PASS] rand21   n=21: sigma odd; sum=0; sigma(d)sigma(-d)=-1; A1=A3=0; A2=n(n-1)=-tr(M^2) -- A2=420  n(n-1)=420
+  NOTE: A_2 = -tr(M^2) = -SUM_{a!=b} sigma(b-a)sigma(a-b) = +n(n-1):
+        the per-pair cherry weight -sigma(d)sigma(-d) = +1 IS the oddness identity.
+        (Paley A_2 = p(p-1) = 42,110,342,506 at p=7,11,19,23: matches
+        cluster_universality_monad.out exactly.)
+
+  C2. Single-merge reduction A_4 = -tr(M^4) + E, |E| = O(n^3)  (exact, per family)
+      family      n    A_4 (exact)       -tr(M^4)        E/n^3
+      paley7      7            336           -294       1.8367
+      paley11    11           1760          -1210       2.2314
+      paley19    19          10944          -6498       2.5429
+      paley23    23          20240         -11638       2.6200
+      rot9        9           -576          -2088       2.0741
+      rot13      13          -4160          -9308       2.3432
+      rot17      17         -15232         -27472       2.4913
+      rot21      21         -40320         -64260       2.5850
+      rot25      25         -88000        -129400       2.6496
+      rot31      31        -225680        -306590       2.7159
+      rand17     17           2176         -10064       2.4913
+      rand25     25          -9600         -51000       2.6496
+      block21    21         -40320         -64260       2.5850
+  [PASS] single-merge reduction |A_4 + tr(M^4)| <= 12 n^3 at all tested families
+      (Paley: tr(M^4) = p^2(p-1) exactly, by M^2 = J - pI; check below.)
+  [PASS] Paley DRT identity tr(M^4) = p^2(p-1) exactly, p=7..43
+
+  C3. The rotation family is NOT quasirandom: a_4 -> -1/3, a_6 -> +2/15
+      (a_L = -lim tr(M^L)/n^L by the single-merge reduction)
+          n   -tr(M^4)/n^4   -tr(M^6)/n^6
+         51      -0.332828       0.133077
+        101      -0.333204       0.133268
+        201      -0.333300       0.133317
+        301      -0.333319       0.133326
+        401      -0.333325       0.133329
+      targets:             -0.333333       0.133333   (= -1/3, +2/15)
+      Richardson(201,401):   -0.333350       0.133342
+  [PASS] rotation a_4 -> -1/3 (|.-(-1/3)|<0.02 at n=401; Richardson <0.005) -- value=-0.333325 richardson=-0.333350
+  [PASS] rotation a_6 -> +2/15 (|.-2/15|<0.02 at n=401; Richardson <0.005) -- value=0.133329 richardson=0.133342
+  [PASS] random odd sigma: -tr(M^4)/n^4 -> 0 (|.|<0.05 at n=401) -- value=-0.007360
+
+  C4. EXACT tanh identity for the rotation generators (Fraction arithmetic)
+      a_{2k}^rot = (-1)^(k-1) * 2 * (2/pi)^(2k) * (1-2^(-2k)) * zeta(2k)
+                 = [x^(2k-1)] tanh(x)
+      k=1:  a_2k =            1   tanh coeff (Bernoulli) =            1   (series: 1)
+      k=2:  a_2k =         -1/3   tanh coeff (Bernoulli) =         -1/3   (series: -1/3)
+      k=3:  a_2k =         2/15   tanh coeff (Bernoulli) =         2/15   (series: 2/15)
+      k=4:  a_2k =      -17/315   tanh coeff (Bernoulli) =      -17/315   (series: -17/315)
+      k=5:  a_2k =      62/2835   tanh coeff (Bernoulli) =      62/2835   (series: 62/2835)
+      k=6:  a_2k = -1382/155925   tanh coeff (Bernoulli) = -1382/155925   (series: -1382/155925)
+  [PASS] rotation generators = tanh Taylor coefficients, k=1..6 (exact Fractions)
+      => sum_k a_2k = tanh(1) = 0.7615941560 ;  conjectured limit exp(tanh 1) = 2.1416876847
+      (vs the quasirandom limit e = 2.7182818285)
+  [PASS] numeric sine-spectrum power sum k=2 matches -1/3 -- -0.333333333333
+  [PASS] numeric sine-spectrum power sum k=3 matches 2/15 -- 0.133333333333
+  [PASS] tanh(1) = sum_odd_j 8/(pi^2 j^2+4) (partial-fraction identity, numeric) -- 0.76159213 vs 0.76159416
+
+  C5. Exact R(n) = H * 2^(n-1) / n!  (Held-Karp, exact ints) + spectral prediction
+      family   n            H          R  exp(spec_n)     R/pred
+      paley    3            3    2.00000      1.64872     1.2131
+      paley    7          189    2.40000      2.11700     1.1337
+      paley   11        95095    2.43951      2.30098     1.0602
+      rot      5           15    2.00000      1.80563     1.1076
+      rot      7          175    2.22222      1.88620     1.1781
+      rot      9         3267    2.30476      1.93551     1.1908
+      rot     11        93027    2.38646      1.96884     1.2121
+      rot     13      3711175    2.44113      1.99288     1.2249
+      rot     15    198464295    2.48658      2.01105     1.2365
+      block    9         3267    2.30476      1.93551     1.1908
+      block   13      3711175    2.44113      1.99288     1.2249
+      rand    11        93467    2.39774      2.15147     1.1145
+      rand    13      3704857    2.43698      2.26330     1.0767
+      reference:  e = 2.71828 ;  exp(tanh 1) = 2.14169
+  [PASS] H(paley_3)=3, H(paley_7)=189, H(paley_11)=95095 (canon values)
+  [PASS] R(paley_7)=2.40000, R(paley_11)=2.43951 (matches cluster_universality_monad.out)
+  [PASS] H(rot_5)=15 (RQ_5, LEM-003 canon value)
+  [PASS] H(rot_13) = 3711175 -- EXACT match with the MISTAKE-011b canon value (n=13, S={1..6})
+  [PASS] H(rot_15) = 198464295 (frozen exact regression value)
+  [PASS] block_9 = 5*rot_9 and block_13 = 7*rot_13 (unit relabelings; same H, same spectrum)
+
+  HONEST FINDING (recorded, not hidden): the NAIVE linked-cluster prediction
+  for the rotation family, exp(sum_L a_L) = exp(tanh 1) = 2.14169, is ALREADY
+  EXCEEDED at n=9 (R=2.30476) and R is still climbing at n=15 (R=2.48658):
+      R_rot(5..15) = 2.00000, 2.22222, 2.30476, 2.38646, 2.44113, 2.48658.
+  The generators a_2k = tanh coefficients are PROVED (C3/C4 above), so what
+  fails for non-quasirandom symbols is the EXPONENTIAL (linked-cluster)
+  formula itself: connected MULTI-RUN clusters are suppressed only when the
+  symbol's Fourier mass is spread (quasirandom/DRT, THM-438).  When the symbol
+  has macroscopic Fourier coefficients, multi-run diagrams contribute at O(1).
+  The true limit of R_rot is OPEN -- see odd_function_dictionary_limits_kpo2.py.
+
+
+==============================================================================
+PART D -- (d) the tournament formal group F=(x+y)/(1+xy) is an ODD formal group
+==============================================================================
+
+  [PASS] tournament FGL (x+y)/(1+xy): [-1](x) = -x EXACTLY (deg <= 21)
+  [PASS] tournament FGL: F(-x,-y) = -F(x,y) (only odd total degrees present)
+  [PASS] tournament FGL: log_F = arctanh (odd series; log check linearizes F)
+  [PASS] log_F coefficients = 1/k for odd k, 0 for even k (= arctanh), deg <= 12
+  [PASS] round trip: FGL rebuilt from log arctanh == (x+y)/(1+xy) (exact, deg <= 12)
+  [PASS] tournament FGL has INTEGER coefficients (defined over Z, torsion-free)
+
+  General lemma (torsion-free ring): (i) [-1]=-x  <=>  (ii) F(-x,-y)=-F  <=>  (iii) log odd
+  [PASS] tangent FGL (x+y)/(1-xy): all three conditions HOLD (log = arctan)
+  [PASS] tangent FGL log = arctan exactly
+  [PASS] multiplicative FGL x+y+xy: ALL THREE conditions FAIL (log = log(1+x), even terms)
+  [PASS] multiplicative FGL [-1](x) = -x + x^2 - x^3 + ... (geometric, not -x)
+  [PASS] 3 random ODD logs: all three conditions hold for the induced FGL
+  [PASS] 3 random NON-ODD logs: all three conditions fail TOGETHER
+
+==============================================================================
+SUMMARY: 91 checks passed, 0 failed
+==============================================================================
+
+DICTIONARY VERDICT
+(a) PROVED+VERIFIED n=3..11: circulant tournaments <-> odd +-1 functions;
+    count 2^((n-1)/2); T^op = -sigma; relabel x->ux acts sigma(d)->sigma(u^{-1}d);
+    even n: both sides empty.
+(b) PROVED+VERIFIED p<60 (exhaustive p<=19): CM +-1 functions on F_p^* =
+    {trivial(even), chi}; chi odd <=> chi(-1)=-1 <=> p=3 mod 4; the unique
+    multiplicative circulant tournament is Paley, existing iff p=3 mod 4.
+(c) PROVED: cherry A_2 = n(n-1) = -tr(M^2) for EVERY odd sigma -- localizes to
+    sigma(d)sigma(-d)=-1; odd A_L = 0.  Single-merge reduction
+    A_L = -tr(M^L) + O(n^{L-1}) (rigorous).  HONEST BOUNDARY: oddness alone
+    does NOT give R->e.  Rotation family: a_{2k} = tanh Taylor coefficients
+    (EXACT Fraction identity, k<=6; numerics at n<=401), so the
+    "single generator" collapses only in the quasirandom/DRT case.
+    The naive exponential prediction exp(tanh 1) ~ 2.14169 is CONTRADICTED by
+    the exact R_rot data (climbing through 2.487 at n=15): the linked-cluster
+    EXPONENTIAL formula itself fails outside the quasirandom class.  The true
+    limit of R_rot is OPEN (see odd_function_dictionary_limits_kpo2.py).
+(d) PROVED: tournament FGL is odd ([-1]=-x exact; log arctanh odd; F(-x,-y)=-F);
+    general torsion-free equivalence verified on examples + counterexamples.
+

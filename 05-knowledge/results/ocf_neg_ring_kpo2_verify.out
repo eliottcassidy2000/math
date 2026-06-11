@@ -1,0 +1,14 @@
+==============================================================================
+RING-IDENTITY VERIFICATION (C1 det quotient, C4 path reciprocity) -- fresh code
+==============================================================================
+n=1,2 edge cases: det quotient == 1 == I(Omega,t) (Omega empty), H=1, path reciprocity holds
+n=3: 12 tournaments (all iso reps + 10 random), failures: 0
+n=4: 14 tournaments (all iso reps + 10 random), failures: 0
+n=5: 22 tournaments (all iso reps + 10 random), failures: 0
+n=6: 66 tournaments (all iso reps + 10 random), failures: 0
+n=7: 10 tournaments (10 random), failures: 0
+
+summary: {'i:Q==G2_PASS': 124, 'ii:QR==Gm2_PASS': 124, 'iii:t=+-4_PASS': 124, 'iv:eps==H,I(-2)_PASS': 124, 'v:path-reciprocity_PASS': 124}
+TOTAL FAILURES: 0
+RING CHECKS: ALL PASS
+done

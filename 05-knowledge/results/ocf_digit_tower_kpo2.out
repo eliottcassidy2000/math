@@ -1,0 +1,111 @@
+[    0.2s] P0: building LUT_3, LUT_5 by rooted-permutation brute force
+[    0.2s] P0 ok: sum LUT_3 = 2 (=2), sum LUT_5 = 768 (=768), max directed 5-cycles on one 5-set = 3
+[    0.2s] P1: building LUT_7 over all 2^21 7-tournaments (vectorized DP)
+[    1.5s] P1 ok: sum LUT_7 = 11796480 (= 720*2^14), 30/30 brute-force matches, max directed 7-cycles on 7 vertices = 24
+[    1.5s] P2: FULL census n=3..7, identity H == 1 + 2*a1 + 4*a2
+[    1.5s]   n=3: 8 tournaments, identity failures = 0; sum-checks H/c3/c5/c7/a2 ALL EXACT; #transitive = 6 = n!; H in [1,3], a1 max=1, a2 max=0
+[    1.5s]   n=4: 64 tournaments, identity failures = 0; sum-checks H/c3/c5/c7/a2 ALL EXACT; #transitive = 24 = n!; H in [1,5], a1 max=2, a2 max=0
+[    1.5s]   n=5: 1024 tournaments, identity failures = 0; sum-checks H/c3/c5/c7/a2 ALL EXACT; #transitive = 120 = n!; H in [1,15], a1 max=7, a2 max=0
+[    1.5s]   n=6: 32768 tournaments, identity failures = 0; sum-checks H/c3/c5/c7/a2 ALL EXACT; #transitive = 720 = n!; H in [1,45], a1 max=20, a2 max=4
+[    9.4s]   n=7: 2097152 tournaments, identity failures = 0; sum-checks H/c3/c5/c7/a2 ALL EXACT; #transitive = 5040 = n!; H in [1,189], a1 max=80, a2 max=14
+[    9.4s] P3: n=8, 200000 random tournaments (28-bit codes)
+[   11.1s]   n=8: identity failures = 0 / 200000; sample means c3=14.000 (theory 14), c5=42.003 (theory 42), c7=45.008 (theory 45), H=315.07 (theory 315); #tournaments with (3,5)-pairs counted: a2 max=72
+[   12.1s]   n=8: (3,5)-pair contribution: present in 174495/200000 samples, max 34 -> the (3,5) digit channel is exercised
+[   12.1s] P4: pure-python brute-force cross-validation on random codes
+[   12.1s]   n=4: 12/12 brute-force profiles match census
+[   12.1s]   n=5: 12/12 brute-force profiles match census
+[   12.1s]   n=6: 12/12 brute-force profiles match census
+[   12.1s]   n=7: 8/8 brute-force profiles match census
+[   12.2s]   n=8: 4/4 brute-force profiles match (incl. explicit odd-cycle lists)
+[   12.2s] P5a: distribution of v2(H-1) over ALL labeled tournaments
+
+  v2(H-1) distribution (full labeled censuses; 'inf' = transitive):
+    n=4: v2=1: 16 (0.2500), v2=2: 24 (0.3750), v2=inf: 24 (0.3750)
+    n=5: v2=1: 304 (0.2969), v2=2: 360 (0.3516), v2=3: 240 (0.2344), v2=inf: 120 (0.1172)
+    n=6: v2=1: 12288 (0.3750), v2=2: 10560 (0.3223), v2=3: 5120 (0.1562), v2=4: 1440 (0.0439), v2=5: 2640 (0.0806), v2=inf: 720 (0.0220)
+    n=7: v2=1: 939392 (0.4479), v2=2: 539520 (0.2573), v2=3: 302400 (0.1442), v2=4: 141120 (0.0673), v2=5: 82320 (0.0393), v2=6: 55440 (0.0264), v2=7: 31920 (0.0152), v2=inf: 5040 (0.0024)
+
+[   12.5s] P5b: score-class determinism tests (full labeled enumeration)
+    n=4 (4 score classes):
+      a1 mod 2 (= H mod 4)    : CONSTANT on every class   (#odd = 16)
+      c3 mod 2                : CONSTANT on every class   (#odd = 16)
+      c5 mod 2                : CONSTANT on every class   (#odd = 0)
+      c7 mod 2                : CONSTANT on every class   (#odd = 0)
+      (c5+c7) mod 2           : CONSTANT on every class   (#odd = 0)
+      a2 mod 2                : CONSTANT on every class   (#odd = 0)
+      v2(H-1) (full valuation): CONSTANT on every class
+    n=5 (9 score classes):
+      a1 mod 2 (= H mod 4)    : NON-CONSTANT on 1/9 classes   (#odd = 304)
+      c3 mod 2                : CONSTANT on every class   (#odd = 384)
+      c5 mod 2                : NON-CONSTANT on 1/9 classes   (#odd = 400)
+      c7 mod 2                : CONSTANT on every class   (#odd = 0)
+      (c5+c7) mod 2           : NON-CONSTANT on 1/9 classes   (#odd = 400)
+      a2 mod 2                : CONSTANT on every class   (#odd = 0)
+      v2(H-1) (full valuation): NON-CONSTANT on 1/9 classes
+    n=6 (22 score classes):
+      a1 mod 2 (= H mod 4)    : NON-CONSTANT on 5/22 classes   (#odd = 12288)
+      c3 mod 2                : CONSTANT on every class   (#odd = 12288)
+      c5 mod 2                : NON-CONSTANT on 5/22 classes   (#odd = 15360)
+      c7 mod 2                : CONSTANT on every class   (#odd = 0)
+      (c5+c7) mod 2           : NON-CONSTANT on 5/22 classes   (#odd = 15360)
+      a2 mod 2                : NON-CONSTANT on 7/22 classes   (#odd = 10880)
+      v2(H-1) (full valuation): NON-CONSTANT on 7/22 classes
+    n=7 (59 score classes):
+      a1 mod 2 (= H mod 4)    : NON-CONSTANT on 28/59 classes   (#odd = 939392)
+      c3 mod 2                : CONSTANT on every class   (#odd = 917504)
+      c5 mod 2                : NON-CONSTANT on 24/59 classes   (#odd = 1003520)
+      c7 mod 2                : NON-CONSTANT on 20/59 classes   (#odd = 944768)
+      (c5+c7) mod 2           : NON-CONSTANT on 28/59 classes   (#odd = 989568)
+      a2 mod 2                : NON-CONSTANT on 35/59 classes   (#odd = 696320)
+      v2(H-1) (full valuation): NON-CONSTANT on 34/59 classes
+
+  VERDICT: alpha_1 mod 2 is NOT score-determined; smallest n = 5.
+  smallest offending class: scores (1, 2, 2, 2, 3), size 280, parity split 120/160
+  COUNTEREXAMPLE (lexicographically smallest of each parity), n=5:
+  tournament A: code=41  scores=[1, 2, 2, 2, 3]
+    0 -> [1, 4]
+    1 -> [3]
+    2 -> [0, 1]
+    3 -> [0, 2]
+    4 -> [1, 2, 3]
+    c3=4 c5=2 c7=0 alpha1=6 alpha2=0 H=13 H mod 4 = 1  v2(H-1) = 2
+  tournament B: code=12  scores=[1, 2, 2, 2, 3]
+    0 -> [3, 4]
+    1 -> [0]
+    2 -> [0, 1]
+    3 -> [1, 2]
+    4 -> [1, 2, 3]
+    c3=4 c5=1 c7=0 alpha1=5 alpha2=0 H=11 H mod 4 = 3  v2(H-1) = 1
+  MINIMAL MOVE: reversing the single directed 3-cycle on vertices (0, 1, 3) flips alpha_1 parity (hence H mod 4):
+  COUNTEREXAMPLE (one triangle reversal on (0, 1, 3)), n=5:
+  tournament A: code=12  scores=[1, 2, 2, 2, 3]
+    0 -> [3, 4]
+    1 -> [0]
+    2 -> [0, 1]
+    3 -> [1, 2]
+    4 -> [1, 2, 3]
+    c3=4 c5=1 c7=0 alpha1=5 alpha2=0 H=11 H mod 4 = 3  v2(H-1) = 1
+  tournament B: code=41  scores=[1, 2, 2, 2, 3]
+    0 -> [1, 4]
+    1 -> [3]
+    2 -> [0, 1]
+    3 -> [0, 2]
+    4 -> [1, 2, 3]
+    c3=4 c5=2 c7=0 alpha1=6 alpha2=0 H=13 H mod 4 = 1  v2(H-1) = 2
+  n=8 (sampled, existence-only): alpha_1 parity non-constant on 114/166 sampled score classes
+
+    n=5: #odd c5 = 400/1024, #odd c7 = 0/1024, #odd (c5+c7) = 400/1024  -> c5+c7 NOT always even
+    n=6: #odd c5 = 15360/32768, #odd c7 = 0/32768, #odd (c5+c7) = 15360/32768  -> c5+c7 NOT always even
+    n=7: #odd c5 = 1003520/2097152, #odd c7 = 944768/2097152, #odd (c5+c7) = 989568/2097152  -> c5+c7 NOT always even
+    n=8 (sampled): #odd (c5+c7) = 98802/200000
+
+[   13.8s] ==================== SUMMARY VERDICTS ====================
+  * n=3: H = 1+2a1+4a2 on ALL 8 labeled tournaments, 0 failures
+  * n=4: H = 1+2a1+4a2 on ALL 64 labeled tournaments, 0 failures
+  * n=5: H = 1+2a1+4a2 on ALL 1024 labeled tournaments, 0 failures
+  * n=6: H = 1+2a1+4a2 on ALL 32768 labeled tournaments, 0 failures
+  * n=7: H = 1+2a1+4a2 on ALL 2097152 labeled tournaments, 0 failures
+  * n=8: H = 1+2a1+4a2 on 200000 random tournaments, 0 failures ((3,5) pairs active in 174495 samples)
+  * brute-force validation: all profiles match (n=4..8)
+  * alpha_1 mod 2 is NOT score-determined: smallest n = 5, single-triangle-reversal counterexample on scores (1, 2, 2, 2, 3)
+[   13.8s] done.

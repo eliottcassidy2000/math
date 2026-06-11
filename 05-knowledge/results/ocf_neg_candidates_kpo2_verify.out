@@ -1,0 +1,45 @@
+number of pre-registered candidates: 31 (expect 31)
+
+REFUTATION TABLE (my first counterexample, my bit convention bit=>i->j):
+  REFUTED  I(-2) == +W(3/2)                     at n=3 mask=0: lhs=1 rhs=13
+  REFUTED  I(-2) == +2^(n-1)*W(3/2)             at n=3 mask=0: lhs=1 rhs=52
+  REFUTED  I(-2) == -W(3/2)                     at n=3 mask=0: lhs=1 rhs=-13
+  REFUTED  I(-2) == -2^(n-1)*W(3/2)             at n=3 mask=0: lhs=1 rhs=-52
+  REFUTED  I(-2) == +W(1)                       at n=3 mask=0: lhs=1 rhs=11/2
+  REFUTED  I(-2) == +2^(n-1)*W(1)               at n=3 mask=0: lhs=1 rhs=22
+  REFUTED  I(-2) == -W(1)                       at n=3 mask=0: lhs=1 rhs=-11/2
+  REFUTED  I(-2) == -2^(n-1)*W(1)               at n=3 mask=0: lhs=1 rhs=-22
+  REFUTED  I(-2) == +W(5/2)                     at n=3 mask=0: lhs=1 rhs=37
+  REFUTED  I(-2) == +2^(n-1)*W(5/2)             at n=3 mask=0: lhs=1 rhs=148
+  REFUTED  I(-2) == -W(5/2)                     at n=3 mask=0: lhs=1 rhs=-37
+  REFUTED  I(-2) == -2^(n-1)*W(5/2)             at n=3 mask=0: lhs=1 rhs=-148
+  REFUTED  I(-2) == +W(-3/2)                    at n=3 mask=0: lhs=1 rhs=13
+  REFUTED  I(-2) == +2^(n-1)*W(-3/2)            at n=3 mask=0: lhs=1 rhs=52
+  REFUTED  I(-2) == -W(-3/2)                    at n=3 mask=0: lhs=1 rhs=-13
+  REFUTED  I(-2) == -2^(n-1)*W(-3/2)            at n=3 mask=0: lhs=1 rhs=-52
+  REFUTED  I(-2) == +W(-1)                      at n=3 mask=0: lhs=1 rhs=11/2
+  REFUTED  I(-2) == +2^(n-1)*W(-1)              at n=3 mask=0: lhs=1 rhs=22
+  REFUTED  I(-2) == -W(-1)                      at n=3 mask=0: lhs=1 rhs=-11/2
+  REFUTED  I(-2) == -2^(n-1)*W(-1)              at n=3 mask=0: lhs=1 rhs=-22
+  REFUTED  I(-2) == det(J-2A)                   at n=3 mask=0: lhs=1 rhs=4
+  REFUTED  |I(-2)| == det(J-2A)                 at n=3 mask=0: lhs=1 rhs=4
+  REFUTED  I(-2) == +det(I-A)                   at n=3 mask=2: lhs=-1 rhs=0
+  REFUTED  I(-2) == -det(I-A)                   at n=3 mask=0: lhs=1 rhs=-1
+  REFUTED  I(-2) == +det(I+A)                   at n=3 mask=2: lhs=-1 rhs=2
+  REFUTED  I(-2) == -det(I+A)                   at n=3 mask=0: lhs=1 rhs=-1
+  REFUTED  I(-2) == +per(I-A)                   at n=3 mask=2: lhs=-1 rhs=0
+  REFUTED  I(-2) == -per(I-A)                   at n=3 mask=0: lhs=1 rhs=-1
+  REFUTED  I(-1) == det(I-A)                    at n=4 mask=4: lhs=-1 rhs=-2
+  REFUTED  I(1) == det(I+A)                     at n=4 mask=4: lhs=3 rhs=2
+  REFUTED  I(1) == per(I+A)                     at n=4 mask=4: lhs=3 rhs=4
+
+refuted: 31/31; survivors: 0
+
+n=3 transitive (arcs 0->1,0->2,1->2): alpha=(0,0), I(-2)=1
+  W(3/2) = 13   2^(n-1) W = 52
+  W(1) = 11/2   2^(n-1) W = 22
+  W(5/2) = 37   2^(n-1) W = 148
+  W(-3/2) = 13   2^(n-1) W = 52
+  W(-1) = 11/2   2^(n-1) W = 22
+  det(J-2A)=4  det(I-A)=1  det(I+A)=1  per(I-A)=1  per(I+A)=1
+done

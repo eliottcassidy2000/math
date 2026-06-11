@@ -1,0 +1,103 @@
+========================================================================
+VALIDATION: numpy fixed-start*n vs pure-Python all-starts DP
+========================================================================
+PASS validator n=7 S=[1, 2, 4] | full=189 fixed-start*n=189
+PASS validator n=7 S=[1, 2, 3] | full=175 fixed-start*n=175
+PASS validator n=9 S=[1, 2, 3, 4] | full=3267 fixed-start*n=3267
+PASS validator n=9 S=[1, 2, 3, 5] | full=3357 fixed-start*n=3357
+PASS validator n=11 S=[1, 3, 4, 5, 9] | full=95095 fixed-start*n=95095
+PASS validator n=11 S=[1, 2, 3, 4, 5] | full=93027 fixed-start*n=93027
+PASS canon H_paley(7)=189
+PASS canon H_paley(11)=95095
+PASS canon/THM-064 H({1,2,3,5}@9)=3357
+========================================================================
+CENSUS n = 7..19: orbits under unit action, exact H per class
+========================================================================
+PASS census n=7: 2^((n-1)/2) tournaments = 8, #classes | #classes=2 (claimed 2)
+PASS census n=7: H constant on every orbit (all members computed)
+  n=7: H=            189  rep=[1, 2, 4] (orbit size 2) [paley-class]
+  n=7: H=            175  rep=[1, 2, 3] (orbit size 6) [rot-class]
+PASS census n=9: 2^((n-1)/2) tournaments = 16, #classes | #classes=4 (claimed 4)
+PASS census n=9: H constant on every orbit (all members computed)
+  n=9: H=          3,357  rep=[1, 2, 3, 5] (orbit size 6)
+  n=9: H=          3,267  rep=[1, 2, 3, 4] (orbit size 6) [rot-class]
+  n=9: H=          3,159  rep=[1, 4, 6, 7] (orbit size 2)
+  n=9: H=          3,159  rep=[1, 3, 4, 7] (orbit size 2)
+PASS census n=11: 2^((n-1)/2) tournaments = 32, #classes | #classes=4 (claimed 4)
+PASS census n=11: H constant on every orbit (all members computed)
+  n=11: H=         95,095  rep=[1, 3, 4, 5, 9] (orbit size 2) [paley-class]
+  n=11: H=         93,467  rep=[1, 2, 3, 4, 6] (orbit size 10)
+  n=11: H=         93,027  rep=[1, 2, 3, 4, 5] (orbit size 10) [rot-class]
+  n=11: H=         92,411  rep=[1, 2, 3, 5, 7] (orbit size 10)
+PASS census n=13: 2^((n-1)/2) tournaments = 64, #classes | #classes=6 (claimed 6)
+PASS census n=13: H constant on every orbit (all members computed)
+  n=13: H=      3,711,175  rep=[1, 2, 3, 4, 5, 6] (orbit size 12) [rot-class]
+  n=13: H=      3,707,483  rep=[1, 2, 3, 4, 5, 7] (orbit size 12)
+  n=13: H=      3,704,857  rep=[1, 2, 3, 4, 6, 8] (orbit size 12)
+  n=13: H=      3,703,011  rep=[1, 2, 3, 5, 6, 9] (orbit size 4)
+PASS census n=15: 2^((n-1)/2) tournaments = 128, #classes | #classes=16 (claimed 16)
+  n=15: H=    198,464,295  rep=[1, 2, 3, 4, 5, 6, 7] (orbit size 8) [rot-class]
+  n=15: H=    197,728,485  rep=[1, 2, 3, 4, 5, 6, 8] (orbit size 8)
+  n=15: H=    197,347,005  rep=[1, 2, 3, 4, 6, 7, 10] (orbit size 8)
+  n=15: H=    197,127,315  rep=[1, 2, 3, 6, 8, 10, 11] (orbit size 8)
+PASS census n=17: 2^((n-1)/2) tournaments = 256, #classes | #classes=16 (claimed 16)
+  n=17: H= 13,689,269,499  rep=[1, 2, 3, 4, 5, 6, 7, 8] (orbit size 16) [rot-class]
+  n=17: H= 13,627,838,945  rep=[1, 2, 3, 4, 5, 6, 7, 9] (orbit size 16)
+  n=17: H= 13,560,055,389  rep=[1, 2, 3, 5, 7, 8, 11, 13] (orbit size 16)
+  n=17: H= 13,551,813,041  rep=[1, 2, 3, 4, 5, 6, 8, 10] (orbit size 16)
+PASS census n=19: 2^((n-1)/2) tournaments = 512, #classes | #classes=30 (claimed 30)
+  n=19: H=1,184,212,824,763  rep=[1, 2, 3, 4, 5, 6, 7, 8, 9] (orbit size 18) [rot-class]
+  n=19: H=1,178,609,421,219  rep=[1, 2, 3, 4, 5, 6, 7, 8, 10] (orbit size 18)
+  n=19: H=1,172,695,746,915  rep=[1, 4, 5, 6, 7, 9, 11, 16, 17] (orbit size 2) [paley-class]
+  n=19: H=1,170,808,019,243  rep=[1, 2, 3, 4, 5, 6, 7, 9, 11] (orbit size 18)
+PASS census n=17: H constant on the full rotation orbit | orbit size 16
+========================================================================
+A9: maximizers and the n=19 top-3
+========================================================================
+PASS A9 n=7: circulant H-maximizer is paley | max H=189 rep=[1, 2, 4]
+PASS A9 n=11: circulant H-maximizer is paley | max H=95,095 rep=[1, 3, 4, 5, 9]
+PASS A9 n=13: circulant H-maximizer is rot | max H=3,711,175 rep=[1, 2, 3, 4, 5, 6]
+PASS A9 n=15: circulant H-maximizer is rot | max H=198,464,295 rep=[1, 2, 3, 4, 5, 6, 7]
+PASS A9 n=17: circulant H-maximizer is rot | max H=13,689,269,499 rep=[1, 2, 3, 4, 5, 6, 7, 8]
+PASS A9 n=19: circulant H-maximizer is rot | max H=1,184,212,824,763 rep=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+PASS A9 n=9 maximizer class contains {1,2,3,5}, H=3357 | max=(3357, [1, 2, 3, 5], 6)
+PASS A9 H_paley(7)=189 is census max at n=7
+PASS A9 H_paley(11)=95095 is census max at n=11
+PASS A9 H_rot(13)=3711175 (MISTAKE-011b value) is census max at n=13 | max=3,711,175
+  n=19 top 5 classes:
+    H=1,184,212,824,763  rep=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+    H=1,178,609,421,219  rep=[1, 2, 3, 4, 5, 6, 7, 8, 10]
+    H=1,172,695,746,915  rep=[1, 4, 5, 6, 7, 9, 11, 16, 17]
+    H=1,170,808,019,243  rep=[1, 2, 3, 4, 5, 6, 7, 9, 11]
+    H=1,169,262,412,601  rep=[1, 2, 3, 5, 8, 9, 12, 13, 15]
+PASS A9 H_rot(19) = 1,184,212,824,763 | 1,184,212,824,763
+PASS A9 H({1..8,10}@19) = 1,178,609,421,219 | 1,178,609,421,219
+PASS A9 H_paley(19) = 1,172,695,746,915 | 1,172,695,746,915
+PASS A9 ordering rot > {1..8,10} > paley at n=19
+PASS A9 gap rot-paley = 11,517,077,848 | 11,517,077,848
+PASS A9 census top-3 at n=19 = (rot, {1..8,10}-class, paley) i.e. Paley ranks THIRD | top3=['1,184,212,824,763', '1,178,609,421,219', '1,172,695,746,915']
+========================================================================
+A7/A8: exact R_rot(n) = H * 2^(n-1)/n! vs naive exp(tanh 1)
+========================================================================
+PASS A7 H_rot(17) = 13,689,269,499 | 13,689,269,499
+PASS A7 H_rot(19) = 1,184,212,824,763 | 1,184,212,824,763
+  exp(tanh 1) = 2.141688  (worker claims 2.14169)
+PASS A7 exp(tanh 1) = 2.14169 (5 dp) | 2.141688
+  n= 5: H_rot=             15  R=2.00000  claimed 2.00000  ok
+  n= 7: H_rot=            175  R=2.22222  claimed 2.22222  ok
+  n= 9: H_rot=          3,267  R=2.30476  claimed 2.30476  ok
+  n=11: H_rot=         93,027  R=2.38646  claimed 2.38646  ok
+  n=13: H_rot=      3,711,175  R=2.44113  claimed 2.44113  ok
+  n=15: H_rot=    198,464,295  R=2.48658  claimed 2.48658  ok
+  n=17: H_rot= 13,689,269,499  R=2.52227  claimed 2.52227  ok
+  n=19: H_rot=1,184,212,824,763  R=2.55197  claimed 2.55197  ok
+PASS A7 all exact R_rot(n) n=5..19 match claimed values (5 dp) and increase
+FAIL A7 R_rot exceeds naive exp(tanh 1) from n=9 on
+PASS A8 status check: R_rot(19)=2.55197 < e=2.71828, gap still 0.1663
+========================================================================
+A11: H equalities for the relabeled sets
+========================================================================
+PASS A11 H({1,2,5,6}@9) = H(rot_9) = 3267 | 3267, 3267
+PASS A11 H({1,2,3,7,8,9}@13) = H(rot_13) = 3711175 | 3711175, 3711175
+========================================================================
+TOTAL 45 checks, 1 failures

@@ -1,0 +1,46 @@
+==============================================================================
+WHERE DOES R_rot HEAD?  exact extension + SIS estimates
+==============================================================================
+reference: e = 2.71828 ; naive linked-cluster exp(tanh 1) = 2.14169
+
+1. fixed-start trick validation (exact, pure-int)
+  [PASS] n=11: full HK = fixed-start*n = 93027
+  [PASS] n=13: full HK = fixed-start*n = 3711175
+
+2. EXACT R_rot at n = 15, 17, 19  (fixed-start Held-Karp, exact ints)
+   n=15  H =          198464295   R = 2.48658   (0.1 s)
+   n=17  H =        13689269499   R = 2.52227   (0.3 s)
+   n=19  H =      1184212824763   R = 2.55197   (1.5 s)
+  [PASS] exact R_rot(15) reproduces 2.48658 (consistency with first script)
+  [PASS] R_rot still EXCEEDS exp(tanh 1) at n = 17, 19 (naive prediction stays wrong) -- R(17)=2.52227 R(19)=2.55197
+
+3. SIS validation against exact values (mean +- 2*stderr)
+   n=13  SIS R = 2.4385 +- 0.0351   exact 2.44113   ok
+   n=15  SIS R = 2.4884 +- 0.0392   exact 2.48658   ok
+   n=17  SIS R = 2.5261 +- 0.0414   exact 2.52227   ok
+   n=19  SIS R = 2.5831 +- 0.0452   exact 2.55197   ok
+  [PASS] SIS estimator agrees with exact R within error bars (n=13,15,17,19)
+
+4. SIS estimates at larger n (rotation family + Paley control)
+   rot   n= 21  R = 2.6066 +- 0.0341   (80000 samples, 1.0 s)
+   rot   n= 25  R = 2.6182 +- 0.0412   (60000 samples, 1.0 s)
+   rot   n= 31  R = 2.6605 +- 0.0499   (50000 samples, 1.3 s)
+   rot   n= 41  R = 2.7499 +- 0.0750   (30000 samples, 1.4 s)
+   rot   n= 51  R = 2.7081 +- 0.0908   (25000 samples, 1.8 s)
+   paley n= 31  R = 2.6469 +- 0.0872   (40000 samples, 1.1 s)
+   paley n= 43  R = 2.6209 +- 0.1255   (25000 samples, 1.4 s)
+   rot   n= 75  R = 2.6609 +- 0.1392   (12000 samples, 1.9 s)
+   rot   n=101  R = 2.8605 +- 0.2130   (8000 samples, 2.3 s)
+
+   exact R_rot:  5..19 = 2.00000 2.22222 2.30476 2.38646 2.44113 2.48658 2.52227 2.55197
+   reference: e = 2.71828, exp(tanh 1) = 2.14169
+
+VERDICT GUIDANCE (for the .out reader):
+ - if R_rot flattens near some constant c with exp(tanh1) < c < e:
+   the limit exists but is NOT given by the naive single-run exponential;
+ - if R_rot keeps climbing past e at n ~ 100: no finite limit at the
+   1/n-corrections scale we can see; Alon's polynomial window is live.
+
+==============================================================================
+SUMMARY: 5 checks passed, 0 failed
+==============================================================================

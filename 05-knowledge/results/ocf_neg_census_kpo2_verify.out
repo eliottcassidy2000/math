@@ -1,0 +1,114 @@
+==============================================================================
+FRESH CENSUS VERIFICATION (verifier kpo2) -- full labeled n=3..6
+bit convention: bit b set => i->j for b-th pair (i,j), i<j, lex order
+==============================================================================
+
+--- n=3: 8 labeled tournaments, 2 iso classes (expected 2) ---
+  ALL CHECKS PASS (OCF, 2-adic mirror, parity, GS7.1 congruence, disc>=0, dfs-vs-perm H, class count)
+  I(-2) sign census: neg 2 (25.0%), zero 0, pos 6 (75.0%)
+  I(-1): min 0, max 1, #(I(-1)=-2) 0, #(I(-1)=+1) 6, #(I(-1) in {0,+-1}) 8
+  I(-1) full distribution: {0: 2, 1: 6}
+  per-iso-class table (canon, orbit, scores, c3, c5, alpha, H, I(-2), I(-1), I(1), SC):
+    canon=    0 orbit=    6 scores=(0, 1, 2) c3=0 c5=0 alpha=(0,0) H=   1 I(-2)=    1 I(-1)=   1 I(1)=   1 SC=Y
+    canon=    2 orbit=    2 scores=(1, 1, 1) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=Y
+
+--- n=4: 64 labeled tournaments, 4 iso classes (expected 4) ---
+  ALL CHECKS PASS (OCF, 2-adic mirror, parity, GS7.1 congruence, disc>=0, dfs-vs-perm H, class count)
+  I(-2) sign census: neg 40 (62.5%), zero 0, pos 24 (37.5%)
+  I(-1): min -1, max 1, #(I(-1)=-2) 0, #(I(-1)=+1) 24, #(I(-1) in {0,+-1}) 64
+  I(-1) full distribution: {-1: 24, 0: 16, 1: 24}
+  per-iso-class table (canon, orbit, scores, c3, c5, alpha, H, I(-2), I(-1), I(1), SC):
+    canon=    0 orbit=   24 scores=(0, 1, 2, 3) c3=0 c5=0 alpha=(0,0) H=   1 I(-2)=    1 I(-1)=   1 I(1)=   1 SC=Y
+    canon=    2 orbit=    8 scores=(1, 1, 1, 3) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon=    4 orbit=   24 scores=(1, 1, 2, 2) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=Y
+    canon=   16 orbit=    8 scores=(0, 2, 2, 2) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+
+--- n=5: 1024 labeled tournaments, 12 iso classes (expected 12) ---
+  ALL CHECKS PASS (OCF, 2-adic mirror, parity, GS7.1 congruence, disc>=0, dfs-vs-perm H, class count)
+  I(-2) sign census: neg 904 (88.3%), zero 0, pos 120 (11.7%)
+  I(-1): min -6, max 1, #(I(-1)=-2) 0, #(I(-1)=+1) 120, #(I(-1) in {0,+-1}) 480
+  I(-1) full distribution: {-6: 64, -5: 120, -4: 120, -3: 240, -1: 240, 0: 120, 1: 120}
+  per-iso-class table (canon, orbit, scores, c3, c5, alpha, H, I(-2), I(-1), I(1), SC):
+    canon=    0 orbit=  120 scores=(0, 1, 2, 3, 4) c3=0 c5=0 alpha=(0,0) H=   1 I(-2)=    1 I(-1)=   1 I(1)=   1 SC=Y
+    canon=    2 orbit=   40 scores=(1, 1, 1, 3, 4) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon=    4 orbit=  120 scores=(1, 1, 2, 2, 4) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=N
+    canon=    8 orbit=  120 scores=(1, 1, 2, 3, 3) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=Y
+    canon=   32 orbit=   40 scores=(0, 2, 2, 2, 4) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=Y
+    canon=   40 orbit=   40 scores=(1, 2, 2, 2, 3) c3=4 c5=3 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=Y
+    canon=   64 orbit=  120 scores=(0, 2, 2, 3, 3) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=N
+    canon=   68 orbit=  120 scores=(1, 2, 2, 2, 3) c3=4 c5=2 alpha=(6,0) H=  13 I(-2)=  -11 I(-1)=  -5 I(1)=   7 SC=Y
+    canon=   76 orbit=   24 scores=(2, 2, 2, 2, 2) c3=5 c5=2 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=Y
+    canon=   97 orbit=  120 scores=(1, 2, 2, 2, 3) c3=4 c5=1 alpha=(5,0) H=  11 I(-2)=   -9 I(-1)=  -4 I(1)=   6 SC=Y
+    canon=  256 orbit=   40 scores=(0, 1, 3, 3, 3) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon=  258 orbit=  120 scores=(1, 1, 2, 3, 3) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=Y
+
+--- n=6: 32768 labeled tournaments, 56 iso classes (expected 56) ---
+  ALL CHECKS PASS (OCF, 2-adic mirror, parity, GS7.1 congruence, disc>=0, dfs-vs-perm H, class count)
+  I(-2) sign census: neg 31968 (97.6%), zero 0, pos 800 (2.4%)
+  I(-1): min -18, max 1, #(I(-1)=-2) 0, #(I(-1)=+1) 720, #(I(-1) in {0,+-1}) 3920
+  I(-1) full distribution: {-18: 240, -17: 1440, -15: 480, -14: 1440, -13: 720, -12: 1440, -11: 5040, -10: 3600, -9: 1440, -8: 1440, -7: 2880, -6: 2208, -5: 1440, -4: 2160, -3: 2880, -1: 2160, 0: 1040, 1: 720}
+  per-iso-class table (canon, orbit, scores, c3, c5, alpha, H, I(-2), I(-1), I(1), SC):
+    canon=    0 orbit=  720 scores=(0, 1, 2, 3, 4, 5) c3=0 c5=0 alpha=(0,0) H=   1 I(-2)=    1 I(-1)=   1 I(1)=   1 SC=Y
+    canon=    2 orbit=  240 scores=(1, 1, 1, 3, 4, 5) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon=    4 orbit=  720 scores=(1, 1, 2, 2, 4, 5) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=N
+    canon=    8 orbit=  720 scores=(1, 1, 2, 3, 3, 5) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=N
+    canon=   16 orbit=  720 scores=(1, 1, 2, 3, 4, 4) c3=4 c5=4 alpha=(8,0) H=  17 I(-2)=  -15 I(-1)=  -7 I(1)=   9 SC=Y
+    canon=   64 orbit=  240 scores=(0, 2, 2, 2, 4, 5) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon=   72 orbit=  240 scores=(1, 2, 2, 2, 3, 5) c3=4 c5=3 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon=   80 orbit=  240 scores=(1, 2, 2, 2, 4, 4) c3=5 c5=6 alpha=(11,1) H=  27 I(-2)=  -17 I(-1)=  -9 I(1)=  13 SC=N
+    canon=   88 orbit=  240 scores=(2, 2, 2, 2, 3, 4) c3=7 c5=9 alpha=(16,0) H=  33 I(-2)=  -31 I(-1)= -15 I(1)=  17 SC=N
+    canon=  128 orbit=  720 scores=(0, 2, 2, 3, 3, 5) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=Y
+    canon=  132 orbit=  720 scores=(1, 2, 2, 2, 3, 5) c3=4 c5=2 alpha=(6,0) H=  13 I(-2)=  -11 I(-1)=  -5 I(1)=   7 SC=N
+    canon=  140 orbit=  144 scores=(2, 2, 2, 2, 2, 5) c3=5 c5=2 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon=  144 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=8 alpha=(14,2) H=  37 I(-2)=  -19 I(-1)= -11 I(1)=  17 SC=Y
+    canon=  148 orbit=  720 scores=(2, 2, 2, 2, 3, 4) c3=7 c5=9 alpha=(16,1) H=  37 I(-2)=  -27 I(-1)= -14 I(1)=  18 SC=N
+    canon=  193 orbit=  720 scores=(1, 2, 2, 2, 3, 5) c3=4 c5=1 alpha=(5,0) H=  11 I(-2)=   -9 I(-1)=  -4 I(1)=   6 SC=N
+    canon=  209 orbit=  720 scores=(2, 2, 2, 2, 3, 4) c3=7 c5=7 alpha=(14,2) H=  37 I(-2)=  -19 I(-1)= -11 I(1)=  17 SC=N
+    canon=  256 orbit=  720 scores=(0, 2, 2, 3, 4, 4) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=N
+    canon=  260 orbit=  720 scores=(1, 2, 2, 2, 4, 4) c3=5 c5=4 alpha=(9,1) H=  23 I(-2)=  -13 I(-1)=  -7 I(1)=  11 SC=N
+    canon=  264 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,2) H=  33 I(-2)=  -15 I(-1)=  -9 I(1)=  15 SC=Y
+    canon=  280 orbit=  720 scores=(2, 2, 2, 3, 3, 3) c3=8 c5=8 alpha=(16,2) H=  41 I(-2)=  -23 I(-1)= -13 I(1)=  19 SC=Y
+    canon=  321 orbit=  720 scores=(1, 2, 2, 2, 4, 4) c3=5 c5=4 alpha=(9,0) H=  19 I(-2)=  -17 I(-1)=  -8 I(1)=  10 SC=N
+    canon=  385 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=5 alpha=(11,0) H=  23 I(-2)=  -21 I(-1)= -10 I(1)=  12 SC=N
+    canon= 1024 orbit=  240 scores=(0, 1, 3, 3, 3, 5) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon= 1026 orbit=  720 scores=(1, 1, 2, 3, 3, 5) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=N
+    canon= 1040 orbit=  240 scores=(1, 1, 3, 3, 3, 4) c3=5 c5=6 alpha=(11,1) H=  27 I(-2)=  -17 I(-1)=  -9 I(1)=  13 SC=N
+    canon= 1280 orbit=  240 scores=(0, 2, 3, 3, 3, 4) c3=4 c5=3 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon= 1282 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=7 alpha=(13,1) H=  31 I(-2)=  -21 I(-1)= -11 I(1)=  15 SC=N
+    canon= 1296 orbit=  240 scores=(1, 2, 3, 3, 3, 3) c3=7 c5=9 alpha=(16,0) H=  33 I(-2)=  -31 I(-1)= -15 I(1)=  17 SC=N
+    canon= 1298 orbit=  720 scores=(2, 2, 2, 3, 3, 3) c3=8 c5=11 alpha=(19,1) H=  43 I(-2)=  -33 I(-1)= -17 I(1)=  21 SC=N
+    canon= 1313 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,1) H=  29 I(-2)=  -19 I(-1)= -10 I(1)=  14 SC=N
+    canon= 2048 orbit=  720 scores=(0, 1, 3, 3, 4, 4) c3=2 c5=0 alpha=(2,0) H=   5 I(-2)=   -3 I(-1)=  -1 I(1)=   3 SC=N
+    canon= 2050 orbit=  720 scores=(1, 1, 2, 3, 4, 4) c3=4 c5=3 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon= 2056 orbit=  720 scores=(1, 1, 3, 3, 3, 4) c3=5 c5=4 alpha=(9,1) H=  23 I(-2)=  -13 I(-1)=  -7 I(1)=  11 SC=N
+    canon= 2176 orbit=  720 scores=(0, 2, 3, 3, 3, 4) c3=4 c5=2 alpha=(6,0) H=  13 I(-2)=  -11 I(-1)=  -5 I(1)=   7 SC=N
+    canon= 2192 orbit=  720 scores=(1, 2, 3, 3, 3, 3) c3=7 c5=9 alpha=(16,1) H=  37 I(-2)=  -27 I(-1)= -14 I(1)=  18 SC=N
+    canon= 2312 orbit=  720 scores=(1, 2, 3, 3, 3, 3) c3=7 c5=7 alpha=(14,2) H=  37 I(-2)=  -19 I(-1)= -11 I(1)=  17 SC=N
+    canon= 2432 orbit=  144 scores=(0, 3, 3, 3, 3, 3) c3=5 c5=2 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon= 2433 orbit=  720 scores=(1, 2, 3, 3, 3, 3) c3=7 c5=7 alpha=(14,1) H=  33 I(-2)=  -23 I(-1)= -12 I(1)=  16 SC=N
+    canon= 3074 orbit=  720 scores=(1, 1, 3, 3, 3, 4) c3=5 c5=4 alpha=(9,0) H=  19 I(-2)=  -17 I(-1)=  -8 I(1)=  10 SC=N
+    canon= 3104 orbit=  720 scores=(0, 2, 3, 3, 3, 4) c3=4 c5=1 alpha=(5,0) H=  11 I(-2)=   -9 I(-1)=  -4 I(1)=   6 SC=N
+    canon= 8192 orbit=  240 scores=(0, 1, 2, 4, 4, 4) c3=1 c5=0 alpha=(1,0) H=   3 I(-2)=   -1 I(-1)=   0 I(1)=   2 SC=N
+    canon= 8194 orbit=   80 scores=(1, 1, 1, 4, 4, 4) c3=2 c5=0 alpha=(2,1) H=   9 I(-2)=    1 I(-1)=   0 I(1)=   4 SC=Y
+    canon= 8196 orbit=  720 scores=(1, 1, 2, 3, 4, 4) c3=4 c5=3 alpha=(7,0) H=  15 I(-2)=  -13 I(-1)=  -6 I(1)=   8 SC=N
+    canon= 8256 orbit=  720 scores=(0, 2, 2, 3, 4, 4) c3=3 c5=1 alpha=(4,0) H=   9 I(-2)=   -7 I(-1)=  -3 I(1)=   5 SC=N
+    canon= 8264 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=7 alpha=(13,1) H=  31 I(-2)=  -21 I(-1)= -11 I(1)=  15 SC=N
+    canon= 8280 orbit=  720 scores=(2, 2, 2, 3, 3, 3) c3=8 c5=11 alpha=(19,1) H=  43 I(-2)=  -33 I(-1)= -17 I(1)=  21 SC=N
+    canon= 8324 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,1) H=  29 I(-2)=  -19 I(-1)= -10 I(1)=  14 SC=N
+    canon= 8385 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,0) H=  25 I(-2)=  -23 I(-1)= -11 I(1)=  13 SC=N
+    canon= 8706 orbit=  720 scores=(1, 1, 2, 3, 4, 4) c3=4 c5=2 alpha=(6,1) H=  17 I(-2)=   -7 I(-1)=  -4 I(1)=   8 SC=Y
+    canon= 8834 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,1) H=  29 I(-2)=  -19 I(-1)= -10 I(1)=  14 SC=Y
+    canon= 8850 orbit=  240 scores=(2, 2, 2, 3, 3, 3) c3=8 c5=12 alpha=(20,1) H=  45 I(-2)=  -35 I(-1)= -18 I(1)=  22 SC=Y
+    canon= 8865 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=4 alpha=(10,2) H=  29 I(-2)=  -11 I(-1)=  -7 I(1)=  13 SC=Y
+    canon= 8881 orbit=  240 scores=(2, 2, 2, 3, 3, 3) c3=8 c5=6 alpha=(14,4) H=  45 I(-2)=  -11 I(-1)=  -9 I(1)=  19 SC=Y
+    canon=12356 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=5 alpha=(11,0) H=  23 I(-2)=  -21 I(-1)= -10 I(1)=  12 SC=N
+    canon=12866 orbit=  720 scores=(1, 2, 2, 3, 3, 4) c3=6 c5=6 alpha=(12,0) H=  25 I(-2)=  -23 I(-1)= -11 I(1)=  13 SC=N
+    canon=16524 orbit=  720 scores=(2, 2, 2, 2, 3, 4) c3=7 c5=7 alpha=(14,1) H=  33 I(-2)=  -23 I(-1)= -12 I(1)=  16 SC=N
+
+--- MISTAKE-023 regression (n=5, bits=40) ---
+  convention bit=>i->j: alpha_1=7, directed 5-cycles on full set=3, H=15, I(2)=15
+  convention bit=>j->i: alpha_1=7, directed 5-cycles on full set=3, H=15, I(2)=15
+  expected (MISTAKES.md): alpha_1=7, three directed 5-cycles on one 5-set, H=15
+
+GRAND TOTAL CHECK FAILURES: 0
+done
