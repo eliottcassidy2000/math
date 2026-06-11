@@ -10,3 +10,8 @@
 
 === m=3 PROBES at s=2 (xor quotient; the open-case cells) ===
    [xor quotient m=3 M=1 j1 (s=2,c=2): N=256, 255 classes, 10795 triangle clauses, build 0.0s]
+   TIMEOUT xor m=3 M=1 j1 (s=2) � finder node budget exceeded (lazy=3657, 362.6s) [NOT a SAT certificate]
+   [xor quotient m=3 M=2 j0 (s=2,c=2): N=256, 255 classes, 10795 triangle clauses, build 0.0s]
+   TIMEOUT xor m=3 M=2 j0 (s=2) � finder node budget exceeded (lazy=3, 124.8s) [NOT a SAT certificate]
+
+=== TOTAL 487.4s ===

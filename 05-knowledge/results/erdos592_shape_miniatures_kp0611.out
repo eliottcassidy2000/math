@@ -6,3 +6,14 @@
    m=2 M=1 j1 (s,c)=(2,3) N=81 |BT|=4: 20 trials OK
    m=3 M=1 j1 (s,c)=(2,2) N=256 |BT|=16: 6 trials OK
 === m=2 M=1 j1 sweep continued ===
+   UNSAT  m=2 M=1 j1 (2,4) N=256 (shapes=64455, tris=291258, 771.9s)
+   *** m=2 M=1 UNSAT at (2,4) ***
+   TIMEOUT m=2 M=1 j1 (3,2) (shapes=21961, tris=138392, 900.0s)
+=== m=2 M=2 j0 sweep ===
+   SAT    m=2 M=2 j0 (2,2) N=16 (35 edges, shapes=35, tris=0, 0.0s)
+   TIMEOUT m=2 M=2 j0 (2,3) (shapes=178312, tris=0, 900.0s)
+   TIMEOUT m=2 M=2 j0 (3,2) (shapes=27979, tris=29704, 900.0s)
+=== m=3 PROBES at (2,2) raw ===
+   TIMEOUT m=3 M=1 j1 (2,2) — finder node budget exceeded (shapes=58, tris=0, 1264.4s) [NOT a SAT certificate]
+   TIMEOUT m=3 M=2 j0 (2,2) — finder node budget exceeded (shapes=48, tris=0, 1647.9s) [NOT a SAT certificate]
+DONE

@@ -1,77 +1,10 @@
-=== plumbing control: invariant algebra at (3,4) — mac-mini S2 had invQ(3,4) SAT (317 edges, different code) ===
+=== plumbing control: invariant algebra at (3,4) ï¿½ mac-mini S2 had invQ(3,4) SAT (317 edges, different code) ===
    [INV (3,4): 171 features, 4142 tri + 195 seed clauses, build 0.2s]
-      ...INV (3,4) round 100, 0.2s
-      ...INV (3,4) round 200, 0.3s
-      ...INV (3,4) round 300, 0.5s
-      ...INV (3,4) round 400, 0.7s
-      ...INV (3,4) round 500, 0.9s
-      ...INV (3,4) round 600, 1.0s
-      ...INV (3,4) round 700, 1.2s
-      ...INV (3,4) round 800, 1.4s
-      ...INV (3,4) round 900, 1.6s
-      ...INV (3,4) round 1000, 1.8s
-      ...INV (3,4) round 1100, 2.0s
-      ...INV (3,4) round 1200, 2.2s
-      ...INV (3,4) round 1300, 2.4s
-      ...INV (3,4) round 1400, 2.6s
-      ...INV (3,4) round 1500, 2.8s
-      ...INV (3,4) round 1600, 3.0s
-      ...INV (3,4) round 1700, 3.2s
-      ...INV (3,4) round 1800, 3.4s
-      ...INV (3,4) round 1900, 3.6s
-      ...INV (3,4) round 2000, 3.8s
-      ...INV (3,4) round 2100, 4.1s
-      ...INV (3,4) round 2200, 4.3s
-      ...INV (3,4) round 2300, 4.5s
-      ...INV (3,4) round 2400, 4.7s
-      ...INV (3,4) round 2500, 5.0s
-      ...INV (3,4) round 2600, 5.2s
    SAT INV (3,4) (446 edges, lazy=2656, 5.3s)
    independent re-verification: PASS
 
 === THE WALL: full invariant algebra at (3,7) ===
    [INV (3,7): 1098 features, 170235 tri + 4026 seed clauses, build 19.1s]
-      ...INV (3,7) round 100, 4.8s
-      ...INV (3,7) round 200, 9.8s
-      ...INV (3,7) round 300, 14.9s
-      ...INV (3,7) round 400, 20.0s
-      ...INV (3,7) round 500, 25.1s
-      ...INV (3,7) round 600, 30.2s
-      ...INV (3,7) round 700, 35.3s
-      ...INV (3,7) round 800, 40.5s
-      ...INV (3,7) round 900, 45.7s
-      ...INV (3,7) round 1000, 50.8s
-      ...INV (3,7) round 1100, 56.1s
-      ...INV (3,7) round 1200, 61.2s
-      ...INV (3,7) round 1300, 66.4s
-      ...INV (3,7) round 1400, 72.0s
-      ...INV (3,7) round 1500, 77.6s
-      ...INV (3,7) round 1600, 82.8s
-      ...INV (3,7) round 1700, 92.2s
-      ...INV (3,7) round 1800, 99.1s
-      ...INV (3,7) round 1900, 104.5s
-      ...INV (3,7) round 2000, 110.0s
-      ...INV (3,7) round 2100, 117.0s
-      ...INV (3,7) round 2200, 122.8s
-      ...INV (3,7) round 2300, 137.6s
-      ...INV (3,7) round 2400, 146.0s
-      ...INV (3,7) round 2500, 164.3s
-      ...INV (3,7) round 2600, 224.7s
-      ...INV (3,7) round 2700, 343.8s
-      ...INV (3,7) round 2800, 367.3s
-      ...INV (3,7) round 2900, 403.8s
-      ...INV (3,7) round 3000, 445.0s
-      ...INV (3,7) round 3100, 476.6s
-      ...INV (3,7) round 3200, 574.9s
-      ...INV (3,7) round 3300, 589.4s
-      ...INV (3,7) round 3400, 597.7s
-      ...INV (3,7) round 3500, 608.9s
-      ...INV (3,7) round 3600, 619.2s
-      ...INV (3,7) round 3700, 631.6s
-      ...INV (3,7) round 3800, 653.9s
-      ...INV (3,7) round 3900, 712.1s
-      ...INV (3,7) round 4000, 1119.1s
-      ...INV (3,7) round 4100, 1402.7s
-      ...INV (3,7) round 4200, 1881.9s
-      ...INV (3,7) round 4300, 2013.6s
-      ...INV (3,7) round 4400, 2376.3s
+   TIMEOUT INV (3,7) lazy=4985
+
+=== TOTAL 7229.7s ===
