@@ -21,7 +21,7 @@ import itertools, time
 from pysat.solvers import Glucose3
 
 from erdos592_shape_miniatures_kp0611 import (
-    ambient_points, bt_size, ShapeFinder, is_bt)
+    ambient_points, bt_size, ShapeFinder, is_bt, BudgetExceeded)
 
 
 def solve_shape_xor(m, M, conv, s, tlimit=2400, verbose=True):
@@ -96,8 +96,15 @@ def solve_shape_xor(m, M, conv, s, tlimit=2400, verbose=True):
                     nb[i] |= 1 << j
                     nb[j] |= 1 << i
                     edges += 1
-        finder.set_graph(nb)
-        bad = finder.find_bt()
+        finder.set_graph(nb, budget=3_000_000)
+        try:
+            bad = finder.find_bt()
+        except BudgetExceeded:
+            if verbose:
+                print(f"   TIMEOUT xor m={m} M={M} {conv} (s={s}) — finder node budget "
+                      f"exceeded (lazy={added}, {time.time()-t0:.1f}s) [NOT a SAT certificate]",
+                      flush=True)
+            return None
         if bad is None:
             if verbose:
                 print(f"   SAT xor m={m} M={M} {conv} (s={s},c=2) N={N} "
@@ -132,7 +139,7 @@ def reverify(m, M, conv, s, blue, L):
     for i, j, k in itertools.combinations(range(N), 3):
         assert not (adj[i][j] and adj[i][k] and adj[j][k]), "triangle!"
     f = ShapeFinder(m, M, conv, L)
-    f.set_graph(nb)
+    f.set_graph(nb)  # no budget: re-verification must be complete or not return
     return f.find_bt() is None
 
 

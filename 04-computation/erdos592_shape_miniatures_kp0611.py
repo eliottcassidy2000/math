@@ -173,38 +173,91 @@ def is_bt(m, M, conv, S):
 
 # ------------------------------------------------------------ the finder
 
+class BudgetExceeded(Exception):
+    pass
+
+
 class ShapeFinder:
     """Complete DFS for an independent BT(m,M) in a graph on the ambient.
-    Structural recursion proposes (halves/chunks with order separation and
-    independence threading), is_bin_shape disposes (the cross-split conditions).
-    Same propose/dispose architecture as TowerFinder (THM-460 D), generalized."""
+    Structural recursion proposes, is_bin_shape disposes — TowerFinder
+    architecture (THM-460 D), shape-generic, with two additions:
+    (i) CONSTRUCTIVE cross-split pruning in the finite-peel case: choose the
+        cross-split position p first (more significant than A's internal
+        splits), then restrict the B-half's candidates to points agreeing with
+        A[0] above p and differing at p.  Complete: a sorted Bin's second half
+        lies in exactly that set (all of A and all of B agree at positions < p,
+        and at p each half is constant with B's value above A's).
+    (ii) an optional node budget: on explosion raises BudgetExceeded so callers
+        report an honest TIMEOUT (never SAT) — MISTAKE-067 discipline."""
 
     def __init__(self, m, M, conv, L):
         self.m, self.M, self.conv = m, M, conv
         self.L = L
         self.N = len(L)
+        self.npos = len(L[0])
+        self.full = (1 << self.N) - 1
+        # agree[k][i] = bitmask of points equal to point i at position k
+        byval = [{} for _ in range(self.npos)]
+        for i, v in enumerate(L):
+            for k in range(self.npos):
+                byval[k].setdefault(v[k], 0)
+                byval[k][v[k]] |= 1 << i
+        self.eqmask = [[byval[k][L[i][k]] for k in range(self.npos)]
+                       for i in range(self.N)]
 
-    def set_graph(self, nb):
+    def set_graph(self, nb, budget=None):
         self.nb = nb  # list of int bitmasks
+        self.budget = budget
+        self.nodes = 0
 
-    def gen(self, delta, lo, taken_mask):
-        """Yield sorted index-tuples forming an independent Bin(delta), all
-        indices > lo, none adjacent to taken_mask."""
+    def _tick(self):
+        self.nodes += 1
+        if self.budget is not None and self.nodes > self.budget:
+            raise BudgetExceeded
+
+    def min_internal_split(self, A):
+        """Most significant (= least index) split among pairs of A; npos if |A|<2."""
+        best = self.npos
+        for x, y in itertools.combinations(A, 2):
+            sp = split_pos(self.L[x], self.L[y])
+            if sp is not None and sp < best:
+                best = sp
+        return best
+
+    def gen(self, delta, lo, taken_mask, allowed):
+        """Yield sorted index-tuples forming an independent Bin(delta), indices
+        > lo, none adjacent to taken_mask, all inside the `allowed` bitmask."""
+        self._tick()
         kind, sub = peel(delta)
         if kind == 'leaf':
-            for i in range(lo + 1, self.N):
-                if (self.nb[i] & taken_mask) == 0:
+            cand = allowed >> (lo + 1)
+            i = lo + 1
+            while cand:
+                if cand & 1 and (self.nb[i] & taken_mask) == 0:
                     yield (i,)
+                cand >>= 1
+                i += 1
             return
         if kind == 'fin':
-            for A in self.gen(sub, lo, taken_mask):
+            for A in self.gen(sub, lo, taken_mask, allowed):
                 amask = taken_mask
                 for a in A:
                     amask |= 1 << a
-                for B in self.gen(sub, A[-1], amask):
-                    S = A + B
-                    if is_bin_shape(delta, tuple(self.L[i] for i in S), self.M, self.conv):
-                        yield S
+                top = self.min_internal_split(A)
+                a0 = A[0]
+                # cross-split position p must be MORE significant (< top);
+                # B agrees with A[0] at every position < p and differs at p
+                prefix = self.full
+                for p in range(0, top):
+                    b_allowed = allowed & prefix & ~self.eqmask[a0][p]
+                    prefix &= self.eqmask[a0][p]
+                    if not b_allowed:
+                        continue
+                    for B in self.gen(sub, A[-1], amask, b_allowed):
+                        S = A + B
+                        if is_bin_shape(delta, tuple(self.L[i] for i in S),
+                                        self.M, self.conv):
+                            yield S
             return
         _, i0 = kind
         shapes = [march_shape(sub, i0, j) for j in march_range(self.M, self.conv)]
@@ -213,7 +266,7 @@ class ShapeFinder:
             if k == len(shapes):
                 yield ()
                 return
-            for P in self.gen(shapes[k], lo2, mask):
+            for P in self.gen(shapes[k], lo2, mask, allowed):
                 pmask = mask
                 for p in P:
                     pmask |= 1 << p
@@ -222,12 +275,14 @@ class ShapeFinder:
         yield from rec(0, lo, taken_mask)
 
     def find_bt(self):
+        """Returns a tuple of indices (found), None (none exists — complete),
+        or raises BudgetExceeded (budget tripped — NOT a certificate)."""
         parts = bt_part_list(self.m, self.M, self.conv)
 
         def rec(k, lo, mask):
             if k == len(parts):
                 return ()
-            for P in self.gen(parts[k], lo, mask):
+            for P in self.gen(parts[k], lo, mask, self.full):
                 pmask = mask
                 for p in P:
                     pmask |= 1 << p
@@ -315,7 +370,8 @@ def validate_m1_against_old():
 
 # ------------------------------------------------------------------ the game
 
-def solve_shape_game(m, M, conv, s, c, tlimit=1200, verbose=True, batch=40):
+def solve_shape_game(m, M, conv, s, c, tlimit=1200, verbose=True, batch=40,
+                     node_budget=3_000_000):
     L = ambient_points(m, s, c)
     N = len(L)
     size = bt_size(m, M, conv)
@@ -370,8 +426,15 @@ def solve_shape_game(m, M, conv, s, c, tlimit=1200, verbose=True, batch=40):
                         break
             if found_tri:
                 continue
-        finder.set_graph(nb)
-        bad = finder.find_bt()
+        finder.set_graph(nb, budget=node_budget)
+        try:
+            bad = finder.find_bt()
+        except BudgetExceeded:
+            if verbose:
+                print(f"   TIMEOUT m={m} M={M} {conv} ({s},{c}) — finder node budget "
+                      f"exceeded (shapes={shapes_blocked}, tris={tris_blocked}, "
+                      f"{time.time()-t0:.1f}s) [NOT a SAT certificate]", flush=True)
+            return None
         if bad is None:
             if verbose:
                 print(f"   SAT    m={m} M={M} {conv} ({s},{c}) N={N} ({len(edges)} edges, "

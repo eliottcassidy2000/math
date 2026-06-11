@@ -23,7 +23,9 @@ invariant one, Finv(x,y) = the gap vector itself — at (3,7).
 Control first: Finv at (3,6) must be SAT (F2 SAT there already implies it).
 """
 
-import time
+import itertools, time
+from pysat.solvers import Glucose3
+from erdos592_satverifier_frontier_macmini_s2 import leaves, SubgridVerifier, seed_subgrids
 from erdos592_bidyadic_rule_macmini_s3 import solve_featured, independent_verify
 
 
@@ -31,16 +33,73 @@ def Finv(x, y):
     return tuple(y[i] - x[i] for i in range(len(x)))
 
 
+def solve_featured_verbose(n, t, F, name, tlimit=900):
+    """solve_featured clone with per-round instrumentation (progress every 100
+    CEGAR rounds) — same encoding, same complete verifier."""
+    L = leaves(n, t); N = len(L)
+    qv = {}; cnt = [0]
+
+    def q(x, y):
+        if x > y:
+            x, y = y, x
+        key = F(x, y)
+        if key not in qv:
+            cnt[0] += 1; qv[key] = cnt[0]
+        return qv[key]
+
+    sol = Glucose3()
+    seen = set()
+    tb = time.time()
+    for i, j, k in itertools.combinations(range(N), 3):
+        c = tuple(sorted(set((-q(L[i], L[j]), -q(L[i], L[k]), -q(L[j], L[k])))))
+        if c not in seen:
+            seen.add(c); sol.add_clause(list(c))
+    ntri = len(seen)
+    for g in seed_subgrids(n, t):
+        c = tuple(sorted(set(q(a, b) for a, b in itertools.combinations(g, 2))))
+        if c not in seen:
+            seen.add(c); sol.add_clause(list(c))
+    print(f"   [{name} ({n},{t}): {cnt[0]} features, {ntri} tri + {len(seen)-ntri} seed clauses, "
+          f"build {time.time()-tb:.1f}s]", flush=True)
+    ver = SubgridVerifier(n, t)
+    t0 = time.time(); added = 0
+    while True:
+        if time.time() - t0 > tlimit:
+            print(f"   TIMEOUT {name} ({n},{t}) lazy={added}", flush=True)
+            return None, None
+        if not sol.solve():
+            print(f"   feature-UNSAT {name} ({n},{t}) (lazy={added}, {time.time()-t0:.1f}s)", flush=True)
+            return False, None
+        model = set(l for l in sol.get_model() if l > 0)
+        edges = set()
+        for i in range(N):
+            for j in range(i + 1, N):
+                if q(L[i], L[j]) in model:
+                    edges.add((i, j))
+        bad = ver.find(edges)
+        if bad is None:
+            print(f"   SAT {name} ({n},{t}) ({len(edges)} edges, lazy={added}, "
+                  f"{time.time()-t0:.1f}s)", flush=True)
+            return True, (edges, L, model, qv)
+        idx = {v: i for i, v in enumerate(L)}
+        cl = sorted(set(q(a, b) for a, b in itertools.combinations(bad, 2)))
+        sol.add_clause(cl)
+        added += 1
+        if added % 100 == 0:
+            print(f"      ...{name} ({n},{t}) round {added}, {time.time()-t0:.1f}s", flush=True)
+
+
 def main():
     t0 = time.time()
-    print("=== control: full invariant algebra at (3,6) — must be SAT ===", flush=True)
-    r, w = solve_featured(3, 6, Finv, "INV", tlimit=3600)
+    print("=== plumbing control: invariant algebra at (3,4) — mac-mini S2 had "
+          "invQ(3,4) SAT (317 edges, different code) ===", flush=True)
+    r, w = solve_featured_verbose(3, 4, Finv, "INV", tlimit=1200)
     if r:
-        ok = independent_verify(3, 6, w[0])
+        ok = independent_verify(3, 4, w[0])
         print(f"   independent re-verification: {'PASS' if ok else 'FAIL'}", flush=True)
 
     print("\n=== THE WALL: full invariant algebra at (3,7) ===", flush=True)
-    r7, w7 = solve_featured(3, 7, Finv, "INV", tlimit=7200)
+    r7, w7 = solve_featured_verbose(3, 7, Finv, "INV", tlimit=7200)
     if r7:
         ok = independent_verify(3, 7, w7[0])
         print(f"   independent re-verification: {'PASS' if ok else 'FAIL'}", flush=True)

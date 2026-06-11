@@ -5,7 +5,7 @@
 
 === m=2 M=2 j0 at s=2 (xor quotient) ===
    [xor quotient m=2 M=2 j0 (s=2,c=2): N=16, 15 classes, 35 triangle clauses, build 0.0s]
-   SAT xor m=2 M=2 j0 (s=2,c=2) N=16 (40 edges, |T|=5, lazy=6, 0.0s)
+   SAT xor m=2 M=2 j0 (s=2,c=2) N=16 (40 edges, |T|=5, lazy=5, 0.0s)
    independent re-verification: PASS
 
 === m=3 PROBES at s=2 (xor quotient; the open-case cells) ===
