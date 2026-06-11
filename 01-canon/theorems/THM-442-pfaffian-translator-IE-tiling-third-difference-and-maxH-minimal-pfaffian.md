@@ -55,11 +55,13 @@ The Pfaffian carries the structure between domains:
 - **the bridge:** `H² − Pf² = 8Q` with `Q ∈ ℤ_{≥0}` (VERIFIED exhaustively n=4,6; both `H,Pf` odd).
   So `H = √(Pf²+8Q)`: the poly-time Pfaffian is the **skeleton**, `Q` the #P-hard correction.
 
-> **(VERIFIED n=4,6; CONJECTURE even n — HYP-2312) The H-maximizing tournament has the MINIMAL
-> Pfaffian `|Pf|=1`** (hence `det(I+2A)=1`, a single net signed cycle-cover) and the maximal
-> correction `Q` (`H²=1+8Q`). **Maximizing Hamiltonian PATHS forces minimizing the cycle-cover
-> Pfaffian** — a paths⟷cycles (open⟷closed) duality: the extremal-paths tournament is "all
-> correction, no skeleton."
+> **(AMENDED 2026-06-11, see MISTAKE-071 — EXISTENTIAL form only; universal form REFUTED at
+> n=6) SOME H-maximizing tournament has the MINIMAL Pfaffian `|Pf|=1`** (hence `det(I+2A)=1`).
+> At n=6 the max H=45 is attained by TWO classes with `|Pf| ∈ {1,7}`; at n=8 the six H=661
+> classes have `|Pf| ∈ {1,9,17}` (mac-mini-2026-06-10-S2 census + independent adversarial
+> recheck). The paths⟷cycles duality slogan survives only existentially: among the extremal-
+> paths tournaments there is always (n=4,6 exhaustive; n=8 supported) one that is "all
+> correction, no skeleton" — but not every one is.
 
 ## Scope / honesty
 

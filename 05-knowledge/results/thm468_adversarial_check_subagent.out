@@ -1,0 +1,55 @@
+======================================================================
+A. det(I+X) = sum over principal minors, random integer matrices
+PASS - A principal-minor identity (random, n=3..6, 20 trials each) 
+======================================================================
+B. Pf(A) = sum_{i=1}^{2k-1} (-1)^{i+1} a_{i,2k} Pf(A minus rows/cols i,2k)
+PASS - B last-row expansion sign convention + det=Pf^2 (n=2,4,6,8) 
+======================================================================
+C. all-(+1)-above-diagonal: Pf_{2k} for 2k = 2,4,6,8
+   2k=2: Pf = 1 (matching-sum 1)
+   2k=4: Pf = 1 (matching-sum 1)
+   2k=6: Pf = 1 (matching-sum 1)
+   2k=8: Pf = 1 (matching-sum 1)
+PASS - C transitive Pf_{2k} = 1 for 2k=2,4,6,8; minors stay all-+1 pattern 
+======================================================================
+D. all 64 labeled 4-tournaments: |Pf| vs vortex vs iso class
+   scores=(0, 1, 2, 3) |Pf|=1 vortex-free=True: 24 labeled
+   scores=(0, 2, 2, 2) |Pf|=3 vortex-free=False: 8 labeled
+   scores=(1, 1, 1, 3) |Pf|=3 vortex-free=False: 8 labeled
+   scores=(1, 1, 2, 2) |Pf|=1 vortex-free=True: 24 labeled
+PASS - D |Pf|=3 <=> vortex, Pf in {±1,±3}, all 64 labeled 4-tournaments 
+PASS - D four 4-classes seen classes=[((0, 1, 2, 3), 1, True), ((0, 2, 2, 2), 3, False), ((1, 1, 1, 3), 3, False), ((1, 1, 2, 2), 1, True)]
+======================================================================
+E. exhaustive n=5: all 1024 labeled tournaments
+PASS - E n=5 every even-minor Pf odd 
+PASS - E n=5 det(I+S) == sum Pf^2 
+PASS - E n=5 2^(n-1) | det and det >= 2^(n-1) 
+PASS - E n=5 {d=1} == {locally transitive} |d1|=384 |lt|=384
+PASS - E n=5 {d=1} == {vortex-free} |vf|=384
+PASS - E n=5 {d=1} == switching closure of transitive |closure|=384
+PASS - E n=5 labeled local orders == (2n-2)!! == 384 got 384
+   n=5: local-order iso classes = 4
+PASS - E n=5 iso-class count matches theorem table got 4
+PASS - E n=5 d invariant under switching/reversal/relabeling (spot) 
+E. exhaustive n=6: all 32768 labeled tournaments
+PASS - E n=6 every even-minor Pf odd 
+PASS - E n=6 det(I+S) == sum Pf^2 
+PASS - E n=6 2^(n-1) | det and det >= 2^(n-1) 
+PASS - E n=6 {d=1} == {locally transitive} |d1|=3840 |lt|=3840
+PASS - E n=6 {d=1} == {vortex-free} |vf|=3840
+PASS - E n=6 {d=1} == switching closure of transitive |closure|=3840
+PASS - E n=6 labeled local orders == (2n-2)!! == 3840 got 3840
+   n=6: local-order iso classes = 6
+PASS - E n=6 iso-class count matches theorem table got 6
+PASS - E n=6 d invariant under switching/reversal/relabeling (spot) 
+======================================================================
+F. T - v transitive (u_1 > ... > u_{n-1}), arbitrary epsilon:
+   vortex-free(T)  <=>  epsilon is 1^a 0^b or 0^a 1^b
+PASS - F vortex-free <=> epsilon monotone, n=5..8, all epsilon 
+======================================================================
+G. n=7: switching closure of transitive
+PASS - G n=7 |closure| == 12!! == 46080 got 46080
+PASS - G n=7 random closure members have d=1 (200 samples) 
+PASS - G n=7 random NON-members have d>1 and divisibility holds (200 samples) 
+======================================================================
+OVERALL: ALL CHECKS PASS

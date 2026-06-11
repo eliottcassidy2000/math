@@ -119,7 +119,29 @@ preserves |Pf| of every even minor. ∎
 - The "vortex ⟺ |Pf| = 3" 4-set dichotomy is the determinant-lens reason local
   orders are the *circular geometry* stratum: d(T) = 1 is the floor, attained exactly
   on the switching class of the principal line's origin.
-- Priority: the lemma "local orders = switching closure of transitive tournaments"
-  may be known (Babai–Cameron school, switching classes of tournaments); literature
-  check logged in the session's research notes. The determinant characterization
-  (a) ⟺ (c) appears to be new to this project.
+## Attribution (verified against sources, 2026-06-11)
+
+The mathematical substance of part 3 is PUBLISHED, in pieces; this file's value is
+the assembly, the det(I+S)-floor phrasing, and an independent proof:
+
+- (c) ⟺ (d): Knuth, *Axioms and Hulls* (LNCS 606, 1992), §4, Lemma (verified from
+  Knuth's own TeX source): "A tournament is vortex-free if and only if it can be
+  obtained from a transitive tournament by negating a subset of its points";
+  labeled count 2^(n-1)(n-1)!. Also Babai–Cameron, EJC 7 (2000) #R38, Lemma 3.3
+  (switching class of a linear order = all local orders = the unique circular
+  order). Nonisomorphic count formula is Brouwer 1980 (Math. Centrum ZW138) =
+  A000016: 2,2,4,6,10,16,30 at n=3..9 — matches this session's census exactly.
+- (b) ⟺ (c) ⟺ (d): Boussairi–Ezzahir–Lakhlifi–Mahzoum, "Skew-adjacency matrices
+  of tournaments with bounded principal minors," Discrete Math. 346 (2023) 113552:
+  the class D₁ (all principal minors of S at most 1, equivalently every even-order
+  principal minor exactly 1 — note minors are Pfaffian SQUARES, so the value -1 is
+  impossible; the ±1 in this file refers to the Pfaffians) = local orders =
+  switching class of transitive. See also Zeng–You arXiv:2408.06992 Prop 1.3 and
+  the D₃ extension (Discrete Math. 2023; Zeng–You–Zhao arXiv:2508.07332).
+- The 4-set determinant dichotomy (det = 9 iff diamond/vortex, else 1) is a lemma
+  of Belkouche–Boussairi–Lakhlifi–Zaidi, Discrete Math. 343 (2020) 111699.
+- NEW here: the floor statement det(I+S) = 2^(n-1) ⟺ local order (gluing the
+  Pfaffian expansion to D₁ — apparently nowhere explicit), the global bound
+  det(I+S) ≥ 2^(n-1) for ALL tournaments, the (2n-2)!! labeled cross-count, the
+  ε-induction proof of (c) ⟹ (d) (independent of Knuth's string calculus), and the
+  metagraph/merged-metagraph placement of d(T).

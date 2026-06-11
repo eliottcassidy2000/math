@@ -21,6 +21,7 @@ Each variable has its own file with full cross-references.
 | `bucket_balance` | [tiling-bucket-balance.md](tiling-bucket-balance.md) | Half-line balance for finite bucket maps and tiling quotients | Lean: `selfHalf+crossHalf=fiber*moves`; tiling: `2*self+cross=|bucket|*|M|` |
 | `c_k` | [fourier-coefficients.md](fourier-coefficients.md) | Coefficients in W-polynomial expansion | W(T,r) = sum c_k * r^k |
 | `D_k` | [D-k.md](D-k.md) | Degree-2k Fourier component of W | W = sum D_k; D_0 = c_0 |
+| `d(T)` | [d-tournament-determinant.md](d-tournament-determinant.md) | Normalized tournament determinant det(I+S)/2^(n-1) | floor 1 ⟺ local order; ceiling ⟺ DRT switching class; E[det]=A000085 |
 | `F_k` | [forward-counts.md](forward-counts.md) | Count of HPs with exactly k forward edges | F(T,x) = sum F_k * x^k |
 | `fwd(P)` | [forward-edges.md](forward-edges.md) | Number of forward edges in HP P | fwd(P) + bwd(P) = n-1 |
 | `B_N(x)` / `c_L` | [good-cut-bucket-polynomial.md](good-cut-bucket-polynomial.md) | Good-cut bucket generating polynomial and connected-run cover counts | `B_N=B_{N-1}+Σ c_L x^L B_{N-L-1}` |

@@ -1,0 +1,80 @@
+========================================================================
+TASK A: n=6 exhaustive — all H-maximizing classes and their |Pf|
+========================================================================
+n=6: max H over all 2^15 tournaments = 45
+labeled tournaments attaining max H: 480
+isomorphism classes attaining H=45: 2
+  class canon=  408: labeled count= 240, H=45, det(S)=1, |Pf|=1, scores=[2, 2, 2, 3, 3, 3]
+  class canon= 1332: labeled count= 240, H=45, det(S)=49, |Pf|=7, scores=[2, 2, 2, 3, 3, 3]
+
+========================================================================
+TASK B: MOD-4 SCORE LAW  (S = A - A^T, exact integer adjugate)
+========================================================================
+odd n=5 EXHAUSTIVE (1024 tournaments): violations = 0
+odd n=7 RANDOM (200 samples): violations = 0
+odd n=9 RANDOM (200 samples): violations = 0
+even n=6 EXHAUSTIVE (32768): +sign holds 32768, global -sign 0, neither 0
+even n=8 RANDOM (200): +sign holds 200, global -sign 0, neither 0
+
+========================================================================
+BONUS: n=8 hill-climb for high-H tournaments; |Pf| of maximizers found
+========================================================================
+n=8 hill-climb best H found = 661 (session/exhaustive claim: 661); examples: 57
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=81, |Pf|=9, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=1, |Pf|=1, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+  H=661, det(S)=289, |Pf|=17, scores=[3, 3, 3, 3, 4, 4, 4, 4]
+|Pf| values among best-found n=8: [1, 9, 17]

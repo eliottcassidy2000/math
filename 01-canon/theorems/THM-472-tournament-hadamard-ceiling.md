@@ -1,6 +1,9 @@
 # THM-472 — The Tournament Hadamard Ceiling: det(I+S) maxima are DRT switching classes
 
-**Status:** PROVED (mac-mini-2026-06-10-S2) — adversarial verification PENDING (this session).
+**Status:** PROVED and ADVERSARIALLY VERIFIED (independent proof check + fresh-code
+computational verification 2026-06-11: every step confirmed, no corrections; the
+n=7 attainers are EXACTLY the 64 switchings of QR_7 by canonical-form set equality.
+See 05-knowledge/results/thm472_adversarial_check.out).
 **Provenance:** mac-mini-2026-06-10-S2 (renumbered THM-467->THM-472 per first-come collision; see MSG-099). Companions: THM-468 (floor, setup and notation),
 THM-473 (average). Related: THM-447/448 (skew tower), THM-213 (Paley Pfaffian),
 the-drt-engine-is-S-squared-equals-J-minus-nI reflection, HYP-2385.

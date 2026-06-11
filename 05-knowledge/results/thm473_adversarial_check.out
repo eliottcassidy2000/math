@@ -1,0 +1,36 @@
+== (1) E[Pf^2] = (|K|-1)!! brute force ==
+[PASS] |K|=4: E[Pf^2] avg=3.0 vs 3  (Pf^2==det verified all 64 cases)
+[PASS] |K|=6: E[Pf^2] avg=15.0 vs 15  (Pf^2==det verified all 32768 cases)
+== (2) He_n(ix) = i^n sum C(n,2k)(2k-1)!! x^(n-2k) ==
+[PASS] n=3 He_3(ix)=-I*x**3 - 3*I*x
+[PASS] n=4 He_4(ix)=x**4 + 6*x**2 + 3
+[PASS] n=5 He_5(ix)=I*x**5 + 10*I*x**3 + 15*I*x
+== (3) sum_k C(n,2k)(2k-1)!! = I(n) ==
+[PASS] n=0 sum=1 I(n)=1
+[PASS] n=1 sum=1 I(n)=1
+[PASS] n=2 sum=2 I(n)=2
+[PASS] n=3 sum=4 I(n)=4
+[PASS] n=4 sum=10 I(n)=10
+[PASS] n=5 sum=26 I(n)=26
+[PASS] n=6 sum=76 I(n)=76
+[PASS] n=7 sum=232 I(n)=232
+[PASS] n=8 sum=764 I(n)=764
+[PASS] n=9 sum=2620 I(n)=2620
+[PASS] n=10 sum=9496 I(n)=9496
+[PASS] n=11 sum=35696 I(n)=35696
+[PASS] n=12 sum=140152 I(n)=140152
+[PASS] n=13 sum=568504 I(n)=568504
+[PASS] n=14 sum=2390480 I(n)=2390480
+== (4a) exhaustive n=5,6: E[det(I+S)], full char poly, E[det S] ==
+[PASS] n=5: E[det(I+S)] 26624/1024 = 26 vs I(5)=26
+[PASS] n=5: E[char poly] = signless matching poly K_5 got=[1, 0, 10, 0, 15, 0]
+      n=5: sympy exact char-poly spot check on 20 random matrices OK
+[PASS] n=6: E[det(I+S)] 2490368/32768 = 76 vs I(6)=76
+[PASS] n=6: E[char poly] = signless matching poly K_6 got=[1, 0, 15, 0, 45, 0, 15]
+[PASS] n=6: E[det S] = (n-1)!! 491520/32768 vs 15
+      n=6: sympy exact char-poly spot check on 20 random matrices OK
+== (4a') exhaustive n=7: E[det(I+S)] (bonus, confirms exact claim 486539264/2097152) ==
+[PASS] n=7: E[det(I+S)] exhaustive 486539264/2097152 = 232 vs I(7)=232
+== (4b) Monte Carlo n=7, 500k samples ==
+[PASS] n=7 MC: E[det(I+S)] ~ I(7)=232 mean=232.156 sem=0.129 z=1.20
+ALL PASS

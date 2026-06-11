@@ -1,6 +1,10 @@
 # THM-473 — The Involution Average: E[det(I+S)] = involutions, E[det(xI+S)] = Hermite
 
-**Status:** PROVED (mac-mini-2026-06-10-S2) — adversarial verification PENDING (this session).
+**Status:** PROVED and ADVERSARIALLY VERIFIED (2026-06-11; exhaustive recheck through
+n=7 labeled, every identity confirmed) — but READ THE ATTRIBUTION SECTION: parts 1
+and 3 are previously published (KMPRS 2025); this file is a corollary-with-
+reinterpretation. The new content is part 2 (the involution/SYT evaluation at x=1)
+and the Godsil–Gutman genealogy. See 05-knowledge/results/thm473_adversarial_check.out.
 **Provenance:** mac-mini-2026-06-10-S2 (renumbered THM-468(avg)->THM-473 per first-come collision; see MSG-099). Companions: THM-468 (setup), THM-472 (ceiling).
 Related: HYP-2383/2387, T777, everything-is-the-triangle (Young tableaux mandate).
 
@@ -58,9 +62,35 @@ SYT count). The x-coefficient extraction at |K| = n (even n) gives E[det S] =
   Hadamard geometry, average = tableau combinatorics — all three living on the
   staircase triangle's own objects (matchings, tableaux, involutions).
 - The random tournament ensemble has expected characteristic polynomial equal to a
-  Hermite polynomial — the same answer as the GUE/GOE expected-characteristic-
-  polynomial heuristic. The tournament ensemble is "antisymmetric Bernoulli";
-  whether this identity is in the random-matrix literature is being checked
-  (session literature thread); the proof above is elementary either way.
+  Hermite polynomial — and this IS in the literature (see Attribution): KMPRS 2025
+  for tournaments, Godsil–Gutman 1981 for the symmetric-signing antecedent.
 - Engineering hook: E[det] = I(n) gives a cheap sanity invariant for testing
   tournament samplers / enumeration code (any bias shows up against A000085).
+
+## Attribution (adversarial check, 2026-06-11)
+
+Parts 1 and 3 are NOT new. S. Klanderman, M. Montee, A. Piotrowski, A. Rice,
+B. Shader, "Determinants of Seidel tournament matrices," Linear Algebra Appl. 707
+(2025), 126-151 (arXiv:2406.09697; DOI 10.1016/j.laa.2024.11.011):
+- Their Theorem 4.1 = part 3: E(det X) = (n-1)!! over Seidel matrices of
+  tournaments of even order n.
+- Their Theorem 7.7 = part 1: the expected coefficient of x^(n-2k) in the
+  characteristic polynomial is the number of k-edge matchings of K_n; they display
+  c(x) = Σ_k C(n,2k)(2k-1)!! x^(n-2k) and themselves remark it is the matching
+  polynomial of K_n / probabilist's Hermite up to sign alternation.
+- Their Theorem 7.8 extends to any graph G (expected char poly = signless matching
+  polynomial of G); they note it also follows from Hou–Lei, EJC 18 (2011) #P156,
+  Thm 2.3.
+
+What THM-473 adds: the x = 1 evaluation E[det(I+S)] = Σ_k C(n,2k)(2k-1)!! = I(n)
+= A000085 (involutions = total SYT count via RSK) — an immediate corollary not
+stated by KMPRS — plus the explicit i^(-n)He_n(ix) closed form and the
+staircase/Young-tableau framing.
+
+Antecedent: C. D. Godsil, I. Gutman, "On the matching polynomial of a graph,"
+Algebraic Methods in Graph Theory (Szeged 1978), Colloq. Math. Soc. Janos Bolyai 25
+(1981), 241-249: the expected characteristic polynomial of a uniformly random
+SYMMETRIC ±1 signing of A(G) is the matching polynomial μ(G,x) — the identity
+underlying Marcus–Spielman–Srivastava interlacing families. The skew (tournament)
+signing yields the signless version. KMPRS do not cite Godsil–Gutman; that
+genealogy is this project's observation.

@@ -1,0 +1,29 @@
+== A/B: brute force max det(I+S), all labeled tournaments ==
+n=3: max=4 (claimed 4, bound 4), labeled attainers=8, iso classes=2 (claimed 2), exact-recheck=OK
+n=4: max=16 (claimed 16, bound 16), labeled attainers=16, iso classes=2 (claimed 2), exact-recheck=OK
+n=5: max=32 (claimed 32, bound 36), labeled attainers=640, iso classes=8 (claimed 8), exact-recheck=OK
+n=6: max=160 (claimed 160, bound 216), labeled attainers=1280, iso classes=4 (claimed 4), exact-recheck=OK
+n=7: max=512 (claimed 512, bound 512), labeled attainers=15360, iso classes=6 (claimed 6), exact-recheck=OK
+
+== C: n=7 attainers vs switching class of QR_7 ==
+switching class of QR_7: 64 labeled switchings, 6 iso classes; equal to attainer set: True
+
+== D: equality analysis on every n=7 attainer ==
+all 15360 labeled attainers: SS^T = 7I - ww^T, switch is regular (scores 3) and doubly regular (pair-domination 1): OK
+
+== E: QR_7 spectrum and bordering to skew-Hadamard of order 8 ==
+eigenvalues of S(QR_7): [np.float64(-2.645751), np.float64(-2.645751), np.float64(-2.645751), np.float64(0.0), np.float64(2.645751), np.float64(2.645751), np.float64(2.645751)]
+H = border(I+S(QR_7)) is a skew-Hadamard matrix of order 8: OK
+
+== F: n=6 attainers, Pfaffian check ==
+all n=6 attainers have det(S) = 81 (|Pf| = 9): True
+
+== G: n=4 skew conference + n=8 via gentourng ==
+all 16 n=4 labeled attainers satisfy SS^T = 3I: OK
+gentourng 8: 6880 iso classes
+n=8: max det = 4096 (claimed 4096), classes attaining = 4 (claimed 4), all skew-conference: True
+
+== H: monotonicity sanity p log(1+c/p) ==
+p log(1+c/p) strictly increasing on p = 1..(n-1)/2 for n=5,7,9,11: OK
+
+ALL CHECKS PASSED

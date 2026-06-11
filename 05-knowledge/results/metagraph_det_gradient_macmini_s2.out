@@ -1,0 +1,313 @@
+============================================================================
+METAGRAPH DET GRADIENT — d(T) = det(I+S)/2^(n-1) on iso-class graph G_n
+macmini-2026-06-10-S2, HYP-2386
+============================================================================
+
+############################################################################
+#  n = 5   (12 iso classes)
+############################################################################
+
+[build] classes = 12 (expect 12): OK
+[build] SC classes = 8 (expect 8): OK
+[build] arc-flip edges = 30, tile-flip (wiggly d=1) edges = 30, tile subset of arc: True, arc-only edges = 0
+[verify] det(I+S) = 2^4 * d with d a positive integer: OK (all 12 classes); d parity: 4 odd, 8 even
+[verify] E[det(I+S)] = 26624/1024 = 26/1 vs involution I(5) = 26: OK (exact)
+[d] distinct d values = 2, min = 1, max = 2
+[d] value -> #classes: 1:4, 2:8
+[d] d=1 (locally transitive) classes: 4
+[timing] classify 0.0s, arc 0.0s, tile 0.0s
+
+  cid           score    H    d   det SC
+    0 (0, 1, 2, 3, 4)    1    1    16 Y
+    4 (1, 1, 1, 3, 4)    3    2    32 
+    9 (0, 2, 2, 2, 4)    3    2    32 Y
+   11 (0, 1, 3, 3, 3)    3    2    32 
+    2 (1, 1, 2, 2, 4)    5    2    32 
+    6 (0, 2, 2, 3, 3)    5    2    32 
+    1 (1, 1, 2, 3, 3)    9    1    16 Y
+    5 (1, 1, 2, 3, 3)    9    2    32 Y
+    3 (1, 2, 2, 2, 3)   11    1    16 Y
+    7 (1, 2, 2, 2, 3)   13    2    32 Y
+    8 (2, 2, 2, 2, 2)   15    1    16 Y
+   10 (1, 2, 2, 2, 3)   15    2    32 Y
+
+[1] EDGE ORIENTATION (is there a d-gradient like the H-gradient?)
+  ARC graph: 30 edges
+    H-level edges: 1 (0.0333)   [canon H-level for n=5: 1]
+    d-level edges: 16 (0.5333)
+    both-level   : 0
+  TILE graph: 30 edges; H-level 1 (0.0333), d-level 16 (0.5333)
+  Orient arc edges low-H -> high-H (29 non-H-level edges):
+    d increases 7 (0.2414), level 16 (0.5517), decreases 6 (0.2069)
+  Orient arc edges low-d -> high-d (14 non-d-level edges):
+    H increases 7 (0.5000), level 1 (0.0714), decreases 6 (0.4286)
+  Sign agreement (edges with both dH,dd != 0): 7/13 = 0.5385
+  FLIP EVENTS (tile 0->1 = away from transitive; 172 cross-class events):
+    H: up 114 (0.6628), level 14 (0.0814), down 44 (0.2558)
+    d: up 28 (0.1628), level 100 (0.5814), down 44 (0.2558)
+    joint (both nonzero): same-sign 28, opposite 30, agreement 0.4828
+  Per-edge 0->1 direction (tile graph, 30 edges):
+    H: always-up 21, always-down 0, mixed 8, level 1
+    d: always-up 5, always-down 4, mixed 5, level 16
+
+[2] CORRELATION d vs H (across 12 nodes)
+  Pearson(d, H)        = -0.1971
+  Spearman(d, H)       = -0.1555
+  Pearson(log d, log H)= -0.0457
+  Score multisets: 9 total, 2 with >=2 classes
+  Between-score-group variance share (eta^2): d 0.5625, H 0.9709, log d 0.5625, log H 0.9937
+  Pooled WITHIN-score-group Pearson(d,H)  = +0.6547
+  Pooled WITHIN-score-group Spearman(d,H) = +0.7500
+  Within-group r(d,H) for groups with >= 3 classes:
+    score (1, 2, 2, 2, 3): 3 classes, Pearson +0.8660, Spearman +0.8660
+
+[3] SECOND-EIGENVECTOR TEST (adjacency of arc-flip G_5)
+  spectrum: lam0 = 5.5823, lam1 = 1.9417, lam_min = -3.2551
+     H vs v2: r = +0.8746, R^2 = 0.7649 | best-matching eigvec: #1 from top (lam = 1.9417), R^2 = 0.7649
+     d vs v2: r = -0.1921, R^2 = 0.0369 | best-matching eigvec: #5 from top (lam = 0.0334), R^2 = 0.6458
+  logd vs v2: r = -0.1921, R^2 = 0.0369 | best-matching eigvec: #5 from top (lam = 0.0334), R^2 = 0.6458
+  corr(resid_d, resid_H) after projecting out v2: -0.0610   [raw corr(d,H) = -0.1971]
+  corr(resid_logd, resid_H) = -0.0610
+  MERGED G_5/Z_2: V = 10, E = 21
+  merged spectrum: lam0 = 4.6405, lam1 = 1.8516, lam_min = -2.9001
+  merged    H vs v2: r = -0.8504, R^2 = 0.7233 | best eigvec #1 from top, R^2 = 0.7233
+  merged    d vs v2: r = +0.1679, R^2 = 0.0282 | best eigvec #4 from top, R^2 = 0.8333
+  merged logd vs v2: r = +0.1679, R^2 = 0.0282 | best eigvec #4 from top, R^2 = 0.8333
+  [S268 reference for merged H R^2: n=5: 0.723, n=6: 0.786, n=7: 0.733]
+  merged corr(resid_d, resid_H) = +0.0827   [raw merged corr(d,H) = -0.0999]
+
+[4] SC/NS DECOMPOSITION (spine / ribs / sea)
+  SC nodes (8): mean d = 1.5000, min = 1, max = 2
+  NS nodes (4): mean d = 2.0000, min = 2, max = 2
+  (H for context: SC mean 9.50 [1,15], NS mean 4.00 [3,5])
+  SC-SC (12 edges): mean|dd| = 0.5000 (max 1), mean|dH| = 3.8333 (max 12)
+  SC-NS (16 edges): mean|dd| = 0.5000 (max 1), mean|dH| = 4.5000 (max 8)
+  NS-NS (2 edges): mean|dd| = 0.0000 (max 0), mean|dH| = 2.0000 (max 2)
+
+[5] WHERE d-MAXIMIZERS AND H-MAXIMIZERS SIT
+  transitive class: cid 0 (H=1, d=1)
+  d-max = 2: 8 class(es)
+    cid 2: H = 5, score (1, 1, 2, 2, 4), SC = N, dist-from-transitive = 1
+    cid 4: H = 3, score (1, 1, 1, 3, 4), SC = N, dist-from-transitive = 1
+    cid 5: H = 9, score (1, 1, 2, 3, 3), SC = Y, dist-from-transitive = 2
+    cid 6: H = 5, score (0, 2, 2, 3, 3), SC = N, dist-from-transitive = 1
+    cid 7: H = 13, score (1, 2, 2, 2, 3), SC = Y, dist-from-transitive = 2
+    cid 9: H = 3, score (0, 2, 2, 2, 4), SC = Y, dist-from-transitive = 1
+    cid 10: H = 15, score (1, 2, 2, 2, 3), SC = Y, dist-from-transitive = 2
+    cid 11: H = 3, score (0, 1, 3, 3, 3), SC = N, dist-from-transitive = 1
+    [odd-n ceiling on det(I+S): (n+1)^((n-1)/2) = 36; max det = 32; attained iff DRT switching class: not attained]
+  H-max = 15: 2 class(es)
+    cid 8: d = 1, score (2, 2, 2, 2, 2), SC = Y, dist-from-transitive = 3
+    cid 10: d = 2, score (1, 2, 2, 2, 3), SC = Y, dist-from-transitive = 2
+  overlap argmax(d) & argmax(H): [10]
+  graph distance between argmax sets: 0
+  eccentricity of transitive node: 3; graph diameter sample (from transitive) covers 12/12 nodes
+
+############################################################################
+#  n = 6   (56 iso classes)
+############################################################################
+
+[build] classes = 56 (expect 56): OK
+[build] SC classes = 12 (expect 12): OK
+[build] arc-flip edges = 290, tile-flip (wiggly d=1) edges = 290, tile subset of arc: True, arc-only edges = 0
+[verify] det(I+S) = 2^5 * d with d a positive integer: OK (all 56 classes); d parity: 18 odd, 38 even
+[verify] E[det(I+S)] = 2490368/32768 = 76/1 vs involution I(6) = 76: OK (exact)
+[d] distinct d values = 5, min = 1, max = 5
+[d] value -> #classes: 1:6, 2:32, 3:8, 4:6, 5:4
+[d] d=1 (locally transitive) classes: 6
+[timing] classify 0.0s, arc 0.0s, tile 0.0s
+
+[1] EDGE ORIENTATION (is there a d-gradient like the H-gradient?)
+  ARC graph: 290 edges
+    H-level edges: 15 (0.0517)   [canon H-level for n=6: 15]
+    d-level edges: 104 (0.3586)
+    both-level   : 9
+  TILE graph: 290 edges; H-level 15 (0.0517), d-level 104 (0.3586)
+  Orient arc edges low-H -> high-H (275 non-H-level edges):
+    d increases 97 (0.3527), level 95 (0.3455), decreases 83 (0.3018)
+  Orient arc edges low-d -> high-d (186 non-d-level edges):
+    H increases 97 (0.5215), level 6 (0.0323), decreases 83 (0.4462)
+  Sign agreement (edges with both dH,dd != 0): 97/180 = 0.5389
+  FLIP EVENTS (tile 0->1 = away from transitive; 4856 cross-class events):
+    H: up 2821 (0.5809), level 528 (0.1087), down 1507 (0.3103)
+    d: up 1360 (0.2801), level 1816 (0.3740), down 1680 (0.3460)
+    joint (both nonzero): same-sign 1284, opposite 1560, agreement 0.4515
+  Per-edge 0->1 direction (tile graph, 290 edges):
+    H: always-up 102, always-down 0, mixed 173, level 15
+    d: always-up 37, always-down 29, mixed 120, level 104
+
+[2] CORRELATION d vs H (across 56 nodes)
+  Pearson(d, H)        = -0.0626
+  Spearman(d, H)       = -0.0550
+  Pearson(log d, log H)= +0.0709
+  Score multisets: 22 total, 11 with >=2 classes
+  Between-score-group variance share (eta^2): d 0.3406, H 0.9640, log d 0.3177, log H 0.9875
+  Pooled WITHIN-score-group Pearson(d,H)  = +0.3745
+  Pooled WITHIN-score-group Spearman(d,H) = +0.5440
+  Within-group r(d,H) for groups with >= 3 classes:
+    score (1, 2, 2, 3, 3, 4): 12 classes, Pearson +0.3815, Spearman +0.5772
+    score (2, 2, 2, 3, 3, 3): 5 classes, Pearson +0.4880, Spearman +0.3611
+    score (1, 1, 2, 3, 4, 4): 4 classes, Pearson +0.2294, Spearman +0.0000
+    score (2, 2, 2, 2, 3, 4): 4 classes, Pearson +0.5774, Spearman +0.5774
+    score (1, 2, 3, 3, 3, 3): 4 classes, Pearson +0.5774, Spearman +0.5774
+    score (1, 2, 2, 2, 4, 4): 3 classes, Pearson +0.0000, Spearman +0.0000
+    score (1, 2, 2, 2, 3, 5): 3 classes, Pearson +0.9820, Spearman +1.0000
+    score (1, 1, 3, 3, 3, 4): 3 classes, Pearson +0.0000, Spearman +0.0000
+    score (0, 2, 3, 3, 3, 4): 3 classes, Pearson +0.9820, Spearman +1.0000
+
+[3] SECOND-EIGENVECTOR TEST (adjacency of arc-flip G_6)
+  spectrum: lam0 = 11.6697, lam1 = 6.7937, lam_min = -6.4783
+     H vs v2: r = -0.9124, R^2 = 0.8324 | best-matching eigvec: #1 from top (lam = 6.7937), R^2 = 0.8324
+     d vs v2: r = -0.0090, R^2 = 0.0001 | best-matching eigvec: #5 from top (lam = 4.0101), R^2 = 0.2063
+  logd vs v2: r = -0.0067, R^2 = 0.0000 | best-matching eigvec: #5 from top (lam = 4.0101), R^2 = 0.2729
+  corr(resid_d, resid_H) after projecting out v2: -0.1730   [raw corr(d,H) = -0.0626]
+  corr(resid_logd, resid_H) = -0.1878
+  MERGED G_6/Z_2: V = 34, E = 143
+  merged spectrum: lam0 = 9.7796, lam1 = 5.4908, lam_min = -5.3527
+  merged    H vs v2: r = -0.8884, R^2 = 0.7892 | best eigvec #1 from top, R^2 = 0.7892
+  merged    d vs v2: r = +0.0413, R^2 = 0.0017 | best eigvec #5 from top, R^2 = 0.2221
+  merged logd vs v2: r = +0.0496, R^2 = 0.0025 | best eigvec #5 from top, R^2 = 0.2681
+  [S268 reference for merged H R^2: n=5: 0.723, n=6: 0.786, n=7: 0.733]
+  merged corr(resid_d, resid_H) = -0.0593   [raw merged corr(d,H) = -0.0639]
+
+[4] SC/NS DECOMPOSITION (spine / ribs / sea)
+  SC nodes (12): mean d = 2.5000, min = 1, max = 5
+  NS nodes (44): mean d = 2.4545, min = 1, max = 5
+  (H for context: SC mean 25.67 [1,45], NS mean 20.82 [3,43])
+  SC-SC (13 edges): mean|dd| = 0.6923 (max 2), mean|dH| = 12.0000 (max 32)
+  SC-NS (90 edges): mean|dd| = 1.0000 (max 3), mean|dH| = 6.4000 (max 24)
+  NS-NS (187 edges): mean|dd| = 0.7914 (max 3), mean|dH| = 8.6845 (max 26)
+
+[5] WHERE d-MAXIMIZERS AND H-MAXIMIZERS SIT
+  transitive class: cid 0 (H=1, d=1)
+  d-max = 5: 4 class(es)
+    cid 29: H = 29, score (1, 2, 2, 3, 3, 4), SC = Y, dist-from-transitive = 3
+    cid 40: H = 15, score (1, 2, 2, 2, 3, 5), SC = N, dist-from-transitive = 2
+    cid 53: H = 15, score (0, 2, 3, 3, 3, 4), SC = N, dist-from-transitive = 2
+    cid 55: H = 9, score (1, 1, 1, 4, 4, 4), SC = Y, dist-from-transitive = 2
+    [even-n ceiling on det(I+S): n^(n/2) = 216; max det = 160; attained iff skew-conference SS^T=(n-1)I: not attained]
+  H-max = 45: 2 class(es)
+    cid 33: d = 1, score (2, 2, 2, 3, 3, 3), SC = Y, dist-from-transitive = 4
+    cid 50: d = 4, score (2, 2, 2, 3, 3, 3), SC = Y, dist-from-transitive = 4
+  overlap argmax(d) & argmax(H): none
+  graph distance between argmax sets: 1
+  eccentricity of transitive node: 4; graph diameter sample (from transitive) covers 56/56 nodes
+  Top 10 classes by d:
+    cid 29: d = 5, H = 29, score (1, 2, 2, 3, 3, 4), SC = Y, dist-from-trans = 3
+    cid 40: d = 5, H = 15, score (1, 2, 2, 2, 3, 5), SC = N, dist-from-trans = 2
+    cid 53: d = 5, H = 15, score (0, 2, 3, 3, 3, 4), SC = N, dist-from-trans = 2
+    cid 55: d = 5, H = 9, score (1, 1, 1, 4, 4, 4), SC = Y, dist-from-trans = 2
+    cid 25: d = 4, H = 13, score (1, 2, 2, 2, 3, 5), SC = N, dist-from-trans = 2
+    cid 28: d = 4, H = 31, score (1, 2, 2, 3, 3, 4), SC = N, dist-from-trans = 3
+    cid 42: d = 4, H = 17, score (1, 1, 2, 3, 4, 4), SC = Y, dist-from-trans = 2
+    cid 44: d = 4, H = 31, score (1, 2, 2, 3, 3, 4), SC = N, dist-from-trans = 3
+    cid 49: d = 4, H = 13, score (0, 2, 3, 3, 3, 4), SC = N, dist-from-trans = 2
+    cid 50: d = 4, H = 45, score (2, 2, 2, 3, 3, 3), SC = Y, dist-from-trans = 4
+
+############################################################################
+#  n = 7   (456 iso classes)
+############################################################################
+
+[build] classes = 456 (expect 456): OK
+[build] SC classes = 88 (expect 88): OK
+[build] arc-flip edges = 4086, tile-flip (wiggly d=1) edges = 4086, tile subset of arc: True, arc-only edges = 0
+[verify] det(I+S) = 2^6 * d with d a positive integer: OK (all 456 classes); d parity: 122 odd, 334 even
+[verify] E[det(I+S)] = 486539264/2097152 = 232/1 vs involution I(7) = 232: OK (exact)
+[d] distinct d values = 7, min = 1, max = 8
+[d] value -> #classes: 1:10, 2:120, 3:80, 4:144, 5:32, 6:64, 8:6
+[d] d=1 (locally transitive) classes: 10
+[timing] classify 1.7s, arc 0.3s, tile 0.2s
+
+[1] EDGE ORIENTATION (is there a d-gradient like the H-gradient?)
+  ARC graph: 4086 edges
+    H-level edges: 136 (0.0333)   [canon H-level for n=7: 136]
+    d-level edges: 1349 (0.3302)
+    both-level   : 36
+  TILE graph: 4086 edges; H-level 136 (0.0333), d-level 1349 (0.3302)
+  Orient arc edges low-H -> high-H (3950 non-H-level edges):
+    d increases 1403 (0.3552), level 1313 (0.3324), decreases 1234 (0.3124)
+  Orient arc edges low-d -> high-d (2737 non-d-level edges):
+    H increases 1403 (0.5126), level 100 (0.0365), decreases 1234 (0.4509)
+  Sign agreement (edges with both dH,dd != 0): 1403/2637 = 0.5320
+  FLIP EVENTS (tile 0->1 = away from transitive; 240256 cross-class events):
+    H: up 138566 (0.5767), level 9686 (0.0403), down 92004 (0.3829)
+    d: up 73224 (0.3048), level 83056 (0.3457), down 83976 (0.3495)
+    joint (both nonzero): same-sign 71290, opposite 78652, agreement 0.4755
+  Per-edge 0->1 direction (tile graph, 4086 edges):
+    H: always-up 662, always-down 0, mixed 3288, level 136
+    d: always-up 253, always-down 194, mixed 2290, level 1349
+
+[2] CORRELATION d vs H (across 456 nodes)
+  Pearson(d, H)        = +0.0028
+  Spearman(d, H)       = -0.0041
+  Pearson(log d, log H)= +0.0929
+  Score multisets: 59 total, 41 with >=2 classes
+  Between-score-group variance share (eta^2): d 0.1249, H 0.9572, log d 0.1387, log H 0.9792
+  Pooled WITHIN-score-group Pearson(d,H)  = +0.3329
+  Pooled WITHIN-score-group Spearman(d,H) = +0.4341
+  Within-group r(d,H) for groups with >= 10 classes:
+    score (1, 2, 3, 3, 3, 4, 5): 47 classes, Pearson +0.3597, Spearman +0.4346
+    score (2, 2, 3, 3, 3, 4, 4): 47 classes, Pearson +0.5202, Spearman +0.5016
+    score (1, 2, 2, 3, 4, 4, 5): 41 classes, Pearson +0.2927, Spearman +0.3663
+    score (2, 2, 2, 3, 3, 4, 5): 37 classes, Pearson +0.4467, Spearman +0.4153
+    score (1, 2, 3, 3, 4, 4, 4): 37 classes, Pearson +0.4467, Spearman +0.4153
+    score (2, 2, 2, 3, 4, 4, 4): 22 classes, Pearson +0.5668, Spearman +0.5004
+    score (2, 2, 3, 3, 3, 3, 5): 15 classes, Pearson +0.2574, Spearman +0.3454
+    score (2, 3, 3, 3, 3, 3, 4): 15 classes, Pearson +0.4524, Spearman +0.4797
+    score (1, 3, 3, 3, 3, 4, 4): 15 classes, Pearson +0.2574, Spearman +0.3454
+    score (1, 2, 2, 3, 3, 5, 5): 12 classes, Pearson +0.0677, Spearman +0.1689
+    score (1, 2, 2, 3, 3, 4, 6): 12 classes, Pearson +0.6327, Spearman +0.6856
+    score (1, 1, 3, 3, 4, 4, 5): 12 classes, Pearson +0.0677, Spearman +0.1689
+    score (0, 2, 3, 3, 4, 4, 5): 12 classes, Pearson +0.6327, Spearman +0.6856
+
+[3] SECOND-EIGENVECTOR TEST (adjacency of arc-flip G_7)
+  spectrum: lam0 = 19.0648, lam1 = 14.1130, lam_min = -13.3640
+     H vs v2: r = +0.9023, R^2 = 0.8141 | best-matching eigvec: #1 from top (lam = 14.1130), R^2 = 0.8141
+     d vs v2: r = -0.0453, R^2 = 0.0021 | best-matching eigvec: #4 from top (lam = 10.7229), R^2 = 0.3704
+  logd vs v2: r = -0.0467, R^2 = 0.0022 | best-matching eigvec: #4 from top (lam = 10.7229), R^2 = 0.3938
+  corr(resid_d, resid_H) after projecting out v2: +0.1014   [raw corr(d,H) = +0.0028]
+  corr(resid_logd, resid_H) = +0.0759
+  MERGED G_7/Z_2: V = 272, E = 2123
+  merged spectrum: lam0 = 17.6171, lam1 = 12.7521, lam_min = -11.9271
+  merged    H vs v2: r = +0.8564, R^2 = 0.7335 | best eigvec #1 from top, R^2 = 0.7335
+  merged    d vs v2: r = -0.0532, R^2 = 0.0028 | best eigvec #3 from top, R^2 = 0.2970
+  merged logd vs v2: r = -0.0551, R^2 = 0.0030 | best eigvec #3 from top, R^2 = 0.3092
+  [S268 reference for merged H R^2: n=5: 0.723, n=6: 0.786, n=7: 0.733]
+  merged corr(resid_d, resid_H) = +0.0979   [raw merged corr(d,H) = +0.0049]
+
+[4] SC/NS DECOMPOSITION (spine / ribs / sea)
+  SC nodes (88): mean d = 3.4545, min = 1, max = 8
+  NS nodes (368): mean d = 3.6793, min = 1, max = 8
+  (H for context: SC mean 97.82 [1,189], NS mean 72.21 [3,153])
+  SC-SC (174 edges): mean|dd| = 1.0517 (max 3), mean|dH| = 25.7126 (max 120)
+  SC-NS (1100 edges): mean|dd| = 0.9964 (max 3), mean|dH| = 19.3891 (max 84)
+  NS-NS (2812 edges): mean|dd| = 1.0306 (max 3), mean|dH| = 21.2831 (max 96)
+
+[5] WHERE d-MAXIMIZERS AND H-MAXIMIZERS SIT
+  transitive class: cid 0 (H=1, d=1)
+  d-max = 8: 6 class(es)
+    cid 381: H = 45, score (2, 2, 2, 3, 3, 3, 6), SC = N, dist-from-transitive = 4
+    cid 395: H = 87, score (1, 2, 3, 3, 3, 4, 5), SC = Y, dist-from-transitive = 4
+    cid 400: H = 69, score (1, 2, 2, 3, 4, 4, 5), SC = Y, dist-from-transitive = 4
+    cid 439: H = 135, score (2, 2, 2, 3, 4, 4, 4), SC = Y, dist-from-transitive = 5
+    cid 446: H = 45, score (0, 3, 3, 3, 4, 4, 4), SC = N, dist-from-transitive = 4
+    cid 447: H = 189, score (3, 3, 3, 3, 3, 3, 3), SC = Y, dist-from-transitive = 7
+    [odd-n ceiling on det(I+S): (n+1)^((n-1)/2) = 512; max det = 512; attained iff DRT switching class: ATTAINED]
+  H-max = 189: 1 class(es)
+    cid 447: d = 8, score (3, 3, 3, 3, 3, 3, 3), SC = Y, dist-from-transitive = 7
+  overlap argmax(d) & argmax(H): [447]
+  graph distance between argmax sets: 0
+  eccentricity of transitive node: 7; graph diameter sample (from transitive) covers 456/456 nodes
+  Top 10 classes by d:
+    cid 381: d = 8, H = 45, score (2, 2, 2, 3, 3, 3, 6), SC = N, dist-from-trans = 4
+    cid 395: d = 8, H = 87, score (1, 2, 3, 3, 3, 4, 5), SC = Y, dist-from-trans = 4
+    cid 400: d = 8, H = 69, score (1, 2, 2, 3, 4, 4, 5), SC = Y, dist-from-trans = 4
+    cid 439: d = 8, H = 135, score (2, 2, 2, 3, 4, 4, 4), SC = Y, dist-from-trans = 5
+    cid 446: d = 8, H = 45, score (0, 3, 3, 3, 4, 4, 4), SC = N, dist-from-trans = 4
+    cid 447: d = 8, H = 189, score (3, 3, 3, 3, 3, 3, 3), SC = Y, dist-from-trans = 7
+    cid 106: d = 6, H = 37, score (2, 2, 2, 2, 3, 4, 6), SC = N, dist-from-trans = 3
+    cid 111: d = 6, H = 31, score (1, 2, 2, 3, 3, 4, 6), SC = N, dist-from-trans = 3
+    cid 113: d = 6, H = 49, score (1, 2, 2, 3, 3, 5, 5), SC = N, dist-from-trans = 3
+    cid 114: d = 6, H = 29, score (1, 2, 2, 3, 3, 4, 6), SC = N, dist-from-trans = 3
+
+DONE.

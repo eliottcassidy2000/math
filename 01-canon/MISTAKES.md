@@ -2264,3 +2264,21 @@ S182's argument (`aut_H_deep_s182.out` Part 5) derives the divisibility from the
 
 ### Lesson
 "X is an integer because it counts something" requires proving the count is well-defined — here, that all orbit sizes equal |Aut| (freeness), which was the entire content. An asserted proof citation can be as hollow as an extrapolated pattern (cf. MISTAKE-028/036/055). When an inventory says PROVED, spot-check the cited argument before building on it.
+
+## MISTAKE-071: "Verified exhaustive n=4,6" That Checked Only One Maximizer Class (HYP-2312)
+
+**Date discovered:** 2026-06-11
+**Found by:** mac-mini-2026-06-10-S2 (det census) + independent adversarial re-verification (fresh exhaustive enumeration at n=6)
+**Affects:** HYP-2312 ("the H-maximizing tournament has |Pf| = 1"), THM-442 section (3), and any plan to restrict A038375 extremal searches to Pf = ±1 tournaments
+
+### What was assumed
+That at n = 4, 6 the H-maximizing tournament has minimal Pfaffian |Pf| = 1, recorded as "VERIFIED exhaustive n=4,6", and conjectured for all even n (HYP-2312).
+
+### Why it was wrong
+At n = 6 the maximum H = 45 is attained by TWO iso classes (240 labeled each, both score (2,2,2,3,3,3)): one has |Pf| = 1 but the other has |Pf| = 7 (det S = 49; same in the det(I+2A) convention, so not a convention artifact). The earlier verification evidently examined only one maximizer class. At n = 8 the six H = 661 classes have |Pf| ∈ {1, 9, 17}.
+
+### The fix
+HYP-2312 amended to the EXISTENTIAL form: "at least one H-maximizing tournament has |Pf| = 1" — true at n = 4, 6 (exhaustive) and supported at n = 8. The existential form still justifies searching Pf = ±1 tournaments for the max VALUE of H, but such a search misses maximizer CLASSES. Universal form: REFUTED at n = 6.
+
+### Lesson
+"The maximizer" is a set, not an element. Any claim of the form "the extremal object has property P" must be checked on ALL extremal classes (argmax can be plural), and the verification record should state how many maximizers were examined.
