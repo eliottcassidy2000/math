@@ -1,0 +1,90 @@
+Pentagonal random-sign Lyapunov + Type II [72,36,16] gate
+N_REC=650, RANDOM_SAMPLES=160, SEED=7203616
+
+[1] Sparse pentagonal denominator laws
+  euler            lambda= 0.055503 root= 1.103979 sqrt-scale= 2.200823 max|a_n|=5503637762499727151307095
+  all_plus         lambda= 0.036309 root= 1.062551 sqrt-scale= 1.355351 max|a_n|=3792924680280874
+  all_minus        lambda= 0.548074 root= 1.727960 sqrt-scale= 12.279540 max|a_n|=29913288853413160239158341162494839970150841992719557437515128222508979599628207070576263753937758214620321473476743744044459828389216897973185102539831667
+  period3_pair     lambda= 0.246296 root= 1.276208 sqrt-scale= 5.480882 max|a_n|=1633831353391682114330850197880251583312157881965504328077732508823210
+  thue_morse_pair  lambda= 0.546124 root= 1.724661 sqrt-scale= 12.236616 max|a_n|=8584625452923931440422048761188882633736340208650712562444662042364580191855101534056801248519043403260805444891472802038532819566927914119960191856341735
+  legendre7_pair   lambda= 0.246398 root= 1.276176 sqrt-scale= 5.480814 max|a_n|=1613569286163767988014438725958528807006837789305997759233167742944510
+  Hardy-Ramanujan sqrt constant pi*sqrt(2/3)=2.565100
+  Euler tail sqrt-scale at N=650: 2.200823
+
+[2] Single paired pentagonal sign flips away from Euler
+  flip k= 1: lambda= 0.246408 root= 1.276176
+  flip k= 2: lambda= 0.548067 root= 1.727948
+  flip k= 3: lambda= 0.326491 root= 1.385572
+  flip k= 4: lambda= 0.259982 root= 1.299309
+  flip k= 5: lambda= 0.201361 root= 1.228322
+  flip k= 6: lambda= 0.171824 root= 1.195056
+  flip k= 7: lambda= 0.145970 root= 1.166547
+  flip k= 8: lambda= 0.129125 root= 1.150272
+  flip k= 9: lambda= 0.115716 root= 1.136122
+  flip k=10: lambda= 0.099863 root= 1.127273
+  flip k=11: lambda= 0.099078 root= 1.119285
+  flip k=12: lambda= 0.095224 root= 1.112815
+  flip k=13: lambda= 0.081623 root= 1.107208
+  flip k=14: lambda= 0.064318 root= 1.104981
+  flip k=15: lambda= 0.054727 root= 1.103905
+  flip k=16: lambda= 0.055508 root= 1.103980
+  flip k=17: lambda= 0.055503 root= 1.103979
+  flip k=18: lambda= 0.055503 root= 1.103979
+  flip k=19: lambda= 0.055503 root= 1.103979
+  flip k=20: lambda= 0.055503 root= 1.103979
+
+[3] Random sign laws on the pentagonal support
+  random-pair lambda stats: {'min': 0.118513, 'q10': 0.138232, 'median': 0.244645, 'mean': 0.281579, 'q90': 0.546124, 'max': 0.548074}
+  random-term lambda stats: {'min': 0.108829, 'q10': 0.173406, 'median': 0.26134, 'mean': 0.312267, 'q90': 0.546124, 'max': 0.548074}
+  selected pair samples: best=0.118513, median=0.244645, worst=0.548074
+
+[4] Tournament Analysis over sign-law quotients
+  vertices: ['euler', 'all_plus', 'all_minus', 'period3_pair', 'thue_morse_pair', 'legendre7_pair', 'random_pair_best', 'random_pair_median', 'random_pair_worst']
+  observable: lower Lyapunov slope wins; tie path = listed order
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed 3-cycles: 0
+  SCC sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1]
+  Hamiltonian path count: 1
+  cancellation order: all_plus -> euler -> random_pair_best -> random_pair_median -> period3_pair -> legendre7_pair -> thue_morse_pair -> all_minus -> random_pair_worst
+
+[5] Gleason gate for a putative extremal Type II [72,36,16] code
+  W = A^9 + c1 A^6 B + c2 A^3 B^2 + c3 B^3
+  coefficients: [1, -126, 3015, -4398]
+  first weights:
+    weight  0: 1
+    weight  4: 0
+    weight  8: 0
+    weight 12: 0
+    weight 16: 249849
+    weight 20: 18106704
+    weight 24: 462962955
+    weight 28: 4397342400
+    weight 32: 16602715899
+  last weights:
+    weight 52: 18106704
+    weight 56: 249849
+    weight 60: 0
+    weight 64: 0
+    weight 68: 0
+    weight 72: 1
+  total W(1,1)=68719476736 expected 2^36=68719476736
+  minimum positive weight=16
+  all coefficients nonnegative? True
+  A_16=249849
+  5-design lambdas for weight-16 words:
+    t=1: lambda_t=55522
+    t=2: lambda_t=11730
+    t=3: lambda_t=2346
+    t=4: lambda_t=442
+    t=5: lambda_t=78
+
+[6] Synthesis checkpoints
+  Euler signs: theorem-level ordinary Lyapunov exponent is 0; the finite
+  regression still sees Hardy-Ramanujan sqrt-growth, so it is only a
+  diagnostic, not a proof of the limiting slope.
+  Random pentagonal signs: positive finite-window slopes in every sampled case;
+  the open proof target is an interior zero of the random sparse denominator.
+  One early Euler pair flip usually creates visible exponential growth; late
+  flips beyond the sampled window become indistinguishable from Euler here.
+  The [72,36,16] scalar enumerator exists and is nonnegative; the open problem
+  is support/design realization, not the scalar modular-form gate.
