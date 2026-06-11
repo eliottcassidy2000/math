@@ -1,0 +1,16 @@
+n= 3672 mu=153  A*_{4mu+4}=A_154=7.857633e+167  (MS formula match: True)
+            A*_{4mu+8}=A_155=2.035031e+168  sign + expected +  -> OK
+n= 3696 mu=154  A*_{4mu+4}=A_155=9.561777e+168  (MS formula match: True)
+            A*_{4mu+8}=A_156=-1.163702e+169  sign - expected -  -> OK
+n= 3720 mu=155  A*_{4mu+4}=A_156=1.163574e+170  (MS formula match: True)
+            A*_{4mu+8}=A_157=-5.848551e+170  sign - expected -  -> OK
+            MOS claim: A_156 = 1.16e170, A_157 = -5.84e170
+            computed : A_156 = 1.164e+170, A_157 = -5.849e+170
+n= 3800 mu=158  A*_{4mu+4}=A_159=5.504719e+172  (MS formula match: True)
+            A*_{4mu+8}=A_160=1.752696e+173  sign + expected +  -> OK
+n= 3824 mu=159  A*_{4mu+4}=A_160=6.698873e+173  (MS formula match: True)
+            A*_{4mu+8}=A_161=-4.478815e+173  sign - expected -  -> OK
+n= 3928 mu=163  A*_{4mu+4}=A_164=3.845621e+177  (MS formula match: True)
+            A*_{4mu+8}=A_165=1.320276e+178  sign + expected +  -> OK
+n= 3952 mu=164  A*_{4mu+4}=A_165=4.680156e+178  (MS formula match: True)
+            A*_{4mu+8}=A_166=-2.155799e+178  sign - expected -  -> OK

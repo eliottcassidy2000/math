@@ -1,0 +1,12 @@
+=== rigidity sweep K=10 (1024 patterns, N=1500) ===
+   subexponential (alpha < 0.005): 1 of 1024
+      mask 0101010101  alpha 0.000910  beta 2.4445 <-- EULER
+   alpha quantiles: min 0.00091, 1% 0.09411, median 0.24539, max 0.54807
+
+=== comparative fresh-iid Lyapunov constants across lag sets ===
+   fibonacci {1,2} (Viswanath control)   : gamma = 0.124242 +- 0.001921   gamma_+ = 0.481212   ratio 0.2582
+   pentagonal pairs                      : gamma = 0.205787 +- 0.002317   gamma_+ = 0.548074   ratio 0.3755
+   triangular                            : gamma = 0.172691 +- 0.002128   gamma_+ = 0.438160   ratio 0.3941
+   squares                               : gamma = 0.138633 +- 0.001296   gamma_+ = 0.349066   ratio 0.3972
+   primes                                : gamma = 0.168625 +- 0.002187   gamma_+ = 0.389491   ratio 0.4329
+(Viswanath check: log(1.13198824) = 0.123976)

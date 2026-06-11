@@ -1,0 +1,18 @@
+=== (1) IVT HALF: F_eps(1) = 4*sum_{k in S}(-1)^{k+1} (exact) ===
+   closed-form vs numeric near x=1 over all |S|<=4 on k<=8: consistent
+   => S with sum_(k in S)(-1)^(k+1) < 0 give F(1)<0, real root in (0,1): rate>0 PROVED
+
+=== (2) Closing the other patterns: interior zero for ALL flips up to k<=8 ===
+   nonempty flip sets on k<=8 with |S|<=5: 218
+   with a zero in the open disk (=> rate>0): 218
+   NO interior zero found (candidate rate-0): 0
+   (Euler = empty flip set, excluded; only it should be rate 0)
+
+=== (3) cross-check: -log r(S) vs growth, a few S ===
+   S={1}: F(1)=+4, real root r=None, -log r = None
+   S={2}: F(1)=-4, real root r=0.57807, -log r = 0.54807
+   S={3}: F(1)=+4, real root r=None, -log r = None
+   S={1, 2}: F(1)=+0, real root r=None, -log r = None
+   S={2, 4, 6}: F(1)=-12, real root r=0.57806, -log r = 0.54807
+
+=== TOTAL 30.8s ===

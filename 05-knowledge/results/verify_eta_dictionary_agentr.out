@@ -1,0 +1,127 @@
+
+verify_eta_dictionary_agentr.py   (agentr, 2026-06-11)
+
+Exact verification of the Construction-A theta dictionary for Type II
+(doubly-even self-dual) binary codes, with every q-convention pinned.
+
+================================ CONVENTIONS ================================
+Formal nome notation.  q is a formal variable (if you want tau: q = e^{pi i tau},
+so q^2 = e^{2 pi i tau} is the "classical" modular-forms nome).
+
+  theta_2(q) = sum_{m in Z} q^{(m+1/2)^2}            (exponents 1/4, 9/4, ...)
+  theta_3(q) = sum_{m in Z} q^{m^2}
+  theta_4(q) = sum_{m in Z} (-1)^m q^{m^2}
+  eta(q)     = q^{1/24} prod_{n>=1} (1 - q^n)        (FORMAL eta; the classical
+               Dedekind eta(tau) equals eta(q^2) in this notation, because
+               eta(tau) = e^{pi i tau/12} prod (1 - e^{2 pi i n tau}))
+  Delta(q)   = eta(q)^24 = q prod_{n>=1} (1-q^n)^24
+  E4(q)      = 1 + 240 sum_{n>=1} sigma_3(n) q^n
+
+Construction A.  For C a doubly-even self-dual binary code of length n,
+  L_C = { v / sqrt(2) : v in Z^n, (v mod 2) in C }      (even unimodular)
+  Theta_{L_C}(q) := sum_{x in L_C} q^{<x,x>}
+                  = W_C( theta_3(q^2), theta_2(q^2) ),
+because a coordinate with codeword bit 0 contributes sum_m q^{(2m)^2/2}
+ = theta_3(q^2), and bit 1 contributes sum_m q^{(2m+1)^2/2} = theta_2(q^2).
+NOTE the half-integer exponents of theta_2(q^2) = 2 sum_{m>=0} q^{(2m+1)^2/2};
+they recombine into integer (indeed even) exponents because Type II weights
+are divisible by 4 (sum of four odd squares is 4 mod 8).
+
+================================ CLAIMS VERIFIED ============================
+(1) W_e8hat(x,y) = x^8 + 14 x^4 y^4 + y^8  maps to  E4(q^2)
+    -- the theta series of E8 (checked exactly through q^100, far past q^10).
+(2) The "code discriminant"  P24(x,y) = x^4 y^4 (x^4 - y^4)^4  maps to
+        16 * eta(q^2)^24 = 16 * Delta(q^2)        [formal notation]
+    i.e. with q = e^{pi i tau}: image = 16 * Delta(tau), the classical
+    normalized weight-12 cusp form in e^{2 pi i tau}.  NOT eta(q)^24 and NOT
+    eta(q^4)^24 (both shown to mismatch).  Derivation chain, each step
+    verified in exact series here:
+      (a) Jacobi:        theta_3^4 = theta_2^4 + theta_4^4
+                         => x^4 - y^4 |--> theta_4(q^2)^4
+      (b) triple product: theta_2(q) theta_3(q) theta_4(q) = 2 eta(q^2)^3
+                         (this is "theta2 theta3 theta4 = 2 eta^3" in the
+                          tau-convention where all functions share one tau)
+      (c) eta quotient:   theta_4(q) = eta(q)^2 / eta(q^2)
+      Then with Q = q^2:
+        theta_2(Q)^4 theta_3(Q)^4 theta_4(Q)^16
+          = (theta_2 theta_3 theta_4)^4(Q) * theta_4(Q)^12
+          = 16 eta(Q^2)^12 * eta(Q)^24 / eta(Q^2)^12 = 16 eta(Q)^24
+          = 16 eta(q^2)^24.
+    Contrast: x^8 y^8 (x^4-y^4)^2 |--> 256 eta(q^4)^24 = 256 Delta(2 tau),
+    a level-2 form -- the exponent pattern (4,4,16) is what lands on SL2(Z).
+(3) Extremal length-24 (Golay) enumerator in the basis {W_e8hat^3, P24}:
+        W_g24 = W_e8hat^3 - 42 * P24          (exact integer coefficients)
+    hence Theta_{A(g24)} = E4(q^2)^3 - 672 Delta(q^2)
+    (48 roots: the Niemeier lattice N(A1^24); Leech would be -720 Delta).
+
+Independent cross-checks (no theta identities used):
+  * brute-force lattice-point counts for Construction A on the [8,4,4]
+    extended Hamming code (all |v|^2 <= 20) and on the [24,12,8] extended
+    Golay code (all |v|^2 <= 8), compared coefficient-by-coefficient;
+  * code weight enumerators computed by enumerating all codewords.
+
+Output is teed to 05-knowledge/results/verify_eta_dictionary_agentr.out
+
+==========================================================================
+STEP 0: build exact series (t = q^(1/2), exact through q^100)
+
+==========================================================================
+CHECK A (preliminaries): the three classical identities, exact series
+  (a) theta_3(q^2)^4 - theta_2(q^2)^4 == theta_4(q^2)^4      OK (to q^100)
+  (b) theta_2(q)theta_3(q)theta_4(q) == 2*eta(q^2)^3         OK (to q^50)
+      [tau-convention: theta_2(tau)theta_3(tau)theta_4(tau) = 2 eta(tau)^3,
+       since classical eta(tau) = formal eta(q^2) with q = e^{pi i tau}]
+  (c) theta_4(q) == eta(q)^2/eta(q^2)  (as q-series)         OK (to q^200)
+
+==========================================================================
+CHECK 1: W_e8hat(x,y) = x^8 + 14 x^4 y^4 + y^8  |-->  E4(q^2)
+  EXACT equality of all coefficients through q^100.
+  Theta_E8(q) = W_e8hat(theta3(q^2),theta2(q^2)) = 1 + 240*q^2 + 2160*q^4 + 6720*q^6 + 17520*q^8 + 30240*q^10 + 60480*q^12 + 82560*q^14 + 140400*q^16 + 181680*q^18 + 272160*q^20 + O(q^21)
+  (= E4(q^2) with E4(q) = 1 + 240 sum sigma_3(n) q^n;  240*sigma_3(10) = 272160)
+  Code check: [8,4] ext. Hamming weight distribution = {0:1, 4:14, 8:1}  OK
+  Brute-force Construction-A point count over Z^8 (all |v|^2 <= 20):
+    norms q^k, k=0..10: [1, 0, 240, 0, 2160, 0, 6720, 0, 17520, 0, 30240]   == series coefficients  OK
+
+==========================================================================
+CHECK 2: P24 = x^4 y^4 (x^4-y^4)^4  |-->  16 * eta(q^2)^24 = 16 * Delta(q^2)
+  EXACT equality of all coefficients through q^100.  Constant c = 16.
+  P24 image = 16*q^2 + -384*q^4 + 4032*q^6 + -23552*q^8 + 77280*q^10 + -96768*q^12 + -267904*q^14 + O(q^15)
+  eta(q^2)^24 = 1*q^2 + -24*q^4 + 252*q^6 + -1472*q^8 + 4830*q^10 + -6048*q^12 + -16744*q^14 + O(q^15)
+  Disambiguation: eta(q)^24 starts at q^1, eta(q^4)^24 starts at q^4;
+    the image starts at q^2  ==>  argument is q^2, period.
+  [tau-language, q = e^{pi i tau}: image = 16 * Delta(tau), the classical
+   normalized weight-12 cusp form q - 24q^2 + 252q^3 - ... in e^{2 pi i tau}.]
+  Contrast: x^8 y^8 (x^4-y^4)^2 |--> 256 * eta(q^4)^24 = 256 Delta(2 tau)
+    (level-2 form, NOT the SL2(Z) discriminant -- exponents (4,4,16) matter).
+
+==========================================================================
+CHECK 3: W_g24 in the basis {W_e8hat^3, P24}
+  Exact identity of polynomials in Z[x,y]:
+      W_g24 = W_e8hat^3 - 42 * P24
+      i.e.  x^24+759x^16y^8+2576x^12y^12+759x^8y^16+y^24
+            = (x^8+14x^4y^4+y^8)^3 - 42 * x^4y^4(x^4-y^4)^4
+  W_e8hat^3 expanded: {(24, 0): 1, (20, 4): 42, (16, 8): 591, (12, 12): 2828, (8, 16): 591, (4, 20): 42, (0, 24): 1}
+  P24 expanded:       {(20, 4): 1, (16, 8): -4, (12, 12): 6, (8, 16): -4, (4, 20): 1}
+  Theta side (exact through q^100):
+      Theta_{A(g24)} = E4(q^2)^3 - 42*16*Delta(q^2) = E4(q^2)^3 - 672 Delta(q^2)
+  Theta_{A(g24)} = 1 + 48*q^2 + 195408*q^4 + 16785216*q^6 + O(q^7)
+  48 roots ==> A(g24) is the Niemeier lattice N(A_1^24), NOT Leech
+  (Theta_Leech = E4^3 - 720 Delta has 0 roots; extremal ENUMERATOR does not
+   give the extremal LATTICE under plain Construction A).
+  Code check: [24,12] ext. Golay weight distribution = {0:1, 8:759, 12:2576, 16:759, 24:1}  OK
+  Brute-force Construction-A point count over Z^24 (all |v|^2 <= 8):
+    q^0,q^1,q^2,q^3,q^4 coefficients: [1, 0, 48, 0, 195408] == series  OK
+    (48 = 2*24 doubled unit vectors; 195408 = 4*C(24,2) + 759*2^8 = 1104+194304)
+
+==========================================================================
+SUMMARY -- ALL ASSERTIONS PASSED.  Exact identities (formal nome q,
+x = theta_3(q^2), y = theta_2(q^2), eta(q) = q^{1/24} prod(1-q^n)):
+
+  (1)  x^8 + 14 x^4 y^4 + y^8                  |-->  E4(q^2)
+  (2)  x^4 y^4 (x^4 - y^4)^4                   |-->  16 eta(q^2)^24 = 16 Delta(q^2)
+       [x^8 y^8 (x^4 - y^4)^2                  |-->  256 eta(q^4)^24, level 2]
+  (3)  W_g24 = W_e8hat^3 - 42 * x^4y^4(x^4-y^4)^4
+       Theta_{A(g24)} = E4(q^2)^3 - 672 Delta(q^2)   (Niemeier A_1^24)
+
+  In tau-language (q = e^{pi i tau}, classical nome e^{2 pi i tau}):
+  Theta_E8 = E4(tau),  P24-image = 16 Delta(tau),  with Delta = eta(tau)^24.

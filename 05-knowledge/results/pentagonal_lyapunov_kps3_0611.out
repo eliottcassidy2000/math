@@ -1,0 +1,23 @@
+=== A. all-plus fixed point and rate ===
+   x* = 0.578061940630, gamma_+ = -log x* = 0.548074252331
+   empirical all-plus slope (exact ints, n in [2000,4000]): 0.548074252331   (match: True)
+
+=== B. fresh-iid random-sign Lyapunov constant gamma_pent ===
+   per-run gammas: ['0.207115', '0.208373', '0.208831', '0.203735', '0.200345', '0.206400', '0.202812', '0.209114']
+   gamma_pent = 0.205841 +- 0.003203  (vs gamma_+ = 0.548074, Euler = 0)
+
+=== C. Euler control + simple variants (exact ints, N=3000) ===
+   Euler signs: alpha = 0.000457, beta = 2.4796 (theory: alpha=0, beta=pi*sqrt(2/3)=2.5651)
+   Euler a_n = p(n) >= 0 check: True
+   global flip: alpha = 0.120808, beta = -0.0177
+
+=== D. rigidity sweep: all 2^6 sign patterns on k<=6, Euler beyond ===
+   Euler mask = 010101
+   patterns with alpha < 0.005 (subexponential): 1 of 64:
+      mask 010101  alpha 0.000683  beta 2.4605 <-- EULER
+   alpha range over the sweep: [0.000683, 0.548074]
+
+=== E. mod-2 floor (signs invisible over F_2) ===
+   recurrence-mod-2 vs p(n) mod 2: 0 mismatches over n <= 3000; odd density 0.5062 (Parkin-Shanks ~ 0.5)
+
+=== TOTAL 6.8s ===
