@@ -1,0 +1,25 @@
+=== (A/B) extremal Type II enumerators, exact ===
+   n=24 (m=1): {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+      = Golay g24: True
+   n=48 (m=2): min weight present = 12, A_12 = 17296
+      eQR48 extremal d=12: True
+   n=72 (m=3): min weight = 16, A_16 = 249849
+      Sloane's A_16 = 249849: True
+      ALL coefficients positive: True  => 72 is BELOW the MOS negativity threshold; extremal W_72 is a bona fide nonneg enumerator
+      (so the [72,36,16] obstruction is NOT enumerator positivity / MOS / shadow — it is code-combinatorial existence)
+
+=== (C) first negativity in the extremal enumerator (Zhang: n=3696) ===
+   FIRST negative coefficient: n = 3696 (m=154), weight 624, value -11637018866635991837618752709870666653199459658927646824210731724139657838402390459730778482291968014162134474715839836541730191811082241645668488393806645695060200253625
+      Zhang threshold n=3696 (m=154) residue-0: True
+
+=== (D) the eta-discriminant grading of the correction stream ===
+   extremal W_n = sum_j c_j * W8^{3(n/24 - j)} * P24^j,  P24 ~ 16 Delta = 16 eta^24
+   n=24: Delta-correction coeffs c_j = [1, -42]
+   n=48: Delta-correction coeffs c_j = [1, -84, 246]
+   n=72: Delta-correction coeffs c_j = [1, -126, 3015, -4398]
+   n=96: Delta-correction coeffs c_j = [1, -168, 7548, -75920, 28086]
+   n=120: Delta-correction coeffs c_j = [1, -210, 13845, -305950, 1571490, -492372]
+   leading correction c_1(m) for m=1..11: [-42, -84, -126, -168, -210, -252, -294, -336, -378, -420, -462]
+   c_1 ratios (-> the eta^24 saddle base, MOS c_1 ~ 69.1...?): [2.0, 1.5, 1.33, 1.25, 1.2, 1.17, 1.14, 1.12, 1.11, 1.1]
+
+=== TOTAL 461.7s ===
