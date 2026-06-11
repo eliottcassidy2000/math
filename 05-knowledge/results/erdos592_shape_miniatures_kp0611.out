@@ -1,0 +1,8 @@
+=== cross-validation: ShapeFinder vs brute force on random graphs ===
+   m=1 M=2 j1 (s,c)=(2,3) N=9 |BT|=6: 20 trials OK
+   m=1 M=2 j1 (s,c)=(3,2) N=8 |BT|=6: 20 trials OK
+   m=2 M=1 j1 (s,c)=(2,2) N=16 |BT|=4: 20 trials OK
+   m=2 M=2 j0 (s,c)=(2,2) N=16 |BT|=7: 20 trials OK
+   m=2 M=1 j1 (s,c)=(2,3) N=81 |BT|=4: 20 trials OK
+   m=3 M=1 j1 (s,c)=(2,2) N=256 |BT|=16: 6 trials OK
+=== m=2 M=1 j1 sweep continued ===
