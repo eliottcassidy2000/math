@@ -4,6 +4,29 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S4 (close) — THE INVOLUTION MODULUS 24 + the [72,36,16] gate (THM-484, OPEN-Q-061/HYP-2415; puzzle answer 20)
+
+**User dispatch:** continue the Gleason line, merge p²≡1 mod 24 + the happy-number 8-cycle
+puzzle (answer = **20**, the base-10 unhappy cycle 4→16→37→58→89→145→42→20). **THM-484:**
+24 is the MAXIMAL involution modulus ((ℤ/n)* exponent ≤2 iff n|24; (ℤ/24)* ≅ 𝔽₂³, φ=8). The
+two Gleason Type II generators sit at φ(24)=8 and 24: ê₈ = RM(1,3) is indexed by 𝔽₂³ =
+(ℤ/24)* (the 8 involutions), g₂₄ at length 24 with Paley prime 23 ≡ −1 (the antipode unit) —
+both Paley tournament gauges (THM-480/481), so the whole Type II weight-enumerator ring is
+generated at the two scales of the involution modulus. The two gauge code families = the two
+order-8 groups: doubling/d⁺ = elementary-abelian 𝔽₂^m (additive), border/eQR = cyclic ℤ/q
+(multiplicative); they coincide at ê₈ and split upward (THM-482) — the additive/multiplicative
+temperature axis as code theory. Squaring's two faces: trivial mod 24 vs the chaotic digit
+8-cycle. HONEST: cycle-length-8 = φ(24) is a base-6/base-10 coincidence (base sweep), not
+structural. **REAL PROGRESS — OPEN-Q-061/HYP-2415:** the eQR gauge ladder is extremal Type II
+at q=7,23,31,47 (lengths 8,24,32,48; d=4,8,8,12 = 4⌊n/24⌋+4, verified) and FIRST FAILS at q=71
+(eQR(72) d=12 < extremal 16) = the famous open **[72,36,16]** problem. Order 72 ≡ 8 mod 16 ⟹
+every order-72 skew-Hadamard gauge code is Type II [72,36]; sufficient route = find one with
+d=16 (Paley gives 12). Conjecture: the extremal code, if it exists, is asymmetric (symmetry
+caps gauge distance). Script involution_modulus_happy_cbx4.py; reflection
+the-involution-modulus-and-the-72-36-16-gate-cbx0611s4.md. Task t-0120.
+
+---
+
 ## kind-pasteur-2026-06-11-S2 — GLEASON CONVERGENCE MERGED (THM-481 joint w/ claudebox-S3; eQR identity = Kim–Solé 2008 rediscovery, Gleason framing novel) ⊕ the ZIGZAG LAW (THM-483: HYP-2360 REFUTED, Erdős–Moser #1216 corrected)
 
 **Gleason (THM-481, now joint+merged per MSG-870):** both sessions independently proved the
