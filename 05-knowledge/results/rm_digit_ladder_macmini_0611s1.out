@@ -1,0 +1,63 @@
+========================================================================
+PART A — THE BLUE CODE (THM-477)
+========================================================================
+n=3: m= 1  f=1  dim B= 1  dim B^perp= 0  defect=1 (=f: True)  blue fraction 2^0
+n=4: m= 3  f=1  dim B= 2  dim B^perp= 1  defect=1 (=f: True)  blue fraction 2^-1
+n=5: m= 6  f=2  dim B= 4  dim B^perp= 2  defect=2 (=f: True)  blue fraction 2^-2   recursion b(5) = b(3) + 3: True
+n=6: m=10  f=2  dim B= 6  dim B^perp= 4  defect=2 (=f: True)  blue fraction 2^-4   recursion b(6) = b(4) + 4: True
+n=7: m=15  f=3  dim B= 9  dim B^perp= 6  defect=3 (=f: True)  blue fraction 2^-6   recursion b(7) = b(5) + 5: True
+n=8: m=21  f=3  dim B=12  dim B^perp= 9  defect=3 (=f: True)  blue fraction 2^-9   recursion b(8) = b(6) + 6: True
+n=9: m=28  f=4  dim B=16  dim B^perp=12  defect=4 (=f: True)  blue fraction 2^-12   recursion b(9) = b(7) + 7: True
+  1-vector: sigma(1)=1 so 1 in B (lines pair blue-blue or black-black);
+  1 not in im(1+sigma) when f>=1 (fixed coords of y+sigma(y) are 0). Glue image of 1 = all-ones on hypotenuse.
+
+========================================================================
+PART B — THE 2-ADIC DIGIT LADDER OF H ON THE TILING CUBE (HYP-2406)
+========================================================================
+
+n=4 (m=3, 2^m=8): H range [1,5], digits=3
+  H sigma-invariant (grid transpose): True;  H complement-translation-invariant: False
+  real Walsh degree of H (tiling model): 2  (THM-163 arc-model band limit D = 2; m/2 = 1.5)
+  digit_0: ANF degree =  0   sigma-invariant: True
+  digit_1: ANF degree =  2   sigma-invariant: True
+  digit_2: ANF degree =  3   sigma-invariant: True
+  digit degree sequence d_k(n=4): [0, 2, 3]
+  c3 mod 2 ANF degree = 2 (predicted <= 2)
+
+n=5 (m=6, 2^m=64): H range [1,15], digits=4
+  H sigma-invariant (grid transpose): True;  H complement-translation-invariant: False
+  real Walsh degree of H (tiling model): 4  (THM-163 arc-model band limit D = 4; m/2 = 3.0)
+  digit_0: ANF degree =  0   sigma-invariant: True
+  digit_1: ANF degree =  4   sigma-invariant: True
+  digit_2: ANF degree =  6   sigma-invariant: True
+  digit_3: ANF degree =  5   sigma-invariant: True
+  digit degree sequence d_k(n=5): [0, 4, 6, 5]
+  c3 mod 2 ANF degree = 2 (predicted <= 2)
+
+n=6 (m=10, 2^m=1024): H range [1,45], digits=6
+  H sigma-invariant (grid transpose): True;  H complement-translation-invariant: False
+  real Walsh degree of H (tiling model): 4  (THM-163 arc-model band limit D = 4; m/2 = 5.0)
+  digit_0: ANF degree =  0   sigma-invariant: True
+  digit_1: ANF degree =  4   sigma-invariant: True
+  digit_2: ANF degree =  7   sigma-invariant: True
+  digit_3: ANF degree =  9   sigma-invariant: True
+  digit_4: ANF degree =  9   sigma-invariant: True
+  digit_5: ANF degree = 10   sigma-invariant: True
+  digit degree sequence d_k(n=6): [0, 4, 7, 9, 9, 10]
+  c3 mod 2 ANF degree = 2 (predicted <= 2)
+
+n=7 (m=15, 2^m=32768): H range [1,189], digits=8
+  H sigma-invariant (grid transpose): True;  H complement-translation-invariant: False
+  real Walsh degree of H (tiling model): 6  (THM-163 arc-model band limit D = 6; m/2 = 7.5)
+  digit_0: ANF degree =  0   sigma-invariant: True
+  digit_1: ANF degree =  6   sigma-invariant: True
+  digit_2: ANF degree = 11   sigma-invariant: True
+  digit_3: ANF degree = 15   sigma-invariant: True
+  digit_4: ANF degree = 15   sigma-invariant: True
+  digit_5: ANF degree = 14   sigma-invariant: True
+  digit_6: ANF degree = 15   sigma-invariant: True
+  digit_7: ANF degree = 15   sigma-invariant: True
+  digit degree sequence d_k(n=7): [0, 6, 11, 15, 15, 14, 15, 15]
+  c3 mod 2 ANF degree = 2 (predicted <= 2)
+
+DONE.
