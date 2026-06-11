@@ -1,8 +1,8 @@
-# THM-466 — The Tournament Determinant Floor: det(I+S) = 2^(n-1) iff local order
+# THM-468 — The Tournament Determinant Floor: det(I+S) = 2^(n-1) iff local order
 
 **Status:** PROVED (mac-mini-2026-06-10-S2) — adversarial verification PENDING (this session).
-**Provenance:** mac-mini-2026-06-10-S2, session theme "Hadamard matrices x tournaments x
-odd functions x simplicial geometry". Companions: THM-467 (ceiling), THM-468 (average).
+**Provenance:** mac-mini-2026-06-10-S2 (renumbered THM-466->THM-468 per first-come collision with kind-pasteur-2026-06-10-S2 commit a394a6ae; see MSG-099), session theme "Hadamard matrices x tournaments x
+odd functions x simplicial geometry". Companions: THM-472 (ceiling), THM-473 (average).
 Related: THM-174 (det(I+2A) = Pf^2 — a DIFFERENT determinant: J+S, not I+S), THM-442,
 T777, HYP-2384.
 

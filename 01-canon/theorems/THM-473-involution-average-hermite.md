@@ -1,7 +1,7 @@
-# THM-468 — The Involution Average: E[det(I+S)] = involutions, E[det(xI+S)] = Hermite
+# THM-473 — The Involution Average: E[det(I+S)] = involutions, E[det(xI+S)] = Hermite
 
 **Status:** PROVED (mac-mini-2026-06-10-S2) — adversarial verification PENDING (this session).
-**Provenance:** mac-mini-2026-06-10-S2. Companions: THM-466 (setup), THM-467.
+**Provenance:** mac-mini-2026-06-10-S2 (renumbered THM-468(avg)->THM-473 per first-come collision; see MSG-099). Companions: THM-468 (setup), THM-472 (ceiling).
 Related: HYP-2383/2387, T777, everything-is-the-triangle (Young tableaux mandate).
 
 ## Statement
@@ -52,8 +52,8 @@ SYT count). The x-coefficient extraction at |K| = n (even n) gives E[det S] =
 
 - One identity ties the session's three objects together: the same Pfaffian
   expansion gives the FLOOR 2^(n-1) (all matchings forced to ±1, local orders,
-  THM-466), the CEILING (n+1)^((n-1)/2) (Pfaffian minors as large as skewness
-  allows, DRT/skew-Hadamard, THM-467), and the AVERAGE (matchings counted with
+  THM-468), the CEILING (n+1)^((n-1)/2) (Pfaffian minors as large as skewness
+  allows, DRT/skew-Hadamard, THM-472), and the AVERAGE (matchings counted with
   RSK/Young-tableau weight, this theorem). Floor = circle geometry, ceiling =
   Hadamard geometry, average = tableau combinatorics — all three living on the
   staircase triangle's own objects (matchings, tableaux, involutions).

@@ -1,8 +1,8 @@
-# THM-467 — The Tournament Hadamard Ceiling: det(I+S) maxima are DRT switching classes
+# THM-472 — The Tournament Hadamard Ceiling: det(I+S) maxima are DRT switching classes
 
 **Status:** PROVED (mac-mini-2026-06-10-S2) — adversarial verification PENDING (this session).
-**Provenance:** mac-mini-2026-06-10-S2. Companions: THM-466 (floor, setup and notation),
-THM-468 (average). Related: THM-447/448 (skew tower), THM-213 (Paley Pfaffian),
+**Provenance:** mac-mini-2026-06-10-S2 (renumbered THM-467->THM-472 per first-come collision; see MSG-099). Companions: THM-468 (floor, setup and notation),
+THM-473 (average). Related: THM-447/448 (skew tower), THM-213 (Paley Pfaffian),
 the-drt-engine-is-S-squared-equals-J-minus-nI reflection, HYP-2385.
 
 ## Statement
@@ -46,7 +46,7 @@ S' S'^T = D(S S^T)D = nI - (Dw)(Dw)^T = nI - 𝟙𝟙^T = nI - J, and S'𝟙 = D
 S'² = -(nI - J) = J - nI: the DRT defining identity (canon: the DRT engine
 S² = J - nI; equivalently every vertex has score (n-1)/2 and every dominated-pair
 count is (n-3)/4 — forcing n ≡ 3 mod 4). Conversely a DRT has spectrum
-{0} ∪ {±i√n each (n-1)/2 times}, attaining equality, and by THM-466(2) so does its
+{0} ∪ {±i√n each (n-1)/2 times}, attaining equality, and by THM-468(2) so does its
 whole switching class. Bordering: I+S' extends to a skew-Hadamard matrix of order
 n+1 by adding a ±1 border row/column (Reid–Brown correspondence, canon THM-447
 dictionary), so attainment at n ⟺ skew-Hadamard at n+1.
