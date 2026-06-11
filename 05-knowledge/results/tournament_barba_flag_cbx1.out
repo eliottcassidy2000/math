@@ -1,0 +1,12 @@
+== THM-475: flag(DRT(n-2)) attains 2(n-1)^((n-1)/2) ==
+n=  9 via Paley QR_7              : det(I+S) = 8192 ; target = 8192 ; ATTAINED
+n= 13 via Paley QR_11             : det(I+S) = 5971968 ; target = 5971968 ; ATTAINED
+n= 17 via doubling-tower DRT(15)  : det(I+S) = 8589934592 ; target = 8589934592 ; ATTAINED
+n= 25 via Paley QR_23             : det(I+S) = 73040694872113152 ; target = 73040694872113152 ; ATTAINED
+n= 29 via GF(27)-Paley            : det(I+S) = 364118239659885068288 ; target = 364118239659885068288 ; ATTAINED
+
+== doubling corollary: det(I+S_D(T)) = 2^n det(I+S_T)^2 ==
+n=9: det = 8192; double(2n=18): det = 34359738368; 2^n*det^2 = 34359738368; OK
+n=13: det = 5971968; double(2n=26): det = 292162779488452608; 2^n*det^2 = 292162779488452608; OK
+
+all checks passed

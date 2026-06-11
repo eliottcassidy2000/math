@@ -1,0 +1,15 @@
+== THM-476 witnesses (exact Bareiss) ==
+n=14: 2n-3 = 25 = 5^2; det = 77635584; EW = 77635584; ATTAINED: True
+n=26: 2n-3 = 49 = 7^2; det = 1826017371802828800; EW = 1826017371802828800; ATTAINED: True
+n=62: 2n-3 = 121 = 11^2; det = 26971018205929469663772672000000000000000000000000000000; EW = 26971018205929469663772672000000000000000000000000000000; ATTAINED: True
+
+== HYP-2405: n=10 best known (EW impossible: 17 not a square) ==
+det = 64000 = 2^9*125; EW(10) = 73728 (unattainable by THM-476)
+SS^T char poly == (x^2-18x+61)^4 (x-9)^2: True  (eigenvalues 9 +- 2*sqrt(5) in Q(sqrt 5))
+
+== search reproduction (multiplier-symmetric two-circulant) ==
+m=13 (n=26) H_a=3 H_b=3: FOUND
+m=31 (n=62) H_a=3 H_b=3: FOUND
+m=43 (n=86): NONE under multiplier symmetry orders [21, 7, 3] (negative result; first open order n=86 resists this ansatz)
+
+all checks passed
