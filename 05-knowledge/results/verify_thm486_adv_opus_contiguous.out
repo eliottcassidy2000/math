@@ -1,0 +1,18 @@
+Contiguous scan m=140..154 (first negative should be 154):
+  m=140 n=3360: min_coeff=pos (0)
+  m=141 n=3384: min_coeff=pos (0)
+  m=142 n=3408: min_coeff=pos (0)
+  m=143 n=3432: min_coeff=pos (0)
+  m=144 n=3456: min_coeff=pos (0)
+  m=145 n=3480: min_coeff=pos (0)
+  m=146 n=3504: min_coeff=pos (0)
+  m=147 n=3528: min_coeff=pos (0)
+  m=148 n=3552: min_coeff=pos (0)
+  m=149 n=3576: min_coeff=pos (0)
+  m=150 n=3600: min_coeff=pos (0)
+  m=151 n=3624: min_coeff=pos (0)
+  m=152 n=3648: min_coeff=pos (0)
+  m=153 n=3672: min_coeff=pos (0)
+  m=154 n=3696: min_coeff=NEG (-11637018866635991837618752709870666653199459658927646824210731724139657838402390459730778482291968014162134474715839836541730191811082241645668488393806645695060200253625)
+FIRST negative m = 154 (claim: 154)
+MATCH: True

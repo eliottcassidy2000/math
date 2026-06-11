@@ -1,0 +1,74 @@
+======================================================================
+CLAIM (1): extremal Type II enumerators at m=1,2,3
+======================================================================
+
+m=1 (n=24): c = ['1', '-42']
+  computed W = {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+  expected   = {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
+  MATCH GOLAY: True
+
+m=2 (n=48): c = ['1', '-84', '246']
+  full W = {0: 1, 12: 17296, 16: 535095, 20: 3995376, 24: 7681680, 28: 3995376, 32: 535095, 36: 17296, 48: 1}
+  min nonzero weight = 12  (expected 12)
+  A_12 = 17296  (expected 17296)
+  MATCH m=2: True
+
+m=3 (n=72): c = ['1', '-126', '3015', '-4398']
+  full W = {0: 1, 16: 249849, 20: 18106704, 24: 462962955, 28: 4397342400, 32: 16602715899, 36: 25756721120, 40: 16602715899, 44: 4397342400, 48: 462962955, 52: 18106704, 56: 249849, 72: 1}
+  min nonzero weight = 16  (expected 16)
+  A_16 = 249849  (expected 249849)
+  all coefficients positive: True
+  MATCH m=3: True
+
+>>> CLAIM (1) overall: True
+
+======================================================================
+CLAIM (2): c_1(m) = -42 m exactly, m=1..8
+======================================================================
+  m=1: c_1 = -42  expected -42  -> True
+  m=2: c_1 = -84  expected -84  -> True
+  m=3: c_1 = -126  expected -126  -> True
+  m=4: c_1 = -168  expected -168  -> True
+  m=5: c_1 = -210  expected -210  -> True
+  m=6: c_1 = -252  expected -252  -> True
+  m=7: c_1 = -294  expected -294  -> True
+  m=8: c_1 = -336  expected -336  -> True
+
+>>> CLAIM (2) numeric: True
+
+  one-line-proof ingredients:
+    A_4(g24) = 1  (expect 1)
+    A_4(g8^{3*1}) = 42  (expect 42*1=42) -> True
+    A_4(g8^{3*2}) = 84  (expect 42*2=84) -> True
+    A_4(g8^{3*3}) = 126  (expect 42*3=126) -> True
+  proof identity (A_4(g8^3m)=42m and A_4(g24)=1): True
+>>> CLAIM (2) overall: True
+
+======================================================================
+CLAIM (3): first negative coefficient at n=24m occurs at m=154
+======================================================================
+
+Spot checks (should all be POSITIVE, has_negative=False):
+  m=  3 (n=  72): has_negative=False  min_coeff(A_0)=1
+  m= 10 (n= 240): has_negative=False  min_coeff(A_0)=1
+  m= 50 (n=1200): has_negative=False  min_coeff(A_0)=1
+  m=100 (n=2400): has_negative=False  min_coeff(A_0)=1
+  m=150 (n=3600): has_negative=False  min_coeff(A_0)=1
+  m=152 (n=3648): has_negative=False  min_coeff(A_0)=1
+  m=153 (n=3672): has_negative=False  min_coeff(A_0)=1
+
+Critical point m=154:
+  m=154 (n=3696): has_negative=True  min_coeff(A_624)=-11637018866635991837618752709870666653199459658927646824210731724139657838402390459730778482291968014162134474715839836541730191811082241645668488393806645695060200253625
+
+  m=153 all positive: True
+  m=154 has negative: True
+>>> CLAIM (3) overall (threshold at n=3696): True
+
+======================================================================
+SUMMARY
+======================================================================
+  CLAIM (1) [m=1,2,3 enumerators]: True
+  CLAIM (2) [c_1(m) = -42m]:       True
+  CLAIM (3) [first neg at n=3696]: True
+
+  ALL THREE CONFIRMED: True

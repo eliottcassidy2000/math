@@ -1,0 +1,19 @@
+==============================================================================
+Resolving near-boundary hard sets via winding-DIFFERENCE vs Euler
+  Kmax=40; D(r)=w(F_S,r)-w(F_Euler,r); artifacts cancel
+==============================================================================
+
+winding(Euler^trunc) along the sweep (the artifact baseline):
+   r=0.93:0  r=0.95:0  r=0.96:6  r=0.97:-129  r=0.98:-6  r=0.985:-104  r=0.99:48  r=0.995:90  r=0.999:366
+
+Near-boundary candidates (winding 0 at r=0.93, B>=0): 4
+  [OK] S={1, 3, 5, 7, 9} B=+5: D>=1 first at r=0.95 (D=8); z=-0.46344+0.81963j |z|=0.94158 res=2.5e-16
+  [OK] S={1, 3, 5, 7, 9, 10} B=+4: D>=1 first at r=0.95 (D=8); z=-0.47857-0.80499j |z|=0.93650 res=2.8e-17
+  [OK] S={1, 3, 5, 7, 9, 11} B=+6: D>=1 first at r=0.95 (D=2); z=-0.49335-0.81636j |z|=0.95386 res=1.5e-13
+  [OK] S={1, 3, 5, 7, 9, 12} B=+4: D>=1 first at r=0.95 (D=8); z=-0.46327+0.82029j |z|=0.94207 res=2.2e-16
+
+==============================================================================
+resolved (genuine interior zero certified): 4/4
+ALL near-boundary hard sets carry a genuine interior zero.
+=> NO counterexample. Rigidity holds on |S|<=6, k<=12.
+=== TOTAL 49.4s ===

@@ -186,39 +186,59 @@ class SignStream:
 # Verification: reproduce the deterministic landmarks.
 # ----------------------------------------------------------------------------
 
-def verify_deterministic(max_m_neg=170):
+def det_signs(m):
+    c = extremal_cj(m)
+    return [1 if cj >= 0 else -1 for cj in c]
+
+
+def verify_deterministic(window_m=60, full_neg_search=False, max_m_neg=170):
+    """Reproduce THM-486 landmarks and confirm the deterministic extremal
+    enumerator stays NONNEGATIVE through the random experiment's window (m<=window_m).
+    The full first-negativity n=3696 (m=154) is PROVED/verified in THM-486 part C;
+    re-deriving it costs a degree-3696 polynomial sweep, so we only optionally redo
+    it (full_neg_search=True). Returns (det_n, det_m) for the first negativity:
+    the cited 3696 if not re-derived, or the recomputed value if full_neg_search."""
     print("=== (V) deterministic sanity (mirrors THM-486 build) ===", flush=True)
-    # Golay at m=1
-    c1 = extremal_cj(1)
-    W24 = assemble(1, [1, 1])  # deterministic uses true signs; here |c|*sign,
-    # but for verification we want the TRUE deterministic enumerator -> use sign = sign(c_j)
-    def det_signs(m):
-        c = extremal_cj(m)
-        return [1 if cj >= 0 else -1 for cj in c]
     W24 = assemble(1, det_signs(1))
     golay = {0: 1, 8: 759, 12: 2576, 16: 759, 24: 1}
     print(f"   m=1 Golay match: {W24 == golay}", flush=True)
     W72 = assemble(3, det_signs(3))
     print(f"   m=3 A_16 = {W72.get(16)} (Sloane 249849): {W72.get(16) == 249849}", flush=True)
     print(f"   m=3 all coeffs positive: {all(v > 0 for v in W72.values())}", flush=True)
-    # c_1(m) = -42m
     ok = all(extremal_cj(m)[1] == -42 * m for m in range(1, 12))
     print(f"   c_1(m) = -42m for m=1..11: {ok}", flush=True)
-    # first deterministic negativity
-    first = None
-    for m in range(1, max_m_neg):
+
+    # Confirm: deterministic extremal enumerator has NO negativity through window_m.
+    det_neg_in_window = None
+    for m in range(1, window_m + 1):
         W = assemble(m, det_signs(m))
         if has_negative(W):
-            w = first_negative_weight(W)
-            first = (24 * m, m, w, W.get(w))
+            det_neg_in_window = m
             break
-    if first:
-        n, m, w, v = first
-        print(f"   DETERMINISTIC first negativity: n={n} (m={m}), weight {w}, "
-              f"value {v}  -- Zhang n=3696 (m=154): {n == 3696}", flush=True)
+    if det_neg_in_window is None:
+        print(f"   DETERMINISTIC extremal enumerator: ALL coeffs >= 0 through "
+              f"m={window_m} (n={24*window_m}) -- negativity only at the cited "
+              f"Zhang threshold n=3696 (m=154), THM-486 part C", flush=True)
     else:
-        print(f"   no deterministic negativity in m<{max_m_neg} (extend)", flush=True)
-    return first
+        print(f"   (!) deterministic negativity at m={det_neg_in_window} "
+              f"(unexpected vs THM-486 n=3696)", flush=True)
+
+    if full_neg_search:
+        first = None
+        for m in range(1, max_m_neg):
+            W = assemble(m, det_signs(m))
+            if has_negative(W):
+                first = (24 * m, m, first_negative_weight(W))
+                break
+        if first:
+            n, m, w = first
+            print(f"   DETERMINISTIC first negativity (recomputed): n={n} (m={m}), "
+                  f"weight {w} -- Zhang n=3696: {n == 3696}", flush=True)
+            return n, m
+        print(f"   no deterministic negativity in m<{max_m_neg}", flush=True)
+        return None, None
+    # cite THM-486
+    return 3696, 154
 
 
 # ----------------------------------------------------------------------------
@@ -304,17 +324,16 @@ def main():
     print("# deterministic extremal first-negativity: n=3696 (m=154)", flush=True)
     print("############################################################", flush=True)
 
-    det = verify_deterministic(max_m_neg=170)
-
     # Parameters: prompt asks m up to ~60, many seeds.
     MAX_M = 60
     N_SEEDS = 400
+
+    det_n, det_m = verify_deterministic(window_m=MAX_M, full_neg_search=False)
 
     res_prefix, none_p = run_experiment(N_SEEDS, MAX_M, mode='prefix')
     res_fresh, none_f = run_experiment(N_SEEDS, MAX_M, mode='fresh')
 
     print("\n=== COMPARISON / READOUT (exploratory) ===", flush=True)
-    det_n = det[0] if det else None
     print(f"   deterministic extremal first negativity: n = {det_n} "
           f"(m = {det_n//24 if det_n else '?'})", flush=True)
     for label, res, none_c in (('prefix', res_prefix, none_p),

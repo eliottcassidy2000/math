@@ -1,10 +1,14 @@
 # THM-485: the pentagonal Lyapunov gap and the sign-rigidity of Euler's recurrence
 
 **Status:** Part A (zero-free characterization) PROVED forward + reverse IVT-half;
-reverse closed COMPUTATIONALLY (k ≤ 8, |S| ≤ 5: 218/218; K=10 growth sweep:
-1023/1024). Part B (Lyapunov constants) COMPUTED, method VALIDATED against
+reverse HARD HALF (B(S) ≥ 0) CERTIFIED by the argument principle (exact winding
+numbers) on |S| ≤ 6, k ≤ 12 — 1585/1585, 0 counterexamples, with the
+truncation-artifact correction; earlier passes 218/218 (k≤8,|S|≤5) and K=10 sweep
+1023/1024. Part B (Lyapunov constants) COMPUTED, method VALIDATED against
 Viswanath. Scripts `04-computation/pentagonal_lyapunov_kps3_0611.py`,
-`pentagonal_rigidity_proof_kps3_0611.py` (+ .out, + K10 comparative .out).
+`pentagonal_rigidity_proof_kps3_0611.py`, `rigidity_winding_kps_0611.py`,
+`rigidity_winding_diag_kps_0611.py`, `rigidity_winding_stress_kps_0611.py`,
+`rigidity_winding_boundary_kps_0611.py` (+ .out).
 **Source:** kind-pasteur-2026-06-11-S3 (HYP-2416/2417/2418). Continues the repo's
 random-sign Lyapunov theme (HYP-614, Viswanath/Embree–Trefethen) and feeds the
 code bridge (THM-487).
@@ -43,18 +47,47 @@ F_Euler(1) = 0):
 If Σ_{k∈S}(−1)^{k+1} < 0 then F_ε(1) < 0, while F_ε(0) = 1 > 0; by the
 intermediate value theorem F_ε has a real zero in (0,1), so rate(ε) > 0. ∎
 
-**Reverse, the remaining patterns (COMPUTATIONAL closure).** For S with
-Σ_{k∈S}(−1)^{k+1} ≥ 0 the boundary value is non-negative and an interior zero —
-when present — is complex. Exhaustive check (script part 2): EVERY nonempty flip
-set on k ≤ 8 with |S| ≤ 5 (218 sets) has a zero in the open disk (real root, or
-a Newton-polished complex zero of modulus < 1); zero exceptions. Independently,
-the K=10 growth sweep (all 1024 sign patterns on the first 10 pairs, Euler
-continuation beyond) found exactly ONE subexponential pattern — Euler's — with
-α-quantiles min 0.0009 (Euler), 1% 0.094, median 0.245, max 0.548. The reverse
-direction is thus proved for the sign-of-boundary half and verified with no
-counterexample on the rest; a fully analytic proof (every finite perturbation of
-Π(1−x^n) acquires an interior zero) is the open residue — **HYP-2417 stays
-PARTIAL pending it**.
+**Reverse, the hard half (B(S) ≥ 0) — ARGUMENT-PRINCIPLE CERTIFICATION
+(kind-pasteur-2026-06-11 winding run).** For S with B(S) = Σ_{k∈S}(−1)^{k+1} ≥ 0
+the boundary value F_ε(1) ≥ 0 and an interior zero — when present — is complex,
+so the IVT is silent. We CERTIFY interior zeros with the argument principle: the
+number of zeros of F_S strictly inside |x| = r equals the winding number of the
+image curve F_S(r e^{iθ}) about 0, an EXACT integer (computed by adaptively
+refined accumulated-argument summation — every step kept below π/4 so no 2π jump
+aliases), not a heuristic grid minimum. Result: on the much larger family
+**|S| ≤ 6, k ≤ 12, every one of the 1585 hard-half sets carries a certified
+interior zero; zero counterexamples** (smaller pass: 255/255 on |S|≤4, k≤10).
+
+*The truncation-artifact correction (the load-bearing subtlety).* The naive
+winding count of the TRUNCATED pentagonal polynomial is NOT trustworthy near the
+boundary: the partial sum approximates Π_{n≤N}(1−x^n), whose zeros are roots of
+unity ON |x| = 1, and these leak inside as r → 1. Concretely winding(F_Euler^trunc)
+jumps from 0 (true value, since Π(1−x^n) is zero-free in the disk) to 19, 41, 48
+as r crosses 0.95 → 0.97 → 0.99. So a high-r winding count over-counts by the
+artifact. The honest certificate uses two devices:
+ (i) a **truncation-safe annulus** — at Kmax ≥ 20 the truncated Euler product has
+     winding EXACTLY 0 for all r ≤ 0.95 (verified table), so a winding ≥ 1 there
+     certifies a GENUINE zero of modulus < r < 1 of the true F_S;
+ (ii) the **winding-difference** D(r) = w(F_S, r) − w(F_Euler, r) at the same r,
+     which cancels the shared high-degree artifact zeros (F_S and F_Euler differ
+     only in finitely many low coefficients, k ∈ S), for the handful of sets whose
+     zero sits in the boundary annulus 0.95 < |x| < 1.
+Exactly **4 sets** (on |S|≤6,k≤12) have their zero in the near-boundary annulus,
+all supported on small odd k — {1,3,5,7,9}, {1,3,5,7,9,10}, {1,3,5,7,9,11},
+{1,3,5,7,9,12}. Each is resolved by D(r) ≥ 1 at r = 0.95 AND by an explicit
+Newton-polished complex zero of modulus 0.937–0.954 < 1 (residual ~1e-16). The
+structural signature: flipping signs on the smallest odd k pushes the interior
+zero toward |x| = 1 but never onto or outside it.
+
+Independently, the K=10 growth sweep (all 1024 sign patterns on the first 10
+pairs) found exactly ONE subexponential pattern — Euler's — with α-quantiles min
+0.0009 (Euler), 1% 0.094, median 0.245, max 0.548. The reverse direction is thus
+PROVED for the sign-of-boundary half (B(S) < 0) and CERTIFIED with no counter-
+example for the hard half on |S| ≤ 6, k ≤ 12; a fully analytic all-n proof (every
+finite perturbation of Π(1−x^n) acquires an interior zero) is the open residue —
+**HYP-2417 stays PARTIAL pending it** (proof sketch in the Honesty section).
+Scripts: `rigidity_winding_kps_0611.py`, `_diag_`, `_stress_`, `_boundary_`
+(+ .out in 05-knowledge/results/).
 
 **Reading.** The rigidity is the *analytic shadow of the product formula*: among
 all sign-decorated pentagonal series, Euler's is the unique one that is a genuine
@@ -101,9 +134,33 @@ depth 0, where only parity survives).
 
 ## Honesty
 
-- Theorem A reverse is PROVED only for Σ_{k∈S}(−1)^{k+1} < 0; the rest is
-  computational (k ≤ 8, |S| ≤ 5, and the K=10 sweep). HYP-2417 = the analytic
+- Theorem A reverse is PROVED only for Σ_{k∈S}(−1)^{k+1} < 0; the hard half is
+  CERTIFIED by the argument principle (exact integer winding numbers) on
+  |S| ≤ 6, k ≤ 12 — 1585/1585, 0 counterexamples — with the truncation-artifact
+  correction (safe annulus r ≤ 0.95 at Kmax ≥ 20, plus winding-difference for the
+  4 near-boundary sets, all with an explicit |z|<1 Newton witness). This is
+  finite-family certification, not an all-n proof. HYP-2417 = the analytic
   completion.
+
+- **Proof sketch toward the analytic completion (defensible, not yet a proof).**
+  Write F_S = F_Euler + 2 Σ_{k∈S}(−1)^{k+1}(x^{g_k}+x^{ḡ_k}) =: F_Euler + P_S(x),
+  a finite polynomial perturbation. F_Euler = Π(1−x^n) vanishes to INFINITE order
+  at x = 1 in the sense that all derivatives are dominated by the essential
+  singularity; on the boundary it has a dense set of near-zeros at roots of unity.
+  The empirical pattern (all certified zeros cluster at modulus 0.94–0.99 for the
+  hard sets, deeper for the easy ones) says the perturbation P_S — which is O(1)
+  near x = 1 while F_Euler → 0 — DOMINATES F_Euler in a boundary collar, so the
+  zero set of F_S there is governed by P_S = −F_Euler, i.e. by where the finite
+  polynomial P_S meets the rapidly-decaying Euler product. A Rouché argument on a
+  contour |x| = 1 − δ(S) would close it IF one can show |P_S| > |F_Euler| on that
+  contour for the hard half (B(S) ≥ 0) — true pointwise in the data but needing a
+  uniform lower bound on |P_S| over the circle (P_S is a sparse pentagonal
+  polynomial; its minimum modulus on |x| = 1−δ is the obstruction). The clean
+  statement to target: *for B(S) ≥ 0, F_Euler has no zero in 1−δ ≤ |x| < 1 but
+  F_S does, because P_S is a nonzero finite pentagonal polynomial whose own zero
+  structure forces a sign/phase configuration F_Euler cannot cancel.* The IVT half
+  is the B(S) < 0 special case where this collapses to the real axis. Hurwitz/Rouché
+  is the right machine; the missing lemma is the uniform |P_S| bound.
 - γ_pent, γ₊ are float estimates with seeded reproducibility; γ_pent's error bar
   is the across-run std (8 runs, N = 20000), not a rigorous interval.
 - The β ≈ π√(2/3) recovery of the Hardy–Ramanujan exponent is a regression

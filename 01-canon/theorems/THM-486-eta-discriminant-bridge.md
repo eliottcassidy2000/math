@@ -96,3 +96,20 @@ positivity. This is the precise sense in which "random-sign Lyapunov × pentagon
 **Cross-refs:** THM-485 (the Lyapunov/rigidity side), THM-481/484 (Gleason/Paley),
 THM-487 (the 72 frame, which uses part C's n = 3696 ≫ 72), HYP-2419 (PROVED here),
 HYP-2420 (CORRECTED here), MOS 1975 / Zhang 1999 / Jenkins–Rouse 2011.
+
+## E. The code-side rigidity mirror (exploratory, HYP-2422)
+
+The deterministic extremal sign-alternation (the c_j of part B) is to the
+extremal enumerator what Euler's alternation is to the partition function: it
+MAXIMALLY DELAYS the sign change. Keeping the exact extremal magnitudes |c_j| but
+randomizing their signs (iid ±1, c_0 = +1 fixed), the first length n = 24m with a
+negative weight-enumerator coefficient has median ≈ 120 (fresh signs per m, 400
+seeds, all negative by m = 60) or ≈ 168 (one coherent random correction stream) —
+the deterministic n = 3696 (THM-486 C) is a ~20–40× outlier in the far tail, and
+~25% of seeds go negative already at n = 48 (m = 2). Robust under an independent
+RNG (600/600). Same shared engine (the P₂₄ ≈ 16Δ = η²⁴ correction stream),
+positivity decided by the SIGNS, the deterministic alternation precisely tuned to
+keep coefficients non-negative the longest. This is the code-side avatar of
+THM-485 A's "Euler signs are the unique subexponential pattern." Honest scope:
+computational over m ≤ 60, evidence not proof; a ~6% never-negative prefix tail
+to probe at larger m. Script `04-computation/random_extremal_enumerator_kps3_0611.py`.
