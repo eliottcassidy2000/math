@@ -4,6 +4,27 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S7 (close) — C′(14) is NOT C′(5)-on-the-3-core ∪ the mod-2/mod-7 fiber: the band ladder, fibered shells, and the stranger dodge (THM-492, HYP-2438)
+
+**User dispatch (= t-0122 / HYP-2436 Test 3):** does C′(14) reduce exactly to C′(5)-on-the-3-core ∪
+THM-421 fiber? **ANSWER: NO, both directions, exact.** (1) DEGENERATION LEMMA: the 27→9 descent
+rescales modulus not threshold — for 3|v, 27∤v, unit a: ‖va/27‖ ≥ 1/9 > 1/14 ⟹ at level 1/14 the
+3-core owes ONLY divisibility (band {0}), never C′(5)'s {0,±1}; bands agree only n∈{5..9}. Witness:
+{1..12,28} has core÷3 = tight n=5 AP yet M=1/13 loose. (2) BAND LADDER: t=a/q witness ⟺ va mod q
+avoids ±⌊q/14⌋; horizon = rungs (k+1)n−1 (27, 41, …), not a wall; fibered shells q=dm (d|14) put the
+d-core in its own shell-m problem (divisor-only for m≤13: q=91 hands the 7-core to proven LRC(13)) —
+THM-421 clocks, S643 windows, the 3-tower = ONE lattice Q={dm: d|14, m≤27}. (3) FAMILY THEOREM:
+S(r)=7·{1..12}∪{r} all loose (r>1092 by Cor B2 on the STRANGER; 936 small exhaustive); five evaders
+r∈{611,702,793,962,1053} (13|r, r≡0,±10 mod 27) block ALL band-1 shells AND B′-on-every-multiple-of-14
+— first configs past the 2n−1 horizon, caught at q∈{40,41} = one rung up. S622-era toolkit has a
+NONEMPTY residual; the dodge target must be ANY runner. (4) Primitivity: C′ needs gcd(S)=1
+(2·{1..13} ∋ 14, tight). **HYP-2438:** Q ∪ B′(any) closes C′(14); proof program = blocking-height
+resource accounting (13 runners can't climb the ladder forever). 688/688 joint failures Q-certified;
+adversarial best 44/76 of Q blocked. Scripts lrc14_*_cbx7.py; reflection
+the-band-ladder-not-cprime5-cbx0611s7.md. Tasks t-0123/0124/0125.
+
+---
+
 ## claudebox-2026-06-11-S6 (close) — LRC n=14 vs n=19 IS the ramification-tower depth; the freed-clock formula; the magma substance (THM-491, HYP-2436/2437)
 
 **User dispatch:** LRC n=14 ↔ n=19, recursive reframes, formula-predictable sub-aspects, the

@@ -1,0 +1,9 @@
+criterion check (||va/q|| > 1/14 <-> (va mod q) outside +-floor(q/14)): mismatches = 0
+fibered lattice Q (d|14, m<=27): 76 moduli, max 378
+joint failures regenerated: 688
+minimal witness moduli histogram: {4: 2, 5: 13, 6: 9, 8: 28, 10: 51, 11: 36, 12: 12, 13: 475, 15: 5, 16: 4, 17: 8, 19: 5, 22: 28, 23: 7, 25: 1, 40: 3, 41: 1}
+minimal modulus already in Q: 687/688
+covered by SOME Q-modulus:    688/688
+adversarial lattice blocking: best blocked 44/76 Q-moduli
+  config: [42, 50, 54, 56, 80, 88, 117, 119, 253, 377, 756, 1365, 1368]
+  first unblocked Q-moduli: [26, 30, 32, 34, 46, 48, 49, 52, 70, 77]

@@ -1,0 +1,25 @@
+deep joint failures (min witness modulus > 27): 4
+  S = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 351]
+    min witness modulus = 40; shells<=27: None; B'(mult-14): True (v=84); B'(any v): True (v=63)
+    HYP-2197 [shells<=27 u B'(mult14)] covers it: True
+  S = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 611]
+    min witness modulus = 41; shells<=27: None; B'(mult-14): False (v=None); B'(any v): True (v=611)
+    HYP-2197 [shells<=27 u B'(mult14)] covers it: False
+  S = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 793]
+    min witness modulus = 40; shells<=27: None; B'(mult-14): False (v=None); B'(any v): True (v=793)
+    HYP-2197 [shells<=27 u B'(mult14)] covers it: False
+  S = [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 1053]
+    min witness modulus = 40; shells<=27: None; B'(mult-14): False (v=None); B'(any v): True (v=1053)
+    HYP-2197 [shells<=27 u B'(mult14)] covers it: False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 1313] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 1495] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 1755] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 2015] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 2197] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 2717] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 2899] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 3159] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 3419] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 3601] minq=40 B'14=False
+  EXTRA candidate vs HYP-2197: [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 3861] minq=40 B'14=False
+extended fam1 scan r<4000: HYP-2197-violating candidates = 11

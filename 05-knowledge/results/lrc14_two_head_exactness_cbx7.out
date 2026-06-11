@@ -1,0 +1,51 @@
+========================================================================
+PART 0 - primitivity is essential in C'(14) as stated
+S = 2*{1..13} = [2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 22, 24, 26]
+  contains 14: True;  gcd = 2;  M(S) = 1/14 (= 1/14: True) at t = 1/28
+  => 'multiple of 14 => loose' is FALSE without gcd(S)=1; C' must read PRIMITIVE.
+========================================================================
+PART 1 - the 3-core degeneration lemma (exhaustive over residues)
+  ||v*a/27|| >= 1/9 for all 3|v, 27 nmid v, all units a: violations = 0
+  descended shell-9 forbidden band at level 1/14: +-[0]  (divisor condition only)
+  C'(5) shell-9 forbidden band at level 1/5:      +-[0, 1]   (genuine +-1 structure)
+  => the descent DEGENERATES at 1/14: the 3-core head is the divisor tower {3,9,27},
+     NOT C'(5). Bands agree only for 1/n in [1/9, 2/9), i.e. n in 5..9. n=14 is past it.
+========================================================================
+PART 2 - C'(5)-on-the-core is NOT necessary: core tight as n=5, config loose
+  core/3 = [1,2,3,4]: M = 1/5 (tight as n=5 problem: True)
+  S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 28]
+  head B (3-tower): True, twist t = 2/27
+    certified: min_v ||v t|| = 2/27 > 1/14: True
+  exact M(S) = 1/13 > 1/14: True  (witness t* = 1/13, shell 13)
+  => the 3-core can be C'(5)-TIGHT while C'(14) looseness holds: not necessary.
+========================================================================
+PART 3 - hunting primitive mult-of-14 configs failing BOTH heads
+family 1 (7*{1..12} + r, r<1200): joint failures = 49
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 179]  M=1/13  t*=3/91 (shell 91)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 199]  M=1/13  t*=1/91 (shell 91)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 233]  M=1/13  t*=1/91 (shell 91)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 243]  M=1/13  t*=1/91 (shell 91)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 253]  M=1/13  t*=1/91 (shell 91)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 297]  M=1/13  t*=1/91 (shell 91)  loose: True
+family 2 (14*{1..6} u odd-7-mults u {54} u r): joint failures = 451
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 141]  M=1/9  t*=1/63 (shell 63)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 151]  M=1/9  t*=1/63 (shell 63)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 155]  M=1/9  t*=1/63 (shell 63)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 165]  M=1/9  t*=1/63 (shell 63)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 169]  M=1/9  t*=1/63 (shell 63)  loose: True
+  [7, 14, 21, 28, 35, 42, 49, 54, 56, 70, 77, 84, 171]  M=1/9  t*=1/63 (shell 63)  loose: True
+family 3 (random, 4000 primitive tries): joint failures = 188
+  [7, 14, 27, 28, 31, 35, 37, 39, 75, 91, 98, 112, 126]  M=3/16  t*=53/224 (shell 224)  loose: True
+  [4, 7, 14, 28, 44, 49, 50, 52, 67, 84, 91, 98, 108]  M=1/5  t*=3/35 (shell 35)  loose: True
+  [7, 14, 21, 27, 50, 56, 58, 63, 74, 101, 112, 118, 119]  M=9/53  t*=3/53 (shell 53)  loose: True
+  [7, 14, 21, 27, 37, 47, 77, 91, 98, 99, 112, 115, 119]  M=21/118  t*=27/118 (shell 118)  loose: True
+  [14, 25, 28, 35, 49, 70, 73, 77, 100, 102, 108, 109, 112]  M=34/179  t*=60/179 (shell 179)  loose: True
+  [7, 14, 21, 27, 28, 54, 56, 70, 77, 84, 91, 98, 126]  M=1/8  t*=1/16 (shell 16)  loose: True
+  [7, 14, 35, 36, 40, 41, 54, 64, 72, 77, 89, 119, 126]  M=20/113  t*=12/113 (shell 113)  loose: True
+  [11, 14, 21, 38, 42, 49, 66, 74, 77, 86, 91, 108, 119]  M=6/25  t*=17/150 (shell 150)  loose: True
+========================================================================
+TOTAL joint failures found: 508
+  all loose (C' holds on them): True
+  witness shells (denominators of t*): [13, 16, 35, 53, 63, 91, 113, 118, 150, 179, 224]
+  => the union [C'(5)-3-core head] u [THM-421 fiber head] is NOT sufficient:
+     these configs are loose only via witnesses OUTSIDE both heads.

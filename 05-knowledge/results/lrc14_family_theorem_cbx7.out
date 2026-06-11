@@ -1,0 +1,13 @@
+family S(r)=7*{1..12} u {r}, valid r <= 1092: 936 instances
+  all loose (exact band-criterion witness found, q <= 600): 936/936
+  max minimal witness modulus over the family: 41
+  evaders of [shells m<=27 u B'(mult-of-14)]: 5
+  evader list (r, min q): [(611, 41), (702, 41), (793, 40), (962, 40), (1053, 40)]
+  evader signatures (r, r mod 13, r mod 27): [(611, 0, 17), (702, 0, 0), (793, 0, 10), (962, 0, 17), (1053, 0, 0)]
+  every evader's minimal modulus in the band-2 range [28, 3n-1=41]: True
+
+THEOREM (family): every valid S(r) is loose —
+  r > 1092: THM-398 Cor B2, dominance dodge on the STRANGER r (r > 13*84 = (n-1)V').
+  r <= 1092: exhaustively verified above (936 instances, exact).
+  The evaders prove: [twisted shells m <= 2n-1] u [B' restricted to multiples of n]
+  has a NONEMPTY residual at n=14; the residual is caught exactly one band-rung up.

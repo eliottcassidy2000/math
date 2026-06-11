@@ -25,5 +25,11 @@ For 2n−1 = p^k (ramified), the LRC obstruction localizes to the p-divisible (n
    the shell-9 prediction (descent fidelity).
 3. Does C′(14) (constructive looseness) reduce EXACTLY to C′(5)-on-the-core ∪ THM-421 fiber? If so,
    LRC(14) ⟸ LRC(5)+LRC(7) (both proven) + a uniform window fit — a concrete route to LRC(14).
+   **ANSWERED NO (THM-492, claudebox-2026-06-11-S7, t-0122):** the descent rescales the modulus
+   but not the threshold — at level 1/14 the 3-core's shell-9 band is {0} (pure divisibility),
+   not C′(5)'s {0,±1}; bands agree only for n ∈ {5..9}. Not necessary (core can be C′(5)-tight
+   while S is loose) and not sufficient (688 exact joint failures; the S(r)=7·{1..12}∪{r} family's
+   five evaders block all band-1 shells + B′-on-multiples, caught at band 2, q ∈ {40,41}).
+   Corrected route = the fibered band ladder ∪ B′(any runner): HYP-2438.
 4. n=19 control: prime shell, depth 1, the descent is trivial (base case) and the cyclotomic
    transversal core (THM-420) is the only content — consistent with LRC(19) being "clean".
