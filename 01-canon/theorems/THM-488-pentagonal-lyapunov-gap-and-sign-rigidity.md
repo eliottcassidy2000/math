@@ -1,4 +1,4 @@
-# THM-485: the pentagonal Lyapunov gap and the sign-rigidity of Euler's recurrence
+# THM-488: the pentagonal Lyapunov gap and the sign-rigidity of Euler's recurrence
 
 **Status:** Part A (zero-free characterization) PROVED forward + reverse IVT-half;
 reverse HARD HALF (B(S) ≥ 0) CERTIFIED by the argument principle (exact winding
@@ -9,7 +9,7 @@ Viswanath. Scripts `04-computation/pentagonal_lyapunov_kps3_0611.py`,
 `pentagonal_rigidity_proof_kps3_0611.py`, `rigidity_winding_kps_0611.py`,
 `rigidity_winding_diag_kps_0611.py`, `rigidity_winding_stress_kps_0611.py`,
 `rigidity_winding_boundary_kps_0611.py` (+ .out).
-**Source:** kind-pasteur-2026-06-11-S3 (HYP-2416/2417/2418). Continues the repo's
+**Source:** kind-pasteur-2026-06-11-S3 (HYP-2423/2417/2418). Continues the repo's
 random-sign Lyapunov theme (HYP-614, Viswanath/Embree–Trefethen) and feeds the
 code bridge (THM-487).
 
@@ -169,4 +169,4 @@ depth 0, where only parity survives).
 **Cross-refs:** HYP-614 (Dedekind regulator = growth rate, the φ-Lyapunov),
 THM-466/478 (digit ladder / 2-adic depth), THM-487 (the code bridge: the same
 Π(1−x^n) = η/q^{1/24} drives extremal self-dual enumerator corrections),
-HYP-2416/2417/2418.
+HYP-2423/2417/2418.

@@ -1,11 +1,11 @@
-# THM-486: the η-discriminant bridge — the code discriminant is the pentagonal product, and the extremal-enumerator correction is secular (−42m), not two-rate
+# THM-489: the η-discriminant bridge — the code discriminant is the pentagonal product, and the extremal-enumerator correction is secular (−42m), not two-rate
 
 **Status:** PROVED (the −42m law, part B) + VERIFIED EXACT (parts A,C: independent
 agent's η/θ computation, all asserts passed; my extremal-enumerator build,
 n = 24m up to m = 154, exact integers). Scripts
 `04-computation/extremal_enumerator_bridge_kps3_0611.py`,
 `verify_eta_dictionary_agentr.py` (+ .out).
-**Source:** kind-pasteur-2026-06-11-S3 (HYP-2419/2420). Bridges THM-485 (the
+**Source:** kind-pasteur-2026-06-11-S3 (HYP-2419/2420). Bridges THM-488 (the
 pentagonal Lyapunov theme) to THM-481/484 (the Gleason/Paley code line) and the
 MOS extremal-enumerator theory. **CORRECTS HYP-2420's mechanism guess.**
 
@@ -20,7 +20,7 @@ Under Construction A (W ↦ Θ via x = θ₃(q²), y = θ₂(q²)):
   exactly what lands on level 1 / SL₂(ℤ), vs (8,8,2) → level 2).
 * W_{g₂₄} = W_{ê₈}³ − 42·P₂₄ (exact in ℤ[x,y]).
 
-So the same pentagonal product that drives the partition function (THM-485,
+So the same pentagonal product that drives the partition function (THM-488,
 1/Π(1−qⁿ)) is the second generator of the Type II weight-enumerator ring, in its
 24th power. The Gleason ring is ℂ[E₄-image, Δ-image] = ℂ[W_{ê₈}, P₂₄], and P₂₄ is
 η²⁴ in disguise.
@@ -65,7 +65,7 @@ The −42m of part B is the code-side avatar of this secular factor.
 
 So the honest mechanism: ONE pentagonal-driven exponential rate (the η^{−24}
 saddle), with positivity decided sub-exponentially by a secular cocycle. This is
-the deterministic cousin of THM-485's sign-rigidity, where ONE rate (the
+the deterministic cousin of THM-488's sign-rigidity, where ONE rate (the
 pentagonal product's boundary singularity) is modulated by the SIGNS to give
 either subexponential (Euler) or exponential (everything else) growth.
 
@@ -73,7 +73,7 @@ either subexponential (Euler) or exponential (everything else) growth.
 
 The partition function (b = 1: 1/Π(1−qⁿ), subexponential e^{π√(2n/3)}) and the
 MOS Bürmann kernel (b = 24: η^{−24}, exponential saddle c₁ ≈ 69.1) are the b = 1
-and b = 24 members of one family of "η^{−b} growth constants." THM-485's all-plus
+and b = 24 members of one family of "η^{−b} growth constants." THM-488's all-plus
 constant γ₊ = 0.548 (root of Σ(x^{g_k}+x^{ḡ_k}) = 1) is the b = 1, sign-flipped
 analog; the random-sign γ_pent = 0.206 its stochastic version. The shared object
 across the whole dispatch is **the pentagonal product Π(1−qⁿ)**: its reciprocal
@@ -93,7 +93,7 @@ positivity. This is the precise sense in which "random-sign Lyapunov × pentagon
 - The η^{−b} "family" (D) is a framing that is precise at b = 1, 24; intermediate
   b is not developed.
 
-**Cross-refs:** THM-485 (the Lyapunov/rigidity side), THM-481/484 (Gleason/Paley),
+**Cross-refs:** THM-488 (the Lyapunov/rigidity side), THM-481/484 (Gleason/Paley),
 THM-487 (the 72 frame, which uses part C's n = 3696 ≫ 72), HYP-2419 (PROVED here),
 HYP-2420 (CORRECTED here), MOS 1975 / Zhang 1999 / Jenkins–Rouse 2011.
 
@@ -105,11 +105,11 @@ MAXIMALLY DELAYS the sign change. Keeping the exact extremal magnitudes |c_j| bu
 randomizing their signs (iid ±1, c_0 = +1 fixed), the first length n = 24m with a
 negative weight-enumerator coefficient has median ≈ 120 (fresh signs per m, 400
 seeds, all negative by m = 60) or ≈ 168 (one coherent random correction stream) —
-the deterministic n = 3696 (THM-486 C) is a ~20–40× outlier in the far tail, and
+the deterministic n = 3696 (THM-489 C) is a ~20–40× outlier in the far tail, and
 ~25% of seeds go negative already at n = 48 (m = 2). Robust under an independent
 RNG (600/600). Same shared engine (the P₂₄ ≈ 16Δ = η²⁴ correction stream),
 positivity decided by the SIGNS, the deterministic alternation precisely tuned to
 keep coefficients non-negative the longest. This is the code-side avatar of
-THM-485 A's "Euler signs are the unique subexponential pattern." Honest scope:
+THM-488 A's "Euler signs are the unique subexponential pattern." Honest scope:
 computational over m ≤ 60, evidence not proof; a ~6% never-negative prefix tail
 to probe at larger m. Script `04-computation/random_extremal_enumerator_kps3_0611.py`.

@@ -4,7 +4,7 @@
 DOIs from the recon round) + framing (the obstruction localization). No new
 theorem about existence is claimed — this is the precise statement of WHERE the
 problem lives, sharpening OPEN-Q-061/HYP-2415.
-**Source:** kind-pasteur-2026-06-11-S3 (HYP-2421). Uses THM-486 (the η-bridge and
+**Source:** kind-pasteur-2026-06-11-S3 (HYP-2421). Uses THM-489 (the η-bridge and
 n = 3696), THM-481 (the Paley/eQR gauge), THM-484/claudebox (the 72-as-3·Δ gate).
 
 ## A. The enumerator is not the obstruction (VERIFIED)
@@ -13,7 +13,7 @@ The extremal Type II enumerator W₇₂ (the unique Gleason-invariant degree-72
 enumerator with A₄ = … = A₁₂ = 0, minimum weight 16) has
   A₀ = 1, **A₁₆ = 249849** (Sloane's value), A₂₀ = 18106704, …, all coefficients
   POSITIVE (built exactly from W_{ê₈}, P₂₄; full vector in the .out).
-By THM-486 C the first negative coefficient in the extremal Type II family appears
+By THM-489 C the first negative coefficient in the extremal Type II family appears
 only at **n = 3696** (Zhang's exact threshold, reproduced). Length 72 = m·24 with
 m = 3 sits FAR below — so:
 
@@ -47,10 +47,10 @@ content of HYP-2415's "asymmetry conjecture."
 ## C. The 72 = 3·24 = Δ³ gate (the modular reading)
 
 Extremality at 24m kills the first m coefficients = the Δ^{≤m} corrections
-(THM-486 B). At m = 3 (length 72) extremality kills exactly the Δ, Δ², Δ³ strata.
+(THM-489 B). At m = 3 (length 72) extremality kills exactly the Δ, Δ², Δ³ strata.
 The lattice side realizes the Δ³ gate (Γ₇₂); the code side is the open question of
 whether the ℤ₂-Gleason ring's Δ³-extremal point is a genuine code. The
-deterministic secular machinery (THM-486 C) is silent at m = 3 (no negativity
+deterministic secular machinery (THM-489 C) is silent at m = 3 (no negativity
 until m = 154), so — unlike the lattice nonexistence at dimension 163264 — the 72
 problem gets NO help from modular-form positivity. It is the rare case where the
 analytic obstruction theory is vacuous and the answer must be combinatorial.
@@ -79,6 +79,6 @@ analytic obstruction theory is vacuous and the answer must be combinatorial.
 - A₁₆ = 249849 and the all-positive W₇₂ are exact; the Aut and SOTA facts are
   cited, not re-derived.
 
-**Cross-refs:** THM-486 (n = 3696, the η-bridge), THM-481 (eQR gauge),
+**Cross-refs:** THM-489 (n = 3696, the η-bridge), THM-481 (eQR gauge),
 THM-484/claudebox (involution modulus, the 72 gate), OPEN-Q-061, HYP-2415,
 HYP-2421 (sharpened here).

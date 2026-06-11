@@ -1,20 +1,20 @@
 # The pentagonal product is the hub — partitions, Lyapunov constants, and the Golay code all hang off Π(1−qⁿ)
 
-**Source:** kind-pasteur-2026-06-11-S3 (THM-485/486/487 session)
+**Source:** kind-pasteur-2026-06-11-S3 (THM-488/489/487 session)
 
 The dispatch asked to connect three things that sound unrelated — random-sign
 Lyapunov constants, Euler's pentagonal partition machinery, and the [72,36,16]
 self-dual code. They turned out to be three views of a single object: the
 **pentagonal product** P(q) = Π_{n≥1}(1−qⁿ).
 
-- **Partitions / Lyapunov (THM-485).** 1/P(q) = Σ p(n)qⁿ. The signs in Euler's
+- **Partitions / Lyapunov (THM-488).** 1/P(q) = Σ p(n)qⁿ. The signs in Euler's
   pentagonal recurrence are exactly what make P(q) a genuine product, hence
   zero-free in the disk, hence p(n) subexponential. Randomize the signs and you
   get a positive Lyapunov constant γ_pent ≈ 0.206 (validated against Viswanath's
   0.124 on the Fibonacci control). Among ALL sign patterns, only Euler's is
   subexponential — the rigidity is the analytic shadow of the product formula.
 
-- **Codes (THM-486).** The Gleason ring of Type II weight enumerators is
+- **Codes (THM-489).** The Gleason ring of Type II weight enumerators is
   ℂ[W_{ê₈}, P₂₄], and the second generator's discriminant P₂₄ = x⁴y⁴(x⁴−y⁴)⁴
   maps under Construction A to 16·η²⁴ = 16q·P(q²)²⁴ — the **24th power of the same
   pentagonal product**. The extremal-enumerator machinery (Mallows–Odlyzko–Sloane)
@@ -64,4 +64,4 @@ random-sign extremal enumerator; the b=3 ternary Gleason–Pierce analog).
 
 Cross-links: [[one-dictionary-two-faces-kps2-0611]] (the previous session's
 doubling dictionary — η²⁴ is the code-side axis there too), [[the-three-twos-kp0611]]
-(the dyadic atom), HYP-614 (the φ atom), THM-485/486/487.
+(the dyadic atom), HYP-614 (the φ atom), THM-488/489/487.
