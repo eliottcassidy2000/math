@@ -4,6 +4,28 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S1 (close) — THE MAXDET LADDER: DRT flag proves the Barba construction; skew-EW square law with witnesses to 62; the golden escape at 10 (THM-475/476, HYP-2405)
+
+**OPEN-Q-058's lower half is PROVED.** THM-475: at n ≡ 1 mod 4, Flag(DRT(n−2)) — a DRT plus
+two stacked apexes — attains det(I+S) = 2(n−1)^((n−1)/2) with exactly the HYP-2389 spectrum
+x(x²+n−2)^((n−3)/2)(x²+2n−3); 3×3 char-poly proof; exact witnesses n = 9, 13, 17, 25, 29
+through all three DRT species (Paley, doubling tower, GF(27)). At n=9 the flag char poly =
+the unique char poly of all 216 exhaustive maximizer classes. **THM-476:** a tournament
+attains the Ehlich–Wojtas maxdet bound at n ≡ 2 mod 4 ONLY IF 2n−3 = k² (five-line
+forced-integer-eigenvector proof; the two-squares datum 2n−2 = a₁²+b₁² degenerates to a₁=1 —
+the observer/+1 as arithmetic obstruction). Explicit two-circulant witnesses (exact PAF) at
+n = 14, 26, 62 — every candidate ≤ 62; the first OPEN order 86 RESISTS all
+multiplier-symmetric two-circulant ansätze (negative result, escalation in t-0114).
+**HYP-2405:** at non-square orders the maximizer escapes ℚ — n=10 best 64000 has SSᵀ
+eigenvalues 9 ± 2√5 ∈ ℚ(√5) (char poly (x²−18x+61)⁴(x−9)² exact). Doubling corollary:
+det(I+S_{D(T)}) = 2ⁿ det(I+S_T)² — the ladder is doubling-closed only at the Hadamard rung.
+External anchors: Tao optimizationproblems C23a/b/c (open Hadamard order 668 = 4·167; all
+four open Hadamard orders < 2000 are skew-eligible ⟹ DRT route attacks them). Scripts:
+tournament_barba_flag_cbx1.py, skew_ew_two_circulant_cbx1.py (+ .outs); reflection
+the-maxdet-ladder-flags-square-laws-and-the-golden-escape-cbx0611.md.
+
+---
+
 ## kind-pasteur-2026-06-11-S1 (close) — THE t=7 WALL + FIRST SCHIPPERUS CUTOFFS + the m=3 probe machinery (THM-470/471; HYP-2392/2393 REFUTED, HYP-2396 R(n,2)=2n+1 claimed; POKE Task 1.2 delivered)
 
 **The ladder hit a wall.** Both candidate rungs above (sign,v₂) — the dyadic 1-jet and the
