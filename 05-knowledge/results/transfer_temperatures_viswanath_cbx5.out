@@ -1,0 +1,29 @@
+== THM-486: the involution modulus 24 is the Pisano modulus ==
+  pi(24) = 24 (= 24); pi(n)=n exactly for n in [1, 24, 120, 600, 3000] = {1} U {24*5^k} (Fulton-Morris)
+  => 24 is the SMALLEST n>1 with pi(n)=n (the involution modulus is the base Pisano-fixed point)
+  alpha(24) = 12 (rank of apparition); F_12 = 144 = 12^2 (unique nontrivial Fibonacci square)
+  pi(p) | p^2-1 AND 24 | p^2-1 for primes 7..61: True  (same p^2-1, THM-484 link)
+
+== THM-485(1): deterministic fugacity x — one operator, Zeckendorf -> repo H ==
+  x=1: growth (1+sqrt(1+4x))/2 = 1.618034, ratio I_40/I_39 = 1.618034  [Zeckendorf / golden-mean SFT (phi)]
+  x=2: growth (1+sqrt(1+4x))/2 = 2.000000, ratio I_40/I_39 = 2.000000  [repo H = I(Omega,2) / Jacobsthal]
+  x=3: growth (1+sqrt(1+4x))/2 = 2.302776, ratio I_40/I_39 = 2.302776  [x=3]
+  Zeckendorf-admissible length-n strings (no 11) = [2, 3, 5, 8, 13, 21, 34] = F_3..F_9 (golden-mean SFT, entropy log phi)
+
+== THM-485(2): quenched sign-disorder — the disordered (Viswanath) constants ==
+  Fibonacci  (det phi=1.61803) -> disordered Lyapunov = 1.1321  == Viswanath True
+  Tribonacci (det 1.83929) -> disordered Lyapunov = 1.2228
+  base-path  (THM-337, det 3.38298) -> disordered Lyapunov = 2.9786
+  (disorder LOWERS growth eigenvalue -> Lyapunov exponent; the 'quenched/glass' temperature, cf S637)
+
+== THM-485(3): disorder-induced phase transition at Embree-Trefethen beta*~0.70258 ==
+  x=0.30000: disordered growth 0.9225 (DECAY), deterministic 1.2416 (always grows)
+  x=0.50000: disordered growth 0.9285 (DECAY), deterministic 1.3660 (always grows)
+  x=0.70258: disordered growth 0.9998 (DECAY), deterministic 1.4760 (always grows)
+  x=0.90000: disordered growth 1.0878 (grow), deterministic 1.5724 (always grows)
+  x=1.00000: disordered growth 1.1322 (grow), deterministic 1.6180 (always grows)
+  x=2.00000: disordered growth 1.5049 (grow), deterministic 2.0000 (always grows)
+  => the QUENCHED hard-core gas has a critical activity beta* (decay<->growth) the deterministic one lacks;
+     Zeckendorf x=1 (1.132) and repo-H x=2 both in the grown phase.
+
+all checks passed

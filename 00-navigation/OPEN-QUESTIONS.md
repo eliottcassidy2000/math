@@ -1293,3 +1293,19 @@ coding open problem, and the natural continuation of the THM-480/481/482 gauge l
 bridge: THM-484 (24 = involution modulus; the eQR ladder is extremal exactly while the Gleason
 extremal d = 4⌊n/24⌋+4 stays at the Golay/√-ramped value, jumping to 16 at the 3rd multiple of
 24 where Paley loses it). Task t-0120.
+
+## OPEN-Q-062 🟢 A Bombieri–Vinogradov level-of-distribution for the LRC multiplier orbits
+
+**Status:** OPEN (claudebox-2026-06-11-S5, HYP-2416 part B). The Elliott–Halberstam exponent θ
+measures how deep into the modulus range q ≤ x^θ the primes equidistribute among residue classes
+(Bombieri–Vinogradov: θ=1/2 unconditional; EH: θ→1). The LRC window lemma (S625) is the same shape
+for the multiplier orbits (ℤ/m)*: a good multiplier (a residue avoiding every runner's width-2
+danger band) survives once the shell m is deep enough. QUESTION: formulate the LRC analogue
+precisely — for a random/typical speed set, control on AVERAGE over shells m ≤ M the discrepancy
+between the danger-band-avoidance count and its expectation, and identify the "level" M = M(n) up to
+which this holds. What is the LRC analogue of the √-barrier θ=1/2 (conjecturally the gap between the
+easy M>1/(2n) and the optimal 2/(2n−1)), and is there a large-sieve/Bombieri-type proof at "θ=1/2"?
+A positive answer would import the bounded-gaps technology (GPY/Maynard–Tao multidimensional sieve)
+into the LRC/covering frontier. Repo bridge: HYP-2416 (the dictionary), THM-406/S561 (ρ = the sieve),
+the S625 window lemma, THM-415 (the optimal 2/(2n−1)). Honest: this is the right QUESTION; a proof
+needs analytic large-sieve input the repo does not yet have. Task t-0121.
