@@ -1,0 +1,26 @@
+========================================================================
+TASK A: exhaustive n=6 census of H-maximizers (fresh code)
+========================================================================
+max H over all 32768 labeled tournaments on 6 vertices: 45
+number of labeled maximizers: 480
+number of ISO CLASSES attaining H = 45: 2
+  class canon=  408: labeled count= 240, scores=(2, 2, 2, 3, 3, 3), H=45, det(S)=1, det(I+2A)=1, |Pf|=1
+  class canon= 1332: labeled count= 240, scores=(2, 2, 2, 3, 3, 3), H=45, det(S)=49, det(I+2A)=49, |Pf|=7
+
+========================================================================
+TASK B: mod-4 score law for adj(S), S = A - A^T (fresh code)
+========================================================================
+odd n=5: 200 random tournaments, 5000 (i,j) entries checked, violations of adj(S)_ij == (-1)^(s_i+s_j) (mod 4): 0
+odd n=7: 200 random tournaments, 9800 (i,j) entries checked, violations of adj(S)_ij == (-1)^(s_i+s_j) (mod 4): 0
+odd n=9: 200 random tournaments, 16200 (i,j) entries checked, violations of adj(S)_ij == (-1)^(s_i+s_j) (mod 4): 0
+even n=6: 200 random tournaments; u=adj(S)@1, S=A-A^T:
+    u_i == +(-1)^(s_i) (mod 4) for ALL i:  200/200
+    only global-flip  -(-1)^(s_i) works:   0/200
+    neither (mixed signs / true violation): 0/200  (violating entries: 0)
+    [convention check] S'=A^T-A, + sign holds: 0/200
+even n=8: 200 random tournaments; u=adj(S)@1, S=A-A^T:
+    u_i == +(-1)^(s_i) (mod 4) for ALL i:  200/200
+    only global-flip  -(-1)^(s_i) works:   0/200
+    neither (mixed signs / true violation): 0/200  (violating entries: 0)
+    [convention check] S'=A^T-A, + sign holds: 0/200
+exhaustive n=6 (all 32768): + sign universal: True (failures: 0)

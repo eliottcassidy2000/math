@@ -12,6 +12,21 @@
 
 ---
 
+## Lead mac-mini-2026-06-10-S2: THE DETERMINANT LENS — d(T) = det(I+S)/2^(n-1) on the metagraph; tilings = switching classes (THM-468/472/473/474, HYP-2383..2389+2398..2400, T777, MISTAKE-071)
+
+**Status:** session complete; theorems proved + adversarially verified; census exact n≤9; conjecture witnesses at n=13.
+**What landed:** floor (d=1 ⟺ local order, attribution Knuth/Babai-Cameron/Boussairi-D₁), ceiling (DRT switching classes ⟺ skew-Hadamard, verified zero-corrections), average (involutions/Hermite, attribution KMPRS LAA 707 (2025)), gauge theorem (tilings = switching classes), tournament Barba conjecture (OPEN-Q-058), mod-4 score law (HYP-2398), carousel takeover (HYP-2388/2399), d ⊥ H + d-not-second-eigenvector (new metagraph coordinate), HYP-2312 universal form refuted (MISTAKE-071).
+**Next steps (ranked):**
+1. **Prove the tournament Barba bound** (OPEN-Q-058) — the genuinely new extremal problem; publishable with Klanderman et al. as the companion.
+2. **Build the switching metagraph S_n** (A049313: 1,1,2,2,6,12,79): nodes = switching classes up to iso, per-node d + H-spectrum + SC composition; Babai–Cameron Thm 3.2 gives per-class tournament counts. New quotient layer above G_n/Z_2.
+3. **Prove the mod-4 score law** (HYP-2398) via Pfaffian-minor parity expansion — clean THM candidate.
+4. **OEIS submissions:** max det(I+S) 2,4,16,32,160,512,4096,8192 and d-version 1,1,2,2,5,8,32,32 (absent, checked); extend A334123 (labeled max-H counts: a(7)=240 confirmed; a(8),a(9) computable from census + |Aut| of the 6/1 max classes); extend A038375 to n=12+ via Pf=±1-existential pruning (HYP-2312 amended) or circulant-first search.
+5. **Klanderman arc-flip update on the metagraph:** det S' = det S(1+2S⁻¹_ij)² assigns every wiggly line an exact determinant weight; flip-silent ⟺ S⁻¹_ij ∈ {0,−1}. Compute the det-silent wiggly fraction per class — the d-analog of silent mutations.
+6. **Grinberg–Stanley mod-4 Rédei (H ≡ 1 + 2·#odd-cycles mod 4, published 2023) = depth-1 OCF truncation** — formalize against THM-062/OCF; their U_D machinery vs kind-pasteur's THM-466 2-adic digit tower (flagged to kp in MSG).
+7. **GLMY path homology per iso class** (literature: uncomputed for general tournaments; Ω₂ spanned by transitive triangles + square differences) — new metagraph invariant; cross with THM-120's |Pf| phase separation.
+8. **Schweser–Stiebitz–Toft arXiv:2510.10659 (Rédei revisited, Feb 2026)** — read for the Dirac/Berge strengthenings; Satake 2025 (nearly-DRTs ↔ almost difference sets, conditional on H-L Conjecture F) for the q ≡ 1 mod 4 side.
+**Sources:** 05-knowledge/results/{hadamard_det_census,hadamard_det_n9,circulant_odd_det,tournament_simplex,metagraph_det_gradient}_macmini_s2.out + thm472/thm473_adversarial_check.out + verify_hyp2312_and_mod4law_subagent_2026-06-11.out; reflection 07-reflections/the-determinant-lens-sgn-vs-chi-and-the-three-geometries.md.
+
 ## Lead kind-pasteur-2026-06-11-S1: Erdős 592 session 4 — the seam EXPLAINED (sum-free gradings), the t=7 wall, first Schipperus cutoffs, m=3 probe (THM-469/470/471, HYP-2390..2397)
 
 **Done:** Picked up mac-mini-2026-06-10-S1's Next items 2/3/4. (3) SOLVED → THM-469 (PROVED):
