@@ -205,9 +205,15 @@ class ShapeFinder:
         self.eqmask = [[byval[k][L[i][k]] for k in range(self.npos)]
                        for i in range(self.N)]
 
-    def set_graph(self, nb, budget=None):
+    def set_graph(self, nb, budget=None, anchor0=False):
+        """anchor0: restrict the search to shapes whose MINIMUM is index 0.
+        Complete ONLY for vertex-transitive graphs whose automorphisms act
+        transitively while preserving the shape family — e.g. XOR-measurable
+        rule graphs on {0,1}^npos (split positions are XOR-invariant and the
+        fin-halves relabel under translation). Do NOT use on general graphs."""
         self.nb = nb  # list of int bitmasks
         self.budget = budget
+        self.anchor0 = anchor0
         self.nodes = 0
 
     def _tick(self):
@@ -230,6 +236,11 @@ class ShapeFinder:
         self._tick()
         kind, sub = peel(delta)
         if kind == 'leaf':
+            if self.anchor0 and lo == -1 and taken_mask == 0:
+                # the very first leaf of the whole search = the shape's minimum
+                if allowed & 1:
+                    yield (0,)
+                return
             cand = allowed >> (lo + 1)
             i = lo + 1
             while cand:
@@ -246,11 +257,17 @@ class ShapeFinder:
                 top = self.min_internal_split(A)
                 a0 = A[0]
                 # cross-split position p must be MORE significant (< top);
-                # B agrees with A[0] at every position < p and differs at p
+                # B agrees with A[0] at every position < p and differs at p.
+                # Try p LEAST-significant-first: inner structures should consume
+                # low significance, leaving high positions for outer levels
+                # (most-significant-first starves outer levels and explodes).
+                cands = []
                 prefix = self.full
                 for p in range(0, top):
-                    b_allowed = allowed & prefix & ~self.eqmask[a0][p]
+                    cands.append(allowed & prefix & ~self.eqmask[a0][p])
                     prefix &= self.eqmask[a0][p]
+                for p in range(top - 1, -1, -1):
+                    b_allowed = cands[p]
                     if not b_allowed:
                         continue
                     for B in self.gen(sub, A[-1], amask, b_allowed):

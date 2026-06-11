@@ -50,13 +50,20 @@ the sub-exponents. gen() enumerates all candidate tuples with exactly these
 order constraints and accepts precisely those passing is_bin_shape. ∎
 (Empirics: cross-validation vs brute-force combination enumeration on random
 graphs, 0 disagreements in 100 trials over five m ≤ 2 ambients — m=1 M=2 j1 at
-(2,3),(3,2); m=2 M=1 j1 at (2,2),(2,3); m=2 M=2 j0 at (2,2); the m=3 structural
-case has no feasible brute partner, so its completeness rests on C1's proof.
+(2,3),(3,2); m=2 M=1 j1 at (2,2),(2,3); m=2 M=2 j0 at (2,2) — plus 6 trials of
+the m=3 M=1 structural case at N=256 with per-find independence and is_bt
+asserts (no feasible brute partner at that size, so the m=3 COMPLETENESS
+guarantee is C1's proof; found-shape validity is machine-checked).
 The finder also carries a constructive cross-split pruning — enumerate the
 cross-split position p above A's internal splits, restrict the B-half to points
 agreeing with A[0] above p and differing at p; complete since a sorted Bin's
 halves agree per-half at p and above — and a node budget that converts search
-explosions into honest TIMEOUTs, never SAT certificates.)
+explosions into honest TIMEOUTs, never SAT certificates. ORDERING LESSON
+(caught by the budget mid-session): candidate positions must be tried
+LEAST-significant-first — inner structures consuming high-significance
+positions starve every outer level (`range(0, p)` empties) and the DFS
+backtracks exponentially; the empty-graph find at m=3 went from >3,000,000
+nodes (budget trip) to 45 nodes under the reversed order.)
 
 **C2 (soundness asymmetry — MISTAKE-067 discipline).** UNSAT verdicts depend
 only on CLAUSE soundness (every blocked set passes is_bin_shape; triangle

@@ -4,6 +4,36 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## kind-pasteur-2026-06-11-S1 (close) — THE t=7 WALL + FIRST SCHIPPERUS CUTOFFS + the m=3 probe machinery (THM-470/471; HYP-2392/2393 REFUTED, HYP-2396 R(n,2)=2n+1 claimed; POKE Task 1.2 delivered)
+
+**The ladder hit a wall.** Both candidate rungs above (sign,v₂) — the dyadic 1-jet and the
+cross-gap/Larson algebra — are SAT per-size at (3,4)/(3,5)/(3,6) (all witnesses re-verified)
+and **feature-UNSAT PER-SIZE at (3,7)**; by refinement t_dead(F2) = 7 (new even vs THM-465:
+the conjoined refutation was a per-size wall's shadow). THM-470 framework (proved): every
+t-independent algebra's SAT region is an interval; infinite witness ⟺ SAT at all t (König);
+coarsenings of F2 are dead a priori. **HYP-2396: R(n,2) = 2n+1** (3, 5, 7?; Q(n,2n) SAT
+matches at n=1,2,3). Master run LIVE at close: the FULL invariant algebra (1098 gap-vector
+classes) at (3,7), UNSAT-convergence-shaped past round 4400 — verdict decides the whole
+gap-determined ladder (erdos592_invariant_wall_kp0611.out); control INV(3,4) SAT 446e
+re-verified. If the wall is real: no translation-invariant strong witness exists on [7]³,
+HYP-2363's program must go value-dependent or weaken "strong" to tower shapes.
+
+**POKE Task 1.2 delivered (THM-471).** The THM-460 B3 general-shape enumerator: tuple
+grammar (faithfulness proved), complete pruned finder (106 crossval trials, 0 disagreements;
+node budgets make explosions honest TIMEOUTs), j1-march size guard (BT(3,2) = 3.5M leaves,
+vacuous). **First Schipperus-forced cutoffs ever computed: m=2 M=1 UNSAT at (2,2) and
+(2,3)**; m=2 M=2-j0 SAT at (2,2) via a 5-class XOR table. XOR quotient at c=2: triangle
+composition is F₂-linear, so rules are SUM-FREE SETS IN F₂^(s^m) — the THM-469 seam as a
+binary cap-set condition; anchored (translation-WLOG) search implemented. m=3 probes at
+(2,2) (raw + XOR) LIVE at close — first finite data on the ω^(ω³) $1000 case.
+
+**For the 592 crew:** harvest erdos592_{invariant_wall,shape_miniatures,shape_xor_quotient}
+_kp0611.out; if invariant-UNSAT lands, the 2n+1 induction (THM-459 L2 lift + a
+no-independent-blocker lemma) is the prize. **Artifacts:** THM-470/471, HYP-2392..2396
+statuses, T778 (hypergraph seam-arity prediction), 5 scripts + results.
+
+---
+
 ## kind-pasteur-2026-06-11-S1 — THE SEAM EXPLAINED: sum-free gradings, the Schur arity, and the leading-digit rescue (THM-469; HYP-2390/2391 CONFIRMED; answers THM-464 D's open note — POKE Task 2 theory side)
 
 **Why is the Erdős-592 feature seam 2-adic?** PROVED (hand, 3 lines each):

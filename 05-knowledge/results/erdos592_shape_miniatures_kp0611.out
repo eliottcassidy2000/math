@@ -1,3 +1,0 @@
-=== m=1 M=2 j1 (2,4) reproduce; then sweeps (pruned finder, node-budgeted) ===
-   SAT    m=1 M=2 j1 (2,4) N=16 (31 edges, shapes=48, tris=0, 0.0s)
-=== m=2 M=1 j1 sweep continued ===

@@ -96,7 +96,9 @@ def solve_shape_xor(m, M, conv, s, tlimit=2400, verbose=True):
                     nb[i] |= 1 << j
                     nb[j] |= 1 << i
                     edges += 1
-        finder.set_graph(nb, budget=3_000_000)
+        finder.set_graph(nb, budget=30_000_000, anchor0=True)
+        # anchor0 is complete here: the rule graph is XOR-measurable, so the
+        # independent-shape family is XOR-translation-invariant (THM-471 C)
         try:
             bad = finder.find_bt()
         except BudgetExceeded:
@@ -139,7 +141,9 @@ def reverify(m, M, conv, s, blue, L):
     for i, j, k in itertools.combinations(range(N), 3):
         assert not (adj[i][j] and adj[i][k] and adj[j][k]), "triangle!"
     f = ShapeFinder(m, M, conv, L)
-    f.set_graph(nb)  # no budget: re-verification must be complete or not return
+    # anchor0 valid: same XOR-measurable graph; no budget — re-verification
+    # must be complete or not return
+    f.set_graph(nb, anchor0=True)
     return f.find_bt() is None
 
 
