@@ -2,55 +2,57 @@
 
 ## Task Chosen
 
-I chose a tiny exhaustive sanity check connected to the local `TournamentH7`
-thread: verify directly, for all labeled tournaments on `n <= 5` vertices, that
-no tournament has exactly `H(T) = 7` Hamiltonian paths.
+I chose a tiny independent sanity check of the Paley character tournament
+values recorded in `05-knowledge/results/number_theory_tournament_atlas_s651.out`.
+The stated rows are:
 
-This is only a low-order verification of the stronger `H(T) != 7` theorem
-recorded in `04-computation/lean/TournamentH7/README.md`, not a proof of the
-general theorem.
+```text
+p=7:  residues [1, 2, 4],      score_hist {3: 7},  c3=14, SCC [7],  H=189
+p=11: residues [1, 3, 4, 5, 9], score_hist {5: 11}, c3=55, SCC [11], H=95095
+```
 
 ## What I Did
 
-I ran a transient brute-force Python enumeration. For each `n = 1, 2, 3, 4, 5`,
-I enumerated all `2^(n choose 2)` labeled tournament orientations. For each
-tournament I counted Hamiltonian paths independently by testing all `n!`
-vertex permutations against the directed edges.
+I ran a transient Python check using the Paley edge rule on vertices modulo
+`p`: orient `i -> j` exactly when `j-i` is a nonzero quadratic residue mod
+`p`. I then computed:
+
+- the score histogram directly from the adjacency matrix,
+- directed 3-cycles by scanning all triples,
+- SCC sizes by forward/backward reachability, and
+- `H(T)` by subset dynamic programming over terminal vertices.
 
 Tournament Analysis declaration:
 
-- Pairwise observable: the orientation of each unordered vertex pair.
-- Switch/gauge: the labeled bit mask over unordered pairs, with each bit
-  choosing one of the two possible arc directions.
-- Tie Hamiltonian path: not needed, since every pairwise comparison is already
-  decisive in a tournament.
-- Fingerprints recorded: full `H(T)` value histograms for each `n <= 5`.
+- Pairwise observable: the quadratic character of `j-i mod p`.
+- Switch/gauge: residue membership gives the binary tournament edge.
+- Tie Hamiltonian path: not needed; Paley comparisons for `p=7,11` have no
+  ties between distinct vertices.
+- Fingerprints recorded: score histogram, directed 3-cycle count, SCC sizes,
+  and Hamiltonian path count.
 
 Assumption challenge:
 
-- I kept tournament vertices as the vertex set because the claim being checked
-  is directly about Hamiltonian paths in `T`.
-- Alternate vertices such as arcs, odd cycles, score gaps, residues, or proof
-  obligations could preserve local orientation or obstruction data, but would
-  destroy the direct one-to-one permutation test for `H(T)`.
+- I kept tournament vertices as residues modulo `p` because the claim being
+  checked is explicitly a finite-field character tournament claim.
+- Alternate vertices such as arcs, residues classes of gaps, Fourier modes, or
+  proof obligations could expose extra arithmetic structure, but would destroy
+  the direct check of the stated tournament fingerprints.
 
 ## Concrete Result
 
-No failures were found. The exhaustive distributions were:
+The independent computation reproduced the recorded values exactly:
 
 ```text
-n=1, labeled_tournaments=1,    H=7 count=0, distribution={1: 1}
-n=2, labeled_tournaments=2,    H=7 count=0, distribution={1: 2}
-n=3, labeled_tournaments=8,    H=7 count=0, distribution={1: 6, 3: 2}
-n=4, labeled_tournaments=64,   H=7 count=0, distribution={1: 24, 3: 16, 5: 24}
-n=5, labeled_tournaments=1024, H=7 count=0, distribution={1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+p=7:  residues [1, 2, 4],       score_hist {3: 7},  c3=14, SCC [7],  H=189
+p=11: residues [1, 3, 4, 5, 9], score_hist {5: 11}, c3=55, SCC [11], H=95095
 ```
 
-Thus the direct exhaustive check confirms `H(T) != 7` for every labeled
-tournament with `n <= 5`.
+Thus the Paley carrier rows in `number_theory_tournament_atlas_s651.out` pass
+this independent spot-check for `p=7` and `p=11`.
 
 ## Confidence Note
 
-Confidence is high for the bounded claim. The enumeration is exhaustive over
-all labeled tournaments for `n <= 5`, and `H(T)` was counted directly from
-permutations rather than inferred from the forbidden-value theorem.
+Confidence is high for this bounded verification. The computation is small,
+uses a direct adjacency construction from quadratic residues, and counts
+Hamiltonian paths with a DP independent of the prior S651 artifact.
