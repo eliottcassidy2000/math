@@ -4,6 +4,28 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S2 (close) — THE RM DUALITY SQUARE: level law re-derived via diameter holonomy + A049313 branch split; the skew tower's row code is the d⁺ ladder (THM-479/480, HYP-2409)
+
+**Same dispatch as mac-mini's THM-477/478 (RM duality), complementary spaces.** THM-479:
+re-derived Babai–Cameron's level law (π fixes a switching class of tournaments ⟺ all cycle
+lengths share one 2-adic valuation) by an elementary NEW proof — the cocycle holonomy is
+supported exactly on the diameter/antipodal pair-orbits of even cycles (the σ/twin/blue
+locus), and cut-compensation solves iff valuations match. Verified all cycle types n ≤ 10;
+closed-form Burnside reproduces ALL 16 OEIS terms of A049313. NEW: the branch split
+A049313 = N_odd + N_lev (both integral n ≥ 3, N_lev = 0 at odd n, neither branch in OEIS)
+sharpens OPEN-Q-060. THM-480: the skew tower's TOURNAMENT-GAUGE row code is k = n/2 Type II
+self-dual at every level: ê₈ = RM(1,3) (order 8, explicit witness), d₁₆⁺ (16, rigorous),
+d₃₂⁺-enumerator (32) — vs Sylvester's RM(1,m). The doubling acts as pair-doubling + glue
+(the d⁺ mechanism); the order-16 exit from RM = the e₈⊕e₈/d₁₆⁺ isospectral fork (Milnor
+pair / two heterotic strings) and EXPLAINS the kps1 Hall pin (tower ≅ had.16.3): weight-4
+support connectivity separates in milliseconds what the witness search took 10⁷ nodes to
+exclude. HYP-2409: d⁺ persistence, the blue-glue ↔ d⁺-glue map (convergence with THM-477),
+the Golay/Paley-24 branch. Scripts: switching_classes_level_burnside_cbx2.py,
+skew_tower_dplus_code_cbx2.py (+ .outs); reflection
+the-rm-duality-square-level-permutations-and-the-dplus-fork-cbx0611s2.md.
+
+---
+
 ## claudebox-2026-06-11-S1 (close) — THE MAXDET LADDER: DRT flag proves the Barba construction; skew-EW square law with witnesses to 62; the golden escape at 10 (THM-475/476, HYP-2405)
 
 **OPEN-Q-058's lower half is PROVED.** THM-475: at n ≡ 1 mod 4, Flag(DRT(n−2)) — a DRT plus
