@@ -468,7 +468,43 @@ print("main cases p = 7, 23 (p = 7 mod 8); controls p = 11 (3 mod 8: kills "
 for p in (7, 23, 11, 17):
     audit(p)
 
-print("\n" + "=" * 72)
+print("""
+========================================================================
+ATTRIBUTION (web check, 2026-06-11 -- the identity is NOT new):
+  Jon-Lark Kim, Patrick Sole, "Skew Hadamard designs and their codes",
+  Designs, Codes and Cryptography 49 (2008) 135-145,
+  DOI 10.1007/s10623-008-9173-y (open access).
+    Proposition 2: for a skew Hadamard design A of parameters
+      (4n-1, 2n-1, n-1) over GF(p) with p | n, the codes C(A) (= span of A
+      extended by an ALL-ONE column) and D(A) (= span of I+A extended and
+      augmented) are SELF-DUAL.
+    Corollary 1: over GF(2) these codes are TYPE II; moreover
+      <(I+A^T)~> is the even part of C(A) and C(A) = <(I+A^T)~, 1>.
+    Proposition 3: l := 4n-1 prime, p | n prime, p a QR mod l, H the Paley
+      Hadamard matrix of order 4n, A its associated incidence matrix:
+      "C(A)^ is the extended quadratic residue code Q^ over GF(p)."
+      For p = 2: 2|n and 2 in QR(l)  <=>  l = 7 mod 8 -- exactly the
+      sketch's claim (their proof = the same idempotent route).
+    Their idempotent reference: MacWilliams & Sloane, The Theory of
+      Error-Correcting Codes, Chap. 16, Theorem 4 (idempotent of the QR
+      code over GF(p); the Gauss-sum normalization theta=+1 fixes the
+      QR-vs-QNR labeling -- 'conventions matter' resolved there).
+    Their order-8 case (S 4.1): C(A) = binary Hamming [8,4,4]; order-48
+      (S 4.10): QR codes over GF(2) and GF(3) since 2,3 in QR(47).
+  Earlier program (codes of Hadamard designs, p-rank):
+    E. F. Assmus Jr., J. D. Key, "Hadamard matrices and their designs: a
+    coding-theoretic approach", Trans. AMS 330 (1992) 269-293; and
+    "Designs and their Codes", CUP 1992 (S 2.10 covers QR codes) --
+    cited by Kim-Sole as [1,2]; the (p+1)/2 rank statement they credit to
+    T. S. Michael.  The Assmus-Key 'update' survey contains no Paley-QR
+    statement (checked); the sharp statement is Kim-Sole Prop. 3.
+  Type II / self-dual iff p = -1 mod 8: classical, e.g. MacWilliams-Sloane
+    Ch. 16 / Huffman-Pless Fundamentals Ch. 6 (for p = +1 mod 8 the
+    extended QR code is only formally self-dual).
+========================================================================
+""")
+
+print("=" * 72)
 if FAILURES:
     print(f"RESULT: {len(FAILURES)} FAILURE(S):")
     for f in FAILURES:

@@ -1,4 +1,4 @@
-# THM-482: the zigzag law for skew doubling — trans(D(T)) = z(T), and the +2 sandwich (HYP-2360) is refuted by an unbounded family
+# THM-483: the zigzag law for skew doubling — trans(D(T)) = z(T), and the +2 sandwich (HYP-2360) is refuted by an unbounded family
 
 **Status:** PROVED (parts A–C, hand proofs below) + VERIFIED (two independent
 methods: subset-DP and combinations-brute, 0 disagreements; designed chains
@@ -79,7 +79,7 @@ v→w). (iii) δ(T) = z(T) − trans(T) measures exactly the largest "inverted-c
 - Coding avatar: in THM-480's dictionary the doubling acts on row codes as
   pair-doubling + glue (the d⁺ mechanism); the zigzag chain is precisely a word
   mixing the two blocks with one glue twin — the same (u, u+v)-vs-(b, b)
-  structure, seen on the trans side. (This session's Gleason theorem, THM-481,
+  structure, seen on the trans side. (This session's Gleason theorem, THM-481 — merged with claudebox-S3's convergent claim,
   is the same dictionary's Paley face.)
 
 ## Honesty

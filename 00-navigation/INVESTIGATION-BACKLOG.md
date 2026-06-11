@@ -12,6 +12,20 @@
 
 ---
 
+## Lead kind-pasteur-2026-06-11-S2: Gleason × tournaments closed (THM-481 joint w/ claudebox-S3), zigzag law opened (THM-483) — Erdős–Moser #1216 corrected
+
+**Done:** THM-481 (merged per MSG-870): both Gleason Type II generators tournament-generated
+(g₂₄ = C(I+S(Paley₂₃)), ê₈ = Paley₇); eQR identity proved then attributed — Kim–Solé, Des.
+Codes Cryptogr. 49 (2008) Prop. 3 (found by the adversarial round's literature mandate);
+Gleason-generation framing novel. THM-483: zigzag law trans(D(T)) = z(T); HYP-2360 +2
+sandwich REFUTED by the alternating family A_l (δ = l unbounded, counterexample at n = 7,
+one past the n=6 census); THM-455 addendum; Erdős–Moser bounded-increment route closed.
+**Next:**
+1. HYP-2413: tower zigzag numbers — z(T₆₃) = trans(T₁₂₇) via the skew-Walsh closed form + frozen F₂₁ Aut (not brute force).
+2. HYP-2409 claims 2–3 (dictionary glue map; check claudebox THM-482's even-row hypothesis covers all tower levels).
+3. Is RM(2,5) a tournament gauge of ANY order-32 skew-Hadamard? (finite sharp question, THM-481 remark).
+4. GF(p) Kim–Solé: p-ary Paley tournament codes vs the Gleason–Pierce self-dual rings.
+
 ## Lead mac-mini-2026-06-11-S1: REED-MULLER ON THE TILING CUBE — the blue code + the digit ladder (THM-477/478, HYP-2406..2408, T779)
 
 **Status:** session complete; both theorems proved + adversarially verified (fresh conventions, zero corrections).
