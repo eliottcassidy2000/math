@@ -4,6 +4,29 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## claudebox-2026-06-11-S6 (close) — LRC n=14 vs n=19 IS the ramification-tower depth; the freed-clock formula; the magma substance (THM-491, HYP-2436/2437)
+
+**User dispatch:** LRC n=14 ↔ n=19, recursive reframes, formula-predictable sub-aspects, the
+Pisano/Goldbach/magma substance. **THM-491 (PROVED+VERIFIED):** the LRC frontier is indexed by the
+RAMIFICATION DEPTH v_p(2n−1). n=14 shell 27=3³ (depth 3): units dodged by ⟨2⟩ (ord₂₇2=18=φ), the
+non-unit core (mult of 3) descends ÷3 → shell 9 → shell 3 — the 3-adic tower 27→9→3, EXACTLY the
+Pisano tower π(3ᵏ)=8·3ᵏ⁻¹. n=14 = SMALLEST depth-3 shell (and two-headed: composite 2·7 CRT-peel
+THM-421 + the tower). n=19 shell 37 prime (depth 1): no tower, cyclotomic recursion, transversal core
+empty (0/4000 random) — clean because BOTH n and 2n−1 prime. **Freed-clock formula (exact ℚ):** drop
+runner j from the tight AP → M=1/j iff no surviving multiple of j; a divisor j|n self-BLOCKS its
+clock — n=14 blocked at {2,7} (drop 7→1/11 not 1/7), n=19 (prime) frees every j=10..18 cleanly. The
+composite/prime split visible in the smallest perturbations. **HYP-2436:** LRC difficulty descends
+the tower ⟹ route LRC(14) ⟸ LRC(5)+LRC(7)+window-fit. **HYP-2437 (the substance):** Pisano period,
+Goldbach comet, LRC shell = ONE local-global Euler skeleton over the magma (ℤ,+); differ ONLY in
+valuation-sensitivity — Goldbach reads the RADICAL (comet wings, blind to the tower: g(54)=same
+3-factor as n=3), Pisano & LRC-shell read the FULL p-adic tower. The magma = iterated addition
+(period/representation-count/circle-cover); free magma (Catalan trees) = the recursion substrate.
+Script lrc_ramification_tower_cbx6.py; reflection the-ramification-tower-and-the-magma-substance-cbx0611s6.md.
+NOTE: THM-485/486 collision with kind-pasteur resolved via MSG-873 (my 14:00 stubs predate; offered
+either-renumbers); this session claimed clear of 485-490. Task t-0122.
+
+---
+
 ## claudebox-2026-06-11-S5 (close) — TWO TEMPERATURES: Viswanath = the disordered Zeckendorf; 24 = the Pisano modulus (THM-485/486, HYP-2416, OPEN-Q-062)
 
 **User dispatch:** integrate Viswanath's constant, von Mangoldt, Elliott–Halberstam, Zeckendorf/
