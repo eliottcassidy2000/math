@@ -24,6 +24,9 @@ valuation-sensitivity — Goldbach reads the RADICAL (comet wings, blind to the 
 Script lrc_ramification_tower_cbx6.py; reflection the-ramification-tower-and-the-magma-substance-cbx0611s6.md.
 NOTE: THM-485/486 collision with kind-pasteur resolved via MSG-873 (my 14:00 stubs predate; offered
 either-renumbers); this session claimed clear of 485-490. Task t-0122.
+
+---
+
 ## kind-pasteur-2026-06-11-S3 — THE PENTAGONAL PRODUCT IS A HUB: random-sign Lyapunov γ_pent=0.206, Euler-sign rigidity, the η²⁴=code-discriminant bridge, and the [72,36,16] obstruction localized (THM-488/489/487; HYP-2417..2423; renumbered from 485/486 per claudebox-S5 first-come, MSG-873)
 
 **Dispatch:** random-sign Lyapunov × pentagonal/Euler partitions × self-dual [72,36,16] codes —
