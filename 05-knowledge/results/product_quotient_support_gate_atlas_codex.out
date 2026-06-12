@@ -1,0 +1,85 @@
+Product-quotient support-gate atlas
+arXiv:2508.14876 x LRC14 x Type II [72,36,16]
+
+[1] Paper facts pulled into repo coordinates
+  arXiv:2508.14876: product-quotient surfaces over finite fields
+  genus g=14; Hurwitz bound 84*(g-1)=1092
+  |PSL2(F_13)|=1092 = 2^2 * 3 * 7 * 13
+  LRC14 single-stranger cutoff 13*84=1092
+  same integer? True
+  subgroups used in the examples:
+    D6: |H|=12, index= 91 (Q27 q=91 rescue witness; C(14,2))
+    D7: |H|=14, index= 78 (Type II [72] lambda_5=78; C(13,2))
+    A4: |H|=12, index= 91 (Q27 q=91 rescue witness; C(14,2))
+  further identities: 1092=12*C(14,2)=1092, 14*C(13,2)=1092, 3*C(14,3)=1092
+
+[2] Explicit supersingular prime residue signatures
+  p      mod 7   mod 13  mod 27  mod 91
+  1091   6 (-1)         12 (-1)        11, +/-11      90 (-1), +/-1
+  2339   1              12 (-1)        17, +/-10      64, +/-27    
+  6551   6 (-1)         12 (-1)        17, +/-10      90 (-1), +/-1
+  7643   6 (-1)         12 (-1)        2, +/-2        90 (-1), +/-1
+  all listed primes are -1 mod 13: True
+  listed primes in the LRC14 missing +/-10 class mod 27: [2339, 6551]
+  caution: residue echoes are search beacons, not obstruction proofs.
+
+[3] Scalar-versus-support gate rows
+  route                              channel theorem bridge compute risk  status
+  diagonal_forms_all_partial_frobenii    5       5      5       3     1    paper theorem
+    scalar:  supersingular reductions are scalar/cohomological
+    support: diagonal symmetric forms survive every asymmetric Frobenius twist
+  lrc14_Q27_resource_ledger              5       4      5       5     2    exact for one-stranger; open resource theorem
+    scalar:  q is blocked / not blocked
+    support: shell-27 classes, 13-clock, divisor fibers, Bprime target
+  order5_marked_fixed_projection         5       5      4       5     1    exact conditional branch reduction
+    scalar:  fixed projected Type II [16,8] scalar type
+    support: marked tetrad support and heptad/Fano boundary
+  code72_minimum_design_support          5       3      5       4     3    open existence / exact scalar and design parameters
+    scalar:  formal Gleason enumerator is nonnegative
+    support: minimum words must realize a 5-(72,16,78) design
+  hurwitz_PSL2_13_indices                3       2      5       5     4    exact arithmetic; speculative proof leverage
+    scalar:  |PSL2(F13)| = 1092
+    support: subgroup indices 91 and 78, genus-14 Hurwitz lattice
+  random_pentagonal_support_law          3       2      4       4     3    computational; analytic theorem open
+    scalar:  finite-window reciprocal Lyapunov slope
+    support: sign support / root placement of sparse pentagonal denominator
+  typeII_gleason_scalar_gate             1       5      4       5     4    exact scalar calculation
+    scalar:  Gleason polynomial positivity and total mass
+    support: none by itself; support must be reattached
+  shioda_supersingular_scalar            1       5      4       2     4    paper theorem/counterexample context
+    scalar:  Shioda supersingular cohomology
+    support: none by itself; Church counterexample shows scalar is insufficient
+
+[4] Tournament Analysis over proof-route vertices
+  observable = (retained_channel, theorem_status, repo_bridge, computability, -risk)
+  tie Hamiltonian path = declaration order in ROUTES
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles: 0
+  SCCs: [['diagonal_forms_all_partial_frobenii'], ['order5_marked_fixed_projection'], ['lrc14_Q27_resource_ledger'], ['code72_minimum_design_support'], ['hurwitz_PSL2_13_indices'], ['random_pentagonal_support_law'], ['typeII_gleason_scalar_gate'], ['shioda_supersingular_scalar']]
+  Hamiltonian path count: 1
+  first Hamiltonian path: ('diagonal_forms_all_partial_frobenii', 'order5_marked_fixed_projection', 'lrc14_Q27_resource_ledger', 'code72_minimum_design_support', 'hurwitz_PSL2_13_indices', 'random_pentagonal_support_law', 'typeII_gleason_scalar_gate', 'shioda_supersingular_scalar')
+  edge flips versus channel-only ranking: 1
+  scores:
+    7: diagonal_forms_all_partial_frobenii
+    6: order5_marked_fixed_projection
+    5: lrc14_Q27_resource_ledger
+    4: code72_minimum_design_support
+    3: hurwitz_PSL2_13_indices
+    2: random_pentagonal_support_law
+    1: typeII_gleason_scalar_gate
+    0: shioda_supersingular_scalar
+
+[5] Assumption challenge and next proof moves
+  alternate vertex sets considered:
+    curves, quotient surfaces, diagonal forms, Frobenius twists, subgroup indices, supersingular prime residues, LRC runners, gaps, fixed circle sections, section boundaries, wall-crossing events, Pisano classes, code supports, matroid circuits, and proof obligations
+  chosen quotient:
+    proof-route vertices.  It preserves whether a scalar obstruction has a retained side channel and whether the channel is computable.
+  information destroyed:
+    actual surface geometry, explicit Magma group data, code support realizability, and multi-stranger LRC interactions.
+  challenged assumption:
+    do not treat supersingularity, Gleason positivity, or q-blocking as the obstruction.  In all three domains the proof-bearing object is the extra support channel retained after the scalar quotient.
+  concrete next moves:
+    (a) use the D7 index 78 as a design-ledger search seed for the 5-(72,16,78) minimum layer;
+    (b) use the D6/A4 index 91 as the geometric analogue of the LRC14 q=91 fibered rescue;
+    (c) model LRC14 Q27 descent after Church's partial-Frobenius descent: each blocked shell should either lower a degree/resource or land in a finite exceptional type.
+

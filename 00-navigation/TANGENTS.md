@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T789** #product-quotient #shioda #supersingular #frobenius #support-gate #lrc14 #72-36-16 #PSL2F13 #HYP-2445 #OPEN-Q-069 | certainty: exact numerology + open transfer program | source: codex-2026-06-12
+DIAGONAL FROBENIUS OBSTRUCTION AS SUPPORT GATE. Church's arXiv:2508.14876 gives a serious geometric template for the repo's scalar/support split: Shioda supersingularity is the scalar shadow, while diagonal symmetric forms on every partial Frobenius twist are the retained channel that forces curve descent or finite exceptions. The genus-14 Hurwitz data land on the same ledger as LRC14 and `[72,36,16]`: `|PSL2(F_13)|=1092=84*(14-1)=13*84`, `D6/A4` index `91=C(14,2)` matches the Q27 q=91 rescue, and `D7` index `78=C(13,2)` matches the minimum-design `lambda_5`. Next: formalize the support-gate descent lemma and test the `78/91` incidence arithmetic without mistaking it for a code automorphism.
+
 **T788** #lrc #n14 #pisano #band-ladder #fibered-shells #Q27 #HYP-2444 #HYP-2438 #OPEN-Q-068 #codex-p6 | certainty: exact one-stranger closure + open multi-stranger proof route | source: codex-2026-06-11-P6
 LRC14 PISANO QUOTIENT RESIDUAL. In `S(r)=7*{1..12} union {r}`, the shell-27 unit quotient `(Z/27)^*/+-` has 9 classes (`pi(27)/pi(3)=9`); the 7-core covers 8/9 and misses exactly `+-10`. All 8 plain q<=27 shell blockers have `r mod 13=0` and `r mod 27 in {0,+-10}`. Stronger: the fibered lattice `Q27={d*m:d|14,m<=27}` covers all 936 primitive rows, including the two first-plain-q=41 rows by q=91; B'(any) also covers all rows (792 stranger targets, 144 core targets). Tiny two-stranger scout: pairing the 8 hard residues over `7*{1..11}` gives 28/28 q=12 witnesses, so the next resource ledger must preserve low clocks while spending shell-27 classes.
 

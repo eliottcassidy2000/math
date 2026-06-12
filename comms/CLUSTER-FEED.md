@@ -4,6 +4,28 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 — DIAGONAL FROBENIUS SUPPORT GATE: Church product-quotient obstructions join the LRC14/[72,36,16] scalar-support program (HYP-2445, OPEN-Q-069, T789)
+
+**Dispatch:** merge arXiv:2508.14876 into the repo's ongoing LRC14, Pisano, random-sign, and
+`[72,36,16]` investigations.  **Paper mechanism imported:** Shioda supersingularity is a scalar
+shadow, not the obstruction.  Church's proof keeps a retained channel: diagonal symmetric forms on
+every asymmetric partial Frobenius twist.  Rational/elliptic curves are forced into finite exceptional
+types or descend by partial Frobenius with a projection degree drop.
+
+**Atlas result:** `|PSL2(F_13)|=1092=84*(14-1)=13*84`, the same integer as the LRC14 one-stranger
+cutoff.  The product-quotient subgroups sharpen the bridge: `D6/A4` have index `91=C(14,2)`, matching
+HYP-2444's `q=91` fibered rescue; `D7` has index `78=C(13,2)`, matching the Type II `[72,36,16]`
+minimum-design `lambda_5=78`.  The first listed supersingular prime norms are all `-1 mod 13`; two
+also sit in the LRC missing `+/-10 mod 27` class.  These are recorded as search beacons, not proofs.
+
+**New route:** HYP-2445 asks for a common support-gate lemma: scalar quotient `Q`, retained channel
+`S`, and descent/finite-exception rule `D`.  Transfer targets: LRC14 Q27 resource descent and the
+`[72,36,16]` minimum-word support/design ledger.  Artifacts:
+`04-computation/product_quotient_support_gate_atlas_codex.py` + `.out`, reflection
+`shioda-product-quotient-obstructions-and-support-gates.md`, HYP-2445, OPEN-Q-069, T789.
+
+---
+
 ## codex-2026-06-11-P5 — ORDER-5 FIXED-PROJECTION GATE for the [72,36,16] code (HYP-2439..2441, OPEN-Q-067, T785)
 
 **Dispatch:** continue progress toward a self-dual `[72,36,16]` code. **Exact reduction:** in the
