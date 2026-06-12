@@ -1,0 +1,74 @@
+== Pisano / shell-27 quotient ==
+  Pisano tower pi(3),pi(9),pi(27),pi(81) = 8,24,72,216
+  ratios: pi(9)/pi(3)=3, pi(27)/pi(9)=3, pi(27)/pi(3)=9
+  ord_27(2)=18; quotient by +- has orbit length 9
+  (Z/27)^*/+- classes (9): [1, 2, 4, 5, 7, 8, 10, 11, 13]
+  multiply-by-2 orbit on classes: [1, 2, 4, 8, 11, 5, 10, 7, 13]
+  core 7*{1..12} covers 8/9 unit classes: [1, 2, 4, 5, 7, 8, 11, 13]
+  missing shell-27 class: [10]; inverse multiplier class: [8]
+  q=27 witness for the 12-runner core alone: a=8
+
+== Exact S(r)=7*{1..12} union {r} family ==
+  valid primitive rows r<=1092: 936
+  all loose by exact band witness q<=600: 936/936
+  max minimal witness modulus: 41
+  minimal-q histogram: {13: 864, 27: 64, 40: 6, 41: 2}
+  rows blocking all plain q<=27 shells: 8
+  old evaders of [plain q<=27 shells union B'(mult14)]: 5
+
+== Residue signature of the shell-27 residual ==
+  shell-blocker residues (r mod 13, r mod 27): {(0, 0): 3, (0, 10): 2, (0, 17): 3}
+  old evader details:
+    r=611: min=(q=41, a=9); r mod 13=0, r mod 27=17, class27=10; Q27=(91, 1); Q41=(41, 9); B'any=True at v=611 margin=443/718536
+    r=702: min=(q=41, a=9); r mod 13=0, r mod 27=0, class27=None; Q27=(91, 1); Q41=(41, 9); B'any=True at v=702 margin=89/137592
+    r=793: min=(q=40, a=11); r mod 13=0, r mod 27=10, class27=10; Q27=(40, 11); Q41=(40, 11); B'any=True at v=793 margin=625/932568
+    r=962: min=(q=40, a=11); r mod 13=0, r mod 27=17, class27=10; Q27=(40, 11); Q41=(40, 11); B'any=True at v=962 margin=397/565656
+    r=1053: min=(q=40, a=11); r mod 13=0, r mod 27=0, class27=None; Q27=(40, 11); Q41=(40, 11); B'any=True at v=1053 margin=295/412776
+  interpretation: the 7-core misses exactly class +-10 mod 27; the five old evaders
+    have r mod 27 in {0,+-10} and r mod 13=0, so they either plug the missing
+    shell-27 unit class or collapse to zero while also blocking the generic 13-clock.
+
+== Fibered lattice and B' gate comparison ==
+  Q27={d*m: d|14, m<=27} size=76, family coverage=936/936
+  Q41={d*m: d|14, m<=41} size=115, family coverage=936/936
+  Q27 misses: []
+  Q41 misses: []
+  B'(any runner) coverage over family: 936/936
+  B'(any runner) certificates: stranger target 792, core-runner target 144
+  exact closure on this family: Q27 covers all rows = True; Q41 covers all rows = True; B'(any) covers all rows = True
+
+== Tiny two-stranger stress probe ==
+  paired hard single-stranger residues over 7*{1..11}: [260, 351, 442, 611, 702, 793, 962, 1053]
+  tested primitive pairs: 28
+  first Q27 witness-q histogram: {12: 28}
+  Q27 plus B'(any) misses: []
+  lesson: simply pairing the one-stranger blockers is too easy; deleting 84 opens
+    the q=12 divisor clock. A hard multi-stranger search must keep low-clock coverage
+    while spending shell-27/Pisano resources.
+
+== Tournament Analysis: proof gates, not runners ==
+  vertices: Q41, band2, Q27, B'(any), band1, B'(mult14), shell27-residue, 13-clock
+  observable tuple per gate: (family coverage, old-evader coverage, shell-blocker coverage, -tie-rank)
+  switch: A -> B iff A has lexicographically larger tuple; tie Hamiltonian path is declaration order
+    Q41_fiber_lattice: metric=(936, 5, 8, -1), outdeg=7
+    band2_min_q_le_41: metric=(936, 5, 8, -2), outdeg=6
+    Q27_fiber_lattice: metric=(936, 5, 8, -3), outdeg=5
+    Bprime_any_runner: metric=(936, 5, 8, -4), outdeg=4
+    band1_plain_q_le_27: metric=(928, 0, 0, -5), outdeg=3
+    Bprime_mult14_only: metric=(420, 0, 3, -6), outdeg=0
+    not_missing_shell27_class: metric=(832, 0, 0, -7), outdeg=1
+    not_13_clock_block: metric=(864, 0, 0, -8), outdeg=2
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles: 0; Hamiltonian paths: 1; edge flips vs declaration path: 3/28
+  assumption challenge: alternate vertices considered = runners, gaps, residues, shell unit classes,
+    Pisano quotient classes, band-rung events, B' targets, and proof obligations.
+    This quotient preserves exact S(r) coverage and the residue mechanism; it destroys arbitrary
+    multi-stranger geometry, endpoint-owner data, and nonlocal pressure dependencies.
+
+== Proof-shaped takeaway ==
+  HYP-2438's Q lattice is exact on the whole one-stranger family already at Q27;
+  the two rows with minimal plain witness q=41 are nevertheless caught at q=91.
+  Q41 is therefore redundant for S(r), though it remains the visible band-2 stress test.
+  The Pisano quotient explains the residual rather than merely listing it: shell 27
+  leaves one antipodal unit class, +-10, and the old evaders occupy that class (or 0)
+  while also killing the 13-clock.  Multi-stranger configurations remain the live gap.

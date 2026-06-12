@@ -596,3 +596,26 @@ homometry/shell structure is odd-prime: re-examine S708/S710 `C=3³,3⁴` as σ-
 **P3 extension: Euler-product ghosts / zeta-side gates.** For `P_b(q)=prod(1-q^m)^{b_m}`, split exponent coordinates, ghosts `G_b(n)=sum_{d|n} d b_d`, and coefficients. Through `q^180`: eta_all has dense ghost (`sigma_1`) but sparse coefficients (`22/181`); prime_only has sparse exponents but almost dense ghost (`179/180`) and dense coefficients (`158/181`); Mobius/Liouville give multiplicative sign product gates with dense ghosts and low small-window leakage. New handoff OPEN-Q-065: Dirichlet-character/random-completely-multiplicative version `prod_p(1-chi(p)p^{-s})`, compare Dirichlet zero pressure with ordinary coefficient leakage. Files: `euler_product_ghost_atlas_codex.py` + `.out`, HYP-2431..2432, T782.
 
 **P4 extension: theta/code lattice gate.** Extremal even-unimodular theta series and Type II code enumerators are parallel scalar modular gates. Atlas rows: theta first shells `196560,52416000,6218175600` at dimensions `24,48,72`; Type II first shells `759,17296,249849` at lengths `24,48,72`. The 72 split is now explicit: Nebe's minimum-8 lattice support exists, while the binary `[72,36,16]` support remains open. Handoff OPEN-Q-066/HYP-2433..2435: find the retained support bridge/obstruction via polarizations, frames, Z4/code lifts, binary matroids, skew-Hadamard gauges, or the `5-(72,16,78)` design layer. Files: `theta_code_lattice_gate_codex.py` + `.out`, reflection `theta-code-lattice-gates-and-the-72-support-split.md`, T784.
+
+---
+## codex-2026-06-11-P6 — LRC14 Pisano quotient/Q27 closure (HYP-2444, OPEN-Q-068, T788)
+
+New exact LRC14 packet for the request "work on pisano and the LRC 14." In
+`S(r)=7*{1..12} union {r}`, the shell-27 quotient `(Z/27)^*/+-` has 9
+classes, matching `pi(27)/pi(3)=9`; the 7-core covers 8/9 and misses
+`+-10`. Every row that blocks all plain q<=27 shells has `r mod 13=0` and
+`r mod 27 in {0,+-10}`.
+
+Counts: 936 primitive rows, min-q histogram `{13:864, 27:64, 40:6, 41:2}`,
+8 plain-shell blockers, 5 old evaders after B'(mult14). Sharper closure:
+`Q27={d*m:d|14,m<=27}` covers all 936 rows; the two first-plain-q=41 rows
+are caught at q=91. B'(any) also covers all rows (792 stranger certificates,
+144 core-runner certificates). Tiny two-stranger scout: pairing the eight hard
+one-stranger residues over `7*{1..11}` gives 28/28 q=12 witnesses, so the next
+search must preserve low divisor clocks while spending shell-27 classes.
+
+HYP-2438 update: Q41 is redundant for one-stranger; the live proof target is
+the multi-stranger resource bound for Q27 plus B'(any). Artifacts:
+`04-computation/lrc14_pisano_band_ladder_codex.py`, result `.out`,
+HYP-2444, OPEN-Q-068, T788, reflection
+`07-reflections/lrc14-pisano-quotient-and-the-fibered-band-ladder.md`.
