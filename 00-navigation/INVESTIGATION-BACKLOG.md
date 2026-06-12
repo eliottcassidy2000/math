@@ -21,6 +21,10 @@
 
 **Done:** merged the Grothendieck-Katz p-curvature conjecture as an operator/carry local-global template for LRC14. Added a toy local p-jet atlas showing scalar mod-p shadows can lie both ways: `1/(1-z)` has zero operator p-curvature but full naive scalar rank, while `z/(1-z)` has full operator p-curvature but zero naive scalar rank. The LRC14 transfer is the denominator-curvature ledger `K_q(S)=(blocked twists,tau_q,Pisano class,13-clock,divisor fiber,Bprime/owner target)`.
 **Next:** compute support-transport defects across denominator maps (`q -> 7q`, `q -> 2q`, `q -> d*m`, `27 -> 9 -> 3`) for the HYP-2443 high-pressure rows. Prove that zero defect over a long ladder forces AP/Vstar/2AP or descent, while positive defect gives a finite witness or owner-private opening.
+## Lead codex-2026-06-12: irreducible-prime certificate-state addendum (HYP-2448/T792/OPEN-Q-070)
+
+**Done:** merged the user's Bunyakovsky/Buniakowski bidirectional atom lens with Singh arXiv:2411.18366 and Iravanian arXiv:2410.15880, then rebased over the newly landed HYP-2447 prism and kept this as an addendum. Added `04-computation/irreducible_prime_carrier_tournament_codex.py` and stored output. The atlas separates forward prime production, reverse Singh/Murty/Cohn certificates, fixed-divisor obstructions, and real-factor recombination survivor tests. Key small facts: `x^2+x+2` is irreducible but fixed-divisor-blocked; `9841` in base `3` gives `1+x+...+x^8` with factor degrees `[2,6]` and `Omega(9841)=2`; `x^4-10x^2+1` is irreducible but has two false integer-trace subset candidates. Proof-carrier TA is nontransitive with `3` directed cycles and SCC sizes `[5,1,1,1]`.
+**Next:** replace the floating real-root trace scout by exact algebraic trace lattices; build certificate states `C(f;X)` for a larger polynomial family and measure edge flips as `X` grows; transfer the same retained-certificate pattern to LRC14 Q27 resource vectors and to `[72,36,16]` support/matroid/design construction moves.
 
 ## Lead codex-2026-06-12: LRC14 marked ladder support gate (HYP-2443/T787)
 
@@ -2573,4 +2577,3 @@ in quotient/H/isomorphism statistics must come from tournament structure.
 - **(c) McShane–Harris JIS 27 (2024):** verifier REACHED and text-mined the PDF — no spectrum/gap-freeness statement (novelty position strengthened); their per-level generating functions (A357242/48/57/66) vs our gap-free floor + the repo's H-distribution machinery is an open bridge. Moon's *Topics on Tournaments* cyclic-triples chapter still worth a skim for a folklore interval exercise before any external novelty claim.
 - **(d) Three-cubes ledger follow-ups (T773–T775):** rigidity-pruned k=114 search with honest exclusion bound (NOT expecting a hit; min coordinate > ~10^16 per Booker–Sutherland); Ono–Trebat-Leder full text when web is stable; Hirschhorn closed-form vs our two recurrence-theoretic proofs; primitivity status of 192/375/600.
 - **Status:** OPEN, prioritized (a) > (c) > (b) > (d).
-

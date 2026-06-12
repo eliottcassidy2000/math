@@ -1,0 +1,192 @@
+IRREDUCIBLE PRIME CARRIER TOURNAMENT ATLAS
+==========================================
+Sources:
+  Singh arXiv:2411.18366 - prime factorization of large values bounds factors.
+  Iravanian arXiv:2410.15880 - real-factor recombination becomes subset-sum.
+
+POLYNOMIAL ATLAS
+================
+
+[linear_x] x
+  note: prime values are exactly the primes in the domain
+  factor_degrees=[1]; fixed_divisor=1; bunyakovsky_admissible=True
+  prime_values_in_n_0_160=37; first_hits=[(2, 2), (3, 3), (5, 5), (7, 7), (11, 11), (13, 13), (17, 17), (19, 19)]
+  H_f=0; d=1 threshold m>=2
+  Singh plain best (m,Omega,|f(m)|)=(2, 1, 2)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(2, 1, 1, 2)
+  first plain tight m with Omega(|f(m)|)=factor_count: (2, 2)
+
+[cohn_101_x2_plus_1] x**2 + 1
+  note: Cohn from prime 101 in base 10
+  factor_degrees=[2]; fixed_divisor=1; bunyakovsky_admissible=True
+  prime_values_in_n_0_160=30; first_hits=[(1, 2), (2, 5), (4, 17), (6, 37), (10, 101), (14, 197), (16, 257), (20, 401)]
+  H_f=1; d=1 threshold m>=3
+  Singh plain best (m,Omega,|f(m)|)=(4, 1, 17)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(4, 1, 1, 17)
+  first plain tight m with Omega(|f(m)|)=factor_count: (4, 17)
+
+[euler_x2_minus_x_plus_41] x**2 - x + 41
+  note: Euler/Singh prime window
+  factor_degrees=[2]; fixed_divisor=1; bunyakovsky_admissible=True
+  prime_values_in_n_0_160=130; first_hits=[(0, 41), (1, 41), (2, 43), (3, 47), (4, 53), (5, 61), (6, 71), (7, 83)]
+  H_f=41; d=1 threshold m>=43
+  Singh plain best (m,Omega,|f(m)|)=(43, 1, 1847)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(43, 1, 1, 1847)
+  first plain tight m with Omega(|f(m)|)=factor_count: (43, 1847)
+
+[bunyakovsky_x2_plus_x_plus_1] x**2 + x + 1
+  note: primitive irreducible candidate
+  factor_degrees=[2]; fixed_divisor=1; bunyakovsky_admissible=True
+  prime_values_in_n_0_160=46; first_hits=[(1, 3), (2, 7), (3, 13), (5, 31), (6, 43), (8, 73), (12, 157), (14, 211)]
+  H_f=1; d=1 threshold m>=3
+  Singh plain best (m,Omega,|f(m)|)=(3, 1, 13)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(3, 1, 1, 13)
+  first plain tight m with Omega(|f(m)|)=factor_count: (3, 13)
+
+[local_obstruction_x2_plus_x_plus_2] x**2 + x + 2
+  note: irreducible but fixed divisor 2
+  factor_degrees=[2]; fixed_divisor=2; bunyakovsky_admissible=False
+  prime_values_in_n_0_160=1; first_hits=[(0, 2)]
+  H_f=2; d=1 threshold m>=4
+  Singh plain best (m,Omega,|f(m)|)=(4, 2, 22)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(7, 2, 1, 29)
+  first plain tight m with Omega(|f(m)|)=factor_count: None
+
+[cohn_9841_repunit_base3] x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1
+  note: Cohn bound tight: 9841=13*757
+  factor_degrees=[2, 6]; fixed_divisor=1; bunyakovsky_admissible=False
+  prime_values_in_n_0_160=0; first_hits=[]
+  H_f=1; d=1 threshold m>=3
+  Singh plain best (m,Omega,|f(m)|)=(3, 2, 9841)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(3, 1, 2, 9841)
+  first plain tight m with Omega(|f(m)|)=factor_count: (3, 9841)
+
+[singh_degree8_example] x**8 + 6*x**7 + 5
+  note: Singh example with x+1 factor
+  factor_degrees=[1, 7]; fixed_divisor=1; bunyakovsky_admissible=False
+  prime_values_in_n_0_160=1; first_hits=[(0, 5)]
+  H_f=6; d=1 threshold m>=8
+  Singh plain best (m,Omega,|f(m)|)=(12, 2, 644972549)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(12, 1, 2, 644972549)
+  first plain tight m with Omega(|f(m)|)=factor_count: (12, 644972549)
+
+[irreducible_quartic_trace_rich] x**4 - 10*x**2 + 1
+  note: irreducible but many trace-zero subsets
+  factor_degrees=[4]; fixed_divisor=1; bunyakovsky_admissible=True
+  prime_values_in_n_0_160=31; first_hits=[(4, 97), (6, 937), (8, 3457), (10, 9001), (14, 36457), (18, 101737), (26, 450217), (30, 801001)]
+  H_f=10; d=1 threshold m>=12
+  Singh plain best (m,Omega,|f(m)|)=(14, 1, 36457)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(14, 1, 1, 36457)
+  first plain tight m with Omega(|f(m)|)=factor_count: (14, 36457)
+
+[reducible_two_quadratics] x**4 + 4*x**3 + 5*x**2 + 4*x + 1
+  note: recombination should find two factors
+  factor_degrees=[2, 2]; fixed_divisor=1; bunyakovsky_admissible=False
+  prime_values_in_n_0_160=0; first_hits=[]
+  H_f=5; d=1 threshold m>=7
+  Singh plain best (m,Omega,|f(m)|)=(8, 2, 6497)
+  Singh unitary best (m,d,Omega(|f(m)|/d),quotient)=(8, 1, 2, 6497)
+  first plain tight m with Omega(|f(m)|)=factor_count: (8, 6497)
+
+COHN DIGIT-POLYNOMIAL ATLAS
+===========================
+
+[prime 101 -> x^2+1] N=101, base=10, digits=[1, 0, 1]
+  digit_poly=x**2 + 1
+  Omega(N)=1; factor_degrees=[2]; bound_ok=True
+
+[prime 131 -> x^2+3x+1] N=131, base=10, digits=[1, 3, 1]
+  digit_poly=x**2 + 3*x + 1
+  Omega(N)=1; factor_degrees=[2]; bound_ok=True
+
+[9841=13*757 -> 1+x+...+x^8] N=9841, base=3, digits=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+  digit_poly=x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1
+  Omega(N)=2; factor_degrees=[2, 6]; bound_ok=True
+
+[2047=23*89 -> binary repunit degree 10] N=2047, base=2, digits=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+  digit_poly=x**10 + x**9 + x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1
+  Omega(N)=2; factor_degrees=[10]; bound_ok=True
+
+REAL-FACTOR RECOMBINATION SCOUT
+===============================
+
+[irreducible trace-rich quartic] x**4 - 10*x**2 + 1
+  factor_degrees=[4]
+  trace_blocks=[-3.1462643699, -0.3178372452, 0.3178372452, 3.1462643699]
+  integer_trace_candidates=2
+  true_nontrivial_factor_subsets=0
+  false_trace_excess=2
+  sample_candidate_sums=[0, 0]
+
+[irreducible generic quartic] x**4 + x + 1
+  factor_degrees=[4]
+  trace_blocks=[-1.454272169, 1.454272169]
+  integer_trace_candidates=0
+  true_nontrivial_factor_subsets=0
+  false_trace_excess=0
+  sample_candidate_sums=[]
+
+[reducible two quadratics] x**4 + 4*x**3 + 5*x**2 + 4*x + 1
+  factor_degrees=[2, 2]
+  trace_blocks=[-2.6180339887, -0.3819660113, -1.0]
+  integer_trace_candidates=2
+  true_nontrivial_factor_subsets=2
+  false_trace_excess=0
+  sample_candidate_sums=[-3, -1]
+
+[Euler quadratic] x**2 - x + 41
+  factor_degrees=[2]
+  trace_blocks=[1.0]
+  integer_trace_candidates=0
+  true_nontrivial_factor_subsets=0
+  false_trace_excess=0
+  sample_candidate_sums=[]
+
+PROOF-CARRIER TOURNAMENT
+========================
+Pairwise observable: majority vote over
+  forward_primes, reverse_irreducibility, recombination, support_retention, repo_bridge
+Tie path: lower risk, then declaration/name.
+  bunyakovsky_forward_atom: score=0, metrics=(5,1,1,2,4; risk=5)
+    note: irreducible primitive f should hit infinitely many primes
+  singh_murty_value_factor_bound: score=7, metrics=(2,5,2,4,5; risk=1)
+    note: large value plus prime factorization bounds irreducible factors
+  cohn_digit_prime_certificate: score=4, metrics=(2,5,1,3,4; risk=1)
+    note: base-b digits of prime N give irreducible digit polynomial
+  iravanian_real_trace_recombination: score=2, metrics=(1,3,5,4,4; risk=2)
+    note: factor over R, then solve integer trace/subset constraints
+  finite_field_hensel_recombination: score=2, metrics=(1,4,4,3,3; risk=1)
+    note: standard modular factor-lift-recombine pipeline
+  newton_nonarch_bivariate_gate: score=3, metrics=(1,4,2,5,4; risk=2)
+    note: Singh bivariate/non-Archimedean extension keeps degree support
+  local_fixed_divisor_sieve: score=4, metrics=(4,2,1,4,5; risk=2)
+    note: fixed divisor / local obstruction is Bunyakovsky's admissibility gate
+  repo_support_gate_LRC72: score=6, metrics=(2,3,2,5,5; risk=2)
+    note: same scalar/support split seen in LRC14 and [72,36,16]
+fingerprint={'score_hist': {0: 1, 2: 2, 3: 1, 4: 2, 6: 1, 7: 1}, 'directed_3cycles': 3, 'scc_sizes': [5, 1, 1, 1], 'hamiltonian_paths': 9, 'edge_flips_vs_reverse_irreducibility_only': 8, 'ranking': ['singh_murty_value_factor_bound', 'repo_support_gate_LRC72', 'cohn_digit_prime_certificate', 'local_fixed_divisor_sieve', 'newton_nonarch_bivariate_gate', 'finite_field_hensel_recombination', 'iravanian_real_trace_recombination', 'bunyakovsky_forward_atom']}
+
+INFINITE-TOURNAMENT HYPOTHESIS
+==============================
+One useful infinite tournament is not on integers themselves but on certificate states.
+A vertex can be (f, local data retained): fixed divisor, residue obstructions,
+least Singh/Cohn certificate depth, trace-subset survivor set, Newton polygon edge data.
+Orient A -> B when A has the smaller retained certificate depth after normalizing degree
+and fixed divisor; orient ties by the richer side channel.  Finite truncations then
+record edge flips as the prime window grows.  This makes Bunyakovsky a statement
+about an infinite supply of forward prime-hit witnesses, while Singh/Cohn/Iravanian
+supply reverse and algorithmic edges in the same tournament.
+
+ASSUMPTION CHALLENGE
+====================
+Alternate vertex sets considered:
+  polynomials; integer values; primes; residues modulo p; fixed-divisor obstructions;
+  roots; real/complex conjugate blocks; recombination subsets; digit positions;
+  Newton polygon edges; bivariate specialization channels; LRC runners/gaps;
+  codewords, matroid circuits, minimum-design blocks, and proof obligations.
+Chosen vertices: proof carriers.
+Preserved: the two-way prime/irreducible direction, support retention,
+computability, and transfer potential to LRC14 and [72,36,16].
+Destroyed: individual polynomial arithmetic, actual asymptotic prime production,
+root geometry beyond first trace, and code-support realizability.
+Challenged assumption: the tournament need not live on runners, arcs, or primes;
+it can live on certificate channels and still preserve the obstruction predicate.

@@ -4,6 +4,34 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 — IRREDUCIBLE-PRIME CERTIFICATE-STATE EXTENSION: Bunyakovsky forward atoms and Singh/Cohn/Iravanian reverse certificates (HYP-2448, OPEN-Q-070, T792)
+
+**Dispatch:** merge the user's irreducible-polynomial/prime-value lens with Singh arXiv:2411.18366
+and Iravanian arXiv:2410.15880.  **Carrier:** primitive irreducible polynomials are atoms in
+`Z[x]`; primes are atoms in `Z`; evaluation is a lossy quotient.  Bunyakovsky is the forward
+atom-production conjecture, while Singh/Murty/Cohn give reverse certificates from prime or
+low-Omega integer values back to irreducibility/factor-count bounds. This is
+kept as an addendum to the newly landed HYP-2447 irreducibility-prime prism.
+
+**Atlas result:** `04-computation/irreducible_prime_carrier_tournament_codex.py` checks fixed
+divisors, prime-value windows, Singh-style value-factor certificates, Cohn digit-polynomial rows,
+and Iravanian-style real-factor trace subset candidates.  Examples: `x^2+x+2` is irreducible but
+fixed-divisor-blocked; `9841` in base `3` gives `1+x+...+x^8` with factor degrees `[2,6]` and
+`Omega(9841)=2`; `x^4-10x^2+1` is irreducible but has two false integer-trace recombination
+subsets, so first-trace subset-sum is necessary but not sufficient.
+
+**Tournament Analysis:** vertices are proof carriers/certificate channels, not polynomials,
+runners, arcs, or primes.  The proof-carrier tournament is nontransitive: `3` directed cycles,
+SCC sizes `[5,1,1,1]`, `9` Hamiltonian paths, and `8` edge flips versus a reverse-certificate-only
+ranking.  OPEN-Q-070 asks for an exact infinite certificate-state tournament and transfer to
+LRC14 Q27 resource vectors and `[72,36,16]` support/matroid/design moves.
+
+Artifacts: HYP-2448, HYP-2447, OPEN-Q-070, T792,
+`04-computation/irreducible_prime_carrier_tournament_codex.py` and its `.out`, reflection
+`irreducible-prime-carriers-and-certificate-tournaments.md`.
+
+---
+
 ## codex-2026-06-12 — DIAGONAL FROBENIUS SUPPORT GATE: Church product-quotient obstructions join the LRC14/[72,36,16] scalar-support program (HYP-2445, OPEN-Q-069, T789)
 
 **Dispatch:** merge arXiv:2508.14876 into the repo's ongoing LRC14, Pisano, random-sign, and
