@@ -10,6 +10,7 @@ Organized by topic. Each hypothesis has a detail file.
 ## Recent Open Additions
 
 - **HYP-2442 (Erdos-Moser tower two-step recurrence is a support gate):** exact tower data now read `trans(T3..T255)=2,3,5,7,11,15,23`, matching `a_{k+2}=2a_k+1`; `T511` is bracketed `[30,47]` and predicted `31`. P5 verifies full tower cores through `T31` have `trans(D(D(T_m)))=2trans(T_m)+1`, while pure chains through `t=15` have `trans(D(D(TT_t)))=2t`. Thus the failed `T511` `TT15` lift to `30` is not an accident: the missing `+1` lives in support outside a naked maximum chain. Next proof target: find or refute a packet `X subset T127` with `trans(X)=15` and `q(X)=trans(D(D(X)))-30 >= 1`. Status: OPEN support-realization target. File: `HYP-2442-erdos-moser-tower-support-gate.md`.
+- **HYP-2443 (LRC14 marked ladder support closes the next proof gap):** HYP-2438's band-ladder route should be read as a marked blocker hypergraph.  For each denominator `q`, compute `tau_q(S)`, the minimum number of runners needed to block all unit twists.  The atlas separates pure-shell band-1 failures from fibered-ladder failures: the `S(r)=7*{1..12} union {r}` evaders are pure `q<=27` failures with `13|r` and `r mod 27 in {0,+/-10}`, but the fibered ladder often already catches them via `q=91=7*13`, while `q=40/41` is the non-fibered rung-up rescue.  Next proof target: finite ladder witness or concentrated blocker load forces Bprime(any runner)/owner-private deletion. Status: OPEN support-pressure theorem. File: `HYP-2443-lrc14-marked-ladder-support-gate.md`.
 
 ## By Status
 

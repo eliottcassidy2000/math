@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: LRC14 marked ladder support gate (HYP-2443/T787)
+
+**Done:** added a marked blocker-hypergraph atlas for HYP-2438. For each denominator `q`, compute which runners block each unit twist and the minimum support `tau_q(S)`. This separates pure shell band-1 failures from fibered ladder failures: the single-stranger `S(r)` rows fail pure `q<=27` exactly in the `13|r`, `r mod 27 in {0,+/-10}` pattern, while fibered addresses such as `q=91=7*13` or rung-up shell `q=40/41` catch them.
+**Next:** prove the support-pressure dichotomy: either a finite ladder witness exists, or the blocker ledger has a universal/apex blocker reducible to HYP-2256, or repeated cover-load marks a runner for Bprime(any runner)/owner-private deletion. Exclude AP/Vstar/2AP as normalized wall atoms before applying this to primitive loose targets.
+
 ## Lead kind-pasteur-2026-06-11-S3: the pentagonal product is a hub — random-sign Lyapunov γ_pent, Euler-sign rigidity, the η²⁴ code-discriminant bridge, [72,36,16] localized (THM-487/488/489, HYP-2417..2423)
 
 **Done:** THM-488 (γ_pent≈0.206 new Lyapunov constant, validated vs Viswanath; Euler's signs the UNIQUE subexponential pattern = analytic shadow of the pentagonal #thm; IVT half proved, hard half certified on 1585 sets via argument principle). THM-489 (code discriminant P₂₄ = 16η²⁴ exactly; extremal correction c₁(m)=−42m proved; HYP-2420 MOS-mechanism CORRECTED to secular, n=3696 reproduced). THM-487 ([72,36,16] obstruction is code-combinatorial — W₇₂ all-positive, Γ₇₂ exists, Paley gauge stalls at d=12). Renumbered from 485/486 per claudebox-S5 first-come.
