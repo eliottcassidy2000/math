@@ -1,0 +1,59 @@
+COEFFICIENT TILING PRIME BRIDGE ATLAS
+=====================================
+Layer d has N-d arcs.  Counts c_d and magnetizations A_d=2c_d-(N-d)
+turn tournament tilings into integer polynomials.
+
+DIAGONAL PROFILE SUMMARIES
+==========================
+{'N': 3, 'fixed_path': False, 'profiles': 6, 'weighted_tilings': 8, 'count_poly_irred_profiles': 4, 'cohn_prime_value_profiles': 2, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 3, 'centered_admissible_profiles': 3, 'centered_has_prime_hit_profiles': 2, 'weighted_centered_irred_tilings': 4, 'extreme_profiles': 4, 'extreme_centered_irred': 2}
+{'N': 3, 'fixed_path': True, 'profiles': 2, 'weighted_tilings': 2, 'count_poly_irred_profiles': 1, 'cohn_prime_value_profiles': 1, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 1, 'centered_admissible_profiles': 1, 'centered_has_prime_hit_profiles': 1, 'weighted_centered_irred_tilings': 1, 'extreme_profiles': 2, 'extreme_centered_irred': 1}
+
+{'N': 4, 'fixed_path': False, 'profiles': 24, 'weighted_tilings': 64, 'count_poly_irred_profiles': 18, 'cohn_prime_value_profiles': 11, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 24, 'centered_admissible_profiles': 24, 'centered_has_prime_hit_profiles': 15, 'weighted_centered_irred_tilings': 64, 'extreme_profiles': 8, 'extreme_centered_irred': 8}
+{'N': 4, 'fixed_path': True, 'profiles': 6, 'weighted_tilings': 8, 'count_poly_irred_profiles': 5, 'cohn_prime_value_profiles': 4, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 6, 'centered_admissible_profiles': 6, 'centered_has_prime_hit_profiles': 5, 'weighted_centered_irred_tilings': 8, 'extreme_profiles': 4, 'extreme_centered_irred': 4}
+
+{'N': 5, 'fixed_path': False, 'profiles': 120, 'weighted_tilings': 1024, 'count_poly_irred_profiles': 92, 'cohn_prime_value_profiles': 28, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 104, 'centered_admissible_profiles': 104, 'centered_has_prime_hit_profiles': 76, 'weighted_centered_irred_tilings': 832, 'extreme_profiles': 16, 'extreme_centered_irred': 12}
+{'N': 5, 'fixed_path': True, 'profiles': 24, 'weighted_tilings': 64, 'count_poly_irred_profiles': 20, 'cohn_prime_value_profiles': 5, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 22, 'centered_admissible_profiles': 22, 'centered_has_prime_hit_profiles': 21, 'weighted_centered_irred_tilings': 62, 'extreme_profiles': 8, 'extreme_centered_irred': 6}
+
+{'N': 6, 'fixed_path': False, 'profiles': 720, 'weighted_tilings': 32768, 'count_poly_irred_profiles': 579, 'cohn_prime_value_profiles': 271, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 518, 'centered_admissible_profiles': 518, 'centered_has_prime_hit_profiles': 391, 'weighted_centered_irred_tilings': 19898, 'extreme_profiles': 32, 'extreme_centered_irred': 26}
+{'N': 6, 'fixed_path': True, 'profiles': 120, 'weighted_tilings': 1024, 'count_poly_irred_profiles': 115, 'cohn_prime_value_profiles': 57, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 96, 'centered_admissible_profiles': 96, 'centered_has_prime_hit_profiles': 74, 'weighted_centered_irred_tilings': 859, 'extreme_profiles': 16, 'extreme_centered_irred': 13}
+
+{'N': 7, 'fixed_path': False, 'profiles': 5040, 'weighted_tilings': 2097152, 'count_poly_irred_profiles': 4212, 'cohn_prime_value_profiles': 580, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 3890, 'centered_admissible_profiles': 3890, 'centered_has_prime_hit_profiles': 2512, 'weighted_centered_irred_tilings': 1415658, 'extreme_profiles': 64, 'extreme_centered_irred': 54}
+{'N': 7, 'fixed_path': True, 'profiles': 720, 'weighted_tilings': 32768, 'count_poly_irred_profiles': 635, 'cohn_prime_value_profiles': 92, 'cohn_prime_mismatches': 0, 'centered_irred_profiles': 601, 'centered_admissible_profiles': 601, 'centered_has_prime_hit_profiles': 368, 'weighted_centered_irred_tilings': 28405, 'extreme_profiles': 32, 'extreme_centered_irred': 27}
+
+FIXED-PATH FIBER H SUMMARY
+==========================
+{'N': 6, 'tilings': 1024, 'profiles': 120, 'profiles_with_H_variation': 91, 'max_H_spread_in_one_profile': 34, 'max_spread_profile': (5, 1, 1, 1, 1), 'bucket_stats': {'cohn_prime=False': {'count': 510, 'avg_H': 29.565, 'min_H': 1, 'max_H': 45}, 'centered_irred=True': {'count': 859, 'avg_H': 28.907, 'min_H': 1, 'max_H': 45}, 'cohn_prime=True': {'count': 514, 'avg_H': 28.44, 'min_H': 5, 'max_H': 45}, 'centered_irred=False': {'count': 165, 'avg_H': 29.485, 'min_H': 5, 'max_H': 45}}, 'examples': {'centered_irred': {'profile': (5, 0, 0, 0, 0), 'centered_poly': '-x**5 - 2*x**4 - 3*x**3 - 4*x**2 + 5*x + 1', 'factor_degrees': [5], 'H': 17}, 'cohn_prime': {'profile': (5, 1, 0, 0, 0), 'path_poly': 'x + 5', 'value_base_N': 11, 'H': 15}}}
+
+COEFFICIENT MAGNITUDE SLICES (N=6)
+==================================
+{'slice': 'max_layer_magnitudes', 'magnitudes': (5, 4, 3, 2, 1), 'valid_sign_assignments': 32, 'distinct_polys': 32, 'irreducible': 26, 'admissible': 26, 'has_prime_hit': 19, 'examples': ['-x**5 - 2*x**4 - 3*x**3 - 4*x**2 - 5*x + 1', 'x**5 - 2*x**4 - 3*x**3 - 4*x**2 - 5*x + 1']}
+{'slice': 'minimum_parity_magnitudes', 'magnitudes': (1, 0, 1, 0, 1), 'valid_sign_assignments': 32, 'distinct_polys': 8, 'irreducible': 8, 'admissible': 8, 'has_prime_hit': 20, 'examples': ['-x**5 - x**3 - x + 1', 'x**5 + x**3 + x + 1']}
+{'slice': 'alternating_rigid_soft', 'magnitudes': (1, 4, 1, 2, 1), 'valid_sign_assignments': 32, 'distinct_polys': 32, 'irreducible': 24, 'admissible': 24, 'has_prime_hit': 18, 'examples': ['-x**5 - 2*x**4 - x**3 - 4*x**2 - x + 1', 'x**5 - 2*x**4 - x**3 - 4*x**2 - x + 1']}
+{'slice': 'apex_rigid_base_soft', 'magnitudes': (1, 0, 1, 0, 1), 'valid_sign_assignments': 32, 'distinct_polys': 8, 'irreducible': 8, 'admissible': 8, 'has_prime_hit': 20, 'examples': ['-x**5 - x**3 - x + 1', 'x**5 + x**3 + x + 1']}
+
+PROCEDURALLY GENERATED HIDING PLACES
+====================================
+diagonal_count_cohn_map: criteria=(4, 5, 5, 5, 3, 5) :: layer counts are base-N digits; prime profile integer certifies irreducibility
+centered_magnetization_slice: criteria=(5, 5, 4, 5, 4, 4) :: coefficient magnitudes are layer-imbalance slices through tiling space
+fiber_entropy_vs_irreducibility: criteria=(4, 4, 3, 5, 5, 4) :: same polynomial profile can hide many H-values and SCC shapes
+root_argument_tournament: criteria=(5, 3, 4, 2, 3, 3) :: orient roots by argument/real part; reducible factors become conjugation-stable modules
+newton_polygon_edge_tournament: criteria=(4, 4, 4, 3, 4, 4) :: vertices are Newton edges; orientations by slope/support dominance
+finite_field_factor_race: criteria=(4, 5, 5, 2, 3, 4) :: orient primes by factorization type of f mod p and edge flips across p
+evaluation_time_tournament: criteria=(3, 5, 4, 3, 3, 4) :: vertices are n-values; edge by which value gives stronger Singh certificate
+derivative_trace_tournament: criteria=(4, 4, 4, 3, 4, 4) :: Singh derivative conditions become a hierarchy of trace/support gates
+galois_orbit_recombination: criteria=(5, 2, 5, 2, 4, 2) :: subsets of roots oriented by stabilizer size and trace integrality
+code_support_polynomial_lift: criteria=(4, 3, 3, 4, 5, 3) :: length-72 support moves become coefficient-layer tilings with fixed low terms
+idea_tournament={'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}, 'directed_3cycles': 0, 'edge_flips_vs_novelty_only': 15, 'ranking': ['diagonal_count_cohn_map', 'centered_magnetization_slice', 'fiber_entropy_vs_irreducibility', 'newton_polygon_edge_tournament', 'finite_field_factor_race', 'derivative_trace_tournament', 'evaluation_time_tournament', 'root_argument_tournament', 'code_support_polynomial_lift', 'galois_orbit_recombination']}
+
+ASSUMPTION CHALLENGE
+====================
+Considered vertex sets: arcs, coefficient layers, layer profiles,
+fixed coefficient-magnitude slices, roots, factor subsets, finite primes,
+evaluation times, Newton polygon edges, derivative obligations, code
+support moves, and LRC denominator resources.
+Chosen primary quotient: diagonal profiles of fixed-path tilings.
+Preserved: the user's triangular coefficient-layer geometry, Cohn prime
+certificates, sign/magnitude slices, and the fact that many tournaments can
+share one coefficient profile.
+Destroyed: individual arc arrangement, most H/SCC data, and actual
+asymptotic Bunyakovsky information.  The fiber-H audit measures that loss.

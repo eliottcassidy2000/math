@@ -4,6 +4,35 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 — COEFFICIENT TILING PRIME BRIDGE: diagonal Cohn digits, coefficient magnetizations, and hidden tournament fibers (HYP-2450, OPEN-Q-072, T794)
+
+**Dispatch:** push the user's triangular coefficient/tile model into the prime `<->` irreducible-polynomial
+program.  **Carrier:** for `N=n+1` vertices, gap-`d` contains `N-d` arcs.  The count profile
+`c_d=#forward arcs` is a Cohn digit profile; the centered profile `A_d=2c_d-(N-d)` is the
+coefficient sign/magnitude profile.  The base Hamiltonian path can be treated as the constant term,
+turning the user's apex-to-base tile picture into a fixed-path tournament quotient.
+
+**Atlas result:** `04-computation/coefficient_tiling_prime_bridge_codex.py` enumerates diagonal
+profiles through `N=7`.  Positive-degree Cohn-prime profile values have zero irreducibility
+mismatches in the checked grids.  In the fixed-path `N=6` quotient there are 120 profiles over
+1024 tilings, 57 positive-degree Cohn-prime profiles, 96 centered-irreducible profiles, and 859
+weighted centered-irreducible tilings.  The quotient is strongly lossy: 91/120 profiles hide more
+than one Hamiltonian-path count, with max spread 34 at profile `(5,1,1,1,1)`.
+
+**New route:** classify coefficient-magnitude slices.  Pilot `N=6` slices: max magnitudes
+`(5,4,3,2,1)` give 32 distinct polynomials and 26 irreducible; parity-minimum `(1,0,1,0,1)` gives
+8 distinct polynomials and all 8 are irreducible.  The procedural idea tournament is transitive
+but has 15 edge flips versus novelty-only ranking, with spine:
+`diagonal_count_cohn_map -> centered_magnetization_slice -> fiber_entropy_vs_irreducibility`.
+OPEN-Q-072 asks for the slice classification and transfer to LRC14 resource vectors and
+`[72,36,16]` support/matroid/design fibers.
+
+Artifacts: HYP-2450, HYP-2448, OPEN-Q-072, T794,
+`04-computation/coefficient_tiling_prime_bridge_codex.py` and its `.out`, reflection
+`coefficient-tilings-and-the-prime-irreducible-bridge.md`.
+
+---
+
 ## codex-2026-06-12 - COEFFICIENT TILING PRIME/IRREDUCIBLE CARRIER: fixed-path row signs need residue/valuation addresses (HYP-2449, OPEN-Q-071, T793)
 
 **Dispatch:** continue HYP-2447/HYP-2448 from the user's coefficient-tiling model.  The degree-5
