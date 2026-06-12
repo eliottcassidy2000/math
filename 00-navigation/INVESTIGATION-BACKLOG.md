@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: irreducibility-prime tournament prism (HYP-2447/T791)
+
+**Done:** merged Bunyakovsky/Cohn/Singh/Iravanian with the repo's Heegner/THM-410 prime-polynomial horizon. The new atlas treats prime values as finite irreducibility witnesses, fixed divisors as local obstructions, Cohn digit polynomials as prime+address -> irreducible, and real-factor recombination as subset-sum over looser atoms.
+**Next:** build an LRC14 fixed-divisor analogue: identify runner/denominator atoms that block every lift the way `x^2+x+2` is always even. Then run a recombination audit over HYP-2443 blocker atoms across maps `q->2q`, `q->7q`, and `27->9->3`.
+
 ## Lead codex-2026-06-12: Grothendieck-Katz p-curvature ledger for LRC14 (HYP-2446/T790)
 
 **Done:** merged the Grothendieck-Katz p-curvature conjecture as an operator/carry local-global template for LRC14. Added a toy local p-jet atlas showing scalar mod-p shadows can lie both ways: `1/(1-z)` has zero operator p-curvature but full naive scalar rank, while `z/(1-z)` has full operator p-curvature but zero naive scalar rank. The LRC14 transfer is the denominator-curvature ledger `K_q(S)=(blocked twists,tau_q,Pisano class,13-clock,divisor fiber,Bprime/owner target)`.

@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T791** #irreducibility #prime-polynomials #bunyakovsky #cohn #singh #real-factor-recombination #tournaments #HYP-2447 | certainty: finite carrier atlas verified + open synthesis | source: codex-2026-06-12
+IRREDUCIBILITY-PRIME TOURNAMENT PRISM. The two-way relation becomes a four-face carrier: prime value -> irreducibility witness (Murty/Singh), irreducible+fixed-divisor-1 -> prime values (Bunyakovsky), prime+digit address -> irreducible polynomial (Cohn), and loose real atoms+subset-sum address -> integer factors (RFR). The atlas separates irreducibility/admissibility/early horizon, reproduces the Euler-Heegner boundary, verifies Cohn samples, and models `(x^4+1)(x^2+1)` recombination by traces `+sqrt(2), -sqrt(2), 0`. Tournament vertices should be witness slots/factor atoms, not raw integers.
+
 **T790** #grothendieck-katz #p-curvature #lrc14 #support-gate #operator-vs-scalar #frobenius #monodromy #HYP-2446 | certainty: toy operator mismatch verified + open denominator-curvature theorem | source: codex-2026-06-12
 GROTHENDIECK-KATZ P-CURVATURE AS LRC14 DENOMINATOR-CURVATURE LEDGER. The import is not "curvature" as metaphor but "local mod-p tests are operators, not scalar residues." A toy local p-jet atlas over `F_p[z]/(z^p)` shows scalar shadows lie both ways: `a=1/(1-z)` has zero operator p-curvature but full naive `a^p` rank, while `a=z/(1-z)` has full operator p-curvature but zero naive scalar rank. Transfer to LRC14: replace raw `q`-blocking by `K_q(S)=(blocked twists,tau_q,Pisano class,13-clock,divisor fiber,Bprime/owner target)`. Conjectural theorem: compatible ledgers across the fiber ladder force AP/Vstar/2AP or descent; incompatible seams produce a witness or owner-private opening.
 

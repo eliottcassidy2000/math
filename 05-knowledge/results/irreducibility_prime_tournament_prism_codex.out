@@ -1,0 +1,85 @@
+﻿==============================================================================
+Irreducibility-prime tournament prism
+==============================================================================
+HYP-2447 / T791
+External anchors: arXiv:2411.18366 and arXiv:2410.15880
+
+[1] Bunyakovsky admissibility and prime-run rows
+    fixed_divisor uses deg+1 consecutive values; run starts at x=0.
+    name             deg  irreducible  fixed_divisor  prime_run  factors  reading
+    Euler41            2 True                     1         41        1  irreducible/admissible; 40-value Euler run at x=0..39
+    Rabinowitsch41     2 True                     1         40        1  same horizon shifted; boundary p^2 at x=40
+    BlockedEven        2 True                     2          1        1  irreducible but fixed divisor 2; Bunyakovsky condition fails
+    ReduciblePair      2 False                    2          1        2  reducible but often has small prime-looking values
+    Heegner17          2 True                     1         16        1  Euler-Heegner prime horizon p=17
+    NonHeegner7        2 True                     1          1        1  irreducible/admissible but prime run fails immediately
+
+[2] Euler-Heegner boundary check
+  primes p<80 whose Q_p(x)=x^2+x+p first positive composite is x=p-1: [2, 3, 5, 11, 17, 41]
+  matches Euler set under 80? True
+  p  d=4p-1  first_bad  Q(first_bad)  positive_horizon
+   2       7          1            4                 0
+   3      11          2            9                 1
+   5      19          4           25                 3
+  11      43         10          121                 9
+  17      67         16          289                15
+  41     163         40         1681                39
+   7      27          1            9                 0
+  13      51          1           15                 0
+  23      91          1           25                 0
+  29     115          2           35                 1
+
+[3] Singh value-factor bound examples
+    plus1 is the printed H_f+d+1 threshold; paper_ok follows the examples' H_f+d usage.
+    name         H_f   m  d  unitary plus1 paper_ok |f(m)/d| factors actual_Z_factors
+    paper_f2       2.0   3  1 True    False True             65       2                2
+      Singh table: value 65=5*13 and exactly two irreducible factors; factorization=(x**2 - x - 1)*(x**2 + x + 1)
+    paper_f3       2.0   3  1 True    False True            713       2                2
+      Singh table: value 23*31 and exactly two irreducible factors; factorization=(x**3 - x - 1)*(x**3 + x + 1)
+    quartic_a2    10.0  12  1 True    True  True          22177       2                1
+      paper example: value has two prime factors; coefficient symmetry proves irreducible; factorization=x**4 + 10*x**2 + 1
+
+[4] Cohn digit-prime criterion samples
+    prime/base digits -> polynomial; irreducibility verified by sympy
+    p= 2339  digit_poly=2*x**3 + 3*x**2 + 3*x + 9 irreducible=True
+    p= 1091  digit_poly=x**3 + 9*x + 1           irreducible=True
+    p= 6551  digit_poly=6*x**3 + 5*x**2 + 5*x + 1 irreducible=True
+    p= 7643  digit_poly=7*x**3 + 6*x**2 + 4*x + 3 irreducible=True
+    p=10007  digit_poly=x**4 + 7                 irreducible=True
+
+[5] Real-factor recombination as subset-sum over trace atoms
+    Toy polynomial: (x^4+1)(x^2+1).  Over R, x^4+1 splits into
+    two quadratic atoms with traces +/-sqrt(2); integer factors are
+    recovered by recombining trace-compatible subsets.
+    subset=('A_plus',)                  degree=2 trace=sqrt(2)  traceZ=False integer_factor=False labels=('x^4+1',)
+    subset=('A_minus',)                 degree=2 trace=-sqrt(2) traceZ=False integer_factor=False labels=('x^4+1',)
+    subset=('A_plus', 'A_minus')        degree=4 trace=0        traceZ=True integer_factor=True labels=('x^4+1',)
+    subset=('B_unit',)                  degree=2 trace=0        traceZ=True integer_factor=True labels=('x^2+1',)
+    subset=('A_plus', 'B_unit')         degree=4 trace=sqrt(2)  traceZ=False integer_factor=False labels=('x^2+1', 'x^4+1')
+    subset=('A_minus', 'B_unit')        degree=4 trace=-sqrt(2) traceZ=False integer_factor=False labels=('x^2+1', 'x^4+1')
+    subset=('A_plus', 'A_minus', 'B_unit') degree=6 trace=0        traceZ=True integer_factor=True labels=('x^2+1', 'x^4+1')
+
+[6] Tournament Analysis over proof-route vertices
+  vertices: bunyakovsky_admissible_irreducible, singh_value_factor_bound, cohn_digit_prime, real_factor_recombination, heegner_euler_horizon, raw_prime_run_length
+  observable = (side_channel_strength, exactness, repo_bridge, computability-risk)
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed 3-cycles: 0
+  Hamiltonian paths: 1
+  first Hamiltonian path: ('singh_value_factor_bound', 'bunyakovsky_admissible_irreducible', 'cohn_digit_prime', 'heegner_euler_horizon', 'real_factor_recombination', 'raw_prime_run_length')
+  edge flips versus scalar-only ranking: 3
+  scores:
+    5: singh_value_factor_bound
+    4: bunyakovsky_admissible_irreducible
+    3: cohn_digit_prime
+    2: heegner_euler_horizon
+    1: real_factor_recombination
+    0: raw_prime_run_length
+
+[7] Repo transfer
+  prime values -> irreducibility is a finite witness channel (Singh/Murty).
+  irreducible + fixed divisor 1 -> prime values is the Bunyakovsky direction.
+  prime -> irreducible polynomial is the Cohn digit-place channel.
+  reducibility over Z -> recombination of looser atoms is the RFR channel.
+  Tournament analogue: vertices should be witness slots or factor atoms;
+  a Hamiltonian path is a recombination order, and directed cycles mark
+  incompatible side-channel commitments.
