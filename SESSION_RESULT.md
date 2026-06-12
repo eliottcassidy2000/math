@@ -2,57 +2,63 @@
 
 ## Task Chosen
 
-I chose a tiny independent sanity check of the Paley character tournament
-values recorded in `05-knowledge/results/number_theory_tournament_atlas_s651.out`.
-The stated rows are:
+I chose one tiny exhaustive sanity check of the odd-cycle collection formula
+at `n=5`.  At this size, two vertex-disjoint odd cycles cannot coexist, so
+the formula specializes to the directly checkable identity
 
 ```text
-p=7:  residues [1, 2, 4],      score_hist {3: 7},  c3=14, SCC [7],  H=189
-p=11: residues [1, 3, 4, 5, 9], score_hist {5: 11}, c3=55, SCC [11], H=95095
+H(T) = 1 + 2 * (# directed 3-cycles + # directed 5-cycles).
 ```
+
+This is small enough to verify over all `2^10 = 1024` labeled tournaments.
 
 ## What I Did
 
-I ran a transient Python check using the Paley edge rule on vertices modulo
-`p`: orient `i -> j` exactly when `j-i` is a nonzero quadratic residue mod
-`p`. I then computed:
+I ran a transient Python enumeration over all labeled tournaments on five
+vertices.  For each tournament I computed:
 
-- the score histogram directly from the adjacency matrix,
-- directed 3-cycles by scanning all triples,
-- SCC sizes by forward/backward reachability, and
-- `H(T)` by subset dynamic programming over terminal vertices.
+- `H(T)` by direct permutation scan of all Hamiltonian paths,
+- the number of cyclic triples,
+- the number of directed 5-cycles, counted up to cyclic rotation, and
+- the specialized OCF right-hand side above.
 
 Tournament Analysis declaration:
 
-- Pairwise observable: the quadratic character of `j-i mod p`.
-- Switch/gauge: residue membership gives the binary tournament edge.
-- Tie Hamiltonian path: not needed; Paley comparisons for `p=7,11` have no
-  ties between distinct vertices.
-- Fingerprints recorded: score histogram, directed 3-cycle count, SCC sizes,
-  and Hamiltonian path count.
+- Pairwise observable: the orientation bit on each unordered vertex pair.
+- Switch/gauge: the bit value gives the binary tournament edge.
+- Tie Hamiltonian path: no tie handling is needed for tournaments; all
+  distinct vertex pairs have exactly one directed edge.
+- Fingerprints recorded: `H` histogram, cyclic-triple histogram,
+  directed-5-cycle histogram, and failure count.
 
 Assumption challenge:
 
-- I kept tournament vertices as residues modulo `p` because the claim being
-  checked is explicitly a finite-field character tournament claim.
-- Alternate vertices such as arcs, residues classes of gaps, Fourier modes, or
-  proof obligations could expose extra arithmetic structure, but would destroy
-  the direct check of the stated tournament fingerprints.
+- I kept tournament vertices as the original five vertices because this task
+  tests the literal OCF statement.
+- Alternate vertex sets such as arcs, odd cycles, proof obligations, or
+  Fourier modes are useful for other quotient views, but would obscure this
+  direct small-`n` identity.  The odd-cycle conflict graph is still present:
+  at `n=5` its independent sets have size at most one.
 
 ## Concrete Result
 
-The independent computation reproduced the recorded values exactly:
+The identity held for every labeled tournament on five vertices.
 
 ```text
-p=7:  residues [1, 2, 4],       score_hist {3: 7},  c3=14, SCC [7],  H=189
-p=11: residues [1, 3, 4, 5, 9], score_hist {5: 11}, c3=55, SCC [11], H=95095
+n = 5
+tournaments = 1024
+failures = 0
+H_hist = {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
+c3_hist = {0: 120, 1: 120, 2: 240, 3: 240, 4: 280, 5: 24}
+c5_hist = {0: 480, 1: 360, 2: 144, 3: 40}
+max_c5 = 3
 ```
 
-Thus the Paley carrier rows in `number_theory_tournament_atlas_s651.out` pass
-this independent spot-check for `p=7` and `p=11`.
+Thus the direct `n=5` specialization of OCF passes an exhaustive independent
+check, including the contribution from directed 5-cycles.
 
 ## Confidence Note
 
-Confidence is high for this bounded verification. The computation is small,
-uses a direct adjacency construction from quadratic residues, and counts
-Hamiltonian paths with a DP independent of the prior S651 artifact.
+Confidence is high for this bounded verification.  The enumeration is
+exhaustive, the path count is by direct permutation scan, and the cycle counts
+are independent of any repository helper scripts.
