@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: Grothendieck-Katz p-curvature ledger for LRC14 (HYP-2446/T790)
+
+**Done:** merged the Grothendieck-Katz p-curvature conjecture as an operator/carry local-global template for LRC14. Added a toy local p-jet atlas showing scalar mod-p shadows can lie both ways: `1/(1-z)` has zero operator p-curvature but full naive scalar rank, while `z/(1-z)` has full operator p-curvature but zero naive scalar rank. The LRC14 transfer is the denominator-curvature ledger `K_q(S)=(blocked twists,tau_q,Pisano class,13-clock,divisor fiber,Bprime/owner target)`.
+**Next:** compute support-transport defects across denominator maps (`q -> 7q`, `q -> 2q`, `q -> d*m`, `27 -> 9 -> 3`) for the HYP-2443 high-pressure rows. Prove that zero defect over a long ladder forces AP/Vstar/2AP or descent, while positive defect gives a finite witness or owner-private opening.
+
 ## Lead codex-2026-06-12: LRC14 marked ladder support gate (HYP-2443/T787)
 
 **Done:** added a marked blocker-hypergraph atlas for HYP-2438. For each denominator `q`, compute which runners block each unit twist and the minimum support `tau_q(S)`. This separates pure shell band-1 failures from fibered ladder failures: the single-stranger `S(r)` rows fail pure `q<=27` exactly in the `13|r`, `r mod 27 in {0,+/-10}` pattern, while fibered addresses such as `q=91=7*13` or rung-up shell `q=40/41` catch them.

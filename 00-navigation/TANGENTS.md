@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T790** #grothendieck-katz #p-curvature #lrc14 #support-gate #operator-vs-scalar #frobenius #monodromy #HYP-2446 | certainty: toy operator mismatch verified + open denominator-curvature theorem | source: codex-2026-06-12
+GROTHENDIECK-KATZ P-CURVATURE AS LRC14 DENOMINATOR-CURVATURE LEDGER. The import is not "curvature" as metaphor but "local mod-p tests are operators, not scalar residues." A toy local p-jet atlas over `F_p[z]/(z^p)` shows scalar shadows lie both ways: `a=1/(1-z)` has zero operator p-curvature but full naive `a^p` rank, while `a=z/(1-z)` has full operator p-curvature but zero naive scalar rank. Transfer to LRC14: replace raw `q`-blocking by `K_q(S)=(blocked twists,tau_q,Pisano class,13-clock,divisor fiber,Bprime/owner target)`. Conjectural theorem: compatible ledgers across the fiber ladder force AP/Vstar/2AP or descent; incompatible seams produce a witness or owner-private opening.
+
 **T789** #product-quotient #shioda #supersingular #frobenius #support-gate #lrc14 #72-36-16 #PSL2F13 #HYP-2445 #OPEN-Q-069 | certainty: exact numerology + open transfer program | source: codex-2026-06-12
 DIAGONAL FROBENIUS OBSTRUCTION AS SUPPORT GATE. Church's arXiv:2508.14876 gives a serious geometric template for the repo's scalar/support split: Shioda supersingularity is the scalar shadow, while diagonal symmetric forms on every partial Frobenius twist are the retained channel that forces curve descent or finite exceptions. The genus-14 Hurwitz data land on the same ledger as LRC14 and `[72,36,16]`: `|PSL2(F_13)|=1092=84*(14-1)=13*84`, `D6/A4` index `91=C(14,2)` matches the Q27 q=91 rescue, and `D7` index `78=C(13,2)` matches the minimum-design `lambda_5`. Next: formalize the support-gate descent lemma and test the `78/91` incidence arithmetic without mistaking it for a code automorphism.
 

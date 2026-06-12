@@ -1,0 +1,70 @@
+﻿==============================================================================
+Grothendieck-Katz p-curvature x LRC14 support gate
+==============================================================================
+HYP-2446 / T790
+External anchors: arXiv:1610.05674, arXiv:1412.7875, arXiv:2501.13175
+
+[1] Rank-one p-curvature on local p-jets R=F_p[z]/(z^p)
+    pcurv_rank = rank((D+M_a)^p); naive_rank = rank(M_{a^p})
+    The mismatch is the operator/carry lesson.
+  zero                         pcurv=[0, 0, 0, 0, 0]      naive=[0, 0, 0, 0, 0]      mismatch=0/5
+    reading: trivial finite monodromy
+  constant_1                   pcurv=[3, 5, 7, 11, 13]    naive=[3, 5, 7, 11, 13]    mismatch=0/5
+    reading: exp(z), non-algebraic
+  one_over_1_minus_z           pcurv=[0, 0, 0, 0, 0]      naive=[3, 5, 7, 11, 13]    mismatch=5/5
+    reading: (1-z)^-1, rational
+  two_over_1_minus_z           pcurv=[0, 0, 0, 0, 0]      naive=[3, 5, 7, 11, 13]    mismatch=5/5
+    reading: (1-z)^-2, rational
+  one_over_1_minus_z_squared   pcurv=[3, 5, 7, 11, 13]    naive=[3, 5, 7, 11, 13]    mismatch=0/5
+    reading: exp(1/(1-z)), non-algebraic
+  z_over_1_minus_z             pcurv=[3, 5, 7, 11, 13]    naive=[0, 0, 0, 0, 0]      mismatch=5/5
+    reading: exp(-z)/(1-z), non-algebraic
+
+[2] LRC14 denominator-curvature table
+    plain<=27 is the scalar shell horizon; Q27 is the fibered/operator ledger.
+    row       plain<=27  plain<=41  Q27       Q41       reading
+    AP       none       none       none      none      wall atom: finite-monodromy-like floor row
+    Vstar    none       none       none      none      wall atom with apex carry
+    S611     none       9/41       1/91      9/41      plain shell blocked; Q27 rescued by q=91
+    S702     none       9/41       1/91      9/41      plain shell blocked; Q27 rescued by q=91
+    S793     none       11/40      11/40     11/40     plain shell blocked; Q27 rescued by q=40
+    S1053    none       11/40      11/40     11/40     plain shell blocked; Q27 rescued by q=40
+
+[3] Transfer dictionary
+  finite monodromy         -> finite wall family / descending quotient atom
+  almost all primes p      -> persistent denominator/fiber ladder tests
+  p-curvature vanishes     -> blocked ledger is compatible under carry/Frobenius lifts
+  nonzero p-curvature      -> a denominator witness or Bprime/owner-private opening appears
+  operator (D+A)^p         -> marked support: Pisano class + 13-clock + divisor fiber + owner
+  naive A^p                -> raw q-blocked scalar, too lossy
+
+[4] Proposed LRC14 p-curvature principle
+  If a primitive LRC14 row blocks the fibered ladder for a long range,
+  its blocker data should define compatible local sections under q -> p*q
+  and q -> d*m fiber maps.  Compatibility is rare: it should force AP,
+  Vstar, 2AP, or a lower resource via Bprime(any runner)/owner-private
+  deletion.  Incompatibility is a nonzero curvature certificate, i.e. a
+  finite denominator witness.
+
+[5] Tournament Analysis over proof-route vertices
+  observable = (operator_retained, exactness, LRC leverage, computability, -risk)
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed 3-cycles: 0
+  Hamiltonian paths: 1
+  first Hamiltonian path: ('p_curvature_operator', 'partial_frobenius_support_gate', 'lrc14_Q27_curvature_ledger', 'marked_blocker_hypergraph', 'raw_q_blocking', 'naive_scalar_modp')
+  edge flips versus scalar-only ranking: 0
+  scores:
+    5: p_curvature_operator
+    4: partial_frobenius_support_gate
+    3: lrc14_Q27_curvature_ledger
+    2: marked_blocker_hypergraph
+    1: raw_q_blocking
+    0: naive_scalar_modp
+
+[6] Assumption challenge
+  Alternate vertices considered: primes, denominators, unit twists, runners,
+  local p-jets, blocker supports, Pisano classes, Bprime targets, Frobenius
+  twists, monodromy generators, and proof obligations.
+  Chosen vertices: proof routes.  This preserves whether scalar local tests
+  retain an operator/carry side channel, and destroys actual differential
+  geometry plus arbitrary multi-stranger LRC interactions.
