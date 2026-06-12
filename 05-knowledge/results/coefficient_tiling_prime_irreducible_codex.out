@@ -1,0 +1,113 @@
+﻿==============================================================================
+Coefficient tiling tournaments for prime <-> irreducible polynomials
+==============================================================================
+HYP-2449 / T793 / OPEN-Q-071 candidate
+
+[1] Degree-5 row geometry
+  mode=top_no_constant
+    a5 -> skip 5, row_size  1 (apex)
+    a4 -> skip 4, row_size  2 (row)
+    a3 -> skip 3, row_size  3 (row)
+    a2 -> skip 2, row_size  4 (row)
+    a1 -> skip 1, row_size  5 (spine/HP row)
+  mode=constant_spine
+    a5 -> skip 6, row_size  1 (apex)
+    a4 -> skip 5, row_size  2 (row)
+    a3 -> skip 4, row_size  3 (row)
+    a2 -> skip 3, row_size  4 (row)
+    a1 -> skip 2, row_size  5 (row)
+    a0 -> skip 1, row_size  6 (spine/HP row)
+
+[2] Degree-5 sign-row fingerprints for a concrete polynomial
+  top_no_constant: vertices=6, score=(2, 2, 2, 3, 3, 3), c3=8, H=41, canonical=000110001000000...
+  constant_spine: vertices=7, score=(2, 3, 3, 3, 3, 3, 4), c3=13, H=151, canonical=000011000110001000000...
+
+[3] Exhaustive degree-4 sign+magnitude sweep
+  rows=3888 (degree 4, |a_i| in {1,2,3}, leading sign positive)
+  irreducible=3096, reducible=792
+  fixed_divisor>1=800
+  no_prime_hit_0..40=552
+
+[4] What leaks under different coefficient-tournament quotients?
+  key=top_key    label=irreducible   groups=  6 mixed=  6 max_bucket= 972
+    example mixed key=0001000000
+      True: coeffs=(-1, -1, -1, -1, 1) f=x**4 - x**3 - x**2 - x - 1 factors=(4,)
+      False: coeffs=(1, -1, -1, -1, 2) f=2*x**4 - x**3 - x**2 - x + 1 factors=(1, 3)
+  key=spine_key  label=irreducible   groups=  9 mixed=  9 max_bucket=1458
+    example mixed key=000010000000000
+      True: coeffs=(-1, -1, -1, -1, 1) f=x**4 - x**3 - x**2 - x - 1 factors=(4,)
+      False: coeffs=(-1, -1, -1, -2, 2) f=2*x**4 - 2*x**3 - x**2 - x - 1 factors=(2, 2)
+  key=top_score  label=irreducible   groups=  4 mixed=  4 max_bucket=1458
+  key=spine_score label=irreducible   groups=  4 mixed=  4 max_bucket=2187
+  key=top_key    label=fixed_divisor groups=  6 mixed=  6 max_bucket= 972
+  key=spine_key  label=fixed_divisor groups=  9 mixed=  9 max_bucket=1458
+  key=marked_signs                    groups= 16 mixed= 16 max_bucket= 243
+  key=marked_signs+local_zero_primes  groups= 48 mixed=  0 max_bucket= 193
+  key=marked_signs+factor_degrees     groups= 68 mixed=  0 max_bucket= 238
+
+[5] Same sign tournament, different arithmetic
+  irreducibility: signs=(-1, -1, -1, -1, 1)
+    A: coeffs=(-1, -1, -1, -1, 1); f=x**4 - x**3 - x**2 - x - 1; factors=(4,); fd=1; local0=(); prime_hits=11
+    B: coeffs=(-1, -1, -1, -2, 2); f=2*x**4 - 2*x**3 - x**2 - x - 1; factors=(2, 2); fd=1; local0=(); prime_hits=0
+  fixed_divisor: signs=(-1, -1, -1, -1, 1)
+    A: coeffs=(-1, -1, -1, -1, 1); f=x**4 - x**3 - x**2 - x - 1; factors=(4,); fd=1; local0=(); prime_hits=11
+    B: coeffs=(-2, -1, -1, -1, 1); f=x**4 - x**3 - x**2 - x - 2; factors=(1, 1, 2); fd=2; local0=(2,); prime_hits=0
+  prime_hits: signs=(-1, -1, -1, -1, 1)
+    A: coeffs=(-1, -1, -1, -1, 1); f=x**4 - x**3 - x**2 - x - 1; factors=(4,); fd=1; local0=(); prime_hits=11
+    B: coeffs=(-1, -1, -1, -2, 2); f=2*x**4 - 2*x**3 - x**2 - x - 1; factors=(2, 2); fd=1; local0=(); prime_hits=0
+
+[6] Cohn digit rows show why sign alone is too weak
+  N=  101 base=10 omega=1 digits=[1, 0, 1] signs=(-1, -1, -1)
+    poly=x**2 + 1; factor_degrees=[2]; irreducible=True; sign-tournament score=(0, 1, 2, 3), c3=0, H=1
+  N=  131 base=10 omega=1 digits=[1, 3, 1] signs=(-1, -1, -1)
+    poly=x**2 + 3*x + 1; factor_degrees=[2]; irreducible=True; sign-tournament score=(0, 1, 2, 3), c3=0, H=1
+  N= 2339 base=10 omega=1 digits=[9, 3, 3, 2] signs=(1, -1, -1, -1)
+    poly=2*x**3 + 3*x**2 + 3*x + 9; factor_degrees=[3]; irreducible=True; sign-tournament score=(1, 1, 2, 3, 3), c3=3, H=9
+  N= 9841 base= 3 omega=2 digits=[1, 1, 1, 1, 1, 1, 1, 1, 1] signs=(1, 1, 1, 1, 1, 1, 1, 1, 1)
+    poly=x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1; factor_degrees=[2, 6]; irreducible=False; sign-tournament score=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9), c3=0, H=1
+  N= 2047 base= 2 omega=2 digits=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] signs=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+    poly=x**10 + x**9 + x**8 + x**7 + x**6 + x**5 + x**4 + x**3 + x**2 + x + 1; factor_degrees=[10]; irreducible=True; sign-tournament score=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11), c3=0, H=1
+  N= 6551 base=10 omega=1 digits=[1, 5, 5, 6] signs=(-1, 1, 1, 1)
+    poly=6*x**3 + 5*x**2 + 5*x + 1; factor_degrees=[3]; irreducible=True; sign-tournament score=(1, 1, 2, 3, 3), c3=3, H=9
+  N= 7643 base=10 omega=1 digits=[3, 4, 6, 7] signs=(-1, -1, 1, 1)
+    poly=7*x**3 + 6*x**2 + 4*x + 3; factor_degrees=[3]; irreducible=True; sign-tournament score=(2, 2, 2, 2, 2), c3=5, H=15
+
+[7] Procedurally generated carrier tournament
+  score_hist={0: 1, 1: 1, 4: 3, 5: 1, 7: 1, 8: 2}
+  directed_3cycles=0
+  Hamiltonian_paths=84
+  ranking:
+    row_sign_plus_local_residues       (row=5, fixed=5, rev=3, recomb=2, cost=2)
+      adds fixed-divisor/local obstruction address
+    newton_polygon_valuation_tiling    (row=4, fixed=5, rev=3, recomb=4, cost=2)
+      edge slopes from p-adic coefficient valuations
+    constant_spine_tiling              (row=5, fixed=3, rev=2, recomb=2, cost=1)
+      a0 becomes Hamiltonian spine rather than external scalar
+    cohn_digit_carry_address           (row=4, fixed=2, rev=5, recomb=2, cost=2)
+      base-b evaluation weights rows exponentially
+    marked_skip_row_tiling             (row=4, fixed=2, rev=2, recomb=2, cost=1)
+      user tiling with coefficient row labels retained
+    singh_value_depth_state            (row=3, fixed=3, rev=5, recomb=3, cost=3)
+      evaluation depth gives reverse irreducibility certificate
+    trace_subset_recombination         (row=3, fixed=2, rev=3, recomb=5, cost=4)
+      loose atoms first, integer factor later
+    coefficient_vertex_tournament      (row=2, fixed=1, rev=2, recomb=1, cost=1)
+      vertices are coefficients, usually too coarse
+    raw_unmarked_skip_tournament       (row=1, fixed=1, rev=1, recomb=1, cost=1)
+      beautiful but loses coefficient labels
+
+[8] New directions extracted
+  1. Treat coefficient rows as modules: polynomial multiplication becomes convolution of skip-row modules, not just scalar coefficient multiplication.
+  2. Read Gauss lemma as switching: content is a global gauge; primitive part is the quotient where row gcd debt has been removed.
+  3. Read Eisenstein as a valuation tournament on coefficient rows: all lower rows point into the p-adic sink except the leading escape and p^2 constant guard.
+  4. Read Newton polygons as coefficient-tile tournaments whose edges are slope comparisons between p-adic row valuations.
+  5. Read Cohn as exponential row weighting: base b gives the skip rows a place-value address, and primality says no nontrivial row subset recombines at that address.
+  6. For LRC14, copy fixed-divisor detection: a denominator family is dangerous only if some runner/resource row vanishes on every residue in a finite local gate.
+  7. For A000568/switching classes, coefficient signs are tiling-cube coordinates; irreducibility should live in marked switching classes, not unmarked tournaments.
+
+Conclusion:
+  The coefficient-sign tournament is real, but unmarked it is too lossy.
+  The useful carrier is a marked skip-row tiling plus local residue/valuation
+  and evaluation-depth addresses.  That is exactly the prime<->irreducible
+  bridge in tournament clothing: signs give the tiling cube, while primes
+  and irreducibility live in the addresses that survive recombination.

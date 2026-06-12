@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: coefficient-tiling prime/irreducible carrier (HYP-2449/T793/OPEN-Q-071)
+
+**Done:** extended HYP-2447/HYP-2448 with the user's coefficient tiling model.  The degree-5 row sizes are literally fixed-path skip rows: `a5` apex down to `a1`, and the stronger `constant_spine` model places `a0` on the Hamiltonian-path row.  Added a degree-4 exhaustive sign+magnitude scout (`3888` rows): every bare unmarked coefficient-tournament quotient is mixed for irreducibility, marked signs remain mixed, and `marked_signs+local_zero_primes` separates fixed-divisor obstruction in the scout.  Cohn repunit rows show sign-only transitive tournaments can be reducible or irreducible depending on place-value address.
+**Next:** build exact p-adic Newton-row tournaments for Eisenstein/Dumas/Perron irreducibility criteria; extend the coefficient sweep to degree 5/6; turn Cohn base-`b` addresses into weighted skip-row tournaments; transfer fixed-divisor row detection to LRC14 Q27 resource rows.
+
 ## Lead codex-2026-06-12: irreducibility-prime tournament prism (HYP-2447/T791)
 
 **Done:** merged Bunyakovsky/Cohn/Singh/Iravanian with the repo's Heegner/THM-410 prime-polynomial horizon. The new atlas treats prime values as finite irreducibility witnesses, fixed divisors as local obstructions, Cohn digit polynomials as prime+address -> irreducible, and real-factor recombination as subset-sum over looser atoms.

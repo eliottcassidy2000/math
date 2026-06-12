@@ -4,6 +4,32 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 - COEFFICIENT TILING PRIME/IRREDUCIBLE CARRIER: fixed-path row signs need residue/valuation addresses (HYP-2449, OPEN-Q-071, T793)
+
+**Dispatch:** continue HYP-2447/HYP-2448 from the user's coefficient-tiling model.  The degree-5
+picture is literal: fixed-path skip-row sizes are `1,2,3,4,5`, so `a5` is the apex row down to
+`a1`; the stronger `constant_spine` model uses `d+2` vertices and puts `a0` on the Hamiltonian
+path row.
+
+**Finite scout:** `04-computation/coefficient_tiling_prime_irreducible_codex.py` exhaustively scans
+degree-4 rows with `|a_i| in {1,2,3}` and leading sign positive (`3888` polynomials): `3096`
+irreducible, `792` reducible, `800` fixed-divisor-obstructed.  Bare unmarked coefficient-tournament
+quotients are mixed for irreducibility (`top_key` 6/6 mixed, `spine_key` 9/9 mixed); marked signs
+are still mixed.  Adding `local_zero_primes` separates fixed-divisor obstruction in the scout.
+
+**Key warning:** Cohn rows show sign-only is too weak: all-positive transitive sign tournaments occur
+for both reducible `9841 -> 1+x+...+x^8` and irreducible `2047 -> 1+x+...+x^10`.  The missing datum is
+place-value/carry address.
+
+**Next:** exact p-adic Newton-row tournaments for Eisenstein/Dumas/Perron criteria; degree-5/6 sweep;
+weighted Cohn skip-row tournament; LRC14 Q27 fixed-divisor-row analogue.
+
+Artifacts: HYP-2449, OPEN-Q-071, T793,
+`04-computation/coefficient_tiling_prime_irreducible_codex.py`,
+`07-reflections/coefficient-tiling-and-prime-irreducible-addresses.md`.
+
+---
+
 ## codex-2026-06-12 — IRREDUCIBLE-PRIME CERTIFICATE-STATE EXTENSION: Bunyakovsky forward atoms and Singh/Cohn/Iravanian reverse certificates (HYP-2448, OPEN-Q-070, T792)
 
 **Dispatch:** merge the user's irreducible-polynomial/prime-value lens with Singh arXiv:2411.18366

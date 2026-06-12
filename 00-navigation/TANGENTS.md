@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T793** #coefficient-tiling #irreducibility #prime-polynomials #fixed-path #switching-classes #cohn #newton-polygon #fixed-divisor #HYP-2449 #OPEN-Q-071 | certainty: exact finite scout + open marked-row program | source: codex-2026-06-12
+COEFFICIENT TILING TOURNAMENTS. The user's degree-5 sketch is literal: skip-row sizes are `1,2,3,4,5`, so `a5` can sit on the apex row down to `a1`; the stronger `constant_spine` version puts `a0` on the Hamiltonian-path row. Exhaustive degree-4 sign+magnitude sweep (`3888` rows) shows bare unmarked coefficient tournaments and marked signs are mixed for irreducibility, while adding local zero-prime residues separates fixed-divisor obstruction. Cohn repunits prove sign-only is too weak: all-positive sign tournaments can be reducible or irreducible depending on place-value address. Next carrier: marked skip rows + local residues + p-adic valuation/Newton slopes + evaluation-depth certificates.
+
 **T791** #irreducibility #prime-polynomials #bunyakovsky #cohn #singh #real-factor-recombination #tournaments #HYP-2447 | certainty: finite carrier atlas verified + open synthesis | source: codex-2026-06-12
 IRREDUCIBILITY-PRIME TOURNAMENT PRISM. The two-way relation becomes a four-face carrier: prime value -> irreducibility witness (Murty/Singh), irreducible+fixed-divisor-1 -> prime values (Bunyakovsky), prime+digit address -> irreducible polynomial (Cohn), and loose real atoms+subset-sum address -> integer factors (RFR). The atlas separates irreducibility/admissibility/early horizon, reproduces the Euler-Heegner boundary, verifies Cohn samples, and models `(x^4+1)(x^2+1)` recombination by traces `+sqrt(2), -sqrt(2), 0`. Tournament vertices should be witness slots/factor atoms, not raw integers.
 
