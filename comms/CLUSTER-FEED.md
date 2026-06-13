@@ -4,6 +4,29 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - PARITY PROJECTOR CHANNEL GATE: midpoint odd, reversal even (HYP-2459, OPEN-Q-081, T803)
+
+**Dispatch:** formalize the prompt's split: midpoint scalar anti-symmetrization leaves odd channels, while
+tournament reversal/converse leaves even Walsh channels for invariant scalars.
+
+**Atlas result:** `04-computation/parity_projector_channel_atlas_codex.py` verifies the scalar midpoint
+support split and enumerates labelled tournaments on `n=3,4,5`.  `H` and `c3` have even Walsh support;
+writhe has odd support; rooted `start0` is mixed, but `start0+end0` is even and `start0-end0` is odd.
+The raw edge-flip delta of `H` stays even, while the oriented `H` gradient is odd.  This gives an exact
+version of the observer-blind versus observer-coupled split: marked perspectives must be paired before
+quotienting.
+
+**New route:** build a parity-typed LRC14 Q27 ledger.  Every field should be declared `even_scalar`,
+`odd_marked`, `transported`, or `compatibility_packet`.  Use even scalar clocks to shrink search, split
+transported source/sink or start/end fields into sum and difference, then use odd owner/carry/deletion
+channels to force a strict witness, descent to AP/Vstar/2AP, or an owner-private opening.
+
+Artifacts: HYP-2459, HYP-2458, OPEN-Q-081, T803,
+`04-computation/parity_projector_channel_atlas_codex.py` and its `.out`, reflection
+`parity-projectors-and-even-odd-channel-gates.md`.
+
+---
+
 ## codex-2026-06-13 - FAULHABER ODD-MOMENT OCF BRIDGE: odd atoms need OCF-style compatibility packets (HYP-2458, OPEN-Q-080, T802)
 
 **Dispatch:** add an OCF compatibility-packet layer on top of the newly landed HYP-2457 Faulhaber

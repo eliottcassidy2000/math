@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: parity projector channel gate (HYP-2459/T803/OPEN-Q-081)
+
+**Done:** turned the prompt's midpoint/reversal slogan into an exact projector calculus. Added `04-computation/parity_projector_channel_atlas_codex.py` and stored output. The scalar side records that pair-differences around a midpoint keep odd offset powers, while the Faulhaber interval balance also has one fixed central atom `c^p`. The tournament side encodes arcs by signs; converse is global sign reversal, so invariant functions have even Walsh support and anti-invariant functions have odd support. Exact labelled audits for `n=3..5` verify `H,c3` even-Walsh, writhe odd-Walsh, rooted `start0` mixed but `start0+end0` even and `start0-end0` odd, raw `H` flip delta even, and oriented `H` gradient odd. Proof-carrier TA is transitive with leader `lrc14_q27_owner_carry_ledger`.
+**Next:** implement a parity-typed LRC14 Q27 ledger. Fields should declare `even_scalar`, `odd_marked`, `transported`, or `compatibility_packet`; AP/Vstar/2AP and HYP-2444 one-stranger rows are the first regression cases. Quotient on even scalar clocks only after splitting transported source/sink or start/end fields into sum/difference; then use odd owner/carry/deletion channels to force strict witnesses, descent to known wall atoms, or owner-private openings.
+
 ## Lead codex-2026-06-13: Faulhaber anchor expansion (HYP-2457/T801/OPEN-Q-079)
 
 **Done:** sharpened the HYP-2454 Bernoulli/Faulhaber route for the user's power-balance anchor. Added `04-computation/triangular_faulhaber_anchor_expansion_codex.py` and stored output. With midpoint `c=a+n`, the exact defect is `D_p(c,n)=c^p-2*sum_{r odd} binom(p,r)c^(p-r)S_r(n)`, so only odd Faulhaber moments survive. Writing `u=n(n+1)`, the formal root expansion is `c=p*u+alpha_p+beta_p/u+gamma_p/u^2+...`; `alpha_p`, the user's `beta_p`, and the factored `gamma_p` all carry `(p-1)(p-2)`, explaining exact p=1/p=2 towers. The p=2 face is the square-pyramidal cuboid identity `6*sum_{j<=n}j^2=n(n+1)(2n+1)=2*S1`. Tournament Analysis over proof carriers is transitive with leader `odd_moment_projection`.

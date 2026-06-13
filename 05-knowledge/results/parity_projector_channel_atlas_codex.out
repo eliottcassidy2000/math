@@ -1,0 +1,80 @@
+﻿Parity projector channel atlas
+Core rule: for an involution J, (f+fJ)/2 keeps invariant channels and (f-fJ)/2 keeps anti-invariant channels.
+On a Boolean edge cube, global reversal x -> -x makes invariant functions even-Walsh and anti-invariant functions odd-Walsh.
+
+1. Scalar midpoint gate
+-----------------------
+For a paired offset z around midpoint c:
+degree 0: pair-sum z-powers [0]; pair-difference z-powers []
+degree 1: pair-sum z-powers [0]; pair-difference z-powers [1]
+degree 2: pair-sum z-powers [0, 2]; pair-difference z-powers [1]
+degree 3: pair-sum z-powers [0, 2]; pair-difference z-powers [1, 3]
+degree 4: pair-sum z-powers [0, 2, 4]; pair-difference z-powers [1, 3]
+degree 5: pair-sum z-powers [0, 2, 4]; pair-difference z-powers [1, 3, 5]
+degree 6: pair-sum z-powers [0, 2, 4, 6]; pair-difference z-powers [1, 3, 5]
+degree 7: pair-sum z-powers [0, 2, 4, 6]; pair-difference z-powers [1, 3, 5, 7]
+degree 8: pair-sum z-powers [0, 2, 4, 6, 8]; pair-difference z-powers [1, 3, 5, 7]
+Faulhaber anchor warning: the prompt's interval balance is paired offsets plus one fixed center term c^p.
+Thus the surviving scalar data are odd moment channels plus a fixed-point scalar atom.
+
+2. Exact tournament Walsh audit
+-------------------------------
+n=3 edges=3 states=8
+  complement/transport mismatches: {'H_complement_invariant': 0, 'c3_complement_invariant': 0, 'writhe_complement_anti': 0, 'start0_to_end0_transport': 0, 'edge0_delta_invariant': 0, 'edge0_grad_anti': 0}
+  H                        parity=even  degrees=[0, 2] nonzero=4 max|W|=12
+  c3                       parity=even  degrees=[0, 2] nonzero=4 max|W|=2
+  writhe                   parity=odd   degrees=[1] nonzero=3 max|W|=8
+  start0                   parity=mixed degrees=[0, 1, 2] nonzero=5 max|W|=4
+  start0_plus_end0         parity=even  degrees=[0, 2] nonzero=3 max|W|=8
+  start0_minus_end0        parity=odd   degrees=[1] nonzero=2 max|W|=4
+  edge0_flip_delta_H       parity=even  degrees=[2] nonzero=2 max|W|=8
+  edge0_oriented_grad_H    parity=odd   degrees=[1] nonzero=2 max|W|=8
+n=4 edges=6 states=64
+  complement/transport mismatches: {'H_complement_invariant': 0, 'c3_complement_invariant': 0, 'writhe_complement_anti': 0, 'start0_to_end0_transport': 0, 'edge0_delta_invariant': 0, 'edge0_grad_anti': 0}
+  H                        parity=even  degrees=[0, 2] nonzero=13 max|W|=192
+  c3                       parity=even  degrees=[0, 2] nonzero=13 max|W|=64
+  writhe                   parity=odd   degrees=[1] nonzero=6 max|W|=64
+  start0                   parity=mixed degrees=[0, 1, 2, 3] nonzero=19 max|W|=48
+  start0_plus_end0         parity=even  degrees=[0, 2] nonzero=10 max|W|=96
+  start0_minus_end0        parity=odd   degrees=[1, 3] nonzero=9 max|W|=32
+  edge0_flip_delta_H       parity=even  degrees=[2] nonzero=4 max|W|=64
+  edge0_oriented_grad_H    parity=odd   degrees=[1] nonzero=4 max|W|=64
+n=5 edges=10 states=1024
+  complement/transport mismatches: {'H_complement_invariant': 0, 'c3_complement_invariant': 0, 'writhe_complement_anti': 0, 'start0_to_end0_transport': 0, 'edge0_delta_invariant': 0, 'edge0_grad_anti': 0}
+  H                        parity=even  degrees=[0, 2, 4] nonzero=91 max|W|=7680
+  c3                       parity=even  degrees=[0, 2] nonzero=31 max|W|=2560
+  writhe                   parity=odd   degrees=[1] nonzero=10 max|W|=1024
+  start0                   parity=mixed degrees=[0, 1, 2, 3, 4] nonzero=89 max|W|=1536
+  start0_plus_end0         parity=even  degrees=[0, 2, 4] nonzero=49 max|W|=3072
+  start0_minus_end0        parity=odd   degrees=[1, 3] nonzero=40 max|W|=768
+  edge0_flip_delta_H       parity=even  degrees=[2, 4] nonzero=30 max|W|=1536
+  edge0_oriented_grad_H    parity=odd   degrees=[1, 3] nonzero=30 max|W|=1536
+
+3. Cross-domain parity gate atlas
+---------------------------------
+Faulhaber midpoint | offset reversal z -> -z | anti gate plus fixed center | odd moments S_1,S_3,... and c^p | build LRC wall ledgers as odd resources plus fixed atoms
+Hamiltonian path count H | tournament converse T -> T^op | invariant gate | even Walsh levels only | scalar H cannot see odd owner/writhe channels
+Rooted tournament perspective | start observer <-> end observer | transport gate | start+end even, start-end odd | observer-coupled LRC data should be paired before quotienting
+H-gradient / flip sensitivity | global converse plus marked edge | derivative toggles parity | raw flip delta even, oriented gradient odd | odd side channels are where local obstruction pressure lives
+Signed LRC cut gauge | speed sign reversal | observer-blind, pair-visible | distance scalar even; sum/difference clocks are marked cuts | ignore signs for one-runner distance, keep them for pair ledgers
+Unit distance threshold | distance equality vs oriented tiling | symmetric metric gate plus directed support | unit graph even; flipped/nonunit orientation is side data | unit spine questions need support orientation, not only counts
+Type II / code72 scalar gate | Gleason invariant reversal | even weight enumerator gate | scalar enumerator positive; support design remains | 72 obstruction is support/matroid, not parity scalar
+Polynomial sign cube | global sign/reciprocal choices | scalar chamber gate | irreducibility needs residue and convolution lifts | sign parity is a quotient; factor grids are the hidden carrier
+OCF odd-cycle formula | cycle-packet compatibility | odd atoms with product packets | alpha_k in I(Omega,2) | model odd Faulhaber/LRC resources as compatible packets
+
+4. Proof-carrier Tournament Analysis
+------------------------------------
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3cycles: 0
+scc_sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths: 1
+flips_vs_list_order: 12
+leaders: [('lrc14_q27_owner_carry_ledger', 9), ('marked_section_parity_toggle', 8), ('lrc_sign_cut_side_channel', 7), ('ocf_compatibility_packets', 6)]
+
+5. Working moves
+----------------
+1. Do not quotient marked observer data until it is split into start+end and start-end analogues.
+2. For LRC14, tag every clock as invariant scalar, anti/owner channel, or transporter between perspectives.
+3. Use even scalar gates to shrink search; use odd derivative/owner channels to prove pressure or descent.
+4. Treat HYP-2458 odd atoms as incomplete until an OCF-style compatibility packet ledger is attached.
+5. When a scalar gate passes in code72/unit-distance/polynomials, immediately ask which support lift was forgotten.
