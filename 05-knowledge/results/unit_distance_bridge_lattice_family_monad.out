@@ -1,0 +1,13 @@
+UNIT-DISTANCE DENSE PATCHES OVER MOSER-LADDER BRIDGE LATTICES L_t
+Exact integer adjacency; identical annealing search on each lattice.
+
+==================================================================
+L_3: 4t-1=11, #units=18 (THM-434:18) OK
+     n  best  recount  Engel   3n  U-3n  cmp
+    21    57       57     57   63    -6   = Engel
+    22    60       60     60   66    -6   = Engel
+    23    64       64     64   69    -5   = Engel
+    24    68       68     68   72    -4   = Engel
+    25    72       72     72   75    -3   = Engel
+    26    76       76     76   78    -2   = Engel
+    27    80       80     81   81    -1   Engel-1
