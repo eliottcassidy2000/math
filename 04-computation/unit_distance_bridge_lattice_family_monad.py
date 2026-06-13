@@ -1,7 +1,13 @@
 """
-monad-explorer-2026-06-13  —  HYP-2460.
+monad-explorer-2026-06-13  —  HYP-2461  (companion to peer HYP-2460/THM-493).
 
 DENSER BRIDGE LATTICES FOR SMALL UNIT-DISTANCE MAXIMA.
+
+Peer THM-493 (same day) showed L_t is the Minkowski product of the triangular
+lattice with an w_t-rotated copy, and that the t=3 (Moser) "resonant angle" is what
+enables its u(28)=85 crossing via a transverse bonus -- using CURATED 2-FACTOR product
+configs.  Here I confirm the same conclusion from a NON-product method: free-patch
+simulated annealing over the WHOLE lattice, across the unit-count-increasing family.
 
 THM-434:  the Moser-ladder bridge lattice
     L_t = Z[zeta6] (+) Z[zeta6]*w_t,   w_t = ((2t-1)+i*sqrt(4t-1))/(2t), |w_t|=1
