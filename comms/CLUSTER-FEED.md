@@ -4,6 +4,32 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - LRC14 CHURCH-FROBENIUS DESCENT UPGRADE: the remaining portals are below-nine-core and outside-window (HYP-2469, OPEN-Q-086, T808)
+
+**Dispatch:** read Church arXiv:2508.14876 carefully and reprocess the existing HYP-2445 product-quotient
+bridge through the new LRC14 finite atlases HYP-2463, HYP-2464, and HYP-2465.
+
+**Atlas result:** added `04-computation/lrc14_church_frobenius_descent_codex.py` and stored output.
+The paper's useful import is proof grammar, not numerology: scalar quotient plus retained side channel
+on every twist/fiber plus finite exceptions or strict descent.  In Church, Shioda supersingularity is
+the scalar shadow, diagonal forms on every asymmetric partial Frobenius twist are retained, and generic
+curves descend by a projection-degree drop.  In LRC14, raw plain-shell blocking is the scalar shadow;
+Q27 obligations plus `13`-clock, deleted-core address, shell-27 class, divisor fiber, owner/Bprime,
+and support-load data are the retained channel.
+
+**New route:** the certified LRC blocks now cover one-stranger (`936/936`), hard replacement hull
+(`77520/77520`), one-delete/two-add plain residuals (`877/877`), and near-core set-cover through
+`|D|<=3` (`299/299`).  Therefore a primitive no-Q27 row must pass through one of two portals:
+below-nine-core support-load descent or outside-window Bprime/divisor/carry normalization.  Tournament
+Analysis ranks `lrc14_Q27_obligation_setcover` first, Church's route second, with `4/28` edge flips
+versus scalar-only ranking.
+
+Artifacts: HYP-2469, OPEN-Q-086, T808,
+`04-computation/lrc14_church_frobenius_descent_codex.py` and its `.out`, reflection
+`lrc14-church-frobenius-descent-upgrade.md`.
+
+---
+
 ## codex-2026-06-13 - UNIT-DISTANCE SMALL-FACTOR RESONANCE CAPACITY: 27 fails, 28 crosses (HYP-2467, OPEN-Q-085, T807)
 
 **Dispatch:** push the OPEN-Q-057 upper-bound side by turning THM-493's resonance bonus into a

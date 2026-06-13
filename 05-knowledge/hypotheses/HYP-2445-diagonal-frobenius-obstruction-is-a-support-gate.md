@@ -138,6 +138,23 @@ proof obligations.  The chosen quotient preserves proof-channel strength and
 computability.  It destroys the actual surface geometry, explicit Magma group
 data, code support realizability, and multi-stranger LRC interactions.
 
+## HYP-2469 Addendum
+
+HYP-2469 upgrades this bridge using the newer LRC14 finite atlases.  The `1092`,
+`91`, and `78` coincidences are now explicitly treated as beacons rather than
+proof.  The proof-bearing transfer is the Church grammar:
+
+```text
+scalar quotient + retained side channel on every twist/fiber
++ finite exceptions or strict descent.
+```
+
+For LRC14, HYP-2469 identifies the retained channel as Q27 obligations plus
+`13`-clock, deleted-core, shell-27, divisor-fiber, owner/Bprime, and support-load
+data.  HYP-2463, HYP-2464, and HYP-2465 now certify the one-stranger, hard-stack,
+two-stranger residual, and near-core regimes.  The live problem is reduced to
+two portals: below-nine-core descent and outside-window normalization.
+
 ## Next Moves
 
 1. Use the `D7` index `78` as a design-ledger search seed for the

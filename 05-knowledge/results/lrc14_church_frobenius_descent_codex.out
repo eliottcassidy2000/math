@@ -1,0 +1,82 @@
+Church partial-Frobenius descent x LRC14 Q27
+========================================================================
+[1] Church paper constants in LRC14 coordinates
+  |PSL2(F_13)| = 1092 = 2^2 * 3 * 7 * 13
+  Hurwitz genus-14 bound 84*(14-1) = 1092
+  LRC14 carry window 13*84 = 1092; same integer = True
+  subgroup D6: |H|=12, index= 91 (C(14,2), LRC q=91 fiber)
+  subgroup D7: |H|=14, index= 78 (C(13,2), code72 lambda_5)
+  subgroup A4: |H|=12, index= 91 (C(14,2), LRC q=91 fiber)
+  first supersingular prime norms and residue beacons:
+    1091: mod13=12, mod27=11, pm27=11, mod91=90
+    2339: mod13=12, mod27=17, pm27=10, mod91=64
+    6551: mod13=12, mod27=17, pm27=10, mod91=90
+    7643: mod13=12, mod27= 2, pm27=2, mod91=90
+  caution: the constants are beacons; the proof object is the retained support channel.
+
+[2] Certified LRC14 blocks after the paper import
+  Q27 size = 76 denominators; Q27=(2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) ... (308, 322, 336, 350, 364, 378)
+  one_stranger_family:
+    rows/cases:       936
+    scalar shadow:    plain shell q<=27 has 8 residual rows
+    retained channel: Q27 plus Bprime(any) on S(r)
+    certified exit:   936/936 Q27 covered; 936/936 Bprime(any) covered
+    source:           HYP-2444/HYP-2443
+  hard_packet_replacement_hull:
+    rows/cases:       77520
+    scalar shadow:    eight shell-27/13-clock hard residues look stackable
+    retained channel: typed Q27 resource ledger
+    certified exit:   77520/77520 have Q27 witnesses; only 10 miss plain q<=27
+    source:           HYP-2463
+  two_stranger_plain_residuals:
+    rows/cases:       877
+    scalar shadow:    one deletion plus two additions can still block every plain shell
+    retained channel: 13-clock debt, deleted-core address, shell-27 pair class, divisor fiber
+    certified exit:   877/877 have Q27 witnesses; every residual has a 13-clock speed
+    source:           HYP-2464
+  near_core_setcover_cases:
+    rows/cases:       299
+    scalar shadow:    arbitrary additions might cover all Q27 obligations
+    retained channel: primitive Q27 set-cover over safe twists for CORE\D
+    certified exit:   all delete counts e<=3 infeasible with budget e+1
+    source:           HYP-2465
+
+[3] Candidate Church-style LRC14 descent theorem
+  Suppose S is a primitive 13-speed row with no Q27 witness.
+  The desired proof should force one of the following exits:
+    carry_window_near_core  -> if S normalizes to 1..1092 and retains >=9 core speeds, HYP-2465 contradicts no-Q27
+    hard_packet_stack       -> if S compresses to shell-27/13-clock hard packets, HYP-2463 contradicts no-Q27
+    two_stranger_resource   -> if S is a one-delete/two-add plain residual, HYP-2464 gives Q27 plus coordinates
+    owner_exception         -> if support concentrates on a runner, Bprime/owner-private deletion should open
+    floor_atom_exception    -> AP, Vstar, and nonprimitive 2AP are named wall atoms, not new blockers
+    below_nine_core         -> the live gap: rows deleting >=4 core speeds need a support-load descent measure
+    outside_window          -> large speeds must trigger divisor/carry/Bprime normalization before the finite atlas applies
+
+  Proposed descent measure for the live gap:
+    R(S) = (outside_window?, deleted_core_count, Q27_setcover_defect,
+            max_support_load, owner_private_width, low_clock_depth)
+  Generic steps should lower R lexicographically; non-lowering steps must land
+  in one of the named finite exceptions above.
+
+[4] Tournament Analysis over proof routes
+  observable=(retained channel, exactness, LRC leverage+descent drop, computability, -risk)
+  tie Hamiltonian path=declaration order
+  score histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles=0
+  SCCs=[['lrc14_Q27_obligation_setcover'], ['church_diagonal_forms_all_twists'], ['lrc14_resource_coordinate_compression'], ['lrc14_owner_Bprime_exception'], ['raw_plain_shell_blocking'], ['hurwitz_1092_91_78_beacons'], ['shioda_supersingular_scalar'], ['lrc14_below_nine_core_descent_gap']]
+  edge flips versus scalar-only ranking=4/28
+  route order:
+    7: lrc14_Q27_obligation_setcover
+    6: church_diagonal_forms_all_twists
+    5: lrc14_resource_coordinate_compression
+    4: lrc14_owner_Bprime_exception
+    3: raw_plain_shell_blocking
+    2: hurwitz_1092_91_78_beacons
+    1: shioda_supersingular_scalar
+    0: lrc14_below_nine_core_descent_gap
+
+[5] High-leverage next computations
+  below-nine-core MILP: repeat the HYP-2465 primitive set-cover lower bound for delete_count=4, but add structured budgets by 13-clock/divisor/owner class instead of raw e+1
+  outside-window Bprime normalizer: prove or test that speeds >1092 either dominate an existing core runner, open Bprime(any), or reduce modulo a carry/fiber without losing blockedness
+  support-transport curvature: measure how Q27 obligation covers change under q->2q, q->7q, and 27->9->3; nonzero defect should be a witness and zero defect should descend
+  exception catalogue: make AP/Vstar/2AP, q=91, q=161, owner-private, and low-clock exits a finite typed list, mirroring Church's finite curve types before descent
