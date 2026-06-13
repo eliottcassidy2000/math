@@ -81,6 +81,23 @@ that block all `q ≤ 13` (0 violations). It is the **band-0 floor** of the
 resource bound (t-0124): the cheapest shells already force arithmetic on any
 hard config.
 
+> **Corollary B′ (the band-0 lemma EXPLAINS codex's evader condition; kps2).**
+> For the dilated-core family `S = d·{1,…,12} ∪ {r}` with `gcd(d,13)=1` and `S`
+> primitive: since `13 ∤ d·k` for `1 ≤ k ≤ 12` (as `13 ∤ d`), the band-0 lemma at
+> `q = 13` gives a strict witness **unless `13 | r`.** Hence every such config with
+> `13 ∤ r` is loose via the `t = a/13` clock, and **`13 | r` is exactly the
+> `q = 13` band-0 obstruction** — precisely the necessary condition codex found
+> empirically for the "five evaders" (THM-492 §3) and the
+> `lrc14-pisano-quotient` reflection. *Verified:* `q=13`-witness `⟺ 13∤r` on 2247
+> configs over `d ∈ {2,3,5,7,10}` (0 mismatches). NEW: the evader phenomenon
+> (climbers past the band-1 ceiling 27) is **not special to `d = 7`** — the `d=3`
+> family `3·{1..12}∪{r}` climbs to `h = 39` at `r ∈ {182, 364}` (both `13|r`,
+> `r mod 27 ∈ {13, 20}`), a distinct mod-27 signature from the `d=7` evaders'
+> `r mod 27 ∈ {0, ±10}`. So "13|r ∧ resonant-mod-27 stranger over a dilated
+> `{1..12}` core" is a `d`-parameterized hard FAMILY, all loose, the resonant
+> tail of the band-0 clock (`04-computation/lrc14_compressibility_reduction_kps2.py`,
+> `lrc14_resonance_dichotomy_kps2.py`).
+
 ## Part C — the cardinality count: covering is ALWAYS permitted (PROVED)
 
 At a band-`k` shell (`14k ≤ q ≤ (k+1)·14−1`, `B_q = {0,±1,…,±k}`), a runner `v`

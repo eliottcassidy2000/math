@@ -1,0 +1,36 @@
+=== (1)+(2) LINK + DICHOTOMY: blocking height vs structure ===
+   1500 primitive non-dominant configs (entries<100).
+   compressibility c (max #runners sharing a factor) -> ladder-height stats:
+      c | n | h: min  median  max
+      3 |    4 |   6    10     10
+      4 |   63 |   3     8     19
+      5 |  184 |   3     9     20
+      6 |  346 |   3    10     22
+      7 |  390 |   3    10     25
+      8 |  280 |   3    11     22
+      9 |  162 |   5    11     25
+     10 |   60 |   3    11     21
+     11 |    8 |   5    11     23
+     12 |    3 |   9     9     16
+
+   TOP-10 climbers (highest h): their compressibility:
+      h= 25  comp= 9  gcd-reduced-spread=40  S=[17, 19, 20, 26, 32, 45, 54, 66, 69, 70, 72, 76, 80]
+      h= 25  comp= 7  gcd-reduced-spread=29  S=[19, 24, 30, 35, 52, 63, 65, 66, 69, 70, 84, 85, 87]
+      h= 23  comp=11  gcd-reduced-spread=46  S=[18, 20, 38, 44, 48, 52, 59, 60, 68, 70, 74, 76, 93]
+      h= 23  comp= 9  gcd-reduced-spread=44  S=[15, 17, 18, 24, 26, 30, 40, 49, 57, 76, 80, 84, 88]
+      h= 23  comp= 9  gcd-reduced-spread=47  S=[14, 15, 17, 19, 20, 42, 72, 74, 78, 80, 88, 93, 94]
+      h= 23  comp= 7  gcd-reduced-spread=45  S=[1, 9, 19, 22, 29, 34, 42, 43, 44, 56, 60, 72, 91]
+      h= 22  comp= 9  gcd-reduced-spread=45  S=[16, 20, 24, 55, 57, 58, 68, 73, 78, 81, 84, 86, 90]
+      h= 22  comp= 9  gcd-reduced-spread=49  S=[2, 20, 32, 33, 34, 38, 39, 41, 54, 58, 72, 91, 98]
+      h= 22  comp= 8  gcd-reduced-spread=45  S=[1, 32, 33, 51, 57, 60, 64, 70, 78, 80, 84, 85, 90]
+      h= 22  comp= 6  gcd-reduced-spread=49  S=[16, 17, 20, 25, 31, 34, 52, 57, 60, 65, 70, 71, 99]
+
+=== (3) known hard configs (evaders) vs random — resonance-extreme? ===
+   evader r=611: h=41 comp=12 (=12 means 12 runners share factor 7) overcorr@q=41=46.4
+   evader r=702: h=41 comp=12 (=12 means 12 runners share factor 7) overcorr@q=41=46.4
+   evader r=793: h=40 comp=12 (=12 means 12 runners share factor 7) overcorr@q=40=66.2
+   evader r=962: h=40 comp=12 (=12 means 12 runners share factor 7) overcorr@q=40=72.2
+   evader r=1053: h=40 comp=12 (=12 means 12 runners share factor 7) overcorr@q=40=64.2
+   random configs avg compressibility = 6.18 (evaders have 12)
+
+=== TOTAL 0.1s ===

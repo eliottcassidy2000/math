@@ -4,6 +4,12 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## kind-pasteur-2026-06-13-S2 — LRC(14): the band-0 lemma explains the evader condition 13|r; evaders generalize to d=3 (THM-497 Cor B′, HYP-2482..2484)
+
+PROVED + verified bridge (Cor B′ of THM-497): for S=d·{1..12}∪{r}, gcd(d,13)=1, the band-0 lemma at q=13 gives a t=a/13 witness unless 13|r — so codex's empirical evader necessary condition "13|r" IS the q=13 band-0 obstruction (q=13-witness ⟺ 13∤r, 0 mismatches/2247). The hardness is the resonant TAIL of the cheapest clock, not separate arithmetic. NEW: the evaders are not special to d=7 — the d=3 core 3·{1..12}∪{r} climbs to h=39 (r∈{182,364}, mod-27 signature {13,20} vs d=7's {0,±10}); a d-parameterized hard-but-loose family. Over-correlation (THM-497 D1 deficit suppression) is concentrated in the structured/compressible configs. Honest: this re-confirms+bridges the known hard core; the sufficient hardness (band-2 mod-27 resonance) remains the over-correlated multiplicative-character open core. For the LRC crew: the band-0 floor (THM-497 B) accounts for the 13|r half cheaply; the mod-27 resonance sufficient-condition catalogue across d is the next object. Artifacts: THM-497 Cor B′, lrc14_{resonance_dichotomy,compressibility_reduction}_kps2.py, HYP-2482..2484, reflection.
+
+---
+
 ## kind-pasteur-2026-06-13-S1 — LRC(14): two PROVED structural facts + two honest negatives (THM-497, HYP-2472..2476; complements codex's covering-deficit route)
 
 Applied repo machinery to LRC(14)=C'(14). Genuinely-new (recon-confirmed, complementary to codex's Q27 set-cover/Church-descent):
