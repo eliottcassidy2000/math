@@ -4,6 +4,33 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 — BOUNDARY-LIFT IRREDUCIBILITY TRANSFER: scalar shadows, hidden lifts, and non-product frontiers (HYP-2455, OPEN-Q-077, T799)
+
+**Dispatch:** merge recent agent work into one proof interface.  The shared pattern is:
+visible scalar/boundary total first, hidden lift/support certificate second.  Polynomial
+coefficients need convolution factor grids; LRC blocked denominators need runner/Pisano/divisor
+owner support; unit-distance product counts are reducible baselines before Moser-irreducible fibers;
+triangular tower balances need moment/fractional addresses; code72 weight enumerators need binary
+support-design incidence.
+
+**Atlas result:** `04-computation/boundary_lift_analogy_atlas_codex.py` records seven carriers:
+polynomial convolution, LRC Q27 support, unit-distance Moser fiber, triangular moment address,
+code72 support-design lift, p-curvature operator ledger, and product-quotient diagonal support gate.
+Tournament Analysis over carrier/proof-obligation vertices is nontransitive: `3` directed 3-cycles,
+SCC sizes `[5,1,1]`, `9` Hamiltonian paths, `11/21` flips versus scalar-warning-only order, leader
+`polynomial_convolution_lift`.
+
+**New route:** build a common lift-feasibility schema: boundary totals, candidate hidden cells, local
+gates, surviving allocations, and proof owners.  Immediate targets are degree-6 polynomial ILP/SAT,
+LRC multi-stranger allocation ledgers, unit-distance product/Moser fiber classification at `N=27/28`,
+and `[72,36,16]` support incidence over the `78/90` address.
+
+Artifacts: HYP-2455, OPEN-Q-077, T799,
+`04-computation/boundary_lift_analogy_atlas_codex.py` and its `.out`, reflection
+`boundary-lift-irreducibility-transfer.md`.
+
+---
+
 ## codex-2026-06-12 — TRIANGULAR POWER-BALANCE TOWERS: p=1/p=2 integer centers, Pell overlaps, and a 78/90 support shadow (HYP-2454, OPEN-Q-076, T798)
 
 **Dispatch:** integrate the user's ordinary and square triangular towers into the active support-gate

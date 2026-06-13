@@ -1,0 +1,112 @@
+Boundary-lift carrier atlas
+===========================
+Thesis: recent agents are seeing the same proof grammar in different clothes.
+A scalar shadow can pass while the hidden lift fails, or vice versa.
+
+* polynomial_convolution_lift
+  scalar:      coefficient row a_k
+  hidden lift: integer factor grid with diagonal sums a_k=sum b_i c_j
+  irreducible: irreducible iff no nontrivial integral convolution lift
+  anchor:      HYP-2452: degree-4/5 primitive scans have zero mismatches
+  live gap:    bounded ILP/SAT lifts beyond degree 5 plus Newton-boundary layers
+
+* lrc_q27_support_lift
+  scalar:      denominator q is blocked / plain shell horizon
+  hidden lift: runner support, Pisano class, divisor fiber, Bprime owner
+  irreducible: hard row survives only if no AP/Vstar/2AP/descent support lift appears
+  anchor:      HYP-2444: Q27 covers all one-stranger rows; residual is +-10 mod 27 plus 13-clock
+  live gap:    multi-stranger rows keeping low-clock coverage while spending shell-27 resources
+
+* unit_distance_moser_irreducible_fiber
+  scalar:      edge count u(N) versus 3N and product average degree
+  hidden lift: rank-4 Moser-ring incidence, direction packets, ears, exact embedding
+  irreducible: N* crosser is non-product; products tie at 27 and first beat only at 32
+  anchor:      OPEN-Q-057/THM-433/THM-437/HYP-2301: H(3,3) rigid at 81; Moser row gives 85 at 28
+  live gap:    prove u(27)=81 or find a genuinely irreducible non-product 82-edge row
+
+* triangular_moment_fractional_address
+  scalar:      equal interval sums or equal square sums
+  hidden lift: moment layer, endpoint Pell address, fractional Bernoulli offset
+  irreducible: integer power centers appear only for p=1,2 in the checked family
+  anchor:      HYP-2453/HYP-2454: unique Q_L(3)=F_R(4), 78/90 support shadow
+  live gap:    prove p>=3 bracket and attach 78/90 to an actual support ledger
+
+* code72_support_design_lift
+  scalar:      Type II weight enumerator feasibility and lambda_5=78
+  hidden lift: binary support/design/matroid incidence for weight-16 words
+  irreducible: a feasible enumerator is reducible noise unless a support incidence lift exists
+  anchor:      HYP-2452/HYP-2454/HYP-2445 transfer: 78 appears as lambda_5 and D7 index
+  live gap:    turn 78/90 and convolution-lift grammar into support-incidence constraints
+
+* p_curvature_operator_ledger
+  scalar:      naive mod-p scalar rank / local residue pass
+  hidden lift: operator p-curvature plus carry/local-section compatibility
+  irreducible: local scalar tests are reducible shadows unless operator sections cohere
+  anchor:      HYP-2446: 1/(1-z) and z/(1-z) give opposite scalar/operator false lessons
+  live gap:    define K_q(S) operator-style for LRC14 blockers and descent failures
+
+* product_quotient_diagonal_support_gate
+  scalar:      Shioda supersingularity / group index arithmetic
+  hidden lift: diagonal symmetric forms across asymmetric Frobenius twists
+  irreducible: scalar supersingularity is too reducible; diagonal support forces descent
+  anchor:      HYP-2445: 91=C(14,2) and 78=C(13,2) match LRC/code support gates
+  live gap:    translate projection-degree descent into finite support-gate constraints
+
+Irreducible analogy table
+=========================
+domain | reducible shadow | irreducible/lift face | transfer instruction
+--- | --- | --- | ---
+Polynomial reducibility | nontrivial factor grid exists | absence of every integral convolution lift | LRC/code support ledgers should be solved as lift feasibility, not scalar counts
+Unit-distance product family | Cartesian/Minkowski product attains edge count | N* crosser below 32 must be non-product Moser fiber | treat product constructions as reducible rows; search the irreducible fiber
+LRC plain q-blocking | scalar denominator appears blocked | Q27/Pisano/owner lift opens or certifies the row | multi-stranger frontier should track support allocations like factor tokens
+Triangular equalities | p=1 and p=2 interval sums balance | p>=3 needs fractional/moment address in checked range | 78/90 is a support address, not a standalone numerological proof
+[72,36,16] code | Gleason/enumerator totals pass | binary support-design incidence lift remains unresolved | adapt convolution/UD non-product tests to rule in/out support realizability
+
+Tournament Analysis
+===================
+Vertices: carriers/proof obligations, not runners, points, primes, or polynomial rows.
+Pairwise observable: majority comparison across criteria:
+  exact_certificate, hidden_lift_visibility, irreducibility_signal, lrc14_transfer, unit_distance_transfer, code72_transfer, computable_now, scalar_warning
+Switch/gauge: A -> B when A wins more criteria; tie Hamiltonian path is declaration order.
+score_hist={1: 2, 2: 1, 3: 2, 5: 1, 6: 1}
+directed_3cycles=3
+scc_sizes=[5, 1, 1]
+hamiltonian_paths=9
+ranking:
+  score=6 polynomial_convolution_lift
+  score=5 lrc_q27_support_lift
+  score=3 product_quotient_diagonal_support_gate
+  score=3 unit_distance_moser_irreducible_fiber
+  score=2 code72_support_design_lift
+  score=1 p_curvature_operator_ledger
+  score=1 triangular_moment_fractional_address
+
+Nontrivial edge flips against scalar-warning-only order:
+edge_flips_vs_scalar_warning=11/21
+  scalar would choose lrc_q27_support_lift; majority carrier chooses polynomial_convolution_lift
+  scalar would choose unit_distance_moser_irreducible_fiber; majority carrier chooses polynomial_convolution_lift
+  scalar would choose code72_support_design_lift; majority carrier chooses polynomial_convolution_lift
+  scalar would choose p_curvature_operator_ledger; majority carrier chooses polynomial_convolution_lift
+  scalar would choose product_quotient_diagonal_support_gate; majority carrier chooses polynomial_convolution_lift
+  scalar would choose code72_support_design_lift; majority carrier chooses lrc_q27_support_lift
+  scalar would choose code72_support_design_lift; majority carrier chooses unit_distance_moser_irreducible_fiber
+  scalar would choose product_quotient_diagonal_support_gate; majority carrier chooses unit_distance_moser_irreducible_fiber
+
+Procedural next moves
+=====================
+1. Build one common 'lift feasibility' data model:
+   boundary totals, candidate hidden cells, local gates, surviving allocations, and proof owner.
+2. Polynomial side: extend HYP-2452 with bounded ILP/SAT degree-6 lifts.
+3. LRC side: turn Q27/Pisano one-stranger rows into multi-stranger allocation ledgers.
+4. Unit-distance side: classify product-reducible versus Moser-irreducible extension fibers at N=27/28.
+5. Code side: encode [72,36,16] minimum-word supports as binary incidence lifts over the 78/90 address.
+
+Assumption challenge
+====================
+Alternate vertices considered: polynomial rows, factor coefficients, prime tokens,
+LRC runners, residues, Q27 divisors, unit-distance points, unit directions,
+Moser ears, triangular endpoints, code supports, Fourier modes, and proof obligations.
+Chosen vertices are carriers/proof obligations because they preserve the predicate
+'does a hidden lift exist?' across all four domains.  The quotient destroys
+domain-specific geometry, so each transfer must reattach its local side channels
+before being treated as evidence.

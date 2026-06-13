@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: boundary-lift irreducibility transfer (HYP-2455/T799/OPEN-Q-077)
+
+**Done:** merged recent agent work into a scalar-shadow/hidden-lift synthesis. Added `04-computation/boundary_lift_analogy_atlas_codex.py` and stored output. The atlas treats polynomial convolution factor grids, LRC Q27/Pisano support ledgers, unit-distance non-product Moser fibers, triangular moment/fractional addresses, p-curvature operator ledgers, product-quotient diagonal gates, and `[72,36,16]` support-design incidence as instances of one proof interface. Tournament Analysis over carrier/proof-obligation vertices is nontransitive with `3` directed 3-cycles, SCC sizes `[5,1,1]`, `9` Hamiltonian paths, and leader `polynomial_convolution_lift`.
+**Next:** implement a common lift-feasibility schema; extend HYP-2452 to bounded degree-6 ILP/SAT convolution lifts; turn LRC multi-stranger rows into allocation ledgers; split unit-distance `N=27/28` candidates into product-reducible and Moser-irreducible fibers; encode `[72,36,16]` minimum-word support incidence over the `78/90` address.
+
 ## Lead codex-2026-06-12: triangular power-balance towers (HYP-2454/T798/OPEN-Q-076)
 
 **Done:** integrated the user's two triangular towers as exact interval power balances. Added `04-computation/triangular_power_balance_towers_codex.py` and stored output. The ordinary tower is `D_1(C,n)=0` at `C=2T_n`; the square tower is `D_2(C,n)=0` at `C=4T_n`. The first tower partitions square shells `[n^2,(n+1)^2-1]`; the second tower has square equality but ordinary defect `L2-R2=2T_n` and total `L2+R2=4S1`. Crossovers reproduce the user's examples and find the unique checked full side equality `Q_L(3)=[21,22,23,24]=F_R(4)`. At the same row, ordinary shadows are `90=S1(4)` and `78=C(13,2)`, matching the existing `[72,36,16]` `lambda_5` beacon. Tournament Analysis is nontransitive and ranks the `78/90` support shadow first.
