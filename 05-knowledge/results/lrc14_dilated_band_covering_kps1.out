@@ -1,0 +1,34 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_dilated_band_covering_kps1.py:14: SyntaxWarning: invalid escape sequence '\ '
+  S has a shell-q witness  <=>  (Z/q)*  \  U_{v in S} v^{-1} B_q  is NONEMPTY.
+=== A. band criterion <-> covering reformulation <-> dense M ===
+   tight {1..13}: M_dense=1/14 (>1/14? False); band ladder height h=None (witness? False); agree=True; expected M=1/14 OK
+   {1..12,28}: M_dense=1/13 (>1/14? True); band ladder height h=13 (witness? True); agree=True
+   evader r=611: M_dense=1/13 (>1/14? True); band ladder height h=41 (witness? True); agree=True
+
+=== B. ladder height h(S) on the hard families ===
+   five evaders S(r)=7*{1..12} u {r} (THM-492: expect h in {40,41}):
+      r=611: primitive_mult14=True  h(S)=41  deficit@h=4
+      r=702: primitive_mult14=True  h(S)=41  deficit@h=4
+      r=793: primitive_mult14=True  h(S)=40  deficit@h=2
+      r=962: primitive_mult14=True  h(S)=40  deficit@h=2
+      r=1053: primitive_mult14=True  h(S)=40  deficit@h=2
+   eight-core 4-deletions (reflection: expect plain q in {31,33}):
+      delete(28, 42, 56, 84): |S|=8 mult14=False  h(S)=4
+      delete(42, 56, 70, 84): |S|=8 mult14=False  h(S)=6
+   random primitive multiple-of-14 configs (13 speeds, entries<=120):
+      40 configs: h min=4 median=11 max=19  (max ladder height seen = candidate resource bound)
+      height distribution: {4: 1, 5: 1, 6: 3, 8: 6, 9: 4, 10: 1, 11: 8, 12: 2, 13: 5, 15: 1, 16: 1, 17: 3, 18: 1, 19: 3}
+
+=== C. covering-deficit curve def(q) for the evaders (band-1 ceiling q=27) ===
+   r=611: band-1 (q<=27) max deficit = 0 (0 = fully covered through band-1); first leak at q*=41 (deficit 4)
+        {v^{-1} mod 41} (units) = [1, 2, 3, 6, 8, 10, 11, 17, 21, 22, 28, 34, 36]
+   r=702: band-1 (q<=27) max deficit = 0 (0 = fully covered through band-1); first leak at q*=41 (deficit 4)
+        {v^{-1} mod 41} (units) = [1, 2, 3, 6, 8, 11, 17, 21, 22, 28, 33, 34, 36]
+   r=793: band-1 (q<=27) max deficit = 0 (0 = fully covered through band-1); first leak at q*=40 (deficit 2)
+        {v^{-1} mod 40} (units) = [7, 9, 13, 17, 21, 23]
+   r=962: band-1 (q<=27) max deficit = 0 (0 = fully covered through band-1); first leak at q*=40 (deficit 2)
+        {v^{-1} mod 40} (units) = [7, 9, 13, 21, 23]
+   r=1053: band-1 (q<=27) max deficit = 0 (0 = fully covered through band-1); first leak at q*=40 (deficit 2)
+        {v^{-1} mod 40} (units) = [7, 9, 13, 21, 23, 37]
+
+=== TOTAL 0.1s ===
