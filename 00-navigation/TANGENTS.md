@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T797** #triangular-towers #moment-lifts #faulhaber #bernoulli-address #lrc14 #Q27 #HYP-2453 #OPEN-Q-075 | certainty: exact identities/overlap scan + open transfer program | source: codex-2026-06-12
+TRIANGULAR TOWER MOMENT BRIDGE. The user's two towers are adjacent unequal shell splits: A_n splits the square shell `[n^2,(n+1)^2-1]` with equal first moments; B_n splits the triangular shell `[T_{2n},T_{2n+1}-1]` with equal second moments. Exact closed forms verify `A_common=3*sum_{j<=n}j^2`, `B_common=n(n+1)(2n+1)(12n^2+12n+1)/6`, and unsquared B-defect `n(n+1)`. The unique whole-side hinge is `B_3.L=A_4.R=[21,24]`; higher moments have balancing start `p n^2+(p-1)n+(p-1)(p-2)/(12p)+...`, so p=1,2 are the only exact integer faces before a Bernoulli/fractional address appears. Transfer target: enrich LRC14 Q27 blocker rows with moment/resource defects and missing address coordinates. Files: HYP-2453, OPEN-Q-075, `triangular_tower_moment_bridge_codex.py`.
+
 **T795** #convolution-lift #irreducibility #prime-polynomials #split-survivors #newton-polygon #residue-tournaments #fixed-path #HYP-2451 #OPEN-Q-073 | certainty: exact local scout + open split-survivor program | source: codex-2026-06-12
 CONVOLUTION-LIFT SPLIT SURVIVORS. Reducibility is a hidden 2D coefficient-grid lift `a_k=sum_{i+j=k}b_i c_j`; irreducibility is the absence of every nontrivial diagonal lift. Exact brute-force residue lifts agree with symbolic mod-p factorization in small examples. In the HYP-2449 degree-4 scout, least mod-p convolution blockers through `31` certify `3058/3096` irreducibles (`98.77%`) with zero false positives and cut sign-bucket mixing from `16` to `8`. Residue blockers and Newton valuation blockers are complementary: Eisenstein rows can look reducible mod p while a one-edge p-adic hull proves irreducibility. Next carrier: split-survivor ledgers for polynomial rows and LRC14 Q27 resources.
 
