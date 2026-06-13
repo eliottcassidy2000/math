@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: Faulhaber anchor expansion (HYP-2457/T801/OPEN-Q-079)
+
+**Done:** sharpened the HYP-2454 Bernoulli/Faulhaber route for the user's power-balance anchor. Added `04-computation/triangular_faulhaber_anchor_expansion_codex.py` and stored output. With midpoint `c=a+n`, the exact defect is `D_p(c,n)=c^p-2*sum_{r odd} binom(p,r)c^(p-r)S_r(n)`, so only odd Faulhaber moments survive. Writing `u=n(n+1)`, the formal root expansion is `c=p*u+alpha_p+beta_p/u+gamma_p/u^2+...`; `alpha_p`, the user's `beta_p`, and the factored `gamma_p` all carry `(p-1)(p-2)`, explaining exact p=1/p=2 towers. The p=2 face is the square-pyramidal cuboid identity `6*sum_{j<=n}j^2=n(n+1)(2n+1)=2*S1`. Tournament Analysis over proof carriers is transitive with leader `odd_moment_projection`.
+**Next:** prove the fixed-`p` asymptotic with a uniform remainder, then use it or direct odd-moment inequalities to prove HYP-2454's bracket `D_p(p*n(n+1),n)<0<D_p(p*n(n+1)+1,n)` for all `p>=3`. Transfer target: build an LRC14 odd-wall ledger whose fields include blocked twists, owner support, shell-27 class, divisor fiber, carry residue, endpoint atom, and moment/resource defect rather than scalar "q blocked" alone.
+
 ## Lead codex-2026-06-13: boundary-lift irreducibility transfer (HYP-2455/T799/OPEN-Q-077)
 
 **Done:** merged recent agent work into a scalar-shadow/hidden-lift synthesis. Added `04-computation/boundary_lift_analogy_atlas_codex.py` and stored output. The atlas treats polynomial convolution factor grids, LRC Q27/Pisano support ledgers, unit-distance non-product Moser fibers, triangular moment/fractional addresses, p-curvature operator ledgers, product-quotient diagonal gates, and `[72,36,16]` support-design incidence as instances of one proof interface. Tournament Analysis over carrier/proof-obligation vertices is nontransitive with `3` directed 3-cycles, SCC sizes `[5,1,1]`, `9` Hamiltonian paths, and leader `polynomial_convolution_lift`.

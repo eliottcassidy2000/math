@@ -1,0 +1,111 @@
+﻿Triangular Faulhaber anchor expansion
+HYP-2457 / T801 / OPEN-Q-079 candidate
+
+[1] Odd Faulhaber moment identity
+    Symbolic identity checks p=1..10: [(1, True), (2, True), (3, True), (4, True), (5, True), (6, True), (7, True), (8, True), (9, True), (10, True)]
+    Exact formula:
+      D_p(c,n)=c^p - 2*sum_{r odd} binom(p,r)c^(p-r)S_r(n)
+      S_r(n)=sum_{i=1..n} i^r
+    Sample integer checks:
+      p=3, n=4, c=60: direct=-200, odd_moment=-200
+      p=4, n=5, c=121: direct=1553761, odd_moment=1553761
+      p=7, n=6, c=300: direct=4123906879466478, odd_moment=4123906879466478
+
+[2] Anchor expansion in u=n(n+1)
+    c=a+n, u=n(n+1), c_p(n)=p*u + alpha_p + beta_p/u + gamma_p/u^2 + ...
+    a_p(n)=c_p(n)-n.
+    alpha_p = (p - 2)*(p - 1)/(12*p)
+    beta_p  = -(p - 2)*(p - 1)*(2*p**2 - 4*p - 1)/(180*p**3)
+    gamma_p = (p - 2)*(p - 1)*(p + 2)*(40*p**3 - 128*p**2 + 53*p + 11)/(30240*p**5)
+    Reduced series coefficients q^0..q^3 vanish for p=1..12: True
+    First coefficients by p:
+      p=1: alpha=0, beta=0, gamma=0
+      p=2: alpha=0, beta=0, gamma=0
+      p=3: alpha=1/18, beta=-1/486, gamma=7/52488
+      p=4: alpha=1/8, beta=-1/128, gamma=7/8192
+      p=5: alpha=1/5, beta=-29/1875, gamma=173/93750
+      p=6: alpha=5/18, beta=-47/1944, gamma=623/209952
+      p=7: alpha=5/14, beta=-23/686, gamma=3915/941192
+      p=8: alpha=7/16, beta=-133/3072, gamma=4241/786432
+
+    Exact p=1 and p=2 anchors recovered:
+      n=1: p=1 a=c-n=1=n^2; p=2 a=c-n=3=2n^2+n
+      n=2: p=1 a=c-n=4=n^2; p=2 a=c-n=10=2n^2+n
+      n=3: p=1 a=c-n=9=n^2; p=2 a=c-n=21=2n^2+n
+      n=4: p=1 a=c-n=16=n^2; p=2 a=c-n=36=2n^2+n
+      n=5: p=1 a=c-n=25=n^2; p=2 a=c-n=55=2n^2+n
+      n=6: p=1 a=c-n=36=n^2; p=2 a=c-n=78=2n^2+n
+
+[3] Numerical root check
+    p=3: target gamma=7/52488
+      n=  8: (c-c2)u^2=0.000133216990513675761 ; (c-c3)u^3=-0.0000105714703953177493
+      n= 32: (c-c2)u^2=0.000133353794194796563 ; (c-c3)u^3=-0.000010583545201093615
+      n=128: (c-c2)u^2=0.000133363175480408783 ; (c-c3)u^3=-0.0000105843732972215418
+    p=4: target gamma=7/8192
+      n=  8: (c-c2)u^2=0.000852906011430298296 ; (c-c3)u^3=-0.000114204677018522655
+      n= 32: (c-c2)u^2=0.000854383830703147973 ; (c-c3)u^3=-0.00011442477747574074
+      n=128: (c-c2)u^2=0.0008544852567898751 ; (c-c3)u^3=-0.000114439885582354497
+    p=5: target gamma=173/93750
+      n=  8: (c-c2)u^2=0.00184132214959080283 ; (c-c3)u^3=-0.000288805229462196221
+      n= 32: (c-c2)u^2=0.00184505922390784183 ; (c-c3)u^3=-0.000289459553319031129
+      n=128: (c-c2)u^2=0.00184531580035821621 ; (c-c3)u^3=-0.000289504485133979001
+    p=8: target gamma=4241/786432
+      n=  8: (c-c2)u^2=0.00537979747797955718 ; (c-c3)u^3=-0.000929728069846883034
+      n= 32: (c-c2)u^2=0.00539182775387498773 ; (c-c3)u^3=-0.000932040345512961616
+      n=128: (c-c2)u^2=0.00539265391197806514 ; (c-c3)u^3=-0.00093219916818837071
+
+[4] Square-pyramidal cuboid carrier
+    P2(n)=1^2+...+n^2=n(n+1)(2n+1)/6.
+    Six square pyramids tile the cuboid n*(n+1)*(2n+1).
+    HYP-2454's first tower common sum is S1=3*P2, so the cuboid is 2*S1.
+      n=1: P2=1, 6P2=6, cuboid=6, S1=3, 2S1=6
+      n=2: P2=5, 6P2=30, cuboid=30, S1=15, 2S1=30
+      n=3: P2=14, 6P2=84, cuboid=84, S1=42, 2S1=84
+      n=4: P2=30, 6P2=180, cuboid=180, S1=90, 2S1=180
+      n=5: P2=55, 6P2=330, cuboid=330, S1=165, 2S1=330
+      n=6: P2=91, 6P2=546, cuboid=546, S1=273, 2S1=546
+      n=7: P2=140, 6P2=840, cuboid=840, S1=420, 2S1=840
+
+    Packing reading:
+      p=1 is the square-shell carrier; p=2 is the square-pyramidal cuboid carrier.
+      Higher p keeps the same u=n(n+1) carrier, but Bernoulli denominators
+      move the real anchor off the integer tower by alpha_p, beta_p/u, ...
+
+[5] Tournament Analysis
+    Criteria: ('exactness', 'proof_readiness', 'geometry', 'lrc_transfer', 'computability', 'novelty')
+    Tie Hamiltonian path: ['odd_moment_projection', 'u_anchor_expansion', 'p1_p2_exact_towers', 'square_pyramid_cuboid', 'simplex_cuboid_packing', 'bernoulli_denominator_address', 'lrc14_moment_resource', 'support_lift_transfer']
+    Vertex scores:
+      odd_moment_projection: (5, 5, 3, 4, 5, 4)
+      u_anchor_expansion: (5, 4, 3, 4, 5, 5)
+      p1_p2_exact_towers: (5, 5, 4, 3, 5, 3)
+      square_pyramid_cuboid: (5, 4, 5, 3, 5, 4)
+      simplex_cuboid_packing: (3, 3, 5, 2, 4, 4)
+      bernoulli_denominator_address: (4, 4, 3, 5, 4, 5)
+      lrc14_moment_resource: (3, 3, 3, 5, 3, 5)
+      support_lift_transfer: (3, 4, 4, 5, 3, 5)
+    Ranking: ['odd_moment_projection', 'u_anchor_expansion', 'square_pyramid_cuboid', 'p1_p2_exact_towers', 'bernoulli_denominator_address', 'support_lift_transfer', 'simplex_cuboid_packing', 'lrc14_moment_resource']
+    Outdegrees: {'odd_moment_projection': 7, 'u_anchor_expansion': 6, 'p1_p2_exact_towers': 4, 'square_pyramid_cuboid': 5, 'simplex_cuboid_packing': 1, 'bernoulli_denominator_address': 3, 'lrc14_moment_resource': 0, 'support_lift_transfer': 2}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+    directed_3cycles=0: []
+    scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+    hamiltonian_paths=1
+    edge_flips_vs_exactness=3
+
+    Assumption challenge:
+      Tournament vertices need not be row entries or runners.  Considered vertices
+      were odd moments, u-carriers, Bernoulli denominators, exact towers, cuboid
+      packings, simplex-packing analogues, LRC proof obligations, and support lifts.
+      The chosen quotient preserves the balance equation, odd-moment ledger,
+      exact p=1/p=2 tower recovery, and transfer channels.  It destroys individual
+      endpoint residues and any actual LRC/unit-distance/code witness.
+      Challenged assumption: the scalar anchor is not the proof object; the proof
+      object is the retained odd-moment/support address that explains when the
+      anchor stays integral and when it drifts into Bernoulli fractions.
+
+[6] Next proof tasks
+    1. Prove the expansion with a uniform remainder in u for fixed p.
+    2. Prove the HYP-2454 integer bracket for p>=3 using the odd-moment formula.
+    3. Lift the odd-moment ledger to LRC14: odd walls, owner/carry fibers, and support.
+    4. Compare simplex-in-cuboid packing constants with higher Faulhaber carriers.
+    5. Search for a finite-dimensional residue/tournament quotient that detects
+       Bernoulli denominator drift before the full polynomial is expanded.

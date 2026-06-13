@@ -2,12 +2,14 @@
 
 **Status:** OPEN synthesis; exact p=1/p=2 identities and finite power-center/bracket scout.
 **Source:** codex-2026-06-12.
-**Companions:** HYP-2453, HYP-2452, HYP-2451, HYP-2450, HYP-2445, HYP-2444,
-HYP-2430, HYP-2425, HYP-2128.
+**Companions:** HYP-2457, HYP-2453, HYP-2452, HYP-2451, HYP-2450,
+HYP-2445, HYP-2444, HYP-2430, HYP-2425, HYP-2128.
 **Computation:** `04-computation/triangular_power_balance_towers_codex.py`;
 stored output `05-knowledge/results/triangular_power_balance_towers_codex.out`.
 **Beatty/Pell side-word addendum:** HYP-2456;
 `04-computation/triangular_tower_beatty_pell_decomposition_codex.py`.
+**Faulhaber anchor addendum:** HYP-2457;
+`04-computation/triangular_faulhaber_anchor_expansion_codex.py`.
 **External anchors:** OEIS A059270 (`https://oeis.org/A059270`) and
 OEIS A059255 (`https://oeis.org/A059255`).
 
@@ -78,6 +80,26 @@ D_4(8T_n+1,n)/(8T_n+1)  > 0.
 The same bracket pattern appears computationally for `p=5..8`.  This suggests
 a Bernoulli/Faulhaber proof route: write `D_p(2pT_n+k,n)` and prove sign at
 `k=0,1`.
+
+HYP-2457 sharpens this route.  With `u=n(n+1)` and `c=a+n`, the exact
+midpoint equation keeps only odd Faulhaber moments:
+
+```text
+D_p(c,n)=c^p - 2*sum_{r odd} binom(p,r)c^(p-r)S_r(n).
+```
+
+The real root has formal expansion
+
+```text
+c_p(n)=p*u
+  + (p-1)(p-2)/(12p)
+  - (p-1)(p-2)(2p^2-4p-1)/(180p^3*u)
+  + O(u^-2),
+```
+
+with the next `u^-2` coefficient also carrying `(p-1)(p-2)`.  Thus the p=1
+and p=2 exact towers are explained by the same odd-moment/Bernoulli address
+rather than by separate low-degree coincidences.
 
 ## First Tower: Square-Shell Partition
 

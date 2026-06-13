@@ -4,6 +4,32 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - FAULHABER ANCHOR EXPANSION: odd moments and square-pyramidal cuboid carrier (HYP-2457, OPEN-Q-079, T801)
+
+**Dispatch:** sharpen HYP-2454's Bernoulli/Faulhaber proof route for the real anchor
+`a_p(n)` satisfying `sum_{j=0..n}(a+j)^p=sum_{j=1..n}(a+n+j)^p`.
+With midpoint `c=a+n`, the exact defect is
+`D_p(c,n)=c^p-2*sum_{r odd} binom(p,r)c^(p-r)S_r(n)`, so only odd Faulhaber
+moments survive.
+
+**Atlas result:** `04-computation/triangular_faulhaber_anchor_expansion_codex.py` verifies the
+identity symbolically for `p<=10`, checks the reduced expansion coefficients through `gamma_p/u^2`
+for `p<=12`, and confirms the numerical root scaling for `p=3,4,5,8`.  With `u=n(n+1)`,
+`c=p*u+alpha_p+beta_p/u+gamma_p/u^2+...`; the displayed `alpha_p,beta_p,gamma_p` all carry
+`(p-1)(p-2)`, recovering the exact p=1 and p=2 towers.  The p=2 geometric face is the
+square-pyramidal cuboid identity `6*sum_{j<=n}j^2=n(n+1)(2n+1)=2*S1`.
+
+**New route:** prove a uniform remainder and then HYP-2454's bracket
+`D_p(p*n(n+1),n)<0<D_p(p*n(n+1)+1,n)` for `p>=3`.  Transfer to LRC14 by replacing scalar
+"q blocked" status with an odd-wall/resource ledger: blocked twists, owner support, shell-27
+class, divisor fiber, carry residue, endpoint atom, and moment/resource defect.
+
+Artifacts: HYP-2457, OPEN-Q-079, T801,
+`04-computation/triangular_faulhaber_anchor_expansion_codex.py` and its `.out`, reflection
+`faulhaber-anchors-square-pyramids-and-bernoulli-addresses.md`.
+
+---
+
 ## codex-2026-06-13 — BOUNDARY-LIFT IRREDUCIBILITY TRANSFER: scalar shadows, hidden lifts, and non-product frontiers (HYP-2455, OPEN-Q-077, T799)
 
 **Dispatch:** merge recent agent work into one proof interface.  The shared pattern is:
