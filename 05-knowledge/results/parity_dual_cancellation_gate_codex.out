@@ -1,0 +1,65 @@
+PARITY-DUAL CANCELLATION GATE SCOUT
+codex-2026-06-12-P5
+
+1. Anchor-side odd support
+  p= 1 surviving_j_powers=[1]
+  p= 2 surviving_j_powers=[1]
+  p= 3 surviving_j_powers=[1, 3]
+  p= 4 surviving_j_powers=[1, 3]
+  p= 5 surviving_j_powers=[1, 3, 5]
+  p= 6 surviving_j_powers=[1, 3, 5]
+  p= 7 surviving_j_powers=[1, 3, 5, 7]
+  p= 8 surviving_j_powers=[1, 3, 5, 7]
+  p= 9 surviving_j_powers=[1, 3, 5, 7, 9]
+  p=10 surviving_j_powers=[1, 3, 5, 7, 9]
+  claim: only odd powers of j survive in (c-j)^p-(c+j)^p.
+
+2. Direct midpoint balance vs odd-moment expansion
+  p= 3 n= 4 c= 61 direct=3521 odd_form=3521 [PASS]
+  p= 4 n= 5 c=123 direct=5361201 odd_form=5361201 [PASS]
+  p= 5 n= 6 c=217 direct=15106268065 odd_form=15106268065 [PASS]
+  p= 8 n= 4 c=290 direct=22401863163694832000 odd_form=22401863163694832000 [PASS]
+
+3. Real-anchor asymptotics
+  columns: root-minus-approx, scaled by n^4, and scaled by u^2=(n(n+1))^2
+  p=3
+    n= 25 err=3.156154673707984540E-10 scaled_n4=1.232872919417181461E-4 scaled_u2=1.333475349641623468E-4
+    n= 50 err=2.050898360296060167E-11 scaled_n4=1.281811475185037604E-4 scaled_u2=1.333596658782513123E-4
+    n=100 err=1.307349951349797976E-12 scaled_n4=1.307349951349797976E-4 scaled_u2=1.333627685371928915E-4
+  p=4
+    n= 25 err=2.022050094407492515E-9 scaled_n4=7.898633181279267638E-4 scaled_u2=8.543161648871655878E-4
+    n= 50 err=1.314028929381118374E-10 scaled_n4=8.212680808631989839E-4 scaled_u2=8.544473113300722228E-4
+    n=100 err=8.376442082963929336E-12 scaled_n4=8.376442082963929336E-4 scaled_u2=8.544808568831504315E-4
+  p=5
+    n= 25 err=4.366598951616283232E-9 scaled_n4=1.705702715475110637E-3 scaled_u2=1.844888057057879665E-3
+    n= 50 err=2.837708279515473853E-10 scaled_n4=1.773567674697171158E-3 scaled_u2=1.845219808754936873E-3
+    n=100 err=1.808944877674656060E-11 scaled_n4=1.808944877674656060E-3 scaled_u2=1.845304669715916647E-3
+  p=6
+    n= 25 err=7.021499319321134676E-9 scaled_n4=2.742773171609818233E-3 scaled_u2=2.966583462413179401E-3
+    n= 50 err=4.563092317428819790E-10 scaled_n4=2.851932698393012369E-3 scaled_u2=2.967150779408090068E-3
+    n=100 err=2.908828447552108589E-11 scaled_n4=2.908828447552108589E-3 scaled_u2=2.967295899347905972E-3
+  p=7
+    n= 25 err=9.842659621223241407E-9 scaled_n4=3.844788914540328675E-3 scaled_u2=4.158523689966819495E-3
+    n= 50 err=6.396523864439744642E-10 scaled_n4=3.997827415274840401E-3 scaled_u2=4.159339642851943953E-3
+    n=100 err=4.077588829872289374E-11 scaled_n4=4.077588829872289374E-3 scaled_u2=4.159548365352722391E-3
+  p=8
+    n= 25 err=1.276041804168646822E-8 scaled_n4=4.984538297533776649E-3 scaled_u2=5.391276622612532824E-3
+    n= 50 err=8.292725602213701795E-10 scaled_n4=5.182953501383563622E-3 scaled_u2=5.392344822839459592E-3
+    n=100 err=5.286362191523759910E-11 scaled_n4=5.286362191523759910E-3 scaled_u2=5.392618071573387484E-3
+
+4. Tournament reversal side (exhaustive n=5)
+  tournaments_checked=1024
+  odd_centered_moment_failures=0
+  distinct_even_m2_values=6 range=[1/2, 3/2]
+  distinct_even_m4_values=8 range=[7/10, 9/2]
+  sample_tournaments(bits, m2, m4, first_10_fwd_counts):
+    bits=   0 m2=  1/2 m4= 7/10 counts=[0, 1, 1, 1, 1, 2, 1, 2, 1, 1]
+    bits=   1 m2=  1/2 m4= 7/10 counts=[1, 2, 2, 2, 2, 3, 1, 2, 1, 1]
+    bits=   2 m2= 7/10 m4=13/10 counts=[0, 1, 1, 1, 1, 2, 2, 3, 2, 2]
+    bits=   3 m2=  1/2 m4= 7/10 counts=[1, 2, 2, 2, 2, 3, 2, 3, 2, 2]
+    bits=   4 m2= 9/10 m4=19/10 counts=[0, 1, 1, 1, 1, 2, 1, 2, 1, 1]
+
+5. Scout conclusion
+  Anchor gate: midpoint antisymmetrization kills even Faulhaber channels.
+  Tournament gate: reversal symmetry kills odd centered forward moments.
+  This is a parity-dual pair of centered cancellation mechanisms.
