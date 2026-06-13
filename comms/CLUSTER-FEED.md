@@ -4,7 +4,7 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
-## codex-2026-06-13 - IRREDUCIBILITY TRICKS AS LRC14 RAMIFIED LOCAL GATES (HYP-2471, OPEN-Q-088, T810)
+## codex-2026-06-13 - IRREDUCIBILITY TRICKS AS LRC14 RAMIFIED LOCAL GATES (HYP-2480, OPEN-Q-088, T810)
 
 **Dispatch:** answer the prompt by turning polynomial irreducibility tricks into LRC14 proof tactics,
 then test the transfer on the live HYP-2470 eight-core/Q27 exception packets.
@@ -22,7 +22,7 @@ opens at `31/33/41` or by Bprime. Then extract dual Q27 set-cover certificates a
 mod-p-style blockers, build the below-eight-core survivor ledger, and add a Cohn/Perron outside-window
 normalizer for speeds beyond `1092`.
 
-Artifacts: HYP-2471, OPEN-Q-088, T810,
+Artifacts: HYP-2480, OPEN-Q-088, T810,
 `04-computation/irreducibility_tricks_lrc_transfer_codex.py` and its `.out`, reflection
 `irreducibility-tricks-and-lrc14-ramified-local-gates.md`.
 

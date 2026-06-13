@@ -29,6 +29,16 @@ portal lemma:
 
 That would make HYP-2470 feel like a theorem rather than a census.
 
+The concurrent Q31-fiber and dilated-band covering work slots neatly into the
+same picture. A shell witness is an uncovered unit after covering `(Z/q)^*` by
+the dilated danger bands `v^{-1}B_q`. That is the complement of the set-cover
+language used here. HYP-2480 says "the added speeds cannot cover all the right
+obligations once the ramified layer is kept"; the band-cover lens says "the
+units must leak at the next band/fiber layer." The one-stranger evaders leaking
+at `40/41` and the four-deletion exceptions opening at `31/33` are now two
+faces of the same instruction: keep the first band-2/fiber layer as valuation
+data.
+
 The assumption challenge also sharpened. The tournament vertices are not
 runners. For this session the proof-bearing vertices were local proof tricks
 and denominator obligations. That preserves what matters: whether a hidden

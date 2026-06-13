@@ -1,4 +1,4 @@
-# HYP-2471 - Irreducibility tricks transfer to LRC14 as ramified local-gate proof tactics
+# HYP-2480 - Irreducibility tricks transfer to LRC14 as ramified local-gate proof tactics
 
 **Status:** OPEN proof-transfer program; exact exception diagnostic verified.
 
@@ -99,7 +99,7 @@ carry-window row retaining >=8 core speeds
 => Q27 witness or plain witness q <= 41.
 ```
 
-HYP-2471 sharpens the next human proof target:
+HYP-2480 sharpens the next human proof target:
 
 ```text
 Q27-feasible four-deletion packet
@@ -111,6 +111,28 @@ The finite scan found only two such packets, but the proposed proof should not
 depend on their names. It should prove that the 7-adic occupancy plus a single
 13-clock primitive escape cannot maintain Q27 blocking across the missing
 plain-shell layer.
+
+## Concurrent Signal: Q31 Fibers And Dilated Bands
+
+During the close-out rebase, kind-pasteur's new HYP-2471/Q31 fiber repair and
+`lrc14_dilated_band_covering_kps1.py` landed on `main`. This is directly
+compatible with HYP-2480.
+
+The dilated-band formulation rewrites a shell witness as an uncovered unit in
+
+```text
+(Z/q)^* \ union_{v in S} v^{-1} B_q.
+```
+
+So the Q27 set-cover language here and the new band-cover language are the same
+local gate seen from opposite sides: HYP-2480 counts which obligations added
+speeds cover, while the dilated-band probe counts which unit numerators survive.
+The incoming Q31 repair says the HYP-2470 exceptions cannot persist once the
+fiber ladder is extended to `Q31`; the band-cover probe says the one-stranger
+evaders fully cover band-1 shells through `q<=27` and first leak at band-2
+shells `40/41` with tiny deficits. This reinforces the ramification reading:
+the scalar residue face is complete through Q27, and the proof must keep the
+next valuation/fiber/band layer rather than only scanning larger denominators.
 
 ## Tournament Analysis
 

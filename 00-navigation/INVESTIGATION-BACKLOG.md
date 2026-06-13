@@ -12,7 +12,7 @@
 
 ---
 
-## Lead codex-2026-06-13: irreducibility tricks as LRC14 ramified local gates (HYP-2471/T810/OPEN-Q-088)
+## Lead codex-2026-06-13: irreducibility tricks as LRC14 ramified local gates (HYP-2480/T810/OPEN-Q-088)
 
 **Done:** added `04-computation/irreducibility_tricks_lrc_transfer_codex.py` and stored output. The script turns polynomial irreducibility tactics into LRC14 proof carriers: primitive normal form, mod-p residue blockers, Eisenstein/Newton valuation repairs, Singh/Cohn factor-capture budgets, Hensel/recombination ledgers, and Cohn/Perron dominance. The concrete diagnostic is the two HYP-2470 Q27-feasible four-deletion packets. Both have `12/13` speeds divisible by `7`; each has exactly one non-7 primitive escape; both primitive escapes are divisible by `13` (`936=2^3*3^2*13` and `1066=2*13*41`). They open at the missing plain shells `q=33` and `q=31`, with Bprime(any) and positive exact safe measure. Proof-carrier Tournament Analysis is transitive with leader `integral_convolution_lift_ilp`, reflecting a pipeline rather than competing heuristics.
 **Next:** prove the ramified 7-ideal/13-clock portal lemma: any four-deletion Q27 packet with this valuation shape opens at `q in {31,33,41}` or by Bprime. Extract dual/Farkas certificates from the HYP-2465/HYP-2470 MILPs so Q27 infeasibility becomes a human-readable local-prime certificate. Then build a below-eight-core survivor ledger with shell-27 class, 13-clock debt, divisor fiber, support-load, and owner/Bprime channels; add a Cohn/Perron outside-window normalizer for speeds beyond `1092`.
