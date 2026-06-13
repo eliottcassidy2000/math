@@ -1,0 +1,78 @@
+Pollock tetrahedral defect-descent scout
+========================================
+tetrahedral verify limit: 1000000
+shell stencil limit: k <= 1200, width <= 3
+tetrahedral reachability limit used: 2880002
+tetrahedral atoms used: 257 (last 2862209)
+
+Five-term coverage and four-term defects
+  missing from <=5 tetrahedra through 1000000: 0
+  min-term histogram through 1000000: {1: 180, 2: 14152, 3: 444283, 4: 541144, 5: 241}
+  numbers needing exactly five through 1000000: 241
+  four-term defect count through 1000000: 241
+  largest four-term defect through 1000000: 343867
+  first four-term defects: [17, 27, 33, 52, 73, 82, 83, 103, 107, 137, 153, 162, 217, 219, 227, 237, 247, 258, 268, 271, 282, 283, 302, 303]
+  last four-term defects: [44833, 47627, 48043, 56467, 56842, 58613, 59077, 62158, 64752, 65253, 65567, 71157, 74687, 78003, 78787, 83603, 84023, 85993, 91128, 106277, 113062, 134038, 148437, 343867]
+
+Triangular separations inside the four-defect set
+  defect pairs with y-x triangular: 601
+  largest triangular gap index: k=825, gap=340725
+  last pair: 3142 -> 343867
+  last triangular-gap classes:
+    k=391: count=2, sample=[(7387, 84023), (14492, 91128)]
+    k=396: count=1, sample=[(7387, 85993)]
+    k=406: count=1, sample=[(1402, 84023)]
+    k=410: count=1, sample=[(1738, 85993)]
+    k=411: count=1, sample=[(6462, 91128)]
+    k=413: count=1, sample=[(502, 85993)]
+    k=419: count=1, sample=[(3138, 91128)]
+    k=455: count=2, sample=[(2537, 106277), (30298, 134038)]
+    k=460: count=1, sample=[(247, 106277)]
+    k=825: count=1, sample=[(3142, 343867)]
+
+Nearby-anchor shell stencil
+  histogram of minimal needed offset width: {0: 4, 1: 1035, 2: 156, 3: 5}
+  after allowing offsets <= 0: failures=1196, last=1200, tail=[1193, 1194, 1195, 1196, 1197, 1198, 1199, 1200]
+  after allowing offsets <= 1: failures=161, last=825, tail=[406, 410, 411, 413, 419, 455, 460, 825]
+  after allowing offsets <= 2: failures=5, last=121, tail=[15, 24, 56, 89, 121]
+  after allowing offsets <= 3: failures=0, last=None, tail=[]
+  shells with exact needed width 0: count=4, first=[1, 2, 3, 4], last=[1, 2, 3, 4]
+  shells with exact needed width 1: count=1035, first=[5, 6, 7, 8, 9, 12, 13, 14], last=[1193, 1194, 1195, 1196, 1197, 1198, 1199, 1200]
+  shells with exact needed width 2: count=156, first=[10, 11, 16, 19, 20, 21, 23, 25], last=[406, 410, 411, 413, 419, 455, 460, 825]
+  shells with exact needed width 3: count=5, first=[15, 24, 56, 89, 121], last=[15, 24, 56, 89, 121]
+
+Tournament Analysis: anchor-offset dominance
+  vertices: offsets j where the anchor is Te_{k-j}
+  observable: private covered shell positions over sampled shells
+  gauge: larger private coverage wins; tie path 0 -> 1 -> 2 -> 3
+  covered counts by offset: {0: 289186020, 1: 289432265, 2: 289437717, 3: 289439464}
+  oriented edges winner -> loser (margin):
+    1 -> 0  margin=246245
+    2 -> 0  margin=251697
+    3 -> 0  margin=253444
+    2 -> 1  margin=5452
+    3 -> 1  margin=7199
+    3 -> 2  margin=1747
+  score by offset: {0: 0, 1: 1, 2: 2, 3: 3}
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1}
+  directed 3-cycles: 0
+  SCCs: [(3,), (2,), (1,), (0,)]
+  Hamiltonian paths: count=1, paths=[(3, 2, 1, 0)]
+
+Octahedral sibling scout
+  limit: 100000
+  atoms: 53 (last 99269)
+  missing from <=7 octahedral numbers: 0
+  min-term histogram: {1: 53, 2: 1235, 3: 16259, 4: 67691, 5: 14582, 6: 168, 7: 12}
+  numbers needing exactly seven: 12
+  seven-term octahedral cases: [17, 35, 55, 61, 73, 79, 80, 200, 206, 213, 225, 309]
+
+Proof hooks suggested by this run
+  1. Strong route: prove no four-tetrahedra defects occur beyond 343867.
+     The computation matches the reported 241-defect frontier through 1,000,000.
+  2. Weaker descent route: prove that for all large k there is no pair
+     r, r+tri(k) in the four-defect set with 0 <= r < Te_{k+1}-Te_k,
+     where tri(k)=Te_k-Te_{k-1}=k(k+1)/2 is the one-back gap.
+     Then every shell is covered by Te_k or Te_{k-1} plus four atoms.
+  3. Finite certificate route: the width-3 nearby-anchor stencil covers
+     every sampled shell through k=1200, and width-1 covers after k=825.

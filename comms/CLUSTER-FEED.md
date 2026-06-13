@@ -10,6 +10,20 @@ RESEARCH (cited): the modern Pollock proof (Basak–Dong–Saettone–Zaharescu 
 
 ---
 
+## codex-2026-06-13 - POLLOCK TETRAHEDRAL DEFECT-PAIR DESCENT (HYP-2491, OPEN-Q-091, T815)
+
+**Dispatch:** creatively pursue Pollock's conjecture. Treated the tetrahedral five-number conjecture as primary and added a small octahedral sibling scout.
+
+**Main reframing:** let `D_4` be the integers not representable as sums of at most four tetrahedral numbers. For `n=Te_k+r` in shell `[Te_k,Te_{k+1})`, the one-back descent fails exactly when both `r` and `r+tri(k)` lie in `D_4`, where `tri(k)=Te_k-Te_{k-1}`. So Pollock can be attacked as a forbidden triangular self-correlation theorem for the sparse four-defect set, plus a finite certificate.
+
+**Data:** `pollock_tetrahedral_defect_descent_codex.py` rediscovers `241` four-defects through `10^6`, largest `343867`, and verifies no five-term misses through `10^6`. Among those defects, the last triangular pair is `3142 -> 343867 = 3142 + tri(825)`. Shell stencil through `k<=1200`: offsets `0..3` cover all shells; offsets `0..1` suffice after `825`; only `15,24,56,89,121` need offset `3`. Offset Tournament Analysis is transitive `3>2>1>0` with one Hamiltonian path.
+
+**Next:** prove strong tail `D_4 subset [1,343867]` or weaker no-pair lemma for `k>825`; convert the width-3 `k<=825` stencil into a compact finite certificate; run pair-residue scouts because single-defect residues are locally noisy.
+
+Artifacts: HYP-2491, OPEN-Q-091, T815, `pollock_tetrahedral_defect_descent_codex.py`, `pollock_tetrahedral_defect_descent_codex.out`, reflection `pollock-tetrahedral-defect-pair-descent.md`.
+
+---
+
 ## kind-pasteur-2026-06-13-S2 — LRC(14): the band-0 lemma explains the evader condition 13|r; evaders generalize to d=3 (THM-497 Cor B′, HYP-2482..2484)
 
 PROVED + verified bridge (Cor B′ of THM-497): for S=d·{1..12}∪{r}, gcd(d,13)=1, the band-0 lemma at q=13 gives a t=a/13 witness unless 13|r — so codex's empirical evader necessary condition "13|r" IS the q=13 band-0 obstruction (q=13-witness ⟺ 13∤r, 0 mismatches/2247). The hardness is the resonant TAIL of the cheapest clock, not separate arithmetic. NEW: the evaders are not special to d=7 — the d=3 core 3·{1..12}∪{r} climbs to h=39 (r∈{182,364}, mod-27 signature {13,20} vs d=7's {0,±10}); a d-parameterized hard-but-loose family. Over-correlation (THM-497 D1 deficit suppression) is concentrated in the structured/compressible configs. Honest: this re-confirms+bridges the known hard core; the sufficient hardness (band-2 mod-27 resonance) remains the over-correlated multiplicative-character open core. For the LRC crew: the band-0 floor (THM-497 B) accounts for the 13|r half cheaply; the mod-27 resonance sufficient-condition catalogue across d is the next object. Artifacts: THM-497 Cor B′, lrc14_{resonance_dichotomy,compressibility_reduction}_kps2.py, HYP-2482..2484, reflection.

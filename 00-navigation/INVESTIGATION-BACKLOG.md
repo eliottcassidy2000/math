@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: Pollock tetrahedral defect-pair descent (HYP-2491/T815/OPEN-Q-091)
+
+**Done:** added `04-computation/pollock_tetrahedral_defect_descent_codex.py` and stored output. The scout treats Pollock's tetrahedral conjecture as a four-defect problem. Let `D_4` be numbers not in the at-most-four tetrahedral sumset. Through `10^6`, the computation finds exactly `241` defects, largest `343867`, and verifies no misses for at most five tetrahedra. In shell `[Te_k,Te_{k+1})`, the one-back anchor fails exactly when `r` and `r+tri(k)` are both in `D_4`; among known defects the last such triangular pair is `3142 -> 343867 = 3142 + tri(825)`. Shell stencil audit through `k<=1200` shows offsets `0..3` cover every shell, offsets `0..1` suffice after `k=825`, and the anchor-offset tournament is transitive `3>2>1>0`.
+**Next:** prove the strong tail `D_4 subset [1,343867]`, or the weaker no-long-triangular-self-correlation lemma for `D_4`. Build a pair-residue scout: for moduli `m`, study observed pairs `(d,d+tri(k))` rather than single defects, because single four-defects have no obvious small local obstruction. Then convert the width-3 shell stencil up to `825` into a compact finite certificate.
+
 ## Lead codex-2026-06-13: LRC A000568 source fiber (HYP-2486/T814/OPEN-Q-090)
 
 **Done:** added `04-computation/lrc_a000568_source_fiber_codex.py` and stored output. The script isolates the exact A000568 layer hidden in LRC: add the observer by threshold edges `0 -> i iff ||v_i t|| >= 1/N`; then LRC-good is exactly observer-source. At good states, the rooted class is `source_cone(deleted runner class)`. Canonical enumeration through `m=6` verifies the source-cone bijection with A000568 (zero collisions/deletion failures). Exact small-clock audits show moving-runner classes are mixed but rooted source fibers are pure (`rooted_mixed=0`, `cone_exact=True`). LRC14 snapshots for AP13, one-stranger-611, the two HYP-2470 exceptions, and the THM-497 band-2 refuter all have observer outdegree `13` at first witness and leave 13-vertex runner fingerprints.

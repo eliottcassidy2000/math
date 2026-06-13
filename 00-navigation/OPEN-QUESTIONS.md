@@ -4,6 +4,13 @@
 
 ---
 
+## OPEN-Q-091 🟡
+**Can Pollock's tetrahedral conjecture be proved by forbidding long triangular self-correlations in the four-defect set?**
+
+HYP-2491 reframes Pollock's five-tetrahedral conjecture around `D_4`, the integers not representable by at most four tetrahedral numbers. For `n=Te_k+r`, a one-back descent works unless both `r` and `r+tri(k)` lie in `D_4`. The computation rediscovers the known `241` four-defects through `10^6`, largest `343867`, and the last triangular defect-pair separation among them is `3142 -> 343867 = 3142 + tri(825)`. Prove either the strong tail `D_4 subset [1,343867]` or the weaker no-pair lemma for all `k>825`; pair this with the width-3 finite shell certificate.
+
+**Source:** HYP-2491, codex-2026-06-13.
+
 ## OPEN-Q-089 🔴
 **Can LRC14 long blocking-height rows be split into peelable-carrier or balanced-cover-congruence cases?**
 
