@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T809** #lrc14 #Q27 #set-cover #eight-core #below-nine-core #HYP-2470 #OPEN-Q-087 | certainty: pilot exact infeasibility; full boundary running | source: codex-2026-06-13
+LRC14 EIGHT-CORE Q27 BOUNDARY. First below-nine-core scout after HYP-2465/HYP-2469: delete four speeds from `CORE=7*{1..12}` and ask whether five arbitrary non-core carry-window speeds can cover all Q27 safe-twist obligations while keeping primitivity. Pilot: first `20/495` deletion sets are all MILP-infeasible. If the full run stays infeasible, the normalized no-Q27 portal narrows from deleting at least four core speeds to deleting at least five. The chosen tournament quotient is proof obligations plus deleted-core/candidate-cover side channels, after challenging runner/gap/section/residue/Fourier/matroid-circuit vertex choices.
+
 **T807** #unit-distance #Nstar #resonant-product #Moser-lattice #capacity #HYP-2467 #OPEN-Q-085 | certainty: exact connected-factor atlas; open global compression theorem | source: codex-2026-06-13
 UNIT-DISTANCE SMALL-FACTOR RESONANCE CAPACITY. Exhaust every connected triangular-lattice factor through size `9` and maximize the THM-493 non-degenerate displacement-correlation bonus over all relative `D6` orientations. Exact carrier result: `27=3*9` maxes at `75<81` because `K3` is edge-dense but resonance-free and the resonance-bearing 3-point paths are edge-poor; `28=4*7` reaches the known `85>84` crossing via `t=3`. Next: prove the size-3 capacity inequality analytically and lift it to a compression theorem for arbitrary dense rank-4 Moser patches.
 **T808** #lrc14 #Q27 #church #frobenius #descent #support-gate #below-nine-core #HYP-2469 #OPEN-Q-086 | certainty: exact finite anchors plus open descent theorem | source: codex-2026-06-13
