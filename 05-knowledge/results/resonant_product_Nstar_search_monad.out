@@ -1,0 +1,13 @@
+Loeschian rungs (transverse vectors exist): [3, 4, 7, 9, 12, 13, 16]
+
+N=24  3N= 72  best resonant-product U= 68  [4x6, rung t=3, generic=66, bonus=2]
+N=25  3N= 75  best resonant-product U= 72  [5x5, rung t=3, generic=70, bonus=2]
+N=26  3N= 78  best resonant-product U= 61  [2x13, rung t=3, generic=61, bonus=0]
+N=27  3N= 81  best resonant-product U= 75  [3x9, rung t=3, generic=75, bonus=0]
+N=28  3N= 84  best resonant-product U= 85  [4x7, rung t=3, generic=83, bonus=2]  <<< BEATS 3N!
+N=29  3N= 87  PRIME -- no two-factor product
+N=30  3N= 90  best resonant-product U= 90  [5x6, rung t=3, generic=87, bonus=3]  (ties 3N)
+
+Note: pure product cap P(N) (THM-433) ties 3N at 27 (K3^[]3=81) & 30; the
+two-factor resonant search above is over a curated patch family (lower bound).
+All champion counts EXACT-recounted from coordinates; 0 coincident points.

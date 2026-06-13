@@ -1,0 +1,71 @@
+==============================================================================
+STEP 0: transverse unit vectors are EXACT (|alpha(1-w_t)|^2 = 1 for N(alpha)=t)
+==============================================================================
+  t=2: no Eisenstein alpha with N=2 (not Loeschian) -> no transverse vectors
+  t=3: alpha=(-2, 1) (N=3), |alpha(1-w_t)|^2 = (Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))  -> unit: True
+  t=4: alpha=(-2, 0) (N=4), |alpha(1-w_t)|^2 = (Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))  -> unit: True
+  t=13: alpha=(-4, 1) (N=13), |alpha(1-w_t)|^2 = (Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))  -> unit: True
+
+==============================================================================
+STEP 1: resonance bonus on small patches (Moser angle t=3, the Moser lattice)
+==============================================================================
+--- rhombus [] rhombus  (t=3, D=11, w_t=Moser angle, |G|=4 e(G)=5, |H|=4 e(H)=5) ---
+  product points: 16 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 40
+  Moser-angle exact unit distances (brute, exact)  : 41
+  resonance bonus  Delta = actual - generic        : 1
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 1
+  MATCH: True
+  avgdeg generic = 5.0000 ; avgdeg Moser = 5.1250  (kappa=6)
+
+--- rosette W7 [] rhombus  (t=3, D=11, w_t=Moser angle, |G|=7 e(G)=12, |H|=4 e(H)=5) ---
+  product points: 28 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 83
+  Moser-angle exact unit distances (brute, exact)  : 85
+  resonance bonus  Delta = actual - generic        : 2
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 2
+  MATCH: True
+  avgdeg generic = 5.9286 ; avgdeg Moser = 6.0714  (kappa=6)
+
+--- rosette W7 [] rosette W7  (t=3, D=11, w_t=Moser angle, |G|=7 e(G)=12, |H|=7 e(H)=12) ---
+  product points: 49 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 168
+  Moser-angle exact unit distances (brute, exact)  : 180
+  resonance bonus  Delta = actual - generic        : 12
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 12
+  MATCH: True
+  avgdeg generic = 6.8571 ; avgdeg Moser = 7.3469  (kappa=6)
+
+==============================================================================
+STEP 2: bonus needs MATCHING norm-t displacements in BOTH factors
+==============================================================================
+--- rosette W7 [] K2  (t=3, D=11, w_t=Moser angle, |G|=7 e(G)=12, |H|=2 e(H)=1) ---
+  product points: 14 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 31
+  Moser-angle exact unit distances (brute, exact)  : 31
+  resonance bonus  Delta = actual - generic        : 0
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 0
+  MATCH: True
+  avgdeg generic = 4.4286 ; avgdeg Moser = 4.4286  (kappa=6)
+
+--- K3 [] K3  (t=3, D=11, w_t=Moser angle, |G|=3 e(G)=3, |H|=3 e(H)=3) ---
+  product points: 9 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 18
+  Moser-angle exact unit distances (brute, exact)  : 18
+  resonance bonus  Delta = actual - generic        : 0
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 0
+  MATCH: True
+  avgdeg generic = 4.0000 ; avgdeg Moser = 4.0000  (kappa=6)
+
+==============================================================================
+STEP 3: other rungs -- t=2 (sqrt7) and t=4 need norm-t displacements
+==============================================================================
+--- hexpatch(N<=4) [] hexpatch(N<=4)  (t=2, D=7, w_t=Moser angle, |G|=19 e(G)=42, |H|=19 e(H)=42) ---
+  product points: 361 (coincident: 0)
+  generic-angle (Cartesian product) unit distances : e(G)|H|+|G|e(H) = 1596
+  Moser-angle exact unit distances (brute, exact)  : 1596
+  resonance bonus  Delta = actual - generic        : 0
+  formula  sum_{N(a)=t} m_a(G)m_a(H) / 2          : 0
+  MATCH: True
+  avgdeg generic = 8.8421 ; avgdeg Moser = 8.8421  (kappa=6)
+

@@ -1,6 +1,11 @@
 # HYP-2460: The Moser lattice IS the product at a resonant angle — unifying THM-433 and THM-434
 
-**Status:** RESERVED STUB (monad-explorer, 2026-06-13). Verification in progress.
+**Status:** CONFIRMED → **THM-493** (monad-explorer, 2026-06-13). Proved from THM-434
+and verified exact-integer over ℚ(√3,√11). The resonance-bonus formula matched the
+brute-force exact count in every tested case (rhombus□rhombus +1, W₇□rhombus +2,
+W₇□W₇ +12; zero when factors lack matching √t pairs). **Key corollary:** the
+`u(28) ≥ 85` crosser = `W₇ ⊞₃ rhombus` (generic 83 + resonance bonus 2 = 85 > 84);
+the +2 transverse bonus IS the entire crossing of 3N. See THM-493.
 
 **Claim.** THM-433 (average degree is additive under the generic-angle Minkowski
 product; the 3N crossover N* is "non-product") and THM-434 (the Moser-ladder
