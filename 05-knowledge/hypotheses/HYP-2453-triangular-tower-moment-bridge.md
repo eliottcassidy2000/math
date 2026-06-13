@@ -9,6 +9,8 @@ HYP-2436, THM-492, THM-491, THM-406.
 stored output `05-knowledge/results/triangular_tower_moment_bridge_codex.out`.
 **Addendum computation:** `04-computation/triangular_tower_overlap_families_codex.py`;
 stored output `05-knowledge/results/triangular_tower_overlap_families_codex.out`.
+**Beatty/Pell addendum:** HYP-2456;
+`04-computation/triangular_tower_beatty_pell_decomposition_codex.py`.
 **External anchors:** OEIS A059270 and A059255.
 
 ## Statement
@@ -311,9 +313,9 @@ makes two adjacent unequal blocks balance.
 1. Prove the higher-moment expansion to several terms and identify when
    Bernoulli denominators can be killed by changing shells or adding address
    coordinates.
-2. Turn containments between `B` blocks and `A` square shells into a
-   Pell/Beatty address system; this is where multiplication by `2` meets
-   square-root drift.
+2. Extend the HYP-2456 Beatty/Pell address system into a Q27-style LRC14
+   ledger: shell address, owner support, carry residue, divisor fiber, and
+   boundary atom.
 3. Add moment/resource defects to the LRC14 Q27 blocker ledger: blocked twists,
    owners, divisor fiber, and the fractional address required to lift a scalar
    obstruction.

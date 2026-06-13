@@ -6,6 +6,8 @@
 HYP-2430, HYP-2425, HYP-2128.
 **Computation:** `04-computation/triangular_power_balance_towers_codex.py`;
 stored output `05-knowledge/results/triangular_power_balance_towers_codex.out`.
+**Beatty/Pell side-word addendum:** HYP-2456;
+`04-computation/triangular_tower_beatty_pell_decomposition_codex.py`.
 **External anchors:** OEIS A059270 (`https://oeis.org/A059270`) and
 OEIS A059255 (`https://oeis.org/A059255`).
 
@@ -250,8 +252,9 @@ or hidden-lift interpretation.
 
 1. Prove or refute the general bracket
    `D_p(2pT_n,n)<0<D_p(2pT_n+1,n)` for all `p>=3`.
-2. Solve the endpoint Pell families and classify infinite overlap/containment
-   types between the `F` and `Q` towers.
+2. Use HYP-2456's Beatty/Pell normal form as the side-word classifier, then
+   extend the same endpoint-wall treatment to the remaining `F`/`Q` power
+   balance families.
 3. Turn the `Q(3)` `78/90` shadow into a concrete `[72,36,16]`
    minimum-design support-ledger constraint.
 4. Attach the same defect ledger to LRC14: compare the `27` shell, `78`,
