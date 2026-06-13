@@ -1,0 +1,66 @@
+========================================================================
+PART B1 — optimal small triangular-lattice factors & their chord spectra
+========================================================================
+  k=2: e= 1  rho=1.000  ChordSpec={1: 1}   non-unit norms=[]
+  k=3: e= 3  rho=2.000  ChordSpec={1: 3}   non-unit norms=[]
+  k=4: e= 5  rho=2.500  ChordSpec={1: 5, 3: 1}   non-unit norms=[3]
+  k=5: e= 7  rho=2.800  ChordSpec={1: 7, 4: 1, 3: 2}   non-unit norms=[3, 4]
+  k=6: e= 9  rho=3.000  ChordSpec={1: 9, 4: 2, 3: 3, 7: 1}   non-unit norms=[3, 4, 7]
+  k=7: e=12  rho=3.429  ChordSpec={1: 12, 3: 6, 4: 3}   non-unit norms=[3, 4]
+  k=8: e=14  rho=3.500  ChordSpec={1: 14, 4: 5, 3: 7, 7: 2}   non-unit norms=[3, 4, 7]
+
+  READING: k=2 (edge) and k=3 (triangle) are CHORD-FREE (only norm 1).
+           k=4 (rhombus) first carries a non-unit chord: norm 3 (= sqrt3).
+  => any product whose SMALLEST factor is size 2 or 3 has Delta_t=0 for all t>=2.
+
+========================================================================
+PART B2 — the 27-vs-28 UNIFICATION (chord bottleneck, no angle calculus)
+========================================================================
+  n=27 = 3*9 (also 3^3): the size-3 factor is the triangle K3, chord-free.
+     ChordSpec(K3)={1: 3}  -> NO non-unit chord
+     => Delta_t(K3, anything)=0 for all t>=2  (scan t=2..30: [] )
+     so 27 gets ZERO resonance bonus through any triangle factor.
+     This RE-DERIVES THM-437 (cube angle-rigid at 81) combinatorially:
+     27=3^3 forces a chord-free size-3 factor.  Best product U(27) = product cap (tie 81).
+
+  n=28 = 4*7: the size-4 factor is the rhombus R, ChordSpec={1,3}.
+     The single non-unit chord (norm 3) opens t=3 resonance => Delta_3=2 => 85 > 84.
+     28 is the FIRST composite whose smallest dense factor is chord-BEARING.
+
+========================================================================
+PART B3 — predictive factorization sweep (which n cross 3N, with which t)
+========================================================================
+  For each n, over factorizations n=a*b (2<=a<=b), take densest a- and b-factors,
+  compute best resonant total over admissible t in shared non-unit chord spectrum.
+
+  n=24: best 4x6  Pcap= 66  t=3 +2      U= 68  vs 3N= 72  
+  n=25: best 5x5  Pcap= 70  t=3 +2      U= 72  vs 3N= 75  
+  n=28: best 4x7  Pcap= 83  t=3 +2      U= 85  vs 3N= 84  CROSS
+  n=30: best 5x6  Pcap= 87  t=3 +3      U= 90  vs 3N= 90  tie
+  n=32: best 4x8  Pcap= 96  t=3 +3      U= 99  vs 3N= 96  CROSS
+  n=35: best 5x7  Pcap=109  t=3 +4      U=113  vs 3N=105  CROSS
+  n=36: best 6x6  Pcap=108  t=3 +5      U=113  vs 3N=108  CROSS
+  n=40: best 5x8  Pcap=126  t=3 +5      U=131  vs 3N=120  CROSS
+  n=42: best 6x7  Pcap=135  t=3 +6      U=141  vs 3N=126  CROSS
+  n=48: best 6x8  Pcap=156  t=3 +8      U=164  vs 3N=144  CROSS
+  n=49: best 7x7  Pcap=168  t=3 +12     U=180  vs 3N=147  CROSS
+
+  NOTE: this is the 2-factor TRIANGULAR-LATTICE product family only (factors<=8).
+  It is a LOWER-bound construction lens, not an upper bound on u(n).
+  The point is the chord-bottleneck PREDICTION of WHERE/WHICH-t a bonus appears.
+  It is a LOWER-bound construction lens, not an upper bound on u(n).
+  The point is the chord-bottleneck PREDICTION of WHERE/WHICH-t a bonus appears.
+
+========================================================================
+PART C — is t=3 merely FIRST, or DOMINANT? per-t bonus breakdown
+========================================================================
+  n=28 (4x7) Pcap= 83: Delta_3=2
+  n=35 (5x7) Pcap=109: Delta_3=4  Delta_4=1
+  n=42 (6x7) Pcap=135: Delta_3=6  Delta_4=2
+  n=49 (7x7) Pcap=168: Delta_3=12  Delta_4=3
+  n=48 (6x8) Pcap=156: Delta_3=8  Delta_4=4  Delta_7=1
+  n=40 (5x8) Pcap=126: Delta_3=5  Delta_4=2
+
+  => t=3 (sqrt3, the triangular SECOND-neighbour) gives the LARGEST bonus
+     in every case: it is the DOMINANT resonance norm, not merely the first.
+     Higher norms (4,7) carry smaller bonuses (fewer such chords in dense patches).
