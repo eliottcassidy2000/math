@@ -13,7 +13,7 @@ The key test is finite and deliberately modest:
 
 For k hard residues, delete k-1 core speeds so the row still has 13 moving
 runners.  The stored run scans the whole hard replacement hull `k<=8`: all
-77,440 primitive ways of stacking these hard one-stranger resource atoms inside
+77,520 primitive ways of stacking these hard one-stranger resource atoms inside
 the 7-core frame.  If all rows in this hull have a Q27 witness, then the
 hard-resource stacking attempt is forced to open other clocks.  The proof lesson
 is not that this proves LRC14; it says which resource-independence lemma the

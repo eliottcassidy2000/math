@@ -30,6 +30,28 @@ Artifacts: HYP-2464, OPEN-Q-083, T805,
 
 ---
 
+## codex-2026-06-13 - LRC14 NEAR-CORE Q27 SET-COVER: 9 retained core speeds force Q27 (HYP-2465, OPEN-Q-084, T806)
+
+**Dispatch:** push the HYP-2463 proof target past named hard residues.  Model Q27 blocking as a
+primitive set-cover problem over twists safe for `CORE\D`.
+
+**Atlas result:** `04-computation/lrc14_near_core_q27_setcover_codex.py` uses candidate speeds in
+the HYP-2444 carry window `1..1092`.  For delete count `e<=3`, it asks whether at most `e+1`
+primitive additions can cover all Q27 obligations left by `CORE\D`.  MILP infeasibility is exact in
+all cases: `1/1`, `12/12`, `66/66`, `220/220`, zero feasible/unknown.  Therefore any primitive
+bounded row retaining at least 9 of 12 core speeds has a Q27 witness.  Plain shell is noisy: the
+one-deletion/two-add scan has `877` plain `q<=27` blockers, but still `0` Q27 misses.
+
+**New route:** a true LRC14 Q27 blocker must either delete at least four core speeds, leave the
+carry window, or pay a side-channel descent tax.  Next target: below-nine-core analysis plus an
+outside-window owner/Bprime/divisor-fiber normalization lemma.
+
+Artifacts: HYP-2465, OPEN-Q-084, T806,
+`04-computation/lrc14_near_core_q27_setcover_codex.py` and its `.out`, reflection
+`lrc14-near-core-setcover-compression.md`.
+
+---
+
 ## codex-2026-06-13 - LRC14 HARD RESOURCES DO NOT STACK: complete Q27 replacement hull (HYP-2463, OPEN-Q-082, T804)
 
 **Dispatch:** extend the HYP-2459 parity-typed Q27 program toward an LRC14 proof by asking whether

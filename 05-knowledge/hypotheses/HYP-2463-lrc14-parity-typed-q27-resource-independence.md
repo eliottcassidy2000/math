@@ -54,6 +54,19 @@ Results:
 
 This is not merely a larger brute-force check.  The strengthened script uses a bitset safe-twist mask for each `(q,speed)`, so the replacement hull can be audited as an exact finite support lemma rather than a fragile long search.
 
+## HYP-2465 Addendum
+
+HYP-2465 strengthens this from the eight named hard residues to arbitrary bounded near-core replacements.  In the same HYP-2444 carry window `1..13*84`, formulate Q27 blocking for `CORE\D` as a primitive set-cover problem over safe twists.  The MILP certificate proves:
+
+```text
+|D|=0, add_budget=1:   1/1 infeasible
+|D|=1, add_budget=2:  12/12 infeasible
+|D|=2, add_budget=3:  66/66 infeasible
+|D|=3, add_budget=4: 220/220 infeasible
+```
+
+Thus any primitive row in the carry window that retains at least nine core speeds has a Q27 witness, regardless of which added speeds are used.  This corrects the residue-level reading of HYP-2463: the eight hard residues are not the real invariant.  The real invariant is the primitive set-cover number of the Q27 obligation hypergraph.
+
 ## Interpretation
 
 HYP-2444 found the packet
@@ -102,4 +115,3 @@ The challenged assumption is that a hard one-stranger obstruction should remain 
 The unit-distance `n=27/28` work (HYP-2460, HYP-2461, HYP-2462) changed the reading of `27`: the number can be a bonus-hostile carrier even when nearby structure is rich.  Here, `C=2n-1=27` plays the same cautionary role.  The LRC shell-27 obstruction exists, but the hard packet is hostile to self-stacking once the missing divisor/fiber address is retained.
 
 The analogy is not an equivalence.  Unit distance uses resonant products and Euclidean distance `sqrt(t)` packets; LRC uses torsion clocks, antipodal quotient classes, and marked owner/carry support.  The shared principle is that scalar product-count shadows become misleading unless the missing address coordinate is reattached.
-
