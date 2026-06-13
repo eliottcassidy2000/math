@@ -129,10 +129,16 @@ the rhombus, **does** contain a `√3` pair). For larger Loeschian `t` the `√t
 fits inside **larger** factors (diameter `≳ √t`, area `≳ t` points), so any crossing
 they support is pushed to **larger `n`**. This is **HYP-2301's degree–radius tension
 (`N_cross ∝ ρ·t·…`) in the product/transverse setting** — the same "radius² cost"
-that puts the single-lattice `√7` crossing at `n=32`. Conjecture: **`t=3` is *first*,
-not unique** — `n_cross(t)` is increasing in `√t`, so `N* = 28` is selected as the
-*smallest-`n`* crossing, won by the minimal Loeschian distance `√3`. (Part B tests
-this directly by locating `n_cross(13)`.)
+that puts the single-lattice `√7` crossing at `n=32`.
+
+**Confirmed (Part B, exact free-patch search):** `n_cross(t=3) = 28` vs
+`n_cross(t=13) = 32`. So **`t=3` is *first*, not unique** — `t=13` (`√−51`, 24 units)
+does cross, but four steps later, and `N* = 28` is selected as the *smallest-`n`*
+crossing, won by the minimal Loeschian distance `√3`. The punchline: `n_cross(13)=32`
+lands **exactly** on HYP-2301's "32 rung" — the single-lattice `√7` crossing and the
+product bottom-out. **Three independent families (single-norm `√7`, generic products,
+and the `L_13` transverse bonus) all begin crossing at 32**, while only the minimal
+`√3` rung reaches down to 28. Registered as HYP-2462.
 
 **Heegner is a red herring (negative result).** Tempting, since `√−11` is one of the
 nine class-number-1 discriminants. But the Moser discriminants `−(4t−1)` that are
