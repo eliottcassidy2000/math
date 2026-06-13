@@ -1,0 +1,126 @@
+TRIANGULAR TOWER OVERLAPS AS REPUNIT/CYCLOTOMIC CARRIERS
+========================================================
+Bridge: HYP-2453 x HYP-2448 x HYP-2450.
+
+WHOLE-EQUATION PELL FAMILY
+==========================
+Condition: T_n = 2*T_m, so the whole B equation sits side-aligned inside A.
+Length carrier: L = 2m+1, host length = 2n+1, support ratio = L/(2n+1).
+  (m,n)=(2,3), L=5, host=7, padding=1, ratio=0.714286, prime-length => R_L irreducible; R_L(2)=2^5-1 prime
+  (m,n)=(14,20), L=29, host=41, padding=6, ratio=0.707317, prime-length => R_L irreducible
+  (m,n)=(84,119), L=169, host=239, padding=35, ratio=0.707113, -
+  (m,n)=(492,696), L=985, host=1393, padding=204, ratio=0.707107, -
+  (m,n)=(2870,4059), L=5741, host=8119, padding=1189, ratio=0.707107, prime-length => R_L irreducible
+  (m,n)=(16730,23660), L=33461, host=47321, padding=6930, ratio=0.707107, prime-length => R_L irreducible
+  (m,n)=(97512,137903), L=195025, host=275807, padding=40391, ratio=0.707107, -
+  (m,n)=(568344,803760), L=1136689, host=1607521, padding=235416, ratio=0.707107, -
+
+SIDE-FAMILY ATLAS
+=================
+Scanned endpoint hits with n<=1000000, m<=1500000. Prime lengths give cyclotomic irreducibility of R_L(x).
+  BL prefix AL
+    window_hits=4, exact_hits=0, mean_support_ratio=0.708956
+    first_lengths=(5, 145, 4901, 166465)
+    prime_lengths=(5,)
+    mersenne_prime_lengths=(5,)
+    note: strict subset family in the scanned window
+  BL prefix AR
+    window_hits=7, exact_hits=1, mean_support_ratio=0.752972
+    first_lengths=(4, 40, 110, 1334, 3712, 45292)
+    prime_lengths=-
+    mersenne_prime_lengths=-
+    note: contains exact side equality at observed hit(s) [1]
+  BL suffix AL
+    window_hits=8, exact_hits=0, mean_support_ratio=0.713551
+    first_lengths=(3, 15, 85, 493, 2871, 16731)
+    prime_lengths=(3,)
+    mersenne_prime_lengths=(3,)
+    note: strict subset family in the scanned window
+  BL suffix AR
+    window_hits=8, exact_hits=1, mean_support_ratio=0.750162
+    first_lengths=(4, 21, 120, 697, 4060, 23661)
+    prime_lengths=-
+    mersenne_prime_lengths=-
+    note: contains exact side equality at observed hit(s) [1]
+  BR prefix AL
+    window_hits=8, exact_hits=0, mean_support_ratio=0.675090
+    first_lengths=(3, 20, 119, 696, 4059, 23660)
+    prime_lengths=(3,)
+    mersenne_prime_lengths=(3,)
+    note: strict subset family in the scanned window
+  BR prefix AR
+    window_hits=8, exact_hits=0, mean_support_ratio=0.700979
+    first_lengths=(2, 14, 84, 492, 2870, 16730)
+    prime_lengths=(2,)
+    mersenne_prime_lengths=(2,)
+    note: strict subset family in the scanned window
+  BR suffix AL
+    window_hits=8, exact_hits=0, mean_support_ratio=0.688067
+    first_lengths=(6, 18, 228, 636, 7770, 21630)
+    prime_lengths=-
+    mersenne_prime_lengths=-
+    note: strict subset family in the scanned window
+  BR suffix AR
+    window_hits=4, exact_hits=0, mean_support_ratio=0.706791
+    first_lengths=(24, 840, 28560, 970224)
+    prime_lengths=-
+    mersenne_prime_lengths=-
+    note: strict subset family in the scanned window
+
+POLYNOMIAL BRIDGE
+=================
+Any overlap block [a,a+L-1] gives x^a * R_L(x), where R_L(x)=1+x+...+x^(L-1).
+Shift x^a is a unit for irreducibility, so the live datum is the block length L.
+
+Exact facts used here:
+  1. If L is prime, R_L(x)=Phi_L(x) is irreducible over Z.
+  2. If 2^L-1 is prime, then R_L(2) is prime, so Cohn certifies irreducibility.
+  3. The unique exact side hinge has L=4, and R_4(x)=x^3+x^2+x+1=(x+1)(x^2+1).
+
+Observed prime-length carriers in the scanned window:
+  whole_equation: prime_lengths=(5, 29, 5741, 33461); mersenne_lengths=(5,)
+  BL prefix AL: prime_lengths=(5,); mersenne_lengths=(5,)
+  BL suffix AL: prime_lengths=(3,); mersenne_lengths=(3,)
+  BR prefix AL: prime_lengths=(3,); mersenne_lengths=(3,)
+  BR prefix AR: prime_lengths=(2,); mersenne_lengths=(2,)
+
+Small exact examples:
+  R_2(2)=3 prime; R_3(2)=7 prime.
+  R_5(2)=31 prime; R_29(2)=536870911 prime.
+
+FAMILY TOURNAMENT
+=================
+Vertices: whole-equation carrier + 8 endpoint-aligned side families.
+Pairwise observable: majority vote over
+  window_hits, prime_length_hits, mersenne_hits, exact_hits, support_ratio
+Tie path: larger support_ratio, then prime_length_hits, then label.
+  BL prefix AL: score=4, metrics=(hits=4, primeL=1, mersenne=1, exact=0, ratio=0.708956)
+  BL suffix AL: score=7, metrics=(hits=8, primeL=1, mersenne=1, exact=0, ratio=0.713551)
+  BL prefix AR: score=4, metrics=(hits=7, primeL=0, mersenne=0, exact=1, ratio=0.752972)
+  BL suffix AR: score=7, metrics=(hits=8, primeL=0, mersenne=0, exact=1, ratio=0.750162)
+  BR prefix AL: score=3, metrics=(hits=8, primeL=1, mersenne=1, exact=0, ratio=0.675090)
+  BR suffix AL: score=0, metrics=(hits=8, primeL=0, mersenne=0, exact=0, ratio=0.688067)
+  BR prefix AR: score=4, metrics=(hits=8, primeL=1, mersenne=1, exact=0, ratio=0.700979)
+  BR suffix AR: score=1, metrics=(hits=4, primeL=0, mersenne=0, exact=0, ratio=0.706791)
+  whole_equation: score=6, metrics=(hits=8, primeL=4, mersenne=1, exact=0, ratio=0.708031)
+fingerprint={'score_hist': {0: 1, 1: 1, 3: 1, 4: 3, 6: 1, 7: 2}, 'directed_3cycles': 6, 'scc_sizes': [7, 1, 1], 'hamiltonian_paths': 33, 'edge_flips_vs_support_exactness_only': 8, 'ranking': ['BL suffix AL', 'BL suffix AR', 'whole_equation', 'BL prefix AL', 'BL prefix AR', 'BR prefix AR', 'BR prefix AL', 'BR suffix AR', 'BR suffix AL']}
+
+TAKEAWAYS
+=========
+1. The exact side hinge [21,24] is structurally special but polynomially reducible (L=4).
+2. The strongest prime-length/irreducibility lane in the scanned window is the whole-equation Pell family:
+   it contributes 4 prime lengths among its first 8 rows, including L=5 and L=29 with base-2 Cohn primes.
+3. Exactness and irreducibility pull in different directions:
+   the A_R hinge families maximize support/exactness, while the whole-equation family wins prime-length supply.
+4. The family tournament is genuinely nontransitive
+   (6 directed 3-cycles, SCC sizes [7,1,1]), and prime-length data flips 8 edges
+   relative to the support/exactness-only ranking, so the polynomial carrier is not cosmetic.
+
+ASSUMPTION CHALLENGE
+====================
+Alternate vertices considered: raw intervals, lengths only, Pell equations,
+coefficient rows, primes, Mersenne exponents, and proof obligations.
+Chosen vertices: overlap-family carriers, because they preserve both the
+interval containment predicate and the irreducible-polynomial bridge R_L(x).
+Destroyed data: exact interval position beyond the shift x^a, asymptotic prime
+production, and any support channel not visible from the block length.
