@@ -4,6 +4,33 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 — CONVOLUTION FACTOR-CAPTURE TILING: reducibility as a hidden diagonal-sum lift (HYP-2452, OPEN-Q-074, T796)
+
+**Dispatch:** continue the coefficient-tiling prime/irreducible bridge without over-following the suggestion list.
+High-leverage turn: HYP-2450's coefficient profile is only a boundary-total shadow, and incoming
+HYP-2451 supplies the residue/valuation split-survivor carrier.  This addendum adds the integer
+and value-factor side: a factorization is a hidden 2D integer convolution grid with diagonal sums
+`a_k=sum_{i+j=k} b_i c_j`; irreducibility is the absence of a nontrivial integral lift.
+
+**Atlas result:** `04-computation/convolution_factor_capture_tiling_codex.py` implements an exact
+linear/quadratic convolution-lift oracle for primitive degree `<=5`.  It agrees with Sympy on all
+tested rows: degree 4 has `3856` primitive rows, `792` reducible, `792` lift-positive, and zero
+mismatches; degree 5 has `2016` primitive rows, `488` reducible, `488` lift-positive, and zero
+mismatches.  Factor-capture witnesses rank low-`Omega(f(m))` values and allocation counts, residue
+tournaments detect fixed-divisor obstruction (`x^2+x+2` all-bad mod `2`), and sign-cube chamber
+tournaments show scalar base-value rankings are mostly transitive and too coarse by themselves.
+
+**New route:** build bounded ILP/SAT/SMT convolution lifts for degree `>=6`, add Newton-polytope
+boundary-layer constraints for sparse/multivariate rows, and transfer the boundary-total/hidden-lift
+grammar to LRC14 blocker ledgers and `[72,36,16]` support/design incidence.  Think "weight enumerator
+coefficients are boundary totals; support realization is the hidden lift."
+
+Artifacts: HYP-2452, HYP-2451, OPEN-Q-074, T796,
+`04-computation/convolution_factor_capture_tiling_codex.py` and its `.out`, reflection
+`convolution-factor-capture-and-hidden-coefficient-tilings.md`.
+
+---
+
 ## codex-2026-06-12 — COEFFICIENT TILING PRIME BRIDGE: diagonal Cohn digits, coefficient magnetizations, and hidden tournament fibers (HYP-2450, OPEN-Q-072, T794)
 
 **Dispatch:** push the user's triangular coefficient/tile model into the prime `<->` irreducible-polynomial
