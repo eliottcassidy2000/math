@@ -67,6 +67,36 @@ Q27 blockers, measure not only coverage but also moment defects across the
 fibered shell.  A row that scalar-blocks every denominator may still fail to
 lift if the owner/fraction address cannot be made consistent.
 
+The follow-up overlap classifier made the pattern cleaner.  The additive tower
+covers every positive integer because its rows are the square shells
+`[n^2,(n+1)^2-1]`.  The square tower covers only alternating triangular shells
+`[T_{2m},T_{2m+1}-1]`, skipping gaps of size `2m+2`.
+
+There are two special exact families:
+
+```text
+B_m equation side-aligned inside A_n equation
+  iff T_n = 2T_m
+  iff (2n+1)^2 - 2(2m+1)^2 = -1.
+```
+
+This is the infinite Pell family `(m,n)=(2,3),(14,20),(84,119),...`; it makes
+`10..14` the first nontrivial example.  In each row, the B block sits in the
+middle of A with symmetric outside padding `n-m`.
+
+The second special family is actually a singleton:
+
+```text
+B_3.L = A_4.R = [21,24].
+```
+
+So `21+22+23+24` is not the first member of a hidden exact-side ladder.  It is
+the unique whole-side equality.  The looser side containments are still
+infinite, but they are governed by a simple floor-square rule: for a B side
+`[u,v]`, set `n=floor(sqrt(u))` and compare `[u,v]` with the A midpoint
+`n^2+n` and square boundary `(n+1)^2-1`.  The resulting word is
+Beatty/Sturmian rather than Pell-exact.
+
 The new proof target I would actually trust is modest and useful:
 
 ```text

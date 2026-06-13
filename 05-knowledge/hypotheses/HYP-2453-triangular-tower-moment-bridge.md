@@ -7,6 +7,8 @@ higher-moment leading address verified.
 HYP-2436, THM-492, THM-491, THM-406.
 **Computation:** `04-computation/triangular_tower_moment_bridge_codex.py`;
 stored output `05-knowledge/results/triangular_tower_moment_bridge_codex.out`.
+**Addendum computation:** `04-computation/triangular_tower_overlap_families_codex.py`;
+stored output `05-knowledge/results/triangular_tower_overlap_families_codex.out`.
 **External anchors:** OEIS A059270 and A059255.
 
 ## Statement
@@ -98,6 +100,93 @@ n^2 - 2n - 3 = 0,
 
 so `n=3`; the other length/start equations have no positive solution.  The
 user's `21+22+23+24` hinge is therefore unique among exact side intervals.
+
+## Overlap Families
+
+The additive tower covers all positive integers because
+
+```text
+A_n = [n^2,(n+1)^2-1]
+```
+
+partitions `[1,infty)`.  The square tower does not.  It covers only alternating
+triangular shells
+
+```text
+B_m = [T_{2m},T_{2m+1}-1],
+```
+
+skipping
+
+```text
+[T_{2m+1},T_{2m+2}-1]
+```
+
+of size `2m+2` between them.
+
+The follow-up overlap scout separates three useful families.
+
+### Whole Equation Side-Aligned
+
+The user's `10+11+12 = 13+14` example is the first nontrivial member of an
+infinite Pell family:
+
+```text
+B_m.L subset A_n.L and B_m.R subset A_n.R
+  iff T_n = 2T_m
+  iff x^2 - 2y^2 = -1, x=2n+1, y=2m+1.
+```
+
+Starting from the trivial `(n,m)=(0,0)`, the recurrence is
+
+```text
+n' = 3n + 4m + 3
+m' = 2n + 3m + 2.
+```
+
+The first nontrivial pairs are
+
+```text
+(m,n) = (2,3), (14,20), (84,119), (492,696), ...
+```
+
+For each pair, `B_m` is the middle of `A_n`; the outside padding on both ends
+is `n-m`, and the B size is `2m+1` inside A size `2n+1`.
+
+### Exact Whole-Side Equality
+
+The less restrictive `21+22+23+24` pattern is an exact whole-side equality,
+not a whole-equation containment:
+
+```text
+B_3.L = A_4.R = [21,24].
+```
+
+It is unique.  Length and start equations show `B_L(m)=A_R(n)` forces
+`n=m+1` and `m^2-2m-3=0`, hence `m=3`; the other side-pair equations have no
+positive solution.
+
+### All Looser Single-Side Matches
+
+All single-side containment instances have a one-line classifier.  For a B
+side interval `I=[u,v]`, let
+
+```text
+n = floor(sqrt(u)).
+```
+
+Then:
+
+```text
+if v > (n+1)^2-1:  I crosses an A square-shell boundary;
+elif v <= n^2+n:   I is inside A_n.L;
+elif u >= n^2+n+1: I is inside A_n.R;
+else:              I crosses the A left/right midpoint.
+```
+
+This predicts every looser match and reports its part of A plus padding.  The
+side-containment word is Sturmian/Beatty-like because the start `T_{2m}` drifts
+through square shells with slope `sqrt(2)`.
 
 ## Higher-Moment Address
 
