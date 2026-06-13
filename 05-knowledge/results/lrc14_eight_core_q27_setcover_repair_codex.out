@@ -1,0 +1,18 @@
+==============================================================================
+Codex LRC14 eight-core sparse-address repair run
+==============================================================================
+repair  1/12 deleted=(14, 21, 28, 70) obs=742 feasible=False elapsed=40.92s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  2/12 deleted=(14, 21, 28, 84) obs=728 feasible=False elapsed=13.28s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  3/12 deleted=(14, 21, 70, 84) obs=616 feasible=False elapsed=26.44s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  4/12 deleted=(14, 28, 42, 70) obs=672 feasible=False elapsed=12.27s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  5/12 deleted=(14, 28, 56, 70) obs=714 feasible=False elapsed=13.07s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  6/12 deleted=(14, 28, 56, 84) obs=714 feasible=False elapsed=16.39s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  7/12 deleted=(14, 56, 70, 84) obs=588 feasible=False elapsed=15.09s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  8/12 deleted=(21, 28, 56, 70) obs=686 feasible=False elapsed=33.21s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair  9/12 deleted=(21, 28, 56, 84) obs=686 feasible=False elapsed=13.73s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair 10/12 deleted=(21, 28, 70, 84) obs=602 feasible=False elapsed=19.14s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair 11/12 deleted=(21, 56, 70, 84) obs=560 feasible=False elapsed=15.38s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+repair 12/12 deleted=(28, 42, 70, 84) obs=546 feasible=False elapsed=26.52s message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+------------------------------------------------------------------------------
+wall_time=247.13s
+infeasible=12 feasible=0 unknown=0

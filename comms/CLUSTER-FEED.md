@@ -4,6 +4,30 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - LRC14 EIGHT-CORE EXCEPTIONS OPEN BY SHELL 41 (HYP-2470, OPEN-Q-087, T809)
+
+**Dispatch:** continue the LRC14 proof push from HYP-2469 by attacking the first below-nine-core
+finite boundary: delete four speeds from `CORE=7*{1,...,12}` and ask whether five arbitrary
+non-core carry-window speeds can block Q27.
+
+**Atlas result:** added `04-computation/lrc14_eight_core_q27_setcover_codex.py` and stored output.
+Q27-only exact census over all `binom(12,4)=495` deletion sets gives `493` infeasible addresses
+and exactly two Q27-feasible addresses, after repairing `12` sparse short-cap unknowns.  The two
+addresses are `(28,42,56,84)` and `(42,56,70,84)`.  Sample packets open at plain `q=33` and
+`q=31`, respectively, and both also have Bprime(any) plus positive exact safe-measure certificates.
+
+**New route:** the universal "8 core speeds force Q27" claim is false, but the Church-style finite
+exception statement is stronger and true in this atlas: adding the missing plain shells through `41`
+makes both exceptional addresses infeasible.  Therefore every primitive carry-window row retaining
+at least eight core speeds has either a Q27 witness or a plain witness `q<=41`.  A normalized
+no-Q27/no-plain-41 row must delete at least five core speeds, leave the carry window, or descend/open.
+
+Artifacts: HYP-2470, OPEN-Q-087, T809,
+`04-computation/lrc14_eight_core_q27_setcover_codex.py` and its `.out`, reflection
+`lrc14-eight-core-exceptions-open-at-shell41.md`.
+
+---
+
 ## codex-2026-06-13 - LRC14 CHURCH-FROBENIUS DESCENT UPGRADE: the remaining portals are below-nine-core and outside-window (HYP-2469, OPEN-Q-086, T808)
 
 **Dispatch:** read Church arXiv:2508.14876 carefully and reprocess the existing HYP-2445 product-quotient

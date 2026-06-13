@@ -75,11 +75,14 @@ class FeasibilityResult:
 
 
 def primitive_q27_cover_feasibility(
-    deleted: tuple[int, ...], add_budget: int, time_limit_s: int = 12
+    deleted: tuple[int, ...],
+    add_budget: int,
+    time_limit_s: int = 12,
+    qs: tuple[int, ...] = Q27,
 ) -> FeasibilityResult:
-    """MILP: can add_budget primitive candidates cover all Q27 obligations?"""
+    """MILP: can add_budget primitive candidates cover the selected obligations?"""
     base = tuple(v for v in CORE_T if v not in deleted)
-    obs = obligations(base, Q27)
+    obs = obligations(base, qs)
     vals = tuple(v for v in CANDIDATES if v not in base)
 
     rows: list[int] = []

@@ -1,0 +1,7 @@
+==============================================================================
+Codex LRC14 eight-core Q27 plus shell<=41 exception repair
+==============================================================================
+qset_size=82 shell_extra=[29, 31, 33, 37, 39, 41]
+deleted=(28, 42, 56, 84) obs=670 feasible=False elapsed=8.20s chosen=() message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+deleted=(42, 56, 70, 84) obs=540 feasible=False elapsed=5.63s chosen=() message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+wall_time=14.08s

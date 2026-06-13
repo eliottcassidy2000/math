@@ -38,6 +38,13 @@ from lrc14_near_core_q27_setcover_codex import (
     obligations,
     primitive_q27_cover_feasibility,
 )
+from lrc14_pisano_band_ladder_codex import (
+    bprime_any,
+    first_witness_in,
+    min_witness_modulus,
+    q_lattice,
+)
+from lrc14_lebesgue_wall_s676 import depth_sweep
 
 
 def residue_signature(deleted: tuple[int, ...]) -> str:
@@ -86,8 +93,34 @@ def coverage_snapshot(deleted: tuple[int, ...], top_n: int = 6) -> dict[str, obj
     }
 
 
-def run_boundary(delete_count: int, add_budget: int, time_limit: int, limit: int | None) -> list[object]:
+def completed_row(deleted: tuple[int, ...], chosen: tuple[int, ...]) -> tuple[int, ...]:
+    return tuple(sorted(tuple(v for v in CORE_T if v not in deleted) + tuple(chosen)))
+
+
+def opening_diagnostics(deleted: tuple[int, ...], chosen: tuple[int, ...]) -> dict[str, object]:
+    row = completed_row(deleted, chosen)
+    sweep = depth_sweep(row)
+    return {
+        "row": row,
+        "plain_min_q": min_witness_modulus(list(row), 1200),
+        "q41": first_witness_in(list(row), q_lattice(41)),
+        "bprime_any": bprime_any(list(row)),
+        "p0": sweep.p0,
+        "components": sweep.positive_safe_components,
+        "safe_points": len(sweep.safe_points),
+    }
+
+
+def run_boundary(
+    delete_count: int,
+    add_budget: int,
+    time_limit: int,
+    limit: int | None,
+    start_index: int,
+    stop_on_feasible: bool,
+) -> list[object]:
     combos = list(combinations(CORE_T, delete_count))
+    combos = combos[start_index:]
     if limit is not None:
         combos = combos[:limit]
     results = []
@@ -104,7 +137,8 @@ def run_boundary(delete_count: int, add_budget: int, time_limit: int, limit: int
         )
         if result.feasible is True:
             print(f"first feasible set found: deleted={deleted} chosen={result.chosen}", file=sys.stderr)
-            break
+            if stop_on_feasible:
+                break
     print(f"progress total wall time {time.time() - start:.2f}s", file=sys.stderr)
     return results
 
@@ -129,7 +163,13 @@ def print_summary(results: list[object], delete_count: int, add_budget: int, tim
     if feasible:
         print("  feasible examples:")
         for r in feasible[:8]:
+            diag = opening_diagnostics(r.deleted, r.chosen)
             print(f"    deleted={r.deleted} chosen={r.chosen} message={r.message}")
+            print(
+                f"      row={diag['row']} plain_min_q={diag['plain_min_q']} "
+                f"Q41={diag['q41']} Bprime={diag['bprime_any']} "
+                f"p0={diag['p0']} components={diag['components']} safe_points={diag['safe_points']}"
+            )
     if unknown:
         print("  unknown examples:")
         for r in unknown[:8]:
@@ -226,8 +266,10 @@ def print_takeaway(results: list[object], delete_count: int) -> None:
         print("  The Church-style descent target narrows from below-nine-core to below-eight-core,")
         print("  unless the row leaves the carry window or the replacement normalization fails.")
     elif feasible:
-        print("  A feasible exception appeared.  Its chosen speeds should be promoted to the")
-        print("  exception catalogue and tested against plain-shell, Bprime, and owner channels.")
+        print("  Feasible Q27 blockers appear at four core deletions, so the universal")
+        print("  eight-core Q27 set-cover lemma is false as stated.  The useful theorem")
+        print("  should instead classify every feasible packet by its opening channel:")
+        print("  plain-shell witness, Bprime/owner opening, positive measure, or descent.")
     elif unknown:
         print("  Some cases were unknown at this time limit.  Rerun with a larger limit before")
         print("  treating this boundary as a certificate.")
@@ -241,13 +283,22 @@ def main() -> None:
     parser.add_argument("--add-budget", type=int, default=5)
     parser.add_argument("--time-limit", type=int, default=12)
     parser.add_argument("--limit", type=int, default=None)
+    parser.add_argument("--start-index", type=int, default=0)
+    parser.add_argument("--stop-on-feasible", action="store_true")
     args = parser.parse_args()
 
     print("=" * 78)
     print("Codex LRC14 eight-core Q27 set-cover boundary")
     print("=" * 78)
     print()
-    results = run_boundary(args.delete_count, args.add_budget, args.time_limit, args.limit)
+    results = run_boundary(
+        args.delete_count,
+        args.add_budget,
+        args.time_limit,
+        args.limit,
+        args.start_index,
+        args.stop_on_feasible,
+    )
     print_summary(results, args.delete_count, args.add_budget, args.time_limit)
     print_tournament_analysis()
     print_takeaway(results, args.delete_count)

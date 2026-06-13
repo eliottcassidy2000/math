@@ -1,0 +1,175 @@
+progress   1/ 97: deleted=(28, 42, 56, 84) obs=630 feasible=True elapsed=2.68s
+first feasible set found: deleted=(28, 42, 56, 84) chosen=(91, 322, 350, 504, 936)
+progress   2/ 97: deleted=(28, 42, 63, 70) obs=742 feasible=False elapsed=0.45s
+progress   3/ 97: deleted=(28, 42, 63, 77) obs=952 feasible=False elapsed=0.87s
+progress   4/ 97: deleted=(28, 42, 63, 84) obs=700 feasible=False elapsed=0.48s
+progress   5/ 97: deleted=(28, 42, 70, 77) obs=812 feasible=False elapsed=0.72s
+progress   6/ 97: deleted=(28, 42, 70, 84) obs=546 feasible=None elapsed=20.01s
+progress   7/ 97: deleted=(28, 42, 77, 84) obs=798 feasible=False elapsed=0.67s
+progress   8/ 97: deleted=(28, 49, 56, 63) obs=1064 feasible=False elapsed=1.08s
+progress   9/ 97: deleted=(28, 49, 56, 70) obs=896 feasible=False elapsed=0.82s
+progress  10/ 97: deleted=(28, 49, 56, 77) obs=1120 feasible=False elapsed=1.34s
+progress  11/ 97: deleted=(28, 49, 56, 84) obs=896 feasible=False elapsed=0.89s
+progress  12/ 97: deleted=(28, 49, 63, 70) obs=1022 feasible=False elapsed=1.29s
+progress  13/ 97: deleted=(28, 49, 63, 77) obs=1190 feasible=False elapsed=1.44s
+progress  14/ 97: deleted=(28, 49, 63, 84) obs=966 feasible=False elapsed=1.06s
+progress  15/ 97: deleted=(28, 49, 70, 77) obs=1064 feasible=False elapsed=1.10s
+progress  16/ 97: deleted=(28, 49, 70, 84) obs=826 feasible=False elapsed=0.58s
+progress  17/ 97: deleted=(28, 49, 77, 84) obs=1036 feasible=False elapsed=1.02s
+progress  18/ 97: deleted=(28, 56, 63, 70) obs=812 feasible=False elapsed=0.63s
+progress  19/ 97: deleted=(28, 56, 63, 77) obs=1036 feasible=False elapsed=1.01s
+progress  20/ 97: deleted=(28, 56, 63, 84) obs=770 feasible=False elapsed=0.62s
+progress  21/ 97: deleted=(28, 56, 70, 77) obs=868 feasible=False elapsed=0.61s
+progress  22/ 97: deleted=(28, 56, 70, 84) obs=588 feasible=False elapsed=5.23s
+progress  23/ 97: deleted=(28, 56, 77, 84) obs=854 feasible=False elapsed=0.75s
+progress  24/ 97: deleted=(28, 63, 70, 77) obs=980 feasible=False elapsed=0.95s
+progress  25/ 97: deleted=(28, 63, 70, 84) obs=700 feasible=False elapsed=0.54s
+progress  26/ 97: deleted=(28, 63, 77, 84) obs=910 feasible=False elapsed=0.76s
+progress  27/ 97: deleted=(28, 70, 77, 84) obs=770 feasible=False elapsed=0.59s
+progress  28/ 97: deleted=(35, 42, 49, 56) obs=854 feasible=False elapsed=0.58s
+progress  29/ 97: deleted=(35, 42, 49, 63) obs=952 feasible=False elapsed=0.92s
+progress  30/ 97: deleted=(35, 42, 49, 70) obs=980 feasible=False elapsed=0.82s
+progress  31/ 97: deleted=(35, 42, 49, 77) obs=1008 feasible=False elapsed=1.29s
+progress  32/ 97: deleted=(35, 42, 49, 84) obs=826 feasible=False elapsed=0.72s
+progress  33/ 97: deleted=(35, 42, 56, 63) obs=770 feasible=False elapsed=0.55s
+progress  34/ 97: deleted=(35, 42, 56, 70) obs=756 feasible=False elapsed=0.55s
+progress  35/ 97: deleted=(35, 42, 56, 77) obs=840 feasible=False elapsed=0.63s
+progress  36/ 97: deleted=(35, 42, 56, 84) obs=602 feasible=False elapsed=0.39s
+progress  37/ 97: deleted=(35, 42, 63, 70) obs=896 feasible=False elapsed=0.65s
+progress  38/ 97: deleted=(35, 42, 63, 77) obs=924 feasible=False elapsed=0.81s
+progress  39/ 97: deleted=(35, 42, 63, 84) obs=700 feasible=False elapsed=0.45s
+progress  40/ 97: deleted=(35, 42, 70, 77) obs=952 feasible=False elapsed=0.77s
+progress  41/ 97: deleted=(35, 42, 70, 84) obs=714 feasible=False elapsed=0.44s
+progress  42/ 97: deleted=(35, 42, 77, 84) obs=784 feasible=False elapsed=0.66s
+progress  43/ 97: deleted=(35, 49, 56, 63) obs=1036 feasible=False elapsed=0.92s
+progress  44/ 97: deleted=(35, 49, 56, 70) obs=1036 feasible=False elapsed=0.91s
+progress  45/ 97: deleted=(35, 49, 56, 77) obs=1078 feasible=False elapsed=1.13s
+progress  46/ 97: deleted=(35, 49, 56, 84) obs=868 feasible=False elapsed=0.87s
+progress  47/ 97: deleted=(35, 49, 63, 70) obs=1176 feasible=False elapsed=1.34s
+progress  48/ 97: deleted=(35, 49, 63, 77) obs=1162 feasible=False elapsed=1.34s
+progress  49/ 97: deleted=(35, 49, 63, 84) obs=966 feasible=False elapsed=0.96s
+progress  50/ 97: deleted=(35, 49, 70, 77) obs=1204 feasible=False elapsed=1.53s
+progress  51/ 97: deleted=(35, 49, 70, 84) obs=994 feasible=False elapsed=0.97s
+progress  52/ 97: deleted=(35, 49, 77, 84) obs=1022 feasible=False elapsed=1.36s
+progress  53/ 97: deleted=(35, 56, 63, 70) obs=966 feasible=False elapsed=0.78s
+progress  54/ 97: deleted=(35, 56, 63, 77) obs=1008 feasible=False elapsed=1.06s
+progress  55/ 97: deleted=(35, 56, 63, 84) obs=756 feasible=False elapsed=0.52s
+progress  56/ 97: deleted=(35, 56, 70, 77) obs=1008 feasible=False elapsed=0.92s
+progress  57/ 97: deleted=(35, 56, 70, 84) obs=742 feasible=False elapsed=0.55s
+progress  58/ 97: deleted=(35, 56, 77, 84) obs=826 feasible=False elapsed=0.59s
+progress  59/ 97: deleted=(35, 63, 70, 77) obs=1134 feasible=False elapsed=1.39s
+progress  60/ 97: deleted=(35, 63, 70, 84) obs=882 feasible=False elapsed=0.59s
+progress  61/ 97: deleted=(35, 63, 77, 84) obs=910 feasible=False elapsed=0.72s
+progress  62/ 97: deleted=(35, 70, 77, 84) obs=938 feasible=False elapsed=0.70s
+progress  63/ 97: deleted=(42, 49, 56, 63) obs=980 feasible=False elapsed=0.91s
+progress  64/ 97: deleted=(42, 49, 56, 70) obs=812 feasible=False elapsed=0.61s
+progress  65/ 97: deleted=(42, 49, 56, 77) obs=1050 feasible=False elapsed=1.23s
+progress  66/ 97: deleted=(42, 49, 56, 84) obs=812 feasible=False elapsed=0.64s
+progress  67/ 97: deleted=(42, 49, 63, 70) obs=938 feasible=False elapsed=0.76s
+progress  68/ 97: deleted=(42, 49, 63, 77) obs=1120 feasible=False elapsed=1.61s
+progress  69/ 97: deleted=(42, 49, 63, 84) obs=896 feasible=False elapsed=0.85s
+progress  70/ 97: deleted=(42, 49, 70, 77) obs=994 feasible=False elapsed=0.91s
+progress  71/ 97: deleted=(42, 49, 70, 84) obs=756 feasible=False elapsed=0.55s
+progress  72/ 97: deleted=(42, 49, 77, 84) obs=980 feasible=False elapsed=1.25s
+progress  73/ 97: deleted=(42, 56, 63, 70) obs=728 feasible=False elapsed=0.55s
+progress  74/ 97: deleted=(42, 56, 63, 77) obs=966 feasible=False elapsed=0.97s
+progress  75/ 97: deleted=(42, 56, 63, 84) obs=686 feasible=False elapsed=0.44s
+progress  76/ 97: deleted=(42, 56, 70, 77) obs=798 feasible=False elapsed=0.60s
+progress  77/ 97: deleted=(42, 56, 70, 84) obs=504 feasible=True elapsed=1.06s
+first feasible set found: deleted=(42, 56, 70, 84) chosen=(91, 119, 700, 1008, 1066)
+progress  78/ 97: deleted=(42, 56, 77, 84) obs=784 feasible=False elapsed=0.67s
+progress  79/ 97: deleted=(42, 63, 70, 77) obs=910 feasible=False elapsed=0.98s
+progress  80/ 97: deleted=(42, 63, 70, 84) obs=630 feasible=False elapsed=0.35s
+progress  81/ 97: deleted=(42, 63, 77, 84) obs=854 feasible=False elapsed=0.63s
+progress  82/ 97: deleted=(42, 70, 77, 84) obs=714 feasible=False elapsed=0.45s
+progress  83/ 97: deleted=(49, 56, 63, 70) obs=1022 feasible=False elapsed=1.06s
+progress  84/ 97: deleted=(49, 56, 63, 77) obs=1218 feasible=False elapsed=2.03s
+progress  85/ 97: deleted=(49, 56, 63, 84) obs=966 feasible=False elapsed=0.85s
+progress  86/ 97: deleted=(49, 56, 70, 77) obs=1064 feasible=False elapsed=1.14s
+progress  87/ 97: deleted=(49, 56, 70, 84) obs=798 feasible=False elapsed=0.52s
+progress  88/ 97: deleted=(49, 56, 77, 84) obs=1036 feasible=False elapsed=1.10s
+progress  89/ 97: deleted=(49, 63, 70, 77) obs=1176 feasible=False elapsed=1.45s
+progress  90/ 97: deleted=(49, 63, 70, 84) obs=924 feasible=False elapsed=0.89s
+progress  91/ 97: deleted=(49, 63, 77, 84) obs=1106 feasible=False elapsed=1.18s
+progress  92/ 97: deleted=(49, 70, 77, 84) obs=980 feasible=False elapsed=0.95s
+progress  93/ 97: deleted=(56, 63, 70, 77) obs=994 feasible=False elapsed=1.09s
+progress  94/ 97: deleted=(56, 63, 70, 84) obs=686 feasible=False elapsed=0.49s
+progress  95/ 97: deleted=(56, 63, 77, 84) obs=924 feasible=False elapsed=0.94s
+progress  96/ 97: deleted=(56, 70, 77, 84) obs=756 feasible=False elapsed=0.54s
+progress  97/ 97: deleted=(63, 70, 77, 84) obs=868 feasible=False elapsed=0.71s
+progress total wall time 127.41s
+==============================================================================
+Codex LRC14 eight-core Q27 set-cover boundary
+==============================================================================
+
+A. Exact Q27 set-cover boundary
+  delete_count=4; add_budget=5; time_limit=20s
+  candidate_window=1..1092; n=14; Q27_size=76
+  cases=97 infeasible=94 feasible=2 unknown=1
+  obligations=504..1218 mean=899.46; solver_elapsed=108.55s; max_case=20.01s
+  feasible examples:
+    deleted=(28, 42, 56, 84) chosen=(91, 322, 350, 504, 936) message=Optimization terminated successfully. (HiGHS Status 7: Optimal)
+      row=(7, 14, 21, 35, 49, 63, 70, 77, 91, 322, 350, 504, 936) plain_min_q=33 Q41=(33, 13) Bprime=(True, 322, Fraction(83, 175812)) p0=148352/2169475 components=250 safe_points=536
+    deleted=(42, 56, 70, 84) chosen=(91, 119, 700, 1008, 1066) message=Optimization terminated successfully. (HiGHS Status 7: Optimal)
+      row=(7, 14, 21, 28, 35, 49, 63, 77, 91, 119, 700, 1008, 1066) plain_min_q=31 Q41=(31, 14) Bprime=(True, 700, Fraction(105799, 188042400)) p0=6870869/125074950 components=274 safe_points=584
+  unknown examples:
+    deleted=(28, 42, 70, 84) chosen=() message=Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)
+
+B. Hardest deletion addresses
+  highest obligation loads:
+    deleted=(49, 56, 63, 77) obligations=1218 k=(7, 8, 9, 11); k_mod3=1202; v_mod13=(10,4,11,12)
+    deleted=(35, 49, 70, 77) obligations=1204 k=(5, 7, 10, 11); k_mod3=2112; v_mod13=(9,10,5,12)
+    deleted=(28, 49, 63, 77) obligations=1190 k=(4, 7, 9, 11); k_mod3=1102; v_mod13=(2,10,11,12)
+    deleted=(35, 49, 63, 70) obligations=1176 k=(5, 7, 9, 10); k_mod3=2101; v_mod13=(9,10,11,5)
+    deleted=(49, 63, 70, 77) obligations=1176 k=(7, 9, 10, 11); k_mod3=1012; v_mod13=(10,11,5,12)
+    deleted=(35, 49, 63, 77) obligations=1162 k=(5, 7, 9, 11); k_mod3=2102; v_mod13=(9,10,11,12)
+    deleted=(35, 63, 70, 77) obligations=1134 k=(5, 9, 10, 11); k_mod3=2012; v_mod13=(9,11,5,12)
+    deleted=(28, 49, 56, 77) obligations=1120 k=(4, 7, 8, 11); k_mod3=1122; v_mod13=(2,10,4,12)
+  slowest solver cases:
+    deleted=(28, 42, 70, 84) elapsed=20.01s obligations=546
+    deleted=(28, 56, 70, 84) elapsed=5.23s obligations=588
+    deleted=(28, 42, 56, 84) elapsed=2.68s obligations=630
+    deleted=(49, 56, 63, 77) elapsed=2.03s obligations=1218
+    deleted=(42, 49, 63, 77) elapsed=1.61s obligations=1120
+    deleted=(35, 49, 70, 77) elapsed=1.53s obligations=1204
+    deleted=(49, 63, 70, 77) elapsed=1.45s obligations=1176
+    deleted=(28, 49, 63, 77) elapsed=1.44s obligations=1190
+
+C. Coverage snapshots for high-load cases
+  deleted=(49, 56, 63, 77) obligations=1218 active_candidates=1080 single_cover_lb=4
+    best=((154, 308), (98, 294), (1001, 266), (182, 266), (91, 266), (1008, 252))
+    best_13=(91, 266) best_non13=(154, 308) best_non7=(675, 198)
+  deleted=(35, 49, 70, 77) obligations=1204 active_candidates=1080 single_cover_lb=5
+    best=((231, 294), (98, 294), (910, 280), (154, 280), (378, 266), (364, 266))
+    best_13=(910, 280) best_non13=(98, 294) best_non7=(675, 196)
+  deleted=(28, 49, 63, 77) obligations=1190 active_candidates=1080 single_cover_lb=5
+    best=((98, 294), (154, 280), (728, 266), (189, 266), (182, 266), (378, 252))
+    best_13=(182, 266) best_non13=(98, 294) best_non7=(675, 194)
+
+D. Tournament Analysis and assumption challenge
+  observable=(exact finite control, descent leverage, retained side-channel,
+              geometric fidelity, computation, proof-transfer leverage)
+  directed_3cycles=0; edge_flips_vs_list_order=2/28
+    Q27_obligation_hypergraph       out=7 scores=(5, 5, 5, 5, 4, 5)
+    deleted_core_addresses          out=6 scores=(5, 4, 5, 4, 5, 4)
+    candidate_speed_cover_masks     out=5 scores=(5, 4, 4, 5, 5, 3)
+    13_clock_resource               out=4 scores=(4, 5, 4, 4, 4, 4)
+    support_load_owner_channels     out=3 scores=(4, 5, 5, 3, 3, 5)
+    divisor_fiber_residue_classes   out=2 scores=(4, 4, 4, 4, 5, 4)
+    outside_window_normalizer       out=1 scores=(3, 5, 5, 3, 3, 5)
+    raw_runner_geometry             out=0 scores=(3, 3, 3, 5, 5, 3)
+
+  Assumption challenge:
+    considered vertices: runners, gaps, fixed circle sections, section boundaries,
+    wall-crossing events, residues, cover arcs, Fourier modes, matroid circuits,
+    deletion addresses, candidate masks, and proof obligations.
+    selected quotient: Q27 obligations with deleted-core/candidate-cover side channels.
+    preserves: exact bounded Q27 feasibility and the Church-style retained channel.
+    destroys: outside-window geometry, time-continuous owner motion, and arbitrary
+    multi-stranger interactions not reducible to the replacement-normalization model.
+
+E. Proof-shaped takeaway
+  Feasible Q27 blockers appear at four core deletions, so the universal
+  eight-core Q27 set-cover lemma is false as stated.  The useful theorem
+  should instead classify every feasible packet by its opening channel:
+  plain-shell witness, Bprime/owner opening, positive measure, or descent.

@@ -57,9 +57,15 @@ HYP-2464:
 HYP-2465:
   near-core primitive set-cover: for |D|<=3, all 299 deletion cases
   are infeasible with add budget |D|+1.
+
+HYP-2470:
+  eight-core boundary: for |D|=4, Q27-only has exactly two feasible
+  deletion addresses among 495, but both open at plain q=31/33 with
+  Bprime and positive measure; Q27 union shell<=41 is infeasible for
+  both addresses.
 ```
 
-Thus, inside the carry window `1..1092`, any no-Q27 row must delete at least four of the twelve speeds in `CORE=7*{1,...,12}` unless it avoids the near-core normalization entirely.
+Thus, inside the carry window `1..1092`, any no-Q27 row must delete at least four of the twelve speeds in `CORE=7*{1,...,12}` unless it avoids the near-core normalization entirely.  More sharply, any row with no Q27 witness and no plain witness `q<=41` must delete at least five core speeds.
 
 ## Descent Skeleton
 
@@ -83,18 +89,21 @@ The Church-style target is a decision tree:
 5. If S is AP, Vstar, or nonprimitive 2AP,
    it is a named wall atom, not a new blocker.
 
-6. If S deletes >=4 core speeds,
-   prove a below-nine-core support-load descent.
+6. If S deletes exactly 4 core speeds,
+   HYP-2470 gives Q27 or plain q<=41.
 
-7. If S leaves the carry window,
+7. If S deletes >=5 core speeds,
+   prove a below-eight-core support-load descent.
+
+8. If S leaves the carry window,
    prove a large-speed Bprime/divisor/carry normalization.
 ```
 
 The remaining live theorem is therefore not "find a bigger q."  It is:
 
 ```text
-no-Q27 blocker
-=> below-nine-core or outside-window
+no-Q27 and no-plain-q<=41 blocker
+=> below-eight-core or outside-window
 => strict descent / named exception.
 ```
 
@@ -154,7 +163,7 @@ Assumption challenge: candidate vertices considered were runners, individual den
 
 ## Next Moves
 
-1. Run a structured below-nine-core set-cover scout for `|D|=4`, with typed budgets rather than raw cardinality.
+1. Build a below-eight-core typed scout for `|D|>=5`, with typed budgets rather than raw cardinality.
 2. Prove or test an outside-window normalizer: a speed `v>1092` must open Bprime(any), dominate an existing core speed, or reduce into a divisor/carry fiber without losing blockedness.
 3. Build support-transport curvature across `q -> 2q`, `q -> 7q`, and `27 -> 9 -> 3`.  Nonzero defect should be a witness; zero defect should force descent.
-4. Make the exception catalogue explicit: AP, Vstar, nonprimitive 2AP, `q=91`, `q=161`, owner-private/Bprime, and low-clock exits.
+4. Make the exception catalogue explicit: AP, Vstar, nonprimitive 2AP, `q=91`, `q=161`, `q=31/33`, owner-private/Bprime, and low-clock exits.

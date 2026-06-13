@@ -1,0 +1,109 @@
+==============================================================================
+Codex LRC14 eight-core Q27 set-cover catalogue
+==============================================================================
+
+Raw supporting outputs from this session:
+
+* lrc14_eight_core_q27_setcover_tail_codex.out
+* lrc14_eight_core_q27_setcover_repair_codex.out
+* lrc14_eight_core_q27_shell41_exception_repair_codex.out
+
+The first long run stopped at the first feasible Q27 packet; the tail and
+repair runs complete the exact four-deletion census.
+
+A. Q27-only four-deletion census
+
+Model:
+  CORE = 7*{1,...,12}
+  delete_count = 4
+  add_budget = 5
+  candidate_window = 1..1092
+  primitive constraint = at least one added speed not divisible by 7
+  Q27 = {d*m: d in {1,2,7,14}, 1 <= m <= 27} \ {1}
+
+Exact deletion-set result:
+  total deletion sets = binom(12,4) = 495
+  Q27-infeasible deletion sets = 493
+  Q27-feasible deletion sets = 2
+  unresolved after sparse repair = 0
+
+The 12 short-cap unknowns from the first/tail runs were all repaired to
+infeasible with a 120s cap:
+
+  (14,21,28,70), (14,21,28,84), (14,21,70,84),
+  (14,28,42,70), (14,28,56,70), (14,28,56,84),
+  (14,56,70,84), (21,28,56,70), (21,28,56,84),
+  (21,28,70,84), (21,56,70,84), (28,42,70,84).
+
+B. The two Q27-feasible deletion packets
+
+1. deleted = (28,42,56,84)
+
+  one Q27-covering choice:
+    added = (91,322,350,504,936)
+    row = (7,14,21,35,49,63,70,77,91,322,350,504,936)
+
+  opening diagnostics:
+    first plain witness <=1200: q=33
+    first Q41 witness: (33,13)
+    Bprime(any): (True, 322, 83/175812)
+    exact p0: 148352/2169475
+    positive safe components: 250
+    safe boundary points: 536
+
+2. deleted = (42,56,70,84)
+
+  one Q27-covering choice:
+    added = (91,119,700,1008,1066)
+    row = (7,14,21,28,35,49,63,77,91,119,700,1008,1066)
+
+  opening diagnostics:
+    first plain witness <=1200: q=31
+    first Q41 witness: (31,14)
+    Bprime(any): (True, 700, 105799/188042400)
+    exact p0: 6870869/125074950
+    positive safe components: 274
+    safe boundary points: 584
+
+C. Q27 plus shell<=41 repair
+
+To test whether the two Q27-feasible deletion sets contain any packet that is
+hard for the next ordinary shells, rerun the MILP with obligations
+
+  Q27 union {2,3,...,41}.
+
+The only new plain shells not already in Q27 are
+
+  29, 31, 33, 37, 39, 41.
+
+Exact repair:
+
+  deleted=(28,42,56,84), obligations=670:
+    infeasible in 8.20s.
+
+  deleted=(42,56,70,84), obligations=540:
+    infeasible in 5.63s.
+
+Therefore every primitive carry-window row retaining exactly eight core speeds
+has either a Q27 witness or a plain-shell witness with q<=41.
+
+D. Proof-shaped consequence
+
+Combining this with HYP-2465:
+
+  In the carry window 1..1092, every primitive replacement row retaining at
+  least eight of the twelve core speeds has either a Q27 witness or a plain
+  denominator witness q<=41.
+
+Thus a normalized LRC14 row with no Q27 witness and no small plain q<=41 witness
+must either:
+
+  * delete at least five core speeds,
+  * leave the carry window,
+  * violate the replacement-normalization model, or
+  * fall into a named owner/Bprime/positive-measure exception channel.
+
+This replaces the original false universal "eight-core forces Q27" target with
+the stronger Church-style finite-exception statement: the only eight-core Q27
+packets found are not LRC threats; they open immediately at q=31 or q=33 and by
+Bprime/positive-measure certificates.
