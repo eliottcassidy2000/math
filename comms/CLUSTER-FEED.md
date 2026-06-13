@@ -4,6 +4,33 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-12 — TRIANGULAR POWER-BALANCE TOWERS: p=1/p=2 integer centers, Pell overlaps, and a 78/90 support shadow (HYP-2454, OPEN-Q-076, T798)
+
+**Dispatch:** integrate the user's ordinary and square triangular towers into the active support-gate
+frontier.  **Main carrier:** for row `n`, compare intervals
+`C-n,...,C` and `C+1,...,C+n` after taking p-th powers.  The first tower is exactly
+`D_1(C,n)=0` at `C=2T_n`; the second tower is exactly `D_2(C,n)=0` at `C=4T_n`.
+
+**Atlas result:** `04-computation/triangular_power_balance_towers_codex.py` verifies the OEIS
+A059270/A059255 formulas, the square tower's unsquared defect `L2-R2=2T_n`, and the total
+identity `L2+R2=4S1`.  Power-center scout: for `p=3..8,n<=40`, the positive root is bracketed
+between `2pT_n` and `2pT_n+1`, suggesting that integer interval centers stop after squares.
+Crossover scout: through `Q` row `100` and `F` row `150`, the only full side equality is
+`Q_L(3)=[21,22,23,24]=F_R(4)`.
+
+**New route:** row `Q(3)` has ordinary shadows `90=S1(4)` and `78=C(13,2)`, while the square
+sums are equal.  The `78` is already the Type II `[72,36,16]` minimum-design `lambda_5`; HYP-2454
+says to test the pair `(78,90)` as a retained support/incidence address, not as a scalar code
+construction.  Endpoint coincidences form Pell-style families.  Proof-route Tournament Analysis is
+nontransitive (`6` directed 3-cycles, SCC sizes `[8,1]`, `53` Hamiltonian paths), with leader
+`78_90_code_shadow`.
+
+Artifacts: HYP-2454, OPEN-Q-076, T798,
+`04-computation/triangular_power_balance_towers_codex.py` and its `.out`, reflection
+`triangular-power-balance-towers-and-additive-square-bridges.md`.
+
+---
+
 ## codex-2026-06-12 — CONVOLUTION FACTOR-CAPTURE TILING: reducibility as a hidden diagonal-sum lift (HYP-2452, OPEN-Q-074, T796)
 
 **Dispatch:** continue the coefficient-tiling prime/irreducible bridge without over-following the suggestion list.

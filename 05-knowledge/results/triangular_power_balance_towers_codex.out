@@ -1,0 +1,163 @@
+Triangular power-balance towers
+HYP-2454 / T798 / OPEN-Q-076 candidate
+
+[1] The two towers as exact interval balances
+    OEIS anchors: A059270 (ordinary sums), A059255 (square sums).
+    T_n=n(n+1)/2.  First row center C1=2T_n=n(n+1).
+    Second row center C2=4T_n=2n(n+1).
+
+n=1: F_L=(1, 2) F_R=(3,) sum=3 formula_S1=3
+     Q_L=(3, 4) Q_R=(5,) square_sum=25 formula_S2=25 ordinary_shadow=(7,5)
+n=2: F_L=(4, 5, 6) F_R=(7, 8) sum=15 formula_S1=15
+     Q_L=(10, 11, 12) Q_R=(13, 14) square_sum=365 formula_S2=365 ordinary_shadow=(33,27)
+n=3: F_L=(9, 10, 11, 12) F_R=(13, 14, 15) sum=42 formula_S1=42
+     Q_L=(21, 22, 23, 24) Q_R=(25, 26, 27) square_sum=2030 formula_S2=2030 ordinary_shadow=(90,78)
+n=4: F_L=(16, 17, 18, 19, 20) F_R=(21, 22, 23, 24) sum=90 formula_S1=90
+     Q_L=(36, 37, 38, 39, 40) Q_R=(41, 42, 43, 44) square_sum=7230 formula_S2=7230 ordinary_shadow=(190,170)
+n=5: F_L=(25, 26, 27, 28, 29, 30) F_R=(31, 32, 33, 34, 35) sum=165 formula_S1=165
+     Q_L=(55, 56, 57, 58, 59, 60) Q_R=(61, 62, 63, 64, 65) square_sum=19855 formula_S2=19855 ordinary_shadow=(345,315)
+n=6: F_L=(36, 37, 38, 39, 40, 41, 42) F_R=(43, 44, 45, 46, 47, 48) sum=273 formula_S1=273
+     Q_L=(78, 79, 80, 81, 82, 83, 84) Q_R=(85, 86, 87, 88, 89, 90) square_sum=45955 formula_S2=45955 ordinary_shadow=(567,525)
+n=7: F_L=(49, 50, 51, 52, 53, 54, 55, 56) F_R=(57, 58, 59, 60, 61, 62, 63) sum=420 formula_S1=420
+     Q_L=(105, 106, 107, 108, 109, 110, 111, 112) Q_R=(113, 114, 115, 116, 117, 118, 119) square_sum=94220 formula_S2=94220 ordinary_shadow=(868,812)
+
+    First-tower row n partitions the square shell [n^2,(n+1)^2-1].
+    Second-tower unsquared defect: L2(n)-R2(n)=2T_n; total L2+R2=4*S1(n).
+
+[2] Power-center rigidity
+    D_p(C,n)=sum_{i=0..n}(C-i)^p - sum_{i=1..n}(C+i)^p
+    p=1: C - n**2 - n
+    p=2: -C*(-C + 2*n**2 + 2*n)
+    p=3: -(-2*C**3 + 6*C**2*n**2 + 6*C**2*n + n**4 + 2*n**3 + n**2)/2
+    p=4: -C*(-C**3 + 4*C**2*n**2 + 4*C**2*n + 2*n**4 + 4*n**3 + 2*n**2)
+
+    p=1: integer centers verified n<=40, first=[(1, 2), (2, 6), (3, 12), (4, 20), (5, 30)], last=(40, 1640)
+    p=2: integer centers verified n<=40, first=[(1, 4), (2, 12), (3, 24), (4, 40), (5, 60)], last=(40, 3280)
+    p=3: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+    p=4: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+    p=5: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+    p=6: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+    p=7: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+    p=8: no positive integer centers; D_p(2pT_n)<0<D_p(2pT_n+1) for n<=40; failures=0
+
+    Candidate theorem: p=1 and p=2 are the exact integer triangular centers;
+    for p>=3 the positive root is trapped between consecutive integers 2pT_n and 2pT_n+1.
+
+[3] Crossovers between the square-row partition F and the square-balance tower Q
+    Q_L(2)=(10, 11, 12) vs F_L(3)=(9, 10, 11, 12): left contained in right; right extra=[9]
+    Q_R(2)=(13, 14) vs F_R(3)=(13, 14, 15): left contained in right; right extra=[15]
+    Q_L(3)=(21, 22, 23, 24) vs F_R(4)=(21, 22, 23, 24): equal
+    Q_R(3)=(25, 26, 27) vs F_L(5)=(25, 26, 27, 28, 29, 30): left contained in right; right extra=[28, 29, 30]
+    Q_L(4)=(36, 37, 38, 39, 40) vs F_L(6)=(36, 37, 38, 39, 40, 41, 42): left contained in right; right extra=[41, 42]
+
+    Exact side equalities with n<=100,m<=150: 1
+      QL(3) = FR(4) = (21, 22, 23, 24)
+    Derivation note: full side equality forces the side lengths to match;
+    the nontrivial solution is Q_L(3)=F_R(4).
+
+    Best nontrivial overlaps/containments:
+      J=1.000, inter=4: QL(3) vs FR(4) -> equal
+      J=0.762, inter=16: QL(15) vs FR(21) -> left contained in right; right extra=[463, 464, 481, 482, 483]
+      J=0.750, inter=21: QL(20) vs FR(28) -> left contained in right; right extra=[813, 814, 815, 816, 817, 818, 819]
+      J=0.750, inter=3: QL(2) vs FL(3) -> left contained in right; right extra=[9]
+      J=0.737, inter=28: QL(27) vs FR(38) -> left contained in right; right extra=[1483, 1484, 1513, 1514, 1515, 1516, 1517, 1518, 1519, 1520]
+      J=0.714, inter=15: QL(14) vs FL(20) -> left contained in right; right extra=[400, 401, 402, 403, 404, 405]
+      J=0.714, inter=10: QL(9) vs FL(13) -> left contained in right; right extra=[169, 170, 181, 182]
+      J=0.714, inter=5: QL(4) vs FL(6) -> left contained in right; right extra=[41, 42]
+      J=0.711, inter=27: QL(26) vs FL(37) -> left contained in right; right extra=[1369, 1370, 1371, 1372, 1373, 1374, 1375, 1376, 1377, 1405, 1406]
+      J=0.710, inter=22: QL(21) vs FL(30) -> left contained in right; right extra=[900, 901, 902, 925, 926, 927, 928, 929, 930]
+      J=0.706, inter=24: QR(24) vs FR(34) -> left contained in right; right extra=[1191, 1192, 1193, 1194, 1195, 1196, 1197, 1198, 1199, 1200]
+      J=0.704, inter=19: QR(19) vs FR(27) -> left contained in right; right extra=[757, 758, 759, 760, 780, 781, 782, 783]
+      J=0.700, inter=14: QR(14) vs FR(20) -> left contained in right; right extra=[435, 436, 437, 438, 439, 440]
+      J=0.700, inter=7: QR(7) vs FR(10) -> left contained in right; right extra=[111, 112, 120]
+      J=0.682, inter=30: QR(30) vs FL(43) -> left contained in right; right extra=[1849, 1850, 1851, 1852, 1853, 1854, 1855, 1856, 1857, 1858, 1859, 1860, 1891, 1892]
+      J=0.676, inter=25: QR(25) vs FL(36) -> left contained in right; right extra=[1296, 1297, 1298, 1299, 1300, 1326, 1327, 1328, 1329, 1330, 1331, 1332]
+
+    Endpoint boundary coincidences through Q-row n<=100: 25
+      3: QL_start(1) = FR_start(1)
+      3: QL_start(1) = FR_end(1)
+      4: QL_end(1) = FL_start(2)
+      12: QL_end(2) = FL_end(3)
+      13: QR_start(2) = FR_start(3)
+      21: QL_start(3) = FR_start(4)
+      24: QL_end(3) = FR_end(4)
+      25: QR_start(3) = FL_start(5)
+      36: QL_start(4) = FL_start(6)
+      90: QR_end(6) = FL_end(9)
+      144: QL_end(8) = FL_start(12)
+      210: QL_start(10) = FL_end(14)
+      324: QR_end(12) = FL_start(18)
+      420: QL_end(14) = FL_end(20)
+      421: QR_start(14) = FR_start(20)
+      528: QL_start(16) = FR_end(22)
+      702: QR_end(18) = FL_end(26)
+      840: QL_end(20) = FR_end(28)
+      841: QR_start(20) = FL_start(29)
+      1224: QR_end(24) = FR_end(34)
+      3081: QL_start(39) = FR_start(55)
+      4095: QL_start(45) = FR_end(63)
+      4900: QL_end(49) = FL_start(70)
+      14280: QL_end(84) = FL_end(119)
+      14281: QR_start(84) = FR_start(119)
+    These are Pell-style quadratic boundary hits, e.g. 2n^2+n=m^2 or
+    2n^2+2n+1=m^2, depending on the endpoint labels.
+
+[4] Sum-shadow bridges and code/LRC beacons
+    L2(n)=S1(m) hits n,m<=500: [(3, 4, 90)]
+    R2(n)=S1(m) hits n,m<=500: []
+    The unique checked hit is L2(3)=90=S1(4).
+    At the same row, R2(3)=78=C(13,2), the existing [72,36,16] lambda_5 beacon.
+      value 25: [('S2', 1)]
+      value 27: [('R2', 2)]
+      value 42: [('S1', 3)]
+      value 78: [('R2', 3)]
+      value 90: [('L2', 3), ('S1', 4)]
+      value 91: []
+      value 165: [('S1', 5)]
+      value 365: [('S2', 2)]
+      value 2030: [('S2', 3)]
+      value 7230: [('S2', 4)]
+      value 249849: []
+
+    Interpretation: row Q(3) is not a code construction, but it creates a
+    tight additive/square shadow: 21+22+23+24 has ordinary sum 90 while
+    25+26+27 has ordinary sum 78, and the squared equality binds them.
+
+[5] Tournament Analysis
+    Criteria: ('exactness', 'novelty', 'transfer_to_lrc', 'transfer_to_72', 'computability', 'proof_potential')
+    Tie Hamiltonian path: ['power_center_rigidity', '78_90_code_shadow', 'square_tower_multiplier_lift', 'unsquared_defect_channel', 'first_square_row_partition', 'pell_endpoint_alignments', 'overlap_atlas', 'lrc14_worry_modulus_bridge', 'convolution_boundary_lift']
+    Vertex scores:
+      power_center_rigidity: (5, 4, 3, 2, 5, 5)
+      78_90_code_shadow: (4, 5, 3, 5, 5, 4)
+      square_tower_multiplier_lift: (5, 4, 3, 3, 5, 4)
+      unsquared_defect_channel: (5, 4, 4, 4, 5, 4)
+      first_square_row_partition: (5, 3, 4, 2, 5, 4)
+      pell_endpoint_alignments: (3, 4, 3, 2, 4, 3)
+      overlap_atlas: (3, 4, 3, 3, 5, 3)
+      lrc14_worry_modulus_bridge: (4, 3, 5, 2, 4, 4)
+      convolution_boundary_lift: (3, 5, 4, 4, 3, 5)
+    Ranking by majority tournament: ['78_90_code_shadow', 'unsquared_defect_channel', 'power_center_rigidity', 'convolution_boundary_lift', 'square_tower_multiplier_lift', 'first_square_row_partition', 'overlap_atlas', 'lrc14_worry_modulus_bridge', 'pell_endpoint_alignments']
+    Outdegrees: {'power_center_rigidity': 6, '78_90_code_shadow': 7, 'square_tower_multiplier_lift': 4, 'unsquared_defect_channel': 7, 'first_square_row_partition': 3, 'pell_endpoint_alignments': 0, 'overlap_atlas': 2, 'lrc14_worry_modulus_bridge': 2, 'convolution_boundary_lift': 5}
+    score_hist={0: 1, 2: 2, 3: 1, 4: 1, 5: 1, 6: 1, 7: 2}
+    directed_3cycles=6: [('power_center_rigidity', '78_90_code_shadow', 'unsquared_defect_channel'), ('power_center_rigidity', '78_90_code_shadow', 'convolution_boundary_lift'), ('power_center_rigidity', 'lrc14_worry_modulus_bridge', 'convolution_boundary_lift'), ('square_tower_multiplier_lift', 'lrc14_worry_modulus_bridge', 'convolution_boundary_lift'), ('first_square_row_partition', 'lrc14_worry_modulus_bridge', 'convolution_boundary_lift'), ('overlap_atlas', 'lrc14_worry_modulus_bridge', 'convolution_boundary_lift')]
+    scc_sizes=[8, 1]
+    hamiltonian_paths=53
+    edge_flips_vs_exactness=12
+
+    Assumption challenge:
+      Considered vertices: rows, intervals, endpoints, centers, sums, defects,
+      square-equality shadows, Pell boundary events, code design parameters,
+      LRC shell moduli, Fourier modes, and proof obligations.
+      Chosen quotient preserves the power-balance center, side endpoints,
+      ordinary-sum defect, and transfer beacons. It destroys individual square
+      residue data, support/incidence fibers, and any actual code/LRC witness.
+      Challenged assumption: the tower vertices need not be numbers in the
+      intervals; the more useful vertices may be obligations such as 'center
+      root is integral', 'endpoint aligns', or 'support lift exists'.
+
+[6] Next proof tasks
+    1. Prove the p>=3 bracket D_p(2pT_n)<0<D_p(2pT_n+1), or find the first exception.
+    2. Solve the endpoint Pell families and classify infinite overlap/containment types.
+    3. Turn Q(3)'s 78/90 shadow into a concrete [72,36,16] support-ledger constraint.
+    4. Attach the same defect ledger to LRC14: compare 27-shell, 78, 90, and 91 resources.
+    5. Lift from interval balances to convolution/support balances, following HYP-2452.

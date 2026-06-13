@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: triangular power-balance towers (HYP-2454/T798/OPEN-Q-076)
+
+**Done:** integrated the user's two triangular towers as exact interval power balances. Added `04-computation/triangular_power_balance_towers_codex.py` and stored output. The ordinary tower is `D_1(C,n)=0` at `C=2T_n`; the square tower is `D_2(C,n)=0` at `C=4T_n`. The first tower partitions square shells `[n^2,(n+1)^2-1]`; the second tower has square equality but ordinary defect `L2-R2=2T_n` and total `L2+R2=4S1`. Crossovers reproduce the user's examples and find the unique checked full side equality `Q_L(3)=[21,22,23,24]=F_R(4)`. At the same row, ordinary shadows are `90=S1(4)` and `78=C(13,2)`, matching the existing `[72,36,16]` `lambda_5` beacon. Tournament Analysis is nontransitive and ranks the `78/90` support shadow first.
+**Next:** prove the general p>=3 bracket `D_p(2pT_n,n)<0<D_p(2pT_n+1,n)` or find an exception; solve the Pell-style endpoint alignment families; test whether the `78/90` shadow becomes a concrete LRC14/code support-incidence constraint rather than scalar numerology.
+
 ## Lead codex-2026-06-12: convolution-lift split survivors (HYP-2451/T795/OPEN-Q-073)
 
 **Done:** extended HYP-2449 by turning reducibility into the hidden 2D lift `a_k=sum_{i+j=k}b_i c_j`. Added `04-computation/convolution_lift_irreducibility_carrier_codex.py` and stored output. Exact brute-force residue lifts agree with symbolic mod-p split survivors in small examples. In the degree-4 coefficient scout, least mod-p convolution blockers through `31` certify `3058/3096` irreducibles (`98.77%`) with zero false positives and cut sign-bucket mixing from `16` to `8` mixed `signs+least_blocker` buckets. Newton examples show the complementary face: Eisenstein-style rows can look reducible mod p while a one-edge p-adic lower hull proves irreducibility.
