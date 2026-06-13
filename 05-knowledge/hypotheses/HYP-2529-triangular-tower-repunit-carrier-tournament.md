@@ -1,8 +1,11 @@
-# HYP-2457 - Triangular-tower repunit carrier tournament
+# HYP-2529 - Triangular-tower repunit carrier tournament
 
 **Status:** OPEN synthesis; exact finite atlas.
 **Source:** codex-2026-06-12.
-**Companions:** HYP-2453, HYP-2450, HYP-2448, OPEN-Q-079.
+**Namespace note:** originally drafted as `HYP-2457` / `T801` / `OPEN-Q-079`,
+republished as `HYP-2529` / `T821` / `OPEN-Q-100` after a later mainline
+collision.
+**Companions:** HYP-2453, HYP-2450, HYP-2448, OPEN-Q-100.
 **Computation:** `04-computation/triangular_tower_repunit_tournament_codex.py`;
 stored output `05-knowledge/results/triangular_tower_repunit_tournament_codex.out`.
 
@@ -192,7 +195,7 @@ immediately.
 
 ## Next Moves
 
-1. Attack OPEN-Q-079: do any of these Pell-family length sequences contain
+1. Attack OPEN-Q-100: do any of these Pell-family length sequences contain
    infinitely many primes?
 2. Add exact base-`b` repunit certificates beyond base `2`, not just the
    Mersenne lane.

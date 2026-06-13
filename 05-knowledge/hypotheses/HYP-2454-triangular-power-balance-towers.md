@@ -1,11 +1,15 @@
 # HYP-2454 - Triangular power-balance towers stop at squares and expose a 78/90 support shadow
 
-**Status:** OPEN synthesis; exact p=1/p=2 identities and finite power-center/bracket scout.
+**Status:** OPEN synthesis; exact p=1/p=2 identities, exact odd-moment
+reformulation, two-term anchor asymptotic, and `n=1` irreducibility lane;
+global bracket/support transfer still open.
 **Source:** codex-2026-06-12.
-**Companions:** HYP-2457, HYP-2453, HYP-2452, HYP-2451, HYP-2450,
+**Companions:** HYP-2457, HYP-2456, HYP-2453, HYP-2452, HYP-2451, HYP-2450,
 HYP-2445, HYP-2444, HYP-2430, HYP-2425, HYP-2128.
-**Computation:** `04-computation/triangular_power_balance_towers_codex.py`;
-stored output `05-knowledge/results/triangular_power_balance_towers_codex.out`.
+**Computation:** `04-computation/triangular_power_balance_towers_codex.py` and
+`04-computation/triangular_power_faulhaber_asymptotic_codex.py`; stored outputs
+`05-knowledge/results/triangular_power_balance_towers_codex.out` and
+`05-knowledge/results/triangular_power_faulhaber_asymptotic_codex.out`.
 **Beatty/Pell side-word addendum:** HYP-2456;
 `04-computation/triangular_tower_beatty_pell_decomposition_codex.py`.
 **Faulhaber anchor addendum:** HYP-2457;
@@ -44,9 +48,28 @@ and the second tower is the consecutive-square balance
 
 The working hypothesis is that the integer-center phenomenon genuinely stops
 after powers `1` and `2`: for every `p>=3`, the positive root of `D_p(C,n)=0`
-is trapped between the consecutive integers `2pT_n` and `2pT_n+1`.  The script
-verifies this bracket for `3<=p<=8` and `n<=40`; for `p=3,4` the displayed
-formulas make the first proof target quite concrete.
+is trapped between the consecutive integers `2pT_n` and `2pT_n+1`.  The scout
+verifies this bracket for `3<=p<=8` and `n<=40`; the new Faulhaber reduction
+partially resolves the route to a proof by showing that only odd moments
+survive and by deriving the first two terms of the anchor expansion:
+
+```text
+let a_p(n) solve  sum_{j=0}^n (a+j)^p = sum_{j=1}^n (a+n+j)^p,
+set c=a+n and u=n(n+1).
+
+Then
+  c^p = 2 * sum_{r odd} binom(p,r) c^(p-r) S_r(n),
+
+and
+  a_p(n)
+  = p*n^2 + (p-1)*n
+    + (p-1)(p-2)/(12p)
+    - (p-1)(p-2)(2p^2-4p-1)/(180 p^3 n(n+1))
+    + O(n^-4).
+```
+
+This recovers the exact towers at `p=1,2` and explains the higher anchors as
+the same triangular carrier seen through a Bernoulli/Faulhaber correction lens.
 
 ## Exact Algebra Already In Hand
 
@@ -81,25 +104,48 @@ The same bracket pattern appears computationally for `p=5..8`.  This suggests
 a Bernoulli/Faulhaber proof route: write `D_p(2pT_n+k,n)` and prove sign at
 `k=0,1`.
 
-HYP-2457 sharpens this route.  With `u=n(n+1)` and `c=a+n`, the exact
-midpoint equation keeps only odd Faulhaber moments:
+## Exact Odd-Moment Reformulation And Anchor Expansion
+
+HYP-2457 sharpens this route.  With midpoint `c=a+n` and triangular carrier
+`u=n(n+1)`, the balance equation collapses to odd Faulhaber moments only:
 
 ```text
-D_p(c,n)=c^p - 2*sum_{r odd} binom(p,r)c^(p-r)S_r(n).
+c^p = 2 * sum_{r odd} binom(p,r) c^(p-r) S_r(n).
 ```
 
-The real root has formal expansion
+The first odd moments in `u` coordinates are
 
 ```text
-c_p(n)=p*u
-  + (p-1)(p-2)/(12p)
-  - (p-1)(p-2)(2p^2-4p-1)/(180p^3*u)
-  + O(u^-2),
+S_1 = u/2,
+S_3 = u^2/4,
+S_5 = u^2(2u-1)/12,
+S_7 = u^2(3u^2-4u+2)/24.
 ```
 
-with the next `u^-2` coefficient also carrying `(p-1)(p-2)`.  Thus the p=1
-and p=2 exact towers are explained by the same odd-moment/Bernoulli address
-rather than by separate low-degree coincidences.
+Writing
+
+```text
+c = p*u + alpha + beta/u + O(u^-2),
+```
+
+and using only `S_1,S_3,S_5`, coefficient matching gives
+
+```text
+alpha = (p-1)(p-2)/(12p),
+beta  = -(p-1)(p-2)(2p^2-4p-1)/(180 p^3).
+```
+
+So
+
+```text
+a_p(n) = p*n^2 + (p-1)*n + alpha + beta/u + O(u^-2)
+```
+
+with `u=n(n+1)`, hence remainder `O(n^-4)`.  The stored numerical check for
+`3<=p<=8` and `5<=n<=200` has `n^4 * error` stabilizing, matching the claimed
+order.  This explains `p=1` and `p=2` as the same odd-moment/Bernoulli
+address with all displayed corrections vanishing, rather than as separate
+low-degree coincidences.
 
 ## First Tower: Square-Shell Partition
 
@@ -142,6 +188,66 @@ L_2(n)+R_2(n)=2n(n+1)(2n+1)=4S_1(n).
 This is the cleanest addition/multiplication bridge in the packet.  Squaring
 turns the defective ordinary comparison into an equality, and the defect is
 itself triangular.
+
+## Square-Pyramidal Cuboid Packing
+
+The `p=2` tower is exactly the square-pyramidal Faulhaber identity
+
+```text
+P_2(n)=1^2+...+n^2 = n(n+1)(2n+1)/6.
+```
+
+Hence
+
+```text
+6*P_2(n) = n(n+1)(2n+1) = u(2n+1),
+```
+
+so six `n`-step square pyramids fill the `u x (2n+1)` cuboid.  Equivalently,
+one doubled pyramid plus four regular ones gives the same cuboid volume.
+
+This is the exact `p=2` analogue of the `p=1` staircase identity
+
+```text
+2*T_n = u.
+```
+
+So the first two towers are the last no-correction rectangle/cuboid packings.
+From `p>=3` onward the triangular carrier survives, but only after Bernoulli
+address terms are added.
+
+## Higher-P Live Factors And Irreducibility
+
+At `n=1` the balance polynomial is
+
+```text
+D_p(C,1) = C^p + (C-1)^p - (C+1)^p.
+```
+
+For even `p`, `C=0` is a forced symmetry root, so the live factor is
+`D_p(C,1)/C`.  The first two tower cases are exactly the last linear ones:
+
+```text
+p=1: C-2,
+p=2: C-4.
+```
+
+The stored finite-field certificates show that the primitive live factor is
+irreducible over `Z` for every checked `3<=p<=20`; for example,
+
+```text
+p=3:  C^3 - 6C^2 - 2                  irreducible mod 5
+p=4:  C^3 - 8C^2 - 8                  irreducible mod 7
+p=5:  C^5 - 10C^4 - 20C^2 - 2         irreducible mod 23
+p=12: C^11 - 24C^10 - ... - 24        irreducible mod 109
+```
+
+This gives a clean polynomial reading of the tower cutoff: once the odd
+Faulhaber correction terms appear, the first visible live balance polynomial
+already stops splitting in the stored window.  In particular, any universal
+nontrivial factorization of the live `(n,C)` balance polynomial would survive
+the specialization `n=1`, so the checked irreducibility blocks the obvious
+split route for higher powers.
 
 ## Crossover Atlas
 
@@ -270,16 +376,57 @@ This is a useful warning.  The exact identities are not automatically the
 highest-leverage proof route; the best next work may be the support transfer
 or hidden-lift interpretation.
 
+## Faulhaber Carrier Tournament
+
+The Faulhaber addendum reruns Tournament Analysis on proof carriers rather than
+rows, powers, or odd moments alone.  The chosen vertices are
+
+```text
+rectangle_packing,
+square_pyramidal_cuboid,
+odd_moment_reduction,
+alpha_beta_asymptotic,
+n1_live_irreducibility,
+78_90_support_shadow,
+global_bracket_tail,
+hidden_lift_transfer.
+```
+
+The pairwise observable is the majority comparison of
+
+```text
+(exactness, geometry, generality, irreducibility, support_transfer, proof_reach),
+```
+
+with the listed order as fixed tie Hamiltonian path.  The stored tournament is
+again nontransitive:
+
+```text
+ranking leader = odd_moment_reduction
+score_hist = {0:1, 2:2, 3:1, 4:1, 5:2, 7:1}
+directed_3cycles = 4
+scc_sizes = [6,1,1]
+hamiltonian_paths = 17
+edge_flips_vs_exactness_only = 14
+```
+
+This is the useful updated warning: once the odd-moment lane and the
+irreducibility lane are added, the best carrier is neither the exact low-power
+packings nor the `78/90` beacon by itself, but the midpoint odd-moment
+reduction that explains all `p` at once.
+
 ## Open Tasks
 
-1. Prove or refute the general bracket
+1. Upgrade the odd-moment expansion to a global proof of
    `D_p(2pT_n,n)<0<D_p(2pT_n+1,n)` for all `p>=3`.
-2. Use HYP-2456's Beatty/Pell normal form as the side-word classifier, then
+2. Prove the `n=1` primitive live-factor irreducibility for every `p>=3`, or
+   identify the first exceptional `p` where it fails.
+3. Use HYP-2456's Beatty/Pell normal form as the side-word classifier, then
    extend the same endpoint-wall treatment to the remaining `F`/`Q` power
    balance families.
-3. Turn the `Q(3)` `78/90` shadow into a concrete `[72,36,16]`
+4. Turn the `Q(3)` `78/90` shadow into a concrete `[72,36,16]`
    minimum-design support-ledger constraint.
-4. Attach the same defect ledger to LRC14: compare the `27` shell, `78`,
+5. Attach the same defect ledger to LRC14: compare the `27` shell, `78`,
    `90`, and `91` resources.
-5. Lift interval balances into convolution/support balances, following
+6. Lift interval balances into convolution/support balances, following
    HYP-2452's hidden-boundary-total program.

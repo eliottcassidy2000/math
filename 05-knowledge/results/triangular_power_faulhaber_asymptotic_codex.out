@@ -1,0 +1,230 @@
+TRIANGULAR POWER-BALANCE FAULHABER ASYMPTOTIC
+=============================================
+Extends HYP-2454 with the exact odd-moment reformulation, the first
+two coefficients in the anchor expansion, the square-pyramidal cuboid
+packing, the n=1 irreducibility lane, and a proof-carrier tournament.
+
+ODD-MOMENT REFORMULATION
+========================
+Let c=a+n and u=n(n+1). Then
+  sum_{j=0}^n (a+j)^p = sum_{j=1}^n (a+n+j)^p
+becomes
+  c^p = 2 * sum_{r odd} binom(p,r) c^(p-r) S_r(n).
+Only odd Faulhaber moments survive because even binomial terms cancel in
+  (c+j)^p - (c-j)^p.
+
+Checks on small integer centers:
+  p=1, n=3, c=12: odd-moment residual = 0
+  p=2, n=4, c=40: odd-moment residual = 0
+  p=3, n=5, c=90: odd-moment residual = -450
+  p=4, n=6, c=168: odd-moment residual = -592704
+  p=5, n=7, c=280: odd-moment residual = -1229370016
+  p=6, n=8, c=432: odd-moment residual = -4179742331904
+
+LEADING ODD FAULHABER MOMENTS
+=============================
+In terms of u=n(n+1):
+  S_1 = u/2
+  S_3 = u^2/4
+  S_5 = u^2(2u-1)/12
+  S_7 = u^2(3u^2-4u+2)/24
+
+Only S_1, S_3, S_5 are needed for the first two asymptotic coefficients,
+because higher odd moments start at order u^(p-3) in the balance equation.
+
+COEFFICIENT MATCHING
+====================
+Write
+  c = p*u + alpha + beta/u + O(u^-2).
+Using only S_1, S_3, S_5, the coefficient equations are:
+  u^(p-1):   p*alpha - (p-1)(p-2)/12 = 0
+  u^(p-2):   p^3*beta + A^2/72 - A(p-3)(p-4)/360 = 0
+             where A=(p-1)(p-2).
+
+So
+  alpha = (p-1)(p-2)/(12p)
+  beta  = -(p-1)(p-2)(2p^2-4p-1)/(180 p^3)
+
+Exact verification for p=3..12:
+  p= 3: eq1=0, eq2=0, alpha=1/18, beta=-1/486
+  p= 4: eq1=0, eq2=0, alpha=1/8, beta=-1/128
+  p= 5: eq1=0, eq2=0, alpha=1/5, beta=-29/1875
+  p= 6: eq1=0, eq2=0, alpha=5/18, beta=-47/1944
+  p= 7: eq1=0, eq2=0, alpha=5/14, beta=-23/686
+  p= 8: eq1=0, eq2=0, alpha=7/16, beta=-133/3072
+  p= 9: eq1=0, eq2=0, alpha=14/27, beta=-350/6561
+  p=10: eq1=0, eq2=0, alpha=3/5, beta=-159/2500
+  p=11: eq1=0, eq2=0, alpha=15/22, beta=-197/2662
+  p=12: eq1=0, eq2=0, alpha=55/72, beta=-2629/31104
+
+Therefore
+  a_p(n) = p*n^2 + (p-1)*n + alpha + beta/u + O(u^-2)
+and since u=n(n+1)~n^2, the remainder is O(n^-4).
+
+EXACT LOW-POWER TOWERS
+======================
+p=1: c=u, so a=n^2 exactly.
+p=2: c=2u, so a=2n^2+n exactly.
+These are precisely the two integer towers already isolated in HYP-2454.
+
+NUMERICAL VERIFICATION
+======================
+Root bracket and asymptotic accuracy for p=3..8.
+Columns: n, root a_p(n), asymptotic, error, n^4*error.
+p=3
+  n=  5: root=85.055487116241083664727753, asym=85.055486968449931412894376, err=1.478E-7, n^4*err=9.237E-5
+  n= 10: root=320.055536860995151578689833, asym=320.055536849981294425738870, err=1.101E-8, n^4*err=1.101E-4
+  n= 20: root=1240.055550657232470275315510, asym=1240.055550656476582402508328, err=7.559E-10, n^4*err=1.209E-4
+  n= 50: root=7600.055554748668939549244855, asym=7600.055554748648430565641895, err=2.051E-11, n^4*err=1.282E-4
+  n=100: root=30200.055555351832786794192070, asym=30200.055555351831479444240720, err=1.307E-12, n^4*err=1.307E-4
+  n=200: root=120400.055555504371230898268080, asym=120400.055555504371148373359540, err=8.252E-14, n^4*err=1.320E-4
+
+p=4
+  n=  5: root=115.124740528551479305520640, asym=115.124739583333333333333333, err=9.452E-7, n^4*err=5.908E-4
+  n= 10: root=430.124929047806051431489843, asym=430.124928977272727272727273, err=7.053E-8, n^4*err=7.053E-4
+  n= 20: root=1660.124981403652039714995517, asym=1660.124981398809523809523810, err=4.843E-9, n^4*err=7.748E-4
+  n= 50: root=10150.124996936405912696859680, asym=10150.124996936274509803921569, err=1.314E-10, n^4*err=8.213E-4
+  n=100: root=40300.124999226493524956934449, asym=40300.124999226485148514851485, err=8.376E-12, n^4*err=8.376E-4
+  n=200: root=160600.124999805659732735167893, asym=160600.124999805659203980099502, err=5.288E-13, n^4*err=8.460E-4
+
+p=5
+  n=  5: root=145.199486484154515254374771, asym=145.199484444444444444444444, err=2.040E-6, n^4*err=1.275E-3
+  n= 10: root=540.199859546229115373617962, asym=540.199859393939393939393939, err=1.523E-7, n^4*err=1.523E-3
+  n= 20: root=2080.199963185060341932611091, asym=2080.199963174603174603174603, err=1.046E-8, n^4*err=1.673E-3
+  n= 50: root=12700.199993934924293703768541, asym=12700.199993934640522875816993, err=2.838E-10, n^4*err=1.774E-3
+  n=100: root=50400.199998468664954135245393, asym=50400.199998468646864686468647, err=1.809E-11, n^4*err=1.809E-3
+  n=200: root=200800.199999615258189974339549, asym=200800.199999615257048092868988, err=1.142E-12, n^4*err=1.827E-3
+
+p=6
+  n=  5: root=175.276975158112706162191804, asym=175.276971879286694101508916, err=3.279E-6, n^4*err=2.049E-3
+  n= 10: root=650.277558232143986866695823, asym=650.277557987280209502431725, err=2.449E-7, n^4*err=2.449E-3
+  n= 20: root=2500.277720230414846968256032, asym=2500.277720213599843229472859, err=1.682E-8, n^4*err=2.690E-3
+  n= 50: root=15250.277768297075368378035144, asym=15250.277768296619059146292262, err=4.563E-10, n^4*err=2.852E-3
+  n=100: root=60500.277775384048971754303985, asym=60500.277775384019883469828464, err=2.909E-11, n^4*err=2.909E-3
+  n=200: root=241000.277777176362829562193894, asym=241000.277777176360993386974592, err=1.836E-12, n^4*err=2.938E-3
+
+p=7
+  n=  5: root=205.356029862841462795685785, asym=205.356025267249757045675413, err=4.596E-6, n^4*err=2.872E-3
+  n= 10: root=760.356838403135370868025476, asym=760.356838059899284389080307, err=3.432E-7, n^4*err=3.432E-3
+  n= 20: root=2920.357063052864348983696001, asym=2920.357063029293349993058448, err=2.357E-8, n^4*err=3.771E-3
+  n= 50: root=17800.357129709666120116393097, asym=17800.357129709026467729949123, err=6.397E-10, n^4*err=3.998E-3
+  n=100: root=70600.357139537609693129877108, asym=70600.357139537568917241578385, err=4.078E-11, n^4*err=4.078E-3
+  n=200: root=281200.357142023123122806105525, asym=281200.357142023120548859202530, err=2.574E-12, n^4*err=4.118E-3
+
+p=8
+  n=  5: root=235.436062815232739134496237, asym=235.436056857638888888888889, err=5.958E-6, n^4*err=3.723E-3
+  n= 10: root=870.437106860699078334794552, asym=870.437106415719696969696970, err=4.450E-7, n^4*err=4.450E-3
+  n= 20: root=3340.437396948961121517093477, asym=3340.437396918402777777777778, err=3.056E-8, n^4*err=4.889E-3
+  n= 50: root=20350.437483022683847723620063, asym=20350.437483021854575163398693, err=8.293E-10, n^4*err=5.183E-3
+  n=100: root=80700.437495713491394975050551, asym=80700.437495713438531353135314, err=5.286E-11, n^4*err=5.286E-3
+  n=200: root=321400.437498923031425699350663, asym=321400.437498923028088723051410, err=3.337E-12, n^4*err=5.339E-3
+
+SQUARE-PYRAMIDAL CUBOID PACKING
+===============================
+Faulhaber at p=2 gives the square-pyramidal numbers
+  P_2(n)=1^2+...+n^2 = n(n+1)(2n+1)/6.
+Hence
+  6*P_2(n) = n(n+1)(2n+1) = u(2n+1),
+so six n-step square pyramids fill the u x (2n+1) cuboid.
+Equivalently, one doubled and four regular pyramids also account for the
+same cuboid because 2+4=6 at the level of the volume identity.
+
+This is the p=2 analogue of the p=1 staircase triangle identity
+  2*T_n = n(n+1) = u,
+so the first two exact anchors are rectangle/cuboid packings with no
+Bernoulli correction, while p>=3 acquires the Faulhaber offset alpha+beta/u+...
+
+Sample values:
+  n=1: T_n=1, 2*T_n=2=u=2, P_2(n)=1, 6*P_2(n)=6=u*(2n+1)=6
+  n=2: T_n=3, 2*T_n=6=u=6, P_2(n)=5, 6*P_2(n)=30=u*(2n+1)=30
+  n=3: T_n=6, 2*T_n=12=u=12, P_2(n)=14, 6*P_2(n)=84=u*(2n+1)=84
+  n=4: T_n=10, 2*T_n=20=u=20, P_2(n)=30, 6*P_2(n)=180=u*(2n+1)=180
+  n=5: T_n=15, 2*T_n=30=u=30, P_2(n)=55, 6*P_2(n)=330=u*(2n+1)=330
+  n=6: T_n=21, 2*T_n=42=u=42, P_2(n)=91, 6*P_2(n)=546=u*(2n+1)=546
+
+Also
+  S_1(n)=n(n+1)(2n+1)/2 = 3*P_2(n),
+so the p=1 common sum is already three square pyramids.
+
+LIVE BALANCE POLYNOMIALS AT n=1
+================================
+At n=1 the balance polynomial is
+  D_p(C,1) = C^p + (C-1)^p - (C+1)^p.
+For even p, C=0 is a forced symmetry root, so the live factor is D_p(C,1)/C.
+This is the smallest row where higher-p irrationality is visible without
+any asymptotic expansion.
+
+Exact low-power cases:
+  p=1: C - 2
+  p=2: C - 4     after removing the forced C factor
+
+Irreducible live factors for p=3..12 (finite-field certificates):
+  p= 3: C^3 - 6*C^2 - 2    irreducible mod 5
+  p= 4: C^3 - 8*C^2 - 8    irreducible mod 7
+  p= 5: C^5 - 10*C^4 - 20*C^2 - 2    irreducible mod 23
+  p= 6: C^5 - 12*C^4 - 40*C^2 - 12    irreducible mod 17
+  p= 7: C^7 - 14*C^6 - 70*C^4 - 42*C^2 - 2    irreducible mod 37
+  p= 8: C^7 - 16*C^6 - 112*C^4 - 112*C^2 - 16    irreducible mod 13
+  p= 9: C^9 - 18*C^8 - 168*C^6 - 252*C^4 - 72*C^2 - 2    irreducible mod 11
+  p=10: C^9 - 20*C^8 - 240*C^6 - 504*C^4 - 240*C^2 - 20    irreducible mod 7
+  p=11: C^11 - 22*C^10 - 330*C^8 - 924*C^6 - 660*C^4 - 110*C^2 - 2    irreducible mod 19
+  p=12: C^11 - 24*C^10 - 440*C^8 - 1584*C^6 - 1584*C^4 - 440*C^2 - 24    irreducible mod 109
+
+Certificate summary through p=20:
+  p=3:q=5, p=4:q=7, p=5:q=23, p=6:q=17, p=7:q=37, p=8:q=13, p=9:q=11, p=10:q=7, p=11:q=19, p=12:q=109, p=13:q=43, p=14:q=11, p=15:q=19, p=16:q=13, p=17:q=41, p=18:q=157, p=19:q=197, p=20:q=37
+
+Interpretation:
+  The tower cases p=1,2 are the last rows whose live n=1 balance factors
+  down to degree 1. From p>=3 onward, the first visible balance polynomial
+  is already irreducible in the stored window, so the higher anchors are
+  algebraic but not split by the old tower mechanism.
+
+TOURNAMENT ANALYSIS
+===================
+Assumption challenge:
+  Vertices were not taken to be powers p, interval entries, or odd moments
+  alone. The chosen quotient uses proof carriers, preserving exactness,
+  packing geometry, asymptotic reach, irreducibility signal, support-transfer
+  value, and proof reach while discarding decorative row data.
+
+Pairwise observable:
+  majority over (exactness, geometry, generality, irreducibility,
+  support_transfer, proof_reach), with the listed carrier order as the
+  fixed tie Hamiltonian path.
+
+Vertices:
+  rectangle_packing: (exact=5, geom=5, gen=1, irr=0, support=1, reach=2)
+  square_pyramidal_cuboid: (exact=5, geom=5, gen=2, irr=1, support=2, reach=3)
+  odd_moment_reduction: (exact=5, geom=2, gen=5, irr=3, support=4, reach=5)
+  alpha_beta_asymptotic: (exact=4, geom=1, gen=4, irr=2, support=3, reach=4)
+  n1_live_irreducibility: (exact=4, geom=0, gen=3, irr=5, support=5, reach=4)
+  78_90_support_shadow: (exact=4, geom=3, gen=2, irr=1, support=5, reach=3)
+  global_bracket_tail: (exact=1, geom=1, gen=5, irr=2, support=3, reach=5)
+  hidden_lift_transfer: (exact=2, geom=0, gen=3, irr=4, support=5, reach=3)
+
+Tournament fingerprint:
+  ranking leader = odd_moment_reduction
+  score_hist = {0: 1, 2: 2, 3: 1, 4: 1, 5: 2, 7: 1}
+  directed_3cycles = 4
+  scc_sizes = [6, 1, 1]
+  hamiltonian_paths = 17
+  edge_flips_vs_exactness_only = 14
+
+Readout:
+  The leader is odd_moment_reduction, not the exact p=1/p=2 packings and
+  not the 78/90 shadow. The tournament therefore prefers the carrier that
+  simultaneously explains all p, produces the asymptotic, and interfaces
+  with the irreducibility and hidden-lift lanes.
+
+TAKEAWAYS
+=========
+1. The midpoint c=a+n is centered at p*u, where u=n(n+1), for every power p.
+2. Only odd Faulhaber moments survive in the exact balance equation.
+3. The first two Bernoulli/Faulhaber corrections are
+     +(p-1)(p-2)/(12p) and
+     -(p-1)(p-2)(2p^2-4p-1)/(180 p^3 u).
+4. p=1 and p=2 are exactly the no-correction cases; from p>=3 onward the
+   same triangular carrier persists but acquires Bernoulli address terms.
+5. The first visible higher-p live balance polynomial (n=1) is already
+   irreducible in the stored p=3..20 window, so the tower split stops
+   exactly where the Bernoulli/Faulhaber corrections begin.
