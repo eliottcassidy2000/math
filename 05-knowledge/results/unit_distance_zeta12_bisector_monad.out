@@ -1,0 +1,32 @@
+Z[zeta_12] brute-force units in box 3: found 12 (claim: 12)
+  CONFIRMED: exactly the 12 roots of unity; transverse-free.
+
+======================================================================
+CALIBRATION triangular sub-hexagon (expect Harborth floor(3n-sqrt(12n-3))): #unit vectors = 6
+     n  best  recount   ref   3n  U-3n  cmp
+    21    47       47    48   63   -16   ref-1
+    22    49       49    50   66   -17   ref-1
+    23    52       52    53   69   -17   ref-1
+    24    55       55    56   72   -17   ref-1
+    25    57       57    58   75   -18   ref-1
+    26    60       60    61   78   -18   ref-1
+    27    63       63    64   81   -18   ref-1
+    28    65       65    66   84   -19   ref-1
+    29    68       68    69   87   -19   ref-1
+    30    71       71    72   90   -19   ref-1
+
+======================================================================
+Z[zeta_12] exact-30deg bisector (DOES IT CROSS 3N AT 28?): #unit vectors = 12
+     n  best  recount   ref   3n  U-3n  cmp
+    21    57       57    57   63    -6   = ref
+    22    59       59    60   66    -7   ref-1
+    23    62       62    64   69    -7   ref-2
+    24    66       66    68   72    -6   ref-2
+    25    70       70    72   75    -5   ref-2
+    26    74       74    76   78    -4   ref-2
+    27    78       78    81   81    -3   ref-3
+    28    83       83    85   84    -1   ref-2
+    29    85       85    89   87    -2   ref-4
+    30    88       88    93   90    -2   ref-5
+
+DONE.
