@@ -117,6 +117,18 @@ This suggests a route for future tournament and LRC work: when a scalar looks
 mysteriously rational, look for the product/elementary object whose
 log-derivative or moment map produced it.
 
+New nearby example: the triangular power-tower anchor problem can be rewritten
+in midpoint form as
+
+```text
+F_p(c,n) = c^p - 2 * sum_{r odd} binom(p,r) c^(p-r) S_r(n),
+```
+
+so the entire asymptotic correction is carried by odd Faulhaber/Bernoulli
+moments. This is the finite discrete analogue of the same “retain the moment
+carrier before trusting the scalar” rule. See
+`03-artifacts/drafts/triangular-power-anchor-asymptotics.md`.
+
 ## Assumption Challenge
 
 The vertices of the Tournament Analysis need not be numbers `k` or zeta values.
