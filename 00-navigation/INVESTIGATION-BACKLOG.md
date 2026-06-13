@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: irreducibility tricks as LRC14 ramified local gates (HYP-2471/T810/OPEN-Q-088)
+
+**Done:** added `04-computation/irreducibility_tricks_lrc_transfer_codex.py` and stored output. The script turns polynomial irreducibility tactics into LRC14 proof carriers: primitive normal form, mod-p residue blockers, Eisenstein/Newton valuation repairs, Singh/Cohn factor-capture budgets, Hensel/recombination ledgers, and Cohn/Perron dominance. The concrete diagnostic is the two HYP-2470 Q27-feasible four-deletion packets. Both have `12/13` speeds divisible by `7`; each has exactly one non-7 primitive escape; both primitive escapes are divisible by `13` (`936=2^3*3^2*13` and `1066=2*13*41`). They open at the missing plain shells `q=33` and `q=31`, with Bprime(any) and positive exact safe measure. Proof-carrier Tournament Analysis is transitive with leader `integral_convolution_lift_ilp`, reflecting a pipeline rather than competing heuristics.
+**Next:** prove the ramified 7-ideal/13-clock portal lemma: any four-deletion Q27 packet with this valuation shape opens at `q in {31,33,41}` or by Bprime. Extract dual/Farkas certificates from the HYP-2465/HYP-2470 MILPs so Q27 infeasibility becomes a human-readable local-prime certificate. Then build a below-eight-core survivor ledger with shell-27 class, 13-clock debt, divisor fiber, support-load, and owner/Bprime channels; add a Cohn/Perron outside-window normalizer for speeds beyond `1092`.
+
 ## Lead codex-2026-06-13: LRC14 eight-core shell-41 exception gate (HYP-2470/T809/OPEN-Q-087)
 
 **Done:** pushed the first below-nine-core finite boundary past HYP-2465. Added `04-computation/lrc14_eight_core_q27_setcover_codex.py` plus stored output. Q27-only set-cover over all `binom(12,4)=495` four-core deletion sets gives `493` infeasible deletion addresses and exactly two Q27-feasible addresses after repairing `12` sparse short-cap unknowns. The two addresses are `(28,42,56,84)` and `(42,56,70,84)`. Example Q27 packets open at plain `q=33` and `q=31`, respectively, and both have Bprime(any) plus positive exact safe-measure certificates. Adding the missing plain shells through `41` makes both exceptional addresses infeasible. Therefore every primitive carry-window row retaining at least eight core speeds has either a Q27 witness or a plain witness `q<=41`.

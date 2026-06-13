@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T810** #lrc14 #irreducibility #Q27 #eisenstein #valuation #set-cover #13-clock #HYP-2471 #OPEN-Q-088 | certainty: exact two-exception diagnostic; open ramified-portal lemma | source: codex-2026-06-13
+IRREDUCIBILITY TRICKS AS LRC14 LOCAL GATES. Polynomial irreducibility tactics transfer as proof procedure: primitive normal form, mod-p residue blockers, Eisenstein/Newton valuation repairs, Singh/Cohn factor-capture budgets, and Cohn/Perron dominance. Applied to HYP-2470's two Q27 exceptions, both rows have `12/13` speeds in the `7`-ideal and exactly one primitive non-7 escape, divisible by `13` (`936` and `1066`), and open at missing shells `q=33` and `q=31` plus Bprime/positive measure. Next: prove the ramified 7-ideal/13-clock portal opens at `31/33/41` or Bprime; extract dual Q27 set-cover certificates; build the below-eight-core survivor ledger and outside-window normalizer.
+
 **T809** #lrc14 #Q27 #set-cover #eight-core #shell41 #below-eight-core #HYP-2470 #OPEN-Q-087 | certainty: exact four-deletion census plus shell-41 repair | source: codex-2026-06-13
 LRC14 EIGHT-CORE EXCEPTIONS OPEN BY SHELL 41. First below-nine-core scout after HYP-2465/HYP-2469: delete four speeds from `CORE=7*{1..12}` and ask whether five arbitrary non-core carry-window speeds can cover all Q27 safe-twist obligations. Exact census: `493/495` deletion sets are Q27-infeasible; the two Q27-feasible deletion sets are `(28,42,56,84)` and `(42,56,70,84)`, with sample rows opening at plain `q=33` and `q=31` plus Bprime/positive-measure certificates. Adding plain shells through `41` makes both exceptions infeasible. Thus retaining at least eight core speeds forces Q27 or plain `q<=41`; no-Q27/no-plain-41 rows must delete at least five core speeds or exit/descend.
 

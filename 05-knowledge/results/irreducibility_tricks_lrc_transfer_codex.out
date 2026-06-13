@@ -1,0 +1,123 @@
+==============================================================================
+Codex irreducibility tricks -> LRC14 proof-transfer atlas
+==============================================================================
+
+A. Irreducibility tricks as LRC proof carriers
+  mod_p_convolution_blocker
+    poly: Find a prime p for which f mod p has no nontrivial split.
+    LRC : Find a denominator family, such as Q27, whose safe-twist obligations cannot all be covered.
+    use : Turns local survivor emptiness into a global no-counterexample certificate in a normalized class.
+    risk: Fails on ramified packets where residue data collapse.
+  eisenstein_newton_valuation
+    poly: Use p-adic heights/Newton slopes when f mod p looks reducible.
+    LRC : Use prime-ideal carry data: many speeds in one ideal, one primitive escape, next-shell witness.
+    use : Explains the two HYP-2470 exceptions as ramified local packets rather than random misses.
+    risk: Needs a clean inequality replacing the scan over q=31,33.
+  gauss_primitive_normal_form
+    poly: Strip content; prove irreducibility for the primitive part.
+    LRC : Normalize rows by gcd, core retention, carry window, and Bprime/opening channels.
+    use : Prevents wasting effort on nonprimitive 7-multiple shadows.
+    risk: Can hide large outside-window runners unless paired with a normalizer.
+  hensel_recombination_ladder
+    poly: Factor locally, then ask whether local factors recombine globally.
+    LRC : Lift Q27 residue/fiber packets through divisor shells and missing plain-shell layers.
+    use : Suggests storing survivor ledgers instead of only first-witness denominators.
+    risk: May be too detailed unless the state space is compressed.
+  cohn_perron_digit_dominance
+    poly: Large-base digit/value dominance can certify irreducibility.
+    LRC : Large speed as a carry digit: either it opens Bprime or folds to a lower carry address.
+    use : A route for outside-window normalization after the eight-core carry-window theorem.
+    risk: Dominance constants are the hard part.
+  singh_factor_capture_budget
+    poly: A value f(m) with small Omega limits possible irreducible factors.
+    LRC : Treat blocker obligations as tokens to allocate among added speeds; small budget forces failure.
+    use : Turns HYP-2465/HYP-2470 MILP certificates into proof-shaped resource inequalities.
+    risk: The exact Singh theorem has hypotheses; the LRC use is an analogy until formalized.
+  fixed_divisor_admissibility
+    poly: Bunyakovsky admissibility forbids one prime from dividing every value.
+    LRC : No single residue/clock should be allowed to cover all twists without a compensating opening.
+    use : Pushes the 13-clock residual toward a finite exceptional atlas.
+    risk: Admissibility is necessary, not sufficient.
+  galois_cycle_type_sequence
+    poly: Factorization mod p gives Frobenius cycle-type data.
+    LRC : First-witness denominator sequence gives cover-type data: which shells open which packets.
+    use : Could classify below-eight-core packets by cycle-type-like signatures.
+    risk: Mostly descriptive until a Chebotarev-like replacement lemma is found.
+  discriminant_ramification_map
+    poly: Bad primes divide the discriminant and mark ramified local behavior.
+    LRC : Sparse unresolved deletion addresses mark ramification: add shell 31/33/41 or Bprime.
+    use : Treats finite exceptions as data to resolve, not as theorem failure.
+    risk: Requires avoiding post-hoc overfitting.
+  integral_convolution_lift_ilp
+    poly: Reducibility is existence of an integer coefficient-grid lift.
+    LRC : Q-blocking is existence of an obligation-cover lift by added speeds.
+    use : Makes exact infeasibility certificates the analogue of irreducibility certificates.
+    risk: MILP dual certificates must be extracted to become human proof.
+
+B. HYP-2470 exceptions through the irreducibility lens
+  Q27 size=76; missing plain shells through 41=(29, 31, 33, 37, 39, 41)
+  E1: deleted=(28, 42, 56, 84) added=(91, 322, 350, 504, 936)
+    row=(7, 14, 21, 35, 49, 63, 70, 77, 91, 322, 350, 504, 936)
+    gcd=1 Q27=None first_plain_q=33 Q41=(33, 13) Bprime=(True, 322, Fraction(83, 175812))
+    p0=148352/2169475 components=250 safe_points=536
+    base_Q27_obligations=630 added_Q27_cover_counts=((91, 266), (322, 182), (350, 182), (504, 140), (936, 90))
+    7-ideal occupancy=12/13; primitive_non7=(936,); non7_all_13_clock=True
+      added   91 = 7*13         7-ideal/13-clock
+      added  322 = 2*7*23       7-ideal
+      added  350 = 2*5^2*7      7-ideal
+      added  504 = 2^3*3^2*7    7-ideal
+      added  936 = 2^3*3^2*13   13-clock/primitive-escape
+    valuation histograms={7: {0: 1, 1: 11, 2: 1}, 13: {0: 11, 1: 2}, 31: {0: 13}, 41: {0: 13}}
+    first missing-shell openings=((33, 13, 2), (37, 2, 6), (41, 1, 8))
+    witness profile at q=33, a=13, band=2:
+      ((7, 8), (14, 16), (21, 9), (35, 7), (49, 10), (63, 6), (70, 14), (77, 11), (91, 5), (322, 5), (350, 4), (504, 15), (936, 9))
+  E2: deleted=(42, 56, 70, 84) added=(91, 119, 700, 1008, 1066)
+    row=(7, 14, 21, 28, 35, 49, 63, 77, 91, 119, 700, 1008, 1066)
+    gcd=1 Q27=None first_plain_q=31 Q41=(31, 14) Bprime=(True, 700, Fraction(105799, 188042400))
+    p0=6870869/125074950 components=274 safe_points=584
+    base_Q27_obligations=504 added_Q27_cover_counts=((91, 266), (1008, 140), (700, 126), (1066, 74), (119, 70))
+    7-ideal occupancy=12/13; primitive_non7=(1066,); non7_all_13_clock=True
+      added   91 = 7*13         7-ideal/13-clock
+      added  119 = 7*17         7-ideal
+      added  700 = 2^2*5^2*7    7-ideal
+      added 1008 = 2^4*3^2*7    7-ideal
+      added 1066 = 2*13*41      13-clock/primitive-escape
+    valuation histograms={7: {0: 1, 1: 11, 2: 1}, 13: {0: 11, 1: 2}, 31: {0: 13}, 41: {0: 12, 1: 1}}
+    first missing-shell openings=((31, 14, 2), (37, 2, 4), (39, 5, 4))
+    witness profile at q=31, a=14, band=2:
+      ((7, 5), (14, 10), (21, 15), (28, 11), (35, 6), (49, 4), (63, 14), (77, 7), (91, 3), (119, 8), (700, 4), (1008, 7), (1066, 13))
+
+C. Tournament Analysis
+  vertices: proof carriers/tricks, not runners or arcs
+  observable=(exactness, local_to_global, exception_power, LRC_leverage, computability, descent_power)
+  switch/gauge: primitive-normal-form first; scalar q-blocking is only the residue face
+  tie Hamiltonian path: the listed trick order in this script
+  fingerprint: score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} directed_3cycles=0 scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths=1 edge_flips_vs_tie_path=15/45
+    integral_convolution_lift_ilp      out=9 scores=(5, 5, 5, 5, 5, 4)
+    mod_p_convolution_blocker          out=8 scores=(5, 5, 4, 5, 5, 3)
+    eisenstein_newton_valuation        out=7 scores=(5, 4, 5, 5, 4, 5)
+    cohn_perron_digit_dominance        out=6 scores=(4, 5, 4, 5, 3, 5)
+    gauss_primitive_normal_form        out=5 scores=(5, 5, 3, 4, 5, 4)
+    singh_factor_capture_budget        out=4 scores=(4, 4, 5, 5, 5, 4)
+    discriminant_ramification_map      out=3 scores=(4, 4, 5, 5, 4, 4)
+    hensel_recombination_ladder        out=2 scores=(4, 4, 4, 4, 4, 5)
+    fixed_divisor_admissibility        out=1 scores=(3, 4, 4, 4, 5, 3)
+    galois_cycle_type_sequence         out=0 scores=(3, 3, 3, 4, 4, 3)
+
+D. Proof-route hypotheses generated by the transfer
+  Residue-face theorem: HYP-2465+HYP-2470 already say: retaining >=8 core speeds in the carry window forces Q27 or q<=41.  The next proof artifact should extract reusable dual set-cover certificates, analogous to a clean mod-p irreducibility certificate.
+  Ramification/Eisenstein portal: The only four-deletion Q27 exceptions have 12/13 speeds in the 7-ideal and a single non-7 primitive escape divisible by 13.  Prove this shape always opens at q in {31,33,41} or by Bprime, instead of relying on enumeration.
+  Factor-capture budget lemma: Model each Q27 safe twist as a prime-token-like obligation.  With <=e+1 added speeds, the obligation allocation should be impossible for e<=4 except the ramified portal above; this is the LRC analogue of small Omega(f(m)).
+  Cohn/Perron outside-window normalizer: A very large speed should behave like a dominant base digit: either it creates a Bprime interval, or its carry residue can be folded into the 1..1092 window.
+  Cycle-type signature atlas: For below-eight-core rows, store the ordered first-witness shells, Q27 divisor fibers, 13-clock debt, and Bprime owner as a Frobenius-cycle-type analogue.
+
+E. Assumption challenge
+  Alternate vertex sets considered: runners, gaps, fixed circle sections, section
+  boundaries, wall-crossing events, residues, cover arcs, Fourier modes, matroid
+  circuits, denominator obligations, added-speed cover masks, valuation primes,
+  and proof tricks.  For this transfer the selected quotient is proof tricks plus
+  denominator obligations.  It preserves exact local-to-global certificate logic
+  and finite exception structure, but destroys continuous timing geometry and
+  arbitrary outside-window interactions.  Challenged assumption: a tournament
+  vertex need not be a runner; the proof-bearing vertex can be a surviving split
+  obligation, exactly as polynomial irreducibility is about hidden factor grids.

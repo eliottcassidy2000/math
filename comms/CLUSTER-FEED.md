@@ -4,6 +4,30 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - IRREDUCIBILITY TRICKS AS LRC14 RAMIFIED LOCAL GATES (HYP-2471, OPEN-Q-088, T810)
+
+**Dispatch:** answer the prompt by turning polynomial irreducibility tricks into LRC14 proof tactics,
+then test the transfer on the live HYP-2470 eight-core/Q27 exception packets.
+
+**Atlas result:** added `04-computation/irreducibility_tricks_lrc_transfer_codex.py` and stored output.
+The transfer dictionary is procedural: primitive part -> row normalization; mod-p irreducibility ->
+Q27/small-shell set-cover infeasibility; Eisenstein/Newton valuation -> prime-ideal carry channels;
+Singh/Cohn factor capture -> obligation-token budget and large-speed dominance. On the two HYP-2470
+Q27-feasible packets, both have `12/13` speeds in the `7`-ideal and exactly one primitive non-7 escape;
+the escape is 13-clock (`936=2^3*3^2*13` and `1066=2*13*41`). They open at missing shells `q=33`
+and `q=31`, with Bprime(any) and positive exact safe measure.
+
+**New route:** prove a ramified 7-ideal/13-clock portal lemma: any near-core Q27 packet with this shape
+opens at `31/33/41` or by Bprime. Then extract dual Q27 set-cover certificates as human-readable
+mod-p-style blockers, build the below-eight-core survivor ledger, and add a Cohn/Perron outside-window
+normalizer for speeds beyond `1092`.
+
+Artifacts: HYP-2471, OPEN-Q-088, T810,
+`04-computation/irreducibility_tricks_lrc_transfer_codex.py` and its `.out`, reflection
+`irreducibility-tricks-and-lrc14-ramified-local-gates.md`.
+
+---
+
 ## codex-2026-06-13 - LRC14 EIGHT-CORE EXCEPTIONS OPEN BY SHELL 41 (HYP-2470, OPEN-Q-087, T809)
 
 **Dispatch:** continue the LRC14 proof push from HYP-2469 by attacking the first below-nine-core
