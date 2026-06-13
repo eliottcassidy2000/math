@@ -1,0 +1,83 @@
+==========================================================================
+PART 1 — lattice-perfection: Harborth(k) vs planar u(k); first divergence
+==========================================================================
+    k  Harborth(k)   u(k)  perfect?
+    2            1      1      True
+    3            3      3      True
+    4            5      5      True
+    5            7      7      True
+    6            9      9      True
+    7           12     12      True
+    8           14     14      True
+    9           16     18     False
+   10           19     20     False
+   11           21     23     False
+   12           24     27     False
+   13           26     30     False
+   14           29     33     False
+  => lattice-perfect (Harborth=u) for k<=8; FIRST imperfect size = 9
+
+==========================================================================
+PART 2 — max unit-edges over ALL connected triangular-lattice patches (k<=9)
+==========================================================================
+  k=2: max edges over     3 connected patches = 1  (Harborth 1)  OK
+  k=3: max edges over    11 connected patches = 3  (Harborth 3)  OK
+  k=4: max edges over    44 connected patches = 5  (Harborth 5)  OK
+  k=5: max edges over   186 connected patches = 7  (Harborth 7)  OK
+  k=6: max edges over   814 connected patches = 9  (Harborth 9)  OK
+  k=7: max edges over  3652 connected patches = 12  (Harborth 12)  OK
+  k=8: max edges over 16689 connected patches = 14  (Harborth 14)  OK
+  k=9: max edges over 77359 connected patches = 16  (Harborth 16)  OK
+
+==========================================================================
+PART 3 — exact resonant-product cap at n=27 (=3*9), the only nontrivial 2-factor
+==========================================================================
+  e(K3)=3 (=3=u(3)); densest 9-lattice patch e=16 (=16=Harborth(9) < u(9)=18)
+  ChordSpec(K3)={1: 3}  -> chord-free (only norm 1)
+  ChordSpec(3x3 patch)={1: 16, 4: 7, 3: 8, 7: 4, 12: 1}
+
+  resonant U over (3-factor) (+)_t (3x3 9-patch), scan t=2..30:
+         3-factor  e  best_t  Delta    U
+               K3  3    None      0   75
+       path(120°)  2       3      4   70
+   path(straight)  2       4      3   69
+  Analytic bound: U(27,resonant) = 9*e(G3)+3*e(H9)+Delta_t,
+    e(H9)<=Harborth(9)=16, Delta_t<=8*(3-e(G3))  =>  U <= e(G3)+72 <= 75.
+    (With only the planar bound e(H9)<=u(9)=18: U <= e(G3)+78 <= 81.)
+  => no 2-factor RESONANT product beats 81 at 27; exact cap 75 (resonance HURTS).
+
+==========================================================================
+PART 4 — generic product cap P_gen(n), gap to 3N, lattice-perfect chord factorizns
+==========================================================================
+    n  P_gen     arg   3n  gap  LP-chord factrzn (parts<=8, >=1 size>=4)
+   24     66 (2, 12)   72    6                          [(3, 8), (4, 6)]
+   25     70  (5, 5)   75    5                                  [(5, 5)]
+   26     73 (2, 13)   78    5                                        []
+   27     81  (3, 9)   81    0                                        []
+   28     83  (4, 7)   84    1                                  [(4, 7)]
+  n=24 (LP 4x6,3x8): gap 6 too big;  n=25 (LP 5x5): gap 5 too big;
+  n=26 (only 2x13, 13 imperfect): no LP factorization;
+  n=27 (only 3x9, 9 imperfect; 3 chord-free): excluded -- generic merely TIES 81;
+  n=28 (LP 4x7): gap=1 < Delta_3=2  =>  FIRST resonant crossing.
+
+==========================================================================
+PART 5 — explicit n=28 resonant crossing  W7 (+)_3 R = 85 > 84  (exact)
+==========================================================================
+  e(W7)=12, e(R)=5, |W7|=7, |R|=4
+  generic Cartesian P(28) = 12*4 + 7*5 = 83
+  Delta_3(R,W7) = 2
+  U(W7 (+)_3 R) = 83 + 2 = 85  vs 3*28 = 84  -> CROSS
+  sizes 4,7 lattice-perfect: Harborth(4)=u(4)=5=5, Harborth(7)=u(7)=12=12
+  ChordSpec(R)={1: 5, 3: 1}  -> non-unit chord norm 3 (sqrt3) present
+
+==========================================================================
+PART 6 — EXHAUSTIVE resonant-product max at n=24,25 over ALL connected patches
+==========================================================================
+  n=24 = 3x8: max resonant U = 66 (e(G)=3,e(H)=14,best t=None,Delta=0)  vs 3N=72  no
+  n=24 = 4x6: max resonant U = 68 (e(G)=5,e(H)=9,best t=3,Delta=2)  vs 3N=72  no
+  n=25 = 5x5: max resonant U = 72 (e(G)=7,e(H)=7,best t=3,Delta=2)  vs 3N=75  no
+  n=26 (=2x13): size-2 factor gives Cartesian <= 1*13+2*Harborth(13) = 65 (chord-free
+    edge) or <=2*26=52 with bonus <=12 (norm-t 2-pt) => U<=65<78. No cross.
+  => 2-factor RESONANT products do NOT cross 3N at n<=27; n=28 is the FIRST.
+
+DONE.
