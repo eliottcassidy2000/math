@@ -1,0 +1,26 @@
+=== Pollock's conjectures via the repo additive-basis min-summands DP ===
+   (atom generator swapped to 3D figurate numbers; nothing hardcoded)
+
+--- cubes  k^3  (Waring g(3)=9; only 23,239 need 9) ---
+   cubes: max arity up to 400000 = 9; count needing 9 = 2 (largest 239); arity histogram {1: 73, 2: 2365, 3: 41809, 4: 220453, 5: 131267, 6: 3895, 7: 121, 8: 15, 9: 2}
+      vs literature bound 9: MATCHES.  expect exactly {23,239} at arity 9
+      numbers needing 9 cubes: [23, 239]
+
+--- tetrahedral  C(k+2,3)  (Pollock 5; OPEN; 241 exceptions, largest 343867) ---
+   tetrahedral: max arity up to 400000 = 5; count needing 5 = 241 (largest 343867); arity histogram {1: 132, 2: 7623, 3: 177487, 4: 214517, 5: 241}
+      vs literature bound 5: MATCHES.  expect 241 numbers at arity 5, largest 343867 (A000797)
+      #needing 5 tetrahedral = 241; largest = 343867; first few = [17, 27, 33, 52, 73, 82, 83, 103]
+
+--- octahedral  k(2k^2+1)/3  (Pollock 7; Brady 2016 large N) ---
+   octahedral: max arity up to 400000 = 7; count needing 7 = 12 (largest 309); arity histogram {1: 84, 2: 3122, 3: 64623, 4: 303786, 5: 28205, 6: 168, 7: 12}
+      vs literature bound 7: MATCHES.  Brady: 7 suffices for large N
+
+--- icosahedral  k(5k^2-5k+2)/2  (Pollock 13 WRONG; true 15; cex (47, 83, 94, 95, 119)) ---
+   icosahedral: max arity up to 200000 = 15; count needing 15 = 1 (largest 95); arity histogram {1: 43, 2: 832, 3: 9822, 4: 67067, 5: 108564, 6: 12353, 7: 1010, 8: 188, 9: 57, 10: 26, 11: 16, 12: 10, 13: 7, 14: 4, 15: 1}
+      vs literature bound 15: MATCHES.  Basak et al 2025: true bound 15; 13 fails at 47,83,94,119; 95 needs 15
+      numbers needing >13 icosahedral (counterexamples to Pollock's 13): [47, 83, 94, 95, 119]
+
+--- dodecahedral  k(3k-1)^2... use k(3k^2-3k+1)? standard: (3k^3-3k^2+k)? ---
+   dodecahedral: max arity up to 200000 = 22; count needing 22 = 1 (largest 79); arity histogram {1: 35, 2: 560, 3: 5554, 4: 35614, 5: 101100, 6: 49999, 7: 5434, 8: 1061, 9: 341, 10: 145, 11: 59, 12: 29, 13: 15, 14: 11, 15: 10, 16: 9, 17: 7, 18: 6, 19: 5, 20: 3, 21: 2, 22: 1}
+      vs literature bound 22: MATCHES.  Basak et al 2025: true bound 22; 21 fails only at 79
+      numbers needing >21 dodecahedral (counterexamples to Pollock's 21): [79]

@@ -73,7 +73,12 @@ degrees 3 and 5.
   theorem** (Lagrange four squares) as the arity engine. A general Pollock proof
   method (representing every integer by `k` values of a fixed polynomial) is the
   template for proving completeness of any score-determined channel; THM-462 is
-  the `Σe_i²` instance.
+  the `Σe_i²` instance. NOTE (grounded): the modern Pollock proof method —
+  Basak–Dong–Saettone–Zaharescu, IMRN 2025 (DOI 10.1093/imrn/rnaf180,
+  icosahedral+dodecahedral) and Brady, JLMS 2016 (arXiv:1509.04316, octahedral) —
+  is Linnik's pairing `f(q+x)+f(q−x) → ·(x²+y²+z²)` (a TERNARY sum of squares,
+  Bombieri-along-curves + Hasse–Weil) + the explicit-error circle method + a
+  finite descent. THM-462's `f(s)=m+(Σe_i²)/2` IS Linnik's pairing in miniature.
 - The **forbidden values are the Pollock *exceptions*** — the finite residue
   obstructions a circle-method proof isolates into a "singular series vanishes /
   finite exceptional set." `c5=10`, `H∈{7,21}` are exactly such exceptions; their
