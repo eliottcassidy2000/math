@@ -1,0 +1,23 @@
+=== RESOURCE CLIMB: how high can a primitive 13-set block the band ladder? ===
+   K = target ceiling (block all shells q<=K).  band-k ceiling = (k+1)*14-1.
+   For each K: can we block all q<=K? with what dominance ratio rho=max/2nd?
+   rho > 13 => B'-DOMINANT (THM-398 Cor B2 fires => loose anyway).
+
+    K  band  blocked?  min-dominance-rho  non-dom-blocker?  maxentry  true-height
+    27  ~ 2   YES       rho=  1.00          YES          476     29
+    41  ~ 3   YES       rho=  1.00          YES          726     43
+    55  ~ 4   YES       rho=  1.05          YES          989     56
+    69  ~ 5   no(res=26)   --                  --              1189     best-effort
+    83  ~ 6   no(res=74)   --                  --              1406     best-effort
+
+=== verdict ===
+   NON-DOMINANT blockers found at K = [27, 41, 55]
+   dominance rho vs K (does rho -> 13 as K grows? => forced dominance):
+      K=27: min non-dom rho achievable = 1.00, true height = 29, max entry 476
+      K=41: min non-dom rho achievable = 1.00, true height = 43, max entry 726
+      K=55: min non-dom rho achievable = 1.05, true height = 56, max entry 989
+   HIGHEST K with a NON-DOMINANT full blocker = 55 (band-4); ladder height there > 55.
+   => the band ladder has NO finite ceiling for non-dominant configs at least up
+      to band-4; consistent with HYP-2438 (closure needs B'(any)).
+
+=== TOTAL 405.3s ===

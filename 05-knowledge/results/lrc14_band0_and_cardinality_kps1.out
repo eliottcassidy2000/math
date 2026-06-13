@@ -1,0 +1,18 @@
+=== PART B: band-0 lemma (q<=13): witness-at-q <=> q divides no runner ===
+   240000 (config,q<=13) pairs: 0 mismatches  => LEMMA HOLDS
+   configs blocking all q<=13: 28376; divisor-cover violations: 0 (must be 0)
+
+=== PART C: cardinality dichotomy — 26k >= phi(q) at every band ===
+   band-k shell q in [14k,(k+1)*14-1]; runner blocks <=2k units; 13 runners <=26k.
+    band k | q range        | max phi(q) | 26k | 26k>=phi? (cover cardinality-permitted)
+       1   | [ 14, 27]   |     22     |  26 | YES
+       2   | [ 28, 41]   |     40     |  52 | YES
+       3   | [ 42, 55]   |     52     |  78 | YES
+       4   | [ 56, 69]   |     66     | 104 | YES
+       5   | [ 70, 83]   |     82     | 130 | YES
+       6   | [ 84, 97]   |     96     | 156 | YES
+       7   | [ 98,111]   |    108     | 182 | YES
+       8   | [112,125]   |    112     | 208 | YES
+   => 26k > 14k >= phi(q) for all k: COUNTING NEVER FORBIDS THE COVER.
+      Hence no first-moment/union-bound proves C'(14); only additive alignment
+      of the {+-j v_i^{-1}} can leave an uncovered unit (the structural obstruction).

@@ -4,6 +4,45 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## kind-pasteur-2026-06-13-S1 — LRC(14): two PROVED structural facts + two honest negatives (THM-497, HYP-2472..2476; complements codex's covering-deficit route)
+
+Applied repo machinery to LRC(14)=C'(14). Genuinely-new (recon-confirmed, complementary to codex's Q27 set-cover/Church-descent):
+- **band-0 lemma (PROVED):** for shell q<=13, a/q is a strict witness iff q divides no runner; a config blocking all q in {2..13} must have each of 2..13 dividing some runner. Refines THM-398 Lemma A. (240k pairs, 0 mismatch.)
+- **cardinality dichotomy (PROVED):** at band-k a runner blocks <=2k units, 13 runners <=26k vs phi(q)<=14k; 26k>14k at every band => COUNTING NEVER FORBIDS the cover => no first-moment argument proves C'(14); the obstruction is purely additive alignment of {+-j v^{-1}}. Pins why LRC(14) is hard.
+- **honest negative 1:** the named next-step "D(q,S)=q(6/7)^13+O(sqrt(q))" is FALSE for structured (over-correlated) configs — deviation grows faster than sqrt(q); needs the over-correlated/Weil regime (D is a MULTIPLICATIVE-character sum).
+- **honest negative 2 (tool-domain boundary):** the repo's celebrated machinery (sum-free THM-469, winding THM-488, eta THM-489, OCF/Paley, mod_rank) does NOT transfer — all additive/code-theoretic vs the multiplicative LRC residual. Stop forcing that key.
+- band-2 ceiling f(13)=41 REFUTED (non-dominant config blocks all q<=41, witness q=43; balanced configs climb to band-4) — convergent with codex THM-497/T813 and HYP-2481/T811; HYP-2438 closure is NOT dominance-growth.
+LITERATURE FLAG: repo "LRC(13) proven" = Sungkawichai-Trakulthongchai arXiv:2604.23906, an UNREFEREED 2026 preprint (textbook frontier = Barajas-Serra k=6); q=91 handoff inherits the fragility. Real frontier = Rosenfeld sieve + MSS n^{2n}; Phi-functional adjacent to Tao Bohr-sets.
+For the LRC crew: the deficit theorem must be proved in the over-correlated regime, not the independent one; resource-atom catalogue (q=40/41/43/56) is the next object. Artifacts: THM-497, lrc14_band0_and_cardinality_kps1.py, HYP-2472..2476, reflection (joint w/ codex).
+
+---
+
+## codex-2026-06-13 - LRC14 Q31 FIBER REPAIR + DILATED-BAND COVERING CORRECTION (HYP-2471, THM-497, T812/T813)
+
+**Dispatch:** continue the LRC14 proof routes through the rebase with HYP-2470/HYP-2480 live, preserving
+the Q31 addendum and integrating kps1's covering-cardinality correction rather than losing the partial work.
+
+**Integrated result:** HYP-2471 keeps the divisor/fiber explanation for the two HYP-2470 Q27 exceptions.
+The full delete-four/budget-five carry-window scan has `489` Q27-infeasible deletion shapes, `4`
+longer-limit Q27-infeasible timeouts, and exactly two Q27-feasible shapes: `(28,42,56,84)` and
+`(42,56,70,84)`. Both become infeasible over `Q31={d*m:d in {1,2,7,14},m<=31}\{1}`. THM-497
+then supplies the complementary warning: a shell witness is an uncovered unit outside `13` dilated
+danger bands, but cardinality permits coverage, so plain small-shell ceilings are not globally
+valid. kps1's scouts exhibit non-dominant blockers through `K=55`, a global `q<=41` ceiling
+falsifier, and first witnesses `29,43,56` in the resource climb.
+
+**New route:** keep HYP-2470 as the direct near-core finite theorem, HYP-2471 as the local fiber repair,
+and THM-497 as the scalar-ceiling correction. The next proof should extract dual certificates from Q31
+and Q27 infeasibility, then prove that any dilated-band cover core must violate a retained structural
+channel: 7-ideal occupancy, 13-clock escape, divisor fiber, owner/Bprime support, or support-load.
+
+Artifacts: HYP-2471, THM-497, T812/T813, `lrc14_below_nine_core_q27_budget5_codex.py`,
+`lrc14_q31_exception_probe_codex.py`, kps1 band-0/cardinality, band/deficit/resource scripts and outputs, reflections
+`lrc14-q31-fiber-repair-for-eight-core-exceptions.md` and
+`lrc14-covering-cardinality-permits-structure-forbids-kps1.md`.
+
+---
+
 ## codex-2026-06-13 - IRREDUCIBILITY TRICKS AS LRC14 RAMIFIED LOCAL GATES (HYP-2480, OPEN-Q-088, T810)
 
 **Dispatch:** answer the prompt by turning polynomial irreducibility tricks into LRC14 proof tactics,

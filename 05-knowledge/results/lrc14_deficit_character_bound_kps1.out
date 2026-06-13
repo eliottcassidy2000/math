@@ -1,0 +1,143 @@
+=== A. deficit D(q,S) vs main term q(6/7)^13 (~0.1348 q) — five evaders ===
+   (band-1 ceiling q=27; evaders fully cover band-1, leak at band-2 q=40/41)
+   r=611: q=23:D=0(mt~3.7)  q=27:D=0(mt~5.8)  q=28:D=0(mt~2.2)  q=40:D=0(mt~7.0)  q=41:D=4(mt~7.6)  q=55:D=4(mt~9.4)  q=69:D=6(mt~11.2)  q=83:D=2(mt~13.1)  q=97:D=8(mt~14.9)
+   r=702: q=23:D=0(mt~3.7)  q=27:D=0(mt~5.8)  q=28:D=0(mt~2.2)  q=40:D=0(mt~7.0)  q=41:D=4(mt~7.6)  q=55:D=4(mt~9.4)  q=69:D=6(mt~11.2)  q=83:D=2(mt~13.1)  q=97:D=8(mt~14.9)
+   r=793: q=23:D=0(mt~3.7)  q=27:D=0(mt~5.8)  q=28:D=0(mt~2.2)  q=40:D=2(mt~7.0)  q=41:D=4(mt~7.6)  q=55:D=4(mt~9.4)  q=69:D=6(mt~11.2)  q=83:D=4(mt~13.1)  q=97:D=8(mt~14.9)
+   r=962: q=23:D=0(mt~3.7)  q=27:D=0(mt~5.8)  q=28:D=0(mt~2.2)  q=40:D=2(mt~7.0)  q=41:D=4(mt~7.6)  q=55:D=4(mt~9.4)  q=69:D=6(mt~11.2)  q=83:D=4(mt~13.1)  q=97:D=6(mt~14.9)
+   r=1053: q=23:D=0(mt~3.7)  q=27:D=0(mt~5.8)  q=28:D=0(mt~2.2)  q=40:D=2(mt~7.0)  q=41:D=4(mt~7.6)  q=55:D=4(mt~9.4)  q=69:D=4(mt~11.2)  q=83:D=4(mt~13.1)  q=97:D=8(mt~14.9)
+
+=== B. deviation delta(q)=D-q*prod(1-beta) vs sqrt(q) — evader r=611 over primes ===
+      q   D     mainterm   delta    delta/sqrt(q)
+       29    0      2.48     -2.48    -0.460
+       41    4      7.56     -3.56    -0.556
+       43    0      4.27     -4.27    -0.651
+       53    2      8.41     -6.41    -0.880
+       67    4     10.27     -6.27    -0.766
+       71    0      7.96     -7.96    -0.945
+       83    2     13.07    -11.07    -1.215
+       97    8     14.94     -6.94    -0.705
+      113    0     13.57    -13.57    -1.277
+      127    0     15.45    -15.45    -1.371
+      151    8     21.55    -13.55    -1.103
+      181    8     26.21    -18.21    -1.354
+      211    2     26.74    -24.74    -1.703
+      (bounded delta/sqrt(q) => character-sum/Polya-Vinogradov regime; main term linear beats it => D>0 forced for q>q0)
+
+=== C. RESOURCE BOUND: per-q MINIMUM deficit over primitive non-dominant configs ===
+   (search 13-speed sets w/ a multiple of 14, entries<=80, excluding B'-dominant;
+    the q where min-deficit first becomes >0 and stays >0 = candidate finite ceiling K)
+   sampled 3000 configs.
+      q : min-deficit (over configs)  #configs-with-deficit-0-at-this-q
+       14 :    0            3005
+       15 :    0            2397
+       16 :    0            2168
+       17 :    0            1793
+       18 :    0            1765
+       19 :    0            1643
+       20 :    0            1752
+       21 :    0            1672
+       22 :    0            1324
+       23 :    0            1251
+       24 :    0            1278
+       25 :    0            1196
+       26 :    0            1269
+       27 :    0            889
+       28 :    0            2151
+       29 :    0            1202
+       30 :    0            1419
+       31 :    0            1110
+       32 :    0            1225
+       33 :    0            1114
+       34 :    0            1021
+       35 :    0            1288
+       36 :    0            947
+       37 :    0            876
+       38 :    0            891
+       39 :    0            948
+       40 :    0            960
+       41 :    0            488
+       42 :    0            1104
+       43 :    0            603
+       44 :    0            661
+       45 :    0            669
+       46 :    0            608
+       47 :    0            500
+       48 :    0            590
+       49 :    0            508
+       50 :    0            541
+       51 :    0            481
+       52 :    0            535
+       53 :    0            490
+       54 :    0            502
+       55 :    0            483
+       56 :    0            1013
+       57 :    0            596
+       58 :    0            588
+       59 :    0            543
+       60 :    0            541
+       61 :    0            507
+       62 :    0            510
+       63 :    0            500
+       64 :    0            511
+       65 :    0            478
+       66 :    0            507
+       67 :    0            463
+       68 :    0            468
+       69 :    0            466
+       70 :    0            856
+       71 :    0            497
+       72 :    0            476
+       73 :    0            510
+       74 :    0            486
+       75 :    0            508
+       76 :    0            475
+       77 :    0            471
+       78 :    0            483
+       79 :    0            523
+       80 :    0            477
+       81 :    0            6
+       84 :    0            82
+       85 :    0            23
+       86 :    0            33
+       87 :    0            28
+       88 :    0            33
+       89 :    0            13
+       90 :    0            31
+       91 :    0            5
+       92 :    0            13
+       93 :    0            2
+       95 :    0            3
+       96 :    0            14
+       98 :    0            18
+       99 :    0            10
+      100 :    0            19
+      101 :    0            7
+      102 :    0            8
+      103 :    0            5
+      104 :    0            11
+      105 :    0            10
+      107 :    0            1
+      108 :    0            4
+      109 :    0            1
+      110 :    2            0
+      112 :    0            39
+      113 :    0            8
+      114 :    0            13
+      115 :    0            7
+      116 :    0            11
+      117 :    0            7
+      118 :    0            1
+      119 :    0            6
+      120 :    0            6
+   --> largest q with ANY config still fully covered (deficit 0) = 120
+       (above this, EVERY sampled config has a witness at this single q; the union over q<=K of witnesses covers all configs at much smaller K)
+   ladder heights: min=3 median=10 max=41 (max = empirical resource bound f(13) on this box)
+
+=== D. additive-relation signature at near-cover (evaders, critical shell) ===
+   r=611 q=41: deficit=4, pairwise-overlap sum=94, independent~47.6, excess=+46.4 (OVER-correlated => cover looser)
+   r=702 q=41: deficit=4, pairwise-overlap sum=94, independent~47.6, excess=+46.4 (OVER-correlated => cover looser)
+   r=793 q=40: deficit=2, pairwise-overlap sum=115, independent~48.8, excess=+66.2 (OVER-correlated => cover looser)
+   r=962 q=40: deficit=2, pairwise-overlap sum=121, independent~48.8, excess=+72.2 (OVER-correlated => cover looser)
+   r=1053 q=40: deficit=2, pairwise-overlap sum=113, independent~48.8, excess=+64.2 (OVER-correlated => cover looser)
+
+=== TOTAL 14.2s ===

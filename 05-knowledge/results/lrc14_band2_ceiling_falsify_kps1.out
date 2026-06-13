@@ -1,0 +1,23 @@
+=== BAND-2 CEILING conjecture: f(13) = 41 = 3n-1.  Try to FALSIFY. ===
+
+--- (2) structured families (7*{1..12}u{r}, scaled APs) ---
+   configs with ladder height > 41 (FALSIFIERS): 0
+
+--- (3) random primitive non-dominant configs (entries<=400) ---
+   18610 valid configs; MAX ladder height = 29
+   configs climbing past shell 58: 0 (any => strong falsifier)
+   max height 29 <= 41: consistent with the band-2 ceiling. argmax=[21, 78, 112, 154, 160, 161, 210, 216, 284, 300, 323, 386, 396]
+
+--- (1) greedy cover-blocker (adversarial: block ALL shells q<=41) ---
+   FALSIFIED: best residual escapers over q<=41 = 0
+   *** FALSIFIER: blocks all shells <=41: [39, 56, 108, 128, 164, 168, 200, 266, 323, 341, 518, 594, 598] ***
+
+=== TOTAL 0.8s ===
+
+Codex follow-up integration check:
+  S=[39,56,108,128,164,168,200,266,323,341,518,594,598]
+  primitive_mult14=True
+  Bprime_dominant=False
+  first plain shell witness q=43
+  first Q27 witness=(44,7)
+  first Q31 witness=(44,7)
