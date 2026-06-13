@@ -107,11 +107,42 @@ the ladder with transverse vectors), HYP-2461 found that only `t=3` crosses at 2
 THM-493 attributes gate 3 to `28 = 4·7` admitting a `√3`-bearing edge-dense factor
 pair. The clean open question: **characterize gate 3 arithmetically** — which Loeschian
 `t` (if any besides 3) admit an `n` and a factor pair whose `Δ_t` lifts a product past
-`3n`? Is `t=3` genuinely unique, or just first? A negative answer (`t=3` unique) would
-make `N*=28` a statement about the prime `11 = 4·3−1` specifically — the smallest
-Loeschian Moser discriminant with a single Eisenstein orbit *and* a host `n` (28) one
-above `3³`. The Heegner texture (`√−11` is class number 1) is sitting right there and
-has not been used.
+`3n`? Is `t=3` genuinely unique, or just *first*?
+
+**Gate-3 sharpening (this session — the minimal-transverse-distance principle).** The
+transverse vector of `L_t` has the form `α(1−ω_t)` with `N(α)=t`, so the factors of a
+crossing product must contain a pair at Euclidean distance `√t` (Eisenstein norm `t`).
+Exact computation (`…bridge_crossing_n_monad.py`, Part A) of the minimal unit-distance
+patch realizing a norm-`t` pair:
+
+```
+   t        1    3    4    7   13   21   28      (Loeschian)
+   √t       1  1.73 2.00 2.65 3.61 4.58 5.29
+   min pts  2    3    3    4    5    6    7       (Eisenstein word length + 1)
+```
+
+So `√3` (`t=3`) is the **minimal transverse distance > 1**, realized in a 3-point
+2-edge path — the smallest possible factor. The optimal 3-point UDG is `K₃` (the unit
+triangle, all distances 1, `√3`-**free**), which is exactly why `27 = 3³` (forced
+size-3 factor) gets **zero** bonus, while `28 = 4·7` works (the optimal 4-point factor,
+the rhombus, **does** contain a `√3` pair). For larger Loeschian `t` the `√t` pair only
+fits inside **larger** factors (diameter `≳ √t`, area `≳ t` points), so any crossing
+they support is pushed to **larger `n`**. This is **HYP-2301's degree–radius tension
+(`N_cross ∝ ρ·t·…`) in the product/transverse setting** — the same "radius² cost"
+that puts the single-lattice `√7` crossing at `n=32`. Conjecture: **`t=3` is *first*,
+not unique** — `n_cross(t)` is increasing in `√t`, so `N* = 28` is selected as the
+*smallest-`n`* crossing, won by the minimal Loeschian distance `√3`. (Part B tests
+this directly by locating `n_cross(13)`.)
+
+**Heegner is a red herring (negative result).** Tempting, since `√−11` is one of the
+nine class-number-1 discriminants. But the Moser discriminants `−(4t−1)` that are
+Heegner are `t = 1,2,3,5,11,17,41` (`−3,−7,−11,−19,−43,−67,−163`), and `t=2,5,11`
+(`√7,√19,√43`) are all **transverse-free** (non-Loeschian) — they cannot even build
+the 81 tie. Meanwhile the transverse-rich `t=13` (`−51`, class number 2) is **not**
+Heegner. So class number 1 is neither necessary nor sufficient. Consistent with
+THM-434's sharpening: the transverse count is a `ℚ(√−3)`-splitting (Loeschian)
+invariant, blind to the second CM field's class number. The selector for the crossing
+is **Loeschian (gate 2) + minimal `√t` (gate 3)**, not Heegner.
 
 ## Files
 

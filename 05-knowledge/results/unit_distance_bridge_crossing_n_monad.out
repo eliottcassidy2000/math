@@ -1,0 +1,8 @@
+
+PART B — first 3N crossing per transverse-bearing L_t (annealing lower bound)
+
+L_3: #units=18 (sqrt(-11))  scanning n=26..32
+     n  best   3n  U-3n  cross?
+    26    76   78    -2 
+    27    80   81    -1 
+    28    85   84     1   *** CROSSES ***
