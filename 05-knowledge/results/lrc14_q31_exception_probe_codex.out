@@ -1,0 +1,43 @@
+================================================================================
+Codex LRC14 Q31 exception probe for delete_count=4
+================================================================================
+A. Resolve Q27 timeout cases with a longer limit
+  D=(14, 21, 28, 70) feasible=False obligations=742 elapsed=30.54s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+  D=(21, 28, 56, 70) feasible=False obligations=686 elapsed=35.92s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+  D=(21, 28, 70, 84) feasible=False obligations=602 elapsed=19.26s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+  D=(28, 42, 70, 84) feasible=False obligations=546 elapsed=24.37s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+
+B. Probe the two Q27-feasible deletion shapes
+  D=(28, 42, 56, 84) ladder=Q27  feasible=True obligations=630 elapsed=1.23s chosen=(91, 322, 350, 504, 832)
+    message=Optimization terminated successfully. (HiGHS Status 7: Optimal)
+    row=(7, 14, 21, 35, 49, 63, 70, 77, 91, 322, 350, 504, 832) gcd=1
+    first_Q150=(31, 10)
+    min_q<=600=31
+    Bprime=(True, 322, Fraction(275, 468832))
+    Q27_support blocked=76 universal=42 min_cover_hist=((1, 42), (3, 2), (4, 8), (5, 3), (6, 8), (7, 3), (8, 4), (9, 6))
+    cover_load=((49, 30), (35, 26), (7, 26), (77, 24), (21, 23), (63, 23), (91, 22), (14, 20))
+  D=(28, 42, 56, 84) ladder=Q31  feasible=False obligations=840 elapsed=15.33s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+  D=(42, 56, 70, 84) ladder=Q27  feasible=True obligations=504 elapsed=0.78s chosen=(91, 119, 156, 700, 1008)
+    message=Optimization terminated successfully. (HiGHS Status 7: Optimal)
+    row=(7, 14, 21, 28, 35, 49, 63, 77, 91, 119, 156, 700, 1008) gcd=1
+    first_Q150=(31, 5)
+    min_q<=600=31
+    Bprime=(True, 700, Fraction(19, 29400))
+    Q27_support blocked=76 universal=44 min_cover_hist=((1, 44), (3, 1), (4, 5), (5, 3), (6, 7), (7, 6), (8, 2), (9, 6), (11, 2))
+    cover_load=((49, 29), (35, 28), (77, 26), (7, 24), (63, 24), (21, 22), (28, 22), (91, 21))
+  D=(42, 56, 70, 84) ladder=Q31  feasible=False obligations=672 elapsed=4.99s chosen=()
+    message=The problem is infeasible. (HiGHS Status 8: model_status is Infeasible; primal_status is None)
+
+C. Proof-shaped consequence
+  Since Q27 infeasibility implies Q31 infeasibility, the 489 first-pass
+  infeasible cases need no widening.  The four timeout cases are Q27
+  infeasible after a longer limit.  The only two Q27-feasible deletion
+  shapes are Q31-infeasible.  Therefore, inside the carry window, every
+  primitive replacement row retaining at least 8 core speeds has a Q31
+  witness.  The bounded descent portal starts at <=7 retained core speeds,
+  unless the row leaves the window or opens an owner/Bprime exception.

@@ -1,0 +1,78 @@
+================================================================================
+Codex LRC14 below-nine-core Q27 budget-5 scout
+================================================================================
+core=(7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+Q27 size=76; candidate_window=1..1092; candidates=1080
+Running exact MILP feasibility for all |D|=4 cases...
+  progress  25/495 infeasible= 25 feasible= 0 unknown= 0 elapsed=40.2s
+  progress  50/495 infeasible= 50 feasible= 0 unknown= 0 elapsed=76.1s
+  progress  75/495 infeasible= 75 feasible= 0 unknown= 0 elapsed=105.6s
+  progress 100/495 infeasible=100 feasible= 0 unknown= 0 elapsed=134.9s
+  progress 125/495 infeasible=125 feasible= 0 unknown= 0 elapsed=161.8s
+  progress 150/495 infeasible=150 feasible= 0 unknown= 0 elapsed=189.1s
+  progress 175/495 infeasible=174 feasible= 0 unknown= 1 elapsed=245.6s
+  progress 200/495 infeasible=199 feasible= 0 unknown= 1 elapsed=288.6s
+  progress 225/495 infeasible=224 feasible= 0 unknown= 1 elapsed=382.7s
+  progress 250/495 infeasible=249 feasible= 0 unknown= 1 elapsed=418.3s
+  progress 275/495 infeasible=274 feasible= 0 unknown= 1 elapsed=462.9s
+  progress 300/495 infeasible=299 feasible= 0 unknown= 1 elapsed=504.3s
+  progress 325/495 infeasible=322 feasible= 0 unknown= 3 elapsed=581.0s
+  progress 350/495 infeasible=347 feasible= 0 unknown= 3 elapsed=606.8s
+  progress 375/495 infeasible=372 feasible= 0 unknown= 3 elapsed=659.1s
+  progress 400/495 infeasible=396 feasible= 1 unknown= 3 elapsed=689.7s
+  progress 425/495 infeasible=420 feasible= 1 unknown= 4 elapsed=743.5s
+  progress 450/495 infeasible=445 feasible= 1 unknown= 4 elapsed=772.3s
+  progress 475/495 infeasible=469 feasible= 2 unknown= 4 elapsed=797.8s
+
+A. Exact delete-count 4 Q27 budget-5 result
+  row form: (CORE \ D) union A, |D|=4, |A|<=5, primitive
+  cases=495 infeasible=489 feasible=2 unknown=4
+  obligations=504..1274 avg=905.0
+  solver_elapsed_total=743.55s max_case=20.02s
+  feasible examples=[(28, 42, 56, 84), (42, 56, 70, 84)]
+  unknown examples=[((14, 21, 28, 70), 'Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)'), ((21, 28, 56, 70), 'Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)'), ((21, 28, 70, 84), 'Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)'), ((28, 42, 70, 84), 'Time limit reached. (HiGHS Status 13: model_status is Time limit reached; primal_status is None)')]
+
+B. Deletion-shape diagnostics
+  anchor signatures={'deletes_7_21_49': 9, 'keeps_21': 36, 'keeps_21_49': 84, 'keeps_49': 36, 'keeps_7': 36, 'keeps_7_21': 84, 'keeps_7_21_49': 126, 'keeps_7_49': 84}
+  first deleted quotient histogram={1: 165, 2: 120, 3: 84, 4: 56, 5: 35, 6: 20, 7: 10, 8: 4, 9: 1}
+  deleted quotient sum range=10..42
+  quotient-sum extremes:
+    low sum 10: D=(7, 14, 21, 28) obligations=1120
+    low sum 11: D=(7, 14, 21, 35) obligations=1078
+    low sum 12: D=(7, 14, 21, 42) obligations=1106
+    high sum 42: D=(63, 70, 77, 84) obligations=868
+    high sum 41: D=(56, 70, 77, 84) obligations=756
+    high sum 40: D=(49, 70, 77, 84) obligations=980
+
+C. Hardest and extremal cases
+  D=(21, 28, 56, 70) quotients=(3, 4, 8, 10) obligations=686 elapsed=20.02s
+    top single covers=((91, 252, 'clock13+mult7+pm10+q91'), (378, 210, 'mult7+zero27'), (182, 196, 'clock13+mult7+c27=7+q91'), (910, 196, 'clock13+mult7+c27=8+q91'), (161, 182, 'mult7+c27=1'), (322, 182, 'mult7+c27=2'))
+  D=(21, 28, 70, 84) quotients=(3, 4, 10, 12) obligations=602 elapsed=20.02s
+    top single covers=((91, 238, 'clock13+mult7+pm10+q91'), (182, 196, 'clock13+mult7+c27=7+q91'), (910, 182, 'clock13+mult7+c27=8+q91'), (378, 168, 'mult7+zero27'), (1092, 168, 'clock13+mult7+nonunit27+q91'), (350, 154, 'mult7+c27=1'))
+  D=(14, 21, 28, 70) quotients=(2, 3, 4, 10) obligations=742 elapsed=20.02s
+    top single covers=((91, 238, 'clock13+mult7+pm10+q91'), (161, 224, 'mult7+c27=1'), (119, 210, 'mult7+c27=11'), (133, 210, 'mult7+c27=2'), (378, 210, 'mult7+zero27'), (910, 210, 'clock13+mult7+c27=8+q91'))
+  D=(7, 14, 21, 49) quotients=(1, 2, 3, 7) obligations=1274 elapsed=2.08s
+    top single covers=((98, 308, 'mult7+pm10'), (364, 280, 'clock13+mult7+c27=13+q91'), (182, 266, 'clock13+mult7+c27=7+q91'), (378, 266, 'mult7+zero27'), (637, 266, 'clock13+mult7+c27=11+q91'), (728, 266, 'clock13+mult7+c27=1+q91'))
+  D=(7, 14, 49, 77) quotients=(1, 2, 7, 11) obligations=1274 elapsed=2.13s
+    top single covers=((98, 308, 'mult7+pm10'), (231, 280, 'mult7+nonunit27'), (1001, 280, 'clock13+mult7+c27=2+q91'), (147, 266, 'mult7+nonunit27'), (154, 266, 'mult7+c27=8'), (182, 266, 'clock13+mult7+c27=7+q91'))
+  D=(42, 56, 70, 84) quotients=(6, 8, 10, 12) obligations=504 elapsed=0.79s
+    top single covers=((91, 266, 'clock13+mult7+pm10+q91'), (182, 168, 'clock13+mult7+c27=7+q91'), (756, 168, 'mult7+zero27'), (1092, 154, 'clock13+mult7+nonunit27+q91'), (840, 140, 'mult7+nonunit27'), (1008, 140, 'mult7+nonunit27'))
+  D=(28, 42, 70, 84) quotients=(4, 6, 10, 12) obligations=546 elapsed=20.01s
+    top single covers=((91, 252, 'clock13+mult7+pm10+q91'), (1092, 182, 'clock13+mult7+nonunit27+q91'), (182, 168, 'clock13+mult7+c27=7+q91'), (350, 168, 'mult7+c27=1'), (266, 154, 'mult7+c27=4'), (322, 154, 'mult7+c27=2'))
+
+D. Proof-shaped consequence
+  The first below-nine-core layer is not closed by raw Q27 budget.
+  Inspect feasible/unknown cases as candidate exceptions or typed-budget gates.
+
+E. Tournament Analysis over proof portals
+  observable=(exactness, support retention, LRC leverage, side-channel, computability, descent)
+  switch/gauge=rank proof portals by retained-channel strength, not scalar q size
+  tie Hamiltonian path=declaration order
+  score histogram={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}; directed_3cycles=0; edge_flips_vs_declaration=1/21
+    6: Q27_budget5_setcover         score=(5, 5, 5, 5, 4, 5)
+    5: eight_core_window_barrier    score=(5, 5, 5, 4, 4, 5)
+    4: support_load_descent         score=(4, 5, 5, 4, 3, 5)
+    3: owner_Bprime_exception       score=(4, 4, 4, 5, 3, 4)
+    2: outside_window_normalizer    score=(3, 4, 5, 4, 3, 5)
+    1: plain_shell_scalar           score=(2, 3, 3, 2, 5, 2)
+    0: raw_denominator_search       score=(1, 2, 3, 1, 5, 1)
