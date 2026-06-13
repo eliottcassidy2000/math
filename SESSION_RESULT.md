@@ -2,63 +2,59 @@
 
 ## Task Chosen
 
-I chose one tiny exhaustive sanity check of the odd-cycle collection formula
-at `n=5`.  At this size, two vertex-disjoint odd cycles cannot coexist, so
-the formula specializes to the directly checkable identity
+I chose one tiny exhaustive sanity check: compute the Hamiltonian path count
+distribution `H(T)` for all labelled tournaments on at most five vertices,
+with the main target `n=5`.
 
-```text
-H(T) = 1 + 2 * (# directed 3-cycles + # directed 5-cycles).
-```
-
-This is small enough to verify over all `2^10 = 1024` labeled tournaments.
+This checks the small Hamiltonian-path data directly and also re-confirms
+Redei parity in the bounded range `n <= 5`.
 
 ## What I Did
 
-I ran a transient Python enumeration over all labeled tournaments on five
-vertices.  For each tournament I computed:
-
-- `H(T)` by direct permutation scan of all Hamiltonian paths,
-- the number of cyclic triples,
-- the number of directed 5-cycles, counted up to cyclic rotation, and
-- the specialized OCF right-hand side above.
+I ran a transient Python dynamic-programming enumeration.  For each tournament,
+the unordered pairs `(i,j)` with `i < j` were encoded by one orientation bit,
+then `H(T)` was computed by subset DP over directed Hamiltonian paths.
 
 Tournament Analysis declaration:
 
 - Pairwise observable: the orientation bit on each unordered vertex pair.
-- Switch/gauge: the bit value gives the binary tournament edge.
-- Tie Hamiltonian path: no tie handling is needed for tournaments; all
-  distinct vertex pairs have exactly one directed edge.
-- Fingerprints recorded: `H` histogram, cyclic-triple histogram,
-  directed-5-cycle histogram, and failure count.
+- Switch/gauge: the bit value determines the directed tournament edge.
+- Tie Hamiltonian path: no tie handling is needed, since a tournament orients
+  every distinct pair exactly once.
+- Fingerprints recorded: labelled tournament count, `H(T)` histogram, minimum
+  and maximum `H(T)`, and parity of all observed values.
 
 Assumption challenge:
 
-- I kept tournament vertices as the original five vertices because this task
-  tests the literal OCF statement.
-- Alternate vertex sets such as arcs, odd cycles, proof obligations, or
-  Fourier modes are useful for other quotient views, but would obscure this
-  direct small-`n` identity.  The odd-cycle conflict graph is still present:
-  at `n=5` its independent sets have size at most one.
+- I kept the vertices as tournament vertices because this is a direct sanity
+  check of `H(T)`.
+- Alternate vertex sets such as arcs, odd cycles, gaps, residues, or proof
+  obligations would be useful for quotient analyses, but would destroy the
+  literal labelled-tournament Hamiltonian-path distribution being checked here.
 
 ## Concrete Result
 
-The identity held for every labeled tournament on five vertices.
+The exhaustive distributions were:
 
 ```text
-n = 5
-tournaments = 1024
-failures = 0
-H_hist = {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
-c3_hist = {0: 120, 1: 120, 2: 240, 3: 240, 4: 280, 5: 24}
-c5_hist = {0: 480, 1: 360, 2: 144, 3: 40}
-max_c5 = 3
+n=1, labelled_tournaments=1, min=1, max=1, all_odd=True
+  distribution {1: 1}
+n=2, labelled_tournaments=2, min=1, max=1, all_odd=True
+  distribution {1: 2}
+n=3, labelled_tournaments=8, min=1, max=3, all_odd=True
+  distribution {1: 6, 3: 2}
+n=4, labelled_tournaments=64, min=1, max=5, all_odd=True
+  distribution {1: 24, 3: 16, 5: 24}
+n=5, labelled_tournaments=1024, min=1, max=15, all_odd=True
+  distribution {1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}
 ```
 
-Thus the direct `n=5` specialization of OCF passes an exhaustive independent
-check, including the contribution from directed 5-cycles.
+Thus the `n=5` labelled Hamiltonian-path spectrum is
+`{1: 120, 3: 120, 5: 240, 9: 240, 11: 120, 13: 120, 15: 64}`, and every
+Hamiltonian path count in this bounded exhaustive check is odd.
 
 ## Confidence Note
 
-Confidence is high for this bounded verification.  The enumeration is
-exhaustive, the path count is by direct permutation scan, and the cycle counts
-are independent of any repository helper scripts.
+Confidence is high for this small verification.  The enumeration is exhaustive
+through `n=5`, the DP recurrence counts directed Hamiltonian paths directly,
+and no repository helper script or cached output was used.
