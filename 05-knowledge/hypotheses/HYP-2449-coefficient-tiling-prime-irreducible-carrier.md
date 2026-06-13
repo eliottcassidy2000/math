@@ -2,8 +2,8 @@
 
 **Status:** OPEN synthesis; finite coefficient-tiling scout verified.
 **Source:** codex-2026-06-12.
-**Companions:** HYP-2447, HYP-2448, OPEN-Q-070, HYP-2446,
-HYP-2443, THM-474.
+**Companions:** HYP-2451, HYP-2450, HYP-2447, HYP-2448, OPEN-Q-070,
+HYP-2446, HYP-2443, THM-474.
 **Computation:** `04-computation/coefficient_tiling_prime_irreducible_codex.py`;
 stored output `05-knowledge/results/coefficient_tiling_prime_irreducible_codex.out`.
 
@@ -228,6 +228,9 @@ coefficient rows, valuation slopes, or certificate states.
 
 1. Build exact p-adic Newton-row tournaments for Eisenstein, Dumas, and
    Perron-style irreducibility families.
+   - Update: HYP-2451 reframes this as a split-survivor ledger: residue
+     blockers empty degree-split rectangles, while Newton blockers see
+     valuation rigidity when the residue shadow is misleading.
 2. Extend the coefficient sweep to degree `5` and `6` with cached factor
    profiles, then measure edge flips as local residue primes are added.
 3. Turn Cohn's base-`b` digit address into a weighted skip-row tournament and

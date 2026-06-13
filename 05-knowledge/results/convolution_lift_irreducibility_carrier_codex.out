@@ -1,0 +1,63 @@
+﻿==============================================================================
+Convolution-lift carriers for prime <-> irreducible polynomials
+==============================================================================
+HYP-2451 / T795 / OPEN-Q-073 candidate
+
+[1] Reducibility as a hidden diagonal-sum lift
+  f = g*h means every coefficient a_k is a diagonal total:
+    a_k = sum_{i+j=k} b_i*c_j
+  Degree splits are proof obligations; the split-check order is only
+  a fixed Hamiltonian path used for ties, not the invariant itself.
+
+[2] Exact small residue lifts: symbolic factorization vs brute force
+  x**4 - x**3 - x**2 - x - 1  mod 2  (irreducible quartic, mod-2 blocker)
+    factor_degrees=(4,), symbolic_survivors=none, brute_survivors=none
+  2*x**4 - 2*x**3 - x**2 - x - 1  mod 3  (reducible quartic, split survives)
+    factor_degrees=(1, 1, 2), symbolic_survivors=(1, 2), brute_survivors=(1, 2)
+
+[3] Residue blocker vs Newton valuation blocker
+  x**5 + 6*x + 3  p=3  (Eisenstein-like: residue split survives, valuation blocks)
+    mod-p split survivors=(1, 2)
+    newton_points=[(0, 1), (1, 1), (5, 0)], lower_hull=[(0, 1), (5, 0)], edge_gcd=1, certificate=True
+  x**4 + 10*x**2 + 5  p=5  (one-edge Newton hull blocks at p=5)
+    mod-p split survivors=(1, 2)
+    newton_points=[(0, 1), (2, 1), (4, 0)], lower_hull=[(0, 1), (4, 0)], edge_gcd=1, certificate=True
+  x**4 + 10*x**2 + 1  p=2  (irreducible but neither this residue nor this hull blocks)
+    mod-p split survivors=(1, 2)
+    newton_points=[(0, 0), (2, 1), (4, 0)], lower_hull=[(0, 0), (4, 0)], edge_gcd=4, certificate=False
+
+[4] Degree-4 coefficient-row scout, |a_i| in {1,2,3}
+  rows=3888, irreducible=3096, reducible=792
+  least mod-p convolution blocker in (2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31): 3058/3096 irreducibles certified (98.77%), false positives=0
+  blocker histogram={2: 784, 3: 508, 5: 744, 7: 472, 11: 264, 13: 120, 17: 76, 19: 58, 23: 20, 29: 12, None: 38}
+  key=signs                groups= 16 mixed= 16 max_bucket=243
+  key=signs+least_blocker  groups=162 mixed=  8 max_bucket= 68
+  sample irreducibles with no blocker up to 31:
+    coeffs=(1, -1, 2, 1, 1); f=x**4 + x**3 + 2*x**2 - x + 1; small_signature=((2, (1, 2)), (3, (2,)), (5, (2,)), (7, (2,)))
+    coeffs=(1, 1, 2, -1, 1); f=x**4 - x**3 + 2*x**2 + x + 1; small_signature=((2, (1, 2)), (3, (2,)), (5, (2,)), (7, (2,)))
+    coeffs=(1, -2, 2, 2, 1); f=x**4 + 2*x**3 + 2*x**2 - 2*x + 1; small_signature=((2, (1, 2)), (3, (2,)), (5, (2,)), (7, (2,)))
+    coeffs=(1, 2, 2, -2, 1); f=x**4 - 2*x**3 + 2*x**2 + 2*x + 1; small_signature=((2, (1, 2)), (3, (2,)), (5, (2,)), (7, (2,)))
+
+[5] Prime-certificate tournament
+  pairwise observable: more least-blocker wins on the degree-4 scout
+  switch/gauge: primitive part by Gauss lemma; degree-drop primes ignored
+  tie Hamiltonian path: 2 -> 3 -> 5 -> ... -> 31
+  least_blocker_counts={2: 784, 3: 508, 5: 744, 7: 472, 11: 264, 13: 120, 17: 76, 19: 58, 23: 20, 29: 12, 31: 0}
+  unresolved_irreducibles=38
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=0
+  Hamiltonian_paths=1
+  ranking=[2, 5, 3, 7, 11, 13, 17, 19, 23, 29, 31]
+
+[6] Extracted proof/program directions
+  1. Use mod-p diagonal-lift infeasibility as a cheap exact irreducibility prefilter before expensive Z-factorization.
+  2. Use Newton/valuation hulls for the cases where residue reduction collapses to a reducible shadow, especially Eisenstein/Dumas rows.
+  3. Treat the leftover no-small-blocker rows as the proper target for Singh-depth and recombination certificates.
+  4. For HYP-2449, replace sign-only chambers by split-survivor signatures: which hidden degree rectangles remain possible?
+  5. For LRC14, copy the same split-survivor language: a dangerous residue fiber is one whose local lift survivors never empty.
+
+Conclusion:
+  The coefficient row is a diagonal projection of a hidden factor grid.
+  Residue blockers empty the possible split set; Newton blockers see
+  valuation rigidity when the residue shadow is misleading.  The next
+  carrier should track split survivors, not just coefficient signs.

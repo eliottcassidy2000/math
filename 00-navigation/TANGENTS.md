@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T795** #convolution-lift #irreducibility #prime-polynomials #split-survivors #newton-polygon #residue-tournaments #fixed-path #HYP-2451 #OPEN-Q-073 | certainty: exact local scout + open split-survivor program | source: codex-2026-06-12
+CONVOLUTION-LIFT SPLIT SURVIVORS. Reducibility is a hidden 2D coefficient-grid lift `a_k=sum_{i+j=k}b_i c_j`; irreducibility is the absence of every nontrivial diagonal lift. Exact brute-force residue lifts agree with symbolic mod-p factorization in small examples. In the HYP-2449 degree-4 scout, least mod-p convolution blockers through `31` certify `3058/3096` irreducibles (`98.77%`) with zero false positives and cut sign-bucket mixing from `16` to `8`. Residue blockers and Newton valuation blockers are complementary: Eisenstein rows can look reducible mod p while a one-edge p-adic hull proves irreducibility. Next carrier: split-survivor ledgers for polynomial rows and LRC14 Q27 resources.
+
 **T793** #coefficient-tiling #irreducibility #prime-polynomials #fixed-path #switching-classes #cohn #newton-polygon #fixed-divisor #HYP-2449 #OPEN-Q-071 | certainty: exact finite scout + open marked-row program | source: codex-2026-06-12
 COEFFICIENT TILING TOURNAMENTS. The user's degree-5 sketch is literal: skip-row sizes are `1,2,3,4,5`, so `a5` can sit on the apex row down to `a1`; the stronger `constant_spine` version puts `a0` on the Hamiltonian-path row. Exhaustive degree-4 sign+magnitude sweep (`3888` rows) shows bare unmarked coefficient tournaments and marked signs are mixed for irreducibility, while adding local zero-prime residues separates fixed-divisor obstruction. Cohn repunits prove sign-only is too weak: all-positive sign tournaments can be reducible or irreducible depending on place-value address. Next carrier: marked skip rows + local residues + p-adic valuation/Newton slopes + evaluation-depth certificates.
 

@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-12: convolution-lift split survivors (HYP-2451/T795/OPEN-Q-073)
+
+**Done:** extended HYP-2449 by turning reducibility into the hidden 2D lift `a_k=sum_{i+j=k}b_i c_j`. Added `04-computation/convolution_lift_irreducibility_carrier_codex.py` and stored output. Exact brute-force residue lifts agree with symbolic mod-p split survivors in small examples. In the degree-4 coefficient scout, least mod-p convolution blockers through `31` certify `3058/3096` irreducibles (`98.77%`) with zero false positives and cut sign-bucket mixing from `16` to `8` mixed `signs+least_blocker` buckets. Newton examples show the complementary face: Eisenstein-style rows can look reducible mod p while a one-edge p-adic lower hull proves irreducibility.
+**Next:** add Newton/valuation certificates to the `38` no-small-blocker irreducibles; extend split-survivor signatures to degrees `5/6`; attach Singh-depth and Cohn-depth only after cheap residue/valuation gates; translate survivor ledgers to LRC14 Q27 denominator/resource fibers.
+
 ## Lead codex-2026-06-12: coefficient-tiling prime/irreducible carrier (HYP-2449/T793/OPEN-Q-071)
 
 **Done:** extended HYP-2447/HYP-2448 with the user's coefficient tiling model.  The degree-5 row sizes are literally fixed-path skip rows: `a5` apex down to `a1`, and the stronger `constant_spine` model places `a0` on the Hamiltonian-path row.  Added a degree-4 exhaustive sign+magnitude scout (`3888` rows): every bare unmarked coefficient-tournament quotient is mixed for irreducibility, marked signs remain mixed, and `marked_signs+local_zero_primes` separates fixed-divisor obstruction in the scout.  Cohn repunit rows show sign-only transitive tournaments can be reducible or irreducible depending on place-value address.

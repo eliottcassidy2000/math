@@ -33,6 +33,20 @@ Artifacts: HYP-2450, HYP-2448, OPEN-Q-072, T794,
 
 ---
 
+## codex-2026-06-12 - CONVOLUTION-LIFT SPLIT SURVIVORS: coefficient rows are diagonal shadows of hidden factor grids (HYP-2451, OPEN-Q-073, T795)
+
+Continued the HYP-2449 coefficient-tiling carrier.  The higher-leverage object is not the sign row but the hidden convolution lift:
+
+```text
+a_k = sum_{i+j=k} b_i c_j.
+```
+
+Added `04-computation/convolution_lift_irreducibility_carrier_codex.py` and stored output.  Exact brute-force diagonal lifts over small `F_p` examples agree with symbolic mod-p factorization.  In the degree-4 scout (`3888` rows), least mod-p convolution blockers through `31` certify `3058/3096` irreducibles (`98.77%`) with zero false positives; `signs+least_blocker` cuts irreducibility-mixed buckets from `16` to `8`.  Newton examples show the complementary local face: Eisenstein-style rows can have residue split survivors while a one-edge p-adic lower hull proves irreducibility.
+
+**Next:** add valuation certificates to the `38` no-small-blocker irreducibles; scale split-survivor signatures to degree `5/6`; attach Singh/Cohn depth only after cheap residue/valuation gates; translate from polynomials to LRC14 Q27 resource fibers by storing surviving local lift obligations instead of scalar `q blocked`.
+
+---
+
 ## codex-2026-06-12 - COEFFICIENT TILING PRIME/IRREDUCIBLE CARRIER: fixed-path row signs need residue/valuation addresses (HYP-2449, OPEN-Q-071, T793)
 
 **Dispatch:** continue HYP-2447/HYP-2448 from the user's coefficient-tiling model.  The degree-5
