@@ -1,0 +1,55 @@
+FAULHABER ODD-MOMENT / OCF BRIDGE
+============================================
+
+1. Odd-moment balance identity
+   exact checks: 792
+   failures: 0
+   identity: D_p(c,n)=c^p-2*sum_{r odd<=p} binom(p,r)c^(p-r)S_r(n)
+   reason: paired terms (c-j)^p-(c+j)^p cancel all even r
+
+2. Exact integer anchors
+   p=1: n=1:a=1,c=2,D=0; n=2:a=4,c=6,D=0; n=3:a=9,c=12,D=0; n=4:a=16,c=20,D=0; n=5:a=25,c=30,D=0; n=6:a=36,c=42,D=0; n=7:a=49,c=56,D=0
+   p=2: n=1:a=3,c=4,D=0; n=2:a=10,c=12,D=0; n=3:a=21,c=24,D=0; n=4:a=36,c=40,D=0; n=5:a=55,c=60,D=0; n=6:a=78,c=84,D=0; n=7:a=105,c=112,D=0
+   p=2 geometry side note: 6*S_2(n)=n(n+1)(2n+1), the cuboid
+   packing volume.  The balance equation itself uses only odd S_1(n),
+   while the square-pyramid volume is the even shell package around it.
+
+3. Asymptotic anchor check
+   a_asym=p*n^2+(p-1)*n+(p-1)(p-2)/(12p)-(p-1)(p-2)(2p^2-4p-1)/(180*p^3*n(n+1))
+   rows show true-a minus asymptotic-a; n^4 scaling should stabilize
+   p=3: n=10:err=1.101386E-8,n4err=0.00011014; n=30:err=1.5418E-10,n4err=0.00012489; n=100:err=1.31E-12,n4err=0.00013073
+   p=4: n=10:err=7.053332E-8,n4err=0.00070533; n=30:err=9.8782E-10,n4err=0.00080014; n=100:err=8.38E-12,n4err=0.00083764
+   p=5: n=10:err=1.5228972E-7,n4err=0.00152290; n=30:err=2.13322E-9,n4err=0.00172791; n=100:err=1.809E-11,n4err=0.00180894
+   p=6: n=10:err=2.4486378E-7,n4err=0.00244864; n=30:err=3.43024E-9,n4err=0.00277849; n=100:err=2.909E-11,n4err=0.00290883
+   p=7: n=10:err=3.4323609E-7,n4err=0.00343236; n=30:err=4.80848E-9,n4err=0.00389487; n=100:err=4.078E-11,n4err=0.00407759
+   p=8: n=10:err=4.4497938E-7,n4err=0.00444979; n=30:err=6.23391E-9,n4err=0.00504947; n=100:err=5.286E-11,n4err=0.00528636
+
+4. OCF compatibility illustration
+   two disjoint directed triangles with all cross edges one way: odd_cycles=2, disjoint_pairs=1, H=9, OCF=9
+   reading: Faulhaber balance is linear in odd moments S_r; OCF adds
+   compatibility packets alpha_k, i.e. independent collections in Omega(T).
+
+5. Tournament Analysis carrier
+   vertices are proof carriers, not runners/arcs:
+   faulhaber_odd_moments, ocf_odd_cycles, omega_alpha_packets, beatty_pell_addresses, convolution_hidden_lifts, lrc14_q27_support, code72_support_design, unit_distance_nonproduct_fibers
+   pairwise observable: majority over 7 retained-channel criteria
+   switch/gauge: higher retained-channel score wins; ties use listed path
+   preserves for LRC: blocker/support address, carry class, witness target
+   destroys for LRC: raw time geometry and exact interval endpoints
+   challenged assumption: the useful tournament may live on proof obligations,
+   odd atoms, or hidden lifts rather than on runner pairs.
+   score_hist={0: 1, 1: 1, 4: 3, 5: 3}
+   directed_3cycles=8
+   scc_sizes=[6, 1, 1]
+   hamiltonian_paths=45
+   scores={'faulhaber_odd_moments': 4, 'ocf_odd_cycles': 5, 'omega_alpha_packets': 4, 'beatty_pell_addresses': 5, 'convolution_hidden_lifts': 5, 'lrc14_q27_support': 4, 'code72_support_design': 1, 'unit_distance_nonproduct_fibers': 0}
+
+6. Working hypotheses generated
+   H1: c=p*u+corrections with u=n(n+1) is the common triangular carrier;
+       p=1,2 are integral because the Bernoulli correction vanishes.
+   H2: odd Faulhaber moments are the scalar shadow of odd-cycle atoms;
+       OCF suggests the missing higher structure is compatibility of atoms.
+   H3: LRC14 Q27 and code72 support ledgers should retain odd atoms plus
+       compatibility packets, mirroring alpha_k rather than only S_r.
+   H4: HYP-2456's Beatty-Pell address is the endpoint/carry layer of the
+       same carrier; the Faulhaber expansion is its moment layer.

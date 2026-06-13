@@ -4,6 +4,31 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - FAULHABER ODD-MOMENT OCF BRIDGE: odd atoms need OCF-style compatibility packets (HYP-2458, OPEN-Q-080, T802)
+
+**Dispatch:** add an OCF compatibility-packet layer on top of the newly landed HYP-2457 Faulhaber
+anchor expansion.  HYP-2457 proves the odd-moment anchor formula; this addendum asks what the
+analog of OCF `alpha_k` packets should be after the odd atom inventory `S_1,S_3,...` has been found.
+
+**Atlas result:** `04-computation/faulhaber_odd_moment_ocf_bridge_codex.py` verifies the odd-moment identity
+on `792` exact checks, recovers `a=n^2` and `a=2n^2+n`, and numerically supports the prompt's
+two-term expansion through p=3..8 with `n^4`-scaled root errors stabilizing.  It separates the p=2
+square-pyramid cuboid layer `6*S_2(n)=n(n+1)(2n+1)` from the antisymmetric balance layer, which uses
+only odd `S_1`.  An OCF miniature with two disjoint directed triangles gives `H=I(Omega,2)=9`,
+illustrating why odd atom inventory must be lifted to compatibility packets.
+
+**New route:** build an odd-moment compatibility lift analogous to OCF `alpha_k` packets.  First apply it
+to HYP-2456 Beatty/Pell boundary atoms, then to LRC14 Q27 owner/carry ledgers, and finally to the
+`[72,36,16]` minimum-word support-design problem where `78/90` should become packet incidence rather
+than scalar numerology.  Carrier Tournament Analysis over proof carriers has `8` directed 3-cycles,
+SCC sizes `[6,1,1]`, and `45` Hamiltonian paths.
+
+Artifacts: HYP-2458, HYP-2457, OPEN-Q-080, T802,
+`04-computation/faulhaber_odd_moment_ocf_bridge_codex.py` and its `.out`, reflection
+`faulhaber-odd-moments-and-ocf-cycle-packets.md`.
+
+---
+
 ## codex-2026-06-13 - FAULHABER ANCHOR EXPANSION: odd moments and square-pyramidal cuboid carrier (HYP-2457, OPEN-Q-079, T801)
 
 **Dispatch:** sharpen HYP-2454's Bernoulli/Faulhaber proof route for the real anchor
