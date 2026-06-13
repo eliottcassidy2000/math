@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: unit-distance small-factor resonance capacity gap (HYP-2467/T807/OPEN-Q-085)
+
+**Done:** turned THM-493's resonance bonus into an exact connected-factor capacity atlas. Added `04-computation/unit_distance_resonance_capacity_atlas_codex.py` and stored output. The script enumerates every connected triangular-lattice patch through size `9` up to translation and `D6`, computes edge counts and norm-`t` displacement spectra, and maximizes the non-degenerate `t>1` resonance bonus over every relative `D6` orientation. Exact result: `27=3*9` maxes at `75<81`; `28=4*7` reaches `85>84`; `30=5*6` ties; `32=4*8` crosses. The size-3 stress test is the useful proof object: `K3` has generic `75` but zero bonus, while the resonance-bearing 3-point paths reach only `69/70`.
+**Next:** prove the size-3 capacity inequality without enumeration, then build a Moser-patch compression verifier: given a dense rank-4 patch, extract displacement packets and try to factor them through small connected triangular shadows. The target theorem is that any 27-point 82-edge patch either compresses to an impossible capacity lane or exposes a genuinely irreducible obstruction worth classifying directly.
+
 ## Lead codex-2026-06-13: LRC14 two-stranger compression stress (HYP-2464/T805/OPEN-Q-083)
 
 **Done:** extended the HYP-2463 Q27 resource-independence route beyond the old hard-residue list. Added `04-computation/lrc14_two_stranger_compression_stress_codex.py` and stored output. The script deletes one runner from `7*{1,...,12}` and adds any two distinct non-core speeds up to `13*84`, scanning `6,868,368` primitive true two-stranger rows by bitset safe-twist masks. Only `877` rows block every plain shell `q<=27`; all `877` have a Q27 witness, so there are `0` Q27 misses. The important correction to HYP-2463 is that `636/877` residuals use zero old hard residues, but every residual still has at least one added speed divisible by `13`, no residual deletes `7,21,49`, and the late rescues are divisor fibers (`70,84,91` plus one `161=7*23`). Compression-map Tournament Analysis is nontransitive with one directed 3-cycle and leader `divisor_fiber_Q27`.

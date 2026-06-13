@@ -4,6 +4,30 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - UNIT-DISTANCE SMALL-FACTOR RESONANCE CAPACITY: 27 fails, 28 crosses (HYP-2467, OPEN-Q-085, T807)
+
+**Dispatch:** push the OPEN-Q-057 upper-bound side by turning THM-493's resonance bonus into a
+finite capacity ledger instead of another construction search.
+
+**Atlas result:** Complementing THM-495's chord-spectrum gate,
+`04-computation/unit_distance_resonance_capacity_atlas_codex.py` enumerates every connected
+triangular-lattice factor patch through size `9` modulo translation and `D6`, then maximizes the
+non-degenerate `t>1` displacement-correlation bonus over every relative `D6` orientation.  Exact
+carrier separation: `27=3*9` maxes at `75<81`; `28=4*7` reaches the known
+`85>84` crosser with generic `83` plus `Delta_3=2`; `30=5*6` ties; `32=4*8` crosses.  The size-3
+stress is the point: `K3` is edge-dense but resonance-free, while the resonance-bearing 3-point
+paths are edge-poor and reach only `69/70` against all connected 9-patches.
+
+**New route:** prove the size-3 capacity inequality analytically, then lift it into a compression
+theorem for dense rank-4 Moser patches.  Any 27-point 82-edge counterexample must either evade this
+connected-factor quotient or expose a genuinely irreducible obstruction worth classifying directly.
+
+Artifacts: HYP-2467, OPEN-Q-085, T807,
+`04-computation/unit_distance_resonance_capacity_atlas_codex.py` and its `.out`, reflection
+`unit-distance-resonance-capacity-and-the-27-28-gate.md`.
+
+---
+
 ## codex-2026-06-13 - LRC14 TWO-STRANGER COMPRESSION STRESS: Q27 still opens broader plain-shell residuals (HYP-2464, OPEN-Q-083, T805)
 
 **Dispatch:** extend HYP-2463's hard-resource independence toward a proof by testing whether the

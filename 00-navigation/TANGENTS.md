@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T807** #unit-distance #Nstar #resonant-product #Moser-lattice #capacity #HYP-2467 #OPEN-Q-085 | certainty: exact connected-factor atlas; open global compression theorem | source: codex-2026-06-13
+UNIT-DISTANCE SMALL-FACTOR RESONANCE CAPACITY. Exhaust every connected triangular-lattice factor through size `9` and maximize the THM-493 non-degenerate displacement-correlation bonus over all relative `D6` orientations. Exact carrier result: `27=3*9` maxes at `75<81` because `K3` is edge-dense but resonance-free and the resonance-bearing 3-point paths are edge-poor; `28=4*7` reaches the known `85>84` crossing via `t=3`. Next: prove the size-3 capacity inequality analytically and lift it to a compression theorem for arbitrary dense rank-4 Moser patches.
+
 **T805** #lrc14 #Q27 #two-stranger #compression #13-clock #divisor-fiber #HYP-2464 #OPEN-Q-083 | certainty: exact bounded two-stranger scan; open global compression theorem | source: codex-2026-06-13
 LRC14 TWO-STRANGER COMPRESSION STRESS. Delete one speed from `7*{1..12}` and add two distinct non-core speeds up to `13*84`: exact scan covers `6,868,368` primitive rows. Only `877` block every plain shell `q<=27`, and all `877` have Q27 witnesses. Most residuals (`636/877`) use no old HYP-2444 hard residue, so the compression target is not a fixed hard list. But every residual has a `13`-clock speed, none delete `7,21,49`, and late rescues are divisor fibers (`70,84,91`, plus one `161=7*23`). Next: prove blockers compress to resource coordinates, not just hard residues.
 **T806** #lrc14 #Q27 #set-cover #near-core #compression #carry-window #HYP-2465 #OPEN-Q-084 | certainty: exact bounded MILP infeasibility through 3 core deletions; open descent below nine-core | source: codex-2026-06-13
