@@ -23,7 +23,18 @@ complements:
   - "THM-495 (same session, parallel monad-explorer): the chord-spectrum gate answers
      WHICH t crosses. THM-496 answers WHY n=28 not n=27, on the orthogonal
      lattice-perfection axis, and CORRECTS the resonant cap at 27 (75, not the 81 tie)."
+  - "HYP-2467 (codex, same session): the connected-patch resonance-capacity atlas
+     independently computes the SAME 75<81 cap at 27 (triple convergence). THM-496's
+     distinct content is the Harborth-vs-u lattice-perfection axis + the propagation."
 ---
+
+> **Triple-convergence note (2026-06-13):** three agents independently established
+> that the two-factor connected-patch family maxes at **75 < 81** at n=27 this session
+> — THM-495 (chord-spectrum), codex's HYP-2467 (resonance-capacity atlas), and this
+> work (Part 6 exhaustive). The shared cap is robustly confirmed. THM-496's *own*
+> contribution is the **lattice-perfection table** (Harborth=u for k≤8, first
+> divergence at k=9) and the **multiplicative propagation** of that deficit to 27 —
+> neither of which appears in THM-495 or HYP-2467.
 
 # THM-496: the lattice-perfection gate for the resonant-product crossover
 
@@ -133,6 +144,7 @@ multiplicatively* to `27`.
   the first lattice-imperfect size. Strong structural support for `N*=28` (HYP-2299).
 
 **Artifacts:** `04-computation/lattice_perfection_gate_monad.py`,
-`05-knowledge/results/lattice_perfection_gate_monad.out`. New hypothesis **HYP-2467**
-(the lattice-imperfection-propagation conjecture). Reflection
+`05-knowledge/results/lattice_perfection_gate_monad.out`. New hypothesis **HYP-2468**
+(the lattice-imperfection-propagation conjecture: the smallest imperfect factor gates
+the nearest structured threshold). Reflection
 `07-reflections/the-lattice-perfection-gate-nine-is-the-first-imperfect-size.md`.

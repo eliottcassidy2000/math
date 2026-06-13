@@ -59,7 +59,10 @@ product needs a factorization that is simultaneously
   **chord-free 3** — it fails (1) *and* (2). The exact resonant cap is **75**, not 81:
   `e(K₃)·9 + 3·e(G₉) + Δ = 27 + 3·16 + 0 = 75` (the lattice `G₉` has 16 edges, not the
   generic 18; `K₃` is chord-free so `Δ=0`). **Resonance strictly hurts at 27.** The
-  `81` tie is the *generic, off-lattice* cube — no resonance in it at all.
+  `81` tie is the *generic, off-lattice* cube — no resonance in it at all. (This `75`
+  cap is **triple-confirmed** this session — THM-495's chord argument, codex's HYP-2467
+  capacity atlas, and my Part-6 exhaustive max all land on it; my distinct point is
+  *why*: the Harborth deficit at 9, not just `K₃`'s chord-freeness.)
 - `n = 28 = 4·7`: both sizes lattice-perfect (`H=u`: `5,12`), the rhombus carries a
   `√3` chord, and `gap(28) = 84 − 83 = 1 < Δ₃ = 2`. **First crossing**: `83 + 2 = 85`.
 - `n = 24, 25` (`4·6`, `5·5`) *are* lattice-perfect and chord-bearing, but `gap = 6, 5`
@@ -105,7 +108,7 @@ at `27`, and why the threshold has to wait for the lattice-perfect, chord-bearin
   structured families are blocked by lattice-imperfection at `9`, so any beat at `27`
   must be a genuinely irregular (non-product, non-lattice) blob, consistent with
   THM-433/437/493.
-- **New question (HYP-2467):** does lattice-imperfection propagate multiplicatively in
+- **New question (HYP-2468):** does lattice-imperfection propagate multiplicatively in
   general — is `u(ab) − [lattice-optimum on ab] ≥` something like `u(a)·b + a·u(b) −
   H(a)b − a·H(b)`, and is the *first* imperfect size always the one that gates the
   nearest structured threshold? The `9 → 27` instance says: watch the smallest
