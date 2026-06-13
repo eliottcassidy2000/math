@@ -1,0 +1,82 @@
+==============================================================================
+TWO TRIANGULAR TOWERS + PELL CROSSOVERS  monad-S712
+==============================================================================
+A_n uses consecutive integers; B_n uses consecutive squares on the 4T_n shell.
+
+FORMULAS
+  A_n   = sum_{k=n^2..n^2+n} k = sum_{k=n^2+n+1..n^2+2n} k
+        = n*(n+1)*(2n+1)/2  = 3*sum_{j=1..n} j^2
+  B_n   = sum_{k=2n^2+n..2n^2+2n} k^2 = sum_{k=2n^2+2n+1..2n^2+3n} k^2
+        = n*(n+1)*(2n+1)*(12n^2+12n+1)/6
+        = A_n * ((12n^2+12n+1)/3) = A_n * ((2n+1)^2 - 2/3)
+  C_n   = triangular-number analog A222716:
+        = sum_{j=n^2-n-1..n^2-1} T_j = sum_{j=n^2..n^2+n-2} T_j
+        = (n-1)*n*(n+1)*(3n^2-2)/6
+
+FIRST TERMS
+  A_n: [3, 15, 42, 90, 165, 273, 420, 612]
+  B_n: [25, 365, 2030, 7230, 19855, 45955]
+  raw B-left sums : [7, 33, 90, 190, 345, 567, 868, 1260]
+  raw B-right sums: [5, 27, 78, 170, 315, 525, 812, 1188]
+  C_n: [0, 10, 100, 460, 1460, 3710, 8120, 15960]
+
+RAW SUM IDENTITIES
+  raw_B_left(n)  = A_n + n*(n+1)^2
+  raw_B_right(n) = A_n + n^2*(n+1)
+  raw_B_left(n) - raw_B_right(n) = n*(n+1)
+  bounded raw-sum crossover raw_B_left = A_m: [(3, 4, 90)]
+  bounded raw-sum crossover raw_B_right = A_m: []
+  In the scanned range, 90 is the only raw left-sum shared by both towers:
+    raw_B_left(3) = 21+22+23+24 = A_4 = 16+17+18+19+20 = 90
+
+UNIQUE EXACT SHARED RAW BLOCK
+  B_left(3) = A_right(4) = (21, 24)
+  Proof: equality of block lengths forces m=n+1; then
+         2n^2+n = m^2+m+1 = (n+1)^2+(n+1)+1, so n^2-2n-3=0 and n=3.
+  So 21+22+23+24 is the unique exact raw interval shared by both towers.
+
+ENDPOINT-CROSSOVER FAMILIES
+  These are the infinite truncation / alignment families behind examples like
+  10+11+12 inside 9+10+11+12 and 25+26+27 starting the A_5 left block.
+  BLe=ALe : (2,3), (14,20), (84,119), (492,696), (2870,4059)
+            Pell constants on first hits: [-1, -1, -1, -1, -1]
+  BLs=ALs : (4,6), (144,204), (4900,6930)
+            Pell constants on first hits: [1, 1, 1]
+  BRs=ALs : (3,5), (20,29), (119,169), (696,985), (4059,5741)
+            Pell constants on first hits: [1, 1, 1, 1, 1]
+  BLs=ARs : (1,1), (3,4), (39,55), (109,154), (1333,1885), (3711,5248)
+            Pell constants on first hits: [7, 7, 7, 7, 7]
+  BLe=ARe : (3,4), (20,28), (119,168), (696,984), (4059,5740)
+            Pell constants on first hits: [-1, -1, -1, -1, -1]
+  BRe=ALe : (6,9), (18,26), (228,323), (636,900)
+            Pell constants on first hits: [7, 7, 7, 7]
+  BRs=ARs : (2,3), (14,20), (84,119), (492,696), (2870,4059)
+            Pell constants on first hits: [-1, -1, -1, -1, -1]
+  BRe=ARe : (24,34), (840,1188)
+
+INTERPRETATION OF THE MAIN FAMILIES
+  BLe=ALe:  B_left(n) is the RIGHT TAIL of A_left(m).
+            first hits (2,3), (14,20), (84,119), (492,696), (2870,4059)
+            equation m(m+1)=2n(n+1), i.e. (2m+1)^2 - 2(2n+1)^2 = -1.
+  BRs=ARs:  B_right(n) is the LEFT TAIL of A_right(m).
+            same solution family (2,3), (14,20), (84,119), (492,696), (2870,4059)
+  BLs=ALs:  B_left(n) starts exactly where A_left(m) starts.
+            first hits (4,6), (144,204), (4900,6930)
+            equation m^2=n(2n+1), i.e. (4n+1)^2 - 8m^2 = 1.
+  BRs=ALs:  B_right(n) starts exactly where A_left(m) starts.
+            first hits (3,5), (20,29), (119,169), (696,985), (4059,5741)
+            equation m^2=2n^2+2n+1, i.e. 2m^2 - (2n+1)^2 = 1.
+  BLs=ARs:  B_left(n) starts exactly where A_right(m) starts.
+            first hits (1,1), (3,4), (39,55), (109,154), (1333,1885), (3711,5248)
+            equation (4n+1)^2 - 2(2m+1)^2 = 7.
+  BRe=ALe:  B_right(n) ends exactly where A_left(m) ends.
+            first hits (6,9), (18,26), (228,323), (636,900)
+            equation (4n+3)^2 - 2(2m+1)^2 = 7.
+
+MAIN BRIDGES
+  1. A_n already hides squares: A_n = 3 * sum_{j<=n} j^2.
+  2. B_n is a multiplicative lift of A_n by the factor (12n^2+12n+1)/3.
+  3. The exact shared block 21..24 is rigid/unique, but one-endpoint bridges
+     persist in infinite Pell families.
+  4. The triangular-number analog C_n shows a third tower exists, but it lives
+     on TRIANGULAR VALUES indexed near n^2, not on a new power shell.
