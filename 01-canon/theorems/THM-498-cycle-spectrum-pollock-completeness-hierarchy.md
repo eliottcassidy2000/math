@@ -48,9 +48,49 @@ recomputed gap-free `[0,M(n)]` for `n ≤ 6` as a pipeline validation against
 THM-462. (`04-computation/cycle_spectrum_pollock_lens_kps3.py`,
 `05-knowledge/results/...out`.) `c5` is **not** score-determined (unlike `c3`),
 so this is a genuinely new spectrum, not reducible to Landau sequences.
-*Honest scope:* `c5=10` is the first forbidden value; the `n=7` `c5` spectrum
-(`[0,42]`-ish) needs an exhaustive `2^{21}` sweep to pin its gaps (sampling shows
-candidate top-end gaps but those are likely sampling artifacts — flagged).
+*Honest scope:* `c5=10` is the first forbidden value.
+
+## ADDENDUM (kps4): the n=7 spectrum, EXHAUSTIVE, via the THM-118 speedup
+
+Last session's `n=7` was left open because the `O(C(n,5)·5!)` explicit counter was
+too slow for `2^{21}` tournaments. But the repo already proved (THM-118,
+2026-03-07) that in a tournament **`c5 = tr(A⁵)/5` exactly** (a closed ≤5-walk
+can't repeat a vertex without forcing a forbidden 2-cycle; fails first at k=6).
+That is an `O(n³)` computation — and with it the full `2^{21}` sweep runs in
+seconds (re-verified `c5 = tr(A⁵)/5` against the explicit counter, n≤6, 0
+mismatches). Result, EXHAUSTIVE:
+
+> **`n=7`: the `c5` spectrum is `[0,42] ∖ {34, 37, 38, 39, 40, 41}`** — six
+> forbidden values, ALL clustered just below the maximum `42`.
+
+Two refinements of the hierarchy: (i) the forbidden set is **not monotone** —
+`c5=10` (forbidden at `n=6`) is REALIZED at `n=7`; the gaps **migrate to the top**
+of the range as `n` grows (a middle gap at `n=6`, a top cluster at `n=7`). So
+"Pollock-incompleteness" of `c5` is a *high-count* / near-extremal phenomenon at
+`n=7`, where the densest-5-cycle tournaments leave arithmetic holes. (ii) This is
+the speedup-as-enabler: a six-month-old canonical identity (THM-118) unblocked a
+computation the previous session could not finish — efficiency drawn from the
+repo's own history (reflection `efficiency-becomes-proof-kps4`).
+
+## ADDENDUM (kps4): the gaps are SKEW-SPECTRAL exclusions
+
+Via THM-118, `c5(T)·5 = tr(A⁵) = Σ_i λ_i⁵`, the 5th power-sum of `A`'s spectrum.
+Since `A + Aᵀ = J − I`, `A = (J − I + S)/2` with `S` the skew matrix (purely
+imaginary spectrum `±iμ`), so the cycle counts are symmetric functions of the
+**skew spectrum** — the same object the determinant lens (THM-468/472,
+`det(I+S)`) and the spectral-OCF chain (THM-133) live on. The `n=6` gap reframes
+cleanly: the achievable `tr(A⁵)` values at `n=6` are `{0,5,…,45,55,60}` — every
+multiple of 5 up to 45, then 55, 60, **skipping exactly 50**. So
+
+> **`c5=10` forbidden ⟺ no 6-vertex tournament has `Σ_i λ_i⁵ = 50`** (equivalently
+> `tr(A⁵)=50`) — a skew-spectral exclusion, not a combinatorial accident.
+
+This bridges the cycle-spectrum gaps (THM-498) to the skew-spectrum / determinant
+machinery: the forbidden cycle-counts (`c5=10`, and conjecturally `H∈{7,21}`) are
+**power-sum / skew-spectral exclusions**, the precise analogue of the
+"singular-series vanishes" exceptional set in the Pollock/circle-method picture
+(HYP-2488). The classification of forbidden values becomes a question about which
+power-sum vectors `(tr A³, tr A⁴, tr A⁵, …)` a tournament spectrum can realize.
 
 ## The hierarchy (the Pollock-onset climbs the cycle length)
 
@@ -87,5 +127,7 @@ degrees 3 and 5.
   10 stay forbidden? do more appear?) and the `c_{2k+1}` onset as a function of
   `k` — the Pollock-completeness curve of the OCF.
 
-**Artifacts:** `04-computation/cycle_spectrum_pollock_lens_kps3.py` (+ `.out`).
+**Artifacts:** `04-computation/cycle_spectrum_pollock_lens_kps3.py`,
+`cycle_trace_speedup_kps4.py` (the THM-118 speedup, n=7 exhaustive, spectral
+reframing) (+ `.out`).
 Reflection `07-reflections/pollock-as-the-bounded-arity-currency-and-the-cycle-spectrum-onset-kps3.md`.

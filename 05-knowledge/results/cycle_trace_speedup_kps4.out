@@ -1,0 +1,17 @@
+=== (A) verify c5 = tr(A^5)/5 vs explicit counter (n=4,5,6) ===
+   n=4: 64 tournaments, tr(A^5) divisible by 5 & matches explicit: ALL OK
+   n=5: 1024 tournaments, tr(A^5) divisible by 5 & matches explicit: ALL OK
+   n=6: 4000 tournaments, tr(A^5) divisible by 5 & matches explicit: ALL OK
+
+=== (B) c5 spectrum via the speedup ===
+   n=5 (exhaustive): c5 in [0,3], gaps=NONE
+   n=6 (exhaustive): c5 in [0,12], gaps=[10]
+   n=7 (2^21 tournaments) — feasible ONLY via the O(n^3) trace speedup:
+      EXHAUSTIVE c5 in [0,42], #values=37, GAPS=[34, 37, 38, 39, 40, 41]
+
+=== (C) spectral reframing of the c5=10 gap at n=6 ===
+   c5=10 <=> tr(A^5)=50. Achievable tr(A^5) values at n=6:
+      tr(A^5) achievable = [0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 55, 60]
+      50 in achievable tr(A^5)? NO — the gap is tr(A^5) skips 50
+
+=== TOTAL 16.5s ===
