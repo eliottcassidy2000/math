@@ -1,0 +1,16 @@
+=== (A) c3 spectrum — must be gap-free [0,M(n)] (THM-462 validation) ===
+   n=3: c3 in [0,1], M(n)=1, max-correct=True, gaps=0 => GAP-FREE (Pollock-complete)
+   n=4: c3 in [0,2], M(n)=2, max-correct=True, gaps=0 => GAP-FREE (Pollock-complete)
+   n=5: c3 in [0,5], M(n)=5, max-correct=True, gaps=0 => GAP-FREE (Pollock-complete)
+   n=6: c3 in [0,8], M(n)=8, max-correct=True, gaps=0 => GAP-FREE (Pollock-complete)
+
+=== (B) c5 spectrum — the next Pollock channel (NOT score-determined) ===
+   n=5 (exhaustive 1024 labeled): c5 in [0,3], #values=4, gaps=0 => GAP-FREE
+   n=6 (exhaustive 32768 labeled): c5 in [0,12], #values=12, gaps=1 => FIRST GAPS [10]
+   n=7: heavy random sample (exhaustive 2^21 feasible but slow; sampling for the spectrum):
+      c5 in [0,42] (sampled), #values=37, missing-in-range=6 (sample lower bound on gaps): candidate gaps [34, 37, 38, 39, 40, 41]
+
+=== (C) Pollock verdict per channel ===
+   c3 (degree-3): gap-free at all n (THM-462, Lagrange-four-square engine) = COMPLETE.
+   c5 (degree-5): see (B) — first gaps locate where additive completeness weakens.
+   H  (degree-n): GAPS at 7, 21 (THM-029/079) = INCOMPLETE. The Pollock-onset is between.
