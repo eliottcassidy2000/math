@@ -4,6 +4,13 @@
 
 ---
 
+## OPEN-Q-089 🔴
+**Can LRC14 long blocking-height rows be split into peelable-carrier or balanced-cover-congruence cases?**
+
+HYP-2481 shows that raw cumulative speed dominance grows with blocking height, but normalized dominance falls and the speed tournament becomes transitive in named hard packets. Prove a dichotomy: either some cumulative/private cover carrier can be peeled, transported, or converted into a Bprime/owner opening, or the lack of such a carrier forces balanced-cover congruences that enter the Q31/band-2 ramified portal of HYP-2471/HYP-2480. Immediate computational subtask: add leave-one-out support-criticality to `lrc14_blocking_height_dominance_codex.py` and test the five one-stranger evaders plus the two HYP-2470/HYP-2471 exception shapes.
+
+**Source:** HYP-2481, codex-2026-06-13.
+
 ## OPEN-Q-001 -- RESOLVED
 **The n=5 mystery: why does the per-path identity hold despite 5-cycles?**
 

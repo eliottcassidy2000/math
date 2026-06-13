@@ -1,0 +1,110 @@
+==============================================================================
+Codex LRC14 blocking-height dominance atlas
+==============================================================================
+n=14; q_start=14; hmax=80; core=(7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84)
+
+A. One-stranger family S(r)=7*{1..12} union {r}
+  rows=936 active_preheight_rows=72
+    corr(height,top_cover_share) pearson= 0.007 spearman=-0.025
+    corr(height,top_unique_share) pearson=-0.492 spearman=-0.497
+    corr(height,mean_pair_margin) pearson= 0.779 spearman= 0.522
+    corr(height,mean_pair_margin_per_shell) pearson=-0.410 spearman=-0.290
+    corr(height,mean_pair_margin_norm) pearson=-0.711 spearman=-0.558
+    corr(height,score_spread) pearson= 0.000 spearman= 0.000
+    corr(height,top_outdegree) pearson= 0.000 spearman= 0.000
+    corr(height,directed_3cycles) pearson= 0.000 spearman= 0.000
+  height buckets with mean dominance metrics:
+    h=27 n= 64 top_cover=0.112 pair_margin=6.83 spread=12.00 c3=0.0
+    h=40 n=  6 top_cover=0.112 pair_margin=11.46 spread=12.00 c3=0.0
+    h=41 n=  2 top_cover=0.113 pair_margin=10.62 spread=12.00 c3=0.0
+
+B. Random primitive multiple-of-14 rows
+  rows=120 active_preheight_rows=23
+    corr(height,top_cover_share) pearson=-0.581 spearman=-0.780
+    corr(height,top_unique_share) pearson= 0.299 spearman= 0.497
+    corr(height,mean_pair_margin) pearson= 0.942 spearman= 0.896
+    corr(height,mean_pair_margin_per_shell) pearson=-0.573 spearman=-0.725
+    corr(height,mean_pair_margin_norm) pearson=-0.729 spearman=-0.875
+    corr(height,score_spread) pearson= 0.000 spearman= 0.000
+    corr(height,top_outdegree) pearson= 0.000 spearman= 0.000
+    corr(height,directed_3cycles) pearson= 0.000 spearman= 0.000
+  height buckets with mean dominance metrics:
+    h=15 n=  5 top_cover=0.341 pair_margin=2.01 spread=12.00 c3=0.0
+    h=16 n=  7 top_cover=0.207 pair_margin=3.03 spread=12.00 c3=0.0
+    h=17 n=  4 top_cover=0.173 pair_margin=3.85 spread=12.00 c3=0.0
+    h=19 n=  3 top_cover=0.171 pair_margin=6.41 spread=12.00 c3=0.0
+    h=21 n=  3 top_cover=0.143 pair_margin=8.07 spread=12.00 c3=0.0
+
+C. Named hard packets: dominance tournaments
+  one-stranger-611: h=41 pre_shells=27 blocked_unit_mass=432
+    top_speed=35 top_cover_share=0.096 top_unique_share=0.150
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((35, 70), (70, 70), (611, 60), (7, 56), (14, 56), (28, 56))
+    top unique loads=((7, 34), (49, 32), (21, 22), (63, 22), (77, 22), (14, 16))
+  one-stranger-702: h=41 pre_shells=27 blocked_unit_mass=432
+    top_speed=702 top_cover_share=0.130 top_unique_share=0.163
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((702, 100), (35, 70), (70, 70), (7, 56), (14, 56), (28, 56))
+    top unique loads=((49, 30), (7, 26), (21, 20), (63, 18), (14, 16), (28, 14))
+  one-stranger-793: h=40 pre_shells=26 blocked_unit_mass=416
+    top_speed=35 top_cover_share=0.099 top_unique_share=0.163
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((35, 70), (70, 70), (793, 58), (28, 56), (56, 56), (7, 54))
+    top unique loads=((49, 34), (7, 28), (63, 20), (77, 20), (21, 18), (56, 18))
+  one-stranger-962: h=40 pre_shells=26 blocked_unit_mass=416
+    top_speed=962 top_cover_share=0.128 top_unique_share=0.169
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((962, 96), (35, 70), (70, 70), (28, 56), (56, 56), (7, 54))
+    top unique loads=((49, 30), (7, 26), (21, 18), (35, 18), (56, 18), (14, 16))
+  one-stranger-1053: h=40 pre_shells=26 blocked_unit_mass=416
+    top_speed=1053 top_cover_share=0.112 top_unique_share=0.160
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((1053, 82), (35, 70), (70, 70), (28, 56), (56, 56), (7, 54))
+    top unique loads=((49, 30), (7, 28), (21, 22), (35, 18), (56, 16), (63, 16))
+  HYP2470-E1-q33: h=33 pre_shells=19 blocked_unit_mass=266
+    top_speed=504 top_cover_share=0.120 top_unique_share=0.137
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((504, 60), (322, 52), (350, 46), (936, 42), (21, 38), (63, 38))
+    top unique loads=((21, 14), (504, 14), (7, 10), (14, 10), (350, 10), (49, 8))
+  HYP2470-E2-q31: h=31 pre_shells=17 blocked_unit_mass=220
+    top_speed=1008 top_cover_share=0.138 top_unique_share=0.200
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((1008, 64), (700, 58), (119, 44), (28, 36), (1066, 36), (21, 32))
+    top unique loads=((49, 14), (7, 10), (28, 8), (21, 6), (35, 6), (63, 6))
+  HYP2471-Q31-E1: h=31 pre_shells=17 blocked_unit_mass=220
+    top_speed=504 top_cover_share=0.133 top_unique_share=0.175
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((504, 56), (322, 44), (832, 40), (350, 38), (21, 32), (63, 32))
+    top unique loads=((504, 14), (21, 10), (7, 8), (14, 8), (77, 8), (350, 8))
+  HYP2471-Q31-E2: h=31 pre_shells=17 blocked_unit_mass=220
+    top_speed=1008 top_cover_share=0.142 top_unique_share=0.171
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1} spread=12 top_outdegree=12 directed_3cycles=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] Hpaths=1
+    top cover loads=((1008, 64), (700, 58), (119, 44), (28, 36), (21, 32), (63, 32))
+    top unique loads=((49, 12), (7, 10), (21, 8), (28, 6), (35, 6), (63, 6))
+
+D. Tournament Analysis setup and proof use
+  vertices: speeds inside a fixed row; alternate vertices considered were
+    denominator shells, unit numerators, dilated bands, deleted-core addresses,
+    cover obligations, owner/Bprime exits, and proof tactics.
+  selected quotient: speed dominance over pre-height dilated-band cover.
+  pairwise observable: sum_q |U_v(q)\U_w(q)| - |U_w(q)\U_v(q)| for q<h(S).
+  switch/gauge: q starts at the band-1 threshold 14; q<h means the row blocks q.
+  tie Hamiltonian path: row order.
+  preserves: who carries the blocked-unit cover before the first witness.
+  destroys: continuous-time owner geometry and Bprime interval widths.
+  proof interpretation: high blocking height is a long perfect-cover streak;
+    if raw dominance grows but normalized dominance thins, the proof target
+    becomes a dichotomy between peelable carriers and balanced-cover rigidity.
+
+E. Takeaway
+  Dominance grows with blocking height only in the raw cumulative sense:
+  mean pair margins rise strongly because a high-h row blocks many shells.
+  Height-normalized dominance moves the other way, and the binary tournament
+  saturates to a transitive order in these samples (score spread 12, no
+  directed 3-cycles).  The hard rows therefore look less like arbitrary
+  hierarchies and more like long balanced-cover chains with accumulated
+  but diluted dominance.
+  Proof route: show that every long blocking-height row either has a
+  peelable carrier whose cumulative excess forces a witness after deletion,
+  or else satisfies balanced-cover congruences tight enough to enter the
+  ramified Q31/band-2 portal already isolated by HYP-2471/HYP-2480.

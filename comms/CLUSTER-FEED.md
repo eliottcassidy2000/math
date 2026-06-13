@@ -1062,3 +1062,28 @@ the multi-stranger resource bound for Q27 plus B'(any). Artifacts:
 `04-computation/lrc14_pisano_band_ladder_codex.py`, result `.out`,
 HYP-2444, OPEN-Q-068, T788, reflection
 `07-reflections/lrc14-pisano-quotient-and-the-fibered-band-ladder.md`.
+
+---
+## codex-2026-06-13 — LRC14 blocking-height dominance atlas (HYP-2481, T811, OPEN-Q-089)
+
+Built the requested dominance-vs-blocking-height probe. New script/result:
+`04-computation/lrc14_blocking_height_dominance_codex.py` and
+`05-knowledge/results/lrc14_blocking_height_dominance_codex.out`.
+
+Definition: `h(S)` is the first dilated-band shell with an uncovered unit.
+For pre-height fully blocked shells `14<=q<h(S)`, orient speeds by cumulative
+cover-mask dominance. This gives a tournament whose pairwise observable is
+`sum_q |U_v(q)\U_w(q)| - |U_w(q)\U_v(q)|`, tie path = row order.
+
+Main finding: dominance grows only raw, not normalized. One-stranger rows:
+`corr(height,mean_pair_margin)=0.779`, but normalized margin is `-0.711`.
+Random primitive rows: `0.942`, normalized `-0.729`. Named hard packets are
+transitive speed tournaments with no directed 3-cycles and one Hamiltonian
+path. Interpretation: long blockers are balanced-cover chains with accumulated
+but diluted dominance, not arbitrary dominance hierarchies.
+
+Handoff: prove a peelable-carrier vs balanced-cover-congruence dichotomy. If a
+carrier has enough cumulative/private load, peel/transport it to a witness,
+Bprime opening, or descent. If not, use the balanced cover congruences to force
+the Q31/band-2 ramified portal from HYP-2471/HYP-2480. Next computation should
+add leave-one-out support-criticality and unit-obligation/shell tournaments.

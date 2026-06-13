@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T811** #lrc14 #dominance #blocking-height #dilated-band #Q31 #balanced-cover #HYP-2481 #OPEN-Q-089 | certainty: exact finite atlas; open dichotomy theorem | source: codex-2026-06-13
+LRC14 BLOCKING-HEIGHT DOMINANCE. Define `h(S)` as the first uncovered-unit shell and orient speeds by cumulative pre-height dilated-band cover-mask dominance. Raw cumulative dominance grows with height (`corr=0.779` one-stranger, `0.942` random primitive), but per-shell/per-unit normalized dominance falls (`corr=-0.711`, `-0.729` for normalized margin). Named hard rows have transitive speed tournaments, so the proof target is a dichotomy rather than a hierarchy: either a peelable cumulative carrier exposes a witness/Bprime/descent, or balanced-cover congruences force the Q31/band-2 ramified portal from HYP-2471/HYP-2480.
+
 **T810** #lrc14 #irreducibility #Q27 #eisenstein #valuation #set-cover #13-clock #HYP-2480 #OPEN-Q-088 | certainty: exact two-exception diagnostic; open ramified-portal lemma | source: codex-2026-06-13
 IRREDUCIBILITY TRICKS AS LRC14 LOCAL GATES. Polynomial irreducibility tactics transfer as proof procedure: primitive normal form, mod-p residue blockers, Eisenstein/Newton valuation repairs, Singh/Cohn factor-capture budgets, and Cohn/Perron dominance. Applied to HYP-2470's two Q27 exceptions, both rows have `12/13` speeds in the `7`-ideal and exactly one primitive non-7 escape, divisible by `13` (`936` and `1066`), and open at missing shells `q=33` and `q=31` plus Bprime/positive measure. Next: prove the ramified 7-ideal/13-clock portal opens at `31/33/41` or Bprime; extract dual Q27 set-cover certificates; build the below-eight-core survivor ledger and outside-window normalizer.
 
