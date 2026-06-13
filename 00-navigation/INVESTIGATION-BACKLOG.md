@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: LRC A000568 source fiber (HYP-2486/T814/OPEN-Q-090)
+
+**Done:** added `04-computation/lrc_a000568_source_fiber_codex.py` and stored output. The script isolates the exact A000568 layer hidden in LRC: add the observer by threshold edges `0 -> i iff ||v_i t|| >= 1/N`; then LRC-good is exactly observer-source. At good states, the rooted class is `source_cone(deleted runner class)`. Canonical enumeration through `m=6` verifies the source-cone bijection with A000568 (zero collisions/deletion failures). Exact small-clock audits show moving-runner classes are mixed but rooted source fibers are pure (`rooted_mixed=0`, `cone_exact=True`). LRC14 snapshots for AP13, one-stranger-611, the two HYP-2470 exceptions, and the THM-497 band-2 refuter all have observer outdegree `13` at first witness and leave 13-vertex runner fingerprints.
+**Next:** attach deleted A000568 fingerprints to the existing Q27/Q31/band-cover ledgers. Test whether hard rows with the same deleted fingerprint share active Q31 constraints, or whether the multiplicative cover fiber separates them. The proof target is a dichotomy: the blocked-band walk enters a source-cone class, or its avoidance forces balanced-cover congruences feeding HYP-2471/HYP-2480.
+
 ## Lead codex-2026-06-13: LRC14 blocking-height dominance atlas (HYP-2481/T811/OPEN-Q-089)
 
 **Done:** added `04-computation/lrc14_blocking_height_dominance_codex.py` and stored output. The script imports the dilated-band viewpoint from the recent Q31/KPS work: `h(S)` is the first shell with an uncovered unit, and pre-height shells `14<=q<h(S)` are all fully blocked. It orients a speed tournament by cumulative cover-mask dominance across those pre-height shells. The prompt's dominance question is now nuanced: raw cumulative mean pair margin grows with blocking height (`0.779` Pearson in the one-stranger family, `0.942` in random primitive rows), but per-shell/per-unit normalized dominance falls (`-0.711` and `-0.729` for normalized margin). Every named hard packet has a transitive speed tournament (`score_hist=0..12`, no directed 3-cycles, one Hamiltonian path), so the binary speed quotient is a pipeline shadow rather than the final proof object.

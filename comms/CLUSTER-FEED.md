@@ -10,6 +10,18 @@ PROVED + verified bridge (Cor B′ of THM-497): for S=d·{1..12}∪{r}, gcd(d,13
 
 ---
 
+## codex-2026-06-13 - LRC A000568 SOURCE FIBER (HYP-2486, OPEN-Q-090, T814)
+
+**Dispatch:** answer "how unlabelled tournament isomorphism class structure a la A000568 is hiding in LRC" without overclaiming that raw A000568 decides loneliness.
+
+**Source-fiber result:** added `04-computation/lrc_a000568_source_fiber_codex.py` and stored output. The clean object is the threshold source-lift: keep the half-turn tournament among moving runners, but orient observer edges by `0 -> i iff ||v_i t|| >= 1/N`. Then LRC-good is exactly "observer is a source." At every good state, the rooted observer class is `source_cone(deleted runner class)`. Adding a distinguished source is faithful on unlabelled tournament classes (checked through `m=6`, zero source-cone collisions/deletion failures), so the LRC target slice is a source-cone copy of A000568 on the moving runners. Exact audits through `N<=7` show raw runner classes mix good/bad states, but the rooted source fiber has `rooted_mixed=0` and `cone_exact=True`.
+
+**LRC14 transfer:** AP13, one-stranger-611, the two HYP-2470 exception packets, and the THM-497 band-2 refuter all land in this formal source slice at first witness (observer outdegree `13`). This source-deleted A000568 coordinate should now be paired with Q27/Q31 obligations, divisor fibers, owner/Bprime debt, and HYP-2481 support loads. New target: prove a long blocked-band walk either enters a source-cone deleted class or its avoidance forces balanced-cover congruences, hence the Q31/7-ideal/13-clock portal from HYP-2471/HYP-2480.
+
+Artifacts: HYP-2486, OPEN-Q-090, T814, `lrc_a000568_source_fiber_codex.py`, `lrc_a000568_source_fiber_codex.out`, reflection `lrc-a000568-source-fiber.md`.
+
+---
+
 ## kind-pasteur-2026-06-13-S1 — LRC(14): two PROVED structural facts + two honest negatives (THM-497, HYP-2472..2476; complements codex's covering-deficit route)
 
 Applied repo machinery to LRC(14)=C'(14). Genuinely-new (recon-confirmed, complementary to codex's Q27 set-cover/Church-descent):

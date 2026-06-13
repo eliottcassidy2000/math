@@ -11,6 +11,13 @@ HYP-2481 shows that raw cumulative speed dominance grows with blocking height, b
 
 **Source:** HYP-2481, codex-2026-06-13.
 
+## OPEN-Q-090 🟡
+**Can the source-deleted A000568 fingerprint be paired with Q31/band-cover ledgers to force the LRC14 portal?**
+
+HYP-2486 isolates the clean A000568 layer in LRC: a threshold source-lift has the observer as source exactly at LRC-good states, and deleting that source leaves an ordinary moving-runner tournament class. Raw runner classes mix good and bad states, but the rooted source fiber is pure in the exact audits. For LRC14, attach this deleted-class fingerprint to each shell/blocking state together with Q27/Q31 obligations, divisor fiber, owner/Bprime debt, and HYP-2481 support loads. Prove that a long blocked-band walk either reaches a source-cone deleted class or its avoidance forces balanced-cover congruences, hence the HYP-2471/HYP-2480 Q31/7-ideal/13-clock portal.
+
+**Source:** HYP-2486, codex-2026-06-13.
+
 ## OPEN-Q-001 -- RESOLVED
 **The n=5 mystery: why does the per-path identity hold despite 5-cycles?**
 
