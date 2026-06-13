@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T804** #lrc14 #Q27 #hard-resources #pisano #parity-typed-ledger #resource-independence #HYP-2463 #OPEN-Q-082 | certainty: exact complete hard-replacement hull; open compression theorem | source: codex-2026-06-13
+LRC14 HARD RESOURCES DO NOT STACK. The eight HYP-2444 one-stranger shell-27/13-clock blockers behave as fragile resource packets. Complete replacement hull scan: for every `R subset HARD` and `D subset 7*{1..12}` with `|D|=|R|-1`, all `77520` primitive rows have Q27 witnesses; only ten rows miss plain `q<=27`, and the only non-original misses are caught at `q=30` and `q=34`. The two `q=91` rows remain the original one-stranger packets `611,702`. Next: prove a resource-independence/compression theorem for arbitrary primitive rows: no Q27 blocker can spend shell-27 class, 13-clock, low-divisor coverage, and odd owner/Bprime width at once.
+
 **T803** #parity-projectors #even-walsh #odd-moments #reversal #marked-perspectives #lrc14 #HYP-2459 #OPEN-Q-081 | certainty: exact projector lemma + labelled tournament audit n=3..5; open Q27 typed-ledger transfer | source: codex-2026-06-13
 PARITY PROJECTOR CHANNEL GATE. Midpoint anti-symmetrization keeps odd offset/Faulhaber channels plus the fixed center atom, while tournament converse is global edge-sign reversal and therefore keeps only even Walsh levels for invariant scalars. Exact audit: `H` and `c3` are even-Walsh, writhe is odd, rooted `start0` is mixed but `start0+end0` is even and `start0-end0` is odd; raw `H` flip deltas are even while oriented gradients are odd. Transfer target: type every LRC14 Q27 field as even scalar, odd marked, transported, or compatibility packet before quotienting.
 

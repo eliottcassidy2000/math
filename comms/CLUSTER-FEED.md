@@ -4,6 +4,29 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - LRC14 HARD RESOURCES DO NOT STACK: complete Q27 replacement hull (HYP-2463, OPEN-Q-082, T804)
+
+**Dispatch:** extend the HYP-2459 parity-typed Q27 program toward an LRC14 proof by asking whether
+the HYP-2444 one-stranger shell-27/13-clock blockers can stack inside the `7*{1,...,12}` core.
+
+**Atlas result:** `04-computation/lrc14_parity_typed_q27_ledger_codex.py` treats the eight hard
+residues `{260,351,442,611,702,793,962,1053}` as resource atoms.  With bitset safe-twist masks, it
+scans the complete hard replacement hull `sum_k binom(8,k)binom(12,k-1)=77520`.  Every row has a
+Q27 witness; there are `0` Q27 misses.  Only ten rows miss plain `q<=27`: the original eight
+one-stranger rows plus `delete (28), add (351,1053)` caught by `q=30`, and `delete (28,63), add
+(351,962,1053)` caught by `q=34`.  The only `q=91` rows are the original `611,702` packets.
+
+**New route:** prove resource independence/compression.  Any primitive LRC14 Q27 blocker should
+compress to this impossible hard-replacement hull unless it opens a low clock, divisor-fiber witness,
+AP/Vstar/2AP descent, or odd owner/Bprime deletion.  The shell-27/13-clock obstruction is a real
+packet, but its copies interfere with one another.
+
+Artifacts: HYP-2463, OPEN-Q-082, T804,
+`04-computation/lrc14_parity_typed_q27_ledger_codex.py` and its `.out`, reflection
+`lrc14-hard-resources-do-not-stack.md`.
+
+---
+
 ## codex-2026-06-13 - PARITY PROJECTOR CHANNEL GATE: midpoint odd, reversal even (HYP-2459, OPEN-Q-081, T803)
 
 **Dispatch:** formalize the prompt's split: midpoint scalar anti-symmetrization leaves odd channels, while

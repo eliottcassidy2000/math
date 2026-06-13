@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: LRC14 hard resources do not stack (HYP-2463/T804/OPEN-Q-082)
+
+**Done:** implemented the parity-typed Q27 hard-resource ledger for LRC14. Added `04-computation/lrc14_parity_typed_q27_ledger_codex.py` and stored output. The eight HYP-2444 one-stranger plain-shell blockers are treated as resource atoms inside the `7*{1,...,12}` core. With bitset safe-twist masks, the script scans the complete hard replacement hull `sum_k binom(8,k)binom(12,k-1)=77520`: every row has a Q27 witness, no Q27 misses. Only ten rows miss plain `q<=27`: the original eight one-stranger rows plus `delete (28), add (351,1053)` caught by `q=30`, and `delete (28,63), add (351,962,1053)` caught by `q=34`. The only `q=91` rows are the original `611,702` packets. Proof-obligation Tournament Analysis is transitive with leader `typed_Q27_ledger`.
+**Next:** prove the compression/resource-independence theorem. Show any primitive LRC14 row with no Q27 witness can be parity-typed and compressed to the hard replacement hull without losing blockedness, unless it opens a low clock, divisor-fiber witness, AP/Vstar/2AP descent, or odd owner/Bprime deletion. First technical sublemma: any row blocking all plain `q<=27` shells has a marked subpacket projecting to shell-27 class `0` or `+-10` plus the 13-clock; second sublemma: copying that packet forces enough 7-core support loss to expose Q27.
+
 ## Lead codex-2026-06-13: parity projector channel gate (HYP-2459/T803/OPEN-Q-081)
 
 **Done:** turned the prompt's midpoint/reversal slogan into an exact projector calculus. Added `04-computation/parity_projector_channel_atlas_codex.py` and stored output. The scalar side records that pair-differences around a midpoint keep odd offset powers, while the Faulhaber interval balance also has one fixed central atom `c^p`. The tournament side encodes arcs by signs; converse is global sign reversal, so invariant functions have even Walsh support and anti-invariant functions have odd support. Exact labelled audits for `n=3..5` verify `H,c3` even-Walsh, writhe odd-Walsh, rooted `start0` mixed but `start0+end0` even and `start0-end0` odd, raw `H` flip delta even, and oriented `H` gradient odd. Proof-carrier TA is transitive with leader `lrc14_q27_owner_carry_ledger`.
