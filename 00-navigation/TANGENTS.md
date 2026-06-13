@@ -10,6 +10,9 @@
 
 ## Combinatorics & Structure
 
+**T805** #lrc14 #Q27 #two-stranger #compression #13-clock #divisor-fiber #HYP-2464 #OPEN-Q-083 | certainty: exact bounded two-stranger scan; open global compression theorem | source: codex-2026-06-13
+LRC14 TWO-STRANGER COMPRESSION STRESS. Delete one speed from `7*{1..12}` and add two distinct non-core speeds up to `13*84`: exact scan covers `6,868,368` primitive rows. Only `877` block every plain shell `q<=27`, and all `877` have Q27 witnesses. Most residuals (`636/877`) use no old HYP-2444 hard residue, so the compression target is not a fixed hard list. But every residual has a `13`-clock speed, none delete `7,21,49`, and late rescues are divisor fibers (`70,84,91`, plus one `161=7*23`). Next: prove blockers compress to resource coordinates, not just hard residues.
+
 **T804** #lrc14 #Q27 #hard-resources #pisano #parity-typed-ledger #resource-independence #HYP-2463 #OPEN-Q-082 | certainty: exact complete hard-replacement hull; open compression theorem | source: codex-2026-06-13
 LRC14 HARD RESOURCES DO NOT STACK. The eight HYP-2444 one-stranger shell-27/13-clock blockers behave as fragile resource packets. Complete replacement hull scan: for every `R subset HARD` and `D subset 7*{1..12}` with `|D|=|R|-1`, all `77520` primitive rows have Q27 witnesses; only ten rows miss plain `q<=27`, and the only non-original misses are caught at `q=30` and `q=34`. The two `q=91` rows remain the original one-stranger packets `611,702`. Next: prove a resource-independence/compression theorem for arbitrary primitive rows: no Q27 blocker can spend shell-27 class, 13-clock, low-divisor coverage, and odd owner/Bprime width at once.
 

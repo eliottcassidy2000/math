@@ -4,6 +4,32 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - LRC14 TWO-STRANGER COMPRESSION STRESS: Q27 still opens broader plain-shell residuals (HYP-2464, OPEN-Q-083, T805)
+
+**Dispatch:** extend HYP-2463's hard-resource independence toward a proof by testing whether the
+same resource coordinates appear when the two added strangers are arbitrary bounded speeds, not just
+old HYP-2444 hard residues.
+
+**Atlas result:** `04-computation/lrc14_two_stranger_compression_stress_codex.py` deletes one speed
+from `7*{1,...,12}` and adds two distinct non-core speeds up to `13*84`, scanning `6,868,368`
+primitive rows.  Only `877` rows block all plain shells `q<=27`, and every one has a Q27 witness
+(`0` Q27 misses).  The residuals are much broader than HYP-2463's hard atom list: `636/877` use no
+old hard residue.  But the resource law persists: every residual contains a `13`-clock speed, no
+residual deletes `7,21,49`, and the late rescues are divisor-fiber addresses `70,84,91` plus one
+`161=7*23`.
+
+**New route:** replace "compress to hard residues" with "compress to resource coordinates."  A
+putative Q27 blocker should expose `13`-clock debt, deleted-core address, shell-27 pair class, and
+divisor fiber; failure of this compression should produce a low-clock witness, AP/Vstar/2AP descent,
+or odd owner/Bprime opening.  Compression-map Tournament Analysis is nontransitive with one directed
+3-cycle and leader `divisor_fiber_Q27`.
+
+Artifacts: HYP-2464, OPEN-Q-083, T805,
+`04-computation/lrc14_two_stranger_compression_stress_codex.py` and its `.out`, reflection
+`lrc14-two-stranger-compression-stress.md`.
+
+---
+
 ## codex-2026-06-13 - LRC14 HARD RESOURCES DO NOT STACK: complete Q27 replacement hull (HYP-2463, OPEN-Q-082, T804)
 
 **Dispatch:** extend the HYP-2459 parity-typed Q27 program toward an LRC14 proof by asking whether

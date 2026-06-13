@@ -12,6 +12,11 @@
 
 ---
 
+## Lead codex-2026-06-13: LRC14 two-stranger compression stress (HYP-2464/T805/OPEN-Q-083)
+
+**Done:** extended the HYP-2463 Q27 resource-independence route beyond the old hard-residue list. Added `04-computation/lrc14_two_stranger_compression_stress_codex.py` and stored output. The script deletes one runner from `7*{1,...,12}` and adds any two distinct non-core speeds up to `13*84`, scanning `6,868,368` primitive true two-stranger rows by bitset safe-twist masks. Only `877` rows block every plain shell `q<=27`; all `877` have a Q27 witness, so there are `0` Q27 misses. The important correction to HYP-2463 is that `636/877` residuals use zero old hard residues, but every residual still has at least one added speed divisible by `13`, no residual deletes `7,21,49`, and the late rescues are divisor fibers (`70,84,91` plus one `161=7*23`). Compression-map Tournament Analysis is nontransitive with one directed 3-cycle and leader `divisor_fiber_Q27`.
+**Next:** prove the resource-coordinate compression lemma: arbitrary primitive rows that block the plain shell should compress to `13`-clock debt + deleted-core address + shell-27 pair class + divisor fiber, or else open a low clock, AP/Vstar/2AP descent, or odd owner/Bprime channel. Upgrade the bounded `r<=13*84` statement using a fast Bprime/large-speed escape, and build a faster Bprime certificate engine for the `877` residuals.
+
 ## Lead codex-2026-06-13: LRC14 hard resources do not stack (HYP-2463/T804/OPEN-Q-082)
 
 **Done:** implemented the parity-typed Q27 hard-resource ledger for LRC14. Added `04-computation/lrc14_parity_typed_q27_ledger_codex.py` and stored output. The eight HYP-2444 one-stranger plain-shell blockers are treated as resource atoms inside the `7*{1,...,12}` core. With bitset safe-twist masks, the script scans the complete hard replacement hull `sum_k binom(8,k)binom(12,k-1)=77520`: every row has a Q27 witness, no Q27 misses. Only ten rows miss plain `q<=27`: the original eight one-stranger rows plus `delete (28), add (351,1053)` caught by `q=30`, and `delete (28,63), add (351,962,1053)` caught by `q=34`. The only `q=91` rows are the original `611,702` packets. Proof-obligation Tournament Analysis is transitive with leader `typed_Q27_ledger`.
