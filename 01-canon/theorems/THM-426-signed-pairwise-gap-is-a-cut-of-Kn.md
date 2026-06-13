@@ -1,8 +1,9 @@
 # THM-426 — The signed pairwise LRC gap depends on the sign gauge only through a CUT of K_{n−1}
 
 **Status:** PROVED (exact, elementary). Exhaustively consistent n=3..6 (`…census_monad_s2.py`,
-`…floor_conjecture_monad_s2.py`).
-**Source:** monad-explorer-2026-06-06-S2.
+`…floor_conjecture_monad_s2.py`); bounded follow-up S711 extends the floor search to
+`n=6, B<=10` and `n=7, B<=8`.
+**Source:** monad-explorer-2026-06-06-S2, monad-explorer-2026-06-12-S711.
 **Convention** (repo canon, as THM-420/THM-369): `n` runners total, stationary observer speed `0`,
 movers `v_1<⋯<v_{n−1}` distinct positive integers, gap threshold `1/n`,
 `‖x‖` = distance to nearest integer. Observer loneliness `M_obs(S)=max_t min_i ‖v_i t‖`;
@@ -51,6 +52,22 @@ So "enumerate sign-reversal patterns" = "enumerate cuts of `K_{n−1}`": same-si
 **difference**, cross-cut pairs become a **sum**. The all-`+` (empty cut) pattern is the
 **all-differences** set; a maximal cut converts the most pairs to sums.
 
+## Corollary: the n-grid cut witness
+
+> **Corollary.** Fix a cut `ε` and let `W_ε={ε_i v_i−ε_j v_j}` be its relative-speed multiset.
+> Then the time `t=1/n` witnesses `G_pair(ε,S) >= 1/n` iff **no** element of `W_ε` is divisible by
+> `n`. Equivalently:
+> - same-side pairs must have DISTINCT residues mod `n`;
+> - across-cut pairs must NOT be additive inverses mod `n`.
+>
+> Hence any cut with no `n`-multiple relative speed is an immediate certificate for the pairwise
+> floor `Gstar(S) >= 1/n`; if every cut has some `n`-multiple, the floor cannot be witnessed on the
+> `n`-grid.
+
+**Proof.** At `t=1/n`, each pair contributes `‖w/n‖`. This is `0` exactly when `n|w`, and otherwise
+it is at least `1/n`. Apply THM-426's cut dictionary:
+same-side pairs contribute differences, across-cut pairs contribute sums. ∎
+
 ## Empirical consequences (n=3..6, exhaustive, exact)
 
 - **The all-differences pattern is usually NOT optimal.** A nontrivial cut strictly raises `G_pair`
@@ -82,12 +99,23 @@ One might hope the sign gauge always lifts the pairwise gap to the observer floo
 > Verified two ways: exact maximin over all 16 cuts, and an independent float grid `N=5·10⁶`
 > (`signed_lrc_counterexample_verify_monad_s2.out`). The best cut is `A={2,3,4}, B={6,8}`, giving
 > relative-speed multiset `{1,1,2,2,8,9,10,10,11,12}`.
+>
+> **Bounded follow-up (S711).** The `n=6` bounded minimum drops further to `2/13` over `B<=10`,
+> attained by `V=(1,4,8,9,10)`, `(2,3,7,9,10)`, `(2,4,5,9,10)`, and the first `n=7` floor failure
+> appears already at `V=(1,2,4,6,7,8)` with `Gstar = 4/29 < 1/7` over `B<=8`
+> (`signed_lrc_floor_residue_obstruction_s711.out`).
 
 So the signed pairwise gap is **not** governed by `n` alone. The obstruction is **not** imprimitivity
 (all 16 cuts here yield `gcd=1` relative-speed sets): it is an **unavoidable cluster of small relative
 speeds**. The triple `{2,3,4}` forces differences `{1,1,2}`, and no single cut can send enough of them
 across to remove the cluster — moving a vertex across the cut trades its small differences for sums but
 creates new small differences elsewhere. The small clocks `‖t‖,‖2t‖` then cap the maximin at `3/19`.
+
+At the `1/n` witness level, the new reduction shows a second layer: all current bounded failures lie in
+the **no-n-cut** class, where every cut has some same-side equal residue or across-cut opposite residue,
+so the `n`-grid cannot witness the floor at all. But this residue quotient is not the whole story:
+already at `n=4,5` there are many no-n-cut sets with `Gstar > 1/n`, so the quotient preserves the
+divisibility obstruction and loses the off-grid metric slack.
 
 The true pairwise floor therefore lies **strictly between** the naive pair-count floor
 `1/(C(n−1,2)+1)` (here `1/11`) and the observer floor `1/n` (here `1/6`): `1/11 < 3/19 < 1/6`.
