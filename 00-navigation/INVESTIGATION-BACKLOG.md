@@ -199,6 +199,17 @@ one past the n=6 census); THM-455 addendum; Erdős–Moser bounded-increment rou
 8. **Schweser–Stiebitz–Toft arXiv:2510.10659 (Rédei revisited, Feb 2026)** — read for the Dirac/Berge strengthenings; Satake 2025 (nearly-DRTs ↔ almost difference sets, conditional on H-L Conjecture F) for the q ≡ 1 mod 4 side.
 **Sources:** 05-knowledge/results/{hadamard_det_census,hadamard_det_n9,circulant_odd_det,tournament_simplex,metagraph_det_gradient}_macmini_s2.out + thm472/thm473_adversarial_check.out + verify_hyp2312_and_mod4law_subagent_2026-06-11.out; reflection 07-reflections/the-determinant-lens-sgn-vs-chi-and-the-three-geometries.md.
 
+## Lead mac-mini-2026-06-11-S2: BSD + HODGE merged into the self-dual-middle frame (T786, HYP-2420..2424, OPEN-Q-095, reflection the-self-dual-middle-where-parity-lives)
+
+**Status:** session complete; reflection + 5 HYPs; rigorous spine adversarially verified; one duplicate (THM-490) caught & withdrawn.
+**What landed:** (1) RIGOROUS SPINE — alternating pairing ⟹ square (Pfaffian) is the shared symplectic mechanism behind |Ш(E)|=□ (Cassels), det(I+2A)=Pf² (THM-174), Weil/Hodge alternating forms; the square-defect is 2-ADIC in both worlds (Poonen-Stoll c∈Ш[2], the 8=2³ in THM-442's 8Q) — the precise home of the user's "doubling." (2) FRAME — the self-dual-middle table (RH s↔1−s / BSD root number / Hodge p↔q / Goldbach swap / project complement-σ-SC), parity lives at each fixed middle; the one rigorous ½/doubling link is λ(2n)=−λ(n). (3) MERGE — additive Goldbach (primes, segment) vs multiplicative Euler (strong-tournament H-primes); the s=2 polygonal segment bridges them; the project's PROVEN genus-2 H-semigroup R=odds\{7,21} (HYP-2271) is the tournament ζ-side.
+**Next steps:**
+1. **OPEN-Q-095** (genuinely open): is there a finite abelian group / pairing attached to a tournament (Ш-analog) whose order = det(I+2A) and whose alternating-vs-antisymmetric type (hence square-vs-2×square) is controlled by a tournament parity (SC / transpose-self / blue-black)? Compute the Smith normal form of I+2A and S; see whether SNF squares track det=Pf² and whether the 2-part carries a c∈[2]-style defect. Cf. Klanderman et al. (SNF of skew D-optimal designs).
+2. **HYP-2421** (polygon side = additive arity): make the s↔arity alignment a precise statement on the project's polygonal↔Goldbach ladder (HYP-1962); does s=2 segment / s=3 triangle / s=4 square map to a tournament/figurate hierarchy with a clean transition law?
+3. **The root-number analog:** is there a tournament "root number" (a global ±1 = product of local ±1's over spine/ribs/sea or over strong components) whose sign predicts a parity (e.g. of some rank-like Q-grading)? The honest version must avoid the decorative local-global product; look for a genuine multiplicative ±1 over strong components paralleling w(E)=∏wᵥ.
+4. **Cross-link** HYP-2424 to the existing band-gap/numerical-semigroup reflection (polarized-delta-fields-...-s699) — the genus-2 semigroup already has a physics (band gap) and NT (Frobenius) reading; add the Euler-product/Goldbach-duality reading.
+**Sources:** 04-computation/h_realizability_goldbach_macmini_0611s2.py + .out; verify_moon_realizability_fresh_opus_0614.py/.out; reflection the-self-dual-middle-where-parity-lives.md.
+
 ## Lead kind-pasteur-2026-06-11-S1: Erdős 592 session 4 — the seam EXPLAINED (sum-free gradings), the t=7 wall, first Schipperus cutoffs, m=3 probe (THM-469/470/471, HYP-2390..2397)
 
 **Done:** Picked up mac-mini-2026-06-10-S1's Next items 2/3/4. (3) SOLVED → THM-469 (PROVED):
