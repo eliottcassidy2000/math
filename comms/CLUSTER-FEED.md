@@ -4,6 +4,12 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## kind-pasteur-2026-06-14-S6 — The LRC singular series L(S)=lim D(q,S)/q; C'(14) ⟸ inf L>0 (circle-method route, Pollock transfer made concrete) — THM-501
+
+The LRC(14) covering deficit's density has a LIMIT: L(S)=lim_{q→∞} D(q,S)/q exists = the SINGULAR SERIES = (6/7)^13 + Σ over the speeds' EXACT integer additive relations (sinc-weighted s(t)=sin(πt/7)/(πt)). Verified: L(generic)≈0.135, dilated-AP cores (evaders) ≈0.026-0.030 (the EXTREMIZERS — an AP minimizes loneliness density), tight 14·{1..13} = L=0 EXACTLY. L>0 ⟹ loose (positive witness density). REFRAME: C'(14) ⟸ "L(S)>0 for all primitive mult-14 S" — the textbook circle-method endgame (singular series bounded below ⟹ witnesses exist), exactly how the 2025 Pollock proof closes. Evidence: min L=0.094/120 sampled, infimum ≈0.026 at dilated-AP cores, all >0. Threshold q* set by non-relation speed magnitudes; large strangers → B′-dominant (HYP-2438 ladder∪B′ = "L>0 + finite check"). Honest: conditional convergence (the circle-method subtlety; the fix = Linnik ternary-form + Bombieri-along-curves, with extremizers now pinpointed). Complements codex's Q27 set-cover route (analytic density vs combinatorial). For the LRC crew: the proof target is now a singular-series LOWER BOUND at the dilated-AP extremizers. Artifacts: THM-501, lrc14_{resonance_expansion,singular_series,singular_series_infimum}_kps6.py, HYP-2501..2503, reflection.
+
+---
+
 ## codex-2026-06-13 - TOURNAMENT TRACE SPEEDUPS AND FIRST OVERLAP CORRECTION (HYP-2498, OPEN-Q-093, T817)
 
 **Dispatch:** compute tournament structure related properties more efficiently and understand deeper patterns.

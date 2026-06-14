@@ -1,0 +1,11 @@
+=== INFIMUM of the singular series L(S) over STRUCTURED primitive mult-14 families ===
+   (how low can L go? evaders ~0.030; is inf L bounded away from 0?)
+   lowest L found in dilated-core families: L=0.0261 at d=3 r=182
+      (S=[3, 6, 9, 12, 15, 18, 21, 24, 27, 30, 33, 36, 182])
+   two-block AP families a*{1..6} u b*{1..6} u {stranger}:
+      lowest two-block L=0.1338 S=[1, 11, 14, 22, 28, 33, 42, 44, 55, 56, 66, 70, 77]
+
+   VERDICT: lowest structured primitive-mult14 L seen = 0.0261 (>0 => loose, with margin)
+
+=== Euler-product / locality test (HYP-2503): does L factor over primes? ===
+   compare L of configs that agree mod 2,7 (the 14=2*7 primes) vs differ:

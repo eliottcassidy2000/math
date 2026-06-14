@@ -1,0 +1,20 @@
+=== (A)+(B) the singular series L(S) = lim D(q,S)/q, by structure ===
+   config: L(S) (limit of D/q) +- window-std   ladder-height   prim-mult14? dominant?
+   generic/Sidon-ish                 : L=0.1461 +-0.0032   h=3   prim14=True dom=False
+   evader r=611 (AP core)            : L=0.0296 +-0.0051   h=41   prim14=True dom=False
+   evader r=702                      : L=0.0296 +-0.0051   h=41   prim14=True dom=False
+   AP 1..13 *? -> 14*{1..13} (non-pri: L=0.0000 +-0.0000   h=None   prim14=False dom=False
+   near-regular-ish + mult14         : L=0.0757 +-0.0013   h=8   prim14=True dom=False
+
+=== (B) min L(S) over a large primitive-non-dominant multiple-of-14 sample (is L>0 always?) ===
+   120 configs: L ranges [0.0944, 0.1649], median 0.1263
+   MIN L config: L=0.0944  S=[18, 19, 20, 26, 28, 36, 37, 47, 55, 66, 68, 73, 87]  (L>0 => loose; is min bounded away from 0?)
+   #configs with L < 0.02 (near-tight, the hard ones): 0
+
+=== (C) threshold q*(S) vs L(S): small singular series => high ladder ===
+   L=0.0944: ladder height = 8  S=[18, 19, 20, 26, 28, 36, 37, 47, 55, 66, 68, 73, 87]
+   L=0.0972: ladder height = 9  S=[7, 23, 32, 55, 58, 61, 68, 76, 78, 84, 92, 94, 95]
+   L=0.0976: ladder height = 10  S=[1, 7, 16, 17, 32, 33, 41, 42, 65, 79, 81, 93, 98]
+   L=0.1524: ladder height = 13  S=[7, 11, 18, 20, 23, 28, 30, 31, 60, 62, 70, 77, 96]
+   L=0.1592: ladder height = 11  S=[1, 2, 4, 8, 18, 42, 49, 52, 54, 67, 80, 87, 91]
+   L=0.1649: ladder height = 5  S=[6, 7, 9, 12, 17, 34, 41, 56, 58, 68, 73, 83, 96]
