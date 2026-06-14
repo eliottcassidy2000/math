@@ -1,0 +1,6 @@
+Witt-transform identity, 120 random tournaments at n=8:
+  W_6 := (trA^6 - trA^3)/6        == c6 + p33        : 120/120
+  W_7 :=  trA^7/7                 == c7 + TQ         : 120/120
+  W_8 := (trA^8 - trA^4)/8        == c8 + Q44 + TF   : 120/120
+  => the Mobius/Witt transform of the trace sequence = #aperiodic closed k-walks up to rotation
+     = simple k-cycles + overlapping distinct-cycle-pair configs (k<=8). Manifestly spectral.

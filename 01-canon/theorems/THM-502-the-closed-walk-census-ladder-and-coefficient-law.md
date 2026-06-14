@@ -106,6 +106,36 @@ exhaustive n≤6): `c3,c4,c5` spectral at all n; `c6` and `p33` and `alpha_2` (h
 why `alpha_1` (delayed to n=7) is the unique OCF-derived invariant with a nontrivial
 spectral window (THM-500 / the resolution-ladder reflection, claim 3, now verified).
 
+## The Witt/necklace form — why the conserved quantity is spectral
+
+The conserved combinations above are not ad hoc: they are the **necklace (Witt)
+transform of the trace sequence**. For a tournament `tr A^1 = tr A^2 = 0`, so
+
+```
+W_k(A) := (1/k) Σ_{d | k} μ(d) · tr A^{k/d}
+W_6 = (tr A^6 - tr A^3)/6     W_7 = tr A^7 / 7     W_8 = (tr A^8 - tr A^4)/8
+```
+
+and **verified 120/120** (n=8): `W_6 = c6 + p33`, `W_7 = c7 + TQ`,
+`W_8 = c8 + Q44 + TF`. The reason is structural: `W_k(A)` counts the **aperiodic
+closed k-walks up to cyclic rotation** (the standard meaning of the Möbius/Witt
+transform of a walk-count sequence). An aperiodic closed walk's reduced shape is
+either a **simple k-cycle** (one cyclic word ↔ `c_k`) or an **asymmetric overlapping
+pair** (one cyclic word ↔ an overlap config); the periodic ones — a `(k/2)`-cycle
+doubled — are exactly the terms the Möbius transform removes. So:
+
+> **The Witt transform of the eigenvalue power-sums equals (simple cycles) +
+> (overlapping reducible configs).** It is manifestly spectral (a Z-combination of
+> traces), which is precisely *why* `c_k + (overlap count)` is constant on every
+> cospectral class. The non-spectral content of the cycle vector is the *partition*
+> of the spectral number `W_k` into its simple vs. overlapping parts.
+
+This is the clean, all-`k` statement (the named-piece decomposition `single + pair`
+is the `k <= 8` special case; from `k = 9` the aperiodic configs also include
+triples, but `W_k = Σ` aperiodic-config embeddings still holds). It places the whole
+census inside the necklace / Bowen–Lanford-zeta framework: `det(I - uA)^{-1} =
+exp(Σ_k tr A^k u^k / k)`, whose log-derivative repackages the same `W_k`.
+
 ## The k=9 frontier (coefficient law holds; enumeration open)
 
 Partitions of 9: `{9},{3,6},{4,5},{3,3,3}`. The first three give the familiar
@@ -123,3 +153,4 @@ geometry data, not a power sum. This is exactly the structural reason `c9` (and 
 - `04-computation/trace8_census_monad.py` (+ `.out`) — exact tr A^8 fit
 - `04-computation/census_ladder_unified_monad.py` (+ `.out`) — k=6,7,8 + conservation
 - `04-computation/trace9_triple_probe_monad.py`, `05-knowledge/results/trace9_divisibility_monad.out`
+- `05-knowledge/results/witt_necklace_identity_monad.out` — W_k = c_k + overlaps (120/120)
