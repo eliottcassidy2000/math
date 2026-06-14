@@ -1,0 +1,28 @@
+=== The figurate DEGREE ladder (why Pollock != pentagonal) ===
+
+DEGREE 1 (the LINE SEGMENT, 2-gon): P_2(m) = m = the integers themselves.
+   Waring bound for 2-gonal = 1 (trivial: every n IS a 2-gonal number).
+
+DEGREE 2 (POLYGONS, quadratic in m -> Cauchy/Gauss/Lagrange, EXACT bound = k):
+   3-gonal triangular(Eureka,Gauss)  : Waring bound = 3  (Cauchy: = k? True)
+   4-gonal square(Lagrange)          : Waring bound = 4  (Cauchy: = k? True)
+   5-gonal pentagonal(Cauchy)        : Waring bound = 5  (Cauchy: = k? True)
+   6-gonal hexagonal                 : Waring bound = 6  (Cauchy: = k? True)
+   7-gonal heptagonal                : Waring bound = 7  (Cauchy: = k? True)
+   8-gonal octagonal                 : Waring bound = 8  (Cauchy: = k? True)
+   => degree-2 figurate: bound is the CLEAN formula k, proved by QUADRATIC FORMS (sums of 3 squares).
+
+DEGREE 3 (POLYTOPES, cubic in m -> Pollock, circle-method, NO clean formula):
+   tetrahedral C(m+2,3)    : Waring bound = 5
+   octahedral m(2m^2+1)/3  : Waring bound = 7
+   cube m^3                : Waring bound = 9
+   => degree-3 figurate: bounds are MESSY (tetrahedral conj 5 but only 8 proven; cube=9=Waring;
+      icosahedral was conjectured 13 but is really 15). Proved (where proved) by the CIRCLE METHOD
+      (Linnik ternary-quadratic-form reduction), NOT Cauchy's elementary quadratic-form lemma.
+
+THE ANSWER: Pollock (degree 3, cubic) differs from pentagonal (degree 2, quadratic) by exactly the
+WARING DEGREE of the figurate polynomial. Degree 2 = sums-of-squares world (exact, clean bound k,
+Gauss/Lagrange/Cauchy). Degree 3 = Waring-for-cubes world (asymptotic + finite check, messy bounds,
+circle method). The figurate DIMENSION (1 segment, 2 polygon, 3 polytope) = the polynomial degree =
+the difficulty class. (Mirrors the OCF spectral hierarchy: c3,c5 = low-degree power sums (spectral,
+clean), H = higher (non-spectral, conflict-graph) -- THM-498/499/501.)

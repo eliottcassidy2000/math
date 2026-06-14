@@ -1,0 +1,18 @@
+Ramanujan tau from the repo's P24 = eta^24 = q*prod(1-q^n)^24:
+  tau(1..12) = [1, -24, 252, -1472, 4830, -6048, -16744, 84480, -113643, -115920, 534612, -370944]
+  known      = [1, -24, 252, -1472, 4830, -6048, -16744, 84480, -113643, -115920, 534612, -370944]
+  MATCH: True
+
+  multiplicative? tau(6)=tau(2)*tau(3)? -6048 == -6048 : True
+  tau(10)=tau(2)*tau(5)? -115920 == -115920 : True
+  |tau(2)|=24 <= 2*p^(11/2)=91: True  (Deligne's RH-analog bound)
+  |tau(3)|=252 <= 2*p^(11/2)=842: True  (Deligne's RH-analog bound)
+  |tau(5)|=4830 <= 2*p^(11/2)=13975: True  (Deligne's RH-analog bound)
+  |tau(7)|=16744 <= 2*p^(11/2)=88934: True  (Deligne's RH-analog bound)
+  |tau(11)|=534612 <= 2*p^(11/2)=1068291: True  (Deligne's RH-analog bound)
+  |tau(13)|=577738 <= 2*p^(11/2)=2677432: True  (Deligne's RH-analog bound)
+
+=> the repo's code discriminant (THM-489, P24=eta^24=Delta) GENERATES the Ramanujan tau
+   L-function L(Delta,s)=sum tau(n)/n^s: a weight-12 modular L-function with Euler product,
+   functional equation, and a proven Riemann-hypothesis-analog (Deligne 1974). This is the
+   SAME class of object as BSD's elliptic-curve L-functions (both modular, by modularity).
