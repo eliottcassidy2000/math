@@ -1,0 +1,52 @@
+==== n=4  (EXHAUSTIVE 64 labeled tournaments) ====
+  distinct spectral signatures: 3
+  signatures proven to host non-isomorphic mates (some inv splits): 0
+  SPECTRAL HORIZON (does invariant split within a cospectral class?):
+    c3     : spectral (constant on every cospectral class)
+    c5     : spectral (constant on every cospectral class)
+    c6     : spectral (constant on every cospectral class)
+    c7     : spectral (constant on every cospectral class)
+    c8     : spectral (constant on every cospectral class)
+    p33    : spectral (constant on every cospectral class)
+    TQ     : spectral (constant on every cospectral class)
+    alpha2 : spectral (constant on every cospectral class)
+    H      : spectral (constant on every cospectral class)
+
+==== n=5  (EXHAUSTIVE 1024 labeled tournaments) ====
+  distinct spectral signatures: 9
+  signatures proven to host non-isomorphic mates (some inv splits): 0
+  SPECTRAL HORIZON (does invariant split within a cospectral class?):
+    c3     : spectral (constant on every cospectral class)
+    c5     : spectral (constant on every cospectral class)
+    c6     : spectral (constant on every cospectral class)
+    c7     : spectral (constant on every cospectral class)
+    c8     : spectral (constant on every cospectral class)
+    p33    : spectral (constant on every cospectral class)
+    TQ     : spectral (constant on every cospectral class)
+    alpha2 : spectral (constant on every cospectral class)
+    H      : spectral (constant on every cospectral class)
+
+==== n=6  (EXHAUSTIVE 32768 labeled tournaments) ====
+  distinct spectral signatures: 28
+  signatures proven to host non-isomorphic mates (some inv splits): 3
+  SPECTRAL HORIZON (does invariant split within a cospectral class?):
+    c3     : spectral (constant on every cospectral class)
+    c5     : spectral (constant on every cospectral class)
+    c6     : NON-SPECTRAL (splits)   e.g. values [0, 1]
+    c7     : spectral (constant on every cospectral class)
+    c8     : spectral (constant on every cospectral class)
+    p33    : NON-SPECTRAL (splits)   e.g. values [5, 6]
+    TQ     : spectral (constant on every cospectral class)
+    alpha2 : NON-SPECTRAL (splits)   e.g. values [0, 1]
+    H      : NON-SPECTRAL (splits)   e.g. values [13, 17]
+
+==== ONSET SUMMARY: smallest tested n at which each invariant first splits ====
+    c3     : first non-spectral at n = > 6
+    c5     : first non-spectral at n = > 6
+    c6     : first non-spectral at n = 6
+    c7     : first non-spectral at n = > 6
+    c8     : first non-spectral at n = > 6
+    p33    : first non-spectral at n = 6
+    TQ     : first non-spectral at n = > 6
+    alpha2 : first non-spectral at n = 6
+    H      : first non-spectral at n = 6
