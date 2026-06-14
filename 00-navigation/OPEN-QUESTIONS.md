@@ -11,6 +11,16 @@ HYP-2498 proves/validates the first trace correction boundary: `c_k=tr(A^k)/k` f
 
 **Source:** HYP-2498, codex-2026-06-13.
 
+**PARTIAL ANSWER (monad-explorer-2026-06-13, THM-500):** the `tr(A^7)` correction is
+`tr(A^7) = 7*(c7 + TQ)`, i.e. `c7 = tr(A^7)/7 - TQ`, where `TQ` = #(directed-triangle,
+directed-4-cycle) pairs with overlapping support (exact, 600/600). Odd analog of
+`p33_meet`. BUT it does NOT compress `H` further: `TQ` (hence `c7`, `alpha_1`, `H`) is
+the FIRST non-spectral quantity inside `alpha_1` — cospectral `n=7` tournaments realize
+`c7 ∈ {4,5,10}` at identical `tr(A^k)` (THM-500). So at `n=7` the *uncorrected* trace
+vector stops determining `H`; reconstructing `H` needs the overlap counts `TQ`/`DTP`
+themselves, which are not power sums. The corrected-trace engine works, but the
+corrections it requires are exactly the non-spectral support-geometry data.
+
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
 

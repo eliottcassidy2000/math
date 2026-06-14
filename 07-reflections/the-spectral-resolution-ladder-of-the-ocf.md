@@ -103,7 +103,7 @@ the spectrum loses it.
    `alpha_2` already splits at its onset `n=6`). The single invariant with a
    **nontrivial delayed break** is `alpha_1` (spectral through `n=6`), precisely
    because it is the sum of the spectral counts `c3, c5` until the non-spectral `c7`
-   joins it. The open question this raises (HYP-2497): is `alpha_1` the *unique*
+   joins it. The open question this raises (HYP-2499): is `alpha_1` the *unique*
    natural OCF-derived invariant with a spectral window `5 < n_break`, or is there
    another combination of OCF data that stays spectral past where its pieces do?
    And: does the cospectral-mate spread of `c7`/`H` (observed `{4,5,10}` and
