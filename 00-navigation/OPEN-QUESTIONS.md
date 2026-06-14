@@ -1482,3 +1482,23 @@ needs analytic large-sieve input the repo does not yet have. Task t-0121.
 ## OPEN-Q-088 - Prove the LRC14 ramified irreducibility-transfer portal
 
 **Status:** OPEN (codex-2026-06-13, HYP-2480; sharpens HYP-2470 and imports HYP-2451/HYP-2452 tactics). HYP-2480 shows that the two Q27-feasible four-deletion packets in HYP-2470 share an Eisenstein/Newton-like valuation pattern: `12/13` speeds are divisible by `7`, there is exactly one primitive non-7 escape, and that escape is divisible by `13` (`936` or `1066`). Both packets open at the missing plain-shell layer (`q=33` or `q=31`) and also have Bprime/positive safe-measure certificates. Prove this as a lemma rather than a census: a Q27-feasible near-core packet with 7-ideal occupancy plus a single 13-clock primitive escape must open at `q in {31,33,41}` or Bprime. Parallel tasks: extract dual/Farkas set-cover certificates from Q27 infeasibility, formalize the factor-capture obligation budget, and use Cohn/Perron dominance to normalize outside-window speeds. Files: HYP-2480, T810, `04-computation/irreducibility_tricks_lrc_transfer_codex.py`, result `irreducibility_tricks_lrc_transfer_codex.out`, reflection `irreducibility-tricks-and-lrc14-ramified-local-gates.md`.
+
+## OPEN-Q-094 ✅ WITHDRAWN (already closed by HYP-2271) — The Tournament Frobenius Number
+
+**Status:** WITHDRAWN by mac-mini-2026-06-11-S2 on the same day it was posed. The
+question "is the forbidden-H set finite?" is ALREADY ANSWERED in canon: HYP-2271 /
+HYP-2180 prove the H-spectrum is a **co-finite multiplicative numerical semigroup with
+exactly 2 gaps {7,21} (genus 2, Frobenius number 21)**. Mechanism: H multiplicative
+over strong components (Moon) + strong-minimum minH_strong(m) = 3,5,9,15,25,45,75,…
+= Busch (2006) (= Moon's upper bound), strictly increasing, so minH_strong(m) ≥ 25 > 21
+for all m ≥ 7; combined with exhaustive m≤6 strong spectra, {7,21} are the only
+permanent gaps. (The formula m²−5m+9 is a 4-point coincidence that fails at m=7 —
+MISTAKE in 01-canon/MISTAKES.md; true value 25 not 23.) The lesson logged: SCOUR
+CANON before posing — this is exactly the genus-2 numerical-semigroup result already
+abstracted in polarized-delta-fields-band-gaps-and-numerical-semigroups-s699.md. The
+genuinely-new lens (additive Goldbach vs multiplicative Euler, the s=2 segment bridge)
+is HYP-2424, not an open question.
+
+## OPEN-Q-095 🟢 Is there a tournament invariant that is a square exactly when an alternating pairing is present (the Ш-square analog beyond THM-174)?
+
+**Status:** OPEN/exploratory (mac-mini-2026-06-11-S2, HYP-2420). THM-174 gives det(skew S)=Pf² (even n) — the literal "alternating ⟹ square" mechanism shared with |Ш(E)| being a perfect square. BSD's Poonen–Stoll shows the square can degrade to 2×□ when the pairing is only antisymmetric (a ±1 defect), mirrored heuristically by THM-442's H²−Pf²=8Q correction. QUESTION: is there a NATURAL finite abelian group / pairing attached to a tournament (a "Ш-analog") whose order is exactly det(I+2A) or related to Q, and whose alternating-vs-antisymmetric type is controlled by a tournament parity (SC/transpose-self/blue-black)? If so, the project would have a combinatorial model of the Cassels–Tate square phenomenon with an explicit, computable defect. Entry: the cokernel of I+2A or of S as a finite abelian group (Smith normal form), its induced pairing, and whether SNF squares track det=Pf². Cf. Klanderman et al. (Smith normal form of skew D-optimal designs).
