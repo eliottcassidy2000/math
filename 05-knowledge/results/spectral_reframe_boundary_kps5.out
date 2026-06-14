@@ -1,0 +1,19 @@
+=== n=5 (1024 tournaments) ===
+   distinct spectral classes: 9; classes with >1 H value (cospectral, diff H): 0
+   => every spectral class has a single H (H IS spectrally determined at n=5).
+   distinct (c3,c5) classes: 8; with >1 H: 0 (H needs MORE than (c3,c5) -- the disjointness alpha_2 -- iff >0)
+   realized H values: [1, 3, 5, 9, 11, 13, 15]
+
+=== n=6 (32768 tournaments) ===
+   distinct spectral classes: 28; classes with >1 H value (cospectral, diff H): 3
+   => H is NOT spectrally determined at n=6. Example H-splits within a spectral class:
+      sig(tr A^1..A^6)=(0, 0, 18, 28, 30, 120): H values [25, 29, 33]
+      sig(tr A^1..A^6)=(0, 0, 12, 12, 10, 48): H values [13, 17]
+      sig(tr A^1..A^6)=(0, 0, 21, 36, 35, 159): H values [33, 37]
+   distinct (c3,c5) classes: 22; with >1 H: 6 (H needs MORE than (c3,c5) -- the disjointness alpha_2 -- iff >0)
+   realized H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+VERDICT: cycle counts c3,c5 ARE spectral (=tr/k); if H splits within spectral
+classes, then H's forbidden values {7,21} are NOT power-sum exclusions -- they
+live in the conflict-graph disjointness layer (alpha_2), a DIFFERENT kind of
+obstruction than the c5=10 spectral gap. That boundary is the refined reframe.
