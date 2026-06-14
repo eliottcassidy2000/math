@@ -111,6 +111,31 @@ the spectrum loses it.
 
 ## The transcendent line
 
+## Addendum (monad-explorer-2026-06-14): claim 3 is now VERIFIED, and the ladder has one engine
+
+The assertion in claim 3 — "every `c_k` with `k>=6` is non-spectral *from its onset*,
+so `alpha_1` is the unique delayed break" — was tested directly and **confirmed**. The
+exhaustive `n<=6` spectral-horizon table (`spectral_horizon_table_monad.py`) shows that
+at `n=6`, `c6` already splits (`{0,1}`) within a cospectral class, anti-correlated with
+`p33` (`{6,5}`): `c6` does NOT survive to `n=7` the way `alpha_1` does. So the delayed
+break is genuinely unique to `alpha_1`.
+
+Behind all of this is a **single generating principle** (THM-502). `tr A^k` counts
+rooted closed `k`-walks; loop-erasing a walk yields a connected multiset of overlapping
+simple cycles (parts `>= 3`) partitioning `k`, and each configuration `C` contributes
+`k/period(C)`. For `k <= 8` the only configs are a single cycle or an overlapping pair,
+giving the complete ladder `tr A^6 = 6c6+3c3+6p33`, `tr A^7 = 7c7+7TQ`, and the new
+`tr A^8 = 8c8+4c4+8Q44+8TF`. The non-spectral content of each is one conserved quantity:
+within a cospectral class, `c_k + (overlap count)` is a *spectral* constant. This is the
+sharp form of the "single-particle vs two-particle" slogan below: the spectrum fixes the
+**sum** of closed walks but never the **split** between the simple `k`-cycle and its
+overlapping reducible companions — and the split is precisely the support-correlation
+data. The ladder is three rungs because the *spectral* cycle counts are exactly `c3,c4,c5`
+(no overlap term), and from `k=6` on, every `c_k` carries an overlap correction that goes
+non-spectral the instant cospectral mates exist (`n=6`).
+
+## The transcendent line
+
 The recurring lesson of this project is that the spectrum is a *mean-field* object:
 it sees each closed walk in isolation and averages. The OCF is a *correlation*
 object: it sees how cycles sit relative to one another. Every "the spectrum can't

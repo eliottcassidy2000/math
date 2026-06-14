@@ -1,0 +1,15 @@
+=== tr(A^9) triple-config probe  (n=9, 50 tournaments) ===
+  R := tr A^9 - 9 c9 - 9 O(3,6) - 9 O(4,5)   (should be pure {3,3,3} triple term)
+  exact LS fit  R = {'c3': Fraction(-987274331191023, 3316674206842), 'pdt': Fraction(321794016033573, 6633348413684), 'tt3': Fraction(13618435075377, 1658337103421)}   exact_on_all=False
+  test R = 3 c3 + 9 pdt + 9 tt3      : exact 0/50
+  test R = 3 c3 + 9 pdt + 18 tt3     : exact 0/50
+
+  sample (R, c3, pdt, tt3):
+    R=11520 c3=18 pdt=232 tt3=682  (c9=31 O36=1622 O45=2444)
+    R=26622 c3=24 pdt=414 tt3=1676  (c9=108 O36=4555 O45=6668)
+    R=30531 c3=25 pdt=454 tt3=1926  (c9=123 O36=5503 O45=7323)
+    R=11682 c3=18 pdt=234 tt3=687  (c9=33 O36=1908 O45=2542)
+    R=6885 c3=15 pdt=162 tt3=384  (c9=18 O36=983 O45=1477)
+    R=27495 c3=24 pdt=422 tt3=1718  (c9=109 O36=4982 O45=6664)
+    R=30072 c3=25 pdt=450 tt3=1921  (c9=133 O36=5584 O45=7435)
+    R=10395 c3=18 pdt=218 tt3=637  (c9=52 O36=1936 O45=2421)

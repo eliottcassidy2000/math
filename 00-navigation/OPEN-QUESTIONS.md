@@ -21,6 +21,23 @@ vector stops determining `H`; reconstructing `H` needs the overlap counts `TQ`/`
 themselves, which are not power sums. The corrected-trace engine works, but the
 corrections it requires are exactly the non-spectral support-geometry data.
 
+**FULL ANSWER (monad-explorer-2026-06-14, THM-502 — the closed-walk census ladder):**
+the correction engine has a *single generating principle*. `tr(A^k)` counts rooted
+closed k-walks; loop-erasing gives a connected multiset of overlapping simple cycles
+(parts ≥3) partitioning k, and each configuration `C` contributes `k/period(C)`. This
+yields the **complete explicit ladder** through k=8 (the last k before triple configs):
+`tr A^6=6c6+3c3+6 p33`, `tr A^7=7c7+7 TQ`, **`tr A^8=8c8+4c4+8 Q44+8 TF`** (Q44 =
+overlapping 4-cycle pairs, TF = overlapping (triangle,5-cycle) pairs — NEW). The
+distinct-pair coefficient is uniformly `k`; a doubled (k/2)-cycle contributes `k/2`.
+**Conservation corollary** (the engine's structural content): within a cospectral
+class, `c6+p33`, `c7+TQ`, `c8+Q44+TF` are spectral constants, so the simple top-cycle
+count trades 1-for-1 against the overlap count — the exact reason corrected trace
+vectors do NOT compress `H` past n=6: the corrections ARE the non-spectral
+support-geometry. Confirms (via the exhaustive n≤6 spectral-horizon table) that `c6`
+is non-spectral *from its onset* n=6, so `alpha_1` (THM-500) is the unique delayed
+break. k=9 opens the first **triple** term (3+3+3); coefficient law verified, the
+distinct-triple enumeration by overlap topology is the remaining open frontier.
+
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
 

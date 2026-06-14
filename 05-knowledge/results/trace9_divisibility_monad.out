@@ -1,0 +1,5 @@
+tr A^9 probe, 80 tournaments at n=9:
+  R divisible by 3:            80/80
+  (R - 3*c3) divisible by 9:   80/80
+  => tr A^9 = 9 c9 + 9 O(3,6) + 9 O(4,5) + 3 c3 + 9*(distinct triple-triangle configs)
+     confirms coeff law: tripled-triangle period 3 -> coeff 3; all distinct configs -> coeff 9.
