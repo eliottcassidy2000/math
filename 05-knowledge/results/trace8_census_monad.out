@@ -1,0 +1,17 @@
+=== tr(A^8) census fit  (n=8, 80 random tournaments) ===
+  exact LS coeffs for R8 = tr8 - 8*c8 - 4*c4:
+    {'q44_1': Fraction(8, 1), 'q44_2': Fraction(8, 1), 'q44_3': Fraction(8, 1), 'tf_1': Fraction(8, 1), 'tf_2': Fraction(8, 1), 'tf_3': Fraction(8, 1)}
+    exact fit on all 80: True
+
+=== CLEAN HYPOTHESIS:  tr(A^8) = 8*c8 + 4*c4 + 8*Q44 + 8*TF ===
+    Q44 = #distinct 4-cycle pairs sharing >=1 vertex
+    TF  = #(triangle, 5-cycle) pairs sharing >=1 vertex
+    exact on 80/80 tournaments (bad=0)
+
+  sample (tr8, c8, c4, Q44=q44_*, TF=tf_*):
+    tr8=1380 c8=0 c4=11 Q44=55 TF=112  (q44=5,25,25 tf=7,55,50)
+    tr8=8740 c8=36 c4=27 Q44=343 TF=700  (q44=89,160,94 tf=208,312,180)
+    tr8=1900 c8=0 c4=13 Q44=78 TF=153  (q44=6,36,36 tf=10,79,64)
+    tr8=3392 c8=3 c4=18 Q44=153 TF=259  (q44=21,72,60 tf=32,137,90)
+    tr8=5232 c8=7 c4=22 Q44=230 TF=406  (q44=31,111,88 tf=69,212,125)
+    tr8=8860 c8=21 c4=27 Q44=348 TF=725  (q44=68,177,103 tf=170,370,185)

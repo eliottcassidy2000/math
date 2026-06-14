@@ -1,0 +1,7 @@
+=== UNIFIED CENSUS LADDER  (n=8, 300 random tournaments) ===
+  tr A^6 = 6 c6 + 3 c3 + 6 p33        : exact 300/300
+  tr A^7 = 7 c7 + 7 TQ                : exact 300/300
+  tr A^8 = 8 c8 + 4 c4 + 8 Q44 + 8 TF : exact 300/300
+  conservation: c6+p33      = (trA^6-3c3)/6   identically: True
+  conservation: c7+TQ       =  trA^7/7        identically: True
+  conservation: c8+Q44+TF   = (trA^8-4c4)/8   identically: True
