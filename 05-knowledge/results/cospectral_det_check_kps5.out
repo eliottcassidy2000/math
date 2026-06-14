@@ -1,0 +1,13 @@
+=== cospectral classes that split H: does det(I+S) co-vary, and does d separate within fixed H? ===
+  sig=(0, 0, 12, 12, 10, 48): H->d(set):
+     H=13: d in [128]
+     H=17: d in [128]
+  sig=(0, 0, 18, 28, 30, 120): H->d(set):
+     H=25: d in [64]
+     H=29: d in [64]
+     H=33: d in [64]
+  sig=(0, 0, 21, 36, 35, 159): H->d(set):
+     H=33: d in [64]
+     H=37: d in [64]
+
+  spectral classes where d=det(I+S) varies (d NOT A-spectral): 0 of 28

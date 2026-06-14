@@ -1,0 +1,12 @@
+=== n=5 (1024 tournaments) ===
+   H = 1 + 2(c3+c5) + 4D  holds: ALL (1024/1024)
+   cospectral classes where D varies (D is the NON-spectral part): 0
+   => at n=5: D=0 always (disjoint triangles need 6 vtx), so H=1+2(c3+c5) is
+      fully spectral -- matching THM-499 part 1 (H spectral at n<=5).
+
+=== n=6 (32768 tournaments) ===
+   H = 1 + 2(c3+c5) + 4D  holds: ALL (32768/32768)
+   cospectral classes where D varies (D is the NON-spectral part): 3
+   => at n=6: c3,c5 spectral (=tr/k), D NOT spectral; H resolves cospectral
+      tournaments exactly through D (alpha_2 = disjoint-triangle pairs).
+

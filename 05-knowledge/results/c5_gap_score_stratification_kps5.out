@@ -1,0 +1,28 @@
+=== c5=10 gap PROOF by score-sequence stratification (n=6) ===
+Landau score sequences (sum=15), their c3 (score-determined, THM-462), and achievable c5:
+  scores (0, 1, 2, 3, 4, 5)  c3= 0  c5 in [0]
+  scores (1, 1, 1, 3, 4, 5)  c3= 1  c5 in [0]
+  scores (0, 2, 2, 2, 4, 5)  c3= 1  c5 in [0]
+  scores (0, 1, 3, 3, 3, 5)  c3= 1  c5 in [0]
+  scores (0, 1, 2, 4, 4, 4)  c3= 1  c5 in [0]
+  scores (1, 1, 2, 2, 4, 5)  c3= 2  c5 in [0]
+  scores (0, 2, 2, 3, 3, 5)  c3= 2  c5 in [0]
+  scores (0, 1, 3, 3, 4, 4)  c3= 2  c5 in [0]
+  scores (1, 1, 1, 4, 4, 4)  c3= 2  c5 in [0]
+  scores (1, 1, 2, 3, 3, 5)  c3= 3  c5 in [1]
+  scores (0, 2, 2, 3, 4, 4)  c3= 3  c5 in [1]
+  scores (1, 2, 2, 2, 3, 5)  c3= 4  c5 in [1, 2, 3]
+  scores (1, 1, 2, 3, 4, 4)  c3= 4  c5 in [2, 3, 4]
+  scores (0, 2, 3, 3, 3, 4)  c3= 4  c5 in [1, 2, 3]
+  scores (1, 2, 2, 2, 4, 4)  c3= 5  c5 in [4, 6]
+  scores (1, 1, 3, 3, 3, 4)  c3= 5  c5 in [4, 6]
+  scores (2, 2, 2, 2, 2, 5)  c3= 5  c5 in [2]
+  scores (0, 3, 3, 3, 3, 3)  c3= 5  c5 in [2]
+  scores (1, 2, 2, 3, 3, 4)  c3= 6  c5 in [4, 5, 6, 7, 8]
+  scores (2, 2, 2, 2, 3, 4)  c3= 7  c5 in [7, 9]
+  scores (1, 2, 3, 3, 3, 3)  c3= 7  c5 in [7, 9]
+  scores (2, 2, 2, 3, 3, 3)  c3= 8  c5 in [6, 8, 11, 12]
+
+Union of all achievable c5 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12]
+c5=10 in any score class? False  => EXCLUDED (the gap is proved by finite score stratification)
+max c5 per c3:  {0: {0}, 1: {0}, 2: {0}, 3: {1}, 4: {1, 2, 3}, 5: {4, 6}, 6: {4, 5, 6, 7, 8}, 7: {9, 7}, 8: {8, 11, 12, 6}}

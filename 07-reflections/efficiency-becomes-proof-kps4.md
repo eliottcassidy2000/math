@@ -81,8 +81,38 @@ score sequence, the singular series) is lower-dimensional than the objects. The
 dimension you save is exactly the structure theorem you prove. Efficiency and
 insight are not two activities; the search for one is the discovery of the other.
 
+## Coda (kps5): every reframe has a boundary, and finding it is also insight
+
+Pushing the spectral reframe one session further produced its *edge*, which is as
+valuable as the reframe. The map of tournament invariants splits cleanly:
+
+- **spectral side** (functions of the spectrum): `c3, c5 = tr(A^k)/k`, and
+  `d = det(I+S) = ∏(1+μ_j²)` — verified A-spectral (constant on every cospectral
+  class at n=6).
+- **non-spectral side** (need the conflict graph `Ω`): `H`, `c7`, the disjointness
+  tower `α_2, α_3, …`.
+
+The boundary is exact and mechanical: at `n ≤ 6`, `H = 1 + 2(c3+c5) + 4D` where
+`D = α_2` = vertex-disjoint triangle pairs (THM-499). `α_1 = c3+c5` is the
+power-sum/spectral layer; `D` is the *first* piece of conflict-graph data the
+spectrum cannot see, and it appears precisely at `n=6` (at `n=5` there is no room
+for two disjoint triangles, so `H` is spectral there). Cospectral tournaments —
+eigenvalue twins — differ exactly in `D`, and `H` resolves them while `d` cannot.
+
+Two payoffs of locating the boundary. (i) It explains a standing empirical fact:
+the determinant lens's `d ⊥ H` (Pearson ≈ 0) is the orthogonality of a *spectral*
+coordinate (`d`) and a *non-spectral* one (`H`) — they measure opposite sides of
+the same boundary. (ii) It tells the forbidden-value program exactly how far the
+spectral method reaches: the cycle gaps (`c5=10`) are provable on the spectral
+side (a finite score-stratification: the regular class achieves `c5∈{6,8,11,12}`,
+skipping 10), but the `H`-gaps `{7,21}` are not — they require the `α_2`
+conflict-graph argument. Conflating the two was an overreach; the boundary is the
+correction. **A reframe is a tool with a domain; knowing where the tool stops is
+the same kind of knowledge as knowing it works.**
+
 Cross-links: THM-118 (the trace identity, the speedup used here), THM-498 (the
-cycle-spectrum gaps, now spectrally reframed + n=7 exhaustive), THM-002 (OCF),
-THM-462 (Kendall–BS / four-square), THM-451 (skew-Walsh butterfly), THM-492/497
-(band criterion / band-0), THM-133/468 (the skew spectrum), the Pollock reflection
+cycle-spectrum gaps, spectrally reframed + n=7 exhaustive), THM-499 (the boundary:
+H non-spectral, H=1+2(c3+c5)+4D, d spectral), THM-002 (OCF), THM-462 (Kendall–BS /
+four-square), THM-451 (skew-Walsh butterfly), THM-492/497 (band criterion / band-0),
+THM-133/468 (the skew spectrum / determinant lens), the Pollock reflection
 [[pollock-as-the-bounded-arity-currency-and-the-cycle-spectrum-onset-kps3]].
