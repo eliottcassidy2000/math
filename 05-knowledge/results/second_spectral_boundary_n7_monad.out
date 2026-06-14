@@ -1,0 +1,28 @@
+=== (A) n=7 OCF formula extension check on 4000 random tournaments ===
+   VERIFIED: H = 1 + 2(c3+c5+c7) + 4*DTP for all 4000/4000 (0 exceptions).
+   => the seed's n<=6 formula H=1+2(c3+c5)+4D extends to n=7 with c7 and DTP=triangle-pairs.
+
+=== (B) bucket 80000 random n=7 tournaments by exact spectral signature ===
+   distinct spectral classes hit: 168
+   classes with >1 c7 value (cospectral, DIFFERENT Hamiltonian-cycle count): 46
+   classes with >1 (c3,c5)  [MUST be 0 -- spectral sanity]: 0
+   classes with >1 alpha_1=c3+c5+c7 (odd-cycle count NON-spectral?): 46
+   classes with >1 DTP (disjoint triangle pairs, non-spectral): 46
+
+   *** SECOND BOUNDARY CONFIRMED: c7 (Hamiltonian-cycle count) is NOT spectral at n=7. ***
+   widest c7-split spectral class: sig=(0, 0, 30, 68, 90, 360, 1204)
+     c7 values realized: [4, 5, 10]
+     -> c7=4: c3=10 c5=18 alpha_1=32 DTP=4 H=81
+     -> c7=5: c3=10 c5=18 alpha_1=33 DTP=4 H=83
+     -> c7=10: c3=10 c5=18 alpha_1=38 DTP=8 H=109
+   explicit cospectral witnesses (upper-triangle arc orientations):
+     c7=4: arcs=[(0, 1), (0, 2), (0, 3), (4, 0), (5, 0), (6, 0), (2, 1), (3, 1), (4, 1), (1, 5), (6, 1), (3, 2), (4, 2), (2, 5), (6, 2), (3, 4), (3, 5), (6, 3), (5, 4), (4, 6), (5, 6)]
+     c7=5: arcs=[(1, 0), (0, 2), (3, 0), (4, 0), (5, 0), (6, 0), (2, 1), (1, 3), (1, 4), (1, 5), (6, 1), (3, 2), (4, 2), (5, 2), (2, 6), (4, 3), (5, 3), (3, 6), (4, 5), (6, 4), (5, 6)]
+
+INTERPRETATION:
+ - n=6 boundary (THM-499): H non-spectral via alpha_2 (disjoint odd-cycle PAIR).
+   But alpha_1 = c3+c5 is still spectral there.
+ - n=7 SECOND boundary: if c7 splits, then alpha_1 = c3+c5+c7 is non-spectral too.
+   The spectrum then cannot even COUNT the odd cycles. The two non-spectral
+   sources at n=7 are c7 (a single 7-cycle that revisiting walks of length 7
+   from triangle+4-cycle cannot be untangled spectrally) and DTP (disjointness).
