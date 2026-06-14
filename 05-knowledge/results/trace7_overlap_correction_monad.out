@@ -1,0 +1,23 @@
+=== tr(A^7) overlap correction fit  R7 = tr(A^7) - 7*c7 ===
+n=7, 120 random tournaments. basis = ['tq1', 'tq2', 'tq3', 'c3', 'c5', 'p33']
+least-squares coefficients: {'tq1': 7.0, 'tq2': 7.0, 'tq3': 7.0, 'c3': -0.0, 'c5': -0.0, 'p33': 0.0}
+max |residual| with full basis: 0.0000
+  model R7 = {'tq1': Fraction(2954784, 143569)}  EXACT_FIT=False
+  model R7 = {'tq1': 4.95222474932193, 'tq2': 11.266931016297347}  EXACT_FIT=False
+  model R7 = {'tq1': 7.00000000000006, 'tq2': 6.99999999999995, 'tq3': 7.000000000000021}  EXACT_FIT=False
+
+=== CLEAN IDENTITY CHECK:  tr(A^7) = 7*(c7 + TQ) ===
+    TQ = #(directed-triangle, directed-4-cycle) pairs sharing >= 1 vertex (= tq1+tq2+tq3)
+    exact on 120/120 tournaments (bad=0)
+    => c7 = tr(A^7)/7 - TQ.  tr(A^7) is SPECTRAL; TQ is NOT (the overlap carrier).
+    => THM-500's cospectral c7-split is exactly a TQ-split: c7 = tr(A^7)/7 - TQ,
+       tr(A^7) fixed by the spectrum, so c7 varies iff the overlap count TQ varies.
+    Mirrors codex HYP-2498: tr(A^6) = 6*c6 + 3*c3 + 6*p33_meet (intersecting tri pairs).
+
+  sample rows (tr7, c7, R7, tq1, tq2, tq3):
+    tr7=889 c7=3 R7=868 tq1=36 tq2=60 tq3=28 c3=9
+    tr7=1715 c7=11 R7=1638 tq1=83 tq2=111 tq3=40 c3=12
+    tr7=630 c7=5 R7=595 tq1=28 tq2=35 tq3=22 c3=8
+    tr7=623 c7=2 R7=609 tq1=25 tq2=40 tq3=22 c3=8
+    tr7=1085 c7=8 R7=1029 tq1=49 tq2=68 tq3=30 c3=10
+    tr7=630 c7=5 R7=595 tq1=28 tq2=35 tq3=22 c3=8

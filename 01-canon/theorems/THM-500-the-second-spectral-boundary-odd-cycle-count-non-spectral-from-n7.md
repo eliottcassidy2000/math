@@ -65,6 +65,32 @@ That is exactly why `c7` (and hence `alpha_1`) escapes the spectrum at `n=7`,
 whereas `c3 = tr A^3/3` and `c5 = tr A^5/5` cannot (no shorter closed walk pads to
 length 3 or 5 in a tournament — no loops, no 2-cycles, THM-118).
 
+## The exact correction identity (bridges codex HYP-2498 / OPEN-Q-093)
+
+The compound term is not just bounded below — it has an exact closed form, the odd
+analog of codex's `tr(A^6) = 6*c6 + 3*c3 + 6*p33_meet`:
+
+> **`tr(A^7) = 7*(c7 + TQ)`**, equivalently **`c7 = tr(A^7)/7 - TQ`**,
+>
+> where `TQ` = number of (directed-triangle, directed-4-cycle) pairs with
+> **overlapping** vertex support (`|V(tri) ∩ V(4cyc)| ∈ {1,2,3}`).
+
+Verified exact on `600/600` and `120/120` random `n=7` tournaments, 0 exceptions
+(`04-computation/trace7_overlap_correction_monad.py`, `.out`). The fit is striking:
+splitting `TQ` by overlap size `(tq1,tq2,tq3)` gives the SAME coefficient `7` for
+each (least-squares residual `0`), so all overlapping triangle–4-cycle pairs
+contribute equally — each such figure (a triangle and a 4-cycle glued on a shared
+vertex/edge) is a closed 7-walk traversed in 7 rotations, exactly like a simple
+7-cycle.
+
+This **pinpoints the non-spectral carrier**: `tr(A^7)` is spectral (a power sum),
+so within a cospectral class `c7 = tr(A^7)/7 - TQ` varies **iff `TQ` varies**.
+THM-500's `c7`-split is precisely a `TQ`-split — the overlap count `TQ` is the
+n=7 odd-cycle analog of codex's intersecting-triangle-pair count `p33_meet`. So the
+trace-correction engine (HYP-2498) and the spectral boundary (THM-500) are two
+readings of one object: the **support-overlap geometry** the power sums cannot
+resolve.
+
 ## The two boundaries form a one-step-offset ladder
 
 The OCF `H = sum_k 2^k alpha_k` and its first layer `alpha_1` lose spectrality at
