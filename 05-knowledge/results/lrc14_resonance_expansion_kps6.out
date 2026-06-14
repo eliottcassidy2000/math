@@ -1,0 +1,32 @@
+=== (A) D(q,S)/q -> (1-beta)^13 ~ 0.1348 as q grows (resonances die => witness) ===
+   evader r=611: q=50:D/q=0.000(mt 0.141)  q=100:D/q=0.000(mt 0.121)  q=200:D/q=0.010(mt 0.130)  q=500:D/q=0.036(mt 0.137)  q=1000:D/q=0.030(mt 0.135)  q=2000:D/q=0.030(mt 0.136)
+      first witness shell (ladder height) = 41
+   generic A: q=50:D/q=0.360(mt 0.141)  q=100:D/q=0.200(mt 0.121)  q=200:D/q=0.170(mt 0.130)  q=500:D/q=0.140(mt 0.137)  q=1000:D/q=0.138(mt 0.135)  q=2000:D/q=0.144(mt 0.136)
+      first witness shell (ladder height) = 4
+   dilated 7*{1..12}+13 (=evader-ish): q=50:D/q=0.000(mt 0.141)  q=100:D/q=0.000(mt 0.121)  q=200:D/q=0.020(mt 0.130)  q=500:D/q=0.036(mt 0.137)  q=1000:D/q=0.032(mt 0.135)  q=2000:D/q=0.031(mt 0.136)
+      first witness shell (ladder height) = 27
+
+=== (B) the deviation lives at RESONANT q (q | a small speed-relation) ===
+   evader r=611, speeds [7, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84, 611]
+   q where D/q is FAR below main term (large negative deviation = strong resonance):
+      q=40: D=0 (D/q=0.000, dev=-0.176); q divides a speed-difference: False
+      q=39: D=0 (D/q=0.000, dev=-0.168); q divides a speed-difference: False
+      q=54: D=0 (D/q=0.000, dev=-0.164); q divides a speed-difference: False
+      q=38: D=0 (D/q=0.000, dev=-0.160); q divides a speed-difference: False
+      q=52: D=0 (D/q=0.000, dev=-0.153); q divides a speed-difference: False
+      q=37: D=0 (D/q=0.000, dev=-0.151); q divides a speed-difference: True
+      q=51: D=0 (D/q=0.000, dev=-0.147); q divides a speed-difference: False
+      q=65: D=0 (D/q=0.000, dev=-0.144); q divides a speed-difference: False
+
+=== (C) threshold scaling: ladder height vs max(speed) under dilation+shift ===
+   (relation sum t_v v = m resonates only at q|m, m ~ speed magnitude; so the
+    first-witness shell should NOT blow up with pure dilation — M is dilation-invariant)
+      1*evader (max=611): ladder height = 41  (dilation-invariant M => same loose/tight)
+      2*evader (max=1222): ladder height = 41  (dilation-invariant M => same loose/tight)
+      3*evader (max=1833): ladder height = 41  (dilation-invariant M => same loose/tight)
+      5*evader (max=3055): ladder height = 41  (dilation-invariant M => same loose/tight)
+   non-dilated growth (evader family r climbing):
+      r=611 (max=611): ladder height = 41
+      r=1093 (max=1093): ladder height = 13
+      r=2000 (max=2000): ladder height = 13
+      r=5000 (max=5000): ladder height = 13
