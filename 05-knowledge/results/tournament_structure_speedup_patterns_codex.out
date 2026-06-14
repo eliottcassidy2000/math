@@ -1,0 +1,54 @@
+=== Formula validation ===
+exhaustive n=3..6 checked=33864, mismatches={}
+random n=7..9 samples per n=80, mismatches={}
+
+=== Benchmarks on fixed random tournaments ===
+n=14 c5 trace=1816, brute=1816, match=True
+  trace_time=0.001070s, brute_time=0.014306s, speedup=13.4x
+n=14 c6 corrected=7113, brute=7113, match=True
+  corrected_time=0.001054s, brute_time=0.111858s, speedup=106.1x
+  trace6_decomposition: trace6=59949, 3*c3=309, 6*p33_meet=16962, 6*c6=42678
+  diagnostic: half-return rooted triangle-pairs sum tau_v^2=6855 (insufficient alone)
+n=8 H dp=235, brute=235, match=True
+  dp_time=0.000405s, brute_time=0.016290s, speedup=40.2x
+
+=== Exhaustive n=6 structural buckets ===
+records=32768
+score: distinct=22, entropy=3.7177
+c3: distinct=9, entropy=2.8572
+c4: distinct=12, entropy=3.3719
+c5: distinct=12, entropy=3.3436
+c6: distinct=6, entropy=2.4433
+H: distinct=19, entropy=4.0502
+keys=('score',) -> H mixing {'buckets': 22, 'mixed_buckets': 9, 'records_in_mixed_buckets': 25680, 'max_target_values_in_bucket': 6}
+keys=('score', 'c5') -> H mixing {'buckets': 39, 'mixed_buckets': 7, 'records_in_mixed_buckets': 12000, 'max_target_values_in_bucket': 3}
+keys=('score', 'c5', 'c6') -> H mixing {'buckets': 47, 'mixed_buckets': 1, 'records_in_mixed_buckets': 2160, 'max_target_values_in_bucket': 2}
+keys=('c3', 'c4', 'c5', 'c6') -> H mixing {'buckets': 32, 'mixed_buckets': 0, 'records_in_mixed_buckets': 0, 'max_target_values_in_bucket': 1}
+keys=('score', 'c3', 'c4', 'c5', 'c6') -> H mixing {'buckets': 50, 'mixed_buckets': 0, 'records_in_mixed_buckets': 0, 'max_target_values_in_bucket': 1}
+keys=('score',) -> c6 mixing {'buckets': 22, 'mixed_buckets': 6, 'records_in_mixed_buckets': 19440, 'max_target_values_in_bucket': 5}
+keys=('c3', 'c4', 'c5') -> c6 mixing {'buckets': 28, 'mixed_buckets': 3, 'records_in_mixed_buckets': 8640, 'max_target_values_in_bucket': 3}
+keys=('c3', 'c4', 'c5', 'c6') -> c6 mixing {'buckets': 32, 'mixed_buckets': 0, 'records_in_mixed_buckets': 0, 'max_target_values_in_bucket': 1}
+
+=== Tournament Analysis: invariant mutual-explanation on all n=6 tournaments ===
+vertices: ['score', 'c3', 'c4', 'c5', 'c6', 'H']
+observable: U(Y|X)=1-H(Y|X)/H(Y), orient X->Y when X explains Y better
+tie_path: score -> c3 -> c4 -> c5 -> c6 -> H
+outdegrees: {'score': 4, 'c3': 1, 'c4': 3, 'c5': 2, 'c6': 0, 'H': 5}
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3_cycles: 0
+scc_sizes: [1, 1, 1, 1, 1, 1]
+hamiltonian_paths: 1
+edges: score>c3, score>c4, score>c5, score>c6, H>score, c4>c3, c5>c3, c3>c6, H>c3, c4>c5, c4>c6, H>c4, c5>c6, H>c5, H>c6
+selected explanation strengths:
+  U(c3|score)=1.0000
+  U(c5|score)=0.6620
+  U(H|c5)=0.6886
+  U(H|c6)=0.5121
+  U(c6|H)=0.8488
+
+=== Interpretation ===
+1. Trace formulas are exact through length 5 because non-simple closed walks need two cycles.
+2. Length 6 is the first correction: double triangles and intersecting triangle pairs.
+3. c6 is still fast, but it is the first trace invariant needing cycle-placement data p33_meet.
+4. At n=6, the low cycle vector (c3,c4,c5,c6) determines H; score+c5+c6 still mixes.
+5. The next speed frontier is to test whether corrected trace vectors keep compressing H at n>=7.

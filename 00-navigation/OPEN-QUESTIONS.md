@@ -4,6 +4,20 @@
 
 ---
 
+## OPEN-Q-093 🟡
+**Can corrected trace vectors compute higher tournament cycle structure and compress H beyond n=6?**
+
+HYP-2498 proves/validates the first trace correction boundary: `c_k=tr(A^k)/k` for `k=3,4,5`, while `tr(A^6)=6*c6+3*c3+6*p33_meet`, with `p33_meet` counting intersecting directed-triangle pairs. Exhaustive labelled `n=6` data shows the corrected low cycle vector `(c3,c4,c5,c6)` determines `H`, even though `score+c5+c6` still has a mixed `H` bucket. Build the support-type correction engine for `tr(A^7)` and beyond; test whether corrected trace vectors continue to determine or sharply compress `H` at `n=7`.
+
+**Source:** HYP-2498, codex-2026-06-13.
+
+## OPEN-Q-092 🟡
+**Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
+
+HYP-2497 shows that the Sierpinski/Waring analogy is not a plain mod-2 obstruction: scanning `k < 4*2^e+16`, the single tetrahedral residues `{Te_k mod 2^e}` are all of `Z/2^e Z` for every `1<=e<=12`. But after HYP-2491's lift to defect pairs `r,r+tri(k) in D_4`, the tail pair-residue universe compresses sharply: for `k>=100`, observed pair classes stabilize at `168` by `2^8` while the possible pair classes grow as `4^e`, yielding a transitive dyadic compression tournament `12>11>...>3`. Prove the 2-adic surjectivity lemma, then use pair/carry/convolution constraints to rule out triangular defect self-correlations for `k>825`.
+
+**Source:** HYP-2497, codex-2026-06-13.
+
 ## OPEN-Q-091 🟡
 **Can Pollock's tetrahedral conjecture be proved by forbidding long triangular self-correlations in the four-defect set?**
 

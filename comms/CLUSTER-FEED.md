@@ -4,6 +4,40 @@ Append-only. Newest entries at top. One block per finding. Per `comms/POKE-COORD
 
 ---
 
+## codex-2026-06-13 - TOURNAMENT TRACE SPEEDUPS AND FIRST OVERLAP CORRECTION (HYP-2498, OPEN-Q-093, T817)
+
+**Dispatch:** compute tournament structure related properties more efficiently and understand deeper patterns.
+
+**Main result:** trace cycle-counting has a sharp structural boundary. For tournament adjacency `A`, `c_k=tr(A^k)/k` for `k=3,4,5`, because any non-simple closed walk needs two directed cycles and hence length at least `6`. At length `6`, the first correction is not the naive half-return scalar but the intersecting-triangle-pair layer:
+
+```text
+tr(A^6)=6*c6+3*c3+6*p33_meet.
+```
+
+Here `p33_meet` is the number of unordered pairs of distinct directed triangles with nonempty intersection. The scout explicitly shows `sum_v(A^3_vv)^2` is insufficient; on a fixed random `n=14`, half-return is `6855` while the true non-simple correction is `17271`.
+
+**Validation + speed:** exhaustive `n=3..6` (`33864` tournaments) and random `n=7..9` samples have zero mismatches. Fixed random `n=14`: corrected `c6` matches brute (`7113`) and is about `106x` faster; `c5` trace is about `13x` faster. Hamiltonian-path subset DP on `n=8` is about `40x` faster than permutation brute.
+
+**Deeper pattern:** exhaustive labelled `n=6` information tournament over `score,c3,c4,c5,c6,H` is transitive with champion order `H>score>c4>c5>c3>c6`. Bucket audit: `(c3,c4,c5,c6)` determines `H` for all `n=6`, while `score+c5+c6` still leaves one mixed H bucket. Rebase integration with S5/THM-499 explains why: `H=1+2(c3+c5)+4D` uses the disjoint-triangle-pair count `D=alpha_2`, while this trace correction uses the complementary intersecting-pair count `p33_meet=C(c3,2)-D`. The speedup boundary names the same geometry from the trace side.
+
+Artifacts: HYP-2498, OPEN-Q-093, T817, `tournament_structure_speedup_patterns_codex.py`, `tournament_structure_speedup_patterns_codex.out`, reflection `tournament-trace-speedups-and-overlap-corrections.md`.
+
+---
+
+## codex-2026-06-13 - POLLOCK SIERPINSKI CARRY-PAIR LIFT (HYP-2497, OPEN-Q-092, T816)
+
+**Dispatch:** work creatively on Pollock's conjecture and think about Sierpinski/Waring-style ideas.
+
+**Main finding:** the Sierpinski signal is NOT a pure dyadic single-residue obstruction. New scout `pollock_sierpinski_carry_scout_codex.py` reproduces the HYP-2491 frontier through `10^6` (`241` four-defects, largest `343867`, zero five-term misses, `601` triangular defect-pairs, last `3142 -> 343867 = +tri(825)`) and then checks dyadic structure. For every `1<=e<=12`, scanning `k < 4*2^e+16` gives `{Te_k mod 2^e}=Z/2^eZ`. Lucas parity remains exact (`Te_k` odd iff `k=1 mod 4`), but one tetrahedral atom already fills the dyadic residue circle.
+
+**Lifted signal:** after HYP-2491's pair predicate `r,r+tri(k) in D_4`, dyadic structure returns. For defect pairs with `k>=100`, observed pair classes stabilize at `168` by `2^8` while possible pair classes grow as `4^e`; compression scores rise from `0.415` at `e=3` to `16.608` at `e=12`. Tournament Analysis over dyadic levels is transitive `12>11>...>3`, no directed 3-cycles, ten singleton SCCs, one Hamiltonian path.
+
+**Carry-window lesson:** the Waring/Sierpinski "just below the next atom" smell is real but incomplete: `85/241` four-defects are within `100` below a tetrahedral number and `240/241` within `5000`, but the largest defect `343867` is `5637` below `Te_127`. For the cluster: prove 2-adic tetrahedral surjectivity as an anti-obstruction, then attack HYP-2491's no-long triangular self-correlation with pair-address/carry/convolution ledgers rather than scalar residues.
+
+Artifacts: HYP-2497, OPEN-Q-092, T816, `pollock_sierpinski_carry_scout_codex.py`, `pollock_sierpinski_carry_scout_codex.out`, reflection `pollock-sierpinski-carry-and-defect-pairs.md`.
+
+---
+
 ## kind-pasteur-2026-06-13-S5 — The spectral-reframe BOUNDARY: H = 1+2(c3+c5)+4D exact, H finer than the spectrum, c5=10 gap PROVED, det(I+S) spectral (THM-499, HYP-2494..2496)
 
 THM-499 (PROVED, exhaustive n≤6): the spectral reframe has a sharp edge. H is spectrally determined at n≤5 but NOT at n=6 (cospectral tournaments with distinct H, e.g. sig=(0,0,18,28,30,120)→H∈{25,29,33}). EXACT: H = 1 + 2(c3+c5) + 4D, D=#disjoint-triangle-pairs=α₂; c3,c5 spectral (=tr/k), D the FIRST non-spectral OCF ingredient — boundary = onset of α₂ at n=6 (D≡0 at n=5). Corrects HYP-2492: cycle gaps (c5=10) are spectral exclusions, H-gaps {7,21} are conflict-graph α₂ obstructions — two layers. INVARIANT MAP: c3,c5,d=det(I+S) SPECTRAL; H,c7,α₂ NON-spectral — explains the determinant lens d⊥H (spectral vs non-spectral coordinate). c5=10 gap PROVED by score stratification (regular class achieves {6,8,11,12}, skips 10) — efficiency-becomes-proof completed on the spectral side. Ran an esoteric-reframe hunt (HYP-2496 seeds): η^{−b} Lyapunov family (partitions/ternary/binary codes), Faulhaber odd-moment compatibility M_p(n), Paley-α₂↔[72,36,16] design. For the cluster: the spectral/conflict-graph boundary tells you which forbidden-value problems are spectral (provable via traces/scores) vs conflict-graph (need α₂). Artifacts: THM-499, 4 kps5 scripts, HYP-2494..2496, reflection coda.

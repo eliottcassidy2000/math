@@ -1,0 +1,86 @@
+Pollock tetrahedral Sierpinski/carry scout
+limit=1000000
+tetrahedral_atoms=180, largest_atom=988260
+D4_defects=241, max_defect=343867
+five_term_misses=0
+triangular_defect_pairs=601
+last_pair_by_k=(825, 3142, 343867)
+last_pair_by_right=(825, 3142, 343867)
+
+=== Triangular-gap pair histograms inside D_4 ===
+k >=   0: pairs=601, max_k=825, v2(tri(k))=[(0, 308), (1, 139), (2, 93), (3, 37), (4, 12), (5, 11), (7, 1)], k mod 16 top=[(9, 58), (7, 54), (10, 52), (4, 50), (1, 40), (8, 39), (11, 36), (2, 35)]
+k >=  50: pairs=332, max_k=825, v2(tri(k))=[(0, 172), (1, 73), (2, 53), (3, 14), (5, 11), (4, 8), (7, 1)], k mod 16 top=[(9, 30), (7, 29), (1, 27), (11, 25), (8, 24), (10, 23), (2, 21), (5, 21)]
+k >= 100: pairs=168, max_k=825, v2(tri(k))=[(0, 79), (1, 44), (2, 27), (3, 8), (4, 6), (5, 3), (7, 1)], k mod 16 top=[(9, 18), (4, 15), (7, 14), (10, 14), (8, 13), (12, 13), (13, 10), (3, 10)]
+k >= 300: pairs= 28, max_k=825, v2(tri(k))=[(0, 13), (1, 8), (2, 6), (3, 1)], k mod 16 top=[(7, 5), (12, 4), (9, 4), (10, 2), (11, 2), (2, 2), (6, 2), (14, 1)]
+k >= 500: pairs=  1, max_k=825, v2(tri(k))=[(0, 1)], k mod 16 top=[(9, 1)]
+k >= 800: pairs=  1, max_k=825, v2(tri(k))=[(0, 1)], k mod 16 top=[(9, 1)]
+
+=== Dyadic residue audit ===
+Single tetrahedral atom residues are scanned over k < 4*2^e+16.
+e= 1 m=    2 atom_res=    2/2     surj=True  D4_res=   2 pair_classes=   4 tail(k>=100)=   4 compression=0.000
+e= 2 m=    4 atom_res=    4/4     surj=True  D4_res=   4 pair_classes=  16 tail(k>=100)=  15 compression=0.093
+e= 3 m=    8 atom_res=    8/8     surj=True  D4_res=   8 pair_classes=  61 tail(k>=100)=  48 compression=0.415
+e= 4 m=   16 atom_res=   16/16    surj=True  D4_res=  16 pair_classes= 191 tail(k>=100)= 108 compression=1.245
+e= 5 m=   32 atom_res=   32/32    surj=True  D4_res=  31 pair_classes= 407 tail(k>=100)= 149 compression=2.781
+e= 6 m=   64 atom_res=   64/64    surj=True  D4_res=  59 pair_classes= 523 tail(k>=100)= 163 compression=4.651
+e= 7 m=  128 atom_res=  128/128   surj=True  D4_res= 108 pair_classes= 580 tail(k>=100)= 166 compression=6.625
+e= 8 m=  256 atom_res=  256/256   surj=True  D4_res= 155 pair_classes= 597 tail(k>=100)= 168 compression=8.608
+e= 9 m=  512 atom_res=  512/512   surj=True  D4_res= 195 pair_classes= 600 tail(k>=100)= 168 compression=10.608
+e=10 m= 1024 atom_res= 1024/1024  surj=True  D4_res= 214 pair_classes= 600 tail(k>=100)= 168 compression=12.608
+e=11 m= 2048 atom_res= 2048/2048  surj=True  D4_res= 229 pair_classes= 600 tail(k>=100)= 168 compression=14.608
+e=12 m= 4096 atom_res= 4096/4096  surj=True  D4_res= 237 pair_classes= 601 tail(k>=100)= 168 compression=16.608
+
+=== Tournament Analysis: dyadic compression levels ===
+vertices: [3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+observable: log2((2^e)^2 / observed tail pair-residue classes)
+tie_path: increasing e
+scores: {3: 0.415, 4: 1.245, 5: 2.781, 6: 4.651, 7: 6.625, 8: 8.608, 9: 10.608, 10: 12.608, 11: 14.608, 12: 16.608}
+outdegrees: {3: 0, 4: 1, 5: 2, 6: 3, 7: 4, 8: 5, 9: 6, 10: 7, 11: 8, 12: 9}
+score_hist: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+directed_3_cycles: 0
+scc_sizes: [1, 1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths: 1
+champion_path: [12, 11, 10, 9, 8, 7, 6, 5, 4, 3]
+edges: 4>3, 5>3, 6>3, 7>3, 8>3, 9>3, 10>3, 11>3, 12>3, 5>4, 6>4, 7>4, 8>4, 9>4, 10>4, 11>4, 12>4, 6>5, 7>5, 8>5, 9>5, 10>5, 11>5, 12>5, 7>6, 8>6, 9>6, 10>6, 11>6, 12>6, 8>7, 9>7, 10>7, 11>7, 12>7, 9>8, 10>8, 11>8, 12>8, 10>9, 11>9, 12>9, 11>10, 12>10, 12>11
+
+=== Lucas/Sierpinski parity check ===
+Te_k = C(k+2,3). Lucas gives Te_k odd iff k == 1 mod 4.
+verified_up_to_k_511: True
+odd k residues mod 64: [1, 5, 9, 13, 17, 21, 25, 29, 33, 37, 41, 45, 49, 53, 57, 61]
+
+=== Near-next-tetrahedron carry windows for D_4 ===
+last 10 defects with upper-index, gap-up, gap-down, normalized gap-up:
+  d= 78787 h= 77 up_gap=  292 down_gap= 2711 norm=0.0972
+  d= 83603 h= 79 up_gap= 1717 down_gap= 1443 norm=0.5434
+  d= 84023 h= 79 up_gap= 1297 down_gap= 1863 norm=0.4104
+  d= 85993 h= 80 up_gap= 2567 down_gap=  673 norm=0.7923
+  d= 91128 h= 81 up_gap=  753 down_gap= 2568 norm=0.2267
+  d=106277 h= 86 up_gap= 3459 down_gap=  282 norm=0.9246
+  d=113062 h= 87 up_gap=  502 down_gap= 3326 norm=0.1311
+  d=134038 h= 92 up_gap=    6 down_gap= 4272 norm=0.0014
+  d=148437 h= 96 up_gap= 3659 down_gap=  997 norm=0.7859
+  d=343867 h=127 up_gap= 5637 down_gap= 2491 norm=0.6935
+gap_up <=     1:   2/241
+gap_up <=     5:  13/241
+gap_up <=    10:  17/241
+gap_up <=    50:  55/241
+gap_up <=   100:  85/241
+gap_up <=   500: 182/241
+gap_up <=  1000: 218/241
+gap_up <=  5000: 240/241
+gap_up <= 10000: 241/241
+tail defects within 100 below a tetrahedral number: [(37798, 60, 22), (39693, 61, 18), (62158, 71, 38), (64752, 72, 72), (134038, 92, 6)]
+
+=== Residue sample tables ===
+D4 residues mod 16: classes=16, top=[(11, 23), (9, 21), (3, 21), (5, 21), (2, 20), (15, 19), (6, 19), (13, 17), (10, 17), (7, 16)]
+D4 residues mod 32: classes=31, top=[(27, 14), (9, 13), (19, 13), (5, 12), (18, 11), (6, 10), (31, 10), (11, 9), (2, 9), (13, 9)]
+D4 residues mod 64: classes=59, top=[(18, 8), (27, 7), (19, 7), (38, 7), (59, 7), (41, 7), (37, 7), (9, 6), (25, 6), (2, 6)]
+tail pair classes k>=300 mod 2^4: count=26, top=[((7, 5), 2), ((6, 9), 2), ((5, 3), 1), ((15, 3), 1), ((11, 10), 1), ((11, 5), 1), ((1, 14), 1), ((3, 0), 1), ((5, 14), 1), ((13, 5), 1)]
+tail pair classes k>=300 mod 2^5: count=28, top=[((23, 21), 1), ((21, 19), 1), ((15, 19), 1), ((27, 10), 1), ((27, 5), 1), ((1, 14), 1), ((3, 16), 1), ((5, 14), 1), ((13, 5), 1), ((14, 21), 1)]
+tail pair classes k>=300 mod 2^6: count=28, top=[((23, 53), 1), ((53, 19), 1), ((47, 51), 1), ((27, 10), 1), ((59, 37), 1), ((1, 14), 1), ((35, 48), 1), ((5, 14), 1), ((13, 37), 1), ((46, 53), 1)]
+
+=== Proof-route interpretation ===
+1. Pure dyadic local obstruction is unlikely: Te_k hits every class mod 2^e in the scan.
+2. Sierpinski survives as Lucas parity of indices and as carry-window structure, not as a missing residue.
+3. The live Pollock target is a no-long triangular self-correlation theorem for D_4.
+4. Pair residues are sparse at high dyadic levels; use them as certificates/pruning, not as single-class obstructions.
