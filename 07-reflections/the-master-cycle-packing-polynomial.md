@@ -172,6 +172,18 @@ the non-spectral level-sums; `x = 2` points into the covariation, `x = −1` poi
 The topology of the packing complex (its Euler characteristic) is "more spectral" than its
 fugacity-2 size for a concrete linear-algebra reason, not a coincidence.
 
+**Sign-damping holds but fades with `n`** (steering from the project owner, POKE-COORDINATION
+2026-06-15). The signed `x = −1` count splits fewer cospectral classes than the unsigned `H`
+at every `n` tested — n=7: **16 vs 47** (66% fewer), n=8: **656 vs 717** (8.5% fewer) — so
+the effect is real but is a *small-`n`* phenomenon, decaying as the non-spectral content
+gains dimension and the single alternating direction `((−1)^j)_j` can cancel only a shrinking
+fraction of it. Crucially the *unsigned* counts at `x = 1` (total #packings: 47, 713) and
+`x = 2` (`H`: 47, 717) split almost identically — **it is the alternating sign, not the
+fugacity magnitude, that damps.** Sign-damping is the `n=7` shadow of the general fact that
+`I(Ω, x)` is a *one-direction* probe of the `⌊n/3⌋`-D non-spectral level-sum space; only when
+that space is 2-D (n=7) can a single sign-choice be nearly orthogonal to all of the
+within-class variation.
+
 ## Why this matters / the transcendent line
 
 The project's recurring slogan is "the spectrum is mean-field, the OCF is correlation."

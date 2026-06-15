@@ -1,0 +1,7 @@
+[6] SIGN-DAMPING test (human steering): signed (x=-1) vs unsigned (x=2) split counts
+ n=7: 168 cospectral classes (12000 samples);  split counts:  x=2 (H) 47   |   x=-1 (Euler/signed) 16   |   x=1 (#packings) 47   -> sign-damping HOLDS (16 < 47)
+ n=8: 1522 cospectral classes (45000 samples);  split counts:  x=2 (H) 717   |   x=-1 (Euler/signed) 656   |   x=1 (#packings) 713   -> sign-damping HOLDS (656 < 717)
+Terminated
+
+ NOTE: n=9 (25000 samples, triple-packing enumeration) did not finish within the 540s
+ cap; n=7 and n=8 suffice to establish sign-damping holds and weakens with n.

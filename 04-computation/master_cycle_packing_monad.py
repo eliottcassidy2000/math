@@ -324,3 +324,39 @@ def verify_eulerchar_projection():
     print(f"        sgn split <=> Delta(c6-c7)!=0 : {'CONSISTENT' if bad_sgn==0 else f'{bad_sgn} mismatch'}")
     print(f"        H   split <=> Delta(2c6+c7)!=0: {'CONSISTENT' if bad_H==0 else f'{bad_H} mismatch'}")
     print(f"        classes where (c6,c7) varies but sgn_odd does NOT (x=-1 cancels covariation): {cov_cancel}")
+
+
+def sign_damping_test(n, n_samples, seed=41):
+    """STEERING (human, POKE-COORDINATION 2026-06-15): test the Sign-Damping hypothesis at
+    larger n -- does the SIGNED packing count (alternating phase, x=-1) split FEWER cospectral
+    classes than the UNSIGNED fugacity-2 count H (x=2)?  Also test x=1 (total #packings)."""
+    import random
+    rng = random.Random(seed)
+    buckets = {}
+    for _ in range(n_samples):
+        A = random_tournament(n, rng)
+        cp = tuple(charpoly_int(A, n))
+        cycles = all_cycles(A, n); packs = enumerate_packings(cycles)
+        # alpha_j = number of odd packings with j cycles
+        alpha = {}
+        for (lam, nc) in packs:
+            if all(L % 2 == 1 for L in lam):
+                alpha[nc] = alpha.get(nc, 0) + 1
+        H2  = sum((2**j)*a for j,a in alpha.items())     # I(Omega,2) = H
+        Hm1 = sum(((-1)**j)*a for j,a in alpha.items())  # I(Omega,-1) = Euler char (sgn)
+        H1  = sum(a for j,a in alpha.items())            # I(Omega,1) = #odd packings
+        b = buckets.setdefault(cp, {'H2':set(),'Hm1':set(),'H1':set()})
+        b['H2'].add(H2); b['Hm1'].add(Hm1); b['H1'].add(H1)
+    multi = [d for d in buckets.values() if len(d['H2'])>1 or len(d['Hm1'])>1 or len(d['H1'])>1]
+    s2  = sum(1 for d in buckets.values() if len(d['H2'])>1)
+    sm1 = sum(1 for d in buckets.values() if len(d['Hm1'])>1)
+    s1  = sum(1 for d in buckets.values() if len(d['H1'])>1)
+    print(f" n={n}: {len(buckets)} cospectral classes ({n_samples} samples);  "
+          f"split counts:  x=2 (H) {s2}   |   x=-1 (Euler/signed) {sm1}   |   x=1 (#packings) {s1}"
+          f"   -> sign-damping {'HOLDS' if sm1 < s2 else 'FAILS'} ({sm1} < {s2})")
+
+if __name__ == '__main__':
+    print("\n[6] SIGN-DAMPING test (human steering): signed (x=-1) vs unsigned (x=2) split counts")
+    sign_damping_test(7, 12000)
+    sign_damping_test(8, 60000)
+    sign_damping_test(9, 90000)
