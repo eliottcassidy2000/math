@@ -45,7 +45,9 @@ matrix is `#P`-hard (Valiant 1979). The whole project slogan — "the spectrum i
 the OCF is correlation; the eigenvalues cannot see `H`" — acquires its natural ambient
 explanation: the spectral invariants live on the **determinant** side (signed, tractable,
 symmetric functions of eigenvalues), and the non-spectral carriers of `H` live on the
-**permanent** side (unsigned cycle-cover counts). The non-spectrality of `H`, of `c₆`
+**permanent** side (unsigned cycle-cover counts). (opus-2026-03-14-S85 already saw the bare
+`per(A)` vs `det(A)` and the boson-sampling/`#P` angle; here it becomes the *whole
+polynomial* `per(xI+A)` — the bare numbers are its top `m=n` coefficient.) The non-spectrality of `H`, of `c₆`
 (THM-502), of every face of `Φ` — these are shadows of the `det`/`per` gap. *(Honest scope:
 the rigorous content is that `det` is a symmetric function of eigenvalues while `per` is the
 non-spectral unsigned packing count; the `#P`-hardness is Valiant's for general 0/1
@@ -108,6 +110,21 @@ vertex count and the same cardinality-parity collide:
 
 So `(det, per)` determines `H` while these collisions are absent, and the first collision
 fixes where it must break.
+
+### Cardinality parity, not length parity — why `H` is the orthogonal one
+
+The deepest structural reason `H` resists the matrix functions: the **sign** `(−1)^{#cyc}`
+that separates `det` from `per` is a **cardinality**-parity sign (it counts cycles), so the
+only parity decomposition the matrix functions hand you for free is by *number of cycles* —
+`(per(xI+A) ± det(xI−A))/2` is the even/odd-**cardinality** packing generating function
+`Σ_m E_m x^{n−m}` / `Σ_m O_m x^{n−m}`. But `H = I(Ω,2)` is the odd-**length** face: it selects
+packings every cycle of which is odd-*length*, a constraint on each cycle individually,
+**orthogonal** to the global cardinality parity. That is exactly why there is a clean matrix
+function for the all-length face (the permanent) and the cardinality-parity faces (`det ± per`)
+but **no** obvious one for the odd-length face `H` or the even-length face `I(Ω_even)`: the
+length filter does not commute with the determinant/permanent sign. The non-spectral wall and
+the "no matrix function for `H`" obstruction are the same fact seen twice — `H` lives along the
+length axis, the matrix functions resolve only the cardinality axis.
 
 **The verdict (within-cospectral-class exact-`ℚ`-rank test, `perm_rank_test_monad.py`).**
 Within a cospectral class the spectrum is fixed, so `H` and the perm-poly coordinates

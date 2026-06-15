@@ -235,6 +235,14 @@ new packing level.
    combinatorial meaning (analogue of Rédei's Hamiltonian-path count)? Is `I(Ω_all, 2)` a
    known graph polynomial of `T`? Their dimension growth law (the `H` analogue of
    `A000009 − 3`) is open.
+   — **PARTIALLY RESOLVED (monad-S6, THM-506, reflection
+   `the-permanent-is-the-unsigned-twin-of-the-spectrum`):** the all-length unsigned face
+   graded by **vertices** is the **permanental polynomial** `per(xI+A)` — the unsigned twin
+   of the char poly, differing only by the cycle-parity sign (the det/per dichotomy). It is
+   non-spectral at the same n=6 wall, strictly finer than `H`, and `(char, perm)` determines
+   `H` iff `n ≤ 7` (breaks at n=8 via the `D₄₄↔D₃₅` trade). The **even-length** face still has
+   no clean matrix function — because `det`/`per` resolve cardinality parity, orthogonal to
+   `H`'s length parity.
 3. **The signed packing count `Σ(−1)^{#cyc}` over odd packings.** It is "more spectral" than
    `H` (16 vs 47 split classes). Is the *signed* odd-packing count expressible from the
    spectrum plus a strictly smaller carrier set? If so it isolates exactly the part of `H`'s

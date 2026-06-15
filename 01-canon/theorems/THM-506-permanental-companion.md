@@ -60,6 +60,18 @@ count (Valiant: per of a 0/1 matrix is `#P`-hard — the ambient structural reas
 spectrum cannot see the unsigned data; not a hardness claim for the tournament-restricted
 permanent).
 
+**Credit / prior work.** opus-2026-03-14-S85 (`04-computation/perm_det_23.py`,
+`permanent_spectral_bridge.py`) compared the **bare numbers** `per(A)` and `det(A)` of the
+adjacency, finding `per(A)=det(A)` at n=5, `per(A)=-det(A)` at n=4, and tying per's
+`#P`-hardness to boson sampling. Those numbers are exactly the **top (`m=n`) coefficient** of
+the present polynomials: `per(A) = e_n^{unsigned} = O_n+E_n` (spanning packings, unsigned) and
+`det(A) = (-1)^n e_n^{signed}` (spanning packings, signed `sgn(σ)=(-1)^{n-#cyc}`), so
+`per(A)=±det(A)` exactly when all spanning packings share one cardinality-parity (e.g. n=5:
+only single 5-cycles, card 1; n=4: only single 4-cycles). THM-506 lifts that single-number
+comparison to the **full polynomial** `per(xI+A)` and places it inside the master-polynomial
+`Φ` framework. (THM-115 uses "permanent" loosely for the H=21 gap via `I(Ω,2)`; unrelated to
+the permanental polynomial.)
+
 ## Part 3 — same wall, strictly finer fingerprint (VERIFIED)
 
 The permanental polynomial is constant on cospectral classes for `n <= 5` and first splits a
