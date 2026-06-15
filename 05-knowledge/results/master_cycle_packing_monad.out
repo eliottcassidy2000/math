@@ -1,0 +1,55 @@
+==============================================================================
+ MASTER CYCLE-PACKING POLYNOMIAL  Phi  -- spectrum & OCF as two specializations
+==============================================================================
+
+[1] Coefficient theorem  det(xI-A) coeff  ==  e_m^signed (Sachs all-length packing)
+ Coefficient theorem (Sachs) n=3: 200/200 match
+ Coefficient theorem (Sachs) n=4: 200/200 match
+ Coefficient theorem (Sachs) n=5: 200/200 match
+ Coefficient theorem (Sachs) n=6: 200/200 match
+ Coefficient theorem (Sachs) n=7: 120/120 match
+
+[2] OCF   H(Hamiltonian paths)  ==  I(Omega_odd, 2)  (unsigned odd-only, fugacity 2)
+ OCF  H == I(Omega_odd, 2)  n=3: 150/150 match
+ OCF  H == I(Omega_odd, 2)  n=4: 150/150 match
+ OCF  H == I(Omega_odd, 2)  n=5: 150/150 match
+ OCF  H == I(Omega_odd, 2)  n=6: 150/150 match
+ OCF  H == I(Omega_odd, 2)  n=7: 80/80 match
+
+[3] Sachs reading of the THM-505 defect lock  (e6^signed = D33 - c6)
+ Sachs skeleton  e6^signed == D33 - c6  n=6: 150/150 match
+ Sachs skeleton  e6^signed == D33 - c6  n=7: 150/150 match
+ Sachs skeleton  e6^signed == D33 - c6  n=8: 80/80 match
+
+[4] NON-SPECTRAL BOUNDARY of each face of Phi (cospectral-class probe)
+    H_odd = the OCF; H_even/H_all = even/all-cycle packing analogues; sgn_* = signed
+
+ cospectral probe n=4: 3 cospectral classes from 6000 samples (0 split by some face)
+   H_odd    : split in    0 / 3 classes  -> spectral (constant on all classes)
+   H_even   : split in    0 / 3 classes  -> spectral (constant on all classes)
+   H_all    : split in    0 / 3 classes  -> spectral (constant on all classes)
+   sgn_odd  : split in    0 / 3 classes  -> spectral (constant on all classes)
+   sgn_even : split in    0 / 3 classes  -> spectral (constant on all classes)
+
+ cospectral probe n=5: 9 cospectral classes from 6000 samples (0 split by some face)
+   H_odd    : split in    0 / 9 classes  -> spectral (constant on all classes)
+   H_even   : split in    0 / 9 classes  -> spectral (constant on all classes)
+   H_all    : split in    0 / 9 classes  -> spectral (constant on all classes)
+   sgn_odd  : split in    0 / 9 classes  -> spectral (constant on all classes)
+   sgn_even : split in    0 / 9 classes  -> spectral (constant on all classes)
+
+ cospectral probe n=6: 28 cospectral classes from 6000 samples (3 split by some face)
+   H_odd    : split in    3 / 28 classes  -> NON-SPECTRAL
+   H_even   : split in    3 / 28 classes  -> NON-SPECTRAL
+   H_all    : split in    3 / 28 classes  -> NON-SPECTRAL
+   sgn_odd  : split in    3 / 28 classes  -> NON-SPECTRAL
+   sgn_even : split in    3 / 28 classes  -> NON-SPECTRAL
+
+ cospectral probe n=7: 168 cospectral classes from 9000 samples (47 split by some face)
+   H_odd    : split in   47 / 168 classes  -> NON-SPECTRAL
+   H_even   : split in   46 / 168 classes  -> NON-SPECTRAL
+   H_all    : split in   47 / 168 classes  -> NON-SPECTRAL
+   sgn_odd  : split in   16 / 168 classes  -> NON-SPECTRAL
+   sgn_even : split in   46 / 168 classes  -> NON-SPECTRAL
+
+DONE.

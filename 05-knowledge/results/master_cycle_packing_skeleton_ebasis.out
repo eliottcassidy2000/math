@@ -1,0 +1,5 @@
+
+[5] Spectral skeleton as a Z-combination of char-poly coefficients e_m
+   n=7  H == (1-2e3-2e5+4e6) + 4c6 + 2c7 :  2000/2000 match
+   n=8  H == (1-2e3-2e5+4e6+4e8) + 4c6 + 2c7 + 4c8 - 4D44 :  1500/1500 match
+   n=7  e-basis skeleton constant on all 167 cospectral classes: YES
