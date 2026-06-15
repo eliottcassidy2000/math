@@ -49,6 +49,7 @@ Generating function: with `P(x) = Π_{k odd, k≥3} 1/(1−x^k)`,
 ```
  n :    6  7  8  9  10  11  12  13  14
 dim :    1  2  3  5   7   9  12  15  19
+              ^  ^   ^   ^   <- VERIFIED by rank (3,5,7,9 at n=8,9,10,11)
 ```
 
 The increment `dim(n) − dim(n−1)` is exactly `p_{odd≥3}(n)` = the number of partitions of `n`
@@ -115,9 +116,10 @@ re-coordinatizes it. The headline number changes 6→5.)
 - `dim ≤ #{λ:Σλ≤n} − 3`: **proved** (upper bound — `H` cannot depend on more than the
   carriers in its own expansion).
 - **Equality** (i.e. all non-trivial `N_λ` are linearly independent within cospectral
-  classes, none spectrally pinned): **verified by cospectral sampling at n=8,9,10** (rank
-  matches `3,5,7`; H always in the carrier span; every carrier drop-one independent), and at
-  n=11 if the running confirmation lands at 9. **Conjecture for general `n`.** The one place
+  classes, none spectrally pinned): **verified by cospectral sampling at n=8,9,10,11** (rank
+  matches `3,5,7,9`; H always in the carrier span; every carrier drop-one independent — at
+  n=11 all nine of `{c7,c9,c11,D33,D35,D37,D55,T333,T335}`, 704 split cospectral classes,
+  OCF holds 5000/5000). **Conjecture for general `n`.** The one place
   this could fail is a "tightness pinning" — some `N_λ` becoming a spectral function of the
   others when `Σλ` is close to `n` (as `Q44` was pinned in the trace basis at n=8). The data
   says the OCF carriers are *free at onset* (`D35` is free at n=8 though it uses all 8

@@ -3,3 +3,20 @@
   n = 11
 ======================================================================
   OCF non-spectral carriers: ['c7', 'c9', 'c11', 'D33', 'D35', 'D37', 'D55', 'T333', 'T335']  (predicted dim = 9)
+  phase1: 6000000 samples; colliding cospectral classes 252528; distinct members 544212
+  phase2: processed 5000; OCF holds 5000/5000; usable classes 704
+  cospectral classes with SPLIT H (non-spectral witnesses): 704
+  within-class delta vectors: 4267
+  RANK of OCF-carrier deltas             : 9
+  RANK including H column                : 9  (H IN carrier span (linear))
+  ==> intrinsic dim_nonspec(H) at n=11  : 9
+     drop c7   : rank  8  (independent)
+     drop c9   : rank  8  (independent)
+     drop c11  : rank  8  (independent)
+     drop D33  : rank  8  (independent)
+     drop D35  : rank  8  (independent)
+     drop D37  : rank  8  (independent)
+     drop D55  : rank  8  (independent)
+     drop T333 : rank  8  (independent)
+     drop T335 : rank  8  (independent)
+FINAL n=11 intrinsic dim = 9  (partition-law prediction = 9)

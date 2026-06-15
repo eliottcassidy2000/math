@@ -1,7 +1,7 @@
 ---
 id: THM-505
 title: The OCF non-spectral defect — H = (spectral skeleton) + (integer-linear combination of Witt/census defects); at n=7, H = [1+2c3+2c5+4C(c3,2)-4W6] + 4c6 + 2c7
-status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension exceeds n−5. INTRINSIC dimension (basis-independent rank, OCF packing basis, monad-explorer-S3) = 3,5,7 at n=8,9,10 — the n=9 trace-basis "6" was an OVER-COUNT (c8 and Q44 enter H only via their sum D35). GROWTH LAW: dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3 = (1,2,3,5,7,9,12,…) for n=6,7,8,9,10,11,12 — a restricted-partition generating function Π_{k odd≥3}1/(1−x^k); equals n−5 only for n≤8. VERIFIED n≤10 (rank, all carriers independent, H in span); dim ≤ #{λ}−3 PROVED, equality CONJECTURE (no N_λ spectrally pinned). LINEARITY: H is universal-integer-linear in the FULL carrier set but NOT a bounded-degree polynomial in the simple cycles alone past n=7. (HYP-2513, dimension claim CORRECTED → partition law)
+status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension exceeds n−5. INTRINSIC dimension (basis-independent rank, OCF packing basis, monad-explorer-S3) = 3,5,7 at n=8,9,10 — the n=9 trace-basis "6" was an OVER-COUNT (c8 and Q44 enter H only via their sum D35). GROWTH LAW: dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3 = (1,2,3,5,7,9,12,…) for n=6,7,8,9,10,11,12 — a restricted-partition generating function Π_{k odd≥3}1/(1−x^k); equals n−5 only for n≤8. VERIFIED n≤11 (rank 3,5,7,9 at n=8..11, all carriers independent, H in span); dim ≤ #{λ}−3 PROVED, equality CONJECTURE (no N_λ spectrally pinned). LINEARITY: H is universal-integer-linear in the FULL carrier set but NOT a bounded-degree polynomial in the simple cycles alone past n=7. (HYP-2513, dimension claim CORRECTED → partition law)
 source: monad-explorer-2026-06-15
 depends_on:
   - THM-499   # H = 1 + 2(c3+c5) + 4*alpha_2 at n<=6; alpha_2 first non-spectral OCF ingredient
@@ -182,10 +182,11 @@ classes since deltas pool across classes):
 | 8 | `{c7, D33, D35}` | **3** | yes |
 | 9 | `{c7, c9, D33, D35, T333}` | **5** | yes |
 | 10 | `{c7, c9, D33, D35, D37, D55, T333}` | **7** | yes |
+| 11 | `{c7, c9, c11, D33, D35, D37, D55, T333, T335}` | **9** | yes |
 
-Verified by cospectral sampling: rank `3,5,7`; every carrier drop-one independent; `H`
-always in the carrier span (so dim is capped by the OCF closed form); OCF identity holds
-`6000/6000` (n=10). At n=9 the explicit reconciliation: rank`{c6,c7,c8,c9,Q44,T333}`=6 but
+Verified by cospectral sampling: rank `3,5,7,9` at n=8,9,10,11; every carrier drop-one
+independent; `H` always in the carrier span (so dim is capped by the OCF closed form); OCF
+identity holds `6000/6000` (n=10), `5000/5000` (n=11, 704 split cospectral classes). At n=9 the explicit reconciliation: rank`{c6,c7,c8,c9,Q44,T333}`=6 but
 rank`{c6,c7,(c8+Q44),c9,T333}`=5 and already contains `H`.
 
 > **GROWTH LAW (the corrected dimension claim).** With `N_∅=1`, `N_{3}=c3=trA³/3`,
@@ -195,7 +196,7 @@ rank`{c6,c7,(c8+Q44),c9,T333}`=5 and already contains `H`.
 >   dim_nonspec(H)(n) = #{ partitions of s into odd parts ≥3, 0 ≤ s ≤ n } − 3
 >                     = ( Σ_{s≤n} [x^s] Π_{k odd ≥3} 1/(1−x^k) ) − 3
 > ```
-> Values `n=6..14`: **1, 2, 3, 5, 7, 9, 12, 15, 19**. The increment
+> Values `n=6..14`: **1, 2, 3, 5, 7, 9, 12, 15, 19** (the n=8,9,10,11 entries 3,5,7,9 VERIFIED). The increment
 > `dim(n)−dim(n−1) = p_{odd≥3}(n)` (partitions of `n` into odd parts ≥3). The sequence
 > equals `n−5` *only* for `n ≤ 8` (each integer has ≤1 odd-≥3 partition there); it first
 > exceeds `n−5` at `n=9`, where `9={9}={3,3,3}` is the first integer with **two** such
@@ -207,7 +208,7 @@ rank`{c6,c7,(c8+Q44),c9,T333}`=5 and already contains `H`.
 >
 > **Status:** decomposition `H=Σ_λ 2^{|λ|}N_λ` PROVED (regroup the OCF closed form);
 > `dim ≤ #{λ}−3` PROVED (upper bound — `H` can't depend on more than its own carriers);
-> EQUALITY (no `N_λ` spectrally pinned) VERIFIED n≤10, CONJECTURE general. See reflection
+> EQUALITY (no `N_λ` spectrally pinned) VERIFIED n≤11, CONJECTURE general. See reflection
 > `the-non-spectral-dimension-of-H-is-a-partition-function`.
 
 ## The linearity dichotomy (resolves the "is H linear in the carriers" question)

@@ -73,13 +73,14 @@ growth law DOES have a closed form. In the basis-independent OCF *packing* basis
 `H = Σ_λ 2^{|λ|} N_λ` over length-multisets `λ` of disjoint odd-cycle packings, parts odd ≥3),
 `dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3` = `Σ_{s≤n}[x^s]Π_{k odd≥3}1/(1−x^k) − 3`
 = **1,2,3,5,7,9,12,15,19** for n=6..14 (increment = p_{odd≥3}(n)). VERIFIED by RANK of the
-within-class carrier-delta matrix: dim = **3,5,7** at n=8,9,10 (every OCF carrier independent,
-H in span, OCF holds 6000/6000 at n=10). The new n=10 carriers are exactly the (3,7) and (5,5)
-disjoint pairs `D37,D55` plus the 10-cycle's contribution via `D37`. CORRECTION: the n=9 dim
+within-class carrier-delta matrix: dim = **3,5,7,9** at n=8,9,10,11 (every OCF carrier
+independent, H in span, OCF holds 6000/6000 at n=10 and 5000/5000 at n=11, 704 split
+cospectral classes). The new n=10 carriers are exactly the (3,7) and (5,5) disjoint pairs
+`D37,D55`; n=11 adds `c11` and the new triple `T335` = {3,3,5}. CORRECTION: the n=9 dim
 is intrinsically **5, not 6** — the trace-basis "6" over-counted because `c8` and `Q44` enter
 `H` only via their sum `D35`. `dim ≤ #{λ}−3` PROVED; equality (no `N_λ` spectrally pinned)
-VERIFIED n≤10, CONJECTURE general. FILES: 04-computation/ocf_nonspectral_n10_monad.py,
-05-knowledge/results/ocf_nonspectral_n10_n11_monad.out, reflection
+VERIFIED n≤11, CONJECTURE general. FILES: 04-computation/ocf_nonspectral_n10_monad.py,
+05-knowledge/results/{ocf_nonspectral_n10_n11_monad.out, ocf_nonspectral_n11_monad.out}, reflection
 the-non-spectral-dimension-of-H-is-a-partition-function. NEW open: (1) PROVE no `N_λ` is
 spectrally pinned (upgrades the law to a theorem); (2) where does the law first deviate, if
 ever — does a tightness-pinning kill a carrier at large n (the rank could drop below the
