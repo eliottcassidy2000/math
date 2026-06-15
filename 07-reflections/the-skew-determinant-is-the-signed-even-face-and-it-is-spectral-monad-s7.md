@@ -207,4 +207,3 @@ strictly dominates the spectrum and `H`), `I(Ω_even,·)`, the packing carriers
   easy/hard split as GLMY chain-rank (poly) vs the packing/independence counts (#P). The
   skew matrix is the spectral (poly) probe of the even cycle space; the cycle-space
   topology (β_k) is the homological probe — do they agree on the even slice?
-```
