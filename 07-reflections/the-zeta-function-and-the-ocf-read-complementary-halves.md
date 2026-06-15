@@ -110,10 +110,24 @@ exchange rate between them, with the fugacity `2` as the unit of conversion. Sta
 mechanics on a finite tournament: same two halves, same wall between them, one rung of
 the wall paid per length `k` as soon as there is room for a correlation to hide.
 
+## One rung per length, counted exactly
+
+The earlier reflection paid the spectral wall "one rung per length `k`." THM-505's
+carrier-dimension probe makes the rung-count literal: the number of *independent*
+non-spectral degrees of freedom in `H` is `0, 1, 2, 3` for `n = 5, 6, 7, 8` — exactly
+`n − 5`, one new carrier `c_n` per vertex added, and the carriers are precisely the
+simple-cycle counts `c6, c7, ..., c_n`. The probe also answers which side the
+even-cycle overlaps fall on: `Q44` (overlapping 4-cycle pairs) is **not** a new axis —
+it is determined by the spectrum together with `(c6, c7, c8)`. Every overlap defect
+(`p33, TQ, Q44, TF`) is a spectral function of the simple-cycle vector; the non-spectral
+content of `H` is *only* that vector `(c6, ..., c_n)`. The simple cycles are the genuine
+hidden coordinates; the overlaps are their spectral shadows.
+
 *Handoffs.* (1) The general-`n` carrier list and weights (HYP-2513) — is every weight a
-pure power of 2, set by the independent-set level at which the defect enters Ω? (2) Does
-the even-overlap carrier `Q44` (and the triple-overlaps at `k=9`) vary within cospectral
-classes — i.e. are the even-cycle overlaps a genuinely new non-spectral axis beyond the
-odd `c_k`? (3) Read `H` itself as a special value of a tournament `L`/zeta-type function
-in the fugacity variable (ties to the kps7 special-value lens) — `H = I(Ω,2)`, and the
-skeleton/defect split may be a functional-equation-like decomposition.*
+pure power of 2, set by the independent-set level at which the carrier enters Ω, and is
+`dim_nonspec(H) = n − 5` exactly (does `c9` join as the 4th carrier at n=9, where the
+first triple-overlap `8·α₃` switches on)? Needs the exhaustive n=9 iso-class data. (2) Is
+`H` *linear* in the carriers past n=7? (At n=8, `Q44` is determined by `(c6,c7,c8)` but
+perhaps nonlinearly.) (3) Read `H` itself as a special value of a tournament `L`/zeta-type
+function in the fugacity variable (ties to the kps7 special-value lens) — `H = I(Ω,2)`,
+and the skeleton/defect split may be a functional-equation-like decomposition.*

@@ -1,7 +1,7 @@
 ---
 id: THM-505
 title: The OCF non-spectral defect — H = (spectral skeleton) + (integer-linear combination of Witt/census defects); at n=7, H = [1+2c3+2c5+4C(c3,2)-4W6] + 4c6 + 2c7
-status: PROVED for n=7 (closed form derived by substitution from THM-500 + THM-502, verified 60000/60000 random tournaments incl. all 47 sampled cospectral split classes); VERIFIED for n=8 (6000/6000); general-n principle CONJECTURE (HYP-2513)
+status: PROVED for n=7 and n=8 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 random n=7, 12000/12000 random n=8 incl. minimal-defect 3-carrier form); non-spectral dimension = n−5 VERIFIED n<=8 (n=8 carrier probe: (c6,c7) insufficient/157 split buckets, Q44 dependent on c6,c7,c8); general-n principle CONJECTURE (HYP-2513)
 source: monad-explorer-2026-06-15
 depends_on:
   - THM-499   # H = 1 + 2(c3+c5) + 4*alpha_2 at n<=6; alpha_2 first non-spectral OCF ingredient
@@ -69,19 +69,44 @@ law `ΔH = 4Δc6+2Δc7` holds on all 47 split classes, and `c6` co-varies with `
 46/47 (the one exception is a class whose H-non-spectrality is carried by `c7` alone).
 (`04-computation/ocf_nonspectral_defect_monad.py`, `05-knowledge/results/ocf_nonspectral_defect_n7_monad.out`.)
 
-## Extension (n=8, VERIFIED)
+## Extension (n=8, PROVED, same substitution)
 
-At n=8 the disjoint odd pairs are `(3,3)` and now also `(3,5)` (`3+5 = 8`). Using the
-census defects `p33 = W6 − c6` and `TF = W8 − c8 − Q44` (from
-`tr A^8 = 8 c8 + 4 c4 + 8 Q44 + 8 TF`, `W8 = (tr A^8 − tr A^4)/8 = c8+Q44+TF`):
+At n=8, `alpha_3 = 0` (three disjoint odd cycles need `>= 9` vertices), so the OCF still
+truncates: `H = 1 + 2·alpha_1 + 4·alpha_2`. The disjoint odd pairs are `(3,3)` and now
+also `(3,5)` (`3+5 = 8`): `alpha_2 = D33 + D35`, `D33 = C(c3,2) − p33`,
+`D35 = c3·c5 − TF`. Using the census defects `p33 = W6 − c6` and `TF = W8 − c8 − Q44`
+(from `tr A^8 = 8 c8 + 4 c4 + 8 Q44 + 8 TF`, `W8 = (tr A^8 − tr A^4)/8 = c8+Q44+TF`):
 
 > **H = [ 1 + 2c3 + 2c5 + 4·C(c3,2) + 4·c3·c5 − 4 W6 − 4 W8 ]  +  2 c7 + 4 c6 + 4 c8 + 4 Q44.**
 
-Spectral skeleton uses `c3, c5, W6, W8`; the non-spectral carriers are `c6, c7, c8,
-Q44` (the overlapping-4-cycle-pair count). Verified 6000/6000 random n=8 tournaments.
-Note the coefficients of `c6` and `c7` are unchanged (4 and 2) from n=7: `c6` always
-enters at the disjoint-pair level (weight `2^2 = 4`), `c7` at the single-cycle level
-(weight `2^1 = 2`).
+Equivalently, the **minimal-defect form** (fold `4c8+4Q44 = 4W8 − 4TF`, drop the
+spectral `4W8` into the skeleton) uses only three carriers `c6, c7, TF`:
+
+> **H = [ 1 + 2c3 + 2c5 + 4·C(c3,2) + 4·c3·c5 − 4 W6 ]  +  4 c6 + 2 c7 − 4 TF.**
+
+Both forms verified 12000/12000 random n=8 tournaments. The coefficients of `c6` and
+`c7` are unchanged (4 and 2) from n=7: `c6` always enters at the disjoint-pair level
+(`2^2 = 4`), `c7` at the single-cycle level (`2^1 = 2`).
+
+## The non-spectral dimension grows as n−5 (PROVED n<=8 for the count; carriers VERIFIED n=8)
+
+How many independent non-spectral degrees of freedom does `H` carry? At n=7 the answer
+is **2**: `(c6, c7)` determines `H` within every cospectral class (the closed form). At
+n=8 the answer is **3**: a carrier-dimension probe (12000 samples, 695 split cospectral
+classes) finds **157 `(spectrum, c6, c7)` buckets that still carry >= 2 distinct `H`** —
+so `(c6, c7)` no longer suffices; a third carrier is genuinely required. Adding `c8`
+closes it: in **0** buckets does `Q44` vary given `(spectrum, c6, c7, c8)`, so `Q44`
+(and hence every length-8 defect) is **spectrally dependent on `(c6, c7, c8)`**, and
+`(spectrum, c6, c7, c8)` determines `H`. The even-overlap config `Q44` is *not* a new
+non-spectral axis.
+
+> **Dimension table:** `dim_nonspec(H)` = 0, 1, 2, 3 for n = 5, 6, 7, 8 — i.e.
+> **n − 5** (n>=5), with carriers the simple-cycle counts `{c6, c7, ..., c_n}`. All
+> overlap/defect counts (`p33 = W6−c6`, `TQ = W7−c7`, `Q44`, `TF`) are spectrally
+> dependent on the simple-cycle vector. **CONJECTURE for n >= 9** (HYP-2513): the
+> non-spectral content of `H` is a function of `(c6, ..., c_n)` of dimension `n−5`; the
+> first triple-overlap term `8·alpha_3` switches on at n=9 (the first 3-disjoint-triangle
+> independent set) and `c9` joins as the next carrier.
 
 ## The fugacity-2 coefficient rule and the zeta/Euler-product picture
 

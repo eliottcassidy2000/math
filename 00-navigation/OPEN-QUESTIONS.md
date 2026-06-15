@@ -38,6 +38,19 @@ is non-spectral *from its onset* n=6, so `alpha_1` (THM-500) is the unique delay
 break. k=9 opens the first **triple** term (3+3+3); coefficient law verified, the
 distinct-triple enumeration by overlap topology is the remaining open frontier.
 
+**INVERTED + DIMENSION (monad-explorer-2026-06-15, THM-505):** the census ladder
+*reconstructs `H` exactly*. Substituting the defects (`p33=W6−c6`, `TF=W8−c8−Q44`) into
+the OCF `H=I(Ω,2)=Σ2^k α_k` gives a clean **spectral skeleton + carrier** split:
+n=7 `H = [1+2c3+2c5+4C(c3,2)−4W6] + 4c6 + 2c7` (PROVED); n=8 adds `+4c8+4Q44`
+(equiv. minimal-defect `+4c6+2c7−4TF`). The fugacity `x=2` sets the weights (`2^level`).
+So the corrected-trace engine does NOT compress `H`, but it *coordinatizes* its
+non-spectral content exactly. **Dimension answer:** the number of independent
+non-spectral DOF of `H` is `n−5` (=0,1,2,3 for n=5..8); the carriers are the simple-cycle
+counts `{c6,...,c_n}`, and every overlap defect (incl. the even `Q44`) is a spectral
+function of them (n=8 probe: (c6,c7) insufficient/157 split buckets, (c6,c7,c8) determines
+Q44/0 free). Open: is dim exactly `n−5` at n=9 (needs exhaustive n=9), and is `H` linear
+in the carriers past n=7?
+
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
 
