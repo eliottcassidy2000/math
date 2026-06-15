@@ -1,0 +1,86 @@
+========================================================================
+ ALPHA-LATTICE / MEAN-FIELD GAP AUDIT
+========================================================================
+
+For n<=6: H = 1 + 2*alpha_1 + 4*alpha_2 exactly.
+The free mean-field envelope at fixed alpha_1=m is 0 <= alpha_2 <= C(m,2).
+The realized tournament lattice is much thinner.
+
+n=5
+  Distinct H values: [1, 3, 5, 9, 11, 13, 15]
+  Achievable alpha_2 fibers at fixed alpha_1:
+    alpha_1= 0: alpha_2 in [0]  | mean-field envelope [0,0]
+    alpha_1= 1: alpha_2 in [0]  | mean-field envelope [0,0]
+    alpha_1= 2: alpha_2 in [0]  | mean-field envelope [0,1]
+    alpha_1= 4: alpha_2 in [0]  | mean-field envelope [0,6]
+    alpha_1= 5: alpha_2 in [0]  | mean-field envelope [0,10]
+    alpha_1= 6: alpha_2 in [0]  | mean-field envelope [0,15]
+    alpha_1= 7: alpha_2 in [0]  | mean-field envelope [0,21]
+  Spectral -> interaction fibers (c3,c5) -> alpha_2:
+    (c3,c5)=( 0, 0) -> alpha_2 in [0]
+    (c3,c5)=( 1, 0) -> alpha_2 in [0]
+    (c3,c5)=( 2, 0) -> alpha_2 in [0]
+    (c3,c5)=( 3, 1) -> alpha_2 in [0]
+    (c3,c5)=( 4, 1) -> alpha_2 in [0]
+    (c3,c5)=( 4, 2) -> alpha_2 in [0]
+    (c3,c5)=( 4, 3) -> alpha_2 in [0]
+    (c3,c5)=( 5, 2) -> alpha_2 in [0]
+
+n=6
+  Distinct H values: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  Achievable alpha_2 fibers at fixed alpha_1:
+    alpha_1= 0: alpha_2 in [0]  | mean-field envelope [0,0]
+    alpha_1= 1: alpha_2 in [0]  | mean-field envelope [0,0]
+    alpha_1= 2: alpha_2 in [0, 1]  | mean-field envelope [0,1]
+    alpha_1= 4: alpha_2 in [0]  | mean-field envelope [0,6]
+    alpha_1= 5: alpha_2 in [0]  | mean-field envelope [0,10]
+    alpha_1= 6: alpha_2 in [0, 1]  | mean-field envelope [0,15]
+    alpha_1= 7: alpha_2 in [0]  | mean-field envelope [0,21]
+    alpha_1= 8: alpha_2 in [0]  | mean-field envelope [0,28]
+    alpha_1= 9: alpha_2 in [0, 1]  | mean-field envelope [0,36]
+    alpha_1=10: alpha_2 in [2]  | mean-field envelope [0,45]
+    alpha_1=11: alpha_2 in [0, 1]  | mean-field envelope [0,55]
+    alpha_1=12: alpha_2 in [0, 1, 2]  | mean-field envelope [0,66]
+    alpha_1=13: alpha_2 in [1]  | mean-field envelope [0,78]
+    alpha_1=14: alpha_2 in [1, 2, 4]  | mean-field envelope [0,91]  | interior holes [3]
+    alpha_1=16: alpha_2 in [0, 1, 2]  | mean-field envelope [0,120]
+    alpha_1=19: alpha_2 in [1]  | mean-field envelope [0,171]
+    alpha_1=20: alpha_2 in [1]  | mean-field envelope [0,190]
+  Spectral -> interaction fibers (c3,c5) -> alpha_2:
+    (c3,c5)=( 0, 0) -> alpha_2 in [0]
+    (c3,c5)=( 1, 0) -> alpha_2 in [0]
+    (c3,c5)=( 2, 0) -> alpha_2 in [0, 1]
+    (c3,c5)=( 3, 1) -> alpha_2 in [0]
+    (c3,c5)=( 4, 1) -> alpha_2 in [0]
+    (c3,c5)=( 4, 2) -> alpha_2 in [0, 1]
+    (c3,c5)=( 4, 3) -> alpha_2 in [0]
+    (c3,c5)=( 4, 4) -> alpha_2 in [0]
+    (c3,c5)=( 5, 2) -> alpha_2 in [0]
+    (c3,c5)=( 5, 4) -> alpha_2 in [0, 1]
+    (c3,c5)=( 5, 6) -> alpha_2 in [1]
+    (c3,c5)=( 6, 4) -> alpha_2 in [2]
+    (c3,c5)=( 6, 5) -> alpha_2 in [0]
+    (c3,c5)=( 6, 6) -> alpha_2 in [0, 1, 2]
+    (c3,c5)=( 6, 7) -> alpha_2 in [1]
+    (c3,c5)=( 6, 8) -> alpha_2 in [2]
+    (c3,c5)=( 7, 7) -> alpha_2 in [1, 2]
+    (c3,c5)=( 7, 9) -> alpha_2 in [0, 1]
+    (c3,c5)=( 8, 6) -> alpha_2 in [4]
+    (c3,c5)=( 8, 8) -> alpha_2 in [2]
+    (c3,c5)=( 8,11) -> alpha_2 in [1]
+    (c3,c5)=( 8,12) -> alpha_2 in [1]
+
+Target H-lines in alpha-coordinates:
+  H=7: alpha_1 + 2*alpha_2 = 3 -> candidates [(3, 0), (1, 1)]
+  H=21: alpha_1 + 2*alpha_2 = 10 -> candidates [(10, 0), (8, 1), (6, 2), (4, 3), (2, 4), (0, 5)]
+
+n=6 exact verdict on the first permanent gaps:
+  H=7: all candidate alpha-points are missing -> [(3, 0), (1, 1)]
+  H=21: all candidate alpha-points are missing -> [(10, 0), (8, 1), (6, 2), (4, 3), (2, 4), (0, 5)]
+
+Interpretation:
+  - alpha_1 is the mean-field odd-cycle census (first spectral shadow).
+  - alpha_2 is the first interaction correction: disjoint-cycle compatibility.
+  - H=7 and H=21 fail because their required low-level alpha vectors are absent,
+    not because of a scalar congruence accident.
+  - This is the alpha-lattice version of the baby-Hodge hole picture.
