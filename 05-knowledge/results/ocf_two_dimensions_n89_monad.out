@@ -1,0 +1,24 @@
+
+================================================================
+ n = 8   samples=200000  cap=200
+================================================================
+  cospectral classes with >=2 members: 1522
+  analyzed members: 159286   OCF holds on all: True
+
+  --- CARRIER-SPACE basis ['c7', 'D33', 'D35'] ---
+    rank(carriers)        = 3   (growth law predicts 3)
+    rank(carriers + H)    = 3  (H in carrier span)
+
+  --- LEVEL-SUM basis ['a1ns', 'a2sum'] ---
+    rank(level-sums)      = 2
+    rank(level-sums + H)  = 2  (H in level-sum span)
+    rank within level-2 ['D33', 'D35'] = 2 (all independent)
+    rank within level-2 ['D33', 'D35'] = 2 (all independent)
+
+  >>> CARRIER-SPACE dim = 3  vs  H-FUNCTIONAL dim = 2
+  >>> MISMATCH: H depends on only 2 level-sums, but the growth law counts 3 individual carriers.
+
+================================================================
+ n = 9   samples=300000  cap=60
+================================================================
+  cospectral classes with >=2 members: 30780

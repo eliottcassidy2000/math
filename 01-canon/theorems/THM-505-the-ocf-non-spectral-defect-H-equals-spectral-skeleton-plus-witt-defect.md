@@ -1,7 +1,7 @@
 ---
 id: THM-505
 title: The OCF non-spectral defect — H = (spectral skeleton) + (integer-linear combination of Witt/census defects); at n=7, H = [1+2c3+2c5+4C(c3,2)-4W6] + 4c6 + 2c7
-status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension exceeds n−5. INTRINSIC dimension (basis-independent rank, OCF packing basis, monad-explorer-S3) = 3,5,7 at n=8,9,10 — the n=9 trace-basis "6" was an OVER-COUNT (c8 and Q44 enter H only via their sum D35). GROWTH LAW: dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3 = (1,2,3,5,7,9,12,…) for n=6,7,8,9,10,11,12 — a restricted-partition generating function Π_{k odd≥3}1/(1−x^k); equals n−5 only for n≤8. VERIFIED n≤11 (rank 3,5,7,9 at n=8..11, all carriers independent, H in span); dim ≤ #{λ}−3 PROVED, equality CONJECTURE (no N_λ spectrally pinned). LINEARITY: H is universal-integer-linear in the FULL carrier set but NOT a bounded-degree polynomial in the simple cycles alone past n=7. (HYP-2513, dimension claim CORRECTED → partition law)
+status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension exceeds n−5. INTRINSIC dimension (basis-independent rank, OCF packing basis, monad-explorer-S3) = 3,5,7 at n=8,9,10 — the n=9 trace-basis "6" was an OVER-COUNT (c8 and Q44 enter H only via their sum D35). GROWTH LAW: dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3 = (1,2,3,5,7,9,12,…) for n=6,7,8,9,10,11,12 — a restricted-partition generating function Π_{k odd≥3}1/(1−x^k); equals n−5 only for n≤8. VERIFIED n≤11 (rank 3,5,7,9 at n=8..11, all carriers independent, H in span); dim ≤ #{λ}−3 PROVED, equality CONJECTURE (no N_λ spectrally pinned). CLOSED FORM (monad-S4): the cumulative restricted-partition count is the named sequence A000009 — `#{λ:odd≥3,Σλ≤n} = q(n) = `#partitions of n into distinct(=odd) parts, so **dim(packing-vector) = A000009(n)−3 ~ exp(π√(n/3))**. TWO-DIMENSIONS CORRECTION (monad-S4): A000009(n)−3 is the non-spectral dim of the PACKING-COUNT VECTOR (N_λ), NOT of H. Since `H = 1+Σ_{j≤⌊n/3⌋} 2^j α_j` factors through the LEVEL-SUMS α_j (H never sees the split of α_j into length-types), **dim_func(H)(n) ≤ ⌊n/3⌋ (LINEAR)**, = ⌊n/3⌋ for n≥7; PROVED ≤, verified =2 at n=8 (vs carrier-rank 3). The fugacity-2 evaluation compresses exp(√n)→n/3. LINEARITY: H is universal-integer-linear in the FULL carrier set but NOT a bounded-degree polynomial in the simple cycles alone past n=7. (HYP-2513, dimension claim CORRECTED → partition law for the packing vector; H itself is ⌊n/3⌋-dim)
 source: monad-explorer-2026-06-15
 depends_on:
   - THM-499   # H = 1 + 2(c3+c5) + 4*alpha_2 at n<=6; alpha_2 first non-spectral OCF ingredient
@@ -210,6 +210,44 @@ rank`{c6,c7,(c8+Q44),c9,T333}`=5 and already contains `H`.
 > `dim ≤ #{λ}−3` PROVED (upper bound — `H` can't depend on more than its own carriers);
 > EQUALITY (no `N_λ` spectrally pinned) VERIFIED n≤11, CONJECTURE general. See reflection
 > `the-non-spectral-dimension-of-H-is-a-partition-function`.
+
+## TWO DIMENSIONS: the growth law counts the PACKING VECTOR, not H (monad-explorer-S4)
+
+The growth-law section measures the rank of the **individual packing carriers**
+`{c7, D33, D35, …}` and gets `q(n)−3`. But `H` does **not** depend on the individual
+`N_λ` — only on the **level-sums** `α_j = Σ_{|λ|=j} N_λ`. The OCF is literally
+`H = I(Ω,2) = 1 + Σ_{j≥1} 2^j α_j`, and `α_j = 0` for `j > ⌊n/3⌋` (j disjoint odd cycles
+need `≥3j` vertices). So `H` is a function of **at most `⌊n/3⌋`** quantities, and within a
+cospectral class `ΔH = Σ_j 2^j Δα_j` is an *identity*. Hence two genuinely different
+non-spectral dimensions:
+
+| dimension | object | value | growth |
+|---|---|---|---|
+| `dim(fine)` | packing-count vector `(N_λ)` | `A000009(n) − 3` | `~exp(π√(n/3))` |
+| `dim_func(H)` | what `H` actually depends on (level-sums `α_j`) | `⌊n/3⌋` (n≥7) | **linear** |
+
+- **`dim_func(H) ≤ ⌊n/3⌋` is PROVED** (the OCF + the 3j-vertex floor; no computation
+  needed). It is `< A000009(n)−3` for all `n ≥ 8`. So the S3 label "dim_nonspec(H) =
+  q(n)−3" over-attributes the packing vector's complexity to `H`.
+- **Closed form for `dim(fine)`** (resolves the S3 OEIS frontier): the cumulative
+  restricted partition is A000009 by a one-line GF identity —
+  `Σ_{s≤n}[x^s]Π_{k odd≥3}1/(1−x^k) = [x^n] Π_{k odd≥1}1/(1−x^k) = q(n)` (the `1/(1−x)`
+  cumulative factor is the missing odd part `k=1`), and `q(n)` = partitions of `n` into
+  odd `=` distinct parts `=` A000009`(n)`. Asymptotic `~ exp(π√(n/3))/(4·3^{1/4}n^{3/4})`.
+  Bijective: carrier `λ` (`Σλ=s≤n`) ↔ odd-part partition `λ∪{1^{n−s}}` of `n`, the 1's =
+  uncovered vertices; the `−3` removes `{1^n},{3,1^{n−3}},{5,1^{n−5}}`.
+- **Verified** (`04-computation/ocf_two_dimensions_monad.py`, n=8, 159 286 members /
+  1522 cospectral classes): carrier basis `{c7,D33,D35}` rank **3** (reproduces S3);
+  level-sum basis `{c7, D33+D35}` rank **2**, `H` in span; `{D33,D35}` independent (rank
+  2) yet `H` reads only their sum. So `dim(fine)=3` but `dim_func(H)=2`.
+
+This is the same over-counting S3 caught at `6→5` (trace→packing basis), pushed one level
+deeper: even the packing basis over-counts *for H*, because `H` sees only the level
+marginals. The terminal honest answer for `H` is the level grading `⌊n/3⌋`; `A000009−3` is
+the honest answer for the finer packing vector. The full fugacity polynomial `I(Ω,x)` (all
+`x`) also carries only `⌊n/3⌋` non-spectral DOF — its coefficients *are* the `α_j`. To see
+the `A000009−3` dimensions one needs the length-refined multivariate packing GF, not the
+scalar `I(Ω,x)`. See reflection `H-reads-only-the-level-grading`.
 
 ## The linearity dichotomy (resolves the "is H linear in the carriers" question)
 
