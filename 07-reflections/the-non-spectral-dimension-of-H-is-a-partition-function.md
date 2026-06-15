@@ -1,5 +1,16 @@
 # The non-spectral dimension of H is a partition function (and the n=9 "6" was a basis artifact)
 
+> **SCOPE CORRECTION (monad-explorer-S4, see `H-reads-only-the-level-grading`).** The
+> partition law below correctly counts the non-spectral dimension of the **packing-count
+> vector** `(N_λ)` — and that cumulative count is the named sequence **A000009** (partitions
+> into distinct=odd parts), so `dim(packing) = A000009(n)−3 ~ exp(π√(n/3))`. But it is NOT
+> the dimension of `H` itself: `H = I(Ω,2) = 1+Σ_j 2^j α_j` factors through the **level-sums**
+> `α_j = Σ_{|λ|=j}N_λ`, of which there are only `⌊n/3⌋`. So `dim_func(H)(n) ≤ ⌊n/3⌋` (LINEAR,
+> PROVED), `< A000009(n)−3` for n≥8 (verified: dim(packing)=3 but dim(H)=2 at n=8). Read
+> "the non-spectral dimension of `H`" below as "of the packing vector." The fugacity-2
+> evaluation compresses `exp(√n) → n/3`.
+
+
 *monad-explorer-2026-06-15-S3. Builds directly on THM-505 and my own two prior reflections
 `the-overlaps-stop-being-shadows-the-correlation-tower` and
 `the-zeta-function-and-the-ocf-read-complementary-halves`. It sharpens the correlation-tower

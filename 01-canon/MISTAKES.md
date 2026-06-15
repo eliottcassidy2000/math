@@ -2303,5 +2303,23 @@ THM-505 / HYP-2513 / the reflection all amended: dim = `n−5` ONLY for `n ≤ 8
 ### Lesson
 The repo's own refrain — "patterns that hold at n=3,4,5 often break at n=6 or n=7" — applies one notch higher here: a dimension/structure pattern verified exhaustively/by-heavy-sampling at `n≤8` STILL broke at `n=9`, precisely at the `n` where a NEW combinatorial level (here the triple disjoint-cycle packing `α_3`, needing `3·3=9` vertices) first has room. When a carrier/dimension count is conjectured "for all n," always test it at the first `n` where the next independent-set / correlation level can appear, not just one size up.
 
+### Addendum 2 (monad-explorer-2026-06-15-S4): even the PACKING basis over-counts *for H* — H's own non-spectral dim is `⌊n/3⌋`, not `A000009(n)−3`
+The S3 partition law `dim = #{λ:odd≥3,Σλ≤n}−3 = A000009(n)−3` (now identified as the named
+sequence: the cumulative restricted-partition count equals partitions of n into distinct/odd
+parts, by the one-line GF identity `Σ_{s≤n}[x^s]Π_{odd≥3}1/(1−x^k)=[x^n]Π_{odd≥1}=q(n)`)
+correctly counts the rank of the **individual packing carriers** `(N_λ)`. But it does **not**
+measure the non-spectral dimension of `H`. `H = I(Ω,2) = 1 + Σ_{j≤⌊n/3⌋} 2^j α_j` depends only
+on the **level-sums** `α_j = Σ_{|λ|=j}N_λ` — it never sees the split of a level into its
+length-types. Since `α_j=0` for `j>⌊n/3⌋`, **`dim_func(H)(n) ≤ ⌊n/3⌋` (LINEAR), PROVED**, and
+`< A000009(n)−3` for n≥8. VERIFIED n=8: carrier basis `{c7,D33,D35}` rank 3 (the S3 number) but
+level-sum basis `{c7, D33+D35}` rank 2 with `H` in span — `D33,D35` are independent functions
+yet `H` reads only their sum. **Third lesson:** the chain of corrections (trace basis 6 →
+packing basis 5 → level grading ⌊n/3⌋) shows that "the non-spectral dimension of `H`" must be
+measured against *what `H` is a function of*, not against any convenient carrier list — and `H`,
+being the scalar `I(Ω,2)`, factors through the coarse level-marginals `α_j`. The
+`A000009(n)−3` law is true and beautiful, but it is the dimension of the finer **packing
+vector**, not of `H`. See THM-505 TWO-DIMENSIONS section + reflection
+`H-reads-only-the-level-grading`. (`04-computation/ocf_two_dimensions_monad.py`)
+
 ### Addendum (monad-explorer-2026-06-15-S3): the "6" was itself a basis over-count → the real law is a partition function
 The corrected `dim_nonspec(H)=6` at n=9 above is itself **basis-dependent and over-counts by one**. It used the TRACE basis `{c6,c7,c8,c9,Q44,T333}`, but `c8` and `Q44` enter `H` **only through their sum** `c8+Q44 = D35` (the disjoint-(3,5)-pair count): the closed form's `+4c8+4Q44` is `4·D35` after `D35 = c3c5 − W8 + c8 + Q44`. In the basis-independent OCF *packing* basis `N_λ` (rank of the within-class carrier-delta matrix), the intrinsic dimension is **5, not 6** — carriers `{c7, c9, D33, D35, T333}`. The general law is `dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3` = 1,2,3,5,7,9,… (verified rank 3,5,7 at n=8,9,10). **Second lesson:** a "dimension" measured by a *nested chain over a fixed (trace) carrier list* counts basis vectors, not degrees of freedom — over-complete bases inflate it. Measure intrinsic dimension by the RANK of the carrier-delta space in the natural (here OCF packing) basis. See THM-505 growth-law section + reflection `the-non-spectral-dimension-of-H-is-a-partition-function`.

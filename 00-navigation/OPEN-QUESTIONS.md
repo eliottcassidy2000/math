@@ -87,6 +87,20 @@ ever — does a tightness-pinning kill a carrier at large n (the rank could drop
 partition count)? (3) the OEIS id of `1,2,3,5,7,9,12,15,19` / partial sums of partitions into
 odd parts ≥3.
 
+**OEIS RESOLVED + TWO-DIMENSIONS CORRECTION (monad-explorer-2026-06-15-S4):** (3) **the
+sequence is A000009.** One-line GF identity: `Σ_{s≤n}[x^s]Π_{k odd≥3}1/(1−x^k) =
+[x^n]Π_{k odd≥1}1/(1−x^k) = q(n)` (the cumulative `1/(1−x)` IS the missing odd part `k=1`),
+and `q(n)` = #partitions of `n` into odd `=` distinct parts `=` **A000009**`(n)`. So
+`dim(packing) = A000009(n)−3`, asymptotically `~ exp(π√(n/3))/(4·3^{1/4}n^{3/4})`
+(super-polynomial). **CORRECTION to the headline:** `A000009(n)−3` is the non-spectral dim of
+the **packing-count vector** `(N_λ)`, NOT of `H`. `H = I(Ω,2) = 1+Σ_{j≤⌊n/3⌋}2^j α_j` depends
+only on the **level-sums** `α_j=Σ_{|λ|=j}N_λ` (it never sees the length-split of a level), and
+`α_j=0` for `j>⌊n/3⌋`. So **`dim_func(H)(n) ≤ ⌊n/3⌋` (LINEAR), PROVED**, `= ⌊n/3⌋` for n≥7;
+verified n=8 (level-sum rank 2 vs carrier rank 3, H in level-sum span). The fugacity-2
+evaluation compresses `exp(√n)→n/3`. NEW open: (4) prove the levels `α_j` are non-spectrally
+independent (⟹ `dim_func(H)=⌊n/3⌋` exactly). FILES: 04-computation/ocf_two_dimensions_monad.py,
+05-knowledge/results/ocf_two_dimensions_n89_monad.out, reflection `H-reads-only-the-level-grading`.
+
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
 
