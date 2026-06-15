@@ -1,0 +1,7 @@
+=== n=9 CLOSED-FORM VERIFICATION  (20000 random tournaments) ===
+  H = [1+2c3+2c5+4C(c3,2)+4c3c5-4W6-4W8] + 2c7+2c9+4c6+4c8+4Q44 + 8*T333
+  [OK ] OCF H=1+2a1+4a2+8a3     : 20000/20000
+  [OK ] p33=W6-c6               : 20000/20000
+  [OK ] TF=W8-c8-Q44            : 20000/20000
+  [OK ] CLOSED FORM (n=9)       : 20000/20000
+  tournaments with a3>0 (triple-overlap level active): 17210/20000

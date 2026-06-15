@@ -1,0 +1,19 @@
+=== n=8 LINEARITY TEST  (8000 random tournaments) ===
+  [OCF]    H=1+2a1+4a2          : 8000/8000
+  [closed] H=skel+2c7+4c6+4c8+4Q44: 8000/8000
+  cospectral classes: 1409; with split H: 642
+
+  (sig,c6,c7,c8) buckets still splitting H: 0  (0 => H is a FUNCTION of (spectrum,c6,c7,c8))
+
+  (1) LINEAR  dH = w6 dc6 + w7 dc7 + w8 dc8 :
+      weights = (Fraction(2894077972472, 481401079379), Fraction(12119316202, 481401079379), Fraction(1903489875212, 481401079379))   EXACT = False
+      NONLINEAR: max |dH - linear pred| = 1998470714136/481401079379
+
+  (2) QUADRATIC  dH = lin(c6,c7,c8) + quad(c6^2,..,c7*c8) :
+      EXACT (universal degree-2 polynomial in carriers) = False
+
+  (3) PER-CLASS Q44~lin(c6,c7,c8): classes with >=4 distinct carrier tuples fit exactly: 120/645
+
+  (4) UNIVERSAL-LINEAR in (c6,c7,TF):  dH = a*dc6+b*dc7+d*dTF
+      weights = (Fraction(4, 1), Fraction(2, 1), Fraction(-4, 1))  EXACT = True  (expect (4,2,-4))
+      and in (c6,c7,c8,Q44): weights = (Fraction(4, 1), Fraction(2, 1), Fraction(4, 1), Fraction(4, 1))  EXACT = True  (expect (4,2,4,4))
