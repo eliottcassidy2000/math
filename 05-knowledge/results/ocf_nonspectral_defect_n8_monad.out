@@ -1,3 +1,15 @@
-=== OCF NON-SPECTRAL DEFECT  n=8, 6000 random tournaments ===
-  [OK ] OCF H=1+2a1+4a2                   : 6000/6000 hold
-  [OK ] CLOSED H=skel+2c7+4c6+4c8+4Q44    : 6000/6000 hold
+=== OCF NON-SPECTRAL DEFECT  n=8, 12000 random tournaments ===
+  [OK ] OCF H=1+2a1+4a2                                   : 12000/12000 hold
+  [OK ] CLOSED H=skel+2c7+4c6+4c8+4Q44                    : 12000/12000 hold
+  [OK ] CLOSED3 H=skel3+4c6+2c7-4TF (minimal-defect form) : 12000/12000 hold
+
+  --- carrier-dimension probe (n=8) ---
+  cospectral classes with split H: 695
+  (sig,c6,c7) buckets carrying >=2 distinct H (=> need a 3rd non-spectral carrier): 157
+     sig=(36, 72, 150, 546, 1596, 4176) c6=31 c7=26 -> H=[213, 217]
+     sig=(36, 72, 150, 546, 1596, 4176) c6=35 c7=32 -> H=[245, 249]
+     sig=(45, 116, 235, 927, 3185, 9036) c6=61 c7=49 -> H=[339, 359]
+     sig=(51, 140, 300, 1197, 4389, 13124) c6=77 c7=67 -> H=[425, 429]
+     sig=(45, 104, 235, 903, 2905, 8392) c6=60 c7=57 -> H=[383, 387]
+     sig=(45, 104, 235, 903, 2905, 8392) c6=56 c7=49 -> H=[335, 339]
+  (sig,c6,c7,c8) buckets where Q44 still varies (Q44 is an INDEPENDENT non-spectral axis): 0

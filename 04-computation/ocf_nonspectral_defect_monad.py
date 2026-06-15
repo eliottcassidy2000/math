@@ -167,6 +167,7 @@ def analyze8(A):
     c3, c4, c5 = len(cyc[3]), len(cyc[4]), len(cyc[5])
     c6, c7, c8 = len(cyc[6]), len(cyc[7]), len(cyc[8])
     Q44 = opairs(cyc[4], None, True)
+    TF = opairs(cyc[3], cyc[5], False)                            # intersecting (triangle,5-cycle) pairs = delta_8 part
     D33 = disjoint_pairs(cyc[3], None, True)
     D35 = disjoint_pairs(cyc[3], cyc[5], False)
     alpha2 = D33 + D35                                             # all disjoint odd pairs at n=8
@@ -178,9 +179,12 @@ def analyze8(A):
     id_ocf = (H == 1 + 2 * (c3 + c5 + c7) + 4 * alpha2)
     skeleton = (1 + 2 * c3 + 2 * c5 + 4 * comb(c3, 2) + 4 * c3 * c5 - 4 * W6 - 4 * W8)
     id_closed = (H == skeleton + 2 * c7 + 4 * c6 + 4 * c8 + 4 * Q44)
+    # alternative MINIMAL-defect form: 3 carriers c6, c7, TF (no W8/c8/Q44)
+    skeleton3 = (1 + 2 * c3 + 2 * c5 + 4 * comb(c3, 2) + 4 * c3 * c5 - 4 * W6)
+    id_closed3 = (H == skeleton3 + 4 * c6 + 2 * c7 - 4 * TF)
     sig = tuple(trace(A, k) for k in range(3, 9))
-    return dict(c6=c6, c7=c7, c8=c8, Q44=Q44, H=H, skeleton=skeleton, sig=sig,
-                ok=(id_ocf, id_closed))
+    return dict(c6=c6, c7=c7, c8=c8, Q44=Q44, TF=TF, H=H, skeleton=skeleton, sig=sig,
+                ok=(id_ocf, id_closed, id_closed3))
 
 
 def main():
@@ -248,16 +252,45 @@ def main():
     elif which == "8":
         n = 8
         print(f"=== OCF NON-SPECTRAL DEFECT  n={n}, {NS} random tournaments ===", flush=True)
-        bad = [0, 0]
+        bad = [0, 0, 0]
+        # carrier-dimension probe: sig -> set of (c6,c7) -> set of H  ;  and sig -> (c6,c7,c8,Q44)->H
+        by67 = defaultdict(lambda: defaultdict(set))      # (sig,(c6,c7)) -> {H}
+        bysig_H = defaultdict(set)
+        Q44_by_c678 = defaultdict(set)                    # (sig,(c6,c7,c8)) -> {Q44}
         for _ in range(NS):
             A = random_tournament(n, rng)
             r = analyze8(A)
             for i, b in enumerate(r["ok"]):
                 if not b:
                     bad[i] += 1
-        names = ["OCF H=1+2a1+4a2", "CLOSED H=skel+2c7+4c6+4c8+4Q44"]
+            by67[(r["sig"], (r["c6"], r["c7"]))]
+            by67[r["sig"]][(r["c6"], r["c7"])].add(r["H"])
+            bysig_H[r["sig"]].add(r["H"])
+            Q44_by_c678[(r["sig"], (r["c6"], r["c7"], r["c8"]))].add(r["Q44"])
+        names = ["OCF H=1+2a1+4a2",
+                 "CLOSED H=skel+2c7+4c6+4c8+4Q44",
+                 "CLOSED3 H=skel3+4c6+2c7-4TF (minimal-defect form)"]
         for nm, b in zip(names, bad):
-            print(f"  [{ 'OK ' if b==0 else 'FAIL' }] {nm:34s}: {NS-b}/{NS} hold", flush=True)
+            print(f"  [{ 'OK ' if b==0 else 'FAIL' }] {nm:50s}: {NS-b}/{NS} hold", flush=True)
+
+        # Does (c6,c7) alone determine H within a cospectral class?  (n=7: YES by THM-505)
+        split = {s: hs for s, hs in bysig_H.items() if len(hs) >= 2}
+        need3 = 0           # classes where some (c6,c7) carries >1 distinct H  => a 3rd carrier is NEEDED
+        examples = []
+        for sig, c67map in by67.items():
+            for (c6, c7), Hs in c67map.items():
+                if len(Hs) >= 2:
+                    need3 += 1
+                    if len(examples) < 6:
+                        examples.append((sig, c6, c7, sorted(Hs)))
+        # Is Q44 determined by (c6,c7,c8) within a class?
+        q44_free = sum(1 for v in Q44_by_c678.values() if len(v) >= 2)
+        print(f"\n  --- carrier-dimension probe (n=8) ---", flush=True)
+        print(f"  cospectral classes with split H: {len(split)}", flush=True)
+        print(f"  (sig,c6,c7) buckets carrying >=2 distinct H (=> need a 3rd non-spectral carrier): {need3}", flush=True)
+        for (sig, c6, c7, Hs) in examples:
+            print(f"     sig={sig} c6={c6} c7={c7} -> H={Hs}", flush=True)
+        print(f"  (sig,c6,c7,c8) buckets where Q44 still varies (Q44 is an INDEPENDENT non-spectral axis): {q44_free}", flush=True)
 
 
 if __name__ == "__main__":
