@@ -64,9 +64,12 @@ def sample_sigs(n, nsamples, batch, seed):
         for k in range(3, n + 1):
             P = np.matmul(P, A)
             powtr[k] = np.einsum('bii->b', P)
+        # fast per-row code: pack the m bits into bytes, then int.from_bytes (C-level)
+        packed = np.packbits(bits.astype(np.uint8), axis=1, bitorder="little")
+        sig_cols = [powtr[k] for k in range(3, n + 1)]
         for i in range(b):
-            sig = tuple(int(powtr[k][i]) for k in range(3, n + 1))
-            code = int(np.dot(bits[i].astype(object), 1 << np.arange(m, dtype=object)))
+            sig = tuple(int(c[i]) for c in sig_cols)
+            code = int.from_bytes(packed[i].tobytes(), "little")  # bit t -> 2^t
             yield sig, code
         done += b
 
