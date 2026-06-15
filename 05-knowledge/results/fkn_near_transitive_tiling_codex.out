@@ -1,0 +1,338 @@
+FKN-style near-transitive tiling probe
+Board = free transitive corner; tournament = interacting perturbation.
+Metrics: shell distance, degree-1 Walsh layer of H, top Möbius interaction.
+
+==============================================================================
+n=4  staircase_bits=3  tilings=8
+==============================================================================
+isomorphism classes among gauge-fixed tilings: 4
+degree-1 Walsh energy ratio for H on the tiling cube: 1.500000 / 2.000000 = 0.750000
+top degree-1 coordinates for H:
+  tile (4, 1) strip=2 coeff=-1.000000
+  tile (3, 1) strip=1 coeff=-0.500000
+  tile (4, 2) strip=1 coeff=-0.500000
+degree-1 coefficients grouped by strip:
+  strip 1: count=2 avg=-0.500000 min=-0.500000 max=-0.500000 span=0.000000
+  strip 2: count=1 avg=-1.000000 min=-1.000000 max=-1.000000 span=0.000000
+shell summary (distance from transitive corner):
+  d=0: count=1 distinct_H=1 H_range=[1,1] mu_H=[0] mu_c3=[0]
+    signature H=1 c3=0 score=(0, 1, 2, 3) occurs 1 times
+    iso classes represented in shell: 1
+  d=1: count=3 distinct_H=2 H_range=[3,5] mu_H=[0] mu_c3=[0]
+    signature H=3 c3=1 score=(1, 1, 1, 3) occurs 1 times
+    signature H=5 c3=2 score=(1, 1, 2, 2) occurs 1 times
+    signature H=3 c3=1 score=(0, 2, 2, 2) occurs 1 times
+    iso classes represented in shell: 3
+  d=2: count=3 distinct_H=1 H_range=[5,5] mu_H=[0] mu_c3=[0]
+    signature H=5 c3=2 score=(1, 1, 2, 2) occurs 3 times
+    iso classes represented in shell: 1
+  d=3: count=1 distinct_H=1 H_range=[5,5] mu_H=[0] mu_c3=[0]
+    signature H=5 c3=2 score=(1, 1, 2, 2) occurs 1 times
+    iso classes represented in shell: 1
+single-flip shell d=1:
+  tile (4, 1) strip=2 -> H=5 c3=2 mu_H=0
+  tile (4, 2) strip=1 -> H=3 c3=1 mu_H=0
+  tile (3, 1) strip=1 -> H=3 c3=1 mu_H=0
+best single flip by H: tile (4, 1) strip=2 gives H=5, c3=2, mu_H=0
+transitive corner: H=1, c3=0, mu_H=0
+
+==============================================================================
+n=5  staircase_bits=6  tilings=64
+==============================================================================
+isomorphism classes among gauge-fixed tilings: 12
+degree-1 Walsh energy ratio for H on the tiling cube: 6.312500 / 12.859375 = 0.490887
+top degree-1 coordinates for H:
+  tile (5, 1) strip=3 coeff=-2.000000
+  tile (3, 1) strip=1 coeff=-0.875000
+  tile (5, 3) strip=1 coeff=-0.875000
+  tile (4, 1) strip=2 coeff=-0.625000
+  tile (5, 2) strip=2 coeff=-0.625000
+  tile (4, 2) strip=1 coeff=0.000000
+degree-1 coefficients grouped by strip:
+  strip 1: count=3 avg=-0.583333 min=-0.875000 max=0.000000 span=0.875000
+  strip 2: count=2 avg=-0.625000 min=-0.625000 max=-0.625000 span=0.000000
+  strip 3: count=1 avg=-2.000000 min=-2.000000 max=-2.000000 span=0.000000
+shell summary (distance from transitive corner):
+  d=0: count=1 distinct_H=1 H_range=[1,1] mu_H=[0] mu_c3=[0]
+    signature H=1 c3=0 score=(0, 1, 2, 3, 4) occurs 1 times
+    iso classes represented in shell: 1
+  d=1: count=6 distinct_H=3 H_range=[3,9] mu_H=[0, 2] mu_c3=[0]
+    signature H=3 c3=1 score=(1, 1, 1, 3, 4) occurs 1 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4) occurs 1 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 1 times
+    signature H=3 c3=1 score=(0, 2, 2, 2, 4) occurs 1 times
+    signature H=5 c3=2 score=(0, 2, 2, 3, 3) occurs 1 times
+    iso classes represented in shell: 6
+  d=2: count=15 distinct_H=5 H_range=[5,15] mu_H=[0, 2, 4, 6] mu_c3=[0]
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 5 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4) occurs 3 times
+    signature H=5 c3=2 score=(0, 2, 2, 3, 3) occurs 3 times
+    signature H=11 c3=4 score=(1, 2, 2, 2, 3) occurs 2 times
+    signature H=15 c3=4 score=(1, 2, 2, 2, 3) occurs 1 times
+    iso classes represented in shell: 6
+  d=3: count=20 distinct_H=5 H_range=[5,15] mu_H=[0, 2, 4] mu_c3=[0]
+    signature H=13 c3=4 score=(1, 2, 2, 2, 3) occurs 9 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 5 times
+    signature H=11 c3=4 score=(1, 2, 2, 2, 3) occurs 3 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4) occurs 1 times
+    signature H=15 c3=5 score=(2, 2, 2, 2, 2) occurs 1 times
+    iso classes represented in shell: 7
+  d=4: count=15 distinct_H=3 H_range=[9,15] mu_H=[2, 4, 6] mu_c3=[0]
+    signature H=11 c3=4 score=(1, 2, 2, 2, 3) occurs 5 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 4 times
+    signature H=15 c3=4 score=(1, 2, 2, 2, 3) occurs 4 times
+    signature H=15 c3=5 score=(2, 2, 2, 2, 2) occurs 2 times
+    iso classes represented in shell: 5
+  d=5: count=6 distinct_H=3 H_range=[9,13] mu_H=[2, 4] mu_c3=[0]
+    signature H=13 c3=4 score=(1, 2, 2, 2, 3) occurs 3 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 2 times
+    signature H=11 c3=4 score=(1, 2, 2, 2, 3) occurs 1 times
+    iso classes represented in shell: 3
+  d=6: count=1 distinct_H=1 H_range=[9,9] mu_H=[2] mu_c3=[0]
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3) occurs 1 times
+    iso classes represented in shell: 1
+single-flip shell d=1:
+  tile (5, 1) strip=3 -> H=9 c3=3 mu_H=2
+  tile (5, 2) strip=2 -> H=5 c3=2 mu_H=0
+  tile (4, 1) strip=2 -> H=5 c3=2 mu_H=0
+  tile (5, 3) strip=1 -> H=3 c3=1 mu_H=0
+  tile (4, 2) strip=1 -> H=3 c3=1 mu_H=0
+  tile (3, 1) strip=1 -> H=3 c3=1 mu_H=0
+best single flip by H: tile (5, 1) strip=3 gives H=9, c3=3, mu_H=2
+transitive corner: H=1, c3=0, mu_H=0
+
+==============================================================================
+n=6  staircase_bits=10  tilings=1024
+==============================================================================
+isomorphism classes among gauge-fixed tilings: 56
+degree-1 Walsh energy ratio for H on the tiling cube: 33.843750 / 104.562500 = 0.323670
+top degree-1 coordinates for H:
+  tile (6, 1) strip=4 coeff=-4.000000
+  tile (3, 1) strip=1 coeff=-2.000000
+  tile (6, 4) strip=1 coeff=-2.000000
+  tile (5, 1) strip=3 coeff=-1.625000
+  tile (6, 2) strip=3 coeff=-1.625000
+  tile (4, 1) strip=2 coeff=-1.500000
+degree-1 coefficients grouped by strip:
+  strip 1: count=4 avg=-1.000000 min=-2.000000 max=0.000000 span=2.000000
+  strip 2: count=3 avg=-0.916667 min=-1.500000 max=0.250000 span=1.750000
+  strip 3: count=2 avg=-1.625000 min=-1.625000 max=-1.625000 span=0.000000
+  strip 4: count=1 avg=-4.000000 min=-4.000000 max=-4.000000 span=0.000000
+shell summary (distance from transitive corner):
+  d=0: count=1 distinct_H=1 H_range=[1,1] mu_H=[0] mu_c3=[0]
+    signature H=1 c3=0 score=(0, 1, 2, 3, 4, 5) occurs 1 times
+    iso classes represented in shell: 1
+  d=1: count=10 distinct_H=4 H_range=[3,17] mu_H=[0] mu_c3=[0]
+    signature H=3 c3=1 score=(1, 1, 1, 3, 4, 5) occurs 1 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4, 5) occurs 1 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3, 5) occurs 1 times
+    signature H=17 c3=4 score=(1, 1, 2, 3, 4, 4) occurs 1 times
+    signature H=3 c3=1 score=(0, 2, 2, 2, 4, 5) occurs 1 times
+    iso classes represented in shell: 10
+  d=2: count=45 distinct_H=11 H_range=[5,37] mu_H=[0, 4, 8] mu_c3=[0]
+    signature H=15 c3=4 score=(1, 1, 2, 3, 4, 4) occurs 6 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3, 5) occurs 5 times
+    signature H=9 c3=3 score=(0, 2, 2, 3, 4, 4) occurs 5 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4, 5) occurs 3 times
+    signature H=5 c3=2 score=(0, 2, 2, 3, 3, 5) occurs 3 times
+    iso classes represented in shell: 25
+  d=3: count=120 distinct_H=14 H_range=[5,41] mu_H=[0, 4, 8] mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 15 times
+    signature H=31 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 10 times
+    signature H=17 c3=4 score=(1, 1, 2, 3, 4, 4) occurs 10 times
+    signature H=13 c3=4 score=(1, 2, 2, 2, 3, 5) occurs 9 times
+    signature H=13 c3=4 score=(0, 2, 3, 3, 3, 4) occurs 9 times
+    iso classes represented in shell: 40
+  d=4: count=210 distinct_H=14 H_range=[9,45] mu_H=[0, 4, 8, 16] mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 39 times
+    signature H=25 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 16 times
+    signature H=37 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 15 times
+    signature H=37 c3=7 score=(1, 2, 3, 3, 3, 3) occurs 15 times
+    signature H=43 c3=8 score=(2, 2, 2, 3, 3, 3) occurs 12 times
+    iso classes represented in shell: 43
+  d=5: count=252 distinct_H=16 H_range=[9,45] mu_H=[0, 4, 8, 16] mu_c3=[0]
+    signature H=43 c3=8 score=(2, 2, 2, 3, 3, 3) occurs 30 times
+    signature H=31 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 28 times
+    signature H=37 c3=7 score=(1, 2, 3, 3, 3, 3) occurs 20 times
+    signature H=37 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 20 times
+    signature H=33 c3=7 score=(1, 2, 3, 3, 3, 3) occurs 17 times
+    iso classes represented in shell: 41
+  d=6: count=210 distinct_H=14 H_range=[9,45] mu_H=[0, 4, 8, 16] mu_c3=[0]
+    signature H=43 c3=8 score=(2, 2, 2, 3, 3, 3) occurs 32 times
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 23 times
+    signature H=37 c3=7 score=(1, 2, 3, 3, 3, 3) occurs 20 times
+    signature H=37 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 20 times
+    signature H=41 c3=8 score=(2, 2, 2, 3, 3, 3) occurs 19 times
+    iso classes represented in shell: 36
+  d=7: count=120 distinct_H=13 H_range=[15,45] mu_H=[0, 4, 8, 16] mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 14 times
+    signature H=37 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 13 times
+    signature H=37 c3=7 score=(1, 2, 3, 3, 3, 3) occurs 13 times
+    signature H=43 c3=8 score=(2, 2, 2, 3, 3, 3) occurs 12 times
+    signature H=37 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 9 times
+    iso classes represented in shell: 31
+  d=8: count=45 distinct_H=11 H_range=[15,45] mu_H=[0, 4, 8, 16] mu_c3=[0]
+    signature H=31 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 8 times
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 5 times
+    signature H=25 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 4 times
+    signature H=33 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 3 times
+    signature H=37 c3=7 score=(2, 2, 2, 2, 3, 4) occurs 3 times
+    iso classes represented in shell: 23
+  d=9: count=10 distinct_H=3 H_range=[15,29] mu_H=[0, 4, 8] mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4) occurs 4 times
+    signature H=15 c3=4 score=(1, 1, 2, 3, 4, 4) occurs 2 times
+    signature H=23 c3=5 score=(1, 2, 2, 2, 4, 4) occurs 2 times
+    signature H=23 c3=5 score=(1, 1, 3, 3, 3, 4) occurs 2 times
+    iso classes represented in shell: 6
+  d=10: count=1 distinct_H=1 H_range=[17,17] mu_H=[4] mu_c3=[0]
+    signature H=17 c3=4 score=(1, 1, 2, 3, 4, 4) occurs 1 times
+    iso classes represented in shell: 1
+single-flip shell d=1:
+  tile (6, 1) strip=4 -> H=17 c3=4 mu_H=0
+  tile (6, 2) strip=3 -> H=9 c3=3 mu_H=0
+  tile (5, 1) strip=3 -> H=9 c3=3 mu_H=0
+  tile (6, 3) strip=2 -> H=5 c3=2 mu_H=0
+  tile (5, 2) strip=2 -> H=5 c3=2 mu_H=0
+  tile (4, 1) strip=2 -> H=5 c3=2 mu_H=0
+  tile (6, 4) strip=1 -> H=3 c3=1 mu_H=0
+  tile (5, 3) strip=1 -> H=3 c3=1 mu_H=0
+  tile (4, 2) strip=1 -> H=3 c3=1 mu_H=0
+  tile (3, 1) strip=1 -> H=3 c3=1 mu_H=0
+best single flip by H: tile (6, 1) strip=4 gives H=17, c3=4, mu_H=0
+transitive corner: H=1, c3=0, mu_H=0
+
+==============================================================================
+n=7  staircase_bits=15  tilings=32768
+==============================================================================
+isomorphism classes among gauge-fixed tilings: skipped at n=7
+degree-1 Walsh energy ratio for H on the tiling cube: 255.253906 / 1189.678711 = 0.214557
+top degree-1 coordinates for H:
+  tile (7, 1) strip=5 coeff=-9.937500
+  tile (3, 1) strip=1 coeff=-4.906250
+  tile (7, 5) strip=1 coeff=-4.906250
+  tile (4, 1) strip=2 coeff=-4.281250
+  tile (6, 1) strip=4 coeff=-4.281250
+  tile (7, 2) strip=4 coeff=-4.281250
+degree-1 coefficients grouped by strip:
+  strip 1: count=5 avg=-2.037500 min=-4.906250 max=0.000000 span=4.906250
+  strip 2: count=4 avg=-1.953125 min=-4.281250 max=0.375000 span=4.656250
+  strip 3: count=3 avg=-2.645833 min=-4.156250 max=0.375000 span=4.531250
+  strip 4: count=2 avg=-4.281250 min=-4.281250 max=-4.281250 span=0.000000
+  strip 5: count=1 avg=-9.937500 min=-9.937500 max=-9.937500 span=0.000000
+shell summary (distance from transitive corner):
+  d=0: count=1 distinct_H=1 H_range=[1,1] mu_H=[0] mu_c3=[0]
+    signature H=1 c3=0 score=(0, 1, 2, 3, 4, 5, 6) occurs 1 times
+  d=1: count=15 distinct_H=5 H_range=[3,33] mu_H=[0, 2] mu_c3=[0]
+    signature H=3 c3=1 score=(1, 1, 1, 3, 4, 5, 6) occurs 1 times
+    signature H=5 c3=2 score=(1, 1, 2, 2, 4, 5, 6) occurs 1 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3, 5, 6) occurs 1 times
+    signature H=17 c3=4 score=(1, 1, 2, 3, 4, 4, 6) occurs 1 times
+    signature H=33 c3=5 score=(1, 1, 2, 3, 4, 5, 5) occurs 1 times
+  d=2: count=105 distinct_H=21 H_range=[5,93] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=15 c3=4 score=(1, 1, 2, 3, 4, 4, 6) occurs 6 times
+    signature H=27 c3=5 score=(1, 1, 2, 3, 4, 5, 5) occurs 6 times
+    signature H=15 c3=4 score=(0, 2, 2, 3, 4, 5, 5) occurs 6 times
+    signature H=9 c3=3 score=(1, 1, 2, 3, 3, 5, 6) occurs 5 times
+    signature H=9 c3=3 score=(0, 2, 2, 3, 4, 4, 6) occurs 5 times
+  d=3: count=455 distinct_H=44 H_range=[5,123] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4, 6) occurs 15 times
+    signature H=29 c3=6 score=(0, 2, 3, 3, 4, 4, 5) occurs 15 times
+    signature H=27 c3=5 score=(1, 1, 2, 3, 4, 5, 5) occurs 11 times
+    signature H=31 c3=6 score=(1, 2, 2, 3, 3, 4, 6) occurs 10 times
+    signature H=17 c3=4 score=(1, 1, 2, 3, 4, 4, 6) occurs 10 times
+  d=4: count=1365 distinct_H=59 H_range=[9,145] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=29 c3=6 score=(1, 2, 2, 3, 3, 4, 6) occurs 39 times
+    signature H=29 c3=6 score=(0, 2, 3, 3, 4, 4, 5) occurs 39 times
+    signature H=65 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 35 times
+    signature H=59 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 32 times
+    signature H=71 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 32 times
+  d=5: count=3003 distinct_H=69 H_range=[9,159] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=75 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 91 times
+    signature H=77 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 80 times
+    signature H=71 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 68 times
+    signature H=81 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 66 times
+    signature H=69 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 66 times
+  d=6: count=5005 distinct_H=70 H_range=[9,175] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=81 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 148 times
+    signature H=89 c3=10 score=(2, 2, 2, 3, 3, 4, 5) occurs 134 times
+    signature H=89 c3=10 score=(1, 2, 3, 3, 4, 4, 4) occurs 134 times
+    signature H=139 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 111 times
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 102 times
+  d=7: count=6435 distinct_H=71 H_range=[15,189] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 226 times
+    signature H=137 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 218 times
+    signature H=135 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 209 times
+    signature H=139 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 167 times
+    signature H=151 c3=13 score=(2, 3, 3, 3, 3, 3, 4) occurs 162 times
+  d=8: count=6435 distinct_H=71 H_range=[15,189] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 310 times
+    signature H=139 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 241 times
+    signature H=151 c3=13 score=(2, 3, 3, 3, 3, 3, 4) occurs 234 times
+    signature H=133 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 208 times
+    signature H=137 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 196 times
+  d=9: count=5005 distinct_H=68 H_range=[15,175] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=133 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 206 times
+    signature H=137 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 205 times
+    signature H=151 c3=13 score=(2, 3, 3, 3, 3, 3, 4) occurs 204 times
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 200 times
+    signature H=159 c3=13 score=(2, 3, 3, 3, 3, 3, 4) occurs 163 times
+  d=10: count=3003 distinct_H=65 H_range=[17,175] mu_H=[0, 2, 4, 6]... mu_c3=[0]
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 130 times
+    signature H=139 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 110 times
+    signature H=133 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 92 times
+    signature H=151 c3=13 score=(2, 3, 3, 3, 3, 3, 4) occurs 90 times
+    signature H=137 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 82 times
+  d=11: count=1365 distinct_H=59 H_range=[25,159] mu_H=[2, 4, 6, 8]... mu_c3=[0]
+    signature H=131 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 44 times
+    signature H=139 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 38 times
+    signature H=81 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 34 times
+    signature H=135 c3=12 score=(2, 2, 3, 3, 3, 4, 4) occurs 34 times
+    signature H=117 c3=11 score=(2, 2, 2, 3, 4, 4, 4) occurs 32 times
+  d=12: count=455 distinct_H=47 H_range=[27,145] mu_H=[2, 4, 6, 8]... mu_c3=[0]
+    signature H=81 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 38 times
+    signature H=77 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 22 times
+    signature H=91 c3=10 score=(2, 2, 2, 3, 3, 4, 5) occurs 13 times
+    signature H=103 c3=10 score=(2, 2, 2, 3, 3, 4, 5) occurs 13 times
+    signature H=103 c3=10 score=(1, 2, 3, 3, 4, 4, 4) occurs 13 times
+  d=13: count=105 distinct_H=27 H_range=[25,129] mu_H=[2, 4, 6, 8]... mu_c3=[0]
+    signature H=69 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 10 times
+    signature H=81 c3=9 score=(1, 2, 3, 3, 3, 4, 5) occurs 7 times
+    signature H=71 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 6 times
+    signature H=61 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 4 times
+    signature H=67 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 4 times
+  d=14: count=15 distinct_H=7 H_range=[29,69] mu_H=[2, 4, 6, 8] mu_c3=[0]
+    signature H=29 c3=5 score=(1, 1, 2, 3, 4, 5, 5) occurs 2 times
+    signature H=41 c3=6 score=(1, 2, 2, 2, 4, 5, 5) occurs 2 times
+    signature H=67 c3=8 score=(1, 2, 2, 3, 4, 4, 5) occurs 2 times
+    signature H=41 c3=6 score=(1, 1, 2, 4, 4, 4, 5) occurs 2 times
+    signature H=51 c3=7 score=(1, 2, 2, 3, 3, 5, 5) occurs 1 times
+  d=15: count=1 distinct_H=1 H_range=[31,31] mu_H=[2] mu_c3=[0]
+    signature H=31 c3=5 score=(1, 1, 2, 3, 4, 5, 5) occurs 1 times
+single-flip shell d=1:
+  tile (7, 1) strip=5 -> H=33 c3=5 mu_H=2
+  tile (7, 2) strip=4 -> H=17 c3=4 mu_H=0
+  tile (6, 1) strip=4 -> H=17 c3=4 mu_H=0
+  tile (7, 3) strip=3 -> H=9 c3=3 mu_H=0
+  tile (6, 2) strip=3 -> H=9 c3=3 mu_H=0
+  tile (5, 1) strip=3 -> H=9 c3=3 mu_H=0
+  tile (7, 4) strip=2 -> H=5 c3=2 mu_H=0
+  tile (6, 3) strip=2 -> H=5 c3=2 mu_H=0
+  tile (5, 2) strip=2 -> H=5 c3=2 mu_H=0
+  tile (4, 1) strip=2 -> H=5 c3=2 mu_H=0
+  tile (7, 5) strip=1 -> H=3 c3=1 mu_H=0
+  tile (6, 4) strip=1 -> H=3 c3=1 mu_H=0
+  tile (5, 3) strip=1 -> H=3 c3=1 mu_H=0
+  tile (4, 2) strip=1 -> H=3 c3=1 mu_H=0
+  tile (3, 1) strip=1 -> H=3 c3=1 mu_H=0
+best single flip by H: tile (7, 1) strip=5 gives H=33, c3=5, mu_H=2
+transitive corner: H=1, c3=0, mu_H=0
+
+Interpretation:
+  1. If the FKN analogy were literally dictator-like, degree-1 energy would dominate.
+  2. What the data actually asks is subtler: does one coordinate define the
+     leading escape direction from the transitive corner?
+  3. The candidate dictator-shadow is the extreme tile (n,1), i.e. reversing
+     the min-max arc. The shell d=1 table shows whether that coordinate is unique.
+  4. mu_H measures the irreducible n-vertex interaction after subtracting every
+     lower-order subtournament shadow. Nonzero mu_H is the first clean sign that
+     the tournament is more than a free assembly of its smaller faces.
