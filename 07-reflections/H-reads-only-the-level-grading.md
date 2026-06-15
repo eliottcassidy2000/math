@@ -83,10 +83,13 @@ cospectral classes, OCF holds on all):
 - within level 2, `{D33, D35}` has **rank 2** — `D33` and `D35` are genuinely independent
   functions, yet `H` reads only their sum `α₂`.
 
-So at n=8 the fine dimension is 3 but **`H` needs only 2**. [n=9: predicted 3 vs fine 5;
-n=10: predicted 3 vs fine 7 — confirmation runs in `results/ocf_two_dimensions_n9,n10`.]
-The unconditional inequality `dim(H) ≤ ⌊n/3⌋` needs no computation; the rank runs only pin
-the equality (levels independent).
+So at n=8 the fine dimension is 3 but **`H` needs only 2**. **n=9 confirms** (60 762
+members / 14 942 cospectral classes, OCF holds on all): carrier basis
+`{c7,c9,D33,D35,T333}` rank **5**, but level-sum basis `{c7+c9, D33+D35, T333}` rank **3**
+`= ⌊9/3⌋`, `H` in the level-sum span. So `dim(fine)=5` while `dim_func(H)=3`. [n=10
+running: predicted 3 vs fine 7.] The unconditional inequality `dim(H) ≤ ⌊n/3⌋` needs no
+computation; the rank runs only pin the equality (levels independent) — confirmed `=2,3` at
+n`=8,9`. (`05-knowledge/results/ocf_two_dim_lean_n910.out`.)
 
 ## What this means
 
