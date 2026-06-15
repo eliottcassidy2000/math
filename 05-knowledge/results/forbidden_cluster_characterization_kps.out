@@ -1,0 +1,78 @@
+======================================================================
+(A) Cluster profile Omega = K3 gives I(K3, 2) = 7
+======================================================================
+  Omega = K3: alpha = [1, 3, 0]  =>  I(K3,2) = 7
+  (1 + 2*3 + 4*0 = 7 = 2^3-1 = Phi_3(2))
+    Omega=empty(0)           alpha=[1]  I(.,2)=1
+    Omega=1 cycle            alpha=[1, 1]  I(.,2)=3
+    Omega=2 indep            alpha=[1, 2, 1]  I(.,2)=9
+    Omega=2 conflict (P2/K2) alpha=[1, 2, 0]  I(.,2)=5
+    Omega=3 path P3          alpha=[1, 3, 2]  I(.,2)=15
+    Omega=K3                 alpha=[1, 3, 0]  I(.,2)=7
+    Omega=3 indep            alpha=[1, 3, 3, 1]  I(.,2)=27
+    Omega=K3 + isolated      alpha=[1, 4, 3, 0]  I(.,2)=21
+
+======================================================================
+(B) Exhaustive achievable H-spectrum, n=3..6; cluster profiles
+======================================================================
+  n=3: achievable H = [1, 3]
+        7 in spectrum? False    21 in spectrum? False
+        (alpha_1=3, alpha_2=0) profile [=K3-only, gives H=7] realizable? False
+  n=4: achievable H = [1, 3, 5]
+        7 in spectrum? False    21 in spectrum? False
+        (alpha_1=3, alpha_2=0) profile [=K3-only, gives H=7] realizable? False
+  n=5: achievable H = [1, 3, 5, 9, 11, 13, 15]
+        7 in spectrum? False    21 in spectrum? False
+        (alpha_1=3, alpha_2=0) profile [=K3-only, gives H=7] realizable? False
+  n=6: achievable H = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+        7 in spectrum? False    21 in spectrum? False
+        (alpha_1=3, alpha_2=0) profile [=K3-only, gives H=7] realizable? False
+  OCF H==I(Omega,2) verified for all tournaments n<=6: True
+
+======================================================================
+(C) strong-min(m): min H over STRONG tournaments, m=3..6 (exhaustive)
+======================================================================
+  m=3: strong H-values = [3]
+        strong-min(3) = 3   ; 7 in? False  21 in? False
+  m=4: strong H-values = [5]
+        strong-min(4) = 5   ; 7 in? False  21 in? False
+  m=5: strong H-values = [9, 11, 13, 15]
+        strong-min(5) = 9   ; 7 in? False  21 in? False
+  m=6: strong H-values = [15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+        strong-min(6) = 15   ; 7 in? False  21 in? False
+
+======================================================================
+(D) Moon minimum / Busch(2006): h_min(m) for strong tournaments
+======================================================================
+  Published strong-min (Busch 2006):
+    h_min( 3) =    3   ratio=nan  [exhaustive strong-min = 3  MATCH=True]
+    h_min( 4) =    5   ratio=1.667  [exhaustive strong-min = 5  MATCH=True]
+    h_min( 5) =    9   ratio=1.800  [exhaustive strong-min = 9  MATCH=True]
+    h_min( 6) =   15   ratio=1.667  [exhaustive strong-min = 15  MATCH=True]
+    h_min( 7) =   25   ratio=1.667
+    h_min( 8) =   45   ratio=1.800
+    h_min( 9) =   75   ratio=1.667
+    h_min(10) =  125   ratio=1.667
+    h_min(11) =  225   ratio=1.800
+    h_min(12) =  375   ratio=1.667
+    h_min(13) =  625   ratio=1.667
+  Note: 7,21 < strong-min from m=7 on (strong-min(7)=25>21). 7,21 not strong values at any m<=6.
+  => no STRONG tournament has H in {7,21} at any size (7=prime needs strong-7; 21=3*7).
+
+======================================================================
+(E) Multiplicative-semigroup closure from strong irreducibles (m<=6)
+======================================================================
+  strong irreducibles (m<=6) U {1}: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+  multiplicatively reachable odd H up to 60: [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 39, 41, 43, 45, 51, 55, 57]
+  ODD gaps (unreachable odd values) up to 60: [7, 21, 35, 47, 49, 53, 59]
+  Within product-closure of m<=6 irreducibles, gaps below 35 = [7, 21]
+  (35=5*7,39,... become reachable once larger strong values appear; {7,21} are the durable genus-2 gaps.)
+
+======================================================================
+SUMMARY
+======================================================================
+  I(K3,2) = 7 (the unique cluster profile for H=7).
+  K3-only profile (alpha_1=3,alpha_2=0) realizable n<=6: {3: False, 4: False, 5: False, 6: False}
+  7 absent from achievable H, n<=6: {3: True, 4: True, 5: True, 6: True}
+  21 absent from achievable H, n<=6: {3: True, 4: True, 5: True, 6: True}
+  strong-min(3..6) = [3, 5, 9, 15] (= 3,5,9,15, Moon/Busch)

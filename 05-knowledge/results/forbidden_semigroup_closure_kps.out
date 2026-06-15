@@ -1,0 +1,32 @@
+Busch / A005517 strong-min(m), m=3..15:
+   [3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875]
+  strictly increasing: True
+  recurrence a(n+3)=5 a(n) for n>=3: True
+  => strong-min(m) >= 25 for all m>=7; in particular > 21. {7,21} below the floor.
+
+Irreducible strong H-values available from m<=6 (plus 1):
+   [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+Using ONLY m<=6 irreducibles, odd gaps up to 500:
+   [7, 21, 35, 47, 49, 53, 59, 61, 63, 67, 71, 73, 77, 79, 83, 89, 91, 97, 101, 103, 105, 107, 109, 113, 119, 127, 131, 133, 137, 139, 141, 147, 149, 151, 157, 159, 161, 163, 167, 173] ...
+  count of odd gaps up to 500 (with limited irreducibles): 154
+  NOTE: many of these (35,47,49,53,...) are TRANSIENT -- they become reachable
+  once larger strong values (m>=7: 25,27,...,strong-min grows) enter as irreducibles.
+  e.g. 35=5*7? no (7 forbidden) -- 35 needs a strong-35 (exists at m=7, per HYP-2179).
+       49=7^2? no -- needs strong-49 (exists at m=7).
+
+The DURABLE gaps are exactly {7,21}:
+  - 7  : prime, never a strong value (strong sets exclude 7 at all m; min jumps over it).
+  - 21 : 21=3*7 only nontrivial factorization, needs forbidden strong-7; and 21 itself
+         is never a strong value (strong-min 15->25 skips 21; 21 not in m=6 set).
+  Genus = 2.  Frobenius-type: largest gap = 21; all odd N>=23 eventually representable.
+
+Factorizations of 7 and 21 into odd parts >1 (the semigroup test):
+  7: factorizations into odd>1 = [7, [7]]
+  21: factorizations into odd>1 = [21, [3, 7], [21]]
+  35: factorizations into odd>1 = [35, [5, 7], [35]]
+  49: factorizations into odd>1 = [49, [7, 7], [49]]
+  63: factorizations into odd>1 = [63, [3, 3, 7], [3, 21], [7, 9], [63]]
+  7: only {7} -> needs strong-7 (forbidden). 21: {21},{3,7} -> both route through forbidden 7/strong-21.
+  35={5,7}: needs strong-7 OR strong-35; strong-35 exists at m=7 => 35 reachable at large n.
+  63={7,9},{3,3,7},{63}: all route through 7 EXCEPT a strong-63; strong-63 status filled at higher n.

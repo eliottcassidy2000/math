@@ -1,0 +1,82 @@
+======================================================================
+PART 1: The 7&21 catalog -- arithmetic checks
+======================================================================
+dim E7        = 133      7*19 = 133   -> 7 | dim?  True
+rank E7       = 7
+roots         = 126    = 18*7 = 126  -> 7|126?   True
+pos roots     = 63     = 9*7 = 63   -> 7|63?    True
+exponents     = [1, 5, 7, 9, 11, 13, 17]  -> is 7 an exponent? True
+  middle exponent (h/2 symmetry): exponents sum to 63 ; pairs m+m'=h=18? [(1, 17), (5, 13), (7, 11), (9, 9), (11, 7), (13, 5), (17, 1)]
+degrees       = [2, 6, 8, 10, 12, 14, 18]  -> degree 8 = 7+1 present? True
+Coxeter h     = 18    (NOT divisible by 7: False)
+|Weyl(E7)|    = 2903040 ; divisible by 7? True; by 7^2? False
+  |Weyl(E7)| factorization = {2: 10, 3: 4, 5: 1, 7: 1}  (expected 2^10*3^4*5*7)
+minuscule rep = 56 = 2*28 = 56 ; = 7*8 = 56  -> BOTH hold: 56 = 2*28 (antipodal pairs) AND 56 = 7*8 (Fano lines x tripartite)
+
+--- Where does 21 genuinely appear? ---
+C(7,2) = 21 = dim so(7) (antisymmetric 7x7).  21 | ?
+  Under G2: 21 = 14 + 7  ->  True  (dim G2=14, vector 7). SOURCED (Baez).
+C(7,3) = 35 = 35 = dim of 3-forms on R^7 (the G2 associative 3-form lives here).
+The binomial tower on the Fano 7-set: C(7,1),C(7,2),C(7,3) = 7,21,35 = 7,21,35.
+  7+21+35 = 63 ; note 56-rep weight under SL(2)^7? 56 = ?   (56 != 7+21+35=63; the 7+21+35 is the EXTERIOR algebra of F_2^7 truncated, NOT the 56). So 21 in E7 = dim so(7), a SUBALGEBRA fact, distinct from the 56.
+
+--- 21 in tournaments / strong-component side ---
+non-strong 6-vertex tournament classes = 21 (sourced, A051337-ish).  strong = 35, total = 56.  35+21 = 56.
+  So on the TOURNAMENT side: 56 (T(6)) = 35 strong + 21 non-strong = C(7,3)+C(7,2).
+  This MIRRORS the E7 binomial tower numerically. Flagged for verdict.
+
+======================================================================
+PART 2: OCF forbidden 7 -- the Phi_3(2) / Fano / K3 facts (arithmetic)
+======================================================================
+Phi_3(2) = 2^2+2+1 = 7  = 2^3-1 = 7 = M_3 (Mersenne) = |PG(2,2)| Fano points
+I(K3, z) = 1 + 3z  (K3 = triangle conflict graph, 3 vertices pairwise adjacent => alpha_0=1, alpha_1=3, alpha_2=0)
+I(K3, 2) = 1 + 3*2 = 7  = the forbidden H value 7.  So 7 = I(K3,2) = Phi_3(2). CHECK.
+21 = 3 * 7 = 21 = 3 * Phi_3(2).  Forbidden because only factorization routes through 7.
+Note: the '3' in K3 = A2 root system / smallest cyclotomic Phi_3 / the 3-cycle. Phi_3(2)=7 ties the SMALLEST cyclotomic to the SMALLEST projective plane.
+
+======================================================================
+PART 3: The 'exceptional cluster gas' -- is the E7 quartic a partition sum gated by 7?
+======================================================================
+OCF partition function:  Z = I(Omega,2) = sum_k alpha_k * 2^k   (hard-core lattice gas).
+  - lives at FUGACITY 2; degree in z = independence/clique number of conflict graph Omega.
+  - cluster expansion (Mayer): log Z = sum over connected subgraphs (Witt/necklace W_k).
+
+E7 quartic Cartan invariant I4 (Duff-Ferrara 2007, PRD 76 025018):
+  - DEGREE 4 in the 56 charges; SL(2)^7-covariant.
+  - 56 = 7 lines x 8 (each line = a tripartite 2x2x2 system).
+  - I4 = (combination of) the 7 Cayley hyperdeterminants Det(line_i), one per Fano line.
+  - each Cayley hyperdeterminant of a 2x2x2 tensor is itself DEGREE 4 (Cayley's = 3-tangle).
+
+STRUCTURAL COMPARISON TABLE
+feature                          | OCF gas Z=I(Omega,2)           | E7 quartic I4                 
+----------------------------------------------------------------------------------------------------
+index set                        | cliques/indep sets of Omega    | 7 lines of Fano PG(2,2)       
+local object                     | a k-clique (z^k term)          | a 2x2x2 tripartite tensor     
+local invariant                  | monomial 2^k                   | Cayley hyperdet (deg 4)       
+global = sum of                  | alpha_k 2^k over k             | Det over 7 Fano lines         
+gating prime                     | 7=Phi3(2)=I(K3,2) FORBIDDEN    | 7 = #lines = rank = #qubits   
+degree                           | = clique number (varies)       | fixed 4 (quartic)             
+role of 7                        | forbidden VALUE of Z           | STRUCTURAL count of summands  
+
+CRITICAL DISTINCTION:
+ - In OCF, 7 is a FORBIDDEN OUTPUT VALUE of the partition function (Z never equals 7).
+ - In E7, 7 is the NUMBER OF TERMS/SUMMANDS (Fano lines) building the invariant.
+ - These are DIFFERENT ROLES for 7. Same numeral, different semantic slot.
+ - BUT both 7's descend from the SAME object: PG(2,2). OCF's 7 = I(K3,2)=|PG(2,2)| as a
+   VALUE; E7's 7 = the 7 lines of PG(2,2) as an INDEX SET. The Fano plane is the common root.
+
+======================================================================
+PART 4: LRC(14) = 2*7 -- where is the 7?
+======================================================================
+LRC(14): modulus 14 = 2*7. s(t)=sin(pi t/7)/(pi t) vanishes IFF 7|t (the 7-vanishing).
+period of sign(s) = 14 = 2*7. 7 = the half-period (the 'forbidden' residue class).
+So LRC's 7 = the modulus's odd part = where the singular-series kernel VANISHES.
+This is a THIRD distinct role: 7 as a MODULUS / vanishing locus, not a value, not a count.
+
+THREE ROLES OF 7, made explicit:
+  OCF:  7 = a forbidden VALUE of H  (7 = I(K3,2) = Phi_3(2))
+  E7:   7 = the COUNT of Fano lines / rank / qubits (structural index)
+  LRC:  7 = the odd MODULUS / vanishing locus (s(t)=0 iff 7|t)
+Common ancestor candidate: 7 = 2^3-1 = Phi_3(2) = |PG(2,2)|. The Fano plane is the only
+object that appears LITERALLY in two of three (OCF value via I(K3,2)=|PG(2,2)|; E7 via
+octonion/qubit Fano lines). LRC's 7 is just the odd part of 14 -- no Fano structure shown.

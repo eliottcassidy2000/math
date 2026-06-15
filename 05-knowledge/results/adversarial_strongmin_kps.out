@@ -1,0 +1,8 @@
+=== (F)/(H) strong-min and strong H-spectra ===
+m=3: strong-min=3, strong-spectrum=[3], 7 in? False, 21 in? False
+m=4: strong-min=5, strong-spectrum=[5], 7 in? False, 21 in? False
+m=5: strong-min=9, strong-spectrum=[9, 11, 13, 15], 7 in? False, 21 in? False
+m=6: strong-min=15, strong-spectrum=[15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45], 7 in? False, 21 in? False
+
+=== (G) Multiplicativity H = prod over strong components ===
+  multiplicativity: tested=1088, failures=0

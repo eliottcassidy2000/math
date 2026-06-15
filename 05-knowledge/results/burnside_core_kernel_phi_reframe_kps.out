@@ -1,0 +1,47 @@
+=== (1) phi-reframe e(mu)=C(t,2)+1/2 sum_{d>=3 odd} phi(d) M_d^2  (cores, parts>=3) ===
+   checked 1113 cores (mass<=40): failures=0
+
+=== (2) full Burnside == compressed == A000568 ===
+   n= 1: a=                     1  full==comp:True  known:OK
+   n= 2: a=                     1  full==comp:True  known:OK
+   n= 3: a=                     2  full==comp:True  known:OK
+   n= 4: a=                     4  full==comp:True  known:OK
+   n= 5: a=                    12  full==comp:True  known:OK
+   n= 6: a=                    56  full==comp:True  known:OK
+   n= 7: a=                   456  full==comp:True  known:OK
+   n= 8: a=                  6880  full==comp:True  known:OK
+   n= 9: a=                191536  full==comp:True  known:OK
+   n=10: a=               9733056  full==comp:True  known:OK
+   n=11: a=             903753248  full==comp:True  known:OK
+   n=12: a=          154108311168  full==comp:True  known:OK
+   ALL n<=16 integer & consistent: True
+
+=== (3) exact add-a-part recurrence: Delta e = (p-1)/2 + sum_{d|p} phi(d) M_d  (d>=1; d=1 term = #parts) ===
+   recurrence reproduces e on all cores (mass<=35): failures=0
+
+=== (4) (m,t) state count vs odd-partition count (the user's ~533x collapse) ===
+   n=20: active (m,t) states=44, odd partitions=64, collapse=1x
+   n=40: active (m,t) states=154, odd partitions=1113, collapse=7x
+   n=60: active (m,t) states=331, odd partitions=10880, collapse=33x
+   n=100: active (m,t) states=884 (odd-partition count skipped; user reports 444793 -> 533x at n=100)
+
+=== (5) the enumerator family: T_n(x) [tournaments/orientations, odd lambda] & G_n(x) [graphs, all lambda] ===
+   n | T_n(1)*n!=#odd-cyc-perms(A000246) | T_n(2)=tournaments(A000568) | T_n(3)*? | G_n(2)=graphs(A000088)
+   1:          1 =A000246 OK   |            1 =A000568 OK   | 3-col K_n: 1 | graphs 1 =A000088 OK
+   2:          1 =A000246 OK   |            1 =A000568 OK   | 3-col K_n: 3/2 | graphs 2 =A000088 OK
+   3:          3 =A000246 OK   |            2 =A000568 OK   | 3-col K_n: 11/2 | graphs 4 =A000088 OK
+   4:          9 =A000246 OK   |            4 =A000568 OK   | 3-col K_n: 267/8 | graphs 11 =A000088 OK
+   5:         45 =A000246 OK   |           12 =A000568 OK   | 3-col K_n: 4059/8 | graphs 34 =A000088 OK
+   6:        225 =A000246 OK   |           56 =A000568 OK   | 3-col K_n: 321111/16 | graphs 156 =A000088 OK
+   7:       1575 =A000246 OK   |          456 =A000568 OK   | 3-col K_n: 33249231/16 | graphs 1044 =A000088 OK
+   8:      11025 =A000246 OK   |         6880 =A000568 OK   | 3-col K_n: 72640283571/128 | graphs 12346 =A000088 OK
+
+=== integer polynomial P_n(x) = n! * T_n(x) = sum_{odd-cycle sigma} x^{#edge-orbits} ===
+   P_1(x): 1x^0
+   P_2(x): 1x^1
+   P_3(x): 2x^1 + 1x^3
+   P_4(x): 8x^2 + 1x^6
+   P_5(x): 24x^2 + 20x^4 + 1x^10
+   P_6(x): 144x^3 + 40x^5 + 40x^7 + 1x^15
+   P_7(x): 720x^3 + 504x^5 + 280x^7 + 70x^11 + 1x^21
+   P_8(x): 8448x^4 + 1344x^8 + 1120x^10 + 112x^16 + 1x^28

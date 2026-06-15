@@ -2,6 +2,9 @@
 
 **Status codes:** 🔴 CRITICAL (blocks main proof) | 🟡 IMPORTANT (needed for paper) | 🟢 INTERESTING (worth exploring)
 
+## OPEN-Q-103 🟢 A closed form / θ-product for the Burnside core kernel B[m,t], and the unified metagraph-enumerator family
+**Status:** OPEN (kind-pasteur-2026-06-15-S7, THM-514, HYP-2538/2539). The 1-tail peeling isolates A000568's difficulty in the `n`-independent core kernel `B[m,t]=Σ_{μ:|μ|=m,ℓ=t,odd parts≥3}2^{e(μ)}/z_μ`, with `e(μ)=C(t,2)+½Σ_{d odd≥3}φ(d)M_d²` (positive-definite GCD/Euler-φ quadratic form → theta-function exponent; VERIFIED 1113 cores). (a) Does `B[m,t]` have a closed product/θ generating function over part-sizes, diagonalizing the φ(d)M_d² cross-coupling (HYP-2538)? The add-a-part recurrence `Δe=(p−1)/2+Σ_{d|p}φ(d)M'_d` closes only on the divisor-profile state — that IS the residual difficulty. (b) Do `G_n(x)` (graphs, A000088), `SC(n)` (base-4), `E_n` (A002854 even graphs) share the same core-kernel compression with their per-part rule (HYP-2539)? (c) Is the `P_n(x)=Σ_{odd-cycle σ}x^{#edge-orbits}` coefficient triangle (rows→A000246) a new OEIS sequence? Entry: THM-514, THM-505 (cores = A000009−3 OCF non-spectral family), `04-computation/burnside_core_kernel_phi_reframe_kps.py`.
+
 ---
 
 ## OPEN-Q-101 - Upgrade moment-shadow witnesses to genuine compatibility inequalities

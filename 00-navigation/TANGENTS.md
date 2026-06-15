@@ -2,6 +2,8 @@
 
 **Purpose:** Dense, scannable index of interesting directions that have emerged. Each entry is 2–4 lines. A new Claude reads this whole file quickly to find a jumping-off point. Add entries with the tag format shown. Do not expand entries here — create a separate file in `03-artifacts/drafts/` if you want to develop a tangent.
 
+**T825** [kind-pasteur-2026-06-15-S7] The Burnside edge-orbit exponent as a θ-function / GCD-matrix quadratic form: `e(μ)=C(t,2)+½Σ_{d odd≥3}φ(d)M_d²` over the divisor-multiplicity lattice (Smith 1875). The 1-tail peeling = removing the score/fixed-point layer; cores (odd parts ≥3) = the OCF non-spectral family (A000009−3, THM-505). The `P_n(x)` edge-orbit triangle (rows→A000246) is a candidate-new OEIS sequence. → THM-514, OPEN-Q-103, HYP-2538/2539.
+
 **Historian map:** For a cross-domain, non-chronological preservation pass over the repo's older proper nouns, speculative theories, and random inspiration hooks, read `00-navigation/HISTORIAN-TANGENT-INDEX.md`.
 
 **Format:** `#tag1 #tag2 | [certainty: low/medium/high] | [source]`

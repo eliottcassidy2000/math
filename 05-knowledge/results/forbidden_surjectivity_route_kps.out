@@ -1,0 +1,20 @@
+Primes dividing some m<=6 strong value: [3, 5, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43]
+
+Odd primes < 200 NOT a known strong value AND not a factor of one (=> unreachable
+by multiplicativity from m<=6 generators alone):
+   [7, 47, 53, 59, 61, 67, 71, 73, 79, 83, 89, 97, 101, 103, 107, 109, 113, 127, 131, 137, 139, 149, 151, 157, 163] ...
+
+KEY POINT (honest): a prime p is achievable as H ONLY IF some STRONG tournament
+has H=p (since p prime => single strong component with H=p). So 'every odd >=23
+is achievable' REQUIRES that every odd prime >=23 is eventually a STRONG value.
+That is the surjectivity/density CONJECTURE (verified through ~n=9, not proved).
+Multiplicative closure CANNOT supply primes; it only recombines existing ones.
+
+Therefore the proof splits cleanly into TWO independent halves:
+  (I)  {7,21} are NOT achievable      <- strong-min growth (Busch) -- RIGOROUS, DONE.
+  (II) every other odd IS achievable  <- strong spectrum eventually hits every
+       odd prime/value >=23           -- CONJECTURE (strong computational support).
+
+The cluster expansion cleans up (I) for H=7 (unique K3 profile) but for 21 only via
+multiplicativity; it says NOTHING toward (II). So {7,21}-are-the-ONLY-gaps is NOT
+fully closed by the cluster picture: the open half is surjectivity, untouched by it.

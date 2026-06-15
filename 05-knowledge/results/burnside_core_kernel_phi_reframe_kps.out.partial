@@ -1,0 +1,10 @@
+=== (3) exact add-a-part recurrence: Delta e = (p-1)/2 + sum_{d|p} phi(d) M_d  (d>=1; d=1 term = #parts) ===
+   recurrence reproduces e on all cores (mass<=35): failures=0
+
+=== (4) (m,t) state count vs odd-partition count (the user's ~533x collapse) ===
+   n=20: active (m,t) states=44, odd partitions=64, collapse=1x
+   n=40: active (m,t) states=154, odd partitions=1113, collapse=7x
+   n=60: active (m,t) states=331, odd partitions=10880, collapse=33x
+   n=100: active (m,t) states=884 (odd-partition count skipped; user reports 444793 -> 533x at n=100)
+
+=== (5) the enumerator family: T_n(x) [tournaments/orientations, odd lambda] & G_n(x) [graphs, all lambda] ===

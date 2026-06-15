@@ -1,0 +1,12 @@
+dim 133 = 7*19? True {7: 1, 19: 1}
+roots 126 = 18*7? True ; pos 63=9*7? True =C(9,2)? False
+7 in exponents? True ; exp sum= 63 (=63? True )
+exponent complements h-e all exponents? True
+central self-paired exp h/2=9 in exps? True ; 7 self-paired? False (7 pairs with 11 )
+degrees==exponents+1? True ; degree 8=7+1 present? True
+Weyl factor= {2: 10, 3: 4, 5: 1, 7: 1} expect 2^10*3^4*5*7= 2903040 match? True ; 7^2|weyl? False
+56=2*28? True ; 56=7*8? True
+C(7,2)= 21 ; C(7,3)= 35 ; 7+21+35= 63 =63? True
+21=14+7 (dim G2 + vector)? True
+NOTE 56 != 7+21+35: True
+coxeter h=18 div by 7? False

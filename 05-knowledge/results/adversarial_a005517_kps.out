@@ -1,0 +1,30 @@
+Stated A005517 terms (a(0..)): [1, 2, 3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875, 3125]
+  RECURRENCE FAIL at n=1: a(n+3)=9 5*a(n)=10
+recurrence a(n+3)=5 a(n) holds for stated terms: False
+
+strong-min(m) mapping (worker: strong-min(m)=A005517 term):
+  strong-min(3) = 3
+  strong-min(4) = 5
+  strong-min(5) = 9
+  strong-min(6) = 15
+  strong-min(7) = 25
+  strong-min(8) = 45
+  strong-min(9) = 75
+  strong-min(10) = 125
+  strong-min(11) = 225
+  strong-min(12) = 375
+
+Cross-check vs my exhaustive strong-min:
+  m=3: exhaustive=3, A005517 prediction=3, match=True
+  m=4: exhaustive=5, A005517 prediction=5, match=True
+  m=5: exhaustive=9, A005517 prediction=9, match=True
+  m=6: exhaustive=15, A005517 prediction=15, match=True
+
+strong-min sequence m=3..: [3, 5, 9, 15, 25, 45, 75, 125, 225, 375, 625, 1125, 1875, 3125]
+strictly increasing: True
+7 ever a strong-min value: False
+21 ever a strong-min value: False
+
+KEY: strong-min(7)=25>21, so no strong tournament with m>=7 can have H<25,
+hence cannot equal 21 (or 7). Combined with exhaustive m<=6 absence => 7,21
+are never strong values at any m. Multiplicativity then forbids them as H.

@@ -1,0 +1,11 @@
+=== Graph-realizable independent-set profiles with I(G,2)=7 ===
+  profile (1, 3)  (example v=3)
+  TOTAL distinct profiles: 1
+
+=== Graph-realizable independent-set profiles with I(G,2)=21 ===
+  profile (1, 4, 3)  (example v=4)
+  profile (1, 6, 2)  (example v=6)
+  profile (1, 8, 1)  (example v=8)
+  profile (1, 10)  (example v=10)
+  TOTAL distinct profiles: 4
+

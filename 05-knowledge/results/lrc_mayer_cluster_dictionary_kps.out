@@ -1,0 +1,27 @@
+=== 1. 7-vanishing (apex-prime-7 gate = cluster weight zero) ===
+  s( 1) = +0.138109   
+  s( 2) = +0.124432   
+  s( 3) = +0.103443   
+  s( 6) = +0.023018   
+  s( 7) = +0.000000   <-- WEIGHT ZERO (7|t)
+  s( 8) = -0.017264   
+  s(13) = -0.010624   
+  s(14) = -0.000000   <-- WEIGHT ZERO (7|t)
+  s(21) = +0.000000   <-- WEIGHT ZERO (7|t)
+  ideal/free term (6/7)^13 = 0.134801
+
+=== 2. |T|=2 pairwise cluster: ABSOLUTE convergence + bound g^2/(3 va vb) ===
+  {14,21}: P=+0.027211  |P|sum=0.034679  bound=0.055556  ok=True 
+  {7,14}: P=+0.051020  |P|sum=0.071305  bound=0.166667  ok=True 
+  {98,105}: P=-0.000000  |P|sum=0.000000  bound=0.001587  ok=True (7|a' or 7|b' => P=0)
+  {14,17}: P=-0.000000  |P|sum=0.000000  bound=0.001401  ok=True (7|a' or 7|b' => P=0)
+  {2,3}: P=+0.027211  |P|sum=0.034679  bound=0.055556  ok=True 
+  {3,5}: P=+0.008163  |P|sum=0.013872  bound=0.022222  ok=True 
+
+=== 3. |T|=3 cluster: SIGNED stabilizes, ABSOLUTE grows (conditional convergence) ===
+  triple(3, 4, 5) Tmax= 13: signed Sigma3=+0.02216  abs A3=0.02730  |sig|/A3=0.812  (N3=118)
+  triple(3, 4, 5) Tmax= 20: signed Sigma3=+0.02140  abs A3=0.02918  |sig|/A3=0.733  (N3=282)
+  triple(3, 4, 5) Tmax= 27: signed Sigma3=+0.02113  abs A3=0.03027  |sig|/A3=0.698  (N3=522)
+  triple(3, 4, 5) Tmax= 40: signed Sigma3=+0.02120  abs A3=0.03146  |sig|/A3=0.674  (N3=1150)
+
+NOTE: signed stable + absolute growing + ratio falling = conditional-convergence signature (THM-504 B).

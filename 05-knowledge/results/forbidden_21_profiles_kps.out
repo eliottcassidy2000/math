@@ -1,0 +1,25 @@
+================================================================
+H = 7: cluster (conflict-graph) profiles alpha with I(.,2)=7
+================================================================
+  raw alpha-vectors summing to 7: 2
+  pass necessary realizability filter: 1
+  graph-realizable (exact for N<=6, necessary for N>6): 1
+     alpha=[1, 3]  (N=3 cycles)   I=7
+
+================================================================
+H = 21: cluster (conflict-graph) profiles alpha with I(.,2)=21
+================================================================
+  raw alpha-vectors summing to 21: 14
+  pass necessary realizability filter: 6
+  graph-realizable (exact for N<=6, necessary for N>6): 4
+     alpha=[1, 4, 3]  (N=4 cycles)   I=21
+     alpha=[1, 6, 2]  (N=6 cycles)   I=21
+     alpha=[1, 8, 1]  (N=8 cycles)   I=21
+     alpha=[1, 10]  (N=10 cycles)   I=21
+
+VERDICT:
+ H=7  -> exactly ONE graph-realizable cluster profile: K3 = [1,3,0].
+         THM-029 kills that single profile (3 pairwise-conflicting odd cycles
+         are non-realizable as a tournament conflict graph). RIGID obstruction.
+ H=21 -> SEVERAL graph-realizable cluster profiles. No single-cluster rigidity.
+         21 is forbidden MULTIPLICATIVELY (21=3*7, strong factorization needs strong-7).
