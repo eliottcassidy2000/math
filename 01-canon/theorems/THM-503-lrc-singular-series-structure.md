@@ -106,3 +106,36 @@ almost-Sidon truncation is exact. (4)'s `β_p = L` is read off exact deficits al
 ladders `p^e ≤ ~6·10^4` with empirical convergence `±0.003`; the structural conclusion
 (no Euler product) follows from the firing dichotomy, which is exact. The converse
 (loose ⟹ L>0) is not addressed.
+
+---
+
+## CORRECTION (kind-pasteur-2026-06-15-S3): the reported infimum was an end-drop-only artifact
+
+The "Sharper infimum data" above (`inf L ≈ 0.0237` at the near-tight cores
+`{1,…,12} ∪ {14m}`) is an **OVERESTIMATE** — it searched only the *end-drop* family
+(drop the last runner 13 of the tight AP). A broad search over **interior-drop**
+near-tight configs goes ~4× lower (independent fresh code, high-precision
+window-averaged L at Q₀ up to 24000, stable to ±0.0001; exact-rational M verifying
+looseness):
+
+- `{1,…,11,13,84}` (= `{1..13}\{12} ∪ {84}`): **L ≈ 0.00535**, M = 7/89 > 1/14 (loose).
+- `{1..13}\{6} ∪ {56}`: **L ≈ 0.00561**, M = 2/23 > 1/14 (loose).
+- Among `{1..13}\{j} ∪ {56}`, the minimizing drop is **j = 6** (middle): L ≈ 0.0056,
+  vs 0.012–0.069 for other j; the end-drop j=13 gives 0.0264, and `{1..12}∪{14m}`
+  (the old claim's family) gives ≈0.0239 — a *suboptimal local* family.
+- Scaling the core (`d·{1..13}\{jd} ∪ {14m}`, d>1) and double-drops both *increase*
+  L (the stranger turns dominant → Criterion B′), so the extremizers sit at
+  **scale 1 with bounded entries**.
+
+> **Corrected infimum:** `inf L ≈ 0.0053`, attained at small interior-drop configs
+> `{1,…,13}\{j} ∪ {14m}` (j interior, scale 1), NOT 0.0237 and NOT the end-drop
+> cores. The qualitative conclusion **inf L > 0** stands (all extremizers verified
+> loose, stable positive limit), but the **margin is ~0.005, not ~0.024** — the
+> uniform-lower-bound program for C′(14) is ~4× closer to the edge than reported.
+
+Claims (1)(2) and (4) of THM-503, and Claim 2/3 of the verifying dispatch (the
+7-vanishing sign structure; the adelic `β_p = L` no-Euler-product result), are
+**re-verified and stand**. Only the infimum *value, extremizer family, and margin*
+are corrected. See MISTAKE-073, HYP-2520; scripts
+`04-computation/lrc_singular_series_verify_extend_kps.py`,
+`lrc_infimum_extremizer_search_kps.py` (+ `.out`).

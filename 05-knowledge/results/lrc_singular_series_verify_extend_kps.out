@@ -1,0 +1,30 @@
+=== CLAIM 2: s(t)=sin(pi t/7)/(pi t) sign structure (period 14) ===
+  t:     [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+  sign:  ['+', '+', '+', '+', '+', '+', '0', '-', '-', '-', '-', '-', '-', '0']
+  + on 1..6, 0 at 7, - on 8..13, 0 at 14:  True   (7-coprime coeffs only contribute)
+
+=== CLAIM 1: inf L over primitive mult-of-14 configs ===
+  tight {1..13} (M=1/14): L = 0.0000  (expect ~0)
+  near-tight core family {1..12} U {14m}:
+    m=1: S={1..12} U {14}  L = 0.0239
+    m=2: S={1..12} U {28}  L = 0.0239
+    m=3: S={1..12} U {42}  L = 0.0273
+    m=4: S={1..12} U {56}  L = 0.0264
+    m=5: S={1..12} U {70}  L = 0.0300
+    m=6: S={1..12} U {84}  L = 0.0273
+    m=7: S={1..12} U {98}  L = 0.0312
+    m=8: S={1..12} U {112}  L = 0.0290
+  generic coprime: L = 0.1332  (expect ~ (6/7)^13 = 0.1348)
+  evader 7*{1..12}+611: L = 0.0292  (claim ~0.0293)
+
+=== CLAIM 3: adelic D(p^e)/p^e -> L for each prime p (evader) ===
+  p=2: D(p^e)/p^e for e=1.. = ['0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0000', '0.0234', '0.0312', '0.0293', '0.0283', '0.0283', '0.0293', '0.0293', '0.0293']  -> 0.0293
+  p=3: D(p^e)/p^e for e=1.. = ['0.0000', '0.0000', '0.0000', '0.0247', '0.0165', '0.0274', '0.0283', '0.0296', '0.0294', '0.0293']  -> 0.0293
+  p=5: D(p^e)/p^e for e=1.. = ['0.0000', '0.0000', '0.0640', '0.0416', '0.0294', '0.0291']  -> 0.0291
+  p=7: D(p^e)/p^e for e=1.. = ['0.0000', '0.0000', '0.0000', '0.0350', '0.0300']  -> 0.0300
+  (each prime's sequence should approach L_evader ~0.029, NOT a per-prime factor)
+
+=== EXTENSION: trend of L({1..12} U {14m}) as m grows (candidate infimum) ===
+  m, L: {1: 0.0239, 2: 0.0239, 3: 0.0273, 4: 0.0264, 5: 0.03, 6: 0.0273, 7: 0.0312, 8: 0.029}
+  min over computed m: 0.0239 at m=1
+  (does L decrease toward a limit ~0.0237, or is there an interior min?)

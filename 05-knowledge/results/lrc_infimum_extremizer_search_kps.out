@@ -1,0 +1,21 @@
+=== (a) high-precision L (Q0=8000,W=1200) for top candidates ===
+   {1..12,14}                : L = 0.02388
+   {1..12,28}                : L = 0.02388
+   tight {1..13}             : L = 0.00000
+   evader 7*{1..12}+611      : L = 0.02921
+
+=== (b) broad near-tight search: tight AP with ONE runner -> small mult of 14 ===
+   lowest-L near-tight perturbations found:
+     L=0.0056  (AP d=1, dropped pos 6, +14*4)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56)
+     L=0.0063  (AP d=3, dropped pos 6, +14*5)  S=(3, 6, 9, 12, 15, 21, 24, 27, 30, 33, 36, 39, 70)
+     L=0.0063  (AP d=3, dropped pos 6, +14*2)  S=(3, 6, 9, 12, 15, 21, 24, 27, 28, 30, 33, 36, 39)
+     L=0.0065  (AP d=5, dropped pos 6, +14*4)  S=(5, 10, 15, 20, 25, 35, 40, 45, 50, 55, 56, 60, 65)
+     L=0.0066  (AP d=5, dropped pos 6, +14*3)  S=(5, 10, 15, 20, 25, 35, 40, 42, 45, 50, 55, 60, 65)
+     L=0.0068  (AP d=3, dropped pos 6, +14*4)  S=(3, 6, 9, 12, 15, 21, 24, 27, 30, 33, 36, 39, 56)
+     L=0.0071  (AP d=5, dropped pos 6, +14*2)  S=(5, 10, 15, 20, 25, 28, 35, 40, 45, 50, 55, 60, 65)
+     L=0.0076  (AP d=5, dropped pos 6, +14*1)  S=(5, 10, 14, 15, 20, 25, 35, 40, 45, 50, 55, 60, 65)
+   GLOBAL near-tight min: L=0.0056 at S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56)
+
+=== (c) random primitive mult-of-14 search: anything below 0.0235? ===
+   400 random configs: min L = 0.0731 at S=[1, 10, 14, 23, 24, 33, 39, 43, 53, 63, 70, 71, 76]; #(L<0.0235)=0
+   => infimum candidate 0.0056 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56); random search did not beat the near-tight extremizer.
