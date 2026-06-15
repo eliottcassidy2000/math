@@ -440,20 +440,32 @@ def run_dim9(NS, rng):
         return
 
     # bucket tests
-    def bucket_split(carrier_keys):
-        buckets = defaultdict(set)
+    def bucket_split(carrier_keys, collect_examples=False):
+        buckets = defaultdict(list)
         for sig, rs in classes.items():
             for r in rs:
                 key = (sig,) + tuple(r[c] for c in carrier_keys)
-                buckets[key].add(r["H"])
-        return sum(1 for v in buckets.values() if len(v) >= 2)
+                buckets[key].append(r)
+        nsplit = 0
+        examples = []
+        for key, rs in buckets.items():
+            if len({r["H"] for r in rs}) >= 2:
+                nsplit += 1
+                if collect_examples and len(examples) < 6:
+                    examples.append((key, sorted({(r["H"], r["c9"], r["Q44"], r["T333"])
+                                                  for r in rs})))
+        return nsplit, examples
 
-    s678 = bucket_split(["c6", "c7", "c8"])
-    s6789 = bucket_split(["c6", "c7", "c8", "c9"])
+    s678, ex678 = bucket_split(["c6", "c7", "c8"], collect_examples=True)
+    s6789, _ = bucket_split(["c6", "c7", "c8", "c9"])
     print(f"\n  (sig,c6,c7,c8)    buckets still splitting H : {s678}  "
           f"(>0 => dim>=4, c9 genuinely needed)", flush=True)
     print(f"  (sig,c6,c7,c8,c9) buckets still splitting H : {s6789}  "
           f"(0 => dim<=4, carriers (c6..c9) determine H)", flush=True)
+    print(f"  --- the (sig,c6,c7,c8)-splitting buckets, showing (H,c9,Q44,T333): ---", flush=True)
+    for key, vals in ex678:
+        sig, c6, c7, c8 = key
+        print(f"     c6={c6} c7={c7} c8={c8}: {vals}", flush=True)
 
     # are Q44, T333 determined by (sig,c6,c7,c8,c9)?
     for tgt in ["Q44", "T333"]:
@@ -474,6 +486,64 @@ def run_dim9(NS, rng):
         print(f"       weights = {tuple(solH) if solH else None}  EXACT = {exactH}", flush=True)
 
 
+def run_chain(n, NS, rng):
+    """Nested-carrier dimension probe at general n.  Determines the MINIMAL
+    carrier set (added to the full spectrum) that determines H, by checking
+    which nested prefix of carriers reduces the H-split count to 0."""
+    analyze = analyze8 if n == 8 else analyze9
+    print(f"=== n={n} NESTED-CARRIER DIMENSION CHAIN  ({NS} random tournaments) ===",
+          flush=True)
+    classes = defaultdict(list)
+    bad = 0
+    for _ in range(NS):
+        r = analyze(random_tournament(n, rng))
+        if not r["ok"][-1]:
+            bad += 1
+        classes[r["sig"]].append(r)
+    print(f"  closed form holds: {NS-bad}/{NS}", flush=True)
+    nclass = len(classes)
+    nsplit = sum(1 for rs in classes.values() if len({r['H'] for r in rs}) >= 2)
+    print(f"  cospectral classes: {nclass}; with split H: {nsplit}", flush=True)
+
+    # the carrier chain (simple cycles first, then overlap/triple configs)
+    if n == 8:
+        chain = [[], ["c6"], ["c6", "c7"], ["c6", "c7", "c8"],
+                 ["c6", "c7", "c8", "Q44"], ["c6", "c7", "c8", "Q44", "TF"]]
+    else:
+        chain = [[], ["c6", "c7", "c8"], ["c6", "c7", "c8", "c9"],
+                 ["c6", "c7", "c8", "c9", "Q44"],
+                 ["c6", "c7", "c8", "c9", "Q44", "T333"]]
+
+    print(f"\n  carrier set                          -> #buckets splitting H", flush=True)
+    prev = None
+    for carriers in chain:
+        buckets = defaultdict(set)
+        for sig, rs in classes.items():
+            for r in rs:
+                buckets[(sig,) + tuple(r[c] for c in carriers)].add(r["H"])
+        nsp = sum(1 for v in buckets.values() if len(v) >= 2)
+        lbl = "(spectrum only)" if not carriers else "+".join(carriers)
+        print(f"    sig,{lbl:34s} -> {nsp}", flush=True)
+        prev = (carriers, nsp)
+
+    # explicit witnesses: cospectral + equal simple-cycle vector, different H
+    simple = ["c6", "c7", "c8"] if n == 8 else ["c6", "c7", "c8", "c9"]
+    buckets = defaultdict(list)
+    for sig, rs in classes.items():
+        for r in rs:
+            buckets[(sig,) + tuple(r[c] for c in simple)].append(r)
+    witnesses = []
+    for key, rs in buckets.items():
+        Hs = {r["H"] for r in rs}
+        if len(Hs) >= 2:
+            extra = sorted({(r["H"], r["Q44"], r.get("T333", 0), r["TF"]) for r in rs})
+            witnesses.append((key[1:], extra))
+    print(f"\n  WITNESSES: cospectral + equal ({'+'.join(simple)}) but DIFFERENT H: "
+          f"{len(witnesses)} buckets", flush=True)
+    for sv, extra in witnesses[:8]:
+        print(f"    {dict(zip(simple, sv))}: (H,Q44,T333,TF)={extra}", flush=True)
+
+
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else "form9"
     NS = int(sys.argv[2]) if len(sys.argv) > 2 else 20000
@@ -484,6 +554,10 @@ def main():
         run_form9(NS, rng)
     elif which == "dim9":
         run_dim9(NS, rng)
+    elif which == "chain8":
+        run_chain(8, NS, rng)
+    elif which == "chain9":
+        run_chain(9, NS, rng)
 
 
 if __name__ == "__main__":

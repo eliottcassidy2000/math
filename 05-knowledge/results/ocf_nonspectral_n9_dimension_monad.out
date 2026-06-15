@@ -1,0 +1,19 @@
+=== n=9 NON-SPECTRAL DIMENSION PROBE  (45000 random tournaments) ===
+  closed form holds: 45000/45000
+  cospectral classes sampled: 20055; with split H: 7415
+
+  (sig,c6,c7,c8)    buckets still splitting H : 130  (>0 => dim>=4, c9 genuinely needed)
+  (sig,c6,c7,c8,c9) buckets still splitting H : 4  (0 => dim<=4, carriers (c6..c9) determine H)
+  --- the (sig,c6,c7,c8)-splitting buckets, showing (H,c9,Q44,T333): ---
+     c6=111 c7=131 c8=100: [(927, 38, 794, 3), (939, 40, 794, 4)]
+     c6=197 c7=260 c8=225: [(1749, 98, 1331, 4), (1751, 99, 1331, 4)]
+     c6=150 c7=184 c8=151: [(1239, 61, 957, 2), (1245, 62, 958, 2)]
+     c6=140 c7=172 c8=145: [(1187, 61, 793, 3), (1203, 63, 794, 4)]
+     c6=201 c7=277 c8=260: [(1989, 121, 1419, 6), (2037, 129, 1419, 10)]
+     c6=241 c7=332 c8=309: [(2315, 147, 1760, 8), (2341, 152, 1762, 9)]
+  (sig,c6,c7,c8,c9) buckets where Q44   still varies: 4  (0 => Q44 spectrally dependent, NOT a new axis)
+  (sig,c6,c7,c8,c9) buckets where T333  still varies: 2  (0 => T333 spectrally dependent, NOT a new axis)
+
+  within-class delta-vectors: 15242
+  dH = w6 dc6 + w7 dc7 + w8 dc8 + w9 dc9 :
+       weights = (Fraction(30062255969342750670184, 2432461077857907020611), Fraction(-813694712423089915098, 2432461077857907020611), Fraction(1223368961731128504876, 2432461077857907020611), Fraction(13282018758662407458286, 2432461077857907020611))  EXACT = False

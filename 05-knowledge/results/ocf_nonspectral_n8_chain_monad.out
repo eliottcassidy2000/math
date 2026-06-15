@@ -1,0 +1,13 @@
+=== n=8 NESTED-CARRIER DIMENSION CHAIN  (60000 random tournaments) ===
+  closed form holds: 60000/60000
+  cospectral classes: 1520; with split H: 718
+
+  carrier set                          -> #buckets splitting H
+    sig,(spectrum only)                    -> 718
+    sig,c6                                 -> 333
+    sig,c6+c7                              -> 163
+    sig,c6+c7+c8                           -> 0
+    sig,c6+c7+c8+Q44                       -> 0
+    sig,c6+c7+c8+Q44+TF                    -> 0
+
+  WITNESSES: cospectral + equal (c6+c7+c8) but DIFFERENT H: 0 buckets
