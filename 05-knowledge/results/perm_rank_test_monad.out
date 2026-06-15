@@ -1,0 +1,17 @@
+==================================================================================
+ WITHIN-CLASS RANK TEST: is H affine in the permanental-poly coordinates?
+==================================================================================
+
+ n=6: 28 cospectral classes, 28 with >=2 members, 3972 within-class deltas; 3 classes split H
+   rank[ De_unsigned ]        = 1
+   rank[ De_unsigned | DH ]   = 1   -> H IS affine in perm poly  => (char,perm) DETERMINES H
+
+ n=7: 166 cospectral classes, 165 with >=2 members, 5834 within-class deltas; 47 classes split H
+   rank[ De_unsigned ]        = 2
+   rank[ De_unsigned | DH ]   = 2   -> H IS affine in perm poly  => (char,perm) DETERMINES H
+
+ n=8: 1432 cospectral classes, 1246 with >=2 members, 7568 within-class deltas; 657 classes split H
+   rank[ De_unsigned ]        = 3
+   rank[ De_unsigned | DH ]   = 4   -> H is NOT affine in perm poly  => (char,perm) does NOT determine H
+   ... adding carrier D35   to perm poly RECOVERS H (H affine in e_unsigned + D35)
+   ... adding carrier D44   to perm poly RECOVERS H (H affine in e_unsigned + D44)

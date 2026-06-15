@@ -4,27 +4,25 @@ permanental_determines_H_hunt_monad.py  (monad-explorer-2026-06-15-S6)  [pure-py
 
 SHARP TEST of "does the pair (char poly, perm poly) DETERMINE H?".  The random (char,perm)
 bucketing in permanental_companion_monad.py [5] is WEAK at n>=8 (collisions on the full
-(char,perm) key are rare under uniform sampling -> few within-key comparisons).  Here we
-bucket by CHAR POLY first (cospectral classes are well populated), then within each
-cospectral class ask whether the perm poly determines H.  We ALSO track the exact carriers
-that (char,perm) is predicted to merge:
-   n=8:  D44 (disjoint 4-cycle pairs) -- merged with D35 inside E_8 = D44+D35;
-         H = const - 4*D44 within a (char,perm) class, so  (char,perm)->H  iff D44 fixed.
-   n=9:  T333 (disjoint triangle triples) -- merged with c9 inside O_9 = c9+T333;
-         H = const + 6*T333 within a (char,perm) class, so  (char,perm)->H  iff T333 fixed.
+(char,perm) key are rare).  Here we bucket by CHAR POLY first (cospectral classes are well
+populated), then within each cospectral class ask whether perm poly determines H.
 
-For each n we report, over cospectral classes (>=2 members observed):
-   - how many split H (H non-spectral),
-   - how many have perm poly that FAILS to determine H (a real (char,perm) H-split),
-   - and a concrete witness with the differing carrier.
+Predicted break points (carriers that (char,perm) is forecast to MERGE):
+   n=8:  D44 (disjoint 4-cycle pairs) merged with D35 inside E_8 = D44+D35;
+         within a (char,perm) class  H = const - 4*D44, so (char,perm)->H iff D44 fixed.
+   n=9:  T333 (disjoint triangle triples) merged with c9 inside O_9 = c9+T333;
+         within a (char,perm) class  H = const + 6*T333, so (char,perm)->H iff T333 fixed.
+
+FAST primitives: char poly (Faddeev int), perm poly (Ryser over Z[x]), H (bitmask DP).
+Diagnostic carriers (D44,D35,c9,T333) computed by packing enumeration only on a witness.
 """
 import sys, random
 from fractions import Fraction
 
 def random_tournament(n, rng):
-    A = [[0]*n for _ in range(n)]
+    A=[[0]*n for _ in range(n)]
     for i in range(n):
-        for j in range(i+1, n):
+        for j in range(i+1,n):
             if rng.randint(0,1): A[i][j]=1
             else: A[j][i]=1
     return A
@@ -44,11 +42,61 @@ def charpoly_int(A,n):
     M=[[1 if i==j else 0 for j in range(n)] for i in range(n)]; co=[1]
     for k in range(1,n+1):
         AM=matmul(A,M,n); tr=sum(AM[i][i] for i in range(n))
-        ck=Fraction(-tr,k); ck=ck.numerator; co.append(ck)
+        ck=Fraction(-tr,k).numerator; co.append(ck)
         if k<n: M=[[AM[i][j]+(ck if i==j else 0) for j in range(n)] for i in range(n)]
     return tuple(co)
 
-def all_cycles(A,n):
+def polymul(p,q):
+    r=[0]*(len(p)+len(q)-1)
+    for i,a in enumerate(p):
+        if a:
+            for j,b in enumerate(q): r[i+j]+=a*b
+    return r
+
+def permpoly_int(A,n):
+    """per(xI+A): returns tuple e_m^unsigned for m=0..n (coeff of x^{n-m}).
+    Ryser:  per(M)=sum_S (-1)^{n-|S|} prod_i rowsum_i(S),  M=xI+A.
+    rowsum_i(S) = [i in S]*x + a_i(S),  a_i(S)=popcount(out-neighbours of i in S).
+    Term = sign * (prod_{i not in S} a_i(S)) * prod_{i in S}(x + a_i(S))  [0 if any out-row empty]."""
+    rowmask=[0]*n
+    for i in range(n):
+        Ai=A[i]; m=0
+        for j in range(n):
+            if Ai[j]: m|=(1<<j)
+        rowmask[i]=m
+    full=[0]*(n+1)
+    for Sbits in range(1<<n):
+        scalar=1; poly=[1]; dead=False
+        for i in range(n):
+            ai=(rowmask[i]&Sbits).bit_count()
+            if (Sbits>>i)&1:
+                poly=polymul(poly,[ai,1])
+            else:
+                if ai==0: dead=True; break
+                scalar*=ai
+        if dead: continue
+        sign=1 if (n-bin(Sbits).count('1'))%2==0 else -1
+        sc=sign*scalar
+        for t,c in enumerate(poly): full[t]+=sc*c
+    return tuple(full[n-m] for m in range(n+1))
+
+def count_ham_paths(A,n):
+    full=(1<<n)-1
+    dp=[[0]*n for _ in range(1<<n)]
+    for v in range(n): dp[1<<v][v]=1
+    for mask in range(1<<n):
+        row=dp[mask]
+        if not any(row): continue
+        for v in range(n):
+            cv=row[v]
+            if not cv: continue
+            Av=A[v]
+            for w in range(n):
+                if not (mask>>w)&1 and Av[w]: dp[mask|(1<<w)][w]+=cv
+    return sum(dp[full][v] for v in range(n))
+
+def carriers(A,n):
+    """Named disjoint-packing carriers via cycle/packing enumeration (only on witnesses)."""
     cyc=[]
     for start in range(n):
         path=[start]; vis={start}
@@ -59,93 +107,57 @@ def all_cycles(A,n):
                 elif w>start and w not in vis and A[u][w]:
                     vis.add(w);path.append(w);dfs(w);path.pop();vis.discard(w)
         dfs(start)
-    return cyc
-
-def carriers_and_perm(A,n):
-    """Return (perm_poly e_unsigned vector, H, dict of named carriers)."""
-    cyc=all_cycles(A,n)
-    vs=[s for (_,s) in cyc]; ln=[L for (L,_) in cyc]; nc=len(cyc)
-    eu={}; H=0
-    Nlam={}
-    out=[]
-    def rec(start,used,k,cov,lam):
-        eu[cov]=eu.get(cov,0)+1
+    vs=[s for (_,s) in cyc]; ln=[L for (L,_) in cyc]; nc=len(cyc); Nlam={}
+    def rec(start,used,lam):
         Nlam[lam]=Nlam.get(lam,0)+1
-        if all(L%2==1 for L in lam):  # odd packing (empty lam counts: all() True)
-            H+=0  # placeholder, fixed below
         for i in range(start,nc):
-            if not (vs[i]&used):
-                rec(i+1, used|vs[i], k+1, cov+len(vs[i]), tuple(sorted(lam+(ln[i],))))
-    # recompute H cleanly with 2^k weights over odd packings
-    Hval=[0]
-    def rec2(start,used,k,lam_all_odd):
-        if lam_all_odd: Hval[0]+=2**k
-        for i in range(start,nc):
-            if not (vs[i]&used):
-                rec2(i+1, used|vs[i], k+1, lam_all_odd and (ln[i]%2==1))
-    rec(0,frozenset(),0,0,())
-    rec2(0,frozenset(),0,True)
-    H=Hval[0]
-    eu_vec=tuple(eu.get(m,0) for m in range(n+1))
-    car={
-        'c6':Nlam.get((6,),0),'c7':Nlam.get((7,),0),'c8':Nlam.get((8,),0),'c9':Nlam.get((9,),0),
-        'D33':Nlam.get((3,3),0),'D35':Nlam.get((3,5),0),'D44':Nlam.get((4,4),0),
-        'T333':Nlam.get((3,3,3),0),
-    }
-    return eu_vec, H, car
+            if not (vs[i]&used): rec(i+1, used|vs[i], tuple(sorted(lam+(ln[i],))))
+    rec(0,frozenset(),())
+    return {'c6':Nlam.get((6,),0),'c7':Nlam.get((7,),0),'c8':Nlam.get((8,),0),'c9':Nlam.get((9,),0),
+            'D33':Nlam.get((3,3),0),'D35':Nlam.get((3,5),0),'D44':Nlam.get((4,4),0),
+            'T333':Nlam.get((3,3,3),0)}
 
-def hunt(n, n_samples, seed=101):
-    rng=random.Random(seed)
-    by_char={}   # char -> list of (perm, H, car)
+def hunt(n,n_samples,seed=101):
+    rng=random.Random(seed); by_char={}
     for _ in range(n_samples):
         A=random_tournament(n,rng)
         cp=charpoly_int(A,n)
-        eu,H,car=carriers_and_perm(A,n)
-        by_char.setdefault(cp,[]).append((eu,H,car))
+        by_char.setdefault(cp,[]).append((permpoly_int(A,n), count_ham_paths(A,n), A))
     cospectral=[(cp,recs) for cp,recs in by_char.items() if len(recs)>=2]
     H_split=0; perm_fail=0; witness=None
-    carrier_var={'D44':0,'T333':0,'D35':0,'c9':0}
     for cp,recs in cospectral:
-        Hs={r[1] for r in recs}
-        if len(Hs)>1: H_split+=1
-        # within this cospectral class, does perm determine H?
+        if len({r[1] for r in recs})>1: H_split+=1
         permmap={}
-        for eu,H,car in recs:
-            if eu in permmap and permmap[eu]!=H:
+        for pp,H,A in recs:
+            if pp in permmap and permmap[pp][0]!=H:
                 perm_fail+=1
-                if witness is None:
-                    # find the two records
-                    a=[r for r in recs if r[0]==eu]
-                    witness=(cp,a)
-                break
-            permmap[eu]=H
-        # track whether D44/T333 vary within (char,perm) sub-buckets
-        sub={}
-        for eu,H,car in recs:
-            sub.setdefault(eu,[]).append(car)
-        for eu,cars in sub.items():
-            for key in carrier_var:
-                if len({c[key] for c in cars})>1: carrier_var[key]+=1
+                if witness is None: witness=(permmap[pp][1], A, permmap[pp][0], H)
+            else:
+                permmap.setdefault(pp,(H,A))
     print(f" n={n}: {len(by_char)} cospectral classes ({len(cospectral)} with >=2 members) "
           f"from {n_samples} samples")
-    print(f"     H non-spectral (class splits H):            {H_split}")
-    print(f"     (char,perm) FAILS to determine H:           {perm_fail}   "
+    print(f"     H non-spectral (class splits H):      {H_split}")
+    print(f"     (char,perm) FAILS to determine H:     {perm_fail}   "
           f"-> {'DETERMINES H' if perm_fail==0 else 'does NOT determine H'}")
-    print(f"     within (char,perm): D44 varies {carrier_var['D44']}, "
-          f"D35 varies {carrier_var['D35']}, c9 varies {carrier_var['c9']}, "
-          f"T333 varies {carrier_var['T333']}")
     if witness:
-        cp,a=witness
-        print(f"     WITNESS (same char, same perm, different H):")
-        for eu,H,car in a[:2]:
-            rel={k:v for k,v in car.items() if v}
-            print(f"        H={H}  carriers={rel}")
+        A1,A2,H1,H2=witness
+        c1=carriers(A1,n); c2=carriers(A2,n)
+        print(f"     WITNESS (same char, same perm, different H): H={H1} vs H={H2}")
+        print(f"        carriers T1: {{{', '.join(f'{k}={v}' for k,v in c1.items() if v)}}}")
+        print(f"        carriers T2: {{{', '.join(f'{k}={v}' for k,v in c2.items() if v)}}}")
+        diff={k:(c1[k],c2[k]) for k in c1 if c1[k]!=c2[k]}
+        print(f"        DIFFERING carriers: {diff}")
     return perm_fail
 
 if __name__=='__main__':
     print("="*82)
     print(" SHARP HUNT: does (char poly, perm poly) determine H?  (bucket by char first)")
     print("="*82)
-    for n,ns in [(7,30000),(8,120000),(9,120000)]:
+    # optional argv: n  n_samples   (else default battery)
+    if len(sys.argv)>=2:
+        n=int(sys.argv[1]); ns=int(sys.argv[2]) if len(sys.argv)>=3 else 150000
         hunt(n,ns)
+    else:
+        for n,ns in [(7,40000),(8,150000),(9,120000)]:
+            hunt(n,ns); sys.stdout.flush()
     print("DONE.")
