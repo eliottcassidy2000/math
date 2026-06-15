@@ -1,0 +1,24 @@
+==========================================================================
+ WALK COUNTS ARE SPECTRAL -- exact verification of the closed form
+   N(x)=1^T adj(xI-A)1 = (-1)^n charA(-x-1) - charA(x)
+==========================================================================
+  n=3: exhaustive 8 labeled tournaments -- failures: 0
+  n=4: exhaustive 64 labeled tournaments -- failures: 0
+  n=5: exhaustive 1024 labeled tournaments -- failures: 0
+  n=6: exhaustive 32768 labeled tournaments -- failures: 0
+        distinct charA classes: 28; classes with >1 distinct walk-vector: 0  (must be 0)
+  n=7: 400 random tournaments -- failures: 0
+  n=8: 400 random tournaments -- failures: 0
+  n=9: 400 random tournaments -- failures: 0
+  n=10: 400 random tournaments -- failures: 0
+  n=12: 400 random tournaments -- failures: 0
+
+  Example, n=5 cyclic-ish tournament (scores shown), closed form:
+    scores=[2, 0, 3, 2, 3]
+    charA   (low->high) = [0, -1, -2, 0, 0, 1]
+    char_A-J(low->high) = [2, 8, 12, 10, 5, 1]
+    N(x)    (low->high) = [2, 9, 14, 10, 5, 0]
+    walk counts w_0..w_10 = [5, 10, 14, 19, 27, 38, 52, 73, 103, 142, 198]
+    series(N/charA)       = [5, 10, 14, 19, 27, 38, 52, 73, 103, 142, 198]
+
+  ALL CHECKS PASSED => w_k spectral, proof confirmed exactly.
