@@ -1,7 +1,7 @@
 ---
 id: THM-505
 title: The OCF non-spectral defect — H = (spectral skeleton) + (integer-linear combination of Witt/census defects); at n=7, H = [1+2c3+2c5+4C(c3,2)-4W6] + 4c6 + 2c7
-status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension BREAKS ABOVE n−5: it is EXACTLY 6 (carriers {c6,c7,c8,c9,Q44,T333}, all independent; capped at 6 by the closed form) versus n−5 = 4. The overlap config Q44 and the triple packing T333 are independent non-spectral carriers (PROVED by explicit cospectral witnesses sharing (c6,c7,c8,c9) but differing in H). LINEARITY: H is universal-integer-linear in the FULL carrier set (simple cycles + overlap configs) but NOT a bounded-degree polynomial in the simple cycles alone past n=7. General-n principle CONJECTURE (HYP-2513, dimension claim CORRECTED)
+status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension exceeds n−5. INTRINSIC dimension (basis-independent rank, OCF packing basis, monad-explorer-S3) = 3,5,7 at n=8,9,10 — the n=9 trace-basis "6" was an OVER-COUNT (c8 and Q44 enter H only via their sum D35). GROWTH LAW: dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3 = (1,2,3,5,7,9,12,…) for n=6,7,8,9,10,11,12 — a restricted-partition generating function Π_{k odd≥3}1/(1−x^k); equals n−5 only for n≤8. VERIFIED n≤10 (rank, all carriers independent, H in span); dim ≤ #{λ}−3 PROVED, equality CONJECTURE (no N_λ spectrally pinned). LINEARITY: H is universal-integer-linear in the FULL carrier set but NOT a bounded-degree polynomial in the simple cycles alone past n=7. (HYP-2513, dimension claim CORRECTED → partition law)
 source: monad-explorer-2026-06-15
 depends_on:
   - THM-499   # H = 1 + 2(c3+c5) + 4*alpha_2 at n<=6; alpha_2 first non-spectral OCF ingredient
@@ -163,6 +163,53 @@ determine `H` within a cospectral class.
 > overlaps are spectral shadows of the simple cycles" is true only for n ≤ 8** (corrects
 > HYP-2513 / reflection `the-zeta-function-and-the-ocf-read-complementary-halves`).
 
+## INTRINSIC dimension and the GROWTH LAW (monad-explorer-2026-06-15-S3) — the n=9 "6" is a trace-basis over-count; the true law is a partition function
+
+The chain above works in the **trace basis** `{c6,c7,c8,c9,Q44,T333}` and counts 6 at n=9.
+But that basis is **over-complete**: `c8` and `Q44` enter `H` *only through their sum*. The
+closed form has `+4c8 + 4Q44`, and both come from `4·D35` via `D35 = c3c5 − W8 + c8 + Q44`
+(`W8` spectral). So `H` depends only on the single quantity `c8+Q44 = D35` (mod spectrum);
+adding `c8` then `Q44` as two chain steps double-counts one degree of freedom.
+
+Working instead in the **OCF packing basis** — expand `H = Σ_λ 2^{|λ|} N_λ` by the
+length-multiset `λ` (parts odd ≥3) of each disjoint-cycle packing, `N_λ` = #packings with
+that multiset — gives a basis-independent count via the rank of the within-class
+carrier-delta matrix (`ocf_nonspectral_n10_monad.py`, rank over ℚ, robust to small cospectral
+classes since deltas pool across classes):
+
+| n | OCF non-spectral carriers | intrinsic dim (RANK) | H in carrier span? |
+|---|---|---|---|
+| 8 | `{c7, D33, D35}` | **3** | yes |
+| 9 | `{c7, c9, D33, D35, T333}` | **5** | yes |
+| 10 | `{c7, c9, D33, D35, D37, D55, T333}` | **7** | yes |
+
+Verified by cospectral sampling: rank `3,5,7`; every carrier drop-one independent; `H`
+always in the carrier span (so dim is capped by the OCF closed form); OCF identity holds
+`6000/6000` (n=10). At n=9 the explicit reconciliation: rank`{c6,c7,c8,c9,Q44,T333}`=6 but
+rank`{c6,c7,(c8+Q44),c9,T333}`=5 and already contains `H`.
+
+> **GROWTH LAW (the corrected dimension claim).** With `N_∅=1`, `N_{3}=c3=trA³/3`,
+> `N_{5}=c5=trA⁵/5` the only spectral/trivial packings (THM-118), and every other `N_λ`
+> non-spectral and (verified n≤10) independent:
+> ```
+>   dim_nonspec(H)(n) = #{ partitions of s into odd parts ≥3, 0 ≤ s ≤ n } − 3
+>                     = ( Σ_{s≤n} [x^s] Π_{k odd ≥3} 1/(1−x^k) ) − 3
+> ```
+> Values `n=6..14`: **1, 2, 3, 5, 7, 9, 12, 15, 19**. The increment
+> `dim(n)−dim(n−1) = p_{odd≥3}(n)` (partitions of `n` into odd parts ≥3). The sequence
+> equals `n−5` *only* for `n ≤ 8` (each integer has ≤1 odd-≥3 partition there); it first
+> exceeds `n−5` at `n=9`, where `9={9}={3,3,3}` is the first integer with **two** such
+> partitions. So the "break above `n−5`" is exactly the point where the restricted partition
+> function first exceeds 1. Asymptotically `dim ~ exp(c√n)` (Hardy–Ramanujan), sub-exponential
+> but super-polynomial. The trace-basis chain count (`6` at n=9) over-counts because `c_even`
+> and overlap configs `Q44,TF` are *change-of-basis coefficients* (inclusion–exclusion
+> converting `N_λ` to spectral + lower carriers), not independent carriers.
+>
+> **Status:** decomposition `H=Σ_λ 2^{|λ|}N_λ` PROVED (regroup the OCF closed form);
+> `dim ≤ #{λ}−3` PROVED (upper bound — `H` can't depend on more than its own carriers);
+> EQUALITY (no `N_λ` spectrally pinned) VERIFIED n≤10, CONJECTURE general. See reflection
+> `the-non-spectral-dimension-of-H-is-a-partition-function`.
+
 ## The linearity dichotomy (resolves the "is H linear in the carriers" question)
 
 There are **two different** notions of "carrier," and they diverge past n=7:
@@ -233,14 +280,12 @@ defects) and verified for n=7, n=8, n=9.
 - (i) The exact carrier list and `±2^{level}` weights at general `n` (driven by which
   disjoint odd-collections fit in `n` vertices and which overlap configs appear). Weights
   observed: pure `±2^{level}` through n=9.
-- (ii) The **non-spectral dimension** `dim_nonspec(H)` is `n−5` only for `n ≤ 8`; at n=9
-  it is `= 6 > n−5 = 4` (jumps `3 → 6`). CONJECTURE: `dim_nonspec(H)` equals the number of
-  *distinct non-spectral carrier types* — simple cycles `c6..c_n` PLUS irreducible
-  overlap/packing configs (`Q44`, `T333`, ...) — that fit in `n` vertices and are not
-  pinned by the others, which grows strictly faster than `n−5` once the multi-cycle
-  correlation configs become independent of the simple-cycle vector. The carrier set is
-  exactly the support of the closed form (so `dim_nonspec(H)` is bounded above by the number
-  of distinct `α_j`-expansion terms); at n=9 that is `{c6,c7,c8,c9,Q44,T333}`, all six
-  independent.
+- (ii) **RESOLVED → the GROWTH LAW (monad-explorer-S3, see section above).** The intrinsic
+  (basis-independent) non-spectral dimension, in the OCF packing basis `N_λ`, is
+  `dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3` = `1,2,3,5,7,9,12,…` for
+  `n=6,7,8,9,10,…`. Equals `n−5` only for `n≤8`. The n=9 trace-basis count `6` was an
+  over-count (`c8,Q44` enter `H` only via their sum `D35`); intrinsic dim is `5`. VERIFIED
+  n≤10 (rank `3,5,7`, all carriers independent, `H` in span); the only general-`n` gap is
+  proving no `N_λ` is spectrally pinned (then the law is a theorem).
 - (iii) `H` is universal-linear in the *full* carrier set but is **not** a bounded-degree
   polynomial in the simple cycles alone past n=7 (the linearity dichotomy above).
