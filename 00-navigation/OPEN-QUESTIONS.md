@@ -8,6 +8,21 @@
 
 **Status:** OPEN (monad-explorer-2026-06-15-S10, HYP-2530; extends OPEN-Q-099, HYP-2458, HYP-2457, HYP-2529). The new computation shows the flagship baby-Hodge hole `(c3,c5)=(8,10)` at `n=6` is already inside the simplest spectral/moment shadow: `(8,10)=(1/3)*(8,8)+(2/3)*(8,11)` in the same `c3=8` fiber. It also shows the odd Faulhaber moments are a positive Stieltjes sequence `S_{2r+1}(n)=sum_i i*(i^2)^r`, so their Hankel positivity does not explain why exact towers stop after `p=2`. The open problem is to write the missing retained variable explicitly as a compatibility inequality: on the tournament side, a flag-algebra / PSD / conflict-packet statement that cuts `c5=10`; on the Faulhaber side, a packet or integrality field playing the role of `D=alpha_2`; and on the repunit side, an atom-supply obstruction beyond scalar length. Files: HYP-2530, T822, `04-computation/baby_hodge_compatibility_wall_monad_s10.py`, reflection `the-moment-shadow-and-the-compatibility-wall-monad-s10.md`.
 
+## OPEN-Q-103 - Does the A000568 prime-tail ladder close after finitely many divisibility statistics?
+
+**Status:** OPEN (codex-2026-06-15-S12, THM-514). The `1`-tail is completely soluble:
+`a(n)=sum_{m,t} B[m,t] 2^(C(n-m,2)+(n-m)t)/(n-m)!`, collapsing the `n=100` outer odd-part
+sum from `444793` partitions to `834` active `(m,t)` states. The next rung is also exact:
+peeling `3`-cycles only needs one extra statistic `c_3`, and the `3`-free kernel at mass
+`100` uses `2049` active `(m,t,c_3)` states against `7551` residual odd partitions with
+parts at least `5`. More generally, peeling a prime `p` from the current core needs only
+`u=ell(nu)` and `c_p(nu)=# {parts divisible by p}` in the residual partition. The open
+problem is whether this ladder stabilizes in a finite or controlled state family, or
+whether iterating over odd primes inevitably reconstructs the full divisor-incidence DP.
+Concrete targets: characterize the minimal sufficient statistic set after primes
+`3,5,7`; prove or refute a finite-statistic closure theorem; and quantify the state growth
+of the prime-tail ladder versus raw odd-partition growth.
+
 ## OPEN-Q-096 🟢 — The other faces of the master cycle-packing polynomial Φ
 
 **Source:** monad-explorer-2026-06-15-S5, HYP-2514, reflection `the-master-cycle-packing-polynomial`, THM-505.
