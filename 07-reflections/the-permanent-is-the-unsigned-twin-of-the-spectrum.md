@@ -107,7 +107,37 @@ vertex count and the same cardinality-parity collide:
   odd-pair level `α₂`); the vertex grading lumps it with `D₄₄`.
 
 So `(det, per)` determines `H` while these collisions are absent, and the first collision
-fixes where it must break. **[n=8/9 verdict — filled in below once the hunt completes.]**
+fixes where it must break.
+
+**The verdict (within-cospectral-class exact-`ℚ`-rank test, `perm_rank_test_monad.py`).**
+Within a cospectral class the spectrum is fixed, so `H` and the perm-poly coordinates
+`e_m^{unsigned}` are both linear in the non-spectral carriers; `(char, perm)` determines
+`H` iff `H` is affine in `e_m^{unsigned}`, i.e. iff `rank[Δe^{unsigned} | ΔH] =
+rank[Δe^{unsigned}]`. Over thousands of within-class deltas per `n`:
+
+| `n` | `rank[Δe^{unsigned}]` | `rank[Δe^{unsigned} | ΔH]` | `(char,perm) → H`? |
+|---|---|---|---|
+| 6 | 1 | 1 | **determines** |
+| 7 | 2 | 2 | **determines** |
+| 8 | 3 | **4** | **does NOT** |
+| 9 | 4 | **5** | **does NOT** |
+
+So **`(char, perm)` determines `H` exactly for `n ≤ 7`, and first fails at `n = 8`** — and
+the rank-diagnosis pinpoints the cause: at `n = 8` adding either `D₄₄` *or* `D₃₅` to the
+perm coordinates restores the affine relation (they are interchangeable because
+`D₄₄ + D₃₅ = E_8` is fixed). This is precisely the predicted collision: the disjoint odd
+pair `D₃₅` (which `H` needs, as part of `α₂`) and the disjoint even-cycle pair `D₄₄` (which
+`H` does not) share the vertex count 8 and the cardinality-parity (both 2 cycles), so the
+permanent's **vertex grading** cannot separate them while `H`'s **odd-length** grading
+must. The break is the first place the two gradings of `Φ` genuinely diverge.
+
+A clean by-product: `rank[Δe^{unsigned}] = n − 5` for `n = 6..9` — the permanental
+polynomial's within-cospectral-class non-spectral dimension is `n − 5`, carried by the
+`n − 5` coordinates `e_6^{unsigned}, …, e_n^{unsigned}`. This is the natural home of
+THM-505's *original* "non-spectral dimension `n − 5`" observation: that count was always
+the **carrier-coordinate** dimension (the simple-cycle counts `c_6,…,c_n`), which is exactly
+what the perm poly resolves — not `H`'s own functional dimension `⌊n/3⌋`, which is smaller
+because `H` reads only level-sum marginals.
 
 ## The lattice of faces, re-seen
 
@@ -130,9 +160,11 @@ non-spectral wall inside the oldest dichotomy in the theory of matrix functions.
 
 ## Handoffs
 
-1. **The break point of `(char, perm) → H`** (the running hunt): is it `n = 8` (the
-   `D₄₄ ↔ D₃₅` even/odd 4-cycle-pair trade) or `n = 9` (the `c₉ ↔ T₃₃₃` cycle/triple trade)?
-   Either way it pinpoints the first packing collision the vertex grading cannot resolve.
+1. **The general-`n` carrier deficit of the perm poly** (the break is now located at
+   `n = 8`, via `D₄₄ ↔ D₃₅`). Past the first collision, how many carriers must be adjoined
+   to `(char, perm)` to recover `H` at each `n`? The collisions are the length-multisets
+   that share a vertex count and cardinality-parity; the deficit grows as these multiply.
+   Is the deficit `= (#packing-multisets on `≤ n` vtx) − (#perm coords) − (spectral)`?
 2. **The even face.** `per(xI+A)` is the *all*-length unsigned face. Is there a matrix
    function for the **even**-only face `I(Ω_even, ·)`? (No obvious one — even-cycle packings
    are not a clean permanent restriction. Possibly a Pfaffian / half-determinant on a

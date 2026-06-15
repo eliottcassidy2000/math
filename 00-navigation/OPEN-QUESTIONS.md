@@ -12,10 +12,17 @@ The spectrum (Sachs Coefficient Theorem, all-length **signed** `y_k=−x^{−k}`
 `H` (odd-only **unsigned** fugacity-2 `y_k=2[k odd]`) are two evaluations of one master
 disjoint-cycle-packing polynomial `Φ(T;{y_k}) = Σ_{packings}∏ y_{|C|}`. Open:
 
-1. **Combinatorial meaning of the even / all faces.** `I(Ω_even,2)` and `I(Ω_all,2)` are
-   non-spectral on the same schedule as `H` (first split at n=6) but unstudied. Is there a
-   Rédei-style count they equal? Is `I(Ω_all,2)` a known graph polynomial of `T`? Their
-   dimension growth law (the analogue of `A000009(n)−3`)?
+1. **The ALL face is the PERMANENTAL POLYNOMIAL — RESOLVED (monad-S6, THM-506, HYP-2515).**
+   The all-length unsigned face of Φ, graded by **vertices**, is `per(xI+A) = Σ_m e_m^unsigned
+   x^{n−m}` (`e_m^unsigned`=#packings on m vtx) — the permanental polynomial, the **unsigned
+   twin of the char poly** `det(xI−A)`; the two differ ONLY by the cycle-parity sign
+   `(−1)^#cyc→+1` (the det/per dichotomy; det spectral & poly-time, per non-spectral &
+   #P-hard). Non-spectral first at n=6 (same wall), splits the same 47 cospectral classes as
+   H at n=7 but strictly **finer** (recovers (c6,c7,…) vs H's one functional); **(char,perm)
+   determines H iff n≤7**, breaking at n=8 via the D44↔D35 trade (within-class rank
+   3→4). STILL OPEN: the **even**-only face `I(Ω_even,·)` has no obvious single matrix
+   function (Pfaffian on a derived graph?); the permanental ROOTS as an invariant; the
+   even/all dimension growth law; the general-n carrier deficit of (char,perm).
 2. **The signed odd face is "more spectral" — RESOLVED at n=7.** `sgn_odd =
    Σ_{odd packings}(−1)^{#cyc} = I(Ω,−1) = −χ̃(Ind Ω)`, the reduced **Euler characteristic of
    the odd-cycle packing complex**. At n=7 it equals `(1+e₃+e₅+e₆) + (c₆−c₇)` (verified

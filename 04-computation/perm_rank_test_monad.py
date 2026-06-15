@@ -131,7 +131,7 @@ def qrank(rows):
         if r==len(R): break
     return rank
 
-def test(n,n_samples,seed=55):
+def test(n,n_samples,seed=55,do_carriers=True):
     rng=random.Random(seed); by_char={}
     for _ in range(n_samples):
         A=random_tournament(n,rng)
@@ -145,16 +145,19 @@ def test(n,n_samples,seed=55):
         if len(As)<2: continue
         nclass2+=1
         ref=As[0]
-        pp_ref=permpoly_int(ref,n); H_ref=count_ham_paths(ref,n); cr_ref=carriers(ref,n)
-        if carnames is None: carnames=sorted(cr_ref)
+        pp_ref=permpoly_int(ref,n); H_ref=count_ham_paths(ref,n)
+        cr_ref=carriers(ref,n) if do_carriers else None
+        if do_carriers and carnames is None: carnames=sorted(cr_ref)
         Hs={H_ref}
         for A in As[1:]:
-            pp=permpoly_int(A,n); H=count_ham_paths(A,n); cr=carriers(A,n)
+            pp=permpoly_int(A,n); H=count_ham_paths(A,n)
             Hs.add(H)
             dperm=[pp[m]-pp_ref[m] for m in range(n+1)]
             dH=H-H_ref
             rows_perm.append(dperm); rows_perm_H.append(dperm+[dH])
-            car_rows.append([cr[k]-cr_ref[k] for k in carnames]); carH.append(dH)
+            if do_carriers:
+                cr=carriers(A,n)
+                car_rows.append([cr[k]-cr_ref[k] for k in carnames]); carH.append(dH)
         if len(Hs)>1: H_split+=1
     rp=qrank(rows_perm); rpH=qrank(rows_perm_H)
     print(f"\n n={n}: {len(by_char)} cospectral classes, {nclass2} with >=2 members, "
@@ -181,7 +184,8 @@ if __name__=='__main__':
     print(" WITHIN-CLASS RANK TEST: is H affine in the permanental-poly coordinates?")
     print("="*82)
     if len(sys.argv)>=2:
-        test(int(sys.argv[1]), int(sys.argv[2]) if len(sys.argv)>=3 else 8000)
+        do_c = not (len(sys.argv)>=4 and sys.argv[3]=='nocar')
+        test(int(sys.argv[1]), int(sys.argv[2]) if len(sys.argv)>=3 else 8000, do_carriers=do_c)
     else:
         for n,ns in [(6,4000),(7,6000),(8,9000),(9,12000)]:
             test(n,ns); sys.stdout.flush()
