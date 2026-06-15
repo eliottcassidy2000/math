@@ -1,0 +1,63 @@
+THM-505 : intrinsic non-spectral dimension of H, the GROWTH LAW
+
+======================================================================
+  n = 8
+======================================================================
+  OCF non-spectral carriers: ['c7', 'D33', 'D35']  (predicted dim = 3)
+  phase1: 150000 samples; colliding cospectral classes 1523; distinct members 149960
+  phase2: processed 6000; OCF holds 6000/6000; usable classes 10
+  cospectral classes with SPLIT H (non-spectral witnesses): 10
+  within-class delta vectors: 5249
+  RANK of OCF-carrier deltas             : 3
+  RANK including H column                : 3  (H IN carrier span (linear))
+  ==> intrinsic dim_nonspec(H) at n=8  : 3
+     drop c7   : rank  2  (independent)
+     drop D33  : rank  2  (independent)
+     drop D35  : rank  2  (independent)
+
+======================================================================
+  n = 9
+======================================================================
+  OCF non-spectral carriers: ['c7', 'c9', 'D33', 'D35', 'T333']  (predicted dim = 5)
+  phase1: 150000 samples; colliding cospectral classes 24151; distinct members 143841
+  phase2: processed 6000; OCF holds 6000/6000; usable classes 114
+  cospectral classes with SPLIT H (non-spectral witnesses): 114
+  within-class delta vectors: 5642
+  RANK of OCF-carrier deltas             : 5
+  RANK including H column                : 5  (H IN carrier span (linear))
+  ==> intrinsic dim_nonspec(H) at n=9  : 5
+     drop c7   : rank  4  (independent)
+     drop c9   : rank  4  (independent)
+     drop D33  : rank  4  (independent)
+     drop D35  : rank  4  (independent)
+     drop T333 : rank  4  (independent)
+
+  RECONCILE TRACE BASIS vs OCF BASIS at n=9:
+    rank of trace-basis carriers {c6,c7,c8,c9,Q44,T333} = 6
+    rank of {c6,c7,(c8+Q44),c9,T333}                    = 5
+    rank including H of latter                          = 5  (H in span -> c8,Q44 enter ONLY via their SUM)
+    => trace-basis chain counts 6; INTRINSIC rank is 5 (c8 & Q44 are ONE non-spectral d.o.f. = D35)
+
+======================================================================
+  n = 10
+======================================================================
+  OCF non-spectral carriers: ['c7', 'c9', 'D33', 'D35', 'D37', 'D55', 'T333']  (predicted dim = 7)
+  phase1: 1500000 samples; colliding cospectral classes 325066; distinct members 1047321
+  phase2: processed 6000; OCF holds 6000/6000; usable classes 137
+  cospectral classes with SPLIT H (non-spectral witnesses): 137
+  within-class delta vectors: 5806
+  RANK of OCF-carrier deltas             : 7
+  RANK including H column                : 7  (H IN carrier span (linear))
+  ==> intrinsic dim_nonspec(H) at n=10  : 7
+     drop c7   : rank  6  (independent)
+     drop c9   : rank  6  (independent)
+     drop D33  : rank  6  (independent)
+     drop D35  : rank  6  (independent)
+     drop D37  : rank  6  (independent)
+     drop D55  : rank  6  (independent)
+     drop T333 : rank  6  (independent)
+
+======================================================================
+  n = 11
+======================================================================
+  OCF non-spectral carriers: ['c7', 'c9', 'c11', 'D33', 'D35', 'D37', 'D55', 'T333', 'T335']  (predicted dim = 9)
