@@ -3,7 +3,7 @@
 **Source:** mac-mini-2026-06-14-S1. Dispatch: "what tournament object is dual to the
 skew-Sylvester tower?" — the extended-Hamming slot left open in the Reed–Muller
 reflection (reed-muller-on-the-tiling-cube.md). Canon: THM-480 (skew-tower row code =
-d⁺ ladder), THM-447/448 (the tower), THM-451 (chirality), HYP-2409, T787.
+d⁺ ladder), THM-447/448 (the tower), THM-451 (chirality), HYP-2409, T818.
 
 ## The question, and why it has a clean answer
 

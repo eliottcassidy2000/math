@@ -1,0 +1,100 @@
+======================================================================
+d-STEP FIBONACCI a_d(n)=a_d(n-1)+a_d(n-d): COMBINATORIAL READINGS
+======================================================================
+
+--- d = 2 ---
+  L  recur a_d(L)  strip(BF)  binom sum  indep P_(L)^(d-1) binstr gap-d, len L-? 
+  0             1          1          1                  1   per-k OK
+  1             1          1          1                  2   per-k OK
+  2             2          2          2                  3   per-k OK
+  3             3          3          3                  5   per-k OK
+  4             5          5          5                  8   per-k OK
+  5             8          8          8                 13   per-k OK
+  6            13         13         13                 21   per-k OK
+  7            21         21         21                 34   per-k OK
+  8            34         34         34                 55   per-k OK
+  9            55         55         55                 89   per-k OK
+ 10            89         89         89                144   per-k OK
+
+--- d = 3 ---
+  L  recur a_d(L)  strip(BF)  binom sum  indep P_(L)^(d-1) binstr gap-d, len L-? 
+  0             1          1          1                  1   per-k OK
+  1             1          1          1                  2   per-k OK
+  2             1          1          1                  3   per-k OK
+  3             2          2          2                  4   per-k OK
+  4             3          3          3                  6   per-k OK
+  5             4          4          4                  9   per-k OK
+  6             6          6          6                 13   per-k OK
+  7             9          9          9                 19   per-k OK
+  8            13         13         13                 28   per-k OK
+  9            19         19         19                 41   per-k OK
+ 10            28         28         28                 60   per-k OK
+
+--- d = 4 ---
+  L  recur a_d(L)  strip(BF)  binom sum  indep P_(L)^(d-1) binstr gap-d, len L-? 
+  0             1          1          1                  1   per-k OK
+  1             1          1          1                  2   per-k OK
+  2             1          1          1                  3   per-k OK
+  3             1          1          1                  4   per-k OK
+  4             2          2          2                  5   per-k OK
+  5             3          3          3                  7   per-k OK
+  6             4          4          4                 10   per-k OK
+  7             5          5          5                 14   per-k OK
+  8             7          7          7                 19   per-k OK
+  9            10         10         10                 26   per-k OK
+ 10            14         14         14                 36   per-k OK
+
+======================================================================
+EXACT INDEX ALIGNMENT (find the shift that makes them coincide)
+======================================================================
+d=3
+strip length L : tilings = a_d(L)
+indep sets of P_v^{d-1} as function of v:
+  v=0: indep=1  matches a_d(L) for L in [0, 1, 2]
+  v=1: indep=2  matches a_d(L) for L in [3]
+  v=2: indep=3  matches a_d(L) for L in [4]
+  v=3: indep=4  matches a_d(L) for L in [5]
+  v=4: indep=6  matches a_d(L) for L in [6]
+  v=5: indep=9  matches a_d(L) for L in [7]
+  v=6: indep=13  matches a_d(L) for L in [8]
+  v=7: indep=19  matches a_d(L) for L in [9]
+  v=8: indep=28  matches a_d(L) for L in [10]
+
+binary strings gap>=d of length L (consecutive 1s >= d apart):
+  L=0: count=1  matches a_d(LL) for LL in [0, 1, 2]
+  L=1: count=2  matches a_d(LL) for LL in [3]
+  L=2: count=3  matches a_d(LL) for LL in [4]
+  L=3: count=4  matches a_d(LL) for LL in [5]
+  L=4: count=6  matches a_d(LL) for LL in [6]
+  L=5: count=9  matches a_d(LL) for LL in [7]
+  L=6: count=13  matches a_d(LL) for LL in [8]
+  L=7: count=19  matches a_d(LL) for LL in [9]
+  L=8: count=28  matches a_d(LL) for LL in [10]
+
+======================================================================
+d=2 SANITY: classic Fibonacci F_{n} = 1,1,2,3,5,8,...
+======================================================================
+a_2(L) for L=0..9: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55]
+These are Fibonacci F_{L+1} (with F_1=F_2=1).
+
+======================================================================
+PROJECT TILING MODEL CHECK
+======================================================================
+Staircase delta_{n-2}: m = C(n-1,2) flippable tiles, 2^m tilings total.
+  n=3: m=C(2,2)=1, total tilings 2^1=2
+  n=4: m=C(3,2)=3, total tilings 2^3=8
+  n=5: m=C(4,2)=6, total tilings 2^6=64
+  n=6: m=C(5,2)=10, total tilings 2^10=1024
+  n=7: m=C(6,2)=15, total tilings 2^15=32768
+  n=8: m=C(7,2)=21, total tilings 2^21=2097152
+
+These are 2^m, NOT a d-step Fibonacci number in general.
+So the FULL staircase tile-flip hypercube is NOT a_d(n).
+The Fibonacci/d-step appears in CONSTRAINED sub-counts (circular tournaments,
+hard-core/independent-set readings), not the unconstrained 2^m hypercube.
+=== d-step Fibonacci: tournament/staircase realization tests (appended) ===
+VERIFIED: a_d strip tilings = recurrence = slope-d binomial (per-k) = indep sets P^(d-1) = gap-d binary strings
+VERIFIED: OEIS d=2 A000045, d=3 A000930, d=4 A003269, d=5 A003520; GF 1/(1-x-x^d); root x^d=x^{d-1}+1
+VERIFIED: OEIS A000930 family comment states a(n)=Sum_i C(n-(m-1)i,i) and the m-wide-molecule tiling reading EXACTLY
+VERIFIED: gap-2 indep sets on n-1 base arcs = F_{n+1} (Fibonacci) -- rigorous arc-subset structure, not a realized invariant
+VERIFIED: circular/round tournament iso-classes on m vertices = 2*Fib(m-2) (S518, m=3..8: 2,2,4,6,10,16) -- a REALIZED tournament count

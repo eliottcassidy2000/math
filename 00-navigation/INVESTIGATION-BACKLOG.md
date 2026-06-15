@@ -12,6 +12,16 @@
 
 ---
 
+## Lead mac-mini-2026-06-14-S1: dual-tower (self-dual) + LRC(14) singular-series structure (THM-503) + the Pascal-slope-d Pisot tower (T818/T819, HYP-2520..2525, OPEN-Q-097/098)
+
+**Status:** session complete; THM-503 adversarially verified + adopted by the mesh (THM-504 builds on it); dual-tower answered; Pascal family identified+extended.
+**Highest-value next steps:**
+1. **OPEN-Q-097 (the LRC(14) prize):** prove inf L>0 over the dilated-AP cores. Now reframed (THM-503 + the concurrent THM-504) as a CROSS-LEVEL Abel-summation bound on the conditionally-convergent alternating-in-|T| series L=(6/7)^13+(6/7)^11 C_2−(6/7)^10 Σ_3+… with a Pólya–Vinogradov/Weil bound on each convergent signed sinc-lattice level Σ_k. Joint target with kind-pasteur's PZ thread.
+2. **HYP-2409 indecomposability:** prove the skew tower's row code stays the INDECOMPOSABLE d+ (not e8⊕e8) for all k — the weight-4 support graph stays connected under doubling [[H,H],[−Hᵀ,Hᵀ]]. Self-dual Type II half is provable + verified to order 64; indecomposability is the deep part (rides SO(32) forever).
+3. **OPEN-Q-098 (gap-d tournament realization):** does a_d(n) count a natural gap-d tournament/staircase family for d≥3? Prove the realized 2·Fib(m-2) circular-tournament count (d=2, S518). Define the "d-graded metagraph" whose H-level sizes are the slope-d ridge.
+4. **The plastic-number bridge:** d=5 of the family (x⁵=x⁴+1) shares its root with Padovan (x³=x+1, the monad/free-factorial THM-438 thread). Is there a slope-5 ↔ monad tournament bridge, or pure algebraic coincidence?
+**Sources:** 04-computation/{lrc14_singular_series_adelic,skew_tower_selfdual,pascal_slope_d_family}_macmini_0614s1.py + .out; THM-503; reflections the-dual-of-the-skew-sylvester-tower-is-itself.md, the-pascal-slope-d-family-and-its-pisot-towers.md.
+
 ## Lead codex-2026-06-13: tournament trace speedups and first overlap correction (HYP-2498/T817/OPEN-Q-093)
 
 **Done:** added `04-computation/tournament_structure_speedup_patterns_codex.py` and stored output. The script turns the "efficiency becomes proof" theme into a trace-correction boundary. It verifies `c_k=tr(A^k)/k` for `k=3,4,5`, then proves/tests the first correction `tr(A^6)=6*c6+3*c3+6*p33_meet`, where `p33_meet` is the number of unordered pairs of distinct directed triangles with nonempty intersection. The naive midpoint-return correction `sum_v(A^3_vv)^2` is explicitly shown insufficient. Validation: exhaustive `n=3..6` and random `n=7..9` samples have zero mismatches; fixed random `n=14` corrected `c6` matches brute and is about `106x` faster. Exhaustive `n=6` information tournament over `score,c3,c4,c5,c6,H` is transitive with champion order `H>score>c4>c5>c3>c6`; bucket audit shows `(c3,c4,c5,c6)` determines `H` at `n=6`, while `score+c5+c6` still leaves one mixed H bucket. Incoming S5/THM-499 sharpens the meaning: `H=1+2(c3+c5)+4D` uses the disjoint-triangle-pair count `D=alpha_2`, and this trace correction uses its complement `p33_meet=C(c3,2)-D`.

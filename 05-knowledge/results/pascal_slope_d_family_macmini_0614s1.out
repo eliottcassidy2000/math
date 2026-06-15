@@ -1,0 +1,86 @@
+==========================================================================
+THE PASCAL-SLOPE-d FAMILY  (row n = C(n-1-(d-1)k,k); sums = d-step Fibonacci)
+==========================================================================
+
+--- d = 1 ---
+  row  1: 1                            = 1
+  row  2: 1 + 1                        = 2
+  row  3: 1 + 2 + 1                    = 4
+  row  4: 1 + 3 + 3 + 1                = 8
+  row  5: 1 + 4 + 6 + 4 + 1            = 16
+  row  6: 1 + 5 + 10 + 10 + 5 + 1      = 32
+  row  7: 1 + 6 + 15 + 20 + 15 + 6 + 1 = 64
+  row  8: 1 + 7 + 21 + 35 + 35 + 21 + 7 + 1 = 128
+  row  9: 1 + 8 + 28 + 56 + 70 + 56 + 28 + 8 + 1 = 256
+  row 10: 1 + 9 + 36 + 84 + 126 + 126 + 84 + 36 + 9 + 1 = 512
+  row-sums (n=1..15): [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096, 8192, 16384]
+
+--- d = 2 ---
+  row  1: 1                            = 1
+  row  2: 1                            = 1
+  row  3: 1 + 1                        = 2
+  row  4: 1 + 2                        = 3
+  row  5: 1 + 3 + 1                    = 5
+  row  6: 1 + 4 + 3                    = 8
+  row  7: 1 + 5 + 6 + 1                = 13
+  row  8: 1 + 6 + 10 + 4               = 21
+  row  9: 1 + 7 + 15 + 10 + 1          = 34
+  row 10: 1 + 8 + 21 + 20 + 5          = 55
+  row-sums (n=1..15): [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233, 377, 610]
+
+--- d = 3 ---
+  row  1: 1                            = 1
+  row  2: 1                            = 1
+  row  3: 1                            = 1
+  row  4: 1 + 1                        = 2
+  row  5: 1 + 2                        = 3
+  row  6: 1 + 3                        = 4
+  row  7: 1 + 4 + 1                    = 6
+  row  8: 1 + 5 + 3                    = 9
+  row  9: 1 + 6 + 6                    = 13
+  row 10: 1 + 7 + 10 + 1               = 19
+  row-sums (n=1..15): [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60, 88, 129]
+
+==========================================================================
+ROW-SUM RECURRENCE  a_d(n) = a_d(n-1) + a_d(n-d)  and named sequences
+==========================================================================
+  d=1: powers of 2 (A000079)      sums=[1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048]
+        recurrence a(n)=a(n-1)+a(n-1) holds: True;  = #tilings(1- & 1-ominoes): True
+  d=2: Fibonacci (A000045)        sums=[1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144]
+        recurrence a(n)=a(n-1)+a(n-2) holds: True;  = #tilings(1- & 2-ominoes): True
+  d=3: Narayana's cows (A000930)  sums=[1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41]
+        recurrence a(n)=a(n-1)+a(n-3) holds: True;  = #tilings(1- & 3-ominoes): True
+  d=4: A003269                    sums=[1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14, 19]
+        recurrence a(n)=a(n-1)+a(n-4) holds: True;  = #tilings(1- & 4-ominoes): True
+  d=5: A003520                    sums=[1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 8, 11]
+        recurrence a(n)=a(n-1)+a(n-5) holds: True;  = #tilings(1- & 5-ominoes): True
+  d=6: A005708                    sums=[1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 7]
+        recurrence a(n)=a(n-1)+a(n-6) holds: True;  = #tilings(1- & 6-ominoes): True
+
+==========================================================================
+"SAME-PACE" CENTRAL SEQUENCES  (largest binomial on each slope-d diagonal)
+==========================================================================
+  d=1: max-on-diagonal (n=1..17): [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462, 924, 1716, 3432, 6435, 12870]
+  d=2: max-on-diagonal (n=1..17): [1, 1, 1, 2, 3, 4, 6, 10, 15, 21, 35, 56, 84, 126, 210, 330, 495]
+  d=3: max-on-diagonal (n=1..17): [1, 1, 1, 1, 2, 3, 4, 5, 6, 10, 15, 21, 28, 36, 56, 84, 120]
+
+  central binomial C(n,floor(n/2)) (A001405): [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462, 924, 1716]
+  (= the project's metagraph WIDTH C(n-2,floor((n-2)/2)); user's powers-of-2 partner)
+
+  USER-STATED partners (for OEIS matching):
+   powers-of-2 partner: 1,1,2,3,6,10,20,35,70,126  =? central binomial: True
+   fibonacci partner:   1,1,2,3,4,6,10,15,20,35,56,70,120,210,252
+   construction-3 partner: 1,1,2,3,4,5,6,10,15,21,28,35,56,84,120,126
+
+==========================================================================
+DOMINANT (PISOT) ROOT of  x^d = x^{d-1} + 1
+==========================================================================
+  d=1: dominant root of x^1=x^0+1  ->  2.0000000000   2
+  d=2: dominant root of x^2=x^1+1  ->  1.6180339887   golden phi=1.6180339887
+  d=3: dominant root of x^3=x^2+1  ->  1.4655712319   supergolden/plastic-adjacent psi=1.4655712319
+  d=4: dominant root of x^4=x^3+1  ->  1.3802775691   1.3802775691
+  d=5: dominant root of x^5=x^4+1  ->  1.3247179572   1.3247...(plastic? no)
+  d=6: dominant root of x^6=x^5+1  ->  1.2851990332   
+  (d=2 golden ratio; d=3 'supergolden ratio' 1.4656, root of x^3=x^2+1)
+
+DONE.
