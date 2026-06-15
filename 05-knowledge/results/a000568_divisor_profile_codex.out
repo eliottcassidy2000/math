@@ -1,0 +1,58 @@
+A000568 via divisor profiles
+========================================================================
+Arithmetic delegation:
+  odd-cycle filter from tournament Burnside
+  gcd(a,b) = sum_{d|a,b} phi(d)
+  state = odd-divisor profile S_d instead of pairwise gcd loops
+
+Verification against known values:
+  a( 0) = 1 [OK]
+  a( 1) = 1 [OK]
+  a( 2) = 1 [OK]
+  a( 3) = 2 [OK]
+  a( 4) = 4 [OK]
+  a( 5) = 12 [OK]
+  a( 6) = 56 [OK]
+  a( 7) = 456 [OK]
+  a( 8) = 6880 [OK]
+  a( 9) = 191536 [OK]
+  a(10) = 9733056 [OK]
+  a(11) = 903753248 [OK]
+  a(12) = 154108311168 [OK]
+  a(13) = 48542114686912 [OK]
+  a(14) = 28401423719122304 [OK]
+
+   n | pairwise s | div-prof s |  speedup |   digits
+------------------------------------------------------------
+  20 |     0.0005 |     0.0006 |     0.92 |       39
+  25 |     0.0012 |     0.0014 |     0.85 |       66
+  30 |     0.0025 |     0.0030 |     0.84 |       99
+  35 |     0.0040 |     0.0045 |     0.90 |      140
+  40 |     0.0080 |     0.0086 |     0.93 |      187
+  45 |     0.0136 |     0.0174 |     0.78 |      242
+  50 |     0.0253 |     0.0322 |     0.79 |      305
+
+Odd-part partition geometry (why Python sees little speedup):
+   n | odd parts | avg distinct | avg pair gcd slots | avg odd-div slots
+------------------------------------------------------------------------
+  20 |        64 |        2.625 |              2.359 |             4.688
+  30 |       296 |        3.169 |              3.733 |             5.990
+  40 |      1113 |        3.642 |              5.142 |             7.131
+  50 |      3658 |        4.053 |              6.559 |             8.159
+  60 |     10880 |        4.424 |              7.983 |             9.106
+  80 |     77312 |        5.084 |             10.858 |            10.826
+ 100 |    444793 |        5.666 |             13.752 |            12.378
+
+Number-theory interpretation:
+  Burnside leaves only odd partitions.
+  The tournament-specific combinatorics then enters only through
+  odd divisibility profiles and totients, not through explicit
+  pairwise cycle-size interactions.
+  But the benchmark shows the current Python bottleneck is partition
+  enumeration itself, not gcd accumulation.
+
+Route forward:
+  1. modularize the same divisor-profile recurrence for CRT/GMP engines;
+  2. memoize low-level profile fibers where the remaining odd divisors are sparse;
+  3. search for a closed recurrence on compressed divisor strata;
+  4. do not expect a Python-only speedup unless partition generation is also compressed.
