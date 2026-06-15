@@ -1,0 +1,11 @@
+tournament-game OMWU: Nash equilibrium (bipartisan set), Lyapunov KL->0, skew spectrum
+
+3-cycle (rock-paper-scissors): Nash=[0.333 0.333 0.333]  KL 0.0000->0.0e+00  skew|mu|=[np.float64(1.7321)]
+transitive T3: Nash=[1. 0. 0.]  KL 1.0986->0.0e+00  skew|mu|=[np.float64(1.7321)]
+regular T5 (circ {1,2}): Nash=[0.2 0.2 0.2 0.2 0.2]  KL 0.0000->0.0e+00  skew|mu|=[np.float64(0.7265), np.float64(3.0777)]
+Paley T7 (QR {1,2,4}): Nash=[0.143 0.143 0.143 0.143 0.143 0.143 0.143]  KL 0.0000->0.0e+00  skew|mu|=[np.float64(2.6458)]
+
+Readings: transitive -> PURE Nash on the dominator (H=1); regular/Paley -> UNIFORM Nash (H=max).
+OMWU frequencies = skew spectrum {mu} = determinant lens det(I+S)=prod(1+mu^2) (THM-468/472).
+E7 direction (HYP-2530): the 56-rep symplectic form omega is a 'continuous tournament' (28 antipodal
+pairs); Weyl-uniform Nash; OMWU frequencies ~ E7 exponents {1,5,7,9,11,13,17}/h=18.
