@@ -117,11 +117,31 @@ walk vector and reading its entries.
 
 ## Handoff / what to chase next
 
-1. **The diagonal walk data `(Aᵏ1)ᵢ` and the transfer matrix `M[a,b]`.** The contracted
-   `1ᵀAᵏ1` is spectral; the per-vertex `Aᵏ1` is not. The S7/THM-080 program lives on
-   `M[a,b]` (a *bordered* / pointed object). Is there a "pointed complement shift" — a
-   closed form for `1ₐᵀ(xI−A)⁻¹1_b` — and exactly where does it stop being spectral? That
-   boundary is the boundary between the easy spectral skeleton and the angle data.
+1. **The de-contraction wall — located (this session).** Probing how spectrality dies as
+   one de-contracts the resolvent `R = (xI−A)⁻¹` (verified on all 3 genuine cospectral,
+   different-`H` classes at n=6, `decontraction_wall_monad_s8.py`):
+
+   | functional | spectral? |
+   |---|---|
+   | `1ᵀR1` (full contraction) | **yes** (THM-507) |
+   | `tr R = charA'/charA` | **yes** (log-derivative) |
+   | `M₂ = Σₐ(R1)ₐ²` (2nd moment of resolvent row sums) | **yes** |
+   | `‖R‖_F² = tr(RRᵀ)` | **yes** |
+   | `M₃ = Σₐ(R1)ₐ³` (3rd moment) | **NO** (splits all 3 classes) |
+
+   The wall is between the 2nd and 3rd moment of the resolvent row-sum vector `r = R1` —
+   the *exact resolvent-space echo* of the classical score wall "`Σsₐ²` spectral (Moon),
+   `Σsₐᵖ` (`p ≥ 3`) not." And it is not a coincidence of `x`: expanding
+   `(R1)ₐ = Σ_k(Aᵏ1)ₐ x^{−k−1}`, the leading nontrivial Taylor coefficient of `M₂` is
+   `Σₐ sₐ² = (A1)ᵀ(A1)` — spectral by Moon — whereas `M₃` carries `Σₐ sₐ³`, the first
+   non-spectral score moment. So `M₂ ⊃ Σsₐ²` and `M₃ ⊃ Σsₐ³`: the resolvent moments
+   *contain* the score moments as their leading coefficients, and inherit the wall from
+   them. (Note `tr(RRᵀ)` spectral is itself a small surprise — `RRᵀ` mixes `A` and `Aᵀ`,
+   and stays spectral via the same complement mechanism; the two-sided walk counts
+   `1ᵀ(Aᵀ)ⁱAʲ1` deserve their own closed form.) **Open:** is every two-sided walk count
+   `1ᵀ(Aᵀ)ⁱAʲ1` spectral (a double complement-shift)? and where is the pointed
+   `1ₐᵀ R 1_b` / `M[a,b]` (THM-080) relative to this wall? — that is the boundary between
+   the spectral skeleton and the genuine eigenvector-angle data.
 2. **Other complement-stable families.** The proof is purely "complement = converse." Which
    *other* matrices `A` with `A + Aᵀ = cJ + dI` inherit a spectral walk function? (c-tournaments
    already appear in `walk_gf_symmetry.py`.) This isolates the algebraic core away from

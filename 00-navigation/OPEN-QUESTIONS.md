@@ -28,9 +28,20 @@ disjoint-cycle-packing polynomial `Φ(T;{y_k}) = Σ_{packings}∏ y_{|C|}`. Open
    Pfaffian route recovers only the spectral shadow; the non-spectral even content
    `I(Ω_even,·)` (splits 3@n6,46@n7) has NO determinantal home, like H. **The det/per
    (Valiant) dichotomy = the spectral/non-spectral boundary, face by face**; the ODD face
-   has no determinantal object at all (irreducibly non-spectral). STILL OPEN: the
+   has no determinantal object at all (irreducibly non-spectral). **WALK-COUNT LINCHPIN
+   NOW PROVED (monad-S8, THM-507/HYP-2518):** the clean general proof that walk counts
+   `w_k=1ᵀAᵏ1` are spectral — exact closed form `1ᵀadj(xI−A)1=(−1)ⁿcharA(−x−1)−charA(x)`,
+   equivalently `F(x)=∏(x+1+λᵢ)/∏(x−λᵢ)−1`, via the matrix-determinant lemma + the
+   tournament identity `A−J=−(Aᵀ+I)` (the all-ones perturbation collapses to a
+   transpose-shift with FORCED eigenvalues `{−1−λᵢ}`, no angle dependence; this is exactly
+   why tournaments escape the cospectral walk obstruction `C₄⊔K₁` vs `K_{1,4}`). So the
+   whole A-affine pencil determinant is now PROVABLY spectral, not just verified ≤n7;
+   `w_k=C(n,k+1)+spectral cycle corrections` (`w_2=C(n,3)+2c₃`, `w_3=C(n,4)+(2n−3)c₃`);
+   reciprocity `(1+F(x))(1+F(−x−1))=1` centred at `−1/2` (= fixed point of complementation
+   on the spectral axis, same `−1/2` as THM-055/059/080). STILL OPEN: the
    permanental ROOTS as an invariant; the even/all dimension growth law; the general-n
-   carrier deficit of (char,perm); a clean general proof that walk counts are spectral.
+   carrier deficit of (char,perm); the POINTED walk data `1ₐᵀ(xI−A)⁻¹1_b` / `M[a,b]` —
+   where exactly does the spectral closed form break as we de-contract (handoff, this session).
 2. **The signed odd face is "more spectral" — RESOLVED at n=7.** `sgn_odd =
    Σ_{odd packings}(−1)^{#cyc} = I(Ω,−1) = −χ̃(Ind Ω)`, the reduced **Euler characteristic of
    the odd-cycle packing complex**. At n=7 it equals `(1+e₃+e₅+e₆) + (c₆−c₇)` (verified
