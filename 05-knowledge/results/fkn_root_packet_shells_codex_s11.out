@@ -1,0 +1,91 @@
+========================================================================
+FKN ROOT PACKET SHELLS AROUND THE TRANSITIVE TILING
+========================================================================
+Free tiles are the non-simple interval roots of the fixed-path chamber; shell1 gives the dictator atoms, shell2 their first packet interactions.
+
+------------------------------------------------------------------------
+n=4  (m=C(n-1,2)=3 free tiles)
+------------------------------------------------------------------------
+n=4 shell1: m=3 one-flip atoms
+  unique iso classes  = 3 (expect m)
+  unique score multisets = 3 (expect m)
+  height summary (gap g -> count, c3, H):
+    g=1: count=2, c3=1, H=3
+    g=2: count=1, c3=2, H=5
+n=4 shell2: 3 two-flip packets
+  c3 packet law exact on all 3 pairs
+  same-end : count=  2, q-signs=(neg=2, zero=0, pos=0), q-range=[-2,-2]
+  cross-end: count=  0, q-signs=(neg=0, zero=0, pos=0), q-range=[]
+  disjoint : count=  1, q-signs=(neg=0, zero=1, pos=0), q-range=[0,0]
+
+------------------------------------------------------------------------
+n=5  (m=C(n-1,2)=6 free tiles)
+------------------------------------------------------------------------
+n=5 shell1: m=6 one-flip atoms
+  unique iso classes  = 6 (expect m)
+  unique score multisets = 6 (expect m)
+  height summary (gap g -> count, c3, H):
+    g=1: count=3, c3=1, H=3
+    g=2: count=2, c3=2, H=5
+    g=3: count=1, c3=3, H=9
+n=5 shell2: 15 two-flip packets
+  c3 packet law exact on all 15 pairs
+  same-end : count=  8, q-signs=(neg=8, zero=0, pos=0), q-range=[-2,-2]
+  cross-end: count=  1, q-signs=(neg=0, zero=0, pos=1), q-range=[4,4]
+  disjoint : count=  6, q-signs=(neg=0, zero=2, pos=4), q-range=[0,4]
+
+------------------------------------------------------------------------
+n=6  (m=C(n-1,2)=10 free tiles)
+------------------------------------------------------------------------
+n=6 shell1: m=10 one-flip atoms
+  unique iso classes  = 10 (expect m)
+  unique score multisets = 10 (expect m)
+  height summary (gap g -> count, c3, H):
+    g=1: count=4, c3=1, H=3
+    g=2: count=3, c3=2, H=5
+    g=3: count=2, c3=3, H=9
+    g=4: count=1, c3=4, H=17
+n=6 shell2: 45 two-flip packets
+  c3 packet law exact on all 45 pairs
+  same-end : count= 20, q-signs=(neg=20, zero=0, pos=0), q-range=[-4,-2]
+  cross-end: count=  4, q-signs=(neg=0, zero=0, pos=4), q-range=[4,8]
+  disjoint : count= 21, q-signs=(neg=0, zero=3, pos=18), q-range=[0,16]
+
+------------------------------------------------------------------------
+n=7  (m=C(n-1,2)=15 free tiles)
+------------------------------------------------------------------------
+n=7 shell1: m=15 one-flip atoms
+  unique iso classes  = 15 (expect m)
+  unique score multisets = 15 (expect m)
+  height summary (gap g -> count, c3, H):
+    g=1: count=5, c3=1, H=3
+    g=2: count=4, c3=2, H=5
+    g=3: count=3, c3=3, H=9
+    g=4: count=2, c3=4, H=17
+    g=5: count=1, c3=5, H=33
+n=7 shell2: 105 two-flip packets
+  c3 packet law exact on all 105 pairs
+  same-end : count= 40, q-signs=(neg=40, zero=0, pos=0), q-range=[-8,-2]
+  cross-end: count= 10, q-signs=(neg=0, zero=0, pos=10), q-range=[4,16]
+  disjoint : count= 55, q-signs=(neg=0, zero=4, pos=51), q-range=[0,52]
+
+------------------------------------------------------------------------
+n=8  (m=C(n-1,2)=21 free tiles)
+------------------------------------------------------------------------
+n=8 shell1: m=21 one-flip atoms
+  unique iso classes  = 21 (expect m)
+  unique score multisets = 21 (expect m)
+  height summary (gap g -> count, c3, H):
+    g=1: count=6, c3=1, H=3
+    g=2: count=5, c3=2, H=5
+    g=3: count=4, c3=3, H=9
+    g=4: count=3, c3=4, H=17
+    g=5: count=2, c3=5, H=33
+    g=6: count=1, c3=6, H=65
+n=8 shell2: 210 two-flip packets
+  c3 packet law exact on all 210 pairs
+  same-end : count= 70, q-signs=(neg=70, zero=0, pos=0), q-range=[-16,-2]
+  cross-end: count= 20, q-signs=(neg=0, zero=0, pos=20), q-range=[4,32]
+  disjoint : count=120, q-signs=(neg=0, zero=5, pos=115), q-range=[0,160]
+
+DONE.
