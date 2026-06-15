@@ -239,7 +239,9 @@ non-spectral dimensions:
 - **Verified** (`04-computation/ocf_two_dimensions_monad.py`, n=8, 159 286 members /
   1522 cospectral classes): carrier basis `{c7,D33,D35}` rank **3** (reproduces S3);
   level-sum basis `{c7, D33+D35}` rank **2**, `H` in span; `{D33,D35}` independent (rank
-  2) yet `H` reads only their sum. So `dim(fine)=3` but `dim_func(H)=2`.
+  2) yet `H` reads only their sum. So `dim(fine)=3` but `dim_func(H)=2`. **n=9 confirms**
+  (60 762 members): carrier `{c7,c9,D33,D35,T333}` rank 5, level-sum `{c7+c9,D33+D35,T333}`
+  rank 3=⌊9/3⌋, `H` in span — so `dim(fine)=5` but `dim_func(H)=3`.
 
 This is the same over-counting S3 caught at `6→5` (trace→packing basis), pushed one level
 deeper: even the packing basis over-counts *for H*, because `H` sees only the level
