@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-15-S3: FKN ⟹ Arrow — the tournament cube IS the social-choice cube (THM-512, T823, HYP-2534..2536, OPEN-Q-102)
+
+**Status:** THM-512 proved/verified (Arrow/Condorcet bridge exact; c3=Guilbaud quadratic; Möbius sieve verified c3 n≤6). Builds on THM-511. Adversarial check running.
+**Next:** (1) OPEN-Q-102 — is the OCF H=I(Ω,2) a noise-stability Stab_ρ functional (mirroring Kalai ρ=-1/3)? forbidden H ⟷ forbidden Condorcet spectra. (2) the H multi-vertex Möbius sieve (HYP-2534, depth=band-limit D). (3) Friedgut/KKL: which invariants are juntas / which arc is decisive. (4) connect Guilbaud (arcsine/level-2) to the project's pi/Wallis constants (everything-is-the-triangle).
+**Sources:** 04-computation/{fkn_tiling_cube,mobius_sieve_arrow}_macmini_0615s3.py + .out; THM-512; reflection fkn-arrow-and-the-tournament-as-a-vote.md.
+
 ## Lead mac-mini-2026-06-15-S1: baby Hodge = the det/permanent (P/#P) wall through the moment problem (THM-509, HYP-2526..2528, OPEN-Q-099, T820)
 
 **Status:** THM-509 proved (Layer-1 det-side spectral-blindness rigorous) + all holes certified moment-interior (n=6,7); holes shown to be pure integrality gaps (flag-cut refuted). Adversarially verified.

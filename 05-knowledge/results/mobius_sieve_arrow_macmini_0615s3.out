@@ -1,0 +1,25 @@
+========================================================================
+(1) MÖBIUS VERTEX-DELETION SIEVE: Σ_{∅≠A⊆[n-1]} (-1)^{|A|+1} φ(T-A) =? φ(T)
+========================================================================
+  n=4: c3 sieve == c3(T) on 48/64 sampled tournaments; (c3-sieve) residual values seen: [1]
+        codim-c terms: count C(3,c), sign (-1)^(c+1); Σ(-1)^(c+1)C(3,c) = 1
+  n=5: c3 sieve == c3(T) on 400/400 sampled tournaments
+        codim-c terms: count C(4,c), sign (-1)^(c+1); Σ(-1)^(c+1)C(4,c) = 1
+  n=6: c3 sieve == c3(T) on 400/400 sampled tournaments
+        codim-c terms: count C(5,c), sign (-1)^(c+1); Σ(-1)^(c+1)C(5,c) = 1
+
+========================================================================
+(2) ARROW / CONDORCET: random tournaments on m candidates
+========================================================================
+  m=3: P(transitive/rational)=0.7500 (=6/8); E[c3]=0.250=C(m,3)/4=0.250; Var(c3)=0.1875 (formula 3C(m,3)/16=0.1875: True)
+  m=4: P(transitive/rational)=0.3750 (=24/64); E[c3]=1.000=C(m,3)/4=1.000; Var(c3)=0.7500 (formula 3C(m,3)/16=0.7500: True)
+  m=5: P(transitive/rational)=0.1172 (=120/1024); E[c3]=2.500=C(m,3)/4=2.500; Var(c3)=1.8750 (formula 3C(m,3)/16=1.8750: True)
+  m=6: P(transitive/rational)=0.0220 (=720/32768); E[c3]=5.000=C(m,3)/4=5.000; Var(c3)=3.7500 (formula 3C(m,3)/16=3.7500: True)
+  m=7: P(transitive/rational)=0.0024 (=5040/2097152); E[c3]=8.750=C(m,3)/4=8.750; Var(c3)=6.5625 (formula 3C(m,3)/16=6.5625: True)
+  Condorcet paradox = directed 3-cycle in the (majority) tournament = minimal odd cycle
+  = the OCF obstruction. Kalai: P_rational(majority,3 cand) = 3/4 + 3/4 Stab_{-1/3}[Maj]
+  -> Guilbaud's number 3/4+(3/4)(1-(2/pi)arcsin(1/3)) ≈ 0.9123 as #voters->inf.
+  Var(c3)=3C(m,3)/16 sits ENTIRELY at Walsh level 2 (THM-163/THM-511): c3 IS the
+  Condorcet/Guilbaud quadratic; transitive (c3=0) = the rational/Arrow-dictator ground state.
+
+DONE.
