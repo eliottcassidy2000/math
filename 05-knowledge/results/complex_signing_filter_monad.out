@@ -1,0 +1,45 @@
+
+========== n=3 ==========
+  processed 8 (exhaustive=True)
+  r=3: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=2, #distinct (charA,charM)=2;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=4: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=2, #distinct (charA,charM)=2;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=6: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=2, #distinct (charA,charM)=2;  H ambiguous: charA=0 -> (charA,charM)=0
+
+========== n=4 ==========
+  processed 64 (exhaustive=True)
+  r=3: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=3, #distinct (charA,charM)=3;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=4: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=3, #distinct (charA,charM)=3;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=6: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=3, #distinct (charA,charM)=3;  H ambiguous: charA=0 -> (charA,charM)=0
+
+========== n=5 ==========
+  processed 1024 (exhaustive=True)
+  r=3: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=9, #distinct (charA,charM)=9;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=4: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=9, #distinct (charA,charM)=9;  H ambiguous: charA=0 -> (charA,charM)=0
+  r=6: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=9, #distinct (charA,charM)=9;  H ambiguous: charA=0 -> (charA,charM)=0
+
+========== n=6 ==========
+  processed 32768 (exhaustive=True)
+  r=3: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=28, #distinct (charA,charM)=28;  H ambiguous: charA=3 -> (charA,charM)=3
+  r=4: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=28, #distinct (charA,charM)=28;  H ambiguous: charA=3 -> (charA,charM)=3
+  r=6: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=28, #distinct (charA,charM)=28;  H ambiguous: charA=3 -> (charA,charM)=3
+
+========== n=7 ==========
+  processed 30000 (exhaustive=False)
+  r=3: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=168, #distinct (charA,charM)=168;  H ambiguous: charA=47 -> (charA,charM)=47
+  r=4: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=168, #distinct (charA,charM)=168;  H ambiguous: charA=47 -> (charA,charM)=47
+  r=6: charM_omega -> SPECTRAL (no new info)
+        #distinct charA=168, #distinct (charA,charM)=168;  H ambiguous: charA=47 -> (charA,charM)=47

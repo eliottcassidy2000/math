@@ -1,0 +1,30 @@
+  (1) S = A-A^T == 2A-(J-I) [pencil(2,-1,0)] : HOLDS (n=5)
+  (2) char poly of pencil P(alpha,beta,gamma)=alpha*A+beta*(J-I)+gamma*I spectral?
+  n=4 (exhaustive=True, 64 tournaments):
+     P(1, 0, 0): SPECTRAL
+     P(2, -1, 0): SPECTRAL
+     P(3, 1, 0): SPECTRAL
+     P(1, 2, -1): SPECTRAL
+     P(5, -3, 2): SPECTRAL
+     P(2, 7, 0): SPECTRAL
+  n=5 (exhaustive=True, 1024 tournaments):
+     P(1, 0, 0): SPECTRAL
+     P(2, -1, 0): SPECTRAL
+     P(3, 1, 0): SPECTRAL
+     P(1, 2, -1): SPECTRAL
+     P(5, -3, 2): SPECTRAL
+     P(2, 7, 0): SPECTRAL
+  n=6 (exhaustive=True, 32768 tournaments):
+     P(1, 0, 0): SPECTRAL
+     P(2, -1, 0): SPECTRAL
+     P(3, 1, 0): SPECTRAL
+     P(1, 2, -1): SPECTRAL
+     P(5, -3, 2): SPECTRAL
+     P(2, 7, 0): SPECTRAL
+  n=7 (exhaustive=False, 20000 tournaments):
+     P(1, 0, 0): SPECTRAL
+     P(2, -1, 0): SPECTRAL
+     P(3, 1, 0): SPECTRAL
+     P(1, 2, -1): SPECTRAL
+     P(5, -3, 2): SPECTRAL
+     P(2, 7, 0): SPECTRAL

@@ -141,6 +141,44 @@ Three consequences:
    can't see `H`" is the `P ≠ #P` boundary in miniature, and the even/odd asymmetry shows
    the boundary is drawn by the **sign**, not the length.
 
+## Sharpening (VERIFIED + clean proof) — the WHOLE signed-adjacency pencil is spectral
+
+The skew matrix is not special. Because `Aᵀ = J − I − A`, **every** complex/real signing
+`M_ω = ω A + ω̄ Aᵀ = (ω − ω̄)A + ω̄(J − I)` is **affine in `A` modulo the rank-1 all-ones
+`J`**. More generally, for the entire 3-parameter pencil
+
+> **`P(α,β,γ) = αA + β(J − I) + γI`**
+
+(which contains `A` itself `(1,0,0)`, the skew `S = 2A−(J−I)` `(2,−1,0)`, and every
+Hermitian signing `M_ω`, including Mohar's second-kind `r=6` matrix), the characteristic
+polynomial is SPECTRAL — a function of `charA`. **VERIFIED** for a spread of
+`(α,β,γ)` exhaustively n≤6, sampled n=7 (`signed_pencil_spectral_monad.py`). Also
+VERIFIED for the Hermitian length-mod-`r` signings `r = 3, 4, 6`
+(`complex_signing_filter_monad.py`): all spectral, even though `M_ω` weights a cycle of
+length `L` by `2cos(2πL/r)` and so *filters cycle length by residue mod r* — the filter
+does **not** escape the spectrum, even at `r=6` (tuned to the length-6 non-spectrality
+onset).
+
+**Clean proof (unconditional reduction).** With `y = x + β − γ`,
+`det(xI − P) = det(yI − αA − βJ) = det(yI − αA)·(1 − β·1ᵀ(yI−αA)⁻¹1)` (matrix-determinant
+lemma). `det(yI − αA) = αⁿ·charA(y/α)` is spectral; the bracket is the walk-generating
+function `1ᵀ(yI−αA)⁻¹1 = Σ_k α^k w_k y^{−k−1}`, spectral because the walk counts
+`w_k = 1ᵀAᵏ1` are spectral. **QED (modulo `w_k` spectral).** So the only way the all-ones
+direction enters any A-affine determinant is through walk counts, which collapse to traces.
+
+This is the sharp statement of the principle:
+
+> **No determinant of an A-affine matrix can see the non-spectral content of a
+> tournament.** "The spectrum can't see H" is not about the char poly of `A` in
+> particular — it is a property of the entire linear-algebraic / determinantal world.
+> To reach `H` (or any non-spectral invariant) you MUST cross to the permanent / #P
+> side. The Valiant `det`∈P vs `per`∈#P boundary is exactly the spectral/non-spectral
+> boundary, and the signed pencil is the whole "easy" (spectral) shore.
+
+The only escape a single matrix could offer would be a *nonlinear* construction or a
+genuinely different (non-A-affine) matrix; the permanent is the canonical one, and it is
+non-spectral precisely because it is not a determinant.
+
 ## Engineering corollary (domain 12, a NEGATIVE result worth recording)
 
 For the H-fingerprint program: **do not compute the skew spectrum / Pfaffian — it is
@@ -158,12 +196,13 @@ strictly dominates the spectrum and `H`), `I(Ω_even,·)`, the packing carriers
   to PROVED upgrades Claim 2 to a clean theorem of this project.
 - **The permanental ROOTS** (still open from S6): the *roots* of `per(xI+A)` as a
   non-spectral invariant — are they a cleaner carrier of `(c₆,c₇,…)` than the coefficients?
-- **Is there a "third matrix"** whose determinant gives a *useful* signed slice we have not
-  named (e.g. a weighted/Hermitian signing that isolates a residue class of lengths mod
-  `r>2`)? The sign argument says only mod-2 (even) is reachable by a single real matrix; a
-  *complex* signing `S_{ij}=ω, S_{ji}=ω̄` (root of unity) might filter lengths mod `r` —
-  and would still be a determinant, hence (conjecturally) spectral. Testing this would map
-  the full "spectral reach of signed slices."
+- **The complex-signing question is now RESOLVED (this session).** The Hermitian signings
+  `M_ω` that filter cycle length mod `r` (`r=3,4,6` tested) are ALL spectral — see the
+  Sharpening above. The whole A-affine pencil is the spectral shore. So there is *no*
+  single A-affine determinant that escapes the spectrum; the open frontier is genuinely
+  *nonlinear* / *non-A-affine* constructions (e.g. the permanent of a non-trivially
+  weighted matrix, immanants between det and per, or a matrix whose entries are
+  themselves tournament sub-invariants).
 - **Tie to path homology / #P:** the det(spectral) / per(#P) split here is the same
   easy/hard split as GLMY chain-rank (poly) vs the packing/independence counts (#P). The
   skew matrix is the spectral (poly) probe of the even cycle space; the cycle-space
