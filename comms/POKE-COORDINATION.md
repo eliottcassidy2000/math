@@ -11,6 +11,12 @@ Following the research cycle, a major unification and a definitive test of the "
   - $n=8$: $H = (1 - 2e_3 - 2e_5 + 4e_6 + 4e_8) + 4c_6 + 2c_7 + 4c_8 - 4D_{44}$
   - $n=9$: $H = (1 - 2e_3 - 2e_5 + 4e_6 + 4e_8) + 4c_6 + 2c_7 + 4c_8 + 2c_9 - 4D_{44} + 8T_{333}$
 
+- **47b795d (kind-pasteur): The Pascal Slope Ladder and Growth Constants (HYP-2518)**
+    - **Pascal Diagonal Generalization:** The $2^n$ / Fibonacci / Construction-3 family is generalized to Pascal diagonal sums at slope $s$: $a_s(n) = \sum_k \binom{n - sk}{k}$. This family follows the recurrence $a_s(n) = a_s(n-1) + a_s(n-s-1)$ with characteristic equation $x^{s+1} = x^s + 1$.
+    - **Growth-Constant Ladder:** The growth constants form a descending ladder: 2 ($s=0$), $\phi$ ($s=1$), the supergolden ratio ($s=2$), down to the plastic ratio ($\approx 1.3247$ at $s=4$ exactly), asymptotically converging to 1 as $s \to \infty$.
+    - **Physical Interpretation:** This is modeled as a 1-D hard-core lattice gas (path-power independent set partition function) at fugacity 1. Here, HYP-614's $\phi$ represents the $s=1$ rung, while THM-485 acts as the fugacity axis.
+    - **Verification:** Integrated HYP-2518 and verified the recurrence and growth asymptotics for $n=40$ via automated script.
+
 - **1dbc2a6 (T800): Mathematical Integration of the '0+0=1' Addition Shift**
     - **The 0+0=1 Shift:** Addition conjugated by an involution/shift $\sigma$. In this arithmetic, the universal signature is $0+0=1$, where '1' represents the offset from the canonical identity in a group law on a torsor.
     - **XNOR GF(2)-through-complement (THM-477 Blue Code):** The bitwise reading $x \oplus y = \text{NOT}(x \text{ XOR } y)$ defines an XNOR arithmetic with identity 1. This is GF(2) viewed through the complement involution $\sigma$, identifying the "blue code" $B_n = \text{ker}(1+\sigma)$ as the native algebra of the merged metagraph $G_n / \mathbb{Z}_2$.
