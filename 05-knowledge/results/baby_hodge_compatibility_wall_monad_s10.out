@@ -1,0 +1,71 @@
+Moment shadow versus compatibility wall
+HYP-2530 / T822 / OPEN-Q-101 candidate
+
+[1] Exhaustive n=6 baby-Hodge holes and convex spectral certificates
+  hole (c3,c5)=(5,3) = 1/2*(5,2) + 1/2*(5,4)
+    lower witness: score=(2, 2, 2, 2, 2, 5) H=15 D=0 bits=140
+    upper witness: score=(1, 2, 2, 2, 4, 4) H=19 D=0 bits=20
+  hole (c3,c5)=(5,5) = 1/2*(5,4) + 1/2*(5,6)
+    lower witness: score=(1, 2, 2, 2, 4, 4) H=19 D=0 bits=20
+    upper witness: score=(1, 2, 2, 2, 4, 4) H=27 D=1 bits=80
+  hole (c3,c5)=(7,8) = 1/2*(7,7) + 1/2*(7,9)
+    lower witness: score=(2, 2, 2, 2, 3, 4) H=37 D=2 bits=152
+    upper witness: score=(2, 2, 2, 2, 3, 4) H=33 D=0 bits=88
+  hole (c3,c5)=(8,7) = 1/2*(8,6) + 1/2*(8,8)
+    lower witness: score=(2, 2, 2, 3, 3, 3) H=45 D=4 bits=408
+    upper witness: score=(2, 2, 2, 3, 3, 3) H=41 D=2 bits=280
+  hole (c3,c5)=(8,9) = 2/3*(8,8) + 1/3*(8,11)
+    lower witness: score=(2, 2, 2, 3, 3, 3) H=41 D=2 bits=280
+    upper witness: score=(2, 2, 2, 3, 3, 3) H=43 D=1 bits=344
+  hole (c3,c5)=(8,10) = 1/3*(8,8) + 2/3*(8,11)
+    lower witness: score=(2, 2, 2, 3, 3, 3) H=41 D=2 bits=280
+    upper witness: score=(2, 2, 2, 3, 3, 3) H=43 D=1 bits=344
+
+  Flagship hole:
+    (c3,c5)=(8,10) is spectrally moment-interior: it sits in the same
+    c3-fiber between realized points (8,8) and (8,11).
+    Therefore the one-particle spectral/moment shadow permits it; the
+    obstruction must live in the compatibility/conflict layer (THM-499 D).
+
+[2] Odd Faulhaber moments as a Stieltjes cone
+  Exact identity: S_{2r+1}(n) = sum_{i=1..n} i*(i^2)^r
+  So the odd-moment Hankel matrices are PSD; leading determinants are:
+    n=1: leading Hankel determinants [1, 0, 0, 0]
+    n=2: leading Hankel determinants [3, 18, 0, 0]
+    n=3: leading Hankel determinants [6, 360, 86400, 0]
+    n=4: leading Hankel determinants [10, 3000, 15120000, 548674560000]
+    n=5: leading Hankel determinants [15, 15750, 740880000, 967861923840000]
+    n=6: leading Hankel determinants [21, 61740, 17425497600, 341461686730752000]
+  Interpretation: the odd-moment lane already lives in a positive moment cone;
+  the failure of exact p>=3 towers is again beyond positivity, at the
+  Bernoulli/integrality/compatibility layer.
+
+[3] Cross-thread synthesis
+  Tournament side: c5=10 is a baby-Hodge hole that survives the simplest
+  moment/convex relaxation.
+  Faulhaber side: odd moments satisfy exact Hankel positivity automatically.
+  Shared lesson: moment positivity is only the one-particle shadow.
+  Real obstructions are packet/compatibility/integrality constraints.
+
+[4] Proof-carrier Tournament Analysis
+  vertices = ['spectral_convex_witness', 'alpha2_compatibility_wall', 'faulhaber_hankel_positivity', 'repunit_prime_atom_supply']
+  observable = majority(exact_local_certificate, cross_thread_reach,
+                       obstruction_sharpness, scalable_proof_leverage)
+  tie path = ['spectral_convex_witness', 'alpha2_compatibility_wall', 'faulhaber_hankel_positivity', 'repunit_prime_atom_supply']
+  score_hist = {0: 1, 1: 1, 2: 1, 3: 1}
+  directed_3cycles = 0
+  scc_sizes = [1, 1, 1, 1]
+  hamiltonian_paths = 1
+  edges:
+    spectral_convex_witness -> ['repunit_prime_atom_supply']
+    alpha2_compatibility_wall -> ['faulhaber_hankel_positivity', 'repunit_prime_atom_supply', 'spectral_convex_witness']
+    faulhaber_hankel_positivity -> ['repunit_prime_atom_supply', 'spectral_convex_witness']
+    repunit_prime_atom_supply -> []
+
+[5] Next questions
+  1. Upgrade the convex baby-Hodge certificates to actual flag-algebra or
+     compatibility inequalities cutting the hole c5=10.
+  2. Make the HYP-2458 packet idea explicit: which compatibility variable
+     plays the role of alpha_2 / D on the Faulhaber side?
+  3. Compare HYP-2529 prime-length atoms with moment-feasible but
+     atom-forbidden overlap lengths.
