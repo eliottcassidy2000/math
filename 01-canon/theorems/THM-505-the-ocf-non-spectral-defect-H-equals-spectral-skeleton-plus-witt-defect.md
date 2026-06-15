@@ -357,11 +357,20 @@ reading for `H` is the **elementary-symmetric (char-poly coefficient)** one, not
 power-sum/trace (`W_k`) one — because `H` is a packing count, so `e_m` and `H` share units.
 
 **Skeleton in the natural (e_m) basis** — a transparent `Z`-combination of char-poly
-coefficients (no `W_k`), VERIFIED `2000/2000` n=7, `1500/1500` n=8 (bracket constant on all
-167 cospectral classes at n=7):
+coefficients (no `W_k`), VERIFIED `2000/2000` n=7, `1500/1500` n=8, `800/800` n=9 (bracket
+constant on all 167 cospectral classes at n=7). Canonical (simple-cycle-carrier) form:
+`H = S + Σ(carrier)·(±2^{level})`, `S = 1 − 2e₃ − 2e₅ + 4·Σ_{m even ≥6} e_m`:
 
 > **n=7:  H = (1 − 2e₃ − 2e₅ + 4e₆) + 4c₆ + 2c₇.**
 > **n=8:  H = (1 − 2e₃ − 2e₅ + 4e₆ + 4e₈) + 4c₆ + 2c₇ + 4c₈ − 4·D₄₄**   (`D₄₄` = disjoint 4-cycle pairs).
+> **n=9:  H = (1 − 2e₃ − 2e₅ + 4e₆ + 4e₈) + 4c₆ + 2c₇ + 4c₈ + 2c₉ − 4·D₄₄ + 8·T₃₃₃**   (`T₃₃₃` = disjoint triangle triples).
+
+The skeleton picks up `e₃, e₅` (`= −c₃, −c₅`, the spectral level-1 odd cycles, THM-118) and
+the **even-m** Sachs coefficients (spectral shadows of the disjoint-odd-**pair** level `α₂`,
+weight `2² = 4`); odd-m `e_m` (`m ≥ 7`) hold a single odd-cycle carrier and stay in the
+carriers. The bare `4·Σ_{even}e_m` skeleton is exact while `α₄ = 0` (`n ≤ 11`); at `n = 12`
+the `(3,3,3,3)` quadruple (weight `2⁴`) refines `e₁₂` — the level structure reappears inside
+the skeleton, one rung per new packing level.
 
 The **defect lock** is one Sachs coefficient: `e₆^{signed} = D₃₃ − c₆` (VERIFIED n=6,7,8).
 `c₆` is non-spectral precisely because it is locked to `D₃₃` by this single char-poly

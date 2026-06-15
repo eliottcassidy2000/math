@@ -159,13 +159,34 @@ count is `A000009 − 3`. The spectrum, `H`, the even/all faces, the signed vari
 full fine packing vector are a single lattice of specializations of one polynomial; the
 project has been studying its shadows one fugacity at a time.
 
-## Handoffs
+## The general Sachs-basis skeleton (derived, verified n≤9)
 
-1. **The general-`n` Sachs-basis skeleton.** Conjecture: for every `n` the spectral skeleton
-   of `H` is `1 + Σ_m w_m e_m` with universal integer `w_m` (`w₃ = w₅ = −2`, `w₆ = +4`,
-   `w₈ = +4`, …), and the carriers are the *unsigned-odd resolutions* of the remaining
-   `e_m`. Find the `w_m` pattern (is `w_m = ±2^{level}`, mirroring the carrier weights?).
-   Verified `n=7,8` here.
+The `w_m` pattern resolves cleanly. The canonical (simple-cycle-carrier) form is
+
+> **H = S + Σ (carrier)·(±2^{level})**,  with  **S = 1 − 2e₃ − 2e₅ + 4·Σ_{m even, m≥6} e_m**,
+
+and carriers = the simple cycle counts `c_k` (`k≥6`; odd `k` weight `2`, even `k` weight `4`)
+plus the overlap/multi-cycle configs (`D₄₄` weight `−4`, `T₃₃₃` weight `+8`, …). Verified:
+
+> n=7: `H = (1−2e₃−2e₅+4e₆) + 4c₆ + 2c₇`  (`2000/2000`)
+> n=8: `H = (1−2e₃−2e₅+4e₆+4e₈) + 4c₆+2c₇+4c₈ − 4D₄₄`  (`1500/1500`)
+> n=9: `H = (1−2e₃−2e₅+4e₆+4e₈) + 4c₆+2c₇+4c₈+2c₉ − 4D₄₄ + 8T₃₃₃`  (`800/800`)
+
+The **conceptual reason** the skeleton picks up exactly `e₃, e₅` and the *even-m* coefficients:
+`e₃ = −c₃`, `e₅ = −c₅` are the spectral level-1 odd cycles (THM-118), entering `H` at level 1
+(weight `2`), so `2c₃ = −2e₃`, `2c₅ = −2e₅`. The **even-m** Sachs coefficient `e_{2t}` is the
+spectral shadow of the disjoint-**odd-pair** level `α₂` (a disjoint odd pair has `ℓ=2`, sign
+`+1`, and even vertex-count `2t`: `(3,3)→6, (3,5)→8, (5,5)/(3,7)→10`), so `α₂` enters `H` at
+level 2 (weight `4 = 2²`), giving `+4 e_{2t}` in the skeleton plus the even-cycle carriers.
+**Odd-m** coefficients `e_{2t+1}` (`m≥7`) contain a single odd cycle `c_{2t+1}` — itself a
+non-spectral carrier — so the whole odd `e_m` goes into carriers, never the skeleton.
+*Threshold caveat:* the bare `4·Σ_{even m}e_m` skeleton is exact only while `α₄ = 0`
+(`n ≤ 11`); at `n = 12` the quadruple level `(3,3,3,3)→12` switches on and the even-m
+coefficient `e₁₂` then mixes the `α₂` (weight 4) and `α₄` (weight 16) shadows, refining the
+coefficient — the level structure of THM-505 reappears in the skeleton itself, one rung per
+new packing level.
+
+## Handoffs
 2. **The even / all faces as new invariants.** `I(Ω_even, 2)` and `I(Ω_all, 2)` are
    non-spectral on the same schedule as `H` but have not been studied. Do they have a
    combinatorial meaning (analogue of Rédei's Hamiltonian-path count)? Is `I(Ω_all, 2)` a

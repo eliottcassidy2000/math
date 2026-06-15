@@ -266,3 +266,24 @@ def verify_skeleton_in_e_basis():
 
 if __name__ == '__main__':
     verify_skeleton_in_e_basis()
+
+
+def verify_skeleton_n9():
+    """n=9 canonical (simple-cycle-carrier) Sachs-basis form:
+       H = (1 - 2e3 - 2e5 + 4e6 + 4e8) + 4c6 + 2c7 + 4c8 + 2c9 - 4*D44 + 8*T333.
+       Pattern conjecture:  skeleton = 1 - 2e3 - 2e5 + 4*sum_{even m>=6} e_m ;
+       carriers = simple cycles (even weight 4, odd weight 2) + overlap configs."""
+    import random
+    rng = random.Random(21); f = tot = 0
+    for _ in range(800):
+        A = random_tournament(9, rng); inv = packing_invariants(A, 9); Nl = inv['Nlam']
+        cp = charpoly_int(A, 9)
+        e3,e5,e6,e8 = cp[3],cp[5],cp[6],cp[8]
+        c6=Nl.get((6,),0); c7=Nl.get((7,),0); c8=Nl.get((8,),0); c9=Nl.get((9,),0)
+        D44=Nl.get((4,4),0); T333=Nl.get((3,3,3),0)
+        H = inv['H_odd']
+        skel = 1 - 2*e3 - 2*e5 + 4*e6 + 4*e8
+        pred = skel + 4*c6 + 2*c7 + 4*c8 + 2*c9 - 4*D44 + 8*T333
+        if H != pred: f += 1
+        tot += 1
+    print(f"   n=9  H == (1-2e3-2e5+4e6+4e8) + 4c6+2c7+4c8+2c9 - 4D44 + 8T333 :  {tot-f}/{tot} match")
