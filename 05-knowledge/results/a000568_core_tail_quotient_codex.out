@@ -1,0 +1,56 @@
+A000568 core-tail quotient
+========================================================================
+Exact factorization:
+  odd partition = (>1 core) + 1-tail
+  a(n) = sum_{m,t} B[m,t] * 2^(C(r,2)+r*t) / r!,  r=n-m
+
+Kernel support through max_verify:
+  n<= 0: kernel states available = 1
+  n<= 5: kernel states available = 3
+  n<=10: kernel states available = 9
+  n<=15: kernel states available = 20
+  n<=20: kernel states available = 34
+
+Verification against known A000568 values:
+  a( 0) = 1 [OK]
+  a( 1) = 1 [OK]
+  a( 2) = 1 [OK]
+  a( 3) = 2 [OK]
+  a( 4) = 4 [OK]
+  a( 5) = 12 [OK]
+  a( 6) = 56 [OK]
+  a( 7) = 456 [OK]
+  a( 8) = 6880 [OK]
+  a( 9) = 191536 [OK]
+  a(10) = 9733056 [OK]
+  a(11) = 903753248 [OK]
+  a(12) = 154108311168 [OK]
+  a(13) = 48542114686912 [OK]
+  a(14) = 28401423719122304 [OK]
+  a(15) = 31021002160355166848 [OK]
+  a(16) = 63530415842308265100288 [OK]
+  a(17) = 244912778438520759443245824 [OK]
+  a(18) = 1783398846284777975419600287232 [OK]
+  a(19) = 24605641171260376770598003978281472 [OK]
+  a(20) = 645022068557873570931850526424042500096 [OK]
+
+All checks through n=20: True
+
+Outer quotient compression:
+   n | odd partitions | (m,t) states | compression
+--------------------------------------------------------
+  20 |             64 |           34 |        1.88x
+  30 |            296 |           76 |        3.89x
+  40 |           1113 |          134 |        8.31x
+  50 |           3658 |          209 |       17.50x
+  60 |          10880 |          301 |       36.15x
+  80 |          77312 |          534 |      144.78x
+ 100 |         444793 |          834 |      533.32x
+
+Interpretation:
+  1. This is an exact second quotient on odd partitions for the outer sum.
+  2. The remaining hard object is the core kernel B[m,t].
+  3. Compression is already strong at the outer layer:
+     for n=100, 444793 odd partitions collapse to 834 active (m,t) states.
+  4. This does not by itself solve the kernel-generation problem,
+     but it isolates where the true complexity lives.
