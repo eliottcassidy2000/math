@@ -1,0 +1,30 @@
+
+===== FULL arc cube  n=4, 6 arcs, 64 tournaments =====
+  c3        even-mass=1.750 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=1.000, L2=0.750
+  H         even-mass=12.000 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=9.000, L2=3.000
+  score[0]  even-mass=2.250 odd-mass=0.750  -> ODD    (expect ODD)
+            levels: L0=2.250, L1=0.750
+  H even levels only: L0=9.000, L2=3.000
+  (L0=mean^2; L2 = pairwise odd-cycle 'conflict' interactions; L4 = disjoint-pair alpha_2 layer)
+
+===== FULL arc cube  n=5, 10 arcs, 1024 tournaments =====
+  c3        even-mass=8.125 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=6.250, L2=1.875
+  H         even-mass=74.062 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=56.250, L2=16.875, L4=0.938
+  score[0]  even-mass=4.000 odd-mass=1.000  -> ODD    (expect ODD)
+            levels: L0=4.000, L1=1.000
+  H even levels only: L0=56.250, L2=16.875, L4=0.938
+  (L0=mean^2; L2 = pairwise odd-cycle 'conflict' interactions; L4 = disjoint-pair alpha_2 layer)
+
+===== FULL arc cube  n=6, 15 arcs, 32768 tournaments =====
+  c3        even-mass=28.750 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=25.000, L2=3.750
+  H         even-mass=652.500 odd-mass=0.000  -> EVEN   (expect EVEN)
+            levels: L0=506.250, L2=135.000, L4=11.250
+  score[0]  even-mass=6.250 odd-mass=1.250  -> ODD    (expect ODD)
+            levels: L0=6.250, L1=1.250
+  H even levels only: L0=506.250, L2=135.000, L4=11.250
+  (L0=mean^2; L2 = pairwise odd-cycle 'conflict' interactions; L4 = disjoint-pair alpha_2 layer)

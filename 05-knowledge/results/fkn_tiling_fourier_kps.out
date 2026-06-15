@@ -1,0 +1,40 @@
+
+===== n=4, m=3 tiles, 8 tilings =====
+zero-tiling check: H = 1 (want 1); scores= [0, 1, 2, 3]
+#iso classes among tilings: 4 (A000568: 12 )
+  SCORES: every coordinate's Fourier support max level = 1  (claim: <=1, i.e. AFFINE in tile bits)
+  c3  level weights: L0=2.250, L1=0.375, L2=0.125
+      c3 mean (L0 coeff) = 1.5000  (random-tiling E[c3]=C(n,3)/4=1.0000)
+      c3 FKN-defect (mass above L1)/(mass above L0) = 0.2500
+  H   level weights: L0=16.000, L1=1.500, L2=0.500
+      H mean = 4.0000 ; H level-1 weight / (var) = 0.7500 (FKN: low => H not score-determined)
+      H FKN-defect (mass >=L2)/(var) = 0.2500
+  [transitive] mass: L0=0.0156 L1=0.0469 >=L2=0.0625  (point-like => spread across ALL levels)
+
+===== n=5, m=6 tiles, 64 tilings =====
+zero-tiling check: H = 1 (want 1); scores= [0, 1, 2, 3, 4]
+#iso classes among tilings: 12 (A000568: 56 )
+  SCORES: every coordinate's Fourier support max level = 1  (claim: <=1, i.e. AFFINE in tile bits)
+  c3  level weights: L0=10.562, L1=0.500, L2=0.562
+      c3 mean (L0 coeff) = 3.2500  (random-tiling E[c3]=C(n,3)/4=2.5000)
+      c3 FKN-defect (mass above L1)/(mass above L0) = 0.5294
+  H   level weights: L0=97.516, L1=6.312, L2=6.062, L3=0.375, L4=0.109
+      H mean = 9.8750 ; H level-1 weight / (var) = 0.4909 (FKN: low => H not score-determined)
+      H FKN-defect (mass >=L2)/(var) = 0.5091
+  [transitive] mass: L0=0.0002 L1=0.0015 >=L2=0.0139  (point-like => spread across ALL levels)
+
+===== n=6, m=10 tiles, 1024 tilings =====
+zero-tiling check: H = 1 (want 1); scores= [0, 1, 2, 3, 4, 5]
+#iso classes among tilings: 56 (A000568: 244 )
+  SCORES: every coordinate's Fourier support max level = 1  (claim: <=1, i.e. AFFINE in tile bits)
+  c3  level weights: L0=36.000, L1=0.625, L2=1.500
+      c3 mean (L0 coeff) = 6.0000  (random-tiling E[c3]=C(n,3)/4=5.0000)
+      c3 FKN-defect (mass above L1)/(mass above L0) = 0.7059
+  H   level weights: L0=841.000, L1=33.844, L2=65.094, L3=3.469, L4=2.156
+      H mean = 29.0000 ; H level-1 weight / (var) = 0.3237 (FKN: low => H not score-determined)
+      H FKN-defect (mass >=L2)/(var) = 0.6763
+  [transitive] mass: L0=0.0000 L1=0.0000 >=L2=0.0010  (point-like => spread across ALL levels)
+
+--- n=7 (scores & c3 only; H/iso too slow) ---
+n=7 score[0] max Fourier level: 1
+n=7 c3 level weights: L0=100.00, L1=0.75, L2=3.12
