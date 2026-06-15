@@ -1,7 +1,7 @@
 ---
 id: THM-505
 title: The OCF non-spectral defect — H = (spectral skeleton) + (integer-linear combination of Witt/census defects); at n=7, H = [1+2c3+2c5+4C(c3,2)-4W6] + 4c6 + 2c7
-status: PROVED for n=7 and n=8 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 random n=7, 12000/12000 random n=8 incl. minimal-defect 3-carrier form); non-spectral dimension = n−5 VERIFIED n<=8 (n=8 carrier probe: (c6,c7) insufficient/157 split buckets, Q44 dependent on c6,c7,c8); general-n principle CONJECTURE (HYP-2513)
+status: PROVED for n=7, n=8 AND n=9 (closed forms derived by substitution from THM-500 + THM-502; verified 60000/60000 n=7, 12000/12000 n=8, 45000/45000 n=9). non-spectral dimension = n−5 ONLY for n<=8 (n=8 chain at 60000: (c6,c7,c8) determines H, dim=3); at n=9 the dimension BREAKS ABOVE n−5: it is EXACTLY 6 (carriers {c6,c7,c8,c9,Q44,T333}, all independent; capped at 6 by the closed form) versus n−5 = 4. The overlap config Q44 and the triple packing T333 are independent non-spectral carriers (PROVED by explicit cospectral witnesses sharing (c6,c7,c8,c9) but differing in H). LINEARITY: H is universal-integer-linear in the FULL carrier set (simple cycles + overlap configs) but NOT a bounded-degree polynomial in the simple cycles alone past n=7. General-n principle CONJECTURE (HYP-2513, dimension claim CORRECTED)
 source: monad-explorer-2026-06-15
 depends_on:
   - THM-499   # H = 1 + 2(c3+c5) + 4*alpha_2 at n<=6; alpha_2 first non-spectral OCF ingredient
@@ -88,25 +88,108 @@ Both forms verified 12000/12000 random n=8 tournaments. The coefficients of `c6`
 `c7` are unchanged (4 and 2) from n=7: `c6` always enters at the disjoint-pair level
 (`2^2 = 4`), `c7` at the single-cycle level (`2^1 = 2`).
 
-## The non-spectral dimension grows as n−5 (PROVED n<=8 for the count; carriers VERIFIED n=8)
+## Extension (n=9, PROVED, same substitution) — the TRIPLE level switches on
 
-How many independent non-spectral degrees of freedom does `H` carry? At n=7 the answer
-is **2**: `(c6, c7)` determines `H` within every cospectral class (the closed form). At
-n=8 the answer is **3**: a carrier-dimension probe (12000 samples, 695 split cospectral
-classes) finds **157 `(spectrum, c6, c7)` buckets that still carry >= 2 distinct `H`** —
-so `(c6, c7)` no longer suffices; a third carrier is genuinely required. Adding `c8`
-closes it: in **0** buckets does `Q44` vary given `(spectrum, c6, c7, c8)`, so `Q44`
-(and hence every length-8 defect) is **spectrally dependent on `(c6, c7, c8)`**, and
-`(spectrum, c6, c7, c8)` determines `H`. The even-overlap config `Q44` is *not* a new
-non-spectral axis.
+At n=9 the OCF gains its **first triple term**: `alpha_3 != 0` because three disjoint
+triangles need exactly `3+3+3 = 9` vertices. (`alpha_4 = 0`: four disjoint odd cycles
+need `>= 12`.) So `H = 1 + 2 alpha_1 + 4 alpha_2 + 8 alpha_3`. The disjoint odd pairs are
+still `(3,3)` and `(3,5)` (as at n=8; `(5,5)`,`(3,7)` need `>= 10`), and the new
+`alpha_3 = T333` = the number of **vertex-disjoint triangle TRIPLES**. With the same
+defect substitutions (`p33 = W6−c6`, `TF = W8−c8−Q44`):
 
-> **Dimension table:** `dim_nonspec(H)` = 0, 1, 2, 3 for n = 5, 6, 7, 8 — i.e.
-> **n − 5** (n>=5), with carriers the simple-cycle counts `{c6, c7, ..., c_n}`. All
-> overlap/defect counts (`p33 = W6−c6`, `TQ = W7−c7`, `Q44`, `TF`) are spectrally
-> dependent on the simple-cycle vector. **CONJECTURE for n >= 9** (HYP-2513): the
-> non-spectral content of `H` is a function of `(c6, ..., c_n)` of dimension `n−5`; the
-> first triple-overlap term `8·alpha_3` switches on at n=9 (the first 3-disjoint-triangle
-> independent set) and `c9` joins as the next carrier.
+> **H = [ 1 + 2c3 + 2c5 + 4·C(c3,2) + 4·c3·c5 − 4 W6 − 4 W8 ]  +  2 c7 + 2 c9 + 4 c6 + 4 c8 + 4 Q44 + 8·T333.**
+
+Verified **45000/45000** random n=9 tournaments (`ocf_nonspectral_n9_monad.py form9`,
+`05-knowledge/results/ocf_nonspectral_n9_form_monad.out`). The new carrier `T333` enters
+with coefficient **`8 = 2^3`** — the fugacity-2 weight of the **triple** independent-set
+level — confirming the `2^level` rule at the next rung. The odd cycle `c9` enters at
+level 1 (weight `2`), `c8` (even) at level 2 (weight `4`), exactly as `c7`, `c6` did.
+
+## The fugacity-polynomial form (the clean generalization)
+
+The `x = 2` evaluation is a shadow of a **polynomial identity in the fugacity `x`**. The
+full independence polynomial `I(Ω, x) = Σ_k α_k x^k` of the odd-cycle conflict graph
+decomposes (n=9):
+
+> **I(Ω, x) = SKEL(x)  +  (c7 + c9)·x  +  (c6 + c8 + Q44)·x²  +  T333·x³**,
+>
+> `SKEL(x) = 1 + (c3 + c5)·x + (C(c3,2) + c3·c5 − W6 − W8)·x²`  (spectral coefficients).
+
+The non-spectral carriers are **sorted by their independent-set level = power of `x`**:
+level 1 (`x¹`) = the new odd cycles `c7, c9`; level 2 (`x²`) = `c6, c8, Q44` (entering via
+the disjoint-odd-**pair** overlap defects); level 3 (`x³`) = `T333` (the disjoint triangle
+**triple**). `H = I(Ω, 2)` sets the weights `(2, 4, 8) = (2¹, 2², 2³)`, recovering the
+closed form. Other special values: `I(Ω, 1) = SKEL(1) + (c7+c9) + (c6+c8+Q44) + T333` is
+the **total number of odd-cycle packings** (independent sets in Ω), the same carriers at
+weight 1; `I'(Ω, 0) = α_1 = c3+c5+c7+c9`. The `x = 2` of the OCF is the **first nontrivial
+oblong fugacity** (`x = n(n−1)` at `n=2`, roots `{2,−1}`; cf.
+`fugacity-axis-and-vanishing-theorem`), which is why the carrier weights are clean powers
+of 2.
+
+## The non-spectral dimension: `n−5` for n<=8, but it BREAKS ABOVE `n−5` at n=9
+
+How many independent non-spectral degrees of freedom does `H` carry? Probe by grouping
+labelled tournaments by trace-vector (`tr A^3,...,tr A^n` = the full characteristic
+polynomial, since `tr A^1 = tr A^2 = 0`) and asking which cycle counts must be added to
+determine `H` within a cospectral class.
+
+- **n=7:** `(c6, c7)` determines `H` (the closed form). `dim = 2`.
+- **n=8 (chain, 60000 samples, 718 split cospectral classes):** the nested chain
+  `sig → +c6 → +c7 → +c8` reduces the H-split count `718 → 333 → 163 → 0`. So
+  `(c6, c7, c8)` determines `H`, and the overlap config `Q44` is **spectrally dependent**
+  on `(c6, c7, c8)` (0 free buckets). `dim = 3`. **`n − 5` holds.**
+- **n=9 (chain, 130000 samples, 29354 cospectral classes, 14804 split):** the chain
+  `sig → +(c6,c7,c8) → +c9 → +Q44 → +T333` gives split counts
+  `14804 → 482 → 24 → 1 → 0`. **`(c6, c7, c8, c9)` does NOT determine `H`** (24 cospectral
+  witness-buckets with *identical* `(c6,c7,c8,c9)` but **different `H`**), and **neither
+  does `(c6,c7,c8,c9,Q44)`** (1 residual split). Only adding BOTH the overlap config `Q44`
+  AND the triple packing `T333` closes it. Every witness satisfies the closed form
+  `ΔH = 4·ΔQ44 + 8·ΔT333` exactly (e.g. `(c6,c7,c8,c9)=(80,85,62,23)` carries
+  `(H,Q44,T333) ∈ {(611,513,2),(615,514,2)}`; `(127,150,113,40)` carries
+  `(1001,795,1),(1005,794,2)`). Cross-checks: `(sig,c6..c9,Q44)` leaves `T333` free in 1
+  bucket; `(sig,c6..c9,T333)` still splits `H` in 5 (so `Q44` is the *finer* of the two
+  overlap carriers, but both are needed).
+
+> **CORRECTED dimension picture.** `dim_nonspec(H)` = 0, 1, 2, 3 for n = 5,6,7,8 (`= n−5`),
+> then **= 6 at n=9** (`> n−5 = 4`). The minimal carrier set is the FULL
+> `{c6, c7, c8, c9, Q44, T333}` (dimension capped at 6 by the closed form; lower bound 6 by
+> cospectral witnesses showing `c9`, `Q44`, `T333` each detach). The simple-cycle counts
+> `(c6, ..., c_n)` do **NOT** determine `H` past n=8: BOTH the overlap config `Q44` and the
+> triple packing `T333` are genuinely **independent** non-spectral carriers. The dimension
+> JUMPS `3 → 6` at n=9 — three carriers detach at once: the new odd cycle `c9`, the
+> previously-dependent `Q44` (pinned at n=8 for lack of room, free at n=9), and the brand-new
+> triple `T333`. The break occurs **exactly** when the triple independent-set level `α_3`
+> (and the `(3,5)`-pair structure inside `α_2`) gains full room. **So the earlier claim "the
+> overlaps are spectral shadows of the simple cycles" is true only for n ≤ 8** (corrects
+> HYP-2513 / reflection `the-zeta-function-and-the-ocf-read-complementary-halves`).
+
+## The linearity dichotomy (resolves the "is H linear in the carriers" question)
+
+There are **two different** notions of "carrier," and they diverge past n=7:
+
+1. **Universal-LINEAR carriers.** `H = (spectral skeleton) + Σ w_c · c` with *universal
+   integer* weights `w_c = ±2^{level}`. By the OCF substitution this *always* exists, but
+   the carrier set **must include the overlap/triple configs** `Q44, TF, T333, ...` — they
+   are irreducible. Verified universal weights (n=8, exact within every cospectral class):
+   `(c6,c7,c8,Q44) → (4,2,4,4)` and minimal `(c6,c7,TF) → (4,2,−4)`.
+2. **FUNCTIONAL carriers.** The minimal cycle-count set `S` with `H = f(spectrum, S)` for
+   *some* function `f` (not necessarily polynomial). At n≤8 `S = {simple cycles}` of size
+   `n−5`; at n=9 it must include `Q44`.
+
+These coincide at n≤7. At n=8 they have the same *size* (3) but different *sets*:
+`{c6,c7,c8}` (functional) vs `{c6,c7,TF}` (linear). The reason: **`H` is a FUNCTION of
+the simple cycles `(c6,c7,c8)` but NOT a bounded-degree polynomial in them.** Within
+cospectral classes, the within-class fit `ΔH = lin(Δc6,Δc7,Δc8)` is **not exact** (best
+linear residual ≈ 4), and neither is the degree-2 fit; only `120/645` classes admit even a
+*per-class* linear `Q44~(c6,c7,c8)` fit. The map `(c6,c7,c8) ↦ Q44` is a genuine
+non-polynomial function (`ocf_nonspectral_n8_linearity_monad.out`). At n=9 the simple
+cycles fail even *functionally*, so `Q44` enters as its own universal-linear carrier.
+
+> **Three-stage degradation of "what the simple cycles tell you about `H`":**
+> n≤7 — simple cycles determine `H` *linearly*; n=8 — simple cycles determine `H`
+> *functionally but non-polynomially*; n=9 — simple cycles do **not** determine `H` (the
+> cycle *correlations* `Q44, T333` carry independent non-spectral information). Each step
+> up in `n` is a step deeper into the correlation structure the spectrum cannot see.
 
 ## The fugacity-2 coefficient rule and the zeta/Euler-product picture
 
@@ -137,12 +220,27 @@ opposite sides of the simple/overlap partition of `W_k`.
 
 ## General-n principle (CONJECTURE — HYP-2513)
 
-For every `n`, `H(T) ≡ Σ_{k>=6} m_k·(non-spectral carrier_k)  (mod the ring of
-spectral invariants)`, where the carriers are the simple-cycle counts `c_k` (`k>=6`)
-and the higher even-overlap configs (`Q44`, triple-overlaps, ...) that first acquire
-room, each weighted by `2^{(independent-set level at which it enters Ω)}`. Equivalently:
-`H` modulo spectral invariants is an explicit integer-linear functional of the Witt
-defects `{δ_k}`. Verified n=7 (closed form, proved) and n=8 (closed form, 6000/6000).
-The open content is (i) the exact carrier list and weights at general `n` (driven by
-which disjoint odd-collections fit in `n` vertices and which overlap configs appear),
-and (ii) whether the weights are always pure powers of 2.
+For every `n`, `H(T) = (spectral skeleton) + Σ m_k·(non-spectral carrier_k)`, an
+**explicit universal-integer-linear functional** of the carriers, where the carriers are
+the simple-cycle counts `c_k` (`k>=6`) AND the overlap/independent-set configs
+(`Q44`, `TF`, `T333`, triple-overlaps, ...) that first acquire room, each weighted by
+`±2^{(independent-set level at which it enters Ω)}`. The full independence polynomial
+`I(Ω, x) = SKEL(x) + Σ (carrier)·x^{level}` is the fugacity generalization, with `x = 2`
+the oblong-fugacity evaluation. PROVED (by substitution from the OCF + THM-502 census
+defects) and verified for n=7, n=8, n=9.
+
+**CORRECTED open content** (the n=9 break sharpens the conjecture):
+- (i) The exact carrier list and `±2^{level}` weights at general `n` (driven by which
+  disjoint odd-collections fit in `n` vertices and which overlap configs appear). Weights
+  observed: pure `±2^{level}` through n=9.
+- (ii) The **non-spectral dimension** `dim_nonspec(H)` is `n−5` only for `n ≤ 8`; at n=9
+  it is `= 6 > n−5 = 4` (jumps `3 → 6`). CONJECTURE: `dim_nonspec(H)` equals the number of
+  *distinct non-spectral carrier types* — simple cycles `c6..c_n` PLUS irreducible
+  overlap/packing configs (`Q44`, `T333`, ...) — that fit in `n` vertices and are not
+  pinned by the others, which grows strictly faster than `n−5` once the multi-cycle
+  correlation configs become independent of the simple-cycle vector. The carrier set is
+  exactly the support of the closed form (so `dim_nonspec(H)` is bounded above by the number
+  of distinct `α_j`-expansion terms); at n=9 that is `{c6,c7,c8,c9,Q44,T333}`, all six
+  independent.
+- (iii) `H` is universal-linear in the *full* carrier set but is **not** a bounded-degree
+  polynomial in the simple cycles alone past n=7 (the linearity dichotomy above).

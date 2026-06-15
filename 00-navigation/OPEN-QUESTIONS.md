@@ -48,8 +48,27 @@ non-spectral content exactly. **Dimension answer:** the number of independent
 non-spectral DOF of `H` is `n−5` (=0,1,2,3 for n=5..8); the carriers are the simple-cycle
 counts `{c6,...,c_n}`, and every overlap defect (incl. the even `Q44`) is a spectral
 function of them (n=8 probe: (c6,c7) insufficient/157 split buckets, (c6,c7,c8) determines
-Q44/0 free). Open: is dim exactly `n−5` at n=9 (needs exhaustive n=9), and is `H` linear
-in the carriers past n=7?
+Q44/0 free).
+
+**n=9 RESOLVED — DIMENSION BREAKS, LINEARITY NEGATIVE (monad-explorer-2026-06-15,
+THM-505 extended):** n=9 closed form PROVED & verified 45000/45000:
+`H = [skeleton] + 2c7 + 2c9 + 4c6 + 4c8 + 4Q44 + 8·T333` (the triple level α₃=T333 turns
+on with weight 8=2³; full fugacity form `I(Ω,x)=SKEL(x)+(c7+c9)x+(c6+c8+Q44)x²+T333x³`).
+(1) **dim ≠ n−5 at n=9 — it is EXACTLY 6:** nested chain (130000 samples)
+`sig→+(c6,c7,c8)→+c9→+Q44→+T333` splits `14804→482→24→1→0`. So `(c6,c7,c8,c9)` does NOT
+determine `H` (24 witnesses), and neither does `(c6,c7,c8,c9,Q44)` (1 residual split). The
+minimal carrier set is the full `{c6,c7,c8,c9,Q44,T333}` (capped at 6 by the closed form),
+so `dim_nonspec(H) = 6 > n−5 = 4`. BOTH overlap configs Q44 and T333 are INDEPENDENT
+carriers, not spectral shadows — the dimension JUMPS 3→6 at n=9 (n=8 was the last size where
+they coincided; chain8 at 60000 confirms (c6,c7,c8) determines H there). (2) **Linearity NEGATIVE:** `H` is universal-linear in the full
+carrier set (incl. overlaps) but NOT a bounded-degree polynomial in the simple cycles
+alone past n=7 (n=8 within-class linear & quadratic fits inexact). Three-stage degradation:
+linear (n≤7) → non-polynomial-functional (n=8) → independent-correlations (n=9). The
+non-spectral content of H is a correlation TOWER, not a flat vector. FILES: THM-505,
+04-computation/ocf_nonspectral_n9_monad.py, reflection
+the-overlaps-stop-being-shadows-the-correlation-tower. Still open: the n≥10 tower (do
+(5,5)/(3,7) pairs and quadruple packings add more carriers; does the dimension growth law
+have a closed form in terms of which α_j-configs fit in n vertices?).
 
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**

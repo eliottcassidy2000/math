@@ -543,6 +543,25 @@ def run_chain(n, NS, rng):
     for sv, extra in witnesses[:8]:
         print(f"    {dict(zip(simple, sv))}: (H,Q44,T333,TF)={extra}", flush=True)
 
+    # is T333 determined by (sig, c6..c9, Q44)?  (=> dim exactly 5, not 6)
+    if n == 9:
+        bt = defaultdict(set)
+        for sig, rs in classes.items():
+            for r in rs:
+                bt[(sig, r["c6"], r["c7"], r["c8"], r["c9"], r["Q44"])].add(r["T333"])
+        free = sum(1 for v in bt.values() if len(v) >= 2)
+        print(f"\n  (sig,c6,c7,c8,c9,Q44) buckets where T333 still varies: {free}  "
+              f"(0 => T333 determined => dim EXACTLY 5; >0 => dim 6, T333 independent)",
+              flush=True)
+        # and the reverse: does (sig,c6..c9,T333) determine H? (asymmetry check)
+        bh = defaultdict(set)
+        for sig, rs in classes.items():
+            for r in rs:
+                bh[(sig, r["c6"], r["c7"], r["c8"], r["c9"], r["T333"])].add(r["H"])
+        freeh = sum(1 for v in bh.values() if len(v) >= 2)
+        print(f"  (sig,c6,c7,c8,c9,T333) buckets still splitting H: {freeh}  "
+              f"(>0 => T333 does NOT close it, Q44 is the finer carrier)", flush=True)
+
 
 def main():
     which = sys.argv[1] if len(sys.argv) > 1 else "form9"

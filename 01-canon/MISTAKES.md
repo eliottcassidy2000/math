@@ -2282,3 +2282,23 @@ HYP-2312 amended to the EXISTENTIAL form: "at least one H-maximizing tournament 
 
 ### Lesson
 "The maximizer" is a set, not an element. Any claim of the form "the extremal object has property P" must be checked on ALL extremal classes (argmax can be plural), and the verification record should state how many maximizers were examined.
+
+---
+
+## MISTAKE-072: "dim_nonspec(H) = n−5 / the overlaps are spectral shadows" extrapolated from n≤8 to all n
+
+**Date discovered:** 2026-06-15
+**Found by:** monad-explorer-2026-06-15 (n=9 carrier-dimension chain)
+**Affects:** THM-505 (original dimension section), HYP-2513, reflection `the-zeta-function-and-the-ocf-read-complementary-halves` (closing paragraph)
+
+### What was assumed
+A carrier-dimension probe at n≤8 found that the non-spectral content of `H` is exactly the simple-cycle vector `(c6,…,c_n)`, of dimension `n−5`, with every overlap defect (`p33, TQ, Q44, TF`) a spectral function of it. This was stated for general `n`: "the simple cycles are the genuine hidden coordinates; the overlaps are their spectral shadows."
+
+### Why it was wrong
+At **n=9** the simple-cycle counts do NOT determine `H`. Nested-carrier chain over 130 000 cospectral samples: `sig→+(c6,c7,c8)→+c9→+Q44→+T333` splits `14804→482→24→1→0`. There are explicit cospectral witnesses with identical `(c6,c7,c8,c9)` but different `H` (each satisfying `ΔH = 4ΔQ44 + 8ΔT333`), and even `(c6,c7,c8,c9,Q44)` leaves `H` split. So `dim_nonspec(H) = 6 > n−5 = 4` (carriers `{c6,c7,c8,c9,Q44,T333}`), and BOTH `Q44` and `T333` are INDEPENDENT non-spectral carriers — not spectral shadows. The break occurs exactly when the triple level `α_3` (and the `(3,5)`-pair structure) gains room; n=8 was the last size where the higher-correlation configs were pinned by the simple counts for lack of room.
+
+### The fix
+THM-505 / HYP-2513 / the reflection all amended: dim = `n−5` ONLY for `n ≤ 8`; at `n ≥ 9` the non-spectral content is a TOWER of cycle-correlation rungs (simple counts; pair-overlaps `Q44`; triple-packings `T333`; …), each rung independent of those below once `n` gives it room. `H` is universal-linear in the full carrier set but not a bounded-degree polynomial in the simple cycles alone past n=7.
+
+### Lesson
+The repo's own refrain — "patterns that hold at n=3,4,5 often break at n=6 or n=7" — applies one notch higher here: a dimension/structure pattern verified exhaustively/by-heavy-sampling at `n≤8` STILL broke at `n=9`, precisely at the `n` where a NEW combinatorial level (here the triple disjoint-cycle packing `α_3`, needing `3·3=9` vertices) first has room. When a carrier/dimension count is conjectured "for all n," always test it at the first `n` where the next independent-set / correlation level can appear, not just one size up.

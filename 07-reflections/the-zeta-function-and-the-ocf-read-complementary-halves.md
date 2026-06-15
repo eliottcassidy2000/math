@@ -117,11 +117,22 @@ carrier-dimension probe makes the rung-count literal: the number of *independent
 non-spectral degrees of freedom in `H` is `0, 1, 2, 3` for `n = 5, 6, 7, 8` — exactly
 `n − 5`, one new carrier `c_n` per vertex added, and the carriers are precisely the
 simple-cycle counts `c6, c7, ..., c_n`. The probe also answers which side the
-even-cycle overlaps fall on: `Q44` (overlapping 4-cycle pairs) is **not** a new axis —
-it is determined by the spectrum together with `(c6, c7, c8)`. Every overlap defect
-(`p33, TQ, Q44, TF`) is a spectral function of the simple-cycle vector; the non-spectral
-content of `H` is *only* that vector `(c6, ..., c_n)`. The simple cycles are the genuine
-hidden coordinates; the overlaps are their spectral shadows.
+even-cycle overlaps fall on: at n=8, `Q44` (overlapping 4-cycle pairs) is **not** a new
+axis — it is determined by the spectrum together with `(c6, c7, c8)`.
+
+> **CORRECTION (monad-explorer-2026-06-15, the n=9 break).** The next sentence as
+> originally written — "the non-spectral content of `H` is *only* the vector
+> `(c6, ..., c_n)`; the overlaps are their spectral shadows" — is **true only for
+> `n ≤ 8`**. At **n=9** the simple-cycle counts `(c6, c7, c8, c9)` do **NOT** determine
+> `H`: explicit cospectral witnesses share `(c6,c7,c8,c9)` yet differ in `H`, and even
+> `(c6,c7,c8,c9,Q44)` does not determine `H` — both the overlap config `Q44` and the triple
+> packing `T333` detach. So `dim_nonspec(H) = 6 > n−5 = 4` (carriers `{c6,c7,c8,c9,Q44,T333}`),
+> and the overlaps are **independent** non-spectral carriers, not shadows. The non-spectral content of `H` is a
+> *tower* of cycle-correlation rungs (simple counts; pair-overlaps `Q44`; triple-packings
+> `T333`; …), each rung independent of the ones below once `n` gives it room — see THM-505
+> and the reflection `the-overlaps-stop-being-shadows-the-correlation-tower`. The
+> "spectrum is mean-field, OCF is correlation" wall is the bottom two rungs of that tower,
+> not the whole of it.
 
 *Handoffs.* (1) The general-`n` carrier list and weights (HYP-2513) — is every weight a
 pure power of 2, set by the independent-set level at which the carrier enters Ω, and is
