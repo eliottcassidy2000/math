@@ -1,0 +1,58 @@
+==========================================================================
+LRC(14) SINGULAR SERIES L(S).  Main term (6/7)^13 = 0.134801
+==========================================================================
+
+TIGHT 14*{1..13} (gcd=14, NOT a C' config): L ~ 0.00000  (D~0)  [0.0000,0.0000]
+GENERIC primitive+mult14 (near-Sidon): L ~ 0.12233  (expect ~0.1348)  [0.1212,0.1245]  set=[3, 5, 9, 14, 17, 33, 65, 129, 257, 513, 1025, 2049, 4097]
+
+==========================================================================
+FRONT 1: adversarial infimum over PRIMITIVE mult-of-14 configs (evader cores 7*{1..12}u{r})
+==========================================================================
+lowest 14 L found (PRIMITIVE mult-of-14 configs):
+   r/tag=d1m13     L=0.02371   set=(1, 2, 3, 4)...182
+   r/tag=d1m1      L=0.02378   set=(1, 2, 3, 4)...14
+   r/tag=d3m13     L=0.02633   set=(3, 6, 9, 12)...182
+   r/tag=d5m13     L=0.02741   set=(5, 10, 15, 20)...182
+   r/tag=d5m19     L=0.02816   set=(5, 10, 15, 20)...266
+   r/tag=d5m1      L=0.02851   set=(5, 10, 14, 15)...60
+   r/tag=d5m29     L=0.02857   set=(5, 10, 15, 20)...406
+   r/tag=d5m17     L=0.02858   set=(5, 10, 15, 20)...238
+   r/tag=d5m23     L=0.02872   set=(5, 10, 15, 20)...322
+   r/tag=d11m23    L=0.02874   set=(11, 22, 33, 44)...322
+   r/tag=d3m1      L=0.02881   set=(3, 6, 9, 12)...36
+   r/tag=250       L=0.02888   set=(7, 14, 21, 28)...250
+   r/tag=d13m17    L=0.02888   set=(13, 26, 39, 52)...238
+   r/tag=d13m23    L=0.02888   set=(13, 26, 39, 52)...322
+   --> min L over evader/dilated cores = 0.02371
+
+random small-entry PRIMITIVE mult-of-14 configs (high additive energy):
+   min L over 600 random primitive configs = 0.06838   at [1, 2, 4, 7, 10, 11, 12, 14, 18, 22, 26, 35, 37]
+
+OVERALL inf-L evidence (PRIMITIVE C' configs): min = 0.02371  > 0 ?  True
+
+==========================================================================
+FRONT 2: the sinc 7-vanishing  s(t)=sin(pi t/7)/(pi t),  s(7j)=0
+==========================================================================
+  s(t) for t=1..14: ['+0.1381', '+0.1244', '+0.1034', '+0.0776', '+0.0498', '+0.0230', '+0.0000', '-0.0173', '-0.0277', '-0.0310', '-0.0282', '-0.0207', '-0.0106', '-0.0000']
+  s(7) = 5.57e-18, s(14) = -5.57e-18  -> VANISH at multiples of 7
+  Consequence: any exact relation sum t_v v = 0 with a coefficient t_v in 7Z drops out.
+  speeds 98*{1..13} (all div by 7^... ) L ~ 0.00000  (vs tight 0.0000)
+
+==========================================================================
+FRONT 3: Euler-product / adelic test  L =? beta_inf * prod_p beta_p   (HYP-2503)
+==========================================================================
+test S = 7*{1..12} u {13} (primitive evader, high energy).  L (large q) ~ 0.02895
+single-prime sequences D(p^e,S)/p^e (does each converge to a NONTRIVIAL local factor?):
+   p= 2: D(p^e)/p^e = ['0.0283', '0.0288', '0.0292', '0.0292']  (last=0.0292 if any)
+   p= 3: D(p^e)/p^e = ['0.0293', '0.0299', '0.0296', '0.0293']  (last=0.0293 if any)
+   p= 5: D(p^e)/p^e = ['0.0640', '0.0352', '0.0307', '0.0293']  (last=0.0293 if any)
+   p= 7: D(p^e)/p^e = ['0.0000', '0.0000', '0.0350', '0.0300']  (last=0.0300 if any)
+   p=11: D(p^e)/p^e = ['0.0496', '0.0240', '0.0291']  (last=0.0291 if any)
+   p=13: D(p^e)/p^e = ['0.0000', '0.0310', '0.0293']  (last=0.0293 if any)
+
+INTERPRETATION: if every single-prime limit ~ (6/7)^13 = main term (no genuine
+per-prime suppression), then L does NOT factor as an Euler product -- L is the
+ARCHIMEDEAN exact-relation sum, and the p-adic data lives in the APPROACH (threshold
+q*), not in L.  (Would REFINE/correct HYP-2503's Euler-product framing.)
+
+DONE.
