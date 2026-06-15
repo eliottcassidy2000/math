@@ -1,0 +1,30 @@
+=== a_s(n) (n=0..12) ===
+  s=0: [1, 2, 4, 8, 16, 32, 64, 128, 256, 512, 1024, 2048, 4096]
+  s=1: [1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, 233]
+  s=2: [1, 1, 1, 2, 3, 4, 6, 9, 13, 19, 28, 41, 60]
+  s=3: [1, 1, 1, 1, 2, 3, 4, 5, 7, 10, 14, 19, 26]
+  s=4: [1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 8, 11, 15]
+  s=5: [1, 1, 1, 1, 1, 1, 2, 3, 4, 5, 6, 7, 9]
+
+=== recurrence a_s(n)=a_s(n-1)+a_s(n-s-1) ===
+  s=0: True
+  s=1: True
+  s=2: True
+  s=3: True
+  s=4: True
+  s=5: True
+
+=== growth constant beta_s = dominant root of x^(s+1)=x^s+1 ===
+  s=0: beta=2.000000  measured ratio=2.000000
+  s=1: beta=1.618034  measured ratio=1.618034
+  s=2: beta=1.465571  measured ratio=1.465571
+  s=3: beta=1.380278  measured ratio=1.380278
+  s=4: beta=1.324718  measured ratio=1.324718
+  s=5: beta=1.285199  measured ratio=1.285202
+  s=6: beta=1.255423  measured ratio=1.255474
+
+  plastic check: rho^3=rho+1 => rho^5=rho^4+1 ? x^5-x^4-1 == (x^3-x-1)(x^2-x+1): True
+
+=== auxiliary (s=0): central binomials C(n,floor(n/2)) = A001405 ===
+   [1, 1, 2, 3, 6, 10, 20, 35, 70, 126, 252, 462]
+  (these carry the sub-exponential ~beta^n / sqrt(n) correction; the 'width'/dominant column)
