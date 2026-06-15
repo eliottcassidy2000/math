@@ -1,0 +1,95 @@
+
+===== n=3 =====
+  exhaustive=True; #cospectral classes=2
+  (A) score sequence SPECTRAL? split in 0 classes -> SPECTRAL
+  (B) sum s_i^1 : spectral
+  (B) sum s_i^2 : spectral
+  (B) sum s_i^3 : spectral
+  (B) sum s_i^4 : spectral
+  (D) w_1: spectral
+  (D) w_2: spectral
+  (D) w_3: spectral
+  (D) w_4: spectral
+  (D) w_6: spectral
+  (C) w_2 == (n-1)C(n,2) - [2C(n,3) - 2*tr(A^3)/3 + C(n,2)] : EXACT all
+  (C) w_3 linear in tr(A^3): 0 + 1*tr(A^3)  [EXACT on all rows]
+  (C) w_4 linear in (tr A^3, tr A^4): no exact affine fit (rank-deficient/inconsistent)
+  (C) w_5 linear in (tr A^3,A^4,A^5): no exact affine fit (rank-deficient/inconsistent)
+
+===== n=4 =====
+  exhaustive=True; #cospectral classes=3
+  (A) score sequence SPECTRAL? split in 1 classes -> NOT spectral
+  (B) sum s_i^1 : spectral
+  (B) sum s_i^2 : spectral
+  (B) sum s_i^3 : NOT spectral (1 classes)
+  (B) sum s_i^4 : NOT spectral (1 classes)
+  (D) w_1: spectral
+  (D) w_2: spectral
+  (D) w_3: spectral
+  (D) w_4: spectral
+  (D) w_5: spectral
+  (D) w_8: spectral
+  (C) w_2 == (n-1)C(n,2) - [2C(n,3) - 2*tr(A^3)/3 + C(n,2)] : EXACT all
+  (C) w_3 linear in tr(A^3): 1 + 5/3*tr(A^3)  [EXACT on all rows]
+  (C) w_4 linear in (tr A^3, tr A^4): 0 + 2*tr(A^3) + 1*tr(A^4)  [EXACT on all rows]
+  (C) w_5 linear in (tr A^3,A^4,A^5): no exact affine fit (rank-deficient/inconsistent)
+
+===== n=5 =====
+  exhaustive=True; #cospectral classes=9
+  (A) score sequence SPECTRAL? split in 2 classes -> NOT spectral
+  (B) sum s_i^1 : spectral
+  (B) sum s_i^2 : spectral
+  (B) sum s_i^3 : NOT spectral (2 classes)
+  (B) sum s_i^4 : NOT spectral (2 classes)
+  (D) w_1: spectral
+  (D) w_2: spectral
+  (D) w_3: spectral
+  (D) w_5: spectral
+  (D) w_6: spectral
+  (D) w_10: spectral
+  (C) w_2 == (n-1)C(n,2) - [2C(n,3) - 2*tr(A^3)/3 + C(n,2)] : EXACT all
+  (C) w_3 linear in tr(A^3): 5 + 7/3*tr(A^3)  [EXACT on all rows]
+  (C) w_4 linear in (tr A^3, tr A^4): no exact affine fit (rank-deficient/inconsistent)
+  (C) w_5 linear in (tr A^3,A^4,A^5): no exact affine fit (rank-deficient/inconsistent)
+
+===== n=6 =====
+  exhaustive=True; #cospectral classes=28
+  (A) score sequence SPECTRAL? split in 14 classes -> NOT spectral
+  (B) sum s_i^1 : spectral
+  (B) sum s_i^2 : spectral
+  (B) sum s_i^3 : NOT spectral (14 classes)
+  (B) sum s_i^4 : NOT spectral (14 classes)
+  (D) w_1: spectral
+  (D) w_2: spectral
+  (D) w_3: spectral
+  (D) w_6: spectral
+  (D) w_7: spectral
+  (D) w_12: spectral
+  (C) w_2 == (n-1)C(n,2) - [2C(n,3) - 2*tr(A^3)/3 + C(n,2)] : EXACT all
+  (C) w_3 linear in tr(A^3): 15 + 3*tr(A^3)  [EXACT on all rows]
+  (C) w_4 linear in (tr A^3, tr A^4): no exact affine fit (rank-deficient/inconsistent)
+  (C) w_5 linear in (tr A^3,A^4,A^5): no exact affine fit (rank-deficient/inconsistent)
+
+===== n=7 =====
+  exhaustive=False; #cospectral classes=168
+  (A) score sequence SPECTRAL? split in 85 classes -> NOT spectral
+  (B) sum s_i^1 : spectral
+  (B) sum s_i^2 : spectral
+  (B) sum s_i^3 : NOT spectral (85 classes)
+  (B) sum s_i^4 : NOT spectral (85 classes)
+  (D) w_1: spectral
+  (D) w_2: spectral
+  (D) w_3: spectral
+  (D) w_7: spectral
+  (D) w_8: spectral
+  (D) w_14: spectral
+  (C) w_2 == (n-1)C(n,2) - [2C(n,3) - 2*tr(A^3)/3 + C(n,2)] : EXACT all
+  (C) w_3 linear in tr(A^3): 35 + 11/3*tr(A^3)  [EXACT on all rows]
+  (C) w_4 linear in (tr A^3, tr A^4): no exact affine fit (rank-deficient/inconsistent)
+  (C) w_5 linear in (tr A^3,A^4,A^5): no exact affine fit (rank-deficient/inconsistent)
+
+--- (E) matrix-determinant-lemma identity check ---
+  (E) n=4: MDL identity det(xI-S)=det((x-1)I-2A)-bordered : HOLDS
+  (E) n=5: MDL identity det(xI-S)=det((x-1)I-2A)-bordered : HOLDS
+  (E) n=6: MDL identity det(xI-S)=det((x-1)I-2A)-bordered : HOLDS
+  (E) n=7: MDL identity det(xI-S)=det((x-1)I-2A)-bordered : HOLDS

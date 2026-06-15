@@ -126,7 +126,26 @@ marginals).
   — Parts 1,2,3 + fingerprint completeness.
 - `04-computation/perm_rank_test_monad.py` (+ `.out`, `perm_rank_test_n9.out`) — Part 4.
 
+## Even-length face — RESOLVED (monad-S7, HYP-2517)
+The even-only face DOES have a clean matrix function — but in its **SIGNED** form, and
+that form is SPECTRAL. The skew-adjacency char poly `det(xI − S)`, `S = A − Aᵀ`, is the
+signed even-length face: by Coates, every cycle cover containing an odd cycle cancels its
+one-cycle-reversal (`w_rev=(−1)^len w`), leaving only even covers, so
+`det(xI−S)=∏(x²+μ_j²)` with coeffs `p_{2t}(S)=Σ_{|W|=2t}Pf(S[W])²` — exactly the
+"Pfaffian on a derived graph." **It is SPECTRAL** (`#distinct(charA)=#distinct(charA,charS)`
+at every n, incl. the cospectral-different-H pairs at n=6; VERIFIED n≤6 exhaustive, n=7
+sample; matches the known spectral-DS-of-tournaments equivalence, complement=converse).
+So the Pfaffian route recovers only the spectral shadow; the genuine **non-spectral** even
+content `I(Ω_even,·)` (splits 3@n6, 46@n7) has NO determinantal home, exactly like H.
+**The det/per (Valiant signed/unsigned) dichotomy = the spectral/non-spectral boundary,
+face by face**: signed→spectral (det A, det S), unsigned→non-spectral (per, I(Ω_even), H);
+the ODD face has no determinantal object at all (the irreducibly non-spectral one).
+See reflection `the-skew-determinant-is-the-signed-even-face-and-it-is-spectral-monad-s7`,
+HYP-2517, THM-174 (`det S = det(I+2A) = Pf(S)²` = the top coefficient).
+
 ## Open
-- The even-only face `I(Omega_even,.)` has no obvious single matrix function (possibly a
-  Pfaffian on a derived graph). The permanental ROOTS as a non-spectral invariant. The
-  general-n carrier deficit of `(char,perm)` past the first collision. (OPEN-Q-096; HYP-2515.)
+- The permanental ROOTS as a non-spectral invariant (cleaner carrier of (c6,c7,…)?).
+  The general-n carrier deficit of `(char,perm)` past the first collision. A clean general
+  proof that walk counts `w_k=1ᵀAᵏ1` are spectral (Moon for low k; HYP-2517). A complex
+  signing `S_{ij}=ω` filtering lengths mod r>2 — still a determinant, conjecturally
+  spectral? (OPEN-Q-096; HYP-2515; HYP-2517.)

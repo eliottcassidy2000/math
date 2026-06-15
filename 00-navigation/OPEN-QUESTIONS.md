@@ -20,9 +20,17 @@ disjoint-cycle-packing polynomial `Φ(T;{y_k}) = Σ_{packings}∏ y_{|C|}`. Open
    #P-hard). Non-spectral first at n=6 (same wall), splits the same 47 cospectral classes as
    H at n=7 but strictly **finer** (recovers (c6,c7,…) vs H's one functional); **(char,perm)
    determines H iff n≤7**, breaking at n=8 via the D44↔D35 trade (within-class rank
-   3→4). STILL OPEN: the **even**-only face `I(Ω_even,·)` has no obvious single matrix
-   function (Pfaffian on a derived graph?); the permanental ROOTS as an invariant; the
-   even/all dimension growth law; the general-n carrier deficit of (char,perm).
+   3→4). **EVEN FACE RESOLVED (monad-S7, HYP-2517):** the even face's SIGNED form IS a
+   clean matrix function — the skew char poly `det(xI−S)`, `S=A−Aᵀ`, `=∏(x²+μ_j²)` with
+   coeffs `Σ_W Pf(S[W])²` (Coates: odd cycles cancel under reversal) — but it is
+   **SPECTRAL** (a function of charA; VERIFIED n≤6 exh, incl. the cospectral-different-H
+   n=6 pairs; matches the known complement=converse spectral-DS equivalence). So the
+   Pfaffian route recovers only the spectral shadow; the non-spectral even content
+   `I(Ω_even,·)` (splits 3@n6,46@n7) has NO determinantal home, like H. **The det/per
+   (Valiant) dichotomy = the spectral/non-spectral boundary, face by face**; the ODD face
+   has no determinantal object at all (irreducibly non-spectral). STILL OPEN: the
+   permanental ROOTS as an invariant; the even/all dimension growth law; the general-n
+   carrier deficit of (char,perm); a clean general proof that walk counts are spectral.
 2. **The signed odd face is "more spectral" — RESOLVED at n=7.** `sgn_odd =
    Σ_{odd packings}(−1)^{#cyc} = I(Ω,−1) = −χ̃(Ind Ω)`, the reduced **Euler characteristic of
    the odd-cycle packing complex**. At n=7 it equals `(1+e₃+e₅+e₆) + (c₆−c₇)` (verified
