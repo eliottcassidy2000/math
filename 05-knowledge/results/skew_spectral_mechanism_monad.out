@@ -1,0 +1,25 @@
+
+===== n=3 =====
+  exhaustive=True; #cospectral(charA) classes total=2
+  (a) walk counts w_1..w_3 SPECTRAL? classes where w_k differs within charA: 0 -> ALL w_k SPECTRAL
+  (c) I(Omega_even,2) NON-spectral in 0 classes; H non-spectral in 0 classes
+
+===== n=4 =====
+  exhaustive=True; #cospectral(charA) classes total=3
+  (a) walk counts w_1..w_4 SPECTRAL? classes where w_k differs within charA: 0 -> ALL w_k SPECTRAL
+  (c) I(Omega_even,2) NON-spectral in 0 classes; H non-spectral in 0 classes
+
+===== n=5 =====
+  exhaustive=True; #cospectral(charA) classes total=9
+  (a) walk counts w_1..w_5 SPECTRAL? classes where w_k differs within charA: 0 -> ALL w_k SPECTRAL
+  (c) I(Omega_even,2) NON-spectral in 0 classes; H non-spectral in 0 classes
+
+===== n=6 =====
+  exhaustive=True; #cospectral(charA) classes total=28
+  (a) walk counts w_1..w_6 SPECTRAL? classes where w_k differs within charA: 0 -> ALL w_k SPECTRAL
+  (c) I(Omega_even,2) NON-spectral in 3 classes; H non-spectral in 3 classes
+
+===== n=7 =====
+  exhaustive=False; #cospectral(charA) classes total=168
+  (a) walk counts w_1..w_7 SPECTRAL? classes where w_k differs within charA: 0 -> ALL w_k SPECTRAL
+  (c) I(Omega_even,2) NON-spectral in 46 classes; H non-spectral in 47 classes

@@ -1,0 +1,50 @@
+
+========== n=3 ==========
+  tournaments processed: 8 (exhaustive=True)
+  S-char-poly EVEN-in-x (odd cycles cancel): ALL PASS
+  #distinct A-char-polys: 2
+  #A-char-polys split by S-char-poly (skew is non-spectral here): 0
+  #distinct (A-char):              2
+  #distinct (A-char, S-char):      2
+  (A-char) alone leaves H ambiguous in 0 classes
+  (A-char,S-char) leaves H ambiguous in 0 classes
+
+========== n=4 ==========
+  tournaments processed: 64 (exhaustive=True)
+  S-char-poly EVEN-in-x (odd cycles cancel): ALL PASS
+  #distinct A-char-polys: 3
+  #A-char-polys split by S-char-poly (skew is non-spectral here): 0
+  #distinct (A-char):              3
+  #distinct (A-char, S-char):      3
+  (A-char) alone leaves H ambiguous in 0 classes
+  (A-char,S-char) leaves H ambiguous in 0 classes
+
+========== n=5 ==========
+  tournaments processed: 1024 (exhaustive=True)
+  S-char-poly EVEN-in-x (odd cycles cancel): ALL PASS
+  #distinct A-char-polys: 9
+  #A-char-polys split by S-char-poly (skew is non-spectral here): 0
+  #distinct (A-char):              9
+  #distinct (A-char, S-char):      9
+  (A-char) alone leaves H ambiguous in 0 classes
+  (A-char,S-char) leaves H ambiguous in 0 classes
+
+========== n=6 ==========
+  tournaments processed: 32768 (exhaustive=True)
+  S-char-poly EVEN-in-x (odd cycles cancel): ALL PASS
+  #distinct A-char-polys: 28
+  #A-char-polys split by S-char-poly (skew is non-spectral here): 0
+  #distinct (A-char):              28
+  #distinct (A-char, S-char):      28
+  (A-char) alone leaves H ambiguous in 3 classes
+  (A-char,S-char) leaves H ambiguous in 3 classes
+
+========== n=7 ==========
+  tournaments processed: 40000 (exhaustive=False)
+  S-char-poly EVEN-in-x (odd cycles cancel): ALL PASS
+  #distinct A-char-polys: 168
+  #A-char-polys split by S-char-poly (skew is non-spectral here): 0
+  #distinct (A-char):              168
+  #distinct (A-char, S-char):      168
+  (A-char) alone leaves H ambiguous in 47 classes
+  (A-char,S-char) leaves H ambiguous in 47 classes
