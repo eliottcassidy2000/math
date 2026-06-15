@@ -1,0 +1,14 @@
+=== achievable odd-H spectrum (exhaustive n<=6, sampled n=7,8) ===
+   n=4 exhaustive: maxH=5, odd-gaps in [1,max]=[]
+   n=5 exhaustive: maxH=15, odd-gaps in [1,max]=[7]
+   n=6 exhaustive: maxH=45, odd-gaps in [1,max]=[7, 21, 35, 39]
+   n=7 sampled(200000): maxH=189, odd-gaps in [1,max]=[7, 21, 63, 107, 119, 149, 161, 163, 165, 167, 169, 173, 177, 179, 181, 183, 185, 187]
+   n=8 sampled(400000): maxH=661, odd-gaps in [1,max]=[7, 21, 611, 615, 617, 619, 623, 625, 635, 647, 655]
+
+=== the 1+2^k+4^k = (111)_{2^k} pattern: {7,21,73,273,1057} ===
+   values: [7, 21, 73, 273, 1057]
+   H=    7 (=1+2^1+4^1): NOT FOUND (n<=10, hard search) -- candidate forbidden
+   H=   21 (=1+2^2+4^2): NOT FOUND (n<=10, hard search) -- candidate forbidden
+   H=   73 (=1+2^3+4^3): ACHIEVABLE at n=7
+   H=  273 (=1+2^4+4^4): ACHIEVABLE at n=8
+   H= 1057 (=1+2^5+4^5): ACHIEVABLE at n=9
