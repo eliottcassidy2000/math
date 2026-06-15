@@ -1,0 +1,19 @@
+=== OCF NON-SPECTRAL DEFECT  n=7, 60000 random tournaments ===
+  [OK ] OCF H=1+2a1+4a2             : 60000/60000 hold
+  [OK ] a2=C(c3,2)-p33              : 60000/60000 hold
+  [OK ] p33=W6-c6                   : 60000/60000 hold
+  [OK ] CLOSED H=skel+4c6+2c7       : 60000/60000 hold
+
+  cospectral classes sampled: 168;  with split H: 47
+  --- within-class check:  Delta H = 4 Delta c6 + 2 Delta c7 ---
+    sig(21, 36, 35, 159, 441): |skel|=1  H=[33, 37, 51]  c6=[3, 4, 6] c7=[0, 3]  law=OK
+    sig(24, 44, 55, 222, 623): |skel|=1  H=[57, 69]  c6=[8, 10] c7=[3, 5]  law=OK
+    sig(24, 52, 70, 240, 742): |skel|=1  H=[49, 59, 85]  c6=[8, 10, 14] c7=[2, 3, 8]  law=OK
+    sig(27, 48, 75, 285, 770): |skel|=1  H=[81, 91]  c6=[12, 14] c7=[6, 7]  law=OK
+    sig(30, 60, 100, 372, 1078): |skel|=1  H=[89, 91, 95, 109, 115]  c6=[16, 17, 19, 20] c7=[6, 7, 10, 11]  law=OK
+    sig(30, 60, 95, 366, 1064): |skel|=1  H=[91, 97, 109]  c6=[16, 17, 19] c7=[6, 7, 9]  law=OK
+    sig(33, 68, 115, 447, 1337): |skel|=1  H=[109, 111, 115, 129]  c6=[20, 21, 23] c7=[8, 9, 12]  law=OK
+    sig(27, 60, 80, 297, 959): |skel|=1  H=[65, 77]  c6=[11, 13] c7=[3, 5]  law=OK
+
+  within-class law Delta H=4Dc6+2Dc7 holds on all split classes: True
+  split classes where c6 ALSO varies (THM-500 prediction): 46/47
