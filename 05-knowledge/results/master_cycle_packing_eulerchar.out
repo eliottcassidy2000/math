@@ -1,0 +1,5 @@
+   n=7  sgn_odd == (1+e3+e5+e6) + (c6-c7) :  3000/3000 match
+   n=7  cospectral classes: 167;  sgn_odd splits 16, H splits 47
+        sgn split <=> Delta(c6-c7)!=0 : CONSISTENT
+        H   split <=> Delta(2c6+c7)!=0: CONSISTENT
+        classes where (c6,c7) varies but sgn_odd does NOT (x=-1 cancels covariation): 31

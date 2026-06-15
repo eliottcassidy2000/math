@@ -141,6 +141,37 @@ Two readings:
    unsigned count) is the project's richest non-spectral invariant. **The choice of fugacity
    and sign is the dial that controls how much of `Φ` the spectrum can see.**
 
+## The fugacity is a dial — and `x = −1` is the Euler characteristic of the packing complex
+
+The cleanest evidence that fugacity selects *which* non-spectral functional you read comes
+from comparing `x = 2` (the OCF) with `x = −1`. For any `x`, `I(Ω, x) = 1 + Σ_j x^j α_j`,
+and the non-spectral content sits in the level-sums `α_j`. At `x = −1`,
+
+> **I(Ω, −1) = Σ_j (−1)^j α_j = −χ̃(Ind Ω)**,
+
+the reduced **Euler characteristic of the odd-cycle packing complex** `Ind(Ω)` (the
+simplicial complex whose faces are the vertex-disjoint odd-cycle collections). It is the
+`sgn_odd` face of `Φ`. At n=7 (two non-spectral levels, `α₁ ⊃ c₇`, `α₂ ≅ c₆`), the two
+fugacities read two different directions of the same 2-D non-spectral content `(c₆, c₇)`:
+
+> `H = I(Ω,2) = [1+e₃+e₅+e₆]·(spectral) + (4c₆ + 2c₇)`  — direction `(4,2)`,
+> `χ-count = I(Ω,−1) = [1+e₃+e₅+e₆] + (c₆ − c₇)`  — direction `(1,−1)`.
+
+(`I(Ω,−1) = (1+e₃+e₅+e₆) + (c₆−c₇)` verified `3000/3000`.) Within cospectral classes the
+behaviour is fully explained by these directions: `H` splits a class **iff** `Δ(2c₆+c₇) ≠ 0`,
+the Euler-characteristic count splits **iff** `Δ(c₆−c₇) ≠ 0` (both consistent with
+`0` mismatches over 167 classes). The count splits 16, `H` splits 47, and **47 = 16 + 31**:
+the 31 extra classes are exactly those where `(c₆,c₇)` varies but `c₆−c₇` does **not** —
+i.e. where `c₆` and `c₇` **covary** (`Δc₆ ≈ Δc₇`). This is the project's own observed fact
+that `c₆` and `c₇` co-vary within cospectral classes (46/47, parent reflection). The
+alternating sign `x = −1` is *near-orthogonal to the covariation direction* `(1,1)` —
+`(1,−1)·(1,1) = 0` — so the Euler characteristic cancels exactly the part of `H`'s
+non-spectrality that lives along the dominant covariation, while `x = 2`'s direction
+`(4,2)·(1,1) = 6 ≠ 0` amplifies it. **The fugacity is a dial choosing a linear functional of
+the non-spectral level-sums; `x = 2` points into the covariation, `x = −1` points across it.**
+The topology of the packing complex (its Euler characteristic) is "more spectral" than its
+fugacity-2 size for a concrete linear-algebra reason, not a coincidence.
+
 ## Why this matters / the transcendent line
 
 The project's recurring slogan is "the spectrum is mean-field, the OCF is correlation."

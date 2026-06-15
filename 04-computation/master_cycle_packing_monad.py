@@ -287,3 +287,40 @@ def verify_skeleton_n9():
         if H != pred: f += 1
         tot += 1
     print(f"   n=9  H == (1-2e3-2e5+4e6+4e8) + 4c6+2c7+4c8+2c9 - 4D44 + 8T333 :  {tot-f}/{tot} match")
+
+
+def verify_eulerchar_projection():
+    """n=7: sgn_odd = I(Omega,-1) = -reduced-Euler-char of odd-cycle packing complex.
+       Claim: sgn_odd = (1 + e3 + e5 + e6) + (c6 - c7)  -> non-spectral content is the
+       1-D combination c6-c7, a projection of H's 2-D content (c6,c7).  And sgn_odd splits
+       a cospectral class IFF (c6-c7) varies, while H splits IFF (2c6+c7) varies."""
+    import random
+    rng = random.Random(31); f = tot = 0
+    for _ in range(3000):
+        A = random_tournament(7, rng); inv = packing_invariants(A, 7); Nl = inv['Nlam']
+        cp = charpoly_int(A, 7); e3,e5,e6 = cp[3],cp[5],cp[6]
+        c6 = Nl.get((6,),0); c7 = Nl.get((7,),0)
+        pred = (1 + e3 + e5 + e6) + (c6 - c7)
+        if inv['sgn_odd'] != pred: f += 1
+        tot += 1
+    print(f"   n=7  sgn_odd == (1+e3+e5+e6) + (c6-c7) :  {tot-f}/{tot} match")
+    # within cospectral classes: does sgn_odd split <=> Delta(c6-c7)!=0, H split <=> Delta(2c6+c7)!=0 ?
+    rng = random.Random(32); buckets = {}
+    for _ in range(12000):
+        A = random_tournament(7, rng); inv = packing_invariants(A,7); Nl = inv['Nlam']
+        cp = tuple(charpoly_int(A,7))
+        c6 = Nl.get((6,),0); c7 = Nl.get((7,),0)
+        b = buckets.setdefault(cp, {'sgn':set(),'H':set(),'diff':set(),'comb':set(),'pair':set()})
+        b['sgn'].add(inv['sgn_odd']); b['H'].add(inv['H_odd'])
+        b['diff'].add(c6-c7); b['comb'].add(2*c6+c7); b['pair'].add((c6,c7))
+    sgn_split = sum(1 for d in buckets.values() if len(d['sgn'])>1)
+    H_split   = sum(1 for d in buckets.values() if len(d['H'])>1)
+    # consistency: sgn splits <=> diff varies ; H splits <=> comb varies
+    bad_sgn = sum(1 for d in buckets.values() if (len(d['sgn'])>1) != (len(d['diff'])>1))
+    bad_H   = sum(1 for d in buckets.values() if (len(d['H'])>1)   != (len(d['comb'])>1))
+    # classes where the (c6,c7) pair varies but sgn does NOT split (covariation cancelled by x=-1)
+    cov_cancel = sum(1 for d in buckets.values() if len(d['pair'])>1 and len(d['sgn'])==1)
+    print(f"   n=7  cospectral classes: {len(buckets)};  sgn_odd splits {sgn_split}, H splits {H_split}")
+    print(f"        sgn split <=> Delta(c6-c7)!=0 : {'CONSISTENT' if bad_sgn==0 else f'{bad_sgn} mismatch'}")
+    print(f"        H   split <=> Delta(2c6+c7)!=0: {'CONSISTENT' if bad_H==0 else f'{bad_H} mismatch'}")
+    print(f"        classes where (c6,c7) varies but sgn_odd does NOT (x=-1 cancels covariation): {cov_cancel}")

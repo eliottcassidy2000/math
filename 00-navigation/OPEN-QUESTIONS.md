@@ -4,6 +4,34 @@
 
 ---
 
+## OPEN-Q-096 🟢 — The other faces of the master cycle-packing polynomial Φ
+
+**Source:** monad-explorer-2026-06-15-S5, HYP-2514, reflection `the-master-cycle-packing-polynomial`, THM-505.
+
+The spectrum (Sachs Coefficient Theorem, all-length **signed** `y_k=−x^{−k}`) and the OCF
+`H` (odd-only **unsigned** fugacity-2 `y_k=2[k odd]`) are two evaluations of one master
+disjoint-cycle-packing polynomial `Φ(T;{y_k}) = Σ_{packings}∏ y_{|C|}`. Open:
+
+1. **Combinatorial meaning of the even / all faces.** `I(Ω_even,2)` and `I(Ω_all,2)` are
+   non-spectral on the same schedule as `H` (first split at n=6) but unstudied. Is there a
+   Rédei-style count they equal? Is `I(Ω_all,2)` a known graph polynomial of `T`? Their
+   dimension growth law (the analogue of `A000009(n)−3`)?
+2. **The signed odd face is "more spectral" — RESOLVED at n=7.** `sgn_odd =
+   Σ_{odd packings}(−1)^{#cyc} = I(Ω,−1) = −χ̃(Ind Ω)`, the reduced **Euler characteristic of
+   the odd-cycle packing complex**. At n=7 it equals `(1+e₃+e₅+e₆) + (c₆−c₇)` (verified
+   3000/3000): non-spectral content is the **1-D** direction `c₆−c₇`, a projection of `H`'s
+   2-D `(c₆,c₇)`. It splits 16 cospectral classes (iff `Δ(c₆−c₇)≠0`) vs `H`'s 47 (iff
+   `Δ(2c₆+c₇)≠0`); `47 = 16 + 31`, the 31 gap = classes where `c₆~c₇` **covary** and the
+   alternating sign `x=−1 ⊥ (1,1)` cancels them. **The fugacity `x` is a dial selecting a
+   linear functional of the non-spectral level-sums `α_j`.** OPEN: the general-n analogue
+   (the Euler-char direction vs the `H` direction in the `⌊n/3⌋`-D `α_j` space); does some
+   `x` minimize the split count (the "most spectral" fugacity)?
+3. **General-n Sachs-basis skeleton.** Prove `S = 1 − 2e₃ − 2e₅ + 4·Σ_{m even ≥6}e_m`
+   (verified n≤9) for all `n ≤ 11`, and derive the `n=12` refinement when the `(3,3,3,3)`
+   quadruple level switches on.
+
+---
+
 ## OPEN-Q-093 🟡
 **Can corrected trace vectors compute higher tournament cycle structure and compress H beyond n=6?**
 
