@@ -330,3 +330,53 @@ defects) and verified for n=7, n=8, n=9.
   proving no `N_λ` is spectrally pinned (then the law is a theorem).
 - (iii) `H` is universal-linear in the *full* carrier set but is **not** a bounded-degree
   polynomial in the simple cycles alone past n=7 (the linearity dichotomy above).
+
+## THE MASTER CYCLE-PACKING POLYNOMIAL — spectrum & H as two specializations (monad-explorer-S5, HYP-2514)
+
+The "spectral skeleton + non-spectral carriers" split is the **Sachs Coefficient Theorem**
+read alongside the OCF. Define the master polynomial over vertex-disjoint directed-cycle
+packings (*linear subdigraphs* `L`), one variable per cycle length:
+
+> **Φ(T; y₃, y₄, …) = Σ_{L} ∏_{C∈L} y_{|C|} = Σ_λ N_λ ∏_i y_{λ_i}.**
+
+Both the spectrum and `H` are evaluations of this **one** polynomial:
+
+- **Spectrum (Sachs):** `y_k = −x^{−k}` ⟹ `xⁿ·Φ = det(xI − A)`. The coefficient of
+  `x^{n−m}` is `e_m^{signed} := Σ_{|V(L)|=m}(−1)^{#cyc(L)}` = the **signed all-length**
+  packing count = `(±)` elementary symmetric function of the eigenvalues (SPECTRAL).
+  VERIFIED `200/200` n≤6, `120/120` n=7 (Sachs vs exact Faddeev–LeVerrier char-poly).
+- **OCF (`H`):** `y_k = 2·[k odd]` ⟹ `Φ = Σ_{odd packings} 2^{#cyc} = I(Ω,2) = H`
+  (the **odd-only, unsigned, fugacity-2** point). VERIFIED vs direct Ham-path count.
+
+So the THM-505 "non-spectral defect" is **the gap between the all-length signed *curve*
+`y_k=−x^{−k}` and the odd-only unsigned *point* `y_k=2[k odd]`** — three separating
+channels: even-vs-odd weighting, signs, length-grading. This supersedes the "complementary
+halves" framing (reflection `the-zeta-function-and-the-ocf-read-complementary-halves`):
+they are not halves but two loci of one packing polynomial, and the *matched* spectral
+reading for `H` is the **elementary-symmetric (char-poly coefficient)** one, not the
+power-sum/trace (`W_k`) one — because `H` is a packing count, so `e_m` and `H` share units.
+
+**Skeleton in the natural (e_m) basis** — a transparent `Z`-combination of char-poly
+coefficients (no `W_k`), VERIFIED `2000/2000` n=7, `1500/1500` n=8 (bracket constant on all
+167 cospectral classes at n=7):
+
+> **n=7:  H = (1 − 2e₃ − 2e₅ + 4e₆) + 4c₆ + 2c₇.**
+> **n=8:  H = (1 − 2e₃ − 2e₅ + 4e₆ + 4e₈) + 4c₆ + 2c₇ + 4c₈ − 4·D₄₄**   (`D₄₄` = disjoint 4-cycle pairs).
+
+The **defect lock** is one Sachs coefficient: `e₆^{signed} = D₃₃ − c₆` (VERIFIED n=6,7,8).
+`c₆` is non-spectral precisely because it is locked to `D₃₃` by this single char-poly
+coefficient; in general each carrier is the *unsigned/odd resolution of a signed/all-length
+`e_m`*.
+
+**All faces of Φ turn non-spectral at n=6.** The unsigned packing counts `H=I(Ω_odd,2)`,
+`I(Ω_even,2)`, `I(Ω_all,2)` and the signed variants ALL first split cospectral classes at
+`n=6` (the disjoint-pair threshold `3+3`; all spectral at n≤5). Split-class counts at n=7
+(of 168): `H_odd 47, even 46, all 47, signed-odd **16**, signed-even 46`. **Signs partially
+restore spectrality** — the signed odd-packing count (16) is much closer to the spectrum
+than unsigned `H` (47); the unsigned fugacity-2 evaluation is the *most* non-spectral way to
+read the odd packings, which is exactly why Rédei's `H` is the project's richest
+non-spectral invariant. Sign/fugacity is the dial controlling how much of `Φ` the spectrum
+can see. (`04-computation/master_cycle_packing_monad.py`,
+`05-knowledge/results/master_cycle_packing_monad.out`,
+`master_cycle_packing_skeleton_ebasis.out`; reflection
+`the-master-cycle-packing-polynomial`.)
