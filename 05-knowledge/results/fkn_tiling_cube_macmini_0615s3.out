@@ -1,0 +1,65 @@
+========================================================================
+FKN ON THE TILING CUBE: ground state, energy, Walsh spectra, perturbations
+========================================================================
+
+--- n=4: m=3 tiles, 8 tilings, 4 iso classes (= A000568(4)) ---
+  energy(backward arcs) -> (#tilings, #distinct iso classes):
+    e=0: tilings=   1, distinct iso=1
+    e=1: tilings=   3, distinct iso=3
+    e=2: tilings=   3, distinct iso=1
+    e=3: tilings=   1, distinct iso=1
+  ground state e=0: transitive (c3=0, H=1); c3 range 0..2, H range 1..5
+  Walsh degree (top level w/ mass): c3=2, H=2 (THM-163 band D=2*floor((n-1)/2)=2), is-transitive=3
+  c3 Walsh weight by level: [2.25, 0.375, 0.125, 0.0]
+  H  Walsh weight by level: [16.0, 1.5, 0.5, 0.0]
+  single-flip iso-class-change influence per tile (FKN dictator strength): [0.75, 0.5, 0.5]
+    total influence (sum) = 1.750; apex tile (n,1)=index0 influence=0.750
+
+--- n=5: m=6 tiles, 64 tilings, 12 iso classes (= A000568(5)) ---
+  energy(backward arcs) -> (#tilings, #distinct iso classes):
+    e=0: tilings=   1, distinct iso=1
+    e=1: tilings=   6, distinct iso=6
+    e=2: tilings=  15, distinct iso=6
+    e=3: tilings=  20, distinct iso=7
+    e=4: tilings=  15, distinct iso=5
+    e=5: tilings=   6, distinct iso=3
+    e=6: tilings=   1, distinct iso=1
+  ground state e=0: transitive (c3=0, H=1); c3 range 0..5, H range 1..15
+  Walsh degree (top level w/ mass): c3=2, H=4 (THM-163 band D=2*floor((n-1)/2)=4), is-transitive=6
+  c3 Walsh weight by level: [10.562, 0.5, 0.562, 0.0, 0.0, 0.0, 0.0]
+  H  Walsh weight by level: [97.52, 6.31, 6.06, 0.38, 0.11, 0.0, 0.0]
+  single-flip iso-class-change influence per tile (FKN dictator strength): [0.875, 0.875, 0.938, 0.875, 0.875, 0.938]
+    total influence (sum) = 5.375; apex tile (n,1)=index0 influence=0.875
+
+--- n=6: m=10 tiles, 1024 tilings, 56 iso classes (= A000568(6)) ---
+  energy(backward arcs) -> (#tilings, #distinct iso classes):
+    e=0: tilings=   1, distinct iso=1
+    e=1: tilings=  10, distinct iso=10
+    e=2: tilings=  45, distinct iso=25
+    e=3: tilings= 120, distinct iso=40
+    e=4: tilings= 210, distinct iso=43
+    e=5: tilings= 252, distinct iso=41
+    e=6: tilings= 210, distinct iso=36
+    e=7: tilings= 120, distinct iso=31
+    e=8: tilings=  45, distinct iso=23
+    e=9: tilings=  10, distinct iso=6
+    e=10: tilings=   1, distinct iso=1
+  ground state e=0: transitive (c3=0, H=1); c3 range 0..8, H range 1..45
+  Walsh degree (top level w/ mass): c3=2, H=4 (THM-163 band D=2*floor((n-1)/2)=4), is-transitive=10
+  c3 Walsh weight by level: [36.0, 0.625, 1.5, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  H  Walsh weight by level: [841.0, 33.84, 65.09, 3.47, 2.16, 0.0, 0.0, 0.0]...
+  single-flip iso-class-change influence per tile (FKN dictator strength): [0.93, 0.926, 0.932, 0.979, 0.926, 0.93, 0.977, 0.932, 0.977, 0.979]
+    total influence (sum) = 9.484; apex tile (n,1)=index0 influence=0.930
+
+========================================================================
+MÖBIUS INCLUSION-EXCLUSION (the A+B+C-D-E-F+G structure)
+========================================================================
+codim-c sub-tournament count C(n-1,c), sign (-1)^(c+1):
+  n=4: +3*sz3 -3*sz2 +1*sz1   (alt-sum of counts = 1; sum |counts| = 7 = 2^(n-1)-1)
+  n=5: +4*sz4 -6*sz3 +4*sz2 -1*sz1   (alt-sum of counts = 1; sum |counts| = 15 = 2^(n-1)-1)
+  n=6: +5*sz5 -10*sz4 +10*sz3 -5*sz2 +1*sz1   (alt-sum of counts = 1; sum |counts| = 31 = 2^(n-1)-1)
+  n=7: +6*sz6 -15*sz5 +20*sz4 -15*sz3 +6*sz2 -1*sz1   (alt-sum of counts = 1; sum |counts| = 63 = 2^(n-1)-1)
+  Note: Σ_c C(n-1,c) = 2^(n-1)-1 (all nonempty subsets of the n-1 non-anchor vertices);
+  Σ_c (-1)^(c+1) C(n-1,c) = 1 - (1-1)^(n-1) = 1 (the Möbius/inclusion-exclusion sieve).
+
+DONE.
