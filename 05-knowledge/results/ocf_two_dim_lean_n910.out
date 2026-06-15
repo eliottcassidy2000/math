@@ -22,3 +22,5 @@
  n = 10   samples=250000  cap=12
 ================================================================
   cospectral classes with >=2 members: 30333
+
+[n=10 phase-2 (pure-python 2^10 H_dp over ~60k members) too slow to finish this session; stopped. dim_func(H)(10) <= floor(10/3) = 3 is PROVED regardless of computation; predicted carrier-dim 7 vs H-func 3, consistent with n=8 (3 vs 2) and n=9 (5 vs 3).]
