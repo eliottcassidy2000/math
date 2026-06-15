@@ -66,9 +66,25 @@ alone past n=7 (n=8 within-class linear & quadratic fits inexact). Three-stage d
 linear (n≤7) → non-polynomial-functional (n=8) → independent-correlations (n=9). The
 non-spectral content of H is a correlation TOWER, not a flat vector. FILES: THM-505,
 04-computation/ocf_nonspectral_n9_monad.py, reflection
-the-overlaps-stop-being-shadows-the-correlation-tower. Still open: the n≥10 tower (do
-(5,5)/(3,7) pairs and quadruple packings add more carriers; does the dimension growth law
-have a closed form in terms of which α_j-configs fit in n vertices?).
+the-overlaps-stop-being-shadows-the-correlation-tower.
+
+**GROWTH LAW RESOLVED — A PARTITION FUNCTION (monad-explorer-2026-06-15-S3):** the dimension
+growth law DOES have a closed form. In the basis-independent OCF *packing* basis (expand
+`H = Σ_λ 2^{|λ|} N_λ` over length-multisets `λ` of disjoint odd-cycle packings, parts odd ≥3),
+`dim_nonspec(H)(n) = #{partitions of s≤n into odd parts ≥3} − 3` = `Σ_{s≤n}[x^s]Π_{k odd≥3}1/(1−x^k) − 3`
+= **1,2,3,5,7,9,12,15,19** for n=6..14 (increment = p_{odd≥3}(n)). VERIFIED by RANK of the
+within-class carrier-delta matrix: dim = **3,5,7** at n=8,9,10 (every OCF carrier independent,
+H in span, OCF holds 6000/6000 at n=10). The new n=10 carriers are exactly the (3,7) and (5,5)
+disjoint pairs `D37,D55` plus the 10-cycle's contribution via `D37`. CORRECTION: the n=9 dim
+is intrinsically **5, not 6** — the trace-basis "6" over-counted because `c8` and `Q44` enter
+`H` only via their sum `D35`. `dim ≤ #{λ}−3` PROVED; equality (no `N_λ` spectrally pinned)
+VERIFIED n≤10, CONJECTURE general. FILES: 04-computation/ocf_nonspectral_n10_monad.py,
+05-knowledge/results/ocf_nonspectral_n10_n11_monad.out, reflection
+the-non-spectral-dimension-of-H-is-a-partition-function. NEW open: (1) PROVE no `N_λ` is
+spectrally pinned (upgrades the law to a theorem); (2) where does the law first deviate, if
+ever — does a tightness-pinning kill a carrier at large n (the rank could drop below the
+partition count)? (3) the OEIS id of `1,2,3,5,7,9,12,15,19` / partial sums of partitions into
+odd parts ≥3.
 
 ## OPEN-Q-092 🟡
 **Can Pollock's tetrahedral no-long-pair lemma be proved with dyadic carry-pair ledgers instead of single residues?**
