@@ -1,0 +1,44 @@
+=== (1) THE 7-VANISHING: s(t)=0 iff 7|t (t!=0) ===
+   checked t in [-300,300]\{0}: s(t)=0  <=>  7|t   -- counterexamples: []
+   |s(t)| <= 1/(pi|t|) for t=1..4999: True
+   => any relation term with a coeff t_v with 7|t_v contributes 0;
+      L depends ONLY on relations all of whose coeffs are coprime to 7.
+
+=== (2) PAIRWISE ABSOLUTE CONVERGENCE + explicit O(g^2/(v_a v_b)) bound ===
+   pair: exact P(a,b)=2 sum_{k>=1} s(k vb/g)s(k va/g);  proved bound |P| <= g^2/(3 va vb)
+   ( 14, 21) g=7 a=3 b=2: P=+2.721088e-02 (tail<8.4e-08)  bound g^2/(3 va vb)=5.555556e-02  OK
+   (  1,  2) g=1 a=2 b=1: P=+5.102041e-02 (tail<2.5e-07)  bound g^2/(3 va vb)=1.666667e-01  OK
+   (  3,  5) g=1 a=5 b=3: P=+8.163265e-03 (tail<3.4e-08)  bound g^2/(3 va vb)=2.222222e-02  OK
+   ( 12, 18) g=6 a=3 b=2: P=+2.721088e-02 (tail<8.4e-08)  bound g^2/(3 va vb)=5.555556e-02  OK
+   (  7, 14) g=7 a=2 b=1: P=+5.102041e-02 (tail<2.5e-07)  bound g^2/(3 va vb)=1.666667e-01  OK
+   (  8, 13) g=1 a=13 b=8: P=+1.962323e-04 (tail<4.9e-09)  bound g^2/(3 va vb)=3.205128e-03  OK
+   (  6, 10) g=2 a=5 b=3: P=+8.163265e-03 (tail<3.4e-08)  bound g^2/(3 va vb)=2.222222e-02  OK
+   ( 98,105) g=7 a=15 b=14: P=-3.482750e-19 (tail<2.4e-09)  bound g^2/(3 va vb)=1.587302e-03  OK  (a or b divisible by 7: terms can vanish by 7-vanishing)
+
+=== (3) ALMOST-SIDON PROVABLE SUBCASE: |L-(6/7)^13| <= (6/7)^11 sum|P| ===
+   (6/7)^13 = 0.134801;  threshold: deviation bound < (6/7)^13  => L>0 (loose).
+   spread primes u14:
+      sum|P| (exact)   = 0.003420  => dev bound (6/7)^11*sum = 0.000628   < (6/7)^13? True
+      sum|P| (proved <=)= 0.015775  => dev bound (proved)      = 0.002894   < (6/7)^13? True
+      => if S is almost-Sidon (only pairwise relations), L >= (6/7)^13 - 0.000628 = 0.134173 > 0
+   large-spread u14:
+      sum|P| (exact)   = 0.000043  => dev bound (6/7)^11*sum = 0.000008   < (6/7)^13? True
+      sum|P| (proved <=)= 0.000857  => dev bound (proved)      = 0.000157   < (6/7)^13? True
+      => if S is almost-Sidon (only pairwise relations), L >= (6/7)^13 - 0.000008 = 0.134793 > 0
+
+=== (4) NUMERICAL: truncated relation sum vs GROUND-TRUTH deficit limit ===
+   (|T|=2 is summed exactly over its lattice; |T|=3 is a coeff-truncated PROBE,
+    NOT a convergent estimate of the |T|=3 total -- the ground-truth limit below
+    is the exact D(q,S)/q average.  Trend, not value, is the claim for |T|=3.)
+   near-Sidon spread-primes u14:
+      (6/7)^13                 = +0.134801
+      + |T|=2 pairwise (exact) = -0.000063  => pairwise-only L = +0.134737
+      |T|=3 probe (|t|<=14)    = -0.051760  (sign/size of higher-order effect)
+      GROUND TRUTH L = avg D/q over q=1500..1529 = 0.1281 +- 0.0046
+      residual L_true - L_pairwise = -0.0066  (near-Sidon: small;  evader: large => |T>=3| matters)
+   evader 7*{1..12}u{611}:
+      (6/7)^13                 = +0.134801
+      + |T|=2 pairwise (exact) = +0.114699  => pairwise-only L = +0.249499
+      |T|=3 probe (|t|<=14)    = -0.477666  (sign/size of higher-order effect)
+      GROUND TRUTH L = avg D/q over q=1500..1529 = 0.0287 +- 0.0034
+      residual L_true - L_pairwise = -0.2208  (near-Sidon: small;  evader: large => |T>=3| matters)

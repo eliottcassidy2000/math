@@ -1,0 +1,61 @@
+=== order 8 (k=3) ===
+  skew_type_ok: True
+  hadamard_orth_ok: True
+  dim: 4
+  n_over_2: 4
+  dim_ok: True
+  self_orth_rows: True
+  self_orth_basis: True
+  perp_dim: 4
+  self_dual: True
+  weights: {0: 1, 4: 14, 8: 1}
+  doubly_even: True
+  min_distance: 4
+  num_codewords: 16
+
+=== order 16 (k=4) ===
+  skew_type_ok: True
+  hadamard_orth_ok: True
+  dim: 8
+  n_over_2: 8
+  dim_ok: True
+  self_orth_rows: True
+  self_orth_basis: True
+  perp_dim: 8
+  self_dual: True
+  weights: {0: 1, 4: 28, 8: 198, 12: 28, 16: 1}
+  doubly_even: True
+  min_distance: 4
+  num_codewords: 256
+
+=== order 32 (k=5) ===
+  skew_type_ok: True
+  hadamard_orth_ok: True
+  dim: 16
+  n_over_2: 16
+  dim_ok: True
+  self_orth_rows: True
+  self_orth_basis: True
+  perp_dim: 16
+  self_dual: True
+  weights: {0: 1, 4: 120, 8: 1820, 12: 8008, 16: 45638, 20: 8008, 24: 1820, 28: 120, 32: 1}
+  doubly_even: True
+  min_distance: 4
+  num_codewords: 65536
+
+=== order 64 (k=6) ===
+  skew_type_ok: True
+  hadamard_orth_ok: True
+  dim: 32
+  n_over_2: 32
+  dim_ok: True
+  self_orth_rows: True
+  self_orth_basis: True
+  perp_dim: 32
+  self_dual: True
+  basis_weights_mod4: [0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0]
+  basis_all_div4: True
+  doubly_even_structural: True
+  weight4_witness_found: True
+  min_distance: 4
+

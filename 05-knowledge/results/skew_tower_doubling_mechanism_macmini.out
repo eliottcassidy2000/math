@@ -1,0 +1,6 @@
+step 0: {'order_old': 1, 'order_new': 2, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': True, 'top_doubled_rows_div4': True, 'dim_old': 0, 'dim_old==m/2': '(m=1 base)', 'dim_new': 1, 'dim_new==n/2': True}
+step 1: {'order_old': 2, 'order_new': 4, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': False, 'top_doubled_rows_div4': False, 'dim_old': 1, 'dim_old==m/2': True, 'dim_new': 3, 'dim_new==n/2': False}
+step 2: {'order_old': 4, 'order_new': 8, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': True, 'top_doubled_rows_div4': True, 'dim_old': 3, 'dim_old==m/2': False, 'dim_new': 4, 'dim_new==n/2': True}
+step 3: {'order_old': 8, 'order_new': 16, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': True, 'top_doubled_rows_div4': True, 'dim_old': 4, 'dim_old==m/2': True, 'dim_new': 8, 'dim_new==n/2': True}
+step 4: {'order_old': 16, 'order_new': 32, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': True, 'top_doubled_rows_div4': True, 'dim_old': 8, 'dim_old==m/2': True, 'dim_new': 16, 'dim_new==n/2': True}
+step 5: {'order_old': 32, 'order_new': 64, 'top_rows_are_pair_doubled': True, 'all_H_rows_even_weight': True, 'top_doubled_rows_div4': True, 'dim_old': 16, 'dim_old==m/2': True, 'dim_new': 32, 'dim_new==n/2': True}

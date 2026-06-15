@@ -1,0 +1,84 @@
+==============================================================================
+LRC(14) ADELIC STRUCTURE AUDIT.   main term (6/7)^13 = 0.134801
+==============================================================================
+
+NON-RELATION set [3, 5, 11, 14, 19, 37, 67, 131, 269, 523, 1051, 2099, 4099]
+   L (large-q) ~ 0.11801   (expect ~ main 0.1348: no exact relations)
+EVADER  7*{1..12}u{13} = [7, 13, 14, 21, 28, 35, 42, 49, 56, 63, 70, 77, 84]
+   L (large-q) ~ 0.02901   (expect suppressed: AP relations)
+AP-CORE {1..12}u{14} = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+   L (large-q) ~ 0.02381   (expect MOST suppressed)
+
+==============================================================================
+T1/T2: single-prime ladders  D(p^e)/p^e  ->  beta_p.  Does beta_p = L for every p?
+==============================================================================
+
+  NON-RELATION  (full L ~ 0.11801, main 0.13480):
+     p= 2: D(p^e)/p^e tail = ['0.1237', '0.1179', '0.1172']  ->  beta_p ~ 0.1172   | beta_p ~ L? True  beta_p ~ main? False
+     p= 3: D(p^e)/p^e tail = ['0.1192', '0.1186', '0.1177']  ->  beta_p ~ 0.1177   | beta_p ~ L? True  beta_p ~ main? False
+     p= 5: D(p^e)/p^e tail = ['0.1152', '0.1158', '0.1187']  ->  beta_p ~ 0.1187   | beta_p ~ L? True  beta_p ~ main? False
+     p=11: D(p^e)/p^e tail = ['0.1322', '0.1232', '0.1157']  ->  beta_p ~ 0.1157   | beta_p ~ L? True  beta_p ~ main? False
+     p=13: D(p^e)/p^e tail = ['0.1420', '0.1238', '0.1177']  ->  beta_p ~ 0.1177   | beta_p ~ L? True  beta_p ~ main? False
+     => all single-prime beta_p within 0.0030; all ~ full L? True  (if yes: NO per-prime suppression difference; beta_p reconstructs L, not main)
+
+  EVADER  (full L ~ 0.02901, main 0.13480):
+     p= 2: D(p^e)/p^e tail = ['0.0292', '0.0292', '0.0292']  ->  beta_p ~ 0.0292   | beta_p ~ L? True  beta_p ~ main? False
+     p= 3: D(p^e)/p^e tail = ['0.0299', '0.0296', '0.0293']  ->  beta_p ~ 0.0293   | beta_p ~ L? True  beta_p ~ main? False
+     p= 5: D(p^e)/p^e tail = ['0.0352', '0.0307', '0.0293']  ->  beta_p ~ 0.0293   | beta_p ~ L? True  beta_p ~ main? False
+     p=11: D(p^e)/p^e tail = ['0.0496', '0.0240', '0.0291']  ->  beta_p ~ 0.0291   | beta_p ~ L? True  beta_p ~ main? False
+     p=13: D(p^e)/p^e tail = ['0.0000', '0.0310', '0.0293']  ->  beta_p ~ 0.0293   | beta_p ~ L? True  beta_p ~ main? False
+     => all single-prime beta_p within 0.0002; all ~ full L? True  (if yes: NO per-prime suppression difference; beta_p reconstructs L, not main)
+
+  AP-CORE  (full L ~ 0.02381, main 0.13480):
+     p= 2: D(p^e)/p^e tail = ['0.0239', '0.0239', '0.0239']  ->  beta_p ~ 0.0239   | beta_p ~ L? True  beta_p ~ main? False
+     p= 3: D(p^e)/p^e tail = ['0.0238', '0.0241', '0.0239']  ->  beta_p ~ 0.0239   | beta_p ~ L? True  beta_p ~ main? False
+     p= 5: D(p^e)/p^e tail = ['0.0320', '0.0237', '0.0241']  ->  beta_p ~ 0.0241   | beta_p ~ L? True  beta_p ~ main? False
+     p=11: D(p^e)/p^e tail = ['0.0331', '0.0210', '0.0238']  ->  beta_p ~ 0.0238   | beta_p ~ L? True  beta_p ~ main? False
+     p=13: D(p^e)/p^e tail = ['0.0710', '0.0264', '0.0240']  ->  beta_p ~ 0.0240   | beta_p ~ L? True  beta_p ~ main? False
+     => all single-prime beta_p within 0.0003; all ~ full L? True  (if yes: NO per-prime suppression difference; beta_p reconstructs L, not main)
+
+==============================================================================
+T3: Euler-product reconstruction test.  If L = beta_inf * prod_p beta_p with beta_p=L,
+    then L = beta_inf * L^{#primes}: only consistent if the product is TRIVIAL (all=1).
+==============================================================================
+  For EVADER: beta_p ~ L ~ 0.0290 for every probed p (see T2). The 'local densities' are
+  NOT < 1 multiplicative corrections to a separate beta_inf; each equals the WHOLE L.
+  prod_p beta_p would -> 0 (infinitely many factors < 1), contradicting L > 0.
+  CONCLUSION: there is no nontrivial Euler product. L is a single archimedean number.
+
+==============================================================================
+T4: p-locality probe.  Exact relations have m=0, divisible by every p^e, so the
+    suppression must be seen by EVERY prime (not just primes dividing some modulus).
+==============================================================================
+  AP-CORE small exact relations (|t|<=2), count=1656; samples:
+     2*1 + -1*2 = 0
+     2*2 + -1*4 = 0
+     2*3 + -1*6 = 0
+     2*4 + -1*8 = 0
+     2*5 + -1*10 = 0
+     2*6 + -1*12 = 0
+  Primes 11 and 13 do NOT divide the relation moduli, yet T2 shows beta_11, beta_13 ~ L
+  (suppressed). => exact-relation suppression is p-adically UNIVERSAL, not p-local.
+
+==============================================================================
+T5: reconstruct L from the EXACT-relation sinc sum (structural cross-check).
+==============================================================================
+  NON-RELATION : exact-relation truncation L_rec = 0.11548 (terms=46); empirical L = 0.11801   main = 0.13480
+  EVADER       : exact-relation truncation L_rec = -0.09405 (terms=790); empirical L = 0.02901   main = 0.13480
+  AP-CORE      : exact-relation truncation L_rec = -0.14843 (terms=940); empirical L = 0.02381   main = 0.13480
+
+  (Truncated/conditionally-convergent: sign & magnitude direction should match —
+   non-relation ~ main, relation sets pushed below main — confirming the q->inf limit
+   is the EXACT-relation (archimedean) sum, identical content to each single-prime limit.)
+
+==============================================================================
+STRUCTURAL VERDICT
+==============================================================================
+  * beta_p := lim_e D(p^e)/p^e  EQUALS the full archimedean L(S) for every prime p,
+    because the surviving (exact, m=0) relations are divisible by every p^e.
+  * Hence NO nontrivial Euler product L = beta_inf * prod_p beta_p (it would force
+    L = L^{1+#primes}). The local factors are all trivially = 1 (generic) or carry
+    the WHOLE L (relation sets) -- either way, not a proper localization.
+  * HYP-2503 is OVER-STATED: L is the singular INTEGRAL (archimedean exact-relation
+    sinc sum), NOT a singular-series Euler product. p-adic/prime-power data lives in
+    the APPROACH to L (threshold shell q*(S) / convergence rate), not in L itself.

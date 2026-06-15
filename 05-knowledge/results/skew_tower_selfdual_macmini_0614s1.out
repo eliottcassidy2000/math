@@ -1,0 +1,12 @@
+========================================================================
+SKEW-SYLVESTER TOWER ROW CODE — self-dual Type II check, orders 8..64
+========================================================================
+order  8: dim=4 (=n/2: True), self-orthogonal=True, SELF-DUAL=True, doubly-even(Type II)=True; min wt 4, weights start [4, 8]
+order 16: dim=8 (=n/2: True), self-orthogonal=True, SELF-DUAL=True, doubly-even(Type II)=True; min wt 4, weights start [4, 8, 12, 16]
+order 32: dim=16 (=n/2: True), self-orthogonal=True, SELF-DUAL=True, doubly-even(Type II)=True; min wt 4, weights start [4, 8, 12, 16]
+order 64: dim=32 (=n/2: True), self-orthogonal=True, SELF-DUAL=True, doubly-even(Type II)=True; sampled min wt 4 (not exhaustive at dim 32)
+
+CONCLUSION: self-dual Type II [2^k, 2^{k-1}, 4] verified for k=3..6 (orders 8,16,32,64).
+This is the ACHIEVABLE half of HYP-2409 (the d+ INDECOMPOSABILITY at higher k is NOT
+checked here — distinguishing d_n+ from e8+e8-type decomposables needs the support graph).
+DONE.

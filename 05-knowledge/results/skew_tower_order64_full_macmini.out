@@ -1,0 +1,5 @@
+order 64: dim=32
+randomized doubly-even check (2e6 samples):
+   {'samples': 2000000, 'non_div4': 0, 'min_sampled_nonzero': 4, 'saw_weight4': True}
+MacWilliams self-dual transform check on exact order-32 enumerator:
+   True

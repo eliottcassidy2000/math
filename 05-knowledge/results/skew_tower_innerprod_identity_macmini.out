@@ -1,0 +1,28 @@
+=== order 8 (n mod 8 = 0) ===
+  row-sum multiset: {0: 7, 8: 1}
+  binarized-weight multiset: {0: 1, 4: 7}
+  all generator weights divisible by 4: True
+  pairwise dot integer (formula):        True
+  pairwise dot EVEN (self-orthogonal):   True
+
+=== order 16 (n mod 8 = 0) ===
+  row-sum multiset: {0: 15, 16: 1}
+  binarized-weight multiset: {0: 1, 8: 15}
+  all generator weights divisible by 4: True
+  pairwise dot integer (formula):        True
+  pairwise dot EVEN (self-orthogonal):   True
+
+=== order 32 (n mod 8 = 0) ===
+  row-sum multiset: {0: 31, 32: 1}
+  binarized-weight multiset: {0: 1, 16: 31}
+  all generator weights divisible by 4: True
+  pairwise dot integer (formula):        True
+  pairwise dot EVEN (self-orthogonal):   True
+
+=== order 64 (n mod 8 = 0) ===
+  row-sum multiset: {0: 63, 64: 1}
+  binarized-weight multiset: {0: 1, 32: 63}
+  all generator weights divisible by 4: True
+  pairwise dot integer (formula):        True
+  pairwise dot EVEN (self-orthogonal):   True
+
