@@ -1,0 +1,130 @@
+==============================================================================
+MOMENT-CUMULANT LAW FOR TOURNAMENT CYCLE STRUCTURE -- fresh verification
+==============================================================================
+
+--- PART (A)+(B): ladder + Witt identities ---
+
+[exhaustive n=4] n=4, kmax=4: 64 tournaments
+   ladder identities: 128/128 exact
+   witt  identities : 128/128 exact
+   ALL EXACT
+[exhaustive n=5] n=5, kmax=5: 1024 tournaments
+   ladder identities: 3072/3072 exact
+   witt  identities : 3072/3072 exact
+   ALL EXACT
+[exhaustive n=6] n=6, kmax=6: 32768 tournaments
+   ladder identities: 131072/131072 exact
+   witt  identities : 131072/131072 exact
+   ALL EXACT
+[random n=7 (300)] n=7, kmax=7: 300 tournaments
+   ladder identities: 1500/1500 exact
+   witt  identities : 1500/1500 exact
+   ALL EXACT
+[random n=8 (200)] n=8, kmax=8: 200 tournaments
+   ladder identities: 1200/1200 exact
+   witt  identities : 1200/1200 exact
+   ALL EXACT
+
+>>> PART (A)+(B) overall: ALL EXACT
+
+==============================================================================
+--- PART (C): is the necklace/Witt law a FREE-prob moment-cumulant law? ---
+==============================================================================
+
+We treat normalized traces m_k = tr(A^k)/n as a moment sequence of the spectral
+distribution of A. We compute CLASSICAL cumulants (all partitions) and FREE
+cumulants (non-crossing partitions) and compare to the cycle quantities W_k and
+c_k. KEY question: does either equal W_k = (1/k) sum mu(d) tr A^{k/d}?
+
+
+  tournament #1 (n=7):
+    traces trA^k        : [0, 0, 15, 20, 20, 81, 175]
+    W_k (necklace)      : [0, 0, 5, 5, 4, 11, 25]
+    moments m_k=trA^k/n : ['0', '0', '15/7', '20/7', '20/7', '81/7', '25']
+    classical kappa_k   : ['0', '0', '15/7', '20/7', '20/7', '-1683/49', '-1325/7']
+    free      k_k       : ['0', '0', '15/7', '20/7', '20/7', '-108/49', '-125/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  tournament #2 (n=7):
+    traces trA^k        : [0, 0, 33, 68, 105, 429, 1330]
+    W_k (necklace)      : [0, 0, 11, 17, 21, 66, 190]
+    moments m_k=trA^k/n : ['0', '0', '33/7', '68/7', '15', '429/7', '190']
+    classical kappa_k   : ['0', '0', '33/7', '68/7', '15', '-7887/49', '-9890/7']
+    free      k_k       : ['0', '0', '33/7', '68/7', '15', '-264/49', '-914/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  tournament #3 (n=7):
+    traces trA^k        : [0, 0, 36, 96, 115, 498, 2030]
+    W_k (necklace)      : [0, 0, 12, 24, 23, 77, 290]
+    moments m_k=trA^k/n : ['0', '0', '36/7', '96/7', '115/7', '498/7', '290']
+    classical kappa_k   : ['0', '0', '36/7', '96/7', '115/7', '-9474/49', '-15250/7']
+    free      k_k       : ['0', '0', '36/7', '96/7', '115/7', '-402/49', '-1426/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  tournament #4 (n=7):
+    traces trA^k        : [0, 0, 24, 44, 70, 240, 630]
+    W_k (necklace)      : [0, 0, 8, 11, 14, 36, 90]
+    moments m_k=trA^k/n : ['0', '0', '24/7', '44/7', '10', '240/7', '90']
+    classical kappa_k   : ['0', '0', '24/7', '44/7', '10', '-4080/49', '-4650/7']
+    free      k_k       : ['0', '0', '24/7', '44/7', '10', '-48/49', '-426/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  tournament #5 (n=7):
+    traces trA^k        : [0, 0, 30, 60, 100, 372, 1078]
+    W_k (necklace)      : [0, 0, 10, 15, 20, 57, 154]
+    moments m_k=trA^k/n : ['0', '0', '30/7', '60/7', '100/7', '372/7', '154']
+    classical kappa_k   : ['0', '0', '30/7', '60/7', '100/7', '-6396/49', '-7922/7']
+    free      k_k       : ['0', '0', '30/7', '60/7', '100/7', '-96/49', '-722/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  tournament #6 (n=7):
+    traces trA^k        : [0, 0, 15, 20, 25, 87, 182]
+    W_k (necklace)      : [0, 0, 5, 5, 5, 12, 26]
+    moments m_k=trA^k/n : ['0', '0', '15/7', '20/7', '25/7', '87/7', '26']
+    classical kappa_k   : ['0', '0', '15/7', '20/7', '25/7', '-1641/49', '-1318/7']
+    free      k_k       : ['0', '0', '15/7', '20/7', '25/7', '-66/49', '-118/7']
+    free_k  == W_k      ? False
+    classical_k == W_k  ? False
+    free_k  == W_k/n    ? False
+
+  Across 6 tournaments:
+    free cumulant == W_k        in 0/6
+    classical cumulant == W_k   in 0/6
+    free cumulant == W_k/n      in 0/6
+
+------------------------------------------------------------------------------
+POSET DIAGNOSTIC: necklace count vs non-crossing-partition count
+------------------------------------------------------------------------------
+
+The Witt/necklace Mobius runs over the DIVISOR poset of k (Mobius mu(d), a
+1-dimensional necklace inversion). Free probability's Mobius runs over the
+NON-CROSSING PARTITION LATTICE NC(k) (Catalan-many elements). If they were the
+same inversion these counts would have to match. They do not:
+
+      k   #divisors(k)   #NC(k)=Catalan   #all-partitions=Bell
+      1              1                1                      1
+      2              2                2                      2
+      3              2                5                      5
+      4              3               14                     15
+      5              2               42                     52
+      6              4              132                    203
+      7              2              429                    877
+
+=> The necklace (Witt) inversion is Mobius on the DIVISOR LATTICE of k, size
+   #divisors(k) (e.g. 4 for k=6). The free-probability inversion is Mobius on
+   NC(k), size Catalan(k) (e.g. 132 for k=6). DIFFERENT posets, different sizes.
+   So the THM-502 law is NOT literally Speicher's free moment-cumulant relation;
+   it is the NECKLACE/Witt (cyclic) Mobius inversion -- the SAME inversion that
+   defines free cumulants ONLY in the degenerate sense that both are Mobius
+   inversions, on different posets.
+

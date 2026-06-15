@@ -1,0 +1,55 @@
+==============================================================================
+THE MOMENT-CUMULANT HOME: necklace/zeta vs classical vs free
+==============================================================================
+
+TEST 1 -- the zeta/necklace identity is an EXACT algebraic (Mobius) identity:
+   exp( sum_k p_k u^k / k )  ==  prod_k (1-u^k)^{-W_k},   W_k = necklace(p)_k.
+This is the 'moment(p_k) <-> cumulant(W_k)' pair for THM-502. It must hold for
+ANY integer sequence p with p_1=p_2=0 (tournament). We check on real traces AND
+on a random integer sequence (to show it is structural, not spectral).
+
+   n=8: p=[0, 0, 42, 96, 180, 738, 2394, 6336]
+        W=[0, 0, 14, 24, 36, 116, 342, 780]
+        exp(sum p_k u^k/k) == prod (1-u^k)^-W_k  up to u^8: True
+   n=8: p=[0, 0, 36, 80, 155, 576, 1750, 4592]
+        W=[0, 0, 12, 20, 31, 90, 250, 564]
+        exp(sum p_k u^k/k) == prod (1-u^k)^-W_k  up to u^8: True
+   n=6: p=[0, 0, 18, 24, 35, 120, 252, 480]
+        W=[0, 0, 6, 6, 7, 17, 36, 57]
+        exp(sum p_k u^k/k) == prod (1-u^k)^-W_k  up to u^8: True
+   ... 20 random tournaments (n in 6,7,8): zeta identity exact = True
+   ... 20 random INTEGER sequences p: identity exact = True
+   => the necklace/zeta moment-cumulant pair is a STRUCTURAL Mobius
+      identity (holds for any p), as a moment-cumulant relation should be.
+
+TEST 2 -- classical & free cumulants of the SPECTRAL moments m_k=p_k/n do NOT
+reproduce W_k (already shown in the sibling script; reconfirmed here with the
+exact series). They are inversions on DIFFERENT posets (partition lattice /
+NC lattice) of a DIFFERENT generating function (EGF / R-transform), so they
+cannot equal the necklace W_k except in trivial low degree.
+
+   n=7 sample: p_k = [0, 0, 36, 76, 145, 546, 1652, 4228]
+   W_k (necklace cumulant)   = [0, 0, 12, 19, 29, 85, 236, 519]
+   classical kappa_k (P-lat) = ['0', '0', '36/7', '76/7', '145/7', '-9138/49', '-12028/7', '-66412/7']
+   free k_k (NC-lat)         = ['0', '0', '36/7', '76/7', '145/7', '-66/49', '-1084/7', '-35268/49']
+   W_k == classical_k ? False
+   W_k == free_k      ? False
+
+CONCLUSION (the precise analogy strength):
+  * THM-502 IS literally a moment<->cumulant correspondence -- in the
+    NECKLACE / Witt / Bowen-Lanford-zeta sense: tr(A^k) are the 'moments'
+    (power sums / all closed walks), W_k are the 'cumulants' (primitive
+    necklaces / aperiodic closed walks up to rotation), related by Mobius
+    inversion on the DIVISOR lattice (equivalently the plethystic log of the
+    zeta function).  The cycle-structure 'cumulants' c_k + overlaps are the
+    refinement of W_k by configuration shape.
+  * It is NOT Speicher's FREE moment-cumulant relation. Free cumulants invert
+    on the NON-CROSSING partition lattice NC(k) (Catalan-many cells), a totally
+    different and larger poset; numerically free_k != W_k.
+  * It is also not the CLASSICAL (all-partition) cumulant relation.
+  * The project's genuine free-probability content (Catalan/semicircle in the
+    Paley two-point spectrum, THM-438; free factorial law kappa_n=n!, R-transform
+    = Euler/Gompertz) lives elsewhere -- in the SPECTRAL DISTRIBUTION's moments,
+    not in the cyclic necklace census. The two 'cumulant' stories share only the
+    word 'Mobius'.
+

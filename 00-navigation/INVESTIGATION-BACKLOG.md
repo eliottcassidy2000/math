@@ -12,6 +12,16 @@
 
 ---
 
+## Lead mac-mini-2026-06-15-S1: baby Hodge = the det/permanent (P/#P) wall through the moment problem (THM-509, HYP-2526..2528, OPEN-Q-099, T820)
+
+**Status:** THM-509 proved (Layer-1 det-side spectral-blindness rigorous) + all holes certified moment-interior (n=6,7); holes shown to be pure integrality gaps (flag-cut refuted). Adversarially verified.
+**Next steps:**
+1. **OPEN-Q-099 positivstellensatz:** prove no polynomial moment inequality (any degree, spectral or overlap) cuts a baby-Hodge hole for all n — making "hole = integer lattice point interior to the flag-feasible body, skipped by #P" a theorem.
+2. **Generating function for the non-spectral defect:** does the necklace/zeta moment-cumulant pair (HYP-2526) give a clean handle on the non-spectral defect dimension A000009(n)-3 (THM-505)? The Witt/zeta Π(1-u^k)^{-W_k} and the restricted-partition Π_{k odd≥3}1/(1-x^k) are both Euler products — connect them.
+3. **The c3-fiber hole structure:** the regular/near-regular score class is the richest hole source (c3=8 at n=6 → 3 holes; c3=14 at n=7 → 12). Characterize the holes as a function of the score sequence / the extremal (densest-cycle) fiber.
+4. **Cross-link to d⊥H and the BSD/Hodge self-dual-middle reflection:** the det/per wall unifies them (d det-side, H per-side).
+**Sources:** 04-computation/{baby_hodge_moment_region,baby_hodge_convex_certificate}_macmini_0615s1.py + .out; THM-509; reflection baby-hodge-is-the-det-permanent-wall-read-through-the-moment-problem.md.
+
 ## Lead mac-mini-2026-06-14-S1: dual-tower (self-dual) + LRC(14) singular-series structure (THM-503) + the Pascal-slope-d Pisot tower (T818/T819, HYP-2520..2525, OPEN-Q-097/098)
 
 **Status:** session complete; THM-503 adversarially verified + adopted by the mesh (THM-504 builds on it); dual-tower answered; Pascal family identified+extended.

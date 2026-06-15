@@ -1,0 +1,34 @@
+=== c3==8 fiber carrier table ===
+  c5  p33 alpha2   c3
+   6   24      4    8
+   8   26      2    8
+  11   27      1    8
+  11   27      1    8
+  12   27      1    8
+
+(p33, c5) fiber points: [[24.0, 6.0], [27.0, 11.0], [27.0, 12.0], [26.0, 8.0], [27.0, 11.0]]
+
+=== (A) MOMENT-FEASIBLE REGION = convex hull of fiber (p33,c5) ===
+  c5=6: p33 in [24.000, 24.000] INSIDE moment region  [REALIZED(integer)]
+  c5=7: p33 in [24.500, 25.000] INSIDE moment region  [HOLE(integer)]
+  c5=8: p33 in [25.000, 26.000] INSIDE moment region  [REALIZED(integer)]
+  c5=9: p33 in [25.500, 26.333] INSIDE moment region  [HOLE(integer)]
+  c5=10: p33 in [26.000, 26.667] INSIDE moment region  [HOLE(integer)]
+  c5=11: p33 in [26.500, 27.000] INSIDE moment region  [REALIZED(integer)]
+  c5=12: p33 in [27.000, 27.000] INSIDE moment region  [REALIZED(integer)]
+
+=== VERDICT (A) ===
+The holes c5 in {7,9,10} lie STRICTLY INSIDE the convex hull (moment-feasible
+region) of the fiber's overlap-density vectors. Because the continuous
+moment/PSD region is EXACTLY this closed convex hull (tournament-limit theory),
+NO finite PSD / Cauchy-Schwarz moment matrix -- built from overlap densities OR
+spectral moments OR anything else -- can exclude an interior point. The hole is
+an INTEGRALITY GAP, not a moment-positivity gap.
+
+=== (B) Explicit overlap Gram matrix at the c5=10 limit point ===
+  limit point (0.5*[c5=8] + 0.5*[c5=12]): {'c3': 8.0, 'c5': 10.0, 'p33': 26.5, 'a2': 1.5}
+  The mix is a convex combination of genuine tournament density vectors,
+  hence a bona fide tournament-limit point. Every moment/Gram matrix evaluated on a
+  genuine limit point is PSD by construction (it is a Gram matrix of actual random
+  variables). Therefore the c5=10 limit point passes EVERY overlap PSD test.
+  => The overlap moment matrix CANNOT cut c5=10.  Confirmed constructively.
