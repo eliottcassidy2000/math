@@ -1,0 +1,38 @@
+==================================================================================
+ PERMANENTAL POLYNOMIAL = the UNSIGNED TWIN of the char poly (all-face of Phi)
+==================================================================================
+
+[1] PERMANENTAL COEFFICIENT THEOREM (Ryser per(xI+A) vs packing enumeration)
+ [1] permanental coeff thm  per(xI+A)_coeff == e_m^unsigned  n=3: 120/120
+ [1] permanental coeff thm  per(xI+A)_coeff == e_m^unsigned  n=4: 120/120
+ [1] permanental coeff thm  per(xI+A)_coeff == e_m^unsigned  n=5: 120/120
+ [1] permanental coeff thm  per(xI+A)_coeff == e_m^unsigned  n=6: 120/120
+ [1] permanental coeff thm  per(xI+A)_coeff == e_m^unsigned  n=7: 60/60
+
+[2] det/per O/E DECOMPOSITION (parity-of-cardinality packing counts)
+ [2] det/per O/E split   O_m=(eu-es)/2, E_m=(eu+es)/2 = #odd/even-card packings  n=3: 120/120
+ [2] det/per O/E split   O_m=(eu-es)/2, E_m=(eu+es)/2 = #odd/even-card packings  n=4: 120/120
+ [2] det/per O/E split   O_m=(eu-es)/2, E_m=(eu+es)/2 = #odd/even-card packings  n=5: 120/120
+ [2] det/per O/E split   O_m=(eu-es)/2, E_m=(eu+es)/2 = #odd/even-card packings  n=6: 120/120
+ [2] det/per O/E split   O_m=(eu-es)/2, E_m=(eu+es)/2 = #odd/even-card packings  n=7: 60/60
+
+[3] COSPECTRAL PROBE: perm poly vs H, which splits cospectral classes & when
+ [3] cospectral n=4: 3 classes / 4000 samples | perm-poly splits   0  |  H splits   0
+ [3] cospectral n=5: 9 classes / 4000 samples | perm-poly splits   0  |  H splits   0
+ [3] cospectral n=6: 28 classes / 4000 samples | perm-poly splits   3  |  H splits   3
+ [3] cospectral n=7: 168 classes / 8000 samples | perm-poly splits  47  |  H splits  47
+ [3] cospectral n=8: 1402 classes / 8000 samples | perm-poly splits 650  |  H splits 646
+
+[4] FINGERPRINT COMPLETENESS (exhaustive; vs A000568 = #tournaments up to iso)
+ [4] n=3: iso-classes(A000568)=    2 | distinct char-poly=    2 | distinct (char,perm)=    2 | distinct (char,perm,H)=    2
+ [4] n=4: iso-classes(A000568)=    4 | distinct char-poly=    3 | distinct (char,perm)=    3 | distinct (char,perm,H)=    3
+ [4] n=5: iso-classes(A000568)=   12 | distinct char-poly=    9 | distinct (char,perm)=    9 | distinct (char,perm,H)=    9
+ [4] n=6: iso-classes(A000568)=   56 | distinct char-poly=   28 | distinct (char,perm)=   32 | distinct (char,perm,H)=   32
+
+[5] DOES (char poly, perm poly) DETERMINE H?  (refine cospectral by perm; first fail)
+ [5] (char,perm)->H  n=6: 32 (char,perm) classes / 5000 samples | 0 classes with SPLIT H  -> DETERMINES H
+ [5] (char,perm)->H  n=7: 234 (char,perm) classes / 5000 samples | 0 classes with SPLIT H  -> DETERMINES H
+ [5] (char,perm)->H  n=8: 2937 (char,perm) classes / 9000 samples | 0 classes with SPLIT H  -> DETERMINES H
+ [5] (char,perm)->H  n=9: 8525 (char,perm) classes / 9000 samples | 0 classes with SPLIT H  -> DETERMINES H
+
+DONE.
