@@ -1,0 +1,24 @@
+baseline (6/7)^13 = 0.13480
+
+=== KEY TEST: |T|=3 signed sum vs absolute — is there sign cancellation? ===
+    NOTE: |t|<=6 forces s(t)>0 (pi*t/7 in (0,pi)); sign variation needs |t|>=8.
+    ratio=|signed|/abs: 1 => aligned (PZ FAILS); <<1 => cancellation (PZ IMPROVES).
+   --- Tmax=6 ---
+     generic-coprime {14,17,19,23,29,31,37,: #rel= 263  |signed|=0.2438  abs=0.2438  ratio=1.000
+     evader 7*{1..12}+611                  : #rel=1173  |signed|=1.1083  abs=1.1083  ratio=1.000
+     evader 7*{1..12}+702                  : #rel=1173  |signed|=1.1083  abs=1.1083  ratio=1.000
+     d=3 core 3*{1..12}+182                : #rel=1173  |signed|=1.1083  abs=1.1083  ratio=1.000
+     near-tight {1..12}+14                 : #rel=1424  |signed|=1.3482  abs=1.3482  ratio=1.000
+   --- Tmax=13 ---
+     generic-coprime {14,17,19,23,29,31,37,: #rel= 981  |signed|=0.2047  abs=0.3138  ratio=0.652
+     evader 7*{1..12}+611                  : #rel=4132  |signed|=0.9211  abs=1.4099  ratio=0.653
+     evader 7*{1..12}+702                  : #rel=4132  |signed|=0.9211  abs=1.4099  ratio=0.653
+     d=3 core 3*{1..12}+182                : #rel=4149  |signed|=0.9213  abs=1.4109  ratio=0.653
+     near-tight {1..12}+14                 : #rel=5031  |signed|=1.1122  abs=1.7224  ratio=0.646
+
+=== full small-relation L estimate (support<=4, coeff<=6) vs baseline ===
+   generic-coprime {14,17,19,23,29,31,37,41,4: L(|T|<=2)=0.1348  L(<=3)=0.0124  L(<=4)=0.3534
+   evader 7*{1..12}+611                      : L(|T|<=2)=0.2858  L(<=3)=-0.3004  L(<=4)=0.9103
+   evader 7*{1..12}+702                      : L(|T|<=2)=0.2858  L(<=3)=-0.3004  L(<=4)=0.9103
+   d=3 core 3*{1..12}+182                    : L(|T|<=2)=0.2858  L(<=3)=-0.3004  L(<=4)=0.9103
+   near-tight {1..12}+14                     : L(|T|<=2)=0.2966  L(<=3)=-0.4144  L(<=4)=1.2173
