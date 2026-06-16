@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-15-S4: LRC-14 via the lonely measure + the Riesz-product key (THM-515, T826, HYP-2540..2543, OPEN-Q-104)
+
+**Status:** THM-515 (theta/lonely-measure form PROVED; additive-energy predictor verified; Riesz-product route set up + feasibility-probed; closed doors confirmed). inf L>0 OPEN. Adversarial check running.
+**Next (ranked):** (1) OPEN-Q-104 — build the optimized dissociated Riesz product for the j=6 interior-drop extremizer cores and push ∫M·R below 1 (the certificate); port arXiv:2511.16636's construction. (2) Bonami hypercontractive level-k bound on the cores' AP relation lattice. (3) Gaussian-subordinated Selberg minorant (finitize + theta-positivity). (4) Linnik/ternary-form reduction (Pollock-style, THM-501).
+**Sources:** 04-computation/{lrc14_theta_lattice,lrc14_riesz_product}_macmini_0615s4.py + .out; THM-515; reflection lrc14-is-the-lonely-measure-and-the-key-is-a-riesz-product.md; arXiv:2511.16636, Tao 1701.02048.
+
 ## Lead mac-mini-2026-06-15-S3: FKN ⟹ Arrow — the tournament cube IS the social-choice cube (THM-512, T823, HYP-2534..2536, OPEN-Q-102)
 
 **Status:** THM-512 proved/verified (Arrow/Condorcet bridge exact; c3=Guilbaud quadratic; Möbius sieve verified c3 n≤6). Builds on THM-511. Adversarial check running.

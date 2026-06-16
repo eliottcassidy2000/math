@@ -1,0 +1,31 @@
+==========================================================================
+(1) MULTIPLICITY MOMENTS ∫M, ∫M², ∫M³  (Tao second/third-moment) + lonely measure
+==========================================================================
+   main term ∫M should ≈ 13·(2⌊Q/14⌋+1)/Q ≈ 13/7 = 1.8571
+   extremizer {1..13}\{6}∪{56}             : ∫M=1.8566 ∫M²=5.8288 ∫M³=35.3182  L=μ{M=0}=0.00571
+   extremizer {1..13}\{12}∪{84}            : ∫M=1.8585 ∫M²=5.9789 ∫M³=37.1552  L=μ{M=0}=0.00529
+   evader 7*{1..12}∪{13}                   : ∫M=1.8529 ∫M²=6.2474 ∫M³=39.4622  L=μ{M=0}=0.02914
+   generic primitive {3,5,9,14,17,33,65,129: ∫M=1.8604 ∫M²=5.0904 ∫M³=17.7750  L=μ{M=0}=0.12157
+
+==========================================================================
+(2) ADDITIVE-ENERGY PREDICTOR: L vs E(S)=#short 7-primitive relations (B=4)
+==========================================================================
+   extremizer {1..13}\{6}∪{56}             : L=0.00564  E(short rels,B=4)=17288
+   extremizer {1..13}\{12}∪{84}            : L=0.00527  E(short rels,B=4)=17796
+   evader 7*{1..12}∪{13}                   : L=0.02891  E(short rels,B=4)=18172
+   generic primitive {3,5,9,14,17,33,65,129: L=0.12455  E(short rels,B=4)=738
+   --> ordered by L: [(0.0053, 'E=17796'), (0.0056, 'E=17288'), (0.0289, 'E=18172'), (0.1245, 'E=738')]  (low L ⟺ high E)
+
+==========================================================================
+(3) RIESZ-PRODUCT PAIRING ∫M·R  (certificate test: can signed R̂ pull ∫MR < 1?)
+==========================================================================
+   target core: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56], L≈0.0056 (the inf extremizer)
+   R=∏(1+a cos 2π m τ): tune frequencies m to the speeds (danger bands) + amplitudes:
+     R=1 (no product): ∫MR=1.8547, ∫R=1.0000  (= ∫M = 13/7 baseline)
+     R with 5 factors (freqs [1, 2, 3, 4]...): ∫MR=1.6087, ∫R=0.9760, ∫MR/∫R=1.6482  (≥1)
+     R with 6 factors (freqs [1, 2, 3, 4]...): ∫MR=1.4163, ∫R=0.8564, ∫MR/∫R=1.6537  (≥1)
+     R with 3 factors (freqs [7, 14, 21]...): ∫MR=1.6363, ∫R=0.9460, ∫MR/∫R=1.7298  (≥1)
+   NOTE: a full looseness certificate needs an OPTIMIZED dissociated Riesz product
+   (the arXiv:2511.16636 construction); this is a feasibility probe of the pairing.
+
+DONE.
