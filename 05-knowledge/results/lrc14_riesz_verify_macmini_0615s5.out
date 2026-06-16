@@ -1,0 +1,27 @@
+==============================================================================
+VERIFY the Riesz certificate: R=∏(1+a cos 2πvτ)≥0, ratio=∫MR/∫R; loose<1, tight≥1?
+==============================================================================
+
+  extremizer {1..13}\{6}∪{56} (LOOSE L≈.006):  S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56]
+     a=-1.00: ∫MR=0.019747, ∫R=0.018555, ratio=1.06424   ratio≥1 (consistent w/ tight)
+     a=-0.99: ∫MR=0.025144, ∫R=0.023335, ratio=1.07753   ratio≥1 (consistent w/ tight)
+     a=-0.95: ∫MR=0.052546, ∫R=0.046534, ratio=1.12920   ratio≥1 (consistent w/ tight)
+     a=-0.90: ∫MR=0.100831, ∫R=0.084849, ratio=1.18836   ratio≥1 (consistent w/ tight)
+
+  dilated {1..12}∪{14}        (LOOSE L≈.024):  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14]
+     a=-1.00: ∫MR=0.017260, ∫R=0.018066, ratio=0.95538   ratio<1 ⟹ LOOSE-certified
+     a=-0.99: ∫MR=0.021555, ∫R=0.022210, ratio=0.97051   ratio<1 ⟹ LOOSE-certified
+     a=-0.95: ∫MR=0.043496, ∫R=0.042448, ratio=1.02469   ratio≥1 (consistent w/ tight)
+     a=-0.90: ∫MR=0.082577, ∫R=0.076241, ratio=1.08311   ratio≥1 (consistent w/ tight)
+
+  TIGHT 14*{1..13}            (L=0, covers) :  S=[14, 28, 42, 56, 70, 84, 98, 112, 126, 140, 154, 168, 182]
+     a=-1.00: ∫MR=0.018828, ∫R=0.018066, ratio=1.04217   ratio≥1 (consistent w/ tight)
+     a=-0.99: ∫MR=0.023488, ∫R=0.022353, ratio=1.05078   ratio≥1 (consistent w/ tight)
+     a=-0.95: ∫MR=0.046627, ∫R=0.042891, ratio=1.08711   ratio≥1 (consistent w/ tight)
+     a=-0.90: ∫MR=0.086517, ∫R=0.076435, ratio=1.13191   ratio≥1 (consistent w/ tight)
+
+  DECISIVE: the certificate is REAL iff loose cores give ratio<1 AND the tight config
+  gives ratio≥1 (it must, since M≥1 a.e. there ⟹ ∫MR≥∫R for R≥0). A false <1 at tight
+  would expose a bug. Cross-check: ∫R must be > 0 (R≥0, not ≡0).
+
+DONE.

@@ -1,0 +1,32 @@
+==============================================================================
+(A) PRIME POINT-MASS BOUND  ML >= ceil((p-1)/26)/p,  p ∤ any core element
+==============================================================================
+   ext j=6  {1..13}\6∪56   : best ML-bound = 0.06897 at p=29  (96.6% of 1/14=0.07143)  SHORT of 1/14
+   ext j=12 {1..13}\12∪84  : best ML-bound = 0.06897 at p=29  (96.6% of 1/14=0.07143)  SHORT of 1/14
+   ext j=1  {2..13}∪14     : best ML-bound = 0.06897 at p=29  (96.6% of 1/14=0.07143)  SHORT of 1/14
+   --> the prime route (Bedert's right tool for AP-cores) lands JUST below 1/14.
+
+==============================================================================
+(B) STRANGER-LIMIT REDUCTION:  L({1..13}\j ∪ {14m})  ->  (6/7)·meas(Lonely({1..13}\j))
+==============================================================================
+   grid Q=210210
+
+   j=1: core12=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+        meas(Lonely(core12)) = 0.071424   (6/7)·that = 0.061220  [conjectured limit]
+        L(core∪14m): m=1:L=0.06122, m=2:L=0.06122, m=3:L=0.06122, m=5:L=0.06122, m=8:L=0.06122, m=13:L=0.06122
+        ratio L(m=13)/limit = 1.0001  (->1 confirms the reduction)
+
+   j=6: core12=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+        meas(Lonely(core12)) = 0.008144   (6/7)·that = 0.006981  [conjectured limit]
+        L(core∪14m): m=1:L=0.00814, m=2:L=0.00814, m=3:L=0.00814, m=5:L=0.00814, m=8:L=0.00687, m=13:L=0.00736
+        ratio L(m=13)/limit = 1.0549  (->1 confirms the reduction)
+
+   j=12: core12=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+        meas(Lonely(core12)) = 0.012140   (6/7)·that = 0.010406  [conjectured limit]
+        L(core∪14m): m=1:L=0.01214, m=2:L=0.01214, m=3:L=0.01214, m=5:L=0.01010, m=8:L=0.01214, m=13:L=0.00979
+        ratio L(m=13)/limit = 0.9408  (->1 confirms the reduction)
+
+   IF L(m)->(6/7)·meas(Lonely(core12))>0 for every j, then inf over the infinite
+   extremizer family = (6/7)·min_j meas(Lonely({1..13}\j)) > 0  — a FINITE certificate.
+
+DONE.

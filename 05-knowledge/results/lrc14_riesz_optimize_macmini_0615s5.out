@@ -1,0 +1,40 @@
+==========================================================================
+ROUTE 097: LEVEL DECOMPOSITION  L = (6/7)^13 + Σ_k (contribution of |T|=k)
+==========================================================================
+  extremizer {1..13}\{6}∪{56}:
+     main (6/7)^13 = 0.1348; level-2 = +0.1061; level-3 = -0.5468; level-4 = +1.1708
+     Σ_{|T|≥3} contribution = +0.6239   |Σ≥3| > main => OPEN-Q-097 literal target FALSE
+     partial L (main+Σlevels, B=6) = 0.8649  vs true L = 0.0056
+  dilated d=1 {1..12}∪{14}:
+     main (6/7)^13 = 0.1348; level-2 = +0.1618; level-3 = -0.7110; level-4 = +1.6318
+     Σ_{|T|≥3} contribution = +0.9208   |Σ≥3| > main => OPEN-Q-097 literal target FALSE
+     partial L (main+Σlevels, B=6) = 1.2173  vs true L = 0.0240
+  tight 14*{1..13} (L=0 ref):
+     main (6/7)^13 = 0.1348; level-2 = +0.1510; level-3 = -0.7047; level-4 = +1.6251
+     Σ_{|T|≥3} contribution = +0.9205   |Σ≥3| > main => OPEN-Q-097 literal target FALSE
+     partial L (main+Σlevels, B=6) = 1.2063  vs true L = 0.0000
+
+==========================================================================
+ROUTE 104: RIESZ-PRODUCT CERTIFICATE — optimize ∫M·R / ∫R  (target < 1 ⟹ loose)
+==========================================================================
+  target core [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56] (L≈0.0056)
+  D = speeds, uniform amplitude a (a<0 makes level-1 R̂ negative, the wanted sign):
+     a=-0.2: ∫M·R=1.5313, ∫R=0.9608, ratio=1.5938  
+     a=-0.4: ∫M·R=1.1714, ∫R=0.7787, ratio=1.5043  
+     a=-0.6: ∫M·R=0.6785, ∫R=0.4834, ratio=1.4035  
+     a=-0.8: ∫M·R=0.2390, ∫R=0.1909, ratio=1.2517  
+     a=-1.0: ∫M·R=0.0176, ∫R=0.0186, ratio=0.9506  < 1  CERTIFICATE!
+  best uniform-speed ratio = 0.9506 at a=-1.0
+
+  D = a dissociated/Sidon-like subset (reduce R̂(0) inflation from generator relations):
+     D=[1, 2, 4, 8, 13, 56], a=-0.7: ∫M·R=1.5998, ∫R=1.0195, ratio=1.5692  
+     D=[1, 2, 4, 8, 13, 56], a=-0.9: ∫M·R=1.6795, ∫R=1.0451, ratio=1.6070  
+     D=[1, 3, 5, 11, 12, 56], a=-0.7: ∫M·R=1.4150, ∫R=0.9037, ratio=1.5658  
+     D=[1, 3, 5, 11, 12, 56], a=-0.9: ∫M·R=1.1503, ∫R=0.7808, ratio=1.4732  
+     D=[3, 5, 9, 11, 13, 56], a=-0.7: ∫M·R=2.2068, ∫R=1.0600, ratio=2.0819  
+     D=[3, 5, 9, 11, 13, 56], a=-0.9: ∫M·R=2.7880, ∫R=1.1640, ratio=2.3952  
+
+  NOTE: a < 1 certificate at the extremizer would prove looseness of THAT core; a UNIFORM
+  family certificate (one construction, all primitive mult-of-14 S) is OPEN-Q-104.
+
+DONE.
