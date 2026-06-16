@@ -1,0 +1,41 @@
+=== E7 numerology checks ===
+  133 == 7*19 ? True
+  63 == 9*7 ? True; 126 == 2*63 ? True
+  E7 exponents [1, 5, 7, 9, 11, 13, 17]: count=7 (=rank 7? True), sum=63 (=#pos roots 63? True)
+  7 is an exponent of E7? True
+  Coxeter h = 126/7 = 18 (claim 18? True)
+  max exponent 17 == h-1 = 17? True
+  |W(E7)| = 2^10*3^4*5*7 = 2903040 = 2903040? True
+  7 | |W(E7)| ? True
+
+=== Forbidden 7/21 arithmetic ===
+  Phi_3(2) = 2^2+2+1 = 7 (==7? True)
+  2^3 - 1 = 7 (Mersenne M_3, ==7? True)
+  21 = 3*7 = 21
+  Fano plane PG(2,2): points = (2^3-1)/(2-1) = 7 (==7? True)
+
+=== LRC s(t)=sin(pi t/7)/(pi t) sign/vanishing pattern ===
+  t :   s(t)         sign   7|t?
+   1:  0.138109      +   False
+   2:  0.124432      +   False
+   3:  0.103443      +   False
+   4:  0.077582      +   False
+   5:  0.049773      +   False
+   6:  0.023018      +   False
+   7:  0.000000      0   True
+   8: -0.017264      -   False
+   9: -0.027652      -   False
+  10: -0.031033      -   False
+  11: -0.028212      -   False
+  12: -0.020739      -   False
+  13: -0.010624      -   False
+  14: -0.000000      0   True
+  Claimed: + on {1..6}, 0 at 7, - on {8..13}, 0 at 14. 7-vanish iff 7|t.
+
+=== JUDGEMENT NOTES ===
+  All E7 numerology facts are STANDARD Lie-theory values (verifiable in any
+  reference: Bourbaki / Carter). 7 appears genuinely (rank, exponent, |W| factor).
+  These are TRUE facts but their RELEVANCE to the OCF forbidden-7 is an
+  ANALOGY, not a derived bridge: nothing connects W(E7)'s factor-7 to H=7's
+  non-realizability. 7=Phi_3(2) is the load-bearing fact for the gas; E7 is
+  decorative coincidence unless a representation-theoretic map is exhibited.

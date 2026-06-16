@@ -1,5 +1,5 @@
 ---
-id: THM-514
+id: THM-516
 title: The Burnside core-kernel φ-reframe — peeling the 1-tail isolates the difficulty of A000568 in a positive-definite GCD/Euler-φ quadratic form e(μ)=C(t,2)+½Σφ(d)M_d², with an exact add-a-part recurrence; the same compression is one member of a metagraph-enumerator family (tournaments, graphs, self-complementary, edge-colored)
 status: PROVED (the φ/Smith-GCD identity for the Burnside edge-orbit exponent; the add-a-part recurrence). VERIFIED computationally: φ-reframe on all 1113 cores of mass ≤40 (0 failures), the recurrence on all cores of mass ≤35 (0 failures), full Burnside == (m,t)-compressed == A000568 through n=16 (integer, matches all known terms), the enumerator family T_n(2)=A000568 / T_n(1)·n!=A000246 / G_n(2)=A000088 through n=8.
 source: kind-pasteur-2026-06-15-S7
@@ -9,12 +9,13 @@ related:
   - THM-511   # converse-parity / the score (level-1) layer = the 1-tail (fixed points)
   - HYP-2538  # the θ-function / generating-function form of the core kernel
   - HYP-2539  # the P_n(x) edge-orbit triangle is a new sequence; the enumerator family is unified
-  - OPEN-Q-103
+  - OPEN-Q-105
   - T825
+  - THM-514   # codex-2026-06-15-S12 unit-tail core kernel + prime-tail ladder — COMPLEMENTARY (same dispatch, concurrent); this theorem is the φ-quadratic-form/enumerator-family view, codex's is the tail-peeling-ladder view
   - reflection: the-burnside-core-kernel-is-a-gcd-quadratic-form-and-a-metagraph-enumerator-family-kps
 ---
 
-# THM-514 — the Burnside core-kernel φ-reframe
+# THM-516 — the Burnside core-kernel φ-reframe
 
 **Setup (the user's 1-tail peeling).** `A000568(n)` = #tournaments on `n` nodes
 `= Σ_{λ⊢n, all parts odd} 2^{e(λ)}/z_λ`, where `e(λ)=Σ_i (λ_i−1)/2 + Σ_{i<j} gcd(λ_i,λ_j)`

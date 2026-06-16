@@ -80,7 +80,7 @@ VERIFIED: the φ-reframe and recurrence (0 failures to mass 40/35), the `(m,t)` 
 (== A000568, `n≤16`, exact), the enumerator-family anchors (`n≤8`). This does **not** solve
 A000568 — it isolates and *names* the difficulty (the GCD-quadratic theta sum). HYP-2538
 (a clean generating function / θ-product for the core kernel), HYP-2539 (the `P_n(x)` triangle
-is new; the family is genuinely unified). Cross-links: THM-514, THM-505 (A000009−3 = the same
+is new; the family is genuinely unified). Cross-links: THM-516 (this; renumbered off a collision with codex-S12's concurrent THM-514 on the same dispatch — complementary views), THM-505 (A000009−3 = the same
 core family), THM-511 (the score/level-1 = the 1-tail), [[triangle_foundation]] (Mode-A vertex
 insertion = adding a fixed point = a `1`-part), the Γ-species quotient view (arXiv:1204.1402),
 tournaments↔even-graphs equinumerous (arXiv:2204.01947).

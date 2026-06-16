@@ -1,0 +1,22 @@
+--- K3 ---
+  I(Omega,z) true coeffs (alpha)      = [1, 3]
+  graphical Mayer b_k (k=1..1)     = ['3']
+  exp(sum b_k z^k) reconstructed I    = ['1', '3']
+  exp(sum b_k z^k) == I(Omega,z)?     = True
+
+--- C4 ---
+  I(Omega,z) true coeffs (alpha)      = [1, 4, 2]
+  graphical Mayer b_k (k=1..2)     = ['4', '-4']
+  exp(sum b_k z^k) reconstructed I    = ['1', '4', '4']
+  exp(sum b_k z^k) == I(Omega,z)?     = False
+
+--- K4 ---
+  I(Omega,z) true coeffs (alpha)      = [1, 4]
+  graphical Mayer b_k (k=1..1)     = ['4']
+  exp(sum b_k z^k) reconstructed I    = ['1', '4']
+  exp(sum b_k z^k) == I(Omega,z)?     = True
+
+If 'match' is FALSE, then 'log I(Omega,z) = sum_k b_k z^k' (worker's
+stated derivation identity) is mathematically WRONG. The graphical b_k
+are a continuum-gas cluster formula that does NOT exponentiate to the
+LATTICE-gas partition function I(Omega,z). Only the analytic c_k do.

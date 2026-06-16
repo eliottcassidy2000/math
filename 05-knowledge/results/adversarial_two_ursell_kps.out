@@ -1,0 +1,16 @@
+Testing the 'two Ursell families' claim on explicit conflict graphs.
+
+graph                  alpha1 alpha2      E    b2=-E   c2(Taylor)    b2-a1/2  match?
+K3 (E=3)                    3      0      3       -3         -9/2       -9/2    True
+P3 path (E=2)               3      1      2       -2         -7/2       -7/2    True
+edgeless3 (E=0)             3      3      0        0         -3/2       -3/2    True
+PaleyT7 (E=3153)           80      7   3153    -3153        -3193      -3193    True
+single edge (E=1)           2      0      1       -1           -2         -2    True
+C4 (E=4)                    4      2      4       -4           -6         -6    True
+
+So: the TAYLOR coefficient of z^2 in log I is c2 = alpha2 - alpha1^2/2,
+which EQUALS b2 - alpha1/2 (since b2=-E=alpha2-C(alpha1,2)=alpha2-alpha1^2/2+alpha1/2).
+=> The literal Taylor log I has c_k, NOT the graphical b_k. The worker's
+   claim that these are DIFFERENT series is mathematically correct.
+   The script's docstring line 20 'log I = sum b_k z^k' is loose/wrong as
+   a Taylor statement, but the worker's RETURNED text corrects it explicitly.

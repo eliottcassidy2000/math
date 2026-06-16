@@ -1,0 +1,33 @@
+======================================================================
+ADVERSARIAL INDEPENDENT CHECK of mayer-ocf claims
+======================================================================
+n=3: 8 tournaments, achievable H = [1, 3]
+n=4: 64 tournaments, achievable H = [1, 3, 5]
+n=5: 1024 tournaments, achievable H = [1, 3, 5, 9, 11, 13, 15]
+n=6: 32768 tournaments, achievable H = [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+FAILURE COUNTS (want all 0 for verified claims):
+  ocf         : 0
+  b2_negE     : 0
+  b2_alpha    : 0
+  brute_b1    : 0
+  brute_b2    : 0
+  brute_b3    : 0
+  exp_cum     : 0
+  free        : 0
+  free_iff    : 0
+
+FORBIDDEN-VALUE CHECK:
+  I(K3, z) = 1 + 3z + 0 z^2 ; I(K3,2) = 7  (want 7)
+  7 in achievable H (n<=6)?  False
+  21 in achievable H (n<=6)? False
+  union achievable H (n<=6): [1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+
+PALEY T_7 CHECK (QR={1,2,4} mod 7):
+  odd cycles: c3=14 c5=42 c7=24 total alpha_1=80
+  alpha (first few) = [1, 80, 7]
+  H(OCF) = 189, H(direct paths) = 189  (canon says 189)
+  smallest |root| of I = R = 0.012514 ; z=2 OUTSIDE
+    literal sum_(k<=)10 c_k 2^k = -1.080e+21  (log H = 5.2417)
+    literal sum_(k<=)40 c_k 2^k = -3.475e+86  (log H = 5.2417)
+    literal sum_(k<=)80 c_k 2^k = -2.431e+174  (log H = 5.2417)

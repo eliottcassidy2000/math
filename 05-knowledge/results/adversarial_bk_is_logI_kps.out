@@ -1,0 +1,30 @@
+graph                       k  brute b_k   Taylor c_k  b_k==c_k?
+K3                          1          3            3       True
+K3                          2         -3         -9/2      False
+K3                          3          2            9      False
+
+P3 path                     1          3            3       True
+P3 path                     2         -2         -7/2      False
+P3 path                     3          1            6      False
+
+single edge + isolated      1          3            3       True
+single edge + isolated      2         -1         -5/2      False
+single edge + isolated      3          0            3      False
+
+C4                          1          4            4       True
+C4                          2         -4           -6      False
+C4                          3          4         40/3      False
+
+K4                          1          4            4       True
+K4                          2         -6           -8      False
+K4                          3          8         64/3      False
+
+paw (triangle+pendant)      1          4            4       True
+paw (triangle+pendant)      2         -4           -6      False
+paw (triangle+pendant)      3          4         40/3      False
+
+VERDICT LOGIC:
+ If brute b_k == Taylor c_k  => the Mayer cluster series IS log I, and the
+    worker's 'b_2 = -|E|' is then a DIFFERENT object (NOT the log-I coeff).
+ If brute b_k == worker's -|E| (i.e. != c_k) => the worker's b_k is the
+    cluster integral but does NOT sum to log I; 'log I = sum b_k z^k' is wrong.
