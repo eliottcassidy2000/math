@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-16-S3: LRC(14) GAP-SIDE reduction to covering sets (THM-523, HYP-2566/2567)
+
+**Status:** PROVED the q-witness reduction: LRC(14) ⟺ M(S)=max_τ min_v||vτ|| ≥1/14 for all primitive COVERING SETS (a multiple of every q∈{2,…,14}); everything else is M≥1/14 via τ=1/q. No counterexample over extensive search; residual covering-set min M = 7/89≈0.0787 (10% margin). The disproof search produced the proof reduction.
+**Next (ranked, to finish LRC(14)):** (1) **HYP-2566 — bound inf M over covering sets > 1/14.** Covering sets are bounded/structured (need multiples of 8,9,11,13,14 → spread out); combine scale-invariance + kind-pasteur's bounded-lcm compactness (THM-522, measure-side) on the GAP side. Is 7/89 the true inf? Search covering sets with larger speeds + 2 multiples of 14. (2) Prove the residue-refinement δ-existence lemma rigorously (the τ=a/14+δ construction for C'(14) with multiple large multiples of 14). (3) The finite-witness-cover endgame: a fixed finite family of τ's (1/q's + a/14+δ's) certifying M≥1/14 for ALL covering sets except a finite checkable residual (the destroy-lonely-points agent: 12 witnesses cover all but 12/2000). (4) Connect M-side covering reduction to L-side inf=1/1260 (HYP-2561) — both fence the same hard core.
+**Sources:** 04-computation/lrc14_{gap_M_exact,constructive_dichotomy,residue_criterion,residual_hardcore_minM,strong_necessary_condition}_mac-mini-2026-06-16-S3.py + ~30 workflow angle scripts (lrc14_{disprove_*,covering_obstruction_proof,M_quantization_floor,destroy_lonely_points,family_reduction,…}) + .out; THM-523, HYP-2564/2565/2566/2567; reflection the-disproof-search-builds-the-proof-lrc14-covering-reduction-mac-mini-S3.md; THM-360/398/501/522.
+
 ## Lead mac-mini-2026-06-16-S2: LRC-14 inf L>0 — corroboration + the four closed doors (HYP-2562/2563, T834, complements kind-pasteur THM-522)
 
 **Status:** kind-pasteur-S7 owns the headline (THM-522 scale-invariance+quantization; HYP-2561 inf=1/1260; MISTAKE-075). I independently CORROBORATED inf=1/1260 (single perturbations w≤600, doubles w≤140: nothing in (0,1/1260)) and CLOSED four positivity routes (LLL/Shearer, Selberg–Beurling, Abel/Cesàro, OCF-bridge), all blocked by ONE obstruction: L is an archimedean SIGNED singular integral with no termwise floor + positively-correlated danger events.

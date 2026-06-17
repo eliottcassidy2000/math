@@ -1,0 +1,33 @@
+FACT 1: scale-invariance
+  M(1*[1..13]) = 1/14  ==1/14? True
+  M(2*[1..13]) = 1/14  ==1/14? True
+  M(3*[1..13]) = 1/14  ==1/14? True
+  M(7*[1..13]) = 1/14  ==1/14? True
+  M(100*[1..13]) = 1/14  ==1/14? True
+
+FACT 2: certificate tau=1/(2max) => M >= 1/(2max);  1/(2max)>=1/26 iff max<=13
+  certificate min_v||v/(2max)|| >= 1/(2max) on 3000 samples: True
+  1/26 = 0.038462,  1/14 = 0.071429,  ratio 1/14 / 1/26 = 13/7
+
+FACT 4: largest reduced a/d < 1/14 by denom bound D (no uniform floor)
+  D=    26: best a/d = 1/15 = 0.0666667  (1/14 - it = 4.762e-03)
+  D=    28: best a/d = 1/15 = 0.0666667  (1/14 - it = 4.762e-03)
+  D=    50: best a/d = 3/43 = 0.0697674  (1/14 - it = 1.661e-03)
+  D=   100: best a/d = 7/99 = 0.0707071  (1/14 - it = 7.215e-04)
+  D=   196: best a/d = 13/183 = 0.0710383  (1/14 - it = 3.903e-04)
+  D=   200: best a/d = 14/197 = 0.0710660  (1/14 - it = 3.626e-04)
+  D=  1000: best a/d = 71/995 = 0.0713568  (1/14 - it = 7.179e-05)
+  D= 10000: best a/d = 714/9997 = 0.0714214  (1/14 - it = 7.145e-06)
+  => as D grows the gap -> 0; quantization alone gives NO uniform floor.
+
+FACT 5: EXHAUSTIVE primitive 13-subsets of {1..W}, W=14..20
+  W=14: #prim=     14  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=15: #prim=    105  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=16: #prim=    560  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=17: #prim=   2380  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=18: #prim=   8568  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=19: #prim=  27132  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+  W=20: #prim=  77520  minM=1/14=0.0714286  argmin=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M<1/14:0
+
+RESULT: no primitive 13-set with max<=20 has M<1/14; min is 1/14 at {1..13}.
+DONE.

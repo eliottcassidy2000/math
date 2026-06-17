@@ -1,1 +1,0 @@
-[SUPERSEDED by lrc14_disprove_breadth3_*.out — this run ordered the broad-random section first with ranges up to 150, whose large candidate-tau sets stalled the pure-Python float screen. Re-run as breadth3 with small ranges: section (f) random sweeps ranges<=40 found 0 counterexamples, smallest M = 1/14 exactly.]

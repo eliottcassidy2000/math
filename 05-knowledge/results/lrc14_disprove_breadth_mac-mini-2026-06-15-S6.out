@@ -1,1 +1,0 @@
-[SUPERSEDED by lrc14_disprove_breadth3_*.out — this run stalled in the HCN-divisor-sampling section (c): divisors of large HCNs (1260,2520,5040) yield 13-subsets with small lcm and hence very large candidate-tau sets, making pure-Python float screening too slow. The disprove-relevant fast families are covered in breadth3 (0 counterexamples, smallest M = 1/14 exactly).]

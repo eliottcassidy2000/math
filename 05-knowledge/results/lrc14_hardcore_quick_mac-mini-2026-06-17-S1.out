@@ -1,0 +1,27 @@
+=== single-speed perturbation of {1..13}, new speed up to 100 ===
+  tested 1144; tight(=1/14): 14; below: 0
+  TIGHT: drop 1 add 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 2 add 2: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 3 add 3: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 4 add 4: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 5 add 5: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 6 add 6: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 7 add 7: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 8 add 8: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 9 add 9: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 10 add 10: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 11 add 11: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 12 add 12: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+  TIGHT: drop 12 add 24: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24] at 5/14
+  TIGHT: drop 13 add 13: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] at 5/14
+
+=== two-speed perturbation: drop 2 AP speeds, add 2 new in [14..28] ===
+  tested 8190; tight: 0; below: 0
+
+=== FAMILY (b): which 3-subsets of AP share lonely point tau=5/14 ===
+  at tau=5/14, ||v*tau||=1/14 for v in [3, 11]
+  residues 5v mod 14: {1: 5, 2: 10, 3: 1, 4: 6, 5: 11, 6: 2, 7: 7, 8: 12, 9: 3, 10: 8, 11: 13, 12: 4, 13: 9}
+Traceback (most recent call last):
+  File "/Users/e/Documents/GitHub/math/04-computation/lrc14_hardcore_quick_mac-mini-2026-06-17-S1.py", line 82, in <module>
+    P("DONE", flush=True)
+TypeError: P() got an unexpected keyword argument 'flush'

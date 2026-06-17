@@ -1,0 +1,13 @@
+STRONG NECESSARY CONDITION: M(S)<1/14  =>  S has a multiple of every q in {2,..,14}
+  (contrapositive: miss multiples of some q<=14  =>  tau=1/q gives M>=1/q>=1/14)
+
+  non-covering S tested: witness tau=1/q failures = 0 (0 => condition PROVED for these)
+
+  covering sets among random primitive 13-sets (speeds<80): 1697/19999 = 8.49%
+  min M over sampled covering sets = 5/41=0.12195 at (3, 5, 8, 11, 13, 14, 19, 22, 27, 28, 30, 48, 50)
+  all covering sets M>=1/14? True (margin 70.7% above 1/14)
+
+  a covering set needs multiples of 8,9,11,13 and 14 etc => >=spread; cannot be {1..13}.
+  the interior-drop hard core {1..13}\{j} u {14m}: is it a covering set?
+    j=6 u56: covering=True missing q=[] -> M>=1/? via tau=1/?
+    j=12 u56: covering=False missing q=[12] -> M>=1/12 via tau=1/12

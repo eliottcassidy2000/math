@@ -6,3 +6,6 @@ SANITY tight {1..13}: M = 1/14 at 5/14 (expect 1/14 at 5/14)
     tight-or-below among single-14j replacements: 0
 
 === (c) ratio v_{k+1}>=(7/6)v_k  =>  claim M>=1/14 ===
+  tested=2999 (ratio>=7/6) violations=0 worst=2/15=0.13333
+
+=== (c') worst M per min-ratio band ===
