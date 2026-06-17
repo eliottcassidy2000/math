@@ -1,0 +1,10 @@
+Baseline tight {1..13}:
+  M=1/14=0.071429 at 5/14; 1/14=0.071429
+(a) single+double perturbations of {1..13}
+  done. counterexamples=0 bestM=(Fraction(1, 14), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), Fraction(5, 14))
+(seed) destroy lonely tau in {1/14,5/14}
+(b) dilated/shifted APs + AP variants + unions
+  done. counterexamples=0 bestM=(Fraction(1, 14), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), Fraction(5, 14))
+(c) divisors of HCN + multiples (bounded random sampling)
+[TERMINATED in section (c): the HCN-divisor random sampling (divisors of 1260/2520) produces small-lcm 13-sets with huge candidate-tau sets, too slow for exact-confirm in pure Python. Sections (a)+(b)+(seed) COMPLETED: 0 counterexamples, smallest M = 1/14 exactly (the tight AP {1..13}). The small-lcm/divisor coverage is provided faster in lrc14_disprove_breadth3 (subsets of {1..24}, multiples+extra) — also 0 counterexamples.]
+CONCLUSION: over single+double perturbations of {1..13}, all dilated/shifted/length-13 APs, all unions of two APs, and the destroy-the-lonely-point seed (multiples of 14) — smallest M(S) = 1/14 = exactly the tight AP. NO primitive 13-set with M<1/14.

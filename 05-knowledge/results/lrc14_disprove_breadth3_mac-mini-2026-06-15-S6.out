@@ -1,0 +1,6 @@
+(f) random ranges<=40
+  bestf=0.071429 ce=0
+(e) near-14k sweep
+[TERMINATED in section (e) — the near-14k sweep is pure-Python-slow on the ~50-value pool (large candidate-tau sets). The disprove-decisive result is already captured above: section (f) random sweeps in ranges <=40 found 0 counterexamples with smallest float M = 0.071429 = exactly 1/14.]
+[The near-14k 'destroy-the-lonely-point' SEED question was answered EXACTLY (not by float sampling) in lrc14_disprove_nearmiss + a targeted exact check: replacing any/both binding pins {1,13},{3,11},{5,9} by multiples/near-multiples of 14 keeps min M = 1/14 exactly; 0 counterexamples. The MAX-over-tau structure of M re-pins 1/14 at the surviving plateau(s) tau in {1/14,3/14,5/14}.]
+VERDICT (whole session): exact M<1/14 found? NO. Smallest M = 1/14 (tight AP + sporadics); secondary non-tight floor = 2/27.

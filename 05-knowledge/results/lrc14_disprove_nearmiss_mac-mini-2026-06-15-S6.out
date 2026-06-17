@@ -1,0 +1,11 @@
+(1) replace binding speeds (pins of 1/14,3/14,5/14) jointly
+  ce=0 best=2/27=0.074074
+(2) local search from near-miss champions (M=2/27)
+  ce=0 best=2/27=0.074074
+(3) scaled-and-shifted tight cores
+  ce=0 best=2/27=0.074074
+======================================================================
+Counterexamples (M<1/14): 0
+
+SMALLEST M: 2/27=0.07407407  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26) tau=2/27
+  M-1/14=1/378=0.00264550; M>=1/14? True
