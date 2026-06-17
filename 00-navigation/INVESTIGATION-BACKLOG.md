@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-16-S1: the octal lens on the H-spectrum + the triangular tile-count (T832, HYP-2558..2560)
+
+**Status:** NEW probe past the kind-pasteur boat session (T830/HYP-2557, which mapped Fib/tri/square/prime + Heron — all re-verified, 3rd confirmation). The octal identity odd²=8T_k+1 aimed at H(T) (always odd, Rédei): at n≤6 the H-spectrum gaps {7,21,35,39} all AVOID residue 1 mod 8; the odd-square residue class is gap-free. Candidate necessary sieve for the forbidden-H frontier.
+**Next (ranked):** (1) HYP-2558 — one Held-Karp sweep at **n=7 (and n=8 if feasible)**: is residue 1 mod 8 still gap-free? do 35,39 get realized? extend `H_mod8_octal_probe`. (2) HYP-2560 — extend the G_n/E_n invariant table to n=8 (m=21, first nontrivial Fibonacci tile-count); does anything special happen at n∈{3,4,8,12}? (3) HYP-2559 — align THM-067 c₁-vanishing Mersenne indices with the perfect-number tile-counts m=T_{2^k-1} at n=5,9,33. (4) reproduce {1,3,21,55} inside the V_4 (complement×transpose) Burnside engine (`burnside_enum_v2.c`) — a positive run upgrades the Klein-four link from suggestive to structural.
+**Sources:** 04-computation/{fib_tri_square_prime_heron,H_mod8_octal_probe}_mac-mini-2026-06-16-S1.py + .out; 07-reflections/the-octal-H-spectrum-and-the-triangular-tilecount-mac-mini-S1.md; T830/HYP-2557 + triangular_fibonacci_heron_boat_kps.py (prior art); THM-462/463 (H gap-freeness), THM-485/486/067/224, T232. (arXiv:1809.09936 = uniqueness Diophantine, per T830.)
+
 ## Lead mac-mini-2026-06-15-S4: LRC-14 via the lonely measure + the Riesz-product key (THM-515, T826, HYP-2540..2543, OPEN-Q-104)
 
 **Status:** THM-515 (theta/lonely-measure form PROVED; additive-energy predictor verified; Riesz-product route set up + feasibility-probed; closed doors confirmed). inf L>0 OPEN. Adversarial check running.
