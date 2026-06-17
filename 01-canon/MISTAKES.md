@@ -11,6 +11,20 @@ Format per entry:
 
 ---
 
+## MISTAKE-075: The LRC(14) inf L estimate (≈0.0052) was a restricted-search artifact — the true inf-relevant extremizers are sporadic-tight perturbations, not the multiple-of-14 family
+
+**Date discovered:** 2026-06-16 (kind-pasteur-S7)
+**Found by:** kind-pasteur, via exact rational arc-sweep of the lonely measure (THM-522)
+**Affects:** THM-518's stated `inf L ≈ 0.0052`; OPEN-Q-097/104's extremizer family; the "primitive multiple-of-14" extremizer search.
+
+- **What was done:** the extremizer search for `inf_S L(S)` (lonely measure, LRC(14)) was restricted to the family `({1..13}\{j})∪{14m}` — interior-drop AP cores with a **multiple-of-14 stranger** — giving `inf ≈ 0.0052` (extremizers `{1..13}\{12}∪{84}` etc.).
+- **Why it was wrong:** `36` is not a multiple of 14, so the search never tested it — yet the **minimal single-element perturbation of the tight AP `{1..13}` is `12→36`**, giving `{1,2,…,11,13,36}` with `L = 1/1260 ≈ 0.000794`, ~6.7× below 0.0052 (verified exact arc-sweep + independent fine grid). The restriction to multiple-of-14 strangers blinded the search to the perturbations of the **sporadic tight configs** (e.g. `{1..11,13,24}`, `L=0`), which open the smallest lonely measures.
+- **Correct framing:** `inf L` is governed by the minimal perturbation of the **FULL tight locus** (AP + sporadics), not the AP/14m family. `inf L ≤ 1/1260` (THM-522 D); conjecturally `=1/1260` (HYP-2561). The lonely measure is quantized `L∈(1/(14 lcm))ℤ` and scale-invariant `L(cS)=L(S)` (THM-522).
+- **Impact:** the LRC(14) difficulty constant is ~6.7× smaller than recorded; OPEN-Q-097's program must control all tight configs (not just dilated-AP cores). NOT a disproof of LRC(14) (every config is loose, `L>0`).
+- **Lesson (= MISTAKE-073 recurring):** sweep the FULL orbit of perturbations, not the convenient sub-family; the extremizer is consistently one orbit further out than the obvious family member (`0.0237` end-drop → `0.0053` interior-drop → `1/1260` sporadic-tight perturbation).
+
+---
+
 ## MISTAKE-001: μ Computation Bug in Scripts 6-9
 
 **Date discovered:** ~2026-02-26 (pre-Cowork sessions); logged 2026-03-05

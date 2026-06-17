@@ -1,0 +1,14 @@
+=== (A) tight locus (L=0) among 1- and 2-element replacements of {1..13}, w<=120 ===
+   1-drop tight configs (L=0): 1 found
+     (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+   2-drop tight configs (L=0, w<=79): 0 found
+
+=== (B) hunting the true min positive L (is it bounded, or →0?) ===
+   1-drop, w<400: min positive L = 0.00079365 = 1/1260 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+   incl 2-drop (w<=119): min positive L = 0.00079365 = 1/1260 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+
+=== (C) minimal perturbations of tight configs → smallest opened L ===
+   smallest L from minimal tight-perturbations: 0.00079365 = 1/1260 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+
+=== GLOBAL min positive L found this session: 0.00079365 = 1/1260 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36) ===
+   (repo's stated inf was 0.0052; 1/1260=0.00079365; is the true min below 1/1260?)

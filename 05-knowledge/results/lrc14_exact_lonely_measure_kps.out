@@ -1,0 +1,20 @@
+=== (1) scale-invariance L(cS)=L(S) (exact) ===
+   c=1: L(1·S)= 0.03902526
+   c=2: L(2·S)= 0.03902526
+   c=3: L(3·S)= 0.03902526
+   c=5: L(5·S)= 0.03902526
+   c=6: L(6·S)= 0.03902526
+   ⟹ L depends only on the PRIMITIVE shape (proof: τ↦cτ is measure-preserving on the circle).
+
+=== (2) tight AP {1..13}: L = 0 (exact) — the n=14 equality case (excluded) ===
+
+=== (3) interior-drop cores ({1..13}\{j}) ∪ {w}: EXACT L, sweep j and w ===
+   GLOBAL min over interior-drop family (j=1..13, w≤199 & 14m≤546): L=0.00079365
+      at S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)  (exact L=1/1260)
+   spotlight S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 56): L=0.00560749
+   spotlight S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84): L=0.00535655
+
+=== (4) compactness probe: random + structured search for L below the interior-drop inf ===
+   tested ~134898 configs; lowest positive L found = 0.00079365 at S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+   #(strictly below the interior-drop family inf 0.000794): 0
+   (if 0 below and the global min stays ~0.005, evidence the inf is attained on a BOUNDED family ⟹ finite check)
