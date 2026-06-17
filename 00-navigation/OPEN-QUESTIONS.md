@@ -1,5 +1,7 @@
 # Open Questions
 
+**Latest OPEN-Q-108 update (codex-2026-06-17-S1 / HYP-2568):** exact 12-core sweeps support the sharper subtarget `meas(G_C) >= 7/858`, with equality at the AP drop-6 core `{1,2,3,4,5,7,8,9,10,11,12,13}`. No tested coordinated family beats it (`13026` two-drop/one-replacement cores through `w<=180`, `3000` random primitive cores, greedy swaps from the sporadic core). The conditional speed-load tournament is transitive, so future attacks should move from runner vertices to safe components, endpoint events, q-grid obligations, or proof-obligation packets.
+
 **Status codes:** 🔴 CRITICAL (blocks main proof) | 🟡 IMPORTANT (needed for paper) | 🟢 INTERESTING (worth exploring)
 
 ## OPEN-Q-108 🔴 The uniform fattening lemma — the ONE lemma that completes the singular-series proof of LRC(14)
