@@ -1,0 +1,18 @@
+(FULL) L_0(p) k-term-sum-free? predict TRUE ⟺ p=2 & k even
+  k=2 even: p2:SF  p3:-  p5:-  p7:-
+  k=3 odd : p2:-  p3:-  p5:-  p7:-
+  k=4 even: p2:SF  p3:-  p5:-  p7:-
+  k=5 odd : p2:-  p3:-  p5:-  p7:-
+  k=6 even: p2:SF  p3:-  p5:-  p7:-
+(DIAGONAL) k·a escapes L_v ⟺ p|k
+  k= 2: killers=[2]  divisors-of-k=[2]
+  k= 3: killers=[3]  divisors-of-k=[3]
+  k= 4: killers=[2]  divisors-of-k=[2]
+  k= 5: killers=[5]  divisors-of-k=[5]
+  k= 6: killers=[2, 3]  divisors-of-k=[2, 3]
+  k=12: killers=[2, 3]  divisors-of-k=[2, 3]
+
+TRIANGLE (k=2, even): seam p=2; char-2 = unique field with 1+1=0 (all-ones 2-term sum vanishes).
+BARRIER COROLLARY: the ONLY fully-sum-free valuation grading for the (even-arity-2) triangle is p=2,
+which runs out at the linear wall t=2n+1 (HYP-2396) — so a STRONG Specker witness (Q(n,t) SAT ∀t)
+CANNOT come from any valuation/invariant grading; it must use non-invariant (Larson partial-sum) features.
