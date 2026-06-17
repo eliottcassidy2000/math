@@ -1,0 +1,61 @@
+==============================================================================
+Alcuin <-> vertex cover <-> tournament  (mac-mini-2026-06-15-S6)
+==============================================================================
+  n=1: 1 non-iso graphs
+  n=2: 2 non-iso graphs
+  n=3: 4 non-iso graphs
+  n=4: 11 non-iso graphs
+  n=5: 34 non-iso graphs
+  n=6: 156 non-iso graphs
+
+--- (A) bound tau <= Alcuin <= tau+1, and the +1 cases ---
+  bound violations: 0
+  n=1: Alcuin=tau in 0, =tau+1 in 1
+  n=2: Alcuin=tau in 1, =tau+1 in 1
+  n=3: Alcuin=tau in 3, =tau+1 in 1
+  n=4: Alcuin=tau in 9, =tau+1 in 2
+  n=5: Alcuin=tau in 30, =tau+1 in 4
+  n=6: Alcuin=tau in 148, =tau+1 in 8
+  total +1 graphs (n<=in 6): 17
+  smallest +1 examples (n, edges, tau):
+     n=1 E=[] tau=0
+     n=2 E=[] tau=0
+     n=3 E=[] tau=0
+     n=4 E=[] tau=0
+     n=4 E=[(0, 1), (0, 2), (0, 3)] tau=1
+     n=5 E=[] tau=0
+     n=5 E=[(0, 1), (0, 2), (0, 3)] tau=1
+     n=5 E=[(0, 1), (0, 2), (0, 3), (0, 4)] tau=1
+  of +1 graphs, how many are edgeless (tau=0): 6
+
+--- (B) correspondence: Redei parity, indep<->reverse-transitive, 3cycle<->P3 ---
+  Redei parity (#ham-paths odd) failures: 0
+  3-cycles == ordered-induced-P3 count failures: 0
+  largest-transitive >= alpha: 208 cases; < alpha: 0 cases (should be 0)
+
+--- (C) minor-monotonicity of tau and Alcuin ---
+  tau minor-monotonicity failures (tau(H)>tau(G)): 0
+  Alcuin minor-monotonicity failures (Alcuin(H)>Alcuin(G)): 8
+    SMALLEST Alcuin minor-increase counterexamples:
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+      via contract: G(n=6,E=[(0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5)],Alcuin=2) -> H(n=5,E=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)],Alcuin=3)
+    of those, via deletion (subgraph, not contraction): 0
+
+--- (D) conjectures linking Alcuin/Hamiltonicity to T_G strong-connectivity ---
+  [conj1] Alcuin=tau+1  vs  T_G strong (natural order):
+     plus1=False, strongNat=False: 127
+     plus1=False, strongNat=True: 64
+     plus1=True, strongNat=False: 16
+     plus1=True, strongNat=True: 1
+  [conj1'] #(Alcuin=tau+1 AND exists-order-strong) = 12  (0 => +1 implies never-strong)
+  [conj2] G has Ham-cycle  vs  exists-order T_G strong (n>=3):
+     hamcycle=False, exists-strong=False: 4
+     hamcycle=False, exists-strong=True: 141
+     hamcycle=True, exists-strong=False: 4
+     hamcycle=True, exists-strong=True: 56
+
+DONE.

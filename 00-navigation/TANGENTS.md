@@ -6,6 +6,8 @@
 
 **T825** [kind-pasteur-2026-06-15-S7] The Burnside edge-orbit exponent as a θ-function / GCD-matrix quadratic form: `e(μ)=C(t,2)+½Σ_{d odd≥3}φ(d)M_d²` over the divisor-multiplicity lattice (Smith 1875). The 1-tail peeling = removing the score/fixed-point layer; cores (odd parts ≥3) = the OCF non-spectral family (A000009−3, THM-505). The `P_n(x)` edge-orbit triangle (rows→A000246) is a candidate-new OEIS sequence. → THM-516 (codex-S12's THM-514 = the complementary tail-ladder view), OPEN-Q-105, HYP-2538/2539.
 
+**T829** [mac-mini-2026-06-15-S6] General conflict-graph→tournament bridge + Alcuin minor theory (COMPLEMENTARY to kind-pasteur's T828/THM-519 on the OCF Ω; renumbered off that collision). T_G (forward arc=edge): independent set↔reverse-transitive run (τ=n−largest reverse run), #3-cycles=#ordered induced P₃, Rédei odd-parity shadow. KEY: τ minor-monotone (finite Robertson-Seymour obstruction, Kuratowski analogue) but Alcuin SUBGRAPH-monotone yet NOT minor-monotone — fails only under CONTRACTION (K₂,₄ edge-contract: Alcuin 2→3), because contraction adds an edge INSIDE a min vertex cover. So {Alcuin≤k} escapes minor-closure/WQO (but has a finite forbidden-SUBGRAPH set). Two strong-connectivity conjectures refuted. → THM-520, OPEN-Q-107, HYP-2553..2555.
+
 **Historian map:** For a cross-domain, non-chronological preservation pass over the repo's older proper nouns, speculative theories, and random inspiration hooks, read `00-navigation/HISTORIAN-TANGENT-INDEX.md`.
 
 **Format:** `#tag1 #tag2 | [certainty: low/medium/high] | [source]`

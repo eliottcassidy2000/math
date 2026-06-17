@@ -1,0 +1,147 @@
+Using networkx graph_atlas_g: 1253 graphs (n=0..7)
+
+======================================================================
+(1) BOUND VERIFICATION  tau <= Alcuin <= tau+1
+======================================================================
+Checked 1252 non-isomorphic graphs, n=1..7
+Violations of tau <= Alcuin <= tau+1: 0
+   NONE -- bound holds for every graph checked.
+
+======================================================================
+(2) FRACTION  Alcuin=tau  vs  Alcuin=tau+1  BY n
+======================================================================
+  n   total   A=tau   A=tau+1  frac(=tau)   frac(+1)
+  1       1       0         1      0.0000     1.0000
+  2       2       1         1      0.5000     0.5000
+  3       4       3         1      0.7500     0.2500
+  4      11       9         2      0.8182     0.1818
+  5      34      30         4      0.8824     0.1176
+  6     156     148         8      0.9487     0.0513
+  7    1044    1024        20      0.9808     0.0192
+
+======================================================================
+(3) STRUCTURAL PATTERN FOR  Alcuin = tau+1
+======================================================================
+Total Alcuin=tau+1 graphs (n=1..7): 37
+
+  Property prevalence among Alcuin=tau+1 graphs:
+    tau = n/2  (n == 2*tau)           : 1/37
+    has perfect matching             : 1/37
+    alpha == tau                     : 1/37
+    has isolated vertex (deg 0)      : 18/37
+    min degree == 0                  : 18/37
+    min degree >= 1                  : 19/37
+
+  CONVERSE / EXACTNESS test of candidate characterizations:
+    [tau==n/2 (perfect VC split)]
+       TP=1 FP=88 FN=36 TN=1127  not exact
+    [has perfect matching]
+       TP=1 FP=107 FN=36 TN=1108  not exact
+    [min_deg>=1 AND tau==n/2]
+       TP=1 FP=74 FN=36 TN=1141  not exact
+
+  Min-vertex-cover uniqueness test:
+    Alcuin=tau+1 graphs with a UNIQUE min vertex cover: 37/37
+
+  SMALLEST Alcuin=tau+1 examples (by n, then edge count):
+    n=1 tau=0 alpha=1 min_deg=0 iso=True PM=False edges=[]
+    n=2 tau=0 alpha=2 min_deg=0 iso=True PM=False edges=[]
+    n=3 tau=0 alpha=3 min_deg=0 iso=True PM=False edges=[]
+    n=4 tau=0 alpha=4 min_deg=0 iso=True PM=False edges=[]
+    n=4 tau=1 alpha=3 min_deg=1 iso=False PM=False edges=[(0, 3), (1, 3), (2, 3)]
+    n=5 tau=0 alpha=5 min_deg=0 iso=True PM=False edges=[]
+    n=5 tau=1 alpha=4 min_deg=0 iso=True PM=False edges=[(1, 3), (2, 3), (3, 4)]
+    n=5 tau=1 alpha=4 min_deg=1 iso=False PM=False edges=[(0, 4), (1, 4), (2, 4), (3, 4)]
+    n=5 tau=2 alpha=3 min_deg=2 iso=False PM=False edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+    n=6 tau=0 alpha=6 min_deg=0 iso=True PM=False edges=[]
+    n=6 tau=1 alpha=5 min_deg=0 iso=True PM=False edges=[(0, 3), (0, 4), (0, 5)]
+    n=6 tau=1 alpha=5 min_deg=0 iso=True PM=False edges=[(0, 5), (1, 5), (2, 5), (3, 5)]
+
+DONE.
+EXACTNESS: unique min vertex cover (nmvc==1) vs Alcuin=tau+1
+  TP=37 FP=333 FN=0 TN=882  exact=False
+
+FP examples (unique min VC but Alcuin=tau):
+  n=3 tau=1 alpha=2 alc=1 edges=[(0, 1), (0, 2)]
+  n=4 tau=1 alpha=3 alc=1 edges=[(1, 3), (2, 3)]
+  n=4 tau=2 alpha=2 alc=2 edges=[(0, 1), (0, 2), (0, 3), (1, 2), (2, 3)]
+  n=5 tau=1 alpha=4 alc=1 edges=[(0, 1), (1, 2)]
+  n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 4), (1, 2), (2, 3)]
+  n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 3), (1, 2), (2, 3)]
+  n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 4), (1, 2), (2, 3)]
+  n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (1, 3), (1, 4), (2, 3), (2, 4)]
+  total FP=333
+
+EXACTNESS: unique max independent set (nmis==1) vs Alcuin=tau+1
+  TP=37 FP=333 FN=0 TN=882  exact=False
+
+Among Alcuin=tau+1, breakdown:
+  total +1 = 37
+  by min_degree: {0: 18, 1: 11, 2: 5, 3: 2, 4: 1}
+
+Nontrivial Alcuin=tau+1 (min_deg>=1):
+  n=4 tau=1 alpha=3 mindeg=1 nmvc=1 nmis=1 edges=[(0, 3), (1, 3), (2, 3)]
+  n=5 tau=1 alpha=4 mindeg=1 nmvc=1 nmis=1 edges=[(0, 4), (1, 4), (2, 4), (3, 4)]
+  n=5 tau=2 alpha=3 mindeg=2 nmvc=1 nmis=1 edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+  n=6 tau=1 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 5), (1, 5), (2, 5), (3, 5), (4, 5)]
+  n=6 tau=2 alpha=4 mindeg=1 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (2, 5)]
+  n=6 tau=2 alpha=4 mindeg=2 nmvc=1 nmis=1 edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]
+  n=6 tau=3 alpha=3 mindeg=3 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+  n=7 tau=1 alpha=6 mindeg=1 nmvc=1 nmis=1 edges=[(0, 6), (1, 6), (2, 6), (3, 6), (4, 6), (5, 6)]
+  n=7 tau=2 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 6), (4, 5)]
+  n=7 tau=2 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (2, 5), (2, 6)]
+  n=7 tau=2 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (1, 2), (1, 3), (1, 4), (1, 6), (2, 3), (2, 4), (2, 5)]
+  n=7 tau=2 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 6)]
+  n=7 tau=2 alpha=5 mindeg=1 nmvc=1 nmis=1 edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5), (5, 6)]
+  n=7 tau=2 alpha=5 mindeg=2 nmvc=1 nmis=1 edges=[(0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6)]
+  n=7 tau=2 alpha=5 mindeg=2 nmvc=1 nmis=1 edges=[(0, 5), (0, 6), (1, 5), (1, 6), (2, 5), (2, 6), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+  n=7 tau=3 alpha=4 mindeg=1 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 4), (3, 4), (4, 5)]
+  n=7 tau=3 alpha=4 mindeg=2 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (2, 4), (3, 4), (4, 5), (4, 6)]
+  n=7 tau=3 alpha=4 mindeg=3 nmvc=1 nmis=1 edges=[(0, 3), (0, 4), (0, 5), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (3, 6), (4, 5), (4, 6), (5, 6)]
+  n=7 tau=4 alpha=3 mindeg=4 nmvc=1 nmis=1 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (0, 6), (1, 2), (1, 3), (1, 4), (1, 5), (1, 6), (2, 3), (2, 4), (2, 5), (2, 6), (3, 4), (3, 5), (3, 6)]
+CHW candidate: Alcuin=tau+1  <=>  (alpha>tau) AND (unique max indep set)
+  TP=35 FP=206 FN=2 TN=1009  EXACT=False
+   FP n=3 tau=1 alpha=2 alc=1 edges=[(0, 1), (0, 2)]
+   FP n=4 tau=1 alpha=3 alc=1 edges=[(1, 3), (2, 3)]
+   FP n=5 tau=1 alpha=4 alc=1 edges=[(0, 1), (1, 2)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 4), (1, 2), (2, 3)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 3), (1, 2), (2, 3)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 4), (1, 2), (2, 3)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (1, 3), (1, 4), (2, 3), (2, 4)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)]
+   FP n=5 tau=2 alpha=3 alc=2 edges=[(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)]
+   FP n=6 tau=1 alpha=5 alc=1 edges=[(1, 2), (1, 3)]
+
+Alt: Alcuin=tau+1 <=> unique max independent set (any alpha)
+  TP=37 FP=333 FN=0 TN=882  EXACT=False
+  FP (unique max IS but Alcuin=tau), smallest few:
+   n=3 tau=1 alpha=2 alc=1 edges=[(0, 1), (0, 2)]
+   n=4 tau=1 alpha=3 alc=1 edges=[(1, 3), (2, 3)]
+   n=4 tau=2 alpha=2 alc=2 edges=[(0, 1), (0, 2), (0, 3), (1, 2), (2, 3)]
+   n=5 tau=1 alpha=4 alc=1 edges=[(0, 1), (1, 2)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 4), (1, 2), (2, 3)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 3), (1, 2), (2, 3)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (0, 2), (0, 4), (1, 2), (2, 3)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (1, 3), (1, 4), (2, 3), (2, 4)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 1), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)]
+   n=5 tau=2 alpha=3 alc=2 edges=[(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)]
+Among unique-max-IS graphs:
+  candidate A: Alcuin=tau+1 <=> cover C = V\I is an independent set (edges_in_C==0)
+    TP=20 FP=52 FN=17 TN=281 EXACT=False
+  candidate B: Alcuin=tau+1 <=> some cover vertex has NO neighbor in I
+    TP=0 FP=0 FN=37 TN=333 EXACT=False
+
+  Candidate A detail (cover independent):
+    FP count=52 FN count=17
+     FP n=3 tau=1 alpha=2 alc=1 edges_in_C=0 edges=[(0, 1), (0, 2)]
+     FP n=4 tau=1 alpha=3 alc=1 edges_in_C=0 edges=[(1, 3), (2, 3)]
+     FP n=5 tau=1 alpha=4 alc=1 edges_in_C=0 edges=[(0, 1), (1, 2)]
+     FP n=5 tau=2 alpha=3 alc=2 edges_in_C=0 edges=[(0, 1), (0, 4), (1, 2), (2, 3)]
+     FP n=5 tau=2 alpha=3 alc=2 edges_in_C=0 edges=[(0, 1), (1, 3), (1, 4), (2, 3), (2, 4)]
+     FP n=5 tau=2 alpha=3 alc=2 edges_in_C=0 edges=[(0, 2), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4)]
+     FN n=5 tau=2 alpha=3 alc=3 edges_in_C=1 edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+     FN n=6 tau=2 alpha=4 alc=3 edges_in_C=1 edges=[(0, 1), (0, 2), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4)]
+     FN n=6 tau=2 alpha=4 alc=3 edges_in_C=1 edges=[(0, 1), (0, 2), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (2, 5)]
+     FN n=6 tau=2 alpha=4 alc=3 edges_in_C=1 edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]
+     FN n=6 tau=3 alpha=3 alc=4 edges_in_C=3 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
+     FN n=7 tau=2 alpha=5 alc=3 edges_in_C=1 edges=[(0, 2), (0, 5), (1, 2), (1, 5), (2, 4), (2, 5), (4, 5)]
