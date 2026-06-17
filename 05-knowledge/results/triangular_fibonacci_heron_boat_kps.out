@@ -1,0 +1,30 @@
+(1) Area = 1·Perimeter Heronian triangles (a,b,c,Area,Perim,inradius):
+    (5, 12, 13, 30, 30, 2.0)
+    (6, 8, 10, 24, 24, 2.0)
+    (6, 25, 29, 60, 60, 2.0)
+    (7, 15, 20, 42, 42, 2.0)
+    (9, 10, 17, 36, 36, 2.0)
+    => exactly 5; ALL inradius r=2 (Area=r·s, Area=P=2s ⟹ r=2).
+(2) Fib ∩ Tri (>0): [1, 3, 21, 55]
+    (2n-1)(4n-1)=T_{4n-2}; factor as (2n-1)·(4n-1):
+    n=0: -1·-1=1=T_-2  Fib=True   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+    n=1: 1·3=3=T_2  Fib=True   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+    n=2: 3·7=21=T_6  Fib=True   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+    n=3: 5·11=55=T_10  Fib=True   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+    n=4: 7·15=105=T_14  Fib=False   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+    n=5: 9·19=171=T_18  Fib=False   (n=2: 3·7=21=Φ3(1)·Φ3(2))
+(3) (2k+1)² = 8·T_k + 1: True (octal odd-square = octal T_k followed by digit 1)
+(4) 2×6 grid, k marbles up to Z2×Z2, k=0..6: [1, 3, 21, 55, 135, 198, 246] → {1,3,21,55} is the prefix; 135 breaks both Fib & Tri.
+(5) Φ3(x)=x²+x+1: Φ3(1)=3 (big-boat/ideal-gas unit H=3^α₁), Φ3(2)=7 (forbidden phantom), Φ3(1)·Φ3(2)=21 (forbidden, =T_6, =Fib∩Tri[4]).
+(6) Fibonacci rank-of-apparition α(p) | p−(5/p):
+    p= 2: α= 3  (5/p)=-1  p-(5/p)= 3  α|p-(5/p)=True
+    p= 3: α= 4  (5/p)=-1  p-(5/p)= 4  α|p-(5/p)=True
+    p= 5: α= 5  (5/p)=+0  p-(5/p)= 5  α|p-(5/p)=p=5
+    p= 7: α= 8  (5/p)=-1  p-(5/p)= 8  α|p-(5/p)=True
+    p=11: α=10  (5/p)=+1  p-(5/p)=10  α|p-(5/p)=True
+    p=13: α= 7  (5/p)=-1  p-(5/p)=14  α|p-(5/p)=True
+    p=17: α= 9  (5/p)=-1  p-(5/p)=18  α|p-(5/p)=True
+    p=19: α=18  (5/p)=+1  p-(5/p)=18  α|p-(5/p)=True
+    p=23: α=24  (5/p)=-1  p-(5/p)=24  α|p-(5/p)=True
+    p=29: α=14  (5/p)=+1  p-(5/p)=28  α|p-(5/p)=True
+    p=31: α=30  (5/p)=+1  p-(5/p)=30  α|p-(5/p)=True
