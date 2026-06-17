@@ -1,0 +1,183 @@
+﻿==============================================================================
+LRC section check-off and switch atlas
+==============================================================================
+Canonical gauge: include speed 0 and divide the loop into n fixed sections.
+Dream certificate: perfect matching in runner<->section lonely-witness graph.
+Exotic cases reduce to Hall packets plus section-support tournaments.
+
+(A) Exhaustive canonical speed sets: n=4, max_speed=14
+  primitive sets=325
+  every runner has some witnessed section=325/325
+  full section cover=325/325
+  open full section cover=0/325
+  perfect section check-off matching=325/325
+  open-cell-only matching=0/325
+  no Hall deficit=325/325
+  open no Hall deficit=0/325
+  Hall packet histogram={}
+  open Hall packet histogram={(1, 1, 0): 2, (1, 3, 2): 320, (2, 2, 0): 3}
+  dream check-off example: speeds=(0, 1, 2, 3)
+    perfect_matching=True open_matching=False section_cover=4/4 open_cover=2/4 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 3), (0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3))
+    section->runners=((0, 1, 2, 3), (1, 2, 3), (1, 2, 3), (0, 1, 2, 3))
+    section_open_measure=('0', '1/4', '1/4', '0')
+    open Hall packet: deficit=2, runners=(0, 3), sections=()
+    wall_debt_sections=(0, 3) wall_only_runners=(0, 3)
+    section tournament={'scores': [3, 1, 0, 2], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_cycles': 0, 'transitive_triples': 4, 'scc_sizes': [1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  exotic wall-switch example: speeds=(0, 1, 2, 3)
+    perfect_matching=True open_matching=False section_cover=4/4 open_cover=2/4 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 3), (0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3))
+    section->runners=((0, 1, 2, 3), (1, 2, 3), (1, 2, 3), (0, 1, 2, 3))
+    section_open_measure=('0', '1/4', '1/4', '0')
+    open Hall packet: deficit=2, runners=(0, 3), sections=()
+    wall_debt_sections=(0, 3) wall_only_runners=(0, 3)
+    section tournament={'scores': [3, 1, 0, 2], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_cycles': 0, 'transitive_triples': 4, 'scc_sizes': [1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  smallest min-runner-measure example: speeds=(0, 1, 2, 3)
+    perfect_matching=True open_matching=False section_cover=4/4 open_cover=2/4 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 3), (0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3))
+    section->runners=((0, 1, 2, 3), (1, 2, 3), (1, 2, 3), (0, 1, 2, 3))
+    section_open_measure=('0', '1/4', '1/4', '0')
+    open Hall packet: deficit=2, runners=(0, 3), sections=()
+    wall_debt_sections=(0, 3) wall_only_runners=(0, 3)
+    section tournament={'scores': [3, 1, 0, 2], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_cycles': 0, 'transitive_triples': 4, 'scc_sizes': [1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+
+(A) Exhaustive canonical speed sets: n=5, max_speed=10
+  primitive sets=205
+  every runner has some witnessed section=205/205
+  full section cover=205/205
+  open full section cover=0/205
+  perfect section check-off matching=205/205
+  open-cell-only matching=0/205
+  no Hall deficit=205/205
+  open no Hall deficit=0/205
+  Hall packet histogram={}
+  open Hall packet histogram={(1, 1, 0): 17, (1, 3, 2): 15, (1, 4, 3): 169, (2, 2, 0): 3, (2, 3, 1): 1}
+  dream check-off example: speeds=(0, 1, 2, 3, 4)
+    perfect_matching=True open_matching=False section_cover=5/5 open_cover=3/5 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section->runners=((0, 1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section_open_measure=('0', '7/30', '1/5', '7/30', '0')
+    open Hall packet: deficit=2, runners=(0, 4), sections=()
+    wall_debt_sections=(0, 4) wall_only_runners=(0, 4)
+    section tournament={'scores': [4, 2, 0, 1, 3], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_cycles': 0, 'transitive_triples': 10, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  exotic wall-switch example: speeds=(0, 1, 2, 3, 4)
+    perfect_matching=True open_matching=False section_cover=5/5 open_cover=3/5 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section->runners=((0, 1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section_open_measure=('0', '7/30', '1/5', '7/30', '0')
+    open Hall packet: deficit=2, runners=(0, 4), sections=()
+    wall_debt_sections=(0, 4) wall_only_runners=(0, 4)
+    section tournament={'scores': [4, 2, 0, 1, 3], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_cycles': 0, 'transitive_triples': 10, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  smallest min-runner-measure example: speeds=(0, 1, 2, 3, 4)
+    perfect_matching=True open_matching=False section_cover=5/5 open_cover=3/5 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section->runners=((0, 1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section_open_measure=('0', '7/30', '1/5', '7/30', '0')
+    open Hall packet: deficit=2, runners=(0, 4), sections=()
+    wall_debt_sections=(0, 4) wall_only_runners=(0, 4)
+    section tournament={'scores': [4, 2, 0, 1, 3], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_cycles': 0, 'transitive_triples': 10, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+
+(A) Exhaustive canonical speed sets: n=6, max_speed=8
+  primitive sets=56
+  every runner has some witnessed section=56/56
+  full section cover=56/56
+  open full section cover=0/56
+  perfect section check-off matching=56/56
+  open-cell-only matching=0/56
+  no Hall deficit=56/56
+  open no Hall deficit=0/56
+  Hall packet histogram={}
+  open Hall packet histogram={(1, 1, 0): 12, (1, 5, 4): 42, (2, 2, 0): 2}
+  dream check-off example: speeds=(0, 1, 2, 3, 4, 5)
+    perfect_matching=True open_matching=False section_cover=6/6 open_cover=4/6 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 4, 5))
+    section->runners=((0, 1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+    section_open_measure=('0', '7/36', '2/9', '2/9', '7/36', '0')
+    open Hall packet: deficit=2, runners=(0, 5), sections=()
+    wall_debt_sections=(0, 5) wall_only_runners=(0, 5)
+    section tournament={'scores': [5, 3, 1, 0, 2, 4], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_cycles': 0, 'transitive_triples': 20, 'scc_sizes': [1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  exotic wall-switch example: speeds=(0, 1, 2, 3, 4, 5)
+    perfect_matching=True open_matching=False section_cover=6/6 open_cover=4/6 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 4, 5))
+    section->runners=((0, 1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+    section_open_measure=('0', '7/36', '2/9', '2/9', '7/36', '0')
+    open Hall packet: deficit=2, runners=(0, 5), sections=()
+    wall_debt_sections=(0, 5) wall_only_runners=(0, 5)
+    section tournament={'scores': [5, 3, 1, 0, 2, 4], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_cycles': 0, 'transitive_triples': 20, 'scc_sizes': [1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  smallest min-runner-measure example: speeds=(0, 1, 2, 3, 4, 5)
+    perfect_matching=True open_matching=False section_cover=6/6 open_cover=4/6 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 4, 5))
+    section->runners=((0, 1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+    section_open_measure=('0', '7/36', '2/9', '2/9', '7/36', '0')
+    open Hall packet: deficit=2, runners=(0, 5), sections=()
+    wall_debt_sections=(0, 5) wall_only_runners=(0, 5)
+    section tournament={'scores': [5, 3, 1, 0, 2, 4], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_cycles': 0, 'transitive_triples': 20, 'scc_sizes': [1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+
+(B) Named rows
+  LRC4 AP: speeds=(0, 1, 2, 3)
+    perfect_matching=True open_matching=False section_cover=4/4 open_cover=2/4 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 3), (0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3))
+    section->runners=((0, 1, 2, 3), (1, 2, 3), (1, 2, 3), (0, 1, 2, 3))
+    section_open_measure=('0', '1/4', '1/4', '0')
+    open Hall packet: deficit=2, runners=(0, 3), sections=()
+    wall_debt_sections=(0, 3) wall_only_runners=(0, 3)
+    section tournament={'scores': [3, 1, 0, 2], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_cycles': 0, 'transitive_triples': 4, 'scc_sizes': [1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  LRC4 uneven: speeds=(0, 1, 2, 4)
+    perfect_matching=True open_matching=False section_cover=4/4 open_cover=3/4 min_runner_open_measure=1/8 (0.125000)
+    runner->sections=((0, 3), (0, 1, 2, 3), (0, 1, 2, 3), (0, 1, 2, 3))
+    section->runners=((0, 1, 2, 3), (1, 2, 3), (1, 2, 3), (0, 1, 2, 3))
+    section_open_measure=('1/8', '13/48', '13/48', '0')
+    open Hall packet: deficit=1, runners=(1, 2, 3), sections=(1, 2)
+    wall_debt_sections=(3,) wall_only_runners=()
+    section tournament={'scores': [3, 1, 0, 2], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1}, 'directed_cycles': 0, 'transitive_triples': 4, 'scc_sizes': [1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  LRC5 AP: speeds=(0, 1, 2, 3, 4)
+    perfect_matching=True open_matching=False section_cover=5/5 open_cover=3/5 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section->runners=((0, 1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (1, 2, 3, 4), (0, 1, 2, 3, 4))
+    section_open_measure=('0', '7/30', '1/5', '7/30', '0')
+    open Hall packet: deficit=2, runners=(0, 4), sections=()
+    wall_debt_sections=(0, 4) wall_only_runners=(0, 4)
+    section tournament={'scores': [4, 2, 0, 1, 3], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1}, 'directed_cycles': 0, 'transitive_triples': 10, 'scc_sizes': [1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  LRC6 cluster: speeds=(0, 1, 2, 3, 5, 8)
+    perfect_matching=True open_matching=False section_cover=6/6 open_cover=5/6 min_runner_open_measure=1/72 (0.013889)
+    runner->sections=((0, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+    section->runners=((0, 1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (1, 2, 3, 4, 5), (0, 1, 2, 3, 4, 5))
+    section_open_measure=('1/72', '1037/5040', '601/2520', '601/2520', '1037/5040', '0')
+    open Hall packet: deficit=1, runners=(1, 2, 3, 4, 5), sections=(1, 2, 3, 4)
+    wall_debt_sections=(5,) wall_only_runners=()
+    section tournament={'scores': [5, 1, 3, 2, 0, 4], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, 'directed_cycles': 0, 'transitive_triples': 20, 'scc_sizes': [1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  LRC14 AP: speeds=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    perfect_matching=True open_matching=False section_cover=14/14 open_cover=12/14 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13))
+    section->runners=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+    section_open_measure=('0', '67157/388080', '7737/43120', '3151/17640', '2689/17640', '62009/388080', '64679/388080', '64679/388080', '62009/388080', '2689/17640', '3151/17640', '7737/43120', '67157/388080', '0')
+    open Hall packet: deficit=2, runners=(0, 13), sections=()
+    wall_debt_sections=(0, 13) wall_only_runners=(0, 13)
+    section tournament={'scores': [13, 7, 11, 9, 3, 5, 1, 0, 4, 2, 8, 10, 6, 12], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}, 'directed_cycles': 0, 'transitive_triples': 364, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+  LRC14 GW: speeds=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+    perfect_matching=True open_matching=False section_cover=14/14 open_cover=12/14 min_runner_open_measure=0 (0.000000)
+    runner->sections=((0, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+    section->runners=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13))
+    section_open_measure=('0', '65127659/367447080', '3702958687/18739801080', '1919008799/9369900540', '130003/703248', '7933531/42882840', '61946959/293957664', '61946959/293957664', '7933531/42882840', '130003/703248', '1919008799/9369900540', '3702958687/18739801080', '65127659/367447080', '0')
+    open Hall packet: deficit=2, runners=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), sections=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    wall_debt_sections=(0, 13) wall_only_runners=(0,)
+    section tournament={'scores': [13, 1, 7, 9, 3, 5, 11, 10, 4, 2, 8, 6, 0, 12], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1}, 'directed_cycles': 0, 'transitive_triples': 364, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}; private-first edge flips=0
+
+(C) Meta Tournament Analysis over n-level profiles
+  profiles={4: (325, 0, 325, 325, 325), 5: (205, 0, 205, 205, 205), 6: (56, 0, 56, 56, 56)}
+  n-order=[4, 5, 6]
+  fingerprint={'scores': [2, 1, 0], 'score_hist': {0: 1, 1: 1, 2: 1}, 'directed_cycles': 0, 'transitive_triples': 1, 'scc_sizes': [1, 1, 1], 'hamiltonian_paths': 1}
+
+SYNTHESIS
+  1. A section proof can be exact after replacing 'runner i' by the
+     runner-section witness graph.  The compactified dream case is Hall
+     matching; strict-open matching exposes the wall debt.
+  2. The exotic cases are not mysterious: their compressed certificate is
+     an open Hall packet (runner subset, section union), wall-debt sections,
+     and a switch tournament on the contested sections.
+  3. The tournament analogy improves when vertices are sections: section
+     dominance records which regions have private support, abundant open
+     witness measure, or only wall witnesses.
+  4. The proof route suggested by this data is local: show every Hall packet
+     has a boundary-crossing switch that strictly enlarges its section union,
+     or descends to an already-proved observer-source/endpoint-mouth case.
