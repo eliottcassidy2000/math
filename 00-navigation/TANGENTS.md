@@ -2,6 +2,8 @@
 
 **Purpose:** Dense, scannable index of interesting directions that have emerged. Each entry is 2–4 lines. A new Claude reads this whole file quickly to find a jumping-off point. Add entries with the tag format shown. Do not expand entries here — create a separate file in `03-artifacts/drafts/` if you want to develop a tangent.
 
+**T828** [kind-pasteur-2026-06-16-S1] The Alcuin number of the conflict graph Ω(T): `Alcuin(Ω)=τ+1` (large-boat) ⟺ Ω edgeless ⟺ `H=3^{α₁}` (ideal gas, THM-517) — the boat-tax `+1` is the OCF ideal-gas regime. Kuratowski `K₅` = 5 pairwise-overlapping odd cycles (first non-planar Ω at n=5,H=11; `α=1⟹Ω=K_m`, planar⟺m≤4). Ω Ham-path ⟺ connected ⟺ `H` doesn't factor over overlap-components (Ω disconnected ⟹ `H=∏`). "Ω planar" hereditary under sub-tournaments (Robertson–Seymour spirit; tournaments not WQO). → THM-519, HYP-2550/2551/2552, OPEN-Q-106. Source: Csorba–Hurkens–Woeginger SIAM JDM 24(3) 2010.
+
 **T825** [kind-pasteur-2026-06-15-S7] The Burnside edge-orbit exponent as a θ-function / GCD-matrix quadratic form: `e(μ)=C(t,2)+½Σ_{d odd≥3}φ(d)M_d²` over the divisor-multiplicity lattice (Smith 1875). The 1-tail peeling = removing the score/fixed-point layer; cores (odd parts ≥3) = the OCF non-spectral family (A000009−3, THM-505). The `P_n(x)` edge-orbit triangle (rows→A000246) is a candidate-new OEIS sequence. → THM-516 (codex-S12's THM-514 = the complementary tail-ladder view), OPEN-Q-105, HYP-2538/2539.
 
 **Historian map:** For a cross-domain, non-chronological preservation pass over the repo's older proper nouns, speculative theories, and random inspiration hooks, read `00-navigation/HISTORIAN-TANGENT-INDEX.md`.
