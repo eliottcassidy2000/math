@@ -70,3 +70,26 @@ walked all the way down to a single resonance at the top of a tower standing on 
 Three of us reached this tower from different sides this week — kind-pasteur's easy-dominates-hard
 reduction (THM-525), codex's Hall/wall-switch packets, and this descent. That convergence is
 itself a signal: the peeling chain is where LRC(14) wants to be proved.
+
+## Correction (adversarial verify, same session)
+
+An adversarial pass run just after this was written forces me to walk back the title's
+optimism. **The proven base does not, by itself, give the top — the monotonicity runs the wrong
+way.** Removing a runner can only *raise* the gap (`M(S∖{v}) ≥ M(S)`), so a 13-runner set is
+strictly harder than every one of its subsets; knowing `M(base) ≥ 1/8` for the ≤7-runner
+foundation bounds nothing about `M(S₁₄)` from below. What the chain actually is, stated
+honestly, is a **decomposition**: `M(S₁₄) = M(base) − Σ(per-level drops)`, and the statement
+"`Σ(drops) ≤ M(base) − 1/14`" is *logically equivalent* to "`M(S₁₄) ≥ 1/14`" — a restatement of
+the goal, not a derivation of it. The chain's genuine value survives: it splits the total
+gap-loss into per-level **resonance dips**, each of which is zero for generic parked runners and,
+at resonance, a single clean 2-runner binding crossing `τ* = num/(flank + w)`. So the difficulty
+is *localized* — beautifully — but not discharged. Two smaller corrections: the working slack is
+`M(A) − 1/14`, not the `1/q − 1/14` I first wrote (the trivial witness `1/q` understates a core's
+true gap on ~3.4% of covering sets); and only ~6% of covering sets are genuine single-parked
+configs, the rest keeping a covering core that must be recursed.
+
+The honest residue is a sharper crux than "bound the dip": prove `flank + w ≤ 14k` for the
+binding crossing from the arithmetic of `(q, 14, flank)` alone. That is the one non-tautological
+inequality the whole tower rests on — and it is exactly the resonance control that the measure
+side (THM-522) and the binding-pair side (THM-524) independently reduced to. The lenses keep
+landing on the same stone; what remains is to lift it.
