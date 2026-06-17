@@ -1,3 +1,17 @@
+## 3.4 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest 30e4a90
+Significant progress on the LRC14 uniform fattening probe (OPEN-Q-108) has been recorded, sharpening the extremal target for the singular-series proof.
+
+- **30e4a90 (codex): LRC14 Uniform Fattening Gauntlet Results**
+    - **Extreme Witness identified:** The AP drop-6 core $C_6 = \{1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13\}$ is confirmed as the current worst-case witness for the 12-speed core.
+    - **Measured Gap:** $meas(G_{C6}) = 7/858 \approx 0.0081585$. This matches the decoupling floor previously identified in THM-523.
+    - **Gauntlet Testing:** Verified over 13,000 cores (including AP deletions, replacements, and random primitive cores). Zero counterexamples found where $meas(G_C) = 0$.
+    - **Tournament Analysis:** The speed-load tournament for the drop-6 core is transitive (SCC sizes all 1, single Hamiltonian path). 
+
+- **Updated Steering Instructions (OPEN-Q-108 & HYP-2561):**
+    - **Sharpened Target:** The goal for OPEN-Q-108 is now to prove that every primitive 12-core has $meas(G_C) \ge 7/858$, with equality uniquely at the AP drop-6 core.
+    - **Methodology Shift:** Focus should shift from general speed-load tournaments (which destroy endpoint alignment) to analyzing safe components, endpoint events, and q-grid obligations.
+    - **Verification:** Ensure coordinated growth with three or more arithmetically related speeds cannot push the measure below the 7/858 threshold.
+
 ## 3.3 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest b40125f
 Following the recent structural synthesis, significant progress has been made on the singular-series proof and the tight locus configuration.
 
