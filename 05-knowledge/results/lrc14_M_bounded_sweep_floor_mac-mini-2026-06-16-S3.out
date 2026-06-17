@@ -1,0 +1,72 @@
+======================================================================
+PART 1: SCALE-INVARIANCE of M -- exact statement & proof check
+======================================================================
+
+CLAIM:  M(cS) = M(S) for every positive integer c.
+PROOF:  M(cS) = max_t min_v ||c v t||.  As t ranges over R/Z, so does u=c t
+        over R/Z (it wraps c times but covers the SAME image, including all of
+        the circle).  Sub u=c t:  M(cS) = max_u min_v ||v u|| = M(S).  QED.
+COROLLARY: M depends only on the PROJECTIVE class of S.  So WLOG gcd(S)=1
+        (primitive) -- exactly the conjecture's hypothesis.  BUT scale-
+        invariance does NOT bound max(S): {1,2,..,13} and {2,4,..,26} have the
+        SAME M, yet we can also scale UP arbitrarily.  Among PRIMITIVE reps,
+        max is the genuine size and is NOT bounded.  This is why quantization
+        needs a SECOND ingredient (a max-bound) to close.
+
+  M(1*[1..13]) = 1/14  (== 1/14? True)
+  M(2*[1..13]) = 1/14  (== 1/14? True)
+  M(3*[1..13]) = 1/14  (== 1/14? True)
+  M(6*[1..13]) = 1/14  (== 1/14? True)
+  M(10*[1..13]) = 1/14  (== 1/14? True)
+  M(1000*[1..13]) = 1/14  (== 1/14? True)
+
+======================================================================
+PART 2: the SCALE-INVARIANT quantity  P(S) = M(S) * max(S)
+======================================================================
+
+M*max is NOT scale-invariant (max scales, M doesn't).  So that's the WRONG
+normalization.  The scale-invariant content is M itself together with the
+PROJECTIVE shape.  Re-pose the floor as: among primitive S, is inf M(S) > 0?
+That IS the conjecture (inf >= 1/14).  The floor M >= 1/(2max) only helps when
+max is bounded.  So compute inf M over EXHAUSTIVE primitive families of bounded
+max -- that is a genuine, finite, rigorous certificate for those families.
+
+======================================================================
+PART 3: EXHAUSTIVE primitive 13-subsets of {1..W}
+======================================================================
+
+For W just above 13 the count C(W,13) is small enough to fully enumerate.
+  C(14,13)=1, C(15,13)=105, C(16,13)=560, C(17,13)=2380,
+  C(18,13)=8568, C(19,13)=27132, C(20,13)=77520, C(21,13)=203490
+
+   W      #prim    min M (exact)       float   <1/14?                                   argmin
+  13          1             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  14         14             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  15        105             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  16        560             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  17       2380             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  18       8568             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  19      27132             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  20      77520             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  21     203490             1/14   0.0714286       no [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+TOTAL exact M<1/14 found across W=13..21: 0
+  NONE.  LRC(14) holds for ALL primitive 13-sets with max <= 21.
+  (Every such S has M(S) >= 1/14, with equality only for the tight
+   configs {1..13} and sporadics like {1..11,13,24}? -- note 24>21.)
+
+======================================================================
+PART 4: lcm bound on a putative minimizer (kind-pasteur L-quantization)
+======================================================================
+
+kind-pasteur THM-522: L in (1/(14 lcm S)) Z, and L is scale-invariant.  M is the
+gap; the tight locus L=0 contains every M-minimizer's projective class.  The M
+VALUE itself has denominator d | (v_a +/- v_b) or 2 v_i, hence d | 2 lcm(S) and
+d <= 2 max(S).  For a counterexample M=a/d<1/14 we need d>14 (since a>=1 =>
+d=14a... no: a/d<1/14 with a>=1 forces d>14).  Smallest possible: a=1,d=15.
+Check whether M can EVER equal 1/15 (or any a/d in (0,1/14)) for a 13-set.
+
+distinct exact M-values in (0,1/14) seen over W<=19: 0
+   NONE.  No primitive 13-set with max<=19 achieves M below 1/14.
+
+DONE part 2.

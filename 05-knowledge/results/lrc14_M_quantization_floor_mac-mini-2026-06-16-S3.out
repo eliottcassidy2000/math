@@ -1,0 +1,84 @@
+======================================================================
+PART (a): Stern-Brocot neighbours of 1/14 with bounded denominator
+======================================================================
+
+A counterexample needs M = a/d < 1/14 with d = denom(M) <= 2*max(S).
+For each D, find the LARGEST fraction a/d < 1/14 with d <= D, and the
+gap 1/14 - a/d.  If M can only land at the lattice of denom<=2max, the
+'room' below 1/14 is exactly these neighbours.
+
+     D    best a/d < 1/14       1/14 - a/d     as float
+    13                  0             1/14   0.00000000
+    14                  0             1/14   0.00000000
+    26               1/15            1/210   0.06666667
+    28               1/15            1/210   0.06666667
+    50               3/43            1/602   0.06976744
+   100               7/99           1/1386   0.07070707
+   196             13/183           1/2562   0.07103825
+   200             14/197           1/2758   0.07106599
+  1000             71/995          1/13930   0.07135678
+  2000           142/1989          1/27846   0.07139266
+ 10000           714/9997         1/139958   0.07142143
+
+Note: 1/14 itself is the value of the tight AP {1..13}.  The nearest
+fraction BELOW with small denom is what a counterexample must HIT.
+As D->inf the neighbour -> 1/14, so quantization alone gives NO uniform
+floor unless we ALSO bound D = 2 max(S).  That is the crux.
+
+======================================================================
+PART (b): does M(S) >= 1/(2 max(S))?  (a candidate forced floor)
+======================================================================
+
+Single runner v at tau = 1/(2v) gives ||v tau|| = 1/2.  For the SLOWEST
+runner v_min, ||v_min tau|| can be made 1/2 at tau=1/(2 v_min).  But the
+min over ALL runners is what matters.  Test the hypothesis
+        M(S) >= 1/(2 max(S))
+on many random / structured 13-sets.  Find min of M*2max over samples.
+
+samples tested: 603
+M(S) >= 1/(2 max) FAILURES: 0
+worst ratio M*2max = 1.857142857142857 = 1.857143
+  at S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13], max=13
+
+If fails=0, then M(S) >= 1/(2 max(S)) holds empirically.  This is a
+forced floor BUT it depends on max(S): useless unless max is bounded.
+Scale-invariance does NOT bound max (M is NOT scale-invariant: M(cS)!=M(S)
+in general because ||.|| wraps).  Check that next.
+
+======================================================================
+PART (c): is M scale-invariant?  M(cS) vs M(S)
+======================================================================
+
+kind-pasteur proved the MEASURE L is scale-invariant.  Is the GAP M?
+If M(cS)=M(S), we could dilate to make gcd=1 / bound max.  Test:
+
+M([1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]) = 3/41
+M(2*S) = 3/41   EQUAL
+M(3*S) = 3/41   EQUAL
+M(5*S) = 3/41   EQUAL
+M(7*S) = 3/41   EQUAL
+
+Interpretation: dilation by integer c keeps the same set of normalized
+speeds modulo the torus reparametrization tau->tau/c, so M is invariant
+under tau-rescaling -> M(cS) = M(S) when we also dilate the torus, but the
+PRIMITIVE requirement (gcd=1) is the canonical normalization.  Verify.
+
+======================================================================
+PART (d): which VALUES a/d can M actually take? (envelope-vertex values)
+======================================================================
+
+M is the value g(S,tau*) = min_v ||v tau*|| at an envelope vertex tau*.
+tau* has denom d* | (v_a +/- v_b) or 2 v_i.  Then ||v tau*|| = |k_v|/d*-ish.
+So M = a/d* with d* | one of those.  KEY: the NUMERATOR a and denom d are
+coupled.  Enumerate the actual M-values that occur over a large sample and
+see how close to (but >=) 1/14 they cluster, and the smallest M seen.
+
+smallest float-M over 3002 samples: 0.07142857
+  >= 1/14 (0.07142857) ? True   at S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+  EXACT M of that minimizer: 1/14 = 0.07142857, attained at tau=5/14
+  exact >= 1/14 ? True
+
+float-M candidates strictly below 1/14: 0
+  (none -- all sampled M >= 1/14, consistent with LRC(14))
+
+DONE part 1.  See companion script for the bounded-max exhaustive sweep.

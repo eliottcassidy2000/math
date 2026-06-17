@@ -1,0 +1,8 @@
+SANITY tight {1..13}: M = 1/14 at 5/14 (expect 1/14 at 5/14)
+
+=== (a) contains a multiple of 14 ===
+  tot=2000 below=0 tight=0 worst=1/8=0.12500 wS=[2, 3, 22, 24, 27, 28, 29, 33, 51, 60, 62, 68, 79]
+  -- replace one AP speed by 14j --
+    tight-or-below among single-14j replacements: 0
+
+=== (c) ratio v_{k+1}>=(7/6)v_k  =>  claim M>=1/14 ===

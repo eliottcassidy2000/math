@@ -1,0 +1,21 @@
+1..13 on (0,1/2]:
+  sum of band measures = 13/14 = 0.928571
+  union (actual coverage) = 1/2 = 0.500000 (target 1/2=0.5000)
+  total overlap (redundancy) = 3/7 = 0.428571
+  surplus over interval = sum - 1/2 = 3/7 = 0.428571
+
+  => union = exactly 1/2 (FULL measure coverage), overlap = 3/7 (0.4286)
+  The 0.4286 of overlap is EXACTLY the redundancy that, if it could be
+  redistributed without leaving boundary touch-points, would give M<1/14.
+  But THM-503 forces overlap at every coprime pair (>=1/(7*max)), and the
+  symmetric pairs {v,14-v} create edge-to-edge band meetings -> survivor points.
+1..12 + 13: M=1/14=0.071429 at 5/14 prim=True
+1..12 + 14: M=1/13=0.076923 at 4/13 prim=True
+1..12 + 28: M=1/13=0.076923 at 4/13 prim=True
+1..12 + 42: M=1/13=0.076923 at 3/13 prim=True
+
+1..12,14: M=1/13=0.076923 at tau=4/13
+  norms at that tau: [Fraction(1, 13), Fraction(2, 13), Fraction(3, 13), Fraction(4, 13), Fraction(5, 13), Fraction(6, 13)]
+
+base 1..11 + 14 + X (X plugs the gap 14 opens):
+  best: 1/13 0.07692307692307693 (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) prim= True

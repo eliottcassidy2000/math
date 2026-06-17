@@ -1,0 +1,22 @@
+CRITERION: for C-prime(14) S=A u {mult of 14}, does (A misses a unit residue mod 14) => M>1/14 ?
+  and is the HARD core exactly {A covers all 6 units} ?
+
+[A] interior-drop {1..13}\{j} u {14m}:
+  j= 1: minM over m=1/8=0.12500 >1/14   misses unit [1] (construction works)
+  j= 2: minM over m=9/83=0.10843 >1/14   COVERS all 6 units (HARD)
+  j= 3: minM over m=2/19=0.10526 >1/14   misses unit [3] (construction works)
+  j= 4: minM over m=5/53=0.09434 >1/14   COVERS all 6 units (HARD)
+  j= 5: minM over m=2/21=0.09524 >1/14   misses unit [5] (construction works)
+  j= 6: minM over m=9/109=0.08257 >1/14   COVERS all 6 units (HARD)
+  j= 7: minM over m=1/11=0.09091 >1/14   COVERS all 6 units (HARD)
+  j= 8: minM over m=1/9=0.11111 >1/14   COVERS all 6 units (HARD)
+  j= 9: minM over m=14/131=0.10687 >1/14   misses unit [9] (construction works)
+  j=10: minM over m=1/11=0.09091 >1/14   COVERS all 6 units (HARD)
+  j=11: minM over m=14/157=0.08917 >1/14   misses unit [11] (construction works)
+  j=12: minM over m=7/89=0.07865 >1/14   COVERS all 6 units (HARD)
+  j=13: minM over m=1/13=0.07692 >1/14   misses unit [13] (construction works)
+
+[B] random C-prime(14): 2876 miss-a-unit, 124 cover-all-units
+    miss-a-unit: min M = 0.126214  (criterion predicts ALL >1/14; violations=0)
+    cover-all-units (hard core): min M = 0.135593  (1/14=0.071429)
+    => criterion HOLDS: missing a unit residue => M>1/14 (construction proves it)

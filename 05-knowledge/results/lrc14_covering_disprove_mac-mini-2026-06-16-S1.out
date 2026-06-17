@@ -1,0 +1,23 @@
+=== SANITY: exact M tool on known tight configs ===
+  1..13 (AP): M=1/14=0.071429 at tau=5/14; open-band uncovered measure=0
+  1..11,13,24: M=1/14=0.071429 at tau=5/14; open-band uncovered measure=0
+  threshold 1/14=0.071429
+
+=== COVERING-DESIGN: Sidon / minimal-overlap constructions (borrowed PROVE idea) ===
+  Mian-Chowla Sidon [1, 2, 4, 8, 13, 21, 31, 45, 66, 81, 97, 123, 148]: M=7/34=0.205882 (large M: Sidon spreads bands, leaves big gaps)
+
+=== SEARCH 1: exhaustive 13-subsets of {1..18} ===
+  C(18,13)=8568 sets; best float M=0.071429 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  configs with M<1/14: 0
+  EXACT best: M=1/14=0.071429
+
+=== SEARCH 2: single-speed perturbations of the tight locus 1..13 ===
+  best single-swap M=1/14=0.071429 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  single-swaps with M<1/14: 0
+
+=== VERDICT ===
+  total primitive 13-sets found with M<1/14: 0
+  minimum M ever observed: 1/14 (the tight config; NO counterexample found)
+  Covering obstruction: open bands reach uncovered-measure EXACTLY 0 for tight configs,
+  yet 3 boundary points (tau=1/14,3/14,5/14) survive as a measure-zero safe locus.
+  M<1/14 requires engulfing these boundary points -> topologically blocked by symmetric band edges.

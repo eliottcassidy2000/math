@@ -1,0 +1,18 @@
+1/14 = 0.07142857142857142
+========================================================================
+Sanity: the tight AP and known configs
+========================================================================
+  {1..13} tight AP: M = 1/14 = 0.071429  = 1/14   (lonely tau*=5/14)
+  {1..11,13,24} sporadic tight (L=0): M = 1/14 = 0.071429  = 1/14   (lonely tau*=5/14)
+  {1..11,13,36} inf-L=1/1260: M = 3/41 = 0.073171  > 1/14   (lonely tau*=17/41)
+  {1..13}\{6} u 98  (my restricted inf): M = 9/109 = 0.082569  > 1/14   (lonely tau*=19/109)
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: M = 1/14 = 0.071429  = 1/14   (lonely tau*=5/14)
+
+========================================================================
+The L=0 (tight) configs: is M=1/14 (equality, LRC holds) or <1/14 (counterexample)?
+========================================================================
+L=0 single-perturbation configs found (w<=200): 1
+  [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]: M = 1/14 = 0.071429  = 1/14   (lonely tau*=5/14)
+
+ANY counterexample (M<1/14) among tight configs: False
+(expected NONE: tight configs satisfy LRC with EQUALITY M=1/14; a counterexample would be historic)

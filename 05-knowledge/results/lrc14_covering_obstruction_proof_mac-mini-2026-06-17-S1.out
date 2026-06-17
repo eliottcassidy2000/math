@@ -1,0 +1,50 @@
+========================================================================
+LRC(14) COVERING OBSTRUCTION  -- mac-mini-2026-06-17-S1
+threshold 1/14 = 0.07142857142857142
+========================================================================
+
+(A) MEASURE FACTS for the tight AP S = {1..13}
+  each band measure = 1/7;  total = 13/7 = 1.8571428571428572  excess = 0.8571428571428571
+  EXACT union of open bands on [0,1): 1 = 1.0  (components: 1 )
+  => union has FULL measure 1: NO positive-measure gap. Pure-measure covering argument is insufficient.
+  SUM of 78 pairwise overlaps = 462821/210210 = 2.2017078159935304  (> 13/7, so Bonferroni II overcounts)
+  clean law meas(d_a cap d_b)=1/(7B) is a LOWER BOUND; STRICT for 26 of 78 pairs.
+
+(B) SURVIVOR CRITERION  &  GRID COVERING LEMMA  (verified exactly)
+  K = {1,3,5,9,11,13} (odd, coprime to 7).  Claim: for k in K, 14|v*k <=> 14|v.
+  identity 14|v*k <=> 14|v for all k in K, v<200: True
+  At tau=k/14: ||v*(k/14)|| >= 1/14  <=> (v*k mod 14) != 0  <=> 14 nmid v*k.
+  Verify on tight AP -- which k/14 survive (no v in {1..13} with 14|v*k):
+    k=1: survivor=True  killers=[]  ||·||@k/14: min=1/14
+    k=3: survivor=True  killers=[]  ||·||@k/14: min=1/14
+    k=5: survivor=True  killers=[]  ||·||@k/14: min=1/14
+    k=9: survivor=True  killers=[]  ||·||@k/14: min=1/14
+    k=11: survivor=True  killers=[]  ||·||@k/14: min=1/14
+    k=13: survivor=True  killers=[]  ||·||@k/14: min=1/14
+
+(C) PROVEN FAMILY:  S primitive, no multiple of 14  =>  M(S) >= 1/14
+    (every k/14, k in K, is a survivor). Broad exact verification:
+    (C1) 2380 primitive 13-subsets of [1..18] w/o mult-of-14: violations=0
+    (C2) 2936 random primitive 13-sets (range 1..89) w/o mult-of-14: violations=0
+    => no counterexample without a multiple of 14 (consistent with the proof).
+
+(D) STRONGER NECESSARY CONDITION (the full covering obstruction)
+    LEMMA: for q in {2,...,13} and gcd(j,q)=1, ||v*(j/q)|| < 1/14  <=>  q|v
+    (since q/14<1 forces min(r,q-r)=0). For q=14 same with j coprime to 14.
+    => to COVER the survivor grid {j/q}, S needs a multiple of q.
+    THEOREM (necessary): M(S)<1/14  =>  for EVERY q in {2,...,14}, S has a multiple of q.
+    grid-covering lemma verified exactly (q=2..14, all coprime j, v<8q): True
+    tight AP {1..13} is missing a multiple of q for q in: [14] (=> grid j/14 survives, M=1/14)
+
+(D') STRESS the ONLY possible counterexamples (S contains a multiple of 14); report min M EXACTLY.
+    (D') 10077 primitive 13-sets containing a multiple of 14 tested (4877 meet the FULL q=2..14 condition).
+        minimum EXACT M found = 1/13 = 0.07692307692307693  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14)
+        counterexamples (M<1/14) = 0
+
+========================================================================
+VERDICT
+  - The covering obstruction = LRC(14) itself (open bands cover circle <=> M<1/14).
+  - PURE MEASURE FAILS: tight-AP open bands already have full measure 1.
+  - The obstruction is POINTWISE/ARITHMETIC, carried by survivor points k/14.
+  - PROVEN infinite family: no multiple of 14 in S => M(S) >= 1/14.
+  - STRONGER: M(S)<1/14 requires a multiple of EVERY q in {2,...,14}.

@@ -1,0 +1,8 @@
+RESIDUAL HARD CORE 2b: C-prime(14), A covers all 6 units mod 14. How close is M to 1/14?
+  cover-all-units C-prime(14) configs screened: 40172+~300
+  MIN gap M over residual hard core (float) = 0.078652   (1/14=0.071429, ratio M/(1/14)=1.1011)
+  exact M at min = 7/89 = 0.078652  at S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+  M > 1/14 strictly? True   margin = 0.007223 = 10.1% above 1/14
+
+  => if inf over residual hard core is bounded ABOVE 1/14, C-prime(14) is UNIFORMLY loose
+     and LRC(14) is constructive(no-mult-14) + constructive(miss-unit) + margin(residual).

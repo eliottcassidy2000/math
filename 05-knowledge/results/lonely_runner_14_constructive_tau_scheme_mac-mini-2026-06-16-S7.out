@@ -1,0 +1,27 @@
+========================================================================
+LRC(14) CONSTRUCTIVE WITNESS tau* = a/(14 t)
+========================================================================
+
+[1] PRIMARY scheme on the tight locus (M = 1/14 configs):
+  consecutive AP {1..13}: M=1/14 at 5/14
+     witness tau* = 1/14, gap = 1/14 (>= 1/14: True); primary-covered (no mult of 14): True
+  sporadic {1..11,13,24}: M=1/14 at 5/14
+     witness tau* = 1/14, gap = 1/14 (>= 1/14: True); primary-covered (no mult of 14): True
+
+[2] Primary THEOREM check: ANY 13-set avoiding multiples of 14 is caught
+    by tau = a/14 for every unit a in {1,3,5,9,11,13}.
+    primary-eligible sample: 7596 verified, 0 failed (expect 0 failures)
+
+[3] UNIFIED scheme coverage on random primitive 13-sets:
+    maxspeed=60: covered 4000/4000  Dhist={14: 1414, 28: 966, 42: 1144, 56: 214, 70: 251, 84: 11}
+    maxspeed=150: covered 4000/4000  Dhist={14: 1586, 28: 914, 42: 845, 56: 413, 70: 203, 84: 28, 98: 10, 112: 1}
+
+[4] EXHAUSTIVE exact counterexample hunt: all 13-subsets of {1..N}.
+    N=14: minM=1/14 (~0.07143)  #tight=1 tight-with-mult14(not primary-covered)=0  #below(1/14)=0
+    N=15: minM=1/14 (~0.07143)  #tight=1 tight-with-mult14(not primary-covered)=0  #below(1/14)=0
+    N=16: minM=1/14 (~0.07143)  #tight=1 tight-with-mult14(not primary-covered)=0  #below(1/14)=0
+    N=17: minM=1/14 (~0.07143)  #tight=1 tight-with-mult14(not primary-covered)=0  #below(1/14)=0
+    N=18: minM=1/14 (~0.07143)  #tight=1 tight-with-mult14(not primary-covered)=0  #below(1/14)=0
+
+SUMMARY: scheme is SOUND (witness => M>=1/14). Empirically COMPLETE on all
+samples; tight locus covered by the primary tau=1/14; no counterexample found.

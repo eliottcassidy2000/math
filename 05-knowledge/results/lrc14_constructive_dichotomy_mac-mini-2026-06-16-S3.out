@@ -1,0 +1,15 @@
+[1] no-mult-14 lemma: tau=1/14 witness failures over 4000 random: 0 (0 => M>=1/14 proved)
+[2] C-prime(14) configs screened: 151359
+    min gap M (float) = 0.0765027322404368  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)   1/14= 0.07142857142857142
+    exact M at min config = 14/183 = 0.07650273224043716  tau*= 14/183  >=1/14: True
+    counterexamples (M<1/14): NONE
+[3] C-prime(14) lonely points tau*:
+    j=4 +14: M=2/19=0.10526 tau*=5/19
+    j=4 +56: M=2/19=0.10526 tau*=5/19
+    j=4 +98: M=2/19=0.10526 tau*=5/19
+    j=6 +14: M=2/23=0.08696 tau*=4/23
+    j=6 +56: M=2/23=0.08696 tau*=4/23
+    j=6 +98: M=9/109=0.08257 tau*=19/109
+    j=12 +14: M=1/12=0.08333 tau*=5/12
+    j=12 +56: M=1/12=0.08333 tau*=5/12
+    j=12 +98: M=1/12=0.08333 tau*=5/12

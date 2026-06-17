@@ -1,0 +1,71 @@
+========================================================================
+LRC(14) -- DESTROY THE LONELY POINT
+========================================================================
+
+[1] Baseline {1..13}: M = 1/14 = 0.071429, attained at tau = 5/14
+    Lonely points (tau with g(tau)=1/14) and protecting speeds:
+      tau = 1/14: achievers (||v tau||=1/14) = [1, 13]
+      tau = 3/14: achievers (||v tau||=1/14) = [5, 9]
+      tau = 5/14: achievers (||v tau||=1/14) = [3, 11]
+    Number of lonely points: 3 -> [Fraction(1, 14), Fraction(3, 14), Fraction(5, 14)]
+
+[2] SINGLE-WITNESS PROTECTION THEOREM (exact residue arithmetic)
+    For r in {0..13}: ||r/14|| and comparison to 1/14:
+      residues with ||r/14|| < 1/14: [0]
+      residues with ||r/14|| = 1/14: [1, 13]
+    => g(1/14)=min_v||v/14|| < 1/14  iff  some v ≡ 0 (mod 14).
+    Multiplying tau=1/14 by a UNIT j mod 14 permutes residues, so the same
+    holds for every tau=j/14 (j in (Z/14)* = {1,3,5,9,11,13}).
+      units mod 14: [1, 3, 5, 9, 11, 13]
+    THEOREM: If a 13-set S has NO multiple of 14, then M(S) >= g(1/14) >= 1/14.
+    COROLLARY: every counterexample (M<1/14) MUST contain a multiple of 14.
+
+[3] Insert a multiple of 14 to destroy all k/14 lonely points at once:
+    (this kills g(k/14) for k coprime to 14 simultaneously, but M rises)
+      add 14, remove 1: M=1/8=0.12500 at 1/16
+      add 14, remove 7: M=1/11=0.09091 at 3/22
+      add 14, remove 12: M=1/12=0.08333 at 5/12
+      add 14, remove 13: M=1/13=0.07692 at 4/13
+      add 28, remove 1: M=2/15=0.13333 at 1/15
+      add 28, remove 7: M=1/9=0.11111 at 5/36
+      add 28, remove 12: M=1/12=0.08333 at 5/12
+      add 28, remove 13: M=1/13=0.07692 at 4/13
+      add 42, remove 1: M=2/15=0.13333 at 1/15
+      add 42, remove 7: M=3/25=0.12000 at 7/50
+      add 42, remove 12: M=1/12=0.08333 at 5/12
+      add 42, remove 13: M=1/13=0.07692 at 3/13
+    In all cases M >= 1/14: destroying the k/14 points opens a NEW lonely
+    point elsewhere. The lonely locus cannot be globally emptied this way.
+
+[4a] Exhaustive 13-subsets of {1..18} (exact, float-screened):
+     scanned 8568 subsets
+     min M among near-threshold candidates = 1/14 = 0.071429 at ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13), Fraction(5, 14))
+     # with M = 1/14 (tight): 1 -> [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)]
+     # with M < 1/14 (COUNTEREXAMPLES): 0 -> NONE
+
+[4b] Single-speed perturbations of {1..13}, new speed up to 200 (exact):
+     best single-swap M = 1/14 = 0.071429 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+     # single-swaps with M < 1/14: 0 -> NONE
+
+========================================================================
+VERDICT
+========================================================================
+  Counterexamples found (M < 1/14): 0
+  Minimum M observed: 1/14 (the tight configs; NO counterexample).
+  The lonely point CANNOT be fully destroyed: tau=1/14 is 7-adically
+  protected unless a multiple of 14 is present, and inserting one merely
+  relocates the lonely point (M stays >= 1/14). LRC(14) survives this attack.
+
+========================================================================
+APPENDIX: WITNESS-COVER REDUCTION (PROVE-side spin-off, /tmp/lrc_witness_fast.py)
+========================================================================
+Greedy rational-witness cover over 2000 random primitive 13-sets:
+  witnesses (tau, #covered): 1/14:851, 1/11:351, 1/10:253, 1/13:182,
+    1/12:121, 7/27:82, 7/25:57, 6/25:33, 10/27:24, 7/26:17, 3/22:9, 11/25:8
+  remaining uncovered after 12 witnesses: 12/2000
+  sample sets with a multiple of 14: 1149/2000
+  sets certified by tau=1/14 ALONE: 851/2000  (= 2000-1149 EXACT MATCH)
+=> tau=1/14 certifies EXACTLY the no-multiple-of-14 sets (protection theorem).
+=> A small finite witness family certifies M>=1/14 for the overwhelming
+   majority; LRC(14) plausibly reduces to a finite witness-cover statement
+   (constructive PROVE route, complementary to quantization+compactness).
