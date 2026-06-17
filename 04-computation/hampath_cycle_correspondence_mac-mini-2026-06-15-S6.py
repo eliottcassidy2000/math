@@ -48,6 +48,8 @@ All graphs up to n<=7 are generated up to isomorphism via a canonical-form filte
 
 import itertools
 import sys
+import subprocess
+import shutil
 from functools import lru_cache
 
 # ----------------------------------------------------------------------
@@ -79,9 +81,62 @@ def canonical_form(n, edge_set):
             best = key
     return best
 
+def graph6_to_edges(n, g6):
+    """Decode a graph6 string (single graph) into a frozenset of edges (i<j).
+    Standard McKay graph6 format. Assumes n < 63 (single-byte order)."""
+    # graph6: first byte(s) encode N, then bit vector of upper triangle.
+    data = g6.strip()
+    # Determine number of vertices
+    idx = 0
+    first = ord(data[0]) - 63
+    if first < 63:
+        N = first
+        idx = 1
+    else:
+        # multi-byte N (n>=63) — not needed here but handle minimally
+        if data[1] != chr(126):
+            N = ((ord(data[1]) - 63) << 12) + ((ord(data[2]) - 63) << 6) + (ord(data[3]) - 63)
+            idx = 4
+        else:
+            raise ValueError("huge graph6 not supported")
+    assert N == n, f"graph6 N={N} != n={n}"
+    # bit vector
+    bits = []
+    for c in data[idx:]:
+        v = ord(c) - 63
+        for b in range(5, -1, -1):
+            bits.append((v >> b) & 1)
+    # upper triangle column-major order: for j in 1..N-1, for i in 0..j-1
+    edges = set()
+    pos = 0
+    for j in range(1, N):
+        for i in range(j):
+            if pos < len(bits) and bits[pos] == 1:
+                edges.add((i, j))
+            pos += 1
+    return frozenset(edges)
+
 def all_noniso_graphs(n):
-    """Generate all non-isomorphic simple graphs on n labelled vertices {0..n-1}.
+    """Generate all non-isomorphic simple graphs on n vertices {0..n-1}.
+    Uses nauty's `geng` if available (fast); else brute canonical-form filter.
     Returns list of frozenset(edge) representatives (one per iso class)."""
+    geng = shutil.which("geng") or shutil.which("nauty-geng")
+    if geng is not None:
+        try:
+            out = subprocess.run([geng, "-q", str(n)], capture_output=True,
+                                 text=True, timeout=600)
+            reps = []
+            for line in out.stdout.splitlines():
+                line = line.strip()
+                if not line:
+                    continue
+                reps.append(graph6_to_edges(n, line))
+            if reps:
+                return reps
+            # geng emits nothing for n=0; fall through for n<=0
+        except Exception as e:
+            print(f"[geng failed: {e}; falling back to brute force]", file=sys.stderr)
+    # brute fallback (slow for n>=7)
     all_pairs = [(i, j) for i in range(n) for j in range(i + 1, n)]
     seen = {}
     reps = []

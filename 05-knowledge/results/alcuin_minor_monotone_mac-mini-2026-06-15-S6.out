@@ -1,0 +1,94 @@
+==============================================================================
+Alcuin number minor-monotonicity study  (mac-mini-2026-06-15-S6)
+tau(G)=n-alpha (vertex cover);  Alcuin(G)=min boat capacity via state-BFS
+==============================================================================
+
+--- n=1: 1 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 0
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=2: 2 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 0
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=3: 4 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 0
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=4: 11 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 0
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=5: 34 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 0
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=6: 156 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 8
+    Alcuin violations (deletion-only / subgraph): 0
+
+--- n=7: 1044 non-isomorphic graphs ---
+    tau violations (minor): 0
+    Alcuin violations (any single-step minor): 22
+    Alcuin violations (deletion-only / subgraph): 0
+
+==============================================================================
+SUMMARY
+==============================================================================
+Total graphs tested (n=1..7): 1252
+Single-step minor checks by op: {'delete_edge': 12342, 'delete_vertex': 8475, 'contract_edge': 12342}
+
+(1) tau minor-monotone?  -> CONFIRMED (no violations)
+
+(2) Alcuin minor-monotone (any single-step minor)?  -> NOT MONOTONE: 30 violations
+
+(4) Alcuin SUBGRAPH-monotone (deletion-only: delete_edge + delete_vertex)?  -> MONOTONE (no deletion violations)
+
+(3) Violations by operation (which op breaks Alcuin monotonicity):
+    delete_edge: 0 violations
+    delete_vertex: 0 violations
+    contract_edge: 30 violations
+
+SMALLEST Alcuin minor-monotonicity counterexample(s):
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 2), (0, 4), (1, 2), (1, 4), (2, 3), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 1), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 1), (0, 4), (1, 2), (1, 3), (1, 4), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 1), (0, 2), (0, 3), (0, 4), (1, 4), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 2), (0, 4), (1, 2), (1, 4), (2, 3), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin(H)=3 > Alcuin(G)=2  (tau ok: 2<=2)
+
+SMALLEST CONTRACTION counterexample:
+    G: n=6, edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5)], tau=2, Alcuin=2
+    --[contract_edge]--> H: n=5, edges=[(0, 2), (0, 4), (1, 2), (1, 4), (2, 3), (2, 4), (3, 4)], tau=2, Alcuin=3
+      => Alcuin jumps 2 -> 3
+
+Alcuin - tau distribution over all graphs (should be {0,1}):
+    Alcuin-tau = 0:  1215 graphs
+    Alcuin-tau = 1:  37 graphs
+
+==============================================================================
+DONE

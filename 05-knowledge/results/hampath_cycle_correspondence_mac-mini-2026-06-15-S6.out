@@ -1,0 +1,336 @@
+==============================================================================
+Hamiltonian path/cycle <-> tournament T_G correspondence
+Map T_G: for i<j, i->j iff {i,j} edge of G, else j->i
+==============================================================================
+
+##############################################################################
+n = 1
+##############################################################################
+non-isomorphic graphs on 1 vertices: 1
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 1   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 0   HC=0,strong=1: 1
+    HC=1,strong=0: 0   HC=1,strong=1: 0
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 0   HC=0,exS=1: 1
+    HC=1,exS=0: 0   HC=1,exS=1: 0
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 1   HC=0,sw=1: 0
+    HC=1,sw=0: 0   HC=1,sw=1: 0
+  HC => exists-order-strong (no counterexample): True
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): True
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (1, 0, 1, 1, 'tau+1') : 1
+  Alcuin == tau:   0
+  Alcuin == tau+1: 1
+  Alcuin other:    0
+
+##############################################################################
+n = 2
+##############################################################################
+non-isomorphic graphs on 2 vertices: 2
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 2   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 2   HC=0,strong=1: 0
+    HC=1,strong=0: 0   HC=1,strong=1: 0
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 2   HC=0,exS=1: 0
+    HC=1,exS=0: 0   HC=1,exS=1: 0
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 2   HC=0,sw=1: 0
+    HC=1,sw=0: 0   HC=1,sw=1: 0
+  HC => exists-order-strong (no counterexample): True
+  exists-order-strong => HC (no counterexample): True
+  HC <=> exists-order spine+wrap (no counterexample): True
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (1, 0, 0, 0, 'tau') : 1
+  Alcuin == tau:   1
+  Alcuin == tau+1: 1
+  Alcuin other:    0
+
+##############################################################################
+n = 3
+##############################################################################
+non-isomorphic graphs on 3 vertices: 4
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 4   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 2   HC=0,strong=1: 1
+    HC=1,strong=0: 1   HC=1,strong=1: 0
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 1   HC=0,exS=1: 2
+    HC=1,exS=0: 1   HC=1,exS=1: 0
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 2   HC=0,sw=1: 1
+    HC=1,sw=0: 1   HC=1,sw=1: 0
+  HC => exists-order-strong (no counterexample): False
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): False
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (0, 0, 1, 1, 'tau') : 1
+    (1, 0, 0, 1, 'tau') : 1
+    (1, 1, 0, 0, 'tau') : 1
+  Alcuin == tau:   3
+  Alcuin == tau+1: 1
+  Alcuin other:    0
+
+##############################################################################
+n = 4
+##############################################################################
+non-isomorphic graphs on 4 vertices: 11
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 11   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 3   HC=0,strong=1: 5
+    HC=1,strong=0: 3   HC=1,strong=1: 0
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 1   HC=0,exS=1: 7
+    HC=1,exS=0: 1   HC=1,exS=1: 2
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 6   HC=0,sw=1: 2
+    HC=1,sw=0: 2   HC=1,sw=1: 1
+  HC => exists-order-strong (no counterexample): False
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): False
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (0, 0, 0, 1, 'tau+1') : 1
+    (0, 0, 1, 1, 'tau') : 4
+    (1, 0, 0, 1, 'tau') : 1
+    (1, 0, 1, 1, 'tau') : 1
+    (1, 1, 0, 0, 'tau') : 1
+    (1, 1, 0, 1, 'tau') : 2
+  Alcuin == tau:   9
+  Alcuin == tau+1: 2
+  Alcuin other:    0
+
+##############################################################################
+n = 5
+##############################################################################
+non-isomorphic graphs on 5 vertices: 34
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 34   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 8   HC=0,strong=1: 18
+    HC=1,strong=0: 6   HC=1,strong=1: 2
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 1   HC=0,exS=1: 25
+    HC=1,exS=0: 1   HC=1,exS=1: 7
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 16   HC=0,sw=1: 10
+    HC=1,sw=0: 2   HC=1,sw=1: 6
+  HC => exists-order-strong (no counterexample): False
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): False
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (0, 0, 0, 1, 'tau') : 1
+    (0, 0, 0, 1, 'tau+1') : 1
+    (0, 0, 1, 1, 'tau') : 12
+    (0, 0, 1, 1, 'tau+1') : 1
+    (1, 0, 0, 1, 'tau') : 4
+    (1, 0, 0, 1, 'tau+1') : 1
+    (1, 0, 1, 1, 'tau') : 5
+    (1, 1, 0, 0, 'tau') : 1
+    (1, 1, 0, 1, 'tau') : 5
+    (1, 1, 1, 1, 'tau') : 2
+  Alcuin == tau:   30
+  Alcuin == tau+1: 4
+  Alcuin other:    0
+
+##############################################################################
+n = 6
+##############################################################################
+non-isomorphic graphs on 6 vertices: 156
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 156   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 19   HC=0,strong=1: 89
+    HC=1,strong=0: 24   HC=1,strong=1: 24
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 1   HC=0,exS=1: 107
+    HC=1,exS=0: 1   HC=1,exS=1: 47
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 65   HC=0,sw=1: 43
+    HC=1,sw=0: 3   HC=1,sw=1: 45
+  HC => exists-order-strong (no counterexample): False
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): False
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (0, 0, 0, 1, 'tau') : 5
+    (0, 0, 0, 1, 'tau+1') : 3
+    (0, 0, 1, 1, 'tau') : 53
+    (0, 0, 1, 1, 'tau+1') : 3
+    (1, 0, 0, 1, 'tau') : 10
+    (1, 0, 1, 1, 'tau') : 33
+    (1, 1, 0, 0, 'tau') : 1
+    (1, 1, 0, 1, 'tau') : 22
+    (1, 1, 0, 1, 'tau+1') : 1
+    (1, 1, 1, 1, 'tau') : 24
+  Alcuin == tau:   148
+  Alcuin == tau+1: 8
+  Alcuin other:    0
+
+##############################################################################
+n = 7
+##############################################################################
+non-isomorphic graphs on 7 vertices: 1044
+
+--- TASK 1: G has Ham PATH  <=>  exists order, spine all-forward ---
+  match: 1044   mismatch: 0
+  NO counterexample: equivalence holds (tautology confirmed).
+
+--- TASK 2: G has Ham CYCLE  <=>  ? ---
+  Contingency [G-HamCycle x T_G-strong(natural order)]:
+    HC=0,strong=0: 73   HC=0,strong=1: 588
+    HC=1,strong=0: 110   HC=1,strong=1: 273
+  Contingency [G-HamCycle x exists-order T_G strong]:
+    HC=0,exS=0: 1   HC=0,exS=1: 660
+    HC=1,exS=0: 1   HC=1,exS=1: 382
+  Contingency [G-HamCycle x exists-order spine+wrap]:
+    HC=0,sw=0: 310   HC=0,sw=1: 351
+    HC=1,sw=0: 2   HC=1,sw=1: 381
+  HC => exists-order-strong (no counterexample): False
+  exists-order-strong => HC (no counterexample): False
+  HC <=> exists-order spine+wrap (no counterexample): False
+
+--- TASK 3: full 5-way contingency ---
+  key = (HamPath, HamCycle, strongNat, existsStrong, Alcuin-vs-tau)
+    (0, 0, 0, 0, 'tau+1') : 1
+    (0, 0, 0, 1, 'tau') : 18
+    (0, 0, 0, 1, 'tau+1') : 5
+    (0, 0, 1, 1, 'tau') : 276
+    (0, 0, 1, 1, 'tau+1') : 10
+    (1, 0, 0, 1, 'tau') : 46
+    (1, 0, 0, 1, 'tau+1') : 3
+    (1, 0, 1, 1, 'tau') : 302
+    (1, 1, 0, 0, 'tau') : 1
+    (1, 1, 0, 1, 'tau') : 108
+    (1, 1, 0, 1, 'tau+1') : 1
+    (1, 1, 1, 1, 'tau') : 273
+  Alcuin == tau:   1024
+  Alcuin == tau+1: 20
+  Alcuin other:    0
+
+==============================================================================
+GRAND SUMMARY across n=1..7
+==============================================================================
+
+TASK 1 (tautology: HamPath <=> exists-spine-forward):
+  n=1: match=1, mismatch=0
+  n=2: match=2, mismatch=0
+  n=3: match=4, mismatch=0
+  n=4: match=11, mismatch=0
+  n=5: match=34, mismatch=0
+  n=6: match=156, mismatch=0
+  n=7: match=1044, mismatch=0
+  >>> Equivalence holds with NO counterexample up to n=7: True
+
+TASK 2 (HamCycle vs tournament strength):
+  n=1: HC=>exStrong=True, exStrong=>HC=False, HC<=>spine+wrap=True
+  n=2: HC=>exStrong=True, exStrong=>HC=True, HC<=>spine+wrap=True
+  n=3: HC=>exStrong=False, exStrong=>HC=False, HC<=>spine+wrap=False
+  n=4: HC=>exStrong=False, exStrong=>HC=False, HC<=>spine+wrap=False
+  n=5: HC=>exStrong=False, exStrong=>HC=False, HC<=>spine+wrap=False
+  n=6: HC=>exStrong=False, exStrong=>HC=False, HC<=>spine+wrap=False
+  n=7: HC=>exStrong=False, exStrong=>HC=False, HC<=>spine+wrap=False
+  >>> HC => exists-order-strong (all n): False
+  >>> exists-order-strong => HC (all n): False
+  >>> HC <=> exists-order spine+wrap (all n): False
+
+TASK 3 (Alcuin vs tau):
+  n=1: Alcuin==tau:0  Alcuin==tau+1:1  other:0
+  n=2: Alcuin==tau:1  Alcuin==tau+1:1  other:0
+  n=3: Alcuin==tau:3  Alcuin==tau+1:1  other:0
+  n=4: Alcuin==tau:9  Alcuin==tau+1:2  other:0
+  n=5: Alcuin==tau:30  Alcuin==tau+1:4  other:0
+  n=6: Alcuin==tau:148  Alcuin==tau+1:8  other:0
+  n=7: Alcuin==tau:1024  Alcuin==tau+1:20  other:0
+
+==============================================================================
+DEEP-DIVE FINDINGS (diagnostic scripts diag1/diag2/diag3)
+==============================================================================
+
+KEY STRUCTURAL FACT: In T_G, every EDGE of G is oriented forward in vertex
+order (i<j edge => i->j). So the sub-digraph on G's edges is ALWAYS acyclic
+(transitive). Strength of T_G can only come from NON-edges (which give the
+backward arcs j->i for i<j).
+
+CLEAN CHARACTERIZATION OF "exists-order T_G strong" (n=2..7, NO exception):
+  exists-order T_G strongly connected  <=>  G is NEITHER empty NOR complete.
+  The ONLY two graphs with exists-strong=FALSE at every n are:
+     - EMPTY graph  (no edges -> T_G has no forward arcs of G; transitive)
+     - COMPLETE K_n (all edges forward -> T_G = transitive tournament)
+  For ALL other graphs, some relabelling makes T_G strong.
+  => This is why "exists-order-strong <=> HamCycle" FAILS: K_n is Hamiltonian
+     but exists-strong=FALSE (T_{K_n} is always the transitive tournament);
+     and many non-Hamiltonian graphs (e.g. with a cut vertex) are non-empty,
+     non-complete, hence exists-strong=TRUE. Counts of exStrong=1 & HC=0:
+        n=4:7, n=5:25, n=6:107, n=7:660.
+
+CLEAN CHARACTERIZATION OF "exists-order spine+wrap":
+  spine+wrap=TRUE  =>  G has a directed Ham cycle in some T_G order = G has a
+  Ham cycle WHERE the cycle vertices are consecutive-forward and the wrap is the
+  single back-edge. This is STRICTLY STRONGER than "G Hamiltonian":
+  HC-but-no-spine+wrap (false negatives): K_n at every n (T_{K_n} transitive,
+  wrap (n-1)->0 never forward) PLUS a few self-complementary-type graphs
+  (C_5 at n=5, the 6e/9e graphs at n=6, the 7e graph C_7 at n=7).
+  False-positive count (spine+wrap but no HC) grows: 1,2,10,43,351 for n=3..7.
+  => spine+wrap is NOT equivalent to HamCycle in either direction.
+
+ALCUIN NUMBER vs VERTEX-COVER tau (Csorba-Hurkens-Woeginger bound tau<=Alcuin<=tau+1):
+  Confirmed: Alcuin in {tau, tau+1} for ALL graphs, NO "other" at any n.
+  Alcuin==tau+1 counts: n=1:1, n=2:1, n=3:1, n=4:2, n=5:4, n=6:8, n=7:20.
+  Alcuin==tau   counts: n=1:0, n=2:1, n=3:3, n=4:9, n=5:30, n=6:148, n=7:1024.
+
+IMPLICATIONS THAT HOLD WITH NO COUNTEREXAMPLE UP TO n=7:
+  [TASK1] G has Ham PATH  <=>  exists order with T_G spine all-forward.  (1044/1044)
+  [bound] tau <= Alcuin <= tau+1.                                        (all graphs)
+  [char ] exists-order-T_G-strong  <=>  G neither empty nor complete.    (all graphs)
+IMPLICATIONS THAT FAIL (with counterexamples):
+  [TASK2a] HamCycle <=> exists-order spine+wrap   (FAILS both directions)
+  [TASK2b] HamCycle <=> T_G strong (natural)       (FAILS both directions)
+  [TASK2c] HamCycle <=> exists-order T_G strong    (FAILS both directions;
+           canonical counterexample = K_n: Hamiltonian but never strong)

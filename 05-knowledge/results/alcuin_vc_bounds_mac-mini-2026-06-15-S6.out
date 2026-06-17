@@ -145,3 +145,40 @@ Among unique-max-IS graphs:
      FN n=6 tau=2 alpha=4 alc=3 edges_in_C=1 edges=[(0, 4), (0, 5), (1, 4), (1, 5), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]
      FN n=6 tau=3 alpha=3 alc=4 edges_in_C=3 edges=[(0, 1), (0, 2), (0, 3), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5)]
      FN n=7 tau=2 alpha=5 alc=3 edges_in_C=1 edges=[(0, 2), (0, 5), (1, 2), (1, 5), (2, 4), (2, 5), (4, 5)]
+Candidate: Alcuin=tau+1  <=>  G has NO two disjoint maximum independent sets
+  TP=37 FP=890 FN=0 TN=325 EXACT=False
+   FP n=3 tau=1 alpha=2 alc=1 edges=[(1, 2)]
+   FP n=3 tau=1 alpha=2 alc=1 edges=[(0, 1), (0, 2)]
+   FP n=4 tau=1 alpha=3 alc=1 edges=[(2, 3)]
+   FP n=4 tau=1 alpha=3 alc=1 edges=[(1, 3), (2, 3)]
+   FP n=4 tau=2 alpha=2 alc=2 edges=[(1, 2), (1, 3), (2, 3)]
+   FP n=4 tau=2 alpha=2 alc=2 edges=[(0, 3), (1, 2), (1, 3), (2, 3)]
+
+Candidate (Hall on unique max IS): Alcuin=tau+1 <=> unique max IS AND cover NOT saturable into I
+  TP=1 FP=106 FN=36 TN=1109 EXACT=False
+   FP n=5 tau=3 alpha=2 alc=3 edges=[(0, 1), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+   FP n=6 tau=3 alpha=3 alc=3 edges=[(0, 1), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+   FP n=6 tau=4 alpha=2 alc=4 edges=[(0, 1), (0, 2), (0, 4), (0, 5), (1, 2), (1, 3), (1, 4), (1, 5), (2, 3), (2, 4), (2, 5), (3, 4), (3, 5), (4, 5)]
+   FP n=7 tau=3 alpha=4 alc=3 edges=[(0, 1), (0, 3), (0, 4), (1, 2), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+   FP n=7 tau=4 alpha=3 alc=4 edges=[(0, 1), (0, 5), (1, 5), (1, 6), (2, 3), (2, 4), (2, 6), (3, 4), (4, 6), (5, 6)]
+   FP n=7 tau=4 alpha=3 alc=4 edges=[(0, 1), (0, 5), (0, 6), (1, 2), (1, 6), (2, 3), (2, 4), (3, 4), (4, 5), (5, 6)]
+   FN n=1 tau=0 alpha=1 alc=1 edges=[]
+   FN n=2 tau=0 alpha=2 alc=1 edges=[]
+   FN n=3 tau=0 alpha=3 alc=1 edges=[]
+   FN n=4 tau=0 alpha=4 alc=1 edges=[]
+   FN n=4 tau=1 alpha=3 alc=2 edges=[(0, 3), (1, 3), (2, 3)]
+   FN n=5 tau=0 alpha=5 alc=1 edges=[]
+ALL 37 Alcuin=tau+1 graphs (n,tau,alpha,#edges):
+  edgeless (empty graph K_n^c, tau=0, Alcuin=1): 7  -> n = [1, 2, 3, 4, 5, 6, 7]
+  graphs WITH edges: 30
+
+  Smallest NONTRIVIAL (with edges) Alcuin=tau+1 examples:
+    n=4 tau=1 alpha=3 edges=[(0, 3), (1, 3), (2, 3)]
+    n=5 tau=1 alpha=4 edges=[(1, 3), (2, 3), (3, 4)]
+    n=5 tau=1 alpha=4 edges=[(0, 4), (1, 4), (2, 4), (3, 4)]
+    n=5 tau=2 alpha=3 edges=[(0, 3), (0, 4), (1, 3), (1, 4), (2, 3), (2, 4), (3, 4)]
+    n=6 tau=1 alpha=5 edges=[(0, 3), (0, 4), (0, 5)]
+    n=6 tau=1 alpha=5 edges=[(0, 5), (1, 5), (2, 5), (3, 5)]
+
+  The SMALLEST nontrivial +1 graph overall: star K_1,3 (n=4): edges=[(0, 3), (1, 3), (2, 3)]
+   -> claw / star: one center adjacent to all leaves; unique max IS = leaves.

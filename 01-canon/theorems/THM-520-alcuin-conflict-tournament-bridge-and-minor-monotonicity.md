@@ -1,7 +1,7 @@
 ---
 id: THM-520
 title: The conflict-graph↔tournament bridge (forward arc = edge) — independent set ↔ reverse-transitive run, 3-cycle ↔ ordered induced P₃, the Rédei odd-parity shadow — and the minor-theory dichotomy: τ is minor-monotone (finite Robertson-Seymour obstruction set) but the Alcuin number is SUBGRAPH-monotone yet NOT minor-monotone, failing ONLY under edge contraction (smallest witness: contract an edge of K₂,₄, Alcuin 2→3)
-status: PROVED/VERIFIED computationally (all non-isomorphic graphs n≤6, exhaustive: 0 failures on the bridge identities; 0 bound violations; minor-monotonicity verdicts exact). The τ minor-monotonicity is proved analytically (all three minor cases). Two creative conjectures (Alcuin+1 ↔ T_G non-strong; G-Ham-cycle ↔ ∃-order-T_G-strong) are REFUTED by exhaustive search — honest negatives. COMPLEMENTARY to kind-pasteur's THM-519 (same human dispatch, concurrent collision — both used THM-519/HYP-2550-2552/OPEN-Q-106/T828; this work renumbered to THM-520/HYP-2553-2555/OPEN-Q-107/T829): theirs specializes Alcuin to the OCF conflict graph Ω (Alcuin(Ω)=τ+1 ⟺ Ω edgeless ⟺ H=3^{α₁}; Kuratowski K₅=5 overlapping odd cycles), citing CHW Lemma 4.3 (two distinct max independent sets ⟹ small-boat) + Thm 3.1; THIS one is the GENERAL graph→tournament bridge + the minor-monotonicity dichotomy.
+status: PROVED/VERIFIED computationally (all non-isomorphic graphs n≤6 by hand-script, EXTENDED to n≤7 (1252 graphs) by an independent 11-agent workflow: 0 failures on the bridge identities; 0 bound violations; minor-monotonicity = 30 contraction-only violations n≤7, 0 deletion). The τ minor-monotonicity is proved analytically (all three minor cases). Two creative conjectures (Alcuin+1 ↔ T_G non-strong; G-Ham-cycle ↔ ∃-order-T_G-strong) are REFUTED — but the clean replacement ∃-order-T_G-strong ⟺ G neither empty nor complete is CONFIRMED n≤7 (part E). COMPLEMENTARY to kind-pasteur's THM-519 (same human dispatch, concurrent collision — both used THM-519/HYP-2550-2552/OPEN-Q-106/T828; this work renumbered to THM-520/HYP-2553-2555/OPEN-Q-107/T829): theirs specializes Alcuin to the OCF conflict graph Ω (Alcuin(Ω)=τ+1 ⟺ Ω edgeless ⟺ H=3^{α₁}; Kuratowski K₅=5 overlapping odd cycles), citing CHW Lemma 4.3 (two distinct max independent sets ⟹ small-boat) + Thm 3.1; THIS one is the GENERAL graph→tournament bridge + the minor-monotonicity dichotomy.
 source: mac-mini-2026-06-15-S6
 depends_on:
   - THM-519   # kind-pasteur's complementary Alcuin-of-Ω result (cites CHW Lemma 4.3 / Thm 3.1)
@@ -12,7 +12,7 @@ related:
   - HYP-2554
   - HYP-2555
 references:
-  - "P. Csorba, C.A.J. Hurkens, G.J. Woeginger, The Alcuin Number of a Graph and Its Connections to the Vertex Cover Number, SIAM J. Discrete Math. 24(3) (2012); JSTOR 41642576."
+  - "P. Csorba, C.A.J. Hurkens, G.J. Woeginger, The Alcuin Number of a Graph and Its Connections to the Vertex Cover Number, SIAM J. Discrete Math. 24(3) (2010) 757–769; JSTOR 41642576. (ESA 2008 conf. version; lineage Prisner/Bahls/Lampis–Mitsou 'Ferry Cover'.)"
   - "N. Robertson, P.D. Seymour, Graph Minors XX (Wagner's conjecture), JCTB 2004 — every minor-closed family has a finite forbidden-minor set."
   - "Kuratowski/Wagner: planar ⟺ no K₅, K₃,₃ minor."
   - "Moon 1966 / Camion: a tournament is strong ⟺ it has a Hamiltonian cycle (⟹ vertex-pancyclic)."
@@ -123,6 +123,29 @@ These negatives are informative: the `T_G` correspondence faithfully encodes `G`
 clique/independent/induced-P₃ structure (part A, all exact), but the Alcuin `+1` and graph
 Hamiltonicity are NOT shadows of tournament strong-connectivity — they live on the
 scheduling/cover-internal-edge axis (part C), not the cycle-structure axis.
+
+## E. n≤7 corroboration + the clean strong-order characterization (independent workflow)
+
+An independent multi-agent workflow (research + compute + adversarial-verify, 11 agents)
+**confirmed every headline claim and extended to all 1252 non-iso graphs `n≤7`**:
+- `τ ≤ Alcuin ≤ τ+1`: 0 violations, `n≤7`.
+- **Alcuin not minor-monotone, contraction-only:** exactly **30 violations, ALL from
+  contraction** (edge-deletion 0, vertex-deletion 0), smallest `= K₄,₂/e` (the same K₂,₄
+  edge-contraction witness, found independently). So **Alcuin is subgraph-monotone (`n≤7`,
+  0 deletion-violations) but not minor-monotone** — part C confirmed.
+- Rédei parity (`#HamPaths(T_G)` odd) and `#3-cycles = #ordered-induced-P₃ (apex at middle
+  label)`: 0 failures `n≤7`. (The identity is genuinely label/order-dependent — the order-
+  independent version fails, as expected.)
+- `Alcuin=τ+1 ⟹ G has a UNIQUE maximum independent set`: confirmed necessary (FN=0, TP=37
+  over `n≤7`) — exactly CHW Lemma 4.3's contrapositive.
+- **NEW clean POSITIVE result** (sharpening the refuted conjecture D): **`∃` an ordering
+  making `T_G` strongly connected ⟺ `G` is neither empty nor complete** (no exceptions,
+  `n=2..7`). So order-existential strong-connectivity of `T_G` detects exactly the trivial
+  extremes of `G` — NOT Hamiltonicity (D) and NOT the Alcuin `+1`. (Caution, flagged by the
+  verify pass: `T_G` strong under the NATURAL order does NOT imply `G` and `Ḡ` connected —
+  that intermediate claim is false; only the order-existential characterization is clean.)
+- **NEW (trees):** the large-boat trees are EXACTLY the stars `K₁,ₖ` with `k≥3` (CHW tree
+  classification) — consistent with part B.
 
 ## Honesty
 

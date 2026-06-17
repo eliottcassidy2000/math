@@ -1,0 +1,111 @@
+
+======================================================================
+T0  m = C(n-1,2) = T_{n-2}; when is the tile-count Fibonacci?
+======================================================================
+ n  m=C(n-1,2)=T_{n-2}  Fibonacci?
+ 3       1             YES <--
+ 4       3             YES <--
+ 5       6             
+ 6      10             
+ 7      15             
+ 8      21             YES <--
+ 9      28             
+10      36             
+11      45             
+12      55             YES <--
+13      66             
+14      78             
+15      91             
+tile-count m is BOTH triangular AND Fibonacci at n = [3, 4, 8, 12] (m = [1, 3, 21, 55] )
+
+======================================================================
+T1  Heronian m=1: Area = Perimeter  <=>  inradius 2; exactly 5
+======================================================================
+m=1 (Area=Perimeter):
+  ( 5,12,13)  area=30  perim=30  inradius r=A/s=2
+  ( 6, 8,10)  area=24  perim=24  inradius r=A/s=2
+  ( 6,25,29)  area=60  perim=60  inradius r=A/s=2
+  ( 7,15,20)  area=42  perim=42  inradius r=A/s=2
+  ( 9,10,17)  area=36  perim=36  inradius r=A/s=2
+count = 5 (expected 5)
+all inradius==2 : True
+counts of integer triangles with r=2M (M=1..5): {1: 5, 2: 18, 3: 41, 4: 32, 5: 31}
+
+======================================================================
+T2  octal odd squares:  (2k+1)^2 = 8*T_k + 1
+======================================================================
+(2k+1)^2 == 8*T_k+1 for k=0..2000: True
+ k   (2k+1)^2  octal     T_k  octal(T_k)  octal(sq)==octal(T_k)+'1'
+ 0        1        1      0       0      True
+ 1        9       11      1       1      True
+ 2       25       31      3       3      True
+ 3       49       61      6       6      True
+ 4       81      121     10      12      True
+ 5      121      171     15      17      True
+ 6      169      251     21      25      True
+ 7      225      341     28      34      True
+ 8      289      441     36      44      True
+ 9      361      551     45      55      True
+10      441      671     55      67      True
+11      529     1021     66     102      True
+=> every odd square is 1 mod 8; strip the octal '1' -> triangular number.
+
+======================================================================
+T3  Fibonacci INTERSECT triangular = {1,3,21,55};  (2n-1)(4n-1)=T_{4n-2}
+======================================================================
+Fibonacci numbers that are triangular (searched F up to ~10^4000): [1, 3, 21, 55]
+ n  (2n-1)(4n-1)  == T_{4n-2}?  Fibonacci?
+ 0       1        True          FIB
+ 1       3        True          FIB
+ 2      21        True          FIB
+ 3      55        True          FIB
+ 4     105        True          
+ 5     171        True          
+ 6     253        True          
+
+======================================================================
+T4  2x6 grid, k marbles up to Klein-four {e, hflip, vflip, 180}
+======================================================================
+Burnside k=0..12 : [1, 3, 21, 55, 135, 198, 246, 198, 135, 55, 21, 3, 1]
+brute   k=0..6   : [1, 3, 21, 55, 135, 198, 246] (must match)
+k=0..3 -> [1, 3, 21, 55] = Fib∩triangular {1,3,21,55};  k=4 -> 135 (135, neither). break confirmed.
+
+======================================================================
+T5  Fibonacci rank of apparition alpha(p) | p - (5/p)  (Euler criterion)
+======================================================================
+alpha(2)=3 alpha(3)=4 alpha(5)=5 alpha(7)=8 alpha(11)=10  (expect 3,4,5,8,10)
+  p  alpha  (5/p)  p-(5/p)  divides? mod5
+  2     3  -1       3     True    2
+  3     4  -1       4     True    3
+  7     8  -1       8     True    2
+ 11    10  +1      10     True    1
+ 13     7  -1      14     True    3
+ 17     9  -1      18     True    2
+ 19    18  +1      18     True    4
+ 23    24  -1      24     True    3
+ 29    14  +1      28     True    4
+ 31    30  +1      30     True    1
+ 37    19  -1      38     True    2
+ 41    20  +1      40     True    1
+ 43    44  -1      44     True    3
+ 47    16  -1      48     True    2
+ 53    27  -1      54     True    3
+ 59    58  +1      58     True    4
+LAW alpha(p) | p-(5/p) holds for all p<60: True    (5 QR <=> p ≡ ±1 mod 5 <=> alpha|p-1)
+
+======================================================================
+T6  Heron square = (x+y+z)*x*y*z;  Lagrange 4-sq; Gauss 3-tri (EYPHKA)
+======================================================================
+Ravi x=s-a,y=s-b,z=s-c -> s=x+y+z, Area^2=(x+y+z)*x*y*z for the 5 m=1 triangles:
+  (5,12,13) s=15 (x,y,z)=(10,3,2) (x+y+z)xyz=900 =? A^2=900  True
+  (6,8,10) s=12 (x,y,z)=(6,4,2) (x+y+z)xyz=576 =? A^2=576  True
+  (6,25,29) s=30 (x,y,z)=(24,5,1) (x+y+z)xyz=3600 =? A^2=3600  True
+  (7,15,20) s=21 (x,y,z)=(14,6,1) (x+y+z)xyz=1764 =? A^2=1764  True
+  (9,10,17) s=18 (x,y,z)=(9,8,1) (x+y+z)xyz=1296 =? A^2=1296  True
+naturals 0..199 NOT a sum of 4 squares (Lagrange): [] (empty => theorem holds)
+naturals 0..199 NOT a sum of 3 triangular (Gauss):  [] (empty => EYPHKA holds)
+
+The recursive duality: square = PRODUCT of 4 naturals (Heron, glue=sum),
+natural = SUM of 4 squares (Lagrange); '4'=2^2 (parity squared), '3'=triangle sides.
+
+DONE.
