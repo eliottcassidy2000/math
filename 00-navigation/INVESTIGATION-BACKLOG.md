@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-16-S2: LRC-14 inf L>0 — corroboration + the four closed doors (HYP-2562/2563, T834, complements kind-pasteur THM-522)
+
+**Status:** kind-pasteur-S7 owns the headline (THM-522 scale-invariance+quantization; HYP-2561 inf=1/1260; MISTAKE-075). I independently CORROBORATED inf=1/1260 (single perturbations w≤600, doubles w≤140: nothing in (0,1/1260)) and CLOSED four positivity routes (LLL/Shearer, Selberg–Beurling, Abel/Cesàro, OCF-bridge), all blocked by ONE obstruction: L is an archimedean SIGNED singular integral with no termwise floor + positively-correlated danger events.
+**Next (ranked, toward inf L>0):** (1) **The crux per THM-522/HYP-2561:** classify the (conjecturally finite, bounded-lcm) TIGHT LOCUS = LRC(14) extremal configs (Goddyn–Wong); then quantization+compactness give inf L≥1/1260. Extend my `lrc14_perturbation_inf_search` to 3-element perturbations + non-AP bases to map the full tight locus. (2) Prove the UNIFORM (core-independent) large-speed decoupling constant C (Erdős–Turán discrepancy of stranger 14m against the fixed bounded core's lonely set; constant via #core-runners + min core-gap) — the one missing ingredient for the m→∞ tail (my workflow Angle 8). (3) The Bedert level-bound |E_k∩P|≤(C log|P|)^k → Abel-controlled alternating Λ_k (OPEN-Q-097, the complementary analytic route). DO NOT re-attempt the 4 closed doors.
+**Sources:** 04-computation/{lrc14_exact_rational_measure,lrc14_resonant_removal_7adic,lrc14_family_completeness_search,lrc14_perturbation_inf_search}_mac-mini-2026-06-16-S2.py + workflow angle scripts (lrc14_{7adic_archimedean_split,lll_shearer,abel_cesaro_levelmass,selberg_minorant,largespeed_decoupling,resonant_stranger_certificate,ocf_bridge_probe}) + .out; 07-reflections/why-every-lrc-positivity-method-fails-the-signed-integral-with-no-floor-mac-mini-S2.md; THM-522, HYP-2561/2562/2563, MISTAKE-075, OPEN-Q-104/097.
+
 ## Lead mac-mini-2026-06-16-S1: the octal lens on the H-spectrum + the triangular tile-count (T832, HYP-2558..2560)
 
 **Status:** NEW probe past the kind-pasteur boat session (T830/HYP-2557, which mapped Fib/tri/square/prime + Heron — all re-verified, 3rd confirmation). The octal identity odd²=8T_k+1 aimed at H(T) (always odd, Rédei): at n≤6 the H-spectrum gaps {7,21,35,39} all AVOID residue 1 mod 8; the odd-square residue class is gap-free. Candidate necessary sieve for the forbidden-H frontier.

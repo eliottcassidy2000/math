@@ -1,0 +1,97 @@
+==============================================================================
+ANGLE 6: Abel/Cesaro summation of level masses — worst LRC-14 core
+S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]   (98 = 2*7^2)
+==============================================================================
+
+[TRUTH] exact lonely measure L(S):
+   Q=  27720:  L = 0.0051948
+   Q=  55440:  L = 0.0051948
+   Q= 110880:  L = 0.0052128
+   --> reference L_true ~ 0.0052128
+   main term (6/7)^13 = 0.1348006
+
+==============================================================================
+(0) CONVERGENCE TYPE per level: signed sum settles, |sum| may diverge
+    (lattice radius R; SIGNED = Lambda_k, ABS = sum|prod s| (6/7)^{13-k} scaled)
+==============================================================================
+
+   level k=2:
+      R=  50: Lambda_k(signed)=0.072900  |..|(abs)=0.179877  terms=4730  
+      R= 200: Lambda_k(signed)=0.072876  |..|(abs)=0.181453  terms=18920  (d_signed=-0.00002, d_abs=+0.00158)
+      R= 800: Lambda_k(signed)=0.072865  |..|(abs)=0.181845  terms=75460  (d_signed=-0.00001, d_abs=+0.00039)
+
+   level k=3:
+      R=  10: Lambda_k(signed)=0.271909  |..|(abs)=0.573732  terms=75330  
+      R=  25: Lambda_k(signed)=0.268668  |..|(abs)=0.665498  terms=450128  (d_signed=-0.00324, d_abs=+0.09177)
+      R=  45: Lambda_k(signed)=0.267878  |..|(abs)=0.698450  terms=1414530  (d_signed=-0.00079, d_abs=+0.03295)
+
+   level k=4:
+      R=   5: Lambda_k(signed)=0.432288  |..|(abs)=1.014986  terms=582572  
+      R=   9: Lambda_k(signed)=0.422662  |..|(abs)=1.288900  terms=2386028  (d_signed=-0.00963, d_abs=+0.27391)
+      R=  14: Lambda_k(signed)=0.380047  |..|(abs)=1.612204  terms=8052480  (d_signed=-0.04262, d_abs=+0.32330)
+
+   level k=5:
+      R=   3: Lambda_k(signed)=0.351046  |..|(abs)=0.731359  terms=1389240  
+      R=   5: Lambda_k(signed)=0.761640  |..|(abs)=1.827360  terms=10719042  (d_signed=+0.41059, d_abs=+1.09600)
+      R=   7: Lambda_k(signed)=0.846253  |..|(abs)=2.109934  terms=22227840  (d_signed=+0.08461, d_abs=+0.28257)
+
+   --> SIGNED Lambda_k stabilize (conditionally convergent); ABS keep climbing
+       for k>=3 => the level series is CONDITIONALLY convergent, order-sensitive.
+
+==============================================================================
+(1) CONVERGED LEVEL MASSES  Lambda_k  (best signed estimate)
+==============================================================================
+    k     Lambda_k   (-1)^k Λ_k
+    2     0.072865     0.072865
+    3     0.267878    -0.267878
+    4     0.380047     0.380047
+    5     0.846253    -0.846253
+
+==============================================================================
+(2) PARTIAL SUMS  P_m = (6/7)^13 + Σ_{k=2}^m (-1)^k Λ_k  vs L_true
+==============================================================================
+    m          P_m   P_m - L_true
+    1     0.134801       0.129588
+    2     0.207666       0.202453
+    3    -0.060212      -0.065425
+    4     0.319835       0.314622
+    5    -0.526418      -0.531631
+
+==============================================================================
+(3) SUMMATION METHODS
+==============================================================================
+
+   EULER transform of Σ(-1)^j Λ_{j+2}:
+      tail = +0.102135;  main+tail = 0.236936   (L_true 0.005213, err +0.231723)
+
+   CESARO (C,1) mean of P_m: 0.015134   (err +0.009921)
+
+   ABEL  Σ(-1)^k Λ_k r^k  as r->1^-:
+           r      Abel(r)
+        0.50     0.116840
+        0.70     0.027642
+        0.85    -0.154165
+        0.92    -0.297606
+        0.96    -0.402268
+        0.98    -0.461747
+        0.99    -0.493413
+        1.00    -0.526418
+      r->1 linear extrap (r=.98,.99): -0.525078  (err -0.530291)
+
+==============================================================================
+(4) PER-LEVEL BOUND DIAGNOSIS
+==============================================================================
+    k        |Λ_k|    |Λ_{k+1}|/|Λ_k|
+    2     0.072865             3.6763
+    3     0.267878             1.4187
+    4     0.380047             2.2267
+    5     0.846253             (last)
+
+   For an Abel/geometric tail bound we would need |Λ_k| <= C g^k with g<1.
+   Observed: Λ_k do NOT decay geometrically — they plateau / decay sub-geometrically,
+   and even sum|prod s| per level DIVERGES (k>=3). A Polya–Vinogradov per-level bound
+   |Σ_{|T|=k} ∏ s| <= G^k is FALSE as stated (the unsigned mass is unbounded);
+   only the SIGNED, symmetric-limit Λ_k is finite, which no elementary summation
+   method can certify a lower bound from below.
+
+DONE.

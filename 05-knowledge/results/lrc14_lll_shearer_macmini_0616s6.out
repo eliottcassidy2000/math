@@ -1,0 +1,133 @@
+================================================================================
+LRC(14) ANGLE 2 — LLL / Shearer on the 13 danger events  (EXACT arithmetic)
+================================================================================
+single-event prob p = meas(d_i) = 2/14 = 1/7 = 0.142857
+independence baseline p^2 = 1/49 = 0.020408
+
+WORST CORE  S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]   (|S|=13, 98=2*7^2; numeric L≈0.00524)
+
+All 13 single danger measures are EXACTLY 1/7. (confirmed)
+
+================================================================================
+(A) EXACT pairwise overlaps meas(d_a ^ d_b)  vs independence value p^2=1/49
+================================================================================
+total pairs = 78
+  HARMFUL (overlap > 1/49, correlated): 34
+  NEUTRAL (overlap = 1/49, independent): 23
+  HELPFUL (overlap < 1/49, anti-corr.):  21
+
+  largest overlaps (most harmful pairs):
+     v=  1, w=  2:  overlap = 1/14 = 0.07143   (ratio to p^2 = 3.500)
+     v=  2, w=  4:  overlap = 1/14 = 0.07143   (ratio to p^2 = 3.500)
+     v=  4, w=  8:  overlap = 1/14 = 0.07143   (ratio to p^2 = 3.500)
+     v=  5, w= 10:  overlap = 1/14 = 0.07143   (ratio to p^2 = 3.500)
+     v=  1, w=  3:  overlap = 1/21 = 0.04762   (ratio to p^2 = 2.333)
+     v=  2, w=  3:  overlap = 1/21 = 0.04762   (ratio to p^2 = 2.333)
+     v=  3, w=  9:  overlap = 1/21 = 0.04762   (ratio to p^2 = 2.333)
+     v=  4, w= 12:  overlap = 1/21 = 0.04762   (ratio to p^2 = 2.333)
+     v=  8, w= 12:  overlap = 1/21 = 0.04762   (ratio to p^2 = 2.333)
+     v=  1, w=  4:  overlap = 1/28 = 0.03571   (ratio to p^2 = 1.750)
+     v=  2, w=  8:  overlap = 1/28 = 0.03571   (ratio to p^2 = 1.750)
+     v=  3, w=  4:  overlap = 1/28 = 0.03571   (ratio to p^2 = 1.750)
+
+LOPSIDED dependency graph (edge = harmful overlap > 1/49):
+   degrees by runner: 1:4, 2:7, 3:6, 4:7, 5:5, 7:0, 8:7, 9:6, 10:8, 11:5, 12:8, 13:5, 98:0
+   max degree D = 8   (avg deg = 5.23, #edges = 34)
+
+FULL dependency graph (edge = ANY non-independence overlap != 1/49):
+   max degree DF = 10, #edges = 55
+
+================================================================================
+(B) SYMMETRIC LLL:   e * p * (D+1) <= 1  ?
+================================================================================
+   lopsided D=8:  e*p*(D+1) = 3.4949  > 1  FAILS
+   full DF=10:  e*p*(D+1) = 4.2716  > 1  FAILS
+   symmetric LLL needs D+1 <= 1/(e*p) = 7/e = 2.5752, i.e. D <= 1.5752
+   => symmetric LLL needs max degree D <= 1 (each event depends on <=1 other).
+
+================================================================================
+(C) ASYMMETRIC (Erdos-Lovasz) LLL:  x_i = p / prod_{j~i}(1-x_j),  bound=prod(1-x_i)
+================================================================================
+   lopsided graph: INFEASIBLE — the LLL fixed point diverges (x_i -> 1). LLL FAILS.
+   full graph: INFEASIBLE — the LLL fixed point diverges (x_i -> 1). LLL FAILS.
+
+================================================================================
+(D) SHEARER positivity:  signed independence polynomial Z(G; -p)  (Fraction-exact)
+================================================================================
+   lopsided graph: Z(G; -p) = -36/343 = -1.049563e-01   NON-POSITIVE -> Shearer FAILS
+   full graph: Z(G; -p) = -144/343 = -4.198251e-01   NON-POSITIVE -> Shearer FAILS
+
+   Shearer FULL check (positivity of Z on EVERY induced subgraph) — lopsided graph:
+      induced subgraphs with Z<=0: 224   (min Z over all induced subgraphs = -1.4286e-01)
+      Shearer criterion FAILS
+
+================================================================================
+(E) SPARSIFICATION: drop highest-overlap runners; does a sub-core satisfy LLL?
+================================================================================
+   (a sub-core gives only a WEAKER set with MORE freedom; meas of its lonely set
+    is an UPPER bound on L of the full core, so this does NOT bound L below — it
+    only tells us which runners are the obstruction.)
+   runner harmful-overlap load (sorted):
+      v=  4: deg=7, total harmful overlap mass=0.31905
+      v=  2: deg=7, total harmful overlap mass=0.30714
+      v= 12: deg=8, total harmful overlap mass=0.25699
+      v=  8: deg=7, total harmful overlap mass=0.24687
+      v= 10: deg=8, total harmful overlap mass=0.24613
+      v=  3: deg=6, total harmful overlap mass=0.24286
+      v=  5: deg=5, total harmful overlap mass=0.18571
+      v=  1: deg=4, total harmful overlap mass=0.18333
+      v=  9: deg=6, total harmful overlap mass=0.16978
+      v= 11: deg=5, total harmful overlap mass=0.10745
+      v= 13: deg=5, total harmful overlap mass=0.10428
+      v=  7: deg=0, total harmful overlap mass=0.00000
+      v= 98: deg=0, total harmful overlap mass=0.00000
+
+   sub-core of 8 runners [1, 4, 5, 7, 9, 11, 13, 98]:
+      LLL APPLIES (lopsided). max deg=2, bound prod(1-x)=1.1771e-01
+      removed runners: [10, 12, 2, 3, 8] (5 dropped)
+
+================================================================================
+(F) STRUCTURAL OVERLAP LAW:  B<=7 => overlap=1/(7B) (clean); close-cofactor
+    pairs (B-A small) also harmful; 7-multiples => exactly 1/49 (independent)
+================================================================================
+   CLEAN regime (B<=7): formula 1/(7B) matches exact on 28/28 such core pairs (PERFECT)
+   CLEAN regime verified on 83 random pairs with B<=7: PERFECT
+   harmful pairs: 23 from small cofactor (B<=6), 11 from close-cofactor (B>=8)
+   => obstruction is the dense small-integer block 1..13; the 7-stranger is deg-0.
+
+================================================================================
+CROSS-CHECK: exact overlap vs grid measurement (a few pairs)
+================================================================================
+   v=  1, w=  2: exact=0.071429  grid(Q=210210)=0.071429  diff=0.00e+00
+   v=  2, w=  4: exact=0.071429  grid(Q=210210)=0.071424  diff=4.76e-06
+   v=  1, w= 98: exact=0.020408  grid(Q=210210)=0.020451  diff=4.28e-05
+================================================================================
+(G) HOW-FAR GAP: largest danger-prob p* for which Shearer Z(lopsided;-p*) > 0
+================================================================================
+   whole-graph Shearer threshold p* ≈ 0.117077  (vs actual p=1/7=0.142857)
+   danger prob would need to SHRINK by factor 1.220x  (band 2/14 -> 2/8.54)
+   equivalently the lonely threshold 1/14 would need to be ~1/4.3 to apply.
+   TRUE Shearer radius (positivity on ALL induced subgraphs) p** ≈ 0.117077
+   => p=1/7 exceeds the Shearer radius by 1.220x. LLL/Shearer cannot apply.
+
+================================================================================
+VERDICT
+================================================================================
+ - The 13 danger events are functions of ONE variable tau, hence never jointly
+   independent. LLL/Shearer need NEGATIVE dependency, but the arithmetic forces
+   STRONG POSITIVE correlation: divisibility-related runners have overlap up to
+   1/14 = 3.5x the independent value 1/49.
+ - Symmetric LLL e*p*(D+1)<=1 needs D<=1; actual D=8.  FAILS by 3.5x.
+ - Asymmetric/lopsided LLL fixed point DIVERGES (infeasible). FAILS.
+ - Shearer's signed independence polynomial is NEGATIVE (Z=-36/343 on the
+   lopsided graph); danger prob would need p* (well below 1/7) to certify.
+ - ROOT CAUSE: the obstruction is entirely the small consecutive integers 1..13
+   whose simple ratios 2:1,3:2,... create heavy positive correlation. The
+   7-multiple strangers are globally INDEPENDENT (deg 0) — they are NOT the
+   problem; the AP-core is. This matches WHY Riesz/additive-energy methods also
+   stall on AP-cores (small additive dimension = high correlation).
+ - CONCLUSION: the probabilistic LLL/Shearer route does NOT prove inf L>0. It is
+   a clean DEAD-END, but it pinpoints the obstruction exactly (positive correlation
+   of the dense small-integer block) and yields the exact overlap law (F).
+
+DONE.

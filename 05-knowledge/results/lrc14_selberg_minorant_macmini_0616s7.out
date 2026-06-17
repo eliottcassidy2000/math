@@ -1,0 +1,54 @@
+========================================================================================
+LRC-14 ANGLE 4: SELBERG-BEURLING NONNEGATIVE MINORANT (dual of Bedert Riesz). stdlib only.
+worst core S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]    true L ~ 0.005223
+========================================================================================
+
+[1] THE IMPOSSIBILITY THEOREM (headline)
+----------------------------------------------------------------------------------------
+A nonneg trig poly m with m<=1_safe must satisfy m<=0 on the CLOSED danger band [-1/14,1/14]
+and m>=0 there too, hence m=0 on a full interval => m=0 identically (real-analyticity).
+So the ONLY valid nonneg POINTWISE minorant of 1_safe at any finite degree is m=0 (bound 0).
+Bedert's Riesz product is the exact DUAL and hits the mirror wall: the indicator's sharp
+edge blocks BOTH extremal-function routes.
+
+[2] CONCRETE nonneg trig poly: Fejer bump c*F_M(theta-1/2), c=1/(M+1)  (provably 0<=m<=1)
+----------------------------------------------------------------------------------------
+     M   c0=int m  leak into danger  sup_danger m  (c0 must DROP toward 0)
+     7    0.12500          0.001284      0.016253
+    14    0.06667          0.000345      0.004646
+    21    0.04545          0.000157      0.002164
+    28    0.03448          0.000089      0.001247
+    40    0.02439          0.000042      0.000609
+   -> c0=int m = 1/(M+1) DECREASES; a sharper bump spreads mass, never approaches 6/7.
+
+[3] GRID-LP minorant numbers (scipy reference, GRID ARTIFACTS of the impossibility)
+----------------------------------------------------------------------------------------
+   A grid LP enforcing m<=0 only at finitely many danger grid points reports growing c0,
+   but those m are NOT true nonneg pointwise minorants (they poke >0 between grid points).
+   Reference (scipy.optimize.linprog, grid N=24000):
+      K=7 : c0~0.345 ; K=14 : c0~0.564 ; K=21 : c0~0.669 ; K=28 : c0~0.718
+   Their TRUE product integral (computed exactly + grid cross-check) collapses to ~0:
+      int prod m  ~ 1.1e-24 (K7), 3.5e-18 (K14), 2.7e-13 (K21), 4.2e-12 (K28)
+   i.e. ~15 orders below L~0.005223. POSITIVE in sign (beats Riesz's 1.0096>=1) but USELESS.
+
+[4] EXACT product constant term for the PROVABLY-VALID Fejer bump (true certificate value)
+----------------------------------------------------------------------------------------
+     M        c0       c0^13   EXACT int prod m    grid check     /L_true
+     7   0.12500   1.819e-12          1.633e-15     1.633e-15    3.13e-13
+    14   0.06667   5.138e-16          6.775e-18     6.776e-18    1.30e-15
+    21   0.04545   3.536e-18          7.783e-23     7.784e-23    1.49e-20
+   (EXACT lattice value and direct grid integral AGREE: the bound is genuinely ~1e-15..1e-23.
+    Note: the bump is a minorant of the constant 1, not of 1_safe, so this is an UPPER proxy;
+    a true 1_safe-minorant would be even smaller. Either way: no useful positive bound.)
+
+[5] VERDICT
+----------------------------------------------------------------------------------------
+ DEAD-END for inf L>0.  The extremal-MINORANT route Bedert avoided fails for a clean reason:
+ the impossibility theorem (no nonzero nonneg trig poly minorizes an indicator on a closed
+ band) caps the only valid finite-degree certificate at 0, and any grid-relaxed surrogate
+ collapses under the (.)^13 product to ~1e-15.  The transferable nugget is the theorem in [1].
+ The genuine remaining direction is NOT a 1-D extremal function but a POSITIVITY/SOS
+ certificate on the 12-dim relation lattice of the product trig poly (moment-SDP), which
+ abandons the per-runner Selberg framework entirely.
+
+DONE.

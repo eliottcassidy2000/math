@@ -1,0 +1,19 @@
+Cayley-Dickson dims n=2^k+1, tile-count m=T_{n-2}=T_{2^k-1}:
+  k=1 n=  3 m=T_{1}=     1  perfect=False  (2^1-1=1 prime=False)
+  k=2 n=  5 m=T_{3}=     6  perfect=True  (2^2-1=3 prime=True)
+  k=3 n=  9 m=T_{7}=    28  perfect=True  (2^3-1=7 prime=True)
+  k=4 n= 17 m=T_{15}=   120  perfect=False  (2^4-1=15 prime=False)
+  k=5 n= 33 m=T_{31}=   496  perfect=True  (2^5-1=31 prime=True)
+  k=6 n= 65 m=T_{63}=  2016  perfect=False  (2^6-1=63 prime=False)
+
+THM-067: c1 vanishes at n = 2^{f+1}-1 (n itself Mersenne-form):
+  f=1: n=2^2-1 = 3
+  f=2: n=2^3-1 = 7
+  f=3: n=2^4-1 = 15
+  f=4: n=2^5-1 = 31
+  f=5: n=2^6-1 = 63
+
+VERDICT: BOTH governed by Mersenne primes 2^p-1, but DIFFERENT index families:
+  THM-067 vanishing: n = 2^p - 1 (n is Mersenne)
+  perfect tile-count: n = 2^k + 1, perfect <=> 2^k-1 is a Mersenne prime
+  => same arithmetic engine (2^p-1), distinct n-loci. Not the literal same event.

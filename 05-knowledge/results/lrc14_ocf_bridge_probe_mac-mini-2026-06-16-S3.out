@@ -1,0 +1,72 @@
+==============================================================================
+ANGLE 7: is L(S) = sum_Lambda prod h  a tournament partition function H=I(Omega,2)?
+==============================================================================
+
+--- (C) THE TWO SEVENS ---
+ tournament side: Phi_3(2) = 2^2+2+1 = 7  (forbidden phantom; orbit 7*3^k)
+ forbidden H orbit: [7, 21, 63, 189]
+ LRC side: band denom n=14=2*7; kernel s(t)=sin(pi t/7)/(pi t); s(t)=0 iff 7|t
+ check s(t)=0 exactly at multiples of 7 (cyclotomic vanishing of the kernel):
+     s( 0) = +0.142857
+     s( 1) = +0.138109
+     s( 6) = +0.023018
+     s( 7) = +0.000000  <-- ZERO (7|t)
+     s( 8) = -0.017264
+     s(13) = -0.010624
+     s(14) = -0.000000  <-- ZERO (7|t)
+     s(21) = +0.000000  <-- ZERO (7|t)
+ NOTE: the LRC 7 is the DENOMINATOR n/2 = 14/2 = 7 of the danger band 1/14.
+       The tournament 7 = Phi_3(2), the cyclotomic value of x^2+x+1 at the
+       OCF fugacity x=2. These are 7 from DIFFERENT mechanisms:
+         LRC 7   = half the runner count (geometry of the circle / band size)
+         OCF 7   = Phi_3(2) (algebra: 3-cycle generating fn at fugacity 2)
+       Same NUMBER, different generators. -> shallow unless a map identifies them.
+
+  Probe: does any natural fugacity z give Phi_3(z) = 7 or 14?
+     Phi_3(1) = 3;  Phi_2(1)=z+1=2;  Phi_6(1)=z*z-z+1=1
+     Phi_3(2) = 7;  Phi_2(2)=z+1=3;  Phi_6(2)=z*z-z+1=3
+     Phi_3(3) = 13;  Phi_2(3)=z+1=4;  Phi_6(3)=z*z-z+1=7
+     Phi_3(4) = 21;  Phi_2(4)=z+1=5;  Phi_6(4)=z*z-z+1=13
+     Phi_3(5) = 31;  Phi_2(5)=z+1=6;  Phi_6(5)=z*z-z+1=21
+  -> Phi_3(2)=7 (z=2) and Phi_6(... ) etc. The OCF 7 needs z=2 EXACTLY.
+     The LRC 7 is independent of any fugacity. Coincidence of the integer 7.
+
+--- (A)+(B) SIDE-BY-SIDE on the extremizer core S={1..13}\{6} U {98} ---
+ S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]  |S| = 13
+ exact lonely measure D(27440)/27440 = 0.005102   (main term (6/7)^13 = 0.134801)
+ theta partial (support<=4): |coeff|<=3 -> 0.315310;  |coeff|<=4 -> 0.526000
+ # short primitive relations (support<=4, |coeff|<=3) = 7184
+ shortest relations (coeff vector restricted to support, with speeds):
+     [(1, -2), (2, 1)]   L1-norm=3
+     [(1, -1), (2, -1), (3, 1)]   L1-norm=3
+     [(1, -1), (3, -1), (4, 1)]   L1-norm=3
+     [(1, -1), (4, -1), (5, 1)]   L1-norm=3
+     [(1, -1), (7, -1), (8, 1)]   L1-norm=3
+     [(1, -1), (8, -1), (9, 1)]   L1-norm=3
+     [(1, -1), (9, -1), (10, 1)]   L1-norm=3
+     [(1, -1), (10, -1), (11, 1)]   L1-norm=3
+
+--- (B) DOES the relation lattice carry a graph whose I(.,2) relates to L? ---
+ relation-overlap graph on 16 shortest relations:
+   vertices=16, edges=89, density=0.742
+   independence poly coeffs alpha_k: {0: 1, 1: 16, 2: 31}
+   I(G,2) = 157.0   <-- this is the OCF-style partition function of the relation graph
+   (compare to L(S) = 0.005102: I(G,2) is a POSITIVE integer >> L, NO direct match)
+
+--- (D) THE SIGN / FLOOR difference (the crux) ---
+ H=I(Omega,2)=sum 2^|U| is POSITIVE termwise -> floor 1 (empty set) is STRUCTURAL.
+ L=sum prod h has h(t)<0 for t!=0 AND s(t) sign-flips at |t|>=8 -> L is a delicate
+ SIGNED cancellation; the level masses Lambda_k GROW (0.11, 0.55, 1.17,...) so there
+ is NO termwise floor. That is exactly why inf L>0 is HARD and H>=1 is EASY.
+
+ SIGNED independence sum over the SAME overlap graph (weights = real L contributions):
+   sum_{U indep} prod_v relweight(v) = 0.998409
+   (main (6/7)^13 added: 1.133210 if 'empty set'=main term)
+
+ CLUSTER-EXPANSION view: L ~ (6/7)^13 * [ 1 + sum signed indep clusters of relations ]
+   true L = 0.005102;  theta(support<=4,B=4) = 0.526000
+   ratio theta/L = 103.0960  (how well the short-relation lattice sum captures L)
+
+==============================================================================
+VERDICT (printed in structured summary).
+==============================================================================

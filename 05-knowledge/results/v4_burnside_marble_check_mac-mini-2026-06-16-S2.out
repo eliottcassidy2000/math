@@ -1,0 +1,6 @@
+marble V4 (free) k=0..5: [1, 3, 21, 55, 135, 198]
+  -> 1,3,21,55 then 135 (=Fib∩Tri prefix, breaks at 135)
+V_merged (complement-quotient) n=1..8: [1, 0, 1, 2, 7, 28, 240, 3440]
+  -> 1,?,1,2,7,28,240,3440  != {1,3,21,55}
+VERDICT: shared group (Z2xZ2) but DIFFERENT action (marble=free, project=has fixed pts).
+         {1,3,21,55} does NOT reproduce in the complement-transpose engine -> word-deep.

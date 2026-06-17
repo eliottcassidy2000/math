@@ -1,0 +1,78 @@
+==============================================================================
+R_j(m) = meas(A_j) - L(A_j ∪ {14m})  removed measure, m=1..210, exact rationals
+==============================================================================
+
+ j= 1: meas(A_j)=1/14=0.071429  #distinct R=1
+      max removal R=1/98=0.010204 at m=[1, 2, 3, 4, 5, 6]  -> min L=3/49=0.061224 <== GLOBAL MIN
+      7-adic valuations of removals: [-2]   max_R/meas = 0.1429
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 2: meas(A_j)=11/364=0.030220  #distinct R=142
+      max removal R=1/147=0.006803 at m=[3]  -> min L=179/7644=0.023417 <== GLOBAL MIN
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.2251
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 3: meas(A_j)=11/273=0.040293  #distinct R=138
+      max removal R=1/98=0.010204 at m=[1, 2]  -> min L=115/3822=0.030089
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.2532
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 4: meas(A_j)=97/4004=0.024226  #distinct R=147
+      max removal R=2/147=0.013605 at m=[3]  -> min L=893/84084=0.010620 <== GLOBAL MIN
+      7-adic valuations of removals: [-4, -3, -2, -1]   max_R/meas = 0.5616
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 5: meas(A_j)=103/2860=0.036014  #distinct R=158
+      max removal R=1/98=0.010204 at m=[1, 2, 3]  -> min L=3617/140140=0.025810
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.2833
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 6: meas(A_j)=7/858=0.008159  #distinct R=145
+      max removal R=1/343=0.002915 at m=[7]  -> min L=1543/294294=0.005243 <== GLOBAL MIN
+      7-adic valuations of removals: [-4, -3, -2, -1]   max_R/meas = 0.3574
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 7: meas(A_j)=4319/51480=0.083897  #distinct R=149
+      max removal R=3/49=0.061224 at m=[1]  -> min L=57191/2522520=0.022672
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.7298
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 8: meas(A_j)=950/21021=0.045193  #distinct R=151
+      max removal R=1/98=0.010204 at m=[4]  -> min L=1471/42042=0.034989
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.2258
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j= 9: meas(A_j)=3273/56056=0.058388  #distinct R=155
+      max removal R=1/98=0.010204 at m=[1, 2, 4, 5]  -> min L=2701/56056=0.048184
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.1748
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j=10: meas(A_j)=1520/63063=0.024103  #distinct R=156
+      max removal R=2/245=0.008163 at m=[5]  -> min L=718/45045=0.015940
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.3387
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j=11: meas(A_j)=4733/76440=0.061918  #distinct R=156
+      max removal R=1/98=0.010204 at m=[1, 2, 4, 11, 17]  -> min L=3953/76440=0.051714
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.1648
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j=12: meas(A_j)=426/35035=0.012159  #distinct R=148
+      max removal R=1/147=0.006803 at m=[6]  -> min L=563/105105=0.005357
+      7-adic valuations of removals: [-4, -3, -2, -1]   max_R/meas = 0.5595
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+ j=13: meas(A_j)=6617/194040=0.034101  #distinct R=160
+      max removal R=1/98=0.010204 at m=[1, 2, 13]  -> min L=4637/194040=0.023897
+      7-adic valuations of removals: [-4, -3, -2, -1, 0]   max_R/meas = 0.2992
+      maxR < meas(A_j)? True  (=> L stays POSITIVE for all scanned m)
+
+==============================================================================
+INFIMUM over interior-drop cores (m<= 210): j=6, m=7, 14m=98
+  meas(A_6) = 7/858,  max removal = 1/343,  L = 1543/294294 = 0.00524306
+  CLEAN FORM: L = 7/858 - 1/343 = meas(core) - 1/7^3
+==============================================================================
+READING: if for EVERY core j the removal R_j(m) is bounded by a 7-power
+strictly below meas(A_j) (verified here for m<=210; m->inf gives (1/7)meas
+by Weyl decoupling THM-518), then inf L>0 reduces to this FINITE per-core
+check.  The resonant removal is 7-adically quantized (the v_7 column).

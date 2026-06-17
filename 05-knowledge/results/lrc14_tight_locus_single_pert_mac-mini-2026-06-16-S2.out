@@ -1,0 +1,6 @@
+MIN POSITIVE single-perturbation L = 1/1260 = 0.0007936507936507937
+  attained at e->w = (12, 36)  (1/1260 = 0.0007936507936507937 )
+configs with 0 < L < 1/1260 (would REFUTE HYP-2561): NONE -> HYP-2561 corroborated
+
+TIGHT-preserving single perturbations e->w (L=0), count = 1
+  drop 12: stays tight for w in [24]    (ratios w/e: [2] )

@@ -1,0 +1,131 @@
+==================================================================================
+ANGLE 3: 7-ADIC x ARCHIMEDEAN SPLIT OF L(S)  --  EXACT rational cell decomposition
+==================================================================================
+
+WORST CORE j=6, stranger 98=2*7^2:  S = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]
+   residues mod 7 : [1, 2, 3, 4, 5, 0, 1, 2, 3, 4, 5, 6, 0]
+   residue mult/7 : {0: 2, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 1}
+   residues mod 49: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 0]
+
+----------------------------------------------------------------------------------
+(1) EXACT per-cell lonely measure  m_a  (Fraction arithmetic, NO grid error)
+----------------------------------------------------------------------------------
+
+   j=6 / 98 (=2*7^2 RESONANT):  L = 1543/294294 = 0.00524306
+      m_a (a=0..6): 0.000000  0.002622  0.000000  0.000000  0.000000  0.000000  0.002622
+      SUPPORT cells (m_a>0): [1, 6]   (dead cells: [0, 2, 3, 4, 5])
+
+   j=6 / 56 (=14*4):  L = 943/168168 = 0.00560749
+      m_a (a=0..6): 0.000000  0.002804  0.000000  0.000000  0.000000  0.000000  0.002804
+      SUPPORT cells (m_a>0): [1, 6]   (dead cells: [0, 2, 3, 4, 5])
+
+   j=6 / 28 (=14*2):  L = 7/858 = 0.00815851
+      m_a (a=0..6): 0.000000  0.004079  0.000000  0.000000  0.000000  0.000000  0.004079
+      SUPPORT cells (m_a>0): [1, 6]   (dead cells: [0, 2, 3, 4, 5])
+
+   j=6 / 14 (=14*1):  L = 7/858 = 0.00815851
+      m_a (a=0..6): 0.000000  0.004079  0.000000  0.000000  0.000000  0.000000  0.004079
+      SUPPORT cells (m_a>0): [1, 6]   (dead cells: [0, 2, 3, 4, 5])
+
+   j=6 / 154 (=14*11):  L = 152/21021 = 0.00723086
+      m_a (a=0..6): 0.000000  0.003615  0.000000  0.000000  0.000000  0.000000  0.003615
+      SUPPORT cells (m_a>0): [1, 6]   (dead cells: [0, 2, 3, 4, 5])
+
+   ==> KEY STRUCTURAL FACT: for EVERY j=6 core the lonely set lives in EXACTLY 2 cells,
+       a=1 and a=6 (mirror images under tau<->1-tau).  5 of the 7 cells are EXACTLY dead.
+
+----------------------------------------------------------------------------------
+(2) WHY a=1, a=6 survive: the 7-LOCAL (residue-only) selection rule
+----------------------------------------------------------------------------------
+   At cell center xi=0: runner v sits at 7-phase (v*a mod 7)/7.  It is at an INTEGER
+   (==> central danger) iff v*a ≡ 0 (mod 7).  Tabulate centered-dangerous runners per a:
+   a=0: centered-dangerous [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98]; widest-band runner v=1, needs |xi|>1/2=0.5000 (cell |xi|<1/2)
+   a=1: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   a=2: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   a=3: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   a=4: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   a=5: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   a=6: centered-dangerous [7, 98]; widest-band runner v=7, needs |xi|>1/14=0.0714 (cell |xi|<1/2)
+   ==> mult-of-7 runners {7,98} are centered-dangerous in EVERY cell (residue 0 always).
+       Runner 7 forces |xi|>1/14: kills only a 1/7-fraction at each cell center (NOT whole cell).
+       So central danger ALONE never empties a cell.  Survival is decided by the NON-central
+       (archimedean) bands of the other runners packing the rest of the cell -- next.
+
+----------------------------------------------------------------------------------
+(3) THE ARCHIMEDEAN RESIDUAL: surviving free intervals in cell a=1 & the 98-RESONANCE
+----------------------------------------------------------------------------------
+
+   j=6 / 14 (=14*1):  m_1 = 7/1716 = 0.00407925
+      2 surviving free interval(s) in cell a=1:
+        (0.159341, 0.160714) width 0.0013736   bounded by ['L:runner13(k=2)', 'R:runner12(k=2)']
+        (0.172619, 0.175325) width 0.0027056   bounded by ['L:runner12(k=2)', 'R:runner11(k=2)']
+
+   j=6 / 98 (=2*7^2 RESONANT):  m_1 = 1543/588588 = 0.00262153
+      3 surviving free interval(s) in cell a=1:
+        (0.159341, 0.160714) width 0.0013736   bounded by ['L:runner13(k=2)', 'R:runner12(k=2)']
+        (0.172619, 0.172741) width 0.0001215   bounded by ['L:runner12(k=2)', 'R:runner98(k=17)']
+        (0.174198, 0.175325) width 0.0011264   bounded by ['L:runner98(k=17)', 'R:runner11(k=2)']
+
+   RESONANCE: replacing 14 by 98 SHAVES cell a=1 from 0.0040793 to 0.0026215
+   delta m_1 = -1/686 = -0.00145773  (and the same in a=6, doubling)
+   Mechanism: 98 ≡ 0 mod 7 AND mod 49 -> its danger band (half-width 1/1372) lands at
+   k/98 = 17/98 = 0.173469 RIGHT INSIDE a wide gap of the 14-core, splitting it.
+   So the resonance is a THIN-BAND SPLIT of an existing gap, not a wholesale cell kill.
+
+----------------------------------------------------------------------------------
+(4) DOES L FACTOR as (7-local cell count)/7 x (archimedean within-cell density)?
+----------------------------------------------------------------------------------
+   Candidate factorization  L = (N_surv / 7) * Rbar  where N_surv = # surviving cells,
+   Rbar = mean over surviving cells of the conditional density R_a = 7 * m_a.
+
+   j=6 / 98 (=2*7^2 RESONANT):  N_surv=2, R_a over surviving cells = [0.018350696922125494, 0.018350696922125494]
+      Rbar=0.0183507; (N_surv/7)*Rbar = 0.00524306 vs actual L=0.00524306
+      => factorization is EXACT iff all R_a equal. spread max/min R_a = 1.0000 (CLEAN PRODUCT (a=1,a=6 mirror-equal))
+
+   j=6 / 14 (=14*1):  N_surv=2, R_a over surviving cells = [0.028554778554778556, 0.028554778554778556]
+      Rbar=0.0285548; (N_surv/7)*Rbar = 0.00815851 vs actual L=0.00815851
+      => factorization is EXACT iff all R_a equal. spread max/min R_a = 1.0000 (CLEAN PRODUCT (a=1,a=6 mirror-equal))
+
+   ==> PARTIAL FACTORIZATION CONFIRMED:
+       7-LOCAL factor = N_surv/7 = 2/7 (which cells; pure residue-mod-7 combinatorics).
+       ARCHIMEDEAN factor = R_a (within-cell gap density; equal across the 2 surviving
+       cells by the tau<->1-tau mirror).  So L = (2/7)*R, R = 7*m_1 EXACTLY.
+
+----------------------------------------------------------------------------------
+(5) SURVIVING-CELL COUNT vs RESIDUES across ALL 12 j-cores (stranger 98 fixed)
+----------------------------------------------------------------------------------
+     j  L (exact float)  #mult7 #surv cells       surv cells
+     1       0.06122449       2           1              [0]
+     2       0.02438888       2           2           [3, 4]
+     3       0.03300441       2           2           [2, 5]
+     4       0.02131032       2           2           [2, 5]
+     5       0.03164081       2           4     [1, 3, 4, 6]
+     6       0.00524306       2           2           [1, 6]
+     7       0.07515030       1           6 [1, 2, 3, 4, 5, 6]
+     8       0.03790427       2           4     [1, 3, 4, 6]
+     9       0.04964168       2           6 [1, 2, 3, 4, 5, 6]
+    10       0.01972970       2           4     [1, 2, 5, 6]
+    11       0.05317149       2           6 [1, 2, 3, 4, 5, 6]
+    12       0.01070154       2           4     [1, 3, 4, 6]
+    13       0.03118576       2           6 [1, 2, 3, 4, 5, 6]
+
+   LOWEST L : j=6(L=0.00524,2cells), j=12(L=0.01070,4cells), j=10(L=0.01973,4cells)
+   HIGHEST L: j=11(L=0.05317,6cells), j=1(L=0.06122,1cells), j=7(L=0.07515,6cells)
+
+   ==> # surviving cells (the 7-local factor) is the DOMINANT discriminator of L across j.
+       j=6 minimizes BOTH the surviving-cell count and the within-cell density -> global inf.
+
+----------------------------------------------------------------------------------
+(6) LOWER-BOUND CONSEQUENCE: L > 0 reduces to 'some cell has a surviving gap'
+----------------------------------------------------------------------------------
+   Since L = sum_a m_a and each m_a >= 0, L>0 iff at least one cell has a free gap.
+   In a cell, the 13 danger bands have TOTAL length sum_v (#bands_v)*2/(14v).  If this
+   total < cell width 1/7, a gap MUST survive (pigeonhole).  Quantify the deficit:
+   a=0: total danger-band length (with multiplicity, capped to cell) = 0.450903, cell width = 0.142857  -> bands MAY cover (overlap needed)
+   a=1: total danger-band length (with multiplicity, capped to cell) = 0.203451, cell width = 0.142857  -> bands MAY cover (overlap needed)
+   a=2: total danger-band length (with multiplicity, capped to cell) = 0.246813, cell width = 0.142857  -> bands MAY cover (overlap needed)
+   ==> pigeonhole alone is NOT enough (bands overlap, total ~ cell width); the surviving
+       gap in a=1,6 comes from OVERLAP of bands elsewhere freeing room. A rigorous inf>0
+       still needs an overlap/structure argument -- but the support is now pinned to 2 cells.
+
+DONE.
