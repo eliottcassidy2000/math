@@ -1,0 +1,103 @@
+==============================================================================
+ANGLE C: LRC(14) INDUCTION / COMPLETENESS CHAIN  (mac-mini-2026-06-17-S4)
+==============================================================================
+Convention: LRC(k+1) = k runners, target 1/(k+1). LRC(14): 13 speeds, >=1/14.
+Covering set for r runners targets moduli 2..(r+1). THM-523 reduces LRC(14) to
+primitive COVERING 13-sets (multiple of every q in 2..14).
+SANITY M{1..13} = (Fraction(1, 14), Fraction(5, 14)) (expect 1/14 at 5/14)
+
+==============================================================================
+(1) Can a covering 13-set stay covering after removing ANY single runner?
+    i.e. is the 12-core A=S\{14m} FORCED to be easy (uncovered at some q<=13)?
+==============================================================================
+
+Searching covering 13-sets (speeds 1..60) and testing redundancy of 2..13 cover...
+  found 4000 distinct covering 13-sets in sample.
+  of these, cover of 2..13 is REDUNDANT (every single removal still covers 2..13): 40
+  EXAMPLE redundant 13-set: (10, 24, 26, 28, 36, 39, 44, 45, 51, 55, 56, 58, 60)
+    M(S) = 4/21 at 11/42
+    multiples of 14 in S: [28, 56]
+    remove 28 -> 12-core covers 2..13? True  M(core)= 4/21
+    remove 56 -> 12-core covers 2..13? True  M(core)= 4/21
+
+  KEY: remove a multiple of 14 from each covering 13-set; is the 12-core covering 2..13?
+  12-core STILL covers 2..13: 7017   | 12-core EASY (uncovered): 248
+  -> CORE-STAYS-COVERING example: S= [6, 7, 10, 12, 13, 20, 27, 28, 32, 40, 51, 55, 56]  removed 14-mult 28
+     core= [6, 7, 10, 12, 13, 20, 27, 32, 40, 51, 55, 56]  covers 2..13. M(core)= 10/61
+  -> CORE-EASY example: S= [6, 18, 22, 24, 26, 27, 28, 36, 40, 48, 50, 51, 53]  removed 28  core uncovered at q= [7]  M(core)= 1/5
+
+  CONCLUSION (1): The 12-core is NOT always easy. A 13-set can cover 2..14 with the
+  multiple of 14 NOT being the unique server of any q<=13, so the core still covers 2..13.
+
+==============================================================================
+(2) RECURSION: how many removals to reach an EASY (uncovered) core? Bounded?
+==============================================================================
+  For covering 13-sets: length of LONGEST covering chain (removals staying covering).
+  When the chain stops, the remaining set has r runners; LRC at that level may be
+  already PROVEN if r <= 7 (Barajas-Serra). Report distribution of stop-levels.
+  stop-level (runners remaining when chain forced to stop) distribution: {7: 1373, 8: 18, 9: 20, 11: 16, 13: 73}
+  longest covering chain length observed: 6
+  longest-chain example S= (6, 7, 10, 12, 13, 20, 27, 28, 32, 40, 51, 55, 56)
+    chain (level, removed): [(13, 28), (12, 13), (11, 12), (10, 55), (9, 10), (8, 27)]
+    remainder ( 7 runners): [6, 7, 20, 32, 40, 51, 56]  covers 2.. 8 ? True
+    M(remainder)= 4/13  target 1/ 8  >= target? True
+
+  BOUND: 13 runners -> 7 runners is AT MOST 6 removals (trivially bounded by 13-7=6).
+  The substance is whether each removal preserves M>=1/14. Tested in (3).
+
+==============================================================================
+(3) PERFECT-MIDDLE REDUCTION: does removing the multiple of 14 (the section-0
+    perfect-middle runner) connect LRC(14) down to a Barajas-Serra base case
+    (<=7 runners) WITHOUT dropping M below 1/14? Where is the obstruction?
+==============================================================================
+  MONOTONICITY: removing any runner cannot DECREASE M (fewer ||.|| terms in the min).
+  M(S\{v}) >= M(S) for all tested removals: True 
+  => If the SMALLER set (after removal) is lonely (M>=1/14), the bigger set's M is
+     NOT automatically >=1/14 (monotonicity goes the WRONG way: smaller set is EASIER).
+  This is the CRUX: induction LRC(14) <- LRC(13) does NOT follow from removing a runner,
+  because the 13-runner set is HARDER than its 12-runner subsets, not easier.
+
+  THE CORRECT REDUCTION (hard-from-easy, THM-524 slack): S = A u {w}, w=14m the
+  perfect-middle runner, A the easy 12-core uncovered at modulus q. Need:
+     dip(m) := M(A) - M(A u {14m})  <=  slack := M(A) - 1/14   (so M(S) >= 1/14).
+  Equivalently M(A u {14m}) >= 1/14. Test across easy cores A and all resonances m.
+
+  Easy core A | M(A) | min_m M(A u {14m}) | argmin m | >=1/14?
+  {1..12}        uncov@[13] M(A)=1/13 min=14/183(=0.07650) m*=13 OK>=1/14
+  {1..13}\{1}    uncov@[] M(A)=2/15 min=1/8(=0.12500) m*=1 OK>=1/14
+  {1..13}\{7}    uncov@[7] M(A)=1/7 min=1/11(=0.09091) m*=1 OK>=1/14
+  {1..13}\{13}   uncov@[13] M(A)=1/13 min=14/183(=0.07650) m*=13 OK>=1/14
+  {2..13}        uncov@[] M(A)=2/15 min=1/8(=0.12500) m*=1 OK>=1/14
+  ALL listed easy cores keep the hard family >= 1/14: True
+
+  CHAIN TO BASE CASE (<=7 runners, Barajas-Serra proven):
+  After removing 14m we are at 12-runner core A, LOOSE via uncovered q (M(A)>=1/q).
+  To reach 7 runners (LRC(8), proven) we need 5 more removals. Each removal can only
+  RAISE M (monotonicity), and the target gap RELAXES (1/13 -> 1/12 -> ... -> 1/8).
+  So once loose, the set STAYS loose down the chain. Verify on the worst core {1..12}:
+    start 12-runner core [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: target 1/13, M=1/13 >= 1/13? True
+    remove largest -> 11 runners [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]: target 1/12, M=1/12 >= target? True
+    remove largest -> 10 runners [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]: target 1/11, M=1/11 >= target? True
+    remove largest -> 9 runners [1, 2, 3, 4, 5, 6, 7, 8, 9]: target 1/10, M=1/10 >= target? True
+    remove largest -> 8 runners [1, 2, 3, 4, 5, 6, 7, 8]: target 1/9, M=1/9 >= target? True
+    remove largest -> 7 runners [1, 2, 3, 4, 5, 6, 7]: target 1/8, M=1/8 >= target? True
+    Reached <=7 runners: LRC(8) (<=7 runners) PROVEN by Barajas-Serra (2008). Base case met.
+
+==============================================================================
+VERDICT
+==============================================================================
+(1) The 12-core is NOT forced to be easy in general (covering can be redundant); BUT
+    when we remove specifically the MULTIPLE OF 14, the core targets only 2..13, and
+    THM-523's logic only needs SOME uncovered modulus. Whether removing the 14-multiple
+    uncovers a modulus is set-dependent (see counts above).
+(2) The number of removals from 13 -> <=7 runners is trivially BOUNDED by 6. The
+    covering-chain length (staying covering) is short; once a removal uncovers a
+    modulus the set is LOOSE.
+(3) OBSTRUCTION FOUND & NAMED: monotonicity runs the WRONG way for naive induction.
+    A 13-runner set is HARDER than its 12-runner subsets (M only RISES on removal).
+    So LRC(14) does NOT reduce to LRC(13) by 'delete a runner'. The perfect-middle
+    reduction is instead a HARD-FROM-EASY TRANSFER: S=A u {14m}, and the looseness of
+    the easy core A (M(A)>=1/q via uncovered q) bounds the dip so M(S)>=1/14 PROVIDED
+    dip(m) <= slack = M(A)-1/14. The chain to Barajas-Serra works on the EASY CORE A
+    (which IS loose and stays loose as it shrinks), NOT on the hard S. The induction is
+    completeness-by-cases (covering vs not), not a clean LRC(14)<-LRC(13) implication.

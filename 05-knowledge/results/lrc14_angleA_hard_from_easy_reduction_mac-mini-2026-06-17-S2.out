@@ -1,0 +1,51 @@
+==============================================================================
+PART 1: M(A u {14m}) vs M(A) for an easy 12-core A, sweep m.
+==============================================================================
+
+Core drop-12 core {1..11,13}: M(A)=1/12 (0.08333), smallest uncovered q=12
+   easy-witness 1/q = 1/12 (0.08333); slack 1/q-1/14 = 1/84
+   generic (dip=0): 33/39 of m in 1..39
+   resonant (dip>0): m = [6, 12, 18, 24, 30, 36]
+     m= 6 w=  84: M(S)=7/89 (0.07865) dip=5/1068 (=0.00468) dip/slack=0.3933
+     m=12 w= 168: M(S)=14/173 (0.08092) dip=5/2076 (=0.00241) dip/slack=0.2023
+     m=18 w= 252: M(S)=21/257 (0.08171) dip=5/3084 (=0.00162) dip/slack=0.1362
+     m=24 w= 336: M(S)=28/341 (0.08211) dip=5/4092 (=0.00122) dip/slack=0.1026
+     m=30 w= 420: M(S)=7/85 (0.08235) dip=1/1020 (=0.00098) dip/slack=0.0824
+     m=36 w= 504: M(S)=42/509 (0.08251) dip=5/6108 (=0.00082) dip/slack=0.0688
+   FAMILY MIN over m=1..39: M = 7/89 (0.078652); >= 1/14 ? True
+
+Core {1..12}: M(A)=1/13 (0.07692), smallest uncovered q=13
+   easy-witness 1/q = 1/13 (0.07692); slack 1/q-1/14 = 1/182
+   generic (dip=0): 36/39 of m in 1..39
+   resonant (dip>0): m = [13, 26, 39]
+     m=13 w= 182: M(S)=14/183 (0.07650) dip=1/2379 (=0.00042) dip/slack=0.0765
+     m=26 w= 364: M(S)=28/365 (0.07671) dip=1/4745 (=0.00021) dip/slack=0.0384
+     m=39 w= 546: M(S)=42/547 (0.07678) dip=1/7111 (=0.00014) dip/slack=0.0256
+   FAMILY MIN over m=1..39: M = 14/183 (0.076503); >= 1/14 ? True
+
+==============================================================================
+PART 2: STRESS TEST DIP <= SLACK over covering 13-sets S = A u {14m}.
+==============================================================================
+distinct covering 13-sets generated: 21
+
+tested 21 covering 13-sets with an easy core
+GLOBAL MIN M(S) = 7/89 (0.078652) at drop12+14*6, S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+  >= 1/14 ? True   (1/14 = 0.071429)
+
+WORST DIP/SLACK ratio = 8/11 (0.727273)
+  at drop7+14*1
+  S=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+  A=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13]
+  M(A)=1/7 (0.142857), M(S)=1/11 (0.090909)
+  smallest uncovered q=7, 1/q=1/7, slack=1/14 (0.071429)
+  DIP=4/77 (0.051948)  DIP/SLACK=0.727273
+
+cases with DIP >= SLACK (reduction-as-stated fails to certify): 0
+
+cases that ACTUALLY break LRC14 (M(S) < 1/14): 0
+
+==============================================================================
+PART 3: HONESTY -- when DIP > SLACK, is M(S) still >= 1/14 (by other means)?
+==============================================================================
+Worst ratio = 0.727273 < 1: DIP <= SLACK on EVERY tested set.
+=> The hand-in-hand reduction certifies M(S) >= 1/14 for all tested covering 13-sets.

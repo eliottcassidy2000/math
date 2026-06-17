@@ -1,0 +1,109 @@
+============================================================================
+(1) dip = M(A)-M(S) < slack = M(A)-1/14  for the covering interior-drop families
+    S={1..13}\{j} u {84m}, j in 1..6 (covering); A={1..13}\{j}; w=84m
+============================================================================
+
+  j=1: A=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/15=0.13333  slack=M(A)-1/14=13/210=0.06190
+    w=  84: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 252: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 336: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=28/211=0.13270  dip=0.00063  dip/slack=0.010  M(S)>=1/14:True
+    w= 504: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/15=0.13333  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  j=2: A=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/17=0.11765  slack=M(A)-1/14=11/238=0.04622
+    w=  84: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=5/43=0.11628  dip=0.00137  dip/slack=0.030  M(S)>=1/14:True
+    w= 252: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 336: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 504: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  j=3: A=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/17=0.11765  slack=M(A)-1/14=11/238=0.04622
+    w=  84: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 252: M(S)=5/43=0.11628  dip=0.00137  dip/slack=0.030  M(S)>=1/14:True
+    w= 336: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 504: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/17=0.11765  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  j=4: A=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/19=0.10526  slack=M(A)-1/14=9/266=0.03383
+    w=  84: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 252: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 336: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 504: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  j=5: A=[1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/19=0.10526  slack=M(A)-1/14=9/266=0.03383
+    w=  84: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 252: M(S)=3/29=0.10345  dip=0.00181  dip/slack=0.054  M(S)>=1/14:True
+    w= 336: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 504: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/19=0.10526  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  j=6: A=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]  M(A)=2/23=0.08696  slack=M(A)-1/14=5/322=0.01553
+    w=  84: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 168: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 252: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 336: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 420: M(S)=37/431=0.08585  dip=0.00111  dip/slack=0.071  M(S)>=1/14:True
+    w= 504: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+    w= 588: M(S)=2/23=0.08696  dip=0.00000  dip/slack=0.000  M(S)>=1/14:True
+
+  WORST dip/slack ratio over these families = 0.0715  (<1 => reduction holds; M(S)>1/14)
+
+============================================================================
+(2) THE PEELING CHAIN: peel one modulus per level, S_14 -> ... -> base
+============================================================================
+
+  drop6 u84: S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84]  covering 2..14? True
+    n=13 (gap target 1/14=0.0714): M=2/23=0.08696  peel mult of 14
+    n=12 (gap target 1/13=0.0769): M=2/23=0.08696  peel mult of 13
+    n=11 (gap target 1/12=0.0833): M=2/19=0.10526  peel mult of 12
+    n=10 (gap target 1/11=0.0909): M=1/6=0.16667  peel mult of 11
+    n= 9 (gap target 1/10=0.1000): M=1/6=0.16667  peel mult of 10
+    n= 8 (gap target 1/9=0.1111): M=1/6=0.16667  peel mult of 9
+    n= 7 (gap target 1/8=0.1250): M=1/6=0.16667  peel mult of 8
+    n= 6 (gap target 1/7=0.1429): M=1/6=0.16667  peel mult of 7
+    base n=6 M=0.16667; top n=13 M=0.08696
+    total dip (base->top) = 0.07971;  base slack (M_base-1/14)=0.09524
+    chain keeps M>=1/14 at every level: True
+
+  drop6 u168: S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168]  covering 2..14? True
+    n=13 (gap target 1/14=0.0714): M=2/23=0.08696  peel mult of 14
+    n=12 (gap target 1/13=0.0769): M=2/23=0.08696  peel mult of 13
+    n=11 (gap target 1/12=0.0833): M=2/19=0.10526  peel mult of 12
+    n=10 (gap target 1/11=0.0909): M=1/6=0.16667  peel mult of 11
+    n= 9 (gap target 1/10=0.1000): M=1/6=0.16667  peel mult of 10
+    n= 8 (gap target 1/9=0.1111): M=1/6=0.16667  peel mult of 9
+    n= 7 (gap target 1/8=0.1250): M=1/6=0.16667  peel mult of 8
+    n= 6 (gap target 1/7=0.1429): M=1/6=0.16667  peel mult of 7
+    base n=6 M=0.16667; top n=13 M=0.08696
+    total dip (base->top) = 0.07971;  base slack (M_base-1/14)=0.09524
+    chain keeps M>=1/14 at every level: True
+
+  drop3 u84: S=[1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 84]  covering 2..14? True
+    n=13 (gap target 1/14=0.0714): M=2/17=0.11765  peel mult of 14
+    n=12 (gap target 1/13=0.0769): M=2/17=0.11765  peel mult of 13
+    n=11 (gap target 1/12=0.0833): M=1/8=0.12500  peel mult of 12
+    n=10 (gap target 1/11=0.0909): M=1/8=0.12500  peel mult of 11
+    n= 9 (gap target 1/10=0.1000): M=1/7=0.14286  peel mult of 10
+    n= 8 (gap target 1/9=0.1111): M=2/13=0.15385  peel mult of 9
+    n= 7 (gap target 1/8=0.1250): M=2/13=0.15385  peel mult of 8
+    n= 6 (gap target 1/7=0.1429): M=2/11=0.18182  peel mult of 7
+    base n=6 M=0.18182; top n=13 M=0.11765
+    total dip (base->top) = 0.06417;  base slack (M_base-1/14)=0.11039
+    chain keeps M>=1/14 at every level: True
+
+============================================================================
+READING: removing the perfect-middle parked runner gives the next-level hard core
+with a STRICTLY larger gap; the gap only drops by a small resonance dip per peel,
+staying >=1/14 down to the proven <=7-runner base. Hard inherits from easy, level by
+level. The crux = bounding the per-level dip below the slack (the resonance control).

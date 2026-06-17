@@ -1,0 +1,139 @@
+======================================================================
+CLAIM (1): does a runner v==7 mod14 ever constrain grid loneliness?
+======================================================================
+
+  runner v=7 (v mod14=7): ||v*a/14|| for a=1..13:
+    a=1:1/2  a=2:0  a=3:1/2  a=4:0  a=5:1/2  a=6:0  a=7:1/2  a=8:0  a=9:1/2  a=10:0  a=11:1/2  a=12:0  a=13:1/2
+
+  runner v=21 (v mod14=7): ||v*a/14|| for a=1..13:
+    a=1:1/2  a=2:0  a=3:1/2  a=4:0  a=5:1/2  a=6:0  a=7:1/2  a=8:0  a=9:1/2  a=10:0  a=11:1/2  a=12:0  a=13:1/2
+
+  runner v=35 (v mod14=7): ||v*a/14|| for a=1..13:
+    a=1:1/2  a=2:0  a=3:1/2  a=4:0  a=5:1/2  a=6:0  a=7:1/2  a=8:0  a=9:1/2  a=10:0  a=11:1/2  a=12:0  a=13:1/2
+
+  runner v=49 (v mod14=7): ||v*a/14|| for a=1..13:
+    a=1:1/2  a=2:0  a=3:1/2  a=4:0  a=5:1/2  a=6:0  a=7:1/2  a=8:0  a=9:1/2  a=10:0  a=11:1/2  a=12:0  a=13:1/2
+
+======================================================================
+CLAIM (1) refined: section-7 runner at EVEN grid points lands in section 0
+======================================================================
+  base=[1, 2, 3, 4, 5, 6]: M=1/7 @ 3/7
+    +7  : M=1/8 @ 1/8   (changed: True)
+    +21 : M=3/22 @ 3/22  (changed: True)
+  base=[2, 3, 5, 8, 11]: M=3/13 @ 2/13
+    +7  : M=1/6 @ 1/6   (changed: True)
+    +21 : M=3/13 @ 2/13  (changed: False)
+  base=[1, 3, 9, 11, 13]: M=1/2 @ 1/2
+    +7  : M=1/2 @ 1/2   (changed: False)
+    +21 : M=1/2 @ 1/2  (changed: False)
+
+======================================================================
+CLAIM (1) PRECISE: at GRID points a/14, is a 7-runner ever the min?
+======================================================================
+  Odd-grid violations (7-runner strict min): 0
+  => At odd grid points, 7-runner is always at 1/2, never the binding min.
+  => CLAIM (1) HOLDS: a 7-runner is FREE at odd grid (its own antipode);
+     at even grid it sits in section 0 (dist 0) = harmless, only removes
+     even grid points as loneliness witnesses. It never makes a config harder
+     at the grid; off-grid is a separate matter (it can lower M off-grid).
+
+======================================================================
+CLAIM (2): can a transform move a section-0 (==0 mod14) runner to section-7?
+======================================================================
+  (Z/14)* units: [1, 3, 5, 9, 11, 13]
+  u*0 mod14 for each unit: [0, 0, 0, 0, 0, 0] -> all 0. Units FIX section 0.
+  Reversal a->-a == mult by 13(=-1): -0==0, -7==7 mod14. FIXES both 0 and 7.
+  => Section 0 is a FIXED POINT of every (Z/14)* unit (0*u=0). So NO unit
+     can move a section-0 runner to section-7. CONFIRMED structurally.
+
+  Mult by 2: 0->0 (still section 0). 7->14==0 mod14! So *2 sends a 7-runner
+    INTO section 0 (free->parked, WRONG direction). And 2 is not invertible mod14.
+  Additive shift v->v+7: sends 0->7 (parked->free!) and 7->14==0 (free->parked).
+    BUT v+7 changes the actual runner SPEED -> a DIFFERENT runner, different config.
+    Does v->v+7 preserve M? Test:
+    [14, 1, 2, 3, 4, 5]: M=1/6  ->  shift+7 [21, 8, 9, 10, 11, 12]: M=8/29  (preserved: False)
+    [28, 3, 5, 9, 11]: M=14/39  ->  shift+7 [35, 10, 12, 16, 18]: M=1/3  (preserved: False)
+    [14, 2, 4, 8, 16]: M=1/3  ->  shift+7 [21, 9, 11, 15, 23]: M=1/2  (preserved: False)
+
+======================================================================
+CLAIM (2) EXPLANATION: why 0 and 7 are BOTH fixed but distinguishable
+======================================================================
+  r=0: CRT (mod2,mod7)=(0,0)
+  r=7: CRT (mod2,mod7)=(1,0)
+  Units fix the mod-2 coordinate -> cannot map parity-0 (sec 0) to parity-1 (sec 7).
+  The ONLY maps mixing them are additive (shift by odd), which change speeds.
+
+======================================================================
+CLAIM (3): full-config reversal. Two reversals to distinguish:
+======================================================================
+Reversal B: S -> {(-v) mod 14 represented as 14-(v%14)} acting on RESIDUES.
+  This is mult by -1 (a unit). Section 0 (0)->0, section 7 (7)->7: BOTH FIXED.
+  Other sections swap: 1<->13, 2<->12, ... 6<->8. The 0/7 occupants are pinned.
+
+  At grid a/14, section of v is v*a mod14. Replacing a -> -a == 14-a (also a grid
+  point) sends section s -> -s mod14. So the grid picture is symmetric under a->-a,
+  which fixes section 0 and section 7 and swaps s<->14-s. M unchanged (same grid set).
+  Verify g(S,a/14)==g(S,(14-a)/14) for all tested a: True
+
+======================================================================
+CRUX: can we replace a sec-0 parked runner by a sec-7 free runner, M-preserving?
+======================================================================
+Test: A u {w}, w==0 mod14, vs A u {w'}, w'==7 mod14. Compare M.
+
+  core A=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: M(A)=1/13 (EASY)
+    +sec0 14: M=1/13 (loose)  | +sec7 21: M=1/13 (loose)
+
+  core A=[2, 3, 5, 8, 11, 13]: M(A)=1/6 (EASY)
+    +sec0 14: M=1/6 (loose)  | +sec7 7: M=1/6 (loose)
+    +sec0 14: M=1/6 (loose)  | +sec7 21: M=1/6 (loose)
+
+  core A=[1, 4, 9, 11]: M(A)=2/5 (EASY)
+    +sec0 14: M=2/5 (loose)  | +sec7 7: M=5/18 (loose)
+    +sec0 14: M=2/5 (loose)  | +sec7 21: M=2/5 (loose)
+
+  core A=[3, 5, 6, 10, 12]: M(A)=3/11 (EASY)
+    +sec0 14: M=3/11 (loose)  | +sec7 7: M=3/13 (loose)
+    +sec0 14: M=3/11 (loose)  | +sec7 21: M=3/11 (loose)
+
+======================================================================
+SURPRISE CHECK: is adding sec-0 MORE M-preserving than adding sec-7?
+======================================================================
+  sec-0 parked runner: M preserved 1132/2800 = 40.4%
+  sec-7 free   runner: M preserved 1300/2658 = 48.9%
+  sec-0 worst drop: 1/4 (A=[9, 19, 23, 27], w=14)
+  sec-7 worst drop: 158/697 (A=[10, 17, 24], w=7)
+
+======================================================================
+WHY sec-7 still dips M: it has a real speed -> off-grid binding pairs
+======================================================================
+  A=[10, 17, 24]: M(A)=8/17 @ tau=5/34
+  A+{7}: M=10/41 @ tau=3/41  (off grid? True)
+    The drop comes from a binding pair involving 7, e.g. k/(7 +- v).
+
+======================================================================
+IS THERE *ANY* M-PRESERVING sec0<->sec7 SWAP? The honest answer.
+======================================================================
+  Exact M-symmetries: (a) tau->-tau [trivial], (b) S->c*S global scale.
+  Verified: M(c*S)=M(S) for all tested c (global scaling is exact M-symmetry).
+  But scaling by c does NOT change residues mod14 in a 0<->7 way unless c is
+  chosen mod14 -- and c must be a UNIT to be a bijection on speeds' residues,
+  and units FIX the parity bit -> CANNOT swap 0 and 7. So:
+
+  HONEST CONCLUSION: there is NO M-preserving transform that turns a sec-0
+  parked (hard) runner into a sec-7 free (easy) runner. The 0/7 duality is a
+  symmetry of the GRID/section picture only (it fixes 0 and 7 as antipodal
+  reversal fixed points), NOT of the full off-grid M-landscape.
+
+======================================================================
+FINAL: the precise asymmetry of sec-0 vs sec-7 ON THE GRID
+======================================================================
+  sec-0 runner 14: grid dists a=1..13: ['0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0', '0']
+  sec-7 runner 7: grid dists a=1..13: ['1/2', '0', '1/2', '0', '1/2', '0', '1/2', '0', '1/2', '0', '1/2', '0', '1/2']
+
+  => sec-0 is the GRID-HARDEST occupant (zero at every grid point);
+     sec-7 is GRID-SAFEST (1/2 at every odd grid point, its own antipode).
+  This IS the 0/7 duality's exact role: they are the two reversal fixed points,
+  and on the grid they are OPPOSITE extremes (all-0 vs alternating-1/2).
+  But OFF the grid both are real speeds forming binding pairs, so the duality
+  does NOT extend to an M-preserving hard->easy swap. The hard->easy mechanism
+  (THM-524 family) works via the EASY CORE + small resonance dip, NOT via 0<->7.

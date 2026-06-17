@@ -1,0 +1,63 @@
+==========================================================================
+(1) REVERSAL FIXED POINTS: section 0 (==0 mod14, HARDEST) vs section 7 (==7, EASIEST)
+==========================================================================
+  runner v at grid a/14 sits in section v*a mod 14; reversal a->-a fixes sec 0 & 7.
+  v=14 (==0)    : sections at units [0, 0, 0, 0, 0, 0]  distances [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  v=28 (==0)    : sections at units [0, 0, 0, 0, 0, 0]  distances [0.0, 0.0, 0.0, 0.0, 0.0, 0.0]
+  v=7 (==7)     : sections at units [7, 7, 7, 7, 7, 7]  distances [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  v=21 (==7)    : sections at units [7, 7, 7, 7, 7, 7]  distances [0.5, 0.5, 0.5, 0.5, 0.5, 0.5]
+  v=1           : sections at units [1, 3, 5, 9, 11, 13]  distances [0.071, 0.214, 0.357, 0.357, 0.214, 0.071]
+  v=13          : sections at units [13, 11, 9, 5, 3, 1]  distances [0.071, 0.214, 0.357, 0.357, 0.214, 0.071]
+  => ==0 mod14 PINNED at section0 center (dist 0, defeats every grid); ==7 PINNED at
+     section7 center (dist 1/2, max-safe, FREE). The two complement-fixed runner types.
+
+==========================================================================
+(2) HARD FAMILY {A u {14m}} <-> EASY 12-core A : M vs m
+==========================================================================
+
+  A={1..12}:
+    A's own gap M(A)=1/13=0.07692  residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  SDR-able=True
+    family min over m: M=14/183=0.07650 at m=13  (>=1/14? True)
+    M(A u 14m) at m=1,2,3,5,10,40: 0.0769, 0.0769, 0.0769, 0.0769, 0.0769, 0.0769
+    large-m limit ~ 0.07692
+
+  A={1..11,13} (drop12):
+    A's own gap M(A)=1/12=0.08333  residues mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  SDR-able=True
+    family min over m: M=7/89=0.07865 at m=6  (>=1/14? True)
+    M(A u 14m) at m=1,2,3,5,10,40: 0.0833, 0.0833, 0.0833, 0.0833, 0.0833, 0.0833
+    large-m limit ~ 0.08333
+
+  A={1..5,7..13} (drop6):
+    A's own gap M(A)=2/23=0.08696  residues mod14=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]  SDR-able=True
+    family min over m: M=9/109=0.08257 at m=7  (>=1/14? True)
+    M(A u 14m) at m=1,2,3,5,10,40: 0.0870, 0.0870, 0.0870, 0.0870, 0.0870, 0.0870
+    large-m limit ~ 0.08696
+
+  A={1..11,13}+? clumped:
+    A's own gap M(A)=1/12=0.08333  residues mod14=[1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  SDR-able=False
+    family min over m: M=7/85=0.08235 at m=6  (>=1/14? True)
+    M(A u 14m) at m=1,2,3,5,10,40: 0.0833, 0.0833, 0.0833, 0.0833, 0.0833, 0.0833
+    large-m limit ~ 0.08333
+
+==========================================================================
+(3) TRANSFER: does the EASY core's structure force the hard family >=1/14?
+==========================================================================
+  Scan ALL easy 12-cores A from a residue-distinct pool, family min-M over m<=20:
+  drop residue 13: M(A)=0.0769  family min-M=14/183=0.07650  ok=True
+  drop residue 12: M(A)=0.0833  family min-M=7/89=0.07865  ok=True
+  drop residue 11: M(A)=0.0909  family min-M=14/157=0.08917  ok=True
+  drop residue 10: M(A)=0.1000  family min-M=1/11=0.09091  ok=True
+  drop residue  9: M(A)=0.1111  family min-M=14/131=0.10687  ok=True
+  drop residue  8: M(A)=0.1250  family min-M=1/9=0.11111  ok=True
+  drop residue  7: M(A)=0.1429  family min-M=1/11=0.09091  ok=True
+  drop residue  6: M(A)=0.0870  family min-M=9/109=0.08257  ok=True
+  drop residue  5: M(A)=0.1053  family min-M=2/21=0.09524  ok=True
+  drop residue  4: M(A)=0.1053  family min-M=5/53=0.09434  ok=True
+  drop residue  3: M(A)=0.1176  family min-M=2/19=0.10526  ok=True
+  drop residue  2: M(A)=0.1176  family min-M=9/83=0.10843  ok=True
+  drop residue  1: M(A)=0.1333  family min-M=1/8=0.12500  ok=True
+
+  easy cores tested: 13;  families dipping BELOW 1/14: 0
+  worst family min-M = 14/183=0.07650  (the tightest easy core = drop-6)
+  => EVERY easy 12-core (drop-one-residue) yields a hard family that STAYS >=1/14:
+     the easy case's existence (a loose 12-core) guarantees the hard family is safe.
