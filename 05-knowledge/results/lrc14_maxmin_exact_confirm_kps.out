@@ -1,0 +1,17 @@
+Exact-verified 400 lowest-float candidates.
+Smallest 12 by EXACT max-min:
+  exact=1/14=0.0714286 (float screen said 0.06250) (=1/14 tight)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  exact=1/14=0.0714286 (float screen said 0.06250) (=1/14 tight)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  exact=3/41=0.0731707 (float screen said 0.06624)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  exact=2/27=0.0740741 (float screen said 0.06469)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+  exact=2/27=0.0740741 (float screen said 0.07045)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 20)
+  exact=3/40=0.0750000 (float screen said 0.06838)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39)
+  exact=4/53=0.0754717 (float screen said 0.06731)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 52)
+  exact=4/53=0.0754717 (float screen said 0.06971)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 48)
+  exact=1/13=0.0769231 (float screen said 0.06397)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 27)
+  exact=1/13=0.0769231 (float screen said 0.06907)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 37)
+  exact=1/13=0.0769231 (float screen said 0.07045)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 60)
+  exact=1/13=0.0769231 (float screen said 0.07045)  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 20)
+
+TRUE smallest exact max-min over all verified: 1/14 = 0.07142857142857142
+1/14 = 0.07142857142857142   Any below 1/14? 0

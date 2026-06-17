@@ -1,0 +1,23 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_tight_locus_deep_kps.py:13: SyntaxWarning: invalid escape sequence '\{'
+  [2] Structured resonant families: {1..13}\{j} \u222a {14m} and \u222a{multiples}, exact L.
+==============================================================================
+[1] BFS over tight configs: 1- and 2-element replacements (w<=140) from AP & sporadic
+==============================================================================
+tight configs found: 2 (capped at 6000)
+primitive tight: 2
+distinct lcms (primitive): [360360]
+max lcm (primitive): 360360
+max element (primitive): 24
+ALL primitive tight configs found:
+   lcm=  360360 max= 13  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+   lcm=  360360 max= 24  (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+
+==============================================================================
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_tight_locus_deep_kps.py", line 117, in <module>
+    print("[2] structured resonant family {1..13}\\{j} \u222a {14m}: any tight?")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u222a' in position 43: character maps to <undefined>

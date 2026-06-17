@@ -1,0 +1,30 @@
+DECOUPLING FLOOR: core = {1..13}\{e}, add w->inf.  L -> (6/7)*meas(G_e)
+    e    meas(G_e)   (6/7)meas(G_e)=floor  >=1/1260?
+    1         1/14                   3/49        yes
+    2       11/364                33/1274        yes
+    3       11/273                 22/637        yes
+    4      97/4004              291/14014        yes
+    5     103/2860              309/10010        yes
+    6        7/858                  1/143        yes
+    7   4319/51480               617/8580        yes
+    8    950/21021             1900/49049        yes
+    9   3273/56056            9819/196196        yes
+   10   1520/63063            3040/147147        yes
+   11   4733/76440             4733/89180        yes
+   12    426/35035            2556/245245        yes
+   13  6617/194040            6617/226380        yes
+  MIN decoupling floor over e = 1/143 = 6.993007e-03
+  (this is the smallest L achievable by sending ONE element to infinity)
+
+Numerical check e=12: L({1..11,13,w}) for large w should approach (6/7)*426/35035:
+   w=    500: L=1.04449836e-02   target 1.04222308e-02
+   w=   1000: L=1.04449836e-02   target 1.04222308e-02
+   w=   5000: L=1.04449836e-02   target 1.04222308e-02
+   w=  20000: L=1.04164122e-02   target 1.04222308e-02
+   w= 100000: L=1.04221264e-02   target 1.04222308e-02
+
+TWO-ELEMENT growth: drop {12,13}, add {w, w2} large; smallest L over scan:
+   best L=1.765377e-02 at (26, 149)  (vs 1/1260=7.936508e-04)
+
+Drop {6,12}, add {w,w2} (6 and 12 are the two smallest-gap drops):
+   best L=1.102883e-02 at (23, 24)

@@ -1,0 +1,36 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_perturbation_gap_structure_kps.py:10: SyntaxWarning: invalid escape sequence '\ '
+  speed e, a set  G_e := [0,1) \ (union of danger arcs of C\{e})  opens up: the
+==============================================================================
+
+#### TIGHT CONFIG AP {1..13} : L = 0 (must be 0)
+   For each dropped speed e, the e-exclusive gap G_e (arcs only e covered):
+     drop e=  1: meas(G_e)=      1/14 = 7.142857e-02 ,  #arcs=2
+     drop e=  2: meas(G_e)=    11/364 = 3.021978e-02 ,  #arcs=2
+     drop e=  3: meas(G_e)=    11/273 = 4.029304e-02 ,  #arcs=4
+     drop e=  4: meas(G_e)=   97/4004 = 2.422577e-02 ,  #arcs=4
+     drop e=  5: meas(G_e)=  103/2860 = 3.601399e-02 ,  #arcs=8
+     drop e=  6: meas(G_e)=     7/858 = 8.158508e-03 ,  #arcs=4
+     drop e=  7: meas(G_e)=4319/51480 = 8.389666e-02 ,  #arcs=6
+     drop e=  8: meas(G_e)= 950/21021 = 4.519290e-02 ,  #arcs=4
+     drop e=  9: meas(G_e)=3273/56056 = 5.838804e-02 ,  #arcs=6
+     drop e= 10: meas(G_e)=1520/63063 = 2.410288e-02 ,  #arcs=4
+     drop e= 11: meas(G_e)=4733/76440 = 6.191784e-02 ,  #arcs=10
+     drop e= 12: meas(G_e)= 426/35035 = 1.215927e-02 ,  #arcs=4
+     drop e= 13: meas(G_e)=6617/194040 = 3.410122e-02 ,  #arcs=12
+
+#### TIGHT CONFIG sporadic {1..11,13,24} : L = 0 (must be 0)
+   For each dropped speed e, the e-exclusive gap G_e (arcs only e covered):
+     drop e=  1: meas(G_e)=      5/84 = 5.952381e-02 ,  #arcs=4
+     drop e=  2: meas(G_e)=    11/364 = 3.021978e-02 ,  #arcs=2
+     drop e=  3: meas(G_e)=    11/273 = 4.029304e-02 ,  #arcs=4
+     drop e=  4: meas(G_e)=   97/4004 = 2.422577e-02 ,  #arcs=4
+     drop e=  5: meas(G_e)=  101/3003 = 3.363303e-02 ,  #arcs=8
+     drop e=  6: meas(G_e)= 241/12012 = 2.006327e-02 ,  #arcs=4
+     drop e=  7: meas(G_e)=5875/72072 = 8.151571e-02 ,  #arcs=6
+     drop e=  8: meas(G_e)= 899/42042 = 2.138338e-02 ,  #arcs=8
+     drop e=  9: meas(G_e)=3273/56056 = 5.838804e-02 ,  #arcs=6
+     drop e= 10: meas(G_e)=1520/63063 = 2.410288e-02 ,  #arcs=4
+     drop e= 11: meas(G_e)=  391/5880 = 6.649660e-02 ,  #arcs=10
+     drop e= 13: meas(G_e)= 697/17640 = 3.951247e-02 ,  #arcs=12
+     drop e= 24: meas(G_e)= 426/35035 = 1.215927e-02 ,  #arcs=4
+==============================================================================

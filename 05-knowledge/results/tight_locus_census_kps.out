@@ -1,0 +1,11 @@
+AP {1..13} tight? True
+sporadic {1..11,13,24} tight? True
+{1..11,13,36} L = 1/1260
+
+=== k=1 replacements, hi=200 ===
+  scanned 2444 k=1 candidates; tight so far 2
+
+=== k=2 replacements, hi=90 ===
+  scanned 240318 k=2 candidates; tight so far 2
+
+=== k=3 replacements, hi=40 ===

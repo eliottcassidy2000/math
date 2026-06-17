@@ -1,0 +1,53 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_family_Lm_closedform_kps.py:10: SyntaxWarning: invalid escape sequence '\ '
+  half-width 1/(14m)). The opened L = meas(G_12 \ D_m).
+G_12 four arcs:
+  [15/182,13/154] len=2/1001 center~0.0834
+  [29/70,41/98] len=1/245 center~0.4163
+  [57/98,41/70] len=1/245 center~0.5837
+  [141/154,167/182] len=2/1001 center~0.9166
+
+L(m)=meas(G_12 \ D_m), m=14..120:
+  smallest 8:
+    m= 24: L=0=0.000000e+00
+    m= 36: L=1/1260=7.936508e-04
+    m= 48: L=13/5880=2.210884e-03
+    m= 60: L=1/294=3.401361e-03
+    m= 72: L=283/64680=4.375387e-03
+    m= 84: L=563/105105=5.356548e-03
+    m= 96: L=5219/840840=6.206888e-03
+    m=108: L=6497/945945=6.868264e-03
+
+Per-arc dissection at m=36:
+  arc[15/182,13/154] len=2/1001: covered by 36 = 2/1001, residual = 0
+      nearby 36-centers k/36: ['1/12']
+  arc[29/70,41/98] len=1/245: covered by 36 = 13/3528, residual = 1/2520
+      nearby 36-centers k/36: ['5/12']
+  arc[57/98,41/70] len=1/245: covered by 36 = 13/3528, residual = 1/2520
+      nearby 36-centers k/36: ['7/12']
+  arc[141/154,167/182] len=2/1001: covered by 36 = 2/1001, residual = 0
+      nearby 36-centers k/36: ['11/12']
+
+Compare m=24 (TIGHT, L=0) vs m=36:
+  m=24:
+    arc center~0.0834: residual=0  centers in arc: ['1/12']
+    arc center~0.4163: residual=0  centers in arc: ['5/12']
+    arc center~0.5837: residual=0  centers in arc: ['7/12']
+    arc center~0.9166: residual=0  centers in arc: ['11/12']
+  m=36:
+    arc center~0.0834: residual=0  centers in arc: ['1/12']
+    arc center~0.4163: residual=1/2520  centers in arc: ['5/12']
+    arc center~0.5837: residual=1/2520  centers in arc: ['7/12']
+    arc center~0.9166: residual=0  centers in arc: ['11/12']
+
+KEY: 24's centers include 10/24=5/12 and 14/24=7/12 EXACTLY (=central arc
+centers), so 24 covers the central arcs fully. 36's centers near 5/12 are
+14/36=0.3889 and 15/36=0.4167; 15/36 sits at the RIGHT edge so the LEFT
+part of the central arc [29/70,41/98] from 5's boundary 29/70 to 36's left
+boundary 15/36-1/504=209/504 stays lonely: 209/504-29/70=1/2520.
+  5/12 = 5/12; 15/36=5/12; equal? True
+  So 15/36 = 5/12 exactly. 36-arc at 5/12 has half-width 1/504 < 12-arc's 1/168.
+  The 12-arc covered [5/12-1/168,5/12+1/168]; 36 only covers [5/12-1/504,5/12+1/504].
+  The gap G_12 central arc was [29/70,41/98] (= the part of 12-arc not covered
+  by 5 on the left and 13 on the right). 36 covers [209/504, 5/12]=its left half
+  reaching only to 5/12-1/504=209/504, leaving [29/70,209/504] lonely.
+  29/70 is 5's right boundary 2/5+1/70. So the RESIDUAL is the 5<->36 clash.

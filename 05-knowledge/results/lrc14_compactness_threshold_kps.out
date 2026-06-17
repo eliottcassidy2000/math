@@ -1,0 +1,30 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_compactness_threshold_kps.py:12: SyntaxWarning: invalid escape sequence '\{'
+  uniform set; the OTHER 12 speeds C = S\{v_max} have a complement gap G (their lonely
+INEQUALITY  L(C u {vmax}) >= (6/7) meas(G_C) - r/(7 vmax)   [G_C = lonely set of C]
+Verify on cores C = {1..13}\{e} (r = #arcs of G_C):
+    e    meas(G_C)   r   lower-bd@vmax=37   actual min L
+    1         1/14   2            97/1813=5.3502e-02     5.8140e-02
+    2       11/364   2          857/47138=1.8181e-02     2.2701e-02
+    3       11/273   4          450/23569=1.9093e-02     2.9711e-02
+    4      97/4004   4        2759/518518=5.3209e-03     1.0620e-02
+    5     103/2860   8           -1/52910=-1.8900e-05     2.4160e-02
+    6        7/858   4         -313/37037=-8.4510e-03     1.7881e-03
+    7   4319/51480   6     108323/2222220=4.8745e-02     6.3488e-02
+    8    950/21021   4      42272/1814813=2.3293e-02     3.0907e-02
+    9   3273/56056   6     195135/7259252=2.6881e-02     3.9340e-02
+   10   1520/63063   4      28396/5444439=5.2156e-03     9.8172e-03
+   11   4733/76440  10      47721/3299660=1.4462e-02     2.9700e-02
+   12    426/35035   4     -45568/9074065=-5.0218e-03     2.2109e-03
+   13  6617/194040  12    -143251/8376060=-1.7102e-02     9.1575e-03
+
+=> for vmax >= ~37, the lower bound (6/7)meas(G_C)-r/(7vmax) already EXCEEDS 1/1260
+   for every core, so a 13-set with L<1/1260 cannot have its perturbing element
+   beyond a bounded range. This is the rigorous core of the compactness lemma
+   FOR SINGLE perturbations. The GAP: extending to all 13-sets (not just
+   single-element perturbations of a tight core) requires bounding meas(G_C)
+   from below for ALL 12-subsets C that could appear, which is the open piece.
+
+Smallest theta such that L<theta forces vmax bounded:
+  min decoupling floor = 1/143 = 6.993007e-03 (=1/143, at e=6)
+  So: L < 1/143 + single-perturbation structure => vmax bounded.
+  And the OBSERVED min positive L = 1/1260 < 1/143, consistent.

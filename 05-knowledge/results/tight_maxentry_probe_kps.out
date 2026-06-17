@@ -1,0 +1,5 @@
+=== exhaustive 13-subsets of {1..18} (C(18,13)=8568) ===
+  scanned 8568, tight 1, t=8.5s
+=== exhaustive 13-subsets of {1..20} (C(20,13)=77520) ===
+  scanned 77520, tight 2, t=94.7s
+=== exhaustive 13-subsets of {1..24} (C(24,13)=2,496,144) ===

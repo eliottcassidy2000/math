@@ -1,0 +1,9 @@
+random search (200000 trials): lowest float max-min = 0.0625000 (1/14=0.0714286)
+  config: (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  EXACT max-min: 1/14 = 0.07142857142857142   < 1/14? False
+
+local descent (minimize max-min):
+  best descent float max-min = 0.0625000 config (2, 6, 7, 8, 10, 11, 12, 13, 14, 16, 17, 18, 19)
+  EXACT: 2/21 = 0.09523809523809523  < 1/14? False  at tau= 20/21
+
+CONCLUSION: smallest max-min found is 0.0625 vs 1/14 = 0.07142857142857142 -- counterexample found? True

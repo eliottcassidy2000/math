@@ -1,0 +1,18 @@
+==============================================================================
+BFS over TIGHT configs from AP {1..13}, single-element replacements, w<=200
+==============================================================================
+tight configs reachable (w<=200, capped): 2
+  primitive among them: 2
+  max element seen in any tight config: 24
+  max lcm seen in any tight config: 360360
+  candidates tested: 4861
+
+  distinct lcms among primitive tight configs: [360360]
+  number of distinct lcms: 1
+
+  TIGHT configs with the LARGEST max element (primitive only):
+     max=  24 lcm=  360360  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+     max=  13 lcm=  360360  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+
+  Single tight replacements directly from AP {1..13}  (e -> w):
+     12 -> [24]

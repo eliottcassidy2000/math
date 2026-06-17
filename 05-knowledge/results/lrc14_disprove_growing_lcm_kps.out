@@ -1,0 +1,42 @@
+=== (1) drop-6 family extended: {1,2,3,4,5,7,8,9,10,11,12,13,w} ===
+   min positive L = 19/10626=0.001788 at w=69; #below 1/1260 = 0
+   samples (w, L, float):
+      w=   14  L=0.008159  lcm=360360
+      w=   69  L=0.001788  lcm=8288280
+      w=  138  L=0.004894  lcm=8288280
+      w=  207  L=0.005929  lcm=8288280
+      w=  690  L=0.007246  lcm=8288280
+      w= 2013  L=0.007023  lcm=21981960
+
+=== (2) coordinated multi-doublings of AP entries (keep tightness?) ===
+   single e->2e (which preserve tightness?):
+      7->14: L=0.022672  lcm=360360
+      8->16: L=0.010165  lcm=720720
+      9->18: L=0.013322  lcm=360360
+      10->20: L=0.001020  lcm=360360
+      11->22: L=0.011039  lcm=360360
+      12->24: TIGHT  lcm=360360
+      13->26: L=0.005495  lcm=360360
+   double pairs e1->2e1, e2->2e2 (look for tight with big lcm):
+   best double-doubling: L=1/980=0.001020 S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 24] lcm=360360
+   triple e->m*e coordinated (m up to 6) keeping tightness:
+   best triple: L=3859/420420=0.009179 S=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20, 24] lcm=360360 via drops=(6, 10, 12) x2
+
+=== (3) S551 sieve-blind {1..12, M}: exact for M<=2000, decoupling limit for large ===
+   core {1..12} lonely measure meas(G_core) = 6617/194040 = 0.03410122
+   decoupling limit L({1..12,M}) -> (6/7)*meas(G_core) = 6617/226380 = 0.02922961 as M->inf
+   exact samples (M moderate):
+   M=   13  L=0.00000000  (=0)  trend-> 0.02922961
+   M=   17  L=0.03200038  (=105559/3298680)  trend-> 0.02922961
+   M=   19  L=0.03284808  (=121103/3686760)  trend-> 0.02922961
+   M=   23  L=0.03348010  (=149419/4462920)  trend-> 0.02922961
+   M=   29  L=0.03081714  (=173413/5627160)  trend-> 0.02922961
+   M=   37  L=0.03339922  (=21799/652680)  trend-> 0.02922961
+   M=   53  L=0.02871038  (=295261/10284120)  trend-> 0.02922961
+   M=  101  L=0.03254535  (=127565/3919608)  trend-> 0.02922961
+   M=  211  L=0.02995430  (=613201/20471220)  trend-> 0.02922961
+   M=  503  L=0.02945968  (=410761/13943160)  trend-> 0.02922961
+   M= 1009  L=0.02900423  (=5678633/195786360)  trend-> 0.02922961
+   M= 2003  L=0.02943461  (=317781/10796170)  trend-> 0.02922961
+   CONCLUSION: as the single huge sieve-blind speed M grows, L INCREASES toward
+   (6/7)*meas(G_core) > 0; it never -> 0. Large lcm does NOT drive L down.

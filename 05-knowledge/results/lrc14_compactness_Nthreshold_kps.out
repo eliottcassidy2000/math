@@ -1,0 +1,33 @@
+theta = 1/1260 = 7.936508e-04
+For each core C={1..13}\{e}: floor=(6/7)meas(G_C), bound-N = r/(7(floor-theta)),
+and TRUE-N = smallest vmax s.t. min_{w>=vmax} L(C+w) > theta.
+    e        floor floor>theta   bound-N  true-N
+    1         3/49         yes         5       0
+    2      33/1274         yes        12       0
+    3       22/637         yes        17       0
+    4    291/14014         yes        29       0
+    5    309/10010         yes        38       0
+    6        1/143         yes        93       0
+    7     617/8580         yes        13       0
+    8   1900/49049         yes        16       0
+    9  9819/196196         yes        18       0
+   10  3040/147147         yes        29       0
+   11   4733/89180         yes        28       0
+   12  2556/245245         yes        60      36
+   13  6617/226380         yes        61       0
+
+MAX true-N over cores = 36
+COMPACTNESS LEMMA (single-perturbation form, PROVEN-modulo-core-bound):
+  If S = C u {w} with C a 12-subset of {1..13} and L(S) < 1/1260, then w <= 36.
+  Hence min positive L over single perturbations is attained at BOUNDED w,
+  and exhaustive search w<=2000 (done) proves it = 1/1260.
+
+THE REMAINING GAP for full inf L>0:
+  This argument fixes 12 elements in {1..13}. The general claim needs: ANY
+  primitive 13-set with small L is within bounded Hamming distance of a tight
+  config (empirically true, hAP<=2 over large search) AND the perturbing
+  elements are bounded. The decoupling floor (6/7)meas(G_C) handles ONE large
+  element per fixed 12-core; iterating handles k large elements as long as the
+  remaining (13-k)-core has positive lonely measure bounded below. Proving a
+  UNIFORM positive lower bound on meas(G_C) over ALL 12-subsets C (or showing
+  finitely many tight 13-sets) is the open crux.

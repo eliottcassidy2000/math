@@ -1,0 +1,8 @@
+=== Logic check: does ANY config approach MM < 1/14? ===
+   1/14 = 0.07142857
+   random (25000): min float MM = 0.07142857 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]; #(float<1/14)=0
+   hill-climb-MIN: min float MM = 0.07142857 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+
+=== Exact verification of the lowest float candidates ===
+   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: exact MM = 1/14 = 0.07142857  (not (>= 1/14))
+   [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: exact MM = 1/14 = 0.07142857  (not (>= 1/14))

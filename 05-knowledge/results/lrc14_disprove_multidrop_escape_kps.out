@@ -1,0 +1,17 @@
+=== (A) Single-drop minimizers, extended window Wmax=600 ===
+  drop e= 1: min L = 11/210 = 0.052381 at w=15, lcm=360360, below 1/1260? False
+  drop e= 2: min L = 1/68 = 0.014706 at w=17, lcm=6126120, below 1/1260? False
+  drop e= 3: min L = 109/4641 = 0.023486 at w=17, lcm=6126120, below 1/1260? False
+  drop e= 4: min L = 73/6916 = 0.010555 at w=19, lcm=6846840, below 1/1260? False
+  drop e= 5: min L = 87/4004 = 0.021728 at w=19, lcm=6846840, below 1/1260? False
+  drop e= 6: min L = 19/10626 = 0.001788 at w=69, lcm=8288280, below 1/1260? False
+  drop e= 7: min L = 57191/2522520 = 0.022672 at w=14, lcm=360360, below 1/1260? False
+  drop e= 8: min L = 263/25872 = 0.010165 at w=16, lcm=720720, below 1/1260? False
+  drop e= 9: min L = 47/3528 = 0.013322 at w=18, lcm=360360, below 1/1260? False
+  drop e=10: min L = 1/980 = 0.001020 at w=20, lcm=360360, below 1/1260? False
+  drop e=11: min L = 17/1540 = 0.011039 at w=22, lcm=360360, below 1/1260? False
+  drop e=12: min L = 1/1260 = 0.000794 at w=36, lcm=360360, below 1/1260? False
+  drop e=13: min L = 1/182 = 0.005495 at w=26, lcm=360360, below 1/1260? False
+
+  Global single-drop min: 1/1260
+  THRESH = 1/1260 = 0.000794

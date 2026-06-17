@@ -1,0 +1,26 @@
+LRC(14) lonely-measure synthesis re-verification (kind-pasteur, 2026-06-17)
+All exact (Python Fraction), independent reimplementation.
+
+TIGHT CONFIGS:
+  L(AP {1..13}) = 0, lcm 360360
+  L(sporadic {1..11,13,24}) = 0, lcm 360360
+EXTREMIZER:
+  L({1..11,13,36}) = 1/1260 exactly (= min positive single-perturbation L)
+MAX-MIN (two independent enumeration methods agree):
+  AP: 1/14 at tau=13/14 ; sporadic: 1/14 at tau=3/14 ; 12->36: 3/41 (loose)
+  => LRC(14) holds with EQUALITY on tight locus; zero counterexamples
+CENSUS:
+  [1..18] all 8568 13-subsets: ONLY the AP is tight
+  k=1 replacement of AP (w<=300): ONLY sporadic {1..11,13,24}
+  family {1..11,13,W}: tight ONLY at W=24; L=1/1260 at 36; rises to ~0.0104, never ->0
+DECOUPLING FLOORS (single-element cores {1..13}\{e}):
+  min (6/7)*meas(G_C) = 1/143 at e=6  (matches claim exactly)
+CRUX / meas(G_C):
+  min meas(G_C) over 12-subsets of [1..16] = 7/858 at {1..5,7..13}; ZERO tight 12-sets in [1..16]
+  random large-entry 12-sets (to 120): min meas >= 0.106 -- meas does NOT ->0 with lcm
+LRC(12) LEVER:
+  over 12-subsets of {1..14}: 1 tight at gap 1/13 (LRC(12) equality), 0 tight at gap 1/14 (min 7/858)
+SUB-1/1260 HUNT:
+  single-pert (w<=2000): nothing below 1/1260
+  drop-6 family minimizer = 19/10626 at w=69 (large w, still ABOVE 1/1260)
+  2-drop scan (84318 configs, entries<=60): ZERO below 1/1260

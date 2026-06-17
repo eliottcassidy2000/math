@@ -1,0 +1,18 @@
+=== (1) TIGHT 12-sets census in small windows ===
+   primitive tight 12-sets in [1,13]: 0
+   primitive tight 12-sets in [1,14]: 0
+   primitive tight 12-sets in [1,15]: 0
+   primitive tight 12-sets in [1,16]: 0
+
+=== (2) Minimize meas(G_C) over 12-sets, growing max entry ===
+   max-entry<= 13: min meas(G_C) = 0.00815851 (=7/858) at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) lcm=360360
+   max-entry<= 16: min meas(G_C) = 0.00815851 (=7/858) at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) lcm=360360
+   max-entry<= 20: min meas(G_C) = 0.00917892 (=3859/420420) at (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20) lcm=360360
+   max-entry<= 30: min meas(G_C) = 0.03101841 (=15503/499800) at (1, 3, 4, 5, 7, 10, 11, 13, 16, 17, 18, 25) lcm=61261200
+   max-entry<= 50: min meas(G_C) = 0.03410122 (=6617/194040) at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) lcm=27720
+   max-entry<=100: min meas(G_C) = 0.03410122 (=6617/194040) at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) lcm=27720
+
+=== (3) Hunt NEW tight 12-sets with large lcm (1- and 2-perturbations of {1..12}) ===
+   new tight 12-sets found (excluding pure {1..12}): 0
+   => if the ONLY tight 12-sets are {1..12} and near-relatives (bounded lcm),
+      then meas(G_C) is bounded below on every OTHER 12-core => uniform floor plausible.

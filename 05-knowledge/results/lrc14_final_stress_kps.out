@@ -1,0 +1,41 @@
+==============================================================================
+[A] tight census: 13-subsets of [1,24] with >=10 of {1..13}, contain 1
+==============================================================================
+tested 40063; tight: 2
+   lcm=360360 max=13 prim=True (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+   lcm=360360 max=24 prim=True (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+
+==============================================================================
+[B] single-stranger tightness: {1..11,13} + w, w=1..400 -> which w tight?
+==============================================================================
+tight w (covering all 4 gaps of {1..11,13}): [12, 24]
+for each AP-drop-j core, the tightening strangers w<=400:
+   drop  1: tight strangers = [1]
+   drop  2: tight strangers = [2]
+   drop  3: tight strangers = [3]
+   drop  4: tight strangers = [4]
+   drop  5: tight strangers = [5]
+   drop  6: tight strangers = [6]
+   drop  7: tight strangers = [7]
+   drop  8: tight strangers = [8]
+   drop  9: tight strangers = [9]
+   drop 10: tight strangers = [10]
+   drop 11: tight strangers = [11]
+   drop 12: tight strangers = [12, 24]
+   drop 13: tight strangers = [13]
+
+==============================================================================
+[C] two-stranger L-minimization: {1..13} drop j1,j2 + two strangers <=200; beat 1/1260?
+==============================================================================
+best two-stranger float L: 0.0010204081632653184 (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20, 24)
+configs with float L < 1/1260: 0
+  NONE below 1/1260 (exact-confirm of float-best):
+   float-best exact L = 1/980 = 0.0010204081632653062
+
+==============================================================================
+[D] L vs lcm: single-stranger {1..11,13}+w sweep, min L per lcm decade
+==============================================================================
+   lcm~1e5: min L=1/1260=0.000793650794 at w=36 (lcm=360360)
+   lcm~1e6: min L=5219/840840=0.00620688835 at w=96 (lcm=1441440)
+   lcm~1e7: min L=2914/371371=0.00784660084 at w=53 (lcm=19099080)
+   lcm~1e8: min L=102456/10895885=0.00940318294 at w=311 (lcm=112071960)

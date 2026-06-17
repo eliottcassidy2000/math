@@ -47,15 +47,17 @@ VERIFIED: `L·14·lcm ∈ ℤ` for the AP, the extremizers, the sporadic, and Si
 For any family `F` of primitive 13-sets with `lcm(S) ≤ M` (`∀S∈F`):
 `inf{ L(S) : S∈F, L(S)>0 } ≥ 1/(14M) > 0` (B). Hence:
 
-> **`inf_S L(S) > 0` ⟺ the `L`-minimizing configs have bounded `lcm`** (no sequence with
-> `lcm → ∞` and `L → 0`). The bounded-`lcm` part is FREE (quantization B); scale-invariance (A)
-> kills the dilation direction; the THM-518 stranger-decoupling kills the one-entry-`→∞`
-> direction (`L → (6/7)·meas(bounded core) > 0`). The open content is exactly the
-> remaining escape: configs with `lcm → ∞` but bounded "shape."
+> **`inf_S L(S) > 0` ⟸ the `L`-minimizing configs have bounded `lcm`** (quantization B gives
+> `inf ≥ 1/(14M)` over any `lcm≤M` family). Scale-invariance (A) kills dilation; THM-518
+> stranger-decoupling kills the one-entry-`→∞` direction (`L → (6/7)·meas(bounded core) > 0`).
 
-This is a **geometry-of-numbers / compactness** route to `inf L>0`, complementary to the
-analytic Bedert-level-bound route (OPEN-Q-097): instead of bounding the alternating singular
-series, bound the *lcm of the extremizers*.
+> **CORRECTION (THM-523, the prove/disprove dialectic):** the clean form "small `L` ⟹ bounded
+> `lcm`" is **FALSE** — near-tight 12-cores can carry `lcm ~ 10^7` with small `L` (e.g.
+> `{1,3,4,5,7,8,9,10,11,12,13,17,25}`, `lcm≈3·10^7`, `L=2/425`). The quantization `L≥1/(14 lcm)`
+> still holds, but the correct compactness bounds the **perturbing ELEMENTS** (via the
+> decoupling floor `L(C∪{w})≥(6/7)meas(G_C)−r/(7w)`, THM-523 B), not the lcm. The true reduction
+> of `inf L>0` is THM-523 D: a **uniform lower bound on `meas(G_C)` over all 12-subsets** (≡
+> finiteness of the tight locus), NOT "bounded lcm of the extremizers."
 
 ## D. Correction of the inf estimate (MISTAKE-075): `inf L ≤ 1/1260`, not `0.0052`
 

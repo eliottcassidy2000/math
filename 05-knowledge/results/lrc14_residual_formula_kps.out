@@ -1,0 +1,21 @@
+Champion clash a=5,b=36,p=2,q=15:
+  q/b - p/a = 1/60
+  minus 1/(14a)+1/(14b) = 41/2520
+  residual Delta = 1/2520 = 3.968254e-04
+  2*Delta = 1/1260 (two symmetric clashes) ; 1/1260=1/1260
+  match: True
+
+--- General principle ---
+Residual length of a clash between a-arc (center p/a) and b-arc (center q/b),
+b-arc just to the right, no other center between:
+  Delta(a,b,p,q) = q/b - p/a - 1/(14a) - 1/(14b)
+This is POSITIVE iff the two 1/14-arcs fail to meet, i.e. the configuration
+is loose there. The two competing speeds in the champion are 5 and 36 —
+NOT the dropped 12 nor added 36 alone; it's the 5<->36 interface.
+
+--- Global single-perturbation minimum over AP, w in 14..2000 ---
+  global min positive L = 1/1260 = 7.936508e-04 at (e,w)=(12, 36)
+  number of (e,w) achieving exactly 1/1260 (w<=2000): 1
+    drop 12 -> 36:  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]
+  distinct configs at L=1/1260: 1
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36]

@@ -1,0 +1,34 @@
+G_12 arcs (the points ONLY speed 12 protected in AP):
+  [15/182,13/154] len=2/1001  near 12-center k/12=1/12=0.0833
+  [29/70,41/98] len=1/245  near 12-center k/12=5/12=0.4167
+  [57/98,41/70] len=1/245  near 12-center k/12=7/12=0.5833
+  [141/154,167/182] len=2/1001  near 12-center k/12=11/12=0.9167
+
+Why these 4 arcs? 12's danger centers are k/12. The gap is the part of
+12's danger arc [k/12-1/168, k/12+1/168] NOT covered by speeds 1..11,13.
+12's arc half-width = 1/168. Listing the 4 gap arcs vs the 12-arc they sit in:
+
+Now ADD w=36 (half-width 1/(14*36)=1/504). Residual = G_12 minus D_36:
+  total residual lonely L = 1/1260
+  lonely arcs:
+    [29/70,209/504]  len=1/2520
+        lo=29/70 = 2/5 + 1/70  (speed 5, center 2/5)
+        hi=209/504 = 15/36 - 1/504  (speed 36, center 15/36)
+    [295/504,41/70]  len=1/2520
+        lo=295/504 = 21/36 + 1/504  (speed 36, center 21/36)
+        hi=41/70 = 3/5 - 1/70  (speed 5, center 3/5)
+
+INTERPRETATION:
+ The two residual arcs are bounded on one side by speed-13's danger arc
+ and on the other by speed-36's danger arc. The gap between consecutive
+ danger centers of 13 and 36 near tau=29/70 is exactly 1/2520 wide.
+
+ Left residual [29/70,209/504]: lo=29/70, hi=209/504.
+   29/70 = boundary of speed-? ; 209/504=boundary of speed-36 (209/504=?)
+   29/70 = 2/5 + 1/70  (right end of speed-5 arc)
+   209/504 = 15/36 - 1/504  (left end of speed-36 arc just right)
+
+LCM analysis of champion config {1..11,13,36}:
+  lcm = 360360, 14*lcm = 5045040, 1/(14*lcm)=1/5045040=1.982e-07
+  L=1/1260; 1260 divides 14*lcm? 5045040 / 1260 = 4004
+  quantization: L in (1/(14*lcm))Z; 1/1260 = 4004 units of 1/(14*lcm)

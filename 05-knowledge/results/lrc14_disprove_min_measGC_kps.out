@@ -1,0 +1,12 @@
+=== Minimize meas(G_C) over 12-sets (hill-climb, big entries allowed) ===
+   12-set: min L = 7/858 = 0.00815851  at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  lcm=360360  gcd=1
+     (compare meas(G_{1..12}) = 6617/194040 = 0.03410122)
+
+=== Minimize L(S) over 13-sets (hill-climb, confirm global inf L) ===
+   13-set: min L = 0 = 0.00000000  at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)  lcm=360360  gcd=1
+     1/1260 = 0.00079365;  below 1/1260? False
+     (hit a TIGHT config; min POSITIVE separately)
+
+=== Targeted: push the large-lcm 12-minimizer further ===
+   seed (1, 3, 4, 5, 7, 10, 11, 13, 16, 17, 18, 25): L=0.03101841 lcm=61261200
+   descended to: L=7032121/394522128=0.01782440 at (1, 3, 4, 5, 7, 10, 11, 13, 16, 17, 18, 23) lcm=281801520

@@ -1,0 +1,26 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_lowerbound_proof_kps.py:8: SyntaxWarning: invalid escape sequence '\ '
+  L = meas(G_e \ D_w) = meas(G_e) - meas(G_e \u2229 D_w).
+central G_12 arc = [29/70,41/98], length = 1/245 = 4.081633e-03
+half-length = 1/490 = 2.040816e-03
+
+A speed-w center placed at 5/12 covers half-width 1/(14w).
+To cover the central arc FULLY from its center, need 1/(14w) >= half-length.
+  need 1/(14w) >= 1/490  <=>  w <= 1/(14*1/490) = 35 = 35.0000
+  so w <= 35 covers, w >= 36 does NOT (if center exactly at 5/12).
+
+central arc midpoint = 102/245 = 0.416327, vs 5/12=0.416667
+  arc is NOT centered at 5/12
+  left half (5/12 - lo) = 1/420, right half (hi - 5/12) = 1/588
+
+w=36 covers [209/504,211/504] within arc.
+  residual left  [29/70,209/504] = 1/2520
+  residual right [211/504,41/98] = 0
+  total residual this arc = 1/2520 (matches 1/2520? True)
+
+WHY only left residual: right end of arc 41/98 = 13's left boundary; 5/12+1/504
+  41/98=0.418367, 5/12+1/504=0.418651: cov_hi>=41/98? True
+  so 36 covers the whole RIGHT side (up to 13's arc) but misses LEFT (5's side).
+
+Scan: for which m is the SUM of central-arc residuals < 1/1260 but >0?
+  m with central residual in (0,1/1260): []  (count 0)
+  (these would need OUTER arcs also covered to actually give total L<1/1260)
