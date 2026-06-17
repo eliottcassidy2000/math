@@ -1,0 +1,96 @@
+﻿==============================================================================
+LRC(14) dihedral endpoint atlas for OPEN-Q-108
+==============================================================================
+Endpoint formula: R(a,k) -> L(b,l) has length
+  (a*(14*l - 1) - b*(14*k + 1))/(14*a*b).
+The global reflection t -> 1-t pairs every safe component orbit.
+
+AP13 deletion atlas through dihedral mouths
+  delete  6: meas=7/858 = 0.008158508; components=4; reflection_orbits=2; owner_path=13-12/12-11/11-12/12-13
+    omitted-clock shadow: (6, (1,)):7/1716, (6, (5,)):7/1716
+  delete 12: meas=426/35035 = 0.012159269; components=4; reflection_orbits=2; owner_path=13-11/5-7/7-5/11-13
+    omitted-clock shadow: (12, (1,)):2/1001, (12, (5,)):1/245, (12, (7,)):1/245, (12, (11,)):2/1001
+  delete 10: meas=1520/63063 = 0.024102881; components=4; reflection_orbits=2; owner_path=11-9/7-13/13-7/9-11
+    omitted-clock shadow: (10, (1,)):4/693, (10, (3,)):4/637, (10, (7,)):4/637, (10, (9,)):4/693
+  delete  4: meas=97/4004 = 0.024225774; components=4; reflection_orbits=2; owner_path=13-8/8-11/11-8/8-13
+    omitted-clock shadow: (4, (1,)):97/8008, (4, (3,)):97/8008
+  delete  2: meas=11/364 = 0.030219780; components=2; reflection_orbits=1; owner_path=13-4/4-13
+    omitted-clock shadow: (2, (1,)):11/364
+  delete 13: meas=6617/194040 = 0.034101216; components=12; reflection_orbits=6; owner_path=1-12/7-6/9-4/10-3/8-5/11-2/2-11/5-8/3-10/4-9/6-7/12-1
+    omitted-clock shadow: (13, (1,)):1/168, (13, (2,)):1/588, (13, (3,)):1/504, (13, (4,)):1/420, (13, (5,)):1/560, (13, (6,)):1/308, (13, (7,)):1/308, (13, (8,)):1/560, (13, (9,)):1/420, (13, (10,)):1/504, (13, (11,)):1/588, (13, (12,)):1/168
+  delete  5: meas=103/2860 = 0.036013986; components=8; reflection_orbits=4; owner_path=11-10/10-9/13-10/10-12/12-10/10-13/9-10/10-11
+    omitted-clock shadow: (5, (1,)):9/770, (5, (2,)):23/3640, (5, (3,)):23/3640, (5, (4,)):9/770
+  delete  3: meas=11/273 = 0.040293040; components=4; reflection_orbits=2; owner_path=13-6/6-11/11-6/6-13
+    omitted-clock shadow: (3, (1,)):11/546, (3, (2,)):11/546
+  delete  8: meas=950/21021 = 0.045192902; components=4; reflection_orbits=2; owner_path=9-7/11-13/13-11/7-9
+    omitted-clock shadow: (8, (1,)):2/147, (8, (3,)):9/1001, (8, (5,)):9/1001, (8, (7,)):2/147
+  delete  9: meas=3273/56056 = 0.058388041; components=6; reflection_orbits=3; owner_path=10-8/5-13/7-11/11-7/13-5/8-10
+    omitted-clock shadow: (9, (1,)):1/112, (9, (2,)):1/91, (9, (4,)):5/539, (9, (5,)):5/539, (9, (7,)):1/91, (9, (8,)):1/112
+  delete 11: meas=4733/76440 = 0.061917844; components=10; reflection_orbits=5; owner_path=12-10/6-5/4-7/3-8/9-13/13-9/8-3/7-4/5-6/10-12
+    omitted-clock shadow: (11, (1,)):1/280, (11, (2,)):1/140, (11, (3,)):3/392, (11, (4,)):1/112, (11, (5,)):1/273, (11, (6,)):1/273, (11, (7,)):1/112, (11, (8,)):3/392, (11, (9,)):1/140, (11, (10,)):1/280
+  delete  1: meas=1/14 = 0.071428571; components=2; reflection_orbits=1; owner_path=2-13/13-2
+    omitted-clock shadow: (1, (0,)):1/14
+  delete  7: meas=4319/51480 = 0.083896659; components=6; reflection_orbits=3; owner_path=8-13/11-10/12-9/9-12/10-11/13-8
+    omitted-clock shadow: (7, (1,)):3/208, (7, (2,)):3/220, (7, (3,)):1/72, (7, (4,)):1/72, (7, (5,)):3/220, (7, (6,)):3/208
+  deletion-compression tournament (smaller safe measure ranks higher after reversal):
+    order_by_measure=[6, 12, 10, 4, 2, 13, 5, 3, 8, 9, 11, 1, 7]
+    {'scores': [12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1, 0], 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1}, 'directed_cycles': 0, 'transitive_triples': 286, 'scc_sizes': [1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1], 'hamiltonian_paths': 1}
+
+Drop-6 detailed dihedral mouth decomposition
+  core=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+  total meas(G_C)=7/858 = 0.008158508
+  orbit 0: members=(0, 3); orbit_measure=1/364 = 0.002747253; det_sum=6
+    component 0: 13R2@29/182 -> 12L2@9/56; interval=(29/182, 9/56); length=1/728; determinant=3
+    component 3: 12R10@47/56 -> 13L11@153/182; interval=(47/56, 153/182); length=1/728; determinant=3
+  orbit 1: members=(1, 2); orbit_measure=5/924 = 0.005411255; det_sum=10
+    component 1: 12R2@29/168 -> 11L2@27/154; interval=(29/168, 27/154); length=5/1848; determinant=5
+    component 2: 11R9@127/154 -> 12L10@139/168; interval=(127/154, 139/168); length=5/1848; determinant=5
+  mouth-orbit tournament by measure:
+    {'scores': [0, 1], 'score_hist': {0: 1, 1: 1}, 'directed_cycles': 0, 'transitive_triples': 0, 'scc_sizes': [1, 1], 'hamiltonian_paths': 1}
+  measure-vs-raw-determinant edge flips=0
+
+Two-delete/one-replacement trade around the drop-6 mouths
+  drop6 base measure=7/858 = 0.008158508
+  rows with missing speed 6 tested=2004; rows that damage old drop6 mouths=1104
+  best total row: missing=(6, 10), replacement=20, meas=3859/420420 = 0.009178916
+    retained_drop6=7/858, lost_drop6=0, new_outside=1/980, surplus_over_drop6=1/980
+    core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)
+  minimum surplus over drop6 among missing-6 rows: missing=(6, 10), replacement=20, meas=3859/420420 = 0.009178916
+    retained_drop6=7/858, lost_drop6=0, new_outside=1/980, surplus_over_drop6=1/980
+    core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)
+  best row that actually damages drop6 mouths: missing=(6, 10), replacement=40, meas=2669/194040 = 0.013754896
+    retained_drop6=43/10920, lost_drop6=13/3080, new_outside=6191/630630, surplus_over_drop6=14117/2522520
+    core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 40)
+  largest damage to old drop6 mouths: missing=(1, 6), replacement=69, meas=5/77 = 0.064935065
+    retained_drop6=19/10626, lost_drop6=40/6279, new_outside=61/966, surplus_over_drop6=31/546
+    core=(2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 69)
+
+Selected non-AP / perturbed decompositions
+best two-delete/one-replacement: core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)
+  measure=3859/420420 = 0.009178916; components=6; reflection_orbits=3
+  orbit members=(0, 5); measure=1/364; mouths=13R->12L:det3, 12R->13L:det3
+  orbit members=(1, 4); measure=5/924; mouths=12R->11L:det5, 11R->12L:det5
+  orbit members=(2, 3); measure=1/980; mouths=7R->20L:det1, 20R->7L:det1
+damage-heavy replacement w=69: core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 69)
+  measure=63095/2900898 = 0.021750162; components=12; reflection_orbits=6
+  orbit members=(0, 11); measure=32/5313; mouths=11R->69L:det32, 69R->11L:det32
+  orbit members=(1, 10); measure=2/1449; mouths=69R->9L:det6, 9R->69L:det6
+  orbit members=(2, 9); measure=1/1932; mouths=69R->12L:det3, 12R->69L:det3
+  orbit members=(3, 8); measure=1/1932; mouths=12R->69L:det3, 69R->12L:det3
+  orbit members=(4, 7); measure=4/5313; mouths=69R->11L:det4, 11R->69L:det4
+  orbit members=(5, 6); measure=8/637; mouths=7R->13L:det8, 13R->7L:det8
+sporadic AP-neighbor: core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+  measure=426/35035 = 0.012159269; components=4; reflection_orbits=2
+  orbit members=(0, 3); measure=4/1001; mouths=13R->11L:det4, 11R->13L:det4
+  orbit members=(1, 2); measure=2/245; mouths=5R->7L:det2, 7R->5L:det2
+
+Conclusion
+  The current worst core is not just AP13 minus 6; it is a D6
+  missing-clock shadow.  Its measure is the sum of two reflected
+  endpoint-mouth orbits, both inside the omitted speed-6 moat:
+    2*(1/728) + 2*(5/1848) = 7/858.
+  In the tested two-delete/one-replacement family, any attempt to
+  damage those old hexagon mouths forces enough new reflected mouth
+  mass elsewhere; the smallest surplus over drop6 is 1/980 and occurs
+  without damaging the old mouths.  This suggests the next proof target:
+  a dihedral mouth-exchange inequality for coordinated growth.
