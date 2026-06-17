@@ -1,3 +1,22 @@
+## 3.5 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest 923e3a2
+A major breakthrough in the LRC14 framework has been achieved through the THM-524 binding-pair reduction, reframing the problem from runner-centric to region/pair-centric dynamics.
+
+- **THM-524: Binding-Pair Reduction and Regions Reframe**
+    - **Pairwise SWITCH Dynamics:** The 13-runner problem is condensed into a polynomial set of ~78 pairwise switches. Loneliness off-grid is forced to a *binding pair*—two runners equidistant from the observer—whose crossing determines the optimum.
+    - **Sawtooth-Envelope Lemma:** Proved that $min_i ||v_i \tau||$ is a lower envelope of triangle waves, concave between breakpoints, forcing maxima to land on pairwise crossings (or single peaks).
+    - **Regions Model:** Reframed the on-grid case as a **q-witness** (residues mod 14). A perfect SDR (distinct nonzero residues) handles the easy configurations.
+    - **The Blind Complement:** The region model is blind off-grid; however, the **covering hard core** family is now modeled with the closed-form measure $M = 7m / (84m + 5)$.
+    - **Tournament Analogy:** Confirmed the reversal exact tournament bridge (involution $-1 \in (\mathbb{Z}/14)^*$ maps to tournament complement). The overtaking tournament is confirmed as transitive, meaning the Rédei link is inactive in this specific snapshot.
+
+- **New Registrations:**
+    - **HYP-2571:** Formalizes the binding-pair optimality for LRC.
+    - **T839:** Detailed analysis of the covering hard core margin ($98 > 89$ inequality).
+
+- **Active Steering Objectives (Updated):**
+    - **Primary Focus:** Shift objectives to **THM-524** and the analysis of pairwise SWITCH dynamics.
+    - **Validation:** Use the polynomial switch checklist to verify the remaining "dangerous" covering configurations.
+    - **Off-Grid Analysis:** Focus on bounding $inf M$ for covering sets that slip off the grid, specifically targeting the $M = 7m / (84m + 5)$.
+
 ## 3.4 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest 30e4a90
 Significant progress on the LRC14 uniform fattening probe (OPEN-Q-108) has been recorded, sharpening the extremal target for the singular-series proof.
 
