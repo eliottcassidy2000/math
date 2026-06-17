@@ -113,7 +113,7 @@ object of §2. So the equidecomposability thread closes the loop back onto Φ₃
 
 VERIFIED: all number-facts (5 area=perimeter triangles & inradius 2; Fib∩Tri={1,3,21,55}=
 Fibonacci prefix of `(2n−1)(4n−1)=T_{4n−2}`; 2×6-marble Burnside `[1,3,21,55,135,…]`;
-`(2k+1)²=8T_k+1`; `α(p)|p−(5/p)`; `Φ₃(1)=3,Φ₃(2)=7,21=3·7`). SYNTHESIS (HYP-2553): the
+`(2k+1)²=8T_k+1`; `α(p)|p−(5/p)`; `Φ₃(1)=3,Φ₃(2)=7,21=3·7`). SYNTHESIS (HYP-2557, renumbered from HYP-2553 off a mac-mini-S6 collision): the
 boat=doubling-threshold and Φ₃-gates-both claims are precise re-readings of CHW + THM-519 +
 S599v, not new theorems. The 5-triangle↔5-Platonic is a flagged COUNT COINCIDENCE. The
 Fibonacci↔QR↔Paley bridge rests on THM-486 (proved) + Euler's criterion (classical). Cross-
