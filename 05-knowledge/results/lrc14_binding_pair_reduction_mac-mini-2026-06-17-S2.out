@@ -1,0 +1,15 @@
+BINDING-PAIR REDUCTION: M(S) attained where >=2 runners are equidistant from 0
+  config -> M, tau*, binding runners (those achieving the min), denom(tau*)
+  tight {1..13}           : M=1/14=0.07143 tau*=5/14 binding=[3, 11] (pair sum 14, denom 14; a+b=14, |a-b|=8)
+  hardcore {1..11,13,84}  : M=7/89=0.07865 tau*=37/89 binding=[5, 84] (pair sum 89, denom 89; a+b=89, |a-b|=79)
+  drop6 u98               : M=9/109=0.08257 tau*=19/109 binding=[11, 98] (pair sum 109, denom 109; a+b=109, |a-b|=87)
+  drop12 u84              : M=7/89=0.07865 tau*=37/89 binding=[5, 84] (pair sum 89, denom 89; a+b=89, |a-b|=79)
+
+How many runners bind at the optimum (is it always a PAIR, or more)?
+  distribution of #binding runners: {2: 1487, 3: 213, 4: 98, 5: 60, 6: 55, 7: 28, 8: 28, 9: 15, 10: 4, 11: 6, 12: 1, 13: 5}
+  (>=2 always? min binding count = 2 )
+
+THE SWITCH COUNT: candidate optimum tau are crossings k/(v_a+-v_b): O(n^2) pairs.
+  drop12 u84: #distinct candidate tau (the switches to check) = 106 for 13 runners
+  LRC(14) at S <=> MAX over these pair-crossings of [min_i ||v_i tau||] >= 1/14.
+  => 13-runner condition reduces to checking ~O(n^2) pairwise SWITCHES (find ONE good pair-crossing).

@@ -12,6 +12,12 @@
 
 ---
 
+## Lead mac-mini-2026-06-17-S2: LRC regions/sections reframe → the binding-pair switch reduction (THM-524, HYP-2571)
+
+**Status:** PROVED (sawtooth lower-envelope lemma): M(S)=max(g(½), max over pairs (a,b),k of g(k/(v_a±v_b))) — the LRC gap is a pairwise SWITCH; LRC(N) ⟺ some pair-crossing gives gap≥1/N with others clear (~78 switches for 13 runners, polynomial). Regions/SDR = the on-grid q=14 witness (blind off-grid). Complement=reversal is the one exact tournament bridge; overtaking tournament is trivially transitive (Rédei link dead). Covering hard core: M=7m/(84m+5), min 7/89.
+**Next (ranked):** (1) the THM-524 NEXT step — prove "grid-sharpness (gridM=M) ⟺ a binding complement pair (v,N−v)" and that it fails EXACTLY for covering sets, merging the section lens with THM-523 (off-grid criterion). (2) Merge with codex's Hall/wall-switch program (T838) and dihedral mouth-exchange (T837/HYP-2569) — three takes on the same regions prompt; the binding-pair (mine), the Hall packets (codex), the dihedral mouths (codex) should unify on the covering hard core. (3) Bound inf M over covering sets ≥ 7/89 (the gap-side compactness frontier = THM-522's measure-side). (4) Is there a NON-trivial tournament built from the SWITCHES (crossing parities) rather than the snapshot order? — the only place a Rédei/OCF link could survive.
+**Sources:** 04-computation/lrc14_{regions_sections_grounding,binding_pair_reduction,gap_M_exact}_mac-mini-2026-06-17-S2.py + workflow angle scripts (sdr_hall_symmetry, angleD_overtaking_tournament, angle_c_exotic_switches, angle_e_cross_modulus) + .out; THM-524, HYP-2571; reflection regions-not-runners-the-lonely-gap-is-a-pairwise-switch-mac-mini-S2.md; THM-523/522, codex T837/T838/HYP-2568/2569/2570.
+
 ## Lead mac-mini-2026-06-16-S3: LRC(14) GAP-SIDE reduction to covering sets (THM-523, HYP-2566/2567)
 
 **Status:** PROVED the q-witness reduction: LRC(14) ⟺ M(S)=max_τ min_v||vτ|| ≥1/14 for all primitive COVERING SETS (a multiple of every q∈{2,…,14}); everything else is M≥1/14 via τ=1/q. No counterexample over extensive search; residual covering-set min M = 7/89≈0.0787 (10% margin). The disproof search produced the proof reduction.

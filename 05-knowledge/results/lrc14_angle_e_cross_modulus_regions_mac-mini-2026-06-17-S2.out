@@ -1,0 +1,171 @@
+==============================================================================
+ANGLE E -- CROSS-MODULUS REGIONS == THE q-WITNESS (THM-523 reframed)
+==============================================================================
+
+IDENTITY: grid tau=a/q -> q sections; observer lonely at a/q  <=>  no v_i==0 (mod q).
+  -> "regions at modulus q" IS the q-witness.
+  -> COVERING (mult of every q in 2..14)  <=>  every coarse grid q<=14 has section 0 BLOCKED.
+
+------------------------------------------------------------------------------
+(1) PER-MODULUS OBSERVER-SECTION TABLE: is section 0 clear at some unit a?
+------------------------------------------------------------------------------
+
+[tight AP {1..13}]  covering=False  (misses q=[14])
+    q | clear-units a (gcd(a,q)=1, observer section 0 empty) | witness?
+    2 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    3 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    4 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    5 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    6 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    7 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    8 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    9 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   10 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   11 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   12 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   13 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   14 | [1, 3, 5, 9, 11, 13]                             | YES tau=1/q lonely   [mult of q in S: False]
+  => ALL coarse grids q<=14 BLOCK the observer? False
+
+[covering hardcore 84 {1..11,13,84}]  covering=True
+    q | clear-units a (gcd(a,q)=1, observer section 0 empty) | witness?
+    2 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    3 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    4 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    5 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    6 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    7 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    8 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    9 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   10 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   11 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   12 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   13 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   14 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+  => ALL coarse grids q<=14 BLOCK the observer? True
+     (so any lonely time must be OFF-GRID; exact M=7/89=0.07865, tau*=37/89)
+
+[interior-drop6 u98 {1..5,7..13,98}]  covering=True
+    q | clear-units a (gcd(a,q)=1, observer section 0 empty) | witness?
+    2 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    3 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    4 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    5 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    6 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    7 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    8 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+    9 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   10 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   11 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   12 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   13 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+   14 | []                                               | NO (section0 always hit)   [mult of q in S: True]
+  => ALL coarse grids q<=14 BLOCK the observer? True
+     (so any lonely time must be OFF-GRID; exact M=9/109=0.08257, tau*=19/109)
+
+==============================================================================
+(2) THE FINE MODULUS: lonely tau* denominator = v_a +- v_b (a BINDING PAIR)
+==============================================================================
+
+M(S) is attained at tau* where TWO runners are equidistant from the observer.
+At a crossing tau=k/(v_a+-v_b), runners a,b both sit at distance ||k v_a/(v_a+-v_b)||.
+The denominator d = v_a+-v_b is the # of FINE sections; the binding pair carves the gap.
+
+
+[tight AP {1..13}]  M=1/14=0.07143  tau*=5/14
+  fine modulus (denominator of tau*) = 14
+  closest runners (binders, equidistant from observer) = [3, 11]  at dist 1/14
+  speed pairs (a,b,sign) with v_a+-v_b == 14: [(1, 13, '+', 14), (2, 12, '+', 14), (3, 11, '+', 14), (4, 10, '+', 14), (5, 9, '+', 14), (6, 8, '+', 14)]
+  gap M=1/14  vs threshold 1/14=1/14:  TIGHT (=1/14)
+
+[covering hardcore 84 {1..11,13,84}]  M=7/89=0.07865  tau*=37/89
+  fine modulus (denominator of tau*) = 89
+  closest runners (binders, equidistant from observer) = [5, 84]  at dist 7/89
+  speed pairs (a,b,sign) with v_a+-v_b == 89: [(5, 84, '+', 89)]
+  gap M=7/89  vs threshold 1/14=1/14:  LONELY (>1/14, LRC FAILS here)
+
+[interior-drop6 u98 {1..5,7..13,98}]  M=9/109=0.08257  tau*=19/109
+  fine modulus (denominator of tau*) = 109
+  closest runners (binders, equidistant from observer) = [11, 98]  at dist 9/109
+  speed pairs (a,b,sign) with v_a+-v_b == 109: [(11, 98, '+', 109)]
+  gap M=9/109  vs threshold 1/14=1/14:  LONELY (>1/14, LRC FAILS here)
+
+==============================================================================
+(3) MIXED-RADIX / CRT SECTION SCHEME: can residues mod different q build a lonely pt?
+==============================================================================
+
+The covering-system DODGE: choose, for several coprime moduli q1,q2,..., a target residue
+class for tau (i.e. pick which FINE section the observer's gap lands in). CRT glues a residue
+mod Q=prod(qi). The question: does there exist tau with ||v tau||>=1/14 for all v, found by
+specifying residues mod a few small moduli simultaneously?
+
+We make this CONCRETE two ways:
+  (A) Per-modulus "clear-section" sets. For modulus q, the set of grid points a/q that keep
+      the OBSERVER clear is U_q={a: no v==0 mod q at a} (the q-witness units). For a SINGLE
+      coarse q this only guarantees gap>=1/q at the lattice point a/q. CRT across coprime q's
+      does NOT improve this -- a/q is the SAME point regardless of how many residues we name,
+      because all coarse grids share the rational a/q. So CRT over COARSE moduli q<=14 gives
+      no new lonely point beyond what one q already gives. (We verify the gap is exactly the
+      single-q witness, not boosted.)
+  (B) The REAL lonely points are at FINE moduli d=v_a+-v_b (>14). Test: pick the binding-pair
+      fine modulus d and a residue k with gcd(k,d) handled; does k/d beat 1/14? This is just
+      evaluating M at the fine grid -- CRT is the bookkeeping of WHICH fine section.
+
+
+(3A) CRT over coarse moduli adds nothing -- the witness gap is single-q:
+  [tight AP {1..13}] omitted coarse moduli (q with clear observer) = [14]  -> e.g. q=14, a=1: gap at 1/14 = 1/14 (= single-q witness 1/14)
+  [covering hardcore 84 {1..11,13,84}] omitted coarse moduli (q with clear observer) = []  -> NONE (covering): no coarse-grid lonely point, CRT has no coarse ingredients.
+  [interior-drop6 u98 {1..5,7..13,98}] omitted coarse moduli (q with clear observer) = []  -> NONE (covering): no coarse-grid lonely point, CRT has no coarse ingredients.
+
+(3B) FINE-grid lonely sections (the genuine lonely points), by binding-pair modulus:
+  [tight AP {1..13}] M=1/14<=1/14 -> NO lonely point on any grid (LRC holds). fine modulus 14 has no clearing section >1/14.
+  [covering hardcore 84 {1..11,13,84}] fine modulus d=89: lonely sections k/d with gap>=1/14:
+     k=37: tau=37/89  gap=7/89=0.07865  | CRT residues k mod prime-factors {89: 37}
+     k=52: tau=52/89  gap=7/89=0.07865  | CRT residues k mod prime-factors {89: 52}
+     => these ARE the constructive lonely points; CRT just names which fine section k lands in.
+  [interior-drop6 u98 {1..5,7..13,98}] fine modulus d=109: lonely sections k/d with gap>=1/14:
+     k=19: tau=19/109  gap=9/109=0.08257  | CRT residues k mod prime-factors {109: 19}
+     k=90: tau=90/109  gap=9/109=0.08257  | CRT residues k mod prime-factors {109: 90}
+     => these ARE the constructive lonely points; CRT just names which fine section k lands in.
+
+==============================================================================
+(3C) DOES MIXED-RADIX BUILD A LONELY POINT FROM SCRATCH? -- honest test
+==============================================================================
+
+Claim to test: 'pick residues mod several small q simultaneously to dodge the covering system'.
+Concretely: choose a target tau by fixing tau mod (1/q) sections for q=2,3,5,7 (pairwise coprime,
+product 210). For EACH q, a 'safe' section means the q-grid points nearest tau keep all runners off
+the observer band of width 1/14. Then ask: does some CRT-glued tau in (0,1/2] beat 1/14?
+
+This is equivalent to scanning the d=210 grid (and its refinements) -- which the M tool already
+does exactly via its candidate set. So the honest statement: CRT/mixed-radix is a SEARCH
+RE-PARAMETERIZATION, not a new construction. It locates lonely points iff M(S)>1/14, which holds
+exactly for the covering hard cores (off-grid) and fails for tight/SDR cases.
+
+  [tight AP {1..13}] best gap on coarse CRT grid Q=210: 1/14=0.07143 at 15/210 ; true M=1/14=0.07143
+     -> coarse-CRT grid REACHES the true optimum (true optimum lives at fine modulus 14).
+  [covering hardcore 84 {1..11,13,84}] best gap on coarse CRT grid Q=210: 1/14=0.07143 at 87/210 ; true M=7/89=0.07865
+     -> coarse-CRT grid MISSES the true optimum (true optimum lives at fine modulus 89).
+  [interior-drop6 u98 {1..5,7..13,98}] best gap on coarse CRT grid Q=210: 1/15=0.06667 at 14/210 ; true M=9/109=0.08257
+     -> coarse-CRT grid MISSES the true optimum (true optimum lives at fine modulus 109).
+
+==============================================================================
+(4) SWEEP: across MANY covering hard cores, is the fine modulus always v_a+-v_b? and is it ALWAYS off every coarse grid q<=14?
+==============================================================================
+  generated 81 covering hard cores of form ({1..13}\{j})∪{14m}
+  LRC counterexamples (M<1/14): 0/81
+  fine modulus equals some v_a+-v_b: 81/81
+  every coarse grid q<=14 blocked (covering -> off-grid only): 81/81
+  tightest (closest to 1/14) covering core: M=7/89=0.07865  (j,w,tau*,d)=(12, 84, Fraction(37, 89), 89)
+  loosest covering core: M=3/22=0.13636  (j,w,tau*,d)=(7, 168, Fraction(25, 176), 176)
+  sample (j, w=14m, M, tau*, fineMod d, d=v_a+-v_b?, allCoarseBlocked?):
+    j= 2 w= 14  M=   2/17=0.11765  tau*=   8/17  d=  17  pair=True  blocked=True
+    j= 2 w= 28  M=   2/17=0.11765  tau*=   8/17  d=  17  pair=True  blocked=True
+    j= 2 w= 42  M=   2/17=0.11765  tau*=   8/17  d=  17  pair=True  blocked=True
+    j= 2 w= 56  M=   2/17=0.11765  tau*=   8/17  d=  17  pair=True  blocked=True
+    j= 2 w= 70  M=   9/83=0.10843  tau*=  39/83  d=  83  pair=True  blocked=True
+    j= 2 w= 84  M=   2/17=0.11765  tau*=   8/17  d=  17  pair=True  blocked=True
+
+==============================================================================
+DONE.
+==============================================================================

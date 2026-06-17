@@ -1,0 +1,278 @@
+========================================================================
+PART 1: For many configs, find the binding pair(s) at the optimum.
+========================================================================
+
+### {1..13} tight AP (perfect SDR)
+    S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    M(S) = 1/14  (= 0.071429),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 14), Fraction(3, 14), Fraction(5, 14)]
+      tau=1/14: type=binding-pair-crossing, binding runners=[1, 13]
+         pair (1,13) via v_a+v_b=14, tau=1/14, others-clear=True
+      tau=3/14: type=binding-pair-crossing, binding runners=[5, 9]
+         pair (5,9) via v_a+v_b=14, tau=3/14, others-clear=True
+      tau=5/14: type=binding-pair-crossing, binding runners=[3, 11]
+         pair (3,11) via v_a+v_b=14, tau=5/14, others-clear=True
+
+### {1..6} small
+    S = [1, 2, 3, 4, 5, 6]
+    M(S) = 1/7  (= 0.142857),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 7), Fraction(2, 7), Fraction(3, 7)]
+      tau=1/7: type=binding-pair-crossing, binding runners=[1, 6]
+         pair (1,6) via v_a+v_b=7, tau=1/7, others-clear=True
+      tau=2/7: type=binding-pair-crossing, binding runners=[3, 4]
+         pair (3,4) via v_a+v_b=7, tau=2/7, others-clear=True
+      tau=3/7: type=binding-pair-crossing, binding runners=[2, 5]
+         pair (2,5) via v_a+v_b=7, tau=3/7, others-clear=True
+
+### {1..7}
+    S = [1, 2, 3, 4, 5, 6, 7]
+    M(S) = 1/8  (= 0.125000),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 8), Fraction(3, 8)]
+      tau=1/8: type=binding-pair-crossing, binding runners=[1, 7]
+         pair (1,7) via v_a+v_b=8, tau=1/8, others-clear=True
+      tau=3/8: type=binding-pair-crossing, binding runners=[3, 5]
+         pair (3,5) via v_a+v_b=8, tau=3/8, others-clear=True
+
+### {2,3,...,14}
+    S = [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+    M(S) = 1/8  (= 0.125000),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 16)]
+      tau=1/16: type=binding-pair-crossing, binding runners=[2, 14]
+         pair (2,14) via v_a+v_b=16, tau=1/16, others-clear=True
+
+### covering core {1..11,13,84}
+    S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+    M(S) = 7/89  (= 0.078652),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(37, 89)]
+      tau=37/89: type=binding-pair-crossing, binding runners=[5, 84]
+         pair (5,84) via v_a+v_b=89, tau=37/89, others-clear=True
+
+### covering {1..11,13} (no 84)
+    S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+    M(S) = 1/12  (= 0.083333),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 12), Fraction(5, 12)]
+      tau=1/12: type=binding-pair-crossing, binding runners=[1, 11, 13]
+         pair (1,11) via v_a+v_b=12, tau=1/12, others-clear=True
+         pair (1,13) via v_a-v_b=12, tau=1/12, others-clear=True
+         pair (11,13) via v_a+v_b=24, tau=2/24, others-clear=True
+      tau=5/12: type=binding-pair-crossing, binding runners=[5, 7]
+         pair (5,7) via v_a+v_b=12, tau=5/12, others-clear=True
+
+### {1,2,3,4,5}
+    S = [1, 2, 3, 4, 5]
+    M(S) = 1/6  (= 0.166667),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 6)]
+      tau=1/6: type=binding-pair-crossing, binding runners=[1, 5]
+         pair (1,5) via v_a+v_b=6, tau=1/6, others-clear=True
+
+### {1,2,4,8,16}
+    S = [1, 2, 4, 8, 16]
+    M(S) = 1/3  (= 0.333333),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 3)]
+      tau=1/3: type=binding-pair-crossing, binding runners=[1, 2, 4, 8, 16]
+         pair (1,2) via v_a+v_b=3, tau=1/3, others-clear=True
+         pair (1,4) via v_a-v_b=3, tau=1/3, others-clear=True
+         pair (1,8) via v_a+v_b=9, tau=3/9, others-clear=True
+         pair (1,16) via v_a-v_b=15, tau=5/15, others-clear=True
+         pair (2,4) via v_a+v_b=6, tau=2/6, others-clear=True
+         pair (2,8) via v_a-v_b=6, tau=2/6, others-clear=True
+         pair (2,16) via v_a+v_b=18, tau=6/18, others-clear=True
+         pair (4,8) via v_a+v_b=12, tau=4/12, others-clear=True
+         pair (4,16) via v_a-v_b=12, tau=4/12, others-clear=True
+         pair (8,16) via v_a+v_b=24, tau=8/24, others-clear=True
+
+### geometric-ish {1,3,7,12}
+    S = [1, 3, 7, 12]
+    M(S) = 6/19  (= 0.315789),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(9, 19)]
+      tau=9/19: type=binding-pair-crossing, binding runners=[7, 12]
+         pair (7,12) via v_a+v_b=19, tau=9/19, others-clear=True
+
+### Lonely Runner classic {1,2,3,4,5,6}
+    S = [1, 2, 3, 4, 5, 6]
+    M(S) = 1/7  (= 0.142857),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 7), Fraction(2, 7), Fraction(3, 7)]
+      tau=1/7: type=binding-pair-crossing, binding runners=[1, 6]
+         pair (1,6) via v_a+v_b=7, tau=1/7, others-clear=True
+      tau=2/7: type=binding-pair-crossing, binding runners=[3, 4]
+         pair (3,4) via v_a+v_b=7, tau=2/7, others-clear=True
+      tau=3/7: type=binding-pair-crossing, binding runners=[2, 5]
+         pair (2,5) via v_a+v_b=7, tau=3/7, others-clear=True
+
+### {3,5,9,11} order-3 part
+    S = [3, 5, 9, 11]
+    M(S) = 1/2  (= 0.500000),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 2)]
+      tau=1/2: type=binding-pair-crossing, binding runners=[3, 5, 9, 11]
+         pair (3,5) via v_a+v_b=8, tau=4/8, others-clear=True
+         pair (3,5) via v_a-v_b=2, tau=1/2, others-clear=True
+         pair (3,9) via v_a+v_b=12, tau=6/12, others-clear=True
+         pair (3,9) via v_a-v_b=6, tau=3/6, others-clear=True
+         pair (3,11) via v_a+v_b=14, tau=7/14, others-clear=True
+         pair (3,11) via v_a-v_b=8, tau=4/8, others-clear=True
+         pair (5,9) via v_a+v_b=14, tau=7/14, others-clear=True
+         pair (5,9) via v_a-v_b=4, tau=2/4, others-clear=True
+         pair (5,11) via v_a+v_b=16, tau=8/16, others-clear=True
+         pair (5,11) via v_a-v_b=6, tau=3/6, others-clear=True
+         pair (9,11) via v_a+v_b=20, tau=10/20, others-clear=True
+         pair (9,11) via v_a-v_b=2, tau=1/2, others-clear=True
+
+### single binding {5,7}
+    S = [5, 7]
+    M(S) = 1/2  (= 0.500000),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 2)]
+      tau=1/2: type=binding-pair-crossing, binding runners=[5, 7]
+         pair (5,7) via v_a+v_b=12, tau=6/12, others-clear=True
+         pair (5,7) via v_a-v_b=2, tau=1/2, others-clear=True
+
+### {1..13} minus 7
+    S = [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13]
+    M(S) = 1/7  (= 0.142857),  vs 1/14 = 0.071429
+    LRC threshold 1/14: PASS (M>=1/14)
+    optima tau (achieving M): [Fraction(1, 7), Fraction(2, 7), Fraction(3, 7)]
+      tau=1/7: type=binding-pair-crossing, binding runners=[1, 6, 8, 13]
+         pair (1,6) via v_a+v_b=7, tau=1/7, others-clear=True
+         pair (1,8) via v_a-v_b=7, tau=1/7, others-clear=True
+         pair (1,13) via v_a+v_b=14, tau=2/14, others-clear=True
+         pair (6,8) via v_a+v_b=14, tau=2/14, others-clear=True
+         pair (6,13) via v_a-v_b=7, tau=1/7, others-clear=True
+         pair (8,13) via v_a+v_b=21, tau=3/21, others-clear=True
+      tau=2/7: type=binding-pair-crossing, binding runners=[3, 4, 10, 11]
+         pair (3,4) via v_a+v_b=7, tau=2/7, others-clear=True
+         pair (3,10) via v_a-v_b=7, tau=2/7, others-clear=True
+         pair (3,11) via v_a+v_b=14, tau=4/14, others-clear=True
+         pair (4,10) via v_a+v_b=14, tau=4/14, others-clear=True
+         pair (4,11) via v_a-v_b=7, tau=2/7, others-clear=True
+         pair (10,11) via v_a+v_b=21, tau=6/21, others-clear=True
+      tau=3/7: type=binding-pair-crossing, binding runners=[2, 5, 9, 12]
+         pair (2,5) via v_a+v_b=7, tau=3/7, others-clear=True
+         pair (2,9) via v_a-v_b=7, tau=3/7, others-clear=True
+         pair (2,12) via v_a+v_b=14, tau=6/14, others-clear=True
+         pair (5,9) via v_a+v_b=14, tau=6/14, others-clear=True
+         pair (5,12) via v_a-v_b=7, tau=3/7, others-clear=True
+         pair (9,12) via v_a+v_b=21, tau=9/21, others-clear=True
+
+========================================================================
+PART 2: Reformulate LRC(14) as binding-pair + others-clear.
+   How many candidate pair-switches must be checked? O(n^2).
+========================================================================
+
+Config | M | M(pairs only) | M(half-int only) | pairs suffice? | #pairs C(n,2) | #pair-taus | #half-taus
+  {1..13} tight AP (perfect SDR)     | M=    1/14 | pairs=    1/14 | half=    1/14 | suffice=True | C(n,2)=78 | #pairtaus=100 | #halftaus=38
+  {1..6} small                       | M=     1/7 | pairs=     1/7 | half=     1/8 | suffice=True | C(n,2)=15 | #pairtaus=21 | #halftaus=9
+  {1..7}                             | M=     1/8 | pairs=     1/8 | half=     1/8 | suffice=True | C(n,2)=21 | #pairtaus=29 | #halftaus=12
+  {2,3,...,14}                       | M=     1/8 | pairs=     1/8 | half=     1/8 | suffice=True | C(n,2)=78 | #pairtaus=115 | #halftaus=44
+  covering core {1..11,13,84}        | M=    7/89 | pairs=    7/89 | half=  11/168 | suffice=True | C(n,2)=78 | #pairtaus=956 | #halftaus=74
+  covering {1..11,13} (no 84)        | M=    1/12 | pairs=    1/12 | half=    1/12 | suffice=True | C(n,2)=66 | #pairtaus=90 | #halftaus=34
+  {1,2,3,4,5}                        | M=     1/6 | pairs=     1/6 | half=     1/6 | suffice=True | C(n,2)=10 | #pairtaus=14 | #halftaus=7
+  {1,2,4,8,16}                       | M=     1/3 | pairs=     1/3 | half=     1/4 | suffice=True | C(n,2)=10 | #pairtaus=44 | #halftaus=16
+  geometric-ish {1,3,7,12}           | M=    6/19 | pairs=    6/19 | half=    3/14 | suffice=True | C(n,2)=6 | #pairtaus=37 | #halftaus=11
+  Lonely Runner classic {1,2,3,4,5,6 | M=     1/7 | pairs=     1/7 | half=     1/8 | suffice=True | C(n,2)=15 | #pairtaus=21 | #halftaus=9
+  {3,5,9,11} order-3 part            | M=     1/2 | pairs=     1/2 | half=     1/2 | suffice=True | C(n,2)=6 | #pairtaus=26 | #halftaus=12
+  single binding {5,7}               | M=     1/2 | pairs=     1/2 | half=     1/2 | suffice=True | C(n,2)=1 | #pairtaus=6 | #halftaus=6
+  {1..13} minus 7                    | M=     1/7 | pairs=     1/7 | half=    1/11 | suffice=True | C(n,2)=66 | #pairtaus=100 | #halftaus=35
+
+========================================================================
+PART 3: Hard core (covering sets). Which pair binds?
+   Is the binding pair always {small speed, the multiple of 14}?
+========================================================================
+
+For each: M, optima, binding runners, and whether the multiple-of-14
+speed participates in the binding pair.
+
+### {1..11,13,84}  (84=6*14)
+    M(S)=7/89 (0.078652), multiples of 14 in S: [84]
+    tau=37/89: binding=[5, 84], type=binding-pair-crossing, mult14 binding? [84]
+        pair (5,84) via +, tau=37/89
+
+### {1..13,14}     (14=1*14)
+    M(S)=1/15 (0.066667), multiples of 14 in S: [14]
+    tau=1/15: binding=[1, 14], type=binding-pair-crossing, mult14 binding? [14]
+        pair (1,14) via +, tau=1/15
+    tau=2/15: binding=[7, 8], type=binding-pair-crossing, mult14 binding? NO
+        pair (7,8) via +, tau=2/15
+    tau=4/15: binding=[4, 11], type=binding-pair-crossing, mult14 binding? NO
+        pair (4,11) via +, tau=4/15
+    tau=7/15: binding=[2, 13], type=binding-pair-crossing, mult14 binding? NO
+        pair (2,13) via +, tau=7/15
+
+### {1..13,28}     (28=2*14)
+    M(S)=2/29 (0.068966), multiples of 14 in S: [28]
+    tau=2/29: binding=[1, 28], type=binding-pair-crossing, mult14 binding? [28]
+        pair (1,28) via +, tau=2/29
+
+### {1..11,13,14}
+    M(S)=1/12 (0.083333), multiples of 14 in S: [14]
+    tau=1/12: binding=[1, 11, 13], type=binding-pair-crossing, mult14 binding? NO
+        pair (1,11) via +, tau=1/12
+        pair (1,13) via -, tau=1/12
+        pair (11,13) via +, tau=2/24
+    tau=5/12: binding=[5, 7], type=binding-pair-crossing, mult14 binding? NO
+        pair (5,7) via +, tau=5/12
+
+### {1..13,42}     (42=3*14)
+    M(S)=3/43 (0.069767), multiples of 14 in S: [42]
+    tau=3/43: binding=[1, 42], type=binding-pair-crossing, mult14 binding? [42]
+        pair (1,42) via +, tau=3/43
+
+### {1..9,11,13,84}
+    M(S)=1/10 (0.100000), multiples of 14 in S: [84]
+    tau=1/10: binding=[1, 9, 11], type=binding-pair-crossing, mult14 binding? NO
+        pair (1,9) via +, tau=1/10
+        pair (1,11) via -, tau=1/10
+        pair (9,11) via +, tau=2/20
+    tau=3/10: binding=[3, 7, 13], type=binding-pair-crossing, mult14 binding? NO
+        pair (3,7) via +, tau=3/10
+        pair (3,13) via -, tau=3/10
+        pair (7,13) via +, tau=6/20
+
+========================================================================
+PART 3b: Off-grid vs on-grid. The multiple-of-14 runner sits in
+   section 0 at EVERY a/14 (||14m * a/14|| = ||m*a|| = 0).
+   So on the GRID a/14 the covering core is never lonely; M is
+   attained OFF-grid. Verify the optimum tau is NOT of form a/14.
+========================================================================
+  {1..11,13,84}  (84=6*14)       tau=   37/89  denom=89   on-grid(=a/14)? False
+  {1..13,14}     (14=1*14)       tau=    1/15  denom=15   on-grid(=a/14)? False
+  {1..13,28}     (28=2*14)       tau=    2/29  denom=29   on-grid(=a/14)? False
+  {1..11,13,14}                  tau=    1/12  denom=12   on-grid(=a/14)? False
+  {1..13,42}     (42=3*14)       tau=    3/43  denom=43   on-grid(=a/14)? False
+  {1..9,11,13,84}                tau=    1/10  denom=10   on-grid(=a/14)? False
+
+========================================================================
+PART 4: Stress test the CORE CLAIM across MANY random configs:
+   is M ALWAYS attained at a tau with >=2 binding runners that form
+   a sum/diff pair? Report any counterexample.
+========================================================================
+
+Tested 4000 random configs (n=2..8).
+Configs where NO optimum is a binding-pair-crossing: 0
+  ...of those, where every optimum has a SINGLE binding runner: 0
+
+Examples where the optimum is pinned by a SINGLE runner (half-integer),
+NOT a pair (these are honest exceptions to a naive 'always a pair' claim):
+
+========================================================================
+PART 4b: Refined claim test. A SINGLE binding runner v at tau=(2k+1)/(2v)
+  means ||v tau||=1/2, the MAX possible. That only pins M when 1/2 is
+  the min, i.e. ALL runners are at 1/2 => M=1/2 (only S={powers giving
+  half}). Otherwise the min is set by a runner NOT at 1/2. Test: when
+  M<1/2, is the binding set ALWAYS >=2 and contain a sum/diff pair?
+========================================================================
+
+Tested 5576 configs with 0<M<1/2.
+Configs where NO optimum has a sum/diff binding pair: 0
+==> NO counterexamples: when 0<M<1/2, the optimum ALWAYS has a
+    sum/diff binding pair (REFINED CLAIM holds on this sample).

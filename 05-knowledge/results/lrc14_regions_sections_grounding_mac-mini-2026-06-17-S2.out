@@ -1,0 +1,58 @@
+==========================================================================
+(1)-(2) GRID-14 SECTION OCCUPANCY  r_i = v_i*a mod 14
+==========================================================================
+
+--- TIGHT AP {1..13} (no mult of 14): S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] ---
+  speeds mod 14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  (distinct & nonzero => SDR-able)
+  a= 1: sections [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> PERFECT SDR
+  a= 3: sections [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> PERFECT SDR
+  a= 5: sections [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> PERFECT SDR
+  grid-14 lonely at a in [1, 3, 5, 9, 11, 13]  (empty => off-grid lonely time needed)
+
+--- COVERING hard core {1..11,13,84} (84=6*14): S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] ---
+  speeds mod 14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 0]  (distinct & nonzero => SDR-able)
+  a= 1: sections [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  -> OBSERVER HIT (sec 0)
+  a= 3: sections [0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13]  -> OBSERVER HIT (sec 0)
+  a= 5: sections [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> OBSERVER HIT (sec 0)
+  grid-14 lonely at a in []  (empty => off-grid lonely time needed)
+
+--- interior-drop j=6 u 98: S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 98] ---
+  speeds mod 14: [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 0]  (distinct & nonzero => SDR-able)
+  a= 1: sections [0, 1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]  -> OBSERVER HIT (sec 0)
+  a= 3: sections [0, 1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> OBSERVER HIT (sec 0)
+  a= 5: sections [0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  -> OBSERVER HIT (sec 0)
+  grid-14 lonely at a in []  (empty => off-grid lonely time needed)
+
+==========================================================================
+(3) OFF-GRID lonely time for the hard core: where do runners sit?
+==========================================================================
+
+  hardcore 84: M=7/89=0.07865, lonely tau*=37/89 (denom 89 = #fine sections)
+  14-section occupancy {sec:count}: {1: 1, 2: 1, 3: 1, 4: 1, 5: 2, 6: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 2}
+  sections EMPTY (no runner): [0, 7, 13]  (observer's gap lives in an empty/clear band)
+  is each runner in its own 14-section? False
+
+  drop6 u98: M=9/109=0.08257, lonely tau*=19/109 (denom 109 = #fine sections)
+  14-section occupancy {sec:count}: {1: 2, 2: 1, 3: 2, 4: 1, 5: 1, 7: 2, 9: 1, 10: 1, 12: 2}
+  sections EMPTY (no runner): [0, 6, 8, 11, 13]  (observer's gap lives in an empty/clear band)
+  is each runner in its own 14-section? False
+
+==========================================================================
+(4) The (Z/14)* action permutes the SDR (the 'switches' for {1..13})
+==========================================================================
+  a -> section-permutation of runners (sigma_a(i)=v_i*a mod 14):
+   a= 1: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+   a= 3: [3, 6, 9, 12, 1, 4, 7, 10, 13, 2, 5, 8, 11]
+   a= 5: [5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
+   a= 9: [9, 4, 13, 8, 3, 12, 7, 2, 11, 6, 1, 10, 5]
+   a=11: [11, 8, 5, 2, 13, 10, 7, 4, 1, 12, 9, 6, 3]
+   a=13: [13, 12, 11, 10, 9, 8, 7, 6, 5, 4, 3, 2, 1]
+  (each a in (Z/14)* gives a DISTINCT bijection runners<->sections: the symmetry group of the nice case)
+
+==========================================================================
+(5) OVERTAKING structure (first look at the tournament): crossings & cyclic order
+==========================================================================
+  at lonely tau*=5/14, cyclic order of runners by position:
+   [3, 6, 9, 12, 1, 4, 7, 10, 13, 2, 5, 8, 11]  (positions [0.07142857142857142, 0.14285714285714285, 0.21428571428571427, 0.2857142857142857, 0.35714285714285715, 0.42857142857142855, 0.5, 0.5714285714285714, 0.6428571428571429, 0.7142857142857143, 0.7857142857142857, 0.8571428571428571, 0.9285714285714286])
+  pairwise relative laps |v_i-v_j| (crossings per period) = the wiring-diagram swap counts:
+   sum of |v_i-v_j| over pairs = 364

@@ -1,0 +1,69 @@
+================================================================================
+(A) BINDING-PAIR MECHANISM: M(S) is a 2-body switch at a crossing tau*=k/(v_a +- v_b)
+================================================================================
+
+  TIGHT AP {1..13}: M=1/14, tau*=5/14
+    binding runners (||v tau*|| == M): [3, 11]  (2 of them)
+    binding PAIR (a,b)=(3,11); tau* = 5/(v_a+v_b) = 5/14  (a 2-body crossing)
+      sum form: at tau*, runner 3 and runner 11 are on OPPOSITE sides equidistant from 0 (v_a+v_b=14)
+    => the LRC optimum is decided by ONE pair, not by all 13 runners.
+
+  hardcore 84: M=7/89, tau*=37/89
+    binding runners (||v tau*|| == M): [5, 84]  (2 of them)
+    binding PAIR (a,b)=(5,84); tau* = 37/(v_a+v_b) = 37/89  (a 2-body crossing)
+      sum form: at tau*, runner 5 and runner 84 are on OPPOSITE sides equidistant from 0 (v_a+v_b=89)
+    => the LRC optimum is decided by ONE pair, not by all 13 runners.
+
+  drop6 u98: M=9/109, tau*=19/109
+    binding runners (||v tau*|| == M): [11, 98]  (2 of them)
+    binding PAIR (a,b)=(11,98); tau* = 19/(v_a+v_b) = 19/109  (a 2-body crossing)
+      sum form: at tau*, runner 11 and runner 98 are on OPPOSITE sides equidistant from 0 (v_a+v_b=109)
+    => the LRC optimum is decided by ONE pair, not by all 13 runners.
+
+================================================================================
+(B) REVERSAL a=-1 in (Z/14)* = TOURNAMENT COMPLEMENT: T*(1-tau) = T*(tau)^op
+================================================================================
+
+  TIGHT AP {1..13}: tau*=5/14; reversal 1-tau=9/14
+    T*(1-tau) == T*(tau)^op ?  True   (LRC complement symmetry = the project's Z_2)
+    sections at tau:   [5, 10, 1, 6, 11, 2, 7, 12, 3, 8, 13, 4, 9]
+    sections at 1-tau: [9, 4, 13, 8, 3, 12, 7, 2, 11, 6, 1, 10, 5]  (= 14 - section, the reversal/complement)
+
+  hardcore 84: tau*=37/89; reversal 1-tau=52/89
+    T*(1-tau) == T*(tau)^op ?  True   (LRC complement symmetry = the project's Z_2)
+
+  drop6 u98: tau*=19/109; reversal 1-tau=90/109
+    T*(1-tau) == T*(tau)^op ?  True   (LRC complement symmetry = the project's Z_2)
+
+================================================================================
+(C) GENUINE BRIDGE: perfect SDR at a unit a/14  <=>  v_i distinct & nonzero mod 14
+    (the LRC mirror of: Omega edgeless <=> ideal gas H=3^alpha)
+================================================================================
+
+  THEOREM (exact, since a is a unit mod 14, mult by a is a bijection on Z/14):
+    {v_i a mod 14} distinct&nonzero  <=>  {v_i mod 14} distinct&nonzero   FOR ALL units a.
+    => 'perfect SDR at SOME unit' = 'perfect SDR at EVERY unit' = a property of S mod 14 alone.
+
+  verify on a census of 13-runner sets (random + structured):
+    S mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: distinct&nonzero=True, SDR@all-units=True, M=1/14(0.0714)  PERFECT-SDR set
+    S mod14=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]: distinct&nonzero=False, SDR@all-units=False, M=1/13(0.0769)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 12]: distinct&nonzero=False, SDR@all-units=False, M=2/27(0.0741)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]: distinct&nonzero=True, SDR@all-units=True, M=1/13(0.0769)  PERFECT-SDR set
+    S mod14=[0, 4, 5, 5, 7, 7, 7, 10, 10, 10, 11, 12, 13]: distinct&nonzero=False, SDR@all-units=False, M=1/5(0.2000)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[0, 0, 0, 1, 2, 3, 4, 5, 6, 8, 8, 9, 13]: distinct&nonzero=False, SDR@all-units=False, M=1/4(0.2500)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[0, 1, 2, 3, 3, 4, 8, 9, 9, 10, 12, 13, 13]: distinct&nonzero=False, SDR@all-units=False, M=10/57(0.1754)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[2, 5, 6, 7, 7, 8, 8, 9, 10, 10, 12, 12, 13]: distinct&nonzero=False, SDR@all-units=False, M=13/63(0.2063)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[0, 2, 4, 4, 4, 5, 7, 8, 9, 10, 12, 13, 13]: distinct&nonzero=False, SDR@all-units=False, M=3/17(0.1765)  NOT perfect SDR (collision/zero mod14)
+    S mod14=[0, 1, 2, 2, 3, 6, 7, 7, 8, 10, 10, 12, 13]: distinct&nonzero=False, SDR@all-units=False, M=4/21(0.1905)  NOT perfect SDR (collision/zero mod14)
+
+  IFF holds across census? True
+
+  KEY: for a perfect-SDR set, is M = 1/14 EXACTLY (the tight extremal value)?
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] (SDR): M = 1/14  -> M==1/14? True  (tau=5/14)
+    [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13] (SDR): M = 1/13  -> M==1/14? False  (tau=4/13)
+  (NOTE: distinct&nonzero mod 14 GUARANTEES a lonely grid time a/14 with min-dist 1/14,
+   hence M >= 1/14; equality iff no closer off-grid optimum. For these it is exactly 1/14.)
+
+================================================================================
+VERDICT in structured summary.
+================================================================================

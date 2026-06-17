@@ -1,0 +1,89 @@
+========================================================================
+EXCEPTION CHARACTERIZATION: M=1/2 single-binding-runner case.
+========================================================================
+M=1/2 means every runner is at distance 1/2 at tau=1/2: v*1/2 ~ 1/2
+=> v ODD for all v. So M=1/2 <=> all speeds odd; tau=1/2 pins it with
+ALL runners binding (the whole set), trivially a pair too.
+  all-odd sets: 333, of which M=1/2: 333
+  M=1/2 with a NON-odd speed present: 231
+  => M=1/2 <=> all speeds odd (the single-runner/half-int case is
+     subsumed: tau=1/2 makes EVERY odd runner bind, so >=2 bind).
+
+========================================================================
+BINDING-PAIR LAW for COVERING CORES with a single multiple m*14.
+========================================================================
+Test set: {1..13} plus one extra speed w=m*14, and {1..k,13,84} style.
+Question: does the small-speed/multiple-of-14 pair (v, w) bind, with
+tau = k/(v+w) for the SMALLEST gap-determining crossing?
+
+{1..13,14}: M=1/15 (0.06667), mult-of-14 = [14]
+   tau=1/15: binding=[1, 14], mult14-binds=[14], pair=(1, 14, 15), denom=15
+   tau=2/15: binding=[7, 8], mult14-binds=NO, pair=(7, 8, 15), denom=15
+   tau=4/15: binding=[4, 11], mult14-binds=NO, pair=(4, 11, 15), denom=15
+   tau=7/15: binding=[2, 13], mult14-binds=NO, pair=(2, 13, 15), denom=15
+   --> LAW CHECK: pair=(1,14) sum=15, tau denom=15, sum==denom? True
+
+{1..13,28}: M=2/29 (0.06897), mult-of-14 = [28]
+   tau=2/29: binding=[1, 28], mult14-binds=[28], pair=(1, 28, 29), denom=29
+   --> LAW CHECK: pair=(1,28) sum=29, tau denom=29, sum==denom? True
+
+{1..13,42}: M=3/43 (0.06977), mult-of-14 = [42]
+   tau=3/43: binding=[1, 42], mult14-binds=[42], pair=(1, 42, 43), denom=43
+   --> LAW CHECK: pair=(1,42) sum=43, tau denom=43, sum==denom? True
+
+{1..13,56}: M=4/57 (0.07018), mult-of-14 = [56]
+   tau=4/57: binding=[1, 56], mult14-binds=[56], pair=(1, 56, 57), denom=57
+   --> LAW CHECK: pair=(1,56) sum=57, tau denom=57, sum==denom? True
+
+{1..13,70}: M=5/71 (0.07042), mult-of-14 = [70]
+   tau=5/71: binding=[1, 70], mult14-binds=[70], pair=(1, 70, 71), denom=71
+   --> LAW CHECK: pair=(1,70) sum=71, tau denom=71, sum==denom? True
+
+{1..13,84}: M=6/85 (0.07059), mult-of-14 = [84]
+   tau=6/85: binding=[1, 84], mult14-binds=[84], pair=(1, 84, 85), denom=85
+   --> LAW CHECK: pair=(1,84) sum=85, tau denom=85, sum==denom? True
+
+{1..11,13,84}: M=7/89 (0.07865), mult-of-14 = [84]
+   tau=37/89: binding=[5, 84], mult14-binds=[84], pair=(5, 84, 89), denom=89
+   --> LAW CHECK: pair=(5,84) sum=89, tau denom=89, sum==denom? True
+
+{1..11,13,98}: M=1/12 (0.08333), mult-of-14 = [98]
+   tau=1/12: binding=[1, 11, 13], mult14-binds=NO, pair=(1, 11, 12), denom=12
+   tau=5/12: binding=[5, 7], mult14-binds=NO, pair=(5, 7, 12), denom=12
+
+========================================================================
+OTHERS-CLEAR INDEPENDENCE: can a pair-crossing have gap>=1/14 but be
+KILLED by another runner being closer? Show the constraint is REAL
+(i.e. binding-pair gap alone is NOT sufficient; need clearance).
+========================================================================
+
+{1,2,3,...,13}: best pair-only gap = 1/2 at (1, 3, Fraction(1, 2))
+   true M (others respected) = 1/14 = 1/14
+   others-clear MATTERS here? True  (pair-only overstates M by 3/7 when True)
+
+{1,5,7,11}: best pair-only gap = 1/2 at (1, 5, Fraction(1, 2))
+   true M (others respected) = 1/2 = 1/2
+   others-clear MATTERS here? False  (pair-only overstates M by 0 when True)
+
+{2,3,11}: best pair-only gap = 1/2 at (3, 11, Fraction(1, 2))
+   true M (others respected) = 5/14 = 5/14
+   others-clear MATTERS here? True  (pair-only overstates M by 1/7 when True)
+
+{1,6,10,15}: best pair-only gap = 1/2 at (1, 15, Fraction(1, 2))
+   true M (others respected) = 3/8 = 3/8
+   others-clear MATTERS here? True  (pair-only overstates M by 1/8 when True)
+
+========================================================================
+DECISIVE STRESS: is true M ALWAYS = max over pair-crossings of the
+FULL gap g(S,tau) (i.e. min over ALL runners)? This is the actual
+reduction we claim: M = max_{pair crossings tau} g(S,tau).
+(plus tau=1/2 for the all-odd M=1/2 case.) Counterexamples?
+========================================================================
+
+Tested 8000 configs (n=2..9).
+Configs where max-over-pair-crossings(+1/2) != true M: 0
+==> ZERO violations. The reduction
+    M(S) = max( g(S,1/2),  max_{pairs(a,b),k} g(S, k/(a+-b)) )
+    holds on all sampled configs. LRC(14) <=> this max >= 1/14,
+    checkable over O(n^2) pairs x O(d) crossings, each an O(n)
+    clearance evaluation.

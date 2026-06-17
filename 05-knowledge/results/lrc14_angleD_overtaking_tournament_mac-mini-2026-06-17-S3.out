@@ -1,0 +1,96 @@
+================================================================================
+ANGLE D: the OVERTAKING TOURNAMENT and SECTION CONFLICT GRAPH for LRC(14)
+================================================================================
+
+################################################################################
+(1) CYCLIC ORDER + GAP SEQUENCE at the lonely time tau*
+################################################################################
+
+  TIGHT AP {1..13}: M=1/14, tau*=5/14
+    cyclic order (by position): [3, 6, 9, 12, 1, 4, 7, 10, 13, 2, 5, 8, 11]
+    gap sequence between runners: ['1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/14', '1/7']
+    observer (sec 0) nearest-runner dist = 1/14 = 0.07143  (lonely iff >= 1/14=0.07143)
+    max runner-gap = 1/7 = 0.14286; observer's clear band straddles 0
+
+  hardcore 84 {1..11,13,84}: M=7/89, tau*=37/89
+    cyclic order (by position): [5, 10, 3, 8, 13, 1, 6, 11, 4, 9, 2, 7, 84]
+    gap sequence between runners: ['7/89', '8/89', '7/89', '7/89', '1/89', '7/89', '7/89', '8/89', '7/89', '8/89', '7/89', '1/89', '14/89']
+    observer (sec 0) nearest-runner dist = 7/89 = 0.07865  (lonely iff >= 1/14=0.07143)
+    max runner-gap = 14/89 = 0.15730; observer's clear band straddles 0
+
+  drop6 u98 {1..5,7..13,98}: M=9/109, tau*=19/109
+    cyclic order (by position): [98, 12, 1, 7, 13, 2, 8, 3, 9, 4, 10, 5, 11]
+    gap sequence between runners: ['1/109', '9/109', '5/109', '5/109', '9/109', '5/109', '14/109', '5/109', '14/109', '5/109', '14/109', '5/109', '18/109']
+    observer (sec 0) nearest-runner dist = 9/109 = 0.08257  (lonely iff >= 1/14=0.07143)
+    max runner-gap = 18/109 = 0.16514; observer's clear band straddles 0
+
+################################################################################
+(2) POSITION TOURNAMENT T*: i->j iff frac(v_i tau*) > frac(v_j tau*)
+################################################################################
+
+  TIGHT AP {1..13}: transitive? True   H(T*) = 1
+    -> position order is a TOTAL ORDER => transitive tournament => H=1, Omega EMPTY.
+
+  hardcore 84 {1..11,13,84}: transitive? True   H(T*) = 1
+    -> position order is a TOTAL ORDER => transitive tournament => H=1, Omega EMPTY.
+
+  drop6 u98 {1..5,7..13,98}: transitive? True   H(T*) = 1
+    -> position order is a TOTAL ORDER => transitive tournament => H=1, Omega EMPTY.
+
+################################################################################
+(2b) OVERTAKING-PARITY TOURNAMENT: i->j iff (current relative lead XOR crossing-parity)
+################################################################################
+
+  TIGHT AP {1..13}: tau*=5/14
+    transitive? False   H(parity tournament) = 3251323  (Redei: must be ODD -> True)
+    score sequence: [5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7]
+    Omega(3-cycles): 88 vertices (too many for I(.,2) brute)
+
+  hardcore 84 {1..11,13,84}: tau*=37/89
+    transitive? False   H(parity tournament) = 3272899  (Redei: must be ODD -> True)
+    score sequence: [5, 5, 5, 6, 6, 6, 6, 6, 6, 6, 7, 7, 7]
+    Omega(3-cycles): 88 vertices (too many for I(.,2) brute)
+
+  drop6 u98 {1..5,7..13,98}: tau*=19/109
+    transitive? False   H(parity tournament) = 2015775  (Redei: must be ODD -> True)
+    score sequence: [4, 4, 5, 5, 5, 5, 6, 6, 7, 7, 8, 8, 8]
+    Omega(3-cycles): 78 vertices (too many for I(.,2) brute)
+
+################################################################################
+(3) SECTION CONFLICT GRAPH G_sec: i~j iff same 14-section at tau*
+################################################################################
+
+  TIGHT AP {1..13}: tau*=5/14
+    section of each runner: {1: 5, 2: 10, 3: 1, 4: 6, 5: 11, 6: 2, 7: 7, 8: 12, 9: 3, 10: 8, 11: 13, 12: 4, 13: 9}
+    distinct sections used = 13/13;  section 0 clear? True
+    G_sec: 0 edges; alpha (max distinct-section set) = 13; chi = 1
+    PERFECT SDR (edgeless)? True   (alpha=13==n=13? True)
+
+  hardcore 84 {1..11,13,84}: tau*=37/89
+    section of each runner: {1: 5, 2: 11, 3: 3, 4: 9, 5: 1, 6: 6, 7: 12, 8: 4, 9: 10, 10: 2, 11: 8, 13: 5, 84: 12}
+    distinct sections used = 11/13;  section 0 clear? True
+    G_sec: 2 edges; alpha (max distinct-section set) = 11; chi = 2
+    PERFECT SDR (edgeless)? False   (alpha=11==n=13? False)
+
+  drop6 u98 {1..5,7..13,98}: tau*=19/109
+    section of each runner: {1: 2, 2: 4, 3: 7, 4: 9, 5: 12, 7: 3, 8: 5, 9: 7, 10: 10, 11: 12, 12: 1, 13: 3, 98: 1}
+    distinct sections used = 9/13;  section 0 clear? True
+    G_sec: 4 edges; alpha (max distinct-section set) = 9; chi = 2
+    PERFECT SDR (edgeless)? False   (alpha=9==n=13? False)
+
+################################################################################
+(3b) PROXIMITY CONFLICT GRAPH G_prox: i~j iff circular dist(frac v_i tau, frac v_j tau) < 1/14
+################################################################################
+
+  TIGHT AP {1..13}: tau*=5/14  G_prox: 0 edges; alpha=13; chi=1
+    edgeless (all runners >=1/14 apart)? True
+
+  hardcore 84 {1..11,13,84}: tau*=37/89  G_prox: 2 edges; alpha=11; chi=2
+    edgeless (all runners >=1/14 apart)? False
+
+  drop6 u98 {1..5,7..13,98}: tau*=19/109  G_prox: 7 edges; alpha=7; chi=2
+    edgeless (all runners >=1/14 apart)? False
+
+================================================================================
+VERDICT printed in structured summary.
+================================================================================

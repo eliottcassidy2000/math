@@ -1,0 +1,61 @@
+================================================================
+1. SECTION OCCUPANCY  (reframe)
+================================================================
+S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+M = 7/89 = 0.078652   (1/14 = 0.071429)   M>1/14: True
+attained OFF-grid at tau* = 37/89
+
+grid times a/14, a in (Z/14)* = [1, 3, 5, 9, 11, 13]:
+  a= 1: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+  a= 3: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+  a= 5: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+  a= 9: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+  a=11: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+  a=13: section 0 (observer NOT lonely) = [84]   -> 84 always sits in section 0
+
+FINE circle (denom 89); observer clear band radius 7/89:
+  nearest ABOVE: runner 5 at +7/89
+  nearest BELOW: runner 84 at -7/89
+  => binding pair (5, 84), gap symmetric.
+
+================================================================
+2. BINDING-PAIR SWITCH
+================================================================
+5 + 84 = 89 = denom(tau*) = 89
+5*tau* mod 1 = 7/89,  84*tau* mod 1 = 7/89  (symmetric)
+optimum is the SUM-crossing tau* = k/(a+b) of pair (5,84).
+
+top pair sum/diff crossings (the switch candidates):
+  g=7/89 (0.07865)  pair(5,84) +-cross  tau=37/89
+  g=6/77 (0.07792)  pair(7,84) --cross  tau=32/77
+  g=1/13 (0.07692)  pair(7,84) +-cross  tau=38/91
+  g=6/79 (0.07595)  pair(5,84) --cross  tau=33/79
+  g=7/94 (0.07447)  pair(10,84) +-cross  tau=39/94
+  g=7/95 (0.07368)  pair(11,84) +-cross  tau=8/95
+  global M = 7/89  (top row, pair (5,84))
+
+================================================================
+3. CLOSED FORM over covering family {1..11,13}+X, X=84m
+================================================================
+base {1..11,13} missing q = [12, 14]; big element must be multiple of lcm(12, 14) = 84
+
+  m=1 X=  84: M=     7/89  =7m/(84m+5)? True  binders=(5, 84)  0.078652
+  m=2 X= 168: M=   14/173  =7m/(84m+5)? True  binders=(5, 168)  0.080925
+  m=3 X= 252: M=   21/257  =7m/(84m+5)? True  binders=(5, 252)  0.081712
+  m=4 X= 336: M=   28/341  =7m/(84m+5)? True  binders=(5, 336)  0.082111
+  m=5 X= 420: M=     7/85  =7m/(84m+5)? True  binders=(5, 420)  0.082353
+  m=6 X= 504: M=   42/509  =7m/(84m+5)? True  binders=(5, 504)  0.082515
+  m=7 X= 588: M=   49/593  =7m/(84m+5)? True  binders=(5, 588)  0.082631
+  limit m->inf -> 7/84 = 1/12 (no-big-element value); min at m=1 = 7/89
+
+================================================================
+4. THE 1/14 MARGIN  and  5. FINITE CHECKLIST
+================================================================
+7/89 > 1/14  <=>  7*14 > 89  <=>  98 > 89  (TRUE by 9 = 3^2)
+
+scanned 452 covering sets (12 from 1..14 + one mult of 84):
+  UNIQUE closest-to-1/14 from above: M=7/89  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+
+SMALL flank runner across covering bases lies in: [2, 4, 5, 13] (tiny)
+=> CHECKLIST: 'beats 1/14?' = check pair sum-crossings
+   (small flank in {2,4,5,13}) x (big element X).  Exhaustive, finite.
