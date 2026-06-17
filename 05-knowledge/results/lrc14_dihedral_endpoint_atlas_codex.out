@@ -49,6 +49,19 @@ Drop-6 detailed dihedral mouth decomposition
     {'scores': [0, 1], 'score_hist': {0: 1, 1: 1}, 'directed_cycles': 0, 'transitive_triples': 0, 'scc_sizes': [1, 1], 'hamiltonian_paths': 1}
   measure-vs-raw-determinant edge flips=0
 
+Drop-6 tooth-coordinate proof view
+  Normalize the omitted speed-6 tooth centered at 1/6 by
+    x = 14*6*(t - 1/6), so the tooth is [-1,1].
+  A speed v with center j/v contributes
+    [14*(6*j-v)/v - 6/v, 14*(6*j-v)/v + 6/v].
+    v=13, j= 2, defect=-1, center=-14/13, half=6/13, interval=[-20/13,-8/13], clipped=[-1,-8/13]
+    v=12, j= 2, defect= 0, center=0, half=1/2, interval=[-1/2,1/2], clipped=[-1/2,1/2]
+    v=11, j= 2, defect= 1, center=14/11, half=6/11, interval=[8/11,20/11], clipped=[8/11,1]
+  merged clipped cover=[(Fraction(-1, 1), Fraction(-8, 13)), (Fraction(-1, 2), Fraction(1, 2)), (Fraction(8, 11), Fraction(1, 1))]
+  uncovered x-components=[(Fraction(-8, 13), Fraction(-1, 2)), (Fraction(1, 2), Fraction(8, 11))]
+  x-length=49/143; t-length in this tooth=7/1716
+  The opposite tooth k=5 is the global reflection of this one.
+
 Two-delete/one-replacement trade around the drop-6 mouths
   drop6 base measure=7/858 = 0.008158508
   rows with missing speed 6 tested=2004; rows that damage old drop6 mouths=1104

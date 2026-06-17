@@ -60,6 +60,40 @@ worst known core is not merely "AP13 minus 6"; it is a **D6 missing-clock
 shadow**, with the other AP speeds covering all but two reflected pieces of that
 hexagon moat.
 
+## Tooth-coordinate proof view
+
+The cleanest local form is to zoom into one omitted speed-6 tooth.  Around the
+tooth centered at `1/6`, set
+
+`x = 14*6*(t - 1/6)`.
+
+The missing tooth is now the fixed interval `[-1,1]`.  A remaining speed `v`,
+with center `j/v`, contributes the normalized danger interval
+
+`[14*(6*j-v)/v - 6/v, 14*(6*j-v)/v + 6/v]`.
+
+Only three speeds meet the tooth:
+
+| speed | center | defect `6j-v` | normalized cover |
+|---:|---:|---:|---:|
+| `13` | `2/13` | `-1` | `[-1,-8/13]` after clipping |
+| `12` | `2/12` | `0` | `[-1/2,1/2]` |
+| `11` | `2/11` | `1` | `[8/11,1]` after clipping |
+
+So the uncovered pieces in the normalized tooth are
+
+`[-8/13,-1/2]` and `[1/2,8/11]`,
+
+with total normalized length
+
+`3/26 + 5/22 = 49/143`.
+
+Dividing by the scale factor `14*6` gives one-tooth measure `7/1716`; reflecting
+to the tooth centered at `5/6` doubles this to `7/858`.
+
+This is the proof-shaped heart of the computation: a local dihedral tooth cover,
+with residue defects `-1,0,1`, produces the exact extremal mass.
+
 ## Perturbation trade
 
 The script `04-computation/lrc14_dihedral_endpoint_atlas_codex.py` scans the same

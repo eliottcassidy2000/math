@@ -286,6 +286,77 @@ def print_drop6_decomposition():
     )
 
 
+def merge_arcs(arcs):
+    arcs = sorted((a, b) for a, b in arcs if b > a)
+    merged = []
+    for a, b in arcs:
+        if not merged or a > merged[-1][1]:
+            merged.append([a, b])
+        elif b > merged[-1][1]:
+            merged[-1][1] = b
+    return [(a, b) for a, b in merged]
+
+
+def tooth_cover_intervals(core, missing, tooth, q=N):
+    """Normalize a missing speed tooth to x in [-1,1]."""
+    rows = []
+    for v in core:
+        for j in range(v):
+            defect = missing * j - tooth * v
+            center = F(q * defect, v)
+            half_width = F(missing, v)
+            lo = center - half_width
+            hi = center + half_width
+            if hi > -1 and lo < 1:
+                rows.append(
+                    {
+                        "v": v,
+                        "j": j,
+                        "defect": defect,
+                        "center": center,
+                        "half_width": half_width,
+                        "interval": (lo, hi),
+                        "clipped": (max(lo, F(-1)), min(hi, F(1))),
+                    }
+                )
+    merged = merge_arcs(row["clipped"] for row in rows)
+    comps = []
+    cursor = F(-1)
+    for lo, hi in merged:
+        if lo > cursor:
+            comps.append((cursor, lo))
+        cursor = max(cursor, hi)
+    if cursor < 1:
+        comps.append((cursor, F(1)))
+    return sorted(rows, key=lambda row: row["interval"]), merged, comps
+
+
+def print_drop6_tooth_coordinates():
+    rows, merged, comps = tooth_cover_intervals(DROP6, 6, 1, N)
+    x_total = sum(b - a for a, b in comps)
+    print("Drop-6 tooth-coordinate proof view")
+    print("  Normalize the omitted speed-6 tooth centered at 1/6 by")
+    print("    x = 14*6*(t - 1/6), so the tooth is [-1,1].")
+    print("  A speed v with center j/v contributes")
+    print("    [14*(6*j-v)/v - 6/v, 14*(6*j-v)/v + 6/v].")
+    for row in rows:
+        lo, hi = row["interval"]
+        clo, chi = row["clipped"]
+        print(
+            "    v={v:2d}, j={j:2d}, defect={defect:2d}, "
+            "center={center}, half={half_width}, "
+            "interval=[{lo},{hi}], clipped=[{clo},{chi}]".format(
+                **row, lo=lo, hi=hi, clo=clo, chi=chi
+            )
+        )
+    print(f"  merged clipped cover={merged}")
+    print(f"  uncovered x-components={comps}")
+    print(
+        f"  x-length={x_total}; t-length in this tooth={x_total/(14*6)}"
+    )
+    print("  The opposite tooth k=5 is the global reflection of this one.")
+
+
 def perturbation_trade_scan(limit=180):
     drop_measure, drop_comps = base.safe_components(DROP6, N)
     best = None
@@ -415,6 +486,8 @@ def main():
     print_ap_delete_atlas()
     print()
     print_drop6_decomposition()
+    print()
+    print_drop6_tooth_coordinates()
     print()
 
     print("Two-delete/one-replacement trade around the drop-6 mouths")
