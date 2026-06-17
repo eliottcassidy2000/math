@@ -12,6 +12,12 @@
 
 ---
 
+## Lead codex-2026-06-17-S4: unit-distance n=22 Mathieu residue (HYP-2572, T840)
+
+**Status:** NEW exact finite scout.  The unresolved `60 <= u(22) <= 61` frontier is a one-point extension problem: any 61-edge graph has a degree-4 or degree-5 deletion ear over a `57/56`-edge 21-core.  The Mathieu chain suggests retaining the `M22` point-stabilizer side-channel: fixing a point exposes `M21 = L_3(4) = PSL(3,4)` on `PG(2,4)`, whose 21 lines are exactly the fixed-point residual hexads of `S(3,6,22)`.  The new script verifies the plane and classifies ear-neighbor sets: degree-5 has `line_5` (`21`), `near_line_4_plus_1` (`1680`), `arc_5_no_three` (`1008`), and `three_collinear_5` (`17640`); degree-4 has `line_4` (`105`), `arc_4_no_three` (`2520`), and `three_collinear_4` (`3360`).  Unit-circle caps give at most `4`/`3` internal unit chords for degree `5`/`4` ears.  Tournament Analysis over proof carriers is transitive with leader `line_5_hexad_ear`.
+**Next (ranked):** (1) Attach `PG(2,4)` ear types to stored `n=21` core and `n=22` extension candidates; record which extensions are line, punctured-line, near-line, or scattered. (2) Prove/certify coherent-ear exclusions using the circle-cap counts plus the existing Moser cap-endpoint ledger. (3) Build a scattered-ear obstruction library indexed by secant profile and compare it against the totally-unfaithful killers from the graph-only 62-edge coimage. (4) Test whether the `M21` residue aligns with `P_2^- / P_2^+` spine-ladder rows and the `57=20+37` centered-hex carrier split.
+**Sources:** `04-computation/unit_distance_n22_mathieu_residue_codex.py`, `05-knowledge/results/unit_distance_n22_mathieu_residue_codex.out`, `05-knowledge/hypotheses/HYP-2572-unit-distance-n22-mathieu-residue.md`, `07-reflections/unit-distance-n22-mathieu-residue-codex.md`; HYP-2176, HYP-2188, HYP-2203, HYP-2467.
+
 ## Lead mac-mini-2026-06-17-S2: LRC regions/sections reframe → the binding-pair switch reduction (THM-524, HYP-2571)
 
 **Status:** PROVED (sawtooth lower-envelope lemma): M(S)=max(g(½), max over pairs (a,b),k of g(k/(v_a±v_b))) — the LRC gap is a pairwise SWITCH; LRC(N) ⟺ some pair-crossing gives gap≥1/N with others clear (~78 switches for 13 runners, polynomial). Regions/SDR = the on-grid q=14 witness (blind off-grid). Complement=reversal is the one exact tournament bridge; overtaking tournament is trivially transitive (Rédei link dead). Covering hard core: M=7m/(84m+5), min 7/89.

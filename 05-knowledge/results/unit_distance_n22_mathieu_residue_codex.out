@@ -1,0 +1,89 @@
+﻿==============================================================================
+Unit-distance n=22 Mathieu/M21 residue scout
+==============================================================================
+External facts verified from standard references:
+  M24 point stabilizer -> M23; two-point stabilizer -> M22.
+  M22 point stabilizer is M21 ~= PSL(3,4) on PG(2,4)'s 21 points.
+  S(3,6,22) has 77 hexads; through a fixed point are 21 residual
+  5-sets, exactly the lines of PG(2,4).
+
+Small unit-distance frontier context:
+  Published small-n data give u(21)=57 and 60 <= u(22) <= 61.
+  A 61-edge 22-point graph has a degree-4 or degree-5 deletion ear:
+    degree 4 -> 57-edge 21-core
+    degree 5 -> 56-edge 21-core
+
+(A) PG(2,4) residue audit
+  points=21 lines=21 line_size=5
+  point_line_degree=5
+  pairs covered by unique line=210/210
+
+  Witt design arithmetic:
+    S(3,6,22) hexads = C(22,3)/C(6,3) = 77
+    hexads through a fixed point = C(21,2)/C(5,2) = 21
+    deleting the fixed point turns those 21 hexads into PG(2,4) lines
+
+(B) Mathieu residue types for degree-4 and degree-5 ears
+  k=4 ear-neighbor subsets of the 21-point residue
+    arc_4_no_three: count=2520 secants={6: 2520} profile=((0, 7), (1, 8), (2, 6))
+    line_4: count=105 secants={1: 105} profile=((0, 4), (1, 16), (4, 1))
+    three_collinear_4: count=3360 secants={4: 3360} profile=((0, 6), (1, 11), (2, 3), (3, 1))
+    unit-circle cap: at most 3 unit chords among the 4 neighbors of one extension point
+
+  k=5 ear-neighbor subsets of the 21-point residue
+    arc_5_no_three: count=1008 secants={10: 1008} profile=((0, 6), (1, 5), (2, 10))
+    line_5: count=21 secants={1: 21} profile=((1, 20), (5, 1))
+    near_line_4_plus_1: count=1680 secants={5: 1680} profile=((0, 3), (1, 13), (2, 4), (4, 1))
+    three_collinear_5: count=17640 secants={6: 7560, 8: 10080} profile=((0, 5), (1, 8), (2, 7), (3, 1))
+    unit-circle cap: at most 4 unit chords among the 5 neighbors of one extension point
+
+(C) Reduction suggested by the M22 -> M21 break
+  The 22-point problem should be split by the deleted point p:
+    1. degree-5 ear over a 56-core
+       line_5: p plus a PG(2,4) line is a coherent Witt hexad
+       near_line/scattered: the ear spends many residue secants
+    2. degree-4 ear over a 57-core
+       line_4: p plus four of a PG line is a punctured hexad
+       three_collinear/arc: the ear is projective-scattered
+
+  Why this is not decorative numerology:
+    M24/M23/M22 are sporadic highly transitive layers; deleting once
+    from M22 exposes the classical projective plane PG(2,4).
+    That is exactly the same shape as the n=22 unit-distance frontier:
+    deciding 61 is not another raw edge-count step, but a one-point
+    extension problem over a 21-point core.
+
+  Candidate proof split:
+    coherent ears: check line_5 / line_4 against unit-circle chord caps
+      and Moser cap-endpoint ledgers;
+    scattered ears: use many-secant residue profiles as an obstruction
+      library, analogous to totally-unfaithful graph side channels.
+
+(D) Tournament Analysis over proof carriers
+  vertices: proof carriers / ear types, not points
+  pairwise observable: design coherence, ear relevance, circle cap,
+    geometry retention, burden, scalar-forgetfulness penalty
+  tie Hamiltonian path: listed carrier order
+    score=7 line_5_hexad_ear features=(5,5,5,4,2,1)
+    score=6 line_4_punctured_hexad_ear features=(5,5,4,4,2,1)
+    score=5 near_line_4_plus_1 features=(4,4,4,3,3,2)
+    score=4 Moser_27_quantum features=(2,4,3,5,2,2)
+    score=3 three_collinear_scattered_ear features=(3,4,3,3,4,2)
+    score=2 arc_scattered_ear features=(2,4,2,3,5,2)
+    score=1 raw_21_core_extension features=(1,5,1,2,4,4)
+    score=0 graph_only_F_free_coimage features=(0,3,0,1,5,5)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed_3_cycles=0
+  scc_sizes=[1, 1, 1, 1, 1, 1, 1, 1]
+  hamiltonian_paths=1
+
+SYNTHESIS
+  1. The Mathieu observation suggests a concrete deletion residue:
+     n=22 -> n=21 exposes PG(2,4), not a featureless 21-core.
+  2. A possible 61-edge graph is a degree-4/5 ear problem.  The ear
+     can be coherent (line/punctured-line) or scattered in PG(2,4).
+  3. Coherent ears are small enough to attack with unit-circle chord
+     caps and the Moser cap-endpoint ledger; scattered ears should feed
+     an obstruction library via their many-secant residue profiles.
+  4. This is the unit-distance analogue of the repo's no-leak lesson:
+     raw graph quotients forget the side channel where the proof lives.
