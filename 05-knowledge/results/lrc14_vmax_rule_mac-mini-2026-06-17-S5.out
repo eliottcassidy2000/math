@@ -1,4 +1,12 @@
-covering sets tested: 4000
-v=LARGEST fails (W(S\{V})<=1/(7V)): 0   => v=largest ALWAYS works
-pigeonhole-via-largest fails: 1282 (W exact may still hold there)
-tightest v=largest margin W-1/(7V): 0.00013526102066839946 at S= [5013, 5016, 5065, 5085, 5124, 5146] ...
+========================================================================
+Does v=LARGEST satisfy W(S\{V})>1/(7V)?  vs general exists-v  (covering 13-sets)
+========================================================================
+  spread (drop+84k)     : n= 232  v=largest FAILS:   0  exists-v FAILS:   0
+  clustered             : n= 681  v=largest FAILS:   0  exists-v FAILS:   0
+  mixed (small+2big)    : n=1200  v=largest FAILS:   0  exists-v FAILS:   0
+
+  TOTAL: v=largest fails 0/2113;  worst v=largest margin +0.000134
+    at S=[5005, 5026, 5082, 5132, 5136, 5142, 5145]... (V=5292)
+
+  => if v=largest fails sometimes but exists-v never, the proof needs the case-split;
+     if v=largest NEVER fails, the deterministic rule v=max(S) is the whole proof.

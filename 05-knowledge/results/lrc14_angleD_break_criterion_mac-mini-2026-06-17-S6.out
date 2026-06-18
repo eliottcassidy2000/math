@@ -1,0 +1,13 @@
+==============================================================================
+ANGLE D — BREAKING criterion C: search for a covering 13-set with C(S) FALSE
+==============================================================================
+
+[ATTACK 0] scale-invariance: margin(cS via cv) = margin(S via v)/c (cannot flip C)
+  c=  2: margin(S)=1/420  margin(cS)=1/840  c*margin(cS)=1/420  match=True
+  c=  3: margin(S)=1/420  margin(cS)=1/1260  c*margin(cS)=1/420  match=True
+  c=  5: margin(S)=1/420  margin(cS)=1/2100  c*margin(cS)=1/420  match=True
+  c=  7: margin(S)=1/420  margin(cS)=1/2940  c*margin(cS)=1/420  match=True
+  c= 30: margin(S)=1/420  margin(cS)=1/12600  c*margin(cS)=1/420  match=True
+  scale-invariance EXACT: True  => scaled cores can NEVER break C.
+
+[ATTACK 1] clustered covering sets, all runners large (bounded window <=1200)

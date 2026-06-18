@@ -1,0 +1,11 @@
+============================================================================
+COMBINED PROVABLE BOUND max(Pigeonhole, Antipode) > 1/(7V) for covering 13-sets?
+============================================================================
+  covering 13-sets tested: 3462
+  combined bound max(P,Anti) > 1/(7V) holds: 3461/3462  (FAILS: 1)
+  pigeonhole alone suffices: 2319/3462;  antipode alone suffices: 1219/3462
+  (sets where NEITHER alone works but combined does: 3462) -- see fails
+  provable bound exceeded exact W (sanity, should be 0): 6
+  tightest combined margin: -0.0000051 via pig at S=[63, 90, 100, 156, 192, 310]...
+
+  combined bound failed on 1 sets — need a third bound / sharper estimate there.
