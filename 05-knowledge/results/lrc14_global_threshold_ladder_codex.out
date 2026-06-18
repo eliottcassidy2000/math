@@ -1,0 +1,289 @@
+========================================================================================
+LRC(14) global-threshold ladder: rho_alpha(P,E)
+========================================================================================
+Definitions: G_P={x: ||p x||>=1/14 for all p in P};
+rho_alpha(P,E)=meas(G_P cap {maxgap({e*x})>alpha}).
+alpha=2/7 is the old via-max sufficient condition; alpha=1/7 is the
+global witness threshold.  All decisions below use Fraction arithmetic.
+
+========================================================================================
+STEP 1. Explicit anti-correlation ladders
+========================================================================================
+
+  Case 1
+  P=(1, 2, 3, 6, 12, 13)  E=(0, 2, 3, 4, 5, 6, 8)  k=7  spread=8
+  critical sup alpha on G_P = 2/7 = 0.285714
+    global_1_7     alpha=  1/7: rho=        515/1092 = 0.471612
+    slack_1_6      alpha=  1/6: rho=       1487/3640 = 0.408516
+    slack_3_14     alpha= 3/14: rho=      2473/10920 = 0.226465
+    quarter_1_4    alpha=  1/4: rho=        543/7280 = 0.074588
+    near_via_4_15  alpha= 4/15: rho=       529/13650 = 0.038755
+    via_2_7        alpha=  2/7: rho=               0 = 0.000000
+
+  Case 2
+  P=(1, 2, 3, 12, 13)  E=(0, 2, 3, 4, 5, 6, 7, 8)  k=8  spread=8
+  critical sup alpha on G_P = 2/7 = 0.285714
+    global_1_7     alpha=  1/7: rho=         177/364 = 0.486264
+    slack_1_6      alpha=  1/6: rho=           27/65 = 0.415385
+    slack_3_14     alpha= 3/14: rho=      2083/10920 = 0.190751
+    quarter_1_4    alpha=  1/4: rho=         59/1040 = 0.056731
+    near_via_4_15  alpha= 4/15: rho=          19/650 = 0.029231
+    via_2_7        alpha=  2/7: rho=               0 = 0.000000
+
+  Case 3
+  P=(1, 2, 3, 13)  E=(0, 2, 3, 4, 5, 6, 7, 8, 9)  k=9  spread=9
+  critical sup alpha on G_P = 51/182 = 0.280220
+    global_1_7     alpha=  1/7: rho=       1641/3185 = 0.515228
+    slack_1_6      alpha=  1/6: rho=      6751/16380 = 0.412149
+    slack_3_14     alpha= 3/14: rho=      6857/57330 = 0.119606
+    quarter_1_4    alpha=  1/4: rho=         19/1365 = 0.013919
+    near_via_4_15  alpha= 4/15: rho=         37/6825 = 0.005421
+    via_2_7        alpha=  2/7: rho=               0 = 0.000000
+
+  Case 4
+  P=(1, 2, 3)  E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)  k=10  spread=10
+  critical sup alpha on G_P = 2/7 = 0.285714
+    global_1_7     alpha=  1/7: rho=           26/49 = 0.530612
+    slack_1_6      alpha=  1/6: rho=        937/2520 = 0.371825
+    slack_3_14     alpha= 3/14: rho=          73/980 = 0.074490
+    quarter_1_4    alpha=  1/4: rho=           1/140 = 0.007143
+    near_via_4_15  alpha= 4/15: rho=           2/525 = 0.003810
+    via_2_7        alpha=  2/7: rho=               0 = 0.000000
+
+  Case 5
+  P=(1, 2, 9)  E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)  k=10  spread=10
+  critical sup alpha on G_P = 19/63 = 0.301587
+    global_1_7     alpha=  1/7: rho=         121/210 = 0.576190
+    slack_1_6      alpha=  1/6: rho=           13/30 = 0.433333
+    slack_3_14     alpha= 3/14: rho=       1217/8820 = 0.137982
+    quarter_1_4    alpha=  1/4: rho=        127/2520 = 0.050397
+    near_via_4_15  alpha= 4/15: rho=        101/3150 = 0.032063
+    via_2_7        alpha=  2/7: rho=            1/90 = 0.011111
+
+========================================================================================
+STEP 2. Consecutive clusters, all admissible P
+========================================================================================
+  k= 3, E=0..2:
+    global_1_7     min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    slack_1_6      min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    slack_3_14     min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    quarter_1_4    min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    near_via_4_15  min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+    via_2_7        min=  14249/252252 = 0.056487 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)
+  k= 4, E=0..3:
+    global_1_7     min=  10601/114660 = 0.092456 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    slack_1_6      min=  10601/114660 = 0.092456 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    slack_3_14     min=  10601/114660 = 0.092456 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    quarter_1_4    min=  10601/114660 = 0.092456 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    near_via_4_15  min=196367/2522520 = 0.077846 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+    via_2_7        min=  22669/315315 = 0.071893 zeros=   0 at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)
+  k= 5, E=0..4:
+    global_1_7     min=    2479/17640 = 0.140533 zeros=   0 at P=(1, 3, 5, 7, 8, 9, 11, 13)
+    slack_1_6      min=    2479/17640 = 0.140533 zeros=   0 at P=(1, 3, 5, 7, 8, 9, 11, 13)
+    slack_3_14     min=    8402/63063 = 0.133232 zeros=   0 at P=(1, 2, 3, 7, 8, 9, 11, 13)
+    quarter_1_4    min=    3581/45864 = 0.078079 zeros=   0 at P=(1, 2, 3, 7, 8, 9, 11, 13)
+    near_via_4_15  min=    3488/63063 = 0.055310 zeros=   0 at P=(1, 2, 3, 6, 7, 9, 11, 13)
+    via_2_7        min=    3488/63063 = 0.055310 zeros=   0 at P=(1, 2, 3, 6, 7, 9, 11, 13)
+  k= 6, E=0..5:
+    global_1_7     min=  45107/229320 = 0.196699 zeros=   0 at P=(1, 5, 7, 8, 9, 11, 13)
+    slack_1_6      min=  45107/229320 = 0.196699 zeros=   0 at P=(1, 5, 7, 8, 9, 11, 13)
+    slack_3_14     min=  67153/504504 = 0.133107 zeros=   0 at P=(1, 3, 7, 8, 9, 11, 13)
+    quarter_1_4    min=    3463/38808 = 0.089234 zeros=   0 at P=(1, 2, 3, 7, 8, 9, 11)
+    near_via_4_15  min=    3488/63063 = 0.055310 zeros=   0 at P=(1, 2, 3, 7, 9, 11, 13)
+    via_2_7        min=    3488/63063 = 0.055310 zeros=   0 at P=(1, 2, 3, 7, 9, 11, 13)
+  k= 7, E=0..6:
+    global_1_7     min=    3029/10780 = 0.280983 zeros=   0 at P=(1, 5, 7, 8, 9, 11)
+    slack_1_6      min=       119/585 = 0.203419 zeros=   0 at P=(1, 5, 8, 9, 11, 13)
+    slack_3_14     min=    6103/72072 = 0.084679 zeros=   0 at P=(1, 3, 8, 9, 11, 13)
+    quarter_1_4    min=      335/9009 = 0.037185 zeros=   0 at P=(1, 2, 3, 9, 11, 13)
+    near_via_4_15  min=     986/45045 = 0.021889 zeros=   0 at P=(1, 2, 3, 9, 11, 13)
+    via_2_7        min=       20/1287 = 0.015540 zeros=   0 at P=(1, 2, 3, 9, 11, 13)
+  k= 8, E=0..7:
+    global_1_7     min=    8152/24255 = 0.336096 zeros=   0 at P=(1, 4, 5, 9, 11)
+    slack_1_6      min=    2929/13860 = 0.211328 zeros=   0 at P=(1, 4, 5, 9, 11)
+    slack_3_14     min=        37/468 = 0.079060 zeros=   0 at P=(1, 3, 4, 9, 13)
+    quarter_1_4    min=       47/2002 = 0.023477 zeros=   0 at P=(1, 2, 3, 11, 13)
+    near_via_4_15  min=     281/15015 = 0.018715 zeros=   0 at P=(1, 2, 3, 11, 13)
+    via_2_7        min=       93/7007 = 0.013272 zeros=   0 at P=(1, 2, 3, 11, 13)
+  k= 9, E=0..8:
+    global_1_7     min=       143/420 = 0.340476 zeros=   0 at P=(1, 10, 11, 12)
+    slack_1_6      min=     1513/6930 = 0.218326 zeros=   0 at P=(1, 3, 10, 11)
+    slack_3_14     min=        45/728 = 0.061813 zeros=   0 at P=(1, 3, 4, 13)
+    quarter_1_4    min=          1/48 = 0.020833 zeros=   0 at P=(1, 2, 3, 12)
+    near_via_4_15  min=          1/60 = 0.016667 zeros=   0 at P=(1, 2, 3, 12)
+    via_2_7        min=          1/84 = 0.011905 zeros=   0 at P=(1, 2, 3, 12)
+  k=10, E=0..9:
+    global_1_7     min=         19/49 = 0.387755 zeros=   0 at P=(1, 11, 12)
+    slack_1_6      min=      383/1386 = 0.276335 zeros=   0 at P=(1, 4, 11)
+    slack_3_14     min=      137/1764 = 0.077664 zeros=   0 at P=(1, 3, 4)
+    quarter_1_4    min=          1/42 = 0.023810 zeros=   0 at P=(1, 2, 3)
+    near_via_4_15  min=        19/945 = 0.020106 zeros=   0 at P=(1, 2, 3)
+    via_2_7        min=          1/63 = 0.015873 zeros=   0 at P=(1, 2, 3)
+  k=11, E=0..10:
+    global_1_7     min=     3193/8820 = 0.362018 zeros=   0 at P=(1, 12)
+    slack_1_6      min=      355/1512 = 0.234788 zeros=   0 at P=(1, 4)
+    slack_3_14     min=    1669/17640 = 0.094615 zeros=   0 at P=(1, 6)
+    quarter_1_4    min=         7/180 = 0.038889 zeros=   0 at P=(1, 6)
+    near_via_4_15  min=       43/1350 = 0.031852 zeros=   0 at P=(1, 6)
+    via_2_7        min=          1/42 = 0.023810 zeros=   0 at P=(1, 6)
+  k=12, E=0..11:
+    global_1_7     min=   10358/24255 = 0.427046 zeros=   0 at P=(1,)
+    slack_1_6      min=   24007/83160 = 0.288684 zeros=   0 at P=(1,)
+    slack_3_14     min=    2677/17640 = 0.151757 zeros=   0 at P=(1,)
+    quarter_1_4    min=      101/1008 = 0.100198 zeros=   0 at P=(1,)
+    near_via_4_15  min=      331/3780 = 0.087566 zeros=   0 at P=(1,)
+    via_2_7        min=        43/588 = 0.073129 zeros=   0 at P=(1,)
+  k=13, E=0..12:
+    global_1_7     min=      477/1078 = 0.442486 zeros=   0 at P=()
+    slack_1_6      min=     2153/5940 = 0.362458 zeros=   0 at P=()
+    slack_3_14     min=    9881/38808 = 0.254612 zeros=   0 at P=()
+    quarter_1_4    min=       183/880 = 0.207955 zeros=   0 at P=()
+    near_via_4_15  min=     1927/9900 = 0.194646 zeros=   0 at P=()
+    via_2_7        min=      829/4620 = 0.179437 zeros=   0 at P=()
+
+========================================================================================
+STEP 3. Structured bounded-spread/perforated shapes, all admissible P
+========================================================================================
+  k= 3: shapes=  8, cases=   2288
+    global_1_7     min=  14249/252252 = 0.056487 zeros=    0
+    slack_1_6      min=  14249/252252 = 0.056487 zeros=    0
+    slack_3_14     min=  14249/252252 = 0.056487 zeros=    0
+    quarter_1_4    min=  14249/252252 = 0.056487 zeros=    0
+    near_via_4_15  min=  14249/252252 = 0.056487 zeros=    0
+    via_2_7        min=  14249/252252 = 0.056487 zeros=    0
+  k= 4: shapes= 11, cases=   7865
+    global_1_7     min=  10601/114660 = 0.092456 zeros=    0
+    slack_1_6      min=  10601/114660 = 0.092456 zeros=    0
+    slack_3_14     min=  10601/114660 = 0.092456 zeros=    0
+    quarter_1_4    min=  10601/114660 = 0.092456 zeros=    0
+    near_via_4_15  min=196367/2522520 = 0.077846 zeros=    0
+    via_2_7        min=  22669/315315 = 0.071893 zeros=    0
+  k= 5: shapes= 14, cases=  18018
+    global_1_7     min=    2479/17640 = 0.140533 zeros=    0
+    slack_1_6      min=    2479/17640 = 0.140533 zeros=    0
+    slack_3_14     min=    8402/63063 = 0.133232 zeros=    0
+    quarter_1_4    min=    3581/45864 = 0.078079 zeros=    0
+    near_via_4_15  min=    3488/63063 = 0.055310 zeros=    0
+    via_2_7        min=    3488/63063 = 0.055310 zeros=    0
+  k= 6: shapes= 15, cases=  25740
+    global_1_7     min=  45107/229320 = 0.196699 zeros=    0
+    slack_1_6      min=  45107/229320 = 0.196699 zeros=    0
+    slack_3_14     min=  67153/504504 = 0.133107 zeros=    0
+    quarter_1_4    min=    3463/38808 = 0.089234 zeros=    0
+    near_via_4_15  min=    3488/63063 = 0.055310 zeros=    0
+    via_2_7        min=    3488/63063 = 0.055310 zeros=    0
+  k= 7: shapes= 16, cases=  27456
+    global_1_7     min=    3029/10780 = 0.280983 zeros=    0
+    slack_1_6      min=       119/585 = 0.203419 zeros=    0
+    slack_3_14     min=    6103/72072 = 0.084679 zeros=    0
+    quarter_1_4    min=         5/364 = 0.013736 zeros=    0
+    near_via_4_15  min=        4/1001 = 0.003996 zeros=    0
+    via_2_7        min=             0 = 0.000000 zeros=    1
+  k= 8: shapes= 17, cases=  21879
+    global_1_7     min=    8152/24255 = 0.336096 zeros=    0
+    slack_1_6      min=    2929/13860 = 0.211328 zeros=    0
+    slack_3_14     min=        37/468 = 0.079060 zeros=    0
+    quarter_1_4    min=         5/364 = 0.013736 zeros=    0
+    near_via_4_15  min=        4/1001 = 0.003996 zeros=    0
+    via_2_7        min=             0 = 0.000000 zeros=    3
+  k= 9: shapes= 18, cases=  12870
+    global_1_7     min=       143/420 = 0.340476 zeros=    0
+    slack_1_6      min=     1513/6930 = 0.218326 zeros=    0
+    slack_3_14     min=        45/728 = 0.061813 zeros=    0
+    quarter_1_4    min=       19/1365 = 0.013919 zeros=    0
+    near_via_4_15  min=         2/525 = 0.003810 zeros=    0
+    via_2_7        min=             0 = 0.000000 zeros=   24
+  k=10: shapes= 19, cases=   5434
+    global_1_7     min=         19/49 = 0.387755 zeros=    0
+    slack_1_6      min=      383/1386 = 0.276335 zeros=    0
+    slack_3_14     min=        53/735 = 0.072109 zeros=    0
+    quarter_1_4    min=         1/140 = 0.007143 zeros=    0
+    near_via_4_15  min=         2/525 = 0.003810 zeros=    0
+    via_2_7        min=             0 = 0.000000 zeros=   25
+  k=11: shapes= 20, cases=   1560
+    global_1_7     min=     3193/8820 = 0.362018 zeros=    0
+    slack_1_6      min=      355/1512 = 0.234788 zeros=    0
+    slack_3_14     min=    1669/17640 = 0.094615 zeros=    0
+    quarter_1_4    min=          2/63 = 0.031746 zeros=    0
+    near_via_4_15  min=       53/1890 = 0.028042 zeros=    0
+    via_2_7        min=          1/42 = 0.023810 zeros=    0
+  k=12: shapes= 21, cases=    273
+    global_1_7     min=   10358/24255 = 0.427046 zeros=    0
+    slack_1_6      min=   24007/83160 = 0.288684 zeros=    0
+    slack_3_14     min=     1327/9240 = 0.143615 zeros=    0
+    quarter_1_4    min=        73/880 = 0.082955 zeros=    0
+    near_via_4_15  min=      239/3300 = 0.072424 zeros=    0
+    via_2_7        min=       93/1540 = 0.060390 zeros=    0
+  k=13: shapes= 22, cases=     22
+    global_1_7     min=      477/1078 = 0.442486 zeros=    0
+    slack_1_6      min=     2153/5940 = 0.362458 zeros=    0
+    slack_3_14     min=    9155/38808 = 0.235905 zeros=    0
+    quarter_1_4    min=     1171/6160 = 0.190097 zeros=    0
+    near_via_4_15  min=    4093/23100 = 0.177186 zeros=    0
+    via_2_7        min=    1751/10780 = 0.162430 zeros=    0
+
+========================================================================================
+STEP 4. Random bounded-spread stress
+========================================================================================
+  tested random cases: 500
+    global_1_7     min=  14249/252252 = 0.056487 zeros=   0 at ((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 3))
+    slack_1_6      min=  14249/252252 = 0.056487 zeros=   0 at ((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 3))
+    slack_3_14     min=  14249/252252 = 0.056487 zeros=   0 at ((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 3))
+    quarter_1_4    min=         1/140 = 0.007143 zeros=   0 at ((1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+    near_via_4_15  min=         2/525 = 0.003810 zeros=   0 at ((1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+    via_2_7        min=             0 = 0.000000 zeros=   1 at ((1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+
+========================================================================================
+STEP 5. Aggregate threshold floors and zero examples
+========================================================================================
+  total structured cases scanned: 123405
+  Aggregate rho_alpha metrics:
+    global_1_7     alpha=  1/7 tested= 132005 zeros=     0 min=    14249/252252 = 0.056487
+      min_case=('consecutive', (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 2))
+    slack_1_6      alpha=  1/6 tested= 132005 zeros=     0 min=    14249/252252 = 0.056487
+      min_case=('consecutive', (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 2))
+    slack_3_14     alpha= 3/14 tested= 132005 zeros=     0 min=    14249/252252 = 0.056487
+      min_case=('consecutive', (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 2))
+    quarter_1_4    alpha=  1/4 tested= 132005 zeros=     0 min=           1/140 = 0.007143
+      min_case=('structured', (1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10))
+    near_via_4_15  alpha= 4/15 tested= 132005 zeros=     0 min=           2/525 = 0.003810
+      min_case=('structured', (1, 2, 3, 11), (0, 2, 3, 4, 5, 6, 7, 8, 10))
+    via_2_7        alpha=  2/7 tested= 132005 zeros=    54 min=               0 = 0.000000
+      min_case=('structured', (1, 2, 3, 6, 12, 13), (0, 2, 3, 4, 5, 6, 8))
+      first_zero_examples=[('structured', (1, 2, 3, 6, 12, 13), (0, 2, 3, 4, 5, 6, 8)), ('structured', (1, 2, 3, 12, 13), (0, 2, 3, 4, 5, 6, 7, 8)), ('structured', (1, 2, 3, 12, 13), (0, 1, 2, 3, 4, 5, 6, 8)), ('structured', (1, 2, 3, 6, 13), (0, 1, 3, 4, 5, 6, 7, 9)), ('structured', (1, 2, 3, 13), (0, 2, 3, 4, 5, 6, 7, 8, 9)), ('structured', (1, 2, 6, 13), (0, 2, 3, 4, 5, 6, 7, 8, 9))]
+
+  Critical-threshold probe on minima and zero examples:
+    explicit           critical=2/7 = 0.285714 P=(1, 2, 3, 6, 12, 13) E=(0, 2, 3, 4, 5, 6, 8)
+    explicit           critical=2/7 = 0.285714 P=(1, 2, 3, 12, 13) E=(0, 2, 3, 4, 5, 6, 7, 8)
+    explicit           critical=51/182 = 0.280220 P=(1, 2, 3, 13) E=(0, 2, 3, 4, 5, 6, 7, 8, 9)
+    explicit           critical=2/7 = 0.285714 P=(1, 2, 3) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    explicit           critical=19/63 = 0.301587 P=(1, 2, 9) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    min_global_1_7     critical=62/77 = 0.805195 P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) E=(0, 1, 2)
+    min_near_via_4_15  critical=2/7 = 0.285714 P=(1, 2, 3, 11) E=(0, 2, 3, 4, 5, 6, 7, 8, 10)
+    zero_via_2_7       critical=2/7 = 0.285714 P=(1, 2, 3, 12, 13) E=(0, 1, 2, 3, 4, 5, 6, 8)
+    zero_via_2_7       critical=2/7 = 0.285714 P=(1, 2, 3, 6, 13) E=(0, 1, 3, 4, 5, 6, 7, 9)
+    zero_via_2_7       critical=2/7 = 0.285714 P=(1, 2, 6, 13) E=(0, 2, 3, 4, 5, 6, 7, 8, 9)
+  probe critical floor=51/182 = 0.280220 at ('explicit', (1, 2, 3, 13), (0, 2, 3, 4, 5, 6, 7, 8, 9))
+
+========================================================================================
+STEP 6. Proof-obligation tournament
+========================================================================================
+  vertices: global_1_7, slack_1_6, slack_3_14, quarter_1_4, near_via_4_15, via_2_7
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} cycles3=0 scc=[1, 1, 1, 1, 1, 1] hamiltonian_paths=1
+  leaders=[(5, 'global_1_7'), (4, 'slack_1_6'), (3, 'slack_3_14'), (2, 'quarter_1_4'), (1, 'near_via_4_15'), (0, 'via_2_7')]
+
+========================================================================================
+TAKEAWAY
+========================================================================================
+  1. The via-max alpha=2/7 density floor is exactly the wrong target:
+     explicit admissible anti-correlation cases have rho_{2/7}=0.
+  2. The global alpha=1/7 object is much fatter in every case scanned;
+     this is the correct reservoir for a direct LRC witness.
+  3. The critical-gap scan suggests a stronger open subtarget:
+     prove a uniform critical slack sup_{x in G_P} maxgap(E*x) >= beta
+     with beta>1/7, and then separately prove a density floor below beta.
+     The tested anti-correlations bind only at the via boundary, not at
+     the global threshold.
+  4. This does not prove LRC(14).  It moves the proof target from
+     'rho*>=c0' to the precise two-part statement: global/slack reservoir
+     plus Weyl/CRT placement cannot be fully covered by conditional blockers.
