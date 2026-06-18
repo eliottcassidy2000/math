@@ -115,16 +115,20 @@ STEP 4. Exact q=14V discrepancy on random covering tails
   min actual count=18 at V=25 ratio=0.630142 deficit=10.565
     row=((1, 3, 4, 5, 8, 9, 10, 11, 12, 13), (0, 9, 11), 'k=3,spread=24') Sigma=19607/17160 K=136
   positive deficit range: min=21303298/287022645 max=186779459202305947/2598958628838684
+  candidate positive-deficit bounds:
+    100: violations=0 max_ratio=0.718670 worst_deficit=71.867 bound=100 cGP=16 k=10
+    7*k*cGP+1: violations=0 max_ratio=0.184776 worst_deficit=28.640 bound=155 cGP=2 k=11
+    14*k*cGP+1: violations=0 max_ratio=0.092687 worst_deficit=28.640 bound=309 cGP=2 k=11
 
   Eight lowest-ratio exact rows:
-    ratio=0.630142 deficit= 10.565 V=  25 actual=  18 Sigma=1.1426 K= 136 k=3,spread=24
-    ratio=0.639368 deficit= 18.049 V=  57 actual=  32 Sigma=0.8781 K= 170 k=3,spread=39
-    ratio=0.643964 deficit= 24.327 V=  36 actual=  44 Sigma=1.8980 K= 228 k=6,spread=18
-    ratio=0.683692 deficit= 31.460 V=  64 actual=  68 Sigma=1.5541 K= 202 k=5,spread=40
-    ratio=0.693367 deficit= 19.458 V=  37 actual=  44 Sigma=1.7151 K= 194 k=4,spread=12
-    ratio=0.768374 deficit= 21.102 V=  69 actual=  70 Sigma=1.3203 K= 334 k=6,spread=126
-    ratio=0.773665 deficit= 10.532 V=  26 actual=  36 Sigma=1.7897 K= 172 k=4,spread=12
-    ratio=0.778848 deficit= 11.926 V=  34 actual=  42 Sigma=1.5861 K= 226 k=4,spread=20
+    ratio=0.630142 deficit= 10.565 V=  25 actual=  18 Sigma=1.1426 K= 136 cGP=12 k=3,spread=24
+    ratio=0.639368 deficit= 18.049 V=  57 actual=  32 Sigma=0.8781 K= 170 cGP=10 k=3,spread=39
+    ratio=0.643964 deficit= 24.327 V=  36 actual=  44 Sigma=1.8980 K= 228 cGP=20 k=6,spread=18
+    ratio=0.683692 deficit= 31.460 V=  64 actual=  68 Sigma=1.5541 K= 202 cGP=16 k=5,spread=40
+    ratio=0.693367 deficit= 19.458 V=  37 actual=  44 Sigma=1.7151 K= 194 cGP=20 k=4,spread=12
+    ratio=0.768374 deficit= 21.102 V=  69 actual=  70 Sigma=1.3203 K= 334 cGP=18 k=6,spread=126
+    ratio=0.773665 deficit= 10.532 V=  26 actual=  36 Sigma=1.7897 K= 172 cGP=16 k=4,spread=12
+    ratio=0.778848 deficit= 11.926 V=  34 actual=  42 Sigma=1.5861 K= 226 cGP=20 k=4,spread=20
 
 ========================================================================================
 STEP 5. Random exact checks of actual >= open >= V*Sigma-K

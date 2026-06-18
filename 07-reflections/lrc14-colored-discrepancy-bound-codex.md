@@ -48,6 +48,14 @@ random covering tail rows there were no zero witnesses, the worst ratio
 `actual/(V*Sigma)` was about `0.63`, and the largest positive deficit
 `V*Sigma-actual` was only about `71.9`.
 
+The stored run also tested three deliberately simple positive-deficit bounds:
+`100`, `7*k*cGP+1`, and `14*k*cGP+1`, where `cGP` is the number of components
+of the small-speed safe set `G_P`.  All three survived the `160`-row exact
+tail census.  A separate larger scratch sample broke the too-small
+`14*cGP+1` guess but still left `7*k*cGP+1` looking plausible.  That suggests
+the right complexity is "small comb times cluster size", not the thousands of
+micro-components created by a large-spread cluster.
+
 So the next theorem should not be "bound the number of continuous components."
 It should use the arithmetic of the grid itself.  The endpoints are produced
 by the same speeds that define the progression, and the grid sees that

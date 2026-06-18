@@ -431,6 +431,7 @@ def scan_tail_exact_discrepancy() -> None:
             continue
         seen.add(key)
         sig, K, _ = sigma_K(P, E)
+        gp_components = len(ladder.safe_set(P))
         found = 0
         for V in range(max(E) + 14, max(E) + 420):
             S = pc.build_S(P, E, V)
@@ -442,7 +443,21 @@ def scan_tail_exact_discrepancy() -> None:
             expected = sig * V
             ratio = F(actual, 1) / expected if expected else F(0)
             deficit = expected - actual
-            rows.append((ratio, deficit, V, sig, K, P, E, f"k={k},spread={spread}", actual))
+            rows.append(
+                (
+                    ratio,
+                    deficit,
+                    V,
+                    sig,
+                    K,
+                    P,
+                    E,
+                    f"k={k},spread={spread}",
+                    actual,
+                    gp_components,
+                    k,
+                )
+            )
             found += 1
             if found >= 2 or len(rows) >= 160:
                 break
@@ -455,6 +470,11 @@ def scan_tail_exact_discrepancy() -> None:
     min_actual = min(rows, key=lambda r: r[8])
     positive_deficits = [r[1] for r in rows if r[1] > 0]
     negative_deficits = [r[1] for r in rows if r[1] < 0]
+    candidate_bounds = [
+        ("100", lambda r: F(100, 1)),
+        ("7*k*cGP+1", lambda r: F(7 * r[10] * max(1, r[9]) + 1, 1)),
+        ("14*k*cGP+1", lambda r: F(14 * r[10] * max(1, r[9]) + 1, 1)),
+    ]
     print(f"  exact covering rows={len(rows)}")
     print(f"  zero actual witnesses: {sum(1 for r in rows if r[8] == 0)}")
     print(f"  negative deficits (actual > V*Sigma): {len(negative_deficits)}")
@@ -480,11 +500,22 @@ def scan_tail_exact_discrepancy() -> None:
             f"  positive deficit range: min={min(positive_deficits)} "
             f"max={max(positive_deficits)}"
         )
+    print("  candidate positive-deficit bounds:")
+    for name, bound in candidate_bounds:
+        violations = [r for r in rows if r[1] > bound(r)]
+        worst = max(rows, key=lambda r: (r[1] / bound(r)) if bound(r) else F(0))
+        print(
+            f"    {name}: violations={len(violations)} "
+            f"max_ratio={float(worst[1] / bound(worst)):.6f} "
+            f"worst_deficit={float(worst[1]):.3f} bound={bound(worst)} "
+            f"cGP={worst[9]} k={worst[10]}"
+        )
     print("\n  Eight lowest-ratio exact rows:")
-    for ratio, deficit, V, sig, K, P, E, tag, actual in sorted(rows)[:8]:
+    for ratio, deficit, V, sig, K, P, E, tag, actual, gp_components, k in sorted(rows)[:8]:
         print(
             f"    ratio={float(ratio):.6f} deficit={float(deficit):7.3f} "
-            f"V={V:4d} actual={actual:4d} Sigma={float(sig):.4f} K={K:4d} {tag}"
+            f"V={V:4d} actual={actual:4d} Sigma={float(sig):.4f} "
+            f"K={K:4d} cGP={gp_components:2d} {tag}"
         )
 
 

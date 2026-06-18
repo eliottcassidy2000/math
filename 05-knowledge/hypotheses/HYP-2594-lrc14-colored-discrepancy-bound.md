@@ -71,6 +71,9 @@ On `160` random primitive covering tail rows:
 - minimum `actual/(V*Sigma) = 61776/98035 ~= 0.630142`;
 - maximum positive deficit `V*Sigma-actual ~= 71.867`;
 - `55` rows had negative deficit, meaning actual count exceeded `V*Sigma`.
+- the candidate positive-deficit bounds `100`, `7*k*c_GP+1`, and
+  `14*k*c_GP+1` had `0` violations in the stored census, where `c_GP` is the
+  number of components of the small-speed safe set `G_P`.
 
 So the next sharpened conjecture is that the true colored-grid discrepancy is
 bounded by a constant, or at least by a small function of `k` and the small
