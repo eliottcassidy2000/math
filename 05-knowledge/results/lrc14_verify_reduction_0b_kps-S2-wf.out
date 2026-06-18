@@ -1,0 +1,4 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation/lrc14_verify_reduction_0_kps-S2-wf.py:15: SyntaxWarning: invalid escape sequence '\ '
+  G_C = [0,1) \ union_{v in C} D_v   (the CLOSED-or-OPEN lonely set; we use the
+C:\Users\Eliott\Documents\GitHub\math\04-computation/lrc14_verify_reduction_0_kps-S2-wf.py:362: SyntaxWarning: invalid escape sequence '\ '
+  L(S) = meas(G_C \ D_w) >= (6/7) meas(G_C) - r/(7w)

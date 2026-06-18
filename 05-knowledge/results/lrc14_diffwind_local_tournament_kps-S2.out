@@ -1,0 +1,5 @@
+n=5 iso classes: 12 (expect 12)
+TARGET (H=15,c3=4): [((1, 2, 2, 2, 3), 4, 15)]
+diff-wind @lonely-opt (vmax<=16): realized 10 /12  TARGET realized? False
+random-phase (tie-free) diff-wind: realized 7 /12  non-local count: 0 / 60000  TARGET realized? False
+CONCLUSION: target unreachable both at lonely-opt and at free phases => ALGEBRAIC, not a loneliness obstruction. Tie-free diff-wind is always a local/round tournament.

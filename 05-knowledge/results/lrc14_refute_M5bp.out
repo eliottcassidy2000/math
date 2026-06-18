@@ -1,0 +1,6 @@
+TARGET (forbidden) = (15, 4, (1, 2, 2, 2, 3))
+
+[PHASE A] R=18: 8436 primitive 5-sets, ALL 8 variants x ALL optimal taus
+  distinct classes realized: 4
+  TARGET realized: 0 times
+  classes: [(1, 0, (0, 1, 2, 3, 4)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]

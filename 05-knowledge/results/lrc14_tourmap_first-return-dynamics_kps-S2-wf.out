@@ -1,0 +1,178 @@
+LRC-14 first-return-dynamics tournament maps  (kind-pasteur-S2-wf)
+======================================================================
+Free set sizes (A000568): {3: 2, 4: 4, 5: 12}
+
+--- n=3: 325 primitive speed-sets from 1..14 ---
+
+=== M1a first-hit-section0 (speed order)  (n=3) ===
+  evaluated tournaments: 325
+  realized classes: 1 / free 2
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (1): H=3,c3=1,score=(1, 1, 1)
+
+=== M3 lap-count-parity @gap-tau  (n=3) ===
+  evaluated tournaments: 325
+  realized classes: 2 / free 2
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 91)
+  realized H values: [1, 3]
+  FORBIDDEN: none (realizes the full free set)
+
+=== M3 lap-count-parity @ALL-cand-tau  (n=3) ===
+  evaluated tournaments: 10746
+  realized classes: 2 / free 2
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 2704)
+  realized H values: [1, 3]
+  FORBIDDEN: none (realizes the full free set)
+
+=== M5 cross-ratio solo-vs-pair wall  (n=3) ===
+  evaluated tournaments: 325
+  realized classes: 2 / free 2
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 55)
+  realized H values: [1, 3]
+  FORBIDDEN: none (realizes the full free set)
+
+=== M6 return-to-section0 hitting @gap-tau  (n=3) ===
+  evaluated tournaments: 325
+  realized classes: 1 / free 2
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (1): H=3,c3=1,score=(1, 1, 1)
+
+=== M6 return-to-section0 hitting @ALL-cand-tau  (n=3) ===
+  evaluated tournaments: 10746
+  realized classes: 1 / free 2
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (1): H=3,c3=1,score=(1, 1, 1)
+
+--- n=4: 965 primitive speed-sets from 1..14 ---
+
+=== M1a first-hit-section0 (speed order)  (n=4) ===
+  evaluated tournaments: 965
+  realized classes: 1 / free 4
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (3): H=3,c3=1,score=(0, 2, 2, 2); H=3,c3=1,score=(1, 1, 1, 3); H=5,c3=2,score=(1, 1, 2, 2)
+
+=== M3 lap-count-parity @gap-tau  (n=4) ===
+  evaluated tournaments: 965
+  realized classes: 2 / free 4
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 555)
+  realized H values: [1, 5]
+  FORBIDDEN classes (2): H=3,c3=1,score=(0, 2, 2, 2); H=3,c3=1,score=(1, 1, 1, 3)
+
+=== M3 lap-count-parity @ALL-cand-tau  (n=4) ===
+  evaluated tournaments: 48963
+  realized classes: 2 / free 4
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 24752)
+  realized H values: [1, 5]
+  FORBIDDEN classes (2): H=3,c3=1,score=(0, 2, 2, 2); H=3,c3=1,score=(1, 1, 1, 3)
+
+=== M5 cross-ratio solo-vs-pair wall  (n=4) ===
+  evaluated tournaments: 965
+  realized classes: 4 / free 4
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 398)
+  realized H values: [1, 3, 5]
+  FORBIDDEN: none (realizes the full free set)
+
+=== M6 return-to-section0 hitting @gap-tau  (n=4) ===
+  evaluated tournaments: 965
+  realized classes: 1 / free 4
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (3): H=3,c3=1,score=(0, 2, 2, 2); H=3,c3=1,score=(1, 1, 1, 3); H=5,c3=2,score=(1, 1, 2, 2)
+
+=== M6 return-to-section0 hitting @ALL-cand-tau  (n=4) ===
+  evaluated tournaments: 48963
+  realized classes: 1 / free 4
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (3): H=3,c3=1,score=(0, 2, 2, 2); H=3,c3=1,score=(1, 1, 1, 3); H=5,c3=2,score=(1, 1, 2, 2)
+
+--- n=5: 786 primitive speed-sets from 1..12 ---
+
+=== M1a first-hit-section0 (speed order)  (n=5) ===
+  evaluated tournaments: 786
+  realized classes: 1 / free 12
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (11): H=3,c3=1,score=(0, 1, 3, 3, 3); H=3,c3=1,score=(0, 2, 2, 2, 4); H=3,c3=1,score=(1, 1, 1, 3, 4); H=5,c3=2,score=(0, 2, 2, 3, 3); H=5,c3=2,score=(1, 1, 2, 2, 4); H=9,c3=3,score=(1, 1, 2, 3, 3); H=9,c3=3,score=(1, 1, 2, 3, 3); H=11,c3=4,score=(1, 2, 2, 2, 3); H=13,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=5,score=(2, 2, 2, 2, 2)
+
+=== M3 lap-count-parity @gap-tau  (n=5) ===
+  evaluated tournaments: 786
+  realized classes: 4 / free 12
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 582)
+  realized H values: [1, 9, 11, 15]
+  FORBIDDEN classes (8): H=3,c3=1,score=(0, 1, 3, 3, 3); H=3,c3=1,score=(0, 2, 2, 2, 4); H=3,c3=1,score=(1, 1, 1, 3, 4); H=5,c3=2,score=(0, 2, 2, 3, 3); H=5,c3=2,score=(1, 1, 2, 2, 4); H=9,c3=3,score=(1, 1, 2, 3, 3); H=13,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=4,score=(1, 2, 2, 2, 3)
+
+=== M3 lap-count-parity @ALL-cand-tau  (n=5) ===
+  evaluated tournaments: 43151
+  realized classes: 4 / free 12
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 29003)
+  realized H values: [1, 9, 11, 15]
+  FORBIDDEN classes (8): H=3,c3=1,score=(0, 1, 3, 3, 3); H=3,c3=1,score=(0, 2, 2, 2, 4); H=3,c3=1,score=(1, 1, 1, 3, 4); H=5,c3=2,score=(0, 2, 2, 3, 3); H=5,c3=2,score=(1, 1, 2, 2, 4); H=9,c3=3,score=(1, 1, 2, 3, 3); H=13,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=4,score=(1, 2, 2, 2, 3)
+
+=== M5 cross-ratio solo-vs-pair wall  (n=5) ===
+  evaluated tournaments: 786
+  realized classes: 11 / free 12
+  NON-TRIVIAL (some H>1): True  (#3-cycle tournaments seen: 391)
+  realized H values: [1, 3, 5, 9, 11, 13, 15]
+  FORBIDDEN classes (1): H=15,c3=5,score=(2, 2, 2, 2, 2)
+
+=== M6 return-to-section0 hitting @gap-tau  (n=5) ===
+  evaluated tournaments: 786
+  realized classes: 1 / free 12
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (11): H=3,c3=1,score=(0, 1, 3, 3, 3); H=3,c3=1,score=(0, 2, 2, 2, 4); H=3,c3=1,score=(1, 1, 1, 3, 4); H=5,c3=2,score=(0, 2, 2, 3, 3); H=5,c3=2,score=(1, 1, 2, 2, 4); H=9,c3=3,score=(1, 1, 2, 3, 3); H=9,c3=3,score=(1, 1, 2, 3, 3); H=11,c3=4,score=(1, 2, 2, 2, 3); H=13,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=5,score=(2, 2, 2, 2, 2)
+
+=== M6 return-to-section0 hitting @ALL-cand-tau  (n=5) ===
+  evaluated tournaments: 43151
+  realized classes: 1 / free 12
+  NON-TRIVIAL (some H>1): False  (#3-cycle tournaments seen: 0)
+  realized H values: [1]
+  FORBIDDEN classes (11): H=3,c3=1,score=(0, 1, 3, 3, 3); H=3,c3=1,score=(0, 2, 2, 2, 4); H=3,c3=1,score=(1, 1, 1, 3, 4); H=5,c3=2,score=(0, 2, 2, 3, 3); H=5,c3=2,score=(1, 1, 2, 2, 4); H=9,c3=3,score=(1, 1, 2, 3, 3); H=9,c3=3,score=(1, 1, 2, 3, 3); H=11,c3=4,score=(1, 2, 2, 2, 3); H=13,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=4,score=(1, 2, 2, 2, 3); H=15,c3=5,score=(2, 2, 2, 2, 2)
+
+======================================================================
+METHOD 4 (grid dihedral-clock, units mod 14)
+  n=3 wall=[1] order=nat: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=3 wall=[1] order=sorted: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=3 wall=[1, 13] order=nat: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=3 wall=[1, 13] order=sorted: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=3 wall=[1, 3] order=nat: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=3 wall=[1, 3] order=sorted: realized 1/2 nontrivial=False (#3cyc=0, evaluated=215) forbidden=1
+  n=4 wall=[1] order=nat: realized 1/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=3
+  n=4 wall=[1] order=sorted: realized 1/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=3
+  n=4 wall=[1, 13] order=nat: realized 0/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=4
+  n=4 wall=[1, 13] order=sorted: realized 0/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=4
+  n=4 wall=[1, 3] order=nat: realized 1/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=3
+  n=4 wall=[1, 3] order=sorted: realized 1/4 nontrivial=False (#3cyc=0, evaluated=494) forbidden=3
+  n=5 wall=[1] order=nat: realized 1/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=11
+  n=5 wall=[1] order=sorted: realized 1/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=11
+  n=5 wall=[1, 13] order=nat: realized 0/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=12
+  n=5 wall=[1, 13] order=sorted: realized 0/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=12
+  n=5 wall=[1, 3] order=nat: realized 1/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=11
+  n=5 wall=[1, 3] order=sorted: realized 1/12 nontrivial=False (#3cyc=0, evaluated=792) forbidden=11
+
+======================================================================
+SUMMARY TABLE
+method                                                n  real  free  nontriv  forb
+M1a first-hit-section0 (speed order)                  3     1     2    False     1
+M3 lap-count-parity @gap-tau                          3     2     2     True     0
+M3 lap-count-parity @ALL-cand-tau                     3     2     2     True     0
+M5 cross-ratio solo-vs-pair wall                      3     2     2     True     0
+M6 return-to-section0 hitting @gap-tau                3     1     2    False     1
+M6 return-to-section0 hitting @ALL-cand-tau           3     1     2    False     1
+M1a first-hit-section0 (speed order)                  4     1     4    False     3
+M3 lap-count-parity @gap-tau                          4     2     4     True     2
+M3 lap-count-parity @ALL-cand-tau                     4     2     4     True     2
+M5 cross-ratio solo-vs-pair wall                      4     4     4     True     0
+M6 return-to-section0 hitting @gap-tau                4     1     4    False     3
+M6 return-to-section0 hitting @ALL-cand-tau           4     1     4    False     3
+M1a first-hit-section0 (speed order)                  5     1    12    False    11
+M3 lap-count-parity @gap-tau                          5     4    12     True     8
+M3 lap-count-parity @ALL-cand-tau                     5     4    12     True     8
+M5 cross-ratio solo-vs-pair wall                      5    11    12     True     1
+M6 return-to-section0 hitting @gap-tau                5     1    12    False    11
+M6 return-to-section0 hitting @ALL-cand-tau           5     1    12    False    11

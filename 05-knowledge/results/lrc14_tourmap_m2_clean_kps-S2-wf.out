@@ -1,0 +1,16 @@
+CLEAN M2 (exclude snrm in {0,1/2}): is it universally SC?
+  n=5 vmax=11: clean valid=14269, SC=14269, ALL SC? True
+  n=6 vmax=10: clean valid=6347, SC=4460, ALL SC? False
+    first non-SC: ((1, 2, 3, 4, 5, 7), Fraction(5, 14), (1, 2, 2, 3, 3, 4), 6)
+  n=6 vmax=11: clean valid=16150, SC=11138, ALL SC? False
+    first non-SC: ((1, 2, 3, 4, 5, 7), Fraction(5, 14), (1, 2, 2, 3, 3, 4), 6)
+
+CLEAN M2 at OPTIMAL tau only, n=6:
+  n=6 vmax=10: clean valid at optimal tau=100, distinct classes=5, non-SC classes among realized=2
+    first non-SC at optimal: ((1, 2, 3, 4, 8, 10), Fraction(2, 11), (1, 2, 2, 3, 3, 4), 6)
+  n=6 vmax=11: clean valid at optimal tau=186, distinct classes=6, non-SC classes among realized=2
+    first non-SC at optimal: ((1, 2, 3, 4, 8, 10), Fraction(2, 11), (1, 2, 2, 3, 3, 4), 6)
+  n=6 vmax=12: clean valid at optimal tau=410, distinct classes=6, non-SC classes among realized=2
+    first non-SC at optimal: ((1, 2, 3, 4, 8, 10), Fraction(2, 11), (1, 2, 2, 3, 3, 4), 6)
+
+DONE.

@@ -1,0 +1,6 @@
+======================================================================
+(1) M4 cross-check: forbidden over ACTUAL LRC speed sets vs residue-exhaustive
+  speeds 1..20: 15246 prim 5-sets; realized=8/12; forbidden=4
+     forbidden: [(9, 3, (1, 1, 2, 3, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+  speeds 1..30: 139246 prim 5-sets; realized=8/12; forbidden=4
+     forbidden: [(9, 3, (1, 1, 2, 3, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]

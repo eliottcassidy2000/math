@@ -1,0 +1,14 @@
+============================================================
+FINAL H13/H15 SETTLEMENT
+============================================================
+[opt {1..24} full-5] configs=41656 reached=9 H13hits=0 H15hits=0
+[allcand {1..16} full-5] configs=4311 reached=10 H13hits=1322 H15hits=0
+   H13 witness: ((1, 2, 3, 4, 5), Fraction(1, 4), [1, 2, 3, 4, 5])
+[induced 6-sub {1..14} OPT] configs=2996 reached=10 H13hits=33 H15hits=0
+   H13 witness: ((1, 2, 3, 4, 5, 7), Fraction(1, 6), [1, 2, 4, 5, 7])
+[induced 7-sub {1..13} OPT] configs=1716 reached=10 H13hits=181 H15hits=0
+   H13 witness: ((1, 2, 3, 4, 5, 7, 8), Fraction(1, 6), [1, 2, 4, 5, 7])
+[induced LRC14 covering/tight OPT] configs=15 reached=7 H13hits=330 H15hits=0
+   H13 witness: ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13), Fraction(1, 12), [1, 2, 7, 8, 13])
+[induced random n8-13 OPT] configs=1997 reached=10 H13hits=1951 H15hits=0
+   H13 witness: ((1, 2, 3, 7, 8, 10, 13, 17, 23), Fraction(1, 6), [1, 2, 10, 13, 17])

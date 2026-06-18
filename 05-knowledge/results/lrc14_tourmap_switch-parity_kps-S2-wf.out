@@ -1,0 +1,142 @@
+========================================================================
+n = 3 runners, speeds in 1..14, #primitive speed-sets = 325
+FREE set (A000568): 2 iso classes
+  free (score,c3,H) signatures: [((0, 1, 2), 0, 1), ((1, 1, 1), 1, 3)]
+------------------------------------------------------------
+[M1_diff_sum_crossing_parity]
+  realized iso classes: 1 / 2
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 1
+    forbidden signatures: [((1, 1, 1), 1, 3)]
+------------------------------------------------------------
+[M2_binding_slope_lex (control)]
+  realized iso classes: 1 / 2
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 1
+    forbidden signatures: [((1, 1, 1), 1, 3)]
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  realized iso classes: 2 / 2
+  H values realized: [1, 3]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2), 0, 1), ((1, 1, 1), 1, 3)]
+  nontrivial example: S=(1, 2, 7) tau=1/3 -> (score,c3,H)=((1, 1, 1), 1, 3)
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  realized iso classes: 2 / 2
+  H values realized: [1, 3]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2), 0, 1), ((1, 1, 1), 1, 3)]
+  nontrivial example: S=(1, 3, 4) tau=3/7 -> (score,c3,H)=((1, 1, 1), 1, 3)
+------------------------------------------------------------
+[M5_separation_parity]
+  realized iso classes: 1 / 2
+  H values realized: [3]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((1, 1, 1), 1, 3)]
+  FORBIDDEN classes (in free, never realized): 1
+    forbidden signatures: [((0, 1, 2), 0, 1)]
+  nontrivial example: S=(1, 2, 3) tau=1/4 -> (score,c3,H)=((1, 1, 1), 1, 3)
+------------------------------------------------------------
+[M6_relative_rising_pairwise]
+  realized iso classes: 1 / 2
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 1
+    forbidden signatures: [((1, 1, 1), 1, 3)]
+
+========================================================================
+n = 4 runners, speeds in 1..14, #primitive speed-sets = 965
+FREE set (A000568): 4 iso classes
+  free (score,c3,H) signatures: [((0, 1, 2, 3), 0, 1), ((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+------------------------------------------------------------
+[M1_diff_sum_crossing_parity]
+  realized iso classes: 1 / 4
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 3
+    forbidden signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+------------------------------------------------------------
+[M2_binding_slope_lex (control)]
+  realized iso classes: 1 / 4
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 3
+    forbidden signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  realized iso classes: 4 / 4
+  H values realized: [1, 3, 5]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2, 3), 0, 1), ((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+  nontrivial example: S=(1, 2, 3, 6) tau=1/4 -> (score,c3,H)=((1, 1, 1, 3), 1, 3)
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  realized iso classes: 3 / 4
+  H values realized: [1, 3, 5]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2, 3), 0, 1), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+  FORBIDDEN classes (in free, never realized): 1
+    forbidden signatures: [((0, 2, 2, 2), 1, 3)]
+  nontrivial example: S=(1, 2, 3, 4) tau=2/5 -> (score,c3,H)=((1, 1, 1, 3), 1, 3)
+------------------------------------------------------------
+[M5_separation_parity]
+  realized iso classes: 1 / 4
+  H values realized: [5]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((1, 1, 2, 2), 2, 5)]
+  FORBIDDEN classes (in free, never realized): 3
+    forbidden signatures: [((0, 1, 2, 3), 0, 1), ((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3)]
+  nontrivial example: S=(1, 2, 3, 4) tau=1/5 -> (score,c3,H)=((1, 1, 2, 2), 2, 5)
+------------------------------------------------------------
+[M6_relative_rising_pairwise]
+  realized iso classes: 1 / 4
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 3
+    forbidden signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+
+========================================================================
+n = 5 runners, speeds in 1..12, #primitive speed-sets = 786
+FREE set (A000568): 12 iso classes
+  free (score,c3,H) signatures: [((0, 1, 2, 3, 4), 0, 1), ((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+------------------------------------------------------------
+[M1_diff_sum_crossing_parity]
+  realized iso classes: 1 / 12
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3, 4), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 11
+    forbidden signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+------------------------------------------------------------
+[M2_binding_slope_lex (control)]
+  realized iso classes: 1 / 12
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3, 4), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 11
+    forbidden signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  realized iso classes: 12 / 12
+  H values realized: [1, 3, 5, 9, 11, 13, 15]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2, 3, 4), 0, 1), ((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+  nontrivial example: S=(1, 2, 3, 4, 6) tau=2/5 -> (score,c3,H)=((1, 2, 2, 2, 3), 4, 11)
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  realized iso classes: 5 / 12
+  H values realized: [1, 3, 5, 9, 11]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((0, 1, 2, 3, 4), 0, 1), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11)]
+  FORBIDDEN classes (in free, never realized): 7
+    forbidden signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+  nontrivial example: S=(1, 2, 3, 4, 6) tau=2/5 -> (score,c3,H)=((1, 1, 2, 2, 4), 2, 5)
+------------------------------------------------------------
+[M5_separation_parity]
+  realized iso classes: 1 / 12
+  H values realized: [15]   NON-TRIVIAL (H>1 seen)? True
+  realized signatures: [((2, 2, 2, 2, 2), 5, 15)]
+  FORBIDDEN classes (in free, never realized): 11
+    forbidden signatures: [((0, 1, 2, 3, 4), 0, 1), ((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15)]
+  nontrivial example: S=(1, 2, 3, 4, 5) tau=1/6 -> (score,c3,H)=((2, 2, 2, 2, 2), 5, 15)
+------------------------------------------------------------
+[M6_relative_rising_pairwise]
+  realized iso classes: 1 / 12
+  H values realized: [1]   NON-TRIVIAL (H>1 seen)? False
+  realized signatures: [((0, 1, 2, 3, 4), 0, 1)]
+  FORBIDDEN classes (in free, never realized): 11
+    forbidden signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+

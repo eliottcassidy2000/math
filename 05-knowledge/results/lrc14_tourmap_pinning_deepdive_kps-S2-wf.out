@@ -1,0 +1,36 @@
+### WIDEN vmax for k=5, N=14 ###
+ vmax=10 (#sets=251): M3 realizes 6/12 forbids 6 | M5 realizes 10/12 forbids 2
+ vmax=13 (#sets=1281): M3 realizes 7/12 forbids 5 | M5 realizes 10/12 forbids 2
+ vmax=16 (#sets=4311): M3 realizes 8/12 forbids 4 | M5 realizes 10/12 forbids 2
+ vmax=20 (#sets=15246): M3 realizes 8/12 forbids 4 | M5 realizes 10/12 forbids 2
+ vmax=25 (#sets=52281): M3 realizes 8/12 forbids 4 | M5 realizes 10/12 forbids 2
+
+### Surviving forbidden classes at vmax=25, N=14 ###
+ M3 forbidden:
+    [score=(1, 1, 2, 3, 3),c3=3,H=9]
+    [score=(1, 2, 2, 2, 3),c3=4,H=15]
+    [score=(1, 2, 2, 2, 3),c3=4,H=13]
+    [score=(2, 2, 2, 2, 2),c3=5,H=15]
+ M5 forbidden:
+    [score=(1, 1, 2, 3, 3),c3=3,H=9]
+    [score=(2, 2, 2, 2, 2),c3=5,H=15]
+
+### Does the forbiddance depend on N? Test M3 regular-tournament for various N ###
+ regular T_5 canonical key: 236643 [score=(2, 2, 2, 2, 2),c3=5,H=15]
+  N=7: M3 realizes 5/12, regular-T5 realized=False, forbids 7
+  N=9: M3 realizes 8/12, regular-T5 realized=False, forbids 4
+  N=11: M3 realizes 6/12, regular-T5 realized=True, forbids 6
+  N=13: M3 realizes 11/12, regular-T5 realized=False, forbids 1
+  N=14: M3 realizes 8/12, regular-T5 realized=False, forbids 4
+  N=15: M3 realizes 12/12, regular-T5 realized=True, forbids 0
+  N=16: M3 realizes 11/12, regular-T5 realized=False, forbids 1
+  N=18: M3 realizes 9/12, regular-T5 realized=False, forbids 3
+  N=20: M3 realizes 12/12, regular-T5 realized=True, forbids 0
+
+### M3: which iso classes are realizable at k=6, N=14 (sample) ###
+  M3 k=6 realizes 16/56 (sampled vmax=16, #sets=7980)
+
+### CHARACTERIZE M3 score sequences realized vs free (k=5,N=14,vmax=25) ###
+  free score seqs: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+  M3 realized score seqs: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3)]
+  score seqs NEVER realized by M3: [(2, 2, 2, 2, 2)]

@@ -1,0 +1,59 @@
+########################################################################
+PROBE n=3, speeds 1..14  (#sets=325, free=2, grid_den<= 36)
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  free=2  any-tau=2  lonely-tau=2
+  forbidden by MAP algebra (free - anytau): 0
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  free=2  any-tau=2  lonely-tau=2
+  forbidden by MAP algebra (free - anytau): 0
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M5_separation_parity]
+  free=2  any-tau=1  lonely-tau=1
+  forbidden by MAP algebra (free - anytau): 1
+     [((0, 1, 2), 0, 1)]
+  forbidden by LONELINESS (anytau - lonely): 0
+
+########################################################################
+PROBE n=4, speeds 1..12  (#sets=479, free=4, grid_den<= 36)
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  free=4  any-tau=4  lonely-tau=4
+  forbidden by MAP algebra (free - anytau): 0
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  free=4  any-tau=3  lonely-tau=3
+  forbidden by MAP algebra (free - anytau): 1
+     [((0, 2, 2, 2), 1, 3)]
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M5_separation_parity]
+  free=4  any-tau=1  lonely-tau=1
+  forbidden by MAP algebra (free - anytau): 3
+     [((0, 1, 2, 3), 0, 1), ((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3)]
+  forbidden by LONELINESS (anytau - lonely): 0
+
+########################################################################
+PROBE n=5, speeds 1..9  (#sets=126, free=11, grid_den<= 36)
+------------------------------------------------------------
+[M3_meeting_parity_x_speed]
+  free=11  any-tau=11  lonely-tau=11
+  forbidden by MAP algebra (free - anytau): 0
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M4_section_winding_rps4]
+  free=11  any-tau=5  lonely-tau=5
+  forbidden by MAP algebra (free - anytau): 6
+     [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+  forbidden by LONELINESS (anytau - lonely): 0
+------------------------------------------------------------
+[M5_separation_parity]
+  free=11  any-tau=1  lonely-tau=1
+  forbidden by MAP algebra (free - anytau): 10
+     [((0, 1, 2, 3, 4), 0, 1), ((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15)]
+  forbidden by LONELINESS (anytau - lonely): 0
+

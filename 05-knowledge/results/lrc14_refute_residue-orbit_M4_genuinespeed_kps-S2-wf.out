@@ -1,0 +1,8 @@
+GENUINE SPEEDS 1..40: used 641166 primitive 5-sets
+forbidden classes realized by genuine speeds:
+   (9, 3, (1, 1, 2, 3, 3)): first speeds (1, 3, 5, 9, 19)
+forbidden classes realized by LRC-LONELY (M>=1/14) genuine speeds:
+   (9, 3, (1, 1, 2, 3, 3)): speeds (1, 3, 5, 9, 19), gap=1/2=0.50000, tau=1/2
+
+(9,3,...) canon key from genuine speeds (1, 3, 5, 9, 19):
+   (0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1)

@@ -1,0 +1,94 @@
+======================================================================
+PART 0: baseline sanity
+S=(1,2,3,4,5): score=(1, 1, 1, 3, 4), c3=1, H=3
+depth profiles for residues 0..13:
+  res  0: profile (0, 0, 0, 0, 0, 0)  sum=0
+  res  1: profile (1, 3, 5, 5, 3, 1)  sum=18
+  res  2: profile (2, 6, 4, 4, 6, 2)  sum=24
+  res  3: profile (3, 5, 1, 1, 5, 3)  sum=18
+  res  4: profile (4, 2, 6, 6, 2, 4)  sum=24
+  res  5: profile (5, 1, 3, 3, 1, 5)  sum=18
+  res  6: profile (6, 4, 2, 2, 4, 6)  sum=24
+  res  7: profile (7, 7, 7, 7, 7, 7)  sum=42
+  res  8: profile (6, 4, 2, 2, 4, 6)  sum=24
+  res  9: profile (5, 1, 3, 3, 1, 5)  sum=18
+  res 10: profile (4, 2, 6, 6, 2, 4)  sum=24
+  res 11: profile (3, 5, 1, 1, 5, 3)  sum=18
+  res 12: profile (2, 6, 4, 4, 6, 2)  sum=24
+  res 13: profile (1, 3, 5, 5, 3, 1)  sum=18
+======================================================================
+PART 1a: residue-level, DISTINCT residues 1..13 (clean SDR), k=5
+(distinct nonzero residues -> tie-break rarely needed; honest residue test)
+  total distinct-residue 5-sets: 1287
+  realized score sequences: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 2, 2, 2, 3)]
+  score (2,2,2,2,2) realized? False  count=0
+  score (1, 1, 2, 3, 3) realized? False count=0
+  score (1, 2, 2, 2, 3) realized? True count=12
+======================================================================
+PART 1b: residue-level, ALL residue 5-tuples 0..13 WITH repeats allowed
+(including section-0 residues; tie-break by an injected speed index)
+  total residue 5-tuples (with repeats): 537824
+  distinct realized scores: 8
+  score (2,2,2,2,2) realized? False count=0
+======================================================================
+PART 1c: residue multiset WITH ALL tie-break orderings
+(probe whether (2,2,2,2,2) is reachable via tie-break choice on repeats)
+  residue multisets tested: 8568
+  (2,2,2,2,2) reachable with SOME tie-break? True
+  number of multisets that can reach it: 38
+    multiset (0, 0, 0, 0, 0), #tied-pairs=10
+    multiset (1, 1, 1, 1, 1), #tied-pairs=10
+    multiset (1, 1, 1, 1, 13), #tied-pairs=10
+    multiset (1, 1, 1, 13, 13), #tied-pairs=10
+    multiset (1, 1, 13, 13, 13), #tied-pairs=10
+    multiset (1, 13, 13, 13, 13), #tied-pairs=10
+    multiset (2, 2, 2, 2, 2), #tied-pairs=10
+    multiset (2, 2, 2, 2, 12), #tied-pairs=10
+  distinct scores reachable (free tie-break): [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3), (2, 2, 2, 2, 2)]
+======================================================================
+PART 2: genuine primitive 5-speed sets, vmax=25, require_lonely=False
+  primitive sets tested: 52281
+  (2,2,2,2,2) realized? False count=0
+  realized scores: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3)]
+  score (1, 1, 2, 3, 3): count=112
+  score (1, 2, 2, 2, 3): count=252
+======================================================================
+PART 2: genuine primitive 5-speed sets, vmax=40, require_lonely=False
+  primitive sets tested: 641166
+  (2,2,2,2,2) realized? False count=0
+  realized scores: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3)]
+  score (1, 1, 2, 3, 3): count=1560
+  score (1, 2, 2, 2, 3): count=2919
+======================================================================
+PART 2: genuine primitive 5-speed sets, vmax=60, require_lonely=False
+  primitive sets tested: 5302911
+  (2,2,2,2,2) realized? False count=0
+  realized scores: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3)]
+  score (1, 1, 2, 3, 3): count=16605
+  score (1, 2, 2, 2, 3): count=28430
+======================================================================
+PART 3: targeted families (covering, residue-7, section-0, large spread)
+  family [7, 14, 21, 28, 1]: score=(0, 1, 2, 3, 4) c3=0 H=1
+  family [14, 28, 42, 56, 1]: score=(0, 1, 2, 3, 4) c3=0 H=1
+  family [7, 21, 35, 49, 1]: score=(0, 1, 2, 3, 4) c3=0 H=1
+  family [1, 13, 3, 11, 5]: score=(1, 2, 2, 2, 3) c3=4 H=11
+  family [2, 4, 6, 8, 10]: score=(1, 2, 2, 2, 3) c3=4 H=11
+  family [7, 2, 1, 4, 3]: score=(0, 1, 2, 3, 4) c3=0 H=1
+  large random primitive sets tested: 192968
+  (2,2,2,2,2) realized in large search? count=0
+  realized scores (large): [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4), (1, 1, 2, 2, 4), (1, 1, 2, 3, 3), (1, 2, 2, 2, 3)]
+======================================================================
+PART 4: N-dependence control. Does regular (2,2,2,2,2) appear at N!=14?
+  N=13: regular realized count=0 / 52281 primitive sets (vmax=25)
+  N=14: regular realized count=0 / 52281 primitive sets (vmax=25)
+  N=15: regular realized count=52 / 52281 primitive sets (vmax=25)
+  N=20: regular realized count=28 / 52281 primitive sets (vmax=25)
+  N=28: regular realized count=0 / 52281 primitive sets (vmax=25)
+  N=22: regular realized count=1298 / 52281 primitive sets (vmax=25)
+======================================================================
+SUMMARY
+  PART1a (distinct residues): regular found = 0
+  PART1b (residues w/ repeats, index tie-break): regular found = 0
+  PART1c (free tie-break): regular reachable multisets = 38
+  PART2 vmax25: 0, vmax40: 0, vmax60: 0
+  PART3 targeted/large: 0

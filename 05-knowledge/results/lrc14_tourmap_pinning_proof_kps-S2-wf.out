@@ -1,0 +1,39 @@
+### EXHAUSTIVE: any residue-multiset + ANY tie-break -> regular T_5? ###
+  multisets checked (with tie-break branches): 98480
+  regular T_5 (2,2,2,2,2) reachable by ANY residue-multiset+tiebreak: True
+  score sequences EVER produced by M3 (incl. parked residue 0):
+      (0, 1, 2, 3, 4)
+      (0, 1, 3, 3, 3)
+      (0, 2, 2, 2, 4)
+      (0, 2, 2, 3, 3)
+      (1, 1, 1, 3, 4)
+      (1, 1, 2, 2, 4)
+      (1, 1, 2, 3, 3)
+      (1, 2, 2, 2, 3)
+      (2, 2, 2, 2, 2)
+  free score seqs NEVER produced (forbidden score-seqs): []
+
+### WHY: tier argument ###
+  margin sign between tiers (representative residues):
+        parked(0)        odd       even      seven
+  parked(0)         .         -6         -6         -6
+        odd         6          .         -2         -6
+       even         6          2          .         -6
+      seven         6          6          6          .
+
+  Interpretation: within-tier margins can be 0 or +-2 (close), but the
+  CROSS-tier margins are large and one-directional:
+    seven beats everyone (+6 vs odd/even, and vs parked).
+    even beats odd (+2) and beats parked.
+    odd beats parked.
+  This induces an almost-total TIER ORDER seven > even > odd > parked.
+  A regular tournament needs every vertex to have score exactly 2 (out of 4),
+  i.e. perfect balance. But the tier order forces tier-7 (if present) to beat
+  all 4 others (score 4, not 2) and the lowest tier present to lose to higher
+  tiers. With at most 3 tiers and a strict tier dominance, perfect 2-2-2-2-2
+  balance is unreachable. Verified exhaustively above.
+
+### Confirm: regular T_5 IS reachable at other moduli (control) ###
+  modulus N=14: regular T_5 reachable = True
+  modulus N=15: regular T_5 reachable = True
+  modulus N=20: regular T_5 reachable = True

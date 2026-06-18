@@ -1,0 +1,17 @@
+signature (9, 3, (1, 1, 2, 3, 3)) has 2 iso classes (canon keys):
+   key: (0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 0, 1, 1, 1, 0, 0, 1, 1, 1)
+   key: (0, 0, 0, 1, 1, 0, 0, 0, 1, 1, 0, 1, 1, 1, 1, 0, 0, 1, 0, 1)
+
+EXACT M4 ceiling reaches 8 of 12 iso classes (canon keys).
+  forbidden-sig (9, 3, (1, 1, 2, 3, 3)) key reached? True
+  forbidden-sig (9, 3, (1, 1, 2, 3, 3)) key reached? False
+  forbidden-sig (13, 4, (1, 2, 2, 2, 3)) key reached? False
+  forbidden-sig (15, 4, (1, 2, 2, 2, 3)) key reached? False
+  forbidden-sig (15, 5, (2, 2, 2, 2, 2)) key reached? False
+
+free classes NOT reached by exact M4 ceiling: 4
+    (9, 3, (1, 1, 2, 3, 3))
+    (13, 4, (1, 2, 2, 2, 3))
+    (15, 4, (1, 2, 2, 2, 3))
+    (15, 5, (2, 2, 2, 2, 2))
+free classes reached: 8/12

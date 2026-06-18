@@ -1,0 +1,24 @@
+LONELINESS-LEVER hunt (M7 binding-return, M8 hit-zero-return)  kps-S2-wf
+======================================================================
+
+M7 binding-return  n=4:
+  realized@lonely 1/4 (forb 3); realized@free 1/4 (forb 3)
+  H@lonely [1]
+  LONELINESS-LEVER classes (forb@lonely minus forb@free): 0
+M8 hit-zero-return  n=4:
+  realized@lonely 1/4 (forb 3); realized@free 1/4 (forb 3)
+  H@lonely [1]
+  nontrivial@lonely: False
+  LONELINESS-LEVER classes (forb@lonely minus forb@free): 0
+
+M7 binding-return  n=5:
+  realized@lonely 1/12 (forb 11); realized@free 1/12 (forb 11)
+  H@lonely [1]
+  LONELINESS-LEVER classes (forb@lonely minus forb@free): 0
+M8 hit-zero-return  n=5:
+  realized@lonely 1/12 (forb 11); realized@free 1/12 (forb 11)
+  H@lonely [1]
+  nontrivial@lonely: False
+  LONELINESS-LEVER classes (forb@lonely minus forb@free): 0
+
+DONE

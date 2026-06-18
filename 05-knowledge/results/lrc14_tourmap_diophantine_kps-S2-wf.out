@@ -1,0 +1,84 @@
+======================================================================
+DIOPHANTINE TOURNAMENT MAPS for LRC(14)
+======================================================================
+FREE set n=3: 2 iso classes (A000568 expects 2); 3cycle-counts present: [0, 1]
+FREE set n=4: 4 iso classes (A000568 expects 4); 3cycle-counts present: [0, 1, 2]
+FREE set n=5: 12 iso classes (A000568 expects 12); 3cycle-counts present: [0, 1, 2, 3, 4, 5]
+
+----------------------------------------------------------------------
+NON-TRIVIALITY GATE (n=3): does the map ever make a 3-cycle (H>1)?
+----------------------------------------------------------------------
+M1_approx_quality         : realized 1/2 classes, nontrivial-tournaments=0, ever-3cycle=False
+M2_side_then_quality      : realized 2/2 classes, nontrivial-tournaments=358, ever-3cycle=True
+M3_CF_parity_speed        : realized 2/2 classes, nontrivial-tournaments=1936, ever-3cycle=True
+M3b_Ostrowski_depth       : realized 2/2 classes, nontrivial-tournaments=191, ever-3cycle=True
+M4_stern_brocot           : realized 1/2 classes, nontrivial-tournaments=0, ever-3cycle=False
+M5_thirds_rockpaper       : realized 2/2 classes, nontrivial-tournaments=2333, ever-3cycle=True
+M6_three_distance_gap     : realized 1/2 classes, nontrivial-tournaments=0, ever-3cycle=False
+
+======================================================================
+REALIZED-CLASS CENSUS (nontrivial maps only)
+  search family: all primitive n-speed sets in 1..MAXSPEED, BOTH tau modes
+======================================================================
+
+### M1_approx_quality: TRANSITIVE-ONLY at n=3 (dead). Skipping census.
+
+### M2_side_then_quality
+  n=3 (maxspeed 16): realized 2/2 free classes  [argmax 2, allcand 2]
+        nontrivial tournaments: argmax 48, allcand 651; inputs(allcand) 18818, skipped 3620
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 6), Fraction(3, 8), 1)]
+  n=4 (maxspeed 14): realized 4/4 free classes  [argmax 4, allcand 4]
+        nontrivial tournaments: argmax 184, allcand 4763; inputs(allcand) 48963, skipped 10829
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4), Fraction(2, 7), 1), ((1, 2, 3, 6), Fraction(2, 9), 1), ((1, 2, 3, 8), Fraction(3, 11), 2)]
+  n=5 (maxspeed 12): realized 11/12 free classes  [argmax 11, allcand 11]
+        nontrivial tournaments: argmax 200, allcand 8100; inputs(allcand) 43151, skipped 11184
+        FORBIDDEN classes: 1 (their 3cycle-counts: [4])
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4, 5), Fraction(2, 9), 1), ((1, 2, 3, 4, 5), Fraction(4, 9), 2), ((1, 2, 3, 4, 6), Fraction(2, 9), 1)]
+
+### M3_CF_parity_speed
+  n=3 (maxspeed 16): realized 2/2 free classes  [argmax 2, allcand 2]
+        nontrivial tournaments: argmax 88, allcand 3314; inputs(allcand) 18818, skipped 0
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 5), Fraction(1, 10), 1)]
+  n=4 (maxspeed 14): realized 4/4 free classes  [argmax 4, allcand 4]
+        nontrivial tournaments: argmax 449, allcand 22575; inputs(allcand) 48963, skipped 0
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 5), Fraction(1, 10), 1), ((1, 2, 3, 8), Fraction(1, 16), 2), ((1, 2, 3, 14), Fraction(1, 28), 1)]
+  n=5 (maxspeed 12): realized 12/12 free classes  [argmax 12, allcand 12]
+        nontrivial tournaments: argmax 560, allcand 30431; inputs(allcand) 43151, skipped 0
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4, 5), Fraction(1, 10), 1), ((1, 2, 3, 4, 8), Fraction(1, 16), 3), ((1, 2, 3, 4, 9), Fraction(1, 18), 4)]
+
+### M3b_Ostrowski_depth
+  n=3 (maxspeed 16): realized 2/2 free classes  [argmax 2, allcand 2]
+        nontrivial tournaments: argmax 81, allcand 330; inputs(allcand) 18818, skipped 514
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 5), Fraction(1, 3), 1)]
+  n=4 (maxspeed 14): realized 4/4 free classes  [argmax 4, allcand 4]
+        nontrivial tournaments: argmax 236, allcand 2022; inputs(allcand) 48963, skipped 1524
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 5), Fraction(1, 3), 1), ((1, 2, 3, 8), Fraction(2, 5), 1), ((1, 2, 4, 11), Fraction(1, 3), 2)]
+  n=5 (maxspeed 12): realized 12/12 free classes  [argmax 12, allcand 12]
+        nontrivial tournaments: argmax 160, allcand 2842; inputs(allcand) 43151, skipped 1780
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4, 5), Fraction(1, 3), 1), ((1, 2, 3, 4, 8), Fraction(2, 11), 1), ((1, 2, 3, 4, 8), Fraction(2, 5), 1)]
+
+### M4_stern_brocot: TRANSITIVE-ONLY at n=3 (dead). Skipping census.
+
+### M5_thirds_rockpaper
+  n=3 (maxspeed 16): realized 2/2 free classes  [argmax 2, allcand 2]
+        nontrivial tournaments: argmax 34, allcand 3994; inputs(allcand) 18818, skipped 6753
+        FORBIDDEN classes: none (realizes everything)
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3), Fraction(1, 4), 1)]
+  n=4 (maxspeed 14): realized 2/4 free classes  [argmax 2, allcand 2]
+        nontrivial tournaments: argmax 265, allcand 17603; inputs(allcand) 48963, skipped 19627
+        FORBIDDEN classes: 2 (their 3cycle-counts: [1, 1])
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4), Fraction(1, 6), 2)]
+  n=5 (maxspeed 12): realized 3/12 free classes  [argmax 3, allcand 3]
+        nontrivial tournaments: argmax 252, allcand 18905; inputs(allcand) 43151, skipped 19158
+        FORBIDDEN classes: 9 (their 3cycle-counts: [1, 1, 1, 2, 2, 3, 4, 4, 5])
+        sample nontrivial (S,tau,#3cyc): [((1, 2, 3, 4, 5), Fraction(1, 6), 4), ((1, 2, 3, 4, 7), Fraction(1, 10), 3)]
+
+### M6_three_distance_gap: TRANSITIVE-ONLY at n=3 (dead). Skipping census.

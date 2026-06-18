@@ -1,0 +1,10 @@
+STEP A: verify build_tournament_M3 == build_adj_res(residues asc) on random primitive sets
+   checked 17122 primitive sets, mismatches=0
+   => reduction is EXACT (residue enumeration is complete)
+
+STEP B: search n=6,7 real primitive sets for high-3cyc / near-regular end
+  n=6: distinct (H,c3,score) classes seen = 13; MAX H=11, MAX c3=4
+        argmax-H example: ([150, 162, 220, 305, 316, 320], (11, 4, (1, 2, 2, 2, 3, 5)))
+n=7: classes seen=26 MAX H=45 MAX c3=8
+argmax-H: ([130, 160, 185, 244, 254, 284, 352], (45, 8, (2, 2, 2, 3, 3, 3, 6)))
+regular (3,3,3,3,3,3,3) reachable? False

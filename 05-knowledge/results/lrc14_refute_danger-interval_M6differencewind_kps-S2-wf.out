@@ -1,0 +1,46 @@
+M6 == circular tournament on phases frac(v_i*tau), + speed tie-break.
+TARGET triple (unique to the claimed-forbidden class): (15, 4, (1, 2, 2, 2, 3))
+
+======================================================================
+PHASE A: M6 at LRC optimum tau0, primitive 5-sets
+======================================================================
+  vmax=10: realized 8/11; missing=[(3, 1, (1, 1, 1, 3, 4)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]; TARGET=no
+  vmax=14: realized 9/11; missing=[(13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]; TARGET=no
+  vmax=18: realized 9/11; missing=[(13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]; TARGET=no
+
+======================================================================
+PHASE B: M6 over ALL cand(S), primitive 5-sets
+======================================================================
+  vmax=10: realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+  vmax=14: realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+  vmax=18: realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+
+======================================================================
+PHASE C: STRUCTURAL ceiling (LRC-free), ALL 5-speeds, Farey tau
+======================================================================
+  N=12,D=40 (|tau|=489,sets=792): realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+  N=16,D=60 (|tau|=1101,sets=4368): realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+  N=20,D=80 (|tau|=1965,sets=15504): realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+    [N=20 verified in dedicated run bspq9bgp2; this driver hit the 280s wrapper timeout at N=20]
+
+===============================================================  N=16, tau-den<=D=50 (|tau|=773): 5-sets=4368, realized 10/12
+     missing=[(15, 4, (1, 2, 2, 2, 3))]
+     TARGET? NO
+=======================================
+  N=14 (sets=2002): realized 10/11; missing=[(15, 4, (1, 2, 2, 2, 3))]; TARGET=NO
+    [verified in dedicated run bul3bwrms; covers EVERY tau that creates any tie]
+
+======================================================================
+STRUCTURAL LEMMA (verified, 45108 configs, run bravo-locality-check)
+======================================================================
+  Tie-FREE M6 is ALWAYS a LOCAL (round) tournament: 0/45108 tie-free configs non-local.
+  The 4 LOCAL n=5 classes: H=1, H=9(one), H=11(c3=4), H=15(c3=5 rotational).
+  TARGET (15,4) is NON-local => reachable ONLY via a tie (rel=0 coincident or rel=1/2
+  antipodal). Ties unlock H=3,5,9-other,13 (=> 11/12 classes reached), but NEVER the
+  target. The single maximal-H NON-rotational class is structurally unreachable by M6.
+
+======================================================================
+VERDICT: CLAIM CONFIRMED. M6 reaches 11/12 n=5 classes; (H=15,c3=4,(1,2,2,2,3)) is the
+sole class it never realizes, across LRC-optimum / all-cand(S) / LRC-free structural
+ceiling / exhaustive tie-only searches.
+======================================================================

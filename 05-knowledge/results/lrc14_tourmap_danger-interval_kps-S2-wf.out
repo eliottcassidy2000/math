@@ -1,0 +1,101 @@
+======================================================================
+METHOD: M1 forward-clearance order   (uses_grid=False)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=325, realized 1/2 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 1 classes NOT realized (candidate FORBIDDEN) ***
+  m=4: #speed-sets-or-inputs scanned=479, realized 1/4 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 3 classes NOT realized (candidate FORBIDDEN) ***
+  m=5: #speed-sets-or-inputs scanned=251, realized 1/12 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 11 classes NOT realized (candidate FORBIDDEN) ***
+
+======================================================================
+METHOD: M2 circular-center winding   (uses_grid=False)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=325, realized 2/2 iso classes, nontrivial=True
+     H values realized: [1, 3]
+     #3-cycle values realized: [0, 1]
+     e.g. nontrivial: H=3, c3=1, score=(1, 1, 1), from S=(1, 2, 3), key=1/4
+  m=4: #speed-sets-or-inputs scanned=479, realized 4/4 iso classes, nontrivial=True
+     H values realized: [1, 3, 5]
+     #3-cycle values realized: [0, 1, 2]
+     e.g. nontrivial: H=3, c3=1, score=(0, 2, 2, 2), from S=(1, 3, 4, 6), key=3/7
+  m=5: #speed-sets-or-inputs scanned=251, realized 12/12 iso classes, nontrivial=True
+     H values realized: [1, 3, 5, 9, 11, 13, 15]
+     #3-cycle values realized: [0, 1, 2, 3, 4, 5]
+     e.g. nontrivial: H=3, c3=1, score=(0, 1, 3, 3, 3), from S=(1, 3, 4, 7, 10), key=2/11
+
+======================================================================
+METHOD: M3 signed danger-arrival parity-twist   (uses_grid=False)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=325, realized 2/2 iso classes, nontrivial=True
+     H values realized: [1, 3]
+     #3-cycle values realized: [0, 1]
+     e.g. nontrivial: H=3, c3=1, score=(1, 1, 1), from S=(1, 2, 3), key=1/4
+  m=4: #speed-sets-or-inputs scanned=479, realized 2/4 iso classes, nontrivial=True
+     H values realized: [1, 5]
+     #3-cycle values realized: [0, 2]
+     *** 2 classes NOT realized (candidate FORBIDDEN) ***
+     e.g. nontrivial: H=5, c3=2, score=(1, 1, 2, 2), from S=(1, 2, 3, 5), key=1/4
+  m=5: #speed-sets-or-inputs scanned=251, realized 4/12 iso classes, nontrivial=True
+     H values realized: [1, 9, 11, 15]
+     #3-cycle values realized: [0, 3, 4, 5]
+     *** 8 classes NOT realized (candidate FORBIDDEN) ***
+     e.g. nontrivial: H=9, c3=3, score=(1, 1, 2, 3, 3), from S=(1, 2, 3, 4, 8), key=1/5
+
+======================================================================
+METHOD: M4 section rotational (on-grid)   (uses_grid=True)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=1950, realized 2/2 iso classes, nontrivial=True
+     H values realized: [1, 3]
+     #3-cycle values realized: [0, 1]
+     e.g. nontrivial: H=3, c3=1, score=(1, 1, 1), from S=(1, 2, 3), key=5
+  m=4: #speed-sets-or-inputs scanned=2874, realized 2/4 iso classes, nontrivial=True
+     H values realized: [1, 5]
+     #3-cycle values realized: [0, 2]
+     *** 2 classes NOT realized (candidate FORBIDDEN) ***
+     e.g. nontrivial: H=5, c3=2, score=(1, 1, 2, 2), from S=(1, 2, 3, 4), key=3
+  m=5: #speed-sets-or-inputs scanned=1506, realized 4/12 iso classes, nontrivial=True
+     H values realized: [1, 9, 11, 15]
+     #3-cycle values realized: [0, 3, 4, 5]
+     *** 8 classes NOT realized (candidate FORBIDDEN) ***
+     e.g. nontrivial: H=9, c3=3, score=(1, 1, 2, 3, 3), from S=(1, 2, 3, 4, 7), key=3
+
+======================================================================
+METHOD: M5 binding-crossing cornered   (uses_grid=False)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=325, realized 1/2 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 1 classes NOT realized (candidate FORBIDDEN) ***
+  m=4: #speed-sets-or-inputs scanned=479, realized 1/4 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 3 classes NOT realized (candidate FORBIDDEN) ***
+  m=5: #speed-sets-or-inputs scanned=251, realized 1/12 iso classes, nontrivial=False
+     H values realized: [1]
+     #3-cycle values realized: [0]
+     *** 11 classes NOT realized (candidate FORBIDDEN) ***
+
+======================================================================
+METHOD: M6 difference-winding overtaking   (uses_grid=False)
+======================================================================
+  m=3: #speed-sets-or-inputs scanned=325, realized 2/2 iso classes, nontrivial=True
+     H values realized: [1, 3]
+     #3-cycle values realized: [0, 1]
+     e.g. nontrivial: H=3, c3=1, score=(1, 1, 1), from S=(1, 2, 3), key=1/4
+  m=4: #speed-sets-or-inputs scanned=479, realized 4/4 iso classes, nontrivial=True
+     H values realized: [1, 3, 5]
+     #3-cycle values realized: [0, 1, 2]
+     e.g. nontrivial: H=3, c3=1, score=(0, 2, 2, 2), from S=(1, 2, 3, 5), key=1/4
+  m=5: #speed-sets-or-inputs scanned=251, realized 9/12 iso classes, nontrivial=True
+     H values realized: [1, 3, 5, 9, 11, 15]
+     #3-cycle values realized: [0, 1, 2, 3, 4, 5]
+     *** 3 classes NOT realized (candidate FORBIDDEN) ***
+     e.g. nontrivial: H=3, c3=1, score=(0, 1, 3, 3, 3), from S=(1, 2, 3, 5, 9), key=1/4
+

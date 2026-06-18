@@ -1,0 +1,2 @@
+M4 depends only on (residues mod 14, speed order): False
+non-all-odd lonely witness for (9,3,...) within scan: None (scanned 400001 even-containing sets)

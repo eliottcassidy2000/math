@@ -1,0 +1,28 @@
+PART 5: 'Thin comb cannot cover fat G_C' -- does the geometry hold?
+==============================================================================
+
+CLAIM under test: a single comb D_w (w==0 mod 14) cannot erase all of G_C when
+meas(G_C) is bounded below. Quantitatively the decoupling bound is
+   L(S) = meas(G_C \ D_w) >= (6/7) meas(G_C) - r/(7w)
+where r = #components(G_C) (the boundary cost: each safe component can lose at
+most one tooth's worth of its two ends; the canon's 'r/(7w)' term).
+
+Re-derive r/(7w): each tooth has width 1/(7w). A connected safe component of G_C
+can intersect many teeth in its interior (those are full teeth, removing a
+(6/7)-fraction is wrong -- inside a component the comb removes the FULL tooth
+measure, fraction (1/(7w))/(1/w) = 1/7 of length on average). The (6/7) factor
+is meas-density of the comb COMPLEMENT = 1 - 1/7 = 6/7. So the heuristic:
+   L(S) ~ (6/7) meas(G_C)  minus  boundary effects (partial teeth at component ends).
+Boundary effect per component end <= half a tooth = 1/(14w); 2 ends, r components
+=> total boundary loss <= 2r/(14w) = r/(7w).  THIS IS THE CANON BOUND. Verify it
+holds EXACTLY (L >= (6/7)meas - r/(7w)) and find when it goes NEGATIVE (the gap).
+
+Drop-6 core (r=4 components): test decoupling bound L >= (6/7)meas - r/(7w).
+   meas(G_C)=7/858=0.00815851, r=4, (6/7)meas=0.00699301
+       w       L(S) exact   (6/7)meas-r/(7w) bound holds?  bound>0?
+      14       0.00815851        -0.03382332         True     False
+      28       0.00815851        -0.01341516         True     False
+      42       0.00815851        -0.00661244         True     False
+      56       0.00560749        -0.00321107         True     False
+      70       0.00815851        -0.00117026         True     False
+      84       0.00815851         0.00019029         True      True

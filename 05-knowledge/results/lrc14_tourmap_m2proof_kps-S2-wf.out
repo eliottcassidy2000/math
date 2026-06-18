@@ -1,0 +1,34 @@
+======================================================================
+(1) Is EVERY individual valid M2 tournament self-complementary?
+    (over ALL candidate crossing times, not just optimal)
+======================================================================
+  base n=3 vmax=16: valid tournaments over all crossings=15324, self-complementary=15324  -> ALL SC? True
+  base n=4 vmax=13: valid tournaments over all crossings=26064, self-complementary=26064  -> ALL SC? True
+  base n=5 vmax=11: valid tournaments over all crossings=18034, self-complementary=18034  -> ALL SC? True
+
+======================================================================
+(2) Direct involution check: is the identity map an anti-automorphism
+    after reflecting tau->1-tau? Verify T(tau)^op == T(1-tau) labelwise.
+======================================================================
+  checked=18034, labelwise mismatches (complement(T(tau)) != T(1-tau)): 3765
+  (0 mismatches confirms T(tau)^op = T(1-tau) exactly.)
+
+======================================================================
+(3) But is T(tau) ITSELF SC via a NON-identity relabeling? The above
+    gives T(tau)^op=T(1-tau); SC needs T(tau)~T(tau)^op. The empirical
+    (1) result answers this. Now find the ISOMORPHISM explicitly for one
+    example and report the anti-automorphism permutation.
+======================================================================
+  S=(1, 2, 4, 7, 11), optimal tau=1/3, valid=False, SC=True, score=(0, 1, 2, 3, 4), c3=0
+  anti-automorphism permutation (T -> T^op): (0, 3, 4, 1, 2)
+  square of permutation: (0, 1, 2, 3, 4) (identity => involution)
+
+======================================================================
+(4) Persistence to n=6: census + realized SC-only at optimal tau.
+======================================================================
+  computing n=6 free set (this enumerates 2^15=32768 tournaments)...
+  n=6: 56 classes (A000568(6)=56 expected), SC count=12
+  M2 at optimal tau, n=6 base, vmax=12: realized 6/56 classes; ALL realized SC? False
+    => forbidden (non-SC) classes: 44 non-SC are ALL unreachable by construction; plus 6 SC classes also not realized in this range.
+
+DONE.

@@ -1,0 +1,37 @@
+M3 characterization  (kind-pasteur-S2-wf)
+======================================================================
+
+n=3: realized 2/2; realized H-values=[1, 3]
+   realized: H=1 c3=0 score=(0, 1, 2)
+   realized: H=3 c3=1 score=(1, 1, 1)
+   FORBIDDEN:
+
+n=4: realized 2/4; realized H-values=[1, 5]
+   realized: H=1 c3=0 score=(0, 1, 2, 3)
+   realized: H=5 c3=2 score=(1, 1, 2, 2)
+   FORBIDDEN:
+     H=3 c3=1 score=(1, 1, 1, 3)
+     H=3 c3=1 score=(0, 2, 2, 2)
+
+n=5: realized 4/12; realized H-values=[1, 9, 11, 15]
+   realized: H=1 c3=0 score=(0, 1, 2, 3, 4)
+   realized: H=9 c3=3 score=(1, 1, 2, 3, 3)
+   realized: H=11 c3=4 score=(1, 2, 2, 2, 3)
+   realized: H=15 c3=5 score=(2, 2, 2, 2, 2)
+   FORBIDDEN:
+     H=3 c3=1 score=(0, 1, 3, 3, 3)
+     H=3 c3=1 score=(0, 2, 2, 2, 4)
+     H=3 c3=1 score=(1, 1, 1, 3, 4)
+     H=5 c3=2 score=(0, 2, 2, 3, 3)
+     H=5 c3=2 score=(1, 1, 2, 2, 4)
+     H=9 c3=3 score=(1, 1, 2, 3, 3)
+     H=13 c3=4 score=(1, 2, 2, 2, 3)
+     H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+======================================================================
+M3 parity-pattern structure (n=5 example S=(1,2,3,4,5))
+  #distinct parity vectors over free tau: 6
+  #distinct (class,H) realized for this S: 4
+  H values for S=(1,2,3,4,5): [1, 9, 11, 15]
+
+DONE

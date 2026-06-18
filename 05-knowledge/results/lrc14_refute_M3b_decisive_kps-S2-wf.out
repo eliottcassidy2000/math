@@ -1,0 +1,28 @@
+residue vectors (multisets of 5 from 0..13): 8568
+  processed 1000/8568 residue vectors; produced 6 keys
+  processed 2000/8568 residue vectors; produced 6 keys
+  processed 3000/8568 residue vectors; produced 8 keys
+  processed 4000/8568 residue vectors; produced 8 keys
+  processed 5000/8568 residue vectors; produced 8 keys
+  processed 6000/8568 residue vectors; produced 8 keys
+  processed 7000/8568 residue vectors; produced 8 keys
+  processed 8000/8568 residue vectors; produced 8 keys
+
+DISTINCT n=5 short-keys produced by M3b (residue-complete, all tie-breaks): 8
+All produced short-keys (H,c3,score):
+    (1, 0, (0, 1, 2, 3, 4))
+    (3, 1, (0, 1, 3, 3, 3))
+    (3, 1, (0, 2, 2, 2, 4))
+    (3, 1, (1, 1, 1, 3, 4))
+    (5, 2, (0, 2, 2, 3, 3))
+    (5, 2, (1, 1, 2, 2, 4))
+    (9, 3, (1, 1, 2, 3, 3))
+    (11, 4, (1, 2, 2, 2, 3))
+
+Forbidden-target check:
+  *** REFUTED *** (9, 3, (1, 1, 2, 3, 3)): e.g. ((1, 1, 1, 3, 5), 1, (0, 1, 2, 3, 4))  (total witnesses 2016)
+  CONFIRMED unreachable (top-level n=5): (13, 4, (1, 2, 2, 2, 3))
+  CONFIRMED unreachable (top-level n=5): (15, 4, (1, 2, 2, 2, 3))
+  CONFIRMED unreachable (top-level n=5): (15, 5, (2, 2, 2, 2, 2))
+
+Overall n=5 top-level verdict: REFUTED

@@ -1,0 +1,110 @@
+UNITS (Z/14)* = [1, 3, 5, 9, 11, 13]
+======================================================================
+
+[Phase 0] Reproduce baseline exhaustive search as in claim
+n=4, speeds in {1..15}:
+  primitive 4-subsets tested: 1325
+  distinct (H,c3,score) classes realized: 3
+    (1, 0, (0, 1, 2, 3)): 1257
+    (3, 1, (0, 2, 2, 2)): 26
+    (3, 1, (1, 1, 1, 3)): 42
+  FORBIDDEN n=4 target {(5, 2, (1, 1, 2, 2))} realized? False
+
+n=5, speeds in {1..13}:
+  primitive 5-subsets tested: 1281
+  distinct (H,c3,score) classes realized: 6
+    (1, 0, (0, 1, 2, 3, 4)): 1074
+    (3, 1, (0, 1, 3, 3, 3)): 43
+    (3, 1, (0, 2, 2, 2, 4)): 34
+    (3, 1, (1, 1, 1, 3, 4)): 58
+    (5, 2, (0, 2, 2, 3, 3)): 17
+    (5, 2, (1, 1, 2, 2, 4)): 55
+  FORBIDDEN n=5 (H,c3,sc) realized in baseline: set()
+
+======================================================================
+[Phase 1] Broaden n=4: speeds {1..40} exhaustive
+  primitive 4-subsets tested: 85771
+  distinct (H,c3,score) classes: 3
+    (1, 0, (0, 1, 2, 3)): 81608
+    (3, 1, (0, 2, 2, 2)): 1467
+    (3, 1, (1, 1, 1, 3)): 2696
+  FORBIDDEN realized? False
+
+======================================================================
+[Phase 2] Broaden n=5: speeds {1..22} exhaustive
+  primitive 5-subsets tested: 25851
+  distinct (H,c3,score) classes: 6
+    (1, 0, (0, 1, 2, 3, 4)): 22505
+    (3, 1, (0, 1, 3, 3, 3)): 580
+    (3, 1, (0, 2, 2, 2, 4)): 615
+    (3, 1, (1, 1, 1, 3, 4)): 911
+    (5, 2, (0, 2, 2, 3, 3)): 362
+    (5, 2, (1, 1, 2, 2, 4)): 878
+  FORBIDDEN n=5 (H,c3,sc) realized: set()
+
+DONE phase 0-2.
+
+======================================================================
+[Phase 3] CANONICAL EXHAUSTIVE over residue configurations (covers ALL LRC inputs, any size)
+  n=4: enumerated 38416 ordered residue-tuples (14^4)
+  distinct (H,c3,score) classes realized: 4
+    (1, 0, (0, 1, 2, 3)): 36208
+    (3, 1, (0, 2, 2, 2)): 528
+    (3, 1, (1, 1, 1, 3)): 1104
+    (5, 2, (1, 1, 2, 2)): 576
+  FORBIDDEN set targeted: [(5, 2, (1, 1, 2, 2))]
+  FORBIDDEN realized? True
+    WITNESS residues=(2, 2, 4, 6) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 4, 8) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 6, 4) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 6, 10) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 8, 4) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 8, 10) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 10, 6) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 2, 10, 8) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 2, 6) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 2, 8) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 4, 6) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 4, 8) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 2) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 4) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 6) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 8) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 10) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 6, 12) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 8, 2) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+    WITNESS residues=(2, 4, 8, 4) -> (H,c3,score)=(5, 2, (1, 1, 2, 2))
+  n=5: enumerated 537824 ordered residue-tuples (14^5)
+  distinct (H,c3,score) classes realized: 8
+    (1, 0, (0, 1, 2, 3, 4)): 475040
+    (3, 1, (0, 1, 3, 3, 3)): 9888
+    (3, 1, (0, 2, 2, 2, 4)): 8256
+    (3, 1, (1, 1, 1, 3, 4)): 15648
+    (5, 2, (0, 2, 2, 3, 3)): 6912
+    (5, 2, (1, 1, 2, 2, 4)): 17280
+    (9, 3, (1, 1, 2, 3, 3)): 1920
+    (11, 4, (1, 2, 2, 2, 3)): 2880
+  FORBIDDEN set targeted: [(9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+  FORBIDDEN realized? True
+    WITNESS residues=(2, 2, 2, 4, 6) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 4, 8) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 6, 4) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 6, 10) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 8, 4) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 8, 10) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 10, 6) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 2, 10, 8) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 2, 6) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 2, 8) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 4, 6) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 4, 8) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 6, 2) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 6, 4) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 6, 6) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 6, 8) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 6, 10) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+    WITNESS residues=(2, 2, 4, 6, 12) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 8, 2) -> (H,c3,score)=(9, 3, (1, 1, 2, 3, 3))
+    WITNESS residues=(2, 2, 4, 8, 4) -> (H,c3,score)=(11, 4, (1, 2, 2, 2, 3))
+
+DONE phase 3.

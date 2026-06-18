@@ -1,0 +1,125 @@
+
+==============================================================================
+(0) SANITY: L(S)>0 <=> M(S)>1/14 on the 84m hard family + drop cores
+==============================================================================
+  84m m=1: S has |S|=13 cov=True prim=True L=0.00535655 M=7/89=0.07865169 consistent=True
+  84m m=2: S has |S|=13 cov=True prim=True L=0.00875791 M=14/173=0.08092486 consistent=True
+  84m m=3: S has |S|=13 cov=True prim=True L=0.00989170 M=21/257=0.08171206 consistent=True
+  --> L<->M certificate consistent on sample: True
+
+==============================================================================
+(A) ONE-AT-A-TIME PEEL CHAIN: does each coordinated append keep a 6/7 factor?
+==============================================================================
+  Start from a 10-speed easy sub-core; append 3 coordinated large mult-of-14.
+  Report L after each step and the step ratio vs 6/7=0.857143.
+  core0=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  meas(G_core0)=1217/8820=0.13798186
+
+  AP small step 14,28,42
+     L-chain = [0.13798185941043084, 0.11757369614512472, 0.10736961451247165, 0.10056689342403628]
+     ratios  = [0.8520953163516845, 0.9132111861137898, 0.9366420274551215]
+     final |S|=13 L=0.10056689  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  AP large 98,112,126
+     L-chain = [0.13798185941043084, 0.11903142209264658, 0.10390751538710723, 0.08839893100097182]
+     ratios  = [0.8626599366122785, 0.8729418968567152, 0.8507462686567164]
+     final |S|=13 L=0.08839893  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  AP huge 1400,2800,4200
+     L-chain = [0.13798185941043084, 0.1184920634920635, 0.10849206349206349, 0.09519274376417233]
+     ratios  = [0.8587510271158587, 0.9156061620897522, 0.8774166579579893]
+     final |S|=13 L=0.09519274  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  tight cluster 14,16x... no(use 14|w) 98,112,126
+     L-chain = [0.13798185941043084, 0.11903142209264658, 0.10390751538710723, 0.08839893100097182]
+     ratios  = [0.8626599366122785, 0.8729418968567152, 0.8507462686567164]
+     final |S|=13 L=0.08839893  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  7-coprime spread 14*11,14*13,14*17
+     L-chain = [0.13798185941043084, 0.119428983714698, 0.09887810602096317, 0.08436320915312512]
+     ratios  = [0.8655411966833495, 0.8279238669331014, 0.8532041373773812]
+     final |S|=13 L=0.08436321  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? False
+  same residue mod 196: 14,210,406
+     L-chain = [0.13798185941043084, 0.11757369614512472, 0.1046485260770975, 0.0896356243646884]
+     ratios  = [0.8520953163516845, 0.8900675024108003, 0.8565397691186909]
+     final |S|=13 L=0.08963562  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  multiples of 84: 84,168,252
+     L-chain = [0.13798185941043084, 0.11587301587301588, 0.1056689342403628, 0.09263038548752835]
+     ratios  = [0.8397699260476582, 0.9119373776908023, 0.8766094420600858]
+     final |S|=13 L=0.09263039  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+  near-equal big 1414,1428,1442
+     L-chain = [0.13798185941043084, 0.11817987921241103, 0.10136226107604758, 0.08589072592733463]
+     ratios  = [0.856488524776882, 0.857694742553119, 0.8473639500099022]
+     final |S|=13 L=0.08589073  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? False
+  powers-ish 14,196,2744
+     L-chain = [0.13798185941043084, 0.11757369614512472, 0.10226757369614513, 0.08763825257994354]
+     ratios  = [0.8520953163516845, 0.8698167791706847, 0.8569505407484501]
+     final |S|=13 L=0.08763825  product-of-ratios floor check: L>= (6/7)^3*L0 = 0.08689237? True
+
+  WORST single step-ratio observed: 0.827924 (< 6/7=0.857143? True)  in 7-coprime spread 14*11,14*13,14*17
+  INTERPRETATION: a step ratio < 6/7 means that one coordinated append removed MORE
+  than the decoupling-floor 1/7 share -> the one-at-a-time (6/7)^k product is NOT a
+  valid uniform floor; the chain can dip below it.  (Whether L stays >0 is question B/D.)
+
+==============================================================================
+(B) THE CRUX: can a 12-CORE C have meas(G_C) -> 0 with coordinated large speeds?
+==============================================================================
+  12-cores = small base u coordinated large speeds.  meas(G_C) as cluster grows:
+  (these are 12-speed cores; appending a single parked w gives the 13-set.)
+  {1..9} u {14,28,42}                     : meas(G_C)=       1207/8820=0.13684807 r=22 widest=0.017007 prim=True
+  {1..6} u 6 coord {14k}                  : meas(G_C)=        611/2940=0.20782313 r=74 widest=0.005952 prim=True
+  {1..4} u 8 coord {14k}                  : meas(G_C)=      3427/20580=0.16652089 r=168 widest=0.003189 prim=True
+  {1..3} u 9 coord {14k}                  : meas(G_C)=    15499/123480=0.12551830 r=192 widest=0.002268 prim=True
+  {1,2} u 10 coord {14k}                  : meas(G_C)=    13387/123480=0.10841432 r=220 widest=0.001531 prim=True
+  {1..9} u {98,112,126}(big AP)           : meas(G_C)=      4013/35280=0.11374717 r=46 widest=0.006641 prim=True
+  {1..6} u 6 coord big {14*20k}           : meas(G_C)=        256/1225=0.20897959 r=1536 widest=0.000298 prim=True
+  {1..4} u 8 coord 7-coprime 14p          : meas(G_C)=892051238707/5194516694367=0.17172940 r=436 widest=0.001655 prim=True
+
+  MIN meas(G_C) over these coordinated 12-cores: 13387/123480=0.10841432  ({1,2} u 10 coord {14k})
+  compare extremal single-drop 7/858=0.00815851.
+  Is the coordinated min BELOW 7/858? False
+  KEY: if a primitive 12-core has meas(G_C) < 7/858, then 7/858 is NOT the universal
+  floor and OPEN-Q-108's conjectured constant is WRONG (the reduction would need a
+  smaller, possibly zero, uniform bound).
+
+==============================================================================
+(B2) SYSTEMATIC MIN meas(G_C) over {1..b} u {AP of mult-of-14}, exact
+==============================================================================
+  GLOBAL min meas(G_C) over this scan: 1553/16380=0.09481074
+     at C=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 70, 182]
+     >= 7/858=0.00815851? True   ==0? False
+
+==============================================================================
+(C) PUSH M(S) TOWARD 1/14 FROM ABOVE with coordinated large speeds
+==============================================================================
+  Minimize M(S) over covering primitive 13-sets = (small drops) u (>=3 coord 14k).
+  scanned 9084 covering+prim 3-coord sets via L-screen.
+  NO L=0 survivors among 3-coord coordinated sets (all have L>0 => all M>1/14).
+  curated exact min M among hand-picked dangerous 3-coord sets: 1/11=0.09090909 at [1, 2, 3, 4, 8, 9, 10, 11, 12, 13, 14, 28, 42]  (>1/14? True)
+
+==============================================================================
+(D) DECISIVE HUNT: any L(S)=0 covering 13-set in coordinated families?
+==============================================================================
+  (D-i) 3-coord 14m (drop3): checked=31355 L=0-survivors=0 min-positive-L=0.024514
+  (D-ii) 4-coord 14m (drop4, k=4): checked=17341 L=0-survivors=0 min-positive-L=0.032981
+  (D-iii) shared-modulus coord clusters: checked=1975 L=0-survivors=0 min-positive-L=0.030871
+  (D-iv) {1..9}+4 coord 14k: checked=0 L=0-survivors=0 min-positive-L=n/a
+
+  VERDICT (D): min M over ALL L=0 survivors in coordinated families = n/a (no L=0 survivors)
+  TIGHT (M=1/14): 0; COUNTEREXAMPLES (M<1/14): 0
+  No counterexample, no tight covering set found in coordinated families (consistent with LRC(14)).
+
+==============================================================================
+(E) DECOUPLING-FLOOR AUDIT: floor>0 vs L>0 over coordinated 12-cores + parked w
+==============================================================================
+  For coordinated 12-cores, the floor threshold w* = r/(6 meas(G_C)) and whether L>0
+  for ALL parked w (14|w) below w* (where the floor is silent):
+  {1..9}u{14,28,42}: meas=0.13684807 r=22 floor-threshold w*=26.79
+     smallest w with floor>0: 28; L there = 0.13684807; any tight w found below: False
+  {1..6}u6coord: meas=0.20782313 r=74 floor-threshold w*=59.35
+     smallest w with floor>0: 70; L there = 0.20782313; any tight w found below: False
+  {1..4}u8coord: meas=0.16652089 r=168 floor-threshold w*=168.15
+     smallest w with floor>0: 182; L there = 0.12018109; any tight w found below: False
+
+  Across audit: 17/117 cases where the PROVED floor is <=0 (silent) but L>0 anyway.
+  => The floor is a LOSE sufficient condition: where it is silent, L is still positive,
+     but the reduction has NO PROOF of that -- that silent zone IS OPEN-Q-108 / GAP A.
+
+==============================================================================
+DONE
+==============================================================================

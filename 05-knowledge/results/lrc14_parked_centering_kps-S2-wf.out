@@ -1,0 +1,253 @@
+
+==============================================================================
+PART 1: Parked-runner position at the OPTIMUM tau*  (binding vs centered)
+==============================================================================
+S = C u {w}, w == 0 mod 14.  Report M(S), tau*, frac(w tau*), ||w tau*||,
+and whether w is BINDING (||w tau*|| == M) i.e. hugging the EDGE of section 0.
+
+--- Family w = 84m on core {1..11,13} (the canonical hard cover) ---
+  core1..11,13 + 84*1                w=  84  M=7/89      ~0.07865  tau*=37/89    
+      ||w tau*|| = 7/89     ~0.07865   frac(w tau*)=82/89     ~0.92135
+      w BINDING? True   binders=[5, 84]   (M-clear vs 1/14: >= ; slack=+0.007223)
+  core1..11,13 + 84*2                w= 168  M=14/173    ~0.08092  tau*=72/173   
+      ||w tau*|| = 14/173   ~0.08092   frac(w tau*)=159/173   ~0.91908
+      w BINDING? True   binders=[5, 168]   (M-clear vs 1/14: >= ; slack=+0.009496)
+  core1..11,13 + 84*3                w= 252  M=21/257    ~0.08171  tau*=107/257  
+      ||w tau*|| = 21/257   ~0.08171   frac(w tau*)=236/257   ~0.91829
+      w BINDING? True   binders=[5, 252]   (M-clear vs 1/14: >= ; slack=+0.010283)
+  core1..11,13 + 84*4                w= 336  M=28/341    ~0.08211  tau*=142/341  
+      ||w tau*|| = 28/341   ~0.08211   frac(w tau*)=313/341   ~0.91789
+      w BINDING? True   binders=[5, 336]   (M-clear vs 1/14: >= ; slack=+0.010683)
+  core1..11,13 + 84*5                w= 420  M=7/85      ~0.08235  tau*=177/425  
+      ||w tau*|| = 7/85     ~0.08235   frac(w tau*)=78/85     ~0.91765
+      w BINDING? True   binders=[5, 420]   (M-clear vs 1/14: >= ; slack=+0.010924)
+  core1..11,13 + 84*6                w= 504  M=42/509    ~0.08251  tau*=212/509  
+      ||w tau*|| = 42/509   ~0.08251   frac(w tau*)=467/509   ~0.91749
+      w BINDING? True   binders=[5, 504]   (M-clear vs 1/14: >= ; slack=+0.011086)
+  core1..11,13 + 84*7                w= 588  M=49/593    ~0.08263  tau*=247/593  
+      ||w tau*|| = 49/593   ~0.08263   frac(w tau*)=544/593   ~0.91737
+      w BINDING? True   binders=[5, 588]   (M-clear vs 1/14: >= ; slack=+0.011202)
+  core1..11,13 + 84*8                w= 672  M=56/677    ~0.08272  tau*=282/677  
+      ||w tau*|| = 56/677   ~0.08272   frac(w tau*)=621/677   ~0.91728
+      w BINDING? True   binders=[5, 672]   (M-clear vs 1/14: >= ; slack=+0.011289)
+
+  Closed-form check  M ?= 7m/(84m+5):
+    m=1: M=7/89       7m/(84m+5)=7/89       match=True
+    m=2: M=14/173     7m/(84m+5)=14/173     match=True
+    m=3: M=21/257     7m/(84m+5)=21/257     match=True
+    m=4: M=28/341     7m/(84m+5)=28/341     match=True
+    m=5: M=7/85       7m/(84m+5)=7/85       match=True
+    m=6: M=42/509     7m/(84m+5)=42/509     match=True
+    m=7: M=49/593     7m/(84m+5)=49/593     match=True
+    m=8: M=56/677     7m/(84m+5)=56/677     match=True
+
+--- w in {14,28,42,...,168} on core {1..11,13} ---
+  core1..11,13 + 14*1                w=  14  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=5/6       ~0.83333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*2                w=  28  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/3      ~0.33333   frac(w tau*)=2/3       ~0.66667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*3                w=  42  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/2      ~0.50000   frac(w tau*)=1/2       ~0.50000
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*4                w=  56  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/3      ~0.33333   frac(w tau*)=1/3       ~0.33333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*5                w=  70  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=1/6       ~0.16667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*6                w=  84  M=7/89      ~0.07865  tau*=37/89    
+      ||w tau*|| = 7/89     ~0.07865   frac(w tau*)=82/89     ~0.92135
+      w BINDING? True   binders=[5, 84]   (M-clear vs 1/14: >= ; slack=+0.007223)
+  core1..11,13 + 14*7                w=  98  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=5/6       ~0.83333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*8                w= 112  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/3      ~0.33333   frac(w tau*)=2/3       ~0.66667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*9                w= 126  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/2      ~0.50000   frac(w tau*)=1/2       ~0.50000
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*10               w= 140  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/3      ~0.33333   frac(w tau*)=1/3       ~0.33333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*11               w= 154  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=1/6       ~0.16667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 14*12               w= 168  M=14/173    ~0.08092  tau*=72/173   
+      ||w tau*|| = 14/173   ~0.08092   frac(w tau*)=159/173   ~0.91908
+      w BINDING? True   binders=[5, 168]   (M-clear vs 1/14: >= ; slack=+0.009496)
+
+--- Same w=84m family on the AP-drop-6 core {1..13}\{6} ---
+  core(AP\6) + 84*1                  w=  84  M=2/23      ~0.08696  tau*=4/23     
+      ||w tau*|| = 9/23     ~0.39130   frac(w tau*)=14/23     ~0.60870
+      w BINDING? False   binders=[11, 12]   (M-clear vs 1/14: >= ; slack=+0.015528)
+  core(AP\6) + 84*2                  w= 168  M=2/23      ~0.08696  tau*=4/23     
+      ||w tau*|| = 5/23     ~0.21739   frac(w tau*)=5/23      ~0.21739
+      w BINDING? False   binders=[11, 12]   (M-clear vs 1/14: >= ; slack=+0.015528)
+  core(AP\6) + 84*3                  w= 252  M=2/23      ~0.08696  tau*=4/23     
+      ||w tau*|| = 4/23     ~0.17391   frac(w tau*)=19/23     ~0.82609
+      w BINDING? False   binders=[11, 12]   (M-clear vs 1/14: >= ; slack=+0.015528)
+  core(AP\6) + 84*4                  w= 336  M=2/23      ~0.08696  tau*=4/23     
+      ||w tau*|| = 10/23    ~0.43478   frac(w tau*)=10/23     ~0.43478
+      w BINDING? False   binders=[11, 12]   (M-clear vs 1/14: >= ; slack=+0.015528)
+  core(AP\6) + 84*5                  w= 420  M=37/431    ~0.08585  tau*=75/431   
+      ||w tau*|| = 37/431   ~0.08585   frac(w tau*)=37/431    ~0.08585
+      w BINDING? True   binders=[11, 420]   (M-clear vs 1/14: >= ; slack=+0.014418)
+
+--- Non-84 multiples of 14 (e.g. 14*lcm-ish) on core {1..11,13} ---
+  core1..11,13 + 70                  w=  70  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=1/6       ~0.16667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 98                  w=  98  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=5/6       ~0.83333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 126                 w= 126  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/2      ~0.50000   frac(w tau*)=1/2       ~0.50000
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 154                 w= 154  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=1/6       ~0.16667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 182                 w= 182  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/6      ~0.16667   frac(w tau*)=5/6       ~0.83333
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 210                 w= 210  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/2      ~0.50000   frac(w tau*)=1/2       ~0.50000
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 280                 w= 280  M=1/12      ~0.08333  tau*=5/12     
+      ||w tau*|| = 1/3      ~0.33333   frac(w tau*)=2/3       ~0.66667
+      w BINDING? False   binders=[5, 7]   (M-clear vs 1/14: >= ; slack=+0.011905)
+  core1..11,13 + 420                 w= 420  M=7/85      ~0.08235  tau*=177/425  
+      ||w tau*|| = 7/85     ~0.08235   frac(w tau*)=78/85     ~0.91765
+      w BINDING? True   binders=[5, 420]   (M-clear vs 1/14: >= ; slack=+0.010924)
+
+==============================================================================
+PART 2: Constructive centering.  meas(T_w(1/14) cap G_C) and centering SLACK
+==============================================================================
+T_w(h) = {||w tau|| >= h} (safe band of w).  G_C = gap-1/14 lonely set of core C.
+If T_w(1/14) cap G_C is nonempty, ANY tau there is a survivor => M(S)>=1/14.
+CENTERED max = max_{tau in G_C} ||w tau||  (how 'middle' we can push w while
+staying lonely for the core). SLACK = CENTERED max - 1/14.
+
+--- core {1..11,13}, w = 84m ---
+  core1..11,13 +84*1             w=  84
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 563/105105     ~0.00535655   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/5        ~0.200000  at tau=41/70     
+      SLACK over 1/14  = 9/70           ~+0.128571   clears 1/14? True
+      Tw cap G_C arcs: [('15/182', '97/1176'), ('33/392', '13/154'), ('29/70', '163/392'), ('491/1176', '41/98'), ('57/98', '685/1176'), ('229/392', '41/70')] ...
+  core1..11,13 +84*2             w= 168
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 263/30030      ~0.00875791   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 2/5        ~0.400000  at tau=41/70     
+      SLACK over 1/14  = 23/70          ~+0.328571   clears 1/14? True
+  core1..11,13 +84*3             w= 252
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 3119/315315    ~0.00989170   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=295/504   
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+  core1..11,13 +84*4             w= 336
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 4397/420420    ~0.01045859   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=391/672   
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+  core1..11,13 +84*5             w= 420
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 4397/420420    ~0.01045859   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=117/280   
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+
+--- core {1..11,13}, w = 14k ---
+  core1..11,13 +14*1             w=  14
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 426/35035      ~0.01215927   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/5        ~0.200000  at tau=41/70     
+      SLACK over 1/14  = 9/70           ~+0.128571   clears 1/14? True
+  core1..11,13 +14*2             w=  28
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 426/35035      ~0.01215927   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 2/5        ~0.400000  at tau=41/70     
+      SLACK over 1/14  = 23/70          ~+0.328571   clears 1/14? True
+  core1..11,13 +14*3             w=  42
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 426/35035      ~0.01215927   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=5/12      
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+  core1..11,13 +14*5             w=  70
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 709/70070      ~0.01011845   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 2/7        ~0.285714  at tau=41/98     
+      SLACK over 1/14  = 3/14           ~+0.214286   clears 1/14? True
+  core1..11,13 +14*6             w=  84
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 563/105105     ~0.00535655   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/5        ~0.200000  at tau=41/70     
+      SLACK over 1/14  = 9/70           ~+0.128571   clears 1/14? True
+  core1..11,13 +14*7             w=  98
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 5249/490490    ~0.01070154   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 2/5        ~0.400000  at tau=41/70     
+      SLACK over 1/14  = 23/70          ~+0.328571   clears 1/14? True
+  core1..11,13 +14*12            w= 168
+      meas(G_C)        = 426/35035      ~0.01215927
+      meas(Tw cap G_C) = 263/30030      ~0.00875791   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 2/5        ~0.400000  at tau=41/70     
+      SLACK over 1/14  = 23/70          ~+0.328571   clears 1/14? True
+
+--- AP-drop-6 core {1..13}\{6}, w = 84m (codex's meas(G_C)=7/858 case) ---
+  meas(G_C) for AP-drop-6 core = 7/858 ~ 0.00815851   (codex sharpened bound 7/858 = 0.00815851)
+  core(AP\6) +84*1               w=  84
+      meas(G_C)        = 7/858          ~0.00815851
+      meas(Tw cap G_C) = 7/858          ~0.00815851   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=47/56     
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+  core(AP\6) +84*2               w= 168
+      meas(G_C)        = 7/858          ~0.00815851
+      meas(Tw cap G_C) = 181/28028      ~0.00645783   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 5/11       ~0.454545  at tau=27/154    
+      SLACK over 1/14  = 59/154         ~+0.383117   clears 1/14? True
+  core(AP\6) +84*3               w= 252
+      meas(G_C)        = 7/858          ~0.00815851
+      meas(Tw cap G_C) = 443/63063      ~0.00702472   (NONEMPTY)
+      CENTERED max ||w tau||_{G_C} = 1/2        ~0.500000  at tau=47/56     
+      SLACK over 1/14  = 3/7            ~+0.428571   clears 1/14? True
+
+==============================================================================
+PART 3: Canonical centering tau=(2j+1)/(2w) -- is it FORCED into G_C?
+==============================================================================
+Perfect middle of w-band: tau=(2j+1)/(2w) gives ||w tau||=1/2 (max possible).
+Question: does the easy core's structure FORCE some such center into G_C?
+Also relate to dihedral clock events (14k +/- 1)/(14 v).
+
+--- core {1..11,13} ---
+  core1..11,13 + w=84            w=  84: #band-centers in (0,1)=84, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+  core1..11,13 + w=168           w= 168: #band-centers in (0,1)=168, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+  core1..11,13 + w=14            w=  14: #band-centers in (0,1)=14, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+  core1..11,13 + w=28            w=  28: #band-centers in (0,1)=28, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+  core1..11,13 + w=42            w=  42: #band-centers in (0,1)=42, #inside G_C=4
+      best center tau=1/12       ~0.083333  core-gap=1/12     ~0.08333  full-gap(min over S)=1/12     ~0.08333
+      dihedral-clock forms (14k+/-1)/(14 v): none small
+
+--- AP-drop-6 core ---
+  core(AP\6) + w=84              w=  84: #band-centers in (0,1)=84, #inside G_C=4
+      best center tau=9/56       ~0.160714  core-gap=1/14     ~0.07143  full-gap(min over S)=1/14     ~0.07143
+      dihedral-clock forms (14k+/-1)/(14 v): ['(14*2-1)/(14*12)']
+  core(AP\6) + w=168             w= 168: #band-centers in (0,1)=168, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+  core(AP\6) + w=14              w=  14: #band-centers in (0,1)=14, #inside G_C=0
+      NO band-center of w lies in G_C (centering tau not core-forced).
+
+==============================================================================
+PART 3b: The m=1 optimum tau*=37/89 vs w=84 band geometry
+==============================================================================
+  tau* = 37/89 ~ 0.415730
+  ||84 tau*|| = 7/89 ~ 0.078652   frac(84 tau*) = 82/89 ~ 0.921348
+  nearest 84-band CENTER below/above tau*:
+    center j=34: tau=23/56 ~0.410714, distance to tau* = 25/4984 ~0.005016
+    center j=35: tau=71/168 ~0.422619, distance to tau* = 103/14952 ~0.006889
+  => at the optimum, w=84 is at frac 0.9213, i.e. ||.||=0.0787=M, hugging the EDGE of section 0 (NOT the 1/2 middle).

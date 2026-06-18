@@ -1,0 +1,88 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_verify_reduction_0_kps-S2-wf.py:15: SyntaxWarning: invalid escape sequence '\ '
+  G_C = [0,1) \ union_{v in C} D_v   (the CLOSED-or-OPEN lonely set; we use the
+==============================================================================
+PART 1: Danger-comb geometry of a parked runner w == 0 (mod 14)
+==============================================================================
+w=  14: meas(D_w)=1/7  (=0.142857)  teeth=14  tooth_width=1/98=0.0102041  spacing=1/14=0.0714286
+w=  28: meas(D_w)=1/7  (=0.142857)  teeth=28  tooth_width=1/196=0.00510204  spacing=1/28=0.0357143
+w=  84: meas(D_w)=1/7  (=0.142857)  teeth=84  tooth_width=1/588=0.00170068  spacing=1/84=0.0119048
+w=  98: meas(D_w)=1/7  (=0.142857)  teeth=98  tooth_width=1/686=0.00145773  spacing=1/98=0.0102041
+w= 168: meas(D_w)=1/7  (=0.142857)  teeth=168  tooth_width=1/1176=0.00085034  spacing=1/168=0.00595238
+CHECK: meas(D_w) = 1/7 exactly for all w (each tooth width 1/(7w), w teeth).
+
+So the comb D_w has w teeth at centers k/w (k=0..w-1), each of HALF-width
+  (1/14)/w = 1/(14w). The GAP between consecutive teeth (safe between teeth)
+  has length  1/w - 2/(14w) = 1/w - 1/(7w) = (6/7)/w = 6/(7w).
+  As w -> infinity, the comb becomes arbitrarily FINE: the largest safe
+  interval BETWEEN teeth has length 6/(7w) -> 0.  <-- 'thin comb' intuition.
+
+==============================================================================
+PART 2: meas(G_C) lower bound -- re-derive the drop-6 extremal 7/858
+==============================================================================
+C_drop6 = [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+meas(G_C) = 7/858  (= 0.00815851)
+claimed extremal 7/858 = 7/858 (= 0.00815851)
+MATCH 7/858 ? True
+
+G_C has 4 safe components (mouths):
+   [29/182, 9/56]   length 1/728 = 0.00137363
+   [29/168, 27/154]   length 5/1848 = 0.00270563
+   [127/154, 139/168]   length 5/1848 = 0.00270563
+   [47/56, 153/182]   length 1/728 = 0.00137363
+   total = 7/858
+
+Sweep: meas(G_C) over all 12-subsets obtained by dropping one of {1..13}:
+   drop  6: meas(G_C) =          7/858  = 0.00815851
+   drop 12: meas(G_C) =      426/35035  = 0.01215927
+   drop 10: meas(G_C) =     1520/63063  = 0.02410288
+   drop  4: meas(G_C) =        97/4004  = 0.02422577
+   drop  2: meas(G_C) =         11/364  = 0.03021978
+   drop 13: meas(G_C) =    6617/194040  = 0.03410122
+   drop  5: meas(G_C) =       103/2860  = 0.03601399
+   drop  3: meas(G_C) =         11/273  = 0.04029304
+   drop  8: meas(G_C) =      950/21021  = 0.04519290
+   drop  9: meas(G_C) =     3273/56056  = 0.05838804
+   drop 11: meas(G_C) =     4733/76440  = 0.06191784
+   drop  1: meas(G_C) =           1/14  = 0.07142857
+   drop  7: meas(G_C) =     4319/51480  = 0.08389666
+MIN over single-drops = 7/858 at drop 6
+
+==============================================================================
+PART 3: THE CORE TEST -- can meas(G_C) be SMALLER than the comb spacing?
+==============================================================================
+
+The reduction's intuition: a parked runner w==0(mod14) has danger comb D_w with
+teeth spaced 1/w and the safe-between-teeth gaps shrink like 6/(7w). For the
+covering set S = C u {w} to be a counterexample, D_w would have to ERASE all of
+G_C, i.e. G_C must be entirely covered by D_w's teeth.
+
+If meas(G_C) >= some c > 0 and the comb is 'thin' (fine teeth), the intuition says
+the teeth can't swallow a fat G_C. BUT the real question for the LOWER bound on
+L(S) = meas(G_C \ D_w) is NOT 'spacing vs measure' -- it is how much of G_C the
+teeth overlap. We test directly: L(S) = meas(G_C cap complement(D_w)).
+
+Canon baseline covering sets:
+  {1..11,13} u {84}: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+     M(S) = 7/89 = 0.078652   (>1/14=0.071429? True)  at tau=37/89
+     meas(G_C) = 426/35035 = 0.01215927
+     L(S)=meas(G_C minus D_w) = 563/105105 = 0.00535655
+  drop-6 core {1..5,7..13} u {84}: S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84]
+     M(S) = 2/23 = 0.086957   (>1/14=0.071429? True)  at tau=4/23
+     meas(G_C) = 7/858 = 0.00815851
+     L(S)=meas(G_C minus D_w) = 7/858 = 0.00815851
+
+Drop-6 core: sweep w = 14*m, m=1..40, compute L(S) and M(S) exactly.
+   m= 1 w=  14: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m= 2 w=  28: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m= 3 w=  42: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m= 4 w=  56: L(S)=      943/168168=0.00560749  M(S)=0.086957
+   m= 5 w=  70: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m= 6 w=  84: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m= 7 w=  98: L(S)=     1543/294294=0.00524306  M(S)=0.082569
+   m= 8 w= 112: L(S)=     2315/336336=0.00688300  M(S)=0.086957
+   m= 9 w= 126: L(S)=      743/126126=0.00589093  M(S)=0.086957
+   m=10 w= 140: L(S)=           7/858=0.00815851  M(S)=0.086957
+   m=11 w= 154: L(S)=       152/21021=0.00723086  M(S)=0.086957
+   m=12 w= 168: L(S)=       181/28028=0.00645783  M(S)=0.086957
+   MIN L over m=1..40: L=1543/294294 = 0.00524306 at w=98, M=0.082569
+

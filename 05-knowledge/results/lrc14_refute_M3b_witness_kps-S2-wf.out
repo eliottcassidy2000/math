@@ -1,0 +1,5 @@
+Searching DISTINCT-residue primitive 5-speed sets in {1..13} (claim's domain) for TARGET (9, 3, (1, 1, 2, 3, 3))
+
+Witnesses within {1..13} primitive n=5 (claim's EXACT domain): 0
+
+  ...of which distinct-nonzero-residue (no tie-break, fully canonical): 0

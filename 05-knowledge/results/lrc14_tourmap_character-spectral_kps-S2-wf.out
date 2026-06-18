@@ -1,0 +1,290 @@
+Precomputing free iso-class sets (A000568)...
+  n=3: 2 free iso classes
+  n=4: 4 free iso classes
+  n=5: 12 free iso classes
+
+Input family sizes (primitive subsets):
+  n=3: 712 configs
+  n=4: 1325 configs
+  n=5: 1281 configs
+
+##############################################################################
+METHOD M1 correlation-integral (danger-weighted)
+  arc x->y by sign of danger-band-weighted grid count of {x farther from 0 than y}.
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 0 NON-transitive (H>1).
+    realized 1/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(3, 1, (1, 1, 1))]
+
+  n=4: 1325 valid tournaments from 1325 input configs; 0 NON-transitive (H>1).
+    realized 1/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3))]
+    FORBIDDEN 3 classes (H,#3cyc,score): [(3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+
+  n=5: 1281 valid tournaments from 1281 input configs; 0 NON-transitive (H>1).
+    realized 1/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4))]
+    FORBIDDEN 11 classes (H,#3cyc,score): [(3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+  --> METHOD M1 correlation-integral (danger-weighted): nontrivial? False
+
+##############################################################################
+METHOD M2 Weyl-phase snapshot
+  arc x->y iff frac((x-y)tau*) in (0,1/2) -- the overtaking snapshot (predicted transitive).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 0 NON-transitive (H>1).
+    realized 1/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(3, 1, (1, 1, 1))]
+
+  n=4: 1325 valid tournaments from 1325 input configs; 57 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 423 NON-transitive (H>1).
+    realized 10/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    FORBIDDEN 2 classes (H,#3cyc,score): [(13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]
+
+  --> METHOD M2 Weyl-phase snapshot: nontrivial? True
+
+##############################################################################
+METHOD M3 Rademacher/Walsh sign (near-section {1,13})
+  arc by sign of Walsh correlation of near-band indicators across grid times.
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 0 NON-transitive (H>1).
+    realized 1/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(3, 1, (1, 1, 1))]
+
+  n=4: 1325 valid tournaments from 1325 input configs; 68 NON-transitive (H>1).
+    realized 3/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(5, 2, (1, 1, 2, 2))]
+
+  n=5: 1281 valid tournaments from 1281 input configs; 207 NON-transitive (H>1).
+    realized 6/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4))]
+    FORBIDDEN 6 classes (H,#3cyc,score): [(9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+  --> METHOD M3 Rademacher/Walsh sign (near-section {1,13}): nontrivial? True
+
+##############################################################################
+METHOD M3b Walsh sign (section parity)
+  arc by Walsh correlation of (-1)^section across grid times.
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 17 NON-transitive (H>1).
+    realized 2/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2)), (3, 1, (1, 1, 1))]
+    FORBIDDEN: none (realizes everything).
+
+  n=4: 1325 valid tournaments from 1325 input configs; 182 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 510 NON-transitive (H>1).
+    realized 7/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (11, 4, (1, 2, 2, 2, 3))]
+    FORBIDDEN 5 classes (H,#3cyc,score): [(9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+  --> METHOD M3b Walsh sign (section parity): nontrivial? True
+
+##############################################################################
+METHOD M3c Rademacher half-circle sign
+  arc by Walsh correlation of sign(frac - 1/2) across grid times.
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 0 NON-transitive (H>1).
+    realized 1/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(3, 1, (1, 1, 1))]
+
+  n=4: 1325 valid tournaments from 1325 input configs; 0 NON-transitive (H>1).
+    realized 1/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3))]
+    FORBIDDEN 3 classes (H,#3cyc,score): [(3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+
+  n=5: 1281 valid tournaments from 1281 input configs; 0 NON-transitive (H>1).
+    realized 1/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4))]
+    FORBIDDEN 11 classes (H,#3cyc,score): [(3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+  --> METHOD M3c Rademacher half-circle sign: nontrivial? False
+
+##############################################################################
+METHOD M5 binding-parity (winding twist)
+  arc x->y = (theta_x>theta_y) XOR (winding parity).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 165 NON-transitive (H>1).
+    realized 2/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2)), (3, 1, (1, 1, 1))]
+    FORBIDDEN: none (realizes everything).
+
+  n=4: 1325 valid tournaments from 1325 input configs; 692 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 908 NON-transitive (H>1).
+    realized 11/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(15, 4, (1, 2, 2, 2, 3))]
+
+  --> METHOD M5 binding-parity (winding twist): nontrivial? True
+
+##############################################################################
+METHOD M5b overtaking-parity (crossing twist)
+  arc x->y = (theta_x>theta_y) XOR (overtake-count parity).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 158 NON-transitive (H>1).
+    realized 2/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2)), (3, 1, (1, 1, 1))]
+    FORBIDDEN: none (realizes everything).
+
+  n=4: 1325 valid tournaments from 1325 input configs; 641 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 845 NON-transitive (H>1).
+    realized 12/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  --> METHOD M5b overtaking-parity (crossing twist): nontrivial? True
+
+##############################################################################
+METHOD M6 resonance c_14(v) functional
+  arc by sign of c_14(v_i)v_j - c_14(v_j)v_i (Ramanujan character).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 0 NON-transitive (H>1).
+    realized 1/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2))]
+    FORBIDDEN 1 classes (H,#3cyc,score): [(3, 1, (1, 1, 1))]
+
+  n=4: 1325 valid tournaments from 1325 input configs; 0 NON-transitive (H>1).
+    realized 1/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3))]
+    FORBIDDEN 3 classes (H,#3cyc,score): [(3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+
+  n=5: 1281 valid tournaments from 1281 input configs; 0 NON-transitive (H>1).
+    realized 1/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4))]
+    FORBIDDEN 11 classes (H,#3cyc,score): [(3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+  --> METHOD M6 resonance c_14(v) functional: nontrivial? False
+
+##############################################################################
+METHOD M6b binding-sum character
+  arc by sign of c_14(v_i+v_j)*(v_i-v_j).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 213 NON-transitive (H>1).
+    realized 2/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2)), (3, 1, (1, 1, 1))]
+    FORBIDDEN: none (realizes everything).
+
+  n=4: 1325 valid tournaments from 1325 input configs; 908 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 1183 NON-transitive (H>1).
+    realized 12/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  --> METHOD M6b binding-sum character: nontrivial? True
+
+##############################################################################
+METHOD M6c binding-diff character
+  arc by sign of c_14(|v_i-v_j|)*sign(v_i-v_j).
+##############################################################################
+
+  n=3: 712 valid tournaments from 712 input configs; 217 NON-transitive (H>1).
+    realized 2/2 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2)), (3, 1, (1, 1, 1))]
+    FORBIDDEN: none (realizes everything).
+
+  n=4: 1325 valid tournaments from 1325 input configs; 934 NON-transitive (H>1).
+    realized 4/4 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3)), (3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  n=5: 1281 valid tournaments from 1281 input configs; 1202 NON-transitive (H>1).
+    realized 12/12 free iso classes.
+    realized (H,#3cyc,score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    FORBIDDEN: none (realizes everything).
+
+  --> METHOD M6c binding-diff character: nontrivial? True
+
+==============================================================================
+SUMMARY: nontriviality + forbidden classes
+==============================================================================
+
+M1 correlation-integral (danger-weighted): trivial (transitive only) -- DEAD
+
+M2 Weyl-phase snapshot: NON-TRIVIAL
+    n=3: forbidden 1 classes -> [(3, 1, (1, 1, 1))]
+    n=5: forbidden 2 classes -> [(13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]
+
+M3 Rademacher/Walsh sign (near-section {1,13}): NON-TRIVIAL
+    n=3: forbidden 1 classes -> [(3, 1, (1, 1, 1))]
+    n=4: forbidden 1 classes -> [(5, 2, (1, 1, 2, 2))]
+    n=5: forbidden 6 classes -> [(9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+M3b Walsh sign (section parity): NON-TRIVIAL
+    n=5: forbidden 5 classes -> [(9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+
+M3c Rademacher half-circle sign: trivial (transitive only) -- DEAD
+
+M5 binding-parity (winding twist): NON-TRIVIAL
+    n=5: forbidden 1 classes -> [(15, 4, (1, 2, 2, 2, 3))]
+
+M5b overtaking-parity (crossing twist): NON-TRIVIAL
+
+M6 resonance c_14(v) functional: trivial (transitive only) -- DEAD
+
+M6b binding-sum character: NON-TRIVIAL
+
+M6c binding-diff character: NON-TRIVIAL
+
+DONE.
+
+================================================================================
+POST-RUN VERIFICATION (kps-S2-wf, character-spectral tournament maps)
+================================================================================
+WIDENED CHECKS (gated tournaments, exact rationals):
+- M2 Weyl-phase (circular), n=5, primitive 5-subsets of {1..16} = 4311 configs:
+    realizes 10/12; FORBIDDEN exactly {(13,4,(1,2,2,2,3)), (15,4,(1,2,2,2,3))}.
+    Same 2 forbidden under all-candidate-times on {1..12} (786 configs).
+- M5 winding-parity, n=5, primitive 5-subsets of {1..18} = 8436 configs, 0 non-tourn:
+    realizes 11/12; FORBIDDEN exactly {(15,4,(1,2,2,2,3))}.
+    Realizes the SAME-score cousins (11,4) [2478x] and (13,4) [121x] AND the
+    regular (15,5) [641x] -- forbids ONLY the max-Ham (H=15) non-regular member.
+- M2 is NOT merely the circular tournament: pure circular phase placement realizes
+    only 4/12 at n=5 (forbids 8), but LRC-driven M2 reaches 10/12 because the
+    binding degeneracies ((x-y)tau* hits Z or 1/2; 5878 such pairs) override the
+    circular rule via the speed tie-break -- yet the top 2 classes stay forbidden.
+
+CROSS-METHOD INVARIANT (the headline):
+    The class (H=15, #3cyc=4, score (1,2,2,2,3)) -- the UNIQUE maximum-Hamiltonian
+    strongly-connected NON-regular tournament on 5 vertices -- is FORBIDDEN by FOUR
+    independent character-spectral maps: M2, M3, M3b, M5. Free arc-flips reach it;
+    loneliness-driven character signs never do (n=5, exhaustive over primitive
+    speed families). This is the strongest forbidden-class signal of the session.
+
+DEAD (always transitive, H=1 only): M1 (danger-weighted lead count over near band),
+    M3c (Rademacher half-circle vote), M6 (c_14(v_i)v_j - c_14(v_j)v_i).
+REALIZE EVERYTHING (non-trivial but no forbidden class at n<=5): M5b, M6b, M6c.
+================================================================================

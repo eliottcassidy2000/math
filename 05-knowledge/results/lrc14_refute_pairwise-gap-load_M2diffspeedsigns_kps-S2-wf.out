@@ -1,0 +1,64 @@
+FREE SET sizes (A000568 = 2,4,12) and # non-SC classes:
+  n=3: 2 classes, 0 of them NON-SC
+  n=4: 4 classes, 2 of them NON-SC
+  n=5: 12 classes, 4 of them NON-SC
+
+======================================================================
+PASS A: optimal lonely tau, primitive speed sets, n in {3,4,5}
+======================================================================
+  n=3 vmax=40: valid=5984, SC=5984, all SC? True
+  n=4 vmax=26: valid=9121, SC=9121, all SC? True
+  n=5 vmax=18: valid=4580, SC=4580, all SC? True
+
+======================================================================
+PASS B: ALL candidate crossings (binding-pair + 1/2), n in {3,4,5}
+======================================================================
+  n=3 vmax=30: valid=199815, SC=199815, all SC? True; distinct classes realized=2 of 2 (non-SC classes realized=0)
+  n=4 vmax=18: valid=139199, SC=139199, all SC? True; distinct classes realized=2 of 4 (non-SC classes realized=0)
+  n=5 vmax=13: valid=49960, SC=49960, all SC? True; distinct classes realized=4 of 12 (non-SC classes realized=0)
+
+======================================================================
+PASS C: EXHAUSTIVE off-grid -- every M2 tournament over ALL tau in (0,1)
+======================================================================
+  n=3 vmax=16: distinct M2 classes over ALL tau = 2 of 2; NON-SC classes = 0; non-SC (S,tau) hits = 0
+  n=4 vmax=14: distinct M2 classes over ALL tau = 2 of 4; NON-SC classes = 0; non-SC (S,tau) hits = 0
+  n=5 vmax=12: distinct M2 classes over ALL tau = 4 of 12; NON-SC classes = 0; non-SC (S,tau) hits = 0
+
+======================================================================
+PASS D: sporadic / non-unit / covering / tight / huge-speed sets
+======================================================================
+  sporadic sets scanned: 32; optimal-tau valid=8, SC=8; non-SC hits (incl off-grid)=0
+
+======================================================================
+PASS E: reflection identity T(tau)^op vs T(1-tau), and SC mechanism
+======================================================================
+  reflection identity T(1-tau) == T(tau)^op holds on all 84505 checked valid configs? True
+  (configs where T(tau) ~ T(1-tau) as iso classes: 84505)
+
+======================================================================
+VERDICT
+======================================================================
+NO non-SC M2 tournament found at n=3,4,5 across all passes.
+Claim CONFIRMED within the search bound:
+  PASS A optimal-tau bounds: {3: (5984, 5984, 40), 4: (9121, 9121, 26), 5: (4580, 4580, 18)}
+  PASS B candidate-crossing bounds: {3: (199815, 199815, 2, 0, 30), 4: (139199, 139199, 2, 0, 18), 5: (49960, 49960, 4, 0, 13)}
+  PASS C EXHAUSTIVE off-grid (ALL tau) bounds: {3: (2, 0, 16), 4: (2, 0, 14), 5: (4, 0, 12)}
+  -> PASS C is exhaustive over ALL M2 tournaments for each S in range,
+     so within the speed-range bound NO non-SC class is reachable.
+
+DONE.
+
+================== ADVERSARIAL VERDICT (kps-S2-wf) ==================
+MAP: arc i->j iff snrm((v_i - v_j)*tau) > 0 (sign of difference-speed signed residue).
+SANITY: n=6 break REPRODUCED under this exact map -> S=(1,2,3,4,5,7), tau=5/14,
+  valid=True, score=(1,2,2,3,3,4), c3=6, is_SC=False. So map is faithful (NOT SC-forcing by bug).
+PASS A optimal-tau: n3=5984 / n4=9121 / n5=4580 valid; ALL SC.
+PASS B all-crossings: n3=199815 / n4=139199 / n5=49960 valid; ALL SC; realized classes 2/2,2/4,4/12 (all SC ones).
+PASS C EXHAUSTIVE off-grid (every M2 tournament over ALL tau, interval-midpoints): 0 non-SC at n=3,4,5.
+PASS D sporadic/non-unit/covering/tight: 0 non-SC.
+PASS E reflection: T(1-tau)==T(tau)^op on all 84505 valid configs; AND each T~T^op (so each is SC).
+LARGE-SPEED SAMPLED (separate file): speeds up to 1e6, prime tau-denominators,
+  ~802,669 valid configs sampled at n=3,4,5; NON-SC = 0.
+CONCLUSION: claim HOLDS (true) at n=3,4,5. VERIFIED-by-exhaustion within speed-range
+  bounds (PASS C exhaustive per set) + large-speed sampling; NOT proved for general n
+  (no airtight argument), and genuinely FALSE at n>=6.

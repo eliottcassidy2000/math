@@ -1,0 +1,45 @@
+R=13: primitive 5-subsets=1281
+   (9, 3, (1, 1, 2, 3, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (13, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 5, (2, 2, 2, 2, 2)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+
+R=20: primitive 5-subsets=15246
+   (9, 3, (1, 1, 2, 3, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=135
+   (13, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 5, (2, 2, 2, 2, 2)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+
+R=27: primitive 5-subsets=79316
+   (9, 3, (1, 1, 2, 3, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=1095
+   (13, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 5, (2, 2, 2, 2, 2)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+
+R=40: primitive 5-subsets=641166
+   (9, 3, (1, 1, 2, 3, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=8895
+   (13, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 4, (1, 2, 2, 2, 3)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+   (15, 5, (2, 2, 2, 2, 2)): structural(distinct-residue,no-tie)=0  tie-break/other=0
+
+=== STRUCTURAL witnesses (the strong refutations: distinct nonzero residues, tournament determined purely by section geometry, NO tie-break) ===
+
+FORBIDDEN (9, 3, (1, 1, 2, 3, 3)) -> no structural witness up to R=40 (distinct residues).
+
+FORBIDDEN (13, 4, (1, 2, 2, 2, 3)) -> no structural witness up to R=40 (distinct residues).
+
+FORBIDDEN (15, 4, (1, 2, 2, 2, 3)) -> no structural witness up to R=40 (distinct residues).
+
+FORBIDDEN (15, 5, (2, 2, 2, 2, 2)) -> no structural witness up to R=40 (distinct residues).
+
+=== Forbidden classes realized ONLY via tie-break (weaker) ===
+   (9, 3, (1, 1, 2, 3, 3)): 8895 tie-break witnesses, e.g. ((1, 3, 5, 9, 19), 1, (1, 3, 5, 9, 5))
+   (13, 4, (1, 2, 2, 2, 3)): NOT realized at all up to R=40.
+   (15, 4, (1, 2, 2, 2, 3)): NOT realized at all up to R=40.
+   (15, 5, (2, 2, 2, 2, 2)): NOT realized at all up to R=40.
+FINAL VERDICT NOTE (kps-S2-wf):
+Claim partially REFUTED. Forbidden (9,3,(1,1,2,3,3)) realized by exact M3b map
+on distinct primitive 5-speed set S={1,3,5,9,19}, ref=1 (M(S)=1/2). Realized via
+TIE-BREAK only (5==19 mod 14); NO structural witness up to R=40. Other three
+forbidden classes (13,4),(15,4),(15,5) NOT realized up to R=40 (survive).
+Within the claim EXACT domain primitive{1..13} n=5: all 4 forbidden absent, (11,4) reached -> domain-statement VERIFIED.

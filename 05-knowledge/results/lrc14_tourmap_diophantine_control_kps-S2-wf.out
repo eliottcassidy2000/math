@@ -1,0 +1,33 @@
+CONTROL: loneliness-forbidding vs rule-artifact forbidding
+Building canonical tables...
+  n=4: 4 iso classes
+  n=5: 12 iso classes
+
+==================================================================
+M2_side_then_quality
+==================================================================
+ n=4: free=4  LRC-realized=4  unconstrained-realized=4
+      forbidden under LRC: 0 | RULE-artifact (forbidden even unconstrained): 0 | LONELINESS-forbidden (rule CAN, loneliness CANNOT): 0
+ n=5: free=12  LRC-realized=11  unconstrained-realized=11
+      forbidden under LRC: 1 | RULE-artifact (forbidden even unconstrained): 1 | LONELINESS-forbidden (rule CAN, loneliness CANNOT): 0
+        (rule-artifact: #3cyc=4, scores=(1, 2, 2, 2, 3))
+
+==================================================================
+M5_thirds_rockpaper
+==================================================================
+ n=4: free=4  LRC-realized=2  unconstrained-realized=2
+      forbidden under LRC: 2 | RULE-artifact (forbidden even unconstrained): 2 | LONELINESS-forbidden (rule CAN, loneliness CANNOT): 0
+        (rule-artifact: #3cyc=1, scores=(1, 1, 1, 3))
+        (rule-artifact: #3cyc=1, scores=(0, 2, 2, 2))
+ n=5: free=12  LRC-realized=3  unconstrained-realized=3
+      forbidden under LRC: 9 | RULE-artifact (forbidden even unconstrained): 9 | LONELINESS-forbidden (rule CAN, loneliness CANNOT): 0
+        (rule-artifact: #3cyc=1, scores=(1, 1, 1, 3, 4))
+        (rule-artifact: #3cyc=2, scores=(1, 1, 2, 2, 4))
+        (rule-artifact: #3cyc=1, scores=(0, 2, 2, 2, 4))
+        (rule-artifact: #3cyc=2, scores=(0, 2, 2, 3, 3))
+        (rule-artifact: #3cyc=3, scores=(1, 1, 2, 3, 3))
+        (rule-artifact: #3cyc=1, scores=(0, 1, 3, 3, 3))
+        (rule-artifact: #3cyc=4, scores=(1, 2, 2, 2, 3))
+        (rule-artifact: #3cyc=4, scores=(1, 2, 2, 2, 3))
+        (rule-artifact: #3cyc=5, scores=(2, 2, 2, 2, 2))
+

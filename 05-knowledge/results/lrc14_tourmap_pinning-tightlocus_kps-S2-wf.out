@@ -1,0 +1,116 @@
+Family sizes: 3of14= 325 4of12= 479 5of10= 251
+
+======================================================================
+METHOD: M1_snapshot_binder_order
+  inputs scanned: 1055  (skipped-toobig: 0)
+  NON-TRIVIAL (produces a 3-cycle anywhere): False
+
+======================================================================
+METHOD: M2_plateau_pin_order
+  inputs scanned: 1055  (skipped-toobig: 0)
+  NON-TRIVIAL (produces a 3-cycle anywhere): False
+  k=3: realized 1/2 free classes.
+    FORBIDDEN (1):
+       [score=(1, 1, 1),c3=1,H=3]
+  k=4: realized 1/4 free classes.
+    FORBIDDEN (3):
+       [score=(0, 2, 2, 2),c3=1,H=3]
+       [score=(1, 1, 2, 2),c3=2,H=5]
+       [score=(1, 1, 1, 3),c3=1,H=3]
+  k=5: realized 1/12 free classes.
+    FORBIDDEN (11):
+       [score=(0, 1, 3, 3, 3),c3=1,H=3]
+       [score=(0, 2, 2, 3, 3),c3=2,H=5]
+       [score=(0, 2, 2, 2, 4),c3=1,H=3]
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 1, 2, 2, 4),c3=2,H=5]
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 1, 1, 3, 4),c3=1,H=3]
+       [score=(1, 2, 2, 2, 3),c3=4,H=11]
+       [score=(1, 2, 2, 2, 3),c3=4,H=15]
+       [score=(1, 2, 2, 2, 3),c3=4,H=13]
+       [score=(2, 2, 2, 2, 2),c3=5,H=15]
+
+======================================================================
+METHOD: M3_section_majority_vote
+  inputs scanned: 1055  (skipped-toobig: 0)
+  NON-TRIVIAL (produces a 3-cycle anywhere): True
+    e.g. k=3: S=(1, 3, 5) c3=1 H=3
+    e.g. k=4: S=(1, 2, 3, 5) c3=1 H=3
+    e.g. k=5: S=(1, 2, 3, 4, 5) c3=1 H=3
+  k=3: realized 2/2 free classes.
+    (realizes ALL free classes)
+  k=4: realized 4/4 free classes.
+    (realizes ALL free classes)
+  k=5: realized 6/12 free classes.
+    FORBIDDEN (6):
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 2, 2, 2, 3),c3=4,H=11]
+       [score=(1, 2, 2, 2, 3),c3=4,H=15]
+       [score=(1, 2, 2, 2, 3),c3=4,H=13]
+       [score=(2, 2, 2, 2, 2),c3=5,H=15]
+
+======================================================================
+METHOD: M4_pair_binding_cyclic
+  inputs scanned: 1055  (skipped-toobig: 22)
+  NON-TRIVIAL (produces a 3-cycle anywhere): False
+  k=3: realized 1/2 free classes.
+    FORBIDDEN (1):
+       [score=(1, 1, 1),c3=1,H=3]
+  k=4: realized 1/4 free classes.
+    FORBIDDEN (3):
+       [score=(0, 2, 2, 2),c3=1,H=3]
+       [score=(1, 1, 2, 2),c3=2,H=5]
+       [score=(1, 1, 1, 3),c3=1,H=3]
+
+======================================================================
+METHOD: M5_halfgrid_parity_xor
+  inputs scanned: 1055  (skipped-toobig: 0)
+  NON-TRIVIAL (produces a 3-cycle anywhere): True
+    e.g. k=3: S=(1, 2, 6) c3=1 H=3
+    e.g. k=4: S=(1, 2, 3, 6) c3=2 H=5
+    e.g. k=5: S=(1, 2, 3, 4, 6) c3=4 H=11
+  k=3: realized 2/2 free classes.
+    (realizes ALL free classes)
+  k=4: realized 4/4 free classes.
+    (realizes ALL free classes)
+  k=5: realized 10/12 free classes.
+    FORBIDDEN (2):
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(2, 2, 2, 2, 2),c3=5,H=15]
+
+======================================================================
+METHOD: M6_rotational_pinrank
+  inputs scanned: 1055  (skipped-toobig: 0)
+  NON-TRIVIAL (produces a 3-cycle anywhere): False
+  k=3: realized 1/2 free classes.
+    FORBIDDEN (1):
+       [score=(1, 1, 1),c3=1,H=3]
+  k=4: realized 1/4 free classes.
+    FORBIDDEN (3):
+       [score=(0, 2, 2, 2),c3=1,H=3]
+       [score=(1, 1, 2, 2),c3=2,H=5]
+       [score=(1, 1, 1, 3),c3=1,H=3]
+  k=5: realized 1/12 free classes.
+    FORBIDDEN (11):
+       [score=(0, 1, 3, 3, 3),c3=1,H=3]
+       [score=(0, 2, 2, 3, 3),c3=2,H=5]
+       [score=(0, 2, 2, 2, 4),c3=1,H=3]
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 1, 2, 2, 4),c3=2,H=5]
+       [score=(1, 1, 2, 3, 3),c3=3,H=9]
+       [score=(1, 1, 1, 3, 4),c3=1,H=3]
+       [score=(1, 2, 2, 2, 3),c3=4,H=11]
+       [score=(1, 2, 2, 2, 3),c3=4,H=15]
+       [score=(1, 2, 2, 2, 3),c3=4,H=13]
+       [score=(2, 2, 2, 2, 2),c3=5,H=15]
+
+######################################################################
+SUMMARY
+  M1_snapshot_binder_order: nontrivial=False  
+  M2_plateau_pin_order: nontrivial=False  k3:1/2 FORBIDS1 k4:1/4 FORBIDS3 k5:1/12 FORBIDS11
+  M3_section_majority_vote: nontrivial=True  k3:2/2 k4:4/4 k5:6/12 FORBIDS6
+  M4_pair_binding_cyclic: nontrivial=False  k3:1/2 FORBIDS1 k4:1/4 FORBIDS3
+  M5_halfgrid_parity_xor: nontrivial=True  k3:2/2 k4:4/4 k5:10/12 FORBIDS2
+  M6_rotational_pinrank: nontrivial=False  k3:1/2 FORBIDS1 k4:1/4 FORBIDS3 k5:1/12 FORBIDS11

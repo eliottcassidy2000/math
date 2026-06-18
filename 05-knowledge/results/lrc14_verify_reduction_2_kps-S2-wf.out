@@ -1,0 +1,150 @@
+
+==============================================================================
+A. THE LOGICAL SKELETON — what each STEP actually delivers
+==============================================================================
+
+  STEP1 (q-witness, THM-523, PROVED): S omits a multiple of some q in 2..14
+        => tau=1/q is lonely => M(S)>=1/q>=1/14.  CONCLUSION = a UNIVERSAL bound
+        (1/14), no dependence on any meas(G_C).  Genuinely reduces the problem to
+        COVERING sets.  NON-CIRCULAR, fully closed.  [verify below]
+
+  STEP2 (gap decomposition, PROVED exact): S = C u {w}, |C|=12, 14|w.
+        L(S) = meas(G_C) - meas(G_C ∩ D_w).  An IDENTITY.  Says nothing by itself.
+        It REWRITES L(S) in terms of meas(G_C).  CONCLUSION depends on meas(G_C).
+
+  STEP3 (decoupling floor, PROVED): L(C u {w}) >= (6/7) meas(G_C) - r/(7w).
+        => for w > r/(6 meas(G_C)), L(S) > 0 => M(S) > 1/14.
+        *** CRITICAL: the threshold w_0 = r/(6 meas(G_C)) DEPENDS ON meas(G_C). ***
+        If meas(G_C) is small, w_0 is LARGE, so STEP3 only handles w above a
+        core-dependent threshold.  For w BELOW w_0 we must exact-check (finite).
+        So STEP3 closes the SINGLE-parked-w case ONLY GIVEN meas(G_C)>0 for THAT C.
+
+  STEP4 (GAP A, OPEN): k>=3 coordinated growing speeds.  Need meas(G_C) bounded
+        below UNIFORMLY in v_max = OPEN-Q-108 itself.
+
+  The circularity question: is STEP1+2+3 a reduction to a STRICTLY WEAKER claim,
+  or does the whole thing still rest on the uniform meas(G_C)>=c (OPEN-Q-108)?
+
+
+==============================================================================
+B. STEP1 is universal (non-circular) — re-verify on random non-covering 13-sets
+==============================================================================
+  non-covering primitive 13-sets checked: 3647; STEP1 q-witness failures: 0
+  => STEP1 reduces LRC(14) to COVERING sets with a UNIVERSAL 1/14 bound. NON-CIRCULAR.
+
+==============================================================================
+C. THE CORE CIRCULARITY TEST: does STEP3's 'closure' need a UNIFORM meas bound?
+==============================================================================
+
+  STEP3 says: M(C u {w}) > 1/14 whenever w > r/(6 meas(G_C)).  For a FIXED core C
+  with meas(G_C)>0 (handed by LRC(12)), this leaves only finitely many w to check.
+  So for ANY FIXED finite family of cores, the single-parked case is closed.
+  But OPEN-Q-108 ranges over INFINITELY MANY cores C (all 12-subsets of N).
+  The closure is uniform iff the threshold w_0(C) = r(C)/(6 meas(G_C)) is bounded
+  AND meas(G_C) is bounded below.  BOTH are exactly the open uniformity.
+
+  I now SHRINK meas(G_C) by choosing cores with a LARGE speed, and watch w_0 blow up.
+
+  Core C = {1,2,...,11, Lbig} (12 speeds). Track meas(G_C), r, threshold w0=r/(6 meas):
+    Lbig        meas(G_C)        float   r   w0=r/6meas
+      13        426/35035    0.0121593   4 54.827856025039125
+      20     10733/194040    0.0553133  14 42.183918755240846
+      50      9671/194040    0.0498402  16 53.504291179815944
+     100     16781/323400    0.0518893  16 51.391454621297896
+     500    58097/1212750    0.0479052  40 139.16381224503846
+    1000   235439/4851000    0.0485341  66 226.64469352995891
+    5000   234467/4851000    0.0483337 294 1013.7844558082801
+   50000 1301227/26950000    0.0482830 2828 9761.888842863953
+
+  READING (CORRECTED — adversarial finding): meas(G_C) does NOT collapse to 0 as
+  the single large speed grows (it stabilizes near a positive value: the large
+  speed acts like a density-1/7 comb thinning {1..11}'s safe set).  BUT the arc
+  count r GROWS LINEARLY with Lbig (the large speed shatters the safe set into
+  ~Lbig arcs).  Since w0 = r/(6 meas), the threshold w0 ALSO GROWS ~ Lbig.
+  *** So even the SINGLE-parked-w decoupling floor (6/7)meas - r/(7w) becomes
+  VACUOUS for cores with a large speed: it only proves L>0 for w > w0 ~ Lbig,
+  and for w <= w0 one must EXACT-CHECK (finitely many, but the bound grows). ***
+  The MEASURE stays bounded below for a single large speed, but the PROVED
+  decoupling certificate does NOT uniformly close even this case -- the r/(7w)
+  error term is too crude once r is large.  STEP3 is a clean proof ONLY when the
+  core's speeds (hence r) are BOUNDED.  Empirically (next: D, F) no w drives L=0,
+  but that is evidence, not the decoupling proof.
+
+
+==============================================================================
+D. WHERE IT STOPS BEING A REDUCTION: the k>=3 coordinated regime is NOT reduced
+==============================================================================
+
+  The honest claim must be: STEP1-3 reduce LRC(14) to controlling cores C that
+  THEMSELVES contain k>=2 coordinated large speeds (because peeling ONE w leaves a
+  12-core that may again have large coordinated speeds).  Each peel needs meas of
+  the SMALLER core bounded below.  Iterating bottoms out at a small (<=2 large
+  speeds) core ONLY IF the intermediate measures stay positive -- which is again
+  the uniform bound.  I test the ITERATION directly: peel large speeds one-by-one
+  and see if any intermediate core hits meas=0 (which would BREAK the induction).
+
+  3 coord 14k on drop-6 core: cov=False prim=True L(S)=0.060725
+     peel-chain (|C|, meas): [(13, 0.06072459286745001), (12, 0.07151176487911182), (11, 0.08317357245928675), (10, 0.09745928674500103)]  all intermediate meas>0
+  3 coord 14k on {1..10}: cov=False prim=True L(S)=0.084444
+     peel-chain (|C|, meas): [(13, 0.08444356097417322), (12, 0.09949789439585358), (11, 0.1155328798185941), (10, 0.13798185941043084)]  all intermediate meas>0
+  3 large AP (no mod-14): cov=False prim=True L(S)=0.089522
+     peel-chain (|C|, meas): [(13, 0.08952217563241689), (12, 0.10458821838197294), (11, 0.12316573494084103), (10, 0.13798185941043084)]  all intermediate meas>0
+  drop-6 + 84,168,252: cov=True prim=True L(S)=0.030522
+     peel-chain (|C|, meas): [(13, 0.030521859093287664), (12, 0.03392321963750535), (11, 0.04412730127015841), (10, 0.09745928674500103)]  all intermediate meas>0
+
+  RESULT: no intermediate core hits meas=0 in these tests, so the iteration LOOKS
+  fine -- but 'looks fine on examples' is exactly the empirical 33k-set evidence,
+  NOT a proof.  The induction needs every intermediate (13-k)-core to have
+  meas>=c uniformly; that is OPEN-Q-108 unchanged.
+
+
+==============================================================================
+E. THE DECISIVE CIRCULARITY VERDICT — is the FINAL claim contingent on OPEN-Q-108?
+==============================================================================
+
+  I formalize the dependency.  Define:
+    P  := 'M(S) >= 1/14 for all primitive 13-sets S'           (= LRC(14), the GOAL)
+    Q  := 'exists c>0 with meas(G_C) >= c for all 12-subsets C' (= OPEN-Q-108)
+  The reduction's logical content (STEP1-3 + THM-522 quantization) is the implication
+    Q  ==>  P    (uniform fattening + decoupling + quantization gives inf L>0 => LRC14).
+  CIRCULARITY would be:  the proof of 'Q ==> P' itself uses P, OR the proof only
+  establishes 'P ==> P' (vacuous), OR it establishes 'Q' assuming 'Q'.
+
+  TEST: is the implication Q==>P PROVED using ONLY facts NOT equivalent to P or Q?
+  STEP1 (PROVED, uses nothing): reduces P to P-restricted-to-covering-sets.
+  STEP2 (IDENTITY): no logical content.
+  STEP3 (PROVED, uses LRC(12) = a DIFFERENT, ALREADY-PROVEN theorem, not P/Q):
+        gives, for EACH core with meas(G_C)>0, closure of the single-large-w case
+        with a threshold depending on meas(G_C).
+  So 'Q ==> P' is a genuine implication whose proof uses LRC(12) and decoupling,
+  NEITHER of which is P or Q.  => the reduction is NOT circular.
+  BUT: it is also NOT a reduction to anything WEAKER than Q.  The k>=3 regime is
+  UNREDUCED; the program's success still REQUIRES Q (or something equivalent).
+  Net: 'Q ==> P' is established; 'P ==> Q' or a weaker-than-Q route is NOT.
+
+  Demonstrate Q is NOT a corollary of LRC(12) alone (the lever is not enough):
+  For cores whose gap-1/13 binders are LARGE speeds, the guaranteed safe arc
+  around the maximizer shrinks like 1/v_binder, so a single-arc Lipschitz bound
+  gives NO universal constant.  Exhibit shrinking half-widths:
+    C=[1, 2, 3]...13 (vmax=13): M(C)=0.08333 binders=[5, 7] Lipschitz half-width=0.0017007
+    C=[1, 2, 3]...13 (vmax=13): M(C)=0.08696 binders=[11, 12] Lipschitz half-width=0.0012940
+    C=[1, 2, 3]...100 (vmax=100): M(C)=0.08333 binders=[5, 7] Lipschitz half-width=0.0017007
+    C=[1, 2, 3]...1000 (vmax=1000): M(C)=0.08333 binders=[5, 7] Lipschitz half-width=0.0017007
+
+  => the single-arc lower bound -> 0 as v_binder grows.  So LRC(12) does NOT imply Q;
+  Q is a STRICTLY STRONGER statement (controls TOTAL measure, not one arc).  The
+  reduction does not prove Q and does not dodge needing it.
+
+
+==============================================================================
+F. INDEPENDENT COUNTEREXAMPLE HUNT (is there a covering set with M<=1/14?)
+==============================================================================
+  Fresh exact search distinct from the original 33k census: targeted coordinated
+  families + a structured grid, exact L-screen then exact-M on L=0 survivors.
+  checked 8598 covering primitive 13-sets; L=0 survivors 0
+  min M over L=0 survivors: n/a at None
+  TIGHT (M=1/14): 0   COUNTEREXAMPLES (M<1/14): 0
+
+==============================================================================
+DONE
+==============================================================================

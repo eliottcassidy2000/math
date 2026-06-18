@@ -1,0 +1,77 @@
+======================================================================
+TIER STRUCTURE: classify residues 0..13 by depth profile
+  profile (7, 7, 7, 7, 7, 7) sum=42: residues [7]
+  profile (2, 6, 4, 4, 6, 2) sum=24: residues [2, 12]
+  profile (4, 2, 6, 6, 2, 4) sum=24: residues [4, 10]
+  profile (6, 4, 2, 2, 4, 6) sum=24: residues [6, 8]
+  profile (1, 3, 5, 5, 3, 1) sum=18: residues [1, 13]
+  profile (3, 5, 1, 1, 5, 3) sum=18: residues [3, 11]
+  profile (5, 1, 3, 3, 1, 5) sum=18: residues [5, 9]
+  profile (0, 0, 0, 0, 0, 0) sum=0: residues [0]
+======================================================================
+PAIRWISE MARGIN between every ordered residue pair (margin(r over s))
+         0   1   2   3   4   5   6   7   8   9  10  11  12  13
+   0:    0  -6  -6  -6  -6  -6  -6  -6  -6  -6  -6  -6  -6  -6
+   1:    6   0  -2  -2  -2   2  -2  -6  -2   2  -2  -2  -2   0
+   2:    6   2   0   2  -2   2   2  -6   2   2  -2   2   0   2
+   3:    6   2  -2   0  -2  -2  -2  -6  -2  -2  -2   0  -2   2
+   4:    6   2   2   2   0   2  -2  -6  -2   2   0   2   2   2
+   5:    6  -2  -2   2  -2   0  -2  -6  -2   0  -2   2  -2  -2
+   6:    6   2  -2   2   2   2   0  -6   0   2   2   2  -2   2
+   7:    6   6   6   6   6   6   6   0   6   6   6   6   6   6
+   8:    6   2  -2   2   2   2   0  -6   0   2   2   2  -2   2
+   9:    6  -2  -2   2  -2   0  -2  -6  -2   0  -2   2  -2  -2
+  10:    6   2   2   2   0   2  -2  -6  -2   2   0   2   2   2
+  11:    6   2  -2   0  -2  -2  -2  -6  -2  -2  -2   0  -2   2
+  12:    6   2   0   2  -2   2   2  -6   2   2  -2   2   0   2
+  13:    6   0  -2  -2  -2   2  -2  -6  -2   2  -2  -2  -2   0
+======================================================================
+Which distinct-residue pairs are TIED (margin 0)?
+  tied distinct pairs: [(1, 13), (2, 12), (3, 11), (4, 10), (5, 9), (6, 8)]
+    (1,13): prof(r)=(1, 3, 5, 5, 3, 1) prof(s)=(1, 3, 5, 5, 3, 1) same=True
+    (2,12): prof(r)=(2, 6, 4, 4, 6, 2) prof(s)=(2, 6, 4, 4, 6, 2) same=True
+    (3,11): prof(r)=(3, 5, 1, 1, 5, 3) prof(s)=(3, 5, 1, 1, 5, 3) same=True
+    (4,10): prof(r)=(4, 2, 6, 6, 2, 4) prof(s)=(4, 2, 6, 6, 2, 4) same=True
+    (5,9): prof(r)=(5, 1, 3, 3, 1, 5) prof(s)=(5, 1, 3, 3, 1, 5) same=True
+    (6,8): prof(r)=(6, 4, 2, 2, 4, 6) prof(s)=(6, 4, 2, 2, 4, 6) same=True
+======================================================================
+DOMINANCE CHECK: res 7 vs all, res 0 vs all
+  margin(7 over r) for r!=7: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+  margin(r over 0) for r!=0: [6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6, 6]
+======================================================================
+EXHAUSTIVE: over ALL 5-residue MULTISETS, with FREE tie-break, which
+reach (2,2,2,2,2)? And are they ALL all-equal-residue (degenerate)?
+  multisets reaching (2,2,2,2,2) with free tie-break: 38
+  of these, ALL-same-profile (degenerate twins): 38
+  of these, NOT all-same-profile (GENUINE escape?): 0
+  -> every (2,2,2,2,2)-reachable multiset is all-same-profile.
+     Same profile => all 10 pairs tied => tournament is decided
+     ENTIRELY by tie-break. Under the smaller-speed tie-break this is
+     the TRANSITIVE order (H=1), NOT regular. Regular only via
+     arbitrary tie orientation, which the claim already concedes.
+     profile classes admitting it: [(0, 0, 0, 0, 0, 0), (1, 3, 5, 5, 3, 1), (2, 6, 4, 4, 6, 2), (3, 5, 1, 1, 5, 3), (4, 2, 6, 6, 2, 4), (5, 1, 3, 3, 1, 5), (6, 4, 2, 2, 4, 6), (7, 7, 7, 7, 7, 7)]
+======================================================================
+Can a DISTINCT-residue 5-set be all-same-profile? (needed for regular)
+  profile (0, 0, 0, 0, 0, 0): 1 residues [0] -> can pick 5 distinct? False
+  profile (1, 3, 5, 5, 3, 1): 2 residues [1, 13] -> can pick 5 distinct? False
+  profile (2, 6, 4, 4, 6, 2): 2 residues [2, 12] -> can pick 5 distinct? False
+  profile (3, 5, 1, 1, 5, 3): 2 residues [3, 11] -> can pick 5 distinct? False
+  profile (4, 2, 6, 6, 2, 4): 2 residues [4, 10] -> can pick 5 distinct? False
+  profile (5, 1, 3, 3, 1, 5): 2 residues [5, 9] -> can pick 5 distinct? False
+  profile (6, 4, 2, 2, 4, 6): 2 residues [6, 8] -> can pick 5 distinct? False
+  profile (7, 7, 7, 7, 7, 7): 1 residues [7] -> can pick 5 distinct? False
+  -> only EVEN tier {2,4,6,8,10,12} has >=5 residues with a COMMON profile?
+  even-tier profiles:
+    res 2: (2, 6, 4, 4, 6, 2)
+    res 4: (4, 2, 6, 6, 2, 4)
+    res 6: (6, 4, 2, 2, 4, 6)
+    res 8: (6, 4, 2, 2, 4, 6)
+    res 10: (4, 2, 6, 6, 2, 4)
+    res 12: (2, 6, 4, 4, 6, 2)
+  odd-tier profiles:
+    res 1: (1, 3, 5, 5, 3, 1)
+    res 3: (3, 5, 1, 1, 5, 3)
+    res 5: (5, 1, 3, 3, 1, 5)
+    res 9: (5, 1, 3, 3, 1, 5)
+    res 11: (3, 5, 1, 1, 5, 3)
+    res 13: (1, 3, 5, 5, 3, 1)

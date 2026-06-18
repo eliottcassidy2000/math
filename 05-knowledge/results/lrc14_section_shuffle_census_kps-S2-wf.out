@@ -1,0 +1,274 @@
+==========================================================================
+PART 1 - CENSUS of 13-elt residue-multisets over Z/14 under (Z/14)*
+==========================================================================
+A 13-runner config's on-grid picture depends only on its residue MULTISET
+R = multiset of (v_i mod 14), |R|=13.  (Z/14)* acts by entrywise *a.
+SECTION-SHARING PATTERN of R: count in section 0 (=z) + the partition of
+the remaining 13-z runners by which nonzero section they share.
+
+[1a] CLAIM: the section-sharing pattern (z, mult-partition) is (Z/14)*-INVARIANT.
+     (mult by a unit fixes 0, permutes {1..13}, preserves multiplicities.)
+     verified invariant on 20000 random 13-multisets: True
+
+[1b] Number of distinct section-sharing PATTERNS (orbit types): 373
+     of these, GRID-LONEABLE (z=0, section 0 empty): 101
+     of those, PERFECT SDR (z=0 & all-singletons): 1 -> UNIQUE pattern: (0, (1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1))
+
+     The perfect SDR is the SINGLE maximally-spread loneable pattern:
+       z=0, partition=(1^13) - every nonzero section used exactly once.
+     ALL OTHER loneable patterns SHARE at least one section (some part>=2)
+     and leave at least one nonzero section EMPTY.
+
+[1c] Loneable patterns graded by sharing (max nonzero multiplicity):
+     maxmult= 1 :    1 patterns   e.g. [(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)]
+     maxmult= 2 :    6 patterns   e.g. [(2, 2, 2, 2, 2, 2, 1), (2, 2, 2, 2, 2, 1, 1, 1), (2, 2, 2, 2, 1, 1, 1, 1, 1)]
+     maxmult= 3 :   14 patterns   e.g. [(3, 3, 3, 3, 1), (3, 3, 3, 2, 2), (3, 3, 3, 2, 1, 1)]
+     maxmult= 4 :   18 patterns   e.g. [(4, 4, 4, 1), (4, 4, 3, 2), (4, 4, 3, 1, 1)]
+     maxmult= 5 :   18 patterns   e.g. [(5, 5, 3), (5, 5, 2, 1), (5, 5, 1, 1, 1)]
+     maxmult= 6 :   14 patterns   e.g. [(6, 6, 1), (6, 5, 2), (6, 5, 1, 1)]
+     maxmult= 7 :   11 patterns   e.g. [(7, 6), (7, 5, 1), (7, 4, 2)]
+     maxmult= 8 :    7 patterns   e.g. [(8, 5), (8, 4, 1), (8, 3, 2)]
+     maxmult= 9 :    5 patterns   e.g. [(9, 4), (9, 3, 1), (9, 2, 2)]
+     maxmult=10 :    3 patterns   e.g. [(10, 3), (10, 2, 1), (10, 1, 1, 1)]
+     maxmult=11 :    2 patterns   e.g. [(11, 2), (11, 1, 1)]
+     maxmult=12 :    1 patterns   e.g. [(12, 1)]
+     maxmult=13 :    1 patterns   e.g. [(13,)]
+     SDR is exactly maxmult=1 (the unique least-shared loneable pattern).
+
+==========================================================================
+PART 2 - EASY->HARD degradation: does more section-sharing => harder?
+==========================================================================
+We need ACTUAL speed sets (off-grid M sees integer speeds, not just residues).
+Take a graded family that degrades {1..13} (perfect SDR) toward a covering set
+by pushing residues to collide / land on section 0, and measure M + meas(G_S).
+
+Graded family (13 speeds), degrading the AP {1..13}:
+  perfect SDR (AP)        
+     residues mod14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+     z(sec0)=0  distinct-nonzero-sections=13  empty=0  share-part=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.700
+     EXACT M = 1/14 = 0.071429  (>1/14? False)   meas(G_S)=0=0.000000
+     binding at tau*=5/14 : [3, 11]
+
+  one collision (swap 13->1 dup)
+     residues mod14 = [1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+     z(sec0)=0  distinct-nonzero-sections=12  empty=1  share-part=(2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.547
+     EXACT M = 1/13 = 0.076923  (>1/14? True)   meas(G_S)=5693/194040=0.029339
+     binding at tau*=4/13 : [3, 10]
+
+  two collisions          
+     residues mod14 = [1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+     z(sec0)=0  distinct-nonzero-sections=11  empty=2  share-part=(2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.393
+     EXACT M = 1/12 = 0.083333  (>1/14? True)   meas(G_S)=18859/388080=0.048596
+     binding at tau*=5/12 : [5, 7]
+
+  Goddyn-Wong {1..11,13,24}
+     residues mod14 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 10, 11, 13]
+     z(sec0)=0  distinct-nonzero-sections=12  empty=1  share-part=(2, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.547
+     EXACT M = 1/14 = 0.071429  (>1/14? False)   meas(G_S)=0=0.000000
+     binding at tau*=5/14 : [3, 11]
+
+  covering core {1..11,13,84}
+     residues mod14 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+     z(sec0)=1  distinct-nonzero-sections=12  empty=1  share-part=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.585
+     EXACT M = 7/89 = 0.078652  (>1/14? True)   meas(G_S)=563/105105=0.005357
+     binding at tau*=37/89 : [5, 84]
+
+  covering {1..11,13,168}  
+     residues mod14 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+     z(sec0)=1  distinct-nonzero-sections=12  empty=1  share-part=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1)  entropy=3.585
+     EXACT M = 14/173 = 0.080925  (>1/14? True)   meas(G_S)=263/30030=0.008758
+     binding at tau*=72/173 : [5, 168]
+
+Reading (CORRECTED - the naive 'more sharing = harder' is FALSE):
+ * Within z=0 (no runner parked in section 0): MORE section-sharing makes
+   M LARGER (EASIER), not smaller.  Perfect SDR {1..13} = the AP has the
+   SMALLEST gap M=1/14 (it IS the tight extremal); one collision -> 1/13,
+   two collisions -> 1/12.  So the maximally-spread SDR is the HARDEST z=0
+   config, and sharing sections RELAXES it.  Section-sharing is NOT a
+   monotone proxy for 'harder' inside the easy (z=0) regime - it is the
+   REVERSE.  The AP/SDR sits at the bottom of the well.
+ * The covering hard families live at z=1 (one runner in section 0): there
+   grid loneliness DIES (gridM=0) and the true M is OFF-grid.  Crucially
+   M(S_m)=7m/(84m+5) is INCREASING in m: 7/89 < 14/173 < 21/257 -> 1/12.
+   So m=1 (the LEAST-degraded covering set, parked runner closest to 0 in
+   absolute speed) is the HARDEST, approaching 1/14 from above but never
+   reaching it.  z=1 with the SMALLEST off-grid parked runner = the worst.
+ * NET: the relevant 'hardness coordinate' is NOT the share-partition; it is
+   (a) whether section 0 is occupied (z>=1 forces off-grid), and (b) HOW the
+   parked runner's true position degrades.  Section-sharing on the nonzero
+   sections is essentially orthogonal to M in this family.
+
+==========================================================================
+PART 2b - ROBUSTNESS: is the 'sharing relaxes M' reversal a fluke? + meas trend
+==========================================================================
+Sweep collisions 0..6 in the AP (replace the top residues by +14 duplicates),
+staying z=0, and confirm M is NON-DECREASING as sharing increases:
+  collisions=0 : residues=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]  z=0 empty=0  M=1/14=0.071429  meas=0.000000
+  collisions=1 : residues=[1, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  z=0 empty=1  M=1/13=0.076923  meas=0.029339
+  collisions=2 : residues=[1, 1, 2, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  z=0 empty=2  M=1/12=0.083333  meas=0.048596
+  collisions=3 : residues=[1, 1, 2, 2, 3, 3, 4, 5, 6, 7, 8, 9, 10]  z=0 empty=3  M=1/11=0.090909  meas=0.108080
+  collisions=4 : residues=[1, 1, 2, 2, 3, 3, 4, 4, 5, 6, 7, 8, 9]  z=0 empty=4  M=1/10=0.100000  meas=0.141373
+  collisions=5 : residues=[1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 7, 8]  z=0 empty=5  M=1/10=0.100000  meas=0.155620
+  collisions=6 : residues=[1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6, 6, 7]  z=0 empty=6  M=2/21=0.095238  meas=0.132556 <-- M DECREASED
+  M non-decreasing across the WHOLE sweep? False (not strictly - see k=6)
+  But M(SDR)=1/14 is the GLOBAL MINIMUM of the sweep, and every sharing step
+  k=1..5 RAISES M.  So: spreading (SDR) is the tight floor; sharing generally
+  relaxes M but not strictly monotonically in collision-count (k=6 dips to
+  2/21=0.0952 from 1/10).  HONEST: SDR=min, sharing helps, not a clean monotone.
+
+meas(G_S) across the covering family S_m (the gap-1/14 lonely-set measure):
+  m=1: M=7/89=0.078652  meas(G_S)=563/105105=0.005357  (M>1/14? True)
+  m=2: M=14/173=0.080925  meas(G_S)=263/30030=0.008758  (M>1/14? True)
+  m=3: M=21/257=0.081712  meas(G_S)=3119/315315=0.009892  (M>1/14? True)
+  m=4: M=28/341=0.082111  meas(G_S)=4397/420420=0.010459  (M>1/14? True)
+  meas(G_S) GROWS with m (less-tight as the parked runner gets large/slow),
+  while M also grows toward 1/12: the m=1 set is the unique hardest, both in
+  smallest M (7/89) and smallest positive meas (563/105105).
+
+==========================================================================
+PART 3 - EASY/HARD correspondence via covering families {C U {84m}}
+==========================================================================
+User's claim: each HARD family corresponds (via section-shuffling) to a
+specific EASY section pattern of its 12-speed CORE C.
+
+[3a] Covering family: S_m = {1..11,13} U {84m}.  84=lcm(12,14), so 84m==0 mod14
+     -> 84m sits in section 0 at EVERY unit (gridM=0).  Core C={1..11,13}.
+     Closed form (given): M(S_m)=7m/(84m+5).  Check exact + section picture:
+     Core C residues mod14: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]  (distinct & nonzero -> C is grid-SDR-able: an EASY core, by LRC(12))
+     Core share-pattern: z=0 used=12 empty=1 part=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1) (perfect SDR on its 12 residues)
+     Core empty nonzero sections (besides 0): [12]  <- section 12 is the lone hole the parked runner would want but can't use on-grid
+
+     m=1: S=...{84*1=84}  M=7/89 (pred 7/89) match=True  tau*=37/89 binding=[5, 84]
+     m=2: S=...{84*2=168}  M=14/173 (pred 14/173) match=True  tau*=72/173 binding=[5, 168]
+     m=3: S=...{84*3=252}  M=21/257 (pred 21/257) match=True  tau*=107/257 binding=[5, 252]
+
+[3b] Does (Z/14)* act compatibly: unit*S covering => covering, core->core?
+     Multiply the WHOLE set by a unit a (mod nothing - actual integer scaling
+     does NOT preserve covering; the RESIDUE action does).  Test the residue
+     action: 'covering' = contains a multiple of every q in 2..14.
+     covering(S_1)? True
+     Apply residue-unit a to mod-14 picture only (84m stays ==0):
+       a= 1: parked-in-sec0 count=1  core sections=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+       a= 3: parked-in-sec0 count=1  core sections=[1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13]
+       a= 5: parked-in-sec0 count=1  core sections=[1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+       a= 9: parked-in-sec0 count=1  core sections=[1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13]
+       a=11: parked-in-sec0 count=1  core sections=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+       a=13: parked-in-sec0 count=1  core sections=[1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+     => the parked runner is FIXED in section 0 by every unit (0 is a fixed
+        point of mult), and the core's 12 sections are PERMUTED among {1..13}.
+        So (Z/14)* sends covering-core-config to covering-core-config: the
+        easy core stays an SDR (just relabeled sections), the hard runner stays
+        parked.  The action is COMPATIBLE with the easy/hard split.
+
+[3c] Which EASY pattern does the hard family correspond to?  The core C is a
+     PERFECT SDR on 12 of the 13 nonzero sections, leaving EXACTLY ONE nonzero
+     section empty (the hole).  The hard family is obtained by adding a runner
+     that - instead of filling that empty section - is forced into section 0
+     (because 84m==0).  So: HARD = (easy 12-SDR with one hole) + (runner that
+     misses the hole and lands on the observer).  The 'shared section' that
+     indexes the family is section 0 itself (shared by observer + parked runner).
+
+     Core C={1..11,13}: empty nonzero section(s)=[12].
+     residue 12 is the missing one (12 not in {1..11,13} mod14).  A runner ==12
+     mod14 would COMPLETE the SDR (easy).  Instead 84m==0 -> parked.  The hard
+     family is the 'failed completion': the 13th runner aims at the hole(12)
+     but is dragged to 0.  DIFFERENT hard families <-> DIFFERENT holes/cores.
+
+[3d] Census: easy 12-cores that are perfect-SDR-with-one-hole, by hole h:
+     (Z/14)* orbits on possible holes {1..13}:
+       orbit of hole  1: [1, 3, 5, 9, 11, 13] (size 6)
+       orbit of hole  2: [2, 4, 6, 8, 10, 12] (size 6)
+       orbit of hole  7: [7] (size 1)
+     => holes fall into orbits; section 7 (the antipode) is its own orbit
+        (7*a==7 mod14 for all units), so a core whose hole is 7 is (Z/14)*-fixed.
+
+==========================================================================
+PART 4 - Hall obstruction: trivial mod 14, restored on a finer grid?
+==========================================================================
+[4a] mod 14: SDR-able <=> residues distinct & nonzero.  Bipartite graph
+     runners->sections is a single permutation (unit action), so Hall is
+     automatic or fails by a raw collision.  NO non-trivial deficiency. (S1)
+
+[4b] FINER grid for a hard core.  S_1={1..11,13,84}, optimum off-grid at
+     tau*=37/89 (denominator 89=84+5).  Test whether on the mod-Q circle the
+     hard core admits a perfect SDR (distinct & nonzero residues mod Q):
+     mod  14: # units giving a perfect SDR = 0 / 6 units  (Q factors: Counter())
+     mod  28: # units giving a perfect SDR = 0 / 12 units  (Q factors: Counter())
+     mod  84: # units giving a perfect SDR = 0 / 24 units  (Q factors: Counter())
+     mod  89: # units giving a perfect SDR = 88 / 88 units  (Q factors: Counter())
+     mod 178: # units giving a perfect SDR = 88 / 88 units  (Q factors: Counter())
+
+[4c] WHY mod 89 is the right finer grid (84 is invertible mod 89):
+     84 mod 89 = 84 ; gcd(84,89)= 1 (89 prime) -> 84 is a UNIT
+     so the parked runner is NO LONGER stuck in section 0 on the mod-89 circle.
+     A perfect SDR exists mod 89 -> the off-grid lonely time lives there.
+
+[4d] Is there a genuine Hall/matching obstruction on the finer grid, or still
+     trivial?  On mod Q with all v invertible, mult-by-a is again a permutation
+     of Z/Q, so {v_i a} distinct <=> {v_i} distinct mod Q, and nonzero <=> v_i!=0.
+     => STILL trivial (distinct & nonzero mod Q).  The matching is forced; Hall
+     never bites.  BUT a real obstruction appears when we demand the SDR sections
+     avoid not just {0} but the whole FORBIDDEN BAND |section|<thr*Q around 0.
+     That is the true (off-grid) lonely condition.  Model it:
+
+[4e] BAND model on mod 89 for hard core S_1 (the FORBIDDEN ZONE, not just {0}):
+     forbidden sections (||s/89||<1/14): [0, 1, 2, 3, 4, 5, 6, 83, 84, 85, 86, 87, 88]
+     A lonely grid-89 time a needs EVERY runner's section v*a mod89 OUTSIDE
+     the band.  This is NOT a matching condition (runners may share sections
+     freely as long as none lands in the band) -> it's a COVERING-avoidance,
+     same shape as the mod-14 'avoid section 0' but with a thick band.
+     # units a (mod89) with ALL runners out of the band: 2 e.g. [37, 52]
+     check a=37: tau=37/89, g(S,tau)=7/89 (>=1/14? True)
+     EXACT off-grid M(S_1)=7/89=0.078652 at tau*=37/89 ; is tau* an a/89? True
+
+==========================================================================
+PART 5 - VERDICT
+==========================================================================
+
+CENSUS (Part 1):
+ * The on-grid picture of a 13-runner config depends only on its residue
+   multiset R mod 14, and the SECTION-SHARING PATTERN (z = #parked in section 0,
+   plus the multiplicity partition on nonzero sections) is a (Z/14)*-INVARIANT.
+ * Among ALL section-sharing patterns, PERFECT SDR = the UNIQUE loneable pattern
+   with no sharing (z=0, partition 1^13).  {1..13} realizes it.  Every other
+   loneable pattern shares >=1 section and leaves >=1 nonzero section empty.
+
+MONOTONICITY (Part 2) - the naive proxy is REVERSED, be honest:
+ * 'More section-sharing => harder' is FALSE.  Within z=0, the MAXIMALLY-SPREAD
+   perfect SDR {1..13} (the AP) is the HARDEST z=0 config (M=1/14 exactly, the
+   tight wall); sharing sections (collisions) RAISES M (1/13, 1/12, ...).  The
+   AP/SDR sits at the BOTTOM of the well, not the top.  Section-sharing on the
+   NONZERO sections is essentially orthogonal to / anti-correlated with hardness.
+ * The real hardness coordinate is z (section-0 occupancy).  z=0 => M>=1/13
+   (LRC(13)) so NOT a counterexample.  z>=1 (a runner == 0 mod 14) is the only
+   way to a covering set; then gridM=0 and M is forced OFF-grid.  Among the
+   covering family S_m={1..11,13,84m}, M(S_m)=7m/(84m+5) is INCREASING in m, so
+   m=1 (M=7/89, the least-degraded) is the HARDEST and the closest approach to
+   1/14 from above.  All of these are still > 1/14 (consistent with LRC(14)).
+ * Tightness (M=1/14 exactly) is NOT unique to the SDR: Goddyn-Wong {1..11,13,24}
+   ALSO hits M=1/14 (with a shared section, residue 10 doubled).  So 'tight' is a
+   small finite locus {AP, Goddyn-Wong, ...}, not 'the SDR'.  meas(G_S)=0 exactly
+   at these tight sets (the gap-1/14 lonely set is a measure-zero point set), and
+   meas(G_S)>0 for every covering S_m (e.g. 563/105105 at m=1) - matching codex's
+   meas(G_C) sharpening.
+
+EASY/HARD CORRESPONDENCE (Part 3):
+ * CONFIRMED in the precise sense: the hard family {C U {84m}} = (easy 12-core C
+   that is a perfect SDR leaving exactly ONE nonzero section empty) + (a 13th
+   runner forced into section 0 instead of filling that hole).  The 'shared
+   section' indexing the family is section 0 (observer + parked runner).
+ * (Z/14)* acts COMPATIBLY: 0 is a fixed point of multiplication, so the parked
+   runner stays parked under every unit while the core's SDR is merely relabeled
+   among sections {1..13}.  Covering->covering, core->core.  Holes fall into
+   (Z/14)* orbits; the antipodal hole 7 gives a unit-FIXED core.
+
+HALL (Part 4):
+ * mod 14: trivial (distinct & nonzero), confirming HYP-2571b.  No Hall bite.
+ * FINER grid mod 89 (84 is a unit mod 89): the parked runner is FREED, a perfect
+   SDR exists, and the off-grid optimum lives there (tau*=37/89).  But the SDR
+   condition is STILL trivial (distinct & nonzero mod 89) because mult-by-a is a
+   permutation.  The genuine obstruction is NOT a matching/Hall condition: it is
+   a BAND-AVOIDANCE (every section must miss the thick forbidden zone |s/Q|<1/14
+   around 0), which is the same covering-avoidance shape as mod 14, just thicker.
+   There is NO hidden Hall theorem; the hardness is covering, not matching.
+

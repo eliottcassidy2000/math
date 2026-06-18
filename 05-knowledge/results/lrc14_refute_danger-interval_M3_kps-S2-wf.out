@@ -1,0 +1,261 @@
+ADVERSARIAL REFUTATION of danger-interval M3 (signed danger-arrival + parity twist)
+==============================================================================
+n=4 free classes: 4 (A000568=4)
+n=5 free classes: 12 (A000568=12)
+n=5 class table (H,c3,score):
+   (1, 0, (0, 1, 2, 3, 4))
+   (3, 1, (0, 1, 3, 3, 3))
+   (3, 1, (0, 2, 2, 2, 4))
+   (3, 1, (1, 1, 1, 3, 4))
+   (5, 2, (0, 2, 2, 3, 3))
+   (5, 2, (1, 1, 2, 2, 4))
+   (9, 3, (1, 1, 2, 3, 3))
+   (9, 3, (1, 1, 2, 3, 3))
+   (11, 4, (1, 2, 2, 2, 3))
+   (13, 4, (1, 2, 2, 2, 3))
+   (15, 4, (1, 2, 2, 2, 3))
+   (15, 5, (2, 2, 2, 2, 2))
+
+[REF] circulant-embeddable n=5 classes (odd N<=21):
+   embeddable count: 12/12
+     embeddable: (1, 0, (0, 1, 2, 3, 4))
+     embeddable: (3, 1, (1, 1, 1, 3, 4))
+     embeddable: (3, 1, (0, 1, 3, 3, 3))
+     embeddable: (3, 1, (0, 2, 2, 2, 4))
+     embeddable: (5, 2, (1, 1, 2, 2, 4))
+     embeddable: (5, 2, (0, 2, 2, 3, 3))
+     embeddable: (9, 3, (1, 1, 2, 3, 3))
+     embeddable: (9, 3, (1, 1, 2, 3, 3))
+     embeddable: (11, 4, (1, 2, 2, 2, 3))
+     embeddable: (13, 4, (1, 2, 2, 2, 3))
+     embeddable: (15, 4, (1, 2, 2, 2, 3))
+     embeddable: (15, 5, (2, 2, 2, 2, 2))
+
+==============================================================================
+BASELINE (reproduce claim): M3 at the TRUE OPTIMUM, vmax=12,16,20
+==============================================================================
+  [opt vmax=12] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [opt vmax=16] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [opt vmax=20] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+==============================================================================
+BROADEN 1: M3 at ALL tied optimal taus (allopt), vmax up to 22
+==============================================================================
+  [allopt vmax=14] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [allopt vmax=18] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [allopt vmax=22] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [allopt CUMULATIVE] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+==============================================================================
+BROADEN 2: M3 evaluated at EVERY candidate crossing (allcand), vmax up to 14
+==============================================================================
+  [allcand vmax=12] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [allcand vmax=14] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [allcand CUMULATIVE] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+==============================================================================
+BROADEN 3: M3 at DENSE arbitrary rational tau (p/q, q<=40), selected speed sets
+==============================================================================
+   #dense taus: 489
+   #speed sets (vmax=13): 1281
+  [dense-tau vmax=13 (all q<=40)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+==============================================================================
+BROADEN 4: LRC-13 families -> all 5-subsets, M3 at full-set optimum & subset optimum
+==============================================================================
+  [LRC-13 5-subsets] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+==============================================================================
+BROADEN 5: M3 on larger sets (m=6..9), read induced 5-vertex sub-tournaments
+==============================================================================
+  [induced-from-m=6 (cumul)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [induced-from-m=7 (cumul)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [induced-from-m=8 (cumul)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [induced-from-m=9 (cumul)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+  [induced-from-m=10 (cumul)] m=5: realized 4/12; forbidden=8
+       FORBIDDEN: H=3 c3=1 score=(1, 1, 1, 3, 4)
+       FORBIDDEN: H=3 c3=1 score=(0, 1, 3, 3, 3)
+       FORBIDDEN: H=3 c3=1 score=(0, 2, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(1, 1, 2, 2, 4)
+       FORBIDDEN: H=5 c3=2 score=(0, 2, 2, 3, 3)
+       FORBIDDEN: H=9 c3=3 score=(1, 1, 2, 3, 3)
+       FORBIDDEN: H=13 c3=4 score=(1, 2, 2, 2, 3)
+       FORBIDDEN: H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+########## PART 2 (canonical-key corrected) ##########
+[setup] baseline M3-realized canonical keys: 4/12
+[setup] baseline-forbidden canonical keys:   8/12
+        forbidden-key tuple (3, 1, (1, 1, 1, 3, 4))
+        forbidden-key tuple (3, 1, (0, 1, 3, 3, 3))
+        forbidden-key tuple (3, 1, (0, 2, 2, 2, 4))
+        forbidden-key tuple (5, 2, (1, 1, 2, 2, 4))
+        forbidden-key tuple (5, 2, (0, 2, 2, 3, 3))
+        forbidden-key tuple (9, 3, (1, 1, 2, 3, 3))
+        forbidden-key tuple (13, 4, (1, 2, 2, 2, 3))
+        forbidden-key tuple (15, 4, (1, 2, 2, 2, 3))
+PART 2: m=13 induced + STRUCTURAL refutation attempt
+==============================================================================
+
+(a) m=13 induced sub-tournaments from real LRC-13 speed sets
+   from 5 named LRC families: realized 4/12
+   invariant tuples realized: [(1, 0, (0, 1, 2, 3, 4)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+   TRUE forbidden-CLASS hits as induced sub? 0 witnesses
+
+   + 400 random covering 13-sets (parked w in 14Z): realized 4/12
+   TRUE forbidden-CLASS hit total? 0 witnesses
+
+(b) STRUCTURAL enumeration of ALL M3-reachable tournaments at n=5
+    arc(i,j) = [rank_i < rank_j] XOR [p_i == p_j]   (p = parity of speed)
+    structurally reachable iso classes: 4/12
+    reachable invariant tuples: [(1, 0, (0, 1, 2, 3, 4)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+    structurally FORBIDDEN CLASSES (8) [by canon key]:
+        (3, 1, (1, 1, 1, 3, 4))
+        (3, 1, (0, 1, 3, 3, 3))
+        (3, 1, (0, 2, 2, 2, 4))
+        (5, 2, (1, 1, 2, 2, 4))
+        (5, 2, (0, 2, 2, 3, 3))
+        (9, 3, (1, 1, 2, 3, 3))
+        (13, 4, (1, 2, 2, 2, 3))
+        (15, 4, (1, 2, 2, 2, 3))
+
+    baseline-forbidden CLASSES reachable structurally: 0
+    structural-reachable == baseline-realized key sets? True
+
+==============================================================================
+VERDICT (part 2)  [keyed on CANONICAL iso class, not invariant tuple]
+  m=13 induced TRUE-forbidden-class witnesses: 0
+  structural enumeration reaching a forbidden CLASS: 0
+  >>> forbidden set UNBROKEN: M3-reachable iso classes = exactly the 4 baseline ones <<<
+  Reachable canonical classes (tuples):
+      (1, 0, (0, 1, 2, 3, 4))
+      (9, 3, (1, 1, 2, 3, 3))
+      (11, 4, (1, 2, 2, 2, 3))
+      (15, 5, (2, 2, 2, 2, 2))

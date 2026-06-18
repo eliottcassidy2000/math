@@ -1,0 +1,6 @@
+M4: count speed sets whose optimal-tau tournament is REGULAR (2,2,2,2,2):
+  vmax=11: 461 primitive 5-speed sets; #regular at OPTIMAL lonely tau = 0
+  vmax=14: 1981 primitive 5-speed sets; #regular at OPTIMAL lonely tau = 0
+  vmax=17: 6131 primitive 5-speed sets; #regular at OPTIMAL lonely tau = 0
+  vmax=20: 15246 primitive 5-speed sets; #regular at OPTIMAL lonely tau = 0
+  vmax=23: 33166 primitive 5-speed sets; #regular at OPTIMAL lonely tau = 0

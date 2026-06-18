@@ -1,0 +1,18 @@
+  vmax<=   40 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  vmax<=   60 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  vmax<=  100 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  vmax<=  200 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  vmax<=  500 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  vmax<= 1000 sampled 4000: cumulative reg_hits=0 distinct-scores=3 regular-score-seen=False
+  structured families (40 sets): cumulative reg_hits=0 regular-score-seen=False
+
+======================================================================
+STRESS-TEST SUMMARY
+======================================================================
+  total speed sets probed (sampled-large + structured): 24040
+  total optimal taus tested: 51363
+  REGULAR (c3=5,H=15) hits at optimum: 0
+  distinct score-sequences at optimum: 3
+  regular SCORE (2,2,2,2,2) ever at optimum: False
+  all score-sequences seen: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (1, 1, 1, 3, 4)]
+  CLAIM SURVIVES stress test (no regular at any optimum).

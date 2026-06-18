@@ -1,0 +1,79 @@
+########################################################################
+VERTEX COUNT m=4   (full iso set: 4)
+########################################################################
+  enumerated 4 iso classes
+
+  [M3] realized 2/4  (vmax=14)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3)   ex S=(1, 2, 3, 4) key=2/5
+       H=5 c3=2 score=(1, 1, 2, 2)   ex S=(1, 2, 3, 5) key=1/4
+    FORBIDDEN invariants (H,c3,score):
+       H=3 c3=1 score=(1, 1, 1, 3)
+       H=3 c3=1 score=(0, 2, 2, 2)
+
+  [M4] realized 2/4  (vmax=14)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3)   ex S=(1, 2, 3, 4) key=1
+       H=5 c3=2 score=(1, 1, 2, 2)   ex S=(1, 2, 3, 4) key=3
+    FORBIDDEN invariants (H,c3,score):
+       H=3 c3=1 score=(1, 1, 1, 3)
+       H=3 c3=1 score=(0, 2, 2, 2)
+
+  [M6] realized 4/4  (vmax=14)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3)   ex S=(1, 2, 4, 5) key=1/3
+       H=3 c3=1 score=(0, 2, 2, 2)   ex S=(1, 2, 3, 5) key=1/4
+       H=3 c3=1 score=(1, 1, 1, 3)   ex S=(2, 3, 5, 7) key=1/4
+       H=5 c3=2 score=(1, 1, 2, 2)   ex S=(1, 2, 3, 4) key=2/5
+########################################################################
+VERTEX COUNT m=5   (full iso set: 12)
+########################################################################
+  enumerated 12 iso classes
+
+  [M3] realized 4/12  (vmax=12)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3, 4)   ex S=(1, 2, 3, 4, 6) key=2/5
+       H=9 c3=3 score=(1, 1, 2, 3, 3)   ex S=(1, 2, 3, 4, 8) key=1/5
+       H=11 c3=4 score=(1, 2, 2, 2, 3)   ex S=(1, 2, 3, 4, 7) key=1/5
+       H=15 c3=5 score=(2, 2, 2, 2, 2)   ex S=(1, 2, 3, 4, 5) key=1/6
+    FORBIDDEN invariants (H,c3,score):
+       H=3 c3=1 score=(1, 1, 1, 3, 4)
+       H=3 c3=1 score=(0, 2, 2, 2, 4)
+       H=3 c3=1 score=(0, 1, 3, 3, 3)
+       H=5 c3=2 score=(1, 1, 2, 2, 4)
+       H=5 c3=2 score=(0, 2, 2, 3, 3)
+       H=9 c3=3 score=(1, 1, 2, 3, 3)
+       H=13 c3=4 score=(1, 2, 2, 2, 3)
+       H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+  [M4] realized 4/12  (vmax=12)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3, 4)   ex S=(1, 2, 3, 4, 5) key=1
+       H=9 c3=3 score=(1, 1, 2, 3, 3)   ex S=(1, 2, 3, 4, 7) key=3
+       H=11 c3=4 score=(1, 2, 2, 2, 3)   ex S=(1, 2, 3, 4, 5) key=5
+       H=15 c3=5 score=(2, 2, 2, 2, 2)   ex S=(1, 2, 3, 4, 5) key=3
+    FORBIDDEN invariants (H,c3,score):
+       H=3 c3=1 score=(1, 1, 1, 3, 4)
+       H=3 c3=1 score=(0, 2, 2, 2, 4)
+       H=3 c3=1 score=(0, 1, 3, 3, 3)
+       H=5 c3=2 score=(1, 1, 2, 2, 4)
+       H=5 c3=2 score=(0, 2, 2, 3, 3)
+       H=9 c3=3 score=(1, 1, 2, 3, 3)
+       H=13 c3=4 score=(1, 2, 2, 2, 3)
+       H=15 c3=4 score=(1, 2, 2, 2, 3)
+
+  [M6] realized 10/12  (vmax=12)
+    REALIZED invariants (H,c3,score):
+       H=1 c3=0 score=(0, 1, 2, 3, 4)   ex S=(1, 2, 4, 5, 7) key=1/3
+       H=3 c3=1 score=(0, 1, 3, 3, 3)   ex S=(1, 2, 3, 5, 9) key=1/4
+       H=3 c3=1 score=(0, 2, 2, 2, 4)   ex S=(2, 3, 5, 7, 9) key=1/4
+       H=3 c3=1 score=(1, 1, 1, 3, 4)   ex S=(2, 3, 7, 9, 11) key=1/4
+       H=5 c3=2 score=(0, 2, 2, 3, 3)   ex S=(1, 2, 3, 5, 6) key=1/4
+       H=5 c3=2 score=(1, 1, 2, 2, 4)   ex S=(1, 2, 4, 6, 10) key=3/8
+       H=9 c3=3 score=(1, 1, 2, 3, 3)   ex S=(1, 2, 3, 4, 6) key=2/5
+       H=9 c3=3 score=(1, 1, 2, 3, 3)   ex S=(1, 2, 3, 5, 7) key=1/4
+       H=11 c3=4 score=(1, 2, 2, 2, 3)   ex S=(1, 2, 3, 4, 9) key=1/5
+       H=15 c3=5 score=(2, 2, 2, 2, 2)   ex S=(1, 2, 3, 4, 5) key=1/6
+    FORBIDDEN invariants (H,c3,score):
+       H=13 c3=4 score=(1, 2, 2, 2, 3)
+       H=15 c3=4 score=(1, 2, 2, 2, 3)

@@ -1,0 +1,147 @@
+FREE SET sizes (should be A000568 = 2,4,12):
+  n=3: 2 classes
+  n=4: 4 classes
+  n=5: 12 classes
+
+======================================================================
+NON-TRIVIALITY GATE + ISO-CLASS ENUMERATION (at optimal lonely tau)
+======================================================================
+
+##### M1_gap_margin_runner #####
+  base n=3 (vmax=12): vertices=3, speedsets=196, valid-tournaments=196, non-valid(ties)=0
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+  base n=4 (vmax=12): vertices=4, speedsets=479, valid-tournaments=479, non-valid(ties)=0
+    realized 1/4 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3), 0, 1)]
+    FORBIDDEN 3 classes; signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+  base n=5 (vmax=11): vertices=5, speedsets=461, valid-tournaments=461, non-valid(ties)=0
+    realized 1/12 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3, 4), 0, 1)]
+    FORBIDDEN 11 classes; signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+##### M2_diff_speed_sign #####
+  base n=3 (vmax=14): vertices=3, speedsets=325, valid-tournaments=324, non-valid(ties)=1
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+  base n=4 (vmax=12): vertices=4, speedsets=479, valid-tournaments=433, non-valid(ties)=46
+    realized 2/4 free classes; NON-TRIVIAL=True
+    realized signatures (score,c3,H): [((0, 1, 2, 3), 0, 1), ((1, 1, 2, 2), 2, 5)]
+    FORBIDDEN 2 classes; signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3)]
+  base n=5 (vmax=11): vertices=5, speedsets=461, valid-tournaments=335, non-valid(ties)=126
+    realized 4/12 free classes; NON-TRIVIAL=True
+    realized signatures (score,c3,H): [((0, 1, 2, 3, 4), 0, 1), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((2, 2, 2, 2, 2), 5, 15)]
+    FORBIDDEN 8 classes; signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15)]
+
+##### M3_sum_speed_sign #####
+  base n=3 (vmax=14): vertices=3, speedsets=325, valid-tournaments=35, non-valid(ties)=290
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+  base n=4 (vmax=12): vertices=4, speedsets=479, valid-tournaments=15, non-valid(ties)=464
+    realized 1/4 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3), 0, 1)]
+    FORBIDDEN 3 classes; signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+  base n=5 (vmax=11): vertices=5, speedsets=461, valid-tournaments=6, non-valid(ties)=455
+    realized 1/12 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3, 4), 0, 1)]
+    FORBIDDEN 11 classes; signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+##### M4_condorcet_diffdist #####
+  base n=3 (vmax=14): vertices=3, speedsets=325, valid-tournaments=325, non-valid(ties)=0
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+  base n=4 (vmax=12): vertices=4, speedsets=479, valid-tournaments=479, non-valid(ties)=0
+    realized 3/4 free classes; NON-TRIVIAL=True
+    realized signatures (score,c3,H): [((0, 1, 2, 3), 0, 1), ((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 2, 2), 2, 5)]
+  base n=5 (vmax=11): vertices=5, speedsets=461, valid-tournaments=461, non-valid(ties)=0
+    realized 4/12 free classes; NON-TRIVIAL=True
+    realized signatures (score,c3,H): [((0, 1, 2, 3, 4), 0, 1), ((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((1, 1, 1, 3, 4), 1, 3)]
+    FORBIDDEN 8 classes; signatures: [((0, 2, 2, 3, 3), 2, 5), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+##### M5_pair_sumload #####
+  base n=3 (vmax=16): vertices=3, speedsets=493, valid-tournaments=493, non-valid(ties)=0
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+
+##### M6_halflap_count #####
+  base n=3 (vmax=14): vertices=3, speedsets=325, valid-tournaments=325, non-valid(ties)=0
+    realized 1/2 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2), 0, 1)]
+    FORBIDDEN 1 classes; signatures: [((1, 1, 1), 1, 3)]
+  base n=4 (vmax=12): vertices=4, speedsets=479, valid-tournaments=479, non-valid(ties)=0
+    realized 1/4 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3), 0, 1)]
+    FORBIDDEN 3 classes; signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+  base n=5 (vmax=11): vertices=5, speedsets=461, valid-tournaments=461, non-valid(ties)=0
+    realized 1/12 free classes; NON-TRIVIAL=False
+    realized signatures (score,c3,H): [((0, 1, 2, 3, 4), 0, 1)]
+    FORBIDDEN 11 classes; signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+======================================================================
+LONELINESS-vs-ALL-CROSSINGS COMPARISON (does optimal-tau forbid more?)
+======================================================================
+
+  M1_gap_margin_runner base n=4 vmax=10 (verts=4):
+    optimal-tau realized: 1/4
+    all-crossings realized: 1/4
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 3
+      -> signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+
+  M1_gap_margin_runner base n=5 vmax=9 (verts=5):
+    optimal-tau realized: 1/12
+    all-crossings realized: 1/12
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 11
+      -> signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+  M4_condorcet_diffdist base n=4 vmax=10 (verts=4):
+    optimal-tau realized: 3/4
+    all-crossings realized: 4/4
+    classes reached by SOME crossing but NOT at optimal lonely tau: 1
+      -> their signatures (score,c3,H): [((1, 1, 2, 2), 2, 5)]
+    classes NEVER reached even over all crossings: 0
+
+  M4_condorcet_diffdist base n=5 vmax=9 (verts=5):
+    optimal-tau realized: 4/12
+    all-crossings realized: 11/12
+    classes reached by SOME crossing but NOT at optimal lonely tau: 7
+      -> their signatures (score,c3,H): [((0, 2, 2, 3, 3), 2, 5), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15)]
+    classes NEVER reached even over all crossings: 1
+      -> signatures: [((2, 2, 2, 2, 2), 5, 15)]
+
+  M2_diff_speed_sign base n=4 vmax=10 (verts=4):
+    optimal-tau realized: 2/4
+    all-crossings realized: 2/4
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 2
+      -> signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3)]
+
+  M2_diff_speed_sign base n=5 vmax=9 (verts=5):
+    optimal-tau realized: 4/12
+    all-crossings realized: 4/12
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 8
+      -> signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15)]
+
+  M3_sum_speed_sign base n=4 vmax=10 (verts=4):
+    optimal-tau realized: 1/4
+    all-crossings realized: 1/4
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 3
+      -> signatures: [((0, 2, 2, 2), 1, 3), ((1, 1, 1, 3), 1, 3), ((1, 1, 2, 2), 2, 5)]
+
+  M3_sum_speed_sign base n=5 vmax=9 (verts=5):
+    optimal-tau realized: 1/12
+    all-crossings realized: 1/12
+    classes reached by SOME crossing but NOT at optimal lonely tau: 0
+    classes NEVER reached even over all crossings: 11
+      -> signatures: [((0, 1, 3, 3, 3), 1, 3), ((0, 2, 2, 2, 4), 1, 3), ((0, 2, 2, 3, 3), 2, 5), ((1, 1, 1, 3, 4), 1, 3), ((1, 1, 2, 2, 4), 2, 5), ((1, 1, 2, 3, 3), 3, 9), ((1, 2, 2, 2, 3), 4, 11), ((1, 2, 2, 2, 3), 4, 13), ((1, 2, 2, 2, 3), 4, 15), ((2, 2, 2, 2, 2), 5, 15)]
+
+DONE.

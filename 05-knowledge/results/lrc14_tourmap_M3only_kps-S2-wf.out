@@ -1,0 +1,9 @@
+M3 (lonely-tau halfplane majority) forbidden-class check
+  n=5 speeds 1..16: 4311 sets; realized=8/12; forbidden=4; regular-forbidden=True
+     forbidden: [(11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+  n=5 speeds 1..20: 15246 sets; realized=10/12; forbidden=2; regular-forbidden=True
+     forbidden: [(15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+  n=5 speeds 1..24: 41656 sets; realized=11/12; forbidden=1; regular-forbidden=True
+     forbidden: [(15, 5, (2, 2, 2, 2, 2))]
+  n=4 speeds 1..25: realized=4/4; forbidden=[]
+DONE

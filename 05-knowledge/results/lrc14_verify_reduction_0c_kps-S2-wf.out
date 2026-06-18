@@ -1,0 +1,83 @@
+==============================================================================
+PART 5: decoupling bound  L >= (6/7)meas(G_C) - r/(7w)  exact check
+==============================================================================
+drop-6 core meas(G_C)=7/858=0.00815851, r=4
+   w=  14: L=0.00815851  bound=-0.03382332  L>=bound? True
+   w=  28: L=0.00815851  bound=-0.01341516  L>=bound? True
+   w=  42: L=0.00815851  bound=-0.00661244  L>=bound? True
+   w=  56: L=0.00560749  bound=-0.00321107  L>=bound? True
+   w=  70: L=0.00815851  bound=-0.00117026  L>=bound? True
+   w=  84: L=0.00815851  bound=0.00019029  L>=bound? True
+   w=  98: L=0.00524306  bound=0.00116210  L>=bound? True
+   w= 112: L=0.00688300  bound=0.00189097  L>=bound? True
+   decoupling-bound violations over m=1..59: 0
+   MIN L over m=1..59: 1543/294294=0.00524306 at w=98  (>0? True)
+   bound>0 needs w>=r/(6 meas)=572/7=81.7; below that, exact-checked min L=0.00524306>0
+
+==============================================================================
+PART 7a: LOAD-BEARING per-arc inequality  cover_w(A) <= meas(A)/7 + 1/(7w)
+==============================================================================
+   tested 4798 random arcs; VIOLATIONS: 0
+   tightest slack=0.00012075 at w=313 A=[2/17,50/193] cover=0.02053857 rhs=0.02065931
+   full-tooth arcs (cover=meas(A), the extreme case):
+     w=14: meas(A)=0.010204 cover=0.010204 rhs=0.011662 holds? True
+     w=84: meas(A)=0.001701 cover=0.001701 rhs=0.001944 holds? True
+     w=200: meas(A)=0.000714 cover=0.000714 rhs=0.000816 holds? True
+
+==============================================================================
+PART 6/7c: ADVERSARIAL meas(G_C) minimization over many families
+==============================================================================
+6a. {1..k}+multiples of 14:
+   tested 833; MIN=8291/194040=0.04272830 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 84]; <7/858? False
+6b. {1..k}+multiples of 7,12,13,84,91,168:
+   tested 36425; MIN=4733/76440=0.06191784 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13]; <7/858? False
+7c. structured-pool random 12-cores (near-covering / spread):
+   tested 40000; MIN=811/35035=0.02314828 at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26]; <7/858? False
+7d. random primitive 12-sets, speeds up to 300:
+   tested 23998; #(<7/858)=0; MIN=1153849/25729704=0.04484502 at [1, 3, 4, 5, 7, 10, 11, 12, 13, 17, 24, 27]
+7e. greedy best-improvement descent from drop-6 (candidates 1..150):
+   final=7/858=0.00815851 at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]; <7/858? False
+
+==============================================================================
+VERDICT DATA
+==============================================================================
+   global min meas(G_C) found: 7/858=0.00815851 (drop-6 baseline) at [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+   target 7/858=0.00815851
+   ANY 12-set with meas(G_C) < 7/858 found? False
+   per-arc comb inequality violations: 0
+
+================================================================================
+ADVERSARIAL VERDICT SUMMARY (kind-pasteur-S2-wf)
+================================================================================
+RE-DERIVED FROM SCRATCH AND CONFIRMED:
+1. Danger comb D_w (w==0 mod14): w teeth at k/w, each half-width 1/(14w), full
+   width 1/(7w), density 1/7, meas(D_w)=1/7 EXACTLY. Between-teeth safe gap 6/(7w)->0.
+2. meas(G_drop6)=7/858 EXACTLY (4 mouths: 2x 1/728 + 2x 5/1848). Matches canon.
+3. LOAD-BEARING per-arc inequality cover_w(A) <= |A|/7 + 1/(7w): VERIFIED.
+   Exhaustive exact worst-case (all rational arcs, w=14,28,84): max excess
+   STRICTLY BELOW 1/(7w) (3/343<1/98 etc). Bound is sound, even conservative.
+   Worst arc = single arc inside one tooth (cover=whole tooth=1/(7w)). 0 violations
+   over 4798 random arcs + exhaustive grid.
+4. Decoupling bound L >= (6/7)meas - r/(7w): 0 violations. For drop-6 (r=4, smallest
+   meas) the bound is POSITIVE only for w>=572/7=81.7; below that, exact min L=
+   1543/294294=0.00524 at w=98, still >0. So 'thin comb cannot cover fat G_C'
+   GEOMETRY IS CORRECT, but the bound alone is vacuous for small w (must exact-check).
+5. THM-525 baseline {1..11,13,84}: M=7/89 at 37/89, 84 binding at frac 82/89 (EDGE
+   of section 0, NOT middle). Confirmed.
+6. GAP-A: drop-6 + coordinated w minimizes at w=69, L=19/10626 > 1/1260. Confirmed.
+
+ADVERSARIAL HUNT FOR meas(G_C) < 7/858: ZERO found over:
+   - all 13 single-drops of {1..13}; all C(14,12) 2-drops of {1..14}
+   - 833 mult-14 cores; 36425 mult-mixed cores; 40000 structured-pool cores
+   - ~43000 random primitive 12-sets (speeds up to 300); greedy descent
+   - 15000 near-covering random cores (max r=220 components, all large meas)
+   #(meas(G_C)==0) = 0 in all searches.
+
+WHAT SURVIVES: the geometry ('thin comb cannot erase fat G_C') is ARITHMETICALLY
+CORRECT and the comb-coverage inequality is rigorously true. meas(G_C) is NEVER
+observed below 7/858 and NEVER zero.
+WHAT DOES NOT SURVIVE AS A PROOF: the uniform lower bound meas(G_C) >= 7/858 (or
+any c>0) for ALL 12-subsets is EXACTLY OPEN-Q-108 -- still a CONJECTURE. The
+'thin comb' intuition only works GIVEN meas(G_C) bounded below; the searches
+support but do not prove that bound. The k>=3 coordinated-growing-speeds regime
+is the genuine uncontrolled gap. NO COUNTEREXAMPLE, but NO PROOF.

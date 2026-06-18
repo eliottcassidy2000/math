@@ -1,0 +1,53 @@
+PROBE: argmax-vs-allcand sub-image + new M7 + hit-count bias
+
+================================================================
+M2
+================================================================
+ n=4: free=4 | argmax-image=4 allcand-image=4 unc-image=4
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=556, transitive(H=1)=372 (93/139)
+ n=5: free=12 | argmax-image=11 allcand-image=11 unc-image=11
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=431, transitive(H=1)=231 (231/431)
+
+================================================================
+M3
+================================================================
+ n=4: free=4 | argmax-image=4 allcand-image=4 unc-image=4
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=965, transitive(H=1)=516 (516/965)
+ n=5: free=12 | argmax-image=12 allcand-image=12 unc-image=12
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=786, transitive(H=1)=226 (113/393)
+
+================================================================
+M3b
+================================================================
+ n=4: free=4 | argmax-image=4 allcand-image=4 unc-image=4
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=965, transitive(H=1)=729 (729/965)
+ n=5: free=12 | argmax-image=12 allcand-image=12 unc-image=12
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=786, transitive(H=1)=626 (313/393)
+
+================================================================
+M5
+================================================================
+ n=4: free=4 | argmax-image=2 allcand-image=2 unc-image=2
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=328, transitive(H=1)=63 (63/328)
+ n=5: free=12 | argmax-image=3 allcand-image=3 unc-image=3
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=258, transitive(H=1)=6 (1/43)
+
+================================================================
+M7
+================================================================
+ n=4: free=4 | argmax-image=4 allcand-image=4 unc-image=4
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 0
+      argmax hit-count: total=965, transitive(H=1)=287 (287/965)
+ n=5: free=12 | argmax-image=11 allcand-image=12 unc-image=12
+      forbidden@argmax not by rule (unc-realized but argmax-misses): 1
+        argmax-misses class #3cyc=1 scores=(0, 1, 3, 3, 3) (allcand-realized=True)
+      argmax hit-count: total=786, transitive(H=1)=99 (33/262)
+

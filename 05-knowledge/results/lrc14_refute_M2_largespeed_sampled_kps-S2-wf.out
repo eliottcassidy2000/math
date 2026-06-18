@@ -1,0 +1,4 @@
+n=5 vmax=5000: primitive sets=1440, valid M2 configs sampled=186841, NON-SC=0
+n=5 vmax=200000: primitive sets=1451, valid M2 configs sampled=190660, NON-SC=0
+n=4 vmax=100000: primitive sets=1386, valid M2 configs sampled=208827, NON-SC=0
+n=3 vmax=1000000: primitive sets=1266, valid M2 configs sampled=216341, NON-SC=0

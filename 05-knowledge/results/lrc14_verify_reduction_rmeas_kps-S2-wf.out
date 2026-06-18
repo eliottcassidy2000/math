@@ -1,0 +1,6 @@
+tested 15000
+max #components r = 220 at [2, 5, 21, 36, 42, 72, 84, 88, 110, 132, 154, 168]
+min meas(G_C) = 401/5460 = 0.07344322344322345
+  < 7/858? False
+#(meas(G_C)==0) = 0
+limiting floor (6/7)*minmeas = 0.06295133437990581

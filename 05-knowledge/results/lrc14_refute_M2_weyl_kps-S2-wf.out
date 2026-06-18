@@ -1,0 +1,42 @@
+======================================================================
+M2 WEYL-PHASE BROAD REFUTATION DRIVER
+======================================================================
+Forbidden targets: [(13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3))]
+[direct {1..16} optimum] primitive-configs=4311 distinct-fps=9 forbidden=0
+[direct {1..18} optimum] primitive-configs=8436 distinct-fps=9 forbidden=0
+[direct {1..20} optimum] primitive-configs=15246 distinct-fps=9 forbidden=0
+[direct {1..16} all-times] primitive-configs=4311 distinct-fps=10 forbidden=1322
+    *** REFUTED: S=(1, 2, 3, 4, 5) tau=1/4 gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 4, 9) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 4, 13) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 5, 8) tau=1/4 gap=2/11 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 5, 9) tau=3/8 gap=1/4 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 5, 12) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+[direct {1..20} all-times] primitive-configs=15246 distinct-fps=10 forbidden=5330
+    *** REFUTED: S=(1, 2, 3, 4, 5) tau=1/4 gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 4, 9) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 4, 13) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 4, 17) tau=1/4 gap=1/5 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 5, 8) tau=1/4 gap=2/11 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED: S=(1, 2, 3, 5, 9) tau=3/8 gap=1/4 fp=(13, 4, (1, 2, 2, 2, 3))
+[induced covering/tight n=12/13] big-configs=10 distinct-n5-fps=7 forbidden=198
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 2, 7, 8, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 3, 7, 8, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 3, 7, 9, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 4, 7, 8, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 4, 7, 9, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) tau=1/12 sub=[1, 4, 7, 10, 13] gap=1/12 fp=(13, 4, (1, 2, 2, 2, 3))
+[induced 6-subsets {1..12}] big-configs=923 distinct-n5-fps=10 forbidden=15
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7) tau=1/6 sub=[1, 2, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7) tau=1/6 sub=[1, 3, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 5, 8, 11) tau=1/6 sub=[1, 3, 5, 8, 11] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 3, 4, 5, 7, 9) tau=1/6 sub=[1, 3, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 3, 4, 5, 7, 9) tau=1/6 sub=[1, 4, 5, 7, 9] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 3, 4, 5, 7, 11) tau=1/6 sub=[1, 3, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+[induced 7-subsets {1..11}] big-configs=330 distinct-n5-fps=10 forbidden=64
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 8) tau=1/6 sub=[1, 2, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 8) tau=1/6 sub=[1, 3, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 8) tau=1/6 sub=[2, 4, 5, 7, 8] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 9) tau=1/6 sub=[1, 2, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 9) tau=1/6 sub=[1, 3, 4, 5, 7] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))
+    *** REFUTED induced: bigS=(1, 2, 3, 4, 5, 7, 9) tau=1/6 sub=[1, 4, 5, 7, 9] gap=1/6 fp=(13, 4, (1, 2, 2, 2, 3))

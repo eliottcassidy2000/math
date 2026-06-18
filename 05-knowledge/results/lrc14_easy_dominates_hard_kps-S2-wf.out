@@ -1,0 +1,182 @@
+
+==============================================================================
+(0) Baselines: meas(G_C) for the single-drop cores {1..13}\{e}
+==============================================================================
+  drop e= 1: meas(G_C)=          1/14 = 0.07142857  #arcs= 2  widest=0.035714  floor(6/7)m=0.06122449
+  drop e= 2: meas(G_C)=        11/364 = 0.03021978  #arcs= 2  widest=0.015110  floor(6/7)m=0.02590267
+  drop e= 3: meas(G_C)=        11/273 = 0.04029304  #arcs= 4  widest=0.011905  floor(6/7)m=0.03453689
+  drop e= 4: meas(G_C)=       97/4004 = 0.02422577  #arcs= 4  widest=0.007305  floor(6/7)m=0.02076495
+  drop e= 5: meas(G_C)=      103/2860 = 0.03601399  #arcs= 8  widest=0.007143  floor(6/7)m=0.03086913
+  drop e= 6: meas(G_C)=         7/858 = 0.00815851  #arcs= 4  widest=0.002706  floor(6/7)m=0.00699301
+  drop e= 7: meas(G_C)=    4319/51480 = 0.08389666  #arcs= 6  widest=0.014423  floor(6/7)m=0.07191142
+  drop e= 8: meas(G_C)=     950/21021 = 0.04519290  #arcs= 4  widest=0.013605  floor(6/7)m=0.03873677
+  drop e= 9: meas(G_C)=    3273/56056 = 0.05838804  #arcs= 6  widest=0.010989  floor(6/7)m=0.05004689
+  drop e=10: meas(G_C)=    1520/63063 = 0.02410288  #arcs= 4  widest=0.006279  floor(6/7)m=0.02065961
+  drop e=11: meas(G_C)=    4733/76440 = 0.06191784  #arcs=10  widest=0.008929  floor(6/7)m=0.05307244
+  drop e=12: meas(G_C)=     426/35035 = 0.01215927  #arcs= 4  widest=0.004082  floor(6/7)m=0.01042223
+  drop e=13: meas(G_C)=   6617/194040 = 0.03410122  #arcs=12  widest=0.005952  floor(6/7)m=0.02922961
+  --> minimum single-drop meas at e=6: 7/858 = 0.00815851  (THM-523: extremal core, 7/858 expected)
+  CHECK 7/858 = 0.00815851; drop-6 = 7/858 -> MATCH
+
+==============================================================================
+(1) HARD<->EASY correspondence: SPEED-COUNT bookkeeping + the genuine 13-speed family
+==============================================================================
+  *** BOOKKEEPING CORRECTION (load-bearing): LRC(14) is about |S|=13 speeds.
+      The naive 'hard family' {1..13} u {14m} has |S|=14 -> that is the N=15 case,
+      NOT ours.  Indeed M({1..14})=1/15<1/14, but that is the tight 14-speed AP for
+      LRC(15), irrelevant to LRC(14).  A GENUINE 13-speed covering set must DROP one
+      of {1..13} to make room for the parked w.  So the hard 13-cores are the
+      SINGLE-DROP cores {1..13}\{e} (plus possibly further drops), NOT the full AP.
+      DEMO: {1..14} has |S|=14, M=1/15=0.066667 < 1/14 (N=15 tight AP, NOT a LRC(14) counterexample).
+
+  Genuine 13-speed hard family: C_e = {1..13}\{e}, parked w=14m.  M(C_e u {w}):
+    drop e= 6, w= 14: |S|=13 cov=True prim=True M=      2/23=0.086957  (>1/14? True)
+    drop e= 6, w= 28: |S|=13 cov=True prim=True M=      2/23=0.086957  (>1/14? True)
+    drop e= 6, w= 84: |S|=13 cov=True prim=True M=      2/23=0.086957  (>1/14? True)
+    drop e=12, w= 14: |S|=13 cov=False prim=True M=      1/12=0.083333  (>1/14? True)
+    drop e=12, w= 28: |S|=13 cov=False prim=True M=      1/12=0.083333  (>1/14? True)
+    drop e=12, w= 84: |S|=13 cov=True prim=True M=      7/89=0.078652  (>1/14? True)
+    drop e=11, w= 14: |S|=13 cov=False prim=True M=      1/11=0.090909  (>1/14? True)
+    drop e=11, w= 28: |S|=13 cov=False prim=True M=      1/11=0.090909  (>1/14? True)
+    drop e=11, w= 84: |S|=13 cov=False prim=True M=      1/11=0.090909  (>1/14? True)
+    drop e= 1, w= 14: |S|=13 cov=True prim=True M=       1/8=0.125000  (>1/14? True)
+    drop e= 1, w= 28: |S|=13 cov=True prim=True M=      2/15=0.133333  (>1/14? True)
+    drop e= 1, w= 84: |S|=13 cov=True prim=True M=      2/15=0.133333  (>1/14? True)
+  PEEL RULE (well-defined): given a covering 13-set S, peel the SMALLEST w with 14|w;
+  C=S\{w} is a 12-speed core.  If C imprimitive, dilate by 1/gcd (scale-invariance,
+  THM-522).  meas(G_C) >= meas(G_S) always (deleting a runner enlarges the safe set).
+
+==============================================================================
+(1b) The codex 84m hard family: S = {1..11,13} u {84m}; M = 7m/(84m+5)
+==============================================================================
+  m= 1 w=  84: covering=True prim=True  M(S)=      7/89=0.07865169 at tau=37/89  predicted 7m/(84m+5)=7/89=0.07865169  MATCH  (1/14=0.071429)
+  m= 2 w= 168: covering=True prim=True  M(S)=    14/173=0.08092486 at tau=72/173  predicted 7m/(84m+5)=14/173=0.08092486  MATCH  (1/14=0.071429)
+  m= 3 w= 252: covering=True prim=True  M(S)=    21/257=0.08171206 at tau=107/257  predicted 7m/(84m+5)=21/257=0.08171206  MATCH  (1/14=0.071429)
+  m= 5 w= 420: covering=True prim=True  M(S)=      7/85=0.08235294 at tau=177/425  predicted 7m/(84m+5)=7/85=0.08235294  MATCH  (1/14=0.071429)
+  m=10 w= 840: covering=True prim=True  M(S)=    14/169=0.08284024 at tau=352/845  predicted 7m/(84m+5)=14/169=0.08284024  MATCH  (1/14=0.071429)
+  So every 84m set has M>1/14 (min 7/89 at m=1).  These are LRC(14)-SAFE, not
+  counterexamples -- exactly what easy-dominates-hard must reprove structurally.
+
+==============================================================================
+(2) KEY LOWER BOUND: can ANY w (14|w) cover the extremal cores' G_C?  EXHAUSTIVE
+==============================================================================
+
+  CORE DROP6 {1..5,7..13} (extremal, meas=7/858): meas(G_C)@gap-1/14=7/858=0.00815851  r=4 arcs  widest=0.002706
+    decoupling floor (6/7)meas - r/(7w) > 0  <=>  w > r/(6 meas) = 81.71  -> for w >= 83 (mult of 14) floor>0 => L>0 guaranteed.
+    NO w (14|w, w<=2000) makes C u {w} tight.  min positive L over these w: 1543/294294=0.00524306 at w=98.
+    => for EVERY w with 14|w, M(C u {w}) >= 1/14 (transversality holds for this core).
+
+  CORE GW-easy {1..11,13} (drop e=12): meas(G_C)@gap-1/14=426/35035=0.01215927  r=4 arcs  widest=0.004082
+    decoupling floor (6/7)meas - r/(7w) > 0  <=>  w > r/(6 meas) = 54.83  -> for w >= 56 (mult of 14) floor>0 => L>0 guaranteed.
+    NO w (14|w, w<=2000) makes C u {w} tight.  min positive L over these w: 563/105105=0.00535655 at w=84.
+    => for EVERY w with 14|w, M(C u {w}) >= 1/14 (transversality holds for this core).
+
+  CORE DROP4 {1..3,5..13} (small meas): meas(G_C)@gap-1/14=97/4004=0.02422577  r=4 arcs  widest=0.007305
+    decoupling floor (6/7)meas - r/(7w) > 0  <=>  w > r/(6 meas) = 27.52  -> for w >= 29 (mult of 14) floor>0 => L>0 guaranteed.
+    NO w (14|w, w<=2000) makes C u {w} tight.  min positive L over these w: 893/84084=0.01062033 at w=42.
+    => for EVERY w with 14|w, M(C u {w}) >= 1/14 (transversality holds for this core).
+
+  CORE DROP10 {1..9,11..13} (small meas): meas(G_C)@gap-1/14=1520/63063=0.02410288  r=4 arcs  widest=0.006279
+    decoupling floor (6/7)meas - r/(7w) > 0  <=>  w > r/(6 meas) = 27.66  -> for w >= 29 (mult of 14) floor>0 => L>0 guaranteed.
+    NO w (14|w, w<=2000) makes C u {w} tight.  min positive L over these w: 718/45045=0.01593962 at w=70.
+    => for EVERY w with 14|w, M(C u {w}) >= 1/14 (transversality holds for this core).
+
+==============================================================================
+(2b) Transversality quantified: tooth half-width 1/(14w) vs G_C arc widths
+==============================================================================
+  Extremal core DROP6 meas=7/858=0.00815851; arcs:
+    arc [29/182,9/56] width=1/728=0.00137363
+    arc [29/168,27/154] width=5/1848=0.00270563
+    arc [127/154,139/168] width=5/1848=0.00270563
+    arc [47/56,153/182] width=1/728=0.00137363
+  For each small w (14|w), exact survivor L and which arcs survive:
+    w= 14: L=         7/858=0.00815851  #survivor-arcs=4
+    w= 28: L=         7/858=0.00815851  #survivor-arcs=4
+    w= 42: L=         7/858=0.00815851  #survivor-arcs=4
+    w= 56: L=    943/168168=0.00560749  #survivor-arcs=4
+    w= 70: L=         7/858=0.00815851  #survivor-arcs=4
+    w= 84: L=         7/858=0.00815851  #survivor-arcs=4
+    w= 98: L=   1543/294294=0.00524306  #survivor-arcs=6
+    w=112: L=   2315/336336=0.00688300  #survivor-arcs=4
+    w=126: L=    743/126126=0.00589093  #survivor-arcs=6
+    w=140: L=         7/858=0.00815851  #survivor-arcs=4
+    w=154: L=     152/21021=0.00723086  #survivor-arcs=4
+    w=168: L=     181/28028=0.00645783  #survivor-arcs=4
+
+==============================================================================
+(3) COORDINATED REGIME: k>=3 arithmetically-coordinated LARGE speeds
+==============================================================================
+  (a) k coordinated large multiples-of-14 added/substituted, exact L:
+    base {1..10} + {14,28,42}             : |S|=13 cov=False prim=True L=      887/8820=0.10056689 
+    base {1..10} + {98,112,126}           : |S|=13 cov=False prim=True L=    7277/82320=0.08839893 
+    base {1..10} + 3 coord {14a}          : |S|=13 cov=False prim=True L=1808867/21441420=0.08436321 
+    drop6 core + coordinated 84,168,252   : |S|=12 cov=False prim=True L=       123/980=0.12551020 (|S|=12, not 13)
+    {1,2,3,4,5} + 8 large coord 14k       : |S|=13 cov=False prim=True L=    3737/27440=0.13618805 
+
+  (b) PEEL-ONE-AT-A-TIME vs ALL-AT-ONCE on coordinated large speeds.
+      Take S0 = small easy core; append coordinated large speeds w1<w2<w3; track
+      L after each append (decoupling predicts each multiplies by ~6/7).
+      core0=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  meas(G_core0)=0.13798186
+      append (14, 28, 42): L-chain=[0.13798185941043084, 0.11757369614512472, 0.10736961451247165, 0.10056689342403628]
+                    step-ratios (vs 6/7=0.8571)=[0.8520953163516845, 0.9132111861137898, 0.9366420274551215]
+                    final |S|=13 L=0.10056689 >= 1/1260? True
+      append (98, 112, 126): L-chain=[0.13798185941043084, 0.11903142209264658, 0.10390751538710723, 0.08839893100097182]
+                    step-ratios (vs 6/7=0.8571)=[0.8626599366122785, 0.8729418968567152, 0.8507462686567164]
+                    final |S|=13 L=0.08839893 >= 1/1260? True
+      append (154, 168, 182): L-chain=[0.13798185941043084, 0.119428983714698, 0.10126262626262626, 0.08215078572221429]
+                    step-ratios (vs 6/7=0.8571)=[0.8655411966833495, 0.8478898765858289, 0.8112646171071536]
+                    final |S|=13 L=0.08215079 >= 1/1260? True
+      append (1400, 2800, 4200): L-chain=[0.13798185941043084, 0.1184920634920635, 0.10849206349206349, 0.09519274376417233]
+                    step-ratios (vs 6/7=0.8571)=[0.8587510271158587, 0.9156061620897522, 0.8774166579579893]
+                    final |S|=13 L=0.09519274 >= 1/1260? True
+
+  (c) THE HONEST DANGER: coordinated speeds that SHARE all teeth (same residues).
+      If w1,w2,w3 are all multiples of 14 sharing structure, their combs may
+      OVERLAP rather than tile -> less coverage than 'independent' 6/7 each.
+      But the WORST is when they are 7-coprime & spread (maximal independent kill).
+      min L over coordinated AP-triples (mult of 14) appended to {1..10}:
+        L=9161/114660=0.07989709 at triple [70, 126, 182], S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 70, 126, 182]
+        >= 1/1260=0.00079365? True   >= 1/14-counterexample? False
+
+==============================================================================
+(3d) DECISIVE: hunt a 13-speed COVERING set with M<=1/14 (a real counterexample)
+==============================================================================
+  KEY FILTER (exact, proved): L(S)>0  =>  M(S)>1/14.  Contrapositive: a counterexample
+  (M<1/14) or a TIGHT set (M=1/14) must have L(S)=0.  So we FAST-screen with exact L,
+  and only run the (expensive) exact-M tool on the L=0 survivors.  This makes the
+  coordinated-large-speed sweep tractable while remaining a true M-gap certificate.
+  (i) single-drop {1..13}\{e} + 14m: checked 226 covering+prim; L=0 survivors 0; min positive L=0.005243
+  (ii) two-drop + 2 coord 14m: checked 4197 covering+prim; L=0 survivors 0; min positive L=0.012948
+  (iii) three-drop + 3 coord 14m (uncontrolled regime): checked 19233 covering+prim; L=0 survivors 0; min positive L=0.024514
+
+  VERDICT (3d): min M over all L=0 survivors = n/a (>=1/14? n/a).
+  TIGHT sets (M=1/14) found: 0.  REAL counterexamples (M<1/14): 0  --> NONE (consistent with LRC(14))
+
+==============================================================================
+(4) WHAT THE EASY STRUCTURE BUYS: lonely intervals, SDR spread, (Z/14)* symmetry
+==============================================================================
+  NAIVE CLAIM (REFUTED below): LRC(12) gap>=1/13 at tau0 => an interval of width
+  >= 2*(1/13-1/14)=1/91 where gap stays >1/14.  This is FALSE: the correct Lipschitz
+  half-width is (M(C)-1/14)/v_max, and v_max (largest core speed) can be LARGE, so the
+  guaranteed arc SHRINKS like 1/v_max.  This is exactly why the structural lever does
+  NOT close OPEN-Q-108.  Quantify the TRUE guaranteed interval:
+    drop e= 6: M(C)=2/23=0.086957 at tau=4/23; v_max=13; binders=[11, 12]
+           slack=M(C)-1/14=0.01553; TRUE Lipschitz half-width (slack/v_binder)=0.001294; host-arc width=0.002706 (>=1/91? False)
+    drop e=12: M(C)=1/12=0.083333 at tau=5/12; v_max=13; binders=[5, 7]
+           slack=M(C)-1/14=0.01190; TRUE Lipschitz half-width (slack/v_binder)=0.001701; host-arc width=0.004082 (>=1/91? False)
+    drop e= 1: M(C)=2/15=0.133333 at tau=1/15; v_max=13; binders=[2, 13]
+           slack=M(C)-1/14=0.06190; TRUE Lipschitz half-width (slack/v_binder)=0.004762; host-arc width=0.035714 (>=1/91? True)
+    drop e= 7: M(C)=1/7=0.142857 at tau=3/7; v_max=13; binders=[2, 5, 9, 12]
+           slack=M(C)-1/14=0.07143; TRUE Lipschitz half-width (slack/v_binder)=0.005952; host-arc width=0.013889 (>=1/91? True)
+
+  CONCLUSION (honest):  the guaranteed safe interval around the LRC(12) maximizer
+  has half-width ~ (M(C)-1/14)/v_binder, NOT a universal constant.  For the extremal
+  cores the binding runners are the LARGE ones (11,12), so the arc is THIN (~0.0027).
+  meas(G_C) is bounded below NOT by a single arc but by the SUM over its (few) arcs,
+  and the extremal value 7/858 already reflects this.  So LRC(12) alone does NOT
+  hand a uniform meas(G_C) bound: the missing estimate is a UNIFORM-IN-v_max lower
+  bound on the TOTAL gap-1/14 measure -- exactly OPEN-Q-108, not closed by Lipschitz.
+
+==============================================================================
+DONE
+==============================================================================

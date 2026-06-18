@@ -1,0 +1,9 @@
+Target class (0,1,3,3,3),#3cyc=1 key found: True
+
+M7 argmax-image at n=5 vs maxspeed; does it ever realize the target?
+
+ maxspeed=12: speedsets=786  argmax-image=11/12  target-realized=False
+ maxspeed=14: speedsets=1981  argmax-image=12/12  target-realized=True  FIRST at S=(1, 2, 10, 11, 14) tau=1/3
+ maxspeed=16: speedsets=4311  argmax-image=12/12  target-realized=True  FIRST at S=(1, 2, 4, 5, 16) tau=1/3
+ maxspeed=18: speedsets=8436  argmax-image=12/12  target-realized=True  FIRST at S=(1, 2, 3, 9, 17) tau=1/4
+ maxspeed=20: speedsets=15246  argmax-image=12/12  target-realized=True  FIRST at S=(1, 2, 3, 9, 17) tau=1/4

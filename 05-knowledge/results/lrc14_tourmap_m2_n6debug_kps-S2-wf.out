@@ -1,0 +1,26 @@
+Find the FIRST valid non-SC M2 tournament at n=6 base (optimal tau):
+  COUNTEREXAMPLE: S=(1, 2, 3, 4, 6, 10), optimal tau=5/12
+    score=(1, 2, 2, 3, 3, 4), c3=6, SC=False
+    pairwise snrm((vi-vj)*tau):
+      (1,2): snrm(-1*5/12)=-5/12
+      (1,3): snrm(-2*5/12)=1/6
+      (1,4): snrm(-3*5/12)=-1/4
+      (1,6): snrm(-5*5/12)=-1/12
+      (1,10): snrm(-9*5/12)=1/4
+      (2,3): snrm(-1*5/12)=-5/12
+      (2,4): snrm(-2*5/12)=1/6
+      (2,6): snrm(-4*5/12)=1/3
+      (2,10): snrm(-8*5/12)=-1/3
+      (3,4): snrm(-1*5/12)=-5/12
+      (3,6): snrm(-3*5/12)=-1/4
+      (3,10): snrm(-7*5/12)=1/12
+      (4,6): snrm(-2*5/12)=1/6
+      (4,10): snrm(-6*5/12)=1/2
+      (6,10): snrm(-4*5/12)=1/3
+
+Now check ALL crossings at n=6 (broader) for ANY valid non-SC M2:
+  n=6 vmax=10: valid M2 tournaments over all crossings=8423, non-SC=2554
+  first non-SC: S=(1, 2, 3, 4, 5, 7), tau=5/14, score=(1, 2, 2, 3, 3, 4), c3=6
+  => M2 is NOT universally SC; the n<=5 SC property is a LOW-N coincidence.
+
+DONE.

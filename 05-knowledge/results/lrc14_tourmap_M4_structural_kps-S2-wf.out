@@ -1,0 +1,44 @@
+========================================================================
+M4 structural characterization: realized = induced subtournaments of R_14?
+========================================================================
+
+ m=3 (free A000568=2):
+   M4 realized (vmax=20):            2
+   induced sub R_14 nonzero residues:   3
+   induced sub R_14 incl residue 0:     3
+   M4 == R_14(nonzero) ? False    M4 subset of R_14(all)? True
+   rotational classes M4 never hits: 1
+   FORBIDDEN by M4: 0 classes
+
+ m=4 (free A000568=4):
+   M4 realized (vmax=16):            4
+   induced sub R_14 nonzero residues:   5
+   induced sub R_14 incl residue 0:     5
+   M4 == R_14(nonzero) ? False    M4 subset of R_14(all)? False
+   M4 has classes NOT in any rotational embedding: 2 (unexpected)
+   rotational classes M4 never hits: 3
+   FORBIDDEN by M4: 0 classes
+
+ m=5 (free A000568=12):
+   M4 realized (vmax=13):            4
+   induced sub R_14 nonzero residues:   9
+   induced sub R_14 incl residue 0:     9
+   M4 == R_14(nonzero) ? False    M4 subset of R_14(all)? True
+   rotational classes M4 never hits: 5
+   FORBIDDEN by M4: 8 classes
+
+ m=6 (free A000568=56):
+   M4 realized (vmax=11):            6
+   induced sub R_14 nonzero residues:   18
+   induced sub R_14 incl residue 0:     18
+   M4 == R_14(nonzero) ? False    M4 subset of R_14(all)? True
+   rotational classes M4 never hits: 12
+   FORBIDDEN by M4: 50 classes
+
+========================================================================
+Rotational embeddability count vs free set (this is the THEORETICAL ceiling)
+========================================================================
+ m=3: 3/2 iso classes embed as induced sub of R_14 (nonzero residues)
+ m=4: 5/4 iso classes embed as induced sub of R_14 (nonzero residues)
+ m=5: 9/12 iso classes embed as induced sub of R_14 (nonzero residues)
+ m=6: 18/56 iso classes embed as induced sub of R_14 (nonzero residues)

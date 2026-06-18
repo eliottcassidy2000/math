@@ -1,0 +1,61 @@
+
+==============================================================================
+(D) DECISIVE HUNT (bounded): any L=0 covering 13-set in coordinated families?
+==============================================================================
+  (D-i) 3-coord 14m (drop3, m<=14): checked=31355 L=0-survivors=0 min-positive-L=0.024514
+  (D-ii) 4-coord 14m (drop4, k=4, m<=9): checked=17341 L=0-survivors=0 min-positive-L=0.032981
+  (D-iii) shared-modulus coord clusters: checked=1975 L=0-survivors=0 min-positive-L=0.030871
+
+  VERDICT (D): L=0 survivors total = 0 families with survivors;
+     min M over all L=0 survivors = NONE (no L=0 survivors at all)
+  TIGHT(=1/14): 0; COUNTEREXAMPLES(<1/14): 0
+
+==============================================================================
+(F) EXTREME PUSH: drive M(S) -> 1/14+ with coordinated large speeds (exact M)
+==============================================================================
+  scanned 12194 coordinated covering primitive 13-sets with exact M.
+  GLOBAL MIN M = 1/11=0.09090909 at (1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 42) (>1/14? True)
+  1/14 = 0.07142857.  gap above 1/14 = 0.01948052
+  10 smallest M among coordinated covering sets:
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 28]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 56]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 70]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 98]
+
+==============================================================================
+(G) k=4,5 COORDINATED STRESS: does growing k drive M toward 1/14?
+==============================================================================
+  k=1: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14] |S|=13 cov=False prim=True M=1/13=0.07692308 L=0.02389713
+  k=2: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28] |S|=13 cov=False prim=True M=1/12=0.08333333 L=0.04102762
+  k=3: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 28, 42] |S|=13 cov=False prim=True M=1/11=0.09090909 L=0.10056689
+  k=4: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 28, 42, 56] |S|=13 cov=False prim=True M=1/10=0.10000000 L=0.12154195
+  k=5: S=[1, 2, 3, 4, 5, 6, 7, 8, 14, 28, 42, 56, 70] |S|=13 cov=False prim=True M=1/9=0.11111111 L=0.13860544
+
+  Maximally-coordinated covering 13-sets (as many mult-of-14 as possible):
+  S=[1, 2, 3, 4, 5, 6, 14, 28, 42, 56, 70, 84, 98] cov=False prim=True M=1/8=0.12500000 L=0.15534500 (>1/14? True)
+  S=[1, 2, 3, 4, 5, 14, 28, 42, 56, 70, 84, 98, 112] cov=False prim=True M=1/9=0.11111111 L=0.13618805 (>1/14? True)
+  S=[1, 2, 3, 4, 14, 28, 42, 56, 70, 84, 98, 112, 126] cov=False prim=True M=1/10=0.10000000 L=0.11181568 (>1/14? True)
+
+==============================================================================
+(E) DECOUPLING-FLOOR AUDIT: floor>0 vs L>0 over coordinated 12-cores + parked w
+==============================================================================
+  {1..9}u{14,28,42}: meas=0.13684807 r=22 floor-threshold w*=26.8
+     smallest w with proved floor>0: 28; L there=0.13684807; any tight w in m<=59: False
+  {1..6}u6coord: meas=0.20782313 r=74 floor-threshold w*=59.3
+     smallest w with proved floor>0: 70; L there=0.20782313; any tight w in m<=59: False
+  {1..4}u8coord: meas=0.16652089 r=168 floor-threshold w*=168.1
+     smallest w with proved floor>0: 182; L there=0.12018109; any tight w in m<=59: False
+
+  17/177 (w,core) pairs: proved floor <=0 (SILENT) but true L>0.
+  => Exactly the gap: where the proved floor is silent, L is still positive, but the
+     reduction lacks a proof of that. That silent zone IS GAP A / OPEN-Q-108.
+
+==============================================================================
+DONE
+==============================================================================

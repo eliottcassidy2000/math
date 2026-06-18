@@ -1,0 +1,38 @@
+Target REGULAR n=5 class: score=(2, 2, 2, 2, 2), c3=5, H=15
+
+========================================================================
+ATTACK A': reproduce ORIGINAL (FIRST optimal tau only), canonical tie-break
+========================================================================
+  vmax= 11: speedsets=   461  regular_count(first-tau)=0  classes=4/12
+  vmax= 14: speedsets=  1981  regular_count(first-tau)=0  classes=5/12
+  vmax= 17: speedsets=  6131  regular_count(first-tau)=0  classes=5/12
+  vmax= 20: speedsets= 15246  regular_count(first-tau)=0  classes=5/12
+  vmax= 23: speedsets= 33166  regular_count(first-tau)=0  classes=5/12
+
+========================================================================
+ATTACK A: ALL optimal taus (every crossing achieving the exact max gap)
+           + symmetric 1-tau.  Canonical tie-break (speed order i<j).
+========================================================================
+  vmax= 11: speedsets=   461  opt-taus tested=   1020  classes=5/12  REGULAR realized=False  count=0
+  vmax= 14: speedsets=  1981  opt-taus tested=   4301  classes=5/12  REGULAR realized=False  count=0
+  vmax= 17: speedsets=  6131  opt-taus tested=  13122  classes=5/12  REGULAR realized=False  count=0
+  vmax= 20: speedsets= 15246  opt-taus tested=  32898  classes=5/12  REGULAR realized=False  count=0
+  vmax= 23: speedsets= 33166  opt-taus tested=  70736  classes=5/12  REGULAR realized=False  count=0
+
+========================================================================
+ATTACK C: curated sporadic/covering/tight/AP 5-sets, ALL optimal taus
+========================================================================
+  curated sets tested; distinct classes realized=2/12
+  REGULAR not realized in curated set.
+
+========================================================================
+ATTACK D: tie-break sensitivity (speed i<j  vs  reversed i>j), vmax=14
+========================================================================
+  tie-break=speed(i<j): REGULAR realized=False count=0 classes=5/12
+  tie-break=rev  (i>j): REGULAR realized=False count=0 classes=4/12
+
+========================================================================
+VERDICT
+========================================================================
+  CLAIM SURVIVES this search: regular n=5 class NOT realized at any optimal tau under canonical M4.
+  Search bound: exhaustive primitive 5-sets up to vmax=26 (all optimal taus) + curated sets.

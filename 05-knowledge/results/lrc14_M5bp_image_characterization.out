@@ -1,0 +1,10 @@
+n=4: image = 2 iso classes, 2 distinct (H,3c,score) tuples
+n=5: image = 4 iso classes, 4 distinct (H,3c,score) tuples
+   image tuples: [(1, 0, (0, 1, 2, 3, 4)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+   TARGET (15,4,(1,2,2,2,3)) in image? False
+   (13,4,(1,2,2,2,3)) in image? False
+n=6: image = 6 iso classes, 5 distinct (H,3c,score) tuples
+n=7: image = 10 iso classes, 9 distinct (H,3c,score) tuples
+
+CONCLUSION: map image = cut-flips of transitive tournament; TARGET is
+structurally outside the image at n=5 -> forbidden for ALL inputs (PROVED).

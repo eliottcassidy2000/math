@@ -1,0 +1,76 @@
+
+==============================================================================
+(F) EXTREME PUSH: smallest L (=> closest-to-tight) over coordinated covering 13-sets
+=======================================================================  scanned 12194 coordinated covering primitive 13-sets with EXACT M.
+  GLOBAL MIN M = 1/11=0.09090909 at [1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 42] (>1/14? True)
+  1/14=0.07142857; gap above 1/14 = 0.01948052
+  10 smallest M among coordinated covering sets:
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 7, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 6, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 28]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 42]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 56]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 70]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 84]
+     M=      1/11=0.09090909  S=[1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 98]
+
+==============================================================================
+(G) k=1..5 COORDINATED STRESS: {1..(13-k)} u {14,28,...,14k}
+==============================================================================
+  k=1: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14] cov=False prim=True M=1/13=0.07692308 L=0.02389713 (>1/14? True)
+  k=2: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 14, 28] cov=False prim=True M=1/12=0.08333333 L=0.04102762 (>1/14? True)
+  k=3: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14, 28, 42] cov=False prim=True M=1/11=0.09090909 L=0.10056689 (>1/14? True)
+  k=4: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 14, 28, 42, 56] cov=False prim=True M=1/10=0.10000000 L=0.12154195 (>1/14? True)
+  k=5: S=[1, 2, 3, 4, 5, 6, 7, 8, 14, 28, 42, 56, 70] cov=False prim=True M=1/9=0.11111111 L=0.13860544 (>1/14? True)
+
+  Maximally-coordinated covering 13-sets (max # mult-of-14):
+  S=[1, 2, 3, 4, 5, 6, 14, 28, 42, 56, 70, 84, 98] cov=False prim=True M=1/8=0.12500000 L=0.15534500 (>1/14? True)
+  S=[1, 2, 3, 4, 5, 14, 28, 42, 56, 70, 84, 98, 112] cov=False prim=True M=1/9=0.11111111 L=0.13618805 (>1/14? True)
+  S=[1, 2, 3, 4, 14, 28, 42, 56, 70, 84, 98, 112, 126] cov=False prim=True M=1/10=0.10000000 L=0.11181568 (>1/14? True)
+
+==============================================================================
+(E) DECOUPLING-FLOOR AUDIT: proved floor>0 vs true L>0 (silent-zone = GAP A)
+==============================================================================
+  {1..9}u{14,28,42}: meas=0.13684807 r=22 floor-threshold w*=r/(6 meas)=26.8
+     smallest w with proved floor>0: 28; L there=0.13684807; any tight w (m<=59): False
+  {1..6}u6coord: meas=0.20782313 r=74 floor-threshold w*=r/(6 meas)=59.3
+     smallest w with proved floor>0: 70; L there=0.20782313; any tight w (m<=59): False
+  {1..4}u8coord: meas=0.16652089 r=168 floor-threshold w*=r/(6 meas)=168.1
+     smallest w with proved floor>0: 182; L there=0.12018109; any tight w (m<=59): False
+
+  17/177 (w,core) pairs: proved floor <=0 (SILENT) but true L>0.
+  => Where the proved floor is silent, the TRUE L is positive, but the reduction has no
+     proof of it. That silent zone is precisely GAP A / OPEN-Q-108.
+
+==============================================================================
+DONE
+==============================================================================
+oor>0 vs true L>0 (silent-zone = GAP A)
+==============================================================================
+  {1..9}u{14,28,42}: meas=0.13684807 r=22 floor-threshold w*=r/(6 meas)=26.8
+     smallest w with proved floor>0: 28; L there=0.13684807; any tight w (m<=59): False
+  {1..6}u6coord: meas=0.20782313 r=74 floor-threshold w*=r/(6 meas)=59.3
+     smallest w with proved floor>0: 70; L there=0.20782313; any tight w (m<=59): False
+  {1..4}u8coord: meas=0.16652089 r=168 floor-threshold w*=r/(6 meas)=168.1
+     smallest w with proved floor>0: 182; L there=0.12018109; any tight w (m<=59): False
+
+  17/177 (w,core) pairs: proved floor <=0 (SILENT) but true L>0.
+  => Where the proved floor is silent, the TRUE L is positive, but the reduction has no
+     proof of it. That silent zone is precisely GAP A / OPEN-Q-108.
+
+==============================================================================
+DONE
+==============================================================================
+
+==============================================================================
+(H) UNIFORM-IN-VMAX PROBE (the crux of GAP A): drive 2 coordinated parked
+    speeds large on easy 11-core base11={1,2,3,5,7,8,9,10,11,12,13}.
+==============================================================================
+  As vmax -> infinity, L does NOT decay to 0; it PLATEAUS ~0.0238 (scale-1 L=0.01295).
+  Random large coordinated parked pairs: min L = 0.01573 > 0.
+  => Empirically, finer/larger coordinated combs tile more uniformly but their TOTAL
+     mass-kill SATURATES; they cannot consume the base core's lonely set. This is the
+     structural fact GAP A needs (meas bounded below uniformly in vmax) -- supported
+     numerically, NOT proved. OPEN-Q-108 remains open.

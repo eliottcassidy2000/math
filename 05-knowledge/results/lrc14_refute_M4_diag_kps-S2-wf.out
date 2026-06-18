@@ -1,0 +1,33 @@
+Free n=5 classes: 12
+
+======================================================================
+(1) Classes realized at OPTIMAL tau (all optimal taus, vmax=23):
+======================================================================
+   score=(0, 1, 2, 3, 4) c3=0 H=1   e.g. S=(1, 2, 3, 4, 5) tau=1/6
+   score=(0, 1, 3, 3, 3) c3=1 H=3   e.g. S=(1, 2, 3, 4, 7) tau=2/5
+   score=(0, 2, 2, 2, 4) c3=1 H=3   e.g. S=(1, 2, 8, 10, 15) tau=2/9
+   score=(0, 2, 2, 3, 3) c3=2 H=5   e.g. S=(1, 2, 7, 8, 9) tau=2/5
+   score=(1, 1, 1, 3, 4) c3=1 H=3   e.g. S=(1, 3, 4, 7, 10) tau=2/11
+
+   realized 5/12; FORBIDDEN signatures:
+     ((1, 1, 2, 2, 4), 2, 5)
+     ((1, 1, 2, 3, 3), 3, 9)
+     ((1, 2, 2, 2, 3), 4, 11)
+     ((1, 2, 2, 2, 3), 4, 13)
+     ((1, 2, 2, 2, 3), 4, 15)
+     ((2, 2, 2, 2, 2), 5, 15) <-- REGULAR
+
+   distinct SCORE sequences seen at optimum: [(0, 1, 2, 3, 4), (0, 1, 3, 3, 3), (0, 2, 2, 2, 4), (0, 2, 2, 3, 3), (1, 1, 1, 3, 4)]
+   regular score (2,2,2,2,2) present at optimum? False
+
+======================================================================
+(2) Is REGULAR reachable at NON-optimal crossing times? (pipeline sanity)
+======================================================================
+   YES regular reached OFF-optimum: S=(1, 2, 6, 11, 17) tau=2/13 gap-there=1/13 (optimal M=1/4)
+   -> map CAN produce regular; its absence at OPTIMUM is a genuine loneliness constraint.
+
+======================================================================
+(3) SCORE-level exclusion of regular (2,2,2,2,2) at optimum?
+======================================================================
+   (2,2,2,2,2) appears at optimum: False
+   If False, regular iso class is excluded a fortiori (no regular-SCORE tournament at optimum).

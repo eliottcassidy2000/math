@@ -1,0 +1,86 @@
+A000568 free iso-class counts: n=3->2, n=4->4, n=5->12
+
+  free(3) = 2
+  free(4) = 4
+  free(5) = 12
+
+======================================================================
+METHOD: M1 orbit-majority-section (mod 14)   (constrained-LRC=True)
+  n=3: free=2  realized=1  forbidden=1  nontrivial=False  (used 2251 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (1, 1, 1))]
+     realized H-class distribution: {1: 1}
+  n=4: free=4  realized=1  forbidden=3  nontrivial=False  (used 14161 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+     realized H-class distribution: {1: 1}
+  n=5: free=12  realized=1  forbidden=11  nontrivial=False  (used 64436 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+     realized H-class distribution: {1: 1}
+======================================================================
+METHOD: M1b orbit-majority-section (mod 13 prime)   (constrained-LRC=True)
+  n=3: free=2  realized=1  forbidden=1  nontrivial=False  (used 2251 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (1, 1, 1))]
+     realized H-class distribution: {1: 1}
+  n=4: free=4  realized=1  forbidden=3  nontrivial=False  (used 14161 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (0, 2, 2, 2)), (3, 1, (1, 1, 1, 3)), (5, 2, (1, 1, 2, 2))]
+     realized H-class distribution: {1: 1}
+  n=5: free=12  realized=1  forbidden=11  nontrivial=False  (used 64436 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+     realized H-class distribution: {1: 1}
+======================================================================
+METHOD: M2 QR-character (p=7)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 691 sets, skipped 306)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=3  forbidden=1  nontrivial=True  (used 2150 sets, skipped 2469)
+     FORBIDDEN classes (H, #3cyc, score): [(1, 0, (0, 1, 2, 3))]
+     realized H-class distribution: {3: 2, 5: 1}
+  n=5: free=12  realized=1  forbidden=11  nontrivial=True  (used 3780 sets, skipped 11466)
+     FORBIDDEN classes (H, #3cyc, score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (5, 2, (0, 2, 2, 3, 3)), (5, 2, (1, 1, 2, 2, 4)), (9, 3, (1, 1, 2, 3, 3)), (9, 3, (1, 1, 2, 3, 3)), (11, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+     realized H-class distribution: {13: 1}
+======================================================================
+METHOD: M2b QR-character (p=11)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 1431 sets, skipped 316)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=4  forbidden=0  nontrivial=True  (used 6824 sets, skipped 3237)
+     realized H-class distribution: {1: 1, 3: 2, 5: 1}
+  n=5: free=12  realized=7  forbidden=5  nontrivial=True  (used 21448 sets, skipped 20208)
+     FORBIDDEN classes (H, #3cyc, score): [(1, 0, (0, 1, 2, 3, 4)), (3, 1, (0, 1, 3, 3, 3)), (3, 1, (0, 2, 2, 2, 4)), (3, 1, (1, 1, 1, 3, 4)), (9, 3, (1, 1, 2, 3, 3))]
+     realized H-class distribution: {5: 2, 9: 1, 11: 1, 13: 1, 15: 2}
+======================================================================
+METHOD: M2c QR-character (p=23)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 3276 sets, skipped 196)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=4  forbidden=0  nontrivial=True  (used 23194 sets, skipped 2625)
+     realized H-class distribution: {1: 1, 3: 2, 5: 1}
+  n=5: free=12  realized=12  forbidden=0  nontrivial=True  (used 116860 sets, skipped 22386)
+     realized H-class distribution: {1: 1, 3: 3, 5: 2, 9: 2, 11: 1, 13: 1, 15: 2}
+======================================================================
+METHOD: M3 halfplane-majority (opt taus)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 493 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=4  forbidden=0  nontrivial=True  (used 1745 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 2, 5: 1}
+  n=5: free=12  realized=8  forbidden=4  nontrivial=True  (used 4311 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(11, 4, (1, 2, 2, 2, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+     realized H-class distribution: {1: 1, 3: 3, 5: 2, 9: 2}
+======================================================================
+METHOD: M4 band-depth-majority (mod 14)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 2251 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=4  forbidden=0  nontrivial=True  (used 14161 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 2, 5: 1}
+  n=5: free=12  realized=8  forbidden=4  nontrivial=True  (used 64436 sets, skipped 0)
+     FORBIDDEN classes (H, #3cyc, score): [(9, 3, (1, 1, 2, 3, 3)), (13, 4, (1, 2, 2, 2, 3)), (15, 4, (1, 2, 2, 2, 3)), (15, 5, (2, 2, 2, 2, 2))]
+     realized H-class distribution: {1: 1, 3: 3, 5: 2, 9: 1, 11: 1}
+======================================================================
+METHOD: M5 crossing-parity (opt taus)   (constrained-LRC=True)
+  n=3: free=2  realized=2  forbidden=0  nontrivial=True  (used 493 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 1}
+  n=4: free=4  realized=4  forbidden=0  nontrivial=True  (used 1745 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 2, 5: 1}
+  n=5: free=12  realized=12  forbidden=0  nontrivial=True  (used 4311 sets, skipped 0)
+     realized H-class distribution: {1: 1, 3: 3, 5: 2, 9: 2, 11: 1, 13: 1, 15: 2}
+======================================================================
+METHOD 6: section-transition tournament (vertices = sections mod 14)
+  V=13 sections. H=too big  #3cyc=48  score=(2, 3, 3, 4, 4, 5, 6, 7, 8, 8, 9, 9, 10)
+  (mod 6 variant, V=5 for iso enumeration)
+  V=5: H=1  #3cyc=0  score=(0, 1, 2, 3, 4)

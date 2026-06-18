@@ -1,0 +1,13 @@
+=== PHASE 1: variant scan on primitive 5-subsets of {1..18} ===
+num primitive configs: 8436
+('gt', 'speedhi', 0, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2689 f13=0 f15reg=835
+('gt', 'speedhi', 0, 'last'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2688 f13=0 f15reg=870
+('gt', 'speedhi', 1, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2689 f13=0 f15reg=835
+('gt', 'speedhi', 1, 'last'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2688 f13=0 f15reg=870
+('gt', 'speedlo', 0, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2673 f13=0 f15reg=824
+('gt', 'speedlo', 0, 'last'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2699 f13=0 f15reg=849
+('gt', 'speedlo', 1, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2673 f13=0 f15reg=824
+('gt', 'speedlo', 1, 'last'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2699 f13=0 f15reg=849
+('gt', 'idxhi', 0, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2689 f13=0 f15reg=835
+('gt', 'idxhi', 0, 'last'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2688 f13=0 f15reg=870
+('gt', 'idxhi', 1, 'first'): classes=4 target=0 nontour=0 has13=False has15reg=True f11=2689 f13=0 f15reg=835

@@ -1,0 +1,21 @@
+m=5: full iso set = 12
+
+[M6 @ OPTIMUM tau0]
+  vmax=12: realized 10/12, forbidden 2
+  vmax=16: realized 10/12, forbidden 2
+  vmax=20: realized 10/12, forbidden 2
+  vmax=24: realized 10/12, forbidden 2
+     FORBIDDEN (13, 4, (1, 2, 2, 2, 3))
+     FORBIDDEN (15, 4, (1, 2, 2, 2, 3))
+
+[M6 @ ALL candidate tau, vmax=16] (does ANY tau realize the forbidden classes?)
+  realized 11/12, forbidden 1
+     STILL FORBIDDEN over all tau: (15, 4, (1, 2, 2, 2, 3))
+
+[M4 section rotational @ grid]
+  vmax=13: realized 4/12, forbidden 8
+  vmax=18: realized 8/12, forbidden 4
+  vmax=24: realized 9/12, forbidden 3
+  vmax=30: realized 11/12, forbidden 1
+  vmax=40: realized 11/12, forbidden 1
+     FORBIDDEN (15, 4, (1, 2, 2, 2, 3))
