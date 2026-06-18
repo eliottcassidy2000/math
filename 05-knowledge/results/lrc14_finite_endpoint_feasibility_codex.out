@@ -1,0 +1,52 @@
+==============================================================================
+LRC14 finite endpoint feasibility scout
+==============================================================================
+
+1. Raw endpoint shape count below V=711
+  total raw S3 coordinate shapes: 1675268836111283636384624399
+  k= 1: 9061
+  k= 2: 18919368  (k=2 already structurally finite-core proved)
+  k= 3: 16070952040
+  k= 4: 6970775447350
+  k= 5: 1739069058604878
+  k= 6: 267430175234350128
+  k= 7: 26399178726705134064
+  k= 8: 1707696873883738359765
+  k= 9: 72629823833697267276425
+  k=10: 1998772751903348795447216
+  k=11: 34045211914651255102617456
+  k=12: 324375213520149458338827428
+  k=13: 1314775273735517035278679220
+  Conclusion: a literal all-shapes exact-M endpoint is not feasible by brute force.
+
+2. q=14V covering-system MILP scout
+  status 0=feasible obstruction, 1=time limit, 2=infeasible certificate
+  V= 14: status=2, seconds= 0.01, S=None
+  V= 15: status=0, seconds= 0.01, S=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15), exact M=2/23 at tau=4/23
+  V= 16: status=2, seconds= 0.00, S=None
+  V= 20: status=2, seconds= 0.00, S=None
+  V= 28: status=2, seconds= 0.06, S=None
+  V= 42: status=2, seconds= 0.29, S=None
+  V= 56: status=2, seconds= 1.25, S=None
+  V= 70: status=1, seconds= 5.02, S=None
+  V= 84: status=1, seconds= 5.02, S=None
+  V= 98: status=1, seconds= 5.02, S=None
+  V=120: status=1, seconds= 5.03, S=None
+  Readout: q=14V is a strong large-V colored tool, but V=15 gives a primitive q-covering row with no q=14V witness while exact M=2/23. So the low endpoint cannot be closed by q=14V alone.
+
+3. Small exact k=3 core calibration
+  k=3, all large speeds <= 42: scanned 61161 covering primitive S3 rows; exact-checked 7 near-threshold rows.
+  worst exact checked M=3/37 at tau=11/37, S=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 23, 30, 42)
+  # exact-checked rows below 1/14: 0  (24.0s)
+  This is useful calibration, not the endpoint.  It says exact-M cores are workable after structural pruning; it does not license the V<711 brute force.
+
+4. Proof-strategy tournament
+  scores: {'naive_shape_enumeration': 0, 'q14V_milp': 1, 'k2_finite_core': 5, 'arc_width_dropmax': 3, 'colored_resonance_largeV': 4, 'endpoint_exactM_core': 2}
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, cycles3=0, sccs=[1, 1, 1, 1, 1, 1], Hamiltonian_paths=1, leader=k2_finite_core
+  The tournament ranks k2_finite_core as the proven model and colored_resonance_largeV as the best large-V lever; the missing bridge is a structural finite-core reduction for k>=3.
+
+5. Next proof directions
+  A. Promote HYP-2595: prove Delta <= 8*(k+cGP)+1 by bounding color-compatible V-resonances.
+  B. Promote HYP-2593: prove the uniform Sigma floor, likely by bounded-spread plus Weyl tails.
+  C. For V<711, avoid all-shape enumeration: classify q=14V obstructions, then exact-M only the residual cores.
+  D. Generalize the k=2 finite-core pattern: drop one large speed, prove W(A) floor except a bounded hard core.
