@@ -1,0 +1,163 @@
+========================================================================================
+LRC14 integer-sequence carriers: universal centers versus mixed residual
+========================================================================================
+
+1. Center-survivor sequence by small-part size s=|P|
+   survivor(s)=C(7,s)+C(9,s)-C(5,s); mixed=C(13,s)-survivor
+   s | survivor | mixed | total | cluster size k=13-s
+   0 |        1 |     0 |     1 | 13
+   1 |       11 |     2 |    13 | 12
+   2 |       47 |    31 |    78 | 11
+   3 |      109 |   177 |   286 | 10
+   4 |      156 |   559 |   715 |  9
+   5 |      146 |  1141 |  1287 |  8
+   6 |       91 |  1625 |  1716 |  7
+   7 |       37 |  1679 |  1716 |  6
+   8 |        9 |  1278 |  1287 |  5
+   9 |        1 |   714 |   715 |  4
+  10 |        0 |   286 |   286 |  3
+  11 |        0 |    78 |    78 |  2
+  12 |        0 |    13 |    13 |  1
+  13 |        0 |     1 |     1 |  0
+
+2. Asymptotic center coefficients
+   For R=max(E)>=4, the universal-center reservoir has coefficient coeff/R.
+  both odd and 3-free        P=(1, 5, 7, 11, 13): coeff=13/42 = 0.309524
+  odd but has multiple of 3  P=(1, 3, 5): coeff=3/14 = 0.214286
+  3-free but has even        P=(1, 2, 5): coeff=2/21 = 0.095238
+  mixed residual             P=(1, 2, 3): coeff=0 = 0.000000
+
+3. Conservative-window stabilization check
+   Positive skeleton counts converge to the survivor sequence as R grows.
+
+   R=4
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/168 at ()
+    s= 1: positive=  13, formula_survivors=  11, mixed_positive=   2, min=7/24 at (1,)
+    s= 2: positive=  78, formula_survivors=  47, mixed_positive=  31, min=11/56 at (1, 6)
+    s= 3: positive= 286, formula_survivors= 109, mixed_positive= 177, min=61/392 at (1, 6, 7)
+    s= 4: positive= 715, formula_survivors= 156, mixed_positive= 559, min=6/49 at (1, 6, 7, 8)
+    s= 5: positive=1287, formula_survivors= 146, mixed_positive=1141, min=109/1176 at (1, 2, 6, 7, 8)
+    s= 8: positive=1287, formula_survivors=   9, mixed_positive=1278, min=20/1287 at (1, 2, 6, 7, 8, 9, 11, 13)
+    s= 9: positive= 715, formula_survivors=   1, mixed_positive= 714, min=4/1001 at (1, 2, 6, 7, 8, 9, 10, 11, 13)
+    s=10: positive= 285, formula_survivors=   0, mixed_positive= 285, min=4/1001 at (1, 2, 3, 6, 7, 8, 9, 10, 11, 13)
+    s=11: positive=  75, formula_survivors=   0, mixed_positive=  75, min=4/1001 at (1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 13)
+    s=12: positive=  10, formula_survivors=   0, mixed_positive=  10, min=4/1001 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=7
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/294 at ()
+    s= 1: positive=  13, formula_survivors=  11, mixed_positive=   2, min=31/294 at (1,)
+    s= 2: positive=  78, formula_survivors=  47, mixed_positive=  31, min=11/196 at (1, 12)
+    s= 3: positive= 286, formula_survivors= 109, mixed_positive= 177, min=26/735 at (1, 10, 12)
+    s= 4: positive= 715, formula_survivors= 156, mixed_positive= 559, min=2/105 at (1, 2, 10, 12)
+    s= 5: positive=1287, formula_survivors= 146, mixed_positive=1141, min=1/140 at (1, 2, 10, 12, 13)
+    s= 8: positive=1251, formula_survivors=   9, mixed_positive=1242, min=4/1001 at (1, 2, 3, 4, 5, 10, 11, 13)
+    s= 9: positive= 660, formula_survivors=   1, mixed_positive= 659, min=4/1001 at (1, 2, 3, 4, 5, 6, 10, 11, 13)
+    s=10: positive= 236, formula_survivors=   0, mixed_positive= 236, min=4/1001 at (1, 2, 3, 4, 5, 6, 7, 10, 11, 13)
+    s=11: positive=  51, formula_survivors=   0, mixed_positive=  51, min=4/1001 at (1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 13)
+    s=12: positive=   5, formula_survivors=   0, mixed_positive=   5, min=4/1001 at (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=10
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/420 at ()
+    s= 1: positive=  13, formula_survivors=  11, mixed_positive=   2, min=13/420 at (1,)
+    s= 2: positive=  77, formula_survivors=  47, mixed_positive=  30, min=1/105 at (1, 2)
+    s= 3: positive= 269, formula_survivors= 109, mixed_positive= 160, min=1/280 at (1, 3, 8)
+    s= 4: positive= 615, formula_survivors= 156, mixed_positive= 459, min=1/280 at (1, 3, 5, 8)
+    s= 5: positive= 973, formula_survivors= 146, mixed_positive= 827, min=1/280 at (1, 3, 5, 7, 8)
+    s= 8: positive= 539, formula_survivors=   9, mixed_positive= 530, min=1/280 at (1, 3, 5, 7, 8, 9, 10, 11)
+    s= 9: positive= 230, formula_survivors=   1, mixed_positive= 229, min=1/280 at (1, 3, 5, 7, 8, 9, 10, 11, 12)
+    s=10: positive=  67, formula_survivors=   0, mixed_positive=  67, min=1/280 at (1, 3, 5, 7, 8, 9, 10, 11, 12, 13)
+    s=11: positive=  12, formula_survivors=   0, mixed_positive=  12, min=1/14 at (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    s=12: positive=   1, formula_survivors=   0, mixed_positive=   1, min=1/14 at (2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=20
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/840 at ()
+    s= 1: positive=  13, formula_survivors=  11, mixed_positive=   2, min=1/210 at (2,)
+    s= 2: positive=  72, formula_survivors=  47, mixed_positive=  25, min=1/210 at (1, 2)
+    s= 3: positive= 223, formula_survivors= 109, mixed_positive= 114, min=1/210 at (1, 2, 4)
+    s= 4: positive= 437, formula_survivors= 156, mixed_positive= 281, min=1/210 at (1, 2, 4, 5)
+    s= 5: positive= 581, formula_survivors= 146, mixed_positive= 435, min=1/210 at (1, 2, 4, 5, 7)
+    s= 8: positive= 174, formula_survivors=   9, mixed_positive= 165, min=1/210 at (1, 2, 4, 5, 7, 8, 10, 11)
+    s= 9: positive=  56, formula_survivors=   1, mixed_positive=  55, min=1/210 at (1, 2, 4, 5, 7, 8, 10, 11, 13)
+    s=10: positive=  11, formula_survivors=   0, mixed_positive=  11, min=1/42 at (3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+    s=11: positive=   1, formula_survivors=   0, mixed_positive=   1, min=1/42 at (3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+    s=12: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=40
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/1680 at ()
+    s= 1: positive=  13, formula_survivors=  11, mixed_positive=   2, min=1/420 at (2,)
+    s= 2: positive=  64, formula_survivors=  47, mixed_positive=  17, min=1/420 at (1, 2)
+    s= 3: positive= 167, formula_survivors= 109, mixed_positive=  58, min=1/420 at (1, 2, 4)
+    s= 4: positive= 263, formula_survivors= 156, mixed_positive= 107, min=1/420 at (1, 2, 4, 5)
+    s= 5: positive= 265, formula_survivors= 146, mixed_positive= 119, min=1/420 at (1, 2, 4, 5, 7)
+    s= 8: positive=  18, formula_survivors=   9, mixed_positive=   9, min=1/420 at (1, 2, 4, 5, 7, 8, 10, 11)
+    s= 9: positive=   2, formula_survivors=   1, mixed_positive=   1, min=1/420 at (1, 2, 4, 5, 7, 8, 10, 11, 13)
+    s=10: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=11: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=12: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=80
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/3360 at ()
+    s= 1: positive=  12, formula_survivors=  11, mixed_positive=   1, min=1/840 at (2,)
+    s= 2: positive=  52, formula_survivors=  47, mixed_positive=   5, min=1/840 at (1, 2)
+    s= 3: positive= 117, formula_survivors= 109, mixed_positive=   8, min=1/840 at (1, 2, 4)
+    s= 4: positive= 161, formula_survivors= 156, mixed_positive=   5, min=1/840 at (1, 2, 4, 5)
+    s= 5: positive= 147, formula_survivors= 146, mixed_positive=   1, min=1/840 at (1, 2, 4, 5, 7)
+    s= 8: positive=   9, formula_survivors=   9, mixed_positive=   0, min=1/840 at (1, 2, 4, 5, 7, 8, 10, 11)
+    s= 9: positive=   1, formula_survivors=   1, mixed_positive=   0, min=1/840 at (1, 2, 4, 5, 7, 8, 10, 11, 13)
+    s=10: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=11: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=12: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+   R=160
+    s= 0: positive=   1, formula_survivors=   1, mixed_positive=   0, min=73/6720 at ()
+    s= 1: positive=  11, formula_survivors=  11, mixed_positive=   0, min=1/1680 at (2,)
+    s= 2: positive=  47, formula_survivors=  47, mixed_positive=   0, min=1/1680 at (1, 2)
+    s= 3: positive= 109, formula_survivors= 109, mixed_positive=   0, min=1/1680 at (1, 2, 4)
+    s= 4: positive= 156, formula_survivors= 156, mixed_positive=   0, min=1/1680 at (1, 2, 4, 5)
+    s= 5: positive= 146, formula_survivors= 146, mixed_positive=   0, min=1/1680 at (1, 2, 4, 5, 7)
+    s= 8: positive=   9, formula_survivors=   9, mixed_positive=   0, min=1/1680 at (1, 2, 4, 5, 7, 8, 10, 11)
+    s= 9: positive=   1, formula_survivors=   1, mixed_positive=   0, min=1/1680 at (1, 2, 4, 5, 7, 8, 10, 11, 13)
+    s=10: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=11: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=12: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+    s=13: positive=   0, formula_survivors=   0, mixed_positive=   0, min=0 at None
+
+4. LRC proof readout by cluster size
+   k=|E|, s=13-k.  The mixed column is the residual needing non-universal recurrence.
+  k= 3: center-surviving P=   0, mixed residual P= 286, total P= 286
+  k= 4: center-surviving P=   1, mixed residual P= 714, total P= 715
+  k= 5: center-surviving P=   9, mixed residual P=1278, total P=1287
+  k= 6: center-surviving P=  37, mixed residual P=1679, total P=1716
+  k= 7: center-surviving P=  91, mixed residual P=1625, total P=1716
+  k= 8: center-surviving P= 146, mixed residual P=1141, total P=1287
+  k= 9: center-surviving P= 156, mixed residual P= 559, total P= 715
+  k=10: center-surviving P= 109, mixed residual P= 177, total P= 286
+  k=11: center-surviving P=  47, mixed residual P=  31, total P=  78
+  k=12: center-surviving P=  11, mixed residual P=   2, total P=  13
+  k=13: center-surviving P=   1, mixed residual P=   0, total P=   1
+
+5. Named hard rows classified
+  HYP2595_constant100_failure : |P|= 3, all_odd=False, no_mult3=True, coeff=2/21
+  quarter_min                 : |P|= 3, all_odd=False, no_mult3=False, coeff=0
+  near_via_min                : |P|= 4, all_odd=False, no_mult3=False, coeff=0
+  via_zero_k7                 : |P|= 6, all_odd=False, no_mult3=False, coeff=0
+  hard_core_84m               : |P|=12, all_odd=False, no_mult3=False, coeff=0
+  P_empty                     : |P|= 0, all_odd=True, no_mult3=True, coeff=13/42
+
+6. Proof-carrier tournament
+  scores={'triadic_centers': 2, 'half_center': 4, 'both_center_families': 5, 'mixed_residual': 1, 'AP_mu_sequence': 3, 'colored_resonance_tail': 0}
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}, cycles3=0, sccs=[1, 1, 1, 1, 1, 1], Hamiltonian_paths=1, leader=both_center_families
+
+7. Takeaway
+  The integer sequence survivor(s)=C(7,s)+C(9,s)-C(5,s) is the exact
+  small-part split for the universal denominator-cap skeleton.
+  It proves a c/R reservoir for all-odd or 3-free small parts, and
+  identifies the mixed parity/triadic residual as the real Diophantine tail.
+  This does not finish LRC(14); it makes the remaining proof obligation smaller
+  and cleaner: solve the mixed residual by colored resonance / spread recurrence.
