@@ -3,11 +3,30 @@ ANGLE D — BREAKING criterion C: search for a covering 13-set with C(S) FALSE
 ==============================================================================
 
 [ATTACK 0] scale-invariance: margin(cS via cv) = margin(S via v)/c (cannot flip C)
-  c=  2: margin(S)=1/420  margin(cS)=1/840  c*margin(cS)=1/420  match=True
-  c=  3: margin(S)=1/420  margin(cS)=1/1260  c*margin(cS)=1/420  match=True
-  c=  5: margin(S)=1/420  margin(cS)=1/2100  c*margin(cS)=1/420  match=True
-  c=  7: margin(S)=1/420  margin(cS)=1/2940  c*margin(cS)=1/420  match=True
-  c= 30: margin(S)=1/420  margin(cS)=1/12600  c*margin(cS)=1/420  match=True
+  c=2: margin(S)=1/420 margin(cS)=1/840 c*margin(cS)=1/420 match=True
+  c=3: margin(S)=1/420 margin(cS)=1/1260 c*margin(cS)=1/420 match=True
+  c=5: margin(S)=1/420 margin(cS)=1/2100 c*margin(cS)=1/420 match=True
+  c=7: margin(S)=1/420 margin(cS)=1/2940 c*margin(cS)=1/420 match=True
+  c=11: margin(S)=1/420 margin(cS)=1/4620 c*margin(cS)=1/420 match=True
   scale-invariance EXACT: True  => scaled cores can NEVER break C.
 
-[ATTACK 1] clustered covering sets, all runners large (bounded window <=1200)
+[ATTACK 1] clustered covering sets, all runners large (window <= CAP)
+  tested 16051; C failures 0; tightest margin 0.00346526 at v=200  S=(140, 143, 153, 156, 160, 168, 175, 178, 186, 192, 195, 198, 200)
+
+[ATTACK 2] two near-equal large runners (sole cover of missing moduli)
+  cumulative tested 16282; C failures 0; tightest margin 0.00204082 at v=140  S=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 70, 140)
+
+[ATTACK 3] private-obligation hard cores (sole-cover large incommensurate)
+  cumulative tested 16282; C failures 0; tightest margin 0.00204082 at v=140  S=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 70, 140)
+
+[ATTACK 4] greedy descent: minimize best criterion margin (bounded runners)
+  descent tightest margin = 0.00204082  at S=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 70, 140)
+
+==============================================================================
+VERDICT
+==============================================================================
+  total covering 13-sets tested: 16306
+  criterion C FAILURES (no v with W>1/(7v)): 0
+  of those, ACTUAL LRC breaks M(S)<1/14: 0
+  global tightest successful margin: 0.00204082 = 1/490
+  ==> C NEVER FAILED across all attacks. Strong evidence C is universal.

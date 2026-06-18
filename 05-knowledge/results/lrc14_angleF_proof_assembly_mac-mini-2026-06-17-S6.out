@@ -1,0 +1,59 @@
+==================================================================================
+ANGLE F: assembling LRC(14) from the arc-width criterion C(S)
+==================================================================================
+
+[1] SINGLE-LARGE CASE  (12 small runners in {1..13} + one parked V, V = 14m >= 14)
+    PIGEONHOLE BOUND (PROVED elementary):  W(A) >= mu(A)/N(A) >= (1 - sum 1/(7u))/(sum u),
+    so PIG(V): 7V*(1 - sum_{u in A}1/(7u)) > sum_{u in A} u  =>  W(A) > 1/(7V)  =>  C(S).
+    A = the 12 small runners (subset of {1..13}); worst (smallest) mu over valid cores:
+    WORST core = {1..13}\{5}: PIG(V) holds for all V > 21.39375 = 30990960/1448599.
+    => For V >= 28 (>21.394), PIG(V) proves C(S). The ONLY parked value
+       that can fail PIG is V = 14.  Those covering sets are exactly:
+       [1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]: M=1/11=0.0909 >=1/14? True  C via v=8
+       [1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]: M=2/23=0.0870 >=1/14? True  C via v=11
+       [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 14]: M=2/21=0.0952 >=1/14? True  C via v=10
+       [1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]: M=2/19=0.1053 >=1/14? True  C via v=11
+       [1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]: M=2/19=0.1053 >=1/14? True  C via v=13
+       [1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]: M=2/17=0.1176 >=1/14? True  C via v=10
+       [2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]: M=1/8=0.1250 >=1/14? True  C via v=5
+    => SINGLE-LARGE CASE CLOSED: V>=28 by pigeonhole, V=14 by the 7-set check (all M>=1/14, min M=2/23). exhaustive-ok=True
+
+[2] FULLY-CLUSTERED CASE  (all 13 runners in a window [N, N+w], gcd 1)
+    ORIGIN-GAP LEMMA (PROVED elementary): remove v0; let A=S\{v0}, a=min(A). All k=0 teeth
+    of A merge into (-1/(7a), 1/(7a)); the nearest positive non-origin tooth-left-edge is
+    g := min_{u in A, k>=1} (7k-1)/(7u).  The interval (1/(7a), g) is A-safe, width g-1/(7a).
+    If g - 1/(7a) > 1/(7 v0) then W(A) > 1/(7 v0), so C(S).
+    Verifying on tightest-window clustered covering 13-sets:
+    fully-clustered covering 13-sets tested: 1200
+    origin-gap proves C on: 1200/1200   (tightest margin 0.002368 at v0=200)
+
+[3] RESIDUAL = covering 13-sets where NEITHER PIG(any v) NOR ORIGIN(any v) fires.
+    Verify: (a) exact C still holds on them; (b) they are LOOSE (M >> 1/14).
+    covering 13-sets tested: 3000
+    residual (PIG & ORIGIN both miss): 101  (3.4%)
+    exact C holds on ALL residual sets: True
+    smallest exact M among small-speed residuals: 7/51=0.1373  (>> 1/14=0.0714)
+    sample residual sets (all have M far above 1/14):
+       [4, 33, 38, 45, 46, 52, 53, 55, 56, 60, 75, 82, 86] M=0.188
+       [1, 7, 18, 30, 39, 53, 54, 55, 60, 72, 80, 98, 100] M=0.202
+       [1, 18, 19, 33, 35, 42, 48, 66, 70, 71, 74, 78, 88] M=0.182
+       [10, 15, 22, 44, 56, 66, 71, 82, 84, 92, 99, 104, 105] M=0.189
+       [5, 13, 27, 42, 46, 49, 52, 55, 57, 67, 72, 80, 84] M=0.193
+       [6, 10, 25, 43, 48, 55, 56, 57, 59, 78, 81, 88, 89] M=0.213
+
+[4] EXHAUSTIVENESS: every covering 13-set falls in exactly one of
+      (S1) single-large (k=#{v>13} <= 1)              -> PROVED (PIG + 7-set check)
+      (S2) clustered/window not single-large          -> origin-gap fires
+      (S3) residual                                    -> C holds (verified), M >> 1/14
+    and C(S) is TRUE on every set in the sample (the union of all three is all covering sets).
+    covering 13-sets tested: 4000
+    C(S) holds (exact): 4000/4000
+    C(S) failures: 0  => exhaustive & C universal on sample
+
+=== NOTE (mac-mini-2026-06-17-S6) ===
+Residual count + min-M vary run-to-run (unseeded random.sample in spread generators);
+both observed runs: residual ~3%, min exact M ~0.137-0.15 >> 1/14, C holds 4000/4000.
+A deeper dedicated search (120k draws, 1580 residual sets, lrc14 residual min-M probe)
+gave the firmest value: MIN exact M over residual = 4/31 = 0.12903 = 1.81x the 1/14 threshold.
+Deterministic invariants reproduce exactly: S1 CLOSED (V>=28 pigeonhole + 7-set check,
+min M=2/23), S2 origin-gap 1200/1200, C(S) 4000/4000 with 0 failures.

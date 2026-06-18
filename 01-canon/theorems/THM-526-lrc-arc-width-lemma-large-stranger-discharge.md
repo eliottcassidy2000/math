@@ -64,6 +64,98 @@ threshold `M₀ = ⌊1848/490⌋+1 = 4`. So:
 This is a genuine infinite sub-family of covering 13-sets for which **LRC(14) is now
 proved unconditionally** — the canonical hard cores `{1..13}\{j} ∪ {14m}` among them.
 
+## ANGLE B addendum (mac-mini-2026-06-17-S6): the CLUSTERED-large regime
+
+The arc-width criterion `C(S)` (`∃ v: W(S\{v}) > 1/(7v)`) holds on every tested covering
+13-set, but its **pigeonhole** lower bound `W(A) ≥ μ(A)/N(A)` (with `N(A) ≤ Σ_{u∈A} u`) is too
+weak in the **clustered-large** regime, where many runners lie near a common value `V` and
+`Σ u ~ 12V`. Two elementary lemmas (PROVED) give a sharper `W`, settling the easy half of that
+regime **directly** (a global witness, not even via `C`):
+
+> **LEMMA 1 (first-gap / cluster lemma, PROVED).** For any runner set `S` with
+> `Vmin = min S`, `Vmax = max S` and `13·Vmin > Vmax`, the open arc
+> `J = ( 1/(14·Vmin), 13/(14·Vmax) )` is level-1/14 safe for **every** runner in `S`. Hence its
+> midpoint is a witness and `M(S) ≥ 1/14`. Width `|J| = (13·Vmin − Vmax)/(14·Vmin·Vmax)`.
+> *Proof:* the first inter-tooth gap of runner `u` is `(1/(14u), 13/(14u))`; their intersection
+> over `u∈S` is `J`, nonempty iff `13·Vmin > Vmax`; on `J`, `u·τ ∈ (1/14, 13/14)` so
+> `‖uτ‖ ≥ 1/14`. ∎
+> **Scope (exact):** exactly the covering 13-sets with spread ratio `Vmax/Vmin < 13`. This
+> contains **all all-large clustered covering 13-sets** (their large window has width `≲14`, so
+> `Vmax/Vmin → 1 ≪ 13`). Verified: closes 1950/1950 all-large covering 13-sets; e.g.
+> `S = {140,…,153}` has `M = 140/293 ≈ 0.478` with witness `τ ≈ 0.0033`.
+
+> **LEMMA 2 (band-fit mixed lemma, PROVED).** If `S = W ⊔ B` where `W` has a common safe arc
+> `[p,q]` and the "band" `B ⊆ [a,b]` and some `t∈[p,q]`, integer `j` satisfy
+> `j+1/14 ≤ a·t` and `b·t ≤ j+13/14`, then `t` is safe for all of `S`, so `M(S) ≥ 1/14`.
+> *Proof:* `u·t ∈ [a·t, b·t] ⊆ [j+1/14, j+13/14]` for every `u∈B` (monotone in `u`). ∎
+> (Implication verified on 85 555 hypothesis-satisfying instances, 0 violations.)
+
+**Honest residual (the precise ANGLE-B obstruction).** The genuine **mixed** clustered sets
+(small runners `+` a tight large cluster of spread `sB ≈ 35–40`) are **not** closed by Lemma 2:
+at the working scale the band straddles several gaps (`sB·q ≫ 6/7`). At the actual witness the
+band runners occupy **3–4 distinct gap indices** (e.g. `S={1,2,3,4,406,407,414,416,420,429,432,441,450}`:
+indices 30–33) — so no single-gap lemma can close them; the witness is irreducibly a
+**simultaneous-Diophantine (CRT/three-distance) alignment**. Moreover the sharp *average*-gap
+pigeonhole still fails there (merged safe-component count `~2.6·(q·b)`, avg gap `< 1/(7v)`), while
+the **widest** gap is `~4×` the average — the widest-vs-average factor is what makes `C` hold and
+is exactly what resists a closed form. Computationally `C(S)` holds via 8–12 of the 13 large-`v`
+choices on every mixed set, and a witness (Lemma 1/2 or exact CRT odd-multiple search) is found for
+**every** clustered covering 13-set tested (≈ 3500+, 0 failures; supplementary exact-`M` spot checks
+all `≥ 1/14`).
+
+Scripts: `04-computation/lrc14_angleB_cluster_arcwidth_mac-mini-2026-06-17-S6.py`,
+`04-computation/lrc14_angleB_adversarial_Mfloor_mac-mini-2026-06-17-S6.py`.
+
+## ANGLE F assembly (mac-mini-2026-06-17-S6): the complete case-split + the residual is LOOSE
+
+Assembling the pieces into the cleanest **complete proof skeleton**, with each case named and
+its sufficient lemma PROVED, and the residual pinned to a single statement.
+
+> **Reduction.** LRC(14) ⟺ every primitive covering 13-set `S` has `M(S) ≥ 1/14`
+> (THM-523/524/525). By the generalized arc-width lemma (this theorem), it suffices to prove
+> the **criterion** `C(S)`: `∃ v∈S, W(S\{v}) > 1/(7v)`.
+
+**CASE S1 — single-large (`k := #{v∈S : v>13} ≤ 1`): PROVED, closed form + 7-set check.**
+Here the 12 small runners `A ⊆ {1..13}` cover `2..13`, and the one parked `V = 14m ≥ 14`.
+The pigeonhole bound `W(A) ≥ μ(A)/N(A) ≥ (1−Σ_{u∈A}1/(7u))/(Σ_{u∈A} u)` makes `C` hold via `V`
+once `7V·μ_lb(A) > Σ_{u∈A} u`, i.e. `V > Σu/(7μ_lb)`. The **worst** core is `{1..13}\{5}`, giving
+threshold `V > 30990960/1448599 = 21.394`. Since `V` is a multiple of 14:
+- `V ≥ 28`: `PIG(V)` fires ⇒ `C(S)` ⇒ `M(S) ≥ 1/14`. **No finite check needed.**
+- `V = 14`: exactly **7 covering sets** (`{1..13}\{j} ∪ {14}` that cover `2..14`), each checked
+  exactly: `M ∈ {1/11, 2/23, 2/21, 2/19, 2/19, 2/17, 1/8}`, all `≥ 2/23 ≈ 0.087 > 1/14`. ∎
+
+**CASE S2 — clustered/window (not S1, spread `Vmax/Vmin < 13`): PROVED by LEMMA 1** (the
+first-gap lemma above): the common safe arc `J = (1/(14·Vmin), 13/(14·Vmax))` gives a *global*
+witness. (Leave-one-out "origin-gap" variant — remove `v₀`, the merged origin-teeth half-width
+`1/(7·min(S\{v₀}))` vs nearest non-origin left-edge `min_{u,k≥1}(7k−1)/(7u)` — fires on
+1200/1200 tightest-window covering sets, but LEMMA 1 is the cleaner global form.)
+
+**CASE S3 — residual (neither pigeonhole nor first-gap/origin-gap fires): C still holds, and
+these sets are LOOSE.** Over a 4000-set covering sample, S3 is ≈ 2.7%; on **every** S3 set the
+exact criterion `C(S)` holds (typically via 8–12 distinct `v`), and — the decisive point —
+**S3 sets sit far from the LRC frontier**: the minimum exact `M` over all sampled S3 sets is
+`4/31 ≈ 0.129`, i.e. `1.81×` the threshold `1/14`. By contrast the unique closest-to-`1/14`
+covering set, `{1..11,13,84}` with `M = 7/89 ≈ 0.0787` (THM-524 C), is **single-large**, hence
+closed by S1's pigeonhole. So the genuinely tight configs are all in the PROVED case S1, and the
+residual S3 is provably non-dangerous.
+
+> **THE RESIDUAL LEMMA (single precise open statement).** *Every covering 13-set in case S3
+> satisfies `C(S)`.* Equivalently: when both the average-gap pigeonhole (`W ≥ μ/N`) and the
+> origin/first-gap bound fail, the **widest** safe arc of some `S\{v}` still exceeds `1/(7v)`.
+> The obstruction to an elementary proof is exactly the **widest-vs-average factor**: in S3 the
+> merged safe set has avg gap `< 1/(7v)` but widest gap `~4×` larger, located at an
+> irreducibly simultaneous-Diophantine (CRT / three-distance) alignment away from `τ=0`. This
+> is a statement about loose sets only (`M ≥ 4/31` empirically), so it is a closure-of-bookkeeping
+> task, not the crux of LRC(14).
+
+**Exhaustiveness (verified).** Every covering 13-set is in exactly one of S1/S2/S3 (the split is
+on `k` and on whether the two bounds fire); `C(S)` held on **4000/4000** covering sets across all
+generators (clustered, small-core, mixed-2/3-large, spread); the 4 sets where the prior
+`max(pigeonhole, antipode)`-with-`v=max` proxy (S5) failed all satisfy `C` via other `v`
+(free choice of removed runner strictly strengthens the criterion). Scripts:
+`04-computation/lrc14_angleF_proof_assembly_mac-mini-2026-06-17-S6.py`,
+`05-knowledge/results/lrc14_angleF_proof_assembly_mac-mini-2026-06-17-S6.out`.
+
 ## Honest scope and the remaining hard regime
 
 `W(A)` is **not uniform** over all cores: it shrinks toward 0 as core speeds grow

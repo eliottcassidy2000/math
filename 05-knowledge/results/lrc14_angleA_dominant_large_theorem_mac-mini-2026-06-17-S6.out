@@ -1,0 +1,60 @@
+==============================================================================
+PART 0. THE PROMPT'S PIGEONHOLE  W(A) >= mu/N  (mu=1-sum 1/(7u))  IS FALSE.
+==============================================================================
+  drop1  {2..13}        : W=0.035714  prompt mu/N=0.007651  W>=mu/N? True   (mu=0.689 but TRUE meas=0.0714)
+  drop6  {1..5,7..13}   : W=0.002706  prompt mu/N=0.006700  W>=mu/N? False   (mu=0.570 but TRUE meas=0.0082)
+  drop12 {1..11,13}     : W=0.004082  prompt mu/N=0.007058  W>=mu/N? False   (mu=0.558 but TRUE meas=0.0122)
+  drop13 {1..12}        : W=0.005952  prompt mu/N=0.007137  W>=mu/N? False   (mu=0.557 but TRUE meas=0.0341)
+  => prompt's mu/N OVERSHOOTS the true measure ~70x; bound fails on 3/4 cores.
+
+==============================================================================
+PART 1. CORRECT RIGOROUS PIGEONHOLE  W(A) >= meas(G_A)/T(A),  T=sum_{u} u  (LEMMA P)
+==============================================================================
+  tested 3013 cores; violations of W>=meas/T: 0
+  PROVED structurally: #safe arcs <= #teeth = T(A) (each safe arc -> tooth on
+  its left boundary, injective) => widest arc >= average = meas/T.
+  (Rigorous, but needs a meas lower bound to use; union bound is too weak for |A|=12.)
+
+==============================================================================
+PART 2. PROVED DOMINANT-LARGE THEOREM (exact-core route).
+==============================================================================
+  B=13: all C(13,12)=13 cores; #(W=0)=0; w_min=5/1848=0.002706 at A=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+        => any V > 1/(7 w_min) = 264/5 = 52.80  discharges (V>=53 ok).
+  B=14: all C(14,12)=91 cores; #(W=0)=0; w_min=5/1848=0.002706 at A=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+        => any V > 1/(7 w_min) = 264/5 = 52.80  discharges (V>=53 ok).
+  B=15: all C(15,12)=455 cores; #(W=0)=0; w_min=5/1848=0.002706 at A=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+        => any V > 1/(7 w_min) = 264/5 = 52.80  discharges (V>=53 ok).
+  B=16: all C(16,12)=1820 cores; #(W=0)=0; w_min=5/1848=0.002706 at A=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+        => any V > 1/(7 w_min) = 264/5 = 52.80  discharges (V>=53 ok).
+  STABLE: enlarging small-runner pool to B=16 does NOT lower w_min below 5/1848.
+  The worst core is ALWAYS the drop-6 core {1,2,3,4,5,7,8,9,10,11,12,13}.
+
+==============================================================================
+PART 2b. EXACT THEOREM VERIFICATION over genuine covering 13-sets.
+  Claim: covering S with the 12 non-max runners in {1..13} and V=max>=53
+         => C(S) holds via v=V => M(S)>=1/14.  (cross-check with exact M)
+==============================================================================
+  covering sets tested: 87;  via-V criterion FAILURES: 0
+  tightest margin W(A)-1/(7V) = 1/6468 = 0.000155 (>0)
+  exact-M checked on ALL 87: M(S)<1/14 count: 0
+  => PROVED: the single-dominant family (non-max runners <=13, V>=53) is fully
+     discharged; the geometry-derived W(A)>1/(7V) and exact M agree.
+
+==============================================================================
+PART 3. EXACT FAILURE CHARACTERIZATION (the clustered-large gap).
+==============================================================================
+  The via-LARGEST-V route uses only v=V and needs W(S\{V})>1/(7V). W(A) shrinks
+  when A contains a runner ~V (clustered), since W ~ meas/T and T grows. We probe
+  tight-window covering 13-sets and report: (a) does via-V fail? (b) does via-ANY
+  still hold (C robust)?
+  clustered-large covering sets tested: 4000
+  criterion-via-LARGEST-V FAILED (margin<=0): 0  (the dominant-route gap)
+  criterion-via-ANY-v ALSO failed (true C gap): 0
+  WORST via-V margin observed = 0.0005862  (still > 0!)
+    at S=[24, 30, 145, 154, 213, 234, 251, 362, 391, 410, 415, 420, 435], V=435: W(A)=0.000915 vs 1/(7V)=0.000328, via-any=(True, 145)
+
+  SUMMARY: the via-LARGEST route PROVABLY discharges the SINGLE-dominant family
+  (non-max runners <=13, V>=53). In the clustered-large regime its margin shrinks
+  toward 0 but was NOT observed to go negative in 4000 adversarial covering sets;
+  C(S) holds there (via-ANY-v, often via a non-max runner). The remaining open part
+  is a PROOF that via-V (or via-ANY) never fails when runners cluster near V.

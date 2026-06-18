@@ -1,0 +1,106 @@
+==============================================================================
+PART 1: bounded-max reduction -- where does the arc-width criterion handle S?
+==============================================================================
+
+  Two thresholds:
+    B_pig  = the max(S) above which the PIGEONHOLE-PROVABLE criterion (mu/N) fires
+             on every covering 13-set (so all such S are RIGOROUSLY handled).
+    B_C    = the max(S) above which the EXACT-W criterion C(S) never fails on search
+             (empirical; stronger but the universal proof is the open GAP).
+
+  sampled covering 13-sets where PIGEONHOLE (mu/N) fails: 304
+    largest max(S) with pigeonhole-fail: 156
+  of those, EXACT-W criterion C(S) ALSO fails: 0
+    exact-W criterion C held on EVERY sampled set (no fail).
+
+------------------------------------------------------------------------------
+PART 1b: a CLEAN provable bound. Remove the largest runner V; bound when pigeon fires.
+------------------------------------------------------------------------------
+
+  Remove v=V=max(S). A=S\{V} (12 distinct runners, each < V). Pigeon fires via V iff
+        7V*mu(A) > sum_{u in A} u.
+  mu(A) = 1 - (1/7) sum_{u in A} 1/u >= 1 - (1/7) H_12   (sum 1/u maximal at A={1..12}),
+        = 1 - H_12/7.  And sum_{u in A} u <= sum of the 12 largest entries < V, but that is
+  not bounded by a constant when the set is CLUSTERED. So removing V alone does NOT give a
+  clean constant bound for clustered sets -- this is exactly the GAP the task flags.
+
+  H_12 = 86021/27720 ~ 3.10321;  mu(A) >= 1 - H_12/7 = 108019/194040 ~ 0.55668
+  SINGLE-large family ({12 of 1..13} + V): pigeon-via-V fires iff V > 21.3937
+    (worst 12-core [1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13]); so B_pig^single = 22 suffices there.
+  => For single-large covering sets, pigeonhole PROVES C for V >= 22. Finite base: V <= 21.
+  => For CLUSTERED-large sets the mu/N pigeon is too weak (N << sum_A u); the EXACT W is
+     needed and its universal lower bound is the remaining GAP (Angle A's open part).
+
+==============================================================================
+PART 2: how many covering 13-sets have all entries <= B? (finiteness + feasibility)
+==============================================================================
+  Total 13-subsets of {1..B} = C(B,13):
+    B=  14:  C(14,13) = 14
+    B=  20:  C(20,13) = 77,520
+    B=  28:  C(28,13) = 37,442,160
+    B=  40:  C(40,13) = 12,033,222,880
+    B=  56:  C(56,13) = 1,889,912,732,400
+    B=  84:  C(84,13) = 625,806,790,696,080
+    B= 120:  C(120,13) = 87,586,833,265,107,120
+    B= 168:  C(168,13) = 8,470,484,585,302,467,168
+    B= 300:  C(300,13) = 19,668,791,957,704,116,141,600
+
+  C(B,13) is the crude superset count; the COVERING ones are a small fraction, but C(B,13)
+  is the work an exhaustive sweep does (we filter covering inside the loop). Feasible region:
+  C(B,13) up to ~10^8-10^9 with the float-prescreen M_fast (most sets decided without exact M).
+  Beyond B~40 the raw C(B,13) explodes, so the sweep must enumerate covering sets DIRECTLY,
+  not filter -- see Part 3, which constrains the large runner to the few covering-forced values.
+
+
+==============================================================================
+PART 3: exact finite M-check, inf M, stabilization
+==============================================================================
+
+  Sweep the SINGLE-large covering family {12 of 1..13} + e (14<=e<=B) exhaustively with exact M.
+  This is the family containing the known global minimizer S*={1..11,13,84}, M=7/89.
+  Report inf M for increasing B and whether it stabilizes at 7/89.
+
+  B=  84: single-large covering swept=     45  exact-min M=7/89=0.078652  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84])  below 1/14:0  [2.8s]
+  B= 168: single-large covering swept=     93  exact-min M=7/89=0.078652  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84])  below 1/14:0  [11.0s]
+  B= 182: single-large covering swept=    101  exact-min M=14/183=0.076503  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182])  below 1/14:0  [13.8s]
+  B= 300: single-large covering swept=    163  exact-min M=14/183=0.076503  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182])  below 1/14:0  [36.0s]
+  B= 600: single-large covering swept=    329  exact-min M=14/183=0.076503  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182])  below 1/14:0  [143.5s]
+  B=1200: single-large covering swept=    669  exact-min M=14/183=0.076503  (arg [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182])  below 1/14:0  [565.4s]
+
+  GLOBAL inf M over single-large family (B<=600) = 14/183 = 0.076503
+    achieved at [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    1/14 = 0.071429;  7/89 = 0.078652
+    inf M >= 1/14 ?  True   (= 7/89 ?  False)
+
+==============================================================================
+PART 4: clustered-large finite base -- exhaustive small-B covering sweep (all structures)
+==============================================================================
+
+  The single-large family is not all covering sets; clustered-large sets exist. But by Part 1b,
+  EVERY covering 13-set with max(S) > B_0 is handled by the criterion (pigeonhole for single-large,
+  exact-W empirically for clustered). To make a COMPLETE finite base we must also enumerate
+  clustered covering sets with max <= B_0. Here we do the genuinely exhaustive sweep over ALL
+  covering 13-subsets of {1..B0} for small B0, confirming inf M there too.
+
+  B0=14: exhaustive primitive covering 13-subsets of {1..14}: count=     7  exact-min M=2/23=0.086957  arg=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]  below 1/14:0  [C(14,13)=14]  [0.0s]
+  B0=18: exhaustive primitive covering 13-subsets of {1..18}: count=   966  exact-min M=1/12=0.083333  arg=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]  below 1/14:0  [C(18,13)=8,568]  [1.1s]
+  B0=22: exhaustive primitive covering 13-subsets of {1..22}: count=31,471  exact-min M=1/12=0.083333  arg=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]  below 1/14:0  [C(22,13)=497,420]  [24.9s]
+  B0=24: exhaustive primitive covering 13-subsets of {1..24}: count=184,757  exact-min M=1/13=0.076923  arg=[2, 4, 6, 8, 10, 12, 13, 14, 16, 18, 20, 22, 24]  below 1/14:0  [C(24,13)=2,496,144]  [147.8s]
+
+==============================================================================
+VERDICT
+==============================================================================
+
+  - EXACT decidability: M(S)>=1/14 is exactly decidable (denom(M)<=2max(S)); the finite base
+    is a genuine terminating computation. (The 'M in (1/(14 lcm))Z' quantization claimed in the
+    task is FALSE for M -- it holds for the LONELY MEASURE L, THM-522. M's correct quantization
+    is denom(M) | (2v_i) or (v_a +/- v_b), giving denom(M)<=2max(S). Decidability is unaffected.)
+  - inf M over the single-large family: 7/89~0.07865 up to B<=168, then 14/183~0.07650 (at e=182);
+    BOTH are > 1/14. (HONESTY: the repo 'inf M = 7/89' is only the B<=168 value; the 1..12 + 182
+    config gives a smaller 14/183 that is still LRC-good. Watch for further drops at larger e.)
+  - The bounded-max reduction is CLEAN and PROVED for the SINGLE-large family (pigeon B_pig=22).
+  - For CLUSTERED-large covering sets the pigeonhole (mu/N) is too weak; the exact-W criterion
+    holds on all searches but its UNIVERSAL proof is the remaining GAP. So: Angle A (large, single)
+    + this finite base = COMPLETE proof for the single-large family; the clustered-large universal
+    bound is the one missing lemma.
+

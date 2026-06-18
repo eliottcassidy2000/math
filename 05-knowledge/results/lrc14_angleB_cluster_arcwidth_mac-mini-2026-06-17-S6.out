@@ -1,0 +1,46 @@
+================================================================================
+ANGLE B: sharper widest-arc bound for the CLUSTERED-large regime
+================================================================================
+
+[LEMMA 1] DIRECT first-gap cluster lemma  (13 Vmin > Vmax => arc J all-safe)
+  all-large covering 13-sets tested: 1950
+  Lemma-1 applies (13 Vmin > Vmax), witness verified safe: 1950/1950
+  exact-M spot checks (Vmin,Vmax,M,M>=1/14): [(60, 77, '60/137', True), (146, 161, '146/307', True), (504, 518, '36/73', True), (1001, 1017, '1001/2018', True), (1778, 1794, '889/1786', True)]
+  => Lemma 1 PROVES LRC(14) looseness for EVERY all-large clustered covering 13-set.
+  e.g. S=[146, 147, 148, 150, 152, 153, 154, 156, 157, 158, 159, 160, 161]
+       Vmin=146 Vmax=161; J=(1/2044,13/2254); width=1737/329084
+       witness tau0=2059/658168=0.003128; M(S)=146/307=0.4756
+
+[LEMMA 2] band-fit mixed lemma (small WIDE arc + clustered BAND fitting one gap)
+  clustered covering 13-sets tested: 2206
+  closed by Lemma 1 (direct cluster):       765
+  closed by Lemma 2 (clean band-fit):       0
+  needs exact CRT odd-mult search (residual): 1441
+  NO witness found at all:                   0  (of these M<1/14: 0)
+  CRT-residual example: S=[1, 2, 3, 4, 406, 407, 414, 416, 420, 429, 432, 441, 450]
+
+================================================================================
+VERDICT
+================================================================================
+PROVED: Lemma 1 closes ALL all-large clustered covering 13-sets (spread ratio < 13).
+PROVED: Lemma 2 closes the mixed clustered sets whose BAND fits inside one safe gap
+        (sB*q <= 6/7 with an aligning integer j) -- a clean closed-form sufficient cond.
+RESIDUAL: 'tooth-straddling' clustered sets (band wider than one gap at the working scale)
+        still have a witness (VERIFIED via exact CRT odd-multiple search, 0 failures) but
+        no closed-form bound yet -- the precise remaining obstruction for ANGLE B.
+These SHARPER bounds beat pigeonhole W>=mu/sum(u) exactly where it is too weak (sum(u)~12V).
+
+================================================================================
+SUPPLEMENTARY CONFIRMATIONS (mac-mini-2026-06-17-S6)
+================================================================================
+[Lemma 1 scope] EXACT = {covering 13-sets with Vmax < 13*Vmin}; ratio Vmax/Vmin<13.
+  - all-large clustered (window ~14): ratio ->1, always closed. 1950/1950 verified.
+  - also closes mixed like {7,8,..,13,72,75,77,78,80,84} (Vmin=7,Vmax=84,ratio=12): witness safe.
+[Lemma 2 implication] band-fit => all-band-safe: 85555 hypothesis-satisfying cases, 0 violations
+  (proof is monotonicity of u*t in u; PROVED).
+[W/threshold ratio scan] 1050 clustered covering sets: min W(S\v)/(1/7v) = 2.92 (>1, margin OK).
+  ratio shrinks toward ~1.16 in very-large V cases but stays > 1 (criterion C holds).
+[Residual obstruction] genuine mixed clustered (small + cluster of spread sB~35-40):
+  at the witness the band runners occupy 3-4 DISTINCT gap indices => irreducibly CRT;
+  sharp average-gap pigeonhole FAILS (avg gap < 1/(7v)); widest gap ~4x average is what saves C.
+  Witness ALWAYS found (Lemma1/2 or exact CRT odd-mult search), 0 failures across ~3500+ sets.

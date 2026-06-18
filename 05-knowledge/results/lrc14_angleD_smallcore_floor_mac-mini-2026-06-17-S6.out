@@ -13,4 +13,15 @@ SMALL-CORE SAFE-ARC FLOOR:  min over 12-subsets A of W(A) vs threshold 1/(7V)
     i.e. for V >= 53, C is AUTOMATIC via the parked runner.
     => only parked runners V <= 52 need a separate check (FINITE).
 
-[4] adversarial 12-core: large incommensurate runners to MINIMIZE W
+[4] adversarial 12-core: large incommensurate runners to MINIMIZE W (bounded)
+    min W over adversarial 12-cores: 5/1848 = 0.002706
+      at A = (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 50, 53)
+    NOTE: each runner contributes total danger measure exactly 2*(1/14)=1/7 (u teeth x 2c/u).
+    With 12 runners, total danger <= 12/7 (overlaps reduce it); a gap can still close.
+
+INTERPRETATION:
+  The floor argument bounds W from below ONLY when the 12-core is the SMALL set {1..13}.
+  When the other 12 runners include large incommensurate ones, W CAN be driven small.
+  BUT in a PRIMITIVE covering 13-set the small runners 1..13 are forced to be present
+  to cover small moduli (you cannot cover q=11,13 etc with only large multiples and stay
+  13 runners), so the relevant cores are NOT freely adversarial. That is the gap C closes.

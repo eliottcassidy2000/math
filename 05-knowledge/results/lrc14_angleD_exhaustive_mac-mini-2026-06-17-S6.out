@@ -1,0 +1,19 @@
+==============================================================================
+ANGLE D EXHAUSTIVE: structured covering 13-sets, test C on every one
+==============================================================================
+  sporadic pool size (<= 420): 328
+  tested (1-sporadic + full-13 + slice of 2-sporadic): 494
+  C FAILURES: 0
+  tightest successful margin W-1/(7v): 0.00010823 at v=11
+     S = (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42)
+  ==> C HELD on EVERY set in this exhaustive structured family.
+
+  [2-sporadic exhaustive on reduced pool]
+    tested 1731; C failures 0; tightest margin 0.00143012 at v=12
+      S=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16, 56)
+    ==> C held on every 2-sporadic set tested.
+
+VERDICT (exhaustive structured):
+  TOTAL C FAILURES across exhaustive structured family: 0
+  global tightest margin: 0.00010823
+  C HOLDS UNIVERSALLY on this family (uniform positive margin).

@@ -1,0 +1,42 @@
+==============================================================================
+[0] HONEST CHECK: the prompt's mu(A)=1-sum 1/(7u) is NOT the safe measure.
+==============================================================================
+  A=[2]
+    true safe meas = 6/7 = 0.857143 ; prompt mu = 0.928571 ; prompt mu/sum(u) = 0.464286
+    true widest W  = 3/7 = 0.428571 ; #safe arcs = 2 ; sum(u) = 2
+    => prompt 'W>=mu/sum(u)'  is  False  (FALSE for the 12-core).
+  A=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13]
+    true safe meas = 7/858 = 0.008159 ; prompt mu = 0.569505 ; prompt mu/sum(u) = 0.006700
+    true widest W  = 5/1848 = 0.002706 ; #safe arcs = 4 ; sum(u) = 85
+    => prompt 'W>=mu/sum(u)'  is  False  (FALSE for the 12-core).
+
+==============================================================================
+[1] DOMINANT-RUNNER CLOSURE (PROVED): finite W(A) over size-12 cores ⊆ {1..13}.
+==============================================================================
+  size-12 cores covering 2..13: min W(A) = 5/1848 = 0.002706  at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+  V >= 53  ==>  1/(7V) <= 1/371 < 5/1848  ==>  C(S) via v=V  ==>  M(S)>=1/14.
+  single-large parked window to finite-check: V in {14,28,42} (all < 53).
+    S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 14]: ARCWIDTH v=11 -> M>=1/14 (window check ok)
+    S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 28]: ARCWIDTH v=12 -> M>=1/14 (window check ok)
+    S=[1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42]: ARCWIDTH v=11 -> M>=1/14 (window check ok)
+
+==============================================================================
+[2] DETERMINISTIC DECISION on representative covering 13-sets
+==============================================================================
+  champion {1..11,13,84}      : ARCWIDTH v=   84  W=0.004082 > 1/(7v)=0.001701
+  q-floor {1..12,182}         : ARCWIDTH v=  182  W=0.005952 > 1/(7v)=0.000785
+  drop6 {1..5,7..13,84}       : ARCWIDTH v=   84  W=0.002706 > 1/(7v)=0.001701
+  clustered {1..6,~840 x7}    : ARCWIDTH v=  819  W=0.000420 > 1/(7v)=0.000174
+  clustered {1..6,~2520 x7}   : ARCWIDTH v= 2514  W=0.000141 > 1/(7v)=0.000057
+
+==============================================================================
+[3] STRESS TEST: is the deterministic decision TOTAL on covering 13-sets?
+==============================================================================
+  covering 13-sets tested: 2000
+  decided by ARCWIDTH (C(S) holds, PROVES M>=1/14): 2000
+  fell back to constructive WITNESS (b<=120): 0  (max b used: 0)
+  OPEN (neither): 0
+  invalid decisions (self-check, must be 0): 0
+  => DECISION IS TOTAL on the sample: every covering 13-set gets a valid
+     loose-witness certificate (arc-width C(S) on all but a few; constructive
+     small-denominator witness on the clustered residue).

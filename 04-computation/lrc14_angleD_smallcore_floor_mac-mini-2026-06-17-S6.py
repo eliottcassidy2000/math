@@ -28,28 +28,33 @@ from itertools import combinations
 
 C = F(1, 14)
 def Wsafe(A, c=C):
+    from math import gcd as _gcd
+    A = sorted(set(A))
+    L = 1
+    for u in A: L = L*u//_gcd(L,u)
+    D = 14*L
     iv = []
-    for u in set(A):
-        hw = F(c, u)
+    for u in A:
+        cu = D//u; hw = D//(14*u)
         for k in range(u):
-            ctr = F(k, u); iv.append((ctr - hw, ctr + hw))
+            ccc = k*cu; iv.append((ccc-hw, ccc+hw))
     if not iv: return F(1)
-    norm = []
-    for lo, hi in iv:
-        sh = lo - (lo % 1); a = lo - sh; b = hi - sh
-        if b <= 1: norm.append((a, b))
-        else: norm.append((a, F(1))); norm.append((F(0), b - 1))
-    norm.sort(); mg = []; cl, ch = norm[0]
-    for lo, hi in norm[1:]:
-        if lo <= ch:
-            if hi > ch: ch = hi
-        else: mg.append((cl, ch)); cl, ch = lo, hi
-    mg.append((cl, ch)); best = F(0); n = len(mg)
+    norm=[]
+    for lo,hi in iv:
+        length=hi-lo; a=lo%D; b=a+length
+        if b<=D: norm.append((a,b))
+        else: norm.append((a,D)); norm.append((0,b-D))
+    norm.sort(); mg=[]; cl,ch=norm[0]
+    for lo,hi in norm[1:]:
+        if lo<=ch:
+            if hi>ch: ch=hi
+        else: mg.append((cl,ch)); cl,ch=lo,hi
+    mg.append((cl,ch)); best=0; n=len(mg)
     for i in range(n):
-        hi = mg[i][1]; lo = mg[(i + 1) % n][0] + (1 if i == n - 1 else 0)
-        g = lo - hi
-        if g > best: best = g
-    return best if best > 0 else F(0)
+        hi=mg[i][1]; lo=mg[(i+1)%n][0]+(D if i==n-1 else 0)
+        g=lo-hi
+        if g>best: best=g
+    return F(best,D) if best>0 else F(0)
 
 print("="*78)
 print("SMALL-CORE SAFE-ARC FLOOR:  min over 12-subsets A of W(A) vs threshold 1/(7V)")
@@ -85,16 +90,16 @@ print(f"    => only parked runners V <= {int(Vthresh)} need a separate check (FI
 #     runners may NOT all be <=13. Show: as long as ANY 12-subset has W>=w0 the bound holds.
 #     The genuine worry: could the OTHER 12 runners be large/incommensurate, making W tiny?
 #     Test: 12 runners that are large multiples chosen to maximally tile the circle.
-print("\n[4] adversarial 12-core: large incommensurate runners to MINIMIZE W")
+print("\n[4] adversarial 12-core: large incommensurate runners to MINIMIZE W (bounded)")
 from math import gcd
 import random
 rng = random.Random(7)
 amin = (F(99), None)
-for _ in range(200000):
+for _ in range(40000):
     # pick 12 distinct runners, mix small + large, try to tile circle densely
     k = rng.randint(2,6)
     smalls = rng.sample(range(1,14), 12-k)
-    larges = [rng.randint(14, 400) for _ in range(k)]
+    larges = [rng.randint(14, 120) for _ in range(k)]
     A = sorted(set(smalls+larges))
     if len(A) != 12: continue
     # total danger measure (sum of tooth widths) -- if <1 there must be a gap

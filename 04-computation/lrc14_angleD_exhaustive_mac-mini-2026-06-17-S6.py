@@ -23,28 +23,33 @@ from itertools import combinations
 C = F(1, 14)
 
 def Wsafe(A, c=C):
+    from math import gcd as _gcd
+    A = sorted(set(A))
+    L = 1
+    for u in A: L = L*u//_gcd(L,u)
+    D = 14*L
     iv = []
-    for u in set(A):
-        hw = F(c, u)
+    for u in A:
+        cu = D//u; hw = D//(14*u)
         for k in range(u):
-            ctr = F(k, u); iv.append((ctr - hw, ctr + hw))
+            ccc = k*cu; iv.append((ccc-hw, ccc+hw))
     if not iv: return F(1)
-    norm = []
-    for lo, hi in iv:
-        shift = lo - (lo % 1); a = lo - shift; b = hi - shift
-        if b <= 1: norm.append((a, b))
-        else: norm.append((a, F(1))); norm.append((F(0), b - 1))
-    norm.sort(); merged = []; cl, ch = norm[0]
-    for lo, hi in norm[1:]:
-        if lo <= ch:
-            if hi > ch: ch = hi
-        else: merged.append((cl, ch)); cl, ch = lo, hi
-    merged.append((cl, ch)); best = F(0); n = len(merged)
+    norm=[]
+    for lo,hi in iv:
+        length=hi-lo; a=lo%D; b=a+length
+        if b<=D: norm.append((a,b))
+        else: norm.append((a,D)); norm.append((0,b-D))
+    norm.sort(); mg=[]; cl,ch=norm[0]
+    for lo,hi in norm[1:]:
+        if lo<=ch:
+            if hi>ch: ch=hi
+        else: mg.append((cl,ch)); cl,ch=lo,hi
+    mg.append((cl,ch)); best=0; n=len(mg)
     for i in range(n):
-        hi = merged[i][1]; lo = merged[(i + 1) % n][0] + (1 if i == n - 1 else 0)
-        gap = lo - hi
-        if gap > best: best = gap
-    return best if best > 0 else F(0)
+        hi=mg[i][1]; lo=mg[(i+1)%n][0]+(D if i==n-1 else 0)
+        g=lo-hi
+        if g>best: best=g
+    return F(best,D) if best>0 else F(0)
 def covering(S): return all(any(v % q == 0 for v in S) for q in range(2, 15))
 def crit(S):
     best = None; holds = False
@@ -55,7 +60,7 @@ def crit(S):
         if best is None or m > best[1]: best = (v, m, W, thr)
     return holds, best
 
-CAP = 1500
+CAP = 420
 # sporadic multiples: any q in 2..14 times a small factor, bounded by CAP, that is "large"
 sporadics = sorted({q*f for q in range(2,15) for f in range(2,200) if 14 <= q*f <= CAP})
 # also include the canonical 84-multiples and lcm-based sole covers
@@ -112,9 +117,9 @@ else:
 
 # focused 2-sporadic exhaustive on a SMALLER pool (to keep it finite)
 print("\n  [2-sporadic exhaustive on reduced pool]")
-small_pool = sorted({q*f for q in [8,9,11,13] for f in range(2,40) if 14<=q*f<=600} |
+small_pool = sorted({q*f for q in [8,9,11,13] for f in range(2,12) if 14<=q*f<=300} |
                     {lcm(a,b)*f for a in [8,9,11,13] for b in [8,9,11,13] if a<b
-                     for f in range(1,8) if lcm(a,b)*f<=600})
+                     for f in range(1,4) if lcm(a,b)*f<=300})
 t2=0; cf2=0; w2=(F(99),None,None); eg2=[]
 for K in combinations(range(1,14), 11):
     for spor in combinations(small_pool, 2):

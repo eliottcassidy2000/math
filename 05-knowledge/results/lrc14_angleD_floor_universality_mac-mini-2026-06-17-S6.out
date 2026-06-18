@@ -1,0 +1,22 @@
+==============================================================================
+FLOOR UNIVERSALITY:  is W(12-core) >= 5/1848 always?  + finite V<=52 check
+==============================================================================
+  floor W0 = 5/1848 = 0.002706;  threshold V > 1848/35 = 52.800  => V>=53 auto.
+
+[1] minimize W over 12-cores (keep >=8 small runners; large runners <= 120)
+    min W = 9/3920 = 0.0022959  at A=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 40)
+    cores with W < 5/1848: 1
+    ==> floor BROKEN. The simple floor argument needs the covering constraint.
+
+[1b] EXHAUSTIVE min W over 12-subsets of {1..20}:
+    exhaustive min W over 12-subsets of 1..20 = 2/1001 = 0.0019980  at (1, 2, 5, 6, 7, 8, 9, 11, 13, 17, 19, 20)
+
+[2] FINITE CHECK: all covering 13-sets with max(S) <= 52 satisfy C?
+    covering 13-sets with max<=52 checked: 11341
+    C failures: 0   (LRC breaks M<1/14: 0)
+    ==> C held on every covering 13-set with max<=52 tested.
+
+VERDICT:
+  floor over 12-subsets of 1..20: 2/1001 (= 5/1848 expected: False)
+  floor broken by large-runner cores: YES
+  V<=52 finite family C failures: 0
