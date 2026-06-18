@@ -1,0 +1,13 @@
+b2 stability P= [1, 2, 3, 4, 5, 6, 8, 9, 11, 13] a,b= 14 28
+  c=   29 cov=False gcd=1 M=2/17=0.117647
+  c=   30 cov=False gcd=1 M=2/17=0.117647
+  c=   31 cov=False gcd=1 M=2/17=0.117647
+  c=   40 cov=False gcd=1 M=2/17=0.117647
+  c=   50 cov=False gcd=1 M=2/17=0.117647
+  c=   60 cov=True gcd=1 M=2/17=0.117647
+  c=   80 cov=False gcd=1 M=2/17=0.117647
+  c=  120 cov=True gcd=1 M=2/17=0.117647
+  c=  200 cov=False gcd=1 M=2/17=0.117647
+  c=  400 cov=False gcd=1 M=2/17=0.117647
+  c=  800 cov=False gcd=1 M=2/17=0.117647
+  c= 1600 cov=False gcd=1 M=2/17=0.117647

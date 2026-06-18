@@ -1,0 +1,60 @@
+=== S* (MISTAKE-076): S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+    cov=True prim=True k(big)=2 case=S3 Vmin=1 Vmax=42
+    M=2/23 (M*14=28/23, >=1/14? True) tau*=4/23
+    binding runners at tau*: [11, 12]
+    crossing reps (va,vb,D,j): [(11, 12, 23, 4)]
+    j>=D/14 for all reps: True
+    mult-of-14: [42]  mult-of-7: [7, 42]
+    private q-owners (q->runner): {8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 13, 14: 42}
+    parked(unique mult14)=42  parked in binding pair? False
+    parked appears in some crossing rep: False
+    M(S minus parked 42) = 2/23 (>=1/14? True)  -> parked essential to LRC? False
+
+=== G2 (HYP-2581): S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 27, 28]
+    cov=True prim=True k(big)=2 case=S3 Vmin=1 Vmax=28
+    M=2/19 (M*14=28/19, >=1/14? True) tau*=5/19
+    binding runners at tau*: [8, 11, 27]
+    crossing reps (va,vb,D,j): [(8, 11, 19, 5), (8, 27, 19, 5), (11, 27, 38, 10)]
+    j>=D/14 for all reps: True
+    mult-of-14: [28]  mult-of-7: [7, 28]
+    private q-owners (q->runner): {6: 12, 8: 8, 10: 10, 11: 11, 12: 12, 13: 13, 14: 28}
+    parked(unique mult14)=28  parked in binding pair? False
+    parked appears in some crossing rep: False
+    M(S minus parked 28) = 2/19 (>=1/14? True)  -> parked essential to LRC? False
+
+=== champion 84: S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]
+    cov=True prim=True k(big)=1 case=S1 Vmin=1 Vmax=84
+    M=7/89 (M*14=98/89, >=1/14? True) tau*=37/89
+    binding runners at tau*: [5, 84]
+    crossing reps (va,vb,D,j): [(5, 84, 89, 37)]
+    j>=D/14 for all reps: True
+    mult-of-14: [84]  mult-of-7: [7, 84]
+    private q-owners (q->runner): {8: 8, 9: 9, 10: 10, 11: 11, 12: 84, 13: 13, 14: 84}
+    parked(unique mult14)=84  parked in binding pair? True
+    parked appears in some crossing rep: True
+    M(S minus parked 84) = 1/12 (>=1/14? True)  -> parked essential to LRC? False
+
+=== champion 182 (k=1!): S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    cov=True prim=True k(big)=1 case=S1 Vmin=1 Vmax=182
+    M=14/183 (M*14=196/183, >=1/14? True) tau*=14/183
+    binding runners at tau*: [1, 182]
+    crossing reps (va,vb,D,j): [(1, 182, 183, 14)]
+    j>=D/14 for all reps: True
+    mult-of-14: [182]  mult-of-7: [7, 182]
+    private q-owners (q->runner): {8: 8, 9: 9, 10: 10, 11: 11, 12: 12, 13: 182, 14: 182}
+    parked(unique mult14)=182  parked in binding pair? True
+    parked appears in some crossing rep: True
+    M(S minus parked 182) = 1/13 (>=1/14? True)  -> parked essential to LRC? False
+
+=== wide cluster: S=[2, 6, 8, 12, 20, 78, 104, 130, 156, 182, 208, 234, 260]
+    cov=False prim=False k(big)=9 case=S3 Vmin=2 Vmax=260
+    M=12/67 (M*14=168/67, >=1/14? True) tau*=73/268
+    binding runners at tau*: [8, 260]
+    crossing reps (va,vb,D,j): [(8, 260, 268, 73)]
+    j>=D/14 for all reps: True
+    mult-of-14: [182]  mult-of-7: [182]
+    private q-owners (q->runner): {7: 182, 9: 234, 14: 182}
+    parked(unique mult14)=182  parked in binding pair? False
+    parked appears in some crossing rep: False
+    M(S minus parked 182) = 12/67 (>=1/14? True)  -> parked essential to LRC? False
+

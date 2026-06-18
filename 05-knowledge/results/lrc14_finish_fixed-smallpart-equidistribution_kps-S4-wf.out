@@ -1,0 +1,98 @@
+================================================================================
+(A) BOUNDEDNESS: meas(G_P)>0 for every PROPER fixed small part (the in-scope ones)
+================================================================================
+  degenerate P={1..13}: M(P)=1/14, meas(G_P)=0  -> EXCLUDED (then |L|=0, no cluster).
+  per-size infimum of meas(G_P) over subsets P with meas(G_P)>0 (== M(P)>1/14) (exhaustive):
+  NOTE meas(G_P)>0  <=>  M(P)>1/14  (G_P has positive measure iff the min-gap exceeds 1/14
+       on an OPEN set; meas=0 means M(P)=1/14 reached only at isolated boundary points).
+     |P|= 2 : inf{meas>0} = 66/91          = 0.725275   (#subsets with meas=0: 0)
+     |P|= 3 : inf{meas>0} = 55/91          = 0.604396   (#subsets with meas=0: 0)
+     |P|= 4 : inf{meas>0} = 1979/4004      = 0.494256   (#subsets with meas=0: 0)
+     |P|= 5 : inf{meas>0} = 2243/5880      = 0.381463   (#subsets with meas=0: 0)
+     |P|= 6 : inf{meas>0} = 3029/10780     = 0.280983   (#subsets with meas=0: 0)
+     |P|= 7 : inf{meas>0} = 45107/229320   = 0.196699   (#subsets with meas=0: 0)
+     |P|= 8 : inf{meas>0} = 2479/17640     = 0.140533   (#subsets with meas=0: 0)
+     |P|= 9 : inf{meas>0} = 10601/114660   = 0.092456   (#subsets with meas=0: 0)
+     |P|=10 : inf{meas>0} = 14249/252252   = 0.056487   (#subsets with meas=0: 0)
+     |P|=11 : inf{meas>0} = 313/9702       = 0.032261   (#subsets with meas=0: 0)
+     |P|=12 : inf{meas>0} = 7/858          = 0.008159   (#subsets with meas=0: 0)
+  ==> EVERY proper P with M(P)>1/14 has meas(G_P) >= 7/858 > 0 (worst = drop-6, |P|=12).
+  These are exactly the small parts that can appear in a genuine MIXED S3 set (|P|<=12).
+
+================================================================================
+(B) LIMITING CLUSTER DENSITY rho_infty(P,offsets) = avg of w(tau) over widest P-arc (EXACT)
+================================================================================
+  P=[1, 2, 3]    |L|=10 : widest P-arc width W_P=0.23809523809523808 rho_infty=avg w=0.032313  (>0:True)
+  P=[1, 2, 3]    |L|= 9 : widest P-arc width W_P=0.23809523809523808 rho_infty=avg w=0.145483  (>0:True)
+  P=[1, 2, 3, 4] |L|= 9 : widest P-arc width W_P=0.16071428571428573 rho_infty=avg w=0.094838  (>0:True)
+  P=[1, 2, 3, 5, 7] |L|= 8 : widest P-arc width W_P=0.061224489795918366 rho_infty=avg w=0.182202  (>0:True)
+  P=[1, 2, 3]    |L|=10 : widest P-arc width W_P=0.23809523809523808 rho_infty=avg w=0.067755  (>0:True)
+
+================================================================================
+(C) CONSTRUCTIVE sub-arc [a',b'], common window Omega* (width g*>0), EXPLICIT threshold V0*
+================================================================================
+  P=[1, 2, 3]    |L|=10 : sub-arc width s=1.2363e-02  Omega* width g*=0.02679  ==> V0* = 81
+       (V0>=81  =>  GLOBAL WITNESS  =>  M(S)>=1/14, PROVED constructively; exact s=313855741630721035741025/25387442211907212668829696)
+  P=[1, 2, 3]    |L|= 9 : sub-arc width s=1.3458e-02  Omega* width g*=0.10317  ==> V0* = 75
+       (V0>=75  =>  GLOBAL WITNESS  =>  M(S)>=1/14, PROVED constructively; exact s=1024958847064576908990011/76162326635721638006489088)
+  P=[1, 2, 3, 4] |L|= 9 : sub-arc width s=1.2458e-02  Omega* width g*=0.08929  ==> V0* = 81
+       (V0>=81  =>  GLOBAL WITNESS  =>  M(S)>=1/14, PROVED constructively; exact s=1265154927503681694459947/101549768847628850675318784)
+  P=[1, 2, 3, 5, 7] |L|= 8 : sub-arc width s=9.2084e-03  Omega* width g*=0.07005  ==> V0* = 109
+       (V0>=109  =>  GLOBAL WITNESS  =>  M(S)>=1/14, PROVED constructively; exact s=253258765451675787756733/27503062396232813724565504)
+  P=[1, 2, 3]    |L|=10 : sub-arc width s=1.5756e-02  Omega* width g*=0.08929  ==> V0* = 64
+       (V0>=64  =>  GLOBAL WITNESS  =>  M(S)>=1/14, PROVED constructively; exact s=266674813150285847361655/16924961474604808445886464)
+
+================================================================================
+(D) VALIDATION on ACTUAL covering+primitive S3 sets, fixed (P,offsets), growing V0
+================================================================================
+  pattern P=[1, 2, 3] offsets=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  (|S|=13)
+  PROVED threshold V0* = 81  (s=1.236e-02, g*=0.0268)
+   V0    |S| gcd  cov   class   M(S)            M>=1/14?  witness?
+     14   13    1  False     S3  4/37            True      True   
+     20   13    1   True     S3  5/47            True      True    <-- in scope
+     28   13    1  False     S3  1/9             True      True   
+     40   13    1  False     S3  10/87           True      True   
+     56   13    1  False     S3  2/17            True      True   
+     84   13    1   True     S3  3/25            True      True    <-- in scope
+    112   13    1   True     S3  4/33            True      True    <-- in scope
+    168   13    1   True     S3  6/49            True      True    <-- in scope
+    210   13    1  False     S3  53/429          True      True   
+    308   13    1   True     S3  11/89           True      True    <-- in scope
+    420   13    1   True     S3  15/121          True      True    <-- in scope
+    560   13    1  False     S3  20/161          True      True   
+    700   13    1   True     S3  25/201          True      True    <-- in scope
+   1000   13    1   True     S3  250/2007        True      True    <-- in scope
+   1500   13    1  False     S3  375/3007        True      True   
+   2200   13    1  False     S3  550/4407        True      True   
+  in-scope (covering+primitive) rows: 8 ; with M>=1/14: 8
+  ==> ALL in-scope rows pass; threshold V0*=81, all covering rows tested have V0 with witness.
+
+  --- second pattern (spread offsets), confirm threshold behavior ---
+  P=[1, 2, 3, 4] offsets=[0, 2, 5, 8, 11, 14, 17, 20, 23]  V0*=81
+  covering+primitive rows with V0 in [14,400): 26 ; all M>=1/14: 26/26
+
+================================================================================
+(E) HONEST SCOPE — what is and is NOT closed
+================================================================================
+  CLOSED (PROVED, this angle): every primitive covering 13-set S = P U L with
+     - P subset {1..13} FIXED with M(P)>1/14 (=> meas(G_P)>0; the in-scope mixed sets, |P|<=12),
+     - L a single tight cluster {V0+d_i} with FIXED offsets d_i (d_c<12 V0),
+     - V0 >= V0*(P,offsets)  [EXPLICIT, from the constructive sub-arc width],
+   has a GLOBAL WITNESS, hence M(S)>=1/14.  V0<V0* is a FINITE exact check per (P,offsets).
+
+  NOT closed by this angle (the genuine residual):
+   (i) AP / coordinated-growth families with NO fixed small part. e.g. {t,2t,...,12t,V}:
+        t=1: speeds<=13 = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]  (a SHRINKING t-dependent set, not a fixed P)
+        t=2: speeds<=13 = [2, 4, 6, 8, 10, 12]  (a SHRINKING t-dependent set, not a fixed P)
+        t=3: speeds<=13 = [3, 6, 9, 12]  (a SHRINKING t-dependent set, not a fixed P)
+        t=5: speeds<=13 = [5, 10]  (a SHRINKING t-dependent set, not a fixed P)
+   (ii) clusters that are NOT tight (Vmax/Vmin >= 13) -- but those are NOT S3-residual:
+        spread>=13 with a fixed small part still tight-clusters the LARGE part; the genuine
+        wide case is the AP family (i).
+   (iii) multiple separated clusters (offsets not bounded) -- offsets must be FIXED & bounded.
+
+  Net: this CLOSES the fixed-small-part single-tight-cluster sub-family of S3 with explicit V0*;
+  it does NOT close the AP-like coordinated-growth sub-family (the asymptotically-tight core,
+  M->2/23 etc.), which remains the open residual (HYP-2581d / OPEN-Q-108).
+
+DONE.

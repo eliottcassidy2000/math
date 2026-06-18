@@ -1,0 +1,46 @@
+====================================================================================
+(1) BAD-SHAPE LOCALISATION at tau = k/7  (exact 7-adic residue rule)
+====================================================================================
+  Claim: for gcd(k,7)=1, ||v*k/7|| = 0 iff 7|v, else in {1/7,2/7,3/7} (>1/14).
+  Verified for k in coprime-to-7, v=1..59: rule holds = True
+  => at tau=k/7 the ONLY dangerous runners are the multiples of 7.
+     min nonzero ||v k/7|| = 1/7 = 0.14286 >> 1/14 = 0.07143.
+     So a covering set, which MUST contain a multiple of 7 (and of 14), can NEVER
+     use tau=k/7 itself as a witness: that runner sits exactly on an integer.
+
+====================================================================================
+(2) THE 7-ADIC FORCED DISPLACEMENT from k/7
+====================================================================================
+  Write tau = k/7 + xi.  For a multiple of 7, say m7 = 7t:
+      ||m7 * tau|| = ||7t*k/7 + 7t*xi|| = ||t*k + m7*xi|| = ||m7 * xi||.
+  Safety of m7 (>= 1/14) forces  ||m7 xi|| >= 1/14, i.e. the NEAREST integer multiple
+  of 1/m7 to xi is at distance >= 1/(14 m7). In particular |xi| >= 1/(14 m7) (taking the
+  integer 0). So the witness is pushed at least 1/(14 m7) off k/7.  The LARGER the
+  mult-of-7 runner, the SMALLER the forced room -- the tightest squeeze.
+  Forced minimal displacement |xi|_min = 1/(14*m7) for several m7 (mult of 7):
+    m7=    7: |xi|_min = 1/98 = 1.020e-02
+    m7=   14: |xi|_min = 1/196 = 5.102e-03
+    m7=   21: |xi|_min = 1/294 = 3.401e-03
+    m7=   28: |xi|_min = 1/392 = 2.551e-03
+    m7=   42: |xi|_min = 1/588 = 1.701e-03
+    m7=   49: |xi|_min = 1/686 = 1.458e-03
+    m7=   56: |xi|_min = 1/784 = 1.276e-03
+    m7=   98: |xi|_min = 1/1372 = 7.289e-04
+    m7=  693: |xi|_min = 1/9702 = 1.031e-04
+
+  KEY TENSION: at xi=0 the small runners (residues mod 7) are at distance >=1/7 (huge
+  margin). As |xi| grows to clear m7, the FAST runners v (large, in the cluster) sweep
+  ||v xi|| quickly: a runner v has ||v tau|| = ||(v mod 7)*k/7 + v*xi||. For 7|v this is
+  ||v xi||; for 7 not| v it starts at >=1/7 and moves at rate v. The bad shape wants ALL
+  cluster runners simultaneously near the 1/14 floor -- a fine resonance. Covering pins
+  the mod-7 residues, breaking the resonance. We quantify next.
+
+====================================================================================
+(3) EXACT LIFT at the forced-displaced tau near k/7 -- worst covering sets
+====================================================================================
+  For each covering primitive S3 set we (a) compute exact M, (b) locate the optimal
+  tau*, (c) measure its 7-adic position: the nearest k/7 and the displacement |tau* - k/7|,
+  and (d) check whether the binding (minimizing) runner at tau* is a multiple of 7.
+  This tests the thesis that M is PINNED by the covering mult-of-7 obligation.
+
+  Generated 4000 covering primitive S3 sets (clustered-large).

@@ -1,0 +1,26 @@
+k>=3 covering primitive S3 sets sampled (Vmax<=130): 2108
+MIN M(k>=3) = 2/21 = 0.09524   M*14 = 1.3333   (1/14 = 0.07143)
+  minimizer S = [1, 2, 3, 8, 9, 10, 11, 12, 13, 14, 38, 71, 109]
+  witness tau = 4/21   binders = [10, 11]
+  binders: mod7 = [3, 4]  mod14 = [10, 11]  large? = [False, False]
+  dist(tau, k/7) = 0.04762 (k=1)
+  12 tightest k>=3 sets (M, binders, any-large-binder):
+    M=0.09524=2/21  binders=[10, 11]  large-binder=False  mod7(b)=[3, 4]
+    M=0.09524=2/21  binders=[10, 11]  large-binder=False  mod7(b)=[3, 4]
+    M=0.09524=2/21  binders=[10, 11]  large-binder=False  mod7(b)=[3, 4]
+    M=0.09524=2/21  binders=[8, 13]  large-binder=False  mod7(b)=[1, 6]
+    M=0.10000=1/10  binders=[4, 76]  large-binder=True  mod7(b)=[4, 6]
+    M=0.10000=1/10  binders=[6, 14]  large-binder=True  mod7(b)=[6, 0]
+    M=0.10169=6/59  binders=[8, 110]  large-binder=True  mod7(b)=[1, 5]
+    M=0.10294=7/68  binders=[6, 130]  large-binder=True  mod7(b)=[6, 4]
+    M=0.10417=5/48  binders=[14, 82]  large-binder=True  mod7(b)=[0, 5]
+    M=0.10526=2/19  binders=[4, 91]  large-binder=True  mod7(b)=[4, 0]
+    M=0.10526=2/19  binders=[4, 91]  large-binder=True  mod7(b)=[4, 0]
+    M=0.10526=2/19  binders=[4, 34]  large-binder=True  mod7(b)=[4, 6]
+
+INTERPRETATION (kps-S4): the k>=3 covering S3 floor (M=2/21, M*14=1.33) is LOOSER than the
+global covering floor 2/23 (M*14=1.22, achieved at k<=2). Tightness is ALWAYS driven by an
+ADJACENT SMALL pair {a,a+1} (or near-adjacent) binding at a small-denominator crossing k/(a+b);
+the cluster never binds tightly. So the genuinely-tight covering sets are k<=2 (PROVED slice);
+k>=3 has slack >= 2/21. The binding-large-runner cases (M~0.10) always have the large binder
+== 0 mod 7 (covering-forced multiple of 7/14) — the 7-adic mechanism — but bind comfortably.

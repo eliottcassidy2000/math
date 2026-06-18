@@ -1,0 +1,135 @@
+========================================================================
+PART A: principal tower {1..12, w=14m}, m=1..40. Closed form for M, tau*.
+========================================================================
+  m     w          M     M*14         tau*      bindingpair/D/j j>=D/14?
+  1    14       1/13    14/13         4/13       (3, 10, 13, 4) True cov=False
+  2    28       1/13    14/13         4/13       (3, 10, 13, 4) True cov=False
+  3    42       1/13    14/13         3/13        (4, 9, 13, 3) True cov=False
+  4    56       1/13    14/13         3/13      (9, 56, 65, 15) True cov=False
+  5    70       1/13    14/13         3/13        (4, 9, 13, 3) True cov=False
+  6    84       1/13    14/13         3/13        (4, 9, 13, 3) True cov=False
+  7    98       1/13    14/13         3/13        (4, 9, 13, 3) True cov=False
+  8   112       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+  9   126       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 10   140       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 11   154       1/13    14/13         6/13   (11, 154, 143, 66) True cov=False
+ 12   168       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 13   182     14/183  196/183       14/183    (1, 182, 183, 14) True cov=True
+ 14   196       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 15   210       1/13    14/13         6/13  (11, 210, 221, 102) True cov=False
+ 16   224       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 17   238       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 18   252       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 19   266       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 20   280       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 21   294       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 22   308       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 23   322       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 24   336       1/13    14/13         6/13  (11, 336, 325, 150) True cov=False
+ 25   350       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 26   364     28/365  392/365       28/365    (1, 364, 365, 28) True cov=True
+ 27   378       1/13    14/13         6/13       (2, 11, 13, 6) True cov=False
+ 28   392       1/13    14/13         6/13  (11, 392, 403, 186) True cov=False
+ 29   406       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 30   420       1/13    14/13         3/13    (9, 420, 429, 99) True cov=False
+ 31   434       1/13    14/13         5/13   (8, 434, 442, 170) True cov=False
+ 32   448       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 33   462       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 34   476       1/13    14/13         5/13   (8, 476, 468, 180) True cov=False
+ 35   490       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 36   504       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 37   518       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 38   532       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+ 39   546     42/547  588/547       42/547    (1, 546, 547, 42) True cov=True
+ 40   560       1/13    14/13         5/13        (5, 8, 13, 5) True cov=False
+
+Closed-form check: is M == 14/(w+1) and tau*==14/(w+1) for large m?
+  m=1 w=14: M=1/13 pred14/(w+1)=14/15 match=False  tau*=4/13 tpredmatch=False
+  m=2 w=28: M=1/13 pred14/(w+1)=14/29 match=False  tau*=4/13 tpredmatch=False
+  m=3 w=42: M=1/13 pred14/(w+1)=14/43 match=False  tau*=3/13 tpredmatch=False
+  m=4 w=56: M=1/13 pred14/(w+1)=14/57 match=False  tau*=3/13 tpredmatch=False
+  m=5 w=70: M=1/13 pred14/(w+1)=14/71 match=False  tau*=3/13 tpredmatch=False
+  m=6 w=84: M=1/13 pred14/(w+1)=14/85 match=False  tau*=3/13 tpredmatch=False
+  m=7 w=98: M=1/13 pred14/(w+1)=14/99 match=False  tau*=3/13 tpredmatch=False
+  m=8 w=112: M=1/13 pred14/(w+1)=14/113 match=False  tau*=6/13 tpredmatch=False
+  m=9 w=126: M=1/13 pred14/(w+1)=14/127 match=False  tau*=6/13 tpredmatch=False
+  m=10 w=140: M=1/13 pred14/(w+1)=14/141 match=False  tau*=6/13 tpredmatch=False
+  m=11 w=154: M=1/13 pred14/(w+1)=14/155 match=False  tau*=6/13 tpredmatch=False
+  m=12 w=168: M=1/13 pred14/(w+1)=14/169 match=False  tau*=6/13 tpredmatch=False
+  m=13 w=182: M=14/183 pred14/(w+1)=14/183 match=True  tau*=14/183 tpredmatch=True
+  m=14 w=196: M=1/13 pred14/(w+1)=14/197 match=False  tau*=6/13 tpredmatch=False
+  m=15 w=210: M=1/13 pred14/(w+1)=14/211 match=False  tau*=6/13 tpredmatch=False
+  m=16 w=224: M=1/13 pred14/(w+1)=14/225 match=False  tau*=6/13 tpredmatch=False
+  m=17 w=238: M=1/13 pred14/(w+1)=14/239 match=False  tau*=6/13 tpredmatch=False
+  m=18 w=252: M=1/13 pred14/(w+1)=14/253 match=False  tau*=6/13 tpredmatch=False
+  m=19 w=266: M=1/13 pred14/(w+1)=14/267 match=False  tau*=6/13 tpredmatch=False
+  m=20 w=280: M=1/13 pred14/(w+1)=14/281 match=False  tau*=6/13 tpredmatch=False
+  m=21 w=294: M=1/13 pred14/(w+1)=14/295 match=False  tau*=6/13 tpredmatch=False
+  m=22 w=308: M=1/13 pred14/(w+1)=14/309 match=False  tau*=6/13 tpredmatch=False
+  m=23 w=322: M=1/13 pred14/(w+1)=14/323 match=False  tau*=6/13 tpredmatch=False
+  m=24 w=336: M=1/13 pred14/(w+1)=14/337 match=False  tau*=6/13 tpredmatch=False
+  m=25 w=350: M=1/13 pred14/(w+1)=14/351 match=False  tau*=6/13 tpredmatch=False
+  m=26 w=364: M=28/365 pred14/(w+1)=14/365 match=False  tau*=28/365 tpredmatch=False
+  m=27 w=378: M=1/13 pred14/(w+1)=14/379 match=False  tau*=6/13 tpredmatch=False
+  m=28 w=392: M=1/13 pred14/(w+1)=14/393 match=False  tau*=6/13 tpredmatch=False
+  m=29 w=406: M=1/13 pred14/(w+1)=14/407 match=False  tau*=5/13 tpredmatch=False
+  m=30 w=420: M=1/13 pred14/(w+1)=14/421 match=False  tau*=3/13 tpredmatch=False
+  m=31 w=434: M=1/13 pred14/(w+1)=14/435 match=False  tau*=5/13 tpredmatch=False
+  m=32 w=448: M=1/13 pred14/(w+1)=14/449 match=False  tau*=5/13 tpredmatch=False
+  m=33 w=462: M=1/13 pred14/(w+1)=14/463 match=False  tau*=5/13 tpredmatch=False
+  m=34 w=476: M=1/13 pred14/(w+1)=14/477 match=False  tau*=5/13 tpredmatch=False
+  m=35 w=490: M=1/13 pred14/(w+1)=14/491 match=False  tau*=5/13 tpredmatch=False
+  m=36 w=504: M=1/13 pred14/(w+1)=14/505 match=False  tau*=5/13 tpredmatch=False
+  m=37 w=518: M=1/13 pred14/(w+1)=14/519 match=False  tau*=5/13 tpredmatch=False
+  m=38 w=532: M=1/13 pred14/(w+1)=14/533 match=False  tau*=5/13 tpredmatch=False
+  m=39 w=546: M=42/547 pred14/(w+1)=14/547 match=False  tau*=42/547 tpredmatch=False
+  m=40 w=560: M=1/13 pred14/(w+1)=14/561 match=False  tau*=5/13 tpredmatch=False
+========================================================================
+PART B: WHY j>=D/14? At tau*=j/D with binding pair (1,w), w=D-1.
+ ||1*tau*||=j/D (the unit runner). ||w*tau*||=||(D-1)j/D||=||-j/D||=j/D. matched.
+ Need j/D>=1/14 i.e. 14j>=D=w+1. The OTHER 11 runners (2..12) must also clear j/D.
+ The binding LEVEL is set by unit runner (1) and parked runner (w) TOGETHER.
+ The covering obligation q=14 (only w is mult of 14) is what put w=14m in the set;
+ w=14m makes D=14m+1 and the question is whether j can be as small as ceil((w+1)/14)=m+1.
+========================================================================
+  m     w      D    j ceil(D/14)=m+1  j-(m+1)      M=j/D
+  1    14     13    4              1        3       4/13
+  2    28     13    4              1        3       4/13
+  3    42     13    3              1        2       3/13
+  4    56     65   15              5       10       3/13
+  5    70     13    3              1        2       3/13
+  6    84     13    3              1        2       3/13
+  7    98     13    3              1        2       3/13
+  8   112     13    6              1        5       6/13
+  9   126     13    6              1        5       6/13
+ 10   140     13    6              1        5       6/13
+ 11   154    143   66             11       55       6/13
+ 12   168     13    6              1        5       6/13
+ 13   182    183   14             14        0     14/183
+ 14   196     13    6              1        5       6/13
+ 15   210    221  102             16       86       6/13
+ 16   224     13    6              1        5       6/13
+ 17   238     13    6              1        5       6/13
+ 18   252     13    6              1        5       6/13
+ 19   266     13    6              1        5       6/13
+ 20   280     13    6              1        5       6/13
+ 21   294     13    6              1        5       6/13
+ 22   308     13    6              1        5       6/13
+ 23   322     13    6              1        5       6/13
+ 24   336    325  150             24      126       6/13
+ 25   350     13    6              1        5       6/13
+ 26   364    365   28             27        1     28/365
+ 27   378     13    6              1        5       6/13
+ 28   392    403  186             29      157       6/13
+ 29   406     13    5              1        4       5/13
+ 30   420    429   99             31       68       3/13
+ 31   434    442  170             32      138       5/13
+ 32   448     13    5              1        4       5/13
+ 33   462     13    5              1        4       5/13
+ 34   476    468  180             34      146       5/13
+ 35   490     13    5              1        4       5/13
+ 36   504     13    5              1        4       5/13
+ 37   518     13    5              1        4       5/13
+ 38   532     13    5              1        4       5/13
+ 39   546    547   42             40        2     42/547
+ 40   560     13    5              1        4       5/13

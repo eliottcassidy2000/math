@@ -1,0 +1,54 @@
+========================================================================
+PART 1: principal tower {1..12, w=182k}, k=1..40 (the COVERING tower).
+Verify EXACT closed form: M=(w/13)/(w+1)=14k/(182k+1), tau*=M, binding (1,w),
+ D=w+1, j=w/13=14k, and slack M-1/14=(w-13)/(182(w+1)).
+========================================================================
+  k=1 w=182: M=14/183 =14k/(182k+1) tau*=14/183 binding(1,182) D=183 j=14 14j-D=13 slack=13/2562  OK
+  k=2 w=364: M=28/365 =14k/(182k+1) tau*=28/365 binding(1,364) D=365 j=28 14j-D=27 slack=27/5110  OK
+  k=3 w=546: M=42/547 =14k/(182k+1) tau*=42/547 binding(1,546) D=547 j=42 14j-D=41 slack=41/7658  OK
+  k=4 w=728: M=56/729 =14k/(182k+1) tau*=56/729 binding(1,728) D=729 j=56 14j-D=55 slack=55/10206  OK
+  k=5 w=910: M=70/911 =14k/(182k+1) tau*=70/911 binding(1,910) D=911 j=70 14j-D=69 slack=69/12754  OK
+  k=13 w=2366: M=182/2367 =14k/(182k+1) tau*=182/2367 binding(1,2366) D=2367 j=182 14j-D=181 slack=181/33138  OK
+  k=26 w=4732: M=364/4733 =14k/(182k+1) tau*=364/4733 binding(1,4732) D=4733 j=364 14j-D=363 slack=363/66262  OK
+  k=39 w=7098: M=546/7099 =14k/(182k+1) tau*=546/7099 binding(1,7098) D=7099 j=546 14j-D=545 slack=545/99386  OK
+
+ALL 40 covering principal-tower checks passed: True
+
+Algebraic identity (exact, symbolic via Fraction at sampled w): 14j-D=14(w/13)-(w+1)
+ =(14w-13w-13)/13=(w-13)/13 >0 for w>13; so j>=D/14 strictly. Mechanism = w in 182Z.
+========================================================================
+PART 2: NON-covering principal tower w=14m, 13 NOT | m  -> M=1/13 (NOT covering).
+ These are NOT counterexamples (not covering). For completeness M=1/13>1/14 anyway.
+========================================================================
+covering m (13|m): 6, min M among covering = 14/183 (>=1/14? True)
+non-covering m: 73 (all have M=1/13>1/14, not counterexamples)
+========================================================================
+PART 3: does the DOUBLE-private-obligation -> forced 182|w mechanism survive when
+ the small core is NOT the full {1..12}? Test cores P that already cover 2..12 but
+ miss 13&14, with a single large drop w. The drop MUST be 182k to cover. Then check
+ whether M and the j>=D/14 bound persist or whether smaller binding pairs take over.
+========================================================================
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=182: M=14/183 M*14=196/183 tau*=14/183 binding=[1, 182] rep=(1, 182, 183, 14) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=364: M=28/365 M*14=392/365 tau*=28/365 binding=[1, 364] rep=(1, 364, 365, 28) j>=D/14=True cov=True
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12] w=546: M=42/547 M*14=588/547 tau*=42/547 binding=[1, 546] rep=(1, 546, 547, 42) j>=D/14=True cov=True
