@@ -1,0 +1,147 @@
+========================================================================================
+LRC(14) colored discrepancy bound scout
+========================================================================================
+Testing actual_count >= open_count >= V*Sigma(P,E)-K(P,E).
+K is the total number of components over the 14 phase-color layers.
+
+========================================================================================
+STEP 1. Named hard shapes: component penalty and finite witnesses
+========================================================================================
+  quarter_min: P=(1, 2, 3) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    Sigma=13067/17640 (0.740760)  K=100  cutoff V>K/Sigma => 135  max_color_K=11 max_width=1/35
+      V=  28: actual=   24 open=   20 V*Sigma-K=-49933/630 (  -79.26) certified=False
+      V=  30: actual=   20 open=   14 V*Sigma-K=-45733/588 (  -77.78) certified=False
+      V=  32: actual=   22 open=   18 V*Sigma-K=-168232/2205 (  -76.30) certified=False
+      V= 692: actual=  526 open=  520 V*Sigma-K=1819591/4410 (  412.61) certified=True
+      V= 693: actual=  506 open=  504 V*Sigma-K=115737/280 (  413.35) certified=True
+      V= 696: actual=  526 open=  520 V*Sigma-K=305443/735 (  415.57) certified=True
+  near_via_min: P=(1, 2, 3, 11) E=(0, 2, 3, 4, 5, 6, 7, 8, 10)
+    Sigma=57089/64680 (0.882638)  K=114  cutoff V>K/Sigma => 130  max_color_K=14 max_width=3/140
+      V=  28: actual=   28 open=   24 V*Sigma-K=-206251/2310 (  -89.29) certified=False
+      V=  30: actual=   24 open=   18 V*Sigma-K=-188695/2156 (  -87.52) certified=False
+      V=  32: actual=   26 open=   22 V*Sigma-K=-693334/8085 (  -85.76) certified=False
+      V= 692: actual=  624 open=  618 V*Sigma-K=8033017/16170 (  496.79) certified=True
+      V= 694: actual=  616 open=  614 V*Sigma-K=16123123/32340 (  498.55) certified=True
+      V= 696: actual=  628 open=  620 V*Sigma-K=1348351/2695 (  500.32) certified=True
+  via_zero_k7: P=(1, 2, 3, 6, 12, 13) E=(0, 2, 3, 4, 5, 6, 8)
+    Sigma=1063/780 (1.362821)  K=124  cutoff V>K/Sigma => 91  max_color_K=13 max_width=1/28
+      V=  22: actual=   24 open=   22 V*Sigma-K=-36667/390 (  -94.02) certified=False
+      V=  30: actual=   36 open=   30 V*Sigma-K=-2161/26 (  -83.12) certified=False
+      V=  36: actual=   46 open=   40 V*Sigma-K=-4871/65 (  -74.94) certified=False
+      V= 686: actual=  946 open=  944 V*Sigma-K=316249/390 (  810.89) certified=True
+      V= 688: actual=  946 open=  932 V*Sigma-K=158656/195 (  813.62) certified=True
+      V= 690: actual=  946 open=  936 V*Sigma-K=21225/26 (  816.35) certified=True
+  via_zero_k9: P=(1, 2, 3, 13) E=(0, 2, 3, 4, 5, 6, 7, 8, 9)
+    Sigma=25369/28665 (0.885017)  K=104  cutoff V>K/Sigma => 118  max_color_K=10 max_width=47/1638
+      V=  30: actual=   22 open=   18 V*Sigma-K=-148006/1911 (  -77.45) certified=False
+      V=  33: actual=   34 open=   30 V*Sigma-K=-714661/9555 (  -74.79) certified=False
+      V=  36: actual=   24 open=   20 V*Sigma-K=-229764/3185 (  -72.14) certified=False
+      V= 690: actual=  610 open=  602 V*Sigma-K=968230/1911 (  506.66) certified=True
+      V= 693: actual=  608 open=  606 V*Sigma-K=231739/455 (  509.32) certified=True
+      V= 700: actual=  622 open=  618 V*Sigma-K=422204/819 (  515.51) certified=True
+  broad_1_90: P=(1, 2, 9) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    Sigma=17239/17640 (0.977268)  K=122  cutoff V>K/Sigma => 125  max_color_K=13 max_width=1/35
+      V=  28: actual=   32 open=   28 V*Sigma-K=-59621/630 (  -94.64) certified=False
+      V=  30: actual=   26 open=   20 V*Sigma-K=-54497/588 (  -92.68) certified=False
+      V=  32: actual=   26 open=   22 V*Sigma-K=-200054/2205 (  -90.73) certified=False
+      V= 692: actual=  692 open=  688 V*Sigma-K=2444327/4410 (  554.27) certified=True
+      V= 693: actual=  672 open=  666 V*Sigma-K=155469/280 (  555.25) certified=True
+      V= 696: actual=  690 open=  682 V*Sigma-K=410261/735 (  558.18) certified=True
+
+========================================================================================
+STEP 2. Structured bank: worst K/Sigma cutoff
+========================================================================================
+  k= 3: worst K/Sigma=9729720/39911 ( 243.785) cutoff=  244 at P,E=((1, 2, 3, 7, 8, 9, 10, 11, 12, 13), (0, 1, 6)) minSigma=14249/28028 K_at_min=112 maxK=228
+  k= 4: worst K/Sigma=4934160/26849 ( 183.774) cutoff=  184 at P,E=((1, 2, 3, 7, 8, 9, 10, 11, 12), (0, 1, 2, 12)) minSigma=118123/180180 K_at_min=112 maxK=234
+  k= 5: worst K/Sigma=3387744360/18943087 ( 178.838) cutoff=  179 at P,E=((1, 2, 5, 7, 8, 9, 11, 13), (0, 1, 2, 15, 17)) minSigma=178403/210210 K_at_min=106 maxK=260
+  k= 6: worst K/Sigma=1171170/6869 ( 170.501) cutoff=  171 at P,E=((1, 2, 9, 10, 11, 12, 13), (0, 1, 2, 3, 12, 13)) minSigma=14038/15015 K_at_min=104 maxK=232
+  k= 7: worst K/Sigma=88638550/533703 ( 166.082) cutoff=  167 at P,E=((1, 2, 10, 11, 12, 13), (0, 1, 2, 3, 4, 21, 23)) minSigma=15291/20020 K_at_min=78 maxK=242
+  k= 8: worst K/Sigma=2624440/17527 ( 149.737) cutoff=  150 at P,E=((1, 2, 7, 11, 12), (0, 1, 2, 3, 4, 5, 24, 26)) minSigma=751/1155 K_at_min=64 maxK=232
+  k= 9: worst K/Sigma=9120384/56335 ( 161.896) cutoff=  162 at P,E=((1, 2, 12, 13), (0, 1, 2, 3, 4, 5, 6, 27, 29)) minSigma=3581/5880 K_at_min=54 maxK=252
+  k=10: worst K/Sigma=14358960/86813 ( 165.401) cutoff=  166 at P,E=((1, 2, 12), (0, 3, 4, 5, 6, 7, 8, 9, 10, 11)) minSigma=10901/17640 K_at_min=68 maxK=234
+  k=11: worst K/Sigma=10995600/68623 ( 160.232) cutoff=  161 at P,E=((1, 2), (0, 1, 2, 3, 4, 5, 6, 7, 8, 33, 35)) minSigma=1751/2205 K_at_min=96 maxK=226
+  k=12: worst K/Sigma=383040/2453 ( 156.152) cutoff=  157 at P,E=((2,), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 36, 38)) minSigma=2575813/2522520 K_at_min=122 maxK=222
+  k=13: worst K/Sigma=300867840/2537603 ( 118.564) cutoff=  119 at P,E=((), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 39, 41)) minSigma=7877/4312 K_at_min=130 maxK=224
+
+  total structured cases=123405
+  GLOBAL worst K/Sigma=9729720/39911 (243.785) at P,E=((1, 2, 3, 7, 8, 9, 10, 11, 12, 13), (0, 1, 6)) Sigma=39911/60060 K=162
+  GLOBAL min Sigma=14249/28028 (0.508384) at P,E=((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 2, 3)) K=112
+  GLOBAL max K=260 at P,E=((1, 2, 4, 6, 8, 9, 10, 12), (0, 1, 2, 15, 17)) Sigma=8929/4284
+
+  Boundary-efficiency phase-color tournament:
+    aggregate_mass=['0', '25321669959835723609/1336897409047200', '886230332792933497/59417662624320', '35858584066972157/2642089741200', '2179193226846641443/148544156560800', '156577552385930989/11625194861280', '72068109278486723/4852622174400', '8797429851975485657/668448704523600', '72068109278486723/4852622174400', '156577552385930989/11625194861280', '2179193226846641443/148544156560800', '35858584066972157/2642089741200', '886230332792933497/59417662624320', '25321669959835723609/1336897409047200']
+    aggregate_components=[0, 1572296, 1244900, 1093587, 1254386, 1148745, 1212345, 1107620, 1212345, 1148745, 1254386, 1093587, 1244900, 1572296]
+    efficiency=['0', '25321669959835723609/2101998448655276371200', '886230332792933497/73969048201015968000', '35858584066972157/2889354993809684400', '2179193226846641443/186331710371675668800', '156577552385930989/13354384470921093600', '72068109278486723/5883052230022968000', '8797429851975485657/740387154104429832000', '72068109278486723/5883052230022968000', '156577552385930989/13354384470921093600', '2179193226846641443/186331710371675668800', '35858584066972157/2889354993809684400', '886230332792933497/73969048201015968000', '25321669959835723609/2101998448655276371200']
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1} cycles3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths=1
+    leaders=[(13, 3, '35858584066972157/2889354993809684400'), (12, 11, '35858584066972157/2889354993809684400'), (11, 6, '72068109278486723/5883052230022968000'), (10, 8, '72068109278486723/5883052230022968000'), (9, 1, '25321669959835723609/2101998448655276371200'), (8, 13, '25321669959835723609/2101998448655276371200'), (7, 2, '886230332792933497/73969048201015968000'), (6, 12, '886230332792933497/73969048201015968000')]
+
+========================================================================================
+STEP 3. Random large-spread tail: cutoff compared with natural V scale
+========================================================================================
+  tail cases=220
+  worst cutoff/(maxE+14)=2064/221 (9.339)
+    row=((), (0, 46, 147, 173, 237, 277, 328, 341, 369, 377, 381, 405, 428), 'k=13,spread=442') cutoff=4128 natural=442 Sigma=13814459775483226593562181/6930858211190074408567320 K=8226
+  worst K/Sigma=57013239645249552084874774320/13814459775483226593562181 (4127.070)
+    row=((), (0, 46, 147, 173, 237, 277, 328, 341, 369, 377, 381, 405, 428), 'k=13,spread=442') cutoff=4128 natural=442 Sigma=13814459775483226593562181/6930858211190074408567320 K=8226
+  min Sigma=25489/42042 (0.606275)
+    row=((1, 3, 4, 5, 7, 8, 9, 11, 12, 13), (0, 33, 54), 'k=3,spread=102') cutoff=238 natural=68 K=144
+  max K=8226
+    row=((), (0, 46, 147, 173, 237, 277, 328, 341, 369, 377, 381, 405, 428), 'k=13,spread=442') cutoff=4128 natural=442 Sigma=13814459775483226593562181/6930858211190074408567320
+
+  Five smallest cutoff/natural rows:
+    scale=1.881 cutoff=190 natural=101 K/Sigma=189.23 Sigma=1.6488 K=312 k=3,spread=102
+    scale=2.146 cutoff=206 natural=96 K/Sigma=205.65 Sigma=1.3324 K=274 k=4,spread=84
+    scale=2.260 cutoff=113 natural=50 K/Sigma=112.90 Sigma=1.4171 K=160 k=3,spread=39
+    scale=2.348 cutoff=216 natural=92 K/Sigma=215.88 Sigma=1.8621 K=402 k=6,spread=78
+    scale=2.357 cutoff=99 natural=42 K/Sigma=98.97 Sigma=1.3944 K=138 k=3,spread=102
+
+  Five largest cutoff/natural rows:
+    scale=7.503 cutoff=1298 natural=173 K/Sigma=1297.09 Sigma=2.1140 K=2742 k=13,spread=169
+    scale=7.605 cutoff=1156 natural=152 K/Sigma=1155.19 Sigma=1.9304 K=2230 k=11,spread=143
+    scale=7.713 cutoff=1319 natural=171 K/Sigma=1318.99 Sigma=2.0683 K=2728 k=13,spread=169
+    scale=8.097 cutoff=3684 natural=455 K/Sigma=3683.29 Sigma=2.0541 K=7566 k=13,spread=442
+    scale=9.339 cutoff=4128 natural=442 K/Sigma=4127.07 Sigma=1.9932 K=8226 k=13,spread=442
+
+========================================================================================
+STEP 4. Exact q=14V discrepancy on random covering tails
+========================================================================================
+  exact covering rows=160
+  zero actual witnesses: 0
+  negative deficits (actual > V*Sigma): 55
+  min actual/(V*Sigma)=61776/98035 (0.630142) at V=25 actual=18 deficit=36259/3432 (10.565)
+    row=((1, 3, 4, 5, 8, 9, 10, 11, 12, 13), (0, 9, 11), 'k=3,spread=24') Sigma=19607/17160 K=136
+  max positive deficit V*Sigma-actual=186779459202305947/2598958628838684 (71.867) at V=349 ratio=0.899608 actual=644
+    row=((4, 6, 10), (0, 49, 85, 97, 196, 205, 207, 269, 284, 326), 'k=10,spread=340') Sigma=5330970819984007/2598958628838684 K=4234
+  min actual count=18 at V=25 ratio=0.630142 deficit=10.565
+    row=((1, 3, 4, 5, 8, 9, 10, 11, 12, 13), (0, 9, 11), 'k=3,spread=24') Sigma=19607/17160 K=136
+  positive deficit range: min=21303298/287022645 max=186779459202305947/2598958628838684
+
+  Eight lowest-ratio exact rows:
+    ratio=0.630142 deficit= 10.565 V=  25 actual=  18 Sigma=1.1426 K= 136 k=3,spread=24
+    ratio=0.639368 deficit= 18.049 V=  57 actual=  32 Sigma=0.8781 K= 170 k=3,spread=39
+    ratio=0.643964 deficit= 24.327 V=  36 actual=  44 Sigma=1.8980 K= 228 k=6,spread=18
+    ratio=0.683692 deficit= 31.460 V=  64 actual=  68 Sigma=1.5541 K= 202 k=5,spread=40
+    ratio=0.693367 deficit= 19.458 V=  37 actual=  44 Sigma=1.7151 K= 194 k=4,spread=12
+    ratio=0.768374 deficit= 21.102 V=  69 actual=  70 Sigma=1.3203 K= 334 k=6,spread=126
+    ratio=0.773665 deficit= 10.532 V=  26 actual=  36 Sigma=1.7897 K= 172 k=4,spread=12
+    ratio=0.778848 deficit= 11.926 V=  34 actual=  42 Sigma=1.5861 K= 226 k=4,spread=20
+
+========================================================================================
+STEP 5. Random exact checks of actual >= open >= V*Sigma-K
+========================================================================================
+  tested=120 failures=0
+  worst open-(V*Sigma-K) slack=82309/980 (83.989)
+    row=((1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10), 594, 426, 424, Fraction(13067, 17640), 100, Fraction(333211, 980))
+
+========================================================================================
+TAKEAWAY
+========================================================================================
+  1. The exact phase-color reservoir admits a deterministic lower bound:
+        actual_count(q=14V) >= V*Sigma(P,E) - K(P,E).
+  2. This proves every fixed (P,E) shape for all V > K/Sigma, reducing
+     the finite placement problem to a computable small-V check.
+  3. The remaining proof burden is now sharper: prove a uniform Sigma
+     floor and a relation-lattice/tail bound showing K/Sigma is below
+     the available V scale, or enumerate the finite residue tail.
+  4. LRC(14) is still not proved; the obstruction has been compressed
+     from colored CRT placement to a boundary-complexity inequality.
