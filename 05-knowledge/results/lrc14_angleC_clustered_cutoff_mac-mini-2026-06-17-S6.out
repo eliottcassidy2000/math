@@ -1,0 +1,47 @@
+==============================================================================
+PART 1: criterion via the SLOWEST runner v_min (fewest, widest teeth to dodge)
+==============================================================================
+
+  Covering forces small runners: a multiple of 2,3,...,7 etc. In particular S must contain a
+  multiple of 2 and of 3, but the SMALLEST element can be as large as... let's measure. For each
+  covering set, v_min = min(S). Remove v_min: W(S\{v_min}) must exceed 1/(7 v_min). Since v_min is
+  small, 1/(7 v_min) is LARGE -- this is the HARD direction. So slowest-runner removal is NOT the
+  easy win; the easy win is removing a LARGE runner. We quantify both.
+
+  over 1250 clustered covering sets: v_min in [1,7], typical min(S)=1
+  => covering essentially forces min(S)=1 or 2 (a multiple of small q must be small).
+
+==============================================================================
+PART 2: deep adversarial search -- largest max(S) at which exact-W criterion C FAILS
+==============================================================================
+
+  tested 9442 clustered covering sets in 714.9s
+  exact-W criterion C FAILURES: 0
+    C(S) HELD on every clustered covering set searched (no fail at any max).
+  tightest successful criterion margin: 0.000000
+    at v=42 S=[1, 3, 6, 7, 9, 10, 13, 34, 37, 41, 42, 240, 242]
+
+==============================================================================
+PART 3: toward a PROVABLE cutoff -- sharpen N(A) for the large-runner removal
+==============================================================================
+
+  Remove the LARGEST runner V. A = S\{V}, 12 runners each <= V-1. The safe set of A at level
+  1/14 has widest arc W(A). The pigeonhole W(A) >= mu(A)/N(A) needs N(A) (number of safe arcs).
+  SHARPER N(A): the safe arcs of A are the gaps of the tooth-union. A runner u contributes u teeth.
+  But two runners u,w only create EXTRA gaps where their teeth interleave. A clean bound:
+        N(A) <= 1 + sum_{u in A} (number of teeth of u that have an endpoint not inside another's tooth)
+  Hard to bound cleanly. Instead we test the EMPIRICAL claim: for clustered covering sets,
+  W(A) (exact) stays >= a constant fraction, so C fires via SOME small/medium runner.
+  We report, over clustered covering sets, min over the set of [ max_v (7 v W(S\{v})) ], i.e.
+  the best criterion ratio; if its inf over all clustered sets is > 1, C is universal.
+
+  over 4911 clustered covering sets:
+  inf over sets of [ max_v 7 v W(S\{v}) ] = 1.37143  (>1 => C fires)
+    worst set [1, 2, 3, 6, 9, 10, 11, 12, 13, 14, 15, 16, 18] via v=12
+  C(S) fires iff this best ratio > 1; observed inf = 1.37143.
+
+==============================================================================
+SUMMARY: clustered-large is where the provable cutoff is missing. The exact-W criterion
+holds with a positive margin on every clustered covering set searched, but the pigeonhole
+(mu/N) proof of it does not fire for clustered sets -> no finite max-cutoff is PROVED yet.
+==============================================================================

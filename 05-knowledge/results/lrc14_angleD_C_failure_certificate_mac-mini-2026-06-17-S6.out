@@ -1,0 +1,34 @@
+==============================================================================
+CERTIFIED C-FAILURE (criterion C sufficient-not-necessary)
+==============================================================================
+S* = (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42)
+covering 2..14: True;  |S|=13
+
+Criterion C rows  (v, W(S*\v), 1/(7v), margin = W - 1/(7v)):
+   v=  1:  W=     85/5586 = 0.0152166   1/(7v)=0.1428571   margin=-0.1276405  
+   v=  2:  W=     31/2352 = 0.0131803   1/(7v)=0.0714286   margin=-0.0582483  
+   v=  3:  W=     32/2793 = 0.0114572   1/(7v)=0.0476190   margin=-0.0361618  
+   v=  5:  W=       1/280 = 0.0035714   1/(7v)=0.0285714   margin=-0.0250000  
+   v=  7:  W=     17/2352 = 0.0072279   1/(7v)=0.0204082   margin=-0.0131803  
+   v=  8:  W=     25/2793 = 0.0089509   1/(7v)=0.0178571   margin=-0.0089062  
+   v=  9:  W=     71/7644 = 0.0092883   1/(7v)=0.0158730   margin=-0.0065847  
+   v= 10:  W=       4/637 = 0.0062794   1/(7v)=0.0142857   margin=-0.0080063  
+   v= 11:  W=     39/3724 = 0.0104726   1/(7v)=0.0129870   margin=-0.0025144  
+   v= 12:  W=     15/2156 = 0.0069573   1/(7v)=0.0119048   margin=-0.0049474  
+   v= 13:  W=     23/4788 = 0.0048037   1/(7v)=0.0109890   margin=-0.0061853  
+   v= 38:  W=      5/1848 = 0.0027056   1/(7v)=0.0037594   margin=-0.0010538  
+   v= 42:  W=      5/1848 = 0.0027056   1/(7v)=0.0034014   margin=-0.0006957  
+
+C holds (some v with W>1/(7v)): False   ==> C FAILS (all margins <= 0)
+least-negative (tightest) margin: -3/4312 at v=42
+
+M(S*) candidate-set method : 2/23 = 0.0869565  (tau=4/23)
+M(S*) independent grid<=3000: 2/23 = 0.0869565  (tau=4/23)   [confirmed in separate run]
+methods agree: True
+1/14 = 1/14 = 0.0714286
+M(S*) >= 1/14: True
+
+CONCLUSION:
+  C FAILS on S* yet M(S*) = 2/23 >= 1/14.  => criterion C is SUFFICIENT but
+  NOT NECESSARY.  Proving C universal CANNOT prove LRC(14); C must be strengthened.
+  LRC(14) itself is NOT threatened by S* (it is loose, M = 2/23 > 1/14).
