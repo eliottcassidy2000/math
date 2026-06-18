@@ -2586,3 +2586,6 @@ Covering hard cases = easy LRC(12)-core + parked runner; use easy-case structure
 
 ## T848: LRC14 threshold subscript matters (codex-2026-06-18)
 The density floor should be `rho_alpha`, not un-subscripted `rho*`. Exact ladder: `alpha=2/7` (via-max) has `54` zeros in a `132005`-case bank, but `alpha=1/4` and `4/15` have no zeros, with minima `1/140` and `2/525`; explicit via-zero cases remain fat at the global threshold (`1/7`) and positive at `4/15`. Critical probe floor `51/182>4/15`. New proof target: prove a slack reservoir for some `alpha0 in (1/7,2/7)`, then use `alpha0-1/7` to make Weyl/CRT denominator placement robust. → HYP-2592, HYP-2591, OPEN-Q-108.
+
+## T849: LRC14 finite placement is a 14-colored reservoir (codex-2026-06-18)
+For `S=P∪{V-e}`, residue color `b=a mod14` forces the exact condition `x=a/(14V)∈G_P∩C_b(E)`, where `C_b={||e*x-b/14||≥1/14}`. Actual CRT count equals colored grid hits (`0` mismatches on named lifts). The colored mass `Sigma=sum_b meas(G_P∩C_b)` has structured-bank floor `14249/28028≈0.508`, far larger than uncolored slack minima; via-zero shapes are fat (`Sigma≈0.885,1.363`). Last lemma candidate: uniform `Sigma` floor + colored Erdos-Turan/Koksma bound for grids `(b+14t)/(14V)`. → HYP-2593, OPEN-Q-108.

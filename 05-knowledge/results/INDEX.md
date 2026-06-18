@@ -443,6 +443,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 
 | `lrc14_global_threshold_ladder_codex.py` | [STORED] | Exact threshold ladder for `rho_alpha(P,E)=meas(G_P cap {maxgap(E*x)>alpha})`, separating the false via-max `alpha=2/7` floor from the true global witness threshold `alpha=1/7`. Across `132005` exact cases (consecutive, structured perforated/relation shapes, and random bounded-spread stress), `alpha=1/7,1/6,3/14,1/4,4/15` had zero failures with aggregate minima `14249/252252`, `14249/252252`, `14249/252252`, `1/140`, and `2/525`; `alpha=2/7` had `54` exact zeros. Explicit via-zero cases keep positive mass at `1/4` and `4/15`; critical probe floor `51/182>4/15`. Proof-obligation tournament is transitive, ranking thresholds by robustness. Supports HYP-2592 and refines HYP-2591/OPEN-Q-108. | `lrc14_global_threshold_ladder_codex.out` |
 
+| `lrc14_phase_color_reservoir_codex.py` | [STORED] | Phase-color reservoir scout for exact CRT placement at `q=14V`. Defines `C_b(E)={x:||e*x-b/14||>=1/14 for all e}` and verifies with `0` mismatches that actual CRT witnesses for `S=P∪{V-e}` equal colored grid hits in `G_P∩C_b(E)` for `a=b+14t`. Structured bank (`123405` cases) has `Sigma=sum_b meas(G_P∩C_b(E))` floor `14249/28028≈0.508384` and min largest single-color mass `2941/63063≈0.046636`; via-max-zero shapes have large colored mass. Random named lift stress: `0` zero witnesses, worst `actual/(V*Sigma)=38808/57089`. Phase-color tournament is transitive with colors `1,13` leading and `0` sink. Supports HYP-2593 and sharpens the CRT side of OPEN-Q-108. | `lrc14_phase_color_reservoir_codex.out` |
+
 ## Convention for new scripts
 
 1. Save the script in `04-computation/`

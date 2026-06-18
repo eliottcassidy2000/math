@@ -1,0 +1,114 @@
+========================================================================================
+LRC(14) phase-color reservoir scout
+========================================================================================
+C_b(E) = {x : ||e*x - b/14|| >= 1/14 for all e in E}.
+Actual q=14V witnesses equal colored grid hits in G_P cap C_b(E).
+
+========================================================================================
+STEP 1. Named shapes: continuous colored reservoirs
+========================================================================================
+  quarter_min: P=(1, 2, 3) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    Sigma=sum_b measure = 13067/17640 = 0.740760; nonzero colors=13
+    best color component width=1/35 at b=1
+    color measures=[(1, '50/441'), (2, '1889/35280'), (3, '51/1960'), (4, '1033/17640'), (5, '71/1470'), (6, '211/4410'), (7, '401/8820'), (8, '211/4410'), (9, '71/1470'), (10, '1033/17640'), (11, '51/1960'), (12, '1889/35280'), (13, '50/441')]
+  near_via_min: P=(1, 2, 3, 11) E=(0, 2, 3, 4, 5, 6, 7, 8, 10)
+    Sigma=sum_b measure = 57089/64680 = 0.882638; nonzero colors=13
+    best color component width=3/140 at b=1
+    color measures=[(1, '8647/64680'), (2, '9059/129360'), (3, '213/10780'), (4, '11/147'), (5, '457/8085'), (6, '1373/21560'), (7, '295/6468'), (8, '1373/21560'), (9, '457/8085'), (10, '11/147'), (11, '213/10780'), (12, '9059/129360'), (13, '8647/64680')]
+  via_zero_k7: P=(1, 2, 3, 6, 12, 13) E=(0, 2, 3, 4, 5, 6, 8)
+    Sigma=sum_b measure = 1063/780 = 1.362821; nonzero colors=13
+    best color component width=1/28 at b=1
+    color measures=[(1, '75/364'), (2, '2363/21840'), (3, '517/10920'), (4, '121/1040'), (5, '163/1820'), (6, '407/5460'), (7, '43/546'), (8, '407/5460'), (9, '163/1820'), (10, '121/1040'), (11, '517/10920'), (12, '2363/21840'), (13, '75/364')]
+  via_zero_k9: P=(1, 2, 3, 13) E=(0, 2, 3, 4, 5, 6, 7, 8, 9)
+    Sigma=sum_b measure = 25369/28665 = 0.885017; nonzero colors=13
+    best color component width=47/1638 at b=1
+    color measures=[(1, '12391/114660'), (2, '4799/57330'), (3, '51/1274'), (4, '3667/57330'), (5, '913/15288'), (6, '45/728'), (7, '289/5733'), (8, '45/728'), (9, '913/15288'), (10, '3667/57330'), (11, '51/1274'), (12, '4799/57330'), (13, '12391/114660')]
+  broad_1_90: P=(1, 2, 9) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    Sigma=sum_b measure = 17239/17640 = 0.977268; nonzero colors=13
+    best color component width=1/35 at b=1
+    color measures=[(1, '619/4410'), (2, '379/5880'), (3, '739/17640'), (4, '1523/17640'), (5, '59/980'), (6, '263/3920'), (7, '499/8820'), (8, '263/3920'), (9, '59/980'), (10, '1523/17640'), (11, '739/17640'), (12, '379/5880'), (13, '619/4410')]
+
+========================================================================================
+STEP 2. Exact identity check: actual CRT count == colored grid count
+========================================================================================
+  quarter_min   V= 28: actual=  24 colored=  24 V*Sigma=13067/630 (20.74) ratio=1.157
+  quarter_min   V= 30: actual=  20 colored=  20 V*Sigma=13067/588 (22.22) ratio=0.900
+  quarter_min   V= 32: actual=  22 colored=  22 V*Sigma=52268/2205 (23.70) ratio=0.928
+  quarter_min   V= 33: actual=  26 colored=  26 V*Sigma=143737/5880 (24.45) ratio=1.064
+  quarter_min   V= 36: actual=  24 colored=  24 V*Sigma=13067/490 (26.67) ratio=0.900
+  quarter_min   V= 42: actual=  32 colored=  32 V*Sigma=13067/420 (31.11) ratio=1.029
+  quarter_min   V= 44: actual=  32 colored=  32 V*Sigma=143737/4410 (32.59) ratio=0.982
+  quarter_min   V= 46: actual=  30 colored=  30 V*Sigma=300541/8820 (34.07) ratio=0.880
+  near_via_min  V= 28: actual=  28 colored=  28 V*Sigma=57089/2310 (24.71) ratio=1.133
+  near_via_min  V= 30: actual=  24 colored=  24 V*Sigma=57089/2156 (26.48) ratio=0.906
+  near_via_min  V= 32: actual=  26 colored=  26 V*Sigma=228356/8085 (28.24) ratio=0.921
+  near_via_min  V= 34: actual=  26 colored=  26 V*Sigma=970513/32340 (30.01) ratio=0.866
+  near_via_min  V= 36: actual=  26 colored=  26 V*Sigma=171267/5390 (31.77) ratio=0.818
+  near_via_min  V= 42: actual=  38 colored=  38 V*Sigma=57089/1540 (37.07) ratio=1.025
+  near_via_min  V= 44: actual=  36 colored=  36 V*Sigma=57089/1470 (38.84) ratio=0.927
+  near_via_min  V= 46: actual=  36 colored=  36 V*Sigma=1313047/32340 (40.60) ratio=0.887
+  via_zero_k7   V= 22: actual=  24 colored=  24 V*Sigma=11693/390 (29.98) ratio=0.800
+  via_zero_k7   V= 30: actual=  36 colored=  36 V*Sigma=1063/26 (40.88) ratio=0.881
+  via_zero_k7   V= 36: actual=  46 colored=  46 V*Sigma=3189/65 (49.06) ratio=0.938
+  via_zero_k7   V= 44: actual=  56 colored=  56 V*Sigma=11693/195 (59.96) ratio=0.934
+  via_zero_k7   V= 48: actual=  66 colored=  66 V*Sigma=4252/65 (65.42) ratio=1.009
+  via_zero_k7   V= 50: actual=  66 colored=  66 V*Sigma=5315/78 (68.14) ratio=0.969
+  via_zero_k7   V= 58: actual=  80 colored=  80 V*Sigma=30827/390 (79.04) ratio=1.012
+  via_zero_k7   V= 60: actual=  74 colored=  74 V*Sigma=1063/13 (81.77) ratio=0.905
+  via_zero_k9   V= 30: actual=  22 colored=  22 V*Sigma=50738/1911 (26.55) ratio=0.829
+  via_zero_k9   V= 33: actual=  34 colored=  34 V*Sigma=279059/9555 (29.21) ratio=1.164
+  via_zero_k9   V= 36: actual=  24 colored=  24 V*Sigma=101476/3185 (31.86) ratio=0.753
+  via_zero_k9   V= 42: actual=  36 colored=  36 V*Sigma=50738/1365 (37.17) ratio=0.969
+  via_zero_k9   V= 44: actual=  42 colored=  42 V*Sigma=1116236/28665 (38.94) ratio=1.079
+  via_zero_k9   V= 48: actual=  40 colored=  40 V*Sigma=405904/9555 (42.48) ratio=0.942
+  via_zero_k9   V= 50: actual=  32 colored=  32 V*Sigma=253690/5733 (44.25) ratio=0.723
+  via_zero_k9   V= 60: actual=  38 colored=  38 V*Sigma=101476/1911 (53.10) ratio=0.716
+  identity mismatches: 0
+
+========================================================================================
+STEP 3. Structured bank: Sigma floor and color tournament
+========================================================================================
+  k= 3: shapes= 8 cases=  2288 min Sigma=14249/28028 (0.508384) at ((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 2, 3)) min max_color=2941/63063 (0.046636)
+  k= 4: shapes=11 cases=  7865 min Sigma=118123/180180 (0.655583) at ((1, 2, 3, 5, 7, 8, 9, 11, 13), (0, 2, 3, 5)) min max_color=166703/2522520 (0.066086)
+  k= 5: shapes=14 cases= 18018 min Sigma=178403/210210 (0.848689) at ((1, 3, 4, 5, 7, 9, 11, 13), (0, 1, 2, 4, 5)) min max_color=191467/2522520 (0.075903)
+  k= 6: shapes=15 cases= 25740 min Sigma=14038/15015 (0.934932) at ((1, 3, 4, 5, 7, 11, 13), (0, 1, 3, 4, 5, 7)) min max_color=10891/114660 (0.094985)
+  k= 7: shapes=16 cases= 27456 min Sigma=15291/20020 (0.763786) at ((1, 3, 4, 5, 11, 13), (0, 1, 2, 3, 4, 5, 6)) min max_color=1951/24024 (0.081210)
+  k= 8: shapes=17 cases= 21879 min Sigma=751/1155 (0.650216) at ((1, 3, 4, 5, 11), (0, 1, 2, 3, 4, 5, 6, 7)) min max_color=5839/76440 (0.076387)
+  k= 9: shapes=18 cases= 12870 min Sigma=3581/5880 (0.609014) at ((1, 3, 4, 5), (0, 1, 2, 3, 4, 5, 6, 7, 8)) min max_color=151/1960 (0.077041)
+  k=10: shapes=19 cases=  5434 min Sigma=10901/17640 (0.617971) at ((1, 3, 4), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)) min max_color=757/9702 (0.078025)
+  k=11: shapes=20 cases=  1560 min Sigma=1751/2205 (0.794104) at ((2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)) min max_color=863/8820 (0.097846)
+  k=12: shapes=21 cases=   273 min Sigma=2575813/2522520 (1.021127) at ((2,), (0, 1, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)) min max_color=27563/252252 (0.109268)
+  k=13: shapes=22 cases=    22 min Sigma=7877/4312 (1.826763) at ((), (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16)) min max_color=6155/36036 (0.170801)
+
+  total structured cases=123405
+  GLOBAL min Sigma=14249/28028 = 0.508384 at P,E=((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 2, 3))
+    color vector=['0', '12665/252252', '10117/252252', '20399/504504', '19601/504504', '4859/126126', '17161/504504', '1520/63063', '17161/504504', '4859/126126', '19601/504504', '20399/504504', '10117/252252', '12665/252252']
+  GLOBAL min max_color=2941/63063 = 0.046636 at P,E=((1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 6))
+    color vector=['0', '2941/63063', '10609/252252', '17161/504504', '2623/72072', '9655/252252', '19475/504504', '5623/126126', '19475/504504', '9655/252252', '2623/72072', '17161/504504', '10609/252252', '2941/63063']
+
+  Phase-color tournament:
+    aggregate=['0', '25321669959835723609/1336897409047200', '886230332792933497/59417662624320', '35858584066972157/2642089741200', '2179193226846641443/148544156560800', '156577552385930989/11625194861280', '72068109278486723/4852622174400', '8797429851975485657/668448704523600', '72068109278486723/4852622174400', '156577552385930989/11625194861280', '2179193226846641443/148544156560800', '35858584066972157/2642089741200', '886230332792933497/59417662624320', '25321669959835723609/1336897409047200']
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1} cycles3=0 scc=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1] hamiltonian_paths=1
+    leaders=[(13, 1, '25321669959835723609/1336897409047200'), (12, 13, '25321669959835723609/1336897409047200'), (11, 2, '886230332792933497/59417662624320'), (10, 12, '886230332792933497/59417662624320'), (9, 6, '72068109278486723/4852622174400'), (8, 8, '72068109278486723/4852622174400'), (7, 4, '2179193226846641443/148544156560800'), (6, 10, '2179193226846641443/148544156560800')]
+
+========================================================================================
+STEP 4. Random lift stress: count vs V*Sigma
+========================================================================================
+  tested random named lifts=250
+  zero actual witnesses at q=14V: 0
+  worst actual/(V*Sigma)=38808/57089 = 0.679781
+    at ('near_via_min', (1, 2, 3, 11), (0, 2, 3, 4, 5, 6, 7, 8, 10), 60, 36, Fraction(57089, 64680))
+
+========================================================================================
+TAKEAWAY
+========================================================================================
+  1. The colored reservoir is the exact finite CRT object: actual
+     witnesses at q=14V equal colored grid hits in G_P cap C_b(E).
+  2. Sigma(P,E)=sum_b meas(G_P cap C_b(E)) is large in the structured
+     bank; the minimum found is printed above and is far from zero.
+  3. This suggests replacing the last placement problem by an
+     Erdos-Turan/Koksma bound for 14 colored arithmetic progressions.
+     The denominator D=14q-r route becomes: conditional blockers cannot
+     cover all colored grid hits when V*Sigma is large.
+  4. LRC(14) is not proved here: the missing theorem is a uniform
+     discrepancy bound plus a finite small-V check, not just this census.
