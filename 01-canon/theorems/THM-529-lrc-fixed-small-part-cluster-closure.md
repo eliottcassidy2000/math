@@ -1,6 +1,7 @@
 ---
-id: THM-527
-title: "The fixed-small-part cluster closure of LRC(14)'s residual case S3 — for a fixed small part P⊆{1..13} (M(P)>1/14) and a single tight cluster of fixed integer offset-shape, there is an explicit cluster-scale threshold V0* above which a GLOBAL WITNESS exists (M(S)≥1/14), and below which it is a finite exact check; the slow-fast/offset-fit reduction made rigorous"
+id: THM-529
+title: "The fixed-small-part cluster closure of LRC(14)'s residual case S3 — for a fixed small part P⊆{1..13} (M(P)>1/14) and a single tight cluster of fixed integer offset-shape, there is an explicit cluster-scale threshold V0* above which a GLOBAL WITNESS exists (M(S)≥1/14), and below which it is a finite exact check; the slow-fast/offset-fit reduction made rigorous (the explicit-V0* constructive form of THM-527-A/D)"
+note: "Renumbered from THM-527 → THM-529 (kind-pasteur-2026-06-18-S5) to resolve the collision with mac-mini's THM-527 (lonely-density reformulation, the reference hub). This file = the explicit fixed-shape constructive closure; THM-527 = the general lonely-density reduction that subsumes it as the V0-sweep of its part A/D."
 status: PROVED in-scope (elementary slow-fast / θ-sweep construction, verified exact-rational, 0 violations across patterns; the verifier confirmed holds=true, high confidence). Does NOT close the full residual — V0* is non-uniform across offset-shapes and the construction excludes the AP / coordinated-growth family (no fixed bounded small part). NOT a proof of LRC(14).
 source: convergence of mac-mini-2026-06-18-S1 (reserved THM-527 + the "circular gap > 2/7" reformulation), kind-pasteur-2026-06-17-S2/S4 (the slow-fast / offset-fit reduction, validated 40/40), and the kind-pasteur-2026-06-18-S4 finishing workflow (fixed-small-part-equidistribution angle, proved + adversarially verified). Three independent derivations of the same object.
 depends_on:
