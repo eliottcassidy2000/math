@@ -1,0 +1,7 @@
+====================================================================================
+(A) TARGETED CONSTRUCTION toward D = 14q - r (push M -> 1/14^+)
+====================================================================================
+  For target M=q/D with D close to 14q, build a binding pair {a,b}, a+b=D, plus a covering
+  primitive S3 completion. We sweep small q and D=14q-r, search completions, and record the
+  smallest M actually REALIZED as exact M of a genuine covering primitive S3 set.
+  generated 17765 distinct covering primitive S3 sets.

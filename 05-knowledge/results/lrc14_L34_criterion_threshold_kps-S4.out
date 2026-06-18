@@ -13,3 +13,14 @@
    (k=2, PROVED slice) has C-failures (S*). CLUSTER-SIZE SPLIT of the residual:
    |L|<=2 PROVED; |L| in {3,4} = pigeonhole-automatic (cluster' <=3 points => maxgap>=1/3>2/7);
    |L|>=5 = the genuine rho* hard case (mac-mini THM-527). This sharpens the open residual to |L|>=5.
+
+=== CORRECTION (kps-S4, approach-from-above test) ===
+The "0 failures for |L|=3,4" above used Vmax>=60; with SMALL Vmax the via-max criterion DOES fail:
+ |L|=3 min via-max margin = 147/208 ~ 0.707 at {1,2,3,6,8,9,10,11,12,13,14,15,21} (Vmax=21)
+ |L|=4 min via-max margin = 242/273 ~ 0.886 at {1,3,4,8,9,10,11,12,13,14,18,21,22} (Vmax=22)
+So the criterion-failures for |L| in {3,4} live at SMALL Vmax (large speeds barely >13). CORRECTED
+split: |L| in {3,4} closes EXACTLY like the PROVED k=2 slice — pigeonhole gives the limit margin
+>= 7/c - 1 (c=|L|-1 <=3: c=2 ->5/2, c=3 ->4/3, both >1) for the large-Vmax regime, and a FINITE
+CORE (bounded Vmax) below the threshold. Only |L|>=5 (cluster' >=4 pts, no pigeonhole) is the
+genuine rho* hard case (mac-mini THM-527). LIMIT margin lower bound: w_theta >= 1/c - 1/7 (since
+maxgap >= 1/c), so margin = 7*w_theta >= 7/c - 1.
