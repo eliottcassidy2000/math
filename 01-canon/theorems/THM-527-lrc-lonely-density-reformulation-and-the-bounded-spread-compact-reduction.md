@@ -19,6 +19,15 @@ external: Lonely Runner Conjecture (≤12 speeds proven 2026; 13 speeds = LRC(14
 
 # THM-527 — The lonely-density reformulation and the bounded-spread compact reduction
 
+> **⚠️ THM-527 NUMBER COLLISION (flagged mac-mini-2026-06-18-S2).** Two theorems share id THM-527:
+> (a) THIS file (lonely-density reformulation, mac-mini-S1, committed 09:21); and
+> (b) `THM-527-lrc-fixed-smallpart-cluster-closure.md` (kind-pasteur-S4, committed 09:01, FIRST).
+> By first-come, (b) keeps 527. BUT this file (a) became the **reference hub** — THM-528 (G_P
+> coupling) `depends_on` it and HYP-2584–2590 cite it. **Proposed resolution:** renumber (a)→THM-529
+> (fewer net broken refs would be (b)→529, but (b) is first-come). Deferred to coordination with
+> kind-pasteur to avoid breaking the ~10 hub references unilaterally. Until resolved, "THM-527
+> lonely-density" = this file; "THM-527 fixed-smallpart" = the other.
+
 **The distilled target** (kind-pasteur handoff, THM-526/HYP-2581d): close the LRC(14) S3
 residual by proving a *uniform positive density floor* `ρ*(Δ,P) ≥ c₀ > 0` via
 Weyl/three-distance. This theorem reformulates that target into a clean single-variable

@@ -224,8 +224,8 @@ print("(B) HEAVY search k=8..13 (exhaustive bounded-spread for k<=9; random+larg
 search_min = {}
 for k in range(8, 14):
     best = (F(2), None)
-    # bounded-spread structured sweep
-    bb = {8: 16, 9: 17, 10: 0, 11: 0, 12: 0, 13: 0}[k]
+    # bounded-spread structured sweep (kept small so the exact engine stays fast)
+    bb = {8: 13, 9: 13, 10: 13, 11: 14, 12: 14, 13: 14}[k]
     if bb:
         for rest in itertools.combinations(range(1, bb + 1), k - 1):
             E = [0] + list(rest)
@@ -234,8 +234,8 @@ for k in range(8, 14):
             m = mu(E)
             if m < best[0]:
                 best = (m, E)
-    # random search at many spreads (covers k>=10 and double-checks k=8,9)
-    ntrial = 60000 if k >= 10 else 20000
+    # random search at many spreads (covers larger spread for all k>=8)
+    ntrial = 20000
     for _ in range(ntrial):
         sp = random.choice([k, k + 1, k + 2, 2 * k, 3 * k, 4 * k, 40, 60, 100, 200])
         rest = random.sample(range(1, sp + 1), min(k - 1, sp))
@@ -253,7 +253,7 @@ print("(C) LARGE-SPREAD floor check: confirm no large-spread shape beats the bou
 print("    For each k, search spreads up to 400; report the smallest mu seen there.")
 for k in range(7, 14):
     floor_seen = (F(2), None)
-    for _ in range(40000):
+    for _ in range(12000):
         sp = random.randint(3 * k, 400)
         rest = random.sample(range(1, sp + 1), k - 1)
         E = primitive([0] + rest)

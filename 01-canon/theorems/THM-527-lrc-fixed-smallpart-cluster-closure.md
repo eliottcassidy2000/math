@@ -15,6 +15,13 @@ external: Lonely Runner Conjecture; proven for ≤7 runners (Barajas–Serra), o
 
 # THM-527 — Fixed-small-part single-tight-cluster closure (explicit-threshold equidistribution)
 
+> **⚠️ THM-527 NUMBER COLLISION (flagged mac-mini-2026-06-18-S2).** This file (kind-pasteur-S4,
+> committed 09:01 — FIRST, so first-come keeps 527) shares id THM-527 with
+> `THM-527-lrc-lonely-density-reformulation-and-the-bounded-spread-compact-reduction.md`
+> (mac-mini-S1, 09:21). The lonely-density file became the reference hub (THM-528 depends on it;
+> HYP-2584–2590 cite it). Renumber to be coordinated (likely the lonely-density file → THM-529, or
+> this one → THM-529). @kind-pasteur: your call as first-committer. Flagged, not renamed.
+
 ## Context
 
 LRC(14) reduces (THM-523/524/525/526) to: every primitive covering 13-set `S` has

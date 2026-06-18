@@ -18,7 +18,27 @@ open subinterval the cyclic order is fixed and every gap g(x)=alpha x+beta is li
 g>2/7 exactly. Intersect with G_P (exact rational arcs) -> rho* exact Fraction.
 
 USAGE:  python3 lrc14_k5_exact_closure_macmini.py [section]
-  sections: sanity | enum SMAX | rho | tail | all   (default: sanity)
+  sections: sanity | enum SMAX | tail | rhofull SMAX | rhok K SMAX | all   (default: sanity)
+
+RESULTS (mac-mini-2026-06-18-S2e, ANGLE E):
+  - PURE mu floor k=5: min over ALL 5-shapes (spread<=20) = 9/14, attained at consecutive
+    {0,1,2,3,4} (and scalings). For k=5 consecutive IS the global mu-extremizer (unlike k>=7).
+    k=6 pure mu floor = 4/7 at {0,1,2,3,4,5}.
+  - rho* floor k=5: min over ALL P (|P|=8) x ALL shapes (spread<=16 exhaustive; 1820 shapes
+    x 1287 P; gcd=1 tail to spread>=17; random to spread 60) = 95/2548 ~= 0.03728, attained
+    at E={0,2,4,6,8} (=2*consecutive), P={1,2,3,4,7,9,12,13}. NO rho*=0 anywhere.
+  - rho* floor k=6: min over ALL P (|P|=7) x shapes (spread<=9 exhaustive) = 3488/63063
+    ~= 0.05531 at consecutive {0,1,2,3,4,5}. NO zeros.
+  - SCALING (PROVED exact): good(g*E)=preimage of good(E) under x->g*x. mu scale-invariant;
+    rho* NOT (G_P fixed). Min over scalings is at SMALL g; rho*(P,g*E)->mu(E)*meas(G_P) as
+    g->inf (Weyl), a POSITIVE limit (k=5: >=(9/14)(2479/17640)=0.0903). Runaway shapes give
+    min_P rho* ~0.09-0.12, all >> floor.
+  - END-TO-END: real covering 13-sets S={1,2,3,4,7,9,12,13}u{Vmax-e:e in {0,2,4,6,8}} have
+    meas(G_S at 1/14)>0 (explicit witness tau) => M(S)>=1/14 directly.
+  - HONEST GAP: rho*>=meas(G_P)-5/14 (IE bound) positive for only 6/1287 P -> positivity
+    needs EXACT alignment, not measure-counting. Bounded spread/scaling = verified finite
+    check; spread->inf & scaling g->inf tails controlled by the Weyl limit but need a
+    quantitative rate (= OPEN-Q-108). k=5,6 CLOSED MODULO the same tail rate as THM-527.
 """
 import sys, itertools
 from fractions import Fraction as F
@@ -236,3 +256,37 @@ def sec_rhofull(smax_shapes):
 
 if __name__=="__main__" and len(sys.argv)>1 and sys.argv[1]=="rhofull":
     sec_rhofull(int(sys.argv[2]) if len(sys.argv)>2 else 8)
+
+# ===================================================================== generic-k rho* full scan
+def sec_rhofull_k(kk, smax_shapes):
+    """min_P rho* over ALL P subset{1..13} with |P|=13-kk, and ALL kk-shapes spread<=smax."""
+    psz=13-kk
+    print("="*90)
+    print(f"k={kk} (FULL): min_P rho* EXACT over ALL P (|P|={psz}) and ALL shapes spread<= {smax_shapes}")
+    print("="*90)
+    Ps=[list(p) for p in itertools.combinations(range(1,14),psz)]
+    print(f"  #P={len(Ps)}")
+    overall=(F(2),None,None); zeros=[]; cnt=0; worst=[]
+    for s in range(kk-1, smax_shapes+1):
+        for T in itertools.combinations(range(1,s),kk-2):
+            E=(0,)+T+(s,)
+            g=good_set_exact(list(E))
+            mn=(F(2),None)
+            for P in Ps:
+                r=meas(intersect(g,safe_set(P)))
+                if r<mn[0]: mn=(r,tuple(P))
+                if r==0: zeros.append((E,tuple(P)))
+            cnt+=1; worst.append((mn[0],E,mn[1]))
+            if mn[0]<overall[0]: overall=(mn[0],E,mn[1])
+    worst.sort()
+    print(f"  shapes checked: {cnt}")
+    print("  8 smallest min_P rho*:")
+    for r,E,P in worst[:8]:
+        print(f"    rho*={str(r):>18s} = {float(r):.7f}  E={E}  P={P}")
+    print(f"\n  *** GLOBAL min rho* (k={kk}) = {str(overall[0])} = {float(overall[0]):.7f} ***")
+    print(f"      E={overall[1]} P={overall[2]}")
+    print(f"  #(rho*=0)={len(zeros)} ==> {'POSITIVE FLOOR' if not zeros else 'HAS ZEROS'}")
+    return overall, zeros
+
+if __name__=="__main__" and len(sys.argv)>1 and sys.argv[1]=="rhok":
+    sec_rhofull_k(int(sys.argv[2]), int(sys.argv[3]) if len(sys.argv)>3 else 9)

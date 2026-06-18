@@ -1,6 +1,7 @@
+# Light bounded-spread minima for k=8..13 (small spread, fast exact) to report concrete floors.
 from fractions import Fraction as F
-import random
-random.seed(99)
+import itertools
+from math import gcd
 TWO7=F(2,7)
 def merge(iv):
     iv=sorted(iv); out=[]
@@ -39,31 +40,17 @@ def good_set_exact(E):
             if lo<hi: good.append((lo,hi))
     return merge(good)
 def mu(E): return meas(good_set_exact(E))
-from math import gcd
 def prim(E):
     g=0
     for e in E: g=gcd(g,e)
     return [e//g for e in E] if g>1 else list(E)
-
-# Candidate uniform bounds. For sorted 0=e1<...<ek=s, define:
-#   d2 = e2 (smallest positive offset)
-#   dtop = s - e_{k-1}  (top gap)
-#   dmin = min consecutive gap
-# Conjecture to test: mu(E) >= 5/(7 * d2) ?  (near x=a/d2 the offset e2 sweeps; near small the cluster forms)
-# Test which of these is a valid uniform LOWER bound.
-worst={'5/(7 e2)':99,'5/(7 dtop)':99}
-for trial in range(40000):
-    k=random.randint(4,13)
-    sp=random.choice([k,k+1,2*k,3*k,5*k,30,60,120,250])
-    rest=random.sample(range(1,sp+1),min(k-1,sp))
-    E=prim([0]+rest)
-    if len(set(E))<3: continue
-    E=sorted(set(E)); s=max(E)
-    e2=E[1]; dtop=s-E[-2]
-    m=mu(E)
-    r1=float(m*F(7*e2,5))   # m / (5/(7 e2)) = m*7e2/5
-    r2=float(m*F(7*dtop,5))
-    if r1<worst['5/(7 e2)']: worst['5/(7 e2)']=r1; w1=E
-    if r2<worst['5/(7 dtop)']: worst['5/(7 dtop)']=r2; w2=E
-print('min ratio mu/(5/(7 e2)) =',round(worst['5/(7 e2)'],3),'(>=1 means valid bound) at',w1)
-print('min ratio mu/(5/(7 dtop))=',round(worst['5/(7 dtop)'],3),'at',w2)
+# exhaustive small spread for k=8..13
+for k in range(8,14):
+    bb={8:14,9:14,10:15,11:15,12:15,13:14}[k]
+    best=(F(2),None)
+    for rest in itertools.combinations(range(1,bb+1),k-1):
+        E=[0]+list(rest)
+        if prim(E)!=E: continue
+        m=mu(E)
+        if m<best[0]: best=(m,E)
+    print(f"k={k}: bounded-spread<= {bb} exhaustive min mu = {best[0]} = {float(best[0]):.6f} at E={best[1]}")

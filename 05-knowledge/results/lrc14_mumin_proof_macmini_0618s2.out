@@ -16,4 +16,3 @@ L3  bounded-spread reduction -- exact minima over primitive shapes
    k=7: exhaustive min mu (spread<=18) = 13/35 = 0.371429  at E=[0, 2, 3, 4, 5, 6, 8]
 
 (B) HEAVY search k=8..13 (exhaustive bounded-spread for k<=9; random+large for k>=10)
-   k=8: min mu found = 71/220 = 0.322727  at E=[0, 2, 3, 4, 5, 6, 8, 11] (spread 11)

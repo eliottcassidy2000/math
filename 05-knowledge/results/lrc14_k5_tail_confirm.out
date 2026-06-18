@@ -1,0 +1,7 @@
+FLOOR (bounded-spread, exhaustive s<=16) = 95/2548 = 0.03728414442700157
+
+k=5 gcd=1 tail shapes, spread 17-18 (the genuinely-new, non-scaling shapes):
+  s=17: min rho* over gcd=1 shapes = 0.087821 at (0, 2, 4, 6, 17)
+  s=18: min rho* over gcd=1 shapes = 0.081911 at (0, 5, 9, 13, 18)
+  gcd=1 shapes checked: 1174; # below 95/2548: 0
+  global min (s17-18 gcd1): 883/10780 = 0.081911 at E=(0, 5, 9, 13, 18) P=(2, 5, 6, 7, 8, 9, 11, 13)
