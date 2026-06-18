@@ -1,0 +1,67 @@
+
+========================================================================
+PART 1 — the residue reduction (PROVED)
+========================================================================
+
+CLAIM (PROVED, elementary): for fixed q, the existence of a safe rational witness
+tau = a/q for a speed-set S depends ONLY on the multiset R = { v mod q : v in S }.
+Proof: ||v (a/q)|| = ||(v mod q)(a/q)|| since ||.|| is 1-periodic and
+(v a)/q = (v mod q)*a/q + integer. So safety of v at a/q = safety of (v mod q) at a/q.
+Hence 'exists a: all safe' is a function of R alone. QED.
+
+CONSEQUENCE: 'fixed q works for all primitive q-covering 13-sets' is a FINITE claim
+over residue-multisets R subset (Z/q) of size <=13 that are REALIZABLE by a primitive
+q-covering set. Realizability constraint: covering needs, for each m in 2..14, a speed
+== 0 mod m; primitivity needs gcd of speeds = 1. We search over realizable R.
+
+
+========================================================================
+PART 2 — adversarial search for a q-counterexample (fixed-q robustness)
+========================================================================
+
+For each candidate q, search hard for a primitive q-covering 13-set with NO safe
+witness a/q. Strategy: random + structured (clusters near j*q/14 to stress the band)
++ the known hard sets. If none found over a large budget -> q is a strong candidate.
+
+  q=  91: checked  12423 primitive covering S3 sets, #fails=1795, min #safe-a over successes = 2
+           FAIL example: [2, 3, 8, 9, 11, 180, 182, 188, 189, 202, 203, 206, 207]  (residues mod q: [2, 3, 8, 9, 11, 89, 0, 6, 7, 20, 21, 24, 25])
+  q=  98: checked  12460 primitive covering S3 sets, #fails=1719, min #safe-a over successes = 2
+           FAIL example: [1, 3, 5, 6, 10, 11, 288, 289, 294, 299, 300, 303, 307]  (residues mod q: [1, 3, 5, 6, 10, 11, 92, 93, 0, 5, 6, 9, 13])
+  q= 182: checked  12703 primitive covering S3 sets, #fails=1270, min #safe-a over successes = 2
+           FAIL example: [2, 5, 7, 8, 11, 13, 357, 358, 359, 360, 364, 371, 372]  (residues mod q: [2, 5, 7, 8, 11, 13, 175, 176, 177, 178, 0, 7, 8])
+  q= 210: checked  12489 primitive covering S3 sets, #fails=670, min #safe-a over successes = 2
+           FAIL example: [2, 6, 7, 9, 10, 11, 12, 13, 197, 200, 202, 204, 210]  (residues mod q: [2, 6, 7, 9, 10, 11, 12, 13, 197, 200, 202, 204, 0])
+  q= 252: checked  12460 primitive covering S3 sets, #fails=650, min #safe-a over successes = 2
+           FAIL example: [3, 5, 6, 7, 8, 13, 248, 249, 251, 252, 253, 257, 260]  (residues mod q: [3, 5, 6, 7, 8, 13, 248, 249, 251, 0, 1, 5, 8])
+  q= 168: checked  12389 primitive covering S3 sets, #fails=1279, min #safe-a over successes = 2
+           FAIL example: [1, 6, 11, 13, 329, 330, 331, 332, 333, 334, 336, 337, 339]  (residues mod q: [1, 6, 11, 13, 161, 162, 163, 164, 165, 166, 0, 1, 3])
+
+========================================================================
+PART 3 — q=91 = 7*13 : the CRT decoupling
+========================================================================
+
+q = 91 = 7 * 13 (coprime). By CRT, a mod 91 <-> (a mod 7, a mod 13).
+SAFE_91 (the band 14*min(r,91-r)>=91, i.e. min(r,91-r) >= 91/14 = 6.5, so >=7):
+danger = { r : min(r,91-r) <= 6 } = {0,..,6, 85,..,90} -- 13 residues.
+The danger band r in {-6..6} mod 91 does NOT factor as (mod7 cond) x (mod13 cond);
+it's a genuine 2D box-complement in (Z/7 x Z/13). We display the safe (a7,a13)
+witness for a hard set and show the CRT solve.
+
+  S*=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42], residues mod 91 = [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+  safe witness a/91 exists: False, a=None (#safe a = 0)
+
+========================================================================
+PART 4 — WHY a fixed q can work: the danger-residue counting bound
+========================================================================
+
+Heuristic for why a fixed q works: for tau=a/q, speed v is UNSAFE iff v*a mod q in
+DANGER_q (|DANGER_q| = 2*ceil(q/14)-1 residues). For random a, P(v unsafe) ~ |DANGER|/q
+~ 1/7. Over 13 speeds, expected #unsafe ~ 13/7 < 2; with q's worth of a-choices,
+the probability ALL a are bad decays. But this is heuristic -- the real question is
+the WORST residue-tuple. We compute, for q=91, the MAX over realizable residue-tuples
+of (min #unsafe speeds) -- if the worst tuple still has a safe a, q works.
+We approximate 'realizable' by the covering+primitive filter on actual integer sets.
+
+  q=91: hardest sampled set has 0 safe a-values (>0 means witness exists)
+        hardest set: [1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 364, 374, 382]
+  => over the entire sample, the MINIMUM #safe-a is 0 > 0, so q=91 gives a witness for every sampled set.

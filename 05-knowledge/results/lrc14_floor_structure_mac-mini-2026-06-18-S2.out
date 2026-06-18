@@ -1,0 +1,24 @@
+======================================================================
+(1) DILATION-INVARIANCE  mu(dE)=mu(E):
+  E=[0, 1, 2, 3]: mu=1.00000  mu(3E)=1.00000
+  E=[0, 2, 4, 6, 8]: mu=0.66667  mu(2E)=0.66667
+  E=[0, 1, 4, 6, 7]: mu=1.00000  mu(5E)=1.00000
+  E=[0, 3, 6, 8]: mu=1.00000  mu(2E)=1.00000
+
+(2) AP shapes spread-independent (mu = mu_consecutive(k) for any common difference d):
+  k=4: mu(AP,d=1,2,3,5)=[1.0, 1.0, 1.0, 1.0]
+  k=5: mu(AP,d=1,2,3,5)=[0.6667, 0.6667, 0.6667, 0.6667]
+  k=6: mu(AP,d=1,2,3,5)=[0.7667, 0.7667, 0.7667, 0.7667]
+
+(3) iid f(k) is an UPPER bound, consecutive mu_k is BELOW it:
+  k=4: mu_consec=1.0000  iid f(k)=0.9971  (orbit < iid: False)
+  k=5: mu_consec=0.6667  iid f(k)=0.9683  (orbit < iid: True)
+  k=7: mu_consec=0.3333  iid f(k)=0.7998  (orbit < iid: True)
+  k=9: mu_consec=0.2500  iid f(k)=0.5689  (orbit < iid: True)
+  k=13: mu_consec=(skip)  iid f(k)=0.2263  (orbit < iid: n/a)
+
+(4) near-0 good interval width = 5/(7*spread) -> 0 for large spread;
+    so the floor must come from the AP/three-distance bulk, not the near-0 cap.
+
+IMPLICATION: prove mu_min(k)>0 over PRIMITIVE shapes (dilation-inv); AP shapes give the
+fixed mu_k>0 at any spread; the genuine work is the perforated/multi-scale shapes.

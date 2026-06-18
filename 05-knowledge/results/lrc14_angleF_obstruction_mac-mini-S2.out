@@ -1,0 +1,80 @@
+
+========================================================================
+PART Q1 — minimal witness modulus q_min(S), vs D and vs Vmax
+========================================================================
+
+For each set, find the smallest q with a safe witness a/q, scanning q upward.
+Compare to D (optimal-tau denominator) and Vmax. EXACT.
+
+  k=3 Vmax= 448  D(optimum)=  176  q_min(witness)=  15  q_min/Vmax=0.033  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 464  D(optimum)=  916  q_min(witness)=  25  q_min/Vmax=0.054  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 153  D(optimum)=  268  q_min(witness)=  18  q_min/Vmax=0.118  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 448  D(optimum)=  878  q_min(witness)=  19  q_min/Vmax=0.042  q_min<=14? False  q_min<=2*Vmax? True
+  k=4 Vmax= 510  D(optimum)= 1012  q_min(witness)=  19  q_min/Vmax=0.037  q_min<=14? False  q_min<=2*Vmax? True
+  k=8 Vmax= 165  D(optimum)=   34  q_min(witness)=  18  q_min/Vmax=0.109  q_min<=14? False  q_min<=2*Vmax? True
+  k=8 Vmax= 554  D(optimum)=  364  q_min(witness)=  16  q_min/Vmax=0.029  q_min<=14? False  q_min<=2*Vmax? True
+  k=5 Vmax= 200  D(optimum)=   36  q_min(witness)=  15  q_min/Vmax=0.075  q_min<=14? False  q_min<=2*Vmax? True
+  k=9 Vmax= 562  D(optimum)=  160  q_min(witness)=  15  q_min/Vmax=0.027  q_min<=14? False  q_min<=2*Vmax? True
+  k=9 Vmax= 272  D(optimum)=  514  q_min(witness)=  22  q_min/Vmax=0.081  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 238  D(optimum)=  424  q_min(witness)=  19  q_min/Vmax=0.080  q_min<=14? False  q_min<=2*Vmax? True
+  k=8 Vmax= 448  D(optimum)=  864  q_min(witness)=  21  q_min/Vmax=0.047  q_min<=14? False  q_min<=2*Vmax? True
+  k=7 Vmax= 201  D(optimum)=  396  q_min(witness)=  17  q_min/Vmax=0.085  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 201  D(optimum)=  358  q_min(witness)=  19  q_min/Vmax=0.095  q_min<=14? False  q_min<=2*Vmax? True
+  k=5 Vmax= 260  D(optimum)=   40  q_min(witness)=  17  q_min/Vmax=0.065  q_min<=14? False  q_min<=2*Vmax? True
+  k=6 Vmax= 303  D(optimum)=  576  q_min(witness)=  15  q_min/Vmax=0.050  q_min<=14? False  q_min<=2*Vmax? True
+  k=8 Vmax= 497  D(optimum)=  990  q_min(witness)=  21  q_min/Vmax=0.042  q_min<=14? False  q_min<=2*Vmax? True
+  k=9 Vmax= 305  D(optimum)=  608  q_min(witness)=  15  q_min/Vmax=0.049  q_min<=14? False  q_min<=2*Vmax? True
+  k=9 Vmax= 526  D(optimum)= 1010  q_min(witness)=  15  q_min/Vmax=0.029  q_min<=14? False  q_min<=2*Vmax? True
+  k=7 Vmax= 312  D(optimum)=   88  q_min(witness)=  15  q_min/Vmax=0.048  q_min<=14? False  q_min<=2*Vmax? True
+  k=5 Vmax= 294  D(optimum)=  196  q_min(witness)=  19  q_min/Vmax=0.065  q_min<=14? False  q_min<=2*Vmax? True
+  k=9 Vmax=  62  D(optimum)=  116  q_min(witness)=  19  q_min/Vmax=0.306  q_min<=14? False  q_min<=2*Vmax? True
+  k=3 Vmax= 133  D(optimum)=  196  q_min(witness)=  17  q_min/Vmax=0.128  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 342  D(optimum)=  674  q_min(witness)=  15  q_min/Vmax=0.044  q_min<=14? False  q_min<=2*Vmax? True
+  k=10 Vmax= 183  D(optimum)=  356  q_min(witness)=  17  q_min/Vmax=0.093  q_min<=14? False  q_min<=2*Vmax? True
+
+  OBSERVATION: q_min is typically MUCH SMALLER than D and than Vmax (often q_min<=~Vmax).
+  So you do NOT need the optimal-denominator modulus; a coarse rational witness exists
+  at a modulus comparable to (or below) Vmax. The optimum D is a red herring for
+  CONSTRUCTING a witness >=1/14.
+
+========================================================================
+PART Q3 — the constructive claim: witness ALWAYS exists at q = 14*Vmax?
+========================================================================
+
+NATURAL CRT MODULUS q = 14 * Vmax (level denom * cluster scale). At this q, tau = a/(14 Vmax)
+ranges over the Vmax-ruler periods refined to 1/14 resolution -- exactly the THM-527
+ruler. A safe a EXISTS  <=>  some good Vmax-period meets G_P  <=>  (THM-527) #good>0.
+We test: over a broad, large-Vmax, adversarial sweep, does q=14*Vmax ALWAYS give a witness?
+If yes -> constructive witness modulo 'rho*>0'; the CRT route REDUCES to the measure floor.
+
+  over 120 sets (Vmax up to ~2050): #fails at q=14*Vmax = 0
+  If 0 fails: the CRT witness at q=14*Vmax exists for every in-scope set tested,
+  i.e. the constructive CRT placement SUCCEEDS, conditional ONLY on the (verified)
+  positivity of the discretized density. This is the SAME crux as THM-527's rho*>0.
+
+========================================================================
+PART Q2 — CRT DECOUPLING when cluster scale is coprime to 14
+========================================================================
+
+Take q = 14 * m with gcd(m,14)=1 (m = a cluster-scale chosen coprime to 14). Then
+CRT: a mod q <-> (a mod 14, a mod m). Speed v:
+  ||v a/q|| >= 1/14. We ask whether the condition decouples: is there a clean
+  description 'a mod 14 controls the speeds with 7|v or 2|v; a mod m controls the rest'?
+We MEASURE the coupling: for the hard residue speeds, does fixing a mod 14 alone (best
+choice) already make the 14-divisible speeds safe, leaving an INDEPENDENT problem mod m?
+
+  test set S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 169], covering=False, primitive=True
+
+========================================================================
+PART Q3b — adversarial stress: clusters straddling j*Vmax/14 (the tight locus)
+========================================================================
+
+The tight locus (THM-527 part B, width->thresh) is near tau = j/7. Build clusters
+designed to fill the 1/7-slots (dense consecutive cluster) and re-test q=14*Vmax.
+This is where the measure rho* is smallest. If a witness STILL exists here, the
+CRT route is robust at the hardest configurations.
+
+  (skipped non-covering/non-primitive/size!=13: [1, 2, 3, 5, 6, 7, 9, 11, 12, 200, 201, 202, 203])
+  (skipped non-covering/non-primitive/size!=13: [1, 2, 3, 4, 5, 6, 7, 8, 9, 700, 701, 702, 703])
+  (skipped non-covering/non-primitive/size!=13: [1, 2, 3, 5, 6, 7, 11, 13, 1000, 1001, 1002, 1003, 1004])
+  (skipped non-covering/non-primitive/size!=13: [1, 2, 3, 4, 11, 13, 1500, 1501, 1502, 1503, 1504, 1505, 1506])

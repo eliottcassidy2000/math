@@ -1,0 +1,90 @@
+================================================================================
+ANGLE D — arithmetic dual of HYP-2579: does private-q force j >= ceil(D/14)?
+================================================================================
+enumerated primitive q-covering case-S3 13-sets: 662
+
+--- Part 1: literal conjecture status ---
+LRC breaks (M<1/14): 0/662
+rows where a binding pair's BIG member has a private-q: 579/662
+rows with a sum-binding (flank,big-with-private-q) having j>=ceil(D/14): 579/662
+binding records with j/D >= 1/14: 956/956  (these are the M-realizing ones)
+
+--- Part 2: verify j = fold(flank*num, D) at the M crossing (the identity) ---
+  identity j == fold(member*num, D) holds: 956 ok, 0 bad
+
+--- Part 3: arithmetic-dual probe ---
+  sum-binding records (big has private-q), sorted by j/D ascending — hardest:
+   M=   14/183 jod=  14/183 D= 183 j= 14 ceil(D/14)= 14 j>=ceilD14=True flank=  1 big= 182 privq(big)=(13, 14) [D%q,big%q,flank%q]=[(13, 1, 0, 1), (14, 1, 0, 1)]
+   M=   28/365 jod=  28/365 D= 365 j= 28 ceil(D/14)= 27 j>=ceilD14=True flank=  1 big= 364 privq(big)=(13, 14) [D%q,big%q,flank%q]=[(13, 1, 0, 1), (14, 1, 0, 1)]
+   M=   42/547 jod=  42/547 D= 547 j= 42 ceil(D/14)= 40 j>=ceilD14=True flank=  1 big= 546 privq(big)=(13, 14) [D%q,big%q,flank%q]=[(13, 1, 0, 1), (14, 1, 0, 1)]
+   M=     7/89 jod=    7/89 D=  89 j=  7 ceil(D/14)=  7 j>=ceilD14=True flank=  5 big=  84 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   14/173 jod=  14/173 D= 173 j= 14 ceil(D/14)= 13 j>=ceilD14=True flank=  5 big= 168 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   21/257 jod=  21/257 D= 257 j= 21 ceil(D/14)= 19 j>=ceilD14=True flank=  5 big= 252 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   28/341 jod=  28/341 D= 341 j= 28 ceil(D/14)= 25 j>=ceilD14=True flank=  5 big= 336 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=     7/85 jod=    7/85 D= 425 j= 35 ceil(D/14)= 31 j>=ceilD14=True flank=  5 big= 420 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   42/509 jod=  42/509 D= 509 j= 42 ceil(D/14)= 37 j>=ceilD14=True flank=  5 big= 504 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   49/593 jod=  49/593 D= 593 j= 49 ceil(D/14)= 43 j>=ceilD14=True flank=  5 big= 588 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=   56/677 jod=  56/677 D= 677 j= 56 ceil(D/14)= 49 j>=ceilD14=True flank=  5 big= 672 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 5, 0, 5), (14, 5, 0, 5)]
+   M=     4/47 jod=    4/47 D=  47 j=  4 ceil(D/14)=  4 j>=ceilD14=True flank=  7 big=  40 privq(big)=(10,) [D%q,big%q,flank%q]=[(10, 7, 0, 7)]
+   M=   37/431 jod=  37/431 D= 431 j= 37 ceil(D/14)= 31 j>=ceilD14=True flank= 11 big= 420 privq(big)=(14,) [D%q,big%q,flank%q]=[(14, 11, 0, 11)]
+   M=     2/23 jod=    2/23 D=  23 j=  2 ceil(D/14)=  2 j>=ceilD14=True flank= 11 big=  12 privq(big)=(6, 12) [D%q,big%q,flank%q]=[(6, 5, 0, 5), (12, 11, 0, 11)]
+   M=     2/23 jod=    2/23 D=  23 j=  2 ceil(D/14)=  2 j>=ceilD14=True flank= 11 big=  12 privq(big)=(12,) [D%q,big%q,flank%q]=[(12, 11, 0, 11)]
+   M=     2/23 jod=    2/23 D=  92 j=  8 ceil(D/14)=  7 j>=ceilD14=True flank=  8 big=  84 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 8, 0, 8), (14, 8, 0, 8)]
+   M=     2/23 jod=    2/23 D=  92 j=  8 ceil(D/14)=  7 j>=ceilD14=True flank=  8 big=  84 privq(big)=(12, 14) [D%q,big%q,flank%q]=[(12, 8, 0, 8), (14, 8, 0, 8)]
+   M=     2/23 jod=    2/23 D=  23 j=  2 ceil(D/14)=  2 j>=ceilD14=True flank= 11 big=  12 privq(big)=(12,) [D%q,big%q,flank%q]=[(12, 11, 0, 11)]
+
+--- Part 4: the binding flank and private-big on the hardest rows ---
+           M flank   big     D    j      priv(big)  priv(flank)
+      14/183     1   182   183   14       (13, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+      28/365     1   364   365   28       (13, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364)
+      42/547     1   546   547   42       (13, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 546)
+        7/89     5    84    89    7       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+      14/173     5   168   173   14       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+      21/257     5   252   257   21       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 252)
+      28/341     5   336   341   28       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 336)
+        7/85     5   420   425   35       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 420)
+      42/509     5   504   509   42       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 504)
+      49/593     5   588   593   49       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 588)
+      56/677     5   672   677   56       (12, 14)           ()  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 672)
+        4/47     7    40    47    4          (10,)           ()  S=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 40, 112)
+      37/431    11   420   431   37          (14,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 420)
+        2/23    11    12    23    2          (12,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42)
+        2/23    11    12    23    2             ()        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84)
+        2/23    11    12    23    2          (12,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+        2/23    11    12    23    2             ()        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168)
+        2/23    11    12    23    2          (12,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 210)
+        2/23    11    12    23    2             ()        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 252)
+        2/23    11    12    23    2          (12,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 294)
+        2/23    11    12    23    2             ()        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 336)
+        2/23    11    12    23    2          (12,)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 378)
+        2/23    11    12    23    2          (12,)           ()  S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 462)
+        2/23    11    12    23    2        (6, 12)        (11,)  S=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20, 28)
+        2/23     8    15    23    2             ()         (8,)  S=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13, 15, 84)
+  flank palette (hardest 25): [1, 5, 7, 8, 11]
+  big member carries a private-q (hardest 25): 20/25
+
+--- Part 5: per-record arithmetic test (NON-tautological) ---
+  Over ALL sum-crossings tau=num/D (num=1..floor(D/2), gcd(num,D)=1) with big|q private,
+  is fold(flank*num,D) >= ceil(D/14) ALWAYS? (this is the arithmetic statement, not M)
+  total sum-crossings checked (flank<big, big privately owns q): 287658
+  crossings where fold(flank*num,D) < ceil(D/14): 38536
+  => the PER-RECORD arithmetic claim is FALSE if this is >0 (expected): the pair gap
+     can be tiny; LRC is saved only because OTHER runners are NOT clear there.
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 1, 14, 15, 1, 1, 2, (7, 14))
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 3, 14, 17, 6, 1, 2, (7, 14))
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 5, 14, 19, 4, 1, 2, (7, 14))
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 9, 14, 23, 5, 1, 2, (7, 14))
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 11, 14, 25, 9, 1, 2, (7, 14))
+    e.g. ((1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14), 13, 14, 27, 2, 1, 2, (7, 14))
+
+--- Part 6: at the TRUE M-crossing, distribution of num and num mod (private q) ---
+  num value histogram at M-crossing (top): {6: 140, 8: 101, 5: 60, 7: 49, 4: 38, 9: 35, 15: 30, 13: 23, 17: 10, 26: 9, 39: 8, 22: 7}
+  (q, num mod q) histogram for private-q of big (top): {(11, 6): 102, (13, 8): 85, (11, 5): 52, (14, 1): 40, (11, 7): 24, (13, 9): 22, (8, 7): 22, (14, 8): 22, (14, 7): 21, (7, 6): 21, (13, 6): 20, (14, 9): 20, (14, 13): 19, (8, 0): 16, (7, 0): 15}
+
+================================================================================
+VERDICT
+================================================================================
+LRC breaks: 0 (0 expected — LRC(14) holds on all sampled S3 rows)
+M-crossing binding-big carries private-q on hardest 25: 20/25
+Literal 'j>=ceil(D/14)' at M-crossing is TAUTOLOGICAL (M=j/D).
+Per-record arithmetic claim FALSE: 38536 sum-crossings have pair-gap<1/14.
