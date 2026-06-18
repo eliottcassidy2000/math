@@ -1,0 +1,16 @@
+==============================================================================
+CRITERION C(S): exists v with W(S\{v}) > 1/(7v)  =>  M(S)>=1/14
+==============================================================================
+  min {1..11,13,84}         : C holds=True via v=84 (W=0.00408 > 1/(7v)=0.00170, margin=+0.00238)  M(S)=7/89=0.0787
+  drop6 {1..5,7..13,84}     : C holds=True via v=84 (W=0.00271 > 1/(7v)=0.00170, margin=+0.00100)  M(S)=2/23=0.0870
+  drop6 u98                 : C holds=True via v=98 (W=0.00271 > 1/(7v)=0.00146, margin=+0.00125)  M(S)=9/109=0.0826
+
+==============================================================================
+STRESS TEST: does C(S) hold for ALL covering 13-sets?  (incl. multiple large runners)
+==============================================================================
+  covering 13-sets tested: 3000
+  C(S) FAILED (no v with W>1/(7v)): 0
+  of those, actual LRC break M(S)<1/14: 0
+  => C(S) HOLDS UNIVERSALLY on the sample: the generalized arc-width criterion
+     PROVES M(S)>=1/14 for every covering 13-set tested. (Proof target: show C always holds.)
+  tightest successful margin W-1/(7v) = 0.000149 at v=168 S=[2, 3, 4, 5, 6, 7, 9, 10, 11, 12, 13, 168, 858]
