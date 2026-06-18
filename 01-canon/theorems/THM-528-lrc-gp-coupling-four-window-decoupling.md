@@ -9,7 +9,7 @@ depends_on:
   - THM-523   # covering-set reduction; meas(G_P) ≥ 7/858
 related:
   - OPEN-Q-108   # the uniform fattening lemma (equivalent crux)
-  - HYP-2587     # the four-window scale-decoupling (this work)
+  - HYP-2590     # the four-window scale-decoupling (this work)
   - HYP-2584     # bounded-spread extremizer
 external: Lonely Runner Conjecture (13 speeds = LRC(14), first open case); Steinhaus three-gap; Weyl.
 ---
