@@ -1,0 +1,6 @@
+backup tau=(m/13)/(m+1): worst level over failing-k covering members (k<500): 28/365 0.07671232876712329
+  >1/14 always? True  #below1/14: 0 []
+tau=2/27: worst level over NON-failing covering members (k<500): 2/27 0.07407407407407407
+  >1/14 always? True  #below1/14: 0
+
+==> COVERING AP family fully closed by two explicit witnesses.

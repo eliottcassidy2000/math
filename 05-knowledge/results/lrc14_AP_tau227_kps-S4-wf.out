@@ -1,0 +1,11 @@
+tau=2/27 levels for 1..12: ['2/27', '4/27', '2/9', '8/27', '10/27', '4/9', '13/27', '11/27', '1/3', '7/27', '5/27', '1/9']
+min over 1..12: 2/27 0.07407407407407407
+m mod 27 making tau=2/27 UNSAFE for runner m: [0, 13, 14]
+Traceback (most recent call last):
+  File "<string>", line 15, in <module>
+    print('  (these are m \u2261 0, ±? mod 27)')
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u2261' in position 15: character maps to <undefined>

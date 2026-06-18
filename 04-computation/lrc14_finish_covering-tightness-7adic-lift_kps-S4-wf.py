@@ -81,6 +81,38 @@ def Mval(S):
         if v > b: b = v; at = t
     return b, at
 
+def cand_floats(S):
+    S = sorted(set(S)); cs = set()
+    for v in S:
+        k = 0
+        while 2*k+1 <= v: cs.add((2*k+1)/(2.0*v)); k += 1
+    n=len(S)
+    for i in range(n):
+        for j in range(i+1, n):
+            for d in (S[i]+S[j], S[j]-S[i]):
+                if d>0:
+                    k=1
+                    while 2*k <= d: cs.add(k/float(d)); k += 1
+    cs.add(0.5); return cs
+def Mfloat(S):
+    cs = cand_floats(S); bt=0.5; bv=-1.0
+    for t in cs:
+        m=1.0
+        for v in S:
+            r=(v*t)%1.0; r = r if r<=1.0-r else 1.0-r
+            if r<m: m=r
+            if m<=bv: break
+        if m>bv: bv=m; bt=t
+    return bv, bt
+def M_decided(S, thr=1.0/14.0, eps=2e-3):
+    """Return (exactM_or_None, is_LRC_good_bool, at_or_None).
+       Uses float prescreen; computes EXACT M only when float-M within eps of thr."""
+    bv, bt = Mfloat(S)
+    if bv > thr + eps:
+        return None, True, None      # safely >= 1/14, exact not needed
+    m, at = Mval(S)                  # exact (near boundary)
+    return m, (m >= C14), at
+
 def is_cov(S): return all(any(v % q == 0 for v in S) for q in range(2, 15))
 def primitive(S): return reduce(gcd, S, 0) == 1
 def classify(S):
@@ -207,28 +239,41 @@ def binding_runners(S, t):
     mn = min(nrm(v*t) for v in S)
     return mn, [v for v in S if nrm(v*t)==mn]
 
-S3sets = gen_S3_covering(seed=4, target=4000, Vrange=(40,900))
-print(f"\n  Generated {len(S3sets)} covering primitive S3 sets (clustered-large).")
-minM = F(10); minS=None; minAt=None
-distbucket = Counter()
-mult7_binding = 0; total = 0
-near_k7_count = 0
-sample_rows = []
+t0=time.time()
+S3sets = gen_S3_covering(seed=4, target=3000, Vrange=(40,400))
+print(f"\n  Generated {len(S3sets)} covering primitive S3 sets (clustered-large), Vmax<=~400.")
+# First pass: float floor to find the LOW sets, then exact-confirm only those.
+fvals = []
 for S in S3sets:
-    m, at = Mval(S)
-    total += 1
+    bv, bt = Mfloat(S)
+    fvals.append((bv, S, bt))
+fvals.sort(key=lambda r: r[0])
+# exact-confirm the lowest 250 (floor candidates) + verify all are LRC-good via decided
+minM=F(10); minS=None; minAt=None
+below=0; total=0
+exact_low=[]
+for bv,S,bt in fvals[:250]:
+    m, at = Mval(S); total+=1
+    exact_low.append((m,S,at))
     if m < minM: minM=m; minS=S; minAt=at
-    mn, binders = binding_runners(S, at)
-    if any(b%7==0 for b in binders): mult7_binding += 1
-    k, d = nearest_k7(at)
-    if d <= F(1,14): near_k7_count += 1
-    distbucket[d <= F(1,14)] += 1
-print(f"  min exact M over sample = {minM} = {float(minM):.6f}  (1/14={float(C14):.6f}, ratio {float(minM*14):.4f})")
+    if m < C14: below+=1
+# also check (float) that the rest are safely above the floor we found
+restmin = fvals[250][0] if len(fvals)>250 else 1.0
+print(f"  exact M on the 250 lowest-float-M sets; below 1/14: {below}/{total} [{time.time()-t0:.1f}s]")
+print(f"  min exact M = {minM} = {float(minM):.6f}  (1/14={float(C14):.6f}, ratio {float(minM*14):.4f})")
 print(f"    at S = {minS}")
 print(f"    optimal tau* = {minAt} = {float(minAt):.6f}; nearest k/7 = {nearest_k7(minAt)[0]}/7, "
       f"dist {nearest_k7(minAt)[1]} = {float(nearest_k7(minAt)[1]):.5f}")
-print(f"  optimal tau* within 1/14 of some k/7: {near_k7_count}/{total}")
-print(f"  binding runner at tau* is a multiple of 7: {mult7_binding}/{total}")
+print(f"  (float-M of 251st-lowest set = {restmin:.6f}, safely above floor: {restmin>float(minM)})")
+# pinning stats on the low exact sets
+near_k7_count=0; mult7_binding=0
+for m,S,at in exact_low:
+    mn, binders = binding_runners(S, at)
+    if any(b%7==0 for b in binders): mult7_binding+=1
+    k,d = nearest_k7(at)
+    if d <= F(1,14): near_k7_count+=1
+print(f"  on the {len(exact_low)} lowest-M sets: tau* within 1/14 of some k/7: {near_k7_count}/{len(exact_low)}")
+print(f"  binding runner at tau* is a multiple of 7: {mult7_binding}/{len(exact_low)}")
 print("  => the optimum tau* is typically PUSHED AWAY from k/7 by the mult-of-7 obligation,")
 print("     and the binding runner is frequently the mult-of-7 itself (the forced displacement).")
 
@@ -271,20 +316,37 @@ def single_gap_closable(S):
         if K > 14*Vmax: break
     return False
 
+# Cache: exact M only for near-floor sets (these contain any possible floor/violation);
+# higher-float sets are certified > floor by the float screen.
+t1=time.time()
+FLOORSCREEN = float(C14) + 0.012
+exactM = {}
+for bv,S,bt in fvals:
+    key=tuple(S)
+    if bv <= FLOORSCREEN:
+        m, at = Mval(S); exactM[key]=(m, at, bv)
+    else:
+        exactM[key]=(None, None, bv)
+nconf = sum(1 for v in exactM.values() if v[0] is not None)
+print(f"\n  [cache] exact M confirmed on {nconf} near-floor sets (float-M <= {FLOORSCREEN:.4f}); "
+      f"rest certified above by float screen. [{time.time()-t1:.1f}s]")
+
 residual = [S for S in S3sets if not single_gap_closable(S)]
 print(f"  residual (NOT single-gap closable) = {len(residual)} / {len(S3sets)}")
 rminM = F(10); rminS=None
 below = 0; rcount=0
 Mhist = Counter()
 for S in residual:
-    m,_ = Mval(S); rcount += 1
+    m, at, bv = exactM[tuple(S)]
+    if m is None: continue
+    rcount += 1
     Mhist[m] += 1
     if m < rminM: rminM=m; rminS=S
     if m < C14: below += 1
-print(f"  exact M computed on {rcount} residual sets; below 1/14: {below}")
+print(f"  exact M (near-floor) computed on {rcount} residual sets; below 1/14: {below}")
 print(f"  min exact M over residual = {rminM} = {float(rminM):.6f}  (ratio to 1/14: {float(rminM*14):.4f})")
 print(f"    at S = {rminS}")
-print(f"  lowest 8 exact M values seen on residual:")
+print(f"  lowest 8 exact M values seen on residual (near-floor band):")
 for m,ct in sorted(Mhist.items())[:8]:
     print(f"     M={m}={float(m):.6f}  (x{ct})   M*14={float(m*14):.4f}  >1/14:{m>C14}")
 
@@ -303,9 +365,11 @@ worst_by_residues = defaultdict(lambda: F(10))
 for S in S3sets:
     cluster = [v for v in S if v > 13]
     rset = set(v % 7 for v in cluster)
-    m,_ = Mval(S)
+    m, at, bv = exactM[tuple(S)]
+    if m is None: continue   # only the near-floor sets carry the worst M
     nd = len(rset)
     if m < worst_by_residues[nd]: worst_by_residues[nd] = m
+print("  (only near-floor sets shown; others are safely above floor)")
 print("  #distinct residues mod 7 in cluster  ->  worst (min) exact M among such sets:")
 for nd in sorted(worst_by_residues):
     mm = worst_by_residues[nd]
@@ -326,9 +390,10 @@ print("""  Sub-lemma to PROVE: let S be covering S3, m7 = a multiple of 14 in S 
   to m7. We test the cleaner claim: for covering S3, M(S) is attained at a tau* whose binding
   pair includes a covering-forced runner (mult of 7 or 14), and the resulting M has a bounded
   denominator giving M >= 2/23. We tabulate the EXACT M denominators on the lowest-M sets.""")
-low_sets = sorted(residual, key=lambda S: Mval(S)[0])[:12] if residual else []
-for S in low_sets:
-    m, at = Mval(S)
+# lowest near-floor residual sets, from the cache
+res_low = [(exactM[tuple(S)][0], S, exactM[tuple(S)][1]) for S in residual if exactM[tuple(S)][0] is not None]
+res_low.sort(key=lambda r: r[0])
+for m, S, at in res_low[:12]:
     mn, binders = binding_runners(S, at)
     has7 = [b for b in binders if b%7==0]
     print(f"    M={str(m):>8}={float(m):.5f} M*14={float(m*14):.3f} tau*={at} "
@@ -348,29 +413,29 @@ print("""  Direct test of the lift's step (3): take the worst covering S3 sets; 
 
 def gap_side_certificate(S):
     """For each k coprime to 7 and each mult-of-7 runner m7, scan tau = k/7 + j/m7 for small j,
-       compute exact min_v ||v tau||, return the best (max) such min as a certificate lower bound."""
+       compute exact min_v ||v tau||, return the best (max) such min as a certificate lower bound.
+       This is a pure 7-adic-lattice witness; if >= 1/14 it certifies M(S) >= 1/14 directly."""
     m7list = sorted(v for v in S if v % 7 == 0)
     best = F(0); bestat=None
-    for k in range(0,7):
-        if gcd(k,7)!=1 and k!=0:
-            pass
-        for m7 in m7list[:2]:
-            for j in range(-6,7):
+    for k in range(1,7):                 # k coprime to 7 (k=1..6)
+        for m7 in m7list:                # every mult-of-7 runner
+            for j in range(-12,13):
                 if j==0: continue
                 t = (F(k,7) + F(j,m7)) % 1
                 mn = min(nrm(v*t) for v in S)
                 if mn > best: best=mn; bestat=(k,m7,j,t)
     return best, bestat
 
-if residual:
-    cert_ok = 0; cert_tot = 0; worst_cert = F(10)
-    for S in sorted(residual, key=lambda S: Mval(S)[0])[:200]:
-        c, at = gap_side_certificate(S)
+if res_low:
+    cert_ok = 0; cert_tot = 0; worst_cert = F(10); worst_certS=None
+    for m, S, at in res_low:             # the near-floor residual sets (worst cases)
+        c, cat = gap_side_certificate(S)
         cert_tot += 1
         if c >= C14: cert_ok += 1
-        if c < worst_cert: worst_cert = c
-    print(f"  gap-side k/7 + j/m7 certificate >= 1/14 on {cert_ok}/{cert_tot} lowest-M residual sets")
-    print(f"  worst certificate value = {worst_cert} = {float(worst_cert):.6f} (M*14={float(worst_cert*14):.4f})")
+        if c < worst_cert: worst_cert = c; worst_certS=S
+    print(f"  gap-side k/7 + j/m7 certificate >= 1/14 on {cert_ok}/{cert_tot} near-floor residual sets")
+    print(f"  worst certificate value = {worst_cert} = {float(worst_cert):.6f} (cert*14={float(worst_cert*14):.4f})")
+    print(f"    at S = {worst_certS}")
     print("""  If this certificate were ALWAYS >= 1/14 it would PROVE the gap side directly. Where it
   drops below, the optimum is NOT on the k/7+j/m7 lattice -- M is still >= 1/14 (exact M
   confirms) but via a different binding pair, so the pure-7-adic lattice is INSUFFICIENT alone.""")

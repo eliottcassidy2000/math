@@ -1,0 +1,12 @@
+Sweep of EXPLICIT thresholds V0*(P,offsets) over admissible fixed patterns
+==============================================================================
+  offsets<=12 : patterns= 399  V0*  min=16  median=57  p90=135  max=334
+  offsets<=25 : patterns= 400  V0*  min=36  median=100  p90=206  max=1093
+  offsets<=50 : patterns= 400  V0*  min=54  median=158  p90=355  max=3158
+
+INTERPRETATION:
+  V0* is finite & explicit for EACH fixed pattern, but GROWS with offset spread/resonance.
+  There is NO single uniform V0 closing all fixed-cluster patterns -- consistent with S3
+  being genuinely infinite.  The closure is PER-PATTERN: for each (P,offsets), V0>=V0*(P,
+  offsets) is PROVED, and V0<V0* is a finite check.  This is a legitimate sub-family closure
+  (a parametrized infinite family, each member's tail proven), NOT a closure of all of S3.

@@ -1,0 +1,4 @@
+witness2 worst level (k<3000, failing residues): 28/365 0.07671232876712329 (2, 364, Fraction(28, 365), [1, 364])
+  always >1/14? True
+  level formula (m/13)/(m+1): at m=364 -> 28/365 = 28/365; limit 1/13
+  28/365 vs 1/14: 27/5110 >0: True

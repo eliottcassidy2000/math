@@ -1,0 +1,69 @@
+====================================================================================
+(A) BINDING-PAIR STRUCTURE OF THE M-FLOOR on a directed tight family
+====================================================================================
+  generated 2500 covering primitive S3 tight-biased sets.
+  exact M on 400 lowest-float sets [60.9s]; below 1/14: 0
+  REALIZED FLOOR M = 4/47 = 0.085106 (M*14=1.1915) at S=[1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 40, 98]
+    tau*=14/47, denom D=47, binding runners=[7, 40], pairs realizing D=[(7, 40)]
+
+  lowest 12 exact M, with binding-pair denominator:
+    M=   4/47=0.08511 M*14=1.191 D=47 binders=[7, 40] pairs=[(7, 40)] mult7-binder=[7]
+    M=   2/23=0.08696 M*14=1.217 D=23 binders=[11, 12] pairs=[(8, 15), (10, 13), (11, 12)] mult7-binder=[]
+    M=   2/23=0.08696 M*14=1.217 D=23 binders=[11, 12] pairs=[(7, 30), (11, 12)] mult7-binder=[]
+    M=   7/79=0.08861 M*14=1.241 D=79 binders=[9, 70] pairs=[(9, 70)] mult7-binder=[70]
+    M=   6/67=0.08955 M*14=1.254 D=67 binders=[1, 66] pairs=[(1, 66)] mult7-binder=[]
+    M= 12/133=0.09023 M*14=1.263 D=133 binders=[1, 132] pairs=[(1, 132)] mult7-binder=[]
+    M= 14/155=0.09032 M*14=1.265 D=155 binders=[11, 144] pairs=[(11, 144)] mult7-binder=[]
+    M= 17/188=0.09043 M*14=1.266 D=188 binders=[1, 187] pairs=[(1, 187)] mult7-binder=[]
+    M=   1/11=0.09091 M*14=1.273 D=77 binders=[7, 70] pairs=[(7, 70)] mult7-binder=[7, 70]
+    M=   1/11=0.09091 M*14=1.273 D=22 binders=[10, 12] pairs=[(3, 19), (9, 13), (10, 12)] mult7-binder=[]
+    M=   1/11=0.09091 M*14=1.273 D=77 binders=[7, 70] pairs=[(7, 70), (12, 65)] mult7-binder=[7, 70]
+    M=   1/11=0.09091 M*14=1.273 D=77 binders=[7, 70] pairs=[(7, 70)] mult7-binder=[7, 70]
+
+  binding denominators among lowest-M sets: {22: 1, 23: 2, 47: 1, 67: 1, 77: 3, 79: 1, 133: 1, 155: 1, 188: 1}
+
+====================================================================================
+(B) THE 2/23 FLOOR: consecutive-pair tight sets
+====================================================================================
+  A consecutive pair {j, j+1} contributes a constraint with denom 2j+1. The smallest
+  covering+primitive+S3 set whose M is set by such a pair gives the floor. {11,12} -> 23.
+  We scan consecutive pairs and find the realized M when that pair binds.
+  S* binding pair {11,12}: denom 23, M=2/23. Check other consecutive pairs in tight sets:
+    consecutive pair {9,10} (denom 19): min realized M = 2/19 = 0.105263 M*14=1.474
+    consecutive pair {10,11} (denom 21): min realized M = 2/21 = 0.095238 M*14=1.333
+    consecutive pair {11,12} (denom 23): min realized M = 2/23 = 0.086957 M*14=1.217
+
+====================================================================================
+(C) WHY M < 1/14 IS BLOCKED: binding-pair arithmetic
+====================================================================================
+  Binding pair {a,b} with D=a+b gives M=q/D for the smallest q with q/D>=... To have M<1/14
+  the pair must satisfy: the closest the two teeth come is < 1/14. For a SUM pair {a,b}, the
+  optimum near k/D gives M = (something)/D. The covering constraints (mult of 7,8,9,11,13 etc.)
+  fix WHICH small runners are present, bounding D from below for any DANGEROUS configuration.
+  We verify exhaustively over small consecutive/near pairs that no covering S3 achieves M<1/14
+  via a small-denom binding pair (denominator <= 28).
+  covering S3 tight sets with denom(tau*)<=28 AND M<1/14: 0  (expect 0)
+  min M among ALL low_exact = 4/47 = 0.085106 >= 1/14: True
+
+====================================================================================
+(D) DOES THE COVERING-FORCED MULT-OF-14 EVER BIND BELOW THE PAIR FLOOR?
+====================================================================================
+  among 400 lowest-M sets: mult-of-14 is a binding runner in 121
+    of those, M < 2/23: 0
+  => the covering-forced mult-of-14 does NOT drive M below the small-pair floor 2/23.
+     It pins tau* off k/7 (the 7-adic effect) but the FLOOR value is the binding-pair value.
+
+====================================================================================
+HONEST SUMMARY
+====================================================================================
+  - 7-adic localization (tau ~ k/7, only mult-of-7 dangerous there) is EXACT and real, but
+    governs the lonely MEASURE, not the M-witness for tight covering sets.
+  - The M-FLOOR is set by SMALL BINDING PAIRS (THM-524 mechanism): S* floor 2/23 = pair {11,12}.
+  - The covering mult-of-7/14 obligation PINS tau* away from k/7 but is not itself binding at
+    the floor. So the 7-adic angle SUPPORTS but does not REPLACE the binding-pair program.
+  - NEGATIVE for the headline 'prove floor via 7-adic unrealizability': the floor is NOT a
+    7-adic phenomenon. The honest path to LRC(14) is the binding-pair / finite-core program.
+
+====================================================================================
+DONE.
+====================================================================================

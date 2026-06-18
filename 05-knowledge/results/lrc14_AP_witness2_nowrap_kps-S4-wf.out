@@ -1,0 +1,18 @@
+Witness 2 levels per v for m=364 (k=2):
+  v=   1: vq mod(m+1) gives ||.||=28/365=0.076712
+  v=   2: vq mod(m+1) gives ||.||=56/365=0.153425
+  v=   3: vq mod(m+1) gives ||.||=84/365=0.230137
+  v=   4: vq mod(m+1) gives ||.||=112/365=0.306849
+  v=   5: vq mod(m+1) gives ||.||=28/73=0.383562
+  v=   6: vq mod(m+1) gives ||.||=168/365=0.460274
+  v=   7: vq mod(m+1) gives ||.||=169/365=0.463014
+  v=   8: vq mod(m+1) gives ||.||=141/365=0.386301
+  v=   9: vq mod(m+1) gives ||.||=113/365=0.309589
+  v=  10: vq mod(m+1) gives ||.||=17/73=0.232877
+  v=  11: vq mod(m+1) gives ||.||=57/365=0.156164
+  v=  12: vq mod(m+1) gives ||.||=29/365=0.079452
+  v= 364: vq mod(m+1) gives ||.||=28/365=0.076712
+
+min level= 28/365
+12*q = 336  < m+1= 365 ? True
+=> v*q in (0,m+1) for all v=1..12, no wrap, levels all near 1/13, min=14k/(182k+1).

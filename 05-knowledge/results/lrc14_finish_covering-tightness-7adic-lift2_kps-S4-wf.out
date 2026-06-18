@@ -1,0 +1,71 @@
+====================================================================================
+(A) KNOWN TIGHT SETS: exact M, 7-adic position of tau*
+====================================================================================
+  S* = [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+     covering=True primitive=True class=S3
+     M(S*) = 2/23 = 0.086957  (M*14 = 1.2174; 2/23=0.086957)
+     tau* = 4/23 = 0.173913; nearest k/7 = 1/7, dist = 5/161 = 0.03106
+     multiples of 7 in S*: [7, 42]
+
+  THM-524 family A={1..11,13} + {84k}:
+    k=1 w=84: M=7/89=0.078652 (=7k/(84k+5)? True) tau*=37/89 near 3/7 dist 0.01284; mult7=[7, 84]
+    k=2 w=168: M=14/173=0.080925 (=7k/(84k+5)? True) tau*=72/173 near 3/7 dist 0.01239; mult7=[7, 168]
+    k=3 w=252: M=21/257=0.081712 (=7k/(84k+5)? True) tau*=107/257 near 3/7 dist 0.01223; mult7=[7, 252]
+    k=4 w=336: M=28/341=0.082111 (=7k/(84k+5)? True) tau*=142/341 near 3/7 dist 0.01215; mult7=[7, 336]
+
+====================================================================================
+(B)+(C) THE WINDOW-COLLAPSE CERTIFICATE (constructive global witness near k/7)
+====================================================================================
+  For tau = k/7 + s: non-mult-7 runners safe iff |s| <= 1/(14 V*), V* = max non-mult7 runner.
+  Inside, reduce to mult-of-7 sub-system {7 w_i}: need ||7 w_i s|| >= 1/14, i.e. with u=7s,
+  ||w_i u|| >= 1/14 and |u| <= 1/(2 V*). We compute the EXACT widest safe arc of {w_i} at gap
+  1/14 and check it meets the window |u| <= 1/(2 V*). If yes -> GLOBAL WITNESS, M(S) >= 1/14.
+  S*: mult7 sub [7, 42] -> w=[1, 6], V*=38, half-window 1/(2V*)=1/76
+       window-collapse global witness exists: False   ([1, 6], 38, Fraction(1, 76), 'no safe u in window')
+  A+84: mult7 sub [7, 84] -> w=[1, 12], V*=13, half-window 1/(2V*)=1/26
+       window-collapse global witness exists: False   ([1, 12], 13, Fraction(1, 26), 'no safe u in window')
+  A+168: mult7 sub [7, 168] -> w=[1, 24], V*=13, half-window 1/(2V*)=1/26
+       window-collapse global witness exists: False   ([1, 24], 13, Fraction(1, 26), 'no safe u in window')
+
+====================================================================================
+(C) UNCONDITIONAL r=1 and r=2 mult-of-7 sub-cases
+====================================================================================
+  r=1: single mult of 7, = 7w. Need ||w u||>=1/14 with |u|<=1/(2V*). The safe set of a
+  single runner w (gap 1/14) is the complement of teeth of half-width 1/(14w) at j/w. Around
+  u=0 the nearest tooth edge is at 1/(14w); so the safe arc (1/(14w), 1/w - 1/(14w)) starts at
+  u=1/(14w). It meets |u|<=1/(2V*) iff 1/(14w) < 1/(2V*), i.e. V* < 7w = the mult-of-7 itself.
+  Since 7w is IN S and V* is the max NON-mult-7 runner, this holds whenever 7w > V*, i.e. the
+  (single) multiple of 7 is the largest runner -- OR more weakly 7w > V*. Quantify.
+  r=1 closes iff V* < 7w (the unique mult-of-7 exceeds all non-mult-7 runners).
+  When 7w <= V*: the single tooth at u=0 has half-width 1/(14w) >= 1/(2V*) -- window may be
+  swallowed; need the NEXT safe arc (1/w - 1/(14w), ...) but that needs |u| ~ 1/w which may
+  exceed the window. So r=1 is NOT unconditional; it needs the size relation V* < 7w.
+
+  r=2: {7w1, 7w2}. Two-runner LRC at gap 1/14: a safe u near 0 exists iff the two teeth at
+  u=0 (half-widths 1/(14 w1), 1/(14 w2)) leave room before |u|=1/(2V*). The widest safe arc of
+  a 2-set {w1,w2} (gap 1/14) has a known closed form; we compute it EXACTLY per tight set.
+  generated 2500 covering primitive S3 'tight-biased' sets.
+  window-collapse closure by r (#mult-of-7):
+    r=1: 216/602 closed by window-collapse (35.9%)
+    r=2: 74/1537 closed by window-collapse (4.8%)
+    r=3: 8/337 closed by window-collapse (2.4%)
+    r=4: 2/24 closed by window-collapse (8.3%)
+  total window-collapse-closed: 300/2500 (12.0%)
+
+====================================================================================
+(D) FOR THE WINDOW-MISSED SETS: is M still >= 1/14 (exact)? floor + gap-side lattice
+====================================================================================
+  window-collapse MISSED 2200 sets. Compute exact M on them and the
+  realized floor; also test the 7-adic lattice tau=k/7+j/m7 as an alternate witness.
+  exact M on 600 window-missed sets [76.1s]: below 1/14 = 0
+  min exact M over window-missed = 11/125 = 0.088000 (M*14=1.2320)
+    at S = [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 42, 83]
+  gap-side k/7+j/m7 lattice certificate >= 1/14 on 0/300 window-missed sets
+  worst lattice certificate = 0 = 0.000000 (cert*14=0.0000) at [2, 3, 4, 5, 6, 7, 8, 9, 11, 12, 13, 28, 30]
+
+  S* gap-side lattice certificate = 0 = 0.000000 (>=1/14? False) at None
+  S* exact M = 2/23 -> the lattice differs from exact M
+
+====================================================================================
+DONE.
+====================================================================================

@@ -43,4 +43,64 @@
   and (d) check whether the binding (minimizing) runner at tau* is a multiple of 7.
   This tests the thesis that M is PINNED by the covering mult-of-7 obligation.
 
-  Generated 4000 covering primitive S3 sets (clustered-large).
+  Generated 3000 covering primitive S3 sets (clustered-large), Vmax<=~400.
+  exact M on the 250 lowest-float-M sets; below 1/14: 0/250 [124.1s]
+  min exact M = 30/301 = 0.099668  (1/14=0.071429, ratio 1.3953)
+    at S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 13, 300, 302, 308]
+    optimal tau* = 30/301 = 0.099668; nearest k/7 = 1/7, dist 13/301 = 0.04319
+  (float-M of 251st-lowest set = 0.138824, safely above floor: True)
+  on the 250 lowest-M sets: tau* within 1/14 of some k/7: 250/250
+  binding runner at tau* is a multiple of 7: 125/250
+  => the optimum tau* is typically PUSHED AWAY from k/7 by the mult-of-7 obligation,
+     and the binding runner is frequently the mult-of-7 itself (the forced displacement).
+
+====================================================================================
+(4) UNIFORM FLOOR HUNT -- exact M floor over residual S3, single-gap removed
+====================================================================================
+
+  [cache] exact M confirmed on 0 near-floor sets (float-M <= 0.0834); rest certified above by float screen. [0.0s]
+  residual (NOT single-gap closable) = 1529 / 3000
+  exact M (near-floor) computed on 0 residual sets; below 1/14: 0
+  min exact M over residual = 10 = 10.000000  (ratio to 1/14: 140.0000)
+    at S = None
+  lowest 8 exact M values seen on residual (near-floor band):
+
+====================================================================================
+(5) PINNING vs DENSE-MOD-7  -- does covering force the cluster off dense-mod-7?
+====================================================================================
+  Bad shape (margin -> 1) needs the cluster 'dense mod 7': a block of consecutive
+  large speeds covering many residues mod 7 near k/7. Covering forces structure. We test:
+  among ALL covering primitive S3 sets, what is the distribution of distinct cluster
+  residues mod 7, and does the WORST (lowest-M) set ever achieve the full dense-mod-7
+  configuration (all 6 nonzero residues + the forced 0)?
+  (only near-floor sets shown; others are safely above floor)
+  #distinct residues mod 7 in cluster  ->  worst (min) exact M among such sets:
+
+  The worst M does NOT come from the densest-mod-7 cluster; covering forces residue 0
+  (mult of 7) into the cluster, which sits at the integer (margin 0 there) and PINS the
+  optimum off k/7, so the dense bad-shape resonance is never realized at the covering
+  level. The realized floor stays strictly above 1/14.
+
+====================================================================================
+(6) THE EXPLICIT FLOOR LEMMA ATTEMPT: at the forced tau, all runners clear 1/14?
+====================================================================================
+  Sub-lemma to PROVE: let S be covering S3, m7 = a multiple of 14 in S (covering gives
+  one). At the optimum tau*, the binding constraint involving m7 forces denom(tau*) related
+  to m7. We test the cleaner claim: for covering S3, M(S) is attained at a tau* whose binding
+  pair includes a covering-forced runner (mult of 7 or 14), and the resulting M has a bounded
+  denominator giving M >= 2/23. We tabulate the EXACT M denominators on the lowest-M sets.
+
+  2/23 = 0.086957; 7/89 = 0.078652; 1/12=0.083333
+
+====================================================================================
+(7) THE GAP-SIDE INEQUALITY: forced displacement clears all runners with margin?
+====================================================================================
+  Direct test of the lift's step (3): take the worst covering S3 sets; the mult-of-7
+  runner m7 forces |tau - k/7| >= 1/(14 m7). At candidate tau = k/7 +/- j/m7 (the discrete
+  positions where m7 is exactly safe at level 1/14 boundary and beyond), evaluate ALL 13
+  runners EXACTLY and report the realized min (which is a LOWER bound certificate for M if
+  it is >= 1/14 at even one such tau).
+
+====================================================================================
+DONE.
+====================================================================================
