@@ -1,0 +1,75 @@
+================================================================================
+(I) PROVED-LEMMA CHECK: Good_E contains the four conservative windows (never fails)
+================================================================================
+   tested 4238 offset sets (exhaustive |E|<=7 spread<=8 + 4000 random spread<=40)
+   four-window lemma holds: True
+
+================================================================================
+(II) PROVABLE conservative floor over (P, consecutive E={0..k-1}), maxE=k-1
+     LB(P,k) = sum_q meas(G_P ∩ window_q(k-1))  <=  rho*(P, consecutive)
+================================================================================
+   k= 5: min provable LB = 10/1287 = 0.007770  at P=(1, 2, 6, 7, 8, 9, 11, 13)
+   k= 6: min provable LB = 10/1287 = 0.007770  at P=(1, 2, 7, 8, 9, 11, 13)
+   k= 7: min provable LB = 2/1001 = 0.001998  at P=(1, 2, 9, 10, 11, 13)
+   k= 8: min provable LB = 1/280 = 0.003571  at P=(1, 2, 10, 12, 13)
+   k= 9: min provable LB = 0 = 0.000000  at P=(1, 2, 12, 13)
+   k=10: min provable LB = 0 = 0.000000  at P=(1, 6, 13)
+   k=11: min provable LB = 0 = 0.000000  at P=(1, 6)
+   k=12: min provable LB = 13/462 = 0.028139  at P=(1,)
+   k=13: min provable LB = 73/504 = 0.144841  at P=()
+
+   GLOBAL provable LB floor = 0 = 0.000000 (at k=9 P=(1, 2, 12, 13))
+   #(P,k) with conservative LB = 0 (the finite exception list): 4
+        EXCEPTION: k=9 P=(1, 2, 12, 13)
+        EXCEPTION: k=9 P=(1, 4, 12, 13)
+        EXCEPTION: k=10 P=(1, 6, 13)
+        EXCEPTION: k=11 P=(1, 6)
+
+================================================================================
+(III) THE EXCEPTIONS: exact rho* > 0 with certified rational safe+good sub-arcs
+================================================================================
+   k=9 P=[1, 2, 12, 13]: EXACT rho* = 2/105 = 0.019048 > 0
+        certificate sub-arc (9/28,55/168) center~0.3244 width 0.00595
+        certificate sub-arc (19/56,12/35) center~0.3411 width 0.00357
+        certificate sub-arc (23/35,37/56) center~0.6589 width 0.00357
+        certificate sub-arc (113/168,19/28) center~0.6756 width 0.00595
+   k=9 P=[1, 4, 12, 13]: EXACT rho* = 131/2940 = 0.044558 > 0
+        certificate sub-arc (9/28,55/168) center~0.3244 width 0.00595
+        certificate sub-arc (19/56,12/35) center~0.3411 width 0.00357
+        certificate sub-arc (23/49,27/56) center~0.4758 width 0.01276
+        certificate sub-arc (29/56,26/49) center~0.5242 width 0.01276
+   k=10 P=[1, 6, 13]: EXACT rho* = 11/294 = 0.037415 > 0
+        certificate sub-arc (23/49,41/84) center~0.4787 width 0.01871
+        certificate sub-arc (43/84,26/49) center~0.5213 width 0.01871
+   k=11 P=[1, 6]: EXACT rho* = 1/42 = 0.023810 > 0
+        certificate sub-arc (10/21,41/84) center~0.4821 width 0.01190
+        certificate sub-arc (43/84,11/21) center~0.5179 width 0.01190
+
+================================================================================
+(IV) EXACT true floor (consecutive) + correlation ratio R = rho*/(measG_P * measGood)
+     R bounded below => quasi-independence (no destructive anti-correlation)
+================================================================================
+   k= 3: min rho*=0.056487(14249/252252) P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13) | min R=1.00000 P=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+   k= 4: min rho*=0.071893(22669/315315) P=(1, 2, 3, 5, 7, 8, 9, 11, 13) | min R=0.66535 P=(1, 2, 3, 5, 6, 7, 9, 11, 13)
+   k= 5: min rho*=0.055310(3488/63063) P=(1, 2, 3, 6, 7, 9, 11, 13) | min R=0.34666 P=(1, 2, 3, 6, 7, 9, 10, 13)
+   k= 6: min rho*=0.055310(3488/63063) P=(1, 2, 3, 7, 9, 11, 13) | min R=0.33775 P=(1, 2, 3, 7, 9, 10, 13)
+   k= 7: min rho*=0.015540(20/1287) P=(1, 2, 3, 9, 11, 13) | min R=0.10492 P=(1, 2, 3, 9, 11, 13)
+   k= 8: min rho*=0.013272(93/7007) P=(1, 2, 3, 11, 13) | min R=0.08676 P=(1, 2, 6, 11, 13)
+   k= 9: min rho*=0.011905(1/84) P=(1, 2, 3, 12) | min R=0.06804 P=(1, 2, 6, 12)
+   k=10: min rho*=0.015873(1/63) P=(1, 2, 3) | min R=0.09100 P=(1, 2, 3)
+   k=11: min rho*=0.023810(1/42) P=(1, 6) | min R=0.14935 P=(1, 6)
+   k=12: min rho*=0.073129(43/588) P=(1,) | min R=0.42028 P=(1,)
+   k=13: min rho*=0.179437(829/4620) P=() | min R=1.00000 P=()
+
+   EXACT consecutive floor rho* = 1/84 = 0.011905 (k=9 P=(1, 2, 3, 12))
+   MIN correlation ratio R      = 245/3601 = 0.06804 (k=9 P=(1, 2, 6, 12))
+   => R >= 0.06804 > 0 on all consecutive cases: quasi-independence holds.
+
+================================================================================
+(V) BROAD bounded-spread scan: min EXACT rho* over perforated / spread shapes (zeros?)
+================================================================================
+   tested 3000 (P, bounded-spread E) pairs
+   min EXACT rho* found = 1/90 = 0.011111  at P=[1, 2, 9] E=[0, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   #(rho* == 0): 0
+
+DONE.

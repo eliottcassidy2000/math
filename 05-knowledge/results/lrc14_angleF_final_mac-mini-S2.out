@@ -1,0 +1,38 @@
+
+========================================================================
+[T3]+[T4] q=14*Vmax witness exists across a BROAD adversarial sweep
+========================================================================
+  generated 400 in-scope sets; testing witness at q=14*Vmax ...
+  #fails at q=14*Vmax = 0 / 400
+  min discretized rho_q over sweep = 417/8386 = 0.049726  (set [1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 1166, 1190, 1198])
+  => VERIFIED: q=14*Vmax constructive CRT witness exists for every set; rho_q>0 throughout.
+
+========================================================================
+[T5] the covering-system view: forbidden classes & survival margin
+========================================================================
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]: q=2548, |DANGER|=363 (~2Vmax=364), sum|A_bad|=4532, |Union A_bad|=2472, FREE=76>0:True
+  S=[1, 3, 4, 7, 8, 9, 10, 11, 12, 13, 1166, 1190, 1198]: q=16772, |DANGER|=2395 (~2Vmax=2396), sum|A_bad|=29944, |Union A_bad|=15938, FREE=834>0:True
+  The 13 forbidden classes massively overlap (sum >> q); free residues = the witnesses.
+  UNIFORM closure <=> 'these 13 classes never cover Z/{14 Vmax}', i.e. rho*>=c0>0.
+
+========================================================================
+[T6] CRT decoupling demo, q=14*m with gcd(m,14)=1 (proper covering sets)
+========================================================================
+  STRUCTURAL FACT (PROVED): every q-covering 13-set contains a speed divisible by 14
+  (covering requires a multiple of 14, and no speed <=13 qualifies). So Vmax coprime to 14
+  forces the multiple-of-14 to be a NON-max cluster member. We build exactly such sets:
+  small part P + a cluster containing a multiple of 14 + a coprime-to-14 Vmax=m.
+  m=169: q=2366, witness a=58, CRT=(a%14=2, a%m=58); #good a=240, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 168]
+  m=197: q=2758, witness a=66, CRT=(a%14=10, a%m=66); #good a=284, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 196]
+  m=199: q=2786, witness a=67, CRT=(a%14=11, a%m=67); #good a=290, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 198]
+  m=211: q=2954, witness a=72, CRT=(a%14=2, a%m=72); #good a=312, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 210]
+  m=223: q=3122, witness a=75, CRT=(a%14=5, a%m=75); #good a=326, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 222]
+  m=9999: q=139986, witness a=3334, CRT=(a%14=2, a%m=3334); #good a=14428, speeds sharing factor with 14=[4, 7, 8, 10, 12, 14, 9998]
+
+========================================================================
+[T1] EXACT residue reduction self-check (PROVED restatement verified)
+========================================================================
+  S*=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]: smallest modulus with a witness is q=56 -> tau=9/56; ||v tau|| for all v >= 1/14: True
+  exact ||v*9/56||: [(1, '9/56'), (2, '9/28'), (3, '27/56'), (5, '11/56'), (7, '1/8'), (8, '2/7'), (9, '25/56'), (10, '11/28'), (11, '13/56'), (12, '1/14'), (13, '5/56'), (38, '3/28'), (42, '1/4')]
+  (the OPTIMAL M=1/14 sits at tau=47/56 denom=56; the CONSTRUCTED
+   witness uses a DIFFERENT, smaller denominator 56 -- only needs >=1/14, not max.)

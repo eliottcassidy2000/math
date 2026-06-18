@@ -134,5 +134,39 @@ closed-form/monotone-collapse law.  The next step is to prove the analogous
 flank law for mixed cores, or show that mixed cores recurse until they enter
 the principal/private packet.
 
-Cross-links: THM-523, THM-524, THM-526, HYP-2577, HYP-2578, HYP-2571, OPEN-Q-108,
-T843, T844.
+## Angle D resolution (mac-mini-2026-06-18-S2) — see HYP-2588
+
+The arithmetic-dual proof target above ("private q-debt forces `j >= D/14`") was
+investigated exactly over 662–700 primitive q-covering case-S3 13-sets. Result:
+**RESOLVED as PARTIAL with a clean obstruction.** Three exact findings:
+
+1. **TAUTOLOGICAL at the M-crossing.** THM-524 gives `M(S) = j/D` exactly (verified
+   `j = fold(member·num, D)`, 956/956). So "`j >= ceil(D/14)`" literally *is*
+   "`M >= 1/14`"; proving it at the M-optimum proves nothing new. (The classifier's
+   own ledger flagged this: "tautological unless `j` is derived from non-M arithmetic.")
+
+2. **FALSE as a per-record arithmetic statement.** Over 287 658 sum-crossings
+   `τ=num/D`, `D=flank+w`, `w` privately owning `q`, **38 536 have
+   `fold(flank·num, D) < ceil(D/14)`** — the bare `(flank,w)` pair-gap drops below
+   `1/14` at many crossings. LRC is saved by the THM-524 *others-clear* condition, NOT
+   by the private-`q` of `w`. So private-`q` alone does not force the crossing index.
+
+3. **PROVABLE non-tautologically only on the PRINCIPAL towers.** For
+   `S_{q,m} = ({1..13}\{q}) ∪ {lcm(q,14)·m}` the M-binding sum pair is exactly
+   `(flank, w)` **iff `q ∈ {7,…,13}` (regime A)**, and then with `g=gcd(q,14)`:
+   `j = (14/g)·m`, `D = flank + lcm(q,14)·m`, so
+   `14j − D = (14/g)(14−q)·m − flank ≥ 0` because `(14/g)(14−q)·m ≥ 14/g ≥ 1` beats
+   `flank ≤ 13`. **The bound reduces to the trivial `q ≤ 14`**, derived from the
+   lcm/private-`q` arithmetic alone (min margin 6 at `q=7,m=1,flank=8`). For
+   `q ∈ {2,…,6}` (regime B) the binding pair is small–small, `w ∉ pair`, and
+   `M(S) = M(P)` — the small part `{1..13}\{q}` is *already* lonely (THM-525), so
+   private-`q` is irrelevant.
+
+**The honest content is the regime split** = whether the cluster spoils the small
+part's own loneliness `M(P)`. In general regime A only 76/182 rows are
+"principal-like" (clean lcm slope law); the rest have `j` fixed by the full small-part
+alignment, certified only a-posteriori — the same crux as OPEN-Q-108 / THM-527's
+uniform floor. See HYP-2588 for the full ledger and scripts.
+
+Cross-links: THM-523, THM-524, THM-525, THM-526, THM-527, HYP-2577, HYP-2578,
+HYP-2583, HYP-2588, HYP-2571, OPEN-Q-108, T843, T844.

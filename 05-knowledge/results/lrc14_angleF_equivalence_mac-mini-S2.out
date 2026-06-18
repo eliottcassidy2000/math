@@ -1,0 +1,62 @@
+
+========================================================================
+PART 1 — verify (i)<=>(ii)<=>(iii) on concrete sets (EXACT)
+========================================================================
+
+For each set, at q=14*Vmax we compute the set of good a's three ways and check they MATCH:
+ (i)   a with ||v a/q||>=1/14 for all v in S
+ (ii)  a with: frac(Vmax*a/q) in (1/14,13/14)  AND  a/q in G_P  AND  cluster maxgap>2/7
+ (iii) just |good a| > 0
+The match certifies the slow-fast/CRT equivalence at the rational tau=a/q.
+
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182]
+    q=14*Vmax=2548: |good a via (i)|=76, |good a via ruler (ii)|=76, MATCH=True, rho_q=19/637=0.02983 (>0: True)
+  S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+    q=14*Vmax=588: |good a via (i)|=12, |good a via ruler (ii)|=16, MATCH=False, rho_q=1/49=0.02041 (>0: True)
+  (skip non-inscope [1, 2, 3, 4, 5, 6, 7, 9, 11, 13, 40, 42, 44]: prim=True cov=False n=13)
+  S=[1, 2, 3, 4, 5, 6, 11, 13, 210, 212, 214, 216, 218]
+    q=14*Vmax=3052: |good a via (i)|=298, |good a via ruler (ii)|=328, MATCH=False, rho_q=149/1526=0.09764 (>0: True)
+
+========================================================================
+PART 2 — the COVERING-SYSTEM obstruction (Union of A_bad covers Z/q?)
+========================================================================
+
+A safe a fails to exist  <=>  the forbidden sets A_bad(v) = {a : v*a mod q in DANGER}
+COVER all of Z/q. Each |A_bad(v)| = |DANGER_q| (for gcd(v,q)=1; smaller if gcd>1... actually
+larger). So the question 'does a witness exist' = 'do the speed-forbidden residue classes
+form a COVERING SYSTEM of Z/q'. We display the covering deficiency = q - |Union A_bad|.
+
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182] q=2548: |DANGER|=363, |Union A_bad|=2472, FREE a's = 76 (witness exists iff >0: True)
+    per-speed |A_bad(v)| (v,size): [(1, 363), (2, 362), (3, 363), (4, 364), (5, 363), (6, 362), (7, 357), (8, 364), (9, 363), (10, 362), (11, 363), (12, 364), (182, 182)]
+    NOTE sum|A_bad| = 4532 >> q-free=2472 -> heavy OVERLAP is what saves us (the forbidden classes pile up, leaving free residues).
+  S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42] q=588: |DANGER|=83, |Union A_bad|=576, FREE a's = 12 (witness exists iff >0: True)
+    per-speed |A_bad(v)| (v,size): [(1, 83), (2, 82), (3, 81), (5, 83), (7, 77), (8, 84), (9, 81), (10, 82), (11, 83), (12, 84), (13, 83), (38, 82), (42, 42)]
+    NOTE sum|A_bad| = 1027 >> q-free=576 -> heavy OVERLAP is what saves us (the forbidden classes pile up, leaving free residues).
+
+========================================================================
+PART 3 — genuine CRT decoupling q=14*m, gcd(m,14)=1 (PROPER covering sets)
+========================================================================
+
+Build covering sets whose Vmax=m is coprime to 14, so q=14*m factors as 14 x m.
+CRT: a<->(a mod14, a mod m). We show the witness's CRT coordinates and quantify
+the coupling: the level band is NOT a product, but we test whether a 'mostly mod-14'
++ 'mostly mod-m' split solves it.
+
+  m=169: skip (n=13 prim=True cov=False)
+  m=197: skip (n=13 prim=True cov=False)
+  m=199: skip (n=13 prim=True cov=False)
+  m=211: skip (n=13 prim=True cov=False)
+  m=9991: skip (n=13 prim=True cov=False)
+
+========================================================================
+PART 4 — tight-locus stress: dense consecutive clusters (smallest rho*)
+========================================================================
+
+The minimum-rho locus is dense consecutive clusters near tau=j/7. Build PROPER covering
+13-sets with a long consecutive cluster and re-test q=14 Vmax. Smallest rho but still >0?
+
+  P=[1, 2, 3, 4, 5, 6, 7, 8, 9] k=4 base=500: not in-scope (prim=True cov=False) S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 500, 501, 502, 503]
+  P=[1, 2, 3, 5, 7, 9, 11, 13] k=5 base=700: not in-scope (prim=True cov=False) S=[1, 2, 3, 5, 7, 9, 11, 13, 700, 701, 702, 703, 704]
+  P=[1, 2, 3, 4, 11, 13] k=7 base=900: not in-scope (prim=True cov=False) S=[1, 2, 3, 4, 11, 13, 900, 901, 902, 903, 904, 905, 906]
+  S=[1, 2, 3, 11, 1100, 1101, 1102, 1103, 1104, 1105, 1106, 1107, 1108]
+     q=14Vmax=15512, #good a=862, rho_q=0.055570, witness exists=True

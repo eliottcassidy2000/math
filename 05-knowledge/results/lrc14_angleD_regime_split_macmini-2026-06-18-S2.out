@@ -1,0 +1,90 @@
+==================================================================================
+Part A: is w a member of the M-binding pair? (principal single-drop towers)
+==================================================================================
+ q  m     w           M   binding pair w in pair?   regime  7|q?
+ 2  1    14        2/17        (4, 13)      False B(small) False
+ 2  2    28        2/17        (4, 13)      False B(small) False
+ 2  3    42        2/17        (4, 13)      False B(small) False
+ 2  4    56        2/17        (4, 13)      False B(small) False
+ 3  1    42        2/17        (6, 11)      False B(small) False
+ 3  2    84        2/17        (6, 11)      False B(small) False
+ 3  3   126        2/17        (6, 11)      False B(small) False
+ 3  4   168        2/17        (6, 11)      False B(small) False
+ 4  1    28        2/19        (8, 11)      False B(small) False
+ 4  2    56        2/19        (8, 11)      False B(small) False
+ 4  3    84        2/19        (8, 11)      False B(small) False
+ 4  4   112        2/19        (8, 11)      False B(small) False
+ 5  1    70        2/19        (9, 10)      False B(small) False
+ 5  2   140        2/19        (9, 10)      False B(small) False
+ 5  3   210        2/19        (9, 10)      False B(small) False
+ 5  4   280        3/29      (10, 280)       True A(w-big) False
+ 6  1    42        2/23       (11, 12)      False B(small) False
+ 6  2    84        2/23       (11, 12)      False B(small) False
+ 6  3   126        2/23       (11, 12)      False B(small) False
+ 6  4   168        2/23       (11, 12)      False B(small) False
+ 7  1    14        1/11        (8, 14)       True A(w-big)  True
+ 7  2    28         1/9        (8, 28)       True A(w-big)  True
+ 7  3    42        3/25        (8, 42)       True A(w-big)  True
+ 7  4    56         1/8        (8, 56)       True A(w-big)  True
+ 8  1    56         1/9        (7, 56)       True A(w-big) False
+ 8  2   112        2/17       (7, 112)       True A(w-big) False
+ 8  3   168        3/25       (7, 168)       True A(w-big) False
+ 8  4   224        4/33       (7, 224)       True A(w-big) False
+ 9  1   126      14/131       (5, 126)       True A(w-big) False
+ 9  2   252      28/257       (5, 252)       True A(w-big) False
+ 9  3   378      42/383       (5, 378)       True A(w-big) False
+ 9  4   504      56/509       (5, 504)       True A(w-big) False
+10  1    70        1/11        (7, 70)       True A(w-big) False
+10  2   140        2/21       (7, 140)       True A(w-big) False
+10  3   210        3/31       (7, 210)       True A(w-big) False
+10  4   280        4/41       (7, 280)       True A(w-big) False
+11  1   154      14/157       (3, 154)       True A(w-big) False
+11  2   308      28/311       (3, 308)       True A(w-big) False
+11  3   462      14/155       (3, 462)       True A(w-big) False
+11  4   616      56/619       (3, 616)       True A(w-big) False
+12  1    84        7/89        (5, 84)       True A(w-big) False
+12  2   168      14/173       (5, 168)       True A(w-big) False
+12  3   252      21/257       (5, 252)       True A(w-big) False
+12  4   336      28/341       (5, 336)       True A(w-big) False
+13  1   182      14/183       (1, 182)       True A(w-big) False
+13  2   364      28/365       (1, 364)       True A(w-big) False
+13  3   546      42/547       (1, 546)       True A(w-big) False
+13  4   728      56/729       (1, 728)       True A(w-big) False
+
+==================================================================================
+Part B: SHARP LEMMA — if a private-q owner w is a MEMBER of the M-binding pair,
+        is j >= ceil(D/14)? (this is M>=1/14 read at the crossing; verify 0 breaks)
+==================================================================================
+S3 rows: 497
+  M-binding pair has a private-q member: 231/497
+     ...and j>=ceil(D/14): 231/231  (must equal: tautological at M)
+  M-binding pair has NO private-q member (LRC via OTHER structure): 266/497
+  LRC breaks: 0
+  Examples where M-binding pair carries NO private-q (so private-q is NOT the lever):
+    S= (1, 2, 3, 4, 6, 7, 8, 9, 10, 11, 12, 13, 630)  pair= (9, 10)  D= 19  j= 2  M= 2/19
+    S= (1, 2, 12, 20, 30, 40, 56, 60, 63, 65, 66, 72, 93)  pair= (1, 63)  D= 64  j= 12  M= 3/16
+    S= (1, 3, 10, 26, 36, 56, 63, 66, 72, 82, 84, 95, 108)  pair= (95, 108)  D= 203  j= 37  M= 37/203
+    S= (1, 4, 5, 12, 42, 72, 78, 90, 96, 99, 104, 108, 110)  pair= (5, 104)  D= 109  j= 22  M= 22/109
+    S= (1, 4, 6, 7, 14, 27, 40, 42, 45, 60, 88, 104, 110)  pair= (88, 110)  D= 198  j= 44  M= 2/9
+    S= (1, 4, 6, 10, 13, 32, 63, 77, 84, 90, 91, 96, 105)  pair= (90, 96)  D= 186  j= 42  M= 7/31
+    S= (1, 4, 7, 11, 18, 24, 30, 42, 72, 75, 78, 80, 104)  pair= (7, 104)  D= 111  j= 23  M= 23/111
+    S= (1, 4, 7, 14, 18, 20, 40, 44, 60, 78, 84, 96, 102)  pair= (40, 84)  D= 124  j= 20  M= 5/31
+
+==================================================================================
+Part C: the regime split is governed by the SMALL part's own loneliness M(P)
+==================================================================================
+  In regime B, the small part P=S∩{1..13} is ALREADY lonely (M(P)>=1/14) at a
+  small-small crossing that the cluster does not spoil -> private-q irrelevant.
+  In regime A, M(P) is spoiled by the cluster and the (flank,w) crossing decides.
+  regime A (M-binding big > 13 and privately owns q): 137
+  regime B (otherwise; small or non-private big):      360
+  regime A examples (S, pair, M, M(P)):
+     ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182), (1, 182), Fraction(14, 183), Fraction(1, 13))
+     ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364), (1, 364), Fraction(28, 365), Fraction(1, 13))
+     ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 546), (1, 546), Fraction(42, 547), Fraction(1, 13))
+     ((1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 728), (1, 728), Fraction(56, 729), Fraction(1, 13))
+  regime B examples (S, pair, M, M(P)):
+     ((1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42), (11, 12), Fraction(2, 23), Fraction(2, 23))
+     ((1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84), (11, 12), Fraction(2, 23), Fraction(2, 23))
+     ((1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126), (11, 12), Fraction(2, 23), Fraction(2, 23))
+     ((1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168), (11, 12), Fraction(2, 23), Fraction(2, 23))

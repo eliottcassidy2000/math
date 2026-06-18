@@ -10,39 +10,28 @@ OBJECT (THM-527):  offset set E, 0 in E, |E|=k.  For x in [0,1) put the k points
   mu(E)      = meas{x in [0,1):       good(x)}
   rho*(P,E)  = meas{x in G_P:         good(x)},  G_P={tau: ||p tau||>=1/14 for all p in P}.
 THM-527: rho*(P,E)>0  ==>  M(P u L) >= 1/14  (case S3).  A uniform floor c0>0 proves S3.
-
 For k=5: |L|=5 large runners, |P|=13-5=8 small runners P subset {1..13}.
 
-EXACT COMPUTATION (Fractions, no float in the decision):
-  maxgap{frac(e_i x)} as a function of x is PIECEWISE LINEAR with RATIONAL breakpoints.
-  Breakpoints come from (a) a point crossing 0 [frac jumps]: x = n/e_i, and
-  (b) two points colliding / swapping order: frac(e_i x)=frac(e_j x) i.e. (e_i-e_j)x in Z
-      => x = n/(e_i-e_j); and (c) a gap hitting the threshold 2/7 exactly.
-  Collect ALL breakpoints of types (a),(b); on each open subinterval the ORDER of the
-  points is fixed and each gap g(x)=A x + B/(something) is linear (rational slope/intercept).
-  For each gap we solve g(x)>2/7 exactly (linear ineq) and intersect -> exact good-set.
-  Intersect with G_P (exact union of rational arcs) -> rho* exact.
+EXACT (Fractions, no float decisions): maxgap{frac(e_i x)} is piecewise-linear in x with
+rational breakpoints n/e_i (point crosses 0) and n/(e_i-e_j) (collision/order-swap). On each
+open subinterval the cyclic order is fixed and every gap g(x)=alpha x+beta is linear; solve
+g>2/7 exactly. Intersect with G_P (exact rational arcs) -> rho* exact Fraction.
 
-This gives EXACT rho* as a Fraction for every (P, E).  We then:
-  - prove the k=5 pigeonhole-type lower bounds where they apply,
-  - enumerate bounded-spread 5-shapes and tabulate mu(E) exactly, find the min,
-  - compute rho*(P,E) exactly for the worst shapes over all P subset{1..13}, |P|=8,
-  - handle the LARGE-SPREAD tail (Angle C: huge spread RAISES mu) rigorously for k=5.
+USAGE:  python3 lrc14_k5_exact_closure_macmini.py [section]
+  sections: sanity | enum SMAX | rho | tail | all   (default: sanity)
 """
 import sys, itertools
 from fractions import Fraction as F
 sys.stdout.reconfigure(line_buffering=True)
 
-H = F(1,14)
+H   = F(1,14)
 THR = F(2,7)          # gap threshold: good <=> maxgap > 2/7
 
-# ---------- exact arc / safe-set machinery (G_P) ----------
+# ---------- exact G_P machinery ----------
 def danger_arcs(u, h=H):
-    """arcs of tau with ||u tau|| < h  (open). returns list of (a,b) with 0<=a<b<=1."""
     iv=[]
     for j in range(u):
-        c=F(j,u); a=(c-h/u); b=(c+h/u)
-        a%=1; b%=1
+        c=F(j,u); a=(c-h/u)%1; b=(c+h/u)%1
         if a<b: iv.append((a,b))
         else:   iv.append((a,F(1))); iv.append((F(0),b))
     return iv
@@ -53,7 +42,6 @@ def merge(iv):
         else: out.append((a,b))
     return out
 def safe_set(A, h=H):
-    """G_A = {tau: ||a tau||>=h for all a in A} as union of closed-ish arcs (a,b)."""
     if not A: return [(F(0),F(1))]
     dz=merge([iv for u in A for iv in danger_arcs(u,h)])
     safe=[]; prev=F(0)
@@ -63,9 +51,8 @@ def safe_set(A, h=H):
     if prev<F(1): safe.append((prev,F(1)))
     return safe
 def meas(arcs): return sum((b-a) for a,b in arcs)
-def intersect(arcsA, arcsB):
-    out=[]; i=j=0
-    A=sorted(arcsA); B=sorted(arcsB)
+def intersect(A,B):
+    out=[]; i=j=0; A=sorted(A); B=sorted(B)
     while i<len(A) and j<len(B):
         a0,a1=A[i]; b0,b1=B[j]
         lo=max(a0,b0); hi=min(a1,b1)
@@ -76,135 +63,176 @@ def intersect(arcsA, arcsB):
 
 # ---------- EXACT good-set of an offset set E ----------
 def good_set_exact(E):
-    """Return exact union of arcs (a,b) in [0,1) where maxgap{frac(e x)}>2/7.
-       E: list/iterable of nonneg ints (0 in E). Duplicate frac-values are collapsed
-       (treat as a set of POINTS; only one point at a shared value)."""
-    E=sorted(set(E))
-    es=[e for e in E]
-    # breakpoints in (0,1): n/e (point crosses 0) and n/(ei-ej) (collision)
+    es=sorted(set(E))
     bps=set([F(0),F(1)])
-    diffs=set()
     for e in es:
-        if e>0:
-            for n in range(1,e): bps.add(F(n,e))
+        for n in range(1,e): bps.add(F(n,e))
     for i in range(len(es)):
+        ei=es[i]
         for j in range(i+1,len(es)):
-            d=abs(es[i]-es[j])
-            if d>0:
-                diffs.add(d)
-                for n in range(1,d): bps.add(F(n,d))
+            d=es[j]-ei
+            for n in range(1,d): bps.add(F(n,d))
     bp=sorted(bps)
     good=[]
     for t in range(len(bp)-1):
-        lo,hi=bp[t],bp[t+1]
-        mid=(lo+hi)/2
-        # exact positions at midpoint to FIX the cyclic order (order constant on (lo,hi))
-        pos=sorted(set((e*mid)%1 for e in es))   # set: collapse coincident points
-        # we need, on the open interval, the gap arcs as linear functions.
-        # The order is fixed; each point p_k(x)=frac(e_{sigma(k)} x)=e x - floor(e mid).
-        # Build, for the fixed cyclic order, the linear form of each consecutive gap.
-        # Recover which e produces each sorted position (could be several e collapsing).
-        # Represent each occupied "slot" by ONE e (the smallest) -> linear form e x - c.
-        slot_e=[]; slot_c=[]
-        seen={}
-        # map sorted value -> representative e and its floor at mid
+        lo,hi=bp[t],bp[t+1]; mid=(lo+hi)/2
         valmap={}
         for e in es:
             v=(e*mid)%1
-            fl=(e*mid)-v   # = floor(e*mid)
-            if v not in valmap:
-                valmap[v]=(e,fl)
-        for v in sorted(valmap):
-            e,fl=valmap[v]
-            slot_e.append(e); slot_c.append(fl)
-        m=len(slot_e)
+            if v not in valmap: valmap[v]=(e,(e*mid)-v)  # (rep e, floor)
+        keys=sorted(valmap)
+        slot_e=[valmap[v][0] for v in keys]
+        slot_c=[valmap[v][1] for v in keys]
+        m=len(keys)
         if m==1:
-            # single point: whole circle is one gap of length 1 > 2/7 always
             good.append((lo,hi)); continue
-        # consecutive gaps g_k(x)= p_{k+1}(x)-p_k(x), and wrap gap = p_0+1 - p_{m-1}
-        # p_k(x) = slot_e[k]*x - slot_c[k]
-        # we want x in (lo,hi) with SOME gap > THR.
-        # For each gap, linear h(x)=alpha x + beta > THR  => solve.
-        cur_good=[]  # subintervals of (lo,hi) that are good
-        gaps=[]
+        sub=[]
         for k in range(m):
             if k<m-1:
-                alpha=slot_e[k+1]-slot_e[k]
-                beta=-(slot_c[k+1]-slot_c[k])
+                alpha=slot_e[k+1]-slot_e[k]; beta=-(slot_c[k+1]-slot_c[k])
             else:
-                # wrap: p_0+1 - p_{m-1}
-                alpha=slot_e[0]-slot_e[m-1]
-                beta=F(1)-(slot_c[0]-slot_c[m-1])
-            gaps.append((alpha,beta))
-        # good iff max_k (alpha_k x+beta_k) > THR. Union over gaps of {x: alpha x+beta>THR}.
-        sub=[]
-        for alpha,beta in gaps:
-            # alpha x + beta > THR  on (lo,hi)
+                alpha=slot_e[0]-slot_e[m-1]; beta=F(1)-(slot_c[0]-slot_c[m-1])
             if alpha==0:
                 if beta>THR: sub.append((lo,hi))
-                continue
-            xb=(THR-beta)/alpha
-            if alpha>0:
-                a=max(lo,xb)
-                if a<hi: sub.append((a,hi))
             else:
-                b=min(hi,xb)
-                if lo<b: sub.append((lo,b))
-        if sub:
-            for a,b in merge(sub):
-                if a<b: good.append((a,b))
+                xb=(THR-beta)/alpha
+                if alpha>0:
+                    a=max(lo,xb);
+                    if a<hi: sub.append((a,hi))
+                else:
+                    b=min(hi,xb)
+                    if lo<b: sub.append((lo,b))
+        for a,b in merge(sub):
+            if a<b: good.append((a,b))
     return merge(good)
 
-def mu_exact(E):
-    return meas(good_set_exact(E))
-
+def mu_exact(E):           return meas(good_set_exact(E))
 def rho_star_exact(P,E):
-    g=good_set_exact(E)
-    gp=safe_set(P)
+    g=good_set_exact(E); gp=safe_set(P)
     return meas(intersect(g,gp)), meas(gp)
 
-# =====================================================================
-# SANITY: reproduce the known exact pure-cluster mu_k for consecutive E
-# =====================================================================
-print("="*90)
-print("SANITY: pure consecutive-cluster mu_k = meas{x: maxgap{0,x,..,(k-1)x}>2/7}")
-print("  (THM-527: mu_3=1, mu_4=19/21, mu_5=9/14, ... mu_13=829/4620)")
-print("="*90)
-expected={3:F(1),4:F(19,21),5:F(9,14),13:F(829,4620)}
-for k in range(3,14):
-    E=list(range(k))
-    m=mu_exact(E)
-    tag=""
-    if k in expected:
-        tag=" EXPECT "+str(expected[k])+("  OK" if m==expected[k] else "  *** MISMATCH ***")
-    print(f"  k={k:2d}: mu_k = {str(m):>14s} = {float(m):.6f}{tag}")
+# ===================================================================== SANITY
+def sec_sanity():
+    print("="*90)
+    print("SANITY: pure consecutive mu_k (THM-527: mu_3=1,mu_4=19/21,mu_5=9/14,mu_13=829/4620)")
+    print("="*90)
+    exp={3:F(1),4:F(19,21),5:F(9,14),13:F(829,4620)}
+    for k in range(3,14):
+        m=mu_exact(list(range(k)))
+        tag=""
+        if k in exp: tag="  EXPECT "+str(exp[k])+("  OK" if m==exp[k] else "  *** MISMATCH")
+        print(f"  k={k:2d}: mu_k = {str(m):>14s} = {float(m):.6f}{tag}")
 
-# =====================================================================
-# k=5 PART 1: pure mu(E) over ALL 5-shapes E (0 in E, |E|=5), bounded spread
-#   spread = max(E). We must show mu(E) bounded away from 0 over ALL shapes,
-#   and identify the EXTREMAL (min-mu) shape. Angle C: large spread RAISES mu.
-# =====================================================================
-print("\n"+"="*90)
-print("k=5 PART 1: pure mu(E) over ALL shapes, 0 in E, |E|=5, by spread s=max(E)")
-print("  (enumerate every subset {0}u T, T subset {1..s}, |T|=4)  -- find global min")
-print("="*90)
-glob_min=(F(2),None)
-per_spread={}
-for s in range(4, 41):                       # spread from 4 (=k-1, consecutive) up
-    locmin=(F(2),None)
-    for T in itertools.combinations(range(1,s+1),4):
-        if max(T)!=s: continue               # require spread exactly s (s in E)
-        E=(0,)+T
-        m=mu_exact(E)
-        if m<locmin[0]: locmin=(m,E)
-        if m<glob_min[0]: glob_min=(m,E)
-    per_spread[s]=locmin
-    print(f"  spread s={s:2d}: min mu = {str(locmin[0]):>14s} = {float(locmin[0]):.6f}  at E={locmin[1]}")
-print(f"\n  *** GLOBAL min mu over all 5-shapes (spread<=40) = {str(glob_min[0])} "
-      f"= {float(glob_min[0]):.6f}  at E={glob_min[1]} ***")
+# ===================================================================== ENUM (min mu over shapes)
+def sec_enum(smax):
+    print("="*90)
+    print(f"k=5 PART 1: min pure mu(E) over ALL shapes (0 in E,|E|=5) by spread s=max(E), s<= {smax}")
+    print("="*90)
+    glob=(F(2),None); per={}
+    for s in range(4, smax+1):
+        loc=(F(2),None)
+        for T in itertools.combinations(range(1,s),3):     # choose 3 from {1..s-1}; s itself forced in
+            E=(0,)+T+(s,)
+            m=mu_exact(E)
+            if m<loc[0]: loc=(m,E)
+        per[s]=loc
+        if loc[0]<glob[0]: glob=loc
+        print(f"  s={s:2d}: min mu = {str(loc[0]):>16s} = {float(loc[0]):.6f}  at E={loc[1]}")
+    print(f"\n  *** GLOBAL min mu (spread<= {smax}) = {str(glob[0])} = {float(glob[0]):.6f}  at E={glob[1]} ***")
+    return glob,per
 
-# Confirm the large-spread monotone-rise (Angle C) for k=5: track min-mu as spread grows
-print("\n  Large-spread behaviour (min mu vs spread): is it rising / bounded below?")
-xs=sorted(per_spread)
-print("    spread:  "+"  ".join(f"{s:>3d}" for s in xs[:18]))
-print("    minmu :  "+"  ".join(f"{float(per_spread[s][0]):.2f}" for s in xs[:18]))
+# ===================================================================== RHO* over P
+def sec_rho(worst_shapes):
+    print("="*90)
+    print("k=5 PART 2: rho*(P,E) EXACT over ALL P subset {1..13}, |P|=8, for worst shapes")
+    print("  (THM-527: rho*>0 ==> M>=1/14). Find min rho* and whether any rho*=0.")
+    print("="*90)
+    overall=(F(2),None,None); zeros=0; total=0
+    Ps=list(itertools.combinations(range(1,14),8))
+    print(f"  #P (|P|=8) = {len(Ps)}; #worst shapes = {len(worst_shapes)}")
+    for E in worst_shapes:
+        mn=(F(2),None);
+        gp_min=(F(2),None)
+        for P in Ps:
+            r,gp=rho_star_exact(list(P),list(E))
+            total+=1
+            if r==0: zeros+=1
+            if r<mn[0]: mn=(r,P)
+            if gp<gp_min[0]: gp_min=(gp,P)
+        if mn[0]<overall[0]: overall=(mn[0],E,mn[1])
+        print(f"  E={str(E):28s} mu={float(mu_exact(list(E))):.4f}  min_P rho* = {str(mn[0]):>16s}"
+              f" = {float(mn[0]):.6f}  at P={mn[1]}  (min meas G_P={float(gp_min[0]):.5f})")
+    print(f"\n  *** OVERALL min rho* over (worst shapes x all P) = {str(overall[0])} "
+          f"= {float(overall[0]):.7f} ***")
+    print(f"      at E={overall[1]} P={overall[2]}")
+    print(f"      #(rho*=0) = {zeros} / {total}   ==>  {'POSITIVE FLOOR' if zeros==0 else 'HAS ZEROS!'}")
+    return overall
+
+# ===================================================================== TAIL (large spread)
+def sec_tail():
+    print("="*90)
+    print("k=5 PART 3: large-spread tail.  Angle C claim: huge spread RAISES mu.")
+    print("  Test families that GROW one offset to infinity; show mu stays bounded below.")
+    print("="*90)
+    # family A: {0,1,2,3,M}  -- 4 consecutive + 1 runaway
+    print("  Family {0,1,2,3,M} (4 consecutive + runaway M):")
+    for M in [4,5,6,8,12,20,50,200,1000,5000]:
+        m=mu_exact([0,1,2,3,M]); print(f"     M={M:5d}: mu={str(m):>14s} = {float(m):.6f}")
+    # family B: {0,1,M-1,M, 2M} growing AP-like
+    print("  Family {0,2,4,6,M} (spread-out base + runaway):")
+    for M in [8,10,14,20,50,200,1000]:
+        m=mu_exact([0,2,4,6,M]); print(f"     M={M:5d}: mu={str(m):>14s} = {float(m):.6f}")
+    # family C: scale the whole consecutive cluster {0,g,2g,3g,4g}
+    print("  Family {0,g,2g,3g,4g} (consecutive scaled by g):")
+    for g in [1,2,3,5,7,11,13,100]:
+        m=mu_exact([0,g,2*g,3*g,4*g]); print(f"     g={g:4d}: mu={str(m):>14s} = {float(m):.6f}")
+
+if __name__=="__main__":
+    sec = sys.argv[1] if len(sys.argv)>1 else "sanity"
+    if sec=="sanity": sec_sanity()
+    elif sec=="enum":
+        smax=int(sys.argv[2]) if len(sys.argv)>2 else 16
+        sec_enum(smax)
+    elif sec=="tail": sec_tail()
+    elif sec=="all":
+        sec_sanity()
+        glob,per=sec_enum(int(sys.argv[2]) if len(sys.argv)>2 else 16)
+        sec_tail()
+
+# ===================================================================== RHO* full scan (called explicitly)
+def sec_rhofull(smax_shapes):
+    """For EVERY 5-shape with spread<=smax_shapes, and EVERY P subset {1..13} |P|=8,
+       compute rho* exactly. Find global min and any zeros. This is the finite check."""
+    print("="*90)
+    print(f"k=5 PART 2 (FULL): min_P rho*(P,E) EXACT over ALL P (|P|=8) and ALL shapes spread<= {smax_shapes}")
+    print("="*90)
+    Ps=[list(p) for p in itertools.combinations(range(1,14),8)]
+    print(f"  #P={len(Ps)}")
+    overall=(F(2),None,None); zeros=[]; shape_cnt=0
+    worst_per_shape=[]
+    for s in range(4, smax_shapes+1):
+        for T in itertools.combinations(range(1,s),3):
+            E=(0,)+T+(s,)
+            g=good_set_exact(list(E))
+            mn=(F(2),None)
+            for P in Ps:
+                gp=safe_set(P)
+                r=meas(intersect(g,gp))
+                if r<mn[0]: mn=(r,tuple(P))
+                if r==0: zeros.append((E,tuple(P)))
+            shape_cnt+=1
+            worst_per_shape.append((mn[0],E,mn[1]))
+            if mn[0]<overall[0]: overall=(mn[0],E,mn[1])
+    worst_per_shape.sort()
+    print(f"  shapes checked: {shape_cnt}")
+    print("  10 smallest min_P rho* (shape, P):")
+    for r,E,P in worst_per_shape[:10]:
+        print(f"    rho*={str(r):>16s} = {float(r):.7f}  E={E}  P={P}")
+    print(f"\n  *** GLOBAL min rho* = {str(overall[0])} = {float(overall[0]):.7f} ***")
+    print(f"      E={overall[1]}  P={overall[2]}")
+    print(f"  #(rho*=0) = {len(zeros)}  ==> {'POSITIVE FLOOR (S3 k=5 closed on this range)' if not zeros else 'HAS ZEROS'}")
+    for E,P in zeros[:8]: print(f"     ZERO at E={E} P={P}")
+    return overall, zeros
+
+if __name__=="__main__" and len(sys.argv)>1 and sys.argv[1]=="rhofull":
+    sec_rhofull(int(sys.argv[2]) if len(sys.argv)>2 else 8)
