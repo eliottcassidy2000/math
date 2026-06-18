@@ -1,0 +1,12 @@
+WITNESS 1 (tau=2/27): residues r where ||2r/27|| < 2/27
+  unsafe residues: [0, 13, 14]  (claim: {0,13,14})  match=True
+  small-part level min_{v=1..12} ||2v/27|| = 2/27 (claim 2/27)
+
+WITNESS 2 (tau=14k/(182k+1)=(m/13)/(m+1)): level and no-wraparound
+  level == 14k/(182k+1) for k=1..199: True
+  no-wraparound 12*(m/13) < m+1: 12 m/13 = m - m/13 < m < m+1 always (algebraic). check k=1: 12*14=168=168 < 183=183: True
+  min combined floor = min(2/27, 28/365) = 2/27 = 0.07407
+  2/27 - 1/14 = 1/378 > 0 ; 28/365 - 1/14 = 27/5110 > 0
+
+S1 PLACEMENT: {1..12,m}, m>=14 has k=#{v>13}=1 => case S1 (already PROVED).
+  => AP theorem rigorously re-closes an S1 slice; does NOT touch open S3.

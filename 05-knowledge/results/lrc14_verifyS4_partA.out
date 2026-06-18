@@ -1,0 +1,15 @@
+======================================================================
+(A) Re-derive load-bearing inequalities of Window-Collapse Lemma
+======================================================================
+
+[A1] 7-adic residue rule: ||v*k/7|| in {1/7,2/7,3/7} for 7 not| v, k coprime 7
+  residue rule holds: True (min nonzero = 1/7 )
+
+[A2] sharpness bound: 1/7 - V**(1/(14 V*)) = 1/14 should = 1/14 = 1/14
+
+[A3] mult-of-7 reduction: ||7w*(k/7+s)|| = ||w*(7s)||  (since w*k integer)
+  reduction identity holds: True
+
+Window: |s| <= 1/(14 V*)  <=>  |u|=|7s| <= 7/(14 V*) = 1/(2 V*).  Confirmed.
+So on |u|<=1/(2V*): non-mult-7 runners ALL safe (>=1/14), and the system
+reduces to finding u with ||w_i u||>=1/14 for all i, |u|<=1/(2V*).

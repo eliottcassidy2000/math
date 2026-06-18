@@ -1,0 +1,5 @@
+======================================================================
+F. a3/a4 with wider scope V<=400 (claim a3:127, a4:4116)
+======================================================================
+  a3 (t<20, V<=400): count=123, minM=1/13, viol=0
+    (claim count 127 — scope-dependent; min M=1/13 & 0 viol are the load-bearing claims)

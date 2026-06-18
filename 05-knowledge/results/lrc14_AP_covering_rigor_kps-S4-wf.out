@@ -1,0 +1,14 @@
+  q= 2: {1..12} has multiple? True
+  q= 3: {1..12} has multiple? True
+  q= 4: {1..12} has multiple? True
+  q= 5: {1..12} has multiple? True
+  q= 6: {1..12} has multiple? True
+  q= 7: {1..12} has multiple? True
+  q= 8: {1..12} has multiple? True
+  q= 9: {1..12} has multiple? True
+  q=10: {1..12} has multiple? True
+  q=11: {1..12} has multiple? True
+  q=12: {1..12} has multiple? True
+  q=13: {1..12} has multiple? False
+  q=14: {1..12} has multiple? False
+=> only q=13,14 need m; covering <=> 182|m.  RIGOROUS.

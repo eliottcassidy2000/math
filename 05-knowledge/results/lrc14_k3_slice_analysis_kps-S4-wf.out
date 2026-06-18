@@ -1,0 +1,13 @@
+k=3 exhaustive board [14,30]:
+  11632 covering primitive S3 k=3 sets, min M = 2/23 = 0.08696
+  margin M*14 = 28/23 = 1.2174  (>1 => strictly above 1/14)
+  worst set: [1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 18, 20, 28]
+  worst-set optimal tau = 4/23, binders [11, 12]
+
+  drop-max stability example (M dips at isolated large c):
+     c=   59: M=1/5 = 0.20000
+     c=   60: M=3/16 = 0.18750
+     c=  251: M=1/5 = 0.20000
+     c= 1251: M=1/5 = 0.20000
+     c= 5000: M=250/1251 = 0.19984
+  => M not constant in c; finite-core lift from k=2 does NOT hold verbatim.

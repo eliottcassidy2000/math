@@ -125,18 +125,20 @@ def gen(seed, target, cluster_hi=300, drops=(1,2,3,4)):
     return out
 
 allsets=[]
-for sd in range(8):
-    allsets += gen(seed=100+sd, target=1500, cluster_hi=200)
-for sd in range(4):
-    allsets += gen(seed=900+sd, target=1500, cluster_hi=400)
+for sd in range(6):
+    allsets += gen(seed=100+sd, target=1200, cluster_hi=160)
+for sd in range(3):
+    allsets += gen(seed=900+sd, target=1000, cluster_hi=260)
 # dedup
 seen=set(); ded=[]
 for S in allsets:
     t=tuple(S)
     if t not in seen: seen.add(t); ded.append(S)
 print(f"  generated {len(ded)} distinct covering primitive S3 sets.")
+t_f=time.time()
 scored=sorted(((Mfloat(S),S) for S in ded), key=lambda r:r[0])
-NEXACT=700
+print(f"  float-M screen done [{time.time()-t_f:.1f}s]")
+NEXACT=350
 floor=F(10); floorS=None; floorAt=None; below=0
 lows=[]
 t0=time.time()

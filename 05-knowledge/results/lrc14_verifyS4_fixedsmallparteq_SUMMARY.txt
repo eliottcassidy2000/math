@@ -1,0 +1,43 @@
+ADVERSARIAL VERIFICATION SUMMARY — THM-527 "fixed-small-part-equidistribution"
+kind-pasteur-2026-06-18-S4 (verifier). ALL exact rationals.
+Scripts: 04-computation/lrc14_verifyS4_fixedsmallparteq_kps-S4-wf.py (+ standalone probes).
+
+VERDICT: holds = TRUE for its STATED SCOPE. No counterexample found; every load-bearing
+step independently re-derived and exactly confirmed. The claim does NOT overclaim (it
+explicitly excludes the AP/coordinated-growth core, which remains the open residual).
+
+LOAD-BEARING CHECKS (all PASS):
+ [PART 0] Algebraic identity ||(V0+d)tau||>=1/14 <=> frac(V0 tau + d tau) in [1/14,13/14]:
+          3000 random exact checks, 0 mismatches. (Tautology; sanity.)
+ [FACT1]  meas(G_P) per-size infima EXACT MATCH to claim for all sizes 2..12.
+          Worst in-scope = 7/858 (size 12). Equivalence meas>0 <=> M(P)>1/14: 0 failures
+          over ALL proper subsets. 0 proper subsets with meas=0. Full {1..13}: meas=0,M=1/14.
+ [STEP1]  Omega* SUBSET Omega(tau) for ALL tau in [a',b'] (INDEPENDENT my_theta_arc build):
+          ~276,000 exact (theta,tau,offset) containment checks across 5 patterns near both
+          Omega* edges + center + 2001 tau samples: 0 violations.
+ [STEP2/THRESHOLD] Independent V0* (smaller than the script's, both valid) -> for ALL V0>=V0*:
+          min M over tested V0 = 11/95, 3/20, 14/83, 13/82, 4/19 (all >1/14). 0 violations.
+ [WITNESS] Exact constructed tau*=(n+theta_c)/V0: min_v||v tau*|| EXACTLY >=1/14 in every case,
+          including the tight P={1,2,3} offs 0..9 V0=43: min-1/14 = 3/347029372886660939776 > 0.
+ [CONSTRUCTION never fails] 2000 random in-scope (P,offsets): w(tau0)>0 reachable in widest
+          P-arc in 2000/2000 (no coverage gap from a degenerate widest arc).
+
+COUNTEREXAMPLE HUNT (covering + primitive + S3, in the sub-family) — NONE FOUND:
+ - Targeted dense (P in {1,2,3},{1,2,3,4},{1,2,3,5,7},{2,3,5},{1,3,5,7,9}; contiguous & even-AP
+   offsets; V0 14..299): 735 sets, MIN M = 1/11 ~ 0.0909 >> 1/14. 0 below 1/14.
+ - Below-threshold region (small V0 < typical V0*, where the witness is NOT guaranteed):
+   131 sets, MIN M = 1/12 ~ 0.0833 >> 1/14. 0 below 1/14. (=> the "finite check" passes here.)
+ - PART3/PART4 independent threshold rows: min M floors 11/95..4/19, all >1/14, 0 below.
+
+SCOPE HONESTY (confirmed): AP family {t,2t,...,12t,V} has NO fixed P (speeds<=13 = shrinking
+ {kt<=13}); correctly OUTSIDE the closure. Threshold V0* is per-pattern, NOT uniform (grows with
+ offset spread) — the claim states this. Heuristic (tau0,h) affects only SIZE of V0*, not
+ correctness; my independent V0* (43 vs the script's 81 for P={1,2,3} offs 0..9) confirms a valid
+ (in fact smaller) threshold exists, so the construction is sound and conservative.
+
+ONLY NON-RIGOROUS ELEMENT (already self-declared, NOT a hole): no closed-form optimal V0*; the
+ sub-arc is found by a deterministic exact procedure but is not proven widest. This affects the
+ SIZE of the finite below-threshold check, never the correctness of the V0>=V0* conclusion.
+
+BOTTOM LINE: the closure of the FIXED-SMALL-PART SINGLE-TIGHT-CLUSTER sub-case of S3 is REAL and
+ GAP-FREE for its stated scope. It does NOT close all of S3; LRC(14) remains OPEN.

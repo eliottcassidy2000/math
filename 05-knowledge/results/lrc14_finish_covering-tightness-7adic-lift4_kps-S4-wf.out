@@ -4,4 +4,86 @@
   For target M=q/D with D close to 14q, build a binding pair {a,b}, a+b=D, plus a covering
   primitive S3 completion. We sweep small q and D=14q-r, search completions, and record the
   smallest M actually REALIZED as exact M of a genuine covering primitive S3 set.
-  generated 17765 distinct covering primitive S3 sets.
+  generated 10053 distinct covering primitive S3 sets.
+  float-M screen done [25.8s]
+  exact M on 350 lowest-float sets [51.4s]; below 1/14: 0
+  251st-lowest float-M = 0.105263 (safely above floor 0.082353: True)
+
+====================================================================================
+(B)+(C) THE TRUE REALIZED FLOOR
+====================================================================================
+  REALIZED FLOOR M = 7/85 = 0.0823529
+    margin M - 1/14 = 13/1190 = 0.0109244  (M*14 = 1.15294)
+    at S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 65, 84]
+    tau*=7/85 denom=85 binders=[1, 84] mult7-binder=[84] mult14-binder=[84]
+
+  lowest 16 distinct exact M values realized (the floor spectrum):
+    M=    7/85=0.0823529 M*14=1.1529 D=85 binders=[1, 84] m7=[84]
+    M=  14/169=0.0828402 M*14=1.1598 D=169 binders=[1, 168] m7=[168]
+    M=    2/23=0.0869565 M*14=1.2174 D=23 binders=[11, 12] m7=[]
+    M=    5/57=0.0877193 M*14=1.2281 D=57 binders=[7, 50] m7=[7]
+    M=    3/34=0.0882353 M*14=1.2353 D=34 binders=[11, 57] m7=[]
+    M=  14/157=0.0891720 M*14=1.2484 D=157 binders=[3, 154] m7=[154]
+    M=    6/67=0.0895522 M*14=1.2537 D=67 binders=[7, 60] m7=[7]
+    M=  13/145=0.0896552 M*14=1.2552 D=145 binders=[2, 143] m7=[]
+    M=  20/223=0.0896861 M*14=1.2556 D=223 binders=[11, 212] m7=[]
+    M=    7/78=0.0897436 M*14=1.2564 D=156 binders=[2, 154] m7=[154]
+    M=    8/89=0.0898876 M*14=1.2584 D=178 binders=[42, 136] m7=[42]
+    M=  14/155=0.0903226 M*14=1.2645 D=155 binders=[11, 144] m7=[]
+    M=    1/11=0.0909091 M*14=1.2727 D=121 binders=[11, 110] m7=[]
+    M=  12/131=0.0916031 M*14=1.2824 D=131 binders=[10, 121] m7=[]
+    M=  11/119=0.0924370 M*14=1.2941 D=119 binders=[9, 110] m7=[]
+    M=    9/97=0.0927835 M*14=1.2990 D=97 binders=[7, 90] m7=[7]
+
+====================================================================================
+(D) IS THE MULT-OF-7/14 RUNNER ESSENTIAL AT THE FLOOR?
+====================================================================================
+  among 200 lowest-M sets: binding set INCLUDES a mult-of-7: 99; pure non-7: 101
+  => the mult-of-7 runner CAN bind at the floor.
+     (Confirms 4/47 set: pair (7,40) -- the covering-forced 7 itself binds.)
+
+  ARITHMETIC FLOOR CHECK: candidate floor values q/(14q-r) just above 1/14:
+    q=1 D=14*1-1=13: q/D=1/13=0.0769231 (>1/14 margin 0.00549) realized-in-sample=False
+    q=1 D=14*1-2=12: q/D=1/12=0.0833333 (>1/14 margin 0.01190) realized-in-sample=False
+    q=1 D=14*1-3=11: q/D=1/11=0.0909091 (>1/14 margin 0.01948) realized-in-sample=True
+    q=1 D=14*1-4=10: q/D=1/10=0.1000000 (>1/14 margin 0.02857) realized-in-sample=True
+    q=1 D=14*1-5=9: q/D=1/9=0.1111111 (>1/14 margin 0.03968) realized-in-sample=False
+    q=2 D=14*2-1=27: q/D=2/27=0.0740741 (>1/14 margin 0.00265) realized-in-sample=False
+    q=2 D=14*2-2=26: q/D=1/13=0.0769231 (>1/14 margin 0.00549) realized-in-sample=False
+    q=2 D=14*2-3=25: q/D=2/25=0.0800000 (>1/14 margin 0.00857) realized-in-sample=False
+    q=2 D=14*2-4=24: q/D=1/12=0.0833333 (>1/14 margin 0.01190) realized-in-sample=False
+    q=2 D=14*2-5=23: q/D=2/23=0.0869565 (>1/14 margin 0.01553) realized-in-sample=True
+    q=3 D=14*3-1=41: q/D=3/41=0.0731707 (>1/14 margin 0.00174) realized-in-sample=False
+    q=3 D=14*3-2=40: q/D=3/40=0.0750000 (>1/14 margin 0.00357) realized-in-sample=False
+    q=3 D=14*3-3=39: q/D=1/13=0.0769231 (>1/14 margin 0.00549) realized-in-sample=False
+    q=3 D=14*3-4=38: q/D=3/38=0.0789474 (>1/14 margin 0.00752) realized-in-sample=False
+    q=3 D=14*3-5=37: q/D=3/37=0.0810811 (>1/14 margin 0.00965) realized-in-sample=False
+    q=4 D=14*4-1=55: q/D=4/55=0.0727273 (>1/14 margin 0.00130) realized-in-sample=False
+    q=4 D=14*4-2=54: q/D=2/27=0.0740741 (>1/14 margin 0.00265) realized-in-sample=False
+    q=4 D=14*4-3=53: q/D=4/53=0.0754717 (>1/14 margin 0.00404) realized-in-sample=False
+    q=4 D=14*4-4=52: q/D=1/13=0.0769231 (>1/14 margin 0.00549) realized-in-sample=False
+    q=4 D=14*4-5=51: q/D=4/51=0.0784314 (>1/14 margin 0.00700) realized-in-sample=False
+    q=5 D=14*5-1=69: q/D=5/69=0.0724638 (>1/14 margin 0.00104) realized-in-sample=False
+    q=5 D=14*5-2=68: q/D=5/68=0.0735294 (>1/14 margin 0.00210) realized-in-sample=False
+    q=5 D=14*5-3=67: q/D=5/67=0.0746269 (>1/14 margin 0.00320) realized-in-sample=False
+    q=5 D=14*5-4=66: q/D=5/66=0.0757576 (>1/14 margin 0.00433) realized-in-sample=False
+    q=5 D=14*5-5=65: q/D=1/13=0.0769231 (>1/14 margin 0.00549) realized-in-sample=False
+    q=6 D=14*6-1=83: q/D=6/83=0.0722892 (>1/14 margin 0.00086) realized-in-sample=False
+    q=6 D=14*6-2=82: q/D=3/41=0.0731707 (>1/14 margin 0.00174) realized-in-sample=False
+    q=6 D=14*6-3=81: q/D=2/27=0.0740741 (>1/14 margin 0.00265) realized-in-sample=False
+    q=6 D=14*6-4=80: q/D=3/40=0.0750000 (>1/14 margin 0.00357) realized-in-sample=False
+    q=6 D=14*6-5=79: q/D=6/79=0.0759494 (>1/14 margin 0.00452) realized-in-sample=False
+    q=7 D=14*7-1=97: q/D=7/97=0.0721649 (>1/14 margin 0.00074) realized-in-sample=False
+    q=7 D=14*7-2=96: q/D=7/96=0.0729167 (>1/14 margin 0.00149) realized-in-sample=False
+    q=7 D=14*7-3=95: q/D=7/95=0.0736842 (>1/14 margin 0.00226) realized-in-sample=False
+    q=7 D=14*7-4=94: q/D=7/94=0.0744681 (>1/14 margin 0.00304) realized-in-sample=False
+    q=7 D=14*7-5=93: q/D=7/93=0.0752688 (>1/14 margin 0.00384) realized-in-sample=False
+
+  The realized floor sits at the LEAST q/D with D < 14q that a covering primitive S3 set can
+  achieve. Covering forbids the tightest pairs (it forces specific small runners present,
+  bounding which sums/differences D can host a dangerous binding pair). The EXACT infimum over
+  all covering S3 is the open quantity; this sample's floor is the current best lower witness.
+
+====================================================================================
+DONE.
+====================================================================================

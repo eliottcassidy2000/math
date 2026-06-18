@@ -1,0 +1,43 @@
+====================================================================================
+(1) EXACT VERIFICATION OF THE WINDOW-COLLAPSE REDUCTION
+====================================================================================
+  Take a closed example, build the global witness tau=k/7+u/7, and CHECK all 13 runners
+  clear 1/14 exactly. This validates the reduction (non-mult-7 safe by margin, mult-7 by sub).
+  example (all mult-of-7 large): S=[1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 31, 154]
+     V*=31, mult7 w=[22], half-window=1/62, closed=True, witness u=185/19096
+     GLOBAL WITNESS tau=k/7+u/7 with k=1: tau=19281/133672, min_v||v tau||=16691/133672=0.12487  >=1/14 OK
+
+====================================================================================
+(2) THE TWO CLEAN SUB-CASES (exact)
+====================================================================================
+  (2a) ALL-MULT7-LARGE: every multiple of 7 in S exceeds V*. Then every tooth half-width
+       1/(14 w_i) < 1/(2 V*) (since 7 w_i > V* => w_i > V*/7 => 1/(14 w_i) < 1/(2 V*)), so u=0+
+       is free of all teeth out to the nearest edge >= min_i 1/(14 w_i) ... actually the safe
+       arc adjacent to 0 has width >= 1/(2 V*) -- CLOSED. Verify on samples.
+  sample of 4000 covering primitive S3 sets.
+  (2a) ALL-MULT7-LARGE (min mult-of-7 > V*): 468 sets, window-collapse closed 468 -> ALL CLOSED
+  (2b) 7 in S: 2808 sets, window-collapse closed 0 -> ALL FAIL
+  overall window-collapse closure: 468/4000 (11.7%)
+
+====================================================================================
+(3) HONEST SCOPE: window-FAILING sets still satisfy M>=1/14 (binding-pair regime)
+====================================================================================
+  window-FAILING sets: 3532. Exact-M the 200 lowest-float of them.
+  [42.3s] below 1/14: 0; min exact M on window-failing = 2/25=0.080000 (M*14=1.1200) at [1, 2, 3, 4, 5, 6, 7, 9, 10, 11, 13, 16, 84]
+
+  CONCLUSION: the 7-adic window-collapse lemma CLOSES the ALL-MULT7-LARGE sub-case
+  unconditionally and FAILS exactly when a small multiple of 7 (esp. 7 itself) is present.
+  The window-failing sets are NOT counterexamples -- their M stays >= 1/14 via the binding-pair
+  mechanism, which is a DIFFERENT (non-7-adic) program. The 7-adic angle is thus a PARTIAL
+  closer, not a floor proof.
+
+====================================================================================
+DONE.
+====================================================================================
+============================================================
+ALL-MULT7-LARGE SUB-CASE: adversarial closure verification
+============================================================
+V*=14..399, mult-of-7 sub-systems size<=4, all 7w>V*:
+  configurations tested = 3515688
+  counterexamples (no safe witness in window) = 0
+  VERDICT: CLOSED on tested range (no counterexample)

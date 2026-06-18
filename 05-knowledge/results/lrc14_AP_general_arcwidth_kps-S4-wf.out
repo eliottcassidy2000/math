@@ -1,0 +1,4 @@
+over all 12-term APs (a<=10,d<=8): min W(A)= 1/1344 0.000744047619047619  at (8, 8)
+  any AP with W(A)=0 (safe set empty => arc-width lemma cannot fire)?: [] count 0
+  if W(A)>0 always, then for V > 1/(7 W(A)) the outlier is auto-dodged;
+  the threshold 1/(7 minW) = 192 192.0

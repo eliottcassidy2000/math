@@ -1,0 +1,20 @@
+ABSTRACT in-window witness condition for ALL-MULT7-LARGE
+============================================================
+Condition (i) 7 w_min > V*  -- always true by definition.
+Condition (ii) w_max < 14 w_min -- guarantees u*=1/(14 w_min)+eps clears all.
+Test: tightest margin of (i): min over (V*,w) of (1/(2V*) - 1/(14 w_min)) > 0
+  tightest (i)-margin = 1/317604 at V*=398 w_min=57 (start 1/(14w)=1/798 < edge 1/(2V*)=1/796): True
+  => 1/(14 w_min) < 1/(2 V*) ALWAYS (proof: 7 w_min > V* => 14 w_min > 2 V*). RIGOROUS.
+
+Now: can w_max >= 14 w_min happen in a COVERING ALL-MULT7-LARGE set,
+and does M still stay >= 1/14 there? Direct search (modest).
+tested 1235 covering ALL-MULT7-LARGE S3 sets
+  LRC breaks (M<1/14): 0
+  cond(ii) w_max<14 w_min failures: 0 (of which still M>=1/14: 0)
+  min M = 2/19 = 0.10526 at [1, 3, 4, 6, 8, 9, 10, 11, 12, 13, 15, 21, 56]; >=1/14: True
+
+CONCLUSION on ALL-MULT7-LARGE:
+  (i) ALWAYS holds (rigorous). If also (ii) holds, window-collapse gives a
+  global witness => M>=1/14, UNCONDITIONALLY (no V* cap needed).
+  Sets failing (ii) are checked directly; if breaks==0 they are still safe
+  (via window-collapse with a second-tooth-aware u, or via another tau).

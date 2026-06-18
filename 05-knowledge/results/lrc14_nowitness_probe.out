@@ -1,0 +1,49 @@
+S= [10, 24, 38, 44, 58, 65, 79, 136, 137, 147, 693, 1848, 1988]
+   cov= True  prim= True  m7= [147, 693, 1848, 1988]  V*= 137  ALLBIG= True
+   W= [21, 99, 264, 284]  wmin= 21  7*wmin= 147  R=1/(2V*)= 1/274 ~ 0.0036496350364963502
+   first-tooth half-width 1/(14 wmin)= 1/294 ~ 0.003401360544217687  vs R= 0.0036496350364963502   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 44/195 ~ 0.22564102564102564  >=1/14? True  arg tau= 68/195
+
+S= [12, 19, 20, 23, 37, 52, 54, 94, 110, 112, 686, 1407, 1526]
+   cov= True  prim= True  m7= [112, 686, 1407, 1526]  V*= 110  ALLBIG= True
+   W= [16, 98, 201, 218]  wmin= 16  7*wmin= 112  R=1/(2V*)= 1/220 ~ 0.004545454545454545
+   first-tooth half-width 1/(14 wmin)= 1/224 ~ 0.004464285714285714  vs R= 0.004545454545454545   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 31/133 ~ 0.23308270676691728  >=1/14? True  arg tau= 16/133
+
+S= [1, 5, 34, 39, 54, 74, 113, 120, 137, 140, 252, 1386, 1904]
+   cov= True  prim= True  m7= [140, 252, 1386, 1904]  V*= 137  ALLBIG= True
+   W= [20, 36, 198, 272]  wmin= 20  7*wmin= 140  R=1/(2V*)= 1/274 ~ 0.0036496350364963502
+   first-tooth half-width 1/(14 wmin)= 1/280 ~ 0.0035714285714285713  vs R= 0.0036496350364963502   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 498/1943 ~ 0.25630468347915597  >=1/14? True  arg tau= 884/1943
+
+S= [4, 8, 12, 37, 40, 46, 51, 55, 60, 63, 1547, 1736, 1841]
+   cov= True  prim= True  m7= [63, 1547, 1736, 1841]  V*= 60  ALLBIG= True
+   W= [9, 221, 248, 263]  wmin= 9  7*wmin= 63  R=1/(2V*)= 1/120 ~ 0.008333333333333333
+   first-tooth half-width 1/(14 wmin)= 1/126 ~ 0.007936507936507936  vs R= 0.008333333333333333   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 421/1896 ~ 0.2220464135021097  >=1/14? True  arg tau= 835/1896
+
+S= [19, 23, 24, 26, 29, 33, 36, 37, 39, 40, 42, 308, 1155]
+   cov= True  prim= True  m7= [42, 308, 1155]  V*= 40  ALLBIG= True
+   W= [6, 44, 165]  wmin= 6  7*wmin= 42  R=1/(2V*)= 1/80 ~ 0.0125
+   first-tooth half-width 1/(14 wmin)= 1/84 ~ 0.011904761904761904  vs R= 0.0125   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 95/327 ~ 0.290519877675841  >=1/14? True  arg tau= 5/327
+
+S= [1, 6, 8, 10, 15, 16, 18, 22, 24, 26, 28, 378, 581]
+   cov= True  prim= True  m7= [28, 378, 581]  V*= 26  ALLBIG= True
+   W= [4, 54, 83]  wmin= 4  7*wmin= 28  R=1/(2V*)= 1/52 ~ 0.019230769230769232
+   first-tooth half-width 1/(14 wmin)= 1/56 ~ 0.017857142857142856  vs R= 0.019230769230769232   (does first tooth of wmin swallow window?  False )
+   safe_u in window: None   #gaps= 0
+   Mval= 81/587 ~ 0.13798977853492334  >=1/14? True  arg tau= 280/587
+
+S= [10, 17, 19, 25, 32, 45, 102, 109, 182, 588, 1344, 1456, 1463]
+   cov= True  prim= True  m7= [182, 588, 1344, 1456, 1463]  V*= 109  ALLBIG= True
+   W= [26, 84, 192, 208, 209]  wmin= 26  7*wmin= 182  R=1/(2V*)= 1/218 ~ 0.0045871559633027525
+   first-tooth half-width 1/(14 wmin)= 1/364 ~ 0.0027472527472527475  vs R= 0.0045871559633027525   (does first tooth of wmin swallow window?  False )
+   safe_u in window: 547/152152   #gaps= 1
+   Mval= 441/1453 ~ 0.3035099793530626  >=1/14? True  arg tau= 204/1453
+

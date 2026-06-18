@@ -1,0 +1,7 @@
+k=3 drop-max dip example (P,a,b= [1, 2, 3, 4, 6, 7, 8, 11, 12, 13] 32 58 ):
+  c=   59: M=1/5 = 0.20000
+  c=   60: M=3/16 = 0.18750
+  c=  251: M=1/5 = 0.20000
+  c= 1251: M=1/5 = 0.20000
+  c= 5000: M=250/1251 = 0.19984
+=> M varies with c; all >> 1/14. Drop-max stability is APPROXIMATE for k=3.

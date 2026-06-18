@@ -1,0 +1,19 @@
+MINIMAL r=2 window-collapse failure: V*=19, mult-of-7 runners {21,273}, W={3,39}
+  window (0,R], R=1/(2*19)= 1/38
+  forbidden (merged) teeth: [('0', '1/38')]
+  SAFE GAPS: []  => window fully blocked: True
+  w=3 j=0 right-tooth: [0, 1/42]=[0, 0.023809523809523808 ]
+  w=39 j=1 tooth: [1/39-1/546, 1/39+1/546]=[ 0.023809523809523808 , 0.027472527472527472 ]
+  1/42 = 0.023809523809523808   1/39-1/546 = 0.023809523809523808   overlap closes gap? True
+  right end R=1/38= 0.02631578947368421  <= 1/39+1/546 = 0.027472527472527472 ? True
+
+Embedding into a real covering 13-set (need a multiple of 14 >19):
+  S= [1, 2, 4, 5, 8, 9, 10, 11, 12, 13, 19, 21, 28, 273]  |S|= 14
+  covering: True  primitive: True
+  S3? : True   V*(max nonmult7)= 19
+  full mult-of-7 subsystem W= [3, 4, 39]  window gaps: []  fully blocked: True
+  Mval(S)= 3/20 ~ 0.15  >=1/14? True
+
+VERDICT: in-scope ALL-MULT7-LARGE set; witness tau=k/7+u/7 does NOT exist
+(window fully blocked), yet M>=1/14. The witness-existence sub-claim is FALSE;
+the closure CONCLUSION (M>=1/14) survives here only via a different tau.

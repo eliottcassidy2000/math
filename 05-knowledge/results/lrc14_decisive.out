@@ -1,0 +1,22 @@
+======================================================================
+CLEANEST EXPLICIT COUNTEREXAMPLE to witness-existence (mechanism failure)
+======================================================================
+S = [1, 6, 8, 10, 15, 16, 18, 22, 24, 26, 28, 378, 581]
+  covering: True  primitive: True  |S|= 13
+  S3? (k>=2,Vmax>=13Vmin): True   (k= 9 Vmin= 1 Vmax= 581 )
+  mult-of-7: [28, 378, 581]  V*= 26  ALL-MULT7-LARGE (all>V*): True
+  subsystem W=v/7: [4, 54, 83]  window R=1/(2V*)= 1/52
+  SAFE GAPS in window: []   => witness exists? False
+  Mval(S) = 81/587 ~ 0.13798977853492334  >=1/14? True
+  CONCLUSION: ALL-MULT7-LARGE & in scope, but NO tau=k/7+u/7 witness; M>=1/14 via other tau.
+
+======================================================================
+MINIMAL-V* search: smallest V* with an ALL-MULT7-LARGE no-witness subsystem
+======================================================================
+  V*= 19  W= (3, 39)  7W= (21, 273)  gaps= []  (fully blocked: True )
+  V*= 20  W= (3, 39)  7W= (21, 273)  gaps= []  (fully blocked: True )
+  V*= 26  W= (4, 52)  7W= (28, 364)  gaps= []  (fully blocked: True )
+  V*= 27  W= (4, 52)  7W= (28, 364)  gaps= []  (fully blocked: True )
+  V*= 32  W= (5, 65)  7W= (35, 455)  gaps= []  (fully blocked: True )
+  V*= 33  W= (5, 65)  7W= (35, 455)  gaps= []  (fully blocked: True )
+  MINIMAL V* with no-witness subsystem: 19  W= (3, 39)

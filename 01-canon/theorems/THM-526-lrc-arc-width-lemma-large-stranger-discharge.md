@@ -294,3 +294,41 @@ existence — place the r contiguous cluster sub-bands in their gap indices with
 Empirically 0 counterexamples over k=2 exhaustive (≤62, 4865) + {1..22} exhaustive (13,996, min M=1/12)
 + k≥3 sweeps to Vmax≈12000. **LRC(14) remains OPEN; no angle produced a gap-free closure (every
 verifier confirmed this).** → HYP-2581, HYP-2580 (corrected), OPEN-Q-108.
+
+## kind-pasteur-2026-06-18-S4 update: pigeonhole cluster-size split, THM-527, AP-family, ALL-MULT7-LARGE
+
+A second finishing workflow (4 angles, adversarially verified) + independent work. Convergence
+with mac-mini (THM-527 reservation). Net: the residual is sharper; new PROVED sub-cases; LRC(14)
+still OPEN (the coordinated-growth core is asymptotically tight).
+
+### PIGEONHOLE CLUSTER-SIZE SPLIT (kps-S4) — the offset-fit is automatic for small clusters
+The carry-phase reformulation (mac-mini THM-527 ≡ kps offset-fit): the via-max criterion margin →
+`7·w_θ`, `w_θ = 6/7 − circ_width({frac(e_i x)})`; a GLOBAL WITNESS needs `w_θ>0` (gap `>1/7`),
+the via-max CRITERION needs `w_θ>1/7` (gap `>2/7`). With `m` cluster phase-points, max gap `≥1/m`
+(pigeonhole), so **margin `≥ 7/m − 1`** (`m=|L|−1` for the criterion). Boundary:
+- via-max criterion: automatic for `|L| ≤ 4` (margin `≥ 4/3`); `|L| ≥ 5` needs `ρ*>0`.
+- global witness: automatic for `|L| ≤ 6` (gap `≥1/m>1/7`); `|L| ≥ 7` needs `ρ*>0`.
+This exactly matches mac-mini's "k≤3 points automatic, k≥4 hard". VERIFIED: criterion holds 0-fail
+over ~8000 covering S3 sets with `|L|≥3` (only `|L|=2` has C-failures = S*, MISTAKE-076); k≥3
+M-floor = **2/21** (looser than k≤2's 2/23); tightness always from an adjacent SMALL pair {a,a+1},
+never the cluster. → THM-527 (the fixed-shape closure made rigorous).
+
+### AP-FAMILY THEOREM (PROVED, gap-free) — but it is case S1
+`S = {1,…,12,m}`, `m≥14`: **covering ⟺ 182|m** (`{1..12}` covers `2..12`; only `13,14` need `m`,
+`lcm=182`); and **every covering member has `M(S) ≥ 2/27 > 1/14`** (two explicit witnesses
+`τ=2/27` and `τ=14k/(182k+1)`; contains the near-1/14 single-large extremizer `{1..12,182}`,
+`M=14/183`). By scale-invariance `M(cS)=M(S)` this closes all scaled copies; primitive AP-clusters
+`{t,…,12t,V}` and general `{a,a+d,…,a+11d,V}` verified counterexample-free (4243 sets, M≥1/13).
+**Caveat: `{1..12,m}` has `k=1` ⇒ case S1, already proved** — a clean constructive re-closure, NOT
+new S3 progress.
+
+### ALL-MULT7-LARGE WINDOW-COLLAPSE (CONDITIONAL-PROVED)
+Near `τ=k/7` (`gcd(k,7)=1`): every non-mult-of-7 runner `v` is safe for `|τ−k/7| ≤ 1/(14V*)`
+(`V*=max non-mult-of-7 runner`), and each mult-of-7 runner `7w_i` reduces to `‖w_i·u‖`, `u=7(τ−k/7)`.
+Covering forces an EVEN mult of 7 (q=14). **PROVED unconditionally:** `1/(14 w_min) < 1/(2V*)`
+(⟺ `V* < 7 w_min`, holds since the mult-of-7 runners exceed `V*` in this slice). **⇒ if
+`w_max < 14 w_min`, the explicit point `u* = 1/(14 w_min)+ε` is a global witness ⇒ `M(S)≥1/14`,
+with no `V*` cap.** Open micro-gap: `w_max < 14 w_min` universal (0 failures / 1235 exact in-scope
+sets, 0 LRC breaks). [The 7-adic structure is NOT the uniform-floor mechanism — REFUTED; the floor
+is set by small binding pairs (THM-524). The window-collapse closes only the ~12% ALL-MULT7-LARGE
+slice and never the `7∈S` sets.] Gap-side companion to codex's private-q=7 obligation (HYP-2579).

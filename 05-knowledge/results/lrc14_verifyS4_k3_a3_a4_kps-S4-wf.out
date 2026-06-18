@@ -1,0 +1,41 @@
+======================================================================
+A. 'No wraparound' inequality 12*(m/13) < m+1 for witness 2 (m=182k)
+======================================================================
+  12*(m/13) < m+1 for all k in [1,5000): True
+  algebraic margin (m+1) - 12q = (182k+1) - 168k = 14k+1 > 0 always.
+
+======================================================================
+B. Is {1,...,12,m} (m=182k) a primitive covering S3 set? (scope check)
+======================================================================
+  m=182: #{v>13}=1 -> k_caseparam=1; this is S1, gcd=1
+  m=364: #{v>13}=1 -> k_caseparam=1; this is S1, gcd=1
+  m=546: #{v>13}=1 -> k_caseparam=1; this is S1, gcd=1
+  NOTE: {1..12,m} has exactly ONE speed >13 (m). So k_param=1 => it is in S1,
+        which was ALREADY PROVED. The AP theorem closes an S1 family, not S3.
+
+======================================================================
+C. a3 scaling family {t,2t,...,12t,V}: claim min M=1/13, 0 violations
+======================================================================
+  a3 covering primitive S3 sets found: 34
+  min M = 1/13 (=0.07692) at t=2, V=39
+  violations (M<1/14): 0
+
+======================================================================
+D. a4 general AP {a,a+d,...,a+11d,V}: claim min M=1/13, 0 violations
+======================================================================
+  a4 covering primitive S3 sets found: 2074
+  min M = 1/13 (=0.07692) at a=2, d=2, V=39
+  violations (M<1/14): 0
+
+======================================================================
+E. k=3 board [14,30]: enumerate covering primitive S3 k=3 sets, min M
+======================================================================
+  k=3 covering primitive S3 sets on board [14,30]: 11632
+  min M = 2/23 (=0.08696)  at S=[1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 18, 20, 28]
+  claim: 11632 sets, min M = 2/23 = 2/23 (0.08696)
+  count match: True;  minM match 2/23: True
+  violations (M<1/14): 0
+
+  Reported worst set [1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 18, 20, 28]:
+    covering=True, primitive(gcd=1), Vmin=1, Vmax=28, 13*Vmin=13
+    M = 2/23 (claim 2/23 = 2/23)

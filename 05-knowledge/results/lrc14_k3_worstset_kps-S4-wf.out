@@ -1,0 +1,6 @@
+worst k=3 set S= [1, 2, 3, 4, 5, 7, 8, 11, 12, 13, 18, 20, 28]
+  M= 2/23 = 0.08695652173913043  optimal tau= 4/23 = 0.17391304347826086
+  binders: [11, 12]
+  k (#>13): 3  Vmin,Vmax= 1 28  13*Vmin= 13
+S* (documented k=2 floor): 2/23 0.08695652173913043  tau= 4/23
+  Both realize the SAME global S3 floor M=2/23 ~ 0.0870.

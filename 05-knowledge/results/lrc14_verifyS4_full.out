@@ -1,0 +1,36 @@
+======================================================================
+(A) Re-derive load-bearing inequalities of Window-Collapse Lemma
+======================================================================
+
+[A1] 7-adic residue rule: ||v*k/7|| in {1/7,2/7,3/7} for 7 not| v, k coprime 7
+  residue rule holds: True (min nonzero = 1/7 )
+
+[A2] sharpness bound: 1/7 - V**(1/(14 V*)) = 1/14 should = 1/14 = 1/14
+
+[A3] mult-of-7 reduction: ||7w*(k/7+s)|| = ||w*(7s)||  (since w*k integer)
+  reduction identity holds: True
+
+Window: |s| <= 1/(14 V*)  <=>  |u|=|7s| <= 7/(14 V*) = 1/(2 V*).  Confirmed.
+So on |u|<=1/(2V*): non-mult-7 runners ALL safe (>=1/14), and the system
+reduces to finding u with ||w_i u||>=1/14 for all i, |u|<=1/(2V*).
+
+======================================================================
+[A4] Triangle-ineq subtlety: ||a+b|| >= ||a|| - ||b|| needs ||b||=|v||s|
+======================================================================
+  ||v s|| = |v||s| for all non-mult7 v<=V* on window edge: True
+
+======================================================================
+(B) Verify the headline validated witness
+======================================================================
+S = [1, 2, 4, 5, 6, 8, 9, 10, 11, 12, 13, 31, 154]
+  covering: True  primitive: True  size: 13
+  Vmin 1 Vmax 154 k=#{v>13} 2   S3? (k>=2 and Vmax>=13 Vmin): True
+  mults of 7: [154]  V* (max non-mult7): 31
+  ALL-MULT7-LARGE? (every mult of 7 > V*): True  (7 in S?: False )
+  claimed witness tau = 19281/133672 =? 19281/133672
+  min_v ||v*tau|| = 16691/133672 ~ 0.12486534203124065   >= 1/14? True
+  exact Mval(S) = 11/81 ~ 0.13580246913580246
+
+======================================================================
+(C) HUNT: covering primitive S3 sets in ALL-MULT7-LARGE with M<1/14
+======================================================================

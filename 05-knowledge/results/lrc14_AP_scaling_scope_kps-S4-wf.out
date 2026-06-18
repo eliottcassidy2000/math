@@ -1,0 +1,2 @@
+primitive covering S3 {t..12t,V} with t>1: [(2, 39), (2, 65), (2, 91), (2, 117), (2, 143), (2, 169), (2, 195), (3, 182), (4, 65), (4, 91), (4, 117), (4, 143), (4, 169), (4, 195), (5, 182)]  total 15
+  (note: t|V impossible here since primitive+t|V forces t=1)
