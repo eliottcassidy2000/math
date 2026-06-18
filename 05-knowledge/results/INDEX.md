@@ -449,6 +449,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 
 | `lrc14_colored_resonance_deficit_codex.py` | [STORED] | Proof-oriented colored discrepancy scout. States the half-boundary Fourier/color-resonance identity: a factor expansion term survives color summation only when `sum_p p*n_p + sum_e e*n_e = ell*V` and `sum_e n_e == ell mod 14`, explaining cancellation of micro-endpoint count `K`. Decomposes exact actual deficits by coarse `G_P` components. Deterministic row `P=(1,2,11)`, `E=(0,84,293,301,355,416,485,665,843,886)`, `V=1203` refutes constant bound `100` with deficit `135.435`; reproducible `149`-row bank has `0` zero witnesses, `0` violations of `7(k+cGP)+1`, `8(k+cGP)+1`, `8kcGP+1`, and raw `K`; the `{1..11,13}∪{84m}` hard-core tower is tame. Since max `cGP=32`, target `8(k+cGP)+1` plus HYP-2593 Sigma floor would certify `V>=711`. Supports HYP-2595 and OPEN-Q-108. | `lrc14_colored_resonance_deficit_codex.out` |
 
+| `lrc14_integer_sequence_carriers_codex.py` | [STORED] | Integer-sequence carrier for HYP-2597's universal denominator-cap centers. Proves/classifies that `1/2` survives `G_P` iff `P` is all odd, and `1/3,2/3` survive iff `P` has no multiple of `3`. Survivor count by `s=|P|` is `C(7,s)+C(9,s)-C(5,s)=1,11,47,109,156,146,91,37,9,1,0,0,0,0`; complement is the mixed parity/triadic residual. For `R=max(E)>=4`, all-odd gives reservoir coefficient `3/(14R)`, 3-free gives `2/(21R)`, both gives `13/(42R)`. Conservative-window scans stabilize to the survivor sequence by large spread; named hard rows classify as mixed or 3-free as expected. Supports HYP-2598 and refines the HYP-2595/OPEN-Q-108 split. | `lrc14_integer_sequence_carriers_codex.out` |
+
 ## Convention for new scripts
 
 1. Save the script in `04-computation/`
