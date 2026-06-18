@@ -1,0 +1,2 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_verify_exhaustive_smallVmax_kps-S3-wf.py:7: SyntaxWarning: invalid escape sequence '\{'
+  - test C(S): does SOME removed runner v give W(S\{v}) > 1/(7v)?  flag total failures.

@@ -1,0 +1,13 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_residual_lrc-lever-overlap_kps-S3-wf.py:12: SyntaxWarning: invalid escape sequence '\{'
+  We want to prove the criterion C(S):  exists v in S with W(S\{v}) > 1/(7v).
+======================================================================
+EXPERIMENT 1: criterion C(S) via v=Vmax, overlap structure of G_P cap G_{L'}
+======================================================================
+
+  S3 sets tested: 300
+  C(S) via Vmax FAILURES: 0
+  margin = W(S\Vmax) / (1/(7 Vmax)):  min=1.3972  max=6.6000
+           exact min margin = 30942/22145
+
+  OVERLAP widest-arc(G_P cap G_L') / (1/(7Vmax)) : min=1.3972 max=6.6000
+  worst overlap config: |P|=4 |L|=9 Vmax=216 wover=573/620060 ratio=1.3972

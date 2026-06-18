@@ -1,0 +1,15 @@
+Phase 3: k=2 boundary sweep (P = 11 small from {1..13}, two large a<b).
+k=2 sweep: checked 5151 S3 sets in 296.3s
+C(S) FAILURES (k=2): 1
+  [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]  best_ratio 429/532 ~0.80639 via 11  M=2/23 ~0.08696
+
+Phase 3b: k=3 spot check (P=10 small, three large near 38..50).
+k=3 spot: checked 4031 S3 sets. C-fails: 0
+
+=== SUMMARY over C(S)-failure family ===
+total C-fails found: 1
+min best-criterion ratio over C-fails: 429/532 0.806390977443609
+min exact M over C-fails: 2/23 0.08695652173913043 >=1/14? True
+LRC(14) counterexamples (M<1/14): 0
+
+DONE 520.0s

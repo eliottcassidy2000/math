@@ -1,0 +1,24 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_verify_clustercollapsethr_kps-S3-wf.py:113: SyntaxWarning: invalid escape sequence '\{'
+  """C(S): exists v in S with W(S\{v}) > 1/(7v). Returns (holds, best_v, best_margin)."""
+======================================================================
+PART 0: Tool self-consistency checks
+======================================================================
+S={1..13}: covering? False primitive? True
+  M(S)= 1/14 0.07142857142857142   >= 1/14? True
+  C(S): False  best_v= 8  best_margin= 16/21 0.7619047619047619
+
+======================================================================
+PART 1: Re-derive CLUSTER-COLLAPSE LEMMA from scratch (exact)
+======================================================================
+Cluster-collapse lemma: 0 failures in 20000 random L's (exact)
+
+Threshold (13 - Vmax/V0)/2 > 1  <=>  Vmax < 11*V0 :
+  V0=100 Vmax=1099: (13-Vmax/V0)/2=201/200=1.0050  Vmax<11V0=True  val>1=True
+  V0=100 Vmax=1100: (13-Vmax/V0)/2=1=1.0000  Vmax<11V0=False  val>1=False
+  V0=100 Vmax=1101: (13-Vmax/V0)/2=199/200=0.9950  Vmax<11V0=False  val>1=False
+  V0=100 Vmax=1000: (13-Vmax/V0)/2=3/2=1.5000  Vmax<11V0=True  val>1=True
+  V0=100 Vmax=1300: (13-Vmax/V0)/2=0=0.0000  Vmax<11V0=False  val>1=False
+
+======================================================================
+PART 2: S3 set generation + adversarial hunt for C(S) failures / M<1/14
+======================================================================

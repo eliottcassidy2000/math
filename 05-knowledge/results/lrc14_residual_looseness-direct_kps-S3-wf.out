@@ -1,0 +1,69 @@
+==============================================================================
+PART (a): EXACT S3 floor hunt (float lower-bound screen, exact-confirm near-min)
+==============================================================================
+  S3 sets screened: 1356
+  near-1/14 (floatM<0.078) exact-confirmed: 529
+  LRC breaks (exact M < 1/14): 0
+  smallest EXACT M = 5/61 = 0.081967  (1/14=0.071429)
+  minimizer S = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156, 182]
+  achieved at tau = 5/61
+  margin over 1/14 = 9/854 = 0.010539
+  smallest 10 exact M (S3):
+     5/61 = 0.081967   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156, 182]
+     7/85 = 0.082353   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 168, 169]
+     13/157 = 0.082803   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 154, 156]
+     14/169 = 0.082840   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 168, 221]
+     15/181 = 0.082873   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 180, 182]
+     16/193 = 0.082902   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 182, 192]
+     21/253 = 0.083004   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 252, 260]
+     14/157 = 0.089172   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 143, 154, 156]
+     13/145 = 0.089655   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 143, 144, 154]
+     11/122 = 0.090164   S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 221, 242, 252]
+
+==============================================================================
+PART (a2): EXHAUSTIVE S3 in a small window -- rigorous finite floor
+  Enumerate ALL covering primitive 13-subsets of {1..W} that are in S3,
+  for W up to a feasible bound; report exact min M.
+==============================================================================
+  W=20: #S3 sets=3054  minM=1/12=0.083333  argmin=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  W=22: #S3 sets=13996  minM=1/12=0.083333  argmin=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  EXHAUSTIVE S3 floor (W<=22): minM=1/12=0.083333 at [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  >= 1/14 strictly? True   (margin 1/84)
+
+==============================================================================
+COMBINED S3 FLOOR (this search): min M = 5/61 = 0.081967
+  minimizer = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156, 182]
+  > 1/14 strictly? True   margin = 0.010539
+==============================================================================
+
+==============================================================================
+PART (b): MULTI-GAP LEMMA -- existence of a common LATER-gap safe arc
+==============================================================================
+  THEOREM (elementary identity, PROVED):
+    For finite S and tau with min_u||u tau|| > 1/14, set k_u=floor(u tau).
+    Then frac(u tau) in (1/14,13/14) for all u, so tau in A(k) and A(k)!=empty.
+    Conversely every tau in A(k) is safe.  Hence:
+      [ exists nonempty multi-gap arc A(k) ]  <=>  [ M(S) > 1/14 ].
+    => the multi-gap Lemma is LOGICALLY EQUIVALENT to the goal, NOT an
+       independent lever.  Content = prove a good k EXISTS by CRT a priori.
+
+  S3 sets tested: 444
+  identity verified (k=floor at argmax gives nonempty arc containing tau): 444
+  identity failures: 0
+  floor minimizer S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 156, 182]
+     M=5/61, argmax tau=5/61, k=floor(u tau)=[0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 12, 14]
+     A(k)=(Fraction(13, 168), Fraction(209, 2548))
+
+==============================================================================
+PART (c): CONSTRUCTIVE structured witness (cluster-pivot + small-part gaps)
+==============================================================================
+  S3 sets tested: 438
+  structured witness found: 438  (100.00%)
+  structured-witness MISSES: 0  (NOT LRC breaks -- scan incompleteness)
+
+==============================================================================
+PART (d): SUBSET Lemma-1 -- drop largest; does Lemma 1 fire on the rest?
+==============================================================================
+  S3 sets tested: 450
+  closed by SUBSET Lemma-1: 0 (0.00%)
+  NOT closed -> need multi-gap/band route: 450

@@ -1,0 +1,36 @@
+FAST ADVERSARIAL VERIFICATION — lrc-lever-overlap S3
+
+[GEOM] L_collapse / L_ruler / WIDTH-INEQ exact checks
+  L_ruler violations=0  L_collapse violations=0  WIDTH-INEQ algebra-mismatch=0  sufficiency-cex=0
+
+[KNOWN-EXC] [1,2,3,5,7,8,9,10,11,12,13,27,28]
+  case=S3 covering=True M=2/19=0.10526 (>=1/14? True, ==2/19? True)
+   remove   1: ratio=0.2044 no
+   remove   2: ratio=0.1652 no
+   remove   3: ratio=0.2798 no
+   remove   5: ratio=0.1683 no
+   remove   7: ratio=0.3125 no
+   remove   8: ratio=0.7619 no
+   remove   9: ratio=0.3029 no
+   remove  10: ratio=0.4040 no
+   remove  11: ratio=1.0476 C-YES
+   remove  12: ratio=1.3427 C-YES
+   remove  13: ratio=0.9931 no
+   remove  27: ratio=1.3807 C-YES
+   remove  28: ratio=0.9423 no
+
+[PERSIST] large-Vmax: does C(S) keep holding as V0 grows? (Wwidth only)
+   V0 200 NOT covering; skip
+   V0 500 NOT covering; skip
+   V0 1000 NOT covering; skip
+   V0 2000 NOT covering; skip
+   V0 4000 NOT covering; skip
+   V0 8000 NOT covering; skip
+
+[BOUNDARY k=2] large speeds in [14,80], exhaustive over 11-subsets
+    ...subsets 13/78 total=65 Cfails=0 minmarg=1.417 (8s)
+    ...subsets 26/78 total=605 Cfails=0 minmarg=1.008 (54s)
+    ...subsets 39/78 total=2046 Cfails=0 minmarg=1.008 (163s)
+    ...subsets 52/78 total=3852 Cfails=1 minmarg=0.806 (301s)
+    ...subsets 65/78 total=6395 Cfails=1 minmarg=0.806 (453s)
+    ...subsets 78/78 total=8830 Cfails=1 minmarg=0.806 (603s)

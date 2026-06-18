@@ -1,0 +1,55 @@
+======================================================================
+TEST A: audit cand() Mval against exhaustive breakpoints + grid (small sets)
+======================================================================
+  sets audited: 389
+  cand-vs-exhaustive discrepancies: 0  (expect 0 => cand() is the correct M)
+  grid-beats-cand events: 0  (expect 0 => cand() never undercounts)
+
+======================================================================
+TEST B: two-gap lemma soundness + (B1)+(B2) -> M>=1/14 hunt (bounded speed)
+======================================================================
+  generated 500 covering primitive S3 sets (V0<=220)
+   ...TEST B progress 0/500 running min M=None
+   ...TEST B progress 100/500 running min M=6/59
+   ...TEST B progress 200/500 running min M=5/53
+   ...TEST B progress 300/500 running min M=11/117
+   ...TEST B progress 400/500 running min M=11/117
+  (B1)+(B2)+(A) witnesses found: 239/500
+  T1 logical violations (witness not actually safe): 0  (expect 0)
+  min M over these S3 sets: 11/117=0.09402 at [1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 110, 140]  (margin x1.316)
+
+======================================================================
+TEST C: gap-vector identity T2 (exists A(k) nonempty  <=>  M>1/14)
+======================================================================
+  sets tested: 483;  T2 mismatches: 0  (expect 0)
+
+======================================================================
+TEST D: exhaustive S3 floor in window {1..22}
+======================================================================
+   ...checked 2000 S3 sets, running floor=1/12
+   ...checked 4000 S3 sets, running floor=1/12
+   ...checked 6000 S3 sets, running floor=1/12
+   ...checked 8000 S3 sets, running floor=1/12
+   ...checked 10000 S3 sets, running floor=1/12
+   ...checked 12000 S3 sets, running floor=1/12
+  S3 sets checked: 13996
+  floor (min M): 1/12=0.083333  argmin=[1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]
+  floor == 1/12 ? True
+  count below 1/12: 0;  below 1/14: 0
+  claimed minimizer [1, 2, 3, 4, 10, 11, 12, 13, 14, 15, 16, 17, 18]: cov=True prim=True S3=True M=1/12
+
+======================================================================
+TEST E: broad adversarial hunt for S3 with M<1/14 (bounded speed, completes)
+======================================================================
+   ...tested 500, running min M=14/169=0.08284
+EXIT=1
+
+=== ADVERSARIAL VERIFICATION VERDICT (kps-S3-wf) ===
+TEST A (Mval audit): 0 cand-vs-exhaustive discrepancies, 0 grid-beats. Mval tool CORRECT.
+TEST B (two-gap lemma T1): 239/500 (B1)+(B2)+(A) witnesses, 0 logical violations. LEMMA SOUND. min M=11/117.
+TEST C (gap-vector identity T2): 0 mismatches over 483 sets. IDENTITY CORRECT (but a restatement).
+TEST D (exhaustive {1..22} floor T3): 13996 S3 sets, floor=1/12 at {1,2,3,4,10..18}, 0 below 1/14. MATCHES CLAIM EXACTLY.
+TEST E (partial, 500 sets V0<=220): min M=14/169, 0 breaks.
+Structured minimizers (exact): {1,2,3,4,10..18}=1/12, {1..11,156,182}=5/61, scaled/large-V families all >=1/14.
+NO covering primitive S3 13-set with M<1/14 found anywhere.
+CLAIM HOLDS as a PARTIAL/REDUCTION result; it does NOT close S3 (self-declared). LRC(14) remains OPEN.

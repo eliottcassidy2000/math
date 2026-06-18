@@ -1,0 +1,2 @@
+C(S) FAILURES found: 1
+  SET [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42] best_ratio 429/532 0.806390977443609 via 11  M= 2/23 0.08695652173913043  M>=1/14? True  case S3 Vmax/Vmin 42

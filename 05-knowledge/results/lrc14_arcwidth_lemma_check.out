@@ -1,0 +1,26 @@
+Tooth-geometry check (single runner v):
+  v=1: #safe arcs=1  safe widths=[0.8571428571428571] expected 6/(7v)=0.8571428571428571
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=2: #safe arcs=2  safe widths=[0.42857142857142855] expected 6/(7v)=0.42857142857142855
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=3: #safe arcs=3  safe widths=[0.2857142857142857] expected 6/(7v)=0.2857142857142857
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=5: #safe arcs=5  safe widths=[0.17142857142857143] expected 6/(7v)=0.17142857142857143
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=7: #safe arcs=7  safe widths=[0.12244897959183673] expected 6/(7v)=0.12244897959183673
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=14: #safe arcs=14  safe widths=[0.061224489795918366] expected 6/(7v)=0.061224489795918366
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=53: #safe arcs=53  safe widths=[0.016172506738544475] expected 6/(7v)=0.016172506738544475
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+  v=100: #safe arcs=100  safe widths=[0.008571428571428572] expected 6/(7v)=0.008571428571428572
+      total safe measure=6/7 ; danger measure=1/7=0.14285714285714285 ; v*1/(7v)=0.14285714285714285 (should be 1/7 total danger)
+
+Longest single danger run of v = 1/(7v)?  (verify gap between teeth = 6/(7v) > 0):
+  v=2: inter-tooth safe gap width=3/7=0.42857142857142855 =? 6/(7v)=0.42857142857142855  tooth width 1/(7v)=0.07142857142857142
+  v=3: inter-tooth safe gap width=2/7=0.2857142857142857 =? 6/(7v)=0.2857142857142857  tooth width 1/(7v)=0.047619047619047616
+  v=7: inter-tooth safe gap width=6/49=0.12244897959183673 =? 6/(7v)=0.12244897959183673  tooth width 1/(7v)=0.02040816326530612
+  v=53: inter-tooth safe gap width=6/371=0.016172506738544475 =? 6/(7v)=0.016172506738544475  tooth width 1/(7v)=0.0026954177897574125
+  v=100: inter-tooth safe gap width=3/350=0.008571428571428572 =? 6/(7v)=0.008571428571428572  tooth width 1/(7v)=0.0014285714285714286
+
+IMPLICATION test: W(A) > 1/(7v)  =>  A u {v} has a safe point (M>=1/14):

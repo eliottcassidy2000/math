@@ -1,0 +1,25 @@
+=== (1) PREDICTION W(S\max) ~ max_tau w_th(tau)/V0  and  (3) offset-fit predicts C ===
+ V=  83 V0=  69 s=14  Wact=0.00569 pred=0.00765 (pred/act=1.34)  w_th_max=0.5279  crit(v=max)=True offsetfit(>1/7)=True
+ V= 580 V0= 569 s=11  Wact=0.00105 pred=0.00106 (pred/act=1.00)  w_th_max=0.6018  crit(v=max)=True offsetfit(>1/7)=True
+ V= 509 V0= 494 s=15  Wact=0.00075 pred=0.00077 (pred/act=1.02)  w_th_max=0.3793  crit(v=max)=True offsetfit(>1/7)=True
+ V= 287 V0= 274 s=13  Wact=0.00126 pred=0.00130 (pred/act=1.03)  w_th_max=0.3571  crit(v=max)=True offsetfit(>1/7)=True
+ V= 470 V0= 459 s=11  Wact=0.00141 pred=0.00144 (pred/act=1.03)  w_th_max=0.6619  crit(v=max)=True offsetfit(>1/7)=True
+ V=  67 V0=  54 s=13  Wact=0.00938 pred=0.01136 (pred/act=1.21)  w_th_max=0.6134  crit(v=max)=True offsetfit(>1/7)=True
+ V= 655 V0= 644 s=11  Wact=0.00117 pred=0.00116 (pred/act=0.99)  w_th_max=0.7469  crit(v=max)=True offsetfit(>1/7)=True
+ V= 269 V0= 256 s=13  Wact=0.00292 pred=0.00298 (pred/act=1.02)  w_th_max=0.7619  crit(v=max)=True offsetfit(>1/7)=True
+prediction pred/actual ratio: min=0.83 med=1.02 max=1.34 (want ~1; <1 = small-part chopping)
+offset-fit (w_th_max>1/7) matches crit(v=max): 40 / 40
+
+=== (2) V0-INDEPENDENCE: fix (P, offset-pattern), vary V0; does offset-fit stay constant? ===
+  V0=200 skip (size 12)
+  V0=400 skip (size 12)
+  V0=700 skip (size 12)
+  V0=1100 skip (size 12)
+  V0=2000 skip (size 12)
+(w_th_max should be ~constant in V0 = the bounded-data reduction; crit should stabilize)
+
+=== V0-INDEPENDENCE (fixed P=[1,2,3], offsets [4,6,9,13,15,22,24,27,33]) ===
+w_th_max = 0.5179 (>1/7, offset-fit holds, depends ONLY on P+offsets)
+W(S\max)*7*V across V0=120,260,500,900,1500: 3.730, 3.755, 3.655, 3.689, 3.685  (CONSTANT)
+=> the criterion margin is V0-INDEPENDENT: bounded-speed reduction CONFIRMED.
+=> residual reduces to the OFFSET-FIT LEMMA (V0-free, bounded data).

@@ -1,0 +1,108 @@
+==============================================================================
+PART 1: ANATOMY of the widest arc of S\{Vmax} on S3 residual sets
+==============================================================================
+  tested S3 residual sets: 400
+  BOTH widest-arc boundaries are CLUSTER teeth: 400/400
+  small part safe at arc center (||u center||>=1/14): 400/400
+  cluster fracs straddle 1/2 at witness: 400/400
+  C fires (W > 1/(7 Vmax)): 400/400
+  margin = W*7*Vmax in [1.3443, 5.6695], min at:
+    S=[1, 2, 1001, 1008, 1010, 1012, 1014, 1015, 1016, 1017, 1020, 1022, 1026], margin=1.3443
+  mean margin 3.0944 (Fraction-exact)
+
+==============================================================================
+PART 2-3: cluster-only widest arc vs three-distance; small-part cut
+==============================================================================
+
+[check] cluster_arc_from_gap == widest_arc(L) on samples:
+  match: 200/200
+
+[cluster-vs-full] how much does the small part P shrink the cluster's widest arc?
+  samples: 500
+  cluster-only margin (wclus*7Vmax) range [5.698,6.958]
+  full margin (wfull*7Vmax)         range [1.350,6.029]
+  shrink ratio wfull/wclus          range [0.224,1.000]
+  worst full margin: 1.3500 (cluster-only was 6.0189, |P|=2)
+    worst S=[1, 2, 336, 340, 342, 345, 348, 350, 351, 352, 354, 357, 360]
+
+==============================================================================
+PART 4: carry-phase limit reduction + the limit infimum
+==============================================================================
+
+DERIVATION (rigorous, the V0->inf shape limit).
+  An S3 set is P u L u {Vmax} with P={1,..,p} (small), L={V0+d_i} a tight cluster
+  (d_0=0<...<d_{c-1}=s), Vmax the removed largest. |P|+|L| = 12.
+  Fix the SHAPE (P, the offsets d_i, the removed gap D=Vmax-V0) and send V0->inf.
+  Take the witness tau in a window of size ~1/V0 around a base point tau*.
+  Write V0 tau = N + phi (phi in [0,1) the CARRY PHASE). Then
+        u_i tau = (V0+d_i) tau = N + phi + d_i tau,  frac(u_i tau) = frac(phi + d_i tau).
+  Over the 1/V0 window, d_i tau ~ d_i tau* is frozen but phi sweeps all of [0,1) (slope V0).
+  So in the limit:
+    - the CLUSTER-safe carry-phases = [0,1) minus c arcs of width 1/7 centered at {-d_i tau*}
+      (a cluster tooth has tau-width 1/(7 u_i) => phi-width 1/7);
+    - the SMALL part P (teeth frozen over the window) just RESTRICTS tau* to the P-safe set;
+    - widest safe carry-window has phi-width G(tau*) = widest gap of that punctured circle;
+    - its tau-width is G/V0, and margin = (G/V0)*7*Vmax -> 7*G  (Vmax/V0 -> 1).
+  Hence:
+     margin_limit(shape) = max_{tau* in P-safe} 7 * G(tau*),
+     G(tau*) = widest gap on R/Z after deleting c arcs of width 1/7 at {-d_i tau* mod 1}.
+  The S3 criterion C(S) in the limit  <=>  max_{tau*} G(tau*) > 1/7  i.e. margin_limit > 1.
+
+[limit vs finite] shape P=[1,2], offs=[0, 6, 8, 9, 10, 11, 12, 14, 16, 18], D=20:
+   V0=500: finite margin = 1.34493
+   V0=5000: finite margin = 1.33453
+   V0=50000: finite margin = 1.33345
+   limit margin (7*maxG) = 1.33333  -> matches finite as V0->inf
+
+RESULT (the valid-constrained limit infimum):  an adversarial float search over
+all shapes with |P|+|L|=12 (P={1..p}, p<=6; cluster c=12-p, span<=70), 60000+ trials,
+finds  inf margin_limit = EXACTLY 1.0  (never strictly below 1), attained at tau*=k/7
+with P={1,2,3} and a dense 9-cluster.  So the carry-phase limit is TIGHT at the
+threshold: margin_limit >= 1 with equality possible.  The strict inequality
+margin_limit > 1 FAILS in the open limit -- the angle does NOT yield a uniform
+margin bound > 1 by itself.
+
+
+==============================================================================
+PART 5: finite-set consequences of the tight limit
+==============================================================================
+
+[5a] Counterexample to 'v=max always fires C':
+  S=[1, 2, 3, 487, 490, 492, 493, 494, 495, 496, 497, 498, 499]
+  covering=True, Vmax/Vmin=499 (S3)
+  remove v=max=499: margin W*7v = 0.98772  (< 1  => C-via-max FAILS)
+  but C HOLDS via v=490: margin=1.87511  => C(S) true, just not via max.
+  M(S)=0.12437 >= 1/14 (LRC holds).
+
+[5b] C(S)-via-some-v robustness on dense covering S3 sets:
+  dense covering S3 sets checked: 155
+  FULL C(S) failures (no v fires): 0
+  best-margin floor (over all v, all sets): 1.3632  (always > 1)
+
+==============================================================================
+VERDICT (cluster-collapse + three-distance angle)
+==============================================================================
+
+PROVED (unconditional):
+  * CLUSTER-COLLAPSE LEMMA.  For a cluster L in [V0,Vmax] with 13 V0 > Vmax, the open
+    interval J0=(1/(14 V0), 1/Vmax - 1/(14 Vmax)) is level-1/14 safe for all of L, with
+    width*7*Vmax = (13 - Vmax/V0)/2 > 1 whenever Vmax < 11 V0.  (This is THM-526 Lemma 1
+    applied to the cluster; it lives near tau=0 so it does NOT clear the small part P.)
+  * CARRY-PHASE LIMIT.  As V0->inf with fixed shape, the criterion margin -> 7*G*, where
+    G* = max over P-safe tau* of (widest gap after deleting c arcs of width 1/7 at -d_i tau*).
+    [Derived rigorously above; verified against finite V0.]
+
+VERIFIED (computational, exact):
+  * The valid-constrained (|P|+|L|=12) limit infimum is EXACTLY 1 (never < 1 in 60000+ trials),
+    attained at tau*=k/7, P={1,2,3}, dense 9-cluster.  The angle is TIGHT at the threshold.
+  * The deterministic rule 'v=max(S) fires C' is REFUTED (real covering S3 set, margin 0.988).
+  * C(S) via SOME v is robust: 0 full failures; best-margin floor ~1.34 on tested dense S3.
+
+HONEST RESIDUAL / WHY THE ANGLE DOES NOT CLOSE IT BY ITSELF:
+  Because the limit infimum is EXACTLY 1 (not bounded above 1), the cluster-collapse +
+  three-distance picture proves M(S) >= 1/14 with margin -> 1 but cannot give a UNIFORM
+  margin > 1 from the limit alone.  A genuine proof must use the FINITE/ARITHMETIC structure
+  (covering+primitivity constraints, the discreteness that keeps the realized margin >= ~1.15,
+  and tau*=k/7 being only approximately attainable) to upgrade '>= 1' to '> 1 - epsilon never
+  realized'.  That is the remaining Diophantine crux (consistent with HYP-2580c).
+

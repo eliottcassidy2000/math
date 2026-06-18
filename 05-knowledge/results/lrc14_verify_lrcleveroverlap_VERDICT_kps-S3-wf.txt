@@ -1,0 +1,59 @@
+ADVERSARIAL VERIFICATION VERDICT — lrc-lever-overlap advance on LRC(14) case S3
+Author of verification: kind-pasteur-S3-wf  (date 2026-06-18)
+
+CLAIM UNDER TEST: "lrc-lever-overlap" closes large sub-regimes of S3 with elementary
+lemmas (L_collapse, L_ruler, WIDTH-INEQ) and reduces the rest to a finite ruler check,
+with the headline that C(S) ['exists v: W(S\{v}) > 1/(7v)'] holds for every covering S3
+13-set (modulo an admitted universality gap G1 and the v=Vmax gap G2).
+
+WHAT HOLDS (re-derived from scratch, exact Fraction, 0 violations):
+  * L_ruler single-runner safe-arc formula I_j^r = ((14j+1)/(14r),(14j+13)/(14r)),
+    period 1/r: EXACT iff. SOUND. (5000 random exact checks, 0 fail.)
+  * L_collapse uniform bound: for tau in J_j=[(14j+1)/(14 w0),(14j+13)/(14 wT)] and any
+    u in [w0,wT], u*tau in [j+1/14, j+13/14] (real, within one period) => ||u tau||>=1/14.
+    SOUND (3000 exact checks, 0 fail). w0*lo = j+1/14, wT*hi = j+13/14 exactly.
+  * WIDTH-INEQ algebra: width(J_0)>thresh  <=>  (13 w0 - wT) Vmax > 2 w0 wT.  EXACT
+    equivalence (20000 checks, 0 mismatch). Sufficiency '11 w0 > wT and Vmax>=wT =>
+    WIDTH-INEQ' verified (20000 checks, 0 counterexample). The monotonicity step needs
+    13 w0 - wT > 0, which 11 w0 > wT supplies. SOUND.
+  * THM-526 implication C(S) => M(S)>=1/14: consistent on all samples (0 violations).
+  * Known 'single exception' [1,2,3,5,7,8,9,10,11,12,13,27,28]: M = 2/19 (tau=5/19),
+    >= 1/14. CONFIRMED not a counterexample. (Minor: C(S) holds for it via v in {11,12,27},
+    not 'only via 27' as the writeup states — but the conclusion stands.)
+  * PERSISTENCE (the heart of G1): fix offset pattern Delta and small part P; grow large
+    cluster scale t (covering-preserving construction 14t+Delta). As Vmax grows to 2285,
+    the best-C-margin CONVERGES to a stable positive constant (~2.2 .. 5.6 across all
+    tested patterns), NEVER approaching 1. Strong support that C-margin does not decay
+    with Vmax. (But still VERIFIED, not PROVED — no closed-form floor.)
+
+WHAT FAILS / THE GAP IS REAL:
+  * The HEADLINE universality "C(S) holds for every covering S3 set" is FALSE.
+    EXHAUSTIVE sweep of all 8830 covering primitive S3 sets with k=2 (exactly two large
+    runners) and large speeds in [14,80] found a C-failure:
+
+        S = [1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+        covering=True, primitive, case S3 (k=2, Vmax=42 >= 13*Vmin=13)
+        C(S) FAILS for ALL 13 removed runners (every ratio W(S\{v})*7v < 1;
+            max ratio = 0.8064 at v=11; v=Vmax=42 gives 0.7955).
+        BUT  M(S) = 2/23 = 0.086957 (tau = 4/23)  >=  1/14 = 0.071429.
+        => CRITERION GAP ONLY. Not an LRC(14) counterexample.
+
+  * This is a NEW C-failing set, distinct from and STRONGER than the author's single
+    reported exception: here L' = {38,42} is a genuine 2-element cluster (NOT degenerate
+    L'={single}), so it is not excused by the 'k=2 at the S2/S3 boundary' caveat.
+  * MECHANISM: the widest arc of the FULL safe set G_S has width 0.002706 < 1/(7*42) =
+    0.003401. The safe set is a fine comb of arcs ALL narrower than thresh(Vmax), yet it
+    is NONEMPTY (M=2/23>1/14). So a common safe point exists, but NO single-runner-removal
+    lever can witness it. This is precisely the failure mode the arc-width lever cannot see.
+
+BOTTOM LINE:
+  - The three elementary lemmas are CORRECT and the implication C(S)=>M>=1/14 is sound.
+  - The persistence evidence for a positive uniform floor (G1) is strong but remains
+    VERIFIED, not PROVED.
+  - The HEADLINE claim that C(S) certifies all S3 is REFUTED: a second, non-degenerate
+    C-failing covering S3 set exists ([..,38,42], margin 0.806). The lever criterion is
+    genuinely non-universal — exactly as the author's own G1/G2 gaps concede, but with a
+    cleaner counterexample to the criterion than the one given.
+  - LRC(14) is NOT closed by this advance. No actual counterexample to LRC(14) was found:
+    every covering S3 set tested (incl. the C-failures) has M >= 1/14. The result is a
+    correct PARTIAL advance + an UNPROVEN reduction, not a proof.

@@ -1,0 +1,56 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_residual_bounded-speed-reduction_kps-S3-wf.py:13: SyntaxWarning: invalid escape sequence '\{'
+  C(S) := [exists v in S: W(S\{v}) > 1/(7v)]  =>  M(S) >= 1/14  (PROVED implication, THM-526).
+============================================================================
+[R1] SCALE-INVARIANCE of the via-Vmax ratio  W(S\{Vmax})*7*Vmax
+============================================================================
+  via-Vmax ratio invariant under common scaling on 8 random pairs: True
+  PROVED: G_{gS}(tau)=G_S(g tau) => W(gA)=W(A)/g, Vmax scales by g => ratio fixed.
+  CONSEQUENCE: WLOG gcd(S)=1 (primitive). [But primitivity does NOT bound speeds.]
+
+============================================================================
+[R2] REFUTED: W(S\{Vmax}) is NOT bounded below (kills the naive reduction).
+============================================================================
+  A=t*{1..12}, t=  1: W(A)=0.005952  W(A)*t=0.005952 (constant)
+  A=t*{1..12}, t=  5: W(A)=0.001190  W(A)*t=0.005952 (constant)
+  A=t*{1..12}, t= 20: W(A)=0.000298  W(A)*t=0.005952 (constant)
+  A=t*{1..12}, t= 50: W(A)=0.000119  W(A)*t=0.005952 (constant)
+  => W(A)=W({1..12})/t -> 0.  No constant lower bound on W exists.
+
+============================================================================
+[R3] REFUTED: one-window union bound for a whole-S witness.
+============================================================================
+  Window I = first gap of Vmin = (1/(14 Vmin), 13/(14 Vmin)), |I| = 6/(7 Vmin).
+  A 'slow' H-runner u<13 Vmin spins u*|I| = 6u/(7Vmin) < 78/7 ~ 11.1 times in I.
+  So even slow runners contribute ~11 wide teeth; sum of danger measures > |I|.
+  Hence NO closed-form union/measure bound proves a one-window whole-S witness.
+  demo S=[25, 90, 99, 143, 172, 192, 195, 242, 266, 280, 294, 310, 348]: |I|=0.03429, union-bound danger meas in I = 0.068  (exceeds |I|).
+
+============================================================================
+[V1] VERIFIED: first-gap-of-Vmin contains a WHOLE-S safe point (M(S)>=1/14 directly).
+============================================================================
+  S3 sets tested: 1721;  first-gap-of-Vmin witness FAILURES: 0
+  worst overlap meas( I cap G_H ) = 0.005448 (>0); worst S = [14, 23, 45, 55, 60, 78, 109, 124, 133, 173, 176, 189, 196]
+  STATUS: VERIFIED (0 failures). NOT PROVED (irreducibly Diophantine).
+
+============================================================================
+[V2] VERIFIED: criterion C(S) via best v, worst-case ratio over S3.
+============================================================================
+  S3 tested: 287;  C(S) (best v) FAILURES (ratio<=1): 0
+  worst best-v ratio max_v W(S\v)*7v = 2.8653 (C holds iff >1)
+  at S = [7, 45, 47, 56, 79, 92, 99, 117, 120, 142, 152, 169, 182]
+
+============================================================================
+[PARTIAL] BOUNDED-PATTERN reduction: what the angle DOES and does NOT close.
+============================================================================
+  B=13: w_min(B)=5/1848=0.002706 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13);  via-Vmax discharges all V>264/5.
+  B=16: w_min(B)=5/1848=0.002706 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13);  via-Vmax discharges all V>264/5.
+  PROVED sub-regime: non-max runners all <=13 and V>=53 => C(S) via v=Vmax. (mac-mini-S6)
+  RESIDUAL after that: some non-max runner is itself large. By [R2] its width is
+  unbounded-small, and {t,2t,...,12t,V} (t,V both free) is primitive+S3 with UNbounded
+  non-max runners => the residual is INFINITE even mod scaling. NO finite check exists
+  along this angle.
+
+============================================================================
+CROSS-CHECK: exact M(S) >= 1/14 on the sampled S3 sets (sanity).
+============================================================================
+  exact-M S3 sets tested: 184;  M(S) < 1/14 count: 0;  min M = 11/73 = 0.15068  (threshold 1/14 = 0.07143)

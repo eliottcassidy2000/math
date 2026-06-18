@@ -1,0 +1,10 @@
+total covering S3 k=2 sets (BCAP=80): 8830
+C-failures (C(S) false for ALL removed runners): 1
+  S=[1, 2, 3, 5, 7, 8, 9, 10, 11, total covering S3 k=2 sets (BCAP=80): 8830
+C-failures (C(S) false for ALL removed runners): 1
+  S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42]
+     best-C-margin=429/532=0.8064 (<1)  M(S)=2/23=0.086957 at tau=4/23
+     >=1/14? True   (criterion gap only; M still safe)
+     per-v ratio: 1:0.107, 2:0.185, 3:0.241, 5:0.125, 7:0.354, 8:0.501, 9:0.585, 10:0.440, 11:0.806, 12:0.584, 13:0.437, 38:0.720, 42:0.795
+
+TRUE LRC14 counterexamples (M<1/14): 0

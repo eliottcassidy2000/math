@@ -1,0 +1,2 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_verify_clustercollapsethr_kps-S3-wf.py:113: SyntaxWarning: invalid escape sequence '\{'
+  """C(S): exists v in S with W(S\{v}) > 1/(7v). Returns (holds, best_v, best_margin)."""

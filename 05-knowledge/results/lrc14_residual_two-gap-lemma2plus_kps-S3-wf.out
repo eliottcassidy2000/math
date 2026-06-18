@@ -1,0 +1,23 @@
+==============================================================================
+LRC(14) S3 residual -- two-gap-lemma2plus consolidated checks
+==============================================================================
+
+S3 sample size: 5200  (Vmax up to ~12000)
+
+RIGOROUS coverage (genuine proofs of M(S)>=1/14):
+  LEMMA A (cluster-collapse single-gap): 2991/5200 = 57.5%
+  LEMMA B (short-arc tooth count):       372/5200 = 7.2%
+  A or B:                                3134/5200 = 60.3%
+
+GLOBAL WITNESS (VERIFIED, not proved in general):
+  exists (margin>0) on 5200/5200
+  margin G*·7·Vmax: min=1.3986 mean=3.825 (all>1: True)
+
+MULTI-BAND STRUCTURE (PROVED: monotone sub-band split):
+  genuine multi-band sets (not single-gap closable): 2209
+  gap-index monotone in speed: 2209/2209
+  r=#distinct gap indices: {2: 197, 3: 447, 4: 606, 5: 630, 6: 329}
+  max r observed: 6  (always <= c)
+
+See companion scripts for: anatomy, mechanism, multibandfit, toothcount,
+infimum (min exact M=2/19~0.105 over residual), and lemma_verify (exact proofs).

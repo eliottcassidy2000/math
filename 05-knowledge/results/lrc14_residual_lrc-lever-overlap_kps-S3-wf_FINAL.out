@@ -1,0 +1,5 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_residual_lrc-lever-overlap_kps-S3-wf_FINAL.py:8: SyntaxWarning: invalid escape sequence '\{'
+  Notation: S3 covering 13-set. v=Vmax. A=S\{v}. P={speeds<=13}. L'={speeds>13}\{Vmax}.
+======================================================================
+FINAL CONSOLIDATION: lrc-lever-overlap on S3
+======================================================================
