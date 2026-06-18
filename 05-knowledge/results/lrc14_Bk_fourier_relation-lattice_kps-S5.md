@@ -40,3 +40,26 @@ low-complexity (AP-like / small-spread) shapes — the precise form of mac-mini'
 - This REPLACES "spread bound B(k)" (a metric notion) by "short-relation patterns of the relation lattice"
   (the intrinsic notion) — `{0,1,500,501}` has large spread but ONE short relation (small dip), showing spread
   was a proxy; the relation lattice is the right object. → THM-527 (mac-mini), HYP-2586, OPEN-Q-108.
+
+## REFINEMENT: the smooth minorant G (cleaner Fourier kernel than the max-gap indicator)
+Let `G(v)=Σ_gaps(gap−2/7)_+` = total empty-(>2/7)-arc length. Then **`g=1[G>0] ≥ G` pointwise**
+(since `0≤G≤1`), so **`μ(E) ≥ ∫₀¹ G(ex)dx`** (PROVED). And `G(v)=∫₀¹ ∏_i ψ(v_i−y)dy`,
+`ψ(t)=1[frac(t)∉(0,2/7)]`, `ψ̂(0)=5/7`, `ψ̂(n)=−χ̂(n)=−(1−e(−2n/7))/(2πin)` for `n≠0` (so `|ψ̂(n)|≤1/(π|n|)`).
+Parseval (one point fixed at 0, `e_0=0`):
+> **∫₀¹G(ex)dx = (5/7)^k + Σ_{n≠0:\ Σn_i=0,\ Σn_i e_i=0} ∏_i ψ̂(n_i).**
+This has the SAME relation-lattice structure as the μ-identity but with EXPLICIT product coefficients.
+Support analysis: no `|supp(n)|=2` terms (would force `e_i=e_j`); `|supp|=3` terms are, per triple {a,b,c},
+the 1-param family `n=t·(e_b−e_c, e_c−e_a, e_a−e_b)` contributing `(5/7)^{k−3}Σ_{t≠0}∏ψ̂(t·d_i)` — dominated
+by SMALL differences `d_i` (tail `≤1/(π|d|)`), i.e. small-spread structure.
+
+## Honest status (numerically validated, exact Fraction pending)
+- `μ(E) ≥ ∫G(ex)dx > 0` for EVERY tested shape (min `∫G ≈ 0.0139` at a k=13 shape; `inf ∫G` is the
+  G-minorant floor, positive). So `inf μ ≥ inf ∫G`.
+- `∫G ≥ (5/7)^k` is FALSE (1177/3971 shapes below; worst k=5 `[0,4,6,7,8]`, `∫G=0.162<0.186`), so the
+  one-line `(5/7)^k` floor fails — the SIGNED correction is sometimes negative.
+- The triple-only approximation is INSUFFICIENT (higher `|T|≥4` terms contribute, residual up to 0.04 at
+  consecutive k=7). So the rigorous floor needs the FULL signed lattice sum + tail control = the
+  Erdős–Turán estimate, now on the clean `ψ̂` kernel (the genuine remaining work, = B(k)).
+- NET GAIN: B(k) reduces to `inf_E ∫G(ex)dx > 0`, a statement about an explicit product-Fourier kernel
+  `ψ̂` over the rank-(k−2) relation lattice — strictly more tractable than the max-gap indicator. The
+  proof = (small-difference finite patterns) + (1/|d| tail). LRC(14) NOT closed; B(k) made concrete.

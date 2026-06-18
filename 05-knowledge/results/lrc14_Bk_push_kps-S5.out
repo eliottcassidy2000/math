@@ -1,0 +1,23 @@
+==========================================================================================
+(2') PUSH THE CAP: does mu_min(k,cap) STABILIZE (bounded-spread reduction TRUE)
+     or keep DROPPING (reduction FALSE)?  Exact, per cap.
+==========================================================================================
+
+   k=3:
+      cap<=  6: mu_min =              1 = 1.000000   argmin spread=2  E=(0, 1, 2)
+      cap<=  8: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      cap<= 12: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      cap<= 16: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      cap<= 24: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      cap<= 32: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      cap<= 48: mu_min =              1 = 1.000000  (=)   argmin spread=2  E=(0, 1, 2)
+      -> STABILIZED at cap 32 (last two caps agree): bounded-spread OK for k=3.
+
+   k=4:
+      cap<=  8: mu_min =          19/21 = 0.904762   argmin spread=3  E=(0, 1, 2, 3)
+      cap<= 12: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
+      cap<= 16: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
+      cap<= 24: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
+      cap<= 32: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
+      cap<= 44: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
+      -> STABILIZED at cap 32 (last two caps agree): bounded-spread OK for k=4.

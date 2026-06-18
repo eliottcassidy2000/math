@@ -1,0 +1,14 @@
+==========================================================================================
+(4) G_P INTERSECTION: rho*(P,E) = meas(G_P cap Good(E)),  |P|+|E\{0}|... search the floor
+    Setup mirrors THM-527: total speeds 13 = |P| small (subset of {1..13}) + large cluster.
+    E = co-offsets of the large cluster (0 in E, |E|=k). |P| + k relates to 13; we scan
+    P subset {1..13} and bounded-spread E, requiring rho*>0 everywhere; report exact min.
+==========================================================================================
+
+   structured scan: 5692 (P,E) pairs, 0 zeros.
+   min rho* (structured) = 1/20 = 0.050000  at P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 8)
+   !!! [rand] rho*=0 at P=(1, 2, 3, 6, 7, 8, 9, 10, 12, 13) E=(0, 1, 2, 3, 4, 5, 8, 9)
+   !!! [rand] rho*=0 at P=(1, 2, 3, 4, 6, 9, 11, 12, 13) E=(0, 2, 3, 4, 5, 6, 7, 8)
+   !!! [rand] rho*=0 at P=(1, 2, 3, 5, 6, 9, 10, 12, 13) E=(0, 1, 2, 3, 4, 5, 6, 8)
+   !!! [rand] rho*=0 at P=(1, 2, 3, 5, 6, 7, 9, 10, 12, 13) E=(0, 1, 2, 4, 5, 6, 7, 8)
+   !!! [rand] rho*=0 at P=(1, 2, 3, 4, 5, 6, 7, 8, 12, 13) E=(0, 1, 2, 3, 4, 5, 6, 8)

@@ -117,7 +117,7 @@ if __name__ == "__main__":
     # greedy: start {0,1}, add e that maximizes union_bad
     best_set = [0, 1]
     print("  greedy adversary maximizing union of bad strips (minimizing mu_0):")
-    cand_pool = list(range(2, 200))
+    cand_pool = list(range(2, 60))
     while len(best_set) < 13:
         bestadd = None
         for e in cand_pool:

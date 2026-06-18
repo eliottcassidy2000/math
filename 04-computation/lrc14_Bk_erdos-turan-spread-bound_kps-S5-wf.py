@@ -153,3 +153,37 @@ if __name__ == "__main__":
             tag = f"  canon={canon[k]}  {'OK' if ok else 'MISMATCH!!'}"
         print(f"  k={k:2d}  consecutive  mu = {m} = {float(m):.6f}{tag}")
     print(f"\n  ALL canon checks: {'PASS' if allok else 'FAIL'}")
+
+
+# ===========================================================================
+# PART 1: the spread-bound MECHANISM, made quantitative.
+#
+# After L1 (scale-invariance + gcd reduction) WLOG gcd(E)=1 and spread = max E.
+# We compute, for each k, the per-spread minimum
+#     m_k(s) := min { mu(E) : 0 in E, |E|=k, max E = s, gcd(E)=1 }
+# and test the claim:  m_k(s) is eventually >= mu_min^bdd(k) for s > B(k).
+# We also record F(k) (the iid ceiling) and the GLOBAL bounded-spread min.
+# ===========================================================================
+import itertools as _it
+from math import gcd as _gcd, comb as _comb
+from functools import reduce as _reduce
+
+def _gcd1(E): return _reduce(_gcd, E) == 1
+
+def Fk(k, L=TWO7):
+    s = F(0); j = 1
+    while 1 - j*L > 0:
+        s += (-1)**(j+1) * _comb(k, j) * (1 - j*L)**(k-1); j += 1
+    return s
+
+def per_spread_min(k, s):
+    """min mu over E with 0 in E, max E = s, |E|=k, gcd 1. Exhaustive (interior choose k-2)."""
+    if s < k-1: return None, None
+    best = F(2); bestE = None
+    for interior in _it.combinations(range(1, s), k-2):
+        E = (0,) + interior + (s,)
+        if not _gcd1(E): continue
+        m = mu_exact(list(E))
+        if m < best: best = m; bestE = E
+    return best, bestE
+
