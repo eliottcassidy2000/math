@@ -1,0 +1,87 @@
+==============================================================================
+REFRAME 5 (2): FROZEN-CORE non-circular test
+==============================================================================
+
+KEY IDEA (C5): the core A=({1..13}\{q}) has gap M(A) attained at core-time(s) tau_A,
+chosen WITHOUT reference to w. If at SOME core-optimal tau_A the parked runner w is
+already >= 1/14 away, then tau_A witnesses M(S) >= 1/14 directly -- the dip is a red
+herring, and the bound is NON-CIRCULAR (uses only M(A) >= 1/14 + one distance check).
+
+ q   M(A)  #tauA  best min(M(A),||w*tauA||)  clears?     M(S)  >=1/14
+ 2   2/17      1                       2/17     True     2/17    True
+ 3   2/17      1                       2/17     True     2/17    True
+ 4   2/19      1                       2/19     True     2/19    True
+ 5   2/19      1                       2/19     True     2/19    True
+ 6   2/23      1                       2/23     True     2/23    True
+ 7    1/7      3                          0    False     1/11    True
+ 8    1/8      2                          0    False      1/9    True
+ 9    1/9      3                          0    False   14/131    True
+10   1/10      2                          0    False     1/11    True
+11   1/11      5                          0    False   14/157    True
+12   1/12      2                          0    False     7/89    True
+13   1/13      6                          0    False   14/183    True
+
+  => every N=14-level single-drop core time already clears w (>=1/14)? False
+
+------------------------------------------------------------------------------
+STRESS: frozen-core 1/14-witness across resonant multiples and multi-drop cores
+------------------------------------------------------------------------------
+  single-drop resonant tests: 144, frozen-core failures: 92
+   FAIL (2, 5, 70, '1/17', '9/83', True)
+   FAIL (2, 12, 168, '1/17', '5/43', True)
+   FAIL (3, 6, 252, '1/17', '5/43', True)
+   FAIL (3, 11, 462, '1/17', '5/43', True)
+   FAIL (4, 8, 224, '1/19', '3/29', True)
+   FAIL (4, 11, 308, '1/19', '3/29', True)
+   FAIL (5, 4, 280, '1/19', '3/29', True)
+   FAIL (6, 10, 420, '1/23', '37/431', True)
+   FAIL (7, 1, 14, '0', '1/11', True)
+   FAIL (7, 2, 28, '0', '1/9', True)
+   FAIL (7, 3, 42, '0', '3/25', True)
+   FAIL (7, 4, 56, '0', '1/8', True)
+   FAIL (7, 5, 70, '0', '5/39', True)
+   FAIL (7, 6, 84, '0', '3/23', True)
+   FAIL (7, 7, 98, '0', '7/53', True)
+   FAIL (7, 8, 112, '0', '2/15', True)
+   FAIL (7, 9, 126, '0', '9/67', True)
+   FAIL (7, 10, 140, '0', '5/37', True)
+   FAIL (7, 11, 154, '0', '11/81', True)
+   FAIL (7, 12, 168, '0', '3/22', True)
+   FAIL (8, 1, 56, '0', '1/9', True)
+   FAIL (8, 2, 112, '0', '2/17', True)
+   FAIL (8, 3, 168, '0', '3/25', True)
+   FAIL (8, 4, 224, '0', '4/33', True)
+   FAIL (8, 5, 280, '0', '5/41', True)
+  two-drop resonant tests: 198, frozen-core failures: 122
+   FAIL (2, 5, 1, 70, '1/17', '9/83', True)
+   FAIL (2, 7, 1, 14, '0', '2/17', True)
+   FAIL (2, 7, 2, 28, '0', '2/17', True)
+   FAIL (2, 7, 3, 42, '0', '3/25', True)
+   FAIL (2, 8, 1, 56, '0', '2/17', True)
+   FAIL (2, 8, 2, 112, '0', '2/17', True)
+   FAIL (2, 8, 3, 168, '0', '3/25', True)
+   FAIL (2, 10, 1, 70, '1/17', '9/83', True)
+   FAIL (2, 11, 2, 308, '1/17', '3/26', True)
+   FAIL (2, 12, 2, 168, '1/17', '5/43', True)
+   FAIL (2, 13, 1, 182, '1/15', '25/193', True)
+   FAIL (3, 4, 3, 252, '1/17', '5/43', True)
+   FAIL (3, 7, 1, 42, '0', '3/25', True)
+   FAIL (3, 7, 2, 84, '0', '3/23', True)
+   FAIL (3, 7, 3, 126, '0', '9/67', True)
+   FAIL (3, 8, 1, 168, '0', '3/25', True)
+   FAIL (3, 8, 2, 336, '0', '6/49', True)
+   FAIL (3, 8, 3, 504, '0', '9/73', True)
+   FAIL (3, 9, 2, 252, '1/17', '5/43', True)
+   FAIL (3, 11, 1, 462, '0', '11/78', True)
+   FAIL (3, 11, 2, 924, '0', '22/155', True)
+   FAIL (3, 11, 3, 1386, '0', '33/232', True)
+   FAIL (3, 12, 3, 252, '1/17', '5/43', True)
+   FAIL (4, 7, 1, 28, '0', '1/9', True)
+   FAIL (4, 7, 2, 56, '0', '1/8', True)
+   FAIL (4, 7, 3, 84, '0', '3/23', True)
+   FAIL (4, 9, 1, 252, '0', '28/257', True)
+   FAIL (4, 9, 2, 504, '0', '56/509', True)
+   FAIL (4, 9, 3, 756, '0', '84/761', True)
+   FAIL (4, 13, 3, 1092, '1/17', '43/367', True)
+
+DONE.

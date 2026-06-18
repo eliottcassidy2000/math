@@ -1,0 +1,35 @@
+==============================================================================
+REFRAME 5 CONSOLIDATED -- principal single-drop families q=7..13, N=14
+==============================================================================
+
+ q    L  c=L/q    M(S,1)  L+flank flank law k<=20 exact?
+ 7   14      2      1/11       22     8             True
+ 8   56      7       1/9       63     7             True
+ 9  126     14    14/131      131     5             True
+10   70      7      1/11       77     7             True
+11  154     14    14/157      157     3             True
+12   84      7      7/89       89     5             True
+13  182     14    14/183      183     1             True
+
+--- non-circular closure (uses ONLY flank<=13 and q<=13): ---
+ q    L  (14-q)L   13q  (14-q)L>=13q  => M(S,1)>=1/14
+ 7   14       98    91          True             True
+ 8   56      336   104          True             True
+ 9  126      630   117          True             True
+10   70      280   130          True             True
+11  154      462   143          True             True
+12   84      168   156          True             True
+13  182      182   169          True             True
+
+  (14-q)*lcm(q,14) >= 13q for all principal q?  True
+  => For principal single-drop families, M(S)>=1/14 holds NON-CIRCULARLY,
+     modulo the EMPIRICAL closed-form law M=(L/q)k/(Lk+flank).
+
+--- scope honesty: messy families q=2..6 do NOT obey the clean law ---
+  q=2: binding k,M = [(5, '9/83')] ; monotone? True  (min NOT at k=1 => law/collapse fails)
+  q=3: binding k,M = [(6, '5/43')] ; monotone? True  (min NOT at k=1 => law/collapse fails)
+  q=4: binding k,M = [(8, '3/29')] ; monotone? True  (min NOT at k=1 => law/collapse fails)
+  q=5: binding k,M = [(4, '3/29')] ; monotone? True  (min NOT at k=1 => law/collapse fails)
+  q=6: binding k,M = [(10, '37/431')] ; monotone? True  (min NOT at k=1 => law/collapse fails)
+
+DONE.

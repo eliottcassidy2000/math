@@ -1,0 +1,42 @@
+==============================================================================
+REFRAME 5 -- THE LAW  M_q(k) = c k/(L k + flank),  reduction to one k=1 check
+==============================================================================
+
+  q  L=lcm    c  flank    law M=c k/(Lk+fl)  14c-L 14c-L-flank  14c>=L? k=1 cert all k?
+  2     14 630/367 3360/367 c k/(Lk+f), ok=False 3682/367     322/367     True           True
+  3     42 210/43      0 c k/(Lk+f), ok=False 1134/43     1134/43     True          False
+  4     28 84/29      0 c k/(Lk+f), ok=False 364/29      364/29     True          False
+  5     70 85470/11593 58800/11593 c k/(Lk+f), ok=False 385070/11593 326270/11593     True           True
+  6     42 37296/10253 38220/10253 c k/(Lk+f), ok=False 91518/10253 53298/10253     True           True
+  7     14    2      8  c k/(Lk+f), ok=True     14           6     True           True
+  8     56    7      7  c k/(Lk+f), ok=True     42          35     True           True
+  9    126   14      5  c k/(Lk+f), ok=True     70          65     True           True
+ 10     70    7      7  c k/(Lk+f), ok=True     28          21     True           True
+ 11    154   14      3  c k/(Lk+f), ok=True     42          39     True           True
+ 12     84    7      5  c k/(Lk+f), ok=True     14           9     True           True
+ 13    182   14      1  c k/(Lk+f), ok=True     14          13     True           True
+
+KEY STRUCTURAL FACTS (read off the table):
+  * M_q(k) = c_q k /(L_q k + flank_q) is the EXACT per-level dip law (7m/(84m+5) is q=12).
+  * Each c_q, flank_q is a CONSTANT (independent of k). c_q in {2,7,14}, flank_q small.
+  * M_q(k) is STRICTLY INCREASING in k (slope c*flank>0), so its min over k>=1 is at k=1.
+  * Hence the INFINITE k-family is certified by the SINGLE k=1 value -- a real collapse.
+  * M(S)>=1/14 for all k  <=>  14 c_q - L_q >= flank_q  (one arithmetic margin per q).
+
+------------------------------------------------------------------------------
+MONOTONICITY proof check: is M_q(k) increasing? show M_q(1) is the family minimum.
+------------------------------------------------------------------------------
+  q= 2: min over binding k at k=5 M=9/83 ; non-decreasing in binding-k? False ; M(A)=2/17
+  q= 3: min over binding k at k=6 M=5/43 ; non-decreasing in binding-k? True ; M(A)=2/17
+  q= 4: min over binding k at k=8 M=3/29 ; non-decreasing in binding-k? True ; M(A)=2/19
+  q= 5: min over binding k at k=4 M=3/29 ; non-decreasing in binding-k? False ; M(A)=2/19
+  q= 6: min over binding k at k=10 M=37/431 ; non-decreasing in binding-k? False ; M(A)=2/23
+  q= 7: min over binding k at k=1 M=1/11 ; non-decreasing in binding-k? True ; M(A)=1/7
+  q= 8: min over binding k at k=1 M=1/9 ; non-decreasing in binding-k? True ; M(A)=1/8
+  q= 9: min over binding k at k=1 M=14/131 ; non-decreasing in binding-k? True ; M(A)=1/9
+  q=10: min over binding k at k=1 M=1/11 ; non-decreasing in binding-k? True ; M(A)=1/10
+  q=11: min over binding k at k=1 M=14/157 ; non-decreasing in binding-k? True ; M(A)=1/11
+  q=12: min over binding k at k=1 M=7/89 ; non-decreasing in binding-k? True ; M(A)=1/12
+  q=13: min over binding k at k=1 M=14/183 ; non-decreasing in binding-k? True ; M(A)=1/13
+
+DONE.

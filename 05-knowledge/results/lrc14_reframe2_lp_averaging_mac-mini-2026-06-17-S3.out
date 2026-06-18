@@ -1,0 +1,27 @@
+lcm(2..14) = 360360
+
+=== OBSTRUCTION A: measure blindness (each band = 1/7, total = 13/7) ===
+  S1 {1..11,13,84}: M=7/89, tau*=37/89, total band measure = 13*1/7 = 13/7
+  S2 {1..5,7..13,84}: M=2/23, tau*=4/23, total band measure = 13*1/7 = 13/7
+  Extremal {1..13} (NOT covering, M=1/14): total band measure also 13/7
+  => mean multiplicity 13/7 identical regardless of M. BLIND.
+
+=== OBSTRUCTION B: averaging LP optimum = min coverage multiplicity ===
+  S1 {1..11,13,84}: min_tau N(tau) = 0  (0 <=> lonely-set nonempty); M=7/89
+  S2 {1..5,7..13,84}: min_tau N(tau) = 0  (0 <=> lonely-set nonempty); M=2/23
+  {1..13}: min_tau N(tau) = 1  (0 <=> lonely-set nonempty); M=1/14
+  => LP optimum encodes exactly the yes/no LRC answer. TAUTOLOGICAL.
+
+=== OBSTRUCTION C: lonely point is OFF the q-grid lattice ===
+  S1 {1..11,13,84}: covering=True, g=0 on every q-grid point: True
+     tau*=37/89, denom=89, gcd(denom,lcm)=1
+  S2 {1..5,7..13,84}: covering=True, g=0 on every q-grid point: True
+     tau*=4/23, denom=23, gcd(denom,lcm)=1
+  => convex combos sum_q lambda_q a_q/q have denom | lcm; the extremal
+     lonely point has denom coprime to lcm => UNREACHABLE by averaging.
+
+=== Sanity: inf over covering sets, best provable averaging LB on M ===
+  unique min over covering 13-sets: M = 7/89 = 0.078652 > 1/14 = 0.071429
+  best provable LOWER bound on M from linear averaging: 0 (no nontrivial bound).
+  REFRAME 2 verdict: NO-LEVERAGE for the linear/first-moment family.
+  Reusable lemma (Obstruction C): off-grid-witness lemma, see docstring.

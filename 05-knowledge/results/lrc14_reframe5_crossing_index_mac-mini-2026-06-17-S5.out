@@ -1,0 +1,130 @@
+==============================================================================
+REFRAME 5 (2b): crossing-index law  j = M(S)*D,  and the split j>=flank & w<=13 flank
+==============================================================================
+
+Collected 100 binding single-drop configs (w actually binds).
+
+ q  k    w flank kind     D   j     M(S) j>=flank? w<=13*flank?  j*14>=D?
+ 2  5   70    13  sum    83   9     9/83     False         True      True
+ 2  7   98     4  sum   102  12     2/17      True        False      True
+ 2 10  140     4 diff   136  16     2/17      True         True      True
+ 2 12  168     4  sum   172  20     5/43      True        False      True
+ 3  5  210     6 diff   204  24     2/17      True         True      True
+ 3  6  252     6  sum   258  30     5/43      True        False      True
+ 3 11  462    11  sum   473  55     5/43      True        False      True
+ 3 12  504     6  sum   510  60     2/17      True        False      True
+ 4  3   84     8 diff    76   8     2/19      True         True      True
+ 4  8  224     8  sum   232  24     3/29      True        False      True
+ 4 11  308    11  sum   319  33     3/29      True        False      True
+ 5  4  280    10  sum   290  30     3/29      True        False      True
+ 5  8  560     9 diff   551  58     2/19      True         True      True
+ 5 11  770     9  sum   779  82     2/19      True        False      True
+ 6  3  126    11 diff   115  10     2/23     False         True      True
+ 6 10  420    11  sum   431  37   37/431      True        False      True
+ 7  1   14     8  sum    22   2     1/11     False         True      True
+ 7  2   28     8  sum    36   4      1/9     False         True      True
+ 7  3   42     8  sum    50   6     3/25     False         True      True
+ 7  4   56     8  sum    64   8      1/8      True         True      True
+ 7  5   70     8  sum    78  10     5/39      True         True      True
+ 7  6   84     8  sum    92  12     3/23      True         True      True
+ 7  7   98     8  sum   106  14     7/53      True         True      True
+ 7  8  112     8  sum   120  16     2/15      True        False      True
+ 7  9  126     8  sum   134  18     9/67      True        False      True
+ 7 10  140     8  sum   148  20     5/37      True        False      True
+ 7 11  154     8  sum   162  22    11/81      True        False      True
+ 7 12  168     8  sum   176  24     3/22      True        False      True
+ 8  1   56     7  sum    63   7      1/9      True         True      True
+ 8  2  112     7  sum   119  14     2/17      True        False      True
+ 8  3  168     7  sum   175  21     3/25      True        False      True
+ 8  4  224     7  sum   231  28     4/33      True        False      True
+ 8  5  280     7  sum   287  35     5/41      True        False      True
+ 8  6  336     7  sum   343  42     6/49      True        False      True
+ 8  7  392     7  sum   399  49     7/57      True        False      True
+ 8  8  448     7  sum   455  56     8/65      True        False      True
+ 8  9  504     7  sum   511  63     9/73      True        False      True
+ 8 10  560     7  sum   567  70    10/81      True        False      True
+ 8 11  616     7  sum   623  77    11/89      True        False      True
+ 8 12  672     7  sum   679  84    12/97      True        False      True
+ 9  1  126     5  sum   131  14   14/131      True        False      True
+ 9  2  252     5  sum   257  28   28/257      True        False      True
+ 9  3  378     5  sum   383  42   42/383      True        False      True
+ 9  4  504     5  sum   509  56   56/509      True        False      True
+ 9  5  630     5  sum   635  70   14/127      True        False      True
+ 9  6  756     5  sum   761  84   84/761      True        False      True
+ 9  7  882     5  sum   887  98   98/887      True        False      True
+ 9  8 1008     5  sum  1013 112 112/1013      True        False      True
+ 9  9 1134     5  sum  1139 126 126/1139      True        False      True
+ 9 10 1260     5  sum  1265 140   28/253      True        False      True
+ 9 11 1386     5  sum  1391 154 154/1391      True        False      True
+ 9 12 1512     5  sum  1517 168 168/1517      True        False      True
+10  1   70     7  sum    77   7     1/11      True         True      True
+10  2  140     7  sum   147  14     2/21      True        False      True
+10  3  210     7  sum   217  21     3/31      True        False      True
+10  4  280     7  sum   287  28     4/41      True        False      True
+10  5  350     7  sum   357  35     5/51      True        False      True
+10  6  420     7  sum   427  42     6/61      True        False      True
+10  7  490     7  sum   497  49     7/71      True        False      True
+10  8  560     7  sum   567  56     8/81      True        False      True
+10  9  630     7  sum   637  63     9/91      True        False      True
+10 10  700     7  sum   707  70   10/101      True        False      True
+10 11  770     7  sum   777  77   11/111      True        False      True
+10 12  840     7  sum   847  84   12/121      True        False      True
+11  1  154     3  sum   157  14   14/157      True        False      True
+11  2  308     3  sum   311  28   28/311      True        False      True
+11  3  462     3  sum   465  42   14/155      True        False      True
+11  4  616     3  sum   619  56   56/619      True        False      True
+11  5  770     3  sum   773  70   70/773      True        False      True
+11  6  924     3  sum   927  84   28/309      True        False      True
+11  7 1078     3  sum  1081  98  98/1081      True        False      True
+11  8 1232     3  sum  1235 112 112/1235      True        False      True
+11  9 1386     3  sum  1389 126   42/463      True        False      True
+11 10 1540     3  sum  1543 140 140/1543      True        False      True
+11 11 1694     3  sum  1697 154 154/1697      True        False      True
+11 12 1848     3  sum  1851 168   56/617      True        False      True
+12  1   84     5  sum    89   7     7/89      True        False      True
+12  2  168     5  sum   173  14   14/173      True        False      True
+12  3  252     5  sum   257  21   21/257      True        False      True
+12  4  336     5  sum   341  28   28/341      True        False      True
+12  5  420     5  sum   425  35     7/85      True        False      True
+12  6  504     5  sum   509  42   42/509      True        False      True
+12  7  588     5  sum   593  49   49/593      True        False      True
+12  8  672     5  sum   677  56   56/677      True        False      True
+12  9  756     5  sum   761  63   63/761      True        False      True
+12 10  840     5  sum   845  70   14/169      True        False      True
+12 11  924     5  sum   929  77   77/929      True        False      True
+12 12 1008     5  sum  1013  84  84/1013      True        False      True
+13  1  182     1  sum   183  14   14/183      True        False      True
+13  2  364     1  sum   365  28   28/365      True        False      True
+13  3  546     1  sum   547  42   42/547      True        False      True
+13  4  728     1  sum   729  56   56/729      True        False      True
+13  5  910     1  sum   911  70   70/911      True        False      True
+13  6 1092     1  sum  1093  84  84/1093      True        False      True
+13  7 1274     1  sum  1275  98  98/1275      True        False      True
+13  8 1456     1  sum  1457 112 112/1457      True        False      True
+13  9 1638     1  sum  1639 126 126/1639      True        False      True
+13 10 1820     1  sum  1821 140 140/1821      True        False      True
+13 11 2002     1  sum  2003 154 154/2003      True        False      True
+13 12 2184     1  sum  2185 168 168/2185      True        False      True
+
+  violations  j>=flank: 5   w<=13*flank (sum only): 85   j*14>=D (THE goal): 0
+  max w/flank ratio: 2184.000 (q=13 k=12 flank=1 w=2184)
+
+INTERPRETATION:
+  If  j >= flank  AND  w <= 13*flank  both hold with NON-circular proofs, then
+      j/D = j/(flank+w) >= flank/(flank + 13*flank) = flank/(14 flank) = 1/14,
+  giving M(S) >= 1/14 WITHOUT assuming it.  So the question becomes whether
+  these two sub-inequalities are themselves non-circular -- check below.
+
+------------------------------------------------------------------------------
+Is 'flank' predictable from (q,14) arithmetic, or does it require solving M?
+------------------------------------------------------------------------------
+  q w=lcm(q,14) flank(k=1)  w/flank  <=13?
+  7          14          8    1.750   True
+  8          56          7    8.000   True
+  9         126          5   25.200  False
+ 10          70          7   10.000   True
+ 11         154          3   51.333  False
+ 12          84          5   16.800  False
+ 13         182          1  182.000  False
+
+DONE.

@@ -1,0 +1,53 @@
+==============================================================================
+Binding-pair anatomy of covering 13-sets: M=k/D, D=f+w, need D<=14k
+==============================================================================
+  drop1 u84     : M=2/15=0.13333 D=15 k=2 binders=[2, 13] D<=14k:True margin=13 w-in-pair:False others-slack=0.0667
+  drop1 u168    : M=2/15=0.13333 D=15 k=2 binders=[2, 13] D<=14k:True margin=13 w-in-pair:False others-slack=0.0667
+  drop1 u252    : M=2/15=0.13333 D=15 k=2 binders=[2, 13] D<=14k:True margin=13 w-in-pair:False others-slack=0.0667
+  drop1 u420    : M=28/211=0.13270 D=211 k=28 binders=[2, 420] D<=14k:True margin=181 w-in-pair:True others-slack=0.0047
+  drop2 u84     : M=2/17=0.11765 D=17 k=2 binders=[4, 13] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop2 u168    : M=5/43=0.11628 D=172 k=20 binders=[4, 168] D<=14k:True margin=108 w-in-pair:True others-slack=0.0058
+  drop2 u252    : M=2/17=0.11765 D=17 k=2 binders=[4, 13] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop2 u420    : M=2/17=0.11765 D=17 k=2 binders=[4, 13] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop3 u84     : M=2/17=0.11765 D=17 k=2 binders=[6, 11] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop3 u168    : M=2/17=0.11765 D=17 k=2 binders=[6, 11] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop3 u252    : M=5/43=0.11628 D=258 k=30 binders=[6, 252] D<=14k:True margin=162 w-in-pair:True others-slack=0.0039
+  drop3 u420    : M=2/17=0.11765 D=17 k=2 binders=[6, 11] D<=14k:True margin=11 w-in-pair:False others-slack=0.0588
+  drop4 u84     : M=2/19=0.10526 D=19 k=2 binders=[8, 11, 84] D<=14k:True margin=9 w-in-pair:True others-slack=0.0526
+  drop4 u168    : M=2/19=0.10526 D=19 k=2 binders=[8, 11] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop4 u252    : M=2/19=0.10526 D=19 k=2 binders=[8, 11] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop4 u420    : M=2/19=0.10526 D=19 k=2 binders=[8, 11] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop5 u84     : M=2/19=0.10526 D=19 k=2 binders=[9, 10] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop5 u168    : M=2/19=0.10526 D=19 k=2 binders=[9, 10] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop5 u252    : M=3/29=0.10345 D=261 k=27 binders=[9, 252] D<=14k:True margin=117 w-in-pair:True others-slack=0.0038
+  drop5 u420    : M=2/19=0.10526 D=19 k=2 binders=[9, 10] D<=14k:True margin=9 w-in-pair:False others-slack=0.0526
+  drop6 u84     : M=2/23=0.08696 D=23 k=2 binders=[11, 12] D<=14k:True margin=5 w-in-pair:False others-slack=0.0435
+  drop6 u168    : M=2/23=0.08696 D=23 k=2 binders=[11, 12] D<=14k:True margin=5 w-in-pair:False others-slack=0.0435
+  drop6 u252    : M=2/23=0.08696 D=23 k=2 binders=[11, 12] D<=14k:True margin=5 w-in-pair:False others-slack=0.0435
+  drop6 u420    : M=37/431=0.08585 D=431 k=37 binders=[11, 420] D<=14k:True margin=87 w-in-pair:True others-slack=0.0023
+  drop7 u84     : M=3/23=0.13043 D=92 k=12 binders=[8, 84] D<=14k:True margin=76 w-in-pair:True others-slack=0.0109
+  drop7 u168    : M=3/22=0.13636 D=176 k=24 binders=[8, 168] D<=14k:True margin=160 w-in-pair:True others-slack=0.0057
+  drop7 u252    : M=9/65=0.13846 D=260 k=36 binders=[8, 252] D<=14k:True margin=244 w-in-pair:True others-slack=0.0038
+  drop7 u420    : M=15/107=0.14019 D=428 k=60 binders=[8, 420] D<=14k:True margin=412 w-in-pair:True others-slack=0.0023
+  drop12 u84    : M=7/89=0.07865 D=89 k=7 binders=[5, 84] D<=14k:True margin=9 w-in-pair:True others-slack=0.0112
+  drop12 u168   : M=14/173=0.08092 D=173 k=14 binders=[5, 168] D<=14k:True margin=23 w-in-pair:True others-slack=0.0058
+  drop12 u252   : M=21/257=0.08171 D=257 k=21 binders=[5, 252] D<=14k:True margin=37 w-in-pair:True others-slack=0.0039
+  drop12 u420   : M=7/85=0.08235 D=425 k=35 binders=[5, 420] D<=14k:True margin=65 w-in-pair:True others-slack=0.0024
+
+==============================================================================
+Does the binding pair ALWAYS contain the parked runner w? (random covering sets)
+==============================================================================
+  covering sets sampled: 400
+  binding pair contains w (==0 mod14): 157/400 = 39.2%
+  #binders distribution: {2: 376, 3: 24}
+  D<=14k held: 400/400
+  smallest margin 14k-D = 5 at D=23 k=2 (M=2/23)
+
+==============================================================================
+The flank f = D - w (when w in pair): which core runner flanks, and gcd(f,w)
+==============================================================================
+  drop1 u420    : w=420 flank f=-209 gcd(f,w)=1 k=28 (f*num mod D = 28, =k? True)
+  drop2 u168    : w=168 flank f=4 gcd(f,w)=4 k=20 (f*num mod D = 152, =k? True)
+
+KEY: M(S)=k/D with D=f+w; need D<=14k. k=(f*num mod D); num also makes ALL
+others >= k/D (others-clear). The honest crux = a clearing crossing exists.

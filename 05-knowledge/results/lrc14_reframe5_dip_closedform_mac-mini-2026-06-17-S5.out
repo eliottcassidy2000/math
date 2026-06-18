@@ -1,0 +1,210 @@
+==============================================================================
+REFRAME 5 - per-level dip closed forms + NON-CIRCULARITY of the dip bound
+==============================================================================
+
+------------------------------------------------------------------------------
+(1) Canonical N=14, q=12 family  A={1..11,13}, w=84k, re-derived exactly
+------------------------------------------------------------------------------
+  A=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+  M(A) = 1/12  (= 1/12 = 1/12)   tau_A = 5/12
+  k=1 w=  84: M(S)=7/89     (=7k/(84k+5)? True)  dip=5/1068      bind=[5, 84]  D(crossings)=[89]
+  k=2 w= 168: M(S)=14/173   (=7k/(84k+5)? True)  dip=5/2076      bind=[5, 168]  D(crossings)=[173]
+  k=3 w= 252: M(S)=21/257   (=7k/(84k+5)? True)  dip=5/3084      bind=[5, 252]  D(crossings)=[257]
+  k=4 w= 336: M(S)=28/341   (=7k/(84k+5)? True)  dip=5/4092      bind=[5, 336]  D(crossings)=[341]
+  k=5 w= 420: M(S)=7/85     (=7k/(84k+5)? True)  dip=1/1020      bind=[5, 420]  D(crossings)=[425]
+  k=6 w= 504: M(S)=42/509   (=7k/(84k+5)? True)  dip=5/6108      bind=[5, 504]  D(crossings)=[509]
+  k=7 w= 588: M(S)=49/593   (=7k/(84k+5)? True)  dip=5/7116      bind=[5, 588]  D(crossings)=[593]
+
+------------------------------------------------------------------------------
+(2) GENERAL family  A_n={1..n}\{q},  w = lcm(q,n)*k   (q-resonant runner)
+------------------------------------------------------------------------------
+
+   n  q    M(A_n)   lcm    M(S)k=1      dip k=1 flank      D  maxdip k<=6
+   7  2      2/11    14       2/11            0  None   None        2/253
+   7  3      2/11    21       2/11            0  None   None        2/253
+   7  4       1/4    28       7/33        5/132     5     33        5/132
+   7  5       1/5    35       7/38        3/190     3     38        3/190
+   7  6       1/6    42       7/47        5/282     5     47        5/282
+   7  7       1/7     7        1/8         1/56     1      8         1/56
+   8  2      2/11     8       2/11            0  None   None        7/341
+   8  3      2/13    24       2/13            0  None   None       7/1651
+   8  4      2/13     8       2/13            0     5     13         1/91
+   8  5       1/5    40       2/11         1/55     4     44         1/55
+   8  6       1/6    24       4/29        5/174     5     29        5/174
+   8  7       1/7    56       4/29        1/203     2     58        1/203
+   8  8       1/8     8        1/9         1/72  None   None         1/72
+   9  2      2/13    18       2/13            0  None   None         1/91
+   9  3      2/13     9       2/13            0  None   None         1/91
+   9  4      2/15    36       2/15            0  None   None      14/2805
+   9  5       1/5    45       3/17         2/85     6     51         2/85
+   9  6       1/6    18       3/23        5/138     5     23        5/138
+   9  7       1/7    63       3/22        1/154     3     66        1/154
+   9  8       1/8    72       3/25        1/200     3     75        1/200
+   9  9       1/9     9       1/10         1/90     1     10         1/90
+  10  2      2/13    10       2/13            0  None   None        2/351
+  10  3       1/7    30        1/7            0  None   None            0
+  10  4      2/15    20       2/15            0  None   None      14/1005
+  10  5       1/8    10        1/8            0     6     16            0
+  10  6       1/6    30        1/7         1/42     5     35         1/42
+  10  7       1/7    70       5/37        2/259     4     74        2/259
+  10  8       1/8    40       5/43        3/344     3     43        3/344
+  10  9       1/9    90       5/46        1/414     2     92        1/414
+  10 10      1/10    10       1/11        1/110  None   None        1/110
+  11  2      2/15    22       2/15            0  None   None        1/345
+  11  3       1/8    33        1/8            0  None   None        5/872
+  11  4      2/17    44       2/17            0  None   None        2/595
+  11  5      2/17    55       2/17            0  None   None        2/595
+  11  6       1/6    66      11/73        7/438     7     73        7/438
+  11  7       1/7    77      11/82        5/574     5     82        5/574
+  11  8       1/8    88      11/93        5/744     5     93        5/744
+  11  9       1/9    99     11/103        4/927     4    103        4/927
+  11 10      1/10   110     11/113       3/1130     3    113       3/1130
+  11 11      1/11    11       1/12        1/132  None   None        1/132
+  12  2      2/15    12       2/15            0  None   None        1/120
+  12  3       1/8    12        1/8            0  None   None         1/72
+  12  4      2/17    12       2/17            0  None   None        1/153
+  12  5       1/9    60        1/9            0  None   None        2/423
+  12  6      2/19    12       2/19            0     7     19            0
+  12  7       1/7    84       2/15        1/105     6     90        1/105
+  12  8       1/8    24       3/29        5/232     5     29        5/232
+  12  9       1/9    36       1/10         1/90     4     40         1/90
+  12 10      1/10    60       2/21        1/210     3     63        1/210
+  12 11      1/11   132       6/67        1/737     2    134        1/737
+  12 12      1/12    12       1/13        1/156  None   None        1/156
+  13  2      2/17    26       2/17            0  None   None        1/153
+  13  3      2/17    39       2/17            0  None   None      11/2839
+  13  4      2/19    52       2/19            0  None   None      11/3173
+  13  5      2/19    65       2/19            0  None   None       3/1292
+  13  6      2/23    78       2/23            0  None   None            0
+  13  7       1/7    91      13/99        8/693     8     99        8/693
+  13  8       1/8   104     13/111        7/888     7    111        7/888
+  13  9       1/9   117     13/122       5/1098     5    122       5/1098
+  13 10      1/10   130     13/137       7/1370     7    137       7/1370
+  13 11      1/11   143     13/146       3/1606     3    146       3/1606
+  13 12      1/12   156     13/161       5/1932     5    161       5/1932
+  13 13      1/13    13       1/14        1/182  None   None        1/182
+  14  2      2/17    14       2/17            0  None   None      13/1411
+  14  3      2/19    42       2/19            0  None   None        1/551
+  14  4      2/19    28       2/19            0  None   None            0
+  14  5      2/21    70       2/21            0  None   None        1/231
+  14  6      2/23    42       2/23            0  None   None            0
+  14  7      1/11    14       1/11            0     8     22            0
+  14  8       1/8    56        1/9         1/72     7     63         1/72
+  14  9       1/9   126       2/19        1/171     7    133        1/171
+  14 10      1/10    70       1/11        1/110     7     77        1/110
+  14 11      1/11   154       7/79        2/869     4    158        2/869
+  14 12      1/12    84       7/89       5/1068     5     89       5/1068
+  14 13      1/13   182       7/92       1/1196     2    184       1/1196
+  14 14      1/14    14       1/15        1/210  None   None        1/210
+
+------------------------------------------------------------------------------
+(3) CLOSED FORM:  M(S) = p*k/(k+r)  fit per (n,q); dip(k) closed form
+------------------------------------------------------------------------------
+  n= 7 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 11), Fraction(2, 11), Fraction(4, 23), Fraction(2, 11), Fraction(2, 11), Fraction(2, 11)]
+  n= 7 q= 3: NOT p k/(k+r) form. Ms=[Fraction(2, 11), Fraction(2, 11), Fraction(4, 23), Fraction(2, 11), Fraction(2, 11), Fraction(2, 11)]
+  n= 7 q= 4: M(S)= 1/4*k/(k+5/28)  k->inf M=1/4  dip_limit=0  M(A)=1/4
+  n= 7 q= 5: M(S)= 1/5*k/(k+3/35)  k->inf M=1/5  dip_limit=0  M(A)=1/5
+  n= 7 q= 6: M(S)= 1/6*k/(k+5/42)  k->inf M=1/6  dip_limit=0  M(A)=1/6
+  n= 7 q= 7: M(S)= 1/7*k/(k+1/7)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n= 8 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 11), Fraction(2, 11), Fraction(5, 31), Fraction(2, 11), Fraction(2, 11), Fraction(2, 11)]
+  n= 8 q= 3: NOT p k/(k+r) form. Ms=[Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(19, 127), Fraction(2, 13)]
+  n= 8 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(1, 7)]
+  n= 8 q= 5: M(S)= 1/5*k/(k+1/10)  k->inf M=1/5  dip_limit=0  M(A)=1/5
+  n= 8 q= 6: M(S)= 1/6*k/(k+5/24)  k->inf M=1/6  dip_limit=0  M(A)=1/6
+  n= 8 q= 7: M(S)= 1/7*k/(k+1/28)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n= 8 q= 8: M(S)= 1/8*k/(k+1/8)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n= 9 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 13), Fraction(2, 13), Fraction(1, 7), Fraction(2, 13), Fraction(2, 13), Fraction(2, 13)]
+  n= 9 q= 3: NOT p k/(k+r) form. Ms=[Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(1, 7), Fraction(2, 13), Fraction(2, 13)]
+  n= 9 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 15), Fraction(2, 15), Fraction(2, 15), Fraction(2, 15), Fraction(24, 187), Fraction(2, 15)]
+  n= 9 q= 5: M(S)= 1/5*k/(k+2/15)  k->inf M=1/5  dip_limit=0  M(A)=1/5
+  n= 9 q= 6: M(S)= 1/6*k/(k+5/18)  k->inf M=1/6  dip_limit=0  M(A)=1/6
+  n= 9 q= 7: M(S)= 1/7*k/(k+1/21)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n= 9 q= 8: M(S)= 1/8*k/(k+1/24)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n= 9 q= 9: M(S)= 1/9*k/(k+1/9)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=10 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(2, 13), Fraction(4, 27), Fraction(2, 13)]
+  n=10 q= 3: M(S)= 1/7*k/(k+0)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n=10 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 15), Fraction(2, 15), Fraction(8, 67), Fraction(2, 15), Fraction(2, 15), Fraction(16, 127)]
+  n=10 q= 5: M(S)= 1/8*k/(k+0)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=10 q= 6: M(S)= 1/6*k/(k+1/6)  k->inf M=1/6  dip_limit=0  M(A)=1/6
+  n=10 q= 7: M(S)= 1/7*k/(k+2/35)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n=10 q= 8: M(S)= 1/8*k/(k+3/40)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=10 q= 9: M(S)= 1/9*k/(k+1/45)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=10 q=10: M(S)= 1/10*k/(k+1/10)  k->inf M=1/10  dip_limit=0  M(A)=1/10
+  n=11 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 15), Fraction(2, 15), Fraction(2, 15), Fraction(3, 23), Fraction(2, 15), Fraction(2, 15)]
+  n=11 q= 3: NOT p k/(k+r) form. Ms=[Fraction(1, 8), Fraction(1, 8), Fraction(13, 109), Fraction(1, 8), Fraction(1, 8), Fraction(1, 8)]
+  n=11 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(4, 35), Fraction(2, 17), Fraction(2, 17), Fraction(2, 17)]
+  n=11 q= 5: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(4, 35), Fraction(2, 17), Fraction(2, 17), Fraction(2, 17)]
+  n=11 q= 6: M(S)= 1/6*k/(k+7/66)  k->inf M=1/6  dip_limit=0  M(A)=1/6
+  n=11 q= 7: M(S)= 1/7*k/(k+5/77)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n=11 q= 8: M(S)= 1/8*k/(k+5/88)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=11 q= 9: M(S)= 1/9*k/(k+4/99)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=11 q=10: M(S)= 1/10*k/(k+3/110)  k->inf M=1/10  dip_limit=0  M(A)=1/10
+  n=11 q=11: M(S)= 1/11*k/(k+1/11)  k->inf M=1/11  dip_limit=0  M(A)=1/11
+  n=12 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 15), Fraction(2, 15), Fraction(2, 15), Fraction(2, 15), Fraction(1, 8), Fraction(2, 15)]
+  n=12 q= 3: NOT p k/(k+r) form. Ms=[Fraction(1, 8), Fraction(1, 8), Fraction(1, 8), Fraction(1, 9), Fraction(1, 8), Fraction(1, 8)]
+  n=12 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(1, 9)]
+  n=12 q= 5: NOT p k/(k+r) form. Ms=[Fraction(1, 9), Fraction(1, 9), Fraction(5, 47), Fraction(1, 9), Fraction(1, 9), Fraction(5, 46)]
+  n=12 q= 6: M(S)= 2/19*k/(k+0)  k->inf M=2/19  dip_limit=0  M(A)=2/19
+  n=12 q= 7: M(S)= 1/7*k/(k+1/14)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n=12 q= 8: M(S)= 1/8*k/(k+5/24)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=12 q= 9: M(S)= 1/9*k/(k+1/9)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=12 q=10: M(S)= 1/10*k/(k+1/20)  k->inf M=1/10  dip_limit=0  M(A)=1/10
+  n=12 q=11: M(S)= 1/11*k/(k+1/66)  k->inf M=1/11  dip_limit=0  M(A)=1/11
+  n=12 q=12: M(S)= 1/12*k/(k+1/12)  k->inf M=1/12  dip_limit=0  M(A)=1/12
+  n=13 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(1, 9), Fraction(2, 17), Fraction(2, 17)]
+  n=13 q= 3: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(19, 167), Fraction(2, 17), Fraction(2, 17)]
+  n=13 q= 4: NOT p k/(k+r) form. Ms=[Fraction(2, 19), Fraction(2, 19), Fraction(17, 167), Fraction(2, 19), Fraction(2, 19), Fraction(2, 19)]
+  n=13 q= 5: NOT p k/(k+r) form. Ms=[Fraction(2, 19), Fraction(2, 19), Fraction(7, 68), Fraction(2, 19), Fraction(2, 19), Fraction(2, 19)]
+  n=13 q= 6: M(S)= 2/23*k/(k+0)  k->inf M=2/23  dip_limit=0  M(A)=2/23
+  n=13 q= 7: M(S)= 1/7*k/(k+8/91)  k->inf M=1/7  dip_limit=0  M(A)=1/7
+  n=13 q= 8: M(S)= 1/8*k/(k+7/104)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=13 q= 9: M(S)= 1/9*k/(k+5/117)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=13 q=10: M(S)= 1/10*k/(k+7/130)  k->inf M=1/10  dip_limit=0  M(A)=1/10
+  n=13 q=11: M(S)= 1/11*k/(k+3/143)  k->inf M=1/11  dip_limit=0  M(A)=1/11
+  n=13 q=12: M(S)= 1/12*k/(k+5/156)  k->inf M=1/12  dip_limit=0  M(A)=1/12
+  n=13 q=13: M(S)= 1/13*k/(k+1/13)  k->inf M=1/13  dip_limit=0  M(A)=1/13
+  n=14 q= 2: NOT p k/(k+r) form. Ms=[Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(2, 17), Fraction(9, 83), Fraction(2, 17)]
+  n=14 q= 3: NOT p k/(k+r) form. Ms=[Fraction(2, 19), Fraction(2, 19), Fraction(2, 19), Fraction(3, 29), Fraction(2, 19), Fraction(2, 19)]
+  n=14 q= 4: M(S)= 2/19*k/(k+0)  k->inf M=2/19  dip_limit=0  M(A)=2/19
+  n=14 q= 5: NOT p k/(k+r) form. Ms=[Fraction(2, 21), Fraction(2, 21), Fraction(1, 11), Fraction(2, 21), Fraction(2, 21), Fraction(4, 43)]
+  n=14 q= 6: M(S)= 2/23*k/(k+0)  k->inf M=2/23  dip_limit=0  M(A)=2/23
+  n=14 q= 7: M(S)= 1/11*k/(k+0)  k->inf M=1/11  dip_limit=0  M(A)=1/11
+  n=14 q= 8: M(S)= 1/8*k/(k+1/8)  k->inf M=1/8  dip_limit=0  M(A)=1/8
+  n=14 q= 9: M(S)= 1/9*k/(k+1/18)  k->inf M=1/9  dip_limit=0  M(A)=1/9
+  n=14 q=10: M(S)= 1/10*k/(k+1/10)  k->inf M=1/10  dip_limit=0  M(A)=1/10
+  n=14 q=11: M(S)= 1/11*k/(k+2/77)  k->inf M=1/11  dip_limit=0  M(A)=1/11
+  n=14 q=12: M(S)= 1/12*k/(k+5/84)  k->inf M=1/12  dip_limit=0  M(A)=1/12
+  n=14 q=13: M(S)= 1/13*k/(k+1/91)  k->inf M=1/13  dip_limit=0  M(A)=1/13
+  n=14 q=14: M(S)= 1/14*k/(k+1/14)  k->inf M=1/14  dip_limit=0  M(A)=1/14
+
+------------------------------------------------------------------------------
+(4) NON-CIRCULARITY: bounds NOT using M(S)>=1/N
+------------------------------------------------------------------------------
+
+  (B1)  dip <= 1/lcm(q,n) ?   (purely arithmetic in q,n)
+     violations of dip<=1/lcm: 4
+     tightest dip/(1/lcm): 1.0606 at n=7 q=4 k=1 dip=5/132 1/lcm=1/28
+
+  (B4)  flank <= n  for binding pair (flank,w)?
+     violations of flank<=n: 0
+     max flank: 13 at n=14 q=2 k=5
+
+  (CRUX) binding D=flank+w, M(S)=j/D.  D<=N*j  <=>  M(S)>=1/N (tautology).
+         INDEPENDENT route would be: j (crossing index) bounded below by
+         (flank,w) arithmetic so that j/D >= 1/N follows WITHOUT assuming it.
+
+  Detail (N=14 level: A={1..13}\{q}, re-cover modulus 14, w=lcm(q,14)):
+   q= 2: w=lcm(2,14)= 14, M(A)=  2/17, M(S)=   2/17, flank=None, D=None, j=2, D<=14j?False, M>=1/14:True
+   q= 3: w=lcm(3,14)= 42, M(A)=  2/17, M(S)=   2/17, flank=None, D=None, j=2, D<=14j?False, M>=1/14:True
+   q= 4: w=lcm(4,14)= 28, M(A)=  2/19, M(S)=   2/19, flank=None, D=None, j=2, D<=14j?False, M>=1/14:True
+   q= 5: w=lcm(5,14)= 70, M(A)=  2/19, M(S)=   2/19, flank=None, D=None, j=2, D<=14j?False, M>=1/14:True
+   q= 6: w=lcm(6,14)= 42, M(A)=  2/23, M(S)=   2/23, flank=None, D=None, j=2, D<=14j?False, M>=1/14:True
+   q= 7: w=lcm(7,14)= 14, M(A)=   1/7, M(S)=   1/11, flank=8, D=22, j=1, D<=14j?False, M>=1/14:True
+   q= 8: w=lcm(8,14)= 56, M(A)=   1/8, M(S)=    1/9, flank=7, D=63, j=1, D<=14j?False, M>=1/14:True
+   q= 9: w=lcm(9,14)=126, M(A)=   1/9, M(S)= 14/131, flank=5, D=131, j=14, D<=14j?True, M>=1/14:True
+   q=10: w=lcm(10,14)= 70, M(A)=  1/10, M(S)=   1/11, flank=7, D=77, j=1, D<=14j?False, M>=1/14:True
+   q=11: w=lcm(11,14)=154, M(A)=  1/11, M(S)= 14/157, flank=3, D=157, j=14, D<=14j?True, M>=1/14:True
+   q=12: w=lcm(12,14)= 84, M(A)=  1/12, M(S)=   7/89, flank=5, D=89, j=7, D<=14j?True, M>=1/14:True
+   q=13: w=lcm(13,14)=182, M(A)=  1/13, M(S)= 14/183, flank=1, D=183, j=14, D<=14j?True, M>=1/14:True
+
+DONE.

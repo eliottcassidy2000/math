@@ -1,0 +1,5 @@
+=== CRITICAL CASE: does the binding big-speed get forced huge? ===
+minimizer [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84]: M=7/89 at t=37/89 binders=[5, 84]
+huge big=360360: covering=True M=6006/72073=0.083332 at t=150152/360365 binders=[5, 360360]
+core M(core)=1/12=0.083333
+Interpretation: if huge big does NOT bind, M=M(core) (decoupled, large speed irrelevant).

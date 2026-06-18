@@ -1,0 +1,31 @@
+========================================================================
+PART 1 — candidate-binder conflict graph is NON-TRIVIAL (named cases)
+========================================================================
+  {1..13}: M=1/14 (0.07143)  |E|=50  triangles=100  oddCycle=True  alpha=5
+  {1..11,13,84}: M=7/89 (0.07865)  |E|=46  triangles=76  oddCycle=True  alpha=5
+  {1..5,7..13,84}: M=2/23 (0.08696)  |E|=48  triangles=86  oddCycle=True  alpha=5
+========================================================================
+PART 2 — alpha does NOT certify M>=1/14 (random 13-sets vs covering family)
+========================================================================
+  random 13-sets:  alpha | count | min M
+       1 |   20 | 13/84 (0.1548)
+       2 |  620 | 4/31 (0.1290)
+       3 |  157 | 3/23 (0.1304)
+       4 |    3 | 1/7 (0.1429)
+  covering family {1..11,13,84*m}:
+     m=1: M=7/89 (0.07865)  alpha=5
+     m=2: M=14/173 (0.08092)  alpha=5
+     m=3: M=21/257 (0.08171)  alpha=5
+     m=4: M=28/341 (0.08211)  alpha=5
+  => hard covering sets have alpha=5 (LARGE) with the SMALLEST M.
+     alpha is an anti-certificate, not a certificate.
+========================================================================
+PROVED LEMMA — two-sided / complement-pair optimum
+========================================================================
+  non-peak optima tested: 14176
+  optima with NO complement (two-sided) binder: 0
+  optima with NO sum-type binding pair:          0
+  Proof: a one-sided binder set is improvable (shift tau to raise every
+         binder's ||.|| while non-binders stay > M) => contradiction with
+         maximality. So +M and -M binders coexist => (a+b)tau* in Z.
+  HONEST: structural (crossing TYPE = SUM/complement), NOT a 1/14 bound.

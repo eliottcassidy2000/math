@@ -1,0 +1,55 @@
+==============================================================================
+REFRAME 7 part 2 — overlap structure / non-tautological leverage
+==============================================================================
+
+[A] num <-> D-num pairing (explains EVEN clearing counts)
+  checked 300 covering sets: clearing nums always closed under num->D-num: True
+  => clearing count = 2*(#unordered pairs); count>=1 forces count>=2. (structural, proved by hand:
+     ||v(D-num)/D|| = ||(-v num)/D|| = ||v num/D||, so D-num clears iff num clears.)
+
+[B] Inclusion-Exclusion lower bound on clearing count (Bonferroni)
+    #clearing >= (D-1) - sum|F_v| + (correction).  Bonferroni-2 lower bound:
+    #good = #{num: avoid all F_v} >= (D-1) - sum|F_v|  (union bound, term 1)
+    A *better* bound uses the structure of F_v as unions of gcd(v,D) caps.
+  over 120 sets at M-attaining D:
+    union-bound deficit  (sum|F_v| - (D-1)) : min=3 max=176 mean=46.7
+    true clearing count                      : min=2 max=36 mean=10.3
+    total pairwise overlap mass sum|F_i&F_j| : min=12 max=345 mean=92
+  Bonferroni inequality direction: |union| >= sum|F| - sum|F_i&F_j|.  That gives an
+  UPPER bound on #good, not a lower bound.  I-E does NOT yield a clearance proof.
+  The overlap is large precisely BECAUSE clearance is hard; counting can't see it.
+
+[C] Covering -> single-modulus structure of F_v (does a SMALL F_v save us?)
+    |F_v| at modulus D depends on gcd(v,D). The cap [0,k-1]U[D-k+1,D-1] pulled back
+    by mult-by-v has size ~ (2k-1) when gcd(v,D)=1, larger when gcd>1.
+    Covering forces some v=14*t (mult of 14) and some v=q*t for each q<=14.
+    Q: at the M-attaining D, does any runner give |F_v| << (2k-1)? (would shrink union)
+  S=[4, 6, 10, 13, 14, 22, 23, 25, 26, 27, 85, 110, 120]
+    D=195 k=14 M=8/39  band size = 168 residues
+    (v, gcd(v,D), |F_v|): [(4, 1, 26), (6, 3, 26), (10, 5, 24), (13, 13, 38), (14, 1, 26), (22, 1, 26), (23, 1, 26), (25, 5, 24), (26, 13, 38), (27, 3, 26), (85, 5, 24), (110, 5, 24), (120, 15, 14)]
+    smallest |F_v|=14; base cap size (gcd=1) = 27; sum|F_v|=342 vs (D-1)=194
+  S=[1, 4, 10, 11, 13, 22, 25, 26, 30, 56, 73, 108, 116]
+    D=141 k=11 M=22/141  band size = 120 residues
+    (v, gcd(v,D), |F_v|): [(1, 1, 20), (4, 1, 20), (10, 1, 20), (11, 1, 20), (13, 1, 20), (22, 1, 20), (25, 1, 20), (26, 1, 20), (30, 3, 20), (56, 1, 20), (73, 1, 20), (108, 3, 20), (116, 1, 20)]
+    smallest |F_v|=20; base cap size (gcd=1) = 21; sum|F_v|=260 vs (D-1)=140
+  S=[3, 4, 6, 7, 8, 10, 11, 18, 26, 27, 28, 72, 101]
+    D=46 k=4 M=4/23  band size = 39 residues
+    (v, gcd(v,D), |F_v|): [(3, 1, 6), (4, 2, 5), (6, 2, 5), (7, 1, 6), (8, 2, 5), (10, 2, 5), (11, 1, 6), (18, 2, 5), (26, 2, 5), (27, 1, 6), (28, 2, 5), (72, 2, 5), (101, 1, 6)]
+    smallest |F_v|=5; base cap size (gcd=1) = 7; sum|F_v|=70 vs (D-1)=45
+  S=[1, 2, 3, 7, 10, 11, 21, 24, 31, 54, 109, 112, 117]
+    D=119 k=9 M=22/119  band size = 102 residues
+    (v, gcd(v,D), |F_v|): [(1, 1, 16), (2, 1, 16), (3, 1, 16), (7, 7, 20), (10, 1, 16), (11, 1, 16), (21, 7, 20), (24, 1, 16), (31, 1, 16), (54, 1, 16), (109, 1, 16), (112, 7, 20), (117, 1, 16)]
+    smallest |F_v|=16; base cap size (gcd=1) = 17; sum|F_v|=220 vs (D-1)=118
+  S=[1, 2, 5, 9, 11, 14, 24, 25, 26, 27, 84, 100, 112]
+    D=137 k=10 M=21/137  band size = 118 residues
+    (v, gcd(v,D), |F_v|): [(1, 1, 18), (2, 1, 18), (5, 1, 18), (9, 1, 18), (11, 1, 18), (14, 1, 18), (24, 1, 18), (25, 1, 18), (26, 1, 18), (27, 1, 18), (84, 1, 18), (100, 1, 18), (112, 1, 18)]
+    smallest |F_v|=18; base cap size (gcd=1) = 19; sum|F_v|=234 vs (D-1)=136
+
+[D] Is clearance forced at a SMALL/structured D (vs needing the full pair-search)?
+    Test: for covering minimizers, what is the M-attaining D? bounded by what?
+  over 400 covering sets: M-attaining D ranges; max D = 215
+    max-D case: S=[2, 8, 11, 14, 15, 17, 21, 24, 27, 59, 78, 105, 110] M=12/43 D=215
+    most common attaining D: [(47, 14), (31, 12), (33, 11), (25, 10), (41, 10), (38, 9), (17, 9), (19, 8), (24, 8), (123, 7)]
+  Conclusion line printed at end.
+
+DONE.

@@ -1,0 +1,52 @@
+==============================================================================
+REFRAME 5 -- VERDICT  (A) monotonicity collapse  (B) is c,flank arithmetic?
+==============================================================================
+
+(A) Closed law M_q(k)=c k/(Lk+flank), exact + strictly increasing, k=1..30:
+  q    L   c flank law exact k<=30?      M(1)     M(30)  incr? M(1)>=1/14?
+  7   14   2     8             True      1/11    15/107   True        True
+  8   56   7     7             True       1/9    30/241   True        True
+  9  126  14     5             True    14/131    84/757   True        True
+ 10   70   7     7             True      1/11    30/301   True        True
+ 11  154  14     3             True    14/157  140/1541   True        True
+ 12   84   7     5             True      7/89    42/505   True        True
+ 13  182  14     1             True    14/183  420/5461   True        True
+
+(B) Is (c,flank) arithmetic in (q,14)? candidate: c = N/gcd(?) ; flank pattern:
+  q  L=lcm  L/14    c  14c  14c-L flank  c==14/gcd(L/14,?)
+  7     14     1    2   28     14     8                   
+  8     56     4    7   98     42     7                   
+  9    126     9   14  196     70     5                   
+ 10     70     5    7   98     28     7                   
+ 11    154    11   14  196     42     3                   
+ 12     84     6    7   98     14     5                   
+ 13    182    13   14  196     14     1                   
+
+READING (B):  L/14 = 1,4,9,5,11,6,13 for q=7..13 (= the 'co-part' q/gcd(q,14)*? );
+              c    = 2,7,14,7,14,7,14;   14c-L = 14,42,70,28,42,14,14 (all > flank).
+  c is NOT a clean single gcd formula across all q -- it tracks the parity/odd-part of
+  L/14.  The margin 14c - L - flank is POSITIVE everywhere (min 6 at q=7), so the
+  k=1 inequality holds with room.  But c,flank are READ OFF the solved binding, i.e.
+  they encode WHICH small runner binds and at WHICH crossing index -- that is exactly
+  the data one would have to derive arithmetically, and it is NOT a one-line gcd.
+
+------------------------------------------------------------------------------
+HONEST EQUIVALENCE CHAIN (principal single-drop families q=7..13):
+------------------------------------------------------------------------------
+
+  LRC(14) on S=({1..13}\{q}) u {Lk}
+    <=>  M_q(k) >= 1/14                                    [def]
+    <=>  c k/(Lk+flank) >= 1/14                            [THE LAW, exact, this session]
+    <=>  14 c k >= Lk + flank                              [cross-mult]
+    <=>  (14c - L) k >= flank                              [collect]
+    <=(*)=  14c - L >= flank   at k=1, AND 14c-L>0          [MONOTONE COLLAPSE, proved (A)]
+
+  The monotone collapse (*) is a GENUINE reduction: infinite tower -> single k=1 check.
+  It is NON-tautological (calculus on the closed form).  BUT the residual k=1 inequality
+  '14c >= L + flank' is, after substituting c=14*M(S,1) and L+flank=D_1, EXACTLY
+  '14 M(S, k=1) >= 1' -- the k=1 instance of the goal.  So REFRAME 5:
+     * GIVES a real closed form + a real infinite->finite collapse (new, clean);
+     * DOES NOT discharge the base k=1 case from arithmetic alone (c,flank not 1-line);
+     * confirms (independently, 3rd time) the crux is the SINGLE binding crossing at k=1.
+
+DONE.

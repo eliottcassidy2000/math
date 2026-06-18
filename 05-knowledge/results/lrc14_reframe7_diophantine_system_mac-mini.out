@@ -1,0 +1,50 @@
+==============================================================================
+REFRAME 7: others-clear as a simultaneous congruence-interval system
+==============================================================================
+
+[0] Named covering cases: M-tool vs band-reformulation
+  generic core-core {1..5,7..13,84}
+     M-tool      M=2/23  tau*=4/23  (D=23, num=4)
+     band-reform M=2/23 at (D,num)=(23, 4)  AGREE=True
+     band [k=2,D-k=21] at level 1/14 (c=ceil(D/14)=2): #num in [1,22] clearing ALL 13 at level>=1/14 = 2
+        clearing num: [4, 19]
+  resonant flank-w {1..11,13,84}
+     M-tool      M=7/89  tau*=37/89  (D=89, num=37)
+     band-reform M=7/89 at (D,num)=(89, 37)  AGREE=True
+     band [k=7,D-k=82] at level 1/14 (c=ceil(D/14)=7): #num in [1,88] clearing ALL 13 at level>=1/14 = 2
+        clearing num: [37, 52]
+
+[1] Equivalence of band-reformulation and M-tool (random + covering sets)
+  band-reform == M-tool on 400 covering 13-sets: agree=400/400
+  -> band reformulation is EXACTLY equivalent to M (as expected; tautological).
+
+[2] Clearing-num COUNT at the M-attaining denominator D (covering sets)
+    For S with M(S) >= 1/14, the attaining (D,num) certifies clearance.
+    Question: how many num in [1,D-1] clear all 13 at level>=1/14? min over sets?
+  scanned 250 covering sets with M>=1/14.
+  clearing-count histogram (at M-attaining D, level 1/14): {2: 18, 4: 42, 6: 40, 8: 29, 10: 27, 12: 19, 14: 18, 16: 21, 18: 13, 20: 4, 22: 5, 24: 10, 26: 2, 28: 1, 30: 1}
+  MIN clearing-count = 2; case: S=[4, 6, 9, 10, 13, 14, 19, 24, 26, 61, 66, 87, 109]
+     M=2/15 D=15 clears=2 num
+  NOTE: min clearing-count >= 1 is GUARANTEED tautologically (the attaining num clears).
+        The real question is whether a COUNTING bound (independent of knowing M)
+        forces count >= 1. See [3].
+
+[3] Union-bound / CRT density test at the M-attaining D
+    Forbidden set for runner v at level 1/14, modulus D: 
+       F_v = {num in [1,D-1] : v*num mod D in [0,k-1] U [D-k+1,D-1]}, k=ceil(D/14).
+    |F_v| (exact) and union-bound slack  (D-1) - sum_v |F_v|.
+    If slack > 0 at some D, that PROVES a clearing num exists at that D (no M needed).
+  at M-attaining D: union-bound slack positive in 0/200 sets.
+  best slack = -4; worst slack = -209
+  best-slack case S=[5, 8, 9, 11, 12, 15, 20, 22, 24, 26, 28, 81, 89] D=23 k=2 slack=-4 M=4/23
+  INTERPRETATION: union bound at the M-attaining D is essentially always NEGATIVE
+  (13 runners each forbid ~2k/D ~ 2/14 ~ 14% of residues -> total ~ 13*2/14 ~ 1.86 > 1).
+  So a naive union bound CANNOT prove clearance: the forbidden caps overlap heavily,
+  and that overlap is exactly the content LRC needs (it is NOT given by counting).
+
+[3b] Sweep ALL candidate D for the worst covering set; is slack EVER positive?
+  S=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84] (the unique LRC minimizer, M=7/89)
+  candidate D with POSITIVE union-bound slack at level 1/14: []
+  (#positive-slack D = 0 out of 35 candidate D >= 14)
+
+DONE.
