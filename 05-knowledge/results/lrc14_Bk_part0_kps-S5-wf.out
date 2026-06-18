@@ -1,0 +1,16 @@
+================================================================================
+PART 0: RIGOROUS exact mu — verify vs canon consecutive values
+================================================================================
+  k= 3  consecutive  mu = 1 = 1.000000  canon=1  OK
+  k= 4  consecutive  mu = 19/21 = 0.904762  canon=19/21  OK
+  k= 5  consecutive  mu = 9/14 = 0.642857  canon=9/14  OK
+  k= 6  consecutive  mu = 4/7 = 0.571429  canon=4/7  OK
+  k= 7  consecutive  mu = 83/210 = 0.395238  canon=13/35  MISMATCH!!
+  k= 8  consecutive  mu = 163/490 = 0.332653
+  k= 9  consecutive  mu = 277/980 = 0.282653
+  k=10  consecutive  mu = 557/2205 = 0.252608
+  k=11  consecutive  mu = 127/588 = 0.215986
+  k=12  consecutive  mu = 1313/6468 = 0.202999
+  k=13  consecutive  mu = 829/4620 = 0.179437  canon=829/4620  OK
+
+  ALL canon checks: FAIL
