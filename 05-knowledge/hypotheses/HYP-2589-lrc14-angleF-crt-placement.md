@@ -1,5 +1,5 @@
 ---
-id: HYP-2587
+id: HYP-2589
 title: ANGLE F — the multi-band CRT placement route for LRC(14)-S3 (HYP-2581d route b). The CRT/covering-system reformulation of the witness, the fixed-modulus refutation, and the q=14·Vmax constructive witness equivalent to ρ*>0.
 status: MIXED. PROVED: the residue reduction (witness a/q ⟺ {v·a mod q}⊆SAFE_q ⟺ the 13 speed-forbidden residue classes A_bad(v) do NOT cover Z/q); the equivalence (i)=(iii) (full witness ⟺ discretized lonely density ρ_q>0) at q=14·Vmax; the structural fact every q-covering 13-set contains a multiple of 14. VERIFIED: no fixed modulus q works for all S (each of 91,98,168,182,210,252 fails on a positive fraction of large-Vmax sets — the earlier "q=91 covers all 40" was a small-sample artifact); q=14·Vmax gives a constructive witness for every in-scope set tested (0/400 + 0 near-tight fails); q_min(S)≤~2·Vmax, unrelated to the optimal denominator D. CONCLUSION: CRT does NOT bypass the ρ*≥c0>0 crux — it RE-EXPRESSES it as a uniform covering-system question. LRC(14) NOT proved.
 source: mac-mini-2026-06-18-S2 (ANGLE F)
@@ -12,7 +12,7 @@ related:
 external: Lonely Runner Conjecture; covering systems of congruences; Chinese Remainder Theorem.
 ---
 
-# HYP-2587 — ANGLE F: the CRT/covering-system placement route
+# HYP-2589 — ANGLE F: the CRT/covering-system placement route
 
 ## The route (HYP-2581d route b)
 Construct the LRC witness τ for an S3 covering 13-set `S = P ∪ L` by Chinese Remainder:
@@ -37,7 +37,8 @@ corrected.) In particular `S* = {1,2,3,5,7,8,9,10,11,12,13,38,42}` has NO witnes
 
 ## [T3] The natural CRT modulus q = 14·Vmax (VERIFIED, constructive)
 At `q = 14·Vmax` a witness `a/q` exists for **every** in-scope set tested (0 fails over
-400 broad sets with Vmax to 3000, plus 0 fails over a near-tight stress sweep). The true
+400 broad sets with Vmax to 3000, plus 0 fails over a near-tight stress sweep — 66 sets
+with M ≤ 2/25, i.e. within ~8% of the threshold, the locus where ρ* is smallest). The true
 minimal modulus `q_min(S)` is even smaller — typically `≤ 2·Vmax`, often `O(Vmax/10)` — and
 is **UNRELATED to the optimal-τ denominator D** (which grows with the binding pair but is a
 red herring: constructing a witness ≥1/14 needs far less resolution than the max-min).
@@ -79,9 +80,9 @@ reformulation** of the residual, but the uniform-over-S solvability is provably 
 inequality as the measure floor ρ*≥c0>0 (OPEN-Q-108). CRT is a constructive packaging and a
 combinatorial handle, **not** a bypass. LRC(14) remains open.
 
-Files: `04-computation/lrc14_angleF_crt_placement_mac-mini-S2.py`,
-`lrc14_angleF_crt_decouple_mac-mini-S2.py`, `lrc14_angleF_fixedq_witness_mac-mini-S2.py`,
-`lrc14_angleF_obstruction_mac-mini-S2.py`, `lrc14_angleF_equivalence_mac-mini-S2.py`,
-`lrc14_angleF_match_debug_mac-mini-S2.py`, `lrc14_angleF_final_mac-mini-S2.py`;
-results in `05-knowledge/results/lrc14_angleF_*_mac-mini-S2.out`.
+Files: `04-computation/lrc14_angleF_crt_placement_mac-mini-S2f.py`,
+`lrc14_angleF_crt_decouple_mac-mini-S2f.py`, `lrc14_angleF_fixedq_witness_mac-mini-S2f.py`,
+`lrc14_angleF_obstruction_mac-mini-S2f.py`, `lrc14_angleF_equivalence_mac-mini-S2f.py`,
+`lrc14_angleF_match_debug_mac-mini-S2f.py`, `lrc14_angleF_final_mac-mini-S2f.py`;
+results in `05-knowledge/results/lrc14_angleF_*_mac-mini-S2f.out`.
 → THM-527, HYP-2581d, OPEN-Q-108, HYP-2584.

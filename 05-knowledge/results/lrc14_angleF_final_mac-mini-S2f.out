@@ -36,3 +36,6 @@
   exact ||v*9/56||: [(1, '9/56'), (2, '9/28'), (3, '27/56'), (5, '11/56'), (7, '1/8'), (8, '2/7'), (9, '25/56'), (10, '11/28'), (11, '13/56'), (12, '1/14'), (13, '5/56'), (38, '3/28'), (42, '1/4')]
   (the OPTIMAL M=1/14 sits at tau=47/56 denom=56; the CONSTRUCTED
    witness uses a DIFFERENT, smaller denominator 56 -- only needs >=1/14, not max.)
+
+=== APPENDED: near-tight stress (faster) ===
+near-tight sets (M<=2/25, ~within 8% of 1/14) tested=66, q=14Vmax misses=0, 0 LRC breaks

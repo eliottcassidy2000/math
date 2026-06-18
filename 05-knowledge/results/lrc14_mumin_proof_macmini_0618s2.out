@@ -1,1 +1,19 @@
-(eval):1: command not found: timeout
+======================================================================================
+L0/L1/L2  exact structural lemmas (the rigorous backbone)
+======================================================================================
+L0 reflection symmetry (x good <=> 1-x good):  PASS
+L1 scale invariance mu(cE)=mu(E):             PASS
+L2 near-0 interval (0,5/(7s)) subset Good:    PASS
+
+======================================================================================
+L3  bounded-spread reduction -- exact minima over primitive shapes
+======================================================================================
+(A) EXHAUSTIVE minimum of mu over primitive E (0 in E, |E|=k, spread<=B(k))
+   k=3: exhaustive min mu (spread<=8) = 1 = 1.000000  at E=[0, 1, 2]
+   k=4: exhaustive min mu (spread<=14) = 19/21 = 0.904762  at E=[0, 1, 2, 3]
+   k=5: exhaustive min mu (spread<=16) = 9/14 = 0.642857  at E=[0, 1, 2, 3, 4]
+   k=6: exhaustive min mu (spread<=18) = 4/7 = 0.571429  at E=[0, 1, 2, 3, 4, 5]
+   k=7: exhaustive min mu (spread<=18) = 13/35 = 0.371429  at E=[0, 2, 3, 4, 5, 6, 8]
+
+(B) HEAVY search k=8..13 (exhaustive bounded-spread for k<=9; random+large for k>=10)
+   k=8: min mu found = 71/220 = 0.322727  at E=[0, 2, 3, 4, 5, 6, 8, 11] (spread 11)

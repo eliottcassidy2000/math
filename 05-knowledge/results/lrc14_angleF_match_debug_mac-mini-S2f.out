@@ -1,0 +1,32 @@
+S=[1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 38, 42], q=588, Vmax=42, E(co-offsets)=[4, 0]
+|i (full witness)|=12, |ii (ruler heuristic)|=16
+(i) subset (ii)? True
+(ii)\(i) = [139, 155, 433, 449]
+
+  a=139, x=139/588:
+    ||Vmax x||=1/14 (>=1/14: True)
+    cluster phases ['139/147', '0'], maxgap=139/147
+    FAILS (i) at speeds [38]: ||v x|| = [(38, '5/294')]
+    => the cluster gap exists in PHASE space, but the corresponding tau-arc
+       does not give that specific cluster member a 1/14 margin (boundary).
+
+  a=155, x=155/588:
+    ||Vmax x||=1/14 (>=1/14: True)
+    cluster phases ['8/147', '0'], maxgap=139/147
+    FAILS (i) at speeds [38]: ||v x|| = [(38, '5/294')]
+    => the cluster gap exists in PHASE space, but the corresponding tau-arc
+       does not give that specific cluster member a 1/14 margin (boundary).
+
+  a=433, x=433/588:
+    ||Vmax x||=1/14 (>=1/14: True)
+    cluster phases ['139/147', '0'], maxgap=139/147
+    FAILS (i) at speeds [38]: ||v x|| = [(38, '5/294')]
+    => the cluster gap exists in PHASE space, but the corresponding tau-arc
+       does not give that specific cluster member a 1/14 margin (boundary).
+
+CONCLUSION (honest): the ruler heuristic (ii) OVERCOUNTS by the boundary/finite-Vmax
+discrepancy (THM-527's O(1/Vmax) error). The OPERATIVE constructive object is (i)=(iii)
+(the residue/covering-system condition), which is EXACT and equals the true witness set.
+rho_q := |A1|/q is the discretized lonely density; rho_q -> rho* as Vmax->inf.
+The ANGLE F reduction stands on (i)=(iii); (ii) is the (asymptotically exact) intuition.
+

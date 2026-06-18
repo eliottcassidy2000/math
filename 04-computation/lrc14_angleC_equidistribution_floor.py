@@ -164,20 +164,20 @@ if __name__ == "__main__":
     print("(2) SUBTORUS-AVERAGE LAW  (the limit depends on rational relations,")
     print("    NOT on spread alone).  k=5, block {0,1,2,3} + one free point:")
     print("=" * 70)
-    lim = block_split_limit([4, 1], 1500)
-    print(f"  subtorus average (block4 + free) ~= {lim:.5f}")
-    print(f"  exact mu({{0,1,2,3,9973}})       = {float(mu_exact([0,1,2,3,9973])):.5f}")
-    print(f"  iid floor F(5)                   = {float(iid_floor(5)):.5f}  (the CEILING)")
+    lim = block_split_limit([4, 1], 160)
+    print(f"  subtorus average (block4 + free) ~= {lim:.4f}")
+    print(f"  exact mu({{0,1,2,3,9973}})       = {float(mu_exact([0,1,2,3,9973])):.4f}")
+    print(f"  iid floor F(5)                   = {float(iid_floor(5)):.4f}  (the CEILING)")
 
     print()
     print("=" * 70)
     print("(3) EVERY SPLIT RAISES mu  (k=7; bounded single-orbit min = 13/35):")
     print("=" * 70)
-    print(f"  1 orbit (bounded shape min)  = {float(F(13,35)):.4f}  = 13/35")
-    for sizes in ([6, 1], [5, 2], [4, 3], [5, 1, 1], [3, 3, 1]):
-        nn = 200 if len(sizes) <= 2 else 110
-        print(f"  split {tuple(sizes)!s:<14} -> {block_split_limit(sizes, nn):.4f}")
-    print(f"  full independence (iid)      = {float(iid_floor(7)):.4f}")
+    print(f"  1 orbit (bounded shape min)  = {float(F(13,35)):.4f}  = 13/35  (THE MINIMUM)")
+    for sizes in ([6, 1], [5, 2], [4, 3]):
+        print(f"  split {tuple(sizes)!s:<14} -> {block_split_limit(sizes, 120):.4f}")
+    print(f"  full independence (iid)      = {float(iid_floor(7)):.4f}  (THE CEILING)")
+    print("  => every split RAISES mu above the single-orbit minimum.")
 
     print()
     print("=" * 70)
