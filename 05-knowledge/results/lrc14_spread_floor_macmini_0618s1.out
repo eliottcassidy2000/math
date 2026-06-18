@@ -1,0 +1,35 @@
+Current branch main is up to date.
+   fb102fc3..667668b0  main -> main
+================================================================================
+(A) large-spread {0,1,...,k-2,M}: does mu stay bounded as M->inf?  (k=9)
+================================================================================
+   consecutive {0..8}: mu=0.28264
+   {0..7}∪{10}: mu=0.26053
+   {0..7}∪{30}: mu=0.31286
+   {0..7}∪{100}: mu=0.31452
+   {0..7}∪{400}: mu=0.31476
+   {0..7}∪{1500}: mu=0.31480
+   {0..7}∪{4000}: mu=0.31521
+
+================================================================================
+(B) broad MIN-mu search per k (spread up to 4k); is the minimizer bounded-spread?
+================================================================================
+   k=7: consecutive mu=0.3952; MIN found mu=0.3952 at E=[0, 1, 2, 3, 4, 5, 6] (spread=6)
+   k=9: consecutive mu=0.2826; MIN found mu=0.2526 at E=[0, 1, 2, 3, 4, 5, 7, 8, 9] (spread=9)
+   k=11: consecutive mu=0.2160; MIN found mu=0.1411 at E=[0, 3, 8, 10, 13, 15, 16, 17, 18, 19, 21] (spread=21)
+
+================================================================================
+(C) estimate universal floor mu_min(k)=min over ALL k-subsets, k=4..13
+================================================================================
+   k= 4: mu_min ~ 0.9047  (consecutive=0.9048)
+   k= 5: mu_min ~ 0.6429  (consecutive=0.6429)
+   k= 6: mu_min ~ 0.5714  (consecutive=0.5714)
+   k= 7: mu_min ~ 0.3952  (consecutive=0.3952)
+   k= 8: mu_min ~ 0.3326  (consecutive=0.3327)
+   k= 9: mu_min ~ 0.2526  (consecutive=0.2827)
+   k=10: mu_min ~ 0.2160  (consecutive=0.2526)
+   k=11: mu_min ~ 0.1652  (consecutive=0.2160)
+   k=12: mu_min ~ 0.1179  (consecutive=0.2030)
+   k=13: mu_min ~ 0.0938  (consecutive=0.1794)
+
+DONE.
