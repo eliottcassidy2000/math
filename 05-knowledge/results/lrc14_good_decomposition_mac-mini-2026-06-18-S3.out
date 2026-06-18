@@ -1,0 +1,22 @@
+Per-rational decomposition of good set of mu_consec(k): group interval widths by the
+smallest-denominator rational each good interval contains.
+  k=5: mu=9/14=0.64286  centers-by-denom-b:
+     b=2: width=1/7=0.14286 (1 intervals)
+     b=3: width=1/7=0.14286 (2 intervals)
+     b=6: width=5/14=0.35714 (2 intervals)
+  k=7: mu=83/210=0.39524  centers-by-denom-b:
+     b=2: width=3/35=0.08571 (1 intervals)
+     b=3: width=1/14=0.07143 (2 intervals)
+     b=9: width=5/21=0.23810 (2 intervals)
+  k=9: mu=277/980=0.28265  centers-by-denom-b:
+     b=2: width=3/49=0.06122 (1 intervals)
+     b=3: width=3/70=0.04286 (2 intervals)
+     b=12: width=5/28=0.17857 (2 intervals)
+  k=11: mu=127/588=0.21599  centers-by-denom-b:
+     b=2: width=1/21=0.04762 (1 intervals)
+     b=3: width=5/196=0.02551 (2 intervals)
+     b=15: width=1/7=0.14286 (2 intervals)
+  k=13: mu=829/4620=0.17944  centers-by-denom-b:
+     b=2: width=3/77=0.03896 (1 intervals)
+     b=3: width=3/140=0.02143 (2 intervals)
+     b=17: width=5/42=0.11905 (2 intervals)

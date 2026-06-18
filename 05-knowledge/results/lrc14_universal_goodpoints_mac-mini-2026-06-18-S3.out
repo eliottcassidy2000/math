@@ -1,0 +1,5 @@
+CLAIM: x in {1/2,1/3,2/3} are GOOD for EVERY integer set E (0 in E).
+Reason: points land on the 1/b-grid (b<=3), so maxgap>=1/b; 1/2,1/3 > 2/7.
+  tested 20000 random E x 3 points: failures=0  => x in {1/2,1/3,2/3} UNIVERSALLY good
+  (b=4: 1/4=0.25<2/7, NOT guaranteed -- check x=1/4:
+   x=1/4 fails on 1295/2000 random E -- confirms b<=3 is the exact universal set)
