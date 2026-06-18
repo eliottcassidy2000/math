@@ -1,0 +1,40 @@
+======================================================================================
+VALIDATE: rho_K(finite w0)  vs  rho*_limit (single-variable reformulation)
+======================================================================================
+
+k=3 P={1..10} Delta={0,1,2}:  meas(G_P)=0.13798
+    rho*_limit (my reformulation) = 0.13800
+    rho_K(w0=  101) = 0.23301   (Vmax=103)
+    rho_K(w0=  401) = 0.15385   (Vmax=403)
+    rho_K(w0= 1009) = 0.14441   (Vmax=1011)
+    rho_K(w0= 3001) = 0.14252   (Vmax=3003)
+
+k=4 P={1..9}  Delta={0,1,2,3}:  meas(G_P)=0.18107
+    rho*_limit (my reformulation) = 0.16578
+    rho_K(w0=  101) = 0.17308   (Vmax=104)
+    rho_K(w0=  401) = 0.16832   (Vmax=404)
+    rho_K(w0= 1009) = 0.16798   (Vmax=1012)
+    rho_K(w0= 3001) = 0.16778   (Vmax=3004)
+
+k=4 P={1..9}  Delta={0,2,5,9}:  meas(G_P)=0.18107
+    rho*_limit (my reformulation) = 0.18108
+    rho_K(w0=  101) = 0.23636   (Vmax=110)
+    rho_K(w0=  401) = 0.20000   (Vmax=410)
+    rho_K(w0= 1009) = 0.18861   (Vmax=1018)
+    rho_K(w0= 3001) = 0.18339   (Vmax=3010)
+
+k=5 P={1..8}  Delta={0,1,2,3,4}:  meas(G_P)=0.26582
+    rho*_limit (my reformulation) = 0.17093
+    rho_K(w0=  101) = 0.19048   (Vmax=105)
+    rho_K(w0=  401) = 0.16296   (Vmax=405)
+    rho_K(w0= 1009) = 0.17177   (Vmax=1013)
+    rho_K(w0= 3001) = 0.17171   (Vmax=3005)
+
+k=6 P={1..7}  Delta={0,1,2,3,4,5}:  meas(G_P)=0.33469
+    rho*_limit (my reformulation) = 0.20068
+    rho_K(w0=  101) = 0.20755   (Vmax=106)
+    rho_K(w0=  401) = 0.19704   (Vmax=406)
+    rho_K(w0= 1009) = 0.20316   (Vmax=1014)
+    rho_K(w0= 3001) = 0.20093   (Vmax=3006)
+
+DONE.
