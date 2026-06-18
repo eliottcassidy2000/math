@@ -140,6 +140,8 @@ def deterministic_rows() -> list[tuple[str, tuple[int, ...], tuple[int, ...], in
         ("structured_worst_K_over_Sigma", (1, 2, 3, 7, 8, 9, 10, 11, 12, 13), (0, 1, 6), 244),
         ("quarter_min", (1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10), 140),
         ("via_zero_k7", (1, 2, 3, 6, 12, 13), (0, 2, 3, 4, 5, 6, 8), 98),
+        ("hard_core_84m_m1", tuple(list(range(1, 12)) + [13]), (0,), 84),
+        ("hard_core_84m_m5", tuple(list(range(1, 12)) + [13]), (0,), 420),
     ]
     return rows
 

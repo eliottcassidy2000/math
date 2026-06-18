@@ -66,13 +66,18 @@ Named/adversarial rows:
 
 Reproducible stress bank:
 
-- `147` total rows (`7` deterministic plus `140` random covering rows).
+- `149` total rows (`9` deterministic plus `140` random covering rows).
 - `0` zero actual witnesses.
 - Bound `100`: `1` violation.
 - Bound `7*(k+c_GP)+1`: `0` violations, max pressure `0.989069`.
 - Bound `8*(k+c_GP)+1`: `0` violations, max pressure `0.866530`.
 - Bound `8*k*c_GP+1`: `0` violations but much larger median size.
 - Raw `K`: `0` violations but median size `862`, much looser.
+
+The old covering hard-core tower `{1,...,11,13} union {84m}` is tame in this
+colored lens: for `m=1`, actual deficit is only `492/385`; for `m=5`, the
+actual deficit is already negative.  Thus the colored discrepancy spike is not
+coming from that principal tower.
 
 The candidate-bound tournament ranks raw `K` most robust but too large; among
 small useful candidates, `8*(k+c_GP)+1` beats `8*k*c_GP+1` and the constant
