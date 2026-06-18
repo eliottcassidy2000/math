@@ -1,0 +1,109 @@
+========================================================================================
+LRC(14) colored resonance deficit scout
+========================================================================================
+Goal: replace raw K by a color-resonance/coarse-component discrepancy bound.
+
+========================================================================================
+STEP 1. Rigorous Fourier/color-resonance identity
+========================================================================================
+Let h(x)=1_{||x||>=1/14}, with boundary values taken as 1/2
+for the Fourier identity.  For a fixed color b define
+  F_b(x)=prod_{p in P} h(px) * prod_{e in E} h(ex-b/14).
+The half-boundary colored count is
+  N(P,E,V)=sum_b sum_{t=0}^{V-1} F_b(t/V+b/(14V)).
+Writing Fourier coefficients in x, the grid quadrature gives
+  N - V*Sigma = V * sum_{ell != 0} sum_b Fhat_b(ell V) exp(2pi i ell b/14).
+Expanding each h-factor, a term can survive the color sum only if
+  sum_p p*n_p + sum_e e*n_e = ell*V
+  and  sum_e n_e == ell (mod 14).
+This is the colored resonance condition.  Raw interval endpoints count
+all micro-events; the actual discrepancy only sees these compatible
+V-resonances.  The closed CRT count differs from the half-boundary
+count by the explicit binding-boundary bonus, which the diagnostics print.
+
+========================================================================================
+STEP 2. Named and adversarial rows: coarse decomposition
+========================================================================================
+  HYP2594_stored_max_deficit: P=(4, 6, 10) Emax=326 k=10 V=349 cGP=16
+    Sigma=5330970819984007/2598958628838684 (2.051195) K=4234 actual=644 open=644 boundary_bonus=0
+    actual_deficit=186779459202305947/2598958628838684 (71.867) open_deficit=71.867 positive_cell_sum=154.630
+    max_color_error=8.253 at b=12 max_interval_error=14.278 at comp=9
+    bounds 100:100.0 7(k+c)+1:183.0 8(k+c)+1:209.0 8kc+1:1281.0
+  P_empty_large_open_deficit: P=() Emax=660 k=13 V=686 cGP=1
+    Sigma=815301330545779344719/394329829394082461880 (2.067562) K=11536 actual=1324 open=1290 boundary_bonus=34
+    actual_deficit=54233263318716400799/574824824189624580 (94.347) open_deficit=128.347 positive_cell_sum=128.347
+    max_color_error=23.925 at b=7 max_interval_error=128.347 at comp=0
+    bounds 100:100.0 7(k+c)+1:99.0 8(k+c)+1:113.0 8kc+1:105.0
+  P_empty_boundary_bonus: P=() Emax=619 k=13 V=658 cGP=1
+    Sigma=147602469315636204504517711/74169992802205522723915260 (1.990056) K=9566 actual=1354 open=1234 boundary_bonus=120
+    actual_deficit=-5020889733279111252596669/112720353802743955507470 (-44.543) open_deficit=75.457 positive_cell_sum=164.102
+    max_color_error=43.862 at b=12 max_interval_error=75.457 at comp=0
+    bounds 100:100.0 7(k+c)+1:99.0 8(k+c)+1:113.0 8kc+1:105.0
+  constant_100_failure: P=(1, 2, 11) Emax=886 k=10 V=1203 cGP=12
+    Sigma=294852746600356291895/138048965508259277472 (2.135856) K=10704 actual=2434 open=2432 boundary_bonus=2
+    actual_deficit=6232224037708512594279/46016321836086425824 (135.435) open_deficit=137.435 positive_cell_sum=266.534
+    max_color_error=18.496 at b=12 max_interval_error=33.070 at comp=10
+    bounds 100:100.0! 7(k+c)+1:155.0 8(k+c)+1:177.0 8kc+1:961.0
+  structured_worst_K_over_Sigma: P=(1, 2, 3, 7, 8, 9, 10, 11, 12, 13) Emax=6 k=3 V=244 cGP=16
+    Sigma=39911/60060 (0.664519) K=162 actual=156 open=152 boundary_bonus=4
+    actual_deficit=92231/15015 (6.143) open_deficit=10.143 positive_cell_sum=32.856
+    max_color_error=2.842 at b=12 max_interval_error=2.352 at comp=15
+    bounds 100:100.0 7(k+c)+1:134.0 8(k+c)+1:153.0 8kc+1:385.0
+  quarter_min: P=(1, 2, 3) Emax=10 k=10 V=140 cGP=4
+    Sigma=13067/17640 (0.740760) K=100 actual=104 open=100 boundary_bonus=4
+    actual_deficit=-37/126 (-0.294) open_deficit=3.706 positive_cell_sum=12.254
+    max_color_error=1.873 at b=13 max_interval_error=2.143 at comp=2
+    bounds 100:100.0 7(k+c)+1:99.0 8(k+c)+1:113.0 8kc+1:321.0
+  via_zero_k7: P=(1, 2, 3, 6, 12, 13) Emax=8 k=7 V=98 cGP=14
+    Sigma=1063/780 (1.362821) K=124 actual=144 open=142 boundary_bonus=2
+    actual_deficit=-4073/390 (-10.444) open_deficit=-8.444 positive_cell_sum=15.276
+    max_color_error=0.603 at b=12 max_interval_error=0.628 at comp=9
+    bounds 100:100.0 7(k+c)+1:148.0 8(k+c)+1:169.0 8kc+1:785.0
+
+========================================================================================
+STEP 3. Reproducible stress bank for candidate bounds
+========================================================================================
+  stress rows=140 total rows=147
+  zero actual witnesses=0
+  bound 100       : violations=  1 max_pressure=1.354351 worst=constant_100_failure deficit=135.435 bound=100.0 k=10 cGP=12 K=10704
+  bound 7(k+c)+1  : violations=  0 max_pressure=0.989069 worst=stress_016 deficit=97.918 bound=99.0 k=13 cGP=1 K=4496
+  bound 8(k+c)+1  : violations=  0 max_pressure=0.866530 worst=stress_016 deficit=97.918 bound=113.0 k=13 cGP=1 K=4496
+  bound 8kc+1     : violations=  0 max_pressure=0.932551 worst=stress_016 deficit=97.918 bound=105.0 k=13 cGP=1 K=4496
+  bound K         : violations=  0 max_pressure=0.144331 worst=stress_040 deficit=17.031 bound=118.0 k=3 cGP=10 K=118
+
+  Worst actual deficit row:
+  constant_100_failure: P=(1, 2, 11) Emax=886 k=10 V=1203 cGP=12
+    Sigma=294852746600356291895/138048965508259277472 (2.135856) K=10704 actual=2434 open=2432 boundary_bonus=2
+    actual_deficit=6232224037708512594279/46016321836086425824 (135.435) open_deficit=137.435 positive_cell_sum=266.534
+    max_color_error=18.496 at b=12 max_interval_error=33.070 at comp=10
+    bounds 100:100.0! 7(k+c)+1:155.0 8(k+c)+1:177.0 8kc+1:961.0
+
+  Worst pressure against 8(k+c)+1:
+  stress_016: P=() Emax=264 k=13 V=286 cGP=1
+    Sigma=92901200932276333/45347216808330360 (2.048664) K=4496 actual=488 open=480 boundary_bonus=8
+    actual_deficit=201831893825718889/2061237127651380 (97.918) open_deficit=105.918 positive_cell_sum=115.163
+    max_color_error=17.250 at b=12 max_interval_error=105.918 at comp=0
+    bounds 100:100.0 7(k+c)+1:99.0 8(k+c)+1:113.0 8kc+1:105.0
+
+  Candidate-bound tournament:
+    100       : violations=1 max_pressure=1.354351 median_bound=100.0
+    7(k+c)+1  : violations=0 max_pressure=0.989069 median_bound=155.0
+    8(k+c)+1  : violations=0 max_pressure=0.866530 median_bound=177.0
+    8kc+1     : violations=0 max_pressure=0.932551 median_bound=801.0
+    K         : violations=0 max_pressure=0.144331 median_bound=862.0
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1} cycles3=0 scc=[1, 1, 1, 1, 1] hamiltonian_paths=1
+    leaders=[(4, 'K'), (3, '8(k+c)+1'), (2, '8kc+1'), (1, '7(k+c)+1'), (0, '100')]
+
+========================================================================================
+TAKEAWAY
+========================================================================================
+  1. The exact discrepancy is governed by a colored resonance condition,
+     not by raw micro-component count K.
+  2. Direct rows refute too-small constant bounds, but additive bounds
+     C*(k+cGP)+1 are the right-looking next theorem target.
+  3. A proof should bound the surviving Fourier/color resonances or,
+     equivalently, prove endpoint cancellation inside each coarse G_P
+     component after summing the 14 phase colors.
+  4. This is still not a proof of LRC(14), but it is a precise lemma:
+     colored discrepancy <= C*(k+cGP)+1 plus the Sigma floor would leave
+     only a finite low-V exact check.
