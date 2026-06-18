@@ -1,0 +1,139 @@
+==============================================================================
+LRC(14) covering residual classifier
+==============================================================================
+sampled q-covering primitive 13-sets: 103
+arc-width certified by THM-526: 94
+arc-width residuals: 9
+zero LRC breaks found: 0
+
+Hardest rows by exact gap M(S) (smallest first):
+  M=14/183 (0.076503), slack=13/2562, arc_cert=True, arc_margin=79/12, priv14=2, unit_missing=(13,), source=principal_drop_q13_k1, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 182)
+    first sum-binding pair=(1, 182) D=183 j=14 14j-D=13
+  M=28/365 (0.076712), slack=27/5110, arc_cert=True, arc_margin=85/6, priv14=2, unit_missing=(13,), source=principal_drop_q13_k2, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 364)
+    first sum-binding pair=(1, 364) D=365 j=28 14j-D=27
+  M=42/547 (0.076782), slack=41/7658, arc_cert=True, arc_margin=87/4, priv14=2, unit_missing=(13,), source=principal_drop_q13_k3, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 546)
+    first sum-binding pair=(1, 546) D=547 j=42 14j-D=41
+  M=56/729 (0.076818), slack=55/10206, arc_cert=True, arc_margin=88/3, priv14=2, unit_missing=(13,), source=principal_drop_q13_k4, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 728)
+    first sum-binding pair=(1, 728) D=729 j=56 14j-D=55
+  M=7/89 (0.078652), slack=9/1246, arc_cert=True, arc_margin=7/5, priv14=2, unit_missing=(), source=principal_drop_q12_k1, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 84)
+    first sum-binding pair=(5, 84) D=89 j=7 14j-D=9
+  M=14/173 (0.080925), slack=23/2422, arc_cert=True, arc_margin=19/5, priv14=2, unit_missing=(), source=principal_drop_q12_k2, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 168)
+    first sum-binding pair=(5, 168) D=173 j=14 14j-D=23
+  M=21/257 (0.081712), slack=37/3598, arc_cert=True, arc_margin=31/5, priv14=2, unit_missing=(), source=principal_drop_q12_k3, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 252)
+    first sum-binding pair=(5, 252) D=257 j=21 14j-D=37
+  M=28/341 (0.082111), slack=51/4774, arc_cert=True, arc_margin=43/5, priv14=2, unit_missing=(), source=principal_drop_q12_k4, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 336)
+    first sum-binding pair=(5, 336) D=341 j=28 14j-D=51
+  M=2/23 (0.086957), slack=5/322, arc_cert=False, arc_margin=-9/44, priv14=1, unit_missing=(), source=principal_drop_q6_k1, S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 42)
+    first sum-binding pair=(11, 12) D=23 j=2 14j-D=5
+  M=2/23 (0.086957), slack=5/322, arc_cert=True, arc_margin=13/22, priv14=1, unit_missing=(), source=principal_drop_q6_k2, S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 84)
+    first sum-binding pair=(11, 12) D=23 j=2 14j-D=5
+  M=2/23 (0.086957), slack=5/322, arc_cert=True, arc_margin=61/44, priv14=1, unit_missing=(), source=principal_drop_q6_k3, S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 126)
+    first sum-binding pair=(11, 12) D=23 j=2 14j-D=5
+  M=2/23 (0.086957), slack=5/322, arc_cert=True, arc_margin=24/11, priv14=1, unit_missing=(), source=principal_drop_q6_k4, S=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 168)
+    first sum-binding pair=(11, 12) D=23 j=2 14j-D=5
+  M=2/23 (0.086957), slack=5/322, arc_cert=False, arc_margin=-11/16, priv14=1, unit_missing=(), source=two_drop_6_8_x16_m1, S=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 14, 16)
+    first sum-binding pair=(7, 16) D=23 j=2 14j-D=5
+  M=2/23 (0.086957), slack=5/322, arc_cert=True, arc_margin=13/36, priv14=2, unit_missing=(), source=two_drop_6_7_x15_m1, S=(1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14, 15)
+    first sum-binding pair=(9, 14) D=23 j=2 14j-D=5
+  M=14/157 (0.089172), slack=39/2198, arc_cert=True, arc_margin=69/8, priv14=2, unit_missing=(11,), source=principal_drop_q11_k1, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 154)
+    first sum-binding pair=(3, 154) D=157 j=14 14j-D=39
+  M=28/311 (0.090032), slack=81/4354, arc_cert=True, arc_margin=73/4, priv14=2, unit_missing=(11,), source=principal_drop_q11_k2, S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13, 308)
+    first sum-binding pair=(3, 308) D=311 j=28 14j-D=81
+
+By source prefix:
+  principal_drop_q10           count=   4 best_M=    1/11 arc_cert=   4/   4
+  principal_drop_q11           count=   4 best_M=  14/157 arc_cert=   4/   4
+  principal_drop_q12           count=   4 best_M=    7/89 arc_cert=   4/   4
+  principal_drop_q13           count=   4 best_M=  14/183 arc_cert=   4/   4
+  principal_drop_q2            count=   4 best_M=    2/17 arc_cert=   4/   4
+  principal_drop_q3            count=   4 best_M=    2/17 arc_cert=   4/   4
+  principal_drop_q4            count=   4 best_M=    2/19 arc_cert=   4/   4
+  principal_drop_q5            count=   4 best_M=    3/29 arc_cert=   4/   4
+  principal_drop_q6            count=   4 best_M=    2/23 arc_cert=   3/   4
+  principal_drop_q7            count=   4 best_M=    1/11 arc_cert=   4/   4
+  principal_drop_q8            count=   4 best_M=     1/9 arc_cert=   4/   4
+  principal_drop_q9            count=   4 best_M=  14/131 arc_cert=   4/   4
+  seeded_random_covering       count=  20 best_M=     1/7 arc_cert=  20/  20
+  two_drop_1_2_x15_m1          count=   1 best_M=     1/6 arc_cert=   1/   1
+  two_drop_1_3_x15_m1          count=   1 best_M=    2/17 arc_cert=   1/   1
+  two_drop_1_4_x15_m1          count=   1 best_M=    2/17 arc_cert=   1/   1
+  two_drop_1_5_x15_m1          count=   1 best_M=    2/17 arc_cert=   1/   1
+  two_drop_1_6_x15_m1          count=   1 best_M=    2/17 arc_cert=   1/   1
+  two_drop_1_7_x15_m1          count=   1 best_M=    2/17 arc_cert=   1/   1
+  two_drop_2_3_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_2_4_x15_m1          count=   1 best_M=     1/7 arc_cert=   1/   1
+  two_drop_2_5_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_2_6_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_2_7_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_3_4_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_3_5_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_3_5_x16_m1          count=   1 best_M=    1/10 arc_cert=   1/   1
+  two_drop_3_6_x15_m1          count=   1 best_M=    3/22 arc_cert=   1/   1
+  two_drop_3_6_x16_m1          count=   1 best_M=    3/23 arc_cert=   1/   1
+  two_drop_3_7_x15_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_3_7_x16_m1          count=   1 best_M=    1/10 arc_cert=   1/   1
+  two_drop_3_8_x16_m1          count=   1 best_M=    1/10 arc_cert=   1/   1
+  two_drop_4_5_x15_m1          count=   1 best_M=    2/21 arc_cert=   0/   1
+  two_drop_4_5_x16_m1          count=   1 best_M=    2/19 arc_cert=   0/   1
+  two_drop_4_6_x15_m1          count=   1 best_M=    2/21 arc_cert=   0/   1
+  two_drop_4_6_x16_m1          count=   1 best_M=    2/19 arc_cert=   0/   1
+  two_drop_4_7_x15_m1          count=   1 best_M=    2/21 arc_cert=   1/   1
+  two_drop_4_7_x16_m1          count=   1 best_M=    2/19 arc_cert=   1/   1
+  two_drop_4_8_x16_m1          count=   1 best_M=    3/23 arc_cert=   1/   1
+  two_drop_5_6_x15_m1          count=   1 best_M=    2/21 arc_cert=   0/   1
+  two_drop_5_6_x16_m1          count=   1 best_M=    1/11 arc_cert=   0/   1
+  two_drop_5_7_x15_m1          count=   1 best_M=    2/21 arc_cert=   1/   1
+  two_drop_5_7_x16_m1          count=   1 best_M=    1/11 arc_cert=   1/   1
+  two_drop_5_8_x16_m1          count=   1 best_M=    1/11 arc_cert=   0/   1
+  two_drop_6_7_x15_m1          count=   1 best_M=    2/23 arc_cert=   1/   1
+  two_drop_6_7_x16_m1          count=   1 best_M=    1/11 arc_cert=   1/   1
+  two_drop_6_8_x16_m1          count=   1 best_M=    2/23 arc_cert=   0/   1
+  two_drop_7_8_x16_m1          count=   1 best_M=    2/15 arc_cert=   1/   1
+
+Principal single-drop towers: current q-covering floor
+  These rows are AP13 with q removed and lcm(q,14)k inserted.
+  The table separates q-covering from the stronger unit-residue coverage condition.
+   q  k    w          M      slack     unit_missing  arc?
+   2  1   14       2/17     11/238               ()  True
+   3  1   42       2/17     11/238             (3,)  True
+   4  1   28       2/19      9/266               ()  True
+   5  4  280       3/29     13/406             (5,)  True
+   6  1   42       2/23      5/322               () False
+   7  1   14       1/11      3/154               ()  True
+   8  1   56        1/9      5/126               ()  True
+   9  1  126     14/131    65/1834             (9,)  True
+  10  1   70       1/11      3/154               ()  True
+  11  1  154     14/157    39/2198            (11,)  True
+  12  1   84       7/89     9/1246               ()  True
+  13  1  182     14/183    13/2562            (13,)  True
+
+Tournament Analysis: exact hardness vs blocking-height proxy
+  vertices: 96 hardest sampled q-covering rows
+  pairwise observable: exact M-slack hardness; tie path = lexicographic S
+  comparison gauge: fragility=sum_q 1/count_q, private parked obligations, arc margin
+  pressure-order agreements: 2963/4560 = 0.650
+  edge flips vs pressure proxy: 1597/4560 = 0.350
+  exact tournament score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1, 41: 1, 42: 1, 43: 1, 44: 1, 45: 1, 46: 1, 47: 1, 48: 1, 49: 1, 50: 1, 51: 1, 52: 1, 53: 1, 54: 1, 55: 1, 56: 1, 57: 1, 58: 1, 59: 1, 60: 1, 61: 1, 62: 1, 63: 1, 64: 1, 65: 1, 66: 1, 67: 1, 68: 1, 69: 1, 70: 1, 71: 1, 72: 1, 73: 1, 74: 1, 75: 1, 76: 1, 77: 1, 78: 1, 79: 1, 80: 1, 81: 1, 82: 1, 83: 1, 84: 1, 85: 1, 86: 1, 87: 1, 88: 1, 89: 1, 90: 1, 91: 1, 92: 1, 93: 1, 94: 1, 95: 1}
+  directed 3-cycles in exact tournament: 0
+  readout: exact hardness is nearly scalar/transitive by construction; the useful
+          signal is the flip rate, i.e. how much blocking pressure fails to predict M.
+
+Assumption challenge ledger
+  Runner vertices preserve exact speed identity but destroy endpoint/component adjacency.
+  q-obligation vertices preserve THM-523 covering necessity but destroy timing and binders.
+  Parked-runner private obligations preserve the small-m resonance source but miss
+    multi-parked rows where deletion leaves a covering core.
+  Safe arcs/endpoints preserve constructive witnesses (THM-526) but W(A) is non-uniform.
+  Binding-pair vertices preserve the exact LRC predicate (THM-524) but the crossing
+    index j>=D/14 is tautological unless j is derived from non-M arithmetic.
+  In this sample, arc residuals with no parked private obligation: 0/9
+
+Hypothesis generated:
+  HYP-2579 (proposed): after THM-523/524/526, the remaining proof is a
+  private-obligation recursion.  Arc-width discharges large parked runners;
+  principal towers collapse to k=1; the real residual consists of rows where
+  deleting any parked runner either leaves another q-covering core or gives
+  a small-m binding crossing whose private q-obligations determine the flank.
+  The immediate correction is that q-covering and unit-residue coverage are
+  different floors: {1..12,182} is a q-covering principal row with M=14/183,
+  closer to 1/14 than the older {1..11,13,84} cover-all-unit champion.
