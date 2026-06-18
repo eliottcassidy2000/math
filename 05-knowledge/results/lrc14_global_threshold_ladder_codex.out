@@ -273,6 +273,22 @@ STEP 6. Proof-obligation tournament
   leaders=[(5, 'global_1_7'), (4, 'slack_1_6'), (3, 'slack_3_14'), (2, 'quarter_1_4'), (1, 'near_via_4_15'), (0, 'via_2_7')]
 
 ========================================================================================
+STEP 7. Component-width diagnostic for finite denominator placement
+========================================================================================
+  quarter_min: alpha=1/4 P=(1, 2, 3) E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+    measure=1/140 = 0.007143 components=2 max_width=1/280 min_width=1/280
+    first_components=[(Fraction(1, 14), Fraction(3, 40)), (Fraction(37, 40), Fraction(13, 14))]
+  near_via_min: alpha=4/15 P=(1, 2, 3, 11) E=(0, 2, 3, 4, 5, 6, 7, 8, 10)
+    measure=2/525 = 0.003810 components=2 max_width=1/525 min_width=1/525
+    first_components=[(Fraction(1, 14), Fraction(11, 150)), (Fraction(139, 150), Fraction(13, 14))]
+  via_zero_k7_at_4_15: alpha=4/15 P=(1, 2, 3, 6, 12, 13) E=(0, 2, 3, 4, 5, 6, 8)
+    measure=529/13650 = 0.038755 components=8 max_width=1/105 min_width=1/420
+    first_components=[(Fraction(5, 56), Fraction(11, 120)), (Fraction(5, 28), Fraction(11, 60)), (Fraction(5, 14), Fraction(11, 30)), (Fraction(34, 75), Fraction(83, 182)), (Fraction(99, 182), Fraction(41, 75)), (Fraction(19, 30), Fraction(9, 14))]
+  via_zero_k9_at_4_15: alpha=4/15 P=(1, 2, 3, 13) E=(0, 2, 3, 4, 5, 6, 7, 8, 9)
+    measure=37/6825 = 0.005421 components=2 max_width=37/13650 min_width=37/13650
+    first_components=[(Fraction(34, 75), Fraction(83, 182)), (Fraction(99, 182), Fraction(41, 75))]
+
+========================================================================================
 TAKEAWAY
 ========================================================================================
   1. The via-max alpha=2/7 density floor is exactly the wrong target:

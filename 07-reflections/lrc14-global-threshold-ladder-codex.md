@@ -56,6 +56,18 @@ suggests a cleaner two-step proof:
 This reframes "covering forbids small binding denominator remainder" as a
 placement theorem with slack, rather than as a private pair inequality.
 
+There is a component-width version of the same thought.  In the current exact
+minima, the reservoirs are not dust:
+
+- The `1/4` minimum `rho=1/140` is two intervals, each width `1/280`.
+- The `4/15` minimum `rho=2/525` is two intervals, each width `1/525`.
+- A via-zero case at `4/15` still has two intervals of width `37/13650`.
+
+So the bounded-spread proof might not need a delicate discrepancy theorem at
+first.  It may be enough to prove a uniform component-width floor for the
+slack reservoir, then hit it by the `1/(14Vmax)` grid.  The relation-lattice
+Fourier work can take over only when spread escapes the bounded regime.
+
 ## The New Conjectural Lever
 
 The critical-threshold probe computed

@@ -584,6 +584,28 @@ def main() -> None:
     print(f"  leaders={tour['leaders']}")
 
     print("\n" + "=" * 88)
+    print("STEP 7. Component-width diagnostic for finite denominator placement")
+    print("=" * 88)
+    component_cases = [
+        ("quarter_min", (1, 2, 3), (0, 2, 3, 4, 5, 6, 7, 8, 9, 10), F(1, 4)),
+        ("near_via_min", (1, 2, 3, 11), (0, 2, 3, 4, 5, 6, 7, 8, 10), F(4, 15)),
+        ("via_zero_k7_at_4_15", (1, 2, 3, 6, 12, 13), (0, 2, 3, 4, 5, 6, 8), F(4, 15)),
+        ("via_zero_k9_at_4_15", (1, 2, 3, 13), (0, 2, 3, 4, 5, 6, 7, 8, 9), F(4, 15)),
+    ]
+    for label, P, E, alpha in component_cases:
+        both = intersect(safe_set(P), good_set_thr(E, alpha))
+        widths = [b - a for a, b in both]
+        total = measure(both)
+        max_width = max(widths) if widths else F(0)
+        min_width = min(widths) if widths else F(0)
+        print(f"  {label}: alpha={alpha} P={P} E={E}")
+        print(
+            f"    measure={total} = {float(total):.6f} components={len(both)} "
+            f"max_width={max_width} min_width={min_width}"
+        )
+        print(f"    first_components={both[:6]}")
+
+    print("\n" + "=" * 88)
     print("TAKEAWAY")
     print("=" * 88)
     print("  1. The via-max alpha=2/7 density floor is exactly the wrong target:")

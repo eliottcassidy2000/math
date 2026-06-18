@@ -54,6 +54,27 @@ If `alpha0=4/15` works, the available gap margin over the LRC threshold is
 `4/15 - 1/7 = 13/105`, which is large enough to make the finite-placement
 lemma much less knife-edge than the old via-max `2/7` route.
 
+## Component-Width Diagnostic
+
+For denominator placement, a positive measure floor is not quite enough; a
+grid argument wants an interval component wide enough to catch a residue.
+On the current exact minima this component structure is simple:
+
+- `alpha=1/4` minimum:
+  `P=(1,2,3)`, `E=(0,2,3,4,5,6,7,8,9,10)` has
+  `rho=1/140` split into two equal components of width `1/280`.
+- `alpha=4/15` minimum:
+  `P=(1,2,3,11)`, `E=(0,2,3,4,5,6,7,8,10)` has
+  `rho=2/525` split into two equal components of width `1/525`.
+- A via-zero case at the same `alpha=4/15`,
+  `P=(1,2,3,13)`, `E=(0,2,3,4,5,6,7,8,9)`, has two components of width
+  `37/13650`.
+
+Thus the next finite-denominator lemma can aim for a uniform **component
+width** lower bound in the bounded-spread regime, not merely a measure lower
+bound.  Large-spread/relation-free regimes should then be handled by the
+Fourier/Weyl tail from the B(k) work.
+
 ## Tournament Analysis
 
 Vertices are proof obligations / thresholds:
