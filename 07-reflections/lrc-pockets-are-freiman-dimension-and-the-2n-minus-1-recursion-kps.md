@@ -72,8 +72,15 @@ its prime factorization sets the **stratum depth** of the relation graph:
    n=16: 2n−1 = 31      prime         1 stratum
    n=18: 2n−1 = 35 = 5·7              2 strata
 ```
-**n=14 is anomalous: 27 = 3³ is the prime-power with the deepest gcd-stratification in range**, and
-the tight sporadic `V*` lives precisely in its gcd-3 blind-spot stratum. The signed cancellation that
+**n=14 is anomalous: 27 = 3³ is the unique nontrivial prime power among `2n−1` in range**, and the
+AP-to-cap margin on the binding row confirms it QUANTITATIVELY (workflow recursion engine, exact):
+`n=10: +0.204, n=12: +0.192, n=14: +0.054 (tightest by ~4×), n≥16: larger again`. The difficulty
+spikes exactly at the prime-power `C`. (Honest caveat: the tight sporadic `V*` lives in `C=27`'s
+gcd-3 blind-spot stratum, but that mod-27 antipodal structure is INERT for the *binding* reduced
+clusters k=8,9,10 — their elements are all `< C/2 ≈ 13.5`, so they carry zero antipodal `{a,27−a}`
+relations; the binding danger is in genuine *integer* relations among small elements, and the mod-27
+shell structure only activates for the large-element regime like `V*`'s 24. The summand-graph
+modulus thus diagnoses *which n is hard* (its factorization) more than it carries the binding tail.) The signed cancellation that
 makes `|corr|` diverge while `corr` stays small (MISTAKE-078) is the destructive interference of the
 antipodal `±a` shells *within* the gcd-3 stratum — which is codex's reciprocal-tail/residue-lift crux
 (HYP-2633) seen from the additive side. The two active LRC(14) threads are addition and multiplication

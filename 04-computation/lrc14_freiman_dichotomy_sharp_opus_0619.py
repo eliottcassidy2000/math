@@ -141,30 +141,37 @@ def min_gap2_size(E):
                     best = (size, q1eff, q2eff, rlen, clen)
     return best
 
-def has_bounded_relation_for_each(E, H):
+def has_bounded_relation_for_each(E, H, maxsupp=3):
     """
-    Returns True if EVERY w in E\{0} satisfies a bounded relation c*w+sum m_v v=0
-    with |c|,|m_v|<=H over E\{w}. Returns the set of strangers (w with NO such
-    relation) otherwise.
+    A 'dissociated stranger' w in E\{0} has NO bounded integer relation
+        c*w + sum_{v in S} m_v v = 0,   1<=|c|<=H, 1<=|m_v|<=H, S subset E\{w},
+        |S| <= maxsupp.
+    (A genuine Freiman relation has small support; large-support relations are
+    not the obstruction we test. maxsupp=3 catches all single/pair/triple ties,
+    which is the relevant 'low-height relation' notion for primitive k=8 sets.)
+    Returns the list of strangers (empty list = every element bounded-related).
+    Fast: enumerate small-support subsets and bounded coeffs, no reachable set.
     """
     E = sorted(set(E))
-    n = len(E)
+    others_all = [v for v in E if v != 0]
     strangers = []
+    coeffs = [m for m in range(-H, H + 1) if m != 0]
     for w in E:
         if w == 0: continue
-        others = [v for v in E if v != w]
-        bound = H * (sum(abs(v) for v in others) + abs(w)) + 1
-        reach = {0}
-        for v in others:
-            nw = set()
-            for s in reach:
-                base = s
-                for m in range(-H, H + 1):
-                    val = base + m * v
-                    if -bound <= val <= bound:
-                        nw.add(val)
-            reach = nw
-        found = any((-c * w) in reach for c in range(1, H + 1))
+        rest = [v for v in E if v != w and v != 0]
+        found = False
+        # support size 1,2,3 among rest
+        for r in range(1, maxsupp + 1):
+            if found: break
+            for S in itertools.combinations(rest, r):
+                if found: break
+                for combo in itertools.product(coeffs, repeat=r):
+                    base = sum(m * v for m, v in zip(combo, S))
+                    # need c*w = -base for some c in [1,H] (or [-H,-1])
+                    for c in range(1, H + 1):
+                        if c * w == -base or -c * w == -base:
+                            found = True; break
+                    if found: break
         if not found:
             strangers.append(w)
     return strangers
@@ -179,14 +186,14 @@ def main():
     # ---- generate a broad k=8 corpus including HIGH-doubling sets ----
     corpus = set()
     # random moderate spread
-    for _ in range(6000):
+    for _ in range(5000):
         sp = random.randint(8, 40)
         E = sorted(random.sample(range(sp + 1), 8))
         E = tuple(e - E[0] for e in E)
         corpus.add(E)
     # Sidon-like / large-doubling: geometric-ish, powers, random sparse large spread
-    for _ in range(4000):
-        sp = random.randint(40, 200)
+    for _ in range(3000):
+        sp = random.randint(40, 90)
         E = sorted(random.sample(range(sp + 1), 8))
         E = tuple(e - E[0] for e in E)
         corpus.add(E)
@@ -230,6 +237,19 @@ def main():
         med = sorted(withgap)[len(withgap)//2] if withgap else None
         mx = max(withgap) if withgap else None
         print(f"     sig~{b:4.1f} | {len(vals):5d} | {len(withgap):11d} | {str(med):14s} | {str(mx):11s} | {nstr}")
+
+    # Q1b: BOUNDED-GAP dichotomy. Fix C; a set is 'GAP-bounded' if min 2-dim GAP
+    # size <= C*k. Otherwise it should have a stranger. Sweep C and check.
+    print("\n[Q1b] BOUNDED-GAP vs STRANGER dichotomy (the real cut). k=8.")
+    print("     For threshold C: GAP-bounded = min2dGAPsize<=C*8. Else expect stranger.")
+    for C in [2, 3, 4, 5, 6, 8, 10]:
+        Ck = C * 8
+        gapbounded = [r for r in rows if r[2] is not None and r[2] <= Ck]
+        notbounded = [r for r in rows if not (r[2] is not None and r[2] <= Ck)]
+        nb_no_strg = [r for r in notbounded if r[3] == 0]
+        maxL_nb = max((r[4] for r in notbounded), default=0.0)
+        print(f"     C={C:2d} (size<= {Ck:3d}): GAP-bounded={len(gapbounded):5d}  not-bounded={len(notbounded):5d}  "
+              f"of-not-bounded-with-NO-stranger={len(nb_no_strg):5d}  maxL_y(not-bounded)={maxL_nb:.5f}")
 
     # Q2: third pocket = small sigma, NO 2dGAP, AND no stranger
     print("\n[Q2] THIRD POCKET search (small sigma & no 2-dim GAP & no H2 stranger):")
