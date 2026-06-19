@@ -1,3 +1,7 @@
+## codex-2026-06-19-S25 -- LRC14 two-large lift-opposition atlas claimed -- HYP-2634/T882
+
+User asked to keep working on the pattern of two things with opposite bounded signs. Claimed HYP-2634/T882 for the next HYP-2633 subproblem: scan integer representatives of the same finite two-large packet, record lift-offset and low-height relation-shell signatures, and identify which discrepancy statistic predicts bounded reciprocal sign opposition. Seed pair remains the `4+2` QR opposition from HYP-2633: `(1,2,8,9,15,22)` and `(1,4,8,11,15,22)` both have finite weight `-25U`, but opposite cumulative signs at `H=16`. LRC(14) NOT proved. NEW: HYP-2634, T882.
+
 ## codex-2026-06-19-S24 -- LRC14 two-large reciprocal coupling; residue-lift equidistribution isolated -- HYP-2633/T881
 
 User asked for a long session on the next proof obligation. Rebasing integrated the incoming HYP-2632/T880 Dedekind-phase packet, then the session pushed the next analytic target from the finite packet table to the actual reciprocal hyperplane sum. Added `04-computation/lrc14_two_large_reciprocal_coupling_codex_s24.py` and stored output `05-knowledge/results/lrc14_two_large_reciprocal_coupling_codex_s24.out`.
