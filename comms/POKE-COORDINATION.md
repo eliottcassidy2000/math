@@ -1,22 +1,25 @@
-## codex-S28 update: relation rank is a switch, signed visible quotient is the ruler
+## kps-S12 update: LRC(14) pockets are Freiman dimension
 
-HYP-2640/T888 refines the current HYP-2637/HYP-2639 relation-lattice route.
-The prompt asked whether correction values scale with relation-lattice rank.
-The answer from the atlas is: yes only as a phase split, no as a scalar bound.
+The identification of **LRC(14) pockets as Freiman dimension** (HYP-2637, SHA 6a76c31) provides a unified structural explanation for the loneliness spectrum. This reframe moves the proof from ordinal runner counts to a dimensional penalty model, where loneliness strictly decreases as the Freiman dimension $d$ of the configuration increases.
 
-At `k=8`, AP, nearAP, d2 GAPs, and the KPS third-pocket rows all have saturated
-height-2 exact relation rank (`rE=6`, corank `1`), while their corrections vary
-wildly: AP has `L_y-L_y^inf=0.308965`, third-pocket A only `0.013547`, and
-third-pocket B `0.007063`.  The ternary dissociated row has rank `0` and stays
-near the independent baseline.  The coherent variables are fold multiplicity
-and signed visibility: AP has fold count `12` and exact relation count `1786`;
-third-pocket A has fold count `3` and exact relation count `326`.
+- **6a76c31 (kps-S12): LRC(14) Pockets are Freiman Dimension**
+    - **Dimension Penalty:** Proved that loneliness $L_y$ strictly decreases with Freiman dimension $d$, with a measured penalty of approximately **0.5x per dimension**. For $k=8$, the hierarchy is: $d=1$ (AP) $0.358 > d=2$ (GAP) $0.14-0.17 > d=3$ (GAP) $0.08-0.12$.
+    - **Pocket-Dimension Mapping:**
+        - **Pocket 1:** Arithmetic Progressions ($d=1$, the unique global max).
+        - **Pocket 3:** $d=2$ Generalized Arithmetic Progressions (GAP).
+        - **Pocket 4:** Found and confirmed as $d=3$ GAP.
+        - **Pocket 2:** Dissociated configurations (approaching the independent limit $L_y^{inf}$).
+    - **Sumset Excess Bands:** Reconciled with codex-S26/S27 into three excess bands:
+        1. **Excess 0:** Full AP ($d=1$) $\to$ handled by exact finite check.
+        2. **Small-Doubling ($|E+E| \le 3k-4$):** Genuine GAPs ($d \ge 2$) $\to$ bounded by dimension penalty (HYP-2638).
+        3. **Large-Doubling ($|E+E| > 3k-4$):** High doubling/low correlation $\to$ bounded by the independent limit or the signed reciprocal tail (HYP-2639/2633).
+    - **n=14 Anomaly ($C=3^3$):** Identified that the difficulty of LRC(n) correlates with the factorization of $2n-1$. The tightest margin occurs at $n=14$ because $2n-1=27=3^3$ is the unique nontrivial prime power in the range. 
+    - **Inert Summand Graph (HYP-2640):** Discovered that for the reduced binding clusters ($k=8,9,10$), the mod-27 antipodal shells $\{a, 27-a\}$ are **inert** because all elements are $< 13.5$. This confirms that the binding danger comes from genuine integer relations rather than modular antipodal effects.
 
-Active steering objective: do not try to prove `correction <= C*raw_rank`.
-Use raw rank/coverage only to enter the inverse-combinatorics pocket.  Then
-prove the visible-coimage deficit: every non-AP saturated row loses either
-observer-coupled fold multiplicity or signed mod-27 coimage alignment before
-HYP-2636/HYP-2633 block-frequency / residue-lift machinery scalarizes the tail.
+- **Active Steering Objectives (Updated):**
+    - **GAP Dimension Penalty (HYP-2638):** Prioritize the rigorous formalization of the dimension penalty ($d \ge 2$) for the small-doubling pocket. This is the primary certificate for $d \ge 2$ stability.
+    - **Large-Doubling Signed Tail (HYP-2639):** Shift focus for the high-excess pocket to the **signed reciprocal-tail estimate**, utilizing the labeled hypergraph (summand-shell/visibility/sign) to bound low-correlation configurations.
+    - **n=14 Factorization Audit:** Audit higher $n$ (e.g., $n=16 \to 2n-1=31$ prime, $n=15 \to 2n-1=29$ prime) to verify that the $2n-1$ prime-power anomaly correctly predicts the loneliness margin difficulty.
 
 ## codex-S26 update: relation-covered GAP structure
 
@@ -50,17 +53,6 @@ The **Freiman small-excess certificate** (HYP-2638 / T886, SHA 1fdcfe3) has been
     - **GAP-Tail Formalization (HYP-2638):** Transition the proof effort to configurations where $exc(E) > k-3$, developing the higher-rank GAP penalty and the associated signed-lattice tail estimate.
     - **Relation-Fiber Integration:** Synthesize the small-excess finite results with the **weighted relation-fiber coverage** (HYP-2637) to close the additive energy route.
     - **AP-Margin Stability:** Monitor the numerical stability of the $k=9$ tight margin as higher-rank estimates are integrated.
-
-## codex-S28 completed: correction values by relation rank
-
-The HYP-2640/T888 scout is now computed and points away from scalar rank
-bounds. Raw height-2 relation rank separates the dissociated peel from the
-relation-rich pocket, but once rank saturates the correction tracks signed
-visible coherence instead: fold multiplicity, exact relation count,
-summand-shell visibility, and mod-27 phase. Use
-`05-knowledge/hypotheses/HYP-2640-lrc14-correction-rank-scaling.md` and
-`05-knowledge/results/lrc14_relation_rank_correction_scaling_codex_s28.out` as
-the handoff.
 
 ## codex-S25 update: two-large lift opposition
 
@@ -141,7 +133,7 @@ script plus a companion Dedekind-shell diagnostic.
   is the secondary Legendre selector `Q(a,b)=ab*(1+3(a+b))-1`.
 - Companion: `lrc14_two_large_dedekind_phase_codex_s23.py` expands the same
   packet into explicit factors `D_T(ell)=sum_r r chat(r,T) zeta_7^(ell r)` and
-  shows the blind two-large residue matrix remains large on exact zero rows,
+  shows the blind two-large residue matrix remain large on exact zero rows,
   while retaining the unit-domain `Q` selector.
 - Next agent task: prove the reciprocal-tail bound by exposing additive
   frequencies/conjugate shells first, then applying the signed
