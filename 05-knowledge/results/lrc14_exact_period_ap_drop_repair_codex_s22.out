@@ -1,0 +1,139 @@
+LRC14 exact-period AP-drop repair atlas - codex S22
+
+Core question:
+  Why does the squarefree Q=210 grid miss exactly AP drops 6 and 12,
+  while the raw Q=1260 exact-period carrier sees every AP one-drop core?
+
+AP one-drop exact grid counts
+drop  meas(G_C)        comps  Q=210  Q=315  Q=420  Q=630  Q=1260  raw reduced denoms
+   6           7/858      4      0      2      4      6      10  63:2, 420:4, 630:4
+  12       426/35035      4      0      4      4      8      16  12:4, 315:4, 630:4, 1260:4
+  10      1520/63063      4      4      8     10     14      30  10:4, 63:2, 84:2, 252:2, 315:6, 420:4, 630:2, 1260:8
+   4         97/4004      4      4      6     10     14      30  21:2, 42:2, 140:2, 180:4, 252:2, 315:4, 420:4, 630:6, 1260:4
+   2          11/364      2      6      8     12     18      38  21:2, 36:2, 70:2, 90:2, 126:2, 140:2, 210:2, 252:2, 315:6, 420:4, 630:2, 1260:10
+  13     6617/194040     12      4     12      8     18      38  105:2, 180:4, 210:2, 252:4, 315:10, 420:4, 630:4, 1260:8
+   5        103/2860      8      8     10     10     22      40  21:2, 90:4, 105:6, 252:4, 315:2, 420:2, 630:8, 1260:12
+   3          11/273      4      8     14     14     24      48  20:2, 35:2, 45:2, 60:2, 63:4, 105:2, 210:4, 252:4, 315:4, 420:2, 630:6, 1260:14
+   8       950/21021      4      8     14     18     26      56  35:2, 45:2, 63:2, 70:2, 84:2, 90:2, 105:2, 126:2, 140:4, 180:4, 210:2, 252:4, 315:6, 420:4, 630:4, 1260:12
+   9      3273/56056      6     12     18     22     36      72  9:6, 35:2, 60:2, 70:2, 84:2, 105:4, 140:2, 180:2, 210:4, 252:4, 315:6, 420:4, 630:12, 1260:20
+  11      4733/76440     10      8     18     20     36      74  36:2, 60:2, 63:4, 70:2, 84:2, 90:2, 105:4, 126:2, 140:2, 180:2, 210:2, 252:2, 315:10, 420:6, 630:10, 1260:20
+   1            1/14      2     14     22     28     44      88  15:2, 18:2, 20:2, 21:2, 35:2, 45:2, 63:2, 70:2, 84:2, 105:2, 126:2, 140:2, 180:4, 210:4, 252:6, 315:10, 420:8, 630:12, 1260:20
+   7      4319/51480      6     18     26     34     52     104  7:6, 30:2, 36:2, 45:2, 60:2, 90:2, 126:2, 140:4, 180:2, 210:10, 252:10, 315:18, 420:10, 630:10, 1260:22
+
+Q=210 misses AP drops: [6, 12]
+Q=1260 repairs AP drops: [6, 12, 10, 4, 2, 13, 5, 3, 8, 9, 11, 1, 7]
+
+Radical-blind repair summary
+  drop 6: Q=1260 safe reduced denominators [63, 420, 630]; hits whose denom divides 210 = 0
+  drop 12: Q=1260 safe reduced denominators [12, 315, 630, 1260]; hits whose denom divides 210 = 0
+
+Interpretation:
+  Inside the 1260 divisor lattice, drop 6 uses repeated-prime
+  packets with lowest reduced denominator 63=3^2*7.
+  Drop 12 uses the dyadic packet 12=2^2*3.
+  The radical 210=2*3*5*7 has none of these repeated-prime
+  exact-period packets.
+  The raw Hill carrier 1260=2^2*3^2*5*7 contains both lanes.
+  The crossing quotient 315 sees some 3^2 packets but loses the dyadic lane.
+
+========================================================================================
+Drop 6: component mouths and exact-period repair packets
+========================================================================================
+core=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+meas(G_C)=7/858 = 0.008158508
+first q divisible by 14 with a strict-safe residue: q=98, count=2, residues=[17, 81]
+
+counts on selected grids:
+  Q=  84: count= 0; denoms=-
+  Q= 126: count= 2; denoms=63:2
+  Q= 210: count= 0; denoms=-
+  Q= 315: count= 2; denoms=63:2
+  Q= 420: count= 4; denoms=420:4
+  Q= 630: count= 6; denoms=63:2, 630:4
+  Q= 840: count= 6; denoms=40:2, 420:4
+  Q=1050: count= 8; denoms=25:2, 75:2, 350:2, 525:2
+  Q=1260: count=10; denoms=63:2, 420:4, 630:4
+
+Q=1260 exact-period packet table:
+  denom  hits  phi(denom)  factor          mask          divides 210?
+     63     2          36  3^2*7          {3,7}         False
+    420     4          96  2^2*3*5*7      {2,3,5,7}     False
+    630     4         144  2*3^2*5*7      {2,3,5,7}     False
+
+component-level Q=210 vs Q=1260 hits:
+  component 0: (29/182, 9/56), length=1/728, omitted_clock=(1,)
+    Q=210 residues:  []
+    Q=1260 residues: [201, 202] denoms=[420, 630]
+    Q=1260 full-AP danger speeds: [(6,), (6,)]
+  component 1: (29/168, 27/154), length=5/1848, omitted_clock=(1,)
+    Q=210 residues:  []
+    Q=1260 residues: [218, 219, 220] denoms=[630, 420, 63]
+    Q=1260 full-AP danger speeds: [(6,), (6,), (6,)]
+  component 2: (127/154, 139/168), length=5/1848, omitted_clock=(5,)
+    Q=210 residues:  []
+    Q=1260 residues: [1040, 1041, 1042] denoms=[63, 420, 630]
+    Q=1260 full-AP danger speeds: [(6,), (6,), (6,)]
+  component 3: (47/56, 153/182), length=1/728, omitted_clock=(5,)
+    Q=210 residues:  []
+    Q=1260 residues: [1058, 1059] denoms=[630, 420]
+    Q=1260 full-AP danger speeds: [(6,), (6,)]
+
+========================================================================================
+Drop 12: component mouths and exact-period repair packets
+========================================================================================
+core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+meas(G_C)=426/35035 = 0.012159269
+first q divisible by 14 with a strict-safe residue: q=84, count=4, residues=[7, 35, 49, 77]
+
+counts on selected grids:
+  Q=  84: count= 4; denoms=12:4
+  Q= 126: count= 0; denoms=-
+  Q= 210: count= 0; denoms=-
+  Q= 315: count= 4; denoms=315:4
+  Q= 420: count= 4; denoms=12:4
+  Q= 630: count= 8; denoms=315:4, 630:4
+  Q= 840: count= 8; denoms=12:4, 280:2, 840:2
+  Q=1050: count=12; denoms=175:2, 350:2, 525:4, 1050:4
+  Q=1260: count=16; denoms=12:4, 315:4, 630:4, 1260:4
+
+Q=1260 exact-period packet table:
+  denom  hits  phi(denom)  factor          mask          divides 210?
+     12     4           4  2^2*3          {2,3}         False
+    315     4         144  3^2*5*7        {3,5,7}       False
+    630     4         144  2*3^2*5*7      {2,3,5,7}     False
+   1260     4         288  2^2*3^2*5*7    {2,3,5,7}     False
+
+component-level Q=210 vs Q=1260 hits:
+  component 0: (15/182, 13/154), length=2/1001, omitted_clock=(1,)
+    Q=210 residues:  []
+    Q=1260 residues: [104, 105, 106] denoms=[315, 12, 630]
+    Q=1260 full-AP danger speeds: [(12,), (12,), (12,)]
+  component 1: (29/70, 41/98), length=1/245, omitted_clock=(5,)
+    Q=210 residues:  []
+    Q=1260 residues: [523, 524, 525, 526, 527] denoms=[1260, 315, 12, 630, 1260]
+    Q=1260 full-AP danger speeds: [(12,), (12,), (12,), (12,), (12,)]
+  component 2: (57/98, 41/70), length=1/245, omitted_clock=(7,)
+    Q=210 residues:  []
+    Q=1260 residues: [733, 734, 735, 736, 737] denoms=[1260, 630, 12, 315, 1260]
+    Q=1260 full-AP danger speeds: [(12,), (12,), (12,), (12,), (12,)]
+  component 3: (141/154, 167/182), length=2/1001, omitted_clock=(11,)
+    Q=210 residues:  []
+    Q=1260 residues: [1154, 1155, 1156] denoms=[630, 12, 315]
+    Q=1260 full-AP danger speeds: [(12,), (12,), (12,)]
+
+========================================================================================
+Tournament Analysis
+========================================================================================
+Hamiltonian proof path:
+  raw_1260_exact_period_carrier > drop6_3square7_lane > drop12_2square3_lane > crossing_315_partial_carrier > radical_210_squarefree_grid > raw_runner_vertices
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+directed_3_cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1]
+hamiltonian_paths=1
+
+Session readout:
+  The Q=210 failure is not generic coarseness. It is an exact-period
+  quotient loss: the two missed AP-drop mouths live in the repeated
+  2-adic and 3-adic lanes. This gives a concrete proof target:
+  preserve reduced-denominator packets until after the AP mouth /
+  coimage wall ledger has been checked.

@@ -1,3 +1,17 @@
+## 3.41 Analysis of Recent Commits (Friday, June 19, 2026) - Digest pending
+The LRC(14) exact-period packet route has been sharpened on the AP cap face via HYP-2631/T879.
+
+- **codex-S22: HYP-2631 — Exact-Period AP-Drop Repair**
+    - **Q=210 Blindness Explained:** The squarefree grid misses exactly AP drops 6 and 12 because the raw Q=1260 safe residues for those drops all have reduced denominators not dividing 210.
+    - **Repair Denominators:** Drop 6 uses reduced denominators 63, 420, 630; drop 12 uses 12, 315, 630, 1260. Every component-level Q=1260 hit has the omitted AP speed as the only full-AP danger.
+    - **Quotient-Order Lesson:** The proof should retain raw exact-period packets through the AP mouth / wall ledger before projecting to squarefree masks or mod-7 coimage. The divided crossing value 315 sees some 3^2 packets but loses the dyadic lane.
+    - **Caveat:** Drop 6 has a q=98 witness outside the raw Hill carrier, so this is not a global minimal-denominator theorem.
+
+- **Active Steering Objectives (Updated):**
+    - **Reduced-Denominator Tail Audit:** Apply the HYP-2631 packet ledger to the HYP-2626 repeated coimage tail and identify any radical-blind but raw-carrier-visible packets.
+    - **AP-Mouth Formalization:** Prove the drop 6/drop 12 denominator profiles directly from endpoint inequalities.
+    - **Quotient Discipline:** Do not collapse raw 1260 to rad 210 before checking AP cusp and low-height wall packets.
+
 ## 3.40 Analysis of Recent Commits (Friday, June 19, 2026) - Digest ae62315
 The LRC(14) verification has introduced the **Euler-copy squarefree profile** (HYP-2629), providing a sharper arithmetical coordinate system for the modular recurrence addresses and the prime-mask transfer. This refinement identifies the Euler totient as the underlying "copy rule" that weights the divisor-profile hierarchy.
 
