@@ -1,0 +1,7 @@
+Consecutive minimizes mu_1/7? (exhaustive spread<=k+5 + ALL perforations of {0..k+2})
+  k= 8: consec mu_1/7=691/735=0.94014  exhaustive-to-spread 13, all perf to top 11 -> CONSEC IS MIN
+  k= 9: consec mu_1/7=247/294=0.84014  exhaustive-to-spread 14, all perf to top 12 -> CONSEC IS MIN
+  k=10: consec mu_1/7=38/49=0.77551  exhaustive-to-spread 15, all perf to top 13 -> CONSEC IS MIN
+  k=11: consec mu_1/7=1381/2205=0.62630  exhaustive-to-spread 16, all perf to top 14 -> CONSEC IS MIN
+  k=12: consec mu_1/7=13823/24255=0.56990  exhaustive-to-spread 17, all perf to top 15 -> CONSEC IS MIN
+  k=13: consec mu_1/7=477/1078=0.44249  exhaustive-to-spread 18, all perf to top 16 -> CONSEC IS MIN

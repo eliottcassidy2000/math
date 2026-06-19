@@ -1,0 +1,41 @@
+============================================================================================
+PART 1: What does a cluster phase-GAP of width w actually buy? (the via-max derivation)
+============================================================================================
+Place k points on circle; pick a gap of width w; midpoint is w/2 from each neighbor.
+To make a SINGLE offset value y* with circ-dist >= 1/14 from EVERY phase, need the offset
+to sit in a gap of width >= 2*(1/14) = 1/7?  NO -- the cluster danger is at level 1/14 in the
+scaled coordinate, but the cluster speeds are Vmax-e ~ Vmax, so ||t(Vmax-e)|| spans the whole
+circle as t varies; the relevant object is frac(e x) and the 1/14 must be compared to the
+PHASE gap directly.  The via-max criterion (THM-528) uses gap>2/7 to fit the small-speed safe
+structure (G_P granularity 1/14 per p, but the cluster needs the gap to host a 1/7-radius ball
+=> width 2/7).  Let us TEST which threshold is SOUND by brute force on actual reconstructed S.
+
+============================================================================================
+PART 2: SOUNDNESS test. For reconstructed S=P u {Vmax-e}, large Vmax, is
+   'x in G_P AND cluster-maxgap{frac(e x)} > theta'  a SUBSET of  'exists lonely t for S'?
+We test theta=2/7 (claimed sufficient/sound) and theta=1/7 (claimed 'right object').
+Soundness = whenever the phase criterion holds at x, S is actually lonely (M(S)>1/14).
+============================================================================================
+reconstructed S tested: 6000
+  theta=2/7: criterion fired 12659 times; of those, S lonely 12659 times -> soundness 12659/12659 = 1.0000
+  theta=1/7: criterion fired 43627 times; of those, S lonely 43627 times -> soundness 43627/43627 = 1.0000
+
+NOTE: BOTH thresholds give S lonely 100% IF LRC(14) holds (S is a covering 13-set).
+That makes this test WEAK: it cannot distinguish a sound criterion from an unsound one,
+because all reconstructed S are lonely anyway (that's what we're trying to prove).
+The REAL question (below): does the criterion produce an EXPLICIT lonely t, locally?
+
+============================================================================================
+PART 3: THE ACTUAL SOUNDNESS QUESTION -- does cluster-maxgap>theta give a LOCAL witness?
+For the reduction to work, x in G_P with cluster-gap>theta must let us EXHIBIT t lonely for
+the FULL S (not rely on S being lonely a priori).  The via-max construction: t = x works for
+the small speeds (x in G_P).  For the cluster speeds Vmax-e, ||x(Vmax-e)|| = ||x*Vmax - e x||;
+with x*Vmax ~ uniform phase phi, the cluster dangers are at phi - frac(e x) mod 1 within 1/14.
+A gap of width w in {frac(e x)} of size > 2/7 lets us CHOOSE phi in the middle so every
+||x(Vmax-e)|| >= w/2 > 1/7 >= 1/14.  THAT needs w > 2/7, NOT 1/7.  So theta=2/7 is the SOUND
+via-max threshold; theta=1/7 is NOT a via-max witness by itself.
+============================================================================================
+=> The 1/7 measure is the right object ONLY UNDER the concurrent THM-530/HYP-2592 reduction,
+   which is a DIFFERENT (global, not via-max) sufficiency argument. This script CANNOT and
+   does NOT re-derive that reduction; it only confirms the 2/7 via-max arithmetic (w/2>1/7
+   needs w>2/7). The 1/7 reformulation's SOUNDNESS is an UNVERIFIED upstream dependency.

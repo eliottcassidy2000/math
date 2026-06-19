@@ -1,0 +1,9 @@
+# SUPERSEDED / CORRUPTED FILE -- DO NOT USE.
+# This path was written by two concurrent runs (file-write contention) plus an early buggy
+# accumulator. Any mu_1/7 value > 1 here is an ARTIFACT (mu is a measure of a subset of [0,1),
+# so mu_1/7 <= 1 always). AUTHORITATIVE numbers: lrc14_Bk_mu17_crudefloor_kps-S5-wf.out and
+# lrc14_Bk_mu17_isolated_kps-S5-wf.out.
+#   consecutive mu_1/7: k=8 691/735, k=9 247/294, k=10 38/49, k=11 1381/2205,
+#                       k=12 13823/24255, k=13 477/1078  (all <= 1).
+#   consecutive minimizes mu_1  k=10: min mu_1/7 (all spreads) = 0.7755 (38/49) at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+         thr_k=0.3956  SLACK=0.3799  OK (union bound holds)

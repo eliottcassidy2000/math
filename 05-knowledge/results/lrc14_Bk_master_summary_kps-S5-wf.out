@@ -1,0 +1,16 @@
+============================================================================================
+MASTER SUMMARY: spread bound B(k) and bounded-spread floor mu_min^bdd(k)
+============================================================================================
+ k |  F(k) ceil |   consec | mu_min^bdd | @spread |  B(k) | minimizer E
+ 4 |     0.9971 |   0.9048 |     0.9048 |       3 |     3 | (0, 1, 2, 3)
+ 5 |     0.9683 |   0.6429 |     0.6429 |       4 |     4 | (0, 1, 2, 3, 4)
+ 6 |     0.8999 |   0.5714 |     0.5714 |       5 |     5 | (0, 1, 2, 3, 4, 5)
+ 7 |     0.7998 |   0.3952 |     0.3714 |       8 |     8 | (0, 2, 3, 4, 5, 6, 8)
+ 8 |     0.6846 |   0.3327 |     0.3227 |      11 |    16 | (0, 2, 3, 4, 5, 6, 8, 11)
+ 9 |     0.5689 |   0.2827 |     0.1980 |      18 |    20 | (0, 5, 7, 8, 9, 10, 11, 13, 18)
+
+Observations:
+  * mu_min^bdd(k) is ALWAYS strictly below F(k) (the iid ceiling) AND below consecutive for k>=7.
+  * The minimizer is a SYMMETRIC bounded-spread perforated near-AP (reflection-invariant).
+  * Minimizer spread grows ~ 2k (4,5,6 consecutive; 7->8, 8->11, 9->18). NOT k-1 for k>=7.
+  * B(k) (spread beyond which min mu exceeds the floor) verified ~2k for k<=9.

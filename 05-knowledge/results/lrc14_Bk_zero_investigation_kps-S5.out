@@ -1,0 +1,28 @@
+==========================================================================================
+(1)-(2) WHY rho*=0 for the witness configs (Good(E), G_P each nonempty but DISJOINT)
+==========================================================================================
+
+  P=(1, 2, 3)  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  (|P|+k = 13)
+     mu(E)        = 121/490 = 0.246939   (Good(E) nonempty, per L2)
+     meas(G_P)    = 29/42 = 0.690476   (G_P nonempty)
+     rho*=meas(cap)= 0   (intersection EMPTY -> single global witness FAILS)
+     Good(E) arcs (first 6): [('0', '1/14'), ('9/28', '12/35'), ('23/49', '26/49'), ('23/35', '19/28'), ('13/14', '1')]
+     G_P arcs     (first 6): [('1/14', '13/42'), ('5/14', '13/28'), ('15/28', '9/14'), ('29/42', '13/14')]
+
+  P=(1, 2, 3, 4)  E=(0, 2, 3, 4, 5, 6, 7, 8, 10)  (|P|+k = 13)
+     mu(E)        = 27/98 = 0.275510   (Good(E) nonempty, per L2)
+     meas(G_P)    = 13/21 = 0.619048   (G_P nonempty)
+     rho*=meas(cap)= 0   (intersection EMPTY -> single global witness FAILS)
+     Good(E) arcs (first 6): [('0', '1/14'), ('9/28', '5/14'), ('23/49', '26/49'), ('9/14', '19/28'), ('13/14', '1')]
+     G_P arcs     (first 6): [('1/14', '13/56'), ('15/56', '13/42'), ('5/14', '13/28'), ('15/28', '9/14'), ('29/42', '41/56'), ('43/56', '13/14')]
+
+==========================================================================================
+(3) DOES rho*=0 imply M(S)<1/14?  NO (THM-527 is one-directional). Direct M(S) estimate.
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_Bk_zero_investigation_kps-S5-wf.py", line 124, in <module>
+    print("    Build speeds S = P \u222a {Vmax - e : e in E}, Vmax large so cluster > 13, distinct.")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u222a' in position 23: character maps to <undefined>

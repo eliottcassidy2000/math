@@ -1,0 +1,13 @@
+======================================================================
+STEP 0: validate engine against known exact values
+======================================================================
+  mu({0,1,2,3}) should be 19/21: got 19/21 expected 19/21  OK
+  mu(consecutive-13) should be 829/4620: got 829/4620 expected 829/4620  OK
+  mu({0,7,14,21,28,35}) L1 == mu({0,1,2,3,4,5})=4/7: got 4/7 expected 4/7  OK
+  mu({0,1,2,3,4,5}) k=6 == 4/7: got 4/7 expected 4/7  OK
+
+Cross-validate exact vs fine-sample (sandwich within ~#arcs/N):
+  E=[0, 1, 2, 3]: exact=0.904762 sample=0.904767 diff=4.76e-06
+  E=[0, 1, 2, 3, 4, 5]...: exact=0.179437 sample=0.179440 diff=2.77e-06
+  E=[0, 1, 2, 3, 4, 5]...: exact=0.246939 sample=0.246940 diff=1.22e-06
+  E=[0, 2, 3, 4, 5, 6]...: exact=0.275510 sample=0.275513 diff=3.13e-06

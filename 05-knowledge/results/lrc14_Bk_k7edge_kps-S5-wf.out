@@ -1,0 +1,2 @@
+k=7 exhaustive over 18564 shapes (spread<=18): min mu_1/7 = 1 = 1.000000 at E=None
+=> mu_1/7(E)=1 for ALL k=7 shapes <=18 spread (pigeonhole edge confirmed exactly).

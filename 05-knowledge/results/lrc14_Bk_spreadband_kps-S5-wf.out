@@ -1,0 +1,18 @@
+k=9: min mu by spread/k band:
+   spread in [0k,1k): min mu=0.2827 (n=85)
+   spread in [1k,2k): min mu=0.2231 (n=809)
+   spread in [2k,3k): min mu=0.2842 (n=770)
+   spread in [3k,4k): min mu=0.3610 (n=758)
+   spread in [4k,5k): min mu=0.3968 (n=78)
+k=11: min mu by spread/k band:
+   spread in [0k,1k): min mu=0.2160 (n=62)
+   spread in [1k,2k): min mu=0.1452 (n=825)
+   spread in [2k,3k): min mu=0.1103 (n=785)
+   spread in [3k,4k): min mu=0.1891 (n=759)
+   spread in [4k,5k): min mu=0.2231 (n=69)
+k=13: min mu by spread/k band:
+   spread in [0k,1k): min mu=0.1794 (n=50)
+   spread in [1k,2k): min mu=0.0897 (n=823)
+   spread in [2k,3k): min mu=0.0794 (n=811)
+   spread in [3k,4k): min mu=0.0831 (n=771)
+   spread in [4k,5k): min mu=0.1390 (n=45)

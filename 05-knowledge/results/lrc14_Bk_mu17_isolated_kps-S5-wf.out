@@ -1,0 +1,11 @@
+consecutive mu_1/7 and the suspect E:
+  k=8: consecutive mu_1/7 = 691/735
+  k=9: consecutive mu_1/7 = 247/294
+  k=10: consecutive mu_1/7 = 38/49
+  k=11: consecutive mu_1/7 = 1381/2205
+  k=12: consecutive mu_1/7 = 13823/24255
+  k=13: consecutive mu_1/7 = 477/1078
+  suspect E=[0, 2, 3, 4, 5, 7, 8, 9, 10]: mu_1/7 = 1 (must be <=1)
+
+EXACT k>=8 union floor = min_{P,k} [ meas(G_P) + mu_1/7(consec_k) - 1 ]:
+  = 1891/5880 = 0.321599  at k=8 P=(1, 5, 7, 8, 9)

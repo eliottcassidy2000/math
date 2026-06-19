@@ -152,17 +152,9 @@ def torus_average_blocks(block_patterns, N):
     for a length-3 consecutive run; (0,2,3) for a perforated run).  Each block gets an
     independent uniform translation tau in [0,1) and, if it has >=2 points, an
     independent uniform spacing omega in [0,1).  Returns midpoint-grid estimate of
-    meas{ maxgap>2/7 } over the product torus, as a Fraction (rational grid value)."""
-    g = G0
-    axes = []
-    for pat in block_patterns:
-        axes.append(('tau', pat))
-        if len(pat) > 1:
-            axes.append(('om', pat))
-    grid = [F(2 * a + 1, 2 * N) for a in range(N)]
-    cnt = 0; tot = 0
-    # iterate product of grid over all axes
-    # build per-block consumption
+    meas{ maxgap>2/7 } over the product torus (FLOAT; numerical sanity check only --
+    the rigorous quantities are exact mu and the bounded-shape minimum)."""
+    g = float(G0)
     idxmap = []
     j = 0
     for pat in block_patterns:
@@ -170,22 +162,24 @@ def torus_average_blocks(block_patterns, N):
         o_idx = None
         if len(pat) > 1:
             o_idx = j; j += 1
-        idxmap.append((pat, t_idx, o_idx))
+        idxmap.append((tuple(pat), t_idx, o_idx))
     naxes = j
-    for combo in product(grid, repeat=naxes):
+    grid = [(2 * a + 1) / (2.0 * N) for a in range(N)]
+    cnt = 0; tot = 0
+    for combo in product(range(N), repeat=naxes):
         pts = []
         for pat, t_idx, o_idx in idxmap:
-            tau = combo[t_idx]
-            om = combo[o_idx] if o_idx is not None else F(0)
+            tau = grid[combo[t_idx]]
+            om = grid[combo[o_idx]] if o_idx is not None else 0.0
             for off in pat:
-                pts.append((tau + off * om) % 1)
+                pts.append((tau + off * om) % 1.0)
         pts.sort()
         m = len(pts)
-        gaps = [pts[r + 1] - pts[r] for r in range(m - 1)] + [pts[0] + 1 - pts[-1]]
-        if max(gaps) > g:
+        mg = max([pts[r + 1] - pts[r] for r in range(m - 1)] + [pts[0] + 1.0 - pts[-1]])
+        if mg > g:
             cnt += 1
         tot += 1
-    return F(cnt, tot)
+    return cnt / tot
 
 
 # ===========================================================================
@@ -260,20 +254,25 @@ if __name__ == "__main__":
         [(0,1,2), (0,1,2)],           # two block3s    (k=6)
     ]
     for bp in cases:
-        Ebig = realize_blocks_integer(bp, scale=4000)
-        mu_big = mu_exact(Ebig)
-        tav = torus_average_blocks(bp, N=160)
-        print(f"    blocks {bp}: exact mu(far) = {float(mu_big):.4f}   "
-              f"torus avg = {float(tav):.4f}   (k={sum(len(b) for b in bp)})")
+        # use MODERATE separation (exact mu feasible); show convergence to torus avg
+        naxes = sum(2 if len(b) > 1 else 1 for b in bp)
+        Nuse = {1:2000, 2:250, 3:120, 4:42, 5:20}.get(naxes, 14)
+        tav = torus_average_blocks(bp, N=Nuse)
+        row = f"    blocks {bp}: torus avg = {tav:.4f}  | exact mu at scale "
+        vals = []
+        for sc in (40, 90):
+            Eb = realize_blocks_integer(bp, scale=sc)
+            vals.append(f"{sc}->{float(mu_exact(Eb)):.4f}")
+        print(row + ", ".join(vals) + f"   (k={sum(len(b) for b in bp)})", flush=True)
 
     # -- (IV) MONOTONICITY: every split RAISES mu above bounded-shape min -------
     print("\n(IV) MONOTONICITY  mu_H(any block split) >= bounded-shape min mu.")
     print("     bounded-shape minima (exact):")
     bmins = {}
-    for k, cap in [(4, 7), (5, 9), (6, 11), (7, 13)]:
+    for k, cap in [(4, 7), (5, 9), (6, 11), (7, 11)]:
         b, E = bounded_min_mu(k, cap)
         bmins[k] = b
-        print(f"       k={k}: min_bounded mu = {str(b):>8s} = {float(b):.5f}  at {E}")
+        print(f"       k={k}: min_bounded mu = {str(b):>8s} = {float(b):.5f}  at {E}", flush=True)
     print("     all nontrivial block splits (torus averages) for k=5,6,7:")
     def compositions(k):
         """all ordered block-size compositions of k with parts>=1 and >=2 parts."""
@@ -291,7 +290,7 @@ if __name__ == "__main__":
                 continue
             bp = [tuple(range(s)) for s in comp]
             naxes = sum(2 if s > 1 else 1 for s in comp)
-            N = {1:1000, 2:300, 3:90, 4:34, 5:18}.get(naxes, 12)
+            N = {1:1000, 2:300, 3:120, 4:42, 5:22, 6:14, 7:9, 8:7}.get(naxes, 6)
             tav = torus_average_blocks(bp, N=N)
             below = tav < bmin
             if worst is None or tav < worst[1]:

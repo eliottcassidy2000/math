@@ -1,0 +1,50 @@
+==========================================================================================
+(0) DIAGNOSE the earlier zeros: were they over-sized (|P|+k>13) configs?
+==========================================================================================
+   |P|=10 k=8  |P|+k=18  rho*=0  (admissible iff |P|+k=13: NO -> ARTIFACT)
+   |P|=9 k=8  |P|+k=17  rho*=0  (admissible iff |P|+k=13: NO -> ARTIFACT)
+   |P|=9 k=8  |P|+k=17  rho*=0  (admissible iff |P|+k=13: NO -> ARTIFACT)
+   |P|=10 k=8  |P|+k=18  rho*=0  (admissible iff |P|+k=13: NO -> ARTIFACT)
+   |P|=10 k=8  |P|+k=18  rho*=0  (admissible iff |P|+k=13: NO -> ARTIFACT)
+   => every reported zero has |P|+k >= 17 (over-constrained); none is an admissible S3 instance.
+      Also: meas(G_P) itself can be 0 once |P| is large enough -- that alone forces rho*=0,
+      independent of E. We confirm meas(G_P) for these P:
+      P=(1, 2, 3, 6, 7, 8, 9, 10, 12, 13): meas(G_P)=9983/76440
+      P=(1, 2, 3, 4, 6, 9, 11, 12, 13): meas(G_P)=4595/18018
+      P=(1, 2, 3, 5, 6, 9, 10, 12, 13): meas(G_P)=407/1638
+      P=(1, 2, 3, 5, 6, 7, 9, 10, 12, 13): meas(G_P)=5909/38220
+      P=(1, 2, 3, 4, 5, 6, 7, 8, 12, 13): meas(G_P)=2167/12740
+
+==========================================================================================
+(1) ADMISSIBLE FLOOR: |P|+k=13, P subset {1..13}, E primitive bounded-spread, 0 in E.
+    Exhaustive over P shapes (consecutive + random subsets) x bounded-spread E.
+==========================================================================================
+   !!! admissible rho*=0 at P=(1, 2, 3, 4) (|P|=4) E=(0, 2, 3, 4, 5, 6, 7, 8, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 3, 4, 5, 7, 8, 9, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 3, 5, 6, 7, 8, 9, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 2, 4, 5, 6, 7, 8, 9, 10)
+   !!! admissible rho*=0 at P=(1, 2, 3) (|P|=3) E=(0, 1, 3, 4, 5, 6, 7, 8, 9, 10)
+
+   admissible scan: 99000 (P,E) pairs, 17 zeros.
+   *** min rho* (admissible) = 0 = 0.000000  at P=(1, 2, 3, 4) E=(0, 2, 3, 4, 5, 6, 7, 8, 10) ***
+
+==========================================================================================
+(2) Does meas(G_P) ever hit 0 for an admissible small part? Scan all P subset {1..13}
+    of each size; report the minimum meas(G_P) and whether any G_P is empty.
+==========================================================================================
+   |P|= 0: min meas(G_P) =              1 = 1.000000  at P=()  
+   |P|= 1: min meas(G_P) =            6/7 = 0.857143  at P=(1,)  
+   |P|= 2: min meas(G_P) =          66/91 = 0.725275  at P=(1, 13)  
+   |P|= 3: min meas(G_P) =          55/91 = 0.604396  at P=(1, 12, 13)  
+   |P|= 4: min meas(G_P) =      1979/4004 = 0.494256  at P=(1, 11, 12, 13)  
+   |P|= 5: min meas(G_P) =      2243/5880 = 0.381463  at P=(1, 5, 7, 8, 9)  
+   |P|= 6: min meas(G_P) =     3029/10780 = 0.280983  at P=(1, 5, 7, 8, 9, 11)  
+   |P|= 7: min meas(G_P) =   45107/229320 = 0.196699  at P=(1, 5, 7, 8, 9, 11, 13)  
+   |P|= 8: min meas(G_P) =     2479/17640 = 0.140533  at P=(1, 3, 5, 7, 8, 9, 11, 13)  
+   |P|= 9: min meas(G_P) =   10601/114660 = 0.092456  at P=(1, 2, 3, 5, 7, 8, 9, 11, 13)  
+   |P|=10: min meas(G_P) =   14249/252252 = 0.056487  at P=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13)  
+
+DONE.

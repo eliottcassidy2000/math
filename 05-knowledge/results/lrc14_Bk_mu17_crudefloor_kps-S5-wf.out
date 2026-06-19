@@ -1,0 +1,19 @@
+Candidate spread-bound: mu_1/7(E) >= mu_1/7(consecutive_k). Exhaustive small k, broad large k.
+Also: does the consecutive value itself clear thr_k? (then union bound is unconditional on
+the FULL search if the spread bound is granted, with the listed slack.)
+  k= 8: min mu_1/7 found=0.9401(691/735)  consec=0.9401  thr_k=0.6185
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+  k= 9: min mu_1/7 found=0.8401(247/294)  consec=0.8401  thr_k=0.5057
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+  k=10: min mu_1/7 found=0.7755(38/49)  consec=0.7755  thr_k=0.3956
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+  k=11: min mu_1/7 found=0.6263(1381/2205)  consec=0.6263  thr_k=0.2747
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+  k=12: min mu_1/7 found=0.5699(13823/24255)  consec=0.5699  thr_k=0.1429
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+  k=13: min mu_1/7 found=0.4425(477/1078)  consec=0.4425  thr_k=0.0000
+         consec>=thr_k: True ; min_found>=thr_k: True ; spread-bound (min==consec): True
+
+INTERPRETATION: if 'spread-bound (min==consec)' holds at every k, then granting the 1/7
+spread bound mu_1/7(E)>=mu_1/7(consecutive_k) makes the k>=8 union floor 1891/5880 RIGOROUS.
+DONE.

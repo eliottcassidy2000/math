@@ -1,0 +1,26 @@
+============================================================================================
+CHECK 1: 'exists phi avoiding all 1/14-arcs around phases'  <=>  'max circular gap > 1/7'
+============================================================================================
+  tested 19999 random phase-configs: mismatches (exists-phi vs maxgap>1/7) = 0
+  => the 1/7 maxgap criterion EXACTLY characterizes 'a global cluster-witness phi exists': CONFIRMED
+
+============================================================================================
+CHECK 2: is the 2/7 via-max criterion STRICTLY stronger (a strict subset)?
+  via-max = 'maxgap>2/7' (centering a single offset, witness forced near x-translate).
+============================================================================================
+  maxgap>2/7 AND >1/7: 13152;  >1/7 only (2/7 fails): 6788;  >2/7 only: 0
+  => 2/7 criterion ⊂ 1/7 criterion (every 2/7-good x is 1/7-good; 6788 are 1/7-good but
+     NOT 2/7-good). So 1/7 is the WEAKER/LARGER (correct sufficient) object IF the decoupling
+     holds. only27 must be 0: True
+
+============================================================================================
+CHECK 3: does the DECOUPLED 1/7 prediction match EXACT loneliness of reconstructed S at
+  FINITE growing Vmax? (tests the asymptotic decoupling THM-527 invokes -- NOT re-proved)
+============================================================================================
+  cases (x in G_P, cluster maxgap>1/7): 1725;  reconstructed S LONELY: 1725;  NON-lonely: 0
+  => decoupled 1/7-good predicts S lonely: 1725/1725. (non-lonely would refute LRC14 itself)
+
+HONEST NOTE: CHECK 3 cannot DISTINGUISH soundness from LRC(14) being true (all covering
+13-sets are lonely if LRC14 holds). It confirms CONSISTENCY, not soundness of the reduction.
+The SOUNDNESS of 'maxgap>1/7 => witness' rests on the asymptotic decoupling (phi free as
+Vmax->inf) which is THM-527-A (assumed upstream, error O(1/Vmax), Vmax<=V0 finite check).

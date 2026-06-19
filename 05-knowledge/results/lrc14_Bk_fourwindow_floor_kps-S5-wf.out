@@ -1,0 +1,32 @@
+==========================================================================
+WHAT IS PROVED vs WHAT NEEDS THE EFFECTIVE RATE
+==========================================================================
+For each k: consecutive-AP value a(k); empirical bounded min c0(k); the
+THM-528 four-window PROVEN lower bound (->0 like 1/maxE); iid ceiling F(k).
+
+  k      a(k)=AP   c0 (emp.min)    THM528@maxE    F(k) ceil
+  7      0.39524        0.37143        0.17063      0.79985
+  8      0.33265        0.32273        0.14626      0.68463
+  9      0.28265        0.19932        0.12798      0.56889
+ 10      0.25261        0.15678        0.11376      0.46206
+ 11      0.21599        0.13199        0.10238      0.36879
+
+OBSERVATIONS (exact):
+  c0 sequence (empirical bounded minima, NOT proven global):
+    k=7: c0 = 13/35 = 0.371429
+    k=8: c0 = 71/220 = 0.322727
+    k=9: c0 = 293/1470 = 0.199320
+    k=10: c0 = 214/1365 = 0.156777
+    k=11: c0 = 3363/25480 = 0.131986
+
+  The four-window PROVEN bound shrinks ~ 1/maxE -> it certifies mu>0 for
+  EACH shape (= L2) but is NOT a uniform floor (it ->0 as spread->inf).
+
+  RIGOR STATUS: per-shape mu>0 is PROVED (L2 + THM-528). A UNIFORM c0>0
+  requires that mu does NOT ->0 along any spread->inf sequence; the subtorus
+  law gives mu->mu_H>0 for EACH fixed lattice type, and there are FINITELY
+  many lattice types for k<=13, BUT translating 'finitely many positive
+  limits' into a single positive floor needs an EFFECTIVE convergence rate
+  (uniform over the finitely many types) -- the remaining analytic input.
+
+DONE.

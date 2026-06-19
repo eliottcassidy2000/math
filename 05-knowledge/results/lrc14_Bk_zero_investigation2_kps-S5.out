@@ -1,0 +1,40 @@
+  P=(1, 2, 3, 4)  E=(0, 2, 3, 4, 5, 6, 7, 8, 10)  (|P|+k = 13)
+     mu(E)        = 27/98 = 0.275510   (Good(E) nonempty, per L2)
+     meas(G_P)    = 13/21 = 0.619048   (G_P nonempty)
+     rho*=meas(cap)= 0   (intersection EMPTY -> single global witness FAILS)
+     Good(E) arcs (first 6): [('0', '1/14'), ('9/28', '5/14'), ('23/49', '26/49'), ('9/14', '19/28'), ('13/14', '1')]
+     G_P arcs     (first 6): [('1/14', '13/56'), ('15/56', '13/42'), ('5/14', '13/28'), ('15/28', '9/14'), ('29/42', '41/56'), ('43/56', '13/14')]
+
+==========================================================================================
+(3) DOES rho*=0 imply M(S)<1/14?  NO (THM-527 is one-directional). Direct M(S) estimate.
+    Build speeds S = P u {Vmax - e : e in E}, Vmax large so cluster > 13, distinct.
+    M(S) = max_t min_{v in S} ||v t||  (fine float grid). LRC(14) wants M(S) >= 1/14.
+==========================================================================================
+   P=(1, 2, 3) Vmax=200: |S|=13  M(S)~0.123360  (1/14=0.071429)  -> M>=1/14 (LRC OK despite rho*=0)
+   P=(1, 2, 3) Vmax=503: |S|=13  M(S)~0.124333  (1/14=0.071429)  -> M>=1/14 (LRC OK despite rho*=0)
+   P=(1, 2, 3, 4) Vmax=200: |S|=13  M(S)~0.123040  (1/14=0.071429)  -> M>=1/14 (LRC OK despite rho*=0)
+   P=(1, 2, 3, 4) Vmax=503: |S|=13  M(S)~0.123505  (1/14=0.071429)  -> M>=1/14 (LRC OK despite rho*=0)
+
+==========================================================================================
+(4) HOW STRUCTURED is the admissible rho*=0 locus?  Exhaustive small sweep k=10, |P|=3.
+    All P=3-subsets of {1..13}, all primitive E (0 in E,|E|=10) spread<=12: count zeros,
+    record whether zeros are exactly the near-consecutive E with small P.
+==========================================================================================
+   #P=286  #E(spread<=12)=220  -> 62920 pairs (exact)
+   scanned 62920 admissible (P,E); zeros = 106
+   zero-E spreads (k-1=9): {10: 20, 11: 32, 12: 54}
+   zero-P multiset: {(1, 2, 3): 48, (1, 2, 6): 54, (1, 2, 9): 4}
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) spread=10
+      zero: P=(1, 2, 6) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) spread=10
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11) spread=11
+      zero: P=(1, 2, 6) E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11) spread=11
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) spread=10
+      zero: P=(1, 2, 6) E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) spread=10
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12) spread=12
+      zero: P=(1, 2, 6) E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12) spread=12
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 10) spread=10
+      zero: P=(1, 2, 6) E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 10) spread=10
+      zero: P=(1, 2, 9) E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 10) spread=10
+      zero: P=(1, 2, 3) E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 11) spread=11
+
+DONE.

@@ -1,0 +1,6 @@
+Starting champion (spread-18): mu=7037/59976=0.117330
+
+(C1) rational-dilation sweep of cap-14 minimizer (round):
+   best dilation: lam=5/4 mu=437/3465=0.126118 E=[0, 1, 2, 4, 5, 6, 8, 9, 10, 11, 15, 16, 18]
+
+(C2) random large-spread screen (k=13, spread up to 130):

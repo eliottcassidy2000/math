@@ -1,0 +1,18 @@
+==========================================================================================
+(B) STRETCH: same-k DILATIONS of cap-14 minimizer never beat mu_min(k); L1 scalar-eq sanity.
+==========================================================================================
+  k= 4: mu_min=         19/21=0.904762  L1-eq=OK  dilations=15  min-stretched=0.904762 none below mu_min (OK)
+  k= 5: mu_min=          9/14=0.642857  L1-eq=OK  dilations=15  min-stretched=0.642857 none below mu_min (OK)
+  k= 6: mu_min=           4/7=0.571429  L1-eq=OK  dilations=15  min-stretched=0.571429 none below mu_min (OK)
+  k= 7: mu_min=         13/35=0.371429  L1-eq=OK  dilations=15  min-stretched=0.371429 none below mu_min (OK)
+  k= 8: mu_min=        71/220=0.322727  L1-eq=OK  dilations=15  min-stretched=0.322727 none below mu_min (OK)
+  k= 9: mu_min=       164/735=0.223129  L1-eq=OK  dilations=15  min-stretched=0.223129 none below mu_min (OK)
+  k=10: mu_min=      468/2695=0.173655  L1-eq=OK  dilations=15  min-stretched=0.173655 none below mu_min (OK)
+  k=11: mu_min=      409/2548=0.160518  L1-eq=OK  dilations=15  min-stretched=0.160518 none below mu_min (OK)
+  k=12: mu_min=    5367/35035=0.153190  L1-eq=OK  dilations=15  min-stretched=0.130992 BEATS!!
+  k=13: mu_min=    5367/35035=0.153190  L1-eq=OK  dilations=15  min-stretched=0.130992 BEATS!!
+
+==========================================================================================
+(C) LARGE-SPREAD ADVERSARY: exact random, spread in [3k,140]; can it beat mu_min(k)?
+==========================================================================================
+  k= 4: mu_min=0.904762  large-spread min=0.904762  spread=3  -> OK (>= mu_min)

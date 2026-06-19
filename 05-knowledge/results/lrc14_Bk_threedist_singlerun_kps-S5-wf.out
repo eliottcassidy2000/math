@@ -1,0 +1,41 @@
+======================================================================
+SINGLE-RUN (dilated AP) shapes: mu is SPREAD-INVARIANT = a(k), EXACT.
+======================================================================
+  k= 4: a(k) =            19/21 = 0.904762  dilation-invariant: True
+  k= 5: a(k) =             9/14 = 0.642857  dilation-invariant: True
+  k= 6: a(k) =              4/7 = 0.571429  dilation-invariant: True
+  k= 7: a(k) =           83/210 = 0.395238  dilation-invariant: True
+  k= 8: a(k) =          163/490 = 0.332653  dilation-invariant: True
+  k= 9: a(k) =          277/980 = 0.282653  dilation-invariant: True
+  k=10: a(k) =         557/2205 = 0.252608  dilation-invariant: True
+  k=11: a(k) =          127/588 = 0.215986  dilation-invariant: True
+  => single runs are scale-equivalent to consecutive AP: CONFIRMED
+
+CONSEQUENCE (rigorous): a SINGLE full arithmetic run, at ANY spread, has
+mu = a(k) EXACTLY (L1 scale-invariance).  So a spread bound is needed ONLY
+for MULTI-BLOCK or PERFORATED shapes.  Single-run shapes never undercut a(k).
+
+======================================================================
+a(k) landmarks (the single-run floor), k=3..13:
+======================================================================
+  a( 3) =                      1 = 1.000000
+  a( 4) =                  19/21 = 0.904762
+  a( 5) =                   9/14 = 0.642857
+  a( 6) =                    4/7 = 0.571429
+  a( 7) =                 83/210 = 0.395238
+  a( 8) =                163/490 = 0.332653
+  a( 9) =                277/980 = 0.282653
+  a(10) =               557/2205 = 0.252608
+  a(11) =                127/588 = 0.215986
+  a(12) =              1313/6468 = 0.202999
+  a(13) =               829/4620 = 0.179437
+  min_k a(k) = a(13) = 829/4620 = 0.179437  (single-run floor)
+
+Perforated/multi-block shapes can go below a(k); empirical bounded minima:
+  k=7: bounded min (emp) 13/35 = 0.371429  (vs a(k)=0.395238)
+  k=8: bounded min (emp) 71/220 = 0.322727  (vs a(k)=0.332653)
+  k=9: bounded min (emp) 293/1470 = 0.199320  (vs a(k)=0.282653)
+  k=10: bounded min (emp) 214/1365 = 0.156777  (vs a(k)=0.252608)
+  k=11: bounded min (emp) 3363/25480 = 0.131986  (vs a(k)=0.215986)
+
+DONE.

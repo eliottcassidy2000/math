@@ -1,0 +1,12 @@
+m_P = 14249/252252 (~0.056487)
+tested 6000 admissible (P,E)
+min rho*_1/7 observed = 14249/252252 (~0.056487) at (k,P,E)=(3, (1, 2, 3, 5, 7, 8, 9, 11, 12, 13), (0, 1, 2))
+# with rho*_1/7 < m_P : 0
+# union-LB violations (rho < meas(GP)+meas(GOOD)-1): 0
+
+k<=7 spot check (Good should be whole circle => rho=meas(GP)):
+  k=3 P=(2, 3, 4, 6, 7, 8, 9, 10, 11, 13): meas(Good)=1 (==1?True); rho=8881/70070 meas(GP)=8881/70070 eq:True
+  k=5 P=(2, 4, 5, 7, 9, 10, 11, 12): meas(Good)=1 (==1?True); rho=5849/24255 meas(GP)=5849/24255 eq:True
+  k=7 P=(1, 2, 3, 4, 6, 10): meas(Good)=1 (==1?True); rho=16/35 meas(GP)=16/35 eq:True
+
+CONCLUSION: combined c0' = min(m_P, 1891/5880) = m_P = 14249/252252 (~0.056487), if min==m_P and 0 below.

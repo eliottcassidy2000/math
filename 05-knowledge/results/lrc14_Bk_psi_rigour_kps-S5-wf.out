@@ -1,0 +1,3 @@
+stress 300 shapes: Psi<=mu violations = 0; all Psi exact-rational = True
+Psi(consecutive 13) = 3379/64680 = 0.052242  (mu=829/4620)
+Psi/mu = 3379/11606 = 0.2911

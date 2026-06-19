@@ -87,15 +87,11 @@ def psi_exact(E):
     tot = F(0)
     for a, b in zip(bp, bp[1:]):
         if b <= a: continue
-        # integrand sum_j (g_j-2/7)_+ is LINEAR on (a,b): exact integral = (f(a^+)+f(b^-))/2*(b-a)
-        # use interior-sided evaluations to avoid boundary order ambiguity
-        xa = a + (b-a)/1000000
-        xb = b - (b-a)/1000000
-        fa = excess_at(E, xa); fb = excess_at(E, xb)
-        # since linear, midpoint = (fa+fb)/2 exactly; but to be fully exact use the true
-        # linear interpolation: integral = (fa+fb)/2*(b-a) only if truly linear on (a,b).
-        # The sided evals at xa,xb are the limits; linearity holds because no breakpoint inside.
-        tot += (fa + fb)/2 * (b - a)
+        # integrand sum_j (g_j-2/7)_+ is LINEAR on the open cell (a,b) (constant point-order,
+        # constant active-gap set since we split at every collision AND every gap=2/7 crossing).
+        # Exact integral of a linear function = value at the midpoint times length. RIGOROUS, EXACT.
+        mid = (a + b) / 2
+        tot += excess_at(E, mid) * (b - a)
     return tot
 
 def mu_exact(E):

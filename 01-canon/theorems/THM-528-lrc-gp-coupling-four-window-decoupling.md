@@ -16,6 +16,16 @@ external: Lonely Runner Conjecture (13 speeds = LRC(14), first open case); Stein
 
 # THM-528 — The G_P coupling: a four-window scale-decoupling for ρ*(P,E)
 
+> **⚠ THRESHOLD CAVEAT (kind-pasteur-2026-06-18-S5, THM-530/HYP-2592).** This file's `Good_E`
+> uses the **via-max** threshold `maxgap>2/7`. THM-530 shows that the via-max density
+> `ρ*_{2/7}` has **EXACT ZEROS** on admissible (P,E) (e.g. `k=7, P={1,2,3,6,12,13},
+> E={0,2,3,4,5,6,8}`: ρ*_{2/7}=0 with meas(G_P)=515/1092, μ_{2/7}=13/35) — so "ρ*_{2/7}≥c₀
+> uniformly" is FALSE, and the "4 certificate exceptions" / "consecutive proved" results below
+> are at the **non-necessary** threshold. The reconstructed covering sets remain LONELY, so
+> LRC(14) is untouched. The CORRECT object is the **global-witness** `ρ*_{1/7}` (THM-530),
+> which has a clean two-branch floor (k≤7 pigeonhole unconditional; k≥8 union bound ≥1891/5880).
+> Read THM-528 as the via-max sub-analysis; THM-530 supersedes the threshold choice.
+
 ## The question (Angle B of THM-527)
 
 THM-527 reduced LRC(14) case S3 to a positive **density floor**

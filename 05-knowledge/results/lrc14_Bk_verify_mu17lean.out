@@ -1,0 +1,14 @@
+consec mu_1/7: {8: '691/735', 9: '247/294', 10: '38/49', 11: '1381/2205', 12: '13823/24255', 13: '477/1078'}
+
+=== EXHAUSTIVE (modest spread, exact) ===
+  k=8: spread<= 21 (116159 sets) min=691/735=0.94014 consec=0.94014 OK
+  k=9: spread<= 19 (75573 sets) min=247/294=0.84014 consec=0.84014 OK
+  k=10: spread<= 18 (48619 sets) min=38/49=0.77551 consec=0.77551 OK
+  k=11: spread<= 18 (43758 sets) min=1381/2205=0.62630 consec=0.62630 OK
+ k=12: spread<= 17 (12376 sets) min=13823/24255=0.56990 consec=0.56990 OK
+  k=13: spread<= 17 (6188 sets) min=477/1078=0.44249 consec=0.44249 OK
+  exhaustive-modest: consec-is-min = True
+
+=== STRUCTURED + LARGE-SPREAD (float prescreen, exact confirm on ties) ===
+  k=8: 16440 cands, no E beats consec 0.94014
+  k=9: 30054 cands, no E beats consec 0.84014

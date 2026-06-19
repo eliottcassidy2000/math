@@ -1,0 +1,70 @@
+ADVERSARIAL VERIFICATION SUMMARY — erdos-turan-spread-bound claimed advance (kps-S5-wf)
+Verifier: kind-pasteur-2026-06-18-S5 (independent re-implementation, exact Fraction)
+
+=== WHAT IS VERIFIED (exact, reproduced independently) ===
+[A] Rigorous mu_theta engine: TWO independent engines (order-cell union-of-affine-half-intervals,
+    AND gap=theta-breakpoint + midpoint) AGREE on all consecutive 2/7 values k=3..13.
+    Matches canon: mu_3=1, mu_4=19/21, mu_5=9/14, mu_6=4/7, mu_13(2/7)=829/4620.
+    CORRECTION CONFIRMED: consecutive mu_7(2/7)=83/210 (NOT 13/35). 13/35 = mu({0,2,3,4,5,6,8})
+    (the perforated minimizer). The prompt's correction to canon THM-527-C is CORRECT.
+
+[B] F(k) iid-ceiling constants (2/7): F(4)=342/343, F(7)=13443/16807, F(9)=3279513/5764801,
+    F(13)=3132376013/13841287201. ALL match.
+
+[C] 2/7 bounded-spread minima (exhaustive at the quoted spread): k=8 -> 71/220 at s=11;
+    k=9 -> 811/4095 at s=18 (E=(0,5,7,8,9,10,11,13,18)). Both match.
+
+[D] mu_1/7 = 1 for ALL k<=7 (EXHAUSTIVE, high spread: k=7 over 27132 shapes spread<=19, min=1).
+    Pigeonhole k<=6 is genuinely RIGOROUS (k gaps sum 1 => some gap >= 1/k >= 1/6 > 1/7).
+    k=7 holds a.e. (maxgap<=1/7 forces all gaps =1/7, a measure-0 x-locus). PROVED.
+
+[E] consecutive mu_1/7(k) k=8..13: 691/735, 247/294, 38/49, 1381/2205, 13823/24255, 477/1078.
+    ALL match quoted.
+
+[F] THE 1/7 THRESHOLD IS GEOMETRICALLY CORRECT for the decoupled global witness:
+    EXACT equivalence (0 mismatches / 20000 random configs):
+      'exists phase phi with ||phi - frac(e_i x)|| >= 1/14 for all i'  <=>  'maxgap{frac(e_i x)} > 1/7'.
+    Each cluster phase forbids an arc of width 2*(1/14)=1/7; a free witness phi exists iff some
+    gap exceeds 1/7. The via-max 2/7 criterion is a STRICT SUBSET (every 2/7-good x is 1/7-good;
+    6788/20000 are 1/7-good but not 2/7-good). So 1/7 is the correct, larger sufficient object
+    — GIVEN the asymptotic decoupling (phi free as Vmax->inf), which is THM-527-A (upstream).
+
+[G] OPPOSITE EXTREMIZERS confirmed: the k=9 2/7-minimizer E=(0,5,7,8,9,10,11,13,18) has
+    mu_1/7 = 1 (whole circle), vs consecutive mu_1/7 = 247/294 ~ 0.84. The shape that minimizes
+    mu_2/7 MAXIMIZES mu_1/7. So the messy 2/7 spread behavior does NOT threaten the 1/7 floor.
+
+[H] UNION FLOOR arithmetic (exact, reproduced): gp_min(8)=2243/5880, thr_8=3637/5880,
+    k>=8 union floor = min_k[gp_min(k)+consec_mu17(k)-1] = 1891/5880 ~ 0.322 (binding k=8,
+    P=(1,5,7,8,9)). R_1/7 floor 67053/84241 ~ 0.796. ALL match THM-530.
+    NOTE: the TRUE combined global-witness floor c0 across ALL k is min(m_P, 1891/5880) =
+    m_P = 14249/252252 ~ 0.0565 (dominated by k=3 branch where Good=whole circle). The 0.322
+    headline is ONLY the k>=8 union piece; still positive but NOT the global floor.
+
+[I] CONSECUTIVE MINIMIZES mu_1/7 for k=8..13: EXHAUSTIVE (modest spread <=17, up to 24309 sets
+    per k) -> consecutive IS the min at every k. Structured (k=8:16440, k=9:30054 cands) NONE
+    below consec. Subtorus/two-AP/dense-core targeted (k=11: 24379 cands, the most dangerous
+    short-relation-lattice regime) NONE below consec.
+    PER-SPREAD MINIMUM TREND (decisive, exact): for theta=1/7 the min over each spread RISES,
+    no dip below consecutive (opposite of 2/7's U-shape):
+      k=8 consec(s7)=0.940: s8=1.000 s9=.972 s12=.972 s16=.989 s40=.997 s80=.998 -> up to 1.
+      k=9 consec(s8)=0.840: s9=.940 s10=.916 s17=.911 s18=.939 s27=.980 s90=.995 -> up to 1.
+    So consecutive (the densest ruler, s=k-1) IS the global minimizer of mu_1/7. CONFIRMED.
+
+=== WHAT IS NOT PROVED (honest gaps, matching the prompt's own SELF-GAPS) ===
+[G1] 'Consecutive minimizes mu_1/7 for 8<=k<=13' is VERIFIED (exhaustive-bounded + structured +
+     large-spread search, ZERO counterexamples) but has NO PROOF. This is the single inequality
+     the k>=8 global-witness branch rests on. The prompt correctly labels it VERIFIED, not proved.
+[G2] The whole 1/7 reduction's SOUNDNESS (maxgap>1/7 => actual lonely witness for S) rests on
+     THM-527-A's asymptotic decoupling (phi free as Vmax->inf, error O(1/Vmax), Vmax<=V0 finite
+     check). This verifier confirmed the decoupled-model equivalence [F] and consistency (all
+     reconstructed S lonely) but did NOT re-derive THM-527-A. It is an assumed upstream dependency.
+[G3] The 2/7 spread bound B(k) for the 2/7 measure remains genuinely hard / not delivered
+     (the prompt concedes this; the deviation identity has divergent l1 tail). The advance is to
+     PIVOT to 1/7 where consecutive provably(verified)-minimizes, NOT to solve B(k) at 2/7.
+
+=== VERDICT ===
+The claimed advance is HONESTLY STATED and its computational content is CORRECT and reproduced.
+It does NOT prove LRC(14). It reduces the k>=8 branch of the global-witness floor to a single
+VERIFIED-but-unproven inequality (consecutive minimizes mu_1/7), with the k<=7 branch genuinely
+PROVED (pigeonhole). The 'PARTIAL' self-assessment is accurate. No overclaim detected; the one
+caveat is the 0.322 headline floor is the k>=8 piece, not the global c0 (=m_P~0.0565).

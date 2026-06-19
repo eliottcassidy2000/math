@@ -1,0 +1,8 @@
+k=8: targeted min mu_1/7=691/735=0.94014 at [0, 1, 2, 3, 4, 5, 6, 7]; thr=3637/5880; min>=thr=True
+k=9: targeted min mu_1/7=247/294=0.84014 at [0, 1, 2, 3, 4, 5, 6, 7, 8]; thr=2025/4004; min>=thr=True
+k=10: targeted min mu_1/7=38/49=0.77551 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]; thr=36/91; min>=thr=True
+k=11: targeted min mu_1/7=1381/2205=0.62630 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]; thr=25/91; min>=thr=True
+k=12: targeted min mu_1/7=13823/24255=0.56990 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]; thr=1/7; min>=thr=True
+k=13: targeted min mu_1/7=477/1078=0.44249 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12]; thr=0; min>=thr=True
+violations=0
+DONE

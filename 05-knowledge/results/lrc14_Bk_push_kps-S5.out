@@ -21,3 +21,11 @@
       cap<= 32: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
       cap<= 44: mu_min =          19/21 = 0.904762  (=)   argmin spread=3  E=(0, 1, 2, 3)
       -> STABILIZED at cap 32 (last two caps agree): bounded-spread OK for k=4.
+
+   k=5:
+      cap<= 10: mu_min =           9/14 = 0.642857   argmin spread=4  E=(0, 1, 2, 3, 4)
+      cap<= 14: mu_min =           9/14 = 0.642857  (=)   argmin spread=4  E=(0, 1, 2, 3, 4)
+      cap<= 18: mu_min =           9/14 = 0.642857  (=)   argmin spread=4  E=(0, 1, 2, 3, 4)
+      cap<= 24: mu_min =           9/14 = 0.642857  (=)   argmin spread=4  E=(0, 1, 2, 3, 4)
+      cap<= 30: mu_min =           9/14 = 0.642857  (=)   argmin spread=4  E=(0, 1, 2, 3, 4)
+      -> STABILIZED at cap 24 (last two caps agree): bounded-spread OK for k=5.

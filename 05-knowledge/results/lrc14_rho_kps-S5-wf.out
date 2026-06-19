@@ -1,0 +1,8 @@
+P={1,2,3}, E=(0..8,10):
+   mu(E)=121/490=0.246939  claim 121/490  OK
+   meas(G_P)=29/42=0.690476  claim 29/42  OK
+   rho*=0=0.000000  claim 0  OK (exactly disjoint)
+P={1,2,3,4}, E=(0,2..8,10):
+   mu(E)=27/98=0.275510  claim 27/98  OK
+   meas(G_P)=13/21=0.619048  claim 13/21  OK
+   rho*=0=0.000000  claim 0  OK (exactly disjoint)

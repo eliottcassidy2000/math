@@ -1,0 +1,50 @@
+================================================================
+THRESHOLD THR = 2/7
+================================================================
+(a) single-run SCALE INVARIANCE (mu_thr({0,g,..,(k-1)g}) = mu_thr(consec)):
+    k= 4: consec mu_thr =            19/21 = 0.90476  scale-invariant: True
+    k= 5: consec mu_thr =             9/14 = 0.64286  scale-invariant: True
+    k= 6: consec mu_thr =              4/7 = 0.57143  scale-invariant: True
+    k= 7: consec mu_thr =           83/210 = 0.39524  scale-invariant: True
+    k= 8: consec mu_thr =          163/490 = 0.33265  scale-invariant: True
+    k= 9: consec mu_thr =          277/980 = 0.28265  scale-invariant: True
+    k=10: consec mu_thr =         557/2205 = 0.25261  scale-invariant: True
+  => single runs scale-invariant at THR=2/7: YES
+
+(b) does CONSECUTIVE minimize mu_thr among single-block (bounded full runs)?
+    compare consec to all k-subsets of {0..k+2} that are SINGLE runs (no
+    interior hole, i.e. {a,a+1,...}); trivially consec is the only full run,
+    so we instead report consec vs the bounded-shape MIN (perforation allowed):
+    k= 7: consec=0.39524  bounded-min=0.37143 at (0, 2, 3, 4, 5, 6, 8)  perforation beats consec
+    k= 8: consec=0.33265  bounded-min=0.32273 at (0, 2, 3, 4, 5, 6, 8, 11)  perforation beats consec
+    k= 9: consec=0.28265  bounded-min=0.22313 at (0, 2, 4, 5, 6, 7, 8, 9, 12)  perforation beats consec
+    k=10: consec=0.25261  bounded-min=0.18302 at (0, 1, 2, 5, 7, 8, 9, 10, 11, 13)  perforation beats consec
+
+================================================================
+THRESHOLD THR = 1/7
+================================================================
+(a) single-run SCALE INVARIANCE (mu_thr({0,g,..,(k-1)g}) = mu_thr(consec)):
+    k= 4: consec mu_thr =                1 = 1.00000  scale-invariant: True
+    k= 5: consec mu_thr =                1 = 1.00000  scale-invariant: True
+    k= 6: consec mu_thr =                1 = 1.00000  scale-invariant: True
+    k= 7: consec mu_thr =                1 = 1.00000  scale-invariant: True
+    k= 8: consec mu_thr =          691/735 = 0.94014  scale-invariant: True
+    k= 9: consec mu_thr =          247/294 = 0.84014  scale-invariant: True
+    k=10: consec mu_thr =            38/49 = 0.77551  scale-invariant: True
+  => single runs scale-invariant at THR=1/7: YES
+
+(b) does CONSECUTIVE minimize mu_thr among single-block (bounded full runs)?
+    compare consec to all k-subsets of {0..k+2} that are SINGLE runs (no
+    interior hole, i.e. {a,a+1,...}); trivially consec is the only full run,
+    so we instead report consec vs the bounded-shape MIN (perforation allowed):
+    k= 7: consec=1.00000  bounded-min=1.00000 at (0, 1, 2, 3, 4, 5, 6)  consec IS min
+    k= 8: consec=0.94014  bounded-min=0.94014 at (0, 1, 2, 3, 4, 5, 6, 7)  consec IS min
+    k= 9: consec=0.84014  bounded-min=0.84014 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  consec IS min
+    k=10: consec=0.77551  bounded-min=0.77551 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  consec IS min
+
+CONCLUSION: scale-invariance of single runs is THRESHOLD-AGNOSTIC (holds for
+both 2/7 and 1/7).  For the 1/7 object the parallel route reports consecutive
+IS the minimizer; for 2/7, perforation beats it (and 2/7-via-max is refuted).
+The lattice 'single run => consecutive' supplies the structural backbone of the
+WORKING 1/7 floor, NOT a new floor for the (refuted) 2/7 object.
+DONE.

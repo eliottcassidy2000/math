@@ -1,0 +1,14 @@
+(a) consecutive mu_7(2/7) and perforated {0,2,3,4,5,6,8}:
+    consec_7 = 83/210 (claim 83/210: True )
+    {0,2,3,4,5,6,8} = 13/35 (claim 13/35: True )
+
+(b) k=9 2/7 per-spread min at s=18 (exhaustive interior C(17,7)=19448): claim 811/4095
+    min mu_2/7 at s=18 = 811/4095 = 0.19805  at (0, 5, 7, 8, 9, 10, 11, 13, 18)  (claim 811/4095: True)
+
+(d) k=8 2/7 per-spread min at s=11 (exhaustive C(10,6)=210): claim 71/220
+    min mu_2/7 at s=11 = 71/220 = 0.32273  at (0, 2, 3, 4, 5, 6, 8, 11)  (claim 71/220: True)
+
+(c) 'opposite extremizers': mu_1/7 of the 2/7-minimizers (must be >> consec mu_1/7):
+    k=9 2/7-min E=(0, 5, 7, 8, 9, 10, 11, 13, 18): mu_2/7=811/4095=0.1980  mu_1/7=1=1.0000
+         vs consec_9 mu_1/7 = 247/294 = 0.8401
+    => the 2/7-minimizer has HIGHER mu_1/7 than consecutive (opposite extremizers).

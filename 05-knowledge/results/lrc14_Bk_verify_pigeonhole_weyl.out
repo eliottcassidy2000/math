@@ -1,0 +1,19 @@
+====================================================================================
+(1) k<=7 pigeonhole: mu_1/7(E)==1 EXACTLY for all E (push spread high)
+====================================================================================
+  k=2: 14 sets spread<= 14: min mu_1/7 = 1 (==1)
+  k=3: 105 sets spread<= 15: min mu_1/7 = 1 (==1)
+  k=4: 560 sets spread<= 16: min mu_1/7 = 1 (==1)
+  k=5: 2380 sets spread<= 17: min mu_1/7 = 1 (==1)
+  k=6: 8568 sets spread<= 18: min mu_1/7 = 1 (==1)
+  k=7: 27132 sets spread<= 19: min mu_1/7 = 1 (==1)
+  ==> mu_1/7==1 for all k<=7 (exact, high spread): True
+
+====================================================================================
+(2) Weyl ceiling sanity: spread-out E (random large, few short relations) -> mu -> F(k)
+====================================================================================
+  k=6: F(k)_2/7=0.8999 ; mean mu over 40 spread-out E = 0.9002 (should hover near F(k), confirming ghat(0)=F(k))
+  k=7: F(k)_2/7=0.7998 ; mean mu over 40 spread-out E = 0.7995 (should hover near F(k), confirming ghat(0)=F(k))
+  k=8: F(k)_2/7=0.6846 ; mean mu over 40 spread-out E = 0.6851 (should hover near F(k), confirming ghat(0)=F(k))
+
+DONE.

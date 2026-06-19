@@ -1,0 +1,7 @@
+Test: does spread>cap LOWER mu_min for small k? (the bounded-spread reduction)
+  k=4: cap14:0.90476(19/21) | cap25:0.90476(19/21) | cap40:0.90476(19/21)  FLAT=True
+  k=5: cap14:0.64286(9/14) | cap18:0.64286(9/14) | cap22:0.64286(9/14)  FLAT=True
+  k=6: cap14:0.57143(4/7) | cap17:0.57143(4/7) | cap20:0.57143(4/7)  FLAT=True
+  k=7: cap14:0.37143(13/35) | cap15:0.37143(13/35)  FLAT=True
+
+Large-spread descent for k=7 (does it beat 13/35=0.371?):

@@ -1,0 +1,32 @@
+==========================================================================================
+(A) CAP PUSH (exact exhaustive) -- does mu_min keep DROPPING or STABILIZE as cap grows?
+==========================================================================================
+
+  k=4:
+     cap<=  6: mu_min =            19/21 = 0.904762   argmin spread=3  E=(0, 1, 2, 3)
+     cap<= 10: mu_min =            19/21 = 0.904762  =   argmin spread=3  E=(0, 1, 2, 3)
+     cap<= 16: mu_min =            19/21 = 0.904762  =   argmin spread=3  E=(0, 1, 2, 3)
+     cap<= 22: mu_min =            19/21 = 0.904762  =   argmin spread=3  E=(0, 1, 2, 3)
+     cap<= 30: mu_min =            19/21 = 0.904762  =   argmin spread=3  E=(0, 1, 2, 3)
+     cap<= 40: mu_min =            19/21 = 0.904762  =   argmin spread=3  E=(0, 1, 2, 3)
+     -> STABLE (last 3 caps equal): converged.
+
+  k=5:
+     cap<=  8: mu_min =             9/14 = 0.642857   argmin spread=4  E=(0, 1, 2, 3, 4)
+     cap<= 12: mu_min =             9/14 = 0.642857  =   argmin spread=4  E=(0, 1, 2, 3, 4)
+     cap<= 16: mu_min =             9/14 = 0.642857  =   argmin spread=4  E=(0, 1, 2, 3, 4)
+     cap<= 22: mu_min =             9/14 = 0.642857  =   argmin spread=4  E=(0, 1, 2, 3, 4)
+     cap<= 28: mu_min =             9/14 = 0.642857  =   argmin spread=4  E=(0, 1, 2, 3, 4)
+     -> STABLE (last 3 caps equal): converged.
+
+  k=6:
+     cap<=  8: mu_min =              4/7 = 0.571429   argmin spread=5  E=(0, 1, 2, 3, 4, 5)
+     cap<= 12: mu_min =              4/7 = 0.571429  =   argmin spread=5  E=(0, 1, 2, 3, 4, 5)
+     cap<= 16: mu_min =              4/7 = 0.571429  =   argmin spread=5  E=(0, 1, 2, 3, 4, 5)
+     cap<= 20: mu_min =              4/7 = 0.571429  =   argmin spread=5  E=(0, 1, 2, 3, 4, 5)
+     -> STABLE (last 3 caps equal): converged.
+
+  k=7:
+     cap<=  9: mu_min =            13/35 = 0.371429   argmin spread=8  E=(0, 2, 3, 4, 5, 6, 8)
+     cap<= 12: mu_min =            13/35 = 0.371429  =   argmin spread=8  E=(0, 2, 3, 4, 5, 6, 8)
+     cap<= 15: mu_min =            13/35 = 0.371429  =   argmin spread=8  E=(0, 2, 3, 4, 5, 6, 8)

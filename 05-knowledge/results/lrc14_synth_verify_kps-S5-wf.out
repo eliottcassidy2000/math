@@ -1,0 +1,24 @@
+=== ANCHOR CHECK (theta=2/7) ===
+  mu4_consec     A=19/21 B=19/21 expected=19/21  OK
+  mu5_consec     A=9/14 B=9/14 expected=9/14  OK
+  mu6_consec     A=4/7 B=4/7 expected=4/7  OK
+  mu7_perf       A=13/35 B=13/35 expected=13/35  OK
+  mu13_consec    A=829/4620 B=829/4620 expected=829/4620  OK
+  L1_scale       A=4/7 B=4/7 expected=4/7  OK
+
+=== CONTESTED SECOND-VERDICT COUNTEREXAMPLES (k=13, claim mu << 1/14) ===
+  1/14 = 0.071429
+  ce1: A=3736/85785 (~0.043551) B=3736/85785 float~0.043597
+        claimed=3736/85785 (~0.043551)  A==B:True  A==claimed:True  A<1/14:True
+  ce2: A=1314101/28198716 (~0.046601) B=1314101/28198716 float~0.046679
+        claimed=1314101/28198716 (~0.046601)  A==B:True  A==claimed:True  A<1/14:True
+  ce3: A=23059/412335 (~0.055923) B=23059/412335 float~0.055980
+        claimed=23059/412335 (~0.055923)  A==B:True  A==claimed:True  A<1/14:True
+  ce4: A=3303/52780 (~0.062581) B=3303/52780 float~0.062573
+        claimed=3303/52780 (~0.062581)  A==B:True  A==claimed:True  A<1/14:True
+
+=== mu_{1/7} of these contested sets (the CORRECT global-witness object) ===
+  ce1: mu_1/7 A=6503339/6592950 (~0.986408) B=6503339/6592950  A==B:True  >=consec13(477/1078=0.4425):True
+  ce2: mu_1/7 A=152418409627483/157103642896200 (~0.970177) B=152418409627483/157103642896200  A==B:True  >=consec13(477/1078=0.4425):True
+  ce3: mu_1/7 A=57283/58520 (~0.978862) B=57283/58520  A==B:True  >=consec13(477/1078=0.4425):True
+  ce4: mu_1/7 A=9545111/10345860 (~0.922602) B=9545111/10345860  A==B:True  >=consec13(477/1078=0.4425):True

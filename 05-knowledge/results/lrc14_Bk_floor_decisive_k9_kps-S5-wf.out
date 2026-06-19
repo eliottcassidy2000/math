@@ -1,0 +1,9 @@
+=== DECISIVE FLOOR TEST k=9 (vectorized numeric mu, annealing) ===
+  spread=  8 (~0.9k): min mu_num ~ 0.2826   E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  spread= 12 (~1.3k): min mu_num ~ 0.2231   E=(0, 3, 4, 5, 6, 7, 8, 10, 12)
+  spread= 18 (~2.0k): min mu_num ~ 0.1980   E=(0, 5, 7, 8, 9, 10, 11, 13, 18)
+  spread= 27 (~3.0k): min mu_num ~ 0.2593   E=(0, 2, 4, 5, 6, 7, 8, 10, 27)
+  spread= 36 (~4.0k): min mu_num ~ 0.2699   E=(0, 12, 14, 15, 18, 21, 24, 28, 36)
+  spread= 54 (~6.0k): min mu_num ~ 0.3124   E=(0, 16, 22, 25, 28, 31, 34, 40, 54)
+  spread= 72 (~8.0k): min mu_num ~ 0.3143   E=(0, 13, 16, 24, 32, 40, 48, 64, 72)
+DONE.

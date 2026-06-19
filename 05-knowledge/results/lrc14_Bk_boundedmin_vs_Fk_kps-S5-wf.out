@@ -1,0 +1,7 @@
+k | bounded-spread min mu (subsets of 0..k+5) | F(k) | min<F?
+k= 4: min mu=0.904762=19/21  F=0.997085  min<F:True  argmin=[0, 1, 2, 3]
+k= 5: min mu=0.642857=9/14  F=0.968347  min<F:True  argmin=[0, 1, 2, 3, 4]
+k= 6: min mu=0.571429=4/7  F=0.899923  min<F:True  argmin=[0, 1, 2, 3, 4, 5]
+k= 7: min mu=0.371429=13/35  F=0.799845  min<F:True  argmin=[0, 2, 3, 4, 5, 6, 8]
+k= 8: min mu=0.322727=71/220  F=0.684627  min<F:True  argmin=[0, 2, 3, 4, 5, 6, 8, 11]
+k= 9: min mu=0.223129=164/735  F=0.568886  min<F:True  argmin=[0, 2, 4, 5, 6, 7, 8, 9, 12]

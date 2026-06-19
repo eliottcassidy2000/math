@@ -1,0 +1,46 @@
+========================================================================
+DECISIVE TEST: does any subtorus type undercut the bounded-shape minimum?
+========================================================================
+  k=5: bounded-min mu = 9/14 = 0.642857  at (0, 1, 2, 3, 4)
+  k=6: bounded-min mu = 4/7 = 0.571429  at (0, 1, 2, 3, 4, 5)
+  k=7: bounded-min mu = 13/35 = 0.371429  at (0, 2, 3, 4, 5, 6, 8)
+
+AP-of-runs subtori (shared large scale q; correlated translations).
+For each run-composition we give EXACT mu at two large coprime q to show
+the spread->inf value is STABLE, and compare to the bounded min:
+
+  k=5 runs (4, 1): mu(q=97)=0.8535 mu(q=101)=0.8505 (UNSTABLE)
+  k=5 runs (3, 2): mu(q=97)=0.8922 mu(q=101)=0.8887 (UNSTABLE)
+  k=5 runs (3, 1, 1): mu(q=97)=0.9311 mu(q=101)=0.9276 (UNSTABLE)
+  k=5 runs (2, 2, 1): mu(q=97)=0.8917 mu(q=101)=0.8924 (UNSTABLE)
+  k=5 runs (2, 1, 1, 1): mu(q=97)=0.8528 mu(q=101)=0.8512 (UNSTABLE)
+  k=5 runs (1, 1, 1, 1, 1): mu(q=97)=0.6429 mu(q=101)=0.6429 (stable)
+  --> k=5: worst AP-of-runs mu = 0.6429 ((1, 1, 1, 1, 1)) vs bounded min 0.6429  OK
+
+  k=6 runs (5, 1): mu(q=97)=0.6222 mu(q=101)=0.6206 (UNSTABLE)
+  k=6 runs (4, 2): mu(q=97)=0.7549 mu(q=101)=0.7507 (UNSTABLE)
+  k=6 runs (3, 3): mu(q=97)=0.6990 mu(q=101)=0.6998 (UNSTABLE)
+  k=6 runs (3, 2, 1): mu(q=97)=0.7391 mu(q=101)=0.7371 (UNSTABLE)
+  k=6 runs (2, 2, 2): mu(q=97)=0.6982 mu(q=101)=0.6995 (UNSTABLE)
+  k=6 runs (2, 2, 1, 1): mu(q=97)=0.7539 mu(q=101)=0.7544 (UNSTABLE)
+  --> k=6: worst AP-of-runs mu = 0.6206 ((5, 1)) vs bounded min 0.5714  OK
+
+  k=7 runs (6, 1): mu(q=97)=0.5222 mu(q=101)=0.5243 (UNSTABLE)
+  k=7 runs (5, 2): mu(q=97)=0.5418 mu(q=101)=0.5400 (UNSTABLE)
+  k=7 runs (4, 3): mu(q=97)=0.5707 mu(q=101)=0.5722 (UNSTABLE)
+  k=7 runs (5, 1, 1): mu(q=97)=0.5635 mu(q=101)=0.5605 (UNSTABLE)
+  k=7 runs (4, 2, 1): mu(q=97)=0.6388 mu(q=101)=0.6372 (UNSTABLE)
+  k=7 runs (3, 2, 2): mu(q=97)=0.5917 mu(q=101)=0.5908 (UNSTABLE)
+  k=7 runs (3, 3, 1): mu(q=97)=0.5906 mu(q=101)=0.5912 (UNSTABLE)
+  k=7 runs (2, 2, 2, 1): mu(q=97)=0.5712 mu(q=101)=0.5721 (UNSTABLE)
+  --> k=7: worst AP-of-runs mu = 0.5222 ((6, 1)) vs bounded min 0.3714  OK
+
+========================================================================
+VERDICT: NO subtorus undercuts the bounded min (in tested families)
+========================================================================
+
+Bounded-shape minimizer structure (k=7, cap 12):
+  min mu = 13/35 = 0.37143 at E=(0, 2, 3, 4, 5, 6, 8)
+  (runs: shows the global min is a bounded perforated near-AP)
+
+DONE.

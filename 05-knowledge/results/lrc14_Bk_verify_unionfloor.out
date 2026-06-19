@@ -1,0 +1,44 @@
+========================================================================================
+CHECK: gp_min(k) = min over admissible P (|P|=13-k, P subset {1..13}) of meas(G_P)
+========================================================================================
+  k= 8: |P|=5  gp_min = 2243/5880 = 0.381463  at P=(1, 5, 7, 8, 9)
+  k= 9: |P|=4  gp_min = 1979/4004 = 0.494256  at P=(1, 11, 12, 13)
+  k=10: |P|=3  gp_min = 55/91 = 0.604396  at P=(1, 12, 13)
+  k=11: |P|=2  gp_min = 66/91 = 0.725275  at P=(1, 13)
+  k=12: |P|=1  gp_min = 6/7 = 0.857143  at P=(1,)
+  k=13: |P|=0 -> meas(G_P)=1
+
+========================================================================================
+CHECK: per-k union floor = gp_min(k) + mu_1/7(consec_k) - 1  (GRANTING the spread bound)
+========================================================================================
+  k= 8: gp_min=0.38146 + consec_mu17=0.94014 - 1 = 1891/5880 = 0.321599  >0 OK
+  k= 9: gp_min=0.49426 + consec_mu17=0.84014 - 1 = 28117/84084 = 0.334392  >0 OK
+  k=10: gp_min=0.60440 + consec_mu17=0.77551 - 1 = 242/637 = 0.379906  >0 OK
+  k=11: gp_min=0.72527 + consec_mu17=0.62630 - 1 = 10078/28665 = 0.351579  >0 OK
+  k=12: gp_min=0.85714 + consec_mu17=0.56990 - 1 = 10358/24255 = 0.427046  >0 OK
+  k=13: gp_min=1.00000 + consec_mu17=0.44249 - 1 = 477/1078 = 0.442486  >0 OK
+
+  GLOBAL k>=8 union floor = 1891/5880 = 0.321599  (binding k=[8])
+  quoted floor 1891/5880 = 1891/5880 = 0.321599  MATCH
+
+========================================================================================
+CHECK: quoted thr_8 = 3637/5880 = 1 - gp_min(8)?  (thr_k := 1 - min meas(G_P))
+========================================================================================
+  1 - gp_min(8) = 3637/5880 = 0.618537   quoted thr_8=3637/5880=0.618537  MATCH
+  consec_mu17(8) = 691/735 = 0.94014 ; margin consec - thr_8 = 1891/5880 = 0.32160
+  (quoted margin 1891/5880 = 0.32160)
+
+========================================================================================
+ADVERSARIAL: is the union bound's hypothesis met by the WORST admissible (P,E) pair?
+The union bound needs meas(G_P)+mu_1/7(E)-1>0 for the actual E (any E, not just consec).
+GRANTING mu_1/7(E)>=consec, worst pair = (P*=argmin G_P, E=consec). Already covered above.
+But cross-check: directly compute rho*_1/7(P*,consec_E) and confirm >= union floor.
+========================================================================================
+  k= 8: actual rho*_1/7(P*,consec) = 2243/5880 = 0.381463  ;  union LB = 0.321599  (rho>=LB OK)
+  k= 9: actual rho*_1/7(P*,consec) = 991/2860 = 0.346503  ;  union LB = 0.334392  (rho>=LB OK)
+  k=10: actual rho*_1/7(P*,consec) = 3803/9555 = 0.398012  ;  union LB = 0.379906  (rho>=LB OK)
+  k=11: actual rho*_1/7(P*,consec) = 278/735 = 0.378231  ;  union LB = 0.351579  (rho>=LB OK)
+  k=12: actual rho*_1/7(P*,consec) = 10358/24255 = 0.427046  ;  union LB = 0.427046  (rho>=LB OK)
+  k=13: actual rho*_1/7(P*,consec) = 477/1078 = 0.442486  ;  union LB = 0.442486  (rho>=LB OK)
+
+DONE.

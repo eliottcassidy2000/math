@@ -1,0 +1,7 @@
+=== ADVERSARIAL DESCENT ON mu_{1/7}: try to break mu_1/7(E) >= thr_k ===
+(Same attack profile that drove mu_{2/7} to ~0.0436 << 1/14)
+
+--- k=8, thr_k = 0.6185 (3637/5880) ---
+   spread<=  10: float_min~0.9387  exact=0.9401 (691/735)  E=[0, 1, 2, 3, 4, 5, 6, 7]  ok
+   spread<=  16: float_min~0.9746  exact=0.9739 (61420/63063)  E=[0, 2, 4, 6, 7, 9, 11, 13]  ok
+   spread<=  24: float_min~0.9917  exact=0.9914 (626809/632247)  E=[0, 1, 2, 5, 6, 11, 12, 23]  ok

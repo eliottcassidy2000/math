@@ -1,0 +1,34 @@
+====================================================================================
+CHECK A: two independent engines agree, and match canon consecutive 2/7 values
+====================================================================================
+  k= 3 consec  mu_2/7=1=1.000000  engines_agree=True  canon=1 OK
+  k= 4 consec  mu_2/7=19/21=0.904762  engines_agree=True  canon=19/21 OK
+  k= 5 consec  mu_2/7=9/14=0.642857  engines_agree=True  canon=9/14 OK
+  k= 6 consec  mu_2/7=4/7=0.571429  engines_agree=True  canon=4/7 OK
+  k= 7 consec  mu_2/7=83/210=0.395238  engines_agree=True  canon=83/210 OK
+  k= 8 consec  mu_2/7=163/490=0.332653  engines_agree=True
+  k= 9 consec  mu_2/7=277/980=0.282653  engines_agree=True
+  k=10 consec  mu_2/7=557/2205=0.252608  engines_agree=True
+  k=11 consec  mu_2/7=127/588=0.215986  engines_agree=True
+  k=12 consec  mu_2/7=1313/6468=0.202999  engines_agree=True
+  k=13 consec  mu_2/7=829/4620=0.179437  engines_agree=True  canon=829/4620 OK
+  ==> ALL consecutive 2/7 checks (both engines + canon): PASS
+  NOTE the prompt's CORRECTION: consecutive mu_7 = 83/210 = 0.39524, and mu({0,2,3,4,5,6,8})=13/35 (the claimed 13/35 perforated min)
+
+====================================================================================
+CHECK B: F(k) iid-ceiling constants quoted in prompt
+====================================================================================
+  F(4) = 342/343  quoted=342/343  OK
+  F(7) = 13443/16807  quoted=13443/16807  OK
+  F(9) = 3279513/5764801  quoted=3279513/5764801  OK
+  F(13) = 3132376013/13841287201  quoted=3132376013/13841287201  OK
+
+====================================================================================
+CHECK C: mu_{1/7} = 1 for k<=7 (pigeonhole claim) -- EXHAUSTIVE over all E up to spread
+====================================================================================
+  k=3: min mu_1/7 over spreads<= 11 = 1 (=1 OK)
+  k=4: min mu_1/7 over spreads<= 12 = 1 (=1 OK)
+  k=5: min mu_1/7 over spreads<= 13 = 1 (=1 OK)
+  k=6: min mu_1/7 over spreads<= 14 = 1 (=1 OK)
+  k=7: min mu_1/7 over spreads<= 15 = 1 (=1 OK)
+  ==> mu_1/7==1 for all tested k<=7: CONFIRMED

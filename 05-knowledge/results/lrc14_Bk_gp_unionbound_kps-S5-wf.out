@@ -1,0 +1,32 @@
+====================================================================================
+(1) Does consecutive E minimize mu_{1/7} at each k>=8? (structured + random search)
+====================================================================================
+  k= 8: consecutive mu_1/7=691/735=0.9401 IS the min found
+  k= 9: consecutive mu_1/7=247/294=0.8401 IS the min found
+  k=10: consecutive mu_1/7=38/49=0.7755 IS the min found
+  k=11: consecutive mu_1/7=1381/2205=0.6263 IS the min found
+  k=12: consecutive mu_1/7=13823/24255=0.5699 IS the min found
+  k=13: consecutive mu_1/7=477/1078=0.4425 IS the min found
+  consecutive-minimizes-mu_1/7 (search): True
+
+====================================================================================
+(2) Per-pair union LB = meas(G_P)+mu_1/7(consecutive E)-1, min over admissible P, k>=8
+====================================================================================
+  k= 8: min union-LB =      1891/5880 = 0.3216  at P=(1, 5, 7, 8, 9)
+  k= 9: min union-LB =    28117/84084 = 0.3344  at P=(1, 11, 12, 13)
+  k=10: min union-LB =        242/637 = 0.3799  at P=(1, 12, 13)
+  k=11: min union-LB =    10078/28665 = 0.3516  at P=(1, 13)
+  k=12: min union-LB =    10358/24255 = 0.4270  at P=(1,)
+  k=13: min union-LB =       477/1078 = 0.4425  at P=()
+
+  GLOBAL min per-pair union-LB (k>=8) = 1891/5880 = 0.3216  (k=8 P=(1, 5, 7, 8, 9))
+  => for k>=8, rho*_1/7 >= 1891/5880 > 0 PROVIDED consecutive minimizes mu_1/7 (the 1/7 spread-bound).
+
+====================================================================================
+(3) The clean combined floor:  c0' = min( m_P[k<=7 pigeonhole=meas G_P],  union-LB[k>=8] )
+====================================================================================
+  k<=7 branch: min meas(G_P) over |P| in 6..10 = 14249/252252 = 0.056487
+  k>=8 branch: union-LB floor = 1891/5880 = 0.3216
+  => combined c0' = 14249/252252 = 0.056487  (the global-witness uniform floor candidate)
+
+DONE.

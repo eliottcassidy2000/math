@@ -1,0 +1,3 @@
+reconstructed covering S tested: 4000
+  LONELY (M(S)>1/14): 4000   NON-LONELY (LRC14 counterexample!): 0
+=> if NON-LONELY count is 0, all reconstructed S satisfy LRC(14) (consistency holds).

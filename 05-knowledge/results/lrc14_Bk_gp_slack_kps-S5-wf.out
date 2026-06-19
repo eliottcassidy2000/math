@@ -1,0 +1,15 @@
+====================================================================================
+Required mu_{1/7} threshold thr_k = 1 - min_P meas(G_P), and slack vs searched min mu
+====================================================================================
+  k= 8: thr_k=1-2243/5880=0.6185 | min mu_1/7=0.9401 | SLACK=0.3216 (OK)
+  k= 9: thr_k=1-1979/4004=0.5057 | min mu_1/7=0.8401 | SLACK=0.3344 (OK)
+  k=10: thr_k=1-55/91=0.3956 | min mu_1/7=0.7755 | SLACK=0.3799 (OK)
+  k=11: thr_k=1-66/91=0.2747 | min mu_1/7=0.6263 | SLACK=0.3516 (OK)
+  k=12: thr_k=1-6/7=0.1429 | min mu_1/7=0.5699 | SLACK=0.4270 (OK)
+  k=13: thr_k=1-1=0.0000 | min mu_1/7=0.4425 | SLACK=0.4425 (OK)
+
+INTERPRETATION: any spread-bound proving mu_{1/7}(E) >= thr_k closes k>=8.
+thr_8 = 1 - 2243/5880 = 3637/5880 ~ 0.6185 is the binding requirement; the searched
+min mu_1/7 ~ 0.940 clears it by ~0.32. A loose discrepancy bound suffices.
+
+DONE.

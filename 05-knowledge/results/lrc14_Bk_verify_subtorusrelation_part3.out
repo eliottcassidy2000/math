@@ -1,0 +1,26 @@
+==========================================================================================
+(A) recompute 1/7 consecutive a17(k) and confirm canon
+==========================================================================================
+  a17( 8) =          691/735  canon          691/735  MATCH
+  a17( 9) =          247/294  canon          247/294  MATCH
+  a17(10) =            38/49  canon            38/49  MATCH
+  a17(11) =        1381/2205  canon        1381/2205  MATCH
+  a17(12) =      13823/24255  canon      13823/24255  MATCH
+  a17(13) =         477/1078  canon         477/1078  MATCH
+
+==========================================================================================
+(B) CLAIM-1/7: is consecutive the BOUNDED-SHAPE MINIMIZER for 1/7?
+    exhaustive over spread cap; report min and whether it equals consec
+==========================================================================================
+  k=7 cap=12 thr=1/7: min=             1 consec=             1  CONSEC IS MIN
+  k=8 cap=12 thr=1/7: min=       691/735 consec=       691/735  CONSEC IS MIN
+  k=9 cap=13 thr=1/7: min=       247/294 consec=       247/294  CONSEC IS MIN
+  k=10 cap=14 thr=1/7: min=         38/49 consec=         38/49  CONSEC IS MIN
+
+==========================================================================================
+(C) CLAIM-2/7: perforation BEATS consecutive for 2/7 (mu_min<a(k))
+    exhaustive over spread cap; report min
+==========================================================================================
+  k=7 cap=12 thr=2/7: min=         13/35=0.37143 consec=    83/210=0.39524  PERFORATION BEATS CONSEC  at (0, 2, 3, 4, 5, 6, 8)
+  k=8 cap=12 thr=2/7: min=        71/220=0.32273 consec=   163/490=0.33265  PERFORATION BEATS CONSEC  at (0, 2, 3, 4, 5, 6, 8, 11)
+  k=9 cap=13 thr=2/7: min=       164/735=0.22313 consec=   277/980=0.28265  PERFORATION BEATS CONSEC  at (0, 2, 4, 5, 6, 7, 8, 9, 12)
