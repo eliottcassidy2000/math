@@ -1,0 +1,38 @@
+============================================================================================
+ANGLE C refined: difference-energy as the three-gap invariant behind AP-extremality
+============================================================================================
+
+--- k=8 (box maxE<=12, 792 primitive shapes), cap=0.38146 ---
+  meas(S7(AP))      = 0.327211   diff_energy(AP) = 344
+  AP is UNIQUE meas(S7) max? True   AP is UNIQUE diff_energy max? True
+  Pearson corr(meas(S7), diff_energy) over all shapes = 0.5349
+  best NON-AP: meas(S7)=0.273639  diff_energy=320  E=(0, 2, 3, 4, 5, 6, 7, 8)
+  max meas(S7) over box = 0.327211  < cap? True  (slack 0.054252)
+
+--- k=9 (box maxE<=12, 495 primitive shapes), cap=0.49426 ---
+  meas(S7(AP))      = 0.416156   diff_energy(AP) = 489
+  AP is UNIQUE meas(S7) max? True   AP is UNIQUE diff_energy max? True
+  Pearson corr(meas(S7), diff_energy) over all shapes = 0.5562
+  best NON-AP: meas(S7)=0.401701  diff_energy=461  E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  max meas(S7) over box = 0.416156  < cap? True  (slack 0.078099)
+
+--- k=10 (box maxE<=12, 220 primitive shapes), cap=0.60440 ---
+  meas(S7(AP))      = 0.504478   diff_energy(AP) = 670
+  AP is UNIQUE meas(S7) max? True   AP is UNIQUE diff_energy max? True
+  Pearson corr(meas(S7), diff_energy) over all shapes = 0.5926
+  best NON-AP: meas(S7)=0.493878  diff_energy=638  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+  max meas(S7) over box = 0.504478  < cap? True  (slack 0.099917)
+
+--- k=11 (box maxE<=12, 66 primitive shapes), cap=0.72527 ---
+  meas(S7(AP))      = 0.581463   diff_energy(AP) = 891
+  AP is UNIQUE meas(S7) max? True   AP is UNIQUE diff_energy max? True
+  Pearson corr(meas(S7), diff_energy) over all shapes = 0.6352
+  best NON-AP: meas(S7)=0.567517  diff_energy=799  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12)
+  max meas(S7) over box = 0.581463  < cap? True  (slack 0.143812)
+
+[CONCLUSION CHECK] Does diff_energy PERFECTLY rank meas(S7) (so a clean monotone
+three-gap certificate 'meas(S7) increasing in diff_energy' would hold)?
+If Pearson<1 and AP is still both maxima, the monotone is APPROXIMATE: AP-extremality
+holds but is NOT reducible to a single-scalar diff-energy inequality.
+
+DONE.

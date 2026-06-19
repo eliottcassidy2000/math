@@ -1,0 +1,26 @@
+============================================================================================
+EXACT VERIFICATION of the round-tournament <-> gap dictionary (tie-free cells)
+============================================================================================
+
+R2: maxgap>1/2 <=> (exists sink score 0) <=> (exists source score k-1)
+R3: maxgap>1/7 <=> (exists empty 1/7-arc after some point)  [scale-1/7 local sink]
+R4: c3 = C(k,3) - sum_i C(s_i,2)  (round-tournament 3-cycle formula)
+--------------------------------------------------------------------------------------------
+  k5 consec              cells=   60  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k5 dissoc              cells=  294  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k6 consec              cells=  104  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k6 dissoc              cells=  846  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k7 consec              cells=  144  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k7 dissoc              cells= 1998  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k8 consec              cells=  218  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k8 perforated          cells=  200  R2_bad=0  R3_bad=0  c3formula_bad=0
+  k8 dissoc              cells= 4942  R2_bad=0  R3_bad=0  c3formula_bad=0
+
+============================================================================================
+CONSEQUENCE if R3 holds universally:
+  mu_{1/7}(E) = P_x[ maxgap > 1/7 ] = P_x[ T(x) has a SCALE-1/7 LOCAL SINK ]
+  i.e. some cluster member's clockwise 1/7-arc is empty of other members.
+  This is the 'lonely at scale 1/7' tournament event.  The CRUX mu_{1/7}>=thr_k
+  becomes: 'a positive fraction of phases have a scale-1/7 local dominator'.
+============================================================================================
+DONE.

@@ -1,0 +1,17 @@
+
+===== k=8: cap_k=0.3815, W(consec)=9.733 =====
+  L= 7: M_L=0.0692  C_L*=0.02651  meas(S_L,consec)=0.3272  bound=M_L+C_L*W(consec)=0.3272  cap=0.3815  CLOSES  consec-max-S_L:True
+  L=14: M_L=0.0056  C_L*=0.01959  meas(S_L,consec)=0.1963  bound=M_L+C_L*W(consec)=0.1963  cap=0.3815  CLOSES  consec-max-S_L:True
+  L=21: M_L=0.0030  C_L*=0.01582  meas(S_L,consec)=0.1569  bound=M_L+C_L*W(consec)=0.1569  cap=0.3815  CLOSES  consec-max-S_L:True
+
+===== k=9: cap_k=0.4943, W(consec)=13.119 =====
+  L= 7: M_L=0.1228  C_L*=0.02236  meas(S_L,consec)=0.4162  bound=M_L+C_L*W(consec)=0.4162  cap=0.4943  CLOSES  consec-max-S_L:True
+  L=14: M_L=0.0212  C_L*=0.02117  meas(S_L,consec)=0.2990  bound=M_L+C_L*W(consec)=0.2990  cap=0.4943  CLOSES  consec-max-S_L:True
+  L=21: M_L=0.0104  C_L*=0.01898  meas(S_L,consec)=0.2595  bound=M_L+C_L*W(consec)=0.2595  cap=0.4943  CLOSES  consec-max-S_L:True
+
+===== k=10: cap_k=0.6044, W(consec)=16.893 =====
+  L= 7: M_L=0.1830  C_L*=0.01903  meas(S_L,consec)=0.5045  bound=M_L+C_L*W(consec)=0.5045  cap=0.6044  CLOSES  consec-max-S_L:True
+  L=14: M_L=0.0561  C_L*=0.01904  meas(S_L,consec)=0.3778  bound=M_L+C_L*W(consec)=0.3778  cap=0.6044  CLOSES  consec-max-S_L:True
+  L=21: M_L=0.0285  C_L*=0.01743  meas(S_L,consec)=0.3228  bound=M_L+C_L*W(consec)=0.3228  cap=0.6044  CLOSES  consec-max-S_L:True
+
+DONE.
