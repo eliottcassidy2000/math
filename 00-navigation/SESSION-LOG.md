@@ -1,3 +1,11 @@
+## codex-2026-06-19-S34 -- LRC14 AP-window single-hole collar proved -- THM-541
+
+User asked to work on the next proof obligation creatively.  Synced current mainline and integrated the incoming HYP-2652 invariant-stack packet plus the THM-538 dispute alert.  The next sharp obligation from HYP-2651 was the AP-window single-hole collar lemma.  Added `04-computation/lrc14_ap_window_single_hole_certificate_codex_s34.py`, stored `05-knowledge/results/lrc14_ap_window_single_hole_certificate_codex_s34.out`, proved `01-canon/theorems/THM-541-lrc14-ap-window-single-hole-collar.md`, updated HYP-2651, and added reflection `07-reflections/lrc14-ap-window-single-hole-collar-codex-s34.md`.
+
+**FINDING:** for the one-hole AP-window cores `{1,...,13}\{e}`, exact rational interval arithmetic proves the unique minimum is `e=6`, with `meas(G_C)=7/858`.  The next value is `e=12`, `426/35035`, separated by `841/210210`.  The proof carrier is not the scalar drop position but the addressed signed wall gap `R(v,a)->L(w,b)`.  Drop 6 has four surviving components owned by `R(13,2)->L(12,2)`, `R(12,2)->L(11,2)`, `R(11,9)->L(12,10)`, and `R(12,10)->L(13,11)`, with determinant numerators `[3,5,5,3]`.
+
+**NEXT OBLIGATION:** prove the near-collar template theorem: if a primitive positive 12-core has `meas(G_C)<426/35035`, then it must have the drop-6 AP-window state template.  The new suggested route is a signed boundary-determinant rigidity lemma for low-measure R-to-L wall chains before scalarizing through Freiman/state-word quotients.  LRC(14) NOT proved, but the first HYP-2651 proof obligation is closed.
+
 ## codex-2026-06-19-S33 -- LRC speed-set invariant stack: endpoint geometry plus binding tail laws -- HYP-2652/T899
 
 User asked again to creatively look for LRC invariants and what actually determines the structure. Mainline already had codex-S32/HYP-2650 answering "scalar plus address" via addressed clearance words and LRC14 state words, and incoming origin claimed HYP-2651/T898 for the core-gap atlas, so this session made a complementary exact 13-speed atlas under HYP-2652/T899. Added `04-computation/lrc_invariant_atlas_codex_20260619.py`, stored `05-knowledge/results/lrc_invariant_atlas_codex_20260619.out`, detail `05-knowledge/hypotheses/HYP-2652-lrc-speedset-invariant-stack.md`, and reflection `07-reflections/lrc-invariant-stack-codex-20260619.md`.

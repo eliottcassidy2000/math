@@ -13,6 +13,7 @@ related:
   - HYP-2638
   - HYP-2639
   - HYP-2646
+  - THM-541
   - OPEN-Q-108
 ---
 
@@ -124,15 +125,18 @@ better by hole/state template than by scalar excess.
 
 This suggests a three-step route for the OPEN-Q-108 uniform fattening lemma.
 
-1. Prove the AP-window single-hole collar lemma exactly:
+1. The AP-window single-hole collar lemma is now proved as THM-541:
 
 ```text
 For C=[1,13]\{e}, meas(G_C) is minimized uniquely at e=6,
 with value 7/858.
 ```
 
-This is a small exact wall-ledger lemma, not a search problem.  The stored table
-gives all values and component counts.
+THM-541 gives the exact addressed wall certificate.  The drop-6 components are
+the signed boundary gaps `R(13,2)->L(12,2)`, `R(12,2)->L(11,2)`,
+`R(11,9)->L(12,10)`, and `R(12,10)->L(13,11)`, with determinant numerators
+`[3,5,5,3]`.  This confirms that the collar is an addressed boundary-owner
+phenomenon, not a scalar hole-position statistic.
 
 2. Prove a near-collar state-template lemma:
 
