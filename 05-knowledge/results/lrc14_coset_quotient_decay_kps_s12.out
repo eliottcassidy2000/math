@@ -1,0 +1,20 @@
+LRC(14) COSET-QUOTIENT DECAY (kps-S12 part 2)
+Step A: VERIFY exact factorization  K(n) = (1/prod n_j) * D7(n mod 7)
+
+  max |K_direct - K_factored| over 2000 random support-6 n = 1.557e-19
+  => factorization EXACT iff this is ~1e-13.
+
+Step B: per-COSET signed reciprocal sums.  correction = sum_c D7(c) * S_c(E,L),
+  S_c(E,L) = sum_{n in Lambda(E), n=c mod7, |n|inf<=L} 1/prod n_j.
+  We track how S_c (and the total) converge per coset.
+
+--- E=[0, 1, 2, 3, 4, 5, 6, 7]  target p0-M7 = 0.302731 ---
+   L=5: #rels=315096  reconstructed corr = +0.018962 (Im=9.2e-17)  frac=0.0626
+   L=7: #rels=801846  reconstructed corr = +0.024862 (Im=5.8e-17)  frac=0.0821
+   L=9: #rels=3259522  reconstructed corr = +0.019833 (Im=1.8e-16)  frac=0.0655
+
+--- E=[0, 1, 3, 5, 7, 9, 11, 13]  target p0-M7 = 0.213476 ---
+   L=5: #rels=173284  reconstructed corr = +0.018185 (Im=1.5e-16)  frac=0.0852
+   L=7: #rels=443974  reconstructed corr = +0.022828 (Im=1.8e-16)  frac=0.1069
+   L=9: #rels=1804120  reconstructed corr = +0.017633 (Im=1.7e-16)  frac=0.0826
+
