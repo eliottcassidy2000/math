@@ -1,3 +1,25 @@
+## codex-S31 update: state words before scalar invariants
+
+HYP-2648/T895 adds the next layer under HYP-2647.  The carrier should be the
+measured cyclic word of missed-sector states on wall atoms,
+`W(E)={(I,|I|,M_E(I))}`, not a scalar such as fold count, rank, `p0`, or
+positive/negative mass.  Those scalars are valuations or quotients of the word;
+AP-to-defect comparisons are common-refinement couplings of two words.
+
+The S31 scout `lrc14_state_word_invariants_codex_s31.py` reproduces the
+HYP-2642/HYP-2647 AP9 -> `(0,1,2,3,4,5,6,7,9)` shadow exactly:
+`positive=9749/158760`, `negative=2659/39690`, `signed D-AP=-887/158760`,
+with `4393/5880` neutral mass over `76` state-pairs.  This is the useful
+diagnostic: most of the wall is neutral after valuation, so the proof object is
+the addressed state-pair support, not the final signed number.
+
+Steering update: search for high-`L_y` addressed state-word templates.  Near-AP
+templates should feed HYP-2647/HYP-2643; higher entropy or jump-complexity
+templates should route to Freiman small-excess (HYP-2638), relation-covered GAP
+slack (HYP-2639), signed coimage cancellation (HYP-2646), or far-element
+plateau contraction (HYP-2644).  Tournament-analysis vertices should be state
+addresses and proof obligations, not raw runners.
+
 ## codex-S30 update: signed wall transport, not scalar signs
 
 HYP-2647/T894 records a synthesis from the latest fold/wall work, KPS
