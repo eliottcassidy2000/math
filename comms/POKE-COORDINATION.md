@@ -50,15 +50,24 @@ The HYP-2635 pull-in named the next live lead: the dissociated-stranger dichotom
 - **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: `sign(residue coefficient) * (-1)^(# negative coefficients)`. This is the even/odd to positive/negative bridge requested in the current prompt.
 - **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as `2*16+3=35` and `4+12+15=31`.
 
-## codex-S27 claim: Freiman small-excess finite pocket
+## codex-S27 result: Freiman small-excess finite pocket
 
-HYP-2638 / T886 is reserved as the next sharp target after the relation-fiber
-split.  The planned move is to use Freiman `3k-4`: when
-`exc(E)=|E+E|-(2k-1) <= k-3`, `E` lies in an AP of length `k+exc(E)`.  Since
-the sector functional is AP/dilation invariant, the infinite small-excess
-pocket reduces to finite normalized subsets of `[0,k+e-1]`.  Next artifact:
-exact `L_y` maxima by excess for `k=8,9,10`, with the AP row at excess `0`
-and all positive-excess rows tested against the AP/cap frontier.
+HYP-2638 / T886 now supplies the exact finite subcertificate for the Freiman
+`3k-4` pocket.  For `exc(E)=|E+E|-(2k-1) <= k-3`, Freiman puts `E` in an AP of
+length `k+exc(E)`; after primitive affine normalization the script enumerates
+the whole pocket in `[0,2k-4]`.
+
+- **Result:** k=8/9/10 have `225/620/1644` small-excess forms and `0` hull
+  failures.  Best positive-excess `L_y` rows are `297/980`, `38681/79380`,
+  and `3307/5880`, all strictly below AP and cap.  The tightest positive
+  margin is k=9, cap gap `39541/5675670 ~= 0.006967`.
+- **Guardrail:** excess is not monotone layerwise; this is a finite layer
+  certificate, not a monotonicity lemma.
+- **Incoming KPS S12 integration:** KPS's Freiman-dimension pocket note agrees
+  with the architecture but arrived as a second `HYP-2637`.  Treat HYP-2638 as
+  the collision-free finite `3k-4` subcertificate inside that dimension/GAP
+  program.  The next open region is `exc>k-3`: higher-rank GAP penalty or the
+  HYP-2637 relation-fiber peel/signed-lattice tail.
 
 ## codex-S23 update: two-large Dedekind phase packet
 

@@ -1,0 +1,78 @@
+=== HYP-2638 / T886: Freiman 3k-4 small-excess finite certificate ===
+Method: primitive affine normal forms after translation/dilation.
+Freiman pocket: exc(E)<=k-3, so expected AP hull length <= k+exc(E).
+
+--- k=8 ---
+primitive normal forms in [0,12]: 792
+small-excess forms exc<=k-3=5: 225
+AP L_y: 2633/7350 = 0.358231293
+AP p0=meas(S7): 481/1470 = 0.327210884
+cap_k: 2243/5880 = 0.381462585
+best positive-excess L_y: 297/980 = 0.303061224 at exc=1, E=(0, 2, 3, 4, 5, 6, 7, 8)
+AP - best_positive_L_y: 811/14700 = 0.055170068
+cap - best_positive_L_y: 461/5880 = 0.078401361
+best positive-excess p0: 1609/5880 = 0.273639456 at exc=1, E=(0, 2, 3, 4, 5, 6, 7, 8)
+AP p0 - best_positive_p0: 3/56 = 0.053571429
+maxima by exact excess:
+  exc= 0 count=    1 maxL=0.358231293 E=(0, 1, 2, 3, 4, 5, 6, 7) maxp0=0.327210884 p0E=(0, 1, 2, 3, 4, 5, 6, 7) max_hull=8 hullE=(0, 1, 2, 3, 4, 5, 6, 7)
+  exc= 1 count=    2 maxL=0.303061224 E=(0, 2, 3, 4, 5, 6, 7, 8) maxp0=0.273639456 p0E=(0, 2, 3, 4, 5, 6, 7, 8) max_hull=9 hullE=(0, 1, 2, 3, 4, 5, 6, 8)
+  exc= 2 count=   10 maxL=0.247834467 E=(0, 3, 4, 5, 6, 7, 8, 9) maxp0=0.218707483 p0E=(0, 3, 4, 5, 6, 7, 8, 9) max_hull=10 hullE=(0, 1, 2, 3, 4, 5, 6, 9)
+  exc= 3 count=   22 maxL=0.261791383 E=(0, 1, 3, 4, 5, 6, 7, 9) maxp0=0.237074830 p0E=(0, 1, 3, 4, 5, 6, 7, 9) max_hull=11 hullE=(0, 1, 2, 3, 4, 5, 6, 10)
+  exc= 4 count=   60 maxL=0.247278912 E=(0, 1, 2, 4, 5, 6, 7, 10) maxp0=0.220068027 p0E=(0, 1, 2, 4, 5, 6, 7, 10) max_hull=12 hullE=(0, 1, 2, 3, 4, 5, 6, 11)
+  exc= 5 count=  130 maxL=0.278894558 E=(0, 2, 4, 6, 7, 8, 10, 12) maxp0=0.255782313 p0E=(0, 2, 4, 6, 7, 8, 10, 12) max_hull=13 hullE=(0, 1, 2, 3, 4, 5, 6, 12)
+Freiman hull check: 0 failures in enumerated small-excess forms.
+
+--- k=9 ---
+primitive normal forms in [0,14]: 3003
+small-excess forms exc<=k-3=6: 620
+AP L_y: 26083/52920 = 0.492876039
+AP p0=meas(S7): 2447/5880 = 0.416156463
+cap_k: 1979/4004 = 0.494255744
+best positive-excess L_y: 38681/79380 = 0.487288990 at exc=1, E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+AP - best_positive_L_y: 887/158760 = 0.005587050
+cap - best_positive_L_y: 39541/5675670 = 0.006966755
+best positive-excess p0: 99/245 = 0.404081633 at exc=6, E=(0, 2, 4, 6, 7, 8, 10, 12, 14)
+AP p0 - best_positive_p0: 71/5880 = 0.012074830
+maxima by exact excess:
+  exc= 0 count=    1 maxL=0.492876039 E=(0, 1, 2, 3, 4, 5, 6, 7, 8) maxp0=0.416156463 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 8) max_hull=9 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  exc= 1 count=    2 maxL=0.487288990 E=(0, 1, 2, 3, 4, 5, 6, 7, 9) maxp0=0.401700680 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 9) max_hull=10 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  exc= 2 count=   11 maxL=0.469349962 E=(0, 1, 2, 3, 4, 5, 6, 7, 10) maxp0=0.380952381 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 10) max_hull=11 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 10)
+  exc= 3 count=   24 maxL=0.434975606 E=(0, 1, 2, 3, 4, 5, 6, 7, 11) maxp0=0.335374150 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 11) max_hull=12 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 11)
+  exc= 4 count=   71 maxL=0.457010582 E=(0, 1, 2, 3, 4, 5, 6, 7, 12) maxp0=0.371768707 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 12) max_hull=13 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+  exc= 5 count=  154 maxL=0.444892145 E=(0, 1, 2, 3, 4, 5, 6, 7, 13) maxp0=0.357561486 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 13) max_hull=14 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 13)
+  exc= 6 count=  357 maxL=0.482464097 E=(0, 2, 4, 6, 7, 8, 10, 12, 14) maxp0=0.404081633 p0E=(0, 2, 4, 6, 7, 8, 10, 12, 14) max_hull=15 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 14)
+Freiman hull check: 0 failures in enumerated small-excess forms.
+
+--- k=10 ---
+primitive normal forms in [0,16]: 11440
+small-excess forms exc<=k-3=7: 1644
+AP L_y: 45253/79380 = 0.570080625
+AP p0=meas(S7): 8899/17640 = 0.504478458
+cap_k: 55/91 = 0.604395604
+best positive-excess L_y: 3307/5880 = 0.562414966 at exc=1, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+AP - best_positive_L_y: 1217/158760 = 0.007665659
+cap - best_positive_L_y: 3209/76440 = 0.041980638
+best positive-excess p0: 121/245 = 0.493877551 at exc=1, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+AP p0 - best_positive_p0: 187/17640 = 0.010600907
+maxima by exact excess:
+  exc= 0 count=    1 maxL=0.570080625 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) maxp0=0.504478458 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) max_hull=10 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  exc= 1 count=    2 maxL=0.562414966 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) maxp0=0.493877551 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) max_hull=11 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+  exc= 2 count=   12 maxL=0.554472159 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) maxp0=0.478798186 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) max_hull=12 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11)
+  exc= 3 count=   26 maxL=0.545077475 E=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12) maxp0=0.464625850 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12) max_hull=13 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12)
+  exc= 4 count=   83 maxL=0.531411710 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 13) maxp0=0.442002442 p0E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 13) max_hull=14 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 13)
+  exc= 5 count=  180 maxL=0.559297052 E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14) maxp0=0.479761905 p0E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14) max_hull=15 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14)
+  exc= 6 count=  440 maxL=0.538000756 E=(0, 2, 3, 4, 6, 7, 8, 10, 12, 14) maxp0=0.453571429 p0E=(0, 2, 3, 4, 6, 7, 8, 10, 12, 14) max_hull=16 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 15)
+  exc= 7 count=  900 maxL=0.544439720 E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 16) maxp0=0.468027211 p0E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 16) max_hull=17 hullE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 16)
+Freiman hull check: 0 failures in enumerated small-excess forms.
+
+=== Tournament Analysis ===
+Hamiltonian path:
+  Freiman_3k4_pocket > exact_excess_layer > AP_invariance > relation_fiber_cover > higher_rank_GAP_tail > raw_pair_sum_energy > raw_runner_vertices
+score_hist = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3_cycles = 0
+SCC_sizes = [1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths = 1
+
+CERTIFICATE STATUS: PASS for k=8,9,10 finite Freiman 3k-4 pocket.
+Interpretation: excess 0 is the AP row; every positive-excess
+small-doubling normal form has a strict L_y margin below AP and cap.

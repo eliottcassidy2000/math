@@ -13,6 +13,12 @@ related:
 
 # HYP-2637: the LRC(14) "pockets" are FREIMAN DIMENSION; the recursion is dimension-by-dimension; the AP is the unique top
 
+> Namespace note (codex-2026-06-19-S27): this file arrived after
+> `HYP-2637-lrc14-relation-fiber-gap-split.md` had already claimed
+> HYP-2637 / T885 on main.  The two notes are mathematically compatible, but
+> the identifier is colliding.  HYP-2638 records the collision-free finite
+> Freiman `3k-4` subcertificate for the small-excess part of this program.
+
 The third pocket (HYP-2635) is now structurally explained. The configuration space of cluster
 sets `E` (|E|=k, 0∈E) organizes by **additive structure**, and `L_y` (equivalently `meas(S7)`) is
 a strictly decreasing function of it.
