@@ -1,0 +1,41 @@
+=== (1) stranger pull-in: EWLB({0..6}∪{w}) as w decreases toward 7 (consec_8) ===
+   w= 7: EWLB=0.692177
+   w= 8: EWLB=0.784524 ↑UP!
+   w= 9: EWLB=0.777381 ↓
+   w=10: EWLB=0.808333 ↑UP!
+   w=11: EWLB=0.831926 ↑UP!
+   w=12: EWLB=0.796429 ↓
+   w=13: EWLB=0.807418 ↑UP!
+   w=14: EWLB=0.764626 ↓
+   w=15: EWLB=0.807143 ↑UP!
+   w=16: EWLB=0.811607 ↑UP!
+   w=17: EWLB=0.801471 ↓
+   w=18: EWLB=0.814286 ↑UP!
+   w=19: EWLB=0.809900 ↓
+   w=20: EWLB=0.789286 ↓
+   w=21: EWLB=0.778571 ↓
+   w=22: EWLB=0.797294 ↑UP!
+   w=23: EWLB=0.793219 ↓
+   w=24: EWLB=0.813690 ↑UP!
+   w=25: EWLB=0.791429 ↓
+   w=26: EWLB=0.788645 ↓
+   w=27: EWLB=0.811640 ↑UP!
+   w=28: EWLB=0.775680 ↓
+   w=29: EWLB=0.808498 ↑UP!
+   w=30: EWLB=0.811905 ↑UP!
+   w=31: EWLB=0.786175 ↓
+   w=32: EWLB=0.803869 ↑UP!
+   w=33: EWLB=0.814935 ↑UP!
+   w=34: EWLB=0.802521 ↓
+   w=35: EWLB=0.784694 ↓
+   w=36: EWLB=0.797619 ↑UP!
+   w=37: EWLB=0.797297 ↓
+   w=38: EWLB=0.802005 ↑UP!
+   w=39: EWLB=0.788736 ↓
+   w=40: EWLB=0.808929 ↑UP!
+   monotone non-increasing as w↓? False  (consec_8 w=7: EWLB=0.692177)
+
+=== (2) S_1 = Σ_j meas(orbit avoids sector j): does consec MINIMIZE S_1, and is it contraction-monotone? ===
+   S_1(consec_8)=393/245=1.604082
+   #S_1 below consec (want 0): 0/150
+   S_1 contraction violations (EWLB-style): 173/431  (0 ⟹ S_1 IS contraction-monotone, unlike EWLB)
