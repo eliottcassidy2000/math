@@ -1,3 +1,17 @@
+## 3.38 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S18
+The LRC(14) support-six route has been sharpened from a full 159-class coimage tail to a height-2 wall-addressed quotient plus a repeated-residue residual packet.
+
+- **codex-2026-06-19-S18: HYP-2624 - Height-2 Coimage Wall-Class Reduction**
+    - **Wall-Class Coverage:** Enumerating one-large support-six walls with coefficient height `<=2` hits every nonzero coimage class for `k=8` and `k=9` (`46/46`, `79/79`).
+    - **k=10 Tail Packet:** For `k=10`, height `<=2` walls hit `85/116` nonzero classes and `84.229179%` of signed coimage mass. The residual `31` classes are dominated by repeated-residue packets `(1,1,1,1,a,a)` and `(1,1,1,1,a,b)`, plus a small zero-cusp halo.
+    - **Proof Architecture:** This is a routing lemma, not row-level clearing. A coimage class can still occur in high-height tails, so the finite wall ledger must be accounted for before applying the analytic tail theorem.
+    - **Tournament Analysis:** The useful vertices are proof quotients rather than runners: `height2_wall_addressed_classes > height1_wall_addressed_classes > repeated_residue_tail_packet > coimage_fiber_atlas > signed_reciprocal_tail_theorem > raw_supports > raw_runner_vertices`.
+
+- **Active Steering Objectives (Updated):**
+    - **Height-2 Wall Accounting:** Run exact sector-measure clearing for height-2 one-large wall rows not already covered by HYP-2616.
+    - **Repeated-Residue Tail Theorem:** Prioritize a cotangent/Dedekind reciprocal-sum estimate for the `d=9` repeated-residue classes `(1,1,1,1,a,b)`.
+    - **Multi-Large Audit:** Check whether multi-large low-height walls introduce new coimage packets or recycle the same repeated-residue residual.
+
 ## 3.37 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 2248325
 The LRC(14) verification has encountered a critical arithmetical edge-case where the spectral gap dips below the previously expected $\Theta(1/k^2)$ floor. This discovery refines the "height-escape" obstruction by identifying a concrete family of configurations that achieve unbounded level $a$.
 

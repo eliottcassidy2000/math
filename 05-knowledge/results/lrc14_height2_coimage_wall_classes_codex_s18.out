@@ -1,0 +1,113 @@
+
+========================================================================================
+LRC(14) HEIGHT-2 COIMAGE WALL-CLASS AUDIT S18
+========================================================================================
+Goal: classify which HYP-2617 coimage classes are already addressed by one-large support-six additive walls of coefficient height <= 2.
+
+========================================================================================
+HEIGHT <= 2 WALL-CLASS COVERAGE OF COIMAGE MASS
+========================================================================================
+ k  H   supports  classes       M-range   nonzero hit  top10 hit  |S|-mass hit
+ 8  1      29969      132        17..70    45/46         10/10      0.99009901
+ 8  2     272007      147       17..140    46/46         10/10      1.00000000
+ 9  1      20505      132        16..65    77/79         10/10      0.98434783
+ 9  2     177648      147       16..130    79/79         10/10      1.00000000
+10  1       8677      100        14..55    79/116         8/10      0.82073243
+10  2      68124      108       14..110    85/116         8/10      0.84229179
+
+Readout: height<=2 one-large walls cover every nonzero coimage class for k=8 and k=9.  For k=10 they cover about 84% of signed coimage mass; the remainder is structured and listed below.
+
+========================================================================================
+TAIL-ONLY COIMAGE PACKETS AFTER HEIGHT <= 2 WALL ADDRESSING
+========================================================================================
+
+k=8, ambient d=7: missed nonzero classes=0, missed |S|-mass=0 (0.000000%)
+  none: every nonzero coimage class is height<=2 wall-addressed.
+
+k=9, ambient d=8: missed nonzero classes=0, missed |S|-mass=0 (0.000000%)
+  none: every nonzero coimage class is height<=2 wall-addressed.
+
+k=10, ambient d=9: missed nonzero classes=31, missed |S|-mass=1.70105407 (15.770821%)
+  pattern histogram: {'4+2 repeated': 6, '4+1+1 repeated': 12, 'zero-cusp': 3, 'mixed': 10}
+  rank                  class        |S_d|        ratio          pattern
+     1     (1, 1, 1, 1, 4, 4)   0.23891209      19.3926     4+2 repeated
+     2     (1, 1, 1, 1, 2, 2)   0.23891209      18.1869     4+2 repeated
+     3     (1, 1, 1, 1, 6, 6)    0.1720167      29.7843     4+2 repeated
+     4     (1, 1, 1, 1, 3, 3)    0.1720167      28.8616     4+2 repeated
+     5     (1, 1, 1, 1, 5, 5)    0.1720167      29.7557     4+2 repeated
+     6     (1, 1, 1, 1, 2, 3)  0.076451868      60.3104   4+1+1 repeated
+     7     (1, 1, 1, 1, 4, 6)  0.076451868      67.5762   4+1+1 repeated
+     8     (1, 1, 1, 1, 2, 5)  0.076451868      59.9927   4+1+1 repeated
+     9     (1, 1, 1, 1, 3, 4)  0.076451868      61.6747   4+1+1 repeated
+    10     (1, 1, 1, 1, 2, 4)  0.076451868      60.0765   4+1+1 repeated
+    11     (1, 1, 1, 1, 5, 6)  0.076451868      62.1768   4+1+1 repeated
+    12     (0, 0, 0, 0, 1, 1)  0.038225934      147.737        zero-cusp
+    13     (0, 0, 1, 1, 1, 1)  0.038225934      131.414     4+2 repeated
+    14     (0, 0, 0, 1, 2, 3) 0.0095564835      493.047            mixed
+    15     (0, 0, 0, 1, 2, 6) 0.0095564835      445.757            mixed
+    16     (0, 0, 1, 1, 1, 2) 0.0095564835      470.688            mixed
+
+========================================================================================
+EXAMPLES: TOP COIMAGE CLASSES AND THEIR HEIGHT<=2 WALL SUPPORTS
+========================================================================================
+
+k=8, ambient d=7
+rank                  class        |S_d|         wall support example
+   1     (1, 1, 2, 2, 3, 3)    1.4048031          (1, 2, 3, 8, 9, 38)
+   2     (1, 1, 2, 2, 3, 4)    1.2487138          (1, 2, 3, 4, 8, 23)
+   3     (1, 1, 2, 3, 4, 5)   0.97555769          (1, 2, 3, 4, 5, 22)
+   4     (1, 2, 3, 4, 5, 6)   0.93653539          (1, 2, 3, 4, 5, 27)
+   5     (1, 1, 2, 2, 4, 6)   0.70240154          (1, 2, 3, 4, 8, 18)
+   6     (1, 1, 2, 3, 3, 6)   0.70240154          (1, 2, 3, 5, 8, 19)
+   7     (1, 1, 2, 3, 3, 5)   0.70240154          (1, 2, 3, 5, 8, 38)
+   8     (1, 1, 2, 4, 6, 6)   0.70240154         (1, 2, 3, 4, 10, 18)
+   9     (1, 1, 2, 2, 5, 6)   0.54631231          (1, 2, 5, 6, 8, 44)
+  10     (1, 1, 3, 3, 4, 5)   0.54631231          (1, 2, 3, 5, 9, 31)
+
+k=9, ambient d=8
+rank                  class        |S_d|         wall support example
+   1     (1, 1, 2, 2, 3, 3)   0.82504308          (1, 2, 3, 8, 9, 38)
+   2     (1, 1, 2, 2, 3, 4)   0.71355077          (1, 2, 3, 4, 8, 16)
+   3     (1, 1, 2, 3, 4, 5)   0.57418539          (1, 2, 3, 4, 5, 22)
+   4     (1, 2, 3, 4, 5, 6)   0.53516308          (1, 2, 3, 4, 5, 27)
+   5     (1, 1, 2, 2, 4, 6)   0.47941692          (1, 2, 3, 4, 8, 18)
+   6     (1, 1, 2, 3, 3, 6)      0.43482          (1, 2, 3, 5, 8, 19)
+   7     (1, 1, 2, 3, 3, 5)      0.43482          (1, 2, 3, 5, 8, 38)
+   8     (1, 1, 2, 4, 6, 6)      0.43482         (1, 2, 3, 4, 10, 18)
+   9     (0, 0, 1, 1, 2, 2)   0.31217846          (1, 2, 7, 8, 9, 21)
+  10     (0, 0, 1, 1, 6, 6)   0.31217846         (1, 6, 7, 8, 13, 70)
+
+k=10, ambient d=9
+rank                  class        |S_d|         wall support example
+   1     (1, 1, 2, 2, 3, 3)   0.43959824          (1, 2, 3, 8, 9, 38)
+   2     (1, 1, 2, 2, 3, 4)    0.4077433          (1, 2, 3, 4, 8, 16)
+   3     (1, 1, 2, 2, 4, 6)   0.33925517          (1, 2, 3, 4, 8, 18)
+   4     (1, 1, 2, 3, 4, 5)    0.3352733          (1, 2, 3, 4, 5, 15)
+   5     (1, 2, 3, 4, 5, 6)   0.30580747          (1, 2, 3, 4, 5, 27)
+   6     (1, 1, 2, 3, 3, 5)    0.2628033          (1, 2, 3, 5, 8, 38)
+   7     (1, 1, 2, 4, 6, 6)    0.2628033         (1, 2, 3, 4, 10, 18)
+   8     (1, 1, 2, 3, 3, 6)    0.2628033          (1, 2, 3, 5, 8, 19)
+   9     (1, 1, 1, 1, 4, 4)   0.23891209                    TAIL-ONLY
+  10     (1, 1, 1, 1, 2, 2)   0.23891209                    TAIL-ONLY
+
+========================================================================================
+PROOF READOUT
+========================================================================================
+1. Height<=2 one-large walls are not a tiny corner of the residue table. For k=8 and k=9 they touch all coimage classes with nonzero signed mass in the relevant ambient dimension.
+2. For k=10 the remaining tail-only classes are not arbitrary.  The largest are repeated-residue packets of shape 4+2 or 4+1+1, with large abs/signed ratios.  This suggests the next analytic theorem should target repeated-residue reciprocal sums, not all 159 classes.
+3. This does not prove LRC(14): a coimage class can appear both in a low-height wall and in high-height tails.  The result is a routing lemma for the proof architecture: finite wall ledger first, then a much narrower repeated-residue signed tail.
+
+========================================================================================
+TOURNAMENT ANALYSIS
+========================================================================================
+Hamiltonian proof path:
+  height2_wall_addressed_classes > height1_wall_addressed_classes > repeated_residue_tail_packet > coimage_fiber_atlas > signed_reciprocal_tail_theorem > raw_supports > raw_runner_vertices
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+SCC sizes: [1, 1, 1, 1, 1, 1, 1]
+Assumption challenged: tournament vertices need not be runners, arcs, or raw support tuples.  Here the useful vertices are proof quotients: height-bounded wall classes, coimage packets, and the repeated-residue tail obligation.  This quotient preserves the LRC14 support-six tail predicate while throwing away witness-time geometry.
+
+========================================================================================
+S18 STATUS
+========================================================================================
+LRC(14) is not proved here.  The session turns the remaining signed tail into a sharper target: after height<=2 finite wall accounting, k=8 and k=9 have no nonzero tail-only coimage classes; k=10 leaves a repeated-residue packet that should be attacked by a dedicated cotangent/Dedekind reciprocal-sum estimate.
