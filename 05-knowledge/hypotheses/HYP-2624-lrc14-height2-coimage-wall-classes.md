@@ -9,6 +9,8 @@ depends_on:
   - HYP-2616
   - THM-538
 related:
+  - THM-539
+  - HYP-2623
   - HYP-2614
   - HYP-2615
   - HYP-2608
@@ -182,6 +184,17 @@ height matters: do not trust a bounded-height scalar heuristic as a global
 proof.  In the support-six lane, this is exactly why class-addressing is only a
 routing lemma.  Low-height wall classes must be accounted for finitely before
 the high-height repeated-residue tail theorem is applied.
+
+The later THM-539 binding-pair note sharpens the analogy: the escaping family
+is controlled by a two-runner resonance `{2a-1, a(k-1)}` whose denominator is
+`a(k+1)-1`, while the lcm-killer computation says coarse clocks are suppressed
+only when `(k-1)` carries enough small factors.  The LRC(14) coimage tail has a
+parallel but more local shape: repeated residue packets `(a,a,a,a,b,c)` are
+not generic high-height noise, but resonant packets where many row clocks have
+collapsed onto the same projective residue.  A plausible proof route should
+therefore look for a signed cotangent/Dedekind estimate that binds those
+repeated packets directly, rather than trying to extend the height-2 quotient
+as if it were a uniform spectral lower bound.
 
 ## Tournament Analysis
 

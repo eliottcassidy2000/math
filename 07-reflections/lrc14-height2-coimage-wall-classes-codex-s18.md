@@ -41,6 +41,15 @@ high-height tail.  So S18 does not delete those classes from analysis.  It says
 which finite wall ledger must be accounted for first and which classes deserve
 the next analytic theorem.
 
+KPS S9's THM-539 update makes the warning more structural.  In the max-min
+spectrum, the useful escape is not "large numbers are bad" but a precise
+binding-pair resonance `{2a-1, a(k-1)}` plus an lcm-killer condition on the
+coarse clocks.  The LRC14 coimage tail feels like the same phenomenon after
+quotienting: repeated packets `(a,a,a,a,b,c)` are where many support clocks
+have lost individuality, leaving a small signed residue problem behind.  That
+suggests the next proof attempt should be less like a bigger bounded-height
+search and more like a resonant tail theorem for repeated coimage roots.
+
 Tournament-wise, the useful vertices are not runners.  They are not even raw
 supports.  They are proof quotients:
 
