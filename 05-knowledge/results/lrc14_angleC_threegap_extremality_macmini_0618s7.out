@@ -1,0 +1,49 @@
+============================================================================================
+ANGLE C: three-gap / dilation-orbit extremality of meas(S7)  [mac-mini-2026-06-18-S7]
+============================================================================================
+
+[A] AP orbit {0,x,2x,...,(k-1)x} is a THREE-GAP configuration (<=3 distinct gaps).
+  k= 8: AP orbit max #distinct gaps over 400 random rationals x = 3  (<=3 expected)
+  k= 9: AP orbit max #distinct gaps over 400 random rationals x = 3  (<=3 expected)
+  k=10: AP orbit max #distinct gaps over 400 random rationals x = 3  (<=3 expected)
+  k=11: AP orbit max #distinct gaps over 400 random rationals x = 3  (<=3 expected)
+  k=13: AP orbit max #distinct gaps over 400 random rationals x = 3  (<=3 expected)
+
+[B] meas(S7(AP_k)) exact, and meas(N)=meas{maxgap<=1/7} (the three-gap net event).
+    A 1/7-net (maxgap<=1/7) hits every sector => N subset S7. For the AP, maxgap is
+    a pure three-gap quantity (largest of the <=3 gaps).
+  k= 8: meas(S7(AP))=0.327211   meas(N=maxgap<=1/7)(AP)=0.000000   S7-N gap=0.327211
+  k= 9: meas(S7(AP))=0.416156   meas(N=maxgap<=1/7)(AP)=0.135714   S7-N gap=0.280442
+  k=10: meas(S7(AP))=0.504478   meas(N=maxgap<=1/7)(AP)=0.095238   S7-N gap=0.409240
+  k=11: meas(S7(AP))=0.581463   meas(N=maxgap<=1/7)(AP)=0.284127   S7-N gap=0.297336
+  k=12: meas(S7(AP))=0.624114   meas(N=maxgap<=1/7)(AP)=0.320563   S7-N gap=0.303551
+  k=13: meas(S7(AP))=0.675928   meas(N=maxgap<=1/7)(AP)=0.488889   S7-N gap=0.187039
+
+[C] Mechanism test: orbit of E = union of dilated APs (Liang 3d-distance).
+    Hypothesis: AP (1 component, 3 gaps) gives MAX cover; splitting into more
+    components (=> up to 3d gaps, less uniform) REDUCES meas(S7).
+    Probe families at k=8: AP, then progressively dissociated; report meas(S7), #3APs, energy.
+  AP {0..7}              meas(S7)=0.32721  #3APs= 12  energy=  344  E=(0, 1, 2, 3, 4, 5, 6, 7)
+  1 hole {0..6,8}        meas(S7)=0.20833  #3APs= 12  energy=  320  E=(0, 1, 2, 3, 4, 5, 6, 8)
+  2 blocks               meas(S7)=0.11510  #3APs=  4  energy=  264  E=(0, 1, 2, 3, 40, 41, 42, 43)
+  4 blocks               meas(S7)=0.11504  #3APs=  4  energy=  264  E=(0, 1, 20, 21, 40, 41, 60, 61)
+  Sidon-ish              meas(S7)=0.01212  #3APs=  0  energy=  120  E=(0, 1, 3, 7, 12, 20, 30, 44)
+  dissociated 2^i        meas(S7)=0.06920  #3APs=  6  energy=  144  E=(0, 1, 2, 4, 8, 16, 32, 64)
+
+[D] AP-extremality (decisive small-box search) for dangerous rows k=8..11.
+    Search primitive normalized k-sets with max element <= B; does ANY beat AP?
+  k= 8 (box maxE<=12, 792 primitive shapes): meas(S7(AP))=0.327211  best=0.327211  beaters=0  => AP IS MAX
+  k= 9 (box maxE<=12, 495 primitive shapes): meas(S7(AP))=0.416156  best=0.416156  beaters=0  => AP IS MAX
+  k=10 (box maxE<=11, 55 primitive shapes): meas(S7(AP))=0.504478  best=0.504478  beaters=0  => AP IS MAX
+  k=11 (box maxE<=11, 11 primitive shapes): meas(S7(AP))=0.581463  best=0.581463  beaters=0  => AP IS MAX
+
+[E] Three-gap closed form attempt for meas(S7(AP_k)): is it a rational with
+    denominator dividing 7*lcm? Report exact fraction + denominator factorization.
+  k= 8: meas(S7(AP)) = 481/1470   (= 0.327211)  denom=1470
+  k= 9: meas(S7(AP)) = 2447/5880   (= 0.416156)  denom=5880
+  k=10: meas(S7(AP)) = 8899/17640   (= 0.504478)  denom=17640
+  k=11: meas(S7(AP)) = 3419/5880   (= 0.581463)  denom=5880
+  k=12: meas(S7(AP)) = 121103/194040   (= 0.624114)  denom=194040
+  k=13: meas(S7(AP)) = 14573/21560   (= 0.675928)  denom=21560
+
+DONE.
