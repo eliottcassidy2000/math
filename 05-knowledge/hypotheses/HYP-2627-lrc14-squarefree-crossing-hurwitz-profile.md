@@ -151,6 +151,14 @@ The `tau <-> 1-tau` symmetry doubles this to `1/(7*6*6*5)=1/1260`.
 So the raw Hill `K_14` denominator is not merely numerically equal to the
 low-measure denominator; it is the denominator in the exact two-speed clash.
 
+HYP-2628 and HYP-2629 add a totient-copy reason for keeping the raw product.
+The user's copy rule `sum_{d|n} c(d)=n` is `c=phi`, so `P_14` can be decomposed
+into exact-period/Euler-copy mass by squarefree masks.  Raw `P_14=1260` has
+full `{2,3,5,7}` copy mass `576`, but `cr(K_14)=315` has full copy mass `0`:
+dividing by four removes the entire dyadic gate.  Thus the raw product is not
+only the right denominator; it is also the first quotient level that still
+carries the complete mod-210 copy profile.
+
 ## Tournament Analysis
 
 The computation uses proof quotients as vertices, not runners or raw crossings.

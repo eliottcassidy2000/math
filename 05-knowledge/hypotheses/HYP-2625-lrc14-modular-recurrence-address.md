@@ -131,6 +131,14 @@ doubling.  This supports the rule used here: keep the raw denominator/profile
 ledger until the squarefree recurrence and coimage projection have both been
 recorded.
 
+HYP-2628 refines this address by replacing the bare squarefree mask with
+exact-period `phi` packets.  HYP-2629 adds the Hill-row scan: adding a
+squarefree prime `p` appends a shifted copy layer multiplied by `p-1`, so
+`{2,3}->{2,3,5}->{2,3,5,7}` is an honest copy recurrence.  At `K_14`,
+`P_14=1260` has full `{2,3,5,7}` copy mass `576`, while the divided crossing
+value `315` has full copy mass `0`; quotienting by four loses the dyadic gate
+before the mod-210/coimage address has been recorded.
+
 ## Proof Route
 
 Use the prime-mask recurrence as the finite transfer state for small parts:

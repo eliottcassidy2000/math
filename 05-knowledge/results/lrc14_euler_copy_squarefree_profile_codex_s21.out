@@ -1,0 +1,140 @@
+LRC14 Euler-copy squarefree profile probe - codex S21
+
+========================================================================================
+COPY RULE IS EULER TOTIENT
+========================================================================================
+Let c(n) satisfy sum_{d|n} c(d)=n.  Mobius inversion gives
+  c(n) = sum_{d|n} mu(d)*(n/d),
+which is phi(n).  Exact check:
+verified c(n)=phi(n) and sum phi(d)=n for n<= 60: True
+First copy counts:
+  1:1, 2:1, 3:2, 4:2, 5:4, 6:2, 7:6, 8:4, 9:6, 10:4, 11:10, 12:4, 13:12, 14:6, 15:8, 16:8, 17:16, 18:6, 19:18, 20:8
+
+========================================================================================
+SQUAREFREE COPY RECURRENCE
+========================================================================================
+For squarefree S, grouped copy mass is w_S(M)=prod_{p in M}(p-1).
+Adding a new prime p keeps old masks and adds a shifted layer
+  w_{S*p}(M union {p}) = (p-1) w_S(M).
+add p=2: total 1->2, full {2} mass 1 = 1*1
+add p=3: total 2->6, full {2,3} mass 2 = 2*1
+add p=5: total 6->30, full {2,3,5} mass 8 = 4*2
+add p=7: total 30->210, full {2,3,5,7} mass 48 = 6*8
+
+The mod-address chain is therefore:
+  N=6      factor=2*3                phi=2     rad=6     copy{2,3}=2      copy/N=1/3
+  N=30     factor=2*3*5              phi=8     rad=30    copy{2,3,5}=8      copy/N=4/15
+  N=210    factor=2*3*5*7            phi=48    rad=210   copy{2,3,5,7}=48     copy/N=8/35
+
+========================================================================================
+PROFILE TABLE: RAW PRODUCT VS DIVIDED CROSSING VALUE
+========================================================================================
+object                       N             factor    phi    rad full-mask copies     copy/N
+mod6 radical                 6                2*3      2      6                2        1/3
+mod30 radical               30              2*3*5      8     30                8       4/15
+mod210 radical             210            2*3*5*7     48    210               48       8/35
+K13 Hill product           900        2^2*3^2*5^2    240     30                0          0
+K14 raw Hill product      1260        2^2*3^2*5*7    288    210              576      16/35
+K14 crossing value         315            3^2*5*7    144    105                0          0
+K15 Hill product          1764        2^2*3^2*7^2    504     42                0          0
+
+K14 comparison:
+  P_14=1260 has copy mass on {2,3,5,7}: 576.
+  cr(K_14)=315 has copy mass on {2,3,5,7}: 0.
+  Reason: dividing P_14 by 4 removes the entire tracked 2-adic gate.
+  This is exactly the HYP-2627 warning: keep the raw product ledger first.
+
+========================================================================================
+DETAILED K14 COPY PROFILE
+========================================================================================
+P_14=1260=2^2*3^2*5*7
+sum over all mask copy masses: 1260
+closed formula matches divisor enumeration: True
+For P_14=2^2*3^2*5*7, a mask containing p receives factor p^a-1 from that prime.
+         mask  copy_mass    copy/P_14
+           {}          1       1/1260
+          {2}          3        1/420
+          {3}          8        2/315
+        {2,3}         24        2/105
+          {5}          4        1/315
+        {2,5}         12        1/105
+        {3,5}         32        8/315
+      {2,3,5}         96        8/105
+          {7}          6        1/210
+        {2,7}         18         1/70
+        {3,7}         48        4/105
+      {2,3,7}        144         4/35
+        {5,7}         24        2/105
+      {2,5,7}         72         2/35
+      {3,5,7}        192       16/105
+    {2,3,5,7}        576        16/35
+
+The radical profile has full-mask mass phi(210)=48; P_14 thickens it to 576.
+The multiplier is ((2^2-1)/(2-1))*((3^2-1)/(3-1)) = 3*4 = 12, coming from the repeated 6 blocks.
+By contrast phi(P_14)=288=6*phi(210); totient itself sees only the p-fold exponent thickening, while the full squarefree copy atom sees all nonzero p-power divisor layers.
+
+========================================================================================
+HILL PRODUCT SCAN
+========================================================================================
+ n               q_n      P_n   rad(P)   copy210(P)    copy/P  copy210(cr)
+ 5      (1, 1, 2, 2)        4        2            0         0            0
+ 6      (1, 2, 2, 3)       12        6            0         0            0
+ 7      (2, 2, 3, 3)       36        6            0         0            0
+ 8      (2, 3, 3, 4)       72        6            0         0            0
+ 9      (3, 3, 4, 4)      144        6            0         0            0
+10      (3, 4, 4, 5)      240       30            0         0            0
+11      (4, 4, 5, 5)      400       10            0         0            0
+12      (4, 5, 5, 6)      600       30            0         0            0
+13      (5, 5, 6, 6)      900       30            0         0            0
+14      (5, 6, 6, 7)     1260      210          576     16/35            0
+15      (6, 6, 7, 7)     1764       42            0         0            0
+16      (6, 7, 7, 8)     2352       42            0         0            0
+17      (7, 7, 8, 8)     3136       14            0         0            0
+18      (7, 8, 8, 9)     4032       42            0         0            0
+19      (8, 8, 9, 9)     5184        6            0         0            0
+20     (8, 9, 9, 10)     6480       30            0         0            0
+21    (9, 9, 10, 10)     8100       30            0         0            0
+22   (9, 10, 10, 11)     9900      330            0         0            0
+23  (10, 10, 11, 11)    12100      110            0         0            0
+24  (10, 11, 11, 12)    14520      330            0         0            0
+25  (11, 11, 12, 12)    17424       66            0         0            0
+26  (11, 12, 12, 13)    20592      858            0         0            0
+27  (12, 12, 13, 13)    24336       78            0         0            0
+28  (12, 13, 13, 14)    28392      546            0         0            0
+29  (13, 13, 14, 14)    33124      182            0         0            0
+30  (13, 14, 14, 15)    38220     2730        14976    96/245            0
+31  (14, 14, 15, 15)    44100      210        27648  768/1225            0
+32  (14, 15, 15, 16)    50400      210        35712   124/175         8064
+
+first Hill row with nonzero full {2,3,5,7} copy mass: n=14
+first row where the raw product has the full mask but the divided crossing value loses it: n=14
+
+========================================================================================
+MARKOV-HURWITZ IN COPY LANGUAGE
+========================================================================================
+K14 Hill tuple q=(5, 6, 6, 7)
+Since x=sum_{d|x} phi(d), the product wxyz is the number of four-block Euler-copy assignments.
+  product copy assignments wxyz = 1260
+  Markov-Hurwitz diagonal energy sum q_i^2 = 146
+  product minus diagonal energy = 1114
+
+Primitive block counts phi(q_i)=(4, 2, 2, 6)
+  primitive product = 96
+  primitive square energy = 60
+Readout: the totient-copy frame does not make q_14 Markov-Hurwitz. It explains the RHS product as a copy-assignment ledger, and it shows which squarefree assignment layers survive projection.
+
+========================================================================================
+TOURNAMENT ANALYSIS
+========================================================================================
+Hamiltonian proof path:
+  euler_copy_squarefree_profile > raw_hill_product > mod210_address > prime7_coimage_seam > markov_hurwitz_energy_surface > crossing_value > raw_divisor_lattice > raw_runner_vertices
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed 3-cycles: 0
+The quotient preserves the proof-relevant mod-210 copy address.  It destroys exact divisor representatives and witness-time geometry, which must be recovered only after the finite wall/coimage ledgers are fixed.
+
+========================================================================================
+SESSION READOUT
+========================================================================================
+The divisor-copy reframe is exactly Euler totient by Mobius inversion. Its useful LRC14 form is the squarefree copy profile sum_{d|N, mask(d)=M} phi(d).
+For K14, raw P_14=1260 has full {2,3,5,7} copy mass 576, while cr(K_14)=315 has full copy mass 0.  The division by 4 deletes the dyadic gate, so HYP-2627's raw-product discipline is necessary.
+The recurrence hidden in the user's reframe is prime extension: adding p appends a shifted copy layer multiplied by p-1.  Thus {2,3}->{2,3,5}->{2,3,5,7} is a genuine Euler-copy recurrence, not just a list of moduli.
