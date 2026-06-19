@@ -1,0 +1,108 @@
+
+========================================================================================
+LRC(14) SIGNED-MASS SEQUENCE SPINE
+========================================================================================
+Goal: collect the integer/fractional sequences behind the observation 'large absolute mass but tiny signed mass', especially on boundary/cusp faces.
+
+========================================================================================
+SUPPORT-FLOOR SEQUENCE
+========================================================================================
+THM-538 is an exact-support statement for the signed Fourier expansion over the relation lattice.  It says all genuine support <=5 relation terms vanish, and the first live layer is support 6.
+Guardrail: do not test this by plugging zero coordinates into the raw ambient K function; that includes lower-dimensional boundary/main pieces. The proof object is the exact-support coefficient after the signed inclusion-exclusion projection.
+  d  support 0    1    2    3    4    5    6
+  6          0    0    0    0    0    0    1
+  7          0    0    0    0    0    0    1
+  8          0    0    0    0    0    0    1
+  9          0    0    0    0    0    0    1
+ 10          0    0    0    0    0    0    1
+ 11          0    0    0    0    0    0    1
+ 12          0    0    0    0    0    0    1
+ 13          0    0    0    0    0    0    1
+Sequence readout: the persistent small detail is the 0,0,0,0,0,0,1 floor.  As d/k changes, lower faces remain killed and the live object is always the six-fold residue coimage.
+
+========================================================================================
+RESIDUE-CONSTANT DECAY SEQUENCE
+========================================================================================
+C_d is defined by K(n_1,...,n_6,0,...)=C_d(n mod 7)/(n_1...n_6).
+Blunt free-product constant 64*c1^6 = 7.35714264.
+  d      max |C_d|       ratio       argmax residue     worst 1-marginal
+  6    0.643084862     0.08741   (3, 3, 3, 3, 3, 3)          0.384780076
+  7    0.321542431    0.043705   (4, 4, 4, 4, 4, 4)          0.193862704
+  8    0.168426988    0.022893   (4, 4, 4, 4, 4, 4)          0.107446515
+  9    0.091869266    0.012487   (4, 4, 4, 4, 4, 4)         0.0637696096
+ 10   0.0519342586    0.007059   (4, 4, 4, 4, 4, 4)         0.0397214435
+ 11   0.0303106082   0.0041199   (4, 4, 4, 4, 4, 4)         0.0256286869
+ 12   0.0182058608   0.0024746   (4, 4, 4, 4, 4, 4)         0.0169882801
+ 13   0.0112237893   0.0015256   (4, 4, 4, 4, 4, 4)          0.011508678
+max |C_d| sequence: 0.643084862, 0.321542431, 0.168426988, 0.091869266, 0.0519342586, 0.0303106082, 0.0182058608, 0.0112237893
+worst one-coordinate marginal sequence: 0.384780076, 0.193862704, 0.107446515, 0.0637696096, 0.0397214435, 0.0256286869, 0.0169882801, 0.011508678
+The max constants fall almost geometrically, while the marginals remain nonzero.  This is the exact shape of the warning: cancellation is a relation-hyperplane/coimage phenomenon, not a free coordinate marginal.
+
+========================================================================================
+BOUNDARY/CUSP ABSOLUTE-VERSUS-SIGNED SEQUENCES
+========================================================================================
+Parsed the exact S12 support-6 relation ledger.  The displayed numbers are absK/|signed| ratios; larger means the absolute envelope is mostly cusp mass cancelled by the signed kernel.
+case                                              final H   final ratio   one-face ratio  one-face count
+AP core support in E={0..7}                            28       29.0667          202.386         5291542
+resonant one-stranger support in E={0..6,21}           28       217.015          3484.64         1825394
+dissociated one-stranger support in E={0..6,211}       34       58.2626          13.3239          353652
+k=9 sampled wide support in E={0..7,68}                30       1118.76          34.8034          783346
+k=10 height-one wall support in E={0..8,22}            24       447.629          112.732          996976
+final ratio sequence: 29.0667, 217.015, 58.2626, 1118.76, 447.629
+one-face boundary ratio sequence: 202.386, 3484.64, 13.3239, 34.8034, 112.732
+Integer side: the one-face boundary relation counts are the large mass.  Fractional side: the signed/absolute ratios are the small coimage error.
+
+========================================================================================
+UNIVERSAL-CENTER SURVIVOR SEQUENCE
+========================================================================================
+survivor(s)=C(7,s)+C(9,s)-C(5,s), s=0..13
+survivor sequence: [1, 11, 47, 109, 156, 146, 91, 37, 9, 1, 0, 0, 0, 0]
+mixed residual sequence: [0, 2, 31, 177, 559, 1141, 1625, 1679, 1278, 714, 286, 78, 13, 1]
+k=13-s readout (cluster size k):
+  k   survivor P    mixed P   total P
+  3            0        286       286
+  4            1        714       715
+  5            9       1278      1287
+  6           37       1679      1716
+  7           91       1625      1716
+  8          146       1141      1287
+  9          156        559       715
+ 10          109        177       286
+ 11           47         31        78
+ 12           11          2        13
+ 13            1          0         1
+The fixed denominator centers solve all-odd or 3-free small parts; the mixed parity/triadic sequence is exactly where colored resonance remains.
+
+========================================================================================
+EMPTY-WINDOW CERTIFICATE SEQUENCES
+========================================================================================
+AP threshold-clearing certificate sequence from HYP-2608:
+  k degree          Phi(AP)        threshold           margin   margin dec
+  8      4      19633/30870        3637/5880        431/24696   0.01745222
+  9      3          127/245        2025/4004      1769/140140   0.01262309
+ 10      3      10765/24696            36/91     12937/321048   0.04029616
+ 11      2      21673/70560            25/91     29749/917280   0.03243175
+ 12      1     89533/543312              1/7     11917/543312   0.02193399
+degree sequence: [4, 3, 3, 2, 1]
+margin numerator sequence: [431, 1769, 12937, 29749, 11917]
+The degree drop 4,3,3,2,1 is the region-side analogue of the support floor: as k grows, the required proof obligation moves to fewer moments.
+
+========================================================================================
+TOURNAMENT ANALYSIS: SEQUENCE-FAMILY QUOTIENTS
+========================================================================================
+Hamiltonian proof path: ['support_floor', 'universal_center_survivors', 'empty_window_degree_drop', 'cusp_signed_ratio', 'residue_constant_decay', 'low_height_wall_ledger', 'coimage_reciprocal_tail']
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+SCC sizes: [1, 1, 1, 1, 1, 1, 1]
+Hamiltonian path count: 1
+edge flips against listed order: 6
+Assumption challenged: sequence-family vertices preserve the analytic tail predicate and the recursion across d/k, while runner vertices hide the support floor and the coimage cancellation.
+
+========================================================================================
+READING FOR THE LRC(14) PROOF ROUTE
+========================================================================================
+1. The support-floor sequence is the hard cancellation: all lower support faces vanish, so boundary/cusp mass must be read through six-fold residues.
+2. The residue constants decay with ambient dimension, but coordinate marginals stay nonzero; the proof object is the signed coimage over sum e_i n_i=0, not a product of one-coordinate cancellations.
+3. The S12 cusp ratio sequence shows why absolute Minkowski volume is the wrong measure.  The integer relation counts are huge exactly where the signed reciprocal mass is tiny.
+4. The center-survivor and empty-window sequences are the companion finite spines.  They say which runner-count regimes need a high-degree local certificate, and which small-speed residues pass to colored recurrence.
+5. LRC(14) remains open.  The sharpened sub-problem is a tail theorem for residue-addressed reciprocal sums after low-height wall deletion.
