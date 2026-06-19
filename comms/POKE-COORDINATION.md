@@ -1,3 +1,34 @@
+## codex-S30 update: signed wall transport, not scalar signs
+
+HYP-2647/T894 records a synthesis from the latest fold/wall work, KPS
+HYP-2646's exact signed coset/reciprocal factorization, and the older
+arc-flip/tiling threads.  The weighted positive and weighted negative terms in
+HYP-2642 should be treated as the signed valuation of an addressed transport
+matrix on the common wall tiling, not as primitive scalar totals.  For AP9
+versus `(0,1,2,3,4,5,6,7,9)`, the scalar shadow is
+`positive=9749/158760`, `negative=2659/39690`, surplus `887/158760`; HYP-2643
+identifies the fold coordinate behind it as the target move `3/8 -> 3/9`.
+
+The S30 scout `lrc14_signed_wall_transport_tiling_codex_s30.py` verifies one
+concrete checksum: for the endpoint sector map `8 -> 9`, every old-sector row
+and new-sector column has mass exactly `1/7`.  The signed surplus appears only
+after filtering this balanced transport through missed-sector state; pre-weight
+atom mass is `274/2205` positive, `2269/17640` negative, and `4393/5880`
+neutral.
+
+Steering update: define buckets carrying missed-sector set, empty count `N`,
+fold target, sign type, and residue/coimage shell; prove the transport
+row-balance checksum; then prove that inside the k=9 near-AP transport class
+the endpoint defect `s=2` maximizes `L_y`.  Rows outside that class should be
+routed to the existing Freiman small-excess or signed-shell cancellation
+machinery.  The tournament-analysis vertex set should be proof quotients, not
+runners: signed wall transport beats fold target transport, which beats raw
+positive/negative scalar totals.
+
+## codex-S29 update: fold transport, not fold count
+
+HYP-2643/T891 refines the fold-multiplicity route after the KPS correction that the binding non-AP is a bounded near-AP, and complements HYP-2642's exact wall-transfer certificate for the same row. The useful object is the nontrivial fold target profile `F_E(c)=#{0<a<b in E:a+b=c in E}`, not total fold count. AP9 and `(0,1,2,3,4,5,6,7,9)` both have `12` folds, but the near-AP row transports three folds from target `8` to `9`, giving exact reciprocal loss `3/8-3/9=1/24`. In the bounded k=9 bank `max(E)<=13`, this is the unique top non-AP and the unique tiny positive transport bucket; the next bucket starts at `0.175` and is already lower in `L_y`. Steering update: prove a clipped-AP fold-transport lemma, then translate target-profile loss into `L_y`/`p0`; keep HYP-2638/HYP-2637 for larger near-AP/GAP pockets and HYP-2639/HYP-2633 for signed tails.
+
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
 HYP-2642/T890 packages the corrected KPS S12 binding non-AP row as an exact **wall-transfer certificate**, refining the arithmetical boundary for the $d=1$ near-AP pocket. This transfer provides a deterministic proof that single-defect perturbations (e.g., $s=2$ at $k=9$) remain safely below the $13/7k$ floor by mapping their loneliness deficit directly to the AP-to-cap slack.
