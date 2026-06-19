@@ -135,6 +135,22 @@ This also explains why `1260` kept recurring in the LRC14 workspace.  It is not
 only the known low-`L` denominator from the exact measure extremizer.  It is also
 the Hill four-block product for `K_14`.
 
+The match with the known THM-523 local champion is exact.  For the perturbation
+`12 -> 36`, the half-gap computation telescopes as
+
+```text
+15/36 - 2/5 - 1/70 - 1/504
+  = 5/12 - 2/5 - 1/(5*14) - 1/(36*14)
+  = 1/60 - 1/70 - 1/504
+  = 1/(5*6*14) - 1/(6*6*14)
+  = 1/(5*6*6*14)
+  = 1/(2*7*6*6*5).
+```
+
+The `tau <-> 1-tau` symmetry doubles this to `1/(7*6*6*5)=1/1260`.
+So the raw Hill `K_14` denominator is not merely numerically equal to the
+low-measure denominator; it is the denominator in the exact two-speed clash.
+
 ## Tournament Analysis
 
 The computation uses proof quotients as vertices, not runners or raw crossings.
@@ -174,6 +190,7 @@ complete-graph crossing product for K14
 -> prime-7 coimage seam and repeated-residue tail.
 ```
 
-Next test: ask whether the repeated-residue packets in HYP-2626 can be
-parameterized directly by the squarefree profile of the Hill tuple `(5,6,6,7)`,
+Next test: explain why the `12 -> 36` perturbation selects the adjacent
+four-block row `(5,6,6,7)`, and ask whether the repeated-residue packets in
+HYP-2626 can be parameterized directly by the squarefree profile of that tuple
 rather than by raw support tuples.

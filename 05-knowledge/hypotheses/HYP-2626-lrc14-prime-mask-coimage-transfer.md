@@ -9,6 +9,7 @@ depends_on:
   - HYP-2619
   - THM-539
 related:
+  - HYP-2627
   - HYP-2625
   - HYP-2608
   - THM-538
@@ -145,6 +146,14 @@ answer is asymmetric: the mod-30 address is inert for the fixed k=10 signed
 coimage wall coverage, while the `{7}` address is live and contributes the
 extra `12` wall-addressed classes.  So HYP-2625 gives the recurrence address
 space; HYP-2626 gives the signed coimage transfer occupancy inside it.
+
+HYP-2627 gives the same warning from the complete-graph side.  The raw
+Harary-Hill `K_14` product has profile `1260 -> rad 210`, while the divided
+crossing value `315` loses prime `2`.  The match is exact at the known
+THM-523 measure champion:
+`15/36-2/5-1/70-1/504=1/(2*1260)`, doubled by symmetry to `1/1260`.
+This matches the coimage-transfer discipline here: quotient only after the
+proof-relevant squarefree address has been retained.
 
 ## Tournament Analysis
 

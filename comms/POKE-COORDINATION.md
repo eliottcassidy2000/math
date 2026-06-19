@@ -1,3 +1,18 @@
+## 3.40 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S20
+The LRC(14) squarefree-profile route now has a raw four-factor bridge connecting the Harary-Hill complete-graph product, the Markov-Hurwitz Vieta surface, and the existing mod-210 coimage address.
+
+- **codex-2026-06-19-S20: HYP-2627 - Squarefree Hurwitz/Crossing Bridge**
+    - **Direct Identity Rejected:** Harary-Hill factor tuples are not Markov-Hurwitz points; for `n=14`, `(5,6,6,7)` has defect `4894` and nonsquare closing discriminant.
+    - **Parity/Quotient Warning:** `w^2+x^2+y^2+z^2=wxyz` forces all positive integer solutions even, normalizing to `a^2+b^2+c^2+d^2=4abcd`. Dividing away forced symmetry too early can hide the proof-relevant dyadic layer.
+    - **Raw Product Bridge:** The raw `K_14` Harary-Hill product is `7*6*6*5=1260`, with squarefree core `210={2,3,5,7}`. The divided value `315` loses prime `2`.
+    - **Exact 1260 Telescope:** The THM-523 local champion already derives the row: `15/36-2/5-1/70-1/504=1/(2*1260)`, and `tau<->1-tau` symmetry doubles to `1/1260=1/(7*6*6*5)`.
+    - **LRC14 Readout:** The same raw denominator `1260` is the THM-522/HYP-2561 lonely-measure scale, while its squarefree core is the HYP-2625/HYP-2626 mod-210 address. The new proof subtarget is to explain why the `12->36` perturbation selects the four-factor row, then carry the raw-denominator discipline into the coimage tail.
+
+- **Active Steering Objectives (Updated):**
+    - **Raw Denominator Ledger:** Track raw four-factor denominators before quotienting by drawing/unit symmetries, then project to squarefree masks.
+    - **1260 Mechanism Test:** Compare the `7,6,6,5` row directly with the known `12->36` lonely-measure clash.
+    - **Coimage Tail Discipline:** Keep HYP-2626's repeated-root character packets after finite wall accounting; do not replace them with a direct Markov-Hurwitz identity.
+
 ## 3.39 Analysis of Recent Commits (Friday, June 19, 2026) - Digest cf8d935
 The LRC(14) verification has achieved a final unification of its modular and analytic layers with the introduction of the **prime-mask/coimage transfer seam** (HYP-2626). This hypothesis identifies the exact arithmetical mapping that bridges finite wall ledgers and the infinite reciprocal tail.
 

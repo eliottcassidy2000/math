@@ -241,6 +241,28 @@ def hurwitz_report() -> None:
     )
 
 
+def telescope_report() -> None:
+    section("THM-523 TWO-SPEED CLASH TELESCOPE")
+    p14 = prod(hill_tuple(14))
+    half = Fraction(15, 36) - Fraction(2, 5) - Fraction(1, 70) - Fraction(1, 504)
+    print("The known LRC14 low-measure champion has half-gap")
+    print("  15/36 - 2/5 - 1/70 - 1/504")
+    print(f"  = {half} = 1/(2*{p14}).")
+    print()
+    print("The cancellation exposes the same four blocks:")
+    print("  15/36 - 2/5 = 5/12 - 2/5 = 1/60")
+    print("  1/60 - 1/70 = 1/420 = 1/(5*6*14)")
+    print("  1/420 - 1/504 = 1/(5*6*14) - 1/(6*6*14)")
+    print("                    = 1/(5*6*6*14)")
+    print("                    = 1/(2*7*6*6*5).")
+    print(f"After tau <-> 1-tau symmetry this is {2 * half} = 1/{p14}.")
+    print(
+        "Thus the denominator 1260 is not only the Hill K_14 product and not only "
+        "the HYP-2625 squarefree carrier; it is exactly the THM-523 local "
+        "two-speed-clash denominator after symmetry."
+    )
+
+
 @dataclass(frozen=True)
 class Route:
     name: str
@@ -306,6 +328,7 @@ def main() -> None:
     print("LRC14 squarefree / Markov-Hurwitz / complete-graph crossing probe - codex S20")
     hill_report()
     hurwitz_report()
+    telescope_report()
     tournament_report()
     section("SESSION READOUT")
     print(
@@ -320,6 +343,11 @@ def main() -> None:
         "the complete-graph crossing formula supplies the four-block squarefree "
         "profile.  For LRC14, the latter is the live object: (5,6,6,7) packages "
         "5, the repeated 6 skeleton, and the prime-7 coimage seam in one product."
+    )
+    print(
+        "The additional telescope check strengthens the bridge: THM-523's "
+        "15/36-2/5-1/70-1/504 half-gap is exactly 1/(2*1260), hence the "
+        "symmetrized low-measure scale is 1/(7*6*6*5)."
     )
 
 

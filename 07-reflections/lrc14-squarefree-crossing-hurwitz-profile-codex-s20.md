@@ -39,6 +39,19 @@ This makes the old `1260` denominator feel less accidental.  It is both the
 known LRC14 low-measure denominator and the four-block Hill product for the
 complete graph at the first open runner count.
 
+The stronger addendum is that the exact THM-523 local champion literally
+telescopes into the same row:
+
+```text
+15/36 - 2/5 - 1/70 - 1/504
+= 1/(5*6*6*14)
+= 1/(2*7*6*6*5).
+```
+
+Then `tau <-> 1-tau` doubles the half-gap to `1/(7*6*6*5)=1/1260`.
+So the raw Hill product is the exact denominator of the known local
+two-speed-clash mechanism, not just a memorable coincidence.
+
 The Markov-Hurwitz tree still contributed something useful.  Generated solutions
 through max coordinate `10^8` have a clean recurrence on the normalized
 `(1,1,u,v)` branch:

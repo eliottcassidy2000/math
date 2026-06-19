@@ -9,6 +9,7 @@ depends_on:
   - HYP-2617
   - HYP-2619
 related:
+  - HYP-2627
   - HYP-2621
   - HYP-2622
   - HYP-2624
@@ -119,6 +120,16 @@ formed: height-2 one-large coimage walls already address every nonzero class for
 `k=8,9`, and they reduce the `k=10` tail to repeated-residue packets.  Thus the
 mod-210 row should be read as the shared address space for HYP-2624's wall
 ledger and the remaining signed reciprocal tail, not as a separate proof.
+
+HYP-2627 adds an external four-factor check on the same address: the raw
+Harary-Hill product for `K_14` is `7*6*6*5=1260`, with squarefree core
+`210={2,3,5,7}`.  The divided crossing value `315` loses the dyadic coordinate.
+Moreover THM-523's half-clash satisfies
+`15/36-2/5-1/70-1/504=1/(2*1260)`, so the known `1/1260`
+lonely-measure scale is exactly the reciprocal raw product after symmetry
+doubling.  This supports the rule used here: keep the raw denominator/profile
+ledger until the squarefree recurrence and coimage projection have both been
+recorded.
 
 ## Proof Route
 
