@@ -1,0 +1,35 @@
+==========================================================================
+(1) finite check: meas(S7(consec_k)) <= cap_k ?  (the extremal within budget)
+==========================================================================
+  k= 8: meas(S7,consec)=0.32721  cap_k=0.38146  slack=+0.05425  OK
+  k= 9: meas(S7,consec)=0.41616  cap_k=0.49426  slack=+0.07810  OK
+  k=10: meas(S7,consec)=0.50448  cap_k=0.60440  slack=+0.09992  OK
+  k=11: meas(S7,consec)=0.58146  cap_k=0.72527  slack=+0.14381  OK
+  k=12: meas(S7,consec)=0.62411  cap_k=0.85714  slack=+0.23303  OK
+  k=13: meas(S7,consec)=0.67593  cap_k=1.00000  slack=+0.32407  OK
+
+==========================================================================
+(2) consec maximizes meas(S7): exhaustive k=9,10
+==========================================================================
+  k=9: meas(S7,consec)=0.41616; checked 495; S7>consec: 0; max at consec
+  k=10: meas(S7,consec)=0.50448; checked 715; S7>consec: 0; max at consec
+
+==========================================================================
+(3) corr(E) vs short-relation weight W(E) (k=8): certificate = W small => corr small
+==========================================================================
+  consec     corr=+0.30273  W(E)=9.7333  (#offsets pairs etc.)
+  perf       corr=+0.09922  W(E)=8.4794  (#offsets pairs etc.)
+  dissoc     corr=+0.01025  W(E)=1.4063  (#offsets pairs etc.)
+  Sidon      corr=-0.01236  W(E)=0.9706  (#offsets pairs etc.)
+  emb-AP     corr=+0.09062  W(E)=2.6777  (#offsets pairs etc.)
+  generic    corr=+0.00260  W(E)=0.7579  (#offsets pairs etc.)
+  2blocks    corr=+0.09362  W(E)=2.5515  (#offsets pairs etc.)
+
+==========================================================================
+(4) low-height residual: shapes with meas(S7) >= 0.85*cap_8 (near-binding), k=8
+==========================================================================
+  threshold 0.85*cap_8=0.3242; #near-binding shapes: 1
+     meas(S7)=0.3272  E=[0, 1, 2, 3, 4, 5, 6, 7]
+  (these AP-rich shapes are the low-height residual = finite mod scale/translation)
+
+DONE.
