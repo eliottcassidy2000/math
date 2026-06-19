@@ -1,0 +1,47 @@
+==============================================================================
+(I) AP-invariance: mu17(consec k) vs mu17(AP a+d*{0..k-1})  (must be EQUAL)
+==============================================================================
+   k=8: mu17(consec)=691/735
+      AP a=0 d=1: mu17=691/735  EQUAL
+      AP a=3 d=1: mu17=691/735  EQUAL
+      AP a=0 d=2: mu17=691/735  EQUAL
+      AP a=5 d=3: mu17=691/735  EQUAL
+      AP a=2 d=7: mu17=691/735  EQUAL
+   k=10: mu17(consec)=38/49
+      AP a=0 d=1: mu17=38/49  EQUAL
+      AP a=3 d=1: mu17=38/49  EQUAL
+      AP a=0 d=2: mu17=38/49  EQUAL
+      AP a=5 d=3: mu17=38/49  EQUAL
+      AP a=2 d=7: mu17=38/49  EQUAL
+
+==============================================================================
+(II) EXHAUSTIVE: consecutive minimizes mu17? k=9,10,11 (bounded spread)
+==============================================================================
+   k=9 (spread<=13): mu17(consec)=0.84014; checked 1287; violations=0; min=0.84014 at consec
+   k=10 (spread<=14): mu17(consec)=0.77551; checked 2002; violations=0; min=0.77551 at consec
+   k=11 (spread<=15): mu17(consec)=0.62630; checked 3003; violations=0; min=0.62630 at consec
+
+==============================================================================
+(III) tightest non-AP competitors to consec (closest from above), k=9
+==============================================================================
+   E=[0, 2, 3, 4, 5, 6, 7, 8, 10]: mu17=0.91633  (excess over consec = 0.07619)
+   E=[0, 2, 4, 5, 6, 7, 8, 10, 12]: mu17=0.91633  (excess over consec = 0.07619)
+   E=[0, 1, 2, 5, 6, 7, 10, 11, 12]: mu17=0.93278  (excess over consec = 0.09264)
+   E=[0, 1, 4, 5, 6, 7, 8, 11, 12]: mu17=0.93581  (excess over consec = 0.09567)
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 9]: mu17=0.94014  (excess over consec = 0.10000)
+   E=[0, 1, 2, 3, 4, 5, 6, 7, 10]: mu17=0.94014  (excess over consec = 0.10000)
+
+==============================================================================
+(IV) multi-block separation rate: mu17({0..3} ⊔ {g+0..g+3}) for k=8, growing g
+==============================================================================
+   mu17(consec 8) = 0.94014  (the per-k minimum)
+   g=    4: mu17=0.94014  >=consec OK
+   g=    8: mu17=0.99490  >=consec OK
+   g=   16: mu17=0.99505  >=consec OK
+   g=   40: mu17=0.98947  >=consec OK
+   g=  100: mu17=0.99164  >=consec OK
+   g=  400: mu17=0.99090  >=consec OK
+   g= 2000: mu17=0.99066  >=consec OK
+   (single AP-block would stay == consec exactly; two separated blocks -> block-average >= consec)
+
+DONE.
