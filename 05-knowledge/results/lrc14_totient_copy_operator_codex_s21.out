@@ -1,0 +1,129 @@
+
+============================================================================================
+COPY RULE IS EULER TOTIENT
+============================================================================================
+recursive copy rule: c(n)=n-sum_{d|n,d<n} c(d)
+Möbius inversion: c = mu * id, hence c(n)=phi(n)
+checked n<=80 against phi: mismatches=[]
+checked divisor sums n<=80: mismatches=[]
+
+  n       factor  c(n)  sum_{d|n}c(d)  mu*id
+  1            1     1              1      1
+  2            2     1              2      1
+  3            3     2              3      2
+  4          2^2     2              4      2
+  5            5     4              5      4
+  6          2*3     2              6      2
+  7            7     6              7      6
+  8          2^3     4              8      4
+  9          3^2     6              9      6
+ 10          2*5     4             10      4
+ 11           11    10             11     10
+ 12        2^2*3     4             12      4
+ 13           13    12             13     12
+ 14          2*7     6             14      6
+ 15          3*5     8             15      8
+ 16          2^4     8             16      8
+ 17           17    16             17     16
+ 18        2*3^2     6             18      6
+ 19           19    18             19     18
+ 20        2^2*5     8             20      8
+ 21          3*7    12             21     12
+ 22         2*11    10             22     10
+ 23           23    22             23     22
+ 24        2^3*3     8             24      8
+
+============================================================================================
+EXACT-PERIOD Q-GRID READOUT
+============================================================================================
+Residues a/q are partitioned by reduced denominator d|q. The packet size is phi(d), so the copy rule is literally the q-grid exact-period census.
+
+q=14=2*7  exact-period packets match phi(d): True
+  d=1: 1, d=2: 1, d=7: 6, d=14: 6
+
+q=30=2*3*5  exact-period packets match phi(d): True
+  d=1: 1, d=2: 1, d=3: 2, d=5: 4, d=6: 2, d=10: 4, d=15: 8, d=30: 8
+
+q=210=2*3*5*7  exact-period packets match phi(d): True
+  d=1: 1, d=2: 1, d=3: 2, d=5: 4, d=6: 2, d=7: 6, d=10: 4, d=14: 6, d=15: 8, d=21: 12, d=30: 8, d=35: 24, d=42: 12, d=70: 24, d=105: 48, d=210: 48
+
+============================================================================================
+SQUAREFREE AND RAW DENOMINATOR COPY PROFILES
+============================================================================================
+    q             factor   rad  phi(q)     phi/q full-mask mass profile sum
+   14                2*7    14       6       3/7              6          14
+  210            2*3*5*7   210      48      8/35             48         210
+  315            3^2*5*7   105     144     16/35            192         315
+ 1260        2^2*3^2*5*7   210     288      8/35            576        1260
+ 2520        2^3*3^2*5*7   210     576      8/35           1344        2520
+   36            2^2*3^2     6      12       1/3             24          36
+   70              2*5*7    70      24     12/35             24          70
+  504          2^3*3^2*7    42     144       2/7            336         504
+
+mask profile for q=210=2*3*5*7:
+  {}:1  {2}:1  {3}:2  {2,3}:2
+  {5}:4  {2,5}:4  {3,5}:8  {2,3,5}:8
+  {7}:6  {2,7}:6  {3,7}:12  {2,3,7}:12
+  {5,7}:24  {2,5,7}:24  {3,5,7}:48  {2,3,5,7}:48
+
+mask profile for q=1260=2^2*3^2*5*7:
+  {}:1  {2}:3  {3}:8  {2,3}:24
+  {5}:4  {2,5}:12  {3,5}:32  {2,3,5}:96
+  {7}:6  {2,7}:18  {3,7}:48  {2,3,7}:144
+  {5,7}:24  {2,5,7}:72  {3,5,7}:192  {2,3,5,7}:576
+
+raw-vs-squarefree amplification from 210 to 1260:
+  repeated 2 contributes factor (2^2-1)/(2-1)=3
+  repeated 3 contributes factor (3^2-1)/(3-1)=4
+        mask  mass210  mass1260    ratio
+          {}        1         1        1
+         {2}        1         3        3
+         {3}        2         8        4
+       {2,3}        2        24       12
+         {5}        4         4        1
+       {2,5}        4        12        3
+       {3,5}        8        32        4
+     {2,3,5}        8        96       12
+         {7}        6         6        1
+       {2,7}        6        18        3
+       {3,7}       12        48        4
+     {2,3,7}       12       144       12
+       {5,7}       24        24        1
+     {2,5,7}       24        72        3
+     {3,5,7}       48       192        4
+   {2,3,5,7}       48       576       12
+
+============================================================================================
+LRC14 1260/2520 TOTIENT READOUT
+============================================================================================
+THM-523 half-clash = 1/2520; denominator = 2520=2^3*3^2*5*7
+symmetry doubles to 1/1260; denominator = 1260=2^2*3^2*5*7
+
+Totient-copy resonance:
+  phi(14)   = 6   -> unit seam size (Z/14Z)^* and F_7^*
+  phi(210)  = 48  -> full squarefree mod-210 exact-period copies
+  phi(1260) = 288 -> exact-period copies at raw K14 product
+  phi(2520) = 576 -> exact-period copies at half-clash denominator
+  full-mask mass of q=1260 = 576, equal to phi(2520).
+
+Denominators in the half-clash, with exact-period copy densities:
+  q=  36=     2^2*3^2: phi=  12, phi/q=1/3, rad=6
+  q=   5=           5: phi=   4, phi/q=4/5, rad=5
+  q=  70=       2*5*7: phi=  24, phi/q=12/35, rad=70
+  q= 504=   2^3*3^2*7: phi= 144, phi/q=2/7, rad=42
+  q=2520= 2^3*3^2*5*7: phi= 576, phi/q=8/35, rad=210
+  q=1260= 2^2*3^2*5*7: phi= 288, phi/q=8/35, rad=210
+
+Readout: the dyadic doubling from 1260 to 2520 is not cosmetic.  It turns the exact-period unit count into 576, the same mass obtained by selecting all four prime masks inside the raw 1260 profile.  That is the arithmetic shadow of the half-gap before tau<->1-tau symmetry halves the denominator.
+
+============================================================================================
+TOURNAMENT ANALYSIS
+============================================================================================
+proof-quotient Hamiltonian path:
+  totient_copy_operator > exact_period_q_grid > raw_1260_profile > squarefree_210_profile > unit_seam_phi14 > coimage_character_tail > raw_divisor_counts > raw_runner_vertices
+observable: preserve divisor-copy identity, exact-period LRC witness packets, squarefree transfer, coimage seam
+fingerprints: {'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}, 'directed_3_cycles': 0, 'hamiltonian_path_count': 1}
+
+mask-mass tournaments use exact-period mass as the pairwise observable; ties follow mask order.
+q=210: {'q': 210, 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1}, 'directed_3_cycles': 0, 'top_masks': [('{3,5,7}', 48, 15), ('{2,3,5,7}', 48, 14), ('{5,7}', 24, 13), ('{2,5,7}', 24, 12), ('{3,7}', 12, 11)]}
+q=1260: {'q': 1260, 'score_hist': {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1}, 'directed_3_cycles': 0, 'top_masks': [('{2,3,5,7}', 576, 15), ('{3,5,7}', 192, 14), ('{2,3,7}', 144, 13), ('{2,3,5}', 96, 12), ('{2,5,7}', 72, 11)]}

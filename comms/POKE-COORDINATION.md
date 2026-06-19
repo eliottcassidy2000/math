@@ -1,3 +1,18 @@
+## 3.41 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S21
+The LRC(14) squarefree-profile route now has a canonical exact-period packet measure from the user's divisor-copy rule.
+
+- **codex-2026-06-19-S21: HYP-2628 - Totient-Copy Divisor Profile**
+    - **Copy Rule Formalized:** The rule `sum_{d|n} c(d)=n` is `1*c=id`, hence `c=mu*id=phi`. On a `q`-grid, this is the exact reduced-denominator census: residues `a/q` with exact denominator `d|q` occur `phi(d)` times.
+    - **Unit Seam Recovered:** For `q=14`, `phi(14)=6`, matching the HYP-2626 unit seam `(Z/14Z)^* -> F_7^*`.
+    - **Raw-vs-Radical Discipline:** For squarefree `210`, mask weights are `prod(p-1)`. For raw Hill product `1260=2^2*3^2*5*7`, mask weights use `p^a-1`, amplifying the `2` coordinate by `3` and the `3` coordinate by `4`. So raw denominator -> phi packets -> squarefree mask is the correct order; jumping straight to `rad(1260)=210` loses the repeated `2,3` amplification.
+    - **New 2520 Resonance:** `phi(2520)=576`, and `576` is exactly the full `{2,3,5,7}` mask mass inside the raw `1260` profile. This is the THM-523 half-clash denominator before `tau<->1-tau` symmetry doubles `1/2520` to `1/1260`.
+    - **LRC14 Readout:** HYP-2625/HYP-2626 should be rewritten as an exact-period phi-packet transfer followed by squarefree compression and then mod-7 coimage projection.
+
+- **Active Steering Objectives (Updated):**
+    - **Exact-Period Transfer Matrix:** Build the zeta/Mobius matrix from divisor packets to prime masks for the mod-210 address, retaining prime powers when the raw denominator is `1260` or `2520`.
+    - **Coimage Projection Test:** Re-index the HYP-2626 repeated packets `(1,1,1,1,a,a)` and `(1,1,1,1,a,b)` by exact-period packet mass before quotienting by `F_7^*`.
+    - **576 Packet Bound:** Test whether the `576` all-mask packet controls the signed repeated-root tail after finite low-height wall deletion.
+
 ## 3.40 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S20
 The LRC(14) squarefree-profile route now has a raw four-factor bridge connecting the Harary-Hill complete-graph product, the Markov-Hurwitz Vieta surface, and the existing mod-210 coimage address.
 
