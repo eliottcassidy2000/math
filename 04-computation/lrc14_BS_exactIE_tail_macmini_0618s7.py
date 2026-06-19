@@ -51,7 +51,6 @@ def hat_BT_mag(T, n):
     for j in T:
         s += cmath.exp(-2j*math.pi*n*j/7.0)*(1-cmath.exp(-2j*math.pi*n/7.0))/(-2j*math.pi*n)
     return abs(s)
-import cmath
 
 # crude per-coefficient bound (T-independent except |T|): |hat 1_{B_T}(n)| <= |T|/(pi|n|), and =0 if 7|n.
 def hat_bound(T, n):

@@ -21,3 +21,14 @@ shape        meas(S7)      measN     E[c3]       E[H]
 consec        0.32721    0.05986   16.1905    487.381
 perf1         0.20833    0.00000   16.4619    490.462
 perf2         0.10408    0.00000   15.7698    436.349
+dissoc        0.03473    0.00000   12.8529    275.773
+Sidon         0.01212    0.00000   13.8126    276.206
+rand1         0.03791    0.00000   14.1597    328.636
+rand2         0.02708    0.00000   14.1628    315.587
+  rank by meas(S7): ['consec', 'perf1', 'perf2', 'rand1', 'dissoc', 'rand2', 'Sidon']
+  rank by E[c3]   : ['perf1', 'consec', 'perf2', 'rand2', 'rand1', 'Sidon', 'dissoc']    same-top? False
+  rank by E[H]    : ['perf1', 'consec', 'perf2', 'rand1', 'rand2', 'Sidon', 'dissoc']    same-top? False
+
+================================================================================================
+EXHAUSTIVE: is consec/AP the GLOBAL MAX of E[c3] and E[H] over primitive shapes?
+(0 in E, distinct, maxE bounded — the 'dangerous box')

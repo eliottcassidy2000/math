@@ -1,0 +1,29 @@
+============================================================================================
+(1) meas(S7(AP_m)) and the max certifiable span N*(k): pointwise lemma closes span<=N*(k)
+============================================================================================
+  m:    7 8 9 10 11 12 13 14 15 16 17 18 19 20 21
+  AP_m: 0.148 0.327 0.416 0.504 0.581 0.624 0.676 0.705 0.728 0.746 0.761 0.777 0.791 0.803 0.811
+
+  k=8: cap_k=0.3815. Pointwise lemma certifies ALL primitive E with span<=N*=7 (since meas(S7(AP_{N*+1}))=0.3272<=cap_k).
+  k=9: cap_k=0.4943. Pointwise lemma certifies ALL primitive E with span<=N*=8 (since meas(S7(AP_{N*+1}))=0.4162<=cap_k).
+  k=10: cap_k=0.6044. Pointwise lemma certifies ALL primitive E with span<=N*=10 (since meas(S7(AP_{N*+1}))=0.5815<=cap_k).
+  k=11: cap_k=0.7253. Pointwise lemma certifies ALL primitive E with span<=N*=13 (since meas(S7(AP_{N*+1}))=0.7047<=cap_k).
+  k=12: cap_k=0.8571. Pointwise lemma certifies ALL primitive E with span<=N*=20 (since meas(S7(AP_{N*+1}))=0.8107<=cap_k).
+  k=13: cap_k=1.0000. Pointwise lemma certifies ALL primitive E with span<=N*=20 (since meas(S7(AP_{N*+1}))=0.8107<=cap_k).
+
+============================================================================================
+(2) Residual after pointwise lemma: span > N*(k). Is it finite mod scale?
+    NO -- span is unbounded (e.g. {0,1,2,...,k-2, BIG}). So pointwise alone leaves an
+    infinite residual. BUT that residual has small |E intersect {0..N*}|... quantify.
+============================================================================================
+  k=8: N*=7. A residual shape e.g. E=(0,1,2,3,4,5,6, BIG):
+      big=8: span=8, meas(S7)=0.20833 <=cap_k(0.3815)? True
+      big=12: span=12, meas(S7)=0.20238 <=cap_k(0.3815)? True
+      big=20: span=20, meas(S7)=0.19048 <=cap_k(0.3815)? True
+      big=50: span=50, meas(S7)=0.19762 <=cap_k(0.3815)? True
+      big=100: span=100, meas(S7)=0.19714 <=cap_k(0.3815)? True
+
+============================================================================================
+(3) Fraction of dangerous-box shapes certified by pointwise lemma (span<=N*(k))
+============================================================================================
+  k=8: N*=7, box maxE<=16, total shapes=11432; pointwise-certified (span<=N*)=1; uncertified=11431 (of which 11431 OK by direct compute, 0 VIOLATE cap)

@@ -1,0 +1,9 @@
+cross-check fast Sfree engine vs slow per-A engine:
+  E(k=8): S match=True  s7=0.32721
+  E(k=8): S match=True  s7=0.03473
+  E(k=8): S match=True  s7=0.12370
+  E(k=11): S match=True  s7=0.58146
+
+==============================================================================================
+CONSEC maximizes L_y?  LARGE bounded-spread sweep + does any E exceed cap_k?
+==============================================================================================
