@@ -216,9 +216,26 @@ The quotient preserves the proof-relevant mod-210 copy address.  It destroys
 exact divisor representatives and witness-time geometry, which must be
 recovered later through finite wall and coimage ledgers.
 
+## HYP-2630 Follow-Up
+
+HYP-2630 applies this copy profile to the HYP-2626 `k=10` repeated-residue
+tail.  The result is a useful negative/positive split:
+
+```text
+copy mass alone does not separate the QR/NQR tail;
+copy mass + quadratic-character phase gives the right packet address.
+```
+
+For `q=1260`, exact top-period packets give `48` copies per unit residue and
+the full `{2,3,5,7}` mask gives `96` copies per unit residue, uniformly over
+`F_7^*`.  The nonzero `4+2` tail classes have identical full-mask copy
+capacities, but their coimage masses split by `chi_7(a)`.  Thus the next
+analytic object is not a scalar Euler-copy mass bound; it is a two-large
+repeated-residue character sum.
+
 ## Status
 
 Open / exploratory.  HYP-2629 is a transfer-coordinate refinement, not a proof.
-The next test is to apply the copy profile directly to the HYP-2626 k=10
-tail-only repeated packets and ask whether the `{7}` coimage mass separates the
-quadratic-character cases more cleanly than raw prime masks do.
+HYP-2630 completes the first direct tail test and redirects the next step to a
+two-large repeated-residue cotangent/Dedekind estimate with the quadratic
+character phase retained.

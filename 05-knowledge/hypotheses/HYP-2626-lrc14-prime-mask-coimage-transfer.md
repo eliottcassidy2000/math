@@ -184,6 +184,26 @@ The quotient destroys exact witness times and row identities.  It preserves
 the support-six signed-tail address, which is the relevant predicate after
 THM-538 and the finite wall ledgers.
 
+## HYP-2630 Update
+
+HYP-2630 completes the Euler-copy re-indexing test suggested by HYP-2629.  The
+copy ledger gives exact-period packet capacity, but it is uniform over
+`F_7^*`.  For raw `q=1260`, exact top-period packets give `48` copies per unit
+residue and the full `{2,3,5,7}` mask gives `96` copies per unit residue.
+Consequently copy capacity is identical inside the nonzero `4+2` row
+`(1,1,1,1,a,a)`.
+
+The observed split is instead the quadratic-character phase:
+
+```text
+chi_7(a)=+1: |S_9|=0.23891209
+chi_7(a)=-1: |S_9|=0.17201670
+```
+
+So the remaining repeated-root theorem should retain the `chi_7` channel
+explicitly.  Raw prime masks and raw Euler-copy capacities are necessary
+addresses, but not the final separator.
+
 ## Status
 
 Partially confirmed by exact enumeration of height `<=2` one-large wall

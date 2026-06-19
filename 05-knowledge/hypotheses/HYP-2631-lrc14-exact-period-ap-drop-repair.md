@@ -11,6 +11,7 @@ depends_on:
   - HYP-2569
   - THM-523
 related:
+  - HYP-2630
   - HYP-2626
   - HYP-2561
   - OPEN-Q-108

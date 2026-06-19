@@ -1,0 +1,106 @@
+
+========================================================================================
+EXACT-PERIOD EULER-COPY UNIT PACKETS
+========================================================================================
+For q divisible by 7, exact-period packets whose denominator touches 7 are uniformly distributed over F_7^*.  This is the copy ledger; any QR/NQR split must come from a later character phase, not from raw phi mass.
+    q   phi(q)  top per unit  full-mask mass  full per unit 7-touch per unit
+   14        6             1               0              0                2
+  210       48             8              48              8               30
+ 1260      288            48             576             96              180
+
+For q=1260, the exact top-period unit seam has 48 copies per unit residue, while the full {2,3,5,7} squarefree mask has 96 per unit residue.  Both are uniform on F_7^*.
+
+========================================================================================
+ONE-LARGE WALL HEIGHT CHECK
+========================================================================================
+height   supports  classes   nonzero hit   mass share
+     2      68124      108    85/116      84.229179%
+     3     114597      108    85/116      84.229179%
+
+height-2 and height-3 class sets equal? True
+Readout: the repeated-residue tail is not a missed coefficient-height 3 one-large wall.  The obstruction is residue multiplicity: one large coordinate cannot create four equal nonzero residues after the core 1..13 supplies only two.
+
+========================================================================================
+K=10 TAIL-ONLY CLASSES BY RESIDUE DEMAND AND COPY CAPACITY
+========================================================================================
+tail-only nonzero classes after height<=2 one-large walls: 31
+tail-only |S_9|-mass: 1.70105407
+bounded core residue capacity 1..13: {0: 1, 1: 2, 2: 2, 3: 2, 4: 2, 5: 2, 6: 2}
+
+Pattern summary:
+           pattern  classes     |S|-mass     mean |S|  min large demand
+      4+2 repeated        6    1.0321002    0.1720167            [2, 3]
+    4+1+1 repeated       12   0.51605011  0.043004176               [2]
+             mixed       10  0.095564835 0.0095564835               [2]
+         zero-cusp        3  0.057338901  0.019112967               [3]
+
+Large-residue demand summary:
+  demand  classes     |S|-mass  share of tail
+       2       27    1.6054892    94.382022%
+       3        4  0.095564835     5.617978%
+
+Top tail classes:
+rank                  class           pattern       |S_9|  demand      scaled demand class    C_full210     C_full1260
+   1     (1, 1, 1, 1, 4, 4)      4+2 repeated  0.23891209       2       (1, 1, 1, 1, 4, 4)         1960    15148137600
+   2     (1, 1, 1, 1, 2, 2)      4+2 repeated  0.23891209       2       (1, 1, 1, 1, 2, 2)         1960    15148137600
+   3     (1, 1, 1, 1, 6, 6)      4+2 repeated   0.1720167       2       (1, 1, 1, 1, 6, 6)         1960    15148137600
+   4     (1, 1, 1, 1, 3, 3)      4+2 repeated   0.1720167       2       (1, 1, 1, 1, 3, 3)         1960    15148137600
+   5     (1, 1, 1, 1, 5, 5)      4+2 repeated   0.1720167       2       (1, 1, 1, 1, 5, 5)         1960    15148137600
+   6     (1, 1, 1, 1, 2, 3)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 2, 3)         4480    30615183360
+   7     (1, 1, 1, 1, 4, 6)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 4, 6)         4480    30615183360
+   8     (1, 1, 1, 1, 2, 5)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 2, 5)         4480    30615183360
+   9     (1, 1, 1, 1, 3, 4)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 3, 4)         4480    30615183360
+  10     (1, 1, 1, 1, 2, 4)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 2, 4)         4480    30615183360
+  11     (1, 1, 1, 1, 5, 6)    4+1+1 repeated 0.076451868       2       (1, 1, 1, 1, 5, 6)         4480    30615183360
+  12     (0, 0, 0, 0, 1, 1)         zero-cusp 0.038225934       3       (0, 0, 0, 0, 1, 1)            0              0
+  13     (0, 0, 1, 1, 1, 1)      4+2 repeated 0.038225934       3       (0, 0, 1, 1, 1, 1)            0              0
+  14     (0, 0, 0, 1, 2, 3)             mixed 0.0095564835       2       (0, 0, 0, 1, 2, 3)            0              0
+  15     (0, 0, 0, 1, 2, 6)             mixed 0.0095564835       2       (0, 0, 0, 1, 2, 6)            0              0
+  16     (0, 0, 1, 1, 1, 2)             mixed 0.0095564835       2       (0, 0, 1, 1, 1, 2)            0              0
+
+========================================================================================
+COPY MASS VS QUADRATIC-CHARACTER PHASE
+========================================================================================
+4+2 packet `(1,1,1,1,a,a)`:
+  a  chi(a)  chi-sum        |S_9|    C_full210     C_full1260
+  0       0        4  0.038225934            0              0
+  2       1        6   0.23891209         1960    15148137600
+  3      -1        2    0.1720167         1960    15148137600
+  4       1        6   0.23891209         1960    15148137600
+  5      -1        2    0.1720167         1960    15148137600
+  6      -1        2    0.1720167         1960    15148137600
+QR mean |S_9|=0.23891209; NQR mean |S_9|=0.1720167. Copy capacities are identical inside the row; the separator is chi.
+
+4+1+1 packet signatures `(chi(a),chi(b),chi(ab),chi((a-1)(b-1)),chi-sum)`:
+                   signature  classes     |S|-mass     mean |S|                example
+           (1, -1, -1, 1, 4)        3    0.2293556  0.076451868     (1, 1, 1, 1, 2, 3)
+          (-1, 1, -1, -1, 4)        1  0.076451868  0.076451868     (1, 1, 1, 1, 3, 4)
+            (1, 1, 1, -1, 6)        1  0.076451868  0.076451868     (1, 1, 1, 1, 2, 4)
+          (-1, -1, 1, -1, 2)        1  0.076451868  0.076451868     (1, 1, 1, 1, 5, 6)
+           (0, -1, 0, -1, 3)        2  0.019112967 0.0095564835     (0, 1, 1, 1, 1, 3)
+           (-1, -1, 1, 1, 2)        1 0.0095564835 0.0095564835     (1, 1, 1, 1, 3, 5)
+          (1, -1, -1, -1, 4)        1 0.0095564835 0.0095564835     (1, 1, 1, 1, 2, 6)
+            (0, -1, 0, 1, 3)        1 0.0095564835 0.0095564835     (0, 1, 1, 1, 1, 6)
+             (0, 1, 0, 1, 5)        1 0.0095564835 0.0095564835     (0, 1, 1, 1, 1, 4)
+
+Conclusion: exact-period Euler-copy capacity thickens the repeated tail by multiplicity pattern, but it is blind to QR/NQR within a fixed pattern because the unit packets are uniform over F_7^*.  The live extra coordinate is the quadratic-character phase moment.
+
+========================================================================================
+PAST-TOPIC INSPIRATION LEDGER
+========================================================================================
+Older repo threads suggest the right architecture here:
+  residue/phase/incidence synthesis: copy mass is a residue capacity, quadratic character is a phase channel, and multi-large walls are an incidence/compatibility obligation;
+  OCF packet lesson: retain packet address before scalar evaluation;
+  root-packet lesson: closed packets need support plus incidence, not support alone;
+  Burnside/totient/divisor ledgers: phi counts exact copies, but character channels decide how those copies cancel.
+
+========================================================================================
+TOURNAMENT ANALYSIS
+========================================================================================
+Pairwise observable: preservation of the signed k=10 coimage-tail predicate.
+Switch: prefer the quotient that keeps residue multiplicity, copy capacity, and character phase with less raw row data.
+Hamiltonian path:
+  multi_large_residue_demand > quadratic_character_phase > euler_copy_unit_capacity > exact_period_1260_packets > height3_one_large_probe > raw_apex_mask > raw_runner_vertices
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1}
+directed_3_cycles = 0
+Challenged assumption: runners and raw apex masks are too coarse.  The useful vertices are repeated-residue proof obligations and the phase/copy coordinates they preserve.

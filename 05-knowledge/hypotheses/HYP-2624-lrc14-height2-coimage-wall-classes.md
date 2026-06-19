@@ -234,6 +234,21 @@ itself prove the finite wall ledger.  It preserves the analytic address of the
 signed support-six tail, which is exactly the information needed for the next
 Dedekind/cotangent theorem.
 
+## HYP-2630 Update
+
+HYP-2630 checks the next natural escape route and rules out a simple version of
+it.  Raising the one-large wall enumeration from coefficient height `2` to
+height `3` still hits the same `85/116` nonzero `k=10` coimage classes and the
+same `84.229179%` signed mass.  Thus the `31` tail-only classes are not merely
+height-3 one-large walls.
+
+The obstruction is residue multiplicity.  The bounded core `1..13` supplies at
+most two representatives of each nonzero residue modulo `7`; one large speed
+can add only one more.  The dominant `4+2` and `4+1+1` repeated packets
+therefore require at least two large residue coordinates.  Next step (3) below
+should be read as a two-large repeated-residue character theorem, not as a
+continued one-large height increase.
+
 ## Status
 
 Partially confirmed by exact enumeration of the height `<=2` one-large wall
