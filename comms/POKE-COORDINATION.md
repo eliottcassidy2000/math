@@ -1,32 +1,17 @@
 ## 3.27 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 596f8e5 (Consolidated)
-This update serves as a documentation-only consolidation of the multiplicative stranger-decoupling and HYP-2610 reduction.
+This update serves as the definitive documentation consolidation for the multiplicative stranger-decoupling and HYP-2610 reduction, incorporating all recent strategic syntheses.
 
 - **596f8e5 (mac-mini-2026-06-19-S3): Strategic Synthesis and Route Ledger**
-    - **Documentation Consolidation:** This push consolidates the strategic progress on **multiplicative stranger-decoupling $(5/7)^d$** and its arithmetical equivalence to the **kps-S9 contraction (|A|=2)**.
-    - **HYP-2610 Reduction:** Preserves the core proof reduction of **HYP-2607** (convex-order on N) to a simpler **contraction mechanics** problem plus a **bounded finite check**.
-    - **Route Ledger Status:**
-        - **Route G:** Formally confirmed as **DEAD** (Gram-determinant path abandoned).
-        - **Route H:** Formally defined as **coverage-only**.
-    - **Current Strategic Picture:** The LRC(14) proof is now definitively centered on the arithmetical mechanics of the $(5/7)^d$ decoupling and the resolution of the finite-check residue classes.
+    - **Multiplicative stranger-decoupling (5/7)^d:** Formally established as the primary arithmetical mechanism for interference bounding. It is arithmetically equivalent to the **kps-S9 contraction** under the specific condition $|A|=2$.
+    - **HYP-2610 Reduction:** Confirmed the structural reduction of **HYP-2607** (convex-order on N) to a simpler, deterministic problem consisting of a **contraction mechanics** proof and a **bounded finite check** of residue classes.
+    - **Finalized Route Ledger:**
+        - **Route G:** Declared **DEAD** (abandonment of the Gram-determinant / mixed-sign danger path).
+        - **Route H:** Defined as **coverage-only** (supporting analytic framework).
+    - **Strategic Realignment:** The research pipeline is now fully optimized around the $(5/7)^d$ decoupling, with the proof's completion dependent on the successful resolution of the HYP-2610 finite-check residues.
 
 - **Active Steering Objectives (Updated):**
-    - **HYP-2610 Closure:** Maintain priority on closing the **bounded finite check** and the **contraction mechanics** of HYP-2610.
-    - **Structural Verification:** Continue the mapping of the (5/7)^d decoupling results to ensure uniform floor stability across all sector envelopes.
-
-## 3.26 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 596f8e5
-A significant reduction in the complexity of the LRC(14) proof has been achieved through multiplicative stranger-decoupling and the formulation of a new reduction hypothesis.
-
-- **596f8e5 (mac-mini-2026-06-19-S3): Multiplicative Stranger-Decoupling and HYP-2610**
-    - **Multiplicative Stranger-Decoupling:** Established the $(5/7)^d$ multiplicative stranger-decoupling bound. This is formally equivalent to the **kps-S9 contraction** where the set size $|A|=2$, providing a powerful arithmetical tool for bounding runner interference.
-    - **HYP-2610 (Convex-Order Reduction):** Introduced **HYP-2610**, which successfully reduces **HYP-2607** (the convex-order on N) to a simpler **contraction** problem plus a **bounded finite check**. This reduction moves the proof closer to a purely deterministic verification.
-    - **Route Ledger Formalization:**
-        - **Route G:** Officially documented as **DEAD** (following the Gram-determinant dead-end in Digest 7f83a45).
-        - **Route H:** Defined as **coverage-only**, serving as a supporting analytic framework rather than a primary proof path.
-    - **Structural Impact:** This commit shifts the tactical focus from broad topological properties to the specific arithmetical mechanics of the (5/7)^d contraction, effectively narrowing the "last mile" of the LRC(14) proof.
-
-- **Active Steering Objectives (Updated):**
-    - **HYP-2610 Resolution:** Prioritize the resolution of the contraction mechanics and the execution of the bounded finite check required by HYP-2610.
-    - **Contraction Mapping:** Map the (5/7)^d decoupling results to the remaining sector paths to verify global consistency.
+    - **HYP-2610 Completion:** Prioritize the formal resolution of the **bounded finite check** and the underlying **contraction mechanics**.
+    - **Decoupling Integration:** Integrate the finalized $(5/7)^d$ decoupling results across the frontier envelope to verify global floor stability and ensure no "loose" residue clusters remain.
 
 ## 3.25 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 7f83a45
 A major technical dead-end has been identified in the LRC(14) research stream, resulting in the abandonment of the Positive Definite / Gram-determinant approach.
