@@ -1,0 +1,60 @@
+========================================================================================
+LRC(14) seven-sector cap scout
+========================================================================================
+
+[0] Sufficient route
+    N(E) = {all gaps <= 1/7}.
+    S7(E)= {fixed sectors 0..6 are all hit by {e*x}}.
+    Up to boundary measure zero, N(E) subset S7(E).
+    Therefore meas(S7(E)) <= cap_k implies mu_1/7(E) >= 1-cap_k.
+
+[1] cap_k = min_{|P|=13-k} meas(G_P)
+    k=8: cap=2243/5880 = 0.381462585; witness P=(1, 5, 7, 8, 9)
+    k=9: cap=1979/4004 = 0.494255744; witness P=(1, 11, 12, 13)
+    k=10: cap=55/91 = 0.604395604; witness P=(1, 12, 13)
+    k=11: cap=66/91 = 0.725274725; witness P=(1, 13)
+    k=12: cap=6/7 = 0.857142857; witness P=(1,)
+    k=13: cap=1 = 1.000000000; witness P=()
+
+[2] Consecutive rows: net(E) <= sector_cover(E) <= cap_k
+    k=8: net=44/735 = 0.059863946; sector=481/1470 = 0.327210884; cap=2243/5880 = 0.381462585; margins cap-sector=319/5880 = 0.054251701
+    k=9: net=47/294 = 0.159863946; sector=2447/5880 = 0.416156463; cap=1979/4004 = 0.494255744; margins cap-sector=65669/840840 = 0.078099282
+    k=10: net=11/49 = 0.224489796; sector=8899/17640 = 0.504478458; cap=55/91 = 0.604395604; margins cap-sector=22913/229320 = 0.099917146
+    k=11: net=824/2205 = 0.373696145; sector=3419/5880 = 0.581462585; cap=66/91 = 0.725274725; margins cap-sector=10993/76440 = 0.143812140
+    k=12: net=10432/24255 = 0.430096887; sector=121103/194040 = 0.624113585; cap=6/7 = 0.857142857; margins cap-sector=45217/194040 = 0.233029272
+    k=13: net=601/1078 = 0.557513915; sector=14573/21560 = 0.675927644; cap=1 = 1.000000000; margins cap-sector=6987/21560 = 0.324072356
+
+[3] Exact primitive sector-cover bank
+    k=8: maxE<=14; checked=3431; max_sector=481/1470 = 0.327210884 at E=(0, 1, 2, 3, 4, 5, 6, 7); cap=2243/5880 = 0.381462585; margin=319/5880 = 0.054251701; violations=0
+    k=9: maxE<=14; checked=3003; max_sector=2447/5880 = 0.416156463 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8); cap=1979/4004 = 0.494255744; margin=65669/840840 = 0.078099282; violations=0
+    k=10: maxE<=15; checked=5005; max_sector=8899/17640 = 0.504478458 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9); cap=55/91 = 0.604395604; margin=22913/229320 = 0.099917146; violations=0
+    k=11: maxE<=14; checked=1001; max_sector=3419/5880 = 0.581462585 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10); cap=66/91 = 0.725274725; margin=10993/76440 = 0.143812140; violations=0
+    k=12: maxE<=14; checked=364; max_sector=11381/17640 = 0.645181406 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12); cap=6/7 = 0.857142857; margin=3739/17640 = 0.211961451; violations=0
+    k=13: maxE<=14; checked=91; max_sector=12023/17640 = 0.681575964 at E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14); cap=1 = 1.000000000; margin=5617/17640 = 0.318424036; violations=0
+
+[4] Compression counterexamples
+    Naive one-step compression cannot be the proof lemma.
+    mu_1/7 counterexamples, where compression increases mu:
+        E=(0, 1, 2, 3, 4, 6, 7, 13) -> Ec=(0, 1, 2, 3, 4, 5, 6, 12): 62113/63063 = 0.984935699 -> 1 = 1.000000000
+        E=(0, 1, 2, 3, 4, 5, 6, 8, 14) -> Ec=(0, 1, 2, 3, 4, 5, 6, 8, 13): 47/49 = 0.959183673 -> 1 = 1.000000000
+        E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 15) -> Ec=(0, 1, 2, 3, 4, 5, 6, 7, 9, 14): 661/735 = 0.899319728 -> 691/735 = 0.940136054
+        E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) -> Ec=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13): 151/196 = 0.770408163 -> 38/49 = 0.775510204
+        E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16) -> Ec=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15): 1354/2205 = 0.614058957 -> 1381/2205 = 0.626303855
+    sector-cover counterexamples, where compression decreases sector cover:
+        E=(0, 1, 2, 3, 4, 5, 6, 10) -> Ec=(0, 1, 2, 3, 4, 5, 6, 9): 4/21 = 0.190476190 -> 79/420 = 0.188095238
+        E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) -> Ec=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11): 11381/17640 = 0.645181406 -> 121103/194040 = 0.624113585
+
+[5] Proof-route Tournament Analysis
+    vertices=['sector_cover_cap', 'consecutive_mu_min', 'gap_max_stratification', 'relation_height_tail', 'one_step_compression']
+    evidence_scores={'sector_cover_cap': 88, 'consecutive_mu_min': 82, 'gap_max_stratification': 68, 'relation_height_tail': 64, 'one_step_compression': 5}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+    vertex_scores={'sector_cover_cap': 4, 'consecutive_mu_min': 3, 'gap_max_stratification': 2, 'relation_height_tail': 1, 'one_step_compression': 0}
+    directed_3cycles=0
+    SCC_sizes=[1, 1, 1, 1, 1]
+    Hamiltonian_path_count=1
+
+Verdict:
+    Sector cover gives a weaker cap target than consecutive-mu minimization.
+    The bounded exact bank has no violations, with large rational margins.
+    LRC(14) is not proved: the missing lemma is a global sector-cover cap
+    or a finite low-height reduction plus high-height sector discrepancy tail.
