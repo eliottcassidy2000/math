@@ -1,0 +1,33 @@
+
+======================================================================
+k=8
+======================================================================
+g=['1', '0', '0', '1/10', '0', '0', '1']
+y_r (moment weights, L_y=sum y_r S_r): ['1', '-1', '1', '-9/10', '3/5', '0', '0']
+  signs of y_r: ['+', '-', '+', '-', '+', '0', '0']
+  used moments r in [0, 1, 2, 3, 4]
+  consec moments S_r = ['1', '393/245', '188/105', '991/735', '472/735', '17/98', '1/49']
+  check sum y_r S_r = 2633/7350 vs L_y = 2633/7350  OK
+  --- per-moment: does consec maximize S_r? ---
+    S_0: y_0=+  consec-max=YES
+    S_1: y_1=-  consec-max=NO (3429 beat)
+    S_2: y_2=+  consec-max=NO (32 beat)
+    S_3: y_3=-  consec-max=YES
+    S_4: y_4=+  consec-max=YES
+  non-dilation ties on L_y: 0
+
+======================================================================
+k=9
+======================================================================
+g=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+y_r (moment weights, L_y=sum y_r S_r): ['1', '-13/18', '4/9', '-1/6', '0', '0', '0']
+  signs of y_r: ['+', '-', '+', '-', '0', '0', '0']
+  used moments r in [0, 1, 2, 3]
+  consec moments S_r = ['1', '4061/2940', '3027/1960', '288/245', '221/392', '15/98', '1/56']
+  check sum y_r S_r = 26083/52920 vs L_y = 26083/52920  OK
+  --- per-moment: does consec maximize S_r? ---
+    S_0: y_0=+  consec-max=YES
+    S_1: y_1=-  consec-max=NO (1274 beat)
+    S_2: y_2=+  consec-max=NO (1 beat)
+    S_3: y_3=-  consec-max=YES
+  non-dilation ties on L_y: 0

@@ -1,0 +1,22 @@
+
+======================================================================
+k=8
+======================================================================
+consec p0=481/1470=0.327211  E[N]=S1=393/245=1.604082
+consec per-sector avoid J({j}) j=1..6: ['799/2940', '179/735', '117/490', '179/735', '799/2940', '82/245']
+  ~ ['0.27177', '0.24354', '0.23878', '0.24354', '0.27177', '0.33469']  (sum=1.60408=S1)
+  p0: competitors beating consec p0 = 0; non-dilation ties = 0
+  S1=E[N]: competitors with SMALLER E[N] than consec = 1; non-dil ties = 0
+  => consec MAXIMIZES p0 (strict up to dilation)
+  => consec does NOT uniquely min E[N]
+
+======================================================================
+k=9
+======================================================================
+consec p0=2447/5880=0.416156  E[N]=S1=4061/2940=1.381293
+consec per-sector avoid J({j}) j=1..6: ['449/1960', '53/245', '29/147', '53/245', '449/1960', '431/1470']
+  ~ ['0.22908', '0.21633', '0.19728', '0.21633', '0.22908', '0.29320']  (sum=1.38129=S1)
+  p0: competitors beating consec p0 = 0; non-dilation ties = 0
+  S1=E[N]: competitors with SMALLER E[N] than consec = 12; non-dil ties = 0
+  => consec MAXIMIZES p0 (strict up to dilation)
+  => consec does NOT uniquely min E[N]

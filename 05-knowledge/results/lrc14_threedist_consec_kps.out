@@ -1,0 +1,14 @@
+=== Angle D: three-distance closed form for consec ===
+
+k=8: gap-prediction matches direct N at all 126 intervals: True (mismatches=0)
+k=9: gap-prediction matches direct N at all 154 intervals: True (mismatches=0)
+k=10: gap-prediction matches direct N at all 196 intervals: True (mismatches=0)
+
+--- max-gap<1/7 is SUFFICIENT but NOT necessary for N=0 ---
+  k=8: meas(N=0)=481/1470=0.3272  meas(maxgap<1/7)=44/735=0.0599  equal=False
+  k=9: meas(N=0)=2447/5880=0.4162  meas(maxgap<1/7)=47/294=0.1599  equal=False
+  k=10: meas(N=0)=8899/17640=0.5045  meas(maxgap<1/7)=11/49=0.2245  equal=False
+
+k=8: consec p_0 = 481/1470 = 0.327211
+k=9: consec p_0 = 2447/5880 = 0.416156
+k=10: consec p_0 = 8899/17640 = 0.504478

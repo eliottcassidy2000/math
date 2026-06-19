@@ -1,0 +1,36 @@
+
+======================================================================
+k=8
+======================================================================
+g support [0, 3, 6], g=['1', '0', '0', '1/10', '0', '0', '1']
+consec=[0, 1, 2, 3, 4, 5, 6, 7]
+  p_consec = ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+  p_consec ~ ['0.32721', '0.24422', '0.17007', '0.10612', '0.08095', '0.05102', '0.02041']
+  L_y(consec) = 2633/7350 ~ 0.358231
+  p0(consec)=meas S7 = 0.327211
+  testing 3431 competitors with max <= 14
+  --- results over 3430 competitors ---
+  consec p0 is the LARGEST: YES
+  consec L_y is the LARGEST: YES
+  worst p0 gap (consec-comp, want >=0): 0.000000
+  worst L_y gap (consec-comp, want >=0): 0.000000
+  usual stoch dom N_E<=N_consec holds for 0/3430
+  increasing-convex order holds for 1/3430
+
+======================================================================
+k=9
+======================================================================
+g support [0, 1, 4, 5], g=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+consec=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+  p_consec = ['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  p_consec ~ ['0.41616', '0.22211', '0.13776', '0.09388', '0.06633', '0.04592', '0.01786']
+  L_y(consec) = 26083/52920 ~ 0.492876
+  p0(consec)=meas S7 = 0.416156
+  testing 1287 competitors with max <= 13
+  --- results over 1286 competitors ---
+  consec p0 is the LARGEST: YES
+  consec L_y is the LARGEST: YES
+  worst p0 gap (consec-comp, want >=0): 0.000000
+  worst L_y gap (consec-comp, want >=0): 0.000000
+  usual stoch dom N_E<=N_consec holds for 0/1286
+  increasing-convex order holds for 12/1286
