@@ -197,8 +197,40 @@ def symbolic_r3_witnesses() -> None:
     )
 
 
+def bounded_height_corollary(rows: list[tuple[F, int, int, F, F, int, F, str]]) -> None:
+    section("4. BOUNDED-HEIGHT COROLLARY FROM THE DENOMINATOR LEMMA")
+    print(
+        "Pulled-in KPS S9 lemma: exact M(S)=p/q is attained at a binding-pair "
+        "denominator q | (v_i +/- v_j), so q <= 2 max(S).  Therefore "
+        "M(S)-1/(k+1) >= 1/(2 max(S)(k+1)) for every non-tight S."
+    )
+    print(
+        "\nConsequently, an o(1/k^2) second-spectrum gap can only come from "
+        "true sigma_2 extremizers with max(S)/k -> infinity.  Any bounded "
+        "multiplier family A_{k,r} has an automatic Theta(1/k^2) lower floor."
+    )
+    print("\nRepresentative largest normalized-depth rows from the AP-defect audit:")
+    print(f"{'k':>3} {'r':>3} {'M':>9} {'e':>3} {'maxS/k':>8} {'g*k^2':>10} {'KPS lb * k^2':>14}")
+    for norm, k, r, value, _arg, e, _dep, state in sorted(rows, reverse=True)[:10]:
+        if state == "AP-tight":
+            continue
+        max_speed = max(s16.multiplier_family(k, r))
+        gap = value - F(1, k + 1)
+        kps_lb = F(1, 2 * max_speed * (k + 1))
+        print(
+            f"{k:>3} {r:>3} {fmt(value):>9} {e:>3} "
+            f"{max_speed / k:>8.3f} {float(gap * k * k):>10.5f} "
+            f"{float(kps_lb * k * k):>14.5f}"
+        )
+    print(
+        "\nThis does not prove the global lower bound, because a true sigma_2 "
+        "extremizer might have growing height.  It does explain why the "
+        "bounded AP-defect ladder improves constants without changing order."
+    )
+
+
 def tournament_analysis() -> None:
-    section("4. TOURNAMENT ANALYSIS")
+    section("5. TOURNAMENT ANALYSIS")
     vertices = [
         "infinite_lower_bound_for_g(k)",
         "excess_one_classifier",
@@ -227,9 +259,10 @@ def main() -> None:
         "Goal: continue HYP-2621 by testing whether the AP-defect multiplier "
         "constant r can grow, which would threaten the desired c/k^2 lower bound."
     )
-    small_grid()
+    rows = small_grid()
     high_r_probe()
     symbolic_r3_witnesses()
+    bounded_height_corollary(rows)
     tournament_analysis()
     section("READOUT")
     print(

@@ -93,7 +93,29 @@ Representative exact equality checks:
 This proves the lower-bound/witness half of the third-mediant branch symbolically on these residue classes.  The remaining proof half is the upper certificate M <= 3/(3k+2), i.e. a modular cover/no-better-crossing argument.
 
 ========================================================================================
-4. TOURNAMENT ANALYSIS
+4. BOUNDED-HEIGHT COROLLARY FROM THE DENOMINATOR LEMMA
+========================================================================================
+Pulled-in KPS S9 lemma: exact M(S)=p/q is attained at a binding-pair denominator q | (v_i +/- v_j), so q <= 2 max(S).  Therefore M(S)-1/(k+1) >= 1/(2 max(S)(k+1)) for every non-tight S.
+
+Consequently, an o(1/k^2) second-spectrum gap can only come from true sigma_2 extremizers with max(S)/k -> infinity.  Any bounded multiplier family A_{k,r} has an automatic Theta(1/k^2) lower floor.
+
+Representative largest normalized-depth rows from the AP-defect audit:
+  k   r         M   e   maxS/k      g*k^2   KPS lb * k^2
+ 31   4     4/127   1    3.871    0.23647        0.12513
+ 25   3      3/77   1    2.880    0.31219        0.16693
+ 19   3      3/59   1    2.842    0.30593        0.16713
+ 13   3      3/41   1    2.769    0.29443        0.16766
+  7   3      3/23   1    2.571    0.26630        0.17014
+ 35   2      2/71   1    1.943    0.47926        0.25020
+ 33   2      2/67   1    1.939    0.47805        0.25023
+ 29   2      2/59   1    1.931    0.47514        0.25030
+ 27   2      2/55   1    1.926    0.47338        0.25034
+ 23   2      2/47   1    1.913    0.46897        0.25047
+
+This does not prove the global lower bound, because a true sigma_2 extremizer might have growing height.  It does explain why the bounded AP-defect ladder improves constants without changing order.
+
+========================================================================================
+5. TOURNAMENT ANALYSIS
 ========================================================================================
 Hamiltonian proof path:
   infinite_lower_bound_for_g(k) > excess_one_classifier > r3_symbolic_witness > high_r_excess_audit > bounded_multiplier_grid > doubled_top_packet > raw_runner_vertices

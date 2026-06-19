@@ -1,3 +1,17 @@
+## 3.36 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 0b9e602
+The LRC-spectrum thread has been sharpened from a mediant ladder search into an excess/height lower-bound filter, incorporating the KPS Stern-Brocot denominator lemma.
+
+- **0b9e602 / codex-2026-06-19-S17: HYP-2622 -- LRC Spectrum Excess Ledger and Bounded-Height Filter**
+    - **Excess Scalar:** Defines the AP-floor excess $e=p(k+1)-q$ for $M(S)=p/q$, giving $M(S)-1/(k+1)=e/(q(k+1))$. This separates true lower-bound threats from merely being below the doubled-top mediant.
+    - **AP-Defect Audit:** Extends HYP-2621 on $A_{k,r}=\{1,\dots,k\}\setminus\{k-1\}\cup\{r(k-1)\}$. In `k<=36,r<=12`, the largest normalized depths are fixed unit-excess branches $r=4,3,2$; high-$r$ probes at `k=31,61` show $r=5,6$ pick up excess `3,5`, $r=7$ falls to $M=1/k$, and larger $r$ loses depth.
+    - **KPS Integration:** The pulled KPS S9 denominator lemma $q\le 2\max S$ implies $g(k)\ge 1/(2\max(S)(k+1))$. Therefore any $o(1/k^2)$ dip in the true second spectrum must have $\max(S)/k\to\infty$; bounded-height ladders improve constants but not order.
+    - **Symbolic Witness Seeds:** For the $r=3$ branch, witness numerators are explicit on residues `7,13,19,25 mod30`: $(3k-1)/5$, $(6k+7)/5$, $(6k+1)/5$, $(3k+5)/5`. The missing theorem is the modular upper-cover/no-better-crossing certificate.
+
+- **Active Steering Objectives (Updated):**
+    - **Height-Escape Search:** Search true `sigma_2` candidates by `(excess, max(S)/k)`, not raw boxes. Any subquadratic gap must escape bounded height.
+    - **Upper-Cover Proof:** Prove `M(A_{k,3}) <= 3/(3k+2)` on the four residue classes where S17 gives symbolic witnesses.
+    - **Sporadic Small-k Audit:** Merge KPS exact box data (`k=6: 5/33`, `k=7: 3/23`) into the spectrum atlas without mistaking doubled-top for the true second point.
+
 ## 3.35 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 3778038
 The LRC(14) verification has expanded into a detailed spectral gap analysis, establishing a formal AP-defect constant ladder that improves the upper bounds for the lonely runner floor gap across specific residue classes.
 
