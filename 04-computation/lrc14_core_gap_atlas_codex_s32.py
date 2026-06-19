@@ -182,6 +182,17 @@ def print_single_hole_ap_window() -> None:
     print()
 
 
+def print_critical_interval_ledgers() -> None:
+    print("critical AP-window interval ledgers")
+    for drop in (6, 12):
+        core = tuple(v for v in range(1, 14) if v != drop)
+        row = Row.from_core(core)
+        print(f"drop {drop}: safe={row.safe}, components={row.components}, core={core}")
+        for lo, hi in safe_components(core):
+            print(f"  [{lo}, {hi}] len={hi - lo} mid={(lo + hi) / 2}")
+    print()
+
+
 def print_top(top: list[Row]) -> None:
     print("near-minimum rows")
     print("rank | safe measure | core | span | exc | comps | min component | holes")
@@ -239,6 +250,7 @@ def main() -> None:
     by_max, top, best_by_excess = scan(args.bmax, args.top)
     print_cumulative(by_max, args.bmax)
     print_single_hole_ap_window()
+    print_critical_interval_ledgers()
     print_top(top)
     print_excess(best_by_excess)
 

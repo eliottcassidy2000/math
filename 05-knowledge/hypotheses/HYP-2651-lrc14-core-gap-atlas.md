@@ -86,6 +86,35 @@ drop 4  ->  97/4004
 drop 10 ->  1520/63063
 ```
 
+The critical interval ledgers are small enough to become a hand-checkable local
+lemma.  For the minimizer `[1,13]\{6}`:
+
+```text
+[29/182, 9/56]     length 1/728
+[29/168, 27/154]   length 5/1848
+[127/154, 139/168] length 5/1848
+[47/56, 153/182]   length 1/728
+```
+
+The total is
+
+```text
+2*(1/728) + 2*(5/1848) = 7/858.
+```
+
+For the next competitor `[1,13]\{12}`:
+
+```text
+[15/182, 13/154] length 2/1001
+[29/70, 41/98]   length 1/245
+[57/98, 41/70]   length 1/245
+[141/154,167/182] length 2/1001
+```
+
+The total is `426/35035`.  This gives the AP-window collar proof target in
+concrete form: prove every other single-hole ledger contains at least this much
+safe length or decomposes into the displayed larger intervals.
+
 The near-minimum rows through `B=19` are AP-cluster templates with a small
 number of holes, usually retaining the central `6` hole.  Higher sumset excess
 does not by itself make rows dangerous; the near-collar rows are recognized
