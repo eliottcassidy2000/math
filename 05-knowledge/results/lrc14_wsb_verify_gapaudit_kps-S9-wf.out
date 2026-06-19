@@ -1,0 +1,24 @@
+V8 GAP AUDIT (efficient) -- consec_8 relation lattice
+======================================================================
+  delta_8 = meas(S7(consec_8)) - M7(8) = 1068481/3529470 = 0.302731
+
+  box |n_i|<=5: 199668 nonzero relations
+    sum|K| all                = 2.28458
+    sum|K| support>=6 (floor) = 1.13640
+    signed sum (=corr_trunc)  = +0.178702  (true corr=0.302731)
+    floor removes 50.3% of abs mass
+    abs(supp>=6) > delta_8?   = True  (claim: YES => abs bound after floor STILL lossy)
+
+  box |n_i|<=6: 543464 nonzero relations
+    sum|K| all                = 2.72075
+    sum|K| support>=6 (floor) = 1.40219
+    signed sum (=corr_trunc)  = +0.190575  (true corr=0.302731)
+    floor removes 48.5% of abs mass
+    abs(supp>=6) > delta_8?   = True  (claim: YES => abs bound after floor STILL lossy)
+
+  box |n_i|<=7: 1281680 nonzero relations
+    sum|K| all                = 2.72075
+    sum|K| support>=6 (floor) = 1.40219
+    signed sum (=corr_trunc)  = +0.190575  (true corr=0.302731)
+    floor removes 48.5% of abs mass
+    abs(supp>=6) > delta_8?   = True  (claim: YES => abs bound after floor STILL lossy)

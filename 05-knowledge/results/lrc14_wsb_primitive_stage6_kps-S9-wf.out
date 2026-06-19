@@ -1,0 +1,39 @@
+==============================================================================
+(G1) PRIMITIVE Lemma B: consec maximizes meas(S7) among primitive same-k sets
+==============================================================================
+  k=8 primitive maxE<=14: 3431 sets, meas(S7)(consec)=0.327211, beaters=0
+  k=9 primitive maxE<=12: 495 sets, meas(S7)(consec)=0.416156, beaters=0
+
+  k=8 RANDOM primitive WIDE-SPREAD bank (maxE up to 60) -- the wide regime:
+    tested 565 random primitive wide E; meas(S7)>consec(0.3272): 0; max meas(S7)=0.15657 @ [0, 15, 17, 19, 20, 21, 23, 25]
+    spread~[20,30): n=189 mean meas(S7)=0.0365 max=0.1566
+    spread~[30,40): n=140 mean meas(S7)=0.0343 max=0.0969
+    spread~[40,50): n=125 mean meas(S7)=0.0320 max=0.0675
+    spread~[50,60): n=98 mean meas(S7)=0.0284 max=0.0574
+    spread~[60,70): n=13 mean meas(S7)=0.0299 max=0.0358
+
+==============================================================================
+(G2) PRIMITIVE P(N=6) bound: <= 1/(7(k-1)), equality iff consec
+==============================================================================
+  k=4 primitive maxE<=12: 196 sets; P(N=6)>1/(7(k-1))=1/21: 0; #equality=1 (consec in eq: True)
+  k=5 primitive maxE<=12: 479 sets; P(N=6)>1/(7(k-1))=1/28: 0; #equality=1 (consec in eq: True)
+  k=6 primitive maxE<=12: 786 sets; P(N=6)>1/(7(k-1))=1/35: 0; #equality=1 (consec in eq: True)
+  k=7 primitive maxE<=12: 923 sets; P(N=6)>1/(7(k-1))=1/42: 0; #equality=1 (consec in eq: True)
+  k=8 primitive maxE<=13: 1716 sets; P(N=6)>1/(7(k-1))=1/49: 0; #equality=1 (consec in eq: True)
+
+==============================================================================
+(G4) wide-spread RESONANT configs (w==0 mod 7) -- do they break the collapse?
+==============================================================================
+  consec_8 meas(S7)=0.32721, cap_8~0.38146
+  AP step 1 (consec)             gcd=1 maxE=7: meas(S7)=0.32721 
+  AP step 2 (nonprim)            gcd=2 maxE=14: meas(S7)=0.32721 
+  AP step 3 (nonprim)            gcd=3 maxE=21: meas(S7)=0.32721 
+  wide 7-mult {0,7,14..}         gcd=7 maxE=49: meas(S7)=0.32721 
+  0..6 + 7                       gcd=1 maxE=7: meas(S7)=0.32721 
+  0..6 + 14                      gcd=1 maxE=14: meas(S7)=0.23231 
+  0..6 + 21                      gcd=1 maxE=21: meas(S7)=0.21769 
+  geometric 2^i                  gcd=1 maxE=64: meas(S7)=0.06920 
+  primes                         gcd=1 maxE=17: meas(S7)=0.03413 
+  wide random spread~50          gcd=1 maxE=49: meas(S7)=0.05270 
+
+DONE stage 6.

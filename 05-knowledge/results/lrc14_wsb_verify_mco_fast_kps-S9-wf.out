@@ -1,0 +1,29 @@
+[calibration float vs exact meas_S7 on consec]
+  k=8: float=0.327210884 exact=0.327210884 diff=0.00e+00
+  k=9: float=0.416156463 exact=0.416156463 diff=0.00e+00
+  k=10: float=0.504478458 exact=0.504478458 diff=2.22e-16
+
+========================================================================
+B2 — wide exhaustive bounded primitive sweep (FLOAT screen, EXACT confirm beaters)
+========================================================================
+ k=8 B=30 prim#=2029245: consec=0.327211 SUPfloat=0.327211 arg=(0, 1, 2, 3, 4, 5, 6, 7) float-beaters=0 EXACT-beaters=0 EXACT-overcap=0
+ k=9 B=24 prim#=734975: consec=0.416156 SUPfloat=0.416156 arg=(0, 1, 2, 3, 4, 5, 6, 7, 8) float-beaters=0 EXACT-beaters=0 EXACT-overcap=0
+ k=10 B=20 prim#=167950: consec=0.504478 SUPfloat=0.504478 arg=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) float-beaters=0 EXACT-beaters=0 EXACT-overcap=0
+ k=11 B=18 prim#=43758: consec=0.581463 SUPfloat=0.581463 arg=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) float-beaters=0 EXACT-beaters=0 EXACT-overcap=0
+
+========================================================================
+B3 — wide / resonant(w=0 mod7) / short-relation RANDOM hunt
+========================================================================
+  [wide] k=8 tried=119967: consec=0.327211 SUPfloat=0.327211 cap=0.381463 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+onant7] k=8 tried=25000: consec=0.327211 SUPfloat=0.327211 cap=0.381463 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [short-rel] k=8 tried=146: consec=0.327211 SUPfloat=0.327211 cap=0.381463 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [wide] k=9 tried=39997: consec=0.416156 SUPfloat=0.416156 cap=0.494256 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [resonant7] k=9 tried=25000: consec=0.416156 SUPfloat=0.416156 cap=0.494256 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [short-rel] k=9 tried=146: consec=0.416156 SUPfloat=0.416156 cap=0.494256 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [wide] k=10 tried=40000: consec=0.504478 SUPfloat=0.504478 cap=0.604396 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [resonant7] k=10 tried=24999: consec=0.504478 SUPfloat=0.504478 cap=0.604396 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+  [short-rel] k=10 tried=146: consec=0.504478 SUPfloat=0.504478 cap=0.604396 float-beat=0 EXACT-beat=0 EXACT-overcap=0
+
+========================================================================
+C — LEMMA A: P(N=6) <= 1/(7(k-1)) for primitive E + component-count bound
+========================================================================

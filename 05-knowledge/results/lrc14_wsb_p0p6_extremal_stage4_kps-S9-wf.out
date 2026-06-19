@@ -4,3 +4,4 @@
 --- k=8  p0(consec)=0.327211 ---
     shapes maxE<=12: 792, p0>consec: 0
     shapes maxE<=15: 6435, p0>consec: 0
+    shapes maxE<=18: 31824, p0>consec: 0

@@ -1,0 +1,22 @@
+HEADLINE EXACT NUMBERS (LRC(14) seven-sector, k=8,9,10)
+======================================================================
+ k=8: meas(S7)(consec)=481/1470=0.327211  cap_k=2243/5880=0.381463  margin=0.054252  <cap OK
+ k=9: meas(S7)(consec)=2447/5880=0.416156  cap_k=1979/4004=0.494256  margin=0.078099  <cap OK
+ k=10: meas(S7)(consec)=8899/17640=0.504478  cap_k=55/91=0.604396  margin=0.099917  <cap OK
+
+LEMMA B headline (k=8): consec is the UNIQUE primitive same-k maximizer of meas(S7).
+  exhaustive primitive maxE<=15: 6434 sets, 0 beaters (verified in stage 6/7).
+  tightest non-consec primitive competitor: E=[0,2,3,4,5,6,7,8] meas(S7)= 0.2736394557823129  (margin 0.10782312925170068 below cap)
+
+LEMMA A headline: P(N=6)(consec_k)=1/(7(k-1)); consec is the UNIQUE primitive same-k max.
+  k=7: P(N=6)(consec)=1/(7*6)=1/42
+  k=8: P(N=6)(consec)=1/(7*7)=1/49
+  k=9: P(N=6)(consec)=1/(7*8)=1/56
+  k=10: P(N=6)(consec)=1/(7*9)=1/63
+
+RESONANCE DISSOLUTION (the w==0 mod 7 fear):
+  E=[0, 1, 2, 3, 4, 5, 6, 7]  gcd=1  meas(S7)=0.327211  (primitive rep = divide by gcd => consec)
+  E=[0, 7, 14, 21, 28, 35, 42, 49]  gcd=7  meas(S7)=0.327211  (primitive rep = divide by gcd => consec)
+  E=[0, 2, 4, 6, 8, 10, 12, 14]  gcd=2  meas(S7)=0.327211  (primitive rep = divide by gcd => consec)
+
+DONE final summary.

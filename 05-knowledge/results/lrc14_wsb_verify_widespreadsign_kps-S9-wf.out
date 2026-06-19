@@ -1,0 +1,124 @@
+ADVERSARIAL VERIFICATION: LRC(14) wide-spread-signed-weyl (kps-S9-wf)
+
+==============================================================================
+V0 -- FRAMING: which target?  cap_k (canon) vs consec (claimed advance)
+==============================================================================
+  Proved floor (THM-535): cap_k >= (k-6)/7.  Check both cap tables:
+   k    (k-6)/7      CAP_canon  >=floor?     CAP_prompt  >=floor?
+   8    0.28571      2243/5880      True      2243/5880      True
+   9    0.42857      1979/4004      True      2025/4004      True
+  10    0.57143          55/91      True          36/91     False
+  11    0.71429          66/91      True          25/91     False
+  12    0.85714            6/7      True            1/7     False
+  13    1.00000              1      True              0     False
+
+  => The PROMPT's cap_9,10,11,12,13 VIOLATE the proved floor (garbled).
+     Canon caps satisfy the floor.  So 'cap framing wrong' is partly right:
+     the prompt's NUMBERS were garbled, BUT the cap TARGET itself is canonical
+     (HYP-2603/THM-532).  The claimed advance instead targets meas(S7(consec)).
+
+  Now: is consec <= cap_k (so proving <=consec suffices)?  And is <=consec
+  even TRUE as a same-k statement?
+   k   meas(consec)      cap_canon consec<=cap?
+   8       481/1470      2243/5880         True
+   9      2447/5880      1979/4004         True
+  10     8899/17640          55/91         True
+  11      3419/5880          66/91         True
+  12  121103/194040            6/7         True
+  13    14573/21560              1         True
+
+==============================================================================
+V1 -- exact targets M7(k), meas(S7(consec_k)), delta_k=consec-M7
+==============================================================================
+   k          M7(k)     meas(consec)        delta_k  >=0.302?
+   8       0.024480         481/1470       0.302731      True
+   9       0.057702        2447/5880       0.358455      True
+  10       0.104913       8899/17640       0.399566      True
+  11       0.163096        3419/5880       0.418366      True
+  12       0.228452    121103/194040       0.395661      True
+  13       0.297307      14573/21560       0.378621      True
+
+  Cross-check meas(S7(consec_k)) vs claimed advance's asserted exact values:
+    k=8: computed=481/1470  claimed=481/1470  match=True
+    k=9: computed=2447/5880  claimed=2447/5880  match=True
+    k=10: computed=8899/17640  claimed=8899/17640  match=True
+    k=11: computed=3419/5880  claimed=3419/5880  match=True
+    k=12: computed=121103/194040  claimed=121103/194040  match=True
+    k=13: computed=14573/21560  claimed=14573/21560  match=True
+
+==============================================================================
+V2 -- LEMMA A (support-6 floor): K(n)=0 unless >=6 nonzero non-7 coords
+==============================================================================
+  (a) C(U) = sum_{T superset U, T subset {1..6}} (-1)^|T|  (independent calc):
+      C(U)=0 for all |U|<6, C(full)=1 :  OK
+  (b) EXHAUSTIVE support 1..5, coords in {-8..8}\{0,+-7} (structured, not random):
+      support 1: tested     14 tuples, running max|K|=2.94e-16
+      support 2: tested    196 tuples, running max|K|=2.94e-16
+      support 3: tested    512 tuples, running max|K|=2.94e-16
+      support 4: tested   4096 tuples, running max|K|=2.94e-16
+      support 5: tested  32768 tuples, running max|K|=2.94e-16
+      OVERALL max|K| over support<=5 = 2.94e-16 at n=(-1,)
+  (c) support-6 examples (must be NONZERO -> floor sharp):
+      n=[1, 2, 3, 4, 5, 6]: |K|=2.370160e-06
+      n=[1, 1, 1, 1, 1, 1]: |K|=4.996588e-03
+      n=[1, -1, 2, -2, 3, -3]: |K|=4.740319e-05
+      n=[3, 3, 3, 3, 3, 3]: |K|=8.821466e-04
+  (d) support-2 kernel W[j,l] identically zero: True  (=> shortest relations contribute K=0)
+
+==============================================================================
+V3 -- LEMMA B envelope |shat(n,j)|=|sin(pi n/7)|/(pi|n|); c1 constant
+==============================================================================
+  |shat(n,j)| closed form verified n=1..49, all j: True
+  c1 = max_n |n|*max_T|chat(n,T)| = 0.697303  at n=66 (n mod 7 = 3)
+  triangle bound 6|sin(3pi/7)|/pi = 1.861975
+  claimed c1 ~ 0.6973/0.6974 : CONSISTENT
+
+==============================================================================
+V4 -- signed identity meas(S7)=M7(k)+sum_{0!=n in Lambda^o} K(n)
+==============================================================================
+  k4 [0,1,2,5]: measS7=0.000000  M7+sumK=0.000000  |diff|=1.56e-17  (truncated |n|<=12)
+  k5 [0,1,2,3,7]: measS7=0.000000  M7+sumK=0.000000  |diff|=3.66e-17  (truncated |n|<=9)
+  k5 [0,2,3,5,8]: measS7=0.000000  M7+sumK=-0.000000  |diff|=1.60e-17  (truncated |n|<=9)
+  k4 [0,1,3,4]: measS7=0.000000  M7+sumK=-0.000000  |diff|=3.23e-17  (truncated |n|<=12)
+
+==============================================================================
+V5 -- RESONANCE w==0 mod 7: hunt for resonant config exceeding consec/cap
+==============================================================================
+  ref: meas(S7(consec_8))=481/1470=0.327211, cap_8=2243/5880=0.381463
+          [0,7,14,1,2,3,4,5] meas=0.121429  >consec?False  >cap?False
+          [0,1,2,3,4,5,6,49] meas=0.212634  >consec?False  >cap?False
+     [0,7,14,21,28,35,42,49] meas=0.327211  >consec?False  >cap?False
+          [0,7,1,8,2,9,3,10] meas=0.091100  >consec?False  >cap?False
+     [0,14,21,35,42,7,28,49] meas=0.327211  >consec?False  >cap?False
+       [0,1,7,8,14,15,21,22] meas=0.114579  >consec?False  >cap?False
+  resonant configs exceeding consec: NONE
+
+==============================================================================
+V6 -- HUNT counterexamples to meas(S7(E)) <= meas(S7(consec_k))
+==============================================================================
+  k=8, max_e=13: target consec=0.327211, beaters=0
+  k=9, max_e=12: target consec=0.416156, beaters=0
+  k=10, max_e=12: target consec=0.504478, beaters=0
+
+==============================================================================
+V6b -- k=12 same-k extremality of consec (T860 claims FALSE)
+==============================================================================
+  consec_12 meas = 121103/194040 = 0.624114
+  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12] meas = 11381/17640 = 0.645181
+  E beats consec? True   (T860: claims YES => '<=consec' is FALSE at k=12)
+  k=12 hunt max_e=13: beaters over consec = 1
+       BEATER E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) meas=0.645181 vs consec 0.624114, <=cap_12? True
+
+==============================================================================
+V7 -- HUNT counterexamples to meas(S7(E)) <= cap_k  (the CANONICAL target)
+==============================================================================
+  k=8 max_e=14: primitive shapes=3431, cap=0.381463, max meas=0.327211, OVER CAP=0
+  k=9 max_e=13: primitive shapes=1287, cap=0.494256, max meas=0.416156, OVER CAP=0
+  k=10 max_e=13: primitive shapes=715, cap=0.604396, max meas=0.504478, OVER CAP=0
+  k=11 max_e=13: primitive shapes=286, cap=0.725275, max meas=0.581463, OVER CAP=0
+  k=12 max_e=14: primitive shapes=364, cap=0.857143, max meas=0.645181, OVER CAP=0
+  k=13 max_e=15: primitive shapes=455, cap=1.000000, max meas=0.681916, OVER CAP=0
+
+==============================================================================
+V8 -- GAP AUDIT: absolute residual after support-6 floor vs delta_k
+==============================================================================

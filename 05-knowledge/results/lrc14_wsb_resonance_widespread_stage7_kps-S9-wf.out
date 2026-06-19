@@ -1,0 +1,63 @@
+consec_8 meas(S7)=481/1470=0.327211  cap_8=2243/5880=0.381463
+
+==============================================================================
+(A) WIDE-SPREAD primitive stress: near-resonant {0..6}+7m tails and structured wides
+==============================================================================
+  {0..6}+tail (the feared near-resonant family), sorted by meas(S7):
+    tail=  7: meas(S7)=0.327211  NOT < consec!
+    tail= 14: meas(S7)=0.232313  <consec OK
+    tail= 21: meas(S7)=0.217687  <consec OK
+    tail= 49: meas(S7)=0.212634  <consec OK
+    tail= 41: meas(S7)=0.210337  <consec OK
+    tail= 63: meas(S7)=0.207483  <consec OK
+    tail= 56: meas(S7)=0.205782  <consec OK
+    tail= 28: meas(S7)=0.205782  <consec OK
+    tail= 35: meas(S7)=0.204762  <consec OK
+    tail= 70: meas(S7)=0.199660  <consec OK
+    tail= 27: meas(S7)=0.193915  <consec OK
+    tail= 42: meas(S7)=0.192857  <consec OK
+
+  random primitive wide, spread up to 200 (asymptotic collapse):
+    spread[40,80): n=47 mean=0.0278 max=0.0752
+    spread[80,120): n=25 mean=0.0260 max=0.0339
+    spread[120,160): n=20 mean=0.0258 max=0.0415
+    spread[160,200): n=17 mean=0.0272 max=0.0511
+  global max over wide primitive bank: 0.07520 @ [0, 11, 21, 22, 24, 30, 33, 41] (<consec 0.3272)
+
+==============================================================================
+(B) BOUNDED-SPREAD finite check: exhaustive primitive k=8, meas(S7)<=consec AND <=cap_8
+==============================================================================
+  primitive maxE<=10: 120 sets; >consec:0; >cap_8:0; largest non-consec meas(S7)=0.273639 @ [0, 2, 3, 4, 5, 6, 7, 8]
+  primitive maxE<=12: 792 sets; >consec:0; >cap_8:0; largest non-consec meas(S7)=0.273639 @ [0, 2, 3, 4, 5, 6, 7, 8]
+  primitive maxE<=13: 1716 sets; >consec:0; >cap_8:0; largest non-consec meas(S7)=0.273639 @ [0, 2, 3, 4, 5, 6, 7, 8]
+  primitive maxE<=14: 3431 sets; >consec:0; >cap_8:0; largest non-consec meas(S7)=0.273639 @ [0, 2, 3, 4, 5, 6, 7, 8]
+  primitive maxE<=15: 6434 sets; >consec:0; >cap_8:0; largest non-consec meas(S7)=0.273639 @ [0, 2, 3, 4, 5, 6, 7, 8]
+
+==============================================================================
+(C) B*(k=8): smallest span S s.t. ALL primitive 8-sets of span>=S have meas(S7)<consec
+==============================================================================
+  span -> max meas(S7) over primitive 8-sets of that exact span (maxE):
+    span= 7: max meas(S7)=0.327211 =CONSEC  @ [0, 1, 2, 3, 4, 5, 6, 7]
+    span= 8: max meas(S7)=0.273639 <consec  @ [0, 2, 3, 4, 5, 6, 7, 8]
+    span= 9: max meas(S7)=0.237075 <consec  @ [0, 1, 3, 4, 5, 6, 7, 9]
+    span=10: max meas(S7)=0.220068 <consec  @ [0, 1, 2, 4, 5, 6, 7, 10]
+    span=11: max meas(S7)=0.209153 <consec  @ [0, 1, 2, 5, 6, 7, 10, 11]
+    span=12: max meas(S7)=0.255782 <consec  @ [0, 2, 4, 6, 7, 8, 10, 12]
+    span=13: max meas(S7)=0.237956 <consec  @ [0, 1, 3, 5, 7, 9, 11, 13]
+    span=14: max meas(S7)=0.232313 <consec  @ [0, 1, 2, 3, 4, 5, 6, 14]
+    span=15: max meas(S7)=0.226697 <consec  @ [0, 3, 5, 7, 9, 11, 13, 15]
+
+==============================================================================
+(D) tightest primitive competitors to consec (the binding finite-check shapes)
+==============================================================================
+  top-8 primitive non-consec meas(S7) (closest to consec, all must stay < cap_8):
+    meas(S7)=0.273639  margin-to-cap=0.107823  E=[0, 2, 3, 4, 5, 6, 7, 8]
+    meas(S7)=0.255782  margin-to-cap=0.125680  E=[0, 2, 4, 6, 7, 8, 10, 12]
+    meas(S7)=0.237956  margin-to-cap=0.143507  E=[0, 1, 3, 5, 7, 9, 11, 13]
+    meas(S7)=0.237075  margin-to-cap=0.144388  E=[0, 1, 3, 4, 5, 6, 7, 9]
+    meas(S7)=0.220068  margin-to-cap=0.161395  E=[0, 1, 2, 4, 5, 6, 7, 10]
+    meas(S7)=0.218707  margin-to-cap=0.162755  E=[0, 3, 4, 5, 6, 7, 8, 9]
+    meas(S7)=0.214796  margin-to-cap=0.166667  E=[0, 2, 4, 5, 6, 7, 8, 10]
+    meas(S7)=0.213322  margin-to-cap=0.168141  E=[0, 4, 5, 6, 7, 8, 9, 10]
+
+DONE stage 7.

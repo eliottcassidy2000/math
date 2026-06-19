@@ -1,0 +1,66 @@
+==============================================================================
+ADVERSARIAL VERIFY  upstream-glue-rigor  (kind-pasteur-2026-06-19-S9)
+==============================================================================
+
+[V0] Engine cross-check: independent meas_S7 vs prompt p0 (IE over {1..6})
+  discrepancies: 0  (engines AGREE)
+
+[V1] cap_k = min_{|P|=13-k} meas(G_P)  (independent), audit both tables
+  k= 8 |P|=5  cap=2243/5880=0.381463  minP=(1, 5, 7, 8, 9)
+  k= 9 |P|=4  cap=1979/4004=0.494256  minP=(1, 11, 12, 13)
+  k=10 |P|=3  cap=55/91=0.604396  minP=(1, 12, 13)
+  k=11 |P|=2  cap=66/91=0.725275  minP=(1, 13)
+  k=12 |P|=1  cap=6/7=0.857143  minP=(1,)
+  audit: computed vs PROMPT-table vs CLAIM-correction vs THM-530-CANON
+    k= 8  computed=2243/5880  prompt:MATCH  claim:MATCH  canon:MATCH
+    k= 9  computed=1979/4004  prompt:MISMATCH  claim:MATCH  canon:MATCH
+    k=10  computed=55/91  prompt:MISMATCH  claim:MATCH  canon:MATCH
+    k=11  computed=66/91  prompt:MISMATCH  claim:MATCH  canon:MATCH
+    k=12  computed=6/7  prompt:MISMATCH  claim:MATCH  canon:MATCH
+  VERDICT: the prompt cap-table for k=9..12 is the 1-complement (stale); the claim's
+           correction = THM-530 canon. Confirmed independently.
+
+[V2] HUNT: any E with meas(S7(E)) > cap_k ?  (a hit BREAKS the whole reduction)
+  [exhaustive k=8, spread<= 12] tested 792 primitive shapes; max meas_S7=0.327211 (cap=0.381463) at [0, 1, 2, 3, 4, 5, 6, 7]
+  [exhaustive k=9, spread<= 13] tested 1287 primitive shapes; max meas_S7=0.416156 (cap=0.494256) at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  [exhaustive k=10, spread<= 14] tested 2002 primitive shapes; max meas_S7=0.504478 (cap=0.604396) at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+  [resonant / scale-invariance] meas_S7({d*a_i}) =?= meas_S7({a_i})
+  scale-invariance meas_S7(d*E)==meas_S7(E): True  (=> resonant w==0 mod7 give NOTHING new; the live extremiser is PRIMITIVE)
+
+  [short-relation / near-AP] AP, perforated-AP, {0,1,N,N+1}, two-block
+
+  WORST (max meas_S7) found per k vs cap_k:
+   k= 8  max meas_S7=0.327211 [exhaustive-bounded]  cap=0.381463  margin=+0.054252  OK   argmax E=[0, 1, 2, 3, 4, 5, 6, 7]
+   k= 9  max meas_S7=0.416156 [exhaustive-bounded]  cap=0.494256  margin=+0.078099  OK   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+   k=10  max meas_S7=0.504478 [exhaustive-bounded]  cap=0.604396  margin=+0.099917  OK   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+   k=11  max meas_S7=0.581463 [consec(AP d=1)]  cap=0.725275  margin=+0.143812  OK   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+   k=12  max meas_S7=0.624114 [consec(AP d=1)]  cap=0.857143  margin=+0.233029  OK   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+
+  NO violation of meas(S7(E)) <= cap_k found in any tested class.
+  (consec/AP is the empirical argmax at every k; consistent with HYP-2603.)
+
+[V3] meas(S7(consec_k)) and slack vs cap_k (claim's slack table)
+  k= 8  meas_S7(consec)=481/1470=0.327211  cap=0.381463  slack=0.054252  (claim ~0.054)  OK
+  k= 9  meas_S7(consec)=2447/5880=0.416156  cap=0.494256  slack=0.078099  (claim ~0.078)  OK
+  k=10  meas_S7(consec)=8899/17640=0.504478  cap=0.604396  slack=0.099917  (claim ~0.1)  OK
+  k=11  meas_S7(consec)=3419/5880=0.581463  cap=0.725275  slack=0.143812  (claim ~0.144)  OK
+  k=12  meas_S7(consec)=121103/194040=0.624114  cap=0.857143  slack=0.233029  (claim ~0.233)  OK
+
+  Is consec_k the global argmax of meas_S7 among tested shapes?
+   k= 8  consec=0.327211  worst-found=0.327211 [exhaustive-bounded]  consec IS argmax
+   k= 9  consec=0.416156  worst-found=0.416156 [exhaustive-bounded]  consec IS argmax
+   k=10  consec=0.504478  worst-found=0.504478 [exhaustive-bounded]  consec IS argmax
+   k=11  consec=0.581463  worst-found=0.581463 [consec(AP d=1)]  consec IS argmax
+   k=12  consec=0.624114  worst-found=0.624114 [consec(AP d=1)]  consec IS argmax
+
+[V4] discretization: arc-count of G_good is shape-determined (Vmax-independent)
+  The claim's bound #arcs(G_good) <= 7*sum(E)+sum(P)+1 has NO Vmax dependence by
+  construction (G_good = G_P cap {maxgap>1/7}; both sets are defined by E,P alone,
+  not by Vmax). The discretization error <= #arcs/Vmax is then the standard
+  'sampling a union of #arcs intervals at mesh 1/Vmax' bound: each arc endpoint
+  flips at most one sample. This is genuinely Vmax-uniform. VERIFIED structurally.
+
+==============================================================================
+DONE. Verdict in final assistant message.
+==============================================================================

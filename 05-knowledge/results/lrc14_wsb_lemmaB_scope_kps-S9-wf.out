@@ -1,0 +1,11 @@
+SELF-SKEPTICAL SCOPE CHECK of LEMMA B (consec maximizes meas(S7) among primitive same-k):
+  k=8  (binding): primitive maxE<=15 (6434 sets) + wide to spread 200: 0 beaters  -> HOLDS
+  k=9  (binding): primitive maxE<=12 (495 sets): 0 beaters                         -> HOLDS
+  k=10 (binding): primitive maxE<=13 (715 sets): 0 beaters, 0 over cap_10          -> HOLDS
+  k=11 (NON-binding): primitive maxE<=14 (1001 sets): 0 beaters                    -> holds here too
+  k=12 (NON-binding): primitive maxE<=15 (1365 sets): 4 BEATERS,
+        WORST [0,1,2,3,4,5,6,7,8,9,10,12] meas(S7)=0.645181 > consec 0.624114      -> FAILS (harmless)
+CONCLUSION: Lemma B is a BINDING-ROW statement. It holds at exactly the rows that matter
+(k=8,9,10, the only genuinely-tight rows per THM-535) and fails at non-binding k=12, consistent
+with HYP-2604's documented AP-non-extremality at large k. The k=12 beaters are far below
+cap_12=6/7~0.857, so the failure does not threaten LRC(14).

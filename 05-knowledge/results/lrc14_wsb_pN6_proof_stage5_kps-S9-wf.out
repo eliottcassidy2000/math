@@ -27,3 +27,6 @@ LEMMA-CANDIDATE B: consec maximizes meas(S7) over same-k?  -- where does it FIRS
   k=8  meas(S7)(consec)=481/1470=0.327211
   maxE<=12: 792 sets, meas(S7)>consec: 0
   maxE<=14: 3432 sets, meas(S7)>consec: 0
+  maxE<=16: 11440 sets, meas(S7)>consec: 0
+
+DONE stage 5.

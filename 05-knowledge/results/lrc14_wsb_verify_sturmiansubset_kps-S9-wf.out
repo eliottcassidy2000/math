@@ -1,0 +1,125 @@
+======================================================================
+(1) ENGINE EQUIVALENCE: IE vs direct vs Sturmian, on AP_m for m up to 22
+======================================================================
+  m= 1: direct=               0  ie==direct:True  sturm==direct:True
+  m= 2: direct=               0  ie==direct:True  sturm==direct:True
+  m= 3: direct=               0  ie==direct:True  sturm==direct:True
+  m= 4: direct=               0  ie==direct:True  sturm==direct:True
+  m= 5: direct=               0  ie==direct:True  sturm==direct:True
+  m= 6: direct=               0  ie==direct:True  sturm==direct:True
+  m= 7: direct=          31/210  ie==direct:True  sturm==direct:True
+  m= 8: direct=        481/1470  ie==direct:True  sturm==direct:True
+  m= 9: direct=       2447/5880  ie==direct:True  sturm==direct:True
+  m=10: direct=      8899/17640  ie==direct:True  sturm==direct:True
+  m=11: direct=       3419/5880  ie==direct:True  sturm==direct:True
+  m=12: direct=   121103/194040  ie==direct:True  sturm==direct:True
+  m=13: direct=     14573/21560  ie==direct:True  sturm==direct:True
+  m=14: direct=     14109/20020  ie==direct:True  sturm==direct:True
+  m=15: direct=     61211/84084  (IE skipped)      sturm==direct:True
+  m=16: direct=     62767/84084  (IE skipped)      sturm==direct:True
+  m=17: direct=      8201/10780  (IE skipped)      sturm==direct:True
+  m=18: direct= 2018207/2598960  (IE skipped)      sturm==direct:True
+  m=19: direct= 6166843/7796880  (IE skipped)      sturm==direct:True
+  m=20: direct=   261547/325584  (IE skipped)      sturm==direct:True
+  m=21: direct=     20949/25840  (IE skipped)      sturm==direct:True
+  m=22: direct=       6155/7497  (IE skipped)      sturm==direct:True
+
+  All engines agree (m<=22): True
+
+======================================================================
+(2) MONOTONICITY a(m)<=a(m+1), and a(m)=0 for m<=6
+======================================================================
+  monotone non-decreasing (m<=22): True
+  a(m)=0 for m<=6: True
+
+======================================================================
+(4) CLAIMED a(m) EXACT VALUES m=7..16
+======================================================================
+  a(7): computed=          31/210  claimed=          31/210  match:True  ~0.1476
+  a(8): computed=        481/1470  claimed=        481/1470  match:True  ~0.3272
+  a(9): computed=       2447/5880  claimed=       2447/5880  match:True  ~0.4162
+  a(10): computed=      8899/17640  claimed=      8899/17640  match:True  ~0.5045
+  a(11): computed=       3419/5880  claimed=       3419/5880  match:True  ~0.5815
+  a(12): computed=   121103/194040  claimed=   121103/194040  match:True  ~0.6241
+  a(13): computed=     14573/21560  claimed=     14573/21560  match:True  ~0.6759
+  a(14): computed=     14109/20020  claimed=     14109/20020  match:True  ~0.7047
+  a(15): computed=     61211/84084  claimed=     61211/84084  match:True  ~0.7280
+  a(16): computed=     62767/84084  claimed=     62767/84084  match:True  ~0.7465
+  all claimed a(m) match: True
+
+======================================================================
+(6) CAP FLOOR cap_k >= (k-6)/7  (proved THM-535)
+======================================================================
+  k=8: cap=   2243/5880 (~0.3815)  floor=  2/7 (~0.2857)  cap>=floor:True
+  k=9: cap=   1979/4004 (~0.4943)  floor=  3/7 (~0.4286)  cap>=floor:True
+  k=10: cap=       55/91 (~0.6044)  floor=  4/7 (~0.5714)  cap>=floor:True
+  k=11: cap=       66/91 (~0.7253)  floor=  5/7 (~0.7143)  cap>=floor:True
+  k=12: cap=         6/7 (~0.8571)  floor=  6/7 (~0.8571)  cap>=floor:True
+  k=13: cap=           1 (~1.0000)  floor=    1 (~1.0000)  cap>=floor:True
+  all caps respect floor: True
+  Garbled dispatch check:
+    k=9: dispatch=2025/4004 (~0.5057)  floor=  3/7  violates_floor:False
+    k=10: dispatch=    36/91 (~0.3956)  floor=  4/7  violates_floor:True
+    k=11: dispatch=    25/91 (~0.2747)  floor=  5/7  violates_floor:True
+
+======================================================================
+(5) N*(k) = max{N : a(N+1) <= cap_k}   (claim 7,8,10,13,21,21; THM-536 says ...,20,20)
+======================================================================
+  k=8: cap=0.3815  N*=7  (a(N*+1)=0.3272 <= cap, a(N*+2)=0.416156462585034)
+  k=9: cap=0.4943  N*=8  (a(N*+1)=0.4162 <= cap, a(N*+2)=0.5044784580498867)
+  k=10: cap=0.6044  N*=10  (a(N*+1)=0.5815 <= cap, a(N*+2)=0.6241135848278705)
+  k=11: cap=0.7253  N*=13  (a(N*+1)=0.7047 <= cap, a(N*+2)=0.7279744065458351)
+  k=12: cap=0.8571  N*=21  (a(N*+1)=0.8210 <= cap, a(N*+2)=NA)
+  k=13: cap=1.0000  N*=21  (a(N*+1)=0.8210 <= cap, a(N*+2)=NA)
+
+======================================================================
+(3) INCLUSION MONOTONICITY  E subset F => meas(S7(E)) <= meas(S7(F))
+======================================================================
+  checked 448 (E=F\{x}) pairs over subsets of {0..7}
+  inclusion monotonicity holds: True
+
+======================================================================
+(7) L_y(consec_k) <= cap_k all k  +  consec maximizes L_y spot check
+======================================================================
+  k=8: L_y(consec)=       2633/7350 (~0.3582)  cap~0.3815  L_y<=cap:True
+  k=9: L_y(consec)=     26083/52920 (~0.4929)  cap~0.4943  L_y<=cap:True
+  k=10: L_y(consec)=     45253/79380 (~0.5701)  cap~0.6044  L_y<=cap:True
+  k=11: L_y(consec)=     12049/17640 (~0.6830)  cap~0.7253  L_y<=cap:True
+  k=12: L_y(consec)=   118781/166320 (~0.7142)  cap~0.8571  L_y<=cap:True
+  k=13: L_y(consec)=  871879/1164240 (~0.7489)  cap~1.0000  L_y<=cap:True
+  L_y(consec_k)<=cap_k all k: True
+
+======================================================================
+(8) COUNTEREXAMPLE HUNT: meas(S7(E)) <= cap_k  (the ACTUAL target)
+======================================================================
+  (8a) exhaustive bounded-spread...
+    k=8 span<=15: 6434 primitive sets, max meas=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7), cap=0.38146, over_cap=0
+    k=9 span<=14: 3003 primitive sets, max meas=0.41616 at (0, 1, 2, 3, 4, 5, 6, 7, 8), cap=0.49426, over_cap=0
+    k=10 span<=13: 715 primitive sets, max meas=0.50448 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), cap=0.60440, over_cap=0
+  (8b) resonant w==0 mod 7 families...
+    k=8: max resonant meas=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7), cap=0.38146
+    k=9: max resonant meas=0.37211 at (0, 1, 2, 3, 4, 5, 6, 7, 21), cap=0.49426
+    k=10: max resonant meas=0.46122 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 35), cap=0.60440
+  (8c) short-relation {0,1,N,N+1,...} shapes...
+    k=8: max short-rel meas=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7), cap=0.38146
+    k=9: max short-rel meas=0.41616 at (0, 1, 2, 3, 4, 5, 6, 7, 8), cap=0.49426
+  (8d) random wide-spread (span up to ~120)...
+    k=8: max wide meas=0.05557 at (0, 16, 22, 32, 33, 66, 84, 90), cap=0.38146
+    k=9: max wide meas=0.11473 at (0, 13, 17, 32, 43, 47, 48, 51, 63), cap=0.49426
+    k=10: max wide meas=0.19853 at (0, 4, 8, 21, 25, 68, 72, 76, 80, 105), cap=0.60440
+    k=11: max wide meas=0.24540 at (0, 1, 29, 40, 49, 59, 64, 69, 75, 79, 109), cap=0.72527
+    k=12: max wide meas=0.31853 at (0, 10, 20, 25, 30, 50, 72, 75, 85, 91, 98, 106), cap=0.85714
+
+  TOTAL over-cap witnesses found: 0
+
+======================================================================
+SUMMARY FLAGS
+======================================================================
+  engines_equiv(m<=22)      : True
+  monotone a(m)             : True
+  a(m)=0 for m<=6           : True
+  claimed a(m) values match : True
+  cap floor respected       : True
+  inclusion monotone        : True
+  L_y(consec)<=cap          : True
+  over-cap counterexamples  : 0
