@@ -1,0 +1,7 @@
+=== k=8 exhaustive primitive sets, 0 in E, |E|=8, max<=14 ===
+consec L_y = 2633/7350 = 0.358231  (cap=0.381500)  consec<cap? True
+primitive sets checked: 3431
+global best L_y = 2633/7350 = 0.358231  at E=[0, 1, 2, 3, 4, 5, 6, 7]
+best == consec? True
+ties with best (besides consec): []  count=0
+any set with L_y >= cap? 0 -> []

@@ -1,0 +1,11 @@
+k=8: L_y(consec)=0.358231  cap=0.3815  margin=0.023269
+k=9: L_y(consec)=0.492876  cap=0.49426  margin=0.001384
+k=10: L_y(consec)=0.570081  cap=0.6044  margin=0.034319
+
+=== WIDE-STRUCTURED hunt (primitive, every elt in a height-2 relation, large spread) ===
+k=8: wide-structured max L_y found = 0.176731 (set [0, 1, 2, 3, 4, 19, 20, 21]), cap=0.3815, margin-to-cap=0.204769, vs consec 0.358231
+k=9: wide-structured max L_y found = 0.353129 (set [0, 3, 6, 8, 9, 11, 12, 14, 17]), cap=0.49426, margin-to-cap=0.141131, vs consec 0.492876
+
+=== single-outlier configs (consec_{k-1} + one far point) — the high wide-set ceiling ===
+k=8: max single-outlier L_y=0.257041 (set [0, 1, 2, 3, 4, 5, 6, 14]), cap=0.3815, margin=0.124459
+k=9: max single-outlier L_y=0.487289 (set [0, 1, 2, 3, 4, 5, 6, 7, 9]), cap=0.49426, margin=0.006971

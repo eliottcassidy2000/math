@@ -1,0 +1,17 @@
+=== LRC(14) Angle B: dissociation closure schema ===
+
+Step 1 -- fully-independent limit  L_inf = sum_r y_r C(6,r)(1-r/7)^(k-1):
+  k=8: L_inf = 40573/823543 = 0.049266   cap = 0.38150   margin = 0.332234
+  k=9: L_inf = 2616535/17294403 = 0.151294   cap = 0.49426   margin = 0.342966
+  k=10: L_inf = 8830611/40353607 = 0.218831   cap = 0.60440   margin = 0.385569
+
+Step 2 -- L_y error budget (need per-A error eps below this for dissociated branch):
+  k=8: slack=0.33223  sum|y_r|C(6,r)(r>=1)=48.000  => eps < 0.00692
+        peel gives eps <= r*14*sum(E')/(6 w); for r<=6, sum(E')~S, need w > 12136*S/?  (separation grows ~S/eps)
+  k=9: slack=0.34297  sum|y_r|C(6,r)(r>=1)=14.333  => eps < 0.02393
+        peel gives eps <= r*14*sum(E')/(6 w); for r<=6, sum(E')~S, need w > 3511*S/?  (separation grows ~S/eps)
+  k=10: slack=0.38557  sum|y_r|C(6,r)(r>=1)=14.333  => eps < 0.02690
+        peel gives eps <= r*14*sum(E')/(6 w); for r<=6, sum(E')~S, need w > 3123*S/?  (separation grows ~S/eps)
+
+Fourier coeff bound used: |c_m(A)| <= r|sin(pi m/7)|/(pi|m|), c_m=0 if 7|m. Per-m magnitudes (single sector):
+   [0.13811, 0.12443, 0.10344, 0.07758, 0.04977, 0.02302, 0.0]

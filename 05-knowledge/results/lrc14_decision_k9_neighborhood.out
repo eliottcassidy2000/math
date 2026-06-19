@@ -1,0 +1,16 @@
+consec L_y = 26083/52920 = 0.492876; cap ~ 0.49426; margin=0.001384
+consec p = [0.416156462585034, 0.22210884353741497, 0.1377551020408163, 0.09387755102040816, 0.0663265306122449, 0.04591836734693878, 0.017857142857142856]
+
+scanned 3003 primitive 9-sets, max<=14
+beats consec: 0  exact ties: 1
+ties (should be only dilations/none): [[0, 1, 2, 3, 4, 5, 6, 7, 8]]
+
+closest 8 competitors to consec (smallest L_y gap), with cap margin:
+  gap-to-consec=0.005587  L_y=0.487289  cap-margin=0.006971  E=[0, 1, 2, 3, 4, 5, 6, 7, 9]
+  gap-to-consec=0.010412  L_y=0.482464  cap-margin=0.011796  E=[0, 2, 4, 6, 7, 8, 10, 12, 14]
+  gap-to-consec=0.023526  L_y=0.469350  cap-margin=0.024910  E=[0, 1, 2, 3, 4, 5, 6, 7, 10]
+  gap-to-consec=0.033655  L_y=0.459221  cap-margin=0.035039  E=[0, 2, 4, 5, 6, 8, 10, 12, 14]
+  gap-to-consec=0.035865  L_y=0.457011  cap-margin=0.037249  E=[0, 1, 2, 3, 4, 5, 6, 7, 12]
+  gap-to-consec=0.036716  L_y=0.456160  cap-margin=0.038100  E=[0, 2, 3, 4, 6, 8, 10, 12, 14]
+  gap-to-consec=0.043547  L_y=0.449329  cap-margin=0.044931  E=[0, 2, 3, 4, 5, 6, 7, 8, 10]
+  gap-to-consec=0.044633  L_y=0.448243  cap-margin=0.046017  E=[0, 2, 4, 5, 6, 7, 8, 10, 12]

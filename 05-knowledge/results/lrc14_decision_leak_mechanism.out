@@ -1,0 +1,9 @@
+g(t) = ['1', '5/18', '0', '0', '1/9', '1/6', '0']
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_decision_leak_mechanism.py", line 28, in <module>
+    print(f"{'t':>2} {'p_consec':>12} {'p_comp':>12} {'\u0394p=comp-cons':>14} {'g(t)':>8} {'g·\u0394p':>14}")
+    ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\encodings\cp1252.py", line 19, in encode
+    return codecs.charmap_encode(input,self.errors,encoding_table)[0]
+           ~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+UnicodeEncodeError: 'charmap' codec can't encode character '\u0394' in position 31: character maps to <undefined>

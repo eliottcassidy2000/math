@@ -1,0 +1,14 @@
+=== (a) propagation budget constants sum_{r>=1}|y_r| C(6,r) ===
+k=8: sum|y_r|C(6,r) (r>=1) = 48 = 48.0000
+      L_inf=0.049266 cap=0.3815 slack=0.332234  per-A eps budget=0.006922
+k=9: sum|y_r|C(6,r) (r>=1) = 43/3 = 14.3333
+      L_inf=0.151294 cap=0.49426 slack=0.342966  per-A eps budget=0.023928
+k=10: sum|y_r|C(6,r) (r>=1) = 43/3 = 14.3333
+      L_inf=0.218831 cap=0.6044 slack=0.385569  per-A eps budget=0.026900
+
+Claim states constants 48, 14.33, 14.33 and budgets 0.00692,0.0239,0.0269.
+
+=== (b) WIDE primitive-set hunt (k=8, spread>16), maximize L_y ===
+wide primitive sets tested: 4012
+max L_y over wide sets = 787/3400 = 0.231471  at E=[0, 1, 2, 3, 4, 5, 6, 17]
+claimed wide ceiling ~0.179; cap=0.3815; margin to cap = 0.1500

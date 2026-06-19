@@ -1,0 +1,21 @@
+=== (1) consec distributions ===
+k=8: p = ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+   matches claimed: True  ; sum=1 ; p0=481/1470=0.327211
+k=9: p = ['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+   matches claimed: True  ; sum=1 ; p0=2447/5880=0.416156
+k=10: p = ['8899/17640', '551/2940', '127/1176', '145/1764', '55/882', '5/126', '1/63']
+   matches claimed: True  ; sum=1 ; p0=8899/17640=0.504478
+
+=== (2) dilated AP {0,2,...,2(k-1)} identical to consec ===
+k=8: identical = True
+k=9: identical = True
+k=10: identical = True
+
+=== (4) maxgap<1/7 => N=0, and meas{maxgap<1/7} ===
+k=8: meas(maxgap<1/7)=44/735=0.059864  claimed 44/735=0.059864  match=True  <=p0? True
+k=9: meas(maxgap<1/7)=47/294=0.159864  claimed 47/294=0.159864  match=True  <=p0? True
+k=10: meas(maxgap<1/7)=11/49=0.224490  claimed 11/49=0.224490  match=True  <=p0? True
+
+=== (3) consec uniquely maximizes p_0 over bounded-spread (k=8, spread<=11) ===
+k=8 spread<=11: tested 330 sets (gcd=1), beat=0, tie=0
+   tie sets (should be only AP class {0,d,2d,...}): []

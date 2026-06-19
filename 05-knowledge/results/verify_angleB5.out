@@ -1,0 +1,27 @@
+E=[0, 1, 2, 3, 4, 5, 6, 17]: L_y=787/3400=0.231471 spread=17
+
+consec-7 + one outlier (0..6, then d):
+  d=8: L_y=0.237381 spread=8
+  d=9: L_y=0.214286 spread=9
+  d=10: L_y=0.214762 spread=10
+  d=11: L_y=0.186861 spread=11
+  d=12: L_y=0.226429 spread=12
+  d=13: L_y=0.208718 spread=13
+  d=14: L_y=0.257041 spread=14
+  d=15: L_y=0.214524 spread=15
+  d=16: L_y=0.219643 spread=16
+  d=17: L_y=0.231471 spread=17
+  d=18: L_y=0.215952 spread=18
+  d=19: L_y=0.204110 spread=19
+  d=20: L_y=0.211190 spread=20
+  d=21: L_y=0.237041 spread=21
+  d=22: L_y=0.218658 spread=22
+  d=23: L_y=0.207992 spread=23
+  d=24: L_y=0.201786 spread=24
+  d=25: L_y=0.218762 spread=25
+  best over d in 8..40: d=14 L_y=0.257041
+
+consec-6 (0..5) + two outliers:
+  best: (6, 7) L_y=0.358231
+
+cap_8=0.3815.  Any wide config above approaches but stays under? max found = 0.358231
