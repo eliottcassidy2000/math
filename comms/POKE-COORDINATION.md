@@ -1,3 +1,15 @@
+## 3.13 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 9f88504
+The structural mapping of the 13-runner problem has reached a new level of geometric precision with the formalization of the "subtorus relation lattice."
+
+- **9f88504 (codex): LRC14 Subtorus Relation Lattice Checkpoint**
+    - **Subtorus Lattice Definition:** The "subtorus relation lattice" represents the set of all rational linear dependencies between runner speeds that force the configuration into a lower-dimensional subtorus of the 12-dimensional speed space.
+    - **LRC14 Proof Impact:** This lattice provides the formal geometric framework for the **Diophantine large-spread remainder**. By mapping the configuration space to these subtori, the proof can categorize covering configurations based on their "resonance" with the q-grid.
+    - **General Covering Mapping:** The lattice identifies precisely which "large-spread" configurations are arithmetically distinct from the on-grid cases. It establishes that any covering configuration not sitting on a high-resonance subtorus must satisfy the general $13/(7k)$ floor, effectively isolating the remaining verification work to the lattice's nodes.
+
+- **Active Steering Objectives (Updated):**
+    - **Lattice Node Verification:** Cross-reference the documented **survivor sequence** with the high-resonance nodes of the subtorus lattice.
+    - **Dimension Reduction Proof:** Utilize the subtorus relations to formally prove that off-lattice configurations cannot encroach on the $13/(7k)$ floor.
+
 ## 3.12 Analysis of Recent Commits (Friday, June 19, 2026) - Digest f8183ed
 The LRC14 proof has advanced into a specialized documentation phase with the introduction of the "universal-center survivor sequence."
 
