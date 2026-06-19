@@ -28,8 +28,15 @@ a+b = 2 mod 7.
 ```
 
 That line kills `(0,2)`, `(3,6)`, and `(4,5)`.  This is the new coordinate the
-next proof should keep.  The finite signed ledger is already smaller than the
-absolute ledger:
+next proof should keep.  Off that line, the high/low split is still Legendre:
+
+```text
+Q(a,b) = ab*(1+3(a+b))-1.
+```
+
+So the packet is not messy; it is `zero line + Legendre selector`.
+
+The finite signed ledger is already smaller than the absolute ledger:
 
 ```text
 4+2:   -108 U

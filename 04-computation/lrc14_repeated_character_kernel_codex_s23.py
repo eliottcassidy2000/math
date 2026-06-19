@@ -128,6 +128,11 @@ def signature(a: int, b: int) -> tuple[int, int, int, int, int, int]:
     )
 
 
+def affine_selector(a: int, b: int) -> int:
+    """Legendre selector for the 4+1+1 high/low split off the zero lane."""
+    return (a * b * (1 + 3 * ((a + b) % MOD)) - 1) % MOD
+
+
 def status_for(cls: tuple[int, ...], row_lookup: dict[tuple[int, ...], s14.FiberStats], hit_h2: set[tuple[int, ...]]) -> str:
     row = row_lookup[cls]
     if row.signed_abs <= 1e-12:
@@ -226,7 +231,8 @@ def four_one_one_report(
         "actually 4+1+1."
     )
     print(
-        f"{'pair':>7} {'S_9/U':>7} {'status':>12} {'chi(a),chi(b),chi(ab),chi((a-1)(b-1)),chi(a-b),a+b':>62}"
+        f"{'pair':>7} {'S_9/U':>7} {'status':>12} {'chi(Q)':>7} "
+        f"{'chi(a),chi(b),chi(ab),chi((a-1)(b-1)),chi(a-b),a+b':>62}"
     )
     packets: dict[tuple[int, int], int] = {}
     by_value: Counter[int] = Counter()
@@ -239,8 +245,10 @@ def four_one_one_report(
         packets[(a, b)] = n
         by_value[n] += 1
         by_line[(a + b) % MOD].append((a, b, n))
+        selector_chi = chi7(affine_selector(a, b))
         print(
             f"{str((a,b)):>7} {n:>7} {status_for(cls, row_lookup, hit_h2):>12} "
+            f"{selector_chi:>7} "
             f"{str(signature(a,b)):>62}"
         )
 
@@ -266,6 +274,22 @@ def four_one_one_report(
         vals = sorted({n for _a, _b, n in items})
         if len(vals) > 1:
             print(f"  {short}: {items}")
+
+    high_failures = []
+    low_failures = []
+    for (a, b), n in packets.items():
+        if (a + b) % MOD == 2:
+            continue
+        selector_chi = chi7(affine_selector(a, b))
+        if n == 8 and selector_chi != 1:
+            high_failures.append((a, b, selector_chi))
+        if n == 1 and selector_chi != -1:
+            low_failures.append((a, b, selector_chi))
+    print("\nLegendre selector after removing the zero lane:")
+    print("  Q(a,b) = ab*(1+3(a+b))-1 mod 7")
+    print("  S_9/U = 8 iff chi_7(Q)=+1; S_9/U = 1 iff chi_7(Q)=-1")
+    print(f"  high selector failures: {high_failures}")
+    print(f"  low selector failures: {low_failures}")
 
     return packets
 

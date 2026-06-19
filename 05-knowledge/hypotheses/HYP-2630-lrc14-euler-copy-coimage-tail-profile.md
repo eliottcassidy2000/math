@@ -180,6 +180,14 @@ additional hidden coordinate is the affine zero lane
 a+b = 2 mod 7.
 ```
 
+Off that zero lane, HYP-2632 finds another Legendre selector:
+
+```text
+Q(a,b)=ab*(1+3(a+b))-1,
+S/U=8 iff chi_7(Q)=+1,
+S/U=1 iff chi_7(Q)=-1.
+```
+
 The repeated-kernel signed ledger is `-108U` from `4+2` and `+54U` from
 `4+1+1`, so the next analytic estimate should exploit this signed table
 directly instead of applying an absolute bound to the `162U` packet mass.

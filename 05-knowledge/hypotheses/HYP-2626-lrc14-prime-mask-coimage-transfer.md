@@ -220,6 +220,14 @@ finite kernel has a hidden affine zero lane:
 (0,2), (3,6), (4,5)  <=>  a+b=2 mod 7  <=>  S_9=0.
 ```
 
+Off that lane, the remaining high/low split is controlled by
+
+```text
+Q(a,b)=ab*(1+3(a+b))-1,
+S/U=8 iff chi_7(Q)=+1,
+S/U=1 iff chi_7(Q)=-1.
+```
+
 So the repeated-root cotangent/Dedekind theorem should use a `chi_7` plus
 affine-line packet table, not just the four multiplicative characters.
 

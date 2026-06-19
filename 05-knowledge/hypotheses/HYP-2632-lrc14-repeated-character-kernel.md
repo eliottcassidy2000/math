@@ -70,8 +70,21 @@ collisions force this extra coordinate:
 ( 1,-1,-1,-1): (2,6)->U, (4,5)->0
 ```
 
-So the two-large theorem must retain both the `chi_7` phase and the affine
-singleton-pair lane.
+Off this zero lane, the high/low split is again Legendre.  Define
+
+```text
+Q(a,b) = ab*(1+3(a+b))-1 mod 7.
+```
+
+Then, for unordered `a,b in {0,2,3,4,5,6}` with `a+b != 2`,
+
+```text
+S_9/U = 8  iff  chi_7(Q(a,b)) = +1,
+S_9/U = 1  iff  chi_7(Q(a,b)) = -1.
+```
+
+So the two-large theorem must retain the `chi_7` phase, the affine zero lane,
+and this secondary Legendre selector.
 
 ## Computation
 
@@ -114,22 +127,22 @@ a  chi(a)  S_9/U  status
 The `4+1+1` table over unordered pairs in `{0,2,3,4,5,6}` is:
 
 ```text
-pair    S_9/U
-(0,2)      0
-(0,3)      1
-(0,4)      1
-(0,5)      1
-(0,6)      1
-(2,3)      8
-(2,4)      8
-(2,5)      8
-(2,6)      1
-(3,4)      8
-(3,5)      1
-(3,6)      0
-(4,5)      0
-(4,6)      8
-(5,6)      8
+pair    S_9/U  chi_7(Q)
+(0,2)      0      -1
+(0,3)      1      -1
+(0,4)      1      -1
+(0,5)      1      -1
+(0,6)      1      -1
+(2,3)      8      +1
+(2,4)      8      +1
+(2,5)      8      +1
+(2,6)      1      -1
+(3,4)      8      +1
+(3,5)      1      -1
+(3,6)      0      -1
+(4,5)      0      -1
+(4,6)      8      +1
+(5,6)      8      +1
 ```
 
 Signed repeated-tail ledger:
@@ -156,14 +169,15 @@ The new theorem-shaped target is:
 ```text
 height-2 wall deletion
 -> finite additive-Fourier kernel
--> chi_7 + affine-line packet table
+-> chi_7 + affine zero lane + Legendre selector Q(a,b)
 -> two-large reciprocal hyperplane sum.
 ```
 
 The analytic estimate should be a cotangent/Dedekind or summation-by-parts
 bound for the two-large reciprocal hyperplane sums weighted by the signed
 integer table above.  A proof that only uses the HYP-2630 four-character
-signature is too coarse, because it misses the affine zero lane `a+b=2`.
+signature is too coarse, because it misses the affine zero lane `a+b=2` and
+the selector `Q(a,b)=ab*(1+3(a+b))-1`.
 
 ## Tournament Analysis
 
