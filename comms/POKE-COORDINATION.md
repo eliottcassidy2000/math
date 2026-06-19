@@ -44,9 +44,9 @@ then scalarize.
 
 The HYP-2635 pull-in named the next live lead: the dissociated-stranger dichotomy fails because many wide primitive sets have every nonzero element in a small relation. HYP-2637 (script `lrc14_relation_fiber_gap_codex_s26.py`) turns that into a concrete replacement object, complementary to HYP-2636's two-large block-frequency side channel.
 
-- **HYP-2637 / T885:** bounded weighted summand fibres `c -> sum c_i e_i` replace ordinary pair sums as the relation-density observable. The two HYP-2635 wide examples have full height-2 nonzero-vertex coverage (`7/7` each; weighted collision fibres `73` and `68`), while a dissociated powers row has no weighted collisions (`0/7`). This supports the split:
+- **HYP-2637 / T885:** bounded weighted summand fibres `c -> sum c_i e_i` replace ordinary pair sums as the relation-density observable. The two HYP-2635 wide examples have full height-2 nonzero-vertex coverage (`7/7` each; weighted collision fibres `73` and `68`) and relation-matrix nullity `1`, while a dissociated powers row has no weighted collisions (`0/7`) and nullity `7`. This supports the split:
     - uncovered element -> peel / independent limit;
-    - full bounded coverage -> high additive energy -> Freiman/GAP pocket -> AP-invariance/dimension bound.
+    - full bounded coverage plus small nullity -> high additive energy -> Freiman/GAP pocket -> AP-invariance/dimension bound.
 - **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: `sign(residue coefficient) * (-1)^(# negative coefficients)`. This is the even/odd to positive/negative bridge requested in the current prompt.
 - **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as `2*16+3=35` and `4+12+15=31`.
 

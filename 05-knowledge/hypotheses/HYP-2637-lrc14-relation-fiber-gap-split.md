@@ -74,17 +74,18 @@ The script compares ordinary pair-sum energy with weighted summand-fiber energy
 on the two HYP-2635 no-dissociated-stranger examples.
 
 ```text
-case              span  pair_E  pair_col  wt_E  wt_colfib  maxfib  h2_cover
-kp_example_A        35      40         6   913         73       7      7/7
-kp_example_B        31      34         3  1075         68       7      7/7
-consecutive_8        7      72        22  4177         23      22      7/7
-dissociated_powers15625     28         0   273          0       1      0/7
+case              span  pair_E  pair_col  wt_E  wt_colfib  maxfib  h2_cover  rel_nullity
+kp_example_A        35      40         6   913         73       7      7/7          1
+kp_example_B        31      34         3  1075         68       7      7/7          1
+consecutive_8        7      72        22  4177         23      22      7/7          1
+dissociated_powers15625     28         0   273          0       1      0/7          7
 ```
 
 `kp_example_A = (0,3,5,16,28,30,33,35)` has a rank-2 scout cover with steps
 `(3,5)` and box `(2,7)`.  Its ordinary pair-sum slice sees only a few
-collisions, but the weighted relation fibers touch every nonzero vertex.  Sample
-relations include:
+collisions, but the weighted relation fibers touch every nonzero vertex and
+the height-2 relation matrix has nullity `1` on the seven nonzero coordinates.
+Sample relations include:
 
 ```text
 5 + 30 = 35
@@ -99,8 +100,8 @@ The missing relation for the apparent outlier is also weighted-small:
 2*16 + 3 = 35.
 ```
 
-`kp_example_B = (0,4,12,15,20,21,25,31)` likewise has full height-2 coverage,
-with sample relations:
+`kp_example_B = (0,4,12,15,20,21,25,31)` likewise has full height-2 coverage
+and relation-matrix nullity `1`, with sample relations:
 
 ```text
 4 + 21 = 25
@@ -110,7 +111,8 @@ with sample relations:
 ```
 
 By contrast, the dissociated row `(0,1,5,25,125,625,3125,15625)` has no
-weighted collisions at this height and no nonzero relation coverage.
+weighted collisions at this height, no nonzero relation coverage, and full
+nullity `7`.
 
 ## Additive Versus Multiplicative Sign
 
@@ -189,8 +191,8 @@ Cov_H,M(E) = {nonzero e_i touched by some primitive relation from weighted fiber
 
 2. Prove a peel lemma when `Cov_H,M(E)` is not full.
 3. Prove an inverse theorem when `Cov_H,M(E)` is full: bounded relation coverage
-   plus enough fibers implies containment in a low-rank GAP with controlled
-   rank/volume.
+   plus high relation rank / small nullity implies containment in a low-rank
+   GAP with controlled rank/volume.
 4. Bound `L_y` or `meas(S7)` on those GAP families using AP-orbit invariance and
    dimension.
 5. For HYP-2633/HYP-2634 reciprocal tails, split every low-height relation ledger

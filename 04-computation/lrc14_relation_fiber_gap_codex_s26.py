@@ -47,6 +47,7 @@ import sys
 from collections import Counter, defaultdict
 from dataclasses import dataclass
 from functools import lru_cache
+from fractions import Fraction
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[1]
@@ -187,16 +188,46 @@ def weighted_metrics(
         ((s, v) for s, v in fibres.items() if len(v) > 1),
         key=lambda item: (-len(item[1]), item[0]),
     )[:5]
+    rel_rank = rational_rank([r.n for r in rels.values()], len(E))
     return {
         "vectors": sum(len(v) for v in fibres.values()),
         "energy": energy,
         "collision_fibres": collision_fibres,
         "max_fibre": max_fibre,
         "relations": rels,
+        "relation_rank": rel_rank,
+        "relation_nullity": len(E) - rel_rank,
         "coverage": len(touched_nonzero),
         "coverage_total": len(nonzero_indices),
         "top_fibres": top_fibres,
     }
+
+
+def rational_rank(rows: list[tuple[int, ...]], ncols: int) -> int:
+    """Exact row rank over Q for the bounded relation matrix."""
+    mat = [[Fraction(x) for x in row] for row in rows if any(row)]
+    rank = 0
+    col = 0
+    while rank < len(mat) and col < ncols:
+        pivot = None
+        for r in range(rank, len(mat)):
+            if mat[r][col]:
+                pivot = r
+                break
+        if pivot is None:
+            col += 1
+            continue
+        mat[rank], mat[pivot] = mat[pivot], mat[rank]
+        pv = mat[rank][col]
+        mat[rank] = [x / pv for x in mat[rank]]
+        for r in range(len(mat)):
+            if r == rank or not mat[r][col]:
+                continue
+            factor = mat[r][col]
+            mat[r] = [x - factor * y for x, y in zip(mat[r], mat[rank])]
+        rank += 1
+        col += 1
+    return rank
 
 
 def fmt_vec(E: tuple[int, ...], c: tuple[int, ...]) -> str:
@@ -268,7 +299,7 @@ def report_hyp2635_examples() -> None:
     print(
         f"{'case':>18} {'span':>6} {'pair_E':>8} {'pair_col':>8} "
         f"{'pair_touch':>10} {'wt_E':>8} {'wt_colfib':>9} {'maxfib':>7} "
-        f"{'h2_cover':>10} {'rank2 scout':>18}"
+        f"{'h2_cover':>10} {'rel nul':>7} {'rank2 scout':>18}"
     )
     for name, E in examples:
         Erel = tuple(e for e in E if e != 0)
@@ -283,6 +314,7 @@ def report_hyp2635_examples() -> None:
             f"{name:>18} {E[-1]-E[0]:>6} {pair_E:>8} {pair_col:>8} "
             f"{pair_touch:>10} {wt['energy']:>8} {wt['collision_fibres']:>9} "
             f"{wt['max_fibre']:>7} {wt['coverage']:>4}/{wt['coverage_total']:<5} "
+            f"{wt['relation_nullity']:>7} "
             f"{gap_text:>18}"
         )
         print(f"  E={E}")
@@ -299,8 +331,9 @@ def report_hyp2635_examples() -> None:
     print(
         "Readout: the wide examples are not ordinary APs, but they are not "
         "dissociated either.  Weighted summand energy covers every nonzero "
-        "vertex with height-2 relations.  This is the exact pocket where a "
-        "Freiman/GAP lemma should replace the failed stranger peel."
+        "vertex with height-2 relations, and the relation-matrix nullity is "
+        "small.  This is the exact pocket where a Freiman/GAP lemma should "
+        "replace the failed stranger peel."
     )
 
 

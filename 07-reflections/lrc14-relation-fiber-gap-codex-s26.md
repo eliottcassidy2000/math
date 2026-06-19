@@ -24,14 +24,14 @@ also sees small equations like
 
 which explain why the two HYP-2635 examples are not peelable even though they
 are wide.  The new scout confirms that the two named wide examples have full
-height-2 coverage of their nonzero vertices, while a dissociated powers row has
-none.
+height-2 coverage of their nonzero vertices and relation-matrix nullity `1`,
+while a dissociated powers row has no such coverage and nullity `7`.
 
 This gives the next proof split:
 
 ```text
-not full bounded relation coverage -> peel / independent limit
-full bounded relation coverage     -> high additive energy -> Freiman/GAP pocket
+not full bounded relation coverage          -> peel / independent limit
+full bounded relation coverage + small nullity -> high additive energy -> Freiman/GAP pocket
 ```
 
 The same computation also clarifies the addition/multiplication sign split from
