@@ -95,7 +95,21 @@ two-defect k= 7, add<=4k: below-family rows=2
 two-defect k= 8, add<=4k: below-family rows=0
 
 ==============================================================================
-5. Tournament Analysis quotient
+5. Multiplicative AP-defect ladder probe
+==============================================================================
+Family: {1,...,k}\{k-1} U {r(k-1)}.  The r=3 branch is
+the third-mediant split above; r=4 shows a first isolated hit at k=31.
+r=2: below-family hits=0 []
+     AP-tight returns first: [7, 13, 19, 25, 31, 37, 43, 49, 55]
+r=3: below-family hits=8 [k=7:M=3/23@4/23, k=13:M=3/41@17/41, k=19:M=3/59@36/59, k=25:M=3/77@61/77, k=37:M=3/113@22/113, k=43:M=3/131@78/131, k=49:M=3/149@59/149, k=55:M=3/167@133/167]
+     AP-tight returns first: [31]
+r=4: below-family hits=1 [k=31:M=4/127@72/127]
+     AP-tight returns first: []
+r=5: below-family hits=0 []
+     AP-tight returns first: []
+
+==============================================================================
+6. Tournament Analysis quotient
 ==============================================================================
 Assumption challenge:
   considered vertices = runners, residue classes mod 2k+1, pair-crossing

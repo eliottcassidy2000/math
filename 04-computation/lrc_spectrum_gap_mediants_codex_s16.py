@@ -237,9 +237,35 @@ def print_defect_scans() -> None:
             )
 
 
+def print_multiplier_ladder_probe() -> None:
+    print("\n" + "=" * 78)
+    print("5. Multiplicative AP-defect ladder probe")
+    print("=" * 78)
+    print("Family: {1,...,k}\\{k-1} U {r(k-1)}.  The r=3 branch is")
+    print("the third-mediant split above; r=4 shows a first isolated hit at k=31.")
+    for r in range(2, 6):
+        hits: list[tuple[int, F, F]] = []
+        tight: list[int] = []
+        for k in range(4, 61):
+            S = tuple(sorted((set(range(1, k + 1)) - {k - 1}) | {r * (k - 1)}))
+            if len(S) != k or set_gcd(S) != 1:
+                continue
+            value, arg = exact_M(S)
+            floor = F(1, k + 1)
+            family_bound = F(2, 2 * k + 1)
+            if floor < value < family_bound:
+                hits.append((k, value, arg))
+            elif value == floor:
+                tight.append(k)
+        hit_text = ", ".join(f"k={k}:M={fmt_frac(v)}@{fmt_frac(a)}" for k, v, a in hits[:10])
+        tight_text = ", ".join(str(k) for k in tight[:12])
+        print(f"r={r}: below-family hits={len(hits)} [{hit_text}]")
+        print(f"     AP-tight returns first: [{tight_text}]")
+
+
 def print_tournament_analysis() -> None:
     print("\n" + "=" * 78)
-    print("5. Tournament Analysis quotient")
+    print("6. Tournament Analysis quotient")
     print("=" * 78)
     print("Assumption challenge:")
     print("  considered vertices = runners, residue classes mod 2k+1, pair-crossing")
@@ -269,6 +295,7 @@ def main() -> None:
     print_third_mediant_family()
     print_bounded_scans()
     print_defect_scans()
+    print_multiplier_ladder_probe()
     print_tournament_analysis()
     print("\nREADOUT")
     print("  The doubled-top family proves an explicit universal upper bound")
