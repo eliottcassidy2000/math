@@ -1,0 +1,163 @@
+
+========================================================================================
+LRC(14) SUPPORT-6 COIMAGE FIBER ATLAS S14
+========================================================================================
+Goal: compute the finite mod-7 coimage of the support-6 relation hyperplane, with speed residues allowed to be 0.
+
+========================================================================================
+PROJECTIVE SPEED-RESIDUE COIMAGE CLASSES
+========================================================================================
+projective support classes modulo F_7^* and S_6: 159
+zero-speed-residue histogram: {0: 80, 1: 42, 2: 22, 3: 10, 4: 4, 5: 1}
+The 159 classes are the finite coimage table for exact support 6. A zero here means a support speed is divisible by 7; that coordinate is still Fourier-live, but disappears from the mod-7 relation.
+
+========================================================================================
+COIMAGE FIBER SUMMARY BY AMBIENT DIMENSION
+========================================================================================
+  d    max |S_d|                  class  z zero-ish classes    median |S_d|  max boundary
+  6    2.1852492     (1, 1, 2, 2, 3, 3)  0              142   1.6809519e-15     1.2701853
+  7    1.4048031     (1, 1, 2, 2, 3, 3)  0              113   1.2047212e-15    0.66804433
+  8   0.82504308     (1, 1, 2, 2, 3, 3)  0               80   1.6883983e-15    0.35819547
+  9   0.43959824     (1, 1, 2, 2, 3, 3)  0               43     0.038225934    0.19871591
+ 10   0.27850323     (1, 1, 1, 1, 4, 4)  0               34     0.039818681    0.13046481
+ 11   0.26426602     (1, 1, 1, 1, 2, 2)  0                3     0.026329087   0.086621033
+ 12   0.22155439     (1, 1, 2, 2, 4, 4)  0                3     0.031204844   0.070664304
+ 13    0.2106327     (1, 1, 1, 1, 1, 1)  0                3     0.027304239   0.057200886
+
+========================================================================================
+MAX COIMAGE MASS BY NUMBER OF ZERO SPEED RESIDUES
+========================================================================================
+
+d=7
+ z classes    max |S_d|                  class   count   abs/signed
+ 0      80    1.4048031     (1, 1, 2, 2, 3, 3)    6666      10.6977
+ 1      42   0.15608923     (0, 1, 1, 2, 3, 5)    6660      94.0259
+ 2      22   0.31217846     (0, 0, 1, 1, 6, 6)    6696      56.7078
+ 3      10 1.3717625e-15     (0, 0, 0, 1, 1, 2)    6480  1.06357e+16
+ 4       4 2.6998852e-15     (0, 0, 0, 0, 1, 6)    7776  9.55759e+15
+ 5       1            0     (0, 0, 0, 0, 0, 1)       0          inf
+  read: high zero-speed-residue classes are often coimage-null or coimage-small; divisibility by 7 is a degeneration to ledger, not automatically an analytic tail threat.
+
+d=8
+ z classes    max |S_d|                  class   count   abs/signed
+ 0      80   0.82504308     (1, 1, 2, 2, 3, 3)    6666      10.2201
+ 1      42   0.15608923     (0, 1, 1, 3, 4, 6)    6660      52.1271
+ 2      22   0.31217846     (0, 0, 1, 1, 2, 2)    6696      26.5392
+ 3      10 8.9929878e-16     (0, 0, 0, 1, 1, 5)    6480  1.01508e+16
+ 4       4 7.3288913e-16     (0, 0, 0, 0, 1, 1)    7776  1.38577e+16
+ 5       1            0     (0, 0, 0, 0, 0, 1)       0          inf
+  read: high zero-speed-residue classes are often coimage-null or coimage-small; divisibility by 7 is a degeneration to ledger, not automatically an analytic tail threat.
+
+d=9
+ z classes    max |S_d|                  class   count   abs/signed
+ 0      80   0.43959824     (1, 1, 2, 2, 3, 3)    6666       10.915
+ 1      42   0.12741978     (0, 1, 1, 3, 3, 4)    6660      36.6102
+ 2      22   0.21661363     (0, 0, 1, 1, 2, 2)    6696      22.1682
+ 3      10 0.0095564835     (0, 0, 0, 1, 2, 3)    6480      493.047
+ 4       4  0.038225934     (0, 0, 0, 0, 1, 1)    7776      147.737
+ 5       1            0     (0, 0, 0, 0, 0, 1)       0          inf
+  read: high zero-speed-residue classes are often coimage-null or coimage-small; divisibility by 7 is a degeneration to ledger, not automatically an analytic tail threat.
+
+d=10
+ z classes    max |S_d|                  class   count   abs/signed
+ 0      80   0.27850323     (1, 1, 1, 1, 4, 4)    6666      10.0797
+ 1      42   0.09875033     (0, 1, 1, 3, 3, 4)    6660      29.0885
+ 2      22   0.12104879     (0, 0, 1, 1, 2, 2)    6696       24.631
+ 3      10  0.019112967     (0, 0, 0, 1, 1, 5)    6480      162.557
+ 4       4  0.076451868     (0, 0, 0, 0, 1, 1)    7776      45.4462
+ 5       1            0     (0, 0, 0, 0, 0, 1)       0          inf
+  read: high zero-speed-residue classes are often coimage-null or coimage-small; divisibility by 7 is a degeneration to ledger, not automatically an analytic tail threat.
+
+d=13
+ z classes    max |S_d|                  class   count   abs/signed
+ 0      80    0.2106327     (1, 1, 1, 1, 1, 1)    6666      13.3303
+ 1      42  0.052910255     (0, 1, 1, 3, 3, 4)    6660      19.3392
+ 2      22  0.072774155     (0, 0, 1, 1, 1, 1)    6696      15.2411
+ 3      10  0.034074575     (0, 0, 0, 1, 1, 5)    6480      31.0831
+ 4       4  0.072774155     (0, 0, 0, 0, 1, 1)    7776      18.9193
+ 5       1            0     (0, 0, 0, 0, 0, 1)       0          inf
+  read: high zero-speed-residue classes are often coimage-null or coimage-small; divisibility by 7 is a degeneration to ledger, not automatically an analytic tail threat.
+
+========================================================================================
+NAMED S12 SUPPORTS IN THE COIMAGE ATLAS
+========================================================================================
+support                        d                  class  z fiber count                S_d        |S_d|   abs/signed  max boundary
+AP core / dissociated 211      7     (1, 2, 3, 4, 5, 6)  0        6666 -0.93653539-1e-15j   0.93653539      15.9731    0.66804433
+resonant 21 support            7     (0, 1, 2, 3, 4, 5)  1        6660 -0.11706692-7e-16j   0.11706692       125.46     0.2208067
+k=9 wide 68 support            8     (1, 1, 2, 4, 5, 6)  0        6666    -0.21741-7e-16j      0.21741      38.0849    0.22529708
+k=10 wall 22 support           9     (0, 1, 1, 1, 2, 4)  1        6660 -3.8055496e-16+2e-16j 4.1069069e-16  1.13272e+16   0.047188015
+The k=10 height-one wall is especially revealing: in its relevant ambient dimension d=9, its leading coimage fiber is numerically zero even though its absolute fiber mass is large.  This is the coimage version of the S12 cusp cancellation signal.
+
+========================================================================================
+TOP COIMAGE FIBERS
+========================================================================================
+
+d=7
+rank                  class  z        |S_d|    abs total        ratio  boundary |sum|
+   1     (1, 1, 2, 2, 3, 3)  0    1.4048031    15.028189      10.6977      0.56140737
+   2     (1, 1, 2, 2, 3, 4)  0    1.2487138    14.651799      11.7335      0.48031196
+   3     (1, 1, 2, 3, 4, 5)  0   0.97555769    14.681185       15.049      0.51288704
+   4     (1, 2, 3, 4, 5, 6)  0   0.93653539    14.959354      15.9731      0.66804433
+   5     (1, 1, 2, 2, 4, 6)  0   0.70240154    14.616226      20.8089      0.38754531
+   6     (1, 1, 2, 3, 3, 6)  0   0.70240154    14.723461      20.9616      0.36703761
+   7     (1, 1, 2, 3, 3, 5)  0   0.70240154    14.638135      20.8401      0.37578787
+   8     (1, 1, 2, 4, 6, 6)  0   0.70240154     14.75952      21.0129      0.26644954
+   9     (1, 1, 2, 2, 5, 6)  0   0.54631231    14.829866      27.1454      0.33532549
+  10     (1, 1, 3, 3, 4, 5)  0   0.54631231    14.799574        27.09      0.41196393
+
+d=9
+rank                  class  z        |S_d|    abs total        ratio  boundary |sum|
+   1     (1, 1, 2, 2, 3, 3)  0   0.43959824    4.7982226       10.915      0.19105012
+   2     (1, 1, 2, 2, 3, 4)  0    0.4077433    4.6815701      11.4817      0.19871591
+   3     (1, 1, 2, 2, 4, 6)  0   0.33925517    4.5579367      13.4351      0.14343879
+   4     (1, 1, 2, 3, 4, 5)  0    0.3352733    4.6389048      13.8362      0.18904405
+   5     (1, 2, 3, 4, 5, 6)  0   0.30580747    4.7246349      15.4497      0.19506767
+   6     (1, 1, 2, 3, 3, 5)  0    0.2628033    4.6046176      17.5212      0.13350358
+   7     (1, 1, 2, 4, 6, 6)  0    0.2628033    4.6973981      17.8742      0.14247903
+   8     (1, 1, 2, 3, 3, 6)  0    0.2628033    4.7219997      17.9678      0.13022199
+   9     (1, 1, 1, 1, 4, 4)  0   0.23891209    4.6331234      19.3926     0.074328898
+  10     (1, 1, 1, 1, 2, 2)  0   0.23891209     4.345077      18.1869     0.074328898
+
+d=13
+rank                  class  z        |S_d|    abs total        ratio  boundary |sum|
+   1     (1, 1, 1, 1, 1, 1)  0    0.2106327    2.8078073      13.3303     0.057200886
+   2     (1, 1, 2, 2, 4, 4)  0   0.17864773    1.0701529       5.9903      0.05340602
+   3     (1, 1, 1, 1, 2, 2)  0   0.16424335    1.0740709      6.53951     0.054030552
+   4     (1, 1, 1, 1, 4, 4)  0   0.16424335    1.0900609      6.63686     0.054030552
+   5     (1, 1, 2, 2, 6, 6)  0   0.13905659    1.0763545      7.74041      0.03933859
+   6     (1, 1, 1, 1, 5, 5)  0   0.12465221     1.112824      8.92743     0.046195709
+   7     (1, 1, 1, 1, 3, 3)  0   0.12465221    1.1342291      9.09915     0.046195709
+   8     (1, 1, 1, 1, 6, 6)  0   0.12465221    1.1140157      8.93699     0.052121708
+   9     (1, 1, 2, 2, 4, 6)  0   0.10482081    1.0159881      9.69262     0.037349099
+  10     (1, 1, 2, 5, 6, 6)  0  0.092501401    1.0381815      11.2234     0.027003442
+
+========================================================================================
+COIMAGE-NULL AND COIMAGE-SMALL CLASSES
+========================================================================================
+  d     <1e-12     <0.001      <0.01       <0.1
+  6        142        142        142        142
+  7        113        113        113        121
+  8         80         80         80        118
+  9         43         43         77        117
+ 10         34         34         43        140
+ 11          3          3         35        148
+ 12          3          3         40        149
+ 13          3          3         25        150
+classes coimage-null for every d=6..13: 3
+first null classes: [(0, 0, 0, 0, 0, 1), (0, 0, 0, 1, 1, 1), (0, 1, 1, 1, 1, 1)]
+
+========================================================================================
+TOURNAMENT ANALYSIS: COIMAGE PROOF QUOTIENTS
+========================================================================================
+Hamiltonian proof path: ['named_wall_nullity', 'coimage_fiber_sum', 'low_height_wall_ledger', 'fixed_boundary_residue', 'speed_residue_projectivization', 'reciprocal_tail_estimate', 'raw_relation_volume']
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+Assumption challenged: the vertices are neither runners nor residue tuples. They are quotient stages in the proof obligation.  The map from raw relation volume to speed-residue projective class to coimage fiber preserves the analytic predicate while discarding witness-time data.
+
+========================================================================================
+S14 READING
+========================================================================================
+1. The support-6 residue coimage has only 159 projective speed-residue classes.  This is the finite address table sitting between S13's sequence spine and the infinite reciprocal tail.
+2. Allowing speed residues 0 mod 7 is essential.  Those coordinates are Fourier-live but invisible to the mod-7 relation, which is exactly a coimage degeneration.
+3. The leading coimage fiber often kills or shrinks the apparent cusp mass.  The k=10 height-one wall support is coimage-null in its relevant ambient dimension d=9, so its danger belongs in the finite wall ledger, not in the analytic tail.
+4. LRC(14) remains open.  The next theorem target is now more concrete: control the finite list of non-null coimage fiber classes by a signed reciprocal-tail estimate after deleting low-height walls.
