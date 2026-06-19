@@ -1,0 +1,27 @@
+============================================================================================
+ANGLE A verification
+============================================================================================
+
+(V1) meas_empty exact vs fine-grid (J=[1], J=[3,5]) -- should agree:
+  consec8   P_1 exact=0.27177 grid=0.27176 | P_35 exact=0.13061 grid=0.13062
+  dissoc8   P_1 exact=0.33539 grid=0.33538 | P_35 exact=0.08756 grid=0.08758
+  Sidon8    P_1 exact=0.31129 grid=0.31130 | P_35 exact=0.07792 grid=0.07792
+  generic8  P_1 exact=0.33238 grid=0.33237 | P_35 exact=0.09258 grid=0.09258
+  perf8     P_1 exact=0.29875 grid=0.29874 | P_35 exact=0.10930 grid=0.10930
+
+(V2-V5) union identities and inequality directions (all should hold):
+  shape       measS7 trueUnion    1-S7     uCS     uDS  CS<=U?  DS<=U? cert>=S7?
+  consec8     0.3272    0.6728  0.6728  0.4963  0.5036    True    True      True
+  dissoc8     0.0347    0.9653  0.9653  0.8067  0.8403    True    True      True
+  Sidon8      0.0121    0.9879  0.9879  0.8345  0.8663    True    True      True
+  generic8    0.0271    0.9729  0.9729  0.8357  0.8689    True    True      True
+  perf8       0.1237    0.8763  0.8763  0.6245  0.6378    True    True      True
+  consec9     0.4162    0.5838  0.5838  0.4268  0.4332    True    True      True
+  consec11    0.5815    0.4185  0.4185  0.3111  0.3170    True    True      True
+
+ALL CHECKS PASS: True
+(V2/V3: lower bounds <= true union. V4: 1-meas(S7)==union. V5: certificate U >= meas(S7).)
+
+Exact-rational certificate values:
+  consec8: U = 2189/4410 = 0.496372;  cap_8 = 2243/5880 = 0.381463;  U-cap = +0.114909
+  dissoc8: U = 4159427/26043255 = 0.159712;  cap_8 = 2243/5880 = 0.381463;  U-cap = -0.221750

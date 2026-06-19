@@ -1,0 +1,25 @@
+EXACT 4-moment certificate U4 for the AP consec k=8 (the tight extremiser):
+
+consec8  E=[0, 1, 2, 3, 4, 5, 6, 7]
+  binomial moments S1..S4 = ['393/245', '188/105', '991/735', '472/735']
+  meas(S7) = 481/1470 = 0.327211
+  U4 (exact) = 2633/7350 = 0.358231
+  certifying count-distribution p_0..p_6 = ['2633/7350', '23/210', '278/735', '0', '47/1470', '299/2450', '0']
+  cap_8 = 2243/5880 = 0.381463
+  U4 <= cap_8 ?  True   (slack = 683/29400 = +0.023231)
+  *** EXACT RATIONAL: U4(consec8) < cap_8 ***
+
+dilAP  E=[0, 2, 4, 6, 8, 10, 12, 14]
+  binomial moments S1..S4 = ['393/245', '188/105', '991/735', '472/735']
+  meas(S7) = 481/1470 = 0.327211
+  U4 (exact) = 2633/7350 = 0.358231
+  certifying count-distribution p_0..p_6 = ['2633/7350', '23/210', '278/735', '0', '47/1470', '299/2450', '0']
+  cap_8 = 2243/5880 = 0.381463
+  U4 <= cap_8 ?  True   (slack = 683/29400 = +0.023231)
+
+
+consec9  E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+  binomial moments S1..S4 = ['4061/2940', '3027/1960', '288/245', '221/392']
+  meas(S7) = 2447/5880 = 0.416156
+  U4 (exact) = 3259/7350 = 0.443401
+  certifying count-distribution p_0..p_6 = ['3259/7350', '61/588', '629/1960', '0', '47/1960', '529/4900', '0']

@@ -1,0 +1,10 @@
+Exhaustive k=8, 0=e1<...<e8<=B=13, primitive. cap_8=0.381463
+Testing U4(E) <= cap_8 for all shapes (4-moment certificate closure).
+
+Scanned 1716 primitive shapes.
+Validity (U4 >= meas(S7)) violations: 0  (should be 0)
+MAX U4 = 0.358231 at [0, 1, 2, 3, 4, 5, 6, 7]
+Worst slack cap_8 - U4 = +0.023231 at [0, 1, 2, 3, 4, 5, 6, 7]
+Shapes with U4 > cap_8 (residual NOT closed by 4-moment cert): 0
+
+*** ALL shapes in box have U4 <= cap_8: the 4-MOMENT CERTIFICATE CLOSES k=8 in this box. ***

@@ -1,0 +1,9 @@
+Cross-check float vs exact U4 over primitive k=8, B=12. cap_8=0.381463
+scanned 792; max|float-exact U4| = 2.15e-15
+exact-U4 > meas(S7) holds for all? validity fails = 0
+exact U4 > cap_8 count = 0
+max exact U4 = 2633/7350 = 0.358231 at [0, 1, 2, 3, 4, 5, 6, 7]
+AP {0..7} is the unique max: True
+
+CERTIFICATE (exact, B=12): every primitive k=8 shape has U4 <= cap_8 =>
+4-moment empty-sector marginal certificate closes LRC(14)-S3 k=8 in this box.

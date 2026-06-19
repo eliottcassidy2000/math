@@ -1,0 +1,20 @@
+========================================================================================================
+ANGLE A pivot: rigorous exact-rational meas(S7) <= 1 - max(CS,Kounias,DawsonSankoff) union bound
+========================================================================================================
+shape                   k  meas(S7)  unionLB   U=1-LB    cap_k    slack  <=cap?
+--------------------------------------------------------------------------------------------------------
+consec{0..7}            8    0.3272   0.5036   0.4964   0.3815  -0.1149    OVER
+perf{0,2,..,9}          8    0.1237   0.6378   0.3622   0.3815   0.0193      OK
+dissoc 2^i              8    0.0347   0.8403   0.1597   0.3815   0.2218      OK
+Sidon                   8    0.0121   0.8663   0.1337   0.3815   0.2478      OK
+spread 0..3,40..43      8    0.1151   0.7054   0.2946   0.3815   0.0868      OK
+generic                 8    0.0271   0.8689   0.1311   0.3815   0.2503      OK
+consec{0..8}            9    0.4162   0.4332   0.5668   0.4943  -0.0725    OVER
+consec{0..9}           10    0.5045   0.3693   0.6307   0.6044  -0.0263    OVER
+consec{0..10}          11    0.5815   0.3170   0.6830   0.7253   0.0423      OK
+consec{0..11}          12    0.6241   0.2858   0.7142   0.8571   0.1429      OK
+consec{0..12}          13    0.6759   0.2511   0.7489   1.0000   0.2511      OK
+--------------------------------------------------------------------------------------------------------
+U = 1 - max(Chung-Erdos, Dawson-Sankoff) = rigorous exact-rational upper bound on meas(S7).
+(Hunter/Kounias is an upper bd on the union -> wrong direction, excluded.)
+If U <= cap_k for consec (extremiser) at the dangerous rows, the pairwise certificate closes them.
