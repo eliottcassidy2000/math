@@ -1,0 +1,15 @@
+=== (ii) EWLB_A(consec_k) vs thr_k ===
+k=8: EWLB=407/588=0.6922  thr=0.6185  margin=0.0736  >=thr:True | mu=0.9401 mu>=EWLB:True
+k=9: EWLB=89/147=0.6054  thr=0.5057  margin=0.0997  >=thr:True | mu=0.8401 mu>=EWLB:True
+k=10: EWLB=1111/2205=0.5039  thr=0.3956  margin=0.1083  >=thr:True | mu=0.7755 mu>=EWLB:True
+k=11: EWLB=7559/17640=0.4285  thr=0.2747  margin=0.1538  >=thr:True | mu=0.6263 mu>=EWLB:True
+k=12: EWLB=146809/388080=0.3783  thr=0.1429  margin=0.2354  >=thr:True | mu=0.5699 mu>=EWLB:True
+binding margin k=8 == 433/5880: True 433/5880
+
+=== (i) mu >= EWLB on random sets ===
+mu<EWLB violations: 0 (0 expected)
+
+=== (iii) consecutive minimizes EWLB_A? exhaustive bounded spread ===
+k=8 spread<=13: min EWLB=0.6922 at (0, 1, 2, 3, 4, 5, 6, 7) consec-argmin:True below-thr:0
+k=9 spread<=13: min EWLB=0.6054 at (0, 1, 2, 3, 4, 5, 6, 7, 8) consec-argmin:True below-thr:0
+k=10 spread<=14: min EWLB=0.5039 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9) consec-argmin:True below-thr:0

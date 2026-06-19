@@ -1,0 +1,24 @@
+=== TRUE exact B7 minorant vs iid 'floor' vs thr_k ===
+k=8: B7(consec)=0.73639  B7_iid=0.97552  mu(consec)=0.94728  thr=0.61854  B7-thr=+0.11786
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+k=9: B7(consec)=0.63776  B7_iid=0.94230  mu(consec)=0.83929
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+k=10: B7(consec)=0.56831  B7_iid=0.89509  mu(consec)=0.78571
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+k=11: B7(consec)=0.45680  B7_iid=0.83690  mu(consec)=0.62092
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+k=12: B7(consec)=0.40584  B7_iid=0.77155  mu(consec)=0.57435  thr=0.14286  B7-thr=+0.26299
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+k=13: B7(consec)=0.36537  B7_iid=0.70269  mu(consec)=0.44661  thr=0.00000  B7-thr=+0.36537
+        B7(consec) <= mu(consec)? True   (minorant valid)
+        iid >= true B7? True  (iid OVER-estimates structured B7 => NOT a lower bound on min_E B7)
+
+=== min_E B7 over k=8 small spread (is consec/AP the B7 MINIMIZER?) ===
+tested 792 k=8 sets (spread<=12). min B7 = 0.73639 at (0, 1, 2, 3, 4, 5, 6, 7)
+consec_8 B7 = 0.73639; thr_8 = 0.61854
+min B7 >= thr_8? True  margin +0.11786

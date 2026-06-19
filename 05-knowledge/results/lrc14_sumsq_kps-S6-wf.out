@@ -1,0 +1,34 @@
+cap_8=0.381463
+
+Compare net(E) <= Q(E)=meas{sum g^2<=1/7}, and int sum g^2, for sample E:
+  E=[0, 1, 2, 3, 4, 5, 6, 7]
+     net=0.05986  Q=meas(sumg^2<=1/7)=0.32770  int(sumg^2)=0.23915  Q<=cap8
+  E=[0, 1, 2, 3, 4, 5, 6, 8]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.27432  int(sumg^2)=0.23310  Q<=cap8
+  E=[0, 1, 2, 3, 4, 5, 6, 14]
+     net=0.02041  Q=meas(sumg^2<=1/7)=0.15380  int(sumg^2)=0.22574  Q<=cap8
+  E=[0, 2, 4, 6, 7, 9, 11, 13]
+     net=0.02605  Q=meas(sumg^2<=1/7)=0.10709  int(sumg^2)=0.24427  Q<=cap8
+  E=[0, 1, 2, 3, 11, 12, 13, 14]
+     net=0.02474  Q=meas(sumg^2<=1/7)=0.11908  int(sumg^2)=0.24437  Q<=cap8
+  E=[0, 1, 5, 6, 10, 11, 12, 15]
+     net=0.01674  Q=meas(sumg^2<=1/7)=0.08036  int(sumg^2)=0.23297  Q<=cap8
+  E=[0, 1, 5, 6, 9, 10, 11, 12]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.10890  int(sumg^2)=0.22779  Q<=cap8
+  E=[0, 1, 3, 4, 8, 11, 13, 14]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.00000  int(sumg^2)=0.23517  Q<=cap8
+  E=[0, 2, 4, 6, 7, 8, 9, 15]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.03077  int(sumg^2)=0.22804  Q<=cap8
+  E=[0, 1, 4, 5, 7, 10, 12, 14]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.01326  int(sumg^2)=0.22861  Q<=cap8
+  E=[0, 2, 3, 7, 11, 13, 14, 15]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.00000  int(sumg^2)=0.22565  Q<=cap8
+  E=[0, 1, 3, 8, 10, 12, 14, 15]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.00000  int(sumg^2)=0.23184  Q<=cap8
+  E=[0, 3, 4, 5, 6, 12, 13, 15]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.00952  int(sumg^2)=0.22556  Q<=cap8
+  E=[0, 3, 4, 9, 11, 12, 13, 15]
+     net=0.00000  Q=meas(sumg^2<=1/7)=0.06234  int(sumg^2)=0.22538  Q<=cap8
+
+  worst Q over sample = 0.32770 at [0, 1, 2, 3, 4, 5, 6, 7] vs cap_8=0.38146
+  (if worst Q <= cap_8 across a broad scan, the sum-g^2 relaxation could give a uniform proof)

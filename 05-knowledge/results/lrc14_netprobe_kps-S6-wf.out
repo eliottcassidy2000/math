@@ -1,0 +1,17 @@
+cap_8 = 2243/5880 = 0.381463
+
+E=consec_8=[0, 1, 2, 3, 4, 5, 6, 7]; meas(N)=44/735=0.059864  (cap_8=0.3815)
+N intervals (4):
+   [0.12245,0.14286] len=0.02041
+   [0.37143,0.38095] len=0.00952
+   [0.61905,0.62857] len=0.00952
+   [0.85714,0.87755] len=0.02041
+
+For each difference d: range of ||dx|| over N(E), and meas{x:||dx|| in that range}:
+   d= 1: ||dx|| in [0.13265,0.37619]  => meas{||dx|| in range} = 0.48707  
+   d= 2: ||dx|| in [0.24762,0.26531]  => meas{||dx|| in range} = 0.03537  *** <= cap8 ***
+   d= 3: ||dx|| in [0.12857,0.39796]  => meas{||dx|| in range} = 0.53878  
+   d= 4: ||dx|| in [0.46429,0.49490]  => meas{||dx|| in range} = 0.06122  *** <= cap8 ***
+   d= 5: ||dx|| in [0.11905,0.33673]  => meas{||dx|| in range} = 0.43537  
+   d= 6: ||dx|| in [0.20408,0.25714]  => meas{||dx|| in range} = 0.10612  *** <= cap8 ***
+   d= 7: ||dx|| in [0.07143,0.36667]  => meas{||dx|| in range} = 0.59048  

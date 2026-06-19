@@ -1,0 +1,14 @@
+SUM-OF-SQUARES RELAXATION at k=8..12:  N(E) subset {sum g^2<=1/7}=Q(E).
+  k  Q(consec)_lo  Q(consec)_hi      cap_k  margin(cap-Qhi)  relax helps?
+  8      0.327704      0.327704   0.381463         0.053759           YES
+  9      0.491918      0.491918   0.494256         0.002338           YES
+ 10      0.580574      0.580574   0.604396         0.023821           YES
+ 11      0.642003      0.642003   0.725275         0.083272           YES
+ 12      0.685171      0.685171   0.857143         0.171972           YES
+
+Now: is consec the MAX of Q over primitive E?  (broad exact scan per k, small spread)
+  k= 8: scanned 1716 primitive (spread<=13); max Qhi=0.327704 at (0, 1, 2, 3, 4, 5, 6, 7); Q(consec)hi=0.327704; consec is max; max Qhi <=cap
+  k= 9: scanned 495 primitive (spread<=12); max Qhi=0.493045 at (0, 1, 2, 3, 4, 5, 6, 7, 9); Q(consec)hi=0.491918; *** consec NOT max ***; max Qhi <=cap
+  k=10: scanned 220 primitive (spread<=12); max Qhi=0.619651 at (0, 1, 2, 3, 4, 5, 6, 7, 9, 12); Q(consec)hi=0.580574; *** consec NOT max ***; max Qhi > cap
+  k=11: scanned 286 primitive (spread<=13); max Qhi=0.692231 at (0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 13); Q(consec)hi=0.642003; *** consec NOT max ***; max Qhi <=cap
+  k=12: scanned 364 primitive (spread<=14); max Qhi=0.743358 at (0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 13, 14); Q(consec)hi=0.685171; *** consec NOT max ***; max Qhi <=cap

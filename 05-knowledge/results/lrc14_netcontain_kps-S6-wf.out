@@ -1,0 +1,21 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_netcontain_kps-S6-wf.py:12: SyntaxWarning: invalid escape sequence '\{'
+  among {frac(e x): e in E\{0}} ... since 0 in E and its clockwise neighbor is
+[CANDIDATE A] For x in N(E), does ||d x||<=1/7 for every CONSECUTIVE diff d?
+   A-VIOLATION E=[0, 2, 3, 5, 8, 10, 11, 12, 13] consec-d=2: max||dx||=0.4668>1/7
+   A-VIOLATION E=[0, 2, 3, 5, 8, 10, 11, 12, 13] consec-d=1: max||dx||=0.2666>1/7
+   A-VIOLATION E=[0, 2, 3, 5, 8, 10, 11, 12, 13] consec-d=2: max||dx||=0.4668>1/7
+   A-VIOLATION E=[0, 2, 3, 5, 8, 10, 11, 12, 13] consec-d=3: max||dx||=0.2003>1/7
+   A-VIOLATION E=[0, 2, 3, 5, 8, 10, 11, 12, 13] consec-d=2: max||dx||=0.4668>1/7
+   candidate A: 172 checks, 154 violations => FALSE
+
+[CANDIDATE A'] does ||d x||<=1/7 hold for the SMALLEST diff d=min consecutive gap?
+   A'-VIOLATION E=[0, 1, 5, 6, 7, 9, 12, 18, 19] dmin=1: max||dx||=0.3748
+   A'-VIOLATION E=[0, 1, 3, 4, 10, 12, 16, 18, 19] dmin=1: max||dx||=0.4088
+   A'-VIOLATION E=[0, 4, 5, 6, 7, 9, 10, 11, 16, 17] dmin=1: max||dx||=0.3762
+   A'-VIOLATION E=[0, 1, 3, 4, 6, 7, 8, 11, 13, 19] dmin=1: max||dx||=0.2162
+   A'-VIOLATION E=[0, 4, 7, 8, 9, 10, 13, 14, 16, 19] dmin=1: max||dx||=0.3762
+   candidate A': 58 checks, 47 violations => FALSE
+
+[CANDIDATE D] ALL pairwise differences d: is max ||dx|| over N <= (some multiple)/7?
+   sample: for each E, max_d (max_{x in N} ||dx||) / (1/7):
+   E=[0, 1, 2, 6, 7, 8, 9, 14] netmeas=0.0051: consec-diff ratios max||dx||/(1/7) = [1.87, 1.87, 0.46, 1.87, 1.87, 1.87, 2.33]

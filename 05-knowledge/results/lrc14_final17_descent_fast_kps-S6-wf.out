@@ -1,0 +1,24 @@
+CONSEC mu_1/7 and THR per k:
+  k=8: consec=0.940136  thr=0.618537  slack(consec-thr)=0.321599
+  k=9: consec=0.840136  thr=0.505744  slack(consec-thr)=0.334392
+  k=10: consec=0.775510  thr=0.395604  slack(consec-thr)=0.379906
+  k=11: consec=0.626304  thr=0.274725  slack(consec-thr)=0.351579
+  k=12: consec=0.569903  thr=0.142857  slack(consec-thr)=0.427046
+
+[A] Annealing descent (accepts uphill; spread capped at 3k):
+  k=8: best=0.940136 at (0, 1, 2, 3, 4, 5, 6, 7)  thr=0.618537  [ok (>=consec)]
+  k=9: best=0.840136 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  thr=0.505744  [ok (>=consec)]
+  k=10: best=0.775510 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  thr=0.395604  [ok (>=consec)]
+  k=11: best=0.626304 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  thr=0.274725  [ok (>=consec)]
+  k=12: best=0.569903 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)  thr=0.142857  [ok (>=consec)]
+
+[B] Structured perforated/coprime rulers:
+  k=8: best=0.940136 at (0, 1, 2, 3, 4, 5, 6, 7)  thr=0.618537  [ok (>=consec)]
+  k=9: best=0.840136 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  thr=0.505744  [ok (>=consec)]
+  k=10: best=0.775510 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  thr=0.395604  [ok (>=consec)]
+  k=11: best=0.626304 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  thr=0.274725  [ok (>=consec)]
+  k=12: best=0.569903 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)  thr=0.142857  [ok (>=consec)]
+
+VERDICT:
+NO violation found. mu_{1/7}(E) >= thr_k held in every aggressive search.
+Consecutive was never beaten as the minimizer.

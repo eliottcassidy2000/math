@@ -1,0 +1,11 @@
+[STRETCH MONOTONICITY] net(stretch(E,i)) <= net(E) for all gaps i?
+   scanned 792 sets (k=8,max<=12), 5544 stretch tests, 141 violations
+   => STRETCH MONOTONICITY FALSE. Examples (E, gap i, net(E), net(stretch)):
+      E=[0, 1, 2, 3, 4, 5, 6, 8] i=1: net 0.000000 -> 0.028118 (INCREASED)
+      E=[0, 1, 2, 3, 4, 5, 6, 9] i=2: net 0.000000 -> 0.028118 (INCREASED)
+      E=[0, 1, 2, 3, 4, 5, 6, 10] i=3: net 0.000000 -> 0.019460 (INCREASED)
+      E=[0, 1, 2, 3, 4, 5, 6, 11] i=4: net 0.000000 -> 0.019460 (INCREASED)
+      E=[0, 1, 2, 3, 4, 5, 6, 12] i=5: net 0.000000 -> 0.015064 (INCREASED)
+      E=[0, 1, 2, 3, 4, 6, 7, 12] i=7: net 0.000000 -> 0.015064 (INCREASED)
+      E=[0, 1, 2, 3, 5, 6, 7, 11] i=7: net 0.000000 -> 0.019460 (INCREASED)
+      E=[0, 1, 2, 3, 5, 6, 8, 12] i=1: net 0.000000 -> 0.015064 (INCREASED)

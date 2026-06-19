@@ -1,0 +1,21 @@
+[M2] N depends only on the MULTISET of consecutive gaps?
+   gapvec (1, 1, 1, 1, 1, 1, 1): netmeas=0.059864 INVARIANT across all 1 perms
+   gapvec (2, 1, 1, 1, 1, 1, 1): netmeas=0.000000 INVARIANT across all 7 perms
+   gapvec (1, 2, 1, 1, 1, 1, 1): netmeas=0.000000 INVARIANT across all 7 perms
+   gapvec base (3, 1, 1, 1, 1, 1, 2): netmeas VARIES across permutations: [0.0, 0.028117913832199547]
+   gapvec base (2, 2, 1, 1, 1, 1, 1): netmeas VARIES across permutations: [0.0, 0.028117913832199547]
+   M2 violations: 2 (checked 78)
+
+[M3] maximize netmeas over gap-vectors (k=8 -> 7 gaps). all-ones=consecutive?
+   consecutive (all-ones) netmeas = 44/735 = 0.059864
+   TOP gap-vectors by netmeas:
+      (6, 6, 6, 6, 6, 6, 6): 0.059864 (44/735) 
+      (5, 5, 5, 5, 5, 5, 5): 0.059864 (44/735) 
+      (4, 4, 4, 4, 4, 4, 4): 0.059864 (44/735) 
+      (3, 3, 3, 3, 3, 3, 3): 0.059864 (44/735) 
+      (2, 2, 2, 2, 2, 2, 2): 0.059864 (44/735) 
+      (1, 1, 1, 1, 1, 1, 1): 0.059864 (44/735) <-- CONSEC
+      (3, 6, 6, 6, 6, 6, 6): 0.010989 (1/91) 
+      (2, 4, 4, 4, 4, 4, 4): 0.010989 (1/91) 
+   max netmeas = 0.059864 at gapvec (1, 1, 1, 1, 1, 1, 1)
+   => CONSECUTIVE MAXIMIZES net over all gap-vectors with gaps<=6. (k=8)

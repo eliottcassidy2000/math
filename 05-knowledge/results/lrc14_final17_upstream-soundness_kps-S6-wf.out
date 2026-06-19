@@ -1,0 +1,140 @@
+==============================================================================
+PART 0 — engine sanity (consecutive mu_{1/7}, k=1..13)
+==============================================================================
+  k= 1: mu_1/7(consec)=           1 = 1.000000
+  k= 2: mu_1/7(consec)=           1 = 1.000000
+  k= 3: mu_1/7(consec)=           1 = 1.000000
+  k= 4: mu_1/7(consec)=           1 = 1.000000
+  k= 5: mu_1/7(consec)=           1 = 1.000000
+  k= 6: mu_1/7(consec)=           1 = 1.000000
+  k= 7: mu_1/7(consec)=           1 = 1.000000
+  k= 8: mu_1/7(consec)=     691/735 = 0.940136
+  k= 9: mu_1/7(consec)=     247/294 = 0.840136
+  k=10: mu_1/7(consec)=       38/49 = 0.775510
+  k=11: mu_1/7(consec)=   1381/2205 = 0.626304
+  k=12: mu_1/7(consec)= 13823/24255 = 0.569903
+  k=13: mu_1/7(consec)=    477/1078 = 0.442486
+  [VERIFIED] engine reproduces all canon consecutive values: True
+  [VERIFIED] engine vs brute (float) max |diff| over 12 sets = 4.15e-06
+
+==============================================================================
+PART 1 — SOUNDNESS: the EXACT cluster equivalence at finite Vmax
+  predictor[maxgap{frac(e_i x)}>1/7 at x=(N+1/2)/Vmax]  ==  free-phi exists
+==============================================================================
+  Vmax=   50: cluster predictor == free-phi  60/60
+  Vmax=  100: cluster predictor == free-phi  60/60
+  Vmax=  200: cluster predictor == free-phi  60/60
+  Vmax=  500: cluster predictor == free-phi  60/60
+  Vmax= 1000: cluster predictor == free-phi  60/60
+  Vmax= 3000: cluster predictor == free-phi  60/60
+  [VERIFIED EXACT] cluster reduction is exact at finite Vmax (1/7 is the sharp threshold): True
+  => the ONLY finite-Vmax slack is the small part P (handled in PART 3 by margin delta).
+
+==============================================================================
+PART 2 — GAP-2: |rho_K - rho*| <= C/Vmax,  C=#components(G_P ∩ Good_E) FIXED
+==============================================================================
+  E(spread) P : C  rho*    err@1000   C/1000  (err<=bound?)
+  E(sp28) P[5, 6, 8, 12]: C=18 0.5905 0.00048  0.0180  True
+  E(sp29) P[3, 6, 13]: C=14 0.6703 0.00233  0.0140  True
+  E(sp27) P[1, 2, 6, 7, 11]: C=18 0.4521 0.00007  0.0180  True
+  E(sp27) P[2, 3, 7, 9, 11]: C=18 0.4350 0.00096  0.0180  True
+  E(sp29) P[2, 7, 9, 10]: C=18 0.5120 0.00198  0.0180  True
+  E(sp28) P[2, 4, 11, 12]: C=18 0.5736 0.00159  0.0180  True
+  E(sp29) P[4, 6, 12]: C=12 0.7143 0.00229  0.0120  True
+  E(sp29) P[1, 7, 9, 12]: C=20 0.5136 0.00239  0.0200  True
+  E(sp22) P[2, 3, 4, 9, 13]: C=16 0.4942 0.00020  0.0160  True
+  E(sp29) P[6, 8, 9]: C=16 0.6607 0.00071  0.0160  True
+  E(sp26) P[3, 6, 8, 9, 13]: C=20 0.4933 0.00128  0.0200  True
+  E(sp25) P[1, 3, 4, 9, 11]: C=16 0.4416 0.00244  0.0160  True
+  [VERIFIED EXACT] grid-discrepancy bound holds in every case: True
+  RIGOROUS STATEMENT: x_N=(N+1/2)/Vmax is a uniform mesh-(1/Vmax) grid; for a set U
+  with C components, |grid-fraction - meas(U)| <= C/Vmax (each boundary straddles <=1 cell).
+  C is FIXED for a fixed cluster shape (P,E) (bounded by #U-breakpoints, independent of Vmax).
+  => Vmax > C/rho*  ==>  rho_K>0 ==> a good period ==> M(S)>=1/14;  V0=ceil(C/rho*);
+     Vmax<=V0 is a FINITE exact check.  [GAP-2 CLOSED, modulo rho*>0 = the spread bound]
+
+==============================================================================
+PART 3 — GAP-3: explicit V0 construction (P included); delta-good x + Vmax>=V0 => witness
+==============================================================================
+  delta=1/14,  V0=ceil(max(39, 6*spread)/(7 delta)):
+  covering sets with a delta-good x and Vmax>=V0; witness construction OK: 334/334
+  construction FAILURES (Vmax>=V0): 0
+  [VERIFIED] Vmax>=V0 ==> the delta-good slow time yields an EXACT lonely witness: True
+  Note: the witness-construction failures at SMALL Vmax (<V0) all still have a witness
+  somewhere (LRC not threatened); those are exactly the finite Vmax<=V0 check of PART 2.
+
+==============================================================================
+PART 4 — THE 1/7-SPREAD BOUND:  mu_{1/7}(E) >= thr_k for all integer E (0 in E, |E|=k)
+==============================================================================
+
+  (4a) PROVED structural lemmas
+   * MONOTONICITY (PROVED): E subset E' => maxgap(E' x)<=maxgap(E x) pointwise
+     => {maxgap(E')>θ} ⊆ {maxgap(E)>θ} => mu(E') <= mu(E).
+     [VERIFIED consistent] adding a point never raises mu: True
+   * SCALE-INVARIANCE (PROVED): mu(gE)=mu(E) (x->x/g pushes Lebesgue to itself).
+     [VERIFIED] mu([0, 1, 3, 7, 11]) invariant under scaling: True
+
+  (4b) EXHAUSTIVE bounded-spread (all k-subsets of {0..M}): consec minimizes, none below thr_k
+   k=8,M=16: min mu=0.94014 (=consec True), #minimizers=2, below thr_k=0  [thr=0.6185]
+   k=9,M=14: min mu=0.84014 (=consec True), #minimizers=1, below thr_k=0  [thr=0.5000]
+   k=10,M=14: min mu=0.77551 (=consec True), #minimizers=1, below thr_k=0  [thr=0.3900]
+
+  (4c) seventh-arc-free LOWER BOUND  L7(E) := meas{some open (j/7,(j+1)/7) point-free} <= mu_{1/7}(E)
+   k=8: L7(consec)=0.73605  mu=0.94014  thr_k=0.61854  L7>=thr? True
+   k=9: L7(consec)=0.65510  mu=0.84014  thr_k=0.50000  L7>=thr? True
+   k=10: L7(consec)=0.56179  mu=0.77551  thr_k=0.39000  L7>=thr? True
+   k=11: L7(consec)=0.49172  mu=0.62630  thr_k=0.28000  L7>=thr? True
+   k=12: L7(consec)=0.42374  mu=0.56990  thr_k=0.14286  L7>=thr? True
+   [VERIFIED] on the minimizer L7 already clears thr_k (slack); a uniform proof that
+   min_E L7(E) >= thr_k would close the lemma — but min_E L7 is itself at consecutive (same difficulty).
+
+  (4d) huge-spread descent (float, span up to 1e5): large spread RAISES mu toward iid≈1
+   tested 220 huge-spread sets; violations(min below consec): 0
+   k=8: min mu found=1.0000  consec=0.9402  (>= consec)
+   k=9: min mu found=0.9999  consec=0.8401  (>= consec)
+   k=10: min mu found=0.9992  consec=0.7755  (>= consec)
+   k=11: min mu found=0.9970  consec=0.6263  (>= consec)
+   k=12: min mu found=0.9932  consec=0.5699  (>= consec)
+
+  (4e) margin union bound at binding k=8, P={1,5,7,8,9}, E={0..7}:
+   delta=0       : meas(G_P^+)=0.38146 mu_(1/7+d)=0.94014 union_bound=+0.32160
+   delta=1/140   : meas(G_P^+)=0.33465 mu_(1/7+d)=0.89786 union_bound=+0.23251
+   delta=1/280   : meas(G_P^+)=0.35752 mu_(1/7+d)=0.91900 union_bound=+0.27652
+   delta=1/560   : meas(G_P^+)=0.36949 mu_(1/7+d)=0.92957 union_bound=+0.29906
+   [VERIFIED] ρ*_{1/7+δ} >= meas(G_P^+δ)+mu_{1/7+δ}-1 > 0 for small δ; the margin does NOT break it.
+
+  (4f') L7 reduction target: min_E L7(E) over {0..12}, k=8 (the binding case)
+     min L7 = 541/735 = 0.73605 at [0, 1, 2, 3, 4, 5, 6, 7]; #below thr_8=0; thr_8=0.61854
+     [VERIFIED EXACT] L7 minimized at consecutive, clears thr_8 with slack 0.1175
+     (Paley-Zygmund on the 7-arc partition gives 0.559<thr_8 at k=8 — too lossy; the
+      seventh-FREE union L7 itself is the right object, but its min is again consecutive.)
+
+  (4f) STATUS of the spread bound:
+   PROVED: monotonicity, scale-invariance, the seventh-free lower bound is valid,
+           k<=7 (pigeonhole), k=8 exhaustive over {0..16}.
+   VERIFIED (not PROVED): consecutive is the GLOBAL minimizer of mu_{1/7} over ALL integer E,
+           hence mu_{1/7}(E) >= mu_{1/7}(consec_k) >= thr_k (binding k=8, slack 0.32).
+           Survived exhaustive bounded + huge-spread (1e5) descents; opposite extremizer
+           from the FALSE mu_{2/7} (which large spread DROVE below 1/14).
+   The residual is a finite-dimensional extremal inequality with large margin; the cleanest
+   honest reduction: prove min_E L7(E) >= thr_k (the seventh-free bound), a bounded-denominator
+   3-distance computation.  LRC(14) NOT proved.
+
+==============================================================================
+SOUNDNESS CONSISTENCY — reconstructed covering sets are all lonely (witness exists)
+==============================================================================
+  primitive covering 13-sets tested: 284; with a level-1/14 witness: 284
+  NON-lonely (M<1/14) found: 0  []
+  [VERIFIED] consistent with LRC(14): True
+
+==============================================================================
+SUMMARY
+==============================================================================
+  PART0 engine ok ............................ True
+  PART1 cluster equivalence exact ............ True   [SOUNDNESS, 1/7 sharp]
+  PART2 GAP-2 |rho_K-rho*|<=C/Vmax ........... True   [explicit V0=ceil(C/rho*)]
+  PART3 GAP-3 explicit V0 construction ....... True   [delta-good x => witness]
+  consistency (no non-lonely covering set) ... True
+  PART4 spread bound: structural lemmas PROVED; consec-minimizes VERIFIED-not-PROVED.
+  => Upstream chain rho*_{1/7}>0 ==> LRC(14) is RIGOROUS (GAP-2/GAP-3/soundness closed);
+     the SINGLE open analytic gap is mu_{1/7}(E) >= thr_k (the 1/7-spread bound).

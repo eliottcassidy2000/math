@@ -1,0 +1,71 @@
+==============================================================================
+ADVERSARIAL VERIFICATION -- 1/7-SPREAD BOUND  (kps-S6-wf)
+==============================================================================
+
+(V1) ENGINE CROSS-CHECK  (independent direct maxgap engine B vs A)
+   k= 7: A=           1  B=           1  A==B:True  anchor:True
+   k= 8: A=     691/735  B=     691/735  A==B:True  anchor:True
+   k= 9: A=     247/294  B=     247/294  A==B:True  anchor:True
+   k=10: A=       38/49  B=       38/49  A==B:True  anchor:True
+   k=11: A=   1381/2205  B=   1381/2205  A==B:True  anchor:True
+   k=12: A= 13823/24255  B= 13823/24255  A==B:True  anchor:True
+   k=13: A=    477/1078  B=    477/1078  A==B:True  anchor:True
+   random A-vs-B mismatches: 0  => engines agree: True
+   thr_k anchors reproduce: True  ->  thr_8=3637/5880, thr_9=2025/4004, thr_10=36/91, thr_11=25/91, thr_12=1/7
+   => (V1) True
+
+(V2) mu_{1/7}(E) >= EWLB_A(E)  (the only PROVED inequality the reduction uses)
+   tested 505 sets; EWLB>mu violations = 0  => (V2) True
+   (EWLB>mu would BREAK the reduction; 0 violations confirms mu>=EWLB direction.)
+
+(V3) COUNTEREXAMPLE HUNT  mu_{1/7}(E) < thr_k  (the actual theorem)
+   thr: {8: 0.6185374149659864, 9: 0.5057442557442557, 10: 0.3956043956043956, 11: 0.27472527472527475, 12: 0.14285714285714285}
+
+   (V3a) exhaustive bounded spread, engine A (heavy) + engine B (small re-check):
+      k= 8: min mu(A)=0.940136 at [0, 1, 2, 3, 4, 5, 6, 7] (consec=0.940136, thr=0.618537) [6434 A-sets, B-recheck min=0.940136 on 1716 sets] OK
+      k= 9: min mu(A)=0.840136 at [0, 1, 2, 3, 4, 5, 6, 7, 8] (consec=0.840136, thr=0.505744) [6435 A-sets, B-recheck min=0.840136 on 1287 sets] OK
+      k=10: min mu(A)=0.775510 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (consec=0.775510, thr=0.395604) [5005 A-sets, B-recheck min=0.775510 on 715 sets] OK
+      k=11: min mu(A)=0.626304 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (consec=0.626304, thr=0.274725) [1001 A-sets, B-recheck min=0.626304 on 286 sets] OK
+      k=12: min mu(A)=0.569903 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11] (consec=0.569903, thr=0.142857) [364 A-sets, B-recheck min=0.569903 on 78 sets] OK
+
+   (V3b) aggressive large-spread DESCENT toward smaller mu (engine A, exact):
+      k= 8: descent min mu = 0.940136 at [0, 1, 2, 3, 4, 5, 6, 7]  (consec=0.940136, thr=0.618537)  consec_still_min=True  OK
+      k= 9: descent min mu = 0.840136 at [0, 1, 2, 3, 4, 5, 6, 7, 8]  (consec=0.840136, thr=0.505744)  consec_still_min=True  OK
+      k=10: descent min mu = 0.775510 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  (consec=0.775510, thr=0.395604)  consec_still_min=True  OK
+      k=11: descent min mu = 0.626304 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  (consec=0.626304, thr=0.274725)  consec_still_min=True  OK
+      k=12: descent min mu = 0.569903 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  (consec=0.569903, thr=0.142857)  consec_still_min=True  OK
+
+   GLOBAL counterexample found (mu<thr): None
+
+(V4) DOES ANY E BEAT CONSECUTIVE on mu (mu(E) < mu(consec))?
+   checked 5840 sets; sets beating consecutive on mu = 0
+   => consecutive-minimizes-mu survives: True
+
+(V5) CONTRAST CONTROL: mu_{2/7} has no floor (descent finds beats-consec)
+   k=8: mu_2/7(consec)=0.33265  min found=0.32273 at [0, 2, 3, 4, 5, 6, 8, 11]  beats_consec=True
+   k=9: mu_2/7(consec)=0.28265  min found=0.24150 at [0, 1, 2, 4, 6, 7, 8, 10, 12]  beats_consec=True
+   k=10: mu_2/7(consec)=0.25261  min found=0.15508 at [0, 3, 5, 7, 9, 10, 11, 15, 17, 20]  beats_consec=True
+   (If beats_consec=True here, the descent machinery DOES find improvers when
+    they exist -- so its failure to beat consec for 1/7 is meaningful, not impotent.)
+
+(V6) L4 per-rational local-width: consecutive widest at fixed residues
+   consecutive attains per-(p,q) max local width (q=7..29): True
+
+==============================================================================
+VERDICT
+==============================================================================
+   (V1) engines agree + anchors      : True
+   (V2) mu >= EWLB (PROVED dir) holds : True
+   (V3) counterexample mu<thr found   : False  (hit=None)
+   (V4) any E beats consec on mu      : False
+   (V6) L4 local-width consec-maximal : True
+
+   NO sub-threshold / no-beat-consec counterexample: True
+
+   The UNDERLYING THEOREM (mu_{1/7}(E) >= thr_k) survives every attack:
+   exhaustive bounded spread (independent engine) + aggressive descent
+   that demonstrably crushes the analogous mu_{2/7}.  The mu>=EWLB
+   inequality (the reduction's only proved step) holds on all tests.
+   The author's RESIDUAL GAP is REAL: 'consecutive minimizes EWLB_A for
+   ALL E (unbounded spread)' is exact-verified, not symbolically closed.
+   => Claim status PARTIAL is CORRECT.

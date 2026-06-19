@@ -1,0 +1,18 @@
+EXACT exhaustion of net(E), primitive k=8.  consec=44/735=0.059864, cap_8=0.381463
+  Wmax= 7: max net (spread=Wmax) = 0.059864 (44/735)  argmax=(0, 1, 2, 3, 4, 5, 6, 7)  [1 sets, 0.0s] 
+  Wmax= 8: max net (spread=Wmax) = 0.000000 (0)  argmax=None  [7 sets, 0.0s] 
+  Wmax= 9: max net (spread=Wmax) = 0.028118 (62/2205)  argmax=(0, 2, 3, 4, 5, 6, 7, 9)  [28 sets, 0.1s] 
+  Wmax=10: max net (spread=Wmax) = 0.028118 (62/2205)  argmax=(0, 1, 3, 4, 5, 6, 7, 10)  [84 sets, 0.3s] 
+  Wmax=11: max net (spread=Wmax) = 0.019460 (472/24255)  argmax=(0, 1, 2, 4, 5, 6, 7, 11)  [210 sets, 0.9s] 
+  Wmax=12: max net (spread=Wmax) = 0.028118 (62/2205)  argmax=(0, 2, 3, 5, 6, 7, 9, 12)  [462 sets, 1.5s] 
+  Wmax=13: max net (spread=Wmax) = 0.026053 (1643/63063)  argmax=(0, 2, 4, 6, 7, 9, 11, 13)  [924 sets, 4.3s] 
+  Wmax=14: max net (spread=Wmax) = 0.024737 (40/1617)  argmax=(0, 1, 2, 3, 11, 12, 13, 14)  [1715 sets, 9.9s] 
+  Wmax=15: max net (spread=Wmax) = 0.025397 (8/315)  argmax=(0, 3, 5, 6, 9, 10, 12, 15)  [3003 sets, 19.0s] 
+  Wmax=16: max net (spread=Wmax) = 0.010989 (1/91)  argmax=(0, 3, 5, 7, 9, 11, 13, 16)  [4998 sets, 38.0s] 
+  Wmax=17: max net (spread=Wmax) = 0.020954 (192/9163)  argmax=(0, 5, 6, 7, 10, 11, 12, 17)  [8008 sets, 76.0s] 
+  Wmax=18: max net (spread=Wmax) = 0.021001 (86/4095)  argmax=(0, 3, 5, 6, 9, 12, 15, 18)  [12348 sets, 111.6s] 
+  Wmax=19: max net (spread=Wmax) = 0.018093 (758/41895)  argmax=(0, 5, 7, 9, 10, 12, 14, 19)  [18564 sets, 208.6s] 
+
+  GLOBAL max net over ALL primitive k=8, spread<=19 = 0.059864 (44/735) at (0, 1, 2, 3, 4, 5, 6, 7)
+  consec=44/735; cap_8=2243/5880
+  RESULT: max net == consec (44/735), <= cap_8, margin to cap_8 = 0.321599

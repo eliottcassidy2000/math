@@ -1,0 +1,12 @@
+[SCALING THEOREM] mu_theta(cE)==mu_theta(E) stress battery:
+   2880 checks across theta in {1/7,2/7,1/5,3/11}, c in 2..7: violations=0
+   => SCALING INVARIANCE VERIFIED (consistent with the proof)
+
+[CONSEC VALUES] mu_1/7(consecutive_k), the downstream floor inputs:
+   k= 7: mu_1/7(consec)=1=1.000000  net=1-mu=0=0.000000
+   k= 8: mu_1/7(consec)=691/735=0.940136  net=1-mu=44/735=0.059864
+   k= 9: mu_1/7(consec)=247/294=0.840136  net=1-mu=47/294=0.159864
+   k=10: mu_1/7(consec)=38/49=0.775510  net=1-mu=11/49=0.224490
+   k=11: mu_1/7(consec)=1381/2205=0.626304  net=1-mu=824/2205=0.373696
+   k=12: mu_1/7(consec)=13823/24255=0.569903  net=1-mu=10432/24255=0.430097
+   k=13: mu_1/7(consec)=477/1078=0.442486  net=1-mu=601/1078=0.557514

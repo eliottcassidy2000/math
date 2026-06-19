@@ -1,0 +1,107 @@
+============================================================================
+LRC(14)  --  THE 1/7-SPREAD BOUND  (kps-S6-wf, three-gap route)
+============================================================================
+
+[L0] ENGINE / ANCHOR VERIFICATION
+   k= 7: mu_1/7(consec)=           1 = 1.000000  [anchor True]  [engine==net-routine True]
+   k= 8: mu_1/7(consec)=     691/735 = 0.940136  [anchor True]  [engine==net-routine True]
+   k= 9: mu_1/7(consec)=     247/294 = 0.840136  [anchor True]  [engine==net-routine True]
+   k=10: mu_1/7(consec)=       38/49 = 0.775510  [anchor True]  [engine==net-routine True]
+   k=11: mu_1/7(consec)=   1381/2205 = 0.626304  [anchor True]  [engine==net-routine True]
+   k=12: mu_1/7(consec)= 13823/24255 = 0.569903  [anchor True]  [engine==net-routine True]
+   k=13: mu_1/7(consec)=    477/1078 = 0.442486  [anchor True]  [engine==net-routine True]
+   thr_8 =  3637/5880 = 0.618537   [anchor True]   consec mu >= thr_k ? True
+   thr_9 =  2025/4004 = 0.505744   [anchor True]   consec mu >= thr_k ? True
+   thr_10 =      36/91 = 0.395604   [anchor True]   consec mu >= thr_k ? True
+   thr_11 =      25/91 = 0.274725   [anchor True]   consec mu >= thr_k ? True
+   thr_12 =        1/7 = 0.142857   [anchor True]   consec mu >= thr_k ? True
+   => [L0] all anchors reproduce: True
+
+[L1] SCALE INVARIANCE  mu(cE)=mu(E)  (THM-522; spot-checked)
+   mu(cE)==mu(E) for c in {2,3,5} on sample sets: True
+   (so WLOG gcd(E)=1; the integer 'co-offset' set may be taken primitive.)
+
+[L2] PIGEONHOLE  k<=7  =>  mu_{1/7}=1  (PROVED)
+   k=3: min mu_1/7 over all shapes spread<= 9 = 1  (proved =1)
+   k=4: min mu_1/7 over all shapes spread<= 10 = 1  (proved =1)
+   k=5: min mu_1/7 over all shapes spread<= 11 = 1  (proved =1)
+   k=6: min mu_1/7 over all shapes spread<= 12 = 1  (proved =1)
+   k=7: min mu_1/7 over all shapes spread<= 13 = 1  (proved =1)
+   => [L2] True
+
+[L3] NET-POSITIVITY CHARACTERIZATION  (PROVED; exact-verified)
+   exhaustive k in {8,9}, spread<=12: 1287 sets, characterization mismatches = 0  => [L3] True
+
+[L4] LOCAL-NET-WIDTH LEMMA  (consecutive maximizes per-rational width)
+   consecutive attains the per-q max local width for q=7..24: True
+   (max local width is the constant 1/49=0.02041 at the best p/q each q)
+   slope-monotonicity spot check (same residues mod 8, spread the top element):
+      E=[0, 1, 2, 3, 4, 5, 6, 7]          w(.;1/8) =       1/49 = 0.02041
+      E=[0, 1, 2, 3, 4, 5, 6, 15]         w(.;1/8) =      1/315 = 0.00317
+      E=[0, 1, 2, 3, 4, 5, 6, 23]         w(.;1/8) =     5/2737 = 0.00183
+
+[L5] FINITE VERIFICATION  (consecutive minimizes; mu>=thr_k)
+   k= 8: min mu =        691/735 = 0.94014 at [0, 1, 2, 3, 4, 5, 6, 7]  | consec=0.94014 thr=0.61854  consec_is_argmin=True  min>=thr=True  [3431 exh + 600 adv]
+   k= 9: min mu =        247/294 = 0.84014 at [0, 1, 2, 3, 4, 5, 6, 7, 8]  | consec=0.84014 thr=0.50574  consec_is_argmin=True  min>=thr=True  [3003 exh + 600 adv]
+   k=10: min mu =          38/49 = 0.77551 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  | consec=0.77551 thr=0.39560  consec_is_argmin=True  min>=thr=True  [2002 exh + 600 adv]
+   k=11: min mu =      1381/2205 = 0.62630 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]  | consec=0.62630 thr=0.27473  consec_is_argmin=True  min>=thr=True  [1001 exh + 600 adv]
+   k=12: min mu =    13823/24255 = 0.56990 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]  | consec=0.56990 thr=0.14286  consec_is_argmin=True  min>=thr=True  [364 exh + 600 adv]
+   => [L5] True
+
+[L6] TAIL CONTROL  (smallest netting denominator distribution, k=8)
+   98.3% of random k=8 sets NEVER net (N=0).
+   netting sets' smallest denominator q:
+      q=  8:   33  (1.10%)
+      q= 15:   15  (0.50%)
+      q= 36:    1  (0.03%)
+      q= 37:    1  (0.03%)
+      q= 43:    1  (0.03%)
+   => net mass concentrates at small q (q=8,15 dominate); large-q-only nets are rare.
+
+[L7] EMPTY-WINDOW LOWER BOUND  (mu >= EWLB; consecutive minimizes EWLB)
+   (i) mu(consec) >= EWLB(consec) >= thr_k :
+       k= 8: mu=0.94014 >= EWLB=0.69218 >= thr=0.61854  [True]
+       k= 9: mu=0.84014 >= EWLB=0.60544 >= thr=0.50574  [True]
+       k=10: mu=0.77551 >= EWLB=0.50385 >= thr=0.39560  [True]
+       k=11: mu=0.62630 >= EWLB=0.42851 >= thr=0.27473  [True]
+       k=12: mu=0.56990 >= EWLB=0.37830 >= thr=0.14286  [True]
+   (ii) consecutive minimizes EWLB (exhaustive spread<=14 + adversarial):
+       k= 8: min EWLB=0.69218 at consec  consec_argmin=True  min>=thr=True  [3431 exh + 2000 adv]
+       k= 9: min EWLB=0.60544 at consec  consec_argmin=True  min>=thr=True  [3003 exh + 2000 adv]
+       k=10: min EWLB=0.50385 at consec  consec_argmin=True  min>=thr=True  [2002 exh + 2000 adv]
+       k=11: min EWLB=0.42851 at consec  consec_argmin=True  min>=thr=True  [1001 exh + 2000 adv]
+       k=12: min EWLB=0.37830 at consec  consec_argmin=True  min>=thr=True  [78 exh + 2000 adv]
+   => [L7] True  (mu >= EWLB is PROVED; 'consec minimizes EWLB' VERIFIED, 0 counterexamples)
+
+============================================================================
+VERDICT
+============================================================================
+   [L0] anchors                : True
+   [L1] scale invariance       : True
+   [L2] pigeonhole k<=7        : True            (PROVED -> k<=7 branch DONE)
+   [L3] net-positivity         : True            (PROVED + verified)
+   [L4] local-width lemma      : True            (PROVED)
+   [L5] finite + adversary (mu): True            (VERIFIED, 0 counterexamples)
+   [L7] empty-window reduction : True            (mu>=EWLB PROVED; consec-min VERIFIED)
+   ALL CHECKS PASS             : True
+
+   STATUS of the 1/7-spread bound  mu_{1/7}(E) >= thr_k  (8<=k<=12):
+     * k<=7 branch: PROVED (pigeonhole, L2).  mu_{1/7}=1.
+     * k>=8 branch: REDUCED, via the PROVED inequality mu >= EWLB_A (L7), to
+       the single statement  'consecutive minimizes EWLB_A'  -- a minimization
+       of the SIMPLE empty-window functional (no maxgap / three-gap combinatorics).
+       That statement is VERIFIED: exhaustive over all primitive E with bounded
+       spread AND a large adversarial sweep up to spread 8k (0 counterexamples),
+       with margin EWLB(consec) - thr_k >= 0.07 at every k (binding k=8: 0.074).
+     * The independent three-gap route (L3 net-positivity + L4 per-rational
+       consecutive-maximality) PROVES the supporting structure and, with L5,
+       gives a second confirmation that consecutive is the global minimizer of mu.
+
+   RESIDUAL (the one symbolic step): a closed proof that consecutive minimizes
+   EWLB_A for ALL E (unbounded spread).  EWLB_A is linear in the per-speed danger
+   sets, so this is strictly simpler than minimizing mu, but a uniform symbolic
+   bound (cross-window correlation is positive, so Bonferroni alone fails) is not
+   yet closed.  It is exact-verified with a >=0.07 margin and 0 counterexamples.
+
+   CONCLUSION: PARTIAL.  k<=7 PROVED.  k>=8 reduced (via the PROVED bound
+   mu>=EWLB) to 'consecutive minimizes EWLB', exact-verified.  Result type: PARTIAL.

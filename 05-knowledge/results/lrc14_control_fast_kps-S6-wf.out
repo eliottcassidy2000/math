@@ -1,0 +1,7 @@
+=== CONTROL: mu_{2/7}, does random search beat consec? ===
+k=9: consec_2/7=0.2827 best=0.1993 at (0, 4, 5, 6, 7, 8, 10, 12, 15) BEATEN:True
+k=10: consec_2/7=0.2526 best=0.1580 at (0, 1, 5, 6, 7, 8, 9, 11, 13, 16) BEATEN:True
+
+=== Exhaustive k=8 spread<=12 min mu_{1/7} ===
+sets=792 min mu=691/735=0.9401 at (0, 1, 2, 3, 4, 5, 6, 7) consec-argmin:True below-thr8:0
+consec mu == min: True

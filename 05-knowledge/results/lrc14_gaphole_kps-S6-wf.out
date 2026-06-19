@@ -1,0 +1,32 @@
+[SPREAD-CUTOFF] among k=8 E with net>0, max consecutive gap of E?
+   W=10: #(net>0 primitive, max=W)=    3  max consec-gap among them=4  E=(0, 1, 2, 3, 7, 8, 9, 10)
+   W=12: #(net>0 primitive, max=W)=   11  max consec-gap among them=5  E=(0, 1, 2, 3, 5, 6, 7, 12)
+   W=14: #(net>0 primitive, max=W)=   49  max consec-gap among them=8  E=(0, 1, 2, 3, 4, 5, 6, 14)
+   W=16: #(net>0 primitive, max=W)=   24  max consec-gap among them=10  E=(0, 1, 2, 3, 13, 14, 15, 16)
+
+[DIRECT hole test] does a single big hole kill net? scan E=run+hole+run:
+   runs 1+7, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 1+7, hole H= 8: E=[0, 8, 9, 10, 11, 12, 13, 14] net=0.02041 NET>0
+   runs 1+7, hole H= 9: E=[0, 9, 10, 11, 12, 13, 14, 15] net=0.01234 NET>0
+   runs 2+6, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 2+6, hole H= 8: E=[0, 1, 9, 10, 11, 12, 13, 14] net=0.02041 NET>0
+   runs 2+6, hole H= 9: E=[0, 1, 10, 11, 12, 13, 14, 15] net=0.01234 NET>0
+   runs 3+5, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 3+5, hole H= 8: E=[0, 1, 2, 10, 11, 12, 13, 14] net=0.02041 NET>0
+   runs 3+5, hole H= 9: E=[0, 1, 2, 11, 12, 13, 14, 15] net=0.01234 NET>0
+   runs 4+4, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 4+4, hole H= 4: E=[0, 1, 2, 3, 7, 8, 9, 10] net=0.00510 NET>0
+   runs 4+4, hole H= 5: E=[0, 1, 2, 3, 8, 9, 10, 11] net=0.00510 NET>0
+   runs 4+4, hole H= 8: E=[0, 1, 2, 3, 11, 12, 13, 14] net=0.02474 NET>0
+   runs 4+4, hole H= 9: E=[0, 1, 2, 3, 12, 13, 14, 15] net=0.01667 NET>0
+   runs 4+4, hole H=10: E=[0, 1, 2, 3, 13, 14, 15, 16] net=0.00137 NET>0
+   runs 4+4, hole H=11: E=[0, 1, 2, 3, 14, 15, 16, 17] net=0.00273 NET>0
+   runs 5+3, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 5+3, hole H= 8: E=[0, 1, 2, 3, 4, 12, 13, 14] net=0.02041 NET>0
+   runs 5+3, hole H= 9: E=[0, 1, 2, 3, 4, 13, 14, 15] net=0.01234 NET>0
+   runs 6+2, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 6+2, hole H= 8: E=[0, 1, 2, 3, 4, 5, 13, 14] net=0.02041 NET>0
+   runs 6+2, hole H= 9: E=[0, 1, 2, 3, 4, 5, 14, 15] net=0.01234 NET>0
+   runs 7+1, hole H= 1: E=[0, 1, 2, 3, 4, 5, 6, 7] net=0.05986 NET>0
+   runs 7+1, hole H= 8: E=[0, 1, 2, 3, 4, 5, 6, 14] net=0.02041 NET>0
+   runs 7+1, hole H= 9: E=[0, 1, 2, 3, 4, 5, 6, 15] net=0.01234 NET>0

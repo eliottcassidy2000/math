@@ -1,0 +1,10 @@
+cap_8=0.381463, thr_8=0.618537, t=1/56=0.017857, 1/8=0.125000
+
+consec_8: E[V]=0.114153 (863/7560), E[V^2]=0.043974, Var=0.030943
+   Cantelli meas{V<=1/56} <= 0.769422  vs cap_8=0.381463  TOO WEAK (>cap8)
+
+Scanning primitive k=8 for WORST (largest) Cantelli bound and min E[V]:
+   scanned 3431 primitive sets (W<=14)
+   min E[V] = 0.091780 at (0, 2, 3, 4, 6, 8, 9, 14)  (if E[V] dips below t=1/56, Cantelli fails)
+   WORST Cantelli bound = 0.778136 at (0, 2, 3, 4, 5, 6, 8, 12)
+   cap_8=0.381463  => CANTELLI INSUFFICIENT for some E

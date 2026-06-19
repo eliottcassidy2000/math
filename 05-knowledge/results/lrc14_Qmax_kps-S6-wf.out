@@ -1,0 +1,19 @@
+cap_8=2243/5880=0.381463
+
+Q(consec_8): in [0.327704, 0.327704]  (rational since equispaced?)
+   cap_8 - Q(consec_8)_hi = 0.053759  (need >0 for headroom)
+
+Max Q (UPPER bound Qhi) over primitive k=8 by spread W=max(E):
+   W= 7: max Qhi=0.327704 (1 sets)  E=(0, 1, 2, 3, 4, 5, 6, 7)  <=cap8
+   W= 8: max Qhi=0.274315 (7 sets)  E=(0, 1, 2, 3, 4, 5, 6, 8)  <=cap8
+   W= 9: max Qhi=0.187720 (28 sets)  E=(0, 1, 3, 4, 5, 6, 8, 9)  <=cap8
+   W=10: max Qhi=0.226376 (84 sets)  E=(0, 2, 3, 4, 5, 6, 8, 10)  <=cap8
+   W=11: max Qhi=0.147313 (210 sets)  E=(0, 2, 3, 5, 6, 8, 9, 11)  <=cap8
+   W=12: max Qhi=0.223873 (462 sets)  E=(0, 2, 4, 5, 6, 8, 10, 12)  <=cap8
+   W=13: max Qhi=0.153432 (924 sets)  E=(0, 1, 3, 5, 7, 9, 11, 13)  <=cap8
+   W=14: max Qhi=0.190724 (1715 sets)  E=(0, 3, 5, 6, 8, 9, 11, 14)  <=cap8
+   W=15: max Qhi=0.198866 (3003 sets)  E=(0, 1, 2, 3, 4, 5, 6, 15)  <=cap8
+   W=16: max Qhi=0.196653 (4998 sets)  E=(0, 1, 2, 3, 4, 5, 6, 16)  <=cap8
+
+  GLOBAL max Qhi (W<=16) = 0.327704 at (0, 1, 2, 3, 4, 5, 6, 7)
+  cap_8=0.381463; margin = 0.053759  Q-RELAXATION VIABLE so far

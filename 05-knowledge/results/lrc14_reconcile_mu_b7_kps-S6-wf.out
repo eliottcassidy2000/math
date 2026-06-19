@@ -1,0 +1,18 @@
+=== (1) Confirm engine mu is true mu via fine grid bracket ===
+consec_8: engine mu=691/735=0.940136  grid bracket [0.939800,0.940200]  engine in bracket? True
+consec_9: engine mu=247/294=0.840136  grid bracket [0.839600,0.840400]  engine in bracket? True
+consec_10: engine mu=38/49=0.775510  grid bracket [0.774900,0.775900]  engine in bracket? True
+
+=== (2) B7 (EXACT) vs engine-mu, and B7 margins to thr_k ===
+consec_8: B7=0.73639  mu_engine=0.94014  B7<=mu? True  thr=0.61854  B7-thr=+0.11786
+consec_9: B7=0.63776  mu_engine=0.84014  B7<=mu? True
+consec_10: B7=0.56831  mu_engine=0.77551  B7<=mu? True
+consec_11: B7=0.45680  mu_engine=0.62630  B7<=mu? True
+consec_12: B7=0.40584  mu_engine=0.56990  B7<=mu? True  thr=0.14286  B7-thr=+0.26299
+consec_13: B7=0.36537  mu_engine=0.44249  B7<=mu? True  thr=0.00000  B7-thr=+0.36537
+
+=== (3) Does B7 >= thr hold at the BINDING k=8, and with what margin? ===
+B7(consec_8)=0.73639  thr_8=0.61854  margin=+0.11786
+(prompt claimed B7 stays in [0.94,1.0] with margin>=0.30 -- that is the
+ IID value 0.9755, NOT the structured deterministic B7=0.736; the real
+ minimizer-margin is ~0.118, far smaller than claimed.)

@@ -1,0 +1,108 @@
+=== (A) Engine sanity vs brute-force proxy ===
+  E=[0, 1, 2, 3, 4, 5, 6, 7] th=1/7: engine=691/735 (0.94014) bf~=0.94762 diff=0.00748 OK
+  E=[0, 1, 2, 3, 4, 5, 6] th=1/7: engine=1 (1.00000) bf~=1.00000 diff=0.00000 OK
+  E=[0, 1, 2, 3, 4, 5, 6, 7, 8] th=1/7: engine=247/294 (0.84014) bf~=0.83690 diff=0.00323 OK
+  E=[0, 2, 3, 5, 7, 11, 13, 14] th=1/7: engine=1 (1.00000) bf~=1.00000 diff=0.00000 OK
+  E=[0, 1, 2, 3, 4, 5, 6, 7] th=2/7: engine=163/490 (0.33265) bf~=0.34405 diff=0.01139 OK
+  E=[0, 1, 3, 4, 5, 9] th=1/7: engine=1 (1.00000) bf~=1.00000 diff=0.00000 OK
+  ANCHOR consec_8 mu_1/7 = 691/735 expect 691/735 = 691/735
+  ANCHOR consec_7 mu_1/7 = 1 expect 1
+
+=== (B) thr_k and consec_k mu values ===
+  k=8: mu_1/7(consec_8) = 691/735 (0.94014) expect 691/735 (0.94014) OK
+        thr_8=3637/5880 (0.61854)  consec - thr = 1891/5880 (0.32160) >=0 OK
+  k=9: mu_1/7(consec_9) = 247/294 (0.84014) expect 247/294 (0.84014) OK
+  k=10: mu_1/7(consec_10) = 38/49 (0.77551) expect 38/49 (0.77551) OK
+  k=11: mu_1/7(consec_11) = 1381/2205 (0.62630) expect 1381/2205 (0.62630) OK
+  k=12: mu_1/7(consec_12) = 13823/24255 (0.56990) expect 13823/24255 (0.56990) OK
+        thr_12=1/7 (0.14286)  consec - thr = 10358/24255 (0.42705) >=0 OK
+  k=13: mu_1/7(consec_13) = 477/1078 (0.44249) expect 477/1078 (0.44249) OK
+        thr_13=0 (0.00000)  consec - thr = 477/1078 (0.44249) >=0 OK
+  cap_8 = 1-thr_8 = 2243/5880 (0.38146) expect 2243/5880=2243/5880
+
+=== (C) Counterexample hunt: mu_1/7(E) < consec / thr ===
+  -- C1: exhaustive k=8, primitive-ish, spread up to 14 --
+     tested 3432 sets; min mu found = 0.94014 at E=None
+     consec_8 = 0.94014, thr_8 = 0.61854
+     min >= consec_8 ? True
+  -- C2: aggressive large-spread descent, k=8 --
+     best (lowest mu) found in descent: 0.94014 at None
+     still >= consec_8 (0.94014)? True
+  -- C3: structured families (perforated, geometric, Sidon-ish), k=8..12 --
+     consec             k=8 E=[0, 1, 2, 3, 4, 5]...: mu=0.94014 consec_k=0.94014 consec is min
+     perf-skip2         k=8 E=[0, 2, 4, 6, 8, 10]...: mu=0.94014 consec_k=0.94014 consec is min
+     perf-odd           k=8 E=[0, 1, 3, 5, 7, 9]...: mu=0.98901 consec_k=0.94014 consec is min
+     consec+outlier     k=8 E=[0, 1, 2, 3, 4, 5]...: mu=0.99916 consec_k=0.94014 consec is min
+     sidon              k=8 E=[0, 1, 3, 7, 12, 20]...: mu=1.00000 consec_k=0.94014 consec is min
+     consec             k=9 E=[0, 1, 2, 3, 4, 5]...: mu=0.84014 consec_k=0.84014 consec is min
+     perf-skip2         k=9 E=[0, 2, 4, 6, 8, 10]...: mu=0.84014 consec_k=0.84014 consec is min
+     perf-odd           k=9 E=[0, 1, 3, 5, 7, 9]...: mu=0.93197 consec_k=0.84014 consec is min
+     consec+outlier     k=9 E=[0, 1, 2, 3, 4, 5]...: mu=0.92898 consec_k=0.84014 consec is min
+     sidon              k=9 E=[0, 1, 3, 7, 12, 20]...: mu=1.00000 consec_k=0.84014 consec is min
+     consec             k=10 E=[0, 1, 2, 3, 4, 5]...: mu=0.77551 consec_k=0.77551 consec is min
+     perf-skip2         k=10 E=[0, 2, 4, 6, 8, 10]...: mu=0.77551 consec_k=0.77551 consec is min
+     perf-odd           k=10 E=[0, 1, 3, 5, 7, 9]...: mu=0.83383 consec_k=0.77551 consec is min
+     geom               k=10 E=[0, 3, 9, 11, 27, 29]...: mu=1.00000 consec_k=0.77551 consec is min
+     consec+outlier     k=10 E=[0, 1, 2, 3, 4, 5]...: mu=0.83227 consec_k=0.77551 consec is min
+     sidon              k=10 E=[0, 1, 3, 7, 12, 20]...: mu=1.00000 consec_k=0.77551 consec is min
+     consec             k=11 E=[0, 1, 2, 3, 4, 5]...: mu=0.62630 consec_k=0.62630 consec is min
+     perf-skip2         k=11 E=[0, 2, 4, 6, 8, 10]...: mu=0.62630 consec_k=0.62630 consec is min
+     perf-odd           k=11 E=[0, 1, 3, 5, 7, 9]...: mu=0.77050 consec_k=0.62630 consec is min
+     geom               k=11 E=[0, 3, 9, 14, 16, 23]...: mu=0.99840 consec_k=0.62630 consec is min
+     consec+outlier     k=11 E=[0, 1, 2, 3, 4, 5]...: mu=0.76428 consec_k=0.62630 consec is min
+     sidon              k=11 E=[0, 1, 3, 7, 12, 20]...: mu=1.00000 consec_k=0.62630 consec is min
+     consec             k=12 E=[0, 1, 2, 3, 4, 5]...: mu=0.56990 consec_k=0.56990 consec is min
+     perf-skip2         k=12 E=[0, 2, 4, 6, 8, 10]...: mu=0.56990 consec_k=0.56990 consec is min
+     perf-odd           k=12 E=[0, 1, 3, 5, 7, 9]...: mu=0.62222 consec_k=0.56990 consec is min
+     consec+outlier     k=12 E=[0, 1, 2, 3, 4, 5]...: mu=0.61361 consec_k=0.56990 consec is min
+     sidon              k=12 E=[0, 1, 3, 7, 12, 20]...: mu=0.99968 consec_k=0.56990 consec is min
+
+=== (D) 'consecutive minimizes mu_1/7' exhaustive-ish + monotonicity ===
+  k=8 spread<=12: tested 792, global min mu = 0.940136 at (0, 1, 2, 3, 4, 5, 6, 7) (consec=0.940136)
+  consecutive IS the minimizer over this range? True
+  k=9 spread<=11: tested 165, global min mu = 0.840136 at (0, 1, 2, 3, 4, 5, 6, 7, 8) (consec=0.840136)
+  consecutive IS the minimizer over this range? True
+  -- stretch-monotonicity check (prompt claims FALSE) --
+     stretch DECREASES mu: E=[0, 2, 4, 8, 14, 19, 23, 24] mu=1.00000 -> E2=[0, 2, 4, 8, 14, 19, 23, 25] mu=0.99793  (confirms NON-monotone)
+
+=== (E) B_7 minorant & iid floor ===
+  -- B_7(E) <= mu_1/7(E) sanity (rigorous-lower-bound claim) --
+     E=[0, 1, 2, 3, 4, 5]... k=8: B7=0.93878 mu=0.94014 OK
+     E=[0, 1, 2, 3, 4, 5]... k=9: B7=0.88563 mu=0.84014 **B7 > mu (LOWER-BOUND VIOLATED)**
+     E=[0, 2, 3, 5, 7, 11]... k=8: B7=0.99871 mu=1.00000 OK
+     E=[0, 1, 2, 3, 5, 8]... k=8: B7=1.00000 mu=1.00000 OK
+     E=[0, 2, 5, 6, 7, 8]... k=9: B7=0.97298 mu=1.00000 OK
+     E=[0, 3, 7, 10, 12, 14]... k=9: B7=0.97645 mu=1.00000 OK
+     E=[0, 3, 4, 6, 7, 8]... k=10: B7=0.93123 mu=0.99351 OK
+     E=[0, 2, 3, 9, 11, 13]... k=8: B7=1.00000 mu=1.00000 OK
+     E=[0, 1, 2, 3, 4, 5]... k=10: B7=0.87086 mu=0.94014 OK
+     E=[0, 3, 5, 6, 7, 9]... k=8: B7=1.00000 mu=1.00000 OK
+     E=[0, 1, 2, 3, 6, 7]... k=10: B7=0.94983 mu=1.00000 OK
+     E=[0, 1, 2, 5, 6, 7]... k=8: B7=0.99881 mu=1.00000 OK
+     E=[0, 1, 4, 5, 7, 8]... k=9: B7=0.95942 mu=1.00000 OK
+     E=[0, 2, 5, 7, 10, 16]... k=8: B7=0.99898 mu=1.00000 OK
+     E=[0, 2, 3, 4, 5, 6]... k=8: B7=1.00000 mu=1.00000 OK
+     E=[0, 2, 3, 4, 8, 9]... k=10: B7=0.93579 mu=1.00000 OK
+     E=[0, 1, 2, 3, 4, 5]... k=9: B7=0.88563 mu=0.84014 **B7 > mu (LOWER-BOUND VIOLATED)**
+     E=[0, 2, 3, 6, 7, 12]... k=9: B7=0.98590 mu=1.00000 OK
+     E=[0, 2, 4, 5, 6, 10]... k=9: B7=0.95900 mu=1.00000 OK
+  B_7 <= mu held on all samples? False
+  -- B_7^iid(k) floor values --
+     k=8: B7_iid = 114769/117649 = 0.97552  (prompt 0.9755)
+     k=9: B7_iid = 776023/823543 = 0.94230  (prompt 0.9423)
+     k=10: B7_iid = 737143/823543 = 0.89509  (prompt 0.8951)
+     k=11: B7_iid = 33772087/40353607 = 0.83690  (prompt 0.8369)
+     k=12: B7_iid = 31134727/40353607 = 0.77155  (prompt 0.7715)
+     k=13: B7_iid = 9726181921/13841287201 = 0.70269  (prompt 0.7027)
+
+=== (F) Scaling, Reflection, sum-g^2 relaxation ===
+  -- SCALING: mu_theta(cE)=mu_theta(E) --
+     scaling checks: 640 total, 0 violations
+  -- REFLECTION: mu_1/7(E) = mu_1/7(maxE - E) --
+     reflection checks: 40 total, 0 violations
+  -- sum-g^2 relaxation: consec_10 net vs {sum g^2<=1/7} measure --
+     k=8: net(consec)=0.05986  meas{sum g^2<=1/7}~=0.33095  cap_8=0.38146
+     k=10: net(consec)=0.22449  meas{sum g^2<=1/7}~=0.58161
+
+=================================================================
+No counterexamples found in tested ranges (consec remained the minimizer; thr_8 never breached).

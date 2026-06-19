@@ -1,0 +1,54 @@
+======================================================================
+ANGLE 1: COMPRESSION MONOTONICITY (hunt for a compression that RAISES mu)
+======================================================================
+compression steps checked: 17
+FOUND 8 compression(s) that RAISE mu => simple monotonicity is FALSE (consec-min proof needs more than compression):
+   [0, 2, 4, 5, 8, 9, 10, 11, 12, 13, 15, 18] mu=0.978257  --compress-->  (0, 2, 4, 5, 8, 9, 10, 11, 12, 13, 15, 17) mu=0.997558  (rose by 0.019301)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 2, 4, 6, 7, 10, 12, 13, 15, 18, 20, 23) mu=0.934551  (rose by 0.052591)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 4, 6, 7, 10, 12, 13, 15, 18, 20, 23) mu=0.974194  (rose by 0.092234)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 5, 6, 7, 10, 12, 13, 15, 18, 20, 23) mu=0.962472  (rose by 0.080512)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 5, 7, 8, 11, 12, 13, 15, 18, 20, 23) mu=0.962568  (rose by 0.080608)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 5, 7, 8, 11, 13, 14, 15, 18, 20, 23) mu=0.979296  (rose by 0.097336)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 5, 7, 8, 11, 13, 14, 16, 18, 20, 23) mu=0.979296  (rose by 0.097336)
+   [0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 21, 24] mu=0.881960  --compress-->  (0, 3, 5, 7, 8, 11, 13, 14, 16, 19, 20, 23) mu=0.946983  (rose by 0.065023)
+
+======================================================================
+ANGLE 2: UNBOUNDED-SPREAD — does mu trend UP with spread? (perforation hurts)
+======================================================================
+  k=8: consec mu=0.940136
+     spread/k~0: n=8 mean mu=0.9401 min=0.9401 max=0.9401
+     spread/k~1: n=495 mean mu=0.9995 min=0.9719 max=1.0000
+     spread/k~2: n=482 mean mu=0.9999 min=0.9890 max=1.0000
+     spread/k~3: n=489 mean mu=1.0000 min=0.9926 max=1.0000
+     spread/k~4: n=498 mean mu=1.0000 min=0.9960 max=1.0000
+     spread/k~5: n=468 mean mu=1.0000 min=0.9952 max=1.0000
+     spread/k~6: n=351 mean mu=1.0000 min=0.9967 max=1.0000
+     spread/k~7: n=207 mean mu=1.0000 min=1.0000 max=1.0000
+  k=10: consec mu=0.775510
+     spread/k~1: n=502 mean mu=0.9847 min=0.8401 max=1.0000
+     spread/k~2: n=483 mean mu=0.9968 min=0.9582 max=1.0000
+     spread/k~3: n=472 mean mu=0.9982 min=0.9748 max=1.0000
+     spread/k~4: n=471 mean mu=0.9987 min=0.9678 max=1.0000
+     spread/k~5: n=420 mean mu=0.9988 min=0.9866 max=1.0000
+     spread/k~6: n=438 mean mu=0.9990 min=0.9833 max=1.0000
+     spread/k~7: n=211 mean mu=0.9991 min=0.9860 max=1.0000
+     spread/k~8: n=3 mean mu=1.0000 min=1.0000 max=1.0000
+  k=12: consec mu=0.569903
+     spread/k~0: n=2 mean mu=0.5699 min=0.5699 max=0.5699
+     spread/k~1: n=465 mean mu=0.9212 min=0.6263 max=1.0000
+     spread/k~2: n=482 mean mu=0.9786 min=0.9022 max=1.0000
+     spread/k~3: n=431 mean mu=0.9860 min=0.8982 max=1.0000
+     spread/k~4: n=442 mean mu=0.9892 min=0.9085 max=1.0000
+     spread/k~5: n=477 mean mu=0.9903 min=0.9518 max=1.0000
+     spread/k~6: n=436 mean mu=0.9917 min=0.9531 max=1.0000
+     spread/k~7: n=260 mean mu=0.9921 min=0.9706 max=0.9998
+  (min mu should stay >= consec; mean should rise as spread grows.)
+
+======================================================================
+ANGLE 3: NEAR-TIES — non-consecutive sets with mu == consec? (uniqueness)
+======================================================================
+  k=8: 1716 small-spread sets; non-consec ties with consec: 0 (consec is STRICT min on this window)
+  k=9: 1287 small-spread sets; non-consec ties with consec: 0 (consec is STRICT min on this window)
+  k=10: 715 small-spread sets; non-consec ties with consec: 0 (consec is STRICT min on this window)
+  k=11: 286 small-spread sets; non-consec ties with consec: 0 (consec is STRICT min on this window)
+  k=12: 78 small-spread sets; non-consec ties with consec: 0 (consec is STRICT min on this window)

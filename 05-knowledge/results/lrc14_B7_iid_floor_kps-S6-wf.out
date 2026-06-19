@@ -1,0 +1,16 @@
+B_7 iid floor (large-spread limit of the 7-arc net minorant):
+  P(all 7 cells occupied by 8 iid pts) = 2880/117649 = 0.024480
+  B_7^iid(k=8) = 114769/117649 = 0.975520
+  thr_8        = 3637/5880 = 0.618537
+  B_7^iid - thr_8 = 0.356983   (>=0: True)
+
+General k: iid floor B_7^iid(k) vs thr_k (7 cells, k points):
+  k= 8: B_7^iid=0.975520 (114769/117649)  thr_k=0.618537  margin=+0.356983  OK
+  k= 9: B_7^iid=0.942298 (776023/823543)  thr_k=0.505744  margin=+0.436554  OK
+  k=10: B_7^iid=0.895087 (737143/823543)  thr_k=0.395604  margin=+0.499483  OK
+  k=11: B_7^iid=0.836904 (33772087/40353607)  thr_k=0.274725  margin=+0.562179  OK
+  k=12: B_7^iid=0.771548 (31134727/40353607)  thr_k=0.142857  margin=+0.628690  OK
+  k=13: B_7^iid=0.702693 (9726181921/13841287201)  thr_k=0.000000  margin=+0.702693  OK
+
+NOTE: B_7 is a lower bound on mu; iid floor>=thr_k at every k with margin>=0.30.
+The bounded-spread exhaustive minimum (separate script) is also >> thr_k.

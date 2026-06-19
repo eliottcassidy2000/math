@@ -22,6 +22,51 @@ This module:
       'consecutive minimizes'.
 
 EXACT Fractions throughout.  stdlib only.
+
+============================================================================
+SESSION FINDINGS (kind-pasteur-S6, k8-direct-net-bound).  Status: PARTIAL/REDUCTION.
+============================================================================
+RIGOROUSLY PROVED (new this session):
+  (T1) SCALING THEOREM:  mu_theta(c*E) = mu_theta(E)  for every positive integer c
+       and every theta.  PROOF: frac(c e x)=frac(e (c x)) (e in Z); phi(x)=cx mod 1
+       is measure-preserving on [0,1); the gap configuration of {frac(c e_i x)} at x
+       equals that of {frac(e_i y)} at y=phi(x); integrate.  Verified 2880 exact
+       checks, 0 violations.  COROLLARY: WLOG gcd(E)=1 (the spread bound need only
+       be proved for PRIMITIVE E).
+  (T2) REFLECTION INVARIANCE:  meas(N(E)) = meas(N(maxE - E)).  Verified, 0 viol.
+  (T3) RELAXATION INCLUSION:  N(E) = {maxgap<=1/7} subset {sum_t g_t(x)^2 <= 1/7}
+       (since sum g=1 => maxgap >= sum g^2).  sum g^2 is piecewise-quadratic, exact.
+
+RIGOROUSLY RULED OUT (negative results -- close off the easy attacks):
+  (N1) FIRST-MOMENT test-function LP bound is provably >= 7/8 > cap_8.  (The equispaced
+       config forces T <= 8*int(W), giving bound >= 7/8.)  Cannot close it.
+  (N2) SECOND-MOMENT (Cantelli/one-sided Chebyshev) on V=sum(g_t-1/8)^2 gives
+       meas{V<=1/56} <= 0.77 > cap_8.  Insufficient (variance too large).
+  (N3) NO FINITE SPREAD CUTOFF EXISTS: net(E)>0 for arbitrarily large primitive
+       spread, e.g. E={0,1,..,6,W} has net>0 for all W (decaying).  So a finite
+       reduction does NOT follow from scaling alone.  (Also: single-difference
+       containment FALSE; single-gap stretch-monotonicity FALSE.)
+  (N4) The sum-g^2 RELAXATION (T3) BREAKS at k=10:  meas{sum g^2<=1/7} reaches
+       0.6197 > cap_10=0.6044 at E=(0..7,9,12), even though the TRUE net there is
+       only 0.0599.  So (T3) is a valid bound but NOT a uniform proof route past k=8.
+
+CERTIFIED EXACT (strong evidence, not a uniform proof):
+  (C1) max over ALL primitive k=8 E with spread<=19 of net(E) = 44/735 (= consec_8),
+       attained ONLY at consecutive; ALL spread>=8 give net<=0.0282.  margin to
+       cap_8 = 0.3215.  Broad random/structured adversaries (spread<=50) agree.
+  (C2) The concurrent "fourier-minorant" angle's 7-arc NET MINORANT
+       B_7(E)=meas{some fixed 1/7-arc empty} (a RIGOROUS lower bound on mu_{1/7})
+       has min_E B_7 >= 0.956 over primitive k=8 spread<=12, >> thr_8=0.6185
+       (1.5x margin) -- a stronger/cleaner object than the net upper bound.  It,
+       too, is only VERIFIED for bounded spread; same unbounded-spread wall.
+
+RESIDUAL GAP (the genuine open crux of LRC(14)):  a UNIFORM-over-unbounded-spread
+  bound (either net(E)<=cap_8 for all E, or B_7(E)>=thr_8 for all E, or
+  'consecutive minimizes mu_{1/7}').  Moment methods and finite cutoffs are
+  provably insufficient; the most promising remaining route is an explicit
+  Weyl/equidistribution bound on the B_7 inclusion-exclusion for large spread plus
+  the (finite) bounded-spread exhaustion.
+============================================================================
 """
 import sys, itertools
 from fractions import Fraction as F

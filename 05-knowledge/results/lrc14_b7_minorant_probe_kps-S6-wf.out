@@ -1,0 +1,27 @@
+E=consec_9:
+   B7 (some fixed arc empty)            = 125/196 = 0.637755
+   B7_strict (empty AND maxgap>1/7)     = 125/196 = 0.637755
+   mu_1/7 (maxgap > 1/7)                = 47/56 = 0.839286
+   meas(maxgap >= 1/7)                  = 47/56 = 0.839286
+   LEAK (arc empty & maxgap == 1/7)     = 0 = 0.000000
+   B7 <= mu ?  True    B7_strict <= mu ?  True
+   B7 <= meas(maxgap>=1/7) ? True
+
+E=consec_8:
+   B7 (some fixed arc empty)            = 433/588 = 0.736395
+   B7_strict (empty AND maxgap>1/7)     = 433/588 = 0.736395
+   mu_1/7 (maxgap > 1/7)                = 557/588 = 0.947279
+   meas(maxgap >= 1/7)                  = 557/588 = 0.947279
+   LEAK (arc empty & maxgap == 1/7)     = 0 = 0.000000
+   B7 <= mu ?  True    B7_strict <= mu ?  True
+   B7 <= meas(maxgap>=1/7) ? True
+
+E=consec_10:
+   B7 (some fixed arc empty)            = 2005/3528 = 0.568311
+   B7_strict (empty AND maxgap>1/7)     = 2005/3528 = 0.568311
+   mu_1/7 (maxgap > 1/7)                = 11/14 = 0.785714
+   meas(maxgap >= 1/7)                  = 11/14 = 0.785714
+   LEAK (arc empty & maxgap == 1/7)     = 0 = 0.000000
+   B7 <= mu ?  True    B7_strict <= mu ?  True
+   B7 <= meas(maxgap>=1/7) ? True
+

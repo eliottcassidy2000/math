@@ -1,0 +1,84 @@
+
+============================================================================
+[0] ENGINE CROSS-CHECK vs THM-530 stated mu_{1/7}(consec_k)
+============================================================================
+  k= 7: mu_theta(consec)=1  expected=1  OK
+  k= 8: mu_theta(consec)=691/735  expected=691/735  OK
+  k= 9: mu_theta(consec)=247/294  expected=247/294  OK
+  k=10: mu_theta(consec)=38/49  expected=38/49  OK
+  k=11: mu_theta(consec)=1381/2205  expected=1381/2205  OK
+  k=12: mu_theta(consec)=13823/24255  expected=13823/24255  OK
+  k=13: mu_theta(consec)=477/1078  expected=477/1078  OK
+  ==> engine reproduces all stated values: True
+
+============================================================================
+[A]+[B] LITERAL SINGLE-ARC FOURIER MINORANT: relation-free ceiling (6/7)^k vs thr_k
+============================================================================
+  The stated product-minorant int prod psi(e_i x) dx = single-fixed-arc measure A(E;0).
+  Its SUPREMUM over E and arc-position is (6/7)^k (relation-free limit). Compare thr_k:
+  k= 8: (6/7)^k=0.2914  thr_k~0.6185   single-arc ceiling: TOO LOW
+  k= 9: (6/7)^k=0.2497  thr_k~0.5000   single-arc ceiling: TOO LOW
+  k=10: (6/7)^k=0.2141  thr_k~0.3900   single-arc ceiling: TOO LOW
+  k=11: (6/7)^k=0.1835  thr_k~0.2800   single-arc ceiling: TOO LOW
+  k=12: (6/7)^k=0.1573  thr_k~0.1429   single-arc ceiling: CLEARS
+  k=13: (6/7)^k=0.1348  thr_k~0.0000   single-arc ceiling: CLEARS
+  ==> single-arc Fourier minorant is RIGOROUSLY TOO WEAK for k=8,9,10,11 (binding k=8).
+
+============================================================================
+[C] WHY 1/7 IS FAVORABLE: iid ceiling F_{1/7}(k) ~ 1, and true mu(large spread) ~ 1
+============================================================================
+  k= 7: F_iid=1.000000  (6/7)^k=0.339917   gap lost by product minorant = 0.6601
+  k= 8: F_iid=0.999999  (6/7)^k=0.291357   gap lost by product minorant = 0.7086
+  k= 9: F_iid=0.999957  (6/7)^k=0.249735   gap lost by product minorant = 0.7502
+  k=10: F_iid=0.999638  (6/7)^k=0.214058   gap lost by product minorant = 0.7856
+  k=11: F_iid=0.998389  (6/7)^k=0.183479   gap lost by product minorant = 0.8149
+  k=12: F_iid=0.995075  (6/7)^k=0.157267   gap lost by product minorant = 0.8378
+  k=13: F_iid=0.988259  (6/7)^k=0.134801   gap lost by product minorant = 0.8535
+  Direct check: large-spread relation-free E -> mu_{1/7} = 1 (not (6/7)^k):
+    consec_8  maxE=  7: mu_1/7 = 691/735
+    spread20  maxE= 20: mu_1/7 = 1
+    spread50  maxE= 50: mu_1/7 = 1
+    primes    maxE= 17: mu_1/7 = 1
+
+============================================================================
+[D] UNION-OF-ARCS (NET) MINORANT: how many arcs reach thr_8 for the binding case
+============================================================================
+  J= 1 equally-spaced arcs on consec_8: B_J = 0.307823   < thr_8
+  J= 2 equally-spaced arcs on consec_8: B_J = 0.450850   < thr_8
+  J= 3 equally-spaced arcs on consec_8: B_J = 0.580612   < thr_8
+  J= 5 equally-spaced arcs on consec_8: B_J = 0.808741   >= thr_8
+  J= 7 equally-spaced arcs on consec_8: B_J = 1.000000   >= thr_8
+
+============================================================================
+[D'] FIXED J=7-ARC NET: EXHAUSTIVE uniformity over ALL primitive E subset {0..14}, k=8
+============================================================================
+  scanned 3431 primitive 8-sets; min_E B_7 = 42232/45045 = 0.937551
+  at E = (0, 1, 3, 5, 7, 9, 11, 13)  (the AP-like ruler, NOT consecutive)
+  thr_8 = 3637/5880 = 0.618537   uniform B_7 >= thr_8 ?  True
+  margin factor = 1.516x
+
+============================================================================
+[E] k=12,13: does the BEST single-arc reach thr_k on the binding (consecutive) set?
+============================================================================
+  k=12: max_c A(consec;c) = 0.203626 at c=1/42   thr_12 = 0.142857   CLEARS (marginal)
+  k=13: max_c A(consec;c) = 0.190919 at c=6/7   thr_13 = 0.000000   CLEARS (marginal)
+  NOTE: even at k=12 the margin is thin (0.204 vs 0.143) and depends on arc choice;
+        bounded-spread MINIMIZER over E is lower => not a robust uniform bound.
+
+============================================================================
+[F] DECISIVE REFRAME: well-spread complement W(E)=1-mu, and the slack at binding k=8
+============================================================================
+  k= 8: W(consec)=1-mu = 44/735 = 0.05986;  need W <= 2243/5880 = 0.38146;  headroom factor = 6.37x
+  k= 9: W(consec)=1-mu = 47/294 = 0.15986;  need W <= 1-thr_9~0.500  (approx);  headroom ~ 3.13x
+  k=10: W(consec)=1-mu = 11/49 = 0.22449;  need W <= 1-thr_10~0.610  (approx);  headroom ~ 2.72x
+  k=11: W(consec)=1-mu = 824/2205 = 0.37370;  need W <= 1-thr_11~0.720  (approx);  headroom ~ 1.93x
+  k=12: W(consec)=1-mu = 10432/24255 = 0.43010;  need W <= 6/7 = 0.85714;  headroom factor = 1.99x
+  k=13: W(consec)=1-mu = 601/1078 = 0.55751;  need W <= 1 = 1.00000;  headroom factor = 1.79x
+
+  CONCLUSION: at the binding k=8 the spread-bound has ~6.4x headroom in the
+  complement measure. The Fourier single-arc route is too weak (ceiling (6/7)^8=0.29);
+  the union-arc net clears thr_8 numerically (>=1.5x) but inherits the spread-
+  extremality question. Rigorous closure = 'consecutive minimizes mu_{1/7}' (finite
+  check), for which this script documents the enormous slack. Hand k=8,9 to that angle.
+
+DONE.

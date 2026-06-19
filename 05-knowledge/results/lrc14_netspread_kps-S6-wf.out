@@ -1,0 +1,16 @@
+consec_8 net = 44/735 = 0.059864; cap_8=0.381463
+
+Max net over PRIMITIVE k=8 sets, by spread W=max(E):
+   W= 7: max net = 0.059864 (44/735) = consec  argmax=(0, 1, 2, 3, 4, 5, 6, 7)
+   W= 8: max net = 0.000000 (0) < consec  argmax=(0, 1, 2, 3, 4, 5, 6, 8)
+   W= 9: max net = 0.028118 (62/2205) < consec  argmax=(0, 2, 3, 4, 5, 6, 7, 9)
+   W=10: max net = 0.028118 (62/2205) < consec  argmax=(0, 1, 3, 4, 5, 6, 7, 10)
+   W=11: max net = 0.019460 (472/24255) < consec  argmax=(0, 1, 2, 4, 5, 6, 7, 11)
+   W=12: max net = 0.028118 (62/2205) < consec  argmax=(0, 2, 3, 5, 6, 7, 9, 12)
+   W=13: max net = 0.026053 (1643/63063) < consec  argmax=(0, 2, 4, 6, 7, 9, 11, 13)
+   W=14: max net = 0.024737 (40/1617) < consec  argmax=(0, 1, 2, 3, 11, 12, 13, 14)
+   W=15: max net = 0.025397 (8/315) < consec  argmax=(0, 3, 5, 6, 9, 10, 12, 15)
+   W=16: max net = 0.010989 (1/91) < consec  argmax=(0, 3, 5, 7, 9, 11, 13, 16)
+
+   overall max (W<=16) = 0.059864 (44/735) at (0, 1, 2, 3, 4, 5, 6, 7)
+   CONFIRMS consec is the max up to W=16

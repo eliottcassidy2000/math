@@ -1,0 +1,24 @@
+=== thr_k = 1 - min_{|P|=13-k, P subset {1..13}} meas(G_P) ===
+k=8: |P|=5  min meas(G_P)=2243/5880=0.38146 at P=(1, 5, 7, 8, 9)  thr_k=1-min=3637/5880=0.61854
+k=9: |P|=4  min meas(G_P)=1979/4004=0.49426 at P=(1, 11, 12, 13)  thr_k=1-min=2025/4004=0.50574
+k=10: |P|=3  min meas(G_P)=55/91=0.60440 at P=(1, 12, 13)  thr_k=1-min=36/91=0.39560
+k=11: |P|=2  min meas(G_P)=66/91=0.72527 at P=(1, 13)  thr_k=1-min=25/91=0.27473
+k=12: |P|=1  min meas(G_P)=6/7=0.85714 at P=(1,)  thr_k=1-min=1/7=0.14286
+k=13: |P|=0 -> thr=0
+
+=== ROUTE CHECK: B7(consec_k) >= thr_k for k=8..12 (the route's requirement)? ===
+   (B7 = deterministic exact minorant; thr from above)
+k=8: B7(consec)=0.73639  thr_k=0.61854  B7-thr=+0.11786  OK B7>=thr
+      (mu(consec)=0.94014 >= thr? True  margin +0.32160)
+k=9: B7(consec)=0.63776  thr_k=0.50574  B7-thr=+0.13201  OK B7>=thr
+      (mu(consec)=0.84014 >= thr? True  margin +0.33439)
+k=10: B7(consec)=0.56831  thr_k=0.39560  B7-thr=+0.17271  OK B7>=thr
+      (mu(consec)=0.77551 >= thr? True  margin +0.37991)
+k=11: B7(consec)=0.45680  thr_k=0.27473  B7-thr=+0.18208  OK B7>=thr
+      (mu(consec)=0.62630 >= thr? True  margin +0.35158)
+k=12: B7(consec)=0.40584  thr_k=0.14286  B7-thr=+0.26299  OK B7>=thr
+      (mu(consec)=0.56990 >= thr? True  margin +0.42705)
+
+B7-minorant route survives at consec for all k=8..12? True
+NOTE: even if B7(consec)>=thr, the route also needs B7(E)>=thr for ALL E,
+AND consec to be (near) the B7-minimizer; and a uniform analytic bound.

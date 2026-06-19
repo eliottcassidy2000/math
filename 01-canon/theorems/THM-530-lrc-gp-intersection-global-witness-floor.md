@@ -108,7 +108,7 @@ confirmed; the combined floor is **c₀'=m_P=14249/252252** (NOT the k≥8 piece
 > `μ_{1/7}(E) ≥ thr_k` (8≤k≤12), with consecutive minimizing and ≥0.32 slack (binding at k=8;
 > thr_13=0 trivial). This is *strictly easier* than the 2/7 lemma (which is FALSE — μ_{2/7} has no floor),
 > survived the same adversarial large-spread descent that crushed μ_{2/7}, and is the single open
-> analytic gap (plus the upstream finite-Vmax / integer-vs-real glue, THM-527-A). → HYP-2600.
+> analytic gap (plus the upstream finite-Vmax / integer-vs-real glue, THM-527-A). → HYP-2602.
 
 ## CANON CORRECTIONS surfaced this session (VERIFIED exact)
 1. **μ_{2/7} has NO uniform floor (corrects THM-527-C / my own kps-S5 2/7 work).** Exact k=13 witnesses
@@ -124,3 +124,30 @@ confirmed; the combined floor is **c₀'=m_P=14249/252252** (NOT the k≥8 piece
    four-window LOWER bounds are correct as pure-μ statements but give no positive G_P-intersection floor
    at 2/7. RESOLUTION (coordinate): re-point THM-528 at θ=1/7, where the same witness gives ρ*_{1/7}>0 and
    R_{1/7}≥0.796. See message to mac-mini.
+
+## EMPTY-WINDOW REDUCTION of the 1/7-spread bound (kind-pasteur-2026-06-18-S6, three-gap workflow)
+A cleaner reduction than "consecutive minimizes μ". For a finite set `A` of window-starts and width
+`θ=1/7`, set `W_a(E)={x: the open arc (a,a+θ) contains NO orbit point of {e_i x}}`. **PROVED (trivial,
+rigorous):** an empty θ-arc forces some orbit gap `>θ`, so `W_a(E) ⊆ Good_E^θ`, hence for EVERY `A`
+   **μ_{1/7}(E) ≥ EWLB_A(E) := meas(⋃_{a∈A} W_a(E)).**
+`W_a(E)` is the exact complement of `⋃_{e∈E,e>0}{x: ex mod1 ∈ (a,a+θ)}` — a finite union of rational
+arcs, so `EWLB_A` is an EXACT rational, free of the maxgap/three-gap combinatorics and CHEAP (covers
+spread up to 8k effortlessly, unlike the O(spread²) μ-engine). With `A={j/14: j=0..6}` (seven staggered
+1/7-windows):
+- (i) `EWLB_A(consec_k) ≥ thr_k` for k=8..12 (exact: 0.692, 0.605, 0.504, 0.429, 0.378 vs thr 0.619,
+  0.506, 0.396, 0.275, 0.143; **binding margin 0.074 at k=8**).
+- (ii) **consecutive MINIMIZES `EWLB_A`** (exhaustive over all primitive E spread≤14 — argmin `{0..k-1}`
+  at every k — plus adversarial sweep to spread 8k, **0/many below thr_k**).
+
+So `μ ≥ EWLB ≥ thr_k` REDUCES the k≥8 branch to (ii): a minimization of the SIMPLE linear functional
+`EWLB_A` (no maxgap). **Residual (one symbolic step):** a closed proof of (ii) for unbounded spread.
+`EWLB_A` is linear in the per-speed danger sets and the adversary that fills all windows IS consecutive
+(small speeds give fattest danger arcs), but cross-window correlation is positive so Bonferroni fails;
+not yet symbolically closed (exact-verified, margin ≥0.074, 0 counterexamples). Also PROVED this session:
+**net-positivity characterization** `N_{1/7}(E)>0 ⟺ ∃ p/q (q≥7) with residues {e_i p mod q} a STRICT
+1/7-net of Z/q (7·maxgap<q)` (exact-verified, 0/1287 mismatches), and the **local-net-width / slope-
+minimization lemma** (at each rational consecutive maximizes the local net width 1/49, since slopes are
+differences e_b−e_a). Spread is NOT bounded for net>0 (e.g. {0,…,6,29} nets at q=8) but the net MASS
+concentrates at small q (98% of random k=8 sets never net; q∈{8,15} dominate).
+Script: `04-computation/lrc14_final17_three-gap-consecutive-minimizes_kps-S6-wf.py`;
+output `05-knowledge/results/lrc14_final17_three-gap-consecutive-minimizes_kps-S6-wf.out`.

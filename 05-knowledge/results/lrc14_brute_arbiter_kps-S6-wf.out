@@ -1,0 +1,6 @@
+BRUTE consec_8: mu=691/735=0.940136  (grid M=2940)
+   engine-A anchor:  691/735 = 0.9401360544217687
+   refine-engine  :  691/735 = 0.9401360544217687
+BRUTE consec_9: mu=247/294=0.840136  (grid M=5880)
+   engine-A anchor:  247/294 = 0.8401360544217688
+   refine-engine  :  4829/5880 = 0.8212585034013605
