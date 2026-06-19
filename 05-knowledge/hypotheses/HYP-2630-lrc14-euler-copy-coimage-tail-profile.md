@@ -164,6 +164,26 @@ attack the two-large repeated-residue character packet directly.
 The expected next theorem is a signed cotangent/Dedekind estimate for the
 two-large `4+2` and `4+1+1` packets, with the QR/NQR phase channel retained.
 
+## HYP-2632 Follow-Up
+
+HYP-2632 executes the first finite-kernel step of that theorem.  The QR/NQR
+split in the `4+2` row is exactly
+
+```text
+2*S_9(1,1,1,1,a,a)/U = -43 - 7*chi_7(a),  a=2..6.
+```
+
+For `4+1+1`, the four-character signature used above is not complete.  The
+additional hidden coordinate is the affine zero lane
+
+```text
+a+b = 2 mod 7.
+```
+
+The repeated-kernel signed ledger is `-108U` from `4+2` and `+54U` from
+`4+1+1`, so the next analytic estimate should exploit this signed table
+directly instead of applying an absolute bound to the `162U` packet mass.
+
 ## Tournament Analysis
 
 Vertices are proof obligations and quotient stages, not runners:

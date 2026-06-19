@@ -204,6 +204,25 @@ So the remaining repeated-root theorem should retain the `chi_7` channel
 explicitly.  Raw prime masks and raw Euler-copy capacities are necessary
 addresses, but not the final separator.
 
+## HYP-2632 Update
+
+HYP-2632 refines the repeated-root target.  The `4+2` packet is genuinely
+Legendre:
+
+```text
+2*S_9(1,1,1,1,a,a)/U = -43 - 7*chi_7(a),  a=2..6.
+```
+
+However, the `4+1+1` signature listed above is incomplete if used alone.  The
+finite kernel has a hidden affine zero lane:
+
+```text
+(0,2), (3,6), (4,5)  <=>  a+b=2 mod 7  <=>  S_9=0.
+```
+
+So the repeated-root cotangent/Dedekind theorem should use a `chi_7` plus
+affine-line packet table, not just the four multiplicative characters.
+
 ## Status
 
 Partially confirmed by exact enumeration of height `<=2` one-large wall

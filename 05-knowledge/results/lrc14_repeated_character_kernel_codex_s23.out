@@ -1,0 +1,93 @@
+
+========================================================================================
+LRC14 REPEATED-RESIDUE CHARACTER KERNEL - CODEX S23
+========================================================================================
+Goal: turn HYP-2630's two-large repeated tail from a coimage census into a finite signed character table suitable for a cotangent/Dedekind tail bound.
+
+========================================================================================
+FINITE ADDITIVE-FOURIER IDENTITY
+========================================================================================
+Verified over the 159 projective support-six coimage classes:
+  S_d(a) = sum_{a.r=0} C_d(r) = (1/7) sum_{t in F_7} C_hat(t a)
+max identity error: 1.100e-14 at class (1, 1, 2, 4, 5, 5)
+max imaginary drift: 2.858e-15
+additive transform cache entries used: 955
+Readout: the repeated tail can be attacked as a finite additive-Fourier kernel first, and only then converted into multiplicative chi_7 packets.
+
+========================================================================================
+4+2 CHARACTER KERNEL
+========================================================================================
+The signed kernel values are shown in units U.  HYP-2630 reported absolute masses; the signs matter for the eventual reciprocal-tail sum.
+kernel unit U = 0.00955648353590534
+ a  chi(a)                  class   S_9/U              S_9       status
+ 0       0     (0, 0, 1, 1, 1, 1)      -4 -0.0382259341436         tail
+ 1       1     (1, 1, 1, 1, 1, 1)       0 -9.48026379621e-16         zero
+ 2       1     (1, 1, 1, 1, 2, 2)     -25  -0.238912088398         tail
+ 3      -1     (1, 1, 1, 1, 3, 3)     -18  -0.172016703646         tail
+ 4       1     (1, 1, 1, 1, 4, 4)     -25  -0.238912088398         tail
+ 5      -1     (1, 1, 1, 1, 5, 5)     -18  -0.172016703646         tail
+ 6      -1     (1, 1, 1, 1, 6, 6)     -18  -0.172016703646         tail
+
+For a in F_7^* \ {1}, the formula is exact in packet units:
+  2*S_9(1,1,1,1,a,a)/U = -43 - 7*chi_7(a)
+formula failures on a=2..6: []
+Thus the QR/NQR split is a literal Legendre component, not merely a visual grouping of floating-point masses.
+
+========================================================================================
+4+1+1 TAIL-SIDE CHARACTER TABLE
+========================================================================================
+Pairs are the two singleton residues after normalizing the repeated residue to 1.  The domain excludes 1 so the multiplicity pattern is actually 4+1+1.
+   pair   S_9/U       status             chi(a),chi(b),chi(ab),chi((a-1)(b-1)),chi(a-b),a+b
+ (0, 2)       0         zero                                           (0, 1, 0, -1, -1, 2)
+ (0, 3)       1         tail                                           (0, -1, 0, -1, 1, 3)
+ (0, 4)       1         tail                                            (0, 1, 0, 1, -1, 4)
+ (0, 5)       1         tail                                           (0, -1, 0, -1, 1, 5)
+ (0, 6)       1         tail                                            (0, -1, 0, 1, 1, 6)
+ (2, 3)       8         tail                                          (1, -1, -1, 1, -1, 5)
+ (2, 4)       8         tail                                           (1, 1, 1, -1, -1, 6)
+ (2, 5)       8         tail                                           (1, -1, -1, 1, 1, 0)
+ (2, 6)       1         tail                                         (1, -1, -1, -1, -1, 1)
+ (3, 4)       8         tail                                         (-1, 1, -1, -1, -1, 0)
+ (3, 5)       1         tail                                          (-1, -1, 1, 1, -1, 1)
+ (3, 6)       0         zero                                          (-1, -1, 1, -1, 1, 2)
+ (4, 5)       0         zero                                         (1, -1, -1, -1, -1, 2)
+ (4, 6)       8         tail                                          (1, -1, -1, 1, -1, 3)
+ (5, 6)       8         tail                                         (-1, -1, 1, -1, -1, 4)
+
+Value histogram in packet units:
+    8: 6 pairs
+    1: 6 pairs
+    0: 3 pairs
+
+Affine-line surprise:
+  pairs with a+b=2 mod 7: [(0, 2, 0), (3, 6, 0), (4, 5, 0)]
+  They are all zero.  This extra affine coordinate is not captured by the shorter HYP-2630 signature using only chi(a), chi(b), chi(ab), and chi((a-1)(b-1)).
+
+Short-signature collisions that force the extra affine coordinate:
+  (-1, -1, 1, -1): [(3, 6, 0), (5, 6, 8)]
+  (1, -1, -1, -1): [(2, 6, 1), (4, 5, 0)]
+
+========================================================================================
+SIGNED INTEGER LEDGER FOR THE REPEATED TAIL
+========================================================================================
+4+2 signed packet sum:       -108 U
+4+2 absolute packet mass:     108 U
+4+1+1 signed packet sum:       54 U
+4+1+1 absolute packet mass:    54 U
+combined signed sum:          -54 U
+combined absolute mass:       162 U
+absolute/net ratio: 3
+Readout: even before the analytic reciprocal sums, the finite repeated kernel has a 3:1 absolute/signed gap.  The proof should exploit this signed chi_7 table instead of bounding the packets by absolute mass.
+
+========================================================================================
+TOURNAMENT ANALYSIS
+========================================================================================
+Candidate vertices considered:
+  runners, gaps, fixed circle sections, section boundaries, wall-crossing events, speed residues, cover arcs, additive Fourier modes, quadratic characters, Jacobi/cross-ratio signatures, and proof obligations.
+Chosen Hamiltonian path:
+  additive_fourier_kernel > affine_line_a_plus_b > quadratic_character_phase > height2_wall_deletion > euler_copy_capacity > raw_coimage_enumeration > raw_runner_vertices
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1}
+directed_3_cycles = 0
+SCC_sizes = [1,1,1,1,1,1,1]
+Preserved predicate: the signed d=9 support-six coimage coefficient after height-2 wall deletion.  Destroyed information: exact witness times, raw support identities, and raw runner labels.
+Challenged assumption: the four multiplicative chi signatures from HYP-2630 are not complete for 4+1+1 packets.  The affine line a+b=2 mod 7 is a hidden zero-lane coordinate.
