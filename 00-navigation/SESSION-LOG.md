@@ -1,3 +1,11 @@
+## codex-2026-06-19-S32 -- LRC invariant separation: the address, not the scalar, determines structure -- HYP-2650/T897
+
+User asked to creatively look for more LRC invariants and what actually determines the structure. Synced first and integrated the incoming HYP-2648/HYP-2649 state-word and below-14 ladder work. Added `04-computation/lrc_invariant_separation_codex_s32.py`, stored `05-knowledge/results/lrc_invariant_separation_codex_s32.out`, detail `05-knowledge/hypotheses/HYP-2650-lrc-invariant-separation.md`, and reflection `07-reflections/lrc-invariant-separation-codex-s32.md`.
+
+**FINDING:** scalar invariants become reliable only with an address. Exact max-min bank (`1743` primitive rows from `(k,B)=(5,13),(6,11)`) shows coarse summaries mix exact `M`: `sumset_excess` has `9` mixed fibers (largest `548`), `fold_count` `7` (largest `603`), `fold_profile` `113` (largest `228`), and `gap_pattern` `441` (largest `9`). Even `q` and `(q,active-count)` mix. In this bank, addressed optimal-time words `(q,j,active runner values)` and `(q, sorted folded residues)` have no mixed `M` fibers.
+
+**LRC14 SECTOR SIDE:** over all `1287` primitive `k=9` rows `E={0}+8-subsets of [1,13]`, `sumset_excess`, `fold_count`, `fold_profile`, and transition signatures mix `L_y`, while missed-count histogram, state mass, and full state word do not. Histogram separates only because `L_y` is its valuation; HYP-2648's measured state word carries the richer transition/fold/coimage/signed-transport structure. Tournament Analysis uses quotient maps as vertices: addressed wall sheaf > clearance word > measured state word > histogram > additive labels > fold profile > raw speeds. LRC(14) NOT proved; new proof target is a canonical addressed wall/crossing sheaf and high-`L_y` template theorem. -> HYP-2650, HYP-2648, HYP-2647, HYP-2646, THM-524, OPEN-Q-108.
+
 ## kind-pasteur-2026-06-19-S12 -- LRC(14) THE SIGNED/COSET QUOTIENT MADE PRECISE: exact factorization K(n)=D7(n mod 7)/∏n_j -- HYP-2646
 
 Angle (endgame brief): make codex's "signed/coset quotient is the ruler" (HYP-2640) PRECISE and QUANTITATIVE; group support-6 relations by |n|∞ shell and mod-7 coset; find the signed decay rate; tie to residue-lift equidistribution (HYP-2632/2633).

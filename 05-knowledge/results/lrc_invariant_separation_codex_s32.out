@@ -1,0 +1,74 @@
+HYP-2650 / T897 LRC invariant separation scout
+========================================================================================
+A. Exact max-min clearance invariant lab
+========================================================================================
+records: 1743 primitive speed sets from banks [(5, 13), (6, 11)]
+feature | mixed M fibers | largest mixed fiber | example
+sumset_excess            |              9 |                 548 | S=(1, 2, 3, 5, 10), M=1/4, t=1/4, active=(1, 3, 5) ; S=(1, 2, 3, 5, 12), M=1/5, t=4/15, active=(3, 12)
+fold_count               |              7 |                 603 | S=(1, 2, 3, 6, 10), M=1/4, t=1/4, active=(1, 3) ; S=(1, 2, 3, 6, 12), M=3/13, t=3/13, active=(1, 12)
+fold_profile             |            113 |                 228 | S=(1, 2, 4, 7, 10), M=1/3, t=1/3, active=(1, 2, 4, 7, 10) ; S=(1, 2, 4, 7, 12), M=2/7, t=5/14, active=(2, 12)
+gap_pattern              |            441 |                   9 | S=(1, 2, 3, 4, 5), M=1/6, t=1/6, active=(1, 5) ; S=(2, 3, 4, 5, 6), M=1/4, t=1/8, active=(2, 6)
+optimal_denominator_q    |             21 |                 132 | S=(1, 2, 5, 6, 8), M=2/7, t=2/7, active=(1, 6, 8) ; S=(1, 2, 3, 4, 5, 6), M=1/7, t=1/7, active=(1, 6)
+q_and_active_count       |             24 |                 127 | S=(1, 2, 5, 7, 12), M=4/17, t=6/17, active=(5, 12) ; S=(1, 3, 5, 7, 10), M=5/17, t=8/17, active=(7, 10)
+q_j_active_values        |              0 |                  51 | no mixed fibers
+clearance_word_q_folds   |              0 |                 123 | no mixed fibers
+
+sample clearance words near the AP floor
+S=(1, 2, 3, 4, 5), M=1/6, t=1/6, q=6, j=1, folds=(1, 1, 2, 2, 3), active=(1, 5), sources=('peak:3', 'sum:1+5', 'sum:2+4')
+S=(1, 2, 3, 4, 5, 6), M=1/7, t=1/7, q=7, j=1, folds=(1, 1, 2, 2, 3, 3), active=(1, 6), sources=('sum:1+6', 'sum:2+5', 'sum:3+4')
+S=(1, 3, 4, 5, 9), M=1/6, t=1/6, q=6, j=1, folds=(1, 1, 2, 3, 3), active=(1, 5), sources=('diff:3-9', 'peak:3', 'peak:9', 'sum:1+5', 'sum:3+9')
+S=(1, 2, 5, 6, 7, 8), M=2/13, t=3/13, q=13, j=2, folds=(2, 2, 3, 5, 5, 6), active=(5, 8), sources=('sum:5+8', 'sum:6+7')
+S=(1, 3, 4, 5, 6, 9), M=2/13, t=6/13, q=13, j=2, folds=(2, 2, 3, 4, 5, 6), active=(4, 9), sources=('sum:4+9',)
+S=(1, 4, 5, 6, 7, 11), M=2/13, t=4/13, q=13, j=2, folds=(2, 2, 3, 4, 5, 6), active=(6, 7), sources=('sum:6+7',)
+S=(2, 5, 6, 8, 10, 11), M=2/13, t=1/13, q=13, j=2, folds=(2, 2, 3, 5, 5, 6), active=(2, 11), sources=('sum:2+11', 'sum:5+8')
+S=(2, 3, 5, 6, 8, 11), M=3/19, t=2/19, q=19, j=3, folds=(3, 3, 4, 6, 7, 9), active=(8, 11), sources=('sum:8+11',)
+S=(2, 5, 6, 7, 8, 11), M=3/19, t=2/19, q=19, j=3, folds=(3, 3, 4, 5, 7, 9), active=(8, 11), sources=('sum:8+11',)
+S=(1, 3, 4, 5, 7), M=2/11, t=5/11, q=11, j=2, folds=(2, 2, 3, 4, 5), active=(4, 7), sources=('sum:4+7',)
+
+========================================================================================
+B. LRC14 sector state-word separation lab
+========================================================================================
+rows: 1287 primitive k=9 offset rows E={0}+8-subsets of [1,13]
+feature | mixed L_y fibers | largest mixed fiber | example
+sumset_excess            |              11 |                 278 | E=(0, 1, 2, 3, 4, 5, 6, 10, 13), L_y=407/1170 ; E=(0, 1, 2, 3, 4, 5, 6, 11, 13), L_y=15014/45045
+fold_count               |              11 |                 409 | E=(0, 1, 2, 3, 4, 5, 6, 12, 13), L_y=36983/98280 ; E=(0, 1, 2, 3, 4, 5, 10, 11, 12), L_y=403/1485
+fold_profile             |             130 |                   6 | E=(0, 1, 2, 4, 6, 8, 10, 12, 13), L_y=4138/12285 ; E=(0, 2, 3, 4, 6, 8, 10, 12, 13), L_y=187/520
+transition_signature     |              54 |                   3 | E=(0, 1, 2, 3, 5, 6, 7, 9, 10), L_y=2831/8820 ; E=(0, 1, 2, 4, 5, 6, 8, 10, 12), L_y=2881/7560
+state_mass               |               0 |                   1 | no mixed L_y fibers
+missed_histogram         |               0 |                   1 | no mixed L_y fibers
+full_state_word          |               0 |                   1 | no mixed L_y fibers
+
+top k=9 rows by L_y with state metrics
+row | L_y | p_hist | states | entropy | transitions | fold_count
+(0, 1, 2, 3, 4, 5, 6, 7, 8) | 26083/52920 | (Fraction(2447, 5880), Fraction(653, 2940), Fraction(27, 196), Fraction(23, 245), Fraction(13, 196), Fraction(9, 196), Fraction(1, 56)) | 32 | 3.73574 | ((1, 68), (2, 8), (3, 2)) | 12
+(0, 1, 2, 3, 4, 5, 6, 7, 9) | 38681/79380 | (Fraction(1181, 2940), Fraction(23, 90), Fraction(1139, 8820), Fraction(38, 441), Fraction(317, 4410), Fraction(5, 126), Fraction(1, 63)) | 30 | 3.71220 | ((1, 77), (2, 8), (3, 1)) | 12
+(0, 1, 2, 3, 4, 5, 6, 7, 10) | 12419/26460 | (Fraction(8, 21), Fraction(40, 147), Fraction(71, 490), Fraction(9, 98), Fraction(2, 35), Fraction(19, 490), Fraction(1, 70)) | 34 | 3.82533 | ((1, 69), (2, 14), (3, 1)) | 11
+(0, 1, 2, 3, 4, 5, 6, 7, 12) | 691/1512 | (Fraction(1093, 2940), Fraction(155, 588), Fraction(171, 980), Fraction(64, 735), Fraction(2, 35), Fraction(5, 147), Fraction(1, 84)) | 38 | 3.90330 | ((1, 79), (2, 13), (3, 1)) | 10
+(0, 2, 3, 4, 5, 6, 7, 8, 10) | 47557/105840 | (Fraction(151, 420), Fraction(1627, 5880), Fraction(239, 1470), Fraction(22, 245), Fraction(7, 120), Fraction(19, 490), Fraction(1, 70)) | 38 | 3.94435 | ((1, 85), (2, 10), (3, 5)) | 9
+(0, 2, 4, 5, 6, 7, 8, 10, 12) | 7907/17640 | (Fraction(289, 840), Fraction(977, 2940), Fraction(139, 980), Fraction(47, 588), Fraction(47, 840), Fraction(5, 147), Fraction(1, 84)) | 38 | 3.93317 | ((1, 96), (2, 15), (3, 6)) | 8
+(0, 2, 3, 4, 5, 6, 7, 8, 9) | 14207/31752 | (Fraction(1271, 3528), Fraction(167, 630), Fraction(181, 1176), Fraction(907, 8820), Fraction(55, 882), Fraction(5, 126), Fraction(1, 63)) | 36 | 4.00382 | ((1, 90), (2, 12), (3, 2)) | 9
+(0, 1, 2, 3, 4, 5, 6, 7, 13) | 10931/24570 | (Fraction(6833, 19110), Fraction(1051, 3822), Fraction(113, 637), Fraction(901, 9555), Fraction(73, 1274), Fraction(5, 182), Fraction(1, 91)) | 42 | 4.08751 | ((1, 88), (2, 16)) | 10
+
+========================================================================================
+C. Invariant reading
+========================================================================================
+1. Additive summaries are routing labels: sumset excess, fold count,
+   fold profile, and gap pattern all have mixed fibers for exact M or L_y.
+2. For max-min M, the local determinant is the optimal-time clearance word:
+   denominator q, folded residues, active runners, and crossing source.
+   It is a finite code on the THM-524 envelope, not a raw speed invariant.
+3. For LRC14 sector measures, the missed-count histogram determines L_y,
+   but HYP-2648's measured state word determines the richer structure:
+   transition complexity, sector bias, and signed wall transport.
+4. The common object is an addressed wall/crossing sheaf: atoms plus labels.
+   Scalar invariants become trustworthy only after the address is retained.
+
+Tournament Analysis
+vertices: addressed_wall_sheaf, optimal_clearance_word, measured_state_word,
+missed_histogram, additive_freiman_labels, fold_profile, raw_speeds
+edge rule: A -> B when B is a quotient of A that can mix target fibers
+Hamiltonian path:
+  addressed_wall_sheaf > optimal_clearance_word > measured_state_word >
+  missed_histogram > additive_freiman_labels > fold_profile > raw_speeds
+challenged assumption: runners and arcs are not the determinant; the determinant
+is the finite address carried by the wall arrangement before scalarization.
