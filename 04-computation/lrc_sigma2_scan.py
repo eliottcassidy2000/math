@@ -102,21 +102,21 @@ def run(k):
         kill[v] = s
     full = frozenset(range(P))
 
+    # suffix-union of kills: union_from[s] = union of kill[v] for v in [s, BOX]
+    union_from = [frozenset()] * (BOX + 2)
+    acc = set()
+    for v in range(BOX, 0, -1):
+        acc |= kill[v]
+        union_from[v] = frozenset(acc)
+
     best_sigma = [None]
     best_witness = [None]
     survivors = [0]
 
-    # DFS: choose increasing speeds; alive = probes not yet killed.
-    # Prune: with rem slots left and need to kill 'alive', if even killing
-    # everything possible can't finish we could prune, but cheap bound: each
-    # element kills <= max_kill probes; skip that, just descend. To bound time
-    # we add: remaining speeds available count >= rem.
-    speeds = list(range(1, BOX + 1))
-
     def dfs(start, chosen, alive):
         rem = k - len(chosen)
         if rem == 0:
-            if not alive:  # all probes killed -> survivor
+            if not alive:  # all probes killed -> survivor candidate
                 S = tuple(chosen)
                 if setgcd(S) != 1:
                     return
@@ -129,14 +129,24 @@ def run(k):
                         best_sigma[0] = M
                         best_witness[0] = S
             return
-        # need at least rem more speeds
+        # need at least rem more speeds available
         if BOX - start + 1 < rem:
+            return
+        # coverage prune: speeds in [start,BOX] must be able to kill every
+        # remaining alive probe; else dead end.
+        if not alive <= union_from[start]:
             return
         for v in range(start, BOX + 1):
             if BOX - v + 1 < rem:
                 break
+            nalive = alive - kill[v]
+            # quick prune: remaining speeds [v+1,BOX] must cover nalive
+            if nalive and not (nalive <= union_from[v + 1]):
+                # even with everything left we can't kill nalive -> skip this v
+                # (still try? no: this v chosen, can't recover) -> prune branch
+                continue
             chosen.append(v)
-            dfs(v + 1, chosen, alive - kill[v])
+            dfs(v + 1, chosen, nalive)
             chosen.pop()
 
     dfs(1, [], full)

@@ -123,6 +123,20 @@ at distance `a/q` on the `q`-clock. So the level-`a` claim `M(F)=a/q` splits int
 `sigma_2(13) = 3/41` (a=3), the deepest dip available at k=13. The genuinely hard `k=13` floor
 is still the AP; the spectral basin around it has width `g(13) = 3/41 - 1/14 = 1/574`.
 
+## Engineering application
+
+The max-min collar `M(S)` is the **guaranteed simultaneous clearance** in view-obstruction /
+periodic-scheduling problems: `k` processes (or transmitters, or radar pulses) with integer
+period-ratios `S` and one observer; `M(S)` is the largest guard band such that, at some phase
+`t`, every process is `>= M(S)` away from the observer's lane. THM-539 says the *achievable
+clearance spectrum* just above the optimum `1/(k+1)` is the Stern-Brocot ladder
+`a/(a(k+1)-1)`, and — crucially for design — the finer rungs (`a>=3`) are reachable **only when
+`k-1` is highly composite**. So a frequency-hopping / coprime-sampling / guard-band designer who
+can choose `k` (number of channels) gets strictly finer clearance tuning by picking `k` with
+`k-1` divisible by `2·3·5·…` (a primorial), via the explicit family `{1,…,k-2,k,a(k-1)}`. The
+denominator lemma `q <= 2 max(S)` is the exact statement that finer clearance costs proportionally
+larger period ratios (`max(S) >= q/2`).
+
 ## Files
 - `04-computation/lrc_spectral_gap_lowerbound_kps.py` (+`.out`) — engine, M_k verify, spectrum scan
 - `04-computation/lrc_below_mediant_fast_kps.py` (+`.out`) — filtered exact sigma_2 scan k<=11
