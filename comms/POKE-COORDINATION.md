@@ -11,12 +11,17 @@ through `s<=30` keeps the best row at the endpoint `L=8`, with global maximum
 at the minimal defect `s=2`; this is consistent with KPS's broader
 single-defect scan through `s<=60`.
 
+Endpoint rows now have a concrete asymptotic handle: treating the last runner
+as equidistributed over the base row `(0,...,7)` gives exact limit
+`20698/46305`, and `F_2` sits above it by `22391/555660`.  A proof of
+`|L_y(F_s)-20698/46305| <= 1/(7+s)` would leave only `s<=17` to check.
+
 Active steering objective: turn the finite near-AP check into three structural
-lemmas: endpoint dominance for one-gap rows, a residue/wall envelope proving
-`F_s=(0,1,2,3,4,5,6,7,7+s)` is maximized at `s=2`, and a wall-transfer pairing
-from AP9 to `F_2` retaining at least the AP-to-cap slack `10441/7567560`.
-This is the tight bounded piece; the wide signed-tail obligation remains with
-HYP-2639/HYP-2636/HYP-2633.
+lemmas: endpoint dominance for one-gap rows, a discrepancy/residue envelope
+proving `F_s=(0,1,2,3,4,5,6,7,7+s)` is maximized at `s=2`, and a wall-transfer
+pairing from AP9 to `F_2` retaining at least the AP-to-cap slack
+`10441/7567560`.  This is the tight bounded piece; the wide signed-tail
+obligation remains with HYP-2639/HYP-2636/HYP-2633.
 
 ## kps-S12 update: LRC(14) pockets are Freiman dimension
 

@@ -104,6 +104,42 @@ global best through gap 30: gap=2, L=8, E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
   L_y=38681/79380 = 0.487288990
   cap_9-L_y=39541/5675670 = 0.006966755
 
+Endpoint-gap asymptotic for F_s=(0,1,2,3,4,5,6,7,7+s)
+  base B=(0,...,7) missed-count distribution: [Fraction(481, 1470), Fraction(359, 1470), Fraction(25, 147), Fraction(26, 245), Fraction(17, 210), Fraction(5, 98), Fraction(1, 49)]
+  independent-extra-runner limit = 20698/46305 = 0.446992765
+  F_2 - limit                   = 22391/555660 = 0.040296224
+
+  Top endpoint gaps through s<=120:
+  gap    w      L_y                         L_y-limit      w*(L_y-limit)
+    2     9                38681/79380     22391/555660          22391/61740
+    3    10                12419/26460      4141/185220           4141/18522
+   14    21                  1349/2940        439/37044             439/1764
+    5    12                   691/1512      1237/123480           1237/10290
+   61    68                  2011/4410        167/18522            5678/9261
+   15    22                 4911/10780    17467/2037420          17467/92610
+   50    57              114439/251370    14549/1759590          14549/30870
+   19    26               52159/114660    19043/2407860          19043/92610
+   42    49               84143/185220        193/26460              193/540
+   84    91                39002/85995       788/120393             788/1323
+   11    18                17981/39690      1679/277830           1679/15435
+   69    76             455153/1005480      2665/469224            2665/6174
+   22    29               57821/127890    13757/2685690          13757/92610
+   36    43             514337/1137780    40303/7964460         40303/185220
+   31    38              113587/251370      1717/351918            1717/9261
+   45    52                38858/85995      2932/601965          11728/46305
+
+  Residue-class maxima for w=7+s mod 7:
+    r=0: max gap= 14, L_y=0.458843537; tail max gap= 84, L_y=0.453537996
+    r=1: max gap= 15, L_y=0.455565863; tail max gap= 99, L_y=0.450350832
+    r=2: max gap=  2, L_y=0.487288990; tail max gap= 51, L_y=0.450212422
+    r=3: max gap=  3, L_y=0.469349962; tail max gap= 66, L_y=0.449892316
+    r=4: max gap= 11, L_y=0.453036029; tail max gap= 60, L_y=0.449792985
+    r=5: max gap=  5, L_y=0.457010582; tail max gap= 61, L_y=0.456009070
+    r=6: max gap= 69, L_y=0.452672355; tail max gap= 69, L_y=0.452672355
+
+  max |w*(L_y(F_s)-limit)| through s<=120: 2143/3087 = 0.694201490
+  Conditional reduction: a proof of |L_y(F_s)-limit| <= 1/(7+s) would leave only s<=17 to check; a 2/(3(7+s)) bound would leave only s<=9.
+
 Tournament Analysis
   vertices are proof obligations / quotients, not runners.
   pairwise observable: which quotient supplies a usable bound earlier in the proof.

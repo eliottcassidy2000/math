@@ -32,6 +32,7 @@ AP9 = tuple(range(9))
 DEFECT9 = (0, 1, 2, 3, 4, 5, 6, 7, 9)
 CAP9 = Fraction(1979, 4004)
 MAX_GAP = 30
+MAX_ENDPOINT_GAP = 120
 
 
 def frac_part(x: Fraction) -> Fraction:
@@ -207,6 +208,72 @@ def print_one_gap_envelope(max_gap: int = MAX_GAP) -> None:
     print()
 
 
+def endpoint_limit() -> tuple[Fraction, list[Fraction]]:
+    """Limit for F_w={0,...,7,w} as w goes to infinity.
+
+    The base row B={0,...,7} has missed-count distribution p_B.  A new
+    equidistributed runner independently hits a missed sector with probability
+    t/7 when B misses t sectors, so the limiting weight is
+
+        h(t) = (t/7) g(t-1) + (1-t/7) g(t).
+    """
+
+    base = tuple(range(8))
+    p_base = distribution(base)
+    limit = Fraction(0)
+    for t, mass in enumerate(p_base):
+        if t == 0:
+            h_t = g9(0)
+        else:
+            h_t = Fraction(t, 7) * g9(t - 1) + Fraction(7 - t, 7) * g9(t)
+        limit += mass * h_t
+    return limit, p_base
+
+
+def print_endpoint_asymptotic(max_gap: int = MAX_ENDPOINT_GAP) -> None:
+    limit, p_base = endpoint_limit()
+    f2 = L_y(DEFECT9)
+    print("Endpoint-gap asymptotic for F_s=(0,1,2,3,4,5,6,7,7+s)")
+    print(f"  base B=(0,...,7) missed-count distribution: {p_base}")
+    print(f"  independent-extra-runner limit = {fmt(limit)}")
+    print(f"  F_2 - limit                   = {fmt(f2 - limit)}")
+    print()
+
+    rows: list[tuple[int, int, Fraction, Fraction]] = []
+    for gap in range(2, max_gap + 1):
+        w = 7 + gap
+        E = tuple(range(8)) + (w,)
+        ly = L_y(E)
+        rows.append((gap, w, ly, (ly - limit) * w))
+
+    print(f"  Top endpoint gaps through s<={max_gap}:")
+    print("  gap    w      L_y                         L_y-limit      w*(L_y-limit)")
+    for gap, w, ly, scaled in sorted(rows, key=lambda row: row[2], reverse=True)[:16]:
+        print(
+            f"  {gap:>3}  {w:>4}   {str(ly):>24}   "
+            f"{str(ly - limit):>14}   {str(scaled):>18}"
+        )
+    print()
+
+    print("  Residue-class maxima for w=7+s mod 7:")
+    for residue in range(7):
+        class_rows = [row for row in rows if row[1] % 7 == residue]
+        overall = max(class_rows, key=lambda row: row[2])
+        tail = max([row for row in class_rows if row[0] > 50], key=lambda row: row[2])
+        print(
+            f"    r={residue}: max gap={overall[0]:>3}, L_y={float(overall[2]):.9f}; "
+            f"tail max gap={tail[0]:>3}, L_y={float(tail[2]):.9f}"
+        )
+    max_scaled = max(abs(scaled) for _, _, _, scaled in rows)
+    print()
+    print(f"  max |w*(L_y(F_s)-limit)| through s<={max_gap}: {fmt(max_scaled)}")
+    print(
+        "  Conditional reduction: a proof of |L_y(F_s)-limit| <= 1/(7+s) "
+        "would leave only s<=17 to check; a 2/(3(7+s)) bound would leave only s<=9."
+    )
+    print()
+
+
 def print_tournament_analysis() -> None:
     vertices = [
         "wall_transfer_pairing",
@@ -251,6 +318,7 @@ def print_tournament_analysis() -> None:
 def main() -> None:
     print_wall_certificate()
     print_one_gap_envelope()
+    print_endpoint_asymptotic()
     print_tournament_analysis()
 
 

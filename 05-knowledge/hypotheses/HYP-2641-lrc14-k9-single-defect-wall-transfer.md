@@ -123,6 +123,49 @@ the S29 exact scan through `s<=30` finds:
 This extends the earlier KPS `lrc14_single_defect_family.py` scan, which found
 the same `s=2` endpoint maximizer for k=8,9,10 through `s<=60`.
 
+## Endpoint Gap Asymptotic
+
+The endpoint family has an exact independent-extra-runner limit.  Write
+
+```text
+F_s = (0,1,2,3,4,5,6,7,7+s).
+```
+
+For the base row `B=(0,1,2,3,4,5,6,7)`, the missed-count distribution is
+
+```text
+[481/1470, 359/1470, 25/147, 26/245, 17/210, 5/98, 1/49].
+```
+
+If the last runner is treated as equidistributed relative to the base row, the
+limit is
+
+```text
+lim_{s->infty} L_y(F_s) = 20698/46305 = 0.446992765.
+```
+
+The binding defect sits well above this limit:
+
+```text
+L_y(F_2) - 20698/46305 = 22391/555660 = 0.040296224.
+```
+
+The scan through `s<=120` has empirical
+
+```text
+max |(7+s) * (L_y(F_s)-20698/46305)| = 2143/3087 = 0.694201490.
+```
+
+Therefore a clean discrepancy lemma of the form
+
+```text
+|L_y(F_s)-20698/46305| <= 1/(7+s)
+```
+
+would reduce endpoint minimal-gap dominance to the finite check `s<=17`.  A
+stronger `2/(3(7+s))` bound would leave only `s<=9`.  This converts the
+oscillating residue sequence into a standard rotation-discrepancy target.
+
 ## Proposed Lemma Split
 
 To turn the finite near-AP check into a theorem-shaped argument, prove:
@@ -132,7 +175,8 @@ To turn the finite near-AP check into a theorem-shaped argument, prove:
 2. **Minimal-gap dominance.** For endpoint rows
    `F_s=(0,1,2,3,4,5,6,7,7+s)`, `L_y(F_s) <= L_y(F_2)` for every `s>=2`.
    Because the sequence in `s` oscillates, the proof should use wall-transfer
-   pairing or residue-class envelopes rather than monotone descent.
+   pairing, residue-class envelopes, or the endpoint discrepancy limit above
+   rather than monotone descent.
 3. **AP-to-defect wall surplus.** On the common-wall refinement for `A` and
    `F_2`, pair positive transfers against negative transfers and keep surplus
    at least `10441/7567560`.  The exact surplus is larger:
