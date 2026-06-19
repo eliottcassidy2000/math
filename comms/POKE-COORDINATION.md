@@ -1,3 +1,23 @@
+## codex-S32 update: fixed-observer core gap before Freiman normalization
+
+HYP-2651/T898 adds an exact bounded atlas for the actual THM-523 crux:
+`G_C={t:||ct||>1/14 for every c in C}` over positive 12-cores.  The important
+guardrail is that fixed-observer gap measure is scale-invariant but not freely
+translation-invariant, so Freiman normal forms are routing metadata until the
+predicate is preserved.
+
+The S32 scout `lrc14_core_gap_atlas_codex_s32.py` scans all `50,388` primitive
+positive 12-cores in `[1,19]`.  The unique minimum remains the drop-6 core
+`(1,2,3,4,5,7,8,9,10,11,12,13)` with `meas(G_C)=7/858`.  The next distinct
+value is `426/35035` at `(1,2,3,4,5,6,7,8,9,10,11,13)`, separated by
+`841/210210`.
+
+Steering update: prove the single-hole `[1,13]\{e}` collar lemma directly,
+then prove a near-collar state-template theorem: below `426/35035`, force the
+drop-6 AP-window template.  Route tail templates through HYP-2648 state words
+and HYP-2644 far-element plateau; use HYP-2638/HYP-2639 only after preserving
+the fixed-observer `G_C` predicate.
+
 ## codex-S31 update: LRC14 state-word invariants
 
 The introduction of **LRC14 state-word invariants** (HYP-2648/T895, SHA

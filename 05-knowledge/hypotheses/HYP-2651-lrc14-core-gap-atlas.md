@@ -1,0 +1,180 @@
+---
+id: HYP-2651
+title: LRC14 core-gap atlas - exact fixed-observer collar and the near-collar template target
+status: OPEN; exact bounded atlas through max speed 19
+source: codex-2026-06-19-S32
+depends_on:
+  - THM-523
+  - HYP-2649
+  - HYP-2648
+  - HYP-2647
+  - HYP-2644
+related:
+  - HYP-2638
+  - HYP-2639
+  - HYP-2646
+  - OPEN-Q-108
+---
+
+# HYP-2651 - LRC14 Core-Gap Atlas
+
+## Claim
+
+The fixed-observer core-gap crux in THM-523 should be attacked with exact
+positive-core gap measure first, and only then routed through Freiman,
+state-word, and far-element quotients.
+
+For a 12-core `C` of positive speeds, define
+
+```text
+G_C = {t in [0,1): ||c t|| > 1/14 for all c in C}.
+```
+
+The exact bounded atlas through all primitive `C subset [1,19]` shows the
+known drop-6 core
+
+```text
+C0 = (1,2,3,4,5,7,8,9,10,11,12,13)
+```
+
+is still the unique minimum, with
+
+```text
+meas(G_C0) = 7/858.
+```
+
+The next distinct safe measure in the atlas is
+
+```text
+426/35035
+```
+
+at the endpoint-drop core `(1,2,3,4,5,6,7,8,9,10,11,13)`, giving separation
+
+```text
+426/35035 - 7/858 = 841/210210.
+```
+
+## Evidence
+
+Script:
+`04-computation/lrc14_core_gap_atlas_codex_s32.py`
+
+Stored output:
+`05-knowledge/results/lrc14_core_gap_atlas_codex_s32.out`
+
+The script scans every primitive positive 12-core in `[1,B]`, with exact
+rational interval arithmetic at target `1/14`.  It deliberately does **not**
+translate cores to contain zero: fixed-observer gap measure is scale-invariant,
+but it is not freely translation-invariant.
+
+For `B=19`, the exact scan covers `50,388` primitive positive cores.  The
+cumulative minimum is:
+
+```text
+B=12: 6617/194040 at (1,2,...,12)
+B=13..19: 7/858 at (1,2,3,4,5,7,8,9,10,11,12,13)
+```
+
+The single-hole AP-window ledger for `[1,13]\{e}` has a unique minimum at
+`e=6`:
+
+```text
+drop 6  ->  7/858
+drop 12 ->  426/35035
+drop 4  ->  97/4004
+drop 10 ->  1520/63063
+```
+
+The near-minimum rows through `B=19` are AP-cluster templates with a small
+number of holes, usually retaining the central `6` hole.  Higher sumset excess
+does not by itself make rows dangerous; the near-collar rows are recognized
+better by hole/state template than by scalar excess.
+
+## Proof Reading
+
+This suggests a three-step route for the OPEN-Q-108 uniform fattening lemma.
+
+1. Prove the AP-window single-hole collar lemma exactly:
+
+```text
+For C=[1,13]\{e}, meas(G_C) is minimized uniquely at e=6,
+with value 7/858.
+```
+
+This is a small exact wall-ledger lemma, not a search problem.  The stored table
+gives all values and component counts.
+
+2. Prove a near-collar state-template lemma:
+
+```text
+If meas(G_C) < 426/35035, then C has the drop-6 AP-window state template.
+```
+
+This would convert the observed separation into a structural dichotomy:
+drop-6-like rows are handled by the explicit collar, and every other bounded
+template has a uniform margin above it.
+
+3. Compose with the far-element plateau recursion:
+
+Rows with genuinely large or dissociated elements should be routed through
+HYP-2644's plateau estimate.  The exact atlas shows that merely appending a
+tail through `19` does not beat the collar; the top tail rows still look like
+AP clusters with a few holes, not independent strangers.
+
+## Relationship To Freiman Small-Excess
+
+HYP-2638 is valid for the `L_y`/sector-functional pocket where translation and
+dilation normal forms are appropriate.  The THM-523 `G_C` crux is stricter:
+translation changes a fixed observer's gap set.  Therefore HYP-2651 keeps the
+positive core itself as the first vertex, then records sumset excess only as a
+classifier.
+
+In the `B=19` atlas the minimum has exact excess `2`, while the second row has
+exact excess `1`; later near-minimum rows have excess up to `11`.  Scalar
+excess is therefore a routing hint, not the collar order parameter.
+
+## Tournament Analysis
+
+Vertices are proof quotients:
+
+```text
+exact_positive_core_gap
+AP_drop_profile
+state_word_template
+sumset_excess_classifier
+far_element_plateau
+raw_runner_bound
+```
+
+Pairwise observable: which quotient preserves the exact OPEN-Q-108 predicate
+before routing to a coarser proof object.
+
+Switch/gauge: keep fixed-observer positivity before using Freiman, state-word,
+or far-element simplifications.
+
+Hamiltonian path:
+
+```text
+exact_positive_core_gap
+> AP_drop_profile
+> state_word_template
+> sumset_excess_classifier
+> far_element_plateau
+> raw_runner_bound
+```
+
+Fingerprint: transitive priority tournament, score histogram
+`{0:1,1:1,2:1,3:1,4:1,5:1}`, no directed 3-cycles.
+
+## Assumption Challenge
+
+Alternate vertex sets considered: runners, holes, safe components, exact
+sumset excess, state words, far-element plateaus, residue/coset classes, and
+proof obligations.
+
+The challenged assumption is that the exact core-gap crux can inherit
+translation-normalized Freiman tables directly.  It cannot without extra
+argument, because the observer is fixed.  HYP-2651 therefore treats exact
+positive-core gap measure as the primary object and uses the other structures
+only after the predicate is preserved.
