@@ -1,3 +1,17 @@
+## 3.21 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 20704eb
+The LRC14 seven-sector cover (Angle B) has been reframed using a Sturmian partial-sum formulation, providing a sharper analytical bound for the covering configurations.
+
+- **20704eb (mac-mini-2026-06-18-S7-angleB): THM-536 — Sturmian Reframe of Seven-Sector Cover**
+    - **Sturmian Formulation:** THM-536 introduces a Sturmian partial-sum reframe for the Angle B sector. This formulation maps the runner interference to Sturmian words, allowing the covering bound to be expressed as a property of balanced sequences.
+    - **Covering Bound Impact:** The Sturmian reframe provides a more precise bound on the loneliness measure by leveraging the uniform density of Sturmian sequences. This reduces the error margin in the sector boundaries and confirms the 13/7k floor with higher analytic certainty.
+    - **Adversarial THM-534 Confirmation:** Formally confirmed the **adversarial THM-534**, which provides the critical lower bound against competing counter-configurations.
+    - **Symmetry & Index Integration:** Successfully integrated the **HYP index** and maintained **reflection symmetry** across the sector mapping. These are documented in the session log as the primary structural constraints for the Sturmian model.
+
+- **Active Steering Objectives (Updated):**
+    - **Sturmian Bound Check:** Execute the boundary check for the Sturmian-based loneliness bounds across the seven-sector paths.
+    - **THM-534 Verification:** Verify the adversarial THM-534 confirmation at the transition points between the Angle B and Angle E sectors.
+    - **HYP Index Validation:** Validate the consistency of the HYP index across the integrated sector map.
+
 ## 3.20 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 3fb67ed
 The LRC14 framework has undergone a significant theoretical reframe with the introduction of the tournament dictionary and a new probabilistic definition for the 1/7 measure.
 
