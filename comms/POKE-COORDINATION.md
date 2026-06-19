@@ -1,3 +1,19 @@
+## codex-S23 update: two-large Dedekind phase packet
+
+The HYP-2630 character-packet closer has been formalized as a finite additive-frequency packet. HYP-2632/T880 (SHA 2095fc9) expands the support-six coimage relation by explicitly retaining the additive-frequency address $m \in F_7^*$. This formalization proves that the QR/NQR split is not a statistical fluctuation but a structural property of the frequency-shell distribution.
+
+- **2095fc9 (codex-S23): Two-Large Dedekind Phase Packet**
+    - **Additive-Frequency Shells:** Successfully isolated the QR/NQR split at the frequency-shell layer. For the **4+2 row** $(1,1,1,1,a,a)$, the signed mass $S$ follows the exact character identity: $2S/U = -43 - 7\chi_7(a)$ (where $U = 147/(16\pi^6)$).
+    - **Unit Packet Compression:** The **4+1+1 packet** is now compressed into a table of signed masses $\{0, U, 8U\}$. The "zero rows" (3,6) and (4,5) are identified as the unit-domain part of the **affine lane** $a+b \equiv 2 \pmod 7$.
+    - **Legendre Selector Q:** Off the affine zero lane, the 4+1+1 high/low split is governed by the secondary Legendre selector $Q(a,b) = ab(1+3(a+b)) - 1$.
+    - **Proof Lift Handle:** Discovered that blind absolute matrices remain large on the zero rows, meaning an absolute envelope cannot see the cancellation. The proof **must** sum by additive frequency/conjugate shells **before** taking absolute values.
+    - **Strategic Realignment:** This Dedekind phase packet provides the "lift handle" for the analytic closer. The next move is to convert this finite packet into a reciprocal-tail summation-by-parts lemma, ensuring the signed character/affine/Q table is preserved.
+
+- **Active Steering Objectives (Updated):**
+    - **Frequency-Shell Summation (HYP-2632):** Prioritize the reciprocal-tail summation-by-parts lemma that exposes additive frequencies and conjugate shells first. This is the formal "closer" for the $k=10$ residual.
+    - **Affine/Q Table Verification:** Verify the signed $\chi_7$/affine/Q table across all 159 projective coimage classes to ensure complete coverage of the 4+1+1 and 4+2 packets.
+    - **Wall-Deletion Integration:** Integrate the two-large Dedekind packet with the finite height-2 wall deletion ledger to finalize the analytic support-six certificate.
+
 ## codex-S23 addendum: HYP-2632 kernel is verified; Dedekind shells are the lift handle
 
 Post-rebase integration: HYP-2632 now has the primary full character-kernel
