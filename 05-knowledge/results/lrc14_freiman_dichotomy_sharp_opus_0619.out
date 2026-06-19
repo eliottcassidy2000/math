@@ -1,2 +1,45 @@
 C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_freiman_dichotomy_sharp_opus_0619.py:146: SyntaxWarning: invalid escape sequence '\{'
   A 'dissociated stranger' w in E\{0} has NO bounded integer relation
+==============================================================================
+SHARP FREIMAN DICHOTOMY — LRC(14) (opus-2026-06-19)
+==============================================================================
+
+[corpus] 7273 primitive non-AP k=8 sets analyzed
+
+[Q1] sigma vs smallest proper 2-dim GAP size (rho = gapsize/k):
+     sigma-bin | #sets | #with-2dGAP | median gapsize | max gapsize | #strangers(H2)
+     sig~ 2.0 |    32 |          32 | 10             | 12          | 0
+     sig~ 2.5 |   268 |         268 | 12             | 16          | 0
+     sig~ 3.0 |  1250 |        1250 | 15             | 33          | 7
+     sig~ 3.5 |  1609 |        1609 | 20             | 64          | 3
+     sig~ 4.0 |  3808 |        3808 | 30             | 80          | 11
+     sig~ 4.5 |   306 |         306 | 48             | 68          | 0
+
+[Q1b] BOUNDED-GAP vs STRANGER dichotomy (the real cut). k=8.
+     For threshold C: GAP-bounded = min2dGAPsize<=C*8. Else expect stranger.
+     C= 2 (size<=  16): GAP-bounded= 1754  not-bounded= 5519  of-not-bounded-with-NO-stranger= 5499  maxL_y(not-bounded)=0.18281
+     C= 3 (size<=  24): GAP-bounded= 4092  not-bounded= 3181  of-not-bounded-with-NO-stranger= 3166  maxL_y(not-bounded)=0.11771
+     C= 4 (size<=  32): GAP-bounded= 5339  not-bounded= 1934  of-not-bounded-with-NO-stranger= 1921  maxL_y(not-bounded)=0.10027
+     C= 5 (size<=  40): GAP-bounded= 6210  not-bounded= 1063  of-not-bounded-with-NO-stranger= 1057  maxL_y(not-bounded)=0.09353
+     C= 6 (size<=  48): GAP-bounded= 6786  not-bounded=  487  of-not-bounded-with-NO-stranger=  484  maxL_y(not-bounded)=0.08000
+     C= 8 (size<=  64): GAP-bounded= 7233  not-bounded=   40  of-not-bounded-with-NO-stranger=   39  maxL_y(not-bounded)=0.06764
+     C=10 (size<=  80): GAP-bounded= 7273  not-bounded=    0  of-not-bounded-with-NO-stranger=    0  maxL_y(not-bounded)=0.00000
+
+[Q2] THIRD POCKET search (small sigma & no 2-dim GAP & no H2 stranger):
+     sets with sigma<=4.0, no 2dGAP, no stranger: 0
+     sets with sigma<=4.0 and no detected proper 2-dim GAP: 0
+
+[Q2b] DICHOTOMY COMPLETENESS over ALL sets:
+      sets with no proper 2-dim GAP found      : 0
+      of those, also NO H2 stranger (residue)  : 0
+
+[Q3] L_y by sigma bin (dimension penalty: higher sigma -> lower L_y):
+     sigma-bin | #sets | max L_y | mean L_y | cap_8=0.38153
+     sig~ 2.0 |    32 | 0.30306 | 0.15386
+     sig~ 2.5 |   268 | 0.24728 | 0.10816
+     sig~ 3.0 |  1250 | 0.23897 | 0.07874
+     sig~ 3.5 |  1609 | 0.15423 | 0.06413
+     sig~ 4.0 |  3808 | 0.13704 | 0.05469
+     sig~ 4.5 |   306 | 0.07336 | 0.04686
+     GLOBAL max L_y over non-AP = 0.30306 at [0, 2, 3, 4, 5, 6, 7, 8] (sigma=2.000)
+     margin to cap_8 = 0.07847

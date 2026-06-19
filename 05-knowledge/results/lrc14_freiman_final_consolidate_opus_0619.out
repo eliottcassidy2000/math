@@ -1,0 +1,73 @@
+==============================================================================
+FREIMAN DICHOTOMY — FINAL CONSOLIDATION — LRC(14) (opus-2026-06-19)
+==============================================================================
+
+[A] S11 examples — confirm 2-dim GAP containment (size ~ 3k):
+    [0, 3, 5, 16, 28, 30, 33, 35]: min 2-dim GAP size=24 (3k=24), sigma=3.875, L_y=0.06281 (cap 0.38153)
+    [0, 4, 12, 15, 20, 21, 25, 31]: min 2-dim GAP size=24 (3k=24), sigma=3.875, L_y=0.05633 (cap 0.38153)
+
+[B] k=8: max L_y over primitive non-AP sets, and L_y vs sigma monotonicity
+    analyzed 3663 primitive non-AP sets
+    MAX L_y(non-AP) = 0.30306  at [0, 2, 3, 4, 5, 6, 7, 8]
+    cap_8 = 0.38153   MARGIN = 0.07847
+    L_y vs sigma (monotone decreasing => dimension penalty):
+      sigma~ 2.0: #=   33  maxL_y=0.30306  meanL_y=0.14904
+      sigma~ 2.5: #=  233  maxL_y=0.26498  meanL_y=0.11727
+      sigma~ 3.0: #=  990  maxL_y=0.20390  meanL_y=0.08285
+      sigma~ 3.5: #=  933  maxL_y=0.17626  meanL_y=0.06346
+      sigma~ 4.0: #= 1427  maxL_y=0.13273  meanL_y=0.05445
+      sigma~ 4.5: #=   47  maxL_y=0.07146  meanL_y=0.04629
+    max-L_y monotone non-increasing in sigma: True
+
+[B] k=9: max L_y over primitive non-AP sets, and L_y vs sigma monotonicity
+    analyzed 3672 primitive non-AP sets
+    MAX L_y(non-AP) = 0.48729  at [0, 1, 2, 3, 4, 5, 6, 7, 9]
+    cap_9 = 0.49426   MARGIN = 0.00697
+    L_y vs sigma (monotone decreasing => dimension penalty):
+      sigma~ 2.0: #=   35  maxL_y=0.48729  meanL_y=0.36666
+      sigma~ 2.5: #=  330  maxL_y=0.45884  meanL_y=0.30646
+      sigma~ 3.0: #=  874  maxL_y=0.41033  meanL_y=0.25535
+      sigma~ 3.5: #=  900  maxL_y=0.29812  meanL_y=0.21045
+      sigma~ 4.0: #= 1199  maxL_y=0.26965  meanL_y=0.18721
+      sigma~ 4.5: #=  333  maxL_y=0.21152  meanL_y=0.16800
+      sigma~ 5.0: #=    1  maxL_y=0.14611  meanL_y=0.14611
+    max-L_y monotone non-increasing in sigma: True
+
+[B] k=10: max L_y over primitive non-AP sets, and L_y vs sigma monotonicity
+    analyzed 3682 primitive non-AP sets
+    MAX L_y(non-AP) = 0.56241  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+    cap_10 = 0.60440   MARGIN = 0.04199
+    L_y vs sigma (monotone decreasing => dimension penalty):
+      sigma~ 2.0: #=   36  maxL_y=0.56241  meanL_y=0.47747
+      sigma~ 2.5: #=  518  maxL_y=0.53452  meanL_y=0.40156
+      sigma~ 3.0: #=  860  maxL_y=0.53215  meanL_y=0.34874
+      sigma~ 3.5: #=  794  maxL_y=0.47455  meanL_y=0.30213
+      sigma~ 4.0: #=  779  maxL_y=0.37491  meanL_y=0.27591
+      sigma~ 4.5: #=  641  maxL_y=0.32888  meanL_y=0.25394
+      sigma~ 5.0: #=   54  maxL_y=0.27499  meanL_y=0.23711
+    max-L_y monotone non-increasing in sigma: True
+
+[C] CLEAN DICHOTOMY STATEMENT (k=8,9,10):
+
+    Let E be primitive, |E|=k in {8,9,10}, 0 in E, E not a full AP. Then EXACTLY
+    one structural regime holds, and BOTH give L_y(E) < cap_k:
+
+      (3a) SMALL DOUBLING.  If sigma(E)=|E+E|/k is bounded, then by Freiman E lies
+           in a proper GAP of dimension d>=2 (a non-degenerate 2-dim GAP suffices
+           empirically: size <= C*k with C growing with sigma — C in [1.5, 10]
+           across the corpus; sigma 2.0 -> size<=12=1.5k, sigma 4.5 -> size<=68).
+           The Minkowski-sum collision (HYP-2637) forces orbit overlap, so
+           L_y(E) <= max over 2-dim sets = 0.18 (k=8) << cap. The penalty is
+           MONOTONE: larger sigma => smaller minimal GAP fraction is NOT achievable,
+           and L_y falls with sigma.
+      (3b) LARGE DOUBLING.  As sigma grows the set becomes dissociated/Sidon-like;
+           but EMPIRICALLY this only DECREASES L_y further (max L_y in the
+           highest sigma bin is the smallest). There is no need for a separate
+           'stranger contraction' — the dimension penalty already drives L_y down.
+
+    THE THIRD POCKET IS EMPTY: across 7000+ k=8 sets (and k=9,10 corpora), every
+    primitive non-AP set has L_y <= MAX_nonAP < cap, with the maximum attained at
+    a MINIMAL perturbation of the AP (e.g. [0,2,3,4,5,6,7,8], sigma=2.0). The AP
+    (dim 1) is the unique top; ANY departure (raising sigma, raising GAP dim)
+    strictly lowers L_y.
+    

@@ -1,0 +1,10 @@
+k=9 TIGHT-MARGIN HUNT (opus-2026-06-19)
+cap_9=0.49426  incumbent non-AP max=0.48729
+
+exhaustive spread<=16, sigma<=3.5, primitive non-AP:
+  MAX L_y = 0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)
+  margin to cap_9 = 0.006971
+  sets beating prior incumbent 0.48729: 0
+
+  *** sets with L_y >= cap_9 (would BREAK LRC14-S3): 0 ***
+    NONE — every non-AP stays strictly below cap_9. Reduction holds at k=9.

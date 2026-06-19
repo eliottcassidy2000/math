@@ -63,16 +63,35 @@ The dangerous non-AP are the **near-AP** sets (one element shifted/holed). They 
 1. **excess 0 ⟹ E is an AP** [Freiman–Vosper, KNOWN] ⟹ `L_y = L_y(consec)` [AP-invariance THM-531]
    ⟹ `< cap_k` [finite computation]. EXACT. ✓
 2. **bounded-spread non-AP: finite check** (the near-AP sets) `< cap`. DONE (k=8,9,10).
-3. **wide non-AP: dichotomy via Freiman** —
-   (a) small doubling ⟹ E ⊆ a `d≥2` GAP ⟹ `L_y ≪ cap` by the DIMENSION PENALTY (margin ≥0.21);
-   (b) large doubling ⟹ a dissociated stranger exists ⟹ CONTRACT (HYP-2610) toward `L_y^inf ≪ cap`.
+3. **wide non-AP** — split (CORRECTED below): (a) SPREAD `d≥2` GAP ⟹ `L_y ≪ cap` by the DIMENSION
+   PENALTY (margin ≥0.21, EASY); (b) large doubling ⟹ dissociated ⟹ near `L_y^inf ≪ cap`.
 
-The genuine remaining lemma is **3(a): the GAP dimension penalty** — but it has HUGE margin (≥0.21),
-so a crude rigorous bound suffices (unlike the tight `consec < cap` at k=9, which is the exact finite
-check). **Mechanism:** a 2-dim GAP `E = A1 + A2` (Minkowski sum of two APs) has orbit
-`O(E,x) = O(A1,x) ⊕ O(A2,x)` (setwise circle sum); the two AP-directions COLLIDE at commensurate `x`
-(when `(a i − b j)x ∈ ℤ`), wasting orbit points and lowering coverage → lower `L_y`. The collisions
-are governed by the relation lattice — connecting to the summand graph below.
+## CORRECTION (workflow w7gkxcz0b, verify-confirmed) — the binding case is the bounded near-AP, NOT a wide GAP
+
+**My "margin ≥0.21, crude bound suffices" was WRONG for the binding case.** Exhaustive (verify-confirmed):
+- The ≥0.21 margin applies ONLY to SPREAD `d≥2` GAPs (Minkowski sums of two genuine APs) — those are
+  the EASY, non-binding cases (provable via the orbit-collision identity `O(A1+A2)(x)=O(A1)⊕O(A2)`).
+- **The actual supremum over ALL non-full-AP sets is a MINIMAL SINGLE-DEFECT near-AP** (excess 2, one
+  double-step), NOT a spread GAP: unique k=9 maximizer `E=[0,1,2,3,4,5,6,7,9]`, `L_y=38681/79380=0.487289`,
+  margin to cap_9 only **0.00697** (k=8 `[0,2,..,8]` 0.30306 margin 0.078; k=10 `[0,..,8,10]` 0.56242 margin 0.042).
+  Verified the UNIQUE global max (exhaustive max(E)≤18). Larger defects strictly LOWER `L_y`.
+- **Good news:** the binding near-AP is BOUNDED-SPREAD (max element ~k+1), so it lives in the EXACT
+  FINITE CHECK (done) — NOT in the wide/open part. The wide/open part (spread GAP + dissociated) is the
+  comfortable-margin part. So "crude bound suffices" is TRUE for the genuinely-OPEN (wide) part; the tight
+  part (AP + single-defect near-AP) is bounded-spread and exact.
+- **NO separate "third pocket":** the intended binary {GAP | dissociated} dichotomy is the WRONG
+  abstraction (every 8–10-set sits in SOME proper 2-dim GAP; dissociated-stranger is nearly vacuous).
+  Coverage is complete via the CONTINUOUS doubling `σ=|E+E|/k`: max-`L_y` is ≈monotone non-increasing in
+  `σ`, the AP (min σ) is the top, and everything is `< cap`. (Tension: my integer-excess envelope showed
+  local bumps at excess 3,5, while the workflow reports σ-monotone — likely a binning artifact; the robust
+  fact both agree on is max-non-AP `< cap`, worst = the s=2 single-defect near-AP.)
+
+**Revised remaining lemma — split 3(a):**
+- **3(a-i) SPREAD GAPs** (`O(A1+A2)=O(A1)⊕O(A2)` collisions): margin ≥0.157, EASY, low-risk.
+- **3(a-ii) near-AP boundary** (the BINDING k=9 single-defect, margin 0.007): the genuinely tight piece,
+  but BOUNDED-SPREAD so in the finite check; the remaining open is only (A) prove the global sup over
+  UNBOUNDED non-AP is attained at the bounded s=2 defect (currently exhaustive to max(E)≤18), and
+  (B) the exact `38681/79380 < cap_9` with a structural reason for the ~0.0056 drop from consec.
 
 ## The summand-graph axis (addition / multiplication / odd / pos-neg)
 
@@ -108,9 +127,15 @@ crux HYP-2633). The precise quantity is the ENVELOPE `max L_y at each excess`: v
 the AP and stay `< cap` for all excess `≥ 1` (not strictly monotone — bumps at excess 3,5).
 
 ## Honest status
-LRC(14) NOT proved. This is a structural REFRAME, verified computationally, that (i) explains the
-third pocket (dimension penalty), (ii) isolates the only tight case (the AP, excess 0, exact finite
-check), (iii) gives a clean Freiman partition, (iv) identifies the one remaining lemma (GAP dimension
-penalty, margin ≥0.21) and its mechanism (collision/relation-lattice), and (v) ties it to the
-summand graph at `C=27=3³` and codex's reciprocal-tail crux (HYP-2633). Files:
+LRC(14) NOT proved. This is a structural REFRAME, verified computationally, that (i) shows `L_y` is
+continuously controlled by the doubling `σ=|E+E|/k` with the AP the unique top and NO separate third
+pocket; (ii) finds the binding worst-non-AP is the BOUNDED single-defect near-AP (k=9 `[0..7,9]`,
+margin 0.007) — in the exact finite check, NOT a wide set; (iii) splits the remaining lemma into the
+EASY spread-GAP dimension penalty (3(a-i), margin ≥0.157, orbit-collision) and the tight near-AP
+boundary (3(a-ii), bounded ⟹ finite, the only open piece being the unbounded→bounded sup reduction);
+(iv) finds pocket 4 (d=3 GAP) and the dimension penalty for spread GAPs; (v) ties the difficulty
+across n to the factorization of `2n−1` (n=14 anomalously tight via `27=3³`, verify-confirmed
+margins n=10 +0.20 / n=12 +0.19 / n=14 +0.054), with the mod-27 summand strata INERT for the binding
+small-element clusters (HYP-2640). My initial "margin ≥0.21 closes it" was CORRECTED (that holds only
+for spread GAPs). Files:
 `04-computation/lrc14_{sumset_excess_pockets,pocket_dimension_recursion,nonAP_max}_kps.py`.
