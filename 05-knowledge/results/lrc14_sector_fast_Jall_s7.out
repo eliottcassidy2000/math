@@ -25,3 +25,5 @@ random WIDE-spread stress (each k, 500 sets): max L_y vs cap_k
 ==============================================================================================
   k=8: worst L_y=0.35823 (cap=0.38146, consec=0.35823)  #over cap=0  
   k=9: worst L_y=0.49288 (cap=0.49426, consec=0.49288)  #over cap=0  
+  k=10: worst L_y=0.57008 (cap=0.60440, consec=0.57008)  #over cap=0  
+  k=11: worst L_y=0.68772 (cap=0.72527, consec=0.68305)  #over cap=0  at [0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14]

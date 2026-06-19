@@ -1,0 +1,40 @@
+============================================================================================
+ANGLE G — analytic finite check: meas(S7(consec_k)) < cap_k for k=8..13
+============================================================================================
+
+[1] PROVED LOWER BOUND  cap_k >= (k-6)/7   (each of the 13-k speeds forbids exactly 1/7)
+  k     cap_k(true)     (k-6)/7   tight?
+  8       2243/5880         2/7         
+  9       1979/4004         3/7         
+ 10           55/91         4/7         
+ 11           66/91         5/7         
+ 12             6/7         6/7      YES
+ 13               1           1      YES
+
+[2] KEY INEQUALITY  meas(S7(consec_k)) < (k-6)/7   (=> closes via piece [1] for k>=9)
+  k        meas(S7)     (k-6)/7  holds         slack
+  8        481/1470         2/7  False      -61/1470
+  9       2447/5880         3/7   True       73/5880
+ 10      8899/17640         4/7   True    1181/17640
+ 11       3419/5880         5/7   True      781/5880
+ 12   121103/194040         6/7   True  45217/194040
+ 13     14573/21560           1   True    6987/21560
+
+[3] RESIDUAL FINITE CHECKS against TRUE cap_k (rows where (k-6)/7 < meas(S7)):
+   k=8: meas(S7)=481/1470=0.327211  <  cap_k=2243/5880=0.381463  ?  True
+        common-denom: 1924/5880  <  2243/5880
+
+[4] FULL VERDICT  meas(S7(consec_k)) < cap_k for all k=8..13:
+   k=8: True  via true-cap finite
+   k=9: True  via subadditive (k-6)/7
+   k=10: True  via subadditive (k-6)/7
+   k=11: True  via subadditive (k-6)/7
+   k=12: True  via subadditive (k-6)/7
+   k=13: True  via subadditive (k-6)/7
+
+   ALL k=8..13 PASS: True
+
+[5] BUILDING BLOCK  Phi(L/7,k) := meas{orbit in [0,L/7)} = L/(7(k-1)) for L/7<=1/2 (L<=3):
+   Phi(L/7,k)=L/(7(k-1)) for L=1,2,3, k=8..13: True
+
+DONE.
