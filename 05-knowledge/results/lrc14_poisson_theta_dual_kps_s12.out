@@ -1,0 +1,15 @@
+=== Poisson/theta dual: primal lattice sum (divergent) vs exact x-cell dual ===
+
+AP(consec)       k=8  corr(exact x-cell dual) = +0.302731
+   primal box-sum H=1,2: +0.02442 +0.06434   R6(box2)=982
+near-AP          k=8  corr(exact x-cell dual) = +0.183854
+   primal box-sum H=1,2: +0.01881 +0.05292   R6(box2)=924
+odd-AP           k=8  corr(exact x-cell dual) = +0.213476
+   primal box-sum H=1,2: +0.01586 +0.04609   R6(box2)=546
+primes-ish       k=8  corr(exact x-cell dual) = +0.009649
+   primal box-sum H=1,2: +0.00632 +0.00645   R6(box2)=414
+squares(Sidon)   k=8  corr(exact x-cell dual) = +0.000536
+   primal box-sum H=1,2: -0.00200 -0.00199   R6(box2)=156
+
+The x-cell value is exact+finite (the convergent Poisson dual);
+the primal box sums crawl up harmonically. R6 (support-6 count) is the ruler.

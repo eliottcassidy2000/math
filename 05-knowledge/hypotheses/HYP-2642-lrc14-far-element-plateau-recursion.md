@@ -1,5 +1,5 @@
 ---
-id: HYP-2641
+id: HYP-2642
 status: STRONG-PARTIAL — the unbounded→bounded reduction REDUCED to a single 1-D Weyl decorrelation estimate (margin 0.13–0.18, vs the divergent-lattice obstruction MISTAKE-078); LRC(14) NOT proved
 source: kind-pasteur-2026-06-19-S13
 related:
@@ -78,8 +78,26 @@ not need to be sharp.
 - The tight part (margin 0.0014) is confined to the bounded finite check (done); the open analytic part
   (the Weyl estimate) has margin 0.13.
 
+## The TOOL for the Weyl lemma — bandlimiting / Fejér kernels (workflow old-ideas lead, sanity-checked)
+
+The Weyl/lattice estimate's obstruction (MISTAKE-078: `Σ|ĉ_T(n)| ~ Σ 0.6973/|n|` diverges) is partly an
+ARTIFACT of the crude envelope: each `ĉ_T(n)` is a SINE kernel `~|sin(π|T|n/7)|/(π|n|)`, which is **3.5×
+smaller** than `0.6973/|n|` and **vanishes at 7|n** (verified). Two sound convergence mechanisms:
+- **(b) bandlimiting (the concrete route):** replace each sector indicator `1_A` by a degree-`D`
+  trigonometric majorant `M_A` (Fourier support `[−D,D]`). Then `K(n)=0` unless ALL `|n_j| ≤ D`, so the
+  infinite lattice sum **TRUNCATES to the finitely many relations with `|n|_∞ ≤ D`**, plus a
+  Selberg–Beurling error `~1/D`. This converts the divergent sum to `finite + O(1/D)` — exactly what the
+  margin-0.13 Weyl lemma needs. (Caveat: the literal Selberg–Beurling majorant was "doubly blocked" in
+  THM-537 for the full S7; the per-coordinate bandlimiting through the inclusion–exclusion product is a
+  DIFFERENT application and must be re-checked — the block may not transfer.)
+- **(a) signed cancellation:** even the sharp sine-kernel envelope diverges (~log), so the sharper
+  per-term bound alone is NOT enough; the genuine win is the SIGNED alternating `T`-sum + relation-lattice
+  constraint (codex HYP-2640's "signed quotient"). The two routes (bandlimit vs signed) are complementary.
+
 ## Honest status
-LRC(14) NOT proved. The unbounded direction is reduced to the 1-D Weyl decorrelation lemma (margin 0.13,
-standard tool); the bounded part is the done finite check. Remaining: (a) prove the Weyl estimate with an
-explicit `C` (and hence `B`); (b) verify the finite check to that `B` (small). Files:
+LRC(14) NOT proved. The unbounded direction is reduced to the 1-D Weyl decorrelation lemma (margin 0.13);
+the bounded part is the done finite check. The Weyl lemma's lattice sum is attacked by bandlimiting
+(finite truncation + 1/D, sound) or signed cancellation. Remaining: (a) execute the bandlimited majorant
+construction (or the signed-coset bound) for the relations-through-`w`, with explicit `C`/`D`/`B`;
+(b) verify the finite check to that `B` (small). Files:
 `04-computation/lrc14_{far_element_decay,far_element_recursion,weyl_plateau}_kps.py`.
