@@ -50,6 +50,16 @@ The HYP-2635 pull-in named the next live lead: the dissociated-stranger dichotom
 - **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: `sign(residue coefficient) * (-1)^(# negative coefficients)`. This is the even/odd to positive/negative bridge requested in the current prompt.
 - **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as `2*16+3=35` and `4+12+15=31`.
 
+## codex-S27 claim: Freiman small-excess finite pocket
+
+HYP-2638 / T886 is reserved as the next sharp target after the relation-fiber
+split.  The planned move is to use Freiman `3k-4`: when
+`exc(E)=|E+E|-(2k-1) <= k-3`, `E` lies in an AP of length `k+exc(E)`.  Since
+the sector functional is AP/dilation invariant, the infinite small-excess
+pocket reduces to finite normalized subsets of `[0,k+e-1]`.  Next artifact:
+exact `L_y` maxima by excess for `k=8,9,10`, with the AP row at excess `0`
+and all positive-excess rows tested against the AP/cap frontier.
+
 ## codex-S23 update: two-large Dedekind phase packet
 
 The HYP-2630 character-packet closer has been formalized as a finite additive-frequency packet. HYP-2632/T880 (SHA 2095fc9) expands the support-six coimage relation by explicitly retaining the additive-frequency address $m \in F_7^*$. This formalization proves that the QR/NQR split is not a statistical fluctuation but a structural property of the frequency-shell distribution.
