@@ -1,0 +1,18 @@
+=== (1) Weyl approach rate: |p0({consec_8} U {w}) - plateau| vs w (k=9) ===
+   plateau = 0.362099
+   w=   9: p0=0.401701  |p0-plateau|=0.039602  err*w=0.356
+   w=  10: p0=0.380952  |p0-plateau|=0.018853  err*w=0.189
+   w=  15: p0=0.340816  |p0-plateau|=0.021283  err*w=0.319
+   w=  20: p0=0.354422  |p0-plateau|=0.007677  err*w=0.154
+   w=  30: p0=0.363946  |p0-plateau|=0.001846  err*w=0.055
+   w=  50: p0=0.353401  |p0-plateau|=0.008698  err*w=0.435
+   w=  80: p0=0.364201  |p0-plateau|=0.002102  err*w=0.168
+   w= 120: p0=0.362245  |p0-plateau|=0.000146  err*w=0.017
+   w= 200: p0=0.359592  |p0-plateau|=0.002507  err*w=0.501
+   w= 300: p0=0.361020  |p0-plateau|=0.001079  err*w=0.324
+
+=== (2) PERTURBED core + far w: does p0(E) stay < cap_9? (general far-element bound) ===
+   max p0 over (perturbed-core + far w) = 0.31582 at (0, 2, 3, 4, 5, 6, 7, 8, 80)  (cap_9=0.49426, margin 0.1784)
+
+=== (3) the plateau bound is UNIFORM: max_w p0({consec_8} U {w}) over ALL w>=9 ===
+   max over w=9..249 = 0.40170 (at the near-AP w=9? = 0.40170); cap_9=0.49426 -> all < cap

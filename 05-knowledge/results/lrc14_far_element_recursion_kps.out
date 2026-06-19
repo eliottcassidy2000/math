@@ -1,0 +1,9 @@
+=== RECURSION: Q(k-1)=max_{(k-1)-sets}[p0+(1/7)p1] vs cap_k (the far-element plateau bound) ===
+
+k=8: Q(k-1=7)=0.19660 at (0, 1, 2, 3, 4, 5, 6)  (consec_7 gives 0.19660)  cap_8=0.38153  Q<cap? True margin=0.1849
+k=9: Q(k-1=8)=0.36210 at (0, 1, 2, 3, 4, 5, 6, 7)  (consec_8 gives 0.36210)  cap_9=0.49426  Q<cap? True margin=0.1322
+k=10: Q(k-1=9)=0.44789 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  (consec_9 gives 0.44789)  cap_10=0.6044  Q<cap? True margin=0.1565
+
+=== so: a k-set with a FAR element has p0 -> ~Q(k-1) < cap_k. Recursion DOWN in k. ===
+=== also verify the plateau formula matches the far-element data (k=9 core consec_8) ===
+   core=consec_8: p0=0.32721 p1=0.24422 => plateau=0.36210 (data far-w plateau ~0.36) 
