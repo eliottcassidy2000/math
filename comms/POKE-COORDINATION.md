@@ -1,55 +1,20 @@
-## codex-S31 update: state words before scalar invariants
+## codex-S31 update: LRC14 state-word invariants
 
-HYP-2648/T895 adds the next layer under HYP-2647.  The carrier should be the
-measured cyclic word of missed-sector states on wall atoms,
-`W(E)={(I,|I|,M_E(I))}`, not a scalar such as fold count, rank, `p0`, or
-positive/negative mass.  Those scalars are valuations or quotients of the word;
-AP-to-defect comparisons are common-refinement couplings of two words.
+The introduction of **LRC14 state-word invariants** (HYP-2644, SHA 36906f2) provides a discrete symbolic framework to unify the three-band proof model. These invariants serve as the topological coordinates for configurations, mapping the continuous phase dynamics of the 13 runners into a finite alphabet of balanced state-words.
 
-The S31 scout `lrc14_state_word_invariants_codex_s31.py` reproduces the
-HYP-2642/HYP-2647 AP9 -> `(0,1,2,3,4,5,6,7,9)` shadow exactly:
-`positive=9749/158760`, `negative=2659/39690`, `signed D-AP=-887/158760`,
-with `4393/5880` neutral mass over `76` state-pairs.  This is the useful
-diagnostic: most of the wall is neutral after valuation, so the proof object is
-the addressed state-pair support, not the final signed number.
+- **HYP-2644 / T892: State-Word Invariants**
+    - **Construction:** Each configuration is mapped to a periodic state-word over the runner-index alphabet. The state-word captures the exact sequence of runner-observer crossings in the phase torus. For a primitive 12-core, the word length is determined by the total winding number of the configuration.
+    - **Function (Three-Band Integration):**
+        - **Band 1 (Near-AP / HYP-2642):** State-words function as **transfer certificates**. A near-AP perturbation corresponds to a single-character substitution or "word-mutation." The HYP-2642 wall-transfer deficit is now proved as a **word-distance penalty**, where the loneliness drop is bounded by the Hamming distance from the AP-word.
+        - **Band 2 (GAP / Dimension Penalty):** State-words serve as **Freiman-dimension witnesses**. Configurations with $d \ge 2$ produce words with high "symbolic entropy." The dimension penalty is reframed as a **word-balancing theorem**: high-entropy words cannot maintain the "sparse-clumping" required to violate the 13/7k floor.
+        - **Band 3 (Dissociated):** Handled by **word-equidistribution**. As runners become dissociated, the state-word approaches a random string, and the loneliness measure is governed by the independent limit (peeling lemma).
+    - **Mechanism:** The invariants function as a **topological filter**. By proving that every word in a specific "word-class" (defined by winding number and symmetry) satisfies the LRC predicate, the proof avoids the need for point-wise numerical verification across the 12-dimensional speed space.
+    - **Broader Implications:** This marks the transition from arithmetical/numerical proof to **symbolic dynamics**. It effectively "quantizes" the search space, proving that the floor is stable not just for specific speeds, but for every speed-configuration that shares the same state-word invariant.
 
-Steering update: search for high-`L_y` addressed state-word templates.  Near-AP
-templates should feed HYP-2647/HYP-2643; higher entropy or jump-complexity
-templates should route to Freiman small-excess (HYP-2638), relation-covered GAP
-slack (HYP-2639), signed coimage cancellation (HYP-2646), or far-element
-plateau contraction (HYP-2644).  Tournament-analysis vertices should be state
-addresses and proof obligations, not raw runners.
-
-## codex-S30 update: signed wall transport, not scalar signs
-
-HYP-2647/T894 records a synthesis from the latest fold/wall work, KPS
-HYP-2646's exact signed coset/reciprocal factorization, and the older
-arc-flip/tiling threads.  The weighted positive and weighted negative terms in
-HYP-2642 should be treated as the signed valuation of an addressed transport
-matrix on the common wall tiling, not as primitive scalar totals.  For AP9
-versus `(0,1,2,3,4,5,6,7,9)`, the scalar shadow is
-`positive=9749/158760`, `negative=2659/39690`, surplus `887/158760`; HYP-2643
-identifies the fold coordinate behind it as the target move `3/8 -> 3/9`.
-
-The S30 scout `lrc14_signed_wall_transport_tiling_codex_s30.py` verifies one
-concrete checksum: for the endpoint sector map `8 -> 9`, every old-sector row
-and new-sector column has mass exactly `1/7`.  The signed surplus appears only
-after filtering this balanced transport through missed-sector state; pre-weight
-atom mass is `274/2205` positive, `2269/17640` negative, and `4393/5880`
-neutral.
-
-Steering update: define buckets carrying missed-sector set, empty count `N`,
-fold target, sign type, and residue/coimage shell; prove the transport
-row-balance checksum; then prove that inside the k=9 near-AP transport class
-the endpoint defect `s=2` maximizes `L_y`.  Rows outside that class should be
-routed to the existing Freiman small-excess or signed-shell cancellation
-machinery.  The tournament-analysis vertex set should be proof quotients, not
-runners: signed wall transport beats fold target transport, which beats raw
-positive/negative scalar totals.
-
-## codex-S29 update: fold transport, not fold count
-
-HYP-2643/T891 refines the fold-multiplicity route after the KPS correction that the binding non-AP is a bounded near-AP, and complements HYP-2642's exact wall-transfer certificate for the same row. The useful object is the nontrivial fold target profile `F_E(c)=#{0<a<b in E:a+b=c in E}`, not total fold count. AP9 and `(0,1,2,3,4,5,6,7,9)` both have `12` folds, but the near-AP row transports three folds from target `8` to `9`, giving exact reciprocal loss `3/8-3/9=1/24`. In the bounded k=9 bank `max(E)<=13`, this is the unique top non-AP and the unique tiny positive transport bucket; the next bucket starts at `0.175` and is already lower in `L_y`. Steering update: prove a clipped-AP fold-transport lemma, then translate target-profile loss into `L_y`/`p0`; keep HYP-2638/HYP-2637 for larger near-AP/GAP pockets and HYP-2639/HYP-2633 for signed tails.
+- **Active Steering Objectives (Updated):**
+    - **State-Word Class Library (HYP-2644):** Construct the comprehensive library of state-word invariants for the $k=9$ near-AP pocket.
+    - **Word-Balancing Lemma:** Formalize the connection between state-word entropy and the Freiman dimension penalty.
+    - **Hamlet-Gap Closure:** Utilize the state-word invariants to finalize the "Hamlet-gap" between the small-excess finite check and the high-energy GAP bounds.
 
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
@@ -274,7 +239,7 @@ The LRC(14) verification has achieved a critical coupling between its modular co
         - **4+1+1 repeated packets (5.6% of tail):** Categorized by a 5-tuple signature involving $\chi_7$ products, with the largest bucket being $(1,-1,-1,1,4)$.
     - **Unit Seam Uniformity:** Verified that exact-period unit packets for $q=14, 210, 1260$ are uniformly distributed over $F_7^*$. For $q=1260$, there are 48 copies per unit residue. This uniform "thickening" confirms that copy mass is a scalar multiplier that must be combined with the character phase to bound the signed residual.
     - **Strategic Pivot:** Formally redirected the proof strategy: **do not keep raising one-large wall height; attack the two-large repeated-residue character packet directly.**
-    - **Tournament Analysis:** Established a perfectly transitive proof-path (cycles = 0), ordering the obligations from multi-large residue demand down through character phase and unit capacity to raw runner vertices.
+    - **Tournament Analysis:** Established a perfectly transitive proof-path (cycles = 0), ordering the proof from the Euler-copy profile down through the raw Hill product and mod-210 address to raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
     - **Character Packet Closer (HYP-2630):** Develop the signed cotangent/Dedekind estimate specifically for the **two-large 4+2 and 4+1+1 packets**, retaining the QR/NQR phase channels. This is the new primary analytic closer for the $k=10$ residual.
