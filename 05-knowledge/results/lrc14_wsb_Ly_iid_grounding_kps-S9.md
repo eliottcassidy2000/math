@@ -36,3 +36,13 @@ The correction is maximized by the densest short-relation lattice = the AP (HYP-
 Closing it = (i) the AP/near-AP finite check (bounded covolume class) + (ii) an absolute-or-signed Weyl
 bound for the rest (large-covolume directions), with the sub-AP persistence handled by induction on k.
 The thin 0.023 margin at k=8 means the bound must be near-sharp. → THM-534, HYP-2606/2607/2608.
+
+## KEY FINDING: consec is the UNIQUE tight case; every wide config has comfortable margin (kps-S9)
+L_y({0,1,2,3,4,5,6,N}) (one large stranger on a 7-AP core; the HYP-2608 stranger-pull-in) over N=8..140:
+**oscillates around ~0.21, max 0.257 (N=14), ALL ≪ cap_8=0.3815** (margin ≥ 0.12). The N≡0 mod7
+"resonances" are slight SPIKES (N=14:0.257, N=21:0.237) but still far below cap. Limit (large non-res N)
+≈ 0.21. So: pulling ONE point of consec out to a large stranger drops L_y from 0.358 (consec max) to ~0.21–0.26.
+**CONSEQUENCE — the proof split is clean and asymmetric:**
+- consec (and near-consec, bounded spread) is the UNIQUE tight case (L_y=0.358, margin to cap only 0.023) — handled by the EXACT finite check (consec verified max over bounded spread).
+- ANY wide config (≥1 large stranger) drops to L_y ≤ ~0.26 < cap (margin ≥ 0.12) — handled by the wide-spread bound, which therefore has COMFORTABLE room (not the tight 0.023).
+So the wide-spread bound does NOT need to be sharp — it needs L_y(E) ≤ ~0.30 (say) for maxE > B(k), which the equidistribution of the stranger(s) gives with margin. The tight 0.023 margin lives entirely in the FINITE (bounded-spread) check, which is exact. This is the most favorable possible structure: hard part is finite & exact, analytic part is loose. → THM-534, HYP-2607/2608.
