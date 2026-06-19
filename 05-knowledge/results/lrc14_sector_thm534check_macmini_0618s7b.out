@@ -5,5 +5,21 @@ CHECK 1: g(t)>=1[t=0] on t=0..6 for each dual (the PROOF of per-E bound)
   k=11: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  valid(g>=1[t=0])=True
 
 CHECK 3 (LIVE GAP): does consec maximize the CORRECT-degree L_y for k=8,9,10? widen spread.
+  k=8, box maxE<=12 (792 sets): L_y(AP)=0.35823 cap=0.3815
+     consec_is_max=True; #beaters=0; #OVER-CAP=0
   k=8, box maxE<=14 (3431 sets): L_y(AP)=0.35823 cap=0.3815
      consec_is_max=True; #beaters=0; #OVER-CAP=0
+  k=9, box maxE<=13 (1287 sets): L_y(AP)=0.49288 cap=0.4943
+     consec_is_max=True; #beaters=0; #OVER-CAP=0
+  k=9, box maxE<=15 (6435 sets): L_y(AP)=0.49288 cap=0.4943
+     consec_is_max=True; #beaters=0; #OVER-CAP=0
+  k=10, box maxE<=14 (2002 sets): L_y(AP)=0.57008 cap=0.6044
+     consec_is_max=True; #beaters=0; #OVER-CAP=0
+  k=10, box maxE<=16 (11440 sets): L_y(AP)=0.57008 cap=0.6044
+     consec_is_max=True; #beaters=0; #OVER-CAP=0
+
+CHECK 4: scale-invariance of L_y. {0,2,4,5,6,7,8,10,12,14} primitive? its L_y vs primitive.
+  gcd(E)=1 (primitive=True)
+  L_y_deg3(E)=0.55930, cap_10=0.6044
+
+DONE.

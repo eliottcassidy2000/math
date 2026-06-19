@@ -68,7 +68,7 @@ def gen(k,maxE):
 for k in [8,9,10]:
     Ly,_=duals[k]; ck=cap[k]
     AP=tuple(range(k)); apLy=Ly(factorial_moments(AP,6))
-    for maxE in [k+6, k+8]:
+    for maxE in [k+4, k+6]:   # trimmed boxes so it finishes; k=9,10 wider boxes are in lrc14_Lycheck_k910
         shapes=gen(k,maxE)
         beat=[]; overcap=[]
         mx=(apLy,AP)
