@@ -1,0 +1,6 @@
+=== filtered below-mediant scan: a_max(k) growth test ===
+  (catches level a if box > (a(k+1)-1)/2)
+
+  k= 6 box=22 (catch a<= 6): sigma_2=5/33 (a=None,e=2) g*k^2=0.3117  #below=1 mediant-a seen=[]  witness=(1, 5, 6, 11, 16, 17)
+  k= 7 box=24 (catch a<= 6): sigma_2=3/23 (a=3,e=1) g*k^2=0.2663  #below=2 mediant-a seen=[3]  witness=(1, 2, 3, 4, 5, 7, 18)
+  k= 8 box=26 (catch a<= 5): NO below-mediant config. scanned=480700 passed_filter=15

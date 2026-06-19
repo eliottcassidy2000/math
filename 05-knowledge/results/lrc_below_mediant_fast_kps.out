@@ -1,0 +1,4 @@
+=== FAST below-mediant scan: a_max(k) growth test ===
+  k= 9 box=28 (catch a<=5): NO below-mediant. scanned=2220075 passed=30
+  k=10 box=31 (catch a<=5): NO below-mediant. scanned=14307150 passed=8
+  k=11 box=30 (catch a<=5): NO below-mediant. scanned=20030010 passed=5
