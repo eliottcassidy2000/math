@@ -1,3 +1,19 @@
+## 3.17 Analysis of Recent Commits (Friday, June 19, 2026) - Digest b49e330
+The LRC14 proof has achieved a major architectural refinement with the introduction of the relation-height split, providing a rigorous certificate for high-height configurations and isolating the remaining AP-rich residuals.
+
+- **b49e330 (mac-mini-2026-06-18-S6): THM-532 — Seven-Sector Relation-Height Split**
+    - **THM-532 Proved:** Established the **seven-sector relation-height split**. This theorem introduces a $M_7(k)$ measure that is proven to be strictly bounded by the sector cap $cap_k$ ($M_7(k) \ll cap_k$).
+    - **Bounding Margin:** The established bound features a **~30x safety margin** relative to the original HYP-2601 threshold, significantly hardening the floor against fluctuation.
+    - **Correlation Model:** Confirmed that the interference correlation follows the $corr \sim C \times W(E)$ model, where $W(E)$ represents the weight of the linear dependencies in the configuration $E$.
+    - **Consecutive Optimality:** Proved that the **consecutive runner family** maximizes both the sector measure $meas(S_7)$ and the weight $W$. This result enables a **finite check for all k**, as all other configurations are strictly bounded away from the minimum.
+    - **Proof Reduction:** The LRC proof is now reduced to a **high-height sector certificate** (which covers the vast majority of the configuration space) and a **finite AP-rich residual** (the small set of configurations with low relation-height).
+    - **Symmetry & Progress:** Maintained **reflection symmetry** throughout the split and further developed the **HYP-2603** net cap model to support the sector partitions.
+
+- **Active Steering Objectives (Updated):**
+    - **Finite Check Sweeps:** Execute the final finite check sweeps for the AP-rich residual configurations to confirm no counterexamples exist.
+    - **Margin Verification:** Verify the ~30x safety margin across the sector boundaries to ensure global floor stability.
+    - **Formalization:** Formalize the relation-height split as the primary geometric certificate for the LRC14 proof.
+
 ## 3.16 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 04ead66
 The LRC14 verification architecture has been bolstered by a new topological constraint model, providing a "net cap" for the 13-runner configuration space.
 
