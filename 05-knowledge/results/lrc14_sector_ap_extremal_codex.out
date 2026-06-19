@@ -1,0 +1,104 @@
+========================================================================================
+LRC(14) seven-sector AP-extremal route scout
+========================================================================================
+
+[0] Route
+    If AP_k maximizes meas(S7(E)) for primitive normalized |E|=k,
+    then meas(S7(E)) <= meas(S7(AP_k)) < cap_k for k=8..13.
+    This would close the continuous seven-sector cap from HYP-2603.
+
+[1] AP cap margins
+    k=8: S7(AP)=481/1470 = 0.327210884; cap=2243/5880 = 0.381462585; margin=319/5880 = 0.054251701; cap-witness P=(1, 5, 7, 8, 9)
+    k=9: S7(AP)=2447/5880 = 0.416156463; cap=1979/4004 = 0.494255744; margin=65669/840840 = 0.078099282; cap-witness P=(1, 11, 12, 13)
+    k=10: S7(AP)=8899/17640 = 0.504478458; cap=55/91 = 0.604395604; margin=22913/229320 = 0.099917146; cap-witness P=(1, 12, 13)
+    k=11: S7(AP)=3419/5880 = 0.581462585; cap=66/91 = 0.725274725; margin=10993/76440 = 0.143812140; cap-witness P=(1, 13)
+    k=12: S7(AP)=121103/194040 = 0.624113585; cap=6/7 = 0.857142857; margin=45217/194040 = 0.233029272; cap-witness P=(1,)
+    k=13: S7(AP)=14573/21560 = 0.675927644; cap=1 = 1.000000000; margin=6987/21560 = 0.324072356; cap-witness P=()
+
+[2] Wider exact primitive boxes
+    k=8, maxE<=18: primitive=31788/31824; max=481/1470 = 0.327210884; AP=481/1470 = 0.327210884; exceeds_AP=0; near_AP_90=1; near_cap_85=1
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7)]
+        top near-AP rows (val,E,max_run,defect): [('481/1470', (0, 1, 2, 3, 4, 5, 6, 7), 8, 0)]
+    k=9, maxE<=17: primitive=24309/24310; max=2447/5880 = 0.416156463; AP=2447/5880 = 0.416156463; exceeds_AP=0; near_AP_90=4; near_cap_85=0
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7, 8)]
+        top near-AP rows (val,E,max_run,defect): [('2447/5880', (0, 1, 2, 3, 4, 5, 6, 7, 8), 9, 0), ('99/245', (0, 2, 4, 6, 7, 8, 10, 12, 14), 3, 6), ('1181/2940', (0, 1, 2, 3, 4, 5, 6, 7, 9), 8, 1), ('8/21', (0, 1, 2, 3, 4, 5, 6, 7, 10), 8, 2)]
+    k=10, maxE<=16: primitive=11440/11440; max=8899/17640 = 0.504478458; AP=8899/17640 = 0.504478458; exceeds_AP=0; near_AP_90=13; near_cap_85=0
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)]
+        top near-AP rows (val,E,max_run,defect): [('8899/17640', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9), 10, 0), ('121/245', (0, 1, 2, 3, 4, 5, 6, 7, 8, 10), 9, 1), ('403/840', (0, 2, 4, 5, 6, 7, 8, 10, 12, 14), 5, 5), ('4223/8820', (0, 1, 2, 3, 4, 5, 6, 7, 9, 10), 8, 1)]
+    k=11, maxE<=16: primitive=8008/8008; max=3419/5880 = 0.581462585; AP=3419/5880 = 0.581462585; exceeds_AP=0; near_AP_90=26; near_cap_85=0
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)]
+        top near-AP rows (val,E,max_run,defect): [('3419/5880', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10), 11, 0), ('3337/5880', (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12), 9, 2), ('111/196', (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14), 7, 4), ('1427/2520', (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 9, 2)]
+    k=12, maxE<=16: primitive=4368/4368; max=11381/17640 = 0.645181406; AP=121103/194040 = 0.624113585; exceeds_AP=4; near_AP_90=161; near_cap_85=0
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)]
+        top near-AP rows (val,E,max_run,defect): [('11381/17640', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 11, 1), ('2263/3528', (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14), 9, 3), ('3089/4851', (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14), 9, 3), ('527/840', (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14), 9, 3)]
+    k=13, maxE<=16: primitive=1820/1820; max=12029/17640 = 0.681916100; AP=14573/21560 = 0.675927644; exceeds_AP=5; near_AP_90=299; near_cap_85=0
+        max rows: [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15)]
+        top near-AP rows (val,E,max_run,defect): [('12029/17640', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15), 11, 3), ('12023/17640', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14), 11, 2), ('12589/18480', (0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16), 9, 4), ('19492/28665', (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13), 11, 1)]
+
+[3] High-spread exact stress
+    k=8: AP=0.327211, cap=0.381463
+        AP            S7=0.327211; ratio_to_AP=1.000; W3=9.733; E=(0, 1, 2, 3, 4, 5, 6, 7)
+        one_hole_tail S7=0.208333; ratio_to_AP=0.637; W3=9.577; E=(0, 1, 2, 3, 4, 5, 6, 8)
+        two_blocks    S7=0.115099; ratio_to_AP=0.352; W3=2.678; E=(0, 1, 2, 3, 40, 41, 42, 43)
+        quadratic     S7=0.025015; ratio_to_AP=0.076; W3=1.165; E=(0, 1, 4, 9, 16, 25, 36, 49)
+        near_ap_far   S7=0.096916; ratio_to_AP=0.296; W3=4.517; E=(0, 1, 2, 3, 4, 5, 60, 61)
+        best_random   S7=0.044960; ratio_to_AP=0.137; W3=1.364; E=(0, 25, 27, 50, 52, 55, 58, 96)
+    k=9: AP=0.416156, cap=0.494256
+        AP            S7=0.416156; ratio_to_AP=1.000; W3=13.119; E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+        one_hole_tail S7=0.401701; ratio_to_AP=0.965; W3=12.618; E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+        two_blocks    S7=0.230305; ratio_to_AP=0.553; W3=4.207; E=(0, 1, 2, 3, 4, 40, 41, 42, 43)
+        quadratic     S7=0.073151; ratio_to_AP=0.176; W3=1.403; E=(0, 1, 4, 9, 16, 25, 36, 49, 64)
+        near_ap_far   S7=0.254606; ratio_to_AP=0.612; W3=7.102; E=(0, 1, 2, 3, 4, 5, 6, 60, 61)
+        best_random   S7=0.095915; ratio_to_AP=0.230; W3=2.914; E=(0, 12, 36, 53, 57, 60, 67, 81, 109)
+    k=10: AP=0.504478, cap=0.604396
+        AP            S7=0.504478; ratio_to_AP=1.000; W3=16.893; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+        one_hole_tail S7=0.493878; ratio_to_AP=0.979; W3=16.691; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+        two_blocks    S7=0.320271; ratio_to_AP=0.635; W3=5.742; E=(0, 1, 2, 3, 4, 40, 41, 42, 43, 44)
+        quadratic     S7=0.126855; ratio_to_AP=0.251; W3=1.509; E=(0, 1, 4, 9, 16, 25, 36, 49, 64, 81)
+        near_ap_far   S7=0.404784; ratio_to_AP=0.802; W3=9.780; E=(0, 1, 2, 3, 4, 5, 6, 7, 60, 61)
+        best_random   S7=0.146130; ratio_to_AP=0.290; W3=2.251; E=(0, 12, 58, 64, 66, 84, 89, 95, 112, 120)
+    k=11: AP=0.581463, cap=0.725275
+        AP            S7=0.581463; ratio_to_AP=1.000; W3=21.365; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+        one_hole_tail S7=0.551964; ratio_to_AP=0.949; W3=20.492; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11)
+        two_blocks    S7=0.398016; ratio_to_AP=0.685; W3=7.456; E=(0, 1, 2, 3, 4, 5, 40, 41, 42, 43, 44)
+        quadratic     S7=0.200784; ratio_to_AP=0.345; W3=1.803; E=(0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100)
+        near_ap_far   S7=0.480275; ratio_to_AP=0.826; W3=13.171; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 60, 61)
+        best_random   S7=0.212809; ratio_to_AP=0.366; W3=3.245; E=(0, 13, 18, 20, 23, 26, 30, 39, 95, 113, 120)
+    k=12: AP=0.624114, cap=0.857143
+        AP            S7=0.624114; ratio_to_AP=1.000; W3=25.873; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)
+        one_hole_tail S7=0.645181; ratio_to_AP=1.034; W3=26.038; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+        two_blocks    S7=0.464428; ratio_to_AP=0.744; W3=9.212; E=(0, 1, 2, 3, 4, 5, 40, 41, 42, 43, 44, 45)
+        quadratic     S7=0.279155; ratio_to_AP=0.447; W3=2.243; E=(0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121)
+        near_ap_far   S7=0.556666; ratio_to_AP=0.892; W3=16.951; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 60, 61)
+        best_random   S7=0.309553; ratio_to_AP=0.496; W3=3.191; E=(0, 6, 17, 24, 35, 39, 44, 57, 61, 72, 94, 96)
+    k=13: AP=0.675928, cap=1.000000
+        AP            S7=0.675928; ratio_to_AP=1.000; W3=31.463; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+        one_hole_tail S7=0.661517; ratio_to_AP=0.979; W3=30.560; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+        two_blocks    S7=0.539729; ratio_to_AP=0.799; W3=11.850; E=(0, 1, 2, 3, 4, 5, 6, 40, 41, 42, 43, 44, 45)
+        quadratic     S7=0.355356; ratio_to_AP=0.526; W3=2.420; E=(0, 1, 4, 9, 16, 25, 36, 49, 64, 81, 100, 121, 144)
+        near_ap_far   S7=0.616850; ratio_to_AP=0.913; W3=21.465; E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 60, 61)
+        best_random   S7=0.355576; ratio_to_AP=0.526; W3=4.063; E=(0, 5, 18, 27, 34, 36, 45, 73, 84, 100, 108, 109, 118)
+
+[4] Structural readout
+    The strong AP-extremal conjecture is false as stated: k=12 and k=13
+    have near-AP tail shapes that beat the plain AP.  This is useful,
+    because those rows have enormous cap slack; the dangerous margins are
+    k=8..11, where widened primitive boxes found no AP-beater.
+    The corrected route is an AP-frontier envelope: prove AP extremal for
+    k=8..11, and prove a coarse AP-rich envelope for k=12,13.  High-spread
+    dissociated/Sidon/quadratic rows fall far below either envelope.
+
+[5] Proof-route Tournament Analysis
+    vertices=['AP_frontier_envelope', 'relation_height_tail', 'colored_resonance_placement', 'two_runner_removal_or_global_witness', 'single_deletion_arcwidth', 'local_gap_compression']
+    evidence_scores={'AP_frontier_envelope': 96, 'relation_height_tail': 90, 'colored_resonance_placement': 82, 'two_runner_removal_or_global_witness': 70, 'single_deletion_arcwidth': 25, 'local_gap_compression': 5}
+    tournament_out_scores={'AP_frontier_envelope': 5, 'relation_height_tail': 4, 'colored_resonance_placement': 3, 'two_runner_removal_or_global_witness': 2, 'single_deletion_arcwidth': 1, 'local_gap_compression': 0}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+    directed_3cycles=0
+    SCC_sizes=[1, 1, 1, 1, 1, 1]
+    Hamiltonian_path_count=1
+
+Verdict:
+    New best proof target: prove the AP-frontier envelope.
+    For k=8..11, show S7(E) <= S7({0,...,k-1}); for k=12,13,
+    show any AP-rich tail remains below cap_k.  The remaining separate
+    layer is the colored finite-denominator placement from HYP-2593/2595.
