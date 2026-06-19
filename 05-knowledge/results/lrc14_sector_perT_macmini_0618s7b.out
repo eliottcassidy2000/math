@@ -1,0 +1,5 @@
+============================================================================================
+Per-M signed-difference analysis vs AP. D_M(E)=(-1)^|M|(B_M(AP)-B_M(E)).
+Claim: sum_M D_M(E) = meas(S7(AP))-meas(S7(E)) >= 0 for all primitive E.
+Question: is each D_M>=0, or is there sign cancellation?
+============================================================================================

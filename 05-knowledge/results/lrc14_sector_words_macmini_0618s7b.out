@@ -1,0 +1,32 @@
+============================================================================================
+(A) Single-e period structure and the independence main term M7(k)
+============================================================================================
+  e=1, |T|=1: meas(avoid T) = 6/7 = 0.85714  (expect 6/7 = 0.85714)
+  e=1, |T|=2: meas(avoid T) = 5/7 = 0.71429  (expect 5/7 = 0.71429)
+  e=1, |T|=3: meas(avoid T) = 4/7 = 0.57143  (expect 4/7 = 0.57143)
+  e=2, |T|=1: meas(avoid T) = 6/7 = 0.85714  (expect 6/7 = 0.85714)
+  e=2, |T|=2: meas(avoid T) = 5/7 = 0.71429  (expect 5/7 = 0.71429)
+  e=2, |T|=3: meas(avoid T) = 4/7 = 0.57143  (expect 4/7 = 0.57143)
+  e=3, |T|=1: meas(avoid T) = 6/7 = 0.85714  (expect 6/7 = 0.85714)
+  e=3, |T|=2: meas(avoid T) = 5/7 = 0.71429  (expect 5/7 = 0.71429)
+  e=3, |T|=3: meas(avoid T) = 4/7 = 0.57143  (expect 4/7 = 0.57143)
+
+  M7(8) = 2880/117649 = 0.024480
+  M7(9) = 47520/823543 = 0.057702
+  M7(10) = 86400/823543 = 0.104913
+  M7(11) = 6581520/40353607 = 0.163096
+  M7(12) = 9218880/40353607 = 0.228452
+  M7(13) = 4115105280/13841287201 = 0.297307
+
+============================================================================================
+(B) Per-block extremality: for each sector-block T, is AP_k a max of (-1)^|T| meas(B_T)?
+    meas(S7) = sum_T (-1)^|T| meas(B_T).  If AP maximizes each IE-signed term, structural.
+============================================================================================
+
+  k=8, box maxE<=12, #shapes=792
+    ALL T-blocks: AP is the IE-correct extremiser. (per-T structural extremality holds)
+
+  k=9, box maxE<=13, #shapes=1287
+    ALL T-blocks: AP is the IE-correct extremiser. (per-T structural extremality holds)
+
+DONE.

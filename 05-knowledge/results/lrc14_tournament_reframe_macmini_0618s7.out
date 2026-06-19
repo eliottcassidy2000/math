@@ -1,0 +1,45 @@
+============================================================================================
+ANGLE E: TOURNAMENT REFRAME of LRC(14) residual — exact small-k dictionary
+============================================================================================
+
+[D1+D2] round-tournament round-ness, and max circular gap vs SCORE structure.
+Fact to test: in a tie-free round tournament on k points, the maxgap(x) (largest
+empty circular arc) > 1/7  <=>  some consecutive pair has an empty 1/7-arc between
+them.  We check: maxgap>1/7  <=>  NOT every sector hit?  (S7 vs N relationship).
+--------------------------------------------------------------------------------------------
+
+=== k = 5 ===
+shape            meas(S7)      measN     mu_1/7   nonloc    E[c3]     E[H]  E[maxsc]   P[dom]
+consec            0.00000    0.00000    1.00000  0.00000   3.3333  10.0000    2.8333  0.25000
+AP-step2          0.00000    0.00000    1.00000  0.00000   3.3333  10.0000    2.8333  0.25000
+perforated        0.00000    0.00000    1.00000  0.00000   3.0000   8.8000    3.1000  0.20000
+dissoc            0.00000    0.00000    1.00000  0.00000   2.0857   6.3810    3.3952  0.42738
+
+=== k = 6 ===
+shape            meas(S7)      measN     mu_1/7   nonloc    E[c3]     E[H]  E[maxsc]   P[dom]
+consec            0.00000    0.00000    1.00000  0.00000   6.2000  32.4000    3.4500  0.20000
+perforated        0.00000    0.00000    1.00000  0.00000   6.1333  29.9333    3.5667  0.16667
+dissoc            0.00000    0.00000    1.00000  0.00000   4.3733  19.3789    4.1018  0.27298
+
+=== k = 7 ===
+shape            meas(S7)      measN     mu_1/7   nonloc    E[c3]     E[H]  E[maxsc]   P[dom]
+consec            0.14762    0.00000    1.00000  0.00000  10.5000 121.4000    4.0167  0.16667
+perforated        0.04558    0.00000    1.00000  0.00000  10.1762 109.2095    4.2714  0.14286
+dissoc            0.00910    0.00000    1.00000  0.00000   7.8647  68.6982    4.8095  0.17991
+
+=== k = 8 ===
+shape            meas(S7)      measN     mu_1/7   nonloc    E[c3]     E[H]  E[maxsc]   P[dom]
+consec            0.32721    0.05986    0.94014  0.00000  16.1905 487.3810    4.7190  0.14286
+perforated        0.20833    0.00000    1.00000  0.00000  16.4619 490.4619    4.7000  0.12500
+dissoc            0.03473    0.00000    1.00000  0.00000  12.8529 275.7729    5.4963  0.10975
+
+============================================================================================
+DICTIONARY CLAIMS UNDER TEST:
+ (C1) nonloc == 0 for all shapes  => T(x) is a.e. a ROUND tournament  [HYP-2576].
+ (C2) measN (1/7-net) = P[no empty 1/7-arc] = P[T(x) strongly-connected-ish + dense].
+ (C3) mu_1/7 = P[maxgap>1/7] = P[ some vertex's clockwise gap to its successor >1/7 ].
+      In round-tournament terms: the consecutive-on-circle pair (v, succ(v)) with the
+      empty arc is a 'NEAR-DOMINANCE' edge.  mu_1/7 = P[ >=1 such weak edge ].
+ (C4) AP {0..k-1}: does it EXTREMISE E[c3] / E[maxscore] / measN among shapes?
+============================================================================================
+DONE.
