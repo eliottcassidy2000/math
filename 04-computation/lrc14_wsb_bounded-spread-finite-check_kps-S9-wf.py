@@ -54,17 +54,49 @@ CORRECT finite family, with margins; plus confirmation consec is the max on that
 import sys, itertools
 from fractions import Fraction as F
 from math import gcd
+from functools import reduce
 sys.stdout.reconfigure(line_buffering=True)
 
+def lcm(a, b):
+    return a*b//gcd(a, b) if a and b else (a or b)
+
 # ----------------------------------------------------------------------------------------
-# EXACT meas(S7).  Breakpoints of x->floor(7 e x) mod 7 are at x=m/(7e).  Exact rational.
+# EXACT meas(S7).  FAST engine: common denominator D=7*lcm(Enz); breakpoints are integers
+# k/D where floor(7 e x) jumps (x=m/(7e) <=> k=m*D/(7e)).  Integer arithmetic, exact.
+# Verified vs the slow rational engine (measS7_slow) and vs canon anchors.
 # ----------------------------------------------------------------------------------------
 def measS7(E):
     E = sorted(set(int(e) for e in E))
     Enz = [e for e in E if e != 0]
+    if not Enz:
+        return F(0)
+    D = 7 * reduce(lcm, Enz, 1)
+    bk = set([0, D])
+    for e in Enz:
+        step = D // (7*e)             # integer spacing between this e's breakpoints
+        k = 0
+        while k <= D:
+            bk.add(k); k += step
+    bk = sorted(bk)
+    total = F(0)
+    for i in range(len(bk)-1):
+        k0, k1 = bk[i], bk[i+1]
+        if k1 <= k0:
+            continue
+        num = k0 + k1; den = 2*D       # midpoint x = num/den
+        res = set([0])
+        for e in Enz:
+            res.add((7*e*num)//den % 7)
+        if len(res) == 7:
+            total += F(k1-k0, D)
+    return total
+
+def measS7_slow(E):
+    """Original rational engine, for cross-validation only (slow)."""
+    E = sorted(set(int(e) for e in E))
+    Enz = [e for e in E if e != 0]
     bps = set([F(0), F(1)])
     for e in Enz:
-        # breakpoints where floor(7 e x) jumps: x = m/(7e), m=0..7e
         for m in range(0, 7*e + 1):
             bps.add(F(m, 7*e))
     bps = sorted(b for b in bps if 0 <= b <= 1)
@@ -74,7 +106,7 @@ def measS7(E):
         if x1 <= x0:
             continue
         xm = (x0 + x1) / 2
-        res = set(int(7*e*xm) % 7 for e in E)   # e=0 gives residue 0
+        res = set(int(7*e*xm) % 7 for e in E)
         if len(res) == 7:
             total += (x1 - x0)
     return total
@@ -91,6 +123,28 @@ def primitive(E):
     for e in E:
         g = gcd(g, e)
     return g == 1
+
+print("="*96)
+print("STEP -1: cross-validate FAST engine vs SLOW rational engine (exact agreement required).")
+print("="*96)
+import random
+random.seed(7)
+mismatch = 0
+tests = [(0,1,2,3,4,5,6,7), (0,1,2,3,4,5,6,9), (0,2,3,4,5,6,8), (0,1,2,3,4,5,6,7,8),
+         (0,5,7,8,9), (0,1,3,7,12), (0,1,2,3,4,5,6,13)]
+for _ in range(40):
+    k = random.randint(3,8)
+    E = tuple(sorted(set([0]+random.sample(range(1,18), k-1))))
+    tests.append(E)
+for E in tests:
+    a = measS7(E); b = measS7_slow(E)
+    if a != b:
+        mismatch += 1
+        print(f"  MISMATCH E={E}: fast={a} slow={b}")
+print(f"  {len(tests)} shapes tested; mismatches={mismatch}  (must be 0)")
+assert mismatch == 0, "FAST ENGINE BUG"
+print("  FAST engine VERIFIED exact against slow engine.")
+print()
 
 print("="*96)
 print("STEP 0: anchor values (reproduce canon).")

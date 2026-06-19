@@ -1,0 +1,99 @@
+==============================================================================
+LRC(14) UPSTREAM-GLUE RIGOR  (kind-pasteur-2026-06-19-S9)
+==============================================================================
+
+[LINK 3a] cap_k = min_{|P|=13-k} meas(G_P)  (EXACT)
+  k= 8  |P|=5  cap_k = 2243/5880 = 0.381463   minimizer P=(1, 5, 7, 8, 9)
+  k= 9  |P|=4  cap_k = 1979/4004 = 0.494256   minimizer P=(1, 11, 12, 13)
+  k=10  |P|=3  cap_k = 55/91 = 0.604396   minimizer P=(1, 12, 13)
+  k=11  |P|=2  cap_k = 66/91 = 0.725275   minimizer P=(1, 13)
+  k=12  |P|=1  cap_k = 6/7 = 0.857143   minimizer P=(1,)
+
+  AUDIT prompt cap-table vs computed:
+    k= 8  computed 2243/5880=0.38146   prompt 2243/5880=0.38146   MATCH
+    k= 9  computed 1979/4004=0.49426   prompt 2025/4004=0.50574   MISMATCH
+    k=10  computed 55/91=0.60440   prompt 36/91=0.39560   MISMATCH
+    k=11  computed 66/91=0.72527   prompt 25/91=0.27473   MISMATCH
+    k=12  computed 6/7=0.85714   prompt 1/7=0.14286   MISMATCH
+  => prompt cap-table HAS ERRORS (k=9..12 are 1-cap complements / stale; use COMPUTED values)
+
+  Cross-check vs THM-530 canon list:
+    k= 8  computed 2243/5880   canon 2243/5880   OK
+    k= 9  computed 1979/4004   canon 1979/4004   OK
+    k=10  computed 55/91   canon 55/91   OK
+    k=11  computed 66/91   canon 66/91   OK
+    k=12  computed 6/7   canon 6/7   OK
+
+[LINK 3b] cap_k >= (k-6)/7  (subadditive: each speed forbids exactly 1/7)
+  single-speed forbidden measure == 1/7 for p=1..29: True  (PROVED, p disjoint teeth)
+  k= 8  (k-6)/7=2/7=0.2857  cap_k=0.3815  cap>=(k-6)/7: True
+  k= 9  (k-6)/7=3/7=0.4286  cap_k=0.4943  cap>=(k-6)/7: True
+  k=10  (k-6)/7=4/7=0.5714  cap_k=0.6044  cap>=(k-6)/7: True
+  k=11  (k-6)/7=5/7=0.7143  cap_k=0.7253  cap>=(k-6)/7: True
+  k=12  (k-6)/7=6/7=0.8571  cap_k=0.8571  cap>=(k-6)/7: True
+
+[LINK 3c] N(E) ⊆ S7(E):  maxgap<=1/7  ==>  hits every 1/7-sector
+  N(E) ⊆ S7(E) verified on random (E,x) with maxgap<=1/7: True
+  PROOF: maxgap<=1/7 means consecutive phase-gaps <=1/7; a sector [j/7,(j+1)/7) of
+         width 1/7 with NO phase inside would create a gap >1/7 (strict, between the
+         phases flanking it) -- contradiction. So every sector is hit. ∎ (rigorous)
+
+[LINK 3d] cardinality: |S|=13, P=S∩{1..13}, L=S∩(13,∞), |L|=k=|E|, so |P|=13-k.
+  => the cap minimization is over |P|=13-k, matching cap_k. (definitional, OK)
+  NOTE: this assumes the split P/L at 13 is EXHAUSTIVE & disjoint -- it is, since
+  every speed is either <=13 (in P) or >13 (in L). (OK)
+
+[LINK 1] GLOBAL-WITNESS soundness on reconstructed covering 13-sets
+  reconstructed covering S tested: 2500
+    LONELY (level-1/14 safe set nonempty => M(S)>=1/14): 2500   NON-LONELY (LRC14 break!): 0
+  via-Vmax criterion positive => safe set nonempty (M(S)>=1/14):  2468/2468 OK,  0 FAIL
+  (NB: 'safe MEASURE' is typically small, e.g. 0.04-0.07; positivity alone => M(S)>=1/14.)
+
+  EXACT equivalence  [maxgap{frac(e_i x)} > 1/7]  <=>  [1/7-teeth around phases leave a free arc]:
+  equivalence holds (strict cases): True
+  => the GLOBAL-WITNESS criterion 'maxgap{frac(e_i x)} > 1/7' is EXACTLY the condition
+     for the cluster's 1/7 fast-phase teeth to leave a free sub-arc (hence a witness). ∎
+
+[LINK 1b] Fast-phase tooth-width = 1/7 in the limit (the IDEALIZATION the S7 cover encodes)
+  cluster member u=Vmax-e plants danger of phi-width -> 1/7 (interior); max dev over random samples
+  = 0.1429 = O(1/Vmax) boundary slop (tooth straddling a gap edge).
+  exact interior instance (Vmax=300,e=7,j=80): phi-width=0.114334, 1/7=0.142857
+  => In the limit Vmax->inf each cluster member's fast-phase danger is EXACTLY a 1/7-tooth
+     around frac(e_i x). THIS is what S7(E) (sectors of width 1/7) encodes. At finite Vmax
+     the 1/7 is approximate (O(1/Vmax)); LINK 2 absorbs that into the arc-count discrepancy.
+
+[LINK 2] FINITE-Vmax discretization: explicit Vmax-independent arc-count bound
+  arc-count of G_good is bounded by a Vmax-INDEPENDENT quantity (depends on shape E,P only):
+  tested 60 shapes: max #arcs(G_good)=28; #arcs<=7*sum(E)+sum(P)+1 holds: True
+  CRUCIAL: this bound has NO Vmax dependence. The good set is determined by the SHAPE.
+
+  discretization: rho_K = #good periods / Vmax  ->  rho* = meas(G_good), error <= #arcs/Vmax
+  shape P=[1, 2, 3] E=[0, 1, 2, 3, 4, 5, 6, 7, 8] (consec k=9): rho* = 0.530612, #arcs=12
+    Vmax=   200: rho_K=0.520000  |rho_K-rho*|=0.010612  bound #arcs/Vmax=0.060000  ok=True
+    Vmax=  1000: rho_K=0.534000  |rho_K-rho*|=0.003388  bound #arcs/Vmax=0.012000  ok=True
+    Vmax=  5000: rho_K=0.530800  |rho_K-rho*|=0.000188  bound #arcs/Vmax=0.002400  ok=True
+    Vmax= 20000: rho_K=0.530500  |rho_K-rho*|=0.000112  bound #arcs/Vmax=0.000600  ok=True
+  => rho* > 0  AND  Vmax > #arcs/rho*  ==>  rho_K > 0  ==>  a good ruler period exists
+     ==>  M(S) >= 1/14. The threshold V0 := ceil(#arcs/rho*) is EXPLICIT & finite;
+     Vmax <= V0 is a finite check. (rho* > 0 is the genuine open analytic input.)
+
+[GLUE CHECK] meas(S7(consec_k)) <= cap_k  =>  thr_k floor  =>  rho* >= cap... chain
+  k= 8  meas(S7(consec))=0.32721  cap_k=0.38146  OK (consec<=cap)  slack=0.05425
+  k= 9  meas(S7(consec))=0.41616  cap_k=0.49426  OK (consec<=cap)  slack=0.07810
+  k=10  meas(S7(consec))=0.50448  cap_k=0.60440  OK (consec<=cap)  slack=0.09992
+  k=11  meas(S7(consec))=0.58146  cap_k=0.72527  OK (consec<=cap)  slack=0.14381
+  k=12  meas(S7(consec))=0.62411  cap_k=0.85714  OK (consec<=cap)  slack=0.23303
+
+[WSB target] large-spread meas(S7) and the resonant w==0 mod7 configs
+  k=8 generic wide (span 400): meas(S7) mean=0.0242 max=0.0315  (cap_8=0.3815)
+  resonant E=[0, 7, 14, 21, 28, 35, 42, 49]: meas(S7)=0.32721  vs base consec 0.32721  (equal by scale-invariance: True)
+  => the WSB must NOT assume small meas(S7) for wide-but-resonant (w==0 mod7) shapes;
+     by scale-invariance these reduce to their PRIMITIVE shape (bounded spread). So a
+     correct WSB+finite-check splits on PRIMITIVITY (gcd of E), not raw span. (key caveat)
+
+[END-TO-END] good slow-time (maxgap{frac(e x)}>1/7 at some x in G_P)  =>  M(S) >= 1/14
+  3000/3000 reconstructed covering S have nonempty level-1/14 safe set (=> M(S)>=1/14). fails=0
+
+==============================================================================
+SUMMARY printed above. See final assistant message for the link-by-link verdict.
+==============================================================================

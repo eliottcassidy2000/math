@@ -1,0 +1,64 @@
+==========================================================================================
+(1) AUDIT the load-bearing monotonicity lemma: E subset F => meas(S7(E)) <= meas(S7(F))
+==========================================================================================
+   checked 2400 (E subset F) pairs; monotonicity violations = 0
+   [VERIFIED] meas(S7) is monotone under integer-set inclusion (no e=0/boundary subtlety).
+
+==========================================================================================
+(2) a(m)=meas(S7(AP_m)) denominators & three-gap signature
+==========================================================================================
+     m                 a(m)               denom factored   7*lcm(1..m-1)?
+     7               31/210                      2*3*5*7          divides
+     8             481/1470                    2*3*5*7^2          divides
+     9            2447/5880                  2^3*3*5*7^2          divides
+    10           8899/17640                2^3*3^2*5*7^2          divides
+    11            3419/5880                  2^3*3*5*7^2          divides
+    12        121103/194040             2^3*3^2*5*7^2*11          divides
+    13          14573/21560                 2^3*5*7^2*11          divides
+    14          14109/20020                2^2*5*7*11*13          divides
+    15          61211/84084              2^2*3*7^2*11*13          divides
+    16          62767/84084              2^2*3*7^2*11*13          divides
+   => denominators divide 7*lcm(1..m-1): consistent with a three-gap / breakpoint-
+      lattice structure. No elementary all-m closed form (confirms THM-535).
+
+==========================================================================================
+(3) No free UPPER bound from sub-structure (only the AP-hull works)
+==========================================================================================
+   Removing a stranger DECREASES meas(S7) (subset) => gives a LOWER bound on the
+   bigger set, useless for an upper bound. The only upper bound is the super-set hull.
+   E=(0, 1, 2, 3, 4, 5, 6, 11): meas=0.16320; core=(0, 1, 2, 3, 4, 5, 6): meas=0.14762
+   meas(core) <= meas(E): True (lower bound direction, as expected)
+
+==========================================================================================
+(4) PROVED corollary: any cap-violating E must have span > N*(k); with the box, > B_box(k)
+==========================================================================================
+   k= 8: cap_k=0.3815. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 8.
+          Exhaustive box (HYP-2603) checked span<=18 with 0 violations,
+          so ANY counterexample (if one exists) has span > 18.  [PROVED reduction]
+   k= 9: cap_k=0.4943. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 9.
+          Exhaustive box (HYP-2603) checked span<=17 with 0 violations,
+          so ANY counterexample (if one exists) has span > 17.  [PROVED reduction]
+   k=10: cap_k=0.6044. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 11.
+          Exhaustive box (HYP-2603) checked span<=16 with 0 violations,
+          so ANY counterexample (if one exists) has span > 16.  [PROVED reduction]
+   k=11: cap_k=0.7253. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 14.
+          Exhaustive box (HYP-2603) checked span<=16 with 0 violations,
+          so ANY counterexample (if one exists) has span > 16.  [PROVED reduction]
+   k=12: cap_k=0.8571. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 27.
+          Exhaustive box (HYP-2603) checked span<=16 with 0 violations,
+          so ANY counterexample (if one exists) has span > 16.  [PROVED reduction]
+   k=13: cap_k=1.0000. Since meas(S7(E)) <= a(span+1) and a increasing,
+          meas(S7(E)) > cap_k  =>  a(span+1) > cap_k  =>  span >= N*+1 = 29.
+          Exhaustive box (HYP-2603) checked span<=16 with 0 violations,
+          so ANY counterexample (if one exists) has span > 16.  [PROVED reduction]
+
+   This is the rigorous yield of the subset-domination angle: it PROVES the open
+   set is confined to LARGE span (> B_box(k)), exactly the regime where meas(S7) is
+   empirically tiny -- handing a clean, well-posed target to the wide-spread bound.
+
+DONE.

@@ -73,3 +73,20 @@ stranger contracts to ≤ ~0.21 ≪ cap — the wide-spread bound is LOOSE.
 This is the moment-side analogue of THM-518 (measure-side stranger-decoupling). The remaining work: (i) the
 explicit single-offset Weyl error disc_N ≤ C(E')/N with C(E') controlled by recursion; (ii) the explicit B;
 (iii) L_y^c(E') < cap for all E' (recursion base = finite check). → THM-534, THM-518, HYP-2606/2608.
+
+## The single-offset error: reduced to ONE Fourier mode Ŵ(N) (kps-S9, refined)
+The peeling error has an EXACT Fourier form (cleaner than the full k−2-dim lattice — it is 1-dimensional):
+  J(A,E'∪{N}) − (1−|A|/7)J(A,E') = Σ_{m≠0} ĉ_A(m)·Ŵ_{E',A}(mN),
+where Ŵ_{E',A}(f)=∫_{W(E',A)} e(−fx)dx is the f-th Fourier coeff of the E'-safe-set W(E',A), and ĉ_A the
+sector-avoid coeffs (ĉ_A(7t)=0). The LEADING term is m=±1: **error ≈ 2 Re[ĉ_A(1)·Ŵ_{E',A}(N)]** + O(1/N²-ish).
+So the whole wide-spread error is governed by the single Fourier coefficient **Ŵ(N)** of the (k−1)-point
+safe set at frequency = the peeled offset N. |Ŵ(N)| ≤ #intervals(W)/(π N) ≤ 2|A|σ(E')/(πN), σ(E')=Σ offsets.
+- CRUDE absolute bound: |L_y(E)−L_y^c(E')| ≤ 252·σ(E')/N (k=8), giving an explicit but IMPRACTICAL B≈31500
+  (the absolute bound is loose — same 5× lossiness as HYP-2606, but now 1-DIMENSIONAL).
+- SHARP (the live target): the SIGNED sum Σ_A (with the dual signs y_r and the (−1)^{|A|}) of ĉ_A(1)Ŵ(N)
+  cancels — a ONE-DIMENSIONAL signed Weyl/Erdős–Turán estimate on Ŵ(N), tractable (one frequency, not a
+  rank-(k−2) lattice). This + the 7-vanishing handles the resonances. THE 1-D crux replaces the k-D one.
+NET: stranger-contraction reduces the wide-spread bound from a multi-dim signed lattice sum (HYP-2606,
+intractable) to k−1 successive SINGLE-OFFSET peels, each governed by one Fourier mode Ŵ(N) — the cleanest
+available form of the wide-spread bound. Robustness: the wide ceiling 0.213 ≪ cap 0.38 (gap 0.168) means even
+a moderately-loose 1-D bound closes it; the tight 0.023 margin is entirely in the bounded-spread finite check.
