@@ -77,6 +77,11 @@ limit (huge margin). The crux is exactly "the AP maximizes the (signed) correlat
   GAPs are multi-dim dilated APs; AP-orbit-invariance (THM-531) + dimension should bound `L_y` on them.
   This would replace the failed dichotomy with: {dissociated stranger → peel} ∪ {high energy → GAP,
   bounded by AP-invariance}. NEW concrete target — needs a quantitative Freiman + a GAP `L_y` bound.
+  **Codex S26 refinement (HYP-2639, after HYP-2637/HYP-2638):** the direct elementary `3k-4` small-doubling version is too strong
+  for the third pocket.  The KPS examples are relation-covered but have `|S+S|=31` at `k=8`, above
+  `3k-4=20`.  The next object should retain the labelled relation hypergraph: summand node `C=a+b`,
+  multiplicand test `C|w`, balanced/even-scalar versus observer-coupled/odd-marked sign type, and
+  visible versus hidden shell.
 - **Tao's second-moment / cluster method** (the only literature tool that structurally matches): bound
   the variance of the number of hit sectors `H(x)=7−N(x)` and conclude `P(H=7)=p_0` is maximized by the
   AP. Worth importing in detail.

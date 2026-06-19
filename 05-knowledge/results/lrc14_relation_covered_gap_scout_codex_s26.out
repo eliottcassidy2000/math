@@ -1,0 +1,90 @@
+========================================================================================
+HYP-2639/T887 relation-covered GAP scout
+========================================================================================
+Small relation motifs tracked:
+  fold:       a+b=c       coefficient sum 1  -> observer-coupled / translation-sensitive
+  midpoint:   a+c=2b      coefficient sum 0  -> balanced but 2-adic midpoint
+  collision:  a+b=c+d     coefficient sum 0  -> balanced pair energy
+Multiplicand layer: pair-sum denominator C clears nonzero w unless C divides w.
+
+CALIBRATION ROWS
+AP13                   k=13 span= 12 M=0.071429 M*n=1.000
+  sumset |S+S|=25 gap= 0 Freiman3k-4=True restricted=23
+  energy=1469 sidon_excess=1144 pair_collision_rel=125 visible_folds=36 midpoints=36
+  collision_nodes visible= 9 hidden=10; covered_nonzero=13/13 all=True
+  multiplicand pair-sum nodes coarse/fine=11/12; blocked coarse/fine=11/0
+shiftAP13              k=13 span= 12 M=0.342105 M*n=4.789
+  sumset |S+S|=25 gap= 0 Freiman3k-4=True restricted=23
+  energy=1469 sidon_excess=1144 pair_collision_rel=125 visible_folds= 0 midpoints=36
+  collision_nodes visible= 0 hidden=19; covered_nonzero=13/13 all=True
+  multiplicand pair-sum nodes coarse/fine=0/23; blocked coarse/fine=0/0
+Vstar                  k=13 span= 23 M=0.071429 M*n=1.000
+  sumset |S+S|=36 gap=11 Freiman3k-4=False restricted=34
+  energy=1169 sidon_excess= 844 pair_collision_rel= 90 visible_folds=31 midpoints=31
+  collision_nodes visible= 8 hidden= 9; covered_nonzero=13/13 all=True
+  multiplicand pair-sum nodes coarse/fine=22/12; blocked coarse/fine=12/0
+KPS_third_pocket_A     k= 8 span= 35 M=0.285714 M*n=2.571
+  sumset |S+S|=31 gap=16 Freiman3k-4=False restricted=23
+  energy= 168 sidon_excess=  48 pair_collision_rel=  6 visible_folds=10 midpoints= 0
+  collision_nodes visible= 2 hidden= 2; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=6/12; blocked coarse/fine=3/0
+KPS_third_pocket_B     k= 8 span= 31 M=0.239130 M*n=2.152
+  sumset |S+S|=31 gap=16 Freiman3k-4=False restricted=25
+  energy= 152 sidon_excess=  32 pair_collision_rel=  3 visible_folds= 8 midpoints= 2
+  collision_nodes visible= 1 hidden= 2; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=6/13; blocked coarse/fine=1/0
+
+SAMPLED WIDE ROWS WITH EVERY NONZERO ELEMENT IN A SMALL ADDITIVE MOTIF
+sample_1               k= 8 span= 38 M=0.219512 M*n=1.976
+  sumset |S+S|=31 gap=16 Freiman3k-4=False restricted=24
+  energy= 160 sidon_excess=  40 pair_collision_rel=  4 visible_folds=10 midpoints= 2
+  collision_nodes visible= 3 hidden= 1; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=13/7; blocked coarse/fine=4/0
+sample_2               k= 8 span= 41 M=0.264151 M*n=2.377
+  sumset |S+S|=31 gap=16 Freiman3k-4=False restricted=24
+  energy= 156 sidon_excess=  36 pair_collision_rel=  4 visible_folds= 9 midpoints= 1
+  collision_nodes visible= 2 hidden= 2; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=5/14; blocked coarse/fine=2/0
+sample_3               k= 8 span= 32 M=0.254545 M*n=2.291
+  sumset |S+S|=30 gap=15 Freiman3k-4=False restricted=25
+  energy= 156 sidon_excess=  36 pair_collision_rel=  3 visible_folds= 9 midpoints= 3
+  collision_nodes visible= 2 hidden= 1; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=6/14; blocked coarse/fine=2/0
+sample_4               k= 8 span= 33 M=0.263158 M*n=2.368
+  sumset |S+S|=32 gap=17 Freiman3k-4=False restricted=25
+  energy= 148 sidon_excess=  28 pair_collision_rel=  3 visible_folds= 9 midpoints= 1
+  collision_nodes visible= 2 hidden= 1; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=8/12; blocked coarse/fine=2/0
+sample_5               k= 8 span= 38 M=0.307692 M*n=2.769
+  sumset |S+S|=29 gap=14 Freiman3k-4=False restricted=24
+  energy= 172 sidon_excess=  52 pair_collision_rel=  5 visible_folds= 8 midpoints= 3
+  collision_nodes visible= 1 hidden= 2; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=3/15; blocked coarse/fine=1/0
+sample_6               k= 8 span= 36 M=0.250000 M*n=2.250
+  sumset |S+S|=31 gap=16 Freiman3k-4=False restricted=24
+  energy= 156 sidon_excess=  36 pair_collision_rel=  4 visible_folds= 8 midpoints= 1
+  collision_nodes visible= 1 hidden= 3; covered_nonzero=7/7 all=True
+  multiplicand pair-sum nodes coarse/fine=4/14; blocked coarse/fine=1/0
+
+READING
+  1. Direct Freiman small-doubling is too strong for the third pocket:
+     KPS relation-covered examples have |S+S| well above 3k-4, so they are not
+     automatically one-dimensional GAP rows by the elementary 3k-4 window.
+  2. The useful condition is relation coverage plus shell location.  Shifted AP
+     has maximal additive energy but zero visible folds; AP has the same energy
+     and many observer-coupled folds.  Energy without the summand-node address
+     is a decoy.
+  3. Addition supplies candidate denominators C in S+S; multiplication tests
+     clearance by divisibility C|w.  Positive/negative signs in a relation say
+     whether the relation is balanced (even scalar, translation-invariant) or
+     observer-coupled (odd marked, translation-sensitive).
+  4. The proof target should be a relation-hypergraph regularity lemma:
+     either a dissociated stranger peels, or the small-relation hypergraph has
+     enough low visible/hidden summand-shell payload that the signed reciprocal
+     tail can be channelized before absolute values.
+
+TOURNAMENT ANALYSIS
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  hamiltonian_paths=1
+  tie_hamiltonian_path=observer_coupled_visible_folds > low_hidden_summand_shells > multiplicand_clearance_sieve > relation_coverage_hypergraph > freiman_small_doubling_GAP > balanced_pair_energy > raw_runner_vertices

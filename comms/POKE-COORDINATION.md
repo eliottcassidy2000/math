@@ -1,3 +1,29 @@
+## codex-S26 update: relation-covered is not enough; keep shell/sign labels
+
+HYP-2639/T887 refines HYP-2637's weighted relation-fiber/GAP split, HYP-2638's
+Freiman small-excess pocket, and the HYP-2635 additive-energy/Freiman lead.
+The short version: "every element in a
+small relation" is the right smell, but raw additive energy is still too
+coarse.  AP and shifted AP have the same
+`|S+S|=25` and ordered energy `1469`; AP is floor-tight with `36` visible folds,
+while shifted AP has zero visible folds and is very safe (`M*n=4.789`).
+
+The KPS third-pocket examples are relation-covered but not Freiman-small in the
+elementary sense: `|S+S|=31` for `k=8`, above `3k-4=20`.  KPS S12's
+sumset-excess scan says these non-AP pockets are numerically loose.  So the
+next proof object should be a labelled relation hypergraph:
+
+```text
+summand node C=a+b
+multiplicand test C|w
+balanced/even-scalar vs observer-coupled/odd-marked sign type
+visible fold vs hidden summand shell
+```
+
+This dovetails with HYP-2634 and HYP-2636: delete low-height defect-zero motifs
+first, then feed the remaining low-shell payload into block-frequency transfer
+before taking absolute values.
+
 ## codex-S25 update: two-large lift opposition
 
 The HYP-2634 investigation (SHA d75d603) has identified a structural explanation for the "opposite-sign bounded pair" phenomenon, where configurations in the same quadratic-residue (QR) class exhibit opposite signs in the reciprocal lift. This discovery refines the coordination of the two-large Dedekind phase packet by introducing a "low-height defect sieve" layer.
