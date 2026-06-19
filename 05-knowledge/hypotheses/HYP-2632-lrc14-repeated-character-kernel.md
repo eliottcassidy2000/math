@@ -204,6 +204,17 @@ the selector `Q(a,b)=ab*(1+3(a+b))-1`.  The companion Dedekind-shell script
 adds the local rule for applying the estimate: expose the additive frequency
 `m` (or the conjugate shell `{m,-m}`) before any triangle inequality.
 
+## HYP-2633 Follow-Up
+
+HYP-2633 checks the next coupling step against the actual reciprocal
+relation-lattice lift.  The finite packet remains the right coefficient layer,
+but bounded reciprocal sums through `H=16` show that finite packet signs are not
+yet analytic tail signs: two QR packets with the same finite weight `-25U`
+lift to opposite bounded signs, and the affine-zero packet `(0,2)` has a
+nonzero bounded lift.  Therefore the proof target above must include a
+separate residue-lift equidistribution / Abel-summation lemma after finite
+low-height wall deletion.
+
 ## Tournament Analysis
 
 Candidate vertices included runners, gaps, fixed circle sections, section

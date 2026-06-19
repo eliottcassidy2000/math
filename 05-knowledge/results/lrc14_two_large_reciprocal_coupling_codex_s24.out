@@ -1,0 +1,91 @@
+
+============================================================================================
+LRC(14) TWO-LARGE RECIPROCAL COUPLING S24
+============================================================================================
+ambient d=9; reciprocal height cutoff Hmax=16
+finite unit U=147/(16*pi^6)=0.00955648353591
+
+============================================================================================
+FINITE PACKET VS ACTUAL RECIPROCAL LIFT
+============================================================================================
+Each support has the same normalized mod-7 packet shown in the HYP-2632 finite table, but the actual reciprocal lift is enumerated with the integer support values.  This is the coupling point where a proof must add residue-lift equidistribution or summation by parts.
+
+         case               finite packet packet S/U   H  relations     signed lift     signed/U         absK   abs/signed                 diagnosis
+     42_QR_a2                 4+2 QR, a=2    -25.000   8      20262   0.00247870093     0.259374  0.021172076       8.5416     finite/lift sign flip
+     42_QR_a2                 4+2 QR, a=2    -25.000  10      70294  0.002724735313     0.285119  0.032290789       11.851     finite/lift sign flip
+     42_QR_a2                 4+2 QR, a=2    -25.000  12     192756  0.002664983802     0.278867  0.044389863      16.6567     finite/lift sign flip
+     42_QR_a2                 4+2 QR, a=2    -25.000  14     299174  0.002644530463     0.276726  0.047114539      17.8158     finite/lift sign flip
+     42_QR_a2                 4+2 QR, a=2    -25.000  16     642506  0.002676143676     0.280034  0.053865829      20.1282     finite/lift sign flip
+
+     42_QR_a4                 4+2 QR, a=4    -25.000   8      19774 3.349756776e-06     0.000351  0.022515899      6721.65     finite/lift sign flip
+     42_QR_a4                 4+2 QR, a=4    -25.000  10      68944 0.0001716902795     0.017966  0.033979592      197.912     finite/lift sign flip
+     42_QR_a4                 4+2 QR, a=4    -25.000  12     188776 -0.0002201827678    -0.023040  0.046693083      212.065 same sign, large envelope
+     42_QR_a4                 4+2 QR, a=4    -25.000  14     293250 -0.0001811719997    -0.018958  0.049595881       273.75 same sign, large envelope
+     42_QR_a4                 4+2 QR, a=4    -25.000  16     628694 -0.0001305137351    -0.013657  0.056443112      432.469 same sign, large envelope
+
+    42_NQR_a3                4+2 NQR, a=3    -18.000   8      20052  0.001999238576     0.209202   0.02364992      11.8295     finite/lift sign flip
+    42_NQR_a3                4+2 NQR, a=3    -18.000  10      69608  0.002330499761     0.243866  0.035770563      15.3489     finite/lift sign flip
+    42_NQR_a3                4+2 NQR, a=3    -18.000  12     190988  0.002445694817     0.255920  0.049413436      20.2043     finite/lift sign flip
+    42_NQR_a3                4+2 NQR, a=3    -18.000  14     296422   0.00241972547     0.253202  0.052432739      21.6689     finite/lift sign flip
+    42_NQR_a3                4+2 NQR, a=3    -18.000  16     636160  0.002424138026     0.253664  0.059882956      24.7028     finite/lift sign flip
+
+  411_high_23           4+1+1 high, (2,3)      8.000   8      21028 0.0003235219356     0.033854  0.024626275      76.1193 same sign, large envelope
+  411_high_23           4+1+1 high, (2,3)      8.000  10      72796 0.0001651937795     0.017286  0.037552458      227.324 same sign, large envelope
+  411_high_23           4+1+1 high, (2,3)      8.000  12     199838  0.000157653547     0.016497   0.05183342      328.781 same sign, large envelope
+  411_high_23           4+1+1 high, (2,3)      8.000  14     310292 0.0001819134635     0.019036   0.05525051      303.719 same sign, large envelope
+  411_high_23           4+1+1 high, (2,3)      8.000  16     663102 0.0001780630816     0.018633  0.063671053      357.576 same sign, large envelope
+
+   411_low_26            4+1+1 low, (2,6)      1.000   8      21108 -0.0009573437342    -0.100177   0.02479976      25.9048     finite/lift sign flip
+   411_low_26            4+1+1 low, (2,6)      1.000  10      72448 -0.001315243104    -0.137628    0.0370832      28.1949     finite/lift sign flip
+   411_low_26            4+1+1 low, (2,6)      1.000  12     198072 -0.001226729285    -0.128366  0.050906206      41.4975     finite/lift sign flip
+   411_low_26            4+1+1 low, (2,6)      1.000  14     305314 -0.001229954296    -0.128704  0.054323121      44.1668     finite/lift sign flip
+   411_low_26            4+1+1 low, (2,6)      1.000  16     655252 -0.001230813632    -0.128794  0.062100703       50.455     finite/lift sign flip
+
+  411_zero_02    4+1+1 affine zero, (0,2)      0.000   8      20584 0.0007872931374     0.082383  0.024554185      31.1881     finite-zero lift leak
+  411_zero_02    4+1+1 affine zero, (0,2)      0.000  10      71158 0.0007549931524     0.079003   0.03750684      49.6784     finite-zero lift leak
+  411_zero_02    4+1+1 affine zero, (0,2)      0.000  12     195124 0.0003862839612     0.040421  0.052514361      135.948     finite-zero lift leak
+  411_zero_02    4+1+1 affine zero, (0,2)      0.000  14     303078 0.0004451968532     0.046586  0.055755049      125.237     finite-zero lift leak
+  411_zero_02    4+1+1 affine zero, (0,2)      0.000  16     650742 0.0004115934605     0.043070  0.063805273       155.02     finite-zero lift leak
+
+
+============================================================================================
+OBSTRUCTION READOUT AT H=16
+============================================================================================
+The finite packet table alone cannot be used as the sign of the bounded reciprocal sum.  The most useful guardrails are listed below.
+
+         case finite S/U finite sign lift sign     lift signed   abs/signed                    guardrail
+     42_QR_a2    -25.000           -         +  0.002676143676      20.1282        finite/lift sign flip
+     42_QR_a4    -25.000           -         - -0.0001305137351      432.469    same sign, large envelope
+    42_NQR_a3    -18.000           -         +  0.002424138026      24.7028        finite/lift sign flip
+  411_high_23      8.000           +         + 0.0001780630816      357.576    same sign, large envelope
+   411_low_26      1.000           +         - -0.001230813632       50.455        finite/lift sign flip
+  411_zero_02      0.000           0         + 0.0004115934605       155.02        finite-zero lift leak
+
+Same finite packet, different lift: `42_QR_a2` and `42_QR_a4` both have finite weight -25U, but at H=16 their cumulative reciprocal lifts have opposite signs (0.002676143676 vs -0.0001305137351).
+Affine-zero warning: `411_zero_02` has finite packet weight 0U, yet its bounded reciprocal lift is visibly nonzero before the summation-by-parts tail is proved.
+
+============================================================================================
+NEXT PROOF OBLIGATION
+============================================================================================
+The theorem-shaped statement should be narrower than HYP-2632:
+
+  finite chi_7/affine/Q Dedekind packet
+  + finite low-height wall deletion
+  + residue-lift equidistribution on relation lattices
+  + signed summation by parts inside additive frequency shells
+  => two-large reciprocal tail bound using -108U+54U, not 162U.
+
+A useful analytic form is to write each additive-frequency shell as a Stieltjes sum over relation-lattice height, prove that the cumulative residue-lift discrepancy is bounded after wall deletion, and then apply Abel summation to the 1/prod(n_i) denominator.  The computation above identifies why this lift lemma is genuinely separate from the finite character kernel.
+
+============================================================================================
+TOURNAMENT ANALYSIS
+============================================================================================
+Pairwise observable: ability to bound the signed two-large reciprocal tail.
+Switch/gauge: prefer the quotient that keeps additive-frequency address and residue-lift discrepancy until after summation by parts.
+Hamiltonian path:
+  residue_lift_equidistribution > additive_frequency_summation > finite_chi_affine_kernel > low_height_wall_deletion > exact_period_squarefree_packets > boundary_face_cancellation > raw_support_values > raw_runner_vertices
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}
+directed_3_cycles = 0
+SCCs = eight singleton proof-obligation vertices
+hamiltonian_paths = 1
+Challenged assumption: neither runner vertices nor raw residue classes preserve enough information.  The quotient must preserve the signed reciprocal-tail predicate and deliberately destroys witness-time geometry.
