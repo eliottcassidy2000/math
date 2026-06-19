@@ -1,0 +1,79 @@
+HYP-2649/T896 below-14 modern LRC reproof ladder
+Convention: LRC(N) has N-1 speeds and target 1/N.
+
+========================================================================================
+A. Exact AP tight rows below the first open case
+========================================================================================
+LRC(N): V=(1,...,N-1), target=1/N.
+  N   M(V)                 witness t       safe_meas@1/N
+  3                  1/3            1/3                0
+  4                  1/4            1/4                0
+  5                  1/5            1/5                0
+  6                  1/6            1/6                0
+  7                  1/7            1/7                0
+  8                  1/8            1/8                0
+  9                  1/9            1/9                0
+ 10                 1/10           1/10                0
+ 11                 1/11           1/11                0
+ 12                 1/12           1/12                0
+ 13                 1/13           1/13                0
+
+========================================================================================
+B. One-step AP frontier: size N-1 subsets of [1,N]
+========================================================================================
+This is the smallest AP-neighborhood where tight rows can split.
+  N  rows  tight@1/N  min M             argmin rows                  min safe@1/(N+1)
+  4     4          1               1/4  [(1, 2, 3)]                               1/10
+  5     5          1               1/5  [(1, 2, 3, 4)]                            1/20
+  6     6          1               1/6  [(1, 2, 3, 4, 5)]                         2/35
+  7     7          1               1/7  [(1, 2, 3, 4, 5, 6)]                      1/35
+  8     8          1               1/8  [(1, 2, 3, 4, 5, 6, 7)]                  4/105
+  9     9          1               1/9  [(1, 2, 3, 4, 5, 6, 7, 8)]              11/420
+ 10    10          1              1/10  [(1, 2, 3, 4, 5, 6, 7, 8, 9)]            20/693
+ 11    11          1              1/11  [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)]           47/2079
+ 12    12          1              1/12  [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)]             7/429
+ 13    13          1              1/13  [(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)]             7/858
+
+========================================================================================
+C. LRC(13) core-fattening lever inside 12-subsets of [1,14]
+========================================================================================
+Rows have 12 speeds.  Compare exact M at target 1/13 and strict safe measure at 1/14.
+  primitive 12-subsets scanned: 91
+  min M at LRC(13) target: 1/13 = 0.076923077
+  tight M=1/13 rows: 1
+    tight13 V=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12) witness=1/13 safe_meas@1/14=6617/194040 = 0.034101216
+  min strict safe measure at relaxed target 1/14: 7/858 = 0.008158508
+    min-fat14 V=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+  first exact M histogram entries:
+    M=1/13: 1
+    M=1/12: 2
+    M=2/23: 1
+    M=1/11: 4
+    M=2/21: 2
+    M=1/10: 6
+    M=2/19: 15
+    M=1/9: 11
+    M=2/17: 14
+    M=1/8: 24
+
+========================================================================================
+D. Even-denominator sector support floor
+========================================================================================
+For N=2q, the half-gap sector quotient has q sectors and q-1 live missed sectors.
+Inclusion-exclusion kills Fourier correction below support q-1.
+  N   q=N/2   support floor   proof meaning
+  4       2               1   below support-six tail
+  6       3               2   below support-six tail
+  8       4               3   below support-six tail
+ 10       5               4   below support-six tail
+ 12       6               5   below support-six tail
+ 14       7               6   first support-six / HYP-2646 wall
+
+========================================================================================
+Tournament Analysis: proof quotients for below-14 reproof
+========================================================================================
+Pairwise observable: preserves proof-relevant address before scalarizing.
+Switch/gauge: prefer the quotient that explains both tight equality and positive fattening.
+Hamiltonian path:
+  AP_tight_locus_plus_fattening > signed_wall_transport > support_floor_q_minus_1 > Freiman_small_excess > exact_M_boundary_scan > raw_runner_vertices
+score histogram: {0:1,1:1,2:1,3:1,4:1,5:1}; directed 3-cycles: 0

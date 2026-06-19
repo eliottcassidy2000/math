@@ -1,20 +1,54 @@
 ## codex-S31 update: LRC14 state-word invariants
 
-The introduction of **LRC14 state-word invariants** (HYP-2644, SHA 36906f2) provides a discrete symbolic framework to unify the three-band proof model. These invariants serve as the topological coordinates for configurations, mapping the continuous phase dynamics of the 13 runners into a finite alphabet of balanced state-words.
+The introduction of **LRC14 state-word invariants** (HYP-2648/T895, SHA
+36906f2) provides a discrete symbolic framework for the three-band proof model.
+These invariants serve as topological coordinates for configurations, mapping
+phase dynamics of the 13 moving runners into an addressed finite state-word on
+wall atoms.  HYP-2644 remains the far-element plateau quotient that this
+state-word framework can route to, not the state-word ID itself.
 
-- **HYP-2644 / T892: State-Word Invariants**
-    - **Construction:** Each configuration is mapped to a periodic state-word over the runner-index alphabet. The state-word captures the exact sequence of runner-observer crossings in the phase torus. For a primitive 12-core, the word length is determined by the total winding number of the configuration.
+- **HYP-2648 / T895: State-Word Invariants**
+    - **Construction:** Each row is mapped to a measured cyclic word of
+      missed-sector states `W(E)={(I,|I|,M_E(I))}` with fold, moving-sector, and
+      coimage labels retained before scalarization.
     - **Function (Three-Band Integration):**
-        - **Band 1 (Near-AP / HYP-2642):** State-words function as **transfer certificates**. A near-AP perturbation corresponds to a single-character substitution or "word-mutation." The HYP-2642 wall-transfer deficit is now proved as a **word-distance penalty**, where the loneliness drop is bounded by the Hamming distance from the AP-word.
-        - **Band 2 (GAP / Dimension Penalty):** State-words serve as **Freiman-dimension witnesses**. Configurations with $d \ge 2$ produce words with high "symbolic entropy." The dimension penalty is reframed as a **word-balancing theorem**: high-entropy words cannot maintain the "sparse-clumping" required to violate the 13/7k floor.
-        - **Band 3 (Dissociated):** Handled by **word-equidistribution**. As runners become dissociated, the state-word approaches a random string, and the loneliness measure is governed by the independent limit (peeling lemma).
-    - **Mechanism:** The invariants function as a **topological filter**. By proving that every word in a specific "word-class" (defined by winding number and symmetry) satisfies the LRC predicate, the proof avoids the need for point-wise numerical verification across the 12-dimensional speed space.
-    - **Broader Implications:** This marks the transition from arithmetical/numerical proof to **symbolic dynamics**. It effectively "quantizes" the search space, proving that the floor is stable not just for specific speeds, but for every speed-configuration that shares the same state-word invariant.
+        - **Band 1 (Near-AP / HYP-2647/HYP-2643):** State words function as
+          transfer templates; near-AP perturbations should become short
+          addressed mutations whose wall-transfer deficit is bounded by the
+          AP-to-defect transport ledger.
+        - **Band 2 (GAP / Freiman Penalty):** Higher symbolic entropy or
+          jump-complexity should force rows into the HYP-2638 small-excess and
+          HYP-2639 relation-covered GAP routes.
+        - **Band 3 (Dissociated / Far Tail):** Low-address control should hand
+          off to HYP-2646 signed coimage cancellation or HYP-2644 far-element
+          plateau contraction.
+    - **Mechanism:** The useful invariant is the addressed state-pair support,
+      not a scalar shadow such as fold count, `p0`, or positive/negative mass.
 
 - **Active Steering Objectives (Updated):**
-    - **State-Word Class Library (HYP-2644):** Construct the comprehensive library of state-word invariants for the $k=9$ near-AP pocket.
-    - **Word-Balancing Lemma:** Formalize the connection between state-word entropy and the Freiman dimension penalty.
-    - **Hamlet-Gap Closure:** Utilize the state-word invariants to finalize the "Hamlet-gap" between the small-excess finite check and the high-energy GAP bounds.
+    - Build a state-word class library for the bounded near-AP pockets.
+    - Prove a word-balancing lemma connecting state entropy to the Freiman
+      dimension penalty.
+    - Use addressed state words as Tournament Analysis vertices, with proof
+      obligations rather than raw runners as the quotient.
+
+## codex-S31 update: below-14 reproof ladder
+
+HYP-2649/T896 uses the current LRC14 proof quotients to reframe the proved
+range below the first open case.  Exact scout
+`lrc_below14_modern_reproof_codex_s31.py` verifies AP tight rows for
+`N=3..13`; in the one-step AP frontier (primitive size `N-1` subsets of
+`[1,N]`) AP is the unique tight/min row for every `N=4..13`, and relaxing to
+target `1/(N+1)` gives positive safe measure.  At the top edge, all `91`
+primitive 12-subsets of `[1,14]` satisfy `M>=1/13`, the unique tight row is
+`(1..12)`, and the minimum strict safe measure at target `1/14` is `7/858` at
+the drop-6 core `(1,2,3,4,5,7,8,9,10,11,12,13)`.
+
+Steering update: try to prove an AP-frontier fattening lemma, then extend it
+from `[1,N]` to AP-rich normal forms via Freiman/signed-wall transport.  The
+even support-floor ladder explains why `N=14` is qualitatively new:
+`N=4,6,8,10,12` have support floors `1..5`, while `N=14` is the first
+support-six / HYP-2646 signed-coset wall.
 
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
