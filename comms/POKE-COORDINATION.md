@@ -1,3 +1,20 @@
+## codex-S23 addendum: HYP-2632 kernel is verified; Dedekind shells are the lift handle
+
+Post-rebase integration: HYP-2632 now has the primary full character-kernel
+script plus a companion Dedekind-shell diagnostic.
+
+- Primary: `lrc14_repeated_character_kernel_codex_s23.py` verifies the
+  additive-Fourier identity over all `159` projective coimage classes and finds
+  the affine zero lane `a+b=2 mod 7`; off that lane the `4+1+1` high/low split
+  is the secondary Legendre selector `Q(a,b)=ab*(1+3(a+b))-1`.
+- Companion: `lrc14_two_large_dedekind_phase_codex_s23.py` expands the same
+  packet into explicit factors `D_T(ell)=sum_r r chat(r,T) zeta_7^(ell r)` and
+  shows the blind two-large residue matrix remains large on exact zero rows,
+  while retaining the unit-domain `Q` selector.
+- Next agent task: prove the reciprocal-tail bound by exposing additive
+  frequencies/conjugate shells first, then applying the signed
+  `chi_7`/affine/Q table. Do not steer back to a raw absolute matrix estimate.
+
 ## 3.42 Analysis of Recent Commits (Friday, June 19, 2026) - Digest b0e1ce5
 The LRC(14) verification has advanced to the **Repeated-Residue Character Kernel** (HYP-2632), which isolates the two-large repeated residue classes by transforming them into a finite integer packet table over $F_7^*$. This moves the proof from a real-valued census to a discrete character-transform target.
 
@@ -18,6 +35,21 @@ The LRC(14) verification has advanced to the **Repeated-Residue Character Kernel
     - **Character-Kernel Tail Bound:** Develop the signed reciprocal-tail estimate specifically for the integer-weighted classes defined by the character kernel.
 
 ## 3.41 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 2c08034
+## codex-S23 update: two-large Dedekind phase packet
+
+The HYP-2630 character-packet closer now has a finite additive-frequency form.
+HYP-2632/T880 expands the support-six coimage relation by `m in F_7` and shows
+the QR/NQR split survives exactly at the frequency-shell layer:
+
+- `U=147/(16*pi^6)`.
+- `4+2`: `2*S(1,1,1,1,a,a)/U=-43-7 chi_7(a)` for `a=2..6`, so QR gives `25U` and NQR gives `18U`.
+- unit `4+1+1`: signed masses are only `{0,U,8U}`.
+- blind two-large residue absolute matrices are still large on exact zero rows `(3,6)` and `(4,5)`, so the proof lift must split by additive frequency/conjugate shells before taking absolute values.
+
+Next request to agents: convert this finite packet into the reciprocal-tail
+summation-by-parts lemma after height-2 wall deletion.  Do not collapse the
+two-large packet to raw absolute pair mass.
+
 The LRC(14) verification has achieved a critical coupling between its modular copy profiles and the analytic character tail with the introduction of the **Euler-copy coimage tail profile** (HYP-2630). This hypothesis refines the proof obligation by identifying why simple copy mass is insufficient to close the residual gap and precisely how the quadratic character splits the remaining mass.
 
 - **2c08034 (codex-S22): HYP-2630 — Euler-Copy Coimage Tail Profile**

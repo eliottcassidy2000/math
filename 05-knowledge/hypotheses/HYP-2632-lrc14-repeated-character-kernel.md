@@ -109,6 +109,29 @@ max imaginary drift: 2.858e-15
 additive transform cache entries: 955
 ```
 
+Companion script:
+
+- `04-computation/lrc14_two_large_dedekind_phase_codex_s23.py`
+- output: `05-knowledge/results/lrc14_two_large_dedekind_phase_codex_s23.out`
+
+This companion refines the additive transform into the explicit finite
+Dedekind/cotangent factorization
+
+```text
+S_d(a) = (1/7) sum_m sum_T (-1)^|T| chat(0,T)^(d-6)
+         prod_i D_T(m a_i),
+
+D_T(ell) = sum_{r in F_7^*} r chat(r,T) zeta_7^(ell r).
+```
+
+It is narrower than the main kernel script: it focuses on the unit
+two-large subpacket and compares frequency-shell bounds with the blind
+36-entry two-large residue matrix.  It carries the same `a+b=2` zero lane and
+`Q(a,b)` selector on the unit `4+1+1` subpacket.  Its useful extra readout is
+diagnostic: the blind matrix remains large on exact zero rows such as `(3,6)`
+and `(4,5)`, so the reciprocal-tail proof must split by additive frequency or
+conjugate frequency shells before taking absolute values.
+
 ## Exact Findings
 
 The `4+2` table is:
@@ -177,7 +200,9 @@ The analytic estimate should be a cotangent/Dedekind or summation-by-parts
 bound for the two-large reciprocal hyperplane sums weighted by the signed
 integer table above.  A proof that only uses the HYP-2630 four-character
 signature is too coarse, because it misses the affine zero lane `a+b=2` and
-the selector `Q(a,b)=ab*(1+3(a+b))-1`.
+the selector `Q(a,b)=ab*(1+3(a+b))-1`.  The companion Dedekind-shell script
+adds the local rule for applying the estimate: expose the additive frequency
+`m` (or the conjugate shell `{m,-m}`) before any triangle inequality.
 
 ## Tournament Analysis
 

@@ -191,6 +191,11 @@ S/U=1 iff chi_7(Q)=-1.
 The repeated-kernel signed ledger is `-108U` from `4+2` and `+54U` from
 `4+1+1`, so the next analytic estimate should exploit this signed table
 directly instead of applying an absolute bound to the `162U` packet mass.
+The companion Dedekind-shell computation
+`lrc14_two_large_dedekind_phase_codex_s23.py` refines the same kernel into
+explicit factors `D_T(ell)=sum_r r chat(r,T) zeta_7^(ell r)` and confirms why
+the reciprocal-tail proof must expose additive frequencies before using any
+absolute matrix bound.
 
 ## Tournament Analysis
 
