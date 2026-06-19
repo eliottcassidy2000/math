@@ -1,0 +1,22 @@
+==============================================================================================
+ANGLE F part 4: does the covolume/transference 1/height bound certify S7<=cap?
+per-sector Fourier const s7/pi = 0.138109; absolute |K(n)| bound = sum_t C(6,t)(t*0.1381)^supp/height
+==============================================================================================
+k=8: M7=0.02448  cap=0.38146  margin=0.35698
+----------------------------------------------------------------------------------------------
+shape                           corr_true    covol    Hbound   H_supp3  M7+H<=cap?
+AP {0..7}                         0.30273    11.83 9055.5660  812.3524          no
+3AP {..6,8}                       0.18385    12.45 8977.0900  816.0944          no
+2run40                            0.09062    83.11 2021.0030  258.9341          no
+perf                              0.09922    14.83 1417.5704  338.0602          no
+Sidon                            -0.01236    58.64 2893.2516  207.7190          no
+dissoc                            0.01025   146.09 1580.9883  155.4674          no
+----------------------------------------------------------------------------------------------
+READOUT:
+ * corr_true is the SIGNED truth; Hbound is the ABSOLUTE (triangle-ineq) bound.
+ * If Hbound >> margin even when corr_true << margin, the absolute bound is too
+   lossy (sign cancellation is essential) -> a covolume bound on |corr| canNOT
+   close on its own; one needs the SIGNED structure (THM-503 vanishing alignment).
+ * H_supp3 isolates the canon W(E) regime; compare to the THM-532 honest gap.
+
+DONE.

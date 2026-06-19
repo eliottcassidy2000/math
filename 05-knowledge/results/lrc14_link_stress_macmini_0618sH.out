@@ -1,0 +1,21 @@
+======================================================================
+LINK 3: N(E) subset S7(E).  Does maxgap<=1/7 force every sector hit?
+======================================================================
+  consec k=8: N subset S7 violations (random exact x) = 0
+  consec k=10: N subset S7 violations (random exact x) = 0
+  consec k=13: N subset S7 violations (random exact x) = 0
+  exact boundary x test: x=1/7 with E={0..7}:
+    points = ['0', '0', '1/7', '2/7', '3/7', '4/7', '5/7', '6/7']
+    maxgap = 1/7 (vs 1/7=1/7)
+    sectors hit = [0, 1, 2, 3, 4, 5, 6]  -> ALL 7
+
+======================================================================
+LINK 'covering used?': is meas(S7(E))<=cap_k claimed for ALL integer E?
+Hunt for an integer E (0 in E, |E|=k) with meas(S7(E)) > cap_k.
+======================================================================
+  k=8: cap=0.3815  meas_S7(consec)=0.3272  MAX_S7=0.3272 at (0, 1, 2, 3, 4, 5, 6, 7)  (#>cap=0/3432, box<= 14)
+  k=9: cap=0.4943  meas_S7(consec)=0.4162  MAX_S7=0.4162 at (0, 1, 2, 3, 4, 5, 6, 7, 8)  (#>cap=0/1287, box<= 13)
+  k=10: cap=0.6044  meas_S7(consec)=0.5045  MAX_S7=0.5045 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  (#>cap=0/220, box<= 12)
+  k=11: cap=0.7253  meas_S7(consec)=0.5815  MAX_S7=0.5815 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  (#>cap=0/286, box<= 13)
+  k=12: cap=0.8571  meas_S7(consec)=0.6241  MAX_S7=0.6452 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  (#>cap=0/78, box<= 13)
+  k=13: cap=1.0000  meas_S7(consec)=0.6759  MAX_S7=0.6816 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)  (#>cap=0/91, box<= 14)

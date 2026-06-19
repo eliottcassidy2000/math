@@ -1,0 +1,17 @@
+ANGLE F part 5: signed cancellation anatomy of corr(E)
+==============================================================================
+(1) SIGNED partial sum by support size (N0=18,mc=4):
+  AP {0..7}: corr_true=+0.30273
+      supp=2: signed=+0.01390  abs=0.01491  cancel_ratio=1.1x
+      supp=3: signed=+0.05032  abs=0.10904  cancel_ratio=2.2x
+      supp=4: signed=+0.02349  abs=0.25535  cancel_ratio=10.9x
+      supp=5: signed=+0.05023  abs=0.54505  cancel_ratio=10.9x
+      supp=6: signed=+0.03484  abs=0.72120  cancel_ratio=20.7x
+      supp=7: signed=+0.02234  abs=0.12771  cancel_ratio=5.7x
+  2run40: corr_true=+0.09062
+      supp=2: signed=+0.00473  abs=0.00486  cancel_ratio=1.0x
+      supp=3: signed=+0.02491  abs=0.03145  cancel_ratio=1.3x
+      supp=4: signed=+0.01552  abs=0.06383  cancel_ratio=4.1x
+      supp=5: signed=+0.01356  abs=0.11789  cancel_ratio=8.7x
+      supp=6: signed=+0.01540  abs=0.15446  cancel_ratio=10.0x
+      supp=7: signed=+0.00223  abs=0.02495  cancel_ratio=11.2x
