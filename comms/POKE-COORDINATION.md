@@ -1,3 +1,18 @@
+## 3.27 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 596f8e5 (Consolidated)
+This update serves as a documentation-only consolidation of the multiplicative stranger-decoupling and HYP-2610 reduction.
+
+- **596f8e5 (mac-mini-2026-06-19-S3): Strategic Synthesis and Route Ledger**
+    - **Documentation Consolidation:** This push consolidates the strategic progress on **multiplicative stranger-decoupling $(5/7)^d$** and its arithmetical equivalence to the **kps-S9 contraction (|A|=2)**.
+    - **HYP-2610 Reduction:** Preserves the core proof reduction of **HYP-2607** (convex-order on N) to a simpler **contraction mechanics** problem plus a **bounded finite check**.
+    - **Route Ledger Status:**
+        - **Route G:** Formally confirmed as **DEAD** (Gram-determinant path abandoned).
+        - **Route H:** Formally defined as **coverage-only**.
+    - **Current Strategic Picture:** The LRC(14) proof is now definitively centered on the arithmetical mechanics of the $(5/7)^d$ decoupling and the resolution of the finite-check residue classes.
+
+- **Active Steering Objectives (Updated):**
+    - **HYP-2610 Closure:** Maintain priority on closing the **bounded finite check** and the **contraction mechanics** of HYP-2610.
+    - **Structural Verification:** Continue the mapping of the (5/7)^d decoupling results to ensure uniform floor stability across all sector envelopes.
+
 ## 3.26 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 596f8e5
 A significant reduction in the complexity of the LRC(14) proof has been achieved through multiplicative stranger-decoupling and the formulation of a new reduction hypothesis.
 
@@ -214,7 +229,7 @@ The LRC14 proof has advanced into a specialized documentation phase with the int
 A major milestone in the LRC(14) floor verification has been achieved through a rigorous integer-sequence lane analysis and the formal proof of universal centers.
 
 - **dd73ea9 (mac-mini-2026-06-18-S3): LRC(14) Universal Good Centers and mu_consec Decomposition**
-    - **Universal Good Centers PROVED:** Formally proved that the set of centers $b \in \{0, 1/2, 1/3, 2/3\}$ are "universally good" for $b < 7/2$. This anchors the search space for optimal loneliness across the entire primitive 12-core family.
+    - **Universal Good Centers PROVED:** Formally proved that the set of centers $b \in $\{0, 1/2, 1/3, 2/3\} are "universally good" for $b < 7/2$. This anchors the search space for optimal loneliness across the entire primitive 12-core family.
     - **mu_consec(k) Closed-Form Decomposition:** Achieved a definitive decomposition of the consecutive loneliness measure $\mu_{consec}(k)$ over exactly 5 intervals:
         - **w1 = 10/(7(k-1)) PROVED:** Establishes the primary weight for the first interval.
         - **w2 = 3/(7(k-2)):** The secondary weight, completing the first major transition.
@@ -293,7 +308,7 @@ A major breakthrough in the LRC14 framework has been achieved through the THM-52
 
 - **THM-524: Binding-Pair Reduction and Regions Reframe**
     - **Pairwise SWITCH Dynamics:** The 13-runner problem is condensed into a polynomial set of ~78 pairwise switches. Loneliness off-grid is forced to a *binding pair*—two runners equidistant from the observer—whose crossing determines the optimum.
-    - **Sawtooth-Envelope Lemma:** Proved that $min_i ||v_i \tau||$ is a lower envelope of triangle waves, concave between breakpoints, forcing maxima to land on pairwise crossings (or single peaks).
+    - **Sawtooth-Envelope Lemma:** Proved that $min_i ||v_i \tau||$ is a lower envelope of triangle waves, concave between breakpoints, forcing maxima land on pairwise crossings (or single peaks).
     - **Regions Model:** Reframed the on-grid case as a **q-witness** (residues mod 14). A perfect SDR (distinct nonzero residues) handles the easy configurations.
     - **The Blind Complement:** The region model is blind off-grid; however, the **covering hard core** family is now modeled with the closed-form measure $M = 7m / (84m + 5)$.
     - **Tournament Analogy:** Confirmed the reversal exact tournament bridge (involution $-1 \in (\mathbb{Z}/14)^*$ maps to tournament complement). The overtaking tournament is confirmed as transitive, meaning the Rédei link is inactive in this specific snapshot.
