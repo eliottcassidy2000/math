@@ -1,0 +1,48 @@
+==================================================================================
+(A,B) min mu_{1/7}(E) over shapes whose MAX sorted-gap = G, vs thr_k  (k=8..12)
+==================================================================================
+
+ k=8: thr_k=0.6185, mu17(consec=gap1)=0.9401
+    max-gap G=1: min mu17=0.9401  [= consec; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7]
+    max-gap G=2: min mu17=0.9719  [>=thr_k OK; >=consec]  worst E=[0, 2, 3, 4, 5, 6, 7, 9]
+    max-gap G=3: min mu17=0.9719  [>=thr_k OK; >=consec]  worst E=[0, 1, 3, 4, 5, 6, 7, 10]
+    max-gap G=4: min mu17=0.9805  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 4, 5, 6, 7, 11]
+    max-gap G=5: min mu17=0.9805  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 5, 6, 7, 12]
+    max-gap G=6: min mu17=1.0000  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 12]
+
+ k=9: thr_k=0.5057, mu17(consec=gap1)=0.8401
+    max-gap G=1: min mu17=0.8401  [= consec; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+    max-gap G=2: min mu17=0.9163  [>=thr_k OK; >=consec]  worst E=[0, 2, 3, 4, 5, 6, 7, 8, 10]
+    max-gap G=3: min mu17=0.9328  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 5, 6, 7, 10, 11, 12]
+    max-gap G=4: min mu17=0.9401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 11]
+    max-gap G=5: min mu17=0.9401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 12]
+    max-gap G=6: min mu17=0.9401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 13]
+
+ k=10: thr_k=0.3956, mu17(consec=gap1)=0.7755
+    max-gap G=1: min mu17=0.7755  [= consec; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    max-gap G=2: min mu17=0.8401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+    max-gap G=3: min mu17=0.8401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 11]
+    max-gap G=4: min mu17=0.8401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 12]
+    max-gap G=5: min mu17=0.8401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 13]
+    max-gap G=6: min mu17=0.8401  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 14]
+
+ k=11: thr_k=0.2747, mu17(consec=gap1)=0.6263
+    max-gap G=1: min mu17=0.6263  [= consec; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+    max-gap G=2: min mu17=0.6909  [>=thr_k OK; >=consec]  worst E=[0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+    max-gap G=3: min mu17=0.7755  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12]
+    max-gap G=4: min mu17=0.7755  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13]
+    max-gap G=5: min mu17=0.7704  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14]
+    max-gap G=6: min mu17=0.7660  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15]
+
+ k=12: thr_k=0.1429, mu17(consec=gap1)=0.5699
+    max-gap G=1: min mu17=0.5699  [= consec; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+    max-gap G=2: min mu17=0.6263  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+    max-gap G=3: min mu17=0.6263  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 13]
+    max-gap G=4: min mu17=0.6263  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14]
+    max-gap G=5: min mu17=0.6263  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15]
+    max-gap G=6: min mu17=0.6141  [>=thr_k OK; >=consec]  worst E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 16]
+
+INTERPRETATION: if min-mu at G>=2 is >= thr_k, the residual is the G=1 (consec)
+neighbourhood only; if also >= mu(consec), consecutive-minimizes holds shape-locally.
+
+DONE.
