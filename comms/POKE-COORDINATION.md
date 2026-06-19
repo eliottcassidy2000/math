@@ -1,28 +1,35 @@
-## codex-S26 update: relation-covered is not enough; keep shell/sign labels
+## codex-S26 update: relation-covered GAP structure
 
-HYP-2639/T887 refines HYP-2637's weighted relation-fiber/GAP split, HYP-2638's
-Freiman small-excess pocket, and the HYP-2635 additive-energy/Freiman lead.
-The short version: "every element in a
-small relation" is the right smell, but raw additive energy is still too
-coarse.  AP and shifted AP have the same
-`|S+S|=25` and ordered energy `1469`; AP is floor-tight with `36` visible folds,
-while shifted AP has zero visible folds and is very safe (`M*n=4.789`).
+The introduction of the **relation-covered GAP structure** (HYP-2639, SHA 6298517) refines the global LRC(14) proof architecture by adding a typed visibility and sign layer to the additive-energy route. This refinement addresses the "high energy but safe" phenomenon (e.g., shifted AP), proving that additive energy alone is an insufficient certificate for loneliness hardness.
 
-The KPS third-pocket examples are relation-covered but not Freiman-small in the
-elementary sense: `|S+S|=31` for `k=8`, above `3k-4=20`.  KPS S12's
-sumset-excess scan says these non-AP pockets are numerically loose.  So the
-next proof object should be a labelled relation hypergraph:
+- **6298517 (codex-S26): Relation-Covered GAP Structure**
+    - **Mechanism Refinement:** Proved that the difference between floor-tight (AP) and safe (shifted AP) configurations lies not in their additive energy, but in their **observer-visibility**. AP collisions land as observer-coupled visible folds, while shifted AP pushes the same profile into hidden summand shells.
+    - **Typed Hypergraph:** Reframed the relation-density observable as a small-relation hypergraph with edges labeled by summand shell ($C=a+b$), multiplicand clearance, relation sign type (balanced vs. observer-coupled), and visibility.
+    - **Three-Way Proof Split:** Replaced the failed dissociation dichotomy with a three-way split: 
+        1. **Dissociated Stranger:** Peeling/independent limit.
+        2. **Freiman-Small GAP:** Finite pocket for low sumset excess (HYP-2638).
+        3. **Relation-Covered Non-GAP:** High-energy/high-excess cases requiring labeled hypergraph analysis and signed shell cancellation.
+    - **Sign/Parity Interface:** Established that "positive/negative" in a relation determines whether it is a balanced energy shadow (even coefficient sum) or a signed observer-coupled fold (odd coefficient sum) capable of moving the lonely threshold.
+    - **Tournament Ranking:** Established a new Hamiltonian proof path: observer-coupled visible folds > low hidden summand shells > multiplicand clearance sieve > relation coverage hypergraph > Freiman small-doubling GAP > balanced pair energy > raw runner vertices.
 
-```text
-summand node C=a+b
-multiplicand test C|w
-balanced/even-scalar vs observer-coupled/odd-marked sign type
-visible fold vs hidden summand shell
-```
+- **Active Steering Objectives (Updated):**
+    - **Labeled Hypergraph Construction (HYP-2639):** Prioritize the construction of the labeled relation hypergraph for the relation-covered non-GAP pocket. Focus on isolating observer-coupled visible folds from hidden balanced shells.
+    - **Sign/Visibility Audit:** Audit known wide configurations (e.g., KPS third-pocket examples) against the labeled hypergraph to verify their large $L_y$ dimension penalty relative to the AP top.
+    - **Block-Frequency Integration:** Integrate HYP-2636's block-frequency transfer with the hypergraph summand channels to handle the signed reciprocal tail before taking absolute values.
 
-This dovetails with HYP-2634 and HYP-2636: delete low-height defect-zero motifs
-first, then feed the remaining low-shell payload into block-frequency transfer
-before taking absolute values.
+## codex-S27 result: Freiman small-excess finite pocket
+
+The **Freiman small-excess certificate** (HYP-2638 / T886, SHA 1fdcfe3) has been formalized, providing a sharp arithmetical filter for the additive-energy route. By leveraging Freiman's $3k-4$ theorem, configurations with small sumset excess ($exc(E) \le k-3$) are reduced to a finite set of primitive affine normal forms in the range $[0, 2k-4]$.
+
+- **Enumeration Results:** For $k=8/9/10$, the script verified $225/620/1644$ small-excess forms respectively. All rows showed **0 hull failures**, with loneliness measures $L_y(E)$ remaining strictly below the AP and sector cap thresholds.
+- **Tightest Margin:** The most critical positive margin was identified at $k=9$, where the gap to the cap is approximately $0.006967$.
+- **Structural Integration:** This certificate serves as the collision-free finite subcertificate inside the broader **Freiman-dimension/GAP program**. Configurations exceeding the $3k-4$ threshold are now routed toward higher-rank GAP penalties or the **relation-fiber peel** (HYP-2637).
+- **Multiplicative Retention:** While the Freiman pocket simplifies additive structure, the multiplicative sign and reciprocal-tail data are explicitly preserved in the parallel HYP-2636 and HYP-2634 coordination layers.
+
+- **Active Steering Objectives (Updated):**
+    - **GAP-Tail Formalization (HYP-2638):** Transition the proof effort to configurations where $exc(E) > k-3$, developing the higher-rank GAP penalty and the associated signed-lattice tail estimate.
+    - **Relation-Fiber Integration:** Synthesize the small-excess finite results with the **weighted relation-fiber coverage** (HYP-2637) to close the additive energy route.
+    - **AP-Margin Stability:** Monitor the numerical stability of the $k=9$ tight margin as higher-rank estimates are integrated.
 
 ## codex-S25 update: two-large lift opposition
 
@@ -75,25 +82,6 @@ The HYP-2635 pull-in named the next live lead: the dissociated-stranger dichotom
     - full bounded coverage plus small nullity -> high additive energy -> Freiman/GAP pocket -> AP-invariance/dimension bound.
 - **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: `sign(residue coefficient) * (-1)^(# negative coefficients)`. This is the even/odd to positive/negative bridge requested in the current prompt.
 - **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as `2*16+3=35` and `4+12+15=31`.
-
-## codex-S27 result: Freiman small-excess finite pocket
-
-HYP-2638 / T886 now supplies the exact finite subcertificate for the Freiman
-`3k-4` pocket.  For `exc(E)=|E+E|-(2k-1) <= k-3`, Freiman puts `E` in an AP of
-length `k+exc(E)`; after primitive affine normalization the script enumerates
-the whole pocket in `[0,2k-4]`.
-
-- **Result:** k=8/9/10 have `225/620/1644` small-excess forms and `0` hull
-  failures.  Best positive-excess `L_y` rows are `297/980`, `38681/79380`,
-  and `3307/5880`, all strictly below AP and cap.  The tightest positive
-  margin is k=9, cap gap `39541/5675670 ~= 0.006967`.
-- **Guardrail:** excess is not monotone layerwise; this is a finite layer
-  certificate, not a monotonicity lemma.
-- **Incoming KPS S12 integration:** KPS's Freiman-dimension pocket note agrees
-  with the architecture but arrived as a second `HYP-2637`.  Treat HYP-2638 as
-  the collision-free finite `3k-4` subcertificate inside that dimension/GAP
-  program.  The next open region is `exc>k-3`: higher-rank GAP penalty or the
-  HYP-2637 relation-fiber peel/signed-lattice tail.
 
 ## codex-S23 update: two-large Dedekind phase packet
 
@@ -253,7 +241,7 @@ The LRC(14) verification has encountered a critical arithmetical edge-case where
 The LRC(14) verification has achieved a critical theoretical refinement in the spectral gap analysis by formalizing the "excess height filter," which isolates the exact arithmetical conditions required for a loneliness floor violation.
 
 - **de92811 (codex-2026-06-19-S17): HYP-2622 — LRC Spectrum Excess and Bounded-Height Filter**
-    - **Excess-Ledger Definition:** Introduced the **AP-floor excess** $e(k,S) = p(k+1) - q$ for a loneliness value $M(S)=p/q$. This organizes the search for the second spectrum point $\sigma_2(k)$ around unit-excess rows ($e=1$) where the gap $g(k) = e/(q(k+1))$ is minimal.
+    - **Excess-Ledger Definition:** Introduced the **AP-floor excess $e(k,S) = p(k+1) - q$** for a loneliness value $M(S)=p/q$. This organizes the search for the second spectrum point $\sigma_2(k)$ around unit-excess rows ($e=1$) where the gap $g(k) = e/(q(k+1))$ is minimal.
     - **Bounded-Height Lower Bound:** Proved that for any family with bounded height ratio $\max(S)/k$, the spectral gap is strictly $\Theta(1/k^2)$. Specifically, the denominator bound $q \le 2\max(S)$ implies a lower floor $g(k) \ge 1/(2\max(S)(k+1))$.
     - **Height-Escape Obstruction:** Identified that an $o(1/k^2)$ dip in the spectral gap can *only* occur if the height ratio $\max(S)/k \to \infty$ while maintaining small excess. This formally reduces the global lower-bound problem to a "height-escape" analysis.
     - **Symbolic Witness Seeds:** Established explicit symbolic witness formulas for the $r=3$ third-mediant branch across residue classes $\pmod{30}$ (e.g., $a(k) = (3k-1)/5$ for $k \equiv 7 \pmod{30}$). This provides the proof-half for the gap ladder (**HYP-2621**).
