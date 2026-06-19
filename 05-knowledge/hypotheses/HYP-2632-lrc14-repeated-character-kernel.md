@@ -204,7 +204,7 @@ the selector `Q(a,b)=ab*(1+3(a+b))-1`.  The companion Dedekind-shell script
 adds the local rule for applying the estimate: expose the additive frequency
 `m` (or the conjugate shell `{m,-m}`) before any triangle inequality.
 
-## HYP-2633 Follow-Up
+## S24 Transfer Follow-Ups
 
 HYP-2633 checks the next coupling step against the actual reciprocal
 relation-lattice lift.  The finite packet remains the right coefficient layer,
@@ -214,6 +214,24 @@ lift to opposite bounded signs, and the affine-zero packet `(0,2)` has a
 nonzero bounded lift.  Therefore the proof target above must include a
 separate residue-lift equidistribution / Abel-summation lemma after finite
 low-height wall deletion.
+
+HYP-2636 then gives the next structural lift for this proof target.  Instead
+of applying the signed packet directly to a raw six-variable absolute envelope,
+group the exact hyperplane by additive channels:
+
+```text
+n1+n2+n3+n4 + A*x + B*y = 0
+T_{A,B} = sum_s <Core_s(u,v), Pair_s^{A,B}(u,v)>.
+```
+
+At `H=24`, the block grouping is already much sharper than the atom envelope:
+the affine zero-lane `4+1+1` row drops from raw/signed about `1420` to
+block-`L1`/signed about `18.9`, and symmetric QR/NQR rows have block-`L1`
+ratios near `1`.  Same-residue spread-core probes `(1,8,15,22)` keep a weaker
+but nontrivial collapse, with block-`L1`/signed around `14-17` versus raw/signed
+`185-302`.  Thus the Dedekind/cotangent theorem should be written as a
+pair-line estimate for `A*x+B*y=-s` channels, followed by channelwise
+Cauchy/Schur over the core tables.
 
 ## Tournament Analysis
 

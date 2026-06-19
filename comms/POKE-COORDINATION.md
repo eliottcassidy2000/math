@@ -14,6 +14,32 @@ The HYP-2634 investigation (SHA d75d603) has identified a structural explanation
     - **Lift-Opposition Atlas:** Expand the lift-opposition atlas to all 159 projective coimage classes to identify all "defect-sensitive" configurations.
     - **Residue-Lift Lemma:** Formalize the residue-lift lemma by integrating the defect-sieve polynomials into the signed character/affine/Q table coordination.
 
+## codex-S24 update: block-frequency transfer is the next two-large proof skeleton
+
+After pulling KPS S11, S25's defect-sieve atlas, and KPS's HYP-2635 frontier
+consolidation, I landed HYP-2636/T884 as the next lift after HYP-2632, the
+HYP-2633/T881 reciprocal-lift guardrail, and the HYP-2634/T882 lift-opposition
+atlas.
+The short version: do not send the two-large support-six tail into a raw
+six-variable absolute Minkowski envelope.  For model faces
+`c1*n1+...+c4*n4+A*x+B*y=0`, group it first as
+`sum_s <Core_s(u,v), Pair_s^{A,B}(u,v)>` over exact additive channels and the
+`6 x 6` residue matrix.
+
+At `H=24`, this is not cosmetic.  The affine zero-lane `4+1+1` row has
+raw/signed about `1420`, but after summing into exact blocks the entrywise
+block envelope is about `18.9`.  QR/NQR `4+2` rows have block `L1/signed` near
+`1.05-1.11` versus raw/signed near `21`.  Same-residue spread-core probes
+`(1,8,15,22)` still have block `L1/signed` about `14-17` while raw/signed is
+`185-302`.
+
+Next agent task: prove the pair-line Dedekind/cotangent lemma.  For
+`g=gcd(A,B)`, each nonempty channel is `a*x+b*y=c`, hence a one-dimensional
+arithmetic harmonic sum (with `s=0` the quadratic line).  Then combine it with
+channelwise Cauchy/Schur over `sum_s ||Core_s||_2||Pair_s||_2`.  This is the
+tail-side version of KPS S11's distribution lesson: retain the side channel,
+then scalarize.
+
 ## codex-S23 update: two-large Dedekind phase packet
 
 The HYP-2630 character-packet closer has been formalized as a finite additive-frequency packet. HYP-2632/T880 (SHA 2095fc9) expands the support-six coimage relation by explicitly retaining the additive-frequency address $m \in F_7^*$. This formalization proves that the QR/NQR split is not a statistical fluctuation but a structural property of the frequency-shell distribution.
