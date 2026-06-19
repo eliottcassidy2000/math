@@ -1,0 +1,16 @@
+============================================================================================
+ANGLE F part 2: Fourier-lattice form + per-vector kernel bound + covolume carrier
+============================================================================================
+(1) Truncated lattice sum -> exact meas(S7) (verifies the lattice picture):
+   E=(0, 1, 2, 3, 4) N0=6: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+   E=(0, 1, 2, 3, 4) N0=12: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+   E=(0, 1, 2, 4, 5) N0=6: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+   E=(0, 1, 2, 4, 5) N0=12: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+   E=(0, 1, 3, 5, 7) N0=6: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+   E=(0, 1, 3, 5, 7) N0=12: M7+latticesum=0.00000  exact=0.00000  corr_exact=+0.00000 corr_trunc=+0.00000
+
+(2) per-sector Fourier bound: max_n |shat_j(n)|*|n| (=1/pi * |sin(pi/7)|*7/pi...):
+   max |shat(n)| * |n| = 0.31033   (bound chat_T <= |T|*0.3103/|n|)
+
+(3) corr(E), W_full(E)=sum 1/height, and covolume(Lambda^o):
+shape (k=8)                             corr     Wfull       covol  corr/Wfull

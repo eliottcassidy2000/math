@@ -1,0 +1,23 @@
+================================================================================================
+CYCLICITY-MONOTONE dictionary: meas(S7) co-moves with E[c3], E[H] (cyclic content)
+================================================================================================
+
+--- k=7 ---
+shape        meas(S7)      measN     E[c3]       E[H]
+consec        0.14762    0.00000   10.5000    121.400
+perf1         0.04558    0.00000   10.1762    109.210
+perf2         0.02381    0.00000   10.3571    109.905
+perf3         0.04048    0.00000   10.0714    106.916
+dissoc        0.00910    0.00000    7.8647     68.698
+Sidon         0.00476    0.00000    8.4740     66.558
+rand1         0.01308    0.00000    8.7567     83.054
+rand2         0.00961    0.00000    8.9533     79.387
+  rank by meas(S7): ['consec', 'perf1', 'perf3', 'perf2', 'rand1', 'rand2', 'dissoc', 'Sidon']
+  rank by E[c3]   : ['consec', 'perf2', 'perf1', 'perf3', 'rand2', 'rand1', 'Sidon', 'dissoc']    same-top? True
+  rank by E[H]    : ['consec', 'perf2', 'perf1', 'perf3', 'rand1', 'rand2', 'dissoc', 'Sidon']    same-top? True
+
+--- k=8 ---
+shape        meas(S7)      measN     E[c3]       E[H]
+consec        0.32721    0.05986   16.1905    487.381
+perf1         0.20833    0.00000   16.4619    490.462
+perf2         0.10408    0.00000   15.7698    436.349
