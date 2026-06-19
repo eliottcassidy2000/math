@@ -117,6 +117,46 @@ Denominators in the half-clash, with exact-period copy densities:
 Readout: the dyadic doubling from 1260 to 2520 is not cosmetic.  It turns the exact-period unit count into 576, the same mass obtained by selecting all four prime masks inside the raw 1260 profile.  That is the arithmetic shadow of the half-gap before tau<->1-tau symmetry halves the denominator.
 
 ============================================================================================
+EXACT-PERIOD SAFE-CENTER TRANSFER ROWS
+============================================================================================
+For each Q, count residues a/Q that are strict-safe for every speed in P subset {1,...,13}.  The all-period row uses every residue a mod Q, therefore automatically weights reduced denominators d|Q by phi(d).
+    Q       mode  phi/top                                         survivors by |P|                                    total safe packets by |P|
+    6        all        6 [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1, 0, 0] [6, 47, 203, 533, 947, 1197, 1099, 733, 348, 112, 22, 2, 0, 0]
+    6      units        2 [1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1, 0, 0] [2, 22, 110, 330, 660, 924, 924, 660, 330, 110, 22, 2, 0, 0]
+   14        all       14 [1, 13, 78, 286, 715, 1239, 1524, 1340, 831, 352, 96, 15, 1, 0] [14, 145, 747, 2345, 4985, 7545, 8323, 6733, 3960, 1650, 462, 78, 6, 0]
+   14      units        6 [1, 13, 78, 278, 647, 1029, 1141, 883, 468, 162, 33, 3, 0, 0] [6, 66, 330, 990, 1980, 2772, 2772, 1980, 990, 330, 66, 6, 0, 0]
+   30        all       30 [1, 13, 78, 286, 715, 1287, 1714, 1697, 1226, 619, 203, 38, 3, 0] [30, 319, 1611, 4933, 10187, 14925, 15883, 12349, 6948, 2752, 726, 114, 8, 0]
+   30      units        8 [1, 13, 78, 286, 707, 1227, 1518, 1339, 831, 352, 96, 15, 1, 0] [8, 90, 462, 1430, 2970, 4356, 4620, 3564, 1980, 770, 198, 30, 2, 0]
+  210        all      210 [1, 13, 78, 286, 715, 1287, 1716, 1716, 1287, 715, 286, 78, 11, 0] [210, 2321, 11969, 37491, 79361, 119491, 131119, 105583, 61886, 25736, 7204, 1218, 94, 0]
+  210      units       48 [1, 13, 78, 286, 715, 1287, 1716, 1716, 1287, 713, 279, 69, 8, 0] [48, 528, 2782, 8898, 19242, 29640, 33348, 27612, 16698, 7192, 2094, 370, 30, 0]
+ 1260        all     1260 [1, 13, 78, 286, 715, 1287, 1716, 1716, 1287, 715, 286, 78, 13, 0] [1260, 14007, 72637, 229073, 488569, 741811, 821697, 668741, 396718, 167242, 47542, 8180, 644, 0]
+ 1260      units      288 [1, 13, 78, 286, 715, 1287, 1716, 1716, 1287, 715, 286, 78, 12, 0] [288, 3236, 16852, 53334, 114128, 173826, 193116, 157616, 93764, 39638, 11300, 1950, 154, 0]
+
+Readout: the survivor rows are the unweighted existence shadow used by HYP-2625.  The total safe-packet rows retain exact-period multiplicity. This is the transfer matrix that should feed the signed coimage tail: first count exact-period witnesses, then project to squarefree masks.
+
+============================================================================================
+AP 12-OF-13 DROP CORES ON EXACT-PERIOD GRIDS
+============================================================================================
+Each row deletes one speed from {1,...,13}.  Counts are strict-safe residues a/Q for the remaining 12 speeds.  This is a finite-grid transversality probe for the OPEN-Q-108 tight-locus problem.
+drop Q=210 all Q=210 units Q=1260 all Q=1260 units        first Q=1260 residues
+   1        14           4         88           20            46,47,48,49,50,51
+   2         6           2         38           10      589,590,591,592,593,594
+   3         8           4         48           14      395,396,397,398,399,400
+   4         4           0         30            4      298,299,300,301,302,303
+   5         8           0         40           12      238,239,240,241,242,262
+   6         0           0         10            0     201,202,218,219,220,1040
+   7        18          10        104           22      169,170,171,172,173,174
+   8         8           2         56           12      151,152,153,154,155,156
+   9        12           4         72           20      136,137,138,139,140,141
+  10         4           0         30            8      123,124,125,126,127,128
+  11         8           2         74           20      113,114,115,116,226,227
+  12         0           0         16            4      104,105,106,523,524,525
+  13         4           2         38            8            91,92,93,94,95,96
+
+full AP13 strict-safe residues at Q=1260: 0
+Readout: Q=210 already catches 11 of the 13 one-drop AP cores, while raw Q=1260 catches all 13.  The divided crossing value 315 and radical 210 do not retain enough exact-period room to see this whole local row.
+
+============================================================================================
 TOURNAMENT ANALYSIS
 ============================================================================================
 proof-quotient Hamiltonian path:

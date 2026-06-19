@@ -6,10 +6,12 @@ The LRC(14) squarefree-profile route now has a canonical exact-period packet mea
     - **Unit Seam Recovered:** For `q=14`, `phi(14)=6`, matching the HYP-2626 unit seam `(Z/14Z)^* -> F_7^*`.
     - **Raw-vs-Radical Discipline:** For squarefree `210`, mask weights are `prod(p-1)`. For raw Hill product `1260=2^2*3^2*5*7`, mask weights use `p^a-1`, amplifying the `2` coordinate by `3` and the `3` coordinate by `4`. So raw denominator -> phi packets -> squarefree mask is the correct order; jumping straight to `rad(1260)=210` loses the repeated `2,3` amplification.
     - **New 2520 Resonance:** `phi(2520)=576`, and `576` is exactly the full `{2,3,5,7}` mask mass inside the raw `1260` profile. This is the THM-523 half-clash denominator before `tau<->1-tau` symmetry doubles `1/2520` to `1/1260`.
+    - **Safe-Center Transfer Row:** Exact-period center counts on AP one-drop cores show `Q=210` catches `11/13` and misses exactly drops `6` and `12`; raw `Q=1260` catches all `13/13` while the full AP13 row remains strict-tight (`0` safe residues).
     - **LRC14 Readout:** HYP-2625/HYP-2626 should be rewritten as an exact-period phi-packet transfer followed by squarefree compression and then mod-7 coimage projection.
 
 - **Active Steering Objectives (Updated):**
     - **Exact-Period Transfer Matrix:** Build the zeta/Mobius matrix from divisor packets to prime masks for the mod-210 address, retaining prime powers when the raw denominator is `1260` or `2520`.
+    - **210-to-1260 Repair:** Explain why the radical grid misses AP drops `6,12` and why the raw Hill denominator repairs precisely those drops without opening the full AP13 wall.
     - **Coimage Projection Test:** Re-index the HYP-2626 repeated packets `(1,1,1,1,a,a)` and `(1,1,1,1,a,b)` by exact-period packet mass before quotienting by `F_7^*`.
     - **576 Packet Bound:** Test whether the `576` all-mask packet controls the signed repeated-root tail after finite low-height wall deletion.
 

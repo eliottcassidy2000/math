@@ -47,6 +47,7 @@ from functools import reduce
 from operator import mul
 
 PRIMES = (2, 3, 5, 7)
+UNIVERSE = tuple(range(1, 14))
 
 
 def section(title: str) -> None:
@@ -269,6 +270,118 @@ def lrc14_telescope_report() -> None:
     )
 
 
+def dist_num_mod(r: int, q: int) -> int:
+    r %= q
+    return min(r, q - r)
+
+
+def speed_safe_at_residue(v: int, a: int, q: int) -> bool:
+    return 14 * dist_num_mod(v * a, q) > q
+
+
+def exact_period_safe_center_counts(q: int, units_only: bool = False) -> list[int]:
+    """For every subset of {1..13}, count safe residues a/q.
+
+    If units_only is true, count only exact top-period residues, gcd(a,q)=1.
+    Otherwise the q residues represent all exact-period packets d|q at once.
+    """
+    counts = [0] * (1 << len(UNIVERSE))
+    for a in range(q):
+        if units_only and math.gcd(a, q) != 1:
+            continue
+        safe_mask = 0
+        for i, v in enumerate(UNIVERSE):
+            if speed_safe_at_residue(v, a, q):
+                safe_mask |= 1 << i
+        sub = safe_mask
+        while True:
+            counts[sub] += 1
+            if sub == 0:
+                break
+            sub = (sub - 1) & safe_mask
+    return counts
+
+
+def safe_residues_for_mask(q: int, mask: int, units_only: bool = False) -> list[int]:
+    residues = []
+    speeds = [v for i, v in enumerate(UNIVERSE) if mask & (1 << i)]
+    for a in range(q):
+        if units_only and math.gcd(a, q) != 1:
+            continue
+        if all(speed_safe_at_residue(v, a, q) for v in speeds):
+            residues.append(a)
+    return residues
+
+
+def exact_period_transfer_report() -> None:
+    section("EXACT-PERIOD SAFE-CENTER TRANSFER ROWS")
+    print(
+        "For each Q, count residues a/Q that are strict-safe for every speed in "
+        "P subset {1,...,13}.  The all-period row uses every residue a mod Q, "
+        "therefore automatically weights reduced denominators d|Q by phi(d)."
+    )
+    print(
+        f"{'Q':>5} {'mode':>10} {'phi/top':>8} "
+        f"{'survivors by |P|':>56} {'total safe packets by |P|':>60}"
+    )
+    for q, modes in (
+        (6, (False, True)),
+        (14, (False, True)),
+        (30, (False, True)),
+        (210, (False, True)),
+        (1260, (False, True)),
+    ):
+        for units_only in modes:
+            counts = exact_period_safe_center_counts(q, units_only=units_only)
+            survivors = [0] * (len(UNIVERSE) + 1)
+            totals = [0] * (len(UNIVERSE) + 1)
+            for mask, count in enumerate(counts):
+                s = mask.bit_count()
+                totals[s] += count
+                if count:
+                    survivors[s] += 1
+            mode = "units" if units_only else "all"
+            top = phi(q) if units_only else q
+            print(
+                f"{q:>5} {mode:>10} {top:>8} "
+                f"{str(survivors):>56} {str(totals):>60}"
+            )
+    print()
+    print(
+        "Readout: the survivor rows are the unweighted existence shadow used by "
+        "HYP-2625.  The total safe-packet rows retain exact-period multiplicity. "
+        "This is the transfer matrix that should feed the signed coimage tail: "
+        "first count exact-period witnesses, then project to squarefree masks."
+    )
+
+
+def ap_drop_grid_report() -> None:
+    section("AP 12-OF-13 DROP CORES ON EXACT-PERIOD GRIDS")
+    full_mask = (1 << len(UNIVERSE)) - 1
+    print(
+        "Each row deletes one speed from {1,...,13}.  Counts are strict-safe "
+        "residues a/Q for the remaining 12 speeds.  This is a finite-grid "
+        "transversality probe for the OPEN-Q-108 tight-locus problem."
+    )
+    print(f"{'drop':>4} {'Q=210 all':>9} {'Q=210 units':>11} {'Q=1260 all':>10} {'Q=1260 units':>12} {'first Q=1260 residues':>28}")
+    for drop in UNIVERSE:
+        mask = full_mask ^ (1 << (drop - 1))
+        r210 = safe_residues_for_mask(210, mask)
+        u210 = safe_residues_for_mask(210, mask, units_only=True)
+        r1260 = safe_residues_for_mask(1260, mask)
+        u1260 = safe_residues_for_mask(1260, mask, units_only=True)
+        sample = ",".join(str(a) for a in r1260[:6])
+        print(f"{drop:>4} {len(r210):>9} {len(u210):>11} {len(r1260):>10} {len(u1260):>12} {sample:>28}")
+    full_1260 = safe_residues_for_mask(1260, full_mask)
+    print()
+    print(f"full AP13 strict-safe residues at Q=1260: {len(full_1260)}")
+    print(
+        "Readout: Q=210 already catches 11 of the 13 one-drop AP cores, while "
+        "raw Q=1260 catches all 13.  The divided crossing value 315 and radical "
+        "210 do not retain enough exact-period room to see this whole local row."
+    )
+
+
 @dataclass(frozen=True)
 class Tournament:
     vertices: tuple[str, ...]
@@ -366,6 +479,8 @@ def main() -> None:
     exact_period_report()
     profile_report()
     lrc14_telescope_report()
+    exact_period_transfer_report()
+    ap_drop_grid_report()
     tournament_report()
 
 

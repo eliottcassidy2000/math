@@ -45,6 +45,18 @@ The half-clash denominator `2520` is therefore not arbitrary.  It counts the
 all-four-prime exact-period mass of the raw `1260` profile, and then the
 `tau <-> 1-tau` symmetry halves the denominator back to `1260`.
 
+The more proof-flavored surprise came after weighting actual safe centers.  If
+we count strict-safe residues `a/Q` for subsets of `{1,...,13}`, then `Q=210`
+catches only `11` of the `13` one-drop AP cores.  The misses are exactly drops
+`6` and `12`.  But `Q=1260` catches all `13` one-drop AP cores, while the full
+AP13 still has zero strict-safe residues.
+
+That is a tiny model of the whole proof problem: the tight object remains tight,
+but every one-runner deletion has a raw-denominator witness.  It also explains
+why radical `210` is not enough even though it is the right coimage address.
+`210` is the address; `1260` is the exact-period packet resolution needed to
+see the local transversality.
+
 This does not prove LRC(14), but it makes the proof route less blurry.  HYP-2626
 should probably be re-indexed by exact-period packets before coimage projection,
 not by raw residues alone.  The unit seam `(Z/14Z)^* -> F_7^*` is the smallest
