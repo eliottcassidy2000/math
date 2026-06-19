@@ -1,16 +1,21 @@
-## 3.38 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S18
-The LRC(14) support-six route has been sharpened from a full 159-class coimage tail to a height-2 wall-addressed quotient plus a repeated-residue residual packet.
+## 3.38 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 85b10bb
+The LRC(14) verification has achieved a structural unification of its modular clues with the introduction of the **modular recurrence address** (HYP-2625). This hypothesis identifies a squarefree divisor-profile hierarchy as the true underlying organization of the proof, transitioning from simple runner residues to a coupled recurrence-tail analytic object.
 
-- **codex-2026-06-19-S18: HYP-2624 - Height-2 Coimage Wall-Class Reduction**
-    - **Wall-Class Coverage:** Enumerating one-large support-six walls with coefficient height `<=2` hits every nonzero coimage class for `k=8` and `k=9` (`46/46`, `79/79`).
-    - **k=10 Tail Packet:** For `k=10`, height `<=2` walls hit `85/116` nonzero classes and `84.229179%` of signed coimage mass. The residual `31` classes are dominated by repeated-residue packets `(1,1,1,1,a,a)` and `(1,1,1,1,a,b)`, plus a small zero-cusp halo.
-    - **Proof Architecture:** This is a routing lemma, not row-level clearing. A coimage class can still occur in high-height tails, so the finite wall ledger must be accounted for before applying the analytic tail theorem.
-    - **Tournament Analysis:** The useful vertices are proof quotients rather than runners: `height2_wall_addressed_classes > height1_wall_addressed_classes > repeated_residue_tail_packet > coimage_fiber_atlas > signed_reciprocal_tail_theorem > raw_supports > raw_runner_vertices`.
+- **85b10bb (codex-2026-06-19-S18): HYP-2625 — Modular Recurrence Address Hierarchy**
+    - **Modular Hierarchy:** Established the hierarchy of modular addresses as the coordinate system for the proof:
+        - **mod 6:** The universal-center skeleton (denominator-2/3 centers), serving as the foundational proof tool.
+        - **mod 30:** The first non-universal recurrence address, adding denominator 5. This explains why mod 30 appeared structurally significant in **HYP-2621/2622** but was insufficient as a standalone proof.
+        - **mod 210:** The interface to the **support-6 mod-7 tail** (THM-538/HYP-2617), incorporating denominator 7.
+    - **Coupled Proof Object:** Reframed the proof target as a multi-layered object: a **prime-mask inclusion-exclusion** over {2,3,5,7} + the **signed projective mod-7 coimage tail** + the **finite low-height wall ledger**. This replaces "one-dimensional" runner searches with a multi-prime recurrence model.
+    - **Primorial Connection (HYP-2622):** The modular recurrence address provides the arithmetical framework for the **primorial family $F(k,a)$**. It demonstrates how highly composite $k-1$ (rich in the $\{2,3,5,7\}$ divisor profile) creates the high-height recurrence that causes the spectral gap to dip, while the inclusion-exclusion guardrails preserve the loneliness floor.
+    - **Fiber Atlas Integration (HYP-2617/2619):** The mod-210 address acts as the **shared address space** for the support-6 coimage fibers and the alternating cusp sequence atlas. It ensures that the signed reciprocal tail is bounded across every residue class by mapping coimage fibers to their exact modular recurrence addresses.
+    - **Exact Sequence Recovery:** Successfully recovered the **HYP-2598 survivor sequence** as the `{2,3}` row of the recurrence and calculated the finite exact sequences for the `{2,3,5}` and `{2,3,5,7}` addresses, providing the first exact census of safe center addresses for small parts.
+    - **Tournament Analysis:** Confirmed a transitive proof-route tournament, ordering the proof from the **support-6 coimage tail** down through the modular addresses to the raw runner residues.
 
 - **Active Steering Objectives (Updated):**
-    - **Height-2 Wall Accounting:** Run exact sector-measure clearing for height-2 one-large wall rows not already covered by HYP-2616.
-    - **Repeated-Residue Tail Theorem:** Prioritize a cotangent/Dedekind reciprocal-sum estimate for the `d=9` repeated-residue classes `(1,1,1,1,a,b)`.
-    - **Multi-Large Audit:** Check whether multi-large low-height walls introduce new coimage packets or recycle the same repeated-residue residual.
+    - **Recurrence-Tail Coupling (HYP-2625):** Prioritize the formal coupling of the **prime-mask inclusion-exclusion** sums with the **signed mod-7 reciprocal tail**. This is the new primary analytic target for proof closure.
+    - **Wall-Ledger Mapping:** Map the existing **finite low-height wall ledger** (HYP-2616) onto the mod-210 address space to identify which recurrence cells are "wall-cleared" vs. "tail-bounded."
+    - **Divisor-Profile Audit:** Extend the divisor-profile audit to $k=11, 12$ to ensure the mod-210 recurrence correctly addresses the higher-height clusters in the wide-spread regime.
 
 ## 3.37 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 2248325
 The LRC(14) verification has encountered a critical arithmetical edge-case where the spectral gap dips below the previously expected $\Theta(1/k^2)$ floor. This discovery refines the "height-escape" obstruction by identifying a concrete family of configurations that achieve unbounded level $a$.
@@ -476,7 +481,7 @@ A major breakthrough in the LRC14 framework has been achieved through the THM-52
     - **Pairwise SWITCH Dynamics:** The 13-runner problem is condensed into a polynomial set of ~78 pairwise switches. Loneliness off-grid is forced to a *binding pair*—two runners equidistant from the observer—whose crossing determines the optimum.
     - **Sawtooth-Envelope Lemma:** Proved that $min_i ||v_i \tau||$ is a lower envelope of triangle waves, concave between breakpoints, forcing maxima land on pairwise crossings (or single peaks).
     - **Regions Model:** Reframed the on-grid case as a **q-witness** (residues mod 14). A perfect SDR (distinct nonzero residues) handles the easy configurations.
-    - **The Blind Complement:** The region model is blind off-grid; however, the **covering hard core** family is now modeled with the closed-form measure $M = 7m / (84m + 5)$.
+    - **The Blind Complement:** The region model is blind off-grid; however, the **covering hard core family** is now modeled with the closed-form measure $M = 7m / (84m + 5)$.
     - **Tournament Analogy:** Confirmed the reversal exact tournament bridge (involution $-1 \in (\mathbb{Z}/14)^*$ maps to tournament complement). The overtaking tournament is confirmed as transitive, meaning the Rédei link is inactive in this specific snapshot.
 
 - **New Registrations:**
