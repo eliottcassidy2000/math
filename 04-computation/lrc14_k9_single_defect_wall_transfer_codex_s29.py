@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-2641/T889: k=9 single-defect wall-transfer certificate.
+"""HYP-2642/T890: k=9 single-defect wall-transfer certificate.
 
 The current LRC(14) endgame says the tight non-AP row is the k=9
 single-end-defect near arithmetic progression
@@ -113,7 +113,7 @@ def fmt(q: Fraction) -> str:
 
 def print_wall_certificate() -> None:
     print("=" * 88)
-    print("HYP-2641/T889: k=9 single-defect wall-transfer certificate")
+    print("HYP-2642/T890: k=9 single-defect wall-transfer certificate")
     print("=" * 88)
     print(f"AP9={AP9}")
     print(f"D9 ={DEFECT9}")

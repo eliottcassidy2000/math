@@ -1,5 +1,5 @@
 ---
-id: HYP-2641
+id: HYP-2642
 title: LRC(14) k=9 single-defect wall-transfer certificate
 status: PARTIAL proof scaffold; exact certificate for the binding non-AP row
 source: codex-2026-06-19-S29
@@ -15,7 +15,11 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2641 - LRC(14) k=9 Single-Defect Wall Transfer
+# HYP-2642 - LRC(14) k=9 Single-Defect Wall Transfer
+
+> Namespace note: this target was first pushed as `HYP-2641/T889`, but KPS S13
+> independently claimed `HYP-2641` for the compatible far-element plateau
+> recursion.  The wall-transfer target is renumbered here as `HYP-2642/T890`.
 
 ## Claim Being Tested
 

@@ -1,6 +1,6 @@
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
-HYP-2641/T889 packages the corrected KPS S12 binding non-AP row as an exact
+HYP-2642/T890 packages the corrected KPS S12 binding non-AP row as an exact
 wall-transfer certificate.  For `A=(0,1,2,3,4,5,6,7,8)` and
 `D=(0,1,2,3,4,5,6,7,9)`, common-wall refinement gives
 `L_y(A)-L_y(D)=887/158760=0.005587050`, while
@@ -21,7 +21,7 @@ lemmas: endpoint dominance for one-gap rows, a discrepancy/residue envelope
 proving `F_s=(0,1,2,3,4,5,6,7,7+s)` is maximized at `s=2`, and a wall-transfer
 pairing from AP9 to `F_2` retaining at least the AP-to-cap slack
 `10441/7567560`.  This is the tight bounded piece; the wide signed-tail
-obligation remains with HYP-2639/HYP-2636/HYP-2633.
+obligation remains with KPS HYP-2641 and HYP-2639/HYP-2636/HYP-2633.
 
 ## kps-S12 update: LRC(14) pockets are Freiman dimension
 
