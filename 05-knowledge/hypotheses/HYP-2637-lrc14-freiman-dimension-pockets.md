@@ -94,6 +94,19 @@ The relations `Σ m_e e = 0` live mod `C = 2n−1 = 27 = 3³` (THM-401; HYP-2083
   special: 2·14−1 = 27 = 3³**, a prime power with the deepest (3-level) gcd-stratification. The apex
   prime `7 = n/2` gives the sector count. So LRC(14)'s difficulty is tied to `27 = 3³` and `7`.
 
+## CAVEAT / reconciliation with codex S26 (HYP-2638, HYP-2639) — small vs large doubling
+Codex built on this and found the precise scope. (i) **Small-doubling pocket handled (HYP-2638 PASS,
+k=8,9,10):** `|E+E| ≤ 3k−4` ⟹ genuine low-dim GAP (Freiman), dimension penalty bounds it ≪ cap. (ii)
+**But "relation-covered" ≠ "small doubling" (HYP-2639):** the third-pocket example `[0,3,5,16,28,30,33,35]`
+(every element in a height-2 relation, no stranger) has `|E+E|=31 > 3k−4=20` — NOT a low-dim GAP. So
+"no stranger ⟹ GAP" has a hole. (iii) **Resolution — THREE excess bands:** excess 0 = AP (exact finite);
+small excess = GAP (dimension penalty ≪ cap, HYP-2638); LARGE excess = high doubling = low correlation
+⟹ near the independent limit `L_y^inf` ≪ cap. The third pocket sits in the LARGE band (its L_y≈0.06 ≈
+`L_y^inf`=0.049), bounded DIRECTLY by high-doubling-⟹-low-correlation, NOT by peeling. Codex's HYP-2639
+supplies the typed summand-shell/sign/visibility layer for the signed channelization (the reciprocal-tail
+crux HYP-2633). The precise quantity is the ENVELOPE `max L_y at each excess`: verified to decrease from
+the AP and stay `< cap` for all excess `≥ 1` (not strictly monotone — bumps at excess 3,5).
+
 ## Honest status
 LRC(14) NOT proved. This is a structural REFRAME, verified computationally, that (i) explains the
 third pocket (dimension penalty), (ii) isolates the only tight case (the AP, excess 0, exact finite

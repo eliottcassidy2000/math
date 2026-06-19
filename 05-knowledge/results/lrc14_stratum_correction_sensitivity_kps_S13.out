@@ -1,0 +1,66 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_stratum_correction_sensitivity_kps_S13.py:16: SyntaxWarning: invalid escape sequence '\ '
+  sensitivity dL = L_y(consec) - L_y(consec \ {e} + {e'}) when e' is chosen
+==============================================================================
+STRATUM CORRECTION SENSITIVITY — which stratum carries the danger?
+==============================================================================
+C=27=3^3. unit=gcd1, gcd3, gcd9. AP consec elements 0..k-1 sit in low residues.
+
+--- (A) +27 shift (residue/stratum PRESERVED, integer relations broken)  (k=8) ---
+  base E = [0, 1, 2, 3, 4, 5, 6, 7]   L_y = 0.35823
+    [shift 1->+27 (resid 1, unit)] E=[0, 2, 3, 4, 5, 6, 7, 28]  L_y=0.12881  dL=-0.22942
+    [shift 2->+27 (resid 2, unit)] E=[0, 1, 3, 4, 5, 6, 7, 29]  L_y=0.09871  dL=-0.25953
+    [shift 3->+27 (resid 3, gcd3)] E=[0, 1, 2, 4, 5, 6, 7, 30]  L_y=0.11082  dL=-0.24741
+    [shift 4->+27 (resid 4, unit)] E=[0, 1, 2, 3, 5, 6, 7, 31]  L_y=0.10187  dL=-0.25636
+    [shift 5->+27 (resid 5, unit)] E=[0, 1, 2, 3, 4, 6, 7, 32]  L_y=0.11898  dL=-0.23925
+    [shift 6->+27 (resid 6, gcd3)] E=[0, 1, 2, 3, 4, 5, 7, 33]  L_y=0.12404  dL=-0.23419
+    [shift 7->+27 (resid 7, unit)] E=[0, 1, 2, 3, 4, 5, 6, 34]  L_y=0.20947  dL=-0.14876
+
+--- (B) replace top elt 7 -> candidate residue (vary stratum)  (k=8) ---
+  base E = [0, 1, 2, 3, 4, 5, 6, 7]   L_y = 0.35823
+    [7->10 (unit)                ] E=[0, 1, 2, 3, 4, 5, 6, 10]  L_y=0.21476  dL=-0.14347
+    [7->11 (unit)                ] E=[0, 1, 2, 3, 4, 5, 6, 11]  L_y=0.18686  dL=-0.17137
+    [7->13 (unit)                ] E=[0, 1, 2, 3, 4, 5, 6, 13]  L_y=0.20872  dL=-0.14951
+    [7->9 (gcd9)                 ] E=[0, 1, 2, 3, 4, 5, 6, 9]  L_y=0.21429  dL=-0.14395
+    [7->18 (gcd9)                ] E=[0, 1, 2, 3, 4, 5, 6, 18]  L_y=0.21595  dL=-0.14228
+    [7->12 (gcd3)                ] E=[0, 1, 2, 3, 4, 5, 6, 12]  L_y=0.22643  dL=-0.13180
+    [7->15 (gcd3)                ] E=[0, 1, 2, 3, 4, 5, 6, 15]  L_y=0.21452  dL=-0.14371
+    [7->21 (gcd3)                ] E=[0, 1, 2, 3, 4, 5, 6, 21]  L_y=0.23704  dL=-0.12119
+    [7->24 (gcd3)                ] E=[0, 1, 2, 3, 4, 5, 6, 24]  L_y=0.20179  dL=-0.15645
+
+--- (A) k=9 +27 shift on gcd-3 elements {3,6} vs unit elements {1,2}  (k=9) ---
+  base E = [0, 1, 2, 3, 4, 5, 6, 7, 8]   L_y = 0.49288
+    [shift 3->+27 (gcd3)         ] E=[0, 1, 2, 4, 5, 6, 7, 8, 30]  L_y=0.30147  dL=-0.19140
+    [shift 6->+27 (gcd3)         ] E=[0, 1, 2, 3, 4, 5, 7, 8, 33]  L_y=0.31242  dL=-0.18045
+    [shift 1->+27 (unit)         ] E=[0, 2, 3, 4, 5, 6, 7, 8, 28]  L_y=0.41033  dL=-0.08255
+    [shift 2->+27 (unit)         ] E=[0, 1, 3, 4, 5, 6, 7, 8, 29]  L_y=0.28985  dL=-0.20303
+    [shift 8->+27 (unit)         ] E=[0, 1, 2, 3, 4, 5, 6, 7, 35]  L_y=0.44906  dL=-0.04382
+
+==============================================================================
+DIRECT STRATUM TEST: push element e by +81 (=3*27, preserves residue),
+compare L_y drop for gcd-3 elements {3,6} vs unit elements {1,2,4,5,7}.
+==============================================================================
+
+ k=8  consec L_y=0.35823
+   push elt 1 (+81, resid 1, unit ) -> L_y drop = +0.24142
+   push elt 2 (+81, resid 2, unit ) -> L_y drop = +0.25962
+   push elt 3 (+81, resid 3, gcd3 ) -> L_y drop = +0.24935
+   push elt 4 (+81, resid 4, unit ) -> L_y drop = +0.25617
+   push elt 5 (+81, resid 5, unit ) -> L_y drop = +0.23630
+   push elt 6 (+81, resid 6, gcd3 ) -> L_y drop = +0.24423
+   push elt 7 (+81, resid 7, unit ) -> L_y drop = +0.14942
+   --- mean L_y drop by stratum:
+       gcd3  : mean drop +0.24679 over 2 elts
+       unit  : mean drop +0.22859 over 5 elts
+
+ k=9  consec L_y=0.49288
+   push elt 1 (+81, resid 1, unit ) -> L_y drop = +0.09214
+   push elt 2 (+81, resid 2, unit ) -> L_y drop = +0.20314
+   push elt 3 (+81, resid 3, gcd3 ) -> L_y drop = +0.18476
+   push elt 4 (+81, resid 4, unit ) -> L_y drop = +0.21346
+   push elt 5 (+81, resid 5, unit ) -> L_y drop = +0.18000
+   push elt 6 (+81, resid 6, gcd3 ) -> L_y drop = +0.18882
+   push elt 7 (+81, resid 7, unit ) -> L_y drop = +0.11449
+   push elt 8 (+81, resid 8, unit ) -> L_y drop = +0.04224
+   --- mean L_y drop by stratum:
+       gcd3  : mean drop +0.18679 over 2 elts
+       unit  : mean drop +0.14091 over 6 elts
