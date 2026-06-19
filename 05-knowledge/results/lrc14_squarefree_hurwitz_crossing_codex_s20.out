@@ -1,0 +1,78 @@
+LRC14 squarefree / Markov-Hurwitz / complete-graph crossing probe - codex S20
+
+========================================================================================
+HILL FOUR-BLOCK CROSSING PRODUCTS AND SQUAREFREE RADICALS
+========================================================================================
+For q_n=(floor((n-3)/2),...,floor(n/2)), Hill's product P_n=prod(q_n) satisfies cr(K_n)=P_n/4.  Markov-Hurwitz pressure is sum(q_i^2)/P_n.
+ n               q_n   P_n=4cr       cr  rad(P_n)   P/rad     pressure   defect                            masks
+ 5      (1, 1, 2, 2)         4        1         2       2          5/2       -6               [{}, {}, {2}, {2}]
+ 6      (1, 2, 2, 3)        12        3         6       2          3/2       -6              [{}, {2}, {2}, {3}]
+ 7      (2, 2, 3, 3)        36        9         6       6        13/18       10             [{2}, {2}, {3}, {3}]
+ 8      (2, 3, 3, 4)        72       18         6      12        19/36       34             [{2}, {3}, {3}, {2}]
+ 9      (3, 3, 4, 4)       144       36         6      24        25/72       94             [{3}, {3}, {2}, {2}]
+10      (3, 4, 4, 5)       240       60        30       8        11/40      174             [{3}, {2}, {2}, {5}]
+11      (4, 4, 5, 5)       400      100        10      40       41/200      318             [{2}, {2}, {5}, {5}]
+12      (4, 5, 5, 6)       600      150        30      20       17/100      498           [{2}, {5}, {5}, {2,3}]
+13      (5, 5, 6, 6)       900      225        30      30       61/450      778         [{5}, {5}, {2,3}, {2,3}]
+14      (5, 6, 6, 7)      1260      315       210       6       73/630     1114         [{5}, {2,3}, {2,3}, {7}]
+15      (6, 6, 7, 7)      1764      441        42      42       85/882     1594         [{2,3}, {2,3}, {7}, {7}]
+16      (6, 7, 7, 8)      2352      588        42      56       33/392     2154           [{2,3}, {7}, {7}, {2}]
+17      (7, 7, 8, 8)      3136      784        14     224     113/1568     2910             [{7}, {7}, {2}, {2}]
+18      (7, 8, 8, 9)      4032     1008        42      96       43/672     3774             [{7}, {2}, {2}, {3}]
+19      (8, 8, 9, 9)      5184     1296         6     864     145/2592     4894             [{2}, {2}, {3}, {3}]
+20     (8, 9, 9, 10)      6480     1620        30     216     163/3240     6154           [{2}, {3}, {3}, {2,5}]
+21    (9, 9, 10, 10)      8100     2025        30     270     181/4050     7738         [{3}, {3}, {2,5}, {2,5}]
+22   (9, 10, 10, 11)      9900     2475       330      30      67/1650     9498          [{3}, {2,5}, {2,5}, {}]
+
+first n with rad(P_n) divisible by 210: 14
+first n with P_n=1260: 14
+K_14 readout: q_14=(5, 6, 6, 7), P_14=1260=2^2*3^2*5*7, cr(K_14)=315, rad(P_14)=210.
+This is the compact arithmetic packet behind the mod hierarchy: two 6-blocks give the mod-6 skeleton, the 5-block adds mod 30, and the 7-block turns the radical into 210.
+
+========================================================================================
+MARKOV-HURWITZ MUTATION TREE AND PRIME MASKS
+========================================================================================
+generated positive solutions with max coordinate <= 1e8: 41
+All generated solutions are even; dividing by 2 gives the normalized surface a^2+b^2+c^2+d^2 = 4abcd.  The mutation is q_i -> product(other three)-q_i.
+                      solution       sum    rad(prod) pressure                     masks after /2
+                  (2, 2, 2, 2)         8            2        1                   [{}, {}, {}, {}]
+                  (2, 2, 2, 6)        12            6        1                  [{}, {}, {}, {3}]
+                 (2, 2, 6, 22)        32           66        1                  [{}, {}, {3}, {}]
+                (2, 2, 22, 82)       108          902        1                   [{}, {}, {}, {}]
+               (2, 6, 22, 262)       292         8646        1                  [{}, {3}, {}, {}]
+               (2, 2, 82, 306)       392         4182        1                  [{}, {}, {}, {3}]
+             (2, 2, 306, 1142)      1452        58242        1                  [{}, {}, {3}, {}]
+             (2, 6, 262, 3122)      3392      1226946        1                 [{}, {3}, {}, {7}]
+             (2, 22, 82, 3606)      3712      1626306        1                  [{}, {}, {}, {3}]
+            (2, 2, 1142, 4262)      5408      2433602        1                   [{}, {}, {}, {}]
+           (2, 22, 262, 11522)     11808     16603202        1                  [{}, {}, {}, {7}]
+           (2, 2, 4262, 15906)     20172     33895686        1                  [{}, {}, {}, {3}]
+           (6, 22, 262, 34582)     34872    149497986        1                  [{3}, {}, {}, {}]
+           (2, 6, 3122, 37202)     40332    174216966        1                 [{}, {3}, {7}, {}]
+           (2, 82, 306, 50182)     50572    104930562        1                  [{}, {}, {3}, {}]
+          (2, 2, 15906, 59362)     75272    472105986        1                  [{}, {}, {3}, {}]
+         (2, 22, 3606, 158582)    162212   3145156806        1                  [{}, {}, {3}, {}]
+         (2, 2, 59362, 221542)    280908   6575588102        1                   [{}, {}, {}, {}]
+
+solutions with some coordinate divisible by 5: 0
+solutions with some coordinate divisible by 7: 10
+  first: (2, 6, 262, 3122)
+
+normalized (1,1,u,v) branch values: [1, 3, 11, 41, 153, 571, 2131, 7953, 29681, 110771]
+recurrence u_(j+1)=4u_j-u_(j-1) holds on shown branch: True
+Readout: Markov-Hurwitz gives a genuine integer recurrence, but its small-prime profile is not the LRC14 mod-210 carrier.  In this orbit, prime 5 is absent through the generated range, while the K_14 crossing tuple needs the 5-block and the 7-block simultaneously.
+
+========================================================================================
+TOURNAMENT ANALYSIS: WHICH QUOTIENT SHOULD CARRY THE ANALOGY?
+========================================================================================
+Hamiltonian proof path:
+  squarefree_210_crossing_profile > lrc14_prime7_coimage_seam > mod30_address > markov_hurwitz_mutation > raw_hill_blocks > raw_crossing_number > raw_runner_vertices
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+Interpretation: the Markov-Hurwitz equation is the right recurrence metaphor, but not the right carrier.  The carrier is the squarefree radical of the Hill four-block product, because K_14 is the first Hill tuple whose product radical is divisible by 210.
+
+========================================================================================
+SESSION READOUT
+========================================================================================
+The relation is not that the K_14 crossing tuple solves w^2+x^2+y^2+z^2=wxyz.  It does not: its Hurwitz pressure is 73/630, well below the Markov pressure 1.  The useful fact is subtler: Hill's four-block product for K_14 is 1260, with radical 210, exactly the squarefree address HYP-2625 needed for mod 6 -> mod 30 -> mod 210.
+So Markov-Hurwitz supplies the mutation/recurrence archetype, while the complete-graph crossing formula supplies the four-block squarefree profile.  For LRC14, the latter is the live object: (5,6,6,7) packages 5, the repeated 6 skeleton, and the prime-7 coimage seam in one product.
