@@ -90,3 +90,19 @@ NET: stranger-contraction reduces the wide-spread bound from a multi-dim signed 
 intractable) to k−1 successive SINGLE-OFFSET peels, each governed by one Fourier mode Ŵ(N) — the cleanest
 available form of the wide-spread bound. Robustness: the wide ceiling 0.213 ≪ cap 0.38 (gap 0.168) means even
 a moderately-loose 1-D bound closes it; the tight 0.023 margin is entirely in the bounded-spread finite check.
+
+## ALL wide regimes are safe — the contraction route has NO structural gap (kps-S9, meas(S7) basis)
+meas(S7(consec_8)) = 481/1470 ≈ 0.327 (the bounded max); cap_8 = 2243/5880 ≈ 0.3815.
+The WIDE regimes (every scale structure), all ≪ cap (margin ≥ 0.17):
+- 1-stranger {0..6,N}: meas(S7) ≈ 0.19 (max ~0.21 small N).
+- NO-SCALE-SEPARATION {0}∪{tight cluster @M} (shifted-AP {0,M..M+6}, no peelable stranger): MAX **0.2072**
+  (M=10), → 0.193 large M. {0}+perfAP@M: ~0.02. These reduce by CLUSTER-COLLAPSE (the 7-pt cluster at
+  scale M, the {0} point equidistributed) to a fixed value < consec (the {0} far from the cluster makes
+  covering HARDER, so meas(S7) DROPS vs consec_8=0.327).
+- relation-free: → M7(8)=2880/117649 ≈ 0.0245.
+**WIDE CEILING ≈ 0.21 over ALL wide shapes (meas(S7) basis), margin 0.17 below cap.** So the contraction
+route is structurally complete: bounded-spread finite check carries the tight case (consec 0.327, margin
+0.054); every wide shape ≤ ~0.21 (loose). The two "no peelable stranger" worries — (i) tight top cluster,
+(ii) scaled AP — are handled by cluster-collapse / scale-invariance and verified safe. THM-538 (support-6
+floor) gives the fast decay (N-relations are ≥6-body); HYP-2610 the fast convergence (N≥61). Remaining:
+rigorous explicit B + the 1-D Weyl/cluster error + finite check to B + upstream-glue formal lemmas.
