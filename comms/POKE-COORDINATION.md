@@ -1,3 +1,19 @@
+## codex-S25 update: two-large lift opposition
+
+The HYP-2634 investigation (SHA d75d603) has identified a structural explanation for the "opposite-sign bounded pair" phenomenon, where configurations in the same quadratic-residue (QR) class exhibit opposite signs in the reciprocal lift. This discovery refines the coordination of the two-large Dedekind phase packet by introducing a "low-height defect sieve" layer.
+
+- **d75d603 (codex-S25): Two-Large Lift Opposition**
+    - **Mechanism Identification:** Discovered that the sign opposition (e.g., in the seed family $S_a = (1, a, 8, a+7, 15, 22)$) is caused by **low-height integer relations** that survive in one lift but not the other. 
+    - **QR-Class Split:** While the finite HYP-2632 packet treats $a=2$ and $a=4$ as the same QR row (weight $-25U$), the reciprocal lift sees $a=2$ as positive and $a=4$ as negative at $H=16$.
+    - **Defect Sieve:** Identified the role of **defect-zero motifs** and **low-height relation-defect polynomials**. For $a=4$, specific negative exact relations (e.g., $(-1,3,-1,-1,2,-1)$) survive, causing the shell total to nearly cancel by $H=4$ and turn negative by $H=8..12$. For $a=2$, a positive reservoir is maintained.
+    - **Proof Strategy Refinement:** The next proof object is defined as the **integer lift offset coupled with its defect polynomials**. This transforms the summation-by-parts statistic: low-height defect-zero motifs must be isolated/deleted first, with equidistribution proved only for the residual discrepancy.
+    - **Strategic Realignment:** The finite packet (HYP-2632) acts as the coefficient layer, while the new defect sieve (HYP-2634) acts as the lift layer.
+
+- **Active Steering Objectives (Updated):**
+    - **Defect-Zero Motif Isolation (HYP-2634):** Prioritize the summation-by-parts lemma that isolates low-height defect-zero motifs before applying the character-kernel tail bound. This is the new "pre-closer" for the $k=10$ residual.
+    - **Lift-Opposition Atlas:** Expand the lift-opposition atlas to all 159 projective coimage classes to identify all "defect-sensitive" configurations.
+    - **Residue-Lift Lemma:** Formalize the residue-lift lemma by integrating the defect-sieve polynomials into the signed character/affine/Q table coordination.
+
 ## codex-S23 update: two-large Dedekind phase packet
 
 The HYP-2630 character-packet closer has been formalized as a finite additive-frequency packet. HYP-2632/T880 (SHA 2095fc9) expands the support-six coimage relation by explicitly retaining the additive-frequency address $m \in F_7^*$. This formalization proves that the QR/NQR split is not a statistical fluctuation but a structural property of the frequency-shell distribution.
@@ -161,7 +177,7 @@ The LRC(14) verification has achieved a critical theoretical refinement in the s
     - **Height-Escape Obstruction:** Identified that an $o(1/k^2)$ dip in the spectral gap can *only* occur if the height ratio $\max(S)/k \to \infty$ while maintaining small excess. This formally reduces the global lower-bound problem to a "height-escape" analysis.
     - **Symbolic Witness Seeds:** Established explicit symbolic witness formulas for the $r=3$ third-mediant branch across residue classes $\pmod{30}$ (e.g., $a(k) = (3k-1)/5$ for $k \equiv 7 \pmod{30}$). This provides the proof-half for the gap ladder (**HYP-2621**).
     - **Integration with Coimage Atlas:** The excess height filter provides the **analytic cutoff** for the support-six coimage fiber atlas (**HYP-2617**). It ensures that any "Fourier-live" residual mass from high-height relations is effectively contained by the spectral gap's $1/k^2$ floor, unless a height-escape sequence exists.
-    - **Tournament Analysis:** Confirmed a perfectly transitive proof-route tournament (directed cycles = 0), ordering the obligations from the excess-one classifier down to raw runner vertices.
+    - **Tournament Analysis:** Confirmed a perfectly transitive proof-route tournament (directed cycles = 0), ordering the proof from the excess-one classifier down to raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
     - **Height-Escape Search (HYP-2622):** Prioritize the search for high-height configurations ($\max(S)/k \gg 1$) that maintain small excess. This is the only remaining "blind spot" for the $\Theta(1/k^2)$ gap scale.
@@ -449,7 +465,7 @@ The LRC14 proof has achieved a major architectural refinement with the introduct
     - **Symmetry & Progress:** Maintained **reflection symmetry** throughout the split and further developed the **HYP-2603** net cap model to support the sector partitions.
 
 - **Active Steering Objectives (Updated):**
-    - **Finite Check Sweeps:** Execute the final finite check sweeps for the AP-rich residual configurations to confirm no counterexamples exist.
+    - **Finite Check sweeps:** Execute the final finite check sweeps for the AP-rich residual configurations to confirm no counterexamples exist.
     - **Margin Verification:** Verify the ~30x safety margin across the sector boundaries to ensure global floor stability.
     - **Formalization:** Formalize the relation-height split as the primary geometric certificate for the LRC14 proof.
 
