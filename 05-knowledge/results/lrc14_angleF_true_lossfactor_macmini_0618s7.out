@@ -1,0 +1,14 @@
+ANGLE F part 6: TRUE absolute loss factor & signed-short/absolute-tail hybrid
+======================================================================================
+k=8: M7=0.02448 cap=0.38146 margin=0.35698
+shape                            corr   covol  AbsTrue   loss   hybrid hyb<=marg
+AP {0..7}                     0.30273    11.8   1.7733    5.9   1.7135        no
+3AP{..6,8}                    0.18385    12.4   1.7422    9.5   1.6867        no
+2run40                        0.09062    83.1   0.3974    4.4   0.3908        no
+perf                          0.09922    14.8   0.3931    4.0   0.3592        no
+Sidon                        -0.01236    58.6   0.5501  -44.5   0.5287        no
+dissoc                        0.01025   146.1   0.2835   27.6   0.2773       YES
+--------------------------------------------------------------------------------------
+AbsTrue = sum|K(n)| (exact); loss=AbsTrue/corr; hybrid=|signed supp<=3|+sum|supp>=4|.
+If hybrid<=margin for ALL shapes incl AP, a SIGNED-SHORT certificate closes k=8.
+DONE.

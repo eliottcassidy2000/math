@@ -15,3 +15,30 @@ ANGLE F part 5: signed cancellation anatomy of corr(E)
       supp=5: signed=+0.01356  abs=0.11789  cancel_ratio=8.7x
       supp=6: signed=+0.01540  abs=0.15446  cancel_ratio=10.0x
       supp=7: signed=+0.00223  abs=0.02495  cancel_ratio=11.2x
+  perf: corr_true=+0.09922
+      supp=2: signed=+0.01004  abs=0.01249  cancel_ratio=1.2x
+      supp=3: signed=+0.01793  abs=0.04943  cancel_ratio=2.8x
+      supp=4: signed=+0.01012  abs=0.08287  cancel_ratio=8.2x
+      supp=5: signed=-0.00038  abs=0.12031  cancel_ratio=313.0x
+      supp=6: signed=+0.00270  abs=0.11369  cancel_ratio=42.1x
+      supp=7: signed=-0.00021  abs=0.01432  cancel_ratio=66.8x
+  dissoc: corr_true=+0.01025
+      supp=2: signed=+0.00190  abs=0.00233  cancel_ratio=1.2x
+      supp=3: signed=+0.00833  abs=0.01407  cancel_ratio=1.7x
+      supp=4: signed=+0.00192  abs=0.03441  cancel_ratio=18.0x
+      supp=5: signed=+0.00409  abs=0.08450  cancel_ratio=20.7x
+      supp=6: signed=-0.00297  abs=0.12400  cancel_ratio=41.7x
+      supp=7: signed=-0.00029  abs=0.02418  cancel_ratio=83.8x
+
+(2) signed truncation convergence by radius R (AP, the worst shape):
+   R= 6: M7+signed_sum=0.21380  (exact corr_true=+0.30273)
+   R=10: M7+signed_sum=0.23180  (exact corr_true=+0.30273)
+   R=14: M7+signed_sum=0.24174  (exact corr_true=+0.30273)
+   R=18: M7+signed_sum=0.24335  (exact corr_true=+0.30273)
+   R=24: M7+signed_sum=0.24341  (exact corr_true=+0.30273)
+
+READOUT: within each fixed support the cancellation ratio is LARGE (tens to
+hundreds x), so |sum| << sum|.|. The covolume controls the DENSITY of lattice
+directions but the SIGN (THM-503 phase alignment) controls the magnitude. A
+rigorous Angle-F certificate MUST keep the sign (Poisson/theta), not |K(n)|.
+DONE.

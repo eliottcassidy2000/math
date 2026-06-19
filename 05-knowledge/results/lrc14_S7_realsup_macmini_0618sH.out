@@ -1,0 +1,19 @@
+  E=[0, 2, 3, 4, 5, 6, 7, 8] d=3: meas_S7(E)=1609/5880  meas_S7(dE)=1609/5880  OK
+  E=[0, 2, 3, 4, 5, 6, 7, 8] d=5: meas_S7(E)=1609/5880  meas_S7(dE)=1609/5880  OK
+
+[true integer maximizer of meas_S7, extended search + beaters]
+  k=8: cap=0.3815 consec=0.3272 SUP_S7=0.3272 margin=0.0543 (AP=max) box16 checked11440 #>cap=0
+  k=9: cap=0.4943 consec=0.4162 SUP_S7=0.4162 margin=0.0781 (AP=max) box15 checked6435 #>cap=0
+  k=10: cap=0.6044 consec=0.5045 SUP_S7=0.5045 margin=0.0999 (AP=max) box14 checked2002 #>cap=0
+  k=11: cap=0.7253 consec=0.5815 SUP_S7=0.5815 margin=0.1438 (AP=max) box14 checked1001 #>cap=0
+  k=12: cap=0.8571 consec=0.6241 SUP_S7=0.6452 margin=0.2120 (AP NOT max) box14 checked364 #>cap=0
+        beater E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+  k=13: cap=1.0000 consec=0.6759 SUP_S7=0.6819 margin=0.3181 (AP NOT max) box15 checked455 #>cap=0
+        beater E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15)
+ #>cap=0
+  k=10: cap=0.6044 consec=0.5045 SUP_S7=0.5045 margin=0.0999 (AP=max) box14 checked2002 #>cap=0
+  k=11: cap=0.7253 consec=0.5815 SUP_S7=0.5815 margin=0.1438 (AP=max) box14 checked1001 #>cap=0
+  k=12: cap=0.8571 consec=0.6241 SUP_S7=0.6452 margin=0.2120 (AP NOT max) box14 checked364 #>cap=0
+        beater E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+  k=13: cap=1.0000 consec=0.6759 SUP_S7=0.6819 margin=0.3181 (AP NOT max) box15 checked455 #>cap=0
+        beater E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15)
