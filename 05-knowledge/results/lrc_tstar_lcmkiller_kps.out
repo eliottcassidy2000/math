@@ -1,0 +1,8 @@
+=== optimal time t* and binding pair for F(k,a)={1..k-2,k,a(k-1)} at dip-k ===
+  a=2 k=  5: M=2/11 t*=8/11  binding speeds=[3, 8]  (W=a(k-1)=8, q=11)
+  a=3 k=  7: M=3/23 t*=4/23  binding speeds=[5, 18]  (W=a(k-1)=18, q=23)
+  a=3 k= 13: M=3/41 t*=17/41  binding speeds=[5, 36]  (W=a(k-1)=36, q=41)
+  a=4 k= 31: M=4/127 t*=72/127  binding speeds=[7, 120]  (W=a(k-1)=120, q=127)
+
+=== E1 own-check: can an lcm-KILLER config beat the primorial family at smaller k? ===
+    {1,...,k-1} + W where W=lcm(1..m) kills clocks t=j/d for ALL d<=m

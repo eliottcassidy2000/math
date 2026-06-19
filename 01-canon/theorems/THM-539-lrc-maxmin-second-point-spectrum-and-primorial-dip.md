@@ -94,6 +94,18 @@ small divisors `(k-1)` has, the more coarse tight times die, and `M` is pushed d
 the floor. When `k-1` is a primorial `2·3·5·7···`, all small clocks die at once and the level
 `a` climbs with the number of distinct small prime factors `ω(k-1)`.
 
+**Binding-pair structure (proof skeleton).** At the optimum the binding pair is always
+`{2a-1, a(k-1)}`, summing to `q = a(k+1)-1` (verified: `a=2→{3,8}`, `a=3→{5,18},{5,36}`,
+`a=4→{7,120}`). I.e. the killer `W=a(k-1)` and its `q`-complement `2a-1 = q - W` sit antipodally
+at distance `a/q` on the `q`-clock. So the level-`a` claim `M(F)=a/q` splits into:
+ (i) **lower bound** `M >= a/q`: at `t* = m/q` (the time where `(2a-1)m ≡ ±a, Wm ≡ ∓a (mod q)`),
+     EVERY speed `v ∈ {1,...,k-2,k}` has residue `mv mod q ∈ [a, q-a]` (the safe band) — this is
+     a finite congruence check on the AP-prefix, and needs `2a-1 ∈ {1,...,k-2}∪{k}` (so `a <= (k-1)/2`);
+ (ii) **upper bound** `M <= a/q` (covering): no other time beats `a/q`. This is where `(k-1)`'s
+     factorization enters — the killer must annihilate all coarse clocks `t=j/d`, `d|(k-1)`, which
+     it does for the primes dividing `k-1`. The clean statement to prove: the danger arcs of radius
+     `a/q` cover `[0,1)` iff `(k-1)` carries the first `a-1` primes. (HYP-2623.)
+
 ## Consequence
 
 - **Generically `g(k) = Theta(1/k^2)`** (`a=2`, `g·k^2 ≈ 1/2`), for all `k` not of the special form.

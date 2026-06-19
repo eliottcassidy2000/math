@@ -1,0 +1,5 @@
+k=9 box=26: floor=1/10=1/10, mediant=2/19=2/19, gcd1-sets=1081575
+   below-mediant non-tight sets count = 0
+   min below-mediant M = None  witness=None
+   examples=[]
+   => NO below-mediant set; sigma_2 = mediant = 2/19
