@@ -1,6 +1,6 @@
 ---
 source: kind-pasteur-2026-06-19-S13
-status: reflection on a verified structural reduction (HYP-2642) + a sanity-checked tool lead
+status: reflection on a verified structural reduction (HYP-2644) + a sanity-checked tool lead
 tags: [lonely-runner, lrc14, endgame, far-element, recursion, weyl, fejer-kernel, selberg-beurling, bandlimiting, unbounded-to-bounded]
 ---
 
@@ -19,7 +19,7 @@ analytic attempt died: the lattice-Fourier expansion `meas(S7)=M7(k)+Σ_{n∈Λ�
 quantity (circular). The Minkowski count was flagged but never executed; the binary GAP/stranger
 dichotomy was the wrong abstraction. Wall.
 
-## The conversion: the far-element plateau recursion (HYP-2642)
+## The conversion: the far-element plateau recursion (HYP-2644)
 
 The key move is to stop trying to bound the infinite lattice sum and instead **decorrelate the single
 largest element**. If `w = max E` is large, `frac(w x)` equidistributes (Weyl) and acts as an

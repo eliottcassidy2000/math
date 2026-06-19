@@ -1,5 +1,5 @@
 ---
-id: HYP-2642
+id: HYP-2644
 status: STRONG-PARTIAL — the unbounded→bounded reduction REDUCED to a single 1-D Weyl decorrelation estimate (margin 0.13–0.18, vs the divergent-lattice obstruction MISTAKE-078); LRC(14) NOT proved
 source: kind-pasteur-2026-06-19-S13
 related:

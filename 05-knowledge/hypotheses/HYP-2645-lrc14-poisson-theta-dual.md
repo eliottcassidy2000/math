@@ -1,5 +1,5 @@
 ---
-id: HYP-2643
+id: HYP-2645
 title: LRC(14) Poisson/theta dual of the seven-sector signed correction — the convergent dual IS the finite x-cell (Weyl) evaluation; no absolutely convergent dual-lattice series exists; the signed series converges FAST for wide E and slowly only at the AP
 status: PARTIALLY-TRUE / structural; the convergent dual is identified and the wide/AP split is verified exactly; does NOT close the cap by itself
 source: kind-pasteur-2026-06-19-S12 (workflow angle: poisson-summation / theta-transform)
