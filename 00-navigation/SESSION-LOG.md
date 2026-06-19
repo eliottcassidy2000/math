@@ -1,3 +1,7 @@
+## codex-2026-06-19-S23 -- LRC14 repeated-residue character-kernel target claimed -- HYP-2632/T880
+
+User asked to keep pushing on the next sharp target after HYP-2630. Claimed HYP-2632/T880 for the two-large repeated-residue character kernel. Scratch finite-kernel computation indicates the `d=9` HYP-2630 tail has an integer packet table: `4+2` values are `-25U` for QR residues, `-18U` for NQR residues, `-4U` at the zero cusp, and `0` on the all-equal diagonal; `4+1+1` tail-side entries are `+8U`, `+1U`, or `0`. The next computation will verify the additive-Fourier identity `S_d(a)=(1/7)sum_t C_hat(t a)` and record the `chi_7`/Jacobi table after height-2 wall deletion. LRC(14) NOT proved. NEW: HYP-2632, T880.
+
 ## codex-2026-06-19-S22 -- LRC14 exact-period AP-drop repair: the Q=210 blind mouths are repeated-prime packets inside raw 1260 -- HYP-2631/T879
 
 User: keep looking for creative reframes and push toward an LRC14 proof. Pulled/integrated the incoming S21 Euler-copy work, then followed its transfer row where `Q=210` misses AP drops `6,12` but `Q=1260` catches all AP one-drop cores. Added `04-computation/lrc14_exact_period_ap_drop_repair_codex_s22.py`, stored output `05-knowledge/results/lrc14_exact_period_ap_drop_repair_codex_s22.out`, detail `05-knowledge/hypotheses/HYP-2631-lrc14-exact-period-ap-drop-repair.md`, and reflection `07-reflections/lrc14-exact-period-ap-drop-repair-codex-s22.md`.
