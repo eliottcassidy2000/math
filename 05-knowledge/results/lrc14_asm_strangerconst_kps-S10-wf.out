@@ -1,0 +1,4 @@
+k=8: max L_y over bounded-core+far-stranger family = 0.21458 (103/480)  E=[0, 1, 2, 3, 4, 5, 6, 160]
+      claim sup 0.25704  cap=0.38146  reached>=claim? False  claim<cap? True  realized<cap? True
+k=9: max L_y over bounded-core+far-stranger family = 0.44838 (1937/4320)  E=[0, 1, 2, 3, 4, 5, 6, 7, 160]
+      claim sup 0.48729  cap=0.49426  reached>=claim? False  claim<cap? True  realized<cap? True

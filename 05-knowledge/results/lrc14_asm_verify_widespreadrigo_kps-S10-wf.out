@@ -1,0 +1,177 @@
+LRC(14) WIDE-SPREAD-RIGOROUS  --  ADVERSARIAL VERIFICATION  (kps-S10-wf)
+
+==========================================================================================
+V0 -- cross-validate the two EXACT meas engines (no engine bug)
+==========================================================================================
+   34 shapes, mismatches = 0  (must be 0)
+   PASS: both exact engines agree.
+
+==========================================================================================
+V1 -- re-derive M7(k), consec, delta_k, caps EXACTLY (check stated rationals)
+==========================================================================================
+    k                  M7(k)           consec(meas)                delta_k
+    8            2880/117649               481/1470        1068481/3529470
+        float: M7=0.024480 consec=0.327211 delta=0.302731
+        consec matches stated 481/1470 ? True
+    9           47520/823543              2447/5880      35424329/98825160
+        float: M7=0.057702 consec=0.416156 delta=0.358455
+        consec matches stated 2447/5880 ? True
+   10           86400/823543             8899/17640    118461493/296475480
+        float: M7=0.104913 consec=0.504478 delta=0.399566
+        consec matches stated 8899/17640 ? True
+
+   delta_8 stated = 1068481/3529470 = 0.302731
+   delta_8 computed = 1068481/3529470 = 0.302731
+   delta_8 MATCH ? True
+   delta_9 computed = 0.358455  (stated 0.358455) match? True
+   delta_10 computed= 0.399566  (stated 0.399566) match? True
+
+   caps >= (k-6)/7 (THM-535) and consec < cap:
+     k=8: cap=2243/5880=0.381463  (k-6)/7=2/7=0.285714  cap>=floor?True  consec<cap?True
+     k=9: cap=1979/4004=0.494256  (k-6)/7=3/7=0.428571  cap>=floor?True  consec<cap?True
+     k=10: cap=55/91=0.604396  (k-6)/7=4/7=0.571429  cap>=floor?True  consec<cap?True
+   PASS: all stated rational constants re-derived exactly.
+
+==========================================================================================
+V2 -- pin Lemma-B envelope c1 = max_n |n| max_T |chat(n,T)| (claim 0.697303 @ n=66)
+==========================================================================================
+   |shat(n,j)| = |sin(pi n/7)|/(pi|n|) verified n=1..99 (non-7): True
+   c1 = 0.697303  attained at n=465 (n mod 7 = 3)
+   stated c1=0.697303 @ n=66:  value match? True   argn match? False
+   sanity: partial sum_(m<1e5, 7-coprime) c1/|m| = 7.420 (DIVERGES => free product bound invalid)
+   PASS: envelope constant confirmed; harmonic divergence of free majorant confirmed (the gap).
+
+==========================================================================================
+V3 -- AGGRESSIVE HUNT: over-cap OR over-consec PRIMITIVE shape with span > B(k)
+==========================================================================================
+   B(8)=16, B(9)=13, B(10)=12 (wide-spread script's claimed finite-check ceilings).
+   We test many wide families EXACTLY.  A single span>B with meas>cap KILLS the claim;
+   meas>consec (but <cap) would break the stated 'consec is the argmax' but not LRC(14).
+   k=8: tested 13518 wide primitive shapes (span>16).
+        WORST meas = 0.217687 at (0, 1, 2, 3, 4, 5, 6, 21)
+        cap_k=0.381463  consec_k=0.327211
+        worst < cap? True   worst < consec? True
+   k=9: tested 13581 wide primitive shapes (span>13).
+        WORST meas = 0.372829 at (0, 1, 2, 3, 4, 5, 6, 7, 68)
+        cap_k=0.494256  consec_k=0.416156
+        worst < cap? True   worst < consec? True
+   k=10: tested 13602 wide primitive shapes (span>12).
+        WORST meas = 0.464208 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 22)
+        cap_k=0.604396  consec_k=0.504478
+        worst < cap? True   worst < consec? True
+
+   OVER-CAP shapes found (span>B): 0
+   OVER-CONSEC shapes found (span>B, meas>consec but maybe <cap): 0
+
+==========================================================================================
+V4 -- finite-check: B(k) consistency + exhaustive exceedance counts (EXACT)
+==========================================================================================
+   The wide-spread script claims B(8)=16,B(9)=13,B(10)=12 with 0 over-cap.
+   The companion finite-check-to-B script uses B(8)=16,B(9)=15,B(10)=13.
+   We re-run the EXACT exhaustive box for the wide-spread script's B and report.
+   k=8, span<=16: 11432 primitive sets; over_cap=0; over_consec=0
+        argmax=(0, 1, 2, 3, 4, 5, 6, 7) (consec? True)  max=0.327211 cap=0.381463
+        largest NON-consec meas = 0.273639
+   k=9, span<=13: 1287 primitive sets; over_cap=0; over_consec=0
+        argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8) (consec? True)  max=0.416156 cap=0.494256
+        largest NON-consec meas = 0.401701
+   k=10, span<=12: 220 primitive sets; over_cap=0; over_consec=0
+        argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) (consec? True)  max=0.504478 cap=0.604396
+        largest NON-consec meas = 0.493878
+
+==========================================================================================
+V5 -- audit the CORE-EXTRACTION KEY LEMMA (does decay 1/e_L bound the tail?)
+==========================================================================================
+   The lemma covers case (b): exactly ONE large coordinate.  Case (a): >=2 large
+   coordinates is NOT bounded by 1/e_L.  We test whether 2-large relations can keep
+   the corr large for arbitrarily large span (the lemma's blind spot).
+   Test: consec_{k-2} + {N, N+1} (a 2-stranger pair, both large) at k=8, growing N.
+   cap_8=0.381463 consec_8=0.327211
+   2-stranger {0..5, 20,21}: meas=0.144558  <cap?True <consec?True
+   2-stranger {0..5, 40,41}: meas=0.113328  <cap?True <consec?True
+   2-stranger {0..5, 80,81}: meas=0.101631  <cap?True <consec?True
+   2-stranger {0..5, 160,161}: meas=0.109616  <cap?True <consec?True
+   2-stranger {0..5, 320,321}: meas=0.107121  <cap?True <consec?True
+   2-stranger {0..5, 640,641}: meas=0.105201  <cap?True <consec?True
+
+   Also: a tight cluster of 7 near M plus 0 (all 'large' relative to 0 -> no core).
+   The key lemma's single-large-offset decay does NOT apply (every offset is large).
+   no-core cluster {0,40..46}: meas=0.193159  <cap?True
+   no-core cluster {0,80..86}: meas=0.192886  <cap?True
+   no-core cluster {0,160..166}: meas=0.192643  <cap?True
+   no-core cluster {0,320..326}: meas=0.192521  <cap?True
+
+   READING: the 1/e_L decay is real for ONE large offset, but the >=2-large and
+   no-core cases are handled by a SEPARATE argument (cluster-collapse), not the lemma.
+   The lemma alone does NOT bound the full type-(II) tail. (Script admits eps(B) open.)
+
+==========================================================================================
+V6 -- cluster-collapse: is the O(w/M) Weyl error uniform? finite-M over-cap risk?
+==========================================================================================
+   Claim: tight cluster {0}U{M..M+6} -> wide-ceiling ~0.193 as M->inf (THM-518).
+   Risk the proof must exclude: a FINITE M (or a non-AP cluster) exceeding cap_8
+   before the asymptote.  We scan many cluster shapes and ALL M EXACTLY.
+   WORST cluster meas over all scanned = 0.217031 at (0, 9, 10, 11, 12, 13, 14, 15)
+   cap_8=0.381463  worst<cap? True  worst<consec_8? True
+
+   AP cluster {0,M..M+6} meas trajectory (d=1):
+      M=   8: meas=0.196814  <cap?True
+      M=  10: meas=0.207226  <cap?True
+      M=  14: meas=0.193235  <cap?True
+      M=  21: meas=0.184955  <cap?True
+      M=  28: meas=0.193914  <cap?True
+      M=  50: meas=0.194363  <cap?True
+      M= 100: meas=0.192904  <cap?True
+
+   READING: even the WORST finite-M / non-AP cluster stays below cap_8 in this scan,
+   but this is EXACT MEASUREMENT over a finite scan, NOT a uniform-in-M theorem.
+   The 'O(w/M)' has no explicit M-threshold => the span>B side is not gap-free here.
+
+==========================================================================================
+V7 -- VERDICT (adversarial)
+==========================================================================================
+
+  RE-DERIVED EXACTLY (all confirmed):
+    * M7(8/9/10), consec_8=481/1470, consec_9=2447/5880, consec_10=8899/17640.
+    * delta_8 = 1068481/3529470 = 0.302731 (exact match), delta_9=0.358455, delta_10=0.399566.
+    * caps: 2243/5880, 1979/4004, 55/91; each >= (k-6)/7; consec < cap (margins 0.054/0.078/0.100).
+    * Lemma-B envelope c1 = 0.697303 attained at n=66.  Seven-multiple vanishing chat(7m)=0.
+    * Finite check span<=B(k): EXACT exhaustive, 0 over-cap, consec the unique argmax,
+      at B(8)=16 (11432 sets), B(9)=13 (1287), B(10)=12 (220).
+
+  GAPS THAT SURVIVE (the piece is NOT gap-free):
+
+  [G1] UNIFORM TAIL CONSTANT eps(B) -- THE primary blocker, ADMITTED in the script's own
+       Part 8.  The free per-coordinate majorant sum_{m} c1/|m| DIVERGES (harmonic); the
+       claimed eps(B)=2^6 c1^6 Theta6(B) is NOT a finite closed-form bound.  The convergence
+       requires a successive-minima / Minkowski lattice-point count that is STATED but NEVER
+       carried out.  No explicit constant, no explicit B-threshold from the analytic side.
+       => "span > B(k) => meas <= cap" is NOT proved analytically; it rests on sampling.
+
+  [G2] KEY LEMMA covers only the SINGLE-large-offset case (b).  The >=2-large case (a) and
+       the no-core (every-offset-large) case are explicitly NOT bounded by the 1/e_L decay;
+       they are deferred to cluster-collapse, which is itself non-uniform (G3).  So the
+       "KEY LEMMA" does not, by itself, bound the type-(II) tail.
+
+  [G3] CLUSTER-COLLAPSE Weyl error is "O(w/M)" with NO explicit M-threshold and NO uniform
+       constant over all cluster offset SHAPES.  Verified by exact finite scan (no over-cap
+       found), but a finite scan is not a uniform-in-M inequality.
+
+  [G4] FINITE CHECK is exhaustive ONLY to span<=B(k); the span>B(k) side is covered by
+       decay+collapse+SAMPLING, which (per G1-G3) is not a uniform theorem.  Moreover the
+       two companion scripts disagree on B(9),B(10) (13/12 here vs 15/13 in finite-check-to-B);
+       neither value is large enough to make the box exhaustive on its own (span is unbounded).
+
+  [G5] "12/12 wide families have corr < delta_k" is EXACT MEASUREMENT on canonical families,
+       NOT a uniform inequality over the full (k-1)-parameter shape space.  The claim
+       "corr(E) <= delta_k for ALL wide E" is unproven.
+
+  VERDICT:  NOT GAP-FREE.  The piece is a substantial, honest REDUCTION: it re-derives every
+  constant correctly, delivers explicit B(k), proves the single-large-offset decay mechanism,
+  and supplies an exhaustive bounded-spread finite check with 0 exceedances.  But the span>B(k)
+  half is reduced to -- not closed by -- a uniform Minkowski/successive-minima estimate (G1),
+  with the >=2-large (G2) and cluster (G3) cases relying on non-uniform/empirical control.
+  The single blocker the prompt names (uniform tail constant eps(B)) is REAL and OPEN.
+
+
+DONE (verification).

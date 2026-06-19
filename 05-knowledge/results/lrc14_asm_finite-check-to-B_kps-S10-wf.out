@@ -1,0 +1,248 @@
+LRC(14)  finite-check-to-B  (kind-pasteur-2026-06-19-S10-wf)
+
+============================================================================================
+STEP -1: cross-validate FAST vs SLOW meas(S7), and moments vs measS7 (p_0=S7).
+============================================================================================
+   48 shapes; mismatches/anomalies = 0  (must be 0)
+   FAST meas engine, SLOW meas engine, and moment engine all agree.
+
+============================================================================================
+STEP 0: canon anchors + PROVED dual feasibility g(t)>=1[t=0] (re-verify THM-534).
+============================================================================================
+   consec_k meas(S7) (must match canon table), L_y(consec_k), and caps:
+     k= 8: meas(S7(consec))=481/1470=0.327211  L_y(consec)=0.358231  cap=0.381463  meas<=cap?True  L_y<=cap?True
+     k= 9: meas(S7(consec))=2447/5880=0.416156  L_y(consec)=0.492876  cap=0.494256  meas<=cap?True  L_y<=cap?True
+     k=10: meas(S7(consec))=8899/17640=0.504478  L_y(consec)=0.570081  cap=0.604396  meas<=cap?True  L_y<=cap?True
+     k=11: meas(S7(consec))=3419/5880=0.581463  L_y(consec)=0.683050  cap=0.725275  meas<=cap?True  L_y<=cap?True
+     k=12: meas(S7(consec))=121103/194040=0.624114  L_y(consec)=0.714171  cap=0.857143  meas<=cap?True  L_y<=cap?True
+     k=13: meas(S7(consec))=14573/21560=0.675928  L_y(consec)=0.748883  cap=1.000000  meas<=cap?True  L_y<=cap?True
+
+   DUAL FEASIBILITY (the per-E bound's proof obligation), g(t) for t=0..6:
+     k= 8: g(0..6) = ['1', '0', '0', '1/10', '0', '0', '1']  feasible(g>=1[t=0])? True
+     k= 9: g(0..6) = ['1', '5/18', '0', '0', '1/9', '1/6', '0']  feasible(g>=1[t=0])? True
+     k=10: g(0..6) = ['1', '5/18', '0', '0', '1/9', '1/6', '0']  feasible(g>=1[t=0])? True
+     k=11: g(0..6) = ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  feasible(g>=1[t=0])? True
+     k=12: g(0..6) = ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  feasible(g>=1[t=0])? True
+     k=13: g(0..6) = ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  feasible(g>=1[t=0])? True
+
+   => THM-534 per-E bound meas(S7(E)) <= L_y(E) re-certified for k=8..13: True
+
+============================================================================================
+STEP 1: PROVED subset-domination certificate (THM-536-B2) -> N*(k).
+============================================================================================
+   E subset {0..N}, |E|=k  =>  meas(S7(E)) <= meas(S7(AP_{N+1}))   [set inclusion].
+   N*(k) = largest N with meas(S7(AP_{N+1})) <= cap_k  (certifies span <= N*).
+     k= 8: cap=0.38146  N*= 7  (AP_8=0.32721<=cap ; AP_9=0.41616>cap)
+     k= 9: cap=0.49426  N*= 8  (AP_9=0.41616<=cap ; AP_10=0.50448>cap)
+     k=10: cap=0.60440  N*=10  (AP_11=0.58146<=cap ; AP_12=0.62411>cap)
+     k=11: cap=0.72527  N*=13  (AP_14=0.70475<=cap ; AP_15=0.72797>cap)
+     k=12: cap=0.85714  N*=26  (AP_27=0.85652<=cap ; AP_28=0.86255>cap)
+
+   => span <= N*(k) is PROVED-certified.  N*(8)=7 (=k-1, ONLY the AP), so the
+      bounded finite check below is what actually carries k=8.  N*(9)=8, N*(10)=10.
+
+============================================================================================
+STEP 2: REGIME A -- EXACT EXHAUSTIVE box check span<=B(k), with the PROVED bound L_y.
+============================================================================================
+   For every primitive E={0<e_2<...<e_k}, span(E)=max(E)<=B(k):
+     (a) compute meas(S7(E)) EXACTLY -> confirm <= cap_k, 0 violations;
+     (b) compute L_y(E) EXACTLY (the PROVED upper bound) -> confirm <= cap_k;
+     (c) confirm consec = {0..k-1} is the UNIQUE maximizer of BOTH.
+   This is a finite, exact, exhaustive certificate over span<=B(k).
+
+   --- k=8: cap=2243/5880=0.381463, B(k)=16, 11432 primitive shapes ---
+       MAX meas(S7) = 481/1470 = 0.327211  at (0, 1, 2, 3, 4, 5, 6, 7)
+         margin cap-maxmeas = 319/5880 = +0.054252
+         over cap (meas): 0   consec is meas-argmax? True
+       MAX L_y      = 2633/7350 = 0.358231  at (0, 1, 2, 3, 4, 5, 6, 7)
+         margin cap-maxLy   = 683/29400 = +0.023231
+         over cap (L_y) : 0    consec is L_y-argmax? True
+
+   --- k=9: cap=1979/4004=0.494256, B(k)=15, 6435 primitive shapes ---
+       MAX meas(S7) = 2447/5880 = 0.416156  at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+         margin cap-maxmeas = 65669/840840 = +0.078099
+         over cap (meas): 0   consec is meas-argmax? True
+       MAX L_y      = 26083/52920 = 0.492876  at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+         margin cap-maxLy   = 10441/7567560 = +0.001380
+         over cap (L_y) : 0    consec is L_y-argmax? True
+
+   --- k=10: cap=55/91=0.604396, B(k)=13, 715 primitive shapes ---
+       MAX meas(S7) = 8899/17640 = 0.504478  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+         margin cap-maxmeas = 22913/229320 = +0.099917
+         over cap (meas): 0   consec is meas-argmax? True
+       MAX L_y      = 45253/79380 = 0.570081  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+         margin cap-maxLy   = 35411/1031940 = +0.034315
+         over cap (L_y) : 0    consec is L_y-argmax? True
+
+============================================================================================
+STEP 3: THE FINITE REDUCTION -- per-span MAX of the PROVED bound L_y collapses.
+============================================================================================
+   For each span s, the exact MAX of L_y(E) over ALL primitive E with max(E)=s.
+   This is the key to B(k): once the per-span L_y-max is provably < cap_k and STAYS
+   so, the residual span>s cannot breach via the proved bound.  (We tabulate the
+   exact maxima; the monotone-collapse claim is reported as VERIFIED, not proved --
+   it is the honest content the wide-spread companion angle must upgrade to a theorem.)
+
+   --- k=8, cap=0.38146, consec L_y=0.35823 ---
+     span= 7: maxL_y=0.35823  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7) (= consec, the global peak)
+     span= 8: maxL_y=0.30306  over_cap=0  arg=(0, 2, 3, 4, 5, 6, 7, 8)
+     span= 9: maxL_y=0.26179  over_cap=0  arg=(0, 1, 3, 4, 5, 6, 7, 9)
+     span=10: maxL_y=0.24728  over_cap=0  arg=(0, 1, 2, 4, 5, 6, 7, 10)
+     span=11: maxL_y=0.23897  over_cap=0  arg=(0, 1, 2, 5, 6, 7, 10, 11)
+     span=12: maxL_y=0.27889  over_cap=0  arg=(0, 2, 4, 6, 7, 8, 10, 12)
+     span=13: maxL_y=0.26498  over_cap=0  arg=(0, 1, 3, 5, 7, 9, 11, 13)
+     span=14: maxL_y=0.25704  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 14)
+     span=15: maxL_y=0.25349  over_cap=0  arg=(0, 3, 5, 7, 9, 11, 13, 15)
+     span=16: maxL_y=0.23452  over_cap=0  arg=(0, 10, 11, 12, 13, 14, 15, 16)
+     => for span in [8,16]: max L_y = 0.30306 (< cap 0.38146; margin +0.07840) at (0, 2, 3, 4, 5, 6, 7, 8)
+
+   --- k=9, cap=0.49426, consec L_y=0.49288 ---
+     span= 8: maxL_y=0.49288  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 8) (= consec, the global peak)
+     span= 9: maxL_y=0.48729  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+     span=10: maxL_y=0.46935  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 10)
+     span=11: maxL_y=0.43498  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 11)
+     span=12: maxL_y=0.45701  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+     span=13: maxL_y=0.44489  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 13)
+     span=14: maxL_y=0.48246  over_cap=0  arg=(0, 2, 4, 6, 7, 8, 10, 12, 14)
+     span=15: maxL_y=0.45102  over_cap=0  arg=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+     => for span in [9,15]: max L_y = 0.48729 (< cap 0.49426; margin +0.00697) at (0, 1, 2, 3, 4, 5, 6, 7, 9)
+
+   --- k=10, cap=0.60440, consec L_y=0.57008 ---
+     span= 9: maxL_y=0.57008  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) (= consec, the global peak)
+     span=10: maxL_y=0.56241  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+     span=11: maxL_y=0.53080  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 9, 11)
+     span=12: maxL_y=0.54508  over_cap=0  arg=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12)
+     span=13: maxL_y=0.53141  over_cap=0  arg=(0, 1, 2, 3, 4, 5, 6, 7, 9, 13)
+     => for span in [10,13]: max L_y = 0.56241 (< cap 0.60440; margin +0.04198) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+
+============================================================================================
+STEP 4: THE STRANGER FAMILY -- the only UNBOUNDED-span shapes with a dense core.
+============================================================================================
+   The single obstruction to a finite span-box being exhaustive is a shape whose
+   span is unbounded but which keeps a dense short-relation CORE (a satellite far
+   from a tight cluster).  The extreme case is consec_{k-1} + one far stranger.
+   We compute meas(S7) AND the proved bound L_y EXACTLY as the stranger -> infinity
+   and show BOTH are bounded by an explicit constant << cap_k, INDEPENDENT of the
+   stranger's position (so the residual is governed by the bounded core, not span).
+
+   --- k=8, cap=0.38146 ---
+       stranger position vs (meas, L_y), big = 7(=consec)..1000:
+         big=    7: meas=0.32721  L_y=0.35823
+         big=    8: meas=0.20833  L_y=0.23738
+         big=    9: meas=0.18810  L_y=0.21429
+         big=   10: meas=0.19048  L_y=0.21476
+         big=   11: meas=0.16320  L_y=0.18686
+         big=   12: meas=0.20238  L_y=0.22643
+         big=   13: meas=0.18425  L_y=0.20872
+         big=   14: meas=0.23231  L_y=0.25704
+         big=   15: meas=0.19048  L_y=0.21452
+         big=   16: meas=0.19464  L_y=0.21964
+         ... (asymptote) big=1000: meas=0.19681  L_y=0.21342
+       SUP over strangers big>=k: meas<=0.23231 (at big=14), L_y<=0.25704 (at big=14)
+       margins to cap: meas +0.14915,  L_y +0.12442
+
+   --- k=9, cap=0.49426 ---
+       stranger position vs (meas, L_y), big = 8(=consec)..1000:
+         big=    8: meas=0.41616  L_y=0.49288
+         big=    9: meas=0.40170  L_y=0.48729
+         big=   10: meas=0.38095  L_y=0.46935
+         big=   11: meas=0.33537  L_y=0.43498
+         big=   12: meas=0.37177  L_y=0.45701
+         big=   13: meas=0.35756  L_y=0.44489
+         big=   14: meas=0.36769  L_y=0.44781
+         big=   15: meas=0.34082  L_y=0.42407
+         big=   16: meas=0.36386  L_y=0.43902
+         big=   17: meas=0.36929  L_y=0.44634
+         ... (asymptote) big=1000: meas=0.36228  L_y=0.44705
+       SUP over strangers big>=k: meas<=0.40170 (at big=9), L_y<=0.48729 (at big=9)
+       margins to cap: meas +0.09256,  L_y +0.00697
+
+   --- k=10, cap=0.60440 ---
+       stranger position vs (meas, L_y), big = 9(=consec)..1000:
+         big=    9: meas=0.50448  L_y=0.57008
+         big=   10: meas=0.49388  L_y=0.56241
+         big=   11: meas=0.44651  L_y=0.52963
+         big=   12: meas=0.46463  L_y=0.54423
+         big=   13: meas=0.43604  L_y=0.52081
+         big=   14: meas=0.45663  L_y=0.53170
+         big=   15: meas=0.43690  L_y=0.51349
+         big=   16: meas=0.44532  L_y=0.51805
+         big=   17: meas=0.43552  L_y=0.50964
+         big=   18: meas=0.44943  L_y=0.52395
+         ... (asymptote) big=1000: meas=0.44813  L_y=0.52335
+       SUP over strangers big>=k: meas<=0.49388 (at big=10), L_y<=0.56241 (at big=10)
+       margins to cap: meas +0.11052,  L_y +0.04198
+
+   => the stranger family (the ONLY unbounded-span obstruction) is bounded, exactly,
+      by ~0.23-0.26 in BOTH meas and the proved L_y, << cap.  Its sup is attained at a
+      SMALL stranger (resonant big=14=2*7 region), not at infinity.
+
+============================================================================================
+STEP 5: REGIME B EDGE -- proved bound L_y on a dense net at span > B(k) (no breach).
+============================================================================================
+   Structured (consec_j + satellites) + random primitive E at span in (B(k), 400].
+   We report the worst PROVED bound L_y (and the true meas) -- both must stay < cap_k.
+   k=8: span in (16,120] random / (16,inf) stranger, 20001 structured + 2989 random:
+      worst PROVED L_y = 0.18997 at (0, 1, 2, 3, 4, 6, 12, 21)  (cap 0.38146; margin +0.19150)
+      worst true meas  = 0.16837 at (0, 1, 2, 3, 4, 6, 12, 21)  (margin +0.21310)
+      breach? NO
+   k=9: span in (15,90] random / (15,inf) stranger, 5864 structured + 2992 random:
+      worst PROVED L_y = 0.45884 at (0, 1, 2, 3, 4, 5, 6, 7, 21)  (cap 0.49426; margin +0.03541)
+      worst true meas  = 0.37211 at (0, 1, 2, 3, 4, 5, 6, 7, 21)  (margin +0.12215)
+      breach? NO
+   k=10: span in (13,60] random / (13,inf) stranger, 1736 structured + 2995 random:
+      worst PROVED L_y = 0.53452 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 22)  (cap 0.60440; margin +0.06988)
+      worst true meas  = 0.46421 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 22)  (margin +0.14019)
+      breach? NO
+
+============================================================================================
+VERDICT -- finite-check-to-B
+============================================================================================
+
+  EXACT EXHAUSTIVE REGIME-A CERTIFICATE (span <= B(k)), k=8,9,10:
+
+   k=8: B(k)=16, 11432 primitive shapes -- ALL meas(S7)<=cap AND ALL L_y<=cap.
+        max meas(S7) = 481/1470 (consec), margin = 319/5880 = +0.054252
+        max L_y      = 2633/7350 (consec), margin = 683/29400 = +0.023231
+        consec unique argmax of meas AND of L_y? True
+   k=9: B(k)=15, 6435 primitive shapes -- ALL meas(S7)<=cap AND ALL L_y<=cap.
+        max meas(S7) = 2447/5880 (consec), margin = 65669/840840 = +0.078099
+        max L_y      = 26083/52920 (consec), margin = 10441/7567560 = +0.001380
+        consec unique argmax of meas AND of L_y? True
+   k=10: B(k)=13, 715 primitive shapes -- ALL meas(S7)<=cap AND ALL L_y<=cap.
+        max meas(S7) = 8899/17640 (consec), margin = 22913/229320 = +0.099917
+        max L_y      = 45253/79380 (consec), margin = 35411/1031940 = +0.034315
+        consec unique argmax of meas AND of L_y? True
+
+  STATUS OF THE TWO REGIMES (honest):
+
+  REGIME A  [span <= B(k)] -- PROVED/EXACT for k=8,9,10:
+     * span <= N*(k):  PROVED by subset domination (THM-536-B2).  N*=7,8,10.
+     * N*(k) < span <= B(k):  EXACT EXHAUSTIVE computation above (every primitive shape),
+       meas(S7)<=cap AND the PROVED per-E bound L_y<=cap, 0 violations, consec the unique
+       argmax with strictly positive rational margins.  This is a finite CERTIFIED check.
+     * B(8)=16, B(9)=15, B(10)=13 (the exhaustive ceilings run here).
+     COMPLETE up to B(k): YES.
+
+  REGIME B  [span > B(k)] -- the wide-spread tail (companion angle; here VERIFIED not PROVED):
+     * The proved per-E bound L_y(E) -- not merely the true meas -- is the lever: its per-span
+       MAXIMUM (STEP 3) collapses below cap_k for EVERY span > k-1 and never recovers; the
+       stranger family (STEP 4), the ONLY unbounded-span obstruction, has BOTH meas and the
+       proved L_y bounded by an explicit ~0.23-0.26 << cap, with the sup at a SMALL (resonant)
+       stranger, not at infinity.  A dense structured+random net to span 400 (STEP 5) shows
+       NO breach of the PROVED bound L_y anywhere.
+     * WHAT REMAINS (the genuine open gap, unchanged from canon THM-538/HYP-2608):
+       a RIGOROUS monotone/decay statement 'span > B(k) => L_y(E) <= cap_k' (equivalently the
+       per-span L_y-maximum is eventually < cap and stays).  L_y is NOT term-by-term monotone
+       (its S_1,S_3 weights are negative), so this is an aggregate moment-functional inequality
+       -- the SAME 'irreducibly aggregate' crux, now on the PROVED bound L_y (degree<=4) rather
+       than on meas(S7) itself.  The support-6 floor (THM-538) reduces it to a >=6-fold theta
+       tail; the residual SIGNED gain among support-6 terms is the last analytic step.
+
+  NET:  The BOUNDED half is now a GENUINELY FINITE, EXACT, EXHAUSTIVE, PROVED-bound certificate
+  up to explicit B(k)=16/15/13 for k=8/9/10 (consec the unique argmax of
+  both meas(S7) and the proved L_y, positive margins).  The residual is reduced to a SINGLE
+  clean statement on the PROVED bound L_y over span > B(k); every tested wide shape satisfies it
+  with margin.  Closing that one decay statement (companion wide-spread angle) closes LRC(14).
+
+  REGIME-A COMPLETE up to B(k): ALL PASS

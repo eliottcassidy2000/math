@@ -1,0 +1,26 @@
+meas(S7({0..N})) for N=6..22:
+  N= 6  size= 7  meas=0.14762 (31/210)
+  N= 7  size= 8  meas=0.32721 (481/1470)
+  N= 8  size= 9  meas=0.41616 (2447/5880)
+  N= 9  size=10  meas=0.50448 (8899/17640)
+  N=10  size=11  meas=0.58146 (3419/5880)
+  N=11  size=12  meas=0.62411 (121103/194040)
+  N=12  size=13  meas=0.67593 (14573/21560)
+  N=13  size=14  meas=0.70475 (14109/20020)
+  N=14  size=15  meas=0.72797 (61211/84084)
+  N=15  size=16  meas=0.74648 (62767/84084)
+  N=16  size=17  meas=0.76076 (8201/10780)
+  N=17  size=18  meas=0.77654 (2018207/2598960)
+  N=18  size=19  meas=0.79094 (6166843/7796880)
+  N=19  size=20  meas=0.80332 (261547/325584)
+  N=20  size=21  meas=0.81072 (20949/25840)
+  N=21  size=22  meas=0.82100 (6155/7497)
+  N=22  size=23  meas=0.82965 (4333193/5222910)
+
+k=8: cap=0.38146 (2243/5880)  N*=7 (claim 7)  meas(S7(AP_8))=0.32721<=cap ; meas(S7(AP_9))=0.41616>cap
+      N*==claim? True
+      k=8 special: N*==7? True  (THM-536-B2 certifies ONLY the AP, span=7)
+k=9: cap=0.49426 (1979/4004)  N*=8 (claim 8)  meas(S7(AP_9))=0.41616<=cap ; meas(S7(AP_10))=0.50448>cap
+      N*==claim? True
+k=10: cap=0.60440 (55/91)  N*=10 (claim 10)  meas(S7(AP_11))=0.58146<=cap ; meas(S7(AP_12))=0.62411>cap
+      N*==claim? True

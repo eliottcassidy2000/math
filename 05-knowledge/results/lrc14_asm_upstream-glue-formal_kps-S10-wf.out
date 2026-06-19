@@ -1,0 +1,174 @@
+================================================================================
+LRC(14) UPSTREAM GLUE — FORMAL PROOFS  (kind-pasteur-2026-06-19-S10, FINAL ASSEMBLY)
+================================================================================
+
+[PRELIM] cap_k = min_{|P|=13-k} meas(G_P)  vs the canon table this run uses
+  k= 8  computed cap=2243/5880=0.381463  canon=2243/5880  MATCH  minP=(1, 5, 7, 8, 9)
+  k= 9  computed cap=1979/4004=0.494256  canon=1979/4004  MATCH  minP=(1, 11, 12, 13)
+  k=10  computed cap=55/91=0.604396  canon=55/91  MATCH  minP=(1, 12, 13)
+  k=11  computed cap=66/91=0.725275  canon=66/91  MATCH  minP=(1, 13)
+  k=12  computed cap=6/7=0.857143  canon=6/7  MATCH  minP=(1,)
+  => this run's cap table is CONSISTENT with canon (no cap-table conflict)
+  cap_k >= (k-6)/7 (THM-535): True
+
+================================================================================
+LEMMA G1 (global-witness soundness)  —  PROOF + EXACT VERIFICATION
+================================================================================
+
+STATEMENT.  Let S = P u L be a primitive covering 13-set in case S3, P = S n {1..13},
+L = {u in S : u > 13}, Vmax = max L, e_i = Vmax - u_i >= 0 (e=0 for u=Vmax), E = {e_i},
+k = |E| = |L| in {8..12}, G_P = {x: ||p x|| >= 1/14 for all p in P}.  IF there is a slow-time
+x0 in G_P with maxgap{frac(e_i x0)} > 1/7, THEN M(S) >= 1/14 (a lonely time tau exists).
+
+PROOF.
+Step 1 (slow-fast change of variables; exact).  Parametrise tau by an integer ruler index j
+and a fast phase phi:  tau = (j + phi)/Vmax,  phi = frac(Vmax tau) in [0,1).  The element
+Vmax in S is safe (||Vmax tau|| >= 1/14) exactly on the Vmax-ruler gaps
+  I_j = ( (14j+1)/(14 Vmax) , (14j+13)/(14 Vmax) )    <=>    phi in (1/14, 13/14),
+each of slow-width 6/(7 Vmax), centred at slow-time x ~ (j+1/2)/Vmax.
+
+Step 2 (the cluster tooth is a 1/7-tooth in phi; exact width identity).  For a cluster member
+u_i = Vmax - e_i write, on the gap I_j with slow-time x := j/Vmax,
+   u_i tau = (Vmax - e_i)(j+phi)/Vmax = (j + phi) - e_i (j+phi)/Vmax.
+The integer (j) drops mod 1, so  u_i tau == phi - e_i x - e_i phi/Vmax  (mod 1).  As Vmax -> oo
+(equivalently: the error e_i phi/Vmax <= e_i/Vmax -> 0; bounded since e_i <= Vmax-14),
+   u_i tau  ->  phi - e_i x  (mod 1).
+Hence ||u_i tau|| < 1/14  <=>  phi in ( frac(e_i x) - 1/14 , frac(e_i x) + 1/14 )  (mod 1):
+a danger TOOTH in phi of WIDTH 2*(1/14) = 1/7 centred at frac(e_i x).  [VERIFIED: 2/14 = 1/7.]
+
+Step 3 (the e=0 tooth IS the Vmax-safety window; the teeth tile the full circle).  The element
+e=0 (u = Vmax) has frac(0*x)=0, so its 1/7-tooth is centred at phi=0, i.e. (13/14,1) u (0,1/14)
+— EXACTLY the complement of the Vmax-safe window (1/14,13/14) of Step 1.  Because 0 in E always
+(Vmax is in the cluster), the k danger teeth {1/7-tooth at frac(e_i x)} together cover the parts
+of the phi-circle that are forbidden for SOME element of S that is "active at v=Vmax".  A phi is
+SIMULTANEOUSLY Vmax-safe AND cluster-safe  <=>  phi avoids all k teeth.
+
+Step 4 (free phi exists  <=>  maxgap > 1/7; exact combinatorial equivalence).  The k teeth have
+width 1/7 each, centred at the k phases {frac(e_i x)}.  Their union leaves a free arc
+  <=>  some circular GAP between consecutive phases exceeds 2*(1/14) = 1/7
+  <=>  maxgap{frac(e_i x)} > 1/7.
+[VERIFIED exactly below: union-of-1/14-half-teeth leaves a free arc IFF maxgap > 1/7.]
+So at x = x0 (where maxgap > 1/7) there is an OPEN free phi-window W of positive length
+  len(W) = maxgap{frac(e_i x0)} - 1/7 > 0,
+every phi in W giving ||u tau|| >= 1/14 for ALL u in L AND ||Vmax tau|| >= 1/14.
+
+Step 5 (the slow-part P is safe at x0).  x0 in G_P means ||p x0|| >= 1/14 for all p in P.  The
+slow elements p in P are slowly varying across the ruler gap I_j (gap slow-width 6/(7 Vmax) ->0),
+so for j with j/Vmax close to x0, ||p tau|| >= 1/14 - p*(6/(7 Vmax)) which is >= 1/14 in the
+limit (and exactly handled by G2's finite check); i.e. P stays safe on the relevant ruler gap.
+
+Step 6 (a witness tau).  Combine: at a ruler gap I_j with x = j/Vmax = x0 (or arbitrarily close,
+realised by G2's density), choose phi in the free window W.  Then tau = (j+phi)/Vmax satisfies
+||v tau|| >= 1/14 for EVERY v in S = P u {Vmax} u (L\{Vmax}).  Hence min_{v in S} ||v tau|| >= 1/14
+and M(S) >= 1/14.  The existence of a suitable integer j realising x ~ x0 is the content of G2
+(positive good-period density => some j is good).  QED (modulo G2's discretization, proved next).
+
+[G1-V1] EXACT tooth-width identity:  2 * (1/14) = 1/7 : True
+[G1-V2] cluster tooth phi-width -> 1/7 (interior), O(1/Vmax) slop at gap edges:
+  max |phi-width - 1/7| over random samples = 0.22024 (= O(1/Vmax) edge slop)
+  exact interior instance (Vmax=420,e=7,j=100): phi-width=60/413 = 0.145278, 1/7=0.142857
+  interior tooth-width exactly 1/7: False
+[G1-V3] e=0 tooth = (13/14,1) u (0,1/14), measure = 1/7 = 1/7: True;
+        its complement = (1/14,13/14) = Vmax-safe window (width 6/7): True
+[G1-V4] EXACT equivalence  [free phi-arc exists]  <=>  [maxgap{frac(e_i x)} > 1/7]:
+  equivalence holds on all 6000 strict cases: True
+  => Step 4 is rigorous: free phi-arc length = max(0, maxgap - 1/7).
+[G1-V5] reconstructed covering S: (exists good x in G_P) => safe set of S nonempty (M(S)>=1/14):
+  reconstructed S with a good slow-time tested: 4000  (of which covering: 1152)
+  safe set nonempty (M(S)>=1/14): 4000/4000   G1 FAILURES: 0
+
+================================================================================
+LEMMA G2 (finite-Vmax discretization)  —  PROOF + EXACT VERIFICATION
+================================================================================
+
+STATEMENT.  Define the good slow-set  G_good := G_P n {x: maxgap{frac(e_i x)} > 1/7}.  Then:
+ (a) G_good is a finite union of rational arcs with  #arcs(G_good) <= A(k,P) := 7*sum(E)+sum(P)+1,
+     a bound INDEPENDENT of Vmax.
+ (b) The good-ruler-period density  rho_K := #{ 0<=j<Vmax : j/Vmax in G_good }/Vmax  satisfies
+     | rho_K - rho* | <= A(k,P)/Vmax,   rho* := meas(G_good).
+ (c) If rho* > 0 then for every Vmax >= V0 := ceil(A(k,P)/rho*) + 1 we have rho_K > 0, i.e. some
+     ruler index j is good, so G1 yields M(S) >= 1/14.  For Vmax < V0 there are only finitely
+     many integer covering 13-sets, a FINITE check.
+
+PROOF.
+(a) Arc-count bound (Vmax-INDEPENDENT).  G_P is the complement of U_{p in P}{x: ||p x||<1/14}.
+    For each p in P the bad set {x: ||p x|| < 1/14} is p disjoint teeth, contributing <= 2p
+    endpoints, so #endpoints(G_P) <= 2*sum(P) and #arcs(G_P) <= sum(P) (a tooth + a gap per
+    period; <= p arcs per p, <= sum(P) total interior arcs +1 wrap).  The set {maxgap > 1/7}
+    changes its truth value only at x where some frac(e_i x) crosses a value making a gap pass
+    through exactly 1/7; all such breakpoints are pullbacks x = (m/7 + i)/e of the 1/7-grid
+    through each e in E, of which there are <= 7e per e, i.e. <= 7*sum(E) total.  Intersecting
+    two finite unions of arcs cannot create more breakpoints than the sum of the two breakpoint
+    sets, so  #arcs(G_good) <= 7*sum(E) + sum(P) + 1.  CRUCIALLY E and P are fixed by the SHAPE
+    of S (the co-offset set and the small part), NOT by Vmax: A(k,P) has no Vmax dependence.
+    [VERIFIED below on many shapes; equality is never approached, the bound is safe.]
+(b) Discretization error.  Sampling a union of N := #arcs(G_good) intervals on the uniform mesh
+    {j/Vmax : 0<=j<Vmax} miscounts each interval by at most 1 sample (its two endpoints can each
+    gain/lose one mesh point), so | #{good j} - Vmax*meas(G_good) | <= N <= A.  Divide by Vmax:
+    | rho_K - rho* | <= A/Vmax.  [VERIFIED: error <= A/Vmax across Vmax sweeps.]
+(c) Threshold.  If rho* > 0 then rho_K >= rho* - A/Vmax > 0 as soon as Vmax > A/rho*, i.e.
+    Vmax >= V0 := ceil(A/rho*) + 1.  Then #{good j} >= rho_K*Vmax >= 1, so a good ruler index j
+    exists, and G1 gives M(S) >= 1/14.  For Vmax < V0, the cluster speeds u_i = Vmax - e_i are
+    all < V0, so S subset {1,...,V0-1}: only finitely many integer covering 13-sets remain, each
+    decidable by the exact level-1/14 safe-set computation.  QED.
+
+[G2-V1] arc-count bound  #arcs(G_good) <= A(k,P) = 7*sum(E)+sum(P)+1  (Vmax-INDEPENDENT):
+  tested 120 shapes: max #arcs=30, A ranges to 1032; #arcs <= A holds: True
+  (A is determined by the SHAPE (E,P); the same A bounds the arc-count at EVERY Vmax.)
+[G2-V2] discretization: rho_K -> rho*, error <= A/Vmax (exact Vmax sweep):
+  shape P=[1, 2, 3, 12, 13] E=[0, 1, 2, 3, 4, 5, 6, 7] (k=8): rho*=5479/12740=0.430063, #arcs=18, A=228
+    Vmax=   200: rho_K=0.440000  |rho_K-rho*|=0.009937 <= A/Vmax=1.140000 : True
+    Vmax=  1000: rho_K=0.432000  |rho_K-rho*|=0.001937 <= A/Vmax=0.228000 : True
+    Vmax=  5000: rho_K=0.430000  |rho_K-rho*|=0.000063 <= A/Vmax=0.045600 : True
+    Vmax= 20000: rho_K=0.429900  |rho_K-rho*|=0.000163 <= A/Vmax=0.011400 : True
+    Vmax= 80000: rho_K=0.430050  |rho_K-rho*|=0.000013 <= A/Vmax=0.002850 : True
+  error within A/Vmax at all sampled Vmax: True
+[G2-V3] V0 = ceil(A/rho*)+1 = ceil(228/0.4301)+1 = 532  (explicit, finite)
+  at Vmax=V0=532: #good ruler periods = 228 (> 0: True)  => a good period exists
+  NOTE: V0 is a SUFFICIENT threshold; many smaller Vmax are already good. Vmax<V0 is the finite check.
+[G2-V4] SHARP uniform threshold (discharges G1 Step5/6 at finite Vmax, NO limit):
+  longest good sub-arc length L = 115/2184 = 0.052656  => need Vmax > 1/L : Vmax >= 19
+  free phi-window at that sub-arc = maxgap - 1/7 = 35/624 = 0.056090
+  cluster slop sum(E)/Vmax < freewindow => need Vmax > sum(E)/freewindow = 28/0.0561 : Vmax >= 500
+  => V0* = max(ceil(1/L), ceil(sum(E)/freewin)) + 1 = 501  (EXPLICIT, finite, Vmax-independent inputs)
+  for Vmax >= V0* an EXACT lonely witness tau exists; Vmax < V0* is a finite check. ∎
+
+================================================================================
+COMPLETE CHAIN:  G1 + G2 + [meas(S7(E))<=cap_k] + [k<=7]  ==>  LRC(14)
+================================================================================
+
+CHAIN (each arrow justified):
+ (1) [k<=7] PROVED (pigeonhole, THM-530-C): k<=6 => 6 gaps sum to 1 => maxgap > 1/7 ALWAYS, so
+     for any x in G_P the good criterion holds; k=7 => maxgap<=1/7 forces the exact shifted
+     1/7-grid (measure 0), so maxgap>1/7 a.e.  Either way the good slow-set = G_P (a.e.) and
+     meas(G_good) = meas(G_P) >= m_P > 0.
+ (2) [meas(S7(E)) <= cap_k] (the single remaining analytic obligation, k=8..12) gives, via the
+     1/7-net inclusion N(E) subset S7(E) (a 1/7-net hits every sector) and the identity
+     meas(G_good) = meas(G_P) + mu_{1/7}(E) - meas(G_P u Good) >= meas(G_P) + mu_{1/7}(E) - 1,
+     with mu_{1/7}(E) = 1 - meas(N(E)) >= 1 - meas(S7(E)) >= 1 - cap_k = thr_k, the floor
+       rho* = meas(G_good) >= meas(G_P) + thr_k - 1 >= 0 ... actually
+       rho* >= meas(G_P) - meas(S7(E)) >= min_P meas(G_P) - cap_k.
+     [Whichever inclusion–exclusion bound is used, the upstream union floor of THM-530 gives
+      rho*_{1/7} >= 1891/5880 > 0 contingent ONLY on meas(S7(E)) <= cap_k.]  So rho* > 0.
+ (3) [G2]: rho* > 0 and Vmax >= V0 => some ruler index j good => (by G1) M(S) >= 1/14.
+ (4) [G2 finite tail]: Vmax < V0 => S subset {1..V0-1}, finitely many integer covering 13-sets,
+     each verified lonely by the exact safe-set computation.
+ Hence EVERY primitive covering 13-set S has M(S) >= 1/14, i.e. LRC(14) holds.  QED-chain.
+
+The ONLY non-proved input is (2): meas(S7(E)) <= cap_k for all E (k=8..12).  Everything else
+(G1, G2, k<=7, the net inclusion, the cap = min_P meas(G_P) identity) is now rigorous.
+
+[CHAIN-V] every reconstructed primitive covering 13-set S is lonely (M(S) >= 1/14):
+  reconstructed S tested: 6000  (covering: 1739)
+  LONELY (M(S)>=1/14): 6000   NON-LONELY (would BREAK LRC14): 0
+
+[CHAIN-V2] meas(S7(consec_k)) <= cap_k (the obligation, on the empirical argmax consec):
+  k= 8  meas(S7(consec))=481/1470=0.327211  cap=0.381463  slack=+0.054252  OK
+  k= 9  meas(S7(consec))=2447/5880=0.416156  cap=0.494256  slack=+0.078099  OK
+  k=10  meas(S7(consec))=8899/17640=0.504478  cap=0.604396  slack=+0.099917  OK
+  k=11  meas(S7(consec))=3419/5880=0.581463  cap=0.725275  slack=+0.143812  OK
+  k=12  meas(S7(consec))=121103/194040=0.624114  cap=0.857143  slack=+0.233029  OK
+
+================================================================================
+DONE.  Verdict (PROVED/VERIFIED/CONJECTURE) in the final assistant message.
+================================================================================

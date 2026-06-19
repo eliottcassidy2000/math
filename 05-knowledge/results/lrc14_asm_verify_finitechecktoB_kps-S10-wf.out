@@ -1,0 +1,59 @@
+==============================================================================
+V1: EXACT constants + fast-engine cross-check vs canon J/measS7
+==============================================================================
+[PASS] V1 fast==canon meas(S7) E=[0, 1, 2, 3, 4, 5, 6, 7]: 481/1470  canon 481/1470
+[PASS] V1 fast==canon meas(S7) E=[0, 1, 2, 3, 4, 5, 6, 16]: 109/560  canon 109/560
+[PASS] V1 fast==canon meas(S7) E=[0, 2, 3, 5, 7, 11, 13, 16]: 4947/112112  canon 4947/112112
+[PASS] V1 fast==canon meas(S7) E=[0, 1, 2, 3, 4, 5, 6, 7, 8]: 2447/5880  canon 2447/5880
+[PASS] V1 fast==canon meas(S7) E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: 8899/17640  canon 8899/17640
+[PASS] V1 meas(S7(consec_8))=481/1470  claim 481/1470
+[PASS] V1 meas(S7(consec_9))=2447/5880  claim 2447/5880
+[PASS] V1 meas(S7(consec_10))=8899/17640  claim 8899/17640
+[PASS] V1 meas(S7(consec_11))=3419/5880  claim 3419/5880
+[PASS] V1 meas(S7(consec_12))=121103/194040  claim 121103/194040
+[PASS] V1 L_y(consec_8)=2633/7350 margin=683/29400  claim 683/29400
+[PASS] V1 chain meas<=L_y<=cap consec_8
+[PASS] V1 L_y(consec_9)=26083/52920 margin=10441/7567560  claim 10441/7567560
+[PASS] V1 chain meas<=L_y<=cap consec_9
+[PASS] V1 L_y(consec_10)=45253/79380 margin=35411/1031940  claim 35411/1031940
+[PASS] V1 chain meas<=L_y<=cap consec_10
+
+==============================================================================
+V2: dual feasibility g(t)>=1[t=0] on t=0..6
+==============================================================================
+[PASS] V2 g(t) k=8: ['1', '0', '0', '1/10', '0', '0', '1']
+[PASS] V2 g(t) k=9: ['1', '5/18', '0', '0', '1/9', '1/6', '0']
+[PASS] V2 g(t) k=10: ['1', '5/18', '0', '0', '1/9', '1/6', '0']
+[PASS] V2 g(t) k=11: ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+[PASS] V2 g(t) k=12: ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+[PASS] V2 g(t) k=13: ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+
+==============================================================================
+V3: EXHAUSTIVE bounded-spread sweep at B(k)=16,15,13 (k=8,9,10)
+    E={0} u (k-1)-subset of {1..B}, primitive(gcd=1); check 0>cap, consec UNIQUE argmax
+==============================================================================
+[PASS] V3 k=10 primitive count=715  claim 715
+[PASS] V3 k=10 0 meas(S7)>cap  []
+[PASS] V3 k=10 0 L_y>cap  []
+[PASS] V3 k=10 meas<=L_y for ALL E (proved bound)  []
+[PASS] V3 k=10 consec UNIQUE argmax meas(S7)  max=8899/17640 arg=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] ties=[]
+[PASS] V3 k=10 consec UNIQUE argmax L_y  max=45253/79380 arg=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] ties=[]
+      consec meas=8899/17640 L_y=45253/79380 cap=55/91 L_y-margin=35411/1031940
+[PASS] V3 k=9 primitive count=6435  claim 6435
+[PASS] V3 k=9 0 meas(S7)>cap  []
+[PASS] V3 k=9 0 L_y>cap  []
+[PASS] V3 k=9 meas<=L_y for ALL E (proved bound)  []
+[PASS] V3 k=9 consec UNIQUE argmax meas(S7)  max=2447/5880 arg=[0, 1, 2, 3, 4, 5, 6, 7, 8] ties=[]
+[PASS] V3 k=9 consec UNIQUE argmax L_y  max=26083/52920 arg=[0, 1, 2, 3, 4, 5, 6, 7, 8] ties=[]
+      consec meas=2447/5880 L_y=26083/52920 cap=1979/4004 L_y-margin=10441/7567560
+[PASS] V3 k=8 primitive count=11432  claim 11432
+[PASS] V3 k=8 0 meas(S7)>cap  []
+[PASS] V3 k=8 0 L_y>cap  []
+[PASS] V3 k=8 meas<=L_y for ALL E (proved bound)  []
+[PASS] V3 k=8 consec UNIQUE argmax meas(S7)  max=481/1470 arg=[0, 1, 2, 3, 4, 5, 6, 7] ties=[]
+[PASS] V3 k=8 consec UNIQUE argmax L_y  max=2633/7350 arg=[0, 1, 2, 3, 4, 5, 6, 7] ties=[]
+      consec meas=481/1470 L_y=2633/7350 cap=2243/5880 L_y-margin=683/29400
+
+==============================================================================
+OVERALL (V1-V3): ALL PASS
+==============================================================================

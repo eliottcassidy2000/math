@@ -1,0 +1,39 @@
+==============================================================================
+V4: HUNT for over-cap shapes with span>B(k) (the OPEN region)
+==============================================================================
+  F1 done (1-stranger)
+  F2 done (2-stranger)
+  F3 k=8 done
+  F3 k=9 done
+  F3 k=10 done
+  F3 done (shifted-AP/no-scale-sep)
+  F4,F5 done (resonant/apex-7)
+  F6 k=8 done
+  F6 k=9 done
+  F6 k=10 done
+  F6 done (random wide)
+  F7 done (dilated+jitter)
+  F8 done (gap-inserted)
+
+  shapes tested (span>B): k=8:1990  k=9:1985  k=10:1965
+
+--- worst meas(S7) found over span>B ---
+  k=8: max meas(S7)=0.21769 (32/147)  cap=0.38146  under-cap by 0.16378  E=[0, 1, 2, 3, 4, 5, 6, 21]
+  k=9: max meas(S7)=0.37283 (1331/3570)  cap=0.49426  under-cap by 0.12143  E=[0, 1, 2, 3, 4, 5, 6, 7, 68]
+  k=10: max meas(S7)=0.46421 (6005/12936)  cap=0.60440  under-cap by 0.14019  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 22]
+--- worst L_y found over span>B ---
+  k=8: max L_y=0.23704 (2323/9800)  cap=0.38146  under-cap by 0.14442  E=[0, 1, 2, 3, 4, 5, 6, 21]
+  k=9: max L_y=0.45884 (1349/2940)  cap=0.49426  under-cap by 0.03541  E=[0, 1, 2, 3, 4, 5, 6, 7, 21]
+  k=10: max L_y=0.53515 (320959/599760)  cap=0.60440  under-cap by 0.06925  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 68]
+
+  >>> BREACHES (span>B, meas>cap OR L_y>cap): 0
+
+==============================================================================
+V5: stranger sup L_y (claim 0.25704/0.48729/0.56241), consec_(k-1)+far N
+==============================================================================
+  k=8: L_y(consec_7+N) N=[50, 100, 200, 400, 800, 1600, 3200] = [0.21638, 0.21514, 0.21086, 0.21365, 0.21322, 0.21304, 0.21327]
+        observed sup~0.21638  claim 0.25704  cap=0.38146  sup<cap? True  sup~claim? False
+  k=9: L_y(consec_8+N) N=[50, 100, 200, 400, 800, 1600, 3200] = [0.43985, 0.44644, 0.44441, 0.44776, 0.44676, 0.44694, 0.44691]
+        observed sup~0.44776  claim 0.48729  cap=0.49426  sup<cap? True  sup~claim? False
+  k=10: L_y(consec_9+N) N=[50, 100, 200, 400, 800, 1600, 3200] = [0.51538, 0.52206, 0.52169, 0.52274, 0.52299, 0.52341, 0.52307]
+        observed sup~0.52341  claim 0.56241  cap=0.60440  sup<cap? True  sup~claim? False
