@@ -1,8 +1,8 @@
 ## 3.30 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 078ae3d
-The LRC(14) verification has achieved a massive architectural reduction, condensing the gap-free proof into a single Minkowski-type problem.
+The LRC(14) verification has achieved a massive architectural reduction, condensing the gap-free proof into a single Minkowski-type problem focused on the final wide-spread residual.
 
 - **078ae3d (kind-pasteur-2026-06-19-S9/S10): GAP-FREE-REDUCED and THM-538 Resolution**
-    - **Reduction to Minkowski Lemma:** The LRC(14) proof has been **GAP-FREE-REDUCED** to a single Minkowski lemma. This reduction unifies the remaining analytic work into a successive-minima counting problem.
+    - **Reduction to Minkowski Lemma:** The LRC(14) proof has been **GAP-FREE-REDUCED** to a single Minkowski lemma. This reduction unifies the remaining analytic work into a successive-minima counting problem for the wide-spread regime.
     - **THM-538 (K(n) Coord-Support) PROVED:** Formally proved that $K(n) = 0$ unless the underlying relation has at least **6 coordinates**. This result explains the **5x-lossiness** observed in **HYP-2606** and provides a much tighter floor for the support-6 configurations.
     - **Finite Certificate & Glue G1 PROVED:** The **bounded-spread finite certificate** and the **glue G1** lemmas are now formally proved, completing the bridge for configurations with bounded speed spreads.
     - **Stranger-Contraction (HYP-2610) Verified:** Verified the **stranger-contraction** mechanism (mac-mini HYP-2610), solidifying the deterministic path for the multiplicative decoupling proof.
@@ -11,9 +11,9 @@ The LRC(14) verification has achieved a massive architectural reduction, condens
     - **Verification Success:** Executed a massive search sweep with **0 counterexamples found in 40k configurations**, providing strong empirical support for the current analytic framework.
 
 - **Active Steering Objectives (Updated):**
-    - **Minkowski Count (HYP-2608a):** Focus all analytical effort on the **Minkowski count** for the wide-spread residual. Proving the $|K(n)|$ bound is the final step to closing the LRC(14) proof.
-    - **Envelope Divergence:** Validate the successive-minima approach to ensure it correctly bounds the harmonically diverging envelope.
-    - **Search Expansion:** Continue the search sweep beyond 40k to maintain empirical pressure on the residual configurations.
+    - **Minkowski Bound Priority (HYP-2608a):** Prioritize the rigorous calculation of the **Minkowski bound** $|K(n)| \le c_1^6 / (\lambda_1 \dots \lambda_6)$ to close the final wide-spread gap. This is the primary blocker for proof closure.
+    - **Successive-Minima Validation:** Validate the alignment of successive-minima across the harmonically diverging envelope to ensure global coverage.
+    - **Proof Reduction Maintenance:** Maintain the clean reduction state by ensuring all new lemmas are integrated directly into the Minkowski framework.
 
 ## 3.29 Analysis of Recent Commits (Friday, June 19, 2026) - Digest f70fe87 (Consolidated)
 The LRC(14) verification has reached its final consolidation phase, with the formalization of the support-6 floor and the assembly of the wide-spread proof now fully documented and integrated into the primary research stream.
@@ -270,10 +270,10 @@ A major milestone in the LRC(14) floor verification has been achieved through a 
         - **w2 = 3/(7(k-2)):** The secondary weight, completing the first major transition.
         - **Floor Verification:** Proved that the overall floor satisfies $floor \ge 13/(7k)$.
     - **Structural Skeleton:** Introduced the **bounded-spread skeleton** as the primary analytic model, leaving only a manageable **Diophantine large-spread remainder** for numerical verification.
-    - **HYP-2597 (Reflection):** Formally registered HYP-2597, which addresses the reflection symmetry of the 12-core speeds and its role in maintaining the 13/(7k) floor.
+    - **HYP-2597 (Reflection):** Formally registered HYP-2597, which addresses the reflection symmetry of the 12-core speeds and its role in maintaining the 13/7k floor.
 
 - **Active Steering Objectives (Updated):**
-    - **Diophantine Remainder Cleanup:** Execute the final numerical sweep on the large-spread remainder to confirm the 13/(7k) bound holds at the limit.
+    - **Diophantine Remainder Cleanup:** Execute the final numerical sweep on the large-spread remainder to confirm the 13/7k bound holds at the limit.
     - **mu_consec Interval Validation:** Verify the remaining 3 intervals of the $\mu_{consec}$ decomposition to complete the closed-form proof.
 
 ## 3.10 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest d0afb9c
@@ -374,5 +374,5 @@ Following the recent structural synthesis, significant progress has been made on
 
 - **4356c56 (codex-p5):** Erdős-Moser support gate sharpening.
 - **4fa5cdfb (codex):** LRC14 ladder support gate integration.
-- **c9cb8ee (codex):** Pisano quotient Q27 packet integration.
+- **c9cb8ee (codex-2026-06-16):** Pisano quotient Q27 packet integration.
 These developments complete the integration of the LRC14-Pisano framework as outlined in the latest THM/HYP series.
