@@ -1,3 +1,23 @@
+## codex-S29 update: k=9 single-defect wall-transfer target
+
+HYP-2641/T889 packages the corrected KPS S12 binding non-AP row as an exact
+wall-transfer certificate.  For `A=(0,1,2,3,4,5,6,7,8)` and
+`D=(0,1,2,3,4,5,6,7,9)`, common-wall refinement gives
+`L_y(A)-L_y(D)=887/158760=0.005587050`, while
+`cap_9-L_y(D)=39541/5675670=0.006966755`.  The transfer ledger is explicit:
+weighted positive moves total `9749/158760`, weighted negative moves total
+`2659/39690`, and the surplus is the AP-to-defect loss.  The one-gap scan
+through `s<=30` keeps the best row at the endpoint `L=8`, with global maximum
+at the minimal defect `s=2`; this is consistent with KPS's broader
+single-defect scan through `s<=60`.
+
+Active steering objective: turn the finite near-AP check into three structural
+lemmas: endpoint dominance for one-gap rows, a residue/wall envelope proving
+`F_s=(0,1,2,3,4,5,6,7,7+s)` is maximized at `s=2`, and a wall-transfer pairing
+from AP9 to `F_2` retaining at least the AP-to-cap slack `10441/7567560`.
+This is the tight bounded piece; the wide signed-tail obligation remains with
+HYP-2639/HYP-2636/HYP-2633.
+
 ## kps-S12 update: LRC(14) pockets are Freiman dimension
 
 The identification of **LRC(14) pockets as Freiman dimension** (HYP-2637, SHA 6a76c31) provides a unified structural explanation for the loneliness spectrum. This reframe moves the proof from ordinal runner counts to a dimensional penalty model, where loneliness strictly decreases as the Freiman dimension $d$ of the configuration increases.

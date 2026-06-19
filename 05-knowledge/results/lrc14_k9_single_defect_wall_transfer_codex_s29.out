@@ -1,0 +1,121 @@
+========================================================================================
+HYP-2641/T889: k=9 single-defect wall-transfer certificate
+========================================================================================
+AP9=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+D9 =(0, 1, 2, 3, 4, 5, 6, 7, 9)
+
+g9 weights by missed-sector count:
+  g[0]=1, g[1]=5/18, g[2]=0, g[3]=0, g[4]=1/9, g[5]=1/6, g[6]=0
+
+Exact distributions:
+  t   p_AP                         p_D                          p_D-p_AP
+  0                  2447/5880                  1181/2940                   -17/1176
+  1                   653/2940                      23/90                    59/1764
+  2                     27/196                  1139/8820                   -19/2205
+  3                     23/245                     38/441                   -17/2205
+  4                     13/196                   317/4410                      1/180
+  5                      9/196                      5/126                   -11/1764
+  6                       1/56                       1/63                     -1/504
+
+L_y(AP9)     = 26083/52920 = 0.492876039
+L_y(D9)      = 38681/79380 = 0.487288990
+AP9 - D9     = 887/158760 = 0.005587050
+cap_9 - D9   = 39541/5675670 = 0.006966755
+cap_9 - AP9  = 10441/7567560 = 0.001379705
+
+Common-wall transfer by missed count (A_count -> D_count):
+  A->D       mass                         weighted_delta
+  0->0                  5947/17640                          0
+  0->1                    697/8820               -9061/158760
+  1->0                  1139/17640               14807/317520
+  1->1                    283/2205                          0
+  1->2                    103/3528                 -515/63504
+  2->1                     85/1764                  425/31752
+  2->2                    671/8820                          0
+  2->3                     17/1260                          0
+  3->2                   421/17640                          0
+  3->3                  1067/17640                          0
+  3->4                       1/105                      1/945
+  4->3                     43/3528                  -43/31752
+  4->4                    191/3528                          0
+  5->4                     29/3528                  -29/63504
+  5->5                      19/504                          0
+  6->5                       1/504                     1/3024
+  6->6                        1/63                          0
+
+weighted positive transfers = 9749/158760 = 0.061407155
+weighted negative transfers = 2659/39690 = 0.066994205
+negative - positive        = 887/158760 = 0.005587050
+zero-weight transfer mass   = 4393/5880 = 0.747108844
+
+Largest missed-set changes by mass:
+  () -> (6,)  mass=1/45  dg=-13/18  weighted=-13/810
+  () -> (1,)  mass=31/1470  dg=-13/18  weighted=-403/26460
+  () -> (5,)  mass=1/56  dg=-13/18  weighted=-13/1008
+  (6,) -> ()  mass=29/1764  dg=13/18  weighted=377/31752
+  (5,) -> ()  mass=4/315  dg=13/18  weighted=26/2835
+  (1, 6) -> (6,)  mass=4/315  dg=5/18  weighted=2/567
+  (4,) -> ()  mass=1/84  dg=13/18  weighted=13/1512
+  (2,) -> ()  mass=1/84  dg=13/18  weighted=13/1512
+  () -> (4,)  mass=1/84  dg=-13/18  weighted=-13/1512
+  (4,) -> (4, 6)  mass=1/98  dg=-5/18  weighted=-5/1764
+  (6,) -> (2,)  mass=1/126  dg=0  weighted=0
+  (4, 5, 6) -> (5, 6)  mass=1/126  dg=0  weighted=0
+  (1, 2) -> (1,)  mass=1/126  dg=5/18  weighted=5/2268
+  (5, 6) -> (6,)  mass=3/392  dg=5/18  weighted=5/2352
+  (1,) -> ()  mass=3/392  dg=13/18  weighted=13/2352
+  (6,) -> (5,)  mass=1/147  dg=0  weighted=0
+
+One-gap near-AP envelope for k=9
+  E(L,s)={0..L-1} union {L-1+s..L-1+s+8-L}, s>=2
+  For each s, the table shows the best primitive L.
+  gap   best_L   best_L_y                    best row
+    2        8                38681/79380   (0, 1, 2, 3, 4, 5, 6, 7, 9)  <== global
+    3        8                12419/26460   (0, 1, 2, 3, 4, 5, 6, 7, 10)
+    4        8                31651/72765   (0, 1, 2, 3, 4, 5, 6, 7, 11)
+    5        8                   691/1512   (0, 1, 2, 3, 4, 5, 6, 7, 12)
+    6        8                10931/24570   (0, 1, 2, 3, 4, 5, 6, 7, 13)
+    7        8                11849/26460   (0, 1, 2, 3, 4, 5, 6, 7, 14)
+    8        8                    229/540   (0, 1, 2, 3, 4, 5, 6, 7, 15)
+    9        8                  3319/7560   (0, 1, 2, 3, 4, 5, 6, 7, 16)
+   10        8              200773/449820   (0, 1, 2, 3, 4, 5, 6, 7, 17)
+   11        8                17981/39690   (0, 1, 2, 3, 4, 5, 6, 7, 18)
+   12        8              223927/502740   (0, 1, 2, 3, 4, 5, 6, 7, 19)
+   13        8                  2561/5880   (0, 1, 2, 3, 4, 5, 6, 7, 20)
+   14        8                  1349/2940   (0, 1, 2, 3, 4, 5, 6, 7, 21)
+   15        8                 4911/10780   (0, 1, 2, 3, 4, 5, 6, 7, 22)
+   16        8               89329/202860   (0, 1, 2, 3, 4, 5, 6, 7, 23)
+   17        8               46219/105840   (0, 1, 2, 3, 4, 5, 6, 7, 24)
+   18        8                14767/33075   (0, 1, 2, 3, 4, 5, 6, 7, 25)
+   19        8               52159/114660   (0, 1, 2, 3, 4, 5, 6, 7, 26)
+   20        8                26573/59535   (0, 1, 2, 3, 4, 5, 6, 7, 27)
+   21        8                 4673/10584   (0, 1, 2, 3, 4, 5, 6, 7, 28)
+   22        8               57821/127890   (0, 1, 2, 3, 4, 5, 6, 7, 29)
+   23        8                  2381/5292   (0, 1, 2, 3, 4, 5, 6, 7, 30)
+   24        8               91268/205065   (0, 1, 2, 3, 4, 5, 6, 7, 31)
+   25        8                11561/26460   (0, 1, 2, 3, 4, 5, 6, 7, 32)
+   26        8                32539/72765   (0, 1, 2, 3, 4, 5, 6, 7, 33)
+   27        8              100957/224910   (0, 1, 2, 3, 4, 5, 6, 7, 34)
+   28        8                 5941/13230   (0, 1, 2, 3, 4, 5, 6, 7, 35)
+   29        8                    139/315   (0, 1, 2, 3, 4, 5, 6, 7, 36)
+   30        8              144439/326340   (0, 1, 2, 3, 4, 5, 6, 7, 37)
+
+global best through gap 30: gap=2, L=8, E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  L_y=38681/79380 = 0.487288990
+  cap_9-L_y=39541/5675670 = 0.006966755
+
+Tournament Analysis
+  vertices are proof obligations / quotients, not runners.
+  pairwise observable: which quotient supplies a usable bound earlier in the proof.
+  switch: A beats B if A preserves the k=9 L_y transfer while discarding more geometry.
+  Hamiltonian path: wall_transfer_pairing > endpoint_defect_dominance > single_gap_s2_bound > Freiman_3k4_finite_pocket > spread_GAP_tail > raw_relation_rank
+  score_histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3_cycles: 0
+  SCC_sizes: [1, 1, 1, 1, 1, 1]
+  Hamiltonian_path_count: 1
+
+Assumption challenge
+  Considered vertices: runners, gaps, wall-crossing events, missed-sector sets, residue classes, relation vectors, and proof obligations.
+  Chosen quotient: common-wall transfer of missed-sector counts. It preserves the exact L_y difference AP9-D9 and the cap margin.
+  Destroyed information: exact runner labels inside intervals and high-height relation tails. This is intentional; HYP-2636/HYP-2633 still own those tails.
+  Challenged assumption: raw relation rank should scale the correction. Here AP9 and D9 both have saturated short-rank, but the wall-transfer mass creates the razor-thin drop.
