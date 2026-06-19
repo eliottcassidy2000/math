@@ -1,0 +1,168 @@
+
+========================================================================================
+LRC(14) SUPPORT-6 RESIDUE/CUSP SCOUT S12
+========================================================================================
+Goal: explain why the signed support-6 layer is tiny after the absolute
+Minkowski count remains huge: expose residue-address and boundary-cusp cancellation.
+
+========================================================================================
+RECIPROCAL RESIDUE IDENTITY
+========================================================================================
+Checked K(n,0,...)=C_d(n mod 7)/prod(n_i) on 320 random six-support vectors; worst error 2.948e-23.
+Proof use: the six-support tail is not a free harmonic product; it is a finite family of residue-addressed reciprocal sums on relation hyperplanes.
+
+========================================================================================
+RAW RESIDUE MARGINAL GUARDRAIL
+========================================================================================
+Testing the tempting stronger claim sum_{r_i} C_d(r)=0.  It is false; cancellation must use the relation hyperplane and finite wall split.
+ambient d    worst one-coordinate marginal
+        6                   0.384780076212
+        7                   0.193862704055
+        8                   0.107446514548
+        9                  0.0637696095737
+
+========================================================================================
+CASE: AP core support in E={0..7}
+========================================================================================
+support values=(1, 2, 3, 4, 5, 6)  ambient nonzero-offset dimension d=7  Hmax=28
+
+Cumulative exact signed support-6 reciprocal sum
+   H    relations               signed           absK   abs/signed
+   4         3778 0.012506396+1.5e-17j    0.098308015      7.86062
+   8        64144 0.018497666+1.6e-17j     0.23118491      12.4981
+  12       612606 0.024907731+8.3e-18j     0.46436579      18.6434
+  16      2037640 0.026482407+1.8e-17j     0.55551336      20.9767
+  20      7196084 0.029701666+5.6e-17j      0.7283195      24.5212
+  24     15484704 0.030488193+5.5e-17j     0.82486388      27.0552
+  28     30280404 0.031660778+7.2e-17j     0.92027507      29.0667
+
+Boundary-face split on the last nonempty shell h=27
+touch    relations               signed           absK   abs/signed
+    1      5291542 8.0978266e-05+2.6e-18j    0.016388845      202.386
+    2       521520 -2.4016997e-06-3.9e-21j  0.00022789434      94.8888
+    3        25778 -1.677269e-07-1.1e-21j  1.9031636e-06      11.3468
+    4          792 2.85936e-09+1.9e-23j  1.0481412e-08      3.66565
+    5            4 -1.9999824e-12+7.9e-27j  5.0714027e-12      2.53572
+    6            0                 0+0j              0          inf
+
+Reading: a large abs/signed ratio means the volume/envelope count is seeing coordinate-boundary mass that the exact six-sector kernel almost cancels.
+
+========================================================================================
+CASE: resonant one-stranger support in E={0..6,21}
+========================================================================================
+support values=(1, 2, 3, 4, 5, 21)  ambient nonzero-offset dimension d=7  Hmax=28
+
+Cumulative exact signed support-6 reciprocal sum
+   H    relations               signed           absK   abs/signed
+   4          952 -0.00082950994-3.1e-18j    0.024379473      29.3902
+   8        19764 -0.00098594154-5.1e-18j     0.07372199      74.7732
+  12       208524 -0.0013166606-9.5e-18j     0.20159142      153.108
+  16       702702 -0.0019323885-1.2e-17j     0.26061464      134.867
+  20      2464304 -0.0017991921-1.6e-17j     0.37564643      208.786
+  24      5330220 -0.001854806-1.6e-17j     0.44214574      238.378
+  28     10393182 -0.0023428527-2e-17j     0.50843422      217.015
+
+Boundary-face split on the last nonempty shell h=27
+touch    relations               signed           absK   abs/signed
+    1      1825394 -3.3700533e-06-2.3e-18j    0.011743423      3484.64
+    2       159086 4.6800606e-06-5.5e-21j  0.00014646453      31.2954
+    3         6734 -2.049462e-08+2.4e-22j  1.0076936e-06      49.1687
+    4          204 3.5717872e-11+1.5e-24j  4.3261321e-09       121.12
+    5            4 3.6736427e-12+4.8e-27j  8.1338984e-12      2.21412
+    6            0                 0+0j              0          inf
+
+Reading: a large abs/signed ratio means the volume/envelope count is seeing coordinate-boundary mass that the exact six-sector kernel almost cancels.
+
+========================================================================================
+CASE: dissociated one-stranger support in E={0..6,211}
+========================================================================================
+support values=(2, 3, 4, 5, 6, 211)  ambient nonzero-offset dimension d=7  Hmax=34
+
+Cumulative exact signed support-6 reciprocal sum
+   H    relations               signed           absK   abs/signed
+   4            0                 0+0j              0          inf
+   8            0                 0+0j              0          inf
+  12          202 -5.0302566e-07-2.3e-21j   4.449663e-06       8.8458
+  16         9344 4.2093191e-06+1.9e-20j  0.00018152205      43.1239
+  20        85786 6.0275395e-05+3e-19j   0.0023679885      39.2862
+  24       249126 1.0976111e-05+1.4e-19j   0.0061601072      561.229
+  28       573270 -3.8792693e-05+2.4e-19j    0.011594456      298.882
+  34      2139790 -0.0004550174-1.6e-18j    0.026510519      58.2626
+
+Boundary-face split on the last nonempty shell h=34
+touch    relations               signed           absK   abs/signed
+    1       353652 -0.00016401117-8.3e-19j    0.002185268      13.3239
+    2        24300 -2.662005e-07+2.6e-22j  2.2103758e-05      83.0342
+    3          866 3.9811628e-08+1.4e-22j   1.423198e-07      3.57483
+    4            8 -8.7881487e-11-4.4e-25j  1.2355879e-10      1.40597
+    5            0                 0+0j              0          inf
+    6            0                 0+0j              0          inf
+
+Reading: a large abs/signed ratio means the volume/envelope count is seeing coordinate-boundary mass that the exact six-sector kernel almost cancels.
+
+========================================================================================
+CASE: k=9 sampled wide support in E={0..7,68}
+========================================================================================
+support values=(2, 3, 4, 5, 6, 68)  ambient nonzero-offset dimension d=8  Hmax=30
+
+Cumulative exact signed support-6 reciprocal sum
+   H    relations               signed           absK   abs/signed
+   4           24 8.2690492e-06+2.7e-20j  0.00017578372       21.258
+   8         3434 -0.00016459761-4.9e-19j    0.003474409      21.1085
+  12        48260 7.6558275e-05+2.2e-18j    0.020872339      272.633
+  16       180028 -0.00019497974+6.8e-19j    0.032516034      166.766
+  20       688506 0.00014940443+2.6e-18j    0.056754911      379.874
+  24      1555630 0.0002233387+2.5e-18j     0.07261684      325.142
+  30      4705272 8.9412031e-05+2.6e-18j     0.10003033      1118.76
+
+Boundary-face split on the last nonempty shell h=30
+touch    relations               signed           absK   abs/signed
+    1       783346 0.00015362056+7.5e-19j   0.0053465141      34.8034
+    2        68246 3.3607167e-06+2e-20j  0.00012562476      37.3803
+    3         3110 -8.3802377e-08-3.7e-22j  1.6743259e-06      19.9795
+    4           90 1.9544032e-09+2.9e-24j  1.3670856e-08       6.9949
+    5            0                 0+0j              0          inf
+    6            0                 0+0j              0          inf
+
+Reading: a large abs/signed ratio means the volume/envelope count is seeing coordinate-boundary mass that the exact six-sector kernel almost cancels.
+
+========================================================================================
+CASE: k=10 height-one wall support in E={0..8,22}
+========================================================================================
+support values=(1, 2, 4, 7, 8, 22)  ambient nonzero-offset dimension d=9  Hmax=24
+
+Cumulative exact signed support-6 reciprocal sum
+   H    relations               signed           absK   abs/signed
+   4         1098 9.3396448e-05-2.4e-18j    0.010060483      107.718
+   8        21090 0.00051731292-3.5e-19j    0.025574796      49.4378
+  12       201708 0.00045620461-5.1e-19j    0.060469559      132.549
+  16       669272 0.00024274185-1.4e-18j    0.075143962      309.563
+  20      2353836 0.00038354218-1.1e-18j     0.10206808       266.12
+  24      5100812 0.00026263531-1.1e-18j     0.11756319      447.629
+
+Boundary-face split on the last nonempty shell h=24
+touch    relations               signed           absK   abs/signed
+    1       996976 -5.9041428e-05-4e-19j   0.0066558638      112.732
+    2       109826 -4.4906781e-07+3.7e-21j  0.00022174578      493.791
+    3         6494 2.5545061e-07+2.1e-21j  4.7333013e-06      18.5292
+    4          208 1.3251288e-08+8.9e-23j  7.7192875e-08      5.82531
+    5            0                 0+0j              0          inf
+    6            2 -7.4932834e-11-2e-25j  1.2018293e-10      1.60388
+
+Reading: a large abs/signed ratio means the volume/envelope count is seeing coordinate-boundary mass that the exact six-sector kernel almost cancels.
+
+========================================================================================
+TOURNAMENT ANALYSIS: PROOF-OBLIGATION QUOTIENTS
+========================================================================================
+Hamiltonian proof path: ['boundary_face_cancellation', 'signed_reciprocal_shell', 'low_height_wall_ledger', 'cluster_translation_quotient', 'residue_permanent_constant', 'coupled_absolute_hyperplane', 'free_product_envelope']
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+edge flips against the coarse old route order: 16
+Assumption challenged: vertices are not runners, arcs, or speeds.  They are quotients of the support-6 proof obligation: residue classes, boundary faces, low-height walls, and cluster translations.  This preserves the LRC predicate 'wide support-6 correction below cap margin' while destroying witness-time geometry.
+
+========================================================================================
+S12 READING
+========================================================================================
+1. Exact support-6 terms factor into a residue/address coordinate and a reciprocal denominator.  That turns the missing tail from a volume count into a Dedekind/cotangent-style signed reciprocal sum.
+2. The absolute relation count is dominated by max-norm boundary faces.  Those are precisely the coordinate cusps where a lower-support shadow would live; THM-538 predicts cancellation there, and the shell ledgers show huge abs/signed ratios on the sampled hard supports.
+3. A cleaner finishing lemma is now visible: after the finite low-height wall ledger, prove a boundary-face annihilation / summation-by-parts bound for the residue reciprocal hyperplane sums.  This is sharper than a bare Minkowski second-theorem count and explains why S11's signed layer is small.
+4. LRC(14) remains unproved in this file.  The progress is a more exact target for HYP-2608(a): residue-addressed signed theta tails with all proper boundary faces killed by the support-6 floor.
