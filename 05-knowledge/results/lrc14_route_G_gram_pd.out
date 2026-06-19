@@ -1,0 +1,35 @@
+======================================================================
+(G1) Single-runner Toeplitz kernel K[i][j] = h(i-j), N x N
+     = Gram of translated 1_safe; PSD by Bochner (hat h = 1_safe >= 0).
+======================================================================
+  N= 5: min eig=+0.371217  max eig=1.000000  PSD:True
+  N= 8: min eig=+0.157609  max eig=1.000000  PSD:True
+  N=12: min eig=+0.039349  max eig=1.000000  PSD:True
+  N=16: min eig=+0.008250  max eig=1.000000  PSD:True
+  N=20: min eig=+0.001586  max eig=1.000000  PSD:True
+  N=28: min eig=+0.000052  max eig=1.000000  PSD:True
+  EXPECTED: min eig -> ess-inf(1_safe) = 0 (1_safe vanishes on the danger band).
+  => G1 is only PSD; its floor is 0. The Toeplitz min-eig is NOT the lonely floor.
+
+======================================================================
+(G3) Relation-lattice correction matrix M[i][j] = h(n_i - n_j)
+     over a finite set of frequencies. PD? min eig as a 'floor'?
+======================================================================
+  core {1..13}\{6}u{56}: |freqs|=61, min eig=+0.000004, PD:True
+  generic Sidon-ish: |freqs|=71, min eig=+0.022927, PD:True
+  AP {1..13}: |freqs|=55, min eig=+0.000004, PD:True
+  (h(n_i-n_j) is a principal submatrix of the infinite Toeplitz => same spectral
+   floor issue: it is PSD (Bochner) but min eig -> 0; no positive floor.)
+
+======================================================================
+(G2) Lonely measure L = ||g||^2, g = prod 1_safe(v_i tau).
+     Cauchy-Schwarz / Gram lower bound: L = <g,1>^2 / ... no. Try L >= |<g,phi>|^2/||phi||^2
+     for a fixed positive test function phi. This is a one-dim Gram (Cauchy-Schwarz)
+     lower bound. The BEST phi is phi=g, recovering L (circular). A FIXED phi gives
+     a computable but possibly-zero lower bound.
+======================================================================
+  L(core) ~ 0.00560
+  L(generic) ~ 0.14090
+  L(AP{1..13}) ~ 0.00000
+  (these confirm L>0 numerically; Cauchy-Schwarz with a FIXED phi cannot certify
+   uniformity without first localizing the safe arc -- the same crux.)
