@@ -451,6 +451,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 
 | `lrc14_integer_sequence_carriers_codex.py` | [STORED] | Integer-sequence carrier for HYP-2597's universal denominator-cap centers. Proves/classifies that `1/2` survives `G_P` iff `P` is all odd, and `1/3,2/3` survive iff `P` has no multiple of `3`. Survivor count by `s=|P|` is `C(7,s)+C(9,s)-C(5,s)=1,11,47,109,156,146,91,37,9,1,0,0,0,0`; complement is the mixed parity/triadic residual. For `R=max(E)>=4`, all-odd gives reservoir coefficient `3/(14R)`, 3-free gives `2/(21R)`, both gives `13/(42R)`. Conservative-window scans stabilize to the survivor sequence by large spread; named hard rows classify as mixed or 3-free as expected. Supports HYP-2598 and refines the HYP-2595/OPEN-Q-108 split. | `lrc14_integer_sequence_carriers_codex.out` |
 
+| `lrc14_subtorus_relation_lattice_codex.py` | [STORED] | Subtorus relation-lattice scout for the LRC14 S3 pure floor. Uses the affine relation lattice `Lambda_aff(E)={n: sum n_i=0, sum n_i e_i=0}` and scans `9373` exact primitive shapes for `k=5..8`, `max(E)<=14`. Low-`mu` rows are short-relation-rich: k=7 minimum `E=(0,2,3,4,5,6,8)` has `25` short support-3 and `100` short support-4 relations; k=8 minima have five-point runs and `29/164` short relation counts. Relation observables predict the negative correction `F(k)-mu(E)` better than raw spread: Tournament Analysis is transitive `triple_decay > small_triples > additive_quad > inverse_spread > run_mass > max_run > spread`, with no directed 3-cycles and one Hamiltonian path. Supports HYP-2599 and reframes the spread bound as a relation-height split. | `lrc14_subtorus_relation_lattice_codex.out` |
+
 ## Convention for new scripts
 
 1. Save the script in `04-computation/`
