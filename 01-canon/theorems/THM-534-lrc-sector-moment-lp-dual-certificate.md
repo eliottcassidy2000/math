@@ -66,9 +66,18 @@ polynomial majorant of the indicator `1[t=0]` on the lattice `{0,…,6}`.
   margin_8=0.357`). The dual bound is tight enough: `L_y(consec_8)=2633/7350≈0.3582 <
   cap_8≈0.3815`.
 - **Consec certified, all k: VERIFIED exact.** `L_y(consec_k) ≤ cap_k`, k=8..13.
-- **Consec maximizes the scalar `L_y(E)`: VERIFIED** over the bounded-spread window
-  (k=8: 11440 sets spread≤16, ZERO over cap and ZERO over consec). [k=9..13 sweep results
-  to be filled from lrc14_sector_fast_Jall_s7.out.]
+- **Consec maximizes the scalar `L_y(E)` for the dangerous rows k=8,9,10: VERIFIED.**
+  bounded-spread sweep, ZERO over consec and ZERO over cap:
+  - k=8: 11440 sets (spread≤16), max L_y = L_y(consec) = 2633/7350 ≈ 0.3582 < cap 0.3815.
+  - k=9: 6435 sets (spread≤15), max = consec = 0.49288 < cap 0.49426 (TIGHTEST row, margin 0.0014).
+  - k=10: 2002 sets (spread≤14), max = consec = 0.57008 < cap 0.60440.
+- **k=11,12,13: consec does NOT maximize L_y (AP-beaters exist) but HARMLESSLY** — every
+  beater is still far below cap (k=11 max 0.6912 < cap 0.7253; k=12 max 0.7330 < cap 0.8571).
+  This mirrors HYP-2604's behavior for meas(S7) itself: the clean extremality lemma holds
+  exactly on the dangerous rows and fails only where the cap slack is large.
+- **Adversarial wide-spread stress (random, spread up to 120, 500 sets/row, k=8..13):
+  ZERO sets with L_y(E) > cap_k.** The proved per-E bound never breaches the cap on any
+  tested shape, narrow or wide.
 
 ## The one remaining piece (HONEST)
 

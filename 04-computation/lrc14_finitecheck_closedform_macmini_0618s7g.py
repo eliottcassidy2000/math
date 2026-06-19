@@ -107,7 +107,10 @@ for k in range(8,14):
 print(f"\n   ALL k=8..13 PASS: {allok}")
 
 # Piece 5: closed form Phi(c,k)=c/(k-1) for c<=1/2 (single-arc), the provable building block
-print("\n[5] BUILDING BLOCK  Phi(L/7,k) := meas{orbit in [0,L/7)} = L/(7(k-1)) for L/7<=1/2 (L<=3):")
+print("\n[5] BUILDING BLOCK (PROVED)  Phi(c,k) := meas{x: orbit {frac(ix):i<k} in [0,c)} = c/(k-1) for c<=1/2.")
+print("    Proof: support is EXACTLY [0, c/(k-1)).  (a) x<c/(k-1) => ix<(k-1)x<c<=1/2<1 => frac(ix)=ix<c.")
+print("    (b) x in [c/(k-1),c): i*=ceil(c/x)<=k-1, i*x in [c,2c)subset[c,1) => frac=i*x>=c, fail.")
+print("    (c) x>=c: frac(x)=x>=c fail.  So meas = c/(k-1).  Gives the IE L=1,2,3 terms = L/(7(k-1)).")
 def phi_arc(c,k):
     bps=set([F(0),F(1)])
     for i in range(1,k):
@@ -123,9 +126,27 @@ def phi_arc(c,k):
         if all((i*xm)%1<c for i in range(0,k)): tot+=x1-x0
     return tot
 ok=True
+for k in range(3,30):
+    for cnum in range(1,50):
+        c=F(cnum,100)
+        if c>F(1,2): continue
+        if phi_arc(c,k)!=c/(k-1): ok=False; print(f"   MISMATCH k={k} c={c}")
+print(f"   VERIFIED Phi(c,k)=c/(k-1) for all c<=1/2, k=3..29: {ok}")
+
+# Piece 6: the CLEAN PROVED CHAIN for k>=11 via pair-Bonferroni (valid inequality, terms = sector-avoid measures)
+print("\n[6] PAIR-BONFERRONI closes k>=11 ANALYTICALLY (no true-cap needed):")
+print("    meas(S7) <= 1 - meas(A_a) - meas(A_b) + meas(A_a cap A_b) for ANY pair (a,b) [Bonferroni].")
+print("    With (a,b)=(1,6) this UB < (k-6)/7 <= cap_k for k=11,12,13:")
+for k in [11,12,13]:
+    a,b=1,6
+    ub = 1 - meas_avoid({a},k) - meas_avoid({b},k) + meas_avoid({a,b},k)
+    sub=F(k-6,7)
+    print(f"    k={k}: UB(1,6)={ub}={float(ub):.5f} < (k-6)/7={float(sub):.5f}: {ub<sub}")
+print("\n  => RESIDUAL genuinely-tight finite checks reduce to EXACTLY k=8,9,10 (3 rational facts).")
+
+# Piece 7: the cap_k minimizer family closed structure
+print("\n[7] cap_k MINIMIZER family (exhaustively verified): {1} U {top consecutive cluster}, except k=8:")
 for k in range(8,14):
-    for L in [1,2,3]:
-        lhs=phi_arc(F(L,7),k); rhs=F(L,7*(k-1))
-        if lhs!=rhs: ok=False; print(f"   MISMATCH k={k} L={L}: {lhs} != {rhs}")
-print(f"   Phi(L/7,k)=L/(7(k-1)) for L=1,2,3, k=8..13: {ok}")
+    print(f"    k={k}: P*={CAP_P[k]}  meas(G_P*)={measGP(CAP_P[k])}")
+print("    Note: cap_12=6/7=1-1/7, cap_13=1 (subadditive bound is TIGHT here, single/zero speed).")
 print("\nDONE.")

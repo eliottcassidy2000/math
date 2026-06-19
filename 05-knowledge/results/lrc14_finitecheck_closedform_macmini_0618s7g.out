@@ -34,7 +34,28 @@ ANGLE G — analytic finite check: meas(S7(consec_k)) < cap_k for k=8..13
 
    ALL k=8..13 PASS: True
 
-[5] BUILDING BLOCK  Phi(L/7,k) := meas{orbit in [0,L/7)} = L/(7(k-1)) for L/7<=1/2 (L<=3):
-   Phi(L/7,k)=L/(7(k-1)) for L=1,2,3, k=8..13: True
+[5] BUILDING BLOCK (PROVED)  Phi(c,k) := meas{x: orbit {frac(ix):i<k} in [0,c)} = c/(k-1) for c<=1/2.
+    Proof: support is EXACTLY [0, c/(k-1)).  (a) x<c/(k-1) => ix<(k-1)x<c<=1/2<1 => frac(ix)=ix<c.
+    (b) x in [c/(k-1),c): i*=ceil(c/x)<=k-1, i*x in [c,2c)subset[c,1) => frac=i*x>=c, fail.
+    (c) x>=c: frac(x)=x>=c fail.  So meas = c/(k-1).  Gives the IE L=1,2,3 terms = L/(7(k-1)).
+   VERIFIED Phi(c,k)=c/(k-1) for all c<=1/2, k=3..29: True
+
+[6] PAIR-BONFERRONI closes k>=11 ANALYTICALLY (no true-cap needed):
+    meas(S7) <= 1 - meas(A_a) - meas(A_b) + meas(A_a cap A_b) for ANY pair (a,b) [Bonferroni].
+    With (a,b)=(1,6) this UB < (k-6)/7 <= cap_k for k=11,12,13:
+    k=11: UB(1,6)=2881/4410=0.65329 < (k-6)/7=0.71429: True
+    k=12: UB(1,6)=27155/38808=0.69973 < (k-6)/7=0.85714: True
+    k=13: UB(1,6)=6995/9702=0.72099 < (k-6)/7=1.00000: True
+
+  => RESIDUAL genuinely-tight finite checks reduce to EXACTLY k=8,9,10 (3 rational facts).
+
+[7] cap_k MINIMIZER family (exhaustively verified): {1} U {top consecutive cluster}, except k=8:
+    k=8: P*=[1, 5, 7, 8, 9]  meas(G_P*)=2243/5880
+    k=9: P*=[1, 11, 12, 13]  meas(G_P*)=1979/4004
+    k=10: P*=[1, 12, 13]  meas(G_P*)=55/91
+    k=11: P*=[1, 13]  meas(G_P*)=66/91
+    k=12: P*=[1]  meas(G_P*)=6/7
+    k=13: P*=[]  meas(G_P*)=1
+    Note: cap_12=6/7=1-1/7, cap_13=1 (subadditive bound is TIGHT here, single/zero speed).
 
 DONE.
