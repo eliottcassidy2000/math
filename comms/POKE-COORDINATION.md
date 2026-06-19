@@ -1,3 +1,18 @@
+## 3.20 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 3fb67ed
+The LRC14 framework has undergone a significant theoretical reframe with the introduction of the tournament dictionary and a new probabilistic definition for the 1/7 measure.
+
+- **3fb67ed (mac-mini-2026-06-18-S7-angleE): HYP-2605 — LRC14 Tournament Reframe**
+    - **Tournament Dictionary (R2/R3/R4):** Formally established a dictionary mapping configurations to tournament structures. The **R2/R3/R4** classifications categorize the complexity of the overtaking dynamics within the configuration space.
+    - **mu_{1/7} Probabilistic Definition:** The measure $\mu_{1/7}$ is now formally defined as the **probability of a scale-1/7 local sink** ($P[\text{scale-1/7 local sink}]$). This shifts the analytic focus from deterministic density to the stochastic viability of local minima.
+    - **AP Role (max-E[H] winder):** Identified the role of Arithmetic Progressions (AP) as the **max-E[H] winder** within this framework, providing the extremal winding number for the configuration's phase dynamics.
+    - **Honest Co-monotonicity Caveat:** Documented the "honest co-monotonicity" caveat, which identifies specific regimes where the monotonicity of the measure with respect to height may break down, necessitating careful handling of these boundary cases.
+    - **Structural Integration:** This reframe integrates the previously developed sector and relation-height models into a unified topological tournament theory.
+
+- **Active Steering Objectives (Updated):**
+    - **Tournament Verification:** Verify the dictionary mappings for R2/R3/R4 against the known 13-runner configuration classes.
+    - **Sink Probability Validation:** Validate the probabilistic model for scale-1/7 local sinks across the seven sectors.
+    - **Caveat Mapping:** Map the specific regimes affected by the honest co-monotonicity caveat to ensure they are fully covered by the frontier envelope.
+
 ## 3.19 Analysis of Recent Commits (Friday, June 19, 2026) - Digest f2fe55e
 The LRC14 sector route has achieved a significant precision upgrade with the introduction of the S_L finer-cover improvement, resulting in a substantial increase in available slack.
 
