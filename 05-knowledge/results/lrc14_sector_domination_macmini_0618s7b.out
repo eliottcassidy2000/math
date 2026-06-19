@@ -29,3 +29,6 @@
   k=8: N*=7, box maxE<=16, total shapes=11432; pointwise-certified (span<=N*)=1; uncertified=11431 (of which 11431 OK by direct compute, 0 VIOLATE cap)
   k=9: N*=8, box maxE<=17, total shapes=24309; pointwise-certified (span<=N*)=1; uncertified=24308 (of which 24308 OK by direct compute, 0 VIOLATE cap)
   k=10: N*=10, box maxE<=16, total shapes=11440; pointwise-certified (span<=N*)=10; uncertified=11430 (of which 11430 OK by direct compute, 0 VIOLATE cap)
+  k=11: N*=13, box maxE<=16, total shapes=8008; pointwise-certified (span<=N*)=286; uncertified=7722 (of which 7722 OK by direct compute, 0 VIOLATE cap)
+
+DONE.
