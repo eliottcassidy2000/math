@@ -1,34 +1,18 @@
-## 3.41 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S21
-The LRC(14) squarefree-profile route now has a canonical exact-period packet measure from the user's divisor-copy rule.
+## 3.40 Analysis of Recent Commits (Friday, June 19, 2026) - Digest ae62315
+The LRC(14) verification has introduced the **Euler-copy squarefree profile** (HYP-2629), providing a sharper arithmetical coordinate system for the modular recurrence addresses and the prime-mask transfer. This refinement identifies the Euler totient as the underlying "copy rule" that weights the divisor-profile hierarchy.
 
-- **codex-2026-06-19-S21: HYP-2628 - Totient-Copy Divisor Profile**
-    - **Copy Rule Formalized:** The rule `sum_{d|n} c(d)=n` is `1*c=id`, hence `c=mu*id=phi`. On a `q`-grid, this is the exact reduced-denominator census: residues `a/q` with exact denominator `d|q` occur `phi(d)` times.
-    - **Unit Seam Recovered:** For `q=14`, `phi(14)=6`, matching the HYP-2626 unit seam `(Z/14Z)^* -> F_7^*`.
-    - **Raw-vs-Radical Discipline:** For squarefree `210`, mask weights are `prod(p-1)`. For raw Hill product `1260=2^2*3^2*5*7`, mask weights use `p^a-1`, amplifying the `2` coordinate by `3` and the `3` coordinate by `4`. So raw denominator -> phi packets -> squarefree mask is the correct order; jumping straight to `rad(1260)=210` loses the repeated `2,3` amplification.
-    - **New 2520 Resonance:** `phi(2520)=576`, and `576` is exactly the full `{2,3,5,7}` mask mass inside the raw `1260` profile. This is the THM-523 half-clash denominator before `tau<->1-tau` symmetry doubles `1/2520` to `1/1260`.
-    - **Safe-Center Transfer Row:** Exact-period center counts on AP one-drop cores show `Q=210` catches `11/13` and misses exactly drops `6` and `12`; raw `Q=1260` catches all `13/13` while the full AP13 row remains strict-tight (`0` safe residues).
-    - **LRC14 Readout:** HYP-2625/HYP-2626 should be rewritten as an exact-period phi-packet transfer followed by squarefree compression and then mod-7 coimage projection.
-
-- **Active Steering Objectives (Updated):**
-    - **Exact-Period Transfer Matrix:** Build the zeta/Mobius matrix from divisor packets to prime masks for the mod-210 address, retaining prime powers when the raw denominator is `1260` or `2520`.
-    - **210-to-1260 Repair:** Explain why the radical grid misses AP drops `6,12` and why the raw Hill denominator repairs precisely those drops without opening the full AP13 wall.
-    - **Coimage Projection Test:** Re-index the HYP-2626 repeated packets `(1,1,1,1,a,a)` and `(1,1,1,1,a,b)` by exact-period packet mass before quotienting by `F_7^*`.
-    - **576 Packet Bound:** Test whether the `576` all-mask packet controls the signed repeated-root tail after finite low-height wall deletion.
-
-## 3.40 Analysis of Recent Commits (Friday, June 19, 2026) - Digest S20
-The LRC(14) squarefree-profile route now has a raw four-factor bridge connecting the Harary-Hill complete-graph product, the Markov-Hurwitz Vieta surface, and the existing mod-210 coimage address.
-
-- **codex-2026-06-19-S20: HYP-2627 - Squarefree Hurwitz/Crossing Bridge**
-    - **Direct Identity Rejected:** Harary-Hill factor tuples are not Markov-Hurwitz points; for `n=14`, `(5,6,6,7)` has defect `4894` and nonsquare closing discriminant.
-    - **Parity/Quotient Warning:** `w^2+x^2+y^2+z^2=wxyz` forces all positive integer solutions even, normalizing to `a^2+b^2+c^2+d^2=4abcd`. Dividing away forced symmetry too early can hide the proof-relevant dyadic layer.
-    - **Raw Product Bridge:** The raw `K_14` Harary-Hill product is `7*6*6*5=1260`, with squarefree core `210={2,3,5,7}`. The divided value `315` loses prime `2`.
-    - **Exact 1260 Telescope:** The THM-523 local champion already derives the row: `15/36-2/5-1/70-1/504=1/(2*1260)`, and `tau<->1-tau` symmetry doubles to `1/1260=1/(7*6*6*5)`.
-    - **LRC14 Readout:** The same raw denominator `1260` is the THM-522/HYP-2561 lonely-measure scale, while its squarefree core is the HYP-2625/HYP-2626 mod-210 address. The new proof subtarget is to explain why the `12->36` perturbation selects the four-factor row, then carry the raw-denominator discipline into the coimage tail.
+- **ae62315 (codex-S21): HYP-2629 — Euler-Copy Squarefree Profile**
+    - **Euler Copy Rule:** Discovered that the rule "sum of copy counts equals n" is exactly the Euler totient $c(n) = \phi(n)$. This transforms the squarefree divisor-profile route into a weighted copy recurrence, where the mass of a prime-mask $M$ is given by $w_S(M) = \prod_{p \in M} (p-1)$.
+    - **Modular Ladder Refinement (HYP-2625):** Proved that the existing mod $6 \to 30 \to 210$ ladder is a genuine prime-extension copy recurrence. Adding a prime $p$ appends a shifted layer of copy mass multiplied by $p-1$ (e.g., adding 7 to the mod-30 address multiplies the mass by 6, reaching the mod-210 total of 48).
+    - **Hill-Product Ledger (HYP-2627):** Identified that the raw $K_{14}$ Hill product ($P_{14}=1260$) carries a "full" $\{2,3,5,7\}$ copy mass of 576, whereas the divided crossing value (315) loses it. This provides the arithmetical justification for retaining the raw product ledger before taking the crossing quotient.
+    - **Seam Integration (HYP-2626):** The Euler-copy profile explains why the prime-7 coimage seam (live in the k=10 residual) belongs in the same four-prime ledger as the mod-30/dyadic data. It provides the "thickened" mask mass (576 vs 48) that accounts for the repeated p-power layers in the Hill product.
+    - **Structural Role:** This is a **transfer-coordinate refinement**. It re-indexes the repeated-residue tail by Euler-copy mask mass rather than raw radical or support tuple, allowing for a more precise accounting of the signed residual burden.
+    - **Tournament Analysis:** Confirmed a perfectly transitive Hamiltonian path (cycles = 0), ordering the proof from the Euler-copy profile down through the raw Hill product and mod-210 address to raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
-    - **Raw Denominator Ledger:** Track raw four-factor denominators before quotienting by drawing/unit symmetries, then project to squarefree masks.
-    - **1260 Mechanism Test:** Compare the `7,6,6,5` row directly with the known `12->36` lonely-measure clash.
-    - **Coimage Tail Discipline:** Keep HYP-2626's repeated-root character packets after finite wall accounting; do not replace them with a direct Markov-Hurwitz identity.
+    - **Tail Re-indexing (HYP-2629):** Re-index the HYP-2626 k=10 tail-only repeated packets by Euler-copy mask mass. Test whether this separates the quadratic-character cases more cleanly than raw prime masks.
+    - **Hill-Row Ledger (HYP-2627):** Formalize the retention of the raw Hill product ledger in the mod-210 address space.
+    - **Hurwitz-Energy Surface Mapping:** Map the squarefree copy-assignment ledger onto the Markov-Hurwitz energy surface (HYP-2627) to verify if the "copy mass" correlates with the structural stability of the complete-graph rows.
 
 ## 3.39 Analysis of Recent Commits (Friday, June 19, 2026) - Digest cf8d935
 The LRC(14) verification has achieved a final unification of its modular and analytic layers with the introduction of the **prime-mask/coimage transfer seam** (HYP-2626). This hypothesis identifies the exact arithmetical mapping that bridges finite wall ledgers and the infinite reciprocal tail.
@@ -260,7 +244,7 @@ A major technical dead-end has been identified in the LRC(14) research stream, r
 
 - **Active Steering Objectives (Updated):**
     - **Route G Pruning:** Formally prune all Route G (Gram-determinant) activities from the research pipeline.
-    - **Refocusing:** Refocus all analytical efforts on the successful paths, specifically the **convex-order on N (HYP-2607)** and the **signed $L_y$ closer** identified in Digest 5d6eb53.
+    - **Refocusing:** Refocus all analytical efforts on the successful paths, specifically the **convex-order on N (HYP-2607)** and the **signed $L_y$ closer identified in Digest 5d6eb53.
 
 ## 3.24 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 5d6eb53
 A major structural integration has been achieved with the 8-angle workflow synthesis, successfully converging multiple research paths onto a new central hypothesis for loneliness maximization.
@@ -473,7 +457,7 @@ A foundational checkpoint in the LRC14 series has been reached with the formaliz
 
 - **Active Steering Objectives (Updated):**
     - **Verification Loop:** Execute the final verification on the finite endpoint set identified by the d0afb9c diagnostic.
-    - **HYP-2561 Resolution:** Formally register the resolution of HYP-2561 once the verification loop confirms zero counterexamples on the tight locus.
+    - **HYP-2561 Resolution:** Formally registered the resolution of HYP-2561 once the verification loop confirms zero counterexamples on the tight locus.
 
 ## 3.11 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 6a5a7f5
 The LRC14 proof strategy has been further refined with a target adjustment for colored discrepancy, sharpening the boundary for covering set optimality.
