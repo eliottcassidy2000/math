@@ -1,0 +1,20 @@
+=== EXPLICIT B(k): far-limit gap vs bounded global max ===
+
+--- k=8 ---
+  M_8   (bounded global max)   = 0.32721  at [0, 1, 2, 3, 4, 5, 6, 7]
+  M_7 (max over (k-1)-sets)  = 0.14762  at [0, 1, 2, 3, 4, 5, 6]
+  far-limit upper bound = M_7+1/7 = 0.29048
+  cap_8 = 0.38153
+  GAP  M_8 - (M_7+1/7) = +0.03673  (far limit BELOW global max -- contraction in limit)
+
+--- k=9 ---
+  M_9   (bounded global max)   = 0.41616  at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  M_8 (max over (k-1)-sets)  = 0.32721  at [0, 1, 2, 3, 4, 5, 6, 7]
+  far-limit upper bound = M_8+1/7 = 0.47007
+  cap_9 = 0.49426
+  GAP  M_9 - (M_8+1/7) = -0.05391  (NO gap -- limit could match max!)
+
+INTERPRETATION:
+  If GAP>0, every far element contracts strictly below the bounded global
+  max in the w->inf limit. An Erdos-Turan rate |meas - LIM| <= D/w then
+  gives explicit B(k) = ceil(D / GAP): for w>B(k), meas(S7) < M_k <= cap_k.

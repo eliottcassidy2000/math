@@ -1,0 +1,69 @@
+=== WEYL LIMIT of meas(S7) under one far element ===
+
+Predicted: LIM(B0) = meas(S7)(B0) + (1/7)*P(B0 misses EXACTLY 1 sector)
+
+B0=[0, 1, 2, 3, 4, 5, 6]
+  meas(S7)(B0)=0.14762  P(exactly1 missed)=0.34286  =>  LIM=0.19660
+    w= 101: meas(S7)=0.19847   (LIM-pred 0.19660, diff +0.00187)
+    w= 211: meas(S7)=0.19535   (LIM-pred 0.19660, diff -0.00125)
+    w= 307: meas(S7)=0.19512   (LIM-pred 0.19660, diff -0.00148)
+    w= 401: meas(S7)=0.19584   (LIM-pred 0.19660, diff -0.00076)
+    w= 503: meas(S7)=0.19725   (LIM-pred 0.19660, diff +0.00065)
+    w= 601: meas(S7)=0.19643   (LIM-pred 0.19660, diff -0.00017)
+    w= 701: meas(S7)=0.19653   (LIM-pred 0.19660, diff -0.00007)
+    w= 809: meas(S7)=0.19671   (LIM-pred 0.19660, diff +0.00011)
+    w= 907: meas(S7)=0.19667   (LIM-pred 0.19660, diff +0.00007)
+    w=1009: meas(S7)=0.19644   (LIM-pred 0.19660, diff -0.00016)
+
+B0=[0, 1, 2, 3, 4, 5]
+  meas(S7)(B0)=0.00000  P(exactly1 missed)=0.26190  =>  LIM=0.03741
+    w= 101: meas(S7)=0.03812   (LIM-pred 0.03741, diff +0.00070)
+    w= 211: meas(S7)=0.03673   (LIM-pred 0.03741, diff -0.00069)
+    w= 307: meas(S7)=0.03800   (LIM-pred 0.03741, diff +0.00059)
+    w= 401: meas(S7)=0.03669   (LIM-pred 0.03741, diff -0.00072)
+    w= 503: meas(S7)=0.03853   (LIM-pred 0.03741, diff +0.00112)
+    w= 601: meas(S7)=0.03848   (LIM-pred 0.03741, diff +0.00106)
+    w= 701: meas(S7)=0.03716   (LIM-pred 0.03741, diff -0.00026)
+    w= 809: meas(S7)=0.03744   (LIM-pred 0.03741, diff +0.00002)
+    w= 907: meas(S7)=0.03755   (LIM-pred 0.03741, diff +0.00013)
+    w=1009: meas(S7)=0.03735   (LIM-pred 0.03741, diff -0.00007)
+
+B0=[0, 1, 2, 3, 4]
+  meas(S7)(B0)=0.00000  P(exactly1 missed)=0.00000  =>  LIM=0.00000
+    w= 101: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 211: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 307: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 401: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 503: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 601: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 701: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 809: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 907: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w=1009: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+
+B0=[0, 2, 3, 5, 6]
+  meas(S7)(B0)=0.00000  P(exactly1 missed)=0.00000  =>  LIM=0.00000
+    w= 101: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 211: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 307: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 401: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 503: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 601: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 701: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 809: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w= 907: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+    w=1009: meas(S7)=0.00000   (LIM-pred 0.00000, diff +0.00000)
+
+B0=[0, 1, 3, 4, 6, 7]
+  meas(S7)(B0)=0.00000  P(exactly1 missed)=0.12245  =>  LIM=0.01749
+    w= 101: meas(S7)=0.01674   (LIM-pred 0.01749, diff -0.00076)
+    w= 211: meas(S7)=0.01751   (LIM-pred 0.01749, diff +0.00001)
+    w= 307: meas(S7)=0.01779   (LIM-pred 0.01749, diff +0.00030)
+    w= 401: meas(S7)=0.01722   (LIM-pred 0.01749, diff -0.00027)
+    w= 503: meas(S7)=0.01791   (LIM-pred 0.01749, diff +0.00042)
+    w= 601: meas(S7)=0.01741   (LIM-pred 0.01749, diff -0.00008)
+    w= 701: meas(S7)=0.01794   (LIM-pred 0.01749, diff +0.00045)
+    w= 809: meas(S7)=0.01748   (LIM-pred 0.01749, diff -0.00001)
+    w= 907: meas(S7)=0.01738   (LIM-pred 0.01749, diff -0.00011)
+    w=1009: meas(S7)=0.01731   (LIM-pred 0.01749, diff -0.00018)
+

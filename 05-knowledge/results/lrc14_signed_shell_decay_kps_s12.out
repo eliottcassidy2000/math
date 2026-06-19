@@ -1,0 +1,78 @@
+LRC(14) SIGNED-QUOTIENT SHELL DECAY  (kps-S12)
+Comparing AP (consec) vs wide odd-AP set at k=8, support-6 relation lattice.
+
+=== AP8 (consec)  E=[0, 1, 2, 3, 4, 5, 6, 7]  L=3 ===
+  p0(exact)=0.327211  M7=0.024480  correction target p0-M7 = 0.302731
+  #support-6 relations |n|inf<=L : 22852
+  SIGNED partial sum  Re = -0.011046  (Im=-7.46e-18)
+  ABSOLUTE partial sum    = 1.766642   (abs/|signed| ratio = 159.9)
+  recovered fraction of target: -0.0365
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=-0.001011  abs=0.013990  abs/|sgn|=  13.8  cumSigned=-0.001011
+    shell |n|inf= 2: signed=+0.007193  abs=0.436810  abs/|sgn|=  60.7  cumSigned=+0.006181
+    shell |n|inf= 3: signed=-0.017227  abs=1.315841  abs/|sgn|=  76.4  cumSigned=-0.011046
+
+=== AP8 (consec)  E=[0, 1, 2, 3, 4, 5, 6, 7]  L=5 ===
+  p0(exact)=0.327211  M7=0.024480  correction target p0-M7 = 0.302731
+  #support-6 relations |n|inf<=L : 315096
+  SIGNED partial sum  Re = 0.018962  (Im=-1.56e-17)
+  ABSOLUTE partial sum    = 7.928552   (abs/|signed| ratio = 418.1)
+  recovered fraction of target: 0.0626
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=-0.001011  abs=0.013990  abs/|sgn|=  13.8  cumSigned=-0.001011
+    shell |n|inf= 2: signed=+0.007193  abs=0.436810  abs/|sgn|=  60.7  cumSigned=+0.006181
+    shell |n|inf= 3: signed=-0.017227  abs=1.315841  abs/|sgn|=  76.4  cumSigned=-0.011046
+    shell |n|inf= 4: signed=+0.014805  abs=2.967451  abs/|sgn|= 200.4  cumSigned=+0.003760
+    shell |n|inf= 5: signed=+0.015203  abs=3.194460  abs/|sgn|= 210.1  cumSigned=+0.018962
+
+=== AP8 (consec)  E=[0, 1, 2, 3, 4, 5, 6, 7]  L=7 ===
+  p0(exact)=0.327211  M7=0.024480  correction target p0-M7 = 0.302731
+  #support-6 relations |n|inf<=L : 801846
+  SIGNED partial sum  Re = 0.024862  (Im=1.18e-17)
+  ABSOLUTE partial sum    = 9.747926   (abs/|signed| ratio = 392.1)
+  recovered fraction of target: 0.0821
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=-0.001011  abs=0.013990  abs/|sgn|=  13.8  cumSigned=-0.001011
+    shell |n|inf= 2: signed=+0.007193  abs=0.436810  abs/|sgn|=  60.7  cumSigned=+0.006181
+    shell |n|inf= 3: signed=-0.017227  abs=1.315841  abs/|sgn|=  76.4  cumSigned=-0.011046
+    shell |n|inf= 4: signed=+0.014805  abs=2.967451  abs/|sgn|= 200.4  cumSigned=+0.003760
+    shell |n|inf= 5: signed=+0.015203  abs=3.194460  abs/|sgn|= 210.1  cumSigned=+0.018962
+    shell |n|inf= 6: signed=+0.005900  abs=1.819374  abs/|sgn|= 308.4  cumSigned=+0.024862
+
+=== WIDE8 odd-AP  E=[0, 1, 3, 5, 7, 9, 11, 13]  L=3 ===
+  p0(exact)=0.237956  M7=0.024480  correction target p0-M7 = 0.213476
+  #support-6 relations |n|inf<=L : 12082
+  SIGNED partial sum  Re = 0.020036  (Im=-2.74e-19)
+  ABSOLUTE partial sum    = 0.878217   (abs/|signed| ratio = 43.8)
+  recovered fraction of target: 0.0939
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=+0.000163  abs=0.004164  abs/|sgn|=  25.6  cumSigned=+0.000163
+    shell |n|inf= 2: signed=+0.019776  abs=0.204625  abs/|sgn|=  10.3  cumSigned=+0.019939
+    shell |n|inf= 3: signed=+0.000097  abs=0.669428  abs/|sgn|=6871.5  cumSigned=+0.020036
+
+=== WIDE8 odd-AP  E=[0, 1, 3, 5, 7, 9, 11, 13]  L=5 ===
+  p0(exact)=0.237956  M7=0.024480  correction target p0-M7 = 0.213476
+  #support-6 relations |n|inf<=L : 173284
+  SIGNED partial sum  Re = 0.018185  (Im=1.03e-17)
+  ABSOLUTE partial sum    = 4.269738   (abs/|signed| ratio = 234.8)
+  recovered fraction of target: 0.0852
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=+0.000163  abs=0.004164  abs/|sgn|=  25.6  cumSigned=+0.000163
+    shell |n|inf= 2: signed=+0.019776  abs=0.204625  abs/|sgn|=  10.3  cumSigned=+0.019939
+    shell |n|inf= 3: signed=+0.000097  abs=0.669428  abs/|sgn|=6871.5  cumSigned=+0.020036
+    shell |n|inf= 4: signed=-0.007491  abs=1.639808  abs/|sgn|= 218.9  cumSigned=+0.012545
+    shell |n|inf= 5: signed=+0.005640  abs=1.751714  abs/|sgn|= 310.6  cumSigned=+0.018185
+
+=== WIDE8 odd-AP  E=[0, 1, 3, 5, 7, 9, 11, 13]  L=7 ===
+  p0(exact)=0.237956  M7=0.024480  correction target p0-M7 = 0.213476
+  #support-6 relations |n|inf<=L : 443974
+  SIGNED partial sum  Re = 0.022828  (Im=4.20e-18)
+  ABSOLUTE partial sum    = 5.299627   (abs/|signed| ratio = 232.2)
+  recovered fraction of target: 0.1069
+  per-shell SIGNED s(L) and ABSOLUTE a(L):
+    shell |n|inf= 1: signed=+0.000163  abs=0.004164  abs/|sgn|=  25.6  cumSigned=+0.000163
+    shell |n|inf= 2: signed=+0.019776  abs=0.204625  abs/|sgn|=  10.3  cumSigned=+0.019939
+    shell |n|inf= 3: signed=+0.000097  abs=0.669428  abs/|sgn|=6871.5  cumSigned=+0.020036
+    shell |n|inf= 4: signed=-0.007491  abs=1.639808  abs/|sgn|= 218.9  cumSigned=+0.012545
+    shell |n|inf= 5: signed=+0.005640  abs=1.751714  abs/|sgn|= 310.6  cumSigned=+0.018185
+    shell |n|inf= 6: signed=+0.004643  abs=1.029889  abs/|sgn|= 221.8  cumSigned=+0.022828

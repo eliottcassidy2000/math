@@ -1,0 +1,56 @@
+=== FAR-ELEMENT CONTRACTION: meas(S7) as one element grows ===
+
+--- k=8  cap_8=0.38153  consec meas=0.32721 ---
+  base (k-1 consec) = [0, 1, 2, 3, 4, 5, 6]
+  w=k..79: meas range [0.16320, 0.32721]
+    w=  7  meas=0.32721  <- AP
+    w=  8  meas=0.20833
+    w=  9  meas=0.18810
+    w= 10  meas=0.19048
+    w= 11  meas=0.16320
+    w= 12  meas=0.20238
+    w= 13  meas=0.18425
+    w= 14  meas=0.23231
+    w= 15  meas=0.19048
+    w= 16  meas=0.19464
+    w= 17  meas=0.20770
+    w= 18  meas=0.19365
+  NO non-AP single-far-element beats consec for w in [7,79]
+  tail meas (w=60..79) avg=0.19647  vs consec 0.32721
+
+--- k=9  cap_9=0.49426  consec meas=0.41616 ---
+  base (k-1 consec) = [0, 1, 2, 3, 4, 5, 6, 7]
+  w=k..79: meas range [0.33537, 0.41616]
+    w=  8  meas=0.41616  <- AP
+    w=  9  meas=0.40170
+    w= 10  meas=0.38095
+    w= 11  meas=0.33537
+    w= 12  meas=0.37177
+    w= 13  meas=0.35756
+    w= 14  meas=0.36769
+    w= 15  meas=0.34082
+    w= 16  meas=0.36386
+    w= 17  meas=0.36929
+    w= 18  meas=0.36939
+    w= 19  meas=0.36579
+  NO non-AP single-far-element beats consec for w in [8,79]
+  tail meas (w=60..79) avg=0.36180  vs consec 0.41616
+
+--- k=10  cap_10=0.6044  consec meas=0.50448 ---
+  base (k-1 consec) = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  w=k..79: meas range [0.43543, 0.50448]
+    w=  9  meas=0.50448  <- AP
+    w= 10  meas=0.49388
+    w= 11  meas=0.44651
+    w= 12  meas=0.46463
+    w= 13  meas=0.43604
+    w= 14  meas=0.45663
+    w= 15  meas=0.43690
+    w= 16  meas=0.44532
+    w= 17  meas=0.43552
+    w= 18  meas=0.44943
+    w= 19  meas=0.44417
+    w= 20  meas=0.45170
+  NO non-AP single-far-element beats consec for w in [9,79]
+  tail meas (w=60..79) avg=0.44784  vs consec 0.50448
+

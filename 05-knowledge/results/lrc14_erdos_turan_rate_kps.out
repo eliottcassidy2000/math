@@ -1,0 +1,18 @@
+=== Erdos-Turan rate: max_B0 |meas(B0u{w}) - LIM(B0)| * w ===
+
+--- k=8  gap_k=0.13061 ---
+  B0=[0, 1, 2, 3, 4, 5, 6]: LIM=0.19660, max|err|*w=1.0000 (at w=175)
+     LIM+max-tail-err exceeds M_k=0.32721?  worst meas-bound=0.23231  OK below M_k
+  B0=[0, 1, 2, 3, 4, 5, 7]: LIM=0.10549, max|err|*w=1.1803 (at w=153)
+     LIM+max-tail-err exceeds M_k=0.32721?  worst meas-bound=0.17849  OK below M_k
+  B0=[0, 1, 2, 3, 4, 6, 7]: LIM=0.10763, max|err|*w=1.2289 (at w=54)
+     LIM+max-tail-err exceeds M_k=0.32721?  worst meas-bound=0.20068  OK below M_k
+
+--- k=9  gap_k=0.05406 ---
+  B0=[0, 1, 2, 3, 4, 5, 6, 7]: LIM=0.36210, max|err|*w=0.9274 (at w=139)
+     LIM+max-tail-err exceeds M_k=0.41616?  worst meas-bound=0.40170  OK below M_k
+  B0=[0, 1, 2, 3, 4, 5, 6, 8]: LIM=0.26327, max|err|*w=1.0417 (at w=175)
+     LIM+max-tail-err exceeds M_k=0.41616?  worst meas-bound=0.29303  OK below M_k
+  B0=[0, 1, 2, 3, 4, 5, 7, 8]: LIM=0.16684, max|err|*w=1.2483 (at w=62)
+     LIM+max-tail-err exceeds M_k=0.41616?  worst meas-bound=0.22623  OK below M_k
+

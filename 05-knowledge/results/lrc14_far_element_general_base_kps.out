@@ -1,0 +1,8 @@
+k=8  cap=0.38153  consec meas=0.32721
+Enumerating (k-1)=7-subsets of 0..9 (0 included), growing far w.
+
+bases checked: 84
+best base+far-w meas = 0.23231  at E=(0, 1, 2, 3, 4, 5, 6, 14)
+  (consec meas = 0.32721, cap = 0.38153)
+NO base+far-w (w>Bbase) configuration beats consec meas.
+=> far element (w>9) always contracts below consec for k=8.

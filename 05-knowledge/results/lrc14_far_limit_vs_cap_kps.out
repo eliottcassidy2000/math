@@ -1,0 +1,16 @@
+=== max far-limit LIM(B0) vs M_k and cap_k ===
+
+--- k=8 ---
+  max far-limit LIM(B0) over (k-1)-bases = 0.19660  at B0=[0, 1, 2, 3, 4, 5, 6]
+  M_8 (consec bounded global max)        = 0.32721
+  cap_8                                  = 0.38153
+  M_8  - maxLIM = +0.13061   (limit BELOW global max: reduction closes!)
+  cap_8- maxLIM = +0.18493   (limit BELOW cap: far elt never violates cap)
+
+--- k=9 ---
+  max far-limit LIM(B0) over (k-1)-bases = 0.36210  at B0=[0, 1, 2, 3, 4, 5, 6, 7]
+  M_9 (consec bounded global max)        = 0.41616
+  cap_9                                  = 0.49426
+  M_9  - maxLIM = +0.05406   (limit BELOW global max: reduction closes!)
+  cap_9- maxLIM = +0.13216   (limit BELOW cap: far elt never violates cap)
+
