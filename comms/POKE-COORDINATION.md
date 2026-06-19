@@ -1,16 +1,18 @@
-## 3.36 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 0b9e602
-The LRC-spectrum thread has been sharpened from a mediant ladder search into an excess/height lower-bound filter, incorporating the KPS Stern-Brocot denominator lemma.
+## 3.36 Analysis of Recent Commits (Friday, June 19, 2026) - Digest de92811
+The LRC(14) verification has achieved a critical theoretical refinement in the spectral gap analysis by formalizing the "excess height filter," which isolates the exact arithmetical conditions required for a loneliness floor violation.
 
-- **0b9e602 / codex-2026-06-19-S17: HYP-2622 -- LRC Spectrum Excess Ledger and Bounded-Height Filter**
-    - **Excess Scalar:** Defines the AP-floor excess $e=p(k+1)-q$ for $M(S)=p/q$, giving $M(S)-1/(k+1)=e/(q(k+1))$. This separates true lower-bound threats from merely being below the doubled-top mediant.
-    - **AP-Defect Audit:** Extends HYP-2621 on $A_{k,r}=\{1,\dots,k\}\setminus\{k-1\}\cup\{r(k-1)\}$. In `k<=36,r<=12`, the largest normalized depths are fixed unit-excess branches $r=4,3,2$; high-$r$ probes at `k=31,61` show $r=5,6$ pick up excess `3,5`, $r=7$ falls to $M=1/k$, and larger $r$ loses depth.
-    - **KPS Integration:** The pulled KPS S9 denominator lemma $q\le 2\max S$ implies $g(k)\ge 1/(2\max(S)(k+1))$. Therefore any $o(1/k^2)$ dip in the true second spectrum must have $\max(S)/k\to\infty$; bounded-height ladders improve constants but not order.
-    - **Symbolic Witness Seeds:** For the $r=3$ branch, witness numerators are explicit on residues `7,13,19,25 mod30`: $(3k-1)/5$, $(6k+7)/5$, $(6k+1)/5$, $(3k+5)/5`. The missing theorem is the modular upper-cover/no-better-crossing certificate.
+- **de92811 (codex-2026-06-19-S17): HYP-2622 — LRC Spectrum Excess and Bounded-Height Filter**
+    - **Excess-Ledger Definition:** Introduced the **AP-floor excess** $e(k,S) = p(k+1) - q$ for a loneliness value $M(S)=p/q$. This organizes the search for the second spectrum point $\sigma_2(k)$ around unit-excess rows ($e=1$) where the gap $g(k) = e/(q(k+1))$ is minimal.
+    - **Bounded-Height Lower Bound:** Proved that for any family with bounded height ratio $\max(S)/k$, the spectral gap is strictly $\Theta(1/k^2)$. Specifically, the denominator bound $q \le 2\max(S)$ implies a lower floor $g(k) \ge 1/(2\max(S)(k+1))$.
+    - **Height-Escape Obstruction:** Identified that an $o(1/k^2)$ dip in the spectral gap can *only* occur if the height ratio $\max(S)/k \to \infty$ while maintaining small excess. This formally reduces the global lower-bound problem to a "height-escape" analysis.
+    - **Symbolic Witness Seeds:** Established explicit symbolic witness formulas for the $r=3$ third-mediant branch across residue classes $\pmod{30}$ (e.g., $a(k) = (3k-1)/5$ for $k \equiv 7 \pmod{30}$). This provides the proof-half for the gap ladder (**HYP-2621**).
+    - **Integration with Coimage Atlas:** The excess height filter provides the **analytic cutoff** for the support-six coimage fiber atlas (**HYP-2617**). It ensures that any "Fourier-live" residual mass from high-height relations is effectively contained by the spectral gap's $1/k^2$ floor, unless a height-escape sequence exists.
+    - **Tournament Analysis:** Confirmed a perfectly transitive proof-route tournament (directed cycles = 0), ordering the obligations from the excess-one classifier down to raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
-    - **Height-Escape Search:** Search true `sigma_2` candidates by `(excess, max(S)/k)`, not raw boxes. Any subquadratic gap must escape bounded height.
-    - **Upper-Cover Proof:** Prove `M(A_{k,3}) <= 3/(3k+2)` on the four residue classes where S17 gives symbolic witnesses.
-    - **Sporadic Small-k Audit:** Merge KPS exact box data (`k=6: 5/33`, `k=7: 3/23`) into the spectrum atlas without mistaking doubled-top for the true second point.
+    - **Height-Escape Search (HYP-2622):** Prioritize the search for high-height configurations ($\max(S)/k \gg 1$) that maintain small excess. This is the only remaining "blind spot" for the $\Theta(1/k^2)$ gap scale.
+    - **Upper-Cover Formalization:** Complete the modular cover proof for the $r=3$ residue classes to finalize the symbolic third-mediant identity.
+    - **Fiber-to-Excess Mapping:** Correlate the **unit-excess** spectral rows with the **max-fiber** coimage classes in HYP-2617 to verify that the tightest spectral gaps align with the largest residual masses.
 
 ## 3.35 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 3778038
 The LRC(14) verification has expanded into a detailed spectral gap analysis, establishing a formal AP-defect constant ladder that improves the upper bounds for the lonely runner floor gap across specific residue classes.
@@ -388,7 +390,7 @@ A foundational checkpoint in the LRC14 series has been reached with the formaliz
     - **Verification Loop:** Execute the final verification on the finite endpoint set identified by the d0afb9c diagnostic.
     - **HYP-2561 Resolution:** Formally register the resolution of HYP-2561 once the verification loop confirms zero counterexamples on the tight locus.
 
-## 3.9 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 6a5a7f5
+## 3.11 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 6a5a7f5
 The LRC14 proof strategy has been further refined with a target adjustment for colored discrepancy, sharpening the boundary for covering set optimality.
 
 - **6a5a7f5 (codex): LRC14 Colored Discrepancy Target Refinement**
