@@ -25,12 +25,12 @@ g=[F(-(t-2)*(t-3)*(t-6),36) for t in range(7)]
 C=list(range(9)); A=[0,1,2,3,4,5,6,7,9]
 pC=dist(C); pA=dist(A)
 print("g(t) =", [str(x) for x in g])
-print(f"{'t':>2} {'p_consec':>12} {'p_comp':>12} {'Δp=comp-cons':>14} {'g(t)':>8} {'g·Δp':>14}")
+print(f"{'t':>2} {'p_consec':>12} {'p_comp':>12} {'dp':>14} {'g(t)':>8} {'g.dp':>14}")
 tot=F(0)
 for t in range(7):
     dp=pA[t]-pC[t]; contrib=g[t]*dp; tot+=contrib
     print(f"{t:>2} {float(pC[t]):>12.6f} {float(pA[t]):>12.6f} {float(dp):>14.6f} {float(g[t]):>8.4f} {float(contrib):>14.6f}")
-print(f"\nΔL_y = sum g·Δp = {tot} = {float(tot):.6f}  (negative => consec wins)")
+print(f"\ndL_y = sum g.dp = {tot} = {float(tot):.6f}  (negative => consec wins)")
 print(f"L_y(consec)={float(sum(g[t]*pC[t] for t in range(7))):.6f}  L_y(comp)={float(sum(g[t]*pA[t] for t in range(7))):.6f}")
 # cap closure check
 print(f"\ncap_9 ~ 0.49426 (THM-535 lower-bounded, paper-stated). L_y(consec)=0.492876 < cap: {0.492876<0.49426}")
