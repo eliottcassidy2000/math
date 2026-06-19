@@ -39,12 +39,18 @@ The immediate next route is a multiplier-ladder classifier:
 A_{k,r} = {1,...,k}\{k-1} union {r(k-1)}.
 ```
 
-In the stored probe, `r=4` has a first isolated below-family hit at `k=31`,
-`M=4/127`.  That suggests a ladder of constants may exist, but it is sparse and
-residue-governed.  To threaten the lower bound order, we would need constants
-`r` growing with `k`, not just fixed `2,3,4`.  The next computation should scan
-by residue classes in `(k,r)` and try to recognize formulas of the shape
-`r/(rk+c)`.
+In the stored probe, `r=4` is no longer isolated: on the `k=1 mod30` class where
+`r=3` goes tight, `r=4` gives
+
+```text
+M = 4/(4k+3)
+```
+
+through `k=181`.  That suggests a ladder of constants may exist, but it is
+sparse and residue-governed.  To threaten the lower bound order, we would need
+constants `r` growing with `k`, not just fixed `2,3,4`.  The next computation
+should scan by residue classes in `(k,r)` and try to recognize formulas of the
+shape `r/(rk+c)`.
 
 This is also the cleanest Tournament Analysis lesson from the session.  Runner
 vertices are too local; pair-crossing denominators are better; but for the

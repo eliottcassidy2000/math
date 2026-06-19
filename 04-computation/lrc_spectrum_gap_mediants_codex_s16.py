@@ -18,9 +18,13 @@ For tested k == 1 (mod 6), the branch is:
   k == 1 (mod 30):      M(S_k) = 1/(k+1)      (AP-tight again)
   k == 7,13,19,25 mod30 M(S_k) = 3/(3k+2)    (third-mediant)
 
-so its gap above the AP floor is 1/((k+1)(3k+2)).  This does not change the
-Theta(1/k^2) scale, but it moves the G2 lift-depth constant from 2 to 3 on an
-infinite subsequence.
+On the tight k == 1 (mod 30) branch, the next multiplier r=4 takes over:
+
+  {1,...,k} \\ {k-1} union {4(k-1)} has M=4/(4k+3)
+
+in the stored continuation.  These do not change the Theta(1/k^2) scale, but
+they move the G2 lift-depth constant from 2 to 3 or 4 on sparse residue
+families.
 """
 
 from __future__ import annotations
@@ -93,6 +97,10 @@ def doubled_top_family(k: int) -> tuple[int, ...]:
 
 def third_mediant_family(k: int) -> tuple[int, ...]:
     return tuple(sorted((set(range(1, k + 1)) - {k - 1}) | {3 * (k - 1)}))
+
+
+def multiplier_family(k: int, r: int) -> tuple[int, ...]:
+    return tuple(sorted((set(range(1, k + 1)) - {k - 1}) | {r * (k - 1)}))
 
 
 def scan_one_defect(k: int, max_add: int) -> list[tuple[F, tuple[int, ...], F, int, int]]:
@@ -242,7 +250,7 @@ def print_multiplier_ladder_probe() -> None:
     print("5. Multiplicative AP-defect ladder probe")
     print("=" * 78)
     print("Family: {1,...,k}\\{k-1} U {r(k-1)}.  The r=3 branch is")
-    print("the third-mediant split above; r=4 shows a first isolated hit at k=31.")
+    print("the third-mediant split above; r=4 takes over on the r=3 tight class.")
     for r in range(2, 6):
         hits: list[tuple[int, F, F]] = []
         tight: list[int] = []
@@ -261,6 +269,16 @@ def print_multiplier_ladder_probe() -> None:
         tight_text = ", ".join(str(k) for k in tight[:12])
         print(f"r={r}: below-family hits={len(hits)} [{hit_text}]")
         print(f"     AP-tight returns first: [{tight_text}]")
+
+    print("\nr=4 continuation on the r=3 AP-tight class k == 1 mod30:")
+    for k in (31, 61, 91, 121, 151, 181):
+        S = multiplier_family(k, 4)
+        value, arg = exact_M(S)
+        expected = F(4, 4 * k + 3)
+        print(
+            f"  k={k:3d}: M={fmt_frac(value):>8}, t={fmt_frac(arg):>8}, "
+            f"expected={fmt_frac(expected):>8}, depth={fmt_frac(gap_depth(k, value))}"
+        )
 
 
 def print_tournament_analysis() -> None:
@@ -302,9 +320,9 @@ def main() -> None:
     print("      g(k) <= 1/((k+1)(2k+1)).")
     print("  The one-defect branch k == 7,13,19,25 mod30 improves that to")
     print("      g(k) <= 1/((k+1)(3k+2))")
-    print("  on an infinite tested residue-class subsequence; the k == 1 mod30")
-    print("  branch of the same construction is AP-tight again.  The lower-bound")
-    print("  question remains open:")
+    print("  and the r=4 branch k == 1 mod30 improves that to")
+    print("      g(k) <= 1/((k+1)(4k+3))")
+    print("  in the stored continuation.  The lower-bound question remains open:")
     print("  these computations do not show any o(1/k^2) dip.")
 
 

@@ -98,7 +98,7 @@ two-defect k= 8, add<=4k: below-family rows=0
 5. Multiplicative AP-defect ladder probe
 ==============================================================================
 Family: {1,...,k}\{k-1} U {r(k-1)}.  The r=3 branch is
-the third-mediant split above; r=4 shows a first isolated hit at k=31.
+the third-mediant split above; r=4 takes over on the r=3 tight class.
 r=2: below-family hits=0 []
      AP-tight returns first: [7, 13, 19, 25, 31, 37, 43, 49, 55]
 r=3: below-family hits=8 [k=7:M=3/23@4/23, k=13:M=3/41@17/41, k=19:M=3/59@36/59, k=25:M=3/77@61/77, k=37:M=3/113@22/113, k=43:M=3/131@78/131, k=49:M=3/149@59/149, k=55:M=3/167@133/167]
@@ -107,6 +107,14 @@ r=4: below-family hits=1 [k=31:M=4/127@72/127]
      AP-tight returns first: []
 r=5: below-family hits=0 []
      AP-tight returns first: []
+
+r=4 continuation on the r=3 AP-tight class k == 1 mod30:
+  k= 31: M=   4/127, t=  72/127, expected=   4/127, depth=4064
+  k= 61: M=   4/247, t= 177/247, expected=   4/247, depth=15314
+  k= 91: M=   4/367, t= 314/367, expected=   4/367, depth=33764
+  k=121: M=   4/487, t= 418/487, expected=   4/487, depth=59414
+  k=151: M=   4/607, t= 174/607, expected=   4/607, depth=92264
+  k=181: M=   4/727, t= 416/727, expected=   4/727, depth=132314
 
 ==============================================================================
 6. Tournament Analysis quotient
@@ -128,7 +136,7 @@ READOUT
       g(k) <= 1/((k+1)(2k+1)).
   The one-defect branch k == 7,13,19,25 mod30 improves that to
       g(k) <= 1/((k+1)(3k+2))
-  on an infinite tested residue-class subsequence; the k == 1 mod30
-  branch of the same construction is AP-tight again.  The lower-bound
-  question remains open:
+  and the r=4 branch k == 1 mod30 improves that to
+      g(k) <= 1/((k+1)(4k+3))
+  in the stored continuation.  The lower-bound question remains open:
   these computations do not show any o(1/k^2) dip.

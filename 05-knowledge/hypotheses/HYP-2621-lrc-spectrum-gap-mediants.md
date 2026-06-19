@@ -57,9 +57,18 @@ On the third-mediant branch,
 M(A_{k,3}) - 1/(k+1) = 1/((k+1)(3k+2)).
 ```
 
-This improves the upper bound for the spectral gap constant on an infinite
-tested residue-class family, but it still has the same `Theta(1/k^2)` scale.
-No computation here finds an `o(1/k^2)` dip.
+On the `k == 1 mod 30` branch, `r=3` is tight, but `r=4` takes over in the
+stored continuation:
+
+```text
+A_{k,4} = {1,2,...,k} \ {k-1} union {4(k-1)}
+M(A_{k,4}) = 4/(4k+3)
+M(A_{k,4}) - 1/(k+1) = 1/((k+1)(4k+3)).
+```
+
+These improve the upper bound for the spectral gap constant on sparse
+residue-class families, but they still have the same `Theta(1/k^2)` scale.  No
+computation here finds an `o(1/k^2)` dip.
 
 ## Computation
 
@@ -132,8 +141,19 @@ The same one-defect shape was probed for `r=2..5`, `k<=60`:
 ```text
 r=2: 0 below-family hits; many AP-tight returns.
 r=3: the third-mediant branch above.
-r=4: one below-family hit at k=31, M=4/127, t=72/127.
+r=4: first below-family hit at k=31, M=4/127, t=72/127.
 r=5: 0 below-family hits.
+```
+
+The stored continuation then checks the `r=4` branch on the `r=3` tight class:
+
+```text
+k=31   M=4/127   depth=4064
+k=61   M=4/247   depth=15314
+k=91   M=4/367   depth=33764
+k=121  M=4/487   depth=59414
+k=151  M=4/607   depth=92264
+k=181  M=4/727   depth=132314
 ```
 
 This suggests a real AP-defect constant ladder, but not a monotone or dense one.
