@@ -1,0 +1,20 @@
+=== construct level-a families {smallest safe reps mod q=a(k+1)-1} ===
+    checking which a are realizable as exact max-min a/(a(k+1)-1)
+
+  k= 5: achievable a = [2]  | a_max=2  sigma_2<= 2/11  g=1/66  g*k^2=0.3788  witness=(1, 2, 3, 4, 10)
+  k= 6: achievable a = [2]  | a_max=2  sigma_2<= 2/13  g=1/91  g*k^2=0.3956  witness=(1, 2, 3, 4, 5, 12)
+  k= 7: achievable a = [2]  | a_max=2  sigma_2<= 2/15  g=1/120  g*k^2=0.4083  witness=(1, 2, 3, 4, 5, 6, 14)
+  k= 8: achievable a = [2]  | a_max=2  sigma_2<= 2/17  g=1/153  g*k^2=0.4183  witness=(1, 2, 3, 4, 5, 6, 7, 16)
+  k= 9: achievable a = [2]  | a_max=2  sigma_2<= 2/19  g=1/190  g*k^2=0.4263  witness=(1, 2, 3, 4, 5, 6, 7, 8, 18)
+  k=10: achievable a = [2]  | a_max=2  sigma_2<= 2/21  g=1/231  g*k^2=0.4329  witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
+  k=11: achievable a = [2]  | a_max=2  sigma_2<= 2/23  g=1/276  g*k^2=0.4384  witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 22)
+  k=12: achievable a = [2]  | a_max=2  sigma_2<= 2/25  g=1/325  g*k^2=0.4431  witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 24)
+  k=13: achievable a = [2]  | a_max=2  sigma_2<= 2/27  g=1/378  g*k^2=0.4471  witness=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+
+=== local descent: true minimal M(S) found (lower sigma_2 => larger a) ===
+  k= 5: min M=2/11 (0.18182)  floor=1/6  g=1/66  g*k^2=0.3788  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 10)
+  k= 6: min M=2/13 (0.15385)  floor=1/7  g=1/91  g*k^2=0.3956  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 5, 12)
+  k= 7: min M=2/15 (0.13333)  floor=1/8  g=1/120  g*k^2=0.4083  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 5, 6, 14)
+  k= 8: min M=2/17 (0.11765)  floor=1/9  g=1/153  g*k^2=0.4183  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 5, 7, 12, 16)
+  k= 9: min M=2/19 (0.10526)  floor=1/10  g=1/190  g*k^2=0.4263  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 5, 6, 7, 8, 18)
+  k=10: min M=2/21 (0.09524)  floor=1/11  g=1/231  g*k^2=0.4329  [= 2/(a(k+1)-1)]  S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 20)
