@@ -1,0 +1,30 @@
+============================================================================
+VERIFY: (5/7)^k + correction(support 3+4)  vs  int G(Ex)dx
+============================================================================
+  AP k=5          : (5/7)^5=0.18593 + corr=-0.04729 = 0.13865   intG(grid)=0.16667   |corr|/main=0.25
+  AP k=6          : (5/7)^6=0.13281 + corr=-0.02524 = 0.10757   intG(grid)=0.13265   |corr|/main=0.19
+  AP k=7          : (5/7)^7=0.09486 + corr=+0.00120 = 0.09607   intG(grid)=0.10714   |corr|/main=0.01
+  dissoc k=5      : (5/7)^5=0.18593 + corr=+0.01335 = 0.19928   intG(grid)=0.19395   |corr|/main=0.07
+  perforated k=7  : (5/7)^7=0.09486 + corr=-0.05126 = 0.04360   intG(grid)=0.08724   |corr|/main=0.54
+  dissoc k=6      : (5/7)^6=0.13281 + corr=+0.02038 = 0.15319   intG(grid)=0.14278   |corr|/main=0.15
+
+============================================================================
+support-3 multiple-tail convergence (primitive (1,-2,1), the AP triple):
+============================================================================
+   m≤ 1: partial=-0.019220  |term_m|=1.92e-02
+   m≤ 3: partial=-0.017381  |term_m|=1.76e-04
+   m≤10: partial=-0.017488  |term_m|=4.75e-06
+   m≤30: partial=-0.017493  |term_m|=4.93e-07
+   m≤59: partial=-0.017493  |term_m|=2.31e-08
+  => converges (~1/m^3). Finitely many primitive triples (k≤13) ⟹ absolute convergence,
+     ESCAPING THM-504's |T|≥3 divergence (which summed over UNBOUNDED speeds).
+
+============================================================================
+FLOOR readout: is |correction| < (5/7)^k? (then int G>0 ⟹ μ>0 ⟹ M≥1/14)
+============================================================================
+  AP k=5          : intG≈+0.13865 >0 ✓
+  AP k=6          : intG≈+0.10757 >0 ✓
+  AP k=7          : intG≈+0.09607 >0 ✓
+  dissoc k=5      : intG≈+0.19928 >0 ✓
+  perforated k=7  : intG≈+0.04360 >0 ✓
+  dissoc k=6      : intG≈+0.15319 >0 ✓

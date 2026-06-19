@@ -1,0 +1,9 @@
+intG(Ex)dx (empty-2/7-window expectation) and (5/7)^k for k=8..13:
+ confirms intG>0 (=> mu>0 => M>=1/14 via THM-527) for canonical S3 cluster shapes
+  AP k=8         k=8: intG=0.091448  (5/7)^k=0.067760  corr=+0.023688  intG>0:True
+  AP k=10        k=10: intG=0.070343  (5/7)^k=0.034572  corr=+0.035772  intG>0:True
+  AP k=13        k=13: intG=0.052242  (5/7)^k=0.012599  corr=+0.039643  intG>0:True
+  perf k=8       k=8: intG=0.064522  (5/7)^k=0.067760  corr=-0.003238  intG>0:True
+  perf k=10      k=10: intG=0.045696  (5/7)^k=0.034572  corr=+0.011125  intG>0:True
+  dissoc k=8     k=8: intG=0.070862  (5/7)^k=0.067760  corr=+0.003102  intG>0:True
+  dissoc k=13    k=13: intG=0.018229  (5/7)^k=0.012599  corr=+0.005630  intG>0:True
