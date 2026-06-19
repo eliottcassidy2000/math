@@ -1,0 +1,53 @@
+==============================================================================
+LRC(14) perturbed unit-wall criterion for S = A U {14m}
+==============================================================================
+First branch theorem:
+  t = a/14 + delta, delta > 0  ->  each v in A stays safe while
+      delta < (13 - (a v mod 14)) / (14 v).
+  t = a/14 - delta, delta > 0  ->  each v in A stays safe while
+      delta < ((a v mod 14) - 1) / (14 v).
+  The 14m-runner is safe on the first branch exactly when
+      delta > 1 / (196 m)
+  provided delta < 1 / (28 m).
+
+A. Exact first-branch verification on bounded exhaustive rows
+  pool <= 16, m in 1..4: rows=1372, first-branch certified=1365, mismatches=0
+  pool <= 18, m in 1..3: rows=15666, first-branch certified=15113, mismatches=0
+
+B. Stronger bounded test: some unit-wall branch exists
+  pool <= 16, m in 1..4: rows=1372, rows with NO unit-wall branch witness=0
+  pool <= 18, m in 1..3: rows=15666, rows with NO unit-wall branch witness=0
+
+C. AP one-drop families {1..13}\\{j} U {14m}
+  drop  1: first-branch from m=1
+  drop  2: unit-complete residual
+  drop  3: first-branch from m=1
+  drop  4: unit-complete residual
+  drop  5: first-branch from m=1
+  drop  6: unit-complete residual
+  drop  7: unit-complete residual
+  drop  8: unit-complete residual
+  drop  9: first-branch from m=1
+  drop 10: unit-complete residual
+  drop 11: first-branch from m=1
+  drop 12: unit-complete residual
+  drop 13: first-branch from m=1
+  Interpretation: odd unit drops are discharged immediately by the first branch;
+  even / 7 drops are exactly the unit-complete residual.
+
+D. Explicit first-branch failure but later-branch success
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 26), missing unit residues=(13,)
+  first-branch witness: None
+  later branch witness: a=1, sign=+, delta=85/8008, t=657/8008
+  This shows the raw 'missing a unit residue' idea is not a complete FIRST-BRANCH theorem by itself, but it may still hold after later wraps.
+
+E. Small exact example where the first branch already works
+  A=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 16), missing unit residues=(13,)
+  first-branch witness: a=1, sign=+, delta=39/4312, t=347/4312, exact=True
+
+Takeaway
+  THM-level: the exact first-branch inequality is elementary and exact.
+  Evidence-level: every bounded row tested with a missing unit residue still
+  has SOME unit-wall branch witness, even when the first branch fails.
+  Proof-program implication: the genuinely hard one-multiple rows appear to be
+  the unit-complete cores, matching the new exact low-L extremizers.

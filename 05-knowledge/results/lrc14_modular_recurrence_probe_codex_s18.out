@@ -1,0 +1,80 @@
+LRC(14) modular recurrence probe - codex S18
+
+========================================================================================
+DIVISOR-PROFILE MASKS ON {1,...,13}
+========================================================================================
+  mask 0000 divisors=()             count=3
+  mask 0001 divisors=(2,)           count=3
+  mask 0010 divisors=(3,)           count=2
+  mask 0011 divisors=(2, 3)         count=2
+  mask 0100 divisors=(5,)           count=1
+  mask 0101 divisors=(2, 5)         count=1
+  mask 1000 divisors=(7,)           count=1
+
+This mask inventory is the finite transfer state.  Adding a center prime is not a new ad hoc trick; it refines the state by one bit and updates the survivor polynomial by inclusion-exclusion.
+
+========================================================================================
+RECOVER HYP-2598 AND EXTEND THE PRIME-MASK SIEVE
+========================================================================================
+prime centers (2, 3)
+  survivor sequence: 1, 11, 47, 109, 156, 146, 91, 37, 9, 1, 0, 0, 0, 0
+  residual hits-all sequence: 0, 2, 31, 177, 559, 1141, 1625, 1679, 1278, 714, 286, 78, 13, 1
+  inclusion-exclusion available-set terms:
+    + C(7,s) for avoid (2,); + C(9,s) for avoid (3,); - C(5,s) for avoid (2, 3)
+prime centers (2, 3, 5)
+  survivor sequence: 1, 13, 72, 223, 437, 581, 545, 366, 174, 56, 11, 1, 0, 0
+  residual hits-all sequence: 0, 0, 6, 63, 278, 706, 1171, 1350, 1113, 659, 275, 77, 13, 1
+  inclusion-exclusion available-set terms:
+    + C(7,s) for avoid (2,); + C(9,s) for avoid (3,); + C(11,s) for avoid (5,); - C(5,s) for avoid (2, 3); - C(6,s) for avoid (2, 5); - C(7,s) for avoid (3, 5); + C(4,s) for avoid (2, 3, 5)
+prime centers (2, 3, 5, 7)
+  survivor sequence: 1, 13, 78, 280, 658, 1066, 1231, 1030, 623, 266, 76, 13, 1, 0
+  residual hits-all sequence: 0, 0, 0, 6, 57, 221, 485, 686, 664, 449, 210, 65, 12, 1
+  inclusion-exclusion available-set terms:
+    + C(7,s) for avoid (2,); + C(9,s) for avoid (3,); + C(11,s) for avoid (5,); + C(12,s) for avoid (7,); - C(5,s) for avoid (2, 3); - C(6,s) for avoid (2, 5); - C(6,s) for avoid (2, 7); - C(7,s) for avoid (3, 5); - C(8,s) for avoid (3, 7); - C(10,s) for avoid (5, 7); + C(4,s) for avoid (2, 3, 5); + C(4,s) for avoid (2, 3, 7); + C(5,s) for avoid (2, 5, 7); + C(6,s) for avoid (3, 5, 7); - C(3,s) for avoid (2, 3, 5, 7)
+
+Readout: HYP-2598 is the (2,3) row.  The next exact sieve rows are (2,3,5) -> mod 30 and (2,3,5,7) -> mod 210.  The latter is not a standalone proof, but it is the natural address lattice for combining parity/triadic centers with the seven-sector support-six tail.
+
+========================================================================================
+RATIONAL CENTER DENOMINATORS b <= 30
+========================================================================================
+  b   C_b(s=5)   C_b(s=8)   1/b>2/7                             sequence s=0..13
+  2         21          0      True 1, 7, 21, 35, 35, 21, 7, 1, 0, 0, 0, 0, 0, 0
+  3        126          9      True 1, 9, 36, 84, 126, 126, 84, 36, 9, 1, 0, 0, 0, 0
+  4        252         45     False 1, 10, 45, 120, 210, 252, 210, 120, 45, 10, 1, 0, 0, 0
+  5        462        165     False 1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1, 0, 0
+  6        462        165     False 1, 11, 55, 165, 330, 462, 462, 330, 165, 55, 11, 1, 0, 0
+  7        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+  8        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+  9        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+ 10        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+ 11        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+ 12        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+ 13        792        495     False 1, 12, 66, 220, 495, 792, 924, 792, 495, 220, 66, 12, 1, 0
+ 14       1029        468     False 1, 13, 78, 278, 647, 1029, 1141, 883, 468, 162, 33, 3, 0, 0
+ 15       1227        831     False 1, 13, 78, 286, 707, 1227, 1518, 1339, 831, 352, 96, 15, 1, 0
+ 21       1287       1226     False 1, 13, 78, 286, 715, 1287, 1712, 1692, 1226, 630, 216, 44, 4, 0
+ 30       1227        831     False 1, 13, 78, 286, 707, 1227, 1518, 1339, 831, 352, 96, 15, 1, 0
+
+Only b=2,3 are universal cluster centers.  Denominators 5,7,10,14,15,21,30 still give exact modular addresses for recurring intervals; using them as if they were universal witnesses is the overclaim to avoid.
+
+========================================================================================
+TOURNAMENT ANALYSIS: MODULAR PROOF OBLIGATIONS
+========================================================================================
+routes and scores:
+  support6_coimage_tail        score=(4, 4, 3, 4) wins=6
+  mod210_address               score=(3, 2, 4, 4) wins=4
+  mod30_address                score=(3, 2, 3, 3) wins=3
+  mod6_universal               score=(3, 4, 2, 2) wins=5
+  primorial_height_escape      score=(2, 2, 4, 4) wins=2
+  all_small_denominators       score=(2, 1, 4, 3) wins=1
+  raw_runner_residues          score=(1, 1, 1, 1) wins=0
+score histogram: [(0, 1), (1, 1), (2, 1), (3, 1), (4, 1), (5, 1), (6, 1)]
+directed 3-cycles: 0
+Hamiltonian path:
+  support6_coimage_tail > mod6_universal > mod210_address > mod30_address > primorial_height_escape > all_small_denominators > raw_runner_residues
+
+========================================================================================
+SESSION READOUT
+========================================================================================
+Mod 6 is the proven universal-center skeleton.  Mod 30 is the first non-universal address extension, because denominator 5 joins parity and triadic data but cannot by itself certify the cluster gap.  The LRC14 support-six tail forces mod 7, so the natural combined address is mod 210 or, better, the squarefree divisor-profile mask on {2,3,5,7}.
+The hidden recurrence is therefore not a one-dimensional recurrence in runners.  It is the finite transfer/inclusion-exclusion recurrence of prime masks, coupled to a signed mod-7 coimage tail.  This explains why mod 30 looked real and why it was not enough.
