@@ -1,0 +1,59 @@
+=== L_y vs sumset excess: is L_y controlled by additive structure? ===
+
+--- k=8: consec L_y=0.35823 excess=0 (must be 0=AP) cap=0.38153 ---
+   L_y=0.35823 exc=  0  dilate x2              [0, 2, 4, 6, 8, 10, 12, 14]
+   L_y=0.35823 exc=  0  dilate x3              [0, 3, 6, 9, 12, 15, 18, 21]
+   L_y=0.35823 exc=  0  dilate x5              [0, 5, 10, 15, 20, 25, 30, 35]
+   L_y=0.17483 exc=  6  GAP2 base2 step9       (0, 1, 9, 10, 18, 19, 27, 28)
+   L_y=0.15546 exc=  6  GAP2 base2 step5       (0, 1, 5, 6, 10, 11, 15, 16)
+   L_y=0.14946 exc=  7  GAP2 base3 step11      (0, 1, 2, 11, 12, 13, 22, 23)
+   L_y=0.13921 exc=  6  GAP2 base2 step7       (0, 1, 7, 8, 14, 15, 21, 22)
+   L_y=0.13826 exc=  6  GAP2 base2 step11      (0, 1, 11, 12, 22, 23, 33, 34)
+   L_y=0.13542 exc=  7  GAP2 base3 step7       (0, 1, 2, 7, 8, 9, 14, 15)
+   L_y=0.12981 exc=  6  GAP2 base4 step7       (0, 1, 2, 3, 7, 8, 9, 10)
+   L_y=0.06281 exc= 16  3rd-pocket ex          (0, 3, 5, 16, 28, 30, 33, 35)
+   L_y=0.06103 exc= 16  random                 (0, 6, 24, 27, 30, 32, 37, 38)
+   L_y=0.06013 exc= 18  random                 (0, 14, 15, 17, 18, 23, 26, 39)
+   L_y=0.05633 exc= 16  3rd-pocket ex          (0, 4, 12, 15, 20, 21, 25, 31)
+   L_y=0.05086 exc= 16  random                 (0, 5, 21, 26, 29, 32, 37, 39)
+   L_y=0.04751 exc= 15  random                 (0, 1, 2, 3, 11, 14, 16, 34)
+   L_y=0.04422 exc= 17  random                 (0, 15, 20, 21, 23, 27, 33, 37)
+
+--- k=9: consec L_y=0.49288 excess=0 (must be 0=AP) cap=0.49426 ---
+   L_y=0.49288 exc=  0  dilate x2              [0, 2, 4, 6, 8, 10, 12, 14, 16]
+   L_y=0.49288 exc=  0  dilate x3              [0, 3, 6, 9, 12, 15, 18, 21, 24]
+   L_y=0.49288 exc=  0  dilate x5              [0, 5, 10, 15, 20, 25, 30, 35, 40]
+   L_y=0.33281 exc=  7  GAP2 base2 step9       (0, 1, 9, 10, 18, 19, 27, 28, 36)
+   L_y=0.32354 exc=  7  GAP2 base2 step5       (0, 1, 5, 6, 10, 11, 15, 16, 20)
+   L_y=0.31803 exc=  8  GAP2 base3 step11      (0, 1, 2, 11, 12, 13, 22, 23, 24)
+   L_y=0.30631 exc=  7  GAP2 base2 step7       (0, 1, 7, 8, 14, 15, 21, 22, 28)
+   L_y=0.30360 exc=  7  GAP2 base2 step11      (0, 1, 11, 12, 22, 23, 33, 34, 44)
+   L_y=0.27601 exc=  8  GAP2 base3 step7       (0, 1, 2, 7, 8, 9, 14, 15, 16)
+   L_y=0.22435 exc=  9  GAP2 base4 step7       (0, 1, 2, 3, 7, 8, 9, 10, 14)
+   L_y=0.19101 exc= 20  random                 (0, 1, 15, 19, 24, 27, 29, 31, 43)
+   L_y=0.17884 exc= 23  random                 (0, 2, 10, 19, 30, 39, 41, 42, 44)
+   L_y=0.17845 exc= 19  random                 (0, 1, 15, 16, 17, 19, 20, 27, 43)
+   L_y=0.17747 exc= 21  random                 (0, 2, 10, 15, 17, 20, 22, 39, 43)
+   L_y=0.16849 exc= 20  random                 (0, 6, 15, 17, 20, 23, 24, 27, 32)
+   L_y=0.16417 exc= 22  random                 (0, 3, 12, 19, 28, 34, 37, 38, 42)
+
+=== TEST: over ALL primitive k=8 sets (spread<=16), is L_y monotone-bounded by excess? ===
+   scanned 11432 primitive sets. max L_y by excess (excess: maxL_y  witness):
+     excess=  0:  maxL_y=0.35823  (0, 1, 2, 3, 4, 5, 6, 7)
+     excess=  1:  maxL_y=0.30306  (0, 2, 3, 4, 5, 6, 7, 8)
+     excess=  2:  maxL_y=0.24783  (0, 3, 4, 5, 6, 7, 8, 9)
+     excess=  3:  maxL_y=0.26179  (0, 1, 3, 4, 5, 6, 7, 9)
+     excess=  4:  maxL_y=0.24728  (0, 1, 2, 4, 5, 6, 7, 10)
+     excess=  5:  maxL_y=0.27889  (0, 2, 4, 6, 7, 8, 10, 12)
+     excess=  6:  maxL_y=0.26498  (0, 1, 3, 5, 7, 9, 11, 13)
+     excess=  7:  maxL_y=0.23897  (0, 1, 2, 5, 6, 7, 10, 11)
+     excess=  8:  maxL_y=0.21986  (0, 2, 5, 6, 8, 10, 11, 14)
+     excess=  9:  maxL_y=0.21026  (0, 1, 3, 6, 9, 11, 12, 14)
+     excess= 10:  maxL_y=0.19903  (0, 2, 3, 4, 8, 12, 13, 14)
+     excess= 11:  maxL_y=0.18598  (0, 1, 2, 4, 5, 10, 13, 14)
+     excess= 12:  maxL_y=0.17626  (0, 4, 6, 7, 10, 12, 15, 16)
+     excess= 13:  maxL_y=0.15777  (0, 1, 3, 5, 11, 13, 14, 16)
+     excess= 14:  maxL_y=0.13470  (0, 1, 4, 6, 10, 12, 15, 16)
+     excess= 15:  maxL_y=0.06631  (0, 1, 3, 7, 11, 13, 14, 16)
+
+   consec L_y=0.35823 at excess=0. If maxL_y STRICTLY DECREASES with excess => excess is the right order.
