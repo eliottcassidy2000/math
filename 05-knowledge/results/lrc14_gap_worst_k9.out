@@ -1,0 +1,9 @@
+k=9 cap=0.49426 L_y(consec)=0.49288
+
+  W=10: scanned     36 primitive non-AP sets; max L_y=0.46935 at E=[0, 1, 2, 3, 4, 5, 6, 7, 10]  (margin 0.02491)
+  W=11: scanned    120 primitive non-AP sets; max L_y=0.43498 at E=[0, 1, 2, 3, 4, 5, 6, 7, 11]  (margin 0.05928)
+  W=12: scanned    330 primitive non-AP sets; max L_y=0.45701 at E=[0, 1, 2, 3, 4, 5, 6, 7, 12]  (margin 0.03725)
+  W=13: scanned    792 primitive non-AP sets; max L_y=0.44489 at E=[0, 1, 2, 3, 4, 5, 6, 7, 13]  (margin 0.04937)
+
+(If maximizer stays at [0,2,3,4,5,6,7,8,10]-type excess-2 near-AP as W grows,
+ the worst non-AP set is pinned and L_y<cap with margin ~0.045.)

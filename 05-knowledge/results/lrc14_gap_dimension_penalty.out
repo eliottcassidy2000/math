@@ -1,0 +1,19 @@
+=== LRC(14) GAP DIMENSION PENALTY: max L_y over proper d>=2 GAPs ===
+
+--- k=8  cap=0.38153  L_y(consec)=0.35823 ---
+  WORST 2-dim GAP: sides(2x4) steps(5,3) E=[0, 3, 5, 6, 8, 9, 11, 14]
+    excess=6 (dim>=2)
+    L_y=108919/485100 = 0.22453   margin to cap = 0.15700   ratio L_y/consec = 0.6268
+  WORST 3-dim GAP: sides(2x2x2) steps(3,5,6) E=[0, 3, 5, 6, 8, 9, 11, 14]
+    L_y=0.22453   margin to cap = 0.15700   ratio L_y/consec = 0.6268
+
+--- k=9  cap=0.49426  L_y(consec)=0.49288 ---
+  WORST 2-dim GAP: sides(3x3) steps(2,3) E=[0, 2, 3, 4, 5, 6, 7, 8, 10]
+    excess=2 (dim>=2)
+    L_y=47557/105840 = 0.44933   margin to cap = 0.04493   ratio L_y/consec = 0.9116
+
+--- k=10  cap=0.6044  L_y(consec)=0.57008 ---
+  WORST 2-dim GAP: sides(2x5) steps(3,2) E=[0, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+    excess=2 (dim>=2)
+    L_y=877741/1746360 = 0.50261   margin to cap = 0.10179   ratio L_y/consec = 0.8817
+
