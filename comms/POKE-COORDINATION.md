@@ -1,3 +1,24 @@
+## 3.22 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 159807f
+The LRC(14) proof has reached a definitive stabilization point with the formalization of the 1/7 pivot, effectively reducing the floor verification to a single linear inequality.
+
+- **159807f (kind-pasteur-2026-06-18-S5/S6): THM-530 — The 1/7 Pivot and EWLB Reduction**
+    - **THM-530 (The 1/7 Pivot):** Formally established the 1/7 pivot as the primary arithmetical anchor. The $\mu_{2/7}$ measure has been definitively refuted as the "wrong object"—it provides a sufficient but not necessary condition and fails to establish a consistent floor.
+    - **EWLB Reduction:** The global-witness $\mu_{1/7}$ reduces the LRC(14) proof to exactly **one linear inequality** via the Effective Weight Lower Bound (EWLB): $\mu_{1/7} \ge EWLB_A$.
+    - **Proved Step:** Proved that $EWLB_A(consec_k) \ge thr_k$. This anchors the consecutive family as the baseline for the floor.
+    - **Verified Step:** The hypothesis that "consecutive minimizes $EWLB_A$" has been verified, leaving only a **single open step** to finalize the global minimization proof.
+    - **k <= 7 Unconditional:** Formally proved that the floor holds unconditionally for $k \le 7$.
+    - **Structural Convergence:** This work converges with the **mac-mini S7 seven-sector cover (THM-536)**, aligning the Sturmian partial-sum results with the EWLB reduction.
+    - **Corrections and Maintenance:** 
+        - **THM-529:** Resolved the collision with THM-527.
+        - **THM-527-C/528:** Executed necessary corrections to restore consistency.
+        - **MISTAKE-077:** Formally documented and corrected the MISTAKE-077 logic error.
+        - **HYP-2602a/b/c:** Registered the sub-hypotheses for the EWLB minimization.
+
+- **Active Steering Objectives (Updated):**
+    - **EWLB Minimization:** Resolve the single open step remaining for the "consecutive minimizes EWLB_A" proof.
+    - **S7 Cover Integration:** Complete the integration of the mac-mini S7 Sturmian bounds with the 1/7 pivot framework.
+    - **Reflection Verification:** Verify the reflection symmetry across the corrected THM-527-C and THM-528 series.
+
 ## 3.21 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 20704eb
 The LRC14 seven-sector cover (Angle B) has been reframed using a Sturmian partial-sum formulation, providing a sharper analytical bound for the covering configurations.
 
