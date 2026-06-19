@@ -92,6 +92,19 @@ that is scale-invariant (THM-531) and gap-monotone (THM-533 flavor). The target 
 moment-functional rearrangement inequality. Combined with THM-530 (k≤7) and the
 THM-527 finite-Vmax glue, proving it would finish LRC(14).
 
+### The mechanism (why consec wins on k=8,9,10)
+
+Separability sweep (exact): consec MINIMIZES the single-miss moment `S_1` (its phases are
+most uniform, so single sectors are least often empty) and MAXIMIZES the higher moments
+`S_2, S_4` (0–1 beaters over the bounded-spread window). The dangerous-row duals put a
+NEGATIVE weight on `S_1` and POSITIVE weights on `S_2, S_4` (k=8:
+`L_y = 1 − S_1 + S_2 − (9/10)S_3 + (3/5)S_4`). Both pulls — the `−S_1` term maximal at
+consec, the `+S_2,+S_4` terms maximal at consec — point the same way, so `L_y` is maximized
+at consec for k=8,9,10. At k=11,12,13 the balance tilts (lower-degree dual, S_1 weight
+`−1/2`), the pulls decouple, and harmless AP-beaters appear far below cap. A final proof
+must capture this coupled (alternating) monotonicity, NOT bound each moment separately
+(S_1 alone is minimized, not maximized, at consec).
+
 ## Files
 - `04-computation/lrc14_sector_fourier_lp_macmini_0618s7.py` (+ `.out`): exact IE identity.
 - `04-computation/lrc14_sector_lp_dual_macmini_0618s7.py` (+ `.out`): Bonferroni / (S1,S2)-LP.

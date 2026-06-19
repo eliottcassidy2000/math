@@ -23,3 +23,6 @@ dissoc                               0.01025      146.09     2.449[1, 2, -1, 0, 
 k=5: min covol=5.477@(0, 1, 2, 3, 4) (AP 5.477) | min lambda1=1.732@(0, 1, 2, 3, 4) (AP 1.732) AP=both-min
 k=6: min covol=7.416@(0, 1, 2, 3, 4, 5) (AP 7.416) | min lambda1=1.732@(0, 1, 2, 3, 4, 5) (AP 1.732) AP=both-min
 k=7: min covol=9.539@(0, 1, 2, 3, 4, 5, 6) (AP 9.539) | min lambda1=1.732@(0, 1, 2, 3, 4, 5, 6) (AP 1.732) AP=both-min
+k=8: min covol=11.832@(0, 1, 2, 3, 4, 5, 6, 7) (AP 11.832) | min lambda1=1.732@(0, 1, 2, 3, 4, 5, 6, 7) (AP 1.732) AP=both-min
+
+DONE.

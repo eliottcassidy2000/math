@@ -1,0 +1,15 @@
+SEPARABILITY of the moments S_r at consec (mac-mini-2026-06-18-S7)
+Question: which S_r are maximized vs minimized at consec? (explains why L_y peaks at consec)
+
+k=8 (120 sets spread<=10): #E with S_r(E)>S_r(consec):  S1=119  S2=1  S3=0  S4=0
+   consec: S1=1.6041 S2=1.7905 S3=1.3483 S4=0.6422
+k=9 (165 sets spread<=11): #E with S_r(E)>S_r(consec):  S1=161  S2=1  S3=0  S4=0
+   consec: S1=1.3813 S2=1.5444 S3=1.1755 S4=0.5638
+k=10 (220 sets spread<=12): #E with S_r(E)>S_r(consec):  S1=202  S2=0  S3=0  S4=0
+   consec: S1=1.1931 S2=1.3637 S3=1.0459 S4=0.4989
+k=11 (286 sets spread<=13): #E with S_r(E)>S_r(consec):  S1=258  S2=0  S3=0  S4=0
+   consec: S1=1.0404 S2=1.2194 S3=0.9400 S4=0.4504
+
+READING: S_1 has ~all beaters (consec MINIMIZES single-sector-miss);
+S_2,S_3,S_4 have ~0 beaters (consec MAXIMIZES higher moments).
+Dual y for k=8: [1,-1,1,-9/10,3/5]: -S_1 (max at consec) + S_2,S_4 (max at consec) => L_y max at consec.

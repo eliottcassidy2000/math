@@ -5,3 +5,5 @@ CHECK 1: g(t)>=1[t=0] on t=0..6 for each dual (the PROOF of per-E bound)
   k=11: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  valid(g>=1[t=0])=True
 
 CHECK 3 (LIVE GAP): does consec maximize the CORRECT-degree L_y for k=8,9,10? widen spread.
+  k=8, box maxE<=14 (3431 sets): L_y(AP)=0.35823 cap=0.3815
+     consec_is_max=True; #beaters=0; #OVER-CAP=0

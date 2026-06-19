@@ -4,3 +4,6 @@ ADVERSARIAL verification of the tournament-reframe dictionary
 
 [V1/V3] R3 (1/7-gap=local sink) and R2 (1/2-gap=Condorcet) on hard shapes:
   k7 dissoc      R3_bad=0 R2_bad=0  measN=0.00000 meas(S7)=0.00910
+  k8 nearAP      R3_bad=0 R2_bad=0  measN=0.00000 meas(S7)=0.17738
+  k9 mixed       R3_bad=0 R2_bad=0  measN=0.00000 meas(S7)=0.07655
+  k10 dissoc     R3_bad=0 R2_bad=0  measN=0.00052 meas(S7)=0.13226

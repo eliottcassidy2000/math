@@ -117,10 +117,20 @@ def kernel_basis(nz):
 
 
 def covol(basis):
+    """RAW covolume of the Z-span of basis (NOT saturated). Use covol_saturated."""
     if not basis:
         return 0.0
     G = sympy.Matrix([[sum(a * b for a, b in zip(u, w)) for w in basis] for u in basis])
     return math.sqrt(float(G.det()))
+
+
+def covol_saturated(nz):
+    """EXACT covolume of the SATURATED relation lattice {n in Z^{k-1}: sum n_j e_j=0}.
+    THEOREM (verified): equals |e_prim|_2 = ||(e/gcd(e))||_2."""
+    g = 0
+    for x in nz:
+        g = math.gcd(g, x)
+    return math.sqrt(sum((x // g) ** 2 for x in nz))
 
 
 def shortest_relation(nz, mc=3):
