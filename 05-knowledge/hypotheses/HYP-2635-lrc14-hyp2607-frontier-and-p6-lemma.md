@@ -81,6 +81,34 @@ limit (huge margin). The crux is exactly "the AP maximizes the (signed) correlat
   the variance of the number of hit sectors `H(x)=7−N(x)` and conclude `P(H=7)=p_0` is maximized by the
   AP. Worth importing in detail.
 
+## 6. The synthesis verdict — the precise remaining gap (the "third pocket")
+
+The workflow synthesis (verify-confirmed) pins it:
+- **Angle B is closest** — the only angle with a CLOSURE ARCHITECTURE: Part 1 (independent limit
+  `L_y^inf` exact, ≪ cap) + Part 2 (bounded-spread finite check, consec unique max < cap). What is
+  missing is one explicit step bridging them.
+- **The gap is the THIRD POCKET:** primitive, wide-spread, **no dissociated stranger** (rich relation
+  lattice Λ(E) yet large diameter — partial-AP / Sidon-complement sets, e.g. `[0,3,5,16,28,30,33,35]`).
+  These are covered only EMPIRICALLY (they cap at ≈0.18/0.28/0.38 for k=8/9/10, margin ≥0.20). To close:
+  bound `Σ_{m≠0,m∈Λ(E)} |ĝ(m)|` (the signed correction `L_y(E)−L_y^inf`) for sets whose Λ(E) is rich.
+  The dissociation-peel (HYP-2610) cannot reach them; the absolute envelope DIVERGES (MISTAKE-078); so
+  the bound MUST be SIGNED.
+- **The binding constraint is the k=9 cap-margin = 0.001384** (consec is only that far below cap_9; the
+  nearest competitor `{0,…,7,9}` is 0.005587 below consec). The TIGHTNESS lives entirely at consec
+  (bounded spread, in the DONE finite check); the third pocket has margin ≥0.20. So the rigorous gap is
+  a LOOSE bound on a generous-margin region — the obstruction is purely the SIGNED cancellation over a
+  rich lattice, not tightness.
+
+## 7. Route convergence — this meets codex's reciprocal-tail route
+
+The third pocket (signed correction over a rich relation lattice Λ(E)) is EXACTLY codex's open target
+(HYP-2632/2633/2634): "the integer relation-lattice lift samples the finite lanes fairly, then signed
+Abel/summation-by-parts inside additive-frequency shells before taking absolute values." My empty-sector
+`p_0`/`L_y` route and codex's reciprocal-hyperplane route are two coordinates on the SAME final object:
+the signed sum `Σ_{m∈Λ(E)} ĝ(m)` over the relation lattice of a wide, high-additive-energy set. Both
+need: a residue-lift/equidistribution statement making the signed shell-sums controllable. **This is the
+single shared crux of both active LRC(14) threads.**
+
 ## Honest status
 LRC(14) NOT proved. The crux is the single inequality "consec maximizes `meas(S7)`" (cleaner than
 `L_y`); all majorization/coupling/dichotomy tools are dead; the live routes are the additive-energy/GAP
