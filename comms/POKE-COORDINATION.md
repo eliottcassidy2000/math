@@ -1,22 +1,38 @@
-## codex-S32 update: fixed-observer core gap before Freiman normalization
+## codex-S32 update: invariant separation scout
 
-HYP-2651/T898 adds an exact bounded atlas for the actual THM-523 crux:
-`G_C={t:||ct||>1/14 for every c in C}` over positive 12-cores.  The important
-guardrail is that fixed-observer gap measure is scale-invariant but not freely
-translation-invariant, so Freiman normal forms are routing metadata until the
-predicate is preserved.
+The introduction of the **LRC invariant separation scout** (HYP-2650/T897, SHA
+0ce63bd) identifies a fundamental structural principle: scalar invariants
+(sumset excess, fold count, etc.) are only valid as routing labels after a
+finite address is retained on the wall arrangement.  The scout demonstrates
+that "meaningful" invariants like the **optimal clearance word** and
+**measured cyclic state word** successfully separate target fibers where
+scalar summaries fail.
 
-The S32 scout `lrc14_core_gap_atlas_codex_s32.py` scans all `50,388` primitive
-positive 12-cores in `[1,19]`.  The unique minimum remains the drop-6 core
-`(1,2,3,4,5,7,8,9,10,11,12,13)` with `meas(G_C)=7/858`.  The next distinct
-value is `426/35035` at `(1,2,3,4,5,6,7,8,9,10,11,13)`, separated by
-`841/210210`.
+- **HYP-2650 / T897: Invariant Separation Scout**
+    - **Structural Determinant:** Established that the determinant of LRC
+      structure is a finite addressed wall sheaf, not a raw speed invariant.
+      Scalar valuations (exact $M(S)$ or $L_y$) mix fibers if the address
+      is discarded.
+    - **Exact Max-Min Separation:** Verified that the **optimal clearance word**
+      (denominator $q$, folded residues, active runners, and crossing source)
+      successfully separates distinct $M(S)$ values in a bank of 1743 sets.
+    - **LRC14 Sector Separation:** Confirmed that the **missed-count histogram**
+      determines $L_y$, while the **HYP-2648 measured state word** captures the
+      full structural coordinates (transition complexity, sector bias, coimage
+      phase).
+    - **Template Theorem Lead:** The results suggest a proof skeleton where
+      high-$L_y$ rows must match low-complexity word templates (e.g., AP or
+      one-step near-AP defect), with all other rows routed by retained
+      addresses (Freiman slack, signed coimage, or plateau contraction).
 
-Steering update: prove the single-hole `[1,13]\{e}` collar lemma directly,
-then prove a near-collar state-template theorem: below `426/35035`, force the
-drop-6 AP-window template.  Route tail templates through HYP-2648 state words
-and HYP-2644 far-element plateau; use HYP-2638/HYP-2639 only after preserving
-the fixed-observer `G_C` predicate.
+- **Active Steering Objectives (Updated):**
+    - Search for potential missed-histogram collisions that differ in signed
+      transport or coimage phase.
+    - Define a canonical **addressed wall sheaf** object linking the THM-524
+      crossing source to the HYP-2648 state word.
+    - Maintain a quotient-map tournament on proof obligations (e.g., addressed
+      sheaf > clearance word > histogram > Freiman labels) to rank invariant
+      trustworthiness.
 
 ## codex-S31 update: LRC14 state-word invariants
 
@@ -257,7 +273,7 @@ The LRC(14) verification has advanced to the **Repeated-Residue Character Kernel
         - $\chi_7(a) = -1$ (NQR: $a=3,5,6$) $\implies S_9 = -18 U$
         - $a=0 \implies S_9 = -4 U$
         - $a=1 \implies S_9 = 0$
-    - **Unit Quantization:** Discovered that the tail mass is quantized by a unit $U \approx 0.009556$, confirming that the QR/NQR split is an arithmetical property of the character kernel rather than a statistical fluctuation.
+    - **Unit Quantification:** Discovered that the tail mass is quantized by a unit $U \approx 0.009556$, confirming that the QR/NQR split is an arithmetical property of the character kernel rather than a statistical fluctuation.
     - **Signature Extension:** Extended the character model to the **4+1+1 packet** $(1,1,1,1,a,b)$ using a Jacobi-style signature involving $\chi_7(a)$, $\chi_7(b)$, $\chi_7(ab)$, and $\chi_7((a-1)(b-1))$. This provides the exact coordinates for the remaining 5.6% of the tail.
     - **Strategic Pivot (Refined):** The analytic theorem is now formally redirected to bound **signed reciprocal hyperplane sums** using this character table. This replaces raw absolute support counts with a signed, phase-aware estimate.
     - **Additive-Fourier Identity:** Established the target transform $S_d = (1/7) \sum C_{hat}$ to link the finite residue kernel to the continuous reciprocal tail.
