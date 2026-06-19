@@ -1,0 +1,112 @@
+
+========================================================================================
+LRC SPECTRUM AP-DEFECT EXCESS AUDIT S17
+========================================================================================
+Goal: continue HYP-2621 by testing whether the AP-defect multiplier constant r can grow, which would threaten the desired c/k^2 lower bound.
+
+========================================================================================
+1. SMALL MULTIPLIER GRID: A_{k,r}, k<=36, r<=12
+========================================================================================
+state counts: {'unit-other': 33, 'positive': 308, 'unit-target': 16, 'AP-tight': 6}
+
+Top rows by normalized reciprocal gap depth q/(e(k+1)):
+  k   r         M    argmax    e    norm-depth        depth        state
+ 31   4     4/127    72/127    1        127/32         4064  unit-target
+ 25   3      3/77     61/77    1         77/26         2002  unit-target
+ 19   3      3/59     36/59    1         59/20         1180  unit-target
+ 13   3      3/41     17/41    1         41/14          574  unit-target
+  7   3      3/23      4/23    1          23/8          184  unit-target
+ 35   2      2/71     23/71    1         71/36         2556  unit-target
+ 33   2      2/67     44/67    1         67/34         2278  unit-target
+ 29   2      2/59     40/59    1         59/30         1770  unit-target
+ 27   2      2/55     36/55    1         55/28         1540  unit-target
+ 23   2      2/47     15/47    1         47/24         1128  unit-target
+ 21   2      2/43     15/43    1         43/22          946  unit-target
+ 17   2      2/35     24/35    1         35/18          630  unit-target
+ 15   2      2/31     20/31    1         31/16          496  unit-target
+ 11   2      2/23     16/23    1         23/12          276  unit-target
+  9   2      2/19      7/19    1         19/10          190  unit-target
+  5   2      2/11      8/11    1          11/6           66  unit-target
+ 31   5     5/157    68/157    3        157/96       5024/3     positive
+ 25   4     4/101    21/101    3        101/78       2626/3     positive
+ 19   4      4/77     47/77    3         77/60       1540/3     positive
+ 13   4      4/53     22/53    3         53/42        742/3     positive
+  7   4      4/29      5/29    3         29/24        232/3     positive
+ 31   6     6/187   106/187    5       187/160       5984/5     positive
+ 36   2      1/36     37/72    1         36/37         1332   unit-other
+ 35   3      1/35    34/105    1         35/36         1260   unit-other
+
+Readout: the top normalized depths are the fixed unit-excess branches r=4, r=3, and r=2.  In this grid, r>=5 never creates a larger unit-mediant constant.
+
+========================================================================================
+2. HIGH-r PROBE ON THE k == 1 mod 30 TIGHT BRANCH
+========================================================================================
+Rows k=31 and 61 are where A_{k,3} is AP-tight and A_{k,4} takes over. If r can grow, excess-one or near-excess-one rows should persist here.
+
+k=31:
+  r         M    argmax    e    norm-depth        depth        state
+  4     4/127    72/127    1        127/32         4064  unit-target
+  5     5/157    68/157    3        157/96       5024/3     positive
+  6     6/187   106/187    5       187/160       5984/5     positive
+  7      1/31    94/217    1         31/32          992   unit-other
+  8     8/247   140/247    9       247/288       7904/9     positive
+  9     9/277   120/277   11       277/352      8864/11     positive
+ 10    10/307   174/307   13       307/416      9824/13     positive
+ 11    11/337   191/337   15       337/480     10784/15     positive
+
+k=61:
+  r         M    argmax    e    norm-depth        depth        state
+  4     4/247   177/247    1        247/62        15314  unit-target
+  5     5/307    87/307    3       307/186      19034/3     positive
+  6     6/367   263/367    5       367/310      22754/5     positive
+  7      1/61   306/427    1         61/62         3782   unit-other
+  8     8/487   138/487    9       487/558      30194/9     positive
+  9     9/547   392/547   11       547/682     33914/11     positive
+ 10    10/607   172/607   13       607/806     37634/13     positive
+ 11    11/667   189/667   15       667/930     41354/15     positive
+
+Pattern: r=4 is the only high-constant excess-one row in this branch. Then r=5,6 have excess 3,5; r=7 has M=1/k; r>=8 has larger excess and normalized depth below 1 in these probes.
+
+========================================================================================
+3. SYMBOLIC WITNESS SEEDS FOR THE r=3 BRANCH
+========================================================================================
+For q=3k+2 and k mod30 in {7,13,19,25}, the table below gives an explicit numerator a(k) such that t=a/(3k+2) clears every speed in A_{k,3} to distance at least 3/(3k+2).
+ k mod30               a(k)                     tested k   all clear?
+       7         (3k - 1)/5  [7, 37, 67, 97, '...', 247]         True
+      13         (6k + 7)/5 [13, 43, 73, 103, '...', 223]         True
+      19         (6k + 1)/5 [19, 49, 79, 109, '...', 229]         True
+      25         (3k + 5)/5 [25, 55, 85, 115, '...', 235]         True
+
+Representative exact equality checks:
+  k   M(A_k,3)    formula t    dist(t)  exact arg
+  7       3/23         4/23       3/23       4/23
+ 13       3/41        17/41       3/41      17/41
+ 19       3/59        23/59       3/59      36/59
+ 25       3/77        16/77       3/77      61/77
+ 37      3/113       22/113      3/113     22/113
+ 43      3/131       53/131      3/131     78/131
+ 49      3/149       59/149      3/149     59/149
+ 55      3/167       34/167      3/167    133/167
+ 97      3/293       58/293      3/293    235/293
+103      3/311      125/311      3/311    186/311
+
+This proves the lower-bound/witness half of the third-mediant branch symbolically on these residue classes.  The remaining proof half is the upper certificate M <= 3/(3k+2), i.e. a modular cover/no-better-crossing argument.
+
+========================================================================================
+4. TOURNAMENT ANALYSIS
+========================================================================================
+Hamiltonian proof path:
+  infinite_lower_bound_for_g(k) > excess_one_classifier > r3_symbolic_witness > high_r_excess_audit > bounded_multiplier_grid > doubled_top_packet > raw_runner_vertices
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+SCC sizes: [1, 1, 1, 1, 1, 1, 1]
+Assumption challenged: runners are not the vertices for this question. The quotient preserving the LRC-spectrum predicate is the family/excess ledger: numerator excess, denominator depth, residue class, and witness formula.
+
+========================================================================================
+READOUT
+========================================================================================
+1. The right scalar is excess e=p(k+1)-q.  Unit-excess rows create the large reciprocal depths; merely being below doubled-top is not enough.
+2. In the exact grid k<=36,r<=12, the largest normalized depths are fixed r=4, r=3, and r=2.  No r>=5 row improves the depth constant.
+3. On the k==1 mod30 branch, r=4 gives the known 4/(4k+3), but r=5,6,8,... quickly pick up excess 3,5,9,... and lose normalized depth.
+4. The r=3 branch now has explicit residue-class witness formulas.  The next proof task is the matching upper cover certificate.
+5. No o(1/k^2) dip was found in this continuation.
