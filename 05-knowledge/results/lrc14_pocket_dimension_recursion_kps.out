@@ -1,0 +1,27 @@
+=== L_y by Freiman dimension d (GAP), per k ===
+
+--- k=8 (cap=0.38153) ---
+  d=1 AP consec: L_y=0.35823 excess=0 relrank=6  (POCKET 1, the MAX)
+  d=2 GAP (2, 4) steps(1, 7): L_y=0.13921 exc=6 relrank=5  [0, 1, 7, 8, 14, 15, 21, 22]
+  d=2 GAP (2, 4) steps(1, 9): L_y=0.17483 exc=6 relrank=5  [0, 1, 9, 10, 18, 19, 27, 28]
+  d=3 GAP (2, 2, 2) steps(1, 5, 17): L_y=0.11535 exc=12 relrank=4  (POCKET 4)  [0, 1, 5, 6, 17, 18, 22, 23]
+  d=3 GAP (2, 2, 2) steps(1, 3, 11): L_y=0.08369 exc=12 relrank=4  (POCKET 4)  [0, 1, 3, 4, 11, 12, 14, 15]
+
+--- k=9 (cap=0.49426) ---
+  d=1 AP consec: L_y=0.49288 excess=0 relrank=7  (POCKET 1, the MAX)
+  d=2 GAP (3, 3) steps(1, 11): L_y=0.31803 exc=8 relrank=6  [0, 1, 2, 11, 12, 13, 22, 23, 24]
+  d=2 GAP (3, 3) steps(1, 7): L_y=0.27601 exc=8 relrank=6  [0, 1, 2, 7, 8, 9, 14, 15, 16]
+  d=3 GAP (3, 3, 1) steps(1, 11, 0): L_y=0.31803 exc=8 relrank=5  (POCKET 4)  [0, 1, 2, 11, 12, 13, 22, 23, 24]
+
+--- k=12 (cap=0.857) ---
+  d=1 AP consec: L_y=0.71417 excess=0 relrank=10  (POCKET 1, the MAX)
+  d=2 GAP (3, 4) steps(1, 13): L_y=0.58592 exc=12 relrank=9  
+  d=2 GAP (4, 3) steps(1, 11): L_y=0.59671 exc=12 relrank=9  
+  d=3 GAP (2, 2, 3) steps(1, 5, 23): L_y=0.53673 exc=22 relrank=8  (POCKET 4)  [0, 1, 5, 6, 23, 24, 28, 29, 46, 47, 51, 52]
+  d=3 GAP (2, 3, 2) steps(1, 7, 29): L_y=0.53524 exc=18 relrank=8  (POCKET 4)  [0, 1, 7, 8, 14, 15, 29, 30, 36, 37, 43, 44]
+
+=== RECURSION in k: max L_y within each excess band, all k=8..12 (bounded scan) ===
+    (shows the dimension-1 vs dimension>=2 GAP across k; the 'pockets' as k grows)
+  k=8: consec L_y=0.35823  max_(non-AP) L_y=0.30306 at (0, 2, 3, 4, 5, 6, 7, 8)  GAP=0.05517  (non-AP max < cap 0.38153? True)
+  k=9: consec L_y=0.49288  max_(non-AP) L_y=0.48729 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  GAP=0.00559  (non-AP max < cap 0.49426? True)
+  k=10: consec L_y=0.57008  max_(non-AP) L_y=0.56241 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  GAP=0.00767  (non-AP max < cap 0.6044? True)
