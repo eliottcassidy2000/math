@@ -1,0 +1,17 @@
+========================================================================
+1. FIRST-MOMENT (mean crossing-gap) vs MAX (=M): mean is a ceiling
+========================================================================
+  {1..11,13,84}: mean=0.03290  M=0.07865  (1/14=0.07143)
+  {1..13}: mean=0.03600  M=0.07143  (1/14=0.07143)
+
+========================================================================
+2. TIGHT-EXTREMAL OBSTRUCTION: {1..13} has mu=0, zero strict components
+========================================================================
+  {1..13}: M=1/14  #lonely components=0  mu=0
+  => no STRICT good crossing exists; any strict-positivity count over-proves.
+
+========================================================================
+3. STRUCTURED WITNESS FAMILY F(S)=grid U (v,Vmax): always contains good crossing
+========================================================================
+  tested=400  LRC violations=0  family misses good crossing=0
+  => 0 misses: F(S) covers the binding crossing (coverage reduction, not a proof).

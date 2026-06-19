@@ -1,0 +1,37 @@
+========================================================================
+(1) ONE far dissociated stranger: factor 5/7 = 0.714286
+========================================================================
+  C(|C|=6) intG=0.13265: +503->0.7143  +2003->0.7143  +9973->0.7143  
+  C(|C|=7) intG=0.08724: +503->0.7143  +2003->0.7143  +9973->0.7143  
+  C(|C|=5) intG=0.19395: +503->0.7143  +2003->0.7143  +9973->0.7143  
+  C(|C|=12) intG=0.05721: +503->0.7143  +2003->0.7143  +9973->0.7143  
+
+========================================================================
+(2) d far strangers: factor (5/7)^d
+========================================================================
+  C=[0, 1, 2, 3, 4, 5] intG=0.13265
+   +1 stranger {503}:        ratio=0.7143  (5/7)^1=0.7143
+   +2 strangers {503,9973}:  ratio=0.5102  (5/7)^2=0.5102
+   +3 strangers {503,2003,9973}: ratio=0.3647  (5/7)^3=0.3644
+
+========================================================================
+(3) convergence RATE: ratio vs N (approaches 5/7 from N≫maxC)
+========================================================================
+   N=   13: ratio=0.72846  dev from 5/7 = +0.01417
+   N=   29: ratio=0.71695  dev from 5/7 = +0.00267
+   N=   61: ratio=0.71426  dev from 5/7 = -0.00002
+   N=  127: ratio=0.71424  dev from 5/7 = -0.00005
+   N=  503: ratio=0.71429  dev from 5/7 = +0.00000
+   N= 2003: ratio=0.71429  dev from 5/7 = +0.00000
+
+========================================================================
+(4) RESONANT N (multiple of a core element) does NOT give 5/7 (stays structured):
+========================================================================
+   N=   12 (resonant): ratio=0.6966  (≠5/7 ⟹ stays in kernel)
+   N=   18 (resonant): ratio=0.7119  (≠5/7 ⟹ stays in kernel)
+   N=   24 (resonant): ratio=0.7100  (≠5/7 ⟹ stays in kernel)
+   N= 3000 (resonant): ratio=0.7143  (≠5/7 ⟹ stays in kernel)
+   N= 3006 (resonant): ratio=0.7143  (≠5/7 ⟹ stays in kernel)
+
+  => far+DISSOCIATED strangers peel by 5/7; resonant ones stay in the bounded kernel.
+     Recursion bottoms out at the structured kernel (bounded ⟹ finite/certificate).
