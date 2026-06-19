@@ -1,0 +1,12 @@
+(1,2) L_y closure + dual coefficients + component moments (consec), k=8,9,10
+  k=8: L_y(consec)=2633/7350=0.35823  cap_k=0.38146  CLOSES
+        dual y_r (binomial)=['1', '-1', '1', '-9/10', '3/5']
+        S_r(consec) r=0..4: [1.0, 1.6040816326530611, 1.7904761904761906, 1.3482993197278912, 0.6421768707482993]
+  k=9: L_y(consec)=26083/52920=0.49288  cap_k=0.49426  CLOSES
+        dual y_r (binomial)=['1', '-13/18', '4/9', '-1/6']
+        S_r(consec) r=0..4: [1.0, 1.3812925170068027, 1.5443877551020408, 1.1755102040816328, 0.5637755102040817]
+  k=10: L_y(consec)=45253/79380=0.57008  cap_k=0.60440  CLOSES
+        dual y_r (binomial)=['1', '-13/18', '4/9', '-1/6']
+        S_r(consec) r=0..4: [1.0, 1.1930839002267575, 1.3636621315192743, 1.0459183673469388, 0.4988662131519274]
+
+(3) component extremality over a thorough bank (k=8, spread<=12): consec MIN S_1? MAX S_2,S_4?

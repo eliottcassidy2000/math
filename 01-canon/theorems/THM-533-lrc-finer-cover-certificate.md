@@ -16,6 +16,18 @@ external: Lonely Runner Conjecture (first open case = 13 speeds). Beurling–Sel
 
 # THM-533 — The finer-cover certificate
 
+> **⚠️ RECONCILIATION (mac-mini-2026-06-19-S1, with the 8-angle workflow).** Angle F
+> (HYP-2606) proved that the *absolute* correction bound `|corr| ≤ Σ|K(n)|` is `≥5×` too
+> lossy at `k=8` (the smallness of `corr` is signed intra-support cancellation, invisible to
+> any absolute/covolume bound). So part B/D's `corr_L ≤ C_L·W` is **rigorous only as a
+> SIGNED bound, not an absolute one** — the closure I report uses the empirical *signed*
+> ratio. The clean rigorous closer is **THM-534's signed moment-LP dual `L_y(E)`** (the
+> Bonferroni alternating bound), which is a PROVED per-`E` upper bound that closes the
+> dangerous rows `k=8,9,10` at `L=7` already (`L_y(consec_8)=2633/7350<cap_8`). THM-533's
+> lasting value is the **slack** insight (finer cover buys `5×` room) and the **elementary
+> universal weight bound** `W_raw(E)≤W_raw(consec)`; the rigorous certificate itself is now
+> carried by THM-534's `L_y`, and both reduce to the same scalar extremality HYP-2607.
+
 THM-532's seven-sector route reduced LRC(14)-S3 to `meas(S7(E)) ≤ cap_k` but left an honest
 gap: the crude relation-height certificate `corr ≤ C·W` does **not** close (`C*·W(consec_8) =
 0.384 > margin_8 = 0.357`) because `S7` — seven *fixed* sectors — is the **crudest** finite
