@@ -1,0 +1,10 @@
+L=9 box-cum corr = +0.019833  frac of target = +0.0655
+per-shell signed / abs:
+  |n|inf=1: signed=-0.00101  abs=0.01098  cumsigned=-0.00101
+  |n|inf=2: signed=+0.00719  abs=0.30527  cumsigned=+0.00618
+  |n|inf=3: signed=-0.01723  abs=0.83455  cumsigned=-0.01105
+  |n|inf=4: signed=+0.01481  abs=1.78365  cumsigned=+0.00376
+  |n|inf=5: signed=+0.01520  abs=1.97474  cumsigned=+0.01896
+  |n|inf=6: signed=+0.00590  abs=1.16458  cumsigned=+0.02486
+  |n|inf=8: signed=+0.00110  abs=0.84129  cumsigned=+0.02596
+  |n|inf=9: signed=-0.00613  abs=1.48748  cumsigned=+0.01983

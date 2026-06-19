@@ -1,0 +1,16 @@
+########## k=8  M_k = 481/1470 = 0.327211 ##########
+  maxLIM over bases in {0..14} = 0.196599 at [0, 1, 2, 3, 4, 5, 6]
+  LIM(consec base [0, 1, 2, 3, 4, 5, 6]) = 0.196599
+  M_k - maxLIM = +0.130612   (need > 0; reduction target)
+  worst single-far meas (window<= 11, w<= 2003) = 0.198468 at [0, 1, 2, 3, 4, 5, 6, 101]
+    margin to M_k = +0.128743
+    NO single-far set reached M_k. reduction holds on grid.
+
+########## k=9  M_k = 2447/5880 = 0.416156 ##########
+  maxLIM over bases in {0..14} = 0.362099 at [0, 1, 2, 3, 4, 5, 6, 7]
+  LIM(consec base [0, 1, 2, 3, 4, 5, 6, 7]) = 0.362099
+  M_k - maxLIM = +0.054057   (need > 0; reduction target)
+  worst single-far meas (window<= 11, w<= 2003) = 0.363915 at [0, 1, 2, 3, 4, 5, 6, 7, 101]
+    margin to M_k = +0.052241
+    NO single-far set reached M_k. reduction holds on grid.
+

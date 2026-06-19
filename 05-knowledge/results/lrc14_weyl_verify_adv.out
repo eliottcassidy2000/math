@@ -1,0 +1,38 @@
+=== (A) baseline meas (exact) ===
+  k=8 consec meas_S7 = 481/1470 = 0.327211
+  k=9 consec meas_S7 = 2447/5880 = 0.416156
+  k=10 consec meas_S7 = 8899/17640 = 0.504478
+
+=== (B) Weyl limit exact-vs-large-w, AP and WIDE non-AP bases (k=8) ===
+  AP-7 B0=[0, 1, 2, 3, 4, 5, 6]  LIM=0.196599 (=289/1470)
+     w=503: meas=0.197250  diff_from_LIM=+0.000651  |diff|*w=0.328
+     w=1009: meas=0.196437  diff_from_LIM=-0.000162  |diff|*w=0.163
+     w=2003: meas=0.196467  diff_from_LIM=-0.000131  |diff|*w=0.263
+     w=5003: meas=0.196611  diff_from_LIM=+0.000012  |diff|*w=0.062
+  wide-nonAP B0=[0, 1, 3, 7, 12, 20, 33]  LIM=0.017312 (=3919/226380)
+     w=503: meas=0.017893  diff_from_LIM=+0.000581  |diff|*w=0.292
+     w=1009: meas=0.017556  diff_from_LIM=+0.000244  |diff|*w=0.246
+     w=2003: meas=0.017316  diff_from_LIM=+0.000004  |diff|*w=0.008
+     w=5003: meas=0.017280  diff_from_LIM=-0.000032  |diff|*w=0.158
+  nonAP-2 B0=[0, 2, 3, 5, 6, 9, 13]  LIM=0.042421 (=1216/28665)
+     w=503: meas=0.042407  diff_from_LIM=-0.000014  |diff|*w=0.007
+     w=1009: meas=0.042217  diff_from_LIM=-0.000204  |diff|*w=0.206
+     w=2003: meas=0.042494  diff_from_LIM=+0.000073  |diff|*w=0.146
+     w=5003: meas=0.042351  diff_from_LIM=-0.000070  |diff|*w=0.353
+
+=== (C) Is consec the BOUNDED global max? search small windows ===
+  k=8 window {0..12}: tested 792 primitive sets
+    consec M_8 = 0.327211   best-in-window = 0.327211 at [0, 1, 2, 3, 4, 5, 6, 7]
+    no bounded set in window beats consec.
+  k=9 window {0..12}: tested 495 primitive sets
+    consec M_9 = 0.416156   best-in-window = 0.416156 at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+    no bounded set in window beats consec.
+  k=10 window {0..13}: tested 715 primitive sets
+    consec M_10 = 0.504478   best-in-window = 0.504478 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+    no bounded set in window beats consec.
+
+=== (D) Hunt: any single-far set exceeds M_k? ===
+  k=8: M_8=0.327211  worst single-far meas=0.198468 at [0, 1, 2, 3, 4, 5, 6, 101]
+    no single-far set reached M_k. (reduction holds on this grid)
+  k=9: M_9=0.416156  worst single-far meas=0.363915 at [0, 1, 2, 3, 4, 5, 6, 7, 101]
+    no single-far set reached M_k. (reduction holds on this grid)

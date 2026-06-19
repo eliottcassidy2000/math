@@ -1,0 +1,36 @@
+================================================================================
+CANDIDATE 3 TEST: does K(n) depend only on n mod 7 (visibility class)?
+================================================================================
+If yes -> finite residue reduction works. If K carries 1/n amplitude -> category error.
+
+  base support-6 relation residue pattern n = (1, 2, 3, 1, 2, 4)
+     K(base) = -0.000077-0.000037j   |K| = 8.532575e-05
+
+  Now add 7 to the FIRST coordinate only (same residues mod 7, different amplitude):
+     n=(   1,...rest same): K=-7.687584e-05-3.702145e-05j  |K|=8.532575e-05
+     n=(   8,...rest same): K=-9.609480e-06-4.627682e-06j  |K|=1.066572e-05
+     n=(  15,...rest same): K=-5.125056e-06-2.468097e-06j  |K|=5.688383e-06
+     n=(  22,...rest same): K=-3.494356e-06-1.682793e-06j  |K|=3.878443e-06
+     n=(  36,...rest same): K=-2.135440e-06-1.028374e-06j  |K|=2.370160e-06
+     n=(  71,...rest same): K=-1.082758e-06-5.214289e-07j  |K|=1.201771e-06
+     n=( 351,...rest same): K=-2.190195e-07-1.054742e-07j  |K|=2.430933e-07
+
+  Multiply ALL coords by a constant c coprime to 7 (a DILATION n->c*n, residues change
+  to c*residue mod 7 but the orbit/measure is dilation-invariant). Watch |K| shrink ~1/c^6:
+     c=  1: n=(1, 2, 3, 1, 2, 4)  |K|=8.5326e-05  (c^6*|K| = 8.5326e-05)
+     c=  2: n=(2, 4, 6, 2, 4, 8)  |K|=1.3332e-06  (c^6*|K| = 8.5326e-05)
+     c=  3: n=(3, 6, 9, 3, 6, 12)  |K|=1.1704e-07  (c^6*|K| = 8.5326e-05)
+     c=  4: n=(4, 8, 12, 4, 8, 16)  |K|=2.0831e-08  (c^6*|K| = 8.5326e-05)
+     c=  5: n=(5, 10, 15, 5, 10, 20)  |K|=5.4608e-09  (c^6*|K| = 8.5326e-05)
+     c=  8: n=(8, 16, 24, 8, 16, 32)  |K|=3.2549e-10  (c^6*|K| = 8.5326e-05)
+     c= 15: n=(15, 30, 45, 15, 30, 60)  |K|=7.4909e-12  (c^6*|K| = 8.5326e-05)
+
+DIAGNOSIS:
+ - K(n) is NOT residue-only: shifting a coord by +7 (same mod-7 class) changes |K|,
+   decaying like 1/n. So one residue class contains INFINITELY many distinct K values.
+ - The dilation n->c*n shrinks |K| like 1/c^6 (the support-6 amplitude product), but the
+   NUMBER of relations of amplitude ~c grows, recreating the harmonic-divergent envelope.
+ - Therefore 'finitely many residue classes -> bounded representative' is a CATEGORY ERROR.
+   Visibility (mod-7 vanishing, THM-503) is REAL but only zeroes the 7|n coords; it does
+   NOT collapse the infinite amplitude tower within a residue class. Candidate 3 REFUTED
+   as a closer (the s708 visibility law is true but does not bound the amplitude sum).

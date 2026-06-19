@@ -1,0 +1,26 @@
+======================================================================
+STEP 1: independent verification of factorization K(n)=D7(n mod7)/prod n
+======================================================================
+  max|K_indep - K_factored(+A)| over 3000 random n = 1.708e-19
+  max|K_indep - K_factored(-A)| over 3000 random n = 1.708e-19
+  (factorization EXACT iff ~1e-13)
+  also: K is REAL? max|Im K_indep| sample = 1.54e-05
+
+======================================================================
+STEP 2: D7 structural claims (antipodal symmetry, bounds, nonzero)
+======================================================================
+  max|D7(-c) - conj(D7(c))| over 3000 random cosets = 7.920e-16
+  => antipodal pairing kills imaginary part => correction is REAL.
+
+  full survey of all 6^6 = 46656 cosets...
+  min|D7(c)| over all cosets = 1.6859e-04  (#near-zero<1e-9: 0)
+  max|Re D7| = 0.1431   max|Im D7| = 0.6270
+  claim: nonzero on all, max|Re|=0.1431, max|Im|=0.627
+
+======================================================================
+STEP 3: box-truncation reconstruction + per-shell decay (NEGATIVE claim)
+======================================================================
+  E=[0, 1, 2, 3, 4, 5, 6, 7] (k=8 AP). p0=0.327211, M7=0.024480, target corr p0-M7 = 0.302731
+  L=3: #rels=    22852  box-cum corr=-0.011046  frac=-0.0365
+  L=5: #rels=   315096  box-cum corr=+0.018962  frac=+0.0626
+  L=7: #rels=   801846  box-cum corr=+0.024862  frac=+0.0821

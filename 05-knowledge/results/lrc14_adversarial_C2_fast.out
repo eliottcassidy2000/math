@@ -1,0 +1,33 @@
+================================================================================
+CANDIDATE 2 (fast): support>=6 lattice envelope vs claimed (pi^2/6)^3<17
+================================================================================
+
+  AP k=8 {0..7}: TRUE signed correction = +0.30273
+     |n|_inf<= 10: support>=6 envelope =     328.4213
+     |n|_inf<= 15: support>=6 envelope =     492.0504
+     |n|_inf<= 20: support>=6 envelope =     663.1220
+     |n|_inf<= 25: support>=6 envelope =     777.5327
+     |n|_inf<= 30: support>=6 envelope =     879.9395
+
+  wide k=8 {0,1,2,3,4,5,6,30}: TRUE signed correction = +0.17076
+     |n|_inf<= 10: support>=6 envelope =     148.1124
+     |n|_inf<= 15: support>=6 envelope =     249.6280
+     |n|_inf<= 20: support>=6 envelope =     363.7349
+     |n|_inf<= 25: support>=6 envelope =     443.3249
+     |n|_inf<= 30: support>=6 envelope =     515.8190
+
+  Sidon k=8 {0,1,3,7,12,20,30,44}: TRUE signed correction = -0.01236
+     |n|_inf<= 10: support>=6 envelope =      69.2248
+     |n|_inf<= 15: support>=6 envelope =     107.6089
+     |n|_inf<= 20: support>=6 envelope =     149.3582
+     |n|_inf<= 25: support>=6 envelope =     178.3737
+     |n|_inf<= 30: support>=6 envelope =     204.8455
+
+  dissoc k=8 {0,1,3,7,15,31,63,127}: TRUE signed correction = +0.01025
+     |n|_inf<= 10: support>=6 envelope =      29.3548
+     |n|_inf<= 15: support>=6 envelope =      47.7941
+     |n|_inf<= 20: support>=6 envelope =      68.7042
+     |n|_inf<= 25: support>=6 envelope =      83.8339
+     |n|_inf<= 30: support>=6 envelope =      97.8385
+
+  Claimed convergent bound (pi^2/6)^3 = 4.4509

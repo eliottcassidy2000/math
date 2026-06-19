@@ -1,0 +1,56 @@
+================================================================================
+CANDIDATE 1 TEST: best-case main-term inflation of the Beurling-Selberg majorant
+================================================================================
+Even a PERFECT high-mode majorant inflates the main term to M7_infl(k,N).
+For the certificate to work we need M7_infl(k,N) <= cap_k (necessary condition).
+
+  k=8: M7(exact)=0.02448  cap_8=0.38146  (headroom for inflation = 0.35698)
+      N=    3: M7_infl=0.03519  <= cap? True
+      N=    6: M7_infl=0.03060  <= cap? True
+      N=   12: M7_infl=0.02777  <= cap? True
+      N=   24: M7_infl=0.02619  <= cap? True
+      N=   48: M7_infl=0.02535  <= cap? True
+      N=   96: M7_infl=0.02492  <= cap? True
+      N=  200: M7_infl=0.02469  <= cap? True
+      N=  500: M7_infl=0.02457  <= cap? True
+      N= 1000: M7_infl=0.02452  <= cap? True
+      N= 5000: M7_infl=0.02449  <= cap? True
+      -> inflation drops below cap at N>= 3
+
+  k=9: M7(exact)=0.05770  cap_9=0.49426  (headroom for inflation = 0.43656)
+      N=    3: M7_infl=0.11737  <= cap? True
+      N=    6: M7_infl=0.08918  <= cap? True
+      N=   12: M7_infl=0.07378  <= cap? True
+      N=   24: M7_infl=0.06581  <= cap? True
+      N=   48: M7_infl=0.06177  <= cap? True
+      N=   96: M7_infl=0.05974  <= cap? True
+      N=  200: M7_infl=0.05868  <= cap? True
+      N=  500: M7_infl=0.05809  <= cap? True
+      N= 1000: M7_infl=0.05790  <= cap? True
+      N= 5000: M7_infl=0.05774  <= cap? True
+      -> inflation drops below cap at N>= 3
+
+  k=10: M7(exact)=0.10491  cap_10=0.60440  (headroom for inflation = 0.49949)
+      N=    3: M7_infl=0.29785  <= cap? True
+      N=    6: M7_infl=0.19858  <= cap? True
+      N=   12: M7_infl=0.15031  <= cap? True
+      N=   24: M7_infl=0.12713  <= cap? True
+      N=   48: M7_infl=0.11588  <= cap? True
+      N=   96: M7_infl=0.11036  <= cap? True
+      N=  200: M7_infl=0.10752  <= cap? True
+      N=  500: M7_infl=0.10595  <= cap? True
+      N= 1000: M7_infl=0.10543  <= cap? True
+      N= 5000: M7_infl=0.10502  <= cap? True
+      -> inflation drops below cap at N>= 3
+
+================================================================================
+BUT: the inflation test is NECESSARY, not sufficient. The REAL killer is that the
+FINITE-box lattice sum at that N must reproduce the TRUE correction delta_k=0.303 (k=8)
+to within (cap - meas) = 0.054.  The earlier Q1 diagnostic (BS_bandlimited_signed)
+showed the SIGNED truncated lattice sum does NOT converge to delta_k even at N=11
+(it sat near -0.03 vs the true +0.303). A majorant only makes the bound LARGER than
+the already-non-converging signed sum, so the box must be enormous AND the inflation
+re-enters. The two requirements (small inflation -> large N; finite box -> tractable N)
+are in tension, and crucially NO ONE HAS EXHIBITED a single (E,N) where the EXACT
+majorant integral <= cap with a verified finite box. The mechanism is GROUNDED but
+UNEXECUTED -- same status as the Minkowski count (MISTAKE-078).

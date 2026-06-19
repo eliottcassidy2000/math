@@ -1,0 +1,10 @@
+================================================================================
+STEP 0: reconcile conventions — exact meas(S7), M7(k), correction delta_k at AP
+================================================================================
+  k=8 AP: meas(S7)=481/1470=0.32721  M7=2880/117649=0.02448  delta(correction)=0.30273
+        cap_8=0.38146  margin meas->cap = 0.05425  margin delta->(cap-M7) = 0.05425
+  k=9 AP: meas(S7)=2447/5880=0.41616  M7=47520/823543=0.05770  delta(correction)=0.35845
+        cap_9=0.49426  margin meas->cap = 0.07810  margin delta->(cap-M7) = 0.07810
+  k=10 AP: meas(S7)=8899/17640=0.50448  M7=86400/823543=0.10491  delta(correction)=0.39957
+        cap_10=0.60440  margin meas->cap = 0.09992  margin delta->(cap-M7) = 0.09992
+
