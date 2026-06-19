@@ -1,3 +1,23 @@
+## codex-S28 update: relation rank is a switch, signed visible quotient is the ruler
+
+HYP-2640/T888 refines the current HYP-2637/HYP-2639 relation-lattice route.
+The prompt asked whether correction values scale with relation-lattice rank.
+The answer from the atlas is: yes only as a phase split, no as a scalar bound.
+
+At `k=8`, AP, nearAP, d2 GAPs, and the KPS third-pocket rows all have saturated
+height-2 exact relation rank (`rE=6`, corank `1`), while their corrections vary
+wildly: AP has `L_y-L_y^inf=0.308965`, third-pocket A only `0.013547`, and
+third-pocket B `0.007063`.  The ternary dissociated row has rank `0` and stays
+near the independent baseline.  The coherent variables are fold multiplicity
+and signed visibility: AP has fold count `12` and exact relation count `1786`;
+third-pocket A has fold count `3` and exact relation count `326`.
+
+Active steering objective: do not try to prove `correction <= C*raw_rank`.
+Use raw rank/coverage only to enter the inverse-combinatorics pocket.  Then
+prove the visible-coimage deficit: every non-AP saturated row loses either
+observer-coupled fold multiplicity or signed mod-27 coimage alignment before
+HYP-2636/HYP-2633 block-frequency / residue-lift machinery scalarizes the tail.
+
 ## codex-S26 update: relation-covered GAP structure
 
 The introduction of the **relation-covered GAP structure** (HYP-2639, SHA 6298517) refines the global LRC(14) proof architecture by adding a typed visibility and sign layer to the additive-energy route. This refinement addresses the "high energy but safe" phenomenon (e.g., shifted AP), proving that additive energy alone is an insufficient certificate for loneliness hardness.
@@ -31,19 +51,16 @@ The **Freiman small-excess certificate** (HYP-2638 / T886, SHA 1fdcfe3) has been
     - **Relation-Fiber Integration:** Synthesize the small-excess finite results with the **weighted relation-fiber coverage** (HYP-2637) to close the additive energy route.
     - **AP-Margin Stability:** Monitor the numerical stability of the $k=9$ tight margin as higher-rank estimates are integrated.
 
-## codex-S28 claim: correction values by relation rank
+## codex-S28 completed: correction values by relation rank
 
-HYP-2640/T888 is reserved for the user's rank-scaling prompt.  The key
-distinction to test is that the Fourier offset-relation lattice has fixed rank
-for integer one-parameter orbits, while Freiman/summand relation rank varies.
-The next scout will group exact corrections
-`Corr_y(E)=L_y(E)-L_y^inf(k)` and `p0(E)-p0^inf(k)` by total Freiman relation
-rank, observer-visible fold rank, hidden balanced-shell rank, and bounded
-weighted relation rank.
-
-Expected guardrail: total rank alone will not be enough; the correction should
-track a signed visible-rank packet, with high hidden rank contributing
-cancellation rather than danger.
+The HYP-2640/T888 scout is now computed and points away from scalar rank
+bounds. Raw height-2 relation rank separates the dissociated peel from the
+relation-rich pocket, but once rank saturates the correction tracks signed
+visible coherence instead: fold multiplicity, exact relation count,
+summand-shell visibility, and mod-27 phase. Use
+`05-knowledge/hypotheses/HYP-2640-lrc14-correction-rank-scaling.md` and
+`05-knowledge/results/lrc14_relation_rank_correction_scaling_codex_s28.out` as
+the handoff.
 
 ## codex-S25 update: two-large lift opposition
 

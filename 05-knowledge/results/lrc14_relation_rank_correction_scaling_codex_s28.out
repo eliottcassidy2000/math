@@ -1,0 +1,74 @@
+================================================================================================
+LRC14 relation-rank correction scaling atlas -- codex-S28, HYP-2640/T888
+================================================================================================
+Rank convention: height-2 coefficient vectors on nonzero runners.
+Rank is computed over two large prime fields; all displayed ranks agree unless marked '?'.
+corank=m-rank_exact_all is the small-relation Freiman-dimension proxy.
+
+BASELINES
+  k=8: M7=0.024479596  L_y^inf=0.049266401  AP_Ly=0.358231293
+  k=9: M7=0.057701905  L_y^inf=0.151293745  AP_Ly=0.492876039
+  k=10: M7=0.104912555  L_y^inf=0.218830773  AP_Ly=0.570080625
+
+shape             fam                   exc cor rE rObs rBal fR fC pR mObs mG3 xRel p0corr Lycorr Ly/vr
+-------------------------------------------------------------------------------------------------------
+k8_AP            d1_AP                    0   1  6    6    5    6   12    5    7   7   1786  0.302731  0.308965 0.044138
+k8_nearAP_top    d1_hull_defect           1   1  6    6    5    6    9    5    7   7   1496  0.249160  0.253795 0.036256
+k8_nearAP_hole   d1_hull_defect           1   1  6    6    5    6   12    5    7   7   1692  0.183854  0.188115 0.026874
+k8_gap2_worst    d2_GAP                   6   1  6    6    5    5    8    4    7   7    920  0.171140  0.175263 0.025038
+k8_gap2_strata   d2_GAP                   6   1  6    6    5    5    8    4    7   7    948  0.077566  0.081836 0.011691
+k8_third_A       relation_covered_wide   16   1  6    6    5    3    3    2    7   7    326  0.008019  0.013547 0.001935
+k8_third_B       relation_covered_wide   16   1  6    6    5    1    1    4    7   7    402  0.008255  0.007063 0.001009
+k8_ternary       dissociated_h2          21   7  0    0    0    0    0    0    4   0      0  0.026667  0.021535 0.005384
+k9_AP            d1_AP                    0   1  7    7    6    7   16    6    8   8   7444  0.358455  0.341582 0.042698
+k9_nearAP_top    d1_hull_defect           1   1  7    7    6    7   15    6    8   8   7104  0.343999  0.335995 0.041999
+k9_gap2_worst    d2_GAP                   2   1  7    7    6    7   13    6    8   8   6140  0.301822  0.298035 0.037254
+k9_gap2_strata   d2_GAP                   4   1  7    7    6    7   13    6    8   8   5904  0.181584  0.205981 0.025748
+k9_ternary       dissociated_h2          28   8  0    0    0    0    0    0    5   0      0  0.045571  0.062096 0.012419
+k10_AP           d1_AP                    0   1  8    8    7    8   20    7    9   9  31592  0.399566  0.351250 0.039028
+k10_nearAP_top   d1_hull_defect           1   1  8    8    7    8   20    7    9   9  30508  0.388965  0.343584 0.038176
+k10_gap2_worst   d2_GAP                   2   1  8    8    7    8   16    7    9   9  26516  0.312625  0.283781 0.031531
+k10_ternary      dissociated_h2          36   9  0    0    0    0    0    0    6   0      0  0.061939  0.070127 0.011688
+
+PAIRWISE LESSONS
+  AP vs nearAP: same small-relation corank (1 vs 1) but Lycorr drops by 0.055170.
+  AP vs d2 GAP: relation corank rises 1 -> 1 (no rise in this height-2 quotient), but fold rank/count drops 6/12 -> 5/8; Lycorr ratio=0.5673.
+  Third pocket: not dissociated by rank (rank=6, corank=1) but its correction is only 0.0438 of AP.
+  Ternary row: exact height-2 rank 0 and correction near the independent baseline (Lycorr=0.021535).
+
+RANK AGREEMENT CHECKS
+  k8_AP             OK
+  k8_nearAP_top     OK
+  k8_nearAP_hole    OK
+  k8_gap2_worst     OK
+  k8_gap2_strata    OK
+  k8_third_A        OK
+  k8_third_B        OK
+  k8_ternary        OK
+  k9_AP             OK
+  k9_nearAP_top     OK
+  k9_gap2_worst     OK
+  k9_gap2_strata    OK
+  k9_ternary        OK
+  k10_AP            OK
+  k10_nearAP_top    OK
+  k10_gap2_worst    OK
+  k10_ternary       OK
+
+TOURNAMENT ANALYSIS
+  vertices are proof quotients, not runners or arcs.
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed 3-cycles: 0
+  Hamiltonian path count: 1
+  first Hamiltonian path:
+    coherent_visible_relation_rank > freiman_corank_dimension_proxy > mod27_observer_gcd3_tail > fold_motif_rank > balanced_pair_rank > raw_height2_relation_rank > raw_runner_vertices
+
+ASSUMPTION CHALLENGE
+  I tested runners, raw relation vectors, folds, pair-collision shells, mod-27 residues, gcd strata, Freiman corank, Fourier correction terms, and proof obligations as possible vertices.
+  The quotient preserved here is correction-carrying rank: which low-height relations can still couple to the seven-sector functional after the 2n-1=27 coimage projection.
+  It destroys exact time geometry and high-height tails, so it is not a proof by itself.  The challenged assumption is that total short-relation rank should linearly predict the LRC correction.
+
+INTERPRETATION
+  Raw relation rank is a switch, not a ruler.  It separates the dissociated tail from the relation-rich pocket, but inside that pocket the rank saturates and the correction is controlled by signed relation multiplicity plus observer/coimage coherence.
+  The proposed proof lemma should not bound correction by raw relation rank.  It should split: low height-2 rank gives the independent-tail peel; saturated rank invokes an inverse theorem, after which non-AP rows must lose either fold multiplicity/coherence or signed mod-27 coimage alignment.
+  In abstract terms: the relation lattice maps to a finite coimage over Z/27Z; the signed correction is the image of only the observer-visible part.  The kernel can have huge absolute mass without increasing the signed LRC correction.
