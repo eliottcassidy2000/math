@@ -1,0 +1,28 @@
+================================================================================
+HIGH-relation-height certificate: B(E)=B3+B4 < (5/7)^k  ⟹  ∫G>0  ⟹  M(S)≥1/14
+================================================================================
+  AP k=7 (low-h)                 k=7: minH3=    2  B3=0.25566 B4=0.20156 B=0.45722  (5/7)^k=0.09486  CERT∫G>0:False
+  perf k=7 (low-h)               k=7: minH3=    2  B3=0.25353 B4=0.15281 B=0.40633  (5/7)^k=0.09486  CERT∫G>0:False
+  dissoc k=5 (Sidon)             k=5: minH3=   12  B3=0.00391 B4=0.01433 B=0.01824  (5/7)^k=0.18593  CERT∫G>0:True
+  dissoc k=6                     k=6: minH3=    6  B3=0.00789 B4=0.01575 B=0.02364  (5/7)^k=0.13281  CERT∫G>0:True
+  dissoc k=7                     k=7: minH3=    2  B3=0.06112 B4=0.04627 B=0.10739  (5/7)^k=0.09486  CERT∫G>0:False
+  Sidon k=8                      k=8: minH3=    6  B3=0.02348 B4=0.02788 B=0.05136  (5/7)^k=0.06776  CERT∫G>0:True
+  short-triple+spread {0,1,2,N}  k=4: minH3=    2  B3=0.02144 B4=0.00000 B=0.02144  (5/7)^k=0.26031  CERT∫G>0:True
+
+================================================================================
+THRESHOLD: for k≤13, how large must min relation-height be so B3 alone < (5/7)^k?
+  (crude: B3 ≤ C(k,3)·2ζ(3)/(π³·minH3) ⟹ minH3 > C(k,3)·2ζ(3)/(π³·(5/7)^k))
+================================================================================
+  k= 5: C(k,3)= 10  (5/7)^k=0.18593  crude H0 (all triples need H>H0) = 4
+  k= 6: C(k,3)= 20  (5/7)^k=0.13281  crude H0 (all triples need H>H0) = 12
+  k= 7: C(k,3)= 35  (5/7)^k=0.09486  crude H0 (all triples need H>H0) = 29
+  k= 8: C(k,3)= 56  (5/7)^k=0.06776  crude H0 (all triples need H>H0) = 64
+  k= 9: C(k,3)= 84  (5/7)^k=0.04840  crude H0 (all triples need H>H0) = 135
+  k=10: C(k,3)=120  (5/7)^k=0.03457  crude H0 (all triples need H>H0) = 269
+  k=11: C(k,3)=165  (5/7)^k=0.02469  crude H0 (all triples need H>H0) = 518
+  k=12: C(k,3)=220  (5/7)^k=0.01764  crude H0 (all triples need H>H0) = 967
+  k=13: C(k,3)=286  (5/7)^k=0.01260  crude H0 (all triples need H>H0) = 1760
+
+READING: shapes whose every primitive triple has height > H0(k) are PROVED loose (high-h).
+The complement = shapes with a small-height triple = a FINITE list of support-3 coefficient
+patterns (codex HYP-2599 low-height side) — the remaining finite-enumeration residual.
