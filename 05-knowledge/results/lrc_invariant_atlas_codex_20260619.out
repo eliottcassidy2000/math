@@ -1,0 +1,113 @@
+LRC invariant atlas: what actually determines the structure?
+==============================================================================
+bank size: 640 primitive 13-speed rows
+  profiled 100 rows...
+  profiled 200 rows...
+  profiled 300 rows...
+  profiled 400 rows...
+  profiled 500 rows...
+  profiled 600 rows...
+
+Hardest rows by exact M(S):
+  AP_1_13                      M=1/14=0.071429 slack=0.000000 L=0.000000 comps=  0 qleak=14 bind=(2, 0, 0, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+  GW_24                        M=1/14=0.071429 slack=0.000000 L=0.000000 comps=  0 qleak=14 bind=(2, 0, 0, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  tail12_24                    M=1/14=0.071429 slack=0.000000 L=0.000000 comps=  0 qleak=14 bind=(2, 0, 0, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24)
+  loose_36                     M=3/41=0.073171 slack=0.001742 L=0.000794 comps=  2 qleak=14 bind=(2, 1, 13, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  tail12_36                    M=3/41=0.073171 slack=0.001742 L=0.000794 comps=  2 qleak=14 bind=(2, 1, 13, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36)
+  tail13_26                    M=2/27=0.074074 slack=0.002646 L=0.005495 comps=  2 qleak=14 bind=(2, 1, 13, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 26)
+  tail13_39                    M=3/40=0.075000 slack=0.003571 L=0.009158 comps=  4 qleak=14 bind=(2, 2, 12, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 39)
+  tail12_48                    M=4/53=0.075472 slack=0.004043 L=0.002211 comps=  4 qleak=14 bind=(2, 3, 11, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 48)
+  tail13_52                    M=4/53=0.075472 slack=0.004043 L=0.011905 comps=  6 qleak=14 bind=(2, 3, 11, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 52)
+  tail13_65                    M=5/66=0.075758 slack=0.004329 L=0.014103 comps=  8 qleak=14 bind=(2, 4, 10, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 65)
+  tail13_78                    M=6/79=0.075949 slack=0.004521 L=0.015934 comps= 10 qleak=14 bind=(2, 5, 9, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 78)
+  tail13_91                    M=7/92=0.076087 slack=0.004658 L=0.017504 comps= 12 qleak=14 bind=(2, 6, 8, 'sum') S=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 91)
+
+Near-tight tail laws discovered in the bank:
+  family A: S={1..12,13a} has M=a/(13a+1) for tested a=2..9? True
+    w=26  M=2/27 pred=2/27 bind=(2, 1, 13, 'sum')
+    w=39  M=3/40 pred=3/40 bind=(2, 2, 12, 'sum')
+    w=52  M=4/53 pred=4/53 bind=(2, 3, 11, 'sum')
+    w=65  M=5/66 pred=5/66 bind=(2, 4, 10, 'sum')
+    w=78  M=6/79 pred=6/79 bind=(2, 5, 9, 'sum')
+  family B: S={1..11,13,12a} has M=a/(12a+5) for tested a>=3? True
+    w=36  M=3/41 pred=3/41 bind=(2, 1, 13, 'sum')
+    w=48  M=4/53 pred=4/53 bind=(2, 3, 11, 'sum')
+    w=60  M=1/13 pred=1/13 bind=(2, 5, 9, 'sum')
+    w=72  M=6/77 pred=6/77 bind=(2, 7, 7, 'sum')
+    w=84  M=7/89 pred=7/89 bind=(2, 9, 5, 'sum')
+
+Best single numeric correlations with hardness M(S):
+  corr(M,three_term) = -0.919
+  corr(M,safe_measure) = +0.902
+  corr(M,longest_run) = -0.896
+  corr(M,diff_energy) = -0.890
+  corr(M,four_sum_collisions) = -0.889
+  corr(M,owner_tournament_hp) = -0.861
+  corr(M,owner_tournament_vertices) = +0.855
+  corr(M,owner_pair_count) = +0.855
+  corr(M,safe_components) = +0.803
+  corr(M,binding_r) = +0.787
+  corr(M,subset_support6plus) = -0.722
+  corr(M,covering) = +0.594
+  corr(M,widest_component) = +0.493
+  corr(M,qleaks) = -0.469
+  corr(M,max_speed) = +0.289
+  corr(M,first_unit_leak) = +0.205
+
+Fiber loss test: lower is more structure-determining.
+  value = within-fiber variance / total variance for exact M.
+  residue              loss=0.000 groups=472 singletons=431 maxfiber=48 avgfiber=1.36
+    worst collision spread=0.011732:
+      low  S3_P(1, 2, 3, 12)_V84_E8 M=0.099379 S=(1, 2, 3, 12, 76, 77, 78, 79, 80, 81, 82, 83, 84)
+      high S3_P(1, 2, 3, 12)_V98_E8 M=0.111111 S=(1, 2, 3, 12, 90, 91, 92, 93, 94, 95, 96, 97, 98)
+  qcov                 loss=0.019 groups=446 singletons=372 maxfiber=45 avgfiber=1.43
+    worst collision spread=0.094237:
+      low  cover_rand_208 M=0.160000 S=(12, 13, 17, 21, 24, 28, 56, 60, 72, 77, 80, 85, 90)
+      high cover_rand_58 M=0.254237 S=(30, 36, 39, 40, 42, 47, 48, 50, 63, 64, 68, 84, 88)
+  add                  loss=0.011 groups=382 singletons=346 maxfiber=97 avgfiber=1.68
+    worst collision spread=0.102002:
+      low  gen_rand_86 M=0.151163 S=(2, 8, 12, 16, 21, 25, 29, 31, 55, 66, 67, 71, 74)
+      high gen_rand_71 M=0.253165 S=(2, 7, 10, 12, 15, 16, 33, 34, 41, 45, 63, 67, 73)
+  subset               loss=0.001 groups=486 singletons=473 maxfiber=63 avgfiber=1.32
+    worst collision spread=0.030303:
+      low  S3_P(2, 3, 5, 7)_V42_E8 M=0.136364 S=(2, 3, 5, 7, 34, 35, 36, 37, 38, 39, 40, 41, 42)
+      high S3_P(2, 3, 5, 7)_V70_E8 M=0.166667 S=(2, 3, 5, 7, 62, 63, 64, 65, 66, 67, 68, 69, 70)
+  component_topology   loss=0.000 groups=511 singletons=506 maxfiber=71 avgfiber=1.25
+  owner_tournament     loss=0.202 groups=40 singletons=4 maxfiber=93 avgfiber=16.00
+    worst collision spread=0.205459:
+      low  cover_rand_73 M=0.136646 S=(10, 18, 30, 32, 33, 36, 52, 63, 69, 70, 71, 88, 90)
+      high cover_rand_97 M=0.342105 S=(52, 55, 56, 60, 63, 70, 76, 80, 84, 88, 90, 98, 100)
+  component_geometry   loss=0.000 groups=590 singletons=586 maxfiber=46 avgfiber=1.08
+  binding              loss=0.044 groups=275 singletons=171 maxfiber=85 avgfiber=2.33
+    worst collision spread=0.118499:
+      low  S3_P(1, 2, 3, 12)_V112_E8 M=0.105991 S=(1, 2, 3, 12, 104, 105, 106, 107, 108, 109, 110, 111, 112)
+      high cover_rand_192 M=0.224490 S=(8, 10, 21, 24, 25, 26, 28, 32, 35, 46, 54, 63, 66)
+
+Fiber loss test for safe-measure L(S) at level 1/14.
+  residue              loss=0.005 groups=472 singletons=431 maxfiber=48 avgfiber=1.36
+  qcov                 loss=0.006 groups=446 singletons=372 maxfiber=45 avgfiber=1.43
+  add                  loss=0.004 groups=382 singletons=346 maxfiber=97 avgfiber=1.68
+  subset               loss=0.001 groups=486 singletons=473 maxfiber=63 avgfiber=1.32
+  component_topology   loss=0.000 groups=511 singletons=506 maxfiber=71 avgfiber=1.25
+  owner_tournament     loss=0.117 groups=40 singletons=4 maxfiber=93 avgfiber=16.00
+  component_geometry   loss=0.000 groups=590 singletons=586 maxfiber=46 avgfiber=1.08
+  binding              loss=0.062 groups=275 singletons=171 maxfiber=85 avgfiber=2.33
+
+Interpretation:
+  1. Residues and q-coverage are necessary filters, not structure.
+     Their fibers still mix rows with visibly different M and L.
+  2. Additive relations and height-1 anti-coset counts improve the picture,
+     especially around AP/Goddyn-Wong families, but still do not determine
+     the exact obstruction.
+  3. Topology-only safe-component data helps, but exact safe geometry
+     (lengths plus boundary owners) is where the structure becomes almost
+     determined.  This is solution-facing, but less so than exact M: it
+     records which speeds carve the witness reservoir.
+  4. Binding denominator data nearly determines M, but it is even more
+     solution-facing:
+     it is best viewed as a readout, not a proof input.
+  5. The recurring determinant is not one scalar invariant.  It is a stack:
+       CRT obligation -> additive anti-coset -> safe-component owners ->
+       binding denominator.
+     The hard rows are exactly where a lower layer looks ambiguous and the
+     next layer resolves the ambiguity.
