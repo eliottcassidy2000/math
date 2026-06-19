@@ -1,60 +1,58 @@
 ---
 id: HYP-2623
-status: STRONGLY SUPPORTED (exact through a=4 at k=31; a=5,6 bounded below their mediants); globalization open
+status: CORRECTED (MISTAKE-079) — a=3,4 dips CONFIRMED (infinite families); the "a_max unbounded"
+        claim is RETRACTED: the natural family collapses to the floor at a=5. a>=5 reachability OPEN.
 source: kind-pasteur-2026-06-19-S9
 related:
   - THM-539
   - HYP-2052
   - HYP-2084
+  - HYP-2621
+  - HYP-2622
 ---
 
-# HYP-2623: the LRC max-min level `a_max(k)` is UNBOUNDED, so the second-point gap dips below Theta(1/k^2)
+# HYP-2623: how deep can the LRC max-min second point dip below the floor `1/(k+1)`?
 
-## Claim
+## What is CONFIRMED (exact)
 
-Define the reachable level `a_max(k) = max { a : some gcd-1 k-set S has M(S) = a/(a(k+1)-1) }`
-(the deepest Stern-Brocot mediant above the floor `1/(k+1)` that is realized). Then:
+The second spectrum point lives on the Stern-Brocot mediants `a/(a(k+1)-1)`, and `g(k)·k^2 -> 1/a`.
+The realized levels:
 
-1. **Generic floor of the dip:** for ALL `k`, `a_max(k) >= 2` (doubled apex `{1,..,k-1,2k}`,
-   `M=2/(2k+1)`). For "most" `k`, `a_max(k) = 2` (e.g. exhaustively k=2,3,4,5,8,9,10,11).
-2. **The primorial family** `F(k,a)={1,...,k-2,k,a(k-1)}` realizes level `a` exactly when
-   `(k-1)` is divisible by the first `a-1` primes:
-   - `a=3` ⟺ `6 | (k-1)` (k=7,13,19,25,...; verified exact);
-   - `a=4` at `k=31` (`k-1=30=2·3·5`; verified exact `M=4/127`);
-   - `a=5,6` at `k=211, 2311` (`k-1`=primorial; `M` verified below the level-(a-1) mediant).
-3. **Therefore `a_max(k) >= ω*(k-1)`** (the number of consecutive small primes `2,3,5,...`
-   dividing `k-1`), which is UNBOUNDED (take `k-1` = primorial). So along that sparse
-   subsequence `g(k)·k^2 -> 1/a -> 0`, i.e. **`liminf_k g(k)·k^2 = 0`** — the spectral gap is
-   not bounded below by any `c/k^2`.
+| level a | family / locus | k | g·k^2 | status |
+|--------|----------------|---|-------|--------|
+| 2 | doubled apex `{1,..,k-1,2k}` | all k | →1/2 | exact, universal |
+| 3 | `F(k,3)={1,..,k-2,k,3(k-1)}` | `k≡7,13,19,25 (mod30)` | →1/3 | exact, infinite family |
+| 4 | `F(k,4)` | `k≡1 (mod30)` (k=31,61,…,181) | →1/4 | exact, infinite family (codex-verified) |
 
-## Status of evidence
+So `a_max(k) >= 4` for infinitely many `k`, and the realized `g·k^2 ∈ [≈1/4, 1/2]`.
 
-| level a | smallest k | k-1 factorization | M | verification |
-|--------|-----------|--------------------|---|--------------|
-| 2 | (all k)   | —                  | 2/(2k+1) | exact, k=2..20 |
-| 3 | 7         | 6 = 2·3            | 3/23     | exact (also exhaustive sigma_2) |
-| 4 | 31        | 30 = 2·3·5         | 4/127    | exact (crossing + covering) |
-| 5 | 211 (cand)| 210 = 2·3·5·7      | < 5/1059 | covering (exact level pending — E2 workflow) |
-| 6 | 2311 (cand)| 2310 = 2·3·5·7·11 | < 6/13871| covering |
+## What was RETRACTED (MISTAKE-079)
 
-## Open / to nail
+I first claimed `a_max(k)` is UNBOUNDED, with `a=5,6` at `k=211,2311` (`k-1` primorial), hence
+`liminf g·k^2 = 0`. **This was wrong.** A covering test returned `M(F(211,5)) < 5/1059`, which I
+misread as a *deeper dip*; in fact `M(F(211,5)) = 1/212 = the FLOOR exactly` — the family
+COLLAPSES to a tight configuration (`g=0`), it does not dip to level 5. Verified by two
+independent covering implementations. `F(k,5)` is TIGHT for every `k` with `2·3·5·7 | (k-1)`
+(k=211,421,631,841) and above all small mediants otherwise. So the natural family TOPS OUT at
+level 4.
 
-- **Globalize:** prove `M(F(k,a)) = a/(a(k+1)-1)` exactly when `(k-1)` has the first `a-1`
-  primes as factors (mechanism: killer speed `a(k-1)` annihilates clocks `t=j/d` for all
-  `d|(k-1)`; need to show no OTHER time beats `a/(a(k+1)-1)`). A clean induction on the
-  primorial structure is the target.
-- **Exact level at k=211, 2311** (is it exactly `a=5,6`, or deeper?). [E2 workflow]
-- **Is `F` optimal?** Could a multi-killer config reach level `a >> ω(k-1)` (e.g. `a ~ sqrt(k)`),
-  making the dip much faster? [E1 workflow] If not, `a_max(k) = Theta(log k / log log k)` exactly.
-- **True `sigma_2(k)`** at k=12,13,14 (does `F` give the min?). [E3 workflow]
+## The OPEN question (sharpened)
 
-## Why it matters
+**Is level `a>=5` realizable by ANY gcd-1 k-set, for some k?** Equivalently: is `g(k)·k^2`
+bounded below by a positive constant (so `g = Theta(1/k^2)` uniformly), or can it be made
+arbitrarily small?
+- Evidence FOR bounded (codex S16/S17 + this correction): the F-family saturates at a=4;
+  every prefix-containing set re-optimizes to level 1 (`t≈1/k`); no construction reaches a=5.
+- The denominator lemma (THM-539 Lemma A, PROVED) says any a>=5 witness needs `max(S) >= q/2 ~
+  5(k+1)/2`, i.e. genuinely larger speeds than the a<=4 families use — but that is necessary,
+  not sufficient.
 
-The user's "live question" (does anything dip below `Theta(1/k^2)` unboundedly?) is answered
-**YES**, but the answer is delicate: the dip is real and unbounded, yet confined to an
-extremely sparse arithmetic subsequence (`k-1` highly composite) and grows only like
-`1/log` — so for almost all `k` the gap is `Theta(1/k^2)` with constant `~1/2`. The
-difficulty of LRC stays localized at the AP, but the *width of its basin* is arithmetic in
-`k-1`, not a clean `1/k^2`.
+## Bonus: a new tight-locus member
 
-See THM-539, `07-reflections/lrc-spectral-gap-dips-along-primorials-kps.md`.
+`F(k,5)={1,…,k-2,k,5(k-1)}` collapsing to `M=floor` when `2·3·5·7|(k-1)` means it is a NON-AP
+TIGHT configuration (max-min `=1/(k+1)`), binding pair `(1, k)` summing to `k+1`. This is a fresh
+input to the lonely-measure tight-locus thread (tight locus ⊇ {AP, Goddyn–Wong, …}); worth
+checking whether it is AP-equivalent under dilation or genuinely new.
+
+See THM-539, MISTAKE-079, `07-reflections/lrc-spectral-gap-dips-along-primorials-kps.md`,
+`04-computation/lrc_a5_collapse_check_kps.py`.

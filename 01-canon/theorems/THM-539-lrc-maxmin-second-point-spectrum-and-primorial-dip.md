@@ -1,8 +1,9 @@
 ---
 id: THM-539
-title: The LRC max-min second-point spectrum — Stern-Brocot mediants, the denominator lemma, and the primorial dip below Theta(1/k^2)
-status: MIXED — Lemma A PROVED; generic value & small-k spectrum VERIFIED (exact); the
-        "a_max unbounded" globalization is HYP-2623 (verified through a=4 exact, a=5,6 bounded)
+title: The LRC max-min second-point spectrum — Stern-Brocot mediants, the denominator lemma, and the a=3,4 below-mediant dips
+status: MIXED — Lemma A PROVED; generic a=2 + dips a=3,4 VERIFIED exact (infinite families);
+        a>=5 OPEN (the natural family collapses to the floor at a=5 — MISTAKE-079 corrected my
+        earlier "a_max unbounded" overclaim). Whether g(k)=Theta(1/k^2) uniformly is OPEN.
 source: kind-pasteur-2026-06-19-S9
 related:
   - HYP-2052   # oracle-S552 spectral gap (original "gap = 2/(2n-1)" claim, here corrected)
@@ -69,21 +70,31 @@ This is **codex's `A_{k,r}` family** (HYP-2621/HYP-2622, independent concurrent 
 two threads converged on the same family and the same denominator lemma.
 **Verified exact:**
 ```
-  a=2:  k=5            M=2/11    g·k^2=0.379
+  a=2:  k=5            M=2/11    g·k^2=0.379                   [generic doubled-apex level]
   a=3:  k=7,13,19,25   M=3/(3k+2)  (3/23, 3/41, 3/59, 3/77)  g·k^2 ≈ 0.27–0.31
                        [k ≡ 7,13,19,25 (mod 30) — codex's sharp refinement of my "k≡1 mod 6";
                         at k ≡ 1 (mod 30) the a=3 family is AP-tight again and a=4 takes over]
-  a=4:  k=31,61,91,... M=4/(4k+3) (4/127, ...)               g·k^2=0.2365  [k ≡ 1 (mod 30), k-1 div by 30=2·3·5]
-  a=5:  k=211          M <= 5/1059  (covering; exact level E2-pending) g·k^2 < 0.20  [k-1=210=2·3·5·7]
-  a=6:  k=2311         M <= 6/13871 (covering)                g·k^2 < 0.17  [k-1=2310=2·3·5·7·11]
+  a=4:  k=31,61,...,181 M=4/(4k+3) (4/127, ...)               g·k^2=0.2365  [k ≡ 1 (mod 30); INFINITE family]
 ```
-**Synthesis with codex (resolves HYP-2621/2622's open question).** codex found, at FIXED k,
-that increasing the multiplier `r` saturates (`r=4` best at k=31,61; `r>=5` picks up excess or
-falls to `1/k`) — hence "no `o(1/k^2)` dip found." This is correct *at fixed k*: the max useful
-multiplier is `a = ω*(k-1)+1` (one more than the run of consecutive small primes dividing k-1).
-The dip appears only when you ALSO grow `k`: level `a=5` requires `7 | (k-1)`, first at `k=211`
-(which codex did not reach — k=31,61 have `k-1 = 30,60`, no factor 7). So the threads agree:
-`a` is bounded at each fixed `k`, but `a_max(k) -> infinity` as `k -> infinity` along primorials.
+**a=5 is NOT reachable by this family (CORRECTION — MISTAKE-079).** I initially claimed a=5,6 at
+k=211,2311 from a covering test reading `M < 5/1059`. That reading was WRONG: `F(211,5) =
+{1,…,209,211,1050}` has `M = 1/212 = the FLOOR exactly` — it COLLAPSES to a tight configuration
+(`g=0`), it does NOT dip to level 5. Verified by two independent covering implementations
+(workflow E2 + own recheck): `F(k,5)` is TIGHT for every `k` with `2·3·5·7 | (k-1)` (k=211,421,631,841),
+and stays above all small mediants otherwise. So **the natural family tops out at level 4**, and the
+`a=5,6` "deep dips" were an artifact. (Bonus: `F(k,5)` collapsing to the floor means `{1,…,k-2,k,5(k-1)}`
+is a NEW member of the tight locus when `2·3·5·7|(k-1)` — relevant to the lonely-measure tight-locus thread.)
+**Synthesis with codex (HYP-2621/2622).** codex found, at FIXED k, that increasing the multiplier
+`r` saturates (`r=4` best at k=31,61; `r>=5` picks up excess or falls to `1/k`) — "no `o(1/k^2)`
+dip found." My correction CONFIRMS codex: the `F`-family levels stop at `a=4`. Trying `a=5` at
+the "right" primorial `k=211` does NOT continue the climb — it collapses to the FLOOR (tight).
+So both threads now agree: **`a_max` via this family is bounded by 4**; whether ANY family
+reaches `a>=5` is OPEN (workflow E1 search inconclusive so far — every prefix-containing set
+re-optimizes at `t≈1/k`, i.e. to level 1). The clean dips are `a=3` (`k≡7,13,19,25 mod30`) and
+`a=4` (`k≡1 mod30`); these are infinite families, so `limsup g·k^2 = 1/2`, and the confirmed
+`liminf` over realized dips is `≈ 1/4` (a=4). **Whether `g(k)·k^2` is bounded below by a positive
+constant (i.e. `g = Theta(1/k^2)` uniformly) remains OPEN** — it hinges on whether `a>=5` is ever
+realizable.
 All `M > floor 1/(k+1)` (LRC holds — NOT counterexamples). The exhaustive `sigma_2` matches
 `F` exactly at k=7 (3/23) and k=13 (3/41); at k=6 the true `sigma_2=5/33` is a deeper
 (non-`F`) Stern-Brocot fraction `= mediant(3/20, 2/13)`.
@@ -109,13 +120,16 @@ at distance `a/q` on the `q`-clock. So the level-`a` claim `M(F)=a/q` splits int
 ## Consequence
 
 - **Generically `g(k) = Theta(1/k^2)`** (`a=2`, `g·k^2 ≈ 1/2`), for all `k` not of the special form.
-- **Along the sparse subsequence `k-1 ∈ {primorials}` (k = 3,7,31,211,2311,…), `g(k)` dips
-  below `Theta(1/k^2)`**, with `g(k)·k^2 -> 1/a`, `a ~ ω(k-1) ~ log k / log log k` UNBOUNDED.
-  Hence **`liminf_k g(k)·k^2 = 0`** (the spectral gap is NOT bounded below by `c/k^2` uniformly).
-- This **corrects HYP-2052 (oracle-S552)**: `2/(2n-1)` is the GENERIC second value, not a true
-  universal gap edge; below-`2/(2n-1)` configs exist (codex-S573 found the first; the primorial
-  family explains and extends them to unbounded depth). The "no config in `(1/n, 2/(2n-1))`"
-  claim was a small-box artifact (exhaustive only to n<=8 with a too-small entry bound).
+- **Below-mediant dips exist** along infinite families: `a=3` (`k≡7,13,19,25 mod30`, `g·k^2→1/3`)
+  and `a=4` (`k≡1 mod30`, `g·k^2→1/4`). So the "gap edge" `2/(2k+1)` is the GENERIC value, NOT a
+  true universal edge: below-`2/(2k+1)` configs exist. The realized `g·k^2` ranges over `[≈1/4, 1/2]`.
+- **`a>=5` is OPEN.** The natural family collapses to the floor at `a=5`; no construction has yet
+  realized level 5. So `liminf_k g(k)·k^2` is **not known to be 0** — it could be `≈1/4` (gap
+  `Theta(1/k^2)` with bounded constant) or `0` (if a deeper family exists). This is the precise
+  remaining question (HYP-2623, sharpened).
+- This **corrects HYP-2052 (oracle-S552)**: `2/(2n-1)` is the GENERIC second value, not a universal
+  gap edge; below-edge configs exist (codex-S573 found the first; the `a=3,4` families explain them).
+  The "no config in `(1/n, 2/(2n-1))`" claim was a small-box artifact (exhaustive only to n<=8).
 
 ## For LRC(14) (k=13)
 

@@ -11,6 +11,24 @@ Format per entry:
 
 ---
 
+## MISTAKE-079 (2026-06-19, kind-pasteur-S9, LRC max-min spectral gap) — "covered below the level-a mediant" misread as a DEEPER dip when it actually meant COLLAPSE TO THE FLOOR
+
+**What was done.** Investigating whether the LRC max-min gap `g(k)=σ_2(k)-1/(k+1)` dips below `Θ(1/k^2)`, I built a covering test `M(S) <= r ⟺ danger arcs of radius r cover [0,1)`. For the family `F(k,a)={1,…,k-2,k,a(k-1)}` at `(a=5,k=211)` and `(a=6,k=2311)` the test returned `M < a/(a(k+1)-1)` (e.g. `M < 5/1059`). I read this as "the family dips even DEEPER than level a" and concluded `a_max(k)` is UNBOUNDED (level grows with `ω(k-1)`), hence `liminf g·k^2 = 0` — and wrote it into THM-539/HYP-2623.
+
+**Why it was wrong.** `M < a/q` only says `M` is below that mediant; it does NOT say `M` is a *deeper mediant just above the floor*. In fact `M(F(211,5)) = 1/212 = the FLOOR exactly` — the family COLLAPSES to a tight configuration (`g=0`), the opposite of a deep dip. The covering "M below 5/1059" was consistent with `M = 1/212` (since `1/212 < 5/1059`), but I never computed the exact `M`; I extrapolated a monotone-deepening pattern from `g·k^2 = 0.50, 0.33, 0.24, <0.20, <0.17` that was really `0.50, 0.33, 0.24, 0(tight), 0(tight)`.
+
+**Correct framing.** The natural family realizes levels `a=2,3,4` only (a=3 at `k≡7,13,19,25 mod30`; a=4 at `k≡1 mod30`); at `a=5` it becomes TIGHT whenever `2·3·5·7|(k-1)`. Confirmed dips give `g·k^2 ∈ [≈1/4, 1/2]`. Whether ANY family reaches `a>=5` (hence whether `g=Θ(1/k^2)` uniformly) is OPEN. This realigns with codex S16/S17 ("no `o(1/k^2)` dip found").
+
+**How it was caught.** The adversarial verification Workflow's exact-`M` agent (independent code, covering + binary search) returned `M(F(211,5))=1/212` cleanly; an own recheck confirmed `F(k,5)` is tight for `k-1` divisible by `2·3·5·7`.
+
+**Impact.** THM-539, HYP-2623, SESSION-LOG, memory corrected: `a=3,4` dips stand (exact, infinite families); the `a_max`-unbounded / `liminf g·k^2=0` claim is RETRACTED to OPEN.
+
+**Lesson.** When an inequality `M < c` localizes a quantity, COMPUTE the quantity exactly before naming what it is — `M < c` does not distinguish "a slightly smaller special value" from "collapsed to the global minimum." Echoes MISTAKE-073/076/078: a bound or a sampled trend is not the exact structure. Run the exact computation at the extrapolation point, especially before declaring an asymptotic (`liminf=0`).
+
+**Source:** kind-pasteur-2026-06-19-S9; caught by the adversarial verification workflow (E2 agent) + own recheck.
+
+---
+
 ## MISTAKE-075: The LRC(14) inf L estimate (≈0.0052) was a restricted-search artifact — the true inf-relevant extremizers are sporadic-tight perturbations, not the multiple-of-14 family
 
 **Date discovered:** 2026-06-16 (kind-pasteur-S7)
