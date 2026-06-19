@@ -1,3 +1,7 @@
+## codex-S29 update: fold transport, not fold count
+
+HYP-2643/T891 refines the fold-multiplicity route after the KPS correction that the binding non-AP is a bounded near-AP, and complements HYP-2642's exact wall-transfer certificate for the same row. The useful object is the nontrivial fold target profile `F_E(c)=#{0<a<b in E:a+b=c in E}`, not total fold count. AP9 and `(0,1,2,3,4,5,6,7,9)` both have `12` folds, but the near-AP row transports three folds from target `8` to `9`, giving exact reciprocal loss `3/8-3/9=1/24`. In the bounded k=9 bank `max(E)<=13`, this is the unique top non-AP and the unique tiny positive transport bucket; the next bucket starts at `0.175` and is already lower in `L_y`. Steering update: prove a clipped-AP fold-transport lemma, then translate target-profile loss into `L_y`/`p0`; keep HYP-2638/HYP-2637 for larger near-AP/GAP pockets and HYP-2639/HYP-2633 for signed tails.
+
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
 HYP-2642/T890 packages the corrected KPS S12 binding non-AP row as an exact

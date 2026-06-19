@@ -1,0 +1,137 @@
+========================================================================================
+HYP-2643/T891 fold multiplicity transport scout
+========================================================================================
+Raw fold count is not the invariant; reciprocal target transport is the next coordinate.
+
+=== Single-End Defect Ladders ===
+E_k(s)={0,...,k-2,k-1+s}; s=0 is AP.  Fold deltas omit trivial 0+a=a.
+
+k=8: AP L_y=0.358231293 p0=0.327210884 fold_profile={3: 1, 4: 1, 5: 2, 6: 2, 7: 3}
+  s=1 exact fold transport: remove 3/(7), add 2/8, net_1=5/28=0.178571429
+  s top  L_y_drop       p0_drop       fold_count  net_1        centroid  profile_delta
+  1   8  0.120850340 0.118877551          8 0.178571429   5.62500 {7:-3, 8:+2}
+  2   9  0.143945578 0.139115646          8 0.206349206   5.87500 {7:-3, 9:+2}
+  3  10  0.143469388 0.136734694          7 0.328571429   5.57143 {7:-3, 10:+1}
+  4  11  0.171369821 0.164007421          7 0.337662338   5.71429 {7:-3, 11:+1}
+  5  12  0.131802721 0.124829932          6 0.428571429   4.83333 {7:-3}
+  6  13  0.149513344 0.142961800          6 0.428571429   4.83333 {7:-3}
+  7  14  0.101190476 0.094897959          6 0.428571429   4.83333 {7:-3}
+  8  15  0.143707483 0.136734694          6 0.428571429   4.83333 {7:-3}
+
+k=9: AP L_y=0.492876039 p0=0.416156463 fold_profile={3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 3}
+  s=1 exact fold transport: remove 3/(8), add 3/9, net_1=1/24=0.041666667
+  s top  L_y_drop       p0_drop       fold_count  net_1        centroid  profile_delta
+  1   9  0.005587050 0.014455782         12 0.041666667   6.41667 {8:-3, 9:+3}
+  2  10  0.023526077 0.035204082         11 0.175000000   6.36364 {8:-3, 10:+2}
+  3  11  0.057900433 0.080782313         11 0.193181818   6.54545 {8:-3, 11:+2}
+  4  12  0.035865457 0.044387755         10 0.291666667   6.20000 {8:-3, 12:+1}
+  5  13  0.047983894 0.058594976         10 0.298076923   6.30000 {8:-3, 13:+1}
+  6  14  0.045068027 0.048469388          9 0.375000000   5.55556 {8:-3}
+  7  15  0.068801965 0.075340136          9 0.375000000   5.55556 {8:-3}
+  8  16  0.053854875 0.052295918          9 0.375000000   5.55556 {8:-3}
+
+k=10: AP L_y=0.570080625 p0=0.504478458 fold_profile={3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 3, 9: 4}
+  s=1 exact fold transport: remove 4/(9), add 3/10, net_1=13/90=0.144444444
+  s top  L_y_drop       p0_drop       fold_count  net_1        centroid  profile_delta
+  1  10  0.007665659 0.010600907         15 0.144444444   6.93333 {9:-4, 10:+3}
+  2  11  0.040451854 0.057972583         15 0.171717172   7.13333 {9:-4, 11:+3}
+  3  12  0.025853490 0.039852608         14 0.277777778   7.00000 {9:-4, 12:+2}
+  4  13  0.049266915 0.068437118         14 0.290598291   7.14286 {9:-4, 13:+2}
+  5  14  0.038381834 0.047845805         13 0.373015873   6.76923 {9:-4, 14:+1}
+  6  15  0.056588561 0.067573696         13 0.377777778   6.84615 {9:-4, 15:+1}
+  7  16  0.052029793 0.059155329         12 0.444444444   6.16667 {9:-4}
+  8  17  0.060443437 0.068954248         12 0.444444444   6.16667 {9:-4}
+
+=== Bounded Bank k=8, max_coord=14: 3430 primitive non-AP rows ===
+Top L_y rows:
+  Ly=0.303061224 drop=0.055170068 net_1=0.842857143 count= 6 centroid=6.83333 E=(0, 2, 3, 4, 5, 6, 7, 8) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:+2}
+  Ly=0.278894558 drop=0.079336735 net_1=1.086904762 count= 6 centroid=9.66667 E=(0, 2, 4, 6, 7, 8, 10, 12) delta={3:-1, 4:-1, 5:-2, 6:-1, 7:-3, 8:+1, 10:+2, 12:+2}
+  Ly=0.264975976 drop=0.093255316 net_1=1.745238095 count= 0 centroid=0.00000 E=(0, 1, 3, 5, 7, 9, 11, 13) delta={3:-1, 4:-1, 5:-2, 6:-2, 7:-3}
+  Ly=0.261791383 drop=0.096439909 net_1=0.620634921 count= 7 centroid=6.71429 E=(0, 1, 3, 4, 5, 6, 7, 9) delta={3:-1, 5:-1, 6:-1, 7:-1, 9:+2}
+  Ly=0.257040816 drop=0.101190476 net_1=0.428571429 count= 6 centroid=4.83333 E=(0, 1, 2, 3, 4, 5, 6, 14) delta={7:-3}
+  Ly=0.247834467 drop=0.110396825 net_1=1.255158730 count= 4 centroid=8.25000 E=(0, 3, 4, 5, 6, 7, 8, 9) delta={3:-1, 4:-1, 5:-2, 6:-2, 7:-2, 8:+1, 9:+2}
+  Ly=0.247278912 drop=0.110952381 net_1=0.826190476 count= 6 centroid=6.83333 E=(0, 1, 2, 4, 5, 6, 7, 10) delta={3:-1, 4:-1, 5:-1, 7:-1, 10:+1}
+  Ly=0.238973923 drop=0.119257370 net_1=1.534126984 count= 2 centroid=9.50000 E=(0, 4, 5, 6, 7, 8, 9, 10) delta={3:-1, 4:-1, 5:-2, 6:-2, 7:-3, 9:+1, 10:+1}
+Smallest positive reciprocal fold-transport rows:
+  net_1=0.178571429 drop=0.120850340 Ly=0.237380952 count= 8 E=(0, 1, 2, 3, 4, 5, 6, 8) delta={7:-3, 8:+2}
+  net_1=0.206349206 drop=0.143945578 Ly=0.214285714 count= 8 E=(0, 1, 2, 3, 4, 5, 6, 9) delta={7:-3, 9:+2}
+  net_1=0.226190476 drop=0.230323129 Ly=0.127908163 count= 8 E=(0, 1, 2, 3, 4, 5, 7, 8) delta={6:-2, 7:-1, 8:+2}
+  net_1=0.253968254 drop=0.228242630 Ly=0.129988662 count= 8 E=(0, 1, 2, 3, 4, 5, 7, 9) delta={6:-2, 7:-1, 9:+2}
+  net_1=0.328571429 drop=0.143469388 Ly=0.214761905 count= 7 E=(0, 1, 2, 3, 4, 5, 6, 10) delta={7:-3, 10:+1}
+  net_1=0.337662338 drop=0.171369821 Ly=0.186861472 count= 7 E=(0, 1, 2, 3, 4, 5, 6, 11) delta={7:-3, 11:+1}
+  net_1=0.376190476 drop=0.249523810 Ly=0.108707483 count= 7 E=(0, 1, 2, 3, 4, 5, 7, 10) delta={6:-2, 7:-1, 10:+1}
+  net_1=0.384523810 drop=0.246530612 Ly=0.111700680 count= 8 E=(0, 1, 2, 3, 5, 6, 7, 8) delta={4:-1, 5:-1, 6:-1, 7:-1, 8:+3}
+Coarse net_1 buckets:
+  [0.10,0.20)  count=    1 bestLy=0.237380952 best_net=0.178571429 mean_drop=0.120850340 bestE=(0, 1, 2, 3, 4, 5, 6, 8)
+  >=0.20       count= 3429 bestLy=0.303061224 best_net=0.842857143 mean_drop=0.274300667 bestE=(0, 2, 3, 4, 5, 6, 7, 8)
+
+=== Bounded Bank k=9, max_coord=13: 1286 primitive non-AP rows ===
+Top L_y rows:
+  Ly=0.487288990 drop=0.005587050 net_1=0.041666667 count=12 centroid=6.41667 E=(0, 1, 2, 3, 4, 5, 6, 7, 9) delta={8:-3, 9:+3}
+  Ly=0.469349962 drop=0.023526077 net_1=0.175000000 count=11 centroid=6.36364 E=(0, 1, 2, 3, 4, 5, 6, 7, 10) delta={8:-3, 10:+2}
+  Ly=0.457010582 drop=0.035865457 net_1=0.291666667 count=10 centroid=6.20000 E=(0, 1, 2, 3, 4, 5, 6, 7, 12) delta={8:-3, 12:+1}
+  Ly=0.449329176 drop=0.043546863 net_1=0.917857143 count= 9 centroid=7.88889 E=(0, 2, 3, 4, 5, 6, 7, 8, 10) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 10:+3}
+  Ly=0.448242630 drop=0.044633409 net_1=1.235714286 count= 8 centroid=9.62500 E=(0, 2, 4, 5, 6, 7, 8, 10, 12) delta={3:-1, 4:-1, 5:-2, 6:-1, 7:-2, 8:-2, 10:+2, 12:+3}
+  Ly=0.447436382 drop=0.045439657 net_1=0.884523810 count= 9 centroid=7.55556 E=(0, 2, 3, 4, 5, 6, 7, 8, 9) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 9:+3}
+  Ly=0.444892145 drop=0.047983894 net_1=0.298076923 count=10 centroid=6.30000 E=(0, 1, 2, 3, 4, 5, 6, 7, 13) delta={8:-3, 13:+1}
+  Ly=0.434975606 drop=0.057900433 net_1=0.193181818 count=11 centroid=6.54545 E=(0, 1, 2, 3, 4, 5, 6, 7, 11) delta={8:-3, 11:+2}
+Smallest positive reciprocal fold-transport rows:
+  net_1=0.041666667 drop=0.005587050 Ly=0.487288990 count=12 E=(0, 1, 2, 3, 4, 5, 6, 7, 9) delta={8:-3, 9:+3}
+  net_1=0.175000000 drop=0.023526077 Ly=0.469349962 count=11 E=(0, 1, 2, 3, 4, 5, 6, 7, 10) delta={8:-3, 10:+2}
+  net_1=0.193181818 drop=0.057900433 Ly=0.434975606 count=11 E=(0, 1, 2, 3, 4, 5, 6, 7, 11) delta={8:-3, 11:+2}
+  net_1=0.220238095 drop=0.086945704 Ly=0.405930335 count=11 E=(0, 1, 2, 3, 4, 5, 6, 8, 9) delta={7:-3, 8:-1, 9:+3}
+  net_1=0.267857143 drop=0.169753086 Ly=0.323122953 count=11 E=(0, 1, 2, 3, 4, 5, 7, 8, 9) delta={6:-2, 7:-1, 8:-1, 9:+3}
+  net_1=0.291666667 drop=0.035865457 Ly=0.457010582 count=10 E=(0, 1, 2, 3, 4, 5, 6, 7, 12) delta={8:-3, 12:+1}
+  net_1=0.298076923 drop=0.047983894 Ly=0.444892145 count=10 E=(0, 1, 2, 3, 4, 5, 6, 7, 13) delta={8:-3, 13:+1}
+  net_1=0.353571429 drop=0.089106198 Ly=0.403769841 count=10 E=(0, 1, 2, 3, 4, 5, 6, 8, 10) delta={7:-3, 8:-1, 10:+2}
+Coarse net_1 buckets:
+  (0,0.05)     count=    1 bestLy=0.487288990 best_net=0.041666667 mean_drop=0.005587050 bestE=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  [0.10,0.20)  count=    2 bestLy=0.469349962 best_net=0.175000000 mean_drop=0.040713255 bestE=(0, 1, 2, 3, 4, 5, 6, 7, 10)
+  >=0.20       count= 1283 bestLy=0.457010582 best_net=0.291666667 mean_drop=0.210820601 bestE=(0, 1, 2, 3, 4, 5, 6, 7, 12)
+
+=== Bounded Bank k=10, max_coord=12: 219 primitive non-AP rows ===
+Top L_y rows:
+  Ly=0.562414966 drop=0.007665659 net_1=0.144444444 count=15 centroid=6.93333 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) delta={9:-4, 10:+3}
+  Ly=0.554472159 drop=0.015608466 net_1=0.186111111 count=15 centroid=7.13333 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) delta={8:-3, 9:-1, 10:+3}
+  Ly=0.545077475 drop=0.025003149 net_1=1.112301587 count=12 centroid=8.91667 E=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 9:-4, 10:+3, 12:+3}
+  Ly=0.544227135 drop=0.025853490 net_1=0.277777778 count=14 centroid=7.00000 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12) delta={9:-4, 12:+2}
+  Ly=0.542372134 drop=0.027708491 net_1=0.319444444 count=14 centroid=7.21429 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12) delta={8:-3, 9:-1, 12:+2}
+  Ly=0.537474805 drop=0.032605820 net_1=1.457936508 count=10 centroid=9.50000 E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12) delta={3:-1, 4:-1, 5:-2, 6:-1, 7:-2, 8:-2, 9:-2, 10:+2, 12:+3}
+  Ly=0.533100277 drop=0.036980348 net_1=1.078968254 count=12 centroid=8.66667 E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 12) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 9:-1, 12:+3}
+  Ly=0.532590073 drop=0.037490552 net_1=1.028968254 count=12 centroid=8.16667 E=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10) delta={3:-1, 4:-1, 5:-1, 6:-1, 7:-1, 8:-1, 9:-1, 10:+3}
+Smallest positive reciprocal fold-transport rows:
+  net_1=0.144444444 drop=0.007665659 Ly=0.562414966 count=15 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) delta={9:-4, 10:+3}
+  net_1=0.171717172 drop=0.040451854 Ly=0.529628771 count=15 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11) delta={9:-4, 11:+3}
+  net_1=0.186111111 drop=0.015608466 Ly=0.554472159 count=15 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) delta={8:-3, 9:-1, 10:+3}
+  net_1=0.213383838 drop=0.039277125 Ly=0.530803500 count=15 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 11) delta={8:-3, 9:-1, 11:+3}
+  net_1=0.277777778 drop=0.025853490 Ly=0.544227135 count=14 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12) delta={9:-4, 12:+2}
+  net_1=0.319444444 drop=0.027708491 Ly=0.542372134 count=14 E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12) delta={8:-3, 9:-1, 12:+2}
+  net_1=0.346717172 drop=0.058783985 Ly=0.511296640 count=14 E=(0, 1, 2, 3, 4, 5, 6, 7, 10, 11) delta={8:-3, 9:-4, 10:+2, 11:+3}
+  net_1=0.364682540 drop=0.088092089 Ly=0.481988536 count=14 E=(0, 1, 2, 3, 4, 5, 6, 8, 9, 10) delta={7:-3, 8:-1, 9:-1, 10:+3}
+Coarse net_1 buckets:
+  [0.10,0.20)  count=    3 bestLy=0.562414966 best_net=0.144444444 mean_drop=0.021241993 bestE=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)
+  >=0.20       count=  216 bestLy=0.545077475 best_net=1.112301587 mean_drop=0.148755052 bestE=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12)
+
+READING
+  1. The tight k=9 near-AP keeps the same nontrivial fold count as AP (12),
+     but transports three top folds from denominator 8 to 9, giving exact
+     reciprocal fold deficit 1/24. Count misses the defect; transport sees it.
+  2. In the critical k=9 bank, the unique top non-AP is also the unique
+     row in the tiny net_1 bucket (0,0.05).  This is exactly the row with
+     fold transport 3/8 -> 3/9, net_1=1/24.  The k=8 bank is a caveat:
+     its looser cap allows a left-hole clipped AP to win despite larger
+     fold transport, so fold transport is a near-AP boundary coordinate,
+     not a universal scalar order.
+  3. Fold multiplicity should be stored as a target profile, not a scalar.
+     Hidden/coset signs still matter, but the near-AP boundary is a fold
+     transport problem before it is a high-rank problem.
+
+=== Tournament Analysis ===
+Pairwise observable: proof usefulness for predicting correction after rank saturation.
+Switch/gauge: lexicographic priority declared by exact near-AP separation.
+Hamiltonian path:
+  fold_transport_profile > reciprocal_fold_mass > fold_target_centroid > visible_fold_count > pair_sum_energy > raw_relation_rank > raw_runner_vertices
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1]
+Hamiltonian_path_count=1
