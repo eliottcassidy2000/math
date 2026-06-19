@@ -4,11 +4,12 @@ The identification of **LRC(14) pockets as Freiman dimension** (HYP-2637, SHA 6a
 
 - **6a76c31 (kps-S12): LRC(14) Pockets are Freiman Dimension**
     - **Dimension Penalty:** Proved that loneliness $L_y$ strictly decreases with Freiman dimension $d$, with a measured penalty of approximately **0.5x per dimension**. For $k=8$, the hierarchy is: $d=1$ (AP) $0.358 > d=2$ (GAP) $0.14-0.17 > d=3$ (GAP) $0.08-0.12$.
-    - **Pocket-Dimension Mapping:**
-        - **Pocket 1:** Arithmetic Progressions ($d=1$, the unique global max).
-        - **Pocket 3:** $d=2$ Generalized Arithmetic Progressions (GAP).
-        - **Pocket 4:** Found and confirmed as $d=3$ GAP.
-        - **Pocket 2:** Dissociated configurations (approaching the independent limit $L_y^{inf}$).
+    - **Structural Collapse (SHA a206f60):** Broadcast correction confirmed that the **binding non-AP** pocket is not a separate structural entity but a **bounded near-AP** manifestation. This collapses the previously hypothesized "third pocket" into the existing small-excess dimension $d=1$ boundary.
+    - **Pocket-Dimension Mapping (Streamlined):**
+        - **Pocket 1:** Arithmetic Progressions ($d=1$, the unique global max) including **near-AP** perturbations.
+        - **Pocket 2:** $d=2$ Generalized Arithmetic Progressions (GAP).
+        - **Pocket 3:** $d=3$ GAP.
+        - **Pocket 4:** Dissociated configurations (approaching the independent limit $L_y^{inf}$).
     - **Sumset Excess Bands:** Reconciled with codex-S26/S27 into three excess bands:
         1. **Excess 0:** Full AP ($d=1$) $\to$ handled by exact finite check.
         2. **Small-Doubling ($|E+E| \le 3k-4$):** Genuine GAPs ($d \ge 2$) $\to$ bounded by dimension penalty (HYP-2638).
@@ -17,9 +18,9 @@ The identification of **LRC(14) pockets as Freiman dimension** (HYP-2637, SHA 6a
     - **Inert Summand Graph (HYP-2640):** Discovered that for the reduced binding clusters ($k=8,9,10$), the mod-27 antipodal shells $\{a, 27-a\}$ are **inert** because all elements are $< 13.5$. This confirms that the binding danger comes from genuine integer relations rather than modular antipodal effects.
 
 - **Active Steering Objectives (Updated):**
+    - **Near-AP Exact Verification (HYP-2638):** Consolidate the "binding non-AP" analysis into the near-AP exact finite check. Ensure the $k=9$ tight margin remains stable under these collapsed configurations.
     - **GAP Dimension Penalty (HYP-2638):** Prioritize the rigorous formalization of the dimension penalty ($d \ge 2$) for the small-doubling pocket. This is the primary certificate for $d \ge 2$ stability.
     - **Large-Doubling Signed Tail (HYP-2639):** Shift focus for the high-excess pocket to the **signed reciprocal-tail estimate**, utilizing the labeled hypergraph (summand-shell/visibility/sign) to bound low-correlation configurations.
-    - **n=14 Factorization Audit:** Audit higher $n$ (e.g., $n=16 \to 2n-1=31$ prime, $n=15 \to 2n-1=29$ prime) to verify that the $2n-1$ prime-power anomaly correctly predicts the loneliness margin difficulty.
 
 ## codex-S26 update: relation-covered GAP structure
 
@@ -28,10 +29,10 @@ The introduction of the **relation-covered GAP structure** (HYP-2639, SHA 629851
 - **6298517 (codex-S26): Relation-Covered GAP Structure**
     - **Mechanism Refinement:** Proved that the difference between floor-tight (AP) and safe (shifted AP) configurations lies not in their additive energy, but in their **observer-visibility**. AP collisions land as observer-coupled visible folds, while shifted AP pushes the same profile into hidden summand shells.
     - **Typed Hypergraph:** Reframed the relation-density observable as a small-relation hypergraph with edges labeled by summand shell ($C=a+b$), multiplicand clearance, relation sign type (balanced vs. observer-coupled), and visibility.
-    - **Three-Way Proof Split:** Replaced the failed dissociation dichotomy with a three-way split: 
-        1. **Dissociated Stranger:** Peeling/independent limit.
-        2. **Freiman-Small GAP:** Finite pocket for low sumset excess (HYP-2638).
-        3. **Relation-Covered Non-GAP:** High-energy/high-excess cases requiring labeled hypergraph analysis and signed shell cancellation.
+    - **Three-Way Proof Split (Streamlined):** 
+        1. **Bounded Near-AP:** Finite pocket for low sumset excess (HYP-2638).
+        2. **Relation-Covered Non-GAP:** High-energy/high-excess cases requiring labeled hypergraph analysis and signed shell cancellation.
+        3. **Dissociated Stranger:** Peeling/independent limit.
     - **Sign/Parity Interface:** Established that "positive/negative" in a relation determines whether it is a balanced energy shadow (even coefficient sum) or a signed observer-coupled fold (odd coefficient sum) capable of moving the lonely threshold.
     - **Tournament Ranking:** Established a new Hamiltonian proof path: observer-coupled visible folds > low hidden summand shells > multiplicand clearance sieve > relation coverage hypergraph > Freiman small-doubling GAP > balanced pair energy > raw runner vertices.
 
@@ -105,9 +106,9 @@ six-variable absolute Minkowski envelope.  For model faces
 
 At `H=24`, this is not cosmetic.  The affine zero-lane `4+1+1` row has
 raw/signed about `1420`, but after summing into exact blocks the entrywise
-block envelope is about `18.9`.  QR/NQR `4+2` rows have block `L1/signed` near
+block envelope is about `18.9`.  QR/NQR `4+2` rows have block $L1/signed$ near
 `1.05-1.11` versus raw/signed near `21`.  Same-residue spread-core probes
-`(1,8,15,22)` still have block `L1/signed` about `14-17` while raw/signed is
+`(1,8,15,22)` still have block $L1/signed$ about `14-17$ while raw/signed is
 `185-302`.
 
 Next agent task: prove the pair-line Dedekind/cotangent lemma.  For
@@ -121,11 +122,11 @@ then scalarize.
 
 The HYP-2635 pull-in named the next live lead: the dissociated-stranger dichotomy fails because many wide primitive sets have every nonzero element in a small relation. HYP-2637 (script `lrc14_relation_fiber_gap_codex_s26.py`) turns that into a concrete replacement object, complementary to HYP-2636's two-large block-frequency side channel.
 
-- **HYP-2637 / T885:** bounded weighted summand fibres `c -> sum c_i e_i` replace ordinary pair sums as the relation-density observable. The two HYP-2635 wide examples have full height-2 nonzero-vertex coverage (`7/7` each; weighted collision fibres `73` and `68`) and relation-matrix nullity `1`, while a dissociated powers row has no weighted collisions (`0/7`) and nullity `7`. This supports the split:
+- **HYP-2637 / T885:** bounded weighted summand fibres $c \to \sum c_i e_i$ replace ordinary pair sums as the relation-density observable. The two HYP-2635 wide examples have full height-2 nonzero-vertex coverage (`7/7` each; weighted collision fibres `73` and `68`) and relation-matrix nullity `1`, while a dissociated powers row has no weighted collisions (`0/7`) and nullity `7`. This supports the split:
     - uncovered element -> peel / independent limit;
     - full bounded coverage plus small nullity -> high additive energy -> Freiman/GAP pocket -> AP-invariance/dimension bound.
-- **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: `sign(residue coefficient) * (-1)^(# negative coefficients)`. This is the even/odd to positive/negative bridge requested in the current prompt.
-- **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as `2*16+3=35` and `4+12+15=31`.
+- **Addition/multiplication sign splice:** revisiting HYP-2634 shows the additive equality only supplies the relation fibre. Reciprocal sign is multiplicative: $sign(residue coefficient) * (-1)^(\# negative coefficients)$. This is the even/odd to positive/negative bridge requested in the current prompt.
+- **Active steering objective:** prove an inverse theorem for full bounded weighted-relation coverage. Ordinary Sidon/pair-sum energy is too thin; the proof needs weighted fibres that see relations such as $2*16+3=35$ and $4+12+15=31$.
 
 ## codex-S23 update: two-large Dedekind phase packet
 
@@ -434,7 +435,7 @@ The LRC(14) verification has transitioned into a final-assembly phase, marked by
     - **Lemma Formalization:** Complete the formalization of the upstream glue lemmas to finalize the theoretical framework.
 
 ## 3.27 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 596f8e5 (Consolidated)
-This update serves as the definitive documentation consolidation for the multiplicative stranger-decoupling and HYP-2610 reduction, incorporating all recent strategic syntheses.
+This update serves the definitive documentation consolidation for the multiplicative stranger-decoupling and HYP-2610 reduction, incorporating all recent strategic syntheses.
 
 - **596f8e5 (mac-mini-2026-06-19-S3): Strategic Synthesis and Route Ledger**
     - **Multiplicative stranger-decoupling (5/7)^d:** Formally established as the primary arithmetical mechanism for interference bounding. It is arithmetically equivalent to the **kps-S9 contraction** under the specific condition $|A|=2$.
