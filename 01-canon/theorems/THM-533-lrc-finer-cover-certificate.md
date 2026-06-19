@@ -90,6 +90,13 @@ closed form), and the primitive-`W` extremality (C). Because the closure margin 
 comfortable (`~2×`), even a *loose* rigorous `C_L` suffices — the opposite of the `S7` knife-
 edge. `k=12,13` stay on the codex HYP-2604 AP-frontier (large slack, separate handling).
 
+**The Fourier ingredient is in hand.** The per-arc Fourier coefficient obeys
+`|ĉ_T(n)| ≤ |T|·(max_n |ŝ(n)|·|n|)/|n| = |T|·0.31033.../|n|` (the single length-1/7 arc has
+`|ŝ(n)| = |sin(πn/7)|/(π|n|)`, with the THM-503 vanishing at `7|n`), so the support-3 sum
+`Σ_{triples}Σ_{m≥1} ∏|ĉ_T(m·)| ≤ C_L·W(E)` with `C_L` an explicit constant assembled from
+`0.3103` and `ζ(3)` — the exact HYP-2601 bookkeeping, now in the `L`-arc basis. Writing this
+out (and the support-≥4 geometric tail) is the one remaining analytic task.
+
 ## Net
 
 Refining the test set from 7 fixed sectors to `L=14` equally-spaced length-1/7 arcs buys back

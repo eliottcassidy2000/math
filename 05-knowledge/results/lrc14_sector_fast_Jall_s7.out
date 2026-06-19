@@ -15,3 +15,11 @@ CONSEC maximizes L_y?  LARGE bounded-spread sweep + does any E exceed cap_k?
         max L_y=0.57008  [consec is MAX]  #over consec=0  #over cap=0
   k=11: 1001 sets spread<= 14.  L_y(consec)=0.68305 cap=0.72527
         max L_y=0.69116  [NOT consec (max at [0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14])]  #over consec=3  #over cap=0
+  k=12: 364 sets spread<= 14.  L_y(consec)=0.71417 cap=0.85714
+        max L_y=0.73298  [NOT consec (max at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14])]  #over consec=14  #over cap=0
+  k=13: 13 sets spread<= 13.  L_y(consec)=0.74888 cap=1.00000
+        max L_y=0.75411  [NOT consec (max at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 13])]  #over consec=1  #over cap=0
+
+==============================================================================================
+random WIDE-spread stress (each k, 500 sets): max L_y vs cap_k
+==============================================================================================
