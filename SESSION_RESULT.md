@@ -2,61 +2,78 @@
 
 ## Task Chosen
 
-I chose one tiny exhaustive sanity check: enumerate all labelled tournaments on
-four vertices, quotient them by vertex relabelling, and compute the Hamiltonian
-path count `H(T)` for each labelled tournament.
+I chose one tiny OEIS/generating-function sanity check from
+`00-navigation/OPEN-QUESTIONS.md`: verify the stated identity behind the
+packing-dimension row
 
-This checks the small A000568-style isomorphism count at `n=4` and the local
-Hamiltonian-path spectrum directly from definitions.
+```text
+1, 2, 3, 5, 7, 9, 12, 15, 19
+```
+
+for `n = 6..14`, namely that the cumulative counts of partitions into odd
+parts at least `3` equal `A000009(n)`, the number of partitions of `n` into odd
+parts. The dimension row is then `A000009(n) - 3`.
 
 ## What I Did
 
-I ran a transient Python enumeration over the `2^6 = 64` orientations of the
-six unordered vertex pairs. For each labelled tournament, I counted directed
-Hamiltonian paths by testing all `4!` vertex orders, and I canonicalized the
-tournament by taking the lexicographically least orientation word over all
-`4!` vertex relabellings.
+I ran a transient dynamic-programming count up to `n = 14` with two ordinary
+partition generating functions:
 
-Tournament Analysis declaration:
+- `P_ge3(x) = prod_{k odd >= 3} 1/(1 - x^k)`, truncated at degree `14`.
+- `Q_odd(x) = prod_{k odd >= 1} 1/(1 - x^k)`, truncated at degree `14`.
 
-- Pairwise observable: the orientation bit on each unordered vertex pair.
-- Switch/gauge: the bit value orients the corresponding tournament edge.
-- Tie Hamiltonian path: none needed; every pair has exactly one orientation.
-- Fingerprints recorded: labelled count, isomorphism-class count, class sizes,
-  class-level `H(T)` values, and the labelled `H(T)` histogram.
+I then compared
 
-Assumption challenge:
+```text
+sum_{s <= n} [x^s] P_ge3(x)
+```
 
-- I used tournament vertices because this was a direct check of `H(T)` and
-  A000568-style tournament classes.
-- Alternate vertex sets such as arcs, odd cycles, gaps, residues, cover arcs,
-  or proof obligations would be useful for quotient or proof-carrier analyses,
-  but they would destroy the literal four-vertex class count being verified.
+against `[x^n] Q_odd(x)` for every `0 <= n <= 14`.
+
+Tournament Analysis was not used here: this task introduced no tournament,
+pairwise observable, switch/gauge, or binary relation. It is only a bounded
+OEIS partition identity check.
 
 ## Concrete Result
 
-The exhaustive output was:
+The computed table was:
 
 ```text
-labelled tournaments 64
-unlabelled classes 4
-labelled H distribution {1: 24, 3: 16, 5: 24}
-classes:
-000000 labelled_size 24 H_values {1: 24}
-000010 labelled_size 8 H_values {3: 8}
-001000 labelled_size 24 H_values {5: 24}
-001001 labelled_size 8 H_values {3: 8}
-H=7 labelled count 0
+n  p_odd_ge3(n)  cumulative_ge3  q_odd(n)  q_odd(n)-3
+0  1             1               1
+1  0             1               1
+2  0             1               1
+3  1             2               2
+4  0             2               2
+5  1             3               3
+6  1             4               4         1
+7  1             5               5         2
+8  1             6               6         3
+9  2             8               8         5
+10 2             10              10        7
+11 2             12              12        9
+12 3             15              15        12
+13 3             18              18        15
+14 4             22              22        19
 ```
 
-So the direct enumeration gives exactly `4` isomorphism classes on four
-vertices, matching the expected A000568 initial value for `n=4`, and the
-labelled Hamiltonian-path spectrum is `{1: 24, 3: 16, 5: 24}`. In particular,
-`H=7` does not occur at `n=4`.
+Thus the identity holds in this checked range, and the dimension row for
+`n = 6..14` is exactly:
+
+```text
+1, 2, 3, 5, 7, 9, 12, 15, 19
+```
+
+This also matches the one-line generating-function reason recorded in the
+navigation notes:
+
+```text
+(1/(1 - x)) * prod_{k odd >= 3} 1/(1 - x^k)
+= prod_{k odd >= 1} 1/(1 - x^k).
+```
 
 ## Confidence Note
 
-Confidence is high for this bounded verification. The enumeration is
-exhaustive, the canonicalization checks all vertex relabellings, and the path
-count is computed directly from the definition without using repository helper
-scripts or cached results.
+Confidence is high for this narrow check. The computation is a direct
+coefficient DP with a small degree bound, and the result is independently
+explained by the displayed generating-function identity.
