@@ -36,6 +36,17 @@ independent covering implementations. `F(k,5)` is TIGHT for every `k` with `2·3
 (k=211,421,631,841) and above all small mediants otherwise. So the natural family TOPS OUT at
 level 4.
 
+## Adversarial-workflow confirmation (8 agents)
+
+All four verify-claims CONFIRMED by independent exact code (denominator lemma; `M(F(31,4))=4/127`
+via crossing + covering; the primorial divisibility pattern; exhaustive small-k `sigma_2`).
+E2 independently computed `M(F(211,5))=1/212` (the floor) — the source of the correction.
+**E3 exhaustively confirmed `sigma_2(13)=3/41`** (177 below-mediant 13-sets all collapse to the
+single witness `{1,…,11,13,36}`), and `sigma_2(11)=2/23`, `sigma_2(12)=2/25` (no dip). **E1's
+"beat the family" search concluded: levels top out at 4; generic 2; 3,4 need `k-1` divisible by a
+primorial; level 5 collapses to the floor** — i.e. `g(k) = Theta(1/k^2)` with constant `≈ 1/4`–`1/2`
+across everything tested. No construction reached `a>=5`.
+
 ## The OPEN question (sharpened)
 
 **Is level `a>=5` realizable by ANY gcd-1 k-set, for some k?** Equivalently: is `g(k)·k^2`

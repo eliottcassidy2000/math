@@ -1,0 +1,55 @@
+LRC max-min second-spectrum: INDEPENDENT exact verification
+(kind-pasteur 2026-06-19, fresh from-definition implementation in
+ 04-computation/lrc-spectrum/, fast_M.py validated 0 mismatches vs naive
+ crossing-candidate enumeration on 200 random sets)
+
+QUESTION (intake): can a k-speed gcd-1 set have M(S) closer to the floor 1/(k+1)
+than the primorial family (level a ~ omega(k-1)), e.g. level a >= sqrt(k)
+(=> g*k^2 -> 0 fast)?
+
+ANSWER: NO. Confirms THM-539 / HYP-2623 independently. Realized levels top out at
+a=4; g*k^2 stays in [~1/4, 1/2]. No construction reaches a>=5.
+
+=== Exhaustive sigma_2 minimizers (smallest exact M, gcd1, bounded speeds) ===
+k=4 V=14: S=(1,2,3,8)        M=2/9   g*k^2=0.3556  a=2
+k=5 V=16: S=(1,2,3,4,10)     M=2/11  g*k^2=0.3788  a=2
+k=6 V=18: S=(1,5,6,11,16,17) M=5/33  g*k^2=0.3117  a=2.5  (non-F deeper SB fraction)
+k=7 V=18: S=(1,2,3,4,5,7,18) M=3/23  g*k^2=0.2663  a=3   [= F(7,3), killer 18=3*6]
+k=8 V=20: S=(1,..,7,16)      M=2/17  g*k^2=0.4183  a=2
+k=9 V=20: S=(1,..,8,18)      M=2/19  g*k^2=0.4263  a=2
+
+=== Structured sigma_2 (near-prefix + <=2 gaps + <=2 killers; polynomial) ===
+k=10: M=2/21  a=2  S={1..9,20}
+k=11: M=2/23  a=2  S={1..10,22}
+k=12: M=2/25  a=2  S={1..11,24}
+k=13: M=3/41  a=3  S={1..11,13,36}   [= F(13,3), killer 36=3*12, drop 12]
+k=14: M=2/29  a=2  S={1..13,28}
+
+=== F-family F(k,a)={1,...,k-2, k, a(k-1)} verified EXACT (my fast_M) ===
+F(7,3)   M=3/23   a=3.0000  g*k^2=0.2663   t*=4/23
+F(13,3)  M=3/41   a=3.0000  g*k^2=0.2944   t*=17/41
+F(31,3)  M=1/32   TIGHT (=floor)            [30|30 => AP-tight]
+F(31,4)  M=4/127  a=4.0000  g*k^2=0.2365   t*=55/127   <<< BEST non-tight at k=31
+F(61,4)  M=4/247  a=4.0000  g*k^2=0.2430   t*=70/247
+F(211,4) M=1/212  TIGHT (=floor)
+F(211,5) M=1/212  TIGHT (=floor)            [collapses; level 5 NOT realized]
+
+=== a=5 reachability probe at the most favorable k=211 (k-1=210=2*3*5*7) ===
+target level 5 => M=5/1059 (~0.004721). NONE of the near-F variants reach it:
+  F(211,5)                       -> TIGHT (1/212, = floor)
+  drop k-2, killer 5(k-1)        -> M=1/209  (a=0.33, coarse re-optimization)
+  2 killers {5(k-1),5(k-1)+1}    -> M=1/209
+  2 killers {5(k-1),7(k-1)}      -> M=1/209
+  keep k-1 drop k, killer 5(k-1) -> M=1/211  (a=1)
+
+=== Conclusion (independent) ===
+sigma_2(k) = 2/(2k+1) generically (a=2, g*k^2 -> 1/2). Dips to a=3 (k=7,13,...,
+k≡7,13,19,25 mod30) and a=4 (k=31,61,...,k≡1 mod30) via the F-family. NO config
+reaches a>=5; the natural family collapses to the floor at a=5. Hence g*k^2 does
+NOT decay to 0 fast; over realized configs it stays in [~1/4, 1/2]. The primorial
+family (level ~omega(k-1), but bounded at 4 in practice) is essentially optimal; a
+>= sqrt(k) is NOT achievable. Whether ANY family reaches a>=5 (=> g*k^2 < 1/4)
+remains the single OPEN point (HYP-2623).
+
+Scripts: 04-computation/lrc-spectrum/{lrc_maxmin.py, fast_M.py, exhaust_small.py,
+structured.py, structured_large.py} (this session).

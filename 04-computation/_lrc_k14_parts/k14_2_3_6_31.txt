@@ -1,0 +1,1 @@
+prefix=(2, 3, 6, 31) sigma2=None wit=None surv=0

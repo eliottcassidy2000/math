@@ -10,7 +10,8 @@ related:
   - HYP-2084   # codex-S573 below-edge rows
   - HYP-2621   # codex-S16 A_{k,r} mediant ladder (same family, mod-30 refinement)
   - HYP-2622   # codex-S17 excess ledger + bounded-height filter (uses this session's denominator lemma)
-  - HYP-2623   # the a_max-unbounded conjecture (this session)
+  - HYP-2623   # the a>=5 reachability question (this session)
+  - HYP-2101   # codex apex-lift sheaf — the killer = "multiple-of-n apex row" (synthesis)
   - THM-534    # moment-LP dual
   - THM-522    # scale-invariance + quantization
 ---
@@ -131,11 +132,29 @@ at distance `a/q` on the `q`-clock. So the level-`a` claim `M(F)=a/q` splits int
   gap edge; below-edge configs exist (codex-S573 found the first; the `a=3,4` families explain them).
   The "no config in `(1/n, 2/(2n-1))`" claim was a small-box artifact (exhaustive only to n<=8).
 
-## For LRC(14) (k=13)
+## For LRC(14) (k=13) — sigma_2 now EXHAUSTIVELY established
 
-`k-1 = 12 = 2^2·3`, so `ω(12)=2` distinct primes → reachable level `a <= 3`; indeed
-`sigma_2(13) = 3/41` (a=3), the deepest dip available at k=13. The genuinely hard `k=13` floor
-is still the AP; the spectral basin around it has width `g(13) = 3/41 - 1/14 = 1/574`.
+`k-1 = 12 = 2^2·3`, so only primes `2,3` → reachable level `a = 3`; indeed `sigma_2(13) = 3/41`,
+the deepest dip available at k=13. **Exhaustively verified** (adversarial-workflow E3, box ~3k,
+exact, independent serial + parallel scans): among all non-tight gcd-1 13-sets, exactly 177 dip
+below the mediant `2/27`, and ALL collapse to the single minimum `3/41` at `{1,…,11,13,36}`
+(maxS=36=2.77k). So `sigma_2(13)=3/41` is the TRUE second point, not merely a family upper bound.
+Companion exact values: `sigma_2(11)=2/23`, `sigma_2(12)=2/25` (no dip — mediant), `k=14` no
+sub-mediant survivor found (94% scan). The genuinely hard `k=13` floor is still the AP; the
+spectral basin around it has width `g(13) = 3/41 - 1/14 = 1/574`.
+
+## Cross-thread synthesis: the primorial killer IS codex's apex-lift "multiple-of-n" row
+
+(Workflow Connect agent.) The killer speed `a(k-1)`, divisible by every `d | (k-1)`, is exactly
+the **"multiple-of-n apex row"** that HYP-2101/2102 flagged as the *loose / positive-measure*
+side of the mod-`n` apex seam: a speed `≡ 0 (mod n)` is invisible at the floor times `t=j/n`
+since `||(mult of n)·(j/n)|| = 0`. The dip finding **explains why** those rows are loose and turns
+the loss into structure: one killer divisible by every `d|(k-1)` annihilates the WHOLE tower of
+coarse clocks `t=j/d` at once, forcing the surviving minimum down to the finer clock — the
+below-mediant level `a/(a(k+1)-1)`, with depth `a` = the number of distinct prime clocks switched
+off. This adds a **fourth outcome** to HYP-2101's apex-lift trichotomy (preserve cheap pair /
+new pair-sum witness / open positive measure): **the lift can DEEPEN the floor** — but only up to
+the saturation point (a<=4 confirmed), beyond which (a=5) it collapses the set ONTO the floor (tight).
 
 ## Engineering application
 

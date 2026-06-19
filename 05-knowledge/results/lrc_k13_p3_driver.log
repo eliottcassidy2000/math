@@ -1,0 +1,50 @@
+k=13 sigma2=3/41=0.073171 wit=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 36) floor=1/14 mediant=2/27 g=1/574 survivors=177
+
+e 136, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_sigma2_worker.py", line 131, in main
+    with open(out, "w") as f:
+         ~~~~^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'C:\\Users\\Eliott\\Documents\\GitHub\\math\\04-computation\\_lrc_k13_parts\\k13_1_3_7.txt'
+concurrent.futures.process._RemoteTraceback: 
+"""
+Traceback (most recent call last):
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\process.py", line 254, in _process_worker
+    r = call_item.fn(*call_item.args, **call_item.kwargs)
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\process.py", line 203, in _process_chunk
+    return [fn(*args) for args in chunk]
+            ~~^^^^^^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_parallel_driver.py", line 22, in run_worker
+    subprocess.run(cmd, check=True)
+    ~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\subprocess.py", line 577, in run
+    raise CalledProcessError(retcode, process.args,
+                             output=stdout, stderr=stderr)
+subprocess.CalledProcessError: Command '['C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe', 'C:\\Users\\Eliott\\Documents\\GitHub\\math\\04-computation\\lrc_sigma2_worker.py', '13', 'C:\\Users\\Eliott\\Documents\\GitHub\\math\\04-computation\\_lrc_k13_parts\\k13_1_3_7.txt', '1', '3', '7']' returned non-zero exit status 1.
+"""
+
+The above exception was the direct cause of the following exception:
+
+Traceback (most recent call last):
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_parallel_driver.py", line 95, in <module>
+    main()
+    ~~~~^^
+  File "C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc_parallel_driver.py", line 62, in main
+    for r in ex.map(run_worker, tasks):
+             ~~~~~~^^^^^^^^^^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\process.py", line 617, in _chain_from_iterable_of_lists
+    for element in iterable:
+                   ^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 625, in result_iterator
+    yield _result_or_cancel(fs.pop())
+          ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 318, in _result_or_cancel
+    return fut.result(timeout)
+           ~~~~~~~~~~^^^^^^^^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 453, in result
+    return self.__get_result()
+           ~~~~~~~~~~~~~~~~~^^
+  File "C:\Program Files\WindowsApps\PythonSoftwareFoundation.Python.3.13_3.13.3824.0_x64__qbz5n2kfra8p0\Lib\concurrent\futures\_base.py", line 402, in __get_result
+    raise self._exception
+subprocess.CalledProcessError: Command '['C:\\Users\\Eliott\\AppData\\Local\\Microsoft\\WindowsApps\\PythonSoftwareFoundation.Python.3.13_qbz5n2kfra8p0\\python.exe', 'C:\\Users\\Eliott\\Documents\\GitHub\\math\\04-computation\\lrc_sigma2_worker.py', '13', 'C:\\Users\\Eliott\\Documents\\GitHub\\math\\04-computation\\_lrc_k13_parts\\k13_1_3_7.txt', '1', '3', '7']' returned non-zero exit status 1.
