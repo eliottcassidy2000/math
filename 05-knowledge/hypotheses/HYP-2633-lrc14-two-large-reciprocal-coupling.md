@@ -107,6 +107,28 @@ sum over relation-lattice height, prove bounded cumulative residue-lift
 discrepancy after wall deletion, and then apply Abel summation to the
 `1/prod(n_i)` denominator.
 
+## HYP-2634 Follow-Up
+
+HYP-2634 explains the first opposite-sign pair from this file.  In the seed
+family `S_a=(1,a,8,a+7,15,22)`, the finite QR packets `a=2` and `a=4` both
+have weight `-25U`, but only `a=4` has extra negative low-height relation
+motifs with defects
+
+```text
+2a - 8 = 0,
+7a - 28 = 0.
+```
+
+The HYP-2633 lift lemma should therefore split into two pieces:
+
+```text
+finite low-height relation-defect zero sieve
++ residual residue-lift equidistribution / Abel summation.
+```
+
+Equidistribution should not be asked to absorb exact low-height resonances
+that can be isolated in a finite wall ledger.
+
 ## Tournament Analysis
 
 Candidate vertices included runners, gaps, fixed circle sections, section

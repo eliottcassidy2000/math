@@ -1,0 +1,72 @@
+
+============================================================================================
+LRC(14) TWO-LARGE LIFT-OPPOSITION ATLAS S25
+============================================================================================
+ambient d=9; confirmation height H=16; scan height H=12
+
+============================================================================================
+SEED FAMILY S_a=(1,a,8,a+7,15,22)
+============================================================================================
+The finite packet sees only the 4+2 class.  The reciprocal lift sees the actual integer identities among these six speeds.
+
+ a  chi7 finite S/U             H8            H12            H16 sign16  abs/signed16
+ 2     1    -25.000 +0.00247870093 +0.002664983802 +0.002676143676      +        20.128
+ 3    -1    -18.000 +0.001999238576 +0.002445694817 +0.002424138026      +        24.703
+ 4     1    -25.000 +3.349756776e-06 -0.0002201827678 -0.0001305137351      -       432.469
+ 5    -1    -18.000 +0.001468284458 +0.002243621398 +0.002309036445      +        25.203
+ 6    -1    -18.000 +0.002269845686 +0.002465822135 +0.002471146747      +        23.571
+
+Only a=4 flips negative in this seed family, despite a=2 and a=4 having the same finite QR packet weight -25U.
+
+============================================================================================
+LOW-HEIGHT RELATION MOTIFS
+============================================================================================
+Each vector n below is tested against S_a.  The defect is sum_i S_a[i]*n_i = c*a+d.  A zero defect is an exact relation; the listed z is one oriented reciprocal term.
+
+                 motif                         n       defect height    a exact    term z when exact
+ universal_h2_positive     (1, 1, -1, -1, -2, 2) +0a+0      2 [2, 3, 4, 5, 6]     +7.403726469e-05
+        a2_h2_negative    (-1, 2, -1, -1, -2, 2) +1a-2      2        [2]     -3.135619413e-05
+        a4_h3_negative    (-1, 3, -1, -1, 2, -1) +2a-8      3        [4]     -7.233053203e-05
+        a4_h4_negative    (-4, 4, -1, 3, -1, -1) +7a-28      4        [4]     -3.655305842e-05
+
+Readout: the universal height-2 positive relation is shared by every S_a.  The a=4 lift alone has the larger negative height-3/4 resonances shown here, which nearly cancel the positive reservoir before the later shells turn it negative.
+
+============================================================================================
+SHELL-GROUP CONTRAST: a=2 VS a=4
+============================================================================================
+     group      a=2 shell sum     a=2 cumulative      a=4 shell sum     a=4 cumulative
+       h=2   +0.0004290642157   +0.0004290642157   +0.0004465404804   +0.0004465404804
+    h=3..4   +0.0009962277538    +0.001425291969   -0.0004119505826   +3.458989774e-05
+    h=5..6    +0.001090711549    +0.002516003518   +6.311090826e-05     +9.7700806e-05
+   h=8..12   +0.0001489802833    +0.002664983802   -0.0003178835738   -0.0002201827678
+  h=13..16    +1.11598746e-05    +0.002676143676   +8.966903269e-05   -0.0001305137351
+
+The sign split is not born at infinity: a=4 almost cancels by h=4, then the h=8..12 block pushes it negative.  The a=2 lift keeps a positive low-height reservoir.
+
+============================================================================================
+CONSECUTIVE-LADDER OFFSET SCAN
+============================================================================================
+Here the residue-1 core is four consecutive lifts and the repeated QR pair is two consecutive lifts.  The table compares a=2 and a=4 at H=12.
+
+core start pair start        a=2 H12        a=4 H12  opposition?
+         0          0   0.0026649838 -0.000220182768         True
+         0          1  0.00128311338  0.00263210467        False
+         0          2  0.00228204622  0.00189294523        False
+         1          0  0.00168426037  0.00167032193        False
+         1          1   0.0022275578  0.00297184587        False
+         1          2  0.00231344542  0.00225437199        False
+
+In this small scan the opposition is localized at the start-aligned shape `(core_start,pair_start)=(0,0)`.  Moving the repeated pair one period up removes the a=4 low-height resonance.
+
+============================================================================================
+TOURNAMENT ANALYSIS
+============================================================================================
+Pairwise observable: prediction of bounded reciprocal sign opposition.
+Switch/gauge: prefer quotients that retain exact integer relation defects before reducing to finite residue packets.
+Hamiltonian path:
+  low_height_relation_motifs > integer_lift_offsets > residue_lift_discrepancy > additive_frequency_shells > finite_packet_weight > boundary_face_mass > raw_support_values > raw_runner_vertices
+score_hist = {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1}
+directed_3_cycles = 0
+SCCs = eight singleton proof-obligation vertices
+hamiltonian_paths = 1
+Challenged assumption: the useful vertices are not runners or finite residue classes.  For this subproblem, exact relation motifs and lift offsets preserve the bounded-sign predicate; raw runner labels destroy it.
