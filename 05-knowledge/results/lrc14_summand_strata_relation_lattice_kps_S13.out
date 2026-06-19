@@ -1,0 +1,114 @@
+==============================================================================
+LRC(14) SUMMAND-GRAPH STRATA mod C=27=3^3  —  kind-pasteur-S13
+==============================================================================
+C = 2n-1 = 27 = 3^3.  Strata by gcd(a,27): unit(gcd1), gcd3, gcd9.
+  unit residues  (18): [1, 2, 4, 5, 7, 8, 10, 11, 13, 14, 16, 17, 19, 20, 22, 23, 25, 26]
+  gcd-3 residues (6) : [3, 6, 12, 15, 21, 24]
+  gcd-9 residues (2) : [9, 18]
+
+##############################################################################
+## CLUSTER SIZE k=8
+##############################################################################
+
+  --- AP_consec: E=[0, 1, 2, 3, 4, 5, 6, 7]
+      L_y = 0.35823   excess(|E+E|-(2k-1)) = 0  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=2892
+        pure-unit=114  pure-gcd3=2  pure-gcd9=0  mixed=2776
+        touching gcd3=2778  touching unit=2890  antipodal(+a/-a)=0
+
+  --- nearAP_top_max: E=[0, 2, 3, 4, 5, 6, 7, 8]
+      L_y = 0.30306   excess(|E+E|-(2k-1)) = 1  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[2, 4, 5, 7, 8]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=2890
+        pure-unit=114  pure-gcd3=2  pure-gcd9=0  mixed=2774
+        touching gcd3=2776  touching unit=2888  antipodal(+a/-a)=0
+
+  --- nearAP_hole: E=[0, 1, 2, 3, 4, 5, 6, 8]
+      L_y = 0.23738   excess(|E+E|-(2k-1)) = 1  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 8]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=2892
+        pure-unit=116  pure-gcd3=2  pure-gcd9=0  mixed=2774
+        touching gcd3=2776  touching unit=2890  antipodal(+a/-a)=0
+  [skip d2_GAP_2x4: |E|=7 != 8  E=[0, 1, 2, 3, 4, 5, 6]]
+
+  --- d2_GAP_4x2: E=[0, 1, 4, 5, 8, 9, 12, 13]
+      L_y = 0.13110   excess(|E+E|-(2k-1)) = 6  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 4, 5, 8, 13]  gcd3=[12]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=2890
+        pure-unit=114  pure-gcd3=0  pure-gcd9=0  mixed=2776
+        touching gcd3=2308  touching unit=2890  antipodal(+a/-a)=0
+
+##############################################################################
+## CLUSTER SIZE k=9
+##############################################################################
+
+  --- AP_consec: E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+      L_y = 0.49288   excess(|E+E|-(2k-1)) = 0  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7, 8]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=14466
+        pure-unit=580  pure-gcd3=2  pure-gcd9=0  mixed=13884
+        touching gcd3=13886  touching unit=14464  antipodal(+a/-a)=0
+
+  --- nearAP_top_max: E=[0, 1, 2, 3, 4, 5, 6, 7, 9]
+      L_y = 0.48729   excess(|E+E|-(2k-1)) = 1  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7]  gcd3=[3, 6]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=14456
+        pure-unit=114  pure-gcd3=2  pure-gcd9=0  mixed=14340
+        touching gcd3=13878  touching unit=14442  antipodal(+a/-a)=0
+
+  --- nearAP_hole: E=[0, 1, 2, 3, 4, 5, 6, 8, 9]
+      L_y = 0.40593   excess(|E+E|-(2k-1)) = 2  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 8]  gcd3=[3, 6]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=14456
+        pure-unit=116  pure-gcd3=2  pure-gcd9=0  mixed=14338
+        touching gcd3=13880  touching unit=14442  antipodal(+a/-a)=0
+
+  --- d2_GAP_3x3: E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+      L_y = 0.49288   excess(|E+E|-(2k-1)) = 0  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7, 8]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=14466
+        pure-unit=580  pure-gcd3=2  pure-gcd9=0  mixed=13884
+        touching gcd3=13886  touching unit=14464  antipodal(+a/-a)=0
+
+  --- d2_GAP_3x4: E=[0, 1, 2, 4, 5, 6, 8, 9, 10]
+      L_y = 0.35728   excess(|E+E|-(2k-1)) = 4  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 8, 10]  gcd3=[6]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=14470
+        pure-unit=578  pure-gcd3=0  pure-gcd9=0  mixed=13892
+        touching gcd3=11580  touching unit=14470  antipodal(+a/-a)=0
+
+##############################################################################
+## CLUSTER SIZE k=10
+##############################################################################
+
+  --- AP_consec: E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+      L_y = 0.57008   excess(|E+E|-(2k-1)) = 0  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7, 8]  gcd3=[3, 6]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=72350
+        pure-unit=580  pure-gcd3=2  pure-gcd9=0  mixed=71768
+        touching gcd3=69458  touching unit=72336  antipodal(+a/-a)=0
+
+  --- nearAP_top_max: E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+      L_y = 0.56241   excess(|E+E|-(2k-1)) = 1  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7, 8, 10]  gcd3=[3, 6]  gcd9=[]
+      low-height (|m|<=2) shell relations mod 27: total=72336
+        pure-unit=2892  pure-gcd3=2  pure-gcd9=0  mixed=69442
+        touching gcd3=69444  touching unit=72334  antipodal(+a/-a)=0
+
+  --- nearAP_hole: E=[0, 1, 2, 3, 4, 5, 6, 7, 9, 10]
+      L_y = 0.55447   excess(|E+E|-(2k-1)) = 2  (excess=0 <=> full AP)
+      E residues mod 27 by stratum: unit=[1, 2, 4, 5, 7, 10]  gcd3=[3, 6]  gcd9=[9]
+      low-height (|m|<=2) shell relations mod 27: total=72348
+        pure-unit=578  pure-gcd3=2  pure-gcd9=0  mixed=71768
+        touching gcd3=69454  touching unit=72334  antipodal(+a/-a)=0
+
+##############################################################################
+## V* (HYP-2083 tight sporadic, n=14): residues mod 27 and stratum content
+##############################################################################
+  V* = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13, 24]  (speeds = residues mod 27)
+  by stratum: unit=[1, 2, 4, 5, 7, 8, 10, 11, 13]  gcd3=[3, 6, 24]  gcd9=[9]
+  gcd-3 residues present in V*: [3, 6, 24]
+  gcd-3 residues ABSENT (missed): [12, 15, 21]
+  low-height (|m|<=1) shell relations: total=59048 pure-unit=720 pure-gcd3=4 mixed=58324 antipodal=26244
+  antipodal pair-shells {+a,-a} fully present in V*: {'gcd3': 1}

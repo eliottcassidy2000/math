@@ -310,7 +310,16 @@ if __name__ == "__main__":
     # HYP-2083: V* misses {12,15} and doubles {3,24}, both gcd-3 stratum. Verify.
     print(f"  gcd-3 residues present in V*: {sorted(set(v%C for v in Vstar if stratum(v)=='gcd3'))}")
     print(f"  gcd-3 residues ABSENT (missed): {sorted(set(a for a in range(1,C) if gcd(a,C)==3) - set(v%C for v in Vstar))}")
-    relsV = low_height_shell_relations(Vstar, max_coef=2)
+    relsV = low_height_shell_relations(Vstar, max_coef=1)  # |V*|=13: cap coef at 1 (3^13 feasible)
     histV = stratum_histogram(relsV)
-    print(f"  low-height shell relations: total={histV['total']} pure-unit={histV['pure_unit']} "
+    print(f"  low-height (|m|<=1) shell relations: total={histV['total']} pure-unit={histV['pure_unit']} "
           f"pure-gcd3={histV['pure_gcd3']} mixed={histV['mixed']} antipodal={histV['antipodal']}")
+    # antipodal-pair (single shell {a,-a}) relations among V* gcd-3 vs unit:
+    from collections import Counter
+    pair_strata = Counter()
+    Vset = set(v % C for v in Vstar)
+    for a in range(1, C):
+        b = (-a) % C
+        if a < b and a in Vset and b in Vset:  # both +a and -a present -> antipodal pair shell
+            pair_strata[stratum(a)] += 1
+    print(f"  antipodal pair-shells {{+a,-a}} fully present in V*: {dict(pair_strata)}")
