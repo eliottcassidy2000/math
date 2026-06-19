@@ -1,3 +1,22 @@
+## 3.31 Analysis of Recent Commits (Friday, June 19, 2026) - Digest e2e57fd
+The LRC(14) verification has reached a significant technical pivot with the introduction of the relative signed support-6 permanent count, reframing the final wide-spread residual from a blunt absolute bound to a precise oscillatory counting problem.
+
+- **e2e57fd (codex-2026-06-19-S11): HYP-2613 — Relative Support-6 Permanent Count**
+    - **Refined Proof Target:** Established **HYP-2613**, which argues that the Minkowski bound for **HYP-2608a** must be attacked via a **relative signed count** rather than a bare absolute bound. The previous absolute majorants (e.g., free product) were found to be up to 5 orders of magnitude too blunt.
+    - **Signed support-6 Layer:** Measured the exact signed support-6 layer through height $H=12$, showing it to be remarkably small (e.g., $\approx -7.63e-8$ for high one-stranger configurations). This confirms that **oscillatory cancellation** across support hyperplanes is the primary reason the floor holds in the wide-spread regime.
+    - **Permanent Constant Improvement:** Identified a significant reduction in the normalized permanent constants compared to the previous blunt $c_1^6$ estimate (ratios as low as **0.0125 for d=9**).
+    - **Finite Resonance Walls:** Isolated "subset-sum resonance walls" (e.g., $1+2+3+4+5+7=22$) as the only true sources of danger. These are finite, discrete structures rather than an infinite harmonic tail.
+    - **Architectural Split:** The final closure is now reframed as a three-layer problem:
+        1. **Bounded core finite certificate** (cleared).
+        2. **Finite low-height subset-sum walls** (to be enumerated).
+        3. **Relative signed hyperplane tail** (the new analytic target).
+    - **Tournament Analysis:** Confirmed that the support-6 envelope participation fingerprints remain mostly transitive, preserving the LRC predicate "tail below the cap margin" while simplifying the phase-location data into a counting quotient.
+
+- **Active Steering Objectives (Updated):**
+    - **Relative Signed Tail (HYP-2613):** Shift all analytical effort from the bare Minkowski count to the **relative signed theta estimate** for support-6 hyperplanes. This is the new "true" closer for the wide-spread regime.
+    - **Resonance Wall Enumeration:** Enumerate and verify the **finite low-height subset-sum walls** to isolate them from the infinite tail.
+    - **Permanent Integration:** Integrate the exact **sector permanent constants** into the global proof structure to harden the margin against the 13/7k floor.
+
 ## 3.30 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 078ae3d
 The LRC(14) verification has achieved a massive architectural reduction, condensing the gap-free proof into a single Minkowski-type problem focused on the final wide-spread residual.
 
@@ -61,7 +80,7 @@ This update serves as the definitive documentation consolidation for the multipl
 
 - **Active Steering Objectives (Updated):**
     - **HYP-2610 Completion:** Prioritize the formal resolution of the **bounded finite check** and the underlying **contraction mechanics**.
-    - **Decoupling Integration:** Integrate the finalized $(5/7)^d$ decoupling results across the frontier envelope to verify global floor stability and ensure no "loose" residue clusters remain.
+    - **De-coupling Integration:** Integrate the finalized $(5/7)^d$ decoupling results across the frontier envelope to verify global floor stability and ensure no "loose" residue clusters remain.
 
 ## 3.25 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 7f83a45
 A major technical dead-end has been identified in the LRC(14) research stream, resulting in the abandonment of the Positive Definite / Gram-determinant approach.
