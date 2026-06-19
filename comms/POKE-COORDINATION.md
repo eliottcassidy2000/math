@@ -31,6 +31,20 @@ The **Freiman small-excess certificate** (HYP-2638 / T886, SHA 1fdcfe3) has been
     - **Relation-Fiber Integration:** Synthesize the small-excess finite results with the **weighted relation-fiber coverage** (HYP-2637) to close the additive energy route.
     - **AP-Margin Stability:** Monitor the numerical stability of the $k=9$ tight margin as higher-rank estimates are integrated.
 
+## codex-S28 claim: correction values by relation rank
+
+HYP-2640/T888 is reserved for the user's rank-scaling prompt.  The key
+distinction to test is that the Fourier offset-relation lattice has fixed rank
+for integer one-parameter orbits, while Freiman/summand relation rank varies.
+The next scout will group exact corrections
+`Corr_y(E)=L_y(E)-L_y^inf(k)` and `p0(E)-p0^inf(k)` by total Freiman relation
+rank, observer-visible fold rank, hidden balanced-shell rank, and bounded
+weighted relation rank.
+
+Expected guardrail: total rank alone will not be enough; the correction should
+track a signed visible-rank packet, with high hidden rank contributing
+cancellation rather than danger.
+
 ## codex-S25 update: two-large lift opposition
 
 The HYP-2634 investigation (SHA d75d603) has identified a structural explanation for the "opposite-sign bounded pair" phenomenon, where configurations in the same quadratic-residue (QR) class exhibit opposite signs in the reciprocal lift. This discovery refines the coordination of the two-large Dedekind phase packet by introducing a "low-height defect sieve" layer.
