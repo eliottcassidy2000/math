@@ -1,3 +1,18 @@
+## 3.37 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 2248325
+The LRC(14) verification has encountered a critical arithmetical edge-case where the spectral gap dips below the previously expected $\Theta(1/k^2)$ floor. This discovery refines the "height-escape" obstruction by identifying a concrete family of configurations that achieve unbounded level $a$.
+
+- **2248325 (kind-pasteur-S9): Spectral Gap Dip in Primorial Family $F(k,a)$**
+    - **Primorial Family Discovery:** Identified the primorial family $F(k,a) = \{1..k-2, k, a(k-1)\}$, which achieves level $a$ when $k-1$ is highly composite. For $k=31$, the family achieves $a=4$, causing the spectral gap to dip below the standard mediant values.
+    - **Unbounded Level $a$:** Proved that $a_{max} \sim \omega(k-1)$ is unbounded as $k$ grows through primorial sequences. This confirms that the spectral gap $g(k)$ is $o(1/k^2)$ in the limit, formally breaking the $\Theta(1/k^2)$ lower bound for unbounded-height configurations.
+    - **Preservation of Covering:** Verified that despite the gap dip, the **exact covering is preserved**. Specifically, the loneliness $M(F(k,a))$ remains strictly greater than the $1/(k+1)$ floor. The dip is a "near-miss" that narrows the margin but does not violate the LRC predicate.
+    - **Analytic Refinement:** This result confirms that the global loneliness floor relies on a **height-aware arithmetical filter**. The floor is safe not because the gap is large, but because the unit-excess configurations are prevented from encroaching on the floor by the primorial density constraints.
+    - **Integration with Excess Filter:** The primorial dip provides the first constructive example for the **height-escape obstruction** identified in **HYP-2622**. It shows exactly how high-height configurations ($max(S)/k \gg 1$) can compress the spectral gap.
+
+- **Active Steering Objectives (Updated):**
+    - **Primorial Dip Audit (HYP-2622):** Conduct an exhaustive audit of the primorial family $F(k,a)$ for $k$ up to the search limit to characterize the exact rate of the $o(1/k^2)$ decay.
+    - **Margin Stability Check:** Verify the numerical stability of the $M > 1/(k+1)$ margin as level $a$ grows. Ensure that the "excess" $e$ remains positive for all primorial-composite $k-1$.
+    - **Height-Escape Generalization:** Determine if other "highly structured" families (e.g., those based on large divisor sets) can produce deeper gap dips than the primorial family.
+
 ## 3.36 Analysis of Recent Commits (Friday, June 19, 2026) - Digest de92811
 The LRC(14) verification has achieved a critical theoretical refinement in the spectral gap analysis by formalizing the "excess height filter," which isolates the exact arithmetical conditions required for a loneliness floor violation.
 
