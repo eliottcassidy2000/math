@@ -32,3 +32,6 @@ rand2         0.02708    0.00000   14.1628    315.587
 ================================================================================================
 EXHAUSTIVE: is consec/AP the GLOBAL MAX of E[c3] and E[H] over primitive shapes?
 (0 in E, distinct, maxE bounded — the 'dangerous box')
+  k=7 (maxE<=9, 84 primitive shapes):
+    AP E[c3]=10.5000; shapes beating it: 3; global max 10.6333 at (0, 2, 3, 4, 5, 6, 8)
+    AP E[H] =121.4000; shapes beating it: 0; global max 121.4000 at (0, 1, 2, 3, 4, 5, 6)

@@ -7,3 +7,5 @@ cross-check fast Sfree engine vs slow per-A engine:
 ==============================================================================================
 CONSEC maximizes L_y?  LARGE bounded-spread sweep + does any E exceed cap_k?
 ==============================================================================================
+  k=8: 11440 sets spread<= 16.  L_y(consec)=0.35823 cap=0.38146
+        max L_y=0.35823  [consec is MAX]  #over consec=0  #over cap=0
