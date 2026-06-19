@@ -1,0 +1,142 @@
+========================================================================================
+HYP-2640/T888 correction values versus relation-rank packets
+========================================================================================
+Correction baseline uses iid sector model with e=0 pinned.
+Fourier offset-lattice rank is fixed for these one-parameter integer rows;
+the variable rank below is Freiman/summand relation rank.
+
+=== Named rows: correction and rank packets ===
+AP8                k= 8 span=    7 L_y=0.358231293 Corr_y=0.308964891 p0Corr=0.302731288
+  total_rank=6 freiman_dim=1 visible_rank=6 hidden_rank=5 overlap=5 folds=16 midpoints=12
+  bounded_weight_rank(H<=2,M<=5)=6 weighted_relations=894
+nearAP8_excess1    k= 8 span=    8 L_y=0.303061224 Corr_y=0.253794823 p0Corr=0.249159860
+  total_rank=6 freiman_dim=1 visible_rank=6 hidden_rank=5 overlap=5 folds=13 midpoints=12
+  bounded_weight_rank(H<=2,M<=5)=6 weighted_relations=890
+KPS_third_A        k= 8 span=   35 L_y=0.062813080 Corr_y=0.013546678 p0Corr=0.008018858
+  total_rank=3 freiman_dim=4 visible_rank=3 hidden_rank=2 overlap=2 folds=10 midpoints=0
+  bounded_weight_rank(H<=2,M<=5)=6 weighted_relations=781
+KPS_third_B        k= 8 span=   31 L_y=0.056328944 Corr_y=0.007062543 p0Corr=0.008254659
+  total_rank=5 freiman_dim=2 visible_rank=1 hidden_rank=4 overlap=0 folds=8 midpoints=2
+  bounded_weight_rank(H<=2,M<=5)=6 weighted_relations=811
+GAP2_8             k= 8 span=   28 L_y=0.174828937 Corr_y=0.125562536 p0Corr=0.126272284
+  total_rank=5 freiman_dim=2 visible_rank=5 hidden_rank=4 overlap=4 folds=14 midpoints=4
+  bounded_weight_rank(H<=2,M<=5)=5 weighted_relations=851
+GAP3_8             k= 8 span=   23 L_y=0.115352391 Corr_y=0.066085990 p0Corr=0.058307722
+  total_rank=4 freiman_dim=3 visible_rank=4 hidden_rank=3 overlap=3 folds=13 midpoints=0
+  bounded_weight_rank(H<=2,M<=5)=6 weighted_relations=826
+small_dissoc8      k= 8 span= 4096 L_y=0.057836914 Corr_y=0.008570513 p0Corr=0.011164935
+  total_rank=0 freiman_dim=7 visible_rank=0 hidden_rank=0 overlap=0 folds=7 midpoints=0
+  bounded_weight_rank(H<=2,M<=5)=0 weighted_relations=386
+AP9                k= 9 span=    8 L_y=0.492876039 Corr_y=0.341582294 p0Corr=0.358454558
+  total_rank=7 freiman_dim=1 visible_rank=7 hidden_rank=6 overlap=6 folds=20 midpoints=16
+  bounded_weight_rank(H<=2,M<=5)=7 weighted_relations=1469
+nearAP9_excess1    k= 9 span=    9 L_y=0.487288990 Corr_y=0.335995245 p0Corr=0.343998775
+  total_rank=7 freiman_dim=1 visible_rank=7 hidden_rank=6 overlap=6 folds=20 midpoints=15
+  bounded_weight_rank(H<=2,M<=5)=7 weighted_relations=1467
+AP10               k=10 span=    9 L_y=0.570080625 Corr_y=0.351249852 p0Corr=0.399565903
+  total_rank=8 freiman_dim=1 visible_rank=8 hidden_rank=7 overlap=7 folds=25 midpoints=20
+  bounded_weight_rank(H<=2,M<=5)=8 weighted_relations=2300
+nearAP10_excess1   k=10 span=   10 L_y=0.562414966 Corr_y=0.343584193 p0Corr=0.388964996
+  total_rank=8 freiman_dim=1 visible_rank=8 hidden_rank=7 overlap=7 folds=24 midpoints=20
+  bounded_weight_rank(H<=2,M<=5)=8 weighted_relations=2298
+
+Exact finite banks: default near-envelope primitive rows.
+Use --full-small for the slower k=8:16, k=9:15, k=10:14 scan.
+
+  progress k=8 max_coord=14: 250 primitive rows
+  progress k=8 max_coord=14: 500 primitive rows
+  progress k=8 max_coord=14: 750 primitive rows
+  progress k=8 max_coord=14: 1000 primitive rows
+  progress k=8 max_coord=14: 1250 primitive rows
+  progress k=8 max_coord=14: 1500 primitive rows
+  progress k=8 max_coord=14: 1750 primitive rows
+  progress k=8 max_coord=14: 2000 primitive rows
+  progress k=8 max_coord=14: 2250 primitive rows
+  progress k=8 max_coord=14: 2500 primitive rows
+  progress k=8 max_coord=14: 2750 primitive rows
+  progress k=8 max_coord=14: 3000 primitive rows
+  progress k=8 max_coord=14: 3250 primitive rows
+--- k=8: 3431 primitive rows ---
+independent L_y=0.049266401 p0=0.024479596
+max Corr_y by total Freiman relation rank:
+  r= 4 count=    3 meanCorr=0.043590556 maxCorr=0.085385613 Ly=0.134652015 vr=4 hr=3 dim=3 E=(0, 1, 3, 4, 9, 10, 12, 13)
+  r= 5 count=  595 meanCorr=0.048156775 maxCorr=0.215709575 Ly=0.264975976 vr=0 hr=5 dim=2 E=(0, 1, 3, 5, 7, 9, 11, 13)
+  r= 6 count= 2833 meanCorr=0.031971991 maxCorr=0.308964891 Ly=0.358231293 vr=6 hr=5 dim=1 E=(0, 1, 2, 3, 4, 5, 6, 7)
+max Corr_y by visible rank:
+  vr= 0 count=    3 meanCorr=0.185088397 maxCorr=0.215709575 total=5 hidden=5 E=(0, 1, 3, 5, 7, 9, 11, 13)
+  vr= 1 count=   12 meanCorr=0.060145698 maxCorr=0.170937680 total=6 hidden=5 E=(0, 6, 7, 8, 9, 10, 11, 12)
+  vr= 2 count=   43 meanCorr=0.042956294 maxCorr=0.168526322 total=6 hidden=5 E=(0, 5, 6, 7, 8, 9, 10, 11)
+  vr= 3 count=  176 meanCorr=0.026755131 maxCorr=0.143182776 total=6 hidden=5 E=(0, 3, 5, 7, 8, 9, 11, 13)
+  vr= 4 count=  735 meanCorr=0.025745466 maxCorr=0.189707522 total=6 hidden=5 E=(0, 4, 5, 6, 7, 8, 9, 10)
+  vr= 5 count= 1656 meanCorr=0.034951731 maxCorr=0.229628156 total=6 hidden=5 E=(0, 2, 4, 6, 7, 8, 10, 12)
+  vr= 6 count=  806 meanCorr=0.043082733 maxCorr=0.308964891 total=6 hidden=5 E=(0, 1, 2, 3, 4, 5, 6, 7)
+top rank packets:
+  packet(total,vis,hid)=(6, 6, 5) count= 445 maxCorr=0.308964891 p0Corr=0.302731288 E=(0, 1, 2, 3, 4, 5, 6, 7)
+  packet(total,vis,hid)=(6, 5, 5) count= 807 maxCorr=0.229628156 p0Corr=0.231302717 E=(0, 2, 4, 6, 7, 8, 10, 12)
+  packet(total,vis,hid)=(5, 0, 5) count=   3 maxCorr=0.215709575 p0Corr=0.213476099 E=(0, 1, 3, 5, 7, 9, 11, 13)
+  packet(total,vis,hid)=(5, 5, 4) count= 325 maxCorr=0.207774415 p0Corr=0.207833329 E=(0, 1, 2, 3, 4, 5, 6, 14)
+  packet(total,vis,hid)=(6, 4, 5) count= 432 maxCorr=0.189707522 p0Corr=0.188842399 E=(0, 4, 5, 6, 7, 8, 9, 10)
+  packet(total,vis,hid)=(6, 6, 4) count= 329 maxCorr=0.177162170 p0Corr=0.177901356 E=(0, 1, 2, 3, 4, 5, 6, 12)
+  packet(total,vis,hid)=(6, 1, 5) count=  11 maxCorr=0.170937680 p0Corr=0.170186452 E=(0, 6, 7, 8, 9, 10, 11, 12)
+  packet(total,vis,hid)=(6, 2, 5) count=  28 maxCorr=0.168526322 p0Corr=0.167300449 E=(0, 5, 6, 7, 8, 9, 10, 11)
+
+  progress k=9 max_coord=13: 250 primitive rows
+  progress k=9 max_coord=13: 500 primitive rows
+  progress k=9 max_coord=13: 750 primitive rows
+  progress k=9 max_coord=13: 1000 primitive rows
+  progress k=9 max_coord=13: 1250 primitive rows
+--- k=9: 1287 primitive rows ---
+independent L_y=0.151293745 p0=0.057701905
+max Corr_y by total Freiman relation rank:
+  r= 6 count=   27 meanCorr=0.151737964 maxCorr=0.228191012 Ly=0.379484757 vr=6 hr=5 dim=2 E=(0, 1, 3, 4, 6, 7, 9, 10, 12)
+  r= 7 count= 1260 meanCorr=0.130912415 maxCorr=0.341582294 Ly=0.492876039 vr=7 hr=6 dim=1 E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+max Corr_y by visible rank:
+  vr= 2 count=    1 meanCorr=0.236161524 maxCorr=0.236161524 total=7 hidden=6 E=(0, 6, 7, 8, 9, 10, 11, 12, 13)
+  vr= 3 count=    1 meanCorr=0.201537727 maxCorr=0.201537727 total=7 hidden=6 E=(0, 5, 7, 8, 9, 10, 11, 12, 13)
+  vr= 4 count=    6 meanCorr=0.198533482 maxCorr=0.242810277 total=7 hidden=6 E=(0, 5, 6, 7, 8, 9, 10, 11, 12)
+  vr= 5 count=   35 meanCorr=0.141948458 maxCorr=0.231974023 total=7 hidden=6 E=(0, 4, 6, 7, 8, 9, 10, 11, 12)
+  vr= 6 count=  405 meanCorr=0.121360236 maxCorr=0.276301367 total=7 hidden=6 E=(0, 2, 4, 6, 7, 8, 9, 10, 12)
+  vr= 7 count=  839 meanCorr=0.135040019 maxCorr=0.341582294 total=7 hidden=6 E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+top rank packets:
+  packet(total,vis,hid)=(7, 7, 6) count= 724 maxCorr=0.341582294 p0Corr=0.358454558 E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  packet(total,vis,hid)=(7, 6, 6) count= 361 maxCorr=0.276301367 p0Corr=0.266787891 E=(0, 2, 4, 6, 7, 8, 9, 10, 12)
+  packet(total,vis,hid)=(7, 7, 5) count= 115 maxCorr=0.258097789 p0Corr=0.235155238 E=(0, 2, 3, 4, 5, 6, 8, 10, 12)
+  packet(total,vis,hid)=(7, 4, 6) count=   6 maxCorr=0.242810277 p0Corr=0.244622358 E=(0, 5, 6, 7, 8, 9, 10, 11, 12)
+  packet(total,vis,hid)=(7, 2, 6) count=   1 maxCorr=0.236161524 p0Corr=0.237842630 E=(0, 6, 7, 8, 9, 10, 11, 12, 13)
+  packet(total,vis,hid)=(7, 5, 6) count=  35 maxCorr=0.231974023 p0Corr=0.213201002 E=(0, 4, 6, 7, 8, 9, 10, 11, 12)
+  packet(total,vis,hid)=(6, 6, 5) count=  27 maxCorr=0.228191012 p0Corr=0.214747075 E=(0, 1, 3, 4, 6, 7, 9, 10, 12)
+  packet(total,vis,hid)=(7, 3, 6) count=   1 maxCorr=0.201537727 p0Corr=0.185829167 E=(0, 5, 7, 8, 9, 10, 11, 12, 13)
+
+--- k=10: 220 primitive rows ---
+independent L_y=0.218830773 p0=0.104912555
+max Corr_y by total Freiman relation rank:
+  r= 8 count=  220 meanCorr=0.204909774 maxCorr=0.351249852 Ly=0.570080625 vr=8 hr=7 dim=1 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+max Corr_y by visible rank:
+  vr= 7 count=    5 meanCorr=0.178349076 maxCorr=0.276573669 total=8 hidden=7 E=(0, 2, 4, 6, 7, 8, 9, 10, 11, 12)
+  vr= 8 count=  215 meanCorr=0.205527465 maxCorr=0.351249852 total=8 hidden=7 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+top rank packets:
+  packet(total,vis,hid)=(8, 8, 7) count= 208 maxCorr=0.351249852 p0Corr=0.399565903 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  packet(total,vis,hid)=(8, 8, 6) count=   7 maxCorr=0.277267111 p0Corr=0.285563636 E=(0, 1, 2, 3, 4, 5, 6, 8, 10, 12)
+  packet(total,vis,hid)=(8, 7, 7) count=   5 maxCorr=0.276573669 p0Corr=0.286769573 E=(0, 2, 4, 6, 7, 8, 9, 10, 11, 12)
+
+READING
+  1. Total Freiman relation rank is a capacity/envelope variable, not the
+     correction itself. AP rows have maximal rank and maximal correction,
+     but k=8 already has a high hidden-only odd-coset row with visible
+     rank 0 and Corr_y=0.2157.
+  2. Rank alone is too coarse.  The same total-rank band can contain rows
+     with different visible/hidden ranks and visibly different correction.
+     Hidden shells can cancel or reinforce depending on parity/coset sign;
+     KPS rows show that bounded weighted rank can be full even when pair
+     rank is small.
+  3. The next proof lemma should bound correction by a signed/coset rank
+     packet: relation rank supplies capacity, while shell phase supplies
+     the correction coefficient.
+
+=== Tournament Analysis ===
+Hamiltonian path:
+  signed_coset_rank > total_freiman_rank > weighted_relation_rank > visible_fold_rank > hidden_shell_rank > correction_per_rank > covolume_short_vector_data > raw_additive_energy > raw_runner_vertices
+score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+directed_3cycles=0
+SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1]
+hamiltonian_paths=1

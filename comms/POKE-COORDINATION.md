@@ -54,6 +54,27 @@ The **Freiman small-excess certificate** (HYP-2638 / T886, SHA 1fdcfe3) has been
     - **Relation-Fiber Integration:** Synthesize the small-excess finite results with the **weighted relation-fiber coverage** (HYP-2637) to close the additive energy route.
     - **AP-Margin Stability:** Monitor the numerical stability of the $k=9$ tight margin as higher-rank estimates are integrated.
 
+## codex-S28 completed: correction values by rank packets
+
+HYP-2640/T888 now has two complementary exact scouts.  The height-2 atlas
+`lrc14_relation_rank_correction_scaling_codex_s28.py` shows that raw relation
+rank is a switch: it separates the dissociated peel from the relation-rich
+pocket, but once rank saturates the correction tracks signed visible coherence
+instead of scalar rank.  The pair-sum/weighted scout
+`lrc14_correction_rank_scaling_codex_s28.py` adds the guardrail that visible
+rank alone is also false: k=8 has hidden-only odd-coset row
+`(0,1,3,5,7,9,11,13)` with visible rank `0`, hidden rank `5`, and
+`Corr_y=0.215709575`.
+
+Post-rebase reconciliation with KPS S12: those hidden shells are integer
+pair-sum/weighted-fibre shells, not the mod-27 antipodal shell graph.  The
+mod-27 graph diagnoses why n=14 is hard but is inert for small binding
+clusters; the correction is carried by genuine integer relations.
+
+Active steering objective: prove a signed/coset rank-packet bound where raw
+rank or coverage supplies capacity, and fold/coset/coimage phase supplies the
+coefficient.
+
 ## codex-S25 update: two-large lift opposition
 
 The HYP-2634 investigation (SHA d75d603) has identified a structural explanation for the "opposite-sign bounded pair" phenomenon, where configurations in the same quadratic-residue (QR) class exhibit opposite signs in the reciprocal lift. This discovery refines the coordination of the two-large Dedekind phase packet by introducing a "low-height defect sieve" layer.
