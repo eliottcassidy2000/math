@@ -1,0 +1,55 @@
+==============================================================================
+(Q1) SPAN-CAP table: meas(S7(AP_{N+1})) vs cap_k; residual span shapes far under cap?
+==============================================================================
+--- k=8  cap=0.38146 ---
+    AP_8 (span 7): meas(S7)=0.32721  <=cap
+    AP_9 (span 8): meas(S7)=0.41616  OVER
+    AP_10 (span 9): meas(S7)=0.50448  OVER
+    => N*(8) = 7  (subset-dom certifies all span<= 7)
+    residual span in (7,13]: 1715 sets, max meas(S7)=0.27364, OVER cap: 0
+--- k=9  cap=0.49426 ---
+    AP_9 (span 8): meas(S7)=0.41616  <=cap
+    AP_10 (span 9): meas(S7)=0.50448  OVER
+    AP_11 (span 10): meas(S7)=0.58146  OVER
+    => N*(9) = 8  (subset-dom certifies all span<= 8)
+    residual span in (8,13]: 1286 sets, max meas(S7)=0.40170, OVER cap: 0
+--- k=10  cap=0.60440 ---
+    AP_10 (span 9): meas(S7)=0.50448  <=cap
+    AP_11 (span 10): meas(S7)=0.58146  <=cap
+    AP_12 (span 11): meas(S7)=0.62411  OVER
+    AP_13 (span 12): meas(S7)=0.67593  OVER
+    => N*(10) = 10  (subset-dom certifies all span<= 10)
+    residual span in (10,13]: 705 sets, max meas(S7)=0.46463, OVER cap: 0
+
+==============================================================================
+(Q2) means/variances; does consec extremize E[N]?  where g non-monotonicity bites
+==============================================================================
+  consec_8: E[N]=1.6041 (393/245)  Var=2.6120  L_y=0.35823
+  bank 792: E[N_E] < consec for 1; > consec for 790
+  (E[N]=6-avg#hit; consec MIN E[N] would mean consec hits most sectors on avg)
+
+==============================================================================
+(Q3) g-cone order: is consec the extremal law for EVERY h with g's sign/curvature class?
+==============================================================================
+  g(0..6) (k=8) = ['1', '0', '0', '1/10', '0', '0', '1']
+  top-6 L_y competitors among same-k bank (consec should be #1):
+    L_y=0.358231  E=[0, 1, 2, 3, 4, 5, 6, 7]  E[N]=1.6041 Var=2.6120  p0=0.3272 p3=0.1061 p6=0.0204
+    L_y=0.303061  E=[0, 2, 3, 4, 5, 6, 7, 8]  E[N]=1.6583 Var=2.3504  p0=0.2736 p3=0.1156 p6=0.0179
+    L_y=0.278895  E=[0, 2, 4, 6, 7, 8, 10, 12]  E[N]=1.5957 Var=2.0789  p0=0.2558 p3=0.1121 p6=0.0119
+    L_y=0.261791  E=[0, 1, 3, 4, 5, 6, 7, 9]  E[N]=1.6459 Var=2.1292  p0=0.2371 p3=0.0884 p6=0.0159
+    L_y=0.247834  E=[0, 3, 4, 5, 6, 7, 8, 9]  E[N]=1.7050 Var=2.1028  p0=0.2187 p3=0.1325 p6=0.0159
+    L_y=0.247279  E=[0, 1, 2, 4, 5, 6, 7, 10]  E[N]=1.6776 Var=2.0110  p0=0.2201 p3=0.1293 p6=0.0143
+
+==============================================================================
+(Q4) shape of AP law as function of k: is p_6(AP_k) = 1/(7(k-1))?  p_5? etc.
+==============================================================================
+  k=7: p6=1/42  guess 1/(7(k-1))=1/42  match=True  p5=13/210 p0=31/210
+  k=8: p6=1/49  guess 1/(7(k-1))=1/49  match=True  p5=5/98 p0=481/1470
+  k=9: p6=1/56  guess 1/(7(k-1))=1/56  match=True  p5=9/196 p0=2447/5880
+  k=10: p6=1/63  guess 1/(7(k-1))=1/63  match=True  p5=5/126 p0=8899/17640
+  k=11: p6=1/70  guess 1/(7(k-1))=1/70  match=True  p5=23/630 p0=3419/5880
+  k=12: p6=1/77  guess 1/(7(k-1))=1/77  match=True  p5=5/154 p0=121103/194040
+  k=13: p6=1/84  guess 1/(7(k-1))=1/84  match=True  p5=1/33 p0=14573/21560
+  k=14: p6=1/91  guess 1/(7(k-1))=1/91  match=True  p5=5/182 p0=14109/20020
+
+DONE stage 2.

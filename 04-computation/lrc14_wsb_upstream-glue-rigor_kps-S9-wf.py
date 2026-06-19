@@ -310,14 +310,18 @@ for _ in range(2500):
             found_good = True; break
     if found_good:
         suff_tested += 1
-        if Ms >= F(1, 14): suff_ok += 1
+        # CORRECT soundness test: the level-1/14 safe set NONEMPTY (Ms>0) <=> M(S)>=1/14.
+        # Ms is the MEASURE of the safe set (often small, e.g. 0.04), NOT the gap M(S);
+        # a positive measure already certifies M(S)>=1/14 (a witness tau exists).
+        if Ms > 0: suff_ok += 1
         else: suff_fail.append((P, E, Vmax))
 
 print(f"  reconstructed covering S tested: {tested}")
-print(f"    LONELY (M(S)>0 i.e. >=1/14): {lonely}   NON-LONELY (LRC14 break!): {len(nonlonely)}")
+print(f"    LONELY (level-1/14 safe set nonempty => M(S)>=1/14): {lonely}   NON-LONELY (LRC14 break!): {len(nonlonely)}")
 for b in nonlonely[:3]: print("     NON-LONELY:", b)
-print(f"  via-Vmax criterion positive => M(S)>=1/14:  {suff_ok}/{suff_tested} OK,  {len(suff_fail)} FAIL")
+print(f"  via-Vmax criterion positive => safe set nonempty (M(S)>=1/14):  {suff_ok}/{suff_tested} OK,  {len(suff_fail)} FAIL")
 for b in suff_fail[:3]: print("     SUFF FAIL:", b)
+print("  (NB: 'safe MEASURE' is typically small, e.g. 0.04-0.07; positivity alone => M(S)>=1/14.)")
 
 # Direct EXACT equivalence check (the precise lemma), on a controlled family:
 #   For fixed x (a slow time), the cluster's fast-phase danger arcs are 1/7-wide teeth
@@ -360,6 +364,35 @@ print("     for the cluster's 1/7 fast-phase teeth to leave a free sub-arc (henc
 #   discrepancy bounded by (#endpoints of G_good)/Vmax (each arc loses/gains <=1 sample).
 #   KEY: #arcs(G_good) <= A(k,P) is Vmax-INDEPENDENT and poly(k). We bound it and verify.
 # ----------------------------------------------------------------------------
+print("\n[LINK 1b] Fast-phase tooth-width = 1/7 in the limit (the IDEALIZATION the S7 cover encodes)")
+def danger_phi_width(Vmax, e, j):
+    """phi-width of cluster member u=Vmax-e's level-1/14 danger inside Vmax-ruler gap I_j."""
+    u = Vmax - e
+    lo = F(14 * j + 1, 14 * Vmax); hi = F(14 * j + 13, 14 * Vmax)
+    import math
+    klo = math.floor(lo * u); khi = math.ceil(hi * u); teeth = []
+    for kk in range(klo - 1, khi + 2):
+        c = F(kk, u); a = c - F(1, 14) / u; b = c + F(1, 14) / u
+        aa = max(a, lo); bb = min(b, hi)
+        if aa < bb: teeth.append((aa, bb))
+    teeth = sorted(teeth); mm = []
+    for a, b in teeth:
+        if mm and a <= mm[-1][1]: mm[-1] = (mm[-1][0], max(mm[-1][1], b))
+        else: mm.append((a, b))
+    return sum(b - a for a, b in mm) * Vmax  # tau-width -> phi-width
+mx_dev = F(0)
+for _ in range(2000):
+    Vmax = random.randint(60, 500); e = random.randint(1, 30); u = Vmax - e
+    if u <= 13: continue
+    j = random.randint(1, Vmax - 2)
+    mx_dev = max(mx_dev, abs(danger_phi_width(Vmax, e, j) - F(1, 7)))
+print(f"  cluster member u=Vmax-e plants danger of phi-width -> 1/7 (interior); max dev over random samples")
+print(f"  = {float(mx_dev):.4f} = O(1/Vmax) boundary slop (tooth straddling a gap edge).")
+print(f"  exact interior instance (Vmax=300,e=7,j=80): phi-width={float(danger_phi_width(300,7,80)):.6f}, 1/7={float(F(1,7)):.6f}")
+print("  => In the limit Vmax->inf each cluster member's fast-phase danger is EXACTLY a 1/7-tooth")
+print("     around frac(e_i x). THIS is what S7(E) (sectors of width 1/7) encodes. At finite Vmax")
+print("     the 1/7 is approximate (O(1/Vmax)); LINK 2 absorbs that into the arc-count discrepancy.")
+
 print("\n[LINK 2] FINITE-Vmax discretization: explicit Vmax-independent arc-count bound")
 
 def good_set(P, E):
@@ -469,6 +502,38 @@ print(f"  resonant E={E_res}: meas(S7)={float(meas_S7(E_res)):.5f}  vs base cons
 print("  => the WSB must NOT assume small meas(S7) for wide-but-resonant (w==0 mod7) shapes;")
 print("     by scale-invariance these reduce to their PRIMITIVE shape (bounded spread). So a")
 print("     correct WSB+finite-check splits on PRIMITIVITY (gcd of E), not raw span. (key caveat)")
+
+# ----------------------------------------------------------------------------
+# END-TO-END soundness: good slow-time => M(S) >= 1/14 (the whole reformulation, exact)
+# ----------------------------------------------------------------------------
+print("\n[END-TO-END] good slow-time (maxgap{frac(e x)}>1/7 at some x in G_P)  =>  M(S) >= 1/14")
+n_ok = 0; n_tot = 0; e2e_fails = []
+for _ in range(3000):
+    k = random.randint(8, 12); psz = 13 - k
+    P = sorted(random.sample(range(1, 14), psz))
+    spread = random.choice([k - 1, k, k + 1, k + 2])
+    body = sorted(random.sample(range(1, spread + 1), min(k - 1, spread)))
+    E = [0] + body
+    if len(set(E)) != k: continue
+    Vmax = max(E) + 14 + random.randint(0, 200)
+    L = [Vmax - e for e in E]
+    if min(L) <= 13: continue
+    S = sorted(set(P) | set(L))
+    if len(S) != 13: continue
+    GP = safe_set(list(P))
+    has_good = False
+    for lo, hi in GP:
+        for t in [F(1, 4), F(1, 2), F(3, 4)]:
+            xm = lo + (hi - lo) * t
+            if maxgap(phases_at(E, xm)) > F(1, 7): has_good = True; break
+        if has_good: break
+    if not has_good: continue
+    n_tot += 1
+    if M_of(S) > 0: n_ok += 1
+    else: e2e_fails.append((P, E, Vmax))
+print(f"  {n_ok}/{n_tot} reconstructed covering S have nonempty level-1/14 safe set (=> M(S)>=1/14). "
+      f"fails={len(e2e_fails)}")
+for f in e2e_fails[:3]: print("   FAIL", f)
 
 print("\n" + "=" * 78)
 print("SUMMARY printed above. See final assistant message for the link-by-link verdict.")

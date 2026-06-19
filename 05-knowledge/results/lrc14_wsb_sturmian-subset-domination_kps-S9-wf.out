@@ -1,0 +1,134 @@
+==============================================================================================
+LRC(14) sturmian-subset-domination  (kind-pasteur-S9-wf)
+==============================================================================================
+cap_k (canonical HYP-2603): {8: '2243/5880', 9: '1979/4004', 10: '55/91', 11: '66/91', 12: '6/7', 13: '1'}
+proved floor (k-6)/7      : {8: '2/7', 9: '3/7', 10: '4/7', 11: '5/7', 12: '6/7', 13: '1'}
+  [VERIFIED] cap_k >= (k-6)/7 for all k (THM-535 floor consistent).
+
+==============================================================================================
+(A) meas(S7(AP_m)) : breakpoint engine vs Sturmian cover-time engine (EXACT)
+==============================================================================================
+  m        breakpoint a(m)          sturmian a(m)     float match
+  1                      0                      0   0.00000 OK
+  2                      0                      0   0.00000 OK
+  3                      0                      0   0.00000 OK
+  4                      0                      0   0.00000 OK
+  5                      0                      0   0.00000 OK
+  6                      0                      0   0.00000 OK
+  7                 31/210                 31/210   0.14762 OK
+  8               481/1470               481/1470   0.32721 OK
+  9              2447/5880              2447/5880   0.41616 OK
+ 10             8899/17640             8899/17640   0.50448 OK
+ 11              3419/5880              3419/5880   0.58146 OK
+ 12          121103/194040          121103/194040   0.62411 OK
+ 13            14573/21560            14573/21560   0.67593 OK
+ 14            14109/20020            14109/20020   0.70475 OK
+ 15            61211/84084            61211/84084   0.72797 OK
+ 16            62767/84084            62767/84084   0.74648 OK
+ 17             8201/10780             8201/10780   0.76076 OK
+ 18        2018207/2598960        2018207/2598960   0.77654 OK
+ 19        6166843/7796880        6166843/7796880   0.79094 OK
+ 20          261547/325584          261547/325584   0.80332 OK
+ 21            20949/25840            20949/25840   0.81072 OK
+ 22              6155/7497              6155/7497   0.82100 OK
+  [VERIFIED] Sturmian cover-time engine reproduces the breakpoint engine exactly
+  for all m<=22.  meas(S7(AP_m)) = (1/7) meas{theta: partial sums cover Z/7}.
+
+==============================================================================================
+(B) Structural facts about a(m)=meas(S7(AP_m)) for the subset-domination route
+==============================================================================================
+  (B1) a(m) non-decreasing for m=1..22: True.  First strict increase at m=6.
+       a(m)=0 for m<=6 (PROVED B1 of THM-536: <7 partial sums can't cover Z/7).
+  (B2) a(m) < 1 for all finite m (the all-covered theta-set is open, misses boundary);
+       a(22)=0.82100. Sequence is increasing toward 1.
+
+  N*(k) = max span certified by pointwise domination = max{N : a(N+1) <= cap_k}:
+    k= 8: cap_k= 2243/5880 (0.3815)  N*=7  a(N*+1)=0.3272<=cap  a(N*+2)=0.4162>cap
+    k= 9: cap_k= 1979/4004 (0.4943)  N*=8  a(N*+1)=0.4162<=cap  a(N*+2)=0.5045>cap
+    k=10: cap_k=     55/91 (0.6044)  N*=10  a(N*+1)=0.5815<=cap  a(N*+2)=0.6241>cap
+    k=11: cap_k=     66/91 (0.7253)  N*=13  a(N*+1)=0.7047<=cap  a(N*+2)=0.7280>cap
+    k=12: cap_k=       6/7 (0.8571)  N*=21  a(N*+1)=0.8210<=cap  a(N*+2)=2.0000>cap
+    k=13: cap_k=         1 (1.0000)  N*=21  a(N*+1)=0.8210<=cap  a(N*+2)=2.0000>cap
+
+==============================================================================================
+(C) Residual span>N*(k): why pointwise domination is lossy (the omitted-index gap)
+==============================================================================================
+  For E=(0,1,..,k-2, BIG) the raw bound is a(BIG+1) -> 1, but true meas(S7(E)) stays
+  bounded. The gap a(BIG+1)-meas(S7(E)) is the mass of theta where ONLY an omitted
+  index would have supplied a missing residue. We tabulate it (EXACT):
+  k=8, N*=7, cap_k=0.3815:
+      BIG  span    a(span+1)    meas(S7(E))   gap(thrown away)  true<=cap?
+        8     8      0.41616        0.20833            0.20782        True
+       10    10      0.58146        0.19048            0.39099        True
+       12    12      0.67593        0.20238            0.47355        True
+       20    20      0.81072        0.19048            0.62024        True
+       40    40      0.90744        0.19048            0.71696        True
+       80    80      0.95420        0.19762            0.75658        True
+  => pointwise domination discards exactly the un-occupied-residue mass; it is sharp
+     ONLY at E=AP (full occupancy), which is precisely why N*(8)=7 = AP itself.
+
+==============================================================================================
+(D) Occupancy refinement: does a TIGHTER super-set than AP_{N+1} help?
+==============================================================================================
+  Subset monotonicity holds for ANY E subset F (index sets): meas(S7(E))<=meas(S7(F)).
+  Test: instead of F=AP_{span+1}, use the SCALE-REDUCED hull. By scale-invariance
+  meas(S7(E))=meas(S7(E/g)). Does dividing out a common structure shrink the needed F?
+  E=(0, 2, 4, 6, 8, 10, 12, 14)  -> reduced (0, 1, 2, 3, 4, 5, 6, 7)  meas=481/1470(0.3272)  scale-inv ok=True
+     reduced span=7, occupancy=1=1.000, raw AP_8 bound=0.3272
+  E=(0, 1, 2, 3, 4, 5, 6, 14)  -> reduced (0, 1, 2, 3, 4, 5, 6, 14)  meas=683/2940(0.2323)  scale-inv ok=True
+     reduced span=14, occupancy=8/15=0.533, raw AP_15 bound=0.7280
+  E=(0, 3, 6, 9, 12, 15, 18, 21)  -> reduced (0, 1, 2, 3, 4, 5, 6, 7)  meas=481/1470(0.3272)  scale-inv ok=True
+     reduced span=7, occupancy=1=1.000, raw AP_8 bound=0.3272
+  CONCLUSION: subset-domination by an AP super-set is the BEST set-containment bound
+  available (AP_{span+1} is the unique minimal index-interval hull); occupancy<1 is
+  exactly the slack the bound cannot recover. A tighter certificate must be MEASURE-
+  based (moment/Sturmian-word), not set-containment -- consistent with THM-536's
+  'irreducibly aggregate' and HYP-2608's death of monotone descent.
+
+==============================================================================================
+(E) Wide-spread complement: the residual span>N*(k) handled by SMALLNESS, not domination
+==============================================================================================
+  For wide/dissociated E, meas(S7(E)) -> M7(k) (tiny). The danger flagged in HYP-2608
+  is the RESONANT family where some offset w == 0 mod 7 (apex-prime-7). We sweep wide
+  primitive E and report max meas(S7); compare to cap_k. (EXACT.)
+  k=8, cap_k=0.3815:
+    stranger-pull-in {0..6}+{w}, w<60: max meas(S7)=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7) (<=cap)
+      among RESONANT w==0 mod7: max meas(S7)=0.32721 at (0, 1, 2, 3, 4, 5, 6, 7) (<=cap)
+    random wide (span<45, 4000 draws): max meas(S7)=0.10986 at (0, 3, 6, 12, 18, 19, 30, 36) (<=cap)
+  k=9, cap_k=0.4943:
+    stranger-pull-in {0..7}+{w}, w<60: max meas(S7)=0.41616 at (0, 1, 2, 3, 4, 5, 6, 7, 8) (<=cap)
+      among RESONANT w==0 mod7: max meas(S7)=0.37211 at (0, 1, 2, 3, 4, 5, 6, 7, 21) (<=cap)
+    random wide (span<45, 4000 draws): max meas(S7)=0.22783 at (0, 2, 4, 12, 14, 20, 21, 22, 24) (<=cap)
+
+==============================================================================================
+(F) HONEST RESIDUAL ACCOUNTING: what is covered, what is not
+==============================================================================================
+  Decompose all primitive E (|E|=k) by span s=max(E):
+    (i)  s <= N*(k)              -> CERTIFIED by subset domination (PROVED set-containment).
+    (ii) N*(k) < s <= B_box(k)   -> covered by the EXHAUSTIVE bounded-span checks
+                                    (HYP-2603 boxes: 0 violations). FINITE, mod scale.
+    (iii) s > B_box(k)           -> the wide-spread regime; meas(S7) small (sweep (E)),
+                                    but NOT yet a closed-form proof. = the open piece.
+  k= 8: subset-domination certifies span<=7; exhaustive box checked to span<=18; wide-spread span>18 = residual (smallness, unproved closed-form).
+  k= 9: subset-domination certifies span<=8; exhaustive box checked to span<=17; wide-spread span>17 = residual (smallness, unproved closed-form).
+  k=10: subset-domination certifies span<=10; exhaustive box checked to span<=16; wide-spread span>16 = residual (smallness, unproved closed-form).
+  k=11: subset-domination certifies span<=13; exhaustive box checked to span<=16; wide-spread span>16 = residual (smallness, unproved closed-form).
+  k=12: subset-domination certifies span<=21; exhaustive box checked to span<=16; wide-spread span>16 = residual (smallness, unproved closed-form).
+  k=13: subset-domination certifies span<=21; exhaustive box checked to span<=16; wide-spread span>16 = residual (smallness, unproved closed-form).
+
+  KEY QUANTITATIVE TAKEAWAY for the writeup:
+    k=8: of 31788 primitive shapes (span<=18), subset-domination alone certifies 1 (0%);
+          the remaining 31787 are certified ONLY by direct computation (exhaustive), with 0 cap-violations.
+
+  RIGOROUS STATUS OF THIS ANGLE:
+   * meas(S7(AP_m)) = Sturmian partial-sum cover-time, PROVED equal to breakpoint engine,
+     PROVED non-decreasing and =0 for m<=6 (exact, m<=22).
+   * subset domination => meas(S7(E)) <= a(span+1): PROVED set-containment (THM-536),
+     here QUANTIFIED to certify exactly span<=N*(k) (N*=7,8,10,13,~ for k=8..11).
+   * The route ALONE is structurally incapable of closing wide span (occupancy<1 slack);
+     it must be PAIRED with (ii) the finite bounded-span check and (iii) a genuine
+     wide-spread smallness bound. (iii) remains the open piece (HYP-2608 route (a)).
+   * NET: subset-domination is a clean, PROVED, but PARTIAL certificate (the small-span
+     stratum). It does NOT close LRC(14) by itself; it reduces the open set to wide span.
+
+DONE.

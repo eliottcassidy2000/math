@@ -46,3 +46,30 @@ L_y({0,1,2,3,4,5,6,N}) (one large stranger on a 7-AP core; the HYP-2608 stranger
 - consec (and near-consec, bounded spread) is the UNIQUE tight case (L_y=0.358, margin to cap only 0.023) — handled by the EXACT finite check (consec verified max over bounded spread).
 - ANY wide config (≥1 large stranger) drops to L_y ≤ ~0.26 < cap (margin ≥ 0.12) — handled by the wide-spread bound, which therefore has COMFORTABLE room (not the tight 0.023).
 So the wide-spread bound does NOT need to be sharp — it needs L_y(E) ≤ ~0.30 (say) for maxE > B(k), which the equidistribution of the stranger(s) gives with margin. The tight 0.023 margin lives entirely in the FINITE (bounded-spread) check, which is exact. This is the most favorable possible structure: hard part is finite & exact, analytic part is loose. → THM-534, HYP-2607/2608.
+
+## THE STRANGER-CONTRACTION ROUTE (kps-S9) — a CLEAN single-variable Weyl path for the wide-spread bound
+Avoids the HYP-2606 "must-be-signed / 5×-lossy full lattice sum" by peeling ONE offset at a time.
+
+**Contraction lemma (VERIFIED, limit exact):** for E = E' ∪ {N} (N=maxE the largest offset),
+J(A, E'∪{N}) → (1−|A|/7)·J(A,E') as N→∞ (the N-point avoids the |A| sectors INDEPENDENTLY, by Weyl on
+the single largest offset). Hence S_r(E) → (1−r/7)·S_r(E'), and
+> **L_y(E) → L_y^c(E') := Σ_r y_r (1−r/7) S_r(E')  + O(disc_N)**,  the SINGLE-OFFSET Weyl error.
+VERIFIED exact: L_y({0..6,N}) → 0.2132 = L_y^c({0..6}) (the contraction formula reproduces the observed
+large-N limit to 3 decimals); and L_y({0..6,N}) ≤ 0.257 for ALL N≥8 (never near cap).
+
+**The wide ceiling (VERIFIED):** max over all 7-cores E'⊆{0..9} of L_y^c(E') = **0.2132 at the consec core
+{0..6}**, margin to cap_8 = **0.168** (vs the tight 0.023 at consec_8 itself). So ANY config with ≥1 large
+stranger contracts to ≤ ~0.21 ≪ cap — the wide-spread bound is LOOSE.
+
+**The proof structure (concrete):**
+- BASE (bounded spread, maxE ≤ B): exact finite check; consec is the max, L_y(consec_8)=2633/7350 < cap_8
+  (the unique TIGHT case, margin 0.023). [done by THM-534/535/536 finite checks; needs explicit B]
+- INDUCTION (maxE = N > B): peel N. L_y(E) = L_y^c(E∖{N}) + O(disc_N), disc_N ≤ (#E'-intervals)/N → 0
+  (single-variable Erdős–Turán/three-distance — CLEAN, not the multi-dim lattice). L_y^c(E∖{N}) is the same
+  problem one offset down (recurse) and is ≤ cap with margin 0.168 for bounded cores.
+- The error disc_N is a ONE-DIMENSIONAL discrepancy (offset N vs the fixed E'-sector-conditions), so the
+  HYP-2606 "signed cancellation" issue does NOT arise — that was for bounding the whole k−2 dim lattice at
+  once; peeling reduces it to k−1 single-variable Weyl steps, each clean.
+This is the moment-side analogue of THM-518 (measure-side stranger-decoupling). The remaining work: (i) the
+explicit single-offset Weyl error disc_N ≤ C(E')/N with C(E') controlled by recursion; (ii) the explicit B;
+(iii) L_y^c(E') < cap for all E' (recursion base = finite check). → THM-534, THM-518, HYP-2606/2608.

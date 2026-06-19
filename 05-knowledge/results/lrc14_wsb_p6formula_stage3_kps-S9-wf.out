@@ -1,0 +1,33 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_wsb_p6formula_stage3_kps-S9-wf.py:15: SyntaxWarning: invalid escape sequence '\{'
+  (G3) N=6 combinatorial meaning for GENERAL E: all e in E\{0} have frac(e x) in [0,1/7).
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_wsb_p6formula_stage3_kps-S9-wf.py:50: SyntaxWarning: invalid escape sequence '\{'
+  """meas{ x in [0,1): frac(e x) in [a,b) for all e in E\{0} }."""
+==============================================================================
+(G1) characterize the theta-set for N=6 (all in sector 0) for consec_k; verify p6=1/(7(k-1))
+==============================================================================
+  k=7: meas{all frac(e x)<1/7, e=1..6}=1/42  p6(law)=1/42  equal=True  =1/(7(k-1))? True
+  k=8: meas{all frac(e x)<1/7, e=1..7}=1/49  p6(law)=1/49  equal=True  =1/(7(k-1))? True
+  k=9: meas{all frac(e x)<1/7, e=1..8}=1/56  p6(law)=1/56  equal=True  =1/(7(k-1))? True
+  k=10: meas{all frac(e x)<1/7, e=1..9}=1/63  p6(law)=1/63  equal=True  =1/(7(k-1))? True
+
+  the N=6 set for consec_8 (all frac(e x)<1/7, e=1..7) as a union of intervals:
+    [0, 1/49)  len=1/49
+    total=1/49 = 1/(7*7)=1/49
+
+==============================================================================
+(G2) does consec MAXIMIZE p_0, p_6, p_0+p_6 over same-k bank? (the g=1 terms)
+==============================================================================
+  consec p0=0.32721 p6=0.02041 p0+p6=0.34762
+  shapes beating consec:  p0:0   p6:0   p0+p6:0
+  global max p0=0.32721 at [0, 1, 2, 3, 4, 5, 6, 7]
+  global max p6=0.02041 at [0, 1, 2, 3, 4, 5, 6, 7]
+  global max p0+p6=0.34762 at [0, 1, 2, 3, 4, 5, 6, 7]
+
+==============================================================================
+(G3) P(N=6)(E) = meas{all frac(e x) in [0,1/7)} -- is consec the max over same-k?
+==============================================================================
+  consec_8 P(N=6)=1/49=0.020408
+  over a wider box maxE<=14: max P(N=6)=1/49=0.020408 at [0, 1, 2, 3, 4, 5, 6, 7]
+  shapes with P(N=6)>consec: 0  (0 => consec maximizes the all-in-1/7-arc measure)
+
+DONE stage 3.
