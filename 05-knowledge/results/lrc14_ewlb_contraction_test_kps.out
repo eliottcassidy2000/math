@@ -1,0 +1,14 @@
+EWLB(consec_8=(0, 1, 2, 3, 4, 5, 6, 7)) = 407/588 = 0.692177  (memory: 407/588=0.692177)
+
+=== TEST 1: does consec MINIMIZE EWLB? (reproduce, small sweep) ===
+  tested 300; min EWLB=0.692177 at (0, 1, 2, 3, 4, 5, 6, 7); #below consec=0 (want 0)
+
+=== TEST 2 (THE ROUTE-VALIDITY CHECK): gap-contraction monotonicity ===
+  for random E, contract each contractible gap; does EWLB NOT increase (move toward consec)?
+  checked 386 contractions; VIOLATIONS (EWLB increased) = 164
+  contraction-INCREASES-EWLB examples (would KILL the monotone route):
+    (0, 3, 4, 7, 10, 11, 12, 14) EWLB=0.91350 --contract gap 1--> (0, 2, 3, 6, 9, 10, 11, 13) EWLB=0.93950
+    (0, 2, 4, 5, 6, 7, 8, 10) EWLB=0.75366 --contract gap 2--> (0, 2, 3, 4, 5, 6, 7, 9) EWLB=0.83827
+    (0, 2, 4, 5, 6, 7, 8, 10) EWLB=0.75366 --contract gap 7--> (0, 2, 4, 5, 6, 7, 8, 9) EWLB=0.83761
+    (0, 3, 4, 7, 11, 12, 13, 14) EWLB=0.88331 --contract gap 1--> (0, 2, 3, 6, 10, 11, 12, 13) EWLB=0.90250
+    (0, 3, 4, 7, 11, 12, 13, 14) EWLB=0.88331 --contract gap 3--> (0, 3, 4, 6, 10, 11, 12, 13) EWLB=0.89881
