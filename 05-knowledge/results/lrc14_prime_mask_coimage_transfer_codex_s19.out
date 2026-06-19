@@ -1,0 +1,122 @@
+
+========================================================================================
+LRC(14) PRIME-MASK / COIMAGE TRANSFER SCOUT S19
+========================================================================================
+Goal: test whether the hidden recurrence is a finite prime-mask transfer coupled to the signed mod-7 coimage tail.
+
+========================================================================================
+UNIT SEAM LAW: (Z/14Z)^* REDUCES TO F_7^*
+========================================================================================
+units mod 14: (1, 3, 5, 9, 11, 13)
+reductions mod 7: (1, 2, 3, 4, 5, 6)
+F_7^*: (1, 2, 3, 4, 5, 6)
+Readout: the HYP-2617 projectivization by F_7^* is exactly the unit action inherited from the 14-runner clock.  The coimage class is therefore a coimage of the LRC14 unit seam, not an arbitrary mod-7 trick.
+
+========================================================================================
+SUPPORT-LEVEL MASK CENSUS
+========================================================================================
+ k   supports  classes M divisible by 7 all support touches 7                 top apex masks
+ 8     272007      147            38219                168865 {}:65951, {2}:62313, {2,3}:31413, {3}:28284, {2,5}:15772
+ 9     177648      147            24507                115641 {}:42820, {2}:42796, {2,3}:20156, {3}:17983, {2,5}:10258
+10      68124      108            10293                 32479 {}:16009, {2}:15623, {2,3}:7498, {3}:6623, {2,5}:3953
+
+========================================================================================
+PRIME-MASK TRANSFER: ALLOWED APEX MASKS
+========================================================================================
+A class is counted for allowed mask Q if it has some height<=2 one-large wall witness whose large speed M is divisible only by primes in Q among {2,3,5,7}.  This tests the old mod-30 slice Q={2,3,5} against the extra LRC14 prime 7.
+ k    allowed Q   hit classes   hit |S|-mass  mass share
+ 8           {}            46      15.765012 100.000000%
+ 8          {2}            46      15.765012 100.000000%
+ 8        {2,3}            46      15.765012 100.000000%
+ 8      {2,3,5}            46      15.765012 100.000000%
+ 8          {7}            46      15.765012 100.000000%
+ 8    {2,3,5,7}            46      15.765012 100.000000%
+ 9           {}            79      12.821615 100.000000%
+ 9          {2}            79      12.821615 100.000000%
+ 9        {2,3}            79      12.821615 100.000000%
+ 9      {2,3,5}            79      12.821615 100.000000%
+ 9          {7}            79      12.821615 100.000000%
+ 9    {2,3,5,7}            79      12.821615 100.000000%
+10           {}            73      7.7789776 72.120496%
+10          {2}            73      7.7789776 72.120496%
+10        {2,3}            73      7.7789776 72.120496%
+10      {2,3,5}            73      7.7789776 72.120496%
+10          {7}            85      9.0850303 84.229179%
+10    {2,3,5,7}            85      9.0850303 84.229179%
+
+========================================================================================
+MINIMAL MASK ANTICHAINS FOR WALL-ADDRESSED COIMAGE CLASSES
+========================================================================================
+For each coimage class, keep only apex masks minimal under subset order. This is the finite transfer fingerprint before the signed coimage tail is evaluated.
+
+k=8
+                     minimal masks  classes     |S|-mass                top class
+                              ({})       46    15.765012       (1, 1, 2, 2, 3, 3)
+
+k=9
+                     minimal masks  classes     |S|-mass                top class
+                              ({})       79    12.821615       (1, 1, 2, 2, 3, 3)
+
+k=10
+                     minimal masks  classes     |S|-mass                top class
+                              ({})       73    7.7789776       (1, 1, 2, 2, 3, 3)
+                             ({7})       12    1.3060527       (0, 0, 1, 1, 2, 2)
+
+========================================================================================
+TAIL-ONLY PACKET AFTER PRIME-MASK + HEIGHT-2 TRANSFER
+========================================================================================
+
+k=8: missed classes=0, missed mass share=0.000000%, patterns={}
+
+k=9: missed classes=0, missed mass share=0.000000%, patterns={}
+
+k=10: missed classes=31, missed mass share=15.770821%, patterns={'4+2 repeated': 6, '4+1+1 repeated': 12, 'zero-cusp': 3, 'mixed': 10}
+      (1, 1, 1, 1, 4, 4)  |S_d|=0.23891209  ratio=19.3926  4+2 repeated
+      (1, 1, 1, 1, 2, 2)  |S_d|=0.23891209  ratio=18.1869  4+2 repeated
+      (1, 1, 1, 1, 6, 6)  |S_d|=0.1720167  ratio=29.7843  4+2 repeated
+      (1, 1, 1, 1, 3, 3)  |S_d|=0.1720167  ratio=28.8616  4+2 repeated
+      (1, 1, 1, 1, 5, 5)  |S_d|=0.1720167  ratio=29.7557  4+2 repeated
+      (1, 1, 1, 1, 2, 3)  |S_d|=0.076451868  ratio=60.3104  4+1+1 repeated
+      (1, 1, 1, 1, 4, 6)  |S_d|=0.076451868  ratio=67.5762  4+1+1 repeated
+      (1, 1, 1, 1, 2, 5)  |S_d|=0.076451868  ratio=59.9927  4+1+1 repeated
+      (1, 1, 1, 1, 3, 4)  |S_d|=0.076451868  ratio=61.6747  4+1+1 repeated
+      (1, 1, 1, 1, 2, 4)  |S_d|=0.076451868  ratio=60.0765  4+1+1 repeated
+
+========================================================================================
+REPEATED TAIL CHARACTER SPLIT AT k=10
+========================================================================================
+4+2 packet (1,1,1,1,a,a):
+                 class  a  chi7(a)        |S_9|   abs/signed
+    (1, 1, 1, 1, 4, 4)  4        1   0.23891209      19.3926
+    (1, 1, 1, 1, 2, 2)  2        1   0.23891209      18.1869
+    (1, 1, 1, 1, 6, 6)  6       -1    0.1720167      29.7843
+    (1, 1, 1, 1, 3, 3)  3       -1    0.1720167      28.8616
+    (1, 1, 1, 1, 5, 5)  5       -1    0.1720167      29.7557
+
+4+1+1 packet (1,1,1,1,a,b):
+                 class    {a,b}   chi(a),chi(b),chi(ab)      chi((a-1)(b-1))        |S_9|
+    (1, 1, 1, 1, 2, 3)   (2, 3)             (1, -1, -1)                    1  0.076451868
+    (1, 1, 1, 1, 4, 6)   (4, 6)             (1, -1, -1)                    1  0.076451868
+    (1, 1, 1, 1, 2, 5)   (2, 5)             (1, -1, -1)                    1  0.076451868
+    (1, 1, 1, 1, 3, 4)   (3, 4)             (-1, 1, -1)                   -1  0.076451868
+    (1, 1, 1, 1, 2, 4)   (2, 4)               (1, 1, 1)                   -1  0.076451868
+    (1, 1, 1, 1, 5, 6)   (5, 6)             (-1, -1, 1)                   -1  0.076451868
+    (1, 1, 1, 1, 3, 5)   (3, 5)             (-1, -1, 1)                    1 0.0095564835
+    (1, 1, 1, 1, 2, 6)   (2, 6)             (1, -1, -1)                   -1 0.0095564835
+
+Readout: the dominant 4+2 tail is not featureless.  Its two largest classes are the nontrivial quadratic residues a=2,4; the three smaller classes are nonresidues a=3,5,6.  The 4+1+1 packet is finer, but still collapses to a handful of multiplicative-character signatures.  This is the concrete target for the next signed cotangent/Dedekind lemma.
+
+========================================================================================
+TOURNAMENT ANALYSIS
+========================================================================================
+Hamiltonian proof path:
+  unit_seam_coimage > prime_mask_transfer > height2_wall_classes > repeated_tail_packet > signed_dedekind_tail > raw_supports > raw_runner_vertices
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+SCC sizes: [1, 1, 1, 1, 1, 1, 1]
+Challenged assumption: vertices need not be runners, gaps, or arcs. This quotient uses the unit seam, prime masks, and coimage packets. It preserves the support-six signed-tail address and destroys exact witness times and row identity.
+
+========================================================================================
+S19 STATUS
+========================================================================================
+LRC(14) is not proved here.  The useful advance is structural: the projective mod-7 coimage quotient is exactly the (Z/14Z)^* seam, while prime masks provide a finite transfer coordinate for low-height wall classes.  The remaining k=10 obstruction is still the repeated coimage tail packet, now isolated after both quotients.
