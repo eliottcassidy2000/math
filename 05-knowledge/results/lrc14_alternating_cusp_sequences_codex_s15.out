@@ -1,0 +1,149 @@
+
+============================================================================================
+LRC(14) ALTERNATING CUSP SEQUENCE ATLAS S15
+============================================================================================
+Goal: expose the recursive integer/fractional sequences behind large absolute cusp mass but tiny signed mass.
+
+============================================================================================
+RESIDUE COEFFICIENT SIGN INVENTORY
+============================================================================================
+C_d(r) is the finite mod-7 coefficient in K(n_1,...,n_6,0,...)=C_d(n mod 7)/(n_1...n_6).
+Individual C_d(r) are complex, so the signed real atoms are conjugate pairs r and -r.  The table compares the signed paired total with the all-positive paired total.  Large abs/net is the finite residue version of an alternating series that would be unusable with all signs made positive.
+  d  + pairs  - pairs     0          sum+      sum- abs           net     abs total     abs/net   max |pair|    max |C|
+  6    12088    11240     0        55.903        55.903  7.621074e-15       111.806         inf    0.2861997  0.6430849
+  7    12088    11240     0      32.75003      32.75003  3.089543e-15      65.50005         inf    0.1430998  0.3215424
+  8    12088    11240     0      19.16272      19.16272 -9.897682e-16      38.32543         inf   0.07495706   0.168427
+  9    11458    11870     0      11.34711      11.34711 -1.080733e-15      22.69421         inf   0.05451423 0.09186927
+ 10    11683    11645     0      7.155554      7.155554 -4.991938e-16      14.31111         inf   0.03852153 0.05193426
+ 11    10493    12835     0      4.969656      4.956004    0.01365212       9.92566   727.04172   0.02697898 0.03031061
+ 12    10103    13225     0      3.599543      3.558586    0.04095636      7.158129   174.77455    0.0189054 0.01820586
+ 13    10085    13243     0      2.685869      2.611758     0.0741115      5.297627   71.481848   0.01331961 0.01122379
+ 14    10565    12763     0      2.055096      1.949779     0.1053163      4.004875   38.027096  0.009459156 0.007085694
+ 15    10565    12763     0      1.625871      1.496076     0.1297946      3.121947   24.052977  0.007397393 0.004571638
+ 16    10805    12523     0      1.302321      1.156526     0.1457951      2.458847   16.865088  0.005755425 0.003009129
+max |paired C_d| sequence: 0.286199688, 0.143099844, 0.0749570612, 0.0545142264, 0.0385215324, 0.0269789794, 0.0189053955, 0.0133196091, 0.00945915589, 0.00739739336, 0.0057554252
+abs/net sequence: inf, inf, inf, inf, inf, 727.04172, 174.77455, 71.481848, 38.027096, 24.052977, 16.865088
+positive/negative balance sequence: 1, 1, 1, 1, 1, 1.0027547, 1.0115092, 1.0283761, 1.0540145, 1.0867567, 1.126063
+Readout: the residue coefficient is already an alternating object.  The positive and negative piles stay comparable while the max coefficient decays; this is the finite shadow of the signed theta tail.
+
+============================================================================================
+RELATION-HYPERPLANE SHELL ALTERNATION LADDERS
+============================================================================================
+Each case is an exact support-6 relation hyperplane.  raw abs is the all-positive/bosonic mass; signed variation is sum_h |shell signed_h|; net is |sum_h shell signed_h|.  Thus raw/net decomposes into (raw/signed-variation) times (signed-variation/net).
+case                         shells sign flips        run lengths     raw abs  signed var         net    raw/var    var/net    raw/net
+AP core support                  23          0               [23]    0.920275   0.0316608   0.0316608  29.066723          1  29.066723
+resonant 21 support              23         15 [1, 1, 3, 2, 4, 1, 1, 1]    0.508434   0.0048962  0.00234285  103.84259  2.0898461  217.01502
+dissociated 211 support          21          4    [3, 6, 3, 1, 8]   0.0265105 0.000585844 0.000455017  45.251805   1.287521  58.262649
+k=9 wide 68 support              23          8 [1, 2, 4, 2, 1, 1, 5, 6]     0.10003  0.00185626  8.9412e-05   53.88822  20.760695  1118.7569
+k=10 wall 22 support             21          9 [2, 1, 5, 1, 1, 3, 3, 2]    0.117563  0.00262262 0.000262635  44.826664  9.9857761  447.62902
+
+Compact shell sign words, by height:
+AP core support              heights=[2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]
+                             signs  =+++++++++++++++++++++++
+resonant 21 support          heights=[2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27]
+                             signs  =-+---++----+-+-+-+-+--+
+dissociated 211 support      heights=[11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 29, 30, 31, 32, 33, 34]
+                             signs  =---++++++---+--------
+k=9 wide 68 support          heights=[4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24, 25, 26, 27, 29, 30]
+                             signs  =+--++++--+-+++++------+
+k=10 wall 22 support         heights=[1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 15, 16, 17, 18, 19, 20, 22, 23, 24]
+                             signs  =++-+++++-+---+++--+--
+
+Two-stage cancellation factor sequences:
+raw/signed-variation: 29.0667, 103.843, 45.2518, 53.8882, 44.8267
+signed-variation/net: 1, 2.0898461, 1.287521, 20.760695, 9.9857761
+raw/net: 29.066723, 217.01502, 58.262649, 1118.7569, 447.62902
+Readout: the proof should not try to make raw abs small.  It should prove a cusp-to-signed-shell collapse and then an alternating-shell summation bound.
+
+============================================================================================
+BOUNDARY-FACE INTEGER/FRACTIONAL SEQUENCES
+============================================================================================
+The final nonempty shell is where the max-norm cusp is most visible.  touch=t means t coordinates sit on the max boundary.  Counts are integer mass; ratios are the fractional cancellation address.
+
+AP core support final shell h=27
+touch        count         signed         abs   abs/signed
+    1      5291542    8.09783e-05   0.0163888    202.38572
+    2       521520    -2.4017e-06 0.000227894    94.888776
+    3        25778   -1.67727e-07 1.90316e-06      11.3468
+    4          792    2.85936e-09 1.04814e-08    3.6656498
+    5            4   -1.99998e-12  5.0714e-12    2.5357237
+    6            0              0           0          inf
+
+resonant 21 support final shell h=27
+touch        count         signed         abs   abs/signed
+    1      1825394   -3.37005e-06   0.0117434    3484.6403
+    2       159086    4.68006e-06 0.000146465    31.295435
+    3         6734   -2.04946e-08 1.00769e-06    49.168688
+    4          204    3.57179e-11 4.32613e-09    121.11954
+    5            4    3.67364e-12  8.1339e-12    2.2141234
+    6            0              0           0          inf
+
+dissociated 211 support final shell h=34
+touch        count         signed         abs   abs/signed
+    1       353652   -0.000164011  0.00218527    13.323897
+    2        24300     -2.662e-07 2.21038e-05    83.034246
+    3          866    3.98116e-08  1.4232e-07    3.5748299
+    4            8   -8.78815e-11 1.23559e-10    1.4059706
+    5            0              0           0          inf
+    6            0              0           0          inf
+
+k=9 wide 68 support final shell h=30
+touch        count         signed         abs   abs/signed
+    1       783346    0.000153621  0.00534651    34.803376
+    2        68246    3.36072e-06 0.000125625    37.380346
+    3         3110   -8.38024e-08 1.67433e-06    19.979456
+    4           90     1.9544e-09 1.36709e-08    6.9949008
+    5            0              0           0          inf
+    6            0              0           0          inf
+
+k=10 wall 22 support final shell h=24
+touch        count         signed         abs   abs/signed
+    1       996976   -5.90414e-05  0.00665586    112.73209
+    2       109826   -4.49068e-07 0.000221746    493.79131
+    3         6494    2.55451e-07  4.7333e-06    18.529223
+    4          208    1.32513e-08 7.71929e-08    5.8253111
+    5            0              0           0          inf
+    6            2   -7.49328e-11 1.20183e-10    1.6038755
+
+final-shell relation count sequence: [5839636, 1991422, 378826, 854792, 1113506]
+final-shell abs/signed sequence: 211.94099, 9220.9535, 13.440976, 34.887488, 116.21417
+one-face relation count sequence: [5291542, 1825394, 353652, 783346, 996976]
+one-face abs/signed sequence: 202.38572, 3484.6403, 13.323897, 34.803376, 112.73209
+Readout: the large integers are not evidence of analytic danger by themselves.  They are the pre-quotient cusp count; the signed fraction is the proof-relevant address.
+
+============================================================================================
+PROJECTIVE COIMAGE SEQUENCE EXTENSION
+============================================================================================
+Projective classes: 159.  Zero-speed-residue histogram: {0: 80, 1: 42, 2: 22, 3: 10, 4: 4, 5: 1}.
+  d    max |S_d|           argmax class   null  <.001   <.01    <.1      median same sign top?
+  6    2.1852492     (1, 1, 2, 2, 3, 3)    142    142    142    142 1.68095e-15          +-+-+
+  7    1.4048031     (1, 1, 2, 2, 3, 3)    113    113    113    121 1.20472e-15          +-+-+
+  8   0.82504308     (1, 1, 2, 2, 3, 3)     80     80     80    118  1.6884e-15          +-+-+
+  9   0.43959824     (1, 1, 2, 2, 3, 3)     43     43     77    117   0.0382259          +-++-
+ 10   0.27850323     (1, 1, 1, 1, 4, 4)     34     34     43    140   0.0398187          ---+-
+ 11   0.26426602     (1, 1, 1, 1, 2, 2)      3      3     35    148   0.0263291          -----
+ 12   0.22155439     (1, 1, 2, 2, 4, 4)      3      3     40    149   0.0312048          -----
+ 13    0.2106327     (1, 1, 1, 1, 1, 1)      3      3     25    150   0.0273042          +----
+ 14   0.25958928     (1, 1, 1, 1, 1, 1)      3      3     37    154   0.0262229          +----
+ 15   0.29159016     (1, 1, 1, 1, 1, 1)      3      3     18    158   0.0223575          +--+-
+ 16   0.30719607     (1, 1, 1, 1, 1, 1)      3      3     19    158   0.0208279          +-++-
+max coimage fiber sequence: 2.18524924, 1.40480308, 0.825043079, 0.439598243, 0.278503234, 0.264266024, 0.221554394, 0.210632698, 0.259589278, 0.291590164, 0.307196067
+coimage-null count sequence: [142, 113, 80, 43, 34, 3, 3, 3, 3, 3, 3]
+coimage <0.01 count sequence: [142, 113, 80, 77, 43, 35, 40, 25, 37, 18, 19]
+Readout: after d=11 the exact-null floor stabilizes at the three pure degenerate classes, while most classes stay <0.1.  The tail theorem can be class-by-class rather than volume-by-volume.
+
+============================================================================================
+TOURNAMENT ANALYSIS: SEQUENCE QUOTIENTS
+============================================================================================
+Hamiltonian proof path: ['dedekind_tail_bound', 'projective_coimage_nullity', 'shell_alternation_ladder', 'height_one_wall_ledger', 'boundary_cusp_faces', 'coefficient_sign_inventory', 'raw_absolute_volume']
+score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+directed 3-cycles: 0
+Assumption challenged: the vertices are proof quotients.  This preserves the signed-tail predicate and the recursive d/k sequences while throwing away runner-time geometry.
+
+============================================================================================
+S15 READING
+============================================================================================
+1. The all-positive residue and shell sums are the wrong object, just as an alternating conditionally convergent series becomes divergent when all signs are made positive.
+2. The useful bound should factor into two inequalities: cusp absolute mass -> signed shell variation, then alternating shell variation -> net.
+3. The persistent sequences are now visible: support floor 0..0,1; residue sign-balance by d; shell sign words; boundary count/ratio pairs; coimage null-count and max-fiber ladders.
+4. LRC(14) is still open.  The next proof move is a class-by-class Dedekind/cotangent summation theorem over the non-null coimage fibers, after HYP-2616-style wall ledger deletion.
