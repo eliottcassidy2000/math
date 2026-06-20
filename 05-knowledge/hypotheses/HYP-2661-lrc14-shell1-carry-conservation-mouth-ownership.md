@@ -1,6 +1,6 @@
 ---
 id: HYP-2661
-status: VERIFIED exhaustive (1-tail, 2-tail); the multi-tail mouth-retention rigidity stated as a CARRY CONSERVATION law; proof OPEN (rational comb cutoff)
+status: VERIFIED exhaustive — AP-tail (1,2-tail) AND general 12-cores [1,19] (50388 cores, 0 violations); the multi-tail mouth-retention rigidity as a CARRY CONSERVATION law; comb proof in progress
 source: kind-pasteur-2026-06-19-S16
 depends_on:
   - THM-541   # drop-6 collar (mouth = 7/858)
@@ -47,6 +47,24 @@ Equivalently: the only sub-`426/35035` AP-tail rows are **`{drop-6 = 7/858, one-
   one-tail {5:+2}:   carry={1:15, 3:5, 5:5, …}                       meas=3859/420420  (< thr2, shell-1 FULL)
   two-tail min:      carry={1:11, 3:5, 5:5, …, 23:2}                 meas=50189/3223220 (≥ thr2, shell-1 DAMAGED by {1:-4})
 ```
+
+## GENERALIZES beyond AP-tail to ALL 12-cores (OPEN-Q-108): exhaustive [1,19]
+
+The rigidity is NOT special to AP-tail rows. Over ALL primitive positive 12-cores in `[1,B]` (exact):
+```
+   B=16: 1820 cores,  1 below thr2 (drop-6), 0 tower-violations
+   B=18: 18564 cores, 1 below thr2 (drop-6), 0 tower-violations
+   B=19: 50388 cores, 1 below thr2 (drop-6), 0 tower-violations   (= HYP-2651's full atlas box)
+```
+So **every sub-`426/35035` primitive 12-core in `[1,19]` contains the full dyadic tower `{1,2,4,8}`**, and
+drop-6 is the unique sub-threshold core there (matching HYP-2651). This sharpens OPEN-Q-108: the
+sub-threshold census is confined to `{1,2,4,8}`-containing cores — a strong universal mouth-owner.
+
+**Structural reason (why exactly `{1,2,4,8}`):** odd part 1 has the DEEPEST dyadic tower among speeds
+`≤13` (`{1,2,4,8}`, 4 levels, since `2^4=16>13`); the other odd parts have shorter towers
+(`3→{3,6,12}`, `5→{5,10}`, `7,9,11,13→` singletons). By the Glaisher halving (HYP-2656), the deepest
+tower gives the tightest NESTED constraints `||t||,||2t||,||4t||,||8t||>1/14`, carving the smallest
+("ground-state") lonely set = the mouth. The tower depth `⌊log₂(n−1)⌋ = ⌊log₂13⌋ = 3` is set by `n=14`.
 
 ## The mechanism (Glaisher + even-graph reading)
 

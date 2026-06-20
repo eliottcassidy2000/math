@@ -1,0 +1,12 @@
+=== GENERAL primitive positive 12-cores in [1,B]: meas<426/35035 ==> {1,2,4,8} subset C ? ===
+    (the OPEN-Q-108 generalization beyond AP-tail; HYP-2651 atlas: drop-6 unique min over [1,19])
+
+  B=16: 1820 primitive 12-cores; 1 below thr2; tower-violations(sub-thr2 w/o full tower)=0
+      global min = 7/858 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) (tower-full? True)
+      ==> every sub-426/35035 general 12-core in this box contains the full tower {1,2,4,8}.
+  B=18: 18564 primitive 12-cores; 1 below thr2; tower-violations(sub-thr2 w/o full tower)=0
+      global min = 7/858 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) (tower-full? True)
+      ==> every sub-426/35035 general 12-core in this box contains the full tower {1,2,4,8}.
+  B=19: 50388 primitive 12-cores; 1 below thr2; tower-violations(sub-thr2 w/o full tower)=0
+      global min = 7/858 at (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) (tower-full? True)
+      ==> every sub-426/35035 general 12-core in this box contains the full tower {1,2,4,8}.

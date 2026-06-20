@@ -1,0 +1,25 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_tower_deletion_proof_kps.py:14: SyntaxWarning: invalid escape sequence '\ '
+  Take S = C cap {1,...,13}  = ({1..13} \ holes).  This DROPS all tail constraints.
+=== STEP 1: the single-hole (drop-one) bases {1..13}\{2^a} ===
+    thr2 = 426/35035 = 0.01215927
+
+  a=0: B={1..13}\{1}  meas(G_B)=1/14=0.07142857  >=thr2? True
+  a=1: B={1..13}\{2}  meas(G_B)=11/364=0.03021978  >=thr2? True
+  a=2: B={1..13}\{4}  meas(G_B)=97/4004=0.02422577  >=thr2? True
+  a=3: B={1..13}\{8}  meas(G_B)=950/21021=0.04519290  >=thr2? True
+
+=== STEP 2: verify monotonicity claim - adding ANY hole only raises meas ===
+    (drop-one is the MINIMUM among all bases containing 2^a as a hole)
+  a=0: MIN over all hole-sets containing 1: meas=1/14=0.07142857  at holes=(1,)  >=thr2? True
+  a=1: MIN over all hole-sets containing 2: meas=11/364=0.03021978  at holes=(2,)  >=thr2? True
+  a=2: MIN over all hole-sets containing 4: meas=97/4004=0.02422577  at holes=(4,)  >=thr2? True
+  a=3: MIN over all hole-sets containing 8: meas=950/21021=0.04519290  at holes=(8,)  >=thr2? True
+
+=== CONCLUSION ===
+  All four single-hole bases >= thr2:        True
+  Single-hole IS the min (monotonicity ok):  True
+  => For every a, the binding base is drop-{2^a}, value = meas(G_{1..13\2^a}).
+  => Since tails only ADD constraints (raise meas) and extra holes only RAISE meas,
+     meas(G_C) >= meas(G_{drop-2^a}) >= thr2 for EVERY AP-tail 12-core missing 2^a.
+  LEMMA PROVED (exact rational monotonicity + four exact single-hole evaluations).
+random full-core test: tested=16000, below_thr2=0

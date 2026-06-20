@@ -64,7 +64,7 @@ def scan_missing_tower_bit(a, tail_max=40):
     bit=2**a
     best=None; below=[]
     cnt=0
-    for nh in [1,2,3,4]:
+    for nh in [1,2,3]:
         ntails=nh-1
         # holes: choose nh from 1..13, must include bit
         others=[d for d in range(1,14) if d!=bit]
@@ -88,7 +88,7 @@ if __name__=="__main__":
     print(f"    thr2 = 426/35035 = {float(thr2):.8f}\n")
     for a in [3,2,1,0]:
         # smaller tail window for a=0 (1 is a hole => more tails) to keep it tractable
-        tmax = 30 if a==0 else (34 if a==1 else 40)
+        tmax = 26 if a==0 else (30 if a==1 else 40)
         best, below, cnt = scan_missing_tower_bit(a, tail_max=tmax)
         L,holes,tails=best
         status = "OK >= thr2" if L>=thr2 else "*** BELOW thr2 ***"

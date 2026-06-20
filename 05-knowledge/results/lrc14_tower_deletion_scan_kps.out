@@ -1,0 +1,17 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_tower_deletion_kps.py:9: SyntaxWarning: invalid escape sequence '\ '
+  An AP-tail 12-core is C = ({1..13} \ holes) union tails, tails subset [14,inf), |C|=12.
+=== TOWER-DELETION SCAN: minimum meas over AP-tail 12-cores missing 2^a ===
+    thr2 = 426/35035 = 0.01215927
+
+  a=3 (bit 8 is a HOLE): scanned 23491 cores; MIN meas=0.01832394=6163/336336
+      binding core: holes=(6, 8) tails=(16,)  -> OK >= thr2
+
+  a=2 (bit 4 is a HOLE): scanned 23491 cores; MIN meas=0.01596649=911/57057
+      binding core: holes=(4, 6) tails=(19,)  -> OK >= thr2
+
+  a=1 (bit 2 is a HOLE): scanned 9181 cores; MIN meas=0.01745314=27/1547
+      binding core: holes=(2, 6) tails=(17,)  -> OK >= thr2
+
+  a=0 (bit 1 is a HOLE): scanned 5305 cores; MIN meas=0.04308339=1333/30940
+      binding core: holes=(1, 6, 10) tails=(17, 20)  -> OK >= thr2
+
