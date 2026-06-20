@@ -1,0 +1,94 @@
+HYP-2664 residual/plateau packet scout
+exact Fraction arithmetic
+
+named best-resonance rows
+  consec8, w=139
+    Phi=621/1715 (0.362099), p0=481/1470 (0.327211), p1=359/1470 (0.244218), p0_full=145249/408660 (0.355427), cap_slack=4056449/29219190 (0.138828)
+    raw/w=-3817/572124 (-0.006672), residual/w=-7327/1225980 (-0.005976), resid_only_slack=77424533/613602990 (0.126180)
+    ratios: |resid|/(w*p1)=7327/299406 (0.024472), |raw|/(w*p1)=19085/698614 (0.027318), |resid|/(w*Phi)=51289/3107484 (0.016505)
+    packets=48, support=48, nonuniform=48, class_l1=218/3, class_range=56, max_packet_abs=2
+  odd_struct_HYP2655, w=90
+    Phi=6067/48510 (0.125067), p0=3107/48510 (0.064049), p1=296/693 (0.427128), p0_full=2479/16170 (0.153309), cap_slack=13031/38220 (0.340947)
+    raw/w=137/4851 (0.028242), residual/w=117/5390 (0.021707), resid_only_slack=87653/252252 (0.347482)
+    ratios: |resid|/(w*p1)=1053/20720 (0.050820), |raw|/(w*p1)=137/2072 (0.066120), |resid|/(w*Phi)=1053/6067 (0.173562)
+    packets=54, support=54, nonuniform=54, class_l1=358/3, class_range=94, max_packet_abs=13
+  two_scale_20_40, w=41
+    Phi=919/13720 (0.066983), p0=331/9240 (0.035823), p1=3527/16170 (0.218120), p0_full=26099/220990 (0.118100), cap_slack=196481/522340 (0.376155)
+    raw/w=316303/6187720 (0.051118), residual/w=4861/110495 (0.043993), resid_only_slack=6166241/16088072 (0.383280)
+    ratios: |resid|/(w*p1)=29166/144607 (0.201691), |raw|/(w*p1)=948909/4048996 (0.234357), |resid|/(w*Phi)=272216/414469 (0.656783)
+    packets=159, support=159, nonuniform=159, class_l1=692/3, class_range=178, max_packet_abs=2
+  multiscale_30_60, w=62
+    Phi=7128913/44476320 (0.160286), p0=131647/1058960 (0.124317), p1=1599739/6353760 (0.251778), p0_full=141899/635376 (0.223331), cap_slack=24615911/90858768 (0.270925)
+    raw/w=2804017/44476320 (0.063045), residual/w=114857/2382660 (0.048205), resid_only_slack=5452489747/19080341280 (0.285765)
+    ratios: |resid|/(w*p1)=918856/4799217 (0.191460), |raw|/(w*p1)=2804017/11198173 (0.250400), |resid|/(w*Phi)=6431992/21386739 (0.300747)
+    packets=312, support=312, nonuniform=312, class_l1=1646/3, class_range=425, max_packet_abs=18
+  cluster_40_80, w=82
+    Phi=15321497/91128240 (0.168131), p0=1717771/13018320 (0.131950), p1=164855/650916 (0.253266), p0_full=109607/482160 (0.227325), cap_slack=18404579/68948880 (0.266931)
+    raw/w=2697113/45564120 (0.059194), residual/w=125399/2789640 (0.044952), resid_only_slack=10992177661/39094014960 (0.281173)
+    ratios: |resid|/(w*p1)=877793/4945650 (0.177488), |raw|/(w*p1)=2697113/11539850 (0.233722), |resid|/(w*Phi)=12289102/45964491 (0.267361)
+    packets=422, support=421, nonuniform=421, class_l1=2222/3, class_range=574, max_packet_abs=22
+
+scale family at w=2M+2
+  scale_M=10, w=22
+    Phi=11629/56595 (0.205478), p0=929/5390 (0.172356), p1=3749/16170 (0.231849), p0_full=2813/10780 (0.260946), cap_slack=8174/35035 (0.233310)
+    raw/w=12557/226380 (0.055469), residual/w=108/2695 (0.040074), resid_only_slack=731921/2942940 (0.248704)
+    ratios: |resid|/(w*p1)=648/3749 (0.172846), |raw|/(w*p1)=12557/52486 (0.239245), |resid|/(w*Phi)=2268/11629 (0.195030)
+    packets=104, support=104, nonuniform=104, class_l1=538/3, class_range=141, max_packet_abs=6
+  scale_M=20, w=42
+    Phi=953737/6187720 (0.154134), p0=26099/220990 (0.118100), p1=44593/176792 (0.252234), p0_full=115187/530376 (0.217180), cap_slack=1910407/6894888 (0.277076)
+    raw/w=53197/843780 (0.063046), residual/w=90287/1988910 (0.045395), resid_only_slack=213371293/723963240 (0.294727)
+    ratios: |resid|/(w*p1)=361148/2006685 (0.179972), |raw|/(w*p1)=1170334/4682265 (0.249950), |resid|/(w*Phi)=2528036/8583633 (0.294518)
+    packets=75, support=75, nonuniform=75, class_l1=818/3, class_range=226, max_packet_abs=12
+  scale_M=30, w=62
+    Phi=7128913/44476320 (0.160286), p0=131647/1058960 (0.124317), p1=1599739/6353760 (0.251778), p0_full=141899/635376 (0.223331), cap_slack=24615911/90858768 (0.270925)
+    raw/w=2804017/44476320 (0.063045), residual/w=114857/2382660 (0.048205), resid_only_slack=5452489747/19080341280 (0.285765)
+    ratios: |resid|/(w*p1)=918856/4799217 (0.191460), |raw|/(w*p1)=2804017/11198173 (0.250400), |resid|/(w*Phi)=6431992/21386739 (0.300747)
+    packets=312, support=312, nonuniform=312, class_l1=1646/3, class_range=425, max_packet_abs=18
+  scale_M=40, w=82
+    Phi=15321497/91128240 (0.168131), p0=1717771/13018320 (0.131950), p1=164855/650916 (0.253266), p0_full=109607/482160 (0.227325), cap_slack=18404579/68948880 (0.266931)
+    raw/w=2697113/45564120 (0.059194), residual/w=125399/2789640 (0.044952), resid_only_slack=10992177661/39094014960 (0.281173)
+    ratios: |resid|/(w*p1)=877793/4945650 (0.177488), |raw|/(w*p1)=2697113/11539850 (0.233722), |resid|/(w*Phi)=12289102/45964491 (0.267361)
+    packets=422, support=421, nonuniform=421, class_l1=2222/3, class_range=574, max_packet_abs=22
+  scale_M=50, w=102
+    Phi=204949/1286740 (0.159278), p0=5659/45955 (0.123142), p1=46497/183820 (0.252949), p0_full=2558396/11718525 (0.218321), cap_slack=142276301/515615100 (0.275935)
+    raw/w=19373093/328118700 (0.059043), residual/w=6305213/140622300 (0.044838), resid_only_slack=3141612989/10827917100 (0.290140)
+    ratios: |resid|/(w*p1)=6305213/35570205 (0.177261), |raw|/(w*p1)=19373093/82997145 (0.233419), |resid|/(w*Phi)=44136491/156785985 (0.281508)
+    packets=526, support=526, nonuniform=526, class_l1=2800/3, class_range=725, max_packet_abs=32
+  scale_M=60, w=122
+    Phi=5429558/33635217 (0.161425), p0=598628/4805031 (0.124584), p1=413054/1601677 (0.257888), p0_full=1362839/6200040 (0.219811), cap_slack=22120363/80600520 (0.274444)
+    raw/w=26184581/448469560 (0.058387), residual/w=6369131/144150930 (0.044184), resid_only_slack=7572794303/26235469260 (0.288647)
+    ratios: |resid|/(w*p1)=6369131/37174860 (0.171329), |raw|/(w*p1)=26184581/115655120 (0.226402), |resid|/(w*Phi)=44583917/162886740 (0.273711)
+    packets=635, support=634, nonuniform=634, class_l1=3374/3, class_range=870, max_packet_abs=35
+  scale_M=70, w=142
+    Phi=13257887/82410552 (0.160876), p0=3684911/29432340 (0.125199), p1=1633409/6540520 (0.249737), p0_full=1079321/4905390 (0.220028), cap_slack=384726109/1402941540 (0.274228)
+    raw/w=24373529/412052760 (0.059151), residual/w=7970209/176594040 (0.045133), resid_only_slack=25476777233/88385317020 (0.288247)
+    ratios: |resid|/(w*p1)=7970209/44102043 (0.180722), |raw|/(w*p1)=24373529/102904767 (0.236855), |resid|/(w*Phi)=55791463/198868305 (0.280545)
+    packets=731, support=730, nonuniform=730, class_l1=1282, class_range=991, max_packet_abs=40
+
+summary
+  max |resid|/(w*p1) among rows = 29166/144607 (0.201691)
+  max |raw|/(w*p1) among rows   = 2804017/11198173 (0.250400)
+  min CAP9 - Phi - |resid|/w     = 77424533/613602990 (0.126180)
+
+bounded AP-window p1-tax bank: E'={0}+7-subsets of [1,13]
+  rows=1716, cap9=1979/4004 (0.494256)
+  minimum allowed c in p0+(1/7+c)*p1 <= cap9: 388929/718718 (0.541143) at (0, 1, 2, 3, 4, 5, 6, 7), p0=481/1470, p1=359/1470
+  c=1/4: violations=0, max=17417/41160 (0.423154) at (0, 1, 2, 3, 4, 5, 6, 7), p0=481/1470, p1=359/1470, slack=418499/5885880 (0.071102)
+  c=13/51: violations=0, max=44539/104958 (0.424351) at (0, 1, 2, 3, 4, 5, 6, 7), p0=481/1470, p1=359/1470, slack=2098409/30017988 (0.069905)
+  c=1/3: violations=0, max=13691/30870 (0.443505) at (0, 1, 2, 3, 4, 5, 6, 7), p0=481/1470, p1=359/1470, slack=448069/8828820 (0.050751)
+
+Tournament Analysis
+  vertices: p1_boundary_mass > phase_packet_class_l1 > residual_channel > raw_wDelta > raw_endpoint_count
+  pairwise observable: which packet invariant predicts residual/w without destroying plateau slack
+  switch/gauge: aggregate endpoints by y=frac(w*x), then quotient by QR/NQR class means
+  tie Hamiltonian path:
+    p1_boundary_mass > phase_packet_class_l1 > residual_channel > raw_wDelta > raw_endpoint_count
+  challenged assumption: residual size is not a free endpoint-count error; it is a boundary
+    of the one-missed-sector packet chain and should be paid by p1(E').
+
+proof-route takeaway
+  In these resonant families, residual grows before scaling, but |residual|/(w*p1)
+  remains tame and residual-only cap slack stays positive. This supports the next
+  lemma: bound intra-quadratic phase residual as a p1-boundary tax, then use
+  HYP-2661/HYP-2663 packet rigidity for the small-plateau side.
+PASS: residual/plateau packet scout complete.

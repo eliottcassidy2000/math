@@ -106,6 +106,16 @@ sub-`426/35035` near-collar rows conserve the dyadic-1 tower `{1,2,4,8}`.  Its f
 tower-deletion minima (`1333/30940`, `27/1547`, `335/23023`, `6163/336336`) show every missing tower bit
 already pays the AP second threshold, with missing `4` the binding deletion.
 
+## 8. S39 addendum: replace uniform C by a p1-boundary tax
+
+Codex S39 / HYP-2664 tests the more natural coarea normalization.  Since the HYP-2653 endpoint sum only
+runs over cells where `E'` misses exactly one sector, the discrepancy should be paid by `p1(E')`.  On
+the HYP-2662 resonant rows and the multiscale family through `M=70`, exact data gives
+`max |residual|/(w*p1)=29166/144607` and `max |raw|/(w*p1)=2804017/11198173`.  The bounded AP-window bank
+`E'={0}+7`-subsets of `[1,13]` has `0` violations of `p0+(1/7+1/3)p1 <= cap9`, with AP8 still below cap
+by `448069/8828820`.  The new far-route input should be `Delta_w^+ <= p1(E')/3`, or a split residual
+`<=p1/4` plus trace/QR tax, not a standalone `w|Delta_w| <= C`.
+
 ## Honest status
 LRC(14) NOT proved. CORRECTS HYP-2653b: the "single open input C≈1.95" is FALSE (C grows with scales,
 ≥3.91). The wide conclusion is CONFIRMED exact (≤0.223 ≪ cap). The real remaining work on the wide branch

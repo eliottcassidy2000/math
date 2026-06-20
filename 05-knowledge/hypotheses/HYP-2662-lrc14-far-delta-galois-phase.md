@@ -138,6 +138,24 @@ intra-quadratic residual also drives the plateau
 `p0(E') + p1(E')/7` far below the AP cap.  This is the HYP-2655 joint
 plateau/Delta recursion with a sharper Galois-phase ledger.
 
+## S39 Addendum: Pay Residual By `p1`
+
+HYP-2664 tests the next normalization: the intra-quadratic residual is a
+boundary of the one-missed-sector packet chain, so the natural currency is
+`p1(E')`, not raw endpoint count.  On the HYP-2662 resonant rows and the scale
+family through `M=70`, exact computation gives
+
+```text
+max |residual|/(w*p1) = 29166/144607 ~= 0.201691
+max |raw|/(w*p1)      = 2804017/11198173 ~= 0.250400
+```
+
+The bounded AP-window bank `E'={0}+7-subsets of [1,13]` has no violation of
+`p0+(1/7+1/3)p1 <= cap9`, with maximum AP8 value `13691/30870` and slack
+`448069/8828820`.  Thus a proof of `Delta_w^+ <= p1(E')/3` would replace the
+false uniform-`C` route by a packet coarea inequality that dovetails with the
+HYP-2661/HYP-2663 mouth/tower packet rigidity.
+
 ## Tournament Analysis
 
 Vertices are phase/proof channels:

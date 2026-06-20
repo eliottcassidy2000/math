@@ -1,3 +1,17 @@
+## codex-2026-06-19-S39 -- residual/plateau packet tax; p1-boundary route for far discrepancy -- HYP-2664
+
+User asked to creatively push the next sharp target and think abstractly about patterns in the repo.  Pulled the new mainline first: KPS HYP-2661 now gives a dyadic-1 tower clamp for the tight mouth, and codex HYP-2663 imports old root-packet/FKN structure into AP-tail packets.  Built `04-computation/lrc14_residual_plateau_packet_codex_s39.py`, stored `05-knowledge/results/lrc14_residual_plateau_packet_codex_s39.out`, and recorded `05-knowledge/hypotheses/HYP-2664-lrc14-residual-plateau-packet-tax.md`.
+
+**FINDING:** the HYP-2662 intra-quadratic residual behaves like a boundary tax paid by `p1(E')`, the measure where the base misses exactly one inner sector.  Aggregating endpoints by phase packet `y=frac(w*x)` and quotienting by QR/NQR class means gives, on the known resonant rows and the scale family through `M=70`,
+
+```text
+max |residual|/(w*p1) = 29166/144607 ~= 0.201691
+max |raw|/(w*p1)      = 2804017/11198173 ~= 0.250400
+min CAP9 - Phi - |residual|/w = 77424533/613602990.
+```
+
+The bounded AP-window bank `E'={0}+7-subsets of [1,13]` has `0` violations of `p0+(1/7+1/3)p1 <= cap9`; the maximum is AP8, `13691/30870`, still below `1979/4004` by `448069/8828820`.  The new proof target is therefore not a uniform endpoint discrepancy constant: prove `Delta_w^+ <= p1(E')/3` (or residual `<=p1/4` plus trace/QR tax), then splice this far packet coarea bound with HYP-2661/HYP-2663 mouth/tower packet rigidity.  LRC(14) is not proved.
+
 ## kind-pasteur-2026-06-19-S16 — the dyadic-1 tower {1,2,4,8} OWNS the mouth: a CARRY CONSERVATION law (Euler/Glaisher + even-graph), verified exhaustive incl. general 12-cores [1,19] — HYP-2661
 
 User hint: Euler/Glaisher carry (2^a*m = 2^a units in odd shell m) + tournament/even-graph (free binary choices -> parity-completed carrier) separate the one-tail exception {5:+2} (full mouth survival) from the two-tail min {1:-4,5:+2,23:+2} (damages mouth, pays 2nd threshold). Made precise + verified.
