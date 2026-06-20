@@ -1,0 +1,22 @@
+=== CLAIM (1): exact mouth endpoints/lengths match stated ===
+  [29/182,9/56]: claimed=(29/182,9/56,len1/728)  actual=(29/182,9/56,len1/728)  MATCH
+  [29/168,27/154]: claimed=(29/168,27/154,len5/1848)  actual=(29/168,27/154,len5/1848)  MATCH
+  [127/154,139/168]: claimed=(127/154,139/168,len5/1848)  actual=(127/154,139/168,len5/1848)  MATCH
+  [47/56,153/182]: claimed=(47/56,153/182,len1/728)  actual=(47/56,153/182,len1/728)  MATCH
+
+=== CLAIM (2): per-tower-bit deletion measures ===
+  del 1: claimed=239/3003  actual=239/3003  MATCH
+  del 2: claimed=461/12012  actual=461/12012  MATCH
+  del 4: claimed=389/12012  actual=389/12012  MATCH
+  del 8: claimed=2243/42042  actual=2243/42042  MATCH
+
+=== CLAIM (3): two-tail surviving det=3 mass = 1/364 ; new mass = 20667/1611610 ===
+  surviving det=3 mass = 2*(1/728) = 1/364  claimed 1/364=1/364  MATCH
+  meas(two-tail) = 50189/3223220 = 0.015571075
+  meas - surviving = 20667/1611610 = 0.012823822
+  claimed new mass = 20667/1611610 = 0.012823822
+  match? True
+  claim: new mass alone (0.012824) exceeds THR2 (0.012159)? True
+
+=== CLAIM (4): det pattern [3,5,5,3] outer=3 inner=5 ===
+  determinant numerators in order = [3, 5, 5, 3]  claimed [3,5,5,3]  MATCH

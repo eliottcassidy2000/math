@@ -1,0 +1,52 @@
+==============================================================================
+INDEPENDENT VERIFICATION — drop-6 mouth ownership geometry
+==============================================================================
+
+drop-6 core = (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+meas(drop-6) = 7/858 = 0.008158508  (THR1=7/858=0.008158508)
+  CHECK: meas == 7/858  OK
+
+--- (1) The four mouths: endpoints, length, walling speeds, determinant ---
+number of safe components = 4
+  [29/182, 9/56] len=1/728=0.001374
+     left endpoint walled by speeds [13], right by [12]
+     R(13, 2)->L(12, 2)  det_num=3
+  [29/168, 27/154] len=5/1848=0.002706
+     left endpoint walled by speeds [12], right by [11]
+     R(12, 2)->L(11, 2)  det_num=5
+  [127/154, 139/168] len=5/1848=0.002706
+     left endpoint walled by speeds [11], right by [12]
+     R(11, 9)->L(12, 10)  det_num=5
+  [47/56, 153/182] len=1/728=0.001374
+     left endpoint walled by speeds [12], right by [13]
+     R(12, 10)->L(13, 11)  det_num=3
+
+Union of all mouth-bounding speeds = [11, 12, 13]
+Tower {1,2,4,8} intersect mouth-walls = []
+
+--- (2) Deleting each tower bit: measure + mouth survival ---
+  del 1: core(11)=(2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+     meas=239/3003 = 0.079587080  >=THR2? True  (THR2=0.012159269)
+     original 4 mouths surviving exactly: 4/4
+  del 2: core(11)=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+     meas=461/12012 = 0.038378288  >=THR2? True  (THR2=0.012159269)
+     original 4 mouths surviving exactly: 4/4
+  del 4: core(11)=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13)
+     meas=389/12012 = 0.032384282  >=THR2? True  (THR2=0.012159269)
+     original 4 mouths surviving exactly: 4/4
+  del 8: core(11)=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13)
+     meas=2243/42042 = 0.053351410  >=THR2? True  (THR2=0.012159269)
+     original 4 mouths surviving exactly: 4/4
+
+--- (3) Two-tail min row {1:-4, 5:+2, 23:+2} ---
+  core = (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 20, 46)
+  meas = 50189/3223220 = 0.015571075  >=THR2? True
+  original mouth survival in two-tail core:
+     mouth [29/182,9/56] det=3 len=1/728: SURVIVES
+     mouth [29/168,27/154] det=5 len=5/1848: destroyed
+     mouth [127/154,139/168] det=5 len=5/1848: destroyed
+     mouth [47/56,153/182] det=3 len=1/728: SURVIVES
+
+--- (4) Exhaustive 1-tail check: only below-THR2 1-tail row ---
+  below-THR2 one-tail rows (holes pair + 1 tail, tail<=59): 1
+     meas=3859/420420=0.009178916 holes=(6, 10) tail=20

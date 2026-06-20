@@ -1,0 +1,62 @@
+== KNOWN-VALUE SANITY (independent engine) ==
+  drop-6       : meas=7/858 expected=7/858  MATCH=True  (0.0081585)
+  {5:+2} exc   : meas=3859/420420 expected=3859/420420  MATCH=True  (0.0091789)
+  drop-12      : meas=426/35035 expected=426/35035  MATCH=True  (0.0121593)
+  two-tail min : meas=50189/3223220 expected=50189/3223220  MATCH=True  (0.0155711)
+  THR1=7/858=0.0081585  THR2=426/35035=0.0121593
+  ALL KNOWN VALUES MATCH: True
+  THR1<THR2? True  (mouth below AP-2nd)
+== EXHAUSTIVE CENSUS: all primitive 12-subsets of [1,cap] ==
+
+ cap=13: 13 12-subsets, 13 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=97/4004=0.024226
+     at C=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13)  >=THR2? True  margin=0.012067
+
+ cap=14: 91 12-subsets, 91 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=97/4004=0.024226
+     at C=(1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13)  >=THR2? True  margin=0.012067
+
+ cap=15: 455 12-subsets, 455 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=95/4004=0.023726
+     at C=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 15)  >=THR2? True  margin=0.011567
+
+ cap=16: 1820 12-subsets, 1820 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=6163/336336=0.018324
+     at C=(1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16)  >=THR2? True  margin=0.006165
+
+ cap=17: 6188 12-subsets, 6188 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=27/1547=0.017453
+     at C=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17)  >=THR2? True  margin=0.005294
+
+ cap=18: 18564 12-subsets, 18564 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=27/1547=0.017453
+     at C=(1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17)  >=THR2? True  margin=0.005294
+
+ cap=19: 50388 12-subsets, 50388 primitive.
+   sub-THR2 cores: 1
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=911/57057=0.015966
+     at C=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 19)  >=THR2? True  margin=0.003807
+
+ cap=20: 125970 12-subsets, 125970 primitive.
+   sub-THR2 cores: 2
+     meas=7/858=0.008159  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  TOWER
+     meas=3859/420420=0.009179  C=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)  TOWER
+   min over TOWER-BROKEN primitive cores: meas=911/57057=0.015966
+     at C=(1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 19)  >=THR2? True  margin=0.003807
+
+== VERDICT ==
+  NO tower-broken core dips below THR2 anywhere in [1,20].
+  Every sub-THR2 primitive core contains the full tower {1,2,4,8}.

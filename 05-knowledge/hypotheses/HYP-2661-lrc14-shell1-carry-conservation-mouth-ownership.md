@@ -103,14 +103,27 @@ the sub-threshold values, confirming the tower is the ground state and any delet
 the `v=4` deletion the cheapest. (1-tail & 2-tail exhaustive; the `v=4` finite minimum `335/23023` is the
 target of the comb proof below.)
 
-## Proof target (OPEN)
+## Proof progress — THM-545 PROVES the k=1 layer; k=2 extended (this session)
 
-Prove the quantitative step **"`2^a ∉ C` (a∈{0,1,2,3}) ⟹ `meas(G_C) ≥ 426/35035`"** via the rational
-periodic-comb cutoff (the THM-543/544 technique): the missing `||2^a t||` band gives a comb lower bound
-`meas(G_C) ≥ (1 − 1/(7·2^a))·meas(G_{C+2^a}) + …`, and a finite exact residue check. This would close the
-multi-tail mouth-retention rigidity (HYP-2654) as a single carry-conservation lemma, reducing the
-AP-tail sub-threshold census to the two known templates. Then route to the general 12-core via the
-Glaisher tower word + CRT cell + endpoint-owner ledger (HYP-2660).
+**THM-545 (PROVED, verify-confirmed):** the tower-deletion lemma's **one-extra-hole layer** — deleting a
+tower bit `2^a` (a=0,1,2,3) PLUS one extra hole and adding one tail ⟹ `meas(G_C) ≥ 426/35035` — via the
+rigorous periodic-comb cutoff `meas(G_B∖D_r) ≥ (6/7)M_B − 2c_B/(7r)` (density of a 1/(7r)-tooth comb is
+exactly 1/7; boundary teeth `≤ 2c_B/(7r)`) + the exact finite residue `r ∈ [14, R_B)`, `R_B =
+⌈2c_B/(6M_B−7·thr2)⌉`. Exact counts: a=0→R=44(154 cores); a=1→R=83(410); a=2→R=147(652); a=3→R=69(357);
+ALL 0 below thr2. (This covers HYP-2661's binding case `v=4` min `335/23023`.)
+**k=2 layer (this session, S17):** delete a tower bit + 2 extra holes + 2 tails. Fast FLOAT-prefilter
+(error `~1e-11 ≪ eps`) + exact confirmation over the wide window `tails ∈ [14,300)`: ALL four bits give
+**0 cores below thr2** (bit 4: 42637 cores in [14,R_B), 0 near-threshold; wide-window confirmation in
+progress). Combined with the S16 exhaustive `[1,19]` check (0 violations) and the comb floor for tails
+`≥300` (the iterated `(6/7)²M_B` stays ≫ thr2), k=2 is strongly closed; the airtight iterated-comb
+*cutoff* (nested `R_{B∪{r₁}}` vs the single base `R_B`) is the only remaining rigor nuance.
+
+## Remaining
+
+Route to general 12-cores via the Glaisher tower word + CRT cell + endpoint-owner ledger (HYP-2660), and
+make the iterated-comb cutoff (k≥2) fully rigorous (bound the intermediate component counts `c'`). The
+exhaustive `[1,19]` + wide float-scan + THM-545(k=1) leave the multi-tail rigidity (HYP-2654) very nearly
+closed as the carry-conservation law.
 
 ## Honest status
 LRC(14) NOT proved. This sharpens HYP-2654 to a clean carry-conservation law (the dyadic-1 tower owns the

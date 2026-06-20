@@ -1,0 +1,8 @@
+[nh=1 done cnt=13]
+[nh=2 done cnt=4459]
+[nh=3 done cnt=250705]
+TOTAL scanned: 250705
+sub-THR2 with BROKEN tower (counterexamples): 0
+ALL sub-THR2 rows: 2
+  meas=0.0081585=7/858 holes=(6,) tails=() tower_intact=True
+  meas=0.0091789=3859/420420 holes=(6, 10) tails=(20,) tower_intact=True

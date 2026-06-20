@@ -1,0 +1,22 @@
+=== A. Delete each single speed from drop-6: which deletions destroy a mouth? ===
+  del  1: 4 mouths surviving=4/4  (no mouth touched)
+  del  2: 4 mouths surviving=4/4  (no mouth touched)
+  del  3: 4 mouths surviving=4/4  (no mouth touched)
+  del  4: 4 mouths surviving=4/4  (no mouth touched)
+  del  5: 4 mouths surviving=4/4  (no mouth touched)
+  del  7: 4 mouths surviving=4/4  (no mouth touched)
+  del  8: 4 mouths surviving=4/4  (no mouth touched)
+  del  9: 4 mouths surviving=4/4  (no mouth touched)
+  del 10: 4 mouths surviving=4/4  (no mouth touched)
+  del 11: 4 mouths surviving=2/4  (walls a mouth)
+  del 12: 4 mouths surviving=0/4  (walls a mouth)
+  del 13: 4 mouths surviving=2/4  (walls a mouth)
+  -> mouths destroyed ONLY by deletions of {11,12,13}? checking...
+     speeds whose deletion destroys >=1 mouth: [11, 12, 13]
+     == {11,12,13}? True
+
+=== B. COUNTEREXAMPLE HUNT: AP-tail 12-core, tower NOT intact, meas<THR2 ? ===
+    Scan: holes subset of {1..13} (size 1..4), tails in [14..50], |core|=12, primitive.
+    Looking for any sub-THR2 core MISSING at least one of {1,2,4,8}.
+    [nh=1 done, tail<= 60, running cnt=13]
+    [nh=2 done, tail<= 60, running cnt=3679]

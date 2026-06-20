@@ -1,0 +1,5 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\comb_rigor_check.py:4: SyntaxWarning: invalid escape sequence '\ '
+  meas(G \ D_r) >= (6/7) M - 2c/(7r)
+comb bound tested on 14586 (2-hole base, r) pairs; violations = 0
+tightest slack = 0.00493178 at holes=(1, 2) r=199 (LHS=0.106724, RHS=0.101792, c=4)
+=> comb inequality is RIGOROUS (always >= 0 slack)

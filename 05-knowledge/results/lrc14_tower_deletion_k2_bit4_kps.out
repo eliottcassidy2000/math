@@ -1,0 +1,3 @@
+=== k=2 tower-deletion scan: delete tower bit 4 + 2 extra holes, add 2 tails ===
+  bit 4: 66 bases, 42637 cores checked (tails<R_B), 0 near-threshold (exact-confirmed)
+  ==> ZERO cores below 426/35035. k=2 tower-deletion for bit 4: COMB-CERTIFIED (tails>=R_B) + EXACT (tails<R_B). PROVED.

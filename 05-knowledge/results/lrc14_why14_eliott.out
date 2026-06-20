@@ -1,0 +1,9 @@
+N=14: floor(log2 14)= 3  tower {2^a<14}= [1, 2, 4, 8]
+CRT split 1/14 = (1/2)(1/7), apex prime 7 = N/2.
+
+== For each N=2p, find the single-hole (N-2)-core mouth and its hole ==
+  N=  6 (p= 3): mouth single-hole = drop-2, meas=0.050000, hole_is_pow2=True, tower=[1, 2, 4]
+  N= 10 (p= 5): mouth single-hole = drop-4, meas=0.026190, hole_is_pow2=True, tower=[1, 2, 4, 8]
+  N= 14 (p= 7): mouth single-hole = drop-6, meas=0.008159, hole_is_pow2=False, tower=[1, 2, 4, 8]
+  N= 22 (p=11): mouth single-hole = drop-10, meas=0.007563, hole_is_pow2=False, tower=[1, 2, 4, 8, 16]
+  N= 26 (p=13): mouth single-hole = drop-24, meas=0.004523, hole_is_pow2=False, tower=[1, 2, 4, 8, 16]

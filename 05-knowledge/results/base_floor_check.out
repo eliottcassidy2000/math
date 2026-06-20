@@ -1,0 +1,14 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\base_floor_check.py:9: SyntaxWarning: invalid escape sequence '\{'
+  print("=== Base case k=0: single-hole bases {1..13}\{2^a}, no tail ===")
+=== Base case k=0: single-hole bases {1..13}\{2^a}, no tail ===
+  a=0 del 1: meas=1/14 (claim 1/14) match=True  >=thr2: True
+  a=1 del 2: meas=11/364 (claim 11/364) match=True  >=thr2: True
+  a=2 del 4: meas=97/4004 (claim 97/4004) match=True  >=thr2: True
+  a=3 del 8: meas=950/21021 (claim 950/21021) match=True  >=thr2: True
+
+=== Floor numbers for a=3 (delete 8): (6/7)^k * min k-hole base M ===
+  k=0: min base M=0.0452  >>thr2=0.0122
+  k=1: min base M=0.0534  >>thr2=0.0122
+  k=2: min base M=0.0775  >>thr2=0.0122
+  k=3: min base M=0.1077  >>thr2=0.0122
+  k=4: min base M=0.1436  >>thr2=0.0122
