@@ -10,6 +10,26 @@ an address repair analogous to HYP-2240/HYP-2241: exact sector wall atoms,
 private-sector owner mass, missed-state compatibility, and state-word support
 as proof channels for routing direct `p0` risk.  Next artifact:
 `04-computation/lrc14_wide_address_repair_codex_s55.py`.
+## codex-2026-06-20-S55 -- LRC14 BV-Fourier cross-scale decorrelation route -- HYP-2683/T922
+
+User asked to search both web and repo for Weyl/decorrelation ideas that might
+advance the proof.  Checkpointed/pulled first, then read the current HYP-2675
+decorrelation foundation, THM-546 one-far BV bound, S53/S54 AP/cube-root
+atlases, and OPEN-Q-108.  Web sources aligned with the repo frontier: Weyl
+criterion/ETK/Koksma-Hlawka convert discrepancy to exponential sums and
+variation; lacunary `f(n_k x)` systems decorrelate only through analytic
+regularity plus arithmetic nonresonance.
+
+Main progress: claimed HYP-2683/T922.  For a two-scale cluster coverage
+function `H(x,phi)`, the exact error between actual and independent-anchor
+models is `sum_{s!=0} Hhat(-M*s,s)`.  Therefore mixed BV decay
+`|Hhat(r,s)|<=V_mix/(4*pi^2|rs|)` would give a concrete nonresonant
+decorrelation error `<=V_mix/(12M)`.  Since KPS S19/S53 already show the finite
+decorrelated plateau is safe (`sup p0_decorr=Q(k-1)<cap_k`), the next proof
+obligation is now explicit: prove the LRC sector-coverage functions have an
+effective mixed-variation budget, choose `G` by `V_mix/(12G)<cap_k-Q(k-1)`, and
+route low-height resonance equations to the existing AP/cube-root and
+Ruzsa/Freiman finite atlases.  No LRC(14) proof claimed.
 
 ## codex-2026-06-20-S53 -- LRC14 rank-one AP-triple phase atlas -- HYP-2682/T921
 

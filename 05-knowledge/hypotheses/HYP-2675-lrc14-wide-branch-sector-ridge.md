@@ -123,3 +123,38 @@ k=12: Q(11)=14873/24696,   cap-Q=6295/24696
 
 This does not prove the Weyl-error/glue step, but it confirms the finite
 decorrelated comparison in the exact THM-548/S51 `P_r(B)` language.
+
+---
+
+## codex-2026-06-20-S55 addendum: BV-Fourier resonance filter for the missing Weyl error
+
+HYP-2683 records the next analytic target after a web/repo search on
+Weyl/decorrelation.  The right abstraction is a two-scale cluster coverage
+function `H(x,phi)`: actual rows evaluate `H` on the line `(x,Mx)`, while the
+decorrelated model averages over independent `(x,phi)`.
+
+Fourier gives the exact identity
+
+```text
+int H(x,Mx) dx - int H(x,phi) dx dphi = sum_{s!=0} Hhat(-M*s, s).
+```
+
+So an explicit mixed-BV decay bound
+
+```text
+|Hhat(r,s)| <= V_mix(H)/(4*pi^2*|r*s|)
+```
+
+would imply the clean nonresonant error
+
+```text
+|error| <= V_mix(H)/(12*M).
+```
+
+This is the multi-cluster sibling of THM-546's one-far BV estimate.  The
+remaining proof obligation is now concrete: define the actual LRC sector
+coverage `H`, prove its mixed-variation budget, and choose a scale threshold
+`G` below the plateau margin `cap_k-Q(k-1)`.  Low-height survivors of the
+resonance equation are not errors in the lemma; they are the finite atlas branch
+already being built by HYP-2682 (rank-one AP/cube-root phase) and HYP-2676/2677
+(higher-rank Ruzsa/Freiman packet models).
