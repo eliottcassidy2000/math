@@ -12,6 +12,17 @@ Eisenstein cyclic modes `S_omega=A+omega B+omega^2 C` and
 order sums.  Next computation will test whether direct risk, pair-tax shadow,
 and cyclic imbalance give different rankings on HYP-2680 triples.
 
+Added `04-computation/lrc14_cube_root_order_filter_codex_s52.py` and stored
+`05-knowledge/results/lrc14_cube_root_order_filter_codex_s52.out`.  Exact bank
+for far `(15,16,17)` over `3003` primitive cores: actual residual signs are
+`+2821/-182`, pair-tax shadow signs are `+1250/-1753`, triple packet signs are
+`+1999/-1004`, and actual-vs-recursion signs agree in only `1368` rows.  The
+four leader lenses differ: actual residual leader
+`(0,5,10,11,12,13,14,15,16,17)`, pair-tax and Eisenstein-imbalance leader
+`(0,4,6,8,10,12,14,15,16,17)`, direct-p0 leader
+`(0,9,10,11,12,13,14,15,16,17)`.  Conclusion: cube-root imbalance is a useful
+phase coordinate, but not direct cap risk by itself.
+
 ## mac-mini-2026-06-20-S3 — LRC(14): the far-element limit is a BOUNDARY FUNCTION — boundary-value decomposition (THM-548), two-far constant C₂=13/1372, simultaneous-peel r≥2 closure
 Dispatch: understand the crux + complete the proof; consider boundary functions / curvilinear convergence / bounded-harmonic boundary functions / Riemann-sphere maps. Ran 2 workflows (8-agent crux+boundary research; 7-agent adversarial verification) + direct exact computation. The user's boundary-function leads turned out to be the EXACT shape of the true-wide crux.
 **THE FRAME (reflection `the-far-element-limit-is-a-boundary-function`):** bounded core `B` = boundary point; far runner `w→∞` = radial approach; plateau `Φ(B)` = boundary function (Fatou, one-far limit PROVED via THM-546 rate 6/49); two-far curvature `I_B(u,v)` = Bagemihl ambiguity defect; resonance `mu+nv≈0` = ambiguous point = Freiman small relation. The boundary-function and additive-combinatorics views are the SAME exceptional set.
