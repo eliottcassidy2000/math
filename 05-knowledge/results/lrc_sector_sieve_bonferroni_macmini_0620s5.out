@@ -1,0 +1,39 @@
+Sector-sieve Bonferroni partial sums vs cap (extremal/dangerous clusters):
+
+consec_8 (k=8): p0=0.32721  cap_8=0.38146
+   S_r = ['1.0000', '1.6041', '1.7905', '1.3483', '0.6422', '0.1735', '0.0204']
+   Bonferroni level 1 (lower): -0.60408  
+   Bonferroni level 2 (UPPER): +1.18639  <= cap? no
+   Bonferroni level 3 (lower): -0.16190  
+   Bonferroni level 4 (UPPER): +0.48027  <= cap? no
+   Bonferroni level 5 (lower): +0.30680  
+   Bonferroni level 6 (UPPER): +0.32721  <= cap? YES
+
+consec_9 (k=9): p0=0.41616  cap_9=0.49426
+   S_r = ['1.0000', '1.3813', '1.5444', '1.1755', '0.5638', '0.1531', '0.0179']
+   Bonferroni level 1 (lower): -0.38129  
+   Bonferroni level 2 (UPPER): +1.16310  <= cap? no
+   Bonferroni level 3 (lower): -0.01241  
+   Bonferroni level 4 (UPPER): +0.55136  <= cap? no
+   Bonferroni level 5 (lower): +0.39830  
+   Bonferroni level 6 (UPPER): +0.41616  <= cap? YES
+
+true-wide leader (k=9): p0=0.32755  cap_9=0.49426
+   S_r = ['1.0000', '1.3964', '1.2338', '0.7586', '0.3202', '0.0804', '0.0089']
+   Bonferroni level 1 (lower): -0.39643  
+   Bonferroni level 2 (UPPER): +0.83741  <= cap? no
+   Bonferroni level 3 (lower): +0.07883  
+   Bonferroni level 4 (UPPER): +0.39898  <= cap? YES
+   Bonferroni level 5 (lower): +0.31862  
+   Bonferroni level 6 (UPPER): +0.32755  <= cap? YES
+
+wide AP (0,2,..,16) k=9: p0=0.41616  cap_9=0.49426
+   S_r = ['1.0000', '1.3813', '1.5444', '1.1755', '0.5638', '0.1531', '0.0179']
+   Bonferroni level 1 (lower): -0.38129  
+   Bonferroni level 2 (UPPER): +1.16310  <= cap? no
+   Bonferroni level 3 (lower): -0.01241  
+   Bonferroni level 4 (UPPER): +0.55136  <= cap? no
+   Bonferroni level 5 (lower): +0.39830  
+   Bonferroni level 6 (UPPER): +0.41616  <= cap? YES
+
+If an even-level (UPPER) Bonferroni partial <= cap for ALL clusters, p0<=cap is proved at that level.

@@ -1,0 +1,52 @@
+======================================================================
+CONSECUTIVE co-offset clusters E = {0,1,...,k-1}, k = 8,9,10
+======================================================================
+--- consec k=8  E=[0, 1, 2, 3, 4, 5, 6, 7]  (|E|=8) ---
+  p0(exact) = 481/1470 = 0.327211
+  cap        = 2243/5880 = 0.381463   (need p0 <= cap; margin +0.054252)
+  Bonferroni cumulative bounds on p0:
+    level 1 (LOWER): Sig_1=1.60408  p0_bound=-0.604082
+    level 2 (UPPER): Sig_2=1.79048  p0_bound=+1.186395  <= cap? NO
+    level 3 (LOWER): Sig_3=1.34830  p0_bound=-0.161905
+    level 4 (UPPER): Sig_4=0.64218  p0_bound=+0.480272  <= cap? NO
+    level 5 (LOWER): Sig_5=0.17347  p0_bound=+0.306803
+    level 6 (UPPER): Sig_6=0.02041  p0_bound=+0.327211  <= cap? YES
+    level 7 (LOWER): Sig_7=0.00000  p0_bound=+0.327211
+
+--- consec k=9  E=[0, 1, 2, 3, 4, 5, 6, 7, 8]  (|E|=9) ---
+  p0(exact) = 2447/5880 = 0.416156
+  cap        = 1979/4004 = 0.494256   (need p0 <= cap; margin +0.078099)
+  Bonferroni cumulative bounds on p0:
+    level 1 (LOWER): Sig_1=1.38129  p0_bound=-0.381293
+    level 2 (UPPER): Sig_2=1.54439  p0_bound=+1.163095  <= cap? NO
+    level 3 (LOWER): Sig_3=1.17551  p0_bound=-0.012415
+    level 4 (UPPER): Sig_4=0.56378  p0_bound=+0.551361  <= cap? NO
+    level 5 (LOWER): Sig_5=0.15306  p0_bound=+0.398299
+    level 6 (UPPER): Sig_6=0.01786  p0_bound=+0.416156  <= cap? YES
+    level 7 (LOWER): Sig_7=0.00000  p0_bound=+0.416156
+
+--- consec k=10  E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  (|E|=10) ---
+  p0(exact) = 8899/17640 = 0.504478
+  cap        = 4/7 = 0.571429   (need p0 <= cap; margin +0.066950)
+  Bonferroni cumulative bounds on p0:
+    level 1 (LOWER): Sig_1=1.19308  p0_bound=-0.193084
+    level 2 (UPPER): Sig_2=1.36366  p0_bound=+1.170578  <= cap? NO
+    level 3 (LOWER): Sig_3=1.04592  p0_bound=+0.124660
+    level 4 (UPPER): Sig_4=0.49887  p0_bound=+0.623526  <= cap? NO
+    level 5 (LOWER): Sig_5=0.13492  p0_bound=+0.488605
+    level 6 (UPPER): Sig_6=0.01587  p0_bound=+0.504478  <= cap? YES
+    level 7 (LOWER): Sig_7=0.00000  p0_bound=+0.504478
+
+======================================================================
+Smaller diagnostic: k=7 (apex boundary), consecutive
+======================================================================
+--- consec k=7  E=[0, 1, 2, 3, 4, 5, 6]  (|E|=7) ---
+  p0(exact) = 31/210 = 0.147619
+  Bonferroni cumulative bounds on p0:
+    level 1 (LOWER): Sig_1=1.96667  p0_bound=-0.966667
+    level 2 (UPPER): Sig_2=2.14048  p0_bound=+1.173810
+    level 3 (LOWER): Sig_3=1.60476  p0_bound=-0.430952
+    level 4 (UPPER): Sig_4=0.75952  p0_bound=+0.328571
+    level 5 (LOWER): Sig_5=0.20476  p0_bound=+0.123810
+    level 6 (UPPER): Sig_6=0.02381  p0_bound=+0.147619
+    level 7 (LOWER): Sig_7=0.00000  p0_bound=+0.147619
