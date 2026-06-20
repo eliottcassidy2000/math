@@ -189,6 +189,9 @@ layer `({1,...,13}\{a,b}) union {r}` with `r>=14`: the unique below-second row
 is still `(a,b,r)=(6,10,20)`, and it still retains the old drop-6 mouth mass
 exactly.
 
+THM-544 then proves that the two-replacement AP-tail layer has no below-second
+rows at all.
+
 ## Tournament Analysis
 
 Vertices: the deleted AP-window positions `e=1..13`.

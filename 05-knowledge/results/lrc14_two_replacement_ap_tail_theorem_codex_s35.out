@@ -1,0 +1,76 @@
+THM-544 LRC14 two-replacement AP-tail certificate
+family: C=({1,...,13}\{a,b,c}) union {r,s}, 1<=a<b<c<=13, 14<=r<s
+AP one-hole second value Q: 426/35035
+
+largest two-comb base cutoffs
+holes | M_base | components | 5M-7Q | cutoff R
+  (4, 5, 6) |      79/1155 |         16 |       551/2145 |      250
+ (4, 6, 10) | 14249/252252 |         12 | 248873/1261260 |      244
+(4, 10, 12) | 76291/1261260 |         12 | 274103/1261260 |      221
+ (5, 6, 13) | 18671/194040 |         20 | 998911/2522520 |      203
+  (2, 5, 6) |   1117/15015 |         14 |     4307/15015 |      196
+ (4, 6, 13) | 16277/194040 |         16 | 843301/2522520 |      192
+(6, 10, 13) | 16573/194040 |         16 | 862541/2522520 |      188
+ (4, 5, 12) | 11147/140140 |         14 |   43807/140140 |      180
+(4, 12, 13) | 17231/194040 |         16 |   82301/229320 |      179
+  (5, 6, 8) | 37571/420420 |         16 |  152071/420420 |      177
+ (2, 6, 10) | 15761/252252 |         10 | 286673/1261260 |      176
+(10, 12, 13) | 17527/194040 |         16 | 924551/2522520 |      175
+ (4, 5, 13) | 21611/194040 |         20 | 1190011/2522520 |      170
+(2, 10, 12) | 83851/1261260 |         10 | 311903/1261260 |      162
+(3, 10, 12) | 24139/315315 |         12 |   93857/315315 |      162
+ (3, 4, 12) | 32237/420420 |         12 |  125401/420420 |      161
+ (2, 6, 13) |   1537/17640 |         14 | 884251/2522520 |      160
+ (6, 8, 10) |  9769/126126 |         12 |  190549/630630 |      159
+(5, 12, 13) | 21011/194040 |         18 | 1151011/2522520 |      158
+(6, 10, 12) | 21514/315315 |         10 |   80732/315315 |      157
+
+largest active fixed-tail cutoffs
+holes, r | M_after_r | components | 6M-7Q | cutoff S
+  (4, 5, 6),  14 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  15 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  16 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  17 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  18 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  19 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  20 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  21 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  22 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  23 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  24 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  25 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  26 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  27 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  28 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  29 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  30 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  31 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  32 |      79/1155 |         16 |        148/455 |       99
+  (4, 5, 6),  33 |      79/1155 |         16 |        148/455 |       99
+
+three-hole bases checked: 286
+fixed smaller-tail rows checked for cutoff: 24824
+finite two-tail pairs checked exactly: 129991
+rows below 426/35035: 0
+
+exact minimum finite row
+  holes=(4, 6, 10), tails=(14,15), safe=14249/252252, gap_above_Q=1141/25740, old_survivor=7/858, core=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 14, 15)
+
+exact extremal cutoff data
+  largest two-comb cutoff: holes=(4, 5, 6), M=79/1155, c=16, 5M-7Q=551/2145, R=250
+  largest active fixed-tail cutoff: holes=(4, 5, 6), r=14, M=79/1155, c=16, 6M-7Q=148/455, S=99
+
+exact conclusion
+  Every two-replacement AP-tail row is at least 426/35035.
+  The exact finite minimum is 14249/252252, exceeding Q by 1141/25740.
+
+Tournament Analysis
+  vertices: two-tail proof gates
+  pairwise observable: exact eliminations before threshold Q
+  switch/gauge: two-comb cutoff, then fixed-tail one-comb cutoff, then scan
+  Hamiltonian path:
+    base_two_tail_slack > fixed_tail_slack > finite_scan > best_gap > mouth_survivor
+  directed 3-cycles: 0 (transitive proof-obligation order)
+  challenged assumption: the proof vertices are gates, not runners or arcs.
+
+PASS: THM-544 two-replacement AP-tail theorem certified.

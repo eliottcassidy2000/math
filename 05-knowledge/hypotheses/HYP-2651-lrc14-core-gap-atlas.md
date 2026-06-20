@@ -16,6 +16,7 @@ related:
   - THM-541
   - THM-542
   - THM-543
+  - THM-544
   - HYP-2653
   - HYP-2654
   - OPEN-Q-108
@@ -183,6 +184,24 @@ remaining below-second bounded AP-tail row must use multi-hole/multi-tail
 state-word damage, or else the proof must route to HYP-2653/HYP-2644 style
 far-element discrepancy.
 
+THM-544 then closes the two-replacement AP-tail layer:
+
+```text
+({1,...,13}\{a,b,c}) union {r,s}, 1 <= a < b < c <= 13, 14 <= r < s.
+```
+
+The exact two-comb/fixed-tail certificate checks `129,991` finite two-tail pairs
+after rational cutoffs and finds no row below `426/35035`; the finite minimum is
+
+```text
+holes=(4,6,10), tails=(14,15),
+meas(G_C)=14249/252252 = 426/35035 + 1141/25740.
+```
+
+Thus the bounded AP-tail search has advanced past the first two replacement
+layers.  The next local target is either a three-or-more-tail template theorem
+or a state-word damage lemma that exits the AP-tail normal form.
+
 3. Compose with the far-element plateau recursion:
 
 Rows with genuinely large or dissociated elements should be routed through
@@ -197,10 +216,10 @@ split is: HYP-2654 for bounded AP-tail mouth retention, HYP-2653/HYP-2644 for
 the far-element plateau route.
 
 The later exact HYP-2653 engine found a bounded resonant core where the proposed
-small uniform constant is too optimistic.  This does not affect THM-543; it
-clarifies the architecture.  Bounded resonant AP-tail layers should be certified
-by exact rational cutoffs, while genuinely wide rows need a separate structured
-breakpoint-discrepancy argument.
+small uniform constant is too optimistic.  This does not affect THM-543 or
+THM-544; it clarifies the architecture.  Bounded resonant AP-tail layers should
+be certified by exact rational cutoffs, while genuinely wide rows need a
+separate structured breakpoint-discrepancy argument.
 
 ## Relationship To Freiman Small-Excess
 

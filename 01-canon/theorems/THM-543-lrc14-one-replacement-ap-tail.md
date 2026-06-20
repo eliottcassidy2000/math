@@ -8,6 +8,7 @@ depends_on:
   - THM-542
   - HYP-2654
 related:
+  - THM-544
   - HYP-2651
   - HYP-2653
   - HYP-2650
@@ -149,6 +150,10 @@ This sharpens HYP-2654: in the one-replacement AP-tail layer, below-second means
 old drop-6 mouth retention exactly.  The remaining near-collar problem is no
 longer a one-tail problem; it must enter multi-hole/multi-tail templates,
 state-word damage, or the far-element plateau/discrepancy branch.
+
+THM-544 closes the next layer: every three-hole/two-replacement AP-tail row is
+already at least `426/35035`, with exact finite minimum
+`14249/252252=426/35035+1141/25740`.
 
 The concurrent HYP-2653 exact decorrelation work shows why this split matters:
 uniform far-tail constants can fail on bounded resonant cores, so resonant
