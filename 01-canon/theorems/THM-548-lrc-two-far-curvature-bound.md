@@ -1,7 +1,7 @@
 ---
 id: THM-548
 title: The boundary-value decomposition for LRC(14) true-wide clusters — p0(B∪F) = P_r(B) + resonance corrections, where P_r(B) is the fully-decorrelated Fatou limit (≤cap with margin growing in r) and the corrections vanish off the resonance set (small additive relations among the far runners = Freiman structure = boundary-function "ambiguous points")
-status: PARTIAL (the decomposition is exact and finite; the limits Φ_t and P_r(B) are derived and VERIFIED; P_r(B)≤cap−margin verified on sample bounded B with margin growing in r; the two-far curvature saturates/bounded. REMAINS: exhaustive P_r(B)≤cap over bounded B, and the signed resonance-correction bound + its Freiman reduction.) Complements codex HYP-2679 (exact two-far atlas).
+status: PARTIAL (the decomposition is exact (2^r terms; high order geometrically suppressed, NOT terminating at |S|=6 — corrected); the limits Φ_t and P_r(B) are derived and VERIFIED; P_r(B)≤cap−margin verified on sample bounded B with margin growing in r; the two-far curvature saturates/bounded. REMAINS: exhaustive P_r(B)≤cap over bounded B, and the signed resonance-correction bound + its Freiman reduction.) Complements codex HYP-2679 (exact two-far atlas).
 source: mac-mini-2026-06-20-S3
 depends_on:
   - THM-546   # one-far signed (6/49) bound
@@ -23,14 +23,22 @@ Region III of the LRC(14) sector crux is the **true-wide** case: `E = B ∪ F`, 
 bounded, `F = {f_1<…<f_r}` the far runners (`>14`), `r ≥ 2`. THM-547 closed `r=1` (boundary
 collar). This theorem handles `r ≥ 2` by the multivariate far-element recursion.
 
-## 1. The exact finite Newton expansion
+## 1. The exact Newton expansion (finite, geometrically dominated by low order)
 
-Since the runners in any `S ⊆ F` can newly complete a missed-sector configuration only when `B`
-misses **exactly** the sectors they supply, and `B` misses at most 6 sectors, the mixed-difference
-(Newton forward-difference / inclusion–exclusion) expansion **terminates at `|S|=6`**:
-> `p0(B∪F) = Σ_{S⊆F, |S|≤6} Δ_S(B)`,  `Δ_S(B) := Σ_{T⊆S}(−1)^{|S|−|T|} p0(B∪T)`.
+The mixed-difference (Newton forward-difference / inclusion–exclusion) expansion is exact, with
+`2^r` terms:
+> `p0(B∪F) = Σ_{S⊆F} Δ_S(B)`,  `Δ_S(B) := Σ_{T⊆S}(−1)^{|S|−|T|} p0(B∪T)`.
 `Δ_∅=p0(B)`; `Δ_{f}` = one-far increment (THM-546/547); `Δ_{f,f'}=I_B(f,f')` = the **two-far
 curvature** (codex HYP-2679); `Δ_S` for `|S|≥3` = higher curvatures.
+
+> **CORRECTION (adversarial verification, mac-mini-S3).** An earlier draft claimed the expansion
+> "terminates at `|S|=6`" (since `B` misses ≤6 sectors). This is **FALSE**: `Δ_S ≠ 0` for `|S|>6`
+> (VERIFIED: `B=(0,1,2,3)`, `|S|=7` gives `Δ_S = 971/949620 ≈ +0.00102`). The high-order terms do
+> not vanish — they are **geometrically suppressed by the apex-prime hierarchy** (`|S|`-fold
+> curvature constant `~1/7^{|S|+1}`, §3b), so the sum is dominated by low order but is genuinely
+> infinite-tailed within the finite `2^r` terms. The "`≤6`" applies correctly only to the
+> **missed-sector count `t`** in the closed boundary-value formula `P_r(B)` below (`B` misses ≤6
+> sectors), NOT to the subset size `|S|`.
 
 ## 2. The decorrelated limits (Fatou boundary values) — DERIVED + VERIFIED
 
