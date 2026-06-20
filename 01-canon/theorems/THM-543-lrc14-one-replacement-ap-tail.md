@@ -10,6 +10,7 @@ depends_on:
 related:
   - THM-544
   - HYP-2651
+  - HYP-2655
   - HYP-2653
   - HYP-2650
   - HYP-2652
@@ -155,10 +156,10 @@ THM-544 closes the next layer: every three-hole/two-replacement AP-tail row is
 already at least `426/35035`, with exact finite minimum
 `14249/252252=426/35035+1141/25740`.
 
-The concurrent HYP-2653 exact decorrelation work shows why this split matters:
-uniform far-tail constants can fail on bounded resonant cores, so resonant
-finite layers should be certified by exact rational cutoffs, while genuinely
-wide branches need their own discrepancy estimates.
+The concurrent HYP-2653/HYP-2655 exact decorrelation work shows why this split
+matters: a small uniform far-tail constant fails on resonant multiscale cores,
+so bounded AP-tail layers should be certified by exact rational cutoffs, while
+genuinely wide branches need the joint plateau/Delta recursion of HYP-2655.
 
 ## Tournament Analysis
 

@@ -10,6 +10,8 @@ depends_on:
   - THM-544
   - HYP-2651
 related:
+  - HYP-2655
+  - HYP-2653
   - HYP-2650
   - HYP-2652
   - HYP-2648
@@ -243,9 +245,9 @@ exact-row rigidity, for deeper multi-tail/state-word damage and
 far/discrepancy branches.
 
 Namespace note: this packet was renumbered after origin/main landed KPS HYP-2653
-for the far-element decorrelation rate.  The two results are complementary:
-KPS HYP-2653 supports the wide/far branch, while HYP-2654 isolates the bounded
-AP-tail mouth-retention branch.  The later exact HYP-2653 engine also warns that
-a too-small uniform decorrelation constant can fail on bounded resonant cores;
-THM-543 and THM-544 follow the complementary strategy of certifying bounded
-AP-tail cores by exact rational finite cutoffs.
+for the far-element decorrelation rate.  The later HYP-2655 update refutes the
+single small uniform-constant dovetail and re-localizes the wide branch to a
+joint plateau/Delta recursion.  These results are complementary: HYP-2655
+supports the wide/far branch, while HYP-2654 isolates the bounded AP-tail
+mouth-retention branch.  THM-543 and THM-544 follow the complementary strategy
+of certifying bounded AP-tail cores by exact rational finite cutoffs.

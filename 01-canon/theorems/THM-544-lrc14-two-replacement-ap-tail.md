@@ -9,6 +9,7 @@ depends_on:
   - HYP-2654
 related:
   - HYP-2651
+  - HYP-2655
   - HYP-2653
   - HYP-2650
   - HYP-2652
@@ -161,7 +162,7 @@ This narrows HYP-2654 further.  The bounded AP-tail obstruction is not in the
 first two replacement layers.  Any remaining below-second bounded AP-tail row
 must start at three or more replacement tails, or else the proof must leave the
 AP-tail model and use state-word damage, additive/Freiman structure, or the
-far-element discrepancy branch.
+far-element joint plateau/Delta recursion of HYP-2655.
 
 ## Tournament Analysis
 
