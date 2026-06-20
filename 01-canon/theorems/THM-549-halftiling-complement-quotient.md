@@ -43,7 +43,9 @@ Tiling model: tournament on `{1..n}`, fixed base path `n→…→1` (arc `k→k-
    for ALL tournaments (VERIFIED n=4,5,6, 100%); scores complement to `(n−1)−s`. Hence any
    complement-invariant invariant (cyclic-triangle count, Ham-path count, H, OCF, Walsh order-2)
    is computable by summing over the `⌊(n−1)²/4⌋`-cell half-region instead of the full
-   `C(n−1,2)` — a literal 2× saving, the diagonal SC spine handled once.
+   `C(n−1,2)` — a literal 2× saving, the diagonal SC spine handled once. **The OCF (odd-cycle
+   counts of ALL lengths) is complement-invariant too** (VERIFIED 100% n=4,5,6), so the CENTRAL
+   Claim-A / μ computation also halves on the half-tiling — not just c3/HP.
 
 ## Significance
 The half-tiling factors out the SAME Z_2 (complement = reverse-all-arcs) as the merged metagraph

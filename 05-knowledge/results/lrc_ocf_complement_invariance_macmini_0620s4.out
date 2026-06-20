@@ -1,0 +1,19 @@
+OCF / odd-cycle complement-invariance (reverse all arcs):
+  n=4 (64 tournaments): odd-cycle-count vector invariant in 64/64  ALL
+  n=5 (1024 tournaments): odd-cycle-count vector invariant in 1024/1024  ALL
+  n=6 (32768 tournaments): odd-cycle-count vector invariant in 32768/32768  ALL
+  => OCF (all odd-cycle counts) complement-invariant => Claim-A / mu computation halves on the half-tiling.
+
+Independent half(n) via Burnside (#orbits of sigma on 2^m tilings = (2^m + 2^fix)/2... NO:
+  half = #orbits of sigma on the m TILES = (m+#fixed-tiles)/2):
+  n=2: (m+fix)/2 = (0+0)/2 = 0  vs floor((n-1)^2/4)=0  OK
+  n=3: (m+fix)/2 = (1+1)/2 = 1  vs floor((n-1)^2/4)=1  OK
+  n=4: (m+fix)/2 = (3+1)/2 = 2  vs floor((n-1)^2/4)=2  OK
+  n=5: (m+fix)/2 = (6+2)/2 = 4  vs floor((n-1)^2/4)=4  OK
+  n=6: (m+fix)/2 = (10+2)/2 = 6  vs floor((n-1)^2/4)=6  OK
+  n=7: (m+fix)/2 = (15+3)/2 = 9  vs floor((n-1)^2/4)=9  OK
+  n=8: (m+fix)/2 = (21+3)/2 = 12  vs floor((n-1)^2/4)=12  OK
+  n=9: (m+fix)/2 = (28+4)/2 = 16  vs floor((n-1)^2/4)=16  OK
+  n=10: (m+fix)/2 = (36+4)/2 = 20  vs floor((n-1)^2/4)=20  OK
+  n=11: (m+fix)/2 = (45+5)/2 = 25  vs floor((n-1)^2/4)=25  OK
+  n=12: (m+fix)/2 = (55+5)/2 = 30  vs floor((n-1)^2/4)=30  OK
