@@ -1,3 +1,20 @@
+## codex-2026-06-20-S43 -- shell-full p1-tax quotient stability through B24 -- HYP-2669
+
+After pushing S42, pulled again (`origin/main` already up to date) and attacked the next sharp target: is the HYP-2668 shell-full `2p1/5` target just a B14 artifact?  Built `04-computation/lrc14_shellfull_p1_tax_quotient_codex_s43.py`, stored `05-knowledge/results/lrc14_shellfull_p1_tax_quotient_codex_s43.out`, and recorded `05-knowledge/hypotheses/HYP-2669-lrc14-shellfull-p1-tax-quotient-stability.md`.
+
+**FINDING:** forcing the full dyadic-1 tower `{1,2,4,8}` stabilizes the p1-tax frontier through `B=24`.  Exact quotient:
+
+```text
+family: E'={0}+{1,2,4,8}+3 extras from [1,24], w=max(E')+1..max(E')+8
+rows=9120
+B=14,16,18,20,22,24: >1/3 = 1, >3/8 = 1, >2/5 = 0 at every checkpoint
+stable max = 997/2562 at E'=(0,1,2,4,6,7,8,10), w=12
+exact 2/5 tax gap = 139/2450
+new-speed max beyond B=14 = 1371/4319 at E'=(0,1,2,4,8,12,16,20), w=24
+```
+
+This supports the ordered target after HYP-2668: shell-damaged rows should be discharged by HYP-2661/HYP-2666 first; shell-full rows appear to reduce to a finite dyadic-even packet lemma around the B13 leader plus a new-speed decay/far-survival lemma.  LRC(14) is not proved.
+
 ## codex-2026-06-19-S42 -- B14 shell-gated p1 tax; global 2/5 false but shell-full survives -- HYP-2668
 
 After pushing S41, ran one more exact bounded-layer stress test before closing because HYP-2667's own lesson was to stress-test constants before canonizing them.  Built `04-computation/lrc14_p1_tax_b14_shell_gate_codex_s42.py`, stored `05-knowledge/results/lrc14_p1_tax_b14_shell_gate_codex_s42.out`, and recorded `05-knowledge/hypotheses/HYP-2668-lrc14-b14-shell-gated-p1-tax.md`.

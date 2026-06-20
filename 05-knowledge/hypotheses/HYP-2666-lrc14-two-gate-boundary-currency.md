@@ -1,7 +1,7 @@
 ---
 id: HYP-2666
 title: LRC14 two-gate boundary currency - shell-1 gate plus refined p1 tax
-status: OPEN; exact bounded-bank evidence, raw tax constant shell-gated by HYP-2667/HYP-2668
+status: OPEN; exact bounded-bank evidence, raw tax constant shell-gated by HYP-2667/HYP-2668/HYP-2669
 source: codex-2026-06-20-S40
 tangent: T908
 depends_on:
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2664
   - HYP-2665
 related:
+  - HYP-2669
   - HYP-2668
   - HYP-2667
   - HYP-2648
@@ -46,15 +47,17 @@ cap_9 = 1979/4004,
 
 after quotienting first by the shell-1 packet.
 
-**S41/S42 correction:** HYP-2667 shows that the cap bank can have room for `c=3/8`
+**S41/S42/S43 correction:** HYP-2667 shows that the cap bank can have room for `c=3/8`
 while the actual far discrepancy still violates `Delta_w^+ <= 3*p1(E')/8`.
 The worst full `B=13` row,
 `E'=(0,1,2,4,6,7,8,10), w=12`, is shell-1-full and has
 `Delta_w^+/p1=997/2562 > 3/8`.  Thus the two-gate proof order remains useful,
 but the raw far-tax target must be larger.  HYP-2668 then refutes global
 `2p1/5` at `B=14`, but the single failure is shell-1 damaged; every
-shell-1-full row in that scan remains below `2p1/5`.  Thus the refined target
-is shell-gated `2p1/5`, not a global scalar bound.
+shell-1-full row in that scan remains below `2p1/5`.  HYP-2669 extends the
+shell-full quotient through `B=24` with the same B13 leader and exact `2/5`
+tax gap `139/2450`.  Thus the refined target is shell-gated `2p1/5`, not a
+global scalar bound.
 
 ## Exact Bounded Evidence
 
@@ -105,8 +108,9 @@ AP8 boundary row and none threaten `c=3/8`.
 At the older `c=1/3` checkpoint, the same max rows have slack
 `448069/8828820` globally and `51871/504504` in the shell-1-full stratum.
 HYP-2665 shows that `c=1/3` is not enough for the actual far discrepancy,
-HYP-2667 shows that `3/8` is not enough either, and HYP-2668 shows global
-`2/5` is also too strong before the shell gate.  This cap bank still has room
+HYP-2667 shows that `3/8` is not enough either, HYP-2668 shows global
+`2/5` is also too strong before the shell gate, and HYP-2669 keeps the
+shell-full `2/5` quotient stable through `B=24`.  This cap bank still has room
 for `3/8`; that is a cap-slack fact, not a proof of the actual raw tax.
 
 ## Interpretation
@@ -144,8 +148,9 @@ or Delta_w^+(E') <= 2*p1(E')/5
 with the residual interpreted through the HYP-2662 endpoint-weight/Galois
 phase decomposition and HYP-2665/HYP-2667's phase-packet cancellation warning.
 A more precise alternative is to prove generic phase packets below `3p1/8` and
-classify the dyadic-even frontier below `2p1/5`, while keeping the bounded cap
-bank charged with its exact slack ledger.
+classify the finite dyadic-even frontier below `2p1/5`, with HYP-2669 pointing
+to the B13 leader as the local packet target, while keeping the bounded cap bank
+charged with its exact slack ledger.
 
 ## Guardrails
 

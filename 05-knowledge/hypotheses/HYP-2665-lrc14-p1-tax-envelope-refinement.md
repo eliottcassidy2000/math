@@ -38,11 +38,12 @@ Delta_w^+ <= 3*p1(E')/8
 or a packet-refined inequality that treats the few `>1/3` rows by their
 phase-packet structure.
 
-**S41/S42 correction:** HYP-2667 later refutes the raw `3/8` target on the full
+**S41/S42/S43 correction:** HYP-2667 later refutes the raw `3/8` target on the full
 bounded `B=13` bank.  The live scalar target is `2/5`, or a split theorem with
 generic packets at `3/8` and a dyadic-even packet frontier below `2/5`.
 HYP-2668 then refutes global raw `2/5` on `B=14`, but the failure is
-shell-1 damaged; the shell-1-full target remains `2/5` in that scan.
+shell-1 damaged; HYP-2669 keeps the shell-1-full target alive through `B=24`
+with the same B13 leader.
 
 ## Evidence
 
@@ -163,5 +164,5 @@ the error to `p1`.
 
 LRC(14) is not proved.  HYP-2665 refines HYP-2664: the p1 currency remains
 promising and the constant `1/3` is false.  HYP-2667/HYP-2668 further correct
-the sampled `3/8` and global `2/5` leads; the current target is shell-gated
-`2p1/5`.
+the sampled `3/8` and global `2/5` leads; HYP-2669 supports the shell-full
+`2p1/5` quotient through `B=24`.

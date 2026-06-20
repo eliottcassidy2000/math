@@ -44,12 +44,12 @@ with an initial proof-friendly target `c=1/3`, and a sharper residual-only
 target near `c=1/4`.  The key point is that `p1(E')` is already present in the plateau, so
 this turns the resonant endpoint problem into a joint plateau/Delta inequality.
 
-**S40/S41/S42 correction:** HYP-2665 refutes the raw `c=1/3` constant,
+**S40/S41/S42/S43 correction:** HYP-2665 refutes the raw `c=1/3` constant,
 HYP-2667 refutes the raw `c=3/8` constant on the full bounded `B=13` bank,
 and HYP-2668 refutes global `c=2/5` on the full bounded `B=14` bank.  The
-`p1` currency remains useful, but only after the right packet gate: the current
-target is `c=2/5` on the shell-1-full quotient, with shell-damaged rows routed
-through HYP-2661/HYP-2666 first.
+`p1` currency remains useful, but only after the right packet gate: HYP-2669
+keeps `c=2/5` alive on the shell-1-full quotient through `B=24`, with
+shell-damaged rows routed through HYP-2661/HYP-2666 first.
 
 ## Evidence
 
@@ -117,6 +117,8 @@ survives the full bank with minimum tax gap `139/2450`.
 HYP-2668 then shows global `2/5` is too strong at B=14:
 `7071/17584 ~= 0.402127` for `E'=(0,1,4,6,8,10,12,14), w=16`, but that row
 misses shell-1 bit `2`; all shell-1-full B=14 rows remain below `2/5`.
+HYP-2669 extends the shell-1-full check through B24, keeping the same B13 leader
+`997/2562` and exact `2/5` gap `139/2450`.
 
 ## Interpretation
 
@@ -150,7 +152,7 @@ Then combine with the exact bounded-bank certificate:
 p0(E') + (1/7+2/5)*p1(E') <= cap9
 ```
 
-on the shell-1-full bounded quotient; HYP-2668 is the current finite evidence
+on the shell-1-full bounded quotient; HYP-2669 is the current finite evidence
 for this gate.  Large-tail and nonlocal rows should route
 through HYP-2655/HYP-2658 recursion, while near-collar small-plateau rows route
 through HYP-2661/HYP-2663 packet rigidity.

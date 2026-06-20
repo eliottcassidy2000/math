@@ -9,6 +9,7 @@ depends_on:
   - HYP-2665
   - HYP-2664
 related:
+  - HYP-2669
   - HYP-2661
   - HYP-2662
   - HYP-2663
@@ -91,6 +92,9 @@ E'=(0,1,2,4,6,7,8,10), w=12
 Delta_w^+/p1 = 997/2562 ~= 0.389149 < 2/5.
 ```
 
+HYP-2669 later extends this shell-1-full stability through `B=24`: the same
+row remains the maximum, with exact `2/5` tax gap `139/2450`.
+
 So, in the B=14 scan:
 
 ```text
@@ -116,8 +120,10 @@ This reconciles the two incoming routes:
    quotient.
 2. HYP-2667 says raw constants must be tested against actual Delta, not only
    cap slack.
-3. HYP-2668 says the current proof obligation is shell-gated:
-   `shell1_full => 2p1/5`, with shell-damaged rows discharged separately.
+3. HYP-2668 says the current proof obligation is shell-gated.
+4. HYP-2669 says the shell-full half remains stable through `B=24`, so the
+   live local target is the finite dyadic-even packet around the B13 leader,
+   with shell-damaged rows discharged separately.
 
 ## Tournament Analysis
 
@@ -154,4 +160,5 @@ shell gate.  It does not.
 
 LRC(14) is not proved.  HYP-2668 sharpens the current proof obligation to a
 two-gate theorem: prove HYP-2661-style shell damage pays first, then prove
-`Delta_w^+ <= 2*p1(E')/5` on the shell-1-full quotient.
+`Delta_w^+ <= 2*p1(E')/5` on the shell-1-full quotient, sharpened by
+HYP-2669 to a finite dyadic-even packet plus new-speed decay target.

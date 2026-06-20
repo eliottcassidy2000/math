@@ -1,7 +1,7 @@
 ---
 id: HYP-2667
-title: LRC14 p1-tax packet frontier - 3p1/8 is false; B13 survives 2p1/5
-status: OPEN; full B=13 exact frontier, later shell-gated by HYP-2668
+title: LRC14 p1-tax packet frontier - 3p1/8 is false; B13 shell-full leader survives 2p1/5
+status: OPEN; full B=13 exact frontier, later shell-gated by HYP-2668/HYP-2669
 source: codex-2026-06-19-S41
 depends_on:
   - HYP-2665
@@ -9,6 +9,7 @@ depends_on:
   - HYP-2662
   - HYP-2655
 related:
+  - HYP-2669
   - HYP-2668
   - HYP-2666
   - HYP-2661
@@ -44,11 +45,12 @@ generic phase packets <= 3*p1/8,
 dyadic-even packet frontier <= 2*p1/5.
 ```
 
-**S42 correction:** HYP-2668 refutes the global raw `2p1/5` target in the
+**S42/S43 correction:** HYP-2668 refutes the global raw `2p1/5` target in the
 full `B=14` bank.  The failure is shell-1 damaged, while the shell-1-full
-stratum remains below `2p1/5`.  The current target is therefore shell-gated:
-shell-damaged rows route to HYP-2661/HYP-2666 first, and shell-1-full rows keep
-the `2p1/5` p1-tax target.
+stratum remains below `2p1/5`.  HYP-2669 then scans the corrected shell-full
+quotient through `B=24` and keeps this same B13 leader as the maximum.  The
+current target is therefore shell-gated: shell-damaged rows route to
+HYP-2661/HYP-2666 first, and shell-1-full rows keep the `2p1/5` p1-tax target.
 
 ## Evidence
 
