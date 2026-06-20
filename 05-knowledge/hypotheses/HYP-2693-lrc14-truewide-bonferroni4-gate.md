@@ -12,6 +12,8 @@ depends_on:
   - HYP-2684
   - HYP-2691
 related:
+  - HYP-2695
+  - HYP-2694
   - HYP-2692
   - THM-546
   - THM-548
@@ -100,6 +102,29 @@ k=10 tightest true-wide row (0,2,4,6,8,10,12,14,15,16):
   p0=265/588, tail45=1/14,
   U4=307/588, cap10-U4=629/7644.
 ```
+
+HYP-2695 sharpens this target by splitting cap into THM-535's subadditive
+floor and an exact dividend.  The S60 audit found no true-wide `k>=9`
+violations of the stronger inequality
+
+```text
+U4(E) <= floor_k = (k-6)/7.
+```
+
+The exact leaders have floor slacks `29/980` at `k=9` and `29/588` at `k=10`.
+The exception is `k=8`: three true-wide rows in the `B18` box exceed `2/7`,
+with worst floor debt `107/8820`, but all remain below cap.  Thus HYP-2695
+refines the HYP-2693 proof split to:
+
+```text
+k>=9 true-wide -> prove the floor gate,
+k=8 true-wide  -> finite exact cap-dividend ledger,
+boundary/AP    -> HYP-2691 finite transfer templates.
+```
+
+Incoming HYP-2694 supplies the complementary single-block decorrelated
+wide-cover route; this HYP-2695 refinement is the final-row Bonferroni
+comparison after that wide-cover/decorrelation routing.
 
 The exact equality of AP9 and the doubled AP boundary row confirms that
 integer dilation can preserve the missed-sector profile while crossing the

@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 — TRUE-WIDE CAP-FLOOR GATE (codex-2026-06-20-S60, HYP-2695/T930).**
+HYP-2693's true-wide Bonferroni4 cap gate now has a sharper currency split.  THM-535 proves
+`cap_k>=floor_k=(k-6)/7`; exact S60 audit shows the true-wide rows with `k>=9` appear to satisfy
+the stronger floor gate `U4=p0+p5+5p6<=floor_k`, so exact cap minimizers should only be needed for
+the `k=8` dividend row.  Exact boxes: k=8 B18 has `3` true-wide floor failures but `0` cap failures;
+k=9 B18 (`27020` true-wide), k=10 B16 (`3432`), k=11 B16 (`3003`), and k=12 B16 (`2002`) have
+`0` true-wide floor/cap failures.  Tight slacks: k=9 `U4=391/980`, floor slack `29/980`; k=10
+`U4=307/588`, floor slack `29/588`; worst k=8 floor debt `107/8820` is covered by cap slack
+`295/3528` and dividend `563/5880`.  New subtarget: prove the state-mass/decorrelation high-tail
+floor lemma for true-wide `k>=9`, and route true-wide `k=8` through finite cap-dividend templates;
+boundary/AP stays on HYP-2691.  Incoming HYP-2694's single-block decorrelated wide-cover extremizer is
+the complementary partition-function route; HYP-2695 is the final-row Bonferroni currency split. ->
+HYP-2695, HYP-2694, HYP-2693, THM-535, THM-556, HYP-2683, HYP-2684, HYP-2676, HYP-2677,
+OPEN-Q-108.
+
 **OPEN-Q-108 — INCLUSION-EXCLUSION-OVER-N COMPREHENSIVE VIEW + REDIRECT (mac-mini-2026-06-20-S5, HYP-2692).**
 The LRC's inclusion-exclusions are one arithmetic skeleton indexed by `6=2·3`: N=7 sectors (=THM-534
 moment-LP, optimal closes k=8-10, plain Bonferroni fails); N=2 quadratic χ (QR/NQR, Gauss sum √−7,

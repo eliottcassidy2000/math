@@ -24,6 +24,51 @@ partition-function statement: linear functionals of Z_n = cut-space observables;
 connections: THM-027 (regular=c3-extreme, Paley at mean+2sigma), THM-552 (even-bias = parity-dichotomy shadow), THM-549
 (complement-halving 2x lossless), H-max IS self-complementary n=3..8 (3,5,15,45,189,661). Engine
 `04-computation/tile_address_score_gf_engine_kps.py`; reflection `the-three-tiling-recurrences-are-one-partition-function`.
+## codex-2026-06-20-S60 -- LRC14 true-wide Bonferroni4 cap-floor gate -- HYP-2695/T930
+
+User asked for a long LRC proof session focused on the true-wide branch and
+understanding cap.  Pulled first with `--autostash`; incoming coordination
+work added `comms/POKE-COORDINATION.md` and left the session-state autostash
+restored locally.  Background explorer agents independently confirmed the cap
+semantics and the same sharp proof direction: split `cap_k` into THM-535's
+subadditive floor `(k-6)/7` plus exact dividend, then try to prove the raw
+THM-556 Bonferroni4 expression below the floor on true-wide rows.
+
+Added `04-computation/lrc14_truewide_cap_floor_gate_codex_s60.py` and stored
+`05-knowledge/results/lrc14_truewide_cap_floor_gate_codex_s60.out`.  The script
+keeps exact Fractions, asserts `U4=p0+p5+5p6` on every row, and compares `U4`
+with both `floor_k=(k-6)/7` and `cap_k`.
+
+Main exact result:
+
+```text
+k=8,  B18: truewide=16359, floor failures=3, cap failures=0
+k=9,  B18: truewide=27020, floor failures=0, cap failures=0
+k=10, B16: truewide=3432,  floor failures=0, cap failures=0
+k=11, B16: truewide=3003,  floor failures=0, cap failures=0
+k=12, B16: truewide=2002,  floor failures=0, cap failures=0
+```
+
+The tight true-wide leaders are exact: k=9 row
+`(0,4,6,8,10,12,14,15,16)` has `U4=391/980` and floor slack `29/980`;
+k=10 row `(0,2,4,6,8,10,12,14,15,16)` has `U4=307/588` and floor slack
+`29/588`.  The k=8 exception is real: `(0,3,6,9,12,14,15,18)` has
+`U4=2627/8820`, floor debt `107/8820`, but cap slack `295/3528`; the exact
+cap dividend is `563/5880`.
+
+Opened HYP-2695/T930 and reflection
+`07-reflections/lrc14-truewide-cap-floor-gate-codex-s60.md`.  New proof
+obligation: prove `second_largest(E)>14, k>=9 => p0+p5+5p6 <= (k-6)/7`;
+treat `k=8` as a finite cap-dividend ledger; keep boundary/AP rows on
+HYP-2691's transfer-DP route.  No LRC14 proof is claimed.  The useful progress
+is that most true-wide rows should not require exact cap-minimizer information
+at all.
+
+After a later pull, incoming KPS work had already claimed HYP-2694 for the
+single-block wide-cover extremizer.  This cap-floor gate was renumbered to
+HYP-2695 and cross-linked to that incoming HYP-2694, which attacks the
+decorrelated wide-cover partition function while HYP-2695 records the
+final-row Bonferroni currency split.
 
 ## mac-mini-2026-06-20-S5 — LRC: inclusion-exclusion over the apex prime's divisors — comprehensive reframe + archimedean redirect (HYP-2692, reflection)
 Dispatch: apply "inclusion-exclusion over 3 (or another natural number)" to the LRC; comprehensive view; to proof. 6-reframing workflow (completed) + direct computation.

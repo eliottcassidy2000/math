@@ -11,6 +11,8 @@ related:
   - HYP-2684  # codex BV-Fourier cross-scale decorrelation (= the R_2 archimedean lever)
   - HYP-2681  # cube-root Eisenstein (the C_3 half of Z/2xZ/3)
   - HYP-2693  # six-sector Bonferroni4 high-tail gate, complementary final-row target
+  - HYP-2694  # single-block decorrelated wide-cover extremizer
+  - HYP-2695  # cap-floor sharpening of the final-row target
   - OPEN-Q-108
 ---
 
@@ -70,5 +72,11 @@ dangerous |B|=7 rows that is `R_1` (collar machinery, barely-far); for sparse co
 HYP-2693/THM-556 gives the complementary sector-sieve form of the same split:
 for six inner sectors, level-4 Bonferroni collapses exactly to
 `U4=p0+p5+5p6`.  After the leading residual and finite-template branches are
-routed, the true-wide final row should pass the high-tail gate
-`p0+p5+5p6<=cap`.
+routed, the true-wide final row should pass the high-tail gate.
+
+HYP-2695 sharpens that last comparison: true-wide rows with `k>=9` appear to
+spend only THM-535's floor `floor_k=(k-6)/7`, while `k=8` is the finite
+exact-cap-dividend exception.  The target after routing residuals is therefore
+`p0+p5+5p6<=floor_k` for `k>=9`, plus the finite `k=8` cap-dividend ledger.
+Incoming HYP-2694 is adjacent but different: it attacks the decorrelated
+wide-cover partition function and its single-block extremizer.
