@@ -15,6 +15,7 @@ related:
   - HYP-2646
   - THM-541
   - THM-542
+  - THM-543
   - HYP-2653
   - HYP-2654
   - OPEN-Q-108
@@ -162,6 +163,26 @@ one-tail AP-drop-6 row `({1,...,13}\{6,h}) union {r}`, the only row below
 `426/35035` is the `(h,r)=(10,20)` tail, and it keeps old mouth mass exactly
 `7/858`.
 
+THM-543 upgrades this from the drop-6 one-tail subcase to the entire
+one-replacement AP-tail layer:
+
+```text
+({1,...,13}\{a,b}) union {r}, 1 <= a < b <= 13, r >= 14.
+```
+
+Across all `78` two-hole bases, exact periodic-comb cutoffs reduce the infinite
+tail to `3277` finite rows, and the only row below `426/35035` is again
+`(a,b,r)=(6,10,20)` with
+
+```text
+3859/420420 = 7/858 + 1/980.
+```
+
+Thus the live near-collar gap has moved past one-replacement AP tails.  Any
+remaining below-second bounded AP-tail row must use multi-hole/multi-tail
+state-word damage, or else the proof must route to HYP-2653/HYP-2644 style
+far-element discrepancy.
+
 3. Compose with the far-element plateau recursion:
 
 Rows with genuinely large or dissociated elements should be routed through
@@ -174,6 +195,12 @@ sigma-dependent far-element decorrelation bound and reducing the uniform
 far-element constant to a structured breakpoint discrepancy.  Thus the current
 split is: HYP-2654 for bounded AP-tail mouth retention, HYP-2653/HYP-2644 for
 the far-element plateau route.
+
+The later exact HYP-2653 engine found a bounded resonant core where the proposed
+small uniform constant is too optimistic.  This does not affect THM-543; it
+clarifies the architecture.  Bounded resonant AP-tail layers should be certified
+by exact rational cutoffs, while genuinely wide rows need a separate structured
+breakpoint-discrepancy argument.
 
 ## Relationship To Freiman Small-Excess
 

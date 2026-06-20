@@ -184,6 +184,11 @@ mouth mass `1/980`.
 THM-542 proves that this is the only below-cutoff row in the entire one-tail
 AP-drop-6 family.
 
+THM-543 strengthens the same conclusion to the whole one-replacement AP-tail
+layer `({1,...,13}\{a,b}) union {r}` with `r>=14`: the unique below-second row
+is still `(a,b,r)=(6,10,20)`, and it still retains the old drop-6 mouth mass
+exactly.
+
 ## Tournament Analysis
 
 Vertices: the deleted AP-window positions `e=1..13`.

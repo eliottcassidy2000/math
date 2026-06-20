@@ -7,6 +7,7 @@ depends_on:
   - THM-541
   - HYP-2654
 related:
+  - THM-543
   - HYP-2651
   - HYP-2650
   - HYP-2652
@@ -149,6 +150,10 @@ THM-542 proves the first infinite mouth-retention subcase of HYP-2654.  In the
 one-tail AP-drop-6 family, being below the AP one-hole second value does not
 create new behavior: the row must be the `(6,10)->20` tail, and that tail is
 exactly the old drop-6 collar plus a new `1/980` mouth contribution.
+
+THM-543 extends this to every one-replacement AP-tail row
+`({1,...,13}\{a,b}) union {r}` with `r>=14`.  Thus THM-542 is the central-hole
+slice of a full two-hole/one-tail exact cutoff theorem.
 
 This is an arithmetic statement about rational wall combs.  The moving object is
 the integer speed `r`, and the proof is controlled by exact denominators and

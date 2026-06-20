@@ -5,6 +5,30 @@ User: integrate other agents' ideas, try new things, explore, long session testi
 **MY CONTRIBUTION (HYP-2653):** the far-element decorrelation error has the EXACT 1-D form Δ_w=(1/w)Σ_cells[G_0(w·b_c−s_c/7)−G_0(w·a_c−s_c/7)] (G_s=G_0(·−s/7) shift; VERIFIED match exact), giving the RIGOROUS bound **|Δ_w|≤(6/7)·σ(E')/w (PROVED, Fourier+BV)** — the far-stranger peel is now a theorem (σ-dependent). The uniform-in-σ bound (w|Δ_w|≤C≈1.95, σ-INDEPENDENT, gives a FINITE base) = a structured breakpoint discrepancy of {w·(j/e)} weighted by the missed-sector phase, surviving w∼e resonances — OPEN. **DOVETAIL (HYP-2653b):** with C≈1.95, peel max(E)≥16 ⟹ p_0(E)≤Q(k−1)+0.122 < cap_k (Q(7)=0.197<0.260, Q(8)=0.362<0.372, Q(9)=0.448<0.482), base span≤15 = the DONE span-16 finite check. **SO LRC(14) (sector route) = [uniform C(k)≤~1.95, the ONE open input] + [span-16 check DONE] + [glue G1 DONE] + [k≤7 DONE].**
 NEW: CASE-thm538 resolved, THM-538 corrected, MISTAKE-078 amended, HYP-2653(+b), reflection a-celebrated-theorem-was-wrong. NEXT (the single gap): prove the uniform decorrelation constant C(k) — the structured breakpoint discrepancy surviving resonances. @mac-mini @codex: the K-floor is retired; HYP-2653's exact 1-D reduction is the clean form of your far-element plateau / HYP-2645 uniform-C.
 
+## codex-2026-06-19-S35b -- LRC14 full one-replacement AP-tail layer closed -- THM-543
+
+User asked to keep moving toward the LRC proof with exact fractions and number-theoretic structure.  Pulled new KPS exact uniform-decorrelation engine work first; its scan found a bounded resonant core with `w|Delta_w|=1370/539`, warning that small uniform constants can fail on finite resonant pockets.  Used that as a routing cue: certify bounded AP-tail resonance by exact rational cutoffs, leave genuinely wide rows to HYP-2653/HYP-2644 discrepancy.
+
+Added `04-computation/lrc14_one_replacement_ap_tail_theorem_codex_s35.py`, stored `05-knowledge/results/lrc14_one_replacement_ap_tail_theorem_codex_s35.out`, and proved `01-canon/theorems/THM-543-lrc14-one-replacement-ap-tail.md`.
+
+**FINDING:** for every integer one-replacement AP-tail core
+
+```text
+C_{a,b,r}=({1,...,13}\{a,b}) union {r}, 1<=a<b<=13, r>=14,
+```
+
+the exact inequality `meas(G_C)<426/35035` holds if and only if `(a,b,r)=(6,10,20)`.  The exceptional row has
+
+```text
+meas(G_C)=3859/420420 = 7/858 + 1/980,
+old drop-6 mouth survivor = 7/858,
+new mass = 1/980.
+```
+
+The proof uses the exact comb bound `meas(G\D_r) >= (6/7)meas(G)-2c/(7r)`.  For all `78` two-hole bases, `6M-7Q>0`; the weakest slack and largest cutoff are both the resonant base `(6,10)` with `M=313/9702`, `c=8`, `6M-7Q=11399/105105`, `R=148`.  After the cutoffs only `3277` finite rows remain, checked by Fraction interval arithmetic.
+
+**PROOF ROUTE UPDATE:** HYP-2654's one-replacement AP-tail layer is now theorem-level, not evidence.  The remaining near-collar target is multi-hole/multi-tail mouth damage or a handoff to state-word/far-element discrepancy.  LRC(14) is not proved, but the bounded AP-tail side lost a full infinite layer.
+
 ## codex-2026-06-19-S35 -- LRC14 one-tail mouth-retention subcase closed -- THM-542
 
 User asked to keep moving toward the LRC proof while relying on exact fractions and integer/number-theoretic structure rather than real-speed intuition.  Synced current mainline, kept the KPS HYP-2653 far-element result as the complementary wide branch, and attacked the bounded AP-tail side of HYP-2654.  Added `04-computation/lrc14_one_tail_mouth_retention_theorem_codex_s35.py`, stored `05-knowledge/results/lrc14_one_tail_mouth_retention_theorem_codex_s35.out`, and proved `01-canon/theorems/THM-542-lrc14-one-tail-mouth-retention.md`.

@@ -6,6 +6,7 @@ source: codex-2026-06-19-S34
 depends_on:
   - THM-541
   - THM-542
+  - THM-543
   - HYP-2651
 related:
   - HYP-2650
@@ -101,9 +102,9 @@ The first row at the AP one-hole second value is still the endpoint drop:
 
 with `426/35035`, and it has no old drop-6 survivor mass.
 
-## One-Tail Subcase Closed
+## One-Replacement AP-Tail Layer Closed
 
-THM-542 proves the infinite one-tail AP-drop-6 subcase exactly.  For
+THM-542 first proved the infinite one-tail AP-drop-6 subcase exactly.  For
 
 ```text
 C_{h,r} = ({1,...,13} \ {6,h}) union {r},  h != 6, r >= 14,
@@ -123,6 +124,30 @@ meas(G_h \ D_r) >= (6/7)meas(G_h) - 2c_h/(7r),
 
 then checks only `863` exact finite rows below the resulting cutoffs.  This
 turns the first AP-tail mouth-retention statement from evidence into a theorem.
+
+THM-543 then closes the full one-replacement AP-tail layer.  For every
+
+```text
+C_{a,b,r} = ({1,...,13} \ {a,b}) union {r},
+1 <= a < b <= 13, r >= 14,
+```
+
+the exact inequality
+
+```text
+meas(G_C) < 426/35035
+```
+
+holds if and only if `(a,b,r)=(6,10,20)`.  The certificate checks only `3277`
+finite rows after exact rational comb cutoffs over all `78` two-hole bases; the
+weakest slack and largest cutoff are both the resonant base `(6,10)`:
+
+```text
+M=313/9702, c=8, 6M-7Q=11399/105105, R=148.
+```
+
+Thus the one-replacement AP-tail layer cannot create a below-second row without
+retaining the four old drop-6 mouth intervals exactly.
 
 ## Refined Proof Target
 
@@ -184,10 +209,15 @@ transitive.
 This is not a proof of the full near-collar theorem.  The broad exact scan
 through `[1,22]` was attempted during this session but timed out before
 completion, so HYP-2654 is structured AP-tail evidence, not a bounded-box
-theorem.  Its value is that it corrects the next target: prove mouth-retention
-rigidity, not exact-row rigidity.
+theorem.  Its value is that it corrects the next target and now removes the
+entire one-replacement AP-tail layer: prove mouth-retention rigidity, not
+exact-row rigidity, for multi-tail/state-word damage and far/discrepancy
+branches.
 
 Namespace note: this packet was renumbered after origin/main landed KPS HYP-2653
 for the far-element decorrelation rate.  The two results are complementary:
 KPS HYP-2653 supports the wide/far branch, while HYP-2654 isolates the bounded
-AP-tail mouth-retention branch.
+AP-tail mouth-retention branch.  The later exact HYP-2653 engine also warns that
+a too-small uniform decorrelation constant can fail on bounded resonant cores;
+THM-543 follows the complementary strategy of certifying those resonant
+one-replacement cores by exact rational finite cutoffs.
