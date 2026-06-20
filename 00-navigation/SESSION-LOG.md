@@ -1,3 +1,17 @@
+## codex-2026-06-20-S52 -- LRC14 cube-root order filter -- HYP-2681/T920
+
+User asked to consider cube roots of unity, one-/two-/three-far structure, and
+the recursion `A+B+C-D-E-F+G` as inspiration for the next long LRC(14) proof
+session.  Claimed HYP-2681/T920.  Initial reading: the recursion is not the
+actual simultaneous-peel total; it is the pair-tax shadow of the seven nonempty
+triple packets.  For packets `A,B,C` (one-far), `D,E,F` (two-far), and `G`
+(three-far), the actual residual is `A+B+C+D+E+F+G`, while the user's recursion
+is `A+B+C-D-E-F+G = H(1)-2(D+E+F)`.  The cube-root refinement keeps exact
+Eisenstein cyclic modes `S_omega=A+omega B+omega^2 C` and
+`P_omega=D+omega E+omega^2 F` instead of collapsing immediately to scalar
+order sums.  Next computation will test whether direct risk, pair-tax shadow,
+and cyclic imbalance give different rankings on HYP-2680 triples.
+
 ## mac-mini-2026-06-20-S3 — LRC(14): the far-element limit is a BOUNDARY FUNCTION — boundary-value decomposition (THM-548), two-far constant C₂=13/1372, simultaneous-peel r≥2 closure
 Dispatch: understand the crux + complete the proof; consider boundary functions / curvilinear convergence / bounded-harmonic boundary functions / Riemann-sphere maps. Ran 2 workflows (8-agent crux+boundary research; 7-agent adversarial verification) + direct exact computation. The user's boundary-function leads turned out to be the EXACT shape of the true-wide crux.
 **THE FRAME (reflection `the-far-element-limit-is-a-boundary-function`):** bounded core `B` = boundary point; far runner `w→∞` = radial approach; plateau `Φ(B)` = boundary function (Fatou, one-far limit PROVED via THM-546 rate 6/49); two-far curvature `I_B(u,v)` = Bagemihl ambiguity defect; resonance `mu+nv≈0` = ambiguous point = Freiman small relation. The boundary-function and additive-combinatorics views are the SAME exceptional set.
