@@ -1,3 +1,18 @@
+## codex-2026-06-20-S53 -- LRC14 rank-one AP-triple phase atlas -- HYP-2682/T921
+
+User asked for another long proof session with frequent pull/push and attention
+to new work from other agents.  Pulled mainline; no incoming changes beyond
+the prior S52 state.  Re-read THM-548, HYP-2680, HYP-2681, and the boundary-
+function reflection.  The current crux remains the signed relation-lattice
+magnitude bound for `d>=2`, but the next actionable subtarget is rank-one:
+the AP far triples `(m,m+1,m+2)` keep exact relation `u-2v+w=0` while their
+signed phase changes.  Claimed HYP-2682/T921 to build an exact AP-triple phase
+atlas retaining packet/order/cube-root coordinates rather than collapsing to
+rank alone.  Quick exact probe over `m=15..80` for three bounded cores already
+shows multiple sign words for the same rank-one relation and top direct rows
+concentrated at small offsets in the tested cores.  Next: run
+`lrc14_ap_triple_phase_atlas_codex_s53.py` and store the exact output.
+
 ## codex-2026-06-20-S52 -- LRC14 cube-root order filter -- HYP-2681/T920
 
 User asked to consider cube roots of unity, one-/two-/three-far structure, and
