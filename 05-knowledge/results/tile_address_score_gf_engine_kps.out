@@ -1,0 +1,62 @@
+
+THE THREE TILING RECURRENCES, COMBINED INTO ONE PARTITION FUNCTION  (kps-2026-06-20)
+===================================================================================
+User ask: combine the full-tiling recurrence and the even/odd half-tiling recurrences
+"at the same time" to understand the recursive structure of any tile, treat the
+half-tiling as an address quotient, and use it to EFFICIENTLY compute how tournament
+structure changes as n grows.
+
+THE COMBINATION.  In codex's two-clock address (THM-553) every free tile (a,b),
+1<=b<a<=n, a-b>=2, has
+    beta(a,b) = a          (BIRTH clock; the full-tiling beta-strip recurrence, THM-442/553)
+    tau(a,b)  = a+b-1      (MIRROR clock; the half-tiling tau-layer recurrence, THM-550)
+with gap = a-b-1 = 2*beta-tau-2 and b = tau-beta+1.  The full recurrence advances beta;
+the even/odd half recurrences advance tau split by parity(tau).
+
+These three recurrences combine into the SCORE PARTITION FUNCTION of the tiling model.
+With the canonical convention (base path n->n-1->...->1, tile bit 0 => a->b, bit 1 => b->a),
+each tile (a,b) adds EXACTLY +1 to score(a) [bit 0] or score(b) [bit 1].  Hence the joint
+score generating function over all 2^{C(n-1,2)} tilings factors:
+
+    Z_n(x_1,...,x_n) = ( prod_{v=2}^n x_v ) * prod_{(a,b) tile} (x_a + x_b).        (Z)
+
+  * BETA-CLOCK (full recurrence) = the INCREMENTAL n->n+1 update: birth strip beta=n+1
+        Z_{n+1} = Z_n * x_{n+1} * prod_{b=1}^{n-1} (x_{n+1} + x_b).                 (beta-step)
+    This is the engine: build Z_n one birth strip at a time, NEVER enumerating 2^F tilings.
+  * TAU-CLOCK (half recurrence) = the COMPLEMENT reflection R:(a,b)->(n+1-b,n+1-a) (THM-280),
+    which is tournament complement up to relabel.  Every complement-invariant, score-
+    determined invariant (c3 = leading OCF/alpha_1 term, the score census) is R-symmetric,
+    so the half-tiling tau<=n representatives (THM-550) carry the whole distribution -- the
+    ADDRESS QUOTIENT.  c3(T)=c3(T^op) gives a 2x fold.
+
+WHAT THIS COMPUTES (exactly, no 2^F enumeration):
+  - the score-sequence census (multiplicity of every score vector),
+  - the c3 (3-cycle) distribution, since c3 = C(n,3) - sum_v C(s_v, 2),
+  - hence the leading OCF term alpha_1's distribution and the H-max/regular census.
+
+Verified: Z-engine score & c3 distribution == brute over all tilings (n<=7).  Reaches the
+EXACT c3 distribution at n=10 (68.7 billion tilings) in ~100s -- far beyond enumeration.
+
+=== VALIDATION: Z-engine c3-distribution == brute over all tilings ===
+  n=3: GF==brute True  (total 2 = 2^{1})
+  n=4: GF==brute True  (total 8 = 2^{3})
+  n=5: GF==brute True  (total 64 = 2^{6})
+  n=6: GF==brute True  (total 1024 = 2^{10})
+  n=7: GF==brute True  (total 32768 = 2^{15})
+
+=== EFFICIENCY: exact c3-distribution via the beta-clock, no 2^F enumeration ===
+  n   tilings=2^C(n-1,2)   Z-states   c3_max   mean_c3   uniform_mean   t(s)
+   3                   2           2       1     0.500        0.250    0.00
+   4                   8           8       2     1.500        1.000    0.00
+   5                  64          52       5     3.250        2.500    0.00
+   6                1024         478       8     6.000        5.000    0.00
+   7               32768        5706      14    10.000        8.750    0.01
+   8             2097152       83824      20    15.500       14.000    0.10
+   9           268435456     1461944      30    22.750       21.000    2.95
+  10         68719476736    29510268      40    32.000       30.000   95.06
+
+=== APPLICATION: REGULAR (H-max/Paley) score-sequence census in the tiling model ===
+  n=3: # tilings with regular score seq (all s_v=1) = 1
+  n=5: # tilings with regular score seq (all s_v=2) = 3
+  n=7: # tilings with regular score seq (all s_v=3) = 91
+  n=9: # tilings with regular score seq (all s_v=4) = 29157
