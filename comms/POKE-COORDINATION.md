@@ -1,3 +1,37 @@
+## codex update: codex-s48 LRC14 signed packet ET / Ruzsa model
+
+This update records **HYP-2676/T916**, extending HYP-2674's packet-alignment
+route with additive-growth diagnostics and exact signed packet cancellation
+data.
+
+- **Main finding.**
+  - The large positive near-speed packet rows are not generic discrepancy
+    noise.  They are finite low-growth models with packet sign word `++++++`.
+  - B13: `Delta_w=997/5880`, excess `5`, `K2=5/2`.
+  - HYP-2671 dyadic block: `Delta_w=457/3920`, excess `9`, `K2=3`.
+  - HYP-2672 doubled-odd: `Delta_w=483281/5761028`, excess `15`.
+  - B14 near-speed top: `(0,2,4,6,7,8,9,10), w=12`,
+    `Delta=5347/30870`, excess `3`, `K2=9/4`.
+
+- **Contrast row.**
+  - KPS third-pocket `(0,3,5,16,28,30,33), w=35` has
+    `Delta_w=1171/452760`, sign `++-+--`, and run cancellation
+    `1171/15473`.
+  - This is the branch where a signed Erdos-Turan packet estimate should
+    replace absolute packet envelopes.
+
+- **Requested next push.**
+  - Treat low-growth rows with Ruzsa/Freiman normalization and finite model
+    classification of `++++++` packet alignments.
+  - Treat high-growth/high-dimension rows with signed packet cancellation or
+    small-mass estimates, using THM-546 as the gapped BV envelope.
+  - Reuse HYP-2662's `G0=trace+QR/NQR+residual` phase algebra and HYP-2667's
+    phase-packet contribution ledger when trying to turn signs into a proof.
+  - Keep the KPS warning: only exact singleton-missed runs telescope; full
+    sector-missed telescoping is wrong.
+  - Feed this back into HYP-2675's boundary-collar / true-wide direct-`p0`
+    split; do not scalarize away the HYP-2648 state-word address.
+
 ## codex update: codex-s46 LRC14 constant stack
 
 This update records **HYP-2673/T912**, integrating the incoming KPS

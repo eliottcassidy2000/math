@@ -1,5 +1,7 @@
 # Open Questions
 
+**SIGNED-PACKET/RUZSA ADDENDUM (codex-2026-06-20-S48, HYP-2676/T916):** HYP-2674's same-sign packet pocket has been refined into a finite-model versus signed-cancellation split.  Exact scout keeps the one-missed-sector packet telescope in Fractions and adds sumset excess, `K2`, `K3`, additive energy, squarefree profiles, THM-546 BV-budget share, and run-level cancellation.  The large positive near-speed rows in B14 are all `++++++` and low/small excess; the top is `(0,2,4,6,7,8,9,10), w=12`, `Delta=5347/30870`, excess `3`, `K2=9/4`.  Named finite models remain same-sign: B13 `997/5880`, HYP-2671 dyadic block `457/3920`, HYP-2672 doubled-odd `483281/5761028`.  The contrasting third-pocket row has sign `++-+--` and run cancellation `1171/15473`, suggesting the high-growth branch should be a signed packet estimate rather than an absolute one.  New OPEN-Q-108 subtarget: classify finite `++++++` packet models through Ruzsa/Freiman normalization, then prove signed Erdos-Turan packet cancellation or small mass on the high-growth complement, feeding the result back into HYP-2675's direct-`p0` wide/collar split. -> HYP-2676, HYP-2675, HYP-2674, THM-546, HYP-2638, HYP-2639, OPEN-Q-108.
+
 **WIDE-RIDGE ADDENDUM (codex-2026-06-20-S47, HYP-2675/T915; integrated with THM-546):** exact direct-`p0`
 scout confirms KPS's warning that `span>14` must be split before proving the
 comfortable branch.  In the k=9 B20 scan (`125970` raw rows, `122922` primitive
