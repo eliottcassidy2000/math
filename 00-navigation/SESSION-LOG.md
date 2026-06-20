@@ -1,3 +1,20 @@
+## codex-2026-06-19-S41 -- full B=13 p1-tax packet frontier; 3/8 refuted, 2/5 survives -- HYP-2667
+
+After pushing S40, pulled again and integrated the incoming three-tail shell-1 frontier checkpoint.  The useful bridge was the same lesson on both sides: choose the right packet quotient before scalarizing.  Built `04-computation/lrc14_p1_tax_packet_frontier_codex_s41.py`, stored `05-knowledge/results/lrc14_p1_tax_packet_frontier_codex_s41.out`, and recorded `05-knowledge/hypotheses/HYP-2667-lrc14-p1-tax-packet-frontier.md`.  After rebasing over the incoming two-gate boundary scout, renumbered this packet-frontier HYP from `2666` to `2667` to avoid a live namespace collision.
+
+**FINDING:** the S40 sampled `3p1/8` target is false on the full bounded `B=13` bank.  Exact scan:
+
+```text
+family: E'={0}+7-subsets of [1,13], w=max(E')+1..max(E')+8
+rows=13728
+Delta_w^+/p1 > 1/3: 17
+Delta_w^+/p1 > 3/8: 2
+Delta_w^+/p1 > 2/5: 0
+max Delta_w^+/p1 = 997/2562 at E'=(0,1,2,4,6,7,8,10), w=12
+```
+
+The worst row remains below `2/5` by exact tax gap `139/2450`; the full-bank minimum cap slack for `p0+(1/7+2/5)p1 <= cap9` is `507209/14714700`.  Packet anatomy shows the two `3/8` failures are low `w=12` bounded rows with strong even/dyadic medium-packet stacks, not one giant endpoint.  The next proof obligation is therefore `Delta_w^+ <= 2*p1(E')/5`, or a split theorem: generic phase packets below `3p1/8` plus a dyadic-even packet frontier below `2p1/5`.  LRC(14) is not proved.
+
 ## codex-2026-06-19-S40 -- p1-tax constant refined; interval envelope too coarse -- HYP-2665
 
 User asked to keep pushing the next sharp LRC14 target and to spend a long session pulling/pushing.  Continued from HYP-2664's residual/plateau packet-tax route and built `04-computation/lrc14_p1_tax_envelope_codex_s40.py`, with output stored at `05-knowledge/results/lrc14_p1_tax_envelope_codex_s40.out`, and detail file `05-knowledge/hypotheses/HYP-2665-lrc14-p1-tax-envelope-refinement.md`.
@@ -12,7 +29,7 @@ E'=(0,1,2,3,6,7,10,11), w=12:
   Delta_w^+/p1 = 4691/13076 ~= 0.358749
 ```
 
-Two more sampled B=13 rows also exceed `1/3`, but all `3872` tested rows stay below `3/8`.  The elementary interval-length envelope is much too coarse: its maximum is `6/7`, and every targeted B=13 row has envelope above `1/3` even though only three actual rows do.  The live proof target is therefore not a direct coarea/length estimate; it is `Delta_w^+ <= 3*p1(E')/8`, or a phase-packet cancellation theorem that classifies the rows above `1/3`.  LRC(14) is not proved.
+Two more sampled B=13 rows also exceed `1/3`, but all `3872` S40 tested rows stay below `3/8`.  The elementary interval-length envelope is much too coarse: its maximum is `6/7`, and every targeted B=13 row has envelope above `1/3` even though only three actual rows do.  S40 therefore suggested `Delta_w^+ <= 3*p1(E')/8`, or a phase-packet cancellation theorem that classifies the rows above `1/3`.  S41/HYP-2667 later refutes the raw `3/8` scalar target on the full B=13 bank and moves the target to `2p1/5` or a packet split.  LRC(14) is not proved.
 
 ## codex-2026-06-19-S39 -- residual/plateau packet tax; p1-boundary route for far discrepancy -- HYP-2664
 

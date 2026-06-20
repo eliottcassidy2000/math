@@ -1,7 +1,7 @@
 ---
 id: HYP-2666
 title: LRC14 two-gate boundary currency - shell-1 gate plus refined p1 tax
-status: OPEN; exact bounded-bank evidence
+status: OPEN; exact bounded-bank evidence, raw tax constant corrected by HYP-2667
 source: codex-2026-06-20-S40
 tangent: T908
 depends_on:
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2664
   - HYP-2665
 related:
+  - HYP-2667
   - HYP-2648
   - HYP-2655
   - HYP-2658
@@ -30,8 +31,8 @@ proof obligations.  They are two gauges of one boundary currency:
    rigidity before any far residual estimate is needed.
 2. On the remaining shell-1-full or genuinely nonlocal rows, pay the far
    HYP-2662/HYP-2664 endpoint imbalance with the single-missed-sector mass
-   `p1(E')`, using the HYP-2665 correction that the raw `p1/3` constant is
-   false and `3p1/8` or packet-refined cancellation is the viable target.
+   `p1(E')`, using the HYP-2665/HYP-2667 correction that the raw `p1/3` and
+   `3p1/8` constants are false; `2p1/5` or a packet split is the viable target.
 
 The scalar target is therefore not a naked residual bound, but the ordered
 certificate
@@ -42,6 +43,13 @@ cap_9 = 1979/4004,
 ```
 
 after quotienting first by the shell-1 packet.
+
+**S41 correction:** HYP-2667 shows that the cap bank can have room for `c=3/8`
+while the actual far discrepancy still violates `Delta_w^+ <= 3*p1(E')/8`.
+The worst full `B=13` row,
+`E'=(0,1,2,4,6,7,8,10), w=12`, is shell-1-full and has
+`Delta_w^+/p1=997/2562 > 3/8`.  Thus the two-gate proof order remains useful,
+but the raw far-tax target must be `2p1/5` or a generic/dyadic packet split.
 
 ## Exact Bounded Evidence
 
@@ -91,8 +99,9 @@ AP8 boundary row and none threaten `c=3/8`.
 
 At the older `c=1/3` checkpoint, the same max rows have slack
 `448069/8828820` globally and `51871/504504` in the shell-1-full stratum.
-HYP-2665 shows that `c=1/3` is not enough for the actual far discrepancy, but
-this cap bank has room for the larger `3/8` tax.
+HYP-2665 shows that `c=1/3` is not enough for the actual far discrepancy, and
+HYP-2667 shows that `3/8` is not enough either.  This cap bank still has room
+for `3/8`; that is a cap-slack fact, not a proof of the actual raw tax.
 
 ## Interpretation
 
@@ -123,14 +132,14 @@ Prove the ordered lemma:
 
 ```text
 Either E' damages shell 1 and pays the HYP-2661 tower-deletion/mouth tax,
-or Delta_w^+(E') <= 3*p1(E')/8
+or Delta_w^+(E') <= 2*p1(E')/5
 ```
 
 with the residual interpreted through the HYP-2662 endpoint-weight/Galois
-phase decomposition and HYP-2665's phase-packet cancellation warning.  A more
-precise alternative is to classify the rows above `p1/3` and prove a
-packet-refined inequality there, while keeping the bounded cap bank charged at
-or below `3/8`.
+phase decomposition and HYP-2665/HYP-2667's phase-packet cancellation warning.
+A more precise alternative is to prove generic phase packets below `3p1/8` and
+classify the dyadic-even frontier below `2p1/5`, while keeping the bounded cap
+bank charged with its exact slack ledger.
 
 ## Guardrails
 
