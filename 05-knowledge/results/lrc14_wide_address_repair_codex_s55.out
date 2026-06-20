@@ -1,0 +1,98 @@
+HYP-2683 / T922 -- LRC14 wide-branch address repair
+Hidden-gem sources: owner-private deletion repair, compatibility walls, state-word invariants.
+Predicate preserved: direct p0(E) <= cap_k for HYP-2675 wide rows.
+Assumption challenged: scalar plateau/additive summaries are enough to route wide risk.
+
+EXACT TRUE-WIDE SCAN
+  box: k=9, row=(0)+8-subsets([1,20]), span>14, second-largest>14
+  raw rows=125970, primitive span>14 rows=122922, true-wide rows=102333
+  rich audit rows=513 (top risk rows plus deterministic low/mid sample)
+  cap_9=1979/4004 (0.494255744)
+
+TOP DIRECT-P0 ROWS WITH ADDRESS DATA
+   1. row=(0, 4, 6, 8, 10, 12, 14, 15, 16) p0=321/980 (0.327551020) margin=11681/70070 (0.166704724) exc=7 run=3 energy=357
+    private_avg=239/504 (0.474206349) min_private_sector=121/280 (0.432142857) private_owners=8 state_support=55 state_entropy=4.3019
+   2. row=(0, 3, 5, 7, 9, 11, 13, 15, 17) p0=1729558/5360355 (0.322657361) margin=334483/1949220 (0.171598383) exc=7 run=1 energy=377
+    private_avg=14757667/32162130 (0.458852290) min_private_sector=2303519/5360355 (0.429732546) private_owners=8 state_support=46 state_entropy=4.3678
+   3. row=(0, 10, 11, 12, 13, 14, 15, 16, 17) p0=4555079/14294280 (0.318664459) margin=2509951/14294280 (0.175591285) exc=7 run=8 energy=377
+    private_avg=9767929/21441420 (0.455563531) min_private_sector=6181909/14294280 (0.432474318) private_owners=8 state_support=57 state_entropy=4.5083
+   4. row=(0, 12, 13, 14, 15, 16, 17, 18, 19) p0=15545501/49380240 (0.314812180) margin=97470629/543182640 (0.179443564) exc=7 run=8 energy=377
+    private_avg=10603081/23390640 (0.453304441) min_private_sector=11033929/24690120 (0.446896532) private_owners=8 state_support=58 state_entropy=4.5260
+   5. row=(0, 4, 6, 8, 10, 12, 14, 16, 19) p0=35167/111720 (0.314778016) margin=2867329/15975960 (0.179477728) exc=8 run=1 energy=353
+    private_avg=16673/35280 (0.472590703) min_private_sector=6284/13965 (0.449982098) private_owners=8 state_support=57 state_entropy=4.3607
+   6. row=(0, 13, 14, 15, 16, 17, 18, 19, 20) p0=45682367/148140720 (0.308371439) margin=302907383/1629547920 (0.185884305) exc=7 run=8 energy=377
+    private_avg=31076219/68372640 (0.454512492) min_private_sector=21939527/49380240 (0.444297699) private_owners=8 state_support=58 state_entropy=4.5349
+   7. row=(0, 11, 12, 13, 14, 15, 16, 17, 18) p0=251215/816816 (0.307553966) margin=152501/816816 (0.186701779) exc=7 run=8 energy=377
+    private_avg=58247857/128648520 (0.452767408) min_private_sector=3203617/7147140 (0.448237617) private_owners=8 state_support=57 state_entropy=4.5465
+   8. row=(0, 9, 10, 11, 12, 13, 14, 15, 16) p0=140177/458640 (0.305636229) margin=951593/5045040 (0.188619515) exc=7 run=8 energy=377
+    private_avg=457687/1009008 (0.453600963) min_private_sector=374239/840840 (0.445077542) private_owners=8 state_support=56 state_entropy=4.5148
+   9. row=(0, 5, 7, 9, 11, 13, 15, 17, 19) p0=80585/264537 (0.304626574) margin=2207213/11639628 (0.189629170) exc=7 run=1 energy=377
+    private_avg=278693183/611080470 (0.456066258) min_private_sector=6173704/14549535 (0.424323114) private_owners=8 state_support=50 state_entropy=4.4433
+  10. row=(0, 3, 6, 9, 11, 12, 14, 15, 18) p0=7328/24255 (0.302123274) margin=242329/1261260 (0.192132471) exc=7 run=2 energy=341
+    private_avg=5963/12936 (0.460961657) min_private_sector=41311/97020 (0.425798804) private_owners=8 state_support=54 state_entropy=4.3496
+  11. row=(0, 3, 6, 7, 9, 11, 12, 15, 18) p0=1031/3465 (0.297546898) margin=35443/180180 (0.196708847) exc=10 run=2 energy=329
+    private_avg=285709/582120 (0.490807737) min_private_sector=21971/48510 (0.452916924) private_owners=8 state_support=43 state_entropy=4.2096
+  12. row=(0, 3, 5, 7, 9, 11, 13, 15, 19) p0=1763383/5990985 (0.294339412) margin=4790783/23963940 (0.199916333) exc=8 run=1 energy=353
+    private_avg=1856731/3993990 (0.464881234) min_private_sector=2656177/5990985 (0.443362319) private_owners=8 state_support=48 state_entropy=4.4431
+
+LOW PRIVATE-SECTOR AVERAGE ROWS
+   1. row=(0, 1, 4, 11, 13, 14, 15, 18, 20) p0=7747/105105 (0.073707245) margin=176807/420420 (0.420548499) exc=16 run=3 energy=245
+    private_avg=1290791/3783780 (0.341137963) min_private_sector=95444/315315 (0.302694131) private_owners=8 state_support=52 state_entropy=5.1412
+   2. row=(0, 1, 3, 4, 10, 14, 15, 17, 18) p0=397/4998 (0.079431773) margin=592961/1429428 (0.414823972) exc=16 run=2 energy=265
+    private_avg=4307/12495 (0.344697879) min_private_sector=1367/4165 (0.328211285) private_owners=8 state_support=50 state_entropy=5.1167
+   3. row=(0, 1, 2, 5, 7, 8, 12, 15, 16) p0=333/3920 (0.084948980) margin=229441/560560 (0.409306765) exc=12 run=3 energy=273
+    private_avg=12361/35280 (0.350368481) min_private_sector=941/2940 (0.320068027) private_owners=8 state_support=48 state_entropy=5.0523
+   4. row=(0, 1, 4, 7, 8, 14, 15, 18, 20) p0=1307/17640 (0.074092971) margin=1059869/2522520 (0.420162774) exc=16 run=2 energy=253
+    private_avg=275/784 (0.350765306) min_private_sector=639/1960 (0.326020408) private_owners=8 state_support=52 state_entropy=5.1057
+   5. row=(0, 2, 3, 4, 9, 11, 13, 17, 20) p0=10249/109395 (0.093688011) margin=1226963/3063060 (0.400567733) exc=15 run=3 energy=261
+    private_avg=269768/765765 (0.352285623) min_private_sector=35062/109395 (0.320508250) private_owners=8 state_support=48 state_entropy=5.0568
+   6. row=(0, 1, 2, 5, 6, 15, 17, 19, 20) p0=2309/33915 (0.068081970) margin=8267507/19399380 (0.426173775) exc=16 run=3 energy=257
+    private_avg=10271/29070 (0.353319573) min_private_sector=9353/27132 (0.344722099) private_owners=8 state_support=47 state_entropy=4.9242
+   7. row=(0, 1, 2, 8, 10, 11, 13, 16, 17) p0=81/1904 (0.042542017) margin=122989/272272 (0.451713727) exc=14 run=3 energy=261
+    private_avg=206489/583440 (0.353916427) min_private_sector=31289/97240 (0.321770876) private_owners=8 state_support=48 state_entropy=4.9436
+   8. row=(0, 3, 4, 10, 13, 14, 18, 19, 20) p0=166183/2178540 (0.076281822) margin=5008151/11981970 (0.417973922) exc=15 run=3 energy=253
+    private_avg=4662841/13071240 (0.356725223) min_private_sector=178702/544635 (0.328113324) private_owners=8 state_support=51 state_entropy=5.0293
+
+STATE-MASS PRESSURE
+  high direct-risk count= 10 avg_p0=318451807/1018467450 (0.312677452) avg_private=14967156773/32590958400 (0.459242609) avg_min_private=1427146051/3259095840 (0.437896313) avg_state_support=54.800 avg_state_entropy=4.4454
+  low direct-risk  count=357 avg_p0=27391096567/193916202480 (0.141252233) avg_private=362524510223/872622911160 (0.415442347) avg_min_private=35952000493/96958101240 (0.370799346) avg_state_support=48.633 avg_state_entropy=4.7311
+  pressure direction: high direct-risk rows have larger private-sector mass
+  and lower missed-state entropy than the low-risk sample.
+
+MIXED-BUCKET CHANNEL AUDIT
+  high threshold p0 >= 3/10; low threshold p0 <= 1/4
+  scalar             buckets= 191 compression=191/513 multi_rows=434 overfit=False mixed=  3 max_width=951/3920 (0.242602041) avg_width=53165767/760455696 (0.069913037)
+    worst bucket low=(0, 1, 2, 5, 7, 8, 12, 15, 16) p0=333/3920; high=(0, 4, 6, 8, 10, 12, 14, 15, 16) p0=321/980
+  residue7           buckets= 187 compression=187/513 multi_rows=379 overfit=False mixed=  6 max_width=13169693/67897830 (0.193963386) avg_width=6126280529/86366039760 (0.070933906)
+    worst bucket low=(0, 3, 5, 11, 12, 14, 15, 16, 20) p0=5211/43120; high=(0, 12, 13, 14, 15, 16, 17, 18, 19) p0=15545501/49380240
+  squarefree         buckets= 421 compression=421/513 multi_rows=159 overfit=False mixed=  4 max_width=8033/38220 (0.210177917) avg_width=26544753/606553948 (0.043763219)
+    worst bucket low=(0, 1, 4, 10, 12, 13, 14, 18, 20) p0=718/9555; high=(0, 4, 8, 10, 12, 13, 14, 16, 20) p0=727/2548
+  additive           buckets=  97 compression=97/513 multi_rows=486 overfit=False mixed=  1 max_width=13155133/77597520 (0.169530328) avg_width=2224135747/38022784800 (0.058494815)
+    worst bucket low=(0, 3, 5, 8, 10, 13, 14, 16, 19) p0=293537/2904720; high=(0, 2, 5, 8, 10, 11, 14, 17, 20) p0=19835/73304
+  private_mass       buckets= 109 compression=109/513 multi_rows=484 overfit=False mixed=  3 max_width=1431079/7373520 (0.194083558) avg_width=2082690739/32590958400 (0.063903943)
+    worst bucket low=(0, 1, 3, 6, 7, 11, 15, 16, 18) p0=25051/388080; high=(0, 4, 5, 6, 9, 10, 14, 15, 19) p0=21671/83790
+  state_mass         buckets= 286 compression=286/513 multi_rows=331 overfit=False mixed=  0 max_width=52229/1113840 (0.046890936) avg_width=379794473/21184122960 (0.017928260)
+    worst bucket low=(0, 3, 5, 6, 13, 14, 15, 16, 17) p0=19573/173264; high=(0, 5, 9, 12, 14, 15, 17, 18, 20) p0=23969/149940
+  residue_private    buckets= 480 compression=160/171 multi_rows= 60 overfit=False mixed=  0 max_width=15027/340340 (0.044152906) avg_width=131038025/8799558768 (0.014891431)
+    worst bucket low=(0, 6, 10, 11, 12, 13, 14, 15, 16) p0=40241/168168; high=(0, 2, 5, 6, 8, 11, 14, 17, 20) p0=28333/99960
+  coarse_address     buckets= 503 compression=503/513 multi_rows= 20 overfit=True mixed=  0 max_width=17009359/814773960 (0.020876169) avg_width=4426811/651819168 (0.006791471)
+    worst bucket low=(0, 11, 13, 14, 15, 16, 17, 18, 19) p0=51660751/203693490; high=(0, 12, 13, 14, 15, 16, 17, 18, 20) p0=1070107/3898440
+  fine_address       buckets= 513 compression=1 multi_rows=  0 overfit=True mixed=  0 max_width=0 (0.000000000) avg_width=0 (0.000000000)
+
+TOURNAMENT ANALYSIS ON REPAIR CHANNELS
+  vertices are proof channels, not runners.
+  pairwise observable: non-overfit compression, fewer high/low mixed buckets,
+  then smaller bucket p0-width; tie path uses channel-name order.
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0
+  Hamiltonian path=residue_private > state_mass > additive > private_mass > scalar > squarefree > residue7 > fine_address > coarse_address
+
+SYNTHESIS
+  1. The direct-risk leaders in the true-wide B20 bank are low-growth, high-overlap
+     sector-cover states rather than generic wide rows.
+  2. Scalar span/additive shadows still mix high and low p0 rows in the audited set;
+     coarse private/state address data reduces mixed buckets without using row identity.
+     Fine address is diagnostic, but too close to a perfect row hash to be a lemma.
+  3. This supports the HYP-2675 proof shape: first route finite low-height/low-growth
+     compatibility addresses, then apply the Weyl/decorrelation plateau lemma.
+  4. No LRC(14) proof is claimed; the open step remains explicit decorrelation error
+     plus bounded-gap glue, but the address-repair channel gives a sharper finite ledger.

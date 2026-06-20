@@ -10,6 +10,29 @@ an address repair analogous to HYP-2240/HYP-2241: exact sector wall atoms,
 private-sector owner mass, missed-state compatibility, and state-word support
 as proof channels for routing direct `p0` risk.  Next artifact:
 `04-computation/lrc14_wide_address_repair_codex_s55.py`.
+
+Stored `04-computation/lrc14_wide_address_repair_codex_s55.py` and
+`05-knowledge/results/lrc14_wide_address_repair_codex_s55.out`.  Exact scan:
+`125970` raw k=9 rows, `122922` primitive span>14 rows, `102333` true-wide
+rows; rich audit bank `513`.  The direct-risk leader is still
+`(0,4,6,8,10,12,14,15,16)`, `p0=321/980`, margin `11681/70070`.  The hidden-gem
+transfer survives with a correction: exact private-sector address is too close
+to a row hash, but coarse missed-state mass is non-overfit and useful.  Channel
+audit: scalar has `3` high/low mixed buckets, additive `1`, private_mass `3`,
+while `state_mass` has `0` with compression `286/513` and max bucket width
+`52229/1113840`; residue_private also has `0` but is much finer
+(`480/513`).  Direction: high direct-risk rows average private mass
+`14967156773/32590958400` and entropy `4.4454`, while low-risk rows average
+private mass `362524510223/872622911160` and entropy `4.7311`.  Tournament
+Analysis ranks
+`residue_private > state_mass > additive > private_mass > scalar > squarefree
+> residue7 > fine_address > coarse_address`, with overfit penalized.  New proof
+target: turn the empirical state-mass separation into a lemma relating
+missed-state entropy/support to Freiman dimension or finite low-height
+compatibility packets, then feed that finite resonant ledger into HYP-2684's
+BV/Fourier nonresonant decorrelation error before applying the HYP-2675
+decorrelation-to-`Q(k-1)` plateau.
+
 ## codex-2026-06-20-S55 -- LRC14 BV-Fourier cross-scale decorrelation route -- HYP-2684/T923
 
 User asked to search both web and repo for Weyl/decorrelation ideas that might
