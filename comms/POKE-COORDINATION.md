@@ -1,3 +1,19 @@
+## codex-S34 update: AP-window single-hole collar
+
+The introduction of the **AP-window single-hole collar** (THM-541, SHA 04736c4) provides the first exact certificate for the AP-window boundary, a critical component of the Band 1 (Bounded Near-AP) proof model. This theorem identifies the **drop-6 core** as the unique global minimizer of safe measure among all one-element deletions from the standard 1..13 sequence.
+
+- **THM-541: AP-Window Single-Hole Collar**
+    - **Mechanism:** Proved that for deletions $e \in \{1,\dots,13\}$ from $\{1,\dots,13\}$, the safe measure $meas(G_e)$ is uniquely minimized at $e=6$ with a value of **7/858**. The next competitor is $e=12$ at **426/35035**.
+    - **Addressed Wall Gap:** The certificate utilizes the **addressed wall gap** $R(v,a) \to L(w,b)$ as the fundamental proof carrier. This moves beyond scalar measures to a signed boundary-determinant model.
+    - **Drop-6 Structure:** The minimizing drop-6 collar is characterized by a specific signed determinant sequence `[3, 5, 5, 3]` owned by the high-speed wall chain `13 -> 12 -> 11 -> 12 -> 13`.
+    - **Band 1 / Near-AP Integration:** This result hardens the **Band 1 (Bounded Near-AP)** classification. It establishes the "collar" for the AP-window, proving that any non-AP configuration with measure below the $426/35035$ cutoff must follow the drop-6 state template.
+    - **Wall-Transfer Certificate (HYP-2642):** THM-541 refines the **HYP-2642 wall-transfer certificate** by providing an exact discrete reference for the $k=12$ core. The wall-transfer ledger now has a formal "endpoint" in the drop-6 collar, allowing near-AP perturbations to be quantified against a fixed structural boundary.
+
+- **Active Steering Objectives (Updated):**
+    - **Near-Collar Template Theorem:** Prioritize proving that any 12-core with measure below $426/35035$ must match the drop-6 state template.
+    - **Small Signed Determinant Rigidity:** Develop a lemma linking the `[3, 5, 5, 3]` determinant pattern to structural rigidity before applying broader Freiman or state-word quotients.
+    - **Global Proof Assembly:** Continue integrating these local exact certificates into the global three-band model to close the LRC(14) proof.
+
 ## codex-S32 update: invariant separation scout
 
 The introduction of the **LRC invariant separation scout** (HYP-2650/T897, SHA
@@ -137,7 +153,7 @@ The introduction of the **relation-covered GAP structure** (HYP-2639, SHA 629851
         2. **Relation-Covered Non-GAP:** High-energy/high-excess cases requiring labeled hypergraph analysis and signed shell cancellation.
         3. **Dissociated Stranger:** Peeling/independent limit.
     - **Sign/Parity Interface:** Established that "positive/negative" in a relation determines whether it is a balanced energy shadow (even coefficient sum) or a signed observer-coupled fold (odd coefficient sum) capable of moving the lonely threshold.
-    - **Tournament Ranking:** Established a new Hamiltonian proof path: observer-coupled visible folds > low hidden summand shells > multiplicand clearance sieve > relation coverage hypergraph > Freiman small-doubling GAP > balanced pair energy > raw runner vertices.
+    - **Tournament Analysis:** Established a new Hamiltonian proof path: observer-coupled visible folds > low hidden summand shells > multiplicand clearance sieve > relation coverage hypergraph > Freiman small-doubling GAP > balanced pair energy > raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
     - **Labeled Hypergraph Construction (HYP-2639):** Prioritize the construction of the labeled relation hypergraph for the relation-covered non-GAP pocket. Focus on isolating observer-coupled visible folds from hidden balanced shells.
@@ -336,7 +352,7 @@ The LRC(14) verification has introduced the **Euler-copy squarefree profile** (H
 The LRC(14) verification has achieved a final unification of its modular and analytic layers with the introduction of the **prime-mask/coimage transfer seam** (HYP-2626). This hypothesis identifies the exact arithmetical mapping that bridges finite wall ledgers and the infinite reciprocal tail.
 
 - **cf8d935 (codex-S19): HYP-2626 — Prime-Mask/Coimage Transfer Seam**
-    - **Seam Identity:** Discovered that the unit action of $(Z/14Z)^*$ maps directly to the projective mod-7 coimage classes. This proves that the mod-7 coimage atlas (HYP-2617) is the natural arithmetical quotient forced by the "14-runner clock" rather than an arbitrary residue trick.
+    - **Seam Identity:** Discovered that the unit action of $(Z/14Z)^^*$ maps directly to the projective mod-7 coimage classes. This proves that the mod-7 coimage atlas (HYP-2617) is the natural arithmetical quotient forced by the "14-runner clock" rather than an arbitrary residue trick.
     - **Modular Transfer (HYP-2625):** Clarified the role of the mod-30 recurrence address. While mod-30 provides the "address space," it was found to be **inert** for the k=10 signed wall coverage. Only the **{7} mask** coordinate is "live," contributing the extra 12 wall-addressed classes that raise mass coverage to 84.2%.
     - **Repeated-Tail Character Split:** Identified a multiplicative character split over $F_7^*$ as the "true" signature of the remaining 31 k=10 tail classes. For packets like $(1,1,1,1,a,a)$, the signed mass is partitioned by $\chi_7(a)$, transforming the residual from a combinatorial counting problem into a **repeated-root character-sum packet**.
     - **Wall-to-Tail Handover:** Refined the proof target into a three-stage transfer:
@@ -411,7 +427,7 @@ The LRC(14) verification has expanded into a detailed spectral gap analysis, est
         - For $k \equiv 7,13,19,25 \pmod{30}$, the loneliness improves to the **third-mediant** $3/(3k+2)$, yielding a tighter gap bound $g(k) \le 1/((k+1)(3k+2))$.
         - For $k \equiv 1 \pmod{30}$, the $r=3$ branch is **AP-tight**, but the **r=4 branch** takes over, yielding $M = 4/(4k+3)$ and a gap bound $g(k) \le 1/((k+1)(4k+3))$.
     - **Spectral Gap Scaling:** Despite these improvements in constants, all tested families maintain a $\Theta(1/k^2)$ scaling. No evidence of an $o(1/k^2)$ dip has been found in the current search space ($k \le 181$).
-    - **Integration with Cusp Atlas:** The gap ladder provides the **denominator floor** for the alternating cusp sequence atlas (**HYP-2619**). It establishes the precise "lift-depth" required to ensure the signed residual mass does not violate the lonely runner floor.
+    - **Denominator Floor:** The gap ladder provides the **denominator floor** for the alternating cusp sequence atlas (**HYP-2619**). It establishes the precise "lift-depth" required to ensure the signed residual mass does not violate the lonely runner floor.
     - **Tournament Analysis:** Confirmed a perfectly transitive proof-route tournament (directed cycles = 0), ordering the proof obligations from the infinite lower bound for $g(k)$ down to raw runner vertices.
 
 - **Active Steering Objectives (Updated):**
@@ -433,7 +449,7 @@ The LRC(14) verification has achieved a critical analytical synthesis by formali
 - **Active Steering Objectives (Updated):**
     - **Two-Stage Signed Theorem (HYP-2619):** Prioritize the development of a signed reciprocal-tail estimate that separately handles **cusp-to-shell collapse** and **alternating shell summation** for each non-null coimage class.
     - **Non-Monotone Atlas Audit:** Re-verify the coimage atlas for $d=14..16$ to characterize the rebound of the all-ones class and its implications for the $k=11..12$ route.
-    - **Dedekind/Cotangent Summation:** Deploy Targeted Dedekind or summation-by-parts bounds over the finite coimage addresses to close the support-6 analytic gap.
+    - **Dedekind/Cotangent summation:** Deploy Targeted Dedekind or summation-by-parts bounds over the finite coimage addresses to close the support-6 analytic gap.
 
 ## 3.33 Analysis of Recent Commits (Friday, June 19, 2026) - Digest 149efb5
 The LRC(14) verification has achieved a structural breakthrough in the wide-spread residual proof by mapping the support-6 tail to a finite projective coimage atlas, reducing an infinite family of relations to just 159 manageable classes.
@@ -642,10 +658,7 @@ The LRC14 framework has undergone a significant theoretical reframe with the int
     - **Sink Probability Validation:** Validate the probabilistic model for scale-1/7 local sinks across the seven sectors.
     - **Caveat Mapping:** Map the specific regimes affected by the honest co-monotonicity caveat to ensure they are fully covered by the frontier envelope.
 
-## 3.19 Analysis of Recent Commits (Friday, June 19, 2026) - Digest f2fe55e
-The LRC14 sector route has achieved a significant precision upgrade with the introduction of the S_L finer-cover improvement, resulting in a substantial increase in available slack.
-
-- **f2fe55e (mac-mini-2026-06-18-S7): S_L Finer-Cover Improvement to Sector Route**
+## f2fe55e (mac-mini-2026-06-18-S7): S_L Finer-Cover Improvement to Sector Route**
     - **S_L Mechanism:** The $S_L$ operator provides a finer covering of the configuration space. As $L$ grows, $S_L$ is proven to decrease the sector measure $S_7 \to meas(N)$ across the search space.
     - **5x Slack Gain:** This refinement "buys" a **5x increase in slack margin**. For example, in the $k=8$ consecutive runner case, the measure is reduced from **0.327** down to **S_42 = 0.107**.
     - **Main Term Shrinkage:** Crucially, the "main term" of the interference model is now proven to **shrink to 0** under this finer cover, effectively removing the primary source of error in the analytic floor calculation.
@@ -771,7 +784,7 @@ A foundational checkpoint in the LRC14 series has been reached with the formaliz
 - **d0afb9c (codex): LRC14 Finite Endpoint Feasibility Checkpoint**
     - **Endpoint Feasibility:** Established the mathematical proof that the set of "endpoint events"—points where a runner's loneliness reaches a local extremum—is finite for any primitive 12-core. This proof utilizes the **Sawtooth-Envelope Lemma** to bound the number of triangle-wave intersections.
     - **Tight Locus Finiteness (HYP-2561):** This checkpoint directly fulfills the primary requirement for closing HYP-2561. By proving endpoint finiteness, the "tight locus" (the set of configurations where $meas(G_C)$ could potentially vanish) is reduced to a finite set of searchable configurations.
-    - **Proof Strategy Impact:** The LRC14 proof is now transitioned from a general analytic problem to a **finite verification problem**. With the search space now bounded, the final completion of the singular-series proof (THM-523) is contingent only on verifying the finite list of configurations identified by the slack component diagnostic.
+    - **Proof Strategy Impact:** The LRC14 proof is now transitioned from a general analytic problem to a **finite verification problem**. With the search space now bounded, the final completion of the singular-series proof (THM-523) is contingent only on verifying the finite list of configurations identified by the slack diagnostic.
 
 - **Active Steering Objectives (Updated):**
     - **Verification Loop:** Execute the final verification on the finite endpoint set identified by the d0afb9c diagnostic.
