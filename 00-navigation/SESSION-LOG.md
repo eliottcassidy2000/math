@@ -1,3 +1,30 @@
+## kind-pasteur-2026-06-20-S20 — Tiling: the three recurrences combine into the score partition function (THM-554/555)
+
+Dispatch: combine the 3 tiling recurrences (full-tiling + even/odd half-tiling) "at the same time" to understand any
+tile's recursive structure, treat half-tilings as an address quotient, compute tournament-structure-vs-n efficiently,
+apply to repo problems.
+
+**THM-554 (the combination).** Weighting each tile by which endpoint its bit feeds collapses the three recurrences into
+ONE object: the score partition function `Z_n = (prod_{v>=2} x_v) * prod_{tiles (a,b)} (x_a+x_b)`. The three recurrences
+= three motions of Z_n: **beta-clock** (full, THM-442/553) = how Z_n GROWS (incremental n->n+1: multiply by birth strip
+`x_{n+1} prod_b (x_{n+1}+x_b)`); **tau-clock** (half, THM-550) = how Z_n FOLDS (complement reflection R, the ADDRESS
+QUOTIENT, free 2x for complement-invariants); **even/odd** = parity of the fold's fixed line. Every score-determined
+invariant is a linear functional of Z_n, computed by the beta-step WITHOUT enumerating 2^{C(n-1,2)} tilings — exact
+c3-distribution to **n=10 (68.7e9 tilings, 95s)**. PROVED `E_tiling[c3]=(C(n,3)+(n-2))/4` (the n-2 consecutive triples
+have a fixed transitive base 2-path => 3-cycle prob 1/2; the fixed Ham path PRIMES cycles, bias (n-2)/4). Realizes codex
+HYP-2690 (score layer).
+
+**THM-555 (cycle-moment hierarchy, application workflow, adversarially verified — one self-script bug caught by brute).**
+PROVED E[c3], E[c_k] leading `(k-1)!/2^k C(n,k)`. VERIFIED-exact: `Var[c3]=(n^3-7n^2+20n-16)/32`,
+`E[c5]=(n^5-10n^4+45n^3-140n^2+294n-280)/160`, E[c7] deg-7/896, `E[(-1)^c3]=1/2^floor((n-1)/2)` (even-bias),
+max-c3 = (n^3-n)/24 odd / (n^3-4n)/24 even, max-c3 multiplicity = **regular census 1,3,91,29157** (odd n; the THM-027
+c3-extreme). **Score->OCF boundary:** c3 is the LAST score-determined OCF datum (c5, alpha_2 NOT — counterexamples);
+MEANS all close by linearity, distributions beyond c3 need full 2^F state (= THM-442 "H not cell-affine" as a
+partition-function statement: linear functionals of Z_n = cut-space observables; H/OCF lives in cycle space). Repo
+connections: THM-027 (regular=c3-extreme, Paley at mean+2sigma), THM-552 (even-bias = parity-dichotomy shadow), THM-549
+(complement-halving 2x lossless), H-max IS self-complementary n=3..8 (3,5,15,45,189,661). Engine
+`04-computation/tile_address_score_gf_engine_kps.py`; reflection `the-three-tiling-recurrences-are-one-partition-function`.
+
 ## mac-mini-2026-06-20-S5 — LRC: inclusion-exclusion over the apex prime's divisors — comprehensive reframe + archimedean redirect (HYP-2692, reflection)
 Dispatch: apply "inclusion-exclusion over 3 (or another natural number)" to the LRC; comprehensive view; to proof. 6-reframing workflow (completed) + direct computation.
 **COMPREHENSIVE VIEW:** the LRC's inclusion-exclusions are ONE arithmetic skeleton indexed by `6=2·3`: N=7 sectors = the moment-LP (THM-534; plain Bonferroni FAILS — level-4 upper 0.55>cap_9; optimal LP closes k=8-10); N=2 = quadratic χ (QR{1,2,4}/NQR{3,5,6}=Legendre mod 7, Gauss sum √−7 [verified =i√7], reflection/reality, CHEBYSHEV BIAS: NQR sectors emptier ~70%, NOT universal); N=3 = cube root C_3 (Eisenstein). **KEYSTONE (verified):** C_3 orbit-sum of 7th roots = Gaussian period `(−1+χ√−7)/2`, period poly `x²+x+2`, disc `−7`; the 3-fold sum produces the 2-fold √−7; the correction's C_3 partial trace ∈ `Q(√−7)`. N=runners (danger sieve) DEAD: `L({1..13})=0` yet witness τ=1/14 exists (measure-blind — WHY the coverage reformulation was needed).
