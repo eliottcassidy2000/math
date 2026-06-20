@@ -71,6 +71,21 @@ NOT decouple — a large `Δ_w` is exactly paired with a SMALL `Φ(E')` (wide `E
 extremality nut (≈ consec-maximizes-p_0). The far-element recursion is an INDUCTION on `k` that bottoms
 out at the finite check, but each level carries the joint `Φ`/`Δ` entanglement — that is the real residue.
 
+## 6. CROSS-THREAD LEAD (kps-S15 + HYP-2657, verify-confirmed): the mod-7 Galois structure may bound the resonant growth
+
+The uniform constant `C(k)` grows precisely at the RESONANCES — `w` sharing factors with the core's `e`'s,
+and the multi-scale `w ∼ lcm(cluster gaps)` (the `w=90=9·10` case). HYP-2657 proved (exactly) that the
+correction's cyclotomic part is governed by `Re(D7(c))` over the residues `c = n mod 7`, with the full
+`F_7*`-average a rational field-trace (`Σ_a D7(a·c) = Tr ∈ ℤ`). The exact reduction of `Δ_w` is a 1-D
+breakpoint discrepancy of `{w·(j/e)}` weighted by the missed-sector phase `s_c/7` — i.e. **the same
+mod-7 phase that the Galois-equivariance constrains.** CONCRETE NEXT STEP: re-express the resonant
+breakpoint contributions of `w·Δ_w` through `Re(D7)` and test whether the trace integrality / the
+`σ_6=conjugation` reality bound `|Re D7| ≤ 0.1431` controls them. The resonances (where `w·Δ_w` is large)
+are exactly the mod-7 commensurabilities where the Galois phase is rigid — so the growth and the
+cancellation may be the same object seen from the two threads (S14 far-element discrepancy ↔ S15 apex-7
+Galois). This is the most promising single direction: bound the resonant discrepancy via the apex-prime
+quadratic/Galois phase, not a uniform constant.
+
 ## Honest status
 LRC(14) NOT proved. CORRECTS HYP-2653b: the "single open input C≈1.95" is FALSE (C grows with scales,
 ≥3.91). The wide conclusion is CONFIRMED exact (≤0.223 ≪ cap). The real remaining work on the wide branch
