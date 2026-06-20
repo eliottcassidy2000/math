@@ -68,6 +68,24 @@ the `1/w`) against a fixed finite-variation set. **VERIFIED** exact: `|Δ_w|·w 
 consecutive, codex's B13-leader, dyadic-block-`m=4`, and third-pocket cores, for `w` up to
 `200` (actual `|Δ_w|·w` runs `0.01–2.8`, comfortably under `C(E')=5–16`).
 
+## Sharpening (mac-mini-S2): the SIGNED Abel bound — a clean RATIONAL constant
+
+The absolute bound above is `~5–30×` loose (it discards the phase cancellation the QR reality
+guarantees). **Abel summation** on the `n`-sum recovers a closed-form *signed* improvement.
+Writing `1̂_{B_j}(−nw) = (2πi(−nw))^{-1} Σ_{arcs} [e(nwa)−e(nwb)]` and summing `n` first,
+`Σ_{n≠0}(ŝ_j(n)/n)e(ny) = 2πi·F_j(y)` where `F_j` = the **centered antiderivative** of
+`1_{sector_j}−1/7` (a sawtooth: slope `+6/7` on sector `j`, `−1/7` elsewhere). Hence exactly
+> `Δ_w = −(1/w) Σ_{j=1}^6 Σ_{arcs(a,b)⊂B_j} [F_j(wa) − F_j(wb)]`, and since
+> `sup_y|F_j(y)| = 3/49` (EXACT, all `j`, by the apex symmetry):
+> **`|Δ_w| ≤ (6/49)·V(E')/w`** — rational constant `6/49 = (#non-apex sectors)/(apex prime)²`.
+
+`6/49 ≈ 0.12245` vs the absolute `κ/π² ≈ 0.18814` (1.54× sharper, and rational). The QR reality
+(HYP-2657: `6=−1` is a non-residue mod 7 ⟹ `Δ_w` is real, `n↔−n` cancels imaginary parts) is
+what makes the signed form clean. The FULL signed sum (keeping the arc-phase cancellation too,
+not just the `n`-cancellation) is `5–76×` below the absolute bound on every tested core — that
+extra factor is real but not yet in closed form (it lives in the arc geometry of `B_j`).
+Verified: `|Δ_w| ≤ (6/49)V/w` on all tested cores. → `lrc14_{signed_erdos_turan,abel_sharp_constant}_macmini_0620s2.py`.
+
 ## What it closes — and what remains
 
 - **Gapped configs (`w` large relative to `E'`): CLOSED.** For
