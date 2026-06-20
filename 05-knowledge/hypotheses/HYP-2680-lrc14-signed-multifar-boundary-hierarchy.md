@@ -232,6 +232,89 @@ margin=1164997/5717712.
 So three-far resonance can be much larger than the fully decorrelated
 `Phi_3`, but these tested rows still have large direct cap margins.
 
+## Tail-Rank S51 Addendum
+
+The follow-up scout
+
+- `04-computation/lrc14_signed_multifar_tail_rank_codex_s51.py`
+- `05-knowledge/results/lrc14_signed_multifar_tail_rank_codex_s51.out`
+
+uses the simultaneous-peel form directly.  For a far block `F`, it verifies the
+exact decomposition
+
+```text
+p0(B union F) - P_|F|(B)
+  = sum_{s=1}^{|F|} sum_{S subset F, |S|=s} (Delta_S(B)-Phi_s(B)).
+```
+
+This changes the proof target.  It is too crude to bound every individual
+residual absolutely and add them.  The useful object is the signed order sum
+
+```text
+R_s(B;F) = sum_{S subset F, |S|=s} (Delta_S(B)-Phi_s(B)).
+```
+
+Structured far blocks can have large order terms, but consecutive orders often
+carry opposite bounded signs.
+
+Exact named rows:
+
+```text
+B=(0,4,6,8,10,12,14), F=(15,16,17):
+  p0-P_3=9243793/68572560
+  order signs R1,R2,R3 = +-+
+  exact relation rank at height 3: 1
+
+B=(0,4,6,8,10,12,14), F=(15,16,17,18):
+  p0-P_4=222536009/1440023760
+  order signs R1..R4 = +--+
+  exact relation rank at height 3: 2
+
+B=(0,4,6,8,10,12,14), F=(15,16,17,18,19,20):
+  p0-P_6=249775162037/1340662120560
+  order signs R1..R6 = ++-+-+
+  exact relation rank at height 3: 5
+
+B=(0,4,6,8,10,12,14), F=(17,23,31):
+  p0-P_3=4331573/239667820
+  order signs R1,R2,R3 = ++-
+  exact relation rank at height 3: 0
+```
+
+The all-core four-far bank for `F=(15,16,17,18)` checks `3003` primitive bounded
+cores.  It finds:
+
+```text
+R2/R3 opposite signs: 1644/3003
+R3/R4 opposite signs: 2053/3003
+total residual positive: 2966
+total residual negative:   37
+top direct row: (0,9,10,11,12,13,14,15,16,17,18)
+  p0=4671421/9529520
+  margin=2240099/9529520
+  sign word R1..R4 = +++-
+top |R4| row: (0,5,6,7,12,13,14,15,16,17,18)
+  R4=10105997/157313520
+  sign word R1..R4 = ++++
+```
+
+This makes the "two opposite bounded signs" route precise: the three-far proof
+should first control `R_3` in the `r=3` peel, then the general proof should
+control the signed order sums `R_s(B;F)` with a relation-rank budget.  Exact
+low-height relations route to finite Freiman/scale atlases; high-rank blocks
+should pay signed Abel/Koksma cancellation and the apex-prime suppression.
+
+The relation-rank budget cannot be a raw rank-only scalar.  Older HYP-2637 and
+HYP-2639, plus the S51 explorer audit, point to a typed relation ledger:
+summand shell, multiplicand clearance, observer visibility, support size, and
+packet sign must remain attached.  Equal energy or equal low-height rank can
+still have different signed corrections, so the lemma should be support-
+stratified before any absolute values are taken.  The incoming adversarial
+THM-548 verification also warns against fixed coefficient boxes: a pair can
+hide its shortest relation just beyond `|m|,|n|<=7`.  The multi-far analogue
+must weight relation height rather than pretending a small box exhausts the
+resonance lattice.
+
 ## Revised Next Target
 
 The sharp target is no longer "prove all higher orders vanish."  They do not.
@@ -254,8 +337,9 @@ is the three-far residual
 Delta_{uvw}(B) - Phi_3(B).
 ```
 
-That residual needs a signed Abel relation-lattice packet bound with separate
-treatment of:
+For `r>3`, the sharper object is not only each individual residual but the
+signed order ledger `R_s(B;F)`.  These residuals need a signed Abel
+relation-lattice packet bound with separate treatment of:
 
 - exact low-height multi-relations such as `u-2v+w=0`;
 - near-relations with small `|m*u+n*v+l*w|`;

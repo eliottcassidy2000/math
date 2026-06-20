@@ -70,6 +70,39 @@ not direct cap threats.  They are proof-obligation threats: without a signed
 relation-lattice bound they prevent a clean analytic closure of the true-wide
 branch.
 
+## Tail-Rank Update
+
+The second S51 scout shifts the target from isolated residuals to signed order
+sums.  For a whole far block `F`,
+
+```text
+p0(B union F)-P_|F|(B)
+  = sum_s R_s(B;F),
+R_s(B;F)=sum_{|S|=s}(Delta_S(B)-Phi_s(B)).
+```
+
+The consecutive far blocks show the pattern the user pointed at: opposite
+bounded signs across adjacent Newton orders.  For the dilated core
+`(0,4,6,8,10,12,14)`, far `(15,16,17)` has order signs `+-+`, far
+`(15,16,17,18)` has `+--+`, and far `(15..20)` has `++-+-+`.  In the exact
+four-far bank for `(15,16,17,18)`, `R2/R3` have opposite signs in `1644/3003`
+primitive cores and `R3/R4` oppose in `2053/3003`.
+
+This matters because an absolute-value proof would spend the same margin twice.
+The right analytic lemma should keep the signed order ledger until the last
+step, with exact low-height relation rank routing the finite atlas branch and
+high-rank blocks paying Abel/Koksma cancellation.
+
+This is not a rank-only lemma.  The repo's older summand/multiplicand notes
+warn that equal additive energy or equal relation rank can carry different
+observer-visible signs.  The residual packets need typed labels: summand shell,
+multiplicand clearance, support, visibility, and sign.
+
+It is also not a fixed-box denominator lemma.  The adversarial THM-548 audit
+found two-far examples whose shortest relation sits just outside the tested
+coefficient box, so `resdist` at bounded height overstates independence.  The
+multi-far denominator should be a height-weighted relation-lattice packet.
+
 ## Next Move
 
 Use the incoming THM-548 simultaneous-peel architecture.  For `r=3`, decompose
@@ -91,5 +124,6 @@ Delta_3(B;u,v,w) - Phi_3(B)
 ```
 
 stratified by the minimum low-height form `|m*u+n*v+l*w|`, with exact
-low-height forms routed to finite Freiman/scale atlases.  Then generalize the
-same mechanism to `s>=4` using the Stirling coefficient table.
+low-height forms routed to finite Freiman/scale atlases.  Then generalize from
+single triples to signed order sums `R_s(B;F)` using the Stirling coefficient
+table and the tail-rank scout.

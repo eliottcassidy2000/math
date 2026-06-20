@@ -65,8 +65,10 @@ and the actual `p0(B∪F)` for a dissociated (Sidon-like) far set `F` tracks `P_
 
 ## 3. The resonance corrections (Bagemihl ambiguous points) — the remaining content
 
-> `p0(B∪F) = P_r(B) + R(B,F)`,  `R(B,F) := Σ_{S⊆F, 2≤|S|≤6} [Δ_S(B) − Φ_{|S|}(B)]`
-> `         + Σ_f [Δ_f(B) − Φ_1(B)]`  (the one-far residuals, bounded by THM-547 since `B` is bounded).
+> `p0(B∪F) = P_r(B) + R(B,F)`,  `R(B,F) := Σ_{S⊆F, S≠∅} [Δ_S(B) − Φ_{|S|}(B)]`.
+The one-far residuals are bounded by THM-547 since `B` is bounded.  The two-far
+residuals are the curvature terms.  Higher terms do not vanish; they should be
+geometrically suppressed and handled as a signed relation-lattice tail.
 
 Each curvature deviation has the Fourier form (two-far case shown):
 > `Δ_{f,f'}(B) − Φ_2(B) = Σ_{(m,n)≠(0,0)} ŝ_j(m)ŝ_{j'}(n)·1̂_{A}(−(mf+nf'))`,
@@ -97,11 +99,16 @@ geometrically `~1/7^{t+1}` — the Newton expansion of §1 converges fast, gover
 `(m,n)↔(−m,−n)` pairing (the `6=−1` non-residue mod 7 argument, HYP-2657, extended to the product)
 kills the imaginary part, so the two-far deviation is real and the signed/Abel form is licensed.
 
-**Resonance-gated bound — VERIFIED.** `|I_B(u,v) − Φ₂(B)|·resdist(u,v)` is bounded `(~0.01)` where
-`resdist = min_{small (m,n)} |mu+nv|`; so `|I_B − Φ₂| ≤ C·V(B)/resdist`. The worst case (resonant,
-`resdist=1`, e.g. consecutive `u,u+1`) gives `|I_B−Φ₂| ≤ ~0.013 ≪` margin `0.25`. **The two-far
-curvature is never cap-threatening.** (Consistent with the synthesis correction: the actual k=9
-leader has *negative* curvature `I_B(15,16)=−13/1470`; positive curvature is sub-critical.)
+**Resonance-gated bound — corrected status.** The consecutive resonant family
+(`u,u+1`) is VERIFIED bounded and saturates around `0.0140`, still far below the
+available margin.  However, the adversarial verification refuted the earlier
+box-truncated claim that
+`|I_B(u,v) − Φ₂(B)|·min_{|m|,|n|≤7}|mu+nv|` is uniformly `~0.01`: relations whose
+smallest coefficients lie just outside the box can make that product much
+larger.  The needed analytic statement is therefore a **height-weighted signed
+relation-lattice bound**, not a fixed-box `resdist` bound.  The two-far
+curvature remains non-cap-threatening in all verified bounded-core samples, but
+the general proof must keep relation height and signed Abel cancellation.
 
 ## 4. The closure (target)
 

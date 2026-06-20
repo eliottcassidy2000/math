@@ -56,6 +56,19 @@ one three-far residual`.  THM-547 handles the one-far bounded-base terms,
 THM-548 handles the two-far curvature terms, and HYP-2680 isolates the new
 analytic task as the signed relation-lattice bound for `Delta_{uvw}-Phi_3`.
 
+Follow-up S51 tail-rank scout added the full simultaneous-peel order ledger:
+`p0(B∪F)-P_|F|(B)=sum_s R_s(B;F)`, where
+`R_s=sum_{|S|=s}(Delta_S-Phi_s)`.  Structured far blocks have large low-height
+relation rank but signed cancellation across orders: for the dilated core,
+far `(15,16,17)` gives signs `+-+`, `(15,16,17,18)` gives `+--+`, and
+`(15..20)` gives `++-+-+`.  The exact four-far bank for `(15,16,17,18)` checks
+`3003` primitive cores: `R2/R3` oppose in `1644` rows and `R3/R4` oppose in
+`2053`.  Next proof obligation sharpened to signed, typed order-sum bounds;
+raw relation rank or absolute residual sums are too coarse.  The incoming
+adversarial THM-548 verification also refutes fixed-box `resdist` as a proof
+denominator, so the signed bound must be height-weighted over the full relation
+lattice.
+
 ## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
 
 User asked to keep pushing toward the LRC(14) proof, pulling/pushing frequently,
