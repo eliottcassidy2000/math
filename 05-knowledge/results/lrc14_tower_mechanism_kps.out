@@ -1,0 +1,29 @@
+=== drop-6 surviving components (THM-541 says 4) ===
+   meas=7/858=0.008159  #components=4
+     [29/182, 9/56]  width=1/728=0.001374  center~0.16003
+     [29/168, 27/154]  width=5/1848=0.002706  center~0.17397
+     [127/154, 139/168]  width=5/1848=0.002706  center~0.82603
+     [47/56, 153/182]  width=1/728=0.001374  center~0.83997
+
+=== tower {1,2,4,8} ALONE: surviving set ===
+   meas=9/14=0.642857  #comp=8
+     [0.07143,0.11607] w=0.04464
+     [0.13393,0.23214] w=0.09821
+     [0.26786,0.36607] w=0.09821
+     [0.38393,0.46429] w=0.08036
+     [0.53571,0.61607] w=0.08036
+     [0.63393,0.73214] w=0.09821
+     [0.76786,0.86607] w=0.09821
+     [0.88393,0.92857] w=0.04464
+
+=== drop-6 WITH one tower bit removed (widen test) ===
+   drop-6 minus 1: meas=239/3003=0.079587  #comp=6  (vs 7/858=0.008159)
+   drop-6 minus 2: meas=461/12012=0.038378  #comp=6  (vs 7/858=0.008159)
+   drop-6 minus 4: meas=389/12012=0.032384  #comp=8  (vs 7/858=0.008159)
+   drop-6 minus 8: meas=2243/42042=0.053351  #comp=8  (vs 7/858=0.008159)
+
+=== drop-6 survivors: which dyadic comb teeth bound each survivor? ===
+   [29/182,9/56]: left-owner ['2/13'] right-owner ['2/12']
+   [29/168,27/154]: left-owner ['2/12'] right-owner ['2/11']
+   [127/154,139/168]: left-owner ['9/11'] right-owner ['10/12']
+   [47/56,153/182]: left-owner ['10/12'] right-owner ['11/13']

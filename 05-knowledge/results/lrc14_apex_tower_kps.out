@@ -1,0 +1,54 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_apex_tower_kps.py:9: SyntaxWarning: invalid escape sequence '\{'
+  is the global-min core ("the mouth") always the (N-1)\{apex-ish hole}, and is its mouth owned
+apex tower per N (powers of 2 < N):
+  N=6=2*3: tower=[1, 2, 4] depth=3 (floor log2(N-1)+1=3)
+  N=10=2*5: tower=[1, 2, 4, 8] depth=4 (floor log2(N-1)+1=4)
+  N=14=2*7: tower=[1, 2, 4, 8] depth=4 (floor log2(N-1)+1=4)
+  N=22=2*11: tower=[1, 2, 4, 8, 16] depth=5 (floor log2(N-1)+1=5)
+  N=26=2*13: tower=[1, 2, 4, 8, 16] depth=5 (floor log2(N-1)+1=5)
+
+=== N=6: one-hole 4-cores from {1..5} (drop 1), exact lonely measure ===
+    drop 2: meas=1/20=0.050000 tower_full=False <-MOUTH
+    drop 4: meas=4/45=0.088889 tower_full=False <-2nd
+    drop 5: meas=5/36=0.138889 tower_full=True 
+    drop 3: meas=3/20=0.150000 tower_full=True 
+    drop 1: meas=1/6=0.166667 tower_full=False 
+    MOUTH=drop 2; thr1=0.050000 thr2=0.088889
+      remove tower bit 1: meas=0.272222 > thr2 (blows up)
+      remove tower bit 4: meas=0.222222 > thr2 (blows up)
+
+=== N=10: one-hole 8-cores from {1..9} (drop 1), exact lonely measure ===
+    drop 4: meas=11/420=0.026190 tower_full=False <-MOUTH
+    drop 2: meas=7/180=0.038889 tower_full=False <-2nd
+    drop 8: meas=62/1575=0.039365 tower_full=False 
+    drop 6: meas=8/175=0.045714 tower_full=True 
+    drop 9: meas=69/1400=0.049286 tower_full=True 
+    drop 3: meas=7/120=0.058333 tower_full=True 
+    drop 1: meas=1/10=0.100000 tower_full=False 
+    drop 7: meas=61/600=0.101667 tower_full=True 
+    drop 5: meas=55/504=0.109127 tower_full=True 
+    MOUTH=drop 4; thr1=0.026190 thr2=0.038889
+      remove tower bit 1: meas=0.126190 > thr2 (blows up)
+      remove tower bit 2: meas=0.081746 > thr2 (blows up)
+      remove tower bit 8: meas=0.115556 > thr2 (blows up)
+
+=== N=14: one-hole 12-cores from {1..13} (drop 1), exact lonely measure ===
+    drop 6: meas=7/858=0.008159 tower_full=True <-MOUTH
+    drop 12: meas=426/35035=0.012159 tower_full=True <-2nd
+    drop 10: meas=1520/63063=0.024103 tower_full=True 
+    drop 4: meas=97/4004=0.024226 tower_full=False 
+    drop 2: meas=11/364=0.030220 tower_full=False 
+    drop 13: meas=6617/194040=0.034101 tower_full=True 
+    drop 5: meas=103/2860=0.036014 tower_full=True 
+    drop 3: meas=11/273=0.040293 tower_full=True 
+    drop 8: meas=950/21021=0.045193 tower_full=False 
+    drop 9: meas=3273/56056=0.058388 tower_full=True 
+    drop 11: meas=4733/76440=0.061918 tower_full=True 
+    drop 1: meas=1/14=0.071429 tower_full=False 
+    drop 7: meas=4319/51480=0.083897 tower_full=True 
+    MOUTH=drop 6; thr1=0.008159 thr2=0.012159
+      remove tower bit 1: meas=0.079587 > thr2 (blows up)
+      remove tower bit 2: meas=0.038378 > thr2 (blows up)
+      remove tower bit 4: meas=0.032384 > thr2 (blows up)
+      remove tower bit 8: meas=0.053351 > thr2 (blows up)
+

@@ -66,13 +66,23 @@ sub-threshold census is confined to `{1,2,4,8}`-containing cores — a strong un
 tower gives the tightest NESTED constraints `||t||,||2t||,||4t||,||8t||>1/14`, carving the smallest
 ("ground-state") lonely set = the mouth. The tower depth `⌊log₂(n−1)⌋ = ⌊log₂13⌋ = 3` is set by `n=14`.
 
-## The mechanism (Glaisher + even-graph reading)
+## The mechanism — CORRECTED (workflow owner-geometry, STRONG-PARTIAL): GLOBAL clamping, not local walling
 
-- **Why the tower owns the mouth:** the four tower constraints `||t||, ||2t||, ||4t||, ||8t|| > 1/14`
-  are the dyadic refinement of one constraint — each doubling halves the admissible interval (HYP-2656).
-  They carve the small surviving "mouth" set (`7/858`). **Deleting `2^a` relaxes `||2^a t|| > 1/14`,
-  re-opening a `1/(7·2^a)`-band and ENLARGING the lonely set past the threshold.** Carry conservation:
-  the `1111₂` tower is the minimal-measure "ground state"; spending any tower bit pays `≥ 426/35035`.
+The tower does NOT wall the mouth. The drop-6 mouth's 4 surviving components are walled EXCLUSIVELY by
+the three TOP speeds `{11,12,13}` (their danger-arc edges; the THM-541 owners `R(13,2)→L(12,2)` etc.).
+The tower `{1,2,4,8}` owns NO mouth wall. So the carry conservation is **GLOBAL, not local**:
+
+- The four nested tower constraints `||t||,||2t||,||4t||,||8t||>1/14` (dyadic refinements, each halving
+  the band — HYP-2656) **clamp the REST of `[0,1)` to near-zero safe mass**, leaving only the tiny mouth
+  (`7/858`, owned by `{11,12,13}`). **Deleting `2^a` leaves the mouths intact (4/4 survive) but UNCOVERS
+  far safe mass** elsewhere (where `||2^a t||>1/14` was the sole binding constraint), and that uncovered
+  mass instantly exceeds `426/35035`. So the tower is a global suppressor; spending any bit re-opens a
+  far region worth `≥ thr2`. (This is why the bound is robust and the `v=4` deletion — the middle band —
+  is the cheapest: it uncovers the least far mass.)
+- **Even-graph parity-completion:** the holes/tails are free binary choices; for sub-threshold they are
+  NOT free — the shell-1 word must be parity-completed to `1111` to maintain the global clamp. The
+  `{5:+2}` exception is "pure carry inside an existing shell" (a gauge move that keeps the clamp); the
+  `{1:-4}` move spends a clamp bit and pays `≥ thr2` via the uncovered far mass (+ a new shell `{23:+2}`).
 - **Even-graph parity-completion:** the holes/tails are free binary choices; for sub-threshold they are
   NOT free — the shell-1 binary word must be parity-completed to `1111`. The `{5:+2}` exception is "pure
   carry inside an existing shell" (a gauge move that keeps the tower); the `{1:-4}` move spends a tower
