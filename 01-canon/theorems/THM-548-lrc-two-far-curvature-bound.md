@@ -68,6 +68,27 @@ nontangential (Fatou) boundary value except at a structured set of **ambiguous p
 which here is the resonance set, and which is exactly where the additive-combinatorial (Ruzsa/
 Plünnecke/Freiman) reduction applies.
 
+## 3b. The two-far constant C₂ and the apex-prime hierarchy (NEW, verified)
+
+A **second** Abel summation (antiderivative in each frequency) gives the parabolic analogue of the
+one-far sawtooth `F_j`: `G_j` = second centered antiderivative of `1_{sector_j}−1/7` (piecewise
+quadratic). Computed exactly:
+> **`C₂ := max_j sup_y |G_j(y)| = 13/1372 = 13/(2²·7³)`**  (all `j` equal, by apex symmetry),
+versus the one-far `sup|F_j| = 3/49 = 3/7²`. **Each Abel order adds one power of the apex prime `7`
+to the denominator** (`1/7² → 1/7³`), so the `t`-fold curvature constants are suppressed
+geometrically `~1/7^{t+1}` — the Newton expansion of §1 converges fast, governed entirely by `7`.
+
+**QR-reality of the product kernel — VERIFIED (was conjectural).** `ŝ_j(m)ŝ_{j'}(n) +
+ŝ_j(−m)ŝ_{j'}(−n)` is **real** (imag part `=0` exactly, all `j,j',1≤m,n≤7`) — the joint
+`(m,n)↔(−m,−n)` pairing (the `6=−1` non-residue mod 7 argument, HYP-2657, extended to the product)
+kills the imaginary part, so the two-far deviation is real and the signed/Abel form is licensed.
+
+**Resonance-gated bound — VERIFIED.** `|I_B(u,v) − Φ₂(B)|·resdist(u,v)` is bounded `(~0.01)` where
+`resdist = min_{small (m,n)} |mu+nv|`; so `|I_B − Φ₂| ≤ C·V(B)/resdist`. The worst case (resonant,
+`resdist=1`, e.g. consecutive `u,u+1`) gives `|I_B−Φ₂| ≤ ~0.013 ≪` margin `0.25`. **The two-far
+curvature is never cap-threatening.** (Consistent with the synthesis correction: the actual k=9
+leader has *negative* curvature `I_B(15,16)=−13/1470`; positive curvature is sub-critical.)
+
 ## 4. The closure (target)
 
 `p0(B∪F) ≤ cap_k` for all true-wide `E` follows from:

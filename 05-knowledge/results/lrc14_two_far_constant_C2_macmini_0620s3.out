@@ -1,0 +1,30 @@
+(1) sup|G_j| (second centered antiderivative; the parabolic constant C_2):
+    j=1: sup|G_j| = 13/1372 = 0.009475
+    j=2: sup|G_j| = 13/1372 = 0.009475
+    j=3: sup|G_j| = 13/1372 = 0.009475
+    j=4: sup|G_j| = 13/1372 = 0.009475
+    j=5: sup|G_j| = 13/1372 = 0.009475
+    j=6: sup|G_j| = 13/1372 = 0.009475
+    C_2 = max_j sup|G_j| = 13/1372 = 0.009475
+    (compare one-far sup|F_j| = 3/49 = 0.061224)
+
+(2) QR-REALITY of product kernel: shat_j(m)shat_{j'}(n) + shat_j(-m)shat_{j'}(-n) real?
+    max |Im( shat_j(m)shat_j'(n) + shat_j(-m)shat_j'(-n) )| over j,j',1<=m,n<=7 = 0.00e+00
+    => REAL (joint (m,n)<->(-m,-n) pairing kills imaginary part; product QR-reality HOLDS)
+
+(3) interaction |I_B - Phi_2| vs resonance distance (B=(0,4,6,8,10,12,14)):
+    Phi_2=0.000889
+           (u,v)  resdist   |IB-Phi2|  *resdist
+         (15,16)        1    0.009732    0.0097
+         (15,23)        1    0.003748    0.0037
+         (20,21)        1    0.012377    0.0124
+         (31,47)        1    0.001430    0.0014
+         (40,41)        1    0.004128    0.0041
+         (61,97)       11    0.000793    0.0087
+         (80,81)        1    0.002784    0.0028
+       (101,211)        9    0.001119    0.0101
+       (200,401)        1    0.000482    0.0005
+
+If |IB-Phi2|*resdist is bounded, the bound |I_B-Phi_2| <= C2'*V/resdist holds (resonance-gated).
+
+DONE.
