@@ -47,6 +47,12 @@ As the runners in `S` go to `∞` independently (coprime), each `Δ_S(B)` tends 
 - **`Φ_2(B) = (2 p2(B) − p1(B))/49`** — VERIFIED exact (`B=consec_8`: `47/24010≈0.00196`;
   `B=(0,1,2,4,8)`: `1/98`). `p_t(B)=meas{B misses exactly t sectors}`.
 - In general `Φ_t` is the inclusion–exclusion of the miss-profile, weight `7^{-t}`.
+- **GENERAL FORMULA (codex-S51, HYP-2680, convergent extension):**
+  `Φ_s(B) = 7^{-s} Σ_{t=1}^{s} (−1)^{s−t} t! S(s,t) p_t(B)` (`S(s,t)` = Stirling-2). Recovers
+  `Φ_2=(2p2−p1)/49` and gives `Φ_3=(p1−6p2+6p3)/343` (`343=7³` — the apex-prime hierarchy §3b
+  confirmed at third order). codex independently made the same Newton-`|S|≤6` correction.
+  **Refinement:** 3-far resonance needs *multi-forms* like `u−2v+w`, not just pairwise `mf+nf'`
+  — the deviation is a full relation-lattice object for `s≥3` (the signed-Abel-packets target).
 
 Summing all limits gives the **fully-decorrelated boundary value** (all `r` far runners independent):
 > **`P_r(B) := lim p0(B∪F) = Σ_{t=0}^{6} prof_t(B)·c_t(r)`,  `c_t(r)=Σ_{i=0}^{t}(−1)^i C(t,i)(1−i/7)^r`**,
