@@ -10,6 +10,7 @@ related:
   - HYP-2657  # QR/Gauss D7 kernel, Q(sqrt-7) Galois structure
   - HYP-2684  # codex BV-Fourier cross-scale decorrelation (= the R_2 archimedean lever)
   - HYP-2681  # cube-root Eisenstein (the C_3 half of Z/2xZ/3)
+  - HYP-2693  # six-sector Bonferroni4 high-tail gate, complementary final-row target
   - OPEN-Q-108
 ---
 
@@ -63,3 +64,11 @@ DOMINANT residual is the LEADING order `s_0 = max(1, 7−|B|)` (THM-551 order-tr
 `R_tot = p0−P_r` stays within the cap margin in every tested row (0.13–0.16 < margin 0.17–0.30).
 CORRECTED TARGET: bound the summed **leading-order** residual `R_{s_0}`, `s_0=max(1,7−|B|)`. For the
 dangerous |B|=7 rows that is `R_1` (collar machinery, barely-far); for sparse cores it is `R_3+`.
+
+## CROSS-LINK (codex-S59): high-tail final-row gate
+
+HYP-2693/THM-556 gives the complementary sector-sieve form of the same split:
+for six inner sectors, level-4 Bonferroni collapses exactly to
+`U4=p0+p5+5p6`.  After the leading residual and finite-template branches are
+routed, the true-wide final row should pass the high-tail gate
+`p0+p5+5p6<=cap`.

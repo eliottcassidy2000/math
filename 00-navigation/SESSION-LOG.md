@@ -3,6 +3,63 @@ Dispatch: apply "inclusion-exclusion over 3 (or another natural number)" to the 
 **COMPREHENSIVE VIEW:** the LRC's inclusion-exclusions are ONE arithmetic skeleton indexed by `6=2·3`: N=7 sectors = the moment-LP (THM-534; plain Bonferroni FAILS — level-4 upper 0.55>cap_9; optimal LP closes k=8-10); N=2 = quadratic χ (QR{1,2,4}/NQR{3,5,6}=Legendre mod 7, Gauss sum √−7 [verified =i√7], reflection/reality, CHEBYSHEV BIAS: NQR sectors emptier ~70%, NOT universal); N=3 = cube root C_3 (Eisenstein). **KEYSTONE (verified):** C_3 orbit-sum of 7th roots = Gaussian period `(−1+χ√−7)/2`, period poly `x²+x+2`, disc `−7`; the 3-fold sum produces the 2-fold √−7; the correction's C_3 partial trace ∈ `Q(√−7)`. N=runners (danger sieve) DEAD: `L({1..13})=0` yet witness τ=1/14 exists (measure-blind — WHY the coverage reformulation was needed).
 **VERDICT (the value, PROVED by reframing B):** `p0(aE)=p0(E)` exactly for all a∈(Z/7)* (integer-dilation invariance), so ALL nontrivial multiplicative characters of `p0` VANISH; the QR/NQR bias is archimedean (in χ_0); and `p0` is NOT residue-only (two clusters, same profile, p0 differ). So incl-excl over arithmetic N does NOT bound `p0` — the obstruction is ARCHIMEDEAN.
 **REDIRECT (verified):** the lever is a height-weighted bound on the summed **leading-order** residual `R_{s_0}`, `s_0=max(1,7−|B|)`. Computed `R_s`: dangerous LEADER (|B|=7) → `R_1=0.174` DOMINANT (one-far, barely-far {15,16} = THM-546/547 collar territory, best-understood, NOT d≥2 lattice), `R_2=−0.010`; sparse (|B|=4) → R_1=R_2=0 (order-truncation), R_3 leads. PROVED pieces (workflow): s≥3 tail geometric (|R_3|/|R_2|<1 always, 1/7-suppressed); simultaneous-peel closes r=2 (W~26). The cube-root C_3 collapses the d≥2 obstruction to **3 QR×NQR cross-orbit classes** (factor-2 reduction); `Q(√−7)` C_3-orbits INDEX the resonances, smallness stays signed archimedean (= codex HYP-2684 + signed d≥2). Canon: HYP-2692, reflection inclusion-exclusion-over-the-apex-primes-divisors; OPEN-Q-108 addendum. Files: 04-computation/lrc_{sector_sieve_bonferroni,empty_sector_distribution,summed_residual_R2}_macmini_0620s5.py + results JSON. NAMESPACE: HYP-2692 (T926).
+## codex-2026-06-20-S59 -- LRC14 true-wide Bonferroni4 high-tail gate -- THM-556/HYP-2693/T929
+
+User asked to keep pushing toward the LRC proof with frequent pull/push and to
+work in tandem with other agents.  Pulled first; incoming KPS/mac-mini work was
+directly relevant.  It showed the sector-sieve level-4 Bonferroni bound fails
+on AP-like rows but succeeds on true-wide leaders, while far-order residual
+decay is not safely geometric in the most resonant rows.  Also resolved a
+namespace collision by moving the S58 LRC insertion theorem from provisional
+THM-554 to THM-555, leaving incoming KPS THM-554 as the tiling
+score-partition theorem.
+
+Added `04-computation/lrc14_truewide_bonferroni4_gate_codex_s59.py` and stored
+`05-knowledge/results/lrc14_truewide_bonferroni4_gate_codex_s59.out`.  The
+script tests the sharpened split
+
+```text
+second_largest(E)>14 and span(E)>14 => U4(E)<=cap_|E|
+```
+
+where `U4=1-S1+S2-S3+S4` is computed exactly from the missed-sector
+distribution.  The key exact simplification is now canonized as THM-556:
+for six inner sectors,
+
+```text
+U4 = p0 + p5 + 5p6.
+```
+
+Thus level 4 is a high-tail gate: all middle missed-sector masses `p1..p4`
+cancel, and the price above `p0` is exactly `p5+5p6`.
+
+Exact staged boxes found zero true-wide `U4>cap` violations:
+
+```text
+k=8,  bound=18: truewide=16359, violations=0
+k=9,  bound=18: truewide=27020, violations=0
+k=10, bound=16: truewide=3432,  violations=0
+k=11, bound=15: truewide=0
+k=12, bound=15: truewide=0
+```
+
+The AP/boundary contrast is sharp.  AP9 and the doubled AP boundary row have
+identical profile, `tail45=53/392`, and fail level 4.  The k=9 true-wide
+leader `(0,4,6,8,10,12,14,15,16)` has `p0=321/980`, `tail45=1/14`,
+`U4=391/980`, and slack `3338/35035`; the k=10 true-wide leader
+`(0,2,4,6,8,10,12,14,15,16)` has `U4=307/588`, slack `629/7644`.
+
+After fetching new concurrent work, renumbered this thread to HYP-2693/T929 so
+mac-mini's incoming HYP-2692 inclusion-exclusion/apex-divisor and leading
+summed-residual route remains intact.  The two threads are complementary:
+HYP-2692 locates the leading residual lever, while HYP-2693 supplies the
+six-sector final-row high-tail gate.
+
+Opened HYP-2693/T929.  Proposed proof split: true-wide high-state rows prove
+`p0+p5+5p6<=cap` by sector moment/decorrelation constraints; boundary/AP
+low-state rows route to HYP-2691's finite AP-prefix, dyadic, cube-root, and
+Ruzsa/Freiman templates.  No LRC14 proof claimed, but the next obligation is
+now much sharper than a generic Bonferroni or far-order residual estimate.
 
 ## codex-2026-06-20-S58 -- LRC14 sector-state transfer DP -- THM-555/HYP-2691/T927
 

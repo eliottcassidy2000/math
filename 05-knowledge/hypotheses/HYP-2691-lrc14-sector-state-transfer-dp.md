@@ -17,6 +17,8 @@ related:
   - HYP-2680
   - HYP-2681
   - HYP-2682
+  - HYP-2693
+  - HYP-2692
   - OPEN-Q-108
 ---
 
@@ -168,6 +170,20 @@ one of two regimes:
 This reframes HYP-2683's successful coarse `state_mass` separator as a
 dynamic transfer theorem: prove the separator at each insertion, not only at
 the final row.
+
+## Bonferroni Gate Addendum
+
+HYP-2693/THM-556 supplies the complementary final-row high-state target.  For
+six inner sectors,
+
+```text
+U4 = 1 - S1 + S2 - S3 + S4 = p0 + p5 + 5p6.
+```
+
+Thus the true-wide branch can try to prove `U4<=cap` directly by suppressing
+the five-six missed-sector tail, while this HYP-2691 transfer DP handles the
+boundary/AP rows where level 4 fails and finite low-state templates are
+structural rather than exceptional.
 
 ## Assumption Challenge
 
