@@ -37,6 +37,11 @@ Its job is the tight ungapped classifier: identify which finite `++++++`
 Ruzsa/Freiman models still need direct treatment, and identify which mixed-sign
 or small-pair rows already expose cancellation before absolute values.
 
+The final incoming THM-547 update further narrows the job.  Boundary-collar
+rows with second-largest at most `14` are now closed modulo a feasible finite
+check, so the boundary example in this atlas is a calibration target.  The live
+geometric work is true-wide structure plus the finite same-sign packet models.
+
 The next proof object should therefore be addressed:
 
 ```text

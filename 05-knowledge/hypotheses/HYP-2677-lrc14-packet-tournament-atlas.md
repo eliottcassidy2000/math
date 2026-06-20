@@ -201,6 +201,12 @@ HYP-2677 classifies the tight ungapped/same-sign chambers where size alone
 does not explain the finite leaders.
 ```
 
+A later rebase also brought in THM-547, which closes the boundary-collar branch
+`second-largest <= 14` modulo a feasible finite check.  In this atlas the
+HYP-2675 boundary row is therefore a calibration point for sign/topology, not
+the live proof frontier.  The remaining structural target is the true-wide
+branch (`second-largest > 14`) together with the finite `++++++` packet models.
+
 ## Proof Route
 
 1. Treat K4 edge signs as a finite chamber coordinate.  `++++++` is the same
@@ -215,7 +221,9 @@ does not explain the finite leaders.
 4. Classify `++++++` rows by finite Ruzsa/Freiman model plus opposite-pair
    packet balances; prove the complement either has a cyclic-pair arc flip,
    small exact pair mass, or enough signed Abel cancellation under THM-546 S2.
-5. Reattach HYP-2648 state-word and HYP-2639 relation-shell addresses before
+5. Use THM-547 to demote the boundary collar to finite-check/calibration status;
+   focus new structural work on true-wide rows and same-sign finite models.
+6. Reattach HYP-2648 state-word and HYP-2639 relation-shell addresses before
    any final LRC step.
 
 ## Tournament Analysis

@@ -10,6 +10,10 @@ Pulled/rebased during the run and integrated incoming mac-mini S2: THM-546 now
 has the rational signed Abel sharpening `|Delta_w| <= (6/49)V(E')/w`.  The
 atlas therefore reports exact Abel pressure for each row and treats Tournament
 Analysis as a tight ungapped/same-sign classifier, not as the analytic bound.
+A final rebase brought in THM-547, which closes the boundary-collar branch
+`second-largest<=14` modulo a feasible finite check; HYP-2677's boundary rows
+should now be read as calibration, with true-wide and finite `++++++` models as
+the live structural targets.
 
 Findings: the top twelve B14 near-speed leaders all have sign `++++++`, the same
 transitive K4 type `scores=(3,2,1,0), c3=0, HP=1`, and the same cyclic-pair
