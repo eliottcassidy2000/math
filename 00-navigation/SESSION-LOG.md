@@ -66,6 +66,24 @@ the same HYP-2671 dyadic block.  The old span-15/23/30 numbers are retained
 only as diagnostics for why the stale `w*Delta_w` normalization looked
 plausible.
 
+**Packet-alignment follow-up (HYP-2674/T913):** added
+`04-computation/lrc14_uniform_delta_packet_alignment_codex_s46.py`, stored
+`05-knowledge/results/lrc14_uniform_delta_packet_alignment_codex_s46.out`, and
+recorded `05-knowledge/hypotheses/HYP-2674-lrc14-uniform-delta-packet-alignment.md`.
+The new scout decomposes the corrected `Delta_w` object into the six
+one-missed-sector packet sums.
+
+Finding: the known risky rows are all same-sign packet alignments, with sign
+word `++++++`.  The finite B13 pocket has `Delta_w=997/5880`; the HYP-2671
+dyadic block has `Delta_w=457/3920` and still clears the k=9 margin by
+`12223/784784`; the non-shell warning row has `Delta_w=11/315`.  In the dyadic
+family `E_s={0,1,2,4,8,3s,4s,5s}` for `s=3..120`, the `w=6s` global spike is
+still the finite `s=4` row, while after `s>20` the best sampled value is only
+`2539/64680` and after `s>40` only `127/3675`.  This suggests the corrected
+uniform-tail proof should classify finite `++++++` alignments, then prove
+packet sign cancellation or small same-sign mass after the cutoff.  LRC(14) is
+not proved.
+
 ## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
 
 Continued after HYP-2670 by asking what the "one open constant" actually is

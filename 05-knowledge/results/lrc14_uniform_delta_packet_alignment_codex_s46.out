@@ -1,0 +1,83 @@
+HYP-2674 LRC14 uniform Delta packet-alignment scout
+k=9 far-tail margin cap_9-Q(8) = 129643/980980 (0.132157)
+
+finite_B13_packet
+  E'=(0, 1, 2, 4, 6, 7, 8, 10), w=12, max(E')=10
+  Delta_w                    = 997/5880 (0.169558)
+  margin_9 - Delta_w         = -220139/5885880 (-0.037401)
+  p1(E')                     = 61/140 (0.435714)
+  Delta_w/p1                 = 997/2562 (0.389149)
+  w*Delta_w diagnostic       = 997/490 (2.034694)
+  packet sign word s=1..6    = ++++++
+  packet positive/negative   = +997/490 (2.034694) / -0 (0.000000)
+  one-missed cells           = 66
+  packets:
+    missed sector 1: 132/343 (0.384840)
+    missed sector 2: 591/1715 (0.344606)
+    missed sector 3: 303/1715 (0.176676)
+    missed sector 4: 1481/3430 (0.431778)
+    missed sector 5: 869/1715 (0.506706)
+    missed sector 6: 326/1715 (0.190087)
+
+dyadic_s4_alignment
+  E'=(0, 1, 2, 4, 8, 12, 16, 20), w=24, max(E')=20
+  Delta_w                    = 457/3920 (0.116582)
+  margin_9 - Delta_w         = 12223/784784 (0.015575)
+  p1(E')                     = 617/1680 (0.367262)
+  Delta_w/p1                 = 1371/4319 (0.317435)
+  w*Delta_w diagnostic       = 1371/490 (2.797959)
+  packet sign word s=1..6    = ++++++
+  packet positive/negative   = +1371/490 (2.797959) / -0 (0.000000)
+  one-missed cells           = 91
+  packets:
+    missed sector 1: 134/245 (0.546939)
+    missed sector 2: 233/490 (0.475510)
+    missed sector 3: 12/35 (0.342857)
+    missed sector 4: 37/98 (0.377551)
+    missed sector 5: 43/70 (0.614286)
+    missed sector 6: 108/245 (0.440816)
+
+nonshell_warning
+  E'=(0, 2, 3, 5, 6, 15), w=18, max(E')=15
+  Delta_w                    = 11/315 (0.034921)
+  margin_9 - Delta_w         = 858479/8828820 (0.097236)
+  p1(E')                     = 1/10 (0.100000)
+  Delta_w/p1                 = 22/63 (0.349206)
+  w*Delta_w diagnostic       = 22/35 (0.628571)
+  packet sign word s=1..6    = ++++++
+  packet positive/negative   = +22/35 (0.628571) / -0 (0.000000)
+  one-missed cells           = 12
+  packets:
+    missed sector 1: 23/245 (0.093878)
+    missed sector 2: 29/245 (0.118367)
+    missed sector 3: 4/49 (0.081633)
+    missed sector 4: 29/245 (0.118367)
+    missed sector 5: 23/245 (0.093878)
+    missed sector 6: 6/49 (0.122449)
+
+dyadic family scan
+  E_s={0,1,2,4,8,3s,4s,5s}; sampled exactly for s=3..120
+  w=6s
+    best             : s=  4, Delta=457/3920 (0.116582), margin_9-Delta=12223/784784 (0.015575)
+    best_after_20    : s= 22, Delta=2539/64680 (0.039255), margin_9-Delta=546809/5885880 (0.092902)
+    best_after_40    : s= 60, Delta=127/3675 (0.034558), margin_9-Delta=1436137/14714700 (0.097599)
+    all_positive_best: s=  4, Delta=457/3920 (0.116582), margin_9-Delta=12223/784784 (0.015575)
+  w=10s
+    best             : s= 16, Delta=673/47040 (0.014307), margin_9-Delta=5549191/47087040 (0.117850)
+    best_after_20    : s= 28, Delta=841/82320 (0.010216), margin_9-Delta=1435453/11771760 (0.121940)
+    best_after_40    : s= 44, Delta=19/2310 (0.008225), margin_9-Delta=364723/2942940 (0.123932)
+    all_positive_best: s= 15, Delta=1019/88200 (0.011553), margin_9-Delta=10647851/88288200 (0.120603)
+
+Tournament Analysis
+  vertices: finite_B13_packet, dyadic_s4_alignment, nonshell_warning,
+            dyadic_w6_tail_after20, dyadic_w10_tail_after20
+  observable: larger positive Delta_w points to the riskier proof obligation.
+  Hamiltonian path by positive Delta_w:
+    finite_B13_packet > dyadic_s4_alignment > dyadic_w6_tail_after20 > nonshell_warning > dyadic_w10_tail_after20
+  score histogram: [0, 1, 2, 3, 4]
+  directed 3-cycles: 0 (risk order is transitive in this scout)
+  challenged assumption: the uniform tail is a generic discrepancy problem.
+    The risky rows are same-sign packet alignments; cancellation only needs
+    to be proved after the finite alignment pocket is isolated.
+
+PASS: uniform Delta packet-alignment scout complete.

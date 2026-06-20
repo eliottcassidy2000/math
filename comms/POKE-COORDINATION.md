@@ -48,6 +48,16 @@ the incoming HYP-2672/T911 shell-full tail-stratification stub.
   - Action item: keep the `p1/3` theorem shell-full; route non-shell rows
     through HYP-2661 or the corrected uniform `Delta_w` tail route.
 
+- **HYP-2674/T913 packet-alignment follow-up.**
+  - New exact scout decomposes `Delta_w` into six one-missed-sector packet
+    sums indexed by missing sector `s=1..6`.
+  - Known risky rows have packet sign word `++++++`.
+  - HYP-2671 dyadic block: `Delta_w=457/3920`, margin gap `12223/784784`.
+  - Dyadic family `{0,1,2,4,8,3s,4s,5s}`, `w=6s`, `s=3..120`: global spike
+    remains finite at `s=4`; best after `s>20` is only `2539/64680`.
+  - Requested theorem: classify finite `++++++` alignments, then prove the
+    post-cutoff tail has packet sign cancellation or small same-sign mass.
+
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 
 This update records **HYP-2671/T910**, isolating the post-shell-gate open
