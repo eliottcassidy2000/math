@@ -1,0 +1,184 @@
+HYP-2682 / T921 -- LRC14 cube-root phase/support atlas
+
+CONSECUTIVE RANK-ONE FAR TRIPLES
+  far triples: (15, 16, 17) through (35, 36, 37)
+  every far triple has exact relation rank 1 at height 3 (basis includes -u+2v-w=0)
+  far=(15, 16, 17) res7=(1, 2, 3) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2821/182 pairtax(+/-)=1250/1753 same_sign=1368
+    top_p0 row=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17) p0=2290763/5717712 margin=1164997/5717712 signs=++++ chamber=a+ b+ d+ Nimb=10563326238541/565827066604800
+    top_imb row=(0, 4, 6, 8, 10, 12, 14, 15, 16, 17) p0=23869/66640 signs=++-+ chamber=a+ b+ d- Nimb=546205453/13322668800
+    top_pairtax row=(0, 4, 6, 8, 10, 12, 14, 15, 16, 17) p0=23869/66640 signs=++-+ chamber=a+ b+ d- abs_pairtax=767717/4571504
+  far=(16, 17, 18) res7=(2, 3, 4) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2771/232 pairtax(+/-)=1186/1817 same_sign=1336
+    top_p0 row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) p0=22537/59976 margin=178259/779688 signs=++-+ chamber=a+ b- d+ Nimb=4539777127/119904019200
+    top_imb row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) p0=22537/59976 signs=++-+ chamber=a+ b- d+ Nimb=4539777127/119904019200
+    top_pairtax row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) p0=22537/59976 signs=++-+ chamber=a+ b- d+ abs_pairtax=9108527/51429420
+  far=(17, 18, 19) res7=(3, 4, 5) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2496/507 pairtax(+/-)=1092/1911 same_sign=1335
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 17, 18, 19) p0=3937/11305 margin=37644/146965 signs=+-++ chamber=a+ b- d+ Nimb=11423011/13802726700
+    top_imb row=(0, 2, 6, 8, 10, 12, 14, 17, 18, 19) p0=49811/158270 signs=++-+ chamber=a+ b+ d- Nimb=255138780481/8116003299600
+    top_pairtax row=(0, 2, 6, 8, 10, 12, 14, 17, 18, 19) p0=49811/158270 signs=++-+ chamber=a+ b+ d- abs_pairtax=157629959/977158980
+  far=(18, 19, 20) res7=(4, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2508/495 pairtax(+/-)=1035/1968 same_sign=1300
+    top_p0 row=(0, 2, 6, 8, 10, 12, 14, 18, 19, 20) p0=117233/335160 margin=1109371/4357080 signs=++-- chamber=a+ b- d+ Nimb=3626236297/112332225600
+    top_imb row=(0, 2, 6, 8, 10, 12, 14, 18, 19, 20) p0=117233/335160 signs=++-- chamber=a+ b- d+ Nimb=3626236297/112332225600
+    top_pairtax row=(0, 2, 6, 8, 10, 12, 14, 18, 19, 20) p0=117233/335160 signs=++-- chamber=a+ b- d+ abs_pairtax=16072579/114959880
+  far=(19, 20, 21) res7=(0, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2411/592 pairtax(+/-)=836/2167 same_sign=1172
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 19, 20, 21) p0=18973/55860 margin=192251/726180 signs=+-++ chamber=a- b- d- Nimb=3323407/3120339600
+    top_imb row=(0, 2, 4, 8, 10, 12, 14, 19, 20, 21) p0=2381/7448 signs=+++- chamber=a+ b+ d- Nimb=332708191/12481358400
+    top_pairtax row=(0, 1, 2, 3, 4, 11, 14, 19, 20, 21) p0=39337/153615 signs=+-+- chamber=a- b- d- abs_pairtax=5593915/42151956
+  far=(20, 21, 22) res7=(0, 1, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2480/523 pairtax(+/-)=923/2080 same_sign=1222
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 20, 21, 22) p0=11527/32340 margin=104249/420420 signs=+-++ chamber=a- b+ d- Nimb=30823/65367225
+    top_imb row=(0, 2, 4, 8, 10, 12, 14, 20, 21, 22) p0=10583/32340 signs=+++- chamber=a+ b+ d+ Nimb=30605809/1045875600
+    top_pairtax row=(0, 1, 2, 5, 6, 11, 14, 20, 21, 22) p0=6217/32340 signs=+-+- chamber=a- b- d- abs_pairtax=1367627/11092620
+  far=(21, 22, 23) res7=(0, 1, 2) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2347/656 pairtax(+/-)=928/2075 same_sign=1278
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 21, 22, 23) p0=22783/61985 margin=190846/805805 signs=+-++ chamber=a+ b+ d+ Nimb=17541553/34579262025
+    top_imb row=(0, 2, 4, 6, 10, 12, 14, 21, 22, 23) p0=34049/123970 signs=++-+ chamber=a+ b+ d- Nimb=1874513233/138317048100
+    top_pairtax row=(0, 7, 10, 11, 12, 13, 14, 21, 22, 23) p0=2233303/9669660 signs=+-++ chamber=a- b- d+ abs_pairtax=100343723/829173345
+  far=(22, 23, 24) res7=(1, 2, 3) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2203/800 pairtax(+/-)=1093/1910 same_sign=1411
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 22, 23, 24) p0=69301/212520 margin=109841/394680 signs=+-++ chamber=a+ b+ d+ Nimb=11981947/45164750400
+    top_imb row=(0, 2, 4, 6, 10, 12, 14, 22, 23, 24) p0=91979/297528 signs=++++ chamber=a+ b- d+ Nimb=31077058963/2213072769600
+    top_pairtax row=(0, 2, 4, 6, 12, 13, 14, 22, 23, 24) p0=130381/483483 signs=+-+- chamber=a+ b+ d+ abs_pairtax=3995863/28840812
+  far=(23, 24, 25) res7=(2, 3, 4) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2145/858 pairtax(+/-)=1146/1857 same_sign=1378
+    top_p0 row=(0, 2, 4, 6, 8, 10, 12, 23, 24, 25) p0=4613/13800 margin=339217/1255800 signs=+-++ chamber=a- b+ d- Nimb=308611/1333080000
+    top_imb row=(0, 2, 4, 6, 8, 12, 14, 23, 24, 25) p0=206389/676200 signs=++-+ chamber=a+ b+ d- Nimb=467532979/38103870000
+    top_pairtax row=(0, 1, 4, 5, 12, 13, 14, 23, 24, 25) p0=45814/219765 signs=+-+- chamber=a- b- d- abs_pairtax=47034304/376896975
+  far=(24, 25, 26) res7=(3, 4, 5) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2335/668 pairtax(+/-)=1195/1808 same_sign=1293
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 24, 25, 26) p0=18449/54600 margin=14551/54600 signs=+-++ chamber=a- b- d- Nimb=1192417/2981160000
+    top_imb row=(0, 2, 4, 6, 8, 12, 14, 24, 25, 26) p0=20107/63700 signs=++++ chamber=a+ b+ d+ Nimb=300155563/20868120000
+    top_pairtax row=(0, 2, 4, 6, 7, 8, 14, 24, 25, 26) p0=94067/382200 signs=+-+- chamber=a+ b+ d+ abs_pairtax=5366479/43698200
+  far=(25, 26, 27) res7=(4, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2267/736 pairtax(+/-)=1134/1869 same_sign=1362
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 25, 26, 27) p0=247/700 margin=327/1300 signs=+-++ chamber=a- b- d- Nimb=5869537/60368490000
+    top_imb row=(0, 1, 3, 5, 7, 9, 10, 25, 26, 27) p0=35194/143325 signs=+-++ chamber=a+ b+ d+ Nimb=7090492267/739514002500
+    top_pairtax row=(0, 1, 2, 3, 6, 7, 14, 25, 26, 27) p0=110867/429975 signs=+-+- chamber=a- b- d- abs_pairtax=35682793/294962850
+  far=(26, 27, 28) res7=(0, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2520/483 pairtax(+/-)=1003/2000 same_sign=1190
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 26, 27, 28) p0=121489/343980 margin=6647/26460 signs=+-++ chamber=a- b- d- Nimb=2769313/118322240400
+    top_imb row=(0, 4, 7, 8, 9, 10, 14, 26, 27, 28) p0=78863/343980 signs=+-++ chamber=a- b- d- Nimb=945604249/118322240400
+    top_pairtax row=(0, 1, 2, 7, 9, 10, 11, 26, 27, 28) p0=206417/945945 signs=+-++ chamber=a- b- d- abs_pairtax=169021/1404585
+  far=(27, 28, 29) res7=(0, 1, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2320/683 pairtax(+/-)=1057/1946 same_sign=1224
+    top_p0 row=(0, 2, 4, 6, 8, 10, 12, 27, 28, 29) p0=174953/511560 margin=1745011/6650280 signs=++++ chamber=a+ b+ d- Nimb=2596614103/785080900800
+    top_imb row=(0, 3, 5, 7, 9, 11, 14, 27, 28, 29) p0=1982683/8440740 signs=+-++ chamber=a+ b+ d- Nimb=96353815519/10178013106800
+    top_pairtax row=(0, 1, 4, 5, 6, 7, 8, 27, 28, 29) p0=143597/767340 signs=+-+- chamber=a- b- d+ abs_pairtax=17350943/175465080
+  far=(28, 29, 30) res7=(0, 1, 2) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2287/716 pairtax(+/-)=1167/1836 same_sign=1277
+    top_p0 row=(0, 2, 4, 6, 8, 10, 12, 28, 29, 30) p0=29173/85260 margin=290651/1108380 signs=++++ chamber=a+ b+ d+ Nimb=28897927/9692356800
+    top_imb row=(0, 4, 6, 7, 9, 10, 12, 28, 29, 30) p0=7963/36540 signs=+-+- chamber=a+ b+ d- Nimb=131142931/21807802800
+    top_pairtax row=(0, 5, 6, 7, 8, 9, 10, 28, 29, 30) p0=39077/170520 signs=+-+- chamber=a- b- d+ abs_pairtax=5718659/58488360
+  far=(29, 30, 31) res7=(1, 2, 3) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2204/799 pairtax(+/-)=1217/1786 same_sign=1308
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 29, 30, 31) p0=32584/94395 margin=318083/1227135 signs=+-++ chamber=a- b- d- Nimb=1132039/1697222100
+    top_imb row=(0, 5, 6, 7, 10, 11, 12, 29, 30, 31) p0=431153/1938244 signs=+-++ chamber=a- b- d- Nimb=5959279478359/845277705795600
+    top_pairtax row=(0, 4, 5, 6, 7, 8, 14, 29, 30, 31) p0=9504/44051 signs=+-++ chamber=a- b- d+ abs_pairtax=184877921/1813139160
+  far=(30, 31, 32) res7=(2, 3, 4) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2191/812 pairtax(+/-)=1230/1773 same_sign=1258
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 30, 31, 32) p0=8621/26040 margin=92527/338520 signs=+-++ chamber=a+ b+ d- Nimb=3679363/10849305600
+    top_imb row=(0, 3, 6, 8, 10, 12, 14, 30, 31, 32) p0=22513/104160 signs=+-++ chamber=a+ b+ d+ Nimb=540703677/59068441600
+    top_pairtax row=(0, 7, 8, 11, 12, 13, 14, 30, 31, 32) p0=154463/709280 signs=+-++ chamber=a- b- d- abs_pairtax=3558862121/35762606880
+  far=(31, 32, 33) res7=(3, 4, 5) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2390/613 pairtax(+/-)=1269/1734 same_sign=1264
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 31, 32, 33) p0=371513/1145760 margin=4172731/14894880 signs=+-++ chamber=a+ b- d+ Nimb=11820859/26791142400
+    top_imb row=(0, 6, 7, 8, 9, 11, 13, 31, 32, 33) p0=3127603/15639624 signs=+-++ chamber=a+ b+ d- Nimb=758799396031/100347831327744
+    top_pairtax row=(0, 5, 7, 8, 9, 10, 11, 31, 32, 33) p0=2684467/12030480 signs=+-++ chamber=a+ b- d+ abs_pairtax=7440955/75026448
+  far=(32, 33, 34) res7=(4, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2450/553 pairtax(+/-)=1312/1691 same_sign=1233
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 32, 33, 34) p0=203933/628320 margin=2285671/8168160 signs=+-++ chamber=a- b- d- Nimb=465823/2255920128
+    top_imb row=(0, 2, 7, 8, 10, 12, 14, 32, 33, 34) p0=922807/4398240 signs=+-++ chamber=a+ b+ d+ Nimb=148804325401/19344515097600
+    top_pairtax row=(0, 7, 8, 9, 10, 11, 14, 32, 33, 34) p0=1036033/4398240 signs=+-++ chamber=a- b- d+ abs_pairtax=90786697/905157792
+  far=(33, 34, 35) res7=(0, 5, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2722/281 pairtax(+/-)=1249/1754 same_sign=1222
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 33, 34, 35) p0=98639/274890 margin=877543/3573570 signs=+-++ chamber=a- b- d- Nimb=2545153/6297042675
+    top_imb row=(0, 1, 2, 9, 10, 11, 14, 33, 34, 35) p0=3307/16830 signs=+-++ chamber=a- b- d- Nimb=299371957/56673384075
+    top_pairtax row=(0, 1, 2, 3, 4, 11, 14, 33, 34, 35) p0=8597/36652 signs=+-++ chamber=a- b+ d- abs_pairtax=2437055/18857454
+  far=(34, 35, 36) res7=(0, 1, 6) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2635/368 pairtax(+/-)=1307/1696 same_sign=1245
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 34, 35, 36) p0=2581/7497 margin=25352/97461 signs=+-++ chamber=a- b- d- Nimb=152563/624500100
+    top_imb row=(0, 2, 4, 7, 10, 12, 14, 34, 35, 36) p0=13207/49980 signs=++++ chamber=a+ b+ d- Nimb=255320113/22482003600
+    top_pairtax row=(0, 6, 7, 8, 10, 11, 12, 34, 35, 36) p0=302741/1649340 signs=+-+- chamber=a- b- d- abs_pairtax=11056417/113144724
+  far=(35, 36, 37) res7=(0, 1, 2) best_relation=(0, 4, (-1, 2, -1)) rank=1 count=3003 actual(+/-)=2551/452 pairtax(+/-)=1348/1655 same_sign=1224
+    top_p0 row=(0, 1, 2, 3, 4, 5, 6, 35, 36, 37) p0=22657/65268 margin=218279/848484 signs=+-++ chamber=a+ b+ d- Nimb=1627951/11833088400
+    top_imb row=(0, 2, 4, 7, 9, 12, 14, 35, 36, 37) p0=63293/326340 signs=++++ chamber=a+ b+ d- Nimb=69380503/15213970800
+    top_pairtax row=(0, 1, 2, 3, 12, 13, 14, 35, 36, 37) p0=464743/2121210 signs=+-++ chamber=a- b- d- abs_pairtax=7559667/80841670
+
+AGGREGATE PHASE/SUPPORT ATLAS
+  rows=63063
+  most common sign ledgers (actual,pairtax,pair,triple):
+    +-++: 23374
+    ++++: 10059
+    +-+-: 8246
+    ++-+: 6851
+    -+-+: 4325
+    --++: 4183
+    ---+: 1905
+    +++-: 1881
+    --+-: 1181
+    ++--: 643
+  A2/Eisenstein chamber counts:
+    a- b- d+: 11753
+    a- b- d-: 11725
+    a+ b+ d+: 11513
+    a+ b+ d-: 11334
+    a- b+ d-: 8513
+    a+ b- d+: 8217
+    a0 b- d+: 4
+    a- b- d0: 2
+    a0 b+ d-: 1
+    a+ b0 d+: 1
+  mod-7 far phase counts:
+    (0, 1, 2): 9009
+    (0, 1, 6): 9009
+    (0, 5, 6): 9009
+    (1, 2, 3): 9009
+    (2, 3, 4): 9009
+    (3, 4, 5): 9009
+    (4, 5, 6): 9009
+  top direct_p0:
+    row=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) direct_p0=2290763/5717712 p0=2290763/5717712 margin=1164997/5717712 signs=++++ chamber=a+ b+ d+ core_hist7=(2, 0, 1, 1, 1, 1, 1) exc=8 energy=526
+    row=(0, 8, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) direct_p0=228112/595595 p0=228112/595595 margin=131863/595595 signs=+-+- chamber=a+ b+ d- core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=502
+    row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) far=(16, 17, 18) res7=(2, 3, 4) direct_p0=22537/59976 p0=22537/59976 margin=178259/779688 signs=++-+ chamber=a+ b- d+ core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=502
+    row=(0, 7, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) direct_p0=54427/145860 p0=54427/145860 margin=236111/1021020 signs=+-++ chamber=a- b- d- core_hist7=(3, 0, 0, 1, 1, 1, 1) exc=8 energy=486
+    row=(0, 1, 2, 3, 4, 5, 6, 21, 22, 23) far=(21, 22, 23) res7=(0, 1, 2) direct_p0=22783/61985 p0=22783/61985 margin=190846/805805 signs=+-++ chamber=a+ b+ d+ core_hist7=(1, 1, 1, 1, 1, 1, 1) exc=8 energy=470
+    row=(0, 1, 2, 3, 4, 5, 6, 33, 34, 35) far=(33, 34, 35) res7=(0, 5, 6) direct_p0=98639/274890 p0=98639/274890 margin=877543/3573570 signs=+-++ chamber=a- b- d- core_hist7=(1, 1, 1, 1, 1, 1, 1) exc=8 energy=470
+  top |actual_residual|:
+    row=(0, 5, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=735838771/3268625360 p0=260969/733040 margin=2367003/9529520 signs=+-++ chamber=a- b+ d- core_hist7=(2, 0, 0, 1, 1, 2, 1) exc=8 energy=466
+    row=(0, 7, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=53537567/245146902 p0=54427/145860 margin=236111/1021020 signs=+-++ chamber=a- b- d- core_hist7=(3, 0, 0, 1, 1, 1, 1) exc=8 energy=486
+    row=(0, 3, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=2108888209/9805876080 p0=2023471/5717712 margin=1432289/5717712 signs=+-++ chamber=a- b+ d- core_hist7=(2, 0, 0, 2, 1, 1, 1) exc=9 energy=458
+    row=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=2084357309/9805876080 p0=2290763/5717712 margin=1164997/5717712 signs=++++ chamber=a+ b+ d+ core_hist7=(2, 0, 1, 1, 1, 1, 1) exc=8 energy=526
+    row=(0, 8, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=128291302/612867255 p0=228112/595595 margin=131863/595595 signs=+-+- chamber=a+ b+ d- core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=502
+    row=(0, 4, 10, 11, 12, 13, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |actual_residual|=42601087/204289085 p0=356063/1021020 margin=37291/145860 signs=+-++ chamber=a- b+ d- core_hist7=(2, 0, 0, 1, 2, 1, 1) exc=9 energy=458
+  top |pair_tax_shadow|:
+    row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) far=(16, 17, 18) res7=(2, 3, 4) |pair_tax_shadow|=9108527/51429420 p0=22537/59976 margin=178259/779688 signs=++-+ chamber=a+ b- d+ core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=502
+    row=(0, 4, 6, 8, 10, 12, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) |pair_tax_shadow|=767717/4571504 p0=23869/66640 margin=213303/866320 signs=++-+ chamber=a+ b+ d- core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=446
+    row=(0, 5, 6, 7, 8, 9, 12, 16, 17, 18) far=(16, 17, 18) res7=(2, 3, 4) |pair_tax_shadow|=16637837/102858840 p0=9193/33320 margin=142291/433160 signs=+-+- chamber=a- b- d+ core_hist7=(2, 1, 1, 0, 0, 2, 1) exc=13 energy=406
+    row=(0, 2, 6, 8, 10, 12, 14, 17, 18, 19) far=(17, 18, 19) res7=(3, 4, 5) |pair_tax_shadow|=157629959/977158980 p0=49811/158270 margin=596007/2057510 signs=++-+ chamber=a+ b+ d- core_hist7=(2, 1, 1, 1, 0, 1, 1) exc=12 energy=402
+    row=(0, 2, 6, 8, 10, 12, 14, 16, 17, 18) far=(16, 17, 18) res7=(2, 3, 4) |pair_tax_shadow|=1068119/6857256 p0=103351/299880 margin=1012637/3898440 signs=++-+ chamber=a- b- d- core_hist7=(2, 1, 1, 1, 0, 1, 1) exc=9 energy=482
+    row=(0, 2, 6, 8, 10, 12, 14, 18, 19, 20) far=(18, 19, 20) res7=(4, 5, 6) |pair_tax_shadow|=16072579/114959880 p0=117233/335160 margin=1109371/4357080 signs=++-- chamber=a+ b- d+ core_hist7=(2, 1, 1, 1, 0, 1, 1) exc=11 energy=450
+  top Eisenstein_norm:
+    row=(0, 4, 6, 8, 10, 12, 14, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) Eisenstein_norm=546205453/13322668800 p0=23869/66640 margin=213303/866320 signs=++-+ chamber=a+ b+ d- core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=446
+    row=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) far=(16, 17, 18) res7=(2, 3, 4) Eisenstein_norm=4539777127/119904019200 p0=22537/59976 margin=178259/779688 signs=++-+ chamber=a+ b- d+ core_hist7=(2, 1, 0, 1, 1, 1, 1) exc=8 energy=502
+    row=(0, 3, 5, 7, 9, 11, 13, 15, 16, 17) far=(15, 16, 17) res7=(1, 2, 3) Eisenstein_norm=2378259900661/68108813572800 p0=14669489/42882840 margin=11248711/42882840 signs=+++- chamber=a+ b+ d+ core_hist7=(2, 0, 1, 1, 1, 1, 1) exc=13 energy=442
+    row=(0, 2, 6, 8, 10, 12, 14, 18, 19, 20) far=(18, 19, 20) res7=(4, 5, 6) Eisenstein_norm=3626236297/112332225600 p0=117233/335160 margin=1109371/4357080 signs=++-- chamber=a+ b- d+ core_hist7=(2, 1, 1, 1, 0, 1, 1) exc=11 energy=450
+    row=(0, 2, 6, 8, 10, 12, 14, 17, 18, 19) far=(17, 18, 19) res7=(3, 4, 5) Eisenstein_norm=255138780481/8116003299600 p0=49811/158270 margin=596007/2057510 signs=++-+ chamber=a+ b+ d- core_hist7=(2, 1, 1, 1, 0, 1, 1) exc=12 energy=402
+    row=(0, 2, 4, 8, 10, 12, 14, 20, 21, 22) far=(20, 21, 22) res7=(0, 1, 6) Eisenstein_norm=30605809/1045875600 p0=10583/32340 margin=116521/420420 signs=+++- chamber=a+ b+ d+ core_hist7=(2, 1, 1, 1, 1, 1, 0) exc=12 energy=418
+  top-12 overlap matrix:
+    direct: 12 6 2 2
+    actual: 6 12 0 0
+    pairtax: 2 0 12 5
+    eisenstein: 2 0 5 12
+  signature leaders: (far_residue, signs, chamber) -> max direct p0
+    res7=(1, 2, 3) signs=++++ chamber=a+ b+ d+ count=300 leader=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17) p0=2290763/5717712 margin=1164997/5717712 total=2084357309/9805876080 recur=191446939/5883525648 Nimb=10563326238541/565827066604800
+    res7=(1, 2, 3) signs=+-+- chamber=a+ b+ d- count=209 leader=(0, 8, 10, 11, 12, 13, 14, 15, 16, 17) p0=228112/595595 margin=131863/595595 total=128291302/612867255 recur=-110602913/4902938040 Nimb=305127778717/20956558022400
+    res7=(2, 3, 4) signs=++-+ chamber=a+ b- d+ count=113 leader=(0, 4, 6, 8, 10, 12, 14, 16, 17, 18) p0=22537/59976 margin=178259/779688 total=15674843/102858840 recur=9108527/51429420 Nimb=4539777127/119904019200
+    res7=(1, 2, 3) signs=+-++ chamber=a- b- d- count=734 leader=(0, 7, 10, 11, 12, 13, 14, 15, 16, 17) p0=54427/145860 margin=236111/1021020 total=53537567/245146902 recur=-65475155/980587608 Nimb=1450089812653/204326440718400
+    res7=(0, 1, 2) signs=+-++ chamber=a+ b+ d+ count=569 leader=(0, 1, 2, 3, 4, 5, 6, 21, 22, 23) p0=22783/61985 margin=190846/805805 total=256345/3644718 recur=-12109/396165 Nimb=17541553/34579262025
+    res7=(0, 5, 6) signs=+-++ chamber=a- b- d- count=930 leader=(0, 1, 2, 3, 4, 5, 6, 33, 34, 35) p0=98639/274890 margin=877543/3573570 total=414914/6734805 recur=-92252/2244935 Nimb=2545153/6297042675
+    res7=(1, 2, 3) signs=++-+ chamber=a+ b+ d- count=198 leader=(0, 4, 6, 8, 10, 12, 14, 15, 16, 17) p0=23869/66640 margin=213303/866320 total=9243793/68572560 recur=767717/4571504 Nimb=546205453/13322668800
+    res7=(0, 1, 6) signs=+-++ chamber=a- b+ d- count=545 leader=(0, 1, 2, 3, 4, 5, 6, 20, 21, 22) p0=11527/32340 margin=104249/420420 total=6255/105644 recur=-2519/144060 Nimb=30823/65367225
+    res7=(1, 2, 3) signs=+-++ chamber=a- b+ d- count=345 leader=(0, 5, 10, 11, 12, 13, 14, 15, 16, 17) p0=260969/733040 margin=2367003/9529520 total=735838771/3268625360 recur=-1203347647/9805876080 Nimb=25429043779/4169927361600
+    res7=(1, 2, 3) signs=++++ chamber=a+ b+ d- count=285 leader=(0, 1, 10, 11, 12, 13, 14, 15, 16, 17) p0=10092889/28588560 margin=7185911/28588560 total=1813484759/9805876080 recur=66854951/9805876080 Nimb=510589/44396352
+    res7=(4, 5, 6) signs=+-++ chamber=a- b- d- count=736 leader=(0, 1, 2, 3, 4, 5, 6, 25, 26, 27) p0=247/700 margin=327/1300 total=40073/720300 recur=-720917/28091700 Nimb=5869537/60368490000
+    res7=(2, 3, 4) signs=+-++ chamber=a+ b+ d- count=458 leader=(0, 1, 2, 3, 4, 5, 6, 16, 17, 18) p0=2003/5712 margin=18841/74256 total=174507/3265360 recur=-659063/29388240 Nimb=76693/262180800
+  reading: direct risk is not a function of relation rank alone; it is a finite address in (mod-7 phase, order signs, A2 chamber, bounded-core support).
+
+TOURNAMENT ANALYSIS ON PHASE-ATLAS LENSES
+  leaders={ direct_p0: (0, 9, 10, 11, 12, 13, 14, 15, 16, 17), actual_residual: (0, 5, 10, 11, 12, 13, 14, 15, 16, 17), pair_tax_shadow: (0, 4, 6, 8, 10, 12, 14, 16, 17, 18), eisenstein_norm: (0, 4, 6, 8, 10, 12, 14, 15, 16, 17) }
+  score_hist={3: 1, 0: 1, 2: 1, 1: 1} directed_3cycles=0
+  Hamiltonian_path=direct_p0 > pair_tax_shadow > eisenstein_norm > actual_residual
+  challenged assumption: the natural vertices are not far runners; they are phase/support proof lenses and packet signatures.
+
+SYNTHESIS
+  Holding the rank-one relation u-2v+w=0 fixed does not freeze the packet signs.
+  The mod-7 far phase and A2/Eisenstein chamber move large mass between actual residual,
+  pair-tax shadow, and direct p0.  This explains why S51 saw AP-relation sign flips
+  under shifts and why S52's cube-root coordinate is useful but not a proof scalar.
+  Proof target: a finite resonant phase/support atlas for low-height relation tuples,
+  followed by signed Abel/Koksma bounds only after the atlas key has been retained.
+  No LRC(14) proof is claimed.

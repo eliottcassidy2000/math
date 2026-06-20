@@ -12,6 +12,37 @@ rank alone.  Quick exact probe over `m=15..80` for three bounded cores already
 shows multiple sign words for the same rank-one relation and top direct rows
 concentrated at small offsets in the tested cores.  Next: run
 `lrc14_ap_triple_phase_atlas_codex_s53.py` and store the exact output.
+## codex-2026-06-20-S54 -- LRC14 cube-root phase/support atlas -- HYP-2682/T921
+
+User asked to use cube roots of unity, one-/two-/three-far structure, and
+`A+B+C-D-E-F+G` as inspiration for the next long LRC(14) session.  Pulled
+incoming S51/S52 work first: S51 built the signed multi-far Newton/Stirling
+hierarchy (HYP-2680), and S52 identified the recursion as the pair-tax shadow
+with exact Eisenstein modes (HYP-2681).
+
+Added `04-computation/lrc14_cube_root_phase_atlas_codex_s54.py` and stored
+`05-knowledge/results/lrc14_cube_root_phase_atlas_codex_s54.out`.  The new
+scout holds relation rank fixed by scanning consecutive far triples
+`(m,m+1,m+2)`, `m=15..35`, all with exact relation `-u+2v-w=0`, across all
+`3003` primitive bounded cores, for `63063` exact rows.
+
+Main finding: relation rank alone is too coarse.  Actual residual signs,
+pair-tax signs, cube-root A2 chamber, and direct-risk leaders all move with
+mod-7 phase/support data.  Top-12 overlap matrix:
+`direct/actual/pairtax/eisenstein = [[12,6,2,2],[6,12,0,0],[2,0,12,5],[2,0,5,12]]`.
+The leader tournament is transitive with path
+`direct_p0 > pair_tax_shadow > eisenstein_norm > actual_residual`.  Pair-tax
+and Eisenstein imbalance see each other, but direct cap risk needs additional
+bounded-core state/support address.
+
+Conclusion: the low-height resonant branch should be routed by a finite
+phase/support atlas keyed by far residues mod `7`, actual/pair-tax/pair/triple
+signs, the A2 chamber of `S_omega-P_omega`, and bounded-core support/state data
+before applying signed Abel/Koksma estimates.  No LRC(14) proof claimed.
+After pulling the next mainline, folded this into S53's reserved HYP-2682/T921
+detail file rather than leaving a parallel hypothesis, and incorporated KPS S19:
+the global wide branch now points to decorrelation/coverage up to the plateau
+`Q(k-1)`, while this atlas is the finite low-height resonant router.
 
 Incoming KPS S19 arrived during the first checkpoint and was directly relevant:
 the scalar route `C(k)=sup w|Delta_w|` is now refuted, and the surviving proof
