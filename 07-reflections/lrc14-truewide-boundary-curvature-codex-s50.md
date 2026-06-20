@@ -98,6 +98,19 @@ sorted far path `(16,28,30,33,35)` keeps `p0=0` until the last two additions;
 all two-far curvatures over that tiny core are zero.  It is a multi-far
 threshold/packet-cancellation row, not a two-far curvature exception.
 
+After the atlas checkpoint, mac-mini S3 claimed THM-548 as the analytic
+counterpart.  Its proposed decorrelated limit is
+
+```text
+Phi_2(B)=(2*p2(B)-p1(B))/49,
+```
+
+and the deviation is supported by resonance frequencies `m*u+n*v`.  That is
+the exact analytic version of the boundary-function analogy: off resonance the
+two approach arcs see independent boundary data; on resonance they share a
+small integer relation, which is precisely the Freiman/scale-invariance finite
+case.
+
 ## Next proof obligation
 
 Prove a finite theorem for the d=1 branch:
@@ -116,6 +129,10 @@ high excess or d>=2 + large positive curvature
 high excess or d>=2 + small/negative curvature
   => signed dimension-penalty / one-far Abel bounds should close it
 ```
+
+THM-548 turns the second line into a concrete analytic problem: bound
+`I_B(u,v)-Phi_2(B)` off the resonance set, then pass the resonant set to the
+finite curvature ledger.
 
 No LRC(14) proof is claimed here.  The gain is structural: the live k=9 leader
 is now a finite d=1 overlap target, not an unbounded two-far synergy target.

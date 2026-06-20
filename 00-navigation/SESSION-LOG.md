@@ -27,6 +27,13 @@ dimension-penalty/excess-curvature cap for d>=2.  Added reflection
 HYP-2679, results index, tangent index, and OPEN-Q-108.  No LRC(14) proof
 claimed.
 
+Post-checkpoint pull brought in mac-mini S3 / THM-548, the analytic complement
+to this atlas: the claimed two-far decorrelated limit is
+`Phi_2(B)=(2p2(B)-p1(B))/49`, and the deviation is governed by resonance
+frequencies `m*u+n*v`.  Integrated that connection into HYP-2679, OPEN-Q-108,
+T918, and the reflection.  The refined target is now nonresonant signed
+BV/Abel decay plus resonant Freiman/scale finite reduction.
+
 ## mac-mini-2026-06-20-S2 — LRC(14): signed Erdős–Turán sharpening `|Δ_w|≤(6/49)V/w` (THM-546) + BOUNDARY-COLLAR CLOSED (THM-547) — 2 of 3 sector-crux regions now closed
 Dispatch: signed Erdős–Turán packet estimate; Ruzsa modeling + Plünnecke–Ruzsa; apex-prime/Bertrand/Chebyshev; aim for an LRC(14) proof. The user's leads mapped exactly onto the open pieces.
 **(1) SIGNED sharpening of THM-546 (DONE).** The absolute `|Δ_w|≤κV/(π²w)` (κ=1.857) is 5–76× loose because it discards the sign. The QR REALITY (HYP-2657: `6=−1`∈NQR mod 7 ⟹ `Δ_w` real, `n↔−n` cancels imag parts) plus Abel summation collapses `Δ_w=−(1/w)Σ_jΣ_{arcs}[F_j(wa)−F_j(wb)]`, `F_j`=centered antiderivative of `1_{sector j}−1/7`, `sup|F_j|=3/49` EXACT ⟹ **`|Δ_w|≤(6/49)V(E')/w`** — RATIONAL constant `6/49=(p−1)/p²` at the apex prime `p=7` (the prime that gives the 7-vanishing now gives the *size*). 1.54× sharper; full signed sum 5–76× tighter (open: closed-form for the arc-phase cancellation).

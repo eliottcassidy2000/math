@@ -14,6 +14,7 @@ depends_on:
   - HYP-2648
   - HYP-2639
 related:
+  - THM-548
   - HYP-2671
   - HYP-2672
   - HYP-2657
@@ -214,6 +215,30 @@ d>=2 / high-growth rows:
 So HYP-2679 narrows HYP-2678 rather than broadening it.  The live k=9 leader is
 a finite dilated-core overlap row, not a high-dimensional positive-curvature
 row.
+
+After this atlas was checkpointed, mac-mini S3 claimed THM-548 as the analytic
+complement.  The claimed decorrelated limit is
+
+```text
+Phi_2(B) = (2*p2(B)-p1(B))/49,
+```
+
+where `p1(B)` and `p2(B)` are the base masses missing exactly one and exactly
+two inner sectors.  The deviation from this limit is organized by resonance
+frequencies `m*u+n*v`.  This is exactly the analytic counterpart of the
+curvilinear-boundary reading: off resonance, two approach arcs decorrelate;
+on resonance, the pair has a small integer relation and should reduce by
+Freiman/scale-invariance to a finite model.
+
+Thus the sharpened target is:
+
+```text
+nonresonant two-far pairs:
+  bound I_B(u,v)-Phi_2(B) by signed BV / Abel decay in |m*u+n*v|.
+
+resonant two-far pairs:
+  scale/Freiman reduce to bounded curvature atlas rows.
+```
 
 ## Assumption Challenge
 
