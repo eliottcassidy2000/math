@@ -1,3 +1,24 @@
+## Eliott Cassidy update: kps-S19 HYP-2675 correction (Cap-level Target)
+
+The latest push (SHA 9d93) by Eliott Cassidy delivers a critical correction to the **HYP-2675 (Wide Ridge / Global Decorrelation)** proof route, marking a fundamental shift in the analytic strategy for closing the True-Wide regime of LRC(14).
+
+- **Refutation of the Q-Invariant:**
+    - The previously assumed invariant that all "wide" configurations must stay below the **Q-level** (the decorrelated limit $Q(k-1)$ of a consecutive core) has been **refuted**. 
+    - **Counter-example:** The set $E=[0, 19, 20, 21, 22, 23, 24, 25]$ (k=8) yields $p_0 \approx 0.202$, which exceeds $Q(7) \approx 0.196$. 
+    - **Explanation:** Clusters that do not contain the origin can "sweep" more effectively and cover inner sectors better than a consecutive core in a finite setting. This proves that $Q(k-1)$ is strictly a **decorrelated limit** as $w \to \infty$, not a universal bound for finite wide sets.
+
+- **Shift to the Cap-level Target:**
+    - The proof target has been reset from the tight $Q(k-1)$ level to the much more robust **$cap_k$ level**.
+    - **Advantage:** The $cap_k$ margin is approximately **5x larger** than the $Q$ margin. This increased arithmetical slack means that a **lossy constant** in the multi-cluster Erdős-Turán-Koksma bound will now suffice to close the proof.
+    - **Verified Safety:** Massive scanning ($10^4$–$10^5$ sets) confirms that while wide sets can break the $Q$-barrier, they remain nowhere near the $cap_k$ ceiling, with margins consistently $\ge 0.30$.
+
+- **Impact on Global Proof Assembly:**
+    - **Analytic Relief:** The "Signed Magnitude Bound" (the final analytic gap) no longer needs to be razor-sharp. The shift to $cap_k$ provides the necessary room to accommodate the resonance corrections $R(B, F)$ without threatening the certificate.
+    - **Surviving Components:** The **THM-546/547** combinatorial bounds (based on miss-1 component counts) and the **Cardinality Lemma** (for small clusters) remain valid and central to the revised route.
+    - **Revised Critical Path:** The immediate focus is now on the **Cap-level joint multi-cluster Erdős-Turán-Koksma constant**, replacing the hunt for an exact $Q$-level invariant.
+
+This correction effectively de-risks the global closure by replacing a fragile, tight target with a stable, wide-margin target that is computationally and analytically much easier to defend.
+
 ## Eliott Cassidy update: codex-s55 LRC14 state mass address repair
 
 The latest push (SHA 68fa) by Eliott Cassidy introduces the **state mass address repair**, a decisive refinement to the **wide address repair** (HYP-2683). This update provides the exact coordinate-based addressing system needed to close the "True-Wide" branch of the LRC(14) proof without over-fitting or losing structural precision.
@@ -19,22 +40,4 @@ The latest push (SHA 68fa) by Eliott Cassidy introduces the **state mass address
         3.  **Weyl/decorrelation bounds** (for the deep tail).
 
 This "address repair" effectively bridges the gap between finite exhaustive checks and infinite analytic bounds, providing a rigorous way to discharge the remaining true-wide obligations.
-
-## Eliott Cassidy update: codex-s55 LRC14 wide address repair
-
-The latest push (SHA d7a1) by Eliott Cassidy introduces **HYP-2683**, a critical architectural fix for the "True-Wide" branch of the LRC(14) proof.
-
-- **What "Wide Address Repair" Refers To:**
-    - The "address repair" is a structural correction to the proof's logic. In previous iterations, using only scalar or product "shadows" (like raw $p_0$ or absolute discrepancy sums) led to a loss of precision because different mathematical states were being "mixed" or collapsed prematurely. 
-    - **The Fix:** The repair restores a **coordinate-based address** to each configuration. Instead of treating a wide row as a single scalar risk, the proof now labels it with a **Private-Sector / Compatibility Profile**.
-
-- **Fixing Addressing Logic and Structures:**
-    - **Private-Sector Ownership:** It identifies which specific inner sectors are "privately owned" (covered exclusively) by which runners. This prevents the proof from over-counting or under-counting the impact of any single runner in the wide regime.
-    - **Compatibility Profiles:** It maps how the missed sectors of the bounded core ($B$) align with the sectors hit by the far runners ($F$). This creates a **missed-state compatibility profile** that determines the "risk routing" of the configuration.
-    - **Newton Expansion Termination:** By grounding the proof in these profiles, the "Newton forward-difference" expansion (which handles multiple far runners) is now rigorously tied to the fact that the bounded core $B$ can miss at most 6 sectors. This ensures the expansion terminates correctly and that interferences are weighted by the **apex-prime hierarchy**.
-
-- **Impact on the Overall Closure of LRC(14):**
-    - **Finite Router:** It provides a deterministic "finite router" that can classify every wide row. If a row's address matches a known "safe" profile (high compatibility, low ownership), it is discharged immediately.
-    - **Resolving AP Resonances:** It allows the proof to handle low-height AP resonances (like $u-2v+w=0$) by identifying their specific support addresses rather than just their additive rank.
-    - **Structural Closure:** By restoring the state-address profile, the "True-Wide" regime is no longer an open search space. It is now a **finite atlas of compatibility profiles** where every entry is proven to satisfy the $cap_k$ ceiling through either the **6/49 signed Abel bound** or a **Freiman dimension penalty**.
 ... (existing entries continue byte-for-byte) ...
