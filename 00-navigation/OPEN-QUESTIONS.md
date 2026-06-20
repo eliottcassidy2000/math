@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 — TRUE-WIDE via DICHOTOMY-FINITE-REDUCTION (kps-2026-06-20-Sx-wf, INDEPENDENT route).**
+A second, cluster-decorrelation attack on Region III (complementary to the THM-548 boundary-value picture).
+[PROVED] `p0(λE)=p0(E)` for `gcd(λ,7)=1` (THM-531-B, re-verified for p0) + pigeonhole (a cluster of size
+`≤6` has `p0=0` alone) ⟹ a true-wide set's `≥2`-cluster SHAPE-multiset family is FINITE. [VERIFIED/EXACT]
+the correct SHARED-`x` decorrelation engine (RIGOR FIX: independent-`x` convolution under-counts, `17/343` vs
+true `23/196`; only shared-`x` matches the `M→∞` limit) gives a worst decorrelated `p0_inf` over the WHOLE
+finite family `= [k-1 consec]+[singleton] =` the THM-547 plateau `Qb(k-1)` `= 0.19660/0.36210/0.44789/
+0.53125/0.60224 < cap_k` (margin `≥0.132`). So TRUE-WIDE decorrelates to NO WORSE than the (closed) boundary
+collar. [REDUCTION] explicit gap cutoff `B=(6/49)·f·Vmax/margin = 682/1453/1774/1988/2034` (k=8..12,
+conservative; signed Abel shrinks `5-76×`): gaps `>B` CLOSED, gaps in `(14,B]` a finite check gluing to span-14.
+[VERIFIED] 0 violations of `p0≤cap_k` on >750 exact true-wide rows (margin `≥0.184`); `max(p0−p0_inf)~0.02-0.05`.
+[SOLE GAP] the multi-cluster ERROR AGGREGATION `p0(E)≤p0_inf+Σ_far (6/49)V_i/g_i` (iterate of the PROVED
+single-element THM-546) is verified-numerically but not yet closed-form — a pure PRODUCT/decorrelation bound,
+not signed cancellation. Closing it finishes LRC(14). Files: `04-computation/lrc14_h2675_dichotomy-finite-
+reduction_kps-Sx-wf.py`, `05-knowledge/results/...out`, reflection `07-reflections/lrc14-true-wide-decorrelates-
+to-the-boundary-collar-plateau.md`. → HYP-2675, THM-547, THM-546, THM-531, OPEN-Q-108.
+
 **OPEN-Q-108 — REGION III (true-wide) BOUNDARY-VALUE ARCHITECTURE (mac-mini-2026-06-20-S3, THM-548).**
 The far-element process is a BOUNDARY-VALUE problem (the user's lead). Dictionary: bounded core `B`
 = boundary point; far runner `w→∞` = radial approach; plateau `Φ(B)` = boundary function (Fatou,

@@ -1,0 +1,70 @@
+##########################################################################
+# ADVERSARIAL VERIFY  HYP-2675  angle=dichotomy-finite-reduction
+##########################################################################
+
+==========================================================================
+TEST 1.  RE-DERIVE worst decorrelated p0_inf over >=2-cluster family [EXACT]
+==========================================================================
+  k=8: worst p0_inf=0.19660 (claim 0.1966)  part=[7, 1]  cap=0.38146  margin=0.18486  match=True
+  k=9: worst p0_inf=0.36210 (claim 0.3621)  part=[8, 1]  cap=0.49426  margin=0.13216  match=True
+  k=10: worst p0_inf=0.44789 (claim 0.44789)  part=[9, 1]  cap=0.60440  margin=0.15651  match=True
+  k=11: worst p0_inf=0.53125 (claim 0.53125)  part=[10, 1]  cap=0.72527  margin=0.19402  match=True
+  k=12: worst p0_inf=0.60224 (claim 0.60224)  part=[11, 1]  cap=0.85714  margin=0.25490  match=True
+  => constants reproduced & all margins>0: True
+
+==========================================================================
+TEST 2.  ERR = p0(E_finite) - p0_inf(shapes): sign & magnitude [EXACT]
+==========================================================================
+  If ERR can be LARGE positive even at moderate gaps, the bound p0<=p0_inf+ERR
+  with ERR controlled by (6/49)V/g is the live question. We tabulate ERR vs gap
+  for the worst family [k-1 consec] + [singleton] (the claimed argmax).
+
+  k=8: p0_inf([0..6],[pt]) = 0.19660
+        max_g>=k-1 [p0(consec_7 U g) - p0_inf] = 0.13061 at g=7  (g=k-1 is consec_k, INSIDE span-14 check)
+        WIDE g>14: max[p0 - p0_inf] = 0.02109 at g=21
+  k=9: p0_inf([0..7],[pt]) = 0.36210
+        max_g>=k-1 [p0(consec_8 U g) - p0_inf] = 0.05406 at g=8  (g=k-1 is consec_k, INSIDE span-14 check)
+        WIDE g>14: max[p0 - p0_inf] = 0.01073 at g=68
+  k=10: p0_inf([0..8],[pt]) = 0.44789
+        max_g>=k-1 [p0(consec_9 U g) - p0_inf] = 0.05659 at g=9  (g=k-1 is consec_k, INSIDE span-14 check)
+        WIDE g>14: max[p0 - p0_inf] = 0.01632 at g=22
+  k=11: p0_inf([0..9],[pt]) = 0.53125
+        max_g>=k-1 [p0(consec_10 U g) - p0_inf] = 0.05021 at g=10  (g=k-1 is consec_k, INSIDE span-14 check)
+        WIDE g>14: max[p0 - p0_inf] = 0.01628 at g=16
+  k=12: p0_inf([0..10],[pt]) = 0.60224
+        max_g>=k-1 [p0(consec_11 U g) - p0_inf] = 0.04294 at g=12  (g=k-1 is consec_k, INSIDE span-14 check)
+        WIDE g>14: max[p0 - p0_inf] = 0.01091 at g=71
+
+==========================================================================
+TEST 3.  ADVERSARIAL COUNTEREXAMPLE HUNT (primitive true-wide) [EXACT]
+==========================================================================
+
+================ ADVERSARIAL ADDENDUM (kps-Sx-wf, exact) ================
+FAST HUNT (4000+ structured + 6000 random primitive true-wide k-sets, MAXE<=80):
+  k  #wide  best_p0   cap      QB      >cap  >QB
+  8   807   0.20218  0.38146  0.19660  NO   YES (witness [0,19,20,21,22,23,24,25])
+  9   787   0.31812  0.49426  0.36210  NO   NO
+ 10   794   0.42690  0.60440  0.44789  NO   NO
+ 11   776   0.50759  0.72527  0.53125  NO   NO
+ 12   785   0.58149  0.85714  0.60224  NO   NO
+  => 0 violations of p0<=cap_k.  Core conclusion SURVIVES the hunt.
+  => 2 rows EXCEED the claimed wide-bound QB(k-1) (the p0_inf worst case).
+
+PROBE of the over-QB witness (EXACT):
+  [0,19,20,21,22,23,24,25]: p0 = 9524621/47108600 = 0.2021843 > QB(7)=0.19660,
+     margin to cap_8 = 0.17928 (safe).
+  TRUE finite-scale max of {0} U (g+consec_7): p0 = 0.2170306 at g=9
+     => EXCEEDS QB by +0.02043 ; still 0.16443 under cap_8.
+  consec_7 U {g} (far singleton): max 0.32721 at g=7 (=consec_8, span-14 case).
+
+INTERPRETATION (the surviving gap, made precise):
+  p0_inf (the decorrelated LIMIT) is NOT an upper bound for the actual finite-
+  scale p0(E).  Finite-scale p0 sits ABOVE p0_inf by ERR up to ~0.020 in the
+  wide region.  The claim's part-(B) statement "worst p0_inf = QB < cap" is
+  TRUE but bounds only the limit, not p0(E).  The theorem p0(E)<=cap_k still
+  holds on all sampled rows because margin (>=0.132) >> observed ERR (<=0.020),
+  but CLOSING it rigorously REQUIRES the deferred error-aggregation inequality
+  p0(E) <= p0_inf + sum_far(6/49)V_i/g_i, which is NOT proved closed-form.
+  This is exactly the SOLE analytic gap the claim itself names.  VERDICT: the
+  reduction is sound and the bottom line is well-supported, but it is a
+  REDUCTION-to-conjecture, NOT a completed proof.

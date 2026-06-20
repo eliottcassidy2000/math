@@ -10,7 +10,7 @@ by some frac(e*x), e in E }.  (Sector 0 always hit by e=0.)
 
 THE COVERAGE-DEFICIT IDENTITY (exact, elementary):
   Let A_j(E) = { x in [0,1) : NO e in E has frac(e*x) in sector j }   (= sector j empty).
-  Then  S7(E) = [0,1) \ union_{j=1}^6 A_j(E),  so
+  Then  S7(E) = [0,1) minus union_{j=1}^6 A_j(E),  so
       p0(E) = 1 - meas( union_j A_j )  <=  1 - max_j meas(A_j(E)).            (DEFICIT-1)
   More generally, by inclusion-exclusion / Bonferroni,
       p0(E) <= 1 - meas(A_a) - meas(A_b) + meas(A_a cap A_b)                  (DEFICIT-2)
@@ -57,43 +57,40 @@ def primitive(E):
     return bool(nz) and reduce(gcd,nz)==1
 
 def breakpoints(E):
-    """Exact wall breakpoints: all j/(7e) for e in E nonzero, plus 0,1."""
-    E=[e for e in E if e]
-    L=reduce(lambda a,b:a*b//gcd(a,b), E, 1)
-    d=7*L
-    bps=set([0,d])
+    """Exact wall breakpoints as reduced Fractions: all a/(7e) for e nonzero,
+    plus 0,1.  Avoids LCM blowup (the killer for large wide sets)."""
+    bps={F(0),F(1)}
     for e in E:
-        step=d//(7*e)
-        x=0
-        for _ in range(7*e+1):
-            bps.add(x); x+=step
-    return d, sorted(bps)
+        if e==0: continue
+        for a in range(7*e+1):
+            bps.add(F(a,7*e))
+    return sorted(b for b in bps if 0<=b<=1)
+
+def _sector(e,mid):
+    v=e*mid
+    v=v-(v.numerator//v.denominator)   # frac
+    return (v.numerator*7)//v.denominator   # floor(7*frac) in 0..6
 
 def full_analysis(E):
-    """Return (p0, p1, [meas(A_j) for j=1..6]) all as exact Fractions.
-    A_j = sector j empty.  Uses midpoint sampling of each elementary interval."""
-    E=sorted(set(E))
-    nz=[e for e in E if e]
-    d,bps=breakpoints(E)
-    den2=2*(d//7)   # = 2L ; midpoint num*e//den2 %7 gives sector of frac(e*mid)
+    """Return (p0, p1, [meas(A_j) for j=0..6]) all as exact Fractions.
+    A_j = sector j empty.  Midpoint sampling of each elementary interval."""
+    E=sorted(set(E)); nz=[e for e in E if e]
+    bps=breakpoints(E)
     p0=F(0); p1=F(0)
-    empty=[F(0)]*7   # empty[j] = measure where sector j is empty (j=0..6)
+    empty=[F(0)]*7
     for lo,hi in zip(bps,bps[1:]):
         if hi<=lo: continue
-        midnum=lo+hi
+        mid=(lo+hi)/2; L=hi-lo
         hitmask=0
         for e in nz:
-            s=(e*midnum//den2)%7
-            hitmask |= (1<<s)
-        length=F(hi-lo,d)
-        # inner-sector missed count
-        innermask = hitmask & 0b1111110
-        missed = 6 - bin(innermask).count('1')
-        if missed==0: p0+=length
-        elif missed==1: p1+=length
+            hitmask |= (1<<_sector(e,mid))
+        innermask=hitmask & 0b1111110
+        missed=6-bin(innermask).count('1')
+        if missed==0: p0+=L
+        elif missed==1: p1+=L
         for j in range(7):
-            if not (hitmask & (1<<j)):
-                empty[j]+=length
+            if not (hitmask&(1<<j)):
+                empty[j]+=L
     return p0,p1,empty
 
 def deficit1(E):
@@ -105,16 +102,14 @@ def deficit1(E):
 def pair_empty(E,a,b):
     """meas(A_a cap A_b) exact."""
     E=sorted(set(E)); nz=[e for e in E if e]
-    d,bps=breakpoints(E); den2=2*(d//7)
-    tot=F(0)
+    bps=breakpoints(E); tot=F(0)
     for lo,hi in zip(bps,bps[1:]):
         if hi<=lo: continue
-        midnum=lo+hi
-        hitmask=0
+        mid=(lo+hi)/2; hitmask=0
         for e in nz:
-            hitmask |= (1<<((e*midnum//den2)%7))
+            hitmask |= (1<<_sector(e,mid))
         if not (hitmask&(1<<a)) and not (hitmask&(1<<b)):
-            tot+=F(hi-lo,d)
+            tot+=hi-lo
     return tot
 
 def deficit2(E):
@@ -135,19 +130,17 @@ def moments(E):
     """factorial moments S_r = sum_{|A|=r} J(A,E), r=0..4, A subset {1..6}.
     S_r = E[C(N,r)] where N=#missed inner sectors."""
     E=sorted(set(E)); nz=[e for e in E if e]
-    d,bps=breakpoints(E); den2=2*(d//7)
-    # we need distribution of N over elementary intervals
+    bps=breakpoints(E)
     from math import comb
     S=[F(0)]*5
     for lo,hi in zip(bps,bps[1:]):
         if hi<=lo: continue
-        midnum=lo+hi
-        hitmask=0
+        mid=(lo+hi)/2; hitmask=0
         for e in nz:
-            hitmask|=(1<<((e*midnum//den2)%7))
+            hitmask|=(1<<_sector(e,mid))
         inner=hitmask&0b1111110
         Nt=6-bin(inner).count('1')
-        length=F(hi-lo,d)
+        length=hi-lo
         for r in range(5):
             S[r]+=comb(Nt,r)*length
     return S
@@ -205,7 +198,7 @@ if __name__=="__main__":
                         ([3,3,2,2] if k==10 else [3,3,3,2] if k==11 else [3,3,3,3])):
                 pass
         # simpler: random wide
-        for _ in range(4000):
+        for _ in range(600):
             mode=rng.choice(['clusters','spread','dyadic','random'])
             E=[0]
             if mode=='clusters':
@@ -216,9 +209,9 @@ if __name__=="__main__":
             elif mode=='spread':
                 step=rng.choice([2,3,4,5]); E=[i*step for i in range(k)]
             elif mode=='dyadic':
-                E=[0,1,2,4,8,16,32,64,128,256,512,1024][:k]
+                E=[0,1,2,4,8,16,24,32,48,64,80,96][:k]
             else:
-                while len(set(E))<k: E.append(rng.randint(1, rng.choice([30,60,150,400])))
+                while len(set(E))<k: E.append(rng.randint(1, rng.choice([30,60,100])))
             E=sorted(set(E))
             while len(E)<k: E.append(E[-1]+rng.randint(1,30))
             E=sorted(set(E))[:k]
@@ -242,4 +235,4 @@ if __name__=="__main__":
         print(f"   worst p0 = {float(worst_p0[0]):.5f}  cap={float(CAP[k]):.5f}  margin={float(CAP[k]-worst_p0[0]):.5f}")
         print(f"   min single-sector deficit margin D-(1-cap) = {float(worst_margin[0]):.5f}  "
               f"(D={worst_margin[2]:.5f}, p0={worst_margin[3]:.5f}) at {worst_margin[1]}")
-        print(f"   DEFICIT-1 fails to certify on {d1_fail}/{d1_total} wide; of those DEFICIT-2 fails {d2_fail}; of those Ly fails {ly_fail}")
+        print(f"   DEFICIT-1 fails to certify on {d1_fail}/{d1_total} wide; of those DEFICIT-2 fails {d2_fail}; of those Ly fails {ly_fail}", flush=True)

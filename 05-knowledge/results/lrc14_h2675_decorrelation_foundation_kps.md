@@ -50,3 +50,26 @@ bound = **[decorrelation lemma: p0(E) ≤ p0_decorr + Weyl error(scale gap G)] +
 = Q(k-1) < cap_k, exact] + [glue: bounded-gap sets → finite check]**. The remaining rigor: (i) explicit Weyl
 error ⟹ explicit gap threshold G; (ii) the nfar≥2 sub-bound p0_decorr(B0,nfar) ≤ Q(k-1) rigorously (validated,
 max at nfar=1); (iii) glue G to the span-14 finite check. → HYP-2675, HYP-2644.
+
+## ⚠️ CORRECTION (kps-S19, after adversarial workflow verification) — the "= Q(k-1)" crux was OVER-CLAIMED
+The claim **"wide ⟹ p0(E) ≤ Q(k-1)"** is **REFUTED**. Counterexample (exact, re-verified):
+> **E=[0,19,20,21,22,23,24,25] (k=8, wide, 2nd-largest=24≫14): p0 = 9524621/47108600 = 0.20218 > Q(7) = 0.19660.**
+Still < cap_8 = 0.38146 (margin 0.179), so the TRUE residual holds — but Q(k-1) is the decorrelated **LIMIT
+(M→∞), NOT a finite upper bound**: finite-scale wide p0 sits ABOVE Q(k-1).
+**The modeling bug:** my p0_decorr model assumed the dense "base" cluster CONTAINS the pinned 0 (frac(0·x)=0
+always sits in sector 0, wasted for inner coverage). But a cluster NOT containing 0 — e.g. {19..25}={0..6}+19 —
+has ALL 7 points SWEEPING (none pinned), so it covers the 6 INNER sectors BETTER than consec_7: p0({19..25})=0.202
+vs p0(consec_7)=0.148. So sup_shapes p0 EXCEEDS Q(k-1). The "sup_shapes p0_decorr = Q(k-1)" computation was of
+the pinned-0-base model, which is not the worst shape. CLASSIC limit-vs-finite + a modeling omission (MISTAKE class:
+"holds at the decorrelated limit, breaks at finite scale / unpinned cluster").
+
+## What SURVIVES (the workflow's genuinely-proved pieces + the corrected residual)
+- **Cardinality lemma (PROVED):** a cluster of size s≤5 covers all 6 inner sectors on measure EXACTLY 0
+  (q(s)=0, s≤5); q(6)≤0.0526, q(7)≤0.2624. Per-cluster coverage deficit δ_0 ≥ 0.7376.
+- **Comb bound (PROVED, THM-546/547, SHARPER than σ-bound):** |Δ_w| ≤ 2·c1(E')/(7w) = (6/49)V(E')/w, where
+  c1(E') = #interval-components of the miss-exactly-one region of E'. Tooth-counting proof, 0 violations.
+- **TRUE residual (CONJECTURE, margins ≥ 0.30 to cap):** wide ⟹ p0(E) ≤ cap_k. Max wide p0 ≈
+  0.073/0.144/0.251/0.352/0.448 (k=8..12) vs caps — margins ≥ 0.30. Reduces to the CAP-level decorrelation
+  bound p0(E) ≤ p0_inf(shapes) + Σ_far(6/49)V_i/g_i with an explicit JOINT multi-dim Erdős–Turán–Koksma constant
+  for the carrier vector (frac(c_i·x))_i on the r-torus — the (r=2, one-far) case IS the proved comb bound; the
+  multi-cluster constant + the balanced-wide branch (c1 unbounded in span) remain OPEN. → HYP-2675, HYP-2603.

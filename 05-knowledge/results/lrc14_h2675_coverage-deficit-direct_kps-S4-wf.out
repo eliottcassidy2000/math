@@ -1,0 +1,46 @@
+==============================================================================
+HYP-2675 coverage-deficit-direct SYNTHESIS (kps-S4-wf)
+==============================================================================
+per-arc Fourier coeff bound:  |s_hat(n)| <= sin(pi/7)/(pi|n|) = 0.138109/|n|
+   (THM-503 vanishing: s_hat(n)=0 whenever 7|n)
+
+LINK 2 [PROVED exact]: dissociated floor Mbar_k vs cap_k
+  k=8: Mbar=40573/823543 = 0.049266   cap=0.381463   margin cap-Mbar = 0.332196  OK
+  k=9: Mbar=2616535/17294403 = 0.151294   cap=0.494256   margin cap-Mbar = 0.342962  OK
+  k=10: Mbar=8830611/40353607 = 0.218831   cap=0.604396   margin cap-Mbar = 0.385565  OK
+  k=11: Mbar=250981567/564950498 = 0.444254   cap=0.725275   margin cap-Mbar = 0.281021  OK
+  k=12: Mbar=288858825/564950498 = 0.511299   cap=0.857143   margin cap-Mbar = 0.345844  OK
+
+LINK 3 baseline: pair-resonance weight W2(E) and the leading head (r*c)^2
+   W2(consec_k) (NARROW, large) vs W2(dilated/wide) (small):
+  k=8: W2(consec)=2.96667   W2(spread-wide)=0.07653   ratio=38.77x
+  k=9: W2(consec)=3.46786   W2(spread-wide)=0.08847   ratio=39.20x
+  k=10: W2(consec)=3.88095   W2(spread-wide)=0.10075   ratio=38.52x
+  k=11: W2(consec)=4.34802   W2(spread-wide)=0.12243   ratio=35.51x
+  k=12: W2(consec)=4.61429   W2(spread-wide)=0.15545   ratio=29.68x
+
+LINK 3 head constants (r in support of the dual):
+  k=8 r=1: |y_r|=1.0000  per-pair head (r*c)^2=0.01907  k=8 r=2: |y_r|=1.0000  per-pair head (r*c)^2=0.07630  k=8 r=3: |y_r|=0.9000  per-pair head (r*c)^2=0.17167  k=8 r=4: |y_r|=0.6000  per-pair head (r*c)^2=0.30519
+  k=9 r=1: |y_r|=0.7222  per-pair head (r*c)^2=0.01907  k=9 r=2: |y_r|=0.4444  per-pair head (r*c)^2=0.07630  k=9 r=3: |y_r|=0.1667  per-pair head (r*c)^2=0.17167
+  k=10 r=1: |y_r|=0.7222  per-pair head (r*c)^2=0.01907  k=10 r=2: |y_r|=0.4444  per-pair head (r*c)^2=0.07630  k=10 r=3: |y_r|=0.1667  per-pair head (r*c)^2=0.17167
+  k=11 r=1: |y_r|=0.5000  per-pair head (r*c)^2=0.01907  k=11 r=2: |y_r|=0.1667  per-pair head (r*c)^2=0.07630
+  k=12 r=1: |y_r|=0.5000  per-pair head (r*c)^2=0.01907  k=12 r=2: |y_r|=0.1667  per-pair head (r*c)^2=0.07630
+
+==============================================================================
+STATUS SUMMARY (honest)
+==============================================================================
+
+  LINK 1  p0(E) <= L_y(E)                         : PROVED (THM-534, integer-root dual)
+  LINK 2  Mbar_k < cap_k (dissociated floor)      : PROVED (exact rational, this work)
+  LINK 4a span<=14  finite check                  : PROVED (prompt; consec argmax)
+  LINK 4b 15<=span<=B exhaustive  L_y<=cap        : VERIFIED-EXACT (S3 scan, 0 viol)
+  LINK 3  span>B  =>  corr(E) <= cap_k - Mbar_k   : CONJECTURE (absolute pair-resonance
+            bound |corr| <= C*W2(E) with explicit C; the per-arc coeff factor is PROVED,
+            the assembled absolute relation-sum + W2 monotonicity is the residual gap --
+            now an UNSIGNED estimate, tractable on wide sets where no cancellation occurs)
+
+  NET: HYP-2675 reduced to ONE clean unsigned analytic statement (LINK 3). The three
+  surrounding links (1,2,4) are PROVED/exhaustively-verified. p0 <= cap holds with
+  margin >= 0.13 on the entire exhaustively-checked glue window, and the dissociated
+  floor sits >=0.28 below cap, so the tail has enormous room.
+

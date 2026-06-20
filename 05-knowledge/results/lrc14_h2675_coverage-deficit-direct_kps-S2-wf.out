@@ -1,0 +1,50 @@
+==============================================================================
+HYP-2675 coverage-deficit-direct PART 2: absolute-Fourier majorant
+==============================================================================
+
+(B) [PROVED exact] Dissociated floor Mbar_k = L_y of the fully-independent set
+    (the value every infinitely-wide set approaches). Mbar_k < cap_k margin:
+  k=8: Mbar=40573/823543=0.04927  cap=0.38146  margin cap-Mbar=0.33220  OK
+  k=9: Mbar=2616535/17294403=0.15129  cap=0.49426  margin cap-Mbar=0.34296  OK
+  k=10: Mbar=8830611/40353607=0.21883  cap=0.60440  margin cap-Mbar=0.38556  OK
+  k=11: Mbar=250981567/564950498=0.44425  cap=0.72527  margin cap-Mbar=0.28102  OK
+  k=12: Mbar=288858825/564950498=0.51130  cap=0.85714  margin cap-Mbar=0.34584  OK
+
+  per-arc Fourier coeff bound: |s_hat(n)| <= 0.138109/|n|  (THM-503: =0 if 7|n)
+
+(A,C) [exact] verify p0<=L_y and measure corr(E)=L_y(E)-Mbar_k vs span
+
+  k=8: sampled=375  Mbar=0.04927  cap=0.38146
+     worst p0=0.12432  worst L_y=0.14766  L_y>cap count=0
+     span [8,14]: (none)
+     span [15,28]: (none)
+     span [29,60]: n=211  max corr(L_y-Mbar)=+0.09684  max p0=0.11961  max L_y=0.14610  Mbar+maxcorr=0.14610 <cap OK
+     span [61,150]: n=164  max corr(L_y-Mbar)=+0.09839  max p0=0.12432  max L_y=0.14766  Mbar+maxcorr=0.14766 <cap OK
+
+  k=9: sampled=379  Mbar=0.15129  cap=0.49426
+     worst p0=0.22333  worst L_y=0.31241  L_y>cap count=0
+     span [8,14]: (none)
+     span [15,28]: (none)
+     span [29,60]: n=205  max corr(L_y-Mbar)=+0.15234  max p0=0.21718  max L_y=0.30364  Mbar+maxcorr=0.30364 <cap OK
+     span [61,150]: n=174  max corr(L_y-Mbar)=+0.16112  max p0=0.22333  max L_y=0.31241  Mbar+maxcorr=0.31241 <cap OK
+
+  k=10: sampled=385  Mbar=0.21883  cap=0.60440
+     worst p0=0.26843  worst L_y=0.36060  L_y>cap count=0
+     span [8,14]: (none)
+     span [15,28]: n=  1  max corr(L_y-Mbar)=+0.08163  max p0=0.17800  max L_y=0.30047  Mbar+maxcorr=0.30047 <cap OK
+     span [29,60]: n= 50  max corr(L_y-Mbar)=+0.14177  max p0=0.24197  max L_y=0.36060  Mbar+maxcorr=0.36060 <cap OK
+     span [61,150]: n=334  max corr(L_y-Mbar)=+0.13797  max p0=0.26843  max L_y=0.35680  Mbar+maxcorr=0.35680 <cap OK
+
+  k=11: sampled=380  Mbar=0.44425  cap=0.72527
+     worst p0=0.30950  worst L_y=0.53921  L_y>cap count=0
+     span [8,14]: (none)
+     span [15,28]: (none)
+     span [29,60]: n= 33  max corr(L_y-Mbar)=+0.07363  max p0=0.29173  max L_y=0.51789  Mbar+maxcorr=0.51789 <cap OK
+     span [61,150]: n=342  max corr(L_y-Mbar)=+0.09496  max p0=0.30950  max L_y=0.53921  Mbar+maxcorr=0.53921 <cap OK
+
+  k=12: sampled=378  Mbar=0.51130  cap=0.85714
+     worst p0=0.42872  worst L_y=0.63006  L_y>cap count=0
+     span [8,14]: (none)
+     span [15,28]: (none)
+     span [29,60]: n= 29  max corr(L_y-Mbar)=+0.07210  max p0=0.31728  max L_y=0.58339  Mbar+maxcorr=0.58339 <cap OK
+     span [61,150]: n=343  max corr(L_y-Mbar)=+0.11877  max p0=0.42872  max L_y=0.63006  Mbar+maxcorr=0.63006 <cap OK

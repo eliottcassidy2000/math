@@ -1,0 +1,25 @@
+== FACT 1: caps, consec p0 (cap is NOT defined by p0 of consec; cap>consec p0) ==
+ k=8 consec p0=0.32721 < cap_k=0.38146  Q(k-1)=0.19660
+ k=9 consec p0=0.41616 < cap_k=0.49426  Q(k-1)=0.36210
+ k=10 consec p0=0.50448 < cap_k=0.60440  Q(k-1)=0.44789
+ k=11 consec p0=0.58146 < cap_k=0.72527  Q(k-1)=0.53125
+ k=12 consec p0=0.62411 < cap_k=0.85714  Q(k-1)=0.60224
+
+== FACT 2 (DECISIVE): (W*) 'p0(E)<=Q(k-1) for wide E' is REFUTED ==
+ E=[0, 19, 20, 21, 22, 23, 24, 25]  p0=9524621/47108600=0.20218
+ Q(7)=289/1470=0.19660   p0 > Q(7): True  (W* FALSE)
+ but p0 < cap_8=0.38146: True  (LRC conclusion still holds)
+
+== FACT 3: scan {0} U (g+consec_7), p0 exceeds Q(7) for several wide g ==
+ wide g with p0>Q(7): [(2, 0.2736394557823129), (3, 0.21870748299319728), (4, 0.21332199546485262), (8, 0.19681390038532895), (9, 0.2170305884591599), (10, 0.20722551258265545), (11, 0.1998860033523899), (17, 0.19706688028515615), (19, 0.2021843357688405), (20, 0.20275780120500617), (25, 0.19751094642243539)]
+
+== FACT 4: induction premise of plateau-recursion 'wide E'=>p0<=Q(k-2)' check ==
+ Q(6)=Plat(consec_6)=11/294=0.03741
+ E'=[0, 12, 18, 24, 30, 36, 42]  p0=0.04558  p0>Q(6): True  (premise FALSE => written induction unsound)
+
+== SUMMARY ==
+ - No cap violation found anywhere (LRC conclusion p0<=cap likely TRUE).
+ - (W*) sharpened invariant p0<=Q(k-1) is FALSE on wide sets (FACT 2/3).
+ - Therefore all four angles' decorrelated worst-case core (=Q(k-1)) is a
+   LIMIT, not an upper bound; the cap-level bound needs HYP-2603 AP-extremality
+   plus an explicit joint ET-Koksma decorrelation constant -- both UNPROVED.

@@ -59,6 +59,40 @@ claimed the wide-branch address-repair scout, so this BV-Fourier route was
 renumbered from the provisional `HYP-2683/T922` to `HYP-2684/T923`.  The two
 threads are complementary: address repair supplies finite routing data for the
 low-height resonances that HYP-2684 separates from the nonresonant Weyl error.
+## kps-2026-06-20-Sx-wf -- LRC14 HYP-2675 true-wide branch via dichotomy-finite-reduction
+
+Attacked the SOLE remaining LRC(14) residual: the TRUE-WIDE branch of HYP-2675
+(span>14, >=2 far clusters => p0(E)<=cap_k), the one region NOT closed by
+THM-547 (boundary collar) + kps-S19 (span-14 finite half).  Angle =
+"dichotomy-finite-reduction": reduce wide => small p0 to a FINITE scale-shape
+family + the rigorous THM-546 per-element bound.  Results (script
+`04-computation/lrc14_h2675_dichotomy-finite-reduction_kps-Sx-wf.py`, output
+`05-knowledge/results/lrc14_h2675_dichotomy-finite-reduction_kps-Sx-wf.out`):
+
+- [PROVED] Scale invariance p0(lam E)=p0(E), gcd(lam,7)=1 (THM-531-B, re-verified
+  exactly for p0).  => cluster contributions depend only on SHAPE up to dilation.
+- [PROVED] Pigeonhole: a cluster of size<=6 covers p0=0 alone (needs >=7 points).
+  With budget k<=12 the >=2-cluster shape-multiset family is FINITE.
+- [VERIFIED/EXACT] Built the correct SHARED-X decorrelation engine (RIGOR FIX: the
+  naive independent-x convolution UNDER-counts, 17/343 vs the true 23/196; only the
+  shared-x model matches the M->inf limit).  Worst decorrelated p0_inf over the WHOLE
+  finite family = [k-1 consec]+[singleton] = the THM-547 plateau Qb(k-1) =
+  0.19660/0.36210/0.44789/0.53125/0.60224, STRICTLY below cap_k (margin>=0.132).
+  So true-wide decorrelates to NO WORSE than the (comfortable) boundary-collar value.
+- [REDUCTION] Explicit gap cutoff B = (6/49)*f*Vmax/margin (iterated THM-546):
+  B = 682/1453/1774/1988/2034 (k=8..12, conservative; SIGNED Abel shrinks 5-76x).
+  Gaps>B CLOSED; gaps in (14,B] a finite check gluing to span-14.
+- [VERIFIED] 0 violations of p0<=cap_k on 750 exact true-wide rows; max p0 per k
+  0.198/0.308/0.417/0.495/0.576 (margin>=0.184); classification covers all wide sets.
+- [CONJECTURE / SOLE GAP] the multi-cluster ERROR AGGREGATION
+  p0(E)<=p0_inf+sum_far (6/49)V_i/g_i (iterate of the PROVED single-element THM-546)
+  is verified-numerically (max(p0-p0_inf) ~ 0.02-0.05) but not yet closed-form.
+  It is a pure DECORRELATION/PRODUCT bound, not signed cancellation -- the more
+  tractable problem the C(k) synthesis predicted.  Closing it finishes LRC(14).
+
+Net: true-wide reduces to (finite shape-family worst case < cap_k, EXACT) + (finite
+gap check (14,B]) + ONE closed-form aggregation inequality.  Updated HYP-2675 detail
+file with the corrected shared-x table.
 
 ## codex-2026-06-20-S53 -- LRC14 rank-one AP-triple phase atlas -- HYP-2682/T921
 

@@ -11,6 +11,18 @@ Format per entry:
 
 ---
 
+## MISTAKE-080 (2026-06-20, kind-pasteur-S19, LRC(14) sector route) — the decorrelated LIMIT Q(k-1) mistaken for a FINITE upper bound on wide p0 (plus a pinned-0 modeling omission)
+
+**What was done.** Attacking the sole LRC(14) residual HYP-2675 (`span(E)>14 ⟹ p0(E)≤cap_k`) via cross-scale decorrelation, I computed the decorrelated model `p0_decorr(base, nfar)` and found `sup_shapes p0_decorr = Q(k-1) = Plat(consec_{k-1})` exactly (0.197/0.362/0.448, k=8/9/10), achieved at consec_{k-1}+1 stranger. I recorded this as the crux "wide ⟹ p0 ≤ Q(k-1) < cap" and called it the proof of the decorrelated bound.
+
+**Why it was wrong.** `Q(k-1)` is the decorrelated **LIMIT** (cluster scale gaps → ∞), NOT a finite upper bound. Counterexample (exact, adversarial-workflow-found, re-verified): `E=[0,19,20,21,22,23,24,25]` (k=8, wide) has `p0 = 9524621/47108600 = 0.20218 > Q(7) = 0.19660`. Finite-scale wide p0 sits ABOVE Q(k-1). Two compounding errors: (1) limit-vs-finite (a value approached in the limit treated as a uniform bound — same class as MISTAKE-079); (2) a MODELING omission — my `p0_decorr` assumed the dense base cluster CONTAINS the pinned 0 (`frac(0·x)=0` wastes the 0-element on sector 0). A cluster NOT containing 0 (e.g. `{19..25}={0..6}+19`) has ALL points SWEEPING and covers the 6 INNER sectors BETTER than consec_7: `p0({19..25})=0.202 > p0(consec_7)=0.148`. So the true `sup_shapes p0` exceeds Q(k-1).
+
+**Correct framing.** The true residual is `wide ⟹ p0(E) ≤ cap_k` (margins ≥0.30 to cap, much looser than the thin margin to Q). Q(k-1) is the decorrelated limit only. The proved pieces survive: the cardinality lemma (cluster size ≤5 ⟹ measure-0 full coverage), the SHARPER comb bound `|Δ_w| ≤ 2c1(E')/(7w)` (THM-546/547, c1=miss-1 component count), and `Q(k-1)<cap_k`. The remaining open lemma is the CAP-level (not Q-level) joint multi-cluster Erdős–Turán–Koksma bound + the balanced-wide branch.
+
+**How it was caught.** The HYP-2675 proof workflow's adversarial verifiers (3 of 4 returned holds=false on the strong (W*) form `wide ⟹ p0≤Q(k-1)`), with the exact counterexample [0,19..25]. Independent re-verification confirmed.
+
+**Impact.** `05-knowledge/results/lrc14_h2675_decorrelation_foundation_kps.md` corrected (the "= Q(k-1)" crux marked REFUTED for the finite bound, kept as the limit). The commit "decorrelated bound EQUALS the plateau Q(k-1)" is superseded. The sector-route residual is `wide ⟹ p0≤cap`, NOT `≤Q(k-1)`. HYP-2675 remains CONJECTURE (0 counterexamples in 10^4–10^5 wide sets, margins ≥0.30).
+
 ## MISTAKE-079 (2026-06-19, kind-pasteur-S9, LRC max-min spectral gap) — "covered below the level-a mediant" misread as a DEEPER dip when it actually meant COLLAPSE TO THE FLOOR
 
 **What was done.** Investigating whether the LRC max-min gap `g(k)=σ_2(k)-1/(k+1)` dips below `Θ(1/k^2)`, I built a covering test `M(S) <= r ⟺ danger arcs of radius r cover [0,1)`. For the family `F(k,a)={1,…,k-2,k,a(k-1)}` at `(a=5,k=211)` and `(a=6,k=2311)` the test returned `M < a/(a(k+1)-1)` (e.g. `M < 5/1059`). I read this as "the family dips even DEEPER than level a" and concluded `a_max(k)` is UNBOUNDED (level grows with `ω(k-1)`), hence `liminf g·k^2 = 0` — and wrote it into THM-539/HYP-2623.

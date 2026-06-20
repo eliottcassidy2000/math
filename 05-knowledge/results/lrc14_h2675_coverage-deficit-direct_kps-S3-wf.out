@@ -1,0 +1,60 @@
+==============================================================================
+HYP-2675 EXHAUSTIVE GLUE: L_y(E) <= cap_k for all primitive E, span in [15,Bk]
+==============================================================================
+  k=8 span=15: cumulative total=3003 over=0 maxLy=0.25349
+  k=8 span=16: cumulative total=8001 over=0 maxLy=0.25349
+  k=8 span=17: cumulative total=16009 over=0 maxLy=0.25349
+  k=8 span=18: cumulative total=28357 over=0 maxLy=0.25349
+  k=8 span=19: cumulative total=46921 over=0 maxLy=0.25349
+k=8: WINDOW [15,19]  total primitive E = 46921
+   L_y > cap count = 0   (MUST be 0)
+   max L_y = 0.253495 = 799307/3153150  at (0, 3, 5, 7, 9, 11, 13, 15)  cap=0.381463  margin=0.127968
+   max p0  = 0.226697  at (0, 3, 5, 7, 9, 11, 13, 15)
+   per-span max L_y: 15:0.2535 16:0.2345 17:0.2315 18:0.2439 19:0.2417
+   (binding span is 15; L_y decreasing across window: False)
+
+  k=9 span=15: cumulative total=3432 over=0 maxLy=0.45102
+  k=9 span=16: cumulative total=9866 over=0 maxLy=0.45102
+  k=9 span=17: cumulative total=21306 over=0 maxLy=0.45102
+  k=9 span=18: cumulative total=40746 over=0 maxLy=0.45304
+  k=9 span=19: cumulative total=72570 over=0 maxLy=0.45304
+k=9: WINDOW [15,19]  total primitive E = 72570
+   L_y > cap count = 0   (MUST be 0)
+   max L_y = 0.453036 = 17981/39690  at (0, 1, 2, 3, 4, 5, 6, 7, 18)  cap=0.494256  margin=0.041220
+   max p0  = 0.371599  at (0, 2, 4, 6, 8, 10, 12, 14, 15)
+   per-span max L_y: 15:0.4510 16:0.4390 17:0.4463 18:0.4530 19:0.4454
+   (binding span is 15; L_y decreasing across window: True)
+
+  k=10 span=15: cumulative total=3003 over=0 maxLy=0.51909
+  k=10 span=16: cumulative total=9438 over=0 maxLy=0.54444
+  k=10 span=17: cumulative total=22308 over=0 maxLy=0.54444
+  k=10 span=18: cumulative total=46617 over=0 maxLy=0.54844
+k=10: WINDOW [15,18]  total primitive E = 46617
+   L_y > cap count = 0   (MUST be 0)
+   max L_y = 0.548444 = 87071/158760  at (0, 2, 4, 6, 7, 8, 10, 12, 14, 18)  cap=0.604396  margin=0.055951
+   max p0  = 0.475510  at (0, 2, 4, 6, 7, 8, 10, 12, 14, 18)
+   per-span max L_y: 15:0.5191 16:0.5444 17:0.5242 18:0.5484
+   (binding span is 15; L_y decreasing across window: False)
+
+  k=11 span=15: cumulative total=2002 over=0 maxLy=0.66755
+  k=11 span=16: cumulative total=7007 over=0 maxLy=0.68128
+  k=11 span=17: cumulative total=18447 over=0 maxLy=0.68128
+  k=11 span=18: cumulative total=42757 over=0 maxLy=0.68128
+k=11: WINDOW [15,18]  total primitive E = 42757
+   L_y > cap count = 0   (MUST be 0)
+   max L_y = 0.681283 = 10301/15120  at (0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16)  cap=0.725275  margin=0.043992
+   max p0  = 0.550737  at (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+   per-span max L_y: 15:0.6675 16:0.6813 17:0.6737 18:0.6774
+   (binding span is 15; L_y decreasing across window: False)
+
+  k=12 span=15: cumulative total=1001 over=0 maxLy=0.71916
+  k=12 span=16: cumulative total=4004 over=0 maxLy=0.73067
+  k=12 span=17: cumulative total=12012 over=0 maxLy=0.73643
+  k=12 span=18: cumulative total=31460 over=0 maxLy=0.73643
+k=12: WINDOW [15,18]  total primitive E = 31460
+   L_y > cap count = 0   (MUST be 0)
+   max L_y = 0.736430 = 147227/199920  at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 17)  cap=0.857143  margin=0.120713
+   max p0  = 0.625300  at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 17)
+   per-span max L_y: 15:0.7192 16:0.7307 17:0.7364 18:0.7330
+   (binding span is 15; L_y decreasing across window: False)
+
