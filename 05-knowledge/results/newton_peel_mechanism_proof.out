@@ -1,0 +1,49 @@
+MECHANISM: inclusion-exclusion truncation drives Delta_S vanishing
+
+(1) p0 union-form == inclusion-exclusion joint-kill form?
+  A=(1, 2, 3, 4, 5, 6, 17, 19, 23): union=190573/624036 ; inc-exc=190573/624036 ; equal? True
+  A=(1, 2, 3, 4, 5, 7, 17, 19, 23): union=1049851/4368252 ; inc-exc=1049851/4368252 ; equal? True
+  A=(2, 3, 5, 7, 11, 13): union=1709/5390 ; inc-exc=1709/5390 ; equal? True
+
+(2) Delta_S direct == reduced joint-kill formula?
+  S=(17,): direct=-103/2380 ; reduced=-103/2380 ; equal? True
+  S=(17, 19): direct=0 ; reduced=0 ; equal? True
+  S=(17, 19, 23): direct=0 ; reduced=0 ; equal? True
+  S=(17, 19, 23, 29): direct=0 ; reduced=0 ; equal? True
+
+(3) TRUE threshold = max kill multiplicity m* (max overlap depth).
+    Claim: Delta_S=0 for |S|>6.  We show Delta_S=0 already for |S|>m*,
+    and report m* for several full runner sets.
+  runners=(1, 2, 3, 4, 5, 6, 17, 19, 23, 29, 31, 37, 41)
+     m* (max joint-kill depth) = 13  witness subset = (1, 2, 3, 4, 5, 6, 17, 19, 23, 29, 31, 37, 41)
+     => structurally Delta_S=0 for |S| > 13 (<= 6? False)
+  runners=(1, 2, 3, 4, 5, 7, 17, 19, 23, 29, 31, 37, 41)
+     m* (max joint-kill depth) = 13  witness subset = (1, 2, 3, 4, 5, 7, 17, 19, 23, 29, 31, 37, 41)
+     => structurally Delta_S=0 for |S| > 13 (<= 6? False)
+  runners=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+     m* (max joint-kill depth) = 13  witness subset = (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13)
+     => structurally Delta_S=0 for |S| > 13 (<= 6? False)
+  runners=(2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
+     m* (max joint-kill depth) = 10  witness subset = (2, 3, 5, 7, 11, 13, 17, 19, 23, 29)
+     => structurally Delta_S=0 for |S| > 10 (<= 6? False)
+
+(4) Direct confirmation: for a deep base, drive Delta_S nonzero up to m*.
+  Probe overlap at t->0 for base=(1, 2, 3, 4, 5, 6, 7): do ALL danger arcs cover t=0?
+    runner 1: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 2: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 3: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 4: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 5: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 6: 0 in D_c? True  (||c*0||=0<1/14 always)
+    runner 7: 0 in D_c? True  (||c*0||=0<1/14 always)
+  => t=0 lies in EVERY danger set, so joint-kill I(all) can be positive
+     near 0, meaning overlap depth m* can be LARGE (>6) for contiguous
+     small runners. THIS IS THE ADVERSARIAL CASE FOR THE '6' CLAIM.
+
+  contiguous 1..2: m*=2, joint-kill of ALL = 1/14 (>0 => |S|=2 difference can be nonzero)
+  contiguous 1..3: m*=3, joint-kill of ALL = 1/21 (>0 => |S|=3 difference can be nonzero)
+  contiguous 1..4: m*=4, joint-kill of ALL = 1/28 (>0 => |S|=4 difference can be nonzero)
+  contiguous 1..5: m*=5, joint-kill of ALL = 1/35 (>0 => |S|=5 difference can be nonzero)
+  contiguous 1..6: m*=6, joint-kill of ALL = 1/42 (>0 => |S|=6 difference can be nonzero)
+  contiguous 1..7: m*=7, joint-kill of ALL = 1/49 (>0 => |S|=7 difference can be nonzero)
+  contiguous 1..8: m*=8, joint-kill of ALL = 1/56 (>0 => |S|=8 difference can be nonzero)

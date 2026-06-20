@@ -1,0 +1,67 @@
+Threshold probe: at which |S| does Delta_S stop being able to be nonzero?
+
+B=(1, 2, 3, 4, 5, 6), F=(17, 19, 23, 29, 31, 37, 41, 43)
+  |S|=1: some Delta_S nonzero? True
+  |S|=2: some Delta_S nonzero? True
+  |S|=3: some Delta_S nonzero? True
+  |S|=4: some Delta_S nonzero? False
+  |S|=5: some Delta_S nonzero? False
+  |S|=6: some Delta_S nonzero? False
+  |S|=7: some Delta_S nonzero? False
+  |S|=8: some Delta_S nonzero? False
+
+B=(1, 2, 3, 4, 5, 7), F=(17, 19, 23, 29, 31, 37, 41, 43)
+  |S|=1: some Delta_S nonzero? True
+  |S|=2: some Delta_S nonzero? True
+  |S|=3: some Delta_S nonzero? True
+  |S|=4: some Delta_S nonzero? True
+  |S|=5: some Delta_S nonzero? False
+  |S|=6: some Delta_S nonzero? False
+  |S|=7: some Delta_S nonzero? False
+  |S|=8: some Delta_S nonzero? False
+
+B=(2,), F=(17, 19, 23, 29, 31, 37, 41, 43)
+  |S|=1: some Delta_S nonzero? True
+  |S|=2: some Delta_S nonzero? True
+  |S|=3: some Delta_S nonzero? True
+  |S|=4: some Delta_S nonzero? True
+  |S|=5: some Delta_S nonzero? False
+  |S|=6: some Delta_S nonzero? False
+  |S|=7: some Delta_S nonzero? False
+  |S|=8: some Delta_S nonzero? False
+
+B=(1, 2), F=(3, 4, 5, 6, 7, 8, 9, 10)
+  |S|=1: some Delta_S nonzero? True
+  |S|=2: some Delta_S nonzero? True
+  |S|=3: some Delta_S nonzero? True
+  |S|=4: some Delta_S nonzero? False
+  |S|=5: some Delta_S nonzero? False
+  |S|=6: some Delta_S nonzero? False
+  |S|=7: some Delta_S nonzero? False
+  |S|=8: some Delta_S nonzero? False
+
+Multiplicativity check: does p0({a,b}) == p0({a})*p0({b})?
+  a=17,b=19: p0(a,b)=1662/2261 ; p0(a)p0(b)=36/49 ; equal? False ; ratio-1=5.160e-04
+  a=17,b=23: p0(a,b)=2010/2737 ; p0(a)p0(b)=36/49 ; equal? False ; ratio-1=-4.263e-04
+  a=19,b=23: p0(a,b)=2246/3059 ; p0(a)p0(b)=36/49 ; equal? False ; ratio-1=-6.356e-04
+  a=2,b=3: p0(a,b)=16/21 ; p0(a)p0(b)=36/49 ; equal? False ; ratio-1=3.704e-02
+  a=3,b=5: p0(a,b)=26/35 ; p0(a)p0(b)=36/49 ; equal? False ; ratio-1=1.111e-02
+
+Second mixed difference Delta_{a,b}(B) for far a,b (expect NONZERO):
+  Delta_{17,19}(B) = 0  nonzero? False
+  Delta_{17,23}(B) = 0  nonzero? False
+  Delta_{19,23}(B) = 0  nonzero? False
+
+Third mixed difference Delta_{a,b,c}(B) (claim: can be nonzero, <=6):
+  Delta_(17, 19, 23)(B) = 0  nonzero? False
+  Delta_(17, 19, 29)(B) = 0  nonzero? False
+  Delta_(19, 23, 29)(B) = 0  nonzero? False
+
+LARGEST |S| with a nonzero Delta_S, scanning a rich far set:
+  B=(1, 2, 3, 4, 5, 6) (|B|=6): largest nonzero |S| = 3
+  B=(1, 2, 3, 4, 5, 7) (|B|=6): largest nonzero |S| = 4
+  B=(1, 2, 3, 4, 5, 6, 7) (|B|=7): largest nonzero |S| = 3
+
+Interpretation: largest nonzero |S| reveals the TRUE order; the claim
+says it must be <= 6.  If it is consistently < 6 here, '6' is a safe
+over-estimate (an upper bound), still correct as stated ('Delta_S=0 for |S|>6').

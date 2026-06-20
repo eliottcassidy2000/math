@@ -1,5 +1,26 @@
 # Open Questions
 
+**OPEN-Q-108 — REGION III (true-wide) BOUNDARY-VALUE ARCHITECTURE (mac-mini-2026-06-20-S3, THM-548).**
+The far-element process is a BOUNDARY-VALUE problem (the user's lead). Dictionary: bounded core `B`
+= boundary point; far runner `w→∞` = radial approach; plateau `Φ(B)` = boundary function (Fatou,
+the one-far limit PROVED to exist with rate `6/49`); two-far curvature `I_B(u,v)` = Bagemihl ambiguity
+defect; resonance `mu+nv≈0` = ambiguous point = Freiman small relation. **Exact finite decomposition:**
+`p0(B∪F) = Σ_{S⊆F,|S|≤6} Δ_S(B) = P_r(B) + R(B,F)`, where `P_r(B)=Σ_t prof_t(B)c_t(r)` is the
+fully-decorrelated **Fatou boundary value** and `R` the resonance corrections. **VERIFIED this session:**
+(a) `Φ₂(B)=(2p₂−p₁)/49`; (b) `P_r(B)≤cap_k` with margin GROWING in `r` (0.13→0.48 — boundary value is
+safe); (c) two-far constant `C₂=13/1372=13/(2²·7³)` (parabolic analogue of one-far `3/49=3/7²`) — each
+Abel order adds one power of the apex prime 7; (d) QR-reality of the PRODUCT kernel (licenses the signed
+two-far bound); (e) resonance-gated `|I_B−Φ₂|≤C·V/resdist`, worst case `~0.013 ≪` margin — two-far
+curvature is NEVER cap-threatening; (f) consecutive-pair curvature SATURATES (bounded). **CORRECTION**
+(re-verified): the k=9 leader `(0,4,6,8,10,12,14,15,16)` has NEGATIVE curvature `−13/1470` and dilated
+core `2·(0,2,3,4,5,6,7)` — it is the SCALE-INVARIANT branch, not a positive-synergy exception (HYP-2679
+literal premise refuted). **REMAINING (honest):** the ONE genuine analytic gap is the SIGNED magnitude
+bound for the `d≥2` relation lattice (absolute bound proven 5× lossy; needs Poisson/theta keeping
+`(−1)^|T|` + the 7-vanishing); plus the divergent-resonance/stacking risk (sup `w|Δ_w|` grows with #scales,
+closure relies on the offsetting tiny plateau — computational not yet analytic); plus the unrun finite
+checks; plus the upstream glue (HYP-2603). LRC(14) NOT proved. → THM-548, THM-546, THM-547, HYP-2679,
+HYP-2678, HYP-2637, HYP-2606.
+
 **OPEN-Q-108 PROGRESS (mac-mini-2026-06-20-S2): 2 of 3 sector-crux regions now CLOSED.** The crux
 `p0(E)≤cap_k` (k=8,9,10) splits by spread into three regions: **(I) finite half** `max(E)≤14` — PROVED
 (kps-S19, 0 violations); **(II) boundary collar** `2nd-largest≤14, max=w>14` — CLOSED (THM-547) via

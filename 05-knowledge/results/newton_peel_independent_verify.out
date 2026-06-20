@@ -1,0 +1,87 @@
+INDEPENDENT Newton-peel verification (exact Fraction arithmetic)
+
+=== requested literal: B=(0,1,2,3,4,5), F=(17,19,23) ===
+B = (0, 1, 2, 3, 4, 5), F = (17, 19, 23)  (r = |F| = 3)
+  p0(B u F) direct        = 0 = 0.000000000000
+  sum_S Delta_S(B)        = 0 = 0.000000000000
+  EXACTLY EQUAL?          = True
+  Delta breakdown by |S|:
+    |S|=0: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=1: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=2: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=3: sum over subsets = 0   (max |Delta_S| at this size = 0)
+
+=== non-degenerate base: B=(1,2,3,4,5,6), F=(17,19,23) ===
+B = (1, 2, 3, 4, 5, 6), F = (17, 19, 23)  (r = |F| = 3)
+  p0(B u F) direct        = 190573/624036 = 0.305387830189
+  sum_S Delta_S(B)        = 190573/624036 = 0.305387830189
+  EXACTLY EQUAL?          = True
+  Delta breakdown by |S|:
+    |S|=0: sum over subsets = 16/35   (max |Delta_S| at this size = 16/35)
+    |S|=1: sum over subsets = -473503/3120180   (max |Delta_S| at this size = 10/161)
+    |S|=2: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=3: sum over subsets = 0   (max |Delta_S| at this size = 0)
+
+=== alt base with a hole: B=(1,2,3,4,5,7), F=(17,19,23) ===
+B = (1, 2, 3, 4, 5, 7), F = (17, 19, 23)  (r = |F| = 3)
+  p0(B u F) direct        = 1049851/4368252 = 0.240336638088
+  sum_S Delta_S(B)        = 1049851/4368252 = 0.240336638088
+  EXACTLY EQUAL?          = True
+  Delta breakdown by |S|:
+    |S|=0: sum over subsets = 281/735   (max |Delta_S| at this size = 281/735)
+    |S|=1: sum over subsets = -64871/428260   (max |Delta_S| at this size = 68/1127)
+    |S|=2: sum over subsets = 26/2737   (max |Delta_S| at this size = 26/2737)
+    |S|=3: sum over subsets = 0   (max |Delta_S| at this size = 0)
+
+################ r=7 top-order vanishing tests ################
+
+--- top-order difference test: B=(1, 2, 3, 4, 5, 6), F=(17, 19, 23, 29, 31, 37, 41), |S|=r=7 ---
+  Delta_F(B) (|S|=7) = 0  ->  zero? True
+
+--- top-order difference test: B=(0, 1, 2, 3, 4, 5), F=(17, 19, 23, 29, 31, 37, 41), |S|=r=7 ---
+  Delta_F(B) (|S|=7) = 0  ->  zero? True
+
+--- top-order difference test: B=(1, 2, 3, 4, 5, 7), F=(17, 19, 23, 29, 31, 37, 41), |S|=r=7 ---
+  Delta_F(B) (|S|=7) = 0  ->  zero? True
+
+=== FULL identity at r=7: B=(1,2,3,4,5,6), F=7 dissociated far ===
+B = (1, 2, 3, 4, 5, 6), F = (17, 19, 23, 29, 31, 37, 41)  (r = |F| = 7)
+  p0(B u F) direct        = 3024656344/18663370355 = 0.162063779825
+  sum_S Delta_S(B)        = 3024656344/18663370355 = 0.162063779825
+  EXACTLY EQUAL?          = True
+  Delta breakdown by |S|:
+    |S|=0: sum over subsets = 16/35   (max |Delta_S| at this size = 16/35)
+    |S|=1: sum over subsets = -132165726/326823997   (max |Delta_S| at this size = 57/820)
+    |S|=2: sum over subsets = 41418371466/354604036745   (max |Delta_S| at this size = 82/5957)
+    |S|=3: sum over subsets = -209484/27981065   (max |Delta_S| at this size = 30/8897)
+    |S|=4: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=5: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=6: sum over subsets = 0   (max |Delta_S| at this size = 0)
+    |S|=7: sum over subsets = 0   (max |Delta_S| at this size = 0)
+
+################ adversarial |S|>6 vanishing probes ################
+
+  B=(1, 2), |F|=7 F=(3, 5, 7, 9, 11, 13, 15): Delta_F = 0
+  B=(1,), |F|=7 F=(2, 3, 4, 5, 6, 7, 8): Delta_F = 0
+  B=(1, 2, 3, 4, 5, 6, 7, 8), |F|=7 F=(9, 10, 11, 12, 13, 14, 15): Delta_F = 0
+  B=(2, 3, 5, 7, 11), |F|=7 F=(13, 17, 19, 23, 29, 31, 37): Delta_F = 0
+
+Any |S|=7 top-difference nonzero among adversarial probes? False
+
+################ is 6 the exact threshold? |S|=6 nonzero? ################
+
+  B=(1, 2, 3, 4, 5, 6), |S|=6 F=(17, 19, 23, 29, 31, 37): Delta_S = 0  -> nonzero? False
+  |B|=1 B=(1,), |S|=6: Delta_S nonzero? False  value=0
+  |B|=1 B=(1,), |S|=7: Delta_S nonzero? False  value=0
+  |B|=2 B=(1, 2), |S|=6: Delta_S nonzero? False  value=0
+  |B|=2 B=(1, 2), |S|=7: Delta_S nonzero? False  value=0
+  |B|=3 B=(1, 2, 3), |S|=6: Delta_S nonzero? False  value=0
+  |B|=3 B=(1, 2, 3), |S|=7: Delta_S nonzero? False  value=0
+  |B|=4 B=(1, 2, 3, 4), |S|=6: Delta_S nonzero? False  value=0
+  |B|=4 B=(1, 2, 3, 4), |S|=7: Delta_S nonzero? False  value=0
+  |B|=5 B=(1, 2, 3, 4, 5), |S|=6: Delta_S nonzero? False  value=0
+  |B|=5 B=(1, 2, 3, 4, 5), |S|=7: Delta_S nonzero? False  value=0
+  |B|=6 B=(1, 2, 3, 4, 5, 6), |S|=6: Delta_S nonzero? False  value=0
+  |B|=6 B=(1, 2, 3, 4, 5, 6), |S|=7: Delta_S nonzero? False  value=0
+  |B|=7 B=(1, 2, 3, 4, 5, 6, 7), |S|=6: Delta_S nonzero? False  value=0
+  |B|=7 B=(1, 2, 3, 4, 5, 6, 7), |S|=7: Delta_S nonzero? False  value=0
