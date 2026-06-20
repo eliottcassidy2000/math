@@ -1,0 +1,12 @@
+======================================================================
+Product kernel reality — independent cmath check
+======================================================================
+[PRIMARY j,j'=1..6, m,n=1..10] cases=3600  max|Im P|=0.000e+00
+[ADV neg+large m,n=-20..20] cases=57600  max|Im P|=0.000e+00
+[ADV j,j'=0..7 (probe outside range)] cases=6400  max|Im P|=0.000e+00
+----------------------------------------------------------------------
+Conjugation symmetry check: shat(-n,j) vs conj(shat(n,j))
+    max|shat(-n,j) - conj(shat(n,j))| = 0.000e+00
+----------------------------------------------------------------------
+OVERALL max|Im P| across all scans = 0.000e+00
+Conjugation symmetry max error      = 0.000e+00
