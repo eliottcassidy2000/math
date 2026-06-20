@@ -64,6 +64,21 @@ The proof target is now two-stage:
 2. a **true-wide sector-cover deficit lemma** for `second-largest >14`, likely
    expressed in Freiman/additive-energy and measured state-word terms.
 
+## Integration with THM-546
+
+After this scout was stored, mac-mini S1 added THM-546:
+
+`|Delta_w(E',w)| <= kappa*V(E')/(pi^2*w)`, with
+`kappa=1.85690...` and `V(E')` the arc-complexity of the sets where `E'`
+misses exactly one sector.
+
+This is complementary rather than redundant.  THM-546 gives the rigorous
+**gapped one-far** decorrelation bound.  HYP-2675 locates the finite
+**ungapped/boundary collar** and **true-wide** ledgers where that bound must be
+paired with scale-invariance, compression, or a Freiman dimension penalty.  The
+exact leaders above are therefore not counterexamples to THM-546; they are the
+rows that explain what remains after the gapped estimate is available.
+
 ## Tournament Analysis
 
 The scout uses row/proof-obligation vertices rather than runner or arc vertices.

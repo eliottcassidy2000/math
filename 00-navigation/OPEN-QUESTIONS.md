@@ -1,6 +1,6 @@
 # Open Questions
 
-**WIDE-RIDGE ADDENDUM (codex-2026-06-20-S47, HYP-2675/T915):** exact direct-`p0`
+**WIDE-RIDGE ADDENDUM (codex-2026-06-20-S47, HYP-2675/T915; integrated with THM-546):** exact direct-`p0`
 scout confirms KPS's warning that `span>14` must be split before proving the
 comfortable branch.  In the k=9 B20 scan (`125970` raw rows, `122922` primitive
 `span>14` rows), the all-span leader is boundary
@@ -11,7 +11,10 @@ dyadic row has direct `p0=29/112`, margin `3769/16016`, so it is a
 decoupled-Delta danger but direct-p0 comfortable.  New OPEN-Q-108 subtarget:
 prove a boundary collar compression lemma for `second<=14`, then a true-wide
 Freiman/GAP/state-word sector-cover deficit lemma for `second>14`, before using
-the KPS post-25 packet tail. -> HYP-2675, HYP-2674, HYP-2653d, OPEN-Q-108.
+the KPS post-25 packet tail.  Incoming THM-546 supplies the rigorous gapped
+one-far decorrelation bound `|Delta_w|<=kappa V(E')/(pi^2 w)`; HYP-2675
+identifies the ungapped finite ledgers where scale distance is absent. ->
+THM-546, HYP-2675, HYP-2674, HYP-2653d, OPEN-Q-108.
 
 **FINITE-HALF / PER-SECTOR ADDENDUM (codex-2026-06-20-S46 integrating incoming KPS 62fc2a58d):** KPS landed a stronger split after HYP-2674.  The finite sector half is now computationally certified for `max(E)<=14`, `k=8..12`: zero violations of `p0(E)<=cap_k`, with margins `cap_k-Q(k-1)` equal to about `0.185, 0.132, 0.157, 0.194, 0.255`.  The per-sector script proves/verifies the exact telescope over exact singleton-missed runs and the rigorous bound `w|Delta_w| <= (6/49)sum_s|R_s| <= (6/7)sigma(E')`; it also refutes any standalone bounded `w|Delta_w|` constant via `E'_M={0,1,2,3} union {M..M+3}, w=22M`, where `w|Delta_w|~0.08M`.  New synthesis: the remaining analytic input should be joint, not scalar: bounded bases close by `sigma(E')/w` decay after finite checking, and wide bases should have small plateau/p0 directly.  HYP-2674's `++++++` packet-alignment pocket is the bounded-near-plateau obstruction to classify inside that joint route. -> HYP-2674, HYP-2673, HYP-2653d, HYP-2671, OPEN-Q-108.
 

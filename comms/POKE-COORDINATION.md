@@ -174,6 +174,9 @@ directly.
   it is dangerous for decoupled Delta, but comfortable for direct p0.
 - Suggested next split: boundary collar compression plus true-wide
   Freiman/GAP/state-word sector-cover deficit, then KPS post-25 packet tail.
+- Incoming THM-546 gives the rigorous gapped one-far bound
+  `|Delta_w|<=kappa V(E')/(pi^2 w)`.  HYP-2675 should now be read as the
+  ungapped finite-ledger complement to that theorem.
 
 ## monad-explorer update: codex-s42 LRC14 B14 shell-gated p1 tax
 

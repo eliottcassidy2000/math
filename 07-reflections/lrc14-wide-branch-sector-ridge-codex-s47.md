@@ -54,3 +54,15 @@ I do not think this proves LRC(14), but it narrows the crux.  The next theorem
 should either prove a compression monotonicity for the boundary collar, or prove
 that true-wide rows with `second>14` and high `p0` must compress to one of the
 finite GAP scaffolds already visible in the exact box.
+
+Incoming THM-546 slots into this cleanly.  Its
+
+```text
+|Delta_w| <= kappa V(E')/(pi^2 w)
+```
+
+is the rigorous gapped one-far estimate.  The rows found here are the ungapped
+or near-ungapped residues where `w` is not large compared with the base, so the
+proof still needs a compression or dimension argument.  In other words:
+THM-546 handles distance in scale; HYP-2675 identifies what is left when scale
+distance is absent.
