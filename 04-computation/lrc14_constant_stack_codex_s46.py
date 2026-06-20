@@ -1,14 +1,20 @@
 #!/usr/bin/env python3
 """HYP-2673 scout: split the LRC14 open constant into proof currencies.
 
-The incoming HYP-2653c work corrects the old "one open constant" story:
+The incoming HYP-2653c work first corrected the old "one open constant" story:
 the raw far-element quantity
 
     C(k) = sup_{E',w} w*|Delta_w|
 
-is not a tiny uniform scalar.  It grows with the number of resonant scale
-clusters.  The post-shell HYP-2671 work, meanwhile, localizes a different
-constant: the shell-full boundary-tax ratio Delta_w^+/p1(E').
+is not a tiny non-resonant scalar.  The later HYP-2653d correction is sharper:
+`w*Delta_w` is not the proof currency at all, because Delta_w has a small
+nonzero floor along resonant dyadic families and so w*Delta_w grows with scale.
+The proof target is instead the uniform far-tail cap
+
+    sup_{max(E') > B} Delta_w(E', w) <= cap_k - Q(k-1).
+
+The post-shell HYP-2671 work, meanwhile, localizes a different constant: the
+shell-full boundary-tax ratio Delta_w^+/p1(E').
 
 This script records the exact constants side by side.  Its goal is not another
 large search; it is an exact proof-route ledger showing which normalization
@@ -74,8 +80,27 @@ def print_gap_table() -> None:
     print()
 
 
-def print_far_span_table() -> None:
+def print_uniform_tail_table() -> None:
     # The tight k=9 far-peel row in the sector route compares cap_9 to Q(8).
+    cap9 = Fraction(1979, 4004)
+    q8 = Fraction(621, 1715)
+    margin = cap9 - q8
+
+    print("corrected far-tail target")
+    print(f"cap_9 - Q(8) margin                 = {fmt(margin)}")
+    print("target")
+    print("  prove sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)")
+    print("  with a finite check for max(E')<=B, empirically B around 20.")
+    print("HYP-2653d scout")
+    print("  B=14 is already below margin but tight at k=9.")
+    print("  B=20 gives about 2.3x safety in the KPS adversarial scan.")
+    print("  the B=14 worst row is the HYP-2671 dyadic-block extremizer.")
+    print()
+
+
+def print_superseded_span_diagnostic() -> None:
+    # These are no longer a proof target.  They explain why the old constant
+    # framing looked plausible before HYP-2653d corrected the normalization.
     cap9 = Fraction(1979, 4004)
     q8 = Fraction(621, 1715)
     margin = cap9 - q8
@@ -87,17 +112,17 @@ def print_far_span_table() -> None:
         ("linear k=9 toy bound", Fraction(9, 1)),
     ]
 
-    print("far-element scale-cluster budget")
+    print("superseded w*Delta span diagnostic")
     print(f"cap_9 - Q(8) margin                 = {fmt(margin)}")
     print("candidate C | needed w >= ceil(C/margin)")
     for name, c in candidates:
         print(f"  {name:28s}: C={fmt(c)}, span >= {ceil_frac(c / margin)}")
     print()
     print("Interpretation")
-    print("  The old 1.95 target was a non-resonant convenience, not the theorem.")
-    print("  HYP-2653c asks for C(k)=O(number of scale clusters), then a finite")
-    print("  base span roughly C(k)/(cap_9-Q(8)).  For k=9, the observed resonant")
-    print("  values still point to a bounded-span extension, not to a failure.")
+    print("  These span numbers are historical diagnostics, not proof obligations.")
+    print("  HYP-2653d shows Delta_w has a nonzero resonant floor, so w*Delta_w")
+    print("  grows with scale.  The far-tail proof must bound Delta_w itself")
+    print("  uniformly after a finite max(E') cutoff.")
     print()
 
 
@@ -128,10 +153,10 @@ def main() -> None:
             "suggested tail lemma for max(E')>24 after the shell-full quotient",
         ),
         Constant(
-            "scale-cluster C(k)",
-            Fraction(293, 100),
-            "w*|Delta_w|, k=9 scout value",
-            "global far-peel budget; should be O(number of scale clusters)",
+            "k=9 uniform Delta margin",
+            Fraction(129643, 980980),
+            "Delta_w",
+            "HYP-2653d far-tail target: sup Delta_w below cap_9-Q(8)",
         ),
     ]
 
@@ -140,15 +165,16 @@ def main() -> None:
     print()
     print_constant_table(constants)
     print_gap_table()
-    print_far_span_table()
+    print_uniform_tail_table()
+    print_superseded_span_diagnostic()
     print("Tournament Analysis")
-    print("  vertices: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices")
+    print("  vertices: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > uniform_delta_tail > raw_runner_vertices")
     print("  observable: exact proof currency attached to each gate, not raw runner labels")
-    print("  switch/gauge: normalize endpoint discrepancy either by p1(E') or by w")
-    print("  Hamiltonian path: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices")
+    print("  switch/gauge: normalize endpoint discrepancy either by p1(E') or by the absolute Delta_w tail cap")
+    print("  Hamiltonian path: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > uniform_delta_tail > raw_runner_vertices")
     print("  challenged assumption: there is one scalar constant to prove.  The data")
-    print("    supports a stack of currencies: local boundary mass p1, and global")
-    print("    scale-cluster count divided by w.")
+    print("    supports a stack of currencies: local boundary mass p1, plus a")
+    print("    uniform far-tail Delta cap after finite max(E') cutoff.")
     print("PASS: constant-stack scout complete.")
 
 

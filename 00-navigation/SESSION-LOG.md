@@ -10,12 +10,12 @@ HYP-2673/T912 and linked back to that tail stub.  Added
 `05-knowledge/hypotheses/HYP-2673-lrc14-constant-stack.md`, and added
 `07-reflections/lrc14-constant-stack-codex-s46.md`.
 
-**FINDING:** the "one open constant" was overcompressed.  There are two
-currencies.  Local shell-full rows should be measured by
-`Delta_w^+/p1(E')`, giving the packet-tax stack `2/5`, `1/3`, and likely
-`1/4` after the shell-damage gate.  Global far peels should be measured by
-`w*|Delta_w|`, and incoming HYP-2653c says the right target is
-`C(k)=O(number of scale clusters)`, not the old non-resonant `39/20`.
+**FINDING:** the "one open constant" was overcompressed.  The local shell-full
+rows should be measured by `Delta_w^+/p1(E')`, giving the packet-tax stack
+`2/5`, `1/3`, and likely `1/4` after the shell-damage gate.  The first S46
+reading treated global far peels through `w*|Delta_w|`, but the later
+HYP-2653d correction below supersedes that as a proof currency: the global
+target is a uniform `Delta_w` tail cap after finite cutoff.
 
 Exact S46 slack ledger: `426/35035-7/858=841/210210`; tower deletion margins
 above `426/35035` have binding missing bit `4`, margin `1927/805805`; B13
@@ -35,8 +35,8 @@ span `23`, and the HYP-2655 multiscale sample `2804017/717360` asks for
 span `30`.  This is an enlarged finite-base target, not a proof failure.
 
 **NEXT:** prove the local packet-tax stack after HYP-2661, then prove the
-per-scale-cluster far-peel bound jointly with plateau shrinkage.  LRC(14) is
-not proved.
+corrected uniform `Delta_w` tail estimate past a finite `max(E')` cutoff.
+LRC(14) is not proved.
 
 **Post-checkpoint incoming bridge:** KPS then landed an exact bridge identifying
 codex's `raw_wdelta/w` with the KPS plateau deviation
@@ -48,6 +48,23 @@ The HYP-2671 extremizer verifies both sides as `457/3920`, with
 `(0,2,3,5,6,15), w=18` verifies the same identity but has
 `Delta/p1=22/63>1/3`, so the relative `p1/3` theorem genuinely requires
 shell-full routing.
+
+**Post-bridge correction:** KPS HYP-2653d then corrected the global far-peel
+currency itself.  The proof should not try to bound
+`C(k)=sup w|Delta_w|`; `Delta_w` has a small nonzero resonant floor along
+dyadic families, so `w*Delta_w` grows with scale.  Updated HYP-2673, the S46
+script/output, OPEN-Q-108, the reflection, and coordination notes to make the
+correct target explicit:
+
+```text
+sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1),
+```
+
+with a finite bounded pocket below `B`.  KPS reports `B=14` already below
+margin but tight at k=9, `B=20` about `2.3x` safe, and the tight B14 row is
+the same HYP-2671 dyadic block.  The old span-15/23/30 numbers are retained
+only as diagnostics for why the stale `w*Delta_w` normalization looked
+plausible.
 
 ## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
 

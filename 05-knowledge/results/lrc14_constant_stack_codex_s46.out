@@ -7,7 +7,7 @@ shell-damage threshold | 426/35035 (0.012159) | fixed-observer safe mass | HYP-2
 finite packet tax | 2/5 (0.400000) | Delta_w^+/p1(E') | shell-full finite pocket; B13 leader stays below this
 new-speed packet tax | 1/3 (0.333333) | Delta_w^+/p1(E') | HYP-2671 local constant; dyadic m=4 leader is the sharp scout row
 far-tail packet tax | 1/4 (0.250000) | Delta_w^+/p1(E') | suggested tail lemma for max(E')>24 after the shell-full quotient
-scale-cluster C(k) | 293/100 (2.930000) | w*|Delta_w|, k=9 scout value | global far-peel budget; should be O(number of scale clusters)
+k=9 uniform Delta margin | 129643/980980 (0.132157) | Delta_w | HYP-2653d far-tail target: sup Delta_w below cap_9-Q(8)
 
 exact slack ledger
 drop-6 mouth floor                 = 7/858 (0.008159)
@@ -25,7 +25,17 @@ shell-full p1-tax margins
   new-speed leader below 1/3        = 206/12957 (0.015899)
   far-tail leader below 1/4         = 355217/16343572 (0.021734)
 
-far-element scale-cluster budget
+corrected far-tail target
+cap_9 - Q(8) margin                 = 129643/980980 (0.132157)
+target
+  prove sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)
+  with a finite check for max(E')<=B, empirically B around 20.
+HYP-2653d scout
+  B=14 is already below margin but tight at k=9.
+  B=20 gives about 2.3x safety in the KPS adversarial scan.
+  the B=14 worst row is the HYP-2671 dyadic-block extremizer.
+
+superseded w*Delta span diagnostic
 cap_9 - Q(8) margin                 = 129643/980980 (0.132157)
 candidate C | needed w >= ceil(C/margin)
   old non-resonant target     : C=39/20 (1.950000), span >= 15
@@ -34,17 +44,17 @@ candidate C | needed w >= ceil(C/margin)
   linear k=9 toy bound        : C=9 (9.000000), span >= 69
 
 Interpretation
-  The old 1.95 target was a non-resonant convenience, not the theorem.
-  HYP-2653c asks for C(k)=O(number of scale clusters), then a finite
-  base span roughly C(k)/(cap_9-Q(8)).  For k=9, the observed resonant
-  values still point to a bounded-span extension, not to a failure.
+  These span numbers are historical diagnostics, not proof obligations.
+  HYP-2653d shows Delta_w has a nonzero resonant floor, so w*Delta_w
+  grows with scale.  The far-tail proof must bound Delta_w itself
+  uniformly after a finite max(E') cutoff.
 
 Tournament Analysis
-  vertices: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices
+  vertices: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > uniform_delta_tail > raw_runner_vertices
   observable: exact proof currency attached to each gate, not raw runner labels
-  switch/gauge: normalize endpoint discrepancy either by p1(E') or by w
-  Hamiltonian path: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices
+  switch/gauge: normalize endpoint discrepancy either by p1(E') or by the absolute Delta_w tail cap
+  Hamiltonian path: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > uniform_delta_tail > raw_runner_vertices
   challenged assumption: there is one scalar constant to prove.  The data
-    supports a stack of currencies: local boundary mass p1, and global
-    scale-cluster count divided by w.
+    supports a stack of currencies: local boundary mass p1, plus a
+    uniform far-tail Delta cap after finite max(E') cutoff.
 PASS: constant-stack scout complete.

@@ -1,13 +1,16 @@
 ## codex update: codex-s46 LRC14 constant stack
 
 This update records **HYP-2673/T912**, integrating the incoming KPS
-HYP-2653c correction with the S45 shell-full new-speed constant and the
-incoming HYP-2672/T911 shell-full tail-stratification stub.
+HYP-2653c/HYP-2653d corrections with the S45 shell-full new-speed constant and
+the incoming HYP-2672/T911 shell-full tail-stratification stub.
 
 - **Main correction.**
   - The "one open constant" is a stack of proof currencies.
   - Local shell-full rows use `Delta_w^+/p1(E')`.
-  - Global far peels use `w*|Delta_w|`.
+  - Global far peels use a uniform `Delta_w` tail cap after finite
+    `max(E')` cutoff.
+  - `w*Delta_w` is now only a resonance diagnostic; HYP-2653d shows it grows
+    with scale along dyadic-family floors.
 
 - **Local packet-tax stack.**
   - Shell-damage threshold: `426/35035`.
@@ -15,17 +18,21 @@ incoming HYP-2672/T911 shell-full tail-stratification stub.
   - New-speed packet tax: `1/3`; dyadic-block gap `206/12957`.
   - Far-tail scout tax: `1/4`; B30 tail gap `355217/16343572`.
 
-- **Global scale-cluster budget.**
-  - HYP-2653c says the old `C~=1.95` was non-resonant.
-  - The target is now `C(k)=O(number of scale clusters)`.
-  - At k=9, `cap_9-Q(8)=129643/980980`, so `C=293/100` asks for span
-    `23`, and the HYP-2655 multiscale sample asks for span `30`.
+- **Corrected global far-tail target.**
+  - HYP-2653d supersedes the `C(k)=sup w|Delta_w|` framing.
+  - The target is now
+    `sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)`.
+  - At k=9, `cap_9-Q(8)=129643/980980`.
+  - KPS reports `B=14` already below margin but tight at k=9, and `B=20`
+    gives about `2.3x` safety.
+  - The tight B14 worst row is the same dyadic block as HYP-2671:
+    `(0,1,2,4,8,12,16,20), w=24`.
 
 - **Requested next pushes.**
   - Prove packet taxes after applying HYP-2661.
-  - Prove a per-scale-cluster decomposition of `w*Delta_w`.
-  - Treat finite-span extension as part of the route rather than a failure of
-    the route.
+  - Prove the corrected uniform `Delta_w` tail bound past a finite cutoff.
+  - Treat finite-span and `w*Delta_w` calculations as diagnostics, not as the
+    theorem's closing currency.
 
 - **S46 dyadic-block addendum.**
   - Extended `E_m={0,1,2,4,8,3m,4m,5m}, w=6m` to `m=120`.
@@ -39,7 +46,7 @@ incoming HYP-2672/T911 shell-full tail-stratification stub.
   - HYP-2671 extremizer: both sides `457/3920`, ratio `1371/4319`.
   - Non-shell warning row `(0,2,3,5,6,15), w=18`: ratio `22/63>1/3`.
   - Action item: keep the `p1/3` theorem shell-full; route non-shell rows
-    through HYP-2661 or the absolute `C(k)/w` peel.
+    through HYP-2661 or the corrected uniform `Delta_w` tail route.
 
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 

@@ -1,7 +1,7 @@
 ---
 id: HYP-2673
-title: LRC14 constant stack and scale-cluster budget
-status: OPEN; synthesis after HYP-2671 and incoming HYP-2653c
+title: LRC14 constant stack and uniform Delta tail
+status: OPEN; corrected synthesis after HYP-2671, HYP-2653d, and KPS bridge
 source: codex-2026-06-20-S46
 depends_on:
   - HYP-2672
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2655
   - HYP-2653
 related:
+  - HYP-2653d
   - HYP-2666
   - HYP-2664
   - HYP-2644
@@ -23,11 +24,11 @@ related:
 
 The "one open constant" should not be treated as one scalar.
 
-There are two proof currencies:
+There are two active proof currencies:
 
 ```text
 local shell-full currency:  Delta_w^+ / p1(E')
-global far-peel currency:   w*|Delta_w|
+global far-tail currency:   Delta_w <= cap_k - Q(k-1) after max(E')>B
 ```
 
 HYP-2671 identifies the local shell-full constant stack after the shell-1 gate:
@@ -38,16 +39,19 @@ new-speed:      Delta_w^+/p1 <= 1/3
 far tail:       Delta_w^+/p1 <= 1/4   (suggested by B30)
 ```
 
-Incoming HYP-2653c corrects the global far-peel side:
+Incoming HYP-2653d corrects the global far-peel side:
 
 ```text
-C(k)=sup w*|Delta_w| is not the old non-resonant ~1.95 constant.
-C(k) should be O(number of scale clusters) <= O(k).
+The proof target is sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1).
+w*Delta_w is a resonance diagnostic, not a bounded proof currency.
 ```
 
 These are compatible, not competing.  The shell-full constants are boundary-tax
 constants normalized by the available single-missed-sector mass `p1(E')`.  The
-far-peel constant is a scale-cluster resonance budget normalized by `w`.
+far-tail constant is an absolute plateau-deviation cap after a finite
+`max(E')` cutoff.  HYP-2653d explains why the old `w*Delta_w` framing felt real
+but could not close the theorem: `Delta_w` has a small nonzero resonant floor
+along dyadic families, so multiplying by `w` grows with scale.
 
 ## Exact Ledger
 
@@ -70,7 +74,7 @@ shell-damage threshold       = 426/35035
 finite packet tax            = 2/5
 new-speed packet tax         = 1/3
 far-tail packet tax          = 1/4
-KPS scale-count scout C(9)   ~= 293/100
+k=9 uniform Delta margin     = 129643/980980
 ```
 
 Exact slacks from the output:
@@ -125,10 +129,40 @@ Delta/p1 = 22/63 > 1/3.
 ```
 
 Thus the relative `Delta <= p1/3` route is genuinely shell-full; non-shell-full
-rows must be routed through the shell-damage gate or the absolute `C(k)/w`
-far-peel route.
+rows must be routed through the shell-damage gate or the corrected uniform
+`Delta_w` far-tail route.
 
-## Far-Span Reading
+## S46 Correction Addendum
+
+The KPS HYP-2653d correction supersedes the first S46 global-constant reading.
+The old object
+
+```text
+C(k)=sup w*|Delta_w|
+```
+
+is not bounded in the needed sense.  Along resonant dyadic families,
+`Delta_w` has a small nonzero floor, so `w*Delta_w` grows with scale.  The
+correct far-element closer is instead
+
+```text
+sup_{max(E')>B} Delta_w(E',w) <= cap_k - Q(k-1),
+```
+
+with the bounded pocket `max(E')<=B` checked finitely.  Empirically KPS reports
+that `B=14` is already below the margin and tight at `k=9`; `B=20` gives about
+a `2.3x` safety factor.  The tight `B=14` row is exactly the HYP-2671 dyadic
+block
+
+```text
+E'=(0,1,2,4,8,12,16,20), w=24.
+```
+
+This is the important convergence: the corrected KPS far-tail target and the
+codex two-gate/p1-tax route point at the same finite resonance and the same
+tail inequality.
+
+## Superseded Far-Span Diagnostic
 
 For the tight k=9 far-peel row, the sector margin is
 
@@ -145,10 +179,11 @@ C=2804017/717360 -> span >= 30
 C=9           -> span >= 69
 ```
 
-This is the useful correction.  The old `1.95` target was convenient because it
-dovetailed with the span-16 bank, but the theorem should instead prove a
-per-scale-cluster bound and enlarge the finite base span as needed.  Even the
-known multiscale examples point to bounded-span work, not a proof failure.
+This table is now a diagnostic, not the proof target.  It explains why the
+older `1.95` story looked plausible: for non-resonant samples, converting a
+`w*Delta_w` number into a finite span seemed to match existing banks.  HYP-2653d
+shows the theorem should not chase a bounded `C(k)`.  The proof needs a finite
+bounded pocket plus a uniform `Delta_w` tail bound.
 
 ## Proof Route
 
@@ -163,10 +198,10 @@ The current route should be assembled in this order:
    the `m=4` dyadic block isolated as the sharp scout row.
 4. Prove the far-tail packet lemma suggested by HYP-2670:
    `max(E')>24` rows satisfy a `p1/4`-style decay.
-5. For genuinely wide/multiscale far peels, prove
-   `w*|Delta_w| <= O(number of scale clusters)` jointly with plateau shrinkage,
-   then finish by a finite base span around `23-30` for k=9 unless the constant
-   is sharpened.
+5. For genuinely wide/multiscale far peels, prove the corrected HYP-2653d tail
+   estimate
+   `sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)`, with `B` likely near `20`
+   and a finite check below the cutoff.
 
 ## Tournament Analysis
 
@@ -177,14 +212,15 @@ shell_damage_gate
 finite_packet_tax
 new_speed_packet_tax
 far_tail_packet_tax
-scale_cluster_Ck
+uniform_delta_tail
 raw_runner_vertices
 ```
 
 Pairwise observable: exact proof currency attached to each gate.
 
-Switch/gauge: normalize endpoint discrepancy either by `p1(E')` in the local
-shell-full quotient or by `w` in the global far-peel quotient.
+Switch/gauge: normalize endpoint discrepancy by `p1(E')` in the local
+shell-full quotient, and by an absolute `Delta_w` tail margin in the global
+far-peel quotient.
 
 Hamiltonian path:
 
@@ -193,16 +229,18 @@ shell_damage_gate
 > finite_packet_tax
 > new_speed_packet_tax
 > far_tail_packet_tax
-> scale_cluster_Ck
+> uniform_delta_tail
 > raw_runner_vertices
 ```
 
 Challenged assumption: there is one scalar constant to prove.  The evidence
-supports a stack of currencies: local boundary mass and global scale-cluster
-count divided by `w`.
+supports a stack of currencies: local boundary mass and a global uniform
+`Delta_w` tail cap after finite cutoff.  The previous scale-cluster `w*Delta_w`
+view is still useful as a resonance detector, but not as the closing constant.
 
 ## Honest Status
 
-LRC(14) is not proved.  HYP-2673 refines the target after the incoming
-HYP-2653c update: prove a local packet-tax stack plus a global per-scale-cluster
-resonance budget, rather than chasing the obsolete uniform `C~=1.95`.
+LRC(14) is not proved.  HYP-2673 now incorporates the HYP-2653d correction:
+prove the local packet-tax stack plus a uniform far-tail `Delta_w` estimate,
+rather than chasing either the obsolete non-resonant `C~=1.95` or the transient
+`w*Delta_w` scale-cluster budget.
