@@ -8,6 +8,9 @@ depends_on:
   - THM-541
   - THM-523
 related:
+  - HYP-2660
+  - HYP-2659
+  - HYP-2658
   - HYP-2646
   - HYP-2644
   - HYP-2655
@@ -72,9 +75,12 @@ drop 13 (odd ) L = ...       = 0.03410122   <- best ODD deletion is far worse
 ...
 drop  7 (odd ) L = ...       = 0.08389666   <- worst (removes the mult-of-7 runner)
 ```
-All five even deletions beat all seven odd deletions: deleting a doubling is
-always cheaper than deleting a base odd speed, because the odd base is the rigid
-skeleton and the evens are refinements.
+Codex S37 caveat: the phrase "five even deletions" is the low-even block
+`{2,4,6,10,12}`.  The remaining even deletion, drop `8=2^3`, is the high-level
+even outlier with `L=950/21021=0.04519290`, after the odd drops `13,5,3` in
+the fixed-observer safe-measure order.  Thus the dyadic tower explains the low
+collar rows, but tower parity alone is not a total scalar order; the CRT cell
+and endpoint-owner layers still matter.
 
 ## CRT factorization is special, not generic
 

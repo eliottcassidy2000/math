@@ -1,0 +1,82 @@
+HYP-2660/T905 LRC14 Glaisher/Witt/even-graph bridge scout
+
+Euler/Glaisher coefficient check
+  range: n<= 40
+  mismatches: []
+  selected counts p_distinct(n)=p_odd(n):
+    n= 7: 5
+    n=14: 22
+    n=21: 76
+    n=28: 222
+    n=35: 585
+    n=40: 1113
+  Glaisher bijection samples for n=14:
+    (13, 1)                      -> (13, 1)                -> (13, 1)
+    (11, 3)                      -> (11, 3)                -> (11, 3)
+    (11, 1, 1, 1)                -> (11, 2, 1)             -> (11, 1, 1, 1)
+    (9, 5)                       -> (9, 5)                 -> (9, 5)
+    (9, 3, 1, 1)                 -> (9, 3, 2)              -> (9, 3, 1, 1)
+    (9, 1, 1, 1, 1, 1)           -> (9, 4, 1)              -> (9, 1, 1, 1, 1, 1)
+    (7, 7)                       -> (14,)                  -> (7, 7)
+    (7, 5, 1, 1)                 -> (7, 5, 2)              -> (7, 5, 1, 1)
+
+Witt/log ghost check for f=prod(1+x^n)=g=prod_odd(1-x^odd)^-1
+  ghost mismatches m<= 40: []
+  first ghost components m*[x^m] log f = sigma_odd(m):
+    m= 1: coeff=      1, ghost= 1
+    m= 2: coeff=    1/2, ghost= 1
+    m= 3: coeff=    4/3, ghost= 4
+    m= 4: coeff=    1/4, ghost= 1
+    m= 5: coeff=    6/5, ghost= 6
+    m= 6: coeff=    2/3, ghost= 4
+    m= 7: coeff=    8/7, ghost= 8
+    m= 8: coeff=    1/8, ghost= 1
+    m= 9: coeff=   13/9, ghost=13
+    m=10: coeff=    3/5, ghost= 6
+    m=11: coeff=  12/11, ghost=12
+    m=12: coeff=    1/3, ghost= 4
+    m=13: coeff=  14/13, ghost=14
+    m=14: coeff=    4/7, ghost= 8
+
+LRC14 single-deletion Glaisher tower ledger
+  odd skeleton core (1, 3, 5, 7, 9, 11, 13): safe measure 75454/315315 = 0.2392972107
+  rows sorted by fixed-observer safe measure at target 1/14:
+    del  measure                 odd level  tower_after  lower upper  odd_deleted
+      6               7/858    3     1       (0, 2)      T     T            F
+     12           426/35035    3     2       (0, 1)      T     F            F
+     10          1520/63063    5     1         (0,)      T     F            F
+      4             97/4004    1     2    (0, 1, 3)      T     T            F
+      2              11/364    1     1    (0, 2, 3)      T     T            F
+     13         6617/194040   13     0           ()      F     F            T
+      5            103/2860    5     0         (1,)      F     T            T
+      3              11/273    3     0       (1, 2)      F     T            T
+      8           950/21021    1     3    (0, 1, 2)      T     F            F
+      9          3273/56056    9     0           ()      F     F            T
+     11          4733/76440   11     0           ()      F     F            T
+      1                1/14    1     0    (1, 2, 3)      F     T            T
+      7          4319/51480    7     0           ()      F     F            T
+  reading: every even deletion leaves the odd skeleton intact; drop 6 deletes the level-1 bit in odd tower 3 while both 3 and 12 survive.
+
+Tournament/even-graph equinumerosity via parity closure
+  n=1: tournaments=1, even_graphs_on_n+1=1, formula=1, invertible=True, switching_classes(T_n)=even_graphs_on_n=1
+  n=2: tournaments=2, even_graphs_on_n+1=2, formula=2, invertible=True, switching_classes(T_n)=even_graphs_on_n=1
+  n=3: tournaments=8, even_graphs_on_n+1=8, formula=8, invertible=True, switching_classes(T_n)=even_graphs_on_n=2
+  n=4: tournaments=64, even_graphs_on_n+1=64, formula=64, invertible=True, switching_classes(T_n)=even_graphs_on_n=8
+  n=5: tournaments=1024, even_graphs_on_n+1=1024, formula=1024, invertible=True, switching_classes(T_n)=even_graphs_on_n=64
+  n=6: tournaments=32768, even_graphs_on_n+1=32768, formula=32768, invertible=True, switching_classes(T_n)=even_graphs_on_n=1024
+  bijection: internal anti-order bits choose a graph on n labeled vertices; root edges are forced uniquely so every degree is even.
+
+Tournament Analysis
+  vertices: glaisher_tower_word, crt_residue_cell, endpoint_owner_ledger, even_graph_parity_closure, witt_ghost_divisor_sum, laurent_wall_polynomial, raw_sumset_excess, raw_speed
+  pairwise observable: which quotient preserves the LRC14 lower-bound predicate while distinguishing the one-hole AP-window rows.
+  switch/gauge: choose the parity/ghost closure before scalarizing; raw speed and raw excess are terminal quotients.
+  tie Hamiltonian path:
+    glaisher_tower_word > crt_residue_cell > endpoint_owner_ledger > even_graph_parity_closure > witt_ghost_divisor_sum > laurent_wall_polynomial > raw_sumset_excess > raw_speed
+  score histogram: {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  directed 3-cycles: 0
+  SCC sizes: [1, 1, 1, 1, 1, 1, 1, 1]
+
+Assumption challenge
+  alternate vertices considered: runners, gaps, speed towers, fixed circle sections, section boundaries, wall-crossing events, residues, cover arcs, Fourier/Witt ghost modes, matroid circuits, even-graph parity bits, and proof obligations.
+  preserved predicate: the fixed-observer safe set G_C and its addressed component/tower ownership. Destroyed information: exact component endpoints once one passes to partition counts, raw tournament counts, or scalar excess.
+  challenged assumption: the vertices should be runners or tournament arcs. The live quotient is closer to a parity-closed tower word: Glaisher closure for dyadic speeds, even-graph closure for tournaments, and Witt ghost closure for Euler products.

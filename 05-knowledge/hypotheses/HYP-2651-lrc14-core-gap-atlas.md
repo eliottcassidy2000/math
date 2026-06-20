@@ -10,6 +10,9 @@ depends_on:
   - HYP-2647
   - HYP-2644
 related:
+  - HYP-2660
+  - HYP-2659
+  - HYP-2658
   - HYP-2656
   - HYP-2658
   - HYP-2659
@@ -158,6 +161,11 @@ unique sub-`426/35035` one-replacement AP-tail exception, the drop-6 collar with
 `10` replaced by `20`.  HYP-2658 records the component anatomy: the four collar
 components remain intact and two symmetric bubbles of length `1/1960` are
 added, with endpoint owners `7 -> 20` and `20 -> 7`.
+
+KPS HYP-2656 supplies the compatible CRT/Glaisher explanation of the
+single-deletion layer: the odd speeds form the rigid base and the even speeds are
+dyadic tower refinements, with drop-6 cheapest because the tower parent `12`
+survives to re-cover the missing `6` bands.
 
 Therefore the near-collar state-template target below `426/35035` must be
 weakened/sharpened: below that threshold, force the drop-6 collar, the proved

@@ -81,7 +81,11 @@ KPS HYP-2653 is the far decorrelation engine, HYP-2654 is the near-collar
 template, and THM-543 proves the one-replacement AP-tail layer.  A second fetch
 then claimed KPS HYP-2655 for multiscale decorrelation growth and THM-544 for
 the two-replacement AP-tail layer, so this packet moved once more to
-HYP-2658/T903.
+the next then-open namespace slot.
+
+A later namespace audit found that KPS HYP-2656 had already landed as the
+CRT/halving tower for exactly the same single-deletion layer.  That is the right
+home for the Glaisher/dyadic fact; this survival bridge is therefore HYP-2658/T903.
 
 The corrected role of this packet is HYP-2658/T903:
 

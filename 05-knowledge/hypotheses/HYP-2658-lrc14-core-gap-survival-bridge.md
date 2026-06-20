@@ -5,6 +5,7 @@ status: OPEN; post-THM-544 bridge hypothesis with exact rational scout
 source: codex-2026-06-19-S36
 depends_on:
   - HYP-2651
+  - HYP-2656
   - HYP-2653
   - HYP-2655
   - HYP-2654
@@ -212,6 +213,11 @@ second row has excess `1`; excess alone has the order backwards.  The
 determining object is the endpoint-owner component ledger: it records that the
 new row is the old collar plus two addressed bubbles, exactly matching the
 THM-543 exceptional replacement.
+
+KPS HYP-2656 now supplies a sharper CRT/Glaisher reading of the single-deletion
+layer: the odd speeds are the rigid skeleton and the even speeds are dyadic tower
+refinements.  This survival bridge uses that as address data rather than as a
+replacement for the endpoint-owner ledger.
 
 The later S15 dyadic/apex-prime residue work is compatible with the same
 lesson: dyadic richness and QR/NQR sector structure can be useful tiebreaker

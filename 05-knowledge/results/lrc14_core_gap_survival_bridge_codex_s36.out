@@ -1,4 +1,4 @@
-HYP-2656/T903 LRC14 core-gap survival bridge scout
+HYP-2658/T903 LRC14 core-gap survival bridge scout
 target gap: 1/14; known collar: 7/858 = 0.008158508
 Integrates HYP-2651 exact core gaps, KPS HYP-2653/HYP-2655 decorrelation, HYP-2654/THM-543/544 near-collar structure, HYP-2648 state words, and HYP-2652 endpoint geometry.
 Caveat: this is exact finite evidence plus a proof route; LRC(14) is not proved here.

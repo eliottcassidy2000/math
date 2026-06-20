@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-2656/T903: fixed-observer core-gap survival bridge scout.
+"""HYP-2658/T903: fixed-observer core-gap survival bridge scout.
 
 This script connects HYP-2651's exact positive-core gap atlas with HYP-2644's
 far-element plateau idea, KPS HYP-2653/HYP-2655 decorrelation work, and the
@@ -339,7 +339,7 @@ def main() -> None:
     parser.add_argument("--scan12-keep", type=int, default=12)
     args = parser.parse_args()
 
-    print("HYP-2656/T903 LRC14 core-gap survival bridge scout")
+    print("HYP-2658/T903 LRC14 core-gap survival bridge scout")
     print(f"target gap: 1/{TARGET_DENOM}; known collar: {fmt(COLLAR)}")
     print("Integrates HYP-2651 exact core gaps, KPS HYP-2653/HYP-2655 decorrelation, HYP-2654/THM-543/544 near-collar structure, HYP-2648 state words, and HYP-2652 endpoint geometry.")
     print("Caveat: this is exact finite evidence plus a proof route; LRC(14) is not proved here.")
