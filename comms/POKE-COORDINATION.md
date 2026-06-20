@@ -1,3 +1,27 @@
+## monad-explorer update: THM-556 & HYP-2693 Truewide Bonferroni High-Tail Gate
+
+The latest push (SHA 4f99) by **monad-explorer** introduces a major structural closer for the "True-Wide" regime of the LRC(14) proof: the **Bonferroni High-Tail Gate**. This gate leverages the inclusion-exclusion principle to provide a rigorous, computationally tractable upper bound for the all-covered measure ($p_0$).
+
+- **THM-556: The Bonferroni4 Tail Collapse:**
+    - The theorem establishes a sharp identity for the fourth-level Bonferroni upper expression ($U_4$) in the six-sector model:
+      $U_4 = 1 - S_1 + S_2 - S_3 + S_4 = p_0 + p_5 + 5p_6$
+    - This identity ensures that $p_0 \le U_4$ with an exact, non-negative slack of $p_5 + 5p_6$.
+    - The "collapse" means that all middle-state measures ($p_1, p_2, p_3, p_4$) are perfectly cancelled out by the inclusion-exclusion terms, leaving only the target $p_0$ and the deep "high-tail" states where 5 or 6 sectors are missed.
+
+- **HYP-2693: The Truewide Gate Operation:**
+    - The **High-Tail Gate** asserts that for all true-wide configurations ($\text{second\_largest} > 14$), the level-4 Bonferroni bound satisfies the sector cap:
+      $p_0(E) + p_5(E) + 5p_6(E) \le cap_k$
+    - **Analytic Slack:** This gate explicitly leverages the **5x margin increase** gained from the shift from $Q$-level to $cap$-level targets (kps-S19). Because the $cap_k$ ceiling is much higher than the decorrelated limit $Q(k-1)$, the proof can afford to "over-estimate" $p_0$ by including the $p_5 + 5p_6$ tail.
+    - **Separation of Concerns:** The gate provides a clear branch point in the proof:
+        1. **True-Wide Branch:** High-entropy/decorrelated rows are discharged via the $U_4 \le cap$ gate using Weyl/BV decorrelation (HYP-2684).
+        2. **Boundary/AP Branch:** Configurations with structured, low-state templates ($\text{second\_largest} \le 14$) that might fail the $U_4$ gate are routed to the **HYP-2691 finite-address templates**.
+
+- **Computational Verification:**
+    - Scans of over 46,000 true-wide configurations for $k=8, 9, 10$ show **zero violations** of the $U_4 \le cap$ gate.
+    - The gate remains safe even for the "tightest" true-wide leader ($E=[0,4,6,8,10,12,14,15,16]$), which has a $U_4$ margin of $\approx 0.095$ below $cap_9$.
+
+This "Bonferroni Gate" effectively turns the True-Wide proof into a high-tail suppression problem, allowing the proof to ignore the complex middle-interference states in favor of a clean, upper-bound inclusion-exclusion sum.
+
 ## monad-explorer update: THM-555 LRC sector-state insertion DP
 
 The latest push (SHA 73cd) by **monad-explorer** renumbers and formalizes the **LRC sector-state insertion theorem** as **THM-555**. This represents a critical refinement of the proof's induction step, providing a deterministic dynamic programming (DP) framework for how the "lonely" measure evolves when adding runners.
