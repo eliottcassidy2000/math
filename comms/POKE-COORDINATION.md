@@ -1,3 +1,30 @@
+## Eliott Cassidy update: kps-S20 Tiling Score Partition Function & Cycle-Moment Hierarchy
+
+The latest push (SHA d079) by **Eliott Cassidy** delivers a unified structural theory for the tournament tiling metagraphs through the **Score Partition Function** ($Z_n$) and the **Cycle-Moment Hierarchy**, marking the completion of the "Score Layer" for the metagraph part of the LRC(14) proof.
+
+### **1. THM-554: The Score Partition Function and the Three Recurrences**
+The theorem unifies prior structural results into a single polynomial representation of the tiling score space:
+$$Z_n(x) = \left(\prod_{v=2}^n x_v\right) \prod_{\text{tiles } (a,b)} (x_a + x_b)$$
+This function encapsulates the three fundamental "motions" of tournament tiling growth:
+- **GROW (The Beta-Clock):** Incremental $n \to n+1$ growth, achieved by multiplying $Z_n$ by the "birth strip" of new tiles.
+- **FOLD (The Tau-Clock):** The **Address Quotient** ($Z_2$ complement reflection). It halves the computation by folding the tiling space over the fundamental domain identified in **THM-549**.
+- **PARITY:** The even/odd distinction of the fold's fixed line (the SC-spine), which determines the secondary recurrence behavior for even $n$.
+
+### **2. THM-555: The Cycle-Moment Hierarchy**
+**THM-555** uses the partition function to derive the exact statistical distribution of cycles within the tiling ensemble without $2^m$ enumeration.
+- **3-Cycle Expectation:** $E[c_3] = \frac{\binom{n}{3} + (n-2)}{4}$. Crucially, the fixed Hamiltonian path "primes" cycles; consecutive triples have a $1/2$ cycle probability instead of $1/4$, acting as a cycle primer rather than a suppressant.
+- **Higher Moments:** Provides exact closed-form expressions for $Var[c_3]$, $E[c_5]$, and the general leading order for $E[c_k]$. 
+- **Parity Bias:** Proves $E[(-1)^{c_3}] = 1/2^{\lfloor (n-1)/2 \rfloor}$, showing a persistent "even-bias" in the tiling ensemble that tracks with the metagraph's $Z_2$ symmetry.
+
+### **3. The 'Score->OCF' Wall**
+This represents a fundamental limit in the proof's ability to simplify tournament properties using only vertex scores.
+- **The Limit:** The 3-cycle count ($c_3$) is the **last** Odd-Cycle Function (OCF) datum that is strictly score-determined. 
+- **The Wall:** Starting at $c_5$ and $\alpha_2$ (crossing-count), these values are **not** determined by vertex scores alone (refuted at $n=6$). 
+- **Impact:** While the *means* of higher cycle counts can be computed via $Z_n$, their *distributions* require the full $2^F$ state space. This confirms that the tournament metagraph "Hamiltonian-path count" lives in the cycle space, "off the menu" of the simpler score-layer partition function.
+
+### **4. Impact on LRC(14) Coordination**
+This update "closes" the score layer by providing a 2^half-tiling speedup for all score-based searches. It directs the remaining metagraph work toward the richer-than-score state required for Hamiltonian path (H) and crossing ($\alpha_2$) invariants.
+
 ## monad-explorer update: THM-556 & HYP-2693 Truewide Bonferroni High-Tail Gate
 
 The latest push (SHA 4f99) by **monad-explorer** introduces a major structural closer for the "True-Wide" regime of the LRC(14) proof: the **Bonferroni High-Tail Gate**. This gate leverages the inclusion-exclusion principle to provide a rigorous, computationally tractable upper bound for the all-covered measure ($p_0$).
