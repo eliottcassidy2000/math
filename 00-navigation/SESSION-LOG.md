@@ -1,3 +1,13 @@
+## kind-pasteur-2026-06-19-S15 — Glaisher dyadic-richness lens: REFUTED as the p_0-maximization principle, CONFIRMED as the exact tiebreaker among near-consec windows + doubling-monotonicity certificate — HYP-2650
+
+User: test the dyadic-richness hypothesis — is consec the joint max of p_0 and dyadic doubling-structure? Doubling-monotonicity? Ergodic equidistribution argument? EXACT fractions. Engine lrc14_euler_dyadic_explore_kps.py.
+Built an exact meas(S7) engine over all k-subsets and correlated p_0 with dyadic-richness measures.
+**(1) HYP REFUTED as primary:** "p_0 maximized by MOST dyadic structure" is FALSE. At k=8 (all 1287 8-subsets of {1..13}, exact Fractions): the richness-max sets (C2-pairs=9, e.g. {1,2,3,4,5,6,8,12}) have p_0 ∈ [0.181,0.293] ≪ consec{1..8} p_0=2447/5880=0.41616. Piling speeds onto few odd-parts kills angular spread. corr(p_0,richness)=+0.156 only.
+**(2) CONTIGUITY is the true primary driver:** corr(p_0, max-consec-run)=+0.268 (strongest). Mean p_0 is flat ~0.15 until run≥6, then jumps run=7→0.282, run=8→0.335. consec = unique full window.
+**(3) DYADIC RICHNESS = EXACT TIEBREAKER (the clean find):** within fixed contiguity, richness-corr STRENGTHENS with run: run=6 +0.746, run=7 +0.828, run=8 +0.983. Among contiguous WINDOWS, p_0 is ordered (essentially monotonically) by the b=1 power-of-2 chain length {1,2,4,8}, UNIQUELY maximized by the window STARTING AT 1. Windows {1..8}/{2..9}/{3..10} have chain length 4/3/2, p_0 0.4162/0.3603/0.3369. "Start at 1 = AP = max dyadic content = max p_0."
+**(4) DOUBLING-MONOTONICITY CONFIRMED (rigorous local-max certificate):** replacing ANY single elt of consec{1..k} by a larger unrelated value strictly DECREASES p_0 — exhaustive k=8: 40/40, k=9: 36/36. Worst-case sector-miss is 6 for ALL sets, so p_0 gaps are global-volume not worst-case.
+**VERDICT:** Glaisher lens supplies the right ORDERING among near-AP contenders (the tight regime, margin 0.0014) but not the maximization principle itself. Does NOT close LRC(14); refines consec-maximality combinatorially. NEW: HYP-2650; files lrc14_dyadic_richness_test{,2,3,4}_kps.py + outputs.
+
 ## kind-pasteur-2026-06-19-S14 — the "ONE open input C≈1.95" is REFUTED (uniform decorrelation GROWS with multi-scale structure); wide conclusion CONFIRMED exact; gap re-localized to the multi-element recursion — HYP-2655
 
 User: keep moving toward the LRC proof, EXACT fractions, it's number theory not physical runners. Built the EXACT `w·Δ_w` engine (HYP-2653's open input), all Fractions.

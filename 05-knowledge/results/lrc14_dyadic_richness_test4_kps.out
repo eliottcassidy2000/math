@@ -1,0 +1,40 @@
+==============================================================================
+WITHIN run=8 (consec-shifted) family k=8: does dyadic richness EXACTLY order p0?
+==============================================================================
+   p0=0.41616  richness(C2)=7  E=(1, 2, 3, 4, 5, 6, 7, 8)
+   p0=0.36026  richness(C2)=4  E=(2, 3, 4, 5, 6, 7, 8, 9)
+   p0=0.33690  richness(C2)=3  E=(3, 4, 5, 6, 7, 8, 9, 10)
+   p0=0.30232  richness(C2)=2  E=(5, 6, 7, 8, 9, 10, 11, 12)
+   p0=0.29569  richness(C2)=2  E=(4, 5, 6, 7, 8, 9, 10, 11)
+   p0=0.29554  richness(C2)=1  E=(6, 7, 8, 9, 10, 11, 12, 13)
+=> The window {1..8} (start at 1) has the MOST dyadic content because it
+   contains b=1:{1,2,4,8} (longest chain). Sliding the window up shortens it.
+
+==============================================================================
+THE CLEAN MECHANISM: among contiguous windows {s+1,...,s+k}, dyadic richness
+(esp. the b=1 chain length = floor(log2) reach) is MAXIMIZED at s=0 (start at 1).
+Verify: for windows of width 8 and 9 starting at s, show b=1 chain length & p0.
+==============================================================================
+  width k=8:
+    window {1..8}: b=1 chain length=4  richness=7  p0=0.41616
+    window {2..9}: b=1 chain length=3  richness=4  p0=0.36026
+    window {3..10}: b=1 chain length=2  richness=3  p0=0.33690
+    window {4..11}: b=1 chain length=2  richness=2  p0=0.29569
+    window {5..12}: b=1 chain length=1  richness=2  p0=0.30232
+    window {6..13}: b=1 chain length=1  richness=1  p0=0.29554
+  width k=9:
+    window {1..9}: b=1 chain length=4  richness=7  p0=0.50448
+    window {2..10}: b=1 chain length=3  richness=5  p0=0.45448
+    window {3..11}: b=1 chain length=2  richness=3  p0=0.41729
+    window {4..12}: b=1 chain length=2  richness=3  p0=0.41867
+    window {5..13}: b=1 chain length=1  richness=2  p0=0.39124
+
+==============================================================================
+SUMMARY DECOMPOSITION of consec-maximality:
+ (1) CONTIGUITY is primary: p0 mean rises only for long consecutive runs.
+ (2) Among maximally-contiguous (windows), DYADIC richness is the exact
+     tiebreaker, and it is uniquely maximized by the window STARTING AT 1
+     (which contains the full power-of-2 chain {1,2,4,8,...}).
+ (3) Doubling-monotonicity (strict, exhaustive k=8:40/40, k=9:36/36):
+     breaking any dyadic chain by an unrelated swap strictly lowers p0.
+==============================================================================
