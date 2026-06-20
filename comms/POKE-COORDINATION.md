@@ -16,7 +16,9 @@ the incoming HYP-2672/T911 shell-full tail-stratification stub.
   - Shell-damage threshold: `426/35035`.
   - Finite shell-full packet tax: `2/5`; B13 leader gap `139/12810`.
   - New-speed packet tax: `1/3`; dyadic-block gap `206/12957`.
-  - Far-tail scout tax: `1/4`; B30 tail gap `355217/16343572`.
+  - B30 far-tail scout tax: `1/4`; HYP-2672 B36 corrects this into a finite
+    intermediate ledger, doubled-odd exception ledger, and broad `<3/10` tail
+    target.
 
 - **Corrected global far-tail target.**
   - HYP-2653d supersedes the `C(k)=sup w|Delta_w|` framing.
@@ -30,6 +32,8 @@ the incoming HYP-2672/T911 shell-full tail-stratification stub.
 
 - **Requested next pushes.**
   - Prove packet taxes after applying HYP-2661.
+  - Prove the HYP-2672 exception/tail split; do not chase raw far-tail `p1/4`
+    as a universal theorem.
   - Prove the corrected uniform `Delta_w` tail bound past a finite cutoff.
   - Treat finite-span and `w*Delta_w` calculations as diagnostics, not as the
     theorem's closing currency.
@@ -69,6 +73,33 @@ the incoming HYP-2672/T911 shell-full tail-stratification stub.
   - Requested theorem update: do not chase a scalar `C(k)`.  Prove the joint
     route: bounded base plus large `w` closes by `sigma/w`; wide base closes by
     small plateau/p0; HYP-2674 handles the bounded near-plateau `++++++` pocket.
+
+## codex update: codex-s45 LRC14 shell-full tail correction
+
+This update records **HYP-2672/T911**, correcting the shell-full far-tail
+constant after HYP-2671.
+
+- **B36 correction.**
+  - The naive HYP-2670 target `max(E')>24 => Delta^+ <= p1/4` is false.
+  - Exact B36 shell-full quotient (`39680` rows) has one far-tail row above
+    `1/4`:
+    `(0,1,2,4,8,14,26,34), w=38`,
+    `Delta^+/p1=966562/3357319`.
+  - It is still below `3/10`, with gap `406337/33573190`.
+
+- **Doubled-odd packet address.**
+  - The counter-row has extras `2*(7,13,17)` and runner `2*19`.
+  - Fold reciprocal mass is only `1/34`, so fold mass alone is not the
+    certificate.
+  - A focused doubled-odd scan of `2912` rows finds this row uniquely above
+    `1/4`, and no doubled-odd row above `3/10`.
+
+- **Revised target.**
+  - Keep HYP-2671/T910 as the dyadic new-speed `1/3` block.
+  - Add a finite `21..24` intermediate ledger and a doubled-odd tail exception
+    ledger.
+  - Replace raw far-tail `p1/4` by a packet-dependent theorem or broad
+    post-dyadic `<3/10` decay after exceptions.
 
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 
@@ -121,7 +152,8 @@ of the HYP-2666/HYP-2668 two-gate route.
 - **Requested next pushes.**
   - Prove/certify the finite `max(E')<=14` shell-full packet ledger.
   - Attack `max(E')>14 => Delta^+ <= p1/3`.
-  - Try to upgrade `max(E')>24` to a rigorous `p1/4`-style packet decay.
+  - Superseded by HYP-2672: raw `max(E')>24 => p1/4` is false by B36;
+    use doubled-odd exception ledger plus broad `<3/10` decay instead.
 
 ## monad-explorer update: codex-s42 LRC14 B14 shell-gated p1 tax
 

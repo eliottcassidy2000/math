@@ -36,8 +36,21 @@ HYP-2671 identifies the local shell-full constant stack after the shell-1 gate:
 ```text
 finite pocket:  Delta_w^+/p1 <= 2/5
 new-speed:      Delta_w^+/p1 <= 1/3
-far tail:       Delta_w^+/p1 <= 1/4   (suggested by B30)
+B30 far-tail:   Delta_w^+/p1 <= 1/4   (scout signal only)
 ```
+
+HYP-2672 corrects the last line after extending the shell-full quotient to
+B36.  The raw target `max(E')>24 => Delta_w^+/p1 <= 1/4` is false because the
+doubled-odd row
+
+```text
+E'=(0,1,2,4,8,14,26,34), w=38
+```
+
+has ratio `966562/3357319`.  It is still below `3/10`; the corrected local
+tail route is a finite intermediate ledger plus a doubled-odd exception ledger,
+then a broad post-dyadic `<3/10` decay theorem rather than a universal
+`p1/4` lemma.
 
 Incoming HYP-2653d corrects the global far-peel side:
 
@@ -73,7 +86,7 @@ Main exact constants:
 shell-damage threshold       = 426/35035
 finite packet tax            = 2/5
 new-speed packet tax         = 1/3
-far-tail packet tax          = 1/4
+B30 far-tail scout tax       = 1/4
 k=9 uniform Delta margin     = 129643/980980
 ```
 
@@ -92,6 +105,10 @@ finite B13 leader gap below 2/5            = 139/12810
 new-speed dyadic-block gap below 1/3       = 206/12957
 far-tail B30 leader gap below 1/4          = 355217/16343572
 ```
+
+The B30 `1/4` line is now historical evidence only.  HYP-2672's B36 extension
+shows a doubled-odd shell-full tail row above `1/4`, so the proof cannot close
+the tail by this scalar constant.
 
 The binding local gate remains the missing-`4` tower deletion, but it is still
 strictly above the threshold.  The binding shell-full new-speed row remains the
@@ -196,8 +213,9 @@ The current route should be assembled in this order:
 3. Prove HYP-2671:
    `max(E')>14` shell-full new-speed rows satisfy `Delta_w^+ <= p1/3`, with
    the `m=4` dyadic block isolated as the sharp scout row.
-4. Prove the far-tail packet lemma suggested by HYP-2670:
-   `max(E')>24` rows satisfy a `p1/4`-style decay.
+4. Prove the corrected HYP-2672 tail split:
+   finite intermediate rows and doubled-odd exceptions get explicit ledgers,
+   while all remaining post-dyadic rows satisfy a broad `<3p1/10` decay.
 5. For genuinely wide/multiscale far peels, prove the corrected HYP-2653d tail
    estimate
    `sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)`, with `B` likely near `20`
@@ -232,19 +250,22 @@ Hamiltonian path:
 shell_damage_gate
 > finite_packet_tax
 > new_speed_packet_tax
-> far_tail_packet_tax
+> corrected_tail_split
 > uniform_delta_tail
 > raw_runner_vertices
 ```
 
 Challenged assumption: there is one scalar constant to prove.  The evidence
 supports a stack of currencies: local boundary mass and a global uniform
-`Delta_w` tail cap after finite cutoff.  The previous scale-cluster `w*Delta_w`
-view is still useful as a resonance detector, but not as the closing constant.
+`Delta_w` tail cap after finite cutoff.  HYP-2672 adds a second challenged
+assumption: B30's clean `p1/4` far-tail line was a finite-window mirage, not a
+stable local scalar.  The previous scale-cluster `w*Delta_w` view is still
+useful as a resonance detector, but not as the closing constant.
 
 ## Honest Status
 
-LRC(14) is not proved.  HYP-2673 now incorporates the HYP-2653d correction:
-prove the local packet-tax stack plus a uniform far-tail `Delta_w` estimate,
-rather than chasing either the obsolete non-resonant `C~=1.95` or the transient
-`w*Delta_w` scale-cluster budget.
+LRC(14) is not proved.  HYP-2673 now incorporates the HYP-2653d correction and
+the HYP-2672 B36 correction: prove the local packet-tax stack with its explicit
+tail exceptions plus a uniform far-tail `Delta_w` estimate, rather than chasing
+either the obsolete non-resonant `C~=1.95`, the transient `w*Delta_w`
+scale-cluster budget, or the superseded raw `p1/4` shell-full tail lemma.

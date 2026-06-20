@@ -159,8 +159,9 @@ The current shell-full proof can be sharpened to:
    block class.
 3. New-speed remainder: prove all non-block shell-full new-speed rows satisfy
    `Delta_w^+ <= p1/3`.
-4. Far-tail decay: prove the stronger `p1/4`-style statement suggested by
-   HYP-2670 for `max(E')>24`.
+4. Tail split: HYP-2672 shows the stronger raw `p1/4` target is false at B36,
+   so replace it with finite intermediate rows, doubled-odd exception ledgers,
+   and broad post-dyadic `<3p1/10` decay.
 
 Together with the incoming KPS S17/THM-545 shell-damaged gate, this turns the
 two-gate route into two explicit constants:

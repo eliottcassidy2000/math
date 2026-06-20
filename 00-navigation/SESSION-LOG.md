@@ -12,7 +12,9 @@ HYP-2673/T912 and linked back to that tail stub.  Added
 
 **FINDING:** the "one open constant" was overcompressed.  The local shell-full
 rows should be measured by `Delta_w^+/p1(E')`, giving the packet-tax stack
-`2/5`, `1/3`, and likely `1/4` after the shell-damage gate.  The first S46
+`2/5`, `1/3`, and the B30 `1/4` scout after the shell-damage gate.  HYP-2672
+later corrects that last scout at B36: the tail needs an exception ledger and
+broad `<3/10` decay, not a universal raw `p1/4` theorem.  The first S46
 reading treated global far peels through `w*|Delta_w|`, but the later
 HYP-2653d correction below supersedes that as a proof currency: the global
 target is a uniform `Delta_w` tail cap after finite cutoff.
@@ -137,17 +139,31 @@ lemma should isolate the dyadic block address plus phase-packet cancellation,
 not fold mass alone.  LRC(14) is not proved.
 ## codex-2026-06-20-S45 -- shell-full tail stratification -- HYP-2672/T911
 
-Renumbered the local continuation after pulling incoming HYP-2671/T910, which
-canonically localizes the new-speed `1/3` barrier at the dyadic block
-`(0,1,2,4,8,12,16,20), w=24`.  HYP-2672/T911 now records the remaining
-shell-full tail split: finite high pocket, the finite `21..24` intermediate
-rows above `1/4`, and far-tail `p1/4` decay.  A local exact B30 re-read found
-only three rows above `3/10`, only the B13 leader above `1/3`, and no
-`max(E')>24` row above `1/4`.
+Renumbered the local continuation after pulling incoming HYP-2671/T910, then
+built `04-computation/lrc14_shellfull_tail_stratification_codex_s45.py` and
+`04-computation/lrc14_doubled_odd_tail_probe_codex_s45.py`, with stored outputs
+in `05-knowledge/results/`.
 
-Next actions: attach an exact extension script and stored output, then sharpen
-the finite `max(E')<=14`, intermediate-band, and far-tail `p1/4` proof
-obligations.  LRC(14) is not proved.
+**FINDING:** the naive HYP-2670 far-tail `p1/4` target is false by B36.  In the
+exact shell-full quotient through `[1,36]` (`39680` rows), the row
+
+```text
+E'=(0,1,2,4,8,14,26,34), w=38
+Delta^+/p1 = 966562/3357319
+```
+
+is above `1/4` but below `3/10` by `406337/33573190`.  All rows with
+`max(E')>20` remain below `3/10` after HYP-2671's dyadic block is treated as
+the new-speed exception.  The only post-dyadic rows above `1/4` are the B36
+doubled-odd row and two finite intermediate rows at max `21` and `24`.
+
+A focused doubled-odd scout over `2912` rows of the form
+`{0,1,2,4,8,2a,2b,2c}`, `w=2d`, found the same `(7,13,17;19)` packet uniquely
+above `1/4`, with no rows above `3/10`.
+
+Updated route: finite high pocket, HYP-2671 dyadic block, finite intermediate
+ledger, doubled-odd exception ledger, then broad post-dyadic `<3/10` decay.
+LRC(14) is not proved.
 
 ## codex-2026-06-20-S44 -- shell-full packet gap beyond B13 leader -- HYP-2670/T909
 
@@ -170,9 +186,10 @@ max for max(E')>24 = 932669/4085893, gap below 1/4 = 355217/16343572
 
 Packet/fold readout says the B13 leader is a finite small-denominator/fold-target
 packet, not a moving frontier.  New proof split: finite ledger for
-`max(E')<=14`, new-speed `p1/3` decay for `max(E')>14`, and far-tail
-`p1/4`-style decay for `max(E')>24`, after shell-damaged rows route through
-HYP-2661/HYP-2666.  During close-out, pulled KPS S17: THM-545 proves the k=1
+`max(E')<=14`, new-speed `p1/3` decay for `max(E')>14`, and what HYP-2672 later
+corrects into a finite/doubled-odd exception ledger plus broad `<3/10` tail
+decay, after shell-damaged rows route through HYP-2661/HYP-2666.  During
+close-out, pulled KPS S17: THM-545 proves the k=1
 tower-deletion comb lemma and the k=2 wide scans report zero sub-threshold rows
 through the binding bit-4 window, so the shell-damaged half is now much closer
 to discharge.  LRC(14) is not proved.

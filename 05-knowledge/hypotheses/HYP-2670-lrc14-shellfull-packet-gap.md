@@ -137,8 +137,12 @@ The current shell-full route should become three lemmas.
    and still below `2/5`.
 2. New-speed lemma: if shell-full and `max(E')>14`, prove
    `Delta_w^+ <= p1(E')/3`.  In the B30 scan the exact margin is `206/12957`.
-3. Far-tail lemma: if shell-full and `max(E')>24`, prove a stronger decay,
-   plausibly `Delta_w^+ <= p1(E')/4` or a nearby packet-dependent version.
+3. Far-tail lemma: if shell-full and `max(E')>24`, prove a stronger decay.
+   **Update (HYP-2672):** the naive `p1/4` version is false by B36, where
+   `(0,1,2,4,8,14,26,34), w=38` has
+   `Delta_w^+/p1=966562/3357319 > 1/4`.  The surviving target is a
+   packet-dependent tail lemma, with doubled-odd exceptions separated and a
+   broad post-dyadic `3/10`-style decay still intact in the B36 scan.
 
 Then HYP-2666/HYP-2668 can assemble:
 
