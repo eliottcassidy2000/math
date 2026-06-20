@@ -1,13 +1,14 @@
 ---
 id: HYP-2665
 title: LRC14 p1-tax envelope refinement - p1/3 is false; S41 later refutes 3p1/8
-status: OPEN; refines HYP-2664 by refuting p1/3, with HYP-2667 correcting the next constant
+status: OPEN; refines HYP-2664 by refuting p1/3, later shell-gated by HYP-2667/HYP-2668
 source: codex-2026-06-19-S40
 depends_on:
   - HYP-2664
   - HYP-2662
   - HYP-2655
 related:
+  - HYP-2668
   - HYP-2667
   - HYP-2661
   - HYP-2663
@@ -37,9 +38,11 @@ Delta_w^+ <= 3*p1(E')/8
 or a packet-refined inequality that treats the few `>1/3` rows by their
 phase-packet structure.
 
-**S41 correction:** HYP-2667 later refutes the raw `3/8` target on the full
+**S41/S42 correction:** HYP-2667 later refutes the raw `3/8` target on the full
 bounded `B=13` bank.  The live scalar target is `2/5`, or a split theorem with
 generic packets at `3/8` and a dyadic-even packet frontier below `2/5`.
+HYP-2668 then refutes global raw `2/5` on `B=14`, but the failure is
+shell-1 damaged; the shell-1-full target remains `2/5` in that scan.
 
 ## Evidence
 
@@ -159,5 +162,6 @@ the error to `p1`.
 ## Honest Status
 
 LRC(14) is not proved.  HYP-2665 refines HYP-2664: the p1 currency remains
-promising and the constant `1/3` is false.  HYP-2667 further corrects the
-sampled `3/8` lead; the current target is `2p1/5` or a packet split.
+promising and the constant `1/3` is false.  HYP-2667/HYP-2668 further correct
+the sampled `3/8` and global `2/5` leads; the current target is shell-gated
+`2p1/5`.

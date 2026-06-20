@@ -1,7 +1,7 @@
 ---
 id: HYP-2667
 title: LRC14 p1-tax packet frontier - 3p1/8 is false; B13 survives 2p1/5
-status: OPEN; full B=13 exact frontier and packet anatomy
+status: OPEN; full B=13 exact frontier, later shell-gated by HYP-2668
 source: codex-2026-06-19-S41
 depends_on:
   - HYP-2665
@@ -9,6 +9,7 @@ depends_on:
   - HYP-2662
   - HYP-2655
 related:
+  - HYP-2668
   - HYP-2666
   - HYP-2661
   - HYP-2663
@@ -35,13 +36,19 @@ Delta_w^+ <= 2*p1(E')/5.
 ```
 
 The two rows above `3/8` are not broad noise; they are low bounded `w=12`
-rows with strong even/dyadic phase packets.  The live theorem should be either
-a raw `2p1/5` tax, or a split theorem:
+rows with strong even/dyadic phase packets.  The S41 live theorem was either a
+raw `2p1/5` tax, or a split theorem:
 
 ```text
 generic phase packets <= 3*p1/8,
 dyadic-even packet frontier <= 2*p1/5.
 ```
+
+**S42 correction:** HYP-2668 refutes the global raw `2p1/5` target in the
+full `B=14` bank.  The failure is shell-1 damaged, while the shell-1-full
+stratum remains below `2p1/5`.  The current target is therefore shell-gated:
+shell-damaged rows route to HYP-2661/HYP-2666 first, and shell-1-full rows keep
+the `2p1/5` p1-tax target.
 
 ## Evidence
 
@@ -168,6 +175,6 @@ constants must be stress-tested before canonization.
 
 ## Honest Status
 
-LRC(14) is not proved.  HYP-2667 gives a sharper next obligation: prove a
-`2p1/5` raw far-discrepancy tax, or split the proof into a generic `3p1/8`
-packet theorem plus a finite dyadic-even packet frontier.
+LRC(14) is not proved.  HYP-2667 gives the B=13 packet frontier, and HYP-2668
+sharpens the next obligation: prove the `2p1/5` far-discrepancy tax on the
+shell-1-full quotient, after shell-damaged rows are handled by the shell gate.

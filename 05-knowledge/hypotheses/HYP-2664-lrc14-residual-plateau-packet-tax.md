@@ -1,7 +1,7 @@
 ---
 id: HYP-2664
 title: LRC14 residual/plateau packet tax - far residual is paid by p1 boundary mass
-status: OPEN; p1 currency supported, but p1/3 and 3p1/8 raw constants are refuted
+status: OPEN; p1 currency supported, but constants require shell-gated packets
 source: codex-2026-06-19-S39
 depends_on:
   - HYP-2662
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2663
 related:
   - HYP-2665
+  - HYP-2668
   - HYP-2667
   - HYP-2648
   - HYP-2658
@@ -43,10 +44,12 @@ with an initial proof-friendly target `c=1/3`, and a sharper residual-only
 target near `c=1/4`.  The key point is that `p1(E')` is already present in the plateau, so
 this turns the resonant endpoint problem into a joint plateau/Delta inequality.
 
-**S40/S41 correction:** HYP-2665 refutes the raw `c=1/3` constant, and
-HYP-2667 refutes the raw `c=3/8` constant on the full bounded `B=13` bank.
-The `p1` currency remains useful, but the next viable raw target is `c=2/5`,
-or a packet-refined bound that isolates the dyadic-even rows above `3/8`.
+**S40/S41/S42 correction:** HYP-2665 refutes the raw `c=1/3` constant,
+HYP-2667 refutes the raw `c=3/8` constant on the full bounded `B=13` bank,
+and HYP-2668 refutes global `c=2/5` on the full bounded `B=14` bank.  The
+`p1` currency remains useful, but only after the right packet gate: the current
+target is `c=2/5` on the shell-1-full quotient, with shell-damaged rows routed
+through HYP-2661/HYP-2666 first.
 
 ## Evidence
 
@@ -75,10 +78,11 @@ min CAP9 - Phi - |residual|/w         = 77424533/613602990 ~= 0.126180
 ```
 
 So the residual channel stays well below `p1/4` in the tested rows.  The raw
-far discrepancy slightly exceeds `p1/4` in one multiscale row, and later S40/S41
-bounded rows exceed both `1/3` and `3/8`.  The robust proof target should now
-be `raw positive Delta <= 2*p1/5`, or a split proof with residual `<= p1/4`
-plus a structured trace/QR/dyadic packet tax.
+far discrepancy slightly exceeds `p1/4` in one multiscale row, later S40/S41
+bounded rows exceed both `1/3` and `3/8`, and S42 has one shell-damaged B=14
+row above `2/5`.  The robust proof target should now be shell-gated: prove raw
+positive Delta `<= 2*p1/5` on the shell-1-full quotient, while shell-damaged
+rows pay via tower/mouth rigidity.
 
 Bounded AP-window bank:
 
@@ -110,6 +114,9 @@ HYP-2665 shows this theorem is too strong as a raw far-discrepancy claim:
 HYP-2667 further shows `3/8` is too strong: the full B=13 bank reaches
 `997/2562 ~= 0.389149` at `E'=(0,1,2,4,6,7,8,10), w=12`, while `2/5`
 survives the full bank with minimum tax gap `139/2450`.
+HYP-2668 then shows global `2/5` is too strong at B=14:
+`7071/17584 ~= 0.402127` for `E'=(0,1,4,6,8,10,12,14), w=16`, but that row
+misses shell-1 bit `2`; all shell-1-full B=14 rows remain below `2/5`.
 
 ## Interpretation
 
@@ -131,8 +138,8 @@ the one-missed-sector region, so its natural price is `p1(E')`.
 Prove one of the following:
 
 ```text
-(A') Delta_w^+ <= 2*p1(E')/5.
-(A'') Generic phase packets <= 3*p1(E')/8, with a dyadic-even frontier <= 2*p1(E')/5.
+(A') If E' is shell-1-full, Delta_w^+ <= 2*p1(E')/5.
+(A'') If E' damages shell 1, route through HYP-2661/HYP-2666 tower/mouth tax first.
 (B) residual^+/w <= p1(E')/4 and trace+QR positive tax <= p1(E')/12.
 (C) A sharper packet coarea inequality using phase_packet_class_l1 and p1.
 ```
@@ -143,8 +150,8 @@ Then combine with the exact bounded-bank certificate:
 p0(E') + (1/7+2/5)*p1(E') <= cap9
 ```
 
-on `E'={0}+7`-subsets of `[1,13]`; HYP-2667's full B=13 scan records minimum
-slack `507209/14714700`.  Large-tail and nonlocal rows should route
+on the shell-1-full bounded quotient; HYP-2668 is the current finite evidence
+for this gate.  Large-tail and nonlocal rows should route
 through HYP-2655/HYP-2658 recursion, while near-collar small-plateau rows route
 through HYP-2661/HYP-2663 packet rigidity.
 
@@ -183,6 +190,7 @@ mass `p1(E')` is the proof-facing currency.
 ## Honest Status
 
 LRC(14) is not proved.  HYP-2664 supplies a much sharper target than the false
-uniform `C` route, but HYP-2665/HYP-2667 correct the constants: prove a `2p1/5`
-raw tax, or a packet-refined `p1` tax with a dyadic-even frontier, then use the
-bounded AP-window certificate and the HYP-2661/HYP-2663 packet rigidity.
+uniform `C` route, but HYP-2665/HYP-2667/HYP-2668 correct the constants:
+prove a shell-gated `2p1/5` raw tax, or a packet-refined `p1` tax with
+dyadic/shell gates, then use the bounded AP-window certificate and the
+HYP-2661/HYP-2663 packet rigidity.

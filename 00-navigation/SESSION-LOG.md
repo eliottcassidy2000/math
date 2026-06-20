@@ -1,3 +1,23 @@
+## codex-2026-06-19-S42 -- B14 shell-gated p1 tax; global 2/5 false but shell-full survives -- HYP-2668
+
+After pushing S41, ran one more exact bounded-layer stress test before closing because HYP-2667's own lesson was to stress-test constants before canonizing them.  Built `04-computation/lrc14_p1_tax_b14_shell_gate_codex_s42.py`, stored `05-knowledge/results/lrc14_p1_tax_b14_shell_gate_codex_s42.out`, and recorded `05-knowledge/hypotheses/HYP-2668-lrc14-b14-shell-gated-p1-tax.md`.
+
+**FINDING:** global raw `2p1/5` is false at `B=14`, but the single failure is shell-1 damaged.  Exact scan:
+
+```text
+family: E'={0}+7-subsets of [1,14], w=max(E')+1..max(E')+8
+rows=27448
+Delta_w^+/p1 > 1/3: 32
+Delta_w^+/p1 > 3/8: 5
+Delta_w^+/p1 > 2/5: 1
+Delta_w^+/p1 > 5/12: 0
+global max = 7071/17584 at E'=(0,1,4,6,8,10,12,14), w=16
+shell1_missing=(2,)
+shell1-full max = 997/2562 < 2/5
+```
+
+This repairs the target: do not chase a global scalar `2p1/5`.  The current proof obligation is the two-gate theorem: shell-1-damaged rows route first to HYP-2661/HYP-2666 tower/mouth rigidity, and shell-1-full rows should satisfy `Delta_w^+ <= 2*p1(E')/5`.  LRC(14) is not proved.
+
 ## codex-2026-06-19-S41 -- full B=13 p1-tax packet frontier; 3/8 refuted, 2/5 survives -- HYP-2667
 
 After pushing S40, pulled again and integrated the incoming three-tail shell-1 frontier checkpoint.  The useful bridge was the same lesson on both sides: choose the right packet quotient before scalarizing.  Built `04-computation/lrc14_p1_tax_packet_frontier_codex_s41.py`, stored `05-knowledge/results/lrc14_p1_tax_packet_frontier_codex_s41.out`, and recorded `05-knowledge/hypotheses/HYP-2667-lrc14-p1-tax-packet-frontier.md`.  After rebasing over the incoming two-gate boundary scout, renumbered this packet-frontier HYP from `2666` to `2667` to avoid a live namespace collision.
@@ -13,7 +33,7 @@ Delta_w^+/p1 > 2/5: 0
 max Delta_w^+/p1 = 997/2562 at E'=(0,1,2,4,6,7,8,10), w=12
 ```
 
-The worst row remains below `2/5` by exact tax gap `139/2450`; the full-bank minimum cap slack for `p0+(1/7+2/5)p1 <= cap9` is `507209/14714700`.  Packet anatomy shows the two `3/8` failures are low `w=12` bounded rows with strong even/dyadic medium-packet stacks, not one giant endpoint.  The next proof obligation is therefore `Delta_w^+ <= 2*p1(E')/5`, or a split theorem: generic phase packets below `3p1/8` plus a dyadic-even packet frontier below `2p1/5`.  LRC(14) is not proved.
+The worst row remains below `2/5` by exact tax gap `139/2450`; the full-bank minimum cap slack for `p0+(1/7+2/5)p1 <= cap9` is `507209/14714700`.  Packet anatomy shows the two `3/8` failures are low `w=12` bounded rows with strong even/dyadic medium-packet stacks, not one giant endpoint.  S41 suggested `Delta_w^+ <= 2*p1(E')/5`, but S42/HYP-2668 later refutes that as a global scalar and keeps it only on the shell-1-full quotient.  LRC(14) is not proved.
 
 ## codex-2026-06-19-S40 -- p1-tax constant refined; interval envelope too coarse -- HYP-2665
 
