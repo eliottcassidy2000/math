@@ -1,0 +1,36 @@
+========================================================================
+ADVERSARIAL re-check of HYP-2688 (FRESH script, no reuse)
+========================================================================
+  [sanity] n=3 all-forward (transitive) H = 1  (expect 1)  OK
+  [sanity] n=4 all-forward (transitive) H = 1  (expect 1)  OK
+  [sanity] n=5 all-forward (transitive) H = 1  (expect 1)  OK
+  [sanity] n=6 all-forward (transitive) H = 1  (expect 1)  OK
+  [sanity] n=7 all-forward (transitive) H = 1  (expect 1)  OK
+
+[X] rho-fixed tiling  <=>  phi-self-converse tournament  (independent)
+  n=3: #rho-fixed=2  #phi-self-converse=2  mismatches=0  2^half=2  OK
+  n=4: #rho-fixed=4  #phi-self-converse=4  mismatches=0  2^half=4  OK
+  n=5: #rho-fixed=16  #phi-self-converse=16  mismatches=0  2^half=16  OK
+  n=6: #rho-fixed=64  #phi-self-converse=64  mismatches=0  2^half=64  OK
+  n=7: #rho-fixed=512  #phi-self-converse=512  mismatches=0  2^half=512  OK
+
+[GS] grid-symmetric maxima (exhaust 2^half(n) grid-sym tilings)
+  n  half   2^half  GS_maxH  canon_max  ATTAINS
+  5     4       16       15         15     True
+        top grid-sym H spectrum (H:count) = {15: 4, 13: 3, 11: 3, 9: 4, 3: 1}
+  6     6       64       45         45     True
+        top grid-sym H spectrum (H:count) = {45: 12, 41: 9, 37: 7, 33: 7, 29: 14}
+  7     9      512      189        189     True
+        top grid-sym H spectrum (H:count) = {189: 3, 175: 9, 171: 9, 159: 30, 157: 9}
+  8    12     4096      661        661     True
+        top grid-sym H spectrum (H:count) = {661: 70, 657: 157, 653: 72, 641: 74, 637: 39}
+  9    16    65536     3357       3357     True
+        top grid-sym H spectrum (H:count) = {3357: 37, 3333: 35, 3303: 13, 3299: 37, 3297: 37}
+
+[FC] FULL-CUBE exhaustion (all 2^m tilings) n=5,6,7
+  n   m     2^m  globalH  #max  #max_GS  #max_nonGS  canon  match
+  5   6      64       15     8        4           4     15   True
+  6  10    1024       45    30       12          18     45   True
+  7  15   32768      189     9        3           6    189   True
+
+DONE.

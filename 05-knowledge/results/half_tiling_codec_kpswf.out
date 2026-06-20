@@ -1,0 +1,92 @@
+========================================================================
+HALF-TILING CODEC  --  kind-pasteur THREAD 4 (engineering)
+========================================================================
+
+[A] EXACT round-trip on ALL 2^half grid-symmetric tilings (n=3..7)
+  n  half   2^half  #gridsym  #roundtrip_ok  #selfconv_ok   status
+  3     1        2         2              2             2       OK
+  4     2        4         4              4             4       OK
+  5     4       16        16             16            16       OK
+  6     6       64        64             64            64       OK
+  7     9      512       512            512           512       OK
+  => round-trip exact on every grid-sym tiling n=3..7: PASS (100%)
+
+[A'] Integer-packing API round-trip (encode_to_int / decode int)
+  n=3: int round-trip OK (code fits in 1 bits, max int 1)
+  n=4: int round-trip OK (code fits in 2 bits, max int 3)
+  n=5: int round-trip OK (code fits in 4 bits, max int 15)
+  n=6: int round-trip OK (code fits in 6 bits, max int 63)
+  n=7: int round-trip OK (code fits in 9 bits, max int 511)
+  => PASS
+
+[B] COMPRESSION TABLE  (phi-self-converse stratum)
+    half(n) = floor((n-1)^2/4) bits  vs  full tiling m=C(n-1,2)  vs  full adjacency C(n,2)
+  n  half(n)  m=C(n-1,2)  C(n,2)   half/m  half/C(n,2) bytes(half) bytes(adj)
+  3        1           1       3   1.0000       0.3333           1          1
+  4        2           3       6   0.6667       0.3333           1          1
+  5        4           6      10   0.6667       0.4000           1          2
+  6        6          10      15   0.6000       0.4000           1          2
+  7        9          15      21   0.6000       0.4286           2          3
+  8       12          21      28   0.5714       0.4286           2          4
+  9       16          28      36   0.5714       0.4444           2          5
+ 10       20          36      45   0.5556       0.4444           3          6
+ 11       25          45      55   0.5556       0.4545           4          7
+ 12       30          55      66   0.5455       0.4545           4          9
+ 13       36          66      78   0.5455       0.4615           5         10
+ 14       42          78      91   0.5385       0.4615           6         12
+ 15       49          91     105   0.5385       0.4667           7         14
+ 16       56         105     120   0.5333       0.4667           7         15
+ 17       64         120     136   0.5333       0.4706           8         17
+ 18       72         136     153   0.5294       0.4706           9         20
+ 19       81         153     171   0.5294       0.4737          11         22
+ 20       90         171     190   0.5263       0.4737          12         24
+    asymptotics: half(n)/m -> 1/2 and half(n)/C(n,2) -> 1/2  (2x compression).
+    at n=200:  half/m = 0.502513,  half/C(n,2) = 0.497487
+
+[C] UNIFORM SAMPLER sanity check
+    (i) every sample is phi-self-converse  (ii) sampled H-dist ~ exhaustive grid-sym
+  --- n=5: |SC stratum|=2^4=16, samples=200000, self-converse failures=0 (OK) ---
+           H   exact#    p_exact  p_sampled     |err|
+           1        1   0.062500   0.062315  0.000185
+           3        1   0.062500   0.062485  0.000015
+           9        4   0.250000   0.250990  0.000990
+          11        3   0.187500   0.186750  0.000750
+          13        3   0.187500   0.188240  0.000740
+          15        4   0.250000   0.249220  0.000780
+      max |p_exact - p_sampled| = 0.000990  (expect -> 0 as samples grow; ~ 1/sqrt(N) = 0.00224)
+  --- n=6: |SC stratum|=2^6=64, samples=200000, self-converse failures=0 (OK) ---
+           H   exact#    p_exact  p_sampled     |err|
+           1        1   0.015625   0.015570  0.000055
+           5        3   0.046875   0.047000  0.000125
+           9        1   0.015625   0.015470  0.000155
+          17       10   0.156250   0.158305  0.002055
+          29       14   0.218750   0.217790  0.000960
+          33        7   0.109375   0.108230  0.001145
+          37        7   0.109375   0.109030  0.000345
+          41        9   0.140625   0.140970  0.000345
+          45       12   0.187500   0.187635  0.000135
+      max |p_exact - p_sampled| = 0.002055  (expect -> 0 as samples grow; ~ 1/sqrt(N) = 0.00224)
+  => sampler ALWAYS phi-self-converse on all tested n: PASS
+
+[D] PRODUCT DEMO: self-converse tournament codec
+    Use case: ranking systems with antisymmetric structure (round-robins,
+    pairwise-preference matrices that are converse-symmetric under a known
+    relabeling phi). Such a system's full pairwise matrix costs C(n,2) bits;
+    the half-tiling fingerprint costs only half(n) ~ C(n,2)/2 bits.
+    Example n=7: drew a random SC tournament.
+      compressed fingerprint (half=9 bits): 101000100
+      packed integer fingerprint: 69
+      H (directed Hamiltonian paths) = 81
+      full tiling would need m=15 bits; full adjacency C(7,2)=21 bits.
+      canonical round-trip encode(decode(code))==code: True
+    The global H-maximizer at n=7 (Paley T_7, H=189) is self-converse and
+    thus lives in the codec's domain -- its fingerprint is a 9-bit code.
+
+========================================================================
+SUMMARY
+  (a) exact round-trip on ALL grid-sym tilings n=3..7 : PASS
+  (a') integer-packing round-trip                     : PASS
+  (b) compression table n<=20                         : printed (half/full -> 1/2)
+  (c) uniform sampler self-converse + H-match         : PASS
+  (d) product demo                                    : printed
+========================================================================

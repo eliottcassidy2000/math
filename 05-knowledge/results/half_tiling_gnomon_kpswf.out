@@ -1,0 +1,174 @@
+==========================================================================
+HYP-2687  GNOMON SHELLS & EVEN-ODD DICHOTOMY  -- kind-pasteur(wf) 2026-06-20
+==========================================================================
+
+[0] half(n) = floor((n-1)^2/4):  odd k^2 (gnomon square) / even k(k-1) (pronic)
+  n    m  d=fix  pairs  half                  shape  half(n)-half(n-2)
+  3    1      1      0     1         odd k=1: k^2=1                  1
+  4    3      1      1     2     even k=2: k(k-1)=2                  2
+  5    6      2      2     4         odd k=2: k^2=4                  3
+  6   10      2      4     6     even k=3: k(k-1)=6                  4
+  7   15      3      6     9         odd k=3: k^2=9                  5
+  8   21      3      9    12    even k=4: k(k-1)=12                  6
+  9   28      4     12    16        odd k=4: k^2=16                  7
+ 10   36      4     16    20    even k=5: k(k-1)=20                  8
+ 11   45      5     20    25        odd k=5: k^2=25                  9
+ 12   55      5     25    30    even k=6: k(k-1)=30                 10
+ 13   66      6     30    36        odd k=6: k^2=36                 11
+
+==========================================================================
+[a] GNOMON SHELLS for ODD n  (shell i = nesting level; widths 1,3,5,...,2k-1)
+    survival(a,b)=min(b, n+1-a) is rho-invariant; shell = smax - survival + 1
+    shell 1 = innermost (deepest Mode-B core), shell k = outermost (apex layer)
+
+  --- n=3 (k=1, half=1, smax=1) ---
+    shell 1 (width 1): (3, 1)[FIX,rc=(1, 1),surv=1]
+    -> shell widths [1]  vs gnomon [1]  OK (1,3,5,... gnomon)
+
+  --- n=5 (k=2, half=4, smax=2) ---
+    shell 1 (width 1): (4, 2)[FIX,rc=(1, 2),surv=2]
+    shell 2 (width 3): (3, 1)~(5, 3)[pair,rc=(1, 1),surv=1]  (4, 1)~(5, 2)[pair,rc=(2, 1),surv=1]  (5, 1)[FIX,rc=(3, 1),surv=1]
+    -> shell widths [1, 3]  vs gnomon [1, 3]  OK (1,3,5,... gnomon)
+
+  --- n=7 (k=3, half=9, smax=3) ---
+    shell 1 (width 1): (5, 3)[FIX,rc=(1, 3),surv=3]
+    shell 2 (width 3): (4, 2)~(6, 4)[pair,rc=(1, 2),surv=2]  (5, 2)~(6, 3)[pair,rc=(2, 2),surv=2]  (6, 2)[FIX,rc=(3, 2),surv=2]
+    shell 3 (width 5): (3, 1)~(7, 5)[pair,rc=(1, 1),surv=1]  (4, 1)~(7, 4)[pair,rc=(2, 1),surv=1]  (5, 1)~(7, 3)[pair,rc=(3, 1),surv=1]  (6, 1)~(7, 2)[pair,rc=(4, 1),surv=1]  (7, 1)[FIX,rc=(5, 1),surv=1]
+    -> shell widths [1, 3, 5]  vs gnomon [1, 3, 5]  OK (1,3,5,... gnomon)
+
+  --- n=9 (k=4, half=16, smax=4) ---
+    shell 1 (width 1): (6, 4)[FIX,rc=(1, 4),surv=4]
+    shell 2 (width 3): (5, 3)~(7, 5)[pair,rc=(1, 3),surv=3]  (6, 3)~(7, 4)[pair,rc=(2, 3),surv=3]  (7, 3)[FIX,rc=(3, 3),surv=3]
+    shell 3 (width 5): (4, 2)~(8, 6)[pair,rc=(1, 2),surv=2]  (5, 2)~(8, 5)[pair,rc=(2, 2),surv=2]  (6, 2)~(8, 4)[pair,rc=(3, 2),surv=2]  (7, 2)~(8, 3)[pair,rc=(4, 2),surv=2]  (8, 2)[FIX,rc=(5, 2),surv=2]
+    shell 4 (width 7): (3, 1)~(9, 7)[pair,rc=(1, 1),surv=1]  (4, 1)~(9, 6)[pair,rc=(2, 1),surv=1]  (5, 1)~(9, 5)[pair,rc=(3, 1),surv=1]  (6, 1)~(9, 4)[pair,rc=(4, 1),surv=1]  (7, 1)~(9, 3)[pair,rc=(5, 1),surv=1]  (8, 1)~(9, 2)[pair,rc=(6, 1),surv=1]  (9, 1)[FIX,rc=(7, 1),surv=1]
+    -> shell widths [1, 3, 5, 7]  vs gnomon [1, 3, 5, 7]  OK (1,3,5,... gnomon)
+
+==========================================================================
+[b] FIXED DIAGONAL CELLS {a+b=n+1}  (count d=floor((n-1)/2); apex=(n,1))
+
+  --- n=3: d=1 fixed cells (apex (n,1) always present) ---
+    (a,b)=(3,1)  pin(r,c)=(1,1)  span=2  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+
+  --- n=4: d=1 fixed cells (apex (n,1) always present) ---
+    (a,b)=(4,1)  pin(r,c)=(2,1)  span=3  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+
+  --- n=5: d=2 fixed cells (apex (n,1) always present) ---
+    (a,b)=(5,1)  pin(r,c)=(3,1)  span=4  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(4,2)  pin(r,c)=(1,2)  span=2  | mid-diagonal arc span=2; symmetric pivot at vertices (4,2)
+
+  --- n=6: d=2 fixed cells (apex (n,1) always present) ---
+    (a,b)=(6,1)  pin(r,c)=(4,1)  span=5  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(5,2)  pin(r,c)=(2,2)  span=3  | mid-diagonal arc span=3; symmetric pivot at vertices (5,2)
+
+  --- n=7: d=3 fixed cells (apex (n,1) always present) ---
+    (a,b)=(7,1)  pin(r,c)=(5,1)  span=6  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(6,2)  pin(r,c)=(3,2)  span=4  | mid-diagonal arc span=4; symmetric pivot at vertices (6,2)
+    (a,b)=(5,3)  pin(r,c)=(1,3)  span=2  | mid-diagonal arc span=2; symmetric pivot at vertices (5,3)
+
+  --- n=8: d=3 fixed cells (apex (n,1) always present) ---
+    (a,b)=(8,1)  pin(r,c)=(6,1)  span=7  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(7,2)  pin(r,c)=(4,2)  span=5  | mid-diagonal arc span=5; symmetric pivot at vertices (7,2)
+    (a,b)=(6,3)  pin(r,c)=(2,3)  span=3  | mid-diagonal arc span=3; symmetric pivot at vertices (6,3)
+
+  --- n=9: d=4 fixed cells (apex (n,1) always present) ---
+    (a,b)=(9,1)  pin(r,c)=(7,1)  span=8  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(8,2)  pin(r,c)=(5,2)  span=6  | mid-diagonal arc span=6; symmetric pivot at vertices (8,2)
+    (a,b)=(7,3)  pin(r,c)=(3,3)  span=4  | mid-diagonal arc span=4; symmetric pivot at vertices (7,3)
+    (a,b)=(6,4)  pin(r,c)=(1,4)  span=2  | mid-diagonal arc span=2; symmetric pivot at vertices (6,4)
+
+  --- n=10: d=4 fixed cells (apex (n,1) always present) ---
+    (a,b)=(10,1)  pin(r,c)=(8,1)  span=9  | APEX: arc between extreme vertices n and 1 (source<->sink); span n-1
+    (a,b)=(9,2)  pin(r,c)=(6,2)  span=7  | mid-diagonal arc span=7; symmetric pivot at vertices (9,2)
+    (a,b)=(8,3)  pin(r,c)=(4,3)  span=5  | mid-diagonal arc span=5; symmetric pivot at vertices (8,3)
+    (a,b)=(7,4)  pin(r,c)=(2,4)  span=3  | mid-diagonal arc span=3; symmetric pivot at vertices (7,4)
+
+==========================================================================
+[c] c3 = #directed 3-cycles: PARITY across ALL tilings, n=4..7
+    (THM-016/017 'even-odd split' is the ALTERNATING-SUM identity; here we
+     test whether VERTEX-count parity of n controls c3-PARITY spread.)
+
+  --- n=3 (m=1, total tilings=2) ---
+    c3 distribution        : {0: 1, 1: 1}
+    parity (all)   even:odd : {0: 1, 1: 1}  both parities present=True
+    parity (grid-sym)       : {0: 1, 1: 1}  both parities present=True
+    parity (non-grid-sym)   : {}
+    c3 values grid-sym only : [0, 1]
+
+  --- n=4 (m=3, total tilings=8) ---
+    c3 distribution        : {0: 1, 1: 2, 2: 5}
+    parity (all)   even:odd : {0: 6, 1: 2}  both parities present=True
+    parity (grid-sym)       : {0: 4}  both parities present=False
+    parity (non-grid-sym)   : {1: 2, 0: 2}
+    c3 values grid-sym only : [0, 2]
+
+  --- n=5 (m=6, total tilings=64) ---
+    c3 distribution        : {0: 1, 1: 3, 2: 10, 3: 18, 4: 29, 5: 3}
+    parity (all)   even:odd : {0: 40, 1: 24}  both parities present=True
+    parity (grid-sym)       : {0: 8, 1: 8}  both parities present=True
+    parity (non-grid-sym)   : {1: 16, 0: 32}
+    c3 values grid-sym only : [0, 1, 3, 4, 5]
+
+  --- n=6 (m=10, total tilings=1024) ---
+    c3 distribution        : {0: 1, 1: 4, 2: 16, 3: 36, 4: 122, 5: 108, 6: 344, 7: 236, 8: 157}
+    parity (all)   even:odd : {0: 640, 1: 384}  both parities present=True
+    parity (grid-sym)       : {0: 64}  both parities present=False
+    parity (non-grid-sym)   : {1: 384, 0: 576}
+    c3 values grid-sym only : [0, 2, 4, 6, 8]
+
+  --- n=7 (m=15, total tilings=32768) ---
+    c3 distribution        : {0: 1, 1: 5, 2: 23, 3: 64, 4: 215, 5: 441, 6: 1141, 7: 1672, 8: 3399, 9: 4423, 10: 7321, 11: 5528, 12: 6241, 13: 2203, 14: 91}
+    parity (all)   even:odd : {0: 18432, 1: 14336}  both parities present=True
+    parity (grid-sym)       : {0: 256, 1: 256}  both parities present=True
+    parity (non-grid-sym)   : {1: 14080, 0: 18176}
+    c3 values grid-sym only : [0, 1, 2, 3, 4, 5, 6, 8, 9, 10, 11, 12, 13, 14]
+
+  EVEN-ODD CONJECTURE TEST (c (a) variant): does odd n force c3 to take
+  BOTH parities while even n constrains it to one?
+    n=3 [ODD  n]: c3 values=[0, 1]  c3-parities present=[0, 1]  grid-sym c3-parities=[0, 1]
+    n=4 [EVEN n]: c3 values=[0, 1, 2]  c3-parities present=[0, 1]  grid-sym c3-parities=[0]
+    n=5 [ODD  n]: c3 values=[0, 1, 2, 3, 4, 5]  c3-parities present=[0, 1]  grid-sym c3-parities=[0, 1]
+    n=6 [EVEN n]: c3 values=[0, 1, 2, 3, 4, 5, 6, 7, 8]  c3-parities present=[0, 1]  grid-sym c3-parities=[0]
+    n=7 [ODD  n]: c3 values=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14]  c3-parities present=[0, 1]  grid-sym c3-parities=[0, 1]
+
+==========================================================================
+[d] MODE-B SHELL TEST: outer gnomon (n -> n+2) = one nested SC sub-tournament?
+    For every phi-self-converse tiling on n vertices, is the inner
+    sub-tournament on {2..n-1} phi'-self-converse on those n-2 labels?
+  n=4: grid-sym tilings tested=   4  inner(2)-self-converse=   4  all_ok=True  | half(n)-half(n-2)=2 (=2(k-1) outer pronic ring)
+  n=5: grid-sym tilings tested=  16  inner(3)-self-converse=  16  all_ok=True  | half(n)-half(n-2)=3 (=2k-1 outer gnomon)
+  n=6: grid-sym tilings tested=  64  inner(4)-self-converse=  64  all_ok=True  | half(n)-half(n-2)=4 (=2(k-1) outer pronic ring)
+  n=7: grid-sym tilings tested= 512  inner(5)-self-converse= 512  all_ok=True  | half(n)-half(n-2)=5 (=2k-1 outer gnomon)
+  n=8: grid-sym tilings tested=4096  inner(6)-self-converse=4096  all_ok=True  | half(n)-half(n-2)=6 (=2(k-1) outer pronic ring)
+
+  Interpretation: the inner tiles {(a,b): 2<=b, a<=n-1} are closed under rho
+  (rho maps {2..n-1}-tiles to {2..n-1}-tiles), so an SC tiling restricts to an
+  SC tiling on n-2 vertices. The outer gnomon = the rho-orbits touching vertex
+  1 or n. This is exactly the Mode-B descent G_n -> G_{n-2}.
+
+==========================================================================
+[c-PROOF] MECHANISM for the grid-sym c3-parity dichotomy
+  phi(i)=n+1-i is an ANTI-automorphism of any phi-self-converse (grid-sym) T.
+  phi maps each directed 3-cycle to a directed 3-cycle. A directed 3-cycle on
+  vertex-set S is self-paired iff S is phi-INVARIANT; otherwise cycles pair off.
+  => c3 parity = parity of #(directed 3-cycles on phi-invariant 3-sets).
+  phi has a fixed vertex (n+1)/2 only at ODD n; a 3-set (odd size) is
+  phi-invariant iff it contains that fixed vertex + one phi-pair.
+    n parity(n)  d=fixcells  #phi-inv 3-sets  c3 forced even?
+    3       ODD           1                1            False
+    4      EVEN           1                0             True
+    5       ODD           2                2            False
+    6      EVEN           2                0             True
+    7       ODD           3                3            False
+    8      EVEN           3                0             True
+    9       ODD           4                4            False
+   10      EVEN           4                0             True
+   11       ODD           5                5            False
+   12      EVEN           5                0             True
+   13       ODD           6                6            False
+  EVEN n: 0 phi-invariant 3-sets (no fixed vertex) => grid-sym c3 ALWAYS EVEN.
+  ODD  n: exactly d=(n-1)/2 phi-invariant 3-sets {(n+1)/2, x, n+1-x} => c3 can be ODD.
+  This is the geometric source of the even-odd split, localized at the fixed
+  diagonal: the EXTRA fixed cell gained per Mode-B step (n->n+2) at odd n is what
+  furnishes a phi-invariant 3-set and unlocks odd c3-parity.
+
+DONE.

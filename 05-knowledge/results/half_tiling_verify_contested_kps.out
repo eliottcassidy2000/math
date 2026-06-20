@@ -1,0 +1,22 @@
+======================================================================
+(1) c3-parity of phi-self-converse (grid-sym) tilings
+  n=3: grid-sym c3 parities present = [0, 1]  -> BOTH (odd n)
+  n=4: grid-sym c3 parities present = [0]  -> EVEN only
+  n=5: grid-sym c3 parities present = [0, 1]  -> BOTH (odd n)
+  n=6: grid-sym c3 parities present = [0]  -> EVEN only
+  n=7: grid-sym c3 parities present = [0, 1]  -> BOTH (odd n)
+  predicted: EVEN-only for even n, BOTH for odd n.
+======================================================================
+(2) Fix_anti(phi) in full labeled space {0,1}^C(n,2)
+  n=3: #phi-orbits on pairs=2 (self-paired=1); half+floor(n/2)=2; BRUTE Fix_anti=4=2^2  OK
+  n=4: #phi-orbits on pairs=4 (self-paired=2); half+floor(n/2)=4; BRUTE Fix_anti=16=2^4  OK
+  n=5: #phi-orbits on pairs=6 (self-paired=2); half+floor(n/2)=6; BRUTE Fix_anti=64=2^6  OK
+  n=6: #phi-orbits on pairs=9 (self-paired=3); half+floor(n/2)=9; BRUTE Fix_anti=512=2^9  OK
+  n=7: #phi-orbits on pairs=12 (self-paired=3); half+floor(n/2)=12  (predicted Fix_anti=2^12)
+======================================================================
+(3) SC_n (self-converse iso classes) vs A000568(n-1)
+  n=3: total iso classes=2 (A000568=2, OK); SC_n=2; A000568(n-1)=1; DIFFERS -> refutes SC(n)=A000568(n-1)
+  n=4: total iso classes=4 (A000568=4, OK); SC_n=2; A000568(n-1)=2; EQUAL
+  n=5: total iso classes=12 (A000568=12, OK); SC_n=8; A000568(n-1)=4; DIFFERS -> refutes SC(n)=A000568(n-1)
+  n=6: total iso classes=56 (A000568=56, OK); SC_n=12; A000568(n-1)=12; EQUAL
+DONE.

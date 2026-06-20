@@ -1,0 +1,47 @@
+==========================================================================
+ADVERSARIAL RE-CHECK  --  HYP-2686 orbifold/Burnside/SC
+==========================================================================
+
+[1] rho-ORBIT COUNT OF TILINGS via ACTUAL converse+relabel operation
+  n    m      2^m  half   2^half  #orbits  #fixed  #2-orb  (2^m+2^half)/2   OK
+  3    1        2     1        2        2       2       0               2 OK
+  4    3        8     2        4        6       4       2               6 OK
+  5    6       64     4       16       40      16      24              40 OK
+  6   10     1024     6       64      544      64     480             544 OK
+  7   15    32768     9      512    16640     512   16128           16640 OK
+  orbit-count sequence n=3..7 = [2, 6, 40, 544, 16640]  (prior claim: 2,6,40,544,16640)
+
+[2] Fix_anti(phi) FULL labeled space {0,1}^C(n,2) -- BRUTE FORCE
+  n  C(n,2)    brute  closed=2^(half+floor(n/2))  exp_bf  #pairorbits   OK
+  3       3        4                           4       2            2 OK
+  4       6       16                          16       4            4 OK
+  5      10       64                          64       6            6 OK
+  6      15      512                         512       9            9 OK
+  7      21     4096                        4096      12           12 OK
+  NOTE exponent = half(n)+floor(n/2). half(n)=floor((n-1)^2/4),
+       floor(n/2) = # phi-self-paired vertex-pairs {u, n+1-u}.
+       The prior 'reconciliation gap' claim says this is floor(n/2), NOT n-1.
+    n=3: half=1, floor(n/2)=1, sum=2, n-1=2  (gap=floor(n/2)? YES)
+    n=4: half=2, floor(n/2)=2, sum=4, n-1=3  (gap=floor(n/2)? YES)
+    n=5: half=4, floor(n/2)=2, sum=6, n-1=4  (gap=floor(n/2)? YES)
+    n=6: half=6, floor(n/2)=3, sum=9, n-1=5  (gap=floor(n/2)? YES)
+    n=7: half=9, floor(n/2)=3, sum=12, n-1=6  (gap=floor(n/2)? YES)
+    n=8: half=12, floor(n/2)=4, sum=16, n-1=7  (gap=floor(n/2)? YES)
+
+[3] OVERREACH GUARD: is 2^half EVER claimed == SC_n? (must be NO except n=3)
+  n   2^half   SC_n  2^half==SC_n?  A000568(n-1)  SC_n==A000568(n-1)?
+  3        2      2           True             1                False
+  4        4      2          False             2                 True
+  5       16      8          False             4                False
+  6       64     12          False            12                 True
+  7      512     88          False            56                False
+  8     4096    176          False           456                False
+  EXPECTED: 2^half==SC_n only at n=3 (2==2). SC_n==A000568(n-1) only n=4,6.
+
+[VERDICT INPUTS]
+  (1) rho-orbit = (2^m+2^half)/2  all OK n=3..7 : True
+  (2) Fix_anti(phi)_full = 2^(half+floor(n/2)) all OK n=3..7 : True
+  (3) 2^half==SC_n ONLY at n=3 : True
+      SC_n==A000568(n-1) per n : {3: False, 4: True, 5: False, 6: True, 7: False, 8: False}  -> holds only n=4,6 : True
+
+DONE.

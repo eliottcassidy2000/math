@@ -1,0 +1,70 @@
+========================================================================
+HALF-TILING MAX-H SEARCH  --  HYP-2688  --  kind-pasteur-S-wf
+========================================================================
+
+Global max H (A038375 / THM-329): a(n) by #vertices n:
+   {1: 1, 2: 1, 3: 3, 4: 5, 5: 15, 6: 45, 7: 189, 8: 661, 9: 3357, 10: 15745, 11: 95095}
+
+========================================================================
+[c] FULL-CUBE exhaustion (n=5,6,7): ALL maximizing tilings,
+    grid-sym vs non-grid-sym among the maximizer SET.
+========================================================================
+  n   m      2^m  globalH   #max  #max_GS  #max_nonGS  GS attains?
+  5   6       64       15      8        4           4         True (canon OK)
+  6  10     1024       45     30       12          18         True (canon OK)
+  7  15    32768      189      9        3           6         True (canon OK)
+    n=5: maximizer set CONTAINS grid-sym (mixed) -- speedup OK
+    n=6: maximizer set CONTAINS grid-sym (mixed) -- speedup OK
+    n=7: maximizer set CONTAINS grid-sym (mixed) -- speedup OK
+
+========================================================================
+[a] n=8 : exhaust 2^half(8)=2^12=4096 grid-symmetric tilings.
+========================================================================
+    grid-sym tilings enumerated = 4096  (= 2^12)
+    MAX grid-sym H(8)           = 661
+    global max H(8)             = 661
+    grid-sym ATTAINS global max = True
+    top grid-sym H values (H:count) = {661: 70, 657: 157, 653: 72, 641: 74, 637: 39, 629: 35, 621: 52, 577: 33}
+
+========================================================================
+[b] n=9 : exhaust 2^half(9)=2^16=65536 grid-symmetric tilings.
+========================================================================
+    grid-sym tilings enumerated = 65536  (= 2^16)
+    MAX grid-sym H(9)           = 3357
+    global max H(9) (canon)     = 3357
+    grid-sym ATTAINS global max = True
+    top grid-sym H values (H:count) = {3357: 37, 3333: 35, 3303: 13, 3299: 37, 3297: 37, 3281: 37, 3279: 35, 3275: 39}
+
+========================================================================
+[d] PROOF-ATTEMPT structural facts
+========================================================================
+  Fact 1 (H=H^op): the maximizer SET is closed under rho (converse-relabel),
+    because H(T)=H(T^op) always (reverse a Ham path -> Ham path of T^op),
+    and rho realizes the converse-relabel as a coordinate involution (THM-280).
+    => the set of maximizing tilings is a UNION of rho-orbits.
+  Fact 2 (needed): HYP-2688 needs >=1 rho-FIXED maximizer (a grid-sym tiling).
+    A rho-orbit of size 2 (a non-grid-sym tiling + its mirror) does NOT by
+    itself give a fixed point. So Fact 1 alone is INSUFFICIENT.
+    Verdict per n (does some grid-sym tiling attain the global max?):
+      n=5: grid-sym attains global max = True
+      n=6: grid-sym attains global max = True
+      n=7: grid-sym attains global max = True
+      n=8: grid-sym attains global max = True
+      n=9: grid-sym attains global max = True
+
+========================================================================
+[e] SPEEDUP TABLE  2^half(n)  vs  2^m,  m=C(n-1,2)
+========================================================================
+  n  m=C(n-1,2)  half(n)       2^m (full)    2^half (fund)   speedup=2^(m-half)
+  5           6        4               64               16                    4
+  6          10        6             1024               64                   16
+  7          15        9            32768              512                   64
+  8          21       12          2097152             4096                  512
+  9          28       16        268435456            65536                 4096
+ 10          36       20      68719476736          1048576                65536
+ 11          45       25   35184372088832         33554432              1048576
+ 12          55       30 36028797018963968       1073741824             33554432
+ 13          66       36 73786976294838206464      68719476736           1073741824
+ 14          78       42 302231454903657293676544    4398046511104          68719476736
+
+DONE.

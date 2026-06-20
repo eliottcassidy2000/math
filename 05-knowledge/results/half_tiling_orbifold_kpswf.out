@@ -1,0 +1,118 @@
+==========================================================================
+THREAD 2  HYP-2686  --  Orbifold Q_m/rho and Burnside/SC connection
+==========================================================================
+
+[a] MERGED TILING COUNT  = #rho-orbits = (2^m + 2^half)/2
+  n    m  half        2^m   2^half   (2^m+2^half)/2  V_merged
+  3    1     1          2        2                2         2
+  4    3     2          8        4                6         3
+  5    6     4         64       16               40        10
+  6   10     6       1024       64              544        34
+  7   15     9      32768      512            16640       272
+  8   21    12    2097152     4096          1050624      3528
+  merged-tiling-count(n=3..8) = [2, 6, 40, 544, 16640, 1050624]
+  V_merged (metagraph)        = [2, 3, 10, 34, 272, 3528]
+  INTERPRETATION: the merged-tiling count is the fixed-HP-FRAME analogue
+  of V_merged. Both are Burnside orbit counts under the converse/complement
+  Z_2, but on DIFFERENT spaces: tilings (labeled, base-path fixed) vs
+  iso classes (S_n-quotient). They are NOT equal: tiling count >> V_merged,
+  because the tiling cube has NOT been quotiented by S_n relabelings.
+
+[b] Fix_anti(phi) in FULL labeled tournament space {0,1}^C(n,2)
+    phi(i)=n+1-i. Count T with T(phi u,phi v)=T(v,u).
+  n  C(n,2) #selfpair #freeorb  exp      2^exp  exhaustive  half   2^half
+  3       3         1        1    2          4           4     1        2  OK
+  4       6         2        2    4         16          16     2        4  OK
+  5      10         2        4    6         64          64     4       16  OK
+  6      15         3        6    9        512         512     6       64  OK
+  7      21         3        9   12       4096        4096     9      512  OK
+  8      28         4       12   16      65536      (skip)    12     4096  closed-form
+
+  EXPONENT formula for Fix_anti(phi)_full:
+    exponent = (#phi-orbits on the C(n,2) unordered vertex-pairs)
+    Derivation: pairs split into (i) self-paired pairs {u, n+1-u}
+    [phi swaps the two endpoints -> constraint is vacuous, 1 free bit]
+    and (ii) free 2-orbits {p, phi(p)} [T on one determines the other,
+    1 free bit]. So EVERY phi-orbit on pairs = exactly 1 free bit.
+
+    n  C(n,2) exp=Fix_anti self=floor(n/2)  half(n)  exp-half  half+floor(n/2)
+    3       3            2               1        1         1                2
+    4       6            4               2        2         2                4
+    5      10            6               2        4         2                6
+    6      15            9               3        6         3                9
+    7      21           12               3        9         3               12
+    8      28           16               4       12         4               16
+    9      36           20               4       16         4               20
+   10      45           25               5       20         5               25
+   11      55           30               5       25         5               30
+   12      66           36               6       30         6               36
+
+  RECONCILIATION (fixed-HP frame vs full frame), CORRECTED:
+    full-frame exponent = half(n) + floor(n/2).
+    Identity  exp == half(n)+floor(n/2)  for n=3..12:  True
+    => Fix_anti(phi)_full = 2^half(n) * 2^floor(n/2).
+    The extra +floor(n/2) (NOT n-1) is the number of phi-SELF-PAIRED
+    vertex-pairs {u, n+1-u}: each carries 1 free bit because the anti-
+    automorphism constraint on a self-paired pair is VACUOUS (phi swaps
+    its two endpoints, so T(v,u)=T(v,u) is automatic). The fixed-HP frame
+    PINS exactly these floor(n/2)... no: it pins the n-1 base-path arcs and
+    leaves m=C(n-1,2) tile bits, of which 2^half are grid-sym. The clean
+    statement is the COUNT identity exp = half + floor(n/2); the half-tiling
+    (grid-sym) part is 2^half, the remaining 2^floor(n/2) lives on the
+    self-paired (anti-diagonal) pairs that the half-tiling frame collapses.
+
+[c] THE 2:1 FOLD (orbifold Q_m/rho): branch locus = grid-sym tilings
+  n      2^m  #orbits #fixed(branch) #2-orbits(free)  (2^m+2^half)/2   OK
+  3        2        2              2               0               2 OK
+  4        8        6              4               2               6 OK
+  5       64       40             16              24              40 OK
+  6     1024      544             64             480             544 OK
+  7    32768    16640            512           16128           16640 OK
+    free tilings pair up (2-orbits); grid-sym tilings are the branch
+    locus (fixed points of the involution).  Euler-orbifold style:
+    #orbits = #2-orbits + #fixed = (2^m - 2^half)/2 + 2^half = (2^m+2^half)/2.
+
+[d] SC-halving:  2^half  vs  SC_n  vs  V_merged
+  n  half   2^half   SC_n  V_merged  2^half/SC k=(n-1)/2  A000568(k)  2^C(k,2)
+  3     1        2      2         2     1.0000         1           1         1
+  4     2        4      2         3     2.0000      None           -         -
+  5     4       16      8        10     2.0000         2           1         2
+  6     6       64     12        34     5.3333      None           -         -
+  7     9      512     88       272     5.8182         3           2         8
+  8    12     4096    176      3528    23.2727      None           -         -
+
+  open-Q#4 target is |SC(n)| = A000568(n-1) (iso classes of (n-1)-vertex
+  tournaments), per two-models-staircase-recursion.md. TEST that identity:
+    n   SC_n  A000568(n-1)  equal?   2^half  2^half==SC
+    3      2             1   False        2        True
+    4      2             2    True        4       False
+    5      8             4   False       16       False
+    6     12            12    True       64       False
+    7     88            56   False      512       False
+    8    176           456   False     4096       False
+  => SC_n == A000568(n-1) for ALL n=3..8?  False
+     (holds ONLY at n=4 and n=6; FAILS at n=3,5,7,8 -> the canon
+      'SC(n)=A000568(n-1)' claim is a small-n coincidence, REFUTED as a
+      general identity. SC_n = A002785(n+1), self-converse iso classes.)
+
+  Test exact bijection candidates for ODD n (where (n-1)/2 is integer):
+    n=3: 2^half=2, SC_n=2, labeled-tour(1)=2^C(1,2)=1, iso-tour(1)=A000568(1)=1
+          2^half == SC_n? True;  2^half == labeled-tour(1)? False
+    n=5: 2^half=16, SC_n=8, labeled-tour(2)=2^C(2,2)=2, iso-tour(2)=A000568(2)=1
+          2^half == SC_n? False;  2^half == labeled-tour(2)? False
+    n=7: 2^half=512, SC_n=88, labeled-tour(3)=2^C(3,2)=8, iso-tour(3)=A000568(3)=2
+          2^half == SC_n? False;  2^half == labeled-tour(3)? False
+
+  CONCLUSION (d): 2^half(n) counts GRID-SYM TILINGS (labeled, base-path-
+  fixed phi-self-converse tournaments), NOT SC iso classes. 2^half grows
+  as 2^floor((n-1)^2/4) (super-exponential in n), while SC_n grows like
+  A000568-style.  2^half != SC_n for all n>=4 (equal only at n=3: 2=2).
+  The relationship is the BURNSIDE/fixed-point identity (2^half = #fixed
+  points of rho), NOT a clean |SC(n)| <-> tournaments-on-(n-1)/2 bijection.
+  The half-tiling does NOT by itself realize the SC-halving bijection of
+  open-Q#4: that bijection lives at the ISO-CLASS (S_n-quotient) level,
+  whereas 2^half is a LABELED/frame-fixed count. Half-tiling gives the
+  correct fixed-point COUNT feeding Burnside, but the explicit class-level
+  bijection still requires the S_n quotient (remains the open problem).
+
+DONE.
