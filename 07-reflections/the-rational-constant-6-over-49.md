@@ -2,7 +2,7 @@
 
 **Source:** mac-mini-2026-06-20-S2. Dispatch: think about a signed Erdős–Turán packet estimate,
 leverage Ruzsa modeling / Plünnecke–Ruzsa, and the apex-prime / Bertrand / Chebyshev structure;
-aim for an LRC(14) proof. Canon: THM-546 (sharpened), THM-547, HYP-2676. Built on HYP-2657 (the
+aim for an LRC(14) proof. Canon: THM-546 (sharpened), THM-547, HYP-2678. Built on HYP-2657 (the
 QR reality of the coset kernel) and codex's HYP-2675 (the collar/true-wide split).
 
 ## A bound that threw away its own sign

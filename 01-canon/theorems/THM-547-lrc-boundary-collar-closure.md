@@ -61,7 +61,7 @@ Define the **collar cutoff** `w*(k) := (6/49)·V_max(k−1) / (cap_k − Qb(k−
 - **What remains:** the **true-wide** branch (second-largest `> 14`, ≥ 2 far elements). There `E'` is itself
   wide, `V(E')` unbounded, and the closed-form bound is loose; that branch needs the Ruzsa/Plünnecke +
   Freiman-dimension program (small doubling ⇒ low-dim GAP ⇒ scale-invariance/dimension penalty; large
-  doubling ⇒ dissociated ⇒ `p0 ≈ M7`). See HYP-2676.
+  doubling ⇒ dissociated ⇒ `p0 ≈ M7`). See HYP-2678.
 
 ## Net
 
