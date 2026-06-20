@@ -1,0 +1,5 @@
+k=1 layer (delete 2^a + one hole + one tail), comb cutoff + exact residue, ALL a:
+  a=0 (del 1): comb cutoff R=44, residue cores=154, below_thr2=0  => PROVED
+  a=1 (del 2): comb cutoff R=83, residue cores=410, below_thr2=0  => PROVED
+  a=2 (del 4): comb cutoff R=147, residue cores=652, below_thr2=0  => PROVED
+  a=3 (del 8): comb cutoff R=69, residue cores=357, below_thr2=0  => PROVED

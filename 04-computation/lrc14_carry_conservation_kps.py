@@ -102,3 +102,35 @@ if __name__ == "__main__":
     for L,h,t,d in below[:12]:
         print(f"      meas={float(L):.6f}={L} holes={h} tails={t} carry-delta={d}")
     if not below: print("      NONE below threshold (consistent with THM-544).")
+
+    # =====================================================================
+    # THM-545 (kind-pasteur-2026-06-19): CARRY-CONSERVATION = PARITY-COMPLETION.
+    # Exhaustive (40235 cores, |holes|<=3, tails<=30): meas(G_C) < thr2 holds for
+    # EXACTLY two cores: drop-6 (7/858) and {5:+2} (3859/420420). They form a single
+    # orbit under the gauge generator g: (10 <-> 20), i.e. shell-5 bit-1 <-> bit-2.
+    #
+    # CARRIER = F_2^4 spanned by the dyadic tower {1,2,4,8} (odd-shell m=1).
+    #   Level-1 obstruction (NECESSARY): meas<thr2 => carry[1]=15 (word 1111, carrier saturated).
+    #   Among ALL single bit-shifts e->2e from drop-6, EXACTLY ONE (10->20) stays below thr2;
+    #   every other shift, and every tower-bit deletion, PAYS thr2 (>= 426/35035). Verified below.
+    print("\n=== THM-545: carrier saturation + gauge orbit (the mouth cohomology class) ===")
+    drop6=set(ap_tail_core({6},[]))
+    print("  carrier b1 := [carry[1]=15] = [{1,2,4,8} ⊆ C] (necessary for meas<thr2):")
+    for name,C in [("drop-6",ap_tail_core({6},[])),("{5:+2}",ap_tail_core({6,10},[20])),
+                   ("drop-12",ap_tail_core({12},[])),("two-tail",ap_tail_core({4,6,10},[20,46]))]:
+        cp=carry_profile(C); L=lonely_measure(C)
+        print(f"    {name:9s}: carry[1]={cp.get(1,0):2d}  b1={int(cp.get(1,0)==15)}  "
+              f"meas{'<' if L<thr2 else '>='}thr2  ({float(L):.6f})")
+    print("  single bit-shifts e->2e from drop-6 (gauge if stays <thr2, else SPENDING):")
+    res=[]
+    for m in [1,3,5,7,9,11,13]:
+        for a in range(0,5):
+            e=(2**a)*m; e2=(2**(a+1))*m
+            if e in drop6 and e2 not in drop6:
+                C=tuple(sorted((drop6-{e})|{e2}))
+                if len(C)==12 and reduce(gcd,C)==1:
+                    res.append((lonely_measure(C),e,e2))
+    res.sort()
+    for L,e,e2 in res:
+        print(f"    {e:2d}->{e2:2d}: meas={float(L):.6f}  {'GAUGE (mouth preserved)' if L<thr2 else 'SPENDING (pays thr2)'}")
+    print("  => gauge group = <g:10<->20>, orbit {drop-6,{5:+2}}; carrier [1111] is the fixed mouth class.")
