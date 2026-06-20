@@ -1,5 +1,18 @@
 # Open Questions
 
+**OPEN-Q-108 — INCLUSION-EXCLUSION-OVER-N COMPREHENSIVE VIEW + REDIRECT (mac-mini-2026-06-20-S5, HYP-2692).**
+The LRC's inclusion-exclusions are one arithmetic skeleton indexed by `6=2·3`: N=7 sectors (=THM-534
+moment-LP, optimal closes k=8-10, plain Bonferroni fails); N=2 quadratic χ (QR/NQR, Gauss sum √−7,
+reality, Chebyshev bias ~70% non-universal); N=3 cube root C_3 (Eisenstein); keystone — C_3 orbit-sum
+of 7th roots = Gaussian period `(−1+χ√−7)/2`, the correction's C_3 trace ∈ Q(√−7); N=runners danger
+sieve DEAD (L=0 at tight {1..13}). **VERDICT:** the multiplicative arithmetic WASHES OUT on `p0`
+(characters vanish, bias is archimedean); incl-excl over arithmetic N does not bound `p0`. **REDIRECT
+(verified):** the lever is the summed **leading-order** residual `R_{s_0}`, `s_0=max(1,7−|B|)` — for the
+dangerous true-wide leader (|B|=7) that is `R_1` (one-far, barely-far = THM-546/547 collar machinery,
+the best-understood piece, not the d≥2 lattice); for sparse cores it is `R_3+`. `R_tot=p0−P_r` stays
+within margin in all tested rows. The Q(√−7) C_3-orbits INDEX the resonance classes the height-weighting
+sums over; smallness stays signed archimedean. → THM-534, THM-548, THM-551, HYP-2657, HYP-2684, HYP-2692.
+
 **OPEN-Q-109 — The base-HP / grid-symmetric maximizer lemma (the one gap in HYP-2688).**
 HYP-2688 (VERIFIED exhaustive n=3..9): the global H-maximizer is attained inside the
 `2^{half(n)}` grid-symmetric (phi-self-converse) subcube of the tiling cube, giving a
