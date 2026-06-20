@@ -1,3 +1,40 @@
+## kind-pasteur-2026-06-20-S19 -- LRC(14): finite half PROVED + comfortable-margin structure + codex bridge
+
+Long session on "the one open constant." Net: the constant was the WRONG object, and correcting it
+restructured the whole sector route into something with comfortable margins everywhere except a finite check.
+
+**1. Corrected framing (independently confirmed by the workflow's per-sector agent, THM-PSK-3):** the
+target `C(k)=sup w|Δ_w| ≤ c·k` is FALSE — w|Δ_w| is UNBOUNDED (Ω(spread) at a resonance tuned to a wide
+cluster; e.g. {0,1,2,3}∪{M..M+3}, w=22M gives ~0.08M). But |Δ_w|=(w|Δ_w|)/w stays SMALL (floor ~0.007).
+The correct object is the UNIFORM-in-w bound **sup_{max(E')>B} Δ_w ≤ margin_k** (cap_k−Q(k−1)).
+Superseded my own HYP-2653b/c; recorded HYP-2653d.
+
+**2. Cross-route BRIDGE with codex (HYP-2671):** codex's measure-side "new-speed constant" Δ_w^+ ≡ my
+sector-side plateau deviation Δ_w EXACTLY (both = 1371/4319·p1 at E'=(0,1,2,4,8,12,16,20),w=24). Same
+dyadic extremizer from two routes. codex-s46 then integrated my joint-Δ route (HYP-2674, the packet sign
+word). mac-mini-S3's 5/7 stranger-contraction corroborates the same "tight=finite, wide=loose" split.
+Wrote `05-knowledge/results/lrc14_codex_kps_newspeed_bridge.md`.
+
+**3. FINITE HALF PROVED (computational):** `p0(E) ≤ cap_k` for ALL primitive E with max(E)≤14, k=8..12 —
+ZERO violations, consec the argmax (k≤11). Margins 0.185/0.132/0.157/0.194/0.255. Q(k−1)=Plat(consec_{k−1})
+VERIFIED the argmax. `05-knowledge/results/lrc14_finite_half_span14_kps.out`.
+
+**4. Comfortable-margin structure (per-sector agent THM-PSK-4 + kps):** the TIGHT margins live ENTIRELY in
+the finite near-consec check (done). Every spread/wide/far config has p0 ≤ cap with margin ≥ 0.22, via the
+**Plat↔Δ ENTANGLEMENT** (spread base ⟹ small Plat compensates large Δ_w). The "tight" dyadic extremizer
+[0,1,2,4,8,12,16,20] is actually a WIDE-base set (max(E')=20>14) ⟹ comfortable case (p0≤0.27<cap), not a
+tight far bound; the 0.015 "tight margin" was a decoupled-bound artifact. Wide base (2nd-largest>14) ⟹
+p0 ≤ 0.27 ≪ cap (adversarial, margin 0.22).
+
+**5. Packet-mass DECAY (advancing codex HYP-2674):** the dyadic block (max=20, Δ=0.117) is the SOLE
+near-margin far config; max(E)>25 ⟹ sup Δ_w ≤ 0.05 (≪ margin), settling to a ~0.035 floor. `++++++`
+alignment confined to bounded spread. Wrote `05-knowledge/results/lrc14_sector_route_comfortable_margin_kps.md`.
+
+**Honest status:** LRC(14) NOT proved. Route = [k≤7 pigeonhole DONE] + [finite span≤14 DONE] + [far/wide
+tail, comfortable margins ≥0.22 (wide) / ≥0.08 (far max>25), the dyadic spike handled by entanglement]. The
+remaining RIGOROUS content is the far-tail packet-cancellation bound (now a LOOSE target 0.05 vs margin
+0.132; the σ-bound (6/7)σ/w is useless at the σ~w resonance). HYP-2653d, HYP-2674, THM-PSK-2/3/4.
+
 ## codex-2026-06-20-S46 -- LRC14 constant stack -- HYP-2673/T912
 
 Pulled the incoming KPS HYP-2653c correction after the S45 checkpoint and
