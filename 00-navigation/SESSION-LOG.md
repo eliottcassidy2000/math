@@ -1,3 +1,30 @@
+## codex-2026-06-20-S49 -- LRC14 packet-sign tournament atlas -- HYP-2677/T917
+
+User asked to pursue Tournament Analysis on the B14 near-speed leaders, the KPS
+third-pocket contrast, and the six packet signs as either K4 edges or six
+tournament vertices.  Claimed HYP-2677/T917, added
+`04-computation/lrc14_packet_tournament_atlas_codex_s49.py`, and stored
+`05-knowledge/results/lrc14_packet_tournament_atlas_codex_s49.out`.
+
+Pulled/rebased during the run and integrated incoming mac-mini S2: THM-546 now
+has the rational signed Abel sharpening `|Delta_w| <= (6/49)V(E')/w`.  The
+atlas therefore reports exact Abel pressure for each row and treats Tournament
+Analysis as a tight ungapped/same-sign classifier, not as the analytic bound.
+
+Findings: the top twelve B14 near-speed leaders all have sign `++++++`, the same
+transitive K4 type `scores=(3,2,1,0), c3=0, HP=1`, and the same cyclic-pair
+sector topology `scores=(3,3,3,2,2,2), c3=8, scc=(6,), HP=41`.  K4 signs locate
+but do not separate the same-sign pocket.  KPS third pocket has `++-+--`,
+`Delta=1171/452760`, Abel pressure `1171/133056`, a negative opposite-pair
+balance `3+4=-23/6468`, and cyclic-pair topology
+`scores=(4,3,3,3,2,0), c3=4, scc=(5,1), HP=15`.  HYP-2675 boundary `+++-+-`
+and true-wide `++++++` split before magnitude.
+
+Next proof target: classify finite `++++++` Ruzsa/Freiman packet models with
+opposite-pair balances, and discharge complements by cyclic-pair arc flips,
+small pair mass, or THM-546 S2 signed Abel cancellation, then reattach HYP-2648
+state-word and HYP-2639 relation-shell addresses.  LRC(14) not proved.
+
 ## mac-mini-2026-06-20-S1 — LRC(14): "the one open constant" is RIGORIZED — |Δ_w| ≤ κ·V(E')/(π²w), κ=1.857 (THM-546); the divergent multi-D lattice envelope CONVERGES once you peel a single far element (1-D BV discrepancy)
 Dispatch: understand the one open constant and complete the proof; integrate concurrent agent work. Absorbed the whole endgame stack (kps HYP-2607→2637 Freiman-dimension reframe, HYP-2642 far-element recursion, S19 finite-half-proved; codex HYP-2640→2673 constant stack; HYP-2643 divergence).
 **THE STATE I FOUND:** the proof of "consec maximizes p0=meas(S7)" splits into (i) the FINITE check (kps-S19 PROVED: p0(E)≤cap_k all primitive E max≤14, k=8..12, 0 violations, consec argmax) + (ii) the far-element recursion HYP-2642 (peel w=max(E): p0(E)→Φ(E')=p0(E')+(1/7)p1(E')≤Q(k−1)<cap_k, margin 0.13) + (iii) THE ONE OPEN CONSTANT = a uniform bound on the deviation Δ_w=p0(E'∪{w})−Φ(E'). The team's wall (HYP-2643): the ABSOLUTE multi-D lattice envelope Σ|K(n)| DIVERGES (even for wide sets), so the constant looked unreachable.

@@ -1,3 +1,37 @@
+## codex update: codex-s49 packet-sign tournament atlas
+
+This update records **HYP-2677/T917**, an exact Tournament Analysis atlas for
+the six HYP-2676 packet signs.
+
+- **What was tested.**
+  - Six packet signs as K4 edge orientations.
+  - Six missed sectors as tournament vertices under exact packet-pair gauges.
+  - Opposite K4 edge-pair balances retaining weighted positive/negative mass.
+  - Exact run count `V` and Abel pressure under incoming THM-546 S2:
+    `|Delta_w| <= (6/49)V(E')/w`.
+
+- **Main signal.**
+  - B14 near-speed top twelve all have `++++++`.
+  - They share the same transitive K4 type and the same cyclic-pair sector type:
+    `scores=(3,3,3,2,2,2), c3=8, scc=(6,), HP=41`.
+  - Therefore K4 signs locate the finite same-sign pocket but do not separate it.
+
+- **KPS contrast.**
+  - KPS third pocket has `++-+--`, `Delta=1171/452760`, Abel pressure
+    `1171/133056`.
+  - It has a negative opposite-pair balance `3+4=-23/6468`.
+  - Its cyclic-pair sector topology is
+    `scores=(4,3,3,3,2,0), c3=4, scc=(5,1), HP=15`, contrasting the B14
+    baseline.
+
+- **Requested next push.**
+  - Classify finite `++++++` Ruzsa/Freiman packet models with opposite-pair
+    balances.
+  - In the complement, prove a cyclic-pair arc flip, small exact pair mass, or
+    THM-546 S2 signed Abel cancellation.
+  - Reattach HYP-2648 state-word and HYP-2639 relation-shell addresses before
+    scalarizing.
+
 ## codex update: codex-s48 LRC14 signed packet ET / Ruzsa model
 
 This update records **HYP-2676/T916**, extending HYP-2674's packet-alignment

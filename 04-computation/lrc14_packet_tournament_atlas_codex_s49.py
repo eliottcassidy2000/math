@@ -83,6 +83,15 @@ class AtlasRow:
     def signed_efficiency(self) -> F:
         return abs(self.wdelta) / self.run_abs if self.run_abs else F(0)
 
+    @property
+    def abel_bound(self) -> F:
+        """Incoming THM-546 S2 signed Abel bound: |Delta_w| <= (6/49) V(E')/w."""
+        return F(6 * self.runs, 49 * self.w)
+
+    @property
+    def abel_pressure(self) -> F:
+        return abs(self.delta) / self.abel_bound if self.abel_bound else F(0)
+
 
 def q(x: F | int | object) -> str:
     return str(x)
@@ -322,7 +331,8 @@ def print_row_bank(rows: list[AtlasRow]) -> None:
         print(
             f"  {row.label}: E'={row.Ep}, w={row.w}, "
             f"Delta={q(row.delta)}, wDelta={q(row.wdelta)}, sign={row.sign}, "
-            f"eff={q(row.signed_efficiency)}, exc={prof['sumset_excess']}, "
+            f"eff={q(row.signed_efficiency)}, V={row.runs}, "
+            f"AbelPressure={q(row.abel_pressure)}, exc={prof['sumset_excess']}, "
             f"K2={prof['K2']}, sqfree={prof['sqfree']}"
         )
     print()
@@ -461,10 +471,13 @@ def print_hypothesis_triage(rows: list[AtlasRow]) -> None:
     print("     prompt: they keep exact packet mass and expose cancellation before absolute values.")
     print("  3. The six-sector vertex gauges turn a negative packet-pair total into an arc flip in a")
     print("     fixed mod-7 cyclic tournament, so KPS-style cancellation becomes visible as topology.")
-    print("  4. The next sharp theorem should classify ++++++ rows by finite Ruzsa/Freiman model plus")
+    print("  4. Incoming THM-546 S2 gives the rational signed Abel bound")
+    print("     |Delta_w| <= (6/49) V(E')/w.  The tournament atlas is therefore a classifier")
+    print("     for tight ungapped/same-sign packets, not a substitute for the analytic bound.")
+    print("  5. The next sharp theorem should classify ++++++ rows by finite Ruzsa/Freiman model plus")
     print("     opposite-pair packet balances; the complement should prove that a cyclic-pair arc flip")
     print("     or small exact pair mass forces signed Erdos-Turan cancellation.")
-    print("  5. No LRC(14) proof is claimed here.")
+    print("  6. No LRC(14) proof is claimed here.")
 
 
 def main() -> None:
