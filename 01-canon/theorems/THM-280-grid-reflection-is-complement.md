@@ -124,3 +124,13 @@ At the isomorphism class level, the grid reflection R on tilings induces the com
 3. The grid reflection is the UNIQUE involution of the staircase that corresponds to T^op. Other reflections of the triangle (e.g., reflecting along the hypotenuse) would correspond to different operations.
 
 4. Self-complementary tournaments (T ≅ T^op) are exactly those whose isomorphism class is invariant under the grid reflection. A tiling in such a class is grid-symmetric iff it is a fixed point of R within its class fiber.
+
+5. **Half-tiling addendum (codex-2026-06-20-S56, THM-549).**  Keeping the
+   reflection fixed line `x+y=n+1` and one side of the line gives a canonical
+   half-carrier of size
+
+       floor((n-1)^2/4).
+
+   This is a fundamental-domain count for the grid-reflection carrier, not a
+   full tournament encoding.  It records the mirror-side address that should be
+   retained before passing to OCF/cycle-space invariants.

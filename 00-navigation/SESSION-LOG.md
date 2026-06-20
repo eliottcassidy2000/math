@@ -1,3 +1,29 @@
+## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-549/HYP-2685/T924
+
+User supplied the half-tiling framework: fix a Hamiltonian path, fold the
+tiling by the mirror/complement line, keep the fixed-line tiles and one side,
+and distinguish even/odd tournament-size recurrences.  Pulled first; incoming
+KPS S19 correction is relevant as a warning for LRC analogies (`Q(k-1)` is a
+decorrelated limit, not a finite wide bound).  Mined THM-280, THM-442, THM-513,
+HYP-2660, HYP-2681/HYP-2682, and the wide address/BV notes.
+
+Added `04-computation/half_tiling_recursion_codex_s56.py` and stored
+`05-knowledge/results/half_tiling_recursion_codex_s56.out`.  The exact half
+domain is free cells `(x,y)` with `x+y>=n+1`, retaining the reflection fixed
+line.  It verifies
+`h_n=(binom(n-1,2)+floor((n-1)/2))/2=floor((n-1)^2/4)`, giving
+`0,1,2,4,6,9,12,16,20,25,30...` from tournament size `2`.  Even sizes obey
+`h_n=A+B-C=2h_{n-1}-h_{n-2}`; odd sizes obey the user's
+`h_n=A+B-C+D-E-F+G`, with `C,D` equal in cardinality but occupying different
+geometric slots.  Canonized this as THM-549 and claimed HYP-2685/T924 for the
+structural transfer: half-tilings should be an address quotient for mirror
+orbits/fixed-line roots before OCF, even-graph, or LRC packet scalarization.
+Tournament Analysis used proof-lens vertices and ranked
+`odd_half_three_corner > mirror_orbit_fold > even_half_two_corner >
+full_IE_third_difference > root_packet_shell > OCF_cycle_space >
+LRC_address_analogy`, with one Hamiltonian path and no directed 3-cycles.
+No claim that Hamiltonian-path count itself obeys the cell recursion.
+
 ## codex-2026-06-20-S55 -- LRC14 wide-branch address repair -- HYP-2683/T922
 
 User asked to keep pushing toward a lonely runner proof and mine recent and

@@ -77,3 +77,30 @@ The Pfaffian carries the structure between domains:
 **Artifacts:** `04-computation/pfaffian_tiling_recursive_H_s707.py` (+`.out`). Reflection
 `07-reflections/the-pfaffian-translator-and-the-additive-multiplicative-tiling-split-s707.md`. New:
 **HYP-2312**. Builds on THM-174, S531, HYP-2283, THM-441/S706, A038375 (Szele/Alon).
+
+## S56 half-tiling addendum
+
+THM-549 gives the mirror-folded parity refinement of the cell-affine recursion.
+For the half-carrier fixed by THM-280's reflection,
+
+```text
+h_n = floor((n-1)^2/4).
+```
+
+Even tournament sizes obey the two-corner recurrence
+
+```text
+h_n = A+B-C,
+```
+
+while odd tournament sizes obey
+
+```text
+h_n = A+B-C+D-E-F+G.
+```
+
+Thus the full `A+B+C-D-E-F+G` recursion is not the only cell-affine face of the
+staircase: after mirror folding, parity decides the correct carrier geometry.
+The warning from this theorem remains unchanged.  These are cell-count
+recurrences, not recurrences for Hamiltonian-path count `H`; the latter still
+requires the cycle-space/OCF packet data.
