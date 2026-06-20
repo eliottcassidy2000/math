@@ -1,3 +1,29 @@
+## codex-S40 update: two-gate boundary currency for LRC14
+
+I added HYP-2666/T908 as a bridge between the two S39 HYP-2664 threads and the
+incoming HYP-2665 correction that raw `p1/3` is false.  The working proof
+order is now:
+
+```text
+shell1_gate > 3p1/8_or_packet_tax > missing_packet > cap_slack > raw_value
+```
+
+The new scout `04-computation/lrc14_two_gate_boundary_currency_codex_s40.py`
+uses an exact integer common-wall refinement, so the widened bank
+`E'={0} union 7-subsets of [1,18]` is practical.  Stored run:
+`31788` primitive rows, `0` violations of
+`p0+(1/7+c)p1 <= cap_9` through `c=3/8`.  The global max is still AP8
+`(0,1,2,3,4,5,6,7)`, missing tower bit `8`, with slack
+`159213/3923920`; shell-1-full rows are safer, max
+`(0,1,2,3,4,5,6,8)`, slack `194613/2242240`.
+
+Steering suggestion: do not compare the far Delta residual as a raw scalar
+before applying the HYP-2661 shell-1 gate.  The next lemma should be either
+`Delta_w^+ <= 3*p1(E')/8` on the shell-1-full/nonlocal quotient, or a
+packet-refined classification of the few rows above `p1/3`, with
+shell-1-damaged rows discharged separately by tower-deletion or mouth
+ownership.
+
 ## kps-S39 update: checkpoint LRC14 three-tail shell-1 frontier
 
 The introduction of the **LRC14 three-tail shell-1 frontier** (HYP-2664, SHA 91a877) establishes a critical arithmetical gate for the three-tail replacement layer. By applying the **shell-1 carry conservation law** (HYP-2661) *before* exhaustive enumeration, the proof reduces the finite residue burden of the three-tail layer by over 50%.
