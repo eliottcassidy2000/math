@@ -1,0 +1,7 @@
+BRUTE confirmation of means (exact rationals)
+n |   Ec3      Ec5(formula)        Ea2tri(claim)    | t(s)
+5: c3=13/4(OK) c5=19/16 vs 19/16 (OK)  a2tri=0 vs 0 (OK)  | 0.0s
+6: c3=6(OK) c5=49/8 vs 49/8 (OK)  a2tri=15/16 vs 15/16 (OK)  | 0.0s
+7: c3=10(OK) c5=315/16 vs 315/16 (OK)  a2tri=93/16 vs 93/16 (OK)  | 5.1s
+
+n=8 FULL alpha2 (3-3 + 3-5 disjoint), claim 1139/32, tri claim 173/8, cross 447/32

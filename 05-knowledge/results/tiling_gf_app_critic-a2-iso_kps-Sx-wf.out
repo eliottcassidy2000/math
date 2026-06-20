@@ -1,0 +1,16 @@
+E[alpha2] per-subset decomposition:
+ n=3: total=0  parts={(3, 3): '0'}
+ n=4: total=0  parts={(3, 3): '0'}
+ n=5: total=0  parts={(3, 3): '0'}
+ n=6: total=1/64  parts={(3, 3): '1/64'}
+ n=7: total=9/64  parts={(3, 3): '9/64'}
+ n=8: total=3/2  parts={(3, 3): '23/32', (3, 5): '25/32'}
+  claim: n=8 full E[alpha2] = 173/8 (3-3) + 447/32 (3-5) = 1139/32
+  computed n=8: 3-3=23/32 3-5=25/32 total=3/2  ==1139/32? False
+
+iso-class counts (canonical form under S_n):
+ n=3: A000568=2  SC(self-converse)=2  V_merged=(A+SC)/2=2
+ n=4: A000568=4  SC(self-converse)=2  V_merged=(A+SC)/2=3
+ n=5: A000568=12  SC(self-converse)=8  V_merged=(A+SC)/2=10
+ n=6: A000568=56  SC(self-converse)=12  V_merged=(A+SC)/2=34
+  claim: A000568=2,4,12,56 ; SC=2,2,8,12 ; V_merged=2,3,10,34 (n=3..6)

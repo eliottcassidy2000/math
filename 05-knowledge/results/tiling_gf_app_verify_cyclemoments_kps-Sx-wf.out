@@ -1,0 +1,77 @@
+==============================================================================
+PART 1: E[c3], Var[c3] from Z-engine vs claimed closed forms (n=3..10)
+==============================================================================
+ n= 3 tot=2^1   E[c3]=     1/2 poly=     1/2 True   Var=     1/4 poly=     1/4 True
+ n= 4 tot=2^3   E[c3]=     3/2 poly=     3/2 True   Var=     1/2 poly=     1/2 True
+ n= 5 tot=2^6   E[c3]=    13/4 poly=    13/4 True   Var=   17/16 poly=   17/16 True
+ n= 6 tot=2^10  E[c3]=       6 poly=       6 True   Var=    17/8 poly=    17/8 True
+ n= 7 tot=2^15  E[c3]=      10 poly=      10 True   Var=    31/8 poly=    31/8 True
+ n= 8 tot=2^21  E[c3]=    31/2 poly=    31/2 True   Var=    13/2 poly=    13/2 True
+ n= 9 tot=2^28  E[c3]=    91/4 poly=    91/4 True   Var=  163/16 poly=  163/16 True
+ n=10 tot=2^36  E[c3]=      32 poly=      32 True   Var=   121/8 poly=   121/8 True
+  --> c3 closed forms match Z-engine for all n<=10: True
+
+==============================================================================
+PART 2: BRUTE tiling enumeration of c3,c5,c7,H (n<=7) vs Z-engine & polys
+==============================================================================
+ n=3: tot=2
+   c3: brute E=1/2 V=1/4 | Z E=1/2 V=1/4 | poly E=1/2 V=1/4  match=True
+   E[H](Redei ham paths): brute=2 | claimed=2  match=True
+ n=4: tot=8
+   c3: brute E=3/2 V=1/2 | Z E=3/2 V=1/2 | poly E=3/2 V=1/2  match=True
+   E[H](Redei ham paths): brute=4 | claimed=4  match=True
+ n=5: tot=64
+   c3: brute E=13/4 V=17/16 | Z E=13/4 V=17/16 | poly E=13/4 V=17/16  match=True
+   c5: brute E=19/16 | poly E=19/16  match=True  (brute Var=191/256)
+   E[H](Redei ham paths): brute=79/8 | claimed=79/8  match=True
+   n=5 identity 1+2E[c3]+2E[c5] = 79/8  vs E[H]=79/8  match=True
+ n=6: tot=1024
+   c3: brute E=6 V=17/8 | Z E=6 V=17/8 | poly E=6 V=17/8  match=True
+   c5: brute E=49/8 | poly E=49/8  match=True  (brute Var=249/32)
+   E[H](Redei ham paths): brute=29 | claimed=29  match=True
+ n=7: tot=32768
+   c3: brute E=10 V=31/8 | Z E=10 V=31/8 | poly E=10 V=31/8  match=True
+   c5: brute E=315/16 | poly E=315/16  match=True  (brute Var=12017/256)
+   c7: brute E=499/64 | poly E=499/64  match=True
+   E[H](Redei ham paths): brute=3175/32 | claimed=3175/32  match=True
+  --> brute matches all: True
+
+==============================================================================
+PART 3: independent PER-SUBSET linearity E[c_k] vs polys (no brute, no Z)
+==============================================================================
+ n=3 k=3: per-subset E[c3]=       1/2 poly=       1/2 match=True
+ n=4 k=3: per-subset E[c3]=       3/2 poly=       3/2 match=True
+ n=5 k=3: per-subset E[c3]=      13/4 poly=      13/4 match=True
+ n=5 k=5: per-subset E[c5]=     19/16 poly=     19/16 match=True
+ n=6 k=3: per-subset E[c3]=         6 poly=         6 match=True
+ n=6 k=5: per-subset E[c5]=      49/8 poly=      49/8 match=True
+ n=7 k=3: per-subset E[c3]=        10 poly=        10 match=True
+ n=7 k=5: per-subset E[c5]=    315/16 poly=    315/16 match=True
+ n=7 k=7: per-subset E[c7]=    499/64 poly=    499/64 match=True
+ n=8 k=3: per-subset E[c3]=      31/2 poly=      31/2 match=True
+ n=8 k=5: per-subset E[c5]=     199/4 poly=     199/4 match=True
+ n=8 k=7: per-subset E[c7]=   1837/32 poly=   1837/32 match=True
+  --> per-subset matches polys: True
+
+==============================================================================
+PART 4: leading-term check E[c_k] ~ (k-1)!/2^k * C(n,k)
+==============================================================================
+ k=3: per-subset baseline (k-1)!/2^k = 1/4 (leading n^k coeff = 1/4/6 = 1/24)
+ k=5: per-subset baseline (k-1)!/2^k = 3/4 (leading n^k coeff = 3/4/120 = 1/160)
+ k=7: per-subset baseline (k-1)!/2^k = 45/8 (leading n^k coeff = 45/8/5040 = 1/896)
+
+DONE.
+
+=== EXTRAPOLATION (efficient per-subset, beyond fit windows) ===
+c5 deg-5 poly holds at n=12,13,15 (fit window was n=5..11): all True
+c7 deg-7 poly holds at n=16,17 (fit window was n=7..15): all True
+--> no hidden higher-degree term; degrees 5 and 7 confirmed.
+
+=== ADVERSARIAL CONCLUSION ===
+PART1 c3 E/Var closed forms == Z-engine, n<=10: MATCH
+PART2 brute enumeration c3,c5,c7,H == Z-engine & polys, n<=7: MATCH
+PART3 independent per-subset linearity == polys, n<=8: MATCH (c7 at n=8 is OUT of brute range, confirms poly not just a fit artifact)
+PART4 leading (k-1)!/2^k baseline confirmed
+n=5 identity 1+2E[c3]+2E[c5]=E[H]=79/8: confirmed exact (low-n coincidence as claimed)
+H values 2,4,79/8,29,3175/32 confirmed via independent Redei Hamiltonian-path count.
+ALL CLAIMED CLOSED FORMS SURVIVE. Surviving gap: full general-k closed form unproved (only leading order PROVED); Var[c5]+ uncomputed.

@@ -1,0 +1,45 @@
+==============================================================================
+CHECK A: brute c3/c5/c7/H moments (n<=7) vs claimed polynomials
+==============================================================================
+ n=3: E[c3]=1/2 (poly 1/2 True)  Var[c3]=1/4 (poly 1/4 True)  E[H]=2
+ n=4: E[c3]=3/2 (poly 3/2 True)  Var[c3]=1/2 (poly 1/2 True)  E[H]=4
+ n=5: E[c3]=13/4 (poly 13/4 True)  Var[c3]=17/16 (poly 17/16 True)  E[c5]=19/16 (poly 19/16 True)  E[H]=79/8
+     n=5 identity 1+2E[c3]+2E[c5]=79/8  ==E[H]? True
+ n=6: E[c3]=6 (poly 6 True)  Var[c3]=17/8 (poly 17/8 True)  E[c5]=49/8 (poly 49/8 True)  E[H]=29
+ n=7: E[c3]=10 (poly 10 True)  Var[c3]=31/8 (poly 31/8 True)  E[c5]=315/16 (poly 315/16 True)  E[c7]=499/64 (poly 499/64 True)  E[H]=3175/32
+
+==============================================================================
+CHECK B: parity bias E[(-1)^c3] = 1/2^floor((n-1)/2), n=4..8  (Z-engine)
+==============================================================================
+ n=3: E[(-1)^c3]=0  claim=0  match=True
+ n=4: E[(-1)^c3]=1/2  claim=1/2  match=True
+ n=5: E[(-1)^c3]=1/4  claim=1/4  match=True
+ n=6: E[(-1)^c3]=1/4  claim=1/4  match=True
+ n=7: E[(-1)^c3]=1/8  claim=1/8  match=True
+ n=8: E[(-1)^c3]=1/8  claim=1/8  match=True
+ n=9: E[(-1)^c3]=1/16  claim=1/16  match=True
+ n=10: E[(-1)^c3]=1/16  claim=1/16  match=True
+
+==============================================================================
+CHECK C: max-c3 value + multiplicity (regular census), Z-engine n<=10
+==============================================================================
+ n=3: max_c3=1 (form 1 True)  mult=1  (n odd)
+ n=4: max_c3=2 (form 2 True)  mult=5  (n even)
+ n=5: max_c3=5 (form 5 True)  mult=3  (n odd)
+ n=6: max_c3=8 (form 8 True)  mult=157  (n even)
+ n=7: max_c3=14 (form 14 True)  mult=91  (n odd)
+ n=8: max_c3=20 (form 20 True)  mult=51949  (n even)
+ n=9: max_c3=30 (form 30 True)  mult=29157  (n odd)
+ n=10: max_c3=40 (form 40 True)  mult=204019829  (n even)
+
+==============================================================================
+CHECK D: score-determinacy of c3 (YES) vs c5/alpha2 (NO) -- counterexamples
+==============================================================================
+ n=5: c3 multi-valued score classes=0 (0=>determined)  c5=1  alpha2tri=0
+     c5 CE: score (1, 2, 2, 2, 3) -> c5 in [1, 2, 3]
+ n=6: c3 multi-valued score classes=0 (0=>determined)  c5=9  alpha2tri=7
+     c5 CE: score (0, 2, 3, 3, 3, 4) -> c5 in [1, 2, 3]
+     a2 CE: score (1, 1, 2, 3, 4, 4) -> a2 in [0, 1]
+ n=7: c3 multi-valued score classes=0 (0=>determined)  c5=38  alpha2tri=35
+     c5 CE: score (0, 1, 3, 4, 4, 4, 5) -> c5 in [1, 2, 3]
+     a2 CE: score (0, 2, 2, 3, 4, 5, 5) -> a2 in [0, 1]

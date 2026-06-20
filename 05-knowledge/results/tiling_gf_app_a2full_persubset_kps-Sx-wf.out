@@ -1,0 +1,9 @@
+Per-subset FULL alpha2 decomposition (3-3 + 3-5 + 5-5):
+n=6: a33=15/16  a35=0  a55=0  FULL=15/16
+n=7: a33=93/16  a35=0  a55=0  FULL=93/16
+n=8: a33=173/8  a35=447/32  a55=0  FULL=1139/32
+   CHECK n=8: a33(tri)=173/8 vs claim 173/8=173/8 (OK)
+   CHECK n=8: a35(cross)=447/32 vs claim 447/32=447/32 (OK)
+   CHECK n=8: full=1139/32 vs claim 1139/32=1139/32 (OK)
+n=9: a33=495/8  a35=3769/32  a55=0  FULL=5749/32
+n=10: a33=2395/16  a35=2253/4  a55=22633/256  FULL=205145/256

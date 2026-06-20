@@ -1,0 +1,11 @@
+n=5: SCORE-only determines:  c3=True  c5=False  a2tri=True
+n=5: SCORE+A^2-rowsums determines:  c5=True  a2tri=True
+    c5 counterexample @score (1, 2, 2, 2, 3): c5 in [1, 2, 3]
+n=6: SCORE-only determines:  c3=True  c5=False  a2tri=False
+n=6: SCORE+A^2-rowsums determines:  c5=False  a2tri=False
+    c5 counterexample @score (0, 2, 3, 3, 3, 4): c5 in [1, 2, 3]
+    a2 counterexample @score (1, 1, 2, 3, 4, 4): a2 in [0, 1]
+n=7: SCORE-only determines:  c3=True  c5=False  a2tri=False
+n=7: SCORE+A^2-rowsums determines:  c5=False  a2tri=False
+    c5 counterexample @score (0, 1, 3, 4, 4, 4, 5): c5 in [1, 2, 3]
+    a2 counterexample @score (0, 2, 2, 3, 4, 5, 5): a2 in [0, 1]

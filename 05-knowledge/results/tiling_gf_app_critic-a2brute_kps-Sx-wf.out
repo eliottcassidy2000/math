@@ -1,0 +1,3 @@
+ n=5: brute E[alpha2_tri] = 0   (claim list says n=6:15/16, n=7:93/16)
+ n=6: brute E[alpha2_tri] = 15/16   (claim list says n=6:15/16, n=7:93/16)
+ n=7: brute E[alpha2_tri] = 93/16   (claim list says n=6:15/16, n=7:93/16)

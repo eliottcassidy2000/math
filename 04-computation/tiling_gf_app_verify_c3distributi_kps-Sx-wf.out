@@ -1,0 +1,87 @@
+==============================================================================
+PART 1+2: engine vs brute, and closed forms (exact)
+==============================================================================
+
+ n=3  total=2 = 2^1  engine==brute_c3: True
+   score-census engine==brute: True
+   E[c3]     engine=1/2  closed=1/2  match=True
+   Var[c3]   engine=1/4  closed=1/4  match=True
+   E[(-1)c3] engine=0  closed=0  match=True
+   min c3=0 mult=1  (claim 0 mult 1): True
+   max c3=1 mult=1  closed_max=1  match=True
+
+ n=4  total=8 = 2^3  engine==brute_c3: True
+   score-census engine==brute: True
+   E[c3]     engine=3/2  closed=3/2  match=True
+   Var[c3]   engine=1/2  closed=1/2  match=True
+   E[(-1)c3] engine=1/2  closed=1/2  match=True
+   min c3=0 mult=1  (claim 0 mult 1): True
+   max c3=2 mult=5  closed_max=2  match=True
+
+ n=5  total=64 = 2^6  engine==brute_c3: True
+   score-census engine==brute: True
+   E[c3]     engine=13/4  closed=13/4  match=True
+   Var[c3]   engine=17/16  closed=17/16  match=True
+   E[(-1)c3] engine=1/4  closed=1/4  match=True
+   min c3=0 mult=1  (claim 0 mult 1): True
+   max c3=5 mult=3  closed_max=5  match=True
+
+ n=6  total=1024 = 2^10  engine==brute_c3: True
+   score-census engine==brute: True
+   E[c3]     engine=6  closed=6  match=True
+   Var[c3]   engine=17/8  closed=17/8  match=True
+   E[(-1)c3] engine=1/4  closed=1/4  match=True
+   min c3=0 mult=1  (claim 0 mult 1): True
+   max c3=8 mult=157  closed_max=8  match=True
+
+ n=7  total=32768 = 2^15  engine==brute_c3: True
+   score-census engine==brute: True
+   E[c3]     engine=10  closed=10  match=True
+   Var[c3]   engine=31/8  closed=31/8  match=True
+   E[(-1)c3] engine=1/8  closed=1/8  match=True
+   min c3=0 mult=1  (claim 0 mult 1): True
+   max c3=14 mult=91  closed_max=14  match=True
+
+==============================================================================
+PART 2b: closed forms vs ENGINE only, n=8..10 (no brute)
+==============================================================================
+ n=3: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=1 maxmult=1 signed=0
+ n=4: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=2 maxmult=5 signed=1/2
+ n=5: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=5 maxmult=3 signed=1/4
+ n=6: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=8 maxmult=157 signed=1/4
+ n=7: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=14 maxmult=91 signed=1/8
+ n=8: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=20 maxmult=51949 signed=1/8
+ n=9: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=30 maxmult=29157 signed=1/16
+ n=10: meanOK=True varOK=True signedOK=True maxOK=True minOK=True | max=40 maxmult=204019829 signed=1/16
+
+==============================================================================
+PART 3: regular / near-regular census
+==============================================================================
+ max-c3 mult odd  (n=3,5,7,9): [1, 3, 91, 29157]  claim [1,3,91,29157]: True
+ max-c3 mult even (n=4,6,8):   [5, 157, 51949]  claim [5,157,51949]: True
+  n=3: regular-score (all s=1) census = 1; equals max-c3 mult: True
+  n=5: regular-score (all s=2) census = 3; equals max-c3 mult: True
+  n=7: regular-score (all s=3) census = 91; equals max-c3 mult: True
+  n=9: regular-score (all s=4) census = 29157; equals max-c3 mult: True
+  n=3: max-c3 achieved by score multisets [(1, 1, 1)] all near-regular: True
+  n=4: max-c3 achieved by score multisets [(1, 1, 2, 2)] all near-regular: True
+  n=5: max-c3 achieved by score multisets [(2, 2, 2, 2, 2)] all near-regular: True
+  n=6: max-c3 achieved by score multisets [(2, 2, 2, 3, 3, 3)] all near-regular: True
+  n=7: max-c3 achieved by score multisets [(3, 3, 3, 3, 3, 3, 3)] all near-regular: True
+
+==============================================================================
+PART 4: complement-fold 2x via THM-280 R-relabel  (a,b)->(n+1-b,n+1-a)
+==============================================================================
+  The REAL fold: T -> T^op realized inside the tiling cube. T^op reverses every
+  arc; relabel v->n+1-v restores the base path n->..->1. Net action on free-tile
+  bits = position permutation R (a,b)->(n+1-b,n+1-a) WITH a bit flip on each tile.
+  Claim: this is an involution on the 2^F tilings, and c3 is invariant => 2x fold.
+ n=3: R pos-perm involution:True  fold involution:True  c3(T)==c3(T^op) all tilings:True  fold-fixed-points:0 (0 => clean 2x)
+ n=4: R pos-perm involution:True  fold involution:True  c3(T)==c3(T^op) all tilings:True  fold-fixed-points:0 (0 => clean 2x)
+ n=5: R pos-perm involution:True  fold involution:True  c3(T)==c3(T^op) all tilings:True  fold-fixed-points:0 (0 => clean 2x)
+ n=6: R pos-perm involution:True  fold involution:True  c3(T)==c3(T^op) all tilings:True  fold-fixed-points:0 (0 => clean 2x)
+
+==============================================================================
+OVERALL holds = True
+==============================================================================
+HOLDS=True

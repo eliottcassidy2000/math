@@ -1,0 +1,222 @@
+
+tiling_gf_app_metagraph-complement-halving_kps-Sx-wf.py
+=======================================================
+ANGLE: metagraph-complement-halving.
+
+Applies the tau-clock complement reflection (THM-549/THM-280, address quotient)
+of the THM-554 score generating function Z_n to METAGRAPH / iso-class computations.
+
+THE TOOL (THM-554, codex THM-553 two-clock address, all PROVED/verified):
+  Tiling model, base path n->n-1->...->1, free tile (a,b) with a-b>=2.
+  bit 0 => arc a->b (+1 to score(a)); bit 1 => arc b->a (+1 to score(b)).
+  Hence the joint score GF over all 2^{C(n-1,2)} tilings FACTORS:
+      Z_n(x_1..x_n) = ( prod_{v=2}^n x_v ) * prod_{(a,b) tile} (x_a + x_b).
+  beta-clock: incremental n->n+1 birth strip (the engine; no 2^F enumeration).
+  tau-clock : complement reflection R:(a,b)->(n+1-b, n+1-a) == complement up to
+              relabel.  Score-determined complement-invariant statistics are
+              R-symmetric => half-tiling reps carry the whole distribution.
+
+THE FOUR DELIVERABLES OF THIS ANGLE.
+  (1) COMPLEMENT-HALVING OF THE Z-ENGINE.  Show the score/c3 distribution is
+      EXACTLY R-symmetric (R acts on score vectors as the reversal/complement
+      s_v -> (n-1) - s_{phi(v)}, phi(v)=n+1-v).  PROVE the score census and the
+      c3 distribution are R-fold-symmetric, and MEASURE the 2x cost reduction
+      from working on half-tiling representatives only.
+  (2) DESCENT TO THE MERGED METAGRAPH G_n/Z_2.  The merged metagraph factors out
+      complement (V_merged = (A000568 + SC)/2).  Show the score/c3 distribution
+      descends to the quotient: every merged class has a well-defined
+      {score-multiset, c3} that is R-invariant, and the c3 *mean over merged
+      classes weighted by fiber size* equals the tiling mean (the per-triple
+      linearity template carries through the quotient).
+  (3) THE R-FIXED (SELF-COMPLEMENTARY) STRATUM via half-tiling reps.  R-fixed
+      tilings = grid-symmetric tilings = phi-self-converse tournaments = the
+      half-cube {0,1}^half(n), half(n)=floor((n-1)^2/4).  Compute their c3/score
+      sub-distribution directly on the half(n)-bit cube (HalfTilingCodec domain),
+      WITHOUT touching the full 2^m cube, and connect to the kps H-maximizer.
+  (4) DOES SCORE-CENSUS + COMPLEMENT-HALVING ACCELERATE THE A000568/SC VERTEX
+      COUNTS or the H-MAXIMIZER SEARCH?  Concrete speedups, verified n<=8:
+      - score-class prefilter prunes the regular/SC-score H-max search;
+      - half-cube restriction for the SC H-maximizer is an exact 2^{m-half} fold;
+      - the c3 mean closed form gives the *expected* alpha_1 leading term for free.
+
+Everything is verified against brute / the Z-engine for small n.  Closed forms
+are PROVED by the per-subset linearity template where claimed; otherwise marked
+CONJECTURE.  No git is run.  Output saved alongside in 05-knowledge/results/.
+
+========================================================================
+[1] COMPLEMENT-HALVING OF THE Z-ENGINE
+========================================================================
+R acts on score vectors as s_v -> (n-1) - s_{n+1-v}.
+Claim: the score census (as a MULTISET-of-scores distribution) and the
+c3 distribution are EXACTLY invariant under R.
+
+  n  #scorevecs  census R-sym  c3 R-sym  #half reps   fold
+  3           2          True      True           2  1.000
+  4           8          True      True           6  1.333
+  5          52          True      True          40  1.600
+  6         478          True      True         544  1.882
+  7        5706          True      True       16640  1.969
+  8       83824          True      True     1050624  1.996
+
+  PROVED (per-subset / involution template):
+   * R is an involution on {0,1}^m (the full tiling cube) preserving
+     tiling-multiplicity uniformly (uniform measure), so any R-invariant
+     score-functional has an R-symmetric distribution.
+   * c3 = C(n,3) - sum_v C(s_v,2) is complement-invariant: under
+     s_v -> (n-1)-s_{phi(v)}, sum_v C(s_v,2) is preserved iff the score
+     SET (with multiplicity) is preserved, which it is, because c3(T)=c3(T^op)
+     (3-cycles are complement-invariant up to the global arc-reversal that
+     fixes the cyclic-triangle indicator).  Verified n=3..8 above.
+
+  COST: working on R-orbit (half-tiling) reps instead of the full cube
+  is a ~2x fold (exactly 2^m / ((2^m+2^half)/2) -> 2 as n grows). Measured:
+
+  [1b] STRUCTURAL 2x: expensive per-tiling ops saved by R-orbit reps
+  (e.g. iso-canonicalization, O(n!) each, when assembling the metagraph)
+    n  2^m calls (full)  #R-orbits (half)  calls saved   fold  asymptote
+    3                 2                 2            0  1.000       -> 2
+    4                 8                 6            2  1.333       -> 2
+    5                64                40           24  1.600       -> 2
+    6              1024               544          480  1.882       -> 2
+    7             32768             16640        16128  1.969       -> 2
+    8           2097152           1050624      1046528  1.996       -> 2
+  fold = 2^m / ((2^m + 2^half)/2) = 2 / (1 + 2^(half-m)) -> 2 as n grows
+  (half-m = floor((n-1)^2/4) - C(n-1,2) -> -infinity).  PROVED exact.
+  witness n=7: rep-folded c3-dist == full c3-dist : True
+
+========================================================================
+[2] DESCENT TO THE MERGED METAGRAPH  G_n/Z_2
+========================================================================
+Merged class = {iso class, its complement}.  Score-multiset & c3 are
+complement-invariant, so they are well-defined ON the merged class.
+Verify: (i) every merged class has a single (score-multiset, c3) value;
+        (ii) fiber-weighted c3 mean over merged classes == tiling c3 mean
+             == closed form (C(n,3)+(n-2))/4 . (per-triple linearity)
+
+  n  V=A000568  SC_self  V_merged  (V+SC)/2  merged c3-welldef mean c3 (tiling)  closed form   eq
+  3          2        2         2         2               True              1/2          1/2 True
+  4          4        2         3         3               True              3/2          3/2 True
+  5         12        8        10        10               True             13/4         13/4 True
+  6         56       12        34        34               True                6            6 True
+
+  PROVED: c3 and the (n-1)-complemented score-multiset descend to G_n/Z_2.
+  PROVED: tiling c3-mean = (C(n,3)+(n-2))/4 (per-triple linearity, THM-554);
+          the descent does NOT change the *uniform-tiling* mean (the quotient
+          only identifies T with T^op, both of which carry equal c3).
+
+========================================================================
+[3] R-FIXED (SELF-COMPLEMENTARY) STRATUM via the half(n)-bit cube
+========================================================================
+R-fixed tilings = grid-symmetric = phi-self-converse tournaments,
+parametrized by {0,1}^half(n), half(n)=floor((n-1)^2/4).
+Compute c3/score sub-distribution on the HALF cube only (no 2^m).
+
+  n half(n)     2^half  matches full-on-fixed     SC mean c3    SC c3 closed?
+  3       1          2                   True            1/2                 
+  4       2          4                   True            3/2                 
+  5       4         16                   True            7/2                 
+  6       6         64                   True              6                 
+  7       9        512                   True           21/2                 
+  8      12       4096             skip(m>15)           31/2                 
+  9      16      65536             skip(m>15)           47/2                 
+ 10      20    1048576             skip(m>15)             32                 
+
+  SC-stratum mean c3 (exact fractions):
+    n=3:  E_SC[c3] = 1/2 = 0.5000
+    n=4:  E_SC[c3] = 3/2 = 1.5000
+    n=5:  E_SC[c3] = 7/2 = 3.5000
+    n=6:  E_SC[c3] = 6 = 6.0000
+    n=7:  E_SC[c3] = 21/2 = 10.5000
+    n=8:  E_SC[c3] = 31/2 = 15.5000
+    n=9:  E_SC[c3] = 47/2 = 23.5000
+    n=10:  E_SC[c3] = 32 = 32.0000
+
+  CONJECTURE (closed form candidate, per-triple linearity on the half cube):
+      n     E_SC[c3]     E_full   E_SC-E_full   closed form  match
+      3          1/2        1/2             0           1/2   True
+      4          3/2        3/2             0           3/2   True
+      5          7/2       13/4           1/4           7/2   True
+      6            6          6             0             6   True
+      7         21/2         10           1/2          21/2   True
+      8         31/2       31/2             0          31/2   True
+      9         47/2       91/4           3/4          47/2   True
+     10           32         32             0            32   True
+
+    CLOSED FORM (CONJECTURE, verified n=3..10):
+      E_SC[c3] = (C(n,3)+(n-2))/4 + [n odd]*(n-3)/8
+      = E_full[c3]   at EVEN n;   E_full[c3] + (n-3)/8   at ODD n.
+    all enumerated means match closed form: YES (CONJECTURE strongly supported)
+    INTERPRETATION (per-triple linearity on the half cube): a triple
+    {u,v,w} fixed by the relabel phi(i)=n+1-i has its 3 arcs R-coupled,
+    raising its 3-cycle probability above 1/4 only when an odd-length
+    self-paired structure survives -- which happens for odd n. The
+    even-n coincidence E_SC[c3]=E_full[c3] is the clean signal.
+
+  Connection: the SC stratum {0,1}^half(n) is exactly the HalfTilingCodec
+  domain; the global H-maximizer (Paley T_p at prime n) is SC, so it lives
+  in this stratum -- the H-max search over SC tournaments is a half-cube scan
+  (deliverable 4).  HYP-2687/2688 H-maximizer lives on {0,1}^half.
+
+========================================================================
+[4] SPEEDUPS:  score-census + complement-halving for A000568/SC & H-max
+========================================================================
+
+  [4a] H-MAX SEARCH PREFILTER via the Z-engine score census.
+  H = OCF is maximized by REGULAR (Paley) at odd n; H is a function whose
+  leading term grows with c3 = C(n,3)-sum C(s_v,2), minimized exactly by
+  the regular score.  The Z-engine gives the score census for FREE, so we
+  can restrict the (expensive) H computation to the min-c3 score classes.
+    n   #tilings #regular-score tilings   fraction  prefilter speedup
+    3          2                      1    0.50000              2.00x
+    4          8                      5    0.62500              1.60x
+    5         64                      3    0.04688             21.33x
+    6       1024                    157    0.15332              6.52x
+    7      32768                     91    0.00278            360.09x
+    8    2097152                  51949    0.02477             40.37x
+  => the score census prunes H-max candidates by the (1/fraction) factor
+     above, FOR FREE, before any Hamiltonian-path DP.  Verified the regular
+     score class contains the H-max at odd n (Paley) per repo THM-027.
+
+  [4b] SC H-MAXIMIZER on the half(n)-bit cube (exact 2^{m-half} fold).
+  The global H-max at prime n is self-complementary (Paley); the SC stratum
+  is {0,1}^half(n).  Searching it directly is a 2^{m-half} speedup vs the
+  full 2^m tiling cube.
+    n    m  half        2^m    2^half  fold 2^(m-half)  SC H-max
+    3    1     1          2         2                1         3
+    4    3     2          8         4                2         5
+    5    6     4         64        16                4        15
+    6   10     6       1024        64               16        45
+    7   15     9      32768       512               64       189
+    8   21    12    2097152      4096              512       661
+  => KEY FINDING (VERIFIED n=3..8): the SC half-cube max EQUALS the
+     GLOBAL H-max at EVERY n=3..8:  3, 5, 15, 45, 189, 661.
+     So the GLOBAL maximizer is self-complementary at every tested n --
+     INCLUDING non-prime n=6 (45) and n=8 (661), not just prime/Paley n.
+     Hence the 2^(m-half) half-cube scan is a COMPLETE search for the
+     global H-max (not a heuristic): n=7 => 2^6=64x, n=8 => 2^9=512x
+     smaller than the full 2^m tiling cube.  (Open: does this persist for
+     all n?  -- CONJECTURE: global H-max is always self-complementary.)
+
+  [4c] A000568 / SC class counts -- honest scope.
+  The score census is a COARSENING of iso classes (many classes share a
+  score multiset), so it does NOT directly count A000568.  BUT complement-
+  halving DOES legitimately halve the *merged* metagraph vertex enumeration:
+  V_merged = (A000568 + SC)/2, and the R-fold lets a canonicalizer skip one
+  of each complement pair.  Measured score-class counts (an invariant of
+  the merged graph, the 'spine coordinate'):
+    n   #score multisets  #SC-symmetric score classes
+    3                  2                            2
+    4                  4                            2
+    5                  9                            5
+    6                 22                            6
+    7                 59                           15
+    8                167                           19
+  (score-class count = 2,4,9,... matches repo Gn_new_sequences score_classes.)
+
+========================================================================
+SUMMARY
+  [1] Z-engine complement-halving (R-symmetry, 2x fold) : PASS
+  [2] descent to merged metagraph G_n/Z_2               : PASS
+  [3] SC stratum c3/score on the half(n)-cube           : PASS
+  [4] speedups (score prefilter + half-cube SC H-max)   : printed
+========================================================================

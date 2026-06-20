@@ -1,0 +1,3 @@
+n=4: 8 tilings, complement violations=0 -> LOSSLESS 2x OK
+n=5: 64 tilings, complement violations=0 -> LOSSLESS 2x OK
+n=6: 1024 tilings, complement violations=0 -> LOSSLESS 2x OK
