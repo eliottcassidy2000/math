@@ -1,3 +1,32 @@
+## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
+
+User asked to keep pushing toward the LRC(14) proof, pulling/pushing frequently,
+integrating incoming agent work, and considering boundary functions,
+curvilinear convergence, bounded harmonic boundary values, and Riemann-sphere
+maps.  Pulled mainline twice.  Incoming mac-mini S2 confirmed the current live
+surface: finite half and boundary collar are closed/modulo finite check
+(THM-547), leaving true-wide HYP-2678.  Claimed HYP-2679/T918 and checkpointed
+the claim before the long scan.
+
+Added `04-computation/lrc14_truewide_boundary_curvature_codex_s50.py` and
+stored `05-knowledge/results/lrc14_truewide_boundary_curvature_codex_s50.out`.
+The exact invariant is `I_B(u,v)=p0(B union {u,v})-p0(B union {u})-p0(B union
+{v})+p0(B)`, the two-far analogue of curvilinear approach data.  Scan:
+`core=(0)+6-subsets of [1,14]`, far pairs `15..24`, `135065` primitive k=9
+rows.  Curvature signs: `positive=131003`, `negative=3961`, `zero=101`.
+
+Main finding: the direct-risk leader remains
+`(0,4,6,8,10,12,14,15,16)`, `p0=321/980`, margin `11681/70070`, but its
+curvature is negative `-13/1470`; the core is `2*(0,2,3,4,5,6,7)`.  Largest
+positive curvature is `307/1960` at `(0,1,4,8,10,12,14,16,20)`, but that row
+is safer (`p0=89/336`).  Therefore the live k=9 leader is a d=1/dilated-core
+overlap row, not a high-dimensional positive two-far synergy.  This sharpens
+HYP-2678: scale-invariance plus finite curvature ledger for d=1, and signed
+dimension-penalty/excess-curvature cap for d>=2.  Added reflection
+`07-reflections/lrc14-truewide-boundary-curvature-codex-s50.md`, updated
+HYP-2679, results index, tangent index, and OPEN-Q-108.  No LRC(14) proof
+claimed.
+
 ## mac-mini-2026-06-20-S2 — LRC(14): signed Erdős–Turán sharpening `|Δ_w|≤(6/49)V/w` (THM-546) + BOUNDARY-COLLAR CLOSED (THM-547) — 2 of 3 sector-crux regions now closed
 Dispatch: signed Erdős–Turán packet estimate; Ruzsa modeling + Plünnecke–Ruzsa; apex-prime/Bertrand/Chebyshev; aim for an LRC(14) proof. The user's leads mapped exactly onto the open pieces.
 **(1) SIGNED sharpening of THM-546 (DONE).** The absolute `|Δ_w|≤κV/(π²w)` (κ=1.857) is 5–76× loose because it discards the sign. The QR REALITY (HYP-2657: `6=−1`∈NQR mod 7 ⟹ `Δ_w` real, `n↔−n` cancels imag parts) plus Abel summation collapses `Δ_w=−(1/w)Σ_jΣ_{arcs}[F_j(wa)−F_j(wb)]`, `F_j`=centered antiderivative of `1_{sector j}−1/7`, `sup|F_j|=3/49` EXACT ⟹ **`|Δ_w|≤(6/49)V(E')/w`** — RATIONAL constant `6/49=(p−1)/p²` at the apex prime `p=7` (the prime that gives the 7-vanishing now gives the *size*). 1.54× sharper; full signed sum 5–76× tighter (open: closed-form for the arc-phase cancellation).

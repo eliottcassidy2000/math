@@ -1,0 +1,161 @@
+HYP-2679 / T918 LRC14 true-wide boundary-curvature scout
+Arithmetic: exact Fractions; decimal displays are guides only.
+Assumption challenge: vertices below are rows, far speeds, or approach orders, not runners.
+Preserved predicate: direct p0(E)<=cap_k. Destroyed data: internal wall endpoints unless state words are reattached.
+
+Named calibration rows
+HYP2675 true-wide leader: E=(0, 4, 6, 8, 10, 12, 14, 15, 16), core=(0, 4, 6, 8, 10, 12, 14), far=(15,16)
+  p0(core)=67/1470 (0.045578231)
+  p0(core+15)=13/120 (0.108333333)  increment=123/1960 (0.062755102)
+  p0(core+16)=1609/5880 (0.273639456)  increment=447/1960 (0.228061224)
+  p0(full)=321/980 (0.327551020) cap=1979/4004 (0.494255744) margin=11681/70070 (0.166704724) risk=45903/69265 (0.662715657)
+  curvature I_B(15,16)=-13/1470 (-0.008843537)
+  ordered increments: add 16 after 15 -> 1289/5880 (0.219217687); add 15 after 16 -> 317/5880 (0.053911565)
+  core_gcd=2 core_scaled=(0, 2, 3, 4, 5, 6, 7) row_exc=7 core_exc=1 K2=8/3 energy=357 run=3 ap7=True lap=7 states=55 H=4.3019 sqfree=((1, 2), (2, 1), (3, 1), (6, 1), (10, 1), (14, 1), (15, 1))
+k8 true-wide leader: E=(0, 3, 6, 9, 12, 14, 15, 18), core=(0, 3, 6, 9, 12, 14), far=(15,18)
+  p0(core)=0 (0.000000000)
+  p0(core+15)=76/2205 (0.034467120)  increment=76/2205 (0.034467120)
+  p0(core+18)=11/294 (0.037414966)  increment=11/294 (0.037414966)
+  p0(full)=391/1764 (0.221655329) cap=2243/5880 (0.381462585) margin=2819/17640 (0.159807256) risk=3910/6729 (0.581067023)
+  curvature I_B(15,18)=1321/8820 (0.149773243)
+  ordered increments: add 18 after 15 -> 1651/8820 (0.187188209); add 15 after 18 -> 325/1764 (0.184240363)
+  core_gcd=1 core_scaled=(0, 3, 6, 9, 12, 14) row_exc=6 core_exc=4 K2=21/8 energy=260 run=2 ap7=True lap=7 states=54 H=4.6992 sqfree=((1, 1), (2, 1), (3, 2), (6, 1), (14, 1), (15, 1))
+even AP core plus two extras: E=(0, 2, 4, 6, 8, 10, 12, 14, 15), core=(0, 2, 4, 6, 8, 10, 12), far=(14,15)
+  p0(core)=31/210 (0.147619048)
+  p0(core+14)=481/1470 (0.327210884)  increment=44/245 (0.179591837)
+  p0(core+15)=57/280 (0.203571429)  increment=47/840 (0.055952381)
+  p0(full)=437/1176 (0.371598639) cap=1979/4004 (0.494255744) margin=20627/168168 (0.122657105) risk=62491/83118 (0.751834741)
+  curvature I_B(14,15)=-17/1470 (-0.011564626)
+  ordered increments: add 15 after 14 -> 87/1960 (0.044387755); add 14 after 15 -> 247/1470 (0.168027211)
+  core_gcd=2 core_scaled=(0, 1, 2, 3, 4, 5, 6) row_exc=7 core_exc=0 K2=8/3 energy=377 run=2 ap7=True lap=8 states=51 H=4.1240 sqfree=((1, 1), (2, 2), (3, 1), (6, 1), (10, 1), (14, 1), (15, 1))
+
+Multi-far approach paths
+HYP2675 true-wide leader sorted path: row=(0, 4, 6, 8, 10, 12, 14, 15, 16)
+  core<=14: (0, 4, 6, 8, 10, 12, 14), fars=(15, 16)
+  p0(core)=67/1470 (0.045578231)
+  +15: p0=13/120 (0.108333333) increment=123/1960 (0.062755102)
+  +16: p0=321/980 (0.327551020) increment=1289/5880 (0.219217687)
+  pair curvature over base core (15,16) = -13/1470 (-0.008843537)
+
+KPS third-pocket sorted path: row=(0, 3, 5, 16, 28, 30, 33, 35)
+  core<=14: (0, 3, 5), fars=(16, 28, 30, 33, 35)
+  p0(core)=0 (0.000000000)
+  +16: p0=0 (0.000000000) increment=0 (0.000000000)
+  +28: p0=0 (0.000000000) increment=0 (0.000000000)
+  +30: p0=0 (0.000000000) increment=0 (0.000000000)
+  +33: p0=73/8085 (0.009029066) increment=73/8085 (0.009029066)
+  +35: p0=1051/32340 (0.032498454) increment=23/980 (0.023469388)
+  pair curvature over base core (16,28) = 0 (0.000000000)
+  pair curvature over base core (16,30) = 0 (0.000000000)
+  pair curvature over base core (16,33) = 0 (0.000000000)
+  pair curvature over base core (16,35) = 0 (0.000000000)
+  pair curvature over base core (28,30) = 0 (0.000000000)
+  pair curvature over base core (28,33) = 0 (0.000000000)
+  pair curvature over base core (28,35) = 0 (0.000000000)
+  pair curvature over base core (30,33) = 0 (0.000000000)
+  pair curvature over base core (30,35) = 0 (0.000000000)
+  pair curvature over base core (33,35) = 0 (0.000000000)
+
+Exact k=9 two-far scan: core=(0)+6-subsets of [1,14], far pairs 15..24
+  raw_rows=135135, primitive_rows=135065
+  curvature signs={'positive': 131003, 'negative': 3961, 'zero': 101}
+  p0 cache: hits=372202, misses=168123, size=168123
+
+Top direct-risk rows
+   1. E=(0, 4, 6, 8, 10, 12, 14, 15, 16) p0=321/980 margin=11681/70070 curv=-13/1470 du=123/1960 dv=447/1960 exc=7 core_gcd=2
+   2. E=(0, 3, 5, 7, 9, 11, 13, 15, 17) p0=1729558/5360355 margin=334483/1949220 curv=226571/5360355 du=20659/105105 dv=3386/63063 exc=7 core_gcd=1
+   3. E=(0, 4, 6, 8, 10, 12, 14, 16, 21) p0=3757/11760 margin=293929/1681680 curv=-131/11760 du=447/1960 dv=67/1176 exc=8 core_gcd=2
+   4. E=(0, 4, 6, 8, 10, 12, 14, 16, 19) p0=35167/111720 margin=2867329/15975960 curv=-13/1140 du=447/1960 dv=587/11172 exc=8 core_gcd=2
+   5. E=(0, 9, 10, 11, 12, 13, 14, 15, 16) p0=140177/458640 margin=951593/5045040 curv=196177/5045040 du=75121/420420 dv=41807/840840 exc=7 core_gcd=1
+   6. E=(0, 4, 6, 8, 10, 12, 14, 16, 23) p0=3901/12880 margin=352497/1841840 curv=-5849/90160 du=447/1960 dv=12727/135240 exc=8 core_gcd=2
+   7. E=(0, 3, 6, 9, 11, 12, 14, 15, 18) p0=7328/24255 margin=242329/1261260 curv=6913/97020 du=6067/48510 dv=685/9702 exc=7 core_gcd=1
+   8. E=(0, 3, 6, 7, 9, 11, 12, 15, 18) p0=1031/3465 margin=35443/180180 curv=1739/24255 du=4819/32340 dv=5/77 exc=10 core_gcd=1
+   9. E=(0, 2, 6, 8, 10, 12, 14, 18, 21) p0=29/98 margin=5559/28028 curv=31/5880 du=41/196 dv=3/56 exc=10 core_gcd=2
+  10. E=(0, 3, 5, 7, 9, 11, 13, 15, 19) p0=1763383/5990985 margin=4790783/23963940 curv=1238/41895 du=20659/105105 dv=15214/399399 exc=8 core_gcd=1
+
+Top positive-curvature rows
+   1. E=(0, 1, 4, 8, 10, 12, 14, 16, 20) p0=89/336 margin=11021/48048 curv=307/1960 du=251/3920 dv=11/392 exc=10 core_gcd=1
+   2. E=(0, 3, 4, 8, 10, 12, 14, 16, 20) p0=2701/11760 margin=444937/1681680 curv=281/1960 du=491/11760 dv=39/980 exc=10 core_gcd=1
+   3. E=(0, 2, 6, 10, 12, 13, 14, 18, 22) p0=286981/1261260 margin=84101/315315 curv=180757/1261260 du=111/2548 dv=821/30030 exc=12 core_gcd=1
+   4. E=(0, 3, 5, 6, 9, 12, 14, 15, 18) p0=19/70 margin=4461/20020 curv=1247/8820 du=239/4410 dv=641/8820 exc=9 core_gcd=1
+   5. E=(0, 4, 5, 8, 10, 12, 14, 16, 20) p0=751/2940 margin=50201/210210 curv=79/560 du=137/2352 dv=13/294 exc=9 core_gcd=1
+   6. E=(0, 2, 6, 9, 10, 12, 14, 18, 22) p0=3629/13860 margin=20939/90090 curv=13423/97020 du=31/420 dv=1081/24255 exc=12 core_gcd=1
+   7. E=(0, 1, 6, 8, 10, 12, 14, 16, 18) p0=1241/5040 margin=178757/720720 curv=697/5040 du=353/5880 dv=20/441 exc=9 core_gcd=1
+   8. E=(0, 3, 6, 8, 10, 12, 14, 16, 18) p0=361/1260 margin=9358/45045 curv=809/5880 du=25/392 dv=23/360 exc=8 core_gcd=1
+   9. E=(0, 4, 5, 6, 8, 12, 14, 16, 24) p0=953/3920 margin=140781/560560 curv=323/2352 du=99/1960 dv=263/5880 exc=11 core_gcd=1
+  10. E=(0, 6, 7, 8, 10, 12, 14, 16, 18) p0=1321/5040 margin=167317/720720 curv=302/2205 du=137/2352 dv=407/8820 exc=8 core_gcd=1
+
+Top negative-curvature-overlap rows
+   1. E=(0, 2, 5, 6, 10, 11, 14, 15, 22) p0=2909/16170 margin=132161/420420 curv=-193/2695 du=967/8085 dv=563/5390 exc=14 core_gcd=1
+   2. E=(0, 5, 9, 10, 11, 13, 14, 15, 22) p0=103231/630630 margin=32071/97020 curv=-193/2695 du=16585/126126 dv=4181/48510 exc=12 core_gcd=1
+   3. E=(0, 2, 3, 4, 5, 7, 13, 15, 22) p0=3277/20020 margin=3309/10010 curv=-566/8085 du=361/2940 dv=6891/70070 exc=14 core_gcd=1
+   4. E=(0, 5, 6, 7, 9, 10, 11, 15, 22) p0=2663/16170 margin=138557/420420 curv=-37/539 du=6253/48510 dv=13/154 exc=13 core_gcd=1
+   5. E=(0, 4, 9, 10, 12, 13, 14, 15, 22) p0=57773/315315 margin=35663/114660 curv=-86381/1261260 du=2363/19110 dv=7507/70070 exc=14 core_gcd=1
+   6. E=(0, 1, 3, 4, 5, 6, 14, 16, 23) p0=44291/270480 margin=12783527/38678640 curv=-463/6762 du=431/3920 dv=3007/33810 exc=16 core_gcd=1
+   7. E=(0, 5, 6, 9, 10, 11, 14, 15, 22) p0=247/1386 margin=1627/5148 curv=-548/8085 du=6697/48510 dv=1339/16170 exc=13 core_gcd=1
+   8. E=(0, 2, 4, 6, 10, 12, 14, 15, 22) p0=51/220 margin=2627/10010 curv=-2183/32340 du=86/735 dv=43/294 exc=11 core_gcd=2
+   9. E=(0, 1, 3, 5, 6, 11, 14, 16, 23) p0=475393/2975280 margin=12937031/38678640 curv=-3319/49588 du=481/3696 dv=30281/371910 exc=17 core_gcd=1
+  10. E=(0, 2, 5, 6, 7, 10, 11, 15, 22) p0=2753/16170 margin=136217/420420 curv=-1/15 du=419/3234 dv=281/3234 exc=14 core_gcd=1
+
+Top absolute-curvature rows
+   1. E=(0, 1, 4, 8, 10, 12, 14, 16, 20) p0=89/336 margin=11021/48048 curv=307/1960 du=251/3920 dv=11/392 exc=10 core_gcd=1
+   2. E=(0, 3, 4, 8, 10, 12, 14, 16, 20) p0=2701/11760 margin=444937/1681680 curv=281/1960 du=491/11760 dv=39/980 exc=10 core_gcd=1
+   3. E=(0, 2, 6, 10, 12, 13, 14, 18, 22) p0=286981/1261260 margin=84101/315315 curv=180757/1261260 du=111/2548 dv=821/30030 exc=12 core_gcd=1
+   4. E=(0, 3, 5, 6, 9, 12, 14, 15, 18) p0=19/70 margin=4461/20020 curv=1247/8820 du=239/4410 dv=641/8820 exc=9 core_gcd=1
+   5. E=(0, 4, 5, 8, 10, 12, 14, 16, 20) p0=751/2940 margin=50201/210210 curv=79/560 du=137/2352 dv=13/294 exc=9 core_gcd=1
+   6. E=(0, 2, 6, 9, 10, 12, 14, 18, 22) p0=3629/13860 margin=20939/90090 curv=13423/97020 du=31/420 dv=1081/24255 exc=12 core_gcd=1
+   7. E=(0, 1, 6, 8, 10, 12, 14, 16, 18) p0=1241/5040 margin=178757/720720 curv=697/5040 du=353/5880 dv=20/441 exc=9 core_gcd=1
+   8. E=(0, 3, 6, 8, 10, 12, 14, 16, 18) p0=361/1260 margin=9358/45045 curv=809/5880 du=25/392 dv=23/360 exc=8 core_gcd=1
+   9. E=(0, 4, 5, 6, 8, 12, 14, 16, 24) p0=953/3920 margin=140781/560560 curv=323/2352 du=99/1960 dv=263/5880 exc=11 core_gcd=1
+  10. E=(0, 6, 7, 8, 10, 12, 14, 16, 18) p0=1321/5040 margin=167317/720720 curv=302/2205 du=137/2352 dv=407/8820 exc=8 core_gcd=1
+
+Bucket maxima
+  small: count=4188, max_p0=321/980 at (0, 4, 6, 8, 10, 12, 14, 15, 16), max_curv=307/1960 at (0, 1, 4, 8, 10, 12, 14, 16, 20)
+  medium: count=130399, max_p0=361/1260 at (0, 2, 3, 6, 9, 10, 12, 15, 18), max_curv=180757/1261260 at (0, 2, 6, 10, 12, 13, 14, 18, 22)
+  large: count=478, max_p0=159017/966966 at (0, 1, 3, 7, 11, 13, 14, 19, 23), max_curv=85615/835107 at (0, 1, 3, 7, 11, 13, 14, 19, 23)
+
+Core-gcd maxima
+  gcd=1: count=134820, max_p0=1729558/5360355 at (0, 3, 5, 7, 9, 11, 13, 15, 17)
+  gcd=2: count=245, max_p0=321/980 at (0, 4, 6, 8, 10, 12, 14, 15, 16)
+
+Row-risk Tournament Analysis
+  vertices: true-wide two-far rows / proof obligations, not runners
+  pairwise observable: larger exact p0/cap wins; ties use curvature then additive excess
+  switch/gauge: direct sector-cover risk; tie Hamiltonian path is lexicographic
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1}, directed_3cycles=0
+  Hamiltonian path:
+     1. E=(0, 4, 6, 8, 10, 12, 14, 15, 16) risk=45903/69265 p0=321/980 curv=-13/1470 exc=7
+     2. E=(0, 3, 5, 7, 9, 11, 13, 15, 17) risk=6918232/10597545 p0=1729558/5360355 curv=226571/5360355 exc=7
+     3. E=(0, 4, 6, 8, 10, 12, 14, 16, 21) risk=537251/831180 p0=3757/11760 curv=-131/11760 exc=8
+     4. E=(0, 4, 6, 8, 10, 12, 14, 16, 19) risk=5028881/7896210 p0=35167/111720 curv=-13/1140 exc=8
+     5. E=(0, 9, 10, 11, 12, 13, 14, 15, 16) risk=1541947/2493540 p0=140177/458640 curv=196177/5045040 exc=7
+     6. E=(0, 4, 6, 8, 10, 12, 14, 16, 23) risk=557843/910340 p0=3901/12880 curv=-5849/90160 exc=8
+     7. E=(0, 3, 6, 9, 11, 12, 14, 15, 18) risk=381056/623385 p0=7328/24255 curv=6913/97020 exc=7
+     8. E=(0, 3, 6, 7, 9, 11, 12, 15, 18) risk=53612/89055 p0=1031/3465 curv=1739/24255 exc=10
+     9. E=(0, 2, 6, 8, 10, 12, 14, 18, 21) risk=8294/13853 p0=29/98 curv=31/5880 exc=10
+    10. E=(0, 3, 5, 7, 9, 11, 13, 15, 19) risk=7053532/11844315 p0=1763383/5990985 curv=1238/41895 exc=8
+    11. E=(0, 2, 6, 8, 10, 12, 14, 18, 23) risk=17018573/28675710 p0=119011/405720 curv=-401/101430 exc=10
+    12. E=(0, 4, 6, 8, 10, 12, 14, 16, 17) risk=8297861/14130060 p0=58027/199920 curv=-655/39984 exc=8
+
+Far-speed first-increment Tournament Analysis
+  vertices: far speeds 15..24
+  pairwise observable: aggregate over cores of [p0(B+u)-p0(B)] - [p0(B+v)-p0(B)]
+  switch/gauge: larger first increment wins; lower speed wins exact zero ties
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}, directed_3cycles=0, ties=0
+  Hamiltonian path=[15, 18, 16, 20, 17, 24, 21, 22, 19, 23]
+    edge 15->16 pressure=1355047/252252
+    edge 15->17 pressure=83021893/5360355
+    edge 15->18 pressure=11146973/2522520
+    edge 15->19 pressure=57565229/2396394
+    edge 15->20 pressure=1769029/114660
+    edge 15->21 pressure=12128381/630630
+    edge 15->22 pressure=479312/21021
+    edge 15->23 pressure=180486693/6446440
+
+Proof-route reading
+  1. The exact two-far curvature is the finite analogue of curvilinear boundary approach data.
+  2. Positive curvature means the far speeds are complementary; negative curvature means one-far overlap.
+  3. If the risk leaders are confined to low-excess/dilated-core rows, HYP-2678's d=1 finite check is the right next theorem.
+  4. If high-excess rows only appear with small or negative curvature, the d>=2 branch should be attacked by a signed dimension-penalty bound.
+  5. Scan leader: E=(0, 4, 6, 8, 10, 12, 14, 15, 16), p0=321/980, margin=11681/70070, curvature=-13/1470, core_scaled=(0, 2, 3, 4, 5, 6, 7).
+PASS: exact boundary-curvature scout complete; no LRC(14) proof claimed.
