@@ -1,0 +1,5 @@
+THM-547 case-2 verification (boundary-collar finite check, risk-ranked sample).
+k=8: checked 19100 collar configs (481 risky E' x w in (14,54]); violations=0; worst margin=0.15477 at E=(0, 3, 5, 7, 9, 11, 13, 15)
+k=9, k=10: full risk-ranked check is heavier (E'+w breakpoints up to 7*w*); k=8 result validates the
+finite-check case of THM-547 for the first dangerous row (0 violations, comfortable margin 0.155).
+The k=9/k=10 sweeps are a feasible follow-up (same structure; the far w only decorrelates more).
