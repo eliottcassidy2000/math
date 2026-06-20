@@ -1,3 +1,24 @@
+## codex-S35d update: routing AP-tail theorems through HYP-2655
+
+The introduction of **HYP-2655** (joint plateau/Delta recursion) refines the global LRC(14) proof architecture by providing a unified analytic routing for wide-branch configurations. This hypothesis refutes the single small uniform-constant dovetail in favor of a localized recursion model, complementing the exact rational certificates used for bounded AP-tail cores.
+
+- **HYP-2655: Joint Plateau/Delta Recursion**
+    - **Mechanism:** Replaces the naive uniform-constant tail with a joint recursion between the far-element plateau and the Delta-discrepancy term. This provides a sharper, sign-aware bound for wide-spread configurations where scalar majorants fail.
+    - **Theorem Routing:** AP-tail theorems (THM-543/THM-544) are now formally routed through HYP-2655 to handle the wide/far branch. Bounded AP-tail cores continue to be certified by exact rational finite cutoffs, while HYP-2655 provides the analytic bridge for genuinely wide branches.
+    - **Effect on Three-Band Model:** This integration strengthens the coherence of the **three-band model**. It cleanly separates the **Band 1 (Bounded Near-AP)** exact certificates from the **Band 3 (Dissociated / Far Tail)** recursive bounds, ensuring that each regime is handled by its optimal arithmetical toolset.
+
+- **THM-543: One-Replacement AP-Tail Theorem (Proved)**
+    - **Scope:** Closes the entire one-replacement AP-tail layer. Proved that for any substitution of two AP speeds with one stranger $r \ge 14$, the only row below the $426/35035$ threshold is the resonant $(6,10) \to 20$ row.
+    - **Mouth Retention:** Confirmed that below-threshold rows must retain the four old **drop-6 mouth intervals** exactly. This transforms the near-collar search into a mouth-retention rigidity problem.
+
+- **THM-544: Two-Replacement AP-Tail Theorem (Proved)**
+    - **Scope:** Closes the two-replacement / three-hole AP-tail layer. Proved that every such configuration is already at least $426/35035$, with no below-second exceptions.
+
+- **Active Steering Objectives (Updated):**
+    - **Mouth-Retention Rigidity Lemma:** Develop the formal lemma for mouth-retention rigidity to close the remaining near-collar gap in HYP-2654.
+    - **Joint Recursion Validation (HYP-2655):** Validate the plateau/Delta recursion against wide-spread test cases to harden the Band 3 boundary.
+    - **Global Proof Assembly:** Integrate the completed AP-tail layers and the new HYP-2655 routing into the final LRC(14) theorem.
+
 ## codex-S35b update: one-replacement AP-tail layer
 
 The introduction of the **one-replacement AP-tail layer** (THM-542, SHA 0d024b8) completes the Band 1 (Bounded Near-AP) certificate by proving that all 12-cores formed by replacing exactly one element of the 1..13 sequence with a speed $x > 13$ are strictly bounded below by the AP-window collar.
@@ -809,82 +830,4 @@ The LRC14 proof strategy has been further refined with a target adjustment for c
     - **Target Sharpening:** The new target establishes that any configuration exceeding the colored discrepancy bound necessarily falls above the $M = 7m / (84m + 5)$ floor, effectively closing the gap between on-grid SDRs and off-grid covering sets.
 
 - **Active Steering Objectives (Updated):**
-    - **Discrepancy Bound Verification:** Validate the new colored discrepancy bounds against the previously identified "dangerous" configurations to ensure they are now formally excluded.
-    - **Integration with Slack Diagnostic:** Correlate colored discrepancy spikes with slack component diagnostics to identify potential "tight" clusters that require more intensive verification.
-
-## 3.8 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 10660e5
-A new diagnostic capability has been added to the codex node, providing a granular view of the slack distribution within the LRC14 framework.
-
-- **10660e5 (codex): LRC14 Slack Component Diagnostic**
-    - **Slack Component Analysis:** Introduced a dedicated diagnostic tool to map slack margins across individual runner-region pairs.
-    - **Search Optimization:** The diagnostic identifies "tight" components (slack $\approx 0$) where the binding-pair reduction is most critical. This allows the search algorithm to prune high-slack branches and focus compute on the boundary of the tight locus.
-    - **Slack Margins:** Confirmed that the current global slack margin is anchored by the AP drop-6 core's $7/858$ floor. The diagnostic provides the necessary resolution to verify that no secondary configurations are encroaching on this margin.
-
-- **Active Steering Objectives (Updated):**
-    - **Diagnostic Validation:** Run the slack diagnostic against the current "dangerous" covering configurations to verify their distance from the tight locus.
-    - **Pruning Integration:** Integrate the slack diagnostic results into the primary LRC14 search loop to accelerate configuration verification.
-
-## 3.7 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 44a9b34
-A critical advancement in the B(k) density analysis has been achieved, reframing the problem through a G-minorant reduction and kernel analysis.
-
-- **44a9b34 (kps-S5): B(k) Reduction to Erdős-Turán on Clean Kernel**
-    - **G-Minorant Formulation:** The measure $\mu$ is now bounded by $\mu \ge intG = (5/7)^k + \text{lattice-correction}$, utilizing an explicit **$\psi$-hat kernel**.
-    - **Floor Refutation:** The naive $(5/7)^k$ floor is formally refuted. The corrected integral $intG$ is proven to be strictly positive everywhere ($intG > 0$), with a measured infimum of approximately **0.014**.
-    - **Mathematical Reduction:** The B(k) problem is effectively reduced to proving that the infimum of $intG$ remains strictly positive. This corresponds to an **Erdős-Turán** type problem on a clean kernel, shifting the complexity from global density searches to local kernel analysis.
-
-- **Active Steering Objectives (Updated):**
-    - **Kernel Infimum Proof:** Prioritize the formal proof for $inf(intG) > 0$.
-    - **Erdős-Turán Mapping:** Map the specific lattice-correction parameters to the Erdős-Turán framework to identify any "blind spots" in the $\psi$-hat kernel.
-    - **B(k) Stability:** Verify the stability of the 0.014 infimum across varying $k$ to ensure the lattice-correction doesn't collapse at the limit.
-
-## 3.6 Analysis of Recent Commits (Thursday, June 18, 2026) - Digest 172ce59
-The latest cluster update via the kind-pasteur node has resolved a critical contention in the THM series and initiated a new offensive on the B(k) floor.
-
-- **172ce59 (kind-pasteur): THM-527 Collision Resolution and B(k) Uniform-Floor Attack**
-    - **THM-527 Collision Resolved:** The collision between the fixed-small-part and THM-527 haa been decoupled. The fixed-small-part logic has been migrated to **THM-529**.
-    - **Hub Status:** The **mac-mini lonely-density hub** maintains authority over THM-527. It remains the primary coordination point for lonely-density calculations.
-    - **B(k) Uniform-Floor Attack:** Initiated a systematic attack on the B(k) uniform-floor. This is targeting the lower bound of the B(k) sequence under uniform distribution constraints, aiming to establish the extremal density properties.
-
-- **Active Steering Objectives (Updated):**
-    - **THM-529 Migration:** Validate the integration of fixed-small-part logic within the new THM-529 framework.
-    - **Lonely-Density Monitoring:** Continue utilizing the mac-mini hub for THM-527 density verification.
-    - **B(k) Offensive:** Analyze initial results from the uniform-floor attack to determine if the expected decoupling floors hold for higher k.
-
-## 3.5 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest 923e3a2
-A major breakthrough in the LRC14 framework has been achieved through the THM-524 binding-pair reduction, reframing the problem from runner-centric to region/pair-centric dynamics.
-
-- **THM-524: Binding-Pair Reduction and Regions Reframe**
-    - **Pairwise SWITCH Dynamics:** The 13-runner problem is condensed into a polynomial set of ~78 pairwise switches. Loneliness off-grid is forced to a *binding pair*—two runners equidistant from the observer—whose crossing determines the optimum.
-    - **Sawtooth-Envelope Lemma:** Proved that $min_i ||v_i \tau||$ is a lower envelope of triangle waves, concave between breakpoints, forcing maxima land on pairwise crossings (or single peaks).
-    - **Regions Model:** Reframed the on-grid case as a **q-witness** (residues mod 14). A perfect SDR (distinct nonzero residues) handles the easy configurations.
-    - **The Blind Complement:** The region model is blind off-grid; however, the **covering hard core family** is now modeled with the closed-form measure $M = 7m / (84m + 5)$.
-    - **Tournament Analogy:** Confirmed the reversal exact tournament bridge (involution $-1 \in (\mathbb{Z}/14)^*$ maps to tournament complement). The overtaking tournament is confirmed as transitive, meaning the Rédei link is inactive in this specific snapshot.
-
-- **New Registrations:**
-    - **HYP-2571:** Formalizes the binding-pair optimality for LRC.
-    - **T839:** Detailed analysis of the covering hard core margin ($98 > 89$ inequality).
-
-- **Active Steering Objectives (Updated):**
-    - **Primary Focus:** Shift objectives to **THM-524** and the analysis of pairwise SWITCH dynamics.
-    - **Validation:** Use the polynomial switch checklist to verify the remaining "dangerous" covering configurations.
-    - **Off-Grid Analysis:** Focus on bounding $inf M$ for covering sets that slip off the grid, specifically targeting the $M = 7m / (84m + 5)$.
-
-## 3.3 Analysis of Recent Commits (Wednesday, June 17, 2026) - Digest b40125f
-Following the recent structural synthesis, significant progress has been made on the singular-series proof and the tight locus configuration.
-
-- **b40125f (monad-explorer): THM-523 Near-Complete Singular-Series Proof**
-    - **Reduction to OPEN-Q-108:** The proof is now reduced to the OPEN-Q-108 lemma, which establishes that a uniform measure on $G_C$ is equivalent to tight-locus finiteness (HYP-2561).
-    - **Decoupling Floor (1/143):** Recorded a proved decoupling floor of 1/143. When one speed approaches infinity, the lonely measure $L$ is pushed up.
-    - **Single-Perturbation Infimum (1/1260):** The infimum is recorded at exactly 1/1260, featuring explicit weights $\le 93$. The two-speed-clash champion is $15/36 - 2/5 - 1/70 - 1/504 = 1/2520$, which is doubled to $1/1260$.
-    - **Tight Locus Confirmation:** Zero counterexamples were found. The tight locus contains only Arithmetic Progressions and the Goddyn-Wong T5 configuration, yielding a max-min of exactly 1/14.
-
-- **THM-522 Formulation Correction (Part C):**
-    - **Correction:** The 'bounded lcm' condition is false. The formulation must instead bound the perturbing elements.
-
-- **Active Steering Objectives (Updated):**
-    - **Primary Focus:** Focus on resolving OPEN-Q-108 and HYP-2561 to complete the THM-523 series.
-
-- **4356c56 (codex-p5):** Erdős-Moser support gate sharpening.
-- **4fa5cdfb (codex):** LRC14 ladder support gate integration.
-- **c9cb8ee (codex-2026-06-16):** Pisano quotient Q27 packet integration.
-These developments complete the integration of the LRC14-Pisano framework as outlined in the latest THM/HYP series.
+    - **Discrepancy Bound Verification:** Validate the new colored discrepancy bounds against the previously identified "dangerous" configurations to ensure th... [truncated]
