@@ -1,0 +1,50 @@
+HYP-2673 LRC14 constant stack
+exact Fraction arithmetic
+
+constant stack
+name | value | currency | proof role
+shell-damage threshold | 426/35035 (0.012159) | fixed-observer safe mass | HYP-2661/HYP-2666 gate: damaging the dyadic-1 tower pays this floor
+finite packet tax | 2/5 (0.400000) | Delta_w^+/p1(E') | shell-full finite pocket; B13 leader stays below this
+new-speed packet tax | 1/3 (0.333333) | Delta_w^+/p1(E') | HYP-2671 local constant; dyadic m=4 leader is the sharp scout row
+far-tail packet tax | 1/4 (0.250000) | Delta_w^+/p1(E') | suggested tail lemma for max(E')>24 after the shell-full quotient
+scale-cluster C(k) | 293/100 (2.930000) | w*|Delta_w|, k=9 scout value | global far-peel budget; should be O(number of scale clusters)
+
+exact slack ledger
+drop-6 mouth floor                 = 7/858 (0.008159)
+AP one-hole second threshold        = 426/35035 (0.012159)
+second threshold - drop-6           = 841/210210 (0.004001)
+
+tower-deletion margins above 426/35035
+  delete 1: value=1333/30940 (0.043083), margin=73673/2382380 (0.030924)
+  delete 2: value=27/1547 (0.017453), margin=3153/595595 (0.005294)
+  delete 4: value=335/23023 (0.014551), margin=1927/805805 (0.002391)
+  delete 8: value=6163/336336 (0.018324), margin=1481/240240 (0.006165)
+
+shell-full p1-tax margins
+  finite B13 leader below 2/5       = 139/12810 (0.010851)
+  new-speed leader below 1/3        = 206/12957 (0.015899)
+  far-tail leader below 1/4         = 355217/16343572 (0.021734)
+
+far-element scale-cluster budget
+cap_9 - Q(8) margin                 = 129643/980980 (0.132157)
+candidate C | needed w >= ceil(C/margin)
+  old non-resonant target     : C=39/20 (1.950000), span >= 15
+  KPS scale-count example     : C=293/100 (2.930000), span >= 23
+  HYP-2655 multiscale sample  : C=2804017/717360 (3.908800), span >= 30
+  linear k=9 toy bound        : C=9 (9.000000), span >= 69
+
+Interpretation
+  The old 1.95 target was a non-resonant convenience, not the theorem.
+  HYP-2653c asks for C(k)=O(number of scale clusters), then a finite
+  base span roughly C(k)/(cap_9-Q(8)).  For k=9, the observed resonant
+  values still point to a bounded-span extension, not to a failure.
+
+Tournament Analysis
+  vertices: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices
+  observable: exact proof currency attached to each gate, not raw runner labels
+  switch/gauge: normalize endpoint discrepancy either by p1(E') or by w
+  Hamiltonian path: shell_damage_gate > finite_packet_tax > new_speed_packet_tax > far_tail_packet_tax > scale_cluster_Ck > raw_runner_vertices
+  challenged assumption: there is one scalar constant to prove.  The data
+    supports a stack of currencies: local boundary mass p1, and global
+    scale-cluster count divided by w.
+PASS: constant-stack scout complete.

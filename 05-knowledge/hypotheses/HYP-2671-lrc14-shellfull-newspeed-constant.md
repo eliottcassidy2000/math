@@ -91,6 +91,34 @@ m=24: 523/6580
 So the `1/3` constant is the rational gap above `1371/4319`, not a broad
 moving frontier.
 
+## S46 Long-Family Addendum
+
+Script:
+
+```text
+04-computation/lrc14_dyadic_block_long_family_codex_s46.py
+```
+
+Output:
+
+```text
+05-knowledge/results/lrc14_dyadic_block_long_family_codex_s46.out
+```
+
+This extends the same exact dyadic-block family to `m=3..120`:
+
+```text
+global family top: m=4, ratio=1371/4319
+tail m>24 top:    m=60, ratio=3048/25067
+best m=61..120:   m=78, ratio=3632/31857
+```
+
+Thus the `m=4` spike remains isolated in the targeted family through `m=120`.
+After `m=24`, the best tested row is only about `0.1216`, far below `1/3` and
+far below the B30 non-family new-speed competitors.  This does not prove the
+new-speed lemma, but it strengthens the interpretation: `m=4` is a finite
+resonance to isolate, not the first term of a high-ratio tail.
+
 ## Fold Guardrail
 
 HYP-2670 suggested fold-target dilution as the reason new speeds fall.  HYP-2671

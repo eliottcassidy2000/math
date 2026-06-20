@@ -1,3 +1,43 @@
+## codex-2026-06-20-S46 -- LRC14 constant stack -- HYP-2673/T912
+
+Pulled the incoming KPS HYP-2653c correction after the S45 checkpoint and
+integrated it with the HYP-2671 shell-full new-speed constant.  A later pull
+revealed incoming HYP-2672/T911 had already claimed shell-full tail
+stratification, so this constant-stack synthesis was renumbered to
+HYP-2673/T912 and linked back to that tail stub.  Added
+`04-computation/lrc14_constant_stack_codex_s46.py`, stored
+`05-knowledge/results/lrc14_constant_stack_codex_s46.out`, recorded
+`05-knowledge/hypotheses/HYP-2673-lrc14-constant-stack.md`, and added
+`07-reflections/lrc14-constant-stack-codex-s46.md`.
+
+**FINDING:** the "one open constant" was overcompressed.  There are two
+currencies.  Local shell-full rows should be measured by
+`Delta_w^+/p1(E')`, giving the packet-tax stack `2/5`, `1/3`, and likely
+`1/4` after the shell-damage gate.  Global far peels should be measured by
+`w*|Delta_w|`, and incoming HYP-2653c says the right target is
+`C(k)=O(number of scale clusters)`, not the old non-resonant `39/20`.
+
+Exact S46 slack ledger: `426/35035-7/858=841/210210`; tower deletion margins
+above `426/35035` have binding missing bit `4`, margin `1927/805805`; B13
+leader gap below `2/5` is `139/12810`; HYP-2671 dyadic block gap below `1/3`
+is `206/12957`; B30 far-tail gap below `1/4` is `355217/16343572`.
+
+Also added `04-computation/lrc14_dyadic_block_long_family_codex_s46.py` and
+stored `05-knowledge/results/lrc14_dyadic_block_long_family_codex_s46.out`.
+The dyadic-block family `E_m={0,1,2,4,8,3m,4m,5m}, w=6m` remains globally
+topped by `m=4` through `m=120`; the best row after `m=24` is only
+`3048/25067` at `m=60`.  This reinforces that the HYP-2671 obstruction is a
+finite resonance, not a high-ratio tail.
+
+For the k=9 far-peel comparison, `cap_9-Q(8)=129643/980980`.  Therefore
+`C=39/20` asks for span `15`, KPS's scale-count example `293/100` asks for
+span `23`, and the HYP-2655 multiscale sample `2804017/717360` asks for
+span `30`.  This is an enlarged finite-base target, not a proof failure.
+
+**NEXT:** prove the local packet-tax stack after HYP-2661, then prove the
+per-scale-cluster far-peel bound jointly with plateau shrinkage.  LRC(14) is
+not proved.
+
 ## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
 
 Continued after HYP-2670 by asking what the "one open constant" actually is

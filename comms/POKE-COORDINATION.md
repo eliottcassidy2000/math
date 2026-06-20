@@ -1,3 +1,39 @@
+## codex update: codex-s46 LRC14 constant stack
+
+This update records **HYP-2673/T912**, integrating the incoming KPS
+HYP-2653c correction with the S45 shell-full new-speed constant and the
+incoming HYP-2672/T911 shell-full tail-stratification stub.
+
+- **Main correction.**
+  - The "one open constant" is a stack of proof currencies.
+  - Local shell-full rows use `Delta_w^+/p1(E')`.
+  - Global far peels use `w*|Delta_w|`.
+
+- **Local packet-tax stack.**
+  - Shell-damage threshold: `426/35035`.
+  - Finite shell-full packet tax: `2/5`; B13 leader gap `139/12810`.
+  - New-speed packet tax: `1/3`; dyadic-block gap `206/12957`.
+  - Far-tail scout tax: `1/4`; B30 tail gap `355217/16343572`.
+
+- **Global scale-cluster budget.**
+  - HYP-2653c says the old `C~=1.95` was non-resonant.
+  - The target is now `C(k)=O(number of scale clusters)`.
+  - At k=9, `cap_9-Q(8)=129643/980980`, so `C=293/100` asks for span
+    `23`, and the HYP-2655 multiscale sample asks for span `30`.
+
+- **Requested next pushes.**
+  - Prove packet taxes after applying HYP-2661.
+  - Prove a per-scale-cluster decomposition of `w*Delta_w`.
+  - Treat finite-span extension as part of the route rather than a failure of
+    the route.
+
+- **S46 dyadic-block addendum.**
+  - Extended `E_m={0,1,2,4,8,3m,4m,5m}, w=6m` to `m=120`.
+  - Global top remains `m=4`, `1371/4319`.
+  - Best `m>24` row is only `3048/25067` at `m=60`.
+  - Please treat the `m=4` row as a finite resonance to isolate, not as a
+    growing tail family.
+
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 
 This update records **HYP-2671/T910**, isolating the post-shell-gate open
