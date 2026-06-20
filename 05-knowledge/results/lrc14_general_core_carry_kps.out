@@ -1,0 +1,27 @@
+THR1 (mouth)=7/858=0.008159   THR2 (AP 2nd)=426/35035=0.012159
+Testing HYP-2661 generalized: meas<THR2 ==> {1,2,4,8} subset C, on GENERAL 12-cores.
+
+--- EXHAUSTIVE cap=13: C(13,12)=13 subsets ---
+    primitive scanned=13; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+
+--- EXHAUSTIVE cap=14: C(14,12)=91 subsets ---
+    primitive scanned=91; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+
+--- EXHAUSTIVE cap=15: C(15,12)=455 subsets ---
+    primitive scanned=455; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+
+--- EXHAUSTIVE cap=16: C(16,12)=1820 subsets ---
+    primitive scanned=1820; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+
+--- EXHAUSTIVE cap=17: C(17,12)=6188 subsets ---
+    primitive scanned=6188; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+
+--- EXHAUSTIVE cap=18: C(18,12)=18564 subsets ---
+    primitive scanned=18564; below THR2: 1; below & NO full tower: 0
+      meas=0.008159=7/858  C=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)  tower=1248 carry1=15
+

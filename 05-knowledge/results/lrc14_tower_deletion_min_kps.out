@@ -1,0 +1,12 @@
+thr2 = 426/35035 = 0.012159
+=== MIN meas(G_C) over AP-tail 12-cores MISSING each tower bit v in {1,2,4,8} ===
+    (if all mins >= thr2, the tower-deletion bound holds; find the binding case)
+
+  v=1 missing: min meas = 1333/30940 = 0.043083  >=thr2 OK  margin=0.030924  at ((1, 6, 10), (17, 20))
+  v=2 missing: min meas = 27/1547 = 0.017453  >=thr2 OK  margin=0.005294  at ((2, 6), (17,))
+  v=4 missing: min meas = 335/23023 = 0.014551  >=thr2 OK  margin=0.002391  at ((4, 6), (46,))
+  v=8 missing: min meas = 6163/336336 = 0.018324  >=thr2 OK  margin=0.006165  at ((6, 8), (16,))
+
+=== for comparison: shell-1-FULL cores that ACHIEVE the threshold ===
+  drop-12: meas=426/35035  (shell-1 full, 1,2,4,8 all present)
+  drop-6: meas=7/858  (shell-1 full, 1,2,4,8 all present)

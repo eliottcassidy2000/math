@@ -60,6 +60,21 @@ Equivalently: the only sub-`426/35035` AP-tail rows are **`{drop-6 = 7/858, one-
   carry inside an existing shell" (a gauge move that keeps the tower); the `{1:-4}` move spends a tower
   bit and is forced to pay the second threshold via a new shell (`{23:+2}`).
 
+## Tower-deletion binding minima (exact) — the quantitative carry conservation
+
+The minimum `meas(G_C)` over AP-tail 12-cores MISSING each tower bit `v` (the "spending" cost):
+```
+   v=1 missing:  min = 1333/30940  = 0.04308  (margin to thr2: 0.0309)   at holes(1,6,10) tails(17,20)
+   v=2 missing:  min = 27/1547     = 0.01745  (margin 0.0053)            at holes(2,6) tail(17)
+   v=4 missing:  min = 335/23023   = 0.01455  (margin 0.0024, TIGHTEST)  at holes(4,6) tail(46)
+   v=8 missing:  min = 6163/336336 = 0.01832  (margin 0.0062)            at holes(6,8) tail(16)
+```
+ALL ≥ `426/35035`; `v=4` is the binding deletion (the middle tower bit, closest to the threshold). The
+shell-1-full cores `drop-12 = 426/35035` (the threshold itself) and `drop-6 = 7/858` (the floor) achieve
+the sub-threshold values, confirming the tower is the ground state and any deletion pays `≥ thr2` with
+the `v=4` deletion the cheapest. (1-tail & 2-tail exhaustive; the `v=4` finite minimum `335/23023` is the
+target of the comb proof below.)
+
 ## Proof target (OPEN)
 
 Prove the quantitative step **"`2^a ∉ C` (a∈{0,1,2,3}) ⟹ `meas(G_C) ≥ 426/35035`"** via the rational

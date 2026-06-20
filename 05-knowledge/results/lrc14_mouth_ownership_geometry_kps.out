@@ -1,0 +1,103 @@
+
+========================================================================
+1. DROP-6 MOUTH WALLS: which speeds bound each surviving component?
+========================================================================
+drop-6 core = (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+meas(G) = 7/858=0.008159  (= THR1)
+
+  mouth 1: [29/182,9/56] len=1/728  LEFT wall R(13,2) (speed 13) | RIGHT wall L(12,2) (speed 12)  det=3
+  mouth 2: [29/168,27/154] len=5/1848  LEFT wall R(12,2) (speed 12) | RIGHT wall L(11,2) (speed 11)  det=5
+  mouth 3: [127/154,139/168] len=5/1848  LEFT wall R(11,9) (speed 11) | RIGHT wall L(12,10) (speed 12)  det=5
+  mouth 4: [47/56,153/182] len=1/728  LEFT wall R(12,10) (speed 12) | RIGHT wall L(13,11) (speed 13)  det=3
+
+  => all mouth-bounding speeds = [11, 12, 13]
+  => tower (1, 2, 4, 8) intersect mouth-walls = []  (EMPTY => tower owns NO mouth wall)
+
+========================================================================
+2. DELETE a tower element from the 12-core: mouths persist, mass explodes
+========================================================================
+(deleting speed s makes an 11-core; isolates the GLOBAL coverage role)
+
+ del |           meas |  >=THR2 | mouths kept | delta_meas
+----------------------------------------------------------------
+   1 |       239/3003 |    True | 4/4 (all 11/12/13 walls intact) | +0.071429
+   2 |      461/12012 |    True | 4/4 (all 11/12/13 walls intact) | +0.030220
+   4 |      389/12012 |    True | 4/4 (all 11/12/13 walls intact) | +0.024226
+   8 |     2243/42042 |    True | 4/4 (all 11/12/13 walls intact) | +0.045193
+
+  Interpretation: removing a tower speed does NOT touch the 11/12/13
+  mouth walls (mouths survive 4/4) but uncovers large far regions; the
+  measure leaps to >= THR2 by GLOBAL coverage loss, not mouth damage.
+
+========================================================================
+3. THE GENUINE BOUNDARY: two-tail min row (HYP-2661 'pay the threshold')
+========================================================================
+core = (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 20, 46)
+meas = 50189/3223220=0.015571   >= THR2 ? True   (carry tower 15 -> 11: lost bit 4)
+
+OLD drop-6 mouths retained: 2/4
+  mouth 1 [29/182,9/56] det=3 (R(13,2)->L(12,2)): KEPT 
+  mouth 2 [29/168,27/154] det=5 (R(12,2)->L(11,2)): DESTROYED
+  mouth 3 [127/154,139/168] det=5 (R(11,9)->L(12,10)): DESTROYED
+  mouth 4 [47/56,153/182] det=3 (R(12,10)->L(13,11)): KEPT 
+
+  => the two OUTER det=3 mouths (13->12, 12->13) survive;
+     the two INNER det=5 mouths (12->11, 11->12) are carved up by the
+     new tail speeds 20,46 (the {5:+2,23:+2} replacements).
+
+========================================================================
+4. PER-COMPONENT MEASURE LEDGER: drop-6 vs perturbations
+========================================================================
+
+drop-6 (THR1, mouth): core=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+  meas = 7/858=0.008159   components = 4
+    [29/182,9/56] len=1/728=0.001374 MOUTH R(13,2)->L(12,2)
+    [29/168,27/154] len=5/1848=0.002706 MOUTH R(12,2)->L(11,2)
+    [127/154,139/168] len=5/1848=0.002706 MOUTH R(11,9)->L(12,10)
+    [47/56,153/182] len=1/728=0.001374 MOUTH R(12,10)->L(13,11)
+
+drop-12 (THR2, AP 2nd): core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+  meas = 426/35035=0.012159   components = 4
+    [15/182,13/154] len=2/1001=0.001998 new   R(13,1)->L(11,1)
+    [29/70,41/98] len=1/245=0.004082 new   R(5,2)->L(7,3)
+    [57/98,41/70] len=1/245=0.004082 new   R(7,4)->L(5,3)
+    [141/154,167/182] len=2/1001=0.001998 new   R(11,10)->L(13,12)
+
+========================================================================
+5. drop-12: how the AP 2nd value relates to the mouth walls
+========================================================================
+drop-12 components and their walls (note: speed 12 is GONE):
+  [15/182,13/154] len=2/1001 R(13,1)(sp13)->L(11,1)(sp11)
+  [29/70,41/98] len=1/245 R(5,2)(sp5)->L(7,3)(sp7)
+  [57/98,41/70] len=1/245 R(7,4)(sp7)->L(5,3)(sp5)
+  [141/154,167/182] len=2/1001 R(11,10)(sp11)->L(13,12)(sp13)
+  drop-12 mouth-wall speeds = [5, 7, 11, 13]
+  (removing speed 12 forces the high-speed collar to re-wall on 11,13,14-ish)
+
+========================================================================
+SUMMARY: the carry-conservation geometry
+========================================================================
+
+The drop-6 MOUTH (the global-min safe set, meas=7/858) is a 4-component collar
+walled EXCLUSIVELY by the three TOP speeds 11,12,13 in the determinant pattern
+[3,5,5,3]:
+    13->12  (det 3)   [outer left]
+    12->11  (det 5)   [inner left]
+    11->12  (det 5)   [inner right]
+    12->13  (det 3)   [outer right]
+
+The TOWER {1,2,4,8} owns NONE of these walls. Its job is GLOBAL: the low dyadic
+speeds 1,2,4,8 are the densest danger-arc generators, so together they CLAMP the
+rest of [0,1) down to near-zero safe mass, leaving only the tight high-speed
+collar. Concretely:
+  * speed 1 alone fixes a 1/7-wide forbidden band around 0 (the wrap arc).
+  * speeds 1,2,4,8 = the geometric dyadic chain -> arcs at every 2^-a scale,
+    the binary refinement that pins the measure to the collar.
+
+Deleting ANY tower bit:
+  * leaves the 11/12/13 mouth walls intact (mouths persist), BUT
+  * removes a whole dyadic scale of coverage, uncovering far mass >> THR2.
+So you cannot damage the tower (carry[1] < 15) without the measure leaping over
+THR2 -- exactly HYP-2661. The conservation is: mouth-mass is tiny and high-speed
+walled; tower-mass is the GLOBAL clamp. Lose a clamp bit, pay the threshold.
+
