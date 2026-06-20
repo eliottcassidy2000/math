@@ -1,7 +1,7 @@
 ---
 id: THM-538
 title: "The support-6 floor for the LRC(14) seven-sector signed Fourier sum — in meas(S7(E)) = M7(k) + Σ_{0≠n∈Λ°(E)} K(n), the kernel K(n) VANISHES unless the relation n has ≥6 coordinates that are nonzero and ≢0 mod 7; the shortest (support ≤5) relations contribute EXACTLY zero, explaining the F3 'absolute 5× lossy' obstruction (the signed sum annihilates all support-≤5 mass)"
-status: DISPUTED (CASE-thm538-support6-floor-zero-padding, kps-S13) — the floor holds for the ACTIVE-COORDINATE sum Q(n) but is FALSE for the full ZERO-PADDED kernel K(n) that appears in the measure expansion: two independent exact computations give K(1,1,−1,0,0,0,0)≈0.0007≠0 (support 3), and the AP's support-3 relations (e.g. 1+2−3=0 ⟹ m=(1,1,−1,0,…)) sum to ≈+0.035 (~12% of the AP correction). The "VERIFIED support≤5 max|K|=5e-17" computed Q, not K. The proof's "C(U)=0" step drops the zero-coordinate factors ĉ_T(0)=(1−|T|/7), which depend on |T| and break the cancellation. [Original claim, now disputed:] PROVED (elementary algebra: C(U)=Σ_{T⊇U}(−1)^{|T|}=(−1)^{|U|}(1−1)^{6−|U|}=0 for |U|<6; the support-2 kernel matrix is identically zero). VERIFIED exhaustively (support ≤5 max |K|=5e-17 incl 7-multiples; nonzero at support 6). Does NOT by itself close the cap bound (absolute support-≥6 residual ~1.2 > δ_8=0.303 at the AP — but the AP is bounded-spread, handled by the exact finite check, NOT this bound).
+status: RESOLVED/CORRECTED (CASE-thm538-support6-floor-zero-padding CONCEDED by author kps-2026-06-19; reconfirmed independently: K(1,1,−1,0,0,0,0)=+0.00066≠0). The support-6 floor is **PROVED for the active-coordinate sum Q(n)** but **FALSE for the zero-padded kernel K(n)** that appears in the measure (the zero coords contribute |T|-dependent factors (1−|T|/7)^z that break the cancellation). The correct kernel structure is the coset factorization K(n)=D7(n mod 7)/∏n_j (HYP-2646), with the correction conditionally convergent and ruled by support-6 relation DENSITY R6 (HYP-2645), NOT a floor. Short relations (support 2–5) DO contribute (the AP's are support-3-dominated). The stranger-contraction / far-element plateau (HYP-2610/2644) is the live wide-spread route and is UNAFFECTED.
 source: kind-pasteur-2026-06-19-S9 (workflow angle wide-spread-signed-weyl)
 depends_on:
   - HYP-2606  # the signed offset-relation-lattice Fourier identity meas(S7)=M7(k)+Σ K(n)
@@ -23,23 +23,33 @@ Fourier expansion over the offset relation lattice `Λ°(E) = {n∈ℤ^{k−1}: 
 where `ĉ_T` = Fourier coefficient of `1_{[0,1)∖∪_{j∈T}[j/7,(j+1)/7)}`, `ĉ_T(0)=1−|T|/7`, and (THM-503)
 `ĉ_T(7m)=0`. `M7(k)=K(0)=Σ_{t=0}^{6}(−1)^t C(6,t)(1−t/7)^{k−1}` is the iid (large-spread) limit.
 
-## The theorem (PROVED)
+## The theorem — CORRECTED (kps-2026-06-19, resolving CASE-thm538): floor holds for Q, NOT for K
 
-> **Support-6 floor.** `K(n) = 0` unless `n` has **at least 6** coordinates that are both nonzero and
-> not multiples of 7. Equivalently: only relations supported on ≥6 distinct offsets (with non-7
-> coordinates) contribute; **every support-≤5 relation — in particular the shortest (λ₁) relations —
-> contributes EXACTLY zero.**
+> ⚠️ **The originally-stated support-6 floor "K(n)=0 for support<6" is FALSE for the zero-padded kernel
+> K(n) that appears in the measure expansion** (CASE-thm538-support6-floor-zero-padding, CONCEDED by the
+> author kps-S9 after independent reconfirmation: K(1,1,−1,0,0,0,0)=+0.00066≠0 at k=8, a support-3
+> relation; the AP's 1+2−3=0 relation genuinely contributes). The bug: the proof's `C(U)=0` step dropped
+> the **zero-coordinate factors `ĉ_T(0)=1−|T|/7`, which depend on |T|** and weight the alternating T-sum
+> by `(1−|T|/7)^z` (z=#zeros), breaking the `(1−1)^{6−|U|}=0` cancellation.
 
-**Proof.** Write `ĉ_T(n_j) = δ_{n_j,0}·(1−|T|/7) + [n_j≠0]·ŝ_T(n_j)` and expand `K(n)` over which
-coordinates are nonzero. Let `U = supp(n)` (the nonzero coordinates; `n_j≡0 mod 7` give `ŝ_T(n_j)=0` by
-the 7-vanishing, so effectively drop them too). For a fixed assignment of sectors, the `T`-sum factors
-through `C(U) := Σ_{T⊇U}(−1)^{|T|}` over the sectors NOT pinned by the nonzero coordinates. Carrying out
-the alternating sum,
-`C(U) = Σ_{T⊇U}(−1)^{|T|} = (−1)^{|U|}\sum_{S⊆\{1..6\}∖U}(−1)^{|S|} = (−1)^{|U|}(1−1)^{6−|U|} = 0`
-unless `|U| = 6`. Hence a surviving term needs all six sectors pinned, i.e. `≥6` genuine (nonzero,
-non-7) coordinates. In particular the support-2 kernel `W[j,l]=Σ_{T⊇\{j,l\}}(−1)^{|T|}` is identically
-zero. ∎ (Verified exhaustively: support ≤5 gives max `|K(n)|=5·10⁻¹⁷`, including zeros and 7-multiples;
-first nonzero at support 6.)
+> **CORRECT statement (PROVED).** The floor holds for the **ACTIVE-COORDINATE sum** `Q(n) :=
+> Σ_T(−1)^{|T|}∏_{j∈U}ŝ_T(n_j)` (the |U|-dimensional kernel with NO zero padding): `Q(n)=0` for
+> support |U|<6 (the proof below is valid for Q), nonzero at |U|=6. The exhaustive "support≤5 ⟹
+> |·|=5e-17" computed Q, not K. **THM-538 conflated Q (active) and K (zero-padded).**
+
+**Proof (for Q).** `Q(n)=Σ_T(−1)^{|T|}∏_{j∈U}ŝ_T(n_j)`; for a fixed sector-assignment the T-sum factors
+through `C(U)=Σ_{T⊇U}(−1)^{|T|}=(−1)^{|U|}(1−1)^{6−|U|}=0` for |U|<6. ∎ (For Q the zero coords are simply
+absent, so no `(1−|T|/7)^z` weight — which is exactly why the argument works for Q but NOT for K.)
+
+## The CORRECT kernel structure (HYP-2646, supersedes the floor framing)
+The right object is the **coset/reciprocal factorization** (kps-S12, verified 1.6e-19):
+`K(n) = D7(n mod 7)/∏_j n_j`, `D7` a FINITE mod-7 character coefficient, NONZERO on all 46656 cosets.
+So `corr(E)=Σ_{c∈(F_7^*)^6} D7(c)·S_c(E)`, `S_c=Σ_{n≡c}1/∏n_j` — the cancellation is the alternating sign
+of `Re D7(c)` (|Re D7|≤0.1431) + the CONDITIONAL convergence of the reciprocal sums, NOT support-6
+sparsity. Short relations (support 2–5) DO contribute. The wide-spread ruler is the support-6 relation
+**DENSITY R6** (HYP-2645: R6=982/924/546/414/156 tracks corr 0.303/0.184/0.213/0.0096/0.0005), and the
+convergent representation is the finite x-cell integral (HYP-2645) / far-element plateau (HYP-2644), NOT
+the box-truncated lattice sum (which is only conditionally convergent — MISTAKE-078).
 
 ## Why it matters
 

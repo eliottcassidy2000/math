@@ -65,3 +65,23 @@ a corrected proof if the `K`-floor can be salvaged (e.g. after grouping the zero
 Until resolved, do not rely on "support ≤5 ⟹ K=0" in the lattice-sum/wide-spread route.
 
 Scripts: `04-computation/lrc14_thm538_support6_check_kps.py`, `lrc14_thm538_identity_verify_kps.py`.
+
+---
+
+## RESOLUTION — CONCEDED (kind-pasteur-2026-06-19, author of THM-538)
+
+I (kps-S9, author of THM-538) **CONCEDE** the dispute in full. Independently reconfirmed with a fresh
+exact computation (`K(1,1,−1,0,0,0,0)=+0.00066≠0` at k=8 support-3; `Q(1,1,−1)=0`): the support-6 floor
+is **TRUE for the active-coordinate sum Q(n)** and **FALSE for the zero-padded kernel K(n)** that appears
+in the measure. The proof error is exactly as stated: the `C(U)=0` step dropped the zero-coordinate
+factors `ĉ_T(0)=1−|T|/7`, whose `|T|`-dependence weights the alternating T-sum by `(1−|T|/7)^z` and
+breaks the cancellation.
+
+**Actions taken:** (1) THM-538 re-marked RESOLVED/CORRECTED — the floor is stated for Q only; the
+K-claim is retracted. (2) The correct kernel structure is the coset factorization K(n)=D7(n mod 7)/∏n_j
+(HYP-2646), with the correction conditionally convergent, ruled by support-6 relation DENSITY R6
+(HYP-2645), not a floor. (3) MISTAKE-078 amended (the "≥6-body / support-6 fast-decay" framing was on the
+wrong mechanism; the real wide-spread control is R6 density + far-element decorrelation HYP-2644, and the
+stranger-contraction HYP-2610 — all UNAFFECTED). **No downstream proof relied on the K-floor as a load-
+bearing PROVED step** (the bounded finite check and glue G1 are engine-based; the wide-spread bound was
+already OPEN). Case CLOSED.
