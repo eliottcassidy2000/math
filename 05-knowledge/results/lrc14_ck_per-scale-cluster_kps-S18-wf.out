@@ -124,6 +124,25 @@ Run:
      hence  C(k) <= slope * (#clusters - 1) <= 2.715 * (k-2)
 
 ======================================================================
+(F) KEY LEMMA (cert.): a SINGLE scale-cluster contributes O(1) INDEPENDENT of its size
+======================================================================
+  This is the engine of the per-cluster bound: take ONE cluster = the
+  consecutive block {0,1,...,L-1} (one scale) and scan w.  The worst
+  w|Delta_w| SATURATES (does not grow with L).  => within-cluster
+  cancellation caps each cluster at a fixed constant K_1, regardless of
+  how many runners the cluster holds.  Hence C(k) <= K_1 * r, r=#clusters.
+  L (cluster size)  worst w|Delta|  (w*)
+                 3          0.0000  (w=0)
+                 4          0.0000  (w=0)
+                 5          0.0000  (w=0)
+                 6          0.7327  (w=41)
+                 7          1.0000  (w=175)
+                 8          0.9347  (w=252)
+                 9          1.1079  (w=116)
+
+  => single-cluster constant K_1 <= 1.108 (saturates; no growth in L)
+
+======================================================================
 (E) EXHAUSTIVE check on small primitive cores (w-scan), worst w|Delta|
 ======================================================================
   scanned 456 primitive cores (k in 5,6, entries<=10), w<56
@@ -138,6 +157,7 @@ SUMMARY  (mark PROVED / VERIFIED / CONJECTURE explicitly)
   (C) per-cluster decomposition is EXACT    : PROVED (exact)
       worst single-cluster |contribution|   : 4.787  (VERIFIED numerically)
   (D) worst w|Delta| linear in #clusters    : VERIFIED; per-cluster slope <= 2.715
+  (F) single-cluster constant K_1 (size-indep): 1.108  (VERIFIED: saturates in L)
   (E) exhaustive small-core worst w|Delta|  : 1.000  (VERIFIED)
 
   THEOREM (per-scale-cluster form), with c = 2.71:

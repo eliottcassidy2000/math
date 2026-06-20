@@ -53,3 +53,21 @@ with COMFORTABLE margins (≥0.22) rather than the tight 0.015 of the old framin
 provably confined to the (done) finite check. This is the same two-gate structure as codex's HYP-2671
 (finite shell pocket + far tax). The cross-route bridge (this session): codex Δ_w^+ ≡ kps Δ_w, same dyadic
 extremizer. → HYP-2653d, HYP-2671, THM-PSK-2/3/4, OPEN-Q-108.
+
+## ADDENDUM — packet-mass decay (advancing codex HYP-2674), exact
+codex's packet sign word: Δ_w = Σ_{s=1}^6 S_s, S_s = Σ_{cells missing exactly s}[G0(wb−s/7)−G0(wa−s/7)].
+Dangerous rows are `++++++` (all packets positive, NO cancellation). kps verification:
+- The TOP far configs by Δ_w ARE `++++++`, but the alignment is **confined to bounded spread**.
+- **Packet-mass DECAY (structured dyadic + 2-cluster, exact):**
+  - max(E) ∈ (15,25]: sup Δ_w = 0.1166 (the dyadic block s=4, max=20) — 88% of margin_9.
+  - max(E) ∈ (25,40]: 0.0492 (37%).  (40,80]: 0.0345 (26%).  (80,160]: 0.0393 (30%).
+  - `++++++` configs with max(E)>40: Δ_w ≤ 0.012.
+- **The dyadic block (max=20, Δ=0.117) is the SOLE near-margin far config.** It is a WIDE-base set
+  (max(E')=20>14), so handled by the COMFORTABLE entanglement (wide ⟹ small Plat; p_0 ≤ 0.27 < cap_9).
+  For max(E)>25, sup Δ_w ≤ 0.05 ≪ margin — the far tail is comfortable.
+
+NET: the route's only tight points are (i) the near-consec finite check (span≤14, DONE) and (ii) the dyadic
+block at span 20 (handled by entanglement, comfortable). Everything else has ≥0.22 (wide) or ≥0.08 (far,
+max>25) margin. The remaining RIGOROUS content is the packet-mass tail bound sup_{max>B}Δ_w ≤ ε(B) (ε→~0.035
+floor, ≪ margin) — the σ-bound (6/7)σ/w is useless here (σ~w at the resonance), so it needs the Erdős–Turán
+packet-cancellation estimate, but now with a LOOSE target (0.05 vs margin 0.132). → HYP-2674 (codex), HYP-2653d.

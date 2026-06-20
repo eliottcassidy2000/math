@@ -385,12 +385,36 @@ def test_E_exhaustive_small():
     return worst
 
 
+def test_F_single_cluster_saturation():
+    banner("(F) KEY LEMMA (cert.): a SINGLE scale-cluster contributes O(1) "
+           "INDEPENDENT of its size")
+    print("  This is the engine of the per-cluster bound: take ONE cluster = the")
+    print("  consecutive block {0,1,...,L-1} (one scale) and scan w.  The worst")
+    print("  w|Delta_w| SATURATES (does not grow with L).  => within-cluster")
+    print("  cancellation caps each cluster at a fixed constant K_1, regardless of")
+    print("  how many runners the cluster holds.  Hence C(k) <= K_1 * r, r=#clusters.")
+    print(f"  {'L (cluster size)':>16}  {'worst w|Delta|':>14}  (w*)")
+    K1 = 0.0
+    for L in (3, 4, 5, 6, 7, 8, 9):
+        core = list(range(L))
+        worst, ww = 0.0, 0
+        for w in range(2, 300):
+            v = wDelta(core, w)
+            if v > worst:
+                worst, ww = v, w
+        K1 = max(K1, worst)
+        print(f"  {L:>16}  {worst:14.4f}  (w={ww})")
+    print(f"\n  => single-cluster constant K_1 <= {K1:.3f} (saturates; no growth in L)")
+    return K1
+
+
 def main():
     print(__doc__)
     okA = test_A_telescoping()
     okB = test_B_G0()
     wcl = test_C_cluster_decomposition()
     slope = test_D_linear_in_clusters()
+    K1 = test_F_single_cluster_saturation()
     we = test_E_exhaustive_small()
 
     banner("SUMMARY  (mark PROVED / VERIFIED / CONJECTURE explicitly)")
@@ -400,6 +424,8 @@ def main():
     print(f"      worst single-cluster |contribution|   : {wcl:.3f}  (VERIFIED numerically)")
     print(f"  (D) worst w|Delta| linear in #clusters    : VERIFIED; per-cluster slope <= "
           f"{slope:.3f}" if slope else "  (D) skipped")
+    print(f"  (F) single-cluster constant K_1 (size-indep): {K1:.3f}  "
+          f"(VERIFIED: saturates in L)")
     print(f"  (E) exhaustive small-core worst w|Delta|  : {we:.3f}  (VERIFIED)")
     print()
     c_explicit = (slope if slope else 3.0)

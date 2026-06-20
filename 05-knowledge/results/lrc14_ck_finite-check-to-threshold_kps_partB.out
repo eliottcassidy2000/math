@@ -40,11 +40,12 @@ PART A  --  EXACT margins / caps / Q(k-1) / peel thresholds T_k
            C= 20: T_k =   127.79  ceil= 128  |R_k|<=C(127,9)=17,722,355,795,375
 
 ==============================================================================
-PART B  --  LOAD-BEARING finite check  (tight C<= 3, safe C<= 4)
+PART B  --  THE FINITE CHECK  (optimistic C<= 3; empirics-indicated C<= 4)
 ==============================================================================
   The peel threshold T_k = C(k)/margin_k.  Residual R_k = {primitive E,
   0 in E, |E|=k, max(E) < T_k}.  We exhaustively certify p_0(E) <= cap_k on R_k.
   Enumeration = pruned B&B (upward-closure); 'exh=True' means COMPLETE.
+  NOTE: empirical sup|wDelta| ~3.9 => C=4 is the load-bearing threshold.
 
   [empirical sup_w|w*Delta_w| on worst resonant (k-1)-bases -> motivates C]
     consec7     sup|wDelta| = 0.9143 at w=7
@@ -55,5 +56,13 @@ PART B  --  LOAD-BEARING finite check  (tight C<= 3, safe C<= 4)
       leaves evaluated   : 2,899   certified-subtrees: 2,261 (cover 8,539)
       cap_8              : 2243/5880 = 0.38146
       max p_0 over R_k    : 0.32721  at (0, 1, 2, 3, 4, 5, 6, 7)  (=consec argmax)
+      violations          : 0    exhaustive: True
+      => TIGHT verdict: PASS (complete, 0 viol, consec argmax)
+      SAFE C=4 T_k=22 (R_k<=~116,280): leaves 46,576, viol 0, max p_0 0.32721, exhaustive True
+
+  --- k=9: TIGHT C=3  T_k=23  (R_k <= C(22,8) = 319,770) ---
+      leaves evaluated   : 93,868   certified-subtrees: 50,003 (cover 225,877)
+      cap_9              : 1979/4004 = 0.49426
+      max p_0 over R_k    : 0.41616  at (0, 1, 2, 3, 4, 5, 6, 7, 8)  (=consec argmax)
       violations          : 0    exhaustive: True
       => TIGHT verdict: PASS (complete, 0 viol, consec argmax)

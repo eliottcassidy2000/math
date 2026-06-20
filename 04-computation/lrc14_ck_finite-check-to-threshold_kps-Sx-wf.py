@@ -365,8 +365,9 @@ def conservative_bnb(k, Tc, cap, node_budget=None):
     best = [F(0), None]
     n_leaf = [0]; n_pruned = [0]; n_cert = [0]; n_viol = [0]; viol = []
     nodes = [0]; exhausted = [True]
+    prefix = [0]  # SHARED mutable prefix (append/pop) -- avoids per-call list copies
 
-    def dfs(prefix, start):
+    def dfs(start):
         if node_budget is not None and nodes[0] >= node_budget:
             exhausted[0] = False
             return
@@ -390,18 +391,20 @@ def conservative_bnb(k, Tc, cap, node_budget=None):
             return
         # upward-closure completion bound: P u (entire future window)
         if len(prefix) >= 3:
-            window = universe[start:]
-            ub = p0(prefix + window)
+            ub = p0(prefix + universe[start:])
             if ub <= cap:
                 n_pruned[0] += 1
                 n_cert[0] += comb(rem, need)  # every completion certified <= cap
                 return
-        for i in range(start, nU - need + 1):
-            dfs(prefix + [universe[i]], i + 1)
+        last = nU - need + 1
+        for i in range(start, last):
+            prefix.append(universe[i])
+            dfs(i + 1)
+            prefix.pop()
             if node_budget is not None and not exhausted[0]:
                 return
 
-    dfs([0], 0)
+    dfs(0)
     return (n_leaf[0], n_pruned[0], n_cert[0], best[0], best[1],
             n_viol[0], viol, exhausted[0])
 
