@@ -102,7 +102,9 @@ Thus the Galois route should not try to prove a standalone trace/QR uniform boun
 joint inequality: intra-quadratic endpoint-weight residual plus plateau margin.  The same multiscale
 geometry that grows the residual must be made to force small `p0(E')+p1(E')/7`.  The incoming KPS
 HYP-2661 shell-1 carry-conservation law gives the complementary bounded-mouth version of this target:
-sub-`426/35035` near-collar rows conserve the dyadic-1 tower `{1,2,4,8}`.
+sub-`426/35035` near-collar rows conserve the dyadic-1 tower `{1,2,4,8}`.  Its follow-up exact
+tower-deletion minima (`1333/30940`, `27/1547`, `335/23023`, `6163/336336`) show every missing tower bit
+already pays the AP second threshold, with missing `4` the binding deletion.
 
 ## Honest status
 LRC(14) NOT proved. CORRECTS HYP-2653b: the "single open input C≈1.95" is FALSE (C grows with scales,

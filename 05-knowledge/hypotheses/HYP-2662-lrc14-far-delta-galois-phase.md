@@ -116,7 +116,10 @@ that projection alone to bound resonance.
 The incoming KPS HYP-2661 shell-1 carry-conservation law is the matching
 plateau-side signal: the bounded near-collar rows below `426/35035` must keep
 the full dyadic-1 tower `{1,2,4,8}`, while damaging that tower pays the AP
-second threshold.  Read together, HYP-2661 constrains the tight mouth/plateau
+second threshold.  The follow-up tower-deletion minima make this quantitative:
+missing `1,2,4,8` gives exact minima `1333/30940`, `27/1547`, `335/23023`,
+`6163/336336` respectively, all above `426/35035`, with the missing-`4` case
+binding closest.  Read together, HYP-2661 constrains the tight mouth/plateau
 templates and HYP-2662 isolates the far-resonant residual channel that remains
 to be bounded against the shrinking plateau.
 
