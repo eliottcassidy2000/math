@@ -18,6 +18,17 @@ external: Lonely Runner Conjecture (first open case = 13 speeds). Koksma/Erdős�
 
 # THM-546 — The far-element decorrelation bound
 
+> **INTEGRATION with kind-pasteur-S19 (concurrent).** kps-S19 proved the **finite half**
+> (`p0(E)≤cap_k` for all primitive `E` with `max(E)≤14`, `k=8..12`, zero violations, consec
+> the argmax) and showed the wide regime is comfortable (`margin ≥ 0.22`) via a "Plat↔Δ
+> entanglement" (a wide base ⟹ small `Plat=Φ` compensates the larger `Δ_w`). kps also
+> corrected the target: `C(k)=sup_E w|Δ_w|` is FALSE — `w|Δ_w|` is **`Ω(spread)`, unbounded**.
+> THM-546 is fully consistent with and complementary to this: my bound gives
+> `w|Δ_w| ≤ κV(E')/π² ~ κ·spread/π²`, which *correctly* reproduces the `Ω(spread)` growth (via
+> `V(E')`), and it is the rigorous analytic backbone for the **gapped** far-element regime
+> (`w ≫ max(E')`), where kps's comfortable-margin structure is computational. The two together
+> = finite half (proved) + wide/gapped half (THM-546 + the Plat↔Δ entanglement).
+
 ## Setup (HYP-2642's recursion)
 
 The S3 crux is `p0(E) := meas(S7(E)) ≤ cap_k`. kind-pasteur's **HYP-2642** peels the largest
