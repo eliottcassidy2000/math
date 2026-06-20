@@ -31,6 +31,20 @@ Tiling model: tournament on `{1..n}`, fixed base path `n→…→1` (arc `k→k-
    `h(n)=2h(n-1)-2h(n-3)+h(n-4)` (= A+B−C+D−E−F+G, the −C+D equal-size but geometrically
    distinct: C an edge-overlap, D a corner). Both satisfied by `⌊(n−1)²/4⌋`.
 
+## Verified extensions (mac-mini-S4)
+6. **Square/pronic shape (the even/odd "different shape"):** odd `n=2k+1` ⟹ half-tiling `= k²`
+   (perfect SQUARE); even `n=2k` ⟹ `= k(k−1)` (PRONIC rectangle). The square (odd) admits the
+   3-corner decomposition; the pronic (even) does not — exactly the user's "even tournaments do
+   not produce half-tilings with 3 corners." (VERIFIED n=2..14.)
+7. **Recurrence order:** the order-4 recurrence `h(n)=2h(n−1)−2h(n−3)+h(n−4)` (char poly
+   `(x−1)³(x+1)`) holds for ALL n; EVEN n *additionally* satisfies the order-2 `h(n)=2h(n−1)−h(n−2)`.
+   So even is degenerate (extra recurrence, pronic), odd is generic (order-4, square).
+8. **Complement-invariance ⟹ 2× computation (engineering):** `c3(T)=c3(T^op)`, `HP(T)=HP(T^op)`
+   for ALL tournaments (VERIFIED n=4,5,6, 100%); scores complement to `(n−1)−s`. Hence any
+   complement-invariant invariant (cyclic-triangle count, Ham-path count, H, OCF, Walsh order-2)
+   is computable by summing over the `⌊(n−1)²/4⌋`-cell half-region instead of the full
+   `C(n−1,2)` — a literal 2× saving, the diagonal SC spine handled once.
+
 ## Significance
 The half-tiling factors out the SAME Z_2 (complement = reverse-all-arcs) as the merged metagraph
 `G_n/Z_2`, but in tiling coordinates where the involution is a literal mirror over `y=x` and the

@@ -1,0 +1,31 @@
+(1) RECURSIONS:
+     n  h(n)   even 2h(n-1)-h(n-2)  odd 2h(n-1)-2h(n-3)+h(n-4)
+     2     0                  None                        None
+     3     1                  None                        None
+     4     2                  2 OK                        None
+     5     4                     3                        4 OK
+     6     6                  6 OK                           6
+     7     9                     8                        9 OK
+     8    12                 12 OK                          12
+     9    16                    15                       16 OK
+    10    20                 20 OK                          20
+    11    25                    24                       25 OK
+    12    30                 30 OK                          30
+    13    36                    35                       36 OK
+    14    42                 42 OK                          42
+
+(2) GEOMETRIC 7-region incl-excl for ODD n: h(n) =? A+B-C+D-E-F+G
+    A=B=h(n-1), C=D=h(n-2), E=F=h(n-3), G=h(n-4)
+    n=5: A+B-C+D-E-F+G = 4  h(n)=4  OK
+    n=7: A+B-C+D-E-F+G = 9  h(n)=9  OK
+    n=9: A+B-C+D-E-F+G = 16  h(n)=16  OK
+    n=11: A+B-C+D-E-F+G = 25  h(n)=25  OK
+    n=13: A+B-C+D-E-F+G = 36  h(n)=36  OK
+
+(3) COMPLEMENT-INVARIANCE of tournament invariants (reverse all arcs):
+   n=4 (64 tournaments): c3(T)=c3(T^op) in 64/64; HP(T)=HP(T^op) in 64/64; score-complement law in 64/64
+   n=5 (1024 tournaments): c3(T)=c3(T^op) in 1024/1024; HP(T)=HP(T^op) in 1024/1024; score-complement law in 1024/1024
+   n=6 (32768 tournaments): c3(T)=c3(T^op) in 32768/32768; HP(T)=HP(T^op) in 32768/32768; score-complement law in 32768/32768
+
+   => c3, HP complement-INVARIANT (so summable over the half-region); scores complement to (n-1)-s.
+   => SC tournaments (T iso T^op) = self-paired = the diagonal {x+y=n+1} spine.
