@@ -1,3 +1,19 @@
+## codex-2026-06-19-S40 -- p1-tax constant refined; interval envelope too coarse -- HYP-2665
+
+User asked to keep pushing the next sharp LRC14 target and to spend a long session pulling/pushing.  Continued from HYP-2664's residual/plateau packet-tax route and built `04-computation/lrc14_p1_tax_envelope_codex_s40.py`, with output stored at `05-knowledge/results/lrc14_p1_tax_envelope_codex_s40.out`, and detail file `05-knowledge/hypotheses/HYP-2665-lrc14-p1-tax-envelope-refinement.md`.
+
+**FINDING:** HYP-2664's proof currency is still right, but the raw `p1/3` constant is false.  Exact counterexamples:
+
+```text
+E'=(0,1,3,5,7,9,10,11), w=13:
+  Delta_w^+/p1 = 95943/269360 ~= 0.356189
+
+E'=(0,1,2,3,6,7,10,11), w=12:
+  Delta_w^+/p1 = 4691/13076 ~= 0.358749
+```
+
+Two more sampled B=13 rows also exceed `1/3`, but all `3872` tested rows stay below `3/8`.  The elementary interval-length envelope is much too coarse: its maximum is `6/7`, and every targeted B=13 row has envelope above `1/3` even though only three actual rows do.  The live proof target is therefore not a direct coarea/length estimate; it is `Delta_w^+ <= 3*p1(E')/8`, or a phase-packet cancellation theorem that classifies the rows above `1/3`.  LRC(14) is not proved.
+
 ## codex-2026-06-19-S39 -- residual/plateau packet tax; p1-boundary route for far discrepancy -- HYP-2664
 
 User asked to creatively push the next sharp target and think abstractly about patterns in the repo.  Pulled the new mainline first: KPS HYP-2661 now gives a dyadic-1 tower clamp for the tight mouth, and codex HYP-2663 imports old root-packet/FKN structure into AP-tail packets.  Built `04-computation/lrc14_residual_plateau_packet_codex_s39.py`, stored `05-knowledge/results/lrc14_residual_plateau_packet_codex_s39.out`, and recorded `05-knowledge/hypotheses/HYP-2664-lrc14-residual-plateau-packet-tax.md`.

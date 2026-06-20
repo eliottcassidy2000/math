@@ -1,7 +1,7 @@
 ---
 id: HYP-2664
 title: LRC14 residual/plateau packet tax - far residual is paid by p1 boundary mass
-status: OPEN; exact finite evidence and new proof target
+status: OPEN; p1 currency supported, but the p1/3 raw constant is refuted by HYP-2665
 source: codex-2026-06-19-S39
 depends_on:
   - HYP-2662
@@ -10,6 +10,7 @@ depends_on:
   - HYP-2661
   - HYP-2663
 related:
+  - HYP-2665
   - HYP-2648
   - HYP-2658
   - HYP-2660
@@ -37,9 +38,13 @@ residual channels.  HYP-2664 proposes the next sharp inequality:
 positive far discrepancy Delta_w is controlled by c*p1(E')
 ```
 
-with a proof-friendly target `c=1/3`, and a sharper residual-only target near
-`c=1/4`.  The key point is that `p1(E')` is already present in the plateau, so
+with an initial proof-friendly target `c=1/3`, and a sharper residual-only
+target near `c=1/4`.  The key point is that `p1(E')` is already present in the plateau, so
 this turns the resonant endpoint problem into a joint plateau/Delta inequality.
+
+**S40 correction:** HYP-2665 refutes the raw `c=1/3` constant.  The `p1`
+currency remains useful, but the next viable raw target is `c=3/8`, or a
+packet-refined bound that handles the few rows above `1/3`.
 
 ## Evidence
 
@@ -97,6 +102,8 @@ Delta_w <= p1(E')/3
 
 would clear the entire bounded AP-window 9-row bank with exact slack, while the
 wide/multiscale rows already have much smaller `Phi(E')` and large cap margin.
+HYP-2665 shows this theorem is too strong as a raw far-discrepancy claim:
+`Delta_w^+/p1` reaches `4691/13076 ~= 0.358749` in a targeted bounded row.
 
 ## Interpretation
 
@@ -118,7 +125,7 @@ the one-missed-sector region, so its natural price is `p1(E')`.
 Prove one of the following:
 
 ```text
-(A) Delta_w^+ <= p1(E')/3.
+(A') Delta_w^+ <= 3*p1(E')/8.
 (B) residual^+/w <= p1(E')/4 and trace+QR positive tax <= p1(E')/12.
 (C) A sharper packet coarea inequality using phase_packet_class_l1 and p1.
 ```
@@ -126,7 +133,7 @@ Prove one of the following:
 Then combine with the exact bounded-bank certificate:
 
 ```text
-p0(E') + (1/7+1/3)*p1(E') <= cap9
+p0(E') + (1/7+3/8)*p1(E') <= cap9
 ```
 
 on `E'={0}+7`-subsets of `[1,13]`.  Large-tail and nonlocal rows should route
@@ -168,5 +175,6 @@ mass `p1(E')` is the proof-facing currency.
 ## Honest Status
 
 LRC(14) is not proved.  HYP-2664 supplies a much sharper target than the false
-uniform `C` route: prove a `p1`-tax inequality for far discrepancy, then use
-the bounded AP-window certificate and the HYP-2661/HYP-2663 packet rigidity.
+uniform `C` route, but HYP-2665 corrects the constant: prove a `3p1/8` raw
+tax, or a packet-refined `p1` tax, then use the bounded AP-window certificate
+and the HYP-2661/HYP-2663 packet rigidity.
