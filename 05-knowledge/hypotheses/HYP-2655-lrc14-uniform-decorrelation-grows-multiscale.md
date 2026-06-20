@@ -86,6 +86,24 @@ cancellation may be the same object seen from the two threads (S14 far-element d
 Galois). This is the most promising single direction: bound the resonant discrepancy via the apex-prime
 quadratic/Galois phase, not a uniform constant.
 
+## 7. S38 addendum: the trace/QR projection is exact but insufficient
+
+Codex S38 / HYP-2662 tested this cross-thread lead by decomposing every endpoint contribution exactly as
+`G0(y-s/7)=F7_trace_average(y)+chi_7(s)*QR_NQR_quadratic_channel(y)+intra_quadratic_residual(y,s)`.
+The identity verifies through denominator `29`, so the apex-prime phase is real structure at the
+far-element endpoint level.  The negative result is sharper than the original question: the bad HYP-2655
+resonances are not dominated by the trace average or by the QR/NQR channel.  The intra-quadratic
+endpoint-weight residual dominates.  For example, odd-struct at `w=90` has raw `1370/539`, trace
+`167/3234`, quadratic `1735/3234`, residual `1053/539`; the multiscale core `(0,1,2,30,31,32,60,61)` at
+`w=62` has raw `2804017/717360`, quadratic `9073/10980`, residual `114857/38430`; the scale-family
+cluster at `M=50` has raw `19373093/3216850` and residual `6305213/1378650`.
+
+Thus the Galois route should not try to prove a standalone trace/QR uniform bound.  The next target is a
+joint inequality: intra-quadratic endpoint-weight residual plus plateau margin.  The same multiscale
+geometry that grows the residual must be made to force small `p0(E')+p1(E')/7`.  The incoming KPS
+HYP-2661 shell-1 carry-conservation law gives the complementary bounded-mouth version of this target:
+sub-`426/35035` near-collar rows conserve the dyadic-1 tower `{1,2,4,8}`.
+
 ## Honest status
 LRC(14) NOT proved. CORRECTS HYP-2653b: the "single open input C≈1.95" is FALSE (C grows with scales,
 ≥3.91). The wide conclusion is CONFIRMED exact (≤0.223 ≪ cap). The real remaining work on the wide branch

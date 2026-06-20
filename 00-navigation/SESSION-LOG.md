@@ -1,3 +1,20 @@
+## codex-2026-06-19-S38 -- far Delta Galois phase decomposition; simple QR trace bound not enough -- HYP-2662
+
+User asked to keep working on the far-element route and specifically to think about bounding resonant far-element discrepancy through the apex-prime quadratic/Galois phase.  Synced KPS/codex S37 first: HYP-2657 supplies exact `F_7^*` Galois trace collapse for the coset kernel, while HYP-2660 reframes the user's equinumerosities as parity/ghost closure.  Added `04-computation/lrc14_far_delta_galois_phase_codex_s38.py`, stored `05-knowledge/results/lrc14_far_delta_galois_phase_codex_s38.out`, and recorded `05-knowledge/hypotheses/HYP-2662-lrc14-far-delta-galois-phase.md`.
+
+**FINDING:** every exact HYP-2653 endpoint term has the decomposition
+
+```text
+G0(y-s/7) =
+  F7_trace_average(y)
+  + chi_7(s)*QR_NQR_quadratic_channel(y)
+  + intra_quadratic_residual(y,s).
+```
+
+The identities verify exactly through denominator `29`.  The negative/sharp result is that the bad HYP-2655 multiscale resonances are not trace- or QR/NQR-dominated.  They are dominated by the intra-quadratic endpoint-weight residual.  Examples: odd-struct `E'=(0,1,3,5,7,9,10,11), w=90` has raw `1370/539`, trace `167/3234`, quadratic `1735/3234`, residual `1053/539`; multiscale `(0,1,2,30,31,32,60,61), w=62` has raw `2804017/717360`, residual `114857/38430`; the tested scale family reaches `M=50`, raw `19373093/3216850`, residual `6305213/1378650`.
+
+**PROOF ROUTE UPDATE:** HYP-2657's Galois trace is real structure, but a standalone trace/QR bound does not close the far route.  The next sharp target is to bound the intra-quadratic endpoint-weight residual jointly with the HYP-2655 plateau margin: the same multiscale geometry that grows residual Delta should force small `p0(E')+p1(E')/7`.  After rebase, KPS HYP-2661 slots in as the complementary tight-mouth statement: below `426/35035`, the shell-1 tower `{1,2,4,8}` is conserved, so damaging the dyadic-1 mouth pays the second AP threshold.  LRC(14) is not proved.
+
 ## kind-pasteur-2026-06-19-S15 — LRC(14) IS Euler's parity duality at the apex prime 7 (QR/NQR sectors, Galois field-trace = even-factor cancellation, Glaisher 2-adic skeleton, cycle-space=speed matroid) — HYP-2656/2657 + reflection
 
 User: keep aiming for LRC(14); deeply consider Euler's odd↔distinct partition equinumerosity (f=∏(1+xⁿ)=g=∏1/(1−x^{2k−1})) and tournaments↔even graphs. Engaged seriously; ran a 4-angle workflow (QR-cancellation / dyadic-consec-max / CRT-halving / even-graph). FINDINGS (exact):
