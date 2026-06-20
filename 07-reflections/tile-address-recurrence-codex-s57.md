@@ -33,7 +33,7 @@ layer in the half quotient.
 
 ```text
 full new cells at n: n-2
-half new orbit reps at n: floor((n-1)/2)
+new half-address crossing coordinates at n: floor((n-1)/2)
 ```
 
 The discarded side is not lost.  Its tile address is reflected by
@@ -43,6 +43,12 @@ The discarded side is not lost.  Its tile address is reflected by
 ```
 
 This gives a precise address for routing paired contributions.
+
+Precision: the half-address coordinates are literal one-bit coordinates only
+on the grid-symmetric/self-converse subcube.  For the full complement quotient,
+nonfixed mirror pairs still carry unordered pair states.  The address quotient
+is therefore a routing compression first; it becomes a bit compression only
+after imposing grid symmetry.
 
 ## Root Packet Reading
 

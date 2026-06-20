@@ -33,17 +33,20 @@ invariants as `n` grows.  THM-551 proves the local address layer:
 - `tau` is the half-tiling mirror crossing;
 - `(beta,tau)` recovers the tile and its one-flip interval-root facts.
 
-The open claim is that many cycle-space computations can be updated on the
-half quotient by processing only the new `tau=n` crossing layer, rather than
-all `n-2` new full-strip tiles.
+The open claim is that many cycle-space computations can be routed through the
+new `tau=n` crossing layer before expanding to the full strip.  On the
+grid-symmetric/self-converse subcube this is a literal one-bit-per-orbit update.
+On the full complement quotient, nonfixed mirror pairs still carry unordered
+pair states, so the saving is an address/state compression rather than a naive
+one-bit replacement.
 
 ## Exact Evidence
 
 When passing from `n-1` to `n`:
 
 ```text
-full new bits = n-2,
-half quotient new orbit bits = floor((n-1)/2).
+full new cells = n-2,
+half-address crossing coordinates = floor((n-1)/2).
 ```
 
 The half update is not merely "half as many cells"; it is the fixed-line
@@ -68,15 +71,16 @@ layers.
 
 ## Program
 
-1. Build an address-indexed DP for complement-even invariants such as cyclic
-   triangle count, Hamiltonian-path count, OCF summaries, and low-order Walsh
-   packets.
-2. Treat fixed-line `tau=n` cells as the only new independent half-quotient
-   bits when `n` increments.
-3. Store discarded-side contributions through their reflected representative
+1. Build an address-indexed DP for the grid-symmetric/self-converse subcube,
+   where each mirror orbit is genuinely one bit.
+2. Extend to complement-even full-quotient computations by replacing nonfixed
+   mirror pairs with unordered pair states.
+3. Treat fixed-line `tau=n` cells as the new crossing coordinates when `n`
+   increments.
+4. Store discarded-side contributions through their reflected representative
    address, not by duplicating full cells.
-4. Add THM-513 interval-root packet data to each address before scalarizing.
-5. Compare against KPS HYP-2688: if H-maximizers really lie in the
+5. Add THM-513 interval-root packet data to each address before scalarizing.
+6. Compare against KPS HYP-2688: if H-maximizers really lie in the
    phi-self-converse half cube, this address DP gives the search coordinates.
 
 ## Tournament Analysis
@@ -110,5 +114,6 @@ score-odd or orientation-sensitive quantities.
 ## Status
 
 OPEN.  THM-551 proves the exact local address calculus.  The next test is a
-small `n<=8` DP that computes `c3` and `H` over the half quotient using crossing
-layers, then compares runtime/state count against full-strip insertion.
+small `n<=8` DP that computes `c3` and `H` on the grid-symmetric half cube using
+crossing layers, then separately tests the unordered-pair-state quotient for
+all complement-even tilings.

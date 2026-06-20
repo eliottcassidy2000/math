@@ -55,10 +55,13 @@ is bijective with inverse `(beta,tau)->(beta,tau-beta+1)`.  Full counts are
 Reflection at size `n` sends `(beta,tau)` to `(n+beta-tau,2n-tau)`, so fixed
 line is exactly `tau=n`.  The address recovers THM-513 one-flip facts:
 `b=tau-beta+1`, `gap=c3=2beta-tau-2`, and `H=1+2^gap`.  Canonized this exact
-layer as THM-551 and opened HYP-2689/T925 for the DP program: complement-even
-invariants should update by the `tau=n` crossing layer (`floor((n-1)/2)` new
-orbit bits) rather than the full new strip (`n-2` bits), then attach OCF/H/root
-packet data after the address quotient.
+layer as THM-551 and opened HYP-2689/T925 for the DP program: invariant updates
+should route through the `tau=n` crossing layer (`floor((n-1)/2)` new
+half-address orbit coordinates) rather than starting from the full new strip
+(`n-2` cells), then attach OCF/H/root packet data after the address quotient.
+Precision note: those coordinates are one-bit only in the grid-symmetric /
+self-converse subcube; the full complement quotient still needs unordered pair
+states on nonfixed mirror orbits.
 
 ## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-550/HYP-2685/T924
 

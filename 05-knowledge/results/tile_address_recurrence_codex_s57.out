@@ -4,7 +4,7 @@ half side uses KPS convention: kept iff a+b<=n+1, equivalently tau<=n
 VERIFIED: address bijection, mirror formula, and canonical reps n=2..16
 VERIFIED: local full IE weights n=4..16, where the shifted-triangle cover is nondegenerate
 INCREMENT LEDGER
- n full_new fixed_crossing half_new full_bits half_bits
+ n full_new fixed_crossing half_new full_cells half_coords
  2        0              0        0         0         0
  3        1              1        1         1         1
  4        2              1        1         3         2
@@ -72,5 +72,7 @@ SYNTHESIS
   half recurrence clock: tau=a+b-1, with crossing-layer size floor((tau-1)/2).
   combined address (beta,tau) recovers the tile and its one-flip root facts:
     b=tau-beta+1, gap=c3=2*beta-tau-2, H_oneflip=1+2^gap.
-  dynamic payoff: n->n+1 adds n-1 full strip bits but only floor(n/2)
-    new independent half-quotient orbit bits for complement-even invariants.
+  dynamic payoff: n->n+1 adds n-1 full strip cells but only floor(n/2)
+    new half-address orbit coordinates.
+  precision: those coordinates are one-bit only on the grid-symmetric
+    subcube; the full complement quotient still needs unordered pair states.

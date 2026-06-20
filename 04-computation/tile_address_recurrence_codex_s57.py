@@ -161,7 +161,7 @@ def crossing_layer_count(tau: int) -> int:
 
 def print_increment_ledger() -> None:
     print("INCREMENT LEDGER")
-    print(" n full_new fixed_crossing half_new full_bits half_bits")
+    print(" n full_new fixed_crossing half_new full_cells half_coords")
     for n in range(2, 14):
         full_new = n - 2
         half_new = fixed_count(n)
@@ -292,8 +292,10 @@ def main() -> None:
     print("  half recurrence clock: tau=a+b-1, with crossing-layer size floor((tau-1)/2).")
     print("  combined address (beta,tau) recovers the tile and its one-flip root facts:")
     print("    b=tau-beta+1, gap=c3=2*beta-tau-2, H_oneflip=1+2^gap.")
-    print("  dynamic payoff: n->n+1 adds n-1 full strip bits but only floor(n/2)")
-    print("    new independent half-quotient orbit bits for complement-even invariants.")
+    print("  dynamic payoff: n->n+1 adds n-1 full strip cells but only floor(n/2)")
+    print("    new half-address orbit coordinates.")
+    print("  precision: those coordinates are one-bit only on the grid-symmetric")
+    print("    subcube; the full complement quotient still needs unordered pair states.")
 
 
 if __name__ == "__main__":
