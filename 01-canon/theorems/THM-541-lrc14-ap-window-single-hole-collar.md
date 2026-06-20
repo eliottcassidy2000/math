@@ -163,11 +163,11 @@ For C=[1,13]\{e}, meas(G_C) is minimized uniquely at e=6.
 ```
 
 It does not prove the full OPEN-Q-108 uniform fattening lemma.  The next sharp
-obligation is now the near-collar template theorem:
+obligation is now the near-collar mouth-retention theorem:
 
 ```text
 If a positive primitive 12-core C has meas(G_C) < 426/35035,
-then C has the drop-6 AP-window state template.
+then C retains the drop-6 mouth template.
 ```
 
 The theorem also explains why HYP-2650/HYP-2652's addressed-wall lesson is not
@@ -175,6 +175,11 @@ cosmetic.  The scalar measure is the final valuation, but the proof carrier is
 the signed boundary address `R(v,a) -> L(w,b)`.  The drop-6 collar is the small
 determinant pattern `[3,5,5,3]` between neighboring high-speed walls
 `13,12,11,12,13`.
+
+HYP-2653 records the first correction to the naive wording: the template is not
+exact-row rigidity.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` lies below
+`426/35035`, but it preserves the four drop-6 mouth intervals and adds new
+mouth mass `1/980`.
 
 ## Tournament Analysis
 

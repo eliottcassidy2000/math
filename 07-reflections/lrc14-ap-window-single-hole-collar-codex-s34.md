@@ -61,16 +61,16 @@ their wrapped periodic addresses.
 
 ## Next Target
 
-The next proof obligation is the near-collar state-template theorem:
+The next proof obligation is the near-collar mouth-retention theorem:
 
 ```text
 If meas(G_C) < 426/35035 for a primitive positive 12-core C,
-then C has the drop-6 AP-window state template.
+then C retains the drop-6 mouth template.
 ```
 
-The certificate suggests a sharper route than raw enumeration: classify the
-possible low-measure R-to-L wall chains.  Below the `426/35035` cutoff, the
-component ledger should be forced into the same high-speed mouth chain
-`13,12,11,12,13` with the same central missing clock.  In other words, prove a
-small signed determinant rigidity lemma before invoking Freiman or state-word
-quotients.
+HYP-2653 corrected the naive exact-row version: the AP-tail row
+`(1,2,3,4,5,7,8,9,11,12,13,20)` is already below `426/35035`, but it keeps the
+old drop-6 mouths undamaged and adds `1/980` new mouth mass.  The certificate
+therefore suggests a sharper route than raw enumeration: classify possible
+low-measure R-to-L wall chains and prove that old-mouth damage, or the absence
+of the central missing clock, costs at least the AP one-hole second value.

@@ -1,0 +1,164 @@
+---
+id: HYP-2653
+title: LRC14 near-collar AP-tail template - below the AP one-hole second value, retain the drop-6 mouth geometry
+status: OPEN; structured AP-tail evidence
+source: codex-2026-06-19-S34
+depends_on:
+  - THM-541
+  - HYP-2651
+related:
+  - HYP-2650
+  - HYP-2652
+  - HYP-2648
+  - HYP-2569
+  - OPEN-Q-108
+---
+
+# HYP-2653 - Near-Collar AP-Tail Template
+
+## Claim
+
+The next proof obligation after THM-541 is not:
+
+```text
+meas(G_C) < 426/35035 forces C = {1,...,13}\{6}.
+```
+
+That exact-row statement is already too strong in the AP-tail pocket.  The
+correct target is a template statement:
+
+```text
+meas(G_C) < 426/35035 forces the drop-6 mouth geometry to survive.
+```
+
+Concretely, the four drop-6 safe components
+
+```text
+[29/182, 9/56]
+[29/168, 27/154]
+[127/154, 139/168]
+[47/56, 153/182]
+```
+
+should either survive as a full sub-reservoir of `G_C`, or the row should pay at
+least the AP one-hole second value `426/35035`.
+
+## Evidence
+
+Script:
+
+```text
+04-computation/lrc14_near_collar_tail_template_codex_s34.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_near_collar_tail_template_codex_s34.out
+```
+
+The scout enumerates structured AP-tail cores
+
+```text
+({1,...,13} \ holes) union replacements,
+```
+
+with `len(replacements)=len(holes)-1`, `max(replacement)<=35`, and up to three
+AP holes.  It scanned `67,795` primitive rows.
+
+Rows below the AP one-hole second value:
+
+```text
+rank | safe          | holes   | repl | old drop-6 survivor | new mass
+   1 | 7/858         | (6,)    | ()   | 7/858               | 0
+   2 | 3859/420420   | (6,10)  | (20) | 7/858               | 1/980
+```
+
+Thus every below-threshold AP-tail row in this pocket:
+
+1. has `6` among the AP holes;
+2. leaves the old drop-6 mouth mass undamaged (`old_survivor=7/858`);
+3. is the drop-6 collar plus optional new mouth mass.
+
+The best row below the cutoff but not equal to the exact drop-6 core is
+
+```text
+(1,2,3,4,5,7,8,9,11,12,13,20)
+```
+
+with holes `(6,10)`, replacement `20`, and
+
+```text
+meas(G_C) = 3859/420420 = 7/858 + 1/980.
+```
+
+The first row at the AP one-hole second value is still the endpoint drop:
+
+```text
+(1,2,3,4,5,6,7,8,9,10,11,13)
+```
+
+with `426/35035`, and it has no old drop-6 survivor mass.
+
+## Refined Proof Target
+
+The HYP-2651 near-collar target should be replaced by:
+
+```text
+If C is a primitive positive 12-core and meas(G_C) < 426/35035,
+then G_C contains the four drop-6 mouth intervals, up to scale-preserving
+fixed-observer address equivalence.
+```
+
+An even more proof-facing split is:
+
+```text
+either old drop-6 mouth damage > 0 or no central drop-6 hole
+    => meas(G_C) >= 426/35035,
+else
+    meas(G_C) >= 7/858 from the surviving mouth reservoir.
+```
+
+This is exactly the addressed-wall lesson of HYP-2650/HYP-2652.  The scalar
+cutoff does not identify one row; it identifies a boundary-owner template.
+
+## Tournament Analysis
+
+Vertices are proof-obligation observables for the AP-tail near-collar rows:
+
+```text
+drop6_mouth_retained
+old_mouth_damage
+new_mouth_mass
+hole_count
+sumset_excess
+raw_tail_size
+```
+
+Pairwise observable: which observable separates rows below `426/35035` from the
+rest.
+
+Switch/gauge: classify by retained drop-6 mouth mass before scalar safe measure.
+
+Hamiltonian path:
+
+```text
+drop6_mouth_retained
+> old_mouth_damage
+> new_mouth_mass
+> hole_count
+> sumset_excess
+> raw_tail_size
+```
+
+Fingerprint in the stored pocket: below-threshold rows with undamaged old mouths
+`2/2`; below-threshold rows with hole `6`: `2/2`; directed priority tournament
+transitive.
+
+## Scope
+
+This is not a proof of the full near-collar theorem.  The broad exact scan
+through `[1,22]` was attempted during this session but timed out before
+completion, so HYP-2653 is structured AP-tail evidence, not a bounded-box
+theorem.  Its value is that it corrects the next target: prove mouth-retention
+rigidity, not exact-row rigidity.

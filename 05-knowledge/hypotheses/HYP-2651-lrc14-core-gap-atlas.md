@@ -14,6 +14,7 @@ related:
   - HYP-2639
   - HYP-2646
   - THM-541
+  - HYP-2653
   - OPEN-Q-108
 ---
 
@@ -138,15 +139,21 @@ the signed boundary gaps `R(13,2)->L(12,2)`, `R(12,2)->L(11,2)`,
 `[3,5,5,3]`.  This confirms that the collar is an addressed boundary-owner
 phenomenon, not a scalar hole-position statistic.
 
-2. Prove a near-collar state-template lemma:
+2. Prove a near-collar state-template lemma, now refined by HYP-2653:
 
 ```text
-If meas(G_C) < 426/35035, then C has the drop-6 AP-window state template.
+If meas(G_C) < 426/35035, then C has the drop-6 mouth-retention template.
 ```
 
 This would convert the observed separation into a structural dichotomy:
 drop-6-like rows are handled by the explicit collar, and every other bounded
 template has a uniform margin above it.
+
+Important correction from HYP-2653: this template cannot mean the exact one-hole
+AP row.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` already has
+`3859/420420 = 7/858 + 1/980 < 426/35035`.  It keeps the old drop-6 mouth
+components undamaged and only adds new mouth mass.  The target is therefore
+boundary-owner mouth retention, not exact-row rigidity.
 
 3. Compose with the far-element plateau recursion:
 
