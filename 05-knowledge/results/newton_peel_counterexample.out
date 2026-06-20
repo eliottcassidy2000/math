@@ -1,0 +1,28 @@
+EXPLICIT COUNTEREXAMPLE to unrestricted '|S|>6 => Delta_S=0'
+
+  B=(), S=(1, 2, 3, 4, 5, 6, 7) (|S|=7): Delta_S = -1/49  nonzero? True
+  B=(1,), S=(2, 3, 4, 5, 6, 7, 8) (|S|=7): Delta_S = 0  nonzero? False
+  B=(), S=(1, 2, 3, 4, 5, 6, 7, 8) (|S|=8): Delta_S = 1/56  nonzero? True
+
+  => The LITERAL universal claim 'Delta_S=0 for all |S|>6' is FALSE
+     for the survival measure p0: contiguous small runners overlap at
+     t=0 to all orders, so Delta_S can be nonzero for |S|=7,8,...
+
+CONFIRMATION: the FAR/dissociated regime (the claim's real target).
+  With far runners large & spread, joint-kill depth collapses, so
+  Delta_S=0 already for |S|>=4 -- comfortably within '<=6'.
+    far S, |S|=1: some Delta_S nonzero? True
+    far S, |S|=2: some Delta_S nonzero? True
+    far S, |S|=3: some Delta_S nonzero? True
+    far S, |S|=4: some Delta_S nonzero? False
+    far S, |S|=5: some Delta_S nonzero? False
+    far S, |S|=6: some Delta_S nonzero? False
+    far S, |S|=7: some Delta_S nonzero? False
+
+VERDICT SUMMARY:
+  - Newton identity p0(BuF)=sum_S Delta_S(B): TAUTOLOGY, holds exactly. CONFIRMED.
+  - Delta_F=0 for the requested far cases (r=3 and r=7): CONFIRMED.
+  - Universal 'Delta_S=0 for |S|>6': REFUTED (small contiguous S above).
+  - Intended far-runner reading 'far Delta_S=0 for |S|>6': CONFIRMED (margin: real threshold ~3-4).
+  - Justification 'B misses <=6 sectors': imprecise. True driver = joint danger-arc
+    overlap depth m*; for FAR runners m* is small, but '6' is not a hard ceiling in general.

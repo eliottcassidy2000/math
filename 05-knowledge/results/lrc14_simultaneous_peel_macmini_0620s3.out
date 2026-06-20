@@ -1,0 +1,17 @@
+(1) Newton identity check (should be exact 0):
+   B=(0, 1, 2, 3, 4, 5, 6) u,v=17,23:  lhs-rhs = 0  OK
+   B=(0, 4, 6, 8, 10, 12, 14) u,v=15,16:  lhs-rhs = 0  OK
+   B=(0, 1, 2, 4, 8) u,v=31,50:  lhs-rhs = 0  OK
+
+(2) max |I_B(u,v)-Phi_2(B)| over bounded B subset{0..14},|B|=7, and far pairs:
+   worst |I_B-Phi_2| = 0.04368 at B=(0, 1, 2, 3, 4, 8, 12), (u,v)=(20,21), V(B)=20
+
+(3) r=2 closing bound: p0(B u {u,v}) <= P_2(B) + (6/49)V/u + (6/49)V/v + maxcurv, vs cap_9
+    For B=consec_7 (the P_2-extremal), find cutoff W s.t. u,v>W => closes:
+    B=consec_7: P_2(B)=0.24645  V(B)=22  cap_9=0.49426  margin(P_2)=0.24780
+    after curvature (0.0437), residual budget = 0.20412
+    closes for u,v > W = 2*(6/49)*V/budget = 26.4
+    => true-wide r=2 with min(u,v) > ~26 closes via simultaneous peel;
+       max(u,v) <= ~26 is a FINITE check (extends THM-547 collar to r=2).
+
+DONE.

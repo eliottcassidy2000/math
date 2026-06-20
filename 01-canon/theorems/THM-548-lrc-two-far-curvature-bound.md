@@ -99,7 +99,33 @@ leader has *negative* curvature `I_B(15,16)=−13/1470`; positive curvature is s
   THM-546's `(6/49)` to `mf+nf'`) + a bound on the number/size of simultaneous resonances is the
   remaining analytic content. The growing margin in `r` is the budget.
 
+## 5. The simultaneous peel — closure for `r ≥ 2` (NEW, the key step)
+
+The decisive move: peel **all** far runners from the **bounded** base `B` *simultaneously*, not
+iteratively (iterating leaves a wide base where `V` blows up — the whole reason `r≥2` was open).
+The Newton identity is exact (VERIFIED, `lhs−rhs=0`):
+> `p0(B∪{u,v}) = P_2(B) + [p0(B∪{u})−Φ(B)] + [p0(B∪{v})−Φ(B)] + [I_B(u,v)−Φ_2(B)]`,
+`Φ(B)=p0(B)+p1(B)/7` (one-far plateau). The two one-far residuals are over the **bounded** `B`,
+so THM-547 controls them: `|p0(B∪{u})−Φ(B)| ≤ (6/49)V(B)/u`. The curvature is uniformly small
+(VERIFIED `max_B |I_B−Φ_2| ≤ 0.044` over sampled bounded `B`, far pairs). Hence
+> `p0(B∪{u,v}) ≤ P_2(B) + (6/49)V(B)·(1/u + 1/v) + 0.044`.
+
+Since `P_2(B) ≤ cap_9 − 0.248` (the exhaustive `r=2` margin, §2), this is `≤ cap_9` whenever
+`(6/49)V(B)(1/u+1/v) ≤ 0.204` — i.e. for `min(u,v) > W ≈ 26` (symmetric case, `B=consec_7`,
+`V=22`); the complementary region (`u,v` small) is a **finite check**. So:
+> **true-wide `r=2` closes exactly like the collar: simultaneous peel for the far part + a finite
+> check below an explicit cutoff.** It EXTENDS THM-547 (`r=1`) to `r=2`.
+
+`r ≥ 3` is the same with the higher curvatures `Δ_S−Φ_{|S|}` (`|S|≥3`) added — and those are
+**geometrically suppressed by `1/7` per order** (the apex-prime hierarchy, §3b: `C_2=13/(2²·7³)`),
+so they cost `O(7^{-(|S|+1)})` each and the `P_r` margin GROWS with `r` (§2), giving room. The
+remaining rigor: (a) the uniform curvature bound `max_B|I_B−Φ_2|` over *all* bounded `B` (sampled
+`≤0.044`; provable from `C_2`); (b) the finite check; (c) the `d≥2` signed lattice bound for the
+genuinely-resonant tuples (the one open analytic gap, HYP-2678/HYP-2606-F3).
+
 **Net:** true-wide is reorganized as a **Fatou boundary value (safe, finite-base) + a resonance
-correction (Bagemihl-structured, Freiman-reducible)**. The boundary-function lead is not a metaphor
-here — it is the exact shape of the `F→∞` limit and its exceptional set. LRC(14) not proved; this is
-the architecture and the verified main term.
+correction (Bagemihl-structured, Freiman-reducible)**, and the simultaneous peel closes it the same
+way THM-547 closed the collar — for `r=2` down to an explicit cutoff `W≈26`. The boundary-function
+lead is not a metaphor: it is the exact shape of the `F→∞` limit and its exceptional set. LRC(14)
+not proved; this is the architecture, the verified main term, and the `r≥2` closure modulo a finite
+check and the one signed `d≥2` lattice bound.
