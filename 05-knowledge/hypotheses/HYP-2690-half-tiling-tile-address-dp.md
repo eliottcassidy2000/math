@@ -146,3 +146,17 @@ OPEN.  THM-553 proves the exact local address calculus and the first
 grid-symmetric DP now computes `c3` and `H` through `n=8`.  The next test is the
 unordered-pair-state quotient for all complement-even tilings, plus a version
 that imports the KPS half-tiling codec and n=9 maximizer workflow.
+
+## kps-S20 realization (THM-554): the SCORE-determined half of this program is now a closed engine
+
+The score generating function `Z_n = (prod_{v>=2} x_v) * prod_{tiles (a,b)} (x_a+x_b)` IS the
+address DP this hypothesis asked for, for every **score-determined** invariant.  The beta-step
+`Z_{n+1}=Z_n * x_{n+1} * prod_{b=1}^{n-1}(x_{n+1}+x_b)` is the incremental crossing-layer update;
+the tau-clock complement reflection is the address quotient (2x fold for complement-invariant
+observables).  It computes the EXACT c3-distribution to **n=10** (68.7e9 tilings, ~95s) without
+enumerating tilings, and gives the PROVED closed form `E[c3]=(C(n,3)+(n-2))/4`.  Engine:
+`04-computation/tile_address_score_gf_engine_kps.py`.  This settles the program's c3/score layer;
+the OPEN remainder is exactly HYP-2690 step 2 — extend the state beyond scores (alpha_2 / disjoint
+cycle pairs) to reach OCF/H, which `Z_n` alone cannot (the score->H / cut-space->cycle-space wall,
+THM-554 Scope).  A kps-S20 application workflow is probing how far a richer-than-score address
+state reaches toward alpha_2.
