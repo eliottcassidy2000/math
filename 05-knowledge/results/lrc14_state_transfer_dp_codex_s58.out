@@ -1,0 +1,354 @@
+HYP-2691 / T927 -- LRC14 exact sector-state transfer DP
+Arithmetic: exact Fractions over common sector-wall refinements.
+Preserved predicate: final p0(E) <= cap_k.
+Destroyed data: actual continuous time after quotienting each wall atom to a missed-sector state.
+Assumption challenged: proof vertices need not be runners; here they are DP states and insertion schedules.
+
+EXACT INSERTION RECURRENCE
+  Adding one speed can remove at most one missed inner sector on any wall atom.
+  Therefore delta p0 is exactly the mass of atoms where the prefix misses one
+  sector and the new speed lands in that sector.  The transition matrix is
+  lower triangular in missed-sector inclusion, with rank-one atom moves.
+
+==========================================================================================
+ROW AP9: E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  k=9 span=8 p0=2447/5880 (0.416156463) cap=1979/4004 (0.494255744) margin=65669/840840 (0.078099282) missed_dist=['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  additive: excess=0 energy=489 squarefree=((1, 2), (2, 2), (3, 1), (5, 1), (6, 1), (7, 1))
+  greedy-min-support    order=(1, 2, 4, 3, 6, 5, 8, 7) max_support=32 area_support=192 final_support=32 H=3.7357 max_trans=58 first_p0_step=6
+  greedy-max-gain       order=(1, 2, 4, 3, 6, 5, 7, 8) max_support=32 area_support=193 final_support=32 H=3.7357 max_trans=59 first_p0_step=6
+  greedy-min-transition order=(1, 2, 3, 4, 6, 8, 5, 7) max_support=32 area_support=196 final_support=32 H=3.7357 max_trans=52 first_p0_step=6
+  increasing            order=(1, 2, 3, 4, 5, 6, 7, 8) max_support=33 area_support=199 final_support=32 H=3.7357 max_trans=60 first_p0_step=6
+  dyadic-tower          order=(8, 4, 2, 6, 1, 3, 5, 7) max_support=39 area_support=200 final_support=32 H=3.7357 max_trans=58 first_p0_step=6
+  decreasing            order=(8, 7, 6, 5, 4, 3, 2, 1) max_support=47 area_support=276 final_support=32 H=3.7357 max_trans=102 first_p0_step=6
+  residue-layer         order=(7, 1, 8, 2, 3, 4, 5, 6) max_support=48 area_support=271 final_support=32 H=3.7357 max_trans=79 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > greedy-max-gain > greedy-min-transition > increasing > dyadic-tower > decreasing > residue-layer
+    step ledger for greedy-min-support:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add=  4 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add=  3 support=27 H=4.6150 p0=0 delta=0 gain=(2/21,11/84,2/21,11/84,2/21,2/21) transitions=36 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5):1/28; (3, 5, 6)->(3, 6):1/28; (3, 5, 6)->(5, 6):1/28
+       5. add=  6 support=31 H=4.7568 p0=0 delta=0 gain=(2/21,5/42,2/21,5/42,2/21,1/21) transitions=47 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):1/14; (3, 6)->(6,):1/21; (1, 3, 5)->(1, 3, 5):1/28
+       6. add=  5 support=32 H=4.5628 p0=31/210 delta=31/210 gain=(1/14,13/210,17/210,13/210,1/14,4/35) transitions=54 closure_by_miss=(Fraction(0, 1), Fraction(31, 210), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2,)->(2,):1/28; (3, 6)->(3,):1/28; (3, 6)->(3, 6):1/28
+       7. add=  8 support=31 H=4.2374 p0=5/24 delta=17/280 gain=(43/840,1/24,13/210,1/24,43/840,37/840) transitions=58 closure_by_miss=(Fraction(0, 1), Fraction(17, 280), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():31/210; (6,)->(6,):17/120; (2,)->(2,):17/420
+       8. add=  7 support=32 H=3.7357 p0=2447/5880 delta=611/2940 gain=(43/1470,73/1960,2/49,73/1960,43/1470,47/392) transitions=50 closure_by_miss=(Fraction(0, 1), Fraction(611, 2940), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():5/24; (6,)->():47/392; (6,)->(6,):47/980
+
+==========================================================================================
+ROW one-gap-top9: E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  k=9 span=9 p0=1181/2940 (0.401700680) cap=1979/4004 (0.494255744) margin=9728/105105 (0.092555064) missed_dist=['1181/2940', '23/90', '1139/8820', '38/441', '317/4410', '5/126', '1/63']
+  additive: excess=1 energy=461 squarefree=((1, 3), (2, 1), (3, 1), (5, 1), (6, 1), (7, 1))
+  greedy-min-support    order=(1, 2, 4, 3, 6, 5, 7, 9) max_support=32 area_support=191 final_support=30 H=3.7122 max_trans=59 first_p0_step=6
+  greedy-min-transition order=(1, 2, 3, 4, 6, 5, 9, 7) max_support=33 area_support=196 final_support=30 H=3.7122 max_trans=58 first_p0_step=6
+  increasing            order=(1, 2, 3, 4, 5, 6, 7, 9) max_support=33 area_support=197 final_support=30 H=3.7122 max_trans=60 first_p0_step=6
+  dyadic-tower          order=(4, 2, 6, 1, 3, 5, 7, 9) max_support=35 area_support=203 final_support=30 H=3.7122 max_trans=59 first_p0_step=6
+  residue-layer         order=(7, 1, 2, 9, 3, 4, 5, 6) max_support=49 area_support=267 final_support=30 H=3.7122 max_trans=85 first_p0_step=6
+  decreasing            order=(9, 7, 6, 5, 4, 3, 2, 1) max_support=52 area_support=284 final_support=30 H=3.7122 max_trans=101 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > greedy-min-transition > increasing > dyadic-tower > residue-layer > decreasing
+    step ledger for greedy-min-support:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add=  4 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add=  3 support=27 H=4.6150 p0=0 delta=0 gain=(2/21,11/84,2/21,11/84,2/21,2/21) transitions=36 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5):1/28; (3, 5, 6)->(3, 6):1/28; (3, 5, 6)->(5, 6):1/28
+       5. add=  6 support=31 H=4.7568 p0=0 delta=0 gain=(2/21,5/42,2/21,5/42,2/21,1/21) transitions=47 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):1/14; (3, 6)->(6,):1/21; (1, 3, 5)->(1, 3, 5):1/28
+       6. add=  5 support=32 H=4.5628 p0=31/210 delta=31/210 gain=(1/14,13/210,17/210,13/210,1/14,4/35) transitions=54 closure_by_miss=(Fraction(0, 1), Fraction(31, 210), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2,)->(2,):1/28; (3, 6)->(3,):1/28; (3, 6)->(3, 6):1/28
+       7. add=  7 support=32 H=4.1247 p0=481/1470 delta=44/245 gain=(37/980,38/735,3/49,38/735,37/980,6/49) transitions=59 closure_by_miss=(Fraction(0, 1), Fraction(44, 245), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():31/210; (6,)->():6/49; (5,)->(5,):1/28
+       8. add=  9 support=30 H=3.7122 p0=1181/2940 delta=73/980 gain=(19/441,373/8820,31/882,373/8820,19/441,197/4410) transitions=59 closure_by_miss=(Fraction(0, 1), Fraction(73, 980), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():481/1470; (6,)->(6,):3/70; (5,)->(5,):293/8820
+
+==========================================================================================
+ROW direct-risk-leader: E=(0, 4, 6, 8, 10, 12, 14, 15, 16)
+  k=9 span=16 p0=321/980 (0.327551020) cap=1979/4004 (0.494255744) margin=11681/70070 (0.166704724) missed_dist=['321/980', '40/147', '1231/5880', '173/1680', '41/784', '3/112', '1/112']
+  additive: excess=7 energy=357 squarefree=((1, 2), (2, 1), (3, 1), (6, 1), (10, 1), (14, 1), (15, 1))
+  dyadic-tower          order=(16, 8, 4, 12, 6, 10, 14, 15) max_support=55 area_support=239 final_support=55 H=4.3019 max_trans=88 first_p0_step=6
+  greedy-min-support    order=(4, 8, 16, 12, 6, 10, 14, 15) max_support=55 area_support=239 final_support=55 H=4.3019 max_trans=88 first_p0_step=6
+  greedy-min-transition order=(4, 8, 12, 16, 6, 10, 14, 15) max_support=55 area_support=243 final_support=55 H=4.3019 max_trans=88 first_p0_step=6
+  increasing            order=(4, 6, 8, 10, 12, 14, 15, 16) max_support=56 area_support=293 final_support=55 H=4.3019 max_trans=104 first_p0_step=6
+  residue-layer         order=(14, 8, 15, 16, 10, 4, 12, 6) max_support=59 area_support=355 final_support=55 H=4.3019 max_trans=142 first_p0_step=6
+  decreasing            order=(16, 15, 14, 12, 10, 8, 6, 4) max_support=61 area_support=360 final_support=55 H=4.3019 max_trans=161 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > dyadic-tower > greedy-min-transition > increasing > residue-layer > decreasing
+    step ledger for dyadic-tower:
+       1. add= 16 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  8 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 3, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(2, 3, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 5, 6):1/14
+       3. add=  4 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 5, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add= 12 support=27 H=4.6150 p0=0 delta=0 gain=(2/21,11/84,2/21,11/84,2/21,2/21) transitions=36 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5):1/28; (3, 5, 6)->(3, 6):1/28; (3, 5, 6)->(5, 6):1/28
+       5. add=  6 support=41 H=5.0938 p0=0 delta=0 gain=(13/168,19/168,5/42,19/168,13/168,1/24) transitions=62 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):17/168; (2, 5)->(2, 5):1/42; (2, 4)->(2, 4):1/42
+       6. add= 10 support=39 H=4.7352 p0=103/840 delta=103/840 gain=(3/35,13/210,5/84,13/210,3/35,31/280) transitions=66 closure_by_miss=(Fraction(0, 1), Fraction(103, 840), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(6,):1/24; (2, 4)->(2, 4):1/24; (3, 6)->(3,):5/168
+       7. add= 14 support=38 H=4.3813 p0=1609/5880 delta=37/245 gain=(73/1470,73/1960,2/49,73/1960,73/1470,47/392) transitions=69 closure_by_miss=(Fraction(0, 1), Fraction(37, 245), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():103/840; (6,)->():3/28; (6,)->(6,):11/280
+       8. add= 15 support=55 H=4.3019 p0=321/980 delta=317/5880 gain=(107/2940,37/840,79/1176,37/840,107/2940,199/5880) transitions=88 closure_by_miss=(Fraction(0, 1), Fraction(317, 5880), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():1609/5880; (6,)->(6,):479/5880; (5,)->(5,):61/1960
+    step ledger for increasing:
+       1. add=  4 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  6 support=20 H=4.2252 p0=0 delta=0 gain=(5/42,1/7,1/7,1/7,5/42,2/21) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 3, 4, 6):1/21; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/21; (1, 3, 4, 5, 6)->(1, 3, 4, 5, 6):1/21
+       3. add=  8 support=32 H=4.8589 p0=0 delta=0 gain=(5/42,11/84,1/7,11/84,5/42,1/14) transitions=41 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 4, 5, 6)->(4, 5, 6):1/28; (2, 4, 5, 6)->(2, 4, 5):1/28; (2, 3, 4, 6)->(2, 3, 6):1/28
+       4. add= 10 support=43 H=5.0814 p0=0 delta=0 gain=(3/28,17/210,1/10,17/210,3/28,4/35) transitions=63 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (4, 5, 6)->(5, 6):1/35; (3, 4, 6)->(3, 4):1/35; (2, 4, 5)->(2, 5):1/35
+       5. add= 12 support=39 H=5.0354 p0=0 delta=0 gain=(47/420,13/105,8/105,13/105,47/420,1/21) transitions=67 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 5)->(5,):1/30; (1, 4, 6)->(1, 6):1/30; (5, 6)->(5, 6):1/35
+       6. add= 14 support=41 H=4.9464 p0=67/1470 delta=67/1470 gain=(57/980,38/735,3/49,38/735,57/980,6/49) transitions=77 closure_by_miss=(Fraction(0, 1), Fraction(67, 1470), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3,)->(3,):29/588; (5,)->(5,):1/30; (4,)->(4,):17/588
+       7. add= 15 support=56 H=4.9652 p0=13/120 delta=123/1960 gain=(13/280,283/5880,227/2940,283/5880,13/280,251/5880) transitions=104 closure_by_miss=(Fraction(0, 1), Fraction(123, 1960), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (6,)->(6,):19/245; (4,)->(4,):46/735; (3,)->(3,):67/1176
+       8. add= 16 support=55 H=4.3019 p0=321/980 delta=1289/5880 gain=(67/980,173/2940,79/1176,173/2940,67/980,99/1960) transitions=95 closure_by_miss=(Fraction(0, 1), Fraction(1289, 5880), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():13/120; (6,)->(6,):23/294; (4,)->():11/280
+
+==========================================================================================
+ROW boundary-leader: E=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+  k=9 span=15 p0=437/1176 (0.371598639) cap=1979/4004 (0.494255744) margin=20627/168168 (0.122657105) missed_dist=['437/1176', '103/420', '491/2940', '703/5880', '17/294', '43/1470', '1/105']
+  additive: excess=7 energy=377 squarefree=((1, 1), (2, 2), (3, 1), (6, 1), (10, 1), (14, 1), (15, 1))
+  greedy-min-support    order=(2, 4, 8, 6, 12, 10, 14, 15) max_support=51 area_support=212 final_support=51 H=4.1240 max_trans=81 first_p0_step=6
+  greedy-min-transition order=(2, 4, 6, 8, 12, 10, 14, 15) max_support=51 area_support=216 final_support=51 H=4.1240 max_trans=81 first_p0_step=6
+  increasing            order=(2, 4, 6, 8, 10, 12, 14, 15) max_support=51 area_support=218 final_support=51 H=4.1240 max_trans=81 first_p0_step=6
+  dyadic-tower          order=(8, 4, 12, 2, 6, 10, 14, 15) max_support=51 area_support=224 final_support=51 H=4.1240 max_trans=81 first_p0_step=6
+  residue-layer         order=(14, 8, 15, 2, 10, 4, 12, 6) max_support=57 area_support=345 final_support=51 H=4.1240 max_trans=131 first_p0_step=6
+  decreasing            order=(15, 14, 12, 10, 8, 6, 4, 2) max_support=61 area_support=353 final_support=51 H=4.1240 max_trans=148 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > greedy-min-transition > increasing > dyadic-tower > residue-layer > decreasing
+    step ledger for greedy-min-support:
+       1. add=  2 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  4 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add=  8 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add=  6 support=27 H=4.6150 p0=0 delta=0 gain=(2/21,11/84,2/21,11/84,2/21,2/21) transitions=36 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5):1/28; (3, 5, 6)->(3, 6):1/28; (3, 5, 6)->(5, 6):1/28
+       5. add= 12 support=31 H=4.7568 p0=0 delta=0 gain=(2/21,5/42,2/21,5/42,2/21,1/21) transitions=47 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):1/14; (3, 6)->(6,):1/21; (1, 3, 5)->(1, 3, 5):1/28
+       6. add= 10 support=32 H=4.5628 p0=31/210 delta=31/210 gain=(1/14,13/210,17/210,13/210,1/14,4/35) transitions=54 closure_by_miss=(Fraction(0, 1), Fraction(31, 210), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2,)->(2,):1/28; (3, 6)->(3,):1/28; (3, 6)->(3, 6):1/28
+       7. add= 14 support=32 H=4.1247 p0=481/1470 delta=44/245 gain=(37/980,38/735,3/49,38/735,37/980,6/49) transitions=59 closure_by_miss=(Fraction(0, 1), Fraction(44, 245), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():31/210; (6,)->():6/49; (5,)->(5,):1/28
+       8. add= 15 support=51 H=4.1240 p0=437/1176 delta=87/1960 gain=(71/1960,103/2940,57/980,103/2940,71/1960,181/5880) transitions=81 closure_by_miss=(Fraction(0, 1), Fraction(87, 1960), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():481/1470; (6,)->(6,):169/2940; (1,)->(1,):41/1176
+
+==========================================================================================
+ROW dyadic-block: E=(0, 1, 2, 4, 8, 12, 16, 20, 24)
+  k=9 span=24 p0=29/112 (0.258928571) cap=1979/4004 (0.494255744) margin=3769/16016 (0.235327173) missed_dist=['29/112', '191/560', '41/210', '73/560', '17/336', '1/56', '1/168']
+  additive: excess=11 energy=301 squarefree=((1, 3), (2, 2), (3, 1), (5, 1), (6, 1))
+  dyadic-tower          order=(16, 8, 24, 4, 12, 20, 2, 1) max_support=39 area_support=218 final_support=39 H=4.1551 max_trans=77 first_p0_step=6
+  greedy-min-support    order=(1, 2, 4, 8, 16, 12, 24, 20) max_support=39 area_support=223 final_support=39 H=4.1551 max_trans=75 first_p0_step=6
+  increasing            order=(1, 2, 4, 8, 12, 16, 20, 24) max_support=39 area_support=226 final_support=39 H=4.1551 max_trans=82 first_p0_step=6
+  decreasing            order=(24, 20, 16, 12, 8, 4, 2, 1) max_support=42 area_support=256 final_support=39 H=4.1551 max_trans=77 first_p0_step=6
+  greedy-max-gain       order=(1, 2, 4, 12, 24, 8, 20, 16) max_support=48 area_support=253 final_support=39 H=4.1551 max_trans=94 first_p0_step=6
+  residue-layer         order=(1, 8, 2, 16, 24, 4, 12, 20) max_support=53 area_support=274 final_support=39 H=4.1551 max_trans=102 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=dyadic-tower > greedy-min-support > increasing > decreasing > greedy-max-gain > residue-layer
+    step ledger for dyadic-tower:
+       1. add= 16 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  8 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 3, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(2, 3, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 5, 6):1/14
+       3. add= 24 support=23 H=4.4040 p0=0 delta=0 gain=(5/42,1/7,2/21,1/7,5/42,2/21) transitions=26 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5):1/14; (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(4, 5, 6):1/21
+       4. add=  4 support=35 H=5.0347 p0=0 delta=0 gain=(5/42,1/12,1/7,1/12,5/42,1/14) transitions=48 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5)->(1, 3, 5):1/28; (1, 3, 5, 6)->(1, 3, 5, 6):1/28; (4, 5, 6)->(4, 5, 6):1/42
+       5. add= 12 support=31 H=4.7568 p0=0 delta=0 gain=(2/21,11/84,2/21,11/84,2/21,1/21) transitions=49 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 5, 6)->(2, 6):1/28; (1, 3, 5)->(1, 3, 5):1/28; (1, 3, 5, 6)->(1, 3, 5, 6):1/28
+       6. add= 20 support=32 H=4.5628 p0=31/210 delta=31/210 gain=(1/14,13/210,17/210,13/210,1/14,4/35) transitions=54 closure_by_miss=(Fraction(0, 1), Fraction(31, 210), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2,)->(2,):1/28; (3, 6)->(3,):1/28; (3, 6)->(3, 6):1/28
+       7. add=  2 support=38 H=4.4527 p0=11/56 delta=41/840 gain=(43/840,1/28,1/14,1/28,43/840,23/840) transitions=62 closure_by_miss=(Fraction(0, 1), Fraction(41, 840), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():31/210; (6,)->(6,):19/140; (1,)->(1,):19/420
+       8. add=  1 support=39 H=4.1551 p0=29/112 delta=1/16 gain=(29/560,7/240,1/21,7/240,29/560,29/840) transitions=77 closure_by_miss=(Fraction(0, 1), Fraction(1, 16), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():11/56; (6,)->(6,):39/280; (3,)->(3,):11/280
+    step ledger for increasing:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add=  4 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add=  8 support=31 H=4.4809 p0=0 delta=0 gain=(3/28,1/14,3/28,1/14,3/28,3/56) transitions=42 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 4)->(1, 2, 4):5/56; (3, 5, 6)->(3, 5, 6):1/14; (1, 3, 6)->(1, 3, 6):1/14
+       5. add= 12 support=39 H=4.9645 p0=0 delta=0 gain=(13/168,3/28,1/14,3/28,13/168,1/12) transitions=65 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):1/24; (3, 5, 6)->(3, 5):1/24; (1, 2, 4)->(1, 2, 4):1/24
+       6. add= 16 support=39 H=4.8998 p0=11/336 delta=11/336 gain=(1/14,17/336,5/56,17/336,1/14,3/56) transitions=77 closure_by_miss=(Fraction(0, 1), Fraction(11, 336), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):11/168; (1, 4)->(1, 4):1/24; (6,)->(6,):1/28
+       7. add= 20 support=39 H=4.7495 p0=151/1680 delta=2/35 gain=(29/560,1/14,19/280,1/14,29/560,13/140) transitions=82 closure_by_miss=(Fraction(0, 1), Fraction(2, 35), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (6,)->(6,):33/560; (3, 6)->(3, 6):43/840; (2,)->(2,):73/1680
+       8. add= 24 support=39 H=4.1551 p0=29/112 delta=71/420 gain=(2/35,8/105,23/420,8/105,2/35,1/28) transitions=71 closure_by_miss=(Fraction(0, 1), Fraction(71, 420), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():151/1680; (6,)->(6,):3/40; (3,)->(3,):3/70
+
+==========================================================================================
+ROW doubled-odd-tail: E=(0, 1, 2, 4, 8, 14, 26, 34, 38)
+  k=9 span=38 p0=10107/58786 (0.171928691) cap=1979/4004 (0.494255744) margin=416863/1293292 (0.322327054) missed_dist=['10107/58786', '58991/205751', '655475/1646008', '171181/1646008', '109/4522', '3/266', '1/266']
+  additive: excess=18 energy=209 squarefree=((1, 2), (2, 2), (14, 1), (26, 1), (34, 1), (38, 1))
+  greedy-min-support    order=(1, 2, 4, 8, 14, 26, 38, 34) max_support=44 area_support=238 final_support=44 H=4.6561 max_trans=110 first_p0_step=6
+  increasing            order=(1, 2, 4, 8, 14, 26, 34, 38) max_support=44 area_support=239 final_support=44 H=4.6561 max_trans=106 first_p0_step=6
+  dyadic-tower          order=(8, 4, 2, 14, 26, 34, 38, 1) max_support=47 area_support=253 final_support=44 H=4.6561 max_trans=105 first_p0_step=6
+  residue-layer         order=(14, 1, 8, 2, 38, 4, 26, 34) max_support=59 area_support=317 final_support=44 H=4.6561 max_trans=155 first_p0_step=6
+  greedy-max-gain       order=(1, 2, 4, 34, 26, 38, 14, 8) max_support=61 area_support=307 final_support=44 H=4.6561 max_trans=165 first_p0_step=6
+  decreasing            order=(38, 34, 26, 14, 8, 4, 2, 1) max_support=61 area_support=335 final_support=44 H=4.6561 max_trans=161 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > increasing > dyadic-tower > residue-layer > greedy-max-gain > decreasing
+    step ledger for greedy-min-support:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add=  4 support=19 H=4.0567 p0=0 delta=0 gain=(1/7,3/28,1/7,3/28,1/7,1/14) transitions=27 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/14; (3, 4, 5, 6)->(3, 4, 6):1/28; (3, 4, 5, 6)->(3, 5, 6):1/28
+       4. add=  8 support=31 H=4.4809 p0=0 delta=0 gain=(3/28,1/14,3/28,1/14,3/28,3/56) transitions=42 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 4)->(1, 2, 4):5/56; (3, 5, 6)->(3, 5, 6):1/14; (1, 3, 6)->(1, 3, 6):1/14
+       5. add= 14 support=39 H=4.8329 p0=0 delta=0 gain=(27/392,4/49,3/49,4/49,27/392,11/98) transitions=75 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5, 6):5/49; (1, 2, 4)->(1, 2, 4):23/392; (3, 6)->(3, 6):5/98
+       6. add= 26 support=42 H=4.9145 p0=1/49 delta=1/49 gain=(11/182,97/1274,43/637,97/1274,11/182,53/637) transitions=106 closure_by_miss=(Fraction(0, 1), Fraction(1, 49), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5, 6)->(3, 5, 6):13/196; (1, 3)->(1, 3):267/5096; (2, 4)->(2, 4):29/637
+       7. add= 38 support=43 H=4.8850 p0=6423/96824 delta=4447/96824 gain=(677/13832,1705/24206,1265/24206,1705/24206,677/13832,139/1729) transitions=110 closure_by_miss=(Fraction(0, 1), Fraction(4447, 96824), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 4)->(2, 4):5093/96824; (1, 3)->(1, 3):4969/96824; (3, 5, 6)->(3, 5, 6):341/6916
+       8. add= 34 support=44 H=4.6561 p0=10107/58786 delta=173805/1646008 gain=(9718/205751,59919/1646008,10228/205751,59919/1646008,9718/205751,13938/205751) transitions=91 closure_by_miss=(Fraction(0, 1), Fraction(173805, 1646008), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():6423/96824; (6,)->(6,):92927/1646008; (2, 4)->(2, 4):69851/1646008
+
+==========================================================================================
+ROW three-cluster-wide: E=(0, 1, 2, 30, 31, 32, 60, 61, 62)
+  k=9 span=62 p0=141899/635376 (0.223330752) cap=1979/4004 (0.494255744) margin=24615911/90858768 (0.270924992) missed_dist=['141899/635376', '12053/45384', '12361/52080', '115271/794220', '6562/66185', '13647/529480', '4/1085']
+  additive: excess=8 energy=361 squarefree=((1, 1), (2, 2), (15, 1), (30, 1), (31, 1), (61, 1), (62, 1))
+  greedy-min-support    order=(1, 2, 32, 62, 31, 30, 60, 61) max_support=55 area_support=330 final_support=53 H=4.7569 max_trans=151 first_p0_step=6
+  greedy-max-gain       order=(1, 2, 32, 62, 31, 60, 61, 30) max_support=58 area_support=337 final_support=53 H=4.7569 max_trans=154 first_p0_step=6
+  greedy-min-transition order=(1, 2, 32, 31, 30, 62, 60, 61) max_support=60 area_support=339 final_support=53 H=4.7569 max_trans=143 first_p0_step=6
+  increasing            order=(1, 2, 30, 31, 32, 60, 61, 62) max_support=60 area_support=345 final_support=53 H=4.7569 max_trans=149 first_p0_step=6
+  dyadic-tower          order=(32, 60, 2, 30, 62, 1, 31, 61) max_support=60 area_support=350 final_support=53 H=4.7569 max_trans=154 first_p0_step=6
+  decreasing            order=(62, 61, 60, 32, 31, 30, 2, 1) max_support=60 area_support=355 final_support=53 H=4.7569 max_trans=181 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian path=greedy-min-support > greedy-max-gain > greedy-min-transition > increasing > dyadic-tower > decreasing
+    step ledger for greedy-min-support:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add= 32 support=42 H=5.1285 p0=0 delta=0 gain=(3/28,23/224,3/28,23/224,3/28,3/28) transitions=70 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/16; (2, 4, 5, 6)->(2, 4, 5, 6):1/32; (1, 2, 4, 6)->(1, 2, 4, 6):1/32
+       4. add= 62 support=55 H=5.5381 p0=0 delta=0 gain=(657/6944,23/248,157/1736,23/248,657/6944,733/6944) transitions=151 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 4, 5)->(1, 2, 4, 5):27/992; (1, 3, 5, 6)->(1, 3, 5, 6):179/6944; (1, 3, 6)->(1, 3, 6):3/124
+       5. add= 31 support=52 H=5.4420 p0=0 delta=0 gain=(19/224,85/992,141/1736,85/992,19/224,337/6944) transitions=126 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 4, 5)->(1, 2, 4, 5):137/3472; (1, 3, 5, 6)->(1, 3, 5, 6):215/6944; (3, 4, 5, 6)->(3, 4, 5, 6):11/434
+       6. add= 30 support=55 H=5.4018 p0=951/34720 delta=951/34720 gain=(167/3472,383/7440,74/1085,383/7440,167/3472,41/465) transitions=131 closure_by_miss=(Fraction(0, 1), Fraction(951, 34720), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):23/560; (1, 6)->(1, 6):109/3360; (1, 2, 4, 5)->(1, 2, 4, 5):1639/52080
+       7. add= 60 support=53 H=5.1210 p0=1189/13020 delta=6659/104160 gain=(6371/104160,5893/104160,271/4340,5893/104160,6371/104160,143/3720) transitions=122 closure_by_miss=(Fraction(0, 1), Fraction(6659, 104160), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (6,)->(6,):5557/104160; (5,)->(5,):3587/104160; (3, 6)->(3, 6):293/8680
+       8. add= 61 support=53 H=4.7569 p0=141899/635376 delta=139793/1058960 gain=(258229/6353760,28759/794220,129133/3176880,28759/794220,258229/6353760,10927/151280) transitions=99 closure_by_miss=(Fraction(0, 1), Fraction(139793, 1058960), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():1189/13020; (6,)->(6,):62987/1058960; (6,)->():137267/3176880
+    step ledger for increasing:
+       1. add=  1 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add=  2 support=13 H=3.6645 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/14) transitions=14 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 4, 5, 6):1/14; (2, 3, 4, 5, 6)->(3, 4, 5, 6):1/14; (1, 3, 4, 5, 6)->(1, 3, 4, 6):1/14
+       3. add= 30 support=42 H=5.1426 p0=0 delta=0 gain=(2/21,2/21,2/21,2/21,2/21,11/105) transitions=70 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):1/15; (3, 4, 5, 6)->(3, 4, 5, 6):1/30; (2, 4, 5, 6)->(2, 4, 5, 6):1/30
+       4. add= 31 support=56 H=5.5305 p0=0 delta=0 gain=(283/3255,3/35,88/1085,3/35,283/3255,111/1085) transitions=116 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 5, 6)->(1, 3, 5, 6):239/6510; (1, 2, 4, 5)->(1, 2, 4, 5):47/1302; (1, 2, 3, 4)->(1, 2, 3, 4):199/6510
+       5. add= 32 support=60 H=5.5759 p0=0 delta=0 gain=(1163/14880,3763/52080,151/1736,3763/52080,1163/14880,9949/104160) transitions=121 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 4, 5)->(1, 2, 4, 5):557/17360; (1, 2, 3, 4, 5)->(1, 2, 3, 4, 5):11/420; (1, 2, 3, 4)->(1, 2, 3, 4):167/6510
+       6. add= 60 support=57 H=5.4352 p0=3841/104160 delta=3841/104160 gain=(8213/104160,1601/20832,9/124,1601/20832,8213/104160,1069/26040) transitions=149 closure_by_miss=(Fraction(0, 1), Fraction(3841, 104160), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 6)->(3, 6):1583/52080; (1, 2, 4, 5)->(1, 2, 4, 5):193/7440; (6,)->(6,):1289/52080
+       7. add= 61 support=57 H=5.2001 p0=131647/1058960 delta=555581/6353760 gain=(95223/2117920,36307/794220,32345/635376,36307/794220,95223/2117920,7661/102480) transitions=133 closure_by_miss=(Fraction(0, 1), Fraction(555581, 6353760), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (6,)->(6,):47011/1270752; ()->():3841/104160; (6,)->():37491/1058960
+       8. add= 62 support=53 H=4.7569 p0=141899/635376 delta=157277/1588440 gain=(47503/907680,26261/529480,100519/1588440,26261/529480,47503/907680,264857/6353760) transitions=115 closure_by_miss=(Fraction(0, 1), Fraction(157277, 1588440), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():131647/1058960; (6,)->(6,):97473/2117920; (4,)->(4,):9181/302560
+
+==========================================================================================
+ROW AP-triple-phase: E=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  k=10 span=17 p0=2290763/5717712 (0.400643299) cap=55/91 (0.604395604) margin=1164997/5717712 (0.203752305) missed_dist=['2290763/5717712', '19846/85085', '1036793/5717712', '114043/1099560', '5207/104720', '131/5712', '1/119']
+  additive: excess=8 energy=526 squarefree=((1, 2), (3, 1), (10, 1), (11, 1), (13, 1), (14, 1), (15, 1), (17, 1))
+  increasing            order=(9, 10, 11, 12, 13, 14, 15, 16, 17) max_support=58 area_support=407 final_support=55 H=4.0327 max_trans=143 first_p0_step=6
+  greedy-min-support    order=(9, 12, 15, 10, 11, 13, 17, 14, 16) max_support=59 area_support=399 final_support=55 H=4.0327 max_trans=160 first_p0_step=6
+  dyadic-tower          order=(16, 12, 10, 14, 9, 11, 13, 15, 17) max_support=59 area_support=400 final_support=55 H=4.0327 max_trans=143 first_p0_step=6
+  greedy-max-gain       order=(9, 12, 15, 11, 13, 10, 14, 17, 16) max_support=60 area_support=403 final_support=55 H=4.0327 max_trans=160 first_p0_step=6
+  decreasing            order=(17, 16, 15, 14, 13, 12, 11, 10, 9) max_support=60 area_support=415 final_support=55 H=4.0327 max_trans=164 first_p0_step=6
+  residue-layer         order=(14, 15, 9, 16, 10, 17, 11, 12, 13) max_support=61 area_support=421 final_support=55 H=4.0327 max_trans=169 first_p0_step=6
+  greedy-min-transition order=(9, 12, 15, 10, 17, 14, 11, 16, 13) max_support=62 area_support=411 final_support=55 H=4.0327 max_trans=155 first_p0_step=6
+  Tournament Analysis on DP order strategies
+    vertices: insertion schedules / proof-state addresses, not runners
+    observable: smaller max support, then area, transitions, entropy
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0
+    Hamiltonian path=increasing > greedy-min-support > dyadic-tower > greedy-max-gain > decreasing > residue-layer > greedy-min-transition
+    step ledger for increasing:
+       1. add=  9 support= 7 H=2.8074 p0=0 delta=0 gain=(1/7,1/7,1/7,1/7,1/7,1/7) transitions=7 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 5, 6):1/7; (1, 2, 3, 4, 5, 6)->(1, 2, 3, 4, 6):1/7
+       2. add= 10 support=22 H=4.4242 p0=0 delta=0 gain=(11/90,13/105,13/105,13/105,11/90,38/315) transitions=43 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (1, 3, 4, 5, 6)->(1, 3, 4, 5, 6):13/315; (1, 2, 3, 4, 6)->(1, 2, 3, 4, 6):13/315; (1, 2, 3, 4, 5)->(1, 2, 3, 4, 5):13/315
+       3. add= 11 support=42 H=5.2036 p0=0 delta=0 gain=(131/1155,155/1386,43/385,155/1386,131/1155,37/330) transitions=93 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 3, 4, 5, 6)->(2, 3, 4, 5, 6):179/6930; (1, 2, 3, 4, 5)->(1, 2, 3, 4, 5):59/2310; (1, 3, 4, 6)->(1, 3, 4, 6):8/385
+       4. add= 12 support=52 H=5.4405 p0=0 delta=0 gain=(1343/13860,367/3465,263/2310,367/3465,1343/13860,79/924) transitions=135 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 4, 5, 6)->(3, 4, 5, 6):31/1386; (1, 2, 3, 4)->(1, 2, 3, 4):61/2772; (1, 3, 4, 6)->(1, 3, 4, 6):3/140
+       5. add= 13 support=58 H=5.5407 p0=0 delta=0 gain=(1346/15015,779/9009,691/8190,779/9009,1346/15015,16603/180180) transitions=143 closure_by_miss=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (3, 5)->(3, 5):1259/45045; (2, 5)->(2, 5):1181/45045; (3, 4, 5, 6)->(3, 4, 5, 6):5/234
+       6. add= 14 support=58 H=5.4134 p0=16123/420420 delta=16123/420420 gain=(3649/48510,23/385,59/1078,23/385,3649/48510,9/98) transitions=141 closure_by_miss=(Fraction(0, 1), Fraction(16123, 420420), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: (2, 5)->(2, 5):4232/105105; (3,)->(3,):40589/1261260; (1, 4)->(1, 4):2819/97020
+       7. add= 15 support=57 H=4.9609 p0=22811/105105 delta=75121/420420 gain=(265/3822,25093/315315,598/8085,25093/315315,265/3822,4694/105105) transitions=124 closure_by_miss=(Fraction(0, 1), Fraction(75121, 420420), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():16123/420420; (4,)->():1042/28665; (2,)->():1583/48510
+       8. add= 16 support=56 H=4.5148 p0=140177/458640 delta=447019/5045040 gain=(56983/1261260,52727/1261260,110137/2522520,52727/1261260,56983/1261260,279641/5045040) transitions=122 closure_by_miss=(Fraction(0, 1), Fraction(447019, 5045040), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():22811/105105; (5,)->(5,):39947/1009008; (6,)->():78487/2522520
+       9. add= 17 support=55 H=4.0327 p0=2290763/5717712 delta=4074173/42882840 gain=(145253/3898440,166403/4764760,14487/433160,166403/4764760,145253/3898440,1863317/42882840) transitions=114 closure_by_miss=(Fraction(0, 1), Fraction(4074173, 42882840), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1))
+          top transitions: ()->():140177/458640; (3,)->(3,):1023559/28588560; (5,)->(5,):37823/1072071
+
+==========================================================================================
+GLOBAL ORDER-STRATEGY SCORECARD
+  decreasing            rows= 8 avg_max_support=55.50 avg_area=329.25 avg_max_trans=136.88
+  dyadic-tower          rows= 8 avg_max_support=48.12 avg_area=260.88 avg_max_trans=95.62
+  greedy-max-gain       rows= 5 avg_max_support=51.80 avg_area=298.60 avg_max_trans=126.40
+  greedy-min-support    rows= 8 avg_max_support=45.88 avg_area=253.00 avg_max_trans=97.75
+  greedy-min-transition rows= 6 avg_max_support=48.83 avg_area=266.83 avg_max_trans=96.17
+  increasing            rows= 8 avg_max_support=46.75 avg_area=265.50 avg_max_trans=98.12
+  residue-layer         rows= 7 avg_max_support=55.14 avg_area=321.43 avg_max_trans=123.29
+
+SYNTHESIS
+  1. The exact DP transition is local: one inserted runner only deletes one
+     sector from the missed-state word on each wall atom.
+  2. Order choice changes the intermediate state explosion even though final
+     p0 is invariant.  This is the LRC analogue of the half-tiling address
+     quotient: choose the address schedule before scalarizing.
+  3. Greedy support/transition schedules expose finite low-state pockets
+     for the resonant rows.  High-support prefixes should be the natural
+     input for Weyl/decorrelation, while low-support prefixes route to
+     AP/dyadic/Ruzsa finite atlases.
+  4. The proof obligation suggested by the DP is a transfer inequality:
+     bound each prefix's one-missed-sector landing mass by either finite
+     address templates or a decorrelation estimate on the transition kernel.

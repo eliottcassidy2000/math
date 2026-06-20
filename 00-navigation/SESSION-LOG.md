@@ -1,3 +1,29 @@
+## codex-2026-06-20-S58 -- LRC14 sector-state transfer DP -- THM-554/HYP-2691/T927
+
+User asked to take the dynamic-programming lens and work on LRC.  Pulled first;
+incoming mac-mini/KPS half-tiling work was relevant through THM-551's apex
+truncation and HYP-2690's address-first DP warning.  Converted that lens into
+the LRC sector model.
+
+Added `04-computation/lrc14_state_transfer_dp_codex_s58.py` and stored
+`05-knowledge/results/lrc14_state_transfer_dp_codex_s58.out`.  The exact
+state is the missed inner-sector set on each wall atom.  Inserting one speed
+can only delete one missed sector, so the scalar increment is exactly
+`p0(P union {e})-p0(P)=sum_s meas{P misses exactly s and e lands in s}`.
+The script asserts the transition theorem on every tested prefix: after-state
+is a subset of before-state, size drops by `0` or `1`, and closure mass equals
+the exact `p0` increment.  Canonized this as THM-554.
+
+Opened HYP-2691/T927.  Exact row-bank result: insertion order changes proof
+state size even though final `p0` is invariant.  Global strategy averages:
+greedy-min-support `avg_max_support=45.88`, increasing `46.75`, dyadic-tower
+`48.12`, decreasing `55.50`.  The dyadic block specifically prefers the
+dyadic-tower order; the three-cluster true-wide row prefers greedy minimum
+support; the AP-triple phase row prefers increasing.  The next sharp target is
+a transfer inequality for the one-missed-sector landing mass: low-state
+prefixes route to finite AP/dyadic/cube-root/Ruzsa templates, high-state
+prefixes route to Weyl/BV decorrelation.  No LRC14 proof claimed.
+
 ## mac-mini-2026-06-20-S4 — half-tiling framework: complement-quotient + cube-root unification + apex-prime order-truncation — THM-549, THM-551, HYP-2689
 Dispatch: the owner's half-tiling framework (mirror over y=x = reverse all arcs; sizes 0,1,2,4,6,9,12,…; even A+B−C vs odd A+B−C+D−E−F+G recursions), connect to the full-tiling A+B+C−D−E−F+G and one/two/three-far, extend. CONCURRENT: codex-S56/S57 + kps owned overlapping pieces; reconciled namespace (I own THM-549/THM-551/HYP-2689; codex built S57 on my THM-551/2689; cross-ref'd prior THM-280/THM-442).
 **PROVED (THM-549):** the y=x reflection σ(x,y)=(n+1−y,n+1−x) of a tiling = φ(T^op) (reverse-all-arcs/complement, relabel i→n+1−i) — VERIFIED exhaustively over all 2^m tilings n≤6. So the half-tiling is the tiling-model fundamental domain of the **complement involution** (same Z₂ as G_n/Z₂), `half(n)=(m+fix)/2=⌊(n−1)²/4⌋`, fixed diagonal {x+y=n+1} = the SC spine. **Square/pronic:** odd n=2k+1 → k² (SQUARE, 3 corners), even n=2k → k(k−1) (PRONIC, no 3 corners) — the owner's "even has a different shape." Order-4 recurrence (x−1)³(x+1) all n; order-2 extra for even. **Complement-invariance** of c3, HP, AND the full OCF (odd-cycle counts, all lengths) — VERIFIED 100% n=4–6 ⟹ the central Claim-A/μ computation (and H-max) **halves on the half-region** (2× saving; supports kps HYP-2688).
