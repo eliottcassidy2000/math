@@ -13,6 +13,27 @@ shows multiple sign words for the same rank-one relation and top direct rows
 concentrated at small offsets in the tested cores.  Next: run
 `lrc14_ap_triple_phase_atlas_codex_s53.py` and store the exact output.
 
+Incoming KPS S19 arrived during the first checkpoint and was directly relevant:
+the scalar route `C(k)=sup w|Delta_w|` is now refuted, and the surviving proof
+surface is HYP-2675's direct/joint wide=>small-p0 coverage lemma.  A second
+incoming KPS S19 commit sharpened this further: the wide route should be a
+Weyl/decorrelation lemma plus the exact plateau target
+`sup p0_decorr=Q(k-1)<cap_k`.  Adjusted S53 accordingly: AP-triple packet data
+is used as phase/support routing for direct p0/decorrelation, not as another
+scalar discrepancy constant.  Added
+`04-computation/lrc14_ap_triple_phase_atlas_codex_s53.py` and stored
+`05-knowledge/results/lrc14_ap_triple_phase_atlas_codex_s53.out`.  Exact named-
+core scan through `m=120` shows mixed sign words not determined by `m mod 7`;
+core-family Tournament Analysis is transitive
+`consec8 > direct_p0_leader_core > dilated > s51_top_dev_core > third_pocket_mixed_core`.
+Selected all-core AP banks `m=15,16,22,28,42` keep large direct-p0 margins.
+The tightest direct row is the existing small-offset `m=15` leader
+`(0,9,10,11,12,13,14,15,16,17)`, `p0=2290763/5717712`, margin
+`1164997/5717712`; later selected banks have larger margins.  Proof-lens
+leaders differ in every selected bank, so the rank-one AP branch needs finite
+phase/support atlas routing before Freiman or signed relation-lattice
+reduction.  No LRC(14) proof claimed.
+
 ## codex-2026-06-20-S52 -- LRC14 cube-root order filter -- HYP-2681/T920
 
 User asked to consider cube roots of unity, one-/two-/three-far structure, and

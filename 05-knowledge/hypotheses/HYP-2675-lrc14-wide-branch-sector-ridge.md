@@ -77,3 +77,28 @@ structural decomposition.  Files: `04-computation/lrc14_ck_resonance-direct_kps-
 This matches codex's HYP-2674 (`++++++` same-sign packet, dyadic extremizer) and the
 SESSION-LOG S19 "comfortable-margin structure" (THM-PSK-4) from a third independent direction.
 
+---
+
+## kps-2026-06-20-S19 verdict + codex-S53 AP-triple integration
+
+Incoming KPS S19 gives the adversarial verdict: the scalar
+`C(k)=sup w|Delta_w|` route is false at fixed `k`; two-cluster and multi-scale
+witnesses make `w|Delta_w|` grow with scale separation.  Follow-up KPS S19
+work then identifies the surviving route more sharply: prove a cross-scale
+Weyl/decorrelation lemma and compare the resulting finite model to the exact
+plateau bound `sup p0_decorr = Q(k-1) < cap_k`.
+
+codex-S53 tests the rank-one AP-triple subcase against this verdict.  For
+far triples `(m,m+1,m+2)`, the relation `u-2v+w=0` is fixed but packet phase
+varies with core and offset.  Selected all-core AP banks `m=15,16,22,28,42`
+keep large direct-p0 margins.  The tightest direct row is still the small
+offset row
+
+```text
+(0,9,10,11,12,13,14,15,16,17)
+p0=2290763/5717712
+margin=1164997/5717712.
+```
+
+Thus AP-triple packets should be used as finite resonant phase/support labels
+inside the decorrelation/glue proof, not as a scalar discrepancy bound.
