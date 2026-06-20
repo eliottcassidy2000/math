@@ -33,5 +33,11 @@ audited prefixes, with worst pressure `27/65`.  That is useful because it says
 the cap-level target does not need a razor-sharp constant in these banks.  The
 large-pressure steps are finite structured prefixes, not the high-state tail.
 
+The AP-prefix template scout pinned the worst pressure to the finite AP6
+append and its integer dilates.  That gives the next finite atom explicitly:
+`d*{0,...,5}->6d`, with residual `27/245` and pressure `27/65`.  This should
+be handled as a base template before any general decorrelation statement is
+asked to do work.
+
 No LRC14 proof is finished here.  The progress is an exact DP recurrence and a
 sharper proof obligation that avoids collapsing the address too early.

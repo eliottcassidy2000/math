@@ -1,0 +1,52 @@
+HYP-2691 AP-prefix transfer template
+template: d*{0,...,m-1} -> add d*m
+pressure = |delta-p1/7| / ((6/49)*V/(d*m))
+
+primitive scale d=1
+ m p1 delta residual V bound pressure scaled_abs
+ 1 0 0 0  0 0 0 0
+ 2 0 0 0  0 0 0 0
+ 3 0 0 0  0 0 0 0
+ 4 0 0 0  0 0 0 0
+ 5 0 0 0  0 0 0 0
+ 6 11/42 31/210 27/245 13 13/49 27/65 162/245
+ 7 12/35 44/245 32/245 23 138/343 112/345 32/35
+ 8 359/1470 523/5880 445/8232 28 3/7 445/3528 445/1029
+ 9 653/2940 779/8820 1747/30870 29 58/147 1747/12180 1747/3430
+10 551/2940 97/1260 155/3087 29 87/245 775/5481 1550/3087
+11 1283/8820 2069/48510 4951/226380 26 156/539 4951/65520 4951/20580
+12 2039/16170 457/8820 4591/135828 26 13/49 4591/36036 4591/11319
+13 1061/10780 8077/280280 28953/1961960 22 132/637 9651/135520 28953/150920
+
+pressure leaders
+  m= 6 pressure=27/65 (0.415384615) scaled_abs=162/245
+  m= 7 pressure=112/345 (0.324637681) scaled_abs=32/35
+  m= 9 pressure=1747/12180 (0.143431856) scaled_abs=1747/3430
+  m=10 pressure=775/5481 (0.141397555) scaled_abs=1550/3087
+  m=12 pressure=4591/36036 (0.127400377) scaled_abs=4591/11319
+  m= 8 pressure=445/3528 (0.126133787) scaled_abs=445/1029
+
+dilation check for the live peak m=6
+  d= 1 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 13 bound=13/49 pressure=27/65 same
+  d= 2 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 26 bound=13/49 pressure=27/65 same
+  d= 3 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 39 bound=13/49 pressure=27/65 same
+  d= 4 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 52 bound=13/49 pressure=27/65 same
+  d= 5 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 65 bound=13/49 pressure=27/65 same
+  d= 6 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V= 78 bound=13/49 pressure=27/65 same
+  d= 7 gcd(d,7)=7 p1=11/42 delta=31/210 residual=27/245 V= 91 bound=13/49 pressure=27/65 same
+  d= 8 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=104 bound=13/49 pressure=27/65 same
+  d= 9 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=117 bound=13/49 pressure=27/65 same
+  d=10 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=130 bound=13/49 pressure=27/65 same
+  d=11 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=143 bound=13/49 pressure=27/65 same
+  d=12 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=156 bound=13/49 pressure=27/65 same
+  d=13 gcd(d,7)=1 p1=11/42 delta=31/210 residual=27/245 V=169 bound=13/49 pressure=27/65 same
+  d=14 gcd(d,7)=7 p1=11/42 delta=31/210 residual=27/245 V=182 bound=13/49 pressure=27/65 same
+
+SYNTHESIS
+  1. Among AP-prefix appends through m=13, the exact pressure peak is m=6:
+     residual=27/245, V=13, bound=13/49, pressure=27/65.
+  2. Integer dilation preserves p1, delta, residual, and pressure,
+     while V and the added speed both scale by d.
+  3. This explains why AP9, boundary doubled-AP, and related row-bank steps
+     share the same top pressure.  It is a finite AP-prefix template, not a
+     true-wide obstruction.

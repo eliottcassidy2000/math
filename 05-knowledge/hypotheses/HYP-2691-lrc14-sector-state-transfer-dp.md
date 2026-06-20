@@ -112,6 +112,23 @@ named banks.  The hard steps are not generic high-support steps; they are
 finite structured prefixes, exactly the rows that should be routed through
 AP/dyadic/cube-root/Ruzsa address templates before decorrelation.
 
+The finite AP-prefix template was isolated by
+`04-computation/lrc14_ap_prefix_transfer_template_codex_s58.py`.  For
+
+```text
+d*{0,1,...,m-1} -> add d*m,   1<=m<=13,
+```
+
+the exact pressure peak occurs at `m=6`:
+
+```text
+p1=11/42, delta=31/210, residual=27/245,
+V=13*d, bound=13/49, pressure=27/65.
+```
+
+Thus the largest pressure in the named residual bank is explained by a finite
+AP6 append template and its integer dilates, not by a true-wide phenomenon.
+
 Concrete exact rows from the scout:
 
 ```text
@@ -163,5 +180,6 @@ transition mass.
 ## Status
 
 No LRC14 proof is claimed.  The concrete next sharp target is the transfer
-inequality for one-missed-sector landing mass, split into finite low-state
-templates and a high-state Weyl/decorrelation bound.
+inequality for one-missed-sector landing mass, with the AP6 append template as
+the first finite low-state atom and a high-state Weyl/decorrelation bound for
+the complement.
