@@ -102,3 +102,24 @@ margin=1164997/5717712.
 
 Thus AP-triple packets should be used as finite resonant phase/support labels
 inside the decorrelation/glue proof, not as a scalar discrepancy bound.
+
+codex-S53 also adds an independent bounded-base audit of the decorrelated
+finite comparison:
+
+- `04-computation/lrc14_decorrelated_plateau_bound_codex_s53.py`
+- `05-knowledge/results/lrc14_decorrelated_plateau_bound_codex_s53.out`
+
+For each `k=8..12`, scanning bounded primitive bases `B subset {0,...,14}` and
+all base sizes `b=|B|`, `r=k-b`, the maximum of `P_r(B)` occurs at
+`b=k-1`, `r=1`, `B={0,...,k-2}`.  Exact outputs:
+
+```text
+k=8:  Q(7)=289/1470,       cap-Q=1087/5880
+k=9:  Q(8)=621/1715,       cap-Q=129643/980980
+k=10: Q(9)=1229/2744,      cap-Q=5583/35672
+k=11: Q(10)=65599/123480,  cap-Q=311453/1605240
+k=12: Q(11)=14873/24696,   cap-Q=6295/24696
+```
+
+This does not prove the Weyl-error/glue step, but it confirms the finite
+decorrelated comparison in the exact THM-548/S51 `P_r(B)` language.

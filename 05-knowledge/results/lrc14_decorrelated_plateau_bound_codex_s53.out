@@ -1,0 +1,105 @@
+HYP-2675 / S53 -- decorrelated plateau-bound audit
+bounded bases B subset {0,...,14}; P_r(B) exact by THM-548/S51
+
+k=8: cap=2243/5880 (+0.381462585) Q(k-1)=289/1470 (+0.196598639) cap-Q=1087/5880 (+0.184863946)
+  global bounded-base max: b=7 r=1 core=(0, 1, 2, 3, 4, 5, 6) P_r=289/1470 (+0.196598639) margin=1087/5880 (+0.184863946) equals_Q=True
+  best by base size:
+    b=1 r=7 P_r=2880/117649 (+0.024479596) Q-P=607489/3529470 (+0.172119043) core=(0,) exc=0 energy=1
+    b=2 r=6 P_r=2880/117649 (+0.024479596) Q-P=607489/3529470 (+0.172119043) core=(0, 1) exc=0 energy=6
+    b=3 r=5 P_r=3180/117649 (+0.027029554) Q-P=598489/3529470 (+0.169569085) core=(0, 1, 2) exc=0 energy=19
+    b=4 r=4 P_r=572/16807 (+0.034033438) Q-P=81967/504210 (+0.162565201) core=(0, 1, 2, 3) exc=0 energy=44
+    b=5 r=3 P_r=123/2401 (+0.051228655) Q-P=10471/72030 (+0.145369985) core=(0, 1, 2, 3, 4) exc=0 energy=85
+    b=6 r=2 P_r=863/10290 (+0.083867833) Q-P=116/1029 (+0.112730807) core=(0, 1, 2, 3, 4, 5) exc=0 energy=146
+    b=7 r=1 P_r=289/1470 (+0.196598639) Q-P=0 (+0.000000000) core=(0, 1, 2, 3, 4, 5, 6) exc=0 energy=231
+  TOURNAMENT ANALYSIS BY BASE-SIZE STRATA
+    vertices are base sizes b=|B|, not runners.
+    pairwise observable=(max_B P_{k-b}(B), b, core label); larger wins.
+    scores={1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0 Hamiltonian_path_count=1
+    tie Hamiltonian path=b=7 > b=6 > b=5 > b=4 > b=3 > b=2 > b=1
+
+k=9: cap=1979/4004 (+0.494255744) Q(k-1)=621/1715 (+0.362099125) cap-Q=129643/980980 (+0.132156619)
+  global bounded-base max: b=8 r=1 core=(0, 1, 2, 3, 4, 5, 6, 7) P_r=621/1715 (+0.362099125) margin=129643/980980 (+0.132156619) equals_Q=True
+  best by base size:
+    b=1 r=8 P_r=47520/823543 (+0.057701905) Q-P=1253421/4117715 (+0.304397220) core=(0,) exc=0 energy=1
+    b=2 r=7 P_r=47520/823543 (+0.057701905) Q-P=1253421/4117715 (+0.304397220) core=(0, 1) exc=0 energy=6
+    b=3 r=6 P_r=7260/117649 (+0.061708982) Q-P=176703/588245 (+0.300390144) core=(0, 1, 2) exc=0 energy=19
+    b=4 r=5 P_r=8520/117649 (+0.072418805) Q-P=170403/588245 (+0.289680320) core=(0, 1, 2, 3) exc=0 energy=44
+    b=5 r=4 P_r=9757/100842 (+0.096755320) Q-P=133789/504210 (+0.265343805) core=(0, 1, 2, 3, 4) exc=0 energy=85
+    b=6 r=3 P_r=1973/14406 (+0.136956824) Q-P=16217/72030 (+0.225142302) core=(0, 1, 2, 3, 4, 5) exc=0 energy=146
+    b=7 r=2 P_r=1268/5145 (+0.246452867) Q-P=17/147 (+0.115646259) core=(0, 1, 2, 3, 4, 5, 6) exc=0 energy=231
+    b=8 r=1 P_r=621/1715 (+0.362099125) Q-P=0 (+0.000000000) core=(0, 1, 2, 3, 4, 5, 6, 7) exc=0 energy=344
+  TOURNAMENT ANALYSIS BY BASE-SIZE STRATA
+    vertices are base sizes b=|B|, not runners.
+    pairwise observable=(max_B P_{k-b}(B), b, core label); larger wins.
+    scores={1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1} directed_3cycles=0 Hamiltonian_path_count=1
+    tie Hamiltonian path=b=8 > b=7 > b=6 > b=5 > b=4 > b=3 > b=2 > b=1
+
+k=10: cap=55/91 (+0.604395604) Q(k-1)=1229/2744 (+0.447886297) cap-Q=5583/35672 (+0.156509307)
+  global bounded-base max: b=9 r=1 core=(0, 1, 2, 3, 4, 5, 6, 7, 8) P_r=1229/2744 (+0.447886297) margin=5583/35672 (+0.156509307) equals_Q=True
+  best by base size:
+    b=1 r=9 P_r=86400/823543 (+0.104912555) Q-P=2259629/6588344 (+0.342973743) core=(0,) exc=0 energy=1
+    b=2 r=8 P_r=86400/823543 (+0.104912555) Q-P=2259629/6588344 (+0.342973743) core=(0, 1) exc=0 energy=6
+    b=3 r=7 P_r=90600/823543 (+0.110012471) Q-P=2226029/6588344 (+0.337873827) core=(0, 1, 2) exc=0 energy=19
+    b=4 r=6 P_r=14500/117649 (+0.123247966) Q-P=305547/941192 (+0.324638331) core=(0, 1, 2, 3) exc=0 energy=44
+    b=5 r=5 P_r=17845/117649 (+0.151679997) Q-P=278787/941192 (+0.296206300) core=(0, 1, 2, 3, 4) exc=0 energy=85
+    b=6 r=4 P_r=1879/9604 (+0.195647647) Q-P=4845/19208 (+0.252238651) core=(0, 1, 2, 3, 4, 6) exc=1 energy=130
+    b=7 r=3 P_r=21409/72030 (+0.297223379) Q-P=43409/288120 (+0.150662918) core=(0, 1, 2, 3, 4, 5, 6) exc=0 energy=231
+    b=8 r=2 P_r=14368/36015 (+0.398944884) Q-P=14101/288120 (+0.048941413) core=(0, 1, 2, 3, 4, 5, 6, 7) exc=0 energy=344
+    b=9 r=1 P_r=1229/2744 (+0.447886297) Q-P=0 (+0.000000000) core=(0, 1, 2, 3, 4, 5, 6, 7, 8) exc=0 energy=489
+  TOURNAMENT ANALYSIS BY BASE-SIZE STRATA
+    vertices are base sizes b=|B|, not runners.
+    pairwise observable=(max_B P_{k-b}(B), b, core label); larger wins.
+    scores={1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1} directed_3cycles=0 Hamiltonian_path_count=1
+    tie Hamiltonian path=b=9 > b=8 > b=7 > b=6 > b=5 > b=4 > b=3 > b=2 > b=1
+
+k=11: cap=66/91 (+0.725274725) Q(k-1)=65599/123480 (+0.531252025) cap-Q=311453/1605240 (+0.194022701)
+  global bounded-base max: b=10 r=1 core=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) P_r=65599/123480 (+0.531252025) margin=311453/1605240 (+0.194022701) equals_Q=True
+  best by base size:
+    b=1 r=10 P_r=6581520/40353607 (+0.163096201) Q-P=5348309551/14527298520 (+0.368155824) core=(0,) exc=0 energy=1
+    b=2 r=9 P_r=6581520/40353607 (+0.163096201) Q-P=5348309551/14527298520 (+0.368155824) core=(0, 1) exc=0 energy=6
+    b=3 r=8 P_r=973440/5764801 (+0.168859255) Q-P=752083993/2075328360 (+0.362392770) core=(0, 1, 2) exc=0 energy=19
+    b=4 r=7 P_r=21576/117649 (+0.183392974) Q-P=14733097/42353640 (+0.347859051) core=(0, 1, 2, 3) exc=0 energy=44
+    b=5 r=6 P_r=150511/705894 (+0.213220399) Q-P=13469797/42353640 (+0.318031626) core=(0, 1, 2, 3, 4) exc=0 energy=85
+    b=6 r=5 P_r=121367/470596 (+0.257900620) Q-P=11577427/42353640 (+0.273351405) core=(0, 1, 2, 3, 4, 6) exc=1 energy=130
+    b=7 r=4 P_r=87932/252105 (+0.348791178) Q-P=1103983/6050520 (+0.182460846) core=(0, 1, 2, 3, 4, 5, 6) exc=0 energy=231
+    b=8 r=3 P_r=36752/84035 (+0.437341584) Q-P=568207/6050520 (+0.093910441) core=(0, 1, 2, 3, 4, 5, 6, 7) exc=0 energy=344
+    b=9 r=2 P_r=46167/96040 (+0.480705956) Q-P=4369/86436 (+0.050546069) core=(0, 1, 2, 3, 4, 5, 6, 7, 8) exc=0 energy=489
+    b=10 r=1 P_r=65599/123480 (+0.531252025) Q-P=0 (+0.000000000) core=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) exc=0 energy=670
+  TOURNAMENT ANALYSIS BY BASE-SIZE STRATA
+    vertices are base sizes b=|B|, not runners.
+    pairwise observable=(max_B P_{k-b}(B), b, core label); larger wins.
+    scores={1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1} directed_3cycles=0 Hamiltonian_path_count=1
+    tie Hamiltonian path=b=10 > b=9 > b=8 > b=7 > b=6 > b=5 > b=4 > b=3 > b=2 > b=1
+
+k=12: cap=6/7 (+0.857142857) Q(k-1)=14873/24696 (+0.602243278) cap-Q=6295/24696 (+0.254899579)
+  global bounded-base max: b=11 r=1 core=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) P_r=14873/24696 (+0.602243278) margin=6295/24696 (+0.254899579) equals_Q=True
+  best by base size:
+    b=1 r=11 P_r=9218880/40353607 (+0.228452440) Q-P=1086034217/2905459704 (+0.373790838) core=(0,) exc=0 energy=1
+    b=2 r=10 P_r=9218880/40353607 (+0.228452440) Q-P=1086034217/2905459704 (+0.373790838) core=(0, 1) exc=0 energy=6
+    b=3 r=9 P_r=9462780/40353607 (+0.234496510) Q-P=1068473417/2905459704 (+0.367746768) core=(0, 1, 2) exc=0 energy=19
+    b=4 r=8 P_r=1437396/5764801 (+0.249340090) Q-P=146477999/415065672 (+0.352903188) core=(0, 1, 2, 3) exc=0 energy=44
+    b=5 r=7 P_r=229469/823543 (+0.278636331) Q-P=19188305/59295096 (+0.323606947) core=(0, 1, 2, 3, 4) exc=0 energy=85
+    b=6 r=6 P_r=151359/470596 (+0.321632568) Q-P=2376977/8470728 (+0.280610710) core=(0, 1, 2, 3, 4, 6) exc=1 energy=130
+    b=7 r=5 P_r=1414969/3529470 (+0.400901268) Q-P=8527567/42353640 (+0.201342010) core=(0, 1, 2, 3, 4, 5, 6) exc=0 energy=231
+    b=8 r=4 P_r=841762/1764735 (+0.476990596) Q-P=5304907/42353640 (+0.125252682) core=(0, 1, 2, 3, 4, 5, 6, 7) exc=0 energy=344
+    b=9 r=3 P_r=69177/134456 (+0.514495448) Q-P=13273/151263 (+0.087747830) core=(0, 1, 2, 3, 4, 5, 6, 7, 8) exc=0 energy=489
+    b=10 r=2 P_r=68977/123480 (+0.558608682) Q-P=449/10290 (+0.043634597) core=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) exc=0 energy=670
+    b=11 r=1 P_r=14873/24696 (+0.602243278) Q-P=0 (+0.000000000) core=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) exc=0 energy=891
+  TOURNAMENT ANALYSIS BY BASE-SIZE STRATA
+    vertices are base sizes b=|B|, not runners.
+    pairwise observable=(max_B P_{k-b}(B), b, core label); larger wins.
+    scores={1: 0, 2: 1, 3: 2, 4: 3, 5: 4, 6: 5, 7: 6, 8: 7, 9: 8, 10: 9, 11: 10}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1} directed_3cycles=0 Hamiltonian_path_count=1
+    tie Hamiltonian path=b=11 > b=10 > b=9 > b=8 > b=7 > b=6 > b=5 > b=4 > b=3 > b=2 > b=1
+
+SYNTHESIS
+  In this bounded-base audit, every k=8..12 maximum occurs at
+  b=k-1, r=1, core=consec_{k-1}, i.e. the one-stranger plateau Q(k-1).
+  This supports the incoming KPS S19 decorrelation foundation.
+  Remaining work is not this finite comparison; it is the explicit
+  Weyl/decorrelation error and finite glue from bounded-gap rows.
+  No LRC(14) proof is claimed.

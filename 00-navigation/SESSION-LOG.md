@@ -34,6 +34,20 @@ leaders differ in every selected bank, so the rank-one AP branch needs finite
 phase/support atlas routing before Freiman or signed relation-lattice
 reduction.  No LRC(14) proof claimed.
 
+Follow-up after reading the newer KPS decorrelation foundation: added
+`04-computation/lrc14_decorrelated_plateau_bound_codex_s53.py` and stored
+`05-knowledge/results/lrc14_decorrelated_plateau_bound_codex_s53.out`.  This
+audits the finite decorrelated comparison in exact THM-548/S51 language:
+for bounded primitive bases `B subset {0,...,14}`, `k=8..12`, base size `b`,
+and independent far count `r=k-b`, the maximum of `P_r(B)` always occurs at
+`b=k-1`, `r=1`, `B={0,...,k-2}`.  Exact plateaus:
+`Q(7)=289/1470`, `Q(8)=621/1715`, `Q(9)=1229/2744`,
+`Q(10)=65599/123480`, `Q(11)=14873/24696`, all below cap.  Base-size
+Tournament Analysis is transitive `b=k-1 > ... > b=1`.  This supports the
+KPS S19 crux and isolates the remaining proof work as explicit
+Weyl/decorrelation error plus bounded-gap glue, not the finite plateau
+comparison.
+
 ## codex-2026-06-20-S52 -- LRC14 cube-root order filter -- HYP-2681/T920
 
 User asked to consider cube roots of unity, one-/two-/three-far structure, and
