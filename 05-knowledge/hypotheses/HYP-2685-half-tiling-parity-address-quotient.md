@@ -10,8 +10,8 @@ depends_on:
   - THM-442
   - THM-513
 related:
-  - THM-551
-  - HYP-2689
+  - THM-553
+  - HYP-2690
   - HYP-2660
   - HYP-2683
   - HYP-2684
@@ -78,7 +78,7 @@ HYP-2660.
 
 ### Tile-address refinement
 
-THM-551 turns the quotient into a local coordinate system.  A tile `(a,b)` has
+THM-553 turns the quotient into a local coordinate system.  A tile `(a,b)` has
 address
 
 ```text
@@ -88,7 +88,7 @@ address
 where `beta` is the full birth strip and `tau` is the half-tiling fixed-line
 crossing.  This refines the address-quotient claim: the half carrier is not
 only a global Burnside count, but a layer clock for individual interval roots.
-HYP-2689 asks whether complement-even invariant computations can update by the
+HYP-2690 asks whether complement-even invariant computations can update by the
 `tau=n` crossing layer before importing OCF/Hamiltonian-path packet data.
 
 ### Relation to `A+B+C-D-E-F+G` in LRC work

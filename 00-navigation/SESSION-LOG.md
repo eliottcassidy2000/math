@@ -36,7 +36,7 @@ on an API error; I independently re-verified its threads). NEW RESULTS:
 NEXT: OPEN-Q-109 (the base-HP/grid-sym lemma) would make HYP-2688 a theorem. Whether the codec's
 2x extends to a useful fingerprint for ML ranking pipelines (engineering roadmap). mac-mini's
 "Mode C n->n-3 Eisenstein" conjecture (cube-root reduction beside binary Cayley-Dickson).
-## codex-2026-06-20-S57 -- local tile-address recurrence -- THM-551/HYP-2689/T925
+## codex-2026-06-20-S57 -- local tile-address recurrence -- THM-553/HYP-2690/T926
 
 User asked to combine the full tiling recurrence and the even/odd half-tiling
 recurrences to understand the recursive structure of a particular tile and to
@@ -55,13 +55,27 @@ is bijective with inverse `(beta,tau)->(beta,tau-beta+1)`.  Full counts are
 Reflection at size `n` sends `(beta,tau)` to `(n+beta-tau,2n-tau)`, so fixed
 line is exactly `tau=n`.  The address recovers THM-513 one-flip facts:
 `b=tau-beta+1`, `gap=c3=2beta-tau-2`, and `H=1+2^gap`.  Canonized this exact
-layer as THM-551 and opened HYP-2689/T925 for the DP program: invariant updates
+layer as THM-553 and opened HYP-2690/T926 for the DP program: invariant updates
 should route through the `tau=n` crossing layer (`floor((n-1)/2)` new
 half-address orbit coordinates) rather than starting from the full new strip
 (`n-2` cells), then attach OCF/H/root packet data after the address quotient.
 Precision note: those coordinates are one-bit only in the grid-symmetric /
 self-converse subcube; the full complement quotient still needs unordered pair
 states on nonfixed mirror orbits.
+
+Namespace repair: concurrent mac-mini work owns THM-551 for apex-prime
+order-truncation and HYP-2689/T925 for the ternary Eisenstein program; KPS owns
+THM-552 for c3-parity.  The codex tile-address theorem/thread was therefore
+renumbered from provisional THM-551/HYP-2689/T925 to THM-553/HYP-2690/T926.
+
+Then added `04-computation/half_tiling_address_dp_codex_s57.py` and stored
+`05-knowledge/results/half_tiling_address_dp_codex_s57.out` as the first
+HYP-2690 DP scaffold.  It directly enumerates the grid-symmetric/self-converse
+half cube by crossing-layer addresses, reflects bits to the discarded side, and
+computes `c3`, score multisets, and Hamiltonian-path spectra.  Exact through
+`n=8`: the n=8 half cube has `12` coordinates and `4096` assignments, reaches
+`Hmax=661` with `c3=20` and scores `(3,3,3,3,4,4,4,4)`.  This exercises the
+local-address DP coordinate while preserving the quotient-state warning.
 
 ## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-550/HYP-2685/T924
 

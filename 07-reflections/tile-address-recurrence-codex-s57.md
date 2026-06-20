@@ -70,3 +70,21 @@ one-flip interval-root data needed for FKN shell packets.
 This still does not make `H` cell-affine.  The address quotient tells us where
 to attach cycle-space data.  It is a routing layer, not a replacement for OCF,
 Hamiltonian-path, or Pfaffian packet computations.
+
+## First DP Check
+
+The follow-up scaffold `half_tiling_address_dp_codex_s57.py` enumerates the
+grid-symmetric half cube directly.  It computes `c3`, score multisets, and `H`
+for `n=3..8`.
+
+The useful displayed point is `n=8`:
+
+```text
+half coordinates = 12
+assignments = 4096
+Hmax = 661
+c3 at displayed leaders = 20
+scores = (3,3,3,3,4,4,4,4)
+```
+
+This is a self-converse subcube computation, not a full complement-quotient DP.

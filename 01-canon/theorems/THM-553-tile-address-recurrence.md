@@ -1,5 +1,5 @@
 ---
-id: THM-551
+id: THM-553
 title: The full and half tiling recurrences combine into a two-clock address for every tile
 status: PROVED; verified by `tile_address_recurrence_codex_s57.py`
 source: codex-2026-06-20-S57
@@ -15,9 +15,14 @@ related:
   - HYP-2687
   - HYP-2688
   - HYP-2689
+  - HYP-2690
 ---
 
-# THM-551 - Tile Address Recurrence
+# THM-553 - Tile Address Recurrence
+
+Namespace note: concurrent mac-mini work owns THM-551 for apex-prime
+order-truncation, and KPS owns THM-552 for the c3-parity dichotomy.  This
+codex local-address theorem was renumbered to THM-553.
 
 ## Statement
 

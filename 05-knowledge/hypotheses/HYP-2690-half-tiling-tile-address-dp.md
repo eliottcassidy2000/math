@@ -1,10 +1,10 @@
 ---
-id: HYP-2689
+id: HYP-2690
 title: Half-tiling tile-address dynamic programs for complement-even tournament invariants
-status: OPEN; THM-551 proves the local address layer, invariant-level DP remains to be built
+status: OPEN; THM-553 proves the local address layer, first grid-symmetric DP verified n<=8
 source: codex-2026-06-20-S57
 depends_on:
-  - THM-551
+  - THM-553
   - THM-549
   - THM-550
   - THM-513
@@ -13,10 +13,15 @@ related:
   - HYP-2686
   - HYP-2687
   - HYP-2688
+  - HYP-2689
   - THM-442
 ---
 
-# HYP-2689 - Half-Tiling Tile-Address Dynamic Programs
+# HYP-2690 - Half-Tiling Tile-Address Dynamic Programs
+
+Namespace note: concurrent mac-mini work owns HYP-2689/T925 for the ternary
+Eisenstein inclusion-exclusion program.  This codex DP thread was renumbered
+to HYP-2690/T926.
 
 ## Claim Being Tested
 
@@ -27,7 +32,7 @@ The two-clock tile address
 ```
 
 should support faster incremental computations for complement-even tournament
-invariants as `n` grows.  THM-551 proves the local address layer:
+invariants as `n` grows.  THM-553 proves the local address layer:
 
 - `beta` is the full-staircase birth strip;
 - `tau` is the half-tiling mirror crossing;
@@ -68,6 +73,30 @@ score defect = e_(tau-beta+1)-e_beta.
 
 So at least the FKN radius-1 ledger can be updated exactly from address
 layers.
+
+## First DP Scaffold
+
+`04-computation/half_tiling_address_dp_codex_s57.py` enumerates the
+grid-symmetric/self-converse half cube directly by crossing-layer addresses.
+For each half assignment, it reflects bits to the discarded side and computes
+`c3`, score multiset, and Hamiltonian-path count on the full tournament.
+
+Exact results through `n=8`:
+
+```text
+n  half_coords  assignments  Hmax
+3            1            2     3
+4            2            4     5
+5            4           16    15
+6            6           64    45
+7            9          512   189
+8           12         4096   661
+```
+
+The `n=8` half-cube leader has `c3=20` and score multiset
+`(3,3,3,3,4,4,4,4)`.  This independently exercises the local-address DP
+coordinates; KPS has separately pushed the global max-H half-cube verification
+further to `n=9`.
 
 ## Program
 
@@ -113,7 +142,7 @@ score-odd or orientation-sensitive quantities.
 
 ## Status
 
-OPEN.  THM-551 proves the exact local address calculus.  The next test is a
-small `n<=8` DP that computes `c3` and `H` on the grid-symmetric half cube using
-crossing layers, then separately tests the unordered-pair-state quotient for
-all complement-even tilings.
+OPEN.  THM-553 proves the exact local address calculus and the first
+grid-symmetric DP now computes `c3` and `H` through `n=8`.  The next test is the
+unordered-pair-state quotient for all complement-even tilings, plus a version
+that imports the KPS half-tiling codec and n=9 maximizer workflow.
