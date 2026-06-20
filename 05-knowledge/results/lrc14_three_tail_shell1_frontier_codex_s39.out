@@ -1,0 +1,117 @@
+HYP-2664/T907 three-tail AP-tail shell-1 frontier
+family: ({1,...,13} \ H) union {r,s,t}, |H|=4
+AP one-hole second value: 426/35035 = 0.012159269
+first-tail cutoff R: all tails >=R are certified by the crude 3-tail comb bound
+
+frontier counts
+  total 4-hole bases: 715
+  shell-1 damaged bases: 589
+  shell-1 full bases: 126
+  top-40 damaged by HYP-2661 gate: 37/40
+  top-100 damaged by HYP-2661 gate: 87/100
+
+r_cut quantiles
+  all:      {'min': 69, 'q25': 124, 'median': 151, 'q75': 181, 'q90': 212, 'q99': 280, 'max': 308}
+  damaged:  {'min': 69, 'q25': 123, 'median': 151, 'q75': 181, 'q90': 216, 'q99': 284, 'max': 308}
+  shell1+:  {'min': 71, 'q25': 125, 'median': 150, 'q75': 179, 'q90': 199, 'q99': 232, 'max': 239}
+
+missing shell-1 packet counts
+  full        : 126
+  (4,)        : 84
+  (2,)        : 84
+  (8,)        : 84
+  (1,)        : 84
+  (4, 8)      : 36
+  (2, 4)      : 36
+  (2, 8)      : 36
+  (1, 4)      : 36
+  (1, 8)      : 36
+  (1, 2)      : 36
+  (2, 4, 8)   : 9
+  (1, 4, 8)   : 9
+  (1, 2, 4)   : 9
+  (1, 2, 8)   : 9
+  (1, 2, 4, 8): 1
+
+top crude comb bases
+rank | r_cut | load_upper | holes | shell1 | missing | base_measure | comp
+  1 |   308 |    4192244 |   (4, 5, 6, 13) | damaged |      (4,) |  24971/194040 |  22
+  2 |   302 |    3939936 |  (3, 4, 10, 12) | damaged |      (4,) | 127111/1261260 |  16
+  3 |   296 |    3697960 |  (4, 6, 10, 12) | damaged |      (4,) |  10601/114660 |  14
+  4 |   291 |    3504050 |    (3, 4, 5, 6) | damaged |      (4,) |    5611/45045 |  20
+  5 |   288 |    3391024 |    (4, 5, 6, 8) | damaged |    (4, 8) |  17587/140140 |  20
+  6 |   285 |    3280455 |    (4, 5, 6, 9) | damaged |      (4,) | 106607/840840 |  20
+  7 |   284 |    3244140 |    (2, 4, 5, 6) | damaged |    (2, 4) |  13991/120120 |  18
+  8 |   280 |    3101560 |  (4, 6, 10, 13) | damaged |      (4,) |  22873/194040 |  18
+  9 |   275 |    2929290 |    (2, 5, 6, 8) | damaged |    (2, 8) |  12569/105105 |  18
+ 10 |   274 |    2895620 |   (3, 4, 5, 12) | damaged |      (4,) |  50381/420420 |  18
+ 11 |   272 |    2829056 |   (2, 5, 6, 13) | damaged |      (2,) |  25601/194040 |  20
+ 12 |   266 |    2635500 |   (4, 5, 6, 12) | damaged |      (4,) |  15627/140140 |  16
+ 13 |   266 |    2635500 | (4, 10, 12, 13) | damaged |      (4,) |  23827/194040 |  18
+ 14 |   263 |    2542124 |   (3, 4, 6, 10) | damaged |      (4,) |  28417/252252 |  16
+ 15 |   261 |    2481115 |   (4, 6, 8, 10) | damaged |    (4, 8) |      551/4851 |  16
+ 16 |   259 |    2421090 |  (2, 4, 10, 12) | damaged |    (2, 4) | 129421/1261260 |  14
+ 17 |   255 |    2303960 |   (5, 6, 8, 13) | damaged |      (8,) |   14653/97020 |  22
+ 18 |   253 |    2246839 |   (2, 4, 6, 10) | damaged |    (2, 4) |  52753/504504 |  14
+ 19 |   252 |    2218636 |    (4, 5, 6, 7) | damaged |      (4,) |  54881/360360 |  22
+ 20 |   252 |    2218636 |  (4, 5, 12, 13) | damaged |      (4,) |  27311/194040 |  20
+ 21 |   248 |    2108184 |    (2, 3, 5, 6) | damaged |      (2,) |    5881/45045 |  18
+ 22 |   246 |    2054360 |  (2, 3, 10, 12) | damaged |      (2,) | 134671/1261260 |  14
+ 23 |   244 |    2001460 |   (2, 6, 8, 10) | damaged |    (2, 8) |  27161/252252 |  14
+ 24 |   243 |    1975354 |    (2, 5, 6, 9) | damaged |      (2,) | 111647/840840 |  18
+ 25 |   242 |    1949476 |    (3, 5, 6, 8) | damaged |      (8,) | 183553/1261260 |  20
+ 26 |   242 |    1949476 |   (4, 5, 6, 11) | damaged |      (4,) |    3701/25480 |  20
+ 27 |   241 |    1923825 |  (2, 6, 10, 13) | damaged |      (2,) |  23503/194040 |  16
+ 28 |   240 |    1898400 |   (2, 4, 5, 12) | damaged |    (2, 4) |  51151/420420 |  16
+ 29 |   240 |    1898400 |   (3, 4, 5, 13) | damaged |      (4,) |  30851/194040 |  22
+ 30 |   239 |    1873200 |   (3, 5, 6, 13) | full    |        () |  30991/194040 |  22
+
+top shell-1-full bases after applying HYP-2661
+rank | r_cut | load_upper | holes | shell1 | missing | base_measure | comp
+  1 |   239 |    1873200 |   (3, 5, 6, 13) | full    |        () |  30991/194040 |  22
+  2 |   232 |    1703016 | (3, 10, 12, 13) | full    |        () |  26767/194040 |  18
+  3 |   231 |    1679580 |   (5, 6, 9, 13) | full    |        () |      443/2695 |  22
+  4 |   228 |    1610564 |  (5, 6, 11, 13) | full    |        () |      793/4410 |  24
+  5 |   223 |    1499784 |  (3, 5, 12, 13) | full    |        () |  30251/194040 |  20
+  6 |   218 |    1394204 | (6, 10, 12, 13) | full    |        () |  25507/194040 |  16
+  7 |   214 |    1313400 |   (5, 6, 7, 13) | full    |        () |    2627/13860 |  24
+  8 |   212 |    1274196 |  (3, 6, 10, 13) | full    |        () |    9631/64680 |  18
+  9 |   211 |    1254890 |  (5, 6, 12, 13) | full    |        () |  28991/194040 |  18
+ 10 |   207 |    1179616 |    (3, 5, 6, 9) | full    |        () | 140137/840840 |  20
+ 11 |   204 |    1125180 |   (3, 5, 9, 12) | full    |        () | 129487/840840 |  18
+ 12 |   204 |    1125180 |  (3, 6, 10, 12) | full    |        () |  39224/315315 |  14
+ 13 |   203 |    1107414 |    (3, 5, 6, 7) | full    |        () |    5107/27720 |  22
+ 14 |   199 |    1038220 |  (3, 9, 12, 13) | full    |        () |      253/1470 |  20
+ 15 |   198 |    1021384 |  (3, 5, 11, 13) | full    |        () |      449/2205 |  24
+ 16 |   198 |    1021384 |  (3, 9, 10, 12) | full    |        () | 120139/840840 |  16
+ 17 |   198 |    1021384 | (6, 10, 11, 13) | full    |        () |      305/1764 |  20
+ 18 |   197 |    1004731 |   (3, 5, 6, 11) | full    |        () |  39889/229320 |  20
+ 19 |   197 |    1004731 |   (3, 5, 6, 12) | full    |        () |    4112/28665 |  16
+ 20 |   194 |     955860 |  (5, 9, 12, 13) | full    |        () |      951/5390 |  20
+ 21 |   193 |     939929 |   (5, 6, 9, 12) | full    |        () |  40829/280280 |  16
+ 22 |   193 |     939929 |  (6, 9, 10, 13) | full    |        () |    1741/10780 |  18
+ 23 |   191 |     908600 |   (3, 5, 9, 13) | full    |        () |     1574/8085 |  22
+ 24 |   190 |     893200 | (5, 11, 12, 13) | full    |        () |     1721/8820 |  22
+ 25 |   188 |     862924 |  (6, 9, 12, 13) | full    |        () |     1339/8085 |  18
+ 26 |   188 |     862924 | (10, 11, 12, 13) | full    |        () |     1597/8820 |  20
+ 27 |   187 |     848046 | (9, 10, 12, 13) | full    |        () |      897/5390 |  18
+ 28 |   186 |     833340 |  (6, 9, 10, 12) | full    |        () |    2901/21560 |  14
+ 29 |   184 |     804440 |   (5, 6, 9, 11) | full    |        () |     1766/9555 |  20
+ 30 |   183 |     790244 | (3, 11, 12, 13) | full    |        () |     1637/8820 |  20
+
+invariant reading
+1. The naive three-tail comb frontier is dominated by packets that delete
+   a shell-1 tower bit. HYP-2661 should remove those before exact tail
+   enumeration; the broad comb was doing avoidable work.
+2. After the shell-1 gate, the worst first-tail cutoff drops from the
+   global frontier to the shell-1-full frontier. The remaining packets
+   should be attacked by mouth survival / endpoint-owner addresses, not
+   by replacement count alone.
+3. This gives a proof-order recipe: tower conservation first, root packet
+   second, nested comb finite residues third.
+
+Tournament Analysis
+  vertices: shell1_gate, root_packet, mouth_owner, nested_comb, raw_replacement_count
+  observable: finite residue burden for proving meas(G_C)>=426/35035
+  Hamiltonian path: shell1_gate > root_packet > mouth_owner > nested_comb > raw_replacement_count
+  challenged assumption: the first AP-tail quotient is not the number of tails; it is whether the shell-1 carrier survives.

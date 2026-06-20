@@ -11,6 +11,13 @@ min CAP9 - Phi - |residual|/w = 77424533/613602990.
 ```
 
 The bounded AP-window bank `E'={0}+7-subsets of [1,13]` has `0` violations of `p0+(1/7+1/3)p1 <= cap9`; the maximum is AP8, `13691/30870`, still below `1979/4004` by `448069/8828820`.  The new proof target is therefore not a uniform endpoint discrepancy constant: prove `Delta_w^+ <= p1(E')/3` (or residual `<=p1/4` plus trace/QR tax), then splice this far packet coarea bound with HYP-2661/HYP-2663 mouth/tower packet rigidity.  LRC(14) is not proved.
+## codex-2026-06-19-S39 -- LRC14 three-tail shell-1 frontier: carry gate before root-packet comb -- HYP-2664/T907
+
+User asked to keep pushing new ideas and integrate other agents' LRC proof work. Pulled KPS S16 / codex S38 work: HYP-2661 shell-1 carry conservation, HYP-2662 far Delta Galois phase, and HYP-2663 three-tail root-packet scout. Tried to promote HYP-2663's three-tail scan to an unbounded nested comb certificate; broad exact residue region was too large for a blind run. The useful integration was to apply HYP-2661 first.
+
+Added `04-computation/lrc14_three_tail_shell1_frontier_codex_s39.py`, exploratory `04-computation/lrc14_three_tail_ap_tail_comb_codex_s39.py`, stored `05-knowledge/results/lrc14_three_tail_shell1_frontier_codex_s39.out`, detail `05-knowledge/hypotheses/HYP-2664-lrc14-three-tail-shell1-frontier.md`, and reflection `07-reflections/lrc14-three-tail-shell1-frontier-codex-s39.md`.
+
+**FINDING:** in the three-tail AP-tail family `({1..13}\H) union {r,s,t}`, `|H|=4`, the naive crude comb frontier is dominated by packets that HYP-2661 should remove. First-tail cutoff `R` from `(4/7)M_base - 6c/(7R) >= 426/35035`: total four-hole bases `715`, shell-1 damaged `589`, shell-1 full `126`; `37/40` top crude bases and `87/100` top bases are shell-1 damaged. Global max is `R=308` at holes `(4,5,6,13)`, missing tower bit `4`; after the shell-1 gate, max is `R=239` at holes `(3,5,6,13)`. Proof-order update: shell-1 carry gate first, root-packet address second, mouth-owner ledger third, nested comb finite residues fourth. LRC(14) NOT proved, but the three-tail theorem target is now better factored. -> HYP-2664, HYP-2661, HYP-2663, HYP-2654, HYP-2659, HYP-2660, HYP-2658, HYP-2655, THM-541, THM-543, THM-544, OPEN-Q-108.
 
 ## kind-pasteur-2026-06-19-S16 — the dyadic-1 tower {1,2,4,8} OWNS the mouth: a CARRY CONSERVATION law (Euler/Glaisher + even-graph), verified exhaustive incl. general 12-cores [1,19] — HYP-2661
 
