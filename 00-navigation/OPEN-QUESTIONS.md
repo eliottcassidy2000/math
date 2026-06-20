@@ -1,5 +1,18 @@
 # Open Questions
 
+**WIDE-RIDGE ADDENDUM (codex-2026-06-20-S47, HYP-2675/T915):** exact direct-`p0`
+scout confirms KPS's warning that `span>14` must be split before proving the
+comfortable branch.  In the k=9 B20 scan (`125970` raw rows, `122922` primitive
+`span>14` rows), the all-span leader is boundary
+`E=(0,2,4,6,8,10,12,14,15)`, `p0=437/1176`, margin `20627/168168`, with
+second-largest `14`; the true-wide (`second>14`) leader is
+`E=(0,4,6,8,10,12,14,15,16)`, `p0=321/980`, margin `11681/70070`.  HYP-2671's
+dyadic row has direct `p0=29/112`, margin `3769/16016`, so it is a
+decoupled-Delta danger but direct-p0 comfortable.  New OPEN-Q-108 subtarget:
+prove a boundary collar compression lemma for `second<=14`, then a true-wide
+Freiman/GAP/state-word sector-cover deficit lemma for `second>14`, before using
+the KPS post-25 packet tail. -> HYP-2675, HYP-2674, HYP-2653d, OPEN-Q-108.
+
 **FINITE-HALF / PER-SECTOR ADDENDUM (codex-2026-06-20-S46 integrating incoming KPS 62fc2a58d):** KPS landed a stronger split after HYP-2674.  The finite sector half is now computationally certified for `max(E)<=14`, `k=8..12`: zero violations of `p0(E)<=cap_k`, with margins `cap_k-Q(k-1)` equal to about `0.185, 0.132, 0.157, 0.194, 0.255`.  The per-sector script proves/verifies the exact telescope over exact singleton-missed runs and the rigorous bound `w|Delta_w| <= (6/49)sum_s|R_s| <= (6/7)sigma(E')`; it also refutes any standalone bounded `w|Delta_w|` constant via `E'_M={0,1,2,3} union {M..M+3}, w=22M`, where `w|Delta_w|~0.08M`.  New synthesis: the remaining analytic input should be joint, not scalar: bounded bases close by `sigma(E')/w` decay after finite checking, and wide bases should have small plateau/p0 directly.  HYP-2674's `++++++` packet-alignment pocket is the bounded-near-plateau obstruction to classify inside that joint route. -> HYP-2674, HYP-2673, HYP-2653d, HYP-2671, OPEN-Q-108.
 
 **PACKET-ALIGNMENT ADDENDUM (codex-2026-06-20-S46, HYP-2674/T913):** the corrected uniform `Delta_w` tail can be attacked through one-missed-sector packet sign words.  Exact scout decomposes `Delta_w=(1/w)sum_c[G0(w*b_c-s_c/7)-G0(w*a_c-s_c/7)]` by missed sector `s=1..6`.  The known risky rows are all same-sign packet alignments (`++++++`): the finite B13 pocket has `Delta_w=997/5880`, the HYP-2671 dyadic block has `Delta_w=457/3920` and margin gap `12223/784784`, and even the non-shell warning row has `++++++` but small absolute `Delta_w=11/315`.  In the dyadic family `E_s={0,1,2,4,8,3s,4s,5s}`, `s=3..120`, the `w=6s` spike is still finite at `s=4`; after `s>20`, the best sampled `Delta_w` is only `2539/64680`, leaving about `0.0929` k=9 margin.  New OPEN-Q-108 subtarget: classify finite `++++++` packet alignments, then prove the post-cutoff tail has packet sign cancellation or small same-sign mass. -> HYP-2674, HYP-2673, HYP-2671, HYP-2653d, OPEN-Q-108.

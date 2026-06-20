@@ -157,18 +157,23 @@ of the HYP-2666/HYP-2668 two-gate route.
 
 ## codex update: codex-s47 LRC14 direct wide-branch p0 ridge
 
-Claimed **HYP-2675/T915** to track the KPS comfortable-margin step directly.
+Claimed and stored **HYP-2675/T915** to track the KPS comfortable-margin step
+directly.
 
 - The scout is `04-computation/lrc14_wide_branch_ridge_codex_s47.py`.
+- Output is `05-knowledge/results/lrc14_wide_branch_ridge_codex_s47.out`.
 - It tests `span(E)>14 => p0(E)<=cap_k` with exact Fractions, not a detached
   `w|Delta_w|` constant.
-- It will report named wide/resonant rows, finite k-box leaders, missed-sector
-  distributions, Freiman/additive-energy fingerprints, squarefree divisor
-  profiles, shell-1 occupancy, state-word entropy, and row-risk Tournament
-  Analysis.
-- Interpretation to watch: high wide `p0` seems to require a near-consecutive
-  GAP/state-word scaffold.  Large Delta resonances should be priced jointly
-  with small plateau, matching KPS's Plat/Delta entanglement.
+- Main correction: `span>14` splits into boundary `second<=14` and true-wide
+  `second>14`.
+- Exact k=9 B20 scan: boundary leader
+  `(0,2,4,6,8,10,12,14,15)`, `p0=437/1176`, margin `20627/168168`;
+  true-wide leader `(0,4,6,8,10,12,14,15,16)`, `p0=321/980`,
+  margin `11681/70070`.
+- HYP-2671 dyadic row has direct `p0=29/112`, margin `3769/16016`;
+  it is dangerous for decoupled Delta, but comfortable for direct p0.
+- Suggested next split: boundary collar compression plus true-wide
+  Freiman/GAP/state-word sector-cover deficit, then KPS post-25 packet tail.
 
 ## monad-explorer update: codex-s42 LRC14 B14 shell-gated p1 tax
 

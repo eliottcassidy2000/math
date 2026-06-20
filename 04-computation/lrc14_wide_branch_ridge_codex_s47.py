@@ -248,12 +248,25 @@ def push_top(top: list[RowReport], rep: RowReport, keep: int) -> None:
     del top[keep:]
 
 
-def scan_box(k: int, bound: int, min_span: int = 15, keep: int = 12) -> tuple[int, int, list[RowReport]]:
-    """Exact primitive scan of rows {0}+choose(k-1, 1..bound), span>=min_span."""
+def scan_box(
+    k: int,
+    bound: int,
+    min_span: int = 15,
+    keep: int = 12,
+) -> tuple[int, int, dict[str, list[RowReport]]]:
+    """Exact primitive scan of rows {0}+choose(k-1, 1..bound), span>=min_span.
+
+    The KPS route separates boundary one-far rows (second largest <=14) from
+    genuine wide-base rows (second largest >14).  Keep both ledgers explicit.
+    """
 
     rows = 0
     primitive_rows = 0
-    top: list[RowReport] = []
+    tops: dict[str, list[RowReport]] = {
+        "all_span_gt14": [],
+        "boundary_second_le14": [],
+        "true_wide_second_gt14": [],
+    }
     for comb in combinations(range(1, bound + 1), k - 1):
         row = (0,) + comb
         rows += 1
@@ -261,8 +274,13 @@ def scan_box(k: int, bound: int, min_span: int = 15, keep: int = 12) -> tuple[in
             continue
         primitive_rows += 1
         dist = missed_distribution(row)
-        push_top(top, RowReport(f"box-k{k}-B{bound}", row, dist), keep)
-    return rows, primitive_rows, top
+        rep = RowReport(f"box-k{k}-B{bound}", row, dist)
+        push_top(tops["all_span_gt14"], rep, keep)
+        if row[-2] <= 14:
+            push_top(tops["boundary_second_le14"], rep, keep)
+        else:
+            push_top(tops["true_wide_second_gt14"], rep, keep)
+    return rows, primitive_rows, tops
 
 
 def cluster_rows() -> list[tuple[str, Row]]:
@@ -283,7 +301,12 @@ def tournament_analysis(reports: list[RowReport], limit: int = 10) -> None:
     fingerprints, not runners or arcs.
     """
 
-    verts = sorted(reports, key=lambda r: (-r.risk_ratio, r.row, r.label))[:limit]
+    dedup: dict[tuple[int, Row], RowReport] = {}
+    for rep in reports:
+        key = (rep.k, rep.row)
+        if key not in dedup or rep.risk_ratio > dedup[key].risk_ratio:
+            dedup[key] = rep
+    verts = sorted(dedup.values(), key=lambda r: (-r.risk_ratio, r.row, r.label))[:limit]
     score = Counter()
     cycles = 0
     n = len(verts)
@@ -353,16 +376,28 @@ def main() -> None:
     print("=" * 78)
     scan_reports: list[RowReport] = []
     for k, bound in ((8, 18), (9, 20), (10, 16)):
-        rows, prims, top = scan_box(k, bound)
+        rows, prims, tops = scan_box(k, bound)
+        top = tops["all_span_gt14"]
         scan_reports.extend(top)
+        scan_reports.extend(tops["true_wide_second_gt14"])
         leader = top[0]
         print(f"k={k}, B={bound}, raw_rows={rows}, primitive_wide_rows={prims}")
-        print(f"  box leader E={leader.row}")
+        print(f"  all span>14 leader E={leader.row}")
         print(f"  p0={fmt(leader.p0)} cap={fmt(leader.cap)} cap-p0={fmt(leader.margin)} risk={fmt(leader.risk_ratio)}")
         print(f"  {structural_line(leader.row)}")
-        print("  top exact rows:")
+        for stratum, reps in tops.items():
+            if not reps:
+                print(f"  stratum {stratum}: empty")
+                continue
+            s_leader = reps[0]
+            print(f"  stratum {stratum} leader: E={s_leader.row}")
+            print(f"    p0={fmt(s_leader.p0)} margin={fmt(s_leader.margin)} second={s_leader.row[-2]} exc={sumset_excess(s_leader.row)} run={longest_run(s_leader.row)}")
+        print("  top exact rows (all span>14):")
         for rep in top[:8]:
-            print(f"    E={rep.row} p0={rep.p0} margin={rep.margin} exc={sumset_excess(rep.row)} run={longest_run(rep.row)}")
+            print(f"    E={rep.row} p0={rep.p0} margin={rep.margin} second={rep.row[-2]} exc={sumset_excess(rep.row)} run={longest_run(rep.row)}")
+        print("  top exact rows (true wide second>14):")
+        for rep in tops["true_wide_second_gt14"][:8]:
+            print(f"    E={rep.row} p0={rep.p0} margin={rep.margin} second={rep.row[-2]} exc={sumset_excess(rep.row)} run={longest_run(rep.row)}")
 
     all_reports = named_reports + cluster_reports + scan_reports
     print("\n" + "=" * 78)
@@ -371,14 +406,17 @@ def main() -> None:
     print("\n" + "=" * 78)
     print("PROOF-ROUTE READING")
     print("=" * 78)
-    print("1. The k=9 wide-box leader is still far below cap_9; the margin is exact above.")
-    print("2. The worst wide rows keep long near-consecutive packets plus a sparse scaffold.")
+    print("1. The span>14 leader can be a boundary one-far row with second-largest <=14;")
+    print("   this is distinct from the KPS true-wide-base branch (second-largest >14).")
+    print("2. The true-wide rows in the finite boxes are much lower than the boundary leaders,")
+    print("   supporting the KPS Plat/Delta entanglement split.")
+    print("3. The worst rows keep long near-consecutive packets plus a sparse scaffold.")
     print("   They have high additive energy / low sumset excess compared with random wide rows,")
     print("   so Freiman-GAP structure is the correct language for the direct p0 bound.")
-    print("3. Delta-only framing loses the plateau/coverage coupling.  The exact predicate to")
+    print("4. Delta-only framing loses the plateau/coverage coupling.  The exact predicate to")
     print("   prove is a wide-row sector-cover deficit: once span>14, no row can retain the")
     print("   consecutive state-word density needed to approach cap_k.")
-    print("4. The squarefree profiles and shell_missing fields show why a one-scalar dyadic or")
+    print("5. The squarefree profiles and shell_missing fields show why a one-scalar dyadic or")
     print("   shell-1 law is insufficient: the same shell carrier can sit in low or high p0")
     print("   depending on the additive scaffold and missed-sector word.")
 

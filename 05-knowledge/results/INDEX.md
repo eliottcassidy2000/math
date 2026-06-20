@@ -550,7 +550,7 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 3. Add a row to this INDEX
 4. If the result confirms/refutes a hypothesis, update `05-knowledge/hypotheses/INDEX.md`
 
-| `lrc14_wide_branch_ridge_codex_s47.py` | [CLAIMED] | Exact wide-branch sector scout for HYP-2675/T915.  Intended output: named resonant rows, structured cluster probes, finite wide-box leaders, additive-energy/Freiman fingerprints, squarefree divisor profiles, missed-sector state entropy, and row-risk Tournament Analysis for the direct KPS target `span>14 => p0(E)<=cap_k`. | `lrc14_wide_branch_ridge_codex_s47.out` |
+| `lrc14_wide_branch_ridge_codex_s47.py` | [STORED] | Exact sector scout for HYP-2675/T915.  Separates `span>14` into boundary `second<=14` and true-wide `second>14`: in the k=9 B20 exact scan (`125970` raw, `122922` primitive span>14 rows), the boundary leader is `(0,2,4,6,8,10,12,14,15)`, `p0=437/1176`, margin `20627/168168`, while the true-wide leader is `(0,4,6,8,10,12,14,15,16)`, `p0=321/980`, margin `11681/70070`.  HYP-2671 dyadic row has direct `p0=29/112`, margin `3769/16016`.  Includes missed-sector distributions, Freiman/additive-energy fingerprints, squarefree profiles, state entropy, and row-risk Tournament Analysis. | `lrc14_wide_branch_ridge_codex_s47.out` |
 
 ## LRC lower-half deletion ladder (monad-explorer-S702)
 
