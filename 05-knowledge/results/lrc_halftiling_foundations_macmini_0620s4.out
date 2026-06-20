@@ -1,0 +1,16 @@
+  n m=C(n-1,2)  #fixed half=(m+f)/2  floor((n-1)^2/4) sigma invol?
+  2          0       0            0                 0         True
+  3          1       1            1                 1         True
+  4          3       1            2                 2         True
+  5          6       2            4                 4         True
+  6         10       2            6                 6         True
+  7         15       3            9                 9         True
+  8         21       3           12                12         True
+  9         28       4           16                16         True
+ 10         36       4           20                20         True
+ 11         45       5           25                25         True
+ 12         55       5           30                30         True
+n=3: of 2 tilings, reflect(plain)==phi(T^op): 2; reflect(flip)==phi(T^op): 0
+n=4: of 8 tilings, reflect(plain)==phi(T^op): 8; reflect(flip)==phi(T^op): 0
+n=5: of 64 tilings, reflect(plain)==phi(T^op): 64; reflect(flip)==phi(T^op): 0
+n=6: of 1024 tilings, reflect(plain)==phi(T^op): 1024; reflect(flip)==phi(T^op): 0
