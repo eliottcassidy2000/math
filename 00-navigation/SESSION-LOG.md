@@ -1,4 +1,4 @@
-## codex-2026-06-20-S58 -- LRC14 sector-state transfer DP -- THM-554/HYP-2691/T927
+## codex-2026-06-20-S58 -- LRC14 sector-state transfer DP -- THM-555/HYP-2691/T927
 
 User asked to take the dynamic-programming lens and work on LRC.  Pulled first;
 incoming mac-mini/KPS half-tiling work was relevant through THM-551's apex
@@ -12,7 +12,8 @@ can only delete one missed sector, so the scalar increment is exactly
 `p0(P union {e})-p0(P)=sum_s meas{P misses exactly s and e lands in s}`.
 The script asserts the transition theorem on every tested prefix: after-state
 is a subset of before-state, size drops by `0` or `1`, and closure mass equals
-the exact `p0` increment.  Canonized this as THM-554.
+the exact `p0` increment.  Canonized this as THM-555 after resolving the
+incoming KPS THM-554 score-partition namespace collision.
 
 Opened HYP-2691/T927.  Exact row-bank result: insertion order changes proof
 state size even though final `p0` is invariant.  Global strategy averages:

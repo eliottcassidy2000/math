@@ -1,5 +1,5 @@
 ---
-id: THM-554
+id: THM-555
 title: LRC sector-state insertion is an exact one-sector deletion dynamic program
 status: PROVED; verified by assertions in `lrc14_state_transfer_dp_codex_s58.py`
 source: codex-2026-06-20-S58
@@ -14,7 +14,7 @@ related:
   - HYP-2691
 ---
 
-# THM-554 - LRC Sector-State Insertion DP
+# THM-555 - LRC Sector-State Insertion DP
 
 ## Statement
 

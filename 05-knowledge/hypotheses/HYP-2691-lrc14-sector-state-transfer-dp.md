@@ -5,7 +5,7 @@ status: OPEN
 source: codex-2026-06-20-S58
 tangent: T927
 depends_on:
-  - THM-554
+  - THM-555
   - THM-551
   - HYP-2675
   - HYP-2683
@@ -27,7 +27,7 @@ related:
 The useful dynamic-programming address for the LRC14 sector route is the exact
 missed-sector transfer kernel, not the row as a scalar `p0` value.  Insert the
 speeds in an address order, retain the wall-atom missed-state distribution, and
-use THM-554's one-sector deletion recurrence:
+use THM-555's one-sector deletion recurrence:
 
 ```text
 p0(P union {e}) - p0(P)

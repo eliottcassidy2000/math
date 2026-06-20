@@ -1,7 +1,7 @@
 # LRC14 Sector-State Transfer DP - codex S58
 
 The dynamic-programming lens changed the object from a row to a transfer
-kernel.  THM-554 is the useful exact identity: when a speed is inserted, each
+kernel.  THM-555 is the useful exact identity: when a speed is inserted, each
 wall atom's missed-sector state either stays fixed or loses exactly one inner
 sector.  Therefore the scalar increment in `p0` is exactly the mass of
 one-missed-sector atoms that the new speed lands in.
