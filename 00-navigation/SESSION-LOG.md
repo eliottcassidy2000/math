@@ -21,6 +21,18 @@ This is the `m=4` member of `E_m={0,1,2,4,8,3m,4m,5m}, w=6m`; `m=3` gives
 Fold reciprocal mass helps locate the block but is not monotone, so the next
 lemma should isolate the dyadic block address plus phase-packet cancellation,
 not fold mass alone.  LRC(14) is not proved.
+## codex-2026-06-20-S45 -- shell-full constant stratification -- HYP-2671/T910
+
+Claimed HYP-2671/T910 to refine HYP-2670's shell-full p1-tax constant split.
+The current hypothesis is that the one open constant is a finite apex-packet
+ledger plus decay, not a single moving scalar barrier.  A local exact B30
+re-read found only three rows above `3/10`, only the B13 leader above `1/3`,
+and no `max(E')>24` row above `1/4`; the only genuine new-speed row above
+`3/10` is `(0,1,2,4,8,12,16,20), w=24`, with ratio `1371/4319`.
+
+Next actions: attach an exact extension script and stored output, then sharpen
+the finite `max(E')<=14`, dyadic apex, and far-tail `p1/4` proof obligations.
+LRC(14) is not proved.
 
 ## codex-2026-06-20-S44 -- shell-full packet gap beyond B13 leader -- HYP-2670/T909
 
