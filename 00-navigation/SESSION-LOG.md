@@ -67,7 +67,10 @@ far `(15,16,17)` gives signs `+-+`, `(15,16,17,18)` gives `+--+`, and
 raw relation rank or absolute residual sums are too coarse.  The incoming
 adversarial THM-548 verification also refutes fixed-box `resdist` as a proof
 denominator, so the signed bound must be height-weighted over the full relation
-lattice.
+lattice.  Scaling AP-relation far blocks confirms why: triples
+`(m,m+1,m+2)` keep exact rank `1` but sign words flip across shifts
+(`+-+`, `-++`, `+++`), and four-blocks keep rank `2` while flipping
+`+--+`, `-++-`, `+++-`; a finite resonant atlas needs phase/support labels.
 
 ## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
 

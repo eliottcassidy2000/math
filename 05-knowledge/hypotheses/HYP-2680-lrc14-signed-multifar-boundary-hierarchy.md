@@ -281,6 +281,30 @@ B=(0,4,6,8,10,12,14), F=(17,23,31):
   exact relation rank at height 3: 0
 ```
 
+A scaling-family probe keeps the same dilated core and shifts AP-relation far
+blocks.  The triple `F=(m,m+1,m+2)` always has rank `1`, and the four-block
+`F=(m,m+1,m+2,m+3)` always has rank `2`, but the signed phase is not constant:
+
+```text
+triples:
+  (15,16,17): +-+
+  (22,23,24): -++
+  (31,32,33): -++
+  (43,44,45): +++
+  (61,62,63): -++
+  (89,90,91): -++
+
+four-blocks:
+  (15,16,17,18): +--+
+  (22,23,24,25): -++-
+  (31,32,33,34): -++-
+  (43,44,45,46): +++-
+  (61,62,63,64): -++-
+```
+
+Thus even the rank-one AP relation `u-2v+w=0` is not one scalar case.  A finite
+resonant atlas needs the phase/support address of the core and far block.
+
 The all-core four-far bank for `F=(15,16,17,18)` checks `3003` primitive bounded
 cores.  It finds:
 

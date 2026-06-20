@@ -88,6 +88,12 @@ bounded signs across adjacent Newton orders.  For the dilated core
 four-far bank for `(15,16,17,18)`, `R2/R3` have opposite signs in `1644/3003`
 primitive cores and `R3/R4` oppose in `2053/3003`.
 
+Scaling the AP-relation block keeps the relation rank but changes the signs.
+For the same dilated core, triples `(m,m+1,m+2)` at
+`m=15,22,31,43,61,89` give sign words `+-+,-++,-++,+++,-++,-++`.
+Four-blocks at `m=15,22,31,43,61` give `+--+,-++-,-++-,+++-,-++-`.
+So the finite rank-one atlas must retain phase/support labels.
+
 This matters because an absolute-value proof would spend the same margin twice.
 The right analytic lemma should keep the signed order ledger until the last
 step, with exact low-height relation rank routing the finite atlas branch and

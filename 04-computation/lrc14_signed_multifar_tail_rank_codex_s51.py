@@ -359,6 +359,35 @@ def small_four_far_bank() -> None:
     print()
 
 
+def scaling_family_probe() -> None:
+    print("SCALING FAMILY PROBE: shifted AP-relation far blocks over dilated core")
+    core = (0, 4, 6, 8, 10, 12, 14)
+    print(f"  core={core}")
+    print("  triples F=(m,m+1,m+2):")
+    for m in (15, 22, 31, 43, 61, 89):
+        far = (m, m + 1, m + 2)
+        rep = make_block("scale-triple", core, far)
+        rel = relation_profile(far, 3)
+        orders = ", ".join(f"R{o.order}={o.total}" for o in rep.orders)
+        print(
+            f"    far={far} residual={rep.residual} p0={rep.direct} "
+            f"signs={rep.sign_word} exact_rank={rel['exact_rank']} orders=[{orders}]"
+        )
+    print("  four-blocks F=(m,m+1,m+2,m+3):")
+    for m in (15, 22, 31, 43, 61):
+        far = (m, m + 1, m + 2, m + 3)
+        rep = make_block("scale-four", core, far)
+        rel = relation_profile(far, 3)
+        orders = ", ".join(f"R{o.order}={o.total}" for o in rep.orders)
+        print(
+            f"    far={far} residual={rep.residual} p0={rep.direct} "
+            f"signs={rep.sign_word} exact_rank={rel['exact_rank']} orders=[{orders}]"
+        )
+    print("  reading: the AP-relation rank stays fixed, but signed residual phase changes with the shift.")
+    print("  A finite resonant atlas needs phase/support labels, not only the relation vector.")
+    print()
+
+
 def synthesis(reports: list[BlockReport]) -> None:
     print("SYNTHESIS")
     print("  Simultaneous peel should be read as a signed order ledger, not as an absolute tail.")
@@ -380,6 +409,7 @@ def synthesis(reports: list[BlockReport]) -> None:
 def main() -> None:
     print("HYP-2680 / S51 -- signed multi-far tail rank scout\n")
     reports = named_blocks()
+    scaling_family_probe()
     small_four_far_bank()
     synthesis(reports)
 
