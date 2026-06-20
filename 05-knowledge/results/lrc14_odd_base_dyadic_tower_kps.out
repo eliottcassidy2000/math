@@ -1,0 +1,36 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_odd_base_dyadic_tower_kps.py:4: SyntaxWarning: invalid escape sequence '\{'
+  The odd sub-core {1,3,5,7,9,11,13} is the SAME for every [1,13]\{even} core.
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_odd_base_dyadic_tower_kps.py:36: SyntaxWarning: invalid escape sequence '\{'
+  print("\nEVEN content of each [1,13]\{e} core (e even) -- the doubling multiset:")
+odd-base core [1, 3, 5, 7, 9, 11, 13]
+  L(odd-base) = 75454/315315 = 0.2392972107
+  as fraction: 75454/315315
+
+EVEN content of each [1,13]\{e} core (e even) -- the doubling multiset:
+  drop  2: evens=[4, 6, 8, 10, 12]  dyadic=[(1, 2), (3, 1), (1, 3), (5, 1), (3, 2)]
+  drop  4: evens=[2, 6, 8, 10, 12]  dyadic=[(1, 1), (3, 1), (1, 3), (5, 1), (3, 2)]
+  drop  6: evens=[2, 4, 8, 10, 12]  dyadic=[(1, 1), (1, 2), (1, 3), (5, 1), (3, 2)]
+  drop  8: evens=[2, 4, 6, 10, 12]  dyadic=[(1, 1), (1, 2), (3, 1), (5, 1), (3, 2)]
+  drop 10: evens=[2, 4, 6, 8, 12]  dyadic=[(1, 1), (1, 2), (3, 1), (1, 3), (3, 2)]
+  drop 12: evens=[2, 4, 6, 8, 10]  dyadic=[(1, 1), (1, 2), (3, 1), (1, 3), (5, 1)]
+
+Full L and the even-removal sensitivity (drop each even from consec, measure rise):
+  consec full L=0.0000000000 = 0
+  drop  2: L=0.0302197802 = 11/364   (rise from consec = +0.03021978)
+  drop  4: L=0.0242257742 = 97/4004   (rise from consec = +0.02422577)
+  drop  6: L=0.0081585082 = 7/858   (rise from consec = +0.00815851)
+  drop  8: L=0.0451929023 = 950/21021   (rise from consec = +0.04519290)
+  drop 10: L=0.0241028812 = 1520/63063   (rise from consec = +0.02410288)
+  drop 12: L=0.0121592693 = 426/35035   (rise from consec = +0.01215927)
+
+DYADIC TOWER CASCADE (odd base + progressively deeper doublings):
+  level 0 (odd base):            L=0.2392972107
+  + level 1 [2, 6, 10]   -> L=0.1172922316
+  + level 2 [4, 12]      -> L=0.0451929023
+  + level 3 [8]          -> L=0.0000000000
+  (consec {1..13} = odd base + all dyadic levels => L=0)
+
+HALVING CHECK: ratio L(after level k)/L(after level k-1):
+  level 1: L=0.11729223  ratio to prev = 0.49015
+  level 2: L=0.04519290  ratio to prev = 0.38530
+  level 3: L=0.00000000  ratio to prev = 0.00000

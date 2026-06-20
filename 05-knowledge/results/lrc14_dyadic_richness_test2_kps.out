@@ -1,0 +1,41 @@
+==============================================================================
+WHAT do the dyadic-richness-MAX 8-subsets look like? (these had LOW p0)
+==============================================================================
+C2-max = 9; example subsets:
+   E=(1, 2, 3, 4, 5, 6, 8, 12) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 5: [0]} p0=0.27381
+   E=(1, 2, 3, 4, 6, 7, 8, 12) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 7: [0]} p0=0.29252
+   E=(1, 2, 3, 4, 6, 8, 9, 12) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 9: [0]} p0=0.21825
+   E=(1, 2, 3, 4, 6, 8, 10, 12) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 5: [1]} p0=0.26786
+   E=(1, 2, 3, 4, 6, 8, 11, 12) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 11: [0]} p0=0.18128
+   E=(1, 2, 3, 4, 6, 8, 12, 13) dyadic={1: [0, 1, 2, 3], 3: [0, 1, 2], 13: [0]} p0=0.20147
+=> These pile MANY speeds onto FEW odd-parts (e.g. b=1: 1,2,4,8; b=3: 3,6,12).
+   Few distinct odd-parts => few distinct angular directions => LOW coverage.
+
+==============================================================================
+REFINED HYPOTHESIS: p0 favors DISTINCT odd-parts (angular spread) AND
+contiguity. Test: p0 vs (#distinct odd parts) and (consecutive-integer run).
+==============================================================================
+Pearson corr(p0, #distinct-odd-parts) = -0.1895
+Pearson corr(p0, max-consec-run)       = +0.2682
+Pearson corr(p0, is_consec[0/1])       = +0.2215
+
+==============================================================================
+DOUBLING-MONOTONICITY: start from consec {1..8}, replace ONE element by an
+unrelated value (breaking dyadic chains). Does p0 DECREASE every time?
+==============================================================================
+base consec [1, 2, 3, 4, 5, 6, 7, 8]: p0=0.41616
+single-element replacements of consec{1..8} -> larger value:
+   40/40 STRICTLY decreased p0. All decreased? True
+
+==============================================================================
+DOUBLED-APEX {1..k-1, 2k}: the '2nd-loneliest'. Is it the largest-p0
+NON-consec set? Compare to other single-apex perturbations at k=8 (base 1..7).
+==============================================================================
+sets {1,..,7, x}, x in 8..13:
+   x= 8  p0=0.41616  dyadic={1: [0, 1, 2, 3], 3: [0, 1], 5: [0], 7: [0]}
+   x= 9  p0=0.40170  dyadic={1: [0, 1, 2], 3: [0, 1], 5: [0], 7: [0], 9: [0]}
+   x=10  p0=0.38095  dyadic={1: [0, 1, 2], 3: [0, 1], 5: [0, 1], 7: [0]}
+   x=11  p0=0.33537  dyadic={1: [0, 1, 2], 3: [0, 1], 5: [0], 7: [0], 11: [0]}
+   x=12  p0=0.37177  dyadic={1: [0, 1, 2], 3: [0, 1, 2], 5: [0], 7: [0]}
+   x=13  p0=0.35756  dyadic={1: [0, 1, 2], 3: [0, 1], 5: [0], 7: [0], 13: [0]}
+(x=8 is consec; x=14 would be doubled-apex 2*7 but exceeds 13.)

@@ -1,0 +1,41 @@
+==============================================================================
+PART 1: Baselines — consec vs structured alternatives at k=8,9
+==============================================================================
+consec {1..8}                E=[1, 2, 3, 4, 5, 6, 7, 8]
+   p0=meas(S7)=0.41616=2447/5880
+   dyadic={1: [0, 1, 2, 3], 3: [0, 1], 5: [0], 7: [0]}
+   richness: C2-pairs=7  doubling-edges(e,2e)=4  maxchain=4
+consec {1..9}                E=[1, 2, 3, 4, 5, 6, 7, 8, 9]
+   p0=meas(S7)=0.50448=8899/17640
+   dyadic={1: [0, 1, 2, 3], 3: [0, 1], 5: [0], 7: [0], 9: [0]}
+   richness: C2-pairs=7  doubling-edges(e,2e)=4  maxchain=4
+
+==============================================================================
+PART 2: k=8 — exhaustive over ALL 8-subsets of {1..13}: p0 vs richness
+==============================================================================
+Total 8-subsets of {1..13}: 1287
+
+TOP 6 by p0:
+   p0=0.41616  C2= 7 dbl-edges=4 maxchain=4  E=(1, 2, 3, 4, 5, 6, 7, 8) <-- CONSEC
+   p0=0.40170  C2= 4 dbl-edges=3 maxchain=3  E=(1, 2, 3, 4, 5, 6, 7, 9)
+   p0=0.38095  C2= 5 dbl-edges=4 maxchain=3  E=(1, 2, 3, 4, 5, 6, 7, 10)
+   p0=0.37177  C2= 6 dbl-edges=4 maxchain=3  E=(1, 2, 3, 4, 5, 6, 7, 12)
+   p0=0.36026  C2= 4 dbl-edges=3 maxchain=3  E=(2, 3, 4, 5, 6, 7, 8, 9)
+   p0=0.35952  C2= 5 dbl-edges=4 maxchain=3  E=(2, 3, 4, 5, 6, 7, 8, 10)
+
+Where does CONSEC (1, 2, 3, 4, 5, 6, 7, 8) rank?
+   CONSEC rank = 1 / 1287  p0=0.41616
+
+Pearson corr(p0, richness):
+   C2-pairs:      +0.1562
+   doubling-edges:+0.2895
+   maxchain:      +0.1584
+
+==============================================================================
+PART 3: Is the p0-MAX subset the richness-MAX subset? (k=8)
+==============================================================================
+p0-max value = 0.41616, achieved by 1 subset(s):
+   E=(1, 2, 3, 4, 5, 6, 7, 8)  C2=7 dbl-edges=4 maxchain=4
+
+richness(C2)-max value = 9, achieved by 6 subset(s); their p0 range:
+   p0 in [0.18128, 0.29252]; is consec among them? False

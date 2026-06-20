@@ -1,0 +1,36 @@
+==============================================================================
+k=9 doubling-monotonicity: replace one elt of consec{1..9} by larger value
+==============================================================================
+base [1, 2, 3, 4, 5, 6, 7, 8, 9]: p0=0.50448
+   36/36 strictly decreased. counterexample(>=): None
+
+==============================================================================
+ISOLATE: fix max-consec-run, vary dyadic richness. Does richness still help
+WITHIN a fixed contiguity stratum? (k=8, group by max_consec_run)
+==============================================================================
+   run=2: n=  90  mean(p0)=0.1578  max(p0)=0.2724  corr(p0,richness)=-0.0881
+   run=3: n= 456  mean(p0)=0.1463  max(p0)=0.3284  corr(p0,richness)=+0.0897
+   run=4: n= 405  mean(p0)=0.1491  max(p0)=0.2984  corr(p0,richness)=+0.2374
+   run=5: n= 210  mean(p0)=0.1600  max(p0)=0.3440  corr(p0,richness)=+0.1950
+   run=6: n=  90  mean(p0)=0.1652  max(p0)=0.2861  corr(p0,richness)=+0.7458
+   run=7: n=  30  mean(p0)=0.2821  max(p0)=0.4017  corr(p0,richness)=+0.8276
+   run=8: n=   6  mean(p0)=0.3345  max(p0)=0.4162  corr(p0,richness)=+0.9827
+=> mean p0 should INCREASE with contiguity-run; richness-corr within strata ~0 if contiguity is the true driver.
+
+==============================================================================
+ERGODIC / EQUIDISTRIBUTION ANGLE (quantitative):
+The dyadic doubling-orbit of b under x->2x equidistributes. For consec, the
+orbit {frac(e x)} is the densest 'multi-scale' net. Measure the WORST-CASE
+uncovered: max over x of (#sectors MISSED). Lower worst-miss => higher p0.
+==============================================================================
+   consec{1..8}                       p0=0.41616  worst-miss=6 sectors @x=1/112
+   consec{1..9}                       p0=0.50448  worst-miss=6 sectors @x=1/126
+   dyadic-rich {1,2,3,4,6,8,12,5}     p0=0.27381  worst-miss=6 sectors @x=1/168
+   apex {1..7,13}                     p0=0.35756  worst-miss=6 sectors @x=1/182
+
+==============================================================================
+VERDICT TABLE: top-3 controlling variables for p0 (k=8, full enumeration)
+==============================================================================
+   corr(p0, max-consec-run) = +0.2682  <- contiguity
+   corr(p0, dyadic-richness)= +0.1562  <- dyadic (weaker, partly confounded)
+   Within non-contiguous (run=1) sets: corr(p0,richness)=+nan

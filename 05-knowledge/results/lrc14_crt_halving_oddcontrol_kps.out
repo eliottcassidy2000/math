@@ -1,0 +1,51 @@
+====================================================================================
+CRT/HALVING ANGLE: does the ODD sub-core control the lonely set? (EXACT)
+====================================================================================
+
+(1) FULL lonely meas vs ODD-ONLY sub-core vs EVEN-ONLY sub-core
+   core                          L(full)    L(odd-only)   L(even-only)  odds evens
+   drop-6 core C0             0.00815851     0.23929721     0.50476190     7     5
+   consec {1..13}             0.00000000     0.23929721     0.45714286     7     6
+   drop-12 core               0.01215927     0.23929721     0.50476190     7     5
+
+   ==> If L(odd-only) == L(full), evens add NOTHING (odd sub-core controls).
+       If L(odd-only) > L(full), evens DO cut extra (doubling refinements bite).
+
+------------------------------------------------------------------------------------
+(2) INCREMENTAL even-speed cuts (start from odd sub-core, add evens by Glaisher order)
+------------------------------------------------------------------------------------
+
+   drop-6 core C0: start odd-only L=0.23929721
+      + 2 (=2^1*1, doubling of odd 1): L 0.23929721 -> 0.17336314  cut=+0.06593407
+      + 4 (=2^2*1, doubling of odd 1): L 0.17336314 -> 0.11342308  cut=+0.05994006
+      + 8 (=2^3*1, doubling of odd 1): L 0.11342308 -> 0.06823018  cut=+0.04519290
+      +12 (=2^2*3, doubling of odd 3): L 0.06823018 -> 0.03226139  cut=+0.03596879
+      +10 (=2^1*5, doubling of odd 5): L 0.03226139 -> 0.00815851  cut=+0.02410288
+
+   consec {1..13}: start odd-only L=0.23929721
+      + 2 (=2^1*1, doubling of odd 1): L 0.23929721 -> 0.17336314  cut=+0.06593407
+      + 4 (=2^2*1, doubling of odd 1): L 0.17336314 -> 0.11342308  cut=+0.05994006
+      + 8 (=2^3*1, doubling of odd 1): L 0.11342308 -> 0.06823018  cut=+0.04519290
+      + 6 (=2^1*3, doubling of odd 3): L 0.06823018 -> 0.03626215  cut=+0.03196803
+      +12 (=2^2*3, doubling of odd 3): L 0.03626215 -> 0.02410288  cut=+0.01215927
+      +10 (=2^1*5, doubling of odd 5): L 0.02410288 -> 0.00000000  cut=+0.02410288
+
+   drop-12 core: start odd-only L=0.23929721
+      + 2 (=2^1*1, doubling of odd 1): L 0.23929721 -> 0.17336314  cut=+0.06593407
+      + 4 (=2^2*1, doubling of odd 1): L 0.17336314 -> 0.11342308  cut=+0.05994006
+      + 8 (=2^3*1, doubling of odd 1): L 0.11342308 -> 0.06823018  cut=+0.04519290
+      + 6 (=2^1*3, doubling of odd 3): L 0.06823018 -> 0.03626215  cut=+0.03196803
+      +10 (=2^1*5, doubling of odd 5): L 0.03626215 -> 0.01215927  cut=+0.02410288
+
+------------------------------------------------------------------------------------
+(3) HALVING: where do the bands of 2v land relative to v's bands?
+    band(2v) centers = k/(2v). EVEN k -> j/v (refines v's own center, REDUNDANT).
+    ODD k -> new midpoint center. Does it fall in v's safe gap (CUTS) or v's band (redundant)?
+------------------------------------------------------------------------------------
+   v=1: 1 new (odd-k) centers from 2v; 1 land in v's SAFE gap (potential cut), 0 inside v's band
+   v=3: 3 new (odd-k) centers from 2v; 3 land in v's SAFE gap (potential cut), 0 inside v's band
+   v=5: 5 new (odd-k) centers from 2v; 5 land in v's SAFE gap (potential cut), 0 inside v's band
+   v=7: 7 new (odd-k) centers from 2v; 7 land in v's SAFE gap (potential cut), 0 inside v's band
+   ==> new centers in SAFE gaps are the ONLY way 2v cuts extra lonely measure.
+
+DONE.

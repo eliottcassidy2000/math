@@ -1,0 +1,37 @@
+(A) PER-CELL (7-adic) decomposition of drop-6 minimizer:
+  cell a=0: m_a = 0 = 0.00000000
+  cell a=1: m_a = 7/1716 = 0.00407925
+  cell a=2: m_a = 0 = 0.00000000
+  cell a=3: m_a = 0 = 0.00000000
+  cell a=4: m_a = 0 = 0.00000000
+  cell a=5: m_a = 0 = 0.00000000
+  cell a=6: m_a = 7/1716 = 0.00407925
+  sum = 7/858 = 0.00815851
+  surviving cells: [1, 6]  (residue pattern)
+
+  speeds mod 7: [0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 5, 6]  (multiset)
+  speeds mod 2: [1, 0, 1, 0, 1, 1, 0, 1, 0, 1, 0, 1]  (5 even, 7 odd)
+
+(B) within-cell conditional density R_a = 7*m_a on surviving cells:
+  a=1: R_a = 7*m_a = 49/1716 = 0.02855478
+  a=6: R_a = 7*m_a = 49/1716 = 0.02855478
+  R_a constant across surviving cells? True  -> CLEAN 7-adic x archimedean product
+  => L = (#surv/7) * R = (2/7)*49/1716 = 7/858
+
+(C) all single-deletion cores ranked by L (the bounded atlas confirms drop-6):
+  drop  6 [EVEN]: L=0.00815851  tower of 3=[6, 12], deleting MIDDLE
+  drop 12 [EVEN]: L=0.01215927  tower of 3=[6, 12], deleting TOP
+  drop 10 [EVEN]: L=0.02410288  tower of 5=[10], deleting TOP
+  drop  4 [EVEN]: L=0.02422577  tower of 1=[2, 4, 8], deleting MIDDLE
+  drop  2 [EVEN]: L=0.03021978  tower of 1=[2, 4, 8], deleting MIDDLE
+  drop 13 [ODD ]: L=0.03410122  odd (base member, NOT a doubling)
+  drop  5 [ODD ]: L=0.03601399  odd (base member, NOT a doubling)
+  drop  3 [ODD ]: L=0.04029304  odd (base member, NOT a doubling)
+  drop  8 [EVEN]: L=0.04519290  tower of 1=[2, 4, 8], deleting TOP
+  drop  9 [ODD ]: L=0.05838804  odd (base member, NOT a doubling)
+  drop 11 [ODD ]: L=0.06191784  odd (base member, NOT a doubling)
+  drop  1 [ODD ]: L=0.07142857  odd (base member, NOT a doubling)
+  drop  7 [ODD ]: L=0.08389666  odd (base member, NOT a doubling)
+
+  => global single-deletion minimizer = drop 6 (delete the MIDDLE of odd-3's tower {6,12}).
+     The deepest tower member 12 survives and re-covers 6's bands. This IS the halving handle.

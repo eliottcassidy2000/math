@@ -1,0 +1,42 @@
+====================================================================================
+LRC(14) cover  <->  cycle-space / even-subgraph  bridge test  (kind-pasteur S?)
+====================================================================================
+
+--- FORM (1): is Lambda(E) a Z cycle space?  rank accounting ---
+  Lattice {n: sum n_i e_i=0} has rank k-1 (one linear constraint).
+  Affine {+ sum n_i=0} has rank k-2.  A graph cycle space has rank |E|-|V|+c.
+  consec {1..8} (+0)       k=9: lin-relation-rank=8 (=k-1), affine-relation-rank=7 (=k-2)
+  consec {1..13} (full)    k=14: lin-relation-rank=13 (=k-1), affine-relation-rank=12 (=k-2)
+  AP-line {0,2,4,6,8}      k=5: lin-relation-rank=4 (=k-1), affine-relation-rank=3 (=k-2)
+  Sidon-ish {0,1,4,9,11}   k=5: lin-relation-rank=4 (=k-1), affine-relation-rank=3 (=k-2)
+  two-large {0,1,500}      k=3: lin-relation-rank=2 (=k-1), affine-relation-rank=1 (=k-2)
+  READ: Lambda is the kernel of a 1x k (or 2x k) integer matrix = a COROTOR /
+        a rank-(k-1) lattice.  It IS a 'cycle space' of the SPEED MATROID
+        (column matroid of [e_i]); but that matroid is uniform U_{1,k} (or the
+        affine point config), NOT the graphic cycle space of a fixed graph.
+
+--- FORM (2)+(3): does meas(S7) split by GF(2) coset / support parity? ---
+  Even-subgraph (GF2 cycle) dim and the support-parity content of the cover.
+  consec {1..8} (+0)      : meas(S7)=0.41616  gf2-cycle-dim(lin)=8  (affine)=7
+  consec {1..13} (full)   : (skipped exact cover, too large)
+      gf2-cycle-dim(lin)=13  gf2-cycle-dim(affine)=12
+  AP-line {0,2,4,6,8}     : meas(S7)=0.00000  gf2-cycle-dim(lin)=5  (affine)=4
+  Sidon-ish {0,1,4,9,11}  : meas(S7)=0.00000  gf2-cycle-dim(lin)=4  (affine)=3
+  two-large {0,1,500}     : meas(S7)=0.00000  gf2-cycle-dim(lin)=2  (affine)=1
+
+--- FORM (4): the doubling (QR/NQR) split = the Euler even/odd factor swap? ---
+  doubling z->2z on Z/7 has order 3; QR(7)={1,2,4}, NQR(7)={3,5,6}, fixes 0.
+  Euler: (1+x^n)=(1-x^{2n})/(1-x^n) cancels EVEN powers (the 2-power tower).
+  Speed e=2^a*b (Glaisher): doubling a runner multiplies its sector by 2.
+  consec {1..8} (+0)      : covAll=0.4162 covQR=0.5923 covNQR=0.5551  QR*NQR=0.3288  2-exps_present=[0, 1, 2, 3]
+  consec {1..13} (full)   : (skipped)
+  AP-line {0,2,4,6,8}     : covAll=0.0000 covQR=0.1905 covNQR=0.1190  QR*NQR=0.0227  2-exps_present=[1, 2, 3]
+  Sidon-ish {0,1,4,9,11}  : covAll=0.0000 covQR=0.0570 covNQR=0.1122  QR*NQR=0.0064  2-exps_present=[0, 2]
+  two-large {0,1,500}     : covAll=0.0000 covQR=0.0000 covNQR=0.0000  QR*NQR=0.0000  2-exps_present=[0, 2]
+
+--- VERDICT SUMMARY (printed; full prose in agent return) ---
+  (1) Lambda = cycle space of the SPEED MATROID (uniform/affine), not graphic. STRUCTURAL.
+  (2) GF(2) even-subgraph dim = k-1 (lin) / k-2 (aff): a real parity space, but the
+      cover measure does NOT factor through it (real coeffs e_i, not just parities). ANALOGY.
+  (3) (-1)^{|T|} Mayer sign == the OCF inclusion-exclusion sign: SAME parity algebra. REAL.
+  (4) doubling QR/NQR split is positively correlated, NO clean factorization. NUMEROLOGY-ish.
