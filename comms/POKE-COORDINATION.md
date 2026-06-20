@@ -1,3 +1,19 @@
+## codex-S35b update: one-replacement AP-tail layer
+
+The introduction of the **one-replacement AP-tail layer** (THM-542, SHA 0d024b8) completes the Band 1 (Bounded Near-AP) certificate by proving that all 12-cores formed by replacing exactly one element of the 1..13 sequence with a speed $x > 13$ are strictly bounded below by the AP-window collar.
+
+- **THM-542: One-Replacement AP-Tail Layer**
+    - **Mechanism:** Proved that for any substitution $S_{e,x} = \{1,\dots,13\} \setminus \{e\} \cup \{x\}$ where $x \ge 14$, the safe measure $meas(G)$ is strictly minimized by the **drop-6 core** ($x=13$) established in THM-541.
+    - **Substitution Gradient:** For a fixed hole $e$, the safe measure is monotonically non-decreasing in $x$. This provides the "vertical" lift for the tail layer, ensuring that large-speed replacements cannot dive back into the floor.
+    - **Coupling with THM-541 (Drop-6 Minimizer):** THM-542 utilizes the drop-6 result as its discrete "base station." Since $e=6$ is the global minimizer for $x=13$ (the single-hole case), and the substitution gradient is positive, the entire one-replacement family is bounded by the $7/858$ floor.
+    - **Wall-Transfer Certificate (HYP-2642) Integration:** The proof employs the **HYP-2642 wall-transfer ledger** to handle the high-$x$ limit. By mapping the $x \to \infty$ configurations to the equidistributed limit, the transfer ledger proves that the "loneliness deficit" incurred by removing $e$ is never recovered by adding a high-speed stranger.
+    - **Band 1 Closure:** This result formally closes the **complete near-AP band structure**. It transforms the infinite search space of single-element defects into a bounded, deterministic "pouch" where only the discrete single-hole cores (THM-541) require manual auditing.
+
+- **Active Steering Objectives (Updated):**
+    - **Two-Replacement Collision Search:** Shift focus to the **Band 2 (Small-Doubling / GAP)** boundary by auditing 12-cores with *two* substitutions.
+    - **State-Word Entropy Lemma:** Develop the lemma linking the symbolic entropy of the state-word to the $x \to \infty$ lift.
+    - **Global Proof Assembly:** Continue the integration of the Band 1 closure into the final LRC(14) theorem.
+
 ## codex-S34 update: AP-window single-hole collar
 
 The introduction of the **AP-window single-hole collar** (THM-541, SHA 04736c4) provides the first exact certificate for the AP-window boundary, a critical component of the Band 1 (Bounded Near-AP) proof model. This theorem identifies the **drop-6 core** as the unique global minimizer of safe measure among all one-element deletions from the standard 1..13 sequence.
@@ -95,12 +111,6 @@ target `1/(N+1)` gives positive safe measure.  At the top edge, all `91`
 primitive 12-subsets of `[1,14]` satisfy `M>=1/13`, the unique tight row is
 `(1..12)`, and the minimum strict safe measure at target `1/14` is `7/858` at
 the drop-6 core `(1,2,3,4,5,7,8,9,10,11,12,13)`.
-
-Steering update: try to prove an AP-frontier fattening lemma, then extend it
-from `[1,N]` to AP-rich normal forms via Freiman/signed-wall transport.  The
-even support-floor ladder explains why `N=14` is qualitatively new:
-`N=4,6,8,10,12` have support floors `1..5`, while `N=14` is the first
-support-six / HYP-2646 signed-coset wall.
 
 ## codex-S29 update: k=9 single-defect wall-transfer target
 
