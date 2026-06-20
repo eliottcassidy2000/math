@@ -1,0 +1,35 @@
+========================================================================
+PART 1: structural — where does the C_3 partial trace land?
+========================================================================
+  T3 (partial, a in {1,2,4}) in Q(sqrt-7)  [fixed by sigma_2]: 64/64
+  T3 (partial) actually RATIONAL                              : 16/64
+  Tfull (all 6 a) RATIONAL  (=HYP-2657 full trace collapse)   : 64/64
+  => partial C_3 trace lives in Q(sqrt-7), NOT generically rational, NOT Z[omega].
+
+  per-orbit magnitude: |T3| vs sum|D7| over the C_3 orbit (cancellation factor):
+    orbits sampled=64  |T3|/sum|D7| : min=0.286 mean=0.642 max=1.000
+    (ratio<1 => signed C_3 cancellation; ratio≈1 => no gain at orbit level)
+
+========================================================================
+PART 2: bounds on the actual relation-lattice correction
+========================================================================
+
+=== AP8 consec  E=[0, 1, 2, 3, 4, 5, 6, 7] ===
+  L=3: #rel= 22852  #res=8156  exact|corr|=1.1046e-02
+        B_abs =1.7666e+00 (x159.94)   B_re =1.1508e+00 (x104.18)
+        B_c3  =1.6392e+00 (x148.40)   B_full=1.0959e+00 (x 99.22)
+        C_3 gain over absolute: 1.08x   full-trace gain over absolute: 1.61x
+  L=4: #rel=100258  #res=25918  exact|corr|=3.7596e-03
+        B_abs =4.7341e+00 (x1259.20)   B_re =2.9345e+00 (x780.52)
+        B_c3  =2.4140e+00 (x642.08)   B_full=1.5755e+00 (x419.07)
+        C_3 gain over absolute: 1.96x   full-trace gain over absolute: 3.00x
+
+=== WIDE8 odd-AP  E=[0, 1, 3, 5, 7, 9, 11, 13] ===
+  L=3: #rel= 12082  #res=5464  exact|corr|=2.0036e-02
+        B_abs =8.7822e-01 (x 43.83)   B_re =5.7599e-01 (x 28.75)
+        B_c3  =8.5948e-01 (x 42.90)   B_full=5.6921e-01 (x 28.41)
+        C_3 gain over absolute: 1.02x   full-trace gain over absolute: 1.54x
+  L=4: #rel= 55140  #res=18520  exact|corr|=1.2545e-02
+        B_abs =2.5180e+00 (x200.72)   B_re =1.5833e+00 (x126.21)
+        B_c3  =1.5218e+00 (x121.31)   B_full=9.4833e-01 (x 75.59)
+        C_3 gain over absolute: 1.65x   full-trace gain over absolute: 2.66x
