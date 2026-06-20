@@ -20,6 +20,27 @@ multi-forms such as `u-2v+w`, so pairwise resonance distance is not enough.
 The intended split is nonresonant signed decay, rank-one Freiman/scale finite
 reduction, and rank `>=2` dimension penalty.  No LRC(14) proof claimed yet.
 
+After reading the incoming Newton-peel scripts, corrected the truncation
+language: the exact Newton identity is over all far subsets, not only
+`|S|<=6`; the six-sector structure enters through the profile variables
+`p_0..p_6`.  Added
+`04-computation/lrc14_signed_multifar_boundary_hierarchy_codex_s51.py` and
+stored `05-knowledge/results/lrc14_signed_multifar_boundary_hierarchy_codex_s51.out`.
+The script verifies the Stirling coefficient table through `s=8` and checks
+`P_r(B)=p0(B)+sum_s binom(r,s)Phi_s(B)` exactly against the direct profile
+boundary value for three cores and `r<=6`.
+
+Main computational finding: three-far discrepancy is a relation-lattice
+object.  `Phi_3=(p1-6p2+6p3)/343`; separated triples are close to this value
+(consec8 with `(17,23,31)` has abs deviation `421/71900346`), while exact
+low-height triple relations have much larger signed deviations.  For the
+dilated core `(0,4,6,8,10,12,14)`, `(15,18,21)` has deviation
+`18443/3025260`, but direct margin `12973/38220`.  The all-core bank for
+far `(15,16,17)` checked `3003` primitive cores: all have exact triple relation
+`-u+2v-w=0`, no exact pair relation at height `4`, and signs split
+`positive=1999`, `negative=1004`.  Top abs deviation is
+`40633081/445721640`, still with large direct cap margin.
+
 ## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
 
 User asked to keep pushing toward the LRC(14) proof, pulling/pushing frequently,
