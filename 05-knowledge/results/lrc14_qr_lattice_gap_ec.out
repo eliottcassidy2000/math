@@ -1,0 +1,19 @@
+DECISIVE GAP TEST: trace collapse vs the integer relation lattice
+====================================================================
+
+### AP8 (consec, tight)  E=[0, 1, 2, 3, 4, 5, 6, 7]
+  L=3: #rel=22852  corr.Re=-1.1046e-02  Im/Re=5.5e-15  sum|W|=2.303e-02  orbit-wt-spread=0.127
+  L=4: #rel=100258  corr.Re=+3.7596e-03  Im/Re=1.4e-14  sum|W|=4.149e-02 (x1.80 vs L-1)  orbit-wt-spread=0.638
+  L=5: #rel=315096  corr.Re=+1.8962e-02  Im/Re=6.3e-15  sum|W|=6.178e-02 (x1.49 vs L-1)  orbit-wt-spread=1.097
+
+### WIDE8 (odd-AP)  E=[0, 1, 3, 5, 7, 9, 11, 13]
+  L=3: #rel=12082  corr.Re=+2.0036e-02  Im/Re=1.3e-15  sum|W|=1.176e-02  orbit-wt-spread=0.063
+  L=4: #rel=55140  corr.Re=+1.2545e-02  Im/Re=3.2e-16  sum|W|=2.206e-02 (x1.88 vs L-1)  orbit-wt-spread=0.370
+  L=5: #rel=173284  corr.Re=+1.8185e-02  Im/Re=2.7e-15  sum|W|=3.331e-02 (x1.51 vs L-1)  orbit-wt-spread=0.999
+
+CONCLUSION:
+  (A) Im/Re ~ 1e-15 on every lattice: n<->-n pairing makes correction REAL. CONFIRMED.
+  (B) within-orbit weight spread is LARGE (0.3-1.2), NOT ~0: the F7* trace collapse
+      does NOT regroup the lattice sum. CONFIRMED.
+  (C) sum|W| (the honest envelope) GROWS with L: no finite magnitude bound from trace.
+  => QR/Gauss angle gives EXACT REALITY reduction, NOT a wide-E magnitude bound.
