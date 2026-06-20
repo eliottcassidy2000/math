@@ -1,0 +1,7 @@
+[sanity] g^2 = ['-7', '0', '0', '0', '0', '0'] (expect -7,0,0,0,0,0) -> OK
+[2] Galois equivariance D7(ac)=sigma_a(D7(c)): 276 pairs, fails=0 -> CONFIRMED
+[3] sum_a D7(ac)=Tr rational on all tests: fails=0; Tr(1^6)=5040 (7!=5040) -> CONFIRMED
+[4] sigma_6=conj and D7(6c)=conj(D7(c)): fails=0 -> CONFIRMED
+[GAP] D7 in Q(sqrt-7) [fixed by sigma_2=QR gen]: 4/404; D7 rational [fixed by sigma_3 too]: 4/404
+      => QR/NQR index-2 split alone does NOT diagonalize; full F7* trace needed,
+         which the integer lattice does not realize. GAP CONFIRMED.
