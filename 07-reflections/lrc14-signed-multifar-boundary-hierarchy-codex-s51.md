@@ -72,7 +72,19 @@ branch.
 
 ## Next Move
 
-Prove a signed Abel packet bound for
+Use the incoming THM-548 simultaneous-peel architecture.  For `r=3`, decompose
+the full row as
+
+```text
+p0(B union {u,v,w}) =
+  P_3(B)
+  + three one-far residuals
+  + three two-far residuals
+  + one three-far residual.
+```
+
+The one- and two-far pieces are now routed by THM-547/548.  The new analytic
+piece is a signed Abel packet bound for
 
 ```text
 Delta_3(B;u,v,w) - Phi_3(B)

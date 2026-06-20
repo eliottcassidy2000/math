@@ -41,6 +41,13 @@ far `(15,16,17)` checked `3003` primitive cores: all have exact triple relation
 `positive=1999`, `negative=1004`.  Top abs deviation is
 `40633081/445721640`, still with large direct cap margin.
 
+Incoming mac-mini THM-548 simultaneous-peel work then sharpened the next proof
+shape.  For `r=3`, do not peel iteratively from a wide base.  Use
+`p0(B∪{u,v,w}) = P_3(B) + three one-far residuals + three two-far residuals +
+one three-far residual`.  THM-547 handles the one-far bounded-base terms,
+THM-548 handles the two-far curvature terms, and HYP-2680 isolates the new
+analytic task as the signed relation-lattice bound for `Delta_{uvw}-Phi_3`.
+
 ## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
 
 User asked to keep pushing toward the LRC(14) proof, pulling/pushing frequently,

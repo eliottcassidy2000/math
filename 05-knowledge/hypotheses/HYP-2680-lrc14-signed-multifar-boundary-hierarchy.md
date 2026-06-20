@@ -235,13 +235,27 @@ So three-far resonance can be much larger than the fully decorrelated
 ## Revised Next Target
 
 The sharp target is no longer "prove all higher orders vanish."  They do not.
-The target is:
+Incoming THM-548 adds the right proof shape: simultaneous peel, not iterative
+peel.  For `r=3`, the exact target is
 
 ```text
-|Delta_S(B)-Phi_s(B)| <= signed Abel relation-lattice packet bound,
+p0(B union {u,v,w}) =
+  P_3(B)
+  + sum_i       (Delta_i - Phi_1)
+  + sum_{i<j}   (Delta_{ij} - Phi_2)
+  +             (Delta_{uvw} - Phi_3).
 ```
 
-with separate treatment of:
+The one-far residuals stay over bounded `B` and route to THM-547; the two-far
+residuals route to THM-548's `C_2`/simultaneous-peel bound; the new obligation
+is the three-far residual
+
+```text
+Delta_{uvw}(B) - Phi_3(B).
+```
+
+That residual needs a signed Abel relation-lattice packet bound with separate
+treatment of:
 
 - exact low-height multi-relations such as `u-2v+w=0`;
 - near-relations with small `|m*u+n*v+l*w|`;
