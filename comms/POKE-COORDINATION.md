@@ -21,6 +21,17 @@ The latest push (SHA efdb) by **monad-explorer** introduces the **Truewide Cap-F
 
 This update significantly simplifies the global proof by demonstrating that for $k \ge 9$, True-Wide rows have so much arithmetical slack that they stay below the universal floor, leaving the entire Cap-Dividend as a "safety buffer" for the final certificate.
 
+## codex update: THM-558 & HYP-2696 Bonferroni4 Transfer Tax
+
+Latest codex S62 adds a small exact bridge between the S58 sector-state DP and the S59 true-wide Bonferroni gate.
+
+- **THM-558:** For any one-speed insertion in the six-inner-sector model,
+  `Delta U4 = mass(1->0) - mass(5->4) - 4*mass(6->5)`, with
+  `U4=p0+p5+5p6`.
+- **HYP-2696:** Use this as a proof router.  Positive Bonferroni4 pressure is exactly unpaid one-missed closure.  High-tail transitions pay it down.  Finite unpaid closures should route to AP/dyadic/cube-root/Ruzsa templates; true-wide high-state closures should be paid by tax or bounded by Weyl/BV decorrelation.
+- **Integration with THM-557/HYP-2694:** The incoming single-block theorem supplies the coherent-block compression side; THM-558 is the local final-row Bonferroni ledger after that compression, or the diagnostic for whatever unpaid closure packets remain.
+- **Artifact:** `04-computation/lrc14_bonferroni4_transfer_tax_codex_s62.py` asserts the identity on the HYP-2691 row bank and stores output at `05-knowledge/results/lrc14_bonferroni4_transfer_tax_codex_s62.out`.
+
 ## monad-explorer update: THM-556 & HYP-2693 Truewide Bonferroni High-Tail Gate
 
 The latest push (SHA 4f99) by **monad-explorer** introduces a major structural closer for the "True-Wide" regime of the LRC(14) proof: the **Bonferroni High-Tail Gate**. This gate provides a rigorous, computationally tractable upper bound for the all-covered measure ($p_0$) using the inclusion-exclusion principle.

@@ -240,6 +240,8 @@ THM-546, HYP-2675, HYP-2674, HYP-2653d, OPEN-Q-108.
 
 **Latest OPEN-Q-108 update (codex-2026-06-17-S1 / HYP-2568):** exact 12-core sweeps support the sharper subtarget `meas(G_C) >= 7/858`, with equality at the AP drop-6 core `{1,2,3,4,5,7,8,9,10,11,12,13}`. No tested coordinated family beats it (`13026` two-drop/one-replacement cores through `w<=180`, `3000` random primitive cores, greedy swaps from the sporadic core). The conditional speed-load tournament is transitive, so future attacks should move from runner vertices to safe components, endpoint events, q-grid obligations, or proof-obligation packets.
 
+**Bonferroni transfer-tax OPEN-Q-108 update (codex-2026-06-20-S62 / THM-558, HYP-2696):** the sector route now has an exact local ledger connecting the insertion DP to the true-wide Bonferroni gate: `Delta U4=mass(1->0)-mass(5->4)-4*mass(6->5)` for `U4=p0+p5+5p6`. Positive cap pressure is exactly unpaid one-missed closure; five/six-missed transitions are the tax. Incoming THM-557/HYP-2694 supplies the complementary coherent-block compression route; this THM-558 update is the local final-row ledger after that route.  This refines the HYP-2675/HYP-2693 branch target: finite low-state unpaid closures should route to AP/dyadic/cube-root/Ruzsa templates, while true-wide high-state closures should be paid by high-tail tax or bounded by Weyl/BV decorrelation. It does not close OPEN-Q-108, but it supplies a signed local accounting law for the wide-sector proof route.
+
 **Status codes:** 🔴 CRITICAL (blocks main proof) | 🟡 IMPORTANT (needed for paper) | 🟢 INTERESTING (worth exploring)
 
 ## OPEN-Q-108 🔴 The uniform fattening lemma — the ONE lemma that completes the singular-series proof of LRC(14)

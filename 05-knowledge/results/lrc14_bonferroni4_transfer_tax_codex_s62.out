@@ -1,0 +1,232 @@
+HYP-2696 / T932 -- LRC14 Bonferroni4 transfer tax
+Arithmetic: exact Fractions over HYP-2691 common sector-wall refinements.
+Preserved predicate: p0(E) <= U4(E), with U4(E)=p0+p5+5p6.
+Assumption challenged: proof vertices are missed-state transitions and schedules, not runners.
+
+EXACT LOCAL LAW
+  For every insertion P -> P union {e}:
+    Delta U4 = mass(1->0) - mass(5->4) - 4*mass(6->5).
+  Positive Bonferroni4 movement is exactly one-missed closure;
+  five/six-missed transitions are a signed tax that lowers U4.
+
+==========================================================================================
+ROW AP9: E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  k=9 span=8 p0=2447/5880 (0.416156463) tail45=53/392 (0.135204082) U4=1621/2940 (0.551360544) cap-U4=-6002/105105 (-0.057104800)
+  missed_dist=['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  increasing            order=(1, 2, 3, 4, 5, 6, 7, 8) pos_area=991/2940 max_pos=223/1470 first_close=6 last_pos=8 preclose_tax=67/14 max_support=33 area_support=199
+  greedy-max-gain       order=(1, 2, 4, 3, 6, 5, 7, 8) pos_area=1061/2940 max_pos=223/1470 first_close=6 last_pos=8 preclose_tax=101/21 max_support=32 area_support=193
+  greedy-min-support    order=(1, 2, 4, 3, 6, 5, 8, 7) pos_area=1061/2940 max_pos=599/2940 first_close=6 last_pos=8 preclose_tax=101/21 max_support=32 area_support=192
+  greedy-min-transition order=(1, 2, 3, 4, 6, 8, 5, 7) pos_area=377/980 max_pos=599/2940 first_close=6 last_pos=8 preclose_tax=101/21 max_support=32 area_support=196
+  dyadic-tower          order=(8, 4, 2, 6, 1, 3, 5, 7) pos_area=1201/2940 max_pos=599/2940 first_close=6 last_pos=8 preclose_tax=34/7 max_support=39 area_support=200
+  residue-layer         order=(7, 1, 8, 2, 3, 4, 5, 6) pos_area=2407/5880 max_pos=1861/5880 first_close=6 last_pos=8 preclose_tax=5713/1176 max_support=48 area_support=271
+  decreasing            order=(8, 7, 6, 5, 4, 3, 2, 1) pos_area=1213/2940 max_pos=29/120 first_close=6 last_pos=8 preclose_tax=1191/245 max_support=47 area_support=276
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0 HP=1 path=increasing > greedy-max-gain > greedy-min-support > greedy-min-transition > dyadic-tower > residue-layer > decreasing
+  best-order identity: final_U4-5=-13079/2940 = close1-tax = 2447/5880-1907/392; final_tail45=5-tax=53/392
+  total close1=2447/5880 hit5=367/392 hit6=55/56 tax=1907/392
+    transfer-tax ledger for increasing:
+       1. add=  1 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  2 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add=  3 dU4=-3/14 U4=5/14 close1=0 hit5=5/42 hit6=1/42 tax=3/14 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(4, 7), Fraction(5, 42), Fraction(1, 42))
+       4. add=  4 dU4=-1/12 U4=23/84 close1=0 hit5=1/28 hit6=1/84 tax=1/12 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(37, 84), Fraction(13, 84), Fraction(1, 28), Fraction(1, 84))
+       5. add=  5 dU4=-5/84 U4=3/14 close1=0 hit5=13/420 hit6=1/140 tax=5/84 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(11, 42), Fraction(73, 420), Fraction(5, 84), Fraction(13, 420), Fraction(1, 140))
+       6. add=  6 dU4=4/35 U4=23/70 close1=31/210 hit5=1/70 hit6=1/210 tax=1/30 hits_by_count=(Fraction(0, 1), Fraction(31, 210), Fraction(8, 35), Fraction(29, 420), Fraction(1, 28), Fraction(1, 70), Fraction(1, 210))
+       7. add=  7 dU4=223/1470 U4=353/735 close1=44/245 hit5=1/70 hit6=1/294 tax=41/1470 hits_by_count=(Fraction(0, 1), Fraction(44, 245), Fraction(17, 210), Fraction(57, 980), Fraction(11, 420), Fraction(1, 70), Fraction(1, 294))
+       8. add=  8 dU4=209/2940 U4=1621/2940 close1=523/5880 hit5=3/392 hit6=1/392 tax=1/56 hits_by_count=(Fraction(0, 1), Fraction(523, 5880), Fraction(131, 1960), Fraction(29, 840), Fraction(131, 5880), Fraction(3, 392), Fraction(1, 392))
+==========================================================================================
+ROW one-gap-top9: E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  k=9 span=9 p0=1181/2940 (0.401700680) tail45=5/42 (0.119047619) U4=1531/2940 (0.520748299) cap-U4=-5569/210210 (-0.026492555)
+  missed_dist=['1181/2940', '23/90', '1139/8820', '38/441', '317/4410', '5/126', '1/63']
+  increasing            order=(1, 2, 3, 4, 5, 6, 7, 9) pos_area=901/2940 max_pos=223/1470 first_close=6 last_pos=8 preclose_tax=67/14 max_support=33 area_support=197
+  greedy-min-support    order=(1, 2, 4, 3, 6, 5, 7, 9) pos_area=971/2940 max_pos=223/1470 first_close=6 last_pos=8 preclose_tax=101/21 max_support=32 area_support=191
+  dyadic-tower          order=(4, 2, 6, 1, 3, 5, 7, 9) pos_area=971/2940 max_pos=223/1470 first_close=6 last_pos=8 preclose_tax=101/21 max_support=35 area_support=203
+  greedy-min-transition order=(1, 2, 3, 4, 6, 5, 9, 7) pos_area=517/1470 max_pos=157/735 first_close=6 last_pos=8 preclose_tax=101/21 max_support=33 area_support=196
+  decreasing            order=(9, 7, 6, 5, 4, 3, 2, 1) pos_area=1153/2940 max_pos=613/2205 first_close=6 last_pos=8 preclose_tax=341/70 max_support=52 area_support=284
+  residue-layer         order=(7, 1, 2, 9, 3, 4, 5, 6) pos_area=387/980 max_pos=25/84 first_close=6 last_pos=8 preclose_tax=1433/294 max_support=49 area_support=267
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=increasing > greedy-min-support > dyadic-tower > greedy-min-transition > decreasing > residue-layer
+  best-order identity: final_U4-5=-13169/2940 = close1-tax = 1181/2940-205/42; final_tail45=5-tax=5/42
+  total close1=1181/2940 hit5=17/18 hit6=62/63 tax=205/42
+    transfer-tax ledger for increasing:
+       1. add=  1 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  2 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add=  3 dU4=-3/14 U4=5/14 close1=0 hit5=5/42 hit6=1/42 tax=3/14 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(4, 7), Fraction(5, 42), Fraction(1, 42))
+       4. add=  4 dU4=-1/12 U4=23/84 close1=0 hit5=1/28 hit6=1/84 tax=1/12 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(37, 84), Fraction(13, 84), Fraction(1, 28), Fraction(1, 84))
+       5. add=  5 dU4=-5/84 U4=3/14 close1=0 hit5=13/420 hit6=1/140 tax=5/84 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(11, 42), Fraction(73, 420), Fraction(5, 84), Fraction(13, 420), Fraction(1, 140))
+       6. add=  6 dU4=4/35 U4=23/70 close1=31/210 hit5=1/70 hit6=1/210 tax=1/30 hits_by_count=(Fraction(0, 1), Fraction(31, 210), Fraction(8, 35), Fraction(29, 420), Fraction(1, 28), Fraction(1, 70), Fraction(1, 210))
+       7. add=  7 dU4=223/1470 U4=353/735 close1=44/245 hit5=1/70 hit6=1/294 tax=41/1470 hits_by_count=(Fraction(0, 1), Fraction(44, 245), Fraction(17, 210), Fraction(57, 980), Fraction(11, 420), Fraction(1, 70), Fraction(1, 294))
+       8. add=  9 dU4=17/420 U4=1531/2940 close1=73/980 hit5=1/63 hit6=2/441 tax=5/147 hits_by_count=(Fraction(0, 1), Fraction(73, 980), Fraction(757, 8820), Fraction(11, 245), Fraction(11, 441), Fraction(1, 63), Fraction(2, 441))
+==========================================================================================
+ROW direct-risk-leader: E=(0, 4, 6, 8, 10, 12, 14, 15, 16)
+  k=9 span=16 p0=321/980 (0.327551020) tail45=1/14 (0.071428571) U4=391/980 (0.398979592) cap-U4=3338/35035 (0.095276152)
+  missed_dist=['321/980', '40/147', '1231/5880', '173/1680', '41/784', '3/112', '1/112']
+  increasing            order=(4, 6, 8, 10, 12, 14, 15, 16) pos_area=1361/5880 max_pos=419/1960 first_close=6 last_pos=8 preclose_tax=506/105 max_support=56 area_support=293
+  dyadic-tower          order=(16, 8, 4, 12, 6, 10, 14, 15) pos_area=391/1470 max_pos=36/245 first_close=6 last_pos=7 preclose_tax=34/7 max_support=55 area_support=239
+  greedy-min-support    order=(4, 8, 16, 12, 6, 10, 14, 15) pos_area=391/1470 max_pos=36/245 first_close=6 last_pos=7 preclose_tax=34/7 max_support=55 area_support=239
+  greedy-min-transition order=(4, 8, 12, 16, 6, 10, 14, 15) pos_area=391/1470 max_pos=36/245 first_close=6 last_pos=7 preclose_tax=34/7 max_support=55 area_support=243
+  decreasing            order=(16, 15, 14, 12, 10, 8, 6, 4) pos_area=127/392 max_pos=419/1680 first_close=6 last_pos=8 preclose_tax=197/40 max_support=61 area_support=360
+  residue-layer         order=(14, 8, 15, 16, 10, 4, 12, 6) pos_area=321/980 max_pos=187/784 first_close=6 last_pos=8 preclose_tax=69/14 max_support=59 area_support=355
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=increasing > dyadic-tower > greedy-min-support > greedy-min-transition > decreasing > residue-layer
+  best-order identity: final_U4-5=-4509/980 = close1-tax = 321/980-69/14; final_tail45=5-tax=1/14
+  total close1=321/980 hit5=27/28 hit6=111/112 tax=69/14
+    transfer-tax ledger for increasing:
+       1. add=  4 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  6 dU4=-22/21 U4=11/21 close1=0 hit5=2/3 hit6=2/21 tax=22/21 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(2, 3), Fraction(2, 21))
+       3. add=  8 dU4=-5/21 U4=2/7 close1=0 hit5=4/21 hit6=1/84 tax=5/21 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(43, 84), Fraction(4, 21), Fraction(1, 84))
+       4. add= 10 dU4=-5/84 U4=19/84 close1=0 hit5=13/420 hit6=1/140 tax=5/84 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 3), Fraction(23, 105), Fraction(13, 420), Fraction(1, 140))
+       5. add= 12 dU4=-19/420 U4=19/105 close1=0 hit5=11/420 hit6=1/210 tax=19/420 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(8, 35), Fraction(19, 70), Fraction(9, 140), Fraction(11, 420), Fraction(1, 210))
+       6. add= 14 dU4=13/735 U4=146/735 close1=67/1470 hit5=1/70 hit6=1/294 tax=41/1470 hits_by_count=(Fraction(0, 1), Fraction(67, 1470), Fraction(166, 735), Fraction(223, 2940), Fraction(113, 2940), Fraction(1, 70), Fraction(1, 294))
+       7. add= 15 dU4=-79/5880 U4=363/1960 close1=123/1960 hit5=8/245 hit6=8/735 tax=8/105 hits_by_count=(Fraction(0, 1), Fraction(123, 1960), Fraction(129, 1960), Fraction(52, 735), Fraction(389, 5880), Fraction(8, 245), Fraction(8, 735))
+       8. add= 16 dU4=419/1960 U4=391/980 close1=1289/5880 hit5=3/980 hit6=1/1680 tax=4/735 hits_by_count=(Fraction(0, 1), Fraction(1289, 5880), Fraction(467, 5880), Fraction(113, 1960), Fraction(143, 11760), Fraction(3, 980), Fraction(1, 1680))
+==========================================================================================
+ROW boundary-leader: E=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+  k=9 span=15 p0=437/1176 (0.371598639) tail45=113/1470 (0.076870748) U4=879/1960 (0.448469388) cap-U4=12833/280280 (0.045786357)
+  missed_dist=['437/1176', '103/420', '491/2940', '703/5880', '17/294', '43/1470', '1/105']
+  increasing            order=(2, 4, 6, 8, 10, 12, 14, 15) pos_area=391/1470 max_pos=223/1470 first_close=6 last_pos=7 preclose_tax=67/14 max_support=51 area_support=218
+  dyadic-tower          order=(8, 4, 12, 2, 6, 10, 14, 15) pos_area=71/245 max_pos=223/1470 first_close=6 last_pos=7 preclose_tax=101/21 max_support=51 area_support=224
+  greedy-min-support    order=(2, 4, 8, 6, 12, 10, 14, 15) pos_area=71/245 max_pos=223/1470 first_close=6 last_pos=7 preclose_tax=101/21 max_support=51 area_support=212
+  greedy-min-transition order=(2, 4, 6, 8, 12, 10, 14, 15) pos_area=71/245 max_pos=223/1470 first_close=6 last_pos=7 preclose_tax=101/21 max_support=51 area_support=216
+  decreasing            order=(15, 14, 12, 10, 8, 6, 4, 2) pos_area=363/980 max_pos=129/490 first_close=6 last_pos=8 preclose_tax=9647/1960 max_support=61 area_support=353
+  residue-layer         order=(14, 8, 15, 2, 10, 4, 12, 6) pos_area=437/1176 max_pos=419/1470 first_close=6 last_pos=8 preclose_tax=7237/1470 max_support=57 area_support=345
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=increasing > dyadic-tower > greedy-min-support > greedy-min-transition > decreasing > residue-layer
+  best-order identity: final_U4-5=-8921/1960 = close1-tax = 437/1176-7237/1470; final_tail45=5-tax=113/1470
+  total close1=437/1176 hit5=471/490 hit6=104/105 tax=7237/1470
+    transfer-tax ledger for increasing:
+       1. add=  2 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  4 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add=  6 dU4=-3/14 U4=5/14 close1=0 hit5=5/42 hit6=1/42 tax=3/14 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(4, 7), Fraction(5, 42), Fraction(1, 42))
+       4. add=  8 dU4=-1/12 U4=23/84 close1=0 hit5=1/28 hit6=1/84 tax=1/12 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(37, 84), Fraction(13, 84), Fraction(1, 28), Fraction(1, 84))
+       5. add= 10 dU4=-5/84 U4=3/14 close1=0 hit5=13/420 hit6=1/140 tax=5/84 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(11, 42), Fraction(73, 420), Fraction(5, 84), Fraction(13, 420), Fraction(1, 140))
+       6. add= 12 dU4=4/35 U4=23/70 close1=31/210 hit5=1/70 hit6=1/210 tax=1/30 hits_by_count=(Fraction(0, 1), Fraction(31, 210), Fraction(8, 35), Fraction(29, 420), Fraction(1, 28), Fraction(1, 70), Fraction(1, 210))
+       7. add= 14 dU4=223/1470 U4=353/735 close1=44/245 hit5=1/70 hit6=1/294 tax=41/1470 hits_by_count=(Fraction(0, 1), Fraction(44, 245), Fraction(17, 210), Fraction(57, 980), Fraction(11, 420), Fraction(1, 70), Fraction(1, 294))
+       8. add= 15 dU4=-187/5880 U4=879/1960 close1=87/1960 hit5=8/245 hit6=8/735 tax=8/105 hits_by_count=(Fraction(0, 1), Fraction(87, 1960), Fraction(89, 1960), Fraction(83, 1960), Fraction(41, 735), Fraction(8, 245), Fraction(8, 735))
+==========================================================================================
+ROW dyadic-block: E=(0, 1, 2, 4, 8, 12, 16, 20, 24)
+  k=9 span=24 p0=29/112 (0.258928571) tail45=1/21 (0.047619048) U4=103/336 (0.306547619) cap-U4=9019/48048 (0.187708125)
+  missed_dist=['29/112', '191/560', '41/210', '73/560', '17/336', '1/56', '1/168']
+  dyadic-tower          order=(16, 8, 24, 4, 12, 20, 2, 1) pos_area=257/1680 max_pos=29/210 first_close=6 last_pos=8 preclose_tax=101/21 max_support=39 area_support=218
+  decreasing            order=(24, 20, 16, 12, 8, 4, 2, 1) pos_area=13/80 max_pos=31/210 first_close=6 last_pos=8 preclose_tax=506/105 max_support=42 area_support=256
+  increasing            order=(1, 2, 4, 8, 12, 16, 20, 24) pos_area=71/336 max_pos=67/420 first_close=6 last_pos=8 preclose_tax=103/21 max_support=39 area_support=226
+  greedy-min-support    order=(1, 2, 4, 8, 16, 12, 24, 20) pos_area=79/336 max_pos=1/6 first_close=6 last_pos=8 preclose_tax=69/14 max_support=39 area_support=223
+  residue-layer         order=(1, 8, 2, 16, 24, 4, 12, 20) pos_area=41/168 max_pos=1/6 first_close=6 last_pos=8 preclose_tax=829/168 max_support=53 area_support=274
+  greedy-max-gain       order=(1, 2, 4, 12, 24, 8, 20, 16) pos_area=29/112 max_pos=239/1680 first_close=6 last_pos=8 preclose_tax=104/21 max_support=48 area_support=253
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=dyadic-tower > decreasing > increasing > greedy-min-support > residue-layer > greedy-max-gain
+  best-order identity: final_U4-5=-1577/336 = close1-tax = 29/112-104/21; final_tail45=5-tax=1/21
+  total close1=29/112 hit5=41/42 hit6=167/168 tax=104/21
+    transfer-tax ledger for dyadic-tower:
+       1. add= 16 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  8 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add= 24 dU4=-3/14 U4=5/14 close1=0 hit5=5/42 hit6=1/42 tax=3/14 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(4, 7), Fraction(5, 42), Fraction(1, 42))
+       4. add=  4 dU4=-1/6 U4=4/21 close1=0 hit5=1/14 hit6=1/42 tax=1/6 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(29, 84), Fraction(5, 28), Fraction(1, 14), Fraction(1, 42))
+       5. add= 12 dU4=0 U4=4/21 close1=0 hit5=0 hit6=0 tax=0 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(1, 4), Fraction(25, 84), Fraction(1, 21), Fraction(0, 1), Fraction(0, 1))
+       6. add= 20 dU4=29/210 U4=23/70 close1=31/210 hit5=1/105 hit6=0 tax=1/105 hits_by_count=(Fraction(0, 1), Fraction(31, 210), Fraction(101, 420), Fraction(17, 420), Fraction(1, 42), Fraction(1, 105), Fraction(0, 1))
+       7. add=  2 dU4=-31/840 U4=7/24 close1=41/840 hit5=4/105 hit6=1/84 tax=3/35 hits_by_count=(Fraction(0, 1), Fraction(41, 840), Fraction(43, 840), Fraction(9, 140), Fraction(7, 120), Fraction(4, 105), Fraction(1, 84))
+       8. add=  1 dU4=5/336 U4=103/336 close1=1/16 hit5=1/42 hit6=1/168 tax=1/21 hits_by_count=(Fraction(0, 1), Fraction(1, 16), Fraction(7, 120), Fraction(1, 21), Fraction(11, 240), Fraction(1, 42), Fraction(1, 168))
+==========================================================================================
+ROW doubled-odd-tail: E=(0, 1, 2, 4, 8, 14, 26, 34, 38)
+  k=9 span=38 p0=10107/58786 (0.171928691) tail45=4/133 (0.030075188) U4=625/3094 (0.202003878) cap-U4=19893/68068 (0.292251866)
+  missed_dist=['10107/58786', '58991/205751', '655475/1646008', '171181/1646008', '109/4522', '3/266', '1/266']
+  dyadic-tower          order=(8, 4, 2, 14, 26, 34, 38, 1) pos_area=202/1547 max_pos=6089/58786 first_close=6 last_pos=8 preclose_tax=895/182 max_support=47 area_support=253
+  greedy-min-support    order=(1, 2, 4, 8, 14, 26, 38, 34) pos_area=2981/21658 max_pos=173805/1646008 first_close=6 last_pos=8 preclose_tax=241/49 max_support=44 area_support=238
+  increasing            order=(1, 2, 4, 8, 14, 26, 34, 38) pos_area=2981/21658 max_pos=10567/86632 first_close=6 last_pos=8 preclose_tax=241/49 max_support=44 area_support=239
+  decreasing            order=(38, 34, 26, 14, 8, 4, 2, 1) pos_area=29375/205751 max_pos=25/238 first_close=6 last_pos=8 preclose_tax=156395/31654 max_support=61 area_support=335
+  greedy-max-gain       order=(1, 2, 4, 34, 26, 38, 14, 8) pos_area=499/3094 max_pos=37925/411502 first_close=6 last_pos=8 preclose_tax=1096/221 max_support=61 area_support=307
+  residue-layer         order=(14, 1, 8, 2, 38, 4, 26, 34) pos_area=34822/205751 max_pos=173805/1646008 first_close=6 last_pos=8 preclose_tax=9249/1862 max_support=59 area_support=317
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=dyadic-tower > greedy-min-support > increasing > decreasing > greedy-max-gain > residue-layer
+  best-order identity: final_U4-5=-14845/3094 = close1-tax = 10107/58786-661/133; final_tail45=5-tax=4/133
+  total close1=10107/58786 hit5=131/133 hit6=265/266 tax=661/133
+    transfer-tax ledger for dyadic-tower:
+       1. add=  8 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  4 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add=  2 dU4=-2/7 U4=2/7 close1=0 hit5=1/7 hit6=1/28 tax=2/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(15, 28), Fraction(1, 7), Fraction(1, 28))
+       4. add= 14 dU4=-13/98 U4=15/98 close1=0 hit5=1/14 hit6=3/196 tax=13/98 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(45, 196), Fraction(25, 98), Fraction(1, 14), Fraction(3, 196))
+       5. add= 26 dU4=-45/637 U4=15/182 close1=0 hit5=3/91 hit6=6/637 tax=45/637 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(155, 2548), Fraction(373, 1274), Fraction(249, 2548), Fraction(3, 91), Fraction(6, 637))
+       6. add= 34 dU4=-1/91 U4=1/14 close1=1/119 hit5=2/221 hit6=4/1547 tax=30/1547 hits_by_count=(Fraction(0, 1), Fraction(1, 119), Fraction(6793, 43316), Fraction(8045, 43316), Fraction(423, 10829), Fraction(2, 221), Fraction(4, 1547))
+       7. add= 38 dU4=6089/58786 U4=5144/29393 close1=341/3094 hit5=1/323 hit6=2/2261 tax=15/2261 hits_by_count=(Fraction(0, 1), Fraction(341, 3094), Fraction(114421, 823004), Fraction(75197, 823004), Fraction(269, 29393), Fraction(1, 323), Fraction(2, 2261))
+       8. add=  1 dU4=1587/58786 U4=625/3094 close1=1567/29393 hit5=3/266 hit6=1/266 tax=1/38 hits_by_count=(Fraction(0, 1), Fraction(1567, 29393), Fraction(11987, 117572), Fraction(5557, 96824), Fraction(109, 4522), Fraction(3, 266), Fraction(1, 266))
+==========================================================================================
+ROW three-cluster-wide: E=(0, 1, 2, 30, 31, 32, 60, 61, 62)
+  k=9 span=62 p0=141899/635376 (0.223330752) tail45=23407/529480 (0.044207524) U4=849937/3176880 (0.267538277) cap-U4=102996349/454293840 (0.226717468)
+  missed_dist=['141899/635376', '12053/45384', '12361/52080', '115271/794220', '6562/66185', '13647/529480', '4/1085']
+  increasing            order=(1, 2, 30, 31, 32, 60, 61, 62) pos_area=10421/60512 max_pos=145937/1588440 first_close=6 last_pos=8 preclose_tax=509993/104160 max_support=60 area_support=345
+  greedy-min-transition order=(1, 2, 32, 31, 30, 62, 60, 61) pos_area=78437/423584 max_pos=137563/1058960 first_close=6 last_pos=8 preclose_tax=509993/104160 max_support=60 area_support=339
+  greedy-min-support    order=(1, 2, 32, 62, 31, 30, 60, 61) pos_area=300071/1588440 max_pos=137563/1058960 first_close=6 last_pos=8 preclose_tax=2441/496 max_support=55 area_support=330
+  dyadic-tower          order=(32, 60, 2, 30, 62, 1, 31, 61) pos_area=322397/1588440 max_pos=137563/1058960 first_close=6 last_pos=8 preclose_tax=254917/52080 max_support=60 area_support=350
+  greedy-max-gain       order=(1, 2, 32, 62, 31, 60, 61, 30) pos_area=81743/397110 max_pos=104489/907680 first_close=6 last_pos=8 preclose_tax=2441/496 max_support=58 area_support=337
+  decreasing            order=(62, 61, 60, 32, 31, 30, 2, 1) pos_area=22573/105896 max_pos=55901/423584 first_close=6 last_pos=8 preclose_tax=15711653/3176880 max_support=60 area_support=355
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0 HP=1 path=increasing > greedy-min-transition > greedy-min-support > dyadic-tower > greedy-max-gain > decreasing
+  best-order identity: final_U4-5=-15034463/3176880 = close1-tax = 141899/635376-2623993/529480; final_tail45=5-tax=23407/529480
+  total close1=141899/635376 hit5=513881/529480 hit6=1081/1085 tax=2623993/529480
+    transfer-tax ledger for increasing:
+       1. add=  1 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add=  2 dU4=-1 U4=4/7 close1=0 hit5=5/7 hit6=1/14 tax=1 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(5, 7), Fraction(1, 14))
+       3. add= 30 dU4=-13/35 U4=1/5 close1=0 hit5=1/7 hit6=2/35 tax=13/35 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(8, 21), Fraction(1, 7), Fraction(2, 35))
+       4. add= 31 dU4=-5/93 U4=68/465 close1=0 hit5=127/3255 hit6=4/1085 tax=5/93 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(513, 2170), Fraction(325, 1302), Fraction(127, 3255), Fraction(4, 1085))
+       5. add= 32 dU4=-295/6944 U4=10807/104160 close1=0 hit5=199/6944 hit6=3/868 tax=295/6944 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(6149, 52080), Fraction(22361, 104160), Fraction(4113, 34720), Fraction(199, 6944), Fraction(3, 868))
+       6. add= 60 dU4=-439/52080 U4=9929/104160 close1=3841/104160 hit5=3851/104160 hit6=1/480 tax=1573/34720 hits_by_count=(Fraction(0, 1), Fraction(3841, 104160), Fraction(14671, 104160), Fraction(497, 3720), Fraction(81, 1085), Fraction(3851, 104160), Fraction(1, 480))
+       7. add= 61 dU4=510457/6353760 U4=186021/1058960 close1=555581/6353760 hit5=7313/1588440 hit6=4/6405 tax=11281/1588440 hits_by_count=(Fraction(0, 1), Fraction(555581, 6353760), Fraction(23266, 198555), Fraction(155791, 2117920), Fraction(5357, 226920), Fraction(7313, 1588440), Fraction(4, 6405))
+       8. add= 62 dU4=145937/1588440 U4=849937/3176880 close1=157277/1588440 hit5=439/105896 hit6=317/423584 tax=27/3782 hits_by_count=(Fraction(0, 1), Fraction(157277, 1588440), Fraction(716789, 6353760), Fraction(216059, 3176880), Fraction(51043, 2117920), Fraction(439, 105896), Fraction(317, 423584))
+==========================================================================================
+ROW AP-triple-phase: E=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  k=10 span=17 p0=2290763/5717712 (0.400643299) tail45=53/816 (0.064950980) U4=443689/952952 (0.465594280) cap-U4=132271/952952 (0.138801325)
+  missed_dist=['2290763/5717712', '19846/85085', '1036793/5717712', '114043/1099560', '5207/104720', '131/5712', '1/119']
+  increasing            order=(9, 10, 11, 12, 13, 14, 15, 16, 17) pos_area=3179003/8576568 max_pos=72239/420420 first_close=6 last_pos=9 preclose_tax=16069/3276 max_support=58 area_support=407
+  decreasing            order=(17, 16, 15, 14, 13, 12, 11, 10, 9) pos_area=722521/1905904 max_pos=2287151/14294280 first_close=6 last_pos=9 preclose_tax=121619/24752 max_support=60 area_support=415
+  greedy-min-support    order=(9, 12, 15, 10, 11, 13, 17, 14, 16) pos_area=1844071/4764760 max_pos=1227203/7147140 first_close=6 last_pos=9 preclose_tax=689/140 max_support=59 area_support=399
+  greedy-max-gain       order=(9, 12, 15, 11, 13, 10, 14, 17, 16) pos_area=1844071/4764760 max_pos=185431/1261260 first_close=6 last_pos=9 preclose_tax=689/140 max_support=60 area_support=403
+  dyadic-tower          order=(16, 12, 10, 14, 9, 11, 13, 15, 17) pos_area=840893/2144142 max_pos=1093933/5045040 first_close=6 last_pos=9 preclose_tax=2483/504 max_support=59 area_support=400
+  residue-layer         order=(14, 15, 9, 16, 10, 17, 11, 12, 13) pos_area=1412833/3573570 max_pos=137855/519792 first_close=6 last_pos=9 preclose_tax=4141/840 max_support=61 area_support=421
+  greedy-min-transition order=(9, 12, 15, 10, 17, 14, 11, 16, 13) pos_area=1136873/2858856 max_pos=137855/519792 first_close=6 last_pos=9 preclose_tax=7043/1428 max_support=62 area_support=411
+  Tournament Analysis on insertion schedules
+    vertices: schedules / transfer-tax proof states, not runners
+    observable: smaller positive U4 area, support, max positive jump, then earlier closure control
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0 HP=1 path=increasing > decreasing > greedy-min-support > greedy-max-gain > dyadic-tower > residue-layer > greedy-min-transition
+  best-order identity: final_U4-5=-4321071/952952 = close1-tax = 2290763/5717712-4027/816; final_tail45=5-tax=53/816
+  total close1=2290763/5717712 hit5=5533/5712 hit6=118/119 tax=4027/816
+    transfer-tax ledger for increasing:
+       1. add=  9 dU4=-24/7 U4=11/7 close1=0 hit5=0 hit6=6/7 tax=24/7 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(6, 7))
+       2. add= 10 dU4=-346/315 U4=149/315 close1=0 hit5=194/315 hit6=38/315 tax=346/315 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(194, 315), Fraction(38, 315))
+       3. add= 11 dU4=-287/990 U4=141/770 close1=0 hit5=1753/6930 hit6=32/3465 tax=287/990 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(68, 165), Fraction(1753, 6930), Fraction(32, 3465))
+       4. add= 12 dU4=-101/1540 U4=181/1540 close1=0 hit5=283/4620 hit6=1/924 tax=101/1540 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(169, 630), Fraction(3803, 13860), Fraction(283, 4620), Fraction(1, 924))
+       5. add= 13 dU4=-1018/45045 U4=311/3276 close1=0 hit5=853/45045 hit6=1/1092 tax=1018/45045 hits_by_count=(Fraction(0, 1), Fraction(0, 1), Fraction(2021, 13860), Fraction(2417, 9009), Fraction(5693, 60060), Fraction(853, 45045), Fraction(1, 1092))
+       6. add= 14 dU4=17117/630630 U4=51323/420420 close1=16123/420420 hit5=185/22932 hit6=1/1274 tax=257/22932 hits_by_count=(Fraction(0, 1), Fraction(16123, 420420), Fraction(131987, 630630), Fraction(114007, 1261260), Fraction(2251, 32340), Fraction(185, 22932), Fraction(1, 1274))
+       7. add= 15 dU4=72239/420420 U4=61781/210210 close1=75121/420420 hit5=79/19110 hit6=1/1470 tax=131/19110 hits_by_count=(Fraction(0, 1), Fraction(75121, 420420), Fraction(131693, 1261260), Fraction(2059, 22932), Fraction(48887, 1261260), Fraction(79, 19110), Fraction(1, 1470))
+       8. add= 16 dU4=413557/5045040 U4=172391/458640 close1=447019/5045040 hit5=5/1176 hit6=1/1680 tax=13/1960 hits_by_count=(Fraction(0, 1), Fraction(447019, 5045040), Fraction(10628, 105105), Fraction(61151, 1009008), Fraction(5639, 315315), Fraction(5, 1176), Fraction(1, 1680))
+       9. add= 17 dU4=7694893/85765680 U4=443689/952952 close1=4074173/42882840 hit5=13/4080 hit6=1/1904 tax=151/28560 hits_by_count=(Fraction(0, 1), Fraction(4074173, 42882840), Fraction(6282461, 85765680), Fraction(295483, 7796880), Fraction(67, 5880), Fraction(13, 4080), Fraction(1, 1904))
+==========================================================================================
+GLOBAL BEST-SCHEDULE SUMMARY
+  AP9                  schedule=increasing           U4=1621/2940 (0.551360544) cap-U4=-6002/105105 (-0.057104800) pos_area=991/2940 tax=1907/392 tail45=53/392
+  one-gap-top9         schedule=increasing           U4=1531/2940 (0.520748299) cap-U4=-5569/210210 (-0.026492555) pos_area=901/2940 tax=205/42 tail45=5/42
+  direct-risk-leader   schedule=increasing           U4=391/980 (0.398979592) cap-U4=3338/35035 (0.095276152) pos_area=1361/5880 tax=69/14 tail45=1/14
+  boundary-leader      schedule=increasing           U4=879/1960 (0.448469388) cap-U4=12833/280280 (0.045786357) pos_area=391/1470 tax=7237/1470 tail45=113/1470
+  dyadic-block         schedule=dyadic-tower         U4=103/336 (0.306547619) cap-U4=9019/48048 (0.187708125) pos_area=257/1680 tax=104/21 tail45=1/21
+  doubled-odd-tail     schedule=dyadic-tower         U4=625/3094 (0.202003878) cap-U4=19893/68068 (0.292251866) pos_area=202/1547 tax=661/133 tail45=4/133
+  three-cluster-wide   schedule=increasing           U4=849937/3176880 (0.267538277) cap-U4=102996349/454293840 (0.226717468) pos_area=10421/60512 tax=2623993/529480 tail45=23407/529480
+  AP-triple-phase      schedule=increasing           U4=443689/952952 (0.465594280) cap-U4=132271/952952 (0.138801325) pos_area=3179003/8576568 tax=4027/816 tail45=53/816
+
+SYNTHESIS
+  The transfer law is exact on every audited row and schedule.
+  Boundary/AP rows can fail the final U4 gate because their high tail
+  survives as finite template mass.  True-wide rows in the bank have
+  enough transfer tax to keep U4 below cap after the same p0 closures.
+  New proof target: classify or bound the possible unpaid 1->0 closures
+  after the 5->4 and 6->5 high-tail tax has been exhausted.

@@ -14,6 +14,7 @@ depends_on:
 related:
   - HYP-2695
   - HYP-2694
+  - HYP-2696
   - HYP-2692
   - THM-546
   - THM-548
@@ -163,6 +164,21 @@ This suggests the following branch proof for HYP-2675.
    `high_tail`, classify its low-height relation packet through the existing
    AP-triple/cube-root and Ruzsa/Freiman atlases before applying the high-state
    bound to the residual.
+
+## Transfer-Tax Addendum
+
+HYP-2696/THM-558 makes this final-row gate local along the HYP-2691 insertion
+DP.  For one insertion,
+
+```text
+Delta U4 = mass(1->0) - mass(5->4) - 4 mass(6->5).
+```
+
+Thus the true-wide proof should be phrased as a ledger of unpaid `1->0`
+closures after subtracting the high-tail tax.  Boundary/AP rows can fail
+because finite templates leave too much unpaid tail structure.  True-wide rows
+should either pay enough tax through `5->4` and `6->5`, or route their unpaid
+closures to the labelled phase/state atlases before decorrelation.
 
 ## Assumption Challenge
 

@@ -18,6 +18,7 @@ related:
   - HYP-2681
   - HYP-2682
   - HYP-2693
+  - HYP-2696
   - HYP-2692
   - OPEN-Q-108
 ---
@@ -184,6 +185,16 @@ Thus the true-wide branch can try to prove `U4<=cap` directly by suppressing
 the five-six missed-sector tail, while this HYP-2691 transfer DP handles the
 boundary/AP rows where level 4 fails and finite low-state templates are
 structural rather than exceptional.
+
+HYP-2696/THM-558 now combines the two facts into an exact insertion ledger:
+
+```text
+Delta U4 = mass(1->0) - mass(5->4) - 4 mass(6->5).
+```
+
+So the transfer inequality can be sharpened from "bound one-missed closure"
+to "classify unpaid one-missed closure after high-tail tax."  This keeps the
+Bonferroni4 gate visible at every prefix instead of only at the final row.
 
 ## Assumption Challenge
 
