@@ -4,6 +4,9 @@ title: The half-tiling is the tiling-model fundamental domain of the complement 
 status: PROVED (the symmetry σ(tiling)=φ(T^op) verified EXHAUSTIVELY n=3..6 over all 2^m tilings; sizes/fixed-count/recursions verified n=2..12). Connects the user's S4 half-tiling framework to the complement quotient G_n/Z_2 and the one/two/three-far Newton recursion (codex HYP-2680/2681).
 source: mac-mini-2026-06-20-S4
 depends_on: []
+prior_art:
+  - THM-280   # reflection = complement (pre-existing; THM-549 gives the tiling-coordinate σ=φ(T^op) form + exhaustive proof)
+  - THM-442   # full-tiling third-difference recursion (the half-tiling parity recursions refine this)
 related:
   - THM-548   # one/two/three-far boundary-value decomposition (the coverage incarnation of the 7-term recursion)
   - HYP-2680  # codex Phi_s Stirling multi-far hierarchy
