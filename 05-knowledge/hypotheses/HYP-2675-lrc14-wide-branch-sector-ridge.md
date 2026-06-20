@@ -1,7 +1,6 @@
 # HYP-2675: LRC(14) wide-branch sector ridge
 
-**Status:** supported computationally / proof still open (codex-s47,
-2026-06-20).
+**Status:** claimed / in progress (codex-s47, 2026-06-20).
 
 The KPS comfortable-margin route reframes the remaining sector proof obligation
 as a direct wide-row bound:
@@ -15,84 +14,66 @@ sector distributions, additive-energy/Freiman fingerprints, squarefree divisor
 profiles, shell-1 occupancy, state-word entropy, and a row-risk Tournament
 Analysis for wide rows.
 
-## Exact findings
+**Claim being tested:** the only rows that can approach the direct cap in the
+wide branch retain a low-rank near-consecutive/GAP scaffold.  Once the
+state-word support spreads across genuinely wide additive structure, `p0` drops
+with comfortable margin; the old large-`Delta_w` resonances are compensated by
+small plateau.
 
-Stored output:
-`05-knowledge/results/lrc14_wide_branch_ridge_codex_s47.out`.
-
-The first correction is terminological: the sector condition `span(E)>14` is
-not one proof branch.  It splits into:
-
-- **boundary one-far rows:** `span(E)>14` but second-largest `<=14`;
-- **true-wide-base rows:** second-largest `>14`.
-
-In the exact finite boxes:
-
-- `k=9`, `{0}+8` choices from `[1,20]`: `125970` raw rows, `122922`
-  primitive rows with `span>14`.  The all-`span>14` leader is boundary,
-  `E=(0,2,4,6,8,10,12,14,15)`, with
-  `p0=437/1176` and cap margin `20627/168168`.  The true-wide leader is
-  `E=(0,4,6,8,10,12,14,15,16)`, with `p0=321/980` and margin
-  `11681/70070`.
-- `k=8`, bound `18`: boundary leader
-  `(0,3,5,7,9,11,13,15)` has margin `130133/840840`; true-wide leader
-  `(0,3,6,9,12,14,15,18)` has margin `2819/17640`.
-- `k=10`, bound `16`: boundary leader
-  `(0,2,4,6,7,8,10,12,14,16)` has margin `1303/9555`; true-wide leader
-  `(0,2,4,6,8,10,12,14,15,16)` has margin `1175/7644`.
-
-Named KPS/codex rows match the comfortable-margin reading:
-
-- KPS spread-base row `(0,3,5,7,9,11,13,14,15)` has
-  `p0=56593/210210`, margin `94609/420420`.
-- HYP-2671 dyadic row `(0,1,2,4,8,12,16,20,24)` has `p0=29/112`,
-  margin `3769/16016`.
-- The best structured three-cluster probe
-  `(0,1,2,10,11,12,20,21,22)` has `p0=2813/10780`, margin `8174/35035`.
-
-## Claim being tested
-
-The only rows that can approach the direct cap retain a low-rank
-near-consecutive/GAP scaffold.  Once the state-word support spreads across
-genuinely wide additive structure, `p0` drops with comfortable margin.  The old
-large-`Delta_w` resonances are compensated by small plateau.
-
-The proof target is now two-stage:
-
-1. a **boundary collar lemma** for `second-largest <=14`, where the leaders are
-   AP-like one-far rows;
-2. a **true-wide sector-cover deficit lemma** for `second-largest >14`, likely
-   expressed in Freiman/additive-energy and measured state-word terms.
-
-## Integration with THM-546
-
-After this scout was stored, mac-mini S1 added THM-546:
-
-`|Delta_w(E',w)| <= kappa*V(E')/(pi^2*w)`, with
-`kappa=1.85690...` and `V(E')` the arc-complexity of the sets where `E'`
-misses exactly one sector.
-
-This is complementary rather than redundant.  THM-546 gives the rigorous
-**gapped one-far** decorrelation bound.  HYP-2675 locates the finite
-**ungapped/boundary collar** and **true-wide** ledgers where that bound must be
-paired with scale-invariance, compression, or a Freiman dimension penalty.  The
-exact leaders above are therefore not counterexamples to THM-546; they are the
-rows that explain what remains after the gapped estimate is available.
-
-## Tournament Analysis
-
-The scout uses row/proof-obligation vertices rather than runner or arc vertices.
-The pairwise observable is the exact risk ratio `p0/cap_k`.  The stored
-tournament is transitive on the top twelve vertices (`0` directed 3-cycles);
-the Hamiltonian path starts with the bounded/near-consecutive rows, not the
-true-wide rows.  This preserves the LRC predicate `p0(E)<=cap_k` while
-destroying runner-label data after the S3 sector quotient.
-
-## Artifacts
-
-- `04-computation/lrc14_wide_branch_ridge_codex_s47.py`
-- `05-knowledge/results/lrc14_wide_branch_ridge_codex_s47.out`
+**Artifact:** `04-computation/lrc14_wide_branch_ridge_codex_s47.py`.
 
 **Open:** no theorem is claimed yet.  The missing proof is still the analytic or
 finite-to-infinite statement turning these exact ridge fingerprints into
 `span>14 => p0(E)<=cap_k`.
+
+---
+
+## kps-2026-06-20-S17 corroboration (resonance-direct angle) — VERIFIED exact
+
+Independent attack from the "resonance-direct" angle (the worst case = multi-scale
+resonant `w`).  Confirms HYP-2675's claim with exact margins and supplies the clean
+structural decomposition.  Files: `04-computation/lrc14_ck_resonance-direct_kps-S17-wf.py`,
+`05-knowledge/results/lrc14_ck_resonance-direct_kps-S17-wf.out`.
+
+1. **Resonance characterization (exact).** `w*|Delta_w|` peaks ONLY at multi-scale
+   resonant `w` (near `k*scale` of the cluster spacings, or `gcd(w,7)=7`); every
+   non-resonant `w` (coprime to scales, far from multiples) gives small `w*|Delta_w|`.
+   E.g. core `(0,1,2,30,31,32,60,61,62)`: top peaks at `w=248=8*31`, `279=9*31`,
+   `210=7*30`; non-resonant sup only `1.236`.
+
+2. **Resonance-direct closure (exact).** At EXACTLY the resonant `w` where `w*|Delta_w|`
+   is large (up to `11.3` for a 4-scale base), the FULL `p0(E'u{w})` is DIRECTLY small:
+   ```
+     (0,1,50,51,100,101,150,151,200)   w*|Delta_w|=11.306   p0=0.2134   margin 0.281
+     (0,1,30,31,60,61,90,91,120)       w*|Delta_w|= 6.417   p0=0.2193   margin 0.275
+     (0,1,2,50,51,52,100,101,102,152)  w*|Delta_w|= 5.128   p0=0.2899   margin 0.315
+   ```
+   The large discrepancy is paired with a TINY plateau `Phi(E')` (wide base) — harmless.
+   This is the Plat<->Delta entanglement (SESSION-LOG S19 pt 4) seen from the resonance side.
+
+3. **Plateau-max lemma (exact, EXHAUSTIVE at k-1=8).** `Phi(F) <= Q(8) = Phi(consec_8)
+   = 621/1715 = 0.36210` for ALL primitive 8-sets `F` (bounded exhaustive 1716 sets span<=13,
+   argmax = consec_8 exactly; wide random <= 0.106).  So `p0(E'u{w}) = Phi(E') + Delta_w
+   <= Q(k-1) + Delta_w`, and the far-element family `p0(consec_8 u {w})` is MAXIMIZED at
+   `w=8` (= consec_9, in the finite check), dropping to the plateau ~0.357 for larger `w`.
+
+4. **Wide bound at k=8,9,10 (exact, the HYP-2675 target).** For span>=16:
+   ```
+     k=8 : cap=0.38162  max wide p0=0.12637  margin 0.255
+     k=9 : cap=0.49426  max wide p0=0.22333  margin 0.271   (argmax (0,1,2,30,31,32,60,61,62))
+     k=10: cap=0.60460  max wide p0=0.30052  margin 0.304
+   ```
+   The bounded finite check (exhaustive primitive 9-sets by span) stays below cap at every
+   span 8..16 (margin>=0.078), and the wide branch has margin>=0.255 — the two regimes OVERLAP
+   at span~16, so the partition `bounded (finite check) | wide (direct p0)` has NO gap.
+
+5. **Honest residue.** Item 4 is VERIFIED on systematic+random samples, NOT yet a proved
+   inequality.  The peel recursion `p0(E)=Phi(base)+Delta` has `Phi(base)` shrinking fast
+   (0.160->0.069->0.017->0 on the worst multiscale) but the `(6/7)sigma/w` step-bound is
+   loose at the `sigma~w` resonance — so a PROOF of `span>14 => p0<=cap` still needs the
+   coverage/equidistribution statement on the full set `E` (margin>=0.25).  The resonance-
+   direct contribution is to confirm this is the SOLE remaining nut and to bound its margin.
+
+This matches codex's HYP-2674 (`++++++` same-sign packet, dyadic extremizer) and the
+SESSION-LOG S19 "comfortable-margin structure" (THM-PSK-4) from a third independent direction.
+

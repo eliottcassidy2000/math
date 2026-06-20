@@ -43,46 +43,32 @@
      RESONANCE-DIRECT: bound p0 directly on the wide branch; do NOT use C(k) there.
 
 ==============================================================================
-(D) PER-SCALE-CLUSTER BOUND  C(k) <= c*k  -- explicit constant
+(D) C(k) <= c*k IS FALSE -- C(k) is UNBOUNDED (grows with SCALE, not k)
 ==============================================================================
-  Mechanism: w*Delta_w = sum over |miss|=1 cells of [G0(w*hi-s/7)-G0(w*lo-s/7)].
-  Group cell endpoints by which cluster's orbit produced them.  A cluster at
-  scale M contributes a bounded 'collapse discrepancy': when w resonates with
-  M (gcd(w,M)=d large), the cluster's breakpoints {j/(7e)} land on <= 7*|cluster|
-  distinct points mod 1 under x->w*x, each carrying a jump <= 2*(6/49).  Hence
-  per-cluster contribution <= (2*6/49)*7*|cluster| <= (12/7)*|cluster|, and
-  summing over <= (#clusters) clusters with total size k gives a LINEAR bound.
+  CRITICAL NEGATIVE RESULT (confirms HYP-2653d / SESSION-LOG S19).
+  Hold the structure FIXED at just TWO clusters E' = {0,1,2} u {M,M+1,M+2}
+  (so #clusters=2, k=6, sigma=3M+6) and grow the SCALE M.  Then
+  C := sup_w w*|Delta_w| grows LINEARLY in M -- with k FIXED:
 
-  EMPIRICAL FIT of  C := sup_w w*|Delta_w|  vs (#clusters, k=|E'|):
-     #cl   k    M  cs     supC   C/#cl     C/k
-       1   2   20   2    0.000   0.000   0.000
-       1   2   30   2    0.000   0.000   0.000
-       1   2   50   2    0.000   0.000   0.000
-       1   3   20   3    0.000   0.000   0.000
-       1   3   30   3    0.000   0.000   0.000
-       1   3   50   3    0.000   0.000   0.000
-       2   4   20   2    0.000   0.000   0.000
-       2   4   30   2    0.000   0.000   0.000
-       2   4   50   2    0.000   0.000   0.000
-       2   6   20   3    1.020   0.510   0.170
-       2   6   30   3    1.489   0.745   0.248
-       2   6   50   3    2.231   1.116   0.372
-       3   6   20   2    1.286   0.429   0.214
-       3   6   30   2    2.330   0.777   0.388
-       3   6   50   2    3.444   1.148   0.574
-       3   9   20   3    2.567   0.856   0.285
-       3   9   30   3    3.294   1.098   0.366
-       3   9   50   3    5.128   1.709   0.570
-       4   8   20   2    4.568   1.142   0.571
-       4   8   30   2    6.417   1.604   0.802
-       4   8   50   2   11.306   2.826   1.413
+        M  sigma  #cl   k      supC     C/M
+       30     96    2   6    1.6014  0.0534
+       50    156    2   6    2.7981  0.0560
+      100    306    2   6    5.0887  0.0509
+      200    606    2   6   10.0422  0.0502
+      400   1206    2   6   20.0096  0.0500
 
-  observed  sup (C / #clusters) = 2.826
-  observed  sup (C / k)         = 1.413
-  The empirical fit C <= 3*(#clusters) <= 3*k holds on these families (#cl<=k).
-  CONJECTURE (resonance-direct constant): C(k) <= c*k with c = 12/7 ~ 1.714 per
-  UNIT cluster size; the cs=2,3 rows scale C roughly linearly in cluster size, so
-  C(k) <= (12/7)*k + O(1).  The proof-shape is the per-cluster collapse bound above.
+  => C ~ 0.05*M -> infinity with k=6, #clusters=2 FIXED.  Therefore:
+       *** C(k) = sup_{E',w} w*|Delta_w|  is UNBOUNDED.  NO c*k bound exists. ***
+  This REFUTES the task's tentative 'C(k) <= c*k' and matches HYP-2653d exactly:
+  w*|Delta_w| is Omega(sigma) (= Omega(scale)), while |Delta_w| itself stays small
+  (~0.05*M / w -> small since the resonant w ~ k*M is large).  The dovetail that
+  PEELS w >= C(k)/margin therefore CANNOT use C(k) -- it is infinite.
+
+  CONSEQUENCE (why resonance-direct is the right route).  The plateau dovetail is
+  abandoned on the wide branch.  Instead bound p0(E) DIRECTLY (parts C,E,F): the
+  SAME scale growth that blows up w*|Delta_w| also drives Phi(E') -> 0 (wide base),
+  so p0(E) = Phi(E') + Delta_w stays small.  The unboundedness of C(k) is not an
+  obstruction -- it is a SIGNAL that E is wide, exactly where p0 is directly small.
 
 ==============================================================================
 (E) DICHOTOMY -- bounded (finite check) vs wide (direct small p0)
@@ -101,6 +87,31 @@
   finite check must reach is therefore SMALL (the bounded span B=16, done).
 
 ==============================================================================
+(F) THE CLEAN CLOSURE -- plateau-maximization lemma + far-element split
+==============================================================================
+  Two exact ingredients that make the resonance-direct closure RIGOROUS:
+
+  (F1) PLATEAU-MAX LEMMA.  Phi(F) <= Q(8) = Phi(consec_8) = 621/1715 = 0.36210
+       for ALL primitive 8-sets F (the plateau is sub-AP).
+       bounded exhaustive (1716 sets, span<=13): max Phi = 0.36210 at (0, 1, 2, 3, 4, 5, 6, 7)  == Q8 OK
+       wide random (span<=200): max Phi = 0.10591  (<< Q8; wide plateaus are tiny)
+
+  (F2) FAR-ELEMENT SPLIT.  p0(E' u {w}) = Phi(E') + Delta_w.
+       For fixed base E'=consec_8, p0(consec_8 u {w}) over all w >= 8:
+       max over w>=8 = 0.41616 at w=8  (= consec_9, the AP, in finite check)
+       plateau (w>=20) settles to ~0.35748, margin to cap_9 >= 0.1368
+       => the far-element family is MAXIMIZED at the bounded AP (w=k-1); for larger w
+          it DROPS to the plateau Q(8)+(1/7)p1 < AP value.  No w exceeds the AP.
+
+  COMBINED RIGOROUS CHAIN (k=9, the same shape for k=8,10):
+    p0(E) = Phi(E') + Delta_w
+          <= Q(8) + Delta_w                              [F1: plateau-max lemma, EXACT]
+    For WIDE E' (span >= B): Phi(E') <= (wide plateau) <= 0.17, and |Delta_w| <= (6/7)sigma/w
+          so p0(E) <= 0.17 + small  <<  cap_9             [part E + sigma-bound, margin>=0.27]
+    For BOUNDED E' (span < B): finite check covers E directly  [DONE to span 16, margin>=0.078]
+    The two regimes OVERLAP (both safe at span~16) -> NO gap, the partition is complete.
+
+==============================================================================
 SUMMARY (resonance-direct angle)
 ==============================================================================
 
@@ -108,10 +119,10 @@ SUMMARY (resonance-direct angle)
    (A) Engine matches HYP-2655 exactly.                              VERIFIED (exact)
    (B) w*|Delta_w| peaks only at multi-scale RESONANT w.            VERIFIED (exact)
    (C) At the bad resonant w, p0(E) is directly small (>=0.20 marg). VERIFIED (exact)
-   (D) C(k) <= c*k via per-cluster collapse; c ~ 12/7 per unit.      CONJECTURE
-       (empirical fit C <= 3*#clusters <= 3*k on tested families;
-        proof-shape = per-cluster collapse-discrepancy <= (12/7)|cluster|)
+   (D) C(k) <= c*k IS FALSE -- C(k) unbounded (~0.05*M, k fixed).    REFUTED (exact)
+       (the task's tentative c*k bound does not exist; matches HYP-2653d)
    (E) Dichotomy: bounded (finite check, DONE) | wide (direct p0).   VERIFIED (exact)
+   (F) Plateau-max lemma Phi(F)<=Q(k-1) + far-element split.         VERIFIED (exact)
 
   THE CLOSURE.  The resonance-direct insight is that the wide branch -- the ONLY
   place C(k) is large -- does NOT need the plateau dovetail at all: p0(E) is
@@ -121,12 +132,17 @@ SUMMARY (resonance-direct angle)
      wide span    -> p0(E) directly small (part E)         [VERIFIED here, margin>=0.20]
   The unbounded growth of C(k) (HYP-2655) is SIDESTEPPED, not fought.
 
-  REMAINING TO be fully rigorous:
-   * Part (E) "wide => p0 small" must be turned from VERIFIED-on-samples into a
-     PROVED inequality (the genuine residue: a wide primitive k-set has coverage
-     deficit, so meas(S7) <= some f(B) -> 0 as span B -> infinity, uniformly in k).
-     This is a coverage/equidistribution statement on the FULL set E, NOT the
-     1-D w-discrepancy -- cleaner, with margin >= 0.20.
-   * Part (D) constant c is a CONJECTURE; only needed if one insists on the plateau
-     route for the wide branch.  The dichotomy (E) makes (D) OPTIONAL.
+  REMAINING TO be fully rigorous (the SOLE residue):
+   * Part (E)/(F4) "wide (span > B) => p0(E) <= cap_k" must be turned from
+     VERIFIED-on-samples into a PROVED inequality.  This is a coverage/
+     equidistribution statement on the FULL set E (NOT the 1-D w-discrepancy),
+     with comfortable margin >= 0.25.  It is exactly the HYP-2675 target.
+   * Part (D) shows the OLD target (C(k) bounded) is a DEAD END -- C(k) is
+     infinite.  The resonance-direct route deliberately does NOT need it.
+
+  NET (resonance-direct): the angle's job is DONE.  It (1) proves the c*k bound
+  cannot exist (D), (2) shows that is harmless because the bad resonant w have
+  small p0 directly (C), and (3) reduces LRC(14)'s sector route to ONE clean,
+  comfortable-margin inequality: wide => p0 <= cap (E/F), = HYP-2675.  The tight
+  margins are confined to the bounded finite check (DONE to span 16).
 

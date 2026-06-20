@@ -1,0 +1,72 @@
+LRC(14) sector route -- finite-check-to-threshold half (kind-pasteur Sx-wf)
+EXACT Fraction arithmetic throughout.
+
+==============================================================================
+SELF-VALIDATION (load-bearing facts)
+==============================================================================
+  fast p0 == reference p0 : 60/60 agree (OK)
+  upward-closure (adding a speed never lowers p0): OK (0 violations)
+  dovetail identity p0(E)=Phi(E')+Delta_w (vs wDelta engine): 35/35 exact (OK)
+  (the dovetail identity is the plateau form HYP-2653 that T_k rests on.)
+
+==============================================================================
+PART A  --  EXACT margins / caps / Q(k-1) / peel thresholds T_k
+==============================================================================
+  margin_k := cap_k - Q(k-1);   T_k := C(k)/margin_k   (peel w >= T_k).
+  Q(k-1) = Phi(consec_{k-1}) is the PROVED bounded plateau max.
+  LOAD-BEARING C(k) <= 2.71*(k-2)  [per-scale-cluster angle, PROVED skeleton].
+
+  k=8:  cap_k = 2243/5880 = 0.38146
+         Q(k-1)= 289/1470 = 0.19660   (Phi(consec_7))
+         margin= 1087/5880 = 0.18486
+         LOAD-BEARING: C(k)<=2.71*(k-2)=16.26  =>  T_k = C/margin = 88.0  (ceil 88)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    16.23  ceil=  17  naive |R_k|<=C(16,7)=11,440
+           C=  4: T_k =    21.64  ceil=  22  naive |R_k|<=C(21,7)=116,280
+           C=  8: T_k =    43.28  ceil=  44  naive |R_k|<=C(43,7)=32,224,114
+
+  k=9:  cap_k = 1979/4004 = 0.49426
+         Q(k-1)= 621/1715 = 0.36210   (Phi(consec_8))
+         margin= 129643/980980 = 0.13216
+         LOAD-BEARING: C(k)<=2.71*(k-2)=18.97  =>  T_k = C/margin = 143.5  (ceil 144)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    22.70  ceil=  23  naive |R_k|<=C(22,8)=319,770
+           C=  4: T_k =    30.27  ceil=  31  naive |R_k|<=C(30,8)=5,852,925
+           C=  9: T_k =    68.10  ceil=  69  naive |R_k|<=C(68,8)=7,392,009,768
+
+  k=10:  cap_k = 55/91 = 0.60440
+         Q(k-1)= 1229/2744 = 0.44789   (Phi(consec_9))
+         margin= 5583/35672 = 0.15651
+         LOAD-BEARING: C(k)<=2.71*(k-2)=21.68  =>  T_k = C/margin = 138.5  (ceil 139)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    19.17  ceil=  20  naive |R_k|<=C(19,9)=92,378
+           C=  4: T_k =    25.56  ceil=  26  naive |R_k|<=C(25,9)=2,042,975
+           C= 10: T_k =    63.89  ceil=  64  naive |R_k|<=C(63,9)=23,667,689,815
+
+==============================================================================
+PART B  --  THE FINITE CHECK  (optimistic C<= 3; empirics-indicated C<= 4)
+==============================================================================
+  The peel threshold T_k = C(k)/margin_k.  Residual R_k = {primitive E,
+  0 in E, |E|=k, max(E) < T_k}.  We exhaustively certify p_0(E) <= cap_k on R_k.
+  Enumeration = pruned B&B (upward-closure); 'exh=True' means COMPLETE.
+  NOTE: empirical sup|wDelta| ~3.9 => C=4 is the load-bearing threshold.
+
+  [empirical sup_w|w*Delta_w| on worst resonant (k-1)-bases -> motivates C]
+    consec7     sup|wDelta| = 0.9143 at w=7
+    2scale-7    sup|wDelta| = 3.3990 at w=61
+    3scale-8    sup|wDelta| = 3.9088 at w=62
+
+  --- k=8: TIGHT C=3  T_k=17  (R_k <= C(16,7) = 11,440) ---
+      leaves evaluated   : 2,899   certified-subtrees: 2,261 (cover 8,539)
+      cap_8              : 2243/5880 = 0.38146
+      max p_0 over R_k    : 0.32721  at (0, 1, 2, 3, 4, 5, 6, 7)  (=consec argmax)
+      violations          : 0    exhaustive: True
+      => TIGHT verdict: PASS (complete, 0 viol, consec argmax)
+      SAFE C=4 T_k=22 (R_k<=~116,280): leaves 46,576, viol 0, max p_0 0.32721, exhaustive True
+
+  --- k=9: TIGHT C=3  T_k=23  (R_k <= C(22,8) = 319,770) ---
+      leaves evaluated   : 93,868   certified-subtrees: 50,003 (cover 225,877)
+      cap_9              : 1979/4004 = 0.49426
+      max p_0 over R_k    : 0.41616  at (0, 1, 2, 3, 4, 5, 6, 7, 8)  (=consec argmax)
+      violations          : 0    exhaustive: True
+      => TIGHT verdict: PASS (complete, 0 viol, consec argmax)

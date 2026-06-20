@@ -1,0 +1,3 @@
+=== FULL k=10 C=4 Tc=26 naive=C(25,9) ===
+  leaves=501,764 cert-covered=1,541,165 total=2,042,929 maxp0=0.504478 consec=True viol=0 exh=True time=1219s
+=== FULL k=9 C=4 Tc=31 naive=C(30,8) ===

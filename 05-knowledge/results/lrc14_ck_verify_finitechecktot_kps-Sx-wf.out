@@ -1,0 +1,32 @@
+ADVERSARIAL VERIFICATION: LRC(14) finite-check-to-threshold
+EXACT Fraction arithmetic.
+
+==============================================================================
+(1) EXACT CONSTANTS  (re-derived independently)
+==============================================================================
+  k=8: cap=2243/5880=0.38146  Q(k-1)=289/1470=0.19660
+        margin=1087/5880=0.18486  C(k)<=2.71*(k-2)=16.26
+        T_k=C/margin=87.96  ceil=88   p0(consec_k)=0.32721
+        p0(consec_k) < cap? True   (slack 0.05425)
+  k=9: cap=1979/4004=0.49426  Q(k-1)=621/1715=0.36210
+        margin=129643/980980=0.13216  C(k)<=2.71*(k-2)=18.97
+        T_k=C/margin=143.54  ceil=144   p0(consec_k)=0.41616
+        p0(consec_k) < cap? True   (slack 0.07810)
+  k=10: cap=55/91=0.60440  Q(k-1)=1229/2744=0.44789
+        margin=5583/35672=0.15651  C(k)<=2.71*(k-2)=21.68
+        T_k=C/margin=138.52  ceil=139   p0(consec_k)=0.50448
+        p0(consec_k) < cap? True   (slack 0.09992)
+
+  constants match claimed values EXACTLY: True
+
+==============================================================================
+(1b) DOVETAIL identity  p0(E) = Phi(E') + Delta_w   (Delta_w = wDelta/w, signed)
+==============================================================================
+  dovetail identity exact: 200/200  (OK)
+  fast p0 == ref p0      : 200/200  (OK)
+
+==============================================================================
+(2) HUNT: is  C(k) <= 2.71*(k-2)  ?   (look for violations)
+==============================================================================
+
+  2a) Multi-scale resonant cores: r clusters of size sz at scales S^i.

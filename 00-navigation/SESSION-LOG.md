@@ -177,6 +177,39 @@ Dispatch: understand the one open constant and complete the proof; integrate con
 **MY RESULT (THM-546): the constant is FINITE and EXPLICIT.** Peeling the single far element w collapses the divergent multi-D sum into a CONVERGENT 1-D BV discrepancy: since w fills ≤1 missed sector, Δ_w=Σ_{j=1..6}[meas{B_j∩(wx∈sector j)}−(1/7)meas(B_j)]=Σ_j Σ_{n≠0} ŝ_j(n)·1̂_{B_j}(−nw), B_j={E' misses EXACTLY sector j}. With |ŝ_j(n)|=|sin(πn/7)|/(π|n|) (=0 at 7|n, the apex prime) and BV-decay |1̂_{B_j}(m)|≤#arcs/(π|m|): **|Δ_w| ≤ κ·V(E')/(π²·w), κ=2Σ_{7∤n}|sin(πn/7)|/n²=1.85690…, V(E')=Σ_j#arcs(B_j)≤42Σe'.** PROVED (elementary Fourier/BV) + VERIFIED exact (|Δ_w|·w≤C(E') on consec/B13-leader/dyadic-block/third-pocket cores, w≤200). Reproduces w|Δ_w|=O(spread) correctly (via V~spread) — consistent with kps-S19's "sup w|Δ_w| unbounded." Gapped regime (w≫max E') closes via THM-546 + HYP-2642; ungapped-wide = scale-invariance (THM-531) + Freiman dimension penalty (HYP-2637); tight margin lives only in the (done) finite check.
 **INTEGRATED kps-S19 (arrived mid-run):** finite half proved + Plat↔Δ entanglement (wide base ⟹ small Φ compensates large Δ_w, margin ≥0.22). THM-546 is the rigorous analytic backbone for the gapped half; the two halves together = finite (proved) + gapped (THM-546) + wide (entanglement, computational). Annotated HYP-2642.
 **NET:** LRC(14) NOT proved, but the endgame's last analytic unknown Δ_w has a CLOSED-FORM bound — "the one open constant" is no longer open, it is κ=1.857. Remaining = bookkeeping (iterate the peel to the bounded core + pair per-element bounds vs recursion margins) + rigorizing the wide-base entanglement. Files: THM-546, reflection decompose-to-converge-the-far-element-peel, 04-computation/lrc14_delta_w_fourier_bound_macmini_0620s1.py + .out. NAMESPACE: THM-546 (no collision).
+## kind-pasteur-2026-06-20-S17 -- LRC(14): resonance-direct angle -- C(k)<=c*k REFUTED (exact), wide-branch direct bound corroborated
+
+Workflow subagent on the "last estimate" C(k)=sup w|Delta_w| from the resonance-direct angle (attack the
+multi-scale resonant worst case directly). Net: the task's tentative `C(k)<=c*k` is FALSE, and the route
+closes by bounding p0 DIRECTLY on the wide branch (= HYP-2675), not via the plateau dovetail.
+
+**1. C(k)<=c*k REFUTED (exact, the key negative result).** Holding structure FIXED at 2 clusters
+E'={0,1,2}u{M,M+1,M+2} (k=6, #clusters=2 fixed) and growing the SCALE M: sup_w w|Delta_w| = 1.60, 2.80,
+5.09, 10.04, 20.01 for M=30,50,100,200,400 -- i.e. C ~ 0.05*M -> infinity with k FIXED. So C(k) is
+UNBOUNDED (Omega(sigma)=Omega(scale)), NO c*k bound exists. Independently re-confirms HYP-2653d / S19's
+"the constant was the wrong object." The peel-threshold w>=C(k)/margin therefore cannot use C(k).
+
+**2. Resonance-direct closure (exact).** At EXACTLY the resonant w where w|Delta_w| is large (up to 11.3
+for a 4-scale base), the FULL p0(E'u{w}) is DIRECTLY small: e.g. (0,1,50,51,100,101,150,151,200) has
+w|Delta_w|=11.3 but p0=0.213 (margin 0.281 to cap_9). Large discrepancy <=> tiny plateau Phi(E') (wide
+base) -- the Plat<->Delta entanglement seen from the resonance side. Unbounded C(k) is a SIGNAL of wide E,
+exactly where p0 is directly small.
+
+**3. Plateau-max lemma (exact, EXHAUSTIVE k-1=8).** Phi(F)<=Q(8)=Phi(consec_8)=621/1715=0.36210 for ALL
+primitive 8-sets (1716 sets span<=13, argmax=consec_8; wide<=0.106). Far-element family p0(consec_8 u {w})
+is MAXIMIZED at w=8 (=consec_9, in finite check), dropping to plateau ~0.357 for large w.
+
+**4. Wide bound k=8,9,10 (exact, the HYP-2675 target).** span>=16: max wide p0 = 0.126/0.223/0.301 (k=8/9/10),
+margins 0.255/0.271/0.304. Bounded finite check (exhaustive primitive 9-sets by span 8..16) stays below cap
+(margin>=0.078). The two regimes OVERLAP at span~16 -> NO gap.
+
+**Honest status:** LRC(14) NOT proved. The resonance-direct angle's job is done: (a) PROVES no c*k bound
+exists (kills the dead-end target), (b) shows that is harmless (bad resonant w have small p0), (c) reduces
+the sector route to the SINGLE clean inequality "span>14 => p0(E)<=cap_k" (= HYP-2675, codex-s47), with
+comfortable margin >=0.25. Tight margins confined to the bounded finite check (DONE to span 16). Corroborates
+S19/THM-PSK-4 and codex HYP-2674/2675 from a third direction. Files:
+`04-computation/lrc14_ck_resonance-direct_kps-S17-wf.py`, `05-knowledge/results/lrc14_ck_resonance-direct_kps-S17-wf.out`;
+appended to `05-knowledge/hypotheses/HYP-2675-lrc14-wide-branch-sector-ridge.md`.
 
 ## kind-pasteur-2026-06-20-S19 -- LRC(14): finite half PROVED + comfortable-margin structure + codex bridge
 

@@ -1,0 +1,48 @@
+==============================================================================
+PART A  --  EXACT margins / caps / Q(k-1) / peel thresholds T_k
+==============================================================================
+  margin_k := cap_k - Q(k-1);   T_k := C(k)/margin_k   (peel w >= T_k).
+  Q(k-1) = Phi(consec_{k-1}) is the PROVED bounded plateau max.
+  LOAD-BEARING C(k) <= 2.71*(k-2)  [per-scale-cluster angle, PROVED skeleton].
+
+  k=8:  cap_k = 2243/5880 = 0.38146
+         Q(k-1)= 289/1470 = 0.19660   (Phi(consec_7))
+         margin= 1087/5880 = 0.18486
+         LOAD-BEARING: C(k)<=2.71*(k-2)=16.26  =>  T_k = C/margin = 88.0  (ceil 88)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    16.23  ceil=  17  naive |R_k|<=C(16,7)=11,440
+           C=  4: T_k =    21.64  ceil=  22  naive |R_k|<=C(21,7)=116,280
+           C=  8: T_k =    43.28  ceil=  44  naive |R_k|<=C(43,7)=32,224,114
+
+  k=9:  cap_k = 1979/4004 = 0.49426
+         Q(k-1)= 621/1715 = 0.36210   (Phi(consec_8))
+         margin= 129643/980980 = 0.13216
+         LOAD-BEARING: C(k)<=2.71*(k-2)=18.97  =>  T_k = C/margin = 143.5  (ceil 144)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    22.70  ceil=  23  naive |R_k|<=C(22,8)=319,770
+           C=  4: T_k =    30.27  ceil=  31  naive |R_k|<=C(30,8)=5,852,925
+           C=  9: T_k =    68.10  ceil=  69  naive |R_k|<=C(68,8)=7,392,009,768
+
+  k=10:  cap_k = 55/91 = 0.60440
+         Q(k-1)= 1229/2744 = 0.44789   (Phi(consec_9))
+         margin= 5583/35672 = 0.15651
+         LOAD-BEARING: C(k)<=2.71*(k-2)=21.68  =>  T_k = C/margin = 138.5  (ceil 139)
+         smaller-C scenarios (for reference):
+           C=  3: T_k =    19.17  ceil=  20  naive |R_k|<=C(19,9)=92,378
+           C=  4: T_k =    25.56  ceil=  26  naive |R_k|<=C(25,9)=2,042,975
+           C= 10: T_k =    63.89  ceil=  64  naive |R_k|<=C(63,9)=23,667,689,815
+
+==============================================================================
+PART D  --  LOAD-BEARING check at proven T_k = 2.71*(k-2)/margin_k
+==============================================================================
+  C(k) <= 2.71*(k-2) (per-scale-cluster, PROVED skeleton) => T_8=88, T_9=144,
+  T_10=139.  D1: p_0 is span-monotone (peak at consec, decays for wide sets);
+  D2: the upward-closure prune certifies the wide bulk, leaving only the small
+  near-consec family as leaves.  0 violations; argmax = consec.
+
+  --- k=8: PROVEN T_k = 2.71*6/margin = 88.0 (ceil 88) ---
+      [D1] sampled max p_0 by span band (peak at consec, decays):
+           span[  7, 10): max p_0 ~ 0.3272  margin +0.0543
+           span[ 10, 16): max p_0 ~ 0.2323  margin +0.1491
+           span[ 16, 32): max p_0 ~ 0.1382  margin +0.2433
+           span[ 32, 88): max p_0 ~ 0.0779  margin +0.3035
