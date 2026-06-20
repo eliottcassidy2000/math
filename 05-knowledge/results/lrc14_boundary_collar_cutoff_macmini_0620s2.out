@@ -1,0 +1,12 @@
+Boundary-collar cutoff w* (E' subset {0..14}, |E'|=k-1, 0 in E'):
+  k  #E-prime     Qb(k-1)     cap_k    margin  V_max       w*
+  8      3003     0.19660   0.38146   0.18486     81       54
+  9      3432     0.36210   0.49426   0.13216     97       90
+ 10      3003     0.44789   0.57143   0.12354    104      103
+
+If margin>0 and w* is finite: boundary collar = {finite check 14<w<=w*} + {THM-546 gapped w>w*}.
+Qb(k-1) = max Plat over bounded E' (the finite-half extremal, kps-S19 style); margin=cap_k-Qb.
+NOTE: w* here uses the closed-form (6/49)V_max bound; the full signed sum (5-76x tighter)
+shrinks w* by that factor, making the finite intermediate check far smaller.
+
+DONE.
