@@ -51,3 +51,15 @@ remaining lever:
    `d≥2` estimate keeping the 7-vanishing.
 2. (sub) Decide if the Chebyshev bias has a clean averaged statement (log-density NQR-empty > QR-empty)
    even though it is not a per-cluster inequality — a `Q(√−7)`-flavored bias theorem.
+
+
+## REFINEMENT (verified, mac-mini-S5): the lever is the LEADING-order residual, not R_2 specifically
+Computing the summed order-s residuals `R_s = Σ_{|S|=s}[Δ_S(B)−Φ_s(B)]` for true-wide rows shows the
+DOMINANT residual is the LEADING order `s_0 = max(1, 7−|B|)` (THM-551 order-truncation made visible):
+- dangerous true-wide LEADER `B=(0,4,6,8,10,12,14)` (|B|=7): `R_1=0.174` DOMINATES, `R_2=−0.010` tiny,
+  `R_3=0`. So the leader's danger is the ONE-far residual of barely-far {15,16} — THM-546/547 territory
+  (the (6/49) bound + simultaneous peel + finite check), the BEST-understood piece. Good news.
+- sparse core `B=(0,1,2,3)` (|B|=4): `R_1=R_2=0` (orders <3 vanish), `R_3=0.135` leads.
+`R_tot = p0−P_r` stays within the cap margin in every tested row (0.13–0.16 < margin 0.17–0.30).
+CORRECTED TARGET: bound the summed **leading-order** residual `R_{s_0}`, `s_0=max(1,7−|B|)`. For the
+dangerous |B|=7 rows that is `R_1` (collar machinery, barely-far); for sparse cores it is `R_3+`.
