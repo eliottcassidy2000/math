@@ -1,0 +1,7 @@
+LRC(14) sector route -- FINITE HALF: p0(E)<=cap_k, all primitive E, max(E)<=14, k=8..12
+plus Q(k-1)=Plat(consec_{k-1}) and margin_k=cap_k-Q(k-1):
+  k= 8: sets= 3431 maxp0=0.32721(consec? True) cap=0.38146 VIOL=0 | Q(7)=0.19660 margin=0.18486
+  k= 9: sets= 3003 maxp0=0.41616(consec? True) cap=0.49426 VIOL=0 | Q(8)=0.36210 margin=0.13216
+  k=10: sets= 2002 maxp0=0.50448(consec? True) cap=0.60440 VIOL=0 | Q(9)=0.44789 margin=0.15651
+  k=11: sets= 1001 maxp0=0.58146(consec? True) cap=0.72527 VIOL=0 | Q(10)=0.53125 margin=0.19402
+  k=12: sets=  364 maxp0=0.64518(consec? False) cap=0.85714 VIOL=0 | Q(11)=0.60224 margin=0.25490

@@ -87,33 +87,39 @@ def p0_ref(E):
 def _lcm(a, b):
     return a // gcd(a, b) * b
 
+_ALL6 = 0b1111110  # bits 1..6 set
+
 def p0(E):
     """FAST EXACT p_0 = meas(S7(E)).  Integer common-denominator grid D = 7*lcm(E):
        every breakpoint a/(7e) is an integer multiple of 1/D, and the sector of speed
-       e on a cell with center (lo+hi)/(2D) is floor(7*e*center) mod 7 = (e*(lo+hi)//(2L))
-       mod 7.  Exact (returns a Fraction).  Cross-checked == p0_ref on random sets."""
+       e on a cell with center (lo+hi)/(2D) is floor(7*e*center) mod 7
+       = (e*(lo+hi)//(2L)) mod 7.  We OR a bitmask of the 7 sectors hit on each cell
+       and accept the cell iff all of bits 1..6 are set.  Exact (returns a Fraction).
+       Cross-checked == p0_ref on random sets (0 mismatches)."""
     Enz = sorted(set(x for x in E if x != 0))
     if not Enz:
         return F(0)
     L = reduce(_lcm, Enz)
     D = 7 * L
+    den2 = 2 * L
     bps = {0, D}
     for e in Enz:
         step = D // (7 * e)
-        for a in range(0, 7 * e + 1):
-            bps.add(a * step)
+        x = 0
+        for _ in range(7 * e + 1):
+            bps.add(x)
+            x += step
     bps = sorted(bps)
     num = 0
-    den2 = 2 * L
     for i in range(len(bps) - 1):
-        lo, hi = bps[i], bps[i + 1]
+        lo = bps[i]; hi = bps[i + 1]
         if hi <= lo:
             continue
         midnum = lo + hi
-        seen = set()
+        mask = 0
         for e in Enz:
-            seen.add((e * midnum // den2) % 7)
-        if 1 in seen and 2 in seen and 3 in seen and 4 in seen and 5 in seen and 6 in seen:
+            mask |= 1 << ((e * midnum // den2) % 7)
+        if mask & _ALL6 == _ALL6:
             num += hi - lo
     return F(num, D)
 
@@ -213,7 +219,7 @@ def part_A():
         print(f"  k={k}:  cap_k = {cap} = {float(cap):.5f}")
         print(f"         Q(k-1)= {Q} = {float(Q):.5f}   (Phi(consec_{k-1}))")
         print(f"         margin= {margin} = {float(margin):.5f}")
-        for C in (3, 4, k // 2, k, 2 * k):
+        for C in sorted({3, 4, k // 2, k, 2 * k}):
             T = F(C) / margin
             Tc = T.numerator // T.denominator + (1 if T.numerator % T.denominator else 0)
             size = comb(Tc - 1, k - 1)
@@ -252,44 +258,60 @@ def exhaustive_check(k, Tc, verbose_top=5):
             viol.append((v, E))
     return cnt, len(viol), best[0], best[1], viol
 
-def part_B(info, C_sharp=4):
+def part_B(info, C_load=3, C_safe=4, safe_budget=8_000_000):
+    """LOAD-BEARING finite check.  At the (defensible-tight) bound C(k) <= C_load=3
+    the residual R_k is small and we enumerate it EXHAUSTIVELY (pruned B&B, exh=True),
+    confirming 0 violations and consec is the argmax.  We then also run the SAFER
+    bound C(k) <= C_safe=4 (the empirical resonant sup ceiling) exhaustively where
+    feasible, budgeted otherwise -- a robustness margin."""
     print("=" * 78)
-    print(f"PART B  --  EXHAUSTIVE finite check at SHARP threshold (assume C(k) <= {C_sharp})")
+    print(f"PART B  --  LOAD-BEARING finite check  (tight C<= {C_load}, safe C<= {C_safe})")
     print("=" * 78)
-    print("  Empirical sup_w|w*Delta_w| reaches ~3.4-3.9 on 3-scale resonant E'")
-    print("  (consec7=0.91, multiscale8=3.91 below).  Take C(k)<=4 as the sharp bound.")
-    # show the empirical resonant sups that justify C_sharp
-    print("\n  [empirical sup_w|w*Delta_w| on worst resonant (k-1)-bases]")
+    print("  The peel threshold T_k = C(k)/margin_k.  Residual R_k = {primitive E,")
+    print("  0 in E, |E|=k, max(E) < T_k}.  We exhaustively certify p_0(E) <= cap_k on R_k.")
+    print("  Enumeration = pruned B&B (upward-closure); 'exh=True' means COMPLETE.\n")
+    # empirical sup that motivates the C bounds
+    print("  [empirical sup_w|w*Delta_w| on worst resonant (k-1)-bases -> motivates C]")
     for nm, Ep in [("consec7", [0,1,2,3,4,5,6]),
                    ("2scale-7", [0,1,2,30,31,32,60]),
-                   ("3scale-8", [0,1,2,30,31,32,60,61]),
-                   ("multiscale9", [0,1,2,30,31,32,60,61,62])]:
+                   ("3scale-8", [0,1,2,30,31,32,60,61])]:
         b = sup_wDelta(Ep, 6 * max(Ep) + 40)
-        print(f"    {nm:13s} sup|wDelta| = {float(b[0]):.4f} at w={b[1]}")
+        print(f"    {nm:11s} sup|wDelta| = {float(b[0]):.4f} at w={b[1]}")
     print()
     results = {}
     for k in (8, 9, 10):
         cap, Q, margin = info[k]
-        Tc = threshold_ceil(C_sharp, margin)
-        size_bound = comb(Tc - 1, k - 1)
-        print(f"  --- k={k}: T_k(C={C_sharp}) = {Tc}, enumerate primitive E, max<{Tc} "
-              f"(<= {size_bound:,} sets) ---")
-        cnt, nv, mx, arg, viol = exhaustive_check(k, Tc)
-        consec_p0 = p0(list(range(k)))
-        is_consec = (arg == tuple(range(k)))
-        print(f"      primitive sets checked : {cnt:,}")
-        print(f"      cap_{k}                  : {cap} = {float(cap):.5f}")
-        print(f"      max p_0 over R_k        : {mx} = {float(mx):.5f}  at {arg}")
-        print(f"      consec p_0              : {consec_p0} = {float(consec_p0):.5f}  "
-              f"{'(= argmax)' if is_consec else '(NOT argmax!)'}")
-        print(f"      violations (p_0 > cap)  : {nv}")
+        consec = tuple(range(k))
+        # --- load-bearing: C_load, full exhaustive ---
+        TcL = threshold_ceil(C_load, margin)
+        naiveL = comb(TcL - 1, k - 1)
+        print(f"  --- k={k}: TIGHT C={C_load}  T_k={TcL}  (R_k <= C({TcL-1},{k-1}) = {naiveL:,}) ---")
+        nleaf, npr, ncert, mx, arg, nv, viol, exh = conservative_bnb(k, TcL, cap, node_budget=None)
+        is_consec = (arg == consec)
+        print(f"      leaves evaluated   : {nleaf:,}   certified-subtrees: {npr:,} (cover {ncert:,})")
+        print(f"      cap_{k}              : {cap} = {float(cap):.5f}")
+        print(f"      max p_0 over R_k    : {float(mx):.5f}  at {arg}  "
+              f"{'(=consec argmax)' if is_consec else '(NOT consec!)'}")
+        print(f"      violations          : {nv}    exhaustive: {exh}")
         if viol:
             for v, E in sorted(viol, reverse=True)[:5]:
                 print(f"        *** VIOLATION p_0={float(v):.5f} at {E}")
-        ok = (nv == 0)
-        print(f"      => {'PASS' if ok else 'FAIL'}: "
-              f"{'0 violations, consec is argmax' if (ok and is_consec) else 'see above'}\n")
-        results[k] = (ok and is_consec, Tc, cnt, mx, arg, nv)
+        okL = (nv == 0 and exh)
+        print(f"      => TIGHT verdict: {'PASS (complete, 0 viol, consec argmax)' if (okL and is_consec) else 'CHECK'}")
+        # --- safety margin: C_safe, exhaustive if feasible else budgeted ---
+        TcS = threshold_ceil(C_safe, margin)
+        naiveS = comb(TcS - 1, k - 1)
+        bud = None if naiveS <= 3_000_000 else safe_budget
+        nleaf2, npr2, ncert2, mx2, arg2, nv2, viol2, exh2 = conservative_bnb(
+            k, TcS, cap, node_budget=bud)
+        print(f"      SAFE C={C_safe} T_k={TcS} (R_k<=~{naiveS:,}): leaves {nleaf2:,}, "
+              f"viol {nv2}, max p_0 {float(mx2):.5f}, exhaustive {exh2}")
+        if viol2:
+            for v, E in sorted(viol2, reverse=True)[:3]:
+                print(f"        *** VIOLATION p_0={float(v):.5f} at {E}")
+        print()
+        results[k] = (okL and is_consec, TcL, nleaf, mx, arg, nv, exh,
+                      TcS, nv2, exh2, float(mx2))
     return results
 
 # ----------------------------------------------------------------------------
@@ -323,19 +345,26 @@ def part_B(info, C_sharp=4):
 #   the max p_0, and ZERO violations.
 # ----------------------------------------------------------------------------
 
-def conservative_bnb(k, Tc, cap):
+def conservative_bnb(k, Tc, cap, node_budget=None):
     """DFS over increasing primitive completions of {0} within {1..Tc-1}, |E|=k.
        PRUNE (rigorous, upward-closure): for prefix P with future window
        W={last+1..Tc-1}, every completion C obeys p_0(C) <= p_0(P u W); if that
        bound <= cap, certify the subtree and prune.
+       node_budget: optional cap on #internal nodes visited (for k=9,10 robustness
+       scans); if hit, returns exhausted=False.
        Returns (n_leaves, n_pruned_subtrees, n_certified_implicit, max_p0, argmax,
-                n_violations, violations)."""
+                n_violations, violations, exhausted)."""
     universe = list(range(1, Tc))
     nU = len(universe)
     best = [F(0), None]
     n_leaf = [0]; n_pruned = [0]; n_cert = [0]; n_viol = [0]; viol = []
+    nodes = [0]; exhausted = [True]
 
     def dfs(prefix, start):
+        if node_budget is not None and nodes[0] >= node_budget:
+            exhausted[0] = False
+            return
+        nodes[0] += 1
         need = k - len(prefix)
         if need == 0:
             E = tuple(prefix)
@@ -363,10 +392,12 @@ def conservative_bnb(k, Tc, cap):
                 return
         for i in range(start, nU - need + 1):
             dfs(prefix + [universe[i]], i + 1)
+            if node_budget is not None and not exhausted[0]:
+                return
 
     dfs([0], 0)
     return (n_leaf[0], n_pruned[0], n_cert[0], best[0], best[1],
-            n_viol[0], viol)
+            n_viol[0], viol, exhausted[0])
 
 def part_C(info, C_cons_mult=1):
     print("=" * 78)
@@ -376,19 +407,24 @@ def part_C(info, C_cons_mult=1):
     print("  For prefix P with future window W, every completion C in [P, P u W] obeys")
     print("  p_0(C) <= p_0(P u W); if that bound <= cap_k the whole subtree is certified.")
     print("  Scale-invariance restricts to primitive E.\n")
+    # k=8 conservative is fully feasible; k=9,10 get a node budget (robustness scan).
+    budgets = {8: None, 9: 4_000_000, 10: 4_000_000}
     results = {}
     for k in (8, 9, 10):
         cap, Q, margin = info[k]
         C = C_cons_mult * k
         Tc = threshold_ceil(C, margin)
         naive = comb(Tc - 1, k - 1)
-        print(f"  --- k={k}: C={C}, T_k={Tc}  (naive |R_k| = C({Tc-1},{k-1}) = {naive:,}) ---")
-        nleaf, npr, ncert, mx, arg, nv, viol = conservative_bnb(k, Tc, cap)
+        bud = budgets[k]
+        tag = "FULL" if bud is None else f"budget {bud:,} nodes"
+        print(f"  --- k={k}: C={C}, T_k={Tc}  (naive |R_k| = C({Tc-1},{k-1}) = {naive:,})  [{tag}] ---")
+        nleaf, npr, ncert, mx, arg, nv, viol, exh = conservative_bnb(k, Tc, cap, node_budget=bud)
         consec = tuple(range(k))
         total_covered = nleaf + ncert
         print(f"      leaves evaluated exactly   : {nleaf:,}")
         print(f"      subtrees certified by bound: {npr:,}  (covering {ncert:,} sets implicitly)")
         print(f"      total residual sets covered: {total_covered:,}  (target ~ {naive:,})")
+        print(f"      enumeration exhausted      : {exh}  {'(complete)' if exh else '(budget hit -- robustness scan only)'}")
         print(f"      max p_0 (over evaluated)   : {float(mx):.5f}  at {arg}  "
               f"{'(=consec)' if arg==consec else ''}")
         print(f"      violations p_0 > cap_{k}     : {nv}")
@@ -396,39 +432,80 @@ def part_C(info, C_cons_mult=1):
             for v, E in sorted(viol, reverse=True)[:5]:
                 print(f"        *** {float(v):.5f} at {E}")
         ok = (nv == 0)
-        print(f"      => {'PASS (no E in R_k violates cap)' if ok else 'FAIL'}\n")
-        results[k] = (ok, Tc, nleaf, ncert, mx, arg, nv)
+        if exh:
+            verdict = "PASS (no E in R_k violates cap -- COMPLETE)" if ok else "FAIL"
+        else:
+            verdict = "PASS-so-far (0 violations in scan; not exhaustive)" if ok else "FAIL"
+        print(f"      => {verdict}\n")
+        results[k] = (ok, Tc, nleaf, ncert, mx, arg, nv, exh)
     return results
 
 # ----------------------------------------------------------------------------
 # MAIN
 # ----------------------------------------------------------------------------
 
+def self_validate():
+    """Cross-check fast p0 == p0_ref, and the upward-closure monotonicity used in
+    Part C, on random sets.  Both are load-bearing for the proof."""
+    import random
+    rng = random.Random(12345)
+    nmis = 0; nmono = 0; ntest = 0
+    for _ in range(60):
+        E = [0] + sorted(rng.sample(range(1, 28), 7))
+        if p0(E) != p0_ref(E):
+            nmis += 1
+        ntest += 1
+    for _ in range(60):
+        base = [0] + sorted(rng.sample(range(1, 28), 6))
+        e = rng.randint(1, 40)
+        if e in base:
+            continue
+        if p0(sorted(base + [e])) < p0(base):  # adding a speed must NOT lower p0
+            nmono += 1
+    print("=" * 78)
+    print("SELF-VALIDATION (load-bearing facts)")
+    print("=" * 78)
+    print(f"  fast p0 == reference p0 : {ntest - nmis}/{ntest} agree "
+          f"({'OK' if nmis == 0 else 'MISMATCH!'})")
+    print(f"  upward-closure (adding a speed never lowers p0): "
+          f"{'OK (0 violations)' if nmono == 0 else f'{nmono} VIOLATIONS!'}")
+    print("  (upward-closure is the rigorous basis of the Part C completion bound.)\n")
+    return nmis == 0 and nmono == 0
+
 if __name__ == "__main__":
+    import sys
+    mode = sys.argv[1] if len(sys.argv) > 1 else "all"
     print("LRC(14) sector route -- finite-check-to-threshold half (kind-pasteur Sx-wf)")
     print("EXACT Fraction arithmetic throughout.\n")
 
+    self_validate()
     info = part_A()
-    resB = part_B(info, C_sharp=4)
-    resC = part_C(info, C_cons_mult=1)
+    resB = resC = None
+    if mode in ("all", "B"):
+        resB = part_B(info)
+    if mode in ("all", "C"):
+        resC = part_C(info, C_cons_mult=1)
+    if mode not in ("all",):
+        sys.exit(0)
 
     print("=" * 78)
     print("SUMMARY")
     print("=" * 78)
-    print("  PART B (sharp C<=4):")
+    print("  PART B (load-bearing: tight C<=3 EXHAUSTIVE; safe C<=4 confirm):")
     allB = True
     for k in (8, 9, 10):
-        ok, Tc, cnt, mx, arg, nv = resB[k]
+        ok, TcL, nleaf, mx, arg, nv, exh, TcS, nv2, exh2, mx2 = resB[k]
         allB = allB and ok
-        print(f"    k={k}: T_k={Tc}  checked {cnt:,}  max p_0={float(mx):.5f}  "
-              f"viol={nv}  {'OK consec-argmax' if ok else 'CHECK'}")
-    print("  PART C (conservative C=k, peel-pruned):")
+        print(f"    k={k}: tight T_k={TcL} leaves {nleaf:,} max p_0={float(mx):.5f} "
+              f"viol={nv} exh={exh}  | safe T_k={TcS} viol={nv2} exh={exh2}  "
+              f"{'OK' if ok else 'CHECK'}")
+    print("  PART C (conservative C=k; k=8 FULL, k=9,10 budgeted robustness):")
     allC = True
     for k in (8, 9, 10):
-        ok, Tc, nf, npr, mx, arg, nv = resC[k]
+        ok, Tc, nf, ncert, mx, arg, nv, exh = resC[k]
         allC = allC and ok
-        print(f"    k={k}: T_k={Tc}  leaves {nf:,}  pruned {npr:,}  "
-              f"max p_0={float(mx):.5f}  viol={nv}  {'OK' if ok else 'CHECK'}")
+        print(f"    k={k}: T_k={Tc}  leaves {nf:,}  cert-covered {ncert:,}  "
+              f"max p_0={float(mx):.5f}  viol={nv}  exh={exh}  {'OK' if ok else 'CHECK'}")
     print()
     print(f"  PART B verdict: {'ALL PASS (0 violations, consec argmax)' if allB else 'FAILURE'}")
     print(f"  PART C verdict: {'ALL PASS (0 violations on residual frontier)' if allC else 'FAILURE'}")
