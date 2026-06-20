@@ -1,3 +1,42 @@
+## kind-pasteur-2026-06-20 -- half-tiling framework: extremal/arithmetic facet -- THM-552, HYP-2686/2687/2688, MISTAKE-081, OPEN-Q-109
+
+User dispatch: the half-tiling framework (mirror over y=x = reverse all arcs; half-tiling
+sizes 0,1,2,4,6,9,12,16,20,25,30; even/odd recursions A+B-C / A+B-C+D-E-F+G), connect to the
+full A+B+C-D-E-F+G recursion and extend. CONCURRENT COLLISION: mac-mini-S4 and codex-S56 were
+given the same prompt and pushed first -- they own THM-549 (half-tiling=complement quotient),
+THM-550 (parity recurrence), HYP-2685 (address quotient), and the geometric folding reflections.
+I reconciled: deleted my 3 duplicate THM files (the count/recursion results are theirs + the
+PRE-EXISTING THM-280 reflection=complement and THM-442 full third-difference recursion), and
+refocused on what was genuinely uncovered.
+
+Verified foundation (04-computation/half_tiling_framework_kps.py): rho(a,b)=(n+1-b,n+1-a) is a
+PURE coordinate involution (no bit flip), half(n)=floor((n-1)^2/4)=#orbits (odd k^2/even k(k-1)),
+#grid-sym tilings=2^half, fraction 2^{(d-m)/2} reproduces canon exponents, folding identity
+full=2*half-d, gnomon k^2=sum odd. Then a 4-thread workflow + adversarial verify (1 verifier died
+on an API error; I independently re-verified its threads). NEW RESULTS:
+- THM-552 (PROVED): c3-parity dichotomy -- phi-self-converse => c3 EVEN at even n, BOTH parities
+  at odd n, via the phi-FIXED-VERTEX (n+1)/2 (exists iff n odd). Distinct from c3=c3^op invariance
+  and from THM-016/017's alternating-sum split. Exhaustive n<=8, 0 mismatches.
+- HYP-2688 (VERIFIED exhaustive n=3..9): the global H-maximizer lives in the 2^half grid-sym
+  subcube (n=8->661, n=9->3357), a 2^{(m-d)/2} search reduction (n=9: 4096x). STRONG form REFUTED
+  (maximizer set MIXED; non-grid-sym maximizers outnumber grid-sym at n=5,6,7). Open lemma =
+  OPEN-Q-109 (base-HP choice making a regular self-converse maximizer's tiling rho-fixed).
+- HYP-2686 (VERIFIED): rho-orbit (merged-tiling) count = (2^m+2^half)/2 = 2,6,40,544,16640,1050624
+  (fixed-HP analogue of V_merged); Fix_anti(phi)_full = 2^{half+floor(n/2)} (gap is floor(n/2)
+  self-paired vertex-pairs, NOT n-1).
+- MISTAKE-081: the canon "SC(n)=A000568(n-1)" (two-models-staircase-recursion.md) is FALSE
+  (SC_n=2,2,8,12 vs A000568(n-1)=1,2,4,12; agree only n=4,6). Correct seq 2,2,8,12,88,176
+  (=unlocking-gn = A002785). Flagged correction note added to that reflection.
+- ENGINEERING: HalfTilingCodec (04-computation/half_tiling_codec_kpswf.py) -- lossless half(n)-bit
+  encode/decode of phi-self-converse tournaments (2x vs adjacency, exact round-trip n<=7) + O(half(n))
+  uniform SC sampler. The fixed locus is the canonical fingerprint of the SC stratum.
+- Reflection: the-fold-is-an-extremal-and-arithmetic-symmetry-not-an-additive-one-kps.md (the fold
+  is invisible to additive H but rules the argmax, the c3-parity, and the Burnside census).
+
+NEXT: OPEN-Q-109 (the base-HP/grid-sym lemma) would make HYP-2688 a theorem. Whether the codec's
+2x extends to a useful fingerprint for ML ranking pipelines (engineering roadmap). mac-mini's
+"Mode C n->n-3 Eisenstein" conjecture (cube-root reduction beside binary Cayley-Dickson).
+
 ## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-550/HYP-2685/T924
 
 User supplied the half-tiling framework: fix a Hamiltonian path, fold the

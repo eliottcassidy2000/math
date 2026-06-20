@@ -303,6 +303,14 @@ $$\Sigma H(n) = \sum_{t \in \{0,1\}^{C(n-1,2)}} H(T_t)$$
 
 ## SC(n) = A000568(n-1) in the Tiling Model
 
+> **CORRECTION (kind-pasteur-2026-06-20, see MISTAKE-081):** the identity stated in this
+> section's title and body — `|SC(n)| = A000568(n-1)` — is **FALSE**. Direct iso-class
+> enumeration gives self-converse counts `SC_n = 2,2,8,12,88,176` (n=3..8), which equals
+> `A000568(n-1) = 1,2,4,12,...` only at `n=4,6` and fails at `n=3` (2≠1) and `n=5` (8≠4).
+> The correct sequence `2,2,8,12,88,176` is the one in `unlocking-gn-at-all-n.md` (= OEIS
+> A002785). The "intrinsic halving" intuition below is kept as motivation, but the specific
+> count identity does not hold; the explicit class-level SC-halving bijection remains OPEN.
+
 **In the tournament model:** Each SC tournament $[T]$ on $n$ vertices satisfies
 $[T] = [T^{\mathrm{op}}]$. The bijection $[T]_{n\text{-SC}} \leftrightarrow [T']_{(n-1)\text{-any}}$
 comes from the Sims construction: given SC tournament $T$ with anti-automorphism $\sigma$,

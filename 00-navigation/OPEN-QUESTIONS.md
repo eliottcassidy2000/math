@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-109 — The base-HP / grid-symmetric maximizer lemma (the one gap in HYP-2688).**
+HYP-2688 (VERIFIED exhaustive n=3..9): the global H-maximizer is attained inside the
+`2^{half(n)}` grid-symmetric (phi-self-converse) subcube of the tiling cube, giving a
+`2^{(m-d)/2}` search reduction. The WEAK form ("the maximizer set CONTAINS a grid-sym point")
+is what holds and what is needed; the STRONG form is REFUTED (non-grid-sym maximizers exist,
+outnumbering grid-sym ones at n=5,6,7). `H=H^op` makes the maximizer set `rho`-invariant but a
+size-2 `rho`-orbit has no fixed point, so invariance alone is insufficient. **The lemma to
+prove:** *every regular self-converse global H-maximizer admits a base-Hamiltonian-path choice
+`P0=n->...->1` under which its tiling is `rho`-fixed (grid-symmetric)*. The canon SC/regular
+maximizer theorem gives the abstract self-converse symmetry (a `phi`-self-converse relabeling
+exists); the gap is making that relabeling compatible with the FIXED base path. Proving it
+upgrades HYP-2688 to a theorem and certifies the search speedup. → HYP-2688, THM-280, THM-552,
+SC-maximizer canon.
+
 **OPEN-Q-108 — TRUE-WIDE via DICHOTOMY-FINITE-REDUCTION (kps-2026-06-20-Sx-wf, INDEPENDENT route).**
 A second, cluster-decorrelation attack on Region III (complementary to the THM-548 boundary-value picture).
 [PROVED] `p0(λE)=p0(E)` for `gcd(λ,7)=1` (THM-531-B, re-verified for p0) + pigeonhole (a cluster of size

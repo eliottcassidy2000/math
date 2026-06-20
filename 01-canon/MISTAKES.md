@@ -11,6 +11,20 @@ Format per entry:
 
 ---
 
+## MISTAKE-081 (2026-06-20, kind-pasteur half-tiling session) — the canon claim "SC(n) = A000568(n−1)" is FALSE (holds only at n=4,6 in the tested range)
+
+**What was claimed.** `07-reflections/two-models-staircase-recursion.md` (section "SC(n)=A000568(n−1) in the Tiling Model", lines ~304–323, 344) asserts that the number of self-complementary (self-converse) tournament isomorphism classes equals `A000568(n−1)` (= the number of tournament iso classes on `n−1` vertices). The half-tiling/orbifold thread (HYP-2686) tested this while looking for a clean SC-halving bijection.
+
+**Why it is wrong.** Direct iso-class enumeration (independently re-verified, `04-computation/half_tiling_verify_contested_kps.py`) gives the self-converse counts `SC_n = 2, 2, 8, 12` for `n=3,4,5,6`, while `A000568(n−1) = 1, 2, 4, 12`. They AGREE only at `n=4` and `n=6` and DISAGREE at `n=3` (`2≠1`) and `n=5` (`8≠4`). (Sanity: the same script reproduces the total iso-class counts `A000568(n)=2,4,12,56` exactly, so the canonicalization is correct.) The correct self-converse sequence is `2,2,8,12,88,176` (n=3..8) — matching the value already recorded in `07-reflections/unlocking-gn-at-all-n.md` (`SC_n` row), and equal to OEIS A002785 (number of self-converse/self-complementary tournaments) up to indexing. So the repo already contained the right numbers in one place and a wrong identity in another.
+
+**Correct framing.** `2^half(n)` (grid-symmetric tilings) is a LABELED, base-path-fixed fixed-point count (the Burnside input `Fix_anti(φ)` restricted to the tiling frame), NOT the iso-class count `SC_n`. There is no clean `|SC(n)| = A000568(n−1)` identity; the genuine relation is the Burnside one `V_merged = (A000568(n) + SC_n)/2` (with `SC_n = 2,2,8,12,88,176`), and the explicit class-level SC-halving bijection (open-Q #4 of two-models-staircase-recursion.md) remains OPEN — the half-tiling supplies the fixed-point count, not the bijection.
+
+**Impact.** A correction note has been added at the head of the affected section in `two-models-staircase-recursion.md` pointing here (additive, non-destructive; the surrounding "intrinsic halving" intuition is kept as motivation, the specific count identity is flagged false). HYP-2686 records the verified counts. No theorem depended on the false identity (it lived only in that reflection's prose).
+
+**How it was caught.** HYP-2686 orbifold thread + independent re-verification (the workflow's Burnside adversarial verifier died on an API error, so kind-pasteur re-checked `SC_n` by direct iso-enumeration n=3..6).
+
+**Source.** kind-pasteur-2026-06-20 (half-tiling framework session).
+
 ## MISTAKE-080 (2026-06-20, kind-pasteur-S19, LRC(14) sector route) — the decorrelated LIMIT Q(k-1) mistaken for a FINITE upper bound on wide p0 (plus a pinned-0 modeling omission)
 
 **What was done.** Attacking the sole LRC(14) residual HYP-2675 (`span(E)>14 ⟹ p0(E)≤cap_k`) via cross-scale decorrelation, I computed the decorrelated model `p0_decorr(base, nfar)` and found `sup_shapes p0_decorr = Q(k-1) = Plat(consec_{k-1})` exactly (0.197/0.362/0.448, k=8/9/10), achieved at consec_{k-1}+1 stranger. I recorded this as the crux "wide ⟹ p0 ≤ Q(k-1) < cap" and called it the proof of the decorrelated bound.
