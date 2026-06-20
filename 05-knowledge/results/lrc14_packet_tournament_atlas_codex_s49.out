@@ -1,0 +1,230 @@
+HYP-2677 / T917 LRC14 packet-sign tournament atlas
+Arithmetic: exact Fractions for packet masses; no numeric approximation is used in the tables.
+Pairwise observables are declared for each tournament quotient.
+
+Rows in atlas
+  B14_top01: E'=(0, 2, 4, 6, 7, 8, 9, 10), w=12, Delta=5347/30870, wDelta=10694/5145, sign=++++++, eff=10694/13375, exc=3, K2=9/4, sqfree=((1, 2), (2, 2), (6, 1), (7, 1), (10, 1))
+  B14_top02: E'=(0, 4, 6, 8, 10, 11, 12, 14), w=16, Delta=155831/905520, wDelta=155831/56595, sign=++++++, eff=155831/190063, exc=6, K2=21/8, sqfree=((1, 1), (2, 1), (3, 1), (6, 1), (10, 1), (11, 1), (14, 1))
+  B14_top03: E'=(0, 1, 4, 6, 8, 10, 12, 14), w=16, Delta=2357/13720, wDelta=4714/1715, sign=++++++, eff=7071/8437, exc=7, K2=11/4, sqfree=((1, 2), (2, 1), (3, 1), (6, 1), (10, 1), (14, 1))
+  B14_top04/B13_same_sign_packet: E'=(0, 1, 2, 4, 6, 7, 8, 10), w=12, Delta=997/5880, wDelta=997/490, sign=++++++, eff=997/1237, exc=5, K2=5/2, sqfree=((1, 2), (2, 2), (6, 1), (7, 1), (10, 1))
+  B14_top05: E'=(0, 4, 6, 8, 10, 12, 13, 14), w=16, Delta=28499/178360, wDelta=56998/22295, sign=++++++, eff=85497/105521, exc=6, K2=21/8, sqfree=((1, 1), (2, 1), (3, 1), (6, 1), (10, 1), (13, 1), (14, 1))
+  B14_top06: E'=(0, 2, 6, 8, 9, 10, 12, 14), w=18, Delta=9797/61740, wDelta=9797/3430, sign=++++++, eff=9797/12930, exc=7, K2=11/4, sqfree=((1, 1), (2, 2), (3, 1), (6, 1), (10, 1), (14, 1))
+  B14_top07: E'=(0, 2, 4, 6, 7, 8, 10, 11), w=12, Delta=597/3773, wDelta=7164/3773, sign=++++++, eff=35820/44591, exc=5, K2=5/2, sqfree=((1, 1), (2, 2), (6, 1), (7, 1), (10, 1), (11, 1))
+  B14_top08: E'=(0, 1, 3, 5, 7, 9, 10, 11), w=13, Delta=31981/210210, wDelta=31981/16170, sign=++++++, eff=223867/293495, exc=8, K2=23/8, sqfree=((1, 2), (3, 1), (5, 1), (7, 1), (10, 1), (11, 1))
+  B14_top09: E'=(0, 2, 3, 4, 6, 7, 8, 10), w=12, Delta=3121/20580, wDelta=3121/1715, sign=++++++, eff=3121/3875, exc=4, K2=19/8, sqfree=((1, 1), (2, 2), (3, 1), (6, 1), (7, 1), (10, 1))
+  B14_top10: E'=(0, 4, 6, 7, 8, 10, 12, 14), w=16, Delta=12227/82320, wDelta=12227/5145, sign=++++++, eff=12227/15899, exc=6, K2=21/8, sqfree=((1, 1), (2, 1), (3, 1), (6, 1), (7, 1), (10, 1), (14, 1))
+  B14_top11: E'=(0, 2, 3, 6, 8, 10, 12, 14), w=18, Delta=18317/123480, wDelta=18317/6860, sign=++++++, eff=1409/1769, exc=7, K2=11/4, sqfree=((2, 2), (3, 2), (6, 1), (10, 1), (14, 1))
+  B14_top12: E'=(0, 3, 4, 6, 8, 10, 12, 14), w=16, Delta=6091/41160, wDelta=12182/5145, sign=++++++, eff=6091/7763, exc=6, K2=21/8, sqfree=((1, 1), (2, 1), (3, 2), (6, 1), (10, 1), (14, 1))
+  HYP2675_true_wide_base: E'=(0, 4, 6, 8, 10, 12, 14, 15), w=16, Delta=943/5880, wDelta=1886/735, sign=++++++, eff=6601/7929, exc=7, K2=11/4, sqfree=((1, 1), (2, 1), (3, 1), (6, 1), (10, 1), (14, 1), (15, 1))
+  HYP2671_dyadic_block: E'=(0, 1, 2, 4, 8, 12, 16, 20), w=24, Delta=457/3920, wDelta=1371/490, sign=++++++, eff=457/607, exc=9, K2=3, sqfree=((1, 3), (2, 2), (3, 1), (5, 1))
+  HYP2672_doubled_odd_tail: E'=(0, 1, 2, 4, 8, 14, 26, 34), w=38, Delta=483281/5761028, wDelta=483281/151606, sign=++++++, eff=483281/665426, exc=15, K2=15/4, sqfree=((1, 2), (2, 2), (14, 1), (26, 1), (34, 1))
+  B14_odd_near_AP_probe: E'=(0, 1, 3, 5, 7, 9, 11, 13), w=15, Delta=1598/21021, wDelta=7990/7007, sign=++-+++, eff=27965/41427, exc=6, K2=21/8, sqfree=((1, 2), (3, 1), (5, 1), (7, 1), (11, 1), (13, 1))
+  B14_even_AP_boundary_probe: E'=(0, 2, 4, 6, 8, 10, 12, 14), w=16, Delta=445/8232, wDelta=890/1029, sign=+-++++, eff=2225/3729, exc=0, K2=15/8, sqfree=((1, 1), (2, 2), (3, 1), (6, 1), (10, 1), (14, 1))
+  nonshell_warning: E'=(0, 2, 3, 5, 6, 15), w=18, Delta=11/315, wDelta=22/35, sign=++++++, eff=11/14, exc=7, K2=3, sqfree=((2, 1), (3, 1), (5, 1), (6, 1), (15, 1))
+  consec8_w10: E'=(0, 1, 2, 3, 4, 5, 6, 7), w=10, Delta=97/5145, wDelta=194/1029, sign=++-++-, eff=97/343, exc=0, K2=15/8, sqfree=((1, 2), (2, 1), (3, 1), (5, 1), (6, 1), (7, 1))
+  mixed_squarefree_probe: E'=(0, 2, 3, 5, 7, 11, 13, 17), w=19, Delta=5919839/475284810, wDelta=5919839/25014990, sign=+-+-++, eff=5919839/37468621, exc=11, K2=13/4, sqfree=((2, 1), (3, 1), (5, 1), (7, 1), (11, 1), (13, 1), (17, 1))
+  HYP2675_boundary_leader_base: E'=(0, 2, 4, 6, 8, 10, 12, 14), w=15, Delta=391/41160, wDelta=391/2744, sign=+++-+-, eff=391/2441, exc=0, K2=15/8, sqfree=((1, 1), (2, 2), (3, 1), (6, 1), (10, 1), (14, 1))
+  wide_two_cluster_probe: E'=(0, 1, 2, 3, 30, 31, 32, 33), w=35, Delta=139/32736, wDelta=4865/32736, sign=++-+--, eff=245/3999, exc=6, K2=21/8, sqfree=((1, 1), (2, 2), (3, 1), (30, 1), (31, 1), (33, 1))
+  KPS_third_pocket: E'=(0, 3, 5, 16, 28, 30, 33), w=35, Delta=1171/452760, wDelta=1171/12936, sign=++-+--, eff=1171/15473, exc=13, K2=26/7, sqfree=((1, 1), (3, 1), (5, 1), (7, 1), (30, 1), (33, 1))
+
+K4 edge-sign quotient
+  six sectors are assigned to K4 edges; + uses the gauge edge direction, - flips it
+  B14_top01: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+3326/5145, 2+5:+2739/3430, 3+4:+2173/3430
+  B14_top02: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+58682/56595, 2+5:+3254/3773, 3+4:+16113/18865
+  B14_top03: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+4751/5145, 2+5:+4558/5145, 3+4:+1611/1715
+  B14_top04/B13_same_sign_packet: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+986/1715, 2+5:+292/343, 3+4:+2087/3430
+  B14_top05: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+179/195, 2+5:+49181/66885, 3+4:+60416/66885
+  B14_top06: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+2481/3430, 2+5:+7727/6860, 3+4:+1381/1372
+  B14_top07: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+2711/5390, 2+5:+31323/37730, 3+4:+194/343
+  B14_top08: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+3639/5390, 2+5:+23693/37730, 3+4:+76369/113190
+  B14_top09: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+359/686, 2+5:+475/686, 3+4:+148/245
+  B14_top10: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+1368/1715, 2+5:+947/1029, 3+4:+484/735
+  B14_top11: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+323/343, 2+5:+1059/1372, 3+4:+3281/3430
+  B14_top12: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+3922/5145, 2+5:+3692/5145, 3+4:+4568/5145
+  HYP2675_true_wide_base: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+3707/5145, 2+5:+4612/5145, 3+4:+4883/5145
+  HYP2671_dyadic_block: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+242/245, 2+5:+267/245, 3+4:+353/490
+  HYP2672_doubled_odd_tail: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+447375/303212, 2+5:+230203/303212, 3+4:+72246/75803
+  B14_odd_near_AP_probe: sign=++-+++, lex scores=(2, 2, 1, 1), c3=2, scc=(4,), HP=5, all sector-edge permutations [3x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 1x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 1x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 1x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:+43880/147147, 2+5:+81316/147147, 3+4:+14198/49049
+  B14_even_AP_boundary_probe: sign=+-++++, lex scores=(2, 2, 2, 0), c3=1, scc=(3, 1), HP=3, all sector-edge permutations [3x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 1x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 1x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 1x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:+3146/5145, 2+5:+178/1715, 3+4:+22/147
+  nonshell_warning: sign=++++++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [1x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1)], opposite-pair balances 1+6:+53/245, 2+5:+52/245, 3+4:+1/5
+  consec8_w10: sign=++-++-, lex scores=(2, 2, 2, 0), c3=1, scc=(3, 1), HP=3, all sector-edge permutations [6x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 5x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:-4/1029, 2+5:+319/2058, 3+4:+11/294
+  mixed_squarefree_probe: sign=+-+-++, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [6x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 5x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:+2723639/12507495, 2+5:-5449/2274090, 3+4:+17750/833833
+  HYP2675_boundary_leader_base: sign=+++-+-, lex scores=(3, 1, 1, 1), c3=1, scc=(3, 1), HP=3, all sector-edge permutations [6x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 5x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:-93/2744, 2+5:+309/2744, 3+4:+25/392
+  wide_two_cluster_probe: sign=++-+--, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [10x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 6x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:+4919/229152, 2+5:+5465/114576, 3+4:+9103/114576
+  KPS_third_pocket: sign=++-+--, lex scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1, all sector-edge permutations [10x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 6x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)], opposite-pair balances 1+6:+27/784, 2+5:+1543/25872, 3+4:-23/6468
+
+K4 gauge examples
+  B14_top01:
+    lex: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+6:+3326/5145, 2+5:+2739/3430, 3+4:+2173/3430
+    opposite_pairs: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+2:+2903/3430, 3+4:+2173/3430, 5+6:+88/147
+    path_then_chords: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+3:+2854/5145, 4+5:+8003/10290, 6+2:+2559/3430
+    face_then_apex: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+6:+3326/5145, 2+5:+2739/3430, 4+3:+2173/3430
+  HYP2675_boundary_leader_base:
+    lex: scores=(3, 1, 1, 1), c3=1, scc=(3, 1), HP=3; pair balances 1+6:-93/2744, 2+5:+309/2744, 3+4:+25/392
+    opposite_pairs: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+2:+81/2744, 3+4:+25/392, 5+6:+135/2744
+    path_then_chords: scores=(2, 2, 1, 1), c3=2, scc=(4,), HP=5; pair balances 1+3:+52/343, 4+5:+69/2744, 6+2:-47/1372
+    face_then_apex: scores=(2, 2, 2, 0), c3=1, scc=(3, 1), HP=3; pair balances 1+6:-93/2744, 2+5:+309/2744, 4+3:+25/392
+  KPS_third_pocket:
+    lex: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+6:+27/784, 2+5:+1543/25872, 3+4:-23/6468
+    opposite_pairs: scores=(3, 1, 1, 1), c3=1, scc=(3, 1), HP=3; pair balances 1+2:+465/4312, 3+4:-23/6468, 5+6:-89/6468
+    path_then_chords: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+3:+53/2352, 4+5:-2/1617, 6+2:+597/8624
+    face_then_apex: scores=(3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1), HP=1; pair balances 1+6:+27/784, 2+5:+1543/25872, 4+3:-23/6468
+
+Six-sector vertex tournaments
+  vertices are missed sectors 1..6; pairwise gauges use exact packet values
+  B14_top01: sector packets=('1921/5145', '4867/10290', '311/1715', '1551/3430', '335/1029', '281/1029')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+  B14_top02: sector packets=('34616/56595', '6086/18865', '25429/56595', '4582/11319', '10184/18865', '1146/2695')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+  B14_top03: sector packets=('944/1715', '2168/5145', '185/343', '2/5', '478/1029', '1919/5145')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+  B14_top04/B13_same_sign_packet: sector packets=('132/343', '591/1715', '303/1715', '1481/3430', '869/1715', '326/1715')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+  B14_top05: sector packets=('31693/66885', '6982/22295', '33422/66885', '8998/22295', '5647/13377', '29704/66885')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+  B14_top06: sector packets=('4541/6860', '435/686', '786/1715', '3761/6860', '3377/6860', '421/6860')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 4, 3, 3, 1, 0), c3=2, scc=(4, 1, 1), HP=5, ties=3
+    absolute_opposite: scores=(4, 4, 3, 3, 1, 0), c3=2, scc=(4, 1, 1), HP=5, ties=3
+  B14_top07: sector packets=('138/385', '17673/37730', '1/7', '145/343', '195/539', '779/5390')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+  B14_top08: sector packets=('141179/339570', '105407/339570', '15107/33957', '78037/339570', '10783/33957', '44039/169785')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+  B14_top09: sector packets=('542/1715', '251/686', '877/3430', '239/686', '16/49', '711/3430')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+  B14_top10: sector packets=('864/1715', '2132/5145', '1208/5145', '436/1029', '2603/5145', '72/245')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+  B14_top11: sector packets=('1891/3430', '673/1372', '794/1715', '1693/3430', '193/686', '1339/3430')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=3
+    absolute_opposite: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=3
+  B14_top12: sector packets=('1804/5145', '2096/5145', '2468/5145', '20/49', '76/245', '706/1715')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+  HYP2675_true_wide_base: sector packets=('2431/5145', '2222/5145', '503/1029', '2368/5145', '478/1029', '1276/5145')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+  HYP2671_dyadic_block: sector packets=('134/245', '233/490', '12/35', '37/98', '43/70', '108/245')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+  HYP2672_doubled_odd_tail: sector packets=('2956/4459', '36003/75803', '135379/303212', '153605/303212', '1759/6188', '246367/303212')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=45, ties=3
+  B14_odd_near_AP_probe: sector packets=('32405/147147', '47189/147147', '-694/13377', '50228/147147', '34127/147147', '3825/49049')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+  B14_even_AP_boundary_probe: sector packets=('578/1715', '-132/1715', '38/1029', '116/1029', '62/343', '1412/5145')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(4, 3, 2, 2, 2, 2), c3=7, scc=(6,), HP=33, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=37, ties=3
+  nonshell_warning: sector packets=('23/245', '29/245', '4/49', '29/245', '23/245', '6/49')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=2
+    cyclic_pair_sum: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+  consec8_w10: sector packets=('18/343', '307/2058', '-25/686', '76/1029', '2/343', '-58/1029')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=31, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+  mixed_squarefree_probe: sector packets=('127069/735735', '-170505/1667666', '140509/833833', '-1349/9163', '1248818/12507495', '187822/4169165')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+  HYP2675_boundary_leader_base: sector packets=('41/2744', '5/343', '375/2744', '-25/343', '269/2744', '-67/1372')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(3, 3, 3, 3, 2, 1), c3=7, scc=(6,), HP=37, ties=0
+    opposite_compensated: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=33, ties=3
+  wide_two_cluster_probe: sector packets=('1367/20832', '2183/38192', '-5461/76384', '34589/229152', '-271/28644', '-5059/114576')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(4, 3, 2, 2, 2, 2), c3=7, scc=(6,), HP=37, ties=0
+    opposite_compensated: scores=(3, 3, 3, 2, 2, 2), c3=8, scc=(6,), HP=41, ties=3
+    absolute_opposite: scores=(4, 3, 3, 2, 2, 1), c3=6, scc=(6,), HP=29, ties=3
+  KPS_third_pocket: sector packets=('45/1232', '615/8624', '-181/12936', '45/4312', '-151/12936', '-9/4312')
+    scalar_signed_rank: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=0
+    cyclic_pair_sum: scores=(4, 3, 3, 3, 2, 0), c3=4, scc=(5, 1), HP=15, ties=0
+    opposite_compensated: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=3
+    absolute_opposite: scores=(5, 4, 3, 2, 1, 0), c3=0, scc=(1, 1, 1, 1, 1, 1), HP=1, ties=3
+
+Family-level contrasts
+  B14_top12: count=12, signs={'++++++': 12}
+    K4 lex types={((3, 2, 1, 0), 0, (1, 1, 1, 1), 1): 12}
+    cyclic-pair sector types={((3, 3, 3, 2, 2, 2), 8, (6,), 41): 12}
+  HYP2675_wide_branch: count=2, signs={'++++++': 1, '+++-+-': 1}
+    K4 lex types={((3, 2, 1, 0), 0, (1, 1, 1, 1), 1): 1, ((3, 1, 1, 1), 1, (3, 1), 3): 1}
+    cyclic-pair sector types={((3, 3, 3, 2, 2, 2), 8, (6,), 41): 1, ((3, 3, 3, 3, 2, 1), 7, (6,), 37): 1}
+  dyadic_doubled_resonances: count=2, signs={'++++++': 2}
+    K4 lex types={((3, 2, 1, 0), 0, (1, 1, 1, 1), 1): 2}
+    cyclic-pair sector types={((3, 3, 3, 2, 2, 2), 8, (6,), 41): 2}
+  other_named: count=6, signs={'++-+++': 1, '+-++++': 1, '++++++': 1, '++-++-': 1, '+-+-++': 1, '++-+--': 1}
+    K4 lex types={((2, 2, 1, 1), 2, (4,), 5): 1, ((2, 2, 2, 0), 1, (3, 1), 3): 2, ((3, 2, 1, 0), 0, (1, 1, 1, 1), 1): 3}
+    cyclic-pair sector types={((3, 3, 3, 2, 2, 2), 8, (6,), 41): 2, ((4, 3, 2, 2, 2, 2), 7, (6,), 33): 1, ((4, 3, 3, 2, 2, 1), 6, (6,), 31): 1, ((4, 3, 3, 2, 2, 1), 6, (6,), 29): 1, ((4, 3, 2, 2, 2, 2), 7, (6,), 37): 1}
+  KPS_third_pocket: count=1, signs={'++-+--': 1}
+    K4 lex types={((3, 2, 1, 0), 0, (1, 1, 1, 1), 1): 1}
+    cyclic-pair sector types={((4, 3, 3, 3, 2, 0), 4, (5, 1), 15): 1}
+
+Hypothesis triage
+  PASS H1: B14 near-speed leaders collapse to one transitive K4 sign type.
+    Reading: the K4 sign quotient locates the same-sign pocket but cannot separate its rows.
+  PASS H2: the KPS third-pocket sign word has multiple K4 types under sector-edge relabelling.
+    Exact type distribution: 10x(scores=(2, 2, 1, 1),c3=2,scc=(4,),HP=5); 6x(scores=(3, 2, 1, 0),c3=0,scc=(1, 1, 1, 1),HP=1); 2x(scores=(2, 2, 2, 0),c3=1,scc=(3, 1),HP=3); 2x(scores=(3, 1, 1, 1),c3=1,scc=(3, 1),HP=3)
+  PASS H3: HYP-2675 boundary and true-wide rows split before magnitudes.
+    boundary sign=+++-+-; true-wide sign=++++++
+  WARN H4: KPS shares an opposite-compensated sector type with a B14 leader.
+  PASS H5: magnitudes inside the same `++++++` chamber create multiple sector-tournament types.
+    same-sign opposite-compensated type count=7
+
+Proof-route reading
+  1. K4 edge signs are a finite chamber coordinate: useful for detecting the ++++++ pocket,
+     but too lossy to prove cancellation by themselves.
+  2. Opposite K4 edge-pair sums are a better typed address for the user's positive/negative
+     prompt: they keep exact packet mass and expose cancellation before absolute values.
+  3. The six-sector vertex gauges turn a negative packet-pair total into an arc flip in a
+     fixed mod-7 cyclic tournament, so KPS-style cancellation becomes visible as topology.
+  4. The next sharp theorem should classify ++++++ rows by finite Ruzsa/Freiman model plus
+     opposite-pair packet balances; the complement should prove that a cyclic-pair arc flip
+     or small exact pair mass forces signed Erdos-Turan cancellation.
+  5. No LRC(14) proof is claimed here.
+PASS: packet tournament atlas complete.
