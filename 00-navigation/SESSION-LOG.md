@@ -84,6 +84,34 @@ uniform-tail proof should classify finite `++++++` alignments, then prove
 packet sign cancellation or small same-sign mass after the cutoff.  LRC(14) is
 not proved.
 
+**Incoming KPS integration after rebase (62fc2a58d / T914):** the second HYP-2674
+push rebased over KPS's finite-half and per-sector-Koksma commit.  Read the new
+script/output and filled the previously empty
+`05-knowledge/results/lrc14_ck_per-sector-koksma_kps-Sx-wf.out`.
+
+Key integration:
+
+```text
+finite half: max(E)<=14, k=8..12, zero p0>cap_k violations
+per-sector: w*Delta_w exact-{s} telescope verified
+BV bound:   w|Delta_w| <= (6/49)sum_s |R_s| <= (6/7)sigma(E')
+negative:   standalone bounded w|Delta_w| is false
+```
+
+The explicit unbounded diagnostic family is
+
+```text
+E'_M={0,1,2,3} union {M,M+1,M+2,M+3}, w=22M,
+w|Delta_w| ~ 0.08M.
+```
+
+This sharpens the HYP-2674 reading: packet alignment is the finite
+near-plateau obstruction, while very wide resonant rows should close through a
+joint plateau/Delta argument: bounded bases use `sigma(E')/w` decay after
+finite checking, and wide bases must be proved to have small plateau/p0
+directly.  LRC(14) is still not proved; the single remaining analytic route is
+now more structured.
+
 ## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
 
 Continued after HYP-2670 by asking what the "one open constant" actually is

@@ -201,7 +201,11 @@ The current route should be assembled in this order:
 5. For genuinely wide/multiscale far peels, prove the corrected HYP-2653d tail
    estimate
    `sup_{max(E')>B} Delta_w(E',w) <= cap_k-Q(k-1)`, with `B` likely near `20`
-   and a finite check below the cutoff.
+   and a finite check below the cutoff.  Incoming KPS per-sector work gives an
+   equivalent-looking joint route: bounded bases use the rigorous
+   `|Delta_w| <= (6/7)sigma(E')/w` decay, while wide bases should be proved to
+   have small plateau/p0 directly.  HYP-2674 supplies the bounded-near-plateau
+   packet-alignment subproblem for the finite same-sign rows.
 
 ## Tournament Analysis
 

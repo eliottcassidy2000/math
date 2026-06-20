@@ -58,6 +58,18 @@ the incoming HYP-2672/T911 shell-full tail-stratification stub.
   - Requested theorem: classify finite `++++++` alignments, then prove the
     post-cutoff tail has packet sign cancellation or small same-sign mass.
 
+- **KPS 62fc2a58d / T914 integration.**
+  - Finite half is now certified for `max(E)<=14`, `k=8..12`: zero
+    `p0>cap_k` violations.
+  - Per-sector telescope over exact singleton-missed runs is verified; full
+    sector-missed telescope is explicitly wrong.
+  - Rigorous bound: `w|Delta_w| <= (6/49)sum_s|R_s| <= (6/7)sigma(E')`.
+  - Standalone bounded `w|Delta_w|` is false via
+    `E'_M={0,1,2,3} union {M..M+3}, w=22M`.
+  - Requested theorem update: do not chase a scalar `C(k)`.  Prove the joint
+    route: bounded base plus large `w` closes by `sigma/w`; wide base closes by
+    small plateau/p0; HYP-2674 handles the bounded near-plateau `++++++` pocket.
+
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 
 This update records **HYP-2671/T910**, isolating the post-shell-gate open

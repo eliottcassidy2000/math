@@ -109,6 +109,70 @@ family has its only threatening spike at `s=4`, while the post-20 tail has
 more than `0.0929` absolute k=9 margin.  This supports HYP-2653d's empirical
 `B=20` safety as a finite-alignment cutoff, not a mysterious numerical cliff.
 
+## Incoming KPS Addendum
+
+After HYP-2674 was first pushed, incoming KPS work added the finite-half and
+per-sector-Koksma side of the same picture.
+
+Finite half:
+
+```text
+05-knowledge/results/lrc14_finite_half_span14_kps.out
+```
+
+certifies `p0(E)<=cap_k` for all primitive `E` with `max(E)<=14`,
+`k=8..12`, with zero violations.  For example:
+
+```text
+k=8:  sets=3431, maxp0=0.32721, cap=0.38146
+k=9:  sets=3003, maxp0=0.41616, cap=0.49426
+k=10: sets=2002, maxp0=0.50448, cap=0.60440
+```
+
+Per-sector Koksma:
+
+```text
+04-computation/lrc14_ck_per-sector-koksma_kps-Sx-wf.py
+05-knowledge/results/lrc14_ck_per-sector-koksma_kps-Sx-wf.out
+```
+
+proves and verifies the exact per-sector telescope
+
+```text
+w*Delta_w = sum_s sum_{[a,b] in exact-{s} runs}
+            [G0(w*b-s/7)-G0(w*a-s/7)].
+```
+
+It also verifies that the tempting full "sector-s-missed" telescope is wrong:
+cells with `|miss|>=2` are double-counted.  The rigorous Koksma/BV bound is
+
+```text
+w|Delta_w| <= (6/49) sum_s |R_s| <= (6/7) sigma(E').
+```
+
+Most importantly, KPS proves that any standalone `w|Delta_w|` constant is
+false: for
+
+```text
+E'_M={0,1,2,3} union {M,M+1,M+2,M+3}, w=22M,
+```
+
+the diagnostic `w|Delta_w|` grows like `0.08M`.  This does not kill the LRC14
+route because the wide base has small plateau/p0.  The real analytic closer is
+a joint statement:
+
+```text
+p0(E)=Plat(E')+Delta_w,
+wide E' => small Plat/p0,
+bounded E' + large w => sigma(E')/w decay.
+```
+
+So HYP-2674 should be read as the bounded-near-plateau packet-alignment
+subproblem.  It classifies why the finite pocket and the HYP-2671 dyadic row
+are dangerous.  The very wide resonant branch may have huge `w*Delta_w`, but it
+is routed through the KPS joint plateau/sigma argument rather than through a
+standalone packet-alignment cap.
+
 ## Proof Route
 
 1. Define the one-missed-sector packet sign word
@@ -119,8 +183,9 @@ more than `0.0929` absolute k=9 margin.  This supports HYP-2653d's empirical
 3. Prove a tail lemma after `max(E')>B`:
    either some packet is nonpositive, giving signed cancellation, or the
    same-sign packet mass has the dyadic-tail bound seen above.
-4. Splice this with HYP-2673: finite pocket below `B`, shell-full `p1` taxes
-   where applicable, and uniform `Delta_w` tail above `B`.
+4. Splice this with HYP-2673 and the KPS per-sector result: finite pocket below
+   `B`, shell-full `p1` taxes where applicable, bounded-base `sigma(E')/w`
+   decay, and wide-base small-plateau control.
 
 ## Tournament Analysis
 
@@ -159,5 +224,7 @@ runner labels.
 ## Honest Status
 
 LRC(14) is not proved.  HYP-2674 is a proof-route improvement: it turns the
-corrected uniform `Delta_w` constant into a finite same-sign alignment problem
-plus a signed tail problem, and explains why `B=20` is plausible as a cutoff.
+near-plateau part of the corrected `Delta_w` problem into a finite same-sign
+alignment problem plus a signed tail problem.  Incoming KPS per-sector work
+adds the complementary wide-base route: huge `w*Delta_w` resonances are harmless
+when the plateau itself is small.

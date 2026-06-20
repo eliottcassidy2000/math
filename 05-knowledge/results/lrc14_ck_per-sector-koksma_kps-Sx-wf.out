@@ -1,0 +1,74 @@
+==============================================================================
+(0) VERIFY the exact reduction AND the per-sector telescope identity (THM-PSK-1)
+==============================================================================
+  E'=[0, 1, 2, 3, 4, 5, 6, 7] w=30:  w(p0-Plat)=19/343  engine=19/343  telescope=19/343  [ALL MATCH]
+  E'=[0, 1, 2, 3, 4, 5, 6, 7] w=23:  w(p0-Plat)=-72/343  engine=-72/343  telescope=-72/343  [ALL MATCH]
+  E'=[0, 1, 2, 3, 4, 5, 7] w=19:  w(p0-Plat)=449/10290  engine=449/10290  telescope=449/10290  [ALL MATCH]
+  E'=[0, 1, 3, 5, 7, 9, 10, 11] w=90:  w(p0-Plat)=1370/539  engine=1370/539  telescope=1370/539  [ALL MATCH]
+  E'=[0, 1, 2, 30, 31, 32, 60, 61] w=62:  w(p0-Plat)=2804017/717360  engine=2804017/717360  telescope=2804017/717360  [ALL MATCH]
+
+==============================================================================
+(1b) CAUTION verified: the FULL sector-s-missed telescope (|miss|>=1) is WRONG
+==============================================================================
+   (it would count cells with |miss|>=2 multiply; only EXACTLY-{s} runs are correct)
+   E'=[0, 1, 2, 3, 4, 5, 6, 7] w=30: correct(exact-{s})=+0.05539  WRONG(full s-missed)=-0.03790  differ=True
+   E'=[0, 1, 3, 5, 7, 9, 10, 11] w=90: correct(exact-{s})=+2.54174  WRONG(full s-missed)=+1.82825  differ=True
+
+==============================================================================
+(2) THM-PSK-2: per-sector Koksma bound  w|Delta_w| <= (6/49) sum_s|R_s| <= (6/7) sigma(E')
+==============================================================================
+  E'=[0, 1, 2, 3, 4, 5, 6, 7] w=30:
+     w|Delta|=0.05539   (6/49)*sum|R_s|=3.42857  (sum|R_s|=28)   (6/7)sigma=24.0000
+     checks: w|Delta|<=(6/49)sum|R_s| : True ;  (6/49)sum|R_s|<=(6/7)sigma : True
+  E'=[0, 1, 3, 5, 7, 9, 10, 11] w=90:
+     w|Delta|=2.54174   (6/49)*sum|R_s|=7.34694  (sum|R_s|=60)   (6/7)sigma=39.4286
+     checks: w|Delta|<=(6/49)sum|R_s| : True ;  (6/49)sum|R_s|<=(6/7)sigma : True
+  E'=[0, 1, 2, 30, 31, 32, 60, 61] w=62:
+     w|Delta|=3.90880   (6/49)*sum|R_s|=26.93878  (sum|R_s|=220)   (6/7)sigma=186.0000
+     checks: w|Delta|<=(6/49)sum|R_s| : True ;  (6/49)sum|R_s|<=(6/7)sigma : True
+  E'=[0, 1, 2, 3, 100, 101, 102, 103] w=2200:
+     w|Delta|=7.86593   (6/49)*sum|R_s|=66.48980  (sum|R_s|=543)   (6/7)sigma=353.1429
+     checks: w|Delta|<=(6/49)sum|R_s| : True ;  (6/49)sum|R_s|<=(6/7)sigma : True
+
+==============================================================================
+(3) THM-PSK-3: C(k)=sup_{E',w} w|Delta_w| is UNBOUNDED  (literal target is FALSE)
+==============================================================================
+   Family E'_M={0,1,2,3}u{M,..,M+3}, w_M=22M resonant (= max E), w_M|Delta| ~ 0.08 M:
+     M=  10 w=  220:  w|Delta|=  1.1800  w|Delta|/M=0.1180  w=maxE:True  primitive:True
+     M=  20 w=  440:  w|Delta|=  2.0450  w|Delta|/M=0.1022  w=maxE:True  primitive:True
+     M=  40 w=  880:  w|Delta|=  3.4558  w|Delta|/M=0.0864  w=maxE:True  primitive:True
+     M=  80 w= 1760:  w|Delta|=  7.9395  w|Delta|/M=0.0992  w=maxE:True  primitive:True
+     M= 160 w= 3520:  w|Delta|= 12.4186  w|Delta|/M=0.0776  w=maxE:True  primitive:True
+     M= 320 w= 7040:  w|Delta|= 25.4355  w|Delta|/M=0.0795  w=maxE:True  primitive:True
+   ==> sup over E' at FIXED k=9 is +inf; no  C(k)<=c*k  can hold.
+
+==============================================================================
+(4) RESONANCE MECHANISM: collapse of {w*breakpoint mod 1} kills Koksma cancellation
+==============================================================================
+     E'=[0, 1, 2, 3, 100, 101, 102, 103] w=2200 [RESONANT 22*100]: w|Delta|=7.8659  #distinct(w*BP mod1)=1771/2815
+     E'=[0, 1, 2, 3, 100, 101, 102, 103] w=2203 [non-resonant]: w|Delta|=0.7105  #distinct(w*BP mod1)=2814/2815
+     E'=[0, 1, 2, 3, 100, 101, 102, 103] w=317 [non-resonant small]: w|Delta|=0.1568  #distinct(w*BP mod1)=2814/2815
+   ==> at the resonance the residues collapse (1771<<2814) and w|Delta| JUMPS UP (7.87 vs ~1.4-2.7);
+       the per-sector alternating signs no longer cancel.  This is why no uniform C exists.
+
+==============================================================================
+(5) THM-PSK-4: the JOINT closing  p_0(E)=Plat(E')+Delta_w  (the route still closes)
+==============================================================================
+   cap_9 = 1979/4004 = 0.49426;  Q(8)=max Plat = 621/1715 = 0.36210
+   (5a) bounded base branch: max(E')<=B => sigma<=(k-1)B, |Delta_w|<=(6/7)(k-1)B/w -> 0:
+      E'=[0, 1, 2, 3, 4, 5, 6, 7]: Plat=0.3621 sigma=28  far w>181.6 closes via sigma-bound (bounded w<=that -> finite check)
+      E'=[0, 1, 2, 3, 4, 5, 6, 12]: Plat=0.2534 sigma=33  far w>117.4 closes via sigma-bound (bounded w<=that -> finite check)
+   (5b) wide base branch: direct p_0 smallness.  Exact scan of wide primitive k=9 sets:
+      scanned 1972 wide k=9 sets: max p_0=0.18927 at [0, 1, 2, 5, 10, 11, 14, 17, 20]
+      margin to cap_9 = 0.30498  (>> 0; wide branch closes with huge margin)
+
+   CONCLUSION: tight sets are bounded near-AP (finite check, done to span 16);
+   far/wide sets close by EITHER (5a) the sigma-bound at large far w OR (5b) direct
+   p_0 smallness.  The per-sector-Koksma analysis PROVES the sigma-bound (THM-PSK-2) and
+   explains (THM-PSK-3/4) why a standalone uniform C(k) cannot exist.
+
+==============================================================================
+STATUS: per-sector telescope identity PROVED+verified; sigma-bound PROVED via per-sector
+Koksma; literal 'C(k)<=c*k' DISPROVED (unbounded); route closes by the JOINT plateau/Delta
+argument, whose remaining rigorous obligation is the (k-1)-extremal 'wide => small p_0'.
+==============================================================================
