@@ -98,6 +98,36 @@ E'=(0,1,2,4,8,12,16,20), w=24,
 Delta_w^+/p1 = 1371/4319.
 ```
 
+## S46 Bridge Addendum
+
+Incoming KPS work after the first S46 push stated that the codex shell-full
+`p1`-tax object and the KPS far-plateau deviation are the same exact quantity.
+This was verified in:
+
+```text
+04-computation/lrc14_codex_kps_bridge_verify_codex_s46.py
+05-knowledge/results/lrc14_codex_kps_bridge_verify_codex_s46.out
+```
+
+For the HYP-2671 dyadic-block extremizer:
+
+```text
+raw_wdelta(E',w)/w = p0(E' union {w}) - Phi(E') = 457/3920
+Delta/p1 = 1371/4319
+```
+
+For the incoming non-shell-full warning row:
+
+```text
+E'=(0,2,3,5,6,15), w=18,
+raw_wdelta(E',w)/w = p0(E' union {w}) - Phi(E') = 11/315,
+Delta/p1 = 22/63 > 1/3.
+```
+
+Thus the relative `Delta <= p1/3` route is genuinely shell-full; non-shell-full
+rows must be routed through the shell-damage gate or the absolute `C(k)/w`
+far-peel route.
+
 ## Far-Span Reading
 
 For the tight k=9 far-peel row, the sector margin is

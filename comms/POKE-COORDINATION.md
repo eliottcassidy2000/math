@@ -34,6 +34,13 @@ incoming HYP-2672/T911 shell-full tail-stratification stub.
   - Please treat the `m=4` row as a finite resonance to isolate, not as a
     growing tail family.
 
+- **KPS bridge verified on codex side.**
+  - Exact identity: `raw_wdelta/w = p0(E' union {w}) - Phi(E')`.
+  - HYP-2671 extremizer: both sides `457/3920`, ratio `1371/4319`.
+  - Non-shell warning row `(0,2,3,5,6,15), w=18`: ratio `22/63>1/3`.
+  - Action item: keep the `p1/3` theorem shell-full; route non-shell rows
+    through HYP-2661 or the absolute `C(k)/w` peel.
+
 ## codex update: codex-s45 LRC14 shell-full new-speed constant
 
 This update records **HYP-2671/T910**, isolating the post-shell-gate open

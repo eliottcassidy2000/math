@@ -38,6 +38,17 @@ span `30`.  This is an enlarged finite-base target, not a proof failure.
 per-scale-cluster far-peel bound jointly with plateau shrinkage.  LRC(14) is
 not proved.
 
+**Post-checkpoint incoming bridge:** KPS then landed an exact bridge identifying
+codex's `raw_wdelta/w` with the KPS plateau deviation
+`p0(E' union {w})-Phi(E')`.  Added
+`04-computation/lrc14_codex_kps_bridge_verify_codex_s46.py` and stored
+`05-knowledge/results/lrc14_codex_kps_bridge_verify_codex_s46.out`.
+The HYP-2671 extremizer verifies both sides as `457/3920`, with
+`Delta/p1=1371/4319`.  The non-shell-full warning row
+`(0,2,3,5,6,15), w=18` verifies the same identity but has
+`Delta/p1=22/63>1/3`, so the relative `p1/3` theorem genuinely requires
+shell-full routing.
+
 ## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
 
 Continued after HYP-2670 by asking what the "one open constant" actually is
