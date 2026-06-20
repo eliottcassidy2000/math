@@ -14,6 +14,7 @@ related:
   - HYP-2639
   - HYP-2646
   - THM-541
+  - THM-542
   - HYP-2653
   - HYP-2654
   - OPEN-Q-108
@@ -155,6 +156,11 @@ AP row.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` already has
 `3859/420420 = 7/858 + 1/980 < 426/35035`.  It keeps the old drop-6 mouth
 components undamaged and only adds new mouth mass.  The target is therefore
 boundary-owner mouth retention, not exact-row rigidity.
+
+THM-542 closes the first infinite subcase of this corrected target: for every
+one-tail AP-drop-6 row `({1,...,13}\{6,h}) union {r}`, the only row below
+`426/35035` is the `(h,r)=(10,20)` tail, and it keeps old mouth mass exactly
+`7/858`.
 
 3. Compose with the far-element plateau recursion:
 

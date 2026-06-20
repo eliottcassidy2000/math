@@ -181,6 +181,9 @@ exact-row rigidity.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` lies below
 `426/35035`, but it preserves the four drop-6 mouth intervals and adds new
 mouth mass `1/980`.
 
+THM-542 proves that this is the only below-cutoff row in the entire one-tail
+AP-drop-6 family.
+
 ## Tournament Analysis
 
 Vertices: the deleted AP-window positions `e=1..13`.

@@ -5,6 +5,7 @@ status: OPEN; structured AP-tail evidence
 source: codex-2026-06-19-S34
 depends_on:
   - THM-541
+  - THM-542
   - HYP-2651
 related:
   - HYP-2650
@@ -99,6 +100,29 @@ The first row at the AP one-hole second value is still the endpoint drop:
 ```
 
 with `426/35035`, and it has no old drop-6 survivor mass.
+
+## One-Tail Subcase Closed
+
+THM-542 proves the infinite one-tail AP-drop-6 subcase exactly.  For
+
+```text
+C_{h,r} = ({1,...,13} \ {6,h}) union {r},  h != 6, r >= 14,
+```
+
+the only row below `426/35035` is `(h,r)=(10,20)`, with
+
+```text
+meas(G_C) = 3859/420420 = 7/858 + 1/980.
+```
+
+The proof uses a rational periodic-comb cutoff:
+
+```text
+meas(G_h \ D_r) >= (6/7)meas(G_h) - 2c_h/(7r),
+```
+
+then checks only `863` exact finite rows below the resulting cutoffs.  This
+turns the first AP-tail mouth-retention statement from evidence into a theorem.
 
 ## Refined Proof Target
 
