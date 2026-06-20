@@ -1,0 +1,76 @@
+S57 local tile-address recurrence verifier
+address(tile=(a,b))=(beta=a, tau=a+b-1)
+half side uses KPS convention: kept iff a+b<=n+1, equivalently tau<=n
+VERIFIED: address bijection, mirror formula, and canonical reps n=2..16
+VERIFIED: local full IE weights n=4..16, where the shifted-triangle cover is nondegenerate
+INCREMENT LEDGER
+ n full_new fixed_crossing half_new full_bits half_bits
+ 2        0              0        0         0         0
+ 3        1              1        1         1         1
+ 4        2              1        1         3         2
+ 5        3              2        2         6         4
+ 6        4              2        2        10         6
+ 7        5              3        3        15         9
+ 8        6              3        3        21        12
+ 9        7              4        4        28        16
+10        8              4        4        36        20
+11        9              5        5        45        25
+12       10              5        5        55        30
+13       11              6        6        66        36
+
+LAYER IDENTITIES
+  verified n=2..14:
+  full_count(n)=sum_{beta<=n}(beta-2)
+  half_count(n)=sum_{tau<=n}floor((tau-1)/2)
+
+LOCAL TILE TIMELINES
+  tile=(7, 3) addr=(beta=7,tau=9) lower=3 gap/c3=3 oneflip_H=9
+    n= 7 parity=odd  side=discarded rep=(5, 1) rep_addr=(5, 5) full_word=BC
+    n= 8 parity=even side=discarded rep=(6, 2) rep_addr=(6, 7) full_word=ABC
+    n= 9 parity=odd  side=fixed     rep=(7, 3) rep_addr=(7, 9) full_word=ABC
+    n=10 parity=even side=kept      rep=(7, 3) rep_addr=(7, 9) full_word=ABC
+    n=11 parity=odd  side=kept      rep=(7, 3) rep_addr=(7, 9) full_word=ABC
+  tile=(9, 1) addr=(beta=9,tau=9) lower=1 gap/c3=7 oneflip_H=129
+    n= 9 parity=odd  side=fixed     rep=(9, 1) rep_addr=(9, 9) full_word=B
+    n=10 parity=even side=kept      rep=(9, 1) rep_addr=(9, 9) full_word=AB
+    n=11 parity=odd  side=kept      rep=(9, 1) rep_addr=(9, 9) full_word=AB
+  tile=(9, 6) addr=(beta=9,tau=14) lower=6 gap/c3=2 oneflip_H=5
+    n= 9 parity=odd  side=discarded rep=(4, 1) rep_addr=(4, 4) full_word=BC
+    n=10 parity=even side=discarded rep=(5, 2) rep_addr=(5, 6) full_word=ABC
+    n=11 parity=odd  side=discarded rep=(6, 3) rep_addr=(6, 8) full_word=ABC
+    n=12 parity=even side=discarded rep=(7, 4) rep_addr=(7, 10) full_word=ABC
+    n=13 parity=odd  side=discarded rep=(8, 5) rep_addr=(8, 12) full_word=ABC
+    n=14 parity=even side=fixed     rep=(9, 6) rep_addr=(9, 14) full_word=ABC
+
+N=9 ADDRESS SNAPSHOT
+  full IE word histogram={'A': 1, 'AB': 5, 'ABC': 10, 'AC': 5, 'B': 1, 'BC': 5, 'C': 1}
+  mirror side histogram={'discarded': 12, 'fixed': 4, 'kept': 12}
+  crossing layers through n=9: {3: 1, 4: 1, 5: 2, 6: 2, 7: 3, 8: 3, 9: 4}
+  first half-carrier addresses:
+    tile=(3, 1) beta=3 tau=3 gap=1 side=kept  full_word=A
+    tile=(4, 1) beta=4 tau=4 gap=2 side=kept  full_word=AB
+    tile=(4, 2) beta=4 tau=5 gap=1 side=kept  full_word=AC
+    tile=(5, 1) beta=5 tau=5 gap=3 side=kept  full_word=AB
+    tile=(5, 2) beta=5 tau=6 gap=2 side=kept  full_word=ABC
+    tile=(5, 3) beta=5 tau=7 gap=1 side=kept  full_word=AC
+    tile=(6, 1) beta=6 tau=6 gap=4 side=kept  full_word=AB
+    tile=(6, 2) beta=6 tau=7 gap=3 side=kept  full_word=ABC
+    tile=(6, 3) beta=6 tau=8 gap=2 side=kept  full_word=ABC
+    tile=(6, 4) beta=6 tau=9 gap=1 side=fixed full_word=AC
+    tile=(7, 1) beta=7 tau=7 gap=5 side=kept  full_word=AB
+    tile=(7, 2) beta=7 tau=8 gap=4 side=kept  full_word=ABC
+
+TOURNAMENT ANALYSIS: address layers, not runners
+  pairwise observable=(shared predicates, predicate count, declaration order)
+  switch/gauge=larger observable orients the edge
+  scores={'birth_strip': 6, 'crossing_spine': 5, 'mirror_orbit': 4, 'gap_root': 3, 'endpoint_score': 2, 'cycle_packet': 1}
+  directed_3cycles=0
+  tie Hamiltonian path=birth_strip > crossing_spine > mirror_orbit > gap_root > endpoint_score > cycle_packet > complement_even_dp
+
+SYNTHESIS
+  full recurrence clock: beta=a, with beta-layer size beta-2.
+  half recurrence clock: tau=a+b-1, with crossing-layer size floor((tau-1)/2).
+  combined address (beta,tau) recovers the tile and its one-flip root facts:
+    b=tau-beta+1, gap=c3=2*beta-tau-2, H_oneflip=1+2^gap.
+  dynamic payoff: n->n+1 adds n-1 full strip bits but only floor(n/2)
+    new independent half-quotient orbit bits for complement-even invariants.

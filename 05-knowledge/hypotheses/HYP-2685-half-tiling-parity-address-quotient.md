@@ -10,6 +10,8 @@ depends_on:
   - THM-442
   - THM-513
 related:
+  - THM-551
+  - HYP-2689
   - HYP-2660
   - HYP-2683
   - HYP-2684
@@ -73,6 +75,21 @@ This suggests a new OCF proof route: compute Walsh/OCF contributions by mirror
 orbits of interval roots, treating fixed-line roots separately.  The fixed line
 is the likely parity-root analogue of the tournament/even-graph bijection in
 HYP-2660.
+
+### Tile-address refinement
+
+THM-551 turns the quotient into a local coordinate system.  A tile `(a,b)` has
+address
+
+```text
+(beta,tau)=(a,a+b-1),
+```
+
+where `beta` is the full birth strip and `tau` is the half-tiling fixed-line
+crossing.  This refines the address-quotient claim: the half carrier is not
+only a global Burnside count, but a layer clock for individual interval roots.
+HYP-2689 asks whether complement-even invariant computations can update by the
+`tau=n` crossing layer before importing OCF/Hamiltonian-path packet data.
 
 ### Relation to `A+B+C-D-E-F+G` in LRC work
 

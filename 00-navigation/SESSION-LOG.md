@@ -36,6 +36,29 @@ on an API error; I independently re-verified its threads). NEW RESULTS:
 NEXT: OPEN-Q-109 (the base-HP/grid-sym lemma) would make HYP-2688 a theorem. Whether the codec's
 2x extends to a useful fingerprint for ML ranking pipelines (engineering roadmap). mac-mini's
 "Mode C n->n-3 Eisenstein" conjecture (cube-root reduction beside binary Cayley-Dickson).
+## codex-2026-06-20-S57 -- local tile-address recurrence -- THM-551/HYP-2689/T925
+
+User asked to combine the full tiling recurrence and the even/odd half-tiling
+recurrences to understand the recursive structure of a particular tile and to
+aim at more efficient computations as `n` grows.  Pulled first; incoming KPS
+and mac-mini work was directly relevant: `half_tiling_framework_kps.py` proves
+the reflection is a pure coordinate permutation and records HYP-2686/2687/2688,
+while mac-mini extended THM-549 with pronic/square shape and complement-even
+invariant savings.  Built on those rather than duplicating them.
+
+Added `04-computation/tile_address_recurrence_codex_s57.py` and stored
+`05-knowledge/results/tile_address_recurrence_codex_s57.out`.  The exact local
+address is `(beta,tau)=(a,a+b-1)` for tile `(a,b)`.  `beta` is the full
+birth-strip clock, `tau` is the half-tiling mirror-crossing clock, and the pair
+is bijective with inverse `(beta,tau)->(beta,tau-beta+1)`.  Full counts are
+`sum_{beta<=n}(beta-2)`; half counts are `sum_{tau<=n}floor((tau-1)/2)`.
+Reflection at size `n` sends `(beta,tau)` to `(n+beta-tau,2n-tau)`, so fixed
+line is exactly `tau=n`.  The address recovers THM-513 one-flip facts:
+`b=tau-beta+1`, `gap=c3=2beta-tau-2`, and `H=1+2^gap`.  Canonized this exact
+layer as THM-551 and opened HYP-2689/T925 for the DP program: complement-even
+invariants should update by the `tau=n` crossing layer (`floor((n-1)/2)` new
+orbit bits) rather than the full new strip (`n-2` bits), then attach OCF/H/root
+packet data after the address quotient.
 
 ## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-550/HYP-2685/T924
 
