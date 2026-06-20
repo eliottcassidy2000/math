@@ -1,0 +1,16 @@
+=== KNOWN ROWS: carry profile + exact lonely measure (verify the hint data) ===
+  drop-6 (THM-541): meas=7/858=0.008159  carry={1: 15, 3: 5, 5: 3, 7: 1, 9: 1, 11: 1, 13: 1}
+      delta_vs_drop6={}  >=thr2(426/35035)? False
+  one-tail exc (THM-543): meas=3859/420420=0.009179  carry={1: 15, 3: 5, 5: 5, 7: 1, 9: 1, 11: 1, 13: 1}
+      delta_vs_drop6={5: '+2'}  >=thr2(426/35035)? False
+  two-tail min (THM-544): meas=50189/3223220=0.015571  carry={1: 11, 3: 5, 5: 5, 7: 1, 9: 1, 11: 1, 13: 1, 23: 2}
+      delta_vs_drop6={1: '-4', 5: '+2', 23: '+2'}  >=thr2(426/35035)? True
+  drop-12 (AP 2nd): meas=426/35035=0.012159  carry={1: 15, 3: 3, 5: 3, 7: 1, 9: 1, 11: 1, 13: 1}
+      delta_vs_drop6={3: '-2'}  >=thr2(426/35035)? True
+
+  drop-6 mouth 7/858=0.008159; AP-2nd 426/35035=0.012159
+
+=== EXPLORE: does the carry profile determine whether meas < 426/35035 ? ===
+    scan two-tail rows (remove 2-3 holes, add 2 tails<=30), group by carry-delta signature
+    scanned 38896 two-tail rows; 0 below 426/35035:
+      NONE below threshold (consistent with THM-544).
