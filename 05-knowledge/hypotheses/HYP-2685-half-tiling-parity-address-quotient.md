@@ -1,9 +1,10 @@
 ---
 id: HYP-2685
 title: Half-tiling parity address quotient for tournament recursion and proof ledgers
-status: OPEN; THM-549 proves the carrier count, structural transfer remains exploratory
+status: OPEN; THM-550 proves the parity carrier count, structural transfer remains exploratory
 source: codex-2026-06-20-S56
 depends_on:
+  - THM-550
   - THM-549
   - THM-280
   - THM-442
@@ -28,7 +29,7 @@ data that survives mirror/complement folding:
 fixed-line tiles + one side of the mirror line.
 ```
 
-THM-549 proves the carrier count and the parity recurrences.  The hypothesis is
+THM-550 proves the carrier count and the parity recurrences.  The hypothesis is
 that this quotient should be used as an address layer before scalarizing
 tournament or LRC-style proof states.
 
@@ -45,7 +46,7 @@ THM-442 identifies the full tiling recursion
 A+B+C-D-E-F+G
 ```
 
-as the third finite difference of the quadratic full-cell count.  THM-549 says
+as the third finite difference of the quadratic full-cell count.  THM-550 says
 the mirror-folded half carrier splits by parity:
 
 ```text
@@ -170,6 +171,6 @@ not as a replacement for full tiling enumeration.
 
 ## Status
 
-THM-549 proves the count and recurrence layer.  The OCF/even-graph/LRC transfers
+THM-550 proves the count and recurrence layer.  The OCF/even-graph/LRC transfers
 are open and should be tested by exact small-`n` scripts before being promoted
 to canon.

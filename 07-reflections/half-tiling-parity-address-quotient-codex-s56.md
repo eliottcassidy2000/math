@@ -38,8 +38,9 @@ important geometric fact: cardinality cancels them, but a proof should not.
 ## Repo Connections
 
 THM-442's full recursion `A+B+C-D-E-F+G` is the third finite difference of the
-full staircase.  THM-549 now says the half model is the mirror-folded parity
-refinement of that recursion.
+full staircase.  THM-550 now says the half model is the mirror-folded parity
+refinement of that recursion, complementing the concurrent THM-549
+complement-quotient theorem.
 
 This should not be applied blindly to Hamiltonian path counts.  THM-442 already
 warns that `H` is multiplicative/cycle-space, not cell-affine.  The right next

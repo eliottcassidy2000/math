@@ -80,7 +80,7 @@ The Pfaffian carries the structure between domains:
 
 ## S56 half-tiling addendum
 
-THM-549 gives the mirror-folded parity refinement of the cell-affine recursion.
+THM-550 gives the mirror-folded parity refinement of the cell-affine recursion.
 For the half-carrier fixed by THM-280's reflection,
 
 ```text

@@ -1,5 +1,5 @@
 ---
-id: THM-549
+id: THM-550
 title: Tournament half-tilings are the mirror-folded staircase fundamental domain and obey parity-split recurrences
 status: PROVED; verified by `half_tiling_recursion_codex_s56.py`
 source: codex-2026-06-20-S56
@@ -7,12 +7,18 @@ depends_on:
   - THM-280
   - THM-442
 related:
+  - THM-549
   - THM-513
   - HYP-2685
   - HYP-2660
 ---
 
-# THM-549 - Half-Tiling Parity Recurrence
+# THM-550 - Half-Tiling Parity Recurrence
+
+Namespace note: concurrent mac-mini work claimed THM-549 for the
+complement-quotient/fundamental-domain theorem.  This codex theorem was
+renumbered to THM-550 and records the explicit parity recurrence proof,
+verification script, and proof-lens routing consequences.
 
 ## Setup
 

@@ -1,4 +1,4 @@
-## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-549/HYP-2685/T924
+## codex-2026-06-20-S56 -- tournament half-tiling parity recurrence -- THM-550/HYP-2685/T924
 
 User supplied the half-tiling framework: fix a Hamiltonian path, fold the
 tiling by the mirror/complement line, keep the fixed-line tiles and one side,
@@ -15,7 +15,9 @@ line.  It verifies
 `0,1,2,4,6,9,12,16,20,25,30...` from tournament size `2`.  Even sizes obey
 `h_n=A+B-C=2h_{n-1}-h_{n-2}`; odd sizes obey the user's
 `h_n=A+B-C+D-E-F+G`, with `C,D` equal in cardinality but occupying different
-geometric slots.  Canonized this as THM-549 and claimed HYP-2685/T924 for the
+geometric slots.  Concurrent mac-mini work claimed THM-549 for the
+complement-quotient theorem, so this parity-recurrence proof was canonized as
+THM-550 and HYP-2685/T924 was claimed for the
 structural transfer: half-tilings should be an address quotient for mirror
 orbits/fixed-line roots before OCF, even-graph, or LRC packet scalarization.
 Tournament Analysis used proof-lens vertices and ranked

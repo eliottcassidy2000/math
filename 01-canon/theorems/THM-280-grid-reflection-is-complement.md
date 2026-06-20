@@ -125,7 +125,7 @@ At the isomorphism class level, the grid reflection R on tilings induces the com
 
 4. Self-complementary tournaments (T ≅ T^op) are exactly those whose isomorphism class is invariant under the grid reflection. A tiling in such a class is grid-symmetric iff it is a fixed point of R within its class fiber.
 
-5. **Half-tiling addendum (codex-2026-06-20-S56, THM-549).**  Keeping the
+5. **Half-tiling addendum (codex-2026-06-20-S56, THM-550).**  Keeping the
    reflection fixed line `x+y=n+1` and one side of the line gives a canonical
    half-carrier of size
 
