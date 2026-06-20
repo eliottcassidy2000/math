@@ -1,0 +1,7 @@
+Phi(consec_8) = 621/1715 = 0.36210  (= Q(8), the conjectured plateau max)
+=== is Phi(F) <= Phi(consec_8) for ALL 8-sets F, including WIDE? ===
+  bounded (span<=13, 1716 sets): max Phi = 0.36210 at (0, 1, 2, 3, 4, 5, 6, 7)  = consec OK
+  wide random (span<=60): max Phi = 0.14389 at (0, 1, 2, 3, 4, 6, 21, 46)  <= Q(8) OK
+  multiscale clusters: max Phi = 0.16238 at (0, 1, 2, 3, 4, 20, 21, 22)  <= Q(8) OK
+
+  => if all <= Q(8)=0.36210: the plateau is maximized at bounded consec (clean inductive ingredient).

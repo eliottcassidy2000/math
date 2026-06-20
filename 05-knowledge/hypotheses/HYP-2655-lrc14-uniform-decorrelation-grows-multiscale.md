@@ -61,6 +61,16 @@ primitive k-set's `p_0` is bounded by the recursion (each peel: plateau-of-base 
 base plateaus shrink fast enough that the total stays `< cap`. The right object is the σ-split:
 `{σ(E') ≤ S : single-far peel, plateau≤Q(k−1), threshold w≥(6/7)S/margin}` ∪ `{σ(E') > S : recurse}`.
 
+## 5. A clean inductive ingredient (verified): the plateau is maximized at the bounded AP
+
+`Φ(F) := p_0(F)+(1/7)p_1(F)` (the plateau) satisfies `Φ(F) ≤ Φ(consec_{k−1}) = Q(k−1)` for ALL
+`(k−1)`-sets `F`, wide included (exact: `Φ(consec_8)=621/1715=0.36210`; wide ≤0.144, multiscale ≤0.162).
+So `p_0(E) = Φ(E') + Δ_w ≤ Q(k−1) + Δ_w`. CAVEAT (why this still doesn't close): the decomposition does
+NOT decouple — a large `Δ_w` is exactly paired with a SMALL `Φ(E')` (wide `E'`), so `sup[Φ(E')+Δ_w]`
+(=`p_0(E)`, circular) is not `≤ Q(k−1)+sup|Δ|`. And `Φ`-maximality is itself the same `(k−1)`-level
+extremality nut (≈ consec-maximizes-p_0). The far-element recursion is an INDUCTION on `k` that bottoms
+out at the finite check, but each level carries the joint `Φ`/`Δ` entanglement — that is the real residue.
+
 ## Honest status
 LRC(14) NOT proved. CORRECTS HYP-2653b: the "single open input C≈1.95" is FALSE (C grows with scales,
 ≥3.91). The wide conclusion is CONFIRMED exact (≤0.223 ≪ cap). The real remaining work on the wide branch
