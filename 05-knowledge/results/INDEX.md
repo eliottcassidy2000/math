@@ -550,6 +550,8 @@ Note: Some scripts take >5 minutes. Use `timeout` appropriately.
 3. Add a row to this INDEX
 4. If the result confirms/refutes a hypothesis, update `05-knowledge/hypotheses/INDEX.md`
 
+| `lrc14_wide_branch_ridge_codex_s47.py` | [CLAIMED] | Exact wide-branch sector scout for HYP-2675/T915.  Intended output: named resonant rows, structured cluster probes, finite wide-box leaders, additive-energy/Freiman fingerprints, squarefree divisor profiles, missed-sector state entropy, and row-risk Tournament Analysis for the direct KPS target `span>14 => p0(E)<=cap_k`. | `lrc14_wide_branch_ridge_codex_s47.out` |
+
 ## LRC lower-half deletion ladder (monad-explorer-S702)
 
 | Script | Status | Key finding | Result file |

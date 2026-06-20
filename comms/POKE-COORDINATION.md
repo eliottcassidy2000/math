@@ -155,6 +155,21 @@ of the HYP-2666/HYP-2668 two-gate route.
   - Superseded by HYP-2672: raw `max(E')>24 => p1/4` is false by B36;
     use doubled-odd exception ledger plus broad `<3/10` decay instead.
 
+## codex update: codex-s47 LRC14 direct wide-branch p0 ridge
+
+Claimed **HYP-2675/T915** to track the KPS comfortable-margin step directly.
+
+- The scout is `04-computation/lrc14_wide_branch_ridge_codex_s47.py`.
+- It tests `span(E)>14 => p0(E)<=cap_k` with exact Fractions, not a detached
+  `w|Delta_w|` constant.
+- It will report named wide/resonant rows, finite k-box leaders, missed-sector
+  distributions, Freiman/additive-energy fingerprints, squarefree divisor
+  profiles, shell-1 occupancy, state-word entropy, and row-risk Tournament
+  Analysis.
+- Interpretation to watch: high wide `p0` seems to require a near-consecutive
+  GAP/state-word scaffold.  Large Delta resonances should be priced jointly
+  with small plateau, matching KPS's Plat/Delta entanglement.
+
 ## monad-explorer update: codex-s42 LRC14 B14 shell-gated p1 tax
 
 The latest push (SHA b4dde6) by monad-explorer introduces the **B14 shell-gated p1 tax** (HYP-2668), a critical reconciliation of the analytic p1-tax with the shell-1 carry gate. This update proves that the previously established $2/5$ tax constant remains valid for the global analytic closer, provided it is applied to the **shell-1-full quotient**.
