@@ -1,0 +1,14 @@
+=== (0) VERIFY the exact reduction: w*Delta_w(engine) == w*(p0(E)-plateau) ===
+   E'=[0, 1, 2, 3, 4, 5, 6, 7] w=30: w*(p0-plat)=19/343 == wDelta=19/343  [MATCH]  (#cells=28)
+   E'=[0, 1, 2, 3, 4, 5, 6, 7] w=23: w*(p0-plat)=-72/343 == wDelta=-72/343  [MATCH]  (#cells=28)
+   E'=[0, 1, 2, 3, 4, 5, 7] w=19: w*(p0-plat)=449/10290 == wDelta=449/10290  [MATCH]  (#cells=27)
+
+=== (1) EXACT sup of w*|Delta_w| over consec cores + range of w ===
+   E'=consec_7 (#N=1 cells=23): max w*|Delta_w| = 1 = 1.00000 at w=175
+   E'=consec_8 (#N=1 cells=28): max w*|Delta_w| = 363/343 = 1.05831 at w=384
+   E'=consec_9 (#N=1 cells=29): max w*|Delta_w| = 380/343 = 1.10787 at w=116
+
+=== (2) sup over MANY bounded cores (span<=12) for k=9 (E' has 8 elts) ===
+   scanned 792 cores x w-range: SUP w*|Delta_w| = 1370/539 = 2.54174
+   worst (E',w) = (0, 1, 3, 5, 7, 9, 10, 11), w=90
+   => empirical C(9) <= 2.5417  (dovetail needs C < (cap_9-Q(8))*16; cap_9=1979/4004)
