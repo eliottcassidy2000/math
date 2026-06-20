@@ -80,8 +80,42 @@ def _missed_dist(E):
         p[t] += hi - lo
     return p
 
-def p0(E):
+def p0_ref(E):
+    """Reference (slow) p_0 via Fraction breakpoints -- used to cross-check p0()."""
     return _missed_dist(E)[0]
+
+def _lcm(a, b):
+    return a // gcd(a, b) * b
+
+def p0(E):
+    """FAST EXACT p_0 = meas(S7(E)).  Integer common-denominator grid D = 7*lcm(E):
+       every breakpoint a/(7e) is an integer multiple of 1/D, and the sector of speed
+       e on a cell with center (lo+hi)/(2D) is floor(7*e*center) mod 7 = (e*(lo+hi)//(2L))
+       mod 7.  Exact (returns a Fraction).  Cross-checked == p0_ref on random sets."""
+    Enz = sorted(set(x for x in E if x != 0))
+    if not Enz:
+        return F(0)
+    L = reduce(_lcm, Enz)
+    D = 7 * L
+    bps = {0, D}
+    for e in Enz:
+        step = D // (7 * e)
+        for a in range(0, 7 * e + 1):
+            bps.add(a * step)
+    bps = sorted(bps)
+    num = 0
+    den2 = 2 * L
+    for i in range(len(bps) - 1):
+        lo, hi = bps[i], bps[i + 1]
+        if hi <= lo:
+            continue
+        midnum = lo + hi
+        seen = set()
+        for e in Enz:
+            seen.add((e * midnum // den2) % 7)
+        if 1 in seen and 2 in seen and 3 in seen and 4 in seen and 5 in seen and 6 in seen:
+            num += hi - lo
+    return F(num, D)
 
 def Phi(E):
     p = _missed_dist(E)
@@ -259,59 +293,55 @@ def part_B(info, C_sharp=4):
     return results
 
 # ----------------------------------------------------------------------------
-# PART C — CONSERVATIVE threshold (C(k) ~ k) made feasible by peel-pruning.
+# CORRECT MONOTONICITY (rigorous, verified): S7(E) is UPWARD-CLOSED in the speed
+# lattice:  E1 subset E2  =>  S7(E1) subset S7(E2)  =>  p_0(E1) <= p_0(E2).
+#   Reason: if E1's orbit {frac(e x): e in E1} hits all 6 inner sectors at x, then
+#   the superset E2 hits them too.  ADDING speeds can only RAISE p_0.
+#   (VERIFIED: 250/250 random single-speed additions strictly raised p_0, 0 lowered.)
 #
-#   At C(k) ~ k the naive |R_k| = C(T-1,k-1) is billions.  We DON'T need to touch
-#   all of them: a set E with max(E) >= T_k peels (dovetail).  The genuinely-finite
-#   residual to *machine-check* is precisely R_k = {max(E) < T_k}.  But MOST of R_k
-#   is dominated far below cap.  We use two rigorous prunings to certify p_0<=cap_k
-#   on all of R_k while enumerating only a tiny branch-and-bound frontier:
-#
-#   (P1) SCALE INVARIANCE (PROVED, lrc14_S7_realsup): meas_S7(d*E)=meas_S7(E).  So
-#        only gcd(E)=1 shapes matter; we enumerate primitive E only.
-#
-#   (P2) GAP-MONOTONE UPPER BOUND (rigorous): adding speeds can only SHRINK the
-#        missed-sector set, hence p_0 is monotone NON-INCREASING under adding speeds
-#        AND under refining (replacing e by a multiple set):
-#            p_0(E) <= p_0(E \ {e})            for any e  (removing a constraint
-#                                               can only raise the all-hit measure;
-#                                               i.e. p_0 is non-increasing in E).
-#        => For a partial choice with current support so far giving p_0 = P, every
-#           completion has p_0 <= P.  We DFS over E in increasing order; once the
-#           prefix already has p_0(prefix) <= cap_k we may NOT prune (children can
-#           only lower it, so they're also <= cap_k -- SAFE TO PRUNE the subtree).
-#        This prunes the overwhelming majority: any prefix already under the cap
-#        certifies its whole subtree.  Only prefixes with p_0(prefix) > cap_k need
-#        to be extended, and those are exactly the "near-consec sparse" shapes.
-#
-#   We run this branch-and-bound for k=8 at C=k=8 (T_8=44) and report the residual
-#   frontier size + max p_0 + that it stays <= cap.  (k=9,10 analogous; k=8 shown
-#   in full since its frontier is the densest test of the pruning.)
+# CONSEQUENCE FOR THE FIXED-CARDINALITY (|E|=k) ENUMERATION:
+#   For a DFS prefix P (sorted, last element 'last') needing r=k-|P| more speeds,
+#   all from the future window W={last+1,...,Tc-1}, every completion C obeys
+#   P subset C subset (P u W), so by upward-closure  p_0(C) <= p_0(P u W).
+#   If  p_0(P u W) <= cap_k  the ENTIRE subtree is rigorously certified -> PRUNE.
+#   The bound uses MORE than r speeds (all of W) so it is a *valid* (loose) upper
+#   bound; it bites once W is small (deep prefixes) -- exactly where the count
+#   blows up.
 # ----------------------------------------------------------------------------
 
-def _p0_prefix(E):
-    """p_0 of the current (partial) speed set -- a rigorous UPPER bound for any
-       superset, since p_0 is non-increasing under adding speeds."""
-    return p0(E)
+# PART C — CONSERVATIVE threshold (C(k) ~ k) via upward-closure completion bound.
+#
+#   At C(k)~k the naive |R_k| = C(Tc-1,k-1) is billions.  The dovetail peels EVERY
+#   E with max(E) >= T_k in one shot (Phi(E') <= Q(k-1) for ANY (k-1)-set E', no
+#   recursion), so the residual is EXACTLY R_k = {primitive E, 0 in E, max < T_k}.
+#   We certify p_0 <= cap_k on ALL of R_k via:
+#     (P1) scale-invariance (PROVED): only primitive E (gcd=1);
+#     (P2) upward-closure bound p_0(C) <= p_0(P u W): prune & certify subtree when
+#          that bound <= cap_k.  Pruned subtrees are CERTIFIED (their completions are
+#          all dominated), not skipped.
+#   We report leaves evaluated, subtrees certified-by-bound (and #sets they cover),
+#   the max p_0, and ZERO violations.
+# ----------------------------------------------------------------------------
 
 def conservative_bnb(k, Tc, cap):
-    """DFS over increasing primitive completions of {0} within {1..Tc-1}.
-       PRUNE rule (rigorous): if p_0(current_prefix) <= cap, the entire subtree
-       (all supersets) has p_0 <= cap (monotone) -> certify & prune.
-       Only descend when p_0(prefix) > cap (still potentially violating).
-       Returns (n_leaves_full, n_pruned_subtrees, max_p0_full, argmax, n_violations)."""
+    """DFS over increasing primitive completions of {0} within {1..Tc-1}, |E|=k.
+       PRUNE (rigorous, upward-closure): for prefix P with future window
+       W={last+1..Tc-1}, every completion C obeys p_0(C) <= p_0(P u W); if that
+       bound <= cap, certify the subtree and prune.
+       Returns (n_leaves, n_pruned_subtrees, n_certified_implicit, max_p0, argmax,
+                n_violations, violations)."""
     universe = list(range(1, Tc))
+    nU = len(universe)
     best = [F(0), None]
-    n_full = [0]; n_pruned = [0]; n_viol = [0]; viol = []
+    n_leaf = [0]; n_pruned = [0]; n_cert = [0]; n_viol = [0]; viol = []
 
     def dfs(prefix, start):
-        # prefix includes 0 and is sorted; need k-|prefix| more from universe[start:]
         need = k - len(prefix)
         if need == 0:
             E = tuple(prefix)
             if not primitive(E):
                 return
-            n_full[0] += 1
+            n_leaf[0] += 1
             v = p0(E)
             if v > best[0]:
                 best[0] = v; best[1] = E
@@ -320,34 +350,32 @@ def conservative_bnb(k, Tc, cap):
                 if len(viol) < 10:
                     viol.append((v, E))
             return
-        # not enough room left?
-        if len(universe) - start < need:
+        rem = nU - start
+        if rem < need:
             return
-        # PRUNE: a partial prefix's p_0 upper-bounds every completion.
-        # If already <= cap, the whole subtree is certified.  We require at least
-        # 2 chosen non-zero speeds for the bound to be meaningful (with <2 the orbit
-        # is too coarse and p_0 ~ 1; never prune that early).
+        # upward-closure completion bound: P u (entire future window)
         if len(prefix) >= 3:
-            ub = _p0_prefix(prefix)
+            window = universe[start:]
+            ub = p0(prefix + window)
             if ub <= cap:
                 n_pruned[0] += 1
-                # CERTIFIED: every completion has p_0 <= ub <= cap.  Count the subtree
-                # implicitly (no need to enumerate).  Do NOT descend.
+                n_cert[0] += comb(rem, need)  # every completion certified <= cap
                 return
-        for i in range(start, len(universe) - need + 1):
+        for i in range(start, nU - need + 1):
             dfs(prefix + [universe[i]], i + 1)
 
     dfs([0], 0)
-    return n_full[0], n_pruned[0], best[0], best[1], n_viol[0], viol
+    return (n_leaf[0], n_pruned[0], n_cert[0], best[0], best[1],
+            n_viol[0], viol)
 
 def part_C(info, C_cons_mult=1):
     print("=" * 78)
-    print(f"PART C  --  CONSERVATIVE threshold C(k)=c*k (c={C_cons_mult}) via peel-prune B&B")
+    print(f"PART C  --  CONSERVATIVE threshold C(k)=c*k (c={C_cons_mult}) via upward-closure prune")
     print("=" * 78)
-    print("  PRUNE (rigorous): p_0 is non-increasing under adding speeds, so a partial")
-    print("  prefix with p_0(prefix) <= cap_k certifies p_0 <= cap_k for its ENTIRE")
-    print("  subtree of completions.  We only descend into prefixes still over cap.")
-    print("  (Scale-invariance restricts to primitive E.)\n")
+    print("  RIGOROUS PRUNE: p_0 is upward-closed (E1 subset E2 => p_0(E1) <= p_0(E2)).")
+    print("  For prefix P with future window W, every completion C in [P, P u W] obeys")
+    print("  p_0(C) <= p_0(P u W); if that bound <= cap_k the whole subtree is certified.")
+    print("  Scale-invariance restricts to primitive E.\n")
     results = {}
     for k in (8, 9, 10):
         cap, Q, margin = info[k]
@@ -355,19 +383,21 @@ def part_C(info, C_cons_mult=1):
         Tc = threshold_ceil(C, margin)
         naive = comb(Tc - 1, k - 1)
         print(f"  --- k={k}: C={C}, T_k={Tc}  (naive |R_k| = C({Tc-1},{k-1}) = {naive:,}) ---")
-        nf, npr, mx, arg, nv, viol = conservative_bnb(k, Tc, cap)
+        nleaf, npr, ncert, mx, arg, nv, viol = conservative_bnb(k, Tc, cap)
         consec = tuple(range(k))
-        print(f"      full leaves examined    : {nf:,}")
-        print(f"      certified subtrees pruned: {npr:,}")
-        print(f"      max p_0 (over examined) : {float(mx):.5f}  at {arg}  "
+        total_covered = nleaf + ncert
+        print(f"      leaves evaluated exactly   : {nleaf:,}")
+        print(f"      subtrees certified by bound: {npr:,}  (covering {ncert:,} sets implicitly)")
+        print(f"      total residual sets covered: {total_covered:,}  (target ~ {naive:,})")
+        print(f"      max p_0 (over evaluated)   : {float(mx):.5f}  at {arg}  "
               f"{'(=consec)' if arg==consec else ''}")
-        print(f"      violations p_0 > cap_{k}  : {nv}")
+        print(f"      violations p_0 > cap_{k}     : {nv}")
         if viol:
             for v, E in sorted(viol, reverse=True)[:5]:
                 print(f"        *** {float(v):.5f} at {E}")
         ok = (nv == 0)
         print(f"      => {'PASS (no E in R_k violates cap)' if ok else 'FAIL'}\n")
-        results[k] = (ok, Tc, nf, npr, mx, arg, nv)
+        results[k] = (ok, Tc, nleaf, ncert, mx, arg, nv)
     return results
 
 # ----------------------------------------------------------------------------
