@@ -1,0 +1,12 @@
+max imag(Tr) over all cosets = 2.74e-11 (should ~0, confirms rational)
+sum Tr over all 6^6 cosets = 0  (claim 0)
+max|Tr| = 9240 at c=(1, 1, 1, 1, 1, 4)  (claim 9240 = 9240)
+per #QR-class sum Tr:
+  #QR=0: 0
+  #QR=1: 0
+  #QR=2: 0
+  #QR=3: 0
+  #QR=4: 0
+  #QR=5: 0
+  #QR=6: 0
+all per-class zero: True
