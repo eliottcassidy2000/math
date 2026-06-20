@@ -1,3 +1,25 @@
+## codex-2026-06-20-S51 -- LRC14 signed multi-far boundary hierarchy -- HYP-2680/T919
+
+User asked to consider the signed two-far bound, signed three-far bound, and
+higher analogues abstractly in search of an LRC(14) proof.  Pulled mainline and
+read the incoming THM-548 boundary-value work.  Claimed HYP-2680/T919 as the
+multi-far continuation of HYP-2679.
+
+Main structural step: the two-far term is not an isolated curvature.  For a
+bounded core `B` and far subset `S`, the mixed term
+`Delta_S(B)=sum_{T subset S}(-1)^{|S|-|T|}p0(B union T)` has fully decorrelated
+limit
+`Phi_s(B)=7^-s sum_{t=1}^s (-1)^(s-t)t!S(s,t)p_t(B)`, where `p_t(B)` is the
+exact missed-sector profile and `S(s,t)` is Stirling-2.  This recovers
+THM-548's `Phi_2=(2p2-p1)/49` and gives the next sharp target
+`Phi_3=(p1-6p2+6p3)/343`.
+
+The live proof obligation is now precise: bound `Delta_S-Phi_s` by signed Abel
+packets over the full far relation lattice.  Three-far already requires
+multi-forms such as `u-2v+w`, so pairwise resonance distance is not enough.
+The intended split is nonresonant signed decay, rank-one Freiman/scale finite
+reduction, and rank `>=2` dimension penalty.  No LRC(14) proof claimed yet.
+
 ## codex-2026-06-20-S50 -- LRC14 true-wide boundary curvature -- HYP-2679/T918
 
 User asked to keep pushing toward the LRC(14) proof, pulling/pushing frequently,
