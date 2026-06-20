@@ -1,3 +1,31 @@
+## codex-2026-06-20-S44 -- shell-full packet gap beyond B13 leader -- HYP-2670/T909
+
+Pulled the S41-S43 mainline work and shifted the shell-full p1-tax task from
+"does the `2p1/5` scalar survive?" to "why does the frontier not move?"  Built
+`04-computation/lrc14_shellfull_packet_gap_codex_s44.py`, stored
+`05-knowledge/results/lrc14_shellfull_packet_gap_codex_s44.out`, recorded
+`05-knowledge/hypotheses/HYP-2670-lrc14-shellfull-packet-gap.md`, and added the
+reflection `07-reflections/lrc14-shellfull-packet-gap-codex-s44.md`.
+
+**FINDING:** in the exact shell-1-full quotient through `B=30`,
+
+```text
+E'={0}+{1,2,4,8}+3 extras from [1,30], w=max(E')+1..max(E')+8
+rows=20800
+only row above 1/3 = (0,1,2,4,6,7,8,10), w=12, Delta^+/p1=997/2562
+max for max(E')>14 = 1371/4319, gap below 1/3 = 206/12957
+max for max(E')>24 = 932669/4085893, gap below 1/4 = 355217/16343572
+```
+
+Packet/fold readout says the B13 leader is a finite small-denominator/fold-target
+packet, not a moving frontier.  New proof split: finite ledger for
+`max(E')<=14`, new-speed `p1/3` decay for `max(E')>14`, and far-tail
+`p1/4`-style decay for `max(E')>24`, after shell-damaged rows route through
+HYP-2661/HYP-2666.  During close-out, pulled KPS S17: THM-545 proves the k=1
+tower-deletion comb lemma and the k=2 wide scans report zero sub-threshold rows
+through the binding bit-4 window, so the shell-damaged half is now much closer
+to discharge.  LRC(14) is not proved.
+
 ## codex-2026-06-20-S43 -- shell-full p1-tax quotient stability through B24 -- HYP-2669
 
 After pushing S42, pulled again (`origin/main` already up to date) and attacked the next sharp target: is the HYP-2668 shell-full `2p1/5` target just a B14 artifact?  Built `04-computation/lrc14_shellfull_p1_tax_quotient_codex_s43.py`, stored `05-knowledge/results/lrc14_shellfull_p1_tax_quotient_codex_s43.out`, and recorded `05-knowledge/hypotheses/HYP-2669-lrc14-shellfull-p1-tax-quotient-stability.md`.
