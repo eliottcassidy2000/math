@@ -1,3 +1,16 @@
+## codex-2026-06-20-S55 -- LRC14 wide-branch address repair -- HYP-2683/T922
+
+User asked to keep pushing toward a lonely runner proof and mine recent and
+older repo work for hidden gems.  Started from the current mainline:
+HYP-2675 is now the wide=>small-`p0` crux via decorrelation/plateau `Q(k-1)`,
+and HYP-2682 supplies finite AP/cube-root phase routing for low-height
+resonances.  Searched older owner-private, compatibility-wall, state-word, and
+coimage threads.  Claimed HYP-2683/T922 to test whether the wide branch needs
+an address repair analogous to HYP-2240/HYP-2241: exact sector wall atoms,
+private-sector owner mass, missed-state compatibility, and state-word support
+as proof channels for routing direct `p0` risk.  Next artifact:
+`04-computation/lrc14_wide_address_repair_codex_s55.py`.
+
 ## codex-2026-06-20-S53 -- LRC14 rank-one AP-triple phase atlas -- HYP-2682/T921
 
 User asked for another long proof session with frequent pull/push and attention
