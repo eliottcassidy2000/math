@@ -10,6 +10,10 @@ depends_on:
   - HYP-2647
   - HYP-2644
 related:
+  - HYP-2656
+  - HYP-2655
+  - HYP-2654
+  - HYP-2653
   - HYP-2638
   - HYP-2639
   - HYP-2646
@@ -17,9 +21,6 @@ related:
   - THM-542
   - THM-543
   - THM-544
-  - HYP-2655
-  - HYP-2653
-  - HYP-2654
   - OPEN-Q-108
 ---
 
@@ -127,6 +128,43 @@ number of holes, usually retaining the central `6` hole.  Higher sumset excess
 does not by itself make rows dangerous; the near-collar rows are recognized
 better by hole/state template than by scalar excess.
 
+## S36 Addendum: B=20/21 Survival Bridge After THM-544
+
+HYP-2656 extends the same fixed-observer scan through `B=21` and connects this
+atlas to the now-proved THM-541/542/543/544 near-collar layer.  The drop-6 core
+remains the unique minimum through `293,930` primitive positive 12-cores in
+`[1,21]`, but the second distinct value becomes
+
+```text
+3859/420420
+```
+
+at
+
+```text
+(1,2,3,4,5,7,8,9,11,12,13,20),
+```
+
+only
+
+```text
+1/980
+```
+
+above the collar.  This row is not a generic tail: THM-543 proves it is the
+unique sub-`426/35035` one-replacement AP-tail exception, the drop-6 collar with
+`10` replaced by `20`.  HYP-2656 records the component anatomy: the four collar
+components remain intact and two symmetric bubbles of length `1/1960` are
+added, with endpoint owners `7 -> 20` and `20 -> 7`.
+
+Therefore the near-collar state-template target below `426/35035` must be
+weakened/sharpened: below that threshold, force the drop-6 collar, the proved
+one-replacement AP-tail exception, or a later finite collar-graft endpoint-owner
+template.  The remaining genuinely-far rows should route through the
+fixed-observer `6/7` survival lemma and KPS HYP-2655 joint plateau/Delta
+recursion.  The original `426/35035` value remains the second value for the
+`B<=19` atlas only.
+
 ## Proof Reading
 
 This suggests a three-step route for the OPEN-Q-108 uniform fattening lemma.
@@ -147,12 +185,16 @@ phenomenon, not a scalar hole-position statistic.
 2. Prove a near-collar state-template lemma, now refined by HYP-2654:
 
 ```text
-If meas(G_C) < 426/35035, then C has the drop-6 mouth-retention template.
+If meas(G_C) < 426/35035, then C has the drop-6 mouth-retention template,
+the THM-543 one-replacement exception, or a later finite endpoint-owner
+graft template.
 ```
 
-This would convert the observed separation into a structural dichotomy:
-drop-6-like rows are handled by the explicit collar, and every other bounded
-template has a uniform margin above it.
+S36 caveat after THM-543: this was the right target for the `B<=19` atlas, but
+the proved `B=20` row `(1,2,3,4,5,7,8,9,11,12,13,20)` lies below
+`426/35035`.  The lemma must allow the THM-543 one-replacement exception and
+any later collar-graft endpoint-owner templates in addition to the pure
+AP-window state template.
 
 Important correction from HYP-2654: this template cannot mean the exact one-hole
 AP row.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` already has
@@ -212,15 +254,13 @@ AP clusters with a few holes, not independent strangers.
 
 The concurrent KPS HYP-2653 strengthens this branch by proving a
 sigma-dependent far-element decorrelation bound and reducing the uniform
-far-element constant to a structured breakpoint discrepancy.  Thus the current
-split is: HYP-2654 for bounded AP-tail mouth retention, HYP-2653/HYP-2644 for
-the far-element plateau route.
-
-The later exact HYP-2655 engine found multiscale resonant cores where the
-proposed small uniform constant is false.  This does not affect THM-543 or
-THM-544; it clarifies the architecture.  Bounded resonant AP-tail layers should
-be certified by exact rational cutoffs, while genuinely wide rows need the joint
-plateau/Delta recursion rather than a decoupled uniform discrepancy constant.
+far-element constant to a structured breakpoint discrepancy.  KPS HYP-2655 then
+shows the proposed small uniform constant is false in multiscale rows, while
+the wide conclusion still has large margin because the plateaus shrink.  Thus
+the current split is: HYP-2654 and THM-541/542/543/544 certify bounded AP-tail
+mouth retention by exact rational cutoffs, while genuinely wide rows need the
+HYP-2655/HYP-2644 joint plateau/Delta recursion rather than a decoupled uniform
+discrepancy constant.
 
 ## Relationship To Freiman Small-Excess
 

@@ -1,0 +1,125 @@
+HYP-2656/T903 LRC14 core-gap survival bridge scout
+target gap: 1/14; known collar: 7/858 = 0.008158508
+Integrates HYP-2651 exact core gaps, KPS HYP-2653/HYP-2655 decorrelation, HYP-2654/THM-543/544 near-collar structure, HYP-2648 state words, and HYP-2652 endpoint geometry.
+Caveat: this is exact finite evidence plus a proof route; LRC(14) is not proved here.
+
+multi-far independent-survival ledger
+For an r-core base, m=12-r independent far speeds predict (6/7)^m * meas(G_base).
+The bmax column is the bounded atlas used for the base minimum in this scout.
+ r | bmax | primitive rows | min G_base | argmin | predicted 12-core floor | margin over collar
+ 1 |   12 |              1 |            6/7 | (1,) | 2176782336/13841287201 | 1770790233881/11875824418458 = 0.149108826
+ 2 |   12 |             45 |          61/84 | (1, 12) | 307369728/1977326743 | 249881939423/1696546345494 = 0.147288602
+ 3 |   12 |            196 |          20/33 | (1, 11, 12) | 67184640/443889677 | 4957926671/34623394806 = 0.143195856
+ 4 |   12 |            479 |       583/1176 | (1, 7, 8, 9) | 40800672/282475249 | 33029649833/242363763642 = 0.136281304
+ 5 |   13 |           1281 |      2243/5880 | (1, 5, 7, 8, 9) | 26162352/201768035 | 21034921771/173116974030 = 0.121506986
+ 6 |   14 |           2996 |     3029/10780 | (1, 5, 7, 8, 9, 11) | 35330256/317064055 | 2553991933/24730996290 = 0.103270887
+ 7 |   15 |           6434 |   45107/229320 | (1, 5, 7, 8, 9, 11, 13) |   4871556/53530295 | 292698691/3532999470 = 0.082847080
+ 8 |   16 |          12869 |     2479/17640 | (1, 3, 5, 7, 8, 9, 11, 13) |       44622/588245 | 34167961/504714210 = 0.067697640
+ 9 |   17 |          24310 |   10601/114660 | (1, 2, 3, 5, 7, 8, 9, 11, 13) |      63606/1092455 | 3609751/72102030 = 0.050064485
+10 |   18 |          43758 |   14249/252252 | (1, 2, 3, 5, 7, 8, 9, 11, 12, 13) |       14249/343343 | 68687/2060058 = 0.033342265
+11 |   19 |          75582 |       313/9702 | (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13) |          313/11319 | 5737/294294 = 0.019494111
+
+one-far append resonance scan: top 12 11-core bases in [1,19], append w<= 240
+primitive 11-core rows scanned: 75582
+rank | base gap | base | limit 6/7 | best append gap | w | margin over collar | max w*err
+   1 |   313/9702 | (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13) |  313/11319 |     3859/420420 |  20 |      1/980 = 0.001020408 |  18877/33957 at 40
+   2 |  389/12012 | (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13) |  389/14014 |       335/23023 |  46 | 883/138138 = 0.006392159 |      387/637 at 46
+   3 | 11434/315315 | (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13) | 22868/735735 |     1847/140140 |  20 | 2111/420420 = 0.005021169 | 115670/147147 at 60
+   4 | 5099/140140 | (1, 2, 3, 5, 6, 7, 8, 9, 10, 11, 13) | 15297/490490 |     7823/380380 |  19 | 14159/1141140 = 0.012407768 |  24743/35035 at 84
+   5 | 14669/399399 | (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 19) | 29338/931931 |  135691/7987980 |  20 | 2137/242060 = 0.008828390 | 1767509/2795793 at 80
+   6 |  433/11781 | (1, 3, 4, 5, 7, 8, 9, 11, 12, 13, 17) |  866/27489 | 258277/15315300 |  50 | 133327/15315300 = 0.008705478 | 1569461/2144142 at 50
+   7 | 7541/204204 | (1, 2, 6, 7, 8, 9, 10, 11, 13, 17, 19) | 7541/238238 | 1330365/59491432 |  23 | 2535011/178474296 = 0.014203788 |    8167/9163 at 156
+   8 | 3044521/81477396 | (1, 2, 3, 7, 8, 10, 11, 13, 17, 18, 19) | 3044521/95056962 | 7871279/386495340 |  37 | 20444899/1674813140 = 0.012207272 | 7069687/4659655 at 216
+   9 | 145349/3879876 | (1, 2, 5, 6, 7, 8, 9, 11, 13, 17, 19) | 145349/4526522 |     4309/255255 |  20 | 4453/510510 = 0.008722650 | 3212527/4526522 at 186
+  10 | 1229/32604 | (1, 2, 3, 7, 8, 9, 10, 11, 12, 13, 19) | 1229/38038 |     6191/326040 |  21 |   107/9880 = 0.010829960 |    4929/6916 at 165
+  11 | 3124237/81477396 | (1, 3, 4, 7, 10, 11, 13, 16, 17, 18, 19) | 3124237/95056962 | 1181129/97349616 |  23 | 4255915/1070845776 = 0.003974349 | 146842743/158428270 at 216
+  12 |  461/12012 | (1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) |  461/14014 |         27/1547 |  17 |    73/7854 = 0.009294627 |      309/539 at 156
+
+drop-6 collar double-graft test: replace h by 2h
+collar=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13); safe=7/858
+ h | graft core | safe | delta over collar
+ 3 | (1, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13) |       11/273 | 193/6006 = 0.032134532
+ 7 | (1, 2, 3, 4, 5, 8, 9, 10, 11, 12, 13, 14) | 77771/2522520 | 57191/2522520 = 0.022672169
+ 8 | (1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16) |  6163/336336 | 263/25872 = 0.010165430
+ 9 | (1, 2, 3, 4, 5, 7, 8, 10, 11, 12, 13, 18) | 10837/504504 | 47/3528 = 0.013321995
+10 | (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20) |  3859/420420 | 1/980 = 0.001020408
+11 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 12, 13, 22) |   1543/60060 | 27/1540 = 0.017532468
+12 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 13, 24) |    241/12012 | 1/84 = 0.011904762
+13 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 26) |     115/6006 | 1/91 = 0.010989011
+
+component ledger: drop-6 collar
+core=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13); safe=7/858 = 0.008158508; components=4; excess=2; holes=(6,)
+  [29/182, 9/56] len=1/728 mid=233/1456 owners=(13,)->(12,)
+  [29/168, 27/154] len=5/1848 mid=643/3696 owners=(12,)->(11,)
+  [127/154, 139/168] len=5/1848 mid=3053/3696 owners=(11,)->(12,)
+  [47/56, 153/182] len=1/728 mid=1223/1456 owners=(12,)->(13,)
+
+component ledger: B=20 near-collar 10->20 graft
+core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20); safe=3859/420420 = 0.009178916; components=6; excess=9; holes=(6, 10, 14, 15, 16, 17, 18, 19)
+  [29/182, 9/56] len=1/728 mid=233/1456 owners=(13,)->(12,)
+  [29/168, 27/154] len=5/1848 mid=643/3696 owners=(12,)->(11,)
+  [29/98, 83/280] len=1/1960 mid=1161/3920 owners=(7,)->(20,)
+  [197/280, 69/98] len=1/1960 mid=2759/3920 owners=(20,)->(7,)
+  [127/154, 139/168] len=5/1848 mid=3053/3696 owners=(11,)->(12,)
+  [47/56, 153/182] len=1/728 mid=1223/1456 owners=(12,)->(13,)
+
+component ledger: old B<=19 second row
+core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13); safe=426/35035 = 0.012159269; components=4; excess=1; holes=(12,)
+  [15/182, 13/154] len=2/1001 mid=167/2002 owners=(13,)->(11,)
+  [29/70, 41/98] len=1/245 mid=102/245 owners=(5,)->(7,)
+  [57/98, 41/70] len=1/245 mid=143/245 owners=(7,)->(5,)
+  [141/154, 167/182] len=2/1001 mid=1835/2002 owners=(11,)->(13,)
+
+exact positive 12-core extension through B=21
+  B | primitive rows | current min | argmin
+ 12 |              1 | 6617/194040 | (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12)
+ 13 |             13 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 14 |             91 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 15 |            455 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 16 |           1820 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 17 |           6188 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 18 |          18564 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 19 |          50388 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 20 |         125970 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+ 21 |         293930 |       7/858 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+
+near-collar rows in the extended 12-core atlas
+rank | safe | margin over collar | core | exc | comps | mincomp | holes
+   1 |           7/858 |                  0 | (1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13) |   2 |     4 |    1/728 | (6,)
+   2 |     3859/420420 |              1/980 | (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20) |   9 |     6 |   1/1960 | (6, 10, 14, 15, 16, 17, 18, 19)
+   3 |       426/35035 |         841/210210 | (1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13) |   1 |     4 |   2/1001 | (12,)
+   4 |     1847/140140 |        2111/420420 | (1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13, 20) |   8 |     6 |   1/1960 | (10, 12, 14, 15, 16, 17, 18, 19)
+   5 |       911/57057 |            27/3458 | (1, 2, 3, 5, 7, 8, 9, 10, 11, 12, 13, 19) |   9 |     6 |   1/2128 | (4, 6, 14, 15, 16, 17, 18)
+   6 |     4309/255255 |        4453/510510 | (1, 2, 5, 6, 7, 8, 9, 11, 13, 17, 19, 20) |  14 |    12 |   1/2128 | (3, 4, 10, 12, 14, 15, 16, 18)
+   7 |  135691/7987980 |        2137/242060 | (1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 19, 20) |  12 |     8 |   1/2128 | (4, 6, 10, 14, 15, 16, 17, 18)
+   8 |         27/1547 |            73/7854 | (1, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13, 17) |   6 |     4 |    1/728 | (2, 6, 14, 15, 16)
+   9 |         27/1547 |            73/7854 | (1, 3, 4, 5, 7, 8, 9, 11, 12, 13, 17, 20) |  11 |     4 |    1/728 | (2, 6, 10, 14, 15, 16, 18, 19)
+  10 |     6163/336336 |          263/25872 | (1, 2, 3, 4, 5, 7, 9, 10, 11, 12, 13, 16) |   6 |    10 |   1/2464 | (6, 8, 14, 15)
+  11 |     6191/326040 |           107/9880 | (1, 2, 3, 7, 8, 9, 10, 11, 12, 13, 19, 21) |  12 |     8 |   1/2128 | (4, 5, 6, 14, 15, 16, 17, 18, 20)
+  12 |   32531/1681680 |        1447/129360 | (1, 2, 3, 4, 5, 7, 9, 11, 12, 13, 16, 20) |  10 |    12 |   1/2464 | (6, 8, 10, 14, 15, 17, 18, 19)
+
+second-value correction
+  old HYP-2651 B<=19 second value: 426/35035 = 0.012159269
+  extended B<=21 second value: 3859/420420 = 0.009178916
+  extended second minus collar: 1/980 = 0.001020408
+
+cross-check
+  best appended row among scanned 11-bases: (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20) with 3859/420420 = 0.009178916
+  best extended 12-core row after collar: (1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20) with 3859/420420 = 0.009178916
+  match? True
+
+proof reading
+  The independent far-speed ledger has large margins: in the tested base atlases, even the closest r=11 one-far limit is 313/11319, about 0.01949 above the collar.  The danger is therefore not the far limit itself but finite resonance before decorrelation.
+  The first resonance is structured: replacing 10 by 20 in the drop-6 collar leaves the four old collar components intact and adds exactly two symmetric bubbles of length 1/1960. THM-543 proves this 10->20 row is the unique one-replacement AP-tail exception below 426/35035.
+  Updated target after THM-541/542/543/544: keep the proved collar, mouth-retention, one-replacement, and two-replacement layers as the near-collar base, then route genuinely far rows through fixed-observer 6/7 survival plus the KPS HYP-2655 joint plateau/Delta recursion.
+
+Tournament Analysis
+Vertices are proof quotients, not runners:
+Pairwise observable: which quotient preserves the lower-bound predicate and explains the sub-426/35035 rows.
+Switch/gauge: keep fixed-observer positivity; judge tails after THM-543/544 and the 6/7 survival quotient.
+Hamiltonian path:
+  proved_one_replacement_tail > proved_two_replacement_tail > exact_core_gap_components > drop6_collar_ledger > owner_bubble_ledger > far_survival_multiplier > joint_plateau_delta_recursion > finite_resonance_discrepancy > sumset_excess > raw_far_speed
+Fingerprint: transitive proof-priority tournament; score histogram {0:1,1:1,2:1,3:1,4:1,5:1,6:1,7:1,8:1,9:1}; directed 3-cycles: 0
+
+Assumption challenge
+Alternate vertices considered: runners, far speed w, missing holes, safe components, component endpoint owners, sumset excess, state words, and proof obligations.  The winner is not raw w or raw excess: it is the proved AP-tail layers plus the endpoint-owner component ledger, because it shows the B=20 near-collar row is the old drop-6 collar plus two owner-addressed bubbles from the 10->20 graft.
