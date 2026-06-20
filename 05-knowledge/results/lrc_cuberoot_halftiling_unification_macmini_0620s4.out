@@ -1,0 +1,17 @@
+3+3+1 cube-root packet structure (B=(0,1,2,3,4), far triples):
+  (15,16,17): full=H(1)=+0.10207 (direct +0.10207 OK)
+     one-far(A,B,C)=(0.0000,0.0000,0.0000)  two-far(D,E,F)=(0.0268,0.0246,0.0315)  G=0.01912
+     pair-tax R=A+B+C-D-E-F+G=-0.06383   |S_w|=0.00000  |P_w|=0.00608  (Eisenstein moduli, S3-invariant)
+  (15,23,41): full=H(1)=+0.04292 (direct +0.04292 OK)
+     one-far(A,B,C)=(0.0000,0.0000,0.0000)  two-far(D,E,F)=(0.0206,0.0125,0.0164)  G=-0.00667
+     pair-tax R=A+B+C-D-E-F+G=-0.05625   |S_w|=0.00000  |P_w|=0.00698  (Eisenstein moduli, S3-invariant)
+  (20,21,22): full=H(1)=+0.11602 (direct +0.11602 OK)
+     one-far(A,B,C)=(0.0000,0.0000,0.0000)  two-far(D,E,F)=(0.0415,0.0214,0.0317)  G=0.02140
+     pair-tax R=A+B+C-D-E-F+G=-0.07322   |S_w|=0.00000  |P_w|=0.01738  (Eisenstein moduli, S3-invariant)
+  (15,30,45): full=H(1)=+0.05556 (direct +0.05556 OK)
+     one-far(A,B,C)=(0.0000,0.0000,0.0000)  two-far(D,E,F)=(0.0286,0.0063,0.0079)  G=0.01270
+     pair-tax R=A+B+C-D-E-F+G=-0.03016   |S_w|=0.00000  |P_w|=0.02147  (Eisenstein moduli, S3-invariant)
+
+S_3-invariance of the Eisenstein modulus |S_w| (permute far runners):
+  |S_w| over 6 permutations of (15, 23, 41): min=0.00000 max=0.00000 spread=0.00e+00
+  (cyclic perms preserve |S_w| exactly; transpositions conjugate it -> same modulus)
