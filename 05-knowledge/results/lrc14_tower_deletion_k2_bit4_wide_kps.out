@@ -1,0 +1,5 @@
+patched to TMAX=300
+--- bit 4 wide window ---
+=== k=2 tower-deletion scan: delete tower bit 4 + 2 extra holes, add 2 tails ===
+  bit 4: 66 bases, 2689830 cores checked (tails<R_B), 0 near-threshold (exact-confirmed)
+  ==> ZERO cores below 426/35035. k=2 tower-deletion for bit 4: COMB-CERTIFIED (tails>=R_B) + EXACT (tails<R_B). PROVED.

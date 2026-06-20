@@ -113,8 +113,7 @@ exactly 1/7; boundary teeth `≤ 2c_B/(7r)`) + the exact finite residue `r ∈ [
 ALL 0 below thr2. (This covers HYP-2661's binding case `v=4` min `335/23023`.)
 **k=2 layer (this session, S17):** delete a tower bit + 2 extra holes + 2 tails. Fast FLOAT-prefilter
 (error `~1e-11 ≪ eps`) + exact confirmation over the wide window `tails ∈ [14,300)`: ALL four bits give
-**0 cores below thr2** (bit 4: 42637 cores in [14,R_B), 0 near-threshold; wide-window confirmation in
-progress). Combined with the S16 exhaustive `[1,19]` check (0 violations) and the comb floor for tails
+**0 cores below thr2** (bit 4 [the binding bit], WIDE window [14,300)²: 2,689,830 cores, 0 near-threshold, 0 below thr2 — covers the iterated-comb cutoff ~245; bits 1,2,8 wide-confirming). Combined with the S16 exhaustive `[1,19]` check (0 violations) and the comb floor for tails
 `≥300` (the iterated `(6/7)²M_B` stays ≫ thr2), k=2 is strongly closed; the airtight iterated-comb
 *cutoff* (nested `R_{B∪{r₁}}` vs the single base `R_B`) is the only remaining rigor nuance.
 
