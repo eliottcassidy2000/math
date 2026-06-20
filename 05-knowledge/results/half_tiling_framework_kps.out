@@ -1,0 +1,103 @@
+========================================================================
+HALF-TILING FRAMEWORK  --  kind-pasteur 2026-06-20
+========================================================================
+
+[A] Half-tiling size half(n) = #orbits of rho = floor((n-1)^2/4)
+  n  m=C(n-1,2)  d=fix  pairs   half  floor((n-1)^2/4)    odd k^2/even k(k-1)
+  2           0      0      0      0                 0          k=1, k(k-1)=0 OK
+  3           1      1      0      1                 1             k=1, k^2=1 OK
+  4           3      1      1      2                 2          k=2, k(k-1)=2 OK
+  5           6      2      2      4                 4             k=2, k^2=4 OK
+  6          10      2      4      6                 6          k=3, k(k-1)=6 OK
+  7          15      3      6      9                 9             k=3, k^2=9 OK
+  8          21      3      9     12                12         k=4, k(k-1)=12 OK
+  9          28      4     12     16                16            k=4, k^2=16 OK
+ 10          36      4     16     20                20         k=5, k(k-1)=20 OK
+ 11          45      5     20     25                25            k=5, k^2=25 OK
+ 12          55      5     25     30                30         k=6, k(k-1)=30 OK
+  sequence half(2..12) = [0, 1, 2, 4, 6, 9, 12, 16, 20, 25, 30]  (expected 0,1,2,4,6,9,12,16,20,25,30)
+
+[B] rho = converse+relabel is a PURE coordinate permutation (no bit flip)
+  n=3: 2/2 tilings confirm  t_converse(P)=t(rho(P))  [exhaustive]  OK
+  n=4: 8/8 tilings confirm  t_converse(P)=t(rho(P))  [exhaustive]  OK
+  n=5: 64/64 tilings confirm  t_converse(P)=t(rho(P))  [exhaustive]  OK
+  n=6: 1024/1024 tilings confirm  t_converse(P)=t(rho(P))  [exhaustive]  OK
+  n=7: 32768/32768 tilings confirm  t_converse(P)=t(rho(P))  [exhaustive]  OK
+
+[C] grid-symmetric (phi-self-converse) tilings = 2^half(n)
+  n   #fixed  #selfconv   2^half         frac  log2 frac  canon exp
+  3        2          2        2     1.000000          0          0 OK
+  4        4          4        4     0.500000         -1         -1 OK
+  5       16         16       16     0.250000         -2         -2 OK
+  6       64         64       64     0.062500         -4         -4 OK
+  7      512        512      512     0.015625         -6         -6 OK
+
+[D] Recursions for half(n)=floor((n-1)^2/4)
+  n= 4 [even] half=  2 =   2  2A-C  (A=h(n-1),C=h(n-2))  OK
+  n= 5 [ odd] half=  4 =   4  2A-2E+G (A=h(n-1),E=h(n-3),G=h(n-4))  OK
+  n= 6 [even] half=  6 =   6  2A-C  (A=h(n-1),C=h(n-2))  OK
+  n= 7 [ odd] half=  9 =   9  2A-2E+G (A=h(n-1),E=h(n-3),G=h(n-4))  OK
+  n= 8 [even] half= 12 =  12  2A-C  (A=h(n-1),C=h(n-2))  OK
+  n= 9 [ odd] half= 16 =  16  2A-2E+G (A=h(n-1),E=h(n-3),G=h(n-4))  OK
+  n=10 [even] half= 20 =  20  2A-C  (A=h(n-1),C=h(n-2))  OK
+  n=11 [ odd] half= 25 =  25  2A-2E+G (A=h(n-1),E=h(n-3),G=h(n-4))  OK
+  n=12 [even] half= 30 =  30  2A-C  (A=h(n-1),C=h(n-2))  OK
+  ... verified to n=40:  EVEN recursion (2A-C) all-OK = True;  ODD recursion (2A-2E+G) all-OK = True
+  user's literal ODD A+B-C+D-E-F+G with sizes (n-1,n-1,n-2,n-2,n-3,n-3,n-4):
+    all-OK to n=29 = True   (note: -C+D cancels -> 2A-2E+G)
+  user's literal EVEN A+B-C with A,B=h(n-1), C=h(n-2):
+    all-OK to n=28 = True
+
+[E] Fundamental-domain shape  ('=' fixed/diagonal, '#' kept, '.' discarded)
+  --- n=5  (kept cells = half(n) = 4) ---
+    r=3 | =  
+    r=2 | #. 
+    r=1 | #=.
+  --- n=6  (kept cells = half(n) = 6) ---
+    r=4 | =   
+    r=3 | #.  
+    r=2 | #=. 
+    r=1 | ##..
+  --- n=7  (kept cells = half(n) = 9) ---
+    r=5 | =    
+    r=4 | #.   
+    r=3 | #=.  
+    r=2 | ##.. 
+    r=1 | ##=..
+  --- n=8  (kept cells = half(n) = 12) ---
+    r=6 | =     
+    r=5 | #.    
+    r=4 | #=.   
+    r=3 | ##..  
+    r=2 | ##=.. 
+    r=1 | ###...
+  --- n=9  (kept cells = half(n) = 16) ---
+    r=7 | =      
+    r=6 | #.     
+    r=5 | #=.    
+    r=4 | ##..   
+    r=3 | ##=..  
+    r=2 | ###... 
+    r=1 | ###=...
+
+[F] Odd-n gnomon decomposition  k^2 = 1+3+5+...+(2k-1)
+  n=3: k=1, half=1 = sum[1] = 1  (OK)
+  n=5: k=2, half=4 = sum[1, 3] = 4  (OK)
+  n=7: k=3, half=9 = sum[1, 3, 5] = 9  (OK)
+  n=9: k=4, half=16 = sum[1, 3, 5, 7] = 16  (OK)
+  n=11: k=5, half=25 = sum[1, 3, 5, 7, 9] = 25  (OK)
+  n=13: k=6, half=36 = sum[1, 3, 5, 7, 9, 11] = 36  (OK)
+
+[G] H-spectrum of grid-symmetric (phi-self-converse) tilings
+  n=3: H_max(all tilings)=3  H_max(grid-sym)=3  == matches global max
+        grid-sym H-spectrum = {1: 1, 3: 1}
+  n=4: H_max(all tilings)=5  H_max(grid-sym)=5  == matches global max
+        grid-sym H-spectrum = {1: 1, 5: 3}
+  n=5: H_max(all tilings)=15  H_max(grid-sym)=15  == matches global max
+        grid-sym H-spectrum = {1: 1, 3: 1, 9: 4, 11: 3, 13: 3, 15: 4}
+  n=6: H_max(all tilings)=45  H_max(grid-sym)=45  == matches global max
+        grid-sym H-spectrum = {1: 1, 5: 3, 9: 1, 17: 10, 29: 14, 33: 7, 37: 7, 41: 9, 45: 12}
+  n=7: H_max(all tilings)=189  H_max(grid-sym)=189  == matches global max
+        grid-sym H-spectrum = {1: 1, 3: 1, 9: 5, 11: 3, 13: 3, 15: 4, 25: 5, 27: 3, 31: 10, 33: 1, 41: 5, 45: 7, 49: 5, 51: 8, 61: 7, 65: 15, 67: 10, 69: 10, 71: 7, 75: 7, 77: 14, 79: 5, 81: 7, 83: 7, 85: 7, 87: 7, 91: 5, 93: 11, 95: 7, 99: 10, 105: 14, 111: 10, 115: 7, 117: 17, 123: 8, 125: 9, 127: 5, 129: 25, 133: 16, 135: 20, 137: 16, 139: 16, 141: 19, 143: 5, 145: 16, 147: 9, 151: 27, 153: 9, 155: 7, 157: 9, 159: 30, 171: 9, 175: 9, 189: 3}
+
+DONE.
