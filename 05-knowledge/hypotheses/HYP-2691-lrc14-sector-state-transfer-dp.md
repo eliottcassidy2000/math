@@ -77,6 +77,41 @@ The strategy winner depends on the row's structure:
 This is a proof signal rather than a speed trick: the right address order is
 part of the finite-resonant classifier.
 
+## Residual-Budget Addendum
+
+The companion script `04-computation/lrc14_transfer_residual_budget_codex_s58.py`
+turns each insertion into the local one-far residual
+
+```text
+residual(P,e) = [p0(P union {e})-p0(P)] - p1(P)/7.
+```
+
+Here `p1(P)/7` is the decorrelated transition value.  The script compares the
+exact residual with the THM-546 style component budget
+
+```text
+|residual(P,e)| <= (6/49) * V(P) / e,
+```
+
+where `V(P)` is the circular number of one-missed-sector runs by sector.
+The bound held with exact assertions on every audited prefix and schedule.
+
+The largest observed pressures were still well below `1`:
+
+```text
+boundary-leader increasing: max_pressure=27/65 ~= 0.415385
+AP9 increasing:             max_pressure=27/65
+dyadic-block dyadic-tower:  max_pressure=329/864 ~= 0.380787
+direct-risk increasing:     max_pressure=943/2970 ~= 0.317508
+three-cluster increasing:   max_pressure=2478259/11606400 ~= 0.213525
+AP-triple increasing:       max_pressure=392675/1945944 ~= 0.201792
+```
+
+This says the DP-local version of THM-546 has large cap-level slack on the
+named banks.  The hard steps are not generic high-support steps; they are
+finite structured prefixes, exactly the rows that should be routed through
+AP/dyadic/cube-root/Ruzsa address templates before decorrelation.
+
 Concrete exact rows from the scout:
 
 ```text

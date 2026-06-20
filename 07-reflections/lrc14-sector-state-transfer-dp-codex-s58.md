@@ -26,5 +26,12 @@ The next version should classify rows by the full prefix transfer word, then
 prove that each transition either belongs to a finite low-state pocket or has
 small landing mass.
 
+The residual-budget follow-up made the link to THM-546 explicit.  On each
+prefix, the decorrelated transition is `p1(P)/7`, and the residual is the
+one-far discrepancy.  The exact component budget `(6/49)V/e` held on all
+audited prefixes, with worst pressure `27/65`.  That is useful because it says
+the cap-level target does not need a razor-sharp constant in these banks.  The
+large-pressure steps are finite structured prefixes, not the high-state tail.
+
 No LRC14 proof is finished here.  The progress is an exact DP recurrence and a
 sharper proof obligation that avoids collapsing the address too early.

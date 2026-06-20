@@ -24,6 +24,17 @@ a transfer inequality for the one-missed-sector landing mass: low-state
 prefixes route to finite AP/dyadic/cube-root/Ruzsa templates, high-state
 prefixes route to Weyl/BV decorrelation.  No LRC14 proof claimed.
 
+After checkpointing, added
+`04-computation/lrc14_transfer_residual_budget_codex_s58.py` and stored
+`05-knowledge/results/lrc14_transfer_residual_budget_codex_s58.out`.  This
+identifies each insertion residual as the DP-local one-far discrepancy
+`[p0(P union {e})-p0(P)]-p1(P)/7` and compares it to the THM-546 component
+budget `(6/49)V(P)/e`, where `V(P)` counts circular one-missed-sector runs.
+Exact assertions verify the budget on every audited prefix and schedule.
+Largest pressure is `27/65`; true-wide three-cluster prefixes stay around
+`0.2135`.  This supports a lossy cap-level transfer constant, with remaining
+high-pressure cases finite and structured.
+
 ## mac-mini-2026-06-20-S4 — half-tiling framework: complement-quotient + cube-root unification + apex-prime order-truncation — THM-549, THM-551, HYP-2689
 Dispatch: the owner's half-tiling framework (mirror over y=x = reverse all arcs; sizes 0,1,2,4,6,9,12,…; even A+B−C vs odd A+B−C+D−E−F+G recursions), connect to the full-tiling A+B+C−D−E−F+G and one/two/three-far, extend. CONCURRENT: codex-S56/S57 + kps owned overlapping pieces; reconciled namespace (I own THM-549/THM-551/HYP-2689; codex built S57 on my THM-551/2689; cross-ref'd prior THM-280/THM-442).
 **PROVED (THM-549):** the y=x reflection σ(x,y)=(n+1−y,n+1−x) of a tiling = φ(T^op) (reverse-all-arcs/complement, relabel i→n+1−i) — VERIFIED exhaustively over all 2^m tilings n≤6. So the half-tiling is the tiling-model fundamental domain of the **complement involution** (same Z₂ as G_n/Z₂), `half(n)=(m+fix)/2=⌊(n−1)²/4⌋`, fixed diagonal {x+y=n+1} = the SC spine. **Square/pronic:** odd n=2k+1 → k² (SQUARE, 3 corners), even n=2k → k(k−1) (PRONIC, no 3 corners) — the owner's "even has a different shape." Order-4 recurrence (x−1)³(x+1) all n; order-2 extra for even. **Complement-invariance** of c3, HP, AND the full OCF (odd-cycle counts, all lengths) — VERIFIED 100% n=4–6 ⟹ the central Claim-A/μ computation (and H-max) **halves on the half-region** (2× saving; supports kps HYP-2688).

@@ -1,0 +1,122 @@
+HYP-2691 residual-budget audit
+residual = exact insertion delta - p1(prefix)/7
+budget = (6/49)*V(prefix)/added_speed, exact Fractions
+V(prefix) counts circular one-missed-sector runs by sector.
+
+========================================================================================
+ROW AP9: E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+  p0=2447/5880 (0.416156463) cap=1979/4004 (0.494255744) margin=65669/840840 (0.078099282)
+  order=greedy-min-support    total_abs=271/980 (0.276530612) total_bound=159/140 (1.135714286) max_pressure=329/864 (0.380787) max_e_abs_residual=899/840 (1.070238095)
+     6. add=  5 p1=1/4 decor=1/28 delta=31/210 residual=47/420 V=12 bound=72/245 pressure=329/864
+     7. add=  8 p1=12/35 decor=12/245 delta=17/280 residual=23/1960 V=23 bound=69/196 pressure=1/30
+     8. add=  7 p1=323/840 decor=323/5880 delta=611/2940 residual=899/5880 V=28 bound=24/49 pressure=899/2880
+  order=increasing            total_abs=12137/41160 (0.294873664) total_bound=376/343 (1.096209913) max_pressure=27/65 (0.415385) max_e_abs_residual=32/35 (0.914285714)
+     6. add=  6 p1=11/42 decor=11/294 delta=31/210 residual=27/245 V=13 bound=13/49 pressure=27/65
+     7. add=  7 p1=12/35 decor=12/245 delta=44/245 residual=32/245 V=23 bound=138/343 pressure=112/345
+     8. add=  8 p1=359/1470 decor=359/10290 delta=523/5880 residual=445/8232 V=28 bound=3/7 pressure=445/3528
+
+========================================================================================
+ROW one-gap-top9: E=(0, 1, 2, 3, 4, 5, 6, 7, 9)
+  p0=1181/2940 (0.401700680) cap=1979/4004 (0.494255744) margin=9728/105105 (0.092555064)
+  order=greedy-min-support    total_abs=2903/10290 (0.282118562) total_bound=5542/5145 (1.077162293) max_pressure=329/864 (0.380787) max_e_abs_residual=32/35 (0.914285714)
+     6. add=  5 p1=1/4 decor=1/28 delta=31/210 residual=47/420 V=12 bound=72/245 pressure=329/864
+     7. add=  7 p1=12/35 decor=12/245 delta=44/245 residual=32/245 V=23 bound=138/343 pressure=112/345
+     8. add=  9 p1=359/1470 decor=359/10290 delta=73/980 residual=163/4116 V=28 bound=8/21 pressure=163/1568
+  order=increasing            total_abs=5771/20580 (0.280417881) total_bound=1079/1029 (1.048590865) max_pressure=27/65 (0.415385) max_e_abs_residual=32/35 (0.914285714)
+     6. add=  6 p1=11/42 decor=11/294 delta=31/210 residual=27/245 V=13 bound=13/49 pressure=27/65
+     7. add=  7 p1=12/35 decor=12/245 delta=44/245 residual=32/245 V=23 bound=138/343 pressure=112/345
+     8. add=  9 p1=359/1470 decor=359/10290 delta=73/980 residual=163/4116 V=28 bound=8/21 pressure=163/1568
+
+========================================================================================
+ROW direct-risk-leader: E=(0, 4, 6, 8, 10, 12, 14, 15, 16)
+  p0=321/980 (0.327551020) cap=1979/4004 (0.494255744) margin=11681/70070 (0.166704724)
+  order=dyadic-tower          total_abs=1303/5880 (0.221598639) total_bound=470/343 (1.370262391) max_pressure=187/672 (0.278274) max_e_abs_residual=54/35 (1.542857143)
+     6. add= 10 p1=4/21 decor=4/147 delta=103/840 residual=187/1960 V=28 bound=12/35 pressure=187/672
+     7. add= 14 p1=2/7 decor=2/49 delta=37/245 residual=27/245 V=54 bound=162/343 pressure=7/30
+     8. add= 15 p1=223/840 decor=223/5880 delta=317/5880 residual=47/2940 V=68 bound=136/245 pressure=47/1632
+  order=increasing            total_abs=914/5145 (0.177648202) total_bound=243/196 (1.239795918) max_pressure=943/2970 (0.317508) max_e_abs_residual=1886/735 (2.565986395)
+     6. add= 14 p1=8/35 decor=8/245 delta=67/1470 residual=19/1470 V=28 bound=12/49 pressure=19/360
+     7. add= 15 p1=601/1470 decor=601/10290 delta=123/1960 residual=179/41160 V=60 bound=24/49 pressure=179/20160
+     8. add= 16 p1=173/420 decor=173/2940 delta=1289/5880 residual=943/5880 V=66 bound=99/196 pressure=943/2970
+
+========================================================================================
+ROW boundary-leader: E=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+  p0=437/1176 (0.371598639) cap=1979/4004 (0.494255744) margin=20627/168168 (0.122657105)
+  order=greedy-min-support    total_abs=10373/41160 (0.252016521) total_bound=1978/1715 (1.153352770) max_pressure=329/864 (0.380787) max_e_abs_residual=64/35 (1.828571429)
+     6. add= 10 p1=1/4 decor=1/28 delta=31/210 residual=47/420 V=24 bound=72/245 pressure=329/864
+     7. add= 14 p1=12/35 decor=12/245 delta=44/245 residual=32/245 V=46 bound=138/343 pressure=112/345
+     8. add= 15 p1=359/1470 decor=359/10290 delta=87/1960 residual=391/41160 V=56 bound=16/35 pressure=391/18816
+  order=increasing            total_abs=10303/41160 (0.250315841) total_bound=1929/1715 (1.124781341) max_pressure=27/65 (0.415385) max_e_abs_residual=64/35 (1.828571429)
+     6. add= 12 p1=11/42 decor=11/294 delta=31/210 residual=27/245 V=26 bound=13/49 pressure=27/65
+     7. add= 14 p1=12/35 decor=12/245 delta=44/245 residual=32/245 V=46 bound=138/343 pressure=112/345
+     8. add= 15 p1=359/1470 decor=359/10290 delta=87/1960 residual=391/41160 V=56 bound=16/35 pressure=391/18816
+
+========================================================================================
+ROW dyadic-block: E=(0, 1, 2, 4, 8, 12, 16, 20, 24)
+  p0=29/112 (0.258928571) cap=1979/4004 (0.494255744) margin=3769/16016 (0.235327173)
+  order=dyadic-tower          total_abs=491/3920 (0.125255102) total_bound=4152/245 (16.946938776) max_pressure=329/864 (0.380787) max_e_abs_residual=47/21 (2.238095238)
+     6. add= 20 p1=1/4 decor=1/28 delta=31/210 residual=47/420 V=48 bound=72/245 pressure=329/864
+     7. add=  2 p1=12/35 decor=12/245 delta=41/840 residual=-1/5880 V=92 bound=276/49 pressure=1/33120
+     8. add=  1 p1=29/84 decor=29/588 delta=1/16 residual=31/2352 V=90 bound=540/49 pressure=31/25920
+  order=increasing            total_abs=1933/11760 (0.164370748) total_bound=591/980 (0.603061224) max_pressure=49/144 (0.340278) max_e_abs_residual=1371/490 (2.797959184)
+     6. add= 16 p1=1/12 decor=1/84 delta=11/336 residual=1/48 V= 8 bound=3/49 pressure=49/144
+     7. add= 20 p1=71/336 decor=71/2352 delta=2/35 residual=317/11760 V=31 bound=93/490 pressure=317/2232
+     8. add= 24 p1=617/1680 decor=617/11760 delta=71/420 residual=457/3920 V=69 bound=69/196 pressure=457/1380
+
+========================================================================================
+ROW doubled-odd-tail: E=(0, 1, 2, 4, 8, 14, 26, 34, 38)
+  p0=10107/58786 (0.171928691) cap=1979/4004 (0.494255744) margin=416863/1293292 (0.322327054)
+  order=greedy-min-support    total_abs=556697/5761028 (0.096631539) total_bound=864/1547 (0.558500323) max_pressure=377/1680 (0.224405) max_e_abs_residual=51211/24206 (2.115632488)
+     6. add= 26 p1=27/392 decor=27/2744 delta=1/49 residual=29/2744 V=10 bound=30/637 pressure=377/1680
+     7. add= 38 p1=197/1274 decor=197/8918 delta=4447/96824 residual=16157/677768 V=38 bound=6/49 pressure=16157/82992
+     8. add= 34 p1=17/56 decor=17/392 delta=173805/1646008 residual=51211/823004 V=108 bound=324/833 pressure=51211/320112
+  order=increasing            total_abs=33337/338884 (0.098372895) total_bound=96855/205751 (0.470738903) max_pressure=483281/1652196 (0.292508) max_e_abs_residual=483281/151606 (3.187743229)
+     6. add= 26 p1=27/392 decor=27/2744 delta=1/49 residual=29/2744 V=10 bound=30/637 pressure=377/1680
+     7. add= 34 p1=197/1274 decor=197/8918 delta=2253/86632 residual=2375/606424 V=38 bound=114/833 pressure=125/4368
+     8. add= 38 p1=25243/86632 decor=25243/606424 delta=206597/1646008 residual=483281/5761028 V=89 bound=267/931 pressure=483281/1652196
+
+========================================================================================
+ROW three-cluster-wide: E=(0, 1, 2, 30, 31, 32, 60, 61, 62)
+  p0=141899/635376 (0.223330752) cap=1979/4004 (0.494255744) margin=24615911/90858768 (0.270924992)
+  order=greedy-min-support    total_abs=5710571/44476320 (0.128395762) total_bound=2980/2989 (0.996988960) max_pressure=1955627/9463680 (0.206646) max_e_abs_residual=1955627/364560 (5.364348804)
+     6. add= 30 p1=863/6944 decor=863/48608 delta=951/34720 residual=1171/121520 V=68 bound=68/245 pressure=1171/33728
+     7. add= 60 p1=12071/52080 decor=12071/364560 delta=6659/104160 residual=22471/729120 V=144 bound=72/245 pressure=22471/214272
+     8. add= 61 p1=8033/26040 decor=8033/182280 delta=139793/1058960 residual=1955627/22238160 V=212 bound=1272/2989 pressure=1955627/9463680
+  order=increasing            total_abs=1234441/8895264 (0.138775083) total_bound=386494/463295 (0.834228731) max_pressure=2478259/11606400 (0.213525) max_e_abs_residual=2804017/717360 (3.908800323)
+     6. add= 60 p1=6149/52080 decor=6149/364560 delta=3841/104160 residual=4863/243040 V=68 bound=34/245 pressure=4863/33728
+     7. add= 61 p1=413/1860 decor=59/1860 delta=555581/6353760 residual=354037/6353760 V=130 bound=780/2989 pressure=2478259/11606400
+     8. add= 62 p1=1599739/6353760 decor=1599739/44476320 delta=157277/1588440 residual=2804017/44476320 V=220 bound=660/1519 pressure=2804017/19324800
+
+========================================================================================
+ROW AP-triple-phase: E=(0, 9, 10, 11, 12, 13, 14, 15, 16, 17)
+  p0=2290763/5717712 (0.400643299) cap=55/91 (0.604395604) margin=1164997/5717712 (0.203752305)
+  order=increasing            total_abs=11299207/42882840 (0.263490175) total_bound=569409/233240 (2.441300806) max_pressure=392675/1945944 (0.201792) max_e_abs_residual=392675/196196 (2.001442435)
+     6. add= 14 p1=2021/13860 decor=2021/97020 delta=16123/420420 residual=5524/315315 V=33 bound=99/343 pressure=38668/637065
+     7. add= 15 p1=2561/8085 decor=2561/56595 delta=75121/420420 residual=78535/588588 V=81 bound=162/245 pressure=392675/1945944
+     8. add= 16 p1=152923/630630 decor=152923/4414410 delta=447019/5045040 residual=1905749/35315280 V=97 bound=291/392 pressure=1905749/26216190
+     9. add= 17 p1=183787/720720 decor=183787/5045040 delta=4074173/42882840 residual=386459/6597360 V=104 bound=624/833 pressure=386459/4942080
+
+========================================================================================
+GLOBAL RESIDUAL LEADERS
+  boundary-leader      increasing            max_pressure=27/65 (0.415385) max_e_abs=64/35 (1.828571429) total_abs=10303/41160 (0.250315841)
+  AP9                  increasing            max_pressure=27/65 (0.415385) max_e_abs=32/35 (0.914285714) total_abs=12137/41160 (0.294873664)
+  one-gap-top9         increasing            max_pressure=27/65 (0.415385) max_e_abs=32/35 (0.914285714) total_abs=5771/20580 (0.280417881)
+  dyadic-block         dyadic-tower          max_pressure=329/864 (0.380787) max_e_abs=47/21 (2.238095238) total_abs=491/3920 (0.125255102)
+  boundary-leader      greedy-min-support    max_pressure=329/864 (0.380787) max_e_abs=64/35 (1.828571429) total_abs=10373/41160 (0.252016521)
+  AP9                  greedy-min-support    max_pressure=329/864 (0.380787) max_e_abs=899/840 (1.070238095) total_abs=271/980 (0.276530612)
+  one-gap-top9         greedy-min-support    max_pressure=329/864 (0.380787) max_e_abs=32/35 (0.914285714) total_abs=2903/10290 (0.282118562)
+  dyadic-block         increasing            max_pressure=49/144 (0.340278) max_e_abs=1371/490 (2.797959184) total_abs=1933/11760 (0.164370748)
+  direct-risk-leader   increasing            max_pressure=943/2970 (0.317508) max_e_abs=1886/735 (2.565986395) total_abs=914/5145 (0.177648202)
+  doubled-odd-tail     increasing            max_pressure=483281/1652196 (0.292508) max_e_abs=483281/151606 (3.187743229) total_abs=33337/338884 (0.098372895)
+  direct-risk-leader   dyadic-tower          max_pressure=187/672 (0.278274) max_e_abs=54/35 (1.542857143) total_abs=1303/5880 (0.221598639)
+  doubled-odd-tail     greedy-min-support    max_pressure=377/1680 (0.224405) max_e_abs=51211/24206 (2.115632488) total_abs=556697/5761028 (0.096631539)
+
+SYNTHESIS
+  1. The DP-local residual is exactly the old one-far discrepancy, but
+     now it appears at every prefix rather than only in a final far step.
+  2. The coarse component budget holds on all audited prefixes.  Its slack
+     is large in many early/high-support steps, suggesting room for a
+     lossy cap-level constant.
+  3. The high-pressure steps are finite structured prefixes.  Those are the
+     candidates to classify by AP/dyadic/cube-root/Ruzsa address before
+     sending the rest to Weyl/BV decorrelation.
