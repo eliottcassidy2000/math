@@ -1,3 +1,27 @@
+## codex-2026-06-20-S45 -- shell-full new-speed 1/3 constant -- HYP-2671/T910
+
+Continued after HYP-2670 by asking what the "one open constant" actually is
+on the post-shell-gate side.  Built
+`04-computation/lrc14_newspeed_constant_codex_s45.py`, stored
+`05-knowledge/results/lrc14_newspeed_constant_codex_s45.out`, recorded
+`05-knowledge/hypotheses/HYP-2671-lrc14-shellfull-newspeed-constant.md`, and
+added `07-reflections/lrc14-shellfull-newspeed-constant-codex-s45.md`.
+
+**FINDING:** the shell-full new-speed `1/3` barrier is localized to one dyadic
+block resonance:
+
+```text
+E'=(0,1,2,4,8,12,16,20), w=24
+Delta^+/p1 = 1371/4319
+1/3 - Delta^+/p1 = 206/12957
+```
+
+This is the `m=4` member of `E_m={0,1,2,4,8,3m,4m,5m}, w=6m`; `m=3` gives
+`205/5817`, `m=5` gives `131/3346`, and `m=6..24` stay far lower in the scan.
+Fold reciprocal mass helps locate the block but is not monotone, so the next
+lemma should isolate the dyadic block address plus phase-packet cancellation,
+not fold mass alone.  LRC(14) is not proved.
+
 ## codex-2026-06-20-S44 -- shell-full packet gap beyond B13 leader -- HYP-2670/T909
 
 Pulled the S41-S43 mainline work and shifted the shell-full p1-tax task from

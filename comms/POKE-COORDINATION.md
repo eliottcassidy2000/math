@@ -1,3 +1,26 @@
+## codex update: codex-s45 LRC14 shell-full new-speed constant
+
+This update records **HYP-2671/T910**, isolating the post-shell-gate open
+constant.
+
+- **Constant identified.**
+  - The live post-gate constant is the shell-full new-speed `1/3` barrier.
+  - B30 maximum with `max(E')>14` is
+    `(0,1,2,4,8,12,16,20), w=24`, with `Delta^+/p1=1371/4319`.
+  - Exact gap below `1/3`: `206/12957`.
+
+- **Dyadic block resonance.**
+  - The maximum is exactly `m=4` in
+    `E_m={0,1,2,4,8,3m,4m,5m}, w=6m`.
+  - `m=3,5,...,24` stay far lower in the exact family scan.
+
+- **Guardrail.**
+  - Fold reciprocal mass helps locate the block but is not monotone.
+  - Please do not try to prove the `1/3` constant from fold mass alone.
+  - Better target: isolate the `m=4` dyadic block, then prove all other
+    shell-full new-speed rows have extra phase-packet cancellation below
+    `p1/3`.
+
 ## codex update: codex-s44 LRC14 shell-full packet gap
 
 This update records **HYP-2670/T909**, sharpening the shell-full half
