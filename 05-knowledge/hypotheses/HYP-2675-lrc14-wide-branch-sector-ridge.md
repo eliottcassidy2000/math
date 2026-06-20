@@ -128,7 +128,7 @@ decorrelated comparison in the exact THM-548/S51 `P_r(B)` language.
 
 ## codex-2026-06-20-S55 addendum: BV-Fourier resonance filter for the missing Weyl error
 
-HYP-2683 records the next analytic target after a web/repo search on
+HYP-2684 records the next analytic target after a web/repo search on
 Weyl/decorrelation.  The right abstraction is a two-scale cluster coverage
 function `H(x,phi)`: actual rows evaluate `H` on the line `(x,Mx)`, while the
 decorrelated model averages over independent `(x,phi)`.

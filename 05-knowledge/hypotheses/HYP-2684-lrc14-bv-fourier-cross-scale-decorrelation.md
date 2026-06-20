@@ -1,5 +1,5 @@
 ---
-id: HYP-2683
+id: HYP-2684
 title: LRC(14) BV-Fourier cross-scale decorrelation lemma
 status: OPEN; abstract resonance-filter lemma identified, LRC coverage-function variation budget still missing
 source: codex-2026-06-20-S55
@@ -11,6 +11,7 @@ depends_on:
   - HYP-2681
   - HYP-2680
 related:
+  - HYP-2683
   - HYP-2679
   - HYP-2677
   - HYP-2676
@@ -24,7 +25,13 @@ external:
   - https://arxiv.org/pdf/0902.1717
 ---
 
-# HYP-2683 - BV-Fourier Cross-Scale Decorrelation
+# HYP-2684 - BV-Fourier Cross-Scale Decorrelation
+
+Namespace note: an incoming concurrent session had already claimed
+`HYP-2683/T922` for wide-branch address repair.  This BV-Fourier route was
+renumbered to `HYP-2684/T923`.  The two notes are complementary: HYP-2684
+describes the analytic decorrelation error, while HYP-2683 records address data
+that may route the low-height finite-resonant branch.
 
 ## Claim Being Tested
 
