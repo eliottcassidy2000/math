@@ -176,7 +176,7 @@ the signed boundary address `R(v,a) -> L(w,b)`.  The drop-6 collar is the small
 determinant pattern `[3,5,5,3]` between neighboring high-speed walls
 `13,12,11,12,13`.
 
-HYP-2653 records the first correction to the naive wording: the template is not
+HYP-2654 records the first correction to the naive wording: the template is not
 exact-row rigidity.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` lies below
 `426/35035`, but it preserves the four drop-6 mouth intervals and adds new
 mouth mass `1/980`.

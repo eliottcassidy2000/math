@@ -15,6 +15,7 @@ related:
   - HYP-2646
   - THM-541
   - HYP-2653
+  - HYP-2654
   - OPEN-Q-108
 ---
 
@@ -139,7 +140,7 @@ the signed boundary gaps `R(13,2)->L(12,2)`, `R(12,2)->L(11,2)`,
 `[3,5,5,3]`.  This confirms that the collar is an addressed boundary-owner
 phenomenon, not a scalar hole-position statistic.
 
-2. Prove a near-collar state-template lemma, now refined by HYP-2653:
+2. Prove a near-collar state-template lemma, now refined by HYP-2654:
 
 ```text
 If meas(G_C) < 426/35035, then C has the drop-6 mouth-retention template.
@@ -149,7 +150,7 @@ This would convert the observed separation into a structural dichotomy:
 drop-6-like rows are handled by the explicit collar, and every other bounded
 template has a uniform margin above it.
 
-Important correction from HYP-2653: this template cannot mean the exact one-hole
+Important correction from HYP-2654: this template cannot mean the exact one-hole
 AP row.  The AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` already has
 `3859/420420 = 7/858 + 1/980 < 426/35035`.  It keeps the old drop-6 mouth
 components undamaged and only adds new mouth mass.  The target is therefore
@@ -161,6 +162,12 @@ Rows with genuinely large or dissociated elements should be routed through
 HYP-2644's plateau estimate.  The exact atlas shows that merely appending a
 tail through `19` does not beat the collar; the top tail rows still look like
 AP clusters with a few holes, not independent strangers.
+
+The concurrent KPS HYP-2653 strengthens this branch by proving a
+sigma-dependent far-element decorrelation bound and reducing the uniform
+far-element constant to a structured breakpoint discrepancy.  Thus the current
+split is: HYP-2654 for bounded AP-tail mouth retention, HYP-2653/HYP-2644 for
+the far-element plateau route.
 
 ## Relationship To Freiman Small-Excess
 

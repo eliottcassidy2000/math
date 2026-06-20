@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-2653/T900 scout: near-collar AP-tail templates after THM-541.
+"""HYP-2654/T901 scout: near-collar AP-tail templates after THM-541.
 
 THM-541 proves that the AP-window one-hole collar is uniquely minimized by
 deleting 6.  The next obligation is subtler than "only the exact drop-6 row":
@@ -223,7 +223,7 @@ def main() -> None:
     parser.add_argument("--below-limit", type=int, default=80)
     args = parser.parse_args()
 
-    print("HYP-2653/T900 LRC14 near-collar AP-tail template scout")
+    print("HYP-2654/T901 LRC14 near-collar AP-tail template scout")
     print(f"AP base: [1,13], target 1/{TARGET_DENOM}, bmax={args.bmax}, max_holes={args.max_holes}")
     print(f"drop-6 collar: {fmt(DROP6_COLLAR)}")
     print(f"AP one-hole second value: {fmt(AP_SECOND)}")

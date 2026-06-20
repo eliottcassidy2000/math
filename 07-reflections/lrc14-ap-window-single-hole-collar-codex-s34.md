@@ -68,7 +68,7 @@ If meas(G_C) < 426/35035 for a primitive positive 12-core C,
 then C retains the drop-6 mouth template.
 ```
 
-HYP-2653 corrected the naive exact-row version: the AP-tail row
+HYP-2654 corrected the naive exact-row version: the AP-tail row
 `(1,2,3,4,5,7,8,9,11,12,13,20)` is already below `426/35035`, but it keeps the
 old drop-6 mouths undamaged and adds `1/980` new mouth mass.  The certificate
 therefore suggests a sharper route than raw enumeration: classify possible

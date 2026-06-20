@@ -1,5 +1,5 @@
 ---
-id: HYP-2653
+id: HYP-2654
 title: LRC14 near-collar AP-tail template - below the AP one-hole second value, retain the drop-6 mouth geometry
 status: OPEN; structured AP-tail evidence
 source: codex-2026-06-19-S34
@@ -14,7 +14,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2653 - Near-Collar AP-Tail Template
+# HYP-2654 - Near-Collar AP-Tail Template
 
 ## Claim
 
@@ -159,6 +159,11 @@ transitive.
 
 This is not a proof of the full near-collar theorem.  The broad exact scan
 through `[1,22]` was attempted during this session but timed out before
-completion, so HYP-2653 is structured AP-tail evidence, not a bounded-box
+completion, so HYP-2654 is structured AP-tail evidence, not a bounded-box
 theorem.  Its value is that it corrects the next target: prove mouth-retention
 rigidity, not exact-row rigidity.
+
+Namespace note: this packet was renumbered after origin/main landed KPS HYP-2653
+for the far-element decorrelation rate.  The two results are complementary:
+KPS HYP-2653 supports the wide/far branch, while HYP-2654 isolates the bounded
+AP-tail mouth-retention branch.
