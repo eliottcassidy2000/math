@@ -7,6 +7,22 @@ User: keep aiming for LRC(14); deeply consider Euler's odd↔distinct partition 
 **(4) Cycle-space=speed matroid (CONFIRMED):** Λ(E) is literally the ℤ-cycle space of the speed vector's column matroid; meas(S7) is a cycle-space generating function — the tournament/even-graph (cycle-space) link.
 **(5) Dyadic-richness REFUTED** (contiguity/AP-ness drives p_0, not dyadic piling); covering all residues mod 7 ~necessary for high p_0.
 HONEST: LRC(14)'s difficulty IS Euler's parity duality at apex prime 7; the conditional-convergence cancellation = the F_7* Galois trace (classical). The one missing step: lift the F_7*-average to a bound on the cycle-space GF's lattice tail. Real structure, not a proof. NEW: reflection lrc14-is-eulers-parity-duality-at-the-apex-prime; HYP-2656 (CRT, codex/wf), HYP-2657 (QR/Gauss, opus/wf); files lrc14_{euler_dyadic_explore,glaisher_measG,dyadic_p0_correlation}_kps.py.
+## codex-2026-06-19-S36 -- Euler parity carrier and corrected THM-544 finite minimum -- HYP-2659
+
+User asked to keep pushing toward LRC(14), with exact fractions and the odd/distinct partition identity plus tournament/even-graph equinumerosity in mind.  Pulled KPS S15 first; it already added HYP-2656, confirming the odd-base/dyadic-halving lens on the single-deletion layer.
+
+Added `04-computation/lrc14_euler_parity_carrier_codex_s36.py` and stored `05-knowledge/results/lrc14_euler_parity_carrier_codex_s36.out`.  The script verifies `prod_n(1+x^n)=prod_{m odd}1/(1-x^m)` through `x^80`, checks the binary carry bijection on sample partitions, and checks the labelled suspension bijection from arbitrary graphs on `n-1` vertices to even graphs on `n` vertices for `n=3..7`.  The LRC14 readout is an odd-shell carry profile: speed `2^a m` contributes `2^a` units to odd shell `m`.
+
+**Correction found while building the carrier:** THM-544's conclusion remains true, but its earlier finite minimum was stale.  `danger_arcs(speed)` returned the wrap interval near `1` before interior intervals, while the incremental `subtract_arcs` routine assumes sorted arcs.  Sorting the arcs gives the corrected exact two-tail finite minimum:
+
+```text
+holes=(4,6,10), tails=(20,46),
+core=(1,2,3,5,7,8,9,11,12,13,20,46),
+meas(G_C)=50189/3223220 = 426/35035 + 1571/460460,
+old drop-6 mouth survivor = 1/364.
+```
+
+The exact two-tail theorem still has zero below-second rows.  Corrected finite residue: `400,090` exact finite pairs; largest active fixed-tail cutoff is now holes `(4,6,10)`, `r=219`, `M=847985/18414396`, `c=28`, `6M-7Q=2933809/15345330`, `S=293`.  The proof route update is sharper: the one-tail exception is pure existing-shell carry with undamaged old mouths, while the corrected two-tail minimum introduces a new odd shell and damages the old mouth but already pays the AP-second threshold.  LRC(14) is still not proved.
 
 ## kind-pasteur-2026-06-19-S15 — Glaisher dyadic-richness lens: REFUTED as the p_0-maximization principle, CONFIRMED as the exact tiebreaker among near-consec windows + doubling-monotonicity certificate — HYP-2650
 
@@ -51,16 +67,16 @@ one has `meas(G_C) >= 426/35035`.  The proof uses a two-comb union bound
 meas(G_B\(D_r union D_s)) >= (5/7)M_B - 2c_B/(7r) - 2c_B/(7s),
 ```
 
-with positive exact slack for all `286` three-hole bases, then fixes the smaller tail and applies the one-comb cutoff to the exact post-`r` safe set.  This leaves `129,991` exact finite pairs.  There are `0` below-second rows.
+with positive exact slack for all `286` three-hole bases, then fixes the smaller tail and applies the one-comb cutoff to the exact post-`r` safe set.  After the S36 sorted-arc correction this leaves `400,090` exact finite pairs.  There are `0` below-second rows.
 
 The exact finite minimum is
 
 ```text
-holes=(4,6,10), tails=(14,15),
-meas(G_C)=14249/252252 = 426/35035 + 1141/25740.
+holes=(4,6,10), tails=(20,46),
+meas(G_C)=50189/3223220 = 426/35035 + 1571/460460.
 ```
 
-Largest two-comb cutoff: holes `(4,5,6)`, `M=79/1155`, `c=16`, `5M-7Q=551/2145`, `R=250`.  Largest active fixed-tail cutoff: same holes with `r=14`, `M=79/1155`, `c=16`, `6M-7Q=148/455`, `S=99`.
+Largest two-comb cutoff: holes `(4,5,6)`, `M=79/1155`, `c=16`, `5M-7Q=551/2145`, `R=250`.  Largest active fixed-tail cutoff after correction: holes `(4,6,10)` with `r=219`, `M=847985/18414396`, `c=28`, `6M-7Q=2933809/15345330`, `S=293`.
 
 **PROOF ROUTE UPDATE:** HYP-2654 now has the first two AP-tail replacement layers closed: one replacement has the single harmless mouth-retaining exception `(6,10)->20`; two replacements has no below-second row.  Remaining bounded AP-tail risk starts at three or more replacement tails, or exits to state-word damage/non-AP/far-discrepancy structure.  LRC(14) is not proved.
 
@@ -103,13 +119,13 @@ User asked to work on the next proof obligation creatively.  Synced current main
 **NEXT OBLIGATION:** prove the near-collar mouth-retention theorem: if a primitive positive 12-core has `meas(G_C)<426/35035`, then it must retain the drop-6 mouth template.  The new suggested route is a signed boundary-determinant rigidity lemma for low-measure R-to-L wall chains before scalarizing through Freiman/state-word quotients.  LRC(14) NOT proved, but the first HYP-2651 proof obligation is closed.
 
 **FOLLOW-UP / HYP-2654:** the naive exact-row version of that next obligation is too strong.  Added `04-computation/lrc14_near_collar_tail_template_codex_s34.py`, stored `05-knowledge/results/lrc14_near_collar_tail_template_codex_s34.out`, and detailed `05-knowledge/hypotheses/HYP-2654-lrc14-near-collar-tail-template.md`.  In `67,795` structured AP-tail rows through replacement `<=35` with up to three AP holes, the only rows below `426/35035` are the exact drop-6 core and `(1,2,3,4,5,7,8,9,11,12,13,20)=7/858+1/980`; both retain the full old drop-6 mouth mass `7/858` with no damage.  The corrected next theorem is mouth-retention rigidity: below the cutoff, force the four drop-6 mouth intervals (or prove any old-mouth damage/no central hole costs at least `426/35035`).
-## codex-2026-06-19-S36 -- LRC14 core-gap survival bridge after THM-544 -- HYP-2656/T903
+## codex-2026-06-19-S36 -- LRC14 core-gap survival bridge after THM-544 -- HYP-2658/T903
 
-User asked to integrate other agents and keep pushing for a proof. Synced current mainline and combined HYP-2651's fixed-observer core-gap atlas, KPS HYP-2653's exact decorrelation engine, KPS HYP-2655's multiscale decorrelation warning, HYP-2654/THM-541/542/543/544's near-collar AP-tail layer, HYP-2648 state-word/address discipline, and HYP-2652 endpoint-owner invariant stack. Added `04-computation/lrc14_core_gap_survival_bridge_codex_s36.py`, stored `05-knowledge/results/lrc14_core_gap_survival_bridge_codex_s36.out`, detail `05-knowledge/hypotheses/HYP-2656-lrc14-core-gap-survival-bridge.md`, and reflection `07-reflections/lrc14-core-gap-survival-bridge-codex-s36.md`; also added an S36 bridge addendum to HYP-2651.
+User asked to integrate other agents and keep pushing for a proof. Synced current mainline and combined HYP-2651's fixed-observer core-gap atlas, KPS HYP-2653's exact decorrelation engine, KPS HYP-2655's multiscale decorrelation warning, HYP-2654/THM-541/542/543/544's near-collar AP-tail layer, HYP-2648 state-word/address discipline, and HYP-2652 endpoint-owner invariant stack. Added `04-computation/lrc14_core_gap_survival_bridge_codex_s36.py`, stored `05-knowledge/results/lrc14_core_gap_survival_bridge_codex_s36.out`, detail `05-knowledge/hypotheses/HYP-2658-lrc14-core-gap-survival-bridge.md`, and reflection `07-reflections/lrc14-core-gap-survival-bridge-codex-s36.md`; also added an S36 bridge addendum to HYP-2651.
 
 **FINDING:** fixed-observer far speeds have the survival limit `meas(G_{B union {w}}) -> (6/7)meas(G_B)`, not the sector-cover filling limit. In the tested bounded base ledgers, this far limit has comfortable margin over the `7/858` collar: the closest 11-core base gives `(6/7)*(313/9702)=313/11319`, margin `5737/294294 ~= 0.01949`. Thus the far limit is not tight; finite resonance before decorrelation is the danger.
 
-**COMPONENT BRIDGE:** the local exact scan through `B=21` rediscovers the THM-543 exceptional one-replacement AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` with `3859/420420 = 7/858 + 1/980`. Component ledger shows the row is the collar with `10` replaced by `20`: the four collar intervals remain and two symmetric bubbles of length `1/1960` appear with endpoint owners `7->20` and `20->7`. THM-544 then closes the two-replacement AP-tail layer above `426/35035`. Updated OPEN-Q-108 target after THM-541/542/543/544: keep the proved collar/mouth/replacement layers, then route genuinely far rows through fixed-observer `6/7` survival plus KPS HYP-2655 joint plateau/Delta recursion. LRC(14) NOT proved. -> HYP-2656, HYP-2655, HYP-2654, HYP-2653, HYP-2651, HYP-2644, HYP-2648, HYP-2652, THM-541, THM-542, THM-543, THM-544, THM-523, OPEN-Q-108.
+**COMPONENT BRIDGE:** the local exact scan through `B=21` rediscovers the THM-543 exceptional one-replacement AP-tail row `(1,2,3,4,5,7,8,9,11,12,13,20)` with `3859/420420 = 7/858 + 1/980`. Component ledger shows the row is the collar with `10` replaced by `20`: the four collar intervals remain and two symmetric bubbles of length `1/1960` appear with endpoint owners `7->20` and `20->7`. THM-544 then closes the two-replacement AP-tail layer above `426/35035`. Updated OPEN-Q-108 target after THM-541/542/543/544: keep the proved collar/mouth/replacement layers, then route genuinely far rows through fixed-observer `6/7` survival plus KPS HYP-2655 joint plateau/Delta recursion. LRC(14) NOT proved. -> HYP-2658, HYP-2655, HYP-2654, HYP-2653, HYP-2651, HYP-2644, HYP-2648, HYP-2652, THM-541, THM-542, THM-543, THM-544, THM-523, OPEN-Q-108.
 
 ## codex-2026-06-19-S33 -- LRC speed-set invariant stack: endpoint geometry plus binding tail laws -- HYP-2652/T899
 

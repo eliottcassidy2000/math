@@ -1,0 +1,72 @@
+LRC14 Euler parity carrier scout
+exact arithmetic only
+
+Euler product identity
+  verified coefficients through x^80: prod(1+x^n) == prod_odd 1/(1-x^m)
+  first coefficients:
+   p_odd_distinct(0)=1, p_odd_distinct(1)=1, p_odd_distinct(2)=1, p_odd_distinct(3)=2, p_odd_distinct(4)=2, p_odd_distinct(5)=3, p_odd_distinct(6)=4, p_odd_distinct(7)=5, p_odd_distinct(8)=6, p_odd_distinct(9)=8, p_odd_distinct(10)=10, p_odd_distinct(11)=12, p_odd_distinct(12)=15, p_odd_distinct(13)=18, p_odd_distinct(14)=22
+
+binary carry bijection samples
+  n=14: distinct=22, odd=22, forward=True, backward=True
+  n=20: distinct=64, odd=64, forward=True, backward=True
+  n=30: distinct=296, odd=296, forward=True, backward=True
+  sample distinct (20, 10, 8, 3, 1) -> odd (5, 5, 5, 5, 5, 5, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1)
+  inverse -> (20, 10, 8, 3, 1)
+
+labelled tournament/even-graph suspension
+  arbitrary graph on n-1 vertices -> even graph on n vertices by apex parity completion
+  n=3: free_bits=C(2,2), count=2, even_graphs_with_chosen_apex=2, injective=True
+  n=4: free_bits=C(3,2), count=8, even_graphs_with_chosen_apex=8, injective=True
+  n=5: free_bits=C(4,2), count=64, even_graphs_with_chosen_apex=64, injective=True
+  n=6: free_bits=C(5,2), count=1024, even_graphs_with_chosen_apex=1024, injective=True
+  n=7: free_bits=C(6,2), count=32768, even_graphs_with_chosen_apex=32768, injective=True
+  formula for all n: count = 2^C(n-1,2), with inverse deleting the chosen apex
+
+LRC14 AP-collar rows as odd-part carry profiles
+  profile records odd_part -> binary multiplicity sum from speed=2^a*odd_part
+  THM-541 drop-6 collar
+    core=(1, 2, 3, 4, 5, 7, 8, 9, 10, 11, 12, 13)
+    safe=7/858, old_mouth_survivor=7/858, above_second=False
+    odd_carry_profile={1:15, 3:5, 5:3, 7:1, 9:1, 11:1, 13:1}
+    delta_vs_drop6={}, new_odd_parts=[]
+  AP second drop-12
+    core=(1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13)
+    safe=426/35035, old_mouth_survivor=0, above_second=True
+    odd_carry_profile={1:15, 3:3, 5:3, 7:1, 9:1, 11:1, 13:1}
+    delta_vs_drop6={3:-2}, new_odd_parts=[]
+  THM-543 one-tail exception
+    core=(1, 2, 3, 4, 5, 7, 8, 9, 11, 12, 13, 20)
+    safe=3859/420420, old_mouth_survivor=7/858, above_second=False
+    odd_carry_profile={1:15, 3:5, 5:5, 7:1, 9:1, 11:1, 13:1}
+    delta_vs_drop6={5:2}, new_odd_parts=[]
+  THM-544 corrected two-tail minimum
+    core=(1, 2, 3, 5, 7, 8, 9, 11, 12, 13, 20, 46)
+    safe=50189/3223220, old_mouth_survivor=1/364, above_second=True
+    odd_carry_profile={1:11, 3:5, 5:5, 7:1, 9:1, 11:1, 13:1, 23:2}
+    delta_vs_drop6={1:-4, 5:2, 23:2}, new_odd_parts=[23]
+  three-scale HYP-2655 witness shadow
+    core=(1, 2, 30, 31, 32, 60, 61, 62, 63, 64, 65, 66)
+    safe=62169061/596260665, old_mouth_survivor=3/3136, above_second=True
+    odd_carry_profile={1:99, 15:6, 31:3, 33:2, 61:1, 63:1, 65:1}
+    delta_vs_drop6={1:84, 3:-5, 5:-3, 7:-1, 9:-1, 11:-1, 13:-1, 15:6, 31:3, 33:2, 61:1, 63:1, 65:1}, new_odd_parts=[15, 31, 33, 61, 63, 65]
+
+carrier conclusion
+  Euler odd/distinct: binary free choices become odd-shell multiplicities.
+  even-graph suspension: binary free choices become parity-completed cycle carriers.
+  HYP-2656 CRT/halving: the odd base is rigid; dyadic levels refine it.
+  LRC14 reading: bounded AP-tail rows should be routed by odd-shell carry plus
+  exact mouth survival before using scalar measure. The unique one-tail
+  below-second exception is a pure carry inside an existing odd shell.
+  The corrected two-tail minimum introduces a new odd shell and damages
+  the old mouth, but already pays the second-value threshold exactly.
+
+Tournament Analysis
+  vertices: parity carrier lenses
+  pairwise observable: which lens preserves exact safe-measure routing
+  switch/gauge: carry profile before scalarizing to safe measure
+  Hamiltonian path:
+    odd_shell_carry > mouth_survivor > state_word_damage
+    > apex_parity_completion > raw_speed_set
+  directed 3-cycles: 0 (declared proof-lens order)
+
+PASS: Euler parity carrier scout complete.

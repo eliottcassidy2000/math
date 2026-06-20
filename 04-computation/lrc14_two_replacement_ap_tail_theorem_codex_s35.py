@@ -89,7 +89,7 @@ def danger_arcs(speed: int) -> tuple[tuple[Fraction, Fraction], ...]:
             arcs.append((Fraction(denom + left, denom), Fraction(1)))
         else:
             arcs.append((Fraction(left, denom), Fraction(right, denom)))
-    return tuple(arcs)
+    return tuple(sorted(arcs))
 
 
 def subtract_arcs(
@@ -263,9 +263,10 @@ def main() -> None:
         raise AssertionError("finite scan unexpectedly empty")
     assert not below
     assert best.holes == (4, 6, 10)
-    assert best.r == 14
-    assert best.s == 15
-    assert best.measure == Fraction(14249, 252252)
+    assert best.r == 20
+    assert best.s == 46
+    assert best.measure == Fraction(50189, 3223220)
+    assert best.old_survivor == Fraction(1, 364)
 
     bases_by_cutoff = sorted(bases, key=lambda row: (-row.cutoff, row.holes))
     fixed_active = [row for row in fixed_cutoff_rows if row.cutoff > row.r + 1]
@@ -320,7 +321,7 @@ def main() -> None:
 
     print("exact conclusion")
     print("  Every two-replacement AP-tail row is at least 426/35035.")
-    print("  The exact finite minimum is 14249/252252, exceeding Q by 1141/25740.")
+    print("  The exact finite minimum is 50189/3223220, exceeding Q by 1571/460460.")
     print()
 
     print("Tournament Analysis")

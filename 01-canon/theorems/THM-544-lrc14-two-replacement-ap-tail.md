@@ -42,15 +42,15 @@ Thus no two-replacement AP-tail row lies below the AP one-hole second value.
 The exact minimum found in the finite residue is
 
 ```text
-holes=(4,6,10), tails=(14,15),
-C=(1,2,3,5,7,8,9,11,12,13,14,15),
-meas(G_C)=14249/252252.
+holes=(4,6,10), tails=(20,46),
+C=(1,2,3,5,7,8,9,11,12,13,20,46),
+meas(G_C)=50189/3223220.
 ```
 
 Its exact gap above the AP one-hole second value is
 
 ```text
-14249/252252 - 426/35035 = 1141/25740.
+50189/3223220 - 426/35035 = 1571/460460.
 ```
 
 ## Certificate
@@ -124,8 +124,8 @@ Every fixed-tail row has positive exact slack
 The largest active fixed-tail cutoff is
 
 ```text
-holes=(4,5,6), r=14,
-M=79/1155, c=16, 6M-7Q=148/455, S=99.
+holes=(4,6,10), r=219,
+M=847985/18414396, c=28, 6M-7Q=2933809/15345330, S=293.
 ```
 
 ## Finite Residue
@@ -135,21 +135,27 @@ The certificate covers:
 ```text
 three-hole bases: 286
 fixed smaller-tail rows checked for cutoff: 24824
-finite two-tail pairs checked exactly: 129991
+finite two-tail pairs checked exactly: 400090
 rows below 426/35035: 0
 ```
 
 The exact finite minimum is the row displayed above:
 
 ```text
-holes=(4,6,10), tails=(14,15),
-safe=14249/252252,
-gap_above_Q=1141/25740.
+holes=(4,6,10), tails=(20,46),
+safe=50189/3223220,
+gap_above_Q=1571/460460,
+old_survivor=1/364.
 ```
 
-The four old drop-6 mouth intervals survive in that minimum with total old
-survivor mass `7/858`, but the theorem does not need mouth retention: every
+The corrected finite minimum damages the four old drop-6 mouth intervals, with
+old survivor mass `1/364`, but the theorem does not need mouth retention: every
 row in the layer is already above the AP-second threshold.
+
+Correction note: an earlier draft of this certificate printed the stale minimum
+`tails=(14,15)`.  The issue was that wrapped danger arcs were not sorted before
+incremental interval subtraction.  The script now returns sorted danger arcs
+and the stored output reflects the corrected exact finite scan.
 
 ## Proof Use
 

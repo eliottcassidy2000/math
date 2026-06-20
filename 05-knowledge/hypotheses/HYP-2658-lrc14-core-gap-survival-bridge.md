@@ -1,5 +1,5 @@
 ---
-id: HYP-2656
+id: HYP-2658
 title: LRC14 fixed-observer core-gap survival bridge - 6/7 far limit and AP-tail bubble ledger
 status: OPEN; post-THM-544 bridge hypothesis with exact rational scout
 source: codex-2026-06-19-S36
@@ -23,7 +23,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2656 - LRC14 Core-Gap Survival Bridge
+# HYP-2658 - LRC14 Core-Gap Survival Bridge
 
 ## Claim
 
@@ -215,5 +215,5 @@ THM-543 exceptional replacement.
 
 The later S15 dyadic/apex-prime residue work is compatible with the same
 lesson: dyadic richness and QR/NQR sector structure can be useful tiebreaker
-addresses near the `m/7` cover walls, but HYP-2656 treats them as part of the
+addresses near the `m/7` cover walls, but HYP-2658 treats them as part of the
 HYP-2648/HYP-2652 address layer, not as a replacement scalar determinant.

@@ -10,6 +10,7 @@ depends_on:
   - THM-544
   - HYP-2651
 related:
+  - HYP-2659
   - HYP-2655
   - HYP-2653
   - HYP-2650
@@ -167,13 +168,14 @@ meas(G_C) >= 426/35035.
 
 The exact proof uses a two-comb cutoff over all `286` three-hole bases, then a
 fixed-tail one-comb cutoff over `24,824` exact smaller-tail rows, leaving
-`129,991` finite two-tail pairs.  None is below threshold.  The finite minimum
+`400,090` finite two-tail pairs.  None is below threshold.  The finite minimum
 is
 
 ```text
-holes=(4,6,10), tails=(14,15),
-meas(G_C)=14249/252252,
-meas(G_C)-426/35035=1141/25740.
+holes=(4,6,10), tails=(20,46),
+meas(G_C)=50189/3223220,
+old_survivor=1/364,
+meas(G_C)-426/35035=1571/460460.
 ```
 
 So the first layer has one harmless mouth-retaining below-second exception, and

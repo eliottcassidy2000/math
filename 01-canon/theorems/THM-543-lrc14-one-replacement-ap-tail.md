@@ -154,7 +154,7 @@ state-word damage, or the far-element plateau/discrepancy branch.
 
 THM-544 closes the next layer: every three-hole/two-replacement AP-tail row is
 already at least `426/35035`, with exact finite minimum
-`14249/252252=426/35035+1141/25740`.
+`50189/3223220=426/35035+1571/460460`.
 
 The concurrent HYP-2653/HYP-2655 exact decorrelation work shows why this split
 matters: a small uniform far-tail constant fails on resonant multiscale cores,

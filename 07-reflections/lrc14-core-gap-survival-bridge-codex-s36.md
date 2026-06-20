@@ -2,7 +2,7 @@
 
 Date: 2026-06-19
 Session: codex-2026-06-19-S36
-Claimed: HYP-2656 / T903
+Claimed: HYP-2658 / T903
 
 ## Why This Session
 
@@ -81,9 +81,9 @@ KPS HYP-2653 is the far decorrelation engine, HYP-2654 is the near-collar
 template, and THM-543 proves the one-replacement AP-tail layer.  A second fetch
 then claimed KPS HYP-2655 for multiscale decorrelation growth and THM-544 for
 the two-replacement AP-tail layer, so this packet moved once more to
-HYP-2656/T903.
+HYP-2658/T903.
 
-The corrected role of this packet is HYP-2656/T903:
+The corrected role of this packet is HYP-2658/T903:
 
 ```text
 near collar: THM-541 -> THM-542 -> THM-543 -> THM-544

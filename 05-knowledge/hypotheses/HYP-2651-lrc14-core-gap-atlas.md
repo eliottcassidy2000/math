@@ -11,6 +11,8 @@ depends_on:
   - HYP-2644
 related:
   - HYP-2656
+  - HYP-2658
+  - HYP-2659
   - HYP-2655
   - HYP-2654
   - HYP-2653
@@ -130,7 +132,7 @@ better by hole/state template than by scalar excess.
 
 ## S36 Addendum: B=20/21 Survival Bridge After THM-544
 
-HYP-2656 extends the same fixed-observer scan through `B=21` and connects this
+HYP-2658 extends the same fixed-observer scan through `B=21` and connects this
 atlas to the now-proved THM-541/542/543/544 near-collar layer.  The drop-6 core
 remains the unique minimum through `293,930` primitive positive 12-cores in
 `[1,21]`, but the second distinct value becomes
@@ -153,7 +155,7 @@ only
 
 above the collar.  This row is not a generic tail: THM-543 proves it is the
 unique sub-`426/35035` one-replacement AP-tail exception, the drop-6 collar with
-`10` replaced by `20`.  HYP-2656 records the component anatomy: the four collar
+`10` replaced by `20`.  HYP-2658 records the component anatomy: the four collar
 components remain intact and two symmetric bubbles of length `1/1960` are
 added, with endpoint owners `7 -> 20` and `20 -> 7`.
 
@@ -233,12 +235,12 @@ THM-544 then closes the two-replacement AP-tail layer:
 ({1,...,13}\{a,b,c}) union {r,s}, 1 <= a < b < c <= 13, 14 <= r < s.
 ```
 
-The exact two-comb/fixed-tail certificate checks `129,991` finite two-tail pairs
+The exact two-comb/fixed-tail certificate checks `400,090` finite two-tail pairs
 after rational cutoffs and finds no row below `426/35035`; the finite minimum is
 
 ```text
-holes=(4,6,10), tails=(14,15),
-meas(G_C)=14249/252252 = 426/35035 + 1141/25740.
+holes=(4,6,10), tails=(20,46),
+meas(G_C)=50189/3223220 = 426/35035 + 1571/460460.
 ```
 
 Thus the bounded AP-tail search has advanced past the first two replacement
