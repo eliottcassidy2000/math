@@ -123,3 +123,6 @@ This is not a proof of LRC14.  It is a formal proof skeleton plus exact
 bounded-ratio evidence.  HYP-2730 and the S72 discrepancy probe reduce the
 remaining mathematical work to wiring the finite row atlas, the finite `f1`
 window, and the elementary torus-line discrepancy lemma into the L7 ledger.
+HYP-2732 also blocks a tempting overclaim: the sector-cover cap does not
+directly imply a positive lonely-measure lower bound.  The theorem remains a
+sector-cover/L7 handoff inside OPEN-Q-108's reduction stack.

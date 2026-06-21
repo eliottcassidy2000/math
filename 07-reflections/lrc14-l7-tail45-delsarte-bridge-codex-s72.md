@@ -71,3 +71,10 @@ window into a proof-ready certificate, then formalize the elementary
 torus-line discrepancy lemma.  HYP-2731 supplies the parallel generated-side
 tail45 strip certificate, so the proof spine is now two finite gates plus one
 elementary discrepancy lemma.
+
+HYP-2732 is the useful brake on overclaiming.  The sector-cover result is a
+measure cap for the `p0` object; it does not automatically lower-bound the
+lonely-measure set.  The common structure is resonance correction around a
+decorrelated value, but the lonely side has the THM-504 conditional-convergence
+wall.  That means the L7 closure is a major component of the LRC14 stack, not
+by itself the final theorem.

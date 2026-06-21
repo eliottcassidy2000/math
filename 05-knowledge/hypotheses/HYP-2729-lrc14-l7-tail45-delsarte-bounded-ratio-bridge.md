@@ -125,3 +125,8 @@ finite-`f1` window are wired into the existing L7 ledger.  The next concrete
 target is no longer a broad `5/3` scout; it is a proof document or Lean-friendly
 finite certificate for the finite atlas plus the HYP-2730 `D<=14/p` Koksma
 lemma, with the `D<=24/(7q)` seven-bin bound as a simpler backup.
+
+HYP-2732 is a guardrail: closing this sector-cover/L7 route does not directly
+give a lower bound on lonely measure `L(S)`.  The bridge to LRC(14) still has
+to pass through the established OPEN-Q-108 reductions and finite-window
+packaging, not the false implication `p0<=cap => L>=1-cap`.
