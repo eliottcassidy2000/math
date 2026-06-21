@@ -37,14 +37,53 @@ larger raw `p_0`, then smaller denominator, then lexicographic label.  This
 turns the L7 scout into a risk tournament on proof obligations, not a
 tournament on runners.
 
-## Missing
+## Exact Evidence
 
-This stub reserves HYP-2729 for the next exact scout:
+The scout now exists:
 
 `04-computation/lrc14_l7_tail45_bounded_ratio_codex_s72.py`
 
-The scout should compute exact missed-count laws for bounded-ratio rows,
-include the KPS ratio `28/25` witness, report cap margins and row-level
-`U4/tail45` diagnostics, and output a tournament fingerprint on ratio
-channels.  Any positive evidence must remain labeled as evidence until the
-finite resonance atlas and non-resonant discrepancy lemma are written.
+Output:
+
+`05-knowledge/results/lrc14_l7_tail45_bounded_ratio_codex_s72.out`
+
+It scanned `3111` exact primitive bounded-ratio rows after skipping `237`
+nonprimitive rows, with `0` cap violations.  The thinnest margins by `k=8..12`
+were:
+
+- `k=8`: `1471/5880`, row `(0,1,2,3,4,5,20,28)`.
+- `k=9`: `62911/300300`, row `(0,2,4,6,8,10,12,25,28)`.
+- `k=10`: `16/91`, row `(0,1,2,3,4,5,6,7,21,35)`.
+- `k=11`: `424/1911`, row `(0,1,2,3,4,5,6,7,8,21,35)`.
+- `k=12`: `4891/17640`, row `(0,1,2,3,4,5,6,7,8,9,35,42)`.
+
+The KPS named ratio `28/25` with even base has
+
+`p0=299/1050`, `cap_9-p0=62911/300300`, `tail45=607/14700`,
+`U4=4793/14700`.
+
+The ratio-channel tournament is transitive under the risk key:
+
+`5/3 > 7/4 > 7/6 > 5/4 > 6/5 > 2/1 > 7/5 > 4/3 > 9/5 > 8/7 > 3/2 > 15/7 > 28/25 > 8/5`.
+
+Raw row `tail45` disagrees with margin risk on `27/91` channel edges.  This is
+evidence for the sequential handoff, not for a direct raw `tail45` L7 theorem.
+
+## Formalization Target
+
+`THM-562` records the proof skeleton:
+
+`01-canon/theorems/THM-562-lrc14-l7-bounded-ratio-handoff-skeleton.md`
+
+The finite formal layer is the exact cell law: breakpoints `a/(7e)`, constant
+sector words between adjacent breakpoints, and rational interval sums for
+`p_t(E)`.  The two missing mathematical premises are a finite rational
+resonance atlas and a non-resonant two-dimensional Erdos-Turan-Koksma bound
+after the HYP-2726 Delsarte readout.
+
+## Remaining Missing Pieces
+
+Any positive evidence remains only evidence until the finite resonance atlas
+and non-resonant discrepancy lemma are written.  The next concrete target is a
+single-channel periodic proof, likely ratio `5/3`, because it is the sampled
+risk leader.
