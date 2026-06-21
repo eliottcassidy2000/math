@@ -1,0 +1,56 @@
+======================================================================================
+LRC(14) ASSEMBLED TWO-REGIME SKELETON -- p0(wide E) < cap_k, k=8..12
+======================================================================================
+
+[STEP 0] exact constants
+  k        cap_k       Q(k-1)     MARGIN
+  8    2243/5880     289/1470    0.18486
+  9    1979/4004     621/1715    0.13216
+ 10        55/91    1229/2744    0.15651
+ 11        66/91 65599/123480    0.19402
+ 12          6/7  14873/24696    0.25490
+  cap - Q == MARGIN exact: OK
+
+[STEP B] BINDING witnesses:  Q(k-1) < p0 < cap  (single-perturbation, scale-reduces)
+  k  span         p0          Q        cap  Q<p0<cap   cap-p0
+  8    21   0.217687    0.19660    0.38146      True  0.16378
+  9    21   0.372109    0.36210    0.49426      True  0.12215
+ 10    21   0.456973    0.44789    0.60440      True  0.14742
+ 11    21   0.539342    0.53125    0.72527      True  0.18593
+ 12    26   0.612515    0.60224    0.85714      True  0.24463
+  ALL binding witnesses span>14 and Q<p0<cap: True
+
+[STEP C] SLACK witnesses:  p0 < Q(k-1) < cap  (genuine-wide, below floor)
+  k  span         p0          Q   p0<Q   cap-p0
+  8    21   0.172356    0.19660   True  0.20911
+  9    21   0.276190    0.36210   True  0.21807
+ 10    19   0.422807    0.44789   True  0.18159
+ 11    19   0.494728    0.53125   True  0.23055
+ 12    16   0.574150    0.60224   True  0.28299
+  ALL slack witnesses span>14 and p0<Q: True
+
+[STEP B2] THM-563 single-far closure (PROVED, 12805 bases; global binding row asserted)
+  global binding base B = (0, 2, 4, 6, 8, 10, 12, 14) = 2*consec_7 (k=9)
+  period-max(B) = 86/49 = 1.75510;  published ratio = 13.2805 < 15  => Delta_w < margin
+  (full sweep: 05-knowledge/results/lrc_periodmax_THM563_general_check_COMPLETE_macmini_0621s7.out
+   12805 bases, k=8..13, 0 FAIL, 0 SKIP -- PROVED)
+
+======================================================================================
+ASSEMBLED VERDICT
+======================================================================================
+  [STEP 0]  exact: OK
+  [STEP A]  dichotomy WITNESSES confirmed: binding side Q<p0<cap, slack side p0<Q.
+            (Full near-cap<=>single-perturbation is PROVED exhaustive at k=8,9;
+             VERIFIED adversarial-sup at k=10,11,12.)
+  [STEP B]  BINDING => p0 = Plat(B)+Delta_w <= Q(k-1) + MARGIN_k = cap_k.
+            B1 plateau-max Plat(B)<=Q(k-1): PROVED (exhaustive bounded bases).
+            B2 single-far Delta_w<MARGIN_k:  PROVED (THM-563, 12805 bases, 0 fail).
+  [STEP C]  SLACK => p0 < Q(k-1) < cap_k.  PROVED k=8,9 (exhaustive deep-slack);
+            VERIFIED k=10,11,12 (adversarial sup, infinite far-placement space).
+
+  => p0(wide E) < cap_k  for ALL wide E:  PROVED at k=8,9 ; VERIFIED at k=10,11,12.
+  The single open analytic nut = the SLACK-side sup over the infinite far-placement
+  space at k>=10 (no global far-monotonicity; needs joint 2D ET-Koksma / covolume
+  bound). NOT on the binding critical path (HYP-2794: no exact 2D period exists).
+
+DONE.
