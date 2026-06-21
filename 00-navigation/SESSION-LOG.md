@@ -1,3 +1,50 @@
+## codex-2026-06-21-S73 -- HYP-2737: L7 sharp tail reduced to a two-odometer row-slice lemma
+
+User asked for another long LRC proof/formalization session with frequent
+pull/push coordination.  Startup found only local session metadata dirty; a
+checkpoint push collided with a remote session-state reset, so the metadata-only
+local commit was skipped during rebase and the checkout was synced onto the
+newer mainline.  Incoming work was substantial signal: KPS had an L7 CLOSED
+summary, HYP-2735 additive-energy cover-bound sweep, HYP-2734/r>=3 pairwise
+tail lift, and codex HYP-2736 integer-grid tail refinement.  This session
+therefore focused on rigorous packaging and a sharper formal interface rather
+than re-proving the already-closed `D<=14/p` tail.
+
+Added `04-computation/lrc14_l7_odometer_row_slice_codex_s73.py` with stored
+output `05-knowledge/results/lrc14_l7_odometer_row_slice_codex_s73.out`.  The
+script cross-checks HYP-2736's common-breakpoint counts against the simpler
+two-clock odometer word
+
+```text
+t -> (floor(t/p), floor(t/q)) mod 7,  0 <= t < 7pq.
+```
+
+Then it scans all primitive bounded-ratio pairs `1<p/q<=43/20` through
+`q<=300` (`31506` pairs).  Results:
+
+```text
+rowdef is identical across all 7 rows: failures=0
+HYP-2733 row-rotation / zero-law checks: failures=0
+defect_sum == 49*rowdef: failures=0
+rowdef <= 12*p violations: 0
+max rowdef/p = 12 at 3/2
+max q>=5 rowdef/p = 4 at 11/10
+```
+
+So the HYP-2736 integer defect target
+`sum_ij |49*c_ij-7pq| <= 588p` would follow from the single seven-bin
+row-balance lemma
+
+```text
+rowdef_0(p,q) = sum_j |7*c_0j-pq| <= 12p.
+```
+
+Created HYP-2737 detail file and reflection
+`07-reflections/lrc14-l7-odometer-row-slice-formalization-codex-s73.md`.
+Updated result/hypothesis indexes and T947.  Honest status: this is a
+formalization/sharp-constant route, not a new dependency for L7 closure; HYP-2730
+already closes the needed tail by the elementary `D<=14/p` estimate.
+
 ## kind-pasteur-2026-06-21 (overnight) -- L7 (the SOLE open LRC(14)-S3 lemma) COMPUTATIONALLY CLOSED via an elementary 2D torus-line discrepancy -- HYP-2730
 
 User: long overnight LRC session, wide array of ideas, formalize, generate leads, pull/push concurrently.
