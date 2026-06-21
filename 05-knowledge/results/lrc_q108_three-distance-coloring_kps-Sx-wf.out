@@ -1,0 +1,42 @@
+================================================================================
+PART A:  SINGLE-BLOCK COLORING + THREE-DISTANCE STRUCTURE
+================================================================================
+
+[A1] THREE-GAP (Steinhaus) for a block's carrier orbit.
+  blocks {0..m-1} (m=2..12), rational x, 4000 samples:
+     max distinct circular gap lengths = 3   (three-distance: <=3)
+     violations of '<=3': 0  => A1 three-gap CONFIRMED (PROVED, Steinhaus).
+  (the coloring image floor(7*pts) is a deterministic function of (frac(x), m).)
+
+[A2] HIT-COUNT KERNEL g_r(rho) (all-singleton base case).
+  g_r(rho) = inclusion-exclusion cover prob, verified r<=6: True  (PROVED kernel).
+  cover6(r) [all 6 inner, r independent singletons]:
+     r= 6: 0.00612  (720/117649)
+     r= 7: 0.02448  (2880/117649)
+     r= 8: 0.05770  (47520/823543)
+     r= 9: 0.10491  (86400/823543)
+     r=10: 0.16310  (6581520/40353607)
+     r=11: 0.22845  (9218880/40353607)
+     r=12: 0.29731  (4115105280/13841287201)
+
+[A3] CONSEC maximizes single-cluster FULL COVER q({1..6}); exhaustive.
+  s=6: q(consec)=0.03500  max over bounded shapes=0.05258 at (0, 1, 2, 3, 4, 6)  consec_is_max=False
+  s=7: q(consec)=0.20389  max over bounded shapes=0.26244 at (0, 1, 3, 4, 5, 6, 9)  consec_is_max=False
+  => [A3] consec maximizes full cover (VERIFIED): False
+
+================================================================================
+PART B:  THE SMALL-|R| CONE (where consec-dominance fails) + COMPENSATION
+================================================================================
+
+[B1] CHARACTERIZE failing (shape C, residual R): q_C(R) > q_consec(R).
+  count of strict failures q_C(R)>q_consec(R) by rho=|R| (sizes s=3..5, bounded):
+     rho=2:   260 failures; ex C=(0, 1, 3) R=(1, 2) excess=0.00794
+     rho=3:   348 failures; ex C=(0, 1, 3) R=(1, 2, 5) excess=0.03175
+     rho=4:   276 failures; ex C=(0, 1, 2, 4) R=(1, 2, 3, 5) excess=0.00694
+     rho=5:    78 failures; ex C=(0, 1, 3, 4, 5) R=(1, 2, 3, 4, 5) excess=0.01246
+  full-cover (rho=6) failures: 0  (=> consec ALWAYS wins rho=6).
+  largest rho with ANY failure: 5
+  STRUCTURE (three-gap): spreading the shape widens AP gaps -> straddles more
+    separated sectors (helps small spread-out R) but leaves holes -> worse full cover.
+
+[B2] CONE COMPENSATION: context-weighted sum on GENERATED contexts.
