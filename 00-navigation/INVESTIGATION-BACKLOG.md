@@ -9,6 +9,16 @@
 **Last S90 update:** opus-2026-03-15-S90 (simplicial Rédei, Cayley monad, τ-φ clock, equidecomposability)
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
 **Last literature sweep:** opus-2026-04-05-S24 (Stanley-Stembridge proved, Mitrovic NC deletion-contraction, Tang-Yau circulant Fourier)
+**Last LRC web trawl:** mac-mini-2026-06-21-S20 (Rosenfeld 2025 proves LRC n=8,9,10; Huffer-Shepp Schur-convex coverage; Cusick AP-tight; see leads below)
+
+---
+
+## Lead mac-mini-2026-06-21-S20: LRC LAYER-3 sharpened routes + key literature (from the creative-lead trawl)
+**Source:** S20 trawl + drill workflows (HYP-2760..2763). **Status:** ACTIVE — LAYER 3 (consec Schur-maximizes measS7) is the last wall; LAYERS 1-2 PROVED+Lean.
+- **Conductance invariant (HYP-2760):** measS7 = EXACT function of c_r = sum_{e=r mod7} 1/|e| (0 collisions); Foster sum_r g(r)=112; bottleneck/minimax on C_7. NEXT: derive the exact F(c) and prove consec maximizes the bottleneck via Chebyshev equalization.
+- **Windows extremality (HYP-2761):** consec UNIQUELY maximizes WIN=harmonic sum of binding speeds (0 ties, sharper than the wall). OBSTRUCTION: WIN/DISCONNECTED split does NOT compose (they anti-correlate). NEXT: harmonic-sum exchange argument.
+- **AP-unification (HYP-2762):** BOTH extremalities = 'the additive AP Schur-maximizes' (consec / cyclic Interval); Paley is small-p only (crossover p=19, HYP-479/THM-135). Wiener-Khinchin: argmin sum|lambda|^4 = QR difference set. NEXT: the elementary-symmetric c_k crossover mechanism; does it transfer to LRC?
+- **KEY LITERATURE (HYP-2763):** **Rosenfeld 2025 (arXiv:2509.14111, arXiv:2511.22427) PROVES LRC n=8,9,10** via finite-checking + the Tao 2018 -> Malikiosis-Santos-Schymura 2025 bound n^{2n} (arXiv:2411.06903). STRATEGIC Q: is the finite check feasible at n=14 (n^{2n}=14^28 brute is not, but our sector-route + stratum-localization + sharp L7 atlas p<=14 reduces it massively)? Huffer-Shepp 1987 reflection lemma (port to per-cell W_a). Cusick view-obstruction (AP {1..n} proven tight). Chung-Graham 3-distance (AP gap-rigidity => LAYER 3 as a rigidity statement).
 
 ---
 

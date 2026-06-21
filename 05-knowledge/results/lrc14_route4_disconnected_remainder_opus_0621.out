@@ -1,0 +1,75 @@
+====================================================================================
+k=8  span<=16
+  consec measS7 = 481/1470 = 0.327211
+  consec WIN    = 83/294 = 0.282313
+  consec DISC   = 11/245 = 0.044898   (DISC/measS7 = 0.137)
+  rivals in stratum: 863
+  [T1] min SLACK (= min consec measS7 lead) = 3/98 = 0.030612
+       attained at [0, 2, 4, 6, 8, 10, 12, 14]
+       => consec measS7 lead is >=0 (consec at least ties)
+  [T1b] #rivals strictly beating consec measS7 = 0
+        #rivals tying-or-beating consec measS7 = 0
+  [T2] max DISCdeficit = 65/588 = 0.110544  at [0, 2, 4, 6, 8, 10, 12, 14]
+       min WINlead     = 59/1176 = 0.050170  at [0, 2, 3, 4, 5, 6, 7, 8]
+       (ROUTE 4 closes if max DISCdeficit < min WINlead, i.e. uniform bound)
+       uniform DISC-bound (maxDISCdef < minWINlead)? False
+  [T3] #rivals with DISC(E) > DISC(consec) = 169/863  (if 0, consec also maximizes DISC -> bound trivial)
+  [T4] tightest 8 rivals (smallest measS7 lead = WINlead - DISCdef):
+     [0, 2, 4, 6, 8, 10, 12, 14]    slack=+0.030612  WINlead=+0.14116 DISCdef=+0.11054  measS7=0.29660
+     [0, 2, 3, 4, 5, 6, 7, 8]       slack=+0.053571  WINlead=+0.05017 DISCdef=-0.00340  measS7=0.27364
+     [0, 4, 6, 8, 10, 12, 14, 16]   slack=+0.080357  WINlead=+0.16624 DISCdef=+0.08588  measS7=0.24685
+     [0, 2, 4, 6, 7, 8, 10, 12]     slack=+0.083333  WINlead=+0.13707 DISCdef=+0.05374  measS7=0.24388
+     [0, 1, 3, 4, 5, 6, 7, 9]       slack=+0.090136  WINlead=+0.08390 DISCdef=-0.00624  measS7=0.23707
+     [0, 1, 2, 3, 4, 5, 6, 14]      slack=+0.094898  WINlead=+0.07347 DISCdef=-0.02143  measS7=0.23231
+     [0, 1, 2, 4, 5, 6, 7, 10]      slack=+0.107143  WINlead=+0.10136 DISCdef=-0.00578  measS7=0.22007
+     [0, 3, 4, 5, 6, 7, 8, 9]       slack=+0.108503  WINlead=+0.08985 DISCdef=-0.01865  measS7=0.21871
+====================================================================================
+k=9  span<=16
+  consec measS7 = 2447/5880 = 0.416156
+  consec WIN    = 379/1176 = 0.322279
+  consec DISC   = 23/245 = 0.093878   (DISC/measS7 = 0.226)
+  rivals in stratum: 2327
+  [T1] min SLACK (= min consec measS7 lead) = 17/1176 = 0.014456
+       attained at [0, 1, 2, 3, 4, 5, 6, 7, 9]
+       => consec measS7 lead is >=0 (consec at least ties)
+  [T1b] #rivals strictly beating consec measS7 = 0
+        #rivals tying-or-beating consec measS7 = 0
+  [T2] max DISCdeficit = 137/1176 = 0.116497  at [0, 2, 4, 6, 8, 10, 12, 14, 16]
+       min WINlead     = 3/98 = 0.030612  at [0, 1, 2, 3, 4, 5, 6, 7, 16]
+       (ROUTE 4 closes if max DISCdeficit < min WINlead, i.e. uniform bound)
+       uniform DISC-bound (maxDISCdef < minWINlead)? False
+  [T3] #rivals with DISC(E) > DISC(consec) = 578/2327  (if 0, consec also maximizes DISC -> bound trivial)
+  [T4] tightest 8 rivals (smallest measS7 lead = WINlead - DISCdef):
+     [0, 1, 2, 3, 4, 5, 6, 7, 9]    slack=+0.014456  WINlead=+0.03180 DISCdef=+0.01735  measS7=0.40170
+     [0, 1, 2, 3, 4, 5, 6, 7, 10]   slack=+0.035204  WINlead=+0.03180 DISCdef=-0.00340  measS7=0.38095
+     [0, 2, 4, 6, 7, 8, 10, 12, 14] slack=+0.042687  WINlead=+0.14983 DISCdef=+0.10714  measS7=0.37347
+     [0, 1, 2, 3, 4, 5, 6, 7, 12]   slack=+0.044388  WINlead=+0.03180 DISCdef=-0.01259  measS7=0.37177
+     [0, 2, 4, 6, 8, 10, 12, 14, 16] slack=+0.044643  WINlead=+0.16114 DISCdef=+0.11650  measS7=0.37151
+     [0, 1, 2, 3, 4, 5, 6, 7, 14]   slack=+0.048469  WINlead=+0.03520 DISCdef=-0.01327  measS7=0.36769
+     [0, 1, 2, 3, 4, 5, 6, 7, 16]   slack=+0.052296  WINlead=+0.03061 DISCdef=-0.02168  measS7=0.36386
+     [0, 2, 3, 4, 5, 6, 7, 8, 9]    slack=+0.055896  WINlead=+0.06434 DISCdef=+0.00845  measS7=0.36026
+====================================================================================
+k=10  span<=15
+  consec measS7 = 8899/17640 = 0.504478
+  consec WIN    = 641/1764 = 0.363379
+  consec DISC   = 2489/17640 = 0.141100   (DISC/measS7 = 0.280)
+  rivals in stratum: 1799
+  [T1] min SLACK (= min consec measS7 lead) = 187/17640 = 0.010601
+       attained at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+       => consec measS7 lead is >=0 (consec at least ties)
+  [T1b] #rivals strictly beating consec measS7 = 0
+        #rivals tying-or-beating consec measS7 = 0
+  [T2] max DISCdeficit = 109/882 = 0.123583  at [0, 1, 2, 3, 4, 6, 8, 9, 10, 12]
+       min WINlead     = 73/3528 = 0.020692  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 12]
+       (ROUTE 4 closes if max DISCdeficit < min WINlead, i.e. uniform bound)
+       uniform DISC-bound (maxDISCdef < minWINlead)? False
+  [T3] #rivals with DISC(E) > DISC(consec) = 918/1799  (if 0, consec also maximizes DISC -> bound trivial)
+  [T4] tightest 8 rivals (smallest measS7 lead = WINlead - DISCdef):
+     [0, 1, 2, 3, 4, 5, 6, 7, 8, 10] slack=+0.010601  WINlead=+0.02783 DISCdef=+0.01723  measS7=0.49388
+     [0, 1, 2, 3, 4, 5, 6, 7, 9, 10] slack=+0.025680  WINlead=+0.05998 DISCdef=+0.03430  measS7=0.47880
+     [0, 1, 2, 3, 4, 5, 6, 7, 8, 12] slack=+0.039853  WINlead=+0.02069 DISCdef=-0.01916  measS7=0.46463
+     [0, 1, 2, 3, 4, 5, 6, 7, 8, 14] slack=+0.047846  WINlead=+0.03634 DISCdef=-0.01151  measS7=0.45663
+     [0, 2, 3, 4, 5, 6, 7, 8, 9, 10] slack=+0.050000  WINlead=+0.06338 DISCdef=+0.01338  measS7=0.45448
+     [0, 1, 2, 3, 4, 5, 6, 7, 9, 12] slack=+0.052891  WINlead=+0.06950 DISCdef=+0.01661  measS7=0.45159
+     [0, 2, 4, 5, 6, 7, 8, 10, 12, 14] slack=+0.055329  WINlead=+0.14008 DISCdef=+0.08475  measS7=0.44915
+     [0, 2, 3, 4, 5, 6, 7, 8, 10, 12] slack=+0.055499  WINlead=+0.10232 DISCdef=+0.04683  measS7=0.44898

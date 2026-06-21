@@ -1,0 +1,28 @@
+========================================================================
+TOURNAMENT H -- p = 7  (p mod 4 = 3)
+========================================================================
+  2 distinct spectral classes, m = 3
+    H=             189  x=[1.75, 1.75, 1.75] PALEY
+    H=             175  x=[0.058, 0.3931, 4.7989] 
+
+  --- e_k (multilinear symmetric) fit ---
+  Not enough classes (2) for 4 unknowns; using LS.
+
+  --- FULL symmetric fit: H = sum_lambda a_lambda m_lambda(x) ---
+  basis size = 7 (partitions of 0..3, <= 3 parts)
+
+========================================================================
+TOURNAMENT H -- p = 11  (p mod 4 = 3)
+========================================================================
+  4 distinct spectral classes, m = 5
+    H=           95095  x=[2.75, 2.75, 2.75, 2.75, 2.75] 
+    H=           93467  x=[0.1736, 0.8732, 1.9673, 2.2438, 8.492] 
+    H=           93027  x=[0.0216, 0.1033, 0.333, 1.1987, 12.0935] 
+    H=           92411  x=[0.0002, 0.7829, 3.3593, 3.8655, 5.7422] 
+
+  --- e_k (multilinear symmetric) fit ---
+  Not enough classes (4) for 6 unknowns; using LS.
+
+  --- FULL symmetric fit: H = sum_lambda a_lambda m_lambda(x) ---
+  basis size = 19 (partitions of 0..5, <= 5 parts)
+

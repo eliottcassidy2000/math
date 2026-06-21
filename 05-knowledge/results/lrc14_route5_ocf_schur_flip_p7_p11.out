@@ -1,0 +1,26 @@
+========================================================================
+OCF LEVEL-SUM ANALYSIS -- p = 7  (p mod 4 = 3)
+========================================================================
+
+  PALEY  S=[1, 2, 4]
+    cycle counts c_ell: {3: 14, 5: 42, 7: 24}
+    total odd cycles (sum c_ell) = 80 ; Ncyc enum=80
+    alpha_j levels: {0: 1, 1: 80, 2: 7}
+    H = 1 + sum 2^j alpha_j = 189
+
+  INTERVAL  S=[1, 2, 3]
+    cycle counts c_ell: {3: 14, 5: 28, 7: 17}
+    total odd cycles (sum c_ell) = 59 ; Ncyc enum=59
+    alpha_j levels: {0: 1, 1: 59, 2: 14}
+    H = 1 + sum 2^j alpha_j = 175
+
+  --- per-level Paley-vs-Interval ---
+      j         aP         aI      delta      2^j*delta
+      0          1          1         +0             +0 =
+      1         80         59        +21            +42 P
+      2          7         14         -7            -28 I
+    cumulative 2^j-weighted: Paley+=42  Interval+=28
+    H(P)-H(I) = 14
+========================================================================
+OCF LEVEL-SUM ANALYSIS -- p = 11  (p mod 4 = 3)
+========================================================================
