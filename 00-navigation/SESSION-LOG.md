@@ -1,3 +1,29 @@
+## kind-pasteur-2026-06-21 -- CJJ complete-LP-hierarchy for LRC + TOURNAMENT extremality: the SUBSPACE-vs-COSET dichotomy (verdict doc + HYP-2754/2755)
+
+User: aim at proof for LRC AND tournament extremalities via the CJJ complete LP hierarchy (arXiv:2211.01248/2112.09221,
+four views incl. Lovasz theta' + Mobius). Workflow (3 threads) + my checks; converged with the team. NET (honest):
+
+ONE STRUCTURAL FACT: CJJ completeness needs an F_q-SUBSPACE optimizer (higher Krawtchouk moments determined by lower
+<=> closed under linear comb). The two extremizers split by it:
+ - TOURNAMENT Paley = QR cyclic code = an F_p-SUBSPACE => certificate-EXISTENCE closes (MacWilliams [7,4]->[7,3]).
+   HYP-2755 (VERIFIED, corrected a buggy workflow thread): Paley IS the circulant H-max p=7(189)/p=11(95095). BUT
+   theta'/Delsarte certifies code DISTANCE, while H=I(Omega,2) is NONLINEAR (THM-134); theta_LP ANTI-tracks H (Paley
+   40 > non-Paley 29.5); and Paley is H-max only p<=11, p=3mod4. So CJJ does NOT certify tournament H-max via theta';
+   candidate = fugacity-2 Lasserre hardcore hierarchy (only viable p<=11).
+ - LRC consec = AP = affine COSET (Freiman dim 1, NOT a subspace) => the linear lift collapses. HYP-2754 (VERIFIED
+   k=8): the 'collapse' is EXACTLY the DILATION symmetry (consec vs 2*consec tie, THM-531); consec's dilation-ORBIT
+   is the unique measS7-max => the right hierarchy factors the AFFINE group (translation+dilation), localizing to the
+   full-residue stratum (HYP-2749). Thread B (HYP-2752): a low-level (R<=3) signed Boolean/type cut PROVES consec-max
+   at k=8 (exact, 0 viol/319+3112 shapes) and k=9, but is NON-UNIFORM in k and its VALIDITY is non-structural (as hard
+   as consec-max). 
+
+TWO WALLS: (LRC) uniform-in-k validity of the signed cut [AP=coset]; (tournament) the nonlinear H-functional
+[Paley=subspace but H is not its distance enumerator]. The two open extremalities (= 'same theta' problem', L9992)
+are split by linearity: Paley clears certificate-EXISTENCE that AP fails, but neither clears certificate-VALIDITY
+that the nonlinearity imposes. Verdict doc: 05-knowledge/results/cjj_hierarchy_verdict_lrc_tournament_kps.md.
+Convergence: my HYP-2745 (cycle-resistance/E_2) -> mac-mini HYP-2750 (L7-tail to (20/7)/p, window p<=14) + HYP-2753
+(measS7 = 6 cycle-graph survival widths, 3-layer wall). Renumbered my colliding 2750->2754, 2751->2755. Synced ~10x.
+
 ## kind-pasteur-2026-06-21-kpswf6 (THREAD C) -- the linear-vs-nonlinear CJJ obstruction made precise + an AFFINE-symmetric fix: factoring DILATION localizes consec-max to the full-residue stratum and makes AP the unique extremizer there, but does NOT restore full integrality (SUPPORTED, exact k=8,9,10; HYP-2750)
 Task (subagent, Thread C, OPEN-Q-108 / HYP-2744): (1) state precisely from the CJJ four views what property the optimizer needs for the hierarchy to be complete/integral, verify consec/AP lacks it and Paley/QR has it; (2) propose+test an affine-group (translation+dilation) hierarchy where consec=AP IS the integral optimizer; (3) connect to HYP-2749 (full-residue stratum = CJJ-linearity locus).
 
