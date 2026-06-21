@@ -1,0 +1,44 @@
+========================================================================
+p = 7
+  TEST 1: is M_{2k}(Paley) = min over all sets, for k=2..5?
+    k=2: M_min=24, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=3: M_min=48, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=4: M_min=96, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=5: M_min=192, #argmin=2, Paley achieves min: True, argmin==2sets: True
+  TEST 2: is Paley's |lambda|^2 vector MAJORIZED BY every other set?
+    Every set majorizes Paley (Paley = majorization MIN)? False
+    # incomparable to Paley: 0
+    first non-majorizing examples: [([4, 5, 6], 'u>v'), ([1, 4, 5], 'u>v'), ([2, 4, 6], 'u>v')]
+  TEST 4: is H Schur-CONCAVE in |lambda|^2 (A majorizes B => H(A) <= H(B))?
+    comparable ordered pairs checked: 12, Schur-concavity VIOLATIONS: 0
+    => H Schur-concave in |lambda|^2 on the circulant family: True
+    max H = 189, argmax sets = [[1, 2, 4], [3, 5, 6]], Paley is unique-up-to-complement max: True
+
+========================================================================
+p = 11
+  TEST 1: is M_{2k}(Paley) = min over all sets, for k=2..5?
+    k=2: M_min=90, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=3: M_min=270, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=4: M_min=810, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=5: M_min=2430, #argmin=2, Paley achieves min: True, argmin==2sets: True
+  TEST 2: is Paley's |lambda|^2 vector MAJORIZED BY every other set?
+    Every set majorizes Paley (Paley = majorization MIN)? False
+    # incomparable to Paley: 0
+    first non-majorizing examples: [([6, 7, 8, 9, 10], 'u>v'), ([1, 6, 7, 8, 9], 'u>v'), ([1, 2, 6, 7, 8], 'u>v')]
+  TEST 4: is H Schur-CONCAVE in |lambda|^2 (A majorizes B => H(A) <= H(B))?
+    comparable ordered pairs checked: 160, Schur-concavity VIOLATIONS: 0
+    => H Schur-concave in |lambda|^2 on the circulant family: True
+    max H = 95095, argmax sets = [[2, 6, 7, 8, 10], [1, 3, 4, 5, 9]], Paley is unique-up-to-complement max: True
+
+========================================================================
+p = 19
+  TEST 1: is M_{2k}(Paley) = min over all sets, for k=2..5?
+    k=2: M_min=450, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=3: M_min=2250, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=4: M_min=11250, #argmin=2, Paley achieves min: True, argmin==2sets: True
+    k=5: M_min=56250, #argmin=2, Paley achieves min: True, argmin==2sets: True
+  TEST 2: is Paley's |lambda|^2 vector MAJORIZED BY every other set?
+    Every set majorizes Paley (Paley = majorization MIN)? False
+    # incomparable to Paley: 0
+    first non-majorizing examples: [([10, 11, 12, 13, 14, 15, 16, 17, 18], 'u>v'), ([1, 10, 11, 12, 13, 14, 15, 16, 17], 'u>v'), ([2, 10, 11, 12, 13, 14, 15, 16, 18], 'u>v')]
+

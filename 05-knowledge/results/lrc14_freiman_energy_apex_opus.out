@@ -1,0 +1,51 @@
+##############################################################################
+# APEX COINCIDENCE: measS7-max == energy-max == AP ?
+##############################################################################
+
+======================================================================
+k=8 span<= 13: 256 shapes  (consec=[0, 1, 2, 3, 4, 5, 6, 7])
+  measS7-max : [0, 1, 2, 3, 4, 5, 6, 7]  measS7=0.327211 energy=344 doub=1.875 AP=True
+  energy-max : [0, 1, 2, 3, 4, 5, 6, 7]  measS7=0.327211 energy=344 doub=1.875 AP=True
+  >>> APEX COINCIDENCE (measS7-max == energy-max)? True
+  >>> both == consec? measS7max:True  energymax:True
+  energy-max value=344; #achieving it=1; all AP? True
+      [0, 1, 2, 3, 4, 5, 6, 7]  measS7=0.327211 AP=True
+  2nd measS7: [0, 2, 3, 4, 5, 6, 7, 8] measS7=0.273639 energy=320 AP=False
+  2nd energy: [0, 1, 2, 3, 4, 5, 6, 8] measS7=0.208333 energy=320 AP=False
+  AMONG APs (1): measS7-max=[0, 1, 2, 3, 4, 5, 6, 7](=0.327211) energy-max=[0, 1, 2, 3, 4, 5, 6, 7](en=344)  both consec? True
+
+======================================================================
+k=9 span<= 12: 160 shapes  (consec=[0, 1, 2, 3, 4, 5, 6, 7, 8])
+  measS7-max : [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 energy=489 doub=1.889 AP=True
+  energy-max : [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 energy=489 doub=1.889 AP=True
+  >>> APEX COINCIDENCE (measS7-max == energy-max)? True
+  >>> both == consec? measS7max:True  energymax:True
+  energy-max value=489; #achieving it=1; all AP? True
+      [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 AP=True
+  2nd measS7: [0, 1, 2, 3, 4, 5, 6, 7, 9] measS7=0.401701 energy=461 AP=False
+  2nd energy: [0, 1, 2, 3, 4, 5, 6, 7, 9] measS7=0.401701 energy=461 AP=False
+  AMONG APs (1): measS7-max=[0, 1, 2, 3, 4, 5, 6, 7, 8](=0.416156) energy-max=[0, 1, 2, 3, 4, 5, 6, 7, 8](en=489)  both consec? True
+
+======================================================================
+k=9 span<= 13: 432 shapes  (consec=[0, 1, 2, 3, 4, 5, 6, 7, 8])
+  measS7-max : [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 energy=489 doub=1.889 AP=True
+  energy-max : [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 energy=489 doub=1.889 AP=True
+  >>> APEX COINCIDENCE (measS7-max == energy-max)? True
+  >>> both == consec? measS7max:True  energymax:True
+  energy-max value=489; #achieving it=1; all AP? True
+      [0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.416156 AP=True
+  2nd measS7: [0, 1, 2, 3, 4, 5, 6, 7, 9] measS7=0.401701 energy=461 AP=False
+  2nd energy: [0, 1, 2, 3, 4, 5, 6, 7, 9] measS7=0.401701 energy=461 AP=False
+  AMONG APs (1): measS7-max=[0, 1, 2, 3, 4, 5, 6, 7, 8](=0.416156) energy-max=[0, 1, 2, 3, 4, 5, 6, 7, 8](en=489)  both consec? True
+
+======================================================================
+k=10 span<= 13: 400 shapes  (consec=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9])
+  measS7-max : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  measS7=0.504478 energy=670 doub=1.900 AP=True
+  energy-max : [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  measS7=0.504478 energy=670 doub=1.900 AP=True
+  >>> APEX COINCIDENCE (measS7-max == energy-max)? True
+  >>> both == consec? measS7max:True  energymax:True
+  energy-max value=670; #achieving it=1; all AP? True
+      [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]  measS7=0.504478 AP=True
+  2nd measS7: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10] measS7=0.493878 energy=638 AP=False
+  2nd energy: [0, 1, 2, 3, 4, 5, 6, 7, 8, 10] measS7=0.493878 energy=638 AP=False
+  AMONG APs (1): measS7-max=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9](=0.504478) energy-max=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9](en=670)  both consec? True

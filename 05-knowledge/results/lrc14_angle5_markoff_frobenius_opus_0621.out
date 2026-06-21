@@ -1,0 +1,17 @@
+##############################################################################
+# ANGLE 5: MARKOFF/FROBENIUS EXTREMALITY TEST
+##############################################################################
+
+consec(8): measS7=481/1470=0.327211  M_var=336 M_span=7 M_frob=-1
+
+=== span<= 13: 256 full-res primitive shapes ===
+  measS7 max=481/1470=0.327211 ; argmax count=1 ; consec is max: True
+  M_var: Kendall tau(measS7 up<=>M down)=+0.3870  conc=22043 disc=9743 tie=854  | measS7-max minimizes M_var: True
+  M_span: Kendall tau(measS7 up<=>M down)=+0.4449  conc=14354 disc=5515 tie=12771  | measS7-max minimizes M_span: True
+  M_frob: Kendall tau(measS7 up<=>M down)=+nan  conc=0 disc=0 tie=32640  | measS7-max minimizes M_frob: True
+
+=== span<= 16: 861 full-res primitive shapes ===
+  measS7 max=481/1470=0.327211 ; argmax count=1 ; consec is max: True
+  M_var: Kendall tau(measS7 up<=>M down)=+0.2717  conc=230642 disc=132088 tie=7500  | measS7-max minimizes M_var: True
+  M_span: Kendall tau(measS7 up<=>M down)=+0.2892  conc=179407 disc=98926 tie=91897  | measS7-max minimizes M_span: True
+  M_frob: Kendall tau(measS7 up<=>M down)=-0.9744  conc=22 disc=1696 tie=368512  | measS7-max minimizes M_frob: True

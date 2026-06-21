@@ -5,48 +5,98 @@ ANGLE 1: SURVIVAL-WIDTH SCHEDULING MODEL of W_a
 [V] VERIFY scheduling model == brute W_a (per a, and SUM):
 
   consec = [0, 1, 2, 3, 4, 5, 6, 7]
-    a=1: brute=0.044218  sched=0.000000  MISMATCH!
-    a=2: brute=0.044218  sched=0.000000  MISMATCH!
-    a=3: brute=0.060544  sched=0.000000  MISMATCH!
-    a=4: brute=0.057823  sched=0.000000  MISMATCH!
-    a=5: brute=0.044218  sched=0.000000  MISMATCH!
-    a=6: brute=0.076190  sched=0.000000  MISMATCH!
-    SUM brute=0.327211  sched=0.000000  MISMATCH!
+    a=1: brute=0.044218  sched=0.044218  OK
+    a=2: brute=0.044218  sched=0.044218  OK
+    a=3: brute=0.060544  sched=0.060544  OK
+    a=4: brute=0.057823  sched=0.057823  OK
+    a=5: brute=0.044218  sched=0.044218  OK
+    a=6: brute=0.076190  sched=0.076190  OK
+    SUM brute=0.327211  sched=0.327211  OK
 
   a1-beater = [0, 2, 3, 4, 5, 6, 7, 8]
-    a=1: brute=0.062925  sched=0.000000  MISMATCH!
-    a=2: brute=0.039286  sched=0.000000  MISMATCH!
-    a=3: brute=0.042517  sched=0.000000  MISMATCH!
-    a=4: brute=0.042517  sched=0.000000  MISMATCH!
-    a=5: brute=0.035714  sched=0.000000  MISMATCH!
-    a=6: brute=0.050680  sched=0.000000  MISMATCH!
-    SUM brute=0.273639  sched=0.000000  MISMATCH!
+    a=1: brute=0.062925  sched=0.062925  OK
+    a=2: brute=0.039286  sched=0.039286  OK
+    a=3: brute=0.042517  sched=0.042517  OK
+    a=4: brute=0.042517  sched=0.042517  OK
+    a=5: brute=0.035714  sched=0.035714  OK
+    a=6: brute=0.050680  sched=0.050680  OK
+    SUM brute=0.273639  sched=0.273639  OK
 
   a5-beater = [0, 1, 2, 4, 5, 6, 7, 10]
-    a=1: brute=0.028571  sched=0.000000  MISMATCH!
-    a=2: brute=0.028571  sched=0.000000  MISMATCH!
-    a=3: brute=0.050340  sched=0.000000  MISMATCH!
-    a=4: brute=0.028571  sched=0.000000  MISMATCH!
-    a=5: brute=0.046259  sched=0.000000  MISMATCH!
-    a=6: brute=0.037755  sched=0.000000  MISMATCH!
-    SUM brute=0.220068  sched=0.000000  MISMATCH!
+    a=1: brute=0.028571  sched=0.028571  OK
+    a=2: brute=0.028571  sched=0.028571  OK
+    a=3: brute=0.050340  sched=0.050340  OK
+    a=4: brute=0.028571  sched=0.028571  OK
+    a=5: brute=0.046259  sched=0.046259  OK
+    a=6: brute=0.037755  sched=0.037755  OK
+    SUM brute=0.220068  sched=0.220068  OK
 
   rand1 = [0, 1, 2, 3, 4, 5, 7, 9]
-    a=1: brute=0.019841  sched=0.000000  MISMATCH!
-    a=2: brute=0.012698  sched=0.000000  MISMATCH!
-    a=3: brute=0.010771  sched=0.000000  MISMATCH!
+    a=1: brute=0.019841  sched=0.019841  OK
+    a=2: brute=0.012698  sched=0.012698  OK
+    a=3: brute=0.010771  sched=0.010771  OK
     a=4: brute=0.000000  sched=0.000000  OK
-    a=5: brute=0.012472  sched=0.000000  MISMATCH!
-    a=6: brute=0.048299  sched=0.000000  MISMATCH!
-    SUM brute=0.104082  sched=0.000000  MISMATCH!
+    a=5: brute=0.012472  sched=0.012472  OK
+    a=6: brute=0.048299  sched=0.048299  OK
+    SUM brute=0.104082  sched=0.104082  OK
 
   rand2 = [0, 1, 3, 4, 5, 6, 8, 11]
-    a=1: brute=0.008550  sched=0.000000  MISMATCH!
-    a=2: brute=0.011364  sched=0.000000  MISMATCH!
-    a=3: brute=0.012987  sched=0.000000  MISMATCH!
-    a=4: brute=0.002597  sched=0.000000  MISMATCH!
-    a=5: brute=0.007792  sched=0.000000  MISMATCH!
-    a=6: brute=0.014502  sched=0.000000  MISMATCH!
-    SUM brute=0.057792  sched=0.000000  MISMATCH!
+    a=1: brute=0.008550  sched=0.008550  OK
+    a=2: brute=0.011364  sched=0.011364  OK
+    a=3: brute=0.012987  sched=0.012987  OK
+    a=4: brute=0.002597  sched=0.002597  OK
+    a=5: brute=0.007792  sched=0.007792  OK
+    a=6: brute=0.014502  sched=0.014502  OK
+    SUM brute=0.057792  sched=0.057792  OK
 
-  => scheduling model DEVIATES from brute W_a.
+  => scheduling model EXACTLY reproduces brute W_a.
+
+==============================================================================
+[S1] CONTIGUOUS survival window through center vs TOTAL covered (=W_a):
+     If window<total, W_a has DISCONNECTED covered pieces (center may be empty).
+
+  consec = [0, 1, 2, 3, 4, 5, 6, 7]
+    a=1: W_a=0.044218  window=0.044218  (center COVERED)
+    a=2: W_a=0.044218  window=0.044218  (center COVERED)
+    a=3: W_a=0.060544  window=0.044218  (center COVERED)  <-- DISCONNECTED (extra 0.01633 off-center)
+    a=4: W_a=0.057823  window=0.044218  (center COVERED)  <-- DISCONNECTED (extra 0.01361 off-center)
+    a=5: W_a=0.044218  window=0.044218  (center COVERED)
+    a=6: W_a=0.076190  window=0.061224  (center COVERED)  <-- DISCONNECTED (extra 0.01497 off-center)
+
+  a1-beater = [0, 2, 3, 4, 5, 6, 7, 8]
+    a=1: W_a=0.062925  window=0.053571  (center COVERED)  <-- DISCONNECTED (extra 0.00935 off-center)
+    a=2: W_a=0.039286  window=0.035714  (center COVERED)  <-- DISCONNECTED (extra 0.00357 off-center)
+    a=3: W_a=0.042517  window=0.035714  (center COVERED)  <-- DISCONNECTED (extra 0.00680 off-center)
+    a=4: W_a=0.042517  window=0.035714  (center COVERED)  <-- DISCONNECTED (extra 0.00680 off-center)
+    a=5: W_a=0.035714  window=0.035714  (center COVERED)
+    a=6: W_a=0.050680  window=0.035714  (center COVERED)  <-- DISCONNECTED (extra 0.01497 off-center)
+
+  a5-beater = [0, 1, 2, 4, 5, 6, 7, 10]
+    a=1: W_a=0.028571  window=0.028571  (center COVERED)
+    a=2: W_a=0.028571  window=0.028571  (center COVERED)
+    a=3: W_a=0.050340  window=0.028571  (center COVERED)  <-- DISCONNECTED (extra 0.02177 off-center)
+    a=4: W_a=0.028571  window=0.028571  (center COVERED)
+    a=5: W_a=0.046259  window=0.038095  (center COVERED)  <-- DISCONNECTED (extra 0.00816 off-center)
+    a=6: W_a=0.037755  window=0.028571  (center COVERED)  <-- DISCONNECTED (extra 0.00918 off-center)
+
+  rand1 = [0, 1, 2, 3, 4, 5, 7, 9]
+    a=1: W_a=0.019841  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01984 off-center)
+    a=2: W_a=0.012698  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01270 off-center)
+    a=3: W_a=0.010771  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01077 off-center)
+    a=4: W_a=0.000000  window=0.000000  (center EMPTY)
+    a=5: W_a=0.012472  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01247 off-center)
+    a=6: W_a=0.048299  window=0.020408  (center COVERED)  <-- DISCONNECTED (extra 0.02789 off-center)
+
+  rand2 = [0, 1, 3, 4, 5, 6, 8, 11]
+    a=1: W_a=0.008550  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.00855 off-center)
+    a=2: W_a=0.011364  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01136 off-center)
+    a=3: W_a=0.012987  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01299 off-center)
+    a=4: W_a=0.002597  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.00260 off-center)
+    a=5: W_a=0.007792  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.00779 off-center)
+    a=6: W_a=0.014502  window=0.000000  (center EMPTY)  <-- DISCONNECTED (extra 0.01450 off-center)
+
+==============================================================================
+[S2] SPEED-MONOTONICITY: does speeding up ONE clock (e->e+7, same residue)
+     never INCREASE sum_a W_a?  (the scheduling-extremal mechanism)
+
+  k=8, span<= 14: 320 full-residue shapes

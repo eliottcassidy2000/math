@@ -1,0 +1,25 @@
+##############################################################################
+# FOSTER CONSERVATION LAW + CONTRACTION/CONDUCTANCE TEST (ANGLE 2)
+##############################################################################
+
+(B) FOSTER CONSERVATION: sum_{r in Z/7} g(leg_r mod 7) = 112 for ALL full-res?
+   distinct values of sum_r g(leg_r mod 7) over 2260 shapes: {112}
+   sum_{t=0..6} g(t) = 112 (this is the conserved Foster total; leg_r mod 7 = r always => trivially const)
+   -> So the RESIDUE-resistance is conserved by construction (transversal).
+      The DEGREE OF FREEDOM is the actual magnitude per residue, not residue.
+
+(A) CONTRACTION PRINCIPLE: increasing one magnitude (same residue) lowers sumW?
+   consec sumW = 0.327211
+   bump e=1->8 (res 1): sumW 0.273639  decreased? True
+   bump e=2->9 (res 2): sumW 0.237075  decreased? True
+   bump e=3->10 (res 3): sumW 0.220068  decreased? True
+   bump e=4->11 (res 4): sumW 0.182313  decreased? True
+   bump e=5->12 (res 5): sumW 0.200680  decreased? True
+   bump e=6->13 (res 6): sumW 0.178493  decreased? True
+   bump e=7->14 (res 0): sumW 0.232313  decreased? True
+   single-bump from consec: 7 tests, 0 violations of contraction
+
+   Rayleigh-monotonicity over full-res stratum (residue-matched domination):
+   residue-matched magnitude-domination pairs: 3977, Rayleigh violations: 656  (monotone contraction: False)
+
+(C) PARALLEL-CONDUCTANCE: c_r = sum_{e: e mod7=r} 1/|e|; does (c_r) -> sumW?

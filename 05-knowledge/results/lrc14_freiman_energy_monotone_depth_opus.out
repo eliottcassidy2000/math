@@ -1,0 +1,49 @@
+##############################################################################
+# ENERGY <-> measS7 ORDER DEPTH + INVERSION HUNT
+##############################################################################
+
+======================================================================
+k=8 span<= 13: 256 shapes
+  top-1: |energy-top ∩ measS7-top| = 1/1
+  top-2: |energy-top ∩ measS7-top| = 2/2
+  top-3: |energy-top ∩ measS7-top| = 2/3
+  top-5: |energy-top ∩ measS7-top| = 2/5
+  top-10: |energy-top ∩ measS7-top| = 6/10
+  FIRST inversion (highest-energy shape involved, energy-rank 1 vs 4):
+    E1=[0, 1, 2, 3, 4, 5, 6, 8] energy=320 measS7=0.208333 doub=2.000
+    E2=[0, 3, 4, 5, 6, 7, 8, 9] energy=300 measS7=0.218707 doub=2.125
+    (energy higher but measS7 LOWER -> inversion at energy-rank 1)
+  doubling<= 2.10: 3 shapes, energy<->measS7 order PERFECT? True
+  doubling<= 2.30: 11 shapes, energy<->measS7 order PERFECT? False
+      inversion: [0, 1, 2, 3, 4, 5, 6, 8](e=320,m=0.2083) vs [0, 3, 4, 5, 6, 7, 8, 9](e=300,m=0.2187)
+
+======================================================================
+k=9 span<= 13: 432 shapes
+  top-1: |energy-top ∩ measS7-top| = 1/1
+  top-2: |energy-top ∩ measS7-top| = 2/2
+  top-3: |energy-top ∩ measS7-top| = 2/3
+  top-5: |energy-top ∩ measS7-top| = 3/5
+  top-10: |energy-top ∩ measS7-top| = 6/10
+  FIRST inversion (highest-energy shape involved, energy-rank 2 vs 6):
+    E1=[0, 2, 3, 4, 5, 6, 7, 8, 9] energy=461 measS7=0.360261 doub=2.000
+    E2=[0, 1, 2, 3, 4, 5, 6, 7, 10] energy=437 measS7=0.380952 doub=2.111
+    (energy higher but measS7 LOWER -> inversion at energy-rank 2)
+  doubling<= 2.10: 3 shapes, energy<->measS7 order PERFECT? True
+  doubling<= 2.30: 20 shapes, energy<->measS7 order PERFECT? False
+      inversion: [0, 2, 3, 4, 5, 6, 7, 8, 9](e=461,m=0.3603) vs [0, 1, 2, 3, 4, 5, 6, 7, 10](e=437,m=0.3810)
+
+======================================================================
+k=10 span<= 14: 832 shapes
+  top-1: |energy-top ∩ measS7-top| = 1/1
+  top-2: |energy-top ∩ measS7-top| = 2/2
+  top-3: |energy-top ∩ measS7-top| = 2/3
+  top-5: |energy-top ∩ measS7-top| = 3/5
+  top-10: |energy-top ∩ measS7-top| = 4/10
+  FIRST inversion (highest-energy shape involved, energy-rank 2 vs 3):
+    E1=[0, 2, 3, 4, 5, 6, 7, 8, 9, 10] energy=638 measS7=0.454478 doub=2.000
+    E2=[0, 1, 2, 3, 4, 5, 6, 7, 9, 10] energy=614 measS7=0.478798 doub=2.100
+    (energy higher but measS7 LOWER -> inversion at energy-rank 2)
+  doubling<= 2.10: 12 shapes, energy<->measS7 order PERFECT? False
+      inversion: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10](e=638,m=0.4545) vs [0, 1, 2, 3, 4, 5, 6, 7, 9, 10](e=614,m=0.4788)
+  doubling<= 2.30: 81 shapes, energy<->measS7 order PERFECT? False
+      inversion: [0, 2, 3, 4, 5, 6, 7, 8, 9, 10](e=638,m=0.4545) vs [0, 1, 2, 3, 4, 5, 6, 7, 9, 10](e=614,m=0.4788)

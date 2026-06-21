@@ -122,15 +122,12 @@ def W_a_brute(E, a):
 # SAME as brute but in local coords -- so instead we directly model survival arcs.
 
 def sector_of_point(e, a, y):
-    """sector in {0..6} of clock e at local time y (circle circumference 7)."""
-    pos = (F(e*a) + F(7*e)*y)  # real position on R, mod 7
-    pos = pos - (pos.numerator // pos.denominator) * 1  # not mod7 yet
-    # reduce mod 7
-    q = pos / 7
-    pos = pos - (q.numerator // q.denominator) * 7
-    if pos < 0: pos += 7
-    # sector = floor(pos)
-    return (pos.numerator // pos.denominator) % 7
+    """sector in {0..6} of clock e at local time y (circle circumference 7).
+    Position on R is e*a + 7*e*y; sector = floor(pos) mod 7.
+    This equals floor(7*frac(e*x)) with x=a/7+y -- the brute convention."""
+    pos = F(e*a) + F(7*e)*y           # real position on R (circumference 7)
+    fl = pos.numerator // pos.denominator   # floor(pos)
+    return fl % 7
 
 def covered_all_at(E, a, y):
     secs = set()
@@ -162,36 +159,45 @@ def W_a_schedule(E, a):
                 bps.add(y)
             m += 1
     bps = sorted(bps | {-half, half})
-    # find maximal run of covered sub-cells containing y=0
-    # build covered flags per sub-cell
     subs = []
     for lo, hi in zip(bps, bps[1:]):
         if hi <= lo: continue
         mid = (lo+hi)/2
         subs.append((lo, hi, covered_all_at(E, a, mid)))
-    # the sub-cell containing 0:
-    total = F(0)
-    # find index of cell containing 0 (0 is a breakpoint; take cells adjacent that are covered)
-    # accumulate contiguous covered cells spanning across 0
-    # left from 0:
+    # TOTAL covered measure in the cell (== brute W_a)
+    total = sum((hi - lo for lo, hi, c in subs if c), F(0))
+    return total
+
+def W_a_window(E, a):
+    """The CONTIGUOUS survival window through the center y=0 (the 'schedule survival').
+    Returns (window_length, center_covered)."""
+    half = F(1, 14)
+    bps = {F(0)}
+    for e in E:
+        if e == 0: continue
+        lo_val = F(7*e)*(-half) + F(e*a); hi_val = F(7*e)*(half) + F(e*a)
+        lo_i = min(lo_val, hi_val); hi_i = max(lo_val, hi_val)
+        m = lo_i.numerator // lo_i.denominator
+        while m <= hi_i.numerator // hi_i.denominator + 1:
+            y = F(m - e*a, 7*e)
+            if -half <= y <= half: bps.add(y)
+            m += 1
+    bps = sorted(bps | {-half, half})
+    subs = []
+    for lo, hi in zip(bps, bps[1:]):
+        if hi <= lo: continue
+        subs.append((lo, hi, covered_all_at(E, a, (lo+hi)/2)))
     n = len(subs)
-    # locate cell with lo<=0<hi  OR cells adjacent to 0 boundary
-    # Since 0 is a breakpoint, two cells touch 0: the one ending at 0 and starting at 0.
-    # accumulate rightward
     i = 0
-    while i < n and subs[i][1] <= 0:
-        i += 1
-    # subs[i] starts at 0 (or contains 0); accumulate covered cells from i upward
+    while i < n and subs[i][1] <= 0: i += 1
+    win = F(0); center_cov = False
     j = i
     while j < n and subs[j][2]:
-        total += subs[j][1] - subs[j][0]
-        j += 1
-    # accumulate covered cells from i-1 downward
+        win += subs[j][1] - subs[j][0]; center_cov = True; j += 1
     j = i - 1
     while j >= 0 and subs[j][2]:
-        total += subs[j][1] - subs[j][0]
-        j -= 1
-    return total
+        win += subs[j][1] - subs[j][0]; center_cov = True; j -= 1
+    return win, center_cov
 
 # ---------------------------------------------------------------------------
 def residues(E): return frozenset(e % 7 for e in E)
@@ -231,3 +237,85 @@ if __name__ == "__main__":
         print(f"    SUM brute={float(tot_b):.6f}  sched={float(tot_s):.6f}  {'OK' if tot_b==tot_s else 'MISMATCH!'}")
         all_ok = all_ok and ok and (tot_b == tot_s)
     print(f"\n  => scheduling model {'EXACTLY reproduces' if all_ok else 'DEVIATES from'} brute W_a.")
+
+    # -----------------------------------------------------------------------
+    # [S1] CONTIGUOUS WINDOW vs TOTAL: is W_a a connected survival window?
+    # -----------------------------------------------------------------------
+    print("\n" + "="*78)
+    print("[S1] CONTIGUOUS survival window through center vs TOTAL covered (=W_a):")
+    print("     If window<total, W_a has DISCONNECTED covered pieces (center may be empty).")
+    for name, E in tests.items():
+        print(f"\n  {name} = {E}")
+        for a in range(1, 7):
+            tot = W_a_schedule(E, a)
+            win, ccov = W_a_window(E, a)
+            tag = "" if win == tot else f"  <-- DISCONNECTED (extra {float(tot-win):.5f} off-center)"
+            cc = "center COVERED" if ccov else "center EMPTY"
+            print(f"    a={a}: W_a={float(tot):.6f}  window={float(win):.6f}  ({cc}){tag}")
+
+    # -----------------------------------------------------------------------
+    # [S2] THE STAGGERING / SPEED-MONOTONICITY HYPOTHESIS.
+    #   Each clock e drifts at speed 7|e|.  Faster clock = leaves its sector sooner
+    #   => shorter individual coverage contribution. CLAIM (H-speed): replacing any
+    #   clock e by a FASTER clock e' (|e'|>|e|, same residue e'==e mod 7) can only
+    #   DECREASE (or keep) sum_a W_a.  consec uses the SMALLEST speeds {0..k-1} with
+    #   full residues => globally slowest => if H-speed true, consec is the max over
+    #   the full-residue stratum.  TEST: exhaustively, for each full-residue shape,
+    #   compare to all single-clock speed-ups (e -> e+7) and check monotone decrease.
+    # -----------------------------------------------------------------------
+    print("\n" + "="*78)
+    print("[S2] SPEED-MONOTONICITY: does speeding up ONE clock (e->e+7, same residue)")
+    print("     never INCREASE sum_a W_a?  (the scheduling-extremal mechanism)")
+    def full_residue_shapes(k, span):
+        out = []
+        for combo in itertools.combinations(range(1, span+1), k-1):
+            E = (0,)+combo
+            if is_full_residue(E):
+                out.append(E)
+        return out
+    for k in (8,):
+        span = 14
+        shapes = full_residue_shapes(k, span)
+        print(f"\n  k={k}, span<= {span}: {len(shapes)} full-residue shapes")
+        viol = 0; checks = 0; worst = F(0); worst_ex = None
+        for E in shapes:
+            base = measS7_sum(list(E))
+            Es = sorted(set(E))
+            for idx in range(1, len(Es)):       # don't speed up the 0
+                e = Es[idx]
+                e2 = e + 7
+                if e2 in Es: continue            # would collide
+                E2 = sorted(set(Es) - {e} | {e2})
+                if len(E2) != k: continue
+                if not is_full_residue(tuple(E2)): continue
+                checks += 1
+                up = measS7_sum(E2)
+                if up > base:                    # speeding up INCREASED -> violation
+                    viol += 1
+                    d = up - base
+                    if d > worst: worst = d; worst_ex = (list(Es), e, e2, float(base), float(up))
+        print(f"     checks={checks}  speed-up-INCREASES (violations)={viol}")
+        if worst_ex:
+            print(f"     worst violation: {worst_ex[0]} speed-up {worst_ex[1]}->{worst_ex[2]}: "
+                  f"sum {worst_ex[3]:.6f} -> {worst_ex[4]:.6f}  (+{float(worst):.6f})")
+        else:
+            print(f"     => SPEED-MONOTONICITY HOLDS on this bank: speeding up any clock")
+            print(f"        (same residue) never increases sum_a W_a. Mechanism CONFIRMED.")
+
+    # -----------------------------------------------------------------------
+    # [S3] ROUND-ROBIN structure of consec: at resonance a the start positions
+    #   {e*a mod 7 : e in consec} = a*{0..6} mod 7 = ALL of Z/7 (equispaced),
+    #   with residue 0 doubled (by e=0 and e=7). Show the start-position multiset
+    #   per a, for consec vs adversaries -- the "round-robin schedule".
+    # -----------------------------------------------------------------------
+    print("\n" + "="*78)
+    print("[S3] ROUND-ROBIN START POSITIONS per resonance a (start = e*a mod 7):")
+    for name, E in tests.items():
+        print(f"\n  {name} = {E}")
+        for a in range(1, 7):
+            starts = sorted((e*a) % 7 for e in E)
+            from collections import Counter
+            cnt = Counter(starts)
+            missing = sorted(set(range(7)) - set(starts))
+            dbl = sorted(s for s,c in cnt.items() if c>1)
+            print(f"    a={a}: starts={starts}  doubled={dbl}  missing-at-start={missing}")

@@ -1,0 +1,22 @@
+========================================================================
+p = 7
+  M_2 = sum|lambda|^2 constant across all sets? True  (value ~ {12})
+  CLAIM A (totality): 28/28 pairs comparable, 0 incomparable.  Majorization is a TOTAL order: True
+  CLAIM B (Schur-concavity, all comparable pairs): violations = 0  => H Schur-CONCAVE in |lambda|^2: True
+  Paley = majorization MINIMUM: True
+  => Paley maximizes H (max H = 189); argmax classes = 1 (Paley class): True
+  CLAIM D (the wall): pairs where M_4 says A<B (A 'better') but H(A)<H(B):
+    #such 'moment-fails' ordered pairs = 0; ALL incomparable in majorization (no Schur contradiction): True
+
+========================================================================
+p = 11
+  M_2 = sum|lambda|^2 constant across all sets? True  (value ~ {30})
+  CLAIM A (totality): 296/496 pairs comparable, 200 incomparable.  Majorization is a TOTAL order: False
+  CLAIM B (Schur-concavity, all comparable pairs): violations = 0  => H Schur-CONCAVE in |lambda|^2: True
+  Paley = majorization MINIMUM: True
+  => Paley maximizes H (max H = 95095); argmax classes = 1 (Paley class): True
+  CLAIM D (the wall): pairs where M_4 says A<B (A 'better') but H(A)<H(B):
+    #such 'moment-fails' ordered pairs = 2; ALL incomparable in majorization (no Schur contradiction): True
+      M4=134(H=92411) vs M4=310(H=93027): majorization rel = incomp
+      M4=134(H=92411) vs M4=178(H=93467): majorization rel = incomp
+
