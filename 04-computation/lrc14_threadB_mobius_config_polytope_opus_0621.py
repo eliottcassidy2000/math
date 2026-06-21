@@ -151,38 +151,36 @@ print("       (b) consec-extremal (min over window, since it's an UPPER bound we
 print("           give the LARGEST true measS7 with the SMALLEST bound -- test argmin/argmax),")
 print("       (c) tight at consec (== measS7).")
 print("=" * 100)
-print(f"\n{'k':>3} {'R':>2} {'B_R(consec)':>12} {'measS7':>9} {'gap=(c)':>10} {'consec=argmax_measS7?':>22} {'consec=argmin_B_R?':>18}")
+print(f"\n{'k':>3} {'R':>2} {'B_R(consec)':>12} {'measS7':>9} {'gap=(c)':>10} {'consec=argmax_measS7?':>22} {'consec=argmin_B_R?':>18} {'argmin_B_R':>22}")
 
-# Precompute laws ONCE per shape (the expensive step), cache q and measS7.
-BANK = {}
-for k in [8, 9, 10, 11]:
-    maxE = WINDOWS[k]
-    recs = []
-    for rest in itertools.combinations(range(1, maxE + 1), k - 1):
-        E = [0] + list(rest)
-        if not primitive(E): continue
-        law = occupancy_full(E)
-        q = q_from_law(law)
-        s7 = law.get(frozenset(), F(0))
-        recs.append((tuple(E), q, s7))
-    BANK[k] = recs
+def Svec_E(E):
+    """compute S_0..S_6 from occupancy law without holding full q-dict."""
+    law = occupancy_full(E)
+    items = list(law.items())
+    S = [F(0)] * 7
+    for r in range(7):
+        S[r] = sum(sum(m for B, m in items if frozenset(A) <= B)
+                   for A in itertools.combinations(INNER, r))
+    s7 = law.get(frozenset(), F(0))
+    return S, s7
 
 for k in [8, 9, 10, 11]:
-    Ec = tuple(consec(k))
-    qc = next(q for (E, q, s7) in BANK[k] if E == Ec)
-    s7c = next(s7 for (E, q, s7) in BANK[k] if E == Ec)
-    Sc = Svec_from_q(qc)
+    maxE = WINDOWS[k]; Ec = consec(k)
+    Sc, s7c = Svec_E(Ec)
     for R in [2, 4]:
         BRc = sum(F((-1) ** r) * Sc[r] for r in range(R + 1))
-        s7_beat = 0; BR_lower = 0
-        for (E, q, s7) in BANK[k]:
-            S = Svec_from_q(q)
+        s7_beat = 0; BR_lower = 0; argmin = Ec; minBR = BRc
+        for rest in itertools.combinations(range(1, maxE + 1), k - 1):
+            E = [0] + list(rest)
+            if not primitive(E): continue
+            S, s7 = Svec_E(E)
             BR = sum(F((-1) ** r) * S[r] for r in range(R + 1))
             if s7 > s7c: s7_beat += 1
             if BR < BRc: BR_lower += 1
+            if BR < minBR: minBR = BR; argmin = E
         gap = BRc - s7c
         print(f"{k:>3} {R:>2} {float(BRc):>12.5f} {float(s7c):>9.5f} {float(gap):>10.5f} "
-              f"{str(s7_beat==0):>22} {str(BR_lower==0):>18}")
+              f"{str(s7_beat==0):>22} {str(BR_lower==0):>18} {str(argmin):>22}")
     print()
 
 # ----------------------------------------------------------------------------
@@ -280,20 +278,24 @@ try:
 except Exception:
     HAVE_SCIPY = False
 
+def q_of_E(E):
+    """q_A for ALL A subset {1..6}, returned as dict (float-friendly via Fraction)."""
+    return q_from_law(occupancy_full(E))
+
 for k in [8, 9, 10]:
-    Ec = tuple(consec(k)); ck = cap(k)
-    recs = BANK[k]
-    qc = next(q for (E, q, s7) in recs if E == Ec)
-    s7c = next(s7 for (E, q, s7) in recs if E == Ec)
+    Ec = consec(k); ck = cap(k)
+    qc = q_of_E(Ec); s7c = measS7(Ec)
     for R in [2, 3]:
         subsets = [frozenset(A) for r in range(R + 1) for A in itertools.combinations(INNER, r)]
         n = len(subsets)
-        # min sum_A lambda_A q_A(consec)  s.t.  sum_A lambda_A q_A(E) >= measS7(E) for all E
-        c = [qc[A] for A in subsets]            # objective coeffs (consec's q_A)
-        # constraints A_ub lambda <= b_ub  with  -sum q_A(E) lambda <= -measS7(E)
+        c = [qc[A] for A in subsets]
         if HAVE_SCIPY:
             A_ub = []; b_ub = []
-            for (E, q, s7) in recs:
+            for rest in itertools.combinations(range(1, WINDOWS[k] + 1), k - 1):
+                E = [0] + list(rest)
+                if not primitive(E): continue
+                law = occupancy_full(E); q = q_from_law(law)
+                s7 = law.get(frozenset(), F(0))
                 A_ub.append([-float(q[A]) for A in subsets]); b_ub.append(-float(s7))
             cobj = [float(x) for x in c]
             res = linprog(cobj, A_ub=np.array(A_ub), b_ub=np.array(b_ub),
@@ -303,8 +305,9 @@ for k in [8, 9, 10]:
             val = res.fun
             gap = val - float(s7c)
             exact = abs(gap) < 1e-9
-            print(f"  k={k} R={R}: min degree-R majorant at consec = {val:.6f}  measS7(consec)={float(s7c):.6f}"
-                  f"  gap={gap:.6f}  EXACT(tight)? {exact}  (<=cap={float(ck):.5f}: {val<=float(ck)+1e-9})")
+            print(f"  k={k} R={R} (#subsets={n}): min degree-R majorant at consec = {val:.6f}  "
+                  f"measS7(consec)={float(s7c):.6f}  gap={gap:.6f}  EXACT(tight)? {exact}  "
+                  f"(<=cap={float(ck):.5f}: {val<=float(ck)+1e-9})")
         else:
             print(f"  k={k} R={R}: scipy unavailable; skipping float majorant LP")
     print()

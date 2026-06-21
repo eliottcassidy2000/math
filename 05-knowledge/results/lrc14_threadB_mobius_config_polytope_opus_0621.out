@@ -10,4 +10,4 @@ THREAD B PART C: CONFIGURATION-POLYTOPE INTEGRALITY TEST (CJJ Lem 3.1 / view d)
        (c) tight at consec (== measS7).
 ====================================================================================================
 
-  k  R  B_R(consec)    measS7    gap=(c)  consec=argmax_measS7? consec=argmin_B_R?
+  k  R  B_R(consec)    measS7    gap=(c)  consec=argmax_measS7? consec=argmin_B_R?             argmin_B_R

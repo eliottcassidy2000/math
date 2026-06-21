@@ -3,3 +3,5 @@ THREAD D SUMMARY: relation-code LP hierarchy -- level needed to PIN consec for m
 ================================================================================================
  k measS7(consec) truth-max? | l1 beat l2 beat l3 beat | PIN l* SAT l
 ------------------------------------------------------------------------------------------------
+ 8       0.327211        YES |     237       0       0 |      2     4
+ 9       0.416156        YES |     336       0       0 |      2     4

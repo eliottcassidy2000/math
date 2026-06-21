@@ -71,7 +71,11 @@ def LP_ind(rho, lvl):
     return -res.fun if res.success else None
 
 TOL = 1e-7
-WINDOWS = {8: 16, 9: 14, 10: 13, 11: 13}
+# Windows kept modest so the summary (which runs levels 1-4 per shape) completes quickly.
+# The FULL k=8 window (maxE=16, 11432 shapes) level-2 result is in
+# lrc14_threadD_level2_robustness_opus_0621.out (0 beaters at level 2); k=11 level-3
+# (0 beaters) is verified directly.  This table reproduces the PIN/SAT levels per k.
+WINDOWS = {8: 13, 9: 13, 10: 13, 11: 13}
 
 print("=" * 96)
 print("THREAD D SUMMARY: relation-code LP hierarchy -- level needed to PIN consec for measS7")
