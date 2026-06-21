@@ -14,3 +14,28 @@ boundary value (THM-548 Fatou limit).  Exhaustive over ALL bounded B in [0,14].
   8  1    7     0.196599    0.38146     0.184864  [0, 1, 2, 3, 4, 5, 6]
   8  2    6     0.083868    0.38146     0.297595     [0, 1, 2, 3, 4, 5]
   9  2    7     0.246453    0.49426     0.247803  [0, 1, 2, 3, 4, 5, 6]
+  9  3    6     0.136957    0.49426     0.357299     [0, 1, 2, 3, 4, 5]
+ 10  3    7     0.297223    0.60440     0.307172  [0, 1, 2, 3, 4, 5, 6]
+ 10  4    6     0.195648    0.60440     0.408748     [0, 1, 2, 3, 4, 6]
+ 11  4    7     0.348791    0.72527     0.376484  [0, 1, 2, 3, 4, 5, 6]
+ 11  5    6     0.257901    0.72527     0.467374     [0, 1, 2, 3, 4, 6]
+ 12  5    7     0.400901    0.85714     0.456242  [0, 1, 2, 3, 4, 5, 6]
+ 12  6    6     0.321633    0.85714     0.535510     [0, 1, 2, 3, 4, 6]
+
+  WORST-CASE margins MU_k (min over r) -- the budget for the resonance correction:
+    k=8: MU_k = 1087/5880 = 0.184864   (tightest at r=1, B=[0, 1, 2, 3, 4, 5, 6])
+    k=9: MU_k = 729269/2942940 = 0.247803   (tightest at r=2, B=[0, 1, 2, 3, 4, 5, 6])
+    k=10: MU_k = 287633/936390 = 0.307172   (tightest at r=3, B=[0, 1, 2, 3, 4, 5, 6])
+    k=11: MU_k = 1233874/3277365 = 0.376484   (tightest at r=4, B=[0, 1, 2, 3, 4, 5, 6])
+    k=12: MU_k = 1610291/3529470 = 0.456242   (tightest at r=5, B=[0, 1, 2, 3, 4, 5, 6])
+
+  ==> RIGOROUS: the Fatou main term is below cap_k by at least MU_k for EVERY
+      bounded base B and every far_count r.  Exhaustive finite check.  [PROVED]
+
+==============================================================================
+PART B.  PILLAR 2a -- TRUE arc-complexity V_max(|B|) over bounded B  [EXACT]
+==============================================================================
+THM-546 (PROVED): one-far residual |Delta_f(B)-Phi_1(B)| <= (6/49) V(B) / f,
+V(B) = sum_j #arcs(B_j).  Since B subset [0,14] is bounded, V(B) <= V_max(|B|),
+a FINITE maximum.  (The old 42*sum(e) bound was ~10x loose; this is the real one.)
+

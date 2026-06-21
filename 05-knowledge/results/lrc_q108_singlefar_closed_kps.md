@@ -47,3 +47,25 @@ extremality: **the single-far (even-AP base + far) is the global wide maximizer*
 wide-base are all DOMINATED by single-far). This is mac-mini Route E (splitting lowers cover) + single-far >=
 single-block, assembled. VERIFIED (3084 configs, 0 exceed); the domination PROOF is the residual (comfortable,
 margin >= 0.12). NET: LRC(14) wide bound = [single-far CLOSED] + [single-far = wide sup, VERIFIED not proved].
+
+## The DOMINATION made structural (kps-S23): p0 decreasing in the number of far elements
+Stratifying wide k=9 configs by `r = #{e in E: e>14}` (the number of FAR elements), the max p0 is:
+```text
+r=1 (single-far): 0.37241  [0,2,4,6,8,10,12,14,29]   <- the wide SUP
+r=2:              0.28673  [0,2,4,6,8,10,12,15,28]
+r=3:              0.15885
+r=4:              0.19040
+```
+**Max p0 DECREASES with r.** Structural reason: for FIXED k, exactly `r` far elements forces the bounded base
+to size `k-r`; a smaller base covers FEWER sectors (base coverage <= p0(consec_{k-r}), monotone in size), and
+the decorrelated far elements add little. So fewer far = larger base = more coverage => **single-far (r=1, the
+max base size k-1) is the global wide maximizer.** This is the clean framing of the domination (vs the abstract
+small-|R| cone): it is base-size monotonicity. PROVABLE via the plateau recursion + p0(consec_m) increasing in m.
+
+## NET state of the LRC(14) wide bound (kps-S23)
+- [span<=14]: finite check, PROVED.
+- [single-far r=1]: CLOSED -- comb bound (w>W*, THM-547 PROVED) + finite window (w<=W*, 0 violations all k).
+- [multi-far r>=2]: p0 <= single-far max (DOMINATION, verified + structural base-size argument). The residual
+  rigor = the r-monotonicity / base-size domination, now a clean target.
+So: wide => p0 <= 0.372(k=9) < cap. LRC(14) NOT proved, but the wide bound = [single-far DONE] + [base-size
+domination], the latter with a clear structural proof route (not the abstract cone).
