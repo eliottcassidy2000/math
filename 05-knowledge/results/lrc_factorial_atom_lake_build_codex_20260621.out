@@ -1,0 +1,11 @@
+info: downloading https://releases.lean-lang.org/lean4/v4.30.0/lean-4.30.0-linux.tar.zst
+info: installing /home/bigo/.elan/toolchains/leanprover--lean4---v4.30.0
+info: mathlib: cloning https://github.com/leanprover-community/mathlib4
+info: stderr:
+Cloning into '/home/bigo/math/04-computation/lean/TournamentH7/.lake/packages/mathlib'...
+error: RPC failed; curl 56 GnuTLS recv error (-54): Error in the pull function.
+error: 3764 bytes of body are still expected
+fetch-pack: unexpected disconnect while reading sideband packet
+fatal: early EOF
+fatal: fetch-pack: invalid index-pack output
+error: external command 'git' exited with code 128

@@ -42,8 +42,45 @@ import TournamentH7.Paley3
 import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
 import TournamentH7.LRCDeathChain
+import TournamentH7.LRCFactorialAtom
 
 open Tournament
+
+/-! ### LRC14 factorial atom / Q0 boundary quotient -/
+
+theorem lrc_factorial_basis_moment_delta_audit :
+    ∀ i j : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.moment (LonelyRunner.FactorialAtom.basis j) i =
+        if i = j then 1 else 0 :=
+  LonelyRunner.FactorialAtom.basis_moment_delta
+#print axioms lrc_factorial_basis_moment_delta_audit
+
+theorem lrc_factorial_originCoeff_delta_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.originCoeff t = if t.val = 0 then 1 else 0 :=
+  LonelyRunner.FactorialAtom.originCoeff_delta
+#print axioms lrc_factorial_originCoeff_delta_audit
+
+theorem lrc_factorial_basis_q0_sign_audit :
+    ∀ j : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.q0 (LonelyRunner.FactorialAtom.basis j) =
+        LonelyRunner.FactorialAtom.altSign j.val :=
+  LonelyRunner.FactorialAtom.basis_q0_sign
+#print axioms lrc_factorial_basis_q0_sign_audit
+
+theorem lrc_factorial_U4_basis_audit :
+    ∀ j : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.U4 (LonelyRunner.FactorialAtom.basis j) =
+        if j.val <= 4 then LonelyRunner.FactorialAtom.altSign j.val else 0 :=
+  LonelyRunner.FactorialAtom.U4_basis
+#print axioms lrc_factorial_U4_basis_audit
+
+theorem lrc_factorial_low12_basis_audit :
+    ∀ j : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.low12 (LonelyRunner.FactorialAtom.basis j) =
+        if j.val = 1 ∨ j.val = 2 then 1 else 0 :=
+  LonelyRunner.FactorialAtom.low12_basis
+#print axioms lrc_factorial_low12_basis_audit
 
 /-! ### LRC14 death-chain/live-depth quotient -/
 

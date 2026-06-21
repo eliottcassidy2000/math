@@ -39,6 +39,7 @@
     · TournamentH7.StaircaseBucketTransport — Concrete staircase transport checksums.
     · TournamentH7.ProductSum   — Product-sum defect normal form.
     · TournamentH7.LRCDeathChain — Finite LRC death-chain/live-depth quotient.
+    · TournamentH7.LRCFactorialAtom — Finite factorial atom identities for Q₀.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
 
@@ -90,4 +91,5 @@ import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
 import TournamentH7.OpSymmetry
 import TournamentH7.LRCDeathChain
+import TournamentH7.LRCFactorialAtom
 import TournamentH7.Verify

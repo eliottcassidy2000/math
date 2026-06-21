@@ -1,0 +1,90 @@
+HYP-2728 factorial boundary operator scout
+
+EXACT FINITE-DIFFERENCE PACKETS
+  B_j is the atom profile created by unit W_j.
+  moment row verifies W_i(B_j)=delta_ij; q0(B_j)=(-1)^j.
+  j  B_j atoms Q0..Q6                         W(B_j)      q0  U4  low12
+  0  ('1', '0', '0', '0', '0', '0', '0')     ('1', '0', '0', '0', '0', '0', '0') 1 (1.000000000) 1 (1.000000000) 0 (0.000000000)
+  1  ('-1', '1', '0', '0', '0', '0', '0')    ('0', '1', '0', '0', '0', '0', '0') -1 (-1.000000000) -1 (-1.000000000) 1 (1.000000000)
+  2  ('1', '-2', '1', '0', '0', '0', '0')    ('0', '0', '1', '0', '0', '0', '0') 1 (1.000000000) 1 (1.000000000) 1 (1.000000000)
+  3  ('-1', '3', '-3', '1', '0', '0', '0')   ('0', '0', '0', '1', '0', '0', '0') -1 (-1.000000000) -1 (-1.000000000) 0 (0.000000000)
+  4  ('1', '-4', '6', '-4', '1', '0', '0')   ('0', '0', '0', '0', '1', '0', '0') 1 (1.000000000) 1 (1.000000000) 0 (0.000000000)
+  5  ('-1', '5', '-10', '10', '-5', '1', '0') ('0', '0', '0', '0', '0', '1', '0') -1 (-1.000000000) 0 (0.000000000) 0 (0.000000000)
+  6  ('1', '-6', '15', '-20', '15', '-6', '1') ('0', '0', '0', '0', '0', '0', '1') 1 (1.000000000) 0 (0.000000000) 0 (0.000000000)
+
+ORIGIN COEFFICIENT CHECK
+  sum_j (-1)^j binom(t,j) is the coefficient of q_t in q0.
+  t=0: coeff=1
+  t=1: coeff=0
+  t=2: coeff=0
+  t=3: coeff=0
+  t=4: coeff=0
+  t=5: coeff=0
+  t=6: coeff=0
+
+ABSTRACT CHEAP LP DIRECTIONS FROM HYP-2721
+  normalized q0=1; these are legal in the atom cone before generated-word tests.
+  r  tax        W1       W2       |W1|+|W2|  B2        U4        tail45
+  1  7/5 (1.400000000) 0 (0.000000000) 3 (3.000000000) 3 (3.000000000) 3 (3.000000000) 2 (2.000000000) 1 (1.000000000)
+  2  3 (3.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) -1 (-1.000000000)
+  3  7 (7.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 5/2 (2.500000000) 3/2 (1.500000000)
+  4  19 (19.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) -1 (-1.000000000)
+  5  63 (63.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) 0 (0.000000000) -1 (-1.000000000)
+
+GENERATED MISS-ZETA FRONTIER
+  Loading S71 frontier metrics; this recomputes the exact 318-test bank.
+  loading coordinate frontier for size=3...
+    size=3 context=[4]: added=56 cumulative=56
+    size=3 context=[3+1]: added=56 cumulative=112
+    size=3 context=[2+2]: added=56 cumulative=168
+    size=3 context=[2+1+1]: added=56 cumulative=224
+    size=3 context=[1+1+1+1]: added=56 cumulative=280
+  loading coordinate frontier for size=4...
+    size=4 context=[3]: added=7 cumulative=287
+    size=4 context=[2+1]: added=7 cumulative=294
+    size=4 context=[1+1+1]: added=7 cumulative=301
+  loading coordinate frontier for size=5...
+    size=5 context=[2]: added=8 cumulative=309
+    size=5 context=[1+1]: added=8 cumulative=317
+  loading coordinate frontier for size=6...
+    size=6 context=[1]: added=1 cumulative=318
+
+  tests=318 positive_q0=318 q0_failures=0
+
+  signed/absolute witness minima on normalized generated moves
+  W1           min=-540/47 (-11.489361702) nonpositive=233 at size=4 shape=(0, 1, 3, 4) context=[1+1+1]
+  W2           min=-4375/282 (-15.514184397) nonpositive= 68 at size=4 shape=(0, 1, 3, 4) context=[1+1+1]
+  W1+W2        min=-7615/282 (-27.003546099) nonpositive= 91 at size=4 shape=(0, 1, 3, 4) context=[1+1+1]
+  |W1|+|W2|    min=144154/63487 (2.270606581) nonpositive=  0 at size=5 shape=(0, 1, 2, 4, 5) context=[2]
+  B2=-W1+W2    min=-1135/282 (-4.024822695) nonpositive= 59 at size=4 shape=(0, 1, 3, 4) context=[1+1+1]
+  U4           min=2187/2005 (1.090773067) nonpositive=  0 at size=3 shape=(0, 1, 3) context=[3+1]
+  tail45       min=182/2005 (0.090773067) nonpositive=  0 at size=3 shape=(0, 1, 3) context=[3+1]
+
+  closest abstract cheap directions, measured by L1 distance
+  r=1: dist=918112/308305 (2.977934189) at size=5 shape=(0, 1, 2, 3, 5) context=[2]; |W1|+|W2|=163599/61661 (2.653200564), U4=69930/61661 (1.134104215)
+  r=2: dist=9682/2479 (3.905607100) at size=4 shape=(0, 1, 2, 4) context=[3]; |W1|+|W2|=10274/2479 (4.144413070), U4=2865/2479 (1.155707947)
+  r=3: dist=528924/61661 (8.577934189) at size=5 shape=(0, 1, 2, 3, 5) context=[2]; |W1|+|W2|=163599/61661 (2.653200564), U4=69930/61661 (1.134104215)
+
+TOURNAMENT ANALYSIS
+  vertices: witness functionals on normalized generated atom moves
+  pairwise observable: fewer nonpositive rows, then larger exact minimum
+  pressure path:
+    |W1|+|W2|    score=6 nonpositive=0 min=144154/63487 (2.270606581)
+    U4           score=5 nonpositive=0 min=2187/2005 (1.090773067)
+    tail45       score=4 nonpositive=0 min=182/2005 (0.090773067)
+    B2=-W1+W2    score=3 nonpositive=59 min=-1135/282 (-4.024822695)
+    W2           score=2 nonpositive=68 min=-4375/282 (-15.514184397)
+    W1+W2        score=1 nonpositive=91 min=-7615/282 (-27.003546099)
+    W1           score=0 nonpositive=233 min=-540/47 (-11.489361702)
+  directed_3cycles=0 (total order by the stated observable)
+
+SYNTHESIS
+  The abstract finite-difference packets are perfectly formal: B_j is
+  exactly dual to W_j, and q0 is the alternating boundary of W.
+  But the generated frontier does not follow a simple signed W1, W2, or
+  B2 rule.  The robust generated witnesses are the absolute low leakage
+  |W1|+|W2| and the Bonferroni4 U4 readout; this matches HYP-2722/HYP-2727.
+  Therefore the HYP-2725/HYP-2727 proof order should be strengthened:
+  formalize the finite-difference boundary first, then prove generated-word
+  exclusion for the cheap atom-cone directions before applying the
+  factorial odd L1 envelope to the high relation-support tail.

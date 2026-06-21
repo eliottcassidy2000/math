@@ -1,3 +1,44 @@
+## codex-2026-06-21 -- HYP-2728: formal factorial boundary plus generated witness hierarchy
+
+User asked for another long LRC proof session with formalization, broad idea
+generation, and frequent pull/push coordination.  Pulled the latest shared
+mainline first; incoming mac-mini HYP-2726 reframed THM-534 as a
+Delsarte/Krawtchouk LP, and incoming codex S71 HYP-2727 warned that
+relation-code packets must be applied after generated miss-zeta word
+compatibility.  Renumbered this session's boundary scout to HYP-2728 to avoid
+the live HYP-2726/HYP-2727 namespace.
+
+Added an exact scout,
+`04-computation/lrc14_factorial_boundary_operator_codex_20260621.py`, with
+stored output
+`05-knowledge/results/lrc14_factorial_boundary_operator_codex_20260621.out`.
+It proves/checks the finite factorial boundary:
+
+```text
+W_j(q)=sum_{t>=j} binom(t,j)q_t,
+q_0=sum_j(-1)^j W_j,
+B_j(t)=(-1)^(j-t)binom(j,t),
+W_i(B_j)=delta_ij.
+```
+
+The useful obstruction is not this algebra.  The abstract cheap atom cone has
+directions `r=2,4,5` with `W1=W2=0` and `U4=0`, but the generated S71
+frontier still has `318/318` positive `q0` tests.  Signed `W1`, `W2`,
+`W1+W2`, and `B2=-W1+W2` all fail as one-sided witnesses; the robust generated
+witness hierarchy is `|W1|+|W2| > U4 > tail45`.
+
+Added Lean source
+`04-computation/lean/TournamentH7/TournamentH7/LRCFactorialAtom.lean` and
+imports/audit wrappers in `TournamentH7.lean` and `Verify.lean`.  Direct
+`lean` checking succeeds for the self-contained seven-coordinate identities;
+the project `lake build` is still blocked by an external mathlib clone failure.
+
+New hypothesis detail:
+`05-knowledge/hypotheses/HYP-2728-lrc14-factorial-boundary-generated-witnesses.md`.
+Proof-order refinement: formal `B_j` boundary first, generated-word exclusion
+second, relation-code/Delsarte classification third, factorial odd-`L1` tail
+envelope fourth, then evaluate `q0`.
+
 ## mac-mini-2026-06-21-S11 -- LRC(14): the cover bound IS a DELSARTE LINEAR PROGRAM (unifies MDS-relation-code + even-Krawtchouk + moment-LP) -- HYP-2726
 User: long session toward the LRC proof; pull/push often, keep workflows fresh; inspiration = MDS codes/arcs/projective geometry + 56-coincidence. Convergent with kps HYP-2723 (MDS/arc lens). Tight 4-thread workflow + main-loop derivation; pulled/pushed ~10x.
 **MAIN RESULT (HYP-2726, VERIFIED exact):** THM-534's moment-LP IS a DELSARTE LP. Its dual g(t) (g>=1[t=0] => measS7(E)<=L_y(E) per E) expands in the binary KRAWTCHOUK basis K_j(t;6) with ALL-NONNEGATIVE coeffs = Delsarte dual feasibility. k=8: c=[1/16,0,1/40,0,3/80,0,0] (EVEN-only -> why HYP-2724 even band clean at k=8); k=9,10: [1/12,1/72,1/36,1/48,0,0,0]; k=11,12,13: [1/8,1/24,1/24,0,0,0,0]. Delsarte-positive at every binding k. UNIFIES: relation code Lambda(E) (kps HYP-2723) = the Delsarte SCHEME (consec=anti-MDS=LP-tight; Sidon/arcs=MDS=slack); depth law pi_E (HYP-2724) = distance distribution; moment-LP (THM-534) = the LP.

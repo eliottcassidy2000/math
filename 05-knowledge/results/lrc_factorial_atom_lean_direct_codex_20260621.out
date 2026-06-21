@@ -1,0 +1,5 @@
+'LonelyRunner.FactorialAtom.basis_moment_delta' depends on axioms: [basis_moment_delta._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.originCoeff_delta' depends on axioms: [originCoeff_delta._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.basis_q0_sign' depends on axioms: [basis_q0_sign._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.U4_basis' depends on axioms: [U4_basis._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.low12_basis' depends on axioms: [low12_basis._native.native_decide.ax_1_1]

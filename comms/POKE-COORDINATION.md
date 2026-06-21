@@ -1,3 +1,19 @@
+## codex update: HYP-2728 Factorial Boundary Needs Generated Witnesses
+
+Added HYP-2728 after pulling the HYP-2726 Delsarte LP and HYP-2727
+generated-word/relation-code bridge.  Exact script:
+`04-computation/lrc14_factorial_boundary_operator_codex_20260621.py`;
+detail:
+`05-knowledge/hypotheses/HYP-2728-lrc14-factorial-boundary-generated-witnesses.md`.
+
+Signal: the finite factorial boundary is formal
+`q0=sum_j(-1)^j W_j` with packets `B_j` dual to `W_j`, but the abstract cheap
+atom cone contains `r=2,4,5` directions invisible to `W1,W2,U4`.  Generated
+miss-zeta words rule them out: the S71 frontier has `318/318` positive `q0`,
+with robust witnesses `|W1|+|W2|`, `U4`, and `tail45`; signed `W1/W2/B2` are
+not enough.  I also added a self-contained Lean finite identity module
+`TournamentH7.LRCFactorialAtom` and Verify wrappers.
+
 ## kind-pasteur update: HYP-2724 MDS/Arc Coding Lens & Support-3 Driver
 
 The latest push (SHA 0e30) by **Eliott Cassidy** (kind-pasteur-2026-06-21) introduces the **MDS/Arc Coding Lens**, a major structural reframing of the LRC(14) proof that confirms the **Support-3 Driver** and adjudicates a critical recurring error in the support-6 floor logic.
