@@ -75,6 +75,11 @@ smallest-denominator window member (`3/2`) of a BOUNDED residue-class invariant.
    ```
    `cov(z)` depends on `z` only through `z mod 7` and on `p` only through `p mod 7`.
 
+   **Validity boundary (exact, verified):** the closed form `cov(z) = floor(p/7) + [...]`
+   holds precisely for `p/q < 7` (first failure at `p/q > 7`, when a length-`p` run wraps
+   the `7q`-cycle and double-covers). The L7 window `p/q <= 43/20 = 2.15` is far inside this,
+   so the formula is valid with a wide margin.
+
 5. **Residue-only conclusion.**
    `c_{0j} = (floor(p/7)) q + #{ z in [qj, q(j+1)) : z mod 7 < p mod 7 }`.
    The count term is the number of integers in a length-`q` window with residue `< p mod 7`,
@@ -99,6 +104,16 @@ smallest-denominator window member (`3/2`) of a BOUNDED residue-class invariant.
 | `lrc_q108_threadC_FINAL_kpswf4.py` | end-to-end: balance + shift + `D=S/(7pq)` + 3 sharp faces, 0 violations (1248 ratios) |
 
 Outputs in `05-knowledge/results/` under the same stems.
+
+## New lead: the closed form is PRIME-AGNOSTIC (robustness of the L7 technique)
+
+`04-computation/lrc_q108_threadC_general_prime_kpswf4.py` confirms the SAME residue-only
+closed form holds for an arbitrary apex value `P` (P sectors), not just `P=7`:
+`D^{(P)}_{p,q} = S_P(p mod P, q mod P)/(P p q)` with `S_P` a finite `PxP` residue table,
+verified for `P = 2,3,5,7,11,13` (cov-model = closed-form = direct, residue-only:True, all).
+The universal max deviation is `maxS_P = 2,4,16,44,168,276` (P=2,3,5,7,11,13); `maxS_7/4 = 11`.
+So the L7 closure technique depends only on `P=7` being the LRC sector count, NOT on any
+arithmetic specialness of 7 -- the same machinery ports to any apex prime.
 
 ## Relation to prior work
 

@@ -1,0 +1,20 @@
+NEW LEAD: residue-only closed form for general apex P (P sectors)
+========================================================================
+  P= 2: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=2  (139 ratios p/q<2)
+  P= 3: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=4  (279 ratios p/q<3)
+  P= 5: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=16  (559 ratios p/q<5)
+  P= 7: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=44  (839 ratios p/q<7)
+  P=11: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=168  (1399 ratios p/q<11)
+  P=13: cov-model==direct:True  closed-form==direct:True  residue-only:True  maxS=276  (1679 ratios p/q<13)
+
+=> The residue-only law + cov closed form is GENERAL (any apex P, window p/q<P).
+   The LRC apex P=7 is one instance; the proof is prime-agnostic.
+   This robustness means the L7 closure technique ports to any sector count.
+
+Universal max deviation S_P (full table) vs P:
+   P= 2: maxS=2  S/4=1/2  ~P^2/4*?=0.500*P^2
+   P= 3: maxS=4  S/4=1  ~P^2/4*?=0.444*P^2
+   P= 5: maxS=16  S/4=4  ~P^2/4*?=0.640*P^2
+   P= 7: maxS=44  S/4=11  ~P^2/4*?=0.898*P^2
+   P=11: maxS=168  S/4=42  ~P^2/4*?=1.388*P^2
+   P=13: maxS=276  S/4=69  ~P^2/4*?=1.633*P^2

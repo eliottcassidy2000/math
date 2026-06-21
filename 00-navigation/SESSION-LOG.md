@@ -1,3 +1,32 @@
+## kind-pasteur-2026-06-21 (overnight, THREAD C) -- HYP-2739: L7 cell-discrepancy EXACT residue closed form; sharp 12/(7q) PROVED combinatorially
+
+User: LRC(14) overnight, RIGOR + new leads. THREAD C = prove the SHARP integer-grid discrepancy
+constant D <= 12/(7q) COMBINATORIALLY from the doubly-balanced staircase matrix (codex HYP-2736c,
+extends kps HYP-2730/2733). Goal: bound sharper than the elementary 14/p, or the precise obstruction.
+
+THREAD C RESULT (HYP-2739): got the SHARP constant AND much more -- an EXACT closed form.
+ D_{p,q} = S(p mod 7, q mod 7)/(7pq), S = 4 f(||p||_7,||q||_7), ||x||_7=min(x%7,7-x%7) in {0,1,2,3},
+ f(a,b) = 0 if ab=0; ab+3 if a!=b; ab+4-2|a-2| if a=b (a,b>=1).
+ KEY INSIGHT (why it's even sharper than expected): the deviation e_j = 7 c_{0j} - pq is RESIDUE-ONLY
+ -- a function of (p mod 7, q mod 7) alone, a finite 7x7 table bounded by S<=44. So the "sharp 12" is
+ NOT a discrepancy/Koksma constant; it is FORCED by the smallest-denominator window member 3/2.
+ PROOF (fully combinatorial, NO Koksma/equidistribution, each step exact-verified):
+  (1) integer staircase c_ij on the 7pq grid, doubly balanced (row=col sums=pq);
+  (2) cyclic-shift collapse row_i = row_0 << s*i, s=p q^{-1} mod 7 (Lemma B/HYP-2733) => 2D->1D,
+      sum_ij|7c_ij-pq| = 7 sum_j|e_j| = 7S;
+  (3) clean lattice form c_{0j} = #{(a,t): 0<=a<q,0<=t<p, (7a+t) mod 7q in [qj,q(j+1))};
+  (4) coverage = PURE SAWTOOTH: cov(z)=floor(p/7)+[z%7<p%7], EXACT for p/q<7 (window 2.15 safe),
+      because {7a:a in Z/q} are exactly the q multiples of 7 in [0,7q) (uniform period-7 class);
+  (5) hence c_{0j}=(p//7)q + #{z in [qj,q(j+1)): z%7<p%7} => residue-only. QED.
+ CONSEQUENCES (all SHARP, all PROVED): D<=12/(7q) (eq @ 3/2); D<=20/(7p) (eq @ 2/1); D<=44/(7pq)
+ universal; D=0 iff 7|pq (apex law recovered). BEATS elementary 14/p and crude 24/(7q); promotes the
+ OBSERVED sup D*p=20/7, sup D*q=12/7 to THEOREMS. CLOSES HYP-2737 (rowdef=S<=12p) and HYP-2736c.
+ End-to-end FINAL script: 1248 window ratios, 0 violations. Files lrc_q108_threadC_*_kpswf4.py (+.out).
+
+NEW LEAD (robustness): the residue-only closed form is PRIME-AGNOSTIC -- verified for apex P=2,3,5,7,11,13
+ (D^{(P)}=S_P(p%P,q%P)/(Ppq), residue-only:True all). maxS_P=2,4,16,44,168,276. The L7 technique depends
+ only on P=7 being the sector count, not on any specialness of 7; ports to any apex prime.
+
 ## kind-pasteur-2026-06-21 (overnight, THREAD B + L7 rigor re-audit) -- HYP-2738: consec-max is IRREDUCIBLY AGGREGATE; L7 Var=2/7 re-verified
 
 User: LRC(14) overnight, RIGOR + new leads. THREAD B = rigorize the consec-maximality crux (HYP-2735):
