@@ -17,3 +17,32 @@ CJJ LINEARITY MECHANISM (the structural payload)
 ============================================================================================
 (L2a) LEVEL-2 with ATLAS Fourier cone (realized Walsh intervals)
 ============================================================================================
+  L2a max p_0 = 26779/76440 = 0.350327
+  L2a < L1 (strict improvement)? True
+  L2a <= measS7(consec)?         False
+
+============================================================================================
+(L2b) LEVEL-2 PROVABLE-ONLY: which Walsh constraints hold for ALL shapes?
+============================================================================================
+  qhat_S>=0 over 3000 shapes: min=-0.49870, #negative=89731 -> NOT a provable scheme constraint.
+  Provable universal Walsh bounds = |qhat_S|<=1 only (non-binding here).
+  => L2b (provable-only) optimum = L1 optimum = 0.358231  (COLLAPSE on provable structure).
+
+============================================================================================
+VERDICT
+============================================================================================
+  measS7(consec)               = 0.327211
+  L1  level-1 Delsarte/L_y     = 0.358231   gap to consec = +0.031020
+  L2a level-2 (atlas cone)     = 0.350327   gap to consec = +0.023116
+  L2b level-2 (provable-only)  = 0.358231   == L1 (COLLAPSE)
+
+  (1) With ATLAS-derived higher-order structure, level-2 STRICTLY IMPROVES
+      (0.350327 < 0.358231) -- consistent with CJJ: the optimizer IS linear
+      (full Z/7, nonneg Walsh), so the hierarchy is NOT forced to collapse.
+  (2) But level-2 does NOT reach measS7(consec) (0.350327 > 0.327211),
+      so level-2 ALONE does NOT certify consec-max without the atlas.
+  (3) With ONLY provably-universal scheme constraints, level-2 COLLAPSES to level-1:
+      the distinguishing structure (qhat_S>=0) is consec-SPECIFIC, not scheme-wide,
+      so a generic level-2 relaxation cannot see it -- exactly the Prop-1.2 boundary.
+
+DONE.

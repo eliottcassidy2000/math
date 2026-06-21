@@ -5,3 +5,34 @@ k=8: measS7(consec)=p_0=481/1470=0.327211   cap_k=0.381463
 Building k=8 atlas (primitive shapes, max<=16) for achievable cones.
 ============================================================================================
   11432 primitive shapes
+  achievable M_1 in [1.7090,2.8085]
+  achievable M_2 in [0.6077,6.1211]
+  achievable p_0 in [0.0034,0.3272]  (atlas max = consec? True)
+
+============================================================================================
+(A) LEVEL-1 (Delsarte) LP optima
+============================================================================================
+  L1a abstract (only p>=0,sum=1,M_j>=0):  max p_0 = 1=1.000000
+  L1b +even-moment ceilings M_2<=M2c,M_4<=M4c:  max p_0 = 2633/7350=0.358231
+      (This is the Delsarte/L_y value -- compare to L_y(consec)=0.327211?
+       L_y(consec) (dual bound) was 0.35823 in saturation script.)
+
+============================================================================================
+(B) LEVEL-2 LP: subset law q_A (64 atoms) + hypercube Q_6 Fourier positivity
+============================================================================================
+  L2 LP: 64 atoms, 1 eq, 134 ineq (63 Fourier-cone pairs).
+  L2 max q_emptyset = 26779/76440=0.350327
+
+============================================================================================
+(C) VERDICT: collapse vs improves
+============================================================================================
+  measS7(consec)        = 0.327211
+  L1a abstract Delsarte = 1.000000
+  L1b data Delsarte     = 0.358231
+  L2 (level-2 LP)       = 0.350327
+  L2 < L1b (strict improvement)? True
+  L2 <= measS7(consec)?          False
+  => IMPROVES: level-2 is strictly stronger than Delsarte.
+     but level-2 still exceeds measS7(consec) -- does not yet certify consec-max.
+
+DONE.

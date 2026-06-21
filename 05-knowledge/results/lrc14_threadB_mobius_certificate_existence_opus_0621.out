@@ -1,0 +1,27 @@
+====================================================================================================
+THREAD B FINAL: does a SINGLE degree-R per-subset functional certify consec-max?
+  Need lambda with (V) F>=measS7 all E, (M) F(E)<=F(consec) all E, (T) F(consec)=measS7(consec).
+  We minimize  s = max_E F_lambda(E) - F_lambda(consec)  s.t. (V)+(T).  s=0 iff certificate exists.
+====================================================================================================
+  k=8 R=2 (#subsets=22): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=8 R=3 (#subsets=42): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=8 R=4 (#subsets=57): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+
+  k=9 R=2 (#subsets=22): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=9 R=3 (#subsets=42): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=9 R=4 (#subsets=57): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+
+  k=10 R=2 (#subsets=22): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=10 R=3 (#subsets=42): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+  k=10 R=4 (#subsets=57): min slack s = max_E F - F(consec) = 0.000000  => consec-max certificate exists? True
+
+====================================================================================================
+INTERPRETATION
+  s=0  : a single degree-R per-subset functional certifies consec-max (route SUCCEEDS at R).
+  s>0  : NO degree-R per-subset functional is simultaneously valid, tight-at-consec, and
+         consec-maximal.  The per-subset Mobius data does NOT select consec at degree R.
+         This is the Prop-1.2 COLLAPSE of the EXTREMALITY (consec is not a lattice-functional
+         optimizer), even though Part B showed the per-subset BOUND strictly improves level 1.
+====================================================================================================
+
+DONE.

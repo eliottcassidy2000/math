@@ -1,0 +1,54 @@
+====================================================================================================
+THREAD B CONTROL: is the degree-R per-subset tight majorant VACUOUS or does it pick consec?
+====================================================================================================
+
+  --- k=8, degree R=2 (#subsets=22), cap=0.38146 ---
+    target                             consec: min majorant=0.327211  measS7=0.327211  gap=-0.000000  tight?True
+    target  2nd-best [0, 2, 3, 4, 5, 6, 7, 8]: min majorant=0.273639  measS7=0.273639  gap=0.000000  tight?True
+    target median [0, 2, 4, 6, 7, 11, 14, 16]: min majorant=0.046498  measS7=0.046498  gap=-0.000000  tight?True
+    target     low [0, 1, 2, 6, 8, 9, 11, 13]: min majorant=0.003441  measS7=0.003441  gap=0.000000  tight?True
+
+  --- k=8, degree R=3 (#subsets=42), cap=0.38146 ---
+    target                             consec: min majorant=0.327211  measS7=0.327211  gap=-0.000000  tight?True
+    target  2nd-best [0, 2, 3, 4, 5, 6, 7, 8]: min majorant=0.273639  measS7=0.273639  gap=-0.000000  tight?True
+    target median [0, 2, 4, 6, 7, 11, 14, 16]: min majorant=0.046498  measS7=0.046498  gap=0.000000  tight?True
+    target     low [0, 1, 2, 6, 8, 9, 11, 13]: min majorant=0.003441  measS7=0.003441  gap=-0.000000  tight?True
+
+  --- k=9, degree R=2 (#subsets=22), cap=0.49426 ---
+    target                             consec: min majorant=0.416156  measS7=0.416156  gap=0.000000  tight?True
+    target 2nd-best [0, 2, 4, 6, 7, 8, 10, 12, 14]: min majorant=0.404082  measS7=0.404082  gap=-0.000000  tight?True
+    target median [0, 2, 3, 6, 8, 9, 10, 13, 15]: min majorant=0.120818  measS7=0.120818  gap=0.000000  tight?True
+    target low [0, 1, 2, 6, 8, 9, 11, 13, 14]: min majorant=0.039829  measS7=0.039829  gap=-0.000000  tight?True
+
+  --- k=9, degree R=3 (#subsets=42), cap=0.49426 ---
+    target                             consec: min majorant=0.416156  measS7=0.416156  gap=-0.000000  tight?True
+    target 2nd-best [0, 2, 4, 6, 7, 8, 10, 12, 14]: min majorant=0.404082  measS7=0.404082  gap=-0.000000  tight?True
+    target median [0, 2, 3, 6, 8, 9, 10, 13, 15]: min majorant=0.120818  measS7=0.120818  gap=0.000000  tight?True
+    target low [0, 1, 2, 6, 8, 9, 11, 13, 14]: min majorant=0.039829  measS7=0.039829  gap=0.000000  tight?True
+
+  --- k=10, degree R=2 (#subsets=22), cap=0.60440 ---
+    target                             consec: min majorant=0.504478  measS7=0.504478  gap=0.000000  tight?True
+    target 2nd-best [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]: min majorant=0.493878  measS7=0.493878  gap=-0.000000  tight?True
+    target median [0, 1, 3, 4, 5, 6, 7, 10, 13, 14]: min majorant=0.244244  measS7=0.244244  gap=-0.000000  tight?True
+    target low [0, 1, 2, 6, 8, 9, 10, 11, 13, 14]: min majorant=0.124560  measS7=0.124560  gap=-0.000000  tight?True
+
+  --- k=10, degree R=3 (#subsets=42), cap=0.60440 ---
+    target                             consec: min majorant=0.504478  measS7=0.504478  gap=0.000000  tight?True
+    target 2nd-best [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]: min majorant=0.493878  measS7=0.493878  gap=0.000000  tight?True
+    target median [0, 1, 3, 4, 5, 6, 7, 10, 13, 14]: min majorant=0.244244  measS7=0.244244  gap=-0.000000  tight?True
+    target low [0, 1, 2, 6, 8, 9, 10, 11, 13, 14]: min majorant=0.124560  measS7=0.124560  gap=-0.000000  tight?True
+
+====================================================================================================
+TEST 2: For the tight-at-consec majorant lambda, is consec the ARGMAX of F_lambda over window?
+  If yes: measS7(E) <= F_lambda(E) <= F_lambda(consec) = measS7(consec) => CONSEC-MAX PROVED at degree R.
+====================================================================================================
+  k=8 R=2: F_lambda(consec)=0.327211=measS7(consec)=0.327211.  #shapes with F_lambda(E)>F_lambda(consec) = 0  (consec=argmax F_lambda? True)
+  k=8 R=3: F_lambda(consec)=0.327211=measS7(consec)=0.327211.  #shapes with F_lambda(E)>F_lambda(consec) = 0  (consec=argmax F_lambda? True)
+  k=9 R=2: F_lambda(consec)=0.416156=measS7(consec)=0.416156.  #shapes with F_lambda(E)>F_lambda(consec) = 0  (consec=argmax F_lambda? True)
+  k=9 R=3: F_lambda(consec)=0.416156=measS7(consec)=0.416156.  #shapes with F_lambda(E)>F_lambda(consec) = 1  (consec=argmax F_lambda? False)
+        BEATER F_lambda=0.439183 > 0.416156 at [0, 2, 4, 6, 7, 8, 10, 12, 14] (measS7=0.40408)
+  k=10 R=2: F_lambda(consec)=0.504478=measS7(consec)=0.504478.  #shapes with F_lambda(E)>F_lambda(consec) = 1  (consec=argmax F_lambda? False)
+        BEATER F_lambda=0.505083 > 0.504478 at [0, 2, 4, 5, 6, 7, 8, 10, 12, 14] (measS7=0.47976)
+  k=10 R=3: F_lambda(consec)=0.504478=measS7(consec)=0.504478.  #shapes with F_lambda(E)>F_lambda(consec) = 0  (consec=argmax F_lambda? True)
+
+DONE (control).

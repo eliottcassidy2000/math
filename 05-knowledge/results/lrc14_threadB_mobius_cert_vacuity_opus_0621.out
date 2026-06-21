@@ -1,0 +1,33 @@
+====================================================================================================
+DECISIVE VACUITY CONTROL: certificate LP with NON-CONSEC winners must give s>0.
+  (A maximal-shape certificate gives s=0; any NON-maximal target must give s>0,
+   else the per-subset functional fakes any max = vacuous = route dead.)
+====================================================================================================
+
+  --- k=8, degree R=2 (#subsets=22) ---
+    target   consec (MAX)     [0, 1, 2, 3, 4, 5, 6, 7]: measS7=0.32721  s=0 (certified as max)
+    target       2nd-best     [0, 2, 3, 4, 5, 6, 7, 8]: measS7=0.27364  s=0.053571 (NOT certifiable as max)
+    target         median  [0, 2, 4, 6, 7, 11, 14, 16]: measS7=0.04650  s=0.280713 (NOT certifiable as max)
+    target            low   [0, 1, 2, 6, 8, 9, 11, 13]: measS7=0.00344  s=0.454779 (NOT certifiable as max)
+
+  --- k=9, degree R=2 (#subsets=22) ---
+    target   consec (MAX)  [0, 1, 2, 3, 4, 5, 6, 7, 8]: measS7=0.41616  s=0 (certified as max)
+    target       2nd-best [0, 2, 4, 6, 7, 8, 10, 12, 14]: measS7=0.40408  s=0.012075 (NOT certifiable as max)
+    target         median [0, 2, 3, 6, 8, 9, 10, 13, 15]: measS7=0.12082  s=0.339320 (NOT certifiable as max)
+    target            low [0, 1, 2, 6, 8, 9, 11, 13, 14]: measS7=0.03983  s=0.427934 (NOT certifiable as max)
+
+  --- k=10, degree R=2 (#subsets=22) ---
+    target   consec (MAX) [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]: measS7=0.50448  s=0 (certified as max)
+    target       2nd-best [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]: measS7=0.49388  s=0.010601 (NOT certifiable as max)
+    target         median [0, 1, 3, 4, 5, 6, 7, 10, 13, 14]: measS7=0.24424  s=0.365973 (NOT certifiable as max)
+    target            low [0, 1, 2, 6, 8, 9, 10, 11, 13, 14]: measS7=0.12456  s=0.536186 (NOT certifiable as max)
+
+====================================================================================================
+VERDICT LOGIC:
+  If ONLY consec gives s=0 and all non-consec give s>0 (or infeasible): the degree-2
+    per-subset functional GENUINELY selects consec => MOBIUS/INTEGRALITY ROUTE SUCCEEDS
+    (a real extremality certificate at degree 2, no full atlas).
+  If non-consec ALSO give s=0: VACUOUS => route collapses (Prop 1.2).
+====================================================================================================
+
+DONE.

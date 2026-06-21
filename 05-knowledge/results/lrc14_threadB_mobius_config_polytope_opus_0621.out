@@ -12,3 +12,31 @@ THREAD B PART C: CONFIGURATION-POLYTOPE INTEGRALITY TEST (CJJ Lem 3.1 / view d)
 
   k  R  B_R(consec)    measS7    gap=(c)  consec=argmax_measS7? consec=argmin_B_R?             argmin_B_R
   8  2      1.18639   0.32721    0.85918                   True              False [0, 1, 5, 6, 7, 9, 13, 16]
+  8  4      0.48027   0.32721    0.15306                   True              False [0, 4, 5, 9, 12, 13, 15, 16]
+
+  9  2      1.16310   0.41616    0.74694                   True              False [0, 1, 3, 5, 8, 12, 13, 14, 15]
+  9  4      0.55136   0.41616    0.13520                   True              False [0, 1, 2, 6, 8, 9, 11, 13, 14]
+
+ 10  2      1.17058   0.50448    0.66610                   True              False [0, 1, 2, 6, 8, 9, 10, 11, 13, 14]
+ 10  4      0.62353   0.50448    0.11905                   True              False [0, 1, 2, 6, 8, 9, 10, 11, 13, 14]
+
+ 11  2      1.17902   0.58146    0.59756                   True              False [0, 1, 3, 4, 5, 7, 8, 10, 11, 12, 13]
+ 11  4      0.68940   0.58146    0.10794                   True              False [0, 1, 3, 4, 5, 7, 8, 10, 11, 12, 13]
+
+====================================================================================================
+(C3-ii) BEST DEGREE-R PER-SUBSET MAJORANT: min_lambda F_lambda(consec) s.t. F_lambda(E)>=measS7(E) for all E.
+        This is the SHARPEST level-R Mobius/subset bound on measS7(consec).
+        If it == measS7(consec): degree-R Mobius certificate is EXACT (integrality success).
+        We use lambda over ALL subsets A with |A|<=R (symmetric per size NOT assumed).
+====================================================================================================
+  k=8 R=2 (#subsets=22): min degree-R majorant at consec = 0.327211  measS7(consec)=0.327211  gap=-0.000000  EXACT(tight)? True  (<=cap=0.38146: True)
+  k=8 R=3 (#subsets=42): min degree-R majorant at consec = 0.327211  measS7(consec)=0.327211  gap=-0.000000  EXACT(tight)? True  (<=cap=0.38146: True)
+
+  k=9 R=2 (#subsets=22): min degree-R majorant at consec = 0.416156  measS7(consec)=0.416156  gap=0.000000  EXACT(tight)? True  (<=cap=0.49426: True)
+  k=9 R=3 (#subsets=42): min degree-R majorant at consec = 0.416156  measS7(consec)=0.416156  gap=-0.000000  EXACT(tight)? True  (<=cap=0.49426: True)
+
+  k=10 R=2 (#subsets=22): min degree-R majorant at consec = 0.504478  measS7(consec)=0.504478  gap=0.000000  EXACT(tight)? True  (<=cap=0.60440: True)
+  k=10 R=3 (#subsets=42): min degree-R majorant at consec = 0.504478  measS7(consec)=0.504478  gap=0.000000  EXACT(tight)? True  (<=cap=0.60440: True)
+
+
+DONE (Part C).
