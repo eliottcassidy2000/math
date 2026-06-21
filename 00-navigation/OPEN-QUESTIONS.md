@@ -1,5 +1,21 @@
 # Open Questions
 
+**OPEN-Q-108 — TRUE-WIDE SURVIVAL MIDDLE-MASS GATE (codex-2026-06-20-S64, HYP-2701/T936).**
+HYP-2695's true-wide cap-floor gate has an exact survival coordinate.  Since THM-556 gives
+`U4=p0+p5+5p6`, the floor comparison `U4<=floor_k=(k-6)/7` is equivalent to
+`p1+p2+p3+p4-4p6 >= (13-k)/7`; the cap comparison uses the same left side with right side
+`1-cap_k`.  Exact S64 scan found no true-wide cap failures and no `k>=9` floor failures in the
+audited boxes (k=8,9 B18; k=10,11,12 B17).  The only floor failures are three `k=8` rows and all
+are cap-safe; worst `(0,3,6,9,12,14,15,18)` has floor debt `107/8820`, cap slack `295/3528`,
+`p6=1/126`, and `far_count=2`.  The far-count ledger is the new proof split: every tight audited
+leader is barely true-wide (`far_count=2`), while `far_count>=3` has larger margin in each layer.
+Sharp target: prove a two-far survival-currency lemma for `k>=9`, prove a separate easier
+`r>=3` far-count margin lemma using the multi-far/decorrelation machinery, and reserve finite
+THM-535 dividend templates for true-wide `k=8`.  Near-equality rows must be lifted back to
+state-word, transfer-tax, residual-profile, and relation-lattice coordinates before scalarizing.
+-> HYP-2701, HYP-2695, HYP-2699, HYP-2700, HYP-2702, THM-556, THM-535, HYP-2696, HYP-2698,
+HYP-2684, HYP-2675, OPEN-Q-108.
+
 **OPEN-Q-108 — RESIDUAL-PROFILE AUTOMATON CONE (codex-2026-06-20-S63, HYP-2698/T934).**
 HYP-2697's generated residual-profile cone now has an exact coordinate.  Actual decorrelated contexts are
 words `x -> w_x(R)` over the 64 residual masks, updated at fixed slow coordinate `x` by OR-convolution /

@@ -10,6 +10,7 @@ depends_on:
   - HYP-2693
   - HYP-2675
 related:
+  - HYP-2701
   - HYP-2694
   - HYP-2691
   - HYP-2692
@@ -125,6 +126,24 @@ Boundary/AP rows confirm why the floor-gate statement must keep the true-wide
 stratum.  AP9 and the doubled AP boundary row have
 `U4=1621/2940`, so they fail both floor and cap for `k=9`; the boundary leader
 `(0,2,4,6,8,10,12,14,15)` fails the floor by `39/1960` but still passes cap.
+
+## S64 Survival-Currency Refinement
+
+HYP-2701 changes the coordinate for this gate.  Since `sum_t p_t=1`,
+
+```text
+floor_k - U4(E)
+  = p1+p2+p3+p4 - 4p6 - (13-k)/7.
+```
+
+Thus the `U4` floor gate is exactly a lower bound on survival middle mass after
+charging the fully-missed tail.  The exact cap gate uses the same left side with
+right side `1-cap_k`.  The S64 scan extends the true-wide boxes to k=10,11,12
+at B17 and finds the same qualitative pattern: no cap failures, no `k>=9`
+floor failures, and the only audited floor failures are three cap-safe k=8
+rows.  Its far-count ledger sharpens this hypothesis' proof route: prove a
+two-far survival-currency lemma first, then prove a separate `far_count>=3`
+margin lemma, while keeping k=8 on the finite dividend branch.
 
 ## Proof Route
 
