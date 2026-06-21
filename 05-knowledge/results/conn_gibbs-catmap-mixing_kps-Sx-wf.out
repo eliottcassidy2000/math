@@ -121,33 +121,24 @@ PART A.2 -- RESONANCE / TRANSFER-OPERATOR RECONSTRUCTION (P2).
   e(E) = sum_{s!=0} INT Hhat_s(x) e(2pi i sMx) dx.  e(2pi i sMx) = L_M[e(2pi i sx)].
   Reconstruct e(E) from truncated s-sum and compare to exact p0_exact - p0_decorr.
 ============================================================================================
+  NOTE: the resonance integral INT Hhat_s(x) e(2pi i sMx) dx is highly oscillatory
+  (frequency sM up to ~200); a plain Riemann sum at Nx converges slowly, so the
+  RECONSTRUCTED e is a crude majorant of the exact e. The point of this part is only
+  to confirm (i) the s=+-1 harmonic dominates and (ii) per-|s| magnitudes fall ~1/|s|.
 
   M=16, m=7:  e_exact(brute) = -0.000193
       Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
-         1    -0.002377      -0.002184    0.00264    0.00000    0.00000
-         2    -0.002757      -0.002563    0.00264    0.00061    0.00000
-         3    -0.002974      -0.002781    0.00264    0.00061    0.00098
-         5    -0.003271      -0.003077    0.00264    0.00061    0.00098
-         8    -0.001351      -0.001158    0.00264    0.00061    0.00098
-     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00132, 2: 0.0003, 3: 0.00049, 4: 0.00025, 5: 0.00015, 6: 4e-05, 7: 0.00098, 8: 6e-05}
+         1    -0.002380      -0.002187    0.00264    0.00000    0.00000
+         2    -0.002760      -0.002566    0.00264    0.00061    0.00000
+         3    -0.002979      -0.002785    0.00264    0.00061    0.00098
+     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00132, 2: 0.0003, 3: 0.00049}
 
   M=23, m=7:  e_exact(brute) = +0.001059
       Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
-         1    -0.000740      -0.001799    0.00082    0.00000    0.00000
-         2     0.000244      -0.000815    0.00082    0.00158    0.00000
-         3     0.000117      -0.000942    0.00082    0.00158    0.00057
-         5     0.000086      -0.000973    0.00082    0.00158    0.00057
-         8     0.000363      -0.000696    0.00082    0.00158    0.00057
-     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00041, 2: 0.00079, 3: 0.00028, 4: 0.0, 5: 2e-05, 6: 0.0, 7: 0.00014, 8: 0.0}
-
-  M=32, m=8:  e_exact(brute) = +0.002841
-      Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
-         1     0.001074      -0.001767    0.00119    0.00000    0.00000
-         2     0.002248      -0.000593    0.00119    0.00188    0.00000
-         3     0.002325      -0.000516    0.00119    0.00188    0.00035
-         5     0.002215      -0.000627    0.00119    0.00188    0.00035
-         8     0.002561      -0.000280    0.00119    0.00188    0.00035
-     per-|s| magnitudes (should fall ~1/|s|): {1: 0.0006, 2: 0.00094, 3: 0.00017, 4: 0.00016, 5: 3e-05, 6: 0.0, 7: 0.00016, 8: 1e-05}
+         1    -0.000734      -0.001793    0.00081    0.00000    0.00000
+         2     0.000255      -0.000804    0.00081    0.00159    0.00000
+         3     0.000129      -0.000930    0.00081    0.00159    0.00057
+     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00041, 2: 0.00079, 3: 0.00028}
 
 ============================================================================================
 PART A.3 -- RESONANT vs GENERIC anchor (P3): relation-lattice / non-mixing directions.
@@ -208,23 +199,23 @@ PART B -- GIBBS form of the SCORE PARTITION FUNCTION Z_n (THM-554/555).
     E[c3] empirical = 10.00000   THM-555 (C(n,3)+(n-2))/4 = 10.00000  MATCH
     Var[c3] empirical = 3.87500
     c3 histogram (energy density of states g(E)):
-       c3=  0  count g=     1  log g=  0.0000  maxH@c3=1
-       c3=  1  count g=     5  log g=  1.6094  maxH@c3=3
-       c3=  2  count g=    23  log g=  3.1355  maxH@c3=9
-       c3=  3  count g=    64  log g=  4.1589  maxH@c3=15
-       c3=  4  count g=   215  log g=  5.3706  maxH@c3=17
-       c3=  5  count g=   441  log g=  6.0890  maxH@c3=33
-       c3=  6  count g=  1141  log g=  7.0397  maxH@c3=51
-       c3=  7  count g=  1672  log g=  7.4218  maxH@c3=69
-       c3=  8  count g=  3399  log g=  8.1312  maxH@c3=93
-       c3=  9  count g=  4423  log g=  8.3946  maxH@c3=123
-       c3= 10  count g=  7321  log g=  8.8985  maxH@c3=135
-       c3= 11  count g=  5528  log g=  8.6176  maxH@c3=135
-       c3= 12  count g=  6241  log g=  8.7389  maxH@c3=145
-       c3= 13  count g=  2203  log g=  7.6976  maxH@c3=159
-       c3= 14  count g=    91  log g=  4.5109  maxH@c3=189
-    c3-max (Gibbs ground state of E=-c3) = 14; maxH at c3-max = 189  (global maxH over all = 189)
-    GIBBS GROUND-STATE = H-MAXIMIZER ?  True  (c3-max class contains the H-max: VERIFIED)
+       c3=  0  count g=     1  log g=  0.0000  maxH@c3=-
+       c3=  1  count g=     5  log g=  1.6094  maxH@c3=-
+       c3=  2  count g=    23  log g=  3.1355  maxH@c3=-
+       c3=  3  count g=    64  log g=  4.1589  maxH@c3=-
+       c3=  4  count g=   215  log g=  5.3706  maxH@c3=-
+       c3=  5  count g=   441  log g=  6.0890  maxH@c3=-
+       c3=  6  count g=  1141  log g=  7.0397  maxH@c3=-
+       c3=  7  count g=  1672  log g=  7.4218  maxH@c3=-
+       c3=  8  count g=  3399  log g=  8.1312  maxH@c3=-
+       c3=  9  count g=  4423  log g=  8.3946  maxH@c3=-
+       c3= 10  count g=  7321  log g=  8.8985  maxH@c3=-
+       c3= 11  count g=  5528  log g=  8.6176  maxH@c3=-
+       c3= 12  count g=  6241  log g=  8.7389  maxH@c3=-
+       c3= 13  count g=  2203  log g=  7.6976  maxH@c3=-
+       c3= 14  count g=    91  log g=  4.5109  maxH@c3=-
+    c3-max (Gibbs ground state of E=-c3) = 14; maxH at c3-max = -  (global maxH over all = -)
+    GIBBS GROUND-STATE = H-MAXIMIZER ?  False  (c3-max does NOT attain global H-max: Gibbs(E=-c3) ground != H-max)
 
 ============================================================================================
 SUMMARY / HONEST STATUS

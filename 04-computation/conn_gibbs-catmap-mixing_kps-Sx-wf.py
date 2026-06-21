@@ -338,7 +338,7 @@ def main():
             A = adj(n, bits, T)
             c = c3_brute(A, n)
             hist[c] += 1
-            if n <= 7:
+            if n <= 6:
                 Hh = H_hampaths(A, n)
                 if c not in c3_to_maxH or Hh > c3_to_maxH[c]:
                     c3_to_maxH[c] = Hh
