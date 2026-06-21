@@ -257,6 +257,28 @@ KPS HYP-2806 is compatible with this: the same corrected slow coordinate
 `y in [0,7)` and frozen doublet law apply to arbitrary bounded bases, including
 the dilated-base rows from HYP-2805.
 
+## Post-Rebase mac-mini S7 Q-Floor Correction
+
+Incoming mac-mini S7 sharpens the correction further: the `Q(k-1)` slack floor
+is not a valid target for all genuine-wide rows at k=12.  Its exhaustive
+span-18 check finds exactly four genuine-wide over-`Q(11)` rows, with maximum
+
+```text
+E* = {0,2,4,6,8,9,10,11,12,14,16,18},
+p0(E*) = 238949/388080,
+p0(E*) - Q(11) > 0,
+cap_12 - p0(E*) > 0.24.
+```
+
+The mechanism is not the adjacent doublet but an even-AP lattice with two odd
+bridges.  The odd bridges preserve full-set primitivity and prevent a
+single-removal scale reduction, while the even lattice keeps the coverage high.
+Therefore the S77 low-f window cannot aim to prove `p0<Q(k-1)` uniformly.
+The correct finite-window target is direct `p0<cap_k`, with the over-`Q`
+bridge rows treated as a named finite resonant subfamily.  The frozen `D7<Q`
+tail evidence remains useful, but only after the genuinely finite bridge
+window has been separated.
+
 ## Proof Route
 
 The corrected r=2 genuine-wide branch now has three separate obligations:
@@ -268,10 +290,12 @@ The corrected r=2 genuine-wide branch now has three separate obligations:
 2. **Frozen gap extremality.**  Prove or exhaustively certify the all-gap
    inequality for `D7(B,g)`.  The evidence says the adjacent consecutive base
    is the frozen leader, with dilated copies tied when the gap is dilated.
-3. **Finite low-f window.**  After `D7+7/f<Q`, the remaining exact check is
-   finite.  With the current crude envelope it is enough to scan roughly
-   `15 <= f <= 193`, `g<=24` for all bounded bases at `k=10..12`; a sharper
-   Abel/BV constant or live-depth kernel can shrink this.
+3. **Finite low-f direct-cap window.**  After `D7+7/f<Q`, the remaining exact
+   check is finite.  mac-mini S7 shows this window cannot be summarized by the
+   stronger `Q(k-1)` floor at k=12: even-AP plus two odd bridges can exceed
+   `Q(11)` while staying far below `cap_12`.  The finite window should
+   therefore be split into direct-cap bridge certificates and the shorter
+   `Q`-safe tail, rather than forcing a false uniform `p0<Q` statement.
 
 This corrects the status of the old Thread-A r=2 certificate.  Its stated
 tail mechanism was promising, but the stored script did not implement the
@@ -343,5 +367,8 @@ No proof of LRC(14) is claimed here.  The concrete progress is:
 - incorporated HYP-2805's scope correction: consecutive doublet is a component,
   while the full genuine-wide proof must be base-uniform and include dilated
   `primitive(FULL E)` rows;
+- incorporated mac-mini S7's correction that the k=12 genuine-wide finite
+  window has over-`Q(11)` even-AP plus odd-bridge rows, so the branch must prove
+  direct cap control there;
 - reduced the remaining r=2 proof to frozen gap extremality plus a finite
-  low-f exact window.
+  low-f direct-cap exact window.
