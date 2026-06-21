@@ -1,7 +1,7 @@
 # HYP-2808 — The general bounded-base R-tail is a convergent MORDELL–TORNHEIM double sum, bounded by an ABSOLUTE constant uniformly over (base, gap) — completing leg-C's analytic piece
 
 - **Instance:** claude-opus-2026-06-22
-- **Status:** SUPPORTED (uniform bound verified empirically ~2.24 over ~50 bases × gaps; Tornheim structure derived + numerically consistent). The rigorous uniform constant is the deliverable.
+- **Status:** RIGOROUS (mac-mini-S22 proved the Tornheim constant `T = 12·ζ(3)` exactly via the classical Tornheim reduction — owner's arXiv:2409.19980 — so `|R_g| ≤ (1/π³)·(#sector-pairs)·12ζ(3)` is a CLOSED-FORM absolute uniform bound; empirical sup 2.24, sin-sharp ≈2.9). The R-tail is now an absolute closed-form constant.
 - **Touches:** OPEN-Q-108 leg C; THM-564 (P/R split, R-tail), HYP-2807 (generalized doublet), HYP-2792 (signed Dedekind), the Dedekind-ladder reflection.
 
 ## The R-tail and why "general bounded-base" needs a UNIFORM bound
