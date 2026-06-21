@@ -133,5 +133,42 @@ theorem c87_rowSums : ∀ i, rowSum c87 i = 56 := by decide
 theorem c21_disc : Ddef c21 2 = 140 := by native_decide
 theorem c21_rowSums : ∀ i, rowSum c21 i = 2 := by decide
 
+/-! ### The sharp residue closed form (HYP-2739)
+
+The thread-C result: the L1 cell-discrepancy is RESIDUE-ONLY,
+`D_{p,q} = 4 * f(‖p‖₇, ‖q‖₇) / (7*p*q)`, where `‖x‖₇ = min(x%7, 7-x%7) ∈ {0,1,2,3}` and
+`f a b = 0` if `a*b=0`, `= a*b+3` if `a≠b`, `= a*b+4-2|a-2|` if `a=b`.  In the integer
+normalization here (`Ddef = Σ|7c-S| = 7 * S`, since `49c-7pq = 7(7c-S)`), this reads
+`Ddef = 7 * Sres p q`.  We machine-check it on the two sharp faces and the apex case. -/
+
+/-- `‖x‖₇ = min(x mod 7, 7 - x mod 7) ∈ {0,1,2,3}`. -/
+def norm7 (x : Int) : Int := min (x % 7) (7 - x % 7)
+
+/-- The residue function `f`. -/
+def fres (a b : Int) : Int :=
+  if a * b = 0 then 0 else if a = b then a * b + 4 - 2 * iabs (a - 2) else a * b + 3
+
+/-- The residue invariant `Sres p q = 4 * f(‖p‖₇, ‖q‖₇)`; `D_{p,q} = Sres/(7pq)` and
+    `Ddef = 7 * Sres`. -/
+def Sres (p q : Int) : Int := 4 * fres (norm7 p) (norm7 q)
+
+/-- **Sharp residue closed form (HYP-2739), apex face `(q,p)=(7,8)`:** `7 | q`, so
+    `Sres = 0` and the discrepancy vanishes. -/
+theorem c87_residue : Ddef c87 56 = 7 * Sres 8 7 := by native_decide
+
+/-- **Sharp residue closed form, the `sup D*q = 12/7` face `(q,p)=(2,3)`:** `Sres 3 2 = 36`,
+    `Ddef = 7*36 = 252`. -/
+theorem c32_residue : Ddef c32 6 = 7 * Sres 3 2 := by native_decide
+
+/-- **Sharp residue closed form, the `sup D*p = 20/7` face `(q,p)=(1,2)`:** `Sres 2 1 = 20`,
+    `Ddef = 7*20 = 140`. -/
+theorem c21_residue : Ddef c21 2 = 7 * Sres 2 1 := by native_decide
+
+/-- The residue invariant is bounded by `44` on the four residue classes `{0,1,2,3}^2`
+    (max `f(3,3)=11`), so `D_{p,q} ≤ 44/(7pq)` (HYP-2739).  Checked on the residue table
+    by `decide`; the reduction `norm7 x ∈ {0,1,2,3}` for general `x` is left to prose. -/
+theorem Sres_table_le_44 : ∀ a : Fin 4, ∀ b : Fin 4,
+    4 * fres (a.val : Int) (b.val : Int) ≤ 44 := by decide
+
 end L7Discrepancy
 end LonelyRunner
