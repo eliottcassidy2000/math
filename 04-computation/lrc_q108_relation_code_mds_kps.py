@@ -1,7 +1,8 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 r"""
-lrc_q108_relation_code_mds_kps.py   (kind-pasteur 2026-06-21, HYP-2723)
+lrc_q108_relation_code_mds_kps.py   (kind-pasteur 2026-06-21, HYP-2724)
+   [renumbered from HYP-2723: codex-S71 concurrently claimed 2723 for depth-law/generated-word]
 
 The MDS / arc / coding-theory lens on OPEN-Q-108 (LRC(14) wide-cover crux).
 
