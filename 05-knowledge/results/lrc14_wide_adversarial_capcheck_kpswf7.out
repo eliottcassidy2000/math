@@ -15,3 +15,23 @@ k=9: cap=0.494256 Q(k-1)=0.362099 Q-margin=0.132157
   => REAL bound p0<cap holds with margin 0.129819? True
 --------------------------------------------------------------------------------
 k=10: cap=0.604396 Q(k-1)=0.447886 Q-margin=0.156509
+  scanned 18832 wide configs
+  sup ACTUAL p0 = 0.465873  margin_to_cap = 0.138523  OVER_CAP = 0
+  argmax p0 E = (0, 2, 4, 6, 8, 9, 10, 12, 14, 16)
+  => REAL bound p0<cap holds with margin 0.138523? True
+--------------------------------------------------------------------------------
+k=11: cap=0.725275 Q(k-1)=0.531252 Q-margin=0.194023
+  scanned 20044 wide configs
+  sup ACTUAL p0 = 0.514116  margin_to_cap = 0.211159  OVER_CAP = 0
+  argmax p0 E = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15)
+  => REAL bound p0<cap holds with margin 0.211159? True
+--------------------------------------------------------------------------------
+k=12: cap=0.857143 Q(k-1)=0.602243 Q-margin=0.254900
+  scanned 21255 wide configs
+  sup ACTUAL p0 = 0.605496  margin_to_cap = 0.251647  OVER_CAP = 0
+  argmax p0 E = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 38)
+  => REAL bound p0<cap holds with margin 0.251647? True
+
+================================================================================
+VERDICT: report sup p0 vs cap (real bound) and whether any wide config violates it.
+================================================================================
