@@ -1,0 +1,21 @@
+
+==========================================================================
+  (A) all 8 circulant tournaments on Z_7  (THM-126 maximizer set)
+==========================================================================
+  Z7 S=[4, 5, 6]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+  Z7 S=[1, 4, 5]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+  Z7 S=[2, 4, 6]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+  Z7 S=[1, 2, 4]         |Aut|=    21  vO=1 arcO=1  VT=Y ArcTrans=Y SelfConv=Y  H=189  det(I+S)=512
+  Z7 S=[3, 5, 6]         |Aut|=    21  vO=1 arcO=1  VT=Y ArcTrans=Y SelfConv=Y  H=189  det(I+S)=512
+  Z7 S=[1, 3, 5]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+  Z7 S=[2, 3, 6]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+  Z7 S=[1, 2, 3]         |Aut|=     7  vO=1 arcO=3  VT=Y ArcTrans=n SelfConv=Y  H=175  det(I+S)=64
+
+  H-max among Z_7 circulants = 189
+    H-MAX attainer: S=[1, 2, 4]  ArcTrans=True  SelfConv=True
+    H-MAX attainer: S=[3, 5, 6]  ArcTrans=True  SelfConv=True
+
+  >> Among Z_7 circulants: is ARC-TRANSITIVE <=> H-MAX?
+     arc-transitive set = [(1, 2, 4), (3, 5, 6)]
+     H-max set          = [(1, 2, 4), (3, 5, 6)]
+     EQUAL? True
