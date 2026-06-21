@@ -1,0 +1,96 @@
+HYP-2790/S76 period-max vs Boolean/type bridge
+topn_by_plat=12; period_limit=0 (coordinate-only overlay)
+features: Phi_low=21*T1+57*T2sep+2*T2adj on bounded base B
+caps: canonical k10=55/91; strict comparison also reports k10=4/7
+exact period maxima are delegated to S6/S7 scripts
+
+================================================================================================
+scanning k=8
+k=8: AP base=(0, 1, 2, 3, 4, 5, 6); AP Plat=289/1470; AP Phi_low=6211/420; AP q0=31/210
+  candidates=16 checked=0 skipped_large_period=16
+  checked rows by strict/canonical pressure:
+  skipped rows: Boolean/type coordinates without exact period-max
+    B=(0, 1, 2, 3, 4, 5, 6)              P=420     Plat=0.196599 mc=0.184864 ms=0.184864 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=           0 q0_gap=         0 ap_type=True  dil_ap=True
+    B=(0, 2, 4, 6, 8, 10, 12)            P=840     Plat=0.196599 mc=0.184864 ms=0.184864 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=           0 q0_gap=         0 ap_type=True  dil_ap=True
+    B=(0, 2, 3, 4, 5, 6, 8)              P=840     Plat=0.163435 mc=0.218027 ms=0.218027 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=      157/42 q0_gap=      1/40 ap_type=False dil_ap=False
+    B=(0, 2, 4, 5, 6, 8, 10)             P=840     Plat=0.143537 mc=0.237925 ms=0.237925 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    1321/210 q0_gap=    13/280 ap_type=False dil_ap=False
+    B=(0, 1, 3, 4, 5, 6, 9)              P=1260    Plat=0.138322 mc=0.243141 ms=0.243141 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    1793/420 q0_gap=      2/45 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 6, 12)             P=84      Plat=0.137755 mc=0.243707 ms=0.243707 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=     453/140 q0_gap=    11/210 ap_type=False dil_ap=False
+    B=(0, 2, 3, 4, 6, 8, 12)             P=168     Plat=0.136054 mc=0.245408 ms=0.245408 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    2029/420 q0_gap=     7/120 ap_type=False dil_ap=False
+    B=(0, 1, 2, 4, 5, 6, 10)             P=420     Plat=0.134354 mc=0.247109 ms=0.247109 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    -283/420 q0_gap=    11/210 ap_type=False dil_ap=False
+    B=(0, 1, 4, 5, 6, 9, 10)             P=1260    Plat=0.128571 mc=0.252891 ms=0.252891 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=     167/180 q0_gap=   67/1260 ap_type=False dil_ap=False
+    B=(0, 2, 3, 5, 6, 8, 11)             P=9240    Plat=0.127458 mc=0.254004 ms=0.254004 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  -4153/3080 q0_gap=  173/3080 ap_type=False dil_ap=False
+    B=(0, 3, 4, 5, 6, 8, 9)              P=2520    Plat=0.126984 mc=0.254478 ms=0.254478 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=   4393/2520 q0_gap=  127/2520 ap_type=False dil_ap=False
+    B=(0, 3, 5, 6, 8, 9, 11)             P=27720   Plat=0.126397 mc=0.255066 ms=0.255066 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap= 11203/13860 q0_gap=1487/27720 ap_type=False dil_ap=False
+    B=(0, 8, 9, 10, 11, 12, 13)          P=360360  Plat=0.116185 mc=0.265278 ms=0.265278 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=1110077/360360 q0_gap=2733/40040 ap_type=False dil_ap=False
+    B=(0, 1, 2, 10, 11, 12, 13)          P=60060   Plat=0.111686 mc=0.269777 ms=0.269777 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=-33499/60060 q0_gap=4171/60060 ap_type=False dil_ap=False
+    B=(0, 1, 3, 5, 9, 11, 13)            P=45045   Plat=0.109665 mc=0.271798 ms=0.271798 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap= -7669/16380 q0_gap=6607/90090 ap_type=False dil_ap=False
+    B=(0, 4, 6, 8, 10, 12, 14)           P=5880    Plat=0.103984 mc=0.277478 ms=0.277478 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=     493/294 q0_gap=      5/49 ap_type=False dil_ap=False
+  corr(nonAP checked ratio, phi_gap)=None
+  corr(nonAP checked ratio, q0_gap)=None
+
+================================================================================================
+scanning k=9
+k=9: AP base=(0, 1, 2, 3, 4, 5, 6, 7); AP Plat=621/1715; AP Phi_low=5503/490; AP q0=481/1470
+  candidates=15 checked=0 skipped_large_period=15
+  checked rows by strict/canonical pressure:
+  skipped rows: Boolean/type coordinates without exact period-max
+    B=(0, 1, 2, 3, 4, 5, 6, 7)           P=2940    Plat=0.362099 mc=0.132157 ms=0.132157 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=           0 q0_gap=         0 ap_type=True  dil_ap=True
+    B=(0, 2, 4, 6, 8, 10, 12, 14)        P=5880    Plat=0.362099 mc=0.132157 ms=0.132157 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=           0 q0_gap=         0 ap_type=True  dil_ap=True
+    B=(0, 2, 3, 4, 5, 6, 7, 8)           P=5880    Plat=0.311565 mc=0.182691 ms=0.182691 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=       23/12 q0_gap=      3/56 ap_type=False dil_ap=False
+    B=(0, 2, 4, 6, 7, 8, 10, 12)         P=5880    Plat=0.299320 mc=0.194936 ms=0.194936 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  12371/2940 q0_gap=      1/14 ap_type=False dil_ap=False
+    B=(0, 1, 3, 4, 5, 6, 7, 9)           P=8820    Plat=0.280337 mc=0.213919 ms=0.213919 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  53563/8820 q0_gap=    53/588 ap_type=False dil_ap=False
+    B=(0, 1, 3, 5, 7, 9, 11, 13)         P=315315  Plat=0.275214 mc=0.219042 ms=0.219042 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap= 39727/16170 q0_gap=  731/8190 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 5, 6, 14)          P=2940    Plat=0.275024 mc=0.219231 ms=0.219231 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=   8279/2940 q0_gap=    93/980 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 5, 6, 8)           P=840     Plat=0.263265 mc=0.230990 ms=0.230990 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=   4693/1960 q0_gap=  233/1960 ap_type=False dil_ap=False
+    B=(0, 2, 4, 5, 6, 7, 8, 10)          P=5880    Plat=0.262998 mc=0.231258 ms=0.231258 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    5547/980 q0_gap=  661/5880 ap_type=False dil_ap=False
+    B=(0, 1, 2, 4, 5, 6, 7, 10)          P=2940    Plat=0.262828 mc=0.231428 ms=0.231428 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=       23/12 q0_gap=      3/28 ap_type=False dil_ap=False
+    B=(0, 3, 4, 5, 6, 7, 8, 9)           P=17640   Plat=0.262358 mc=0.231897 ms=0.231897 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  13291/2940 q0_gap=  319/2940 ap_type=False dil_ap=False
+    B=(0, 2, 4, 5, 6, 8, 10, 12)         P=840     Plat=0.254082 mc=0.240174 ms=0.240174 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  13721/2940 q0_gap=  151/1176 ap_type=False dil_ap=False
+    B=(0, 1, 3, 5, 6, 7, 9, 11)          P=48510   Plat=0.248638 mc=0.245618 ms=0.245618 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=401351/48510 q0_gap=5869/48510 ap_type=False dil_ap=False
+    B=(0, 6, 7, 8, 9, 10, 11, 12)        P=194040  Plat=0.235513 mc=0.258743 ms=0.258743 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=130463/32340 q0_gap=8573/64680 ap_type=False dil_ap=False
+    B=(0, 8, 9, 10, 11, 12, 13, 14)      P=2522520 Plat=0.233927 mc=0.260328 ms=0.260328 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=556247/105105 q0_gap=109643/840840 ap_type=False dil_ap=False
+  corr(nonAP checked ratio, phi_gap)=None
+  corr(nonAP checked ratio, q0_gap)=None
+
+================================================================================================
+scanning k=10
+k=10: AP base=(0, 1, 2, 3, 4, 5, 6, 7, 8); AP Plat=1229/2744; AP Phi_low=17657/1960; AP q0=2447/5880
+  candidates=8 checked=0 skipped_large_period=8
+  checked rows by strict/canonical pressure:
+  skipped rows: Boolean/type coordinates without exact period-max
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8)        P=5880    Plat=0.447886 mc=0.156509 ms=0.123542 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=           0 q0_gap=         0 ap_type=True  dil_ap=True
+    B=(0, 2, 4, 6, 7, 8, 10, 12, 14)     P=5880    Plat=0.438387 mc=0.166009 ms=0.133042 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    2971/980 q0_gap=   71/5880 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9)        P=8820    Plat=0.438209 mc=0.166187 ms=0.133220 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  10867/5880 q0_gap=   17/1176 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 10)       P=2940    Plat=0.419825 mc=0.184571 ms=0.151603 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=  12253/5880 q0_gap=   69/1960 ap_type=False dil_ap=False
+    B=(0, 2, 3, 4, 6, 8, 10, 12, 14)     P=5880    Plat=0.409742 mc=0.194653 ms=0.161686 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=   2365/1176 q0_gap=  127/2940 ap_type=False dil_ap=False
+    B=(0, 2, 4, 6, 8, 10, 11, 12, 14)    P=64680   Plat=0.396866 mc=0.207530 ms=0.174563 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=157279/64680 q0_gap= 947/16170 ap_type=False dil_ap=False
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 13)       P=38220   Plat=0.396845 mc=0.207550 ms=0.174583 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=188017/76440 q0_gap=1493/25480 ap_type=False dil_ap=False
+    B=(0, 2, 4, 6, 8, 10, 12, 13, 14)    P=76440   Plat=0.387828 mc=0.216568 ms=0.183601 pm=        NA w=None    ratioC=       NA ratioS=       NA phi_gap=    2329/840 q0_gap=  209/3185 ap_type=False dil_ap=False
+  corr(nonAP checked ratio, phi_gap)=None
+  corr(nonAP checked ratio, q0_gap)=None
+
+================================================================================================
+Synthesis
+- This is a coordinate overlay.  Exact period maxima remain in the S6/S7
+  period-max scripts and are not recomputed here.
+- AP/dilation rows are zero-gap orbit labels and still explain the largest
+  pressure rows that S6/S7 already close.
+- global non-AP frontier min Phi_low gap = -4153/3080
+- global non-AP frontier min q0 gap = 71/5880
+- k=8: min Phi_low gap=-4153/3080; min q0 gap=1/40
+- k=9: min Phi_low gap=23/12; min q0 gap=3/56
+- k=10: min Phi_low gap=10867/5880; min q0 gap=71/5880
+- Therefore the naive transfer of HYP-2791's three-term Phi_low cut to the
+  one-far base ledger is false at k=8.  The safer bridge is AP/dilation
+  filtering plus q0/cover slack on bases, with Phi_low reserved for final-row
+  Boolean laws or for a size-shifted k>=9 subledger.
+- k=10 cap normalization must be kept explicit: 4/7 strict floor is harder
+  than the canonical cap 55/91 used by the final LRC cap ledger.
+
+Tournament Analysis over proof lenses
+observable=(preserves period predicate, preserves missed-shape, tractability,
+            compatibility with THM-563/HYP-2788/S21, formalizability)
+wins={'periodmax_direct_scan': 6, 'ap_dilation_filter': 5, 'skipped_period_audit': 3, 'q0_slack': 4, 'boolean_low_depth_slack': 2, 'cap_normalization_guard': 1, 'raw_plateau_margin': 0}
+directed_3cycles=0; Hamiltonian_paths=1
+pressure order=['periodmax_direct_scan', 'ap_dilation_filter', 'q0_slack', 'skipped_period_audit', 'boolean_low_depth_slack', 'cap_normalization_guard', 'raw_plateau_margin']

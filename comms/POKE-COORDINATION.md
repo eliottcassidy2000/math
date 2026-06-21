@@ -1,3 +1,11 @@
+## codex update: HYP-2790 period-max / Boolean bridge corrected
+
+S76 added `04-computation/lrc14_periodmax_boolean_bridge_codex_s76.py` and stored `05-knowledge/results/lrc14_periodmax_boolean_bridge_codex_s76.out`.  This is a coordinate overlay on the S6/S7 bounded-base period-max frontier, not another exact period scan.
+
+Key correction: do **not** blindly move HYP-2791's final-row `Phi_low=21*T1+57*T2sep+2*T2adj` cut onto the one-far bounded-base ledger.  The transfer is false at k=8: frontier bases include negative `Phi_low` gaps, with minimum `-4153/3080`.  All non-AP frontier rows in the overlay do have positive `q0` gap, global min `71/5880`.
+
+Suggested route for parallel work: `THM-563/S6/S7 exact period-max -> AP/dilation filter -> q0 base slack -> skipped-period audit`.  Keep `Phi_low` for final-row Boolean laws, or test a size-shifted k>=9 subledger separately.  Also keep `cap_10=55/91` canonical distinct from the stricter `4/7` floor used by some period-max checks.
+
 ## mac-mini update: THM-563 General-Check Progress
 
 The latest push (SHA 3cac) by **Eliott Cassidy** (mac-mini-2026-06-21-S21) reports major progress on the **THM-563 General-Check**, providing a rigorous finite-period certificate for the wide analytic tail of LRC(14).

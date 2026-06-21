@@ -1,7 +1,7 @@
 ---
 id: HYP-2790
-title: THM-563 bounded-base period maxima should be explainable by Boolean/type cut slack
-status: TESTED; Boolean/type scalar bridge weak, endpoint-period coordinate survives
+title: THM-563 bounded-base period maxima are not explained by scalar Boolean/type slack; endpoint and q0 coordinates survive
+status: TESTED/PARTIALLY-TRUE; scalar bridge weak, Phi_low base-transfer refuted at k=8
 source: codex-2026-06-21
 depends_on:
   - THM-563
@@ -35,6 +35,18 @@ periodmax(B) < 15 * (cap_k - Plat(B)).
 This hypothesis tests whether the same Boolean/type slack discovered in
 `HYP-2791` and the containment-cut refinements of `HYP-2752` explain why the
 dangerous bounded bases satisfy the period-max inequality.
+
+The first S76 coordinate overlay gives a correction: the three-term
+`Phi_low` cut does **not** transfer naively to the one-far bounded-base ledger.
+At base size `7` (final row `k=8`) some non-AP frontier bases have negative
+`Phi_low-AP` gap.  The safer bridge is:
+
+```text
+period-max direct scan / THM-563
+  -> AP and dilation orbit filter
+  -> q0 cover-atom slack on bounded bases
+  -> Phi_low only on final-row Boolean laws, or on a size-shifted k>=9 ledger
+```
 
 ## Planned Finite Ledger
 
@@ -119,6 +131,72 @@ where `C(B)` is controlled by the signed endpoint orbit, arc pairing, or
 reciprocity data and then compare `C(B)` with `15*(cap_k-Plat(B))`.  The
 Boolean/type quotient remains useful for bounded plateau/cap certification; it
 is not the natural carrier for the single-far oscillatory numerator.
+
+## S76 Coordinate Overlay
+
+Script:
+
+```text
+04-computation/lrc14_periodmax_boolean_bridge_codex_s76.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_periodmax_boolean_bridge_codex_s76.out
+```
+
+The script is deliberately a coordinate overlay.  Exact period maxima are
+delegated to the incoming S6/S7 period-max scripts, especially
+`lrc_periodmax_general_macmini_0621s6.py`,
+`lrc_periodmax_dangerous_scan_macmini_0621s7.py`, and
+`lrc_periodmax_skipped_audit_thread5.py`.  The overlay attaches `Plat(B)`,
+canonical and strict margins, endpoint period `P=7*lcm(B)`, AP/dilation type,
+`q0`, and `Phi_low` coordinates to the published frontier rows.
+
+Findings:
+
+```text
+global non-AP frontier min Phi_low gap = -4153/3080
+global non-AP frontier min q0 gap      = 71/5880
+k=8  min Phi_low gap=-4153/3080; min q0 gap=1/40
+k=9  min Phi_low gap=23/12;      min q0 gap=3/56
+k=10 min Phi_low gap=10867/5880; min q0 gap=71/5880
+```
+
+Thus the naive statement
+
+```text
+non-AP bounded base => Phi_low(B) > Phi_low(AP_base)
+```
+
+is false at the `k=8` base level.  Concrete negative witnesses in the S6/S21
+frontier include:
+
+```text
+B=(0,1,2,4,5,6,10):       Phi_low gap = -283/420
+B=(0,2,3,5,6,8,11):       Phi_low gap = -4153/3080
+B=(0,1,2,10,11,12,13):    Phi_low gap = -33499/60060
+B=(0,1,3,5,9,11,13):      Phi_low gap = -7669/16380
+```
+
+All non-AP frontier rows in the overlay have positive `q0` gap, including the
+S6 broad-scan worst checked row
+
+```text
+B=(0,4,6,8,10,12,14): Phi_low gap=493/294, q0 gap=5/49.
+```
+
+The updated proof interpretation is that `q0`/cover slack is a better
+base-ledger coordinate, while HYP-2791's `Phi_low` cut remains a final-row
+Boolean law or possibly a size-shifted `k>=9` subledger.  This is a useful
+negative result: it prevents using the finite k=8 final-row certificate at the
+wrong projection level.
+
+The overlay also records the cap-normalization guardrail: the canonical final
+LRC cap has `cap_10=55/91`, while older period-max scripts sometimes report a
+strict comparison against the proved floor `4/7`.  The latter is harder and
+should not be silently conflated with the final cap ledger.
 
 ## Why This Is Not A Duplicate
 
