@@ -57,3 +57,30 @@ For generated words, the usable witnesses are low-factorial leakage and
 `B4=U4`, plus relation-support handoff.  For full rows, the depth-law
 convex-order program can still pursue even Krawtchouk extremality.  These are
 two layers of the proof stack, not competing explanations.
+
+## Pull Integration: Relation Code Versus Generated Compatibility
+
+The later KPS HYP-2724 pull gives the right name for the relation-support
+handoff: view `Lambda(E)` as a relation code and measure low-support packets by
+`dmin,A2,A3,A4`, with MDS/arc sets as easy general-position cases and AP-like
+sets as anti-MDS hard cases.
+
+I tested whether this relation-code lens can replace the generated-word
+compatibility filter.  It cannot.  The bridge scout
+`lrc14_miss_zeta_relation_code_bridge_codex_s71.py` reuses the exact `318`
+generated-context tests and attaches relation spectra to the `72` unique
+sparse-tail challenger shapes.  Globally the relation spectra correlate with
+q0/U4/B2 barriers, but this is partly a shape-size effect.  Within fixed size
+the signs are mixed, and the size-3 death-chain frontier has the worst q0/U4
+witnesses while the simple `|coef|<=2` relation spectrum is flat.
+
+So the proof order should be:
+
+1. generated miss-zeta singleton/death-chain compatibility;
+2. coherent context merging;
+3. relation-code `A3/dmin/MDS` finite-packet classification;
+4. q0/Vitali atom boundary evaluation.
+
+The useful theorem is not `A3 implies compatibility`.  It is that
+compatibility reduces the remaining packets to a low-support relation ledger
+whose finite leading cases are organized by `A3,dmin,MDS`.

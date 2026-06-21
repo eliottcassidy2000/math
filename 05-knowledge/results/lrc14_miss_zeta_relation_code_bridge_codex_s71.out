@@ -1,0 +1,109 @@
+HYP-2725/S71 miss-zeta compatibility / relation-code bridge
+Exact generated-word metrics from HYP-2722; relation spectra from HYP-2724.
+
+  loading coordinate frontier for size=3...
+    size=3 context=[4]: added=56 cumulative=56
+    size=3 context=[3+1]: added=56 cumulative=112
+    size=3 context=[2+2]: added=56 cumulative=168
+    size=3 context=[2+1+1]: added=56 cumulative=224
+    size=3 context=[1+1+1+1]: added=56 cumulative=280
+  loading coordinate frontier for size=4...
+    size=4 context=[3]: added=7 cumulative=287
+    size=4 context=[2+1]: added=7 cumulative=294
+    size=4 context=[1+1+1]: added=7 cumulative=301
+  loading coordinate frontier for size=5...
+    size=5 context=[2]: added=8 cumulative=309
+    size=5 context=[1+1]: added=8 cumulative=317
+  loading coordinate frontier for size=6...
+    size=6 context=[1]: added=1 cumulative=318
+
+AGGREGATE: tests=318 unique_shapes=72
+
+GLOBAL PEARSON (unique shapes; size-confounded)
+  A2    min_q0=+0.732 min_w12=-0.055 min_u4=+0.855 min_b2=+0.888 min_tax=+0.008 min_d1=-0.062
+  A3    min_q0=+0.830 min_w12=-0.094 min_u4=+0.885 min_b2=+0.904 min_tax=-0.034 min_d1=-0.088
+  A4    min_q0=+0.816 min_w12=-0.052 min_u4=+0.834 min_b2=+0.794 min_tax=-0.032 min_d1=-0.057
+  dmin  min_q0=-0.778 min_w12=+0.449 min_u4=-0.718 min_b2=-0.800 min_tax=+0.239 min_d1=+0.290
+  dA3   min_q0=+0.092 min_w12=-0.223 min_u4=-0.487 min_b2=-0.411 min_tax=+0.051 min_d1=+0.141
+  dA4   min_q0=+0.867 min_w12=-0.234 min_u4=+0.693 min_b2=+0.782 min_tax=+0.089 min_d1=+0.049
+
+PER-SIZE PEARSON (unique shapes)
+
+size=3 n=56
+
+
+size=4 n=7
+
+  A2    min_q0=-0.427 min_w12=+0.554 min_u4=+0.489 min_b2=+0.669 min_tax=-0.586 min_d1=-0.914
+  A3    min_q0=-0.492 min_w12=+0.568 min_u4=+0.455 min_b2=+0.705 min_tax=-0.591 min_d1=-0.945
+  A4    min_q0=-0.258 min_w12=-0.343 min_u4=-0.656 min_b2=-0.398 min_tax=+0.394 min_d1=+0.378
+  dmin  min_q0=+0.294 min_w12=-0.482 min_u4=-0.649 min_b2=-0.715 min_tax=+0.776 min_d1=+0.978
+  dA3   min_q0=+0.492 min_w12=-0.568 min_u4=-0.455 min_b2=-0.705 min_tax=+0.591 min_d1=+0.945
+  dA4   min_q0=+0.258 min_w12=+0.343 min_u4=+0.656 min_b2=+0.398 min_tax=-0.394 min_d1=-0.378
+
+size=5 n=8
+
+  A2    min_q0=+0.215 min_w12=+0.347 min_u4=+0.616 min_b2=+0.579 min_tax=+0.246 min_d1=+0.257
+  A3    min_q0=+0.039 min_w12=+0.160 min_u4=+0.592 min_b2=+0.523 min_tax=-0.010 min_d1=-0.006
+  A4    min_q0=-0.467 min_w12=-0.540 min_u4=-0.345 min_b2=-0.313 min_tax=-0.594 min_d1=-0.608
+  dmin  min_q0=-0.123 min_w12=-0.355 min_u4=-0.198 min_b2=-0.220 min_tax=-0.231 min_d1=-0.197
+  dA3   min_q0=-0.039 min_w12=-0.160 min_u4=-0.592 min_b2=-0.523 min_tax=+0.010 min_d1=+0.006
+  dA4   min_q0=+0.467 min_w12=+0.540 min_u4=+0.345 min_b2=+0.313 min_tax=+0.594 min_d1=+0.608
+
+size=6 n=1
+
+
+EXTREME SHAPE WITNESSES
+  smallest q0:
+    size=3 shape=(0, 1, 3) A2/A3/A4=0/0/0 dmin=99 dA3=4 dA4=0
+    q0=20/16807 (0.001189980) W12=2199/614 (3.581433225) U4/q0=2187/2005 (1.090773067) B2/q0=-533/280 (-1.903571429) tax=852/307 (2.775244300) d1=5599/1535 (3.647557003)
+  smallest W1+W2 leakage:
+    size=5 shape=(0, 1, 2, 4, 5) A2/A3/A4=2/12/22 dmin=2 dA3=3 dA4=13
+    q0=239/24010 (0.009954186) W12=144154/63487 (2.270606581) U4/q0=1639/1434 (1.142956764) B2/q0=1439/717 (2.006973501) tax=153035/63487 (2.410493487) d1=1206794/317435 (3.801704286)
+  smallest U4/q0:
+    size=3 shape=(0, 1, 3) A2/A3/A4=0/0/0 dmin=99 dA3=4 dA4=0
+    q0=20/16807 (0.001189980) W12=2199/614 (3.581433225) U4/q0=2187/2005 (1.090773067) B2/q0=-533/280 (-1.903571429) tax=852/307 (2.775244300) d1=5599/1535 (3.647557003)
+  smallest B2/q0:
+    size=4 shape=(0, 1, 3, 4) A2/A3/A4=0/2/10 dmin=3 dA3=4 dA4=0
+    q0=47/16807 (0.002796454) W12=21349/6739 (3.167977445) U4/q0=209/188 (1.111702128) B2/q0=-1135/282 (-4.024822695) tax=5567/1733 (3.212348529) d1=39916/8665 (4.606578188)
+  closest cheap r=1 direction:
+    size=5 shape=(0, 1, 2, 3, 5) A2/A3/A4=1/10/31 dmin=2 dA3=5 dA4=4
+    q0=199/24010 (0.008288213) W12=163599/61661 (2.653200564) U4/q0=69930/61661 (1.134104215) B2/q0=163599/61661 (2.653200564) tax=136551/61661 (2.214544039) d1=918112/308305 (2.977934189)
+
+TOURNAMENT ANALYSIS
+  vertices: sparse-tail challenger shapes, not runners or arcs
+  generated-risk edge: smaller (q0, W12, U4, cheap-r1 distance)
+  relation-proxy edge: smaller dmin, then larger A3, then larger A4
+  tie Hamiltonian path: lexicographic shape order
+  size=3: vertices=56 pairs=1540 proxy_flips=602
+    risk_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1, 41: 1, 42: 1, 43: 1, 44: 1, 45: 1, 46: 1, 47: 1, 48: 1, 49: 1, 50: 1, 51: 1, 52: 1, 53: 1, 54: 1, 55: 1}
+    relation_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1, 11: 1, 12: 1, 13: 1, 14: 1, 15: 1, 16: 1, 17: 1, 18: 1, 19: 1, 20: 1, 21: 1, 22: 1, 23: 1, 24: 1, 25: 1, 26: 1, 27: 1, 28: 1, 29: 1, 30: 1, 31: 1, 32: 1, 33: 1, 34: 1, 35: 1, 36: 1, 37: 1, 38: 1, 39: 1, 40: 1, 41: 1, 42: 1, 43: 1, 44: 1, 45: 1, 46: 1, 47: 1, 48: 1, 49: 1, 50: 1, 51: 1, 52: 1, 53: 1, 54: 1, 55: 1}
+    risk_directed_3cycles=0
+    risk path head: (0, 1, 3) > (0, 2, 3) > (0, 1, 4) > (0, 3, 4) > (0, 1, 5) > (0, 4, 5) > (0, 2, 5) > (0, 3, 5)
+    relation path head: (0, 1, 3) > (0, 1, 4) > (0, 1, 5) > (0, 1, 6) > (0, 1, 7) > (0, 1, 8) > (0, 1, 9) > (0, 1, 10)
+  size=4: vertices=7 pairs=21 proxy_flips=6
+    risk_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+    relation_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+    risk_directed_3cycles=0
+    risk path head: (0, 1, 2, 4) > (0, 2, 3, 4) > (0, 1, 3, 4) > (0, 2, 3, 5) > (0, 1, 3, 5) > (0, 1, 4, 5) > (0, 1, 2, 5)
+    relation path head: (0, 1, 2, 4) > (0, 2, 3, 4) > (0, 1, 2, 5) > (0, 1, 3, 4) > (0, 1, 3, 5) > (0, 1, 4, 5) > (0, 2, 3, 5)
+  size=5: vertices=8 pairs=28 proxy_flips=14
+    risk_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+    relation_score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+    risk_directed_3cycles=0
+    risk path head: (0, 1, 2, 3, 5) > (0, 2, 3, 4, 5) > (0, 1, 2, 4, 5) > (0, 1, 3, 4, 5) > (0, 1, 3, 4, 6) > (0, 1, 2, 4, 6) > (0, 1, 2, 3, 6) > (0, 1, 2, 5, 6)
+    relation path head: (0, 1, 2, 4, 6) > (0, 1, 2, 4, 5) > (0, 1, 2, 3, 6) > (0, 1, 2, 3, 5) > (0, 2, 3, 4, 5) > (0, 1, 2, 5, 6) > (0, 1, 3, 4, 6) > (0, 1, 3, 4, 5)
+
+SYNTHESIS
+  Relation-code features are real signal but not a replacement for
+  generated-word compatibility.  Globally A3/A4/dmin correlate strongly
+  with q0, U4, and B2, but that is partly a size effect.  Within fixed
+  shape size, the signs are mixed, and size=3 has the worst q0/U4
+  witnesses while the simple |coef|<=2 relation spectrum is flat.
+  Therefore the proof stack should stay sequential:
+    generated miss-zeta death-chain/context-merge compatibility first;
+    relation-code A3/MDS packet selection second;
+    factorial q0/Vitali atom boundary evaluation last.
+  The useful theorem target is not 'A3 implies compatibility'.  It is
+  'compatibility reduces surviving packets to a low-support relation
+  ledger whose leading finite cases are organized by A3/dmin/MDS'.
