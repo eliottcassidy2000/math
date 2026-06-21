@@ -1,0 +1,37 @@
+=== RAW CROSSING (claim a) ===
+n=4: C(n,4) = 1
+n=5: C(n,4) = 5
+n=6: C(n,4) = 15
+n=7: C(n,4) = 35
+n=8: C(n,4) = 70
+Guy optimal cr(K_n) n=4..8 = 0,1,3,9,18  (raw convex is strictly larger for n>=5) -- consistent
+
+=== TEST 1: P quadratic in tile bits ===
+n=5: 3rd-diff all zero = True ; some 2nd-diff nonzero = True ; counterexample=None
+n=6: 3rd-diff all zero = True ; some 2nd-diff nonzero = True ; counterexample=None
+
+=== TEST 2: P not score-determined ===
+n=5: same-score-different-P exists = True
+    score (0, 2, 2, 3, 3) -> P in [1, 3]
+    score (1, 1, 2, 3, 3) -> P in [1, 3, 5]
+    score (1, 2, 2, 2, 3) -> P in [1, 3, 5]
+    score (1, 1, 2, 2, 4) -> P in [1, 3]
+n=6: same-score-different-P exists = True
+    score (0, 1, 3, 3, 4, 4) -> P in [7, 8, 11]
+    score (0, 2, 2, 3, 4, 4) -> P in [4, 5, 6, 7, 9, 10, 12]
+    score (0, 2, 3, 3, 3, 4) -> P in [3, 4, 5, 6, 7, 8, 9, 10]
+    score (1, 1, 2, 3, 4, 4) -> P in [3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 15]
+    score (1, 1, 3, 3, 3, 4) -> P in [4, 5, 6, 7, 8, 9, 10, 11, 12]
+n=7 (sampled 20000): same-score-different-P exists = True; examples:
+    score (2, 3, 3, 3, 3, 3, 4) -> P in [11, 13, 15, 17, 19, 21, 23]
+    score (2, 2, 2, 3, 4, 4, 4) -> P in [9, 11, 13, 15, 17, 19, 21, 23, 25, 27]
+    score (1, 2, 3, 3, 4, 4, 4) -> P in [9, 11, 13, 15, 17, 19, 21, 23, 25, 27, 31]
+
+=== TEST 3&4: P vs c3 ===
+n=5: #distinct c3 = 6 ; #distinct (c3,P) = 11 ; P affine-in-c3 = False (False => P refines c3)
+n=6: #distinct c3 = 9 ; #distinct (c3,P) = 60 ; P affine-in-c3 = False (False => P refines c3)
+n=7 (sampled): #c3=15 #(c3,P)=129 affine=False
+
+=== ROAD COLORING (negative) ===
+n=4: every letter is involution/bijection on Q_F = True => permutation automaton => NO synchronizing word
+n=5: every letter is involution/bijection on Q_F = True => permutation automaton => NO synchronizing word

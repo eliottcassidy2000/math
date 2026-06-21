@@ -235,3 +235,17 @@ SUMMARY / HONEST STATUS
      Gibbs/free-energy family; its t->inf ground state is the c3-maximizer.
    * Whether the c3-ground-state coincides with the global H-maximizer: see data (this is the
      real test of "energy=c3, ground=H-max").
+
+============================================================================================
+PART B ADDENDUM (separate exact run, /tmp/n7check.py): n=7 Gibbs ground state vs H-max.
+============================================================================================
+  global maxH = 189 attained at c3 = 14
+  maxH at c3=14 (regular/Paley T_7) = 189
+  c3-max = 14   maxH there = 189
+  ground(E=-c3) == global H-max ?  True
+  => VERIFIED n=5,6,7: the Gibbs ground state of E=-c3 (the c3-maximizer class) attains the
+     global H-maximizer.  Consistent with THM-027 (max-c3 = regular) and THM-555 (H-max is
+     self-complementary/regular).  Caveat: H is NOT monotone in c3 (e.g. n=6 c3=5 -> maxH=27
+     exceeds c3=4 -> maxH=17 while c3=6 -> 37), so "energy = c3" controls only the EXTREME
+     (ground) state, not the full H-ordering -- the deg-4 c5/alpha_2 part (HYP-2707) governs
+     intermediate levels.  This is the score->OCF (Clifford->magic) wall in Gibbs language.

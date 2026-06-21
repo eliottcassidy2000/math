@@ -1,0 +1,4 @@
+=== P and c3 constancy within iso classes ===
+n=4: #iso classes=4 ; c3 constant per class=True ; P constant per class=False ; #classes with multi-valued P=1
+n=5: #iso classes=12 ; c3 constant per class=True ; P constant per class=False ; #classes with multi-valued P=7
+n=6: #iso classes=56 ; c3 constant per class=True ; P constant per class=False ; #classes with multi-valued P=50

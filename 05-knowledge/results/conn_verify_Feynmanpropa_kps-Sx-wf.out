@@ -1,0 +1,36 @@
+ADVERSARIAL VERIFY: Feynman-propagator/OCF connection (fresh code)
+======================================================================
+TEST 1: W(1/2)==H(T)==Redei Ham-path count (claim (1), THM-061)
+  n=3: F=1, all 2 tilings, W(1/2)=H failures=0
+  n=4: F=3, all 8 tilings, W(1/2)=H failures=0
+  n=5: F=6, all 64 tilings, W(1/2)=H failures=0
+  => VERIFIED
+
+TEST 2: W(i/2) direct path-sum == polar formula prefactor*A(-i) (claim (2))
+  n=3: prefactor=((-1+i)/2)^(n-1), exact-match failures=0
+  n=4: prefactor=((-1+i)/2)^(n-1), exact-match failures=0
+  n=5: prefactor=((-1+i)/2)^(n-1), exact-match failures=0
+  => VERIFIED
+
+TEST 3: W(i/2)=0 => H-maximizer? (THM-064(v)/claim about null)
+  n=3: maxH=3, #zeros=1, all-zeros-are-max=True, #maxtilings=1, all-max-vanish=True
+  n=5: maxH=15, #zeros=3, all-zeros-are-max=True, #maxtilings=8, all-max-vanish=False
+       e.g. maximizer bits=12 has W(i/2)=6+0i (nonzero)
+
+TEST 3b: circulant maximizers at n=9,11 -- does W(i/2) vanish? (GAP check)
+  DP-vs-brute fwd_coeffs n=5 bits=13 match: True
+  n=9 circ{1,2,3,5}: tournament=True, H=3357, W(i/2)=342+0i (via DP+polar)
+  n=11 Paley QR: tournament=True, H=95095, W(i/2)=-10010+0i (via DP+polar)
+  (THM-064 says n=9 maximizer W(i/2)=342, n=11 W(i/2)=-10010, NOT zero)
+
+TEST 4: W_{T^op}(i/2) vs W_T(i/2). Claim: ratio==1 exactly (DEGENERATE slit)
+  n=3: tilings checked=2, W_Top != W_T count=0
+  n=4: tilings checked=8, W_Top != W_T count=0
+  n=5: tilings checked=64, W_Top != W_T count=0
+  => W_Top==W_T exactly: VERIFIED (slit degenerate, naive double-slit REFUTED)
+
+PREDICTIVENESS AUDIT:
+  - W(1/2)=H : restatement of Redei/THM-061 (computes H). PROVED upstream.
+  - W(i/2)=0 <=> maximizer : EXACT only n=3,5,7; FAILS n>=9 (computes nothing new there).
+  - amp(P)=e^{iS}/2^{(n-1)/2}: an exact polar identity (re-derivation of THM-064(ii)), descriptive.
+  - double-slit T/T^op: ratio==1 => NO nontrivial second slit (naive picture REFUTED).

@@ -1,0 +1,73 @@
+======================================================================
+INDEPENDENT ADVERSARIAL VERIFICATION: clifford-magic connection
+======================================================================
+
+--- T1: c3 EXACT integer quadratic form (independent triple-cross-check) ---
+n=4 F=3: quadform-match=OK, triangle==scoreformula=OK; deg3-vanish=VERIFIED (270 trials)
+n=5 F=6: quadform-match=OK, triangle==scoreformula=OK; deg3-vanish=VERIFIED (1080 trials)
+n=6 F=10: quadform-match=OK, triangle==scoreformula=OK; deg3-vanish=VERIFIED (3000 trials)
+n=7 F=15: quadform-match=OK, triangle==scoreformula=OK; deg3-vanish=VERIFIED (3000 trials)
+n=8 F=21: skipped(F large); deg3-vanish=VERIFIED (3000 trials)
+
+--- T2: magic spectrum of H (independent H_dp, cross-checked vs H_perm) ---
+n=4 F=3: magic-frac=0=0.0000 (claim 0.0) VERIFIED; maxdeg(H)=2
+n=5 F=6: magic-frac=84/281=0.2989 (claim 0.2989) VERIFIED; maxdeg(H)=4
+n=6 F=10: magic-frac=1816/3561=0.5100 (claim 0.51) VERIFIED; maxdeg(H)=4
+n=7 F=15: magic-frac=31216/49173=0.6348 (claim 0.6348) VERIFIED; maxdeg(H)=6
+
+--- T3: imaginary Gauss sum G=sum_b i^{c3} and |G|^2 odd-part ---
+n=4: G=-4+2i  |G|^2=20=2^2*5 (claim odd=5) VERIFIED
+n=5: G=20-12i  |G|^2=544=2^5*17 (claim odd=17) VERIFIED
+n=6: G=-80-160i  |G|^2=32000=2^8*125 (claim odd=125) VERIFIED
+n=7: G=1280-192i  |G|^2=1675264=2^12*409 (claim odd=409) VERIFIED
+
+--- T4: PREDICTIVE? character-sum distribution of c3 from the quadratic form ---
+   (compare brute 2^F sum vs variable-elimination over the interaction graph)
+n=4 F=3: support 0..2 (3 vals); char-sum<->dist invertible: OK; interaction-edges=2/3 (dense => NO treewidth speedup)
+n=5 F=6: support 0..5 (6 vals); char-sum<->dist invertible: OK; interaction-edges=9/15 (dense => NO treewidth speedup)
+n=6 F=10: support 0..8 (9 vals); char-sum<->dist invertible: OK; interaction-edges=24/45 (dense => NO treewidth speedup)
+n=7 F=15: support 0..14 (15 vals); char-sum<->dist invertible: OK; interaction-edges=50/105 (dense => NO treewidth speedup)
+
+--- T5: naive 'regular = more local magic' (avg|d3 H|) -- expect REFUTED ---
+n=5: avg|d3 H| transitive=0.62  near-regular=0.72  H_reg=15  naive-holds(reg>=trans)
+n=6: avg|d3 H| transitive=1.88  near-regular=2.05  H_reg=41  naive-holds(reg>=trans)
+n=7: avg|d3 H| transitive=3.42  near-regular=3.20  H_reg=175  REFUTED(reg<trans)
+
+======================================================================
+VERDICT (filled by analysis in summary)
+======================================================================
+
+ADVERSARIAL VERDICT (kps-Sx-wf, independent reviewer):
+1. ALL claimed NUMBERS reproduce with fresh code:
+   - c3 quadratic form: VERIFIED, full 2^F n=4..7, with INDEPENDENT triangle-count
+     cross-check (c3_triangles==score_formula==quadform). deg3 vanishes. CONFIRMED.
+   - magic fractions 0, 0.2989, 0.5100, 0.6348 (n=4..7): VERIFIED. H_dp cross-checked
+     against H_perm (permutation enumeration) at n<=6 with zero mismatches. CONFIRMED.
+   - Gauss-sum odd parts 5,17,125,409: VERIFIED bit-for-bit. CONFIRMED.
+   - maxdeg(H): 2,4,4,6 = (longest odd cycle length) - 1 EXACTLY for n=4..7 (cleaner than
+     the 'n-1' phrasing; equals n-1 only at odd n). VERIFIED/PREDICTIVE.
+2. PREDICTIVE vs RELABELING:
+   - PREDICTIVE & SOUND: (a) c3 is an exact integer quadratic form Q(b); (b) the magic-
+     fraction monotone of H is a concretely COMPUTED tournament invariant (deg>=3 Fourier
+     mass), zero iff H pure-quadratic (n=4); (c) maxdeg(H)=L_odd-1 is a falsifiable relation.
+   - HOWEVER the c3-quadratic-form result is a ~2-line COROLLARY of canon (THM-554: c3=
+     C(n,3)-sum C(s_v,2) quadratic in scores; scores affine in bits). It CONFIRMS HYP-2707,
+     does not extend it. Honest: 'PROVED' is fair but it is not a new theorem.
+3. THE 'CLIFFORD = POLY-TIME / GAUSS-SUM TRACTABLE' CLAIM IS NOT DELIVERED (downgrade):
+   - T4 shows the quadratic form's interaction graph is DENSE (2,9,24,50 edges out of
+     3,15,45,105; ~half-dense, growing with F). No completing-the-square applies: this is
+     an integer quadratic form whose VALUE DISTRIBUTION is wanted (a count over Z), NOT a
+     finite-field quadratic character sum. There is NO demonstrated speedup over 2^F brute.
+   - So 'the c3 layer is the Clifford-tractable ceiling' is an ANALOGY, not an algorithm.
+     The acknowledged GAP (poly(F) char-sum never implemented) is REAL and the dense
+     interaction graph is concrete evidence it is not trivially achievable. DOWNGRADE this
+     sub-claim from 'tractable' to 'exact-quadratic-representation only'.
+4. REFUTED naive local-magic: CONFIRMED as refuted at n=7 (reg 3.20 < trans 3.42). At
+   n=5,6 my sample shows reg slightly ABOVE trans (noisy, sample-dependent) -- so even the
+   DIRECTION of the naive monotone is sampling-noise-level, reinforcing it is the WRONG
+   monotone. Agreement with original 'REFUTED' verdict.
+
+NET: The connection is a CORRECT and PARTIALLY PREDICTIVE re-framing (exact quadratic form
+for c3; computable global magic-fraction invariant for H; clean maxdeg=L_odd-1 law). Its
+headline algorithmic promise (Clifford=>poly-time Gauss-sum count beating the DP) is
+UNSUBSTANTIATED and the interaction graph is dense. Useful as STRUCTURE, not yet as SPEEDUP.
