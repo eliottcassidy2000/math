@@ -71,3 +71,26 @@ This IS the gK8 Delsarte dual (Lean-built); the remaining content is the achieva
 characterization (an SOS/LP certificate on (S1,..,S6) tight at consec). The moments S_r factor as a
 decorrelated main part + corrections, each closing single-far by THM-563 periodicity; the genuine-wide
 (doublet) corrections are the HYP-2798 direct bound. So the moment inequality is the clean unified target.
+
+## Lean addendum (codex-S79): exact moment/extreme-mass bridge is now machine-facing
+`TournamentH7.LRCFactorialAtom` now names the HYP-2823 bridge explicitly:
+
+- `extremeMass q = q0(q)+q6(q)`;
+- `LyK8_moment_form`: `L_yK8 = 10*S0 - 10*S1 + 10*S2 - 9*S3 + 6*S4`;
+- `LyK8_probability_moment_form`: the normalized `S0=1` target
+  `10 - 10*S1 + 10*S2 - 9*S3 + 6*S4`;
+- `LyK8_extremeMass_readout`: `L_yK8 = 10*(q0+q6)+q3`;
+- `LyK8_moment_extremeMass_identity`: the degree-4 moment polynomial is exactly
+  the same readout `10*(q0+q6)+q3`.
+
+The focused build `lake build TournamentH7.LRCFactorialAtom` succeeds and the
+stored audit output is `05-knowledge/results/lrc_factorial_atom_gk8_allrows_codex_s79.out`.
+This does not prove the global moment-region inequality; it removes the algebraic
+ambiguity around the target.
+
+Post-fetch connection to HYP-2828: the relation-depth dichotomy should be read as
+an exception taxonomy underneath this same degree-4 feasible-moment problem.  The
+S80 audit says audited positive `p0-Q` genuine-wide rows are depth-2/two-peel
+bounded, so if the global moment-region proof has resonant exceptions, those
+exceptions route to the generalized-doublet/R-tail lane; depth>=3 is the
+decorrelated middle-mass separator branch.

@@ -61,6 +61,10 @@ def tail45 (q : Atom) : Int :=
 def U4 (q : Atom) : Int :=
   q ⟨0, by decide⟩ + tail45 q
 
+/-- The HYP-2823 extreme-mass readout `q0+q6 = P(N in {0,6})`. -/
+def extremeMass (q : Atom) : Int :=
+  q0 q + q ⟨6, by decide⟩
+
 /-- Low leakage readout `W1+W2` used by HYP-2722/HYP-2726. -/
 def low12 (q : Atom) : Int :=
   moment q ⟨1, by decide⟩ + moment q ⟨2, by decide⟩
@@ -225,6 +229,32 @@ def LyK8 (q : Atom) : Int :=
   + (yK8 ⟨5, by decide⟩) * moment q ⟨5, by decide⟩
   + (yK8 ⟨6, by decide⟩) * moment q ⟨6, by decide⟩
 
+/-- HYP-2823 moment form of the `gK8` functional:
+`L_yK8 = 10*S0 - 10*S1 + 10*S2 - 9*S3 + 6*S4`, where
+`S_r = W_r(q) = E[choose(N,r)]`.  For probability atoms `S0=1`, this is the
+degree-4 inequality `10 - 10*S1 + 10*S2 - 9*S3 + 6*S4 <= 10*cap`. -/
+theorem LyK8_moment_form (q : Atom) :
+    LyK8 q =
+      10 * moment q ⟨0, by decide⟩
+        - 10 * moment q ⟨1, by decide⟩
+        + 10 * moment q ⟨2, by decide⟩
+        - 9 * moment q ⟨3, by decide⟩
+        + 6 * moment q ⟨4, by decide⟩ := by
+  simp [LyK8, yK8]
+  omega
+
+/-- Probability-normalized HYP-2823 moment form, with `S0=1`. -/
+theorem LyK8_probability_moment_form (q : Atom)
+    (h0 : moment q ⟨0, by decide⟩ = 1) :
+    LyK8 q =
+      10
+        - 10 * moment q ⟨1, by decide⟩
+        + 10 * moment q ⟨2, by decide⟩
+        - 9 * moment q ⟨3, by decide⟩
+        + 6 * moment q ⟨4, by decide⟩ := by
+  rw [LyK8_moment_form, h0]
+  omega
+
 /-- The dual readout `g(t) = sum_{r<=t} y_r * C(t,r)`; for the `k=8` dual it is the
 Krawtchouk-nonnegative vector `(10,0,0,1,0,0,10)` (HYP-2726a). -/
 def gK8 (t : Fin atomCount) : Int :=
@@ -252,6 +282,33 @@ theorem LyK8_readout (q : Atom) :
   simp only [LyK8, moment, sum7, atomCount, yK8, chooseInt, choose,
     Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd]
   omega
+
+/-- HYP-2823 extreme-mass readout:
+`L_yK8 = 10*(q0+q6)+q3`, so the active dual is dominated by the two endpoint atoms. -/
+theorem LyK8_extremeMass_readout (q : Atom) :
+    LyK8 q = 10 * extremeMass q + q ⟨3, by decide⟩ := by
+  rw [LyK8_readout]
+  unfold extremeMass q0
+  omega
+
+/-- Direct bridge between the HYP-2823 degree-4 moment polynomial and the extreme-mass
+readout `10*(q0+q6)+q3`. -/
+theorem LyK8_moment_extremeMass_identity (q : Atom) :
+    10 * moment q ⟨0, by decide⟩
+        - 10 * moment q ⟨1, by decide⟩
+        + 10 * moment q ⟨2, by decide⟩
+        - 9 * moment q ⟨3, by decide⟩
+        + 6 * moment q ⟨4, by decide⟩ =
+      10 * extremeMass q + q ⟨3, by decide⟩ := by
+  calc
+    10 * moment q ⟨0, by decide⟩
+        - 10 * moment q ⟨1, by decide⟩
+        + 10 * moment q ⟨2, by decide⟩
+        - 9 * moment q ⟨3, by decide⟩
+        + 6 * moment q ⟨4, by decide⟩ = LyK8 q := by
+          exact (LyK8_moment_form q).symm
+    _ = 10 * extremeMass q + q ⟨3, by decide⟩ :=
+          LyK8_extremeMass_readout q
 
 /-- **The per-shape Delsarte / moment-LP bound (THM-534, HYP-2726).**  For any
 nonnegative missed-count atom `q` (a genuine row distribution), the origin/cover atom
@@ -540,7 +597,11 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms cheapScaled_tail45
 #print axioms gK8_values
 #print axioms gK8_dominates
+#print axioms LyK8_moment_form
+#print axioms LyK8_probability_moment_form
 #print axioms LyK8_readout
+#print axioms LyK8_extremeMass_readout
+#print axioms LyK8_moment_extremeMass_identity
 #print axioms delsarte_bound_k8
 #print axioms LyK9_readout
 #print axioms delsarte_bound_k9

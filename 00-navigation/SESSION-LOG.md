@@ -1,3 +1,21 @@
+## codex-2026-06-22-S79 addendum -- HYP-2823 moment/extreme-mass bridge formalized after HYP-2828 pull
+
+After the first S79 checkpoint, pulled incoming HYP-2823/HYP-2828/S80 work and
+folded it into the Lean-facing gK8 ledger.  `TournamentH7.LRCFactorialAtom`
+now defines `extremeMass=q0+q6` and proves the HYP-2823 algebraic bridges:
+`LyK8_moment_form`, `LyK8_probability_moment_form`,
+`LyK8_extremeMass_readout`, and `LyK8_moment_extremeMass_identity`.  The last
+theorem states directly that the degree-4 factorial-moment polynomial
+`10*S0-10*S1+10*S2-9*S3+6*S4` is the same object as `10*(q0+q6)+q3`.
+Audit wrappers were added in `TournamentH7.Verify`, and the stored focused
+build output `lrc_factorial_atom_gk8_allrows_codex_s79.out` was refreshed.
+
+Integrated S80/HYP-2828 as signal: relation depth is an exception taxonomy for
+the same moment-region problem, not a rival scalar route.  If the global
+degree-4 inequality needs resonant exceptions, the audited positive `p0-Q`
+genuine-wide rows are depth-2/two-peel bounded and route to generalized
+doublet/R-tail; depth>=3 is the decorrelated middle-mass separator branch.
+
 ## kind-pasteur-2026-06-22-S29 (MAIN-LOOP) -- THM-527 last crux COLLAPSES via the WITNESS route: k<=7 PIGEONHOLE-ELEMENTARY, only k=8..13 (3-8x slack) remains; + LRC Lean components sorry-free (HYP-2823..2827)
 Dispatch: focus THM-527 (the last assumed LRC link) + formalize. Ran a 3-thread workflow (compactness / p0-connection / Lean-audit). After the sector route p0<=cap is closed, THM-527 (rho*(P,E)>0 => M>=1/14 PROVED; the floor rho*>0 OPEN) is the last non-finite link.
 - **HYP-2823 (the p0<->THM-527 reconciliation):** the closed p0<=cap gives rho* >= meas(G_P)-cap = 0 at the extremal P (ZERO-SLACK union bound, cap=min meas(G_P)). Containment rho* <= witness <= 1-p0; the cap inequality points the WRONG way. So p0<=cap is NECESSARY not SUFFICIENT; THM-527's strict floor is a SEPARATE crux. (Workflow Thread B independently confirmed: w_theta=maxgap-1/7 dictionary, routes PARALLEL.)

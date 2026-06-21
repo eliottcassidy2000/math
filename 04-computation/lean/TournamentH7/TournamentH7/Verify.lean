@@ -325,6 +325,47 @@ theorem lrc_factorial_LyK8_readout_audit (q : LonelyRunner.FactorialAtom.Atom) :
   LonelyRunner.FactorialAtom.LyK8_readout q
 #print axioms lrc_factorial_LyK8_readout_audit
 
+theorem lrc_factorial_LyK8_extremeMass_readout_audit
+    (q : LonelyRunner.FactorialAtom.Atom) :
+    LonelyRunner.FactorialAtom.LyK8 q =
+      10 * LonelyRunner.FactorialAtom.extremeMass q + q ⟨3, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK8_extremeMass_readout q
+#print axioms lrc_factorial_LyK8_extremeMass_readout_audit
+
+theorem lrc_factorial_LyK8_moment_form_audit
+    (q : LonelyRunner.FactorialAtom.Atom) :
+    LonelyRunner.FactorialAtom.LyK8 q =
+      10 * LonelyRunner.FactorialAtom.moment q ⟨0, by decide⟩
+        - 10 * LonelyRunner.FactorialAtom.moment q ⟨1, by decide⟩
+        + 10 * LonelyRunner.FactorialAtom.moment q ⟨2, by decide⟩
+        - 9 * LonelyRunner.FactorialAtom.moment q ⟨3, by decide⟩
+        + 6 * LonelyRunner.FactorialAtom.moment q ⟨4, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK8_moment_form q
+#print axioms lrc_factorial_LyK8_moment_form_audit
+
+theorem lrc_factorial_LyK8_probability_moment_form_audit
+    (q : LonelyRunner.FactorialAtom.Atom)
+    (h0 : LonelyRunner.FactorialAtom.moment q ⟨0, by decide⟩ = 1) :
+    LonelyRunner.FactorialAtom.LyK8 q =
+      10
+        - 10 * LonelyRunner.FactorialAtom.moment q ⟨1, by decide⟩
+        + 10 * LonelyRunner.FactorialAtom.moment q ⟨2, by decide⟩
+        - 9 * LonelyRunner.FactorialAtom.moment q ⟨3, by decide⟩
+        + 6 * LonelyRunner.FactorialAtom.moment q ⟨4, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK8_probability_moment_form q h0
+#print axioms lrc_factorial_LyK8_probability_moment_form_audit
+
+theorem lrc_factorial_LyK8_moment_extremeMass_identity_audit
+    (q : LonelyRunner.FactorialAtom.Atom) :
+    10 * LonelyRunner.FactorialAtom.moment q ⟨0, by decide⟩
+        - 10 * LonelyRunner.FactorialAtom.moment q ⟨1, by decide⟩
+        + 10 * LonelyRunner.FactorialAtom.moment q ⟨2, by decide⟩
+        - 9 * LonelyRunner.FactorialAtom.moment q ⟨3, by decide⟩
+        + 6 * LonelyRunner.FactorialAtom.moment q ⟨4, by decide⟩ =
+      10 * LonelyRunner.FactorialAtom.extremeMass q + q ⟨3, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK8_moment_extremeMass_identity q
+#print axioms lrc_factorial_LyK8_moment_extremeMass_identity_audit
+
 theorem lrc_factorial_delsarte_bound_k8_audit
     (q : LonelyRunner.FactorialAtom.Atom)
     (hq : ∀ t : Fin LonelyRunner.FactorialAtom.atomCount, 0 <= q t) :

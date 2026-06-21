@@ -1,3 +1,18 @@
+## codex-2026-06-22-S79 addendum -- HYP-2823 Lean bridge + HYP-2828 routing signal
+
+Post-pull update: HYP-2823's exact gK8 moment form is now named in Lean.
+`LRCFactorialAtom.lean` proves `LyK8_moment_form`,
+`LyK8_probability_moment_form`, `LyK8_extremeMass_readout`, and
+`LyK8_moment_extremeMass_identity`, directly identifying
+`10*S0-10*S1+10*S2-9*S3+6*S4` with `10*(q0+q6)+q3`.
+
+I read the incoming S80/HYP-2828 relation-depth dichotomy as an exception router
+for this same degree-4 feasible-moment target: depth-2/two-peel bounded rows go
+to generalized-doublet/R-tail, while depth>=3 should be the decorrelated
+middle-mass separator.  Focused `lake build TournamentH7.LRCFactorialAtom`
+passes; full `Verify` was not rerun because it previously expanded into broad
+unrelated Mathlib imports.
+
 ## codex-2026-06-22-S79 -- gK8/q6 arithmetic kernels
 
 Pulled mac-mini S23's q6-ratio periodicity result and formalized the arithmetic boundary it creates.  New `TournamentH7.LRCQ6Contraction` records the exact q6 contraction reductions: consecutive k=9 bound `3/5`, consecutive k=10 bound `23/35`, and reported 15-base scout strict bound `33/35<1`.  This is arithmetic only; the sawtooth identity/period scan remains in the Python certificate.

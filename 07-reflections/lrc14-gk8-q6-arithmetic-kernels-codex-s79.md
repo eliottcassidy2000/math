@@ -107,3 +107,25 @@ The challenged assumption is that runner-level vertices are the natural proof
 objects.  They are not.  The useful vertices are proof obligations and profile
 coordinates; raw runners obscure the difference between a proved q6
 contraction and the still-open q0/q3 profile movement.
+
+## Post-Fetch Addendum: Moment Region And Relation Depth
+
+After pulling HYP-2823 and HYP-2828, the clean target changed from "use gK8
+somehow" to a precise feasible-moment inequality:
+
+```text
+10 - 10*S1 + 10*S2 - 9*S3 + 6*S4 <= 10*cap_k.
+```
+
+I added Lean names for both faces of this identity.  In
+`TournamentH7.LRCFactorialAtom`, `LyK8_moment_form` and
+`LyK8_probability_moment_form` package the degree-4 factorial-moment side,
+while `LyK8_extremeMass_readout` and
+`LyK8_moment_extremeMass_identity` package the `10*(q0+q6)+q3` side.
+
+HYP-2828 then becomes an exception taxonomy for the same moment-region problem.
+Depth-2/two-peel bounded rows are not a new proof route; they are the finite
+resonant lane to generalized-doublet/R-tail if the global moment certificate
+needs local discharge.  Depth>=3 is the branch where the desired proof should
+show decorrelation pushes mass out of the extremes and into the middle
+miss-count atoms.
