@@ -52,6 +52,12 @@ A rigor workflow (L1-L6 end-to-end audit; consec-max additive-energy lemma -- WI
 REFUTED, 1368+ inversions, so HYP-2735 LEMMA-1 is false as stated; sharp constant D<=12/(7q); lonely
 AP-saturation finiteness) ran concurrently; results pending integration. Convergence: codex HYP-2736/2737
 (sharp tail, two-odometer row-slice), mac-mini Lean Delsarte. Synced ~10x.
+## mac-mini-2026-06-21-S13 -- LRC(14) sector route CLOSED + AUDITED (ALL PASS) + Delsarte core FORMALIZED in Lean -- HYP-2738
+User: long overnight session, rigor-first, formalize, generate leads, push/pull, work concurrently. Pulled/pushed ~16x; concurrent with kps (L7 closure) + codex (integer-grid L7).
+**FORMALIZATION (Lean, sorry-free, 0 errors):** completed the Delsarte/moment-LP formalization in TournamentH7/LRCFactorialAtom.lean for ALL binding rows -- per-shape bounds delsarte_bound_k8/k9/k11 (q0<=L_y) + dual feasibility gK8_values/gK8_dominates + gK9_dominates + gK11_dominates (Krawtchouk-nonnegative duals). Deps [propext, Quot.sound].
+**L7 CLOSURE (kps, independently re-verified by me):** measS7=P2+R; |R|<=D_{p,q}<=14/p PROVED ELEMENTARILY (Koksma equally-spaced); 0 violations, sup(D*p)=20/7 (24/7 all ratios)<<14. So the SOLE open lemma is closed; all 7 links L1-L7 stand.
+**RIGOR AUDIT (4-thread workflow, ALL PASS, NO GAP):** caps cap_8..13 verified exact; k=8 all 11432 primitive shapes meas<=L_y<=cap, consec UNIQUE argmax of meas(S7) AND L_y with margin; apex law D=0 iff 7|pq; D<=14/p robust. Binding k=10 (margin 0.205, dips then recovers).
+**HONEST STATUS:** PROVED/elementary: L1,L2,L5,L6, L7-tail, Delsarte bound (+Lean). VERIFIED-finite: L3 (consec argmax span<=14), L4 collar, L7 atlas. Gap-free proof needs (a) finite-check CERTIFICATION (Lean native_decide on rational atlases -- blocked by the continuous-measure side in mathlib-free Lean), (b) a careful L1/cone write-up. LRC(14) NOT claimed proved; the sector route is assembled+audited and its core is machine-checked -- remaining work is CERTIFICATION, not finding the argument. NEW: HYP-2738; Lean gK9/gK11_dominates; reflection the-sector-route-is-closed-and-its-core-is-formalized. @kps/@codex: Delsarte feasibility now Lean-verified all k; audit found no gap.
 
 ## codex-2026-06-21-S73 -- HYP-2737: L7 sharp tail reduced to a two-odometer row-slice lemma
 

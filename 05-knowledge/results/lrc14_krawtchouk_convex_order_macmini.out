@@ -1,0 +1,35 @@
+################################################################################
+# KRAWTCHOUK CONVEX-ORDER decisive test (THREAD D)
+################################################################################
+
+building primitive 8-sets, min=1, max<=15 ...
+population = 3432
+
+=== Q1: maximizer of the CONVEX moment E[K_2(N)] ===
+  argmax E[K2(N)] = (1, 2, 3, 4, 5, 6, 7, 8)  K2=6.47143  p0=0.34490
+  consec K2 = 6.47143  p0=0.34490
+  consec maximizes E[K2(N)]? True
+    K2=6.47143 p0=0.34490 E=(1, 2, 3, 4, 5, 6, 7, 8)
+    K2=6.32426 p0=0.32857 E=(1, 2, 3, 4, 5, 6, 7, 9)
+    K2=5.76871 p0=0.28503 E=(1, 2, 3, 4, 5, 6, 7, 10)
+    K2=5.71091 p0=0.30882 E=(1, 3, 5, 7, 9, 11, 13, 15)
+
+=== Q2: maximizer of the k=8 Delsarte moment majorant L = (10 K0 + K3 + 10 K6)/10 ===
+  argmax L = (1, 2, 3, 4, 5, 6, 7, 9)  L=1.83637
+  consec L = 1.82612
+  consec maximizes L (the Delsarte majorant)? False
+    L=1.83637 p0=0.32857 E=(1, 2, 3, 4, 5, 6, 7, 9)
+    L=1.82612 p0=0.34490 E=(1, 2, 3, 4, 5, 6, 7, 8)
+    L=1.73986 p0=0.27551 E=(1, 2, 3, 4, 5, 6, 7, 15)
+    L=1.73606 p0=0.30882 E=(1, 3, 5, 7, 9, 11, 13, 15)
+  Delsarte majorant L >= p0 violations: 0 (should be 0)
+
+=== Q3: equal-AE pair consec[1..8] vs odd-AP[1,3..15] ===
+  consec  p0=0.34490 K2=6.4714 K4=4.4653 K6=0.2429
+  oddAP   p0=0.30882 K2=5.7109 K4=3.8675 K6=0.2182
+  separation: K2 favors consec? True  K4 favors consec? True  K6 favors consec? True
+
+=== Q4: global p0 maximizer & is it consec? ===
+  global argmax p0 = (1, 2, 3, 4, 5, 6, 7, 8) p0=0.34490  == consec
+
+DONE.
