@@ -31,3 +31,16 @@ k=9: top-20 highest-Plat bounded bases, period-max(B) vs 15*margin(B):
   B=(0, 1, 3, 5, 7, 9, 11, 13) P=315315 (skipped, huge period)
   B=(0, 1, 2, 3, 4, 5, 6, 14)  Plat=0.2750 margin=0.2192 P=2940 period-max=1.1895 15m=3.2885 CLOSE
   B=(0, 1, 2, 3, 4, 5, 6, 8)   Plat=0.2633 margin=0.2310 P=840 period-max=1.1560 15m=3.4649 CLOSE
+  B=(0, 2, 4, 5, 6, 7, 8, 10)  Plat=0.2630 margin=0.2313 P=5880 period-max=1.7166 15m=3.4689 CLOSE
+  B=(0, 1, 2, 4, 5, 6, 7, 10)  Plat=0.2628 margin=0.2314 P=2940 period-max=1.0391 15m=3.4714 CLOSE
+  B=(0, 3, 4, 5, 6, 7, 8, 9)   Plat=0.2624 margin=0.2319 P=17640 period-max=1.5143 15m=3.4785 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10, 12) Plat=0.2541 margin=0.2402 P=840 period-max=1.7214 15m=3.6026 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 12)  Plat=0.2534 margin=0.2409 P=420 period-max=1.0071 15m=3.6128 CLOSE
+  B=(0, 4, 5, 6, 7, 8, 9, 10)  Plat=0.2532 margin=0.2410 P=17640 period-max=1.5612 15m=3.6154 CLOSE
+  B=(0, 2, 3, 4, 6, 8, 12, 14) Plat=0.2518 margin=0.2424 P=1176 period-max=1.5889 15m=3.6365 CLOSE
+  B=(0, 2, 3, 4, 6, 7, 8, 12)  Plat=0.2511 margin=0.2432 P=1176 period-max=1.1948 15m=3.6474 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10, 14) Plat=0.2493 margin=0.2450 P=5880 period-max=1.7520 15m=3.6744 CLOSE
+  B=(0, 1, 3, 5, 6, 7, 9, 11) P=48510 (skipped, huge period)
+  B=(0, 1, 2, 3, 4, 6, 7, 12)  Plat=0.2476 margin=0.2467 P=588 period-max=0.8188 15m=3.7003 CLOSE
+  B=(0, 2, 3, 4, 6, 8, 10, 12) Plat=0.2473 margin=0.2470 P=840 period-max=1.8452 15m=3.7047 CLOSE
+  => checked 18, fails=0, worst period-max/margin = 13.280 (need <15)
