@@ -1,0 +1,87 @@
+LRC14 Delsarte root/parity atlas (exact fractions)
+==============================================================================
+Root-polynomial Delsarte candidates:
+  degree 1: 1 candidates
+    roots=(6,); sum_g=7/2; nonzero_K=[0, 1]; g=['1', '5/6', '2/3', '1/2', '1/3', '1/6', '0']
+  degree 2: 3 candidates
+    roots=(3, 4); sum_g=7/3; nonzero_K=[0, 1, 2]; g=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+    roots=(4, 5); sum_g=21/10; nonzero_K=[0, 1, 2]; g=['1', '3/5', '3/10', '1/10', '0', '0', '1/10']
+    roots=(5, 6); sum_g=7/3; nonzero_K=[0, 1, 2]; g=['1', '2/3', '2/5', '1/5', '1/15', '0', '0']
+  degree 3: 3 candidates
+    roots=(2, 3, 6); sum_g=14/9; nonzero_K=[0, 1, 2, 3]; g=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+    roots=(3, 4, 6); sum_g=14/9; nonzero_K=[0, 1, 2, 3]; g=['1', '5/12', '1/9', '0', '0', '1/36', '0']
+    roots=(4, 5, 6); sum_g=7/4; nonzero_K=[0, 1, 2, 3]; g=['1', '1/2', '1/5', '1/20', '0', '0', '0']
+  degree 4: 5 candidates
+    roots=(1, 2, 4, 5); sum_g=21/10; nonzero_K=[0, 2, 4]; g=['1', '0', '0', '1/10', '0', '0', '1']
+    roots=(1, 2, 5, 6); sum_g=7/5; nonzero_K=[0, 3, 4]; g=['1', '0', '0', '1/5', '1/5', '0', '0']
+    roots=(2, 3, 4, 5); sum_g=7/5; nonzero_K=[0, 1, 2, 3, 4]; g=['1', '1/5', '0', '0', '0', '0', '1/5']
+    roots=(2, 3, 5, 6); sum_g=56/45; nonzero_K=[0, 1, 2, 3, 4]; g=['1', '2/9', '0', '0', '1/45', '0', '0']
+    roots=(3, 4, 5, 6); sum_g=7/5; nonzero_K=[0, 1, 2, 3, 4]; g=['1', '1/3', '1/15', '0', '0', '0', '0']
+  degree 5: 3 candidates
+    roots=(1, 2, 3, 4, 6); sum_g=7/6; nonzero_K=[0, 1, 2, 3, 4, 5]; g=['1', '0', '0', '0', '0', '1/6', '0']
+    roots=(1, 2, 4, 5, 6); sum_g=21/20; nonzero_K=[0, 1, 2, 3, 4, 5]; g=['1', '0', '0', '1/20', '0', '0', '0']
+    roots=(2, 3, 4, 5, 6); sum_g=7/6; nonzero_K=[0, 1, 2, 3, 4, 5]; g=['1', '1/6', '0', '0', '0', '0', '0']
+  degree 6: 1 candidates
+    roots=(1, 2, 3, 4, 5, 6); sum_g=1; nonzero_K=[0, 1, 2, 3, 4, 5, 6]; g=['1', '0', '0', '0', '0', '0', '0']
+
+==============================================================================
+AP/consecutive-row selection among Delsarte-feasible root certificates
+  Observable: lower L_y on the generated AP occupancy row is better.
+  This uses the actual LRC depth law p_t, not only abstract LP feasibility.
+
+k=8, degree=4, cap=2243/5880, AP p_t=['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+  best roots=(1, 2, 4, 5); known roots=(1, 2, 4, 5); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(1, 2, 4, 5)': 4, '(1, 2, 5, 6)': 3, '(2, 3, 4, 5)': 2, '(2, 3, 5, 6)': 1, '(3, 4, 5, 6)': 0}
+    roots=(1, 2, 4, 5); Ly=2633/7350; cap-Ly=683/29400; zeros=[1, 2, 4, 5]; positive_slack=[3, 6]
+    roots=(1, 2, 5, 6); Ly=268/735; cap-Ly=33/1960; zeros=[1, 2, 5, 6]; positive_slack=[3, 4]
+    roots=(2, 3, 4, 5); Ly=1397/3675; cap-Ly=13/9800; zeros=[2, 3, 4, 5]; positive_slack=[1, 6]
+    roots=(2, 3, 5, 6); Ly=1811/4725; cap-Ly=-481/264600; zeros=[2, 3, 5, 6]; positive_slack=[1, 4]
+    roots=(3, 4, 5, 6); Ly=926/2205; cap-Ly=-97/2520; zeros=[3, 4, 5, 6]; positive_slack=[1, 2]
+
+k=9, degree=3, cap=1979/4004, AP p_t=['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  best roots=(2, 3, 6); known roots=(2, 3, 6); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(2, 3, 6)': 2, '(3, 4, 6)': 1, '(4, 5, 6)': 0}
+    roots=(2, 3, 6); Ly=26083/52920; cap-Ly=10441/7567560; zeros=[2, 3, 6]; positive_slack=[1, 4, 5]
+    roots=(3, 4, 6); Ly=4633/8820; cap-Ly=-19567/630630; zeros=[3, 4, 6]; positive_slack=[1, 2, 5]
+    roots=(4, 5, 6); Ly=2056/3675; cap-Ly=-137057/2102100; zeros=[4, 5, 6]; positive_slack=[1, 2, 3]
+
+k=10, degree=3, cap=55/91, AP p_t=['8899/17640', '551/2940', '127/1176', '145/1764', '55/882', '5/126', '1/63']
+  best roots=(2, 3, 6); known roots=(2, 3, 6); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(2, 3, 6)': 2, '(3, 4, 6)': 1, '(4, 5, 6)': 0}
+    roots=(2, 3, 6); Ly=45253/79380; cap-Ly=35411/1031940; zeros=[2, 3, 6]; positive_slack=[1, 4, 5]
+    roots=(3, 4, 6); Ly=189137/317520; cap-Ly=36019/4127760; zeros=[3, 4, 6]; positive_slack=[1, 2, 5]
+    roots=(4, 5, 6); Ly=7337/11760; cap-Ly=-2981/152880; zeros=[4, 5, 6]; positive_slack=[1, 2, 3]
+
+k=11, degree=2, cap=66/91, AP p_t=['3419/5880', '1283/8820', '827/8820', '661/8820', '3/56', '23/630', '1/70']
+  best roots=(3, 4); known roots=(3, 4); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(3, 4)': 2, '(4, 5)': 1, '(5, 6)': 0}
+    roots=(3, 4); Ly=12049/17640; cap-Ly=9683/229320; zeros=[3, 4]; positive_slack=[1, 2, 5, 6]
+    roots=(4, 5); Ly=8893/12600; cap-Ly=3191/163800; zeros=[4, 5]; positive_slack=[1, 2, 3, 6]
+    roots=(5, 6); Ly=3887/5292; cap-Ly=-635/68796; zeros=[5, 6]; positive_slack=[1, 2, 3, 4]
+
+k=12, degree=2, cap=6/7, AP p_t=['121103/194040', '2039/16170', '3517/38808', '223/3465', '19/385', '5/154', '1/77']
+  best roots=(3, 4); known roots=(3, 4); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(3, 4)': 2, '(4, 5)': 1, '(5, 6)': 0}
+    roots=(3, 4); Ly=118781/166320; cap-Ly=3397/23760; zeros=[3, 4]; positive_slack=[1, 2, 5, 6]
+    roots=(4, 5); Ly=1425601/1940400; cap-Ly=237599/1940400; zeros=[4, 5]; positive_slack=[1, 2, 3, 6]
+    roots=(5, 6); Ly=9839/12936; cap-Ly=1249/12936; zeros=[5, 6]; positive_slack=[1, 2, 3, 4]
+
+k=13, degree=2, cap=1, AP p_t=['14573/21560', '1061/10780', '2119/27720', '431/6930', '69/1540', '1/33', '1/84']
+  best roots=(3, 4); known roots=(3, 4); known_best=True
+  tournament directed_3cycles=0; Hamiltonian_paths=1; wins={'(3, 4)': 2, '(4, 5)': 1, '(5, 6)': 0}
+    roots=(3, 4); Ly=871879/1164240; cap-Ly=292361/1164240; zeros=[3, 4]; positive_slack=[1, 2, 5, 6]
+    roots=(4, 5); Ly=297007/388080; cap-Ly=91073/388080; zeros=[4, 5]; positive_slack=[1, 2, 3, 6]
+    roots=(5, 6); Ly=764077/970200; cap-Ly=206123/970200; zeros=[5, 6]; positive_slack=[1, 2, 3, 4]
+
+==============================================================================
+Interpretation
+  Abstract Delsarte feasibility is not unique: degrees 2,3,4 have
+  3,3,5 feasible root-polynomial certificates respectively.
+  The generated AP occupancy law selects exactly the THM-534 dual
+  root set at every binding k=8..13.  Thus the missing lemma is not
+  a sparse Tanner lemma; it is a generated-depth selection lemma.
+  The parity chain selected by AP is
+    K8 roots  (1,2,4,5): even Krawtchouk support K0,K2,K4
+    K9 roots  (2,3,6):   mixed support K0,K1,K2,K3
+    K11 roots (3,4):     mixed support K0,K1,K2
+  This is the concrete puncture/extend target suggested by HYP-2740.

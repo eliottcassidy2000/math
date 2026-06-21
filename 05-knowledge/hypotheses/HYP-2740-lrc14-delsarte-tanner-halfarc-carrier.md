@@ -1,8 +1,8 @@
 ---
-id: HYP-2738
+id: HYP-2740
 title: LRC14 Delsarte duals have a Tanner carrier, but the useful invariant is half-arc sign rigidity
 status: OPEN guardrail and proof-order target
-source: codex-2026-06-21
+source: codex-2026-06-21; renumbered from a transient HYP-2738 collision after incoming mainline work
 depends_on:
   - THM-534
   - HYP-2726
@@ -15,7 +15,7 @@ related:
   - HYP-2205
 ---
 
-# HYP-2738: Delsarte/Tanner/Half-Arc Carrier
+# HYP-2740: Delsarte/Tanner/Half-Arc Carrier
 
 ## Claim
 
@@ -143,6 +143,54 @@ More concretely:
 3. Show that the sign-rigid binomial carrier is compatible with the
    HYP-2737 row word after quotienting by missed depth.
 4. Only after that, scalarize to the Delsarte cap.
+
+## Root-Parity Addendum
+
+Follow-up script:
+
+```text
+04-computation/lrc14_delsarte_root_parity_atlas_codex_20260621.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_delsarte_root_parity_atlas_codex_20260621.out
+```
+
+This tests the puncture/extend target directly.  For each degree `d`, enumerate
+all normalized root-polynomial certificates
+
+```text
+g_R(t) = prod_{a in R}(t-a) / prod_{a in R}(0-a),  R subset {1,...,6},
+```
+
+that satisfy both dominance `g_R(t) >= 1[t=0]` and Krawtchouk nonnegativity.
+Abstract Delsarte feasibility is not unique:
+
+```text
+degree 2: 3 feasible root certificates
+degree 3: 3 feasible root certificates
+degree 4: 5 feasible root certificates
+```
+
+The generated AP occupancy law then selects exactly the THM-534 roots:
+
+```text
+k=8:       degree 4 best roots = (1,2,4,5), known_best=True
+k=9,10:    degree 3 best roots = (2,3,6),   known_best=True
+k=11..13:  degree 2 best roots = (3,4),     known_best=True
+```
+
+Every candidate tournament under the observable "lower `L_y` on the generated
+AP row is better" is transitive, with one Hamiltonian path.  Thus the known
+Delsarte duals are not selected by abstract LP positivity alone; they are
+selected by the actual LRC/generated-depth occupancy distribution.  This is the
+precise finite form of the proof-order warning:
+
+```text
+generated word -> depth occupancy -> Delsarte parity certificate.
+```
 
 ## Tournament Analysis
 

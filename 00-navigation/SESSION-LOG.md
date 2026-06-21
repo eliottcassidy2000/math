@@ -57,7 +57,7 @@ CONVERGENCE: codex 5edbf66 (same add-energy tie-break, AP-offset angle; independ
  inversion -- corroborates REFUTED). A concurrent kps session produced THREAD C sharp closed-form
  D=S(p%7,q%7)/(7pq)<=12/(7q) (strengthens my audited 14/p) + THREAD D AP-saturation -- its files
  (lrc_q108_threadC_*, lrc14_tight_maxelt_*) ride along this commit. Synced ~5x.
-## codex-2026-06-21 -- HYP-2738: Delsarte/Tanner carrier audit and half-arc sign rigidity
+## codex-2026-06-21 -- HYP-2740: Delsarte/Tanner carrier audit and half-arc sign rigidity
 
 User supplied Delsarte/Tanner/unit-distance/Doyle-Holt/modular-form prompts as
 inspiration for the LRC14 push.  Pulled current mainline, read the latest
@@ -90,11 +90,35 @@ is Doyle-Holt-style half-arc rigidity: the undirected support has automorphisms,
 but no side-preserving automorphism orbit mixes positive and negative weighted
 edges.  This makes sign/orientation a real invariant of the Delsarte certificate.
 
-Created HYP-2738 and reflection
+Created HYP-2740 (renumbered after incoming mainline claimed HYP-2738/HYP-2739) and reflection
 `07-reflections/lrc14-delsarte-tanner-halfarc-carrier-codex-20260621.md`.
 Next sharp target: prove a Krawtchouk puncture/extend parity lemma explaining
 K8's even-only support versus K9/K11 mixed low-degree support, then splice that
 to HYP-2737's generated row-slice odometer proof target.
+
+Follow-up `04-computation/lrc14_delsarte_root_parity_atlas_codex_20260621.py`
+attacks that target directly.  It enumerates every normalized
+root-polynomial Delsarte certificate with roots in `{1,...,6}`.  Abstract
+feasibility is not unique:
+
+```text
+degree 2: 3 candidates
+degree 3: 3 candidates
+degree 4: 5 candidates
+```
+
+But evaluating `L_y` on the actual consecutive/AP occupancy law uniquely
+selects the THM-534 roots for every binding row:
+
+```text
+k=8       best roots (1,2,4,5), known_best=True
+k=9,10    best roots (2,3,6),   known_best=True
+k=11..13  best roots (3,4),     known_best=True
+```
+
+This is the precise parity-puncture formulation suggested by the external
+Delsarte/Tanner prompt: generated word -> depth occupancy -> Delsarte parity
+certificate, not sparse Tanner expansion.
 
 ## kind-pasteur-2026-06-21 (overnight, RIGOR + FORMALIZATION) -- L7 D<=14/p paper-proof + Lean apex-law formalization (sorry-free, standard axioms)
 
