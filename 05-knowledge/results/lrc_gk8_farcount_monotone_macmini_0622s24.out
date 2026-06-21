@@ -1,0 +1,18 @@
+--- k=8 (cap*10=3.8146) ---
+  r=0 far: max L_yK8=3.5823  @ (0, 1, 2, 3, 4, 5, 6, 7)
+  r=1 far: max L_yK8=1.7376  @ (0, 1, 2, 3, 5, 6, 7, 18)
+  r=2 far: max L_yK8=1.2133  @ (0, 5, 8, 10, 11, 13, 23, 28)
+  r=3 far: max L_yK8=1.2267  @ (0, 2, 3, 4, 13, 19, 22, 35)
+  monotone decreasing in r? False  (=> bounded r=0 is global max => concentration)
+--- k=9 (cap*10=4.9426) ---
+  r=0 far: max L_yK8=4.4340  @ (0, 1, 2, 3, 4, 5, 6, 7, 8)
+  r=1 far: max L_yK8=2.4724  @ (0, 1, 4, 5, 6, 7, 9, 10, 57)
+  r=2 far: max L_yK8=2.1891  @ (0, 1, 2, 4, 5, 6, 10, 28, 30)
+  r=3 far: max L_yK8=2.1643  @ (0, 2, 4, 8, 10, 12, 20, 56, 59)
+  monotone decreasing in r? True  (=> bounded r=0 is global max => concentration)
+--- k=10 (cap*10=5.7143) ---
+  r=0 far: max L_yK8=5.2857  @ (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  r=1 far: max L_yK8=4.6014  @ (0, 1, 2, 3, 4, 5, 6, 7, 8, 71)
+  r=2 far: max L_yK8=3.1022  @ (0, 2, 3, 4, 5, 6, 8, 12, 24, 29)
+  r=3 far: max L_yK8=2.7720  @ (0, 2, 3, 4, 5, 6, 8, 40, 46, 68)
+  monotone decreasing in r? True  (=> bounded r=0 is global max => concentration)

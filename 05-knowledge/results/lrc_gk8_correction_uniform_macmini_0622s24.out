@@ -1,0 +1,14 @@
+  k  Lyk8_dec    10cap room=10cap-dec  consec corr  max|corr| sample
+  8    0.4927   3.8146         3.3220       3.0896            3.0896
+      => correction <= room? consec corr=3.0896 vs room 3.3220: OK; max sample corr 3.0896 @ consec
+  9    0.7388   4.9426         4.2038       3.6953            3.6953
+      => correction <= room? consec corr=3.6953 vs room 4.2038: OK; max sample corr 3.6953 @ consec
+ 10    1.1505   5.7143         4.5637       4.1352            4.1352
+      => correction <= room? consec corr=4.1352 vs room 4.5637: OK; max sample corr 4.1352 @ consec
+ 11    1.6929   7.1429         5.4500       4.3395            4.3395
+      => correction <= room? consec corr=4.3395 vs room 5.4500: OK; max sample corr 4.3395 @ consec
+ 12    2.3216   8.5714         6.2498       4.1137            4.1137
+      => correction <= room? consec corr=4.1137 vs room 6.2498: OK; max sample corr 4.1137 @ consec
+
+If max correction over ALL configs < room (=10cap - Lyk8_dec) UNIFORMLY => gK8 concentration PROVED
+(decorrelated main is base-independent; correction = the relation-lattice/R-tail object).
