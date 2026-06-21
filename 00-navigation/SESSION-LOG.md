@@ -1,3 +1,29 @@
+## kind-pasteur-2026-06-21 -- the user's inspiration (Delsarte/Tanner/Doyle-Holt/modular-forms): the apex-prime discrepancy is QUASIMODULAR (E_2 on 3 legs), the converse is DOYLE-HOLT (F_21), Tanner/Delsarte = honest negatives
+
+User gave 4 leads (Delsarte LP, Tanner/weakly-regular, Doyle-Holt half-arc-transitive=arc-flip, algebraic
+modular forms / Belyi / Gamma(2)) to continue toward the LRC proof. Engaged each concretely; deep-dived the
+modular one myself, workflow on the rest. All converged with canon.
+
+MODULAR (HYP-2742/2743/2745, verified): the L7 sharp residue discrepancy generalizes -- D_P(p,q) is
+RESIDUE-ONLY mod P for EVERY prime (P=3..43), one closed form **G_P=[2 A B (P-A)(P-B) + 2 C (P-C)]/P**,
+A=||p||_P, B=||q||_P, C=||pq||_P (THREE Markoff-like legs). Each leg g(t)=2t(P-t)=-2P^2 B2(t/P)+P^2/3 =
+P*R_eff(0,t) on the cycle C_P => the discrepancy is a SUM OF CYCLE-GRAPH EFFECTIVE RESISTANCES = second-
+Bernoulli / QUASIMODULAR E_2 values. HONEST: NOT a holomorphic modular form -- it is the absolute/L1 E_2
+avatar; the signed Dedekind sum s(slope,P) is its Fourier-1 SHADOW (= MISTAKE-082 signed-vs-absolute, on the
+modular curve). Symmetry = Klein-4 <z->-z, z->1/z> PROVED all P>=5 (order-2 survives, order-3/QR washes out).
+CORRECTION to my HYP-2742: G_P is on the PAIR-space (Z/P)^2/<+-,swap>, NOT the slope (3rd leg ||pq|| is
+slope-invisible). The 3 legs <=> the TRIANGLE FOUNDATION's three sides.
+DOYLE-HOLT (HYP-2748, verified): half-arc-transitivity = "the converse Z_2 is not realized by Aut" (Tutte's
+invariant orientation = partial tournament, arc-orbits {D},{D^op}) = the tournament converse T<->T^op (my
+THM-549/550) one level up. Tournament analog = vertex-transitive NON-self-converse tournament, smallest F_21
+at n=21 (= canon THM-052). Circulant/Paley always SC (Chen-Quimpo) => why the SC spine = circulant locus.
+TANNER/DELSARTE (honest negatives): the relation-code Tanner graph gives NO expansion bound (girth=4 always,
+spectral gap WRONG sign, enumerator diverges); weight-distribution confirms AP=anti-MDS. consec-max is
+irreducibly aggregate (my HYP-2738). LEAD: the effective-resistance bound R_eff<=(P-1)/4 may sharpen the L7
+window below 14/p. META: the apex prime 7 runs through all of it; the structure is gorgeous and well-placed
+(quasimodular/hyperelliptic/effective-resistance/Markoff) but the proof bottleneck HYP-2602 stays aggregate.
+Reflection: the-apex-prime-discrepancy-is-quasimodular-and-the-converse-is-doyle-holt-kps.md. Synced ~8x.
+
 ## mac-mini-2026-06-21-S15 (opus, THREAD D) -- the relation-code MARGINAL-MATCHING LP IMPROVES (does NOT collapse) and PINS consec at LEVEL 2 for k<=10 (level 3 at k=11); distinct from the SoS lift S14 found to collapse
 Task (subagent, Thread D): build+solve the level-l relation-code hierarchy LP for measS7(E)=P(N=0); collapse-vs-improves; does a low level pin consec; level needed.
 **KEY DISTINCTION (reconciles with S14):** there are TWO "level-2" objects. (a) the SoS/theta' LIFT on the conflict graph H_E -- optimizer = miss-event DISTRIBUTION, NOT a linear code -> COLLAPSES (CJJ Prop 1.2), S14's verdict, theta'(H_E)=L_y. (b) the MARGINAL-MATCHING LP (this session): variables = the joint missed-sector law on subsets of {1..6}; fix all realizable marginals P(A subset M), |A|<=l, of E; maximize P(M=emptyset). This is a PRIMAL marginal relaxation, NOT the SoS lift, and it DOES improve.
