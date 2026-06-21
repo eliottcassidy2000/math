@@ -1,0 +1,36 @@
+====================================================================================================
+THREAD B: MINIMUM LEVEL of a valid+tight+consec-max signed cut (proper atoms, no constant)
+  R<6 with s=0 => genuine low-level cert (does NOT reconstruct full measS7=B_6).
+  Only R=6 with s=0 => circular (the size-6 atom = full inclusion-exclusion is forced).
+====================================================================================================
+
+k=8: #shapes=319 measS7(consec)=481/1470=0.32721
+  level R=2 (#atoms=21): min slack s = 0.0000000  cert? True
+  level R=3 (#atoms=41): min slack s = 0.0000000  cert? True
+  level R=4 (#atoms=56): min slack s = 0.0000000  cert? True
+  level R=5 (#atoms=62): min slack s = 0.0000000  cert? True
+  level R=6 (#atoms=63): min slack s = 0.0000000  cert? True  uses_size6_atom=False
+  => MINIMUM CERTIFICATE LEVEL for k=8: R = 2
+
+k=9: #shapes=688 measS7(consec)=2447/5880=0.41616
+  level R=2 (#atoms=21): min slack s = 0.0000000  cert? True
+  level R=3 (#atoms=41): min slack s = 0.0000000  cert? True
+  level R=4 (#atoms=56): min slack s = 0.0000000  cert? True
+  level R=5 (#atoms=62): min slack s = 0.0000000  cert? True
+  level R=6 (#atoms=63): min slack s = 0.0000000  cert? True  uses_size6_atom=False
+  => MINIMUM CERTIFICATE LEVEL for k=9: R = 2
+
+k=10: #shapes=832 measS7(consec)=8899/17640=0.50448
+  level R=2 (#atoms=21): min slack s = 0.0018225  cert? False
+  level R=3 (#atoms=41): min slack s = 0.0000000  cert? True
+  level R=4 (#atoms=56): min slack s = 0.0000000  cert? True
+  level R=5 (#atoms=62): min slack s = 0.0000000  cert? True
+  level R=6 (#atoms=63): min slack s = 0.0000000  cert? True  uses_size6_atom=False
+  => MINIMUM CERTIFICATE LEVEL for k=10: R = 3
+
+====================================================================================================
+VERDICT: if MIN level < 6 for all k => genuine low-level signed cut (route SUCCEEDS, non-circular).
+  if MIN level = 6 => the full-support atom is forced => the tight+valid+max cut IS measS7 => CIRCULAR.
+====================================================================================================
+
+DONE.

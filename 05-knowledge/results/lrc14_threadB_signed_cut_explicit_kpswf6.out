@@ -1,0 +1,15 @@
+====================================================================================================
+THREAD B EXPLICIT CUT: even-Bonferroni / Mobius-truncation certificate B_R = sum_{|A|<=R}(-1)^|A| a[A]
+  B_R >= measS7 STRUCTURALLY for even R (Bonferroni). Need: B_R consec-MAXIMAL over stratum.
+  Smallest even R with consec=argmax(B_R) and B_R(consec) closing under cap = the signed cut.
+====================================================================================================
+
+k=8: #shapes=319 measS7(consec)=481/1470=0.32721 cap=2243/5880=0.38146
+  R=0: B_R(consec)=1.00000  consec=argmax? True (beaters=0)  slack@consec=0.67279  argmaxE=consec
+  R=2: B_R(consec)=1.18639  consec=argmax? True (beaters=0)  slack@consec=0.85918  argmaxE=consec
+  R=4: B_R(consec)=0.48027  consec=argmax? True (beaters=0)  slack@consec=0.15306  argmaxE=consec
+  R=6: B_R(consec)=0.32721  consec=argmax? True (beaters=0)  slack@consec=0.00000  argmaxE=consec
+
+k=9: #shapes=688 measS7(consec)=2447/5880=0.41616 cap=1979/4004=0.49426
+  R=0: B_R(consec)=1.00000  consec=argmax? True (beaters=0)  slack@consec=0.58384  argmaxE=consec
+  R=2: B_R(consec)=1.16310  consec=argmax? True (beaters=0)  slack@consec=0.74694  argmaxE=consec

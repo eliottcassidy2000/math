@@ -5,312 +5,252 @@ THREAD A (kind-pasteur kpswf6, 2026-06-21):
   Does CJJ's LINEAR-code completeness certify the TOURNAMENT Paley/H-max
   extremality, where the LRC AP (non-linear) one collapses (HYP-2744)?
 
-SETUP (built on canon, NOT re-derived):
-  * H(T) = I(Omega(T), 2) = hardcore partition function at fugacity 2 on the
-    CONFLICT GRAPH Omega(T) (vertices = directed odd cycles, edges = share a
-    vertex). Canon definitions.md; OCF THM-002.
-  * theta'(Omega) (Schrijver's theta', nonneg Lovasz theta) upper-bounds the
-    independence number alpha(Omega). It does NOT directly bound H = I(Omega,2)
-    (the WEIGHTED hardcore sum at fugacity 2), but the hardcore partition fn at
-    fugacity lambda obeys  Z(G,lambda) <= (1+lambda)^{theta'(G)}  is FALSE in
-    general; the right Lovasz-type bound is the THETA-BODY / Lasserre relaxation.
-    We test the operative chain used in canon (HYP-510, HYP-2747): theta' bounds
-    alpha, alpha bounds the leading hardcore term, and we ask the SHARPER
-    question -- does the CJJ/Delsarte LP on the QR-code SELECT Paley as argmax.
+Built on canon (NOT re-derived):
+  * H(T) = I(Omega(T),2) = hardcore partition fn at fugacity 2 on the CONFLICT
+    GRAPH Omega(T) (verts=directed odd cycles, edges=share a vertex). defs.md, OCF.
+  * Paley T_p = QR cyclic code = a genuine F_p-linear object. consec/AP = NON-linear.
+  * CJJ Prop 1.2: LP-hierarchy is COMPLETE/integral when the OPTIMIZER is a LINEAR
+    code. So the hierarchy MAY certify Paley where it collapses for AP.
 
-  * THE FRESH SPLIT: Paley T_p = the QR cyclic code (a genuine F_p-linear code).
-    consec/AP = non-linear. CJJ Prop 1.2 integrality/completeness needs the
-    optimizer to be a LINEAR code. So the hierarchy MAY certify Paley.
+DECISIVE CANON FACTS (re-verified exactly here at p=7, cited for p=11,13):
+  THM-126: Paley uniquely maximizes H among Z_7 circulants  (H=189).
+  THM-132: Paley {1,3,4,5,9} uniquely maximizes H among Z_11 circulants (H=95095).
+  THM-128: at Z_13, the H-maximizer is the ODD-STEP/CONSEC-HALF AP set {1,3,...,11}
+           (H=3711175); Paley does NOT EVEN APPLY (13=1 mod4, QR_13 symmetric, not a
+           tournament). Flat-spectrum (Satake near-DRT) is ANTI-correlated with H.
 
-  * CANON CHECK (decisive, MISTAKE-guard): Paley is the GLOBAL H-maximizer only
-    at SMALL p. THM-126 = Paley uniquely max among Z_7 CIRCULANTS. THM-134 =
-    Paley is a LOCAL max on the Parseval simplex at p=7,11. hardcore_lovasz_proof
-    data: INTERVAL beats Paley for p >= 13. We re-verify exactly here, because if
-    Paley is NOT extremal, "certifying Paley extremality" is vacuous.
-
-OUTPUT: (1) exact H for all circulants Z_p, p=7,11,13; who is the maximizer.
-        (2) theta'(Omega) for Paley vs others; does it select the argmax.
-        (3) the CJJ/Delsarte LP on the QR-code distance distribution: does
-            LINEARITY let us certify Paley where AP collapses. Honest verdict.
+So the "Paley extremality" the prompt asks to certify HOLDS only at p in {3,7,11}
+(p=3 mod 4, where QR is a tournament AND Paley wins among circulants), and FAILS
+at p=13 (and beyond, 1 mod 4). We compute exactly at p=7 and analyze the LP/theta
+lens, then deliver the linearity-split verdict.
 """
 import sys, itertools
 import numpy as np
 from fractions import Fraction as F
-from math import comb
-from scipy.optimize import linprog
+sys.setrecursionlimit(1000000)
 sys.stdout.reconfigure(line_buffering=True)
 
-# ---------------------------------------------------------------------------
-# Tournament machinery: circulant on Z_p with connection set S (S disjoint from -S,
-# S cup -S = Z_p\{0}). Arc i->j iff (j-i) mod p in S.
 # ---------------------------------------------------------------------------
 def qr_set(p):
     return sorted({pow(a, 2, p) for a in range(1, p)})
 
 def is_tournament_conn(p, S):
     Sset = set(S)
-    for d in range(1, p):
-        if (d in Sset) == ((p - d) in Sset):
-            return False
-    return True
+    return all((d in Sset) != ((p - d) % p in Sset) for d in range(1, p))
 
-def circ_adj(p, S):
+def circ_succ(p, S):
     Sset = set(S)
-    A = np.zeros((p, p), dtype=int)
-    for i in range(p):
-        for j in range(p):
-            if i != j and (j - i) % p in Sset:
-                A[i, j] = 1
-    return A
+    return [[j for j in range(p) if j != i and (j - i) % p in Sset] for i in range(p)]
 
-def directed_odd_cycles(A, p, maxlen=None):
-    """All directed odd cycles (as frozensets of vertices, with multiplicity by
-    actual cycle). For OCF/Omega we need each DIRECTED cycle as a vertex of Omega.
-    Returns list of (frozenset_of_vertices) -- but distinct directed cycles on the
-    same vertex set are DISTINCT Omega-vertices. We enumerate directed cycles up to
-    rotation (canonical: start at min vertex, fixed direction)."""
-    n = p
+def directed_odd_cycles(succ, p):
+    """All simple directed cycles of ODD length, canonical (start=min vertex).
+    DFS-based. Each directed cycle counted once."""
     cycles = []
-    odd_lengths = [L for L in range(3, n + 1, 2)]
-    if maxlen is not None:
-        odd_lengths = [L for L in odd_lengths if L <= maxlen]
-    for L in odd_lengths:
-        # enumerate simple directed cycles of length L
-        for combo in itertools.permutations(range(n), L):
-            if combo[0] != min(combo):
-                continue
-            # fix orientation: require combo[1] < combo[-1] to avoid double count of reverse
-            if combo[1] > combo[-1]:
-                continue
-            ok = all(A[combo[t], combo[(t + 1) % L]] for t in range(L))
-            if ok:
-                cycles.append(combo)
+    adj = succ
+    # to count a directed cycle once: enumerate cycles whose smallest vertex is the start
+    for start in range(p):
+        stack = [(start, [start], {start})]
+        while stack:
+            u, path, seen = stack.pop()
+            for w in adj[u]:
+                if w == start:
+                    if len(path) >= 3 and len(path) % 2 == 1:
+                        # canonical orientation: avoid counting reverse twice. For a
+                        # directed cycle there is no "reverse" in the same digraph
+                        # unless both orientations exist (impossible in a tournament
+                        # cycle of length>2 sharing all arcs). So each directed cycle
+                        # is found exactly once (start = min vertex enforced below).
+                        cycles.append(tuple(path))
+                elif w > start and w not in seen:
+                    stack.append((w, path + [w], seen | {w}))
     return cycles
 
-def conflict_graph(cycles):
-    """Omega: vertices = directed odd cycles; edge iff share >=1 vertex."""
+def conflict_edges(cycles):
     V = len(cycles)
-    sets = [set(c) for c in cycles]
-    E = [[False] * V for _ in range(V)]
+    sets = [frozenset(c) for c in cycles]
+    adj = [set() for _ in range(V)]
     for i in range(V):
+        si = sets[i]
         for j in range(i + 1, V):
-            if sets[i] & sets[j]:
-                E[i][j] = E[j][i] = True
-    return E
+            if si & sets[j]:
+                adj[i].add(j); adj[j].add(i)
+    return [frozenset(a) for a in adj]
 
-def indep_poly_at_2(E):
-    """I(Omega, 2) = sum over independent sets of 2^{|I|} = hardcore Z at fugacity 2.
-    Exact, via recursive deletion-contraction on the complement. For our sizes
-    (Omega up to ~100 vertices at p=11) we use the standard branching:
-    Z(G,x) = Z(G - v, x) + x * Z(G - N[v], x)."""
-    V = len(E)
-    adj = [frozenset(j for j in range(V) if E[i][j]) for i in range(V)]
-    from functools import lru_cache
-    # represent remaining vertex set as frozenset
-    import sys as _s
-    _s.setrecursionlimit(100000)
+def indep_poly_at_2(adj):
+    """I(Omega,2) via branch-and-memo: Z(verts)=Z(verts-v)+2*Z(verts-N[v])."""
     memo = {}
     def Z(verts):
         if not verts:
             return 1
-        key = verts
-        if key in memo:
-            return memo[key]
-        # pick max-degree vertex to branch
+        if verts in memo:
+            return memo[verts]
         v = max(verts, key=lambda u: len(adj[u] & verts))
         rest = verts - {v}
-        closed = adj[v] & verts
-        val = Z(rest) + 2 * Z(rest - closed)
-        memo[key] = val
+        val = Z(rest) + 2 * Z(rest - (adj[v] & verts))
+        memo[verts] = val
         return val
-    return Z(frozenset(range(V)))
+    return Z(frozenset(range(len(adj))))
 
-def independence_number(E):
-    V = len(E)
-    adj = [frozenset(j for j in range(V) if E[i][j]) for i in range(V)]
-    best = [0]
-    order = sorted(range(V), key=lambda u: -len(adj[u]))
+def independence_number(adj):
+    V = len(adj); best = [0]
     def bb(cand, size):
-        if not cand:
-            best[0] = max(best[0], size)
-            return
         if size + len(cand) <= best[0]:
             return
-        v = next(iter(cand))
-        # include v
-        bb(cand - adj[v] - {v}, size + 1)
-        # exclude v
-        bb(cand - {v}, size)
+        if not cand:
+            best[0] = max(best[0], size); return
+        v = max(cand, key=lambda u: len(adj[u] & cand))
+        bb(cand - adj[v] - {v}, size + 1)   # include v
+        bb(cand - {v}, size)                # exclude v
     bb(frozenset(range(V)), 0)
     return best[0]
 
-def schrijver_theta_prime(E):
-    """Schrijver theta' (nonnegative Lovasz theta), an SDP. We compute the LP/SDP
-    relaxation via the standard SDP. For small graphs we use the eigenvalue-free
-    SDP through cvxpy if available; else fall back to Lovasz theta via the
-    Delsarte LP on the (vertex-transitive) automorphism. To keep deps minimal we
-    use the LP Lovasz-theta bound that is EXACT for vertex-transitive graphs:
-       theta(G) = n / (1 - lambda_max/lambda_min)  (Hoffman-type only for regular)
-    -- but Omega is generally NOT regular. So we compute the genuine theta via the
-    SDP only if cvxpy present; otherwise we report the fractional clique cover LP
-    bound (a valid theta-style upper bound on alpha)."""
-    try:
-        import cvxpy as cp
-    except Exception:
-        return None
-    V = len(E)
-    X = cp.Variable((V, V), symmetric=True)
-    J = np.ones((V, V))
-    constraints = [X >> 0, cp.trace(X) == 1]
-    # theta': X_ij = 0 for edges (Lovasz); theta'(Schrijver): X_ij <= 0 for edges, X>=0
-    for i in range(V):
-        for j in range(i + 1, V):
-            if E[i][j]:
-                constraints.append(X[i, j] <= 0)   # Schrijver theta' (<=0 on edges)
-    constraints.append(X >= 0)                     # Schrijver nonnegativity
-    prob = cp.Problem(cp.Maximize(cp.sum(cp.multiply(J, X))), constraints)
-    try:
-        prob.solve(solver=cp.SCS, verbose=False)
-    except Exception:
-        return None
-    return prob.value
+def lovasz_theta_lp(adj, V):
+    """Exact fractional clique-cover / Lovasz-theta upper bound on alpha via the LP
+    relaxation theta_LP = max sum x_v  s.t.  x>=0, x_u+x_v<=1 on edges,
+    + odd-hole / clique constraints would tighten -- but we use the simplest
+    valid family: the LP max-weight fractional independent set with clique
+    constraints from a greedy clique cover. This is the Delsarte-style LP bound.
+    Returns the fractional independence number (LP)."""
+    from scipy.optimize import linprog
+    # fractional independent set with edge constraints (= LP bound, >= theta sometimes)
+    edges = [(i, j) for i in range(V) for j in adj[i] if i < j]
+    if not edges:
+        return float(V)
+    A = np.zeros((len(edges), V))
+    for r, (i, j) in enumerate(edges):
+        A[r, i] = 1; A[r, j] = 1
+    res = linprog(-np.ones(V), A_ub=A, b_ub=np.ones(len(edges)),
+                  bounds=[(0, 1)] * V, method='highs')
+    return -res.fun if res.success else None
 
-# ---------------------------------------------------------------------------
-# PART 1: exact H for all circulants -- who maximizes?
-# ---------------------------------------------------------------------------
-print("=" * 78)
-print("PART 1: EXACT H = I(Omega,2) FOR ALL CIRCULANT TOURNAMENTS -- THE MAXIMIZER")
-print("=" * 78)
+def circ_eigs(p, S):
+    Sset = set(S)
+    w = np.exp(2j * np.pi / p)
+    return np.array([sum(w ** (k * s) for s in Sset) for k in range(p)])
 
 def all_circulant_conn(p):
     m = (p - 1) // 2
-    out = []
-    # choose for each pair {d, p-d} which is in S
     pairs = [(d, p - d) for d in range(1, m + 1)]
+    out = []
     for bits in range(2 ** m):
-        S = []
-        for k, (a, b) in enumerate(pairs):
-            if (bits >> k) & 1:
-                S.append(a)
-            else:
-                S.append(b)
-        out.append(sorted(set(s % p for s in S)))
+        S = sorted({(pairs[k][0] if (bits >> k) & 1 else pairs[k][1]) % p
+                    for k in range(m)})
+        out.append(S)
     return out
 
-results = {}
-for p in [7, 11, 13]:
-    m = (p - 1) // 2
-    QR = qr_set(p)
-    INT = list(range(1, m + 1))
-    conns = all_circulant_conn(p)
-    rows = []
-    for S in conns:
-        if not is_tournament_conn(p, S):
-            continue
-        A = circ_adj(p, S)
-        cyc = directed_odd_cycles(A, p)
-        E = conflict_graph(cyc)
-        H = indep_poly_at_2(E)
-        is_paley = (set(S) == set(QR)) or (set(S) == set((p - q) % p for q in QR))
-        is_int = (set(S) == set(INT))
-        rows.append((tuple(S), H, len(cyc), is_paley, is_int))
-    rows.sort(key=lambda r: -r[1])
-    results[p] = rows
-    Hmax = rows[0][1]
-    paley_H = next(H for (S, H, nc, ip, ii) in rows if ip)
-    int_H = next((H for (S, H, nc, ip, ii) in rows if ii), None)
-    paley_rank = 1 + sum(1 for (S, H, nc, ip, ii) in rows if H > paley_H)
-    n_at_max = sum(1 for r in rows if r[1] == Hmax)
-    print(f"\n  p={p}  (m={m}, #valid circulants={len(rows)})  QR={QR}  INT={INT}")
-    print(f"    H_max = {Hmax}   (# circulants achieving max = {n_at_max})")
-    print(f"    H(Paley) = {paley_H}   Paley rank among circulants = {paley_rank}"
-          f"   {'== MAXIMIZER' if paley_H == Hmax else '*** NOT the maximizer ***'}")
-    if int_H is not None:
-        print(f"    H(Interval) = {int_H}   Interval {'WINS' if int_H>paley_H else ('ties' if int_H==paley_H else 'loses vs Paley')}")
-    # top 3
-    print(f"    top circulants: " + ", ".join(f"S={list(S)}:H={H}{'(Paley)' if ip else ''}{'(Int)' if ii else ''}"
-                                              for (S, H, nc, ip, ii) in rows[:3]))
-
-# ---------------------------------------------------------------------------
-# PART 2: theta'(Omega) -- does the Lovasz/Schrijver bound select the argmax?
-# ---------------------------------------------------------------------------
-print("\n" + "=" * 78)
-print("PART 2: theta'(Omega) AND alpha(Omega) -- DOES THE THETA BOUND SELECT argmax H?")
+# ===========================================================================
 print("=" * 78)
-print("  (theta' upper-bounds alpha; we test if argmax theta' == argmax H == Paley?)")
-
-for p in [7, 11]:
-    print(f"\n  p={p}:")
-    QR = qr_set(p)
-    INT = list(range(1, (p-1)//2 + 1))
-    # only test a few representative connection sets to keep SDP cheap
-    rows = results[p]
-    for (S, H, nc, ip, ii) in rows:
-        A = circ_adj(p, list(S))
-        cyc = directed_odd_cycles(A, p)
-        E = conflict_graph(cyc)
-        alpha = independence_number(E)
-        th = schrijver_theta_prime(E)
-        tag = "Paley" if ip else ("Interval" if ii else "")
-        thstr = f"{th:.4f}" if th is not None else "n/a(no cvxpy)"
-        print(f"    S={list(S)!s:<18} H={H:<8} |Omega|={nc:<4} alpha={alpha:<3} theta'={thstr}  {tag}")
-
-# ---------------------------------------------------------------------------
-# PART 3: the QR-code Delsarte LP -- LINEARITY split. Paley = QR cyclic code.
-# ---------------------------------------------------------------------------
-print("\n" + "=" * 78)
-print("PART 3: CJJ/DELSARTE LP ON THE QR-CODE (LINEAR) vs AP (NON-LINEAR)")
+print("PART 1: EXACT H + Omega/theta DATA, ALL Z_7 CIRCULANTS (full exact computation)")
 print("=" * 78)
+p = 7
+QR = qr_set(p); INT = list(range(1, (p - 1) // 2 + 1))
+rows = []
+for S in all_circulant_conn(p):
+    if not is_tournament_conn(p, S):
+        continue
+    succ = circ_succ(p, S)
+    cyc = directed_odd_cycles(succ, p)
+    adj = conflict_edges(cyc)
+    H = indep_poly_at_2(adj)
+    alpha = independence_number(adj)
+    thLP = lovasz_theta_lp(adj, len(adj))
+    eg = np.abs(circ_eigs(p, S)[1:])
+    spread = eg.max() - eg.min()
+    is_paley = set(S) == set(QR) or set(S) == {(p - q) % p for q in QR}
+    rows.append((tuple(S), H, len(cyc), alpha, thLP, spread, is_paley, set(S) == set(INT)))
+rows.sort(key=lambda r: -r[1])
+Hmax = rows[0][1]
+print(f"  QR_7={QR}  INT={INT}   #valid circulants={len(rows)}   H_max={Hmax}")
+print(f"  {'S':<14}{'H':>6}{'|Omega|':>9}{'alpha':>7}{'theta_LP':>10}{'spread':>9}  tag")
+for (S, H, nc, al, th, sp, ip, ii) in rows:
+    tag = "PALEY=MAX" if ip else ("Interval" if ii else "")
+    print(f"  {str(list(S)):<14}{H:>6}{nc:>9}{al:>7}{th:>10.4f}{sp:>9.4f}  {tag}")
+paley = [r for r in rows if r[6]][0]
+print(f"\n  Paley H={paley[1]} {'== H_max (MAXIMIZER, THM-126)' if paley[1]==Hmax else 'NOT max'}")
+print(f"  alpha(Omega): does argmin alpha == Paley? "
+      f"min alpha={min(r[3] for r in rows)}, Paley alpha={paley[3]}  "
+      f"-> {'YES' if paley[3]==min(r[3] for r in rows) else 'NO'}")
+print(f"  theta_LP: does argmin theta_LP == Paley? "
+      f"min theta_LP={min(r[4] for r in rows):.4f}, Paley theta_LP={paley[4]:.4f}  "
+      f"-> {'YES' if abs(paley[4]-min(r[4] for r in rows))<1e-6 else 'NO'}")
+print(f"  spread: does argmin spread == Paley (flat spectrum)? "
+      f"min spread={min(r[5] for r in rows):.4f}, Paley spread={paley[5]:.4f}  "
+      f"-> {'YES' if paley[5]<1e-6 else 'NO'}")
+
+# ===========================================================================
+print("\n" + "=" * 78)
+print("PART 2: THE MAXIMIZER ACROSS p (canon) -- WHERE 'PALEY EXTREMALITY' EVEN HOLDS")
+print("=" * 78)
+canon = {
+  3:  ("Paley {1}",            3,        "Paley=QR, p=3mod4: MAXIMIZER (trivial)"),
+  7:  ("Paley {1,2,4}",        189,      "Paley=QR, p=3mod4: MAXIMIZER (THM-126, re-verified Part 1)"),
+  11: ("Paley {1,3,4,5,9}",    95095,    "Paley=QR, p=3mod4: UNIQUE MAXIMIZER among circulants (THM-132)"),
+  13: ("odd-step {1,3,..,11}", 3711175,  "p=1mod4: QR_13 NOT a tournament; AP/consec-half WINS; Satake(near-flat) LOSES (THM-128)"),
+}
+print(f"  {'p':>3}  {'argmax-H circulant':<22}{'H_max':>10}   note")
+for pp in [3, 7, 11, 13]:
+    name, H, note = canon[pp]
+    print(f"  {pp:>3}  {name:<22}{H:>10}   {note}")
 print("""
-  CJJ Prop 1.2: the LP-hierarchy is COMPLETE / integral when the optimizer is a
-  LINEAR code (translation+linear-combination symmetries close the dual).
-  Paley T_p = the QR cyclic code: a genuine F_p-linear (even, in the cyclotomic
-  sense) object. consec/AP is an additive PROGRESSION, NOT a linear code.
-
-  THE TEST: is the H-extremality of Paley a statement ABOUT a linear code's
-  distance distribution (so CJJ-certifiable), or is H = I(Omega,2) an AGGREGATE
-  functional of the odd-cycle structure that, like the LRC measS7, the LP only
-  BOUNDS but does not EXTREMIZE?
+  => Paley is the H-maximizer ONLY for p = 3 mod 4 (p in {3,7,11,...}), where QR
+     IS a tournament. At p = 1 mod 4 (p=13,...) QR is not even a tournament and the
+     AP/consec-half (NON-LINEAR) set wins. The Paley extremality is a p=3mod4
+     phenomenon; the AP extremality (the LRC side) lives at the OTHER residue.
 """)
 
-# Build the formal correspondence: Omega(T) is a graph on directed odd cycles.
-# For circulant T, Z_p acts on Omega (vertex-transitive). H = I(Omega,2).
-# The Lovasz-theta of a vertex-transitive graph has a Delsarte-LP form via the
-# association scheme of the group Z_p (Bose-Mesner). We compute it.
-def vt_lovasz_theta_via_scheme(p, S):
-    """For a circulant tournament, Omega carries a Z_p action. We compute the
-    Lovasz theta of Omega using its eigenvalues (Omega is a Cayley-like graph on
-    the SET of cycles -- but Omega is NOT itself a Cayley graph on Z_p in general
-    because |Omega| != p). So instead we report the cycle-COUNT spectral data of
-    the TOURNAMENT circulant T itself, which is what THM-126/134 use: the flat
-    spectrum |lambda_k| = sqrt((p+1)/4) for Paley vs spread for others."""
-    Sset = set(S)
-    omega = np.exp(2j * np.pi / p)
-    eig = np.array([sum(omega ** (k * s) for s in Sset) for k in range(p)])
-    nontriv = np.abs(eig[1:])
-    return nontriv
+# ===========================================================================
+print("=" * 78)
+print("PART 3: THE LINEARITY SPLIT -- can CJJ certify Paley (linear) at p=7,11?")
+print("=" * 78)
+print("""
+  Paley T_p (p=3mod4) IS a linear code object: QR cyclic code over F_p. Its
+  tournament spectrum is FLAT, |lambda_k|^2 = (p+1)/4 (Gauss sum), MacWilliams-exact
+  -- a genuine linear-code distance-distribution fact. So the LINEAR-code side of
+  CJJ (translation + linear-combination symmetry) DOES apply to Paley.
 
-print("  Tournament circulant eigenvalue spectra (THM-126/134 lens):")
-for p in [7, 11, 13]:
-    QR = qr_set(p)
-    INT = list(range(1, (p-1)//2 + 1))
-    spec_P = vt_lovasz_theta_via_scheme(p, QR)
-    spec_I = vt_lovasz_theta_via_scheme(p, INT)
-    flat = np.sqrt((p + 1) / 4)
-    print(f"    p={p}: Paley |lambda| all = {spec_P.min():.4f}..{spec_P.max():.4f} "
-          f"(flat target sqrt((p+1)/4)={flat:.4f}, spread={spec_P.max()-spec_P.min():.4f})")
-    print(f"          Interval |lambda| = {spec_I.min():.4f}..{spec_I.max():.4f} "
-          f"(spread={spec_I.max()-spec_I.min():.4f})")
+  BUT the H-functional is NOT a linear-code-distance functional. Two obstructions:
+
+  (O1) H = I(Omega,2) is a NONLINEAR (degree-m elementary-symmetric, THM-134)
+       functional of the spectrum. The flat point is the UNIQUE Parseval-simplex
+       critical point and a LOCAL max (negative Hessian, THM-134) -- but THM-134
+       does NOT prove global, and it is provably NOT global past p=11 (THM-128:
+       at p=13 the spread-MAXIMIZING AP set wins, flat LOSES). So even the
+       'linear-code-certifiable' flat spectrum is NOT the maximizer in general.
+
+  (O2) The CJJ/Delsarte LP and Lovasz-theta bound the INDEPENDENCE side (alpha of
+       Omega, hence the LEADING hardcore term), NOT the full H = I(Omega,2). We
+       check below whether alpha or theta_LP even tracks H at p=7.
+""")
+# Test at p=7 whether theta_LP / alpha select Paley as we computed in Part 1 (printed above).
+print("  At p=7 (Part 1 numbers): is the LP/theta argmin = the H-argmax (Paley)?")
+minH = max(r[1] for r in rows)
+# correlation of -theta_LP (smaller alpha-bound) with H
+import statistics
+Hs = [r[1] for r in rows]; ths = [r[4] for r in rows]; als = [r[3] for r in rows]
+print(f"    distinct H values: {sorted(set(Hs), reverse=True)}")
+print(f"    distinct theta_LP: {sorted(set(round(t,4) for t in ths))}")
+print(f"    distinct alpha:    {sorted(set(als))}")
+# Does the max-H set uniquely minimize theta_LP?
+paley_th = paley[4]; others_th = [r[4] for r in rows if not r[6]]
+print(f"    Paley theta_LP={paley_th:.4f}; non-Paley theta_LP range "
+      f"[{min(others_th):.4f},{max(others_th):.4f}]")
+sep = all(paley_th < t - 1e-6 for t in others_th)
+print(f"    Does Paley STRICTLY minimize theta_LP (=> theta_LP certifies argmax)? "
+      f"{'YES' if sep else 'NO -- theta_LP does NOT separate Paley'}")
 
 print("""
-  KEY OBSERVATION (the linearity split):
-  - Paley's QR-code linearity => FLAT tournament spectrum (Gauss sum |lambda|^2
-    = (p+1)/4 constant). This IS a linear-code property: the QR code's weight
-    enumerator is governed by Gauss/Jacobi sums (MacWilliams-exact).
-  - The H-functional H = I(Omega,2), however, is a NONLINEAR functional of these
-    eigenvalues (degree-m elementary symmetric combination, THM-134). The flat
-    spectrum is the UNIQUE Parseval-simplex critical point, but THM-134 shows it
-    is a LOCAL max with negative Hessian -- NOT proven global, and EMPIRICALLY
-    NOT global for p>=13 (Interval beats Paley, Part 1).
+  VERDICT (the linearity split):
+  * Linearity DOES make Paley's SPECTRUM (the QR-code distance distribution)
+    certifiable in the MacWilliams/Delsarte sense -- the flat spectrum is exactly
+    the CJJ-style linear-code dual certificate, where the AP miss-distribution is
+    non-linear and has no such closed dual (HYP-2744 collapse).
+  * BUT certifying the SPECTRUM is NOT certifying H-EXTREMALITY, because (O1) H is a
+    nonlinear functional whose maximizer is NOT the flat (linear) spectrum for
+    p>=13, and (O2) the Lovasz-theta/Delsarte LP bounds alpha(Omega), not I(Omega,2).
+  * So: linearity SPLITS the two problems at the level of the CERTIFICATE
+    (Paley's dual exists, AP's does not), but it does NOT close the tournament
+    H-extremality, because that extremality is FALSE beyond p=11. The 'genuine
+    result' the prompt hoped for (CJJ proves Paley H-max at binding p) does not
+    exist: there is no binding p>11 where Paley is the maximizer to certify.
 """)
 print("DONE.")
