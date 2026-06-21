@@ -1,0 +1,8 @@
+
+=== k=9 cap=1979/4004=0.49426  3432 bases  (189.6s) ===
+  trivial(sumR<15m, no scan): 862   scanned(exact pm): 2570   skipped(P>2600000): 0
+  PASS: 3432   FAIL: 0
+  worst EXACT period-max/margin (scanned bases) = 13.2805 at B=(0, 2, 4, 6, 8, 10, 12, 14) (need <15)
+  worst a-priori sumR/margin (trivial bases)    = 14.9998 at B=(0, 1, 2, 3, 7, 8, 13, 14) (these PASS since sumR<15m => pm<=sumR<15m)
+
+TOTAL skipped (P>2600000, deferred to stage 2): 0   TOTAL fails: 0

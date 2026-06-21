@@ -116,7 +116,7 @@ def period_max_float_argmax(arcs,P):
     cand=np.where(tot>=mx-tol)[0]
     return mx, cand.tolist()
 
-caps={9:F(1979,4004),10:F(55,91),11:F(66,91),12:F(6,7),13:F(1)}
+caps={8:F(2243,5880),9:F(1979,4004),10:F(55,91),11:F(66,91),12:F(6,7),13:F(1)}
 ABS=F(6,49)
 
 def process_k(k, Pcap):

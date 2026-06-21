@@ -1,0 +1,78 @@
+================================================================================
+THM-563 GENERAL BOUNDED-BASE FINITE CHECK -- COMPLETE
+mac-mini-2026-06-21-S7, THREAD 1
+================================================================================
+
+CLAIM (THREAD 1 deliverable):
+  period-max(B) < 15*margin(B)  for ALL primitive bounded bases B subset [0,14],
+  0 in B, |B| = k-1, at every k = 8,9,10,11,12,13.
+  => Delta_w <= period-max/15 < margin_k  for ALL integer far speeds w >= 15
+  => p0(B u {w}) = Plat(B) + Delta_w < cap_k   for all w >= 15  (SINGLE-FAR CLOSED).
+
+DEFINITIONS (canonical):
+  Plat(B)   = decorrelated plateau = measS7(B) + p1(B)/7   (whole-circle breakpoint method)
+  margin_k  = cap_k - Plat(B)   (skip base if <= 0; NONE occurred)
+  period-max(B) = max over one period [0,P), P=7*lcm(B), of  w*Delta_w
+              = max_w  sum over one-miss sector-j arcs (j,a,b) of [Sc_j(w*b)-Sc_j(w*a)]  (THM-563 id)
+  Sc_j      = centered sawtooth, |S_j| <= 3/49, range R_j = 6/49.
+  caps      = cap_8..13 = 2243/5880, 1979/4004, 55/91, 66/91, 6/7, 1  (canonical / orchestrator).
+
+METHOD (two-stage, ALL candidates exact-verified in Fractions):
+  STAGE A (a-priori, no scan): period-max <= sumR := (6/49)*(#arcs).  If sumR < 15*margin, PASS.
+  STAGE B (exact scan): numpy float scan of f(w) over [0,P) via per-endpoint period tiling
+     (each Sc_j(frac(w*t)) periodic with period q | 7e <= 98; tile to length P).
+     Take all residues within 1e-9 of the float max -> candidates; recompute f in EXACT
+     Fractions; period-max = exact max.  Verified: candidate-max == brute-force exact max
+     on 15 small-period k=9 bases (0 mismatches).  Consec bases reproduce canon exactly
+     (k=8 pm=1, k=9 pm=43/49, k=10 pm=1007/980).
+
+================================================================================
+RESULT -- EVERY k PASSES, ZERO FAILS, ZERO SKIPPED
+================================================================================
+ k | bases | trivial | scanned | skipped | PASS | FAIL | worstEXACTratio | worst base (even-AP/dilated)
+---+-------+---------+---------+---------+------+------+-----------------+------------------------------------
+ 8 |  3003 |   2316  |    687  |    0    | 3003 |   0  |     10.8188     | (0,2,4,6,8,10,12)        = 2*consec6
+ 9 |  3432 |    862  |   2570  |    0    | 3432 |   0  |     13.2805     | (0,2,4,6,8,10,12,14)     = 2*consec7
+10 |  3003 |    216  |   2787  |    0    | 3003 |   0  |     10.8140     | (0,2,4,6,8,10,11,12,14)
+11 |  2002 |    137  |   1865  |    0    | 2002 |   0  |      9.7616     | (0,3,7,8,9,10,11,12,13,14)
+12 |  1001 |    204  |    797  |    0    | 1001 |   0  |      8.2059     | (0,5,6,7,8,9,10,11,12,13,14)
+13 |   364 |    260  |    104  |    0    |  364 |   0  |      5.9838     | (0,3,5,6,7,8,9,10,11,12,13,14)
+
+TOTAL bases checked = 3003+3432+3003+2002+1001+364 = 12805.  ALL PASS.  0 FAIL.  0 SKIP.
+
+GLOBAL WORST (binding base): k=9, B=(0,2,4,6,8,10,12,14) = 2*consec_7  (even AP, a DILATED base).
+   Plat        = 621/1715           = 0.36210
+   margin_9    = 129643/980980      = 0.13216
+   P           = 5880
+   period-max  = 86/49              = 1.75510   (exact)
+   15*margin_9 = 388929/196196      = 1.98235
+   ratio       = 13.2805            < 15   PASS   (headroom 15m - pm = +0.22725)
+
+EXACT CERTIFICATES for the per-k worst bases (all PASS):
+  k=8  B=(0,2,4,6,8,10,12)             pm = 1            (=42/42)   15m=2.766... ratio 10.8188
+  k=9  B=(0,2,4,6,8,10,12,14)          pm = 86/49        =1.75510   15m=1.98235 ratio 13.2805
+  k=10 B=(0,2,4,6,8,10,11,12,14)       pm = 3299/1470    =2.24422   15m=3.11295 ratio 10.8140
+  k=11 B=(0,3,7,8,9,10,11,12,13,14)    pm = 6730439/1961960 =3.43047 15m=5.27135 ratio  9.7616
+  k=12 B=(0,5,6,7,8,9,10,11,12,13,14)  pm = 536399/196196 =2.73400  15m=4.99762 ratio  8.2059
+  k=13 B=(0,3,5,6,7,8,9,10,11,12,13,14) pm=122064/49049  =2.48861   15m=6.23836 ratio  5.9838
+
+================================================================================
+CONCLUSION
+================================================================================
+THM-563's general bounded-base finite check is COMPLETE for k=8,9,10,11,12,13.
+period-max(B) < 15*margin(B) holds for EVERY primitive bounded base B subset [0,14].
+=> The SIGNED single-far case is CLOSED for ALL bounded bases at all binding k, for all
+   integer far speeds w >= 15, with NO finite-w window and NO appeal to THM-546's lossy
+   (6/49)V absolute bound.
+
+The binding family is the even arithmetic progressions (0,2,...,2(k-1)) = 2*consec_{k-1}
+(DILATED consec bases), worst at k=9 with ratio 13.28.  Headroom to 15 is +0.227 there.
+This is consistent with THM-563's dilated/continuous section being the tight regime; the
+integer period-max (13.28) sits below the threshold, so the dilated case closes too.
+
+NOTE on the trivial-pass ratios up to ~14.999: these are the a-priori sumR/margin ratios,
+NOT exact period-max ratios.  A base passes STAGE A iff sumR < 15*margin, which already
+GUARANTEES period-max <= sumR < 15*margin -- so the closeness of sumR/margin to 15 for some
+trivial bases is harmless (the true period-max is far smaller, as the scanned worst of 13.28
+shows).  Every base whose a-priori sumR/margin >= 15 was exact-scanned (STAGE B); all such
+bases have exact ratio well below 15 (worst 13.28).
