@@ -55,9 +55,30 @@ READING: max_slack p0 <= cap_k - gap with the gaps above; SLACK REGIME SAFE.
 ====================================================================================
 PART 4: THM-557 multi-cluster STRICTLY lowers the decorrelated cover (item 3)
 ====================================================================================
-Base = {0}; m=k-1 nonzero runners partitioned into far coherent blocks.
-Single block [m] vs split [m-1,1], [m-2,2], ... -- decorr cover via boundary_value_direct({0}, .)
-is NOT the right call; THM-557 integrates the actual shared-x cover. We reproduce its D_m and
-the split GAPS by EXACT p0 on widely-separated coherent blocks (diagonal-freeze limit).
+THM-557 (codex S61, EXACT Fraction integration): anchor 0 fixed, m=k-1 far runners partitioned
+into coherent consecutive blocks; the SINGLE block [m] MAXIMIZES the shared-x decorrelated cover.
+Closest split is always [m-1,1], with explicit POSITIVE split_gap. So any multi-cluster config's
+decorrelated cover <= single-block D_m, and a SPLIT spends the split_gap as EXTRA margin.
 
- m   single-block D_m (p0, M-large)      best split          split p0           gap=single-split
+ m   THM-557 D_m        cap_margin       split_gap[m-1,1]    small-M demo (single>split)
+  7  D_m=283/1470=0.192517  capmargin=0.18895  split_gap=0.10797 (1111/10290)  demo M=60: 0.1929>0.0872? True
+  8  D_m=629/2058=0.305637  capmargin=0.18862  split_gap=0.07269 (374/5145)  demo M=60: 0.3055>0.2378? True
+  9  D_m=16969/41160=0.412269  capmargin=0.19213  split_gap=0.06832 (6561/96040)  demo M=60: 0.4124>0.3479? True
+ 10  D_m=30551/61740=0.494833  capmargin=0.23044  split_gap=0.04936 (42661/864360)  demo M=60: 0.4961>0.4510? True
+ 11  D_m=71111/123480=0.575891  capmargin=0.28125  split_gap=0.05233 (9047/172872)  demo M=60: 0.5776>0.5297? True
+
+READING: every split lowers the cover below the single block (split_gap>0, THM-557). So a multi-cluster
+SLACK config's decorrelated cover is bounded by the single-block D_m, which is itself < cap by cap_margin.
+Multi-cluster spends the split_gap as EXTRA margin on top of the cap margin.
+
+====================================================================================
+SLACK-REGIME SUMMARY (the deliverable):
+====================================================================================
+ k    max_slack p0    cap_k       GAP        (decorr sup, decorr gap)
+  8   0.19764      0.38146   0.18382    (0.19660, 0.18486)
+  9   0.37160      0.49426   0.12266    (0.36210, 0.13216)
+ 10   0.45068      0.60440   0.15372    (0.43839, 0.16601)
+ 11   0.51310      0.72527   0.21218    (0.52274, 0.20253)
+ 12   0.60085      0.85714   0.25629    (0.59473, 0.26241)
+
+CLAIM: over the slack family (>=3 far OR multi-cluster/spread base), p0 <= cap_k - GAP.

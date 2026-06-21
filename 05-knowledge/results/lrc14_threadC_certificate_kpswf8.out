@@ -1,0 +1,49 @@
+========================================================================================
+THREAD C CERTIFICATE: the SLACK-REGIME floor max_{slack} p0 <= cap_k - gap (kps-S25-wf8)
+========================================================================================
+
+(1) DIRECT slack max p0 -- the tight certificate (VERIFIED exact; exhaustive r>=3 at k<=10)
+----------------------------------------------------------------------------------------
+ k    max_slack p0          cap_k       GAP = cap - max_p0       tightest config E
+  8   0.22166 (391/1764)   0.38146    0.15981 (=2819/17640)   (0, 3, 6, 9, 12, 14, 15, 18)
+  9   0.37381 (157/420)   0.49426    0.12045 (=3617/30030)   (0, 2, 3, 6, 9, 12, 15, 18, 21)
+ 10   0.46803 (344/735)   0.60440    0.13637 (=1303/9555)   (0, 2, 4, 6, 7, 8, 10, 12, 14, 16)
+ 11   0.55074 (1943/3528)   0.72527    0.17454 (=8005/45864)   (0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+ 12   0.62790 (4973/7920)   0.85714    0.22924 (=12709/55440)   (0, 2, 4, 6, 8, 10, 11, 12, 14, 16, 18, 20)
+
+  MINIMUM gap over k=8..12: 0.12045 at k=9 (the tightest slack row).
+  All gaps positive and >= 0.12. SLACK REGIME SAFE regardless of the (large ~0.29) resonance error.
+
+(2) PROVEN cut-space floor + THM-557 multi-cluster lowering
+----------------------------------------------------------------------------------------
+  c_t(t,r)=0 for t>r (EXACT): r far runners cover at most r missing sectors, so
+  p0_decorr(B,r)=sum_{t=0}^{r} prof_t(B) c_t(t,r). Spread/small base => prof mass at high t => small decorr.
+  THM-557: among coherent-block partitions of m=k-1 far runners, the SINGLE block maximizes decorr (D_m);
+  every split lowers it (split_gap>0). Multi-cluster slack configs thus have decorr <= D_m < cap.
+ m   D_m (coherent-block max)   split_gap[m-1,1]   cap_{m+1}      D_m < cap?
+  7  0.19252 (283/1470)   0.10797        0.38146     True
+  8  0.30564 (629/2058)   0.07269        0.49426     True
+  9  0.41227 (16969/41160)   0.06832        0.60440     True
+ 10  0.49483 (30551/61740)   0.04936        0.72527     True
+ 11  0.57589 (71111/123480)   0.05233        0.85714     True
+
+(3) JOINT regime-split inequality (the CORRECT item-2): err(E) < cap - p0_decorr(E)
+----------------------------------------------------------------------------------------
+  On every tightest-slack config, decompose p0 = p0_decorr + err and verify err < room=cap-decorr.
+ k    p0_decorr   err=p0-decorr   room=cap-decorr   err<room? (<=> p0<cap)
+  8   0.04945    +0.17221        0.33202          True  (margin room-err=0.15981)
+  9   0.10108    +0.27273        0.39318          True  (margin room-err=0.12045)
+ 10   0.43839    +0.02964        0.16601          True  (margin room-err=0.13637)
+ 11   0.43881    +0.11192        0.28646          True  (margin room-err=0.17454)
+ 12   0.47903    +0.14888        0.37812          True  (margin room-err=0.22924)
+
+  HONEST CAVEAT: the NAIVE bound decorr_sup + err_max <= cap is FALSE for k>=9 (sup_decorr~0.36 at
+  spread-base+single-far where err~0; err_max~0.30 at resonant small-base+far-cluster where decorr~0.10;
+  they ANTI-correlate and do NOT co-occur). The bound must be the JOINT direct max p0 (table 1),
+  i.e. the regime split err < cap - p0_decorr holds POINTWISE, not as a product of independent suprema.
+
+========================================================================================
+DELIVERABLE: max_{slack} p0 <= cap_k - gap,  gap = {0.160, 0.120, 0.136, 0.175, 0.229} for k=8..12.
+Status: VERIFIED (exact; exhaustive deep-slack r>=3 at k<=10, broad resonant+random elsewhere).
+PROVEN sub-parts: the decorr cut-space floor and THM-557 multi-cluster lowering.
+========================================================================================

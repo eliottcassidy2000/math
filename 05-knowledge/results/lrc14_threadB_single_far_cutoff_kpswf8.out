@@ -1,0 +1,29 @@
+THREAD B (1) FOCUSED: single-far cutoff W_k + residual finite-band exact check
+================================================================================
+  k=8: cap=0.38146 Q(k-1)=0.19660 margin=0.18486
+  k=9: cap=0.49426 Q(k-1)=0.36210 margin=0.13216
+  k=10: cap=0.60440 Q(k-1)=0.44789 margin=0.15651
+  k=11: cap=0.72527 Q(k-1)=0.53125 margin=0.19402
+  k=12: cap=0.85714 Q(k-1)=0.60224 margin=0.25490
+
+--------------------------------------------------------------------------------
+(A) V(B) = arc-complexity over ALL bounded primitive bases; is consec_{k-1} the max?
+--------------------------------------------------------------------------------
+  k=8: V(consec_7)=43  V_max over bounded bases = 185 at (0, 9, 10, 11, 12, 13, 14)  consec-is-max=False
+  k=9: V(consec_8)=45  V_max over bounded bases = 170 at (0, 5, 9, 10, 11, 12, 13, 14)  consec-is-max=False
+  k=10: V(consec_9)=45  V_max over bounded bases = 150 at (0, 3, 5, 8, 10, 11, 12, 13, 14)  consec-is-max=False
+
+--------------------------------------------------------------------------------
+(B) cutoff  W_k = (6/49) * V_max(B) / margin_k :  for w > W_k, THM-546 proves p0 < cap
+--------------------------------------------------------------------------------
+   k  V_max    margin       W_k ceil(W_k)
+   8    185   0.18486  122.5391       123
+   9    170   0.13216  157.5126       158
+  10    150   0.15651  117.3563       118
+  11     43* 0.19402   27.1376        28  (*V(consec); base size 10 not exhausted)
+  12     39* 0.25490   18.7349        19  (*V(consec); base size 11 not exhausted)
+
+--------------------------------------------------------------------------------
+(C) RESIDUAL FINITE BAND exact check: all bounded primitive B (size k-1), w in [15, W(B)]
+    (W(B) = (6/49)V(B)/margin_k, the per-base cutoff; above it THM-546 already closes)
+--------------------------------------------------------------------------------

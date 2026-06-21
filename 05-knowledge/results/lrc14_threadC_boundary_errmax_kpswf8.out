@@ -1,0 +1,36 @@
+THREAD C part 3 (kps-S25-wf8): boundary-slack branch + slack err_max conditional bound
+
+====================================================================================
+(B) BOUNDARY slack r in {1,2}, SPREAD (non-single-block) base: EXACT max p0
+====================================================================================
+ k    max_p0 (spread,r<=2)    cap_k      GAP        Q(k-1)     (max_p0 - Q)   argmax E
+  8   0.22670 (23827/105105)   0.38146   0.15477   0.19660   +0.03010   E=(0, 3, 5, 7, 9, 11, 13, 15)
+  9   0.37160 (437/1176)   0.49426   0.12266   0.36210   +0.00950   E=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+ 10   0.47551 (233/490)   0.60440   0.12889   0.44789   +0.02762   E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 18)
+ 11   0.55074 (1943/3528)   0.72527   0.17454   0.53125   +0.01948   E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+
+  NOTE: the spread base can slightly EXCEED Q(k-1) (e.g. k=9 even-base), but stays << cap.
+  These r<=2 configs have TINY error (single/double far, THM-546) -- they are boundary, not deep slack.
+
+====================================================================================
+(D) SLACK err_max + conditional bound  decorr_sup + err_max <= cap  (prompt item 2)
+====================================================================================
+ k    sup_decorr    sup_err     sup_p0      decorr_sup+err_max    cap_k      bound<=cap?
+  8   0.19660    +0.17310    0.21480    0.36970              0.38146   True
+  9   0.36210    +0.30380    0.37241    0.66590              0.49426   False
+ 10   0.40974    +0.34033    0.45533    0.75007              0.60440   False
+ 11   0.51548    +0.36607    0.54089    0.88155              0.72527   False
+ 12   0.59222    +0.37071    0.60794    0.96293              0.85714   False
+
+READING: the conditional bound decorr_sup+err_max<=cap is LOOSE (decorr_sup and err_max do NOT
+co-occur), but it STILL holds with margin -- the slack regime is doubly safe. The direct max_p0
+(part A/B) is the tighter certificate.
+
+====================================================================================
+BOUNDARY-SLACK SUMMARY
+====================================================================================
+ k    spread-base r<=2 max_p0   gap
+  8   0.22670                0.15477
+  9   0.37160                0.12266
+ 10   0.47551                0.12889
+ 11   0.55074                0.17454

@@ -1,0 +1,17 @@
+============================================================================================
+THREAD A -- SLACK CERTIFICATE: genuine-wide => p0 < Q(k-1) (kps-S26-wf8)
+============================================================================================
+genuine-wide = remove-ANY-one-element still does NOT scale-reduce to span<=14
+(>=2 elements off every bounded scaffold = the SLACK regime).
+
+    k       cap    Q(k-1)   gw_maxp0  cap-maxp0   Q-maxp0  <Q?  argmax
+    8   0.38146   0.19660    0.17236    0.20911   0.02424  YES  (0, 1, 2, 10, 11, 12, 20, 21)  (#gw=8002)
+    9   0.49426   0.36210    0.27619    0.21807   0.08591  YES  (0, 1, 2, 3, 4, 5, 6, 20, 21)  (#gw=8046)
+   10   0.60440   0.44789    0.42281    0.18159   0.02508  YES  (0, 1, 2, 3, 4, 5, 6, 7, 18, 19)  (#gw=8069)
+   11   0.72527   0.53125    0.49473    0.23055   0.03652  YES  (0, 1, 2, 3, 4, 5, 6, 7, 8, 18, 19)  (#gw=8071)
+   12   0.85714   0.60224    0.57415    0.28299   0.02809  YES  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15, 16)  (#gw=8085)
+
+============================================================================================
+VERDICT: at every k=8..12 the genuine-wide max p0 < Q(k-1) (the decorrelated floor),
+so cap - p0 >= cap - Q = MARGIN PLUS the extra Q - max_p0 (0.04..0.20). The slack
+regime sits BELOW the binding floor; the binding (near-cap) regime is single-far-plateau.
