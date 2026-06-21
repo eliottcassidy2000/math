@@ -1,0 +1,4 @@
+k=8: contmax(s>14, over period 420) = 1.00000 at s=175.000  14*margin=2.58810  OK (dilated-safe)
+k=9: contmax(s>14, over period 2940) = 0.89488 at s=2189.568  14*margin=1.85019  OK (dilated-safe)
+k=10: contmax(s>14, over period 5880) = 1.02755 at s=231.000  14*margin=1.72959  OK (dilated-safe)
+=> contmax < 14*margin => Delta_s<margin for all real far speed s>=14 => DILATED case closes too.

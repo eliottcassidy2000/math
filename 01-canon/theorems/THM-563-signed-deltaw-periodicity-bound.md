@@ -64,3 +64,14 @@ This **avoids the joint 2D ET-Koksma** (HYP-2779/2788 Thread-C "unavoidable") be
 k=8 dangerous bases (top-20 by Plat): 0 fails, worst `period-max/margin = 10.82 < 15`. (k=9,10 in
 progress.) Single-block domination (mine) + kps THM-557 lowering confirm the multi-block ≤ single-block
 side independently.
+
+
+## DILATED bases — the CONTINUOUS period-max (completes the composition)
+kps's single-perturbation reduction can give a DILATED base `d·X` (`X` bounded). By scale-invariance,
+`p0(d·X ∪ {w}) = p0(X ∪ {w/d})` (real far speed `s=w/d`), and `w·Δ_w(d·X) = d·(s·Δ_s(X))`. The
+deviation `f(s)=s·Δ_s(X) = Σ_j Σ_t ±S_j(frac(s·t))` is periodic in REAL `s` with the same period
+`P=7·lcm(X)` (since `P·t∈Z`), so `sup_{real s} f(s)` = max over `[0,P)` = a finite max at a sawtooth
+breakpoint. For real far speed `s>14`: `Δ_s ≤ contmax/s ≤ contmax/14`. VERIFIED `contmax < 14·margin`
+for consec_{k-1}: k=8 →`1.000`@s=175, k=9 →`0.895`@s=2189.6 (non-integer), k=10 →`1.028`@s=231; thresholds
+`14·margin = 2.59, 1.85, 1.73`. So `Δ_s < margin` for ALL real `s≥14` — **the dilated/scale-reduced case
+closes too**, and THM-563 composes fully with kps HYP-2788's reduction (which may produce dilated bases).
