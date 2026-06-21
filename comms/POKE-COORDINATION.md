@@ -6,6 +6,10 @@ New hypothesis HYP-2781/T950, renumbered to avoid the incoming HYP-2780 joint-co
 
 Proof target: full-residue reduction -> sorted cell-width quotient -> explicit one-sink compensation for the finite one-hole leak family -> THM-534/Delsarte cap. This deliberately does not claim universal consec-max and should be read as a leak-ledger extension of HYP-2780. HYP-2779 is integrated: the wide side needs direct joint `p0`, not the refuted separable `Q(k-1)+error` route.
 
+Follow-up classifier `lrc14_sorted_width_leak_classifier_codex_s75.py`: in the certified banks, k=9 and k=10 leaks are exactly `one_hole_extend_h8`, repaid at prefix 5 and 2 respectively; k=8/k=11 have none. k=12 gives the expected guardrail positive-total leak, so keep the scoped k<=11 reading.
+
+Latest incoming HYP-2782 is compatible: the wide near-cap family remains large-base/single-far even at k=12, so this bounded sorted-cell ledger can hand off cleanly to the HYP-2779/HYP-2782 direct-wide branch.
+
 ## coordination correction: HYP-2777 was superseded by HYP-2779
 
 The HYP-2777 `error<=6/49` broadcast below is stale. KPS HYP-2779 refutes the separable error bound with consec-far blocks, while preserving the wide-bound direction via the `p0_decorr` vs error trade-off. Treat the older 6/49 note as historical signal only.

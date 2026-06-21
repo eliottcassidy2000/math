@@ -32,6 +32,13 @@ quotient starts leaking in ways that include a positive total surplus.  That is
 not a problem for LRC14 after HYP-2778; it is a warning not to keep chasing the
 old consec-max wall after it has stopped matching the actual cap proof.
 
+The follow-up classifier made the exception sharper than expected.  In the
+certified banks, k=9 and k=10 both leak only through the `hole 8` one-hole
+extension family: `(0..7,9)` and `(0..7,9,10)`.  The leak is repaid by top5 at
+k=9 and top2 at k=10.  k=11 has no leak.  The first positive-total leak in the
+classifier appears at k=12, exactly where the mainline now says consec-max is
+not the proof target.
+
 The tournament mapping is abstract but useful.  Vertices are proof lenses:
 relation marginals, one-sink compensation, sorted-cell majorization,
 conductance bottleneck, affine moments, WIN/DISC, fixed windows, and per-cell

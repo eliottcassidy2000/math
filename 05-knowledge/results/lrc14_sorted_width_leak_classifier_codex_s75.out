@@ -1,0 +1,40 @@
+LRC14 sorted-width leak classifier (codex S75)
+method: exact W_a Fractions, sorted-prefix leaks vs consec/AP
+
+== k=8, span<=15: leaks=0 ==
+family histogram: {}
+repay-prefix histogram: {}
+
+== k=9, span<=14: leaks=1 ==
+family histogram: {'one_hole_extend_h8': 1}
+repay-prefix histogram: {5: 1}
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 9) family=one_hole_extend_h8 levels=(1, 2, 3, 4) gains=(top1:5/392, top2:11/1176, top3:37/4410, top4:11/2205) repay=5 dtotal=-17/1176 holes=(8,) extras=(9,) gaps=(1, 1, 1, 1, 1, 1, 1, 2)
+
+== k=10, span<=14: leaks=1 ==
+family histogram: {'one_hole_extend_h8': 1}
+repay-prefix histogram: {2: 1}
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) family=one_hole_extend_h8 levels=(1,) gains=(top1:53/8820) repay=2 dtotal=-151/5880 holes=(8,) extras=(10,) gaps=(1, 1, 1, 1, 1, 1, 1, 2, 1)
+
+== k=11, span<=14: leaks=0 ==
+family histogram: {}
+repay-prefix histogram: {}
+
+== k=12, span<=14: leaks=2 ==
+family histogram: {'holes2_extras2': 1, 'one_hole_extend_h11': 1}
+repay-prefix histogram: {3: 1, None: 1}
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) family=one_hole_extend_h11 levels=(3, 4, 5) gains=(top3:131/10780, top4:51/5390, top5:899/64680) repay=None dtotal=31/1980 holes=(11,) extras=(12,) gaps=(1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2)
+  E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14) family=holes2_extras2 levels=(2,) gains=(top2:409/194040) repay=3 dtotal=-247/21560 holes=(1, 3) extras=(12, 14) gaps=(2, 2, 1, 1, 1, 1, 1, 1, 1, 1, 2)
+
+cross-k synthesis
+all leak families: {'holes2_extras2': 1, 'one_hole_extend_h11': 1, 'one_hole_extend_h8': 2}
+positive-total leak records: 1
+  k=12 E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) family=one_hole_extend_h11 dtotal=31/1980
+
+Tournament Analysis over leak explanations
+pair observable = (explains_k9, explains_k10, survives_wider_span, finite_family, proof_ready)
+  single_largest_cell_sink: score=5, observable=(3, 3, 3, 2, 2)
+  one_hole_extension: score=4, observable=(3, 3, 2, 3, 2)
+  sorted_prefix_lemma: score=3, observable=(3, 2, 3, 2, 3)
+  fixed_window_lemma: score=2, observable=(1, 1, 1, 1, 2)
+  conductance_order: score=1, observable=(1, 1, 1, 1, 1)
+  raw_per_cell_max: score=0, observable=(0, 0, 0, 2, 0)

@@ -10,6 +10,7 @@ depends_on:
   - HYP-2778
   - HYP-2779
   - HYP-2780
+  - HYP-2782
   - THM-534
 related:
   - HYP-2760
@@ -51,6 +52,11 @@ direct joint `p0` bound.  HYP-2781 therefore targets the finite bounded
 compression certificate and should be read as supporting HYP-2780, not
 competing with it.
 
+Incoming HYP-2782 further cleans up the handoff: the wide near-cap family is
+uniformly large-base/single-far even when the k=12 bounded maximizer stops being
+consecutive.  So HYP-2781 can stay entirely bounded; the wide branch can use
+the HYP-2779/HYP-2782 regime split.
+
 ## Exact Scout
 
 Script:
@@ -63,6 +69,13 @@ Stored output:
 
 ```text
 05-knowledge/results/lrc14_cell_width_majorization_codex_s75.out
+```
+
+Leak classifier:
+
+```text
+04-computation/lrc14_sorted_width_leak_classifier_codex_s75.py
+05-knowledge/results/lrc14_sorted_width_leak_classifier_codex_s75.out
 ```
 
 The script enumerates anchored primitive full-residue shapes and computes exact
@@ -106,6 +119,26 @@ k=12: guardrail, not part of the bounded-consec target after HYP-2778.
 The k=12 line is useful negative signal.  It says sorted width majorization is
 not a universal theorem, exactly matching HYP-2778's correction that the
 project only needs a bounded cap certificate at the binding rows.
+
+The follow-up leak classifier extracts the finite exception ledger in the same
+certified spans:
+
+```text
+k=8:  leaks=0
+k=9:  leaks=1, family=one_hole_extend_h8, repay prefix=5
+      E=(0,1,2,3,4,5,6,7,9), holes=(8,), extras=(9,)
+k=10: leaks=1, family=one_hole_extend_h8, repay prefix=2
+      E=(0,1,2,3,4,5,6,7,9,10), holes=(8,), extras=(10,)
+k=11: leaks=0
+k=12: guardrail leaks=2:
+      one_hole_extend_h11 with positive total surplus,
+      holes2_extras2 with repayment by prefix 3.
+```
+
+Thus, in the actual bounded rows needed for the sorted-W consec certificate,
+the leak family is not diffuse: it is a single missing-runner ledger at `8`,
+with explicit finite repayment.  This is exactly the kind of exception that can
+be attached to HYP-2780's joint-coupling theorem.
 
 ## No-Go: Fixed Cell Windows
 
