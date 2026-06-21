@@ -1,0 +1,34 @@
+================================================================================
+GENERALIZED DOUBLET REFRAME of the genuine-wide leg  (claude-opus 2026-06-22)
+================================================================================
+
+(1) k=12 obstruction E* = (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+    base (<=14) = (0, 2, 4, 6, 8, 9, 10, 11, 12, 14)
+    far  (>14)  = (16, 18)   => far pair (16, 18), GAP g = 2 (spread doublet!)
+    p0(E*) = 238949/388080 = 0.615721  cap_12=0.85714  Q(11)=0.60224
+    genuine-wide? True   n_far(r) = 2
+
+(2) k=10  cap=0.60440  genuine-wide max by far-count r:
+     r=2: max p0=0.442289  cap-max=+0.16211  (0, 1, 3, 5, 7, 9, 11, 13, 15, 17)
+     r=3: max p0=0.371229  cap-max=+0.23317  (0, 1, 4, 5, 7, 10, 13, 16, 19, 22)
+     r=4: max p0=0.396206  cap-max=+0.20819  (0, 4, 7, 8, 12, 13, 16, 20, 24, 28)
+     GLOBAL max p0=0.442289 at r=2: (0, 1, 3, 5, 7, 9, 11, 13, 15, 17)
+     => max is a GENERALIZED DOUBLET (r=2)? True
+
+(2) k=11  cap=0.72527  genuine-wide max by far-count r:
+     r=2: max p0=0.521058  cap-max=+0.20422  (0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22)
+     r=3: max p0=0.502834  cap-max=+0.22244  (0, 2, 4, 6, 8, 10, 12, 14, 15, 18, 21)
+     r=4: max p0=0.471647  cap-max=+0.25363  (0, 3, 5, 6, 9, 12, 13, 15, 18, 21, 30)
+     GLOBAL max p0=0.521058 at r=2: (0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22)
+     => max is a GENERALIZED DOUBLET (r=2)? True
+
+(2) k=12  cap=0.85714  genuine-wide max by far-count r:
+     r=2: max p0=0.606303  cap-max=+0.25084  (0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20)
+     r=3: max p0=0.574302  cap-max=+0.28284  (0, 4, 6, 8, 9, 10, 12, 13, 14, 16, 20, 24)
+     r=4: max p0=0.573399  cap-max=+0.28374  (0, 2, 4, 6, 8, 10, 12, 14, 18, 20, 25, 29)
+     GLOBAL max p0=0.606303 at r=2: (0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20)
+     => max is a GENERALIZED DOUBLET (r=2)? True
+
+================================================================================
+If the genuine-wide max is ALWAYS r=2 (a generalized doublet {M,M+g} over a base),
+the R-tail framework extended to gap g covers the ENTIRE genuine-wide leg.
