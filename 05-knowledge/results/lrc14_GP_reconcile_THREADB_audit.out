@@ -1,0 +1,11 @@
+meas(G_{1..13}) = 0 0.0
+meas(G_P), P= [1, 2, 3, 5, 7, 8, 9, 11, 12, 13] = 14249/252252 0.05648716363002077
+  is 14249/252252: True
+
+=== thr_k = 1 - min_{|P|=13-k} meas(G_P), P subset {1..13} ===
+k=8 (|P|=5): min meas(G_P)=2243/5880=0.38146 at (1, 5, 7, 8, 9)  thr=3637/5880=0.61854  matches:True
+k=9 (|P|=4): min meas(G_P)=1979/4004=0.49426 at (1, 11, 12, 13)  thr=2025/4004=0.50574  matches:True
+k=10 (|P|=3): min meas(G_P)=55/91=0.60440 at (1, 12, 13)  thr=36/91=0.39560  matches:True
+k=11 (|P|=2): min meas(G_P)=66/91=0.72527 at (1, 13)  thr=25/91=0.27473  matches:True
+k=12 (|P|=1): min meas(G_P)=6/7=0.85714 at (1,)  thr=1/7=0.14286  matches:True
+k=13 (|P|=0): min meas(G_P)=1=1.00000 at ()  thr=0=0.00000  matches:True

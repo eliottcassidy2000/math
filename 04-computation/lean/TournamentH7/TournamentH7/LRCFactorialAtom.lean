@@ -336,6 +336,37 @@ theorem delsarte_bound_k11 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
   unfold q0
   omega
 
+/-! #### Delsarte dual feasibility for `k=9,10` and `k=11,12,13`
+
+Completing the Krawtchouk-nonnegativity audit (HYP-2726a): the dual readouts
+`g(t) = sum_{r<=t} y_r * C(t,r)` for the `k=9,10` and `k=11,12,13` duals are the
+nonnegative vectors `(18,5,0,0,2,3,0)` and `(6,3,1,0,0,1,3)`, each dominating the
+cover indicator `scale*[t=0]`. -/
+
+/-- Dual readout for `k=9,10`. -/
+def gK9 (t : Fin atomCount) : Int :=
+  sum7 fun r =>
+    if h : r < atomCount then
+      (if r <= t.val then yK9 ⟨r, h⟩ * chooseInt t.val r else 0)
+    else 0
+
+/-- The `k=9,10` dual is `(18,5,0,0,2,3,0)` -- Krawtchouk-nonnegative, dominating `18*[t=0]`. -/
+theorem gK9_dominates :
+    ∀ t : Fin atomCount, (if t.val = 0 then (18 : Int) else 0) <= gK9 t := by
+  native_decide
+
+/-- Dual readout for `k=11,12,13`. -/
+def gK11 (t : Fin atomCount) : Int :=
+  sum7 fun r =>
+    if h : r < atomCount then
+      (if r <= t.val then yK11 ⟨r, h⟩ * chooseInt t.val r else 0)
+    else 0
+
+/-- The `k=11,12,13` dual is `(6,3,1,0,0,1,3)` -- Krawtchouk-nonnegative, dominating `6*[t=0]`. -/
+theorem gK11_dominates :
+    ∀ t : Fin atomCount, (if t.val = 0 then (6 : Int) else 0) <= gK11 t := by
+  native_decide
+
 /-- Every scaled cheap direction is outside the generated tail45 strip.
 
 This is a Boolean audit theorem so the module remains self-contained without
