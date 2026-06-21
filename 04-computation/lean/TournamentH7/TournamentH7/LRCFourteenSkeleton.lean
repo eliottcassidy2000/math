@@ -19,8 +19,12 @@
 
     * GENUINELY OPEN / needing mathlib analysis (carried as `sorry` with a
       precise statement):
-        - THM-527 Part A : `rho* > 0  =>  M(S) >= 1/14`     (measure -> witness);
-        - THM-527 Part G : `inf rho* = c0 > 0`              (THE crux, OPEN-Q-108);
+        - THM-527 Part A : positive witness density => M(S) >= 1/14
+          (measure -> witness);
+        - the 1/7 witness floor `G2 >= m_P` over the remaining k=8..13 shapes
+          (the new easier witness route; k<=7 is pigeonhole-elementary);
+        - the parallel 2/7 `rhoStar` floor route (KPS Thread A now has exact
+          compact/asymptotic evidence, but it is not Lean-formalized here);
         - the gK8 concentration-extremality  `max_E L_yK8 <= 10*cap`;
         - the doublet R-tail (Mordell-Tornheim) uniform bound (THM-564);
         - the top-level assembly into `M(S) >= 1/14` for every covering 13-set.
@@ -88,11 +92,19 @@ theorem lonely_of_Mreach_ge (v : Fin 13 → ℤ) (hv : ∀ i, v i ≠ 0)
   -- and the sup is attained (compactness of the torus) -> a lonely witness.
   sorry
 
-/-! ## 2. THM-527 -- the lonely-density reformulation
+/-! ## 2. THM-527 -- density reformulations
 
-Two halves.  PART A is PROVED in the canon (the slow-fast change of variables):
-positive good-period density forces the reach bound.  PART G is the OPEN crux:
-the density floor `inf rho* = c0 > 0` over the compact bounded-spread shape space.
+There are now two related density routes:
+
+* the older `rho*` route at the `2/7` max-gap threshold;
+* the newer `G2` witness route at the `1/7` max-gap threshold.
+
+The current repo canon treats the `G2` route as the sharper final target.  The
+k<=7 binding cases are pigeonhole-elementary; the remaining `k=8..13` floor has
+large computational slack.  After KPS Thread A's exact compact/asymptotic
+rho-star engine, the older `rho*` route should also be kept as a live parallel
+route, not merely as historical scaffold.  This file records both DAGs, while
+only the new `G2` wiring below is added as no-sorry Lean glue in this session.
 
 We carry `rho*` abstractly as a nonnegative real attached to the data `(P, E)`
 (small part `P ⊆ {1,…,13}` and cluster co-offsets `E`). -/
@@ -145,8 +157,77 @@ theorem thm527_partG_uniform_floor :
 when the cluster has size 3, three phases always leave a max-gap `≥ 1/3 > 2/7`, so
 every `x ∈ G_P` is good and `rho* = meas(G_P) > 0`.  Carried as a hypothesis-form
 statement (`G_P` positivity is the proven LRC at 11 speeds). -/
-theorem thm527_k3_unconditional (s : Shape) (hk3 : True) (hGP : 0 < rhoStar s) :
+theorem thm527_k3_unconditional (s : Shape) (_hk3 : True) (hGP : 0 < rhoStar s) :
     0 < rhoStar s := hGP
+
+/-! ### 2b. The 1/7 witness route (KPS HYP-2825/HYP-2826/HYP-2827)
+
+`G2(P,E)` is the measure of good slow phases in `G_P` whose cluster phases leave a
+circular gap `> 1/7`.  This is the direct witness scale: a positive `G2` produces
+`M(S) >= 1/14`.  KPS HYP-2827 proves the binding `k<=7` cases by the elementary
+pigeonhole bound `maxgap >= 1/k >= 1/7`; only k=8..13 remains, with large slack.
+-/
+
+/-- The 1/7-scale witness density
+`G2(P,E)=meas{x in G_P : maxgap(frac(e_i*x)) > 1/7}`.  Abstract here; a full
+formalization will define it as a Lebesgue measure. -/
+opaque witnessG2 : Shape → ℝ
+
+/-- The exact admissible small-part floor from THM-530/KPS witness route:
+`m_P = 14249/252252`. -/
+def witnessMP : ℚ := 14249 / 252252
+
+/-- The proved floor is strictly positive, as rational arithmetic. -/
+theorem witnessMP_pos_rat : (0 : ℚ) < witnessMP := by
+  native_decide
+
+/-- The same strict positivity after casting to `ℝ`. -/
+theorem witnessMP_pos_real : (0 : ℝ) < (witnessMP : ℝ) := by
+  norm_num [witnessMP]
+
+/-- If a shape has the `m_P` witness floor, then its witness density is positive.
+This is the tiny arithmetic bridge that turns the exact floor into the THM-527
+Part-A input. -/
+theorem witness_floor_positive (s : Shape)
+    (hfloor : (witnessMP : ℝ) ≤ witnessG2 s) : 0 < witnessG2 s :=
+  lt_of_lt_of_le witnessMP_pos_real hfloor
+
+/-- Pure arithmetic core of the KPS HYP-2827 pigeonhole step: for any nonempty
+cluster of size `k<=7`, the pigeonhole lower bound `maxgap >= 1/k` is already at
+the 1/7 witness threshold.  The geometric max-gap theorem is separate; this is
+the exact threshold arithmetic. -/
+theorem one_seventh_le_inv_of_pos_le_seven (k : ℕ) (hkpos : 0 < k) (hk : k ≤ 7) :
+    (1 : ℝ) / 7 ≤ (1 : ℝ) / k := by
+  interval_cases k <;> norm_num at hkpos ⊢
+
+/-- Sorry-free logical glue for the new witness route, parameterized by the two
+analysis nodes: the uniform `G2>=m_P` floor and the direct-witness implication
+`G2>0 -> Mreach>=1/14`.  This is the route now preferred over the old `rho*`
+floor. -/
+theorem lrc14_from_witness_floor_given_nodes
+    (hfloor : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v)
+    (hR0 : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (1 : ℝ) / 14 ≤ Mreach v → ∃ t : ℝ, Lonely 14 v t) :
+    LRC14Statement := by
+  intro v hv
+  have hG2pos : 0 < witnessG2 (shapeOf v) :=
+    witness_floor_positive (shapeOf v) (hfloor v hv)
+  exact hR0 v hv (hpartA v hG2pos)
+
+/-- **TOP-LEVEL ASSEMBLY (1/7 witness route).**  This specializes the previous
+glue to the abstract `Mreach` reduction already carried in the skeleton.  It
+still depends on the open analytic nodes through `lonely_of_Mreach_ge`, but the
+witness-floor-to-top logical wiring is explicit and checked. -/
+theorem lrc14_from_witness_floor
+    (hfloor : ∀ v : Fin 13 → ℤ, (∀ i, v i ≠ 0) →
+      (witnessMP : ℝ) ≤ witnessG2 (shapeOf v))
+    (hpartA : ∀ v : Fin 13 → ℤ, 0 < witnessG2 (shapeOf v) →
+      (1 : ℝ) / 14 ≤ Mreach v) :
+    LRC14Statement :=
+  lrc14_from_witness_floor_given_nodes hfloor hpartA lonely_of_Mreach_ge
 
 /-! ## 3. The sector / p0 route (L0 layer): the wide bound `p0(E) ≤ cap_k`
 
@@ -264,7 +345,13 @@ theorem doublet_Rtail_uniform_bound :
 
 The cleanest closure: `10*q0 ≤ L_yK8 = 10q0 + q3 + 10q6` holds per-shape (PROVED
 sorry-free as `FactorialAtom.delsarte_bound_k8`), and the only remaining content
-is the scalar concentration-extremality `max_E L_yK8 ≤ 10·cap_k`. -/
+is the scalar concentration-extremality `max_E L_yK8 ≤ 10·cap_k`.
+
+Mac-mini HYP-2829 now refines this open node into a far-count reduction:
+bounded `r=0` is finite, the binding wide case is single-far `r=1` and should
+route through THM-563 periodicity, and `r>=2` has large decorrelation margin.
+That reduction is not formalized here, but it is the current intended structure
+of this `sorry`. -/
 
 /-- **DAG node L3a (gK8 per-shape bound, PROVED sorry-free upstream).**  For any
 nonnegative missed-count atom `q` (a genuine row distribution), `10*q0 ≤ L_yK8(q)`.
@@ -283,10 +370,15 @@ theorem gK8_dual_feasible :
   FactorialAtom.gK8_dominates
 
 /-- **DAG node L3b (gK8 concentration-extremality, OPEN).**  The scalar content:
-the maximum of the moment functional `L_yK8` over ALL `k`-speed configs equals its
-maximum over BOUNDED configs, which is `< 10·cap_k`.  Carried abstractly: a real
-functional `LyVal` on configs is maximized by a bounded config.  This is a
-smoothing/majorization lemma on the 7-simplex (HYP-2812).  OPEN. -/
+the maximum of the moment functional `L_yK8` over ALL `k`-speed configs is below
+`10·cap_k`.  HYP-2829's preferred split is:
+
+* `r=0` bounded configs: finite certificate;
+* `r=1` single-far configs: THM-563 periodicity, apparently the binding wide
+  case;
+* `r>=2`: decorrelated/far-count margin.
+
+Carried abstractly as a real functional `LyVal` on configs.  OPEN. -/
 theorem gK8_concentration_extremality
     (LyVal : (List ℤ) → ℝ) (k : ℕ)
     (boundedMax : ℝ) (hbound : boundedMax < 10 * (capRat k : ℝ)) :
@@ -379,6 +471,11 @@ obligations." -/
 #print axioms genuine_wide_rows_below_cap
 #print axioms sampleBoundedRows_ok
 #print axioms wide_bound_from_gK8
+#print axioms witnessMP_pos_rat
+#print axioms witnessMP_pos_real
+#print axioms witness_floor_positive
+#print axioms one_seventh_le_inv_of_pos_le_seven
+#print axioms lrc14_from_witness_floor_given_nodes
 -- The following SHOULD report `sorryAx` (open obligations):
 #print axioms thm527_partA_density_pos_implies_reach
 #print axioms thm527_partG_uniform_floor
@@ -386,6 +483,7 @@ obligations." -/
 #print axioms doublet_Rtail_uniform_bound
 #print axioms gK8_concentration_extremality
 #print axioms lrc14_from_thm527
+#print axioms lrc14_from_witness_floor
 
 end LRC14
 end LonelyRunner

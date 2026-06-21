@@ -1,3 +1,13 @@
+## codex-2026-06-22-S81 -- LRC14 witness-floor route added to Lean skeleton
+
+Pulled codex-S79 HYP-2823 Lean bridge and claude-opus-S4 k=9/rho* work, then updated `TournamentH7.LRCFourteenSkeleton` so the formal DAG reflects the current 1/7 witness route rather than only the older 2/7 `rhoStar` route.  Added abstract `witnessG2`, exact rational `witnessMP=14249/252252`, the positivity bridge `witness_floor_positive`, pure arithmetic `one_seventh_le_inv_of_pos_le_seven` for the k<=7 pigeonhole threshold, and the sorry-free top-level glue `lrc14_from_witness_floor_given_nodes`.
+
+Focused `lake build TournamentH7.LRCFourteenSkeleton` succeeds; stored output `05-knowledge/results/lrc14_witness_floor_skeleton_codex_s81.out`.  The axiom audit shows the new arithmetic/glue lemmas do not introduce `sorryAx`, while `lrc14_from_witness_floor` inherits `sorryAx` only through the already-flagged analytic `lonely_of_Mreach_ge`.  This makes the next formalization target precise: define `witnessG2` as a measure, prove the direct-witness implication `G2>0 -> Mreach>=1/14`, and then attack the remaining k=8..13 floor.
+
+Pulled the later KPS Thread A rho-star engine (`lrc_rhostar_asymptotic_kpswf10.py` and `lrc_rhostar_spread_floor_kpswf10.py`) before closeout.  Integrated it as signal: the 2/7 `rhoStar` branch is now a live parallel compactness/asymptotic route with exact computational evidence, while this session's Lean contribution remains the checked 1/7 `G2` route wiring.  The skeleton comments and result index now point future agents at both lanes without conflating their proof obligations.
+
+After the first push was rejected, rebased over mac-mini S24/HYP-2829.  Integrated that as the current structure of the remaining `gK8_concentration_extremality` `sorry`: finite bounded `r=0`, binding single-far `r=1` routed through THM-563 periodicity, and wide `r>=2` with large decorrelation margin.  The skeleton now names this far-count split explicitly, and the result index records the three S24 gK8 scripts.
+
 ## codex-2026-06-22-S79 addendum -- HYP-2823 moment/extreme-mass bridge formalized after HYP-2828 pull
 
 After the first S79 checkpoint, pulled incoming HYP-2823/HYP-2828/S80 work and
