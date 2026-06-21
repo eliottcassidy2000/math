@@ -1,0 +1,17 @@
+====================================================================================
+DOUBLET ALMOST-PERIODIC P/R DECOMPOSITION  (THREAD A, kps-Swf9)
+E_M = consec_{k-1} U {M, M+1}    g(M)=M*(p0(E_M)-Phi) = P(M)+R(M)
+====================================================================================
+
+[STEP 1] EXACT plateau Phi (frozen-doublet integral) vs opus late-window avg
+------------------------------------------------------------------------------------
+  k=8: Phi_exact = 92339/352800 = 0.261732   (opus late-win 0.261700, diff +0.000032)
+        cap_8=0.381463  margin=cap-Phi=0.119731  target 0.16
+  k=9: Phi_exact = 7895/19208 = 0.411027   (opus late-win 0.411009, diff +0.000018)
+        cap_9=0.494256  margin=cap-Phi=0.083229  target 0.16
+  k=10: Phi_exact = 23557/48020 = 0.490566   (opus late-win 0.490553, diff +0.000013)
+        cap_10=0.604396  margin=cap-Phi=0.113829  target 0.16
+  k=11: Phi_exact = 14085881/24893568 = 0.565844   (opus late-win 0.565827, diff +0.000017)
+        cap_11=0.725275  margin=cap-Phi=0.159431  target 0.16
+  k=12: Phi_exact = 55931399/88905600 = 0.629110   (opus late-win 0.629083, diff +0.000027)
+        cap_12=0.857143  margin=cap-Phi=0.228033  target 0.16
