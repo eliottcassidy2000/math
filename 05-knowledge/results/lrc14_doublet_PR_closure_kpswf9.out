@@ -3,3 +3,29 @@ DOUBLET P/R CLOSURE (THREAD A authoritative, kps-Swf9)  E_M=consec_{K-2} u {M,M+
 EXACT incl-excl split: g=M*(p0-Phi)=P(M)+R(M); P period-(7lcm) exact, R=M*(d2-d_inf)=O(1/M)
 close p0<=cap_K-0.16 for ALL M>=15 (margin 0.16)
 ============================================================================================
+
+K=8  P_per=420  Phi=0.106054  cap=0.381463  H_K=0.115408   [FULL period 420 exact]
+   p0(base)=0.000000  a_inf=0.037415  d_inf(adjacent-pair corr)=0.031224
+   EXACT period-max(P) over [15,435) = 0.74679 at M=293  (min -0.62908)
+   sup g(M) over [15,1614] = 1.38187 at M=1266  (P+R==g exact? True)
+   R=M*(d2-d_inf): global sup M*|R| = 1084.59661  sup|R|=0.73482
+          M0     sup|R|   sup M|R|  sup|d2-dinf|
+          15    0.73482  1084.5966      0.017755
+         100    0.73482  1084.5966      0.005977
+         300    0.73482  1084.5966      0.002059
+         800    0.73482  1084.5966      0.000784
+   CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.48161; M*=ceil(G/H_K)=13
+   finite window [15,15]: worst p0=0.075000 <= cap-0.16=0.221463 ? True  (cap-sup_p0=0.23690)
+
+K=9  P_per=420  Phi=0.261732  cap=0.494256  H_K=0.072524   [FULL period 420 exact]
+   p0(base)=0.147619  a_inf=0.048980  d_inf(adjacent-pair corr)=0.016154
+   EXACT period-max(P) over [15,435) = 1.12198 at M=259  (min -1.01134)
+   sup g(M) over [15,1614] = 1.26251 at M=1519  (P+R==g exact? True)
+   R=M*(d2-d_inf): global sup M*|R| = 915.78513  sup|R|=0.57165
+          M0     sup|R|   sup M|R|  sup|d2-dinf|
+          15    0.57165   915.7851      0.013796
+         100    0.57165   915.7851      0.003884
+         300    0.57165   915.7851      0.001666
+         800    0.57165   915.7851      0.000581
+   CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.69363; M*=ceil(G/H_K)=24
+   finite window [15,24]: worst p0=0.289765 <= cap-0.16=0.334256 ? True  (cap-sup_p0=0.20449)

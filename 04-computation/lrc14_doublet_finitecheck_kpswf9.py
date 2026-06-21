@@ -2,9 +2,14 @@
 # -*- coding: utf-8 -*-
 """kind-pasteur kpswf9 -- FINAL FINITE CHECK closing the binding doublet tail.
 
-Using J_sharp (lrc14_doublet_tvsharp) the cutoff is f0_sharp = floor(J_sharp/margin_inf)+1
-(108..344). This script does the HONEST exact finite check:
-  for every f in [15, f0_sharp]:  p0(E_f) = p0_fast(consec_{k-1} U {f,f+1})  is EXACT;
+CARDINALITY (CORRECTED): a k-RUNNER genuine-wide doublet is  E = consec_{k-2} U {f, f+1}
+(|E| = (k-2)+2 = k), compared to CAP[k].  (The single-far plateau consec_{k-1} U {1 far} also
+has k runners, defining QVAL[k]; the doublet's TIGHT base is consec_{k-2}.)  The binding value
+at f=21 is 1301/2940=0.4425 at k=10 -- matching the task statement.
+
+Using J_sharp (lrc14_doublet_tvsharp) the cutoff is f0_sharp = floor(J_sharp/margin_inf)+1.
+This script does the HONEST exact finite check:
+  for every f in [15, f0_sharp]:  p0(E_f) = p0_fast(consec_{k-2} U {f,f+1})  is EXACT;
   assert  p0(E_f) < cap_k  (with the actual margin), and  f*|p0-p0_inf| <= J_sharp.
 For f > f0_sharp the tail bound p0 <= p0_inf + J_sharp/f < cap closes it (PROVED).
 => p0(E_f) < cap_k for ALL f >= 15.  Reports the exact max, its f, and margin per k.

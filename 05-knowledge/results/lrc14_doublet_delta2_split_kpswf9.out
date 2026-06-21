@@ -57,3 +57,10 @@ K=11  base=consec_9=(0, 1, 2, 3, 4, 5, 6, 7, 8)  P_per=7*lcm(1, 2, 3, 4, 5, 6, 7
   d_inf(emp,large M)=0.010946  exact-match? False
   cap_11=0.725275  headroom H_K=cap-0.16-Phi=0.074708
   (2) P(M) single-far part exactly periodic (2nd-diff vanish, spot 60)? True
+  (3) R(M)=M*(d2-d_inf): sup|R| over [15,3000] = 3.63297
+          M0  sup|d2-dinf|  sup|R|=M|d2-dinf|  sup M^2|d2-dinf|
+          15      0.014580            3.63297         10554.295
+         100      0.003703            3.63297         10554.295
+         300      0.002856            3.63297         10554.295
+         800      0.001522            3.63297         10554.295
+        1500      0.001344            3.63297         10554.295
