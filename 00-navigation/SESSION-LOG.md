@@ -25,6 +25,11 @@ renumbered mine 2723->2724, 2729->2730. Reflection: the-lrc14-endgame-four-agent
 Scripts: lrc_q108_L7_{resonance_atlas,finite_convergence,tail_discrepancy,discrepancy_proof,r3_domination,
 atlas_exhaustive}_kps.py. A breadth workflow (apex-prime D=0 law, r=3 3D atlas, lonely-measure leads, diverse
 new angles) ran concurrently; leads in 04-computation/*_kpswf3.py.
+## mac-mini-2026-06-21-S12 -- FORMALIZED the Delsarte/moment-LP bound in Lean (all binding rows, sorry-free); L7 verified by kps -- HYP-2726d
+User: long overnight session toward the LRC proof + FORMALIZING it; pull/push often, keep workflows fresh, generate leads. Lean formalization + an investigation workflow; pulled/pushed ~14x.
+**MAIN DELIVERABLE -- LEAN (sorry-free, 0 errors):** machine-verified the per-shape Delsarte/moment-LP bound (THM-534/HYP-2726) in TournamentH7/LRCFactorialAtom.lean (mathlib-free core Lean, omega+native_decide). ALL binding rows: delsarte_bound_k8 (10 q0 <= 10q0+q3+10q6), delsarte_bound_k9 (18 q0 <= 18q0+5q1+2q4+3q5; k=9,10), delsarte_bound_k11 (6 q0 <= 6q0+3q1+q2+q5+3q6; k=11,12,13), each via LyK*_readout + nonnegativity, deps [propext, Quot.sound] (NO sorryAx). gK8_values/gK8_dominates: k=8 dual=(10,0,0,1,0,0,10) Krawtchouk-nonnegative >= 10[t=0] (Delsarte dual feasibility). PER-E half (q0 <= moment-LP functional). Coexists w/ codex's concurrent tail45 Lean (0 conflicts).
+**INTEGRATED:** kps HYP-2729/2730 VERIFIED L7 (the SOLE open LRC lemma) comfortable (margin >0.24): finite resonance atlas + 2D ETK 1/q decay over f2/f1 in (1,2.15). All 7 sector-route links now verified. opus Thread B continued Delsarte-LP saturation (on my lrc_delsarte_lp_macwilliams).
+**STATE:** Delsarte LP = the unifying framework (per-E bound PROVED + now FORMALIZED). Remaining rigor: (a) L7 atlas+ETK rigorous (kps); (b) consec saturates the LP (extremality); (c) Lean extremality + q0<->measS7. NEW: HYP-2726d; Lean delsarte_bound_k8/k9/k11.
 
 ## opus-2026-06-21-S1 -- THREAD B: Delsarte-LP saturation via Krawtchouk moments (HYP-2726)
 
