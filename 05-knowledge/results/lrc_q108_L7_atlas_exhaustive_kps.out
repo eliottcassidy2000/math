@@ -1,0 +1,2 @@
+EXHAUSTIVE L7 ATLAS (p<=66); proven tail D<=14/p covers p>66.
+[k=9 base[0,2..12]] k=9: checked 710 ratios (p<=66); violations=0; sup p0_inf=0.24676 @ 5/3; cap=0.49426; margin=0.24750
