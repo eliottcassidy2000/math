@@ -1,0 +1,46 @@
+HYP-2719/HYP-2720 bridge: factorial odd support vs Schur support-size
+Exact origin-atom diagnostics plus integer Schur/additive-triangle counts.
+
+  row                                  odd_share  Q0          allSchur posSchur cross+ crossDistinct signedOdd
+  two 4-blocks, ratio 2:1             0.502848  -0.0131569       27       10     10             8     False
+  two 4-blocks, moderate gap          0.522774  -0.0073245       29       12     12            10     False
+  two 4-blocks, wider gap             0.565010  -0.0104766       17        0      0             0     False
+  two 4-blocks, high relation phase   0.525331  -0.0148915       29       12     12            10     False
+  two 4-blocks, positive Q0           0.514338  +0.0045652       17        0      0             0      True
+  two 4-blocks, positive Q0 high      0.513937  +0.0040318       17        0      0             0      True
+  5+3 split                           0.478930  -0.0030300       17        0      0             0     False
+  3+3+2 split                         0.497536  -0.0008948       20        3      3             2     False
+  five 2-blocks                       0.632954  -0.0262884       32       11     11            10     False
+  seven singleton carriers            0.483337  -0.0109641       17        2      2             2     False
+
+CORRELATIONS (Pearson on this small exact bank)
+  corr(odd_share, all_ordered_schur)      = +0.532172
+  corr(odd_share, positive_schur)         = +0.374758
+  corr(odd_share, cross_positive_schur)   = +0.374758
+  corr(odd_share, cross_distinct_schur)   = +0.419479
+  corr(|Q0|, cross_positive_schur)        = +0.632631
+
+TOURNAMENT ANALYSIS
+  vertices: rows; observable: odd_share then cross-positive Schur count
+  switch/gauge: compare factorial support with Fourier support-size proxy
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3cycles=0
+  path:
+    five 2-blocks: odd_share=308384657123292/487215047000971 (0.632953886) cross+=11 Q0=-2447628624709/93106921650624 (-0.026288364)
+    two 4-blocks, wider gap: odd_share=80928202622/143233124623 (0.565010383) cross+=0 Q0=-12913427/1232593824 (-0.010476628)
+    two 4-blocks, high relation phase: odd_share=9275755/17656988 (0.525330538) cross+=12 Q0=-10659503/715813560 (-0.014891452)
+    two 4-blocks, moderate gap: odd_share=153963647/294513084 (0.522773538) cross+=12 Q0=-3495299/477209040 (-0.007324461)
+    two 4-blocks, positive Q0: odd_share=269668295555/524301955829 (0.514337764) cross+=0 Q0=15034635281/3293293590720 (0.004565228)
+    two 4-blocks, positive Q0 high: odd_share=128653729997855/250329885792153 (0.513936758) cross+=0 Q0=84067159079/20851143722640 (0.004031777)
+    two 4-blocks, ratio 2:1: odd_share=182414363/362762706 (0.502847619) cross+=10 Q0=-4138153/314524140 (-0.013156869)
+    3+3+2 split: odd_share=10426253663/20955767232 (0.497536241) cross+=3 Q0=-51629953/57697542630 (-0.000894838)
+    seven singleton carriers: odd_share=33889791384644837/70116339071146574 (0.483336578) cross+=2 Q0=-7586871109925/691974784572029 (-0.010964086)
+    5+3 split: odd_share=13627486/28453997 (0.478930464) cross+=0 Q0=-79935/26380816 (-0.003030043)
+
+SYNTHESIS
+  The two support notions are not the same.  Schur/additive triangles are
+  a Fourier relation-support proxy; odd/even W_j is the factorial-origin
+  support after miss-zeta inversion.  In this bank, odd_share is not a
+  monotone function of cross-Schur counts, so HYP-2720 should not replace
+  HYP-2719.  The useful split is sequential: HYP-2719 selects low-support
+  carrier packets; HYP-2720 taxes their origin atom in factorial parity.

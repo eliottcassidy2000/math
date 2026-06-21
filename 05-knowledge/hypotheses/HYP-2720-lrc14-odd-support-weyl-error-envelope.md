@@ -122,6 +122,30 @@ This keeps the user's odd-support intuition, but places it in the right
 currency: an envelope before scalarization, not a pointwise signed dominance
 claim.
 
+## Schur / Support-Size Bridge
+
+Follow-up script:
+
+```text
+04-computation/lrc14_odd_support_schur_bridge_codex_s69.py
+05-knowledge/results/lrc14_odd_support_schur_bridge_codex_s69.out
+```
+
+This compares the factorial odd-support share to the HYP-2719
+Schur/additive-triangle support-size proxy on the same split-row bank.
+
+The two support notions are related but not identical:
+
+```text
+corr(odd_share, cross_positive_schur) = +0.3748
+corr(|Q0|,    cross_positive_schur)  = +0.6326
+```
+
+So factorial odd support is not a monotone function of the Schur count.  This
+is useful: HYP-2719 should select low-support carrier packets in the Fourier
+relation lattice, and HYP-2720 should then tax the selected packets in the
+factorial-origin basis.  One should not replace one ledger by the other.
+
 ## Tournament Analysis
 
 Vertices are tested split rows.  Pairwise observable:

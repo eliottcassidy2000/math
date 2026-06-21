@@ -69,6 +69,15 @@ support-size/cycle-space lever and refutes the naive OCF-style signed odd-cycle
 transfer.  New detail file:
 `05-knowledge/hypotheses/HYP-2720-lrc14-odd-support-weyl-error-envelope.md`.
 
+Added bridge scout `04-computation/lrc14_odd_support_schur_bridge_codex_s69.py`
+with stored output
+`05-knowledge/results/lrc14_odd_support_schur_bridge_codex_s69.out`.  It puts
+HYP-2719 Schur/additive-triangle support-size counts and HYP-2720 factorial
+odd-support pressure on the same row bank.  Result: the ledgers are related but
+not the same (`corr(odd_share,cross_positive_schur)=+0.3748`,
+`corr(|Q0|,cross_positive_schur)=+0.6326`).  Proof order should be sequential:
+HYP-2719 selects low-support carrier packets, HYP-2720 taxes their origin atom.
+
 ## codex-2026-06-21-S68 -- HYP-2714 finite-ledger addendum for moderate multi-block budget
 
 Continued the LRC(14) sector-route proof session after HYP-2715--HYP-2717
