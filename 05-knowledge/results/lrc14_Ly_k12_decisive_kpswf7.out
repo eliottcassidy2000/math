@@ -9,3 +9,7 @@ k=8 L_y(consec)=2633/7350=0.358231 (canon: 2633/7350=0.358231); p0=0.327211
   consec maximizes L_y vs E*? False   (delta L_y = -0.020568)
 
 --- full L_y argmax scan k=8..13 (full-residue/primitive/span<=14) ---
+  k=8: L_y(consec)=0.358231  argmaxL_y=CONSEC  maxL_y=0.358231  #L_y-beaters=0  worst+0.000000
+  k=9: L_y(consec)=0.443401  argmaxL_y=CONSEC  maxL_y=0.443401  #L_y-beaters=0  worst+0.000000
+  k=10: L_y(consec)=0.528571  argmaxL_y=CONSEC  maxL_y=0.528571  #L_y-beaters=0  worst+0.000000
+  k=11: L_y(consec)=0.603243  argmaxL_y=CONSEC  maxL_y=0.603243  #L_y-beaters=0  worst+0.000000
