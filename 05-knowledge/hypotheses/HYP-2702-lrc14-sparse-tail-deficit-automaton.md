@@ -322,3 +322,10 @@ by the Boolean Gauss-sum formula.  The transfer lesson for HYP-2702 is that
 raw hit-count and band quotients are stabilizer-like coarse shadows; the
 generated signed residual language is the sparse-tail analogue of the magic
 phase resource.
+
+The later HYP-2707 magic-spread update adds an important caution: magic is not
+the same as being extremal or large.  On the tournament side, the H-maximizer
+can live in a stabilizer score class while the largest magic spread occurs in
+an unbalanced class.  The LRC analogue should therefore measure how much the
+generated residual profile is unpredictable from the coarse death-depth /
+hit-count quotient, not merely how large `p0` or a sparse coordinate is.
