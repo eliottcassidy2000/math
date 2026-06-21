@@ -17,6 +17,24 @@ This is a LINEAR FUNCTIONAL of the base's missed-distribution (p_0,..,p_6) -- th
 Matches the commensurable atlas non-resonant value (0.247). So the decorrelated two-far closes via this clean
 finite check on (p0,p1,p2) of bounded bases, margin >= 0.20.
 
+## MAIN RESULT (kps-S24): the decorrelated wide bound is MAXIMIZED at r=1 = Q(k-1) < cap (PROVEN finite check)
+The full check `sum_t P_t^{(r)} p_t(B)` over ALL r=1..k-1 and ALL bounded bases B (size k-r):
+```text
+  k    GLOBAL max over (r,B)     value     cap      margin    over_cap
+  8    r=1, consec_7             0.19660   0.38146  0.18486   0
+  9    r=1, consec_8             0.36210   0.49426  0.13216   0
+  10   r=1, consec_9             0.44789   0.60440  0.15651   0
+  11   r=1, consec_10            0.53125   0.72527  0.19402   0
+  12   r=1, consec_11            0.60224   0.85714  0.25490   0
+```
+**The max is ALWAYS at r=1 (single far) on the consec base = the plateau Q(k-1).** So for ANY wide config (any
+r>=1 far elements, any bounded base):
+> **p0_decorr(E) = sum_t P_t^{(r)} p_t(B) <= Q(k-1) < cap_k.**
+This PROVES the base-size domination (single-far dominates) FOR THE DECORRELATED bound, AND closes the
+decorrelated wide bound with the SAME margin as the finite check (Q(k-1) to cap). The decorrelated p0 never
+exceeds the single-far plateau -- more far elements (smaller base, P_t weights) strictly lower it. The wide
+bound = [decorrelated <= Q(k-1) < cap, DONE as a finite check] + [resonance error <= margin].
+
 ## Structure (the L7 closure)
 - DECORRELATED main term: `sum_t P_t^{(r)} p_t(B)` -- CLOSED FORM, < cap (finite check over bounded bases, all r).
 - RESONANT correction: for a COMMENSURABLE far group, P_t^{(r)} is replaced by the curve survival width
