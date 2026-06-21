@@ -1,5 +1,5 @@
 ---
-id: HYP-2750
+id: HYP-2754
 title: An AFFINE-symmetric (translation+dilation) CJJ-style LP hierarchy makes consec=AP the integral optimizer where the LINEAR (subspace) hierarchy collapses
 status: SUPPORTED (partial), exact k=8,9,10 -- the affine fix gives the right REDUCTION (localize to full-residue stratum + AP unique extremizer there) but NOT full CJJ-integrality, NOT a proof (kind-pasteur-2026-06-21 THREAD C)
 source: kind-pasteur-2026-06-21-S?? (THREAD C: linear-vs-nonlinear obstruction + affine fix)
