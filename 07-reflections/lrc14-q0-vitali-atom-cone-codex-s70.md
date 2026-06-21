@@ -42,8 +42,10 @@ The abstract LP makes the warning sharper.  If all signed atom moves on
 cheaply than the local finite-difference basis: preserving `W_1` costs only
 `7/5` by using `q_1=-6/5,q_6=1/5`, not the `3` units paid by `B_2`.  The
 canonical basis names the channel, but the generated LRC cone must exclude or
-tax these cheap high-state escapes.  That is where THM-558/HYP-2696 belongs in
-the q0/Vitali proof.
+tax these cheap high-state escapes.  THM-558/HYP-2696 belongs here, but it is
+not the whole story: the LP's cheap `r=2,4,5` moves have `U4_delta=0`, so
+Bonferroni4 alone cannot see them.  They have to be blocked by generated-word
+compatibility or by relation-support packet estimates.
 
 The next plausible lemma is:
 

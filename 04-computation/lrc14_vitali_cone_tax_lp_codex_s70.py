@@ -91,6 +91,16 @@ def finite_difference_tax(r: int) -> tuple[F, dict[int, F]]:
     return sum(abs(v) for v in q.values()), q
 
 
+def u4_delta(q: dict[int, F]) -> F:
+    """Change in U4=p0+p5+5p6 for normalized q0=1."""
+    return F(1) + q.get(5, F(0)) + 5 * q.get(6, F(0))
+
+
+def high_tail_slack(q: dict[int, F]) -> F:
+    """The Bonferroni4 slack component p5+5p6 of a normalized move."""
+    return q.get(5, F(0)) + 5 * q.get(6, F(0))
+
+
 def check_solution(r: int, q: dict[int, F]) -> None:
     assert sum(q.values()) == -1
     for i in range(1, r + 1):
@@ -100,13 +110,16 @@ def check_solution(r: int, q: dict[int, F]) -> None:
 def main() -> None:
     print("HYP-2721/S70 q0 Vitali-cone minimum tax LP")
     print("Normalize q0=1; minimize sum_{t>0}|q_t| while preserving W_1..W_r.\n")
-    print("  r  min_tax        support q_t                         local_B_tax")
+    print("  r  min_tax        U4_delta      tail45       support q_t                         local_B_tax")
     for r in range(0, M):
         tax, q = min_tax(r)
         check_solution(r, q)
         b_tax, b_q = finite_difference_tax(r)
         support = " ".join(f"q{t}={q[t]}" for t in range(1, M + 1) if q[t])
-        print(f"  {r}  {fmt(tax):18s} {support:45s} {fmt(b_tax)}")
+        print(
+            f"  {r}  {fmt(tax):18s} {fmt(u4_delta(q)):13s} "
+            f"{fmt(high_tail_slack(q)):13s} {support:45s} {fmt(b_tax)}"
+        )
         if tax < b_tax:
             b_support = " ".join(f"q{t}={b_q[t]}" for t in range(1, M + 1) if b_q[t])
             print(f"      cheaper than local finite difference B_{r+1}: {b_support}")
@@ -118,6 +131,9 @@ def main() -> None:
     print("  less non-origin L1 tax.  Therefore a proof cannot use the abstract atom")
     print("  cone alone: it must retain generated-word compatibility and high-tail")
     print("  Bonferroni/transfer constraints before evaluating Q0.")
+    print("  The U4/tail45 columns show which cheap abstract moves are already")
+    print("  visible to the Bonferroni4 high-tail slack, and which require the")
+    print("  stronger generated-word/relation-support ledger.")
 
 
 if __name__ == "__main__":

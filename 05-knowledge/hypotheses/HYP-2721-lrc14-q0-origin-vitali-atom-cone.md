@@ -184,6 +184,23 @@ generated LRC compatibility constraints, and it must keep the high-tail
 Bonferroni/transfer ledgers from THM-558/HYP-2696 in view.  Otherwise high
 `t` atoms can fake low-moment preservation too cheaply.
 
+The LP also prints the Bonferroni4 readout
+
+```text
+U4_delta = q_0 + q_5 + 5q_6.
+```
+
+The cheapest abstract moves at `r=1` and `r=3` are visible to `U4`:
+
+```text
+r=1: U4_delta=2
+r=3: U4_delta=5/2
+```
+
+But the cheapest moves at `r=2,4,5` have `U4_delta=0`.  Therefore THM-558 is
+a necessary high-tail ledger but not a complete replacement for generated-word
+compatibility and relation-support selection.
+
 ## Proof Route
 
 The proof target should be a `Q_0` Vitali-cone lemma:
