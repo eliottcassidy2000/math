@@ -1,0 +1,17 @@
+====================================================================================
+ROUTE 3 v2: PER-CELL Huffer-Shepp monotonicity of W_a
+====================================================================================
+
+[A] IS consec THE PER-CELL MAXIMISER?  W_a(consec) >= W_a(E) for ALL E, each a?
+    (If yes, the wall collapses to 6 independent per-cell inequalities.)
+====================================================================================
+
+  k=8: consec W_a = ['13/294', '13/294', '89/1470', '17/294', '13/294', '8/105']
+        stratum size = 319
+        cell a=1: consec BEATEN on W_a by 3 shapes; worst (0, 2, 3, 4, 5, 6, 7, 8) W_a=0.06293 vs consec 0.04422 (+0.01871)
+        cell a=2: consec BEATEN on W_a by 1 shapes; worst (0, 1, 2, 3, 4, 6, 8, 12) W_a=0.05357 vs consec 0.04422 (+0.00935)
+        cell a=5: consec BEATEN on W_a by 2 shapes; worst (0, 1, 2, 4, 5, 6, 7, 10) W_a=0.04626 vs consec 0.04422 (+0.00204)
+        >>> consec is NOT a per-cell maximiser: PER-CELL HS port FAILS at this k.
+
+  k=9: consec W_a = ['11/168', '73/1176', '15/196', '19/294', '43/735', '523/5880']
+        stratum size = 688
