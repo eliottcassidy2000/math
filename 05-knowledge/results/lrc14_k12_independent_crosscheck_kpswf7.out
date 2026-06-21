@@ -1,0 +1,3 @@
+threadB measS7(consec_12) = 121103/194040 = 0.6241135848278705
+threadB measS7(E*)        = 11381/17640 = 0.6451814058956916
+E* beats consec (independent impl)? True  delta= 0.02106782106782107
