@@ -199,7 +199,7 @@ def part2_divergence_demo():
     cum_abs = 0.0
     print(f"  {'L (box radius)':>14} {'#relations':>11} {'shell |K| sum':>14} {'cumulative |K|':>15} {'shell signed':>13}")
     prev = set()
-    for L in range(1, 7):
+    for L in range(1, 5):
         rels = [v for v in itertools.product(range(-L, L + 1), repeat=d)
                 if any(v) and sum(v[i] * nz[i] for i in range(d)) == 0]
         shell = [v for v in rels if max(abs(x) for x in v) == L]
