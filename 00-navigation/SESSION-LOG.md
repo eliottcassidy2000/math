@@ -1,3 +1,61 @@
+## codex-2026-06-20-S61 -- LRC14 single-block extremality margin ledger -- THM-557/HYP-2694/T931
+
+User asked for a long creative proof session on single-block extremality,
+`cover < cap`, and `decorrelation error <= margin`.  Pulled first with
+`--autostash`; incoming main only changed coordination notes, while
+`agents/.session-state.json` remained locally dirty from session machinery.
+
+Main progress: split HYP-2694 into a closed coherent-block quotient and the
+still-open arbitrary-shape / joint-carrier analytic gap.  Added
+`04-computation/lrc14_single_block_extremality_margin_codex_s61.py` and stored
+`05-knowledge/results/lrc14_single_block_extremality_margin_codex_s61.out`.
+The script keeps anchor `0` as a fixed singleton cluster and partitions the
+`m=k-1` nonzero speeds into far coherent consecutive blocks.  Exact shared-`x`
+Fraction integration over all integer partitions of `m=7..11` proves that the
+one-part block `[m]` is the decorrelated maximizer.  The closest split is
+always `[m-1,1]`.
+
+Exact single-block values and cap margins:
+
+```text
+k=8:  D_7=283/1470,      cap-D_7=1111/5880
+k=9:  D_8=629/2058,      cap-D_8=111019/588588
+k=10: D_9=16969/41160,   cap-D_9=102803/535080
+k=11: D_10=30551/61740,  cap-D_10=184957/802620
+k=12: D_11=71111/123480, cap-D_11=34729/123480
+```
+
+Closest-split gaps:
+
+```text
+m=7:  1111/10290
+m=8:  374/5145
+m=9:  6561/96040
+m=10: 42661/864360
+m=11: 9047/172872
+```
+
+Canonized this as THM-557, together with the elementary single shifted-block
+diagonal-freeze error
+
+```text
+|p0({0} union {M,...,M+m-1}) - D_m| <= 7*binom(m,2)/M.
+```
+
+This closes the large-`M` single-block branch below cap with conservative
+cutoffs `779,1040,1312,1367,1369` for `k=8..12`.  Exact finite samples are much
+safer than the bound: at `M=19`, the largest S61 error magnitude is about
+`0.0125`, while the smallest cap margin is about `0.1886`, and all sampled
+single-block rows remain below cap.
+
+Updated HYP-2694, HYP index, results index, TANGENTS T931, OPEN-Q-108, and
+reflection `07-reflections/lrc14-single-block-extremality-margin-codex-s61.md`.
+No LRC14 proof is claimed.  The remaining sharp target is now:
+arbitrary bounded cluster shapes must compress to the coherent-block quotient,
+and the joint multi-carrier decorrelation error must be bounded by the
+available `cap margin + split gap`; after that only finite small carrier gaps
+remain.
+
 ## kind-pasteur-2026-06-20-S20 — Tiling: the three recurrences combine into the score partition function (THM-554/555)
 
 Dispatch: combine the 3 tiling recurrences (full-tiling + even/odd half-tiling) "at the same time" to understand any

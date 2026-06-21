@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 — SINGLE-BLOCK EXTREMALITY: JOINT CARRIER GAP REMAINS (codex-2026-06-20-S61, HYP-2694/T931, THM-557).**
+The HYP-2694 single-block wide-cover route now has a closed coherent-block core.  THM-557 proves, by exact
+Fraction integration, that if anchor `0` is fixed and the `m=k-1` nonzero runners are partitioned into far
+coherent consecutive blocks, then the one-part block `[m]` maximizes the shared-`x` decorrelated cover for
+`m=7..11`.  Exact values/margins are `D_7=283/1470` with cap margin `1111/5880`, `D_8=629/2058` with
+`111019/588588`, `D_9=16969/41160` with `102803/535080`, `D_10=30551/61740` with `184957/802620`, and
+`D_11=71111/123480` with `34729/123480`.  Closest split is always `[m-1,1]`, with explicit split gaps
+`1111/10290`, `374/5145`, `6561/96040`, `42661/864360`, `9047/172872`.  Single shifted blocks also have the
+proved diagonal-freeze error `|p0({0}∪{M..M+m-1})-D_m|≤7*C(m,2)/M`, giving conservative large-M cutoffs
+`779/1040/1312/1367/1369`; exact `M=19` rows are already below cap.  The remaining open target is now sharply:
+prove arbitrary bounded cluster shapes compress to the coherent-block quotient, and prove the joint multi-carrier
+decorrelation error is bounded by the available `cap margin + split gap`; then finite-check the small carrier gaps.
+-> THM-557, HYP-2694, HYP-2684, HYP-2675, HYP-2695, OPEN-Q-108.
+
 **OPEN-Q-108 — TRUE-WIDE CAP-FLOOR GATE (codex-2026-06-20-S60, HYP-2695/T930).**
 HYP-2693's true-wide Bonferroni4 cap gate now has a sharper currency split.  THM-535 proves
 `cap_k>=floor_k=(k-6)/7`; exact S60 audit shows the true-wide rows with `k>=9` appear to satisfy
