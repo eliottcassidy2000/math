@@ -11,3 +11,11 @@ k=8  P=7*lcm=420  cap=2243/5880=0.381463
   sup_M |M^2*D(M)| = 31854.13632 at M=697  (D(M) ~ 1/M^2?)
   ASSEMBLE: p0(E_M) <= Phi_1 + (PM1 + sup|M*D|)/M ; at M=15: 3.310050  vs cap 0.381463  margin -2.928588
   (empirical sup p0(E_M) over [15,700] = 0.289765 at M=21)
+
+k=9  P=7*lcm=2940  cap=1979/4004=0.494256
+  SINGLE-FAR (THM-563): periodic=True  Phi_1=621/1715=0.362099  period-max PM1=43/49=0.87755
+  DRIFT sign(s) of D(M)=['+']
+  sup_M |M*D(M)|   = 34.57797 at M=697   (D(M) bounded*M?)
+  sup_M |M^2*D(M)| = 24100.84380 at M=697  (D(M) ~ 1/M^2?)
+  ASSEMBLE: p0(E_M) <= Phi_1 + (PM1 + sup|M*D|)/M ; at M=15: 2.725800  vs cap 0.494256  margin -2.231545
+  (empirical sup p0(E_M) over [15,700] = 0.442517 at M=21)
