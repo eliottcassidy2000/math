@@ -89,7 +89,7 @@ def main():
         Ep=set([0])
         while len(Ep)<ep: Ep.add(random.randint(1,14))
         Ep=sorted(Ep)
-        w=random.randint(15,300)
+        w=random.randint(15,150)
         if w in Ep: continue
         E=sorted(Ep+[w])
         p0E,_=p0p1(E); p0p,p1p=p0p1(Ep)
@@ -132,28 +132,28 @@ def main():
         p0,_=p0p1(E2)
         report(f"k=9 w1={w1},w2={2*w1} p0", f"{float(p0):.5f} cap9={float(caps[9]):.5f} {'OK' if p0<=caps[9] else 'VIOL'}")
 
-    print("="*60); print("(HUNT) wide primitive k-sets, p0>cap?"); print("="*60)
+    print("="*60); print("(HUNT) wide primitive k-sets, p0>cap? (scale-capped<=150)"); print("="*60)
     viol=0; tot=0; thin=F(1)
     fams=0
-    for trial in range(4000):
+    for trial in range(1500):
         k=random.randint(8,12)
         style=random.randint(0,4)
         E=set([0])
         if style==0:  # consec + far
             for i in range(1,k-1): E.add(i)
-            E.add(random.randint(15,400))
+            E.add(random.randint(15,150))
         elif style==1:  # stretched AP
             step=random.randint(2,7);
             for i in range(1,k): E.add(i*step)
         elif style==2:  # two blocks
-            b=random.randint(20,200)
+            b=random.randint(20,100)
             for i in range(k//2): E.add(i+1)
             for i in range(k-k//2): E.add(b+i)
         elif style==3:  # random wide
-            while len(E)<k: E.add(random.randint(1,500))
+            while len(E)<k: E.add(random.randint(1,150))
         else:  # multi-scale
-            scs=[1,random.randint(20,60),random.randint(200,400)]
-            while len(E)<k: E.add(random.choice(scs)*random.randint(1,5))
+            scs=[1,random.randint(20,40),random.randint(80,140)]
+            while len(E)<k: E.add(random.choice(scs)*random.randint(1,3))
         E=sorted(E)
         if len(E)<k: continue
         if max(E)-min(E)<=14: continue

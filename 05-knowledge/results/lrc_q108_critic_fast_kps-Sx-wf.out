@@ -1,0 +1,17 @@
+=== (1) chain identity exact (telescoping) ===
+  chain fails: 0/60
+=== (2) V-growth: V<=C*k FALSE, V<=7*sigma rigorous ===
+  max V/#nonzero=57.000 (large => V<=C*k FALSE)
+  max V/sigma=1.082
+  V>7*sigma violations: 0/200
+=== (3) k=9 separated two-far cutoff (core=consec7, w1, w2=2w1) ===
+  w1=40 p0=0.24107 cap9=0.49426 OK
+  w1=45 p0=0.23730 cap9=0.49426 OK
+  w1=48 p0=0.24048 cap9=0.49426 OK
+  w1=49 p0=0.26229 cap9=0.49426 OK
+  w1=50 p0=0.25143 cap9=0.49426 OK
+  w1=55 p0=0.23831 cap9=0.49426 OK
+  w1=60 p0=0.24405 cap9=0.49426 OK
+=== (4) targeted wide hunt (resonant/AP/2-block), p0>cap? scale<=140 ===
+  hunt: 0/904 violations, thinnest margin=0.12215
+DONE
