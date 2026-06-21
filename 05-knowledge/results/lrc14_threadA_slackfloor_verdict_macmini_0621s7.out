@@ -13,3 +13,24 @@ k=10: EXHAUSTIVE genuine-wide over span<=18 (27483 configs)  [12s]  slack floor 
    max gw p0 = 947/2205 = 0.429478   Q(k-1) = 0.447886   max-Q = -0.018408
    maximizer E = (0, 1, 2, 3, 4, 5, 6, 7, 17, 18)
 
+----------------------------------------------------------------------------------------------------
+k=11: EXHAUSTIVE genuine-wide over span<=18 (29724 configs)  [15s]  slack floor HOLDS
+   max gw p0 = 2257/4410 = 0.511791   Q(k-1) = 0.531252   max-Q = -0.019461
+   maximizer E = (0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18)
+
+----------------------------------------------------------------------------------------------------
+k=12: EXHAUSTIVE genuine-wide over span<=18 (24816 configs)  [14s]  slack floor *** BREAKS ***
+   max gw p0 = 238949/388080 = 0.615721   Q(k-1) = 0.602243   max-Q = +0.013478
+   maximizer E = (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+   OVER-Q configs (4 distinct), all p0 < cap = 0.8571:
+      p0=238949/388080=0.615721 (p0-Q=+0.013478, cap-p0=0.2414) E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)  [10 even + 2 odd-bridge [9, 11]]
+      p0=4301/7056=0.609552 (p0-Q=+0.007309, cap-p0=0.2476) E=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18)  [10 even + 2 odd-bridge [7, 9]]
+      p0=10697/17640=0.606406 (p0-Q=+0.004163, cap-p0=0.2507) E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18)  [9 even + 3 odd-bridge [3, 9, 15]]
+      p0=7129/11760=0.606207 (p0-Q=+0.003964, cap-p0=0.2509) E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18)  [10 even + 2 odd-bridge [3, 9]]
+
+====================================================================================================
+VERDICT: slack floor HOLDS at k=10,11 (0 over-Q, exhaustive span<=18; max p0 < Q with margin
+  0.018, 0.020). slack floor BREAKS at k=12 (exactly 4 over-Q genuine-wide configs, even-AP +
+  >=2-odd-bridge family). The consec doublet is NOT the k=12 maximizer (doublet<Q<breaker).
+  HYP-2788 (slack floor) and HYP-2797 (doublet-maximizer) are BOTH FALSE at k=12.
+  All breakers have p0 < cap (margin >= 0.24): LRC cap NOT violated; only the Q(k-1) reduction.

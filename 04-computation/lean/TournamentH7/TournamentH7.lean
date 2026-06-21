@@ -42,6 +42,10 @@
     · TournamentH7.LRCFactorialAtom — Finite factorial atom identities for Q₀.
     · TournamentH7.LRCBooleanTypeCut — finite arithmetic for the HYP-2791
                                       Boolean/type signed cut.
+    · TournamentH7.LRCPeriodmaxCertificate — finite arithmetic kernel for the
+                                      completed THM-563 period-max audit.
+    · TournamentH7.LRCGenuineWideCorrection — finite arithmetic kernel for the
+                                      HYP-2805 genuine-wide margin correction.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
@@ -96,5 +100,7 @@ import TournamentH7.OpSymmetry
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
+import TournamentH7.LRCPeriodmaxCertificate
+import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.Verify

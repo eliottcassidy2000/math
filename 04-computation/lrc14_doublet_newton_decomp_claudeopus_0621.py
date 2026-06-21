@@ -11,7 +11,7 @@ mac-mini Thread-B Newton peel:  p0(B u {M,M+1}) = p0(B) + [p0(B u{M})-p0(B)]
 
 PREDICTION (claude-opus): M*error(M) = (M*Delta_M) + (M*Delta_{M+1}) + M*(C(M)-C_sat)
   = [periodic, THM-563] + [~periodic] + [curvature approach, decaying].
-This EXPLAINS HYP-2796's 'almost periodic' (periodic single-far parts + decaying curvature),
+This EXPLAINS HYP-2797's 'almost periodic' (periodic single-far parts + decaying curvature),
 and gives  |M*error| <= 2*period-max(B) + sup_M |M*(C(M)-C_sat)|.
 If the curvature-approach term is bounded/small, the doublet error is pinned to the KNOWN
 single-far period-max (THM-563), closing the genuine-wide binding case via existing machinery.

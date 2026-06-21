@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 """claude-opus 2026-06-21: EXACT characterization of the doublet joint curvature C(M)
-as a SIGNED double-Dedekind sum — pins down the single object codex must bound (HYP-2796).
+as a SIGNED double-Dedekind sum — pins down the single object codex must bound (HYP-2799).
 
 From the pointwise second difference of the cover indicator (derivation in HYP-2797):
   C(M) = p0(B+{M,M+1}) - p0(B+{M}) - p0(B+{M+1}) + p0(B)

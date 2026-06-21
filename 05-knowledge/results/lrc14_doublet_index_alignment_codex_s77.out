@@ -1,0 +1,24 @@
+========================================================================================
+LRC14 doublet index alignment audit (codex-S77)
+========================================================================================
+Actual row-size convention: E_N(M)={0,...,N-3} union {M,M+1}.
+
+Actual-size doublet maxima over 15<=M<=120:
+  N |E|   M*                 p0       cap_N-p0      Q(N-1)-p0
+  8   8   20             85/588        199/840         51/980
+  9   9   21         9371/32340   21493/105105     3275/45276
+ 10  10   21          1301/2940     6187/38220      221/41160
+ 11  11   21         5617/10780   28619/140140  13847/1358280
+ 12  12   21        14302/24255     6488/24255    5701/452760
+
+Incoming signed-bound script label audit:
+  It builds range(k-1) union {M,M+1}, which has actual size k+1.
+label k actual N   M*                 p0       cap_k-p0       cap_N-p0
+      8        9   21         9371/32340     1977/21560   21493/105105
+      9       10   21          1301/2940    5438/105105     6187/38220
+     10       11   21         5617/10780   11679/140140   28619/140140
+     11       12   21        14302/24255   42764/315315     6488/24255
+     12       13   15        11423/17640     3697/17640            n/a
+
+Verdict: use actual size N for cap_N and Q(N-1).
+The cap margins only get larger after correcting the shifted labels for N=9..12.

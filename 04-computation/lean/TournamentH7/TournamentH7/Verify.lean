@@ -44,9 +44,104 @@ import TournamentH7.ProductSum
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
+import TournamentH7.LRCPeriodmaxCertificate
+import TournamentH7.LRCGenuineWideCorrection
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
+
+/-! ### LRC14 HYP-2805 genuine-wide correction kernel -/
+
+theorem lrc_genuine_wide_correction_all_reported_rows_below_cap_audit :
+    ∀ r : Fin 5,
+      0 < LonelyRunner.GenuineWideCorrection.marginNum
+        (LonelyRunner.GenuineWideCorrection.maxRow r) :=
+  LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap
+#print axioms lrc_genuine_wide_correction_all_reported_rows_below_cap_audit
+
+theorem lrc_genuine_wide_correction_k10_smallest_margin_audit :
+    LonelyRunner.GenuineWideCorrection.marginLE LonelyRunner.GenuineWideCorrection.k10
+        LonelyRunner.GenuineWideCorrection.k8 = true ∧
+      LonelyRunner.GenuineWideCorrection.marginLE LonelyRunner.GenuineWideCorrection.k10
+        LonelyRunner.GenuineWideCorrection.k9 = true ∧
+      LonelyRunner.GenuineWideCorrection.marginLE LonelyRunner.GenuineWideCorrection.k10
+        LonelyRunner.GenuineWideCorrection.k10 = true ∧
+      LonelyRunner.GenuineWideCorrection.marginLE LonelyRunner.GenuineWideCorrection.k10
+        LonelyRunner.GenuineWideCorrection.k11 = true ∧
+      LonelyRunner.GenuineWideCorrection.marginLE LonelyRunner.GenuineWideCorrection.k10
+        LonelyRunner.GenuineWideCorrection.k12 = true :=
+  LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin
+#print axioms lrc_genuine_wide_correction_k10_smallest_margin_audit
+
+theorem lrc_genuine_wide_correction_robust_margin_flags_audit :
+    0 <= LonelyRunner.GenuineWideCorrection.robustNum
+        LonelyRunner.GenuineWideCorrection.k8 ∧
+      0 <= LonelyRunner.GenuineWideCorrection.robustNum
+        LonelyRunner.GenuineWideCorrection.k9 ∧
+      LonelyRunner.GenuineWideCorrection.robustNum
+        LonelyRunner.GenuineWideCorrection.k10 < 0 ∧
+      0 <= LonelyRunner.GenuineWideCorrection.robustNum
+        LonelyRunner.GenuineWideCorrection.k11 ∧
+      0 <= LonelyRunner.GenuineWideCorrection.robustNum
+        LonelyRunner.GenuineWideCorrection.k12 :=
+  LonelyRunner.GenuineWideCorrection.robust_margin_flags
+#print axioms lrc_genuine_wide_correction_robust_margin_flags_audit
+
+theorem lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit :
+    LonelyRunner.GenuineWideCorrection.k9.basePrimitive = false ∧
+      LonelyRunner.GenuineWideCorrection.k10.basePrimitive = false :=
+  LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail
+#print axioms lrc_genuine_wide_correction_nonprimitive_base_guardrail_audit
+
+/-! ### LRC14 THM-563 period-max certificate kernel -/
+
+theorem lrc_periodmax_all_worst_rows_headroom_positive_audit :
+    ∀ r : Fin 6,
+      0 < LonelyRunner.PeriodmaxCertificate.headroomNum
+        (LonelyRunner.PeriodmaxCertificate.worstRow r) :=
+  LonelyRunner.PeriodmaxCertificate.all_worst_rows_headroom_positive
+#print axioms lrc_periodmax_all_worst_rows_headroom_positive_audit
+
+theorem lrc_periodmax_k9_global_worst_among_worst_rows_audit :
+    LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k8
+        LonelyRunner.PeriodmaxCertificate.k9 = true ∧
+      LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k9
+        LonelyRunner.PeriodmaxCertificate.k9 = true ∧
+      LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k10
+        LonelyRunner.PeriodmaxCertificate.k9 = true ∧
+      LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k11
+        LonelyRunner.PeriodmaxCertificate.k9 = true ∧
+      LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k12
+        LonelyRunner.PeriodmaxCertificate.k9 = true ∧
+      LonelyRunner.PeriodmaxCertificate.ratioLE LonelyRunner.PeriodmaxCertificate.k13
+        LonelyRunner.PeriodmaxCertificate.k9 = true :=
+  LonelyRunner.PeriodmaxCertificate.k9_is_global_worst_among_worst_rows
+#print axioms lrc_periodmax_k9_global_worst_among_worst_rows_audit
+
+theorem lrc_periodmax_count_totals_audit :
+    LonelyRunner.PeriodmaxCertificate.totalBases = 12805 ∧
+      LonelyRunner.PeriodmaxCertificate.totalTrivial = 3995 ∧
+      LonelyRunner.PeriodmaxCertificate.totalScanned = 8810 ∧
+      LonelyRunner.PeriodmaxCertificate.totalSkipped = 0 ∧
+      LonelyRunner.PeriodmaxCertificate.totalPassed = 12805 ∧
+      LonelyRunner.PeriodmaxCertificate.totalFailed = 0 :=
+  LonelyRunner.PeriodmaxCertificate.count_totals
+#print axioms lrc_periodmax_count_totals_audit
+
+theorem lrc_periodmax_every_count_row_passes_audit :
+    ∀ r : Fin 6,
+      (LonelyRunner.PeriodmaxCertificate.countRow r).passed =
+          (LonelyRunner.PeriodmaxCertificate.countRow r).bases ∧
+        (LonelyRunner.PeriodmaxCertificate.countRow r).failed = 0 ∧
+        (LonelyRunner.PeriodmaxCertificate.countRow r).skipped = 0 :=
+  LonelyRunner.PeriodmaxCertificate.every_count_row_passes
+#print axioms lrc_periodmax_every_count_row_passes_audit
+
+theorem lrc_periodmax_k8_periodmax_is_two_audit :
+    LonelyRunner.PeriodmaxCertificate.k8.pmNum = 2 ∧
+      LonelyRunner.PeriodmaxCertificate.k8.pmDen = 1 :=
+  LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two
+#print axioms lrc_periodmax_k8_periodmax_is_two_audit
 
 /-! ### LRC14 Boolean/type signed aggregate cut -/
 

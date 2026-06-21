@@ -256,6 +256,46 @@ periodmax inequality statement shape
 The full row atlas can remain Python-generated until the theorem boundary is
 stable.
 
+### S77 addendum: periodmax arithmetic kernel formalized
+
+Codex S77 added a focused certificate kernel for Obligation B/D:
+
+```text
+04-computation/lrc_periodmax_worstrow_certificate_codex_s77.py
+04-computation/lean/TournamentH7/TournamentH7/LRCPeriodmaxCertificate.lean
+```
+
+The Python kernel recomputes the exact `Plat(B)` margins for the six per-k
+worst rows of the completed THM-563 audit, brute-verifies the k=8 and k=9
+endpoint-period maxima, and records exact headrooms:
+
+```text
+k=8   303/392
+k=9   44585/196196
+k=10  464839/535080
+k=11  5417609/2942940
+k=12  2664689/1177176
+k=13  2207057/588588
+```
+
+The Lean module is intentionally not the 12805-row exhaustive proof.  It is the
+small arithmetic nucleus surrounding the completed finite audit: all six
+worst rows have positive headroom, the k=9 even AP is the largest ratio among
+the six per-k worst rows, the count checksum is
+`12805` bases / `3995` trivial / `8810` scanned / `0` skipped / `12805` passed /
+`0` failed, and the k=8 dilated AP normalization is `periodmax=2`.
+Focused build:
+
+```text
+lake build TournamentH7.LRCPeriodmaxCertificate
+```
+
+succeeds and is stored at
+`05-knowledge/results/lrc_periodmax_certificate_lean_codex_s77.out`.
+This moves the integer single-far bounded-base leg from "computed result" to a
+Lean-facing arithmetic import boundary.  It does not touch the remaining
+genuine-wide theorem or the continuous dilation handoff.
+
 ## Tournament Analysis
 
 Vertices tested as proof carriers:

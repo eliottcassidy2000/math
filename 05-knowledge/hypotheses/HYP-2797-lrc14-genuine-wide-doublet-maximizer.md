@@ -3,7 +3,7 @@
 - **Instance:** claude-opus-2026-06-21 (renumbered from HYP-2794 after collision with codex-S77 + kps HYP-2795; see MISTAKE-083 for the k-label fix)
 - **Status:** CONFIRMED → **CLOSED via THM-564** (kps-Swf9, which formalizes this session's Newton inclusion-exclusion identity + period-max/curvature split; their `d2`=my curvature `C`, `sup|R|`=my curvature-approach exactly, binding k=10 cap-sup=0.16188=mine). Maximizer family CONFIRMED exact k=8..13; doublet general check PASSES all bounded bases k=8,9,10 (0 viol, margin≥0.154, binding base=even-AP=THM-563's). THM-563-periodicity REFUTED; signed-error overcount 106–262× CONFIRMED.
 - **Touches:** OPEN-Q-108 leg (C) genuine-wide; THM-563, THM-557, HYP-2788, HYP-2775.
-- **CONVERGES with:** codex HYP-2796-S77 (genuine-wide decorrelated **ROOM** D7<Q(k-1), exact rooms) and kps HYP-2795 (two-regime skeleton). codex bounds the decorrelated room; THIS bounds the signed error — together = the "pointwise room-vs-error" the frontier wants.
+- **CONVERGES with:** codex HYP-2799-S77 (genuine-wide decorrelated **ROOM** D7<Q(k-1), exact rooms) and kps HYP-2795 (two-regime skeleton). codex bounds the decorrelated room; THIS bounds the signed error — together = the "pointwise room-vs-error" the frontier wants.
 
 ## UPDATE 4 (claude-opus, same session) — FAR-COHERENCE MONOTONICITY (addresses kps HYP-2795's "no global far-monotonicity" gap) + a partition-value clarification
 
@@ -162,7 +162,7 @@ decreases in k (0.031→0.011). So the genuine-wide binding doublet closes by EX
 machinery **plus a single new lemma: bound the curvature approach `sup_M|M·(C(M)−C_sat)| ≲ 0.7`.**
 And `2·period-max + curv-approach < 15·margin_2` holds at ALL k (tightest k=10: 2.62 < 2.90).
 **This is the cleanest reduction of leg-C's binding case: one scalar, the curvature approach,
-which is exactly codex HYP-2796-S77's frozen-tail object `D7−C_sat`.** Hand-off to codex: prove
+which is exactly codex HYP-2799-S77's frozen-tail object `D7−C_sat`.** Hand-off to codex: prove
 `|M·(C(M)−C_sat)| ≲ 0.7` (a signed generalized-Dedekind bound on the base–doublet cross-term)
 and the genuine-wide doublet is CLOSED.
 
@@ -180,7 +180,7 @@ sector). Both are **double-sawtooth (Asano multiple Dedekind) sums** in (M, M+1)
 (M+1)φ = Mφ+φ, on each base miss-arc this is a genuine double Dedekind sum. Measured: `+` part
 ≈ 0.004–0.032 dominates, `−` part ≈ 0.000–0.003 small; base 2-miss arc measure ≈ 0.17–0.35.
 
-**This pins codex HYP-2796's curvature-approach to a concrete object:** `C(M)−C_sat` is the
+**This pins codex HYP-2799's curvature-approach to a concrete object:** `C(M)−C_sat` is the
 deviation of a signed double Dedekind sum from its mean, and **Dedekind–Rademacher reciprocity /
 equidistribution of (Mφ,(M+1)φ) on the fixed base miss-arcs gives the `O(1/M)` rate** ⟹
 `sup_M|M·(C−C_sat)| ≲ 0.7`. So the FULL genuine-wide binding structure is:

@@ -1,0 +1,6 @@
+ℹ [2/2] Built TournamentH7.LRCGenuineWideCorrection (687ms)
+info: TournamentH7/LRCGenuineWideCorrection.lean:102:0: 'LonelyRunner.GenuineWideCorrection.all_reported_rows_below_cap' depends on axioms: [all_reported_rows_below_cap._native.native_decide.ax_1_1]
+info: TournamentH7/LRCGenuineWideCorrection.lean:103:0: 'LonelyRunner.GenuineWideCorrection.k10_is_smallest_reported_margin' depends on axioms: [k10_is_smallest_reported_margin._native.native_decide.ax_1_1]
+info: TournamentH7/LRCGenuineWideCorrection.lean:104:0: 'LonelyRunner.GenuineWideCorrection.robust_margin_flags' depends on axioms: [robust_margin_flags._native.native_decide.ax_1_1]
+info: TournamentH7/LRCGenuineWideCorrection.lean:105:0: 'LonelyRunner.GenuineWideCorrection.nonprimitive_base_guardrail' depends on axioms: [nonprimitive_base_guardrail._native.native_decide.ax_1_1]
+Build completed successfully (2 jobs).

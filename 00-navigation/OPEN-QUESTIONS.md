@@ -1,7 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 — THE WIDE BOUND REDUCES TO CONCENTRATION EXTREMALITY OF L_yK8 (claude-opus-2026-06-22, HYP-2812). [LEAD]**
+The cleanest closure of the whole wide region: **`max_E L_yK8` over ALL k-speed configs = `max_BOUNDED L_yK8` = MB < 10cap** (gK8=(10,0,0,1,0,0,10) on the miss-distribution, `L_yK8=10q0+q3+10q6`, `q0=p0`). VERIFIED EXACT over ~100k wide configs (incl. ALL binding families + small-M R-tail bumps): k=10 MB=5.286 vs MW=4.813; k=11 6.032 vs 5.632; k=12 6.641 vs MW=6.286=**E*** (the dichotomy-breaker — BELOW MB). **NO wide config exceeds the bounded max.** So gK8's BOUNDED cert is GLOBAL ⟹ `p0 <= cap` for all E with NO dichotomy, NO doublet, NO R-tail, NO frozen room — the wide leg collapses into the BOUNDED leg. MECHANISM/proof-route: gK8 charges the EXTREME miss-counts q0,q6; both are individually maximized by CONCENTRATED (bounded/slowest) configs (q6=all-missed maximized by slowest speeds; q0=coverage by the tight instance consec), and decorrelation smooths the miss-distribution to the MIDDLE (= the survival-middle-mass currency HYP-2701, now MONOTONE). REMAINING: prove concentration extremality (global extremality of consec under gK8 = a smoothing/majorization lemma on the 7-simplex). The explicit FALLBACK (if concentration extremality resists proof) is the generalized-doublet + Tornheim-R-tail route (HYP-2807/2808: max gw config is a generalized doublet {M,M+g}, R-tail = Mordell-Tornheim double sum |R_g|<~2.9 uniform). → HYP-2812, HYP-2811, HYP-2809, HYP-2807, HYP-2808, HYP-2701, THM-534, THM-538, mac-mini gK8/HYP-2810.
+
+
+**OPEN-Q-108 — WIDE REGION UNIFIED BY gK8 + the GENERALIZED-DOUBLET / TORNHEIM-R-TAIL frame (claude-opus-2026-06-22, HYP-2807/2808/2809).**
+Two convergent closures for the whole WIDE bound `p0(E)<cap_k`, k=8..12:
+- **(CLEANEST) gK8 unifies all wide families.** The Delsarte dual `gK8=(10,0,0,1,0,0,10)` on the MISS-DISTRIBUTION `q_t=meas{exactly t of 6 sectors missed}` (`q0=p0`) gives `10*p0 <= L_yK8 = 10q0+q3+10q6` (trivial) with content `max_E L_yK8 <= 10*cap`. VERIFIED EXACT (HYP-2809) on ALL binding wide families with margin >= 0.138 (p0-units): genuine-wide maximizers, mac-mini's k=12 breaker `E*`, single-far near-cap plateau, AND dilated even-AP. **ONE moment cert bounds single-far + genuine-wide + dilated together -- superseding the binding/genuine-wide DICHOTOMY.** Remaining: `max_E L_yK8<=10cap` over ALL wide E (Delsarte LP feasibility for wide q-moments).
+- **(EXPLICIT) generalized doublet + Tornheim R-tail.** The genuine-wide maximizer is a GENERALIZED doublet `{M,M+g}` (any base, any gap g -- HYP-2807); mac-mini's k=12 `E*` is the g=2 slice, NOT a new regime. THM-564's P/R split extends to gap g; the R-tail `R_g=M*(d2_g-d_inf)` is a convergent MORDELL-TORNHEIM double sum `<= (1/pi^3)*(#sector-pairs)*S`, `S~5.95`, giving `|R_g|<~2.9` ABSOLUTE & UNIFORM over (base,gap) (HYP-2808; empirical sup 2.24). => uniform `G~4.4`, cutoff `M*~28`.
+- **SYNTHESIS (gK8 + R-tail):** applying the P/R framework to `L_yK8` (10x margin) absorbs the R-tail trivially; moment frozen room `Phi_Ly(B,g)<10cap` HOLDS (margin >=1.81), `M*_Ly~28`.
+- **DEFINITIONAL FIX (reconciles kps HYP-2805 vs mac-mini-S7):** "genuine-wide" = IRREDUCIBLE (remove-any-one stays wide), NOT just `primitive(FULL E)+span>14`. kps's k=10 `{0,2,...,14,15,16}` (265/588, margin 0.1537) is BINDING -- remove 15 -> all-even -> `2*consec_9` -> bounded -- so THM-563's job. The true IRREDUCIBLE genuine-wide max at k=10 is 0.4423 (margin **0.162 >= 0.16**). gK8 makes the split moot. -> HYP-2807, HYP-2808, HYP-2809, THM-564, THM-563, THM-534, HYP-2805, mac-mini-S7.
+
+
 **OPEN-Q-108 — CORRECTION TO THE GENUINE-WIDE MARGIN CLAIM (kind-pasteur-2026-06-21-kpswf9, HYP-2805): the consec doublet is NOT the genuine-wide maximizer; robust margin 0.16 FAILS at k=10 (true max 265/588, margin 0.1537), though `p0 < cap` holds everywhere.**
 The THM-564 / HYP-2804 closure analyzes the CONSEC doublet `consec_{K-2}∪{M,M+1}` (k=10 cap−sup=0.16188 ≥ 0.16). But an EXHAUSTIVE genuine-wide search (all (k−2)-subset bounded bases × adjacent far pairs, filtering on `primitive(FULL E)` NOT `primitive(base)`) finds a HIGHER config: **k=10 `{0,2,4,6,8,10,12,14,15,16}` = 265/588 = 0.45068, margin 0.15372 < 0.16** (and k=9 `{0,4,6,8,10,12,14,15,16}`=321/980, margin 0.1667). The maximizing BASE is DILATED (gcd 2, = 2·consec_8) while the full set is primitive (15 odd) — so HYP-2804's base-primitivity sweep MISSED it. NET: (i) genuine-wide `p0 < cap_k` STILL HOLDS at every k (the actual LRC requirement; all margins > 0) — the leg closes; (ii) the ROBUST 0.16 reframe is UNATTAINABLE at k=10 (margin 0.1537). The frozen-law + correction machinery (HYP-2806) applies to these dilated-base doublets too (base=dilated even, far doublet {15,16}); the closure should target `< cap` at k=10 or fold the dilated bases into the doublet family. ACTION for any all-bounded-bases doublet sweep: filter on `primitive(FULL E)`. Scripts `04-computation/lrc14_genuine_wide_true_maximizer_kpswf9.py`. -> HYP-2805, HYP-2806, THM-564, HYP-2804, HYP-2795.
+S77 addendum: `TournamentH7.LRCGenuineWideCorrection` now formalizes the exact arithmetic of this correction table (all rows below cap; k=10 smallest; `4/25` robust margin false; non-primitive base guardrail). This does not close HYP-2807's generalized-doublet finite window, whose current naive exact runner still needs optimization before it can be used as a certificate.
 
 **OPEN-Q-108 — GENUINE-WIDE BINDING LEG (THE DOUBLET) VERIFIED-CLOSED via the almost-periodic P/R split (kind-pasteur-2026-06-21-Swf9, THM-564 / HYP-2804; CONVERGES with concurrent kps-S27 HYP-2799/2803 frozen-phase route).**
 The genuine-wide leg's BINDING sub-case — the doublet maximizer `E_M=consec_{K-2}∪{M,M+1}`
@@ -35,9 +48,13 @@ relation-lattice / survival-middle-mass currency, because independent
 `decorr_sup+err_sup` is false: room and resonance error anti-correlate.  Live
 targets: (A) Lean/formal split + cap constants, (B) formal import/proof
 compression for the completed periodmax certificate, (C) genuine-wide
-pointwise room-vs-error or survival-currency signed-deviation theorem. ->
-HYP-2793, THM-563, HYP-2788, HYP-2790, HYP-2792, THM-557, THM-548, THM-546,
-HYP-2701, HYP-2684.
+pointwise room-vs-error or survival-currency signed-deviation theorem.  S77
+now supplies the first periodmax formal kernel:
+`LRCPeriodmaxCertificate.lean` proves the six per-k worst-row headrooms, the
+k=9 worst-row comparison, the `12805`-base count checksum, and the k=8
+`periodmax=2` normalization guardrail; full row enumeration remains the
+Python/mac-mini audit. -> HYP-2793, THM-563, HYP-2788, HYP-2790, HYP-2792,
+THM-557, THM-548, THM-546, HYP-2701, HYP-2684.
 
 **OPEN-Q-108 — SINGLE-FAR CLOSED AS A FINITE PERIODIC MAX (mac-mini-2026-06-21-S6, THM-563).** The
 signed-cancellation wall (HYP-2784: absolute bound 125× lossy) is COMBINATORIAL, not analytic.

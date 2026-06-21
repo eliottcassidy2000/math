@@ -1,0 +1,26 @@
+==============================================================================
+CONCENTRATION EXTREMALITY: any WIDE config with L_yK8 > MB?  (claude-opus 0622)
+==============================================================================
+
+k=10  10cap=6.04396
+  MB (bounded max L_yK8) = 5.28571  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  MW (wide max L_yK8) = 4.81347  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 22)   (33422 wide configs)
+  MW - MB = -0.47225   10cap - MW = +1.23049
+  NO wide config exceeds MB => CONCENTRATION EXTREMALITY holds (k=10)
+
+k=11  10cap=7.25275
+  MB (bounded max L_yK8) = 6.03243  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
+  MW (wide max L_yK8) = 5.63223  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16)   (33479 wide configs)
+  MW - MB = -0.40020   10cap - MW = +1.62052
+  NO wide config exceeds MB => CONCENTRATION EXTREMALITY holds (k=11)
+
+k=12  10cap=8.57143
+  MB (bounded max L_yK8) = 6.64104  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+  MW (wide max L_yK8) = 6.28613  at (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)   (31809 wide configs)
+  MW - MB = -0.35492   10cap - MW = +2.28530
+  NO wide config exceeds MB => CONCENTRATION EXTREMALITY holds (k=12)
+
+==============================================================================
+If no exceedances at any k: max_E L_yK8 = max_bounded L_yK8 = MB < 10cap (GLOBAL).
+=> gK8 bounded cert is GLOBAL => wide bound closes by concentration extremality.
+   No dichotomy, no R-tail. The whole wide leg reduces to BOUNDED extremality of L_yK8.
