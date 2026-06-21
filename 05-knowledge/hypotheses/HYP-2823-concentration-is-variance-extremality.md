@@ -45,3 +45,17 @@ Prove consec maximizes `Var(N) = S₁+2S₂−S₁²`: (i) the covariance form `
 maximized by maximal clustering (consec); (ii) or via FKG / association of the sector-empty events for
 the consec orbit; (iii) connect to the moment-LP `S₂` extremal bound. Each far runner decorrelates a
 sector-pair (Cov → 0), lowering Var — the rigorous form is the THM-563 periodicity applied to `m_{jj'}`.
+
+
+## UPDATE (mac-mini-S23): single-far closes via periodicity; compression NOT monotone (=> LP, not greedy)
+- **Single-far variance closes (verified):** `sup_{far>=15} Var(consec_{k-1} u {far}) < Var(consec_k)`
+  with margins 0.43-0.63 (k=8,9,10); rigorizes by THM-563 periodicity (far*(deviation of S1,S2) periodic).
+  So Var, q6 (HYP-2820), and L_yK8 ALL decrease under the single-far swap -- the binding case is closed.
+- **Compression is NOT monotone (negative, important):** moving the largest runner to the smallest gap
+  DECREASES Var in 48/80 random paths (e.g. (0,1,2,3,4,12,13,29,30) Var=1.476 -> (0,1,2,3,4,5,12,13,29)
+  Var=1.414). So there is NO simple greedy/monotone path to consec -- the extremality is a GLOBAL one.
+  => the right tool is the gK8 Delsarte LP dual (a global certificate, Lean-built, HYP-2809 Thread 4),
+  NOT a combinatorial compression. The remaining content is the MOMENT-REGION characterization: showing
+  L_yK8 = Sum y_s S_s <= 10cap holds on the achievable factorial-moment region (S1,...,S6), whose
+  relevant extreme point is consec. FKG/association gives Cov>=0 (variance LOWER bound) but not the upper
+  extremality; the quantitative upper side is the decorrelation (periodicity single-far + doublet multi-far).

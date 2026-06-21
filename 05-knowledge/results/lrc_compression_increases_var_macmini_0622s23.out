@@ -1,0 +1,8 @@
+Does each compression step strictly INCREASE Var(N)? (testing the monotone path to consec)
+  paths with a Var-DECREASING compression step: 48/80
+  counterexamples (compression LOWERED Var -- monotonicity FALSE):
+    (0, 1, 2, 3, 4, 12, 13, 29, 30) Var=1.4761 -> (0, 1, 2, 3, 4, 5, 12, 13, 29) Var=1.4135
+    (0, 1, 2, 3, 11, 26, 29, 39, 40, 41) Var=1.1199 -> (0, 1, 2, 3, 4, 11, 26, 29, 39, 40) Var=1.0059
+    (0, 1, 6, 18, 27, 30, 36, 42, 43) Var=0.9168 -> (0, 1, 2, 6, 18, 27, 30, 36, 42) Var=0.9088
+    (0, 1, 4, 14, 25, 31, 44, 47) Var=0.8053 -> (0, 1, 2, 4, 14, 25, 31, 44) Var=0.7529
+    (0, 8, 9, 13, 25, 26, 27, 42, 46, 47) Var=0.9090 -> (0, 1, 8, 9, 13, 25, 26, 27, 42, 46) Var=0.8884

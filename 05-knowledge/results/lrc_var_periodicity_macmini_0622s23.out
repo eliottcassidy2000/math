@@ -1,0 +1,3 @@
+k=8: Var(consec_k)=2.61196  sup_far Var(consec_7u far) [far<600]=1.98521 at far=49  swap-decreases-Var? True  margin=0.6267
+k=9: Var(consec_k)=2.56210  sup_far Var(consec_8u far) [far<600]=2.11955 at far=56  swap-decreases-Var? True  margin=0.4425
+k=10: Var(consec_k)=2.49696  sup_far Var(consec_9u far) [far<600]=2.06672 at far=63  swap-decreases-Var? True  margin=0.4302
