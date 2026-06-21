@@ -1,7 +1,7 @@
 ---
 id: HYP-2757
 title: LRC(14) L7 resonant tail = a FINITE atlas of 1-D torus-curve coverages (commensurable far pairs trace closed geodesics)
-status: OPEN; the curve-reduction is exact (proposed); the finite-atlas check is runnable
+status: VALIDATED (curve limit converges, c-independent, <cap); finite-atlas check + non-resonant bound remain
 source: kind-pasteur-2026-06-21-S24
 depends_on:
   - OPEN-Q-108
@@ -46,6 +46,13 @@ coverage integrals (the geodesics, indexed by the small-denom ratios in the boun
 exactly, plus (ii) the generic 2-torus case where the ratio is bounded so the relevant ET-Koksma frequencies
 are bounded and a lossy constant suffices (margin 0.21). This is the SAME architecture as the single-far
 closure (finite window + comb bound), lifted one dimension via the geodesic decomposition.
+
+## VALIDATION (kps-S24): the curve limit is c-independent and < cap
+p0(B u {cq,cp}), B=[0,2,..,12], as c grows (c=7,13,23,41,71): CONVERGES to a c-INDEPENDENT limit ~0.24-0.25 for
+ratios 2/1, 7/4, 4/3, 5/3 (3/2 noisier, settling ~0.24-0.26) -- all < cap_9=0.494 (margin ~0.25). Small-c values
+(0.36-0.40 at c=7) are the finite-c / near-merge regime (the comb correction, decaying). So the resonant-ratio
+curve coverages are FINITE and SAFE. Generic (non-resonant) ratios decorrelate LOWER (full 2-torus, ~0.05) at
+large c. So L7's worst LARGE-scale cases are the commensurable (curve) ones, all comfortable.
 
 ## Tests / next
 - Compute `p0_curve(p,q,B)` for all `p/q in (1,2.15)`, `q<=8`, and bounded bases B; verify `<= cap_k` with
