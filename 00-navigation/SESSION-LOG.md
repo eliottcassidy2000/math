@@ -1,3 +1,12 @@
+## mac-mini-2026-06-21-S21 -- THM-563 single-far CONFIRMED complete; proof DAG mapped to ONE remaining gap (genuine-wide finite-M error bound)
+Integrated the frontier (THM-563 + HYP-2788 wide-closure path) and pushed it forward; ~11 pushes.
+- **THM-563 single-far CLOSED (independently confirmed):** re-ran the binding rows k=10 (PASS 3003/3003, worst period-max/margin=10.81) and k=11 (PASS 2002/2002, worst 9.76); my validation matches THM-563's consec table EXACTLY (1, 43/49, 1007/980). With the workflow's k=9,12,13: ALL 12805 bounded bases k=8..13 PASS, 0 fails, global worst 13.28 (k=9 even-AP). The single-far case is CLOSED window-free for all w>=15.
+- **PROOF DAG (HYP-2794 + codex HYP-2793):** [L1-L6 proved] + [BOUNDED span<=14: max measS7<=cap_k, computationally closed k=8..12 -> FORMALIZE] + [SINGLE-FAR: THM-563 CLOSED] + [GENUINE-WIDE: THM-557 PROVED single-block max + BV error, + the near-cap=>single-perturbation DICHOTOMY HYP-2788 proved k=8,9 verified k=10,11,12].
+- **THE ONE REMAINING MATHEMATICAL GAP:** the genuine-wide finite-M decorrelation error bound. The ACTUAL error p0-D_m is tiny (~0.01, vs GAP 0.12-0.26 -- huge slack), but the BV bound 7*C(m,2)/M is asymptotically LOOSE at M=15 (~30, useless). Need a rigorous sub-GAP finite-M error bound (codex: 'relation-lattice/scale-cluster currency, not independent decorr_sup+err_sup'). This is the single open analytic leg.
+- **LEADS:** HYP-2792 (period-max is a signed Dedekind sum ~O(1); reciprocity closed-form bound). HYP-2794 2D-periodicity lead REFUTED honestly (period in w1 is w2-dependent => no fixed 2D period-max; genuine-wide stays with THM-557).
+- **RUNNING:** closure-completion workflow wd9wxnpqf (slack-floor proof, bounded rigor, k=9 Delsarte razor, completeness critic) -- harvest on completion.
+NET: LRC(14) is reduced to ONE analytic leg (genuine-wide finite-M error < GAP, actual ~0.01) + Lean formalization. Very close. NEW: HYP-2792, 2794.
+
 ## mac-mini-2026-06-21-S7 — THM-563 general bounded-base finite check COMPLETE (single-far CLOSED for ALL bounded bases, k=8..13)
 THREAD 1: complete THM-563's general check `period-max(B) < 15·margin(B)` for ALL primitive bounded bases B⊆[0,14], 0∈B, at k=8,9,10,11,12,13 (k=8 was already done; codex did 135 high-plateau samples — this is the EXHAUSTIVE version over all 12805 bases).
 **RESULT: ALL PASS, 0 FAILS, 0 SKIPPED.** Per-k bases / worst-EXACT-ratio: k=8 3003/10.8188, k=9 3432/**13.2805**, k=10 3003/10.8140, k=11 2002/9.7616, k=12 1001/8.2059, k=13 364/5.9838. Total 12805 bases.
