@@ -1,0 +1,25 @@
+HYP-2729/HYP-2730 L7 torus-curve discrepancy bound
+Exact D_{p,q}; elementary crude proof target D <= 24/(7q).
+
+ratios_checked=2260 q<=80
+crude_bound_failures D<=24/(7q): 0
+sharp_observed_failures D<=12/(7q): 0
+max D*q checked: p/q=3/2 D*q=12/7 (1.714285714) D=6/7 (0.857142857)
+
+FINITE DISCREPANCY ATLAS q<=16
+  p/q=2/1  D=10/7 (1.428571429) D*q=10/7 (1.428571429)
+  p/q=3/2  D=6/7 (0.857142857) D*q=12/7 (1.714285714)
+  p/q=4/3  D=11/21 (0.523809524) D*q=11/7 (1.571428571)
+  p/q=5/3  D=12/35 (0.342857143) D*q=36/35 (1.028571429)
+  p/q=5/4  D=9/35 (0.257142857) D*q=36/35 (1.028571429)
+finite q<=16 with D>=0.21: 5
+
+TAIL CERTIFICATE
+  For q>=17, 24/(7q) <= 24/119 (0.201680672) < 0.21.
+  Therefore the elementary crude bound alone makes every q>=17 resonance tail safe.
+  Exact D for 5<=q<=16 is already below 0.21, so only q<=4 needs p0_inf atlas checks.
+
+SYNTHESIS
+  HYP-2730's sharp 12/7 constant is excellent, but L7 does not need it.
+  A simple seven-bin lattice discrepancy bound plus finite q<=16 D-checks leaves
+  the same small rational atlas and is a cleaner formalization target.

@@ -81,9 +81,41 @@ sector words between adjacent breakpoints, and rational interval sums for
 resonance atlas and a non-resonant two-dimensional Erdos-Turan-Koksma bound
 after the HYP-2726 Delsarte readout.
 
+Incoming HYP-2730 supplies the missing shape of the non-resonant premise:
+`R(p/q) <= D_{p,q}`, where `D_{p,q}` is the L1 cell discrepancy of the
+torus curve `v -> (qv,pv)`.
+
+Follow-up script:
+
+`04-computation/lrc_q108_L7_discrepancy_bound_codex_s72.py`
+
+Output:
+
+`05-knowledge/results/lrc_q108_L7_discrepancy_bound_codex_s72.out`
+
+This script records a formalization-friendly crude route:
+
+`D_{p,q} <= 24/(7q)`.
+
+The proof sketch is elementary: condition on `u={qv}`.  The second coordinate
+samples `q` equally spaced points in seven bins, so each bin count differs from
+`q/7` by at most one; integrating over the seven first-coordinate sectors gives
+the displayed L1 bound.  Exact checks through `q<=80` found zero failures for
+both this crude bound and the sharper observed `12/(7q)`.
+
+Since `24/(7*17)<0.21`, the crude bound alone makes every `q>=17` tail safe.
+Exact finite `D` checks for `5<=q<=16` are already below `0.21`, so only the
+five small ratios
+
+`2/1, 3/2, 4/3, 5/3, 5/4`
+
+need row-level `p0_inf` atlas checks.  This dovetails with HYP-2730's sharper
+`12/7` constant but does not require proving the sharp constant.
+
 ## Remaining Missing Pieces
 
-Any positive evidence remains only evidence until the finite resonance atlas
-and non-resonant discrepancy lemma are written.  The next concrete target is a
-single-channel periodic proof, likely ratio `5/3`, because it is the sampled
-risk leader.
+Any positive evidence remains only evidence until the small ratio atlas and the
+finite-`f1` window are wired into the existing L7 ledger.  The next concrete
+target is no longer a broad `5/3` scout; it is a proof document or Lean-friendly
+finite certificate for the five-ratio atlas together with the `D<=24/(7q)`
+seven-bin discrepancy lemma.

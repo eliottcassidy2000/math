@@ -1,7 +1,7 @@
 ---
 id: THM-562
 title: LRC14 L7 bounded-ratio handoff skeleton — generated atom compatibility plus Delsarte packets reduce the remaining balanced two-far window to a finite resonance atlas and one non-resonant 2D discrepancy lemma
-status: OPEN proof skeleton with exact scout evidence; not a proof of LRC14
+status: OPEN proof skeleton with exact scout evidence; HYP-2730 now supplies the torus-discrepancy reduction and codex-S72 supplies a crude finite-tail route; not a proof of LRC14
 source: codex-2026-06-21-S72
 depends_on:
   - THM-534   # sector moment / Delsarte LP dual certificate
@@ -42,9 +42,16 @@ The remaining L7 bounded-ratio case follows from the following two premises.
 the exact cell law gives `p_0(E) <= cap_|E|`.
 
 **Non-Resonant 2D Discrepancy Lemma.**  For ratios not in the finite atlas,
-the map `x -> (f_1 x, f_2 x)` has a uniform two-dimensional
-Erdos-Turan-Koksma bound strong enough to place the row-level Delsarte packet
-below `cap_|E|` after the HYP-2726 Krawtchouk-positive dual is applied.
+the map `x -> (f_1 x, f_2 x)` has a uniform two-dimensional discrepancy bound
+strong enough to place the row-level Delsarte packet below `cap_|E|` after the
+HYP-2726 Krawtchouk-positive dual is applied.
+
+HYP-2730 sharpens this premise to the explicit torus-curve inequality
+
+`|R(p/q)| <= D_{p,q}`,
+
+where `D_{p,q}` is the L1 discrepancy of the cell law of
+`v -> (qv,pv)` against the uniform `7x7` grid.
 
 If both premises hold, then KPS L7 closes: the near-merge side is already
 routed to the single-cluster theorem, the ratio `>=43/20` side is routed to
@@ -76,6 +83,21 @@ Raw row `tail45` disagrees with risk on `27/91` channel edges, confirming that
 the generated `tail45` strip should not be scalarized directly into the L7 row
 bound.  It is a compatibility gate before the Delsarte handoff.
 
+Incoming HYP-2730 then supplies the expected resonance correction:
+
+`R(p/q) = p0_inf(B,p/q) - P2(B)`, with `|R(p/q)| <= D_{p,q}`.
+
+`04-computation/lrc_q108_L7_discrepancy_bound_codex_s72.py` records a cruder
+but formalization-friendly tail route:
+
+`D_{p,q} <= 24/(7q)`.
+
+Exact checks through `q<=80` show zero failures for this crude bound and for
+the sharper observed `D_{p,q} <= 12/(7q)`.  Since `24/(7*17)<0.21`, every
+`q>=17` resonance tail is safe by the crude bound; exact `D` for `5<=q<=16` is
+already below `0.21`, so only `2/1,3/2,4/3,5/3,5/4` need row-level atlas
+checks.
+
 ## Formalization Frontier
 
 The Lean-ready finite layer is the exact cell-law statement: for a finite row
@@ -83,13 +105,17 @@ The Lean-ready finite layer is the exact cell-law statement: for a finite row
 breakpoints, and the resulting `p_t(E)` is a rational sum of interval lengths.
 This can be formalized independently of the analytic non-resonant lemma.
 
-The non-finite formal target is a two-dimensional discrepancy theorem for the
-indicator of the sector-hit cells after projection through the Delsarte dual.
-That theorem should be stated after the finite resonance atlas identifies the
-small denominators that must be excluded.
+The non-finite formal target can now be the elementary seven-bin discrepancy
+lemma: condition on `u={qv}`; the second coordinate is a shifted q-point lattice
+in seven equal bins; every bin count differs from `q/7` by at most one; summing
+the conditional L1 discrepancy gives `D_{p,q} <= 24/(7q)`.
+
+This is weaker than the sharp observed `12/(7q)` but strong enough when paired
+with the finite exact `q<=16` discrepancy check.
 
 ## Honesty
 
 This is not a proof of LRC14.  It is a formal proof skeleton plus exact
-bounded-ratio evidence.  The missing mathematical work is precisely the finite
-resonance atlas and the non-resonant discrepancy lemma.
+bounded-ratio evidence.  HYP-2730 and the S72 discrepancy probe reduce the
+remaining mathematical work to wiring the five-ratio row atlas, the finite
+`f1` window, and the elementary `D<=24/(7q)` lemma into the L7 ledger.

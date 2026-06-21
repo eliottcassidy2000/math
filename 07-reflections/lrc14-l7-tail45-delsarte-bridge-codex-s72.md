@@ -56,7 +56,15 @@ multiplier or merge/split near ratio one.  The proof obligation is to show that
 every recurrent component either enters a finite atlas certificate or has a
 uniform non-resonant discrepancy gap under the Delsarte readout.
 
-The next computation should not merely add more rows.  It should construct the
-residue-period cells for one ratio channel, probably `5/3` because it was the
-sampled risk leader, and prove a periodic margin formula for all multipliers in
-that channel.
+Incoming HYP-2730 sharpened the target faster than that: the two-far correction
+is bounded by `D_{p,q}`, the L1 discrepancy of the torus line
+`v -> (qv,pv)` in the `7x7` sector grid.  The extra S72 discrepancy probe gives
+a deliberately crude proof route: `D_{p,q} <= 24/(7q)`.  It is just a seven-bin
+lattice count after conditioning on `u={qv}`.  This is weaker than KPS's sharp
+observed `12/(7q)`, but it makes every `q>=17` tail safe, and exact checks show
+`5<=q<=16` is already below the `0.21` margin.
+
+So the next computation should not add more random rows or even build a broad
+`5/3` periodic formula.  It should package the five-ratio atlas
+`2/1,3/2,4/3,5/3,5/4` and the finite-`f1` window into a proof-ready certificate,
+then formalize the elementary seven-bin discrepancy lemma.
