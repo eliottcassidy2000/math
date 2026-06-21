@@ -10,6 +10,7 @@ depends_on:
   - THM-556
   - THM-535
 related:
+  - HYP-2704
   - HYP-2703
   - THM-548
   - HYP-2680

@@ -1,0 +1,46 @@
+LRC14 SURVIVAL / SEVEN-PACKET BRIDGE (exact Fraction scout)
+==============================================================================
+BASIS IDENTITIES
+  C coefficients on p0..p6:  ['0', '1', '1', '1', '1', '0', '-4']
+  U4 coefficients on p0..p6: ['1', '0', '0', '0', '0', '1', '5']
+  exact: C = G1 - G5 - 4*G6
+  exact: U4 = 1 - C = 1 - G1 + G5 + 4*G6
+
+SEVEN-PACKET / CUT COMPARISON
+  packets: ('A', 'B', 'C', 'D', 'E', 'F', 'G')
+  actual far correction H(1):       (1, 1, 1, 1, 1, 1, 1) sign=+++++++
+  pair-tax A+B+C-D-E-F+G:          (1, 1, 1, -1, -1, -1, 1) sign=+++---+
+  odd half-tiling addressed signs: (1, 1, -1, 1, -1, -1, 1) sign=++-+--+
+  layer quotient (singletons,pairs,triple):
+    actual        -> (+1,+1,+1)
+    pair-tax      -> (+1,-1,+1)
+    survival cuts -> (+1,-1,-4) on (G1,G5,G6)
+    transfer dC   -> (-1,+1,+4) across depths (1,5,6)
+  conclusion: survival is a tail-weighted cut/Stokes character, not the pair-tax Euler character.
+
+TRANSFER TAX AND DECORRELATED FAR HITS
+  one-hit dC=C(t-1)-C(t), t=1..6: ['-1', '0', '0', '0', '1', '4']
+  live transitions: t=1 gives -1, t=5 gives +1, t=6 gives +4
+  expected currency coefficient after r iid far color hits:
+       t:         0         1         2         3         4         5         6
+    r=0:         0         1         1         1         1         0        -4
+    r=1:         0       6/7         1         1         1       5/7      -4/7
+    r=2:         0     36/49     47/49         1         1     45/49     26/49
+    r=3:         0   216/343   307/343   337/343         1   335/343   296/343
+    r=4:         0 1296/2401   281/343 2269/2401 2377/2401 2385/2401 2306/2401
+
+  two-far gain K2(t)-C(t):
+               0    -13/49     -2/49         0         0     45/49    222/49
+  exact signal: a fully missed state has C=-4, but after two
+  decorrelated far hits its expected coefficient is 26/49.
+
+TOURNAMENT ANALYSIS
+  vertices: missed-count depths t=0..6
+  pairwise observable: K2(t)=E[C after two decorrelated far hits | N=t]
+  switch/gauge: orient toward larger K2; ties by smaller t
+  K2 order: t3(1) > t4(1) > t2(47/49) > t5(45/49) > t1(36/49) > t6(26/49) > t0(0)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  preserved quotient: missed-count survival currency; destroyed data: sector labels, cyclic order, runner phases, and relation-lattice address.
+
