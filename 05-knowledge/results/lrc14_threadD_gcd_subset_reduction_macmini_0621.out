@@ -53,9 +53,18 @@ THREAD D: gcd-subset reduction (Rosenfeld Lemma 5 / MSS Thm A) on LRC(14)
       primitive 13-subsets sampled: 200000
       Lemma 5 KILLS: 0  (0.00%)
       fully subset-coprime (residual): 200000  (100.00%)
-    READING: Lemma 5's power is real but its reach is exactly 'all-but-one speed
-    share a factor'.  The hard residual = subset-coprime configs (incl. every AP
-    with primitive base/step); these survive to the finite check B_13.
+    READING: even drawing from composite pools, 13 DISTINCT primitive speeds almost
+    never leave 12 sharing one factor (the lone 'odd-one-out' must be unique).  So
+    Lemma 5's trigger is MEASURE-ZERO among generic configs -- but it kills an entire
+    EXACTLY-DESCRIBED structured sub-family (12 multiples of d + 1 coprime far runner),
+    e.g. the scaled-AP clusters of [D].  Hard residual = subset-coprime (incl. every
+    primitive-base/step AP); survives to the finite check B_13.
+
+    Explicit Lemma-5 family (constructed, not sampled):
+      12*(2)-multiples + far=1: gcd_full=1, gcd12=2, Lemma5=KILLS
+      12*(3)-multiples + far=1: gcd_full=1, gcd12=3, Lemma5=KILLS
+      12*(5)-multiples + far=7: gcd_full=1, gcd12=5, Lemma5=KILLS
+      12*(6)-multiples + far=35: gcd_full=1, gcd12=6, Lemma5=KILLS
 
 ==============================================================================
 [D] CLUSTER / SECTOR-ROUTE TRANSFER
@@ -88,6 +97,26 @@ THREAD D: gcd-subset reduction (Rosenfeld Lemma 5 / MSS Thm A) on LRC(14)
     (gcd-1 AP, e.g. consec {0,1,2,...}), which is exactly the LP-tight sector-route
     extremizer the project has isolated.  Literature and the sector route AGREE on
     the same hard core.
+
+==============================================================================
+[E] POLYNOMIAL METHOD: why 14 = 2*7 is OUTSIDE the strongest analytic tool
+==============================================================================
+    Sungkawichai-Trakulthongchai arXiv:2604.23906, Prop 1.4 / Prop 4.1:
+      'Let k+1 and p>k^2+k be ODD PRIMES.  If gcd(u_i)=1 and u_i = i (mod p)
+       for all i, then (u_1,...,u_k) has the LR property.'
+      Prop 4.1: 'Let k+1 be an ODD PRIME.  For all v in N_k there are
+       s,r in (Z_{k+1})^x with s*v + r*(1,2,...,k) in {1,...,k-1}^k.'
+    For LRC(14): k=13, k+1 = 14 = 2*7 is EVEN and COMPOSITE.
+      14 = {2: 1, 7: 1}  -> NOT an odd prime, so Prop 4.1 GIVES NOTHING for k+1=14.
+    This is the RIGOROUS literature reason the project keeps hitting a wall at 14:
+    every k proven so far by the polynomial method had k+1 PRIME (8->no wait:
+    proven cases used k+1 in {prime} for the analytic step; composite k+1 fell
+    back on PURE computation).  14 needs either (i) the full finite check B_13
+    or (ii) a NEW composite-modulus analytic tool exploiting 14 = 2*7.
+    The project's sector route (mod 7) + antipodal-fold (mod 2) is EXACTLY an
+    attempt at the missing 2*7 composite tool: it CRT-splits 14 into the proven
+    prime-7 sector structure x the prime-2 antipodal involution.  THREAD D thus
+    locates the sector route precisely in the literature gap.
 
 ==============================================================================
 SUMMARY (THREAD D deliverable)

@@ -296,9 +296,9 @@ def main():
         d += 1
     print(f"      14 = {fac}  -> NOT an odd prime, so Prop 4.1 GIVES NOTHING for k+1=14.")
     print("    This is the RIGOROUS literature reason the project keeps hitting a wall at 14:")
-    print("    every k proven so far by the polynomial method had k+1 PRIME (8->no wait:")
-    print("    proven cases used k+1 in {prime} for the analytic step; composite k+1 fell")
-    print("    back on PURE computation).  14 needs either (i) the full finite check B_13")
+    print("    the polynomial-method analytic shortcut (Prop 4.1) requires k+1 to be an ODD")
+    print("    PRIME; for composite/even k+1 the proven cases fell back on PURE computation.")
+    print("    14 needs either (i) the full finite check B_13")
     print("    or (ii) a NEW composite-modulus analytic tool exploiting 14 = 2*7.")
     print("    The project's sector route (mod 7) + antipodal-fold (mod 2) is EXACTLY an")
     print("    attempt at the missing 2*7 composite tool: it CRT-splits 14 into the proven")
