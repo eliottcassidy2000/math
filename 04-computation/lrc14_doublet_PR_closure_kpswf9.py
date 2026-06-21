@@ -115,11 +115,11 @@ def main():
     print("=" * 90)
     # config: (nper_full, win_cap, label). K=8,9: full 420-periods x several. K=10: 2940 x 2.
     # K=11,12: representative window (period huge, H_K large -> not binding).
-    cfg = {8: (8, 10_000, "FULL exact (period 420)"),
-           9: (8, 10_000, "FULL exact (period 420)"),
-           10: (3, 9_000, "FULL exact (period 2940)"),
-           11: (1, 6_000, "WINDOW (period 5880; H_K large)"),
-           12: (1, 6_000, "WINDOW (period 17640; H_K large)")}
+    cfg = {8: (3, 2_000, "FULL exact (period 420, 3x)"),
+           9: (3, 2_000, "FULL exact (period 420, 3x)"),
+           10: (1, 3_200, "FULL exact (period 2940, 1x)"),
+           11: (1, 3_200, "WINDOW (period 5880; H_K large)"),
+           12: (1, 3_200, "WINDOW (period 17640; H_K large)")}
     res = {}
     for K in range(8, 13):
         npf, wc, lab = cfg[K]

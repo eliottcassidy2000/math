@@ -41,3 +41,19 @@ K=10  base=consec_8=(0, 1, 2, 3, 4, 5, 6, 7)  P_per=7*lcm(1, 2, 3, 4, 5, 6, 7)=2
   d_inf(emp,large M)=0.014038  exact-match? False
   cap_10=0.604396  headroom H_K=cap-0.16-Phi=0.033369
   (2) P(M) single-far part exactly periodic (2nd-diff vanish, spot 60)? True
+  (3) R(M)=M*(d2-d_inf): sup|R| over [15,3000] = 6.09662
+          M0  sup|d2-dinf|  sup|R|=M|d2-dinf|  sup M^2|d2-dinf|
+          15      0.015933            6.09662         18239.833
+         100      0.004877            6.09662         18239.833
+         300      0.003399            6.09662         18239.833
+         800      0.002602            6.09662         18239.833
+        1500      0.002274            6.09662         18239.833
+  (4) period-max(P) over one base period [15,2955) = 1.24049 at M=2835  (min -1.24999)
+  (5) ASSEMBLE: B=pmaxP+tail|R|@800=7.33712; M0=ceil(B/H_K)=220; finite window [15,220] worst p0=0.442517 <= cap-0.16=0.444396? True
+
+K=11  base=consec_9=(0, 1, 2, 3, 4, 5, 6, 7, 8)  P_per=7*lcm(1, 2, 3, 4, 5, 6, 7, 8)=5880
+  p0(base)=0.416156  BV1=0.447886  BV2=0.480706
+  a_inf=0.031730  Phi=0.490566  d_inf=Phi-BV2=0.009860
+  d_inf(emp,large M)=0.010946  exact-match? False
+  cap_11=0.725275  headroom H_K=cap-0.16-Phi=0.074708
+  (2) P(M) single-far part exactly periodic (2nd-diff vanish, spot 60)? True
