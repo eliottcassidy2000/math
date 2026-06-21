@@ -1,0 +1,22 @@
+======================================================================================
+DOUBLET ALMOST-PERIODIC P/R DECOMPOSITION  (THREAD A, kps-Swf9, K-runner-correct)
+E_M = consec_{K-2} U {M,M+1}    g(M)=M*(p0(E_M)-Phi)=P(M)+R(M)   target margin 0.16
+======================================================================================
+
+[STEP 1] EXACT plateau Phi (frozen-doublet integral); margins & headroom
+--------------------------------------------------------------------------------------
+  K=8: Phi=1559/14700=0.106054  cap=0.381463  cap-Phi=0.275408
+        headroom H_K = cap-0.16-Phi = 0.115408  (OK >0)  15*H_K=1.7311
+  K=9: Phi=92339/352800=0.261732  cap=0.494256  cap-Phi=0.232524
+        headroom H_K = cap-0.16-Phi = 0.072524  (OK >0)  15*H_K=1.0879
+  K=10: Phi=7895/19208=0.411027  cap=0.604396  cap-Phi=0.193369
+        headroom H_K = cap-0.16-Phi = 0.033369  (OK >0)  15*H_K=0.5005
+  K=11: Phi=23557/48020=0.490566  cap=0.725275  cap-Phi=0.234708
+        headroom H_K = cap-0.16-Phi = 0.074708  (OK >0)  15*H_K=1.1206
+  K=12: Phi=14085881/24893568=0.565844  cap=0.857143  cap-Phi=0.291299
+        headroom H_K = cap-0.16-Phi = 0.131299  (OK >0)  15*H_K=1.9695
+
+  (Need sup_{M>=15} g(M) <= 15*H_K via finite window + tail; tightest K has smallest H_K.)
+
+[STEP 2/3] P/R split (period-avg) + decay of R; global sup g(M)=M*Delta_M
+--------------------------------------------------------------------------------------
