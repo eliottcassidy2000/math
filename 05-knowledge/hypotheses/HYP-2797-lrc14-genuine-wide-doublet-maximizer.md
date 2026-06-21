@@ -16,6 +16,17 @@ r≥3 ≤0.333. This is the missing **monotonicity in far-block-count** — the 
 is NOT hidden at high r; it sits at the single tightest far block. (k=12/triplet-ladder rung timed
 out; k=9,10,11 suffice.)
 
+**(a′) NO simple base-size monotonicity (prevents a dead-end proof route).** Stratifying by base
+size j (base `consec_j` + single far block of size k−j), `p0_inf` is **U-shaped, NOT monotone**:
+high at j=1 (= THM-557 single far block D_m) and at j=k−1 (single-far), dipping in the middle.
+BUT j=1 (the all-far single block `{0}∪{M..M+k-2}`) is **NOT genuine-wide** — removing 0 leaves a
+span-(k−2)≤14 bounded set. Among *genuine-wide* base sizes (j=2..k−2), the doublet (j=k−2) is the
+max, with the base-2 config `{0,1}∪{M..M+k-3}` a close SECOND (k=11: 0.453 vs doublet 0.490). So
+**there is no simple monotonicity lemma** (base-count and base-size both fail as monotone orderings
+once the non-gw high end is excluded); the maximizer-is-doublet claim rests on the exhaustive
+actual-p0 search + codex's frozen-gap extremality, NOT a monotonicity shortcut. (`p0_inf` U-shape
+verified k=9,10,11.)
+
 **(b) Partition-value clarification (prevents a wrong proof route for kps's `p0_inf ≤ Q`).**
 The doublet plateau `p0_inf` (≈0.41 at k=10) is **NOT** the THM-557 all-far partition value
 `D([m-2,2])` (=0.294): in the doublet the base `consec_{k-2}` is a FIXED bounded base (full Plat
