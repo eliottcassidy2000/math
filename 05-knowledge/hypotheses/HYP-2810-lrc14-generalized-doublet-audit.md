@@ -1,9 +1,11 @@
 ---
 id: HYP-2810
-title: LRC14 generalized-doublet audit, proof-history maturity map, and sieve-frontier bridge
-status: OPEN rigor guardrail; exact bounded-span evidence supports the reframe; proof not claimed
+title: LRC14 generalized-doublet audit as a gK8 concentration guardrail
+status: OPEN guardrail; exact bounded-span evidence supports gK8 concentration and generalized-doublet fallback; proof not claimed
 source: codex-2026-06-22-S78
 depends_on:
+  - HYP-2812
+  - HYP-2811
   - HYP-2807
   - HYP-2809
   - HYP-2806
@@ -22,13 +24,25 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2810: Generalized Doublet As The Mature LRC14 Wide Route
+# HYP-2810: Generalized-Doublet Audit As A gK8 Concentration Guardrail
 
 ## Claim
 
-The current best LRC14 genuine-wide route should be stated as an addressed
-generalized-doublet theorem, not as a raw slack-floor or sampled maximizer
-claim:
+After the incoming HYP-2811/HYP-2812 work, the current best LRC14 wide route is
+not primarily a `p0` generalized-doublet theorem.  It is the gK8 concentration
+route:
+
+```text
+L_yK8(E)=10q0(E)+q3(E)+10q6(E) is maximized by bounded/concentrated rows.
+max_bounded L_yK8 < 10*cap_k.
+Therefore every wide row has p0=q0 <= L_yK8/10 < cap_k.
+```
+
+The generalized-doublet route remains the exact structural fallback and sanity
+check.  If concentration extremality needs a finite resonant atlas, S78's
+evidence says the dangerous genuine-wide `p0` rows are already addressed by
+bounded base, far pair `{M,M+g}`, parity/bridge data, full-set primitivity, and
+remove-one witnesses, not by a raw slack-floor or sampled maximizer claim:
 
 ```text
 If E is a cap-dangerous genuine-wide row, then after bounded normalization
@@ -43,6 +57,39 @@ reframe of the mac-mini k=12 obstruction, but the repo should treat it as an
 open theorem until the search domain is exact: full-set primitivity, remove-one
 scale witnesses, arbitrary bounded bases, far gaps `g`, and the low-`M` window
 must all remain addressed.
+
+## Post-Fetch gK8 Concentration Update
+
+HYP-2812 is the sharpest current target.  Its exact concentration audit reports
+that the maximum wide `L_yK8` is below the bounded maximum at k=10,11,12:
+
+```text
+k=10: MB=37/7, MW≈4.81347, MW-MB≈-0.47225.
+k=11: MB=26603/4410, MW≈5.63223, MW-MB≈-0.40020.
+k=12: MB=29287/4410, MW=30494/4851 at E*, MW-MB≈-0.35492.
+```
+
+Here `E*=(0,2,4,6,8,9,10,11,12,14,16,18)` is exactly the k=12 odd-bridge row
+that broke the old `p0<Q(11)` slack floor.  Under gK8 it is no longer a threat:
+`L_yK8(E*)=30494/4851` leaves `10cap-L=11086/4851`.
+
+The proof obligation has therefore moved to a concentration/decorrelation
+monotonicity theorem for the missed-sector distribution:
+
+```text
+far spreading / decorrelation moves mass away from q0 and q6
+and into middle missed-count atoms, so L_yK8 cannot increase.
+```
+
+The Mordell-Tornheim side is also sharper after mac-mini S22: the absolute
+two-frequency constant in HYP-2808 is
+
+```text
+sum_{h,h' != 0, h+h' != 0} 1/(|h| |h'| |h+h'|) = 12*zeta(3).
+```
+
+Thus the R-tail route is now a rigorous fallback with a closed-form constant,
+while gK8 concentration is the clean route if the monotonicity lemma is proved.
 
 ## Exact S78 Evidence
 
@@ -117,6 +164,49 @@ sampled witness with max speed `22` is outside this span-20 audit; it should
 be rechecked in a later span-22 run before any k=11 global-window language is
 used.
 
+## Exact gK8 Overlay
+
+Script:
+
+```text
+04-computation/lrc14_genuinewide_gK8_overlay_codex_s78.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_genuinewide_gK8_overlay_codex_s78.out
+```
+
+This overlay recomputes the same `span<=18` normalized primitive genuine-wide
+domain by the full missed-sector distribution `q_t`, then ranks rows by
+`L_yK8=10q0+q3+10q6`.  It found zero `L_yK8>10cap` violations:
+
+```text
+k=10: 27484 genuine-wide rows, L_yK8_violations=0
+  max_L row r=2:
+  E=(0,1,3,5,7,9,11,13,15,17),
+  L_yK8=393157/85085,
+  10cap-L=17299/12155.
+
+k=11: 29724 genuine-wide rows, L_yK8_violations=0
+  max_L row r=2:
+  E=(0,2,4,6,7,8,10,12,14,15,18),
+  L_yK8=92777/17640,
+  10cap-L=457099/229320.
+
+k=12: 24816 genuine-wide rows, L_yK8_violations=0
+  max_L row r=2:
+  E=(0,2,4,6,8,9,10,11,12,14,16,18),
+  L_yK8=30494/4851,
+  10cap-L=11086/4851.
+```
+
+The k=12 `p0` breaker is also the span-18 `L_yK8` leader, but its gK8 margin is
+large.  This overlay is a finite-window check only; its value is that it ties
+the S78 generalized-doublet address audit to the newer HYP-2812 concentration
+route using the same exact row domain.
+
 ## What The Repo History Says
 
 The LRC14 proof strategy has matured by repeatedly restoring hidden addresses
@@ -144,8 +234,9 @@ The common lesson is: do not scalarize before the address quotient is stable.
 For the current branch the stable address appears to be
 
 ```text
-(bounded base B, far pair {M,M+g}, full-set gcd, remove-one witnesses,
- frozen slow coordinate y, finite-window row).
+(missed distribution q, gK8 moment, bounded base B, far pair {M,M+g},
+ full-set gcd, remove-one witnesses, frozen slow coordinate y,
+ finite-window row).
 ```
 
 ## External Literature Checkpoint
@@ -186,35 +277,28 @@ families already visible in the cap audit.
 
 ## Bold Finish Guess
 
-The shortest plausible finish is:
+The shortest plausible finish has changed:
 
-1. **Far-count domination lemma.**  Prove cap-dangerous genuine-wide rows have
-   `r=2`, or prove the weaker statement that every `r>=3` row has direct cap
-   slack by a survival/live-depth margin.  HYP-2708's live-depth kernel is the
-   likely human proof currency: adding the third far element makes too many
-   high-tail debts nonnegative for the row to remain cap-dangerous.
-2. **Generalized frozen-room lemma.**  Extend HYP-2806 from adjacent `g=1` to
-   arbitrary fixed `g`:
-   `s_{M+g}(y)=s_M(y)+floor(g*y + frac(M*y)) mod 7`, giving an exact
-   one-fast-phase frozen law.  Then prove the frozen plateau is below `cap_k`
-   for all bounded bases and gaps, with worst gaps small.
-3. **Uniform P/R or TV tail.**  Generalize THM-564's
-   `M*(p0-Phi)=P+R` to gap `g`.  The periodic part is still built from
-   THM-563 endpoint packets; the residual is one-fast-phase Koksma/variation.
-4. **Finite bridge atlas.**  Exact-check the remaining small `M,g` window,
-   including even-AP plus odd-bridge rows.  This is where HYP-2807's k=12 row
-   lives; it is cap-safe and should be treated as a named finite resonant
-   family, not as a slack-floor failure.
-5. **Sieve residual projection.**  Import the below-frontier sieve lens: for
-   the actual `k=13` frontier, characterize the finite improper/projection
-   survivors by the same `(B,g,M,bridge parity)` address quotient.  If the
-   public lifting/backward-projection machinery leaves only generalized
-   doublets plus a finite bridge atlas, the local cap proof and the global
-   finite-check proof meet at a single certificate.
+1. **Concentration extremality for gK8.**  Prove that far spreading and wide
+   decorrelation cannot increase `L_yK8=10q0+q3+10q6`.  This is a convex-order
+   or Schur-type statement on the missed-sector distribution, but it cannot
+   forget generated-word compatibility; arbitrary probability vectors on
+   `q_0,...,q_6` are too coarse.
+2. **Bounded maximum certificate.**  Use the existing bounded gK8 finite check
+   and Lean-facing Delsarte certificate: the bounded maximum `MB` is already
+   below `10cap_k`.
+3. **Finite near-boundary / R-tail bridge.**  If concentration is first proved
+   only asymptotically, use HYP-2811 plus the closed-form `12*zeta(3)` R-tail
+   constant to reduce the remaining low-`M` window.
+4. **Generalized-doublet fallback atlas.**  If the monotonicity proof has
+   resonant exceptions, route them through the S78 address quotient
+   `(B,g,M,bridge parity, primitive(FULL E), remove-one witnesses)`.
+5. **Sieve residual projection.**  Compare any surviving finite atlas with the
+   below-frontier lifting/backward-projection sieve, whose next bottleneck is
+   computing the improper ansatz set for the fourteen-runner frontier.
 
-If this route works, HYP-2684's broad BV/Fourier lemma is no longer needed in
-full generality.  It becomes the conceptual explanation for why the P/R tail
-and the survival/live-depth margins are small.
+If this route works, the generalized-doublet work is not discarded.  It becomes
+the finite-address layer beneath a stronger gK8 concentration theorem.
 
 ## Assumption Challenge
 
@@ -226,6 +310,8 @@ candidate vertex sets considered were:
 - proof-era strategies from the repo history;
 - hidden addresses `(B,g,M,primitive(FULL E), remove-one scaffold)`;
 - frozen-law terms and P/R-tail obligations.
+- missed-sector distributions `q_t` and the gK8 moment `10q0+q3+10q6`;
+- concentration/decorrelation proof states.
 
 The quotient preserves the direct predicate `p0<cap_k` and the identity of the
 current proof obligation.  It destroys the stronger false predicate
@@ -241,10 +327,17 @@ profiles are still direct-cap safe.
 The span-20 audit keeps that order: the k=12 profile path begins with
 `('r2','g2','even10_odd2_farodd0')`, and every over-`Q` top row is `r=2`.
 
+The gK8 overlay builds the same tournament with observable max `L_yK8`.  In
+the span-18 overlay the Hamiltonian path still begins with an `r=2` profile for
+k=10,11,12, with zero `L_yK8` cap violations.
+
 At the proof-strategy level the matured tournament is:
 
 ```text
-addressed_generalized_doublet
+gK8_concentration_extremality
+> decorrelation_middle_mass_majorization
+> bounded_LyK8_certificate
+> addressed_generalized_doublet_fallback
 > frozen_room_plus_PR_tail
 > survival_live_depth_r>=3_margin
 > global_BV_Fourier_error
@@ -263,8 +356,11 @@ No LRC14 proof is claimed.  HYP-2810 contributes:
 
 - an exact finite-window audit supporting generalized-doublet dominance at
   `span<=18` and `span<=20`;
+- an exact `span<=18` gK8 overlay showing the same genuine-wide window has
+  zero `L_yK8` cap violations, with r=2 leaders;
 - a proof-history synthesis explaining why the current route should retain
-  `(B,g,M)` addresses;
+  both the gK8 missed-sector moment and `(B,g,M)` addresses;
 - a bridge from the 2026 below-frontier lifting/backward-projection literature
   to the repo's cap/genuine-wide address quotient;
-- a sharper next theorem statement for finishing the genuine-wide branch.
+- a sharper next theorem statement: prove gK8 concentration/decorrelation
+  extremality, with generalized doublets as the finite resonant fallback.

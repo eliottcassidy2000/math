@@ -12,11 +12,28 @@ genuine-wide rows.  THM-563 made the single-far branch exact by signed endpoint
 periodicity, which forced the remaining proof obligation into genuine-wide
 rows with at least two far elements.
 
+Post-fetch HYP-2811/HYP-2812 changes the proof order again.  The clean route is
+now the gK8 missed-sector moment
+
+```text
+L_yK8 = 10q0 + q3 + 10q6,
+```
+
+not a direct `p0` extremality statement.  The new concentration-extremality
+claim is that `L_yK8` is maximized by bounded/concentrated rows and strictly
+drops under wide decorrelation.  This explains why the k=12 odd-bridge breaker
+can beat `Q(11)` in `p0` while remaining comfortably below the bounded maximum
+in `L_yK8`: gK8 charges the extreme missed-count atoms `q0` and `q6`, and
+spreading pushes mass into the middle.  The exact S78 gK8 overlay on the
+span-18 genuine-wide domain found zero `L_yK8` violations, with the same r=2
+leaders at k=10,11,12.
+
 The current mature address looks like
 
 ```text
-(bounded base B, far pair {M,M+g}, bridge parity, full-set gcd,
- remove-one scale witnesses, frozen slow coordinate y, finite bridge window).
+(missed-sector distribution q, gK8 moment, bounded base B,
+ far pair {M,M+g}, bridge parity, full-set gcd, remove-one scale witnesses,
+ frozen slow coordinate y, finite bridge window).
 ```
 
 This address explains why mac-mini S7's k=12 over-`Q(11)` obstruction did not
@@ -40,13 +57,15 @@ public improper ansatz survivor
 
 So the bold finish is not "make Weyl error uniformly small."  It is:
 
-1. Prove cap-dangerous genuine-wide rows have exactly two far elements, or
-   prove all `r>=3` rows have a survival/live-depth margin.
-2. Prove arbitrary-gap generalized doublets by a frozen-room plus P/R-tail
-   theorem, with full-set primitivity and remove-one witnesses in scope.
-3. Build a finite bridge atlas for the low-`M,g` rows, especially even-AP plus
-   odd-bridge families.
-4. Compare the resulting finite addressed families with the prime-sieve
+1. Prove gK8 concentration extremality: wide decorrelation cannot increase
+   `10q0+q3+10q6` beyond the bounded maximum.
+2. Use the bounded gK8 certificate to compare that maximum with `10cap_k`.
+3. If the concentration proof is only asymptotic, use the HYP-2811/HYP-2808
+   R-tail route; the Mordell-Tornheim constant now has closed form
+   `12*zeta(3)`.
+4. Keep the generalized-doublet and finite bridge atlas as the resonant
+   exception layer, especially for even-AP plus odd-bridge families.
+5. Compare any remaining finite addressed families with the prime-sieve
    improper survivors for `k=13`.
 
 The strategic correction is sharp: retain addresses until the last possible
