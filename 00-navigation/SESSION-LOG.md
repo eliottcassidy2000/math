@@ -57,6 +57,16 @@ decorrelated product = finite-n Riesz product (arXiv:2511.16636).
 error]. All hugs Q(k-1) = the consec plateau. 15+ pushes; all leads shared. Files: lrc_L7_{decorrelated_closed_
 form,resonant_atlas}_kps, lrc_web_literature_map_kps-S24; HYP-2757/2758.
 
+## mac-mini-2026-06-21-S20b -- CAPSTONE: the consec-max wall DISSOLVES (drill harvest + reframe)
+The LAYER-3 drill (wkkl2szpf) delivered a pivotal reframe (HYP-2778), independently verified + broadcast to the team:
+- **consec is NOT the measS7 maximizer for k>=12** (counterexample E*=[0..10,12] beats consec at k=12, verified). consec-max holds k=8..11, fails k=12, recovers 13-15, fails k>=16. So the long-hunted gap #4 / LAYER 3 'consec uniquely maximizes measS7' is FALSE as a universal claim.
+- **...and it was UNNECESSARY.** The real proof target is max_E measS7(E) <= cap_k, which HOLDS at every non-trivial row (BOUNDARY TABLE): k=8: 0.327<=0.382 (+0.054); k=9..12 margins 0.078/0.100/0.144/0.212; cap_13=1 => k>=13 trivial. Binding row is k=8 (NOT k=10 -- the audit's k=10 measured cap vs the decorrelated plateau).
+- **CORRECTED ARCHITECTURE:** LRC(14) = [L1-L6] + [max measS7<=cap_k for the 5 FINITE rows k=8..12, all spans: P2 Delsarte L_y<=cap + R<=(20/7)/p L7 tail] + [k>=13 trivial]. The aggregate consec-max wall is replaced by 5 finite per-row Delsarte cap bounds. k=8,9,11 duals ALREADY Lean-formalized (delsarte_bound + gK*_dominates); need k=10,12.
+- Drill also PROVED: binding-speed survival formula F (T=1/(7v)), the LEG-BOUND LEMMA (v+<=M, consec M=6 unique min, ties L3 to L1), the two-case perfect-short reduction. Refuted (flags): minimax-equalization, harmonic-exchange, Huffer-Shepp per-cell, WIN/DISC composition.
+- REFLECTION: consec-max-is-the-wrong-wall-the-cap-binds-only-at-k10 (note: actually k=8). Broadcast sent.
+- **RUNNING:** corrected-architecture workflow (wuag82fuj): Delsarte dual at k=10,12 + crude k>=12 bound + reconcile the k=12 numeric discrepancy + adversarial proof-status audit.
+NEW: HYP-2778 + boundary table. CAVEAT: k=12 measS7 has a ~0.006 mac-mini-vs-drill boundary discrepancy to reconcile (qualitative E*>consec robust).
+
 ## mac-mini-2026-06-21-S20 -- harvested the creative-lead trawl: conductance invariant, windows extremality, AP-unification CORRECTION; drill workflow running
 Harvested the 7-angle creative trawl (wiarhvx3i) + launched a 5-route LAYER-3 drill (wkkl2szpf). NEW: HYP-2760..2763 + a reflection correction + ROUTE-4 obstruction + backlog catalog.
 - **HYP-2760 (conductance invariant, VERIFIED):** measS7 is EXACTLY a function of c_r=sum_{e=r mod7}1/|e| (0 collisions) -- the sharpest LRC invariant yet. Foster conservation sum_r g(r)=112 on C_7; measS7 is a MIN-over-sectors BOTTLENECK (not Rayleigh/additive). consec maxes total conductance; e=0 = perfect short on sector 0 (electrical proof of LAYER 2).
