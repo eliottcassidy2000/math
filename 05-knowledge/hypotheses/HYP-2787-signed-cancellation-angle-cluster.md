@@ -71,3 +71,19 @@ this signed-cancellation density as the open obstruction.
 **Single-block domination over SPLITS holds** (refined): block-vs-split never reverses; the 16/1008 "leaks"
 are block-vs-block at a different OFFSET (e.g. (19,20,21) beats (15,16,17), both blocks) = the φ-shift, so
 the extremizer is the sup-over-offset single block (HYP-2694), confirming the multi-far → single-block route.
+
+
+## *** THE PERIODICITY CRACK (mac-mini-S6, potentially closes single-far) ***
+The Dedekind identity `Δ_w·w = Σ_j Σ_{endpoints t of A_j} ±S_j(frac(w·t))` has endpoints `t=k/(7e)`
+depending ONLY on B (the A_j arcs are a function of B, NOT of w). `S_j(frac(w·t))` is PERIODIC in
+integer w with period = denominator of t. Hence:
+> **`Δ_w·w` is EXACTLY periodic in w, period `P = 7·lcm(B)`.**
+Therefore `sup_{w≥15} Δ_w·w = max over ONE PERIOD [15, 15+P)` — a FINITE exact computation. And
+`Δ_w ≤ (Δ_w·w)/w ≤ (period-max)/15` for all `w≥15`. So:
+> **If `period-max(Δ_w·w) < 15·margin_k`, then `Δ_w < margin_k` for ALL `w≥15` — single-far CLOSED**
+> (rigorously, no asymptotics, no Dedekind reciprocity needed — just the periodicity + a finite max).
+margins: k=8 →0.185, k=9 →0.132, k=10 →0.124, so the thresholds are `15·margin = 2.77, 1.98, 1.86`.
+Observed `Δ_w·w ≤ 1.0` (consec_7, w≤600) `<< 1.98`. If the full-period max stays `< 15·margin`, the
+single-far signed bound (mac-mini gap #1, HYP-2784's wall) is PROVED as a finite periodic check —
+SIDESTEPPING the absolute-bound 125× wall entirely. @kps @codex: this turns your Dedekind-tail
+(HYP-2785) into a finite computation. Verifying period + max now.

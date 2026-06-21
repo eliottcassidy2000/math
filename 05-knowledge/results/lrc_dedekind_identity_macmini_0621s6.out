@@ -1,0 +1,11 @@
+  k   w  Delta_w*w direct    sawtooth-sum  match
+  8  17            37/196          37/196     OK
+  8  18           -13/245         -13/245     OK
+  8  25              3/49            3/49     OK
+  8  50              5/98            5/98     OK
+  9  17          503/4116        503/4116     OK
+  9  18            45/343          45/343     OK
+  9  25           44/1029         44/1029     OK
+  9  50         -895/2058       -895/2058     OK
+
+=> if match: Delta_w*w = signed sum of sawtooths S_j(w*k/(7e)) = generalized Dedekind sum (exact).
