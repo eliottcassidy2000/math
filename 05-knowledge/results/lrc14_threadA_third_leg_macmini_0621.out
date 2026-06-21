@@ -1,0 +1,25 @@
+##############################################################################
+# THE THIRD LEG: doubled-residue coordinate (THREAD A)
+##############################################################################
+
+Full-residue, exactly-one-doubled-residue (span<= 14): 319 shapes
+
+consec=[0, 1, 2, 3, 4, 5, 6, 7]: doubled_data = (0, 0, 7), measS7=0.327211
+   (residue 0 doubled by {0,7}; the doubled magnitude 7 = the third leg.)
+   [0, 1, 2, 3, 4, 5, 6, 7]: doubled=(0, 0, 7), measS7=0.327211
+   [0, 1, 2, 3, 4, 5, 6, 8]: doubled=(1, 1, 8), measS7=0.208333
+
+Is measS7 a function of (leg profile, r*, m1, m2)? non-function keys: 0/319
+
+Among MINIMAL-leg-profile (0,1,2,3,4,5,6) shapes: vary the 3rd leg (r*, m2):
+   [0, 1, 2, 3, 4, 5, 6, 7]: doubled res 0 = {0,7}, 3rd-leg m2=7, measS7=0.327211  <-- consec
+   [0, 1, 2, 3, 4, 5, 6, 14]: doubled res 0 = {0,14}, 3rd-leg m2=14, measS7=0.232313
+   [0, 1, 2, 3, 4, 5, 6, 8]: doubled res 1 = {1,8}, 3rd-leg m2=8, measS7=0.208333
+   [0, 1, 2, 3, 4, 5, 6, 12]: doubled res 5 = {5,12}, 3rd-leg m2=12, measS7=0.202381
+   [0, 1, 2, 3, 4, 5, 6, 10]: doubled res 3 = {3,10}, 3rd-leg m2=10, measS7=0.190476
+   [0, 1, 2, 3, 4, 5, 6, 9]: doubled res 2 = {2,9}, 3rd-leg m2=9, measS7=0.188095
+   [0, 1, 2, 3, 4, 5, 6, 13]: doubled res 6 = {6,13}, 3rd-leg m2=13, measS7=0.184249
+   [0, 1, 2, 3, 4, 5, 6, 11]: doubled res 4 = {4,11}, 3rd-leg m2=11, measS7=0.163203
+
+KEY: doubling residue 0 (the IDENTITY/center residue) with the SMALLEST
+second magnitude (7) maximizes the aggregate -- the third-leg-optimal choice.

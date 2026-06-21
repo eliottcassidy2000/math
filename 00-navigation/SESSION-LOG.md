@@ -1,3 +1,20 @@
+## mac-mini-2026-06-21-S18 (THREAD B) -- does the Doyle-Holt/half-arc-transitive lens give the Paley H-max? VERDICT: NO -- two extremalities DECOUPLE; arc-transitivity = det-ceiling (spectral), NOT H-max; Doyle-Holt is the OBSTRUCTION
+Task (subagent, Thread B): test whether the Doyle-Holt / half-arc-transitive (arc-transitive) structure forces Paley as the H-max (the tournament side of the shared theta' wall HYP-2747), or is the obstruction.
+
+**VERDICT: clean OBSTRUCTION (computed, exact).** There are TWO distinct tournament extremalities and Paley realizes the WRONG one for H:
+- **det(I+S) Hadamard ceiling** (THM-472) = DRT = Paley when it exists = **arc-transitive**, self-converse (SC), |Aut|=n(n-1)/2, arcO=1. A **spectral / weakly-regular** extremal.
+- **H-max** (Hamiltonian paths) = the **ROTATION (consec/carousel)** for n>=13 (canon LEM-004: Paley only 3rd at n=19), NOT a DRT, NOT arc-transitive (arcO = m = (n-1)/2), |Aut|=n. **Strictly finer than spectrum** (THM-499).
+- They COINCIDE on Paley only at n=7,11; SPLIT at n>=13. At n=15 (Paley-free) rotation H=198,464,295 BEATS the tower DRT H=198,335,025.
+
+**MECHANISM (exact):** for a circulant tournament, arc-transitivity <=> multiplier group transitive on connection set <=> single multiplicative orbit <=> QR <=> Paley (verified p=7,11,19). Rotation {1..m} = opposite extreme (m arc-orbits, minimal symmetry). "Max multiplier symmetry = spectral flatness = DRT = det ceiling" -- NOT H-max.
+
+**THE TRICHOTOMY (real deliverable, pairing my arc-transitivity mechanism with kps HYP-2748):** across n=3 mod 4 the DRT's available symmetry is one of three:
+- **prime-power n** (7,11,19,23,27,31,43): Paley/QR exists -> arc-transitive & SC (converse Z_2 REALIZED).
+- **n=pq, p|q-1** (21,39,55): no Paley but non-abelian Frobenius group order n -> VT NS (half-arc regime, converse Z_2 UNREALIZED; kps's F_21).
+- **n=pq, p nmid q-1** (15,35,51): only Z_n, 0 circulant DRTs -> forced non-VT NS DEFECTIVE (tower DRT(15): vO=3,arcO=7). One-line obstruction: no non-abelian group of order 15.
+
+So arc-transitivity (Doyle-Holt "symmetric, converse realized" end) is available ONLY at prime-power orders, and is the det-ceiling object -- NOT the H-max. The H-max is the rotation = consec = LRC linear/anti-MDS stratum (HYP-2602, THM-538). **The shared theta' wall runs through the ROTATION/consec side, not Paley.** Fully consistent with kpswf6 Thread A (O3: Paley H-max fails past p=11; Z_13 H-max is odd-step consec) and mac-mini-S14 (theta'=L_y collapse). Scripts: 04-computation/lrc14_threadB_{doyle_holt_paley,drt_symmetry_vs_H,rotation_vs_paley_symmetry}_macmini.py; outputs in 05-knowledge/results/. Reflection: the-two-tournament-extremalities-split-paley-is-the-spectral-ceiling-rotation-is-the-h-max-macmini.md. HONEST: global (non-circulant) H-max at n>=13 unknown; "rotation is H-max" proven within circulant family only (at n=7 global max IS Paley=189).
+
 ## kind-pasteur-2026-06-21-kpswf6 (THREAD A) -- does CJJ linear-code completeness CERTIFY the tournament Paley H-max where the LRC AP one collapses? VERDICT: linearity splits the CERTIFICATE, NOT the H-extremality
 Task (subagent, Thread A): build the Delsarte/CJJ LP on the conflict graph Omega(T) for tournament H-max; test whether CJJ's linear-code completeness UNIQUELY SELECTS Paley (=QR cyclic linear code) as H-maximizer, where the LRC consec=AP (non-linear) collapses (HYP-2744). Find the hierarchy level that pins Paley; honest verdict on whether linearity splits the two.
 

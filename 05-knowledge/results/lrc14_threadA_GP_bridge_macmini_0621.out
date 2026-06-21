@@ -1,0 +1,34 @@
+##############################################################################
+# G_P / MARKOFF-LEG BRIDGE & ROBUSTNESS (THREAD A)
+##############################################################################
+
+1. Resonance a=1 for consec: per-residue survival arc & cycle-leg test.
+   W_1(consec) = 13/294 = 0.044218
+   cover fraction in the 1/7-cell = 13/42 = 0.309524
+   cycle-graph legs g(t)=2t(7-t), t=1..6: [12, 20, 24, 24, 20, 12]
+   (g(t)/7 = effective resistance R_eff(0,t) on C_7; the G_P building block)
+
+2. Per-resonance widths W_a(consec), a=1..6 (exact), and 7*W_a:
+   a=1: W=13/294  7W=13/42=0.309524
+   a=2: W=13/294  7W=13/42=0.309524
+   a=3: W=89/1470  7W=89/210=0.423810
+   a=4: W=17/294  7W=17/42=0.404762
+   a=5: W=13/294  7W=13/42=0.309524
+   a=6: W=8/105  7W=8/15=0.533333
+
+3. ROBUSTNESS of consec-max over the FULL-residue stratum (k=8):
+   span<= 13: 256 full-res shapes; consec beaters=0  (consec unique max: True)
+   span<= 16: 861 full-res shapes; consec beaters=0  (consec unique max: True)
+   span<= 20: 5812 full-res shapes; consec beaters=0  (consec unique max: True)
+
+4. AGGREGATE marker: consec maximizes the SUM of W_a but NOT each W_a.
+   a=1: consec W_a beaters = 3
+   a=2: consec W_a beaters = 1
+   a=3: consec W_a beaters = 0
+   a=4: consec W_a beaters = 0
+   a=5: consec W_a beaters = 1
+   a=6: consec W_a beaters = 0
+   SUM_a: consec beaters = 0 (the sum is consec-maximal though individual a are not)
+
+   => consec-max is genuinely AGGREGATE across resonances: it wins the
+      TOTAL while losing individual resonances. No per-resonance argument.

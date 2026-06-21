@@ -1,0 +1,29 @@
+##############################################################################
+# THIRD-LEG MONOTONICITY & GENERALIZATION (THREAD A)
+##############################################################################
+
+TEST A: minimal base {0..6}, add one extra elt = r*+7t. measS7 vs (r*, m2):
+   double res 0, extra=7 (m2=7): measS7=0.327211
+   double res 0, extra=14 (m2=14): measS7=0.232313
+   double res 0, extra=21 (m2=21): measS7=0.217687
+   double res 1, extra=8 (m2=8): measS7=0.208333
+   double res 3, extra=17 (m2=17): measS7=0.207703
+   double res 5, extra=26 (m2=26): measS7=0.205861
+   double res 5, extra=12 (m2=12): measS7=0.202381
+   double res 1, extra=22 (m2=22): measS7=0.200216
+   double res 4, extra=25 (m2=25): measS7=0.199048
+   double res 2, extra=16 (m2=16): measS7=0.194643
+   double res 6, extra=27 (m2=27): measS7=0.193915
+   double res 4, extra=18 (m2=18): measS7=0.193651
+   double res 1, extra=15 (m2=15): measS7=0.190476
+   double res 3, extra=10 (m2=10): measS7=0.190476
+   => best = double residue 0 at smallest m2=7 (consec).
+
+TEST B: k=8 span<= 14: 319 full-res shapes. measS7(consec)=0.327211
+   consec beaters over full stratum: 0  (consec global max: True)
+
+TEST C k=9 span<= 14: 688 full-res shapes; measS7(consec)=0.416156; beaters=0; argmax=consec
+   consec residue->elements: {0: [0, 7], 1: [1, 8], 2: [2], 3: [3], 4: [4], 5: [5], 6: [6]}
+
+TEST C k=10 span<= 14: 832 full-res shapes; measS7(consec)=0.504478; beaters=0; argmax=consec
+   consec residue->elements: {0: [0, 7], 1: [1, 8], 2: [2, 9], 3: [3], 4: [4], 5: [5], 6: [6]}

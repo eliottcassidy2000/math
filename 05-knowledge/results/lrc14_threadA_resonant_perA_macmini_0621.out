@@ -1,0 +1,32 @@
+##############################################################################
+# PER-RESONANCE EXACT WIDTH near x=a/7  (THREAD A)
+##############################################################################
+
+consec=[0, 1, 2, 3, 4, 5, 6, 7], per-resonance widths (a=1..6):
+   a=1: width=13/294 = 0.044218
+   a=2: width=13/294 = 0.044218
+   a=3: width=89/1470 = 0.060544
+   a=4: width=17/294 = 0.057823
+   a=5: width=13/294 = 0.044218
+   a=6: width=8/105 = 0.076190
+   sum a=1..6: 481/1470 = 0.327211
+
+Full-residue stratum: 48 shapes. Per-resonance consec-max test:
+   a=1: consec width=0.044218  beaters=2  argmax=[0, 2, 3, 4, 5, 6, 7, 8] (=0.062925)
+   a=2: consec width=0.044218  beaters=0  argmax=consec
+   a=3: consec width=0.060544  beaters=0  argmax=consec
+   a=4: consec width=0.057823  beaters=0  argmax=consec
+   a=5: consec width=0.044218  beaters=1  argmax=[0, 1, 2, 4, 5, 6, 7, 10] (=0.046259)
+   a=6: consec width=0.076190  beaters=0  argmax=consec
+
+AGGREGATE resonant (sum a=1..6): consec=0.327211  beaters=0
+
+Consec residue assignment (e, e mod 7) and the local slope 7e:
+   e=0: e mod 7=0, local slope 7e=0
+   e=1: e mod 7=1, local slope 7e=7
+   e=2: e mod 7=2, local slope 7e=14
+   e=3: e mod 7=3, local slope 7e=21
+   e=4: e mod 7=4, local slope 7e=28
+   e=5: e mod 7=5, local slope 7e=35
+   e=6: e mod 7=6, local slope 7e=42
+   e=7: e mod 7=0, local slope 7e=49

@@ -1,0 +1,77 @@
+
+==========================================================================
+  n=7  rotation S={1,2,3} vs Paley S={1,2,4}
+==========================================================================
+  rotation7          DRT=n |Aut|=       7 vO= 1 arcO=   3 VT=Y ArcT=n SC=Y det(I+S)=            64  H=175  [0.0s]
+  Paley7             DRT=Y |Aut|=      21 vO= 1 arcO=   1 VT=Y ArcT=Y SC=Y det(I+S)=           512  H=189  [0.0s]
+
+==========================================================================
+  n=11  rotation S={1..5} vs Paley QR_11
+==========================================================================
+  rotation11         DRT=n |Aut|=      11 vO= 1 arcO=   5 VT=Y ArcT=n SC=Y det(I+S)=          1024  H=93027  [0.0s]
+  Paley11            DRT=Y |Aut|=      55 vO= 1 arcO=   1 VT=Y ArcT=Y SC=Y det(I+S)=        248832  H=95095  [0.0s]
+
+==========================================================================
+  n=15  rotation S={1..7}  (PALEY-FREE: no QR tournament; tower DRT is the DRT)
+==========================================================================
+  computing rotation15 symmetry + H (Held-Karp 2^15)...
+  rotation15         DRT=n |Aut|=      15 vO= 1 arcO=   7 VT=Y ArcT=n SC=Y det(I+S)=         16384  H=198464295  [0.3s]
+
+==========================================================================
+  n=19  rotation S={1..9} vs Paley QR_19  (H from canon LEM-004; symmetry computed)
+==========================================================================
+  rotation19         DRT=n |Aut|=      19 vO= 1 arcO=   9 VT=Y ArcT=n SC=Y det(I+S)=        262144  H=1184212824763  [0.0s]
+  Paley19            DRT=Y |Aut|=     171 vO= 1 arcO=   1 VT=Y ArcT=Y SC=Y det(I+S)=  512000000000  H=1172695746915  [0.0s]
+
+==========================================================================
+  VERDICT SUMMARY
+==========================================================================
+  CANON LEM-004: circulant H-max = Paley at n=7,11; = ROTATION at n=13,15,17,19.
+  THM-472: det(I+S) Hadamard ceiling = DRT (spectral / weakly-regular) extremal.
+  THM-499: H is STRICTLY FINER than the spectrum.
+
+  Reading the symmetry columns above:
+   * PALEY = arc-transitive (ArcT=Y), self-converse (SC=Y), a DRT, attains the
+     det(I+S) ceiling. It is the MAXIMAL-SYMMETRY / SPECTRAL extremal.
+   * ROTATION = the H-MAX (n>=13) but is NOT arc-transitive and NOT a DRT.
+   * The half-arc-transitive (Doyle-Holt) object is the NS / 2-arc-orbit case:
+     it is neither Paley nor rotation.
+
+  => The arc-transitive (Doyle-Holt) lens characterizes the det(I+S)/DRT
+     spectral ceiling, NOT the H-max. The two extremalities DECOUPLE at n>=13.
+     Doyle-Holt is the OBSTRUCTION (wrong extremality), not the route, for H.
+
+  => The arc-transitive (Doyle-Holt) lens characterizes the det(I+S)/DRT
+     spectral ceiling, NOT the H-max. The two extremalities DECOUPLE at n>=13.
+     Doyle-Holt is the OBSTRUCTION (wrong extremality), not the route, for H.
+
+==========================================================================
+  APPENDIX: arc-transitivity availability across n = 3 mod 4
+==========================================================================
+  n   factors      prime-pow   nonab-order-n   symmetry available for the DRT
+    7 [7]              True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   11 [11]             True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   15 [3, 5]          False           False   DEFECTIVE only (no order-n group but Z_n; no circ DRT => non-VT NS)
+   19 [19]             True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   23 [23]             True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   27 [3]              True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   31 [31]             True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   35 [5, 7]          False           False   DEFECTIVE only (no order-n group but Z_n; no circ DRT => non-VT NS)
+   39 [3, 13]         False            True   HALF-ARC/NS only (non-ab carrier exists, e.g. F_21; VT but arcO>=2, NS)
+   43 [43]             True            None   ARC-TRANSITIVE (Paley/QR circulant: |Aut|=n(n-1)/2, arcO=1)
+   51 [3, 17]         False           False   DEFECTIVE only (no order-n group but Z_n; no circ DRT => non-VT NS)
+   55 [5, 11]         False            True   HALF-ARC/NS only (non-ab carrier exists, e.g. F_21; VT but arcO>=2, NS)
+
+  TRICHOTOMY (proved/structural):
+   * PRIME-POWER n (7,11,19,23,27,31,43): Paley/QR circulant DRT exists, is
+     ARC-TRANSITIVE & self-converse. The det(I+S) Hadamard ceiling has a
+     maximal-symmetry attainer. (But H-max is still rotation for n>=13.)
+   * n = p*q with p | q-1 (21,39,55): no Paley, but a non-abelian Frobenius
+     group of order n exists -> VERTEX-TRANSITIVE NON-SELF-CONVERSE tournament
+     (kps HYP-2748, F_21). Half-arc-transitive regime: the converse Z_2 is
+     UNREALIZED. Not arc-transitive.
+   * n = p*q with p nmid q-1 (15,35,51): only Z_n; 0 circulant DRTs -> the DRT
+     is FORCED non-VT, NS, DEFECTIVE symmetry (tower DRT(15): vO=3,arcO=7).
+  So ARC-TRANSITIVITY (the Doyle-Holt 'symmetric' end) is available ONLY at
+  prime-power orders. Everywhere else the DRT lives in the NS / half-arc-rigid
+  or defective regime -- exactly the Doyle-Holt 'converse Z_2 unrealized' side.

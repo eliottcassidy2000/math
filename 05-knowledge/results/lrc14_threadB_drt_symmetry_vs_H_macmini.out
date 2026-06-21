@@ -1,0 +1,36 @@
+
+==========================================================================
+  (B) n=7 -- unique DRT (Paley QR_7) vs Mersenne-tower DRT(7): same object?
+==========================================================================
+  Paley QR_7                 DRT=Y  |Aut|=     21 vO= 1 arcO=  1 VT=Y ArcT=Y SelfConv=Y halfArc=n  H=189  det(I+S)=512  [0.0s]
+  Tower DRT(7)               DRT=Y  |Aut|=     21 vO= 1 arcO=  1 VT=Y ArcT=Y SelfConv=Y halfArc=n  H=189  det(I+S)=512  [0.0s]
+
+==========================================================================
+  (C) n=11 -- Paley QR_11 (unique circulant DRT)
+==========================================================================
+  Paley QR_11                DRT=Y  |Aut|=     55 vO= 1 arcO=  1 VT=Y ArcT=Y SelfConv=Y halfArc=n  H=95095  det(I+S)=248832  [0.0s]
+  #circulant DRTs at n=11 (over antisymmetric sets): 2
+    circulant DRT set S=[2, 6, 7, 8, 10]
+    circulant DRT set S=[1, 3, 4, 5, 9]
+
+==========================================================================
+  (D) n=15 -- THE PALEY-FREE CASE: tower DRT (NS) + any circulant DRT
+==========================================================================
+  building tower DRT(15) symmetry + H (may take a few seconds)...
+  Tower DRT(15)              DRT=Y  |Aut|=     21 vO= 3 arcO=  7 VT=n ArcT=n SelfConv=n halfArc=n  H=198335025  det(I+S)=268435456  [0.3s]
+  searching all 2^7=128 antisymmetric circulant sets on Z_15 for DRTs...
+  #circulant DRTs at n=15: 0
+
+  H-max among KNOWN DRTs at n=15 = 198335025
+    H-MAX DRT: Tower DRT(15)  ArcTrans=False SelfConv=False VT=False
+  >> Is the H-max DRT at n=15 ARC-TRANSITIVE? False
+  >> Is the H-max DRT at n=15 SELF-CONVERSE (SC)? False
+
+==========================================================================
+  SYNTHESIS TABLE
+==========================================================================
+  object                       n  DRT  VT  ArcT  SC              H
+  Paley QR_7                   7    Y   Y     Y   Y            189
+  Tower DRT(7)                 7    Y   Y     Y   Y            189
+  Paley QR_11                 11    Y   Y     Y   Y          95095
+  Tower DRT(15)               15    Y   n     n   n      198335025

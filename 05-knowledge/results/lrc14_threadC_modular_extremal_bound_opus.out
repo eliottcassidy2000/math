@@ -1,0 +1,61 @@
+==============================================================================
+THREAD C: modular/Dedekind extremal home for the ABSOLUTE discrepancy G_P
+==============================================================================
+
+[OBSTRUCTION 1] G_P multivalued on slopes => not a slope-function
+   P= 7: 6 slopes, 5 multivalued, max fiber=3
+   P=11: 10 slopes, 9 multivalued, max fiber=5
+   P=13: 12 slopes, 11 multivalued, max fiber=6
+   => G_P lives on the PAIR torus (Z/P)^2/<+-,swap>, finer than P^1(F_P).
+      The classical Dedekind/modular extremal theory is a SLOPE theory: no grip.
+
+[OBSTRUCTION 2] G_P residue-only => blind to continued-fraction depth
+   P=7: D=0 occurs at cf-sums [5, 6, 7, 8, 9] (many distinct depths, same D=0)
+        => D does NOT track the cf-sum; it tracks ONLY (p mod 7, q mod 7).
+        corr(D, cf-sum) over nonzero = -0.742 (no usable monotone bound)
+   => the classical cf-bound |s|<=(1/12) sum a_i and Rademacher cusp theory
+      (both depth-driven) CANNOT bound the residue-only absolute discrepancy.
+
+[OBSTRUCTION 3] No clean (Kronecker/Walum-style) 2nd moment for the absolute object
+   sum_(p,q) G_P^2 for P=[5, 7, 11, 13, 17, 19, 23, 29, 31]:
+     [2432, 30592, 1023680, 3816064, 31939584, 77296192, 353708672, 2245875584, 3824220416]
+   best degree-6 polynomial fit: relative residual 1.07e-04 (NOT exact)
+   (Walum's SIGNED 2nd moment IS a clean L(1,chi)^4 formula; absolute one is not.)
+
+[OBSTRUCTION 4] three legs are NOT {0,1,inf}: branch divisors collapse
+   P= 7: (||pq||=0) <=> (||p||=0 or ||q||=0): True
+   P=11: (||pq||=0) <=> (||p||=0 or ||q||=0): True
+   P=13: (||pq||=0) <=> (||p||=0 or ||q||=0): True
+   => third divisor = union of first two; degenerate {0,inf}, not {0,1,inf}.
+      The Belyi/Gamma(2) three-point home is the project's TRIANGLE-side
+      analogy, but the discrepancy's divisors do NOT realize three points.
+
+[POSITIVE] symmetry is exactly Klein-4 <z->-z, z->1/z> (order-2 modular part)
+   P= 7: swap-viol=0, neg-viol=0, S(recip)-viol=0/23
+   P=11: swap-viol=0, neg-viol=0, S(recip)-viol=0/63
+   P=13: swap-viol=0, neg-viol=0, S(recip)-viol=0/91
+   => the order-2 (hyperelliptic) reciprocity IS present, but it is the WHOLE
+      symmetry group; the order-3 (QR/doubling) of X(P) does NOT act. G_P is a
+      hyperelliptic SHADOW of X(P), not a full level-P modular form (HYP-2745).
+
+[EXTREMALITY] signed vs absolute aggregate peak at DIFFERENT shapes
+   consec=[1, 2, 3, 4, 5, 6]: abs-agg=408, signed-agg=-15/14
+   argmax ABS-agg    = (2, 3, 4, 5, 10, 11) (val 584)
+   argmax SIGNED-agg = (1, 2, 4, 8, 9, 11) (val 27/14)
+   => the two avatars are extremized at DIFFERENT sets: the SIGNED (reciprocity)
+      object cannot be used as a proxy/certificate for the ABSOLUTE extremality.
+   NOTE: neither pairwise aggregate peaks at consec -- consistent with HYP-2738
+   (the LRC functional is the COVER measure measS7, irreducibly aggregate, not a
+   pairwise sum of discrepancies). So even the absolute aggregate is the wrong
+   single modular value; the binding object is the full coupled cover event.
+
+==============================================================================
+TOTAL ASSERTION FAILURES: 0
+VERDICT: modular/Dedekind extremal theory does NOT supply a rigorous bound.
+Four exact obstructions: (1) multivalued on slopes, (2) residue-only/cf-blind,
+(3) no clean 2nd moment, (4) branch divisors collapse (no {0,1,inf}).
+The signed Dedekind sum (which DOES carry reciprocity + cf-bound + clean 2nd
+moment + cusp extremal theory) is only the degree-1 shadow; all four modular
+tools live on the shadow, none transfer to the absolute |E_2| carrier.
+This IS the 'absolute object has no clean transformation' wall, pinned exactly.
+==============================================================================
