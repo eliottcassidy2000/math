@@ -1,3 +1,32 @@
+## kind-pasteur-2026-06-20-S22 -- External-ideas mining: tournaments ARE quantum circuits (cut/cycle = Clifford/magic); THM-560 OCF degree ladder PROVED
+
+Dispatch: ~10 external ideas (Gibbs+Arnold cat map, Clifford/T-gate, road coloring, Hopfield vs 2-layer NN, crossing
+number, double-slit/Feynman-propagator-weights, Fubini-Study, Hebbian) — connections to the repo, hypotheses + proofs,
+pull frequently. (Same prompt dispatched to codex-S66/HYP-2705 and mac-mini-S7/THM-559 — three-way convergence.)
+
+**THE UNIFICATION (reflection `the-eight-external-ideas-are-one-apex-prime-stabilizer-magic-split`).** All 8 ideas are
+ONE structure: the apex-prime Z/p partition function split into a STABILIZER layer (cut-space / degree<=2 / Clifford,
+poly-time) and a MAGIC layer (cycle-space / degree>=3 / T-gate). Each idea is a lens on a layer or the boundary. The
+score->OCF wall (THM-555), the Clifford->magic wall, the Hopfield 2-local->k-local wall, the n=4->5 magic onset are
+ALL the boundary degree-2 -> degree-4.
+
+**HYP-2707 (tournaments = quantum circuits) + PROVED CORE.** c3 is a degree-2 GF(2) quadratic form in the tile bits;
+its parity is LITERALLY a Clifford Gauss sum: E[(-1)^c3]=2^{-rank/2}, bilinear rank=2floor((n-1)/2) (= THM-555 EXACTLY
+= the Gottesman-Knill rank formula). Verified n=4..8.
+
+**THM-560 (PROVED, my distinct result): the OCF degree ladder `deg_b(c_{2k+1})=2k`.** Proof: a directed (2k+1)-cycle
+sigma and its REVERSE sigma' have top-degree monomials differing by (-1)^{2k+1}=-1 (the cycle is ODD), so they CANCEL,
+dropping degree 2k+1 -> 2k. The ODDNESS of the OCF cycles IS the Clifford->magic degree drop. Exact n=7: deg(c3,c5,c7)
+=2,4,6; maxdeg(H)=L_max-1; magic onset n=5 (deg>=3 Fourier mass of H = 0/0.299/0.510/0.635, =0 at n=4 = pure Gauss sum).
+
+**Other verified:** MAGIC MEASURE = H-spread per score class (stabilizer spread-0 vs magic; onset n=5; Paley is NOT
+max-magic, it's a stabilizer score class). ARITHMETIC MAGIC SIGNATURE (conjecture): |sum_b i^{c3}|^2 odd-part =
+5,17,125,409 (degenerate non-stabilizer Gauss sum). CAT-MAP P1: LRC anchor map = M-fold expanding circle map; its
+transfer operator gives the O(1/M) decorrelation (Lemma DE) a spectral-gap meaning -> OPEN-Q-108 lead.
+**REFUTED-as-useful:** Feynman dictionary non-incremental (null<=>maximizer FALSE n>=9); crossing P(T) not iso-invariant
+(circular crossing = C(n,4), orientation-blind); road-coloring trivial on the bijective tiling hypercube; Gibbs/cat-map
+P2/P3 weak. Three-way convergence: codex HYP-2705 (LRC side), mac-mini THM-559 (c3=Ising, degree-2 rung), kps THM-560.
+
 ## mac-mini-2026-06-20-S7 -- CROSS-DOMAIN hypothesis session (Gibbs/Clifford/road-coloring/Hopfield/crossing/Feynman): the cut/cycle UNIVERSAL SEAM; THM-559 (c3 = line-graph Ising, PROVED)
 User: 10-idea brief (Gibbs+Arnold cat map, Clifford/T-gate, road coloring, Hopfield vs 2-layer NN, crossing number vs alternating, double-slit/Feynman-propagator-as-weights, Fubini-Study, Hebbian neuron) — find connections to the repo, generate hypotheses/proofs, pull frequently. Ran a 7-thread connection workflow (8 agents, 604k tok) + main-loop proof.
 **MAIN DELIVERABLE — THM-559 (PROVED all n):** the 3-cycle count c3 is an EXACT frustrated 2-body Ising energy on the ARC SPINS (line graph L(K_n)): c3 = n(n²−1)/24 − ½·Σ_v(s_v−s̄)², and E_score = Σ(s_v−s̄)² = C(n,2)/2 + ½Σ_{cherries}ε(v,e)ε(v,f)σ_eσ_f, coupling +½ if shared vertex is an EXTREME of the cherry / −½ if MIDDLE (ratio 2:1), zero field; ground state = regular tournament (max c3, Paley at n=7 via THM-126). Proof = elementary (s_v−s̄=½Σε σ); verified exact n=4,5,6 (0 mismatches). This is the CUT-SPACE face of the OCF as a classical spin glass — complementary to THM-290 (H/cycle-space antiferromagnet, many-body).
