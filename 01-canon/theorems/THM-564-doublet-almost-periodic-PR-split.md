@@ -1,13 +1,15 @@
 ---
 id: THM-564
 title: The genuine-wide DOUBLET deviation g(M)=M·(p0(E_M)−Φ) is ALMOST-PERIODIC and BOUNDED when centered at the EXACT frozen plateau Φ — exact inclusion-exclusion split g=P(M)+R(M), P period-(7·lcm(base)) with EXACT finite period-max, R=M·(d2(M)−d_inf)=O(1/M); closes the binding genuine-wide leg p0(E_M)≤cap_K−0.16 for all M≥15 via period-max(P)+sup|R| and a TINY finite window [15,M*] (M*=13,24,… ). The doublet analogue of THM-563.
-status: VERIFIED (K=8,9: full exact period 420, closes with M*=13,24; K=10: full exact period 2940; K=11,12 representative-window, H_K large/non-binding). The exact incl-excl identity p0(E_M)=p0(base)+A(M)+A(M+1)+d2(M) and g=P+R are PROVED exact (consistency P+R==g verified). period-max(P) is EXACT (THM-563 single-far sawtooth, finite). R=O(1/M) is VERIFIED (sup|R|=M·|d2−d_inf| bounded ~0.5–0.7, d2−d_inf decays ~1/M; mechanism = Koksma/three-distance discrepancy of the single residual far phase). The general bounded-base closure is the remaining finite check (as for THM-563).
+status: VERIFIED-closed ALL K=8..12 (FULL exact period at K=8,9,10 = 420,420,2940, M*=13,24,55; window-verified K=11,12, M*=25,13, H_K large/non-binding). The exact incl-excl identity p0(E_M)=p0(base)+A(M)+A(M+1)+d2(M) and g=P+R are PROVED exact (consistency P+R==g verified all M). period-max(P) is EXACT (THM-563 single-far sawtooth, finite). R=O(1/M) is VERIFIED (sup|R|=M·|d2−d_inf| bounded 0.43–0.74, d2−d_inf decays ~1/M; mechanism = Koksma/three-distance discrepancy of the single residual far phase). The general bounded-base R-tail closure is the remaining finite check (the doublet analogue of THM-563's completed 12805-base periodmax). CONVERGES with the concurrent kps-2026-06-21-S27 frozen-phase route (HYP-2799/2801/2803): their independent slow-x/fast-u double integral p0_inf EQUALS Φ_frozen to the EXACT rational at every K; their TV bound J_sharp=200/7≈28.6 gives the same closure with a looser window (f0~48–148) — this theorem's EXACT period-max(P)~1.2 is the tighter form (M*~13–55).
 source: kind-pasteur-2026-06-21-Swf9
 depends_on:
   - THM-563   # the single-far exact periodicity this extends to the far DOUBLET
-  - THM-557   # the BV finite-cutoff this collapses (M_BV~2000 -> M*~13-24)
+  - THM-557   # the BV/TV finite-cutoff this collapses (M_BV~2000 / f0~148 -> M*~13-55)
 related:
-  - HYP-2799  # this theorem's hypothesis-log entry (the frozen-plateau centering)
+  - HYP-2804  # this theorem's hypothesis-log entry (the frozen-plateau centering + exact P/R)
+  - HYP-2799  # kps S27 CONVERGENT: frozen-phase p0_inf == Φ_frozen (independent double integral)
+  - HYP-2803  # kps S27 CONVERGENT: binding doublet closed (cites this script's P/R numbers)
   - HYP-2797  # opus: doublet maximizer = consec+{M,M+1}; "sup|M·error|~1.4 bounded"
   - HYP-2798  # kps S27: "M·e grows to 7" (WRONG center bvd(base,2)); resolved here
   - HYP-2796  # codex: genuine-wide two-far freeze tail (frozen-phase law, converges)
@@ -61,8 +63,10 @@ the correct cutoff `M* = ⌈G_sup_bound/H_K⌉` is small, so the window is `[15,
 
 K=10 is the BINDING case: `cap−sup_p0 = 0.16188 ≥ 0.16` exactly, window `[15,55]` (vs THM-557
 `M_BV≈2200` — a 40× collapse). `d_inf=0.014039` matches the empirical large-M `d2` to 6 digits.
-(K=11,12: `H_K=0.0747,0.1313` large → non-binding; representative-window-verified, `cap−sup_p0
-≈0.204,0.267`.)
+K=11: period-max(P)=1.20535, sup|R|=0.61480, M*=25, worst p0=0.521058 ≤ 0.565275 ✓, cap−sup_p0=0.20422.
+K=12: period-max(P)=1.19556, sup|R|=0.42886, M*=13, worst p0=0.574150 ≤ 0.697143 ✓, cap−sup_p0=0.26749.
+(`H_K=0.0747,0.1313` large → non-binding; period-max over a 2400-window, which spans ≫ the
+sawtooth scale `7·max(base)≤70` so it captures the periodic envelope's max.) **ALL K=8..12 CLOSE.**
 
 ## Significance
 This is the **doublet analogue of THM-563**. THM-563 closed single-far via exact periodicity of

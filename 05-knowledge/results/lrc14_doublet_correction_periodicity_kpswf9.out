@@ -13,3 +13,7 @@ k=8
         f~165: |2nd-diff|=0.003088  f*that=0.5095
         f~215: |2nd-diff|=0.002031  f*that=0.4366
         f~265: |2nd-diff|=0.001690  f*that=0.4479
+  TEST3 asymptotic periodic envelope of c(f): max=+0.000574 min=-0.000451
+        => asymptotic sup p0(E_f) ~ p0_inf+max_cper = 0.262305; cap=0.381463; margin=+0.119157
+
+k=9
