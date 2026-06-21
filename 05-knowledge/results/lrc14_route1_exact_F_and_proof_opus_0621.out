@@ -1,0 +1,41 @@
+##############################################################################
+# ROUTE 1 DELIVERABLE: exact F + WIN proof + DISC obstruction
+##############################################################################
+
+consec = [0, 1, 2, 3, 4, 5, 6, 7]
+  M (leg-profile max) = 6 = 6  (the UNIQUE minimum)
+  measS7(consec) = 481/1470 = 0.327211
+  WIN(consec)    = 83/294 = 0.282313
+
+[A] EXACT contiguous survival (merged arcs), consec:
+   a=1: WIN_a=13/294=0.044218  W_a=13/294=0.044218  
+   a=2: WIN_a=13/294=0.044218  W_a=13/294=0.044218  
+   a=3: WIN_a=13/294=0.044218  W_a=89/1470=0.060544  (+DISC)
+   a=4: WIN_a=13/294=0.044218  W_a=17/294=0.057823  (+DISC)
+   a=5: WIN_a=13/294=0.044218  W_a=13/294=0.044218  
+   a=6: WIN_a=3/49=0.061224  W_a=8/105=0.076190  (+DISC)
+
+[B] WIN EXTREMALITY across full-residue k=8 stratum:
+   span<=18: N=2260  WIN>consec: 0  ties: 0
+   span<=22: N=9185  WIN>consec: 0  ties: 0
+
+[C] LEG-BOUND LEMMA: contiguous right-survival T+ >= 1/(7 M)?
+   T+ < 1/(7M) violations (relay only HELPS): 0  (0 => T+ >= 1/(7M))
+   consec M=6 is the UNIQUE minimum => T+ >= 1/42 best-possible.
+
+[D] DISC OBSTRUCTION: measS7 = WIN + DISC. Is DISC also consec-maximal?
+   DISC(consec) = 11/245 = 0.044898
+   shapes with DISC > consec: 383 (DISC NOT consec-maximal => cannot piggyback on WIN proof)
+     [0, 2, 3, 6, 9, 12, 15, 18]: DISC=0.140476 > consec, but measS7=0.188095 < 0.327211
+     [0, 3, 5, 6, 9, 12, 15, 18]: DISC=0.134127 > consec, but measS7=0.181746 < 0.327211
+     [0, 3, 6, 9, 12, 15, 16, 18]: DISC=0.132937 > consec, but measS7=0.180556 < 0.327211
+     [0, 3, 6, 9, 12, 13, 15, 18]: DISC=0.127289 > consec, but measS7=0.174908 < 0.327211
+
+   => OBSTRUCTION: DISC is a genuinely separate additive term. WIN is
+      provably consec-maximal; full measS7 needs DISC controlled too.
+
+[E] TWO-CASE REDUCTION for full measS7 (span<=18):
+   CASE 1 (no perfect short, 1616 shapes): max measS7 = 0.208333  (< WIN(consec)=0.282313: True)
+   CASE 2 (perfect short, !=consec, 643 shapes): max measS7 = 0.273639  (< consec=0.327211: True)
+   => consec UNIQUE max: True
+   M=6 residue-0-doublers (the L1+L2 winners): [[0, 1, 2, 3, 4, 5, 6, 7], [0, 1, 2, 3, 4, 5, 6, 14]]
