@@ -1,9 +1,77 @@
 ==============================================================================
-PART 1: EXACT H = I(Omega,2) FOR ALL CIRCULANT TOURNAMENTS -- THE MAXIMIZER
+PART 1: EXACT H + Omega/theta DATA, ALL Z_7 CIRCULANTS (full exact computation)
+==============================================================================
+  QR_7=[1, 2, 4]  INT=[1, 2, 3]   #valid circulants=8   H_max=189
+  S                  H  |Omega|  alpha  theta_LP   spread  tag
+  [1, 2, 4]        189       80      2   40.0000   0.0000  PALEY=MAX
+  [3, 5, 6]        189       80      2   40.0000   0.0000  PALEY=MAX
+  [4, 5, 6]        175       59      2   29.5000   1.6920  
+  [1, 4, 5]        175       59      2   29.5000   1.6920  
+  [2, 4, 6]        175       59      2   29.5000   1.6920  
+  [1, 3, 5]        175       59      2   29.5000   1.6920  
+  [2, 3, 6]        175       59      2   29.5000   1.6920  
+  [1, 2, 3]        175       59      2   29.5000   1.6920  Interval
+
+  Paley H=189 == H_max (MAXIMIZER, THM-126)
+  alpha(Omega): does argmin alpha == Paley? min alpha=2, Paley alpha=2  -> YES
+  theta_LP: does argmin theta_LP == Paley? min theta_LP=29.5000, Paley theta_LP=40.0000  -> NO
+  spread: does argmin spread == Paley (flat spectrum)? min spread=0.0000, Paley spread=0.0000  -> YES
+
+==============================================================================
+PART 2: THE MAXIMIZER ACROSS p (canon) -- WHERE 'PALEY EXTREMALITY' EVEN HOLDS
+==============================================================================
+    p  argmax-H circulant         H_max   note
+    3  Paley {1}                      3   Paley=QR, p=3mod4: MAXIMIZER (trivial)
+    7  Paley {1,2,4}                189   Paley=QR, p=3mod4: MAXIMIZER (THM-126, re-verified Part 1)
+   11  Paley {1,3,4,5,9}          95095   Paley=QR, p=3mod4: UNIQUE MAXIMIZER among circulants (THM-132)
+   13  odd-step {1,3,..,11}     3711175   p=1mod4: QR_13 NOT a tournament; AP/consec-half WINS; Satake(near-flat) LOSES (THM-128)
+
+  => Paley is the H-maximizer ONLY for p = 3 mod 4 (p in {3,7,11,...}), where QR
+     IS a tournament. At p = 1 mod 4 (p=13,...) QR is not even a tournament and the
+     AP/consec-half (NON-LINEAR) set wins. The Paley extremality is a p=3mod4
+     phenomenon; the AP extremality (the LRC side) lives at the OTHER residue.
+
+==============================================================================
+PART 3: THE LINEARITY SPLIT -- can CJJ certify Paley (linear) at p=7,11?
 ==============================================================================
 
-  p=7  (m=3, #valid circulants=8)  QR=[1, 2, 4]  INT=[1, 2, 3]
-    H_max = 175   (# circulants achieving max = 1)
-    H(Paley) = 167   Paley rank among circulants = 2   *** NOT the maximizer ***
-    H(Interval) = 175   Interval WINS
-    top circulants: S=[1, 2, 3]:H=175(Int), S=[1, 2, 4]:H=167(Paley), S=[1, 3, 5]:H=125
+  Paley T_p (p=3mod4) IS a linear code object: QR cyclic code over F_p. Its
+  tournament spectrum is FLAT, |lambda_k|^2 = (p+1)/4 (Gauss sum), MacWilliams-exact
+  -- a genuine linear-code distance-distribution fact. So the LINEAR-code side of
+  CJJ (translation + linear-combination symmetry) DOES apply to Paley.
+
+  BUT the H-functional is NOT a linear-code-distance functional. Two obstructions:
+
+  (O1) H = I(Omega,2) is a NONLINEAR (degree-m elementary-symmetric, THM-134)
+       functional of the spectrum. The flat point is the UNIQUE Parseval-simplex
+       critical point and a LOCAL max (negative Hessian, THM-134) -- but THM-134
+       does NOT prove global, and it is provably NOT global past p=11 (THM-128:
+       at p=13 the spread-MAXIMIZING AP set wins, flat LOSES). So even the
+       'linear-code-certifiable' flat spectrum is NOT the maximizer in general.
+
+  (O2) The CJJ/Delsarte LP and Lovasz-theta bound the INDEPENDENCE side (alpha of
+       Omega, hence the LEADING hardcore term), NOT the full H = I(Omega,2). We
+       check below whether alpha or theta_LP even tracks H at p=7.
+
+  At p=7 (Part 1 numbers): is the LP/theta argmin = the H-argmax (Paley)?
+    distinct H values: [189, 175]
+    distinct theta_LP: [29.5, 40.0]
+    distinct alpha:    [2]
+    Paley theta_LP=40.0000; non-Paley theta_LP range [29.5000,29.5000]
+    Does Paley STRICTLY minimize theta_LP (=> theta_LP certifies argmax)? NO -- theta_LP does NOT separate Paley
+
+  VERDICT (the linearity split):
+  * Linearity DOES make Paley's SPECTRUM (the QR-code distance distribution)
+    certifiable in the MacWilliams/Delsarte sense -- the flat spectrum is exactly
+    the CJJ-style linear-code dual certificate, where the AP miss-distribution is
+    non-linear and has no such closed dual (HYP-2744 collapse).
+  * BUT certifying the SPECTRUM is NOT certifying H-EXTREMALITY, because (O1) H is a
+    nonlinear functional whose maximizer is NOT the flat (linear) spectrum for
+    p>=13, and (O2) the Lovasz-theta/Delsarte LP bounds alpha(Omega), not I(Omega,2).
+  * So: linearity SPLITS the two problems at the level of the CERTIFICATE
+    (Paley's dual exists, AP's does not), but it does NOT close the tournament
+    H-extremality, because that extremality is FALSE beyond p=11. The 'genuine
+    result' the prompt hoped for (CJJ proves Paley H-max at binding p) does not
+    exist: there is no binding p>11 where Paley is the maximizer to certify.
+
+DONE.

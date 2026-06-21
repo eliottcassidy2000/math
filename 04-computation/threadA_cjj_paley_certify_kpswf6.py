@@ -23,6 +23,11 @@ So the "Paley extremality" the prompt asks to certify HOLDS only at p in {3,7,11
 (p=3 mod 4, where QR is a tournament AND Paley wins among circulants), and FAILS
 at p=13 (and beyond, 1 mod 4). We compute exactly at p=7 and analyze the LP/theta
 lens, then deliver the linearity-split verdict.
+
+NOTE (bug history): an EARLIER draft of this file mis-enumerated Omega and reported
+H(Paley_7)=167 / "Interval wins". That was a BUG (HYP-2751 flagged it). The current
+DFS odd-cycle enumeration is correct: H(Paley_7)=189 = circulant max, Interval=175.
+Re-verified against canon (THM-126) and the kps recompute (HYP-2751).
 """
 import sys, itertools
 import numpy as np

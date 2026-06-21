@@ -1,0 +1,51 @@
+==============================================================================
+(A) THE QR CODE IS LINEAR: MacWilliams duality closes EXACTLY (CJJ premise)
+==============================================================================
+  p=7 binary QR code = [7,4,3] Hamming code. Weight enumerator A = [1, 0, 0, 7, 7, 0, 0, 1]
+  Dual weight enum via MacWilliams B = ['1', '0', '0', '0', '7', '0', '0', '0']
+  Expected dual (simplex [7,3], all 7 nonzero cw weight 4) = [1, 0, 0, 0, 7, 0, 0, 0]
+  MacWilliams duality EXACT (the linear-code Delsarte dual closes)? YES
+
+  => For the QR (linear) code, the Delsarte/MacWilliams dual is an EXACT closed
+     transform. This is precisely the structure CJJ leverages: the LP-hierarchy is
+     COMPLETE because the dual lives on the (linear) subspace lattice and closes.
+
+==============================================================================
+(B) THE AP (LRC) SIDE: Boolean lattice, NOT a subspace lattice -> no closure
+==============================================================================
+
+  HYP-2744: the LRC analogue uses the BOOLEAN lattice of missed-sector subsets
+  (2^6 masks) with Boolean Mobius inversion q[M]=sum_{A superset M}(-1)^|A\M| a[A].
+  This is NOT the subspace lattice of a linear code. CJJ's completeness/integrality
+  (Prop 1.2) needs the optimizer to BE a linear code so the dual closes on the
+  subspace lattice. The AP miss-distribution is non-linear => no such closure =>
+  the hierarchy improves the BOUND but cannot SELECT consec (the HYP-2744 collapse,
+  re-confirmed: degree-2 per-subset functional non-vacuously selects consec, but
+  every clean monotone atom has many AP-beaters; needs a signed aggregate cut).
+
+==============================================================================
+(C) PUNCHLINE: the linear QR certificate certifies DISTANCE, not H=I(Omega,2)
+==============================================================================
+
+  The QR code's MacWilliams dual (A) certifies the QR code's DISTANCE DISTRIBUTION.
+  But the tournament extremal quantity is H = I(Omega(T),2), the hardcore partition
+  function of the ODD-CYCLE conflict graph -- a NONLINEAR functional that the
+  MacWilliams/Delsarte LP does not compute and does not bound from below.
+
+  Concretely (from threadA_cjj_paley_certify_kpswf6 Part 1, p=7):
+    * the Lovasz/Delsarte LP bound theta_LP(Omega) is LARGER for Paley (40) than
+      for non-Paley (29.5): the independence relaxation ANTI-tracks H.
+    * alpha(Omega)=2 for ALL 8 circulants: the independence number does not
+      separate the maximizer at all.
+  And globally THM-128: at p=13 the H-maximizer is the AP/odd-step (NON-linear)
+  set; the flat QR-style spectrum LOSES. So the linear-code certificate, even where
+  it exists, points at the wrong functional and the wrong optimizer past p=11.
+
+  HONEST VERDICT: linearity DOES split the CERTIFICATE-EXISTENCE question
+  (QR=closed MacWilliams dual; AP=open Boolean aggregate). It does NOT yield a CJJ
+  proof of tournament H-max extremality, because (i) CJJ certifies code distance,
+  not the hardcore H-functional, and (ii) the H-extremality of Paley is itself only
+  a p=3mod4, p<=11 phenomenon -- there is no binding large p where Paley is the
+  H-maximizer for a hierarchy to certify.
+
+DONE.
