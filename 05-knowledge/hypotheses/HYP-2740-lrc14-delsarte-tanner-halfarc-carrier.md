@@ -7,9 +7,12 @@ depends_on:
   - THM-534
   - HYP-2726
   - HYP-2737
+  - HYP-2739
 related:
   - HYP-2723
   - HYP-2735
+  - HYP-2738
+  - HYP-2602
   - HYP-2638
   - HYP-2217
   - HYP-2205
@@ -131,8 +134,15 @@ This hypothesis changes the next target from "find a Tanner theorem" to:
 
 ```text
 prove a puncture/extend parity lemma for the K8/K9/K11 Delsarte duals,
-then splice it to HYP-2737's generated row-slice balance.
+then splice it to the generated-depth/consec-max certification layer.
 ```
+
+After the incoming HYP-2739 residue closed form, HYP-2737's row-slice
+inequality is no longer the open analytic target: the L7 discrepancy is
+residue-only and sharp.  The role of HYP-2740 is now upstream of the remaining
+sector-route certification bottleneck.  It explains which Delsarte parity/sign
+certificate the generated depth law selects before one tackles HYP-2602 and the
+finite/consec-max certification layer.
 
 More concretely:
 
@@ -141,7 +151,7 @@ More concretely:
 2. Treat K9/K11's mixed low-degree supports as punctured or extended versions
    of that even certificate.
 3. Show that the sign-rigid binomial carrier is compatible with the
-   HYP-2737 row word after quotienting by missed depth.
+   HYP-2739/HYP-2737 generated row word after quotienting by missed depth.
 4. Only after that, scalarize to the Delsarte cap.
 
 ## Root-Parity Addendum

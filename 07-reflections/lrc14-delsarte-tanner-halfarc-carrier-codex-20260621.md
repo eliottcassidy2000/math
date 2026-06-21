@@ -23,9 +23,11 @@ K11 : mixed low-degree support K0,K1,K2.
 ```
 
 That looks much closer to Li-style Delsarte parity and to the repo's half
-tiling even/odd split than to a sparse Tanner graph.  If this can be spliced to
-HYP-2737's row-slice odometer word, the final proof interface becomes cleaner:
-generated word -> depth quotient -> parity/sign-rigid Delsarte cap.
+tiling even/odd split than to a sparse Tanner graph.  After incoming HYP-2739,
+the row-slice odometer target has an exact residue closed form, so this parity
+carrier should be read as upstream support for the remaining generated-depth
+and consec-max certification layer: generated word -> depth quotient ->
+parity/sign-rigid Delsarte cap.
 
 The unit-distance prompt points the same way.  Unit-distance Delsarte/Hoffman
 bounds are spectral and global; the local graph is valuable only when it

@@ -100,8 +100,10 @@ edges.  This makes sign/orientation a real invariant of the Delsarte certificate
 Created HYP-2740 (renumbered after incoming mainline claimed HYP-2738/HYP-2739) and reflection
 `07-reflections/lrc14-delsarte-tanner-halfarc-carrier-codex-20260621.md`.
 Next sharp target: prove a Krawtchouk puncture/extend parity lemma explaining
-K8's even-only support versus K9/K11 mixed low-degree support, then splice that
-to HYP-2737's generated row-slice odometer proof target.
+K8's even-only support versus K9/K11 mixed low-degree support.  After the
+incoming HYP-2739 exact residue closed form, HYP-2737's generated row-slice
+odometer is no longer the open L7 target; HYP-2740 should now feed the
+generated-depth/consec-max certification layer around HYP-2602 and HYP-2738.
 
 Follow-up `04-computation/lrc14_delsarte_root_parity_atlas_codex_20260621.py`
 attacks that target directly.  It enumerates every normalized
