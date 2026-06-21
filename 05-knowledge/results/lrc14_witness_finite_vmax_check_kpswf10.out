@@ -1,0 +1,31 @@
+====================================================================================================
+FINITE-Vmax: does the WITNESS threshold (maxgap>1/7) yield a REAL safe tau* (min||v t||>=1/14)?
+====================================================================================================
+Build S = {V0 - e_i : e_i in E} u P, for moderate V0, exact M(S), and a witness point.
+
+config                V0   k      M(S)  M>=1/14?   witness min||v t*||  wit>=1/14?
+----------------------------------------------------------------------------------
+P={1,2,3}            200   5   0.16418      True               0.08333        True
+P={1,2,3}            400   5   0.16583      True               0.08417        True
+P={1,2,3}            803   5   0.16667      True               0.08302        True
+P={1,2,3}            300   7   0.12479      True               0.07912        True
+P={1,2,3}            700   7   0.12491      True               0.07819        True
+P={1,2,3,12}         500   9   0.11100      True               0.07360        True
+P={1,2,3,12}        1001   9   0.11089      True               0.07472        True
+P={1..5}             400   8   0.10973      True               0.07692        True
+P={1..5}             900   8   0.11099      True               0.07641        True
+P={1,2,3} perf       400   7   0.16414      True               0.07954        True
+P={1,2,3} perf       803   7   0.16583      True               0.07822        True
+----------------------------------------------------------------------------------
+
+M(S)>=1/14 for all built sets:           True
+witness point safe (>=1/14) for all:     True
+
+READING:
+  * If the witness column is >=1/14 everywhere, the maxgap>1/7 (1/7-scale) event delivers a
+    GENUINE finite-Vmax safe point -- the witness route is sound, not a slow-limit artifact.
+  * Then BOTH thresholds certify LRC: the criterion (2/7, THM-527) AND the strictly-weaker
+    witness (1/7).  The witness floor being larger (THREAD-B: 0.0565 vs 1/84) means the 1/7
+    route is the EASIER sufficient condition.  The two routes are PARALLEL (same phi-phase,
+    thresholds 1/7 vs 2/7), and the 1/7 one is the weaker/easier of the two.
+

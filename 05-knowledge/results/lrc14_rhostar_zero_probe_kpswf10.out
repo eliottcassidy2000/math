@@ -1,0 +1,43 @@
+================================================================================================
+Q-A/Q-B: the reported rho*=0 case  P={1,2,3,12}, E=consec k=13
+================================================================================================
+  |P|=4, |E|=13  => total |P|+|E| = 17  (LRC needs =13)
+  meas(G_P)=25/42 ~ 0.59524
+  rho* = meas(G2 cap G_P) = 0 ~ 0.00000   (maxgap>2/7)
+  witness = meas(G1 cap G_P) = 16/147 ~ 0.10884   (maxgap>1/7)
+  => rho*=0 here: True;  witness>0 here: True
+  ADMISSIBILITY: |P|+|E| = 17 != 13  => OUT OF SCOPE (not an LRC config).
+  (THM-527's k is |L|=|E|; |P|+k must equal 13. consec k=13 with |P|=4 is inadmissible.)
+
+================================================================================================
+Q-C: ADMISSIBLE configs (|P|+k = 13). For each k, P = a size-(13-k) subset of {1..13}.
+     rho* = meas(G2 cap G_P), witness = meas(G1 cap G_P), consec cluster E={0..k-1}.
+================================================================================================
+  k  |P|  worst P (min rho*)          min rho*  witness@thatP  min witness
+  3   10  [1, 2, 3, 5, 7, 8, 9, 11, 12, 13]     0.05649        0.05649      0.05649
+  4    9  [1, 2, 3, 5, 7, 8, 9, 11, 13]     0.07189        0.09246      0.09246
+  5    8  [1, 2, 3, 6, 7, 9, 11, 13]     0.05531        0.24169      0.14053
+  6    7  [1, 2, 3, 7, 9, 11, 13]      0.05531        0.27366      0.19670
+  7    6  [1, 2, 3, 9, 11, 13]         0.01554        0.37474      0.28098
+  8    5  [1, 2, 3, 11, 13]            0.01327        0.39535      0.33610
+  9    4  [1, 2, 3, 12]                0.01190        0.43537      0.34048
+ 10    3  [1, 2, 3]                    0.01587        0.46599      0.38776
+ 11    2  [1, 6]                       0.02381        0.37868      0.36202
+ 12    1  [1]                          0.07313        0.42705      0.42705
+ 13    0  (empty P)                    0.17944        0.44249      0.44249
+------------------------------------------------------------------------------------------------
+
+GLOBAL min rho* over admissible consec configs = 1/84 = 0.011905  @ (9, [1, 2, 3, 12])
+  (THM-527 Part E claims 1/84=0.011905 at k=9,P={1,2,3,12}.)
+GLOBAL min witness over admissible consec configs = 14249/252252 = 0.056487  @ (3, [1, 2, 3, 5, 7, 8, 9, 11, 12, 13])
+
+  rho* floor > 0 (admissible): True
+  witness floor > 0 (admissible): True   (>= rho* always; the weaker sufficient route)
+
+NET (THREAD B):
+  * The rho*=0 case P={1,2,3,12}@k=13 is INADMISSIBLE (|P|+k=17), so it is NOT a counterexample
+    to THM-527's crux.  Over ADMISSIBLE consec configs rho* stays > 0 (floor = 1/84 at k=9).
+  * The WITNESS floor (maxgap>1/7) is >= rho* and strictly larger; it is the weaker LRC-sufficient
+    event.  If one proves the WITNESS floor > 0 (an EASIER 1/7-scale inequality), LRC(14) closes
+    WITHOUT the 2/7 criterion floor of THM-527.
+
