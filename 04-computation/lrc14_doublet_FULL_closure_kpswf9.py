@@ -104,8 +104,9 @@ def main():
     for (k, base, pinf, cap, Js, f0, maxp0, fmax, rm, tb, closed) in rows:
         print(f"  {k:>3} {float(pinf):>10.6f} {float(cap):>10.6f} {float(maxp0):>10.6f} {fmax:>4} "
               f"{float(rm):>13.6f} {float(Js):>8.3f} {f0:>5} {str(closed):>7}")
+    all_margin = all(r[8] >= F(16, 100) for r in rows)
     print(f"\n  OVERALL doublet genuine-wide tail CLOSED (all f>=15, k=8..12): {overall}")
-    print(f"  ROBUST MARGIN >= 0.16 at every k: {all(rm >= F(16,100) for (*_, rm, tb, c) in [(r[0],r[1],r[2],r[3],r[4],r[5],r[6],r[7],r[8],r[9],r[10]) for r in rows])}")
+    print(f"  ROBUST MARGIN >= 0.16 at every k: {all_margin}")
     print("=" * 100)
 
 

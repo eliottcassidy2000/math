@@ -1,5 +1,22 @@
 # Open Questions
 
+**OPEN-Q-108 — GENUINE-WIDE BINDING LEG (THE DOUBLET) VERIFIED-CLOSED via the almost-periodic P/R split (kind-pasteur-2026-06-21-Swf9, THM-564 / HYP-2799).**
+The genuine-wide leg's BINDING sub-case — the doublet maximizer `E_M=consec_{K-2}∪{M,M+1}`
+(opus HYP-2797) — is now VERIFIED-closed with the LRC margin 0.16. The mechanism is the
+**doublet analogue of THM-563**: center the deviation at the EXACT frozen plateau `Φ_frozen`
+(not `bvd(base,2)`, which leaves a drift `d_inf` making `M·error→∞`, the HYP-2798 puzzle), then
+`g(M)=M·(p0(E_M)−Φ)=P(M)+R(M)` exactly (inclusion-exclusion), with `P` exactly period-`7·lcm(base)`
+(EXACT finite period-max, THM-563 sawtooth) and `R=M·(d2(M)−d_inf)=O(1/M)` (VERIFIED, Koksma on the
+single residual far phase). Closure: `p0≤cap−0.16` for `M≥M*=⌈(period-max(P)+sup|R|)/H_K⌉` (TINY:
+M*=13,24,55 for K=8,9,10) + an EXACT finite window `[15,M*]`. CLOSED K=8,9 (full period 420) and
+K=10 (full period 2940, the BINDING case: `cap−sup_p0=0.16188`); K=11,12 window-verified (non-binding).
+The crude `sup_g/15<H_K` FAILS at K=9 (razor-thin) — the careful `M*`-cutoff is what closes it.
+REMAINING for a full PROVED status: the general bounded-base R-tail bound (a finite check, the
+doublet analogue of THM-563's completed 12805-base periodmax check) + Lean formalization.
+Scripts `04-computation/lrc14_doublet_{almostperiodic_PR,PR_closure}_kpswf9.py`,
+output `05-knowledge/results/lrc14_doublet_PR_closure_kpswf9.out`. -> THM-564, THM-563, HYP-2799,
+HYP-2797, HYP-2798, HYP-2796, HYP-2795, HYP-2793.
+
 **OPEN-Q-108 — LRC14 FRONTIER COMPRESSED AFTER BOUNDED AND SINGLE-FAR CLOSURE (codex-2026-06-21, HYP-2793).**
 The current endgame should be handled as a proof DAG, not as one scalar search.
 The bounded span<=14 leg is computationally closed for k=8..12 with split

@@ -1,0 +1,48 @@
+==========================================================================================
+THREAD C: FROZEN-PHASE limit law for the binding doublet  (kps-wf9)
+E_f = consec_{k-1} U {f, f+g};  p0_inf = lim_{f->inf} p0(E_f) via slow(x)/fast(u) split
+==========================================================================================
+
+k=8  cap=2243/5880=0.381463  Q(k-1)=0.196599
+  FROZEN p0_inf (g=1, adjacent) = 92339/352800 = 0.261732
+     cap - p0_inf = +0.119731   (margin if this is the plateau)
+     Q(k-1) - p0_inf = -0.065133
+     empirical p0(E_f) at large f (g=1): [(301, 0.2647756191649615), (401, 0.25978187083818527), (503, 0.26292494466308725), (601, 0.26229626780867515)]
+  FROZEN p0_inf (g=2) = 0.256514   (should be <= g=1 if adjacent is worst)
+  FROZEN p0_inf (g=3) = 0.253095   (should be <= g=1 if adjacent is worst)
+
+k=9  cap=1979/4004=0.494256  Q(k-1)=0.362099
+  FROZEN p0_inf (g=1, adjacent) = 7895/19208 = 0.411027
+     cap - p0_inf = +0.083229   (margin if this is the plateau)
+     Q(k-1) - p0_inf = -0.048928
+     empirical p0(E_f) at large f (g=1): [(301, 0.4106972867693204), (401, 0.4101895606197219), (503, 0.4113923037737295), (601, 0.4110596930023025)]
+  FROZEN p0_inf (g=2) = 0.406298   (should be <= g=1 if adjacent is worst)
+  FROZEN p0_inf (g=3) = 0.404516   (should be <= g=1 if adjacent is worst)
+
+k=10  cap=55/91=0.604396  Q(k-1)=0.447886
+  FROZEN p0_inf (g=1, adjacent) = 23557/48020 = 0.490566
+     cap - p0_inf = +0.113829   (margin if this is the plateau)
+     Q(k-1) - p0_inf = -0.042680
+     empirical p0(E_f) at large f (g=1): [(301, 0.48919940993492733), (401, 0.4904295067489161), (503, 0.49116333743570323), (601, 0.491135877792668)]
+  FROZEN p0_inf (g=2) = 0.487041   (should be <= g=1 if adjacent is worst)
+  FROZEN p0_inf (g=3) = 0.485404   (should be <= g=1 if adjacent is worst)
+
+k=11  cap=66/91=0.725275  Q(k-1)=0.531252
+  FROZEN p0_inf (g=1, adjacent) = 14085881/24893568 = 0.565844
+     cap - p0_inf = +0.159431   (margin if this is the plateau)
+     Q(k-1) - p0_inf = -0.034592
+     empirical p0(E_f) at large f (g=1): [(301, 0.5647408180377752), (401, 0.5655430141436607), (503, 0.5662918182514888), (601, 0.5666784989737875)]
+  FROZEN p0_inf (g=2) = 0.563306   (should be <= g=1 if adjacent is worst)
+  FROZEN p0_inf (g=3) = 0.563488   (should be <= g=1 if adjacent is worst)
+
+k=12  cap=6/7=0.857143  Q(k-1)=0.602243
+  FROZEN p0_inf (g=1, adjacent) = 55931399/88905600 = 0.629110
+     cap - p0_inf = +0.228033   (margin if this is the plateau)
+     Q(k-1) - p0_inf = -0.026867
+     empirical p0(E_f) at large f (g=1): [(301, 0.6280683401241804), (401, 0.62804613799714), (503, 0.6293726304305686), (601, 0.6299462268365149)]
+  FROZEN p0_inf (g=2) = 0.627694   (should be <= g=1 if adjacent is worst)
+  FROZEN p0_inf (g=3) = 0.628612   (should be <= g=1 if adjacent is worst)
+
+==========================================================================================
+If p0_inf(g=1) < cap with margin and is the plateau, the doublet sup is governed
+by p0_inf + finite-f correction. Next: bound the finite-f correction (decay).
