@@ -8,3 +8,25 @@ ORDERING  measS7 <= theta'(H_E) <= L_y, and the two extremality questions
      (Q2) consec maximizes L_y?      beaters=0  -> YES  (max=0.358231)
      (Q1) consec maximizes theta'?   beaters=0  -> YES  (max=0.358231)
           consec maximizes measS7?   beaters=0   -> YES
+
+  k=9: consec measS7=0.416156  theta'=0.492876  L_y=0.492876
+     span<= 13: 1287 shapes; ordering measS7<=theta'<=L_y holds on 1287/1287
+     #shapes where theta' STRICTLY tighter than L_y = 824
+     (Q2) consec maximizes L_y?      beaters=0  -> YES  (max=0.492876)
+     (Q1) consec maximizes theta'?   beaters=0  -> YES  (max=0.492876)
+          consec maximizes measS7?   beaters=0   -> YES
+
+  k=10: consec measS7=0.504478  theta'=0.570081  L_y=0.570081
+     span<= 13: 715 shapes; ordering measS7<=theta'<=L_y holds on 715/715
+     #shapes where theta' STRICTLY tighter than L_y = 552
+     (Q2) consec maximizes L_y?      beaters=0  -> YES  (max=0.570081)
+     (Q1) consec maximizes theta'?   beaters=0  -> YES  (max=0.570081)
+          consec maximizes measS7?   beaters=0   -> YES
+
+CONCLUSION: theta'(H_E) is the per-E TIGHT Schrijver/Delsarte LP value and equals
+the moment-LP optimum.  Both 'consec maximizes theta'' and 'consec maximizes L_y'
+hold on the dangerous rows by exhaustive check -- but each is the SAME aggregate
+extremal statement, not a consequence of a graph-theoretic theta monotonicity.
+theta' CERTIFIES each E (upper bound) but does not, by itself, prove the
+argmax is consec: the Lovasz-theta machinery gives the BOUND, not the EXTREMIZER.
+

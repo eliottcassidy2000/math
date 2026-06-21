@@ -1,0 +1,41 @@
+==============================================================================
+THREAD C BRIDGE: the LRC Delsarte/theta' cover vs the project Omega hard-core
+==============================================================================
+
+--- PROJECT side: Paley_7 tournament conflict graph Omega, H = I(Omega,2) ---
+  Paley_7 (QR={1,2,4}): H = #Ham paths = 189  (Redei: odd; regular tournament)
+  #directed 3-cycles = 14  (vertices of Omega's 3-cycle layer)
+  -> H = I(Omega,2): the hard-core partition function at fugacity 2 (HYP-510).
+     theta/Hoffman bounds alpha(Omega) -> bounds H, but the EXTREMIZER
+     (Paley beats Interval) needs the Ramanujan spectral GAP (HYP-507), not theta alone.
+
+--- LRC side: the Z/7 sector cover, Delsarte LP = theta'(relation graph) ---
+  k=8: consec=[0, 1, 2, 3, 4, 5, 6, 7]  measS7=0.32721  min-support(Lambda)=2 (ANTI-MDS: short relations)
+        spread=[0, 1, 3, 7, 12, 20, 30, 44]  measS7=0.01212  min-support=3 (MDS-ish: long relations)
+        -> consec (anti-MDS, densest code) MAXIMIZES the cover; theta'/Delsarte
+           certifies the bound but the argmax is the aggregate open piece.
+  k=9: consec=[0, 1, 2, 3, 4, 5, 6, 7, 8]  measS7=0.41616  min-support(Lambda)=2 (ANTI-MDS: short relations)
+        spread=[0, 1, 3, 7, 12, 20, 30, 44, 65]  measS7=0.03661  min-support=3 (MDS-ish: long relations)
+        -> consec (anti-MDS, densest code) MAXIMIZES the cover; theta'/Delsarte
+           certifies the bound but the argmax is the aggregate open piece.
+
+==============================================================================
+THE SHARED TEMPLATE (deliverable conclusion)
+==============================================================================
+Both the project's tournament-as-code Lovasz work and the LRC Delsarte/theta'
+cover instantiate ONE template at the apex prime 7:
+
+   code  =  independent set in a CONFLICT GRAPH
+   count =  a partition function / LP value (H = I(Omega,2)  |  measS7 <= theta'(H_E)=L_y)
+   bound =  Lovasz theta / Hoffman / Delsarte LP  (CERTIFIES per instance)
+   GAP   =  theta/Delsarte does NOT pick the extremizer:
+              project: Paley>Interval needs Ramanujan spectral gap (HYP-507), not theta;
+              LRC:     consec>Sidon  needs aggregate alternating-moment monotonicity,
+                       not theta'/Delsarte (SoS COLLAPSES to level-1, CJJ Prop 1.2).
+
+So Thread C's answer: the LRC conflict graph is the RELATION-scheme graph H_E (NOT
+the Z/7 sector Cayley graph), theta'(H_E)=L_y(E) exactly (Schrijver identity,
+verified), and theta'/SoS does NOT give the extremality -- it gives the SAME
+genuinely-aggregate ceiling the project already hit on the tournament-code side.
+The Lovasz-theta lens UNIFIES the two open extremalities under one structural cause.
+

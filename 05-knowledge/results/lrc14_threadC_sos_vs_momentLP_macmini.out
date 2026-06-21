@@ -1,0 +1,21 @@
+==============================================================================
+degree-2 SoS bound vs degree-2 moment-LP bound (does SDP beat LP? -> collapse)
+==============================================================================
+ Univariate scheme on N in {0..6}: SoS-Hankel-PSD == LP-simplex realizability.
+ So degree-2 SoS bound should EQUAL the L=3 (S_0,S_1,S_2) moment-LP bound.
+
+  k=8 consec : moment-LP(deg2)=0.496372  SoS(deg2)=0.496372  EQUAL? True  (opt-Hankel PSD lmin=8.25e-02)
+  k=8 chal   : moment-LP(deg2)=0.443849  SoS(deg2)=0.443849  EQUAL? True  (opt-Hankel PSD lmin=1.00e-02)
+  k=9 consec : moment-LP(deg2)=0.566752  SoS(deg2)=0.566752  EQUAL? True  (opt-Hankel PSD lmin=7.30e-02)
+  k=9 chal   : moment-LP(deg2)=0.565552  SoS(deg2)=0.565552  EQUAL? True  (opt-Hankel PSD lmin=5.55e-02)
+  k=10 consec : moment-LP(deg2)=0.630735  SoS(deg2)=0.630735  EQUAL? True  (opt-Hankel PSD lmin=6.87e-02)
+  k=10 chal   : moment-LP(deg2)=0.627976  SoS(deg2)=0.627976  EQUAL? True  (opt-Hankel PSD lmin=5.61e-02)
+
+==> degree-2 SoS == degree-2 moment-LP for every E (univariate Hankel = simplex
+    realizability on {0..6}).  The SDP gives NOTHING beyond the LP.  COLLAPSE
+    confirmed at the SDP level: CJJ Prop 1.2 holds because the optimizer is a
+    non-linear object (an offset SET / its N-distribution), so the linear-
+    combination power source of the SoS hierarchy is inactive.  Lovasz theta'
+    (= Delsarte = level-1 LP) and its degree-2 SoS strengthening BOTH fail to
+    linearize 'consec-max'; the extremality is genuinely aggregate.
+

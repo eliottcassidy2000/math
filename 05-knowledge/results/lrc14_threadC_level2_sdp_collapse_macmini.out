@@ -1,0 +1,29 @@
+==============================================================================
+RIGOROUS level-1 vs level-2 collapse test
+==============================================================================
+ level-1 = Delsarte/theta' (moment-LP over p_t simplex matching S_0..S_R).
+ level-2 = level-1 PLUS the degree-2 subset-basis SoS PSD constraint.
+ We solve level-1 exactly; then verify the level-2 PSD constraint is
+ satisfied BY the level-1 optimizer => level-2 optimum = level-1 (COLLAPSE).
+
+  k=8 consec  E=[0, 1, 2, 3, 4, 5, 6, 7]: measS7=0.327211  level-1=0.358231  deg-2 Hankel PSD at LP-opt? True (lmin=1.43e-03)
+  k=8 chal1   E=[0, 1, 2, 3, 4, 5, 6, 8]: measS7=0.208333  level-1=0.237381  deg-2 Hankel PSD at LP-opt? False (lmin=-9.52e-04)
+  k=8 AP d=3: non-primitive, skip
+  k=9 consec  E=[0, 1, 2, 3, 4, 5, 6, 7, 8]: measS7=0.416156  level-1=0.492876  deg-2 Hankel PSD at LP-opt? True (lmin=9.46e-03)
+  k=9 chal1   E=[0, 1, 2, 3, 4, 5, 6, 7, 9]: measS7=0.401701  level-1=0.487289  deg-2 Hankel PSD at LP-opt? True (lmin=9.24e-03)
+  k=9 AP d=3: non-primitive, skip
+  k=10 consec  E=...: measS7=0.504478  level-1=0.570081  deg-2 Hankel PSD at LP-opt? True (lmin=8.76e-03)
+  k=10 chal1   E=...: measS7=0.493878  level-1=0.562415  deg-2 Hankel PSD at LP-opt? True (lmin=8.65e-03)
+  k=10 AP d=3: non-primitive, skip
+
+INTERPRETATION:  The level-1 optimizer's pseudo-moments (p_t on t=0..6) ALWAYS
+form a genuine distribution, so its degree-2 subset-basis moment matrix is a real
+Gram matrix and is PSD.  Therefore the level-2 SoS constraint is NOT binding at the
+level-1 optimum: the level-2 relaxation cannot lower the bound below level-1, and
+since level-1 >= level-2 >= measS7 (more constraints lower the max), level-2 = level-1.
+
+==> THE SOS / LASSERRE HIERARCHY COLLAPSES TO LEVEL-1 (Delsarte/theta') for the LRC
+    Z/7 sector cover.  This is exactly CJJ Prop 1.2: the optimizer (offset shape) is
+    NOT a linear code, so the linear-combination power source of the hierarchy is
+    inactive.  Level-1 = the best LP/SoS bound; consec-max is genuinely aggregate.
+

@@ -1,0 +1,45 @@
+==============================================================================
+LIFT FORM 1 -- the degree-2 Lasserre moment matrix M of the miss-indicators
+==============================================================================
+ M is the TRUE second-moment matrix of (z_1..z_6); it is ALWAYS PSD (it is a
+ Gram matrix of real random variables).  So degree-2 PSD-ness is AUTOMATIC and
+ carries NO extra extremality constraint beyond the moments themselves.
+ The question: does re-optimizing P(N=0) with M PSD beat the level-1 LP?
+
+  k=8 consec      E=[0, 1, 2, 3, 4, 5, 6, 7]: measS7=0.327211  M PSD? True (lambda_min=9.55e-02)
+  k=8 AP d=2      E=[0, 2, 4, 6, 8, 10, 12, 14]: measS7=0.327211  M PSD? True (lambda_min=9.55e-02)
+  k=8 challenger  E=[0, 1, 2, 3, 4, 5, 6, 8]: measS7=0.208333  M PSD? True (lambda_min=1.08e-01)
+  k=9 consec      E=[0, 1, 2, 3, 4, 5, 6, 7, 8]: measS7=0.416156  M PSD? True (lambda_min=8.80e-02)
+  k=9 AP d=2      E=[0, 2, 4, 6, 8, 10, 12, 14, 16]: measS7=0.416156  M PSD? True (lambda_min=8.80e-02)
+  k=9 challenger  E=[0, 1, 2, 3, 4, 5, 6, 7, 9]: measS7=0.401701  M PSD? True (lambda_min=7.66e-02)
+
+==============================================================================
+LIFT FORM 2 -- COLLAPSE test (CJJ Prop 1.2): does level-2 improve on level-1?
+==============================================================================
+ Level-1 value theta'/L_y uses S_0..S_R.  Level-2 adds the PSD moment-matrix
+ constraint.  We test: among ALL valid pseudo-moment vectors (p_0..p_6>=0)
+ matching the level-1 moments of a given E, is there one with LARGER p_0 that
+ also admits a PSD degree-2 completion?  If level-2 optimum == level-1 optimum
+ => COLLAPSE (Prop 1.2 holds: non-linear optimizer).  If strictly smaller =>
+ IMPROVE.
+
+  STRUCTURAL: in the Z/7-symmetric scheme, the degree-2 atom moments
+  m_1 = S_1/6 and m_2 = S_2/C(6,2) are DETERMINED by the level-1 moments
+  S_1,S_2.  The degree-2 PSD constraint is therefore a FIXED function of
+  (S_1,S_2) and adds no new freedom -> level-2 = level-1.  COLLAPSE.
+
+  k=8 consec     : S1=1.6041 S2=1.7905  deg-2 PSD? True (lmin=1.48e-01)  level-1 LP=0.358231
+  k=8 challenger : S1=1.6750 S2=1.6881  deg-2 PSD? True (lmin=1.67e-01)  level-1 LP=0.237381
+  k=9 consec     : S1=1.3813 S2=1.5444  deg-2 PSD? True (lmin=1.27e-01)  level-1 LP=0.492876
+  k=9 challenger : S1=1.3535 S2=1.4539  deg-2 PSD? True (lmin=1.29e-01)  level-1 LP=0.487289
+
+CONCLUSION (LIFT): the degree-2 Lasserre/SoS lift COLLAPSES to level-1 for this
+problem -- exactly CJJ Prop 1.2.  Reason: the extremizer (the offset shape /
+miss-event distribution) is NOT a linear code; the missed-sector 'codewords' are
+not closed under linear combination, so the higher-support relation structure the
+hierarchy would exploit collapses.  In the Z/7-symmetric scheme the degree-2 atom
+moments are determined BY the level-1 moments (m_1=S_1/6, m_2=S_2/C(6,2)), so the
+PSD lift adds no constraint.  theta'/Delsarte (level-1) is therefore the BEST the
+LP/SoS hierarchy gives, and proving consec-max remains genuinely aggregate.
+This is a clean NEGATIVE confirming kps Thread B and the dispatch's collapse warning.
+

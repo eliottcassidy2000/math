@@ -1,0 +1,35 @@
+==============================================================================
+THE MOMENT-LP HIERARCHY: fixing more moments S_0..S_{L-1} tightens the bound
+==============================================================================
+ This IS the Bonferroni / CJJ Mobius hierarchy: level uses moments up to order L.
+ level-1(Delsarte)=R+1 moments; the FULL level (L=7) pins p_0=measS7 exactly.
+ We tabulate the bound at each L and whether CONSEC stays the argmax at each L.
+
+--- k=8 (level-1 fixes 5 moments; full = 7 moments = exact measS7) ---
+   L=5 moments (level-1(Delsarte) ): consec bound=0.358231  #beating consec=0  consec-max? True  (global max=0.358231)
+   L=6 moments (intermediate      ): consec bound=0.332517  #beating consec=0  consec-max? True  (global max=0.332517)
+   L=7 moments (EXACT measS7      ): consec bound=0.327211  #beating consec=0  consec-max? True  (global max=0.327211)
+
+--- k=9 (level-1 fixes 4 moments; full = 7 moments = exact measS7) ---
+   L=4 moments (level-1(Delsarte) ): consec bound=0.492876  #beating consec=0  consec-max? True  (global max=0.492876)
+   L=5 moments (intermediate      ): consec bound=0.443401  #beating consec=0  consec-max? True  (global max=0.443401)
+   L=6 moments (intermediate      ): consec bound=0.420850  #beating consec=0  consec-max? True  (global max=0.420850)
+   L=7 moments (EXACT measS7      ): consec bound=0.416156  #beating consec=0  consec-max? True  (global max=0.416156)
+
+--- k=10 (level-1 fixes 4 moments; full = 7 moments = exact measS7) ---
+   L=4 moments (level-1(Delsarte) ): consec bound=0.570081  #beating consec=0  consec-max? True  (global max=0.570081)
+   L=5 moments (intermediate      ): consec bound=0.528571  #beating consec=0  consec-max? True  (global max=0.528571)
+   L=6 moments (intermediate      ): consec bound=0.508588  #beating consec=0  consec-max? True  (global max=0.508588)
+   L=7 moments (EXACT measS7      ): consec bound=0.504478  #beating consec=0  consec-max? True  (global max=0.504478)
+
+
+READING: each higher moment fixed tightens the LP bound toward measS7 (the
+Mobius/Bonferroni = CJJ subspace-lattice inversion).  At EVERY level L from
+Delsarte(level-1) up to exact, consec remains the argmax on the dangerous rows
+(exhaustive, span<=13).  So the hierarchy is consec-max at every level -- but the
+PROOF that the argmax is consec is the SAME aggregate statement at each level: no
+single low level linearizes it into a per-moment or graph-monotone certificate.
+The hierarchy CONVERGES to the exact answer (it is complete, CJJ), but it does not
+COLLAPSE the EXTREMALITY into a finite-checkable graph theta; the bound is exact
+only at the full level, where 'consec-max' = the original statement verbatim.
+
