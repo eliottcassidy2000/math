@@ -1,0 +1,32 @@
+==============================================================================
+THM-527 Thread A: DOES inf rho* STAY POSITIVE as spread grows?
+==============================================================================
+
+========== k=7, |P|=6 ==========
+  (P shortlist: 40 smallest-meas G_P; min meas=0.2810)
+  W= 6: min rho* (spread==W) = 0.079454  | GLOBAL min (spread<=W) = 0.079454 = 1193/15015
+  W= 7: min rho* (spread==W) = 0.074197  | GLOBAL min (spread<=W) = 0.074197 = 5199/70070
+  W= 8: min rho* (spread==W) = 0.068127  | GLOBAL min (spread<=W) = 0.068127 = 14321/210210
+  W= 9: min rho* (spread==W) = 0.088605  | GLOBAL min (spread<=W) = 0.068127 = 14321/210210
+  W=10: min rho* (spread==W) = 0.063781  | GLOBAL min (spread<=W) = 0.063781 = 221/3465
+  W=11: min rho* (spread==W) = 0.060303  | GLOBAL min (spread<=W) = 0.060303 = 10141/168168
+  W=12: min rho* (spread==W) = 0.062571  | GLOBAL min (spread<=W) = 0.060303 = 10141/168168
+  W=13: min rho* (spread==W) = 0.067108  | GLOBAL min (spread<=W) = 0.060303 = 10141/168168
+  W=14: min rho* (spread==W) = 0.061320  | GLOBAL min (spread<=W) = 0.060303 = 10141/168168
+  W=15: min rho* (spread==W) = 0.063076  | GLOBAL min (spread<=W) = 0.060303 = 10141/168168
+  W=16: min rho* (spread==W) = 0.058469  | GLOBAL min (spread<=W) = 0.058469 = 301/5148
+  W=17: min rho* (spread==W) = 0.064135  | GLOBAL min (spread<=W) = 0.058469 = 301/5148
+  W=18: min rho* (spread==W) = 0.049119  | GLOBAL min (spread<=W) = 0.049119 = 1408/28665
+  W=19: min rho* (spread==W) = 0.054412  | GLOBAL min (spread<=W) = 0.049119 = 1408/28665
+  W=20: min rho* (spread==W) = 0.061392  | GLOBAL min (spread<=W) = 0.049119 = 1408/28665
+  --> k=7: global min rho* over spread<=W = 1408/28665 = 0.049119  at E=[0, 4, 5, 9, 13, 14, 18] P=[1, 4, 5, 7, 9, 13]
+
+========== k=9, |P|=4 ==========
+  (P shortlist: 40 smallest-meas G_P; min meas=0.4943)
+  W= 8: min rho* (spread==W) = 0.041411  | GLOBAL min (spread<=W) = 0.041411 = 1741/42042
+  W= 9: min rho* (spread==W) = 0.037415  | GLOBAL min (spread<=W) = 0.037415 = 11/294
+  W=10: min rho* (spread==W) = 0.023810  | GLOBAL min (spread<=W) = 0.023810 = 1/42
+  W=11: min rho* (spread==W) = 0.033333  | GLOBAL min (spread<=W) = 0.023810 = 1/42
+  W=12: min rho* (spread==W) = 0.024675  | GLOBAL min (spread<=W) = 0.023810 = 1/42
+  W=13: min rho* (spread==W) = 0.018553  | GLOBAL min (spread<=W) = 0.018553 = 10/539
+  W=14: min rho* (spread==W) = 0.023810  | GLOBAL min (spread<=W) = 0.018553 = 10/539
