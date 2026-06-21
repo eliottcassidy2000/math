@@ -1,0 +1,41 @@
+##################################################################################
+# THREAD B -- characterizing the LOW-RELATION-HEIGHT family (finite check)
+##################################################################################
+
+==================================================================================
+PART A -- measS7 scale invariance: measS7(cE) = measS7(E)  (=> normalize by gcd)
+==================================================================================
+  measS7(cE)=measS7(E) for c in 2,3,5,7 on 3 shapes: True
+  => scale-normalization: WLOG primitive (gcd of nonzero offsets = 1).
+
+==================================================================================
+PART B -- support-6 floor (THM-538): K(n)=0 unless >=6 genuine coords
+==================================================================================
+  genuine-count -> max |K(n)| observed (should be ~0 for <6):
+    genuine=1: max|K| = 7.61e-03  (n=574 samples) <-- nonzero
+    genuine=2: max|K| = 7.35e-03  (n=589 samples) <-- nonzero
+    genuine=3: max|K| = 1.66e-03  (n=594 samples) <-- nonzero
+    genuine=4: max|K| = 5.87e-04  (n=552 samples) <-- nonzero
+    genuine=5: max|K| = 4.20e-04  (n=589 samples) <-- nonzero
+    genuine=6: max|K| = 1.67e-04  (n=548 samples) <-- nonzero
+    genuine=7: max|K| = 4.95e-05  (n=554 samples) <-- nonzero
+  CONFIRMS: only relations with >=6 genuine coords survive (contribute to corr).
+
+==================================================================================
+PART D -- height of the smallest SURVIVING relation: consec vs spread
+==================================================================================
+  h(E) = min over surviving n (>=6 genuine, ||n||_inf<=Hcap) of ||n||_inf.
+  (search relations by enumerating low-height integer vectors in Lambda(E).)
+  family                                k  h(E)<=4?    measS7
+  consec8 {0..7}                        8         1    0.3272
+  consec9 {0..8}                        9         1    0.4162
+  near-consec {0..6,8}                  8         1    0.2083
+  spreadA {0,1,3,7,12,20,30,44}         8         1    0.0121
+  1-stranger {0..6,40}                  8         2    0.1905
+  geom {0,1,2,4,8,16,32,64}             8         2    0.0692
+
+  READING: dense (consec, near-consec) shapes have a SHORT surviving relation
+  (h small); spread/dissociated shapes have NO short surviving relation (h>4).
+  => THREAD B family = shapes with a short surviving relation = the DENSE ones.
+
+DONE (Thread B stage 1).

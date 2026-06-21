@@ -1,0 +1,48 @@
+============================================================================================
+THREAD D: PERMANENT / van der Waerden / rearrangement angle for consec-extremality
+============================================================================================
+
+[D0] verify measS7 = Sum_S (-1)^|S| J(S,E) (signed surjection count):
+    k=8 E=(0, 1, 2, 3, 4, 5, 6, 7): direct=0.327211 IE=0.327211 OK
+    k=8 E=(0, 2, 3, 4, 5, 6, 7, 8): direct=0.273639 IE=0.273639 OK
+    k=8 E=(0, 1, 2, 3, 4, 6, 9, 11): direct=0.056277 IE=0.056277 OK
+    k=9 E=(0, 1, 2, 3, 4, 5, 6, 7, 8): direct=0.416156 IE=0.416156 OK
+    k=9 E=(0, 2, 3, 4, 5, 6, 7, 8, 9): direct=0.360261 IE=0.360261 OK
+    k=9 E=(0, 1, 2, 3, 4, 5, 6, 7, 9): direct=0.401701 IE=0.401701 OK
+    => signed-surjection identity CONFIRMED.
+
+############################################################################################
+# (D-ii) SCHUR ORDER on the GAP MULTISET.  consec = flat gaps (all 1) = majorization
+#        MINIMUM.  measS7 max at consec  <=>  measS7 SCHUR-CONCAVE in gap multiset
+#        on shapes of fixed support-length k and fixed SPAN (= same gap-sum).
+############################################################################################
+
+--- k=8 (gaps=7) ---
+  span=7: |pool|=   1 Schur-pairs tested=    0 violations=   0  | flattest-is-argmax: Y
+  span=8: |pool|=   7 Schur-pairs tested=   42 violations=  21  worst +0.1961  | flattest-is-argmax: N
+  span=9: |pool|=  28 Schur-pairs tested=  609 violations= 290  worst +0.1801  | flattest-is-argmax: N
+  span=10: |pool|=  84 Schur-pairs tested= 4963 violations=2526  worst +0.1871  | flattest-is-argmax: N
+  span=11: |pool|= 210 Schur-pairs tested=29092 violations=14277  worst +0.2055  | flattest-is-argmax: N
+      worst pair: more-spread (0, 1, 2, 5, 6, 7, 10, 11) measS7>(0, 2, 3, 5, 6, 9, 10, 11) less-spread, by +0.20555
+
+--- k=9 (gaps=8) ---
+  span=8: |pool|=   1 Schur-pairs tested=    0 violations=   0  | flattest-is-argmax: Y
+  span=9: |pool|=   8 Schur-pairs tested=   56 violations=  28  worst +0.2317  | flattest-is-argmax: Y
+  span=10: |pool|=  36 Schur-pairs tested= 1036 violations= 527  worst +0.2638  | flattest-is-argmax: N
+  span=11: |pool|= 120 Schur-pairs tested=10248 violations=5169  worst +0.2522  | flattest-is-argmax: N
+  span=12: |pool|= 330 Schur-pairs tested=72674 violations=35837  worst +0.2959  | flattest-is-argmax: N
+      worst pair: more-spread (0, 1, 2, 3, 4, 5, 6, 7, 12) measS7>(0, 1, 3, 6, 7, 8, 10, 11, 12) less-spread, by +0.29586
+
+--- k=10 (gaps=9) ---
+  span=9: |pool|=   1 Schur-pairs tested=    0 violations=   0  | flattest-is-argmax: Y
+  span=10: |pool|=   9 Schur-pairs tested=   72 violations=  36  worst +0.2300  | flattest-is-argmax: Y
+  span=11: |pool|=  45 Schur-pairs tested= 1656 violations= 851  worst +0.2407  | flattest-is-argmax: N
+  span=12: |pool|= 165 Schur-pairs tested=19608 violations=9836  worst +0.2789  | flattest-is-argmax: N
+  span=13: |pool|= 495 Schur-pairs tested=164988 violations=84693  worst +0.2876  | flattest-is-argmax: N
+      worst pair: more-spread (0, 1, 2, 3, 4, 5, 6, 7, 9, 13) measS7>(0, 1, 3, 4, 5, 8, 10, 11, 12, 13) less-spread, by +0.28760
+
+############################################################################################
+# (D-ii') ELEMENTARY ROBIN-HOOD TRANSFER (the Schur-concavity generator):
+#   flatten one gap-pair by 1 unit; measS7 should NOT decrease (Schur-concave).
+############################################################################################
+  k=8: transfers tested=  1218  flattening-DECREASED-measS7 =   551  worst drop 0.17208  e.g. (0, 1, 2, 5, 6, 7, 10, 11) -> (0, 1, 3, 6, 7, 8, 10, 11)

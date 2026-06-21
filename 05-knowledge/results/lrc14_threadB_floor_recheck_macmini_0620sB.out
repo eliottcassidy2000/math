@@ -1,0 +1,18 @@
+
+==================================================================================
+(1) SUPPORT-6 FLOOR: exhaustive K(n) for support<=5 vectors (do they vanish?)
+==================================================================================
+  K(n) by genuine support g (values 1..6, all distinct positions), max|K|:
+    g=1: max|K| over residue-multisets = 2.944e-16  at (1,)
+    g=2: max|K| over residue-multisets = 5.788e-17  at (2, 2)
+    g=3: max|K| over residue-multisets = 3.072e-17  at (1, 1, 1)
+    g=4: max|K| over residue-multisets = 5.938e-18  at (2, 2, 2, 2)
+    g=5: max|K| over residue-multisets = 1.542e-18  at (1, 1, 1, 1, 2)
+    g=6: max|K| over residue-multisets = 4.997e-03  at (1, 1, 1, 1, 1, 1)
+    g=7: max|K| over residue-multisets = 2.415e-03  at (1, 1, 1, 1, 1, 1, 1)
+  INTERPRETATION: if max|K| jumps from ~0 to nonzero exactly at g=6, floor confirmed.
+
+==================================================================================
+(1b) Same, but with REPEATED coords allowed via integer values (not just residues)
+==================================================================================
+  Using actual integer coords (height<=3), genuine count g:

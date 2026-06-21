@@ -1,0 +1,33 @@
+######################################################################################
+# THREAD E: CUT/CYCLE split of measS7 = iid_k (cut) + corr(E) (cycle)
+######################################################################################
+
+[A] CUT part is the single-clock-product moment; verify J_cut(E,a)=[a=0].
+    single-clock marginal m(e,a)=int omega^{a c_e}dx should be [a=0] (apex-prime).
+    e= 1: m(e,0)=1.000000  max_{a!=0}|m|=6.47e-16
+    e= 2: m(e,0)=1.000000  max_{a!=0}|m|=6.33e-16
+    e= 3: m(e,0)=1.000000  max_{a!=0}|m|=6.31e-16
+    e= 5: m(e,0)=1.000000  max_{a!=0}|m|=6.16e-16
+    e= 8: m(e,0)=1.000000  max_{a!=0}|m|=6.24e-16
+    e=13: m(e,0)=1.000000  max_{a!=0}|m|=6.44e-16
+    => each clock individually uniform on Z/7: m(a)=[a=0]  (verified=True)
+    => J_cut(E,a)=prod_e m(a_e)=[a=0]; measS7_cut = Khat(0) = iid_k (E-independent).
+
+[B] EXACT IDENTITY measS7(E) = iid_k + corr(E)  [corr := measS7 - iid_k, FREE].
+    + low-weight (2-body, 3-body) cycle layers via the Fourier-on-Z/7 split.
+  k=8: iid_k = 2880/117649 = 0.024480   cap=0.381463  wide-budget cap-iid=0.356983
+    consec8   measS7=0.327211 = iid 0.0245 + corr +0.302731
+        cycle layers (t<= 3): [c3:+0.08228]  sum_low=+0.082279  high-residual(corr-low)=+0.220453
+    drop1_8   measS7=0.208333 = iid 0.0245 + corr +0.183854
+        cycle layers (t<= 3): [c2:-0.00229 c3:+0.07835]  sum_low=+0.076057  high-residual(corr-low)=+0.107797
+    spread8   measS7=0.188095 = iid 0.0245 + corr +0.163616
+        cycle layers (t<= 3): [c2:-0.00170 c3:+0.07522]  sum_low=+0.073518  high-residual(corr-low)=+0.090098
+    twoblk8   measS7=0.091100 = iid 0.0245 + corr +0.066620
+        cycle layers (t<= 3): [c2:-0.00522 c3:+0.03750]  sum_low=+0.032285  high-residual(corr-low)=+0.034335
+    iidlike8  measS7=0.033391 = iid 0.0245 + corr +0.008912
+        cycle layers (t<= 3): [c2:-0.00483 c3:+0.00864]  sum_low=+0.003807  high-residual(corr-low)=+0.005105
+
+[C] LAYER EXTREMALITY: is consec the MAX of each cut/cycle layer separately?
+    cut layer = iid_k (constant -> consec ties, never beaten: vacuously extremal).
+    2-body cycle layer corr_2: does consec maximize it over all bounded shapes?
+  k=8: consec corr_2=+0.000000  consec measS7=0.327211

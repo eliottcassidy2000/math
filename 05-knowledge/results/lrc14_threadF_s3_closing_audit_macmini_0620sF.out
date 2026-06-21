@@ -1,0 +1,95 @@
+==============================================================================
+THREAD F — LRC(14) S3-closing condition audit (exact)
+==============================================================================
+
+[Q1] p0(E)=meas(S7(E)) equals the full-cover residual capacity q_E({1..6})
+  E=(0, 1, 2, 3, 4, 5, 6, 7)
+    p0=481/1470 (0.327211)  q_E(R=1..6)=481/1470 (0.327211)  equal=True
+  E=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+    p0=2447/5880 (0.416156)  q_E(R=1..6)=2447/5880 (0.416156)  equal=True
+  E=(0, 1, 2, 30, 31, 32, 60, 61, 62)
+    p0=141899/635376 (0.223331)  q_E(R=1..6)=141899/635376 (0.223331)  equal=True
+
+[Q2/Q5] cap_k, iid_k=7!S(k,7)/7^k, wide budget cap_k - iid_k
+  k=8: cap=2243/5880 (0.381463)  iid=2880/117649 (0.024480)  cap-iid=5039843/14117880 (0.356983)
+  k=9: cap=1979/4004 (0.494256)  iid=47520/823543 (0.057702)  cap-iid=205645931/471066596 (0.436554)
+  k=10: cap=55/91 (0.604396)  iid=86400/823543 (0.104913)  cap-iid=5347495/10706059 (0.499483)
+  k=11: cap=66/91 (0.725275)  iid=6581520/40353607 (0.163096)  cap-iid=294917106/524596891 (0.562179)
+  k=12: cap=6/7 (0.857143)  iid=9218880/40353607 (0.228452)  cap-iid=25369926/40353607 (0.628690)
+
+[Q6] consec_k = {0..k-1}: p0=measS7 vs cap_k (the bounded-span extreme)
+  k=8: consec p0=481/1470 (0.327211)  cap=2243/5880 (0.381463)  cap-p0=319/5880 (0.054252)  p0<=cap=True
+  k=9: consec p0=2447/5880 (0.416156)  cap=1979/4004 (0.494256)  cap-p0=65669/840840 (0.078099)  p0<=cap=True
+  k=10: consec p0=8899/17640 (0.504478)  cap=55/91 (0.604396)  cap-p0=22913/229320 (0.099917)  p0<=cap=True
+  k=11: consec p0=3419/5880 (0.581463)  cap=66/91 (0.725275)  cap-p0=10993/76440 (0.143812)  p0<=cap=True
+  k=12: consec p0=121103/194040 (0.624114)  cap=6/7 (0.857143)  cap-p0=45217/194040 (0.233029)  p0<=cap=True
+
+[Q3] HYP-2700b: U4=p0+p5+5p6 OVERSHOOTS cap for consec_8 (U4 cannot close k=8)
+  k=8: consec p0=481/1470 (0.327211)  U4=353/735 (0.480272)  cap=2243/5880 (0.381463)  p0<=cap=True  U4<=cap=False
+  k=9: consec p0=2447/5880 (0.416156)  U4=1621/2940 (0.551361)  cap=1979/4004 (0.494256)  p0<=cap=True  U4<=cap=False
+  k=10: consec p0=8899/17640 (0.504478)  U4=10999/17640 (0.623526)  cap=55/91 (0.604396)  p0<=cap=True  U4<=cap=False
+  k=11: consec p0=3419/5880 (0.581463)  U4=12161/17640 (0.689399)  cap=66/91 (0.725275)  p0<=cap=True  U4<=cap=True
+  k=12: consec p0=121103/194040 (0.624114)  U4=140003/194040 (0.721516)  cap=6/7 (0.857143)  p0<=cap=True  U4<=cap=True
+
+[Q4] The LRC S3 predicate IS p0(E)<=cap_k.  The cone is a route to it.
+     Test: exhaustive bounded span check that consec maximizes p0,
+     so p0(E)<=p0(consec_k)<=cap_k on the bounded box (k=8,9,10).
+  k=8 box max(E)<=13: rows=1716
+    consec p0=481/1470 (0.327211)  global max p0=481/1470 (0.327211) at (0, 1, 2, 3, 4, 5, 6, 7)
+    rows with p0>cap_k: 0   rows with p0>consec_p0: 0
+  k=9 box max(E)<=13: rows=1287
+    consec p0=2447/5880 (0.416156)  global max p0=2447/5880 (0.416156) at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+    rows with p0>cap_k: 0   rows with p0>consec_p0: 0
+  k=10 box max(E)<=13: rows=715
+    consec p0=8899/17640 (0.504478)  global max p0=8899/17640 (0.504478) at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+    rows with p0>cap_k: 0   rows with p0>consec_p0: 0
+
+[Q7] HYP-2700a small-|R| cone violations vs the LRC predicate (|R|=6 only)
+  K=consec_8=(0, 1, 2, 3, 4, 5, 6, 7)   C=(0, 1, 2, 3, 4, 5, 6, 8)
+    R=(1, 2, 3, 4, 5, 6): q_K=481/1470 (0.327211)  q_C=5/24 (0.208333)  K>=C=True
+    R=(1, 3, 5): q_K=129/245 (0.526531)  q_C=223/420 (0.530952)  K>=C=False  <-- C beats K (small-R)
+    R=(1, 6): q_K=97/196 (0.494898)  q_C=117/280 (0.417857)  K>=C=True
+    R=(1,): q_K=2141/2940 (0.728231)  q_C=89/120 (0.741667)  K>=C=False  <-- C beats K (small-R)
+  NOTE: the LRC predicate reads ONLY R={1..6} (full cover = p0).
+        Small-|R| violations are internal to the cone PROOF of consec-max,
+        not failures of p0(E)<=cap_k.
+
+================================================================================
+THREAD F SYNTHESIS (mac-mini-2026-06-20-SF) — the precise S3-closing statement
+================================================================================
+
+THE EXACT SUFFICIENT CONDITION (chain, with status):
+  THM-523/525/526: LRC(14)-S3 <= every primitive covering 13-set S=P∪L (k=|L|>=3,
+    k<=2 proved) has M(S)>=1/14.   [PROVED reduction]
+  THM-532/HYP-2603: N(E) ⊆ S7(E)  (a 1/7-net hits every sector), so
+    meas(S7(E)) <= cap_k := min_{|P|=13-k} meas(G_P)  ⟹  μ_{1/7}>=thr_k ⟹ S3.
+    [PROVED set-inclusion; the THM-527-A finite-Vmax glue is the upstream caveat]
+  THM-534: meas(S7(E)) = p0(E) = q_E(R={1..6}) is the SINGLE LRC predicate.
+    [PROVED: p0 = full-cover residual capacity, |R|=6 layer of the cone]
+
+  ==> S3-CLOSING CONDITION (exact, canonical):
+        for all primitive E (0∈E, |E|=k, k=8..12):  p0(E) = meas(S7(E)) <= cap_k.
+      The cone Σ_R w_R q_C(R) (HYP-2697/2698) is a PROOF DEVICE for this, NOT a
+      stronger/alternative predicate. The LRC predicate reads ONLY R={1..6}.
+
+cap_k = min_{|P|=13-k} meas(G_P):  2243/5880, 1979/4004, 55/91, 66/91, 6/7 (k=8..12).
+  cap_k >= (k-6)/7 PROVED (subadditivity, THM-535-A). k=8 anomalous: P*={1,5,7,8,9}.
+
+WIDE(A)+FINITE(B) PARTITION (do they close p0<=cap?):
+  FINITE (Thread B, span<=N): exhaustive box exact, consec maximizes p0,
+    p0<=cap, 0 violators k=8,9,10 (verified above, box<=13). THM-536-B2 span-floor
+    N*=7,8,10,13,20,20 (k=8..13); THM-535 closes k>=9 via (k-6)/7. Need W(k) explicit
+    & box>=N*: box B18/B17 already covers k=8,9 to span 18, k=10..12 to 17. FEASIBLE.
+  WIDE (Thread A, span>W): iid_k=7!S(k,7)/7^k = 0.0245/0.0577/0.1049/0.1631/0.2285;
+    cap_k - iid_k = 0.357/0.437/0.499/0.562/0.629 (LARGE budget). High relation-height
+    ⟹ corr small ⟹ p0≈iid≪cap. VERIFIED, the BV/Erdos-Turan decorrelation bound NOT
+    yet a closed inequality (THM-546/HYP-2684).
+
+ANSWER TO "does the cone need more than p0<=cap?":  NO for the predicate.
+  The cone's small-|R| violations (HYP-2700a, e.g. K=consec_8 vs C=(0..6,8):
+  q_C(R=(1,3,5))=223/420 > q_K=129/245; q_C(R=(1,))>q_K) are INTERNAL to a
+  cone-based PROOF of consec-max-p0; they do NOT violate p0(E)<=cap. The
+  full-cover layer |R|=6 (=p0) has 0 violators k=8,9,10 (HYP-2700a).
+  HYP-2700b: U4=p0+p5+5p6 OVERSHOOTS cap (U4(consec_8)=353/735>cap_8) — so the
+  U4/Bonferroni4 gate (HYP-2693) is a SEPARATE, STRICTLY STRONGER true-wide gate,
+  NOT the S3-closing predicate. p0<=cap is the right (weaker, sufficient) object.

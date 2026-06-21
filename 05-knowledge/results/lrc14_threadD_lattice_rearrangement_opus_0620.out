@@ -1,0 +1,41 @@
+============================================================================================
+THREAD D (part iii): relation-lattice REARRANGEMENT -- the right coordinate for corr(E)
+============================================================================================
+
+############################################################################################
+### k=8, span box [0..11], |pool|=330, iid=0.02448, cap=0.3815
+############################################################################################
+
+[L2] consec: measS7=0.32721 corr=+0.30273 add-triples=20 diff-collisions=56
+     max add-triples: 20 at (0, 1, 2, 3, 4, 5, 6, 7) (consec? True)
+     max diff-collisions: 56 at (0, 1, 2, 3, 4, 5, 6, 7) (consec? True)
+     max measS7: 0.32721 at (0, 1, 2, 3, 4, 5, 6, 7) (consec? True)
+
+[L3:add-triples] strictly-comparable pairs=43711, MONOTONE-violations(inversions)=14034 (32.1%)
+     worst inversion: add-triples=17 measS7=0.2736  >  add-triples=18 measS7=0.0417  (lower energy, higher measS7 by +0.2320)
+
+[L3:diff-collisions] strictly-comparable pairs=50530, MONOTONE-violations(inversions)=12947 (25.6%)
+     worst inversion: diff-collisions=32 measS7=0.2062  >  diff-collisions=33 measS7=0.0271  (lower energy, higher measS7 by +0.1792)
+
+############################################################################################
+### k=9, span box [0..11], |pool|=165, iid=0.05770, cap=0.4943
+############################################################################################
+
+[L2] consec: measS7=0.41616 corr=+0.35845 add-triples=25 diff-collisions=84
+     max add-triples: 25 at (0, 1, 2, 3, 4, 5, 6, 7, 8) (consec? True)
+     max diff-collisions: 84 at (0, 1, 2, 3, 4, 5, 6, 7, 8) (consec? True)
+     max measS7: 0.41616 at (0, 1, 2, 3, 4, 5, 6, 7, 8) (consec? True)
+
+[L3:add-triples] strictly-comparable pairs=11183, MONOTONE-violations(inversions)=3913 (35.0%)
+     worst inversion: add-triples=18 measS7=0.3369  >  add-triples=19 measS7=0.0832  (lower energy, higher measS7 by +0.2537)
+
+[L3:diff-collisions] strictly-comparable pairs=12800, MONOTONE-violations(inversions)=3437 (26.9%)
+     worst inversion: diff-collisions=53 measS7=0.2723  >  diff-collisions=54 measS7=0.0832  (lower energy, higher measS7 by +0.1891)
+
+============================================================================================
+READOUT (Thread D part iii)
+============================================================================================
+If consec maximizes a lattice-energy proxy AND corr is monotone in it -> WORKING
+rearrangement inequality. If monotone fails -> the relation lattice is also the wrong
+single coordinate; the extremality is genuinely a MULTI-shell aggregate (matches the
+CLAUDE.md 'consec-max is irreducibly aggregate' note).

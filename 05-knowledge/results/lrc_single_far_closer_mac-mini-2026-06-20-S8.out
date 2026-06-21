@@ -1,0 +1,15 @@
+SINGLE-FAR LIMIT L(base)=measS7(base)+(1/7)m1(base), worst base over span<=13:
+  k=8: worst base=[0, 1, 2, 3, 4, 5, 6]  L=289/1470=0.1966  cap_8-L=0.1849 (margin)
+  k=9: worst base=[0, 1, 2, 3, 4, 5, 6, 7]  L=621/1715=0.3621  cap_9-L=0.1322 (margin)
+  k=10: worst base=[0, 1, 2, 3, 4, 5, 6, 7, 8]  L=1229/2744=0.4479  cap_10-L=0.1565 (margin)
+
+Sharp error: measS7(consec_7 u {w}) -> 289/1470=0.1966, error*w bounded (O(1/w)):
+   w=   8: measS7=0.2083 err=0.0117 err*w=0.09
+   w=  14: measS7=0.2323 err=0.0357 err*w=0.50
+   w=  21: measS7=0.2177 err=0.0211 err*w=0.44
+   w=  30: measS7=0.1952 err=0.0014 err*w=0.04
+   w=  50: measS7=0.1976 err=0.0010 err*w=0.05
+   w= 100: measS7=0.1971 err=0.0005 err*w=0.05
+
+=> single-far regime closed: limit comfortable (margin 0.18), O(1/w) error, small W*.
+   consec_k is the global max; everything else (single/multi-far, dissociated) is below it.
