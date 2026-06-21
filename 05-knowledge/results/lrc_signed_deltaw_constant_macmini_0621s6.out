@@ -1,0 +1,10 @@
+  k |B|   maxDw*w  argw  maxDw/margabsConst15.8/w@w*
+  8   7    0.9429    91      0.1141
+  9   8    0.7680    91      0.0812
+ 10   9    0.9342    68      0.1321
+ 11  10    1.0093    68      0.0890
+ 12  11    0.9003    96      0.0428
+
+=> 'maxDw*w' is the HONEST signed constant. If it is bounded ~O(1) and SMALL (<< absolute 15.8),
+   the signed bound Delta_w <= C_signed/w closes the binding window. Compare to absolute V*6/49.
+   sqrt(7)=2.6458  (the Weil/Gauss-sum scale; 6/49 was the absolute constant)

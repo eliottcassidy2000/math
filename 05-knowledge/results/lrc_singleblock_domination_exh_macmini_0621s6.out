@@ -1,0 +1,2 @@
+single consec block NOT max in 16/1008 (block dominated by a same-size shape in window)
+  worst beater: B=(0, 1, 2, 3, 4) block=(15, 16, 17) beaten by (19, 20, 21) (by 0.05194)

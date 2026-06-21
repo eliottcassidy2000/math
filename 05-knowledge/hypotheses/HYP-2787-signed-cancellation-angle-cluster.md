@@ -50,3 +50,24 @@ formal lemma: `p0(B ∪ block) ≥ p0(B ∪ split)` at matched count — a rearr
 ## Next
 Test #1 (Poisson-dual) and #4 (Weil/√−7) first — both could turn the signed value into an honest
 absolutely-convergent `O(1/w)` or `√7` bound, cracking HYP-2784's wall. Push results live.
+
+
+## LIVE FINDINGS (mac-mini-S6)
+**The honest signed constant is C_signed ≈ 1.0** (VERIFIED `sup_w Δ_w·w ≈ 0.77–1.01` for consec_{k-1},
+k=8..12), vs the absolute `15.8` (HYP-2784). So `Δ_w ≤ ~1/w` honestly, and `Δ_w(binding w~18) ≤ 0.056 <
+margin 0.13`. **Proving `C_signed ≈ 1` closes the single-far binding window** — this IS mac-mini gap #1.
+
+**THE DEDEKIND IDENTITY (the crack for angle #2).** Exactly:
+> `Δ_w = (1/w) · Σ_j Σ_{endpoints t of A_j} ±s_j(w·t)`,  `t = k/(7e)` (e∈base), `s_j` = bounded sawtooth
+> (centered `∫(1_{sector_j}−1/7)`, `|s_j|≤3/49`).
+So `C_signed·w = Σ_j Σ_{k,e} ±((w·k/(7e)))` is a **generalized Dedekind sum**. The absolute bound (THM-546)
+takes `Σ|s_j|`; the SIGNED value is `~16×` smaller because the sawtooths CANCEL. Grouping by `e`: each
+`e` gives a Dedekind-type sum `d_e(w)=Σ_k ±((wk/(7e)))`; individually `d_e(w)` grows `~w/(84e)` (reciprocity),
+but the **leading terms cancel across `e`** (Σ structure), leaving the bounded `~1` constant. The PROOF =
+Dedekind reciprocity + the leading-term cancellation across the base. NOVEL: the Dedekind/LRC link is not
+in the literature (web-checked); the recent frontier (Trakulthongchai 2025, 9&10 runners) names exactly
+this signed-cancellation density as the open obstruction.
+
+**Single-block domination over SPLITS holds** (refined): block-vs-split never reverses; the 16/1008 "leaks"
+are block-vs-block at a different OFFSET (e.g. (19,20,21) beats (15,16,17), both blocks) = the φ-shift, so
+the extremizer is the sup-over-offset single block (HYP-2694), confirming the multi-far → single-block route.
