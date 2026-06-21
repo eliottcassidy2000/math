@@ -68,6 +68,41 @@ theorem cell_apex_necessity (c S : Int) (h : iabs (7 * c - S) = 0) : (7 : Int) �
 theorem cell_uniform_zero (m : Int) : iabs (7 * m - 7 * m) = 0 := by
   simp only [iabs]; omega
 
+/-- `iabs` is nonnegative. -/
+theorem iabs_nonneg (x : Int) : 0 ≤ iabs x := by simp only [iabs]; omega
+
+/-- The `(0,0)` summand is at most the whole sum, when all summands are nonnegative.
+    Proved by linear arithmetic treating each `g i j` as an opaque nonnegative integer
+    (no `natAbs` here, so `omega` stays tractable over the 49 terms). -/
+theorem cell_le_sum49 (g : Fin 7 → Fin 7 → Int) (hg : ∀ i j, 0 ≤ g i j) :
+    g 0 0 ≤ sum49 g := by
+  have h00 := hg 0 0; have h01 := hg 0 1; have h02 := hg 0 2; have h03 := hg 0 3
+  have h04 := hg 0 4; have h05 := hg 0 5; have h06 := hg 0 6
+  have h10 := hg 1 0; have h11 := hg 1 1; have h12 := hg 1 2; have h13 := hg 1 3
+  have h14 := hg 1 4; have h15 := hg 1 5; have h16 := hg 1 6
+  have h20 := hg 2 0; have h21 := hg 2 1; have h22 := hg 2 2; have h23 := hg 2 3
+  have h24 := hg 2 4; have h25 := hg 2 5; have h26 := hg 2 6
+  have h30 := hg 3 0; have h31 := hg 3 1; have h32 := hg 3 2; have h33 := hg 3 3
+  have h34 := hg 3 4; have h35 := hg 3 5; have h36 := hg 3 6
+  have h40 := hg 4 0; have h41 := hg 4 1; have h42 := hg 4 2; have h43 := hg 4 3
+  have h44 := hg 4 4; have h45 := hg 4 5; have h46 := hg 4 6
+  have h50 := hg 5 0; have h51 := hg 5 1; have h52 := hg 5 2; have h53 := hg 5 3
+  have h54 := hg 5 4; have h55 := hg 5 5; have h56 := hg 5 6
+  have h60 := hg 6 0; have h61 := hg 6 1; have h62 := hg 6 2; have h63 := hg 6 3
+  have h64 := hg 6 4; have h65 := hg 6 5; have h66 := hg 6 6
+  simp only [sum49]; omega
+
+/-- **The general matrix apex law (HYP-2733, easy half), now PROVED.** If the integer
+    discrepancy of any occupancy matrix vanishes then `7 | S`.  No 49-term `natAbs`
+    blowup: bound the `(0,0)` summand by the (zero) total, force it to vanish, then
+    apply the scalar `cell_apex_necessity`. -/
+theorem matrix_apex_necessity (c : Mat) (S : Int) (h : Ddef c S = 0) : (7 : Int) ∣ S := by
+  have hle : iabs (7 * c 0 0 - S) ≤ Ddef c S :=
+    cell_le_sum49 (fun i j => iabs (7 * c i j - S)) (fun i j => iabs_nonneg _)
+  have hz : iabs (7 * c 0 0 - S) = 0 := by
+    have := iabs_nonneg (7 * c 0 0 - S); omega
+  exact cell_apex_necessity (c 0 0) S hz
+
 /-! ### Concrete atlas instances (native_decide) -/
 
 /-- Occupancy of the `(q,p)=(2,3)` geodesic (ratio 3/2, the `sup D*q` ratio); `S=pq=6`. -/
