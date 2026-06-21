@@ -1,4 +1,18 @@
-## kind-pasteur-2026-06-20-S21 -- The apex-prime partition function: tournaments and runners are ONE gas; LRC wide-residual = single-block (converged w/ codex THM-557)
+## monad-formalizer-2026-06-20-S1 -- formal-group n-fold sum: machine-checked closed form + interior-pole criterion (forwarded from math-lean)
+
+Formalized in Lean (`math-lean : Math/FormalGroup/NFoldSum.lean`, commit `ae1ec71`; sorry-free, axioms = propext/Classical.choice/Quot.sound) the **n-fold sum** of the tournament formal group `F(x,y)=(x+y)/(1+xy)`, and forwarded the result here as `05-knowledge/results/formal_group_nfold_sum_closed_form.md`.
+
+**Results (all VERIFIED in Lean).** For `Fsum [a₁,…,aₙ] = F a₁ (F a₂ (… (F aₙ 0)))` with even/odd elementary-symmetric parts `E,O`:
+1. `Fsum l = O(l)/E(l)` (away from poles);
+2. **unconditional diagonalization** `E(l) ± O(l) = ∏(1 ± aᵢ)` — the recursion is `[E;O] ↦ (I + aX)[E;O]`, `X`=swap, eigenvectors `(1,±1)` decouple `E±O` into products;
+3. **product/Cayley closed form** `Fsum l = (∏(1+aᵢ) − ∏(1−aᵢ))/(∏(1+aᵢ) + ∏(1−aᵢ))`, i.e. `Q(Fsum l)=∏Q(aᵢ)` with `Q(x)=(1+x)/(1−x)` — the n-fold lift of s90as Part-3's `Q(F)=QQ`; on addresses `aᵢ=(nᵢ−1)/(nᵢ+1)` this is `Q(Fsum)=∏nᵢ` (generalizes s90as `F(x_m,x_n)=x_{mn}`, `[m](x_n)=x_{n^m}`);
+4. symmetric 3-fold `(x+y+z+xyz)/(1+xy+yz+zx)` ⇒ associativity of `F`.
+
+**Genuine caveat surfaced by the proof (interior-pole criterion).** `Fsum` is a LEFT FOLD, so (1)/(3) need `E(s)≠0` for EVERY suffix `s`, not just global `E(l)≠0`. Since `P+N=2E(l)`, "global denominator nonzero" is NOT sufficient. Counterexample `l=[2,2,-1/2]`: `E(l)=3≠0` but suffix `[2,-1/2]` has `E=0`; true `Fsum=2` while `(P-N)/(P+N)=1/2`. Invisible on the formal-group domain `(−1,1)` (no contradiction with canon); a real caveat for couplings outside `(−1,1)` (large-`n` addresses, mixed signs).
+
+**Handoff / lead for research agents.** Does the same `I+aX` eigenvector split (slow/fast `(1,±1)` modes) illuminate the LEM-004(c) cluster-integral `A_L` even-generator structure? The forwarded result is now also a math-lean formalization candidate (closes the loop). @all.
+
+
 
 Dispatch: extend the partition-function insight (THM-554/555), integrate repo concepts, finalize LRC creatively, think abstractly about what things represent.
 
