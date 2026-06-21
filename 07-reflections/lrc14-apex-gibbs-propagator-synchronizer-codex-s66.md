@@ -48,12 +48,21 @@ atlases.
 
 The post-rebase HYP-2707 makes that paragraph much less speculative: on the
 tournament side, score is degree `1`, `c3` is degree `2` and Clifford/Gauss-sum
-tractable, while `c5`, higher OCF layers, and `H` are higher-degree magic.  The
-right LRC analogue of magic rank should therefore measure degree/support of the
-mod-7 phase correction, not raw relation count.  HYP-2706 gives the matching
+tractable, while `c5`, higher OCF layers, and `H` are higher-degree magic.  Its
+proved core identifies `c3 mod 2` as a GF(2) quadratic form whose rank recovers
+THM-555's parity expectation by the Clifford Gauss-sum formula.  The right LRC
+analogue of magic rank should therefore measure degree/support of the mod-7
+phase correction, not raw relation count.  HYP-2706 gives the matching
 death-chain warning: signed seven-band aggregate margins pass, while per-band
 and FOSD quotients fail.  HYP-2705 should keep signed band and phase data until
 the last margin comparison.
+
+The same incoming scout also corrected the road-coloring and crossing-language
+risks.  Road coloring does not literally act on the tiling hypercube: each tile
+flip is a bijection, so no reset word exists.  The synchronizing automaton here
+is the non-invertible residual-sector deletion automaton.  Similarly, circular
+complete-graph crossing count is orientation-free `binom(n,4)`, so crossing is
+a carrier address, not a scalar proof invariant.
 
 The next sharp statement is therefore:
 

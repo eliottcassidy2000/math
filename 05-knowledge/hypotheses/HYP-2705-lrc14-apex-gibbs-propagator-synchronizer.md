@@ -257,11 +257,22 @@ They sharpen the route rather than competing with it.
 * **HYP-2707 / tournament Clifford-magic hierarchy:** the Clifford/T analogy is
   now precise on the tournament side.  Score data is degree `1` in tile bits,
   `c3` is degree `2` and Gauss-sum/Clifford tractable, while `c5`, higher OCF
-  layers, and `H` are higher-degree magic.  HYP-2705 imports this as a template
-  for LRC: the decorrelated cut-space quotient is stabilizer data; signed
-  relation/cycle corrections are the magic resource.  The LRC "magic rank"
-  should therefore measure polynomial/phase degree or stabilizer rank of the
-  mod-7 relation profile, not raw relation count.
+  layers, and `H` are higher-degree magic.  Its proved core goes further:
+  `c3 mod 2` is a GF(2) quadratic form whose bilinear rank is
+  `2*floor((n-1)/2)`, giving THM-555's `E[(-1)^c3]` by the standard Clifford
+  Gauss-sum rank formula.  HYP-2705 imports this as a template for LRC: the
+  decorrelated cut-space quotient is stabilizer data; signed relation/cycle
+  corrections are the magic resource.  The LRC "magic rank" should therefore
+  measure polynomial/phase degree or stabilizer rank of the mod-7 relation
+  profile, not raw relation count.
+
+* **Crossing/road-coloring scout:** circular tournament drawings have raw
+  crossing number `binom(n,4)` independent of orientation, and the tested
+  alternating crossing counts are not `c3`.  Likewise, road coloring fails
+  literally on the tiling hypercube because every tile-letter is a bijection.
+  This corrects HYP-2705's synchronizer language: the road-coloring object is
+  the non-invertible residual-sector deletion automaton, not the invertible
+  wiggly/tiling automaton.
 
 * **Formal-group n-fold sum:** the machine-checked Cayley transform identity
   `Q(Fsum)=prod Q(a_i)` and unconditional `E+-O=prod(1+-a_i)` split offer a
