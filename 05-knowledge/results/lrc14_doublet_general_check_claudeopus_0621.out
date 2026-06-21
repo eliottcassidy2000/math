@@ -1,0 +1,27 @@
+================================================================================
+DOUBLET GENERAL CHECK over ALL bounded bases (genuine-wide, THM-563-style)
+claude-opus 2026-06-21   E = B u {M,M+1}, B subset [0,14], |B|=k-2, M in [15,80]
+================================================================================
+
+k=8  cap=2243/5880=0.381463   bases checked: 2002  (size 6)
+  WORST (closest-to-cap) genuine-wide doublet: max p0 = 0.207226
+     at base B=(0, 10, 11, 12, 13, 14), doublet M=15
+  margin cap - worst = +0.174237   FAILS (>=cap): 0
+  => doublet general check PASSES (all bounded bases < cap)
+
+k=9  cap=1979/4004=0.494256   bases checked: 3003  (size 7)
+  WORST (closest-to-cap) genuine-wide doublet: max p0 = 0.327551
+     at base B=(0, 4, 6, 8, 10, 12, 14), doublet M=15
+  margin cap - worst = +0.166705   FAILS (>=cap): 0
+  => doublet general check PASSES (all bounded bases < cap)
+
+k=10  cap=55/91=0.604396   bases checked: 3432  (size 8)
+  WORST (closest-to-cap) genuine-wide doublet: max p0 = 0.450680
+     at base B=(0, 2, 4, 6, 8, 10, 12, 14), doublet M=15
+  margin cap - worst = +0.153715   FAILS (>=cap): 0
+  => doublet general check PASSES (all bounded bases < cap)
+
+================================================================================
+If all PASS: the genuine-wide doublet is VERIFIED over ALL bounded bases (window
+[15,80]); tail M>80 by kps p0<=p0_inf+J/f. Combined w/ far-count monotonicity (doublet
+= genuine-wide max), this is the THM-563-style general check for the genuine-wide leg.
