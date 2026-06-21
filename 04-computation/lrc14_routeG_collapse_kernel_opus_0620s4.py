@@ -141,16 +141,25 @@ def Kk_collapse(n):
 # relation lattice enumeration (exact integer kernel, LLL-lite)
 # ----------------------------------------------------------------------------
 def kbasis(nz):
-    import sympy
-    M = sympy.Matrix([nz]); out = []
-    for v in M.nullspace():
-        L = 1
-        for x in v:
-            fr = F(int(x.p), int(x.q)); L = L * fr.denominator // math.gcd(L, fr.denominator)
-        iv = [int(x * L) for x in v]; g = 0
-        for c in iv: g = math.gcd(g, abs(c))
-        if g: iv = [c // g for c in iv]
-        out.append(iv)
+    """Integer nullspace of the 1xk row [nz_0,...,nz_{k-1}]  (stdlib only).
+    nz spans a line, so the relation lattice has rank k-1. Use a pivot coordinate p
+    (any with nz[p]!=0); for every other coord j a primitive relation supported on
+    {p,j} is  (nz[p]/g)*e_j - (nz[j]/g)*e_p,  g=gcd(nz[p],nz[j])."""
+    k = len(nz); out = []
+    p = next((i for i, v in enumerate(nz) if v != 0), None)
+    if p is None: return out
+    for j in range(k):
+        if j == p: continue
+        if nz[j] == 0:
+            v = [0] * k; v[j] = 1; out.append(v); continue
+        g = math.gcd(abs(nz[p]), abs(nz[j]))
+        v = [0] * k
+        v[j] = nz[p] // g
+        v[p] = -nz[j] // g
+        gg = 0
+        for c in v: gg = math.gcd(gg, abs(c))
+        if gg: v = [c // gg for c in v]
+        out.append(v)
     return out
 
 def lll(basis):
