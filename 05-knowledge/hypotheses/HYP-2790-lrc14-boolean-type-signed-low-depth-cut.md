@@ -1,5 +1,5 @@
 ---
-id: HYP-2751
+id: HYP-2790
 title: LRC14 Boolean type quotient has a sharp low-depth signed aggregate cut
 status: CONFIRMED finite k=8 bounded-bank certificate; OPEN as global proof route
 source: codex-2026-06-21
@@ -16,7 +16,7 @@ related:
   - HYP-2750
 ---
 
-# HYP-2751: Boolean Type Signed Low-Depth Cut
+# HYP-2790: Boolean Type Signed Low-Depth Cut
 
 ## Claim
 

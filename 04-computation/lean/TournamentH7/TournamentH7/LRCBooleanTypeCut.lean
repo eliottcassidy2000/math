@@ -1,5 +1,5 @@
 /-
-  TournamentH7.LRCBooleanTypeCut -- finite arithmetic for the HYP-2751
+  TournamentH7.LRCBooleanTypeCut -- finite arithmetic for the HYP-2790
   Boolean/type signed aggregate cut.
 
   The companion Python script validates the cut against the full k=8 bounded
