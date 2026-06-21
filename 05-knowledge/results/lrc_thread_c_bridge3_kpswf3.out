@@ -1,0 +1,34 @@
+==================================================================================
+THREAD C BRIDGE 3: lonely measure as RESONANCE DEPRESSION of (6/7)^k (dual of L7)
+==================================================================================
+
+[HYP-C1] L(C) vs decorrelated floor (6/7)^|C|, and the depression D=floor-L:
+   C                |C|   (6/7)^|C|   L(C)exact   depress D  D/floor
+   {1,2,3}            3     0.62974     0.69048    -0.06074   -0.096
+   {1,2,3,4,5}        5     0.46266     0.50476    -0.04210   -0.091
+   {1..7}             7     0.33992     0.33469     0.00522    0.015
+   {1..11,13}        12     0.15727     0.01216     0.14511    0.923
+
+   => depression D grows as relations accumulate; for {1..11,13} D/floor~0.92
+      (loneliness is depressed to 8% of its decorrelated value by resonance).
+
+[HYP-C3] theta-form depression by relation SUPPORT (float; Tmax=6):
+   sum of nonzero-relation terms, grouped by |support|. Negative sum = depression.
+   {1,2,3}: floor(6/7)^k=0.62974
+       support 2: sum of terms = +0.10462
+       support 3: sum of terms = -0.03635
+     theta-approx L (Tmax=6) = 0.69801   exact L = 0.69048
+     => largest depression from support 3 (-0.03635)
+   {1,2,3,4,5}: floor(6/7)^k=0.46266
+       support 2: sum of terms = +0.16507
+       support 3: sum of terms = -0.18018
+       support 4: sum of terms = +0.09059
+     theta-approx L (Tmax=6) = 0.53815   exact L = 0.50476
+     => largest depression from support 3 (-0.18018)
+
+[HYP-C2] TIGHT-LOCUS <-> RESONANCE-ATLAS equivalence sketch:
+   tight (L=0) configs found in canon: AP{1..13}, sporadic {1..11,13,24}, Goddyn-Wong T5.
+   Each is a SATURATING small-denominator relation pattern (AP: t=(1,-2,1,..) support-3 chains).
+   The L7 resonance atlas = small-denom ratios p/q in (1,2.15). CLAIM: tight-locus
+   finiteness <=> these saturating relation patterns are finitely many. Both reduce to
+   'small-denominator commensurability is bounded'. Tested structurally, not proved.

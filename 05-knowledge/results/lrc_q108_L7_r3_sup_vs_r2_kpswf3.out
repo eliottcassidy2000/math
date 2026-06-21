@@ -1,0 +1,27 @@
+======================================================================================
+THREAD B final: r=3 sup vs r=2 sup (k=9), the merge-dichotomy, vs cap_9
+======================================================================================
+
+ r=2 (base7, 7+2=9): P2=0.24645  sup p0_inf = 0.246757 at (3, 5)
+ r=3 (base6, 6+3=9): P3=0.13696  sup p0_inf = 0.148384 at (2, 3, 4)
+
+ => r=3 sup (0.14838) <= r=2 sup (0.24676) ? True   [DIRECT base-size domination, k=9]
+    cap_9=0.49426; margins: r=2 0.24750, r=3 0.34587
+
+ MERGE check: r=3 direction (q,p,p) [two far ratios equal] collapses to r=2-like.
+       q,p,p   p0_inf_r3   cmp r2(q,p) base6+1dup
+       2,3,3    0.081916                 0.081916
+       3,4,4    0.086451                 0.086451
+       3,5,5    0.084580                 0.084580
+       4,5,5    0.083282                 0.083282
+       5,6,6    0.084206                 0.084206
+  (r3 (q,p,p) ~ r2 (q,p): the duplicated ratio adds a near-coincident far -> single cluster,
+   confirming MERGE -> lower-r regime, NOT a new divergence. THM-557 boundary, one dim up.)
+
+ SEPARATED check: well-separated coprime triples, growing scale -> R3 -> 0:
+   q= 7 dir=(7,9,15) g=(1.286,2.143)  p0_inf=0.139331  R3=+0.002374
+   q= 9 dir=(9,11,19) g=(1.222,2.111)  p0_inf=0.137719  R3=+0.000762
+   q=11 dir=(11,14,23) g=(1.273,2.091)  p0_inf=0.138525  R3=+0.001568
+   q=13 dir=(13,16,27) g=(1.231,2.077)  p0_inf=0.137057  R3=+0.000100
+
+DONE.

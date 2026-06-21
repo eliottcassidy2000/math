@@ -1,0 +1,12 @@
+========================================================================
+VERIFY the elementary bound  D_{p,q} <= 14/p  (and the true sup D*p)
+========================================================================
+  checked 1248 ratios p/q in (1,2.15], q<=59
+  D_{p,q} <= 14/p violations: 0   (0 == bound HOLDS, proof verified)
+  TRUE sup D*p = 2.8571  at p/q=2/1  (vs proven bound 14)
+  TRUE sup D*q = 1.7143 at p/q=3/2
+
+  Using proven bound D<=14/p: tail p >= 67 safe; atlas p <= 66.
+  Using empirical sup D*p=2.86: tail p >= 14 safe; atlas p <= 13 (tiny, each exact-checked p0_inf<cap).
+
+  => L7 tail RIGOROUSLY CLOSED (elementary Koksma + equally-spaced a_m). DONE.

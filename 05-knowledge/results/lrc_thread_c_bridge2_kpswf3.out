@@ -1,0 +1,39 @@
+==================================================================================
+THREAD C BRIDGE 2: the EXACT set relation danger vs sector, and which route binds
+==================================================================================
+
+[A] danger band ||theta||<=1/14 vs 7-sector partition:
+    meas(danger) = 2*(1/14) = 1/7   (one band of total width 1/7)
+    danger = [0,1/14] u [13/14,1).  sector0=[0,1/7), sector6=[6/7,1).
+    1/14=0.0714 < 1/7=0.1429 ; 13/14=0.9286 > 6/7=0.8571
+    => DANGER is a STRICT SUBSET of (sector0 u sector6). NOT equal.
+    => 'avoid danger' (lonely) is WEAKER than 'avoid sectors 0,6'.
+
+[B] DECORRELATED single-speed probabilities (independent uniform model):
+    P(one speed in danger) = 1/7 = 0.1429
+    P(k indep speeds ALL avoid danger) = (6/7)^k  [lonely decorrelated floor]
+       k= 7: (6/7)^k = 0.33992   <- decorrelated L floor (no relations)
+       k= 8: (6/7)^k = 0.29136   <- decorrelated L floor (no relations)
+       k=12: (6/7)^k = 0.15727   <- decorrelated L floor (no relations)
+       k=13: (6/7)^k = 0.13480   <- decorrelated L floor (no relations)
+    These are POSITIVE and bounded below for fixed k. The decorrelated lonely
+    measure NEVER vanishes; L=0 requires arithmetic RELATIONS (the tight locus).
+
+[C] THE LOGICAL LINK (THM-525, exact identity):
+    For S=C u {w}:  L(S) = meas(G_C) - meas(G_C cap D_w).
+    meas(G_C) is the OPEN-Q-108 floor (route 2).  D_w is w's danger comb (meas 1/7).
+    The sector-cover p0(S) bounds when the FULL union of danger combs covers [0,1):
+    p0 relates to meas(union D_v over ALL of S). Test the chain numerically below.
+
+    S = C u {w}:  L(S) vs meas(G_C) vs L(C):
+      core C              w   meas(G_C)    L(S=Cuw)        drop
+      {1..11,13}         36     0.01216     0.00079     0.01137
+      {1..11,13}         24     0.01216     0.00000     0.01216
+      {1..11,13}         84     0.01216     0.00536     0.00680
+      {1..12}            14     0.03410     0.02390     0.01020
+
+    => meas(G_C) is the dominant term; the stranger w only shaves off
+       meas(G_C cap D_w) <= meas(D_w)=1/7. So meas(G_C)>=c & c>1/7 => L(S)>0 directly.
+       The whole game IS lower-bounding meas(G_C). p0/sector-cover is the WRONG functional
+       for THIS (it's an upper bound on the danger-cover). BUT the L7 closure's MACHINERY
+       (resonance atlas + torus discrepancy) may transfer. See bridge3.
