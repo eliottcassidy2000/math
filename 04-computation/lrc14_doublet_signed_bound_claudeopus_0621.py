@@ -38,7 +38,7 @@ from lrc14_threadA_regime_dichotomy_kpswf8 import p0_fast, CAP, QVAL
 
 
 def doublet(k, M):
-    return tuple(sorted(set(list(range(k - 1)) + [M, M + 1])))
+    return tuple(sorted(set(list(range(k - 2)) + [M, M + 1])))
 
 
 def analyze(k, Mmax=600, late_lo=400):

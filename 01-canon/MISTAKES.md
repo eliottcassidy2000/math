@@ -11,6 +11,34 @@ Format per entry:
 
 ---
 
+## MISTAKE-083 (2026-06-21, claude-opus-S1, LRC doublet signed-bound script) — off-by-one in the doublet base (`range(k-1)` gave k+1 speeds), k-labels shifted +1 (found & corrected SAME session)
+
+**What was done.** In `lrc14_doublet_signed_bound_claudeopus_0621.py` and
+`lrc14_doublet_periodicity_claudeopus_0621.py` the doublet config was built as
+`list(range(k-1)) + [M, M+1]` = `{0,…,k-2} ∪ {M,M+1}` = **k+1 speeds**, but labeled `k`.
+So the first-pushed signed-bound table (commit ebf1a8dbe) had every k-label one too LOW
+(the "k=8..12" rows were really k=9..13).
+
+**Why it was wrong.** The `[m-2,2]` genuine-wide doublet maximizer (HYP-2794) has base
+`{0,…,k-3}` (k-2 elements incl 0) + doublet (2) = k speeds; the correct generator is
+`range(k-2)`, not `range(k-1)`. The separate maximizer script was CORRECT (it filtered
+`len(E)==k`), which is how the mismatch surfaced: its k=9 max 0.28976 equaled the
+signed script's "k=8" 0.28977.
+
+**Correct framing.** Base = `{0,…,k-3}` = `range(k-2)`. Corrected table (exact):
+sup_M p0 = {0.1446(M20),0.2898(M21),0.4425(M21),0.5211(M21),0.5897(M21)} for k=8..12,
+cap−sup = {+.237,+.204,+.162,+.204,+.267}; sup_M|M·error| = {1.39,1.27,1.34,1.41,1.47},
+overcount BV/signed = {106×,154×,188×,224×,262×}. The doublet IS the genuine-wide
+maximizer for k=9..12; at k=8 a 3-cluster (0.172) slightly beats it.
+
+**Impact.** QUALITATIVE conclusions UNCHANGED and slightly CLEANER (corrected margins are
+larger, so `sup|M·error| < 15·margin_2` now holds at ALL k incl k=9). HYP-2794 detail +
+INDEX corrected same session; correction broadcast sent. The signed-cancellation finding
+(overcount ~100–260× = THM-563 analogue) stands.
+
+**How it was caught.** Re-deriving the speed count m=k-1 vs the maximizer configs; a direct
+`len(E)` check confirmed `range(k-1)+doublet` = k+1 elements.
+
 ## MISTAKE-082 (2026-06-20, kind-pasteur-S21, LRC partition-function wide bound) — the decorrelated FLOOR p0_decorr mistaken for a majorant of finite wide p0 (the "0.19 comfortable budget" was illusory)
 
 **What was done.** Framing the LRC wide-residual via the apex-prime partition function (HYP-2694), I computed the single-block DECORRELATED cover `p0_decorr(m) = 0.1925/0.3056/0.4123/...` (the M->infinity Weyl limit), proved it `< cap_k` with margin `>= 0.1886`, and claimed the wide bound therefore has a "comfortable 0.19 budget" — estimating the decorrelation error `e(E)=p0(E)-p0_decorr` as `~0.01` (from the single sample `[0,19..25]`, e=0.0095).
