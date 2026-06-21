@@ -15,3 +15,83 @@ ROUTE 3 v2: PER-CELL Huffer-Shepp monotonicity of W_a
 
   k=9: consec W_a = ['11/168', '73/1176', '15/196', '19/294', '43/735', '523/5880']
         stratum size = 688
+        cell a=1: consec BEATEN on W_a by 12 shapes; worst (0, 2, 3, 4, 5, 6, 7, 8, 9) W_a=0.08787 vs consec 0.06548 (+0.02239)
+        cell a=2: consec BEATEN on W_a by 3 shapes; worst (0, 1, 2, 3, 4, 6, 7, 8, 12) W_a=0.06548 vs consec 0.06207 (+0.00340)
+        cell a=4: consec BEATEN on W_a by 4 shapes; worst (0, 1, 3, 4, 5, 6, 7, 9, 10) W_a=0.07007 vs consec 0.06463 (+0.00544)
+        cell a=5: consec BEATEN on W_a by 5 shapes; worst (0, 2, 4, 5, 6, 8, 10, 12, 14) W_a=0.06616 vs consec 0.05850 (+0.00765)
+        cell a=6: consec BEATEN on W_a by 1 shapes; worst (0, 1, 2, 3, 4, 5, 6, 7, 9) W_a=0.10170 vs consec 0.08895 (+0.01276)
+        >>> consec is NOT a per-cell maximiser: PER-CELL HS port FAILS at this k.
+
+  k=10: consec W_a = ['7/72', '247/3528', '71/882', '67/882', '247/3528', '977/8820']
+        stratum size = 832
+        cell a=1: consec BEATEN on W_a by 6 shapes; worst (0, 2, 3, 4, 5, 6, 7, 8, 9, 10) W_a=0.10454 vs consec 0.09722 (+0.00731)
+        cell a=2: consec BEATEN on W_a by 18 shapes; worst (0, 1, 2, 3, 4, 5, 6, 7, 12, 14) W_a=0.08299 vs consec 0.07001 (+0.01298)
+        cell a=3: consec BEATEN on W_a by 12 shapes; worst (0, 1, 2, 3, 4, 5, 6, 7, 8, 10) W_a=0.09184 vs consec 0.08050 (+0.01134)
+        cell a=4: consec BEATEN on W_a by 8 shapes; worst (0, 1, 3, 4, 5, 6, 7, 9, 10, 13) W_a=0.08380 vs consec 0.07596 (+0.00784)
+        cell a=5: consec BEATEN on W_a by 14 shapes; worst (0, 1, 2, 4, 5, 6, 7, 10, 12, 13) W_a=0.07813 vs consec 0.07001 (+0.00812)
+        cell a=6: consec BEATEN on W_a by 1 shapes; worst (0, 1, 2, 3, 4, 5, 6, 7, 9, 10) W_a=0.11678 vs consec 0.11077 (+0.00601)
+        >>> consec is NOT a per-cell maximiser: PER-CELL HS port FAILS at this k.
+
+====================================================================================
+[B] HS SYMMETRISATION.  Replace each non-zero clock e by the PAIR {e,-e}
+    (a symmetric two-sided covering arc about the cell centre).  HS centering
+    lemma => symmetrising should NOT DECREASE coverage.  Compare W_a(E) to
+    W_a(E union -E).  Test sign per cell.
+====================================================================================
+
+  E=[0, 1, 2, 3, 4, 5, 6, 7]  ->  symmetrised E∪(-E)=[-7, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 7]
+     a=1: W_a(E)=0.04422  W_a(sym)=0.12925  d=+0.08503 [+]
+     a=2: W_a(E)=0.04422  W_a(sym)=0.09796  d=+0.05374 [+]
+     a=3: W_a(E)=0.06054  W_a(sym)=0.10714  d=+0.04660 [+]
+     a=4: W_a(E)=0.05782  W_a(sym)=0.10714  d=+0.04932 [+]
+     a=5: W_a(E)=0.04422  W_a(sym)=0.09796  d=+0.05374 [+]
+     a=6: W_a(E)=0.07619  W_a(sym)=0.12925  d=+0.05306 [+]
+
+  E=[0, 1, 2, 3, 4, 5, 6, 8]  ->  symmetrised E∪(-E)=[-8, -6, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 6, 8]
+     a=1: W_a(E)=0.03571  W_a(sym)=0.12500  d=+0.08929 [+]
+     a=2: W_a(E)=0.04167  W_a(sym)=0.08810  d=+0.04643 [+]
+     a=3: W_a(E)=0.02857  W_a(sym)=0.11310  d=+0.08452 [+]
+     a=4: W_a(E)=0.02381  W_a(sym)=0.11310  d=+0.08929 [+]
+     a=5: W_a(E)=0.03810  W_a(sym)=0.08810  d=+0.05000 [+]
+     a=6: W_a(E)=0.04048  W_a(sym)=0.12500  d=+0.08452 [+]
+
+  E=[0, 2, 3, 4, 5, 6, 7, 8]  ->  symmetrised E∪(-E)=[-8, -7, -6, -5, -4, -3, -2, 0, 2, 3, 4, 5, 6, 7, 8]
+     a=1: W_a(E)=0.06293  W_a(sym)=0.09949  d=+0.03656 [+]
+     a=2: W_a(E)=0.03929  W_a(sym)=0.10510  d=+0.06582 [+]
+     a=3: W_a(E)=0.04252  W_a(sym)=0.07313  d=+0.03061 [+]
+     a=4: W_a(E)=0.04252  W_a(sym)=0.07313  d=+0.03061 [+]
+     a=5: W_a(E)=0.03571  W_a(sym)=0.10510  d=+0.06939 [+]
+     a=6: W_a(E)=0.05068  W_a(sym)=0.09949  d=+0.04881 [+]
+
+  E=[0, 1, 2, 3, 4, 5, 7, 8]  ->  symmetrised E∪(-E)=[-8, -7, -5, -4, -3, -2, -1, 0, 1, 2, 3, 4, 5, 7, 8]
+     a=1: W_a(E)=0.01412  W_a(sym)=0.12296  d=+0.10884 [+]
+     a=2: W_a(E)=0.00000  W_a(sym)=0.10510  d=+0.10510 [+]
+     a=3: W_a(E)=0.02466  W_a(sym)=0.08929  d=+0.06463 [+]
+     a=4: W_a(E)=0.00935  W_a(sym)=0.08929  d=+0.07993 [+]
+     a=5: W_a(E)=0.00000  W_a(sym)=0.10510  d=+0.10510 [+]
+     a=6: W_a(E)=0.05153  W_a(sym)=0.12296  d=+0.07143 [+]
+
+====================================================================================
+[C] REFLECTION-TOWARD-CONSEC single moves.  From a rival E, reflect each
+    clock e->-e; for the moves that reduce |magnitude - consec target|,
+    record per-cell sign of dW_a.  HS-port predicts: moving toward the
+    balanced consec config does NOT decrease W_a.
+====================================================================================
+
+  rival E=[0, 1, 2, 3, 4, 5, 6, 8]
+     reflect e=  1-> -1: a1:+ a2:- a3:+ a4:+ a5:- a6:-   dmeasS7=-0.01548
+     reflect e=  2-> -2: a1:- a2:- a3:- a4:+ a5:0 a6:-   dmeasS7=-0.09524
+     reflect e=  3-> -3: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.12024
+     reflect e=  4-> -4: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.10714
+     reflect e=  5-> -5: a1:- a2:+ a3:- a4:- a5:- a6:-   dmeasS7=-0.11905
+     reflect e=  6-> -6: a1:- a2:- a3:+ a4:+ a5:- a6:-   dmeasS7=-0.10833
+     reflect e=  8-> -8: a1:+ a2:- a3:- a4:0 a5:- a6:-   dmeasS7=-0.03095
+
+  rival E=[0, 2, 3, 4, 5, 6, 7, 8]
+     reflect e=  2-> -2: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.20238
+     reflect e=  3-> -3: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.19473
+     reflect e=  4-> -4: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.18503
+     reflect e=  5-> -5: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.17500
+     reflect e=  6-> -6: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.20374
+     reflect e=  7-> -7: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.13486
+     reflect e=  8-> -8: a1:- a2:- a3:- a4:- a5:- a6:-   dmeasS7=-0.15833

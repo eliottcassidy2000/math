@@ -11266,6 +11266,51 @@ Entry format:
 10. **Disjoint pairs use only 5-cycles**: No 3-cycle can pass through two vertex-disjoint tiles. All disjoint pair coefficients come from 5-cycle and higher OCF contributions.
 
 **New contributions:** THM-299 through THM-303, S_1 formula, 8 computation scripts, 8 result files
+## opus-2026-03-06-S23 — 2026-03-06 (even r-powers: determinantal search, coefficient structure, literature)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S22 (ran out of context)
+**Summary of work:**
+  (1) **EXHAUSTIVE COFACTOR/MINOR SEARCH:** M[a,b] is NOT a cofactor, minor, permanent minor, or adjugate entry of A=rJ'+S, I±A, J-A, or any simple matrix derived from A. Tested n=3,4 with all pairs. Degree mismatch: cofactors have degree n-1, M has degree n-2.
+  (2) **r-COEFFICIENT STRUCTURE DISCOVERED:** [r^{n-2}] = (n-2)! (n even) or 0 (n odd) — proved by counting argument. [r^2] for n=5 = 2·sum(s_{au}+s_{bu}), for n=6 = degree-2 polynomial with ±2 coefficients. Verified n=3,...,6.
+  (3) **r^1 TELESCOPING MECHANISM:** At n=4, each s_{uv} term in [r^1] appears once with + and once with - when a vertex u moves between S and R. At n=5, same telescoping at degree 2 in s. This is the KEY mechanism for odd-power vanishing.
+  (4) **LITERATURE SEARCH (3 parallel agents):** Found Irving-Omar (arXiv:2412.10572) matrix algebra for Redei-Berge, Mitrovic (arXiv:2504.20968) noncommuting version with deletion-contraction, El Sahili-Ghazo Hanna proving T and T^op equal Hamiltonian path type distributions. Key new lead: Mitrovic deletion-contraction W_X = W_{X\e} - W_{X/e}^up.
+  (5) **RE-INDEXING PROOF AUDITED (subagent):** M_T[b,a] = (-1)^{n-2} M_{T^op}[a,b] confirmed correct in all 4 steps.
+  (6) **APPROACH RULING:** Eliminated determinantal/cofactor approach (degree mismatch). Identified Mitrovic deletion-contraction as most promising new lead for inductive proof.
+**New scripts:** determinantal_identity_test.py, det_compare_explicit.py, r1_coefficient_analysis.py, r_coefficient_structure.py
+**New contributions:** INV-001 updated with coefficient structure and approach rulings
+**Unresolved threads:**
+- Prove even r-powers for general n (THE LAST GAP)
+- Mitrovic deletion-contraction approach (unexplored, most promising)
+- Irving-Omar walk generating function → M[a,b] connection (unclear)
+- Direct telescoping proof of [r^1]=0 (promising, needs generalization beyond n=4)
+
+## opus-2026-03-06-S22 — 2026-03-06 (continuation of S21 audit; even r-powers exploration)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S21 (ran out of context)
+**Summary of work:**
+  S21 performed exhaustive devil's-advocate audit of ALL claims:
+  (1) **PROVED M[a,b](-r,s) = M[b,a](r,s)** — clean derivation via path reversal on r. Under r→-r: E→B, B→E with sign (-1)^|S|, (-1)^|R|. Relabeling S↔R gives M[b,a].
+  (2) **VERIFIED even r-powers n=3-7** (200 random tests at n=6,7). r^1 cancellation at n=4: each s_ij appears twice with opposite signs. At n=5: toggle pairing (S∋u vs S∌u) splits sum into exact negatives.
+  (3) **M is NOT a matrix function** — exhaustive search: adj(rI±S), cofactors of r²I-S², Laplacian cofactors, char poly coefficients — none match M.
+  (4) **8-part audit ALL PASS:** path reversal, S↔R relabeling, circularity confirmed, even r-powers, c=0 symmetry, skew constraint required, general-c identity, r^1 polynomial fit.
+  (5) S22 (this session): reading S10 results on even cycle vanishing + hook Schur positivity. Exploring connection to even r-powers proof.
+**New scripts:** audit_path_reversal.py, even_r_powers_proof.py, matrix_identity_search.py, r1_cancellation_pairing.py, s_squared_connection.py
+**Unresolved threads:**
+- Prove even r-powers for general n (THE LAST GAP)
+- Even cycle vanishing ↔ even r-powers: same involution at different levels?
+- LGV/determinantal approach not yet tried seriously
+
+## opus-2026-03-06-S10 — 2026-03-06 (positivity hierarchy, even cycle vanishing, hook Schur positivity)
+**Account:** Eliott (primary)
+**Continuation of:** opus-2026-03-06-S9
+**Summary of work:**
+  (1) **POSITIVITY HIERARCHY TESTED:** h-positivity FAILS for all non-transitive tournaments (only transitive is h-positive). e-positivity = h-positivity (via omega(U_T) = U_T). s-positivity FAILS (s(2,2) < 0 at n=4). p-positivity HOLDS (= OCF).
+  (2) **EVEN CYCLE VANISHING THEOREM (PROVED):** p_mu(U_T) = 0 whenever mu has any even part. Clean involution proof: reverse even k-cycle c in sigma to get sigma', sign flips by (-1)^{k-1} = -1. Verified n=3-7. Consequence: only odd-part cycle types contribute to U_T.
+  (3) **HOOK SCHUR POSITIVITY:** PROVED at n=4, VERIFIED at n=5 (11/11), n=6 (40/40). **FAILS at n=7** (231/242, 11 failures all for middle hook (4,1,1,1)). Regular tournament T_7 gives [s_{(4,1,1,1)}] = -83/28 from 48 directed 7-cycles.
+  (4) **NON-HOOK NEGATIVITY:** At n=4, s(2,2) carries all negativity (chi^{(2,2)}((3,1))=-1). At n=5, s(3,2) and s(2,2,1) carry it. Non-hook chars at (3,1,...,1) are always negative.
+  (5) **DEEP CONNECTION TO S23:** The even cycle vanishing is the symmetric-function version of kind-pasteur's even-r-powers conjecture (T147). Both stem from the same T<->T^op involution = perpendicular grid reflection.
+**New contributions:** T148 (even cycle vanishing), T149 (hook positivity), T150 (geometric interpretation), INV-053, INV-054
+**New scripts:** h_positivity_test.py, positivity_full_test.py, schur_hook_analysis.py, hook_positivity_test.py (buggy, superseded), hook_geometric_analysis.py, tournament_cycle_structure.py, even_cycle_vanishing_proof.py
 **Unresolved threads:**
 - Closed formula for disjoint pair coefficients (ratio depends on range overlap but no clean formula yet)
 - Proof of quadratic signature theorem (why n-2 negative eigenvalues?)

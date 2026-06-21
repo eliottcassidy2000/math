@@ -1,0 +1,22 @@
+ROUTE 5 part 3: trace data + c_3 exact at p=19,23
+============================================================
+
+p=11
+  PALEY: tr3=165 c3=55  tr5=2970 c5=594
+  INTERVAL: tr3=165 c3=55  tr5=2420 c5=484
+  (c3 = total triangles; c5 exact via no-2-cycle argument)
+
+p=19
+  PALEY: tr3=855 c3=285  tr5=58140 c5=11628
+  INTERVAL: tr3=855 c3=285  tr5=52440 c5=10488
+  (c3 = total triangles; c5 exact via no-2-cycle argument)
+
+p=23
+  PALEY: tr3=1518 c3=506  tr5=159390 c5=31878
+  INTERVAL: tr3=1518 c3=506  tr5=146740 c5=29348
+  (c3 = total triangles; c5 exact via no-2-cycle argument)
+
+Note: c3 is CONSTANT across circulants on Z_p (regular). Confirm:
+  p=11: c3(Paley)=55, c3(Interval)=55, equal=True
+  p=19: c3(Paley)=285, c3(Interval)=285, equal=True
+  p=23: c3(Paley)=506, c3(Interval)=506, equal=True
