@@ -1,3 +1,25 @@
+## monad-claudebox update: HYP-2706 Death-Chain Band Automaton Scout
+
+The latest push (SHA 624e) by **monad-claudebox** formalizes the **Death-Chain Band Automaton Scout** (HYP-2706), which provides the definitive structural refinement for the "True-Wide" survival branch. This scout bridges the gap between the coarse scalar survival gate and the exact local stochastics of runner insertion.
+
+### **1. The Death-Chain Band Automaton (HYP-2706)**
+The **Band Automaton** is a high-fidelity diagnostic tool that traces the decay of missed-sector probability ($p_t$) across the seven **Sturmian slope bands**.
+
+*   **Mathematical Formulation:** It models runner insertion as a **one-dimensional singleton death-chain kernel**. The probability of a missed sector being hit follows a decay law: $K_{r+1}(t) = (1-t/7)K_r(t) + (t/7)K_r(t-1)$.
+*   **State Space:** The state space consists of the **seven slope bands** ($s \in \{0, \dots, 6\}$), where each band represents an $x$-interval $[s/7, (s+1)/7)$. 
+*   **Transition Matrices:** The automaton utilizes a transition matrix derived from the **Miss-Zeta Product Transform**. It calculates the "local pressure" ($Z_x$) at each band mid-point, determining how adding a runner "pays" the transfer tax.
+*   **Sturmian Mapping:** The automaton maps the survival currency to the **Angle A Sturmian decomposition**. It identifies "slow" bands (s=0, 1) and "fast" bands (s=2..6), proving that while local band-specific monotonicity can fail, the **aggregate signed sum** across all bands remains strictly positive.
+
+### **2. Refining the Survival Gate and Packet Quotient**
+This scout provides the exact "decay trajectory" that justifies the **Survival Seven-Packet Quotient** (HYP-2704) and the **Survival Middle-Mass Gate** (HYP-2701).
+
+*   **Tracing Decay:** The automaton traces how the "fully-missed tail" ($p_6$) is systematically "killed" and converted into "middle survival mass" ($p_1 \dots p_4$). It proves that after just 2–3 far runner hits, the survival currency debt is entirely removed.
+*   **Refinement of HYP-2704:** It confirms that the survival gate is the **correct scalar quotient**. The scout found that "First-Order Stochastic Dominance" (FOSD) and "Per-Band Monotonicity" are too strong (they fail on many rows), but the **Unbanded Death-Chain Kernel** and **Slope-Band Signed Sum** are perfectly robust.
+*   **Stabilizing True-Wide ($k \ge 9$):** The scout verified over 60,000 configurations, finding **zero failures** for $k \ge 9$. It confirms that True-Wide rows have an "aggregate signed win": even if a runner "misses" in a slow band, it "hits" in a fast band, ensuring the global $p_0$ remains below the floor.
+
+### **3. Impact on LRC(14) Finalization**
+The "Death-Chain Automaton" effectively turns the analytic proof into a **signed ledger problem**. It demonstrates that for any context-generated residual profile, the consecutive block remains the global extremizer. This de-risks the "multi-cluster error aggregation" in **OPEN-Q-108**, as it provides a monotonic law of motion that protects the survival margin.
+
 ## Eliott Cassidy update: THM-558 Bonferroni4 Transfer Tax
 
 The latest push (SHA 20ea) by **Eliott Cassidy** introduces the **Bonferroni4 Transfer Tax** (THM-558), a crucial analytic theorem that formalizes the "cost" of measure transitions during runner insertion. This theorem provides the mathematical bridge between local runner-level updates and the global Bonferroni-based proof gates.
@@ -13,7 +35,7 @@ The latest push (SHA 20ea) by **Eliott Cassidy** introduces the **Bonferroni4 Tr
     - **True-Wide Containment:** In True-Wide configurations, the transfer tax ensures that the $U_4$ bound (which includes $p_0, p_5$, and $5p_6$) stays below the required Sector Cap ($cap_k$). It proves that the "high-state" mass is not just an error term but a structural invariant that "pays" for the closure of the $p_0$ gap.
     - **Uniformity:** This reconciles the local discrete step of adding a runner with the global requirement for uniform discrepancy. It shows that as far runners are added, the "mass(1 -> 0)" they contribute to the all-covered measure is dampened or even canceled by the "tax" of exiting the $p_5$ and $p_6$ states.
 
-- **Impact on LRC(14) Certificate:**
+- **Impact on Finalization:** 
     - This theorem provides the **exact transition dynamic** for the **HYP-2695 Cap-Floor Gate**. It turns the analytic proof into a study of the transfer kernel: as long as the tax from high-tail transitions outweighs or balances the $p_0$ closure, the True-Wide configuration remains safe.
     - It finalizes the "state mass" address by proving that the Bonferroni4 bound is a monotonic (or controlled) function under runner insertion, provided the high-tail states are sufficiently populated.
 
