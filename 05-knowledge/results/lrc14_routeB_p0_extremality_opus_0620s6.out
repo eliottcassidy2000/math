@@ -1,0 +1,35 @@
+==============================================================================
+(1) closing margins: p0(consec_k) vs cap_k
+==============================================================================
+  k=8: p0(consec)=481/1470=0.327211  cap_k=0.381463  margin=0.054252  CLOSES
+  k=9: p0(consec)=2447/5880=0.416156  cap_k=0.494256  margin=0.078099  CLOSES
+  k=10: p0(consec)=8899/17640=0.504478  cap_k=0.604396  margin=0.099917  CLOSES
+  k=11: p0(consec)=3419/5880=0.581463  cap_k=0.725275  margin=0.143812  CLOSES
+  k=12: p0(consec)=121103/194040=0.624114  cap_k=0.857143  margin=0.233029  CLOSES
+
+==============================================================================
+(2) HAMMER cut (I): p0(E) <= p0(consec) on big exact bank
+==============================================================================
+  k=8: bank=19440 primitive (span<= 17)  p0(consec)=0.327211
+        cut(I) violations: 0  -> consec maximizes p0 on this bank
+        tightest competitor: gap 0.00e+00 at [0, 1, 2, 3, 4, 5, 6, 7]
+  k=9: bank=12869 primitive (span<= 16)  p0(consec)=0.416156
+        cut(I) violations: 0  -> consec maximizes p0 on this bank
+        tightest competitor: gap 0.00e+00 at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+  k=10: bank=5005 primitive (span<= 15)  p0(consec)=0.504478
+        cut(I) violations: 0  -> consec maximizes p0 on this bank
+        tightest competitor: gap 0.00e+00 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+==============================================================================
+(3) k=12 cut(I) failure is OUTSIDE the binding regime
+==============================================================================
+  E=[0..10,12]: p0=0.645181 > p0(consec_12)=0.624114  BUT cap_12=0.857143
+     -> p0(E)=0.6452 < cap_12=0.8571: NO cap violation. And k>=11 closes via THM-535 floor route.
+
+==============================================================================
+(4) does p0 depend only on the difference-multiset?
+==============================================================================
+  k=7: 450 difference-multisets shared by >1 distinct primitive set
+     COUNTEREXAMPLE: [(0, 1, 2, 3, 4, 5, 8), (0, 3, 4, 5, 6, 7, 8)] share diffmult but p0 differs: [0.03197278911564626, 0.016666666666666666]
+     COUNTEREXAMPLE: [(0, 1, 2, 3, 4, 5, 9), (0, 4, 5, 6, 7, 8, 9)] share diffmult but p0 differs: [0.02857142857142857, 0.032086167800453515]
+  => p0 is NOT a function of the difference-multiset  (checked 3 colliding classes)

@@ -1,0 +1,21 @@
+========================================================================
+ROUTE D: compression metagraph, U4-gradient.  consec = unique sink?
+========================================================================
+
+### k=8, shapes with span<=11  (cap_8=0.38146) ###
+    Ly(consec)=0.358231  (the claimed global MAX)
+  O1_neighbor_pull         shapes= 330 inc= 575 dec= 443 eq=   0 stuck= 0  -> NOT monotone (dec=443, stuck=0)
+  O2_gap_close             shapes= 330 inc= 595 dec= 245 eq=   0 stuck= 0  -> NOT monotone (dec=245, stuck=0)
+  O3_endpoint_pull         shapes= 330 inc=  74 dec=  46 eq=   0 stuck=209  -> NOT monotone (dec=46, stuck=209)
+  O4_steiner               shapes= 330 inc= 226 dec= 103 eq=   0 stuck= 0  -> NOT monotone (dec=103, stuck=0)
+  O5_difference_compress   shapes= 330 inc=3458 dec=1795 eq=   1 stuck= 0  -> NOT monotone (dec=1795, stuck=0)
+
+### k=9, shapes with span<=12  (cap_9=0.49426) ###
+    Ly(consec)=0.492876  (the claimed global MAX)
+  O1_neighbor_pull         shapes= 495 inc= 908 dec= 668 eq=   0 stuck= 0  -> NOT monotone (dec=668, stuck=0)
+  O2_gap_close             shapes= 495 inc= 796 dec= 524 eq=   0 stuck= 0  -> NOT monotone (dec=524, stuck=0)
+  O3_endpoint_pull         shapes= 495 inc=  75 dec=  90 eq=   0 stuck=329  -> NOT monotone (dec=90, stuck=329)
+  O4_steiner               shapes= 495 inc= 304 dec= 190 eq=   0 stuck= 0  -> NOT monotone (dec=190, stuck=0)
+  O5_difference_compress   shapes= 495 inc=6196 dec=2514 eq=   0 stuck= 0  -> NOT monotone (dec=2514, stuck=0)
+
+DONE TEST 1.

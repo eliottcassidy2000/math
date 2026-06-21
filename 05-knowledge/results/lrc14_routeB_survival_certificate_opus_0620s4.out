@@ -1,0 +1,35 @@
+k=8: bank=1716 primitive shapes (span<= 13)
+   consec G_1=0.67279 G_5=0.07143 G_6=0.02041  p0=G... 1-G_1=0.32721
+   (I)  p0(consec) is MAX  [G_1 min]:  violations=0  -> consec maximizes the lonely measure p0
+   (II) G_5(consec) is MAX:            violations=0  -> consec maximizes P(N>=5)
+   (III)G_6(consec)=p6 is MAX:         violations=0  -> consec maximizes p6
+   => SURVIVAL CERTIFICATE HOLDS on this bank (consec maximizes U4)
+
+k=9: bank=1287 primitive shapes (span<= 13)
+   consec G_1=0.58384 G_5=0.06378 G_6=0.01786  p0=G... 1-G_1=0.41616
+   (I)  p0(consec) is MAX  [G_1 min]:  violations=0  -> consec maximizes the lonely measure p0
+   (II) G_5(consec) is MAX:            violations=0  -> consec maximizes P(N>=5)
+   (III)G_6(consec)=p6 is MAX:         violations=0  -> consec maximizes p6
+   => SURVIVAL CERTIFICATE HOLDS on this bank (consec maximizes U4)
+
+k=10: bank=715 primitive shapes (span<= 13)
+   consec G_1=0.49552 G_5=0.05556 G_6=0.01587  p0=G... 1-G_1=0.50448
+   (I)  p0(consec) is MAX  [G_1 min]:  violations=0  -> consec maximizes the lonely measure p0
+   (II) G_5(consec) is MAX:            violations=0  -> consec maximizes P(N>=5)
+   (III)G_6(consec)=p6 is MAX:         violations=0  -> consec maximizes p6
+   => SURVIVAL CERTIFICATE HOLDS on this bank (consec maximizes U4)
+
+k=11: bank=286 primitive shapes (span<= 13)
+   consec G_1=0.41854 G_5=0.05079 G_6=0.01429  p0=G... 1-G_1=0.58146
+   (I)  p0(consec) is MAX  [G_1 min]:  violations=0  -> consec maximizes the lonely measure p0
+   (II) G_5(consec) is MAX:            violations=0  -> consec maximizes P(N>=5)
+   (III)G_6(consec)=p6 is MAX:         violations=0  -> consec maximizes p6
+   => SURVIVAL CERTIFICATE HOLDS on this bank (consec maximizes U4)
+
+k=12: bank=78 primitive shapes (span<= 13)
+   consec G_1=0.37589 G_5=0.04545 G_6=0.01299  p0=G... 1-G_1=0.62411
+   (I)  p0(consec) is MAX  [G_1 min]:  violations=1  worst by -2.11e-02 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+   (II) G_5(consec) is MAX:            violations=0  -> consec maximizes P(N>=5)
+   (III)G_6(consec)=p6 is MAX:         violations=0  -> consec maximizes p6
+   => SURVIVAL CERTIFICATE has a standalone-cut violation
+

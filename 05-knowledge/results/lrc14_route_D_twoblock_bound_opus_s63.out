@@ -1,0 +1,47 @@
+========================================================================
+ROUTE D part 4: the BLOCK DICHOTOMY -- split ceiling vs consec
+========================================================================
+
+### k=8: Ly(consec)=2633/7350=0.358231 ###
+  span<= 8: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<= 9: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<=10: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<=11: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<=12: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<=13: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+  span<=14: split-ceiling=0.303061 at (0, 2, 3, 4, 5, 6, 7, 8)  margin(consec-split)=0.055170  SAFE
+
+### k=9: Ly(consec)=26083/52920=0.492876 ###
+  span<= 9: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=10: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=11: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=12: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=13: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=14: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+  span<=15: split-ceiling=0.487289 at (0, 1, 2, 3, 4, 5, 6, 7, 9)  margin(consec-split)=0.005587  SAFE
+
+### k=10: Ly(consec)=45253/79380=0.570081 ###
+  span<=10: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=11: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=12: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=13: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=14: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=15: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+  span<=16: split-ceiling=0.562415 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  margin(consec-split)=0.007666  SAFE
+
+### k=11: Ly(consec)=12049/17640=0.683050 ###
+  span<=11: split-ceiling=0.671368 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11)  margin(consec-split)=0.011681  SAFE
+  span<=12: split-ceiling=0.684410 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12)  margin(consec-split)=-0.001361  DANGER
+  span<=13: split-ceiling=0.684410 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12)  margin(consec-split)=-0.001361  DANGER
+  span<=14: split-ceiling=0.691156 at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14)  margin(consec-split)=-0.008107  DANGER
+  span<=15: split-ceiling=0.691156 at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14)  margin(consec-split)=-0.008107  DANGER
+  span<=16: split-ceiling=0.691156 at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14)  margin(consec-split)=-0.008107  DANGER
+  span<=17: split-ceiling=0.691156 at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14)  margin(consec-split)=-0.008107  DANGER
+
+### k=12: Ly(consec)=118781/166320=0.714171 ###
+  span<=12: split-ceiling=0.728042 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  margin(consec-split)=-0.013871  DANGER
+  span<=13: split-ceiling=0.728042 at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  margin(consec-split)=-0.013871  DANGER
+  span<=14: split-ceiling=0.732984 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)  margin(consec-split)=-0.018812  DANGER
+  span<=15: split-ceiling=0.732984 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)  margin(consec-split)=-0.018812  DANGER
+  span<=16: split-ceiling=0.732984 at (0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14)  margin(consec-split)=-0.018812  DANGER
+  span<=17: split-ceiling=0.736430 at (0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 17)  margin(consec-split)=-0.022258  DANGER

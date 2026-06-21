@@ -1,0 +1,68 @@
+========================================================================
+ROUTE D part 3: local maxima are BLOCK shapes; block-merge monotone?
+========================================================================
+
+### k=8, span<=11, 330 shapes.  Ly(consec)=0.358231 ###
+(1) #local maxima = 3
+    (0, 1, 2, 3, 4, 5, 6, 7)  Ly=0.358231  blocks=(8,) gaps=()  = CONSEC (single block)
+    (0, 1, 2, 3, 4, 9, 10, 11)  Ly=0.130714  blocks=(5, 3) gaps=(5,)  
+    (0, 1, 2, 3, 7, 8, 9, 10)  Ly=0.129813  blocks=(4, 4) gaps=(4,)  
+(2) block-merge metagraph (blocks separated by gap=1):
+    adjacent-merge moves: 448, Ly-DECREASING (violations): 214
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [2, 1, 1, 1, 1, 1, 1]: Ly 0.358231 -> 0.264976  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [1, 2, 1, 1, 1, 1, 1]: Ly 0.358231 -> 0.101161  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 2, 1, 1, 1, 1]: Ly 0.358231 -> 0.110031  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 2, 1, 1, 1]: Ly 0.358231 -> 0.138022  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 2, 1, 1]: Ly 0.358231 -> 0.114721  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 1, 2, 1]: Ly 0.358231 -> 0.098766  DROP
+(2b) gap-close slides (two blocks, sizes a,b, gap d -> d-1):
+    two-block gap-close: 28 slides, Ly-DECREASING: 7
+      sizes(3,5) gap 3->2: Ly 0.097069->0.079932 DROP
+      sizes(3,5) gap 4->3: Ly 0.105071->0.097069 DROP
+      sizes(4,4) gap 3->2: Ly 0.129813->0.104819 DROP
+      sizes(5,3) gap 3->2: Ly 0.124286->0.092914 DROP
+      sizes(5,3) gap 4->3: Ly 0.130714->0.124286 DROP
+      sizes(6,2) gap 3->2: Ly 0.106667->0.092460 DROP
+
+### k=9, span<=12, 495 shapes.  Ly(consec)=0.492876 ###
+(1) #local maxima = 2
+    (0, 1, 2, 3, 4, 5, 6, 7, 8)  Ly=0.492876  blocks=(9,) gaps=()  = CONSEC (single block)
+    (0, 1, 2, 3, 4, 5, 6, 7, 12)  Ly=0.457011  blocks=(8, 1) gaps=(5,)  
+(2) block-merge metagraph (blocks separated by gap=1):
+    adjacent-merge moves: 1024, Ly-DECREASING (violations): 458
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [2, 1, 1, 1, 1, 1, 1, 1]: Ly 0.492876 -> 0.426312  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 2, 1, 1, 1, 1, 1, 1]: Ly 0.492876 -> 0.351155  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 2, 1, 1, 1, 1, 1]: Ly 0.492876 -> 0.259620  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 2, 1, 1, 1, 1]: Ly 0.492876 -> 0.258560  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 2, 1, 1, 1]: Ly 0.492876 -> 0.263956  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 1, 2, 1, 1]: Ly 0.492876 -> 0.269909  DROP
+(2b) gap-close slides (two blocks, sizes a,b, gap d -> d-1):
+    two-block gap-close: 32 slides, Ly-DECREASING: 7
+      sizes(1,8) gap 4->3: Ly 0.394104->0.391270 DROP
+      sizes(3,6) gap 4->3: Ly 0.267264->0.264001 DROP
+      sizes(4,5) gap 4->3: Ly 0.265510->0.244053 DROP
+      sizes(5,4) gap 4->3: Ly 0.282612->0.253064 DROP
+      sizes(6,3) gap 4->3: Ly 0.271380->0.265769 DROP
+      sizes(7,2) gap 4->3: Ly 0.357624->0.351684 DROP
+
+### k=10, span<=13, 715 shapes.  Ly(consec)=0.570081 ###
+(1) #local maxima = 1
+    (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  Ly=0.570081  blocks=(10,) gaps=()  = CONSEC (single block)
+(2) block-merge metagraph (blocks separated by gap=1):
+    adjacent-merge moves: 2304, Ly-DECREASING (violations): 1057
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [2, 1, 1, 1, 1, 1, 1, 1, 1]: Ly 0.570081 -> 0.507699  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 2, 1, 1, 1, 1, 1, 1, 1]: Ly 0.570081 -> 0.446719  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 2, 1, 1, 1, 1, 1, 1]: Ly 0.570081 -> 0.399205  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 2, 1, 1, 1, 1, 1]: Ly 0.570081 -> 0.348226  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 2, 1, 1, 1, 1]: Ly 0.570081 -> 0.356145  DROP
+      (1, 1, 1, 1, 1, 1, 1, 1, 1, 1) -> [1, 1, 1, 1, 1, 2, 1, 1, 1]: Ly 0.570081 -> 0.356578  DROP
+(2b) gap-close slides (two blocks, sizes a,b, gap d -> d-1):
+    two-block gap-close: 36 slides, Ly-DECREASING: 8
+      sizes(1,9) gap 3->2: Ly 0.502808->0.497649 DROP
+      sizes(4,6) gap 4->3: Ly 0.371257->0.346964 DROP
+      sizes(5,5) gap 3->2: Ly 0.355341->0.345150 DROP
+      sizes(5,5) gap 4->3: Ly 0.393094->0.355341 DROP
+      sizes(6,4) gap 3->2: Ly 0.351022->0.347827 DROP
+      sizes(6,4) gap 4->3: Ly 0.383345->0.351022 DROP
+
+DONE part 3.

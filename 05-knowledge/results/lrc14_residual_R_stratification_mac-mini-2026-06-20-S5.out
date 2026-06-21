@@ -1,0 +1,16 @@
+Residual-set stratification of consec dominance over the bounded k=8 box (1716 shapes):
+  |R|>=6:    0/1716 shapes violate q_K(R)>=q_C(R) (= p_0 = meas S7, the real covering measure)
+  |R|>=5:    0/1716 shapes violate q_K(R)>=q_C(R)
+  |R|>=4:    1/1716 shapes violate q_K(R)>=q_C(R)
+  |R|>=3:    9/1716 shapes violate q_K(R)>=q_C(R)
+
+|R|=3 violated-residual census (which spread sets let a shape beat consec):
+   (1, 3, 5): 4 shapes
+   (1, 2, 5): 3 shapes
+   (1, 4, 5): 3 shapes
+   (1, 2, 4): 2 shapes
+   (2, 4, 5): 2 shapes
+   (1, 3, 6): 1 shapes
+   (1, 5, 6): 1 shapes
+
+=> consec dominance is UNIVERSAL for |R|>=5; the cone theorem's content is the small-|R| tail.

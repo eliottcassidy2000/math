@@ -1,0 +1,59 @@
+ROUTE F -- gap/arc tournament view of LRC(14) compression-extremality
+==========================================================================
+
+[LAWS 1-3] exact per-cell gap-band laws (representative E):
+  k=6 E=[0, 1, 2, 3, 4, 5]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=6 E=[0, 2, 4, 6, 8, 10]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=6 E=[0, 1, 2, 10, 11, 12]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=7 E=[0, 1, 2, 3, 4, 5, 6]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=7 E=[0, 2, 4, 6, 8, 10, 12]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=7 E=[0, 1, 2, 10, 11, 12, 13]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=8 E=[0, 1, 2, 3, 4, 5, 6, 7]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=8 E=[0, 2, 4, 6, 8, 10, 12, 14]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+  k=8 E=[0, 1, 2, 10, 11, 12, 13, 14]: N=6=>mg>6/7:True  N=0=>mg<2/7:True  N<=sum floor(7g):True
+
+[IDENTITY] p6(E) = J({1..6},E) = meas all phases in sector 0:
+  E=[0, 1, 2, 3, 4, 5, 6, 7]: p6=1/49  J(1..6)=1/49  match=True
+  E=[0, 2, 3, 4, 5, 6, 7, 8]: p6=1/56  J(1..6)=1/56  match=True
+  E=[0, 1, 2, 3, 10, 11, 12, 13]: p6=1/91  J(1..6)=1/91  match=True
+
+[LEMMA F1] giant-gap span-extremality: p6(consec_k) = 1/(7(k-1)):
+  k=5: p6=1/28  1/(7(k-1))=1/28  D=k-1=4
+  k=6: p6=1/35  1/(7(k-1))=1/35  D=k-1=5
+  k=7: p6=1/42  1/(7(k-1))=1/42  D=k-1=6
+  k=8: p6=1/49  1/(7(k-1))=1/49  D=k-1=7
+  k=9: p6=1/56  1/(7(k-1))=1/56  D=k-1=8
+  k=10: p6=1/63  1/(7(k-1))=1/63  D=k-1=9
+  k=11: p6=1/70  1/(7(k-1))=1/70  D=k-1=10
+  k=12: p6=1/77  1/(7(k-1))=1/77  D=k-1=11
+
+[LEMMA F1] EXHAUSTIVE: consec uniquely maximizes p6 (primitive sets):
+  k=6 span<=14: prim=1981 maxp6=1/35 thr=1/35 exceed=0 equal=1 argmax=[0, 1, 2, 3, 4, 5]
+  k=7 span<=13: prim=1715 maxp6=1/42 thr=1/42 exceed=0 equal=1 argmax=[0, 1, 2, 3, 4, 5, 6]
+  k=8 span<=12: prim=792 maxp6=1/49 thr=1/49 exceed=0 equal=1 argmax=[0, 1, 2, 3, 4, 5, 6, 7]
+
+[THREE-DISTANCE CHAR.] maxDistinctGaps<=3 iff AP (k=6 primitive):
+  AP&<=3:1  AP&>3:0  nonAP&<=3:0  nonAP&>3:785
+  characterization 'maxDistinctGaps<=3 iff AP' HOLDS: True
+  unique primitive AP with 0 is consec_k => consec is the unique
+  three-distance/Steinhaus configuration at every scale x.
+
+[DICHOTOMY] consec dominates BOTH tails (k=8):
+  E=[0, 1, 2, 3, 4, 5, 6, 7]: N=0 tail p0=0.32721  N>=5 tail p5+5p6=0.15306  U4=0.48027
+  E=[0, 2, 3, 4, 5, 6, 7, 8]: N=0 tail p0=0.27364  N>=5 tail p5+5p6=0.13520  U4=0.40884
+
+[HONEST] U4 is NOT monotone in span D (max-U4-per-span, k=7 primitive):
+  D=6: maxU4=0.32857 by [0, 1, 2, 3, 4, 5, 6]
+  D=7: maxU4=0.20238 by [0, 1, 2, 3, 4, 6, 7]
+  D=8: maxU4=0.26190 by [0, 2, 3, 4, 5, 6, 8]  <-- INCREASE (non-monotone)
+  D=9: maxU4=0.22222 by [0, 1, 3, 4, 5, 6, 9]
+  D=10: maxU4=0.21548 by [0, 2, 4, 5, 6, 8, 10]
+  D=11: maxU4=0.21071 by [0, 3, 5, 6, 8, 9, 11]
+  D=12: maxU4=0.20238 by [0, 1, 3, 4, 6, 9, 12]
+  D=13: maxU4=0.17374 by [0, 1, 2, 3, 11, 12, 13]
+  monotone decreasing in span: False
+  => giant-gap tail reduces to span-min (PROVED); full U4 does NOT.
+
+DONE. ROUTE F leverage = PARTIAL: clean reduction of the lonely tail,
+gap-combinatorial necessary laws for both tails, but covered tail (p0)
+needs a separate three-distance argument (consec still wins p0).

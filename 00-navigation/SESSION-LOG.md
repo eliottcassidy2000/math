@@ -1,3 +1,38 @@
+## opus-2026-06-20-S1 -- Route B: the U4 layer-cake survival certificate -- HYP-2699/T935
+
+Worked the HYP-2693 compression/extremality crux ("consec maximizes U4=p0+p5+5p6")
+via Route B: a convex-order / layer-cake reframe of the empty-count distribution
+N_E(x). Reused the exact p-vector engine (lrc14_empty_sector_distribution_kps.py
++ hyp2607 moment engine).
+
+PROVED (elementary Abel summation on THM-556): U4(E) = 1 - G_1 + G_5 + 4*G_6 where
+G_b = P_x(N_E >= b). This change of basis (binomial-moment -> survival/cut)
+DIAGONALIZES U4 with sign-aligned coefficients, breaking the moment
+non-separability (DEAD-END 3). The functional splits into three monotone cuts:
+(I) consec MIN G_1 = MAX p0; (II) consec MAX G_5; (III) consec MAX G_6. All three
+point the same way for consec => U4(E) <= U4(consec).
+
+VERIFIED (exact, scale+reflection-deduped) with ZERO violations on THM-535's
+binding rows: k=8 (19440 primitive, span<=17), k=9 (12869, span<=16),
+k=10 (5005, span<=15). The joint extremality is a TWO-ENDED SQUEEZE: consec is the
+UNIQUE shape step-light at b=1 AND tail-heavy at all b>=2 (0 non-consec shapes).
+
+HONEST DEAD-ENDS recorded: (a) cut (I) fails standalone at k=12 ([0..10,12] beats
+consec on U4), but k>=11 closes via the floor route so consec need not win there
+-- certificate is clean exactly on the binding rows. (b) p0 is NOT a function of
+the difference-multiset (kills that majorization framing). (c) U4(consec_8)=0.480
+> cap_8=0.381 -- the cap is carried by p0 itself (p0(consec_k)<cap_k all k, growing
+margins) or by L_y, which has NO clean survival certificate (mixed signs). (d)
+consec does NOT minimize mean c3 -- it buys extremality in the rare deep tail.
+
+NEXT: prove the two-ended squeeze on k=8,9,10 (the cone/coupling step, = HYP-2697).
+The contribution is the survival BASIS in which that proof should be written.
+
+Files: 7 scripts 04-computation/lrc14_routeB_*_opus_0620s*.py, outputs in
+05-knowledge/results/, reflection
+07-reflections/the-survival-basis-breaks-the-moment-non-separability.md,
+HYP-2699 added to INDEX.
+
 ## codex-2026-06-20-S63 -- LRC14 generated residual-profile automaton cone -- HYP-2698/T934
 
 User asked to see which residual profiles actual decorrelated LRC contexts can

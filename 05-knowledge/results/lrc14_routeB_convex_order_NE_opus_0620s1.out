@@ -1,0 +1,43 @@
+==============================================================================
+ROUTE B: convex/cut order on N_E for U4 = p_0+p_5+5p_6
+==============================================================================
+
+U4 weights phi = ['1', '0', '0', '0', '0', '1', '5']
+second differences of phi (t=1..5): ['1', '0', '0', '1', '3']  => phi CONVEX
+phi monotone increasing? False  (=> NOT plain icx since it dips at t=1)
+
+######################################################################
+# k=8
+######################################################################
+consec=[0, 1, 2, 3, 4, 5, 6, 7]
+  p = ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+  E[N]=1.60408 Var=2.61196 U4=353/735=0.480272
+  survival G_a (a=0..7) = ['1', '989/1470', '3/7', '38/147', '16/105', '1/14', '1/49', '0']
+  cut E[(N-a)_+] (a=0..6) = ['393/245', '1369/1470', '739/1470', '359/1470', '9/98', '1/49', '0']
+
+  bank size (span<= 12): 792
+
+  (A) shapes beating consec on U4: 0
+
+  (B) E[N] range over bank: [1.59575, 2.09836]  (consec E[N]=1.60408)
+      shapes with EXACT same mean as consec: 1/792   => convex order (equal-mean) NOT universally applicable
+      shapes violating icx-upper cut dominance by consec (some E[(N-a)_+] > consec): 790/792
+        => if 0, consec dominates ALL increasing-convex functionals, but U4 is NOT increasing so this is only suggestive.
+
+######################################################################
+# k=9
+######################################################################
+consec=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+  p = ['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  E[N]=1.38129 Var=2.56210 U4=1621/2940=0.551361
+  survival G_a (a=0..7) = ['1', '3433/5880', '709/1960', '439/1960', '51/392', '25/392', '1/56', '0']
+  cut E[(N-a)_+] (a=0..6) = ['4061/2940', '1563/1960', '61/140', '83/392', '4/49', '1/56', '0']
+
+  bank size (span<= 12): 495
+
+  (A) shapes beating consec on U4: 0
+
+  (B) E[N] range over bank: [1.32109, 1.78947]  (consec E[N]=1.38129)
+      shapes with EXACT same mean as consec: 1/495   => convex order (equal-mean) NOT universally applicable
+      shapes violating icx-upper cut dominance by consec (some E[(N-a)_+] > consec): 484/495
+        => if 0, consec dominates ALL increasing-convex functionals, but U4 is NOT increasing so this is only suggestive.

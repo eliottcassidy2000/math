@@ -1,0 +1,36 @@
+====================================================================================
+ROUTE A: is U4 a tournament-score/cycle functional of T(x)?  (EXACT)
+====================================================================================
+
+[THM-556 re-VERIFY]  1-S1+S2-S3+S4  ==  p0+p5+5p6
+  k=8 consec: IE=353/735  moment=353/735  match=True  (=0.48027)
+  k=9 consec: IE=1621/2940  moment=1621/2940  match=True  (=0.55136)
+  k=10 consec: IE=10999/17640  moment=10999/17640  match=True  (=0.62353)
+
+[TEST 1] N determined by score multiset / (scores,c3) of T(x)?
+  E=[0, 1, 2, 3, 4]: score-classes=4 (>1N:3); (score,c3)-classes=4 (>1N:3)
+  E=[0, 1, 2, 3, 4, 5]: score-classes=3 (>1N:3); (score,c3)-classes=3 (>1N:3)
+  E=[0, 1, 3, 7, 15]: score-classes=4 (>1N:4); (score,c3)-classes=4 (>1N:4)
+
+[TEST 3] N determined by sorted GAP SPECTRUM (cut-space data)?
+  E=[0, 1, 2, 3, 4]: gap-spectra=21 (>1N:16)
+  E=[0, 1, 2, 3, 4, 5]: gap-spectra=35 (>1N:32)
+
+[TEST 4] N determined by the SCALE-1/7 SEPTILE DIGRAPH (phase-ordered)?
+  E=[0, 1, 2, 3, 4]: septile-digraphs=19 (>1N:8)
+  E=[0, 1, 3, 7, 15]: septile-digraphs=49 (>1N:15)
+
+[SALVAGE] consec U4-extremal? AND does it dominate the maxgap CDF (cut-space)?
+  k=8 bank spread<=11: checked=330, consec U4=0.48027, beats=0
+  shapes with maxgap-survival EXCEEDING consec at some threshold: 6
+    [0, 1, 2, 3, 7, 8, 9, 10]: U4=0.20108 (<<consec) but lonely-meas exceeds consec at ['1/2']
+    [0, 1, 2, 3, 8, 9, 10, 11]: U4=0.19578 (<<consec) but lonely-meas exceeds consec at ['1/2']
+    [0, 1, 2, 5, 6, 7, 10, 11]: U4=0.30656 (<<consec) but lonely-meas exceeds consec at ['1/2']
+    [0, 1, 3, 4, 6, 7, 9, 10]: U4=0.22721 (<<consec) but lonely-meas exceeds consec at ['1/2', '4/7']
+    [0, 1, 4, 5, 6, 9, 10, 11]: U4=0.22994 (<<consec) but lonely-meas exceeds consec at ['1/2']
+    [0, 2, 3, 5, 6, 8, 9, 11]: U4=0.24459 (<<consec) but lonely-meas exceeds consec at ['1/2']
+
+  => consec maximizes U4 but NOT the tournament lonely-measure: the U4-extremum
+     is a SCALE-1/7 WALL-ALIGNMENT effect, NOT a tournament cut/cycle-space effect.
+
+DONE. Route A (U4 = tournament score/cycle moment functional) = DEAD END.

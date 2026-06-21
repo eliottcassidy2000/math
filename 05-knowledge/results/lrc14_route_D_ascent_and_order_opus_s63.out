@@ -1,0 +1,25 @@
+========================================================================
+ROUTE D part 2: ascent reachability, global DAG sinks, convex order
+========================================================================
+
+### k=8, span<=11, 330 shapes.  Ly(consec)=0.358231 ###
+(A) steepest-ascent: 299/330 land at consec
+    attractor (0, 1, 2, 3, 7, 8, 9, 10)  Ly=0.129813  basin=16  <consec
+    attractor (0, 1, 2, 3, 4, 9, 10, 11)  Ly=0.130714  basin=15  <consec
+(B) global Ly-DAG: #local-max sinks=3; consec global top=True
+    extra sink (0, 1, 2, 3, 4, 9, 10, 11) Ly=0.130714 (vs consec 0.358231)
+    extra sink (0, 1, 2, 3, 7, 8, 9, 10) Ly=0.129813 (vs consec 0.358231)
+(C) increasing-convex order N_consec >=_icx N_E: holds 0, FAILS 329/329
+    first failure: E=(0, 1, 2, 3, 4, 5, 6, 8)  meanN(consec)=1.6041 meanN(E)=1.6750
+    dual g(N) second-differences on 0..6: ['1', '1/10', '-1/5', '1/10', '1']  (NOT convex)
+
+### k=9, span<=12, 495 shapes.  Ly(consec)=0.492876 ###
+(A) steepest-ascent: 487/495 land at consec
+    attractor (0, 1, 2, 3, 4, 5, 6, 7, 12)  Ly=0.457011  basin=8  <consec
+(B) global Ly-DAG: #local-max sinks=2; consec global top=True
+    extra sink (0, 1, 2, 3, 4, 5, 6, 7, 12) Ly=0.457011 (vs consec 0.492876)
+(C) increasing-convex order N_consec >=_icx N_E: holds 10, FAILS 484/494
+    first failure: E=(0, 1, 2, 3, 4, 5, 6, 8, 9)  meanN(consec)=1.3813 meanN(E)=1.4560
+    dual g(N) second-differences on 0..6: ['4/9', '5/18', '1/9', '-1/18', '-2/9']  (NOT convex)
+
+DONE part 2.
