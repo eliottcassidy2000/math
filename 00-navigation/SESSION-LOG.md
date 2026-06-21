@@ -68,6 +68,13 @@ THREAD 4 (the k=9 Delsarte razor margin + k=10/k=12 dual certificates for Lean).
 - Scripts: `04-computation/lrc14_THREAD4_k9_sharper_dual_macmini.py` (float moment-LP, finds deg-4=gK8), `lrc14_THREAD4_k9_sharper_exact_macmini.py` (exact k=9 deg-3 vs deg-4 span-robust), `lrc14_THREAD4_k10_k12_dual_certs_macmini.py` (exact k=10/k=12 LP+snap+verify), `lrc14_THREAD4_unified_gK8_all_rows_macmini.py` (one dual clears k=8..13). Results in `05-knowledge/results/lrc14_THREAD4_*`.
 NET: the razor-thin k=9 Delsarte row is no longer razor-thin — it (and k=10,12) close with the existing gK8 cert at 37x/comfortable margins, and the Lean is done & building. The Delsarte LEG of the bounded-span proof is computationally + Lean-formally closed for all binding rows with a SINGLE certificate.
 
+## mac-mini-2026-06-21-S21c -- gK8 may CLOSE THE WIDE REGION DIRECTLY (candidate simplification superseding the dichotomy)
+After harvesting the closure workflow (slack floor FALSE at k=12, gK8 unifies Delsarte), tested whether gK8 also clears WIDE configs -- and it does, with big margin.
+- **gK8 clears the slack-floor BREAKER E*** (HYP-2807): L_yK8(E*)=6.286 <= 10cap_12=8.571 (ratio 0.733) => measS7(E*)<=cap_12 directly via Delsarte. The breaker is a non-issue for gK8.
+- **gK8 clears WIDE broadly (HYP-2810):** 1600 random wide (span 15-45) + breaker families k=10-13: worst 0.70; EXHAUSTIVE near-boundary span 15,16,17 k=10,11 (40755 configs): worst 0.8016. 0 fails. The wide region clears gK8 with >=20% margin; the BINDING case is BOUNDED (~0.98 k=8).
+- **CANDIDATE CLEAN CLOSURE:** measS7 <= L_yK8/10 (Lean-PROVED, delsarte_bound_k8). If L_yK8 <= 10cap for ALL E (bounded: finite-checked; wide: 20% slack), then measS7<=cap EVERYWHERE => LRC(14), WITHOUT the dichotomy/single-far/genuine-wide machinery. The wide leg reduces to 'sup_wide L_yK8 <= 10cap' -- a LOOSE bound (20% slack) closeable by THM-563-style periodicity on the smoother L_yK8 (or even BV/Koksma), where measS7's tiny slack had REFUTED the loose bound.
+HANDOFF: prove sup_{wide} L_yK8(E) <= 10*cap_k rigorously (20% slack target; single-far = THM-563-on-L_yK8, genuine-wide >=2-far decorrelates more). This candidate supersedes the dichotomy (which broke at k=12) as the wide closure. NEW: HYP-2810 (+ strengthening), HYP-2807/2808/2809.
+
 ## mac-mini-2026-06-21-S21b -- closure workflow harvested: slack floor FALSE at k=12, gK8 unifies Delsarte, dichotomy is the gap
 Harvested the 5-thread closure-completion workflow (wd9wxnpqf). NEW: HYP-2807,2808,2809 + team broadcast.
 - **THM-563 single-far CLOSED** (Thread 1, confirmed): 12805 bounded bases k=8..13, 0 fails, 0 skips, global worst 13.28 (k=9 even-AP). I independently re-verified k=10,11.
