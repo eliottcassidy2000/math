@@ -43,8 +43,49 @@ import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
+import TournamentH7.LRCL7Discrepancy
 
 open Tournament
+
+/-! ### LRC14 L7 discrepancy integer core -/
+
+theorem lrc_l7_cell_apex_necessity_audit (c S : Int)
+    (h : LonelyRunner.L7Discrepancy.iabs (7 * c - S) = 0) :
+    (7 : Int) ∣ S :=
+  LonelyRunner.L7Discrepancy.cell_apex_necessity c S h
+#print axioms lrc_l7_cell_apex_necessity_audit
+
+theorem lrc_l7_matrix_apex_necessity_audit
+    (c : LonelyRunner.L7Discrepancy.Mat) (S : Int)
+    (h : LonelyRunner.L7Discrepancy.Ddef c S = 0) :
+    (7 : Int) ∣ S :=
+  LonelyRunner.L7Discrepancy.matrix_apex_necessity c S h
+#print axioms lrc_l7_matrix_apex_necessity_audit
+
+theorem lrc_l7_c32_disc_audit :
+    LonelyRunner.L7Discrepancy.Ddef LonelyRunner.L7Discrepancy.c32 6 = 252 :=
+  LonelyRunner.L7Discrepancy.c32_disc
+#print axioms lrc_l7_c32_disc_audit
+
+theorem lrc_l7_c87_disc_zero_audit :
+    LonelyRunner.L7Discrepancy.Ddef LonelyRunner.L7Discrepancy.c87 56 = 0 :=
+  LonelyRunner.L7Discrepancy.c87_disc_zero
+#print axioms lrc_l7_c87_disc_zero_audit
+
+theorem lrc_l7_c21_disc_audit :
+    LonelyRunner.L7Discrepancy.Ddef LonelyRunner.L7Discrepancy.c21 2 = 140 :=
+  LonelyRunner.L7Discrepancy.c21_disc
+#print axioms lrc_l7_c21_disc_audit
+
+theorem lrc_l7_c32_rowSums_audit :
+    ∀ i, LonelyRunner.L7Discrepancy.rowSum LonelyRunner.L7Discrepancy.c32 i = 6 :=
+  LonelyRunner.L7Discrepancy.c32_rowSums
+#print axioms lrc_l7_c32_rowSums_audit
+
+theorem lrc_l7_c32_colSums_audit :
+    ∀ j, LonelyRunner.L7Discrepancy.colSum LonelyRunner.L7Discrepancy.c32 j = 6 :=
+  LonelyRunner.L7Discrepancy.c32_colSums
+#print axioms lrc_l7_c32_colSums_audit
 
 /-! ### LRC14 factorial atom / Q0 boundary quotient -/
 

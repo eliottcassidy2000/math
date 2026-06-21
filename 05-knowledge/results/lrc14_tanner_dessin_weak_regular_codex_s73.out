@@ -1,0 +1,132 @@
+LRC14 Tanner/dessin/weak-regularity carrier audit
+==============================================================================
+Vertex challenge:
+  tested vertices: moment rows, missed-depth atoms, signed edges,
+  equitable quotient classes, dessin half-edges, unit-distance graph lenses.
+  chosen carrier: moment rows r and atoms t, edge iff r<=t.
+  preserved predicate: THM-534 Delsarte dominance g(t)>=scale*[t=0].
+  destroyed data: generated speed words, relation lattice, L7 residue odometer.
+------------------------------------------------------------------------------
+K8: scale=10
+  y_scaled=[10, -10, 10, -9, 6, 0, 0]
+  g_scaled=[10, 0, 0, 1, 0, 0, 10]
+  dominance check: True
+  rows=[0, 1, 2, 3, 4]; edges=25; density=5/7
+  check degree hist={7: 1, 6: 1, 5: 1, 4: 1, 3: 1}
+  atom degree hist={1: 1, 2: 1, 3: 1, 4: 1, 5: 3}
+  edge sign hist={'+': 15, '-': 10}
+  signed atom-neighbor profiles:
+    t=0: deg=1, +=1, -=0, rows=[0]
+    t=1: deg=2, +=1, -=1, rows=[0, 1]
+    t=2: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=3: deg=4, +=2, -=2, rows=[0, 1, 2, 3]
+    t=4: deg=5, +=3, -=2, rows=[0, 1, 2, 3, 4]
+    t=5: deg=5, +=3, -=2, rows=[0, 1, 2, 3, 4]
+    t=6: deg=5, +=3, -=2, rows=[0, 1, 2, 3, 4]
+  common-neighbor hist, check side={6: 1, 5: 2, 4: 3, 3: 4}
+  common-neighbor hist, atom side={1: 6, 2: 5, 3: 4, 4: 3, 5: 3}
+  weak-regularity verdict: not biregular; common-neighbor counts form a chain, not a two-value law
+  degree quotient equitable=True; classes=[('r', 3), ('r', 4), ('r', 5), ('r', 6), ('r', 7), ('t', 1), ('t', 2), ('t', 3), ('t', 4), ('t', 5)]
+    quotient row ('r', 3): (0, 0, 0, 0, 0, 0, 0, 0, 0, 3)
+    quotient row ('r', 4): (0, 0, 0, 0, 0, 0, 0, 0, 1, 3)
+    quotient row ('r', 5): (0, 0, 0, 0, 0, 0, 0, 1, 1, 3)
+    quotient row ('r', 6): (0, 0, 0, 0, 0, 0, 1, 1, 1, 3)
+    quotient row ('r', 7): (0, 0, 0, 0, 0, 1, 1, 1, 1, 3)
+    quotient row ('t', 1): (0, 0, 0, 0, 1, 0, 0, 0, 0, 0)
+    quotient row ('t', 2): (0, 0, 0, 1, 1, 0, 0, 0, 0, 0)
+    quotient row ('t', 3): (0, 0, 1, 1, 1, 0, 0, 0, 0, 0)
+    quotient row ('t', 4): (0, 1, 1, 1, 1, 0, 0, 0, 0, 0)
+    quotient row ('t', 5): (1, 1, 1, 1, 1, 0, 0, 0, 0, 0)
+  support automorphisms=6; edge orbits=15; mixed-sign orbits=0
+  first edge orbits=[[(0, 0)], [(0, 1)], [(0, 2)], [(0, 3)], [(0, 4), (0, 5), (0, 6)], [(1, 1)]]
+  dessin passport black degrees=[3, 4, 5, 6, 7]
+  dessin passport white degrees=[1, 2, 3, 4, 5, 5, 5]
+  dessin face lengths=[4, 8, 13]; Euler check V-E+F=-10
+  face sign words sample=['++-+-+-++-+-+', '++-++-+-', '+-+-']
+  dessin verdict: passport keeps branch degrees but forgets dominance unless signs are retained
+------------------------------------------------------------------------------
+K9: scale=18
+  y_scaled=[18, -13, 8, -3, 0, 0, 0]
+  g_scaled=[18, 5, 0, 0, 2, 3, 0]
+  dominance check: True
+  rows=[0, 1, 2, 3]; edges=22; density=11/14
+  check degree hist={7: 1, 6: 1, 5: 1, 4: 1}
+  atom degree hist={1: 1, 2: 1, 3: 1, 4: 4}
+  edge sign hist={'+': 12, '-': 10}
+  signed atom-neighbor profiles:
+    t=0: deg=1, +=1, -=0, rows=[0]
+    t=1: deg=2, +=1, -=1, rows=[0, 1]
+    t=2: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=3: deg=4, +=2, -=2, rows=[0, 1, 2, 3]
+    t=4: deg=4, +=2, -=2, rows=[0, 1, 2, 3]
+    t=5: deg=4, +=2, -=2, rows=[0, 1, 2, 3]
+    t=6: deg=4, +=2, -=2, rows=[0, 1, 2, 3]
+  common-neighbor hist, check side={6: 1, 5: 2, 4: 3}
+  common-neighbor hist, atom side={1: 6, 2: 5, 3: 4, 4: 6}
+  weak-regularity verdict: not biregular; common-neighbor counts form a chain, not a two-value law
+  degree quotient equitable=True; classes=[('r', 4), ('r', 5), ('r', 6), ('r', 7), ('t', 1), ('t', 2), ('t', 3), ('t', 4)]
+    quotient row ('r', 4): (0, 0, 0, 0, 0, 0, 0, 4)
+    quotient row ('r', 5): (0, 0, 0, 0, 0, 0, 1, 4)
+    quotient row ('r', 6): (0, 0, 0, 0, 0, 1, 1, 4)
+    quotient row ('r', 7): (0, 0, 0, 0, 1, 1, 1, 4)
+    quotient row ('t', 1): (0, 0, 0, 1, 0, 0, 0, 0)
+    quotient row ('t', 2): (0, 0, 1, 1, 0, 0, 0, 0)
+    quotient row ('t', 3): (0, 1, 1, 1, 0, 0, 0, 0)
+    quotient row ('t', 4): (1, 1, 1, 1, 0, 0, 0, 0)
+  support automorphisms=24; edge orbits=10; mixed-sign orbits=0
+  first edge orbits=[[(0, 0)], [(0, 1)], [(0, 2)], [(0, 3), (0, 4), (0, 5), (0, 6)], [(1, 1)], [(1, 2)]]
+  dessin passport black degrees=[4, 5, 6, 7]
+  dessin passport white degrees=[1, 2, 3, 4, 4, 4, 4]
+  dessin face lengths=[4, 6, 12]; Euler check V-E+F=-8
+  face sign words sample=['+-+-++-+-+-+', '+-+-+-', '+-+-']
+  dessin verdict: passport keeps branch degrees but forgets dominance unless signs are retained
+------------------------------------------------------------------------------
+K11: scale=6
+  y_scaled=[6, -3, 1, 0, 0, 0, 0]
+  g_scaled=[6, 3, 1, 0, 0, 1, 3]
+  dominance check: True
+  rows=[0, 1, 2]; edges=18; density=6/7
+  check degree hist={7: 1, 6: 1, 5: 1}
+  atom degree hist={1: 1, 2: 1, 3: 5}
+  edge sign hist={'+': 12, '-': 6}
+  signed atom-neighbor profiles:
+    t=0: deg=1, +=1, -=0, rows=[0]
+    t=1: deg=2, +=1, -=1, rows=[0, 1]
+    t=2: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=3: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=4: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=5: deg=3, +=2, -=1, rows=[0, 1, 2]
+    t=6: deg=3, +=2, -=1, rows=[0, 1, 2]
+  common-neighbor hist, check side={6: 1, 5: 2}
+  common-neighbor hist, atom side={1: 6, 2: 5, 3: 10}
+  weak-regularity verdict: not biregular; common-neighbor counts form a chain, not a two-value law
+  degree quotient equitable=True; classes=[('r', 5), ('r', 6), ('r', 7), ('t', 1), ('t', 2), ('t', 3)]
+    quotient row ('r', 5): (0, 0, 0, 0, 0, 5)
+    quotient row ('r', 6): (0, 0, 0, 0, 1, 5)
+    quotient row ('r', 7): (0, 0, 0, 1, 1, 5)
+    quotient row ('t', 1): (0, 0, 1, 0, 0, 0)
+    quotient row ('t', 2): (0, 1, 1, 0, 0, 0)
+    quotient row ('t', 3): (1, 1, 1, 0, 0, 0)
+  support automorphisms=120; edge orbits=6; mixed-sign orbits=0
+  first edge orbits=[[(0, 0)], [(0, 1)], [(0, 2), (0, 3), (0, 4), (0, 5), (0, 6)], [(1, 1)], [(1, 2), (1, 3), (1, 4), (1, 5), (1, 6)], [(2, 2), (2, 3), (2, 4), (2, 5), (2, 6)]]
+  dessin passport black degrees=[5, 6, 7]
+  dessin passport white degrees=[1, 2, 3, 3, 3, 3, 3]
+  dessin face lengths=[7, 11]; Euler check V-E+F=-6
+  face sign words sample=['++-++-+', '+-++-++-++-']
+  dessin verdict: passport keeps branch degrees but forgets dominance unless signs are retained
+==============================================================================
+Tournament Analysis over proof lenses
+  observable=(preserves_bound, exact_audit, LRC_remaining_gap, sign_structure, locality)
+  switch/gauge: generated words and signs are retained before scalarizing
+  Hamiltonian path=['generated_depth_occupancy', 'signed_delsarte_dual', 'delsarte_quasicode_parity', 'halfarc_sign_orbit', 'weak_regular_equitable_quotient', 'dessin_belyi_passport', 'sparse_tanner_expander', 'unit_distance_spectral_transfer']
+  score histogram={'generated_depth_occupancy': 7, 'signed_delsarte_dual': 6, 'delsarte_quasicode_parity': 5, 'halfarc_sign_orbit': 4, 'weak_regular_equitable_quotient': 3, 'dessin_belyi_passport': 2, 'sparse_tanner_expander': 1, 'unit_distance_spectral_transfer': 0}
+  directed_3cycles=0 (ties only; strict tie-break gives 0)
+==============================================================================
+Conclusion
+  The Tanner graph exists but is not weakly regular or LDPC-like.
+  Its useful invariant is the signed half-arc orientation: support
+  automorphisms never mix + and - edge orbits.  A Belyi/dessin passport
+  is a good address layer for the carrier, but only the signed passport
+  remembers the Delsarte dominance certificate.  The proof route should
+  stay: generated depth word -> signed Delsarte/quasicode parity -> cap,
+  while using weak-regular/unit-distance/Tanner analogies as audits.

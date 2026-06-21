@@ -1,7 +1,7 @@
 ---
 id: HYP-2737
 title: LRC14 L7 integer-grid defect collapses to a single two-odometer row-slice inequality
-status: OPEN formalization target; exact q<=300 scout
+status: SUPERSEDED by HYP-2739 residue closed form; retained as Lean-facing route
 source: codex-2026-06-21-S73
 depends_on:
   - HYP-2736
@@ -98,6 +98,11 @@ s = p*q^{-1} mod 7.
 When `7|p` or `7|q`, the rows are uniform, giving the apex-prime zero law.
 
 ## Proof Target
+
+**Update after pull:** HYP-2739 proves a stronger exact residue-only closed
+form for this row defect and closes the `rowdef_0 <= 12p` target
+combinatorially.  HYP-2737 remains useful as a Lean-facing decomposition of
+the same proof, but it is no longer the open analytic target.
 
 Prove the single-row inequality:
 

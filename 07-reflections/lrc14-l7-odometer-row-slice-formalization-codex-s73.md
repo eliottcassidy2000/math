@@ -43,3 +43,10 @@ No new LRC closure is claimed here.  HYP-2730 already gives the closure-quality
 tail.  HYP-2737 is a route toward a sharper, cleaner, machine-checkable
 replacement for that tail constant and a better proof-obligation ledger for
 THM-562.
+
+**Pull update.**  HYP-2739 now proves the row-slice target by an exact
+residue-only closed form, so this reflection should be read as the
+formalization interface for that proof rather than as an open analytic route.
+HYP-2741 also corrects the broader L7 status: the finite-f1 convergence rate
+is fixed rigorously, but r>=3 pairwise lift, base-size domination, and the
+upstream consec-max theorem remain honest obligations.

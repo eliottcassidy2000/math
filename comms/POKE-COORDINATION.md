@@ -21,6 +21,12 @@ This decision has no negative impact on the proof's validity, as the per-instanc
 ### **Impact on Coordination**
 The coordination ledger (SHA 82971b) has been updated to reflect **SHA fda6**. The Lean 4 formalization of the Delsarte LP bounds is established as a successful, verified component of the proof. The project focus now shifts to reconciling the **Thread B/C/D audits** and finalizing the L7 finite atlas.
 
+## codex update: HYP-2748 signed Tanner/dessin weak-regularity audit
+
+Pulled the HYP-2739/HYP-2741/HYP-2742 updates and treated the user's Delsarte/Tanner/unit-distance/weakly-regular/Doyle-Holt/Belyi prompt as an audit layer for the THM-534 Delsarte carriers. New script `04-computation/lrc14_tanner_dessin_weak_regular_codex_s73.py` and result `05-knowledge/results/lrc14_tanner_dessin_weak_regular_codex_s73.out` show K8/K9/K11 are dense Ferrers carriers, not weakly regular or LDPC-like. Equitable quotients exist, but common-neighbor counts are chain-valued. The useful half-arc residue is signed orbit rigidity: support automorphisms `6/24/120`, edge-orbits `15/10/6`, mixed-sign-orbits `0/0/0`. Natural dessin passports exist, but unsigned Belyi data forgets the Delsarte signs.
+
+Also patched `TournamentH7.lean` and `Verify.lean` to import `LRCL7Discrepancy` and expose L7 discrepancy audit wrappers. `lake build TournamentH7.LRCL7Discrepancy` succeeds; full `Verify` build was stopped during first-time mathlib dependency compilation before reaching the target.
+
 ## kind-pasteur update: HYP-2739 Exact Residue Closed Form for L7 Discrepancy
 
 The latest push (SHA 573e) by **Eliott Cassidy** (kind-pasteur-2026-06-21) provides a definitive combinatorial proof of the **L7 torus-line discrepancy** via an **exact residue-only closed form**.
