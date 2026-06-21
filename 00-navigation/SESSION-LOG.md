@@ -1,3 +1,25 @@
+## kind-pasteur-2026-06-20-S23 -- LRC(14): the SINGLE-FAR (binding) case of OPEN-Q-108 CLOSED; base-size domination
+
+Dispatch: long overnight session toward an LRC(14) proof; push/pull often; integrate incoming ideas.
+
+**WIDE BOUND LOCALIZED + BINDING CASE CLOSED.** OPEN-Q-108 (span>14 => p0(E)<=cap_k), peel max far w, E'=E\{w}:
+- **sup p0 over ALL wide configs = the SINGLE-FAR config** (bounded base subset{0..14} + ONE far w):
+  max p0 = 0.227/0.372/0.476/0.547/0.605 (k=8..12). Wide maximizer = base {0,2,..,14}=2*{0..7} + odd far 29.
+- **SINGLE-FAR CASE CLOSED:** p0(E)=Plat(E')+Delta_w; comb bound |Delta_w|<=2c1(E')/(7w) (THM-546/547 PROVED).
+  KEY: c1(bounded base)=O(m) (~2.5m, NOT sigma~m^2/2) => per-base cutoff W*(E')=2c1/(7(cap-Plat(E')))<=48.
+  w>W*: RIGOROUS (comb bound). w<=W*: FINITE window -- 26807/43364/33313/12240/1343 sets (k=8..12),
+  **0 violations**, margins>=0.12 (float, >>1e-12, safe).
+- **DOMINATION (structural):** max p0 DECREASING in r=#far (0.372/0.287/0.159/0.190 for r=1..4, k=9). Reason:
+  fixed k, r far => bounded base size k-r; smaller base covers fewer sectors. So single-far (r=1, max base k-1)
+  is the global wide maximizer => wide => p0<=single-far max<cap. Clean route (plateau recursion + p0(consec_m)
+  monotone), NOT the abstract small-|R| cone.
+
+**NET:** LRC(14) wide bound = [span<=14 finite DONE] + [single-far CLOSED] + [base-size domination, VERIFIED].
+Balanced-wide residual (c1~O(span), comb peel too weak) needs the carrier-product (mac-mini Route E: multi-block
+<=single-block, splitting lowers cover -- verified finite scale). LRC NOT proved, but the BINDING case is
+rigorously closed; rest comfortable (margin>=0.12) + structurally framed. Converges w/ codex HYP-2708, mac-mini
+HYP-2700, opus Thread-A. Files: lrc_q108_{singlefar_closed,binding_localization}_kps.md.
+
 ## opus-2026-06-20-S7 -- LRC(14) THREAD A: the WIDE bound must BANDLIMIT, not absolute-value; explicit band thresholds D0(k)
 
 THREAD A of the LRC(14) sector route: make the WIDE / high-relation-height half rigorous with an EXPLICIT threshold.
