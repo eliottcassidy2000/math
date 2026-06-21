@@ -1,3 +1,16 @@
+## codex-2026-06-20-S63 -- LRC14 generated residual-profile automaton cone -- HYP-2698/T934
+
+User asked to see which residual profiles actual decorrelated LRC contexts can
+generate, to consider Rule 110 cellular automata as structural inspiration, and
+to keep pulling and treating incoming work as proof signal.  Pulled first;
+main was up to date except for session-state machinery.  Claimed HYP-2698/T934
+as the next HYP-2697 subtarget: residual profiles should be represented as
+generated words `x -> w_x(R)` over the 64 sector masks, updated at fixed `x` by
+OR-convolution / residual deletion, not as arbitrary averaged vectors in the
+positive orthant.  The Rule-110 analogy is constrained-language generation by
+a simple finite local rule; it is not a claim that LRC is literally Rule 110.
+Exact scout still in progress.
+
 ## codex-2026-06-20-S62 -- LRC14 arbitrary cluster compression cone -- HYP-2697/T933
 
 User asked to work on arbitrary bounded cluster shape compression, with
