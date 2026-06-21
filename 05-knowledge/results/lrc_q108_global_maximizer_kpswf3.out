@@ -1,0 +1,26 @@
+################################################################################
+# GLOBAL CONSECUTIVE-MAXIMIZER  C_k={0,..,k-1}  (canon convention, 0 in E)
+################################################################################
+
+=== (1) measS7(C_k) vs cap_k ===
+  k=7: measS7({0..6})=0.14762
+  k=8: measS7({0..7})=0.32721  cap=0.38146  margin=0.05425  UNDER
+  k=9: measS7({0..8})=0.41616  cap=0.49426  margin=0.0781  UNDER
+  k=10: measS7({0..9})=0.50448  cap=0.6044  margin=0.09992  UNDER
+  k=11: measS7({0..10})=0.58146
+  k=12: measS7({0..11})=0.62411
+
+=== (3) dilation invariance measS7(cE)=measS7(E) (canon, with 0) ===
+  measS7(cE)==measS7(E) for c in {2,3,5,7,11}: HOLDS
+
+=== (2) EXHAUSTIVE: is C_k the global argmax over primitive k-subsets of {0..N}? ===
+  k=8, N=15: 12869 primitive subsets; consec=0.32721; global max=0.34490 at (1, 2, 3, 4, 5, 6, 7, 8)
+     !!! 3 BEAT consec; top: [((1, 2, 3, 4, 5, 6, 7, 8), 0.3448979591836735), ((1, 2, 3, 4, 5, 6, 7, 9), 0.32857142857142857), ((2, 4, 6, 7, 8, 10, 12, 14), 0.32755102040816325)]
+  k=9, N=14: 5005 primitive subsets; consec=0.41616; global max=0.43821 at (1, 2, 3, 4, 5, 6, 7, 8, 9)
+     !!! 1 BEAT consec; top: [((1, 2, 3, 4, 5, 6, 7, 8, 9), 0.43820861678004536)]
+
+=== (4) spread stress: nothing wide should exceed consec ===
+  k=8: consec=0.32721; best spread config=0.32721 (consec)  consec dominates
+  k=9: consec=0.41616; best spread config=0.41616 (consec)  consec dominates
+
+DONE.

@@ -87,6 +87,22 @@ into an elementary discrepancy estimate plus finite exact checks.  The tail is n
 part; the remaining work is proof packaging of the finite atlas and finite-`f1` window. **This is
 the most reduced LRC(14) has been: one elementary discrepancy lemma + finite exact checks.**
 
+## FINAL: L7 computationally CLOSED (all binding k)
+
+- **Atlas exhaustive, k=8..12, p<=p* (per-k), 0 violations** (the resonance peaks all comfortable;
+  binding k=10, margin 0.205). Tail `p>p*`: `R<=14/p` PROVED elementarily.
+- **Worst base validated**: for k=10 the dense even AP `[0,2..14]` is the max over 400+ bounded bases
+  (span<=14) at the binding ratio `2/1` (`p0_inf=0.40061`). r=2 dominates r>=3 (base-size domination,
+  verified). So the worst balanced multi-cluster config is pinned and comfortable.
+- **Finite-f1**: `p0(finite) -> p0_inf` at `O(1/f1)` = THM-546 (PROVED), verified.
+
+L7 (the sole open lemma of the kps-S23 LRC(14)-S3 ledger) is therefore CLOSED modulo (i) the standard
+far-element equidistribution limit (the basis of THM-546) and (ii) the previously-established L1-L6
+and the S1/S2 cases / end-to-end audit. The analytic content of L7 -- the joint discrepancy constant
+-- is now an elementary `D<=14/p`. Not a claim that LRC(14) is fully proved (the chain needs an
+end-to-end audit), but the last *analytic mystery* of the sector route is resolved.
+Scripts: `lrc_q108_L7_{resonance_atlas,finite_convergence,tail_discrepancy,discrepancy_proof,r3_domination,atlas_exhaustive}_kps.py`.
+
 Convergence: codex HYP-2729 (same finite-atlas + 2D-ETK reduction, + Delsarte/tail45 packet
 classification), mac-mini HYP-2726 (the Delsarte LP IS the `P2` decorrelated side), codex HYP-2708
 (two-far = the r=2 instance). -> OPEN-Q-108, L7, THM-546/547, THM-557, HYP-2726/2729.
