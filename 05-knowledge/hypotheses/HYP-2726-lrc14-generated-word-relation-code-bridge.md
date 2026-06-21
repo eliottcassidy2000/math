@@ -1,9 +1,10 @@
 ---
-id: HYP-2725
+id: HYP-2726
 title: LRC14 generated-word compatibility hands off to relation-code packets
-status: OPEN; exact bridge scout
+status: OPEN; exact bridge scout; renumbered from colliding HYP-2725
 source: codex-2026-06-21-S71
 depends_on:
+  - HYP-2725
   - HYP-2724
   - HYP-2723
   - HYP-2722
@@ -17,13 +18,18 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2725 - Generated-Word / Relation-Code Bridge
+# HYP-2726 - Generated-Word / Relation-Code Bridge
+
+Namespace note: this bridge was first drafted as HYP-2725, but origin/main
+already used HYP-2725 for the two-support-axis Weyl proof order.  This note is
+therefore HYP-2726 and should be read as a refinement of that proof-order
+wrapper.
 
 ## Claim
 
-The HYP-2724 relation-code lens is not a replacement for HYP-2722 generated
-miss-zeta word compatibility.  It is the next filter after compatibility has
-reduced the problem to surviving low-support packets.
+The KPS HYP-2724 relation-code lens is not a replacement for HYP-2722
+generated miss-zeta word compatibility.  It is the next filter after
+compatibility has reduced the problem to surviving low-support packets.
 
 The proof stack should stay sequential:
 
@@ -42,6 +48,17 @@ relation-code A3/dmin directly proves generated q0 compatibility
 is too strong.  The exact bridge scout finds relation-code signal, but not a
 single monotone scalar that replaces the generated-word death-chain and
 context-merge lemmas.
+
+The incoming KPS pattern-linearity probe reinforces this: low-support
+`|coef|<=2, support<=4` pattern counts explain only
+
+```text
+R^2 = 0.572814
+```
+
+of exact `corr(E)` on its battery, with max residual `0.14488`.  That is enough
+to make `A3/dmin/MDS` a useful packet selector, but not enough to throw away
+the tail or generated-word compatibility.
 
 ## Exact Scout
 
@@ -143,8 +160,9 @@ U4/q0 = 69930/61661
 distance to cheap r=1 = 918112/308305
 ```
 
-This is exactly the type of packet HYP-2724 can organize after HYP-2722 has
-already shown it is not a silent generated q0-hiding move.
+This is exactly the type of packet KPS HYP-2724 and the HYP-2725
+two-support-axis order can organize after HYP-2722 has already shown it is not
+a silent generated q0-hiding move.
 
 ## Tournament Analysis
 
@@ -183,14 +201,15 @@ not the same quotient.
 
 ## Proof Target
 
-Use HYP-2725 as a guardrail for the LRC14 proof:
+Use HYP-2726 as a guardrail for the LRC14 proof:
 
 1. Prove the singleton generated-word exclusion using the HYP-2702 death-chain
    kernel.
 2. Prove coherent context merging cannot erase the relevant q0, `W1+W2`, and
    `U4` witnesses.
-3. Only then apply HYP-2724 to classify surviving low-support relation packets
-   by `dmin`, `A3`, MDS/arc structure, and finite tournament-like types.
+3. Only then apply KPS HYP-2724 and the HYP-2725 two-support-axis proof order
+   to classify surviving low-support relation packets by `dmin`, `A3`,
+   MDS/arc structure, and finite tournament-like types.
 4. Evaluate the HYP-2721 q0/Vitali atom boundary after both compatibility and
    relation-support selection have been retained.
 

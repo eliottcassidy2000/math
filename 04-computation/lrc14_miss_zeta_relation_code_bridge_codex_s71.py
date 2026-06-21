@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""HYP-2725/S71: bridge generated-word compatibility to relation-code packets.
+"""HYP-2726/S71: bridge generated-word compatibility to relation-code packets.
 
 HYP-2722 says cheap abstract q0-hiding atom moves must first pass the
 HYP-2698 generated miss-zeta word cone.  HYP-2724 says the remaining carrier
@@ -251,7 +251,7 @@ def print_synthesis(rows: list[ShapeRow]) -> None:
 
 
 def main() -> None:
-    print("HYP-2725/S71 miss-zeta compatibility / relation-code bridge")
+    print("HYP-2726/S71 miss-zeta compatibility / relation-code bridge")
     print("Exact generated-word metrics from HYP-2722; relation spectra from HYP-2724.\n")
     metrics = s71.frontier_metrics()
     rows = shape_rows(metrics)

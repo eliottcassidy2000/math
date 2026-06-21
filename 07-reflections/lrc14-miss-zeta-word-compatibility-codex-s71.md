@@ -63,7 +63,8 @@ two layers of the proof stack, not competing explanations.
 The later KPS HYP-2724 pull gives the right name for the relation-support
 handoff: view `Lambda(E)` as a relation code and measure low-support packets by
 `dmin,A2,A3,A4`, with MDS/arc sets as easy general-position cases and AP-like
-sets as anti-MDS hard cases.
+sets as anti-MDS hard cases.  A concurrent HYP-2725 note then separates this
+relation-support axis from the factorial-support axis used by the q0 atom.
 
 I tested whether this relation-code lens can replace the generated-word
 compatibility filter.  It cannot.  The bridge scout
@@ -72,7 +73,10 @@ generated-context tests and attaches relation spectra to the `72` unique
 sparse-tail challenger shapes.  Globally the relation spectra correlate with
 q0/U4/B2 barriers, but this is partly a shape-size effect.  Within fixed size
 the signs are mixed, and the size-3 death-chain frontier has the worst q0/U4
-witnesses while the simple `|coef|<=2` relation spectrum is flat.
+witnesses while the simple `|coef|<=2` relation spectrum is flat.  KPS's
+pattern-linearity probe points the same way from another angle: low-support
+pattern counts explain only `R^2=0.572814` of exact `corr(E)`, so the tail and
+the generated-word compatibility layer cannot be discarded.
 
 So the proof order should be:
 
