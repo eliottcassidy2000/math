@@ -29,6 +29,35 @@ extend the S68 relation-height scout so each low-height carrier packet reports
 its exact `Q_t` profile, then search for a transfer-tax identity that charges
 positive `Q_0` creation to named tail packets.
 
+## codex-2026-06-21-S69 -- HYP-2719: odd-support envelope for the factorial-origin Weyl error
+
+User asked to keep pushing the idea that the Weyl error is odd-support
+dominated.  Pulled and integrated the incoming HYP-2718/THM-561 origin-atom
+atlas first.  The sharper coordinate is:
+
+```text
+Q_0 = ProductCover - ActualCover
+    = sum_j (-1)^j W_j
+    = sum_even W_j - sum_odd W_j,
+```
+
+where `W_j=Delta E[binom(T,j)]` and `T` is the number of missed inner sectors.
+
+Claimed HYP-2719 and added
+`04-computation/lrc14_odd_support_weyl_error_codex_s69.py` with stored output
+`05-knowledge/results/lrc14_odd_support_weyl_error_codex_s69.out`.  The exact
+bank combines the HYP-2715 split rows with the S68 relation-height two-carrier
+rows.  Result: odd support does dominate as an unsigned envelope in aggregate
+(`odd_L1=1.169709905...`, `even_L1=1.041714308...`, odd share `0.52894`), but
+not as a signed cone.  Signed odd dominance occurs only on 2/10 rows; most
+negative `Q_0` rows are signed-even-led after cancellation.
+
+Proof-state update: keep the user's odd-support intuition, but formulate it as
+an odd-support `L1` envelope for the high-height HYP-2717 carrier tail, plus a
+finite ledger for signed-even-led low-height packets, then evaluate the
+HYP-2718 origin atom.  New detail file:
+`05-knowledge/hypotheses/HYP-2719-lrc14-odd-support-weyl-error-envelope.md`.
+
 ## codex-2026-06-21-S68 -- HYP-2714 finite-ledger addendum for moderate multi-block budget
 
 Continued the LRC(14) sector-route proof session after HYP-2715--HYP-2717
