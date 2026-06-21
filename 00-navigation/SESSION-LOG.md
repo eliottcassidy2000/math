@@ -1,3 +1,44 @@
+## kind-pasteur-2026-06-21 -- LRC(14) OPEN-Q-108 via the MDS/arc CODING lens (the user's '56 challenger shapes' lead) -- HYP-2724, adjudicated a workflow's THM-538 trap, reflection
+
+User: long LRC session, pull/push frequently, manage workflows, MDS-code/projective-arc/'56
+challenger shapes = 56 tournaments-on-6' inspiration. Synced (handled the recurring session-state
+conflicts + a HYP-2723 collision with codex-S71, renumbered mine 2723->2724; recovered prior
+uncommitted OPEN-Q-108 WIP).
+
+THE LENS: corr(E)=measS7(E)-iid_k = Sum_{n in Lambda(E)} K(n), Lambda(E)={n: sum n_i e_i=0} = the
+relation lattice. Viewed as a linear CODE [k,k-1,d], d=min support: AP=anti-MDS (d->2, dense low-
+weight relations)=hardest; Sidon/arc=MDS (general position)=easiest. Built the engine
+(lrc_q108_relation_code_mds_kps.py).
+
+FINDINGS:
+- EXTREMAL DICHOTOMY CONFIRMED: AP hardest (corr=0.30), Sidon easiest (~0); A3(support-3=additive
+  energy) tracks corr Pearson +0.93. A coding-theory mechanism for the known consec-extremality.
+- ADJUDICATION (the important catch): a fan-out workflow concluded 'support-3 contributes ZERO
+  (support-6 floor) => HYP-2724 REFUTED, carrier is support-6.' This RE-MADE the already-conceded
+  THM-538/MISTAKE-078 error: the floor holds for the BARE active-coord sum Q, but corr uses the
+  ZERO-PADDED measure kernel K, where zeros carry chat(0,T)=(1-|T|/7) factors that break it.
+  Verified on the workflow's own kernel: Kk([1,1,-1])=0 but Kk([1,1,-1,0,0,0,0])=+0.00066=canon.
+  So support-3 DOES drive corr (AP correction is support-3-dominated, matching mac-mini HYP-2719a).
+  My framing STANDS; the workflow lacked the THM-538 memory (caught by checking canon).
+- 56-BIJECTION cleanly REFUTED: support-3 shape count is UNBOUNDED (47/55 were window artifacts);
+  56=C(8,3) is a coincidence with A000568(6); H3(E) is a partial 3-uniform hypergraph (wrong type
+  for a tournament bijection). Drop the hunt.
+- TRUNCATION DEPTH: with the correct zero-padded kernel, the low-height (support<=6,|coef|<=2)
+  enumerator is only ~16-25% of corr; the bulk is the high-coefficient-height CONDITIONAL TAIL.
+  So the lens CONFIRMS the structure but the analytic difficulty (conditional convergence) is
+  INVARIANT to the reframing = the same R6/far-element nut (single-far CLOSED THM-546/547; balanced-
+  wide residual open).
+- SIDE: corr's global argmax is the OFF-0 block [1..k] not [0..k-1] (0=degenerate observer); for the
+  LRC (0 forced) [0..k-1] is the right family, but flag THM-535-style scripts using [0..k-1] as the
+  unconstrained RHS extremiser.
+
+Reflection: the-coding-lens-confirms-the-lrc-support-structure-but-not-its-analytic-content-kps.md
+(reframing reorganizes, it does not manufacture analytic content; the Q-vs-K trap is a recurring
+foot-gun -- defend by checking the verified object against a case where candidates must differ).
+NEXT: the invariant open nut = a signed bound on the conditionally-convergent height tail of the
+relation-lattice sum (= the balanced-wide / R6-density residual). Scripts: lrc_q108_{relation_code_mds,
+pattern_linearity,zeropad_vs_bare_kernel,support_alternation}_kps.py + workflow lrc_q108_*_kpswf2.py.
+
 ## mac-mini-2026-06-21-S9 -- how the multi-dim Weyl/carrier error relates to TOURNAMENTS: it IS the LRC cycle space (cut/cycle support-size seam); OCF reverse-cancellation does NOT transfer; additive-energy lever reduces multi->single block -- HYP-2719
 User: "think about how multi-dim Weyl error relates to tournaments"; then keep going, push/pull often, extend incoming. Pulled/pushed ~10x; integrated codex HYP-2715/2718/THM-561 (carrier budget / origin-atom / binomial-moment basis).
 **THE ANSWER (HYP-2719):** the carrier error corr(E)=measS7-iid = signed Fourier sum over the OFFSET RELATION LATTICE Lambda(E)={n: sum n_i e_i=0} = the LRC twin of the GF(2) CYCLE SPACE of K_n. corr is the CYCLE/dear side; iid the CUT/cheap (single-particle) side. The seam is a SUPPORT-SIZE seam: support-2 = 2-body cut (>=0, small, = THM-559 c3=Ising twin); support>=3 = many-body cycle (binding). Leading cross-block error = support-3 ADDITIVE TRIANGLES (Schur triples a+b=c, e.g. 65=1+64) = cross-block 3-cycles.
