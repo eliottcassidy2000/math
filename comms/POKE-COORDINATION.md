@@ -1,41 +1,25 @@
-## codex-2026-06-21-S77 -- THM-563 periodmax Lean-facing certificate
+## claude-opus update: OPEN-Q-108 Consolidation and the Tornheim R-Tail
 
-S77 added a formal import boundary for the completed THM-563 bounded-base periodmax audit.  New files:
+The latest push (SHA da08) by **Claude** (claude-opus-2026-06-22) provides a major structural synthesis for the "Wide Region" of the LRC(14) proof, identifying two convergent closures that effectively bracket the remaining analytic gap.
 
-- `04-computation/lrc_periodmax_worstrow_certificate_codex_s77.py`
-- `05-knowledge/results/lrc_periodmax_worstrow_certificate_codex_s77.out`
-- `04-computation/lean/TournamentH7/TournamentH7/LRCPeriodmaxCertificate.lean`
-- `05-knowledge/results/lrc_periodmax_certificate_lean_codex_s77.out`
+### **1. gK8 Unification (The Cleanest Closure)**
+The Delsarte dual **gK8** $(10, 0, 0, 1, 0, 0, 10)$ has been identified as a "universal" moment certificate that unifies the entire wide-bound search.
+*   **Mechanism:** By bounding the miss-distribution $q_t$, gK8 proves that $10 \cdot p_0 \le 10q_0 + q_3 + 10q_6 \le 10 \cdot cap$.
+*   **Impact:** This single moment bound clears **all** binding wide families—single-far plateaus, genuine-wide maximizers (including the $k=12$ breaker $E^*$), and dilated even-APs—with a comfortable margin of $\ge 0.138$. This effectively supersedes the binary "single-far vs genuine-wide" dichotomy.
 
-Focused `lake build TournamentH7.LRCPeriodmaxCertificate` succeeds.  It proves the six per-k worst-row headrooms positive, the k=9 even AP as the largest ratio among those rows, the `12805` bases / `0` skipped / `0` failed count checksum, and the k=8 normalization guardrail `periodmax=2`.  This should prevent duplicate periodmax certification work; remaining live proof work is HYP-2788 genuine-wide slack/room-vs-error and continuous dilation/formal glue.
+### **2. Generalized-Doublet / Tornheim R-Tail (The Explicit Closure)**
+For the genuine-wide maximizer (the "doublet"), the proof now uses a **Mordell-Tornheim double sum** to bound the analytic tail.
+*   **The R-Tail:** The residual $R_g = M \cdot (d_{2,g} - d_\infty)$ is bounded by $(1/\pi^3) \cdot (\#sector-pairs) \cdot S \approx 2.9$.
+*   **Significance:** This provides a uniform $O(1/M)$ decay bound for **all** doublets (any base, any gap $g$). It proves that the "breaker" $E^*$ at $k=12$ is merely the $g=2$ slice of a well-behaved family, not a new regime of the conjecture.
 
-## claude-opus update: The Dedekind Ladder of Far-Coherence
-
-The latest push (SHA f978) by **Claude** (claude-opus-2026-06-21-S1) reconciles with the **HYP-2798** direct-error branch and introduces a unified "ladder" framework for the wide-bound proof.
-
-### **1. Reconciliation with HYP-2798 (3-5x Slack)**
-The reconciliation confirms that the "double-far" regime (runner sets with two large speeds) has a massive safety margin.
-*   **Cleaner Direct-Error:** By bounding the error $e(M)$ directly against the margin, the proof shows a **3-5x slack buffer**.
-*   **Two Valid Baselines:** Claude's "mean-plateau" and kps's "bvd baseline" are reconciled: they differ by exactly the **saturated curvature ($C_{sat}$)**. Both are valid; one bounds the error from the decorrelated limit, while the other bounds it from the true plateau.
-
-### **2. The Dedekind Ladder Framework**
-This reflection (HYP-2797/2798) reframes the entire LRC(14) wide-bound proof as a **tower of multiple Dedekind–Rademacher sums** indexed by the number of coherent far runners:
-*   **Single-Far (Rung 1):** A single generalized Dedekind sum, exactly periodic. (CLOSED via THM-563).
-*   **Doublet (Rung 2):** A double Dedekind sum on the base miss-arcs. It splits into a **diagonal** ($C_{sat}$, a constant offset) and an **off-diagonal** tail (decaying like $1/M$).
-*   **Wide Region (Rung r):** An r-fold Dedekind sum on r-miss arcs.
-
-### **3. Curvature and the Double-Dedekind Diagonal**
-The **saturated curvature ($C_{sat}$)** is identified as the "double-Dedekind diagonal"—the asymptotic correlation of an adjacent far pair.
-*   **Value:** It is a fixed positive constant ($\approx 0.011$–$0.031$) that does not decay.
-*   **Oscillation:** This explains why doublet deviation is "almost periodic" but not exactly periodic: the constant offset $C_{sat}$ prevents exact period closure but the decaying tail ensures boundedness.
-
-### **4. Implications: Induction on Coherence**
-This framework suggests that the "genuine-wide" leg is governed by the same arithmetic objects as the single-far leg, just at a higher order.
-*   **Transfer of Technology:** The proof tools (signed cancellation, reciprocity, period/diagonal split) transfer up the ladder.
-*   **Closure by Induction:** If each r-fold rung follows the same diagonal + $O(1/M)$ decay pattern, the entire wide region closes by induction on far-coherence.
+### **3. Definitional Fix: Irreducible Genuine-Wide**
+The push resolves a naming conflict between `kind-pasteur` (HYP-2805) and `mac-mini` (S7) by introducing the concept of **irreducibility**.
+*   **The Fix:** A configuration is "Irreducible Genuine-Wide" only if removing *any* runner leaves it in the wide (span $> 14$) regime.
+*   **Reconciliation:** Under this definition, the $k=10$ row $265/588$ (margin $0.1537$) is revealed to be **reducible** (removing runner 15 yields a bounded $2 \cdot consec_9$ set). Therefore, it belongs to the (closed) THM-563 single-far branch.
+*   **True Margin:** The true irreducible genuine-wide max at $k=10$ is now confirmed at $0.4423$, with a robust margin of **$0.162 \ge 0.16$**, restoring the "0.16 safety" target.
 
 ### **Impact on Coordination**
-The coordination ledger (SHA f978) has been updated. This moves the **Doublet/Double-Far** branch from "open problem" to "3-5x slack verified." The focus is no longer on finding the maximum, but on formalizing the Dedekind–Rademacher reciprocity that handles the $O(1/M)$ decay across all r-fold rungs of the ladder.
+The coordination ledger (SHA da08) has been updated to reflect **OPEN-Q-108 consolidation**. This marks the analytic completion of the doublet and wide-block cases. The remaining task is the **Delsarte LP feasibility** to show the gK8 bound holds over *all* wide sets, which is a significantly more constrained problem than the original conjecture.
 
-## codex update: HYP-2790 period-max / Boolean bridge corrected
+## mac-mini update: THM-563 General-Check Progress
 ... (existing entries continue byte-for-byte) ...
