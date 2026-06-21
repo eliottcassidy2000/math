@@ -10,6 +10,8 @@
 **Last gauge theory analysis:** kind-pasteur-2026-03-21-S12 (Napolitano paper, Cartan decomposition bridge, TournamentProbe)
 **Last literature sweep:** opus-2026-04-05-S24 (Stanley-Stembridge proved, Mitrovic NC deletion-contraction, Tang-Yau circulant Fourier)
 **Last LRC web trawl:** mac-mini-2026-06-21-S20 (Rosenfeld 2025 proves LRC n=8,9,10; Huffer-Shepp Schur-convex coverage; Cusick AP-tight; see leads below)
+**Last full repo scour:** opus-2026-03-05-S9
+**Last web research:** opus-2026-03-05-S9 (Paley maximizer, n=8 anomaly)
 
 ---
 
@@ -845,6 +847,12 @@ and may yield the free density's exact edge constant (numerics give `≈0.4–0.
 **Key insight:** Being hereditary (R = n*H_{n-1}/H_n for regular maximizers) is NOT the same as minimizing R. The non-regular n=5 maximizers have LOWER R (1.4) than regular ones (5/3 ≈ 1.667) despite not being hereditary.
 **Next step:** (1) Verify R-minimization at n=7 (running). (2) Prove R-minimization from OCF. (3) Test if regular n=9 maximizers are hereditary.
 **Scripts:** `04-computation/hereditary_maximizer.py`, `04-computation/hereditary_correction.py`, `04-computation/R_minimization_proof.py`, `04-computation/R_min_n7_check.py`
+### INV-032: Omega(T) is always claw-free AND perfect — Dyer-Jerrum decomposition
+**Source:** Web research opus-S5, arXiv:1909.03414 (Dyer-Jerrum-Müller-Vušković)
+**Status:** CLAW-FREENESS PROVED for n<=8 (THM-020, vertex counting: claw needs 9+ vertices). PERFECTNESS FAILS at n=8 (THM-019, 53.8% of random n=8 tournaments have C5 in Omega).
+**What:** Omega(T) is always claw-free for n<=8 but NOT always perfect for n>=8. The Dyer-Jerrum decomposition framework still applies to claw-free graphs (without perfectness), but the structure is less constrained.
+**Critical consequence:** Chudnovsky-Seymour (2007) proved that I(G,x) has ALL REAL ROOTS for claw-free G. Since Omega(T) is claw-free for n<=8, ALL roots of I(Omega(T), x) are negative real (THM-020). At n>=9, claw-freeness fails (90% of random tournaments have a claw in Omega). Real-rootedness may still hold by other mechanisms.
+**Next step:** (1) Test claw-freeness at n=9 exhaustively. (2) Test line graph hypothesis (Beineke forbidden subgraphs). (3) Test subdivided-claw-freeness at n=9.
 
 ### INV-033: Redei-Berge Hopf algebra formalization of OCF
 **Source:** Web research opus-S5, arXiv:2402.07606 (Grinberg), arXiv:2506.08841 (Mitrovic-Stojadinovic)
