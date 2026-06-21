@@ -58,13 +58,15 @@ form `14/p` is what closes the tail without citing classical discrepancy theory.
 
 ## Status
 
-L7 = **[finite atlas `q<=8`, exact] + [tail `q>=9`: classical 2D torus-line discrepancy `D_{p,q}<=(12/7)/q`, verified to q=44] + [finite-f1 O(1/f1) = THM-546] + [base-size domination, kps-S23]**.
+L7 = **[finite atlas, exact] + [tail `p>=67`: elementary torus-line discrepancy
+`D_{p,q}<=14/p`, proved above] + [finite-f1 O(1/f1) = THM-546] + [base-size domination,
+kps-S23]**.  The sharper empirical constants `sup(D*q)=12/7` and `sup(D*p)=20/7` make the
+practical atlas tiny, but the proved `14/p` bound already closes the analytic tail.
 
 This converts the kps-S23 ledger's "the joint r>=2 ET-Koksma constant is the ONE unproven input"
-into an EXPLICIT, computed constant (`12/7`) reducing to a TEXTBOOK discrepancy estimate -- not an
-open problem. Not yet a formal proof (the explicit-constant torus-line discrepancy bound for all q is
-verified, not machine-checked), but the residual is classical. **This is the most reduced LRC(14) has
-been: one classical discrepancy inequality + finite exact checks.**
+into an elementary discrepancy estimate plus finite exact checks.  The tail is no longer the open
+part; the remaining work is proof packaging of the finite atlas and finite-`f1` window. **This is
+the most reduced LRC(14) has been: one elementary discrepancy lemma + finite exact checks.**
 
 Convergence: codex HYP-2729 (same finite-atlas + 2D-ETK reduction, + Delsarte/tail45 packet
 classification), mac-mini HYP-2726 (the Delsarte LP IS the `P2` decorrelated side), codex HYP-2708

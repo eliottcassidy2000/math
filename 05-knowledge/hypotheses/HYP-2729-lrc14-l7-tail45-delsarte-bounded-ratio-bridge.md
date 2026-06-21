@@ -81,9 +81,15 @@ sector words between adjacent breakpoints, and rational interval sums for
 resonance atlas and a non-resonant two-dimensional Erdos-Turan-Koksma bound
 after the HYP-2726 Delsarte readout.
 
-Incoming HYP-2730 supplies the missing shape of the non-resonant premise:
-`R(p/q) <= D_{p,q}`, where `D_{p,q}` is the L1 cell discrepancy of the
-torus curve `v -> (qv,pv)`.
+Incoming HYP-2730 supplies the missing shape of the non-resonant premise and
+then proves an elementary tail bound:
+
+`R(p/q) <= D_{p,q} <= 14/p`,
+
+where `D_{p,q}` is the L1 cell discrepancy of the torus curve
+`v -> (qv,pv)`.  The proof fixes a first-coordinate sector, writes the second
+coordinate as equally spaced arc starts, applies Koksma with variation `2/7`,
+and sums the 49 cell errors.  This makes `p>=67` safe at margin `0.21`.
 
 Follow-up script:
 
@@ -93,7 +99,7 @@ Output:
 
 `05-knowledge/results/lrc_q108_L7_discrepancy_bound_codex_s72.out`
 
-This script records a formalization-friendly crude route:
+This script records a parallel formalization-friendly crude route:
 
 `D_{p,q} <= 24/(7q)`.
 
@@ -109,13 +115,13 @@ five small ratios
 
 `2/1, 3/2, 4/3, 5/3, 5/4`
 
-need row-level `p0_inf` atlas checks.  This dovetails with HYP-2730's sharper
-`12/7` constant but does not require proving the sharp constant.
+need row-level `p0_inf` atlas checks.  This dovetails with HYP-2730's proved
+`14/p` bound and sharper observed constants `sup D*p=20/7`, `sup D*q=12/7`.
 
 ## Remaining Missing Pieces
 
 Any positive evidence remains only evidence until the small ratio atlas and the
 finite-`f1` window are wired into the existing L7 ledger.  The next concrete
 target is no longer a broad `5/3` scout; it is a proof document or Lean-friendly
-finite certificate for the five-ratio atlas together with the `D<=24/(7q)`
-seven-bin discrepancy lemma.
+finite certificate for the finite atlas plus the HYP-2730 `D<=14/p` Koksma
+lemma, with the `D<=24/(7q)` seven-bin bound as a simpler backup.

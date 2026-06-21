@@ -1,7 +1,7 @@
 ---
 id: THM-562
 title: LRC14 L7 bounded-ratio handoff skeleton — generated atom compatibility plus Delsarte packets reduce the remaining balanced two-far window to a finite resonance atlas and one non-resonant 2D discrepancy lemma
-status: OPEN proof skeleton with exact scout evidence; HYP-2730 now supplies the torus-discrepancy reduction and codex-S72 supplies a crude finite-tail route; not a proof of LRC14
+status: OPEN proof skeleton with exact scout evidence; HYP-2730 now supplies the torus-discrepancy reduction and an elementary D<=14/p tail proof; not a proof of LRC14
 source: codex-2026-06-21-S72
 depends_on:
   - THM-534   # sector moment / Delsarte LP dual certificate
@@ -48,10 +48,13 @@ HYP-2726 Krawtchouk-positive dual is applied.
 
 HYP-2730 sharpens this premise to the explicit torus-curve inequality
 
-`|R(p/q)| <= D_{p,q}`,
+`|R(p/q)| <= D_{p,q} <= 14/p`,
 
 where `D_{p,q}` is the L1 discrepancy of the cell law of
-`v -> (qv,pv)` against the uniform `7x7` grid.
+`v -> (qv,pv)` against the uniform `7x7` grid.  The `14/p` proof is
+elementary: fix a first-coordinate sector, use `gcd(p,q)=1` to get equally
+spaced starts for the second-coordinate arcs, apply Koksma to a trapezoid of
+variation `2/7`, and sum the 49 cell errors.
 
 If both premises hold, then KPS L7 closes: the near-merge side is already
 routed to the single-cluster theorem, the ratio `>=43/20` side is routed to
@@ -85,10 +88,10 @@ bound.  It is a compatibility gate before the Delsarte handoff.
 
 Incoming HYP-2730 then supplies the expected resonance correction:
 
-`R(p/q) = p0_inf(B,p/q) - P2(B)`, with `|R(p/q)| <= D_{p,q}`.
+`R(p/q) = p0_inf(B,p/q) - P2(B)`, with `|R(p/q)| <= D_{p,q} <= 14/p`.
 
 `04-computation/lrc_q108_L7_discrepancy_bound_codex_s72.py` records a cruder
-but formalization-friendly tail route:
+but formalization-friendly backup route:
 
 `D_{p,q} <= 24/(7q)`.
 
@@ -110,12 +113,13 @@ lemma: condition on `u={qv}`; the second coordinate is a shifted q-point lattice
 in seven equal bins; every bin count differs from `q/7` by at most one; summing
 the conditional L1 discrepancy gives `D_{p,q} <= 24/(7q)`.
 
-This is weaker than the sharp observed `12/(7q)` but strong enough when paired
-with the finite exact `q<=16` discrepancy check.
+This is weaker than KPS's proved `14/p` bound in some ranges and stronger in
+others; both reduce the analytic tail to elementary one-dimensional
+discrepancy plus finite checks.
 
 ## Honesty
 
 This is not a proof of LRC14.  It is a formal proof skeleton plus exact
 bounded-ratio evidence.  HYP-2730 and the S72 discrepancy probe reduce the
-remaining mathematical work to wiring the five-ratio row atlas, the finite
-`f1` window, and the elementary `D<=24/(7q)` lemma into the L7 ledger.
+remaining mathematical work to wiring the finite row atlas, the finite `f1`
+window, and the elementary torus-line discrepancy lemma into the L7 ledger.
