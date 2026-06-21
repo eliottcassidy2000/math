@@ -34,4 +34,14 @@ theorem layer2_only_identity :
 /-- Restatement: the set of dilation-fixed doubled-residues in {0,...,6} is exactly `{0}`. -/
 theorem dilFixed_iff_zero : ∀ rstar, rstar < 7 → (dilFixed rstar ↔ rstar = 0) := by decide
 
+/-- **LAYER 1 (the minimal leg profile), core fact.**  For a residue `r < 7`, the smallest
+    nonnegative integer representative of `r` mod 7 is `r` itself.  Hence in any full-residue
+    offset set the per-residue minimum magnitude (the "leg profile") is `≥ (0,1,2,3,4,5,6)`
+    componentwise, with equality exactly when `{0,1,…,6} ⊆ E` (consec attains it). -/
+theorem layer1_min_rep (r : Nat) (hr : r < 7) (n : Nat) (hn : n % 7 = r) : r ≤ n := by
+  omega
+
+/-- The consec profile `(0,1,…,6)` is attainable: each residue `r < 7` has representative `r`. -/
+theorem layer1_consec_attains (r : Nat) (hr : r < 7) : r % 7 = r := by omega
+
 end TournamentH7.LRCDilationSymmetry

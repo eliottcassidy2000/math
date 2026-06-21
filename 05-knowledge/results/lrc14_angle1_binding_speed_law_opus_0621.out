@@ -1,0 +1,22 @@
+================================================================================
+BINDING-SPEED LAW & WINDOWS-ONLY MECHANISM
+================================================================================
+
+[B1] binding speeds b=1/(7T) per (a,side):
+  [0, 1, 2, 3, 4, 5, 6, 7]     WIN=0.282313
+     binding b: 1+=6  1-=7  2+=6  2-=7  3+=6  3-=7  4+=6  4-=7  5+=6  5-=7  6+=7/2  6-=7
+  [0, 2, 3, 4, 5, 6, 7, 8]     WIN=0.232143
+     binding b: 1+=8  1-=4  2+=8  2-=8  3+=8  3-=8  4+=8  4-=8  5+=8  5-=8  6+=8  6-=8
+  [0, 1, 2, 4, 5, 6, 7, 10]    WIN=0.180952
+     binding b: 1+=10  1-=10  2+=10  2-=10  3+=10  3-=10  4+=10  4-=10  5+=10  5-=6  6+=10  6-=10
+  [0, 1, 2, 3, 4, 5, 6, 8]     WIN=0.147619
+     binding b: 1+=6  1-=X  2+=6  2-=X  3+=5  3-=X  4+=6  4-=X  5+=6  5-=X  6+=6  6-=X
+
+[B2/B3] binding-speed extremality over full-residue stratum:
+  consec binding-speed sum (sentinel BIG for center-empty) = 75.5000
+  (i) consec minimizes SUM of binding speeds? #shapes with smaller sum = 0
+  (ii) consec sorted-bvec <= other's sorted-bvec (componentwise): holds for 319/319
+
+  reconstruct WIN from binding speeds (sanity):
+    [0, 1, 2, 3, 4, 5, 6, 7]     sum T = 0.282313  WIN=0.282313  OK
+    [0, 2, 3, 4, 5, 6, 7, 8]     sum T = 0.232143  WIN=0.232143  OK
