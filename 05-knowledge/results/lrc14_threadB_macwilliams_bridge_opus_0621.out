@@ -1,0 +1,45 @@
+
+================================================================================================
+A. M_j(E) as a relation-supported sum:  M_j = K_j(N), N=sum_s b_s, expanded in J(A,E).
+================================================================================================
+  K_j(N) for N=sum of 6 indicators b_s: expand K_j as poly in elementary symmetrics e_r(b)=S_r.
+  Since b_s in {0,1}: e_r(b)=#{A:|A|=r, all b_s=1}=sum_{|A|=r} prod_{s in A} b_s, E[that]=S_r.
+  So M_j = sum_r [K_j as poly in e_r] ... but cleaner: M_j=sum_r m_jr S_r with m from part(A) earlier.
+  E=[0, 1, 2, 3, 4, 5]...: M_1..4=[2.7918367346938777, 6.1210884353741495, 5.779591836734694, 3.8054421768707485]  identity M_j=sum m_jr S_r(from J): True
+  E=[0, 1, 3, 7, 12, 20]...: M_1..4=[2.0691403834260975, 0.6729746444032159, -1.609400123685838, -1.2075448361162646]  identity M_j=sum m_jr S_r(from J): True
+  E=[0, 1, 2, 3, 4, 5]...: M_1..4=[3.2374149659863947, 7.364625850340136, 7.680272108843537, 5.247619047619048]  identity M_j=sum m_jr S_r(from J): True
+
+================================================================================================
+B. The Krawtchouk (dual) profile (M_0..M_6) of consec; even/odd extremality split.
+================================================================================================
+  Even band {M_2,M_4,M_6}: consec-MAX (binding for the cover bound).
+  Odd band {M_1,M_3,M_5}: NOT consec-extremal (M_1=6-2S_1, S_1 has beaters).
+  k=8: M = [1.0, 2.7918367346938777, 6.1210884353741495, 5.779591836734694, 3.8054421768707485, 1.2462585034013605, 0.19727891156462585]
+        even M_2,M_4,M_6 = 6.1211, 3.8054, 0.1973  (M_6=P-read: 64 P(N even-ish); all>=0:True)
+  k=9: M = [1.0, 3.2374149659863947, 7.364625850340136, 7.680272108843537, 5.247619047619048, 1.827891156462585, 0.2761904761904762]
+        even M_2,M_4,M_6 = 7.3646, 5.2476, 0.2762  (M_6=P-read: 64 P(N even-ish); all>=0:True)
+  k=10: M = [1.0, 3.613832199546485, 8.523809523809524, 9.589569160997732, 6.746031746031746, 2.431972789115646, 0.38140589569161]
+        even M_2,M_4,M_6 = 8.5238, 6.7460, 0.3814  (M_6=P-read: 64 P(N even-ish); all>=0:True)
+
+================================================================================================
+C. ANTI-MDS: relation min-distance d(E) vs even moment M_2 and the bound.  (proper sampler)
+================================================================================================
+  k=8: consec d=2  L_y=0.35823  M_2=6.12109
+    d=2: max L_y=0.35823  M_2=6.12109  at [0, 1, 2, 3, 4, 5, 6, 7]
+    d=3: max L_y=0.14006  M_2=2.28444  at [0, 1, 5, 11, 13, 14, 16, 17]
+  => anti-MDS (d=2, consec) has the LARGEST L_y and M_2; higher d (more MDS-like) => smaller.
+
+================================================================================================
+D. Relaxed Delsarte LP: max L_y over prob vectors p with consec's tail-coupling.
+================================================================================================
+  THM-536 coupling: for E subset {0..maxE}, N_E >= N_{AP} pointwise is the WRONG-k story.
+  Same-k relaxation tested: max sum_j c_j M_j(p) over p>=0, sum p=1, with the binding
+  moment constraints that hold for ALL same-k E.  We use the achievable (M_2,M_4) box from
+  the exhaustive window as the cone, and confirm the LP vertex is consec.
+  k=8: L_y(consec) = c_0 + c_2 M_2 + c_4 M_4 = 1/16 + 1/40*6.1211 + 3/80*3.8054
+        = 0.358231 = 2633/7350
+  Since M_2 AND M_4 are SIMULTANEOUSLY maximized at consec (verified), and c_2,c_4>0,
+  the separable upper bound c_0+c_2 max M_2 + c_4 max M_4 is ATTAINED at consec.
+  => the Delsarte LP optimum over the realizable region EQUALS L_y(consec) for k=8.
+
+DONE.
