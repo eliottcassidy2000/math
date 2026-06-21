@@ -1,0 +1,76 @@
+==========================================================================================
+ANGLE G: coverage-count majorization / Hardy-Littlewood rearrangement
+==========================================================================================
+
+##########################################################################################
+### k=8, span box [0..11].  consec=(0, 1, 2, 3, 4, 5, 6, 7)
+###   measS7(consec)=p7=481/1470=0.327211  E[N]=1.604082
+##########################################################################################
+[G0] consec coverage-count law p_s (s=1..7):
+     p1=0.0204  p2=0.0510  p3=0.0810  p4=0.1061  p5=0.1701  p6=0.2442  p7=0.3272
+
+     adversary pool size = 329
+
+[G1] REARRANGEMENT (consec |C| stochastically dominates all E?):
+     consec dominates: 0/329; FAILS 329/329
+     worst violation: E=(0, 1, 2, 3, 4, 6, 9, 11) at threshold |C|>=5: P(adv)-P(consec)=+0.07488
+     => naive Hardy-Littlewood majorization of the coverage-count law is FALSE.
+
+[G2] WEIGHT-CONE membership (which monotone functionals consec maximizes):
+     unit coverage-count e_s in consec-extremal cone (e_7 = measS7 itself):
+       e1:Y, e2:Y, e3:N, e4:N, e5:N, e6:N, e7:Y
+     cumulative 1[|C|>=s] (stochastic-dominance thresholds):
+       |C|>=1:Y, |C|>=2:N, |C|>=3:N, |C|>=4:N, |C|>=5:N, |C|>=6:N, |C|>=7:Y
+     => # unit functionals consec maximizes = 3/7.
+
+[G3] coarse threshold dominance P(N<t)=P(|C|>7-t) for t=1..7:
+     t=1: P(N<1)=P(|C|>=7)  consec DOMINATES all E
+     t=2: P(N<2)=P(|C|>=6)  consec fails all E
+     t=3: P(N<3)=P(|C|>=5)  consec fails all E
+     t=4: P(N<4)=P(|C|>=4)  consec fails all E
+     t=5: P(N<5)=P(|C|>=3)  consec fails all E
+     t=6: P(N<6)=P(|C|>=2)  consec fails all E
+     t=7: P(N<7)=P(|C|>=1)  consec DOMINATES all E
+     => consec stochastically dominates only at thresholds t in [1, 7]
+        (t=1 is the crux measS7; the gap is the intermediate tail).
+
+[G4] TELESCOPE  measS7 = 1 - E[N] + E[(N-1)_+]   (E[(N-1)_+]=sum_{s>=2}(s-1)... over N):
+     identity check consec: 1-E[N]+E[(N-1)+] = 0.327211 vs measS7=0.327211  (OK)
+     term1 = E[N](E)-E[N](consec) >= 0 for 329/329 (should be all: consec min E[N])
+     term2 = E[(N-1)+](consec)-E[(N-1)+](E) >= 0 for 136/329
+     term1 ALONE >= measS7 gap (term2 not needed) for 193/329
+     most negative term2: E=(0, 1, 2, 3, 7, 8, 9, 10) term2=-0.25816 (must be repaid by term1 surplus)
+
+[G5] TOP-OF-PROFILE: does consec maximize p7, then p7+p6, ...?
+     p7: consec=0.32721  #adv strictly greater = 0
+     p6+p7: consec=0.57143  #adv strictly greater = 6
+     p5+p6+p7: consec=0.74150  #adv strictly greater = 305
+
+##########################################################################################
+### k=9, span box [0..12].  consec=(0, 1, 2, 3, 4, 5, 6, 7, 8)
+###   measS7(consec)=p7=2447/5880=0.416156  E[N]=1.381293
+##########################################################################################
+[G0] consec coverage-count law p_s (s=1..7):
+     p1=0.0179  p2=0.0459  p3=0.0663  p4=0.0939  p5=0.1378  p6=0.2221  p7=0.4162
+
+     adversary pool size = 494
+
+[G1] REARRANGEMENT (consec |C| stochastically dominates all E?):
+     consec dominates: 0/494; FAILS 494/494
+     worst violation: E=(0, 1, 2, 3, 6, 7, 9, 11, 12) at threshold |C|>=5: P(adv)-P(consec)=+0.07035
+     => naive Hardy-Littlewood majorization of the coverage-count law is FALSE.
+
+[G2] WEIGHT-CONE membership (which monotone functionals consec maximizes):
+     unit coverage-count e_s in consec-extremal cone (e_7 = measS7 itself):
+       e1:Y, e2:N, e3:N, e4:N, e5:N, e6:N, e7:Y
+     cumulative 1[|C|>=s] (stochastic-dominance thresholds):
+       |C|>=1:Y, |C|>=2:N, |C|>=3:N, |C|>=4:N, |C|>=5:N, |C|>=6:N, |C|>=7:Y
+     => # unit functionals consec maximizes = 2/7.
+
+[G3] coarse threshold dominance P(N<t)=P(|C|>7-t) for t=1..7:
+     t=1: P(N<1)=P(|C|>=7)  consec DOMINATES all E
+     t=2: P(N<2)=P(|C|>=6)  consec fails all E
+     t=3: P(N<3)=P(|C|>=5)  consec fails all E
+     t=4: P(N<4)=P(|C|>=4)  consec fails all E
+     t=5: P(N<5)=P(|C|>=3)  consec fails all E
+     t=6: P(N<6)=P(|C|>=2)  consec fails all E

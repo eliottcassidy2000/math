@@ -1,0 +1,43 @@
+================================================================================================
+ANGLE C j-HOLE MONOTONICITY FLOOR  (opus-2026-06-20)
+measS7(E) <= min_{J subset H,|J|=j} measS7(full\J).  Adversary max over H => bound_j.
+Certificate closes if bound_j(N,nholes) <= cap_k. Find smallest sufficient j.
+================================================================================================
+
+--- k=8, cap_k=2243/5880=0.38146 ---
+  N= 8 holes=1: j=1:0.2736<=cap
+        --> smallest j closing certificate: j=1 (bound 0.27364 <= cap 0.38146)
+  N= 9 holes=2: j=1:0.3603<=cap
+        --> smallest j closing certificate: j=1 (bound 0.36026 <= cap 0.38146)
+  N=10 holes=3: j=1:0.4545  j=2:0.2994<=cap
+        --> smallest j closing certificate: j=2 (bound 0.29943 <= cap 0.38146)
+  N=11 holes=4: j=1:0.5097  j=2:0.3429<=cap
+        --> smallest j closing certificate: j=2 (bound 0.34289 <= cap 0.38146)
+  N=12 holes=5: j=1:0.5984  j=2:0.4657  j=3:0.3728<=cap
+        --> smallest j closing certificate: j=3 (bound 0.37276 <= cap 0.38146)
+  N=13 holes=6: j=1:0.6442  j=2:0.4949  j=3:0.4040  j=4:0.3050<=cap
+        --> smallest j closing certificate: j=4 (bound 0.30498 <= cap 0.38146)
+
+--- k=9, cap_k=1979/4004=0.49426 ---
+  N= 9 holes=1: j=1:0.4017<=cap
+        --> smallest j closing certificate: j=1 (bound 0.40170 <= cap 0.49426)
+  N=10 holes=2: j=1:0.4788<=cap
+        --> smallest j closing certificate: j=1 (bound 0.47880 <= cap 0.49426)
+  N=11 holes=3: j=1:0.5245  j=2:0.4208<=cap
+        --> smallest j closing certificate: j=2 (bound 0.42078 <= cap 0.49426)
+  N=12 holes=4: j=1:0.6108  j=2:0.5124  j=3:0.4165<=cap
+        --> smallest j closing certificate: j=3 (bound 0.41650 <= cap 0.49426)
+  N=13 holes=5: j=1:0.6467  j=2:0.5583  j=3:0.4671<=cap
+        --> smallest j closing certificate: j=3 (bound 0.46709 <= cap 0.49426)
+
+--- k=10, cap_k=55/91=0.60440 ---
+  N=10 holes=1: j=1:0.4939<=cap
+        --> smallest j closing certificate: j=1 (bound 0.49388 <= cap 0.60440)
+  N=11 holes=2: j=1:0.5378<=cap
+        --> smallest j closing certificate: j=1 (bound 0.53785 <= cap 0.60440)
+  N=12 holes=3: j=1:0.6125  j=2:0.5242<=cap
+        --> smallest j closing certificate: j=2 (bound 0.52421 <= cap 0.60440)
+  N=13 holes=4: j=1:0.6505  j=2:0.5831<=cap
+        --> smallest j closing certificate: j=2 (bound 0.58305 <= cap 0.60440)
+
+DONE.

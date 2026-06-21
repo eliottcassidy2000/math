@@ -1,0 +1,34 @@
+####################################################################################
+# Fourier-on-Z/7 resonance: structural search for a signed extremality of consec
+####################################################################################
+====================================================================================
+(F2) Khat(a) depends only on the multiset of a-values (S_k symmetric)
+====================================================================================
+  Khat invariant under coordinate permutation: True
+
+====================================================================================
+(F1) J(E,a) != 0  <=>  7 | sum_e a_e e   (the mod-7 resonance)
+====================================================================================
+  consec5: rule holds on sample = True
+  spread5: rule holds on sample = True
+  consec6: rule holds on sample = True
+
+====================================================================================
+(B) RELATION LATTICE mod 7:  L7(E)={a:7|sum a_e e}.  |L7| and weight profile.
+    consec vs spread shapes.  (QR idea: does consec have a *distinguished* L7?)
+====================================================================================
+  consec5   |L7|=2401    k=5  expect 7^(k-1)=2401  weights[w0:1 w1:6 w2:36 w3:336 w4:906 w5:1116]
+  spreadA5  |L7|=2401    k=5  expect 7^(k-1)=2401  weights[w0:1 w1:6 w2:36 w3:336 w4:906 w5:1116]
+  spreadB5  |L7|=2401    k=5  expect 7^(k-1)=2401  weights[w0:1 w1:6 w2:36 w3:336 w4:906 w5:1116]
+  consec6   |L7|=16807   k=6  expect 7^(k-1)=16807  weights[w0:1 w1:6 w2:60 w3:660 w4:2730 w5:6690 w6:6660]
+  spread6   |L7|=16807   k=6  expect 7^(k-1)=16807  weights[w0:1 w1:6 w2:60 w3:660 w4:2730 w5:6690 w6:6660]
+  NOTE: |L7(E)| = 7^(k-1) ALWAYS (e_0=0 free coord + each residue class equidistributed).
+        So lattice SIZE is not the discriminator; the WEIGHT PROFILE / which a's appear is.
+
+====================================================================================
+(C) SIGNED AGGREGATE by Fourier weight (number of nonzero a-coords).
+    measS7 = sum_t contrib_t.  Does consec dominate at each/any weight level?
+====================================================================================
+  consec5   measS7=0.00000 (recon 0.00000)  by-weight[]
+  spreadA5  measS7=0.00000 (recon 0.00000)  by-weight[]
+  spreadB5  measS7=0.00000 (recon 0.00000)  by-weight[]
