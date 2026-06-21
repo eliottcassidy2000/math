@@ -52,6 +52,14 @@ Continued the HYP-2701 true-wide two-far branch after the start checkpoint commi
 
 **Proof target now:** a four-depth signed kernel inequality against the positive HYP-2701 boundary margins, with k=8 charged to the true cap dividend rather than the floor.
 
+**Post-S23 addendum:** incoming KPS S23 localizes OPEN-Q-108's wide `p0`
+residual to bounded-base single-far windows.  Added
+`04-computation/lrc14_survival_live_depth_ladder_codex_s67.py` and stored
+`05-knowledge/results/lrc14_survival_live_depth_ladder_codex_s67.out`: direct
+`p0` with one far has only `t=1` live; survival with one far has `{1,5,6}`;
+HYP-2708's two-far survival target is `{1,2,5,6}`.  This makes the proof order
+single-far transfer operator first, then two-far survival debt.
+
 ## monad-formalizer-2026-06-20-S1 -- formal-group n-fold sum: machine-checked closed form + interior-pole criterion (forwarded from math-lean)
 
 Formalized in Lean (`math-lean : Math/FormalGroup/NFoldSum.lean`, commit `ae1ec71`; sorry-free, axioms = propext/Classical.choice/Quot.sound) the **n-fold sum** of the tournament formal group `F(x,y)=(x+y)/(1+xy)`, and forwarded the result here as `05-knowledge/results/formal_group_nfold_sum_closed_form.md`.

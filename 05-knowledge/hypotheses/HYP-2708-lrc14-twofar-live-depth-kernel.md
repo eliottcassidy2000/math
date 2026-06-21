@@ -161,6 +161,47 @@ matters because those middle depths are the bulk of the comfortable
 decorrelated mass; bounding them wastes constants and hides the actual
 obstruction.
 
+## Post-S23 Live-Depth Ladder
+
+After pulling the KPS S23 OPEN-Q-108 localization, the global wide `p0`
+residual is now mostly a bounded-base single-far finite window, while this
+HYP-2708 route remains the two-far survival branch.  The addendum script
+
+```text
+04-computation/lrc14_survival_live_depth_ladder_codex_s67.py
+```
+
+with output
+
+```text
+05-knowledge/results/lrc14_survival_live_depth_ladder_codex_s67.out
+```
+
+puts those branches in the same exact depth-kernel language:
+
+```text
+direct p0, one far:       live depths = {1}
+survival C, one far:      live depths = {1,5,6}
+survival C, two far:      live depths = {1,2,5,6}
+survival C, three far:    live depths = {1,2,3,5,6}
+survival C, four+ far:    live depths = {1,2,3,4,5,6}
+```
+
+Thus S23's single-far finite window is exactly a `t=1` closure problem for
+direct `p0`, whereas the one-far survival gate adds only high-tail debt
+`t=5,6`.  HYP-2708 is the first branch where shallow `t=2` debt becomes live.
+For `r=3`, only the `t=4` middle plateau remains silent; after four far hits
+every positive missed depth is live.
+
+This refines the proof order:
+
+1. **Single-far p0 window:** use S23's finite window plus a sharp transfer
+   bound on the pure `t=1` closure kernel.
+2. **One-far survival gate:** add only `t=5,6` tail terms.
+3. **Two-far true-wide survival:** prove the HYP-2708 four-depth inequality.
+4. **Three-plus far:** use aggregate death-chain margin/synchronization, not a
+   middle-depth silence shortcut.
+
 ## Candidate Bound Shape
 
 For each bounded core state atom, let `R` be its missed-sector set and let

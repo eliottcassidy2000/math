@@ -1,0 +1,89 @@
+HYP-2708 addendum -- survival live-depth ladder
+Exact arithmetic: closed-form iid hit law on seven colors.
+
+SURVIVAL CURRENCY LIVE-DEPTH LADDER
+  C(t)=p1+p2+p3+p4-4p6 coefficient by missed depth:
+  C(0)=0, C(1)=1, C(2)=1, C(3)=1, C(4)=1, C(5)=0, C(6)=-4
+
+r=1 far hits: live_depths=(1, 5, 6) silent_depths=(0, 2, 3, 4)
+  t=0: K1=0 coeffs_h=['0'] silent
+  t=1: K1=6/7 coeffs_h=['1/7', '-6/7'] LIVE
+  t=2: K1=1 coeffs_h=['0', '0'] silent
+  t=3: K1=1 coeffs_h=['0', '0'] silent
+  t=4: K1=1 coeffs_h=['0', '0'] silent
+  t=5: K1=5/7 coeffs_h=['-5/7', '2/7'] LIVE
+  t=6: K1=-4/7 coeffs_h=['-24/7', '4/7'] LIVE
+
+r=2 far hits: live_depths=(1, 2, 5, 6) silent_depths=(0, 3, 4)
+  t=0: K2=0 coeffs_h=['0'] silent
+  t=1: K2=36/49 coeffs_h=['13/49', '-36/49'] LIVE
+  t=2: K2=47/49 coeffs_h=['2/49', '2/49', '-47/49'] LIVE
+  t=3: K2=1 coeffs_h=['0', '0', '0'] silent
+  t=4: K2=1 coeffs_h=['0', '0', '0'] silent
+  t=5: K2=45/49 coeffs_h=['-45/49', '4/49', '4/49'] LIVE
+  t=6: K2=26/49 coeffs_h=['-222/49', '-26/49', '23/49'] LIVE
+
+r=3 far hits: live_depths=(1, 2, 3, 5, 6) silent_depths=(0, 4)
+  t=0: K3=0 coeffs_h=['0'] silent
+  t=1: K3=216/343 coeffs_h=['127/343', '-216/343'] LIVE
+  t=2: K3=307/343 coeffs_h=['36/343', '36/343', '-307/343'] LIVE
+  t=3: K3=337/343 coeffs_h=['6/343', '6/343', '6/343', '-337/343'] LIVE
+  t=4: K3=1 coeffs_h=['0', '0', '0', '0'] silent
+  t=5: K3=335/343 coeffs_h=['-335/343', '8/343', '8/343', '8/343'] LIVE
+  t=6: K3=296/343 coeffs_h=['-1668/343', '-296/343', '47/343', '47/343'] LIVE
+
+r=4 far hits: live_depths=(1, 2, 3, 4, 5, 6) silent_depths=(0,)
+  t=0: K4=0 coeffs_h=['0'] silent
+  t=1: K4=1296/2401 coeffs_h=['1105/2401', '-1296/2401'] LIVE
+  t=2: K4=281/343 coeffs_h=['62/343', '62/343', '-281/343'] LIVE
+  t=3: K4=2269/2401 coeffs_h=['132/2401', '132/2401', '132/2401', '-2269/2401'] LIVE
+  t=4: K4=2377/2401 coeffs_h=['24/2401', '24/2401', '24/2401', '24/2401', '-2377/2401'] LIVE
+  t=5: K4=2385/2401 coeffs_h=['-2385/2401', '16/2401', '16/2401', '16/2401', '16/2401'] LIVE
+  t=6: K4=2306/2401 coeffs_h=['-11910/2401', '-2306/2401', '95/2401', '95/2401', '95/2401'] LIVE
+
+r=5 far hits: live_depths=(1, 2, 3, 4, 5, 6) silent_depths=(0,)
+  t=0: K5=0 coeffs_h=['0'] silent
+  t=1: K5=7776/16807 coeffs_h=['9031/16807', '-7776/16807'] LIVE
+  t=2: K5=12427/16807 coeffs_h=['4380/16807', '4380/16807', '-12427/16807'] LIVE
+  t=3: K5=14977/16807 coeffs_h=['1830/16807', '1830/16807', '1830/16807', '-14977/16807'] LIVE
+  t=4: K5=16207/16807 coeffs_h=['600/16807', '600/16807', '600/16807', '600/16807', '-16207/16807'] LIVE
+  t=5: K5=16655/16807 coeffs_h=['-16655/16807', '152/16807', '152/16807', '152/16807', '152/16807', '-16655/16807'] LIVE
+  t=6: K5=16616/16807 coeffs_h=['-83844/16807', '-16616/16807', '191/16807', '191/16807', '191/16807', '191/16807'] LIVE
+
+r=6 far hits: live_depths=(1, 2, 3, 4, 5, 6) silent_depths=(0,)
+  t=0: K6=0 coeffs_h=['0'] silent
+  t=1: K6=46656/117649 coeffs_h=['70993/117649', '-46656/117649'] LIVE
+  t=2: K6=77687/117649 coeffs_h=['39962/117649', '39962/117649', '-77687/117649'] LIVE
+  t=3: K6=97189/117649 coeffs_h=['20460/117649', '20460/117649', '20460/117649', '-97189/117649'] LIVE
+  t=4: K6=108529/117649 coeffs_h=['9120/117649', '9120/117649', '9120/117649', '9120/117649', '-108529/117649'] LIVE
+  t=5: K6=16335/16807 coeffs_h=['-16335/16807', '472/16807', '472/16807', '472/16807', '472/16807', '-16335/16807'] LIVE
+  t=6: K6=116546/117649 coeffs_h=['-587142/117649', '-116546/117649', '1103/117649', '1103/117649', '1103/117649', '1103/117649', '-116546/117649'] LIVE
+
+DIRECT p0 SINGLE-FAR KERNEL
+  D(t)=1[t=0].  With one inserted far color, only t=1 can change p0.
+  t=0: P1=1 coeffs_h=['0'] silent
+  t=1: P1=1/7 coeffs_h=['-1/7', '6/7'] LIVE
+  t=2: P1=0 coeffs_h=['0', '0'] silent
+  t=3: P1=0 coeffs_h=['0', '0'] silent
+  t=4: P1=0 coeffs_h=['0', '0'] silent
+  t=5: P1=0 coeffs_h=['0', '0'] silent
+  t=6: P1=0 coeffs_h=['0', '0'] silent
+
+TOURNAMENT ANALYSIS
+  vertices: live-depth proof branches
+  pairwise observable: fewer live depths, then smaller far-hit count
+  switch/gauge: choose the currency before scalarizing row risk
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+  directed_3cycles=0
+  Hamiltonian proof-pressure path:
+    r=1: S23 single-far p0 finite window; live=(1,)
+    r=1: one-far survival transfer; live=(1, 5, 6)
+    r=2: HYP-2708 two-far survival; live=(1, 2, 5, 6)
+    r=3: three-far survival aggregate; live=(1, 2, 3, 5, 6)
+    r=4: four-plus synchronizer branch; live=(1, 2, 3, 4, 5, 6)
+
+SYNTHESIS
+  S23's single-far p0 window is a pure t=1 closure problem.
+  The one-far survival gate adds only high-tail t=5,6 debt.
+  HYP-2708's two-far survival target is exactly t=1,2,5,6.
+  For r=3 only t=4 remains silent; for r>=4 every positive depth is live.
