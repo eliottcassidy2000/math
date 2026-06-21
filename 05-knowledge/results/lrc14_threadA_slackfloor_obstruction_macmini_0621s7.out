@@ -1,0 +1,66 @@
+================================================================================================
+THREAD 2: GENUINE-WIDE SLACK-FLOOR OBSTRUCTION at k=12 (mac-mini-S7)
+================================================================================================
+  k=10: cap=55/91=0.604396  Q(k-1)=1229/2744=0.447886
+  k=11: cap=66/91=0.725275  Q(k-1)=65599/123480=0.531252
+  k=12: cap=6/7=0.857143  Q(k-1)=14873/24696=0.602243
+
+CLAIM tested: every genuine-wide config (span>14, remove-any-one still span>14) has p0 < Q(k-1).
+
+------------------------------------------------------------------------------------------------
+k=12  OBSTRUCTION configs (genuine-wide, primitive, p0 > Q(11) but < cap):
+------------------------------------------------------------------------------------------------
+  E = (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+     p0 (repo canonical) = 238949/388080 = 0.6157210
+     Q(11) = 0.6022433   p0 - Q = +0.0134777   (p0 > Q: True)
+     cap_12 = 0.8571429  cap - p0 = 0.2414219  (p0 < cap: True)
+     primitive(repo) = True   reduced_span = 18
+     genuine-wide = True (genuine-wide)
+     structure: 10 evens [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]  +  2 ODD bridges [9, 11]
+       remove odd 9: gcd(rest)=1, reduced_span=18
+       remove odd 11: gcd(rest)=1, reduced_span=18
+
+  E = (0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18)
+     p0 (repo canonical) = 4301/7056 = 0.6095522
+     Q(11) = 0.6022433   p0 - Q = +0.0073089   (p0 > Q: True)
+     cap_12 = 0.8571429  cap - p0 = 0.2475907  (p0 < cap: True)
+     primitive(repo) = True   reduced_span = 18
+     genuine-wide = True (genuine-wide)
+     structure: 10 evens [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]  +  2 ODD bridges [7, 9]
+       remove odd 7: gcd(rest)=1, reduced_span=18
+       remove odd 9: gcd(rest)=1, reduced_span=18
+
+  E = (0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18)
+     p0 (repo canonical) = 10697/17640 = 0.6064059
+     Q(11) = 0.6022433   p0 - Q = +0.0041626   (p0 > Q: True)
+     cap_12 = 0.8571429  cap - p0 = 0.2507370  (p0 < cap: True)
+     primitive(repo) = True   reduced_span = 18
+     genuine-wide = True (genuine-wide)
+     structure: 9 evens [0, 2, 4, 6, 8, 10, 12, 14, 18]  +  3 ODD bridges [3, 9, 15]
+       remove odd 3: gcd(rest)=1, reduced_span=18
+       remove odd 9: gcd(rest)=1, reduced_span=18
+       remove odd 15: gcd(rest)=1, reduced_span=18
+
+  E = (0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18)
+     p0 (repo canonical) = 7129/11760 = 0.6062075
+     Q(11) = 0.6022433   p0 - Q = +0.0039642   (p0 > Q: True)
+     cap_12 = 0.8571429  cap - p0 = 0.2509354  (p0 < cap: True)
+     primitive(repo) = True   reduced_span = 18
+     genuine-wide = True (genuine-wide)
+     structure: 10 evens [0, 2, 4, 6, 8, 10, 12, 14, 16, 18]  +  2 ODD bridges [3, 9]
+       remove odd 3: gcd(rest)=1, reduced_span=18
+       remove odd 9: gcd(rest)=1, reduced_span=18
+
+------------------------------------------------------------------------------------------------
+MECHANISM: even AP {0,2,...,18} (high coverage via dilated lattice) + 2 odd bridges.
+The 2 odd bridges keep gcd=1 robust to ANY single removal (the other odd survives),
+so the config is genuine-wide; yet p0 is pushed above the decorrelated single-far floor Q.
+
+VERDICT: kps HYP-2788's genuine-wide slack floor p0 < Q(k-1) is FALSE at k=12.
+  k=10, k=11: slack floor HOLDS (exhaustive over span<=18: 0 over-Q; max p0 0.4295, 0.5118 < Q;
+              random span<=30 even-dominant hunt: still 0 over-Q).
+  k=12: slack floor BREAKS. EXACTLY 4 over-Q genuine-wide configs (exhaustive span<=18),
+        all even-AP {0,2,..,18} + 2-odd-bridge; span 19..40 random hunt finds NO more.
+  CRUCIAL: all breakers have p0 < cap (margin >= 0.24), so the LRC cap is NOT violated; only
+  the INTERMEDIATE 'genuine-wide => p0<Q' reduction fails. The wide proof must bound p0<cap
+  DIRECTLY for these shapes, not via the Q(k-1) slack floor.

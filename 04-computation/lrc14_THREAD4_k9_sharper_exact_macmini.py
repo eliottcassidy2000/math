@@ -60,25 +60,42 @@ def collect_shapes(k,span):
     return [(0,)+rest for rest in itertools.combinations(range(1,span+1),k-1)
             if primitive((0,)+rest)]
 
-def maxLy(k,span,g):
-    best=F(-10); bestE=None
-    for E in collect_shapes(k,span):
-        ly=Ly_from_g(atom_q(E),g)
-        if ly>best: best,bestE=ly,E
-    return best,bestE
-
 def main():
-    cap9=CAP[9]
+    cap9=CAP[9]; k=9
+    SMAX=18
     print("#"*86)
     print("# THREAD 4 -- EXACT sharper k=9 Delsarte dual = gK8/10 (re-used k=8 cert)")
     print("#"*86)
     print(f"\ncap_9 = {cap9} = {float(cap9):.10f}\n")
 
+    # Cache atoms once per shape, grouped by span (span = max element).
+    # A shape with max==s is "new" at span s; cumulative max over span<=S.
+    atoms_by_span={}   # span -> list of (E, q)
+    for s in range(8, SMAX+1):
+        lst=[]
+        for rest in itertools.combinations(range(1,s),k-1-1):
+            E=(0,)+rest+(s,)
+            E=tuple(sorted(set(E)))
+            if len(E)!=9: continue
+            if not primitive(E): continue
+            lst.append((E, atom_q(E)))
+        atoms_by_span[s]=lst
+    # also span=8 base (consec) handled: max==8 means rest in 1..7 choose 7 -> only [0..8]
+    # fix: for span s, the (k-1)=8 nonzero elements are an 8-subset of 1..s with max==s.
+
+    def cumulative_max(g, upto):
+        best=F(-10); bestE=None
+        for s in range(8, upto+1):
+            for E,q in atoms_by_span[s]:
+                ly=Ly_from_g(q,g)
+                if ly>best: best,bestE=ly,E
+        return best,bestE
+
     print("="*86)
     print("DEG-3 dual g=(18,5,0,0,2,3,0)/18  (current THM-534 k=9 dual)")
     print("="*86)
     for span in (14,16,18):
-        m,E=maxLy(9,span,G_K9_DEG3)
+        m,E=cumulative_max(G_K9_DEG3, span)
         print(f"  span<={span}: max L_y = {m} = {float(m):.10f}  argmax={list(E)}  margin={cap9-m}={float(cap9-m):+.8f}")
 
     print("\n"+"="*86)
@@ -86,26 +103,23 @@ def main():
     print("="*86)
     sharper_margin=None; sharper_max=None; sharper_arg=None
     for span in (14,16,18):
-        m,E=maxLy(9,span,G_K8_DEG4)
+        m,E=cumulative_max(G_K8_DEG4, span)
         mar=cap9-m
         print(f"  span<={span}: max L_y = {m} = {float(m):.10f}  argmax={list(E)}  margin={mar}={float(mar):+.8f}")
         if span==14:
             sharper_margin,sharper_max,sharper_arg=mar,m,E
 
-    # express the sharper bound in the gK8 integer scale: 10*q0 <= 10*q0 + q3 + 10*q6
-    # so measS7 = q0 <= (10*q0 + q3 + 10*q6)/10 = L_yK8/10. The finite check is
-    # max_E (10*q0 + q3 + 10*q6) <= 10*cap_9.
     print("\n"+"="*86)
     print("INTEGER (Lean) FORM:  10*measS7 <= L_yK8 = 10*q0 + q3 + 10*q6")
     print("  finite check needed:  max_E (10*q0 + q3 + 10*q6) <= 10*cap_9")
     print("="*86)
     cap9x10=10*cap9
     best=F(-10); bestE=None
-    for E in collect_shapes(9,14):
-        q=atom_q(E)
-        val=10*q[0]+q[3]+10*q[6]
-        if val>best: best,bestE=val,E
-    print(f"  max_E (10*q0+q3+10*q6) = {best} = {float(best):.8f}   argmax={list(bestE)}")
+    for s in range(8,15):
+        for E,q in atoms_by_span[s]:
+            val=10*q[0]+q[3]+10*q[6]
+            if val>best: best,bestE=val,E
+    print(f"  max_E (10*q0+q3+10*q6) [span<=14] = {best} = {float(best):.8f}   argmax={list(bestE)}")
     print(f"  10*cap_9 = {cap9x10} = {float(cap9x10):.8f}")
     print(f"  10*cap_9 - max = {cap9x10-best} = {float(cap9x10-best):+.8f}  ({'CLEARS' if cap9x10-best>0 else 'FAILS'})")
     print(f"  per-shape margin cap_9 - max L_y = {(cap9x10-best)/10} = {float((cap9x10-best)/10):+.8f}")

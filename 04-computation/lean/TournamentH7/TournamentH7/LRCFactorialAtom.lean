@@ -382,6 +382,106 @@ theorem gK11_dominates :
     ∀ t : Fin atomCount, (if t.val = 0 then (6 : Int) else 0) <= gK11 t := by
   native_decide
 
+/-! #### The binding rows `k=10` and `k=12` close with the SAME `gK8` dual (THREAD 4)
+
+THREAD 4 (mac-mini-2026-06-21) found by exact moment-LP that the *optimal*
+(largest-margin) Delsarte dual at the binding rows `k=10` and `k=12` is **not** a
+new per-row covector but the already-formalized `k=8` dual itself:
+`yK8 = (10,-10,10,-9,6,0,0)`, readout `gK8 = (10,0,0,1,0,0,10)`.  It dominates the
+deg-3 `gK9` and deg-2 `gK11` duals at every row.  Concretely the finite-check
+maxima (over the bounded-span region) are
+
+  * `k=10`: `max_E L_yK8 = 37/7    <= 10*cap_10 = 550/91`,   margin `69/91`;
+  * `k=12`: `max_E L_yK8 = 29287/4410 <= 10*cap_12 = 60/7`, margin `8513/4410`;
+
+and at the formerly razor-thin `k=9` it gives margin `106901/210210 ~ 0.51`
+(vs the deg-3 `gK9` razor `10441/756756 ~ 0.0014`, ~37x sharper).
+
+So the standalone `k=10,12` certificates are `delsarte_bound_k8` re-applied: the
+per-shape inequality `10*q0 <= L_yK8(q)` is row-independent, and only the scalar
+finite-check `max_E L_yK8 <= 10*cap_k` differs per row (a closed rational comparison,
+verified exactly in `lrc14_THREAD4_*` and discharged below as `native_decide` on the
+cap constants). -/
+
+/-- The `k=10` Delsarte dual is the `k=8` dual `(10,-10,10,-9,6,0,0)` (THREAD 4). -/
+def yK10 : Fin atomCount -> Int := yK8
+
+/-- The `k=12` Delsarte dual is the `k=8` dual `(10,-10,10,-9,6,0,0)` (THREAD 4). -/
+def yK12 : Fin atomCount -> Int := yK8
+
+/-- Scaled Delsarte functional for `k=10` (`= LyK8`). -/
+def LyK10 (q : Atom) : Int := LyK8 q
+
+/-- Scaled Delsarte functional for `k=12` (`= LyK8`). -/
+def LyK12 (q : Atom) : Int := LyK8 q
+
+/-- `k=10` readout collapses to `10*q0 + q3 + 10*q6` (same covector as `gK8`). -/
+theorem LyK10_readout (q : Atom) :
+    LyK10 q = 10 * q ⟨0, by decide⟩ + q ⟨3, by decide⟩ + 10 * q ⟨6, by decide⟩ :=
+  LyK8_readout q
+
+/-- `k=12` readout collapses to `10*q0 + q3 + 10*q6` (same covector as `gK8`). -/
+theorem LyK12_readout (q : Atom) :
+    LyK12 q = 10 * q ⟨0, by decide⟩ + q ⟨3, by decide⟩ + 10 * q ⟨6, by decide⟩ :=
+  LyK8_readout q
+
+/-- **Delsarte / moment-LP bound at `k=10`** : `10 * q0 <= L_y(q)` for nonnegative `q`.
+The optimal `k=10` dual is the `k=8` dual, so this is `delsarte_bound_k8`. -/
+theorem delsarte_bound_k10 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
+    10 * q0 q <= LyK10 q :=
+  delsarte_bound_k8 q hq
+
+/-- **Delsarte / moment-LP bound at `k=12`** : `10 * q0 <= L_y(q)` for nonnegative `q`.
+The optimal `k=12` dual is the `k=8` dual, so this is `delsarte_bound_k8`. -/
+theorem delsarte_bound_k12 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
+    10 * q0 q <= LyK12 q :=
+  delsarte_bound_k8 q hq
+
+/-- Dual readout for `k=10` (`= gK8`). -/
+def gK10 (t : Fin atomCount) : Int := gK8 t
+
+/-- Dual readout for `k=12` (`= gK8`). -/
+def gK12 (t : Fin atomCount) : Int := gK8 t
+
+/-- The `k=10` dual is `(10,0,0,1,0,0,10)` -- Krawtchouk-nonnegative, dominating `10*[t=0]`. -/
+theorem gK10_values :
+    ∀ t : Fin atomCount,
+      gK10 t = (if t.val = 0 then 10 else if t.val = 3 then 1 else if t.val = 6 then 10 else 0) :=
+  gK8_values
+
+theorem gK10_dominates :
+    ∀ t : Fin atomCount, (if t.val = 0 then (10 : Int) else 0) <= gK10 t :=
+  gK8_dominates
+
+/-- The `k=12` dual is `(10,0,0,1,0,0,10)` -- Krawtchouk-nonnegative, dominating `10*[t=0]`. -/
+theorem gK12_values :
+    ∀ t : Fin atomCount,
+      gK12 t = (if t.val = 0 then 10 else if t.val = 3 then 1 else if t.val = 6 then 10 else 0) :=
+  gK8_values
+
+theorem gK12_dominates :
+    ∀ t : Fin atomCount, (if t.val = 0 then (10 : Int) else 0) <= gK12 t :=
+  gK8_dominates
+
+/-! ##### Per-row finite-check cap clearances (THREAD 4, exact rational constants)
+
+These record the exact scalar comparison `max_E L_yK8(E) <= 10*cap_k` proven by exhaustive
+exact-rational enumeration in `lrc14_THREAD4_unified_gK8_all_rows_macmini.py`.  They are
+the per-row halves of the binding-row obligation (the per-shape half is `delsarte_bound_k8`).
+Stored as cross-multiplied integer inequalities so the module stays import-light. -/
+
+/-- `k=10` cap clearance: `max_E L_yK8 = 37/7`, `10*cap_10 = 550/91`, i.e. `37*91 <= 550*7`. -/
+theorem capClear_k10 : (37 : Int) * 91 <= 550 * 7 := by native_decide
+
+/-- `k=12` cap clearance: `max_E L_yK8 = 29287/4410`, `10*cap_12 = 60/7`, i.e.
+`29287*7 <= 60*4410`. -/
+theorem capClear_k12 : (29287 : Int) * 7 <= 60 * 4410 := by native_decide
+
+/-- `k=9` (razor row) cap clearance with the sharper `gK8` dual: `max_E L_yK8 = 3259/735`,
+`10*cap_9 = 9895/2002`, i.e. `3259*2002 <= 9895*735` (margin `106901/210210`, ~37x the
+deg-3 `gK9` razor). -/
+theorem capClear_k9_sharp : (3259 : Int) * 2002 <= 9895 * 735 := by native_decide
+
 /-- Every scaled cheap direction is outside the generated tail45 strip.
 
 This is a Boolean audit theorem so the module remains self-contained without
@@ -426,6 +526,17 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms delsarte_bound_k11
 #print axioms gK11_values
 #print axioms gK11_dominates
+#print axioms LyK10_readout
+#print axioms delsarte_bound_k10
+#print axioms gK10_values
+#print axioms gK10_dominates
+#print axioms LyK12_readout
+#print axioms delsarte_bound_k12
+#print axioms gK12_values
+#print axioms gK12_dominates
+#print axioms capClear_k10
+#print axioms capClear_k12
+#print axioms capClear_k9_sharp
 #print axioms cheapScaled_outside_tailStrip_bool
 #print axioms tailStrip_constants_order
 #print axioms cheapScaled_tailStripSide

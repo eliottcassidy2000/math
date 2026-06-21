@@ -1,0 +1,41 @@
+########################################################################################
+# THREAD 4 -- ONE dual gK8=(10,0,0,1,0,0,10) clears EVERY binding row k=8..13
+########################################################################################
+
+  L_yK8(q) = 10*q0 + q3 + 10*q6  (Krawtchouk-nonneg, dominates 10*[t=0])
+
+    k      max_E L_yK8       10*cap_k         integer margin     per-shape margin
+    8         2633/735       2243/588               683/2940            683/29400  [CLEARS]
+    9         3259/735      9895/2002          106901/210210       106901/2102100  [CLEARS]
+   10             37/7         550/91                  69/91               69/910  [CLEARS]
+   11       26603/4410         660/91            69961/57330         69961/573300  [CLEARS]
+   12       29287/4410           60/7              8513/4410           8513/44100  [CLEARS]
+   13       61529/8820             10             26671/8820          26671/88200  [CLEARS]
+
+  k=8: max_E L_yK8 = 2633/735 (3.582313)  10*cap_8 = 2243/588 (3.814626)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7]
+        integer margin 10*cap_8 - max = 683/2940 = +0.23231293
+        per-shape margin cap_8 - max measS7-majorant = 683/29400 = +0.02323129
+  k=9: max_E L_yK8 = 3259/735 (4.434014)  10*cap_9 = 9895/2002 (4.942557)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7, 8]
+        integer margin 10*cap_9 - max = 106901/210210 = +0.50854384
+        per-shape margin cap_9 - max measS7-majorant = 106901/2102100 = +0.05085438
+  k=10: max_E L_yK8 = 37/7 (5.285714)  10*cap_10 = 550/91 (6.043956)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+        integer margin 10*cap_10 - max = 69/91 = +0.75824176
+        per-shape margin cap_10 - max measS7-majorant = 69/910 = +0.07582418
+  k=11: max_E L_yK8 = 26603/4410 (6.032426)  10*cap_11 = 660/91 (7.252747)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        integer margin 10*cap_11 - max = 69961/57330 = +1.22032095
+        per-shape margin cap_11 - max measS7-majorant = 69961/573300 = +0.12203209
+  k=12: max_E L_yK8 = 29287/4410 (6.641043)  10*cap_12 = 60/7 (8.571429)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+        integer margin 10*cap_12 - max = 8513/4410 = +1.93038549
+        per-shape margin cap_12 - max measS7-majorant = 8513/44100 = +0.19303855
+  k=13: max_E L_yK8 = 61529/8820 (6.976077)  10*cap_13 = 10 (10.000000)
+        argmax = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]
+        integer margin 10*cap_13 - max = 26671/8820 = +3.02392290
+        per-shape margin cap_13 - max measS7-majorant = 26671/88200 = +0.30239229
+
+  VERDICT: the single Lean certificate gK8 (delsarte_bound_k8) clears all binding rows k=8..13 with strictly positive margin (smallest at k=8: see above).
+  => gK10, gK12 lemmas = delsarte_bound_k8 + per-row finite-check inequality.
