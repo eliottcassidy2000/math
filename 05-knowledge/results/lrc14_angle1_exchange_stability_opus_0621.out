@@ -1,0 +1,63 @@
+================================================================================
+EXCHANGE-STABILITY CERTIFICATE for LAYER 3
+================================================================================
+
+######################################################################
+### k=8, span<= 14
+######################################################################
+  consec=(0, 1, 2, 3, 4, 5, 6, 7)  sum W_a=0.327211=481/1470
+
+  [E1] full-residue shapes=320; local maxima (no swap-nbr strictly higher):
+       #local maxima (incl scalings) = 3
+       consec & its scalings among maxima: 1  e.g. [(0, 1, 2, 3, 4, 5, 6, 7)]
+       NON-consec local maxima: 2
+       *** consec is NOT the unique local max ***
+          (0, 1, 3, 5, 7, 9, 11, 13): W=0.215978 (strict=True)  ratio to consec=0.6601
+          (0, 4, 5, 8, 9, 10, 13, 14): W=0.190585 (strict=True)  ratio to consec=0.5825
+
+  [E2] hill-climb (residue-preserving swap-ascent) from all 320 starts:
+       reach consec (up to scaling): 63/320
+       stuck elsewhere: 257  ends=[(1, 2, 3, 4, 5, 6, 7, 9), (1, 2, 3, 4, 5, 6, 7, 12), (1, 2, 3, 5, 7, 9, 11, 13), (4, 8, 9, 10, 11, 12, 13, 14), (0, 1, 3, 5, 7, 9, 11, 13)]
+       non-monotone ascents: 0
+
+######################################################################
+### k=9, span<= 15
+######################################################################
+  consec=(0, 1, 2, 3, 4, 5, 6, 7, 8)  sum W_a=0.416156=2447/5880
+
+  [E1] full-residue shapes=1280; local maxima (no swap-nbr strictly higher):
+       #local maxima (incl scalings) = 23
+       consec & its scalings among maxima: 1  e.g. [(0, 1, 2, 3, 4, 5, 6, 7, 8)]
+       NON-consec local maxima: 22
+       *** consec is NOT the unique local max ***
+          (0, 1, 2, 3, 4, 5, 6, 7, 9): W=0.401701 (strict=True)  ratio to consec=0.9653
+          (0, 1, 2, 3, 4, 5, 6, 7, 10): W=0.380952 (strict=True)  ratio to consec=0.9154
+          (0, 2, 4, 6, 7, 8, 10, 12, 14): W=0.373469 (strict=True)  ratio to consec=0.8974
+          (0, 1, 2, 3, 4, 5, 6, 7, 12): W=0.371769 (strict=True)  ratio to consec=0.8933
+          (0, 1, 2, 3, 4, 5, 6, 7, 14): W=0.367687 (strict=True)  ratio to consec=0.8835
+
+  [E2] hill-climb (residue-preserving swap-ascent) from all 1280 starts:
+       reach consec (up to scaling): 69/1280
+       stuck elsewhere: 1211  ends=[(4, 8, 9, 10, 11, 12, 13, 14, 15), (3, 5, 7, 9, 10, 11, 12, 13, 15), (1, 2, 3, 4, 10, 11, 12, 13, 14), (1, 2, 3, 7, 8, 11, 12, 13, 14), (1, 3, 5, 7, 8, 9, 11, 13, 15)]
+       non-monotone ascents: 0
+
+######################################################################
+### k=10, span<= 16
+######################################################################
+  consec=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  sum W_a=0.504478=8899/17640
+
+  [E1] full-residue shapes=3720; local maxima (no swap-nbr strictly higher):
+       #local maxima (incl scalings) = 55
+       consec & its scalings among maxima: 1  e.g. [(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)]
+       NON-consec local maxima: 54
+       *** consec is NOT the unique local max ***
+          (0, 1, 2, 3, 4, 5, 6, 7, 8, 10): W=0.493878 (strict=True)  ratio to consec=0.9790
+          (0, 1, 2, 3, 4, 5, 6, 7, 9, 10): W=0.478798 (strict=True)  ratio to consec=0.9491
+          (0, 1, 2, 3, 4, 5, 6, 7, 8, 12): W=0.464626 (strict=True)  ratio to consec=0.9210
+          (0, 1, 2, 3, 4, 5, 6, 7, 8, 14): W=0.456633 (strict=True)  ratio to consec=0.9052
+          (0, 1, 2, 3, 4, 5, 6, 7, 9, 12): W=0.451587 (strict=True)  ratio to consec=0.8952
+
+  [E2] hill-climb (residue-preserving swap-ascent) from all 3720 starts:
+       reach consec (up to scaling): 121/3720
+       stuck elsewhere: 3599  ends=[(2, 3, 4, 6, 7, 8, 10, 11, 12, 14), (3, 5, 6, 7, 8, 9, 10, 11, 13, 15), (0, 3, 7, 8, 9, 10, 11, 12, 13, 14), (1, 2, 3, 5, 7, 9, 11, 13, 15, 16), (0, 2, 4, 6, 7, 8, 10, 12, 13, 14)]
+       non-monotone ascents: 0
