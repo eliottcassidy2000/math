@@ -59,3 +59,15 @@ sector-pair (Cov → 0), lowering Var — the rigorous form is the THM-563 perio
   L_yK8 = Sum y_s S_s <= 10cap holds on the achievable factorial-moment region (S1,...,S6), whose
   relevant extreme point is consec. FKG/association gives Cov>=0 (variance LOWER bound) but not the upper
   extremality; the quantitative upper side is the decorrelation (periodicity single-far + doublet multi-far).
+
+
+## THE EXACT MOMENT FORM (mac-mini-S23): the gK8 concentration is a degree-4 factorial-moment inequality
+Expanding `L_yK8 = Sum_t g(t) q_t` (g=(10,0,0,1,0,0,10)) in the factorial moments `S_r=E[C(N,r)]=Sum_{|A|=r}
+meas{A all missed}` via Mobius `q_t=Sum_{s>=t}(-1)^{s-t}C(s,t)S_s` gives `y_s=(10,-10,10,-9,6,0,0)`, so EXACTLY:
+> **`L_yK8 = 10 - 10 S1 + 10 S2 - 9 S3 + 6 S4`**  (verified k=8,9,10, match exact).
+Hence the WHOLE wide bound (gK8 concentration) <=> the single degree-4 factorial-moment inequality
+> **`10 - 10 S1 + 10 S2 - 9 S3 + 6 S4 <= 10 cap_k`  for ALL configs** (consec gaps 0.23/0.51/0.43 at k=8/9/10).
+This IS the gK8 Delsarte dual (Lean-built); the remaining content is the achievable-moment-region
+characterization (an SOS/LP certificate on (S1,..,S6) tight at consec). The moments S_r factor as a
+decorrelated main part + corrections, each closing single-far by THM-563 periodicity; the genuine-wide
+(doublet) corrections are the HYP-2798 direct bound. So the moment inequality is the clean unified target.

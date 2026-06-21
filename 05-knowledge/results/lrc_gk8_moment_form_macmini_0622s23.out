@@ -1,0 +1,6 @@
+Verify L_yK8 = 10q0+q3+10q6 == 10 - 10*S1 + 10*S2 - 9*S3 + 6*S4, and the moment inequality vs 10cap:
+  consec_8: L_yK8(q)=3.58231  moment-form=3.58231  match=True  | 10cap=3.8146  gap=0.2323
+  consec_9: L_yK8(q)=4.43401  moment-form=4.43401  match=True  | 10cap=4.9426  gap=0.5085
+  consec_10: L_yK8(q)=5.28571  moment-form=5.28571  match=True  | 10cap=5.7143  gap=0.4286
+
+=> gK8 concentration <=> 10 - 10*S1 + 10*S2 - 9*S3 + 6*S4 <= 10*cap_k for ALL configs (degree-4 factorial-moment ineq).
