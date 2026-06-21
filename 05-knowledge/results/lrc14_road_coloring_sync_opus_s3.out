@@ -54,6 +54,20 @@ H-CERNY(b): 'reset cost' = span the prefix needs to match a sparse E's
    window. The open inequality = 'cheapest reset wins'.
 
 ==========================================================================
+CRUX-GAP: does span-domination CLOSE the LRC crux? (brutally honest: NO)
+==========================================================================
+   adv [0,2..8] (k=8, span 8): measS7 = 1609/5880  ~ 0.273639
+   span-dom gives adv <= consec_9 (span 8 -> prefix 0..8 = 9 elements):
+      consec_9 measS7 = 2447/5880 ~ 0.416156; adv<=consec_9: True
+   but the LRC crux needs adv <= consec_8 (EQUAL cardinality 8):
+      consec_8 measS7 = 481/1470 ~ 0.327211; adv<=consec_8: True
+      margin consec_8 - adv = 3/56 ~ 0.053571  (consec wins)
+   => span-domination relates DIFFERENT cardinalities. consec_k uniquely
+      has MINIMAL span among |E|=k, so span-dom gives NO traction at fixed
+      cardinality. The reachability/synchronization frame PROVES the
+      fixed-span lemma but DOES NOT close the fixed-cardinality crux.
+
+==========================================================================
 H-ROAD: q-twist (state relabel e->q*e) and the slope-band link to HYP-2703
 ==========================================================================
    s | rotation reset t*(s) | bandcover_s(consec_8)
@@ -64,12 +78,23 @@ H-ROAD: q-twist (state relabel e->q*e) and the slope-band link to HYP-2703
    4 |           7          |   0.40476
    5 |           7          |   0.41429
    6 |           7          |   0.28571
-   OBSERVATION: 'slow' bands s=0,1 (smallest rotation step) are where
-   consec LOSES (HYP-2703 R1) -- the +s rotation explores Z/7 SLOWEST
-   there, so coverage is hardest and the spread adversary can exploit it.
-   The twist is exactly the road-coloring state relabel; coverage SPEED
-   (reset length) is the q-invariant explaining the per-band failure.
+   HONEST CORRECTION: pure-rotation skeleton {s*e mod7: e=0..7} is FULL
+   (=Z/7) for ALL s with gcd(s,7)=1 (s=1..6); only s=0 is degenerate {0}.
+   So 'rotation reset length' is 7 for every s>=1 and does NOT distinguish
+   the bands. The slow-band loss at s=1 (HYP-2703 R1) is therefore NOT
+   explained by rotation speed -- the q-twist is a clean state relabel but
+   the per-band extremality failure is a Sturmian floor-spread effect, not
+   a synchronization-speed effect. The road-coloring reset DOES cleanly
+   explain s=0 (degenerate road: coverage impossible from rotation alone).
 
 ==========================================================================
-VERDICT printed in final structured assessment.
+VERDICT: PARTIAL. The genuine automaton is the 2-letter rotation (L=+q,
+H=+q+1) Sturmian road on Z/7. Rotations are PERMUTATIONS so it is NEVER
+synchronizing in Cerny's state-collapse sense; the LRC notion is COVERAGE
+(reachability fullness), not synchronization. The lasting YIELD is the
+PROVED span-domination lemma: measS7(E) <= measS7(consec_{max(E)+1}),
+a pointwise tautology (visited set is monotone under adding probes). But
+it does NOT close the fixed-cardinality crux. Road-coloring cleanly
+explains only the degenerate band s=0. NET: clean PARTIAL + sharp DEAD-END
+for synchronization as a NEW certificate.
 ==========================================================================

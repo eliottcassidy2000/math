@@ -1,0 +1,46 @@
+PATH-INTEGRAL / DOUBLE-SLIT amplitude test  (mac-mini-2026-06-20-S8)
+
+========================================================================
+(T1) surjection indicator = signed interference (IE/character) sum
+========================================================================
+   shapes checked=11  mismatches=0
+   => measS7 = integral of the ALTERNATING missing-set sum (interference signs).
+   complex additive-character (e^{2pi i/7}) form of the indicator:
+      max |char_expansion - true_indicator| over 2000 words = 3.77e-15
+   => the surjection indicator IS literally a sum of phases e^{2pi i t(r-a)/7}.
+
+========================================================================
+(T2) does the clock-amplitude coherence pick consec? (k=8, span<=12)
+========================================================================
+   k=8  subsets tested=792
+   measS7      argmax == consec? True   (consec=0.3272)
+   coherence   argmax == consec? True   (consec=27.1399, max=27.1399 at [0, 1, 2, 3, 4, 5, 6, 7])  beats_consec=0
+   coh*1[surj] argmax == consec? False  (consec=0.1429, max=0.2917 at [0, 2, 4, 6, 7, 8, 10, 12])  beats_consec=46
+
+========================================================================
+(T3) OCF H(n=5): is H a squared amplitude / does (-1)^desc carry it?
+========================================================================
+   tournaments=1024  H==1+2t3+2t5 mismatches=0
+   sample (H, present_oriented, signed_sum_{(-1)^desc}):
+      (1, 1, 1)
+      (1, 1, -1)
+      (3, 3, -1)
+      (1, 1, -1)
+      (1, 1, -1)
+      (3, 3, -1)
+   NOTE: present_oriented = 2*H (each Redei path both directions).
+   The signed sum sum (-1)^desc over PRESENT paths is the OCF-style
+   amplitude; we report whether |.|/structure relates to H below.
+
+========================================================================
+(T4) interference (off-diagonal) part: does it carry consec-vs-adv margin?
+========================================================================
+   consec: measS7=0.32721  coh_diag=8.0000  coh_off=+19.1399
+   adv:    measS7=0.27364  coh_diag=8.0000  coh_off=+17.0649
+   measS7 margin (consec-adv)      = +0.05357
+   coherence-offdiag margin        = +2.07497  (diag equal: True)
+   sign agreement (both same sign)? True
+
+========================================================================
+Interpretation printed in final assistant message (PASS/FAIL per claim).
+========================================================================

@@ -1,0 +1,52 @@
+==============================================================================
+(C1) Phi(beta)=log sum exp(beta*E) convex in beta: TRIVIAL (variance>=0)
+==============================================================================
+  Convex for ANY energy -> says NOTHING about which config wins. Reframing, not leverage.
+
+==============================================================================
+(C2) Is measS7 CONCAVE along consec<->non-consec deformations? (if yes: interior max, NOT
+     consec; if no: consec is an EXTREME point -> no convexity proof, matches S6)
+==============================================================================
+  k=7: E = {0,...,5} U {t}, slide top element t:
+    t:          6       7       8       9      10      11      12      13      14
+    meas:  0.1476  0.0456  0.0167  0.0286  0.0214  0.0156  0.0452  0.0842  0.0405
+    d2:        +0.073    +0.041    -0.019    +0.001    +0.035    +0.009    -0.083   (mixed sign => NOT concave)
+    consec (t=6) is the max over this slide? True;  d2 signs={'+', '-'}
+
+  k=8: E = {0,...,6} U {t}, slide top element t:
+    t:          7       8       9      10      11      12      13      14      15
+    meas:  0.3272  0.2083  0.1881  0.1905  0.1632  0.2024  0.1842  0.2323  0.1905
+    d2:        +0.099    +0.023    -0.030    +0.066    -0.057    +0.066    -0.090   (mixed sign => NOT concave)
+    consec (t=7) is the max over this slide? True;  d2 signs={'+', '-'}
+
+  PREDICTION CHECK: consec is an EXTREME (boundary) config; measS7 is not concave, so the
+  maximizer cannot be certified by any convex/concave variational inequality on offset
+  position. This is the Gibbs-language restatement of S6's 'no monotone/majorization path'.
+
+==============================================================================
+(C3) death-chain as TRANSFER MATRIX (Boltzmann operator); decorrelated cover = leading mode
+==============================================================================
+  Transfer matrix M[t,s]: M[t,t]=(7-t)/7 (stay), M[t,t-1]=t/7 (one residue filled).
+  K_r(t) table (matches HYP-2704):
+    r\t        0       1       2       3       4       5       6
+    r=0        0       1       1       1       1       0      -4
+    r=1        0     6/7       1       1       1     5/7    -4/7
+    r=2        0   36/49   47/49       1       1   45/49   26/49
+    r=3        0 216/343 307/343 337/343       1 335/343 296/343
+  r=1 matches HYP-2704: True
+  r=2 matches HYP-2704: True
+  Eigenvalues of transfer matrix M (lower-triangular): (7-t)/7 for t=0..6 =
+    1, 6/7, 5/7, 4/7, 3/7, 2/7, 1/7
+  Spectral gap = 1 - 6/7 = 1/7 (the relaxation rate). Dominant eigenvalue 1 (t=0, all
+  covered = absorbing). => measS7(decorrelated) is the t=0 (covered) coordinate after r
+  steps: a genuine FREE ENERGY = leading mode of a transfer matrix. C3 CONFIRMED.
+
+==============================================================================
+SUMMARY (H3 sharpened)
+==============================================================================
+  C1 convex-in-beta: TRIVIAL, no leverage.
+  C2 consec is an EXTREME (boundary) config, measS7 NOT concave => no convex variational
+     certificate; matches S6 'irreducibly aggregate / no monotone path'. PARTIAL/honest.
+  C3 death-chain IS a real transfer matrix; measS7(decorr) = leading mode, spectral gap
+     1/7. This is the cleanest genuine Gibbs/Boltzmann object in the thread. PROMISING for
+     the DECORRELATED cover; the cycle-space correction (true vs decorrelated) stays open.

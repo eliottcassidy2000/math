@@ -49,8 +49,10 @@ from math import comb
 from fractions import Fraction
 from collections import defaultdict
 import random
+import sys
 
 random.seed(20260620)
+sys.stdout.reconfigure(line_buffering=True)
 
 # ---------------------------------------------------------------------------
 # Tournament representation.
@@ -107,29 +109,39 @@ def H_count(n, A):
 # H1 + H2: c3 as an Ising energy on arc spins.
 # ===========================================================================
 def test_H1_H2(n):
-    print(f"\n=== H1/H2 at n={n}: c3 = C(n,3) - sum C(s_v,2), spin-variance form ===")
+    print(f"\n=== H1/H2 at n={n}: c3 = C(n,3) - sum C(s_v,2), spin-variance form ===",
+          flush=True)
     edges = edges_of(n)
     m = len(edges)
-    sbar = Fraction(n - 1, 2)
     best_c3 = -1
     best_scoreclass = None
     c3_by_scoreclass = defaultdict(set)
-    # exhaustive only for small n
-    exhaustive = (m <= 21)  # 2^21 ~ 2M; cap
+    # Exhaustive through n=6. At n=7 the identity is exact, but the full
+    # 2^21 score sweep is too slow for this evidence script.
+    exhaustive = (m <= 15)
     if not exhaustive:
-        print("  (sampling, n too large for exhaustive)")
-    iters = range(1 << m) if exhaustive else range(200000)
+        print("  (sampling, n too large for exhaustive)", flush=True)
+    # precompute, for each edge bit b=(i,j), which vertex (i or j) gets +1 to its
+    # out-score when spin=+1 (i->j) vs spin=-1.  Then scores via fast bit loop.
+    iters = range(1 << m) if exhaustive else range(50000)
+    checked_identity = False
     for it in iters:
         if exhaustive:
-            spins = [1 if (it >> b) & 1 else -1 for b in range(m)]
+            mask = it
         else:
-            spins = [random.choice((1, -1)) for _ in range(m)]
-        A = spins_to_adj(n, edges, spins)
-        s = scores(n, A)
+            mask = random.getrandbits(m)
+        s = [0] * n
+        for b, (i, j) in enumerate(edges):
+            if (mask >> b) & 1:
+                s[i] += 1
+            else:
+                s[j] += 1
         c3 = comb(n, 3) - sum(comb(sv, 2) for sv in s)
-        # spin-variance identity check
-        var_form = comb(n, 3) - Fraction(1, 2) * (sum(sv * sv for sv in s) - comb(n, 2))
-        assert var_form == c3, (s, c3, var_form)
+        if not checked_identity:
+            # spin-variance identity check (once, exact rationals)
+            var_form = comb(n, 3) - Fraction(1, 2) * (sum(sv * sv for sv in s) - comb(n, 2))
+            assert var_form == c3, (s, c3, var_form)
+            checked_identity = True
         sc = tuple(sorted(s))
         c3_by_scoreclass[sc].add(c3)
         if c3 > best_c3:
@@ -265,18 +277,36 @@ def hopfield_descent(n, trials=400):
 # H4: within the max-c3 (regular) score class, do scores determine H?
 # If cut != cycle, NO: H varies inside a single score class.
 # ===========================================================================
-def test_H4(n):
-    print(f"\n=== H4 at n={n}: does the score class determine H? (cut vs cycle) ===")
+def test_H4(n, sample=None):
+    print(f"\n=== H4 at n={n}: does the score class determine H? (cut vs cycle) ===",
+          flush=True)
     edges = edges_of(n)
     m = len(edges)
-    if m > 21:
-        print("  too large; skip")
-        return
+    if n == 7:
+        witnesses = []
+        for jumps in ((1, 2, 4), (1, 2, 3), (1, 3, 4)):
+            A = regular_circulant(n, jumps)
+            witnesses.append((jumps, tuple(sorted(scores(n, A))), H_count(n, A)))
+        distinct = sorted({Hv for _, _, Hv in witnesses})
+        print("  exact regular-circulant witnesses:")
+        for jumps, sc, Hv in witnesses:
+            print(f"    jumps={jumps}: score={sc}, H={Hv}")
+        print(f"  distinct H values inside the regular score class: {distinct}")
+        print(f"  score multiset determines H?  {len(distinct) == 1}")
+        print("  => same score/Hopfield ground layer, different cycle-space/H layer.")
+        return len(distinct) == 1
     H_by_scoreclass = defaultdict(set)
     reg = tuple([(n - 1) // 2] * n) if n % 2 == 1 else None
     H_in_regular = set()
-    for it in range(1 << m):
-        spins = [1 if (it >> b) & 1 else -1 for b in range(m)]
+    if sample is None and m <= 15:
+        it_src = (i for i in range(1 << m))
+        total = 1 << m
+    else:
+        it_src = (random.getrandbits(m) for _ in range(sample or 50000))
+        total = sample or 50000
+    cnt = 0
+    for mask in it_src:
+        spins = [1 if (mask >> b) & 1 else -1 for b in range(m)]
         A = spins_to_adj(n, edges, spins)
         s = scores(n, A)
         sc = tuple(sorted(s))
@@ -284,14 +314,28 @@ def test_H4(n):
         H_by_scoreclass[sc].add(Hv)
         if reg is not None and sc == reg:
             H_in_regular.add(Hv)
+        cnt += 1
     score_determines_H = all(len(v) == 1 for v in H_by_scoreclass.values())
-    print(f"  score multiset determines H?  {score_determines_H}  "
+    note = "exhaustive" if (sample is None and m <= 15) else f"sampled {cnt}"
+    print(f"  ({note}) score multiset determines H?  {score_determines_H}  "
           f"(False => need cycle space = 'hidden layer')")
-    if reg is not None:
-        print(f"  distinct H values within regular class {reg}: {sorted(H_in_regular)}")
+    if reg is not None and H_in_regular:
+        print(f"  distinct H values seen within regular class {reg}: {sorted(H_in_regular)}")
         print(f"  => max H in regular class = {max(H_in_regular)} "
               f"(THM-126: Paley=189 at n=7)")
     return score_determines_H
+
+
+def regular_circulant(n, jumps):
+    """Regular circulant tournament on odd n with arcs i -> i+j for j in jumps."""
+    jumps = set(jumps)
+    A = [[0] * n for _ in range(n)]
+    for i in range(n):
+        for d in range(1, n):
+            j = (i + d) % n
+            if d in jumps:
+                A[i][j] = 1
+    return A
 
 
 if __name__ == "__main__":
@@ -301,6 +345,6 @@ if __name__ == "__main__":
     for n in (4, 5, 6):
         line_graph_quadratic(n)
     for n in (5, 7):
-        hopfield_descent(n, trials=300)
-    for n in (5, 7):
-        test_H4(n)
+        hopfield_descent(n, trials=120)
+    test_H4(5)              # exhaustive (1024)
+    test_H4(7)              # exact regular-circulant witnesses

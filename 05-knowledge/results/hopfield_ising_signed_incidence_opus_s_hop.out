@@ -1,0 +1,12 @@
+n=4: 2-body Ising E = sum_v (s_v-sbar)^2 EXACT? True (exhaustive)
+       #couplings=12 (= line-graph edges of K_n), coupling-value multiset {Fraction(1, 2): 8, Fraction(-1, 2): 4}, field h nonzero: False
+       => Hopfield weight matrix = SIGNED (frustrated) line-graph coupling + external field; NOT the uniform Q. Ground state = regular.
+n=5: 2-body Ising E = sum_v (s_v-sbar)^2 EXACT? True (exhaustive)
+       #couplings=30 (= line-graph edges of K_n), coupling-value multiset {Fraction(1, 2): 20, Fraction(-1, 2): 10}, field h nonzero: False
+       => Hopfield weight matrix = SIGNED (frustrated) line-graph coupling + external field; NOT the uniform Q. Ground state = regular.
+n=6: 2-body Ising E = sum_v (s_v-sbar)^2 EXACT? True (exhaustive)
+       #couplings=60 (= line-graph edges of K_n), coupling-value multiset {Fraction(1, 2): 40, Fraction(-1, 2): 20}, field h nonzero: False
+       => Hopfield weight matrix = SIGNED (frustrated) line-graph coupling + external field; NOT the uniform Q. Ground state = regular.
+n=7: 2-body Ising E = sum_v (s_v-sbar)^2 EXACT? True (sampled 4000)
+       #couplings=105 (= line-graph edges of K_n), coupling-value multiset {Fraction(1, 2): 70, Fraction(-1, 2): 35}, field h nonzero: False
+       => Hopfield weight matrix = SIGNED (frustrated) line-graph coupling + external field; NOT the uniform Q. Ground state = regular.

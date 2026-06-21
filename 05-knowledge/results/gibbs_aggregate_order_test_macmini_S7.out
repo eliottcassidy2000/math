@@ -1,0 +1,21 @@
+==============================================================================
+HONEST interaction-order climb for -log measS7 (overdetermined, train/test)
+==============================================================================
+If LRC free energy were a SUM of local terms, some finite order -> TEST R^2 = 1.
+Aggregate (HYP-2704/S6) predicts TEST R^2 stays < 1 and doesn't snap to 1.
+
+  W=12 k=8: 330 positive subsets; train=230 test=100
+    1-body additive: params= 13  train R^2=0.27052  TEST R^2=0.22472
+    2-body pairwise: params= 79  train R^2=0.62493  TEST R^2=0.11178
+    3-body triple : SKIP (299 params vs 230 train rows -- underdetermined)
+
+  W=13 k=7: 875 positive subsets; train=612 test=263
+    1-body additive: params= 14  train R^2=0.11879  TEST R^2=0.11595
+    2-body pairwise: params= 92  train R^2=0.25345  TEST R^2=0.11229
+    3-body triple : params=378  train R^2=0.49637  TEST R^2=-0.08271
+
+INTERPRETATION:
+  -log measS7 = -log( a single sum-over-x measure ) = a free energy. A free energy is
+  generically NOT a finite-order interaction polynomial in the spins (offsets). If TEST
+  R^2 never reaches 1, that IS the precise meaning of 'irreducibly aggregate': the
+  obstruction is the log-of-a-sum (Gibbs free energy), not any term-by-term inequality.
