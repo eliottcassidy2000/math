@@ -1,0 +1,32 @@
+==============================================================================
+TEST 1: correlate measS7 with SPREAD (variance) of drift speeds {7|e|}.
+        HS-convex predicts POSITIVE corr (spread-out drift => more cover).
+==============================================================================
+  corr(measS7, drift-variance) = -0.2658  (319 full-res shapes)
+  TOP 6 measS7:
+     measS7=0.32721  drift-var=257.2  (0, 1, 2, 3, 4, 5, 6, 7)
+     measS7=0.27364  drift-var=305.5  (0, 2, 3, 4, 5, 6, 7, 8)
+     measS7=0.25578  drift-var=691.4  (0, 2, 4, 6, 7, 8, 10, 12)
+     measS7=0.23796  drift-var=948.6  (0, 1, 3, 5, 7, 9, 11, 13)
+     measS7=0.23707  drift-var=391.2  (0, 1, 3, 4, 5, 6, 7, 9)
+     measS7=0.23231  drift-var=820.0  (0, 1, 2, 3, 4, 5, 6, 14)
+
+==============================================================================
+TEST 2 (the actual HS transfer): from consec, EQUALIZE two drift speeds
+        (Robin-Hood toward balance). HS-convex predicts measS7 DROPS.
+==============================================================================
+  consec drift speeds = [0, 7, 14, 21, 28, 35, 42, 49]  measS7=0.327211
+  balancing transfers tested = 7
+     measS7 DROPPED  (HS-convex predicts this) = 0
+     measS7 ROSE     (violates HS-convex)       = 0
+     measS7 UNCHANGED                            = 7
+  TEST 2 verdict: INCONCLUSIVE
+
+==============================================================================
+TEST 3: is consec the UNIQUE drift-spread (Schur) maximum?  Over same
+        drift-SUM groups, test majorization sign of measS7.
+==============================================================================
+  same-drift-sum majorization-comparable pairs = 1888
+  Schur-CONVEX  evidence (more drift-spread beat balanced) = 626
+  Schur-CONCAVE evidence (balanced beat more drift-spread) = 1260
+  => NEITHER pure (conv=626, conc=1260); not clean Schur in drift vector.

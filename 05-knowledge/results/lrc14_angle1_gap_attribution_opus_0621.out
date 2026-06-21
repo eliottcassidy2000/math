@@ -1,0 +1,41 @@
+================================================================================
+GAP ATTRIBUTION: consec surplus dissected (windows vs disconnected arcs)
+================================================================================
+
+consec=[0, 1, 2, 3, 4, 5, 6, 7]
+  total W = 0.327211   windows = 0.282313   disconnected = 0.044898
+
+[P3] windows-only vs total for top rivals (does consec need disconnected arcs?):
+  shape                                total   windows   disconn
+  consec                            0.327211  0.282313  0.044898
+  [0, 2, 4, 6, 8, 10, 12, 14]       0.296599  0.141156  0.155442
+  [0, 2, 3, 4, 5, 6, 7, 8]          0.273639  0.232143  0.041497
+  [0, 2, 4, 6, 7, 8, 10, 12]        0.243878  0.145238  0.098639
+  [0, 1, 3, 4, 5, 6, 7, 9]          0.237075  0.198413  0.038662
+  [0, 1, 2, 3, 4, 5, 6, 14]         0.232313  0.208844  0.023469
+  [0, 1, 2, 4, 5, 6, 7, 10]         0.220068  0.180952  0.039116
+
+  consec window_sum max over stratum? argmax=consec; #shapes beating consec on windows-only = 0
+
+[P1] BINDING-SPEED LAW for consec: T+, T- as 1/(7*b):
+  a=1: T+=1/42=1/(7*6)  T-=1/49=1/(7*7)
+  a=2: T+=1/42=1/(7*6)  T-=1/49=1/(7*7)
+  a=3: T+=1/42=1/(7*6)  T-=1/49=1/(7*7)
+  a=4: T+=1/42=1/(7*6)  T-=1/49=1/(7*7)
+  a=5: T+=1/42=1/(7*6)  T-=1/49=1/(7*7)
+  a=6: T+=2/49=1/(7*7/2)  T-=1/49=1/(7*7)
+
+[P2] DISCONNECTED-arc bonus per a (W_a - window_a) for consec:
+  a=1: W_a=0.044218  window=0.044218  bonus=0.000000
+  a=2: W_a=0.044218  window=0.044218  bonus=0.000000
+  a=3: W_a=0.060544  window=0.044218  bonus=0.016327
+  a=4: W_a=0.057823  window=0.044218  bonus=0.013605
+  a=5: W_a=0.044218  window=0.044218  bonus=0.000000
+  a=6: W_a=0.076190  window=0.061224  bonus=0.014966
+
+NEAREST RIVAL [0, 2, 4, 6, 8, 10, 12, 14]:
+  total surplus  Delta = 0.030612
+  windows surplus      = 0.141156
+  disconnect surplus   = -0.110544
+
+  => consec's edge is mostly WINDOWS
