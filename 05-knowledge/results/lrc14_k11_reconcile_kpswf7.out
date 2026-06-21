@@ -1,0 +1,2 @@
+k=11 box13 fullres=True: |strat|=220 L_y(consec)=0.603243 argmax=CONSEC maxL_y=0.603243 #beaters=0 worst+0.000000
+k=11 box13 fullres=False: |strat|=286 L_y(consec)=0.603243 argmax=CONSEC maxL_y=0.603243 #beaters=0 worst+0.000000
