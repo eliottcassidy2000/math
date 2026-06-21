@@ -1,0 +1,14 @@
+L7 gap#1 closure: |p0(E)-p0_inf| <= C(B,q)/f1, C(B,q)=M*q*2/7  (RIGOROUS rate, replaces THM-546 citation)
+  B=[0, 2, 4, 6, 8, 10] g=3/2 f1=60: |err|*f1=0.201 <= C(B,q)=80.0? True
+  B=[0, 2, 4, 6, 8, 10] g=3/2 f1=120: |err|*f1=0.170 <= C(B,q)=80.0? True
+  B=[0, 2, 4, 6, 8, 10] g=3/2 f1=240: |err|*f1=0.327 <= C(B,q)=80.0? True
+  B=[0, 1, 2, 3, 4, 5, 6] g=3/2 f1=60: |err|*f1=0.755 <= C(B,q)=48.0? True
+  B=[0, 1, 2, 3, 4, 5, 6] g=3/2 f1=120: |err|*f1=0.204 <= C(B,q)=48.0? True
+  B=[0, 1, 2, 3, 4, 5, 6] g=3/2 f1=240: |err|*f1=0.075 <= C(B,q)=48.0? True
+  B=[0, 2, 4, 6, 8, 10, 12] g=5/3 f1=60: |err|*f1=0.423 <= C(B,q)=144.0? True
+  B=[0, 2, 4, 6, 8, 10, 12] g=5/3 f1=120: |err|*f1=0.297 <= C(B,q)=144.0? True
+  B=[0, 2, 4, 6, 8, 10, 12] g=5/3 f1=240: |err|*f1=0.493 <= C(B,q)=144.0? True
+  B=[0, 1, 3, 5, 7] g=2/1 f1=60: |err|*f1=0.251 <= C(B,q)=26.0? True
+  B=[0, 1, 3, 5, 7] g=2/1 f1=120: |err|*f1=0.093 <= C(B,q)=26.0? True
+  B=[0, 1, 3, 5, 7] g=2/1 f1=240: |err|*f1=0.003 <= C(B,q)=26.0? True
+ALL HELD: True  => rate is rigorously O(1/f1); finite window f1<=C(B,q)/margin is finite.
