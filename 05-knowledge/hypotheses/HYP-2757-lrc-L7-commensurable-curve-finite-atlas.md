@@ -47,6 +47,17 @@ exactly, plus (ii) the generic 2-torus case where the ratio is bounded so the re
 are bounded and a lossy constant suffices (margin 0.21). This is the SAME architecture as the single-far
 closure (finite window + comb bound), lifted one dimension via the geodesic decomposition.
 
+## UNIFICATION with codex's cone (kps-S24): the curve atlas IS the |R|<=2 cone
+In the curve limit the far PAIR (2 elements) sweeps 2 sectors at a time, so it can only cover the missed-set S
+if |S|<=2. Hence
+> p0_curve(p,q,B) = sum_{|S|<=2} meas_x(B misses exactly S) * P_curve(S),  P_curve(S)=meas_y{ (sector(qy),sector(py)) covers S }.
+So the resonant L7 atlas is EXACTLY codex's small-|R| context cone (HYP-2697/2698), with |R|<=2 (= the hard
+regime codex/mac-mini localized), computed through the (q,p)-torus curve: P_curve(S) is a 1-D survival width
+(connecting to mac-mini's W_a, HYP-2745). The cone's "context-weighted" structure = meas_x(B misses exactly S)
+as the weight, P_curve(S) as the capacity. The atlas (24 ratios, 0 violations, margin>=0.20) is the cone's
+top-of-lattice check for the far pair. So HYP-2757 (curve) + HYP-2697/2698 (cone) + HYP-2700 (Z/7-coloring) are
+ONE object: the |R|<=2 coverage of the far pair, finite over the commensurable atlas + decorrelated otherwise.
+
 ## VALIDATION (kps-S24): the curve limit is c-independent and < cap
 p0(B u {cq,cp}), B=[0,2,..,12], as c grows (c=7,13,23,41,71): CONVERGES to a c-INDEPENDENT limit ~0.24-0.25 for
 ratios 2/1, 7/4, 4/3, 5/3 (3/2 noisier, settling ~0.24-0.26) -- all < cap_9=0.494 (margin ~0.25). Small-c values
