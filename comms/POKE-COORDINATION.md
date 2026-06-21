@@ -1,3 +1,26 @@
+## mac-mini update: HYP-2713 Single-Far Closer & Consec Global-Max
+
+The latest push (SHA 46b0) by **Eliott Cassidy** (mac-mini-S8) provides the structural closer for the "Single-Far" branch of the True-Wide proof and formalizes the **consecutive global maximum** for coverage measure. This update assembles the final route for the LRC(14) certificate.
+
+- **HYP-2713: Single-Far Limit Closer:**
+    - The hypothesis provides the exact limit for the coverage measure ($\text{meas } S_7$) when a single far runner is added to a bounded speed prefix $B$.
+    - **Mathematical Formulation:** $\text{meas } S_7(B \cup \{w \to \infty\}) = \text{meas } S_7(B) + \frac{1}{7} m_1(B)$, where $m_1(B)$ is the measure of atoms where the prefix $B$ misses exactly one sector.
+    - **Bounding Inequalities:**
+        - For $k=8$: $L = 289/1470 \approx 0.197$ (Cap Margin: 0.185)
+        - For $k=9$: $L = 621/1715 \approx 0.362$ (Cap Margin: 0.132)
+        - For $k=10$: $L = 1229/2744 \approx 0.448$ (Cap Margin: 0.157)
+    - **Proof Structure:** It proves that the "comfortable" margins (0.13–0.18) between these limits and the **Sector Cap** ($cap_k$) remove the need for a tight floor gate analysis for single-far rows. The finite window for verification ($W^*$) is reduced to approximately 30 configurations due to $O(1/w)$ error decay from the transfer operator's non-zero modes.
+
+- **Consecutive Global-Max (Sector Route Assembly):**
+    - The "sector route assembly" constructs the final proof by identifying the **consecutive block** as the global extremizer for coverage probability across all True-Wide regimes.
+    - **Bridging Domains:** It bridges the local discrete checks (for $k=8$ and tight prefixes) with the global analytic bounds. By showing that 0/4000 random gcd-1 shapes (span $\le 100$) exceed the consecutive block's coverage, it establishes a "consec-max" baseline.
+    - **Final Route:** The proof is assembled into two stages:
+        1. **Consecutive Global Max:** Prove the consecutive block is the supremum for all True-Wide shapes.
+        2. **Tabulated Cap Satisfaction:** Verify that the consecutive block itself satisfies the Sector Cap ($cap_k$) for all relevant $k$, which is already confirmed to have a comfortable margin.
+
+- **Impact on Coordination:**
+    - This update resolves **OPEN-Q-108** for the single-far case, effectively closing one of the last major proof obligations. It shifts the project from "finding a bound" to "tabulating a comfortable margin," significantly de-risking the final certificate.
+
 ## Eliott Cassidy update: THM-560 OCF Degree Ladder & Quantum Unification
 
 The latest push (SHA dfd9) by **Eliott Cassidy** (kps-S22) introduces a major algebraic result for the Odd-Cycle Function (OCF) and a physical unification that bridges tournaments with quantum information theory.
@@ -33,7 +56,7 @@ The latest push (SHA 0786) by **Eliott Cassidy** (mac-mini-S7) provides a deep p
 - **The Universal Seam (Cut vs. Cycle):**
     - The session identified a fundamental "seam" that bisects all borrowed structural ideas into two categories:
         1. **Cut-Side (Local/2-body):** Includes Gibbs measures, Hopfield networks, Ising models, and the score partition function. These are classically tractable and represent the "cheap" part of the tournament.
-        2. **Cycle-Side (Global/Many-body):** Includes Even-Graphs ($E_n$), crossing numbers, and the aggregate lonely runner cover. These are "dear" and represent the "hard" part of the proof.
+        2. **Cycle-Side (Global/Many-body):** Includes Even-Graphs ($E_n$), crossing numbers, and the aggregate lonely runner cover. These are "dear" and represent the "hard" part of the tournament.
     - **MacWilliams Duality (HYP-2710):** Proves that the Cut-Code and the Cycle-Code (Even-Graph space) are exact MacWilliams duals.
 
 - **HYP-2712: Crossing-Even-Page Bridge:**
