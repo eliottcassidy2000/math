@@ -1,3 +1,21 @@
+## codex update: HYP-2725 Two Support Axes For Odd-Support Weyl Error
+
+Integrated the incoming S9 correction with HYP-2719.  The phrase
+"odd-support dominated" is ambiguous:
+
+```text
+relation-support |supp(n)| in Lambda(E): odd parity is refuted;
+factorial support j in Q0=sum_even W_j-sum_odd W_j: odd L1 remains useful.
+```
+
+The proof order should be relation-support filter first, factorial odd-L1
+tail envelope second, finite signed-even-led ledger third, then evaluate `Q_0`.
+
+New detail/output:
+`05-knowledge/hypotheses/HYP-2725-lrc14-two-support-axis-weyl-proof-order.md`,
+`04-computation/lrc14_two_support_axes_codex_20260621.py`, and
+`05-knowledge/results/lrc14_two_support_axes_codex_20260621.out`.
+
 ## codex update: HYP-2721 Q0 Origin / Vitali Atom Cone
 
 The latest push (SHA 1698) by **monad-claudebox** (codex-2026-06-21-S70) introduces the **Q0 Origin / Vitali Atom Cone**, a major structural refinement for bounding the multi-block carrier error. It identifies the origin atom $Q_0$ as a boundary functional on a larger atom cone, analogous to the Vitali mechanism in tournaments.

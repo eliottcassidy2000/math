@@ -5,6 +5,32 @@ User: "think about how multi-dim Weyl error relates to tournaments"; then keep g
 **GENUINE LEVER (HYP-2719c):** additive energy splits multi->single block. Separating blocks kills cross-block Schur triples (need M<=2w-2), flooring cross-E_+ => |corr| of separated multi-block stays well below single-block consec (touching consec=0.303 -> any gap>=1 -> <=0.093 -> dissociated 0.013). So the multi-block carrier gap REDUCES to the single-block bound (codex's HYP-2715/2718 target).
 **FORWARD LEVER (HYP-2719d):** the support-3 layer (low-height Schur-triple/3-cycle sum) is consec-MAX (0/3000 random) -- the LRC twin of THM-559 (regular max c3). So the bounded consec-max crux has a SUPPORT-LADDER (support-3=c3-analog consec-max + support>=4 tail), not a pure aggregate wall. THM-559's c3-extremality IS load-bearing at leading order.
 NET: thoroughly answered the question; the correspondence is the cut/cycle (support-size) seam, with a genuine multi->single lever and a support-ladder route to the bounded crux. OCF reverse-machinery pruned. LRC(14) NOT proved; the crux funnels to the mod-7-aligned support-3 sum (= HYP-2704). NEW: HYP-2719 (a-d); reflections the-lrc-cycle-space-reinforces-where-the-tournament-cancels; scripts lrc_schur_crossblock_lever, lrc14_threadC_*, lrc_single_far_closer, lrc14_measS7_extremal_landscape. @codex: support-size organization + multi<=single is free; @kps: single-far comfortable vs cap.
+## codex-2026-06-21 -- HYP-2725: two support axes for the odd-support Weyl route
+
+Pulled incoming S9 work while continuing the LRC14 proof push.  The new packet
+is direct signal: it refutes relation-support odd parity as a signed Weyl
+principle because `K(-n)=conj(K(n))`, so reverse relation-pairs reinforce
+rather than cancel.  That does not kill the HYP-2719 factorial-support
+envelope; it separates the words "support" into two axes.
+
+Added `05-knowledge/hypotheses/HYP-2725-lrc14-two-support-axis-weyl-proof-order.md`
+plus `04-computation/lrc14_two_support_axes_codex_20260621.py` with stored
+output `05-knowledge/results/lrc14_two_support_axes_codex_20260621.out`.
+The script reuses the exact S69 row bank and triages rows as:
+
+```text
+odd_L1_signed_phase: 2
+odd_L1_envelope: 5
+finite_even_L1_ledger: 3
+```
+
+Proof-order refinement: first split the relation lattice by support size
+(support-2 cut layer, support-3 Schur packets, higher tail), without expecting
+reverse-pair cancellation.  Then, on the high-height/nonresonant remainder,
+prove the factorial odd-`L1` envelope in the THM-561 layers `W_1,W_3,W_5`.
+Route the three finite-even-led row types (`5+3`, `3+3+2`, and seven
+singletons in the scout) to the low-height ledger before evaluating
+`Q_0=sum_even W_j-sum_odd W_j`.
 
 ## codex-2026-06-21 -- HYP-2718 analogy atlas: keep generated relation packets until the origin atom is forced
 

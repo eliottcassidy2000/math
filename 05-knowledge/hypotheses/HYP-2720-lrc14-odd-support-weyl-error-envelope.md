@@ -146,6 +146,31 @@ is useful: HYP-2719 should select low-support carrier packets in the Fourier
 relation lattice, and HYP-2720 should then tax the selected packets in the
 factorial-origin basis.  One should not replace one ledger by the other.
 
+## S9/HYP-2725 Compatibility Addendum
+
+Incoming S9 work refutes a different statement with a similar name:
+relation-support odd dominance in the Fourier lattice.  There, support means
+`|supp(n)|` for relation vectors `n in Lambda(E)`, and reverse-pair
+cancellation is false because
+
+```text
+K(-n)=conj(K(n)).
+```
+
+So relation-pairs reinforce as `2 Re K(n)`.  HYP-2719's surviving claim is
+not that relation-support parity is odd-dominated.  It is the factorial-axis
+claim that, after relation-support filtering, the HYP-2718 origin-atom tail
+should admit an odd `L1` envelope in the layers `W_1,W_3,W_5`.
+
+HYP-2725 records the two-axis proof order:
+
+```text
+relation-support filter first;
+factorial odd-L1 envelope second;
+finite even-led packets third;
+then evaluate Q_0.
+```
+
 ## Tournament Analysis
 
 Vertices are tested split rows.  Pairwise observable:

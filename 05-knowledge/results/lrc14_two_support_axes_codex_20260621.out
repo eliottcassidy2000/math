@@ -1,0 +1,42 @@
+HYP-2725 two-support-axis ledger for the LRC14 Weyl/origin error
+Exact S69 factorial-support arithmetic; relation-support lesson from S9.
+
+AXIS WARNING
+  relation-support parity is not the proof rule:
+    K(-n)=conj(K(n)), so reverse relation-pairs reinforce as 2 Re K(n).
+  keep support-size as cut/cycle structure, not as odd/even cancellation.
+
+FACTORIAL-SUPPORT TRIAGE
+  class                      odd_share     |Q0|/(cap-product)     Q0 sign  row
+  odd_L1_signed_phase        0.514337764   2149952845183/157936471128720 (0.013612770)  +     two 4-blocks, positive Q0
+  odd_L1_signed_phase        0.513936758   1092873068027/90905294428740 (0.012022106)  +     two 4-blocks, positive Q0 high
+  odd_L1_envelope            0.632953886   31819172121217/652959979562952 (0.048730662)  -     five 2-blocks
+  odd_L1_envelope            0.525330538   138573539/3120751710 (0.044403897)  -     two 4-blocks, high relation phase
+  odd_L1_envelope            0.502847619   591755879/15083633265 (0.039231654)  -     two 4-blocks, ratio 2:1
+  odd_L1_envelope            0.565010383   167874551/5373772584 (0.031239608)  -     two 4-blocks, wider gap
+  odd_L1_envelope            0.522773538   45438887/2080501140 (0.021840357)  -     two 4-blocks, moderate gap
+  finite_even_L1_ledger      0.483336578   910424533191000/29642787224726503 (0.030713189)  -     seven singleton carriers
+  finite_even_L1_ledger      0.478930464   3117465/349976257 (0.008907647)  -     5+3 split
+  finite_even_L1_ledger      0.497536241   1135858966/498120762465 (0.002280288)  -     3+3+2 split
+
+AGGREGATES
+  finite_even_L1_ledger: 3
+  odd_L1_envelope: 5
+  odd_L1_signed_phase: 2
+  odd_L1_signed_phase: sum|Q0|=30832269182597/3586396720294080 (0.008597005) odd_L1=9300589957992169/59534185556881728 (0.156222679) even_L1=3138847960557521/21262209127457760 (0.147625674) max_cap_risk=2149952845183/157936471128720 (0.013612770)
+  odd_L1_envelope: sum|Q0|=15115844104659428563/209541316986203590080 (0.072137774) odd_L1=20849896882159651651/28573815952664125920 (0.729685420) even_L1=374281355562485905991/628623950958610770240 (0.595397861) max_cap_risk=31819172121217/652959979562952 (0.048730662)
+  finite_even_L1_ledger: sum|Q0|=1146698010560821277849/77016627448918530413040 (0.014888967) odd_L1=2467777513339255326403/8695425679716608272440 (0.283801806) even_L1=14639008354632689016539/49010581103857246626480 (0.298690773) max_cap_risk=910424533191000/29642787224726503 (0.030713189)
+
+PROOF ORDER
+  1. Relation-support axis: split support-2 cut terms, support-3 Schur
+     packets, and higher support; do not expect reverse-pair cancellation.
+  2. Factorial-support axis: on the high-height/nonresonant tail, prove
+     an odd-L1 envelope for W_1+W_3+W_5 versus W_0+W_2+W_4+W_6.
+  3. Route finite_even_L1_ledger rows and signed-even-led packets through
+     the HYP-2717/HYP-2714 low-height ledger.
+  4. Only after those filters evaluate Q0=even_support-odd_support.
+
+SYNTHESIS
+  Odd support remains useful only on the factorial axis, as an L1
+  envelope.  On the relation-lattice axis, parity is a false friend;
+  support size, especially support-3 Schur packets, is the live geometry.
