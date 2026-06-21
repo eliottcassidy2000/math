@@ -1,7 +1,7 @@
 ---
 id: HYP-2757
 title: LRC(14) L7 resonant tail = a FINITE atlas of 1-D torus-curve coverages (commensurable far pairs trace closed geodesics)
-status: VALIDATED (curve limit converges, c-independent, <cap); finite-atlas check + non-resonant bound remain
+status: ATLAS RUN -- finite (24 ratios q<=8) & SAFE (max p0_curve 0.247/0.401 k=9/10, 0 violations, margin>=0.20); non-resonant tail + rigor remain
 source: kind-pasteur-2026-06-21-S24
 depends_on:
   - OPEN-Q-108
@@ -53,6 +53,15 @@ ratios 2/1, 7/4, 4/3, 5/3 (3/2 noisier, settling ~0.24-0.26) -- all < cap_9=0.49
 (0.36-0.40 at c=7) are the finite-c / near-merge regime (the comb correction, decaying). So the resonant-ratio
 curve coverages are FINITE and SAFE. Generic (non-resonant) ratios decorrelate LOWER (full 2-torus, ~0.05) at
 large c. So L7's worst LARGE-scale cases are the commensurable (curve) ones, all comfortable.
+
+## ATLAS RESULT (kps-S24, lrc_L7_resonant_atlas_kps.out): FINITE & SAFE
+24 commensurable ratios p/q in (1,2.15] with q<=8; curve coverage p0(B u {701q,701p}) over 60+ bounded bases:
+- k=9: 1488 points, **max p0_curve = 0.2468** (cap 0.4943, margin 0.2475), **0 violations**, worst 5/3.
+- k=10: 1488 points, **max p0_curve = 0.4009** (cap 0.6044, margin 0.2035), **0 violations**, worst 2/1.
+So the resonant atlas is FINITE and SAFE. For q>8 the ratio is "more irrational" => the 2D discrepancy is
+smaller => p0 decorrelates LOWER (toward the full 2-torus value ~0.05). So the WORST L7 cases are the low-q
+resonances (in the atlas), all < cap. L7 closure = [finite atlas q<=Q0~8, SAFE, VERIFIED] + [q>Q0 decorrelated,
+2D ET-Koksma tail bound] -- mirroring the single-far [finite window + comb bound]. 
 
 ## Tests / next
 - Compute `p0_curve(p,q,B)` for all `p/q in (1,2.15)`, `q<=8`, and bounded bases B; verify `<= cap_k` with
