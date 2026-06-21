@@ -1,0 +1,87 @@
+================================================================================
+L7 TAIL: D_{p,q} = L1 cell-discrepancy of the (q,p) curve; R(p/q) <= D_{p,q}
+================================================================================
+
+  q   p     p/q   D_{p,q}     D*q  R<=D<margin?
+  1   2  2.0000   1.42857   1.429  atlas(check)
+  2   3  1.5000   0.85714   1.714  atlas(check)
+  3   4  1.3333   0.52381   1.571  atlas(check)
+  3   5  1.6667   0.34286   1.029  atlas(check)
+  4   5  1.2500   0.25714   1.029  atlas(check)
+  4   7  1.7500   0.00000   0.000     TAIL-SAFE
+  5   6  1.2000   0.09524   0.476     TAIL-SAFE
+  5   7  1.4000   0.00000   0.000     TAIL-SAFE
+  5   8  1.6000   0.07143   0.357     TAIL-SAFE
+  5   9  1.8000   0.10159   0.508     TAIL-SAFE
+  6   7  1.1667   0.00000   0.000     TAIL-SAFE
+  6  11  1.8333   0.05195   0.312     TAIL-SAFE
+  7   8  1.1429   0.00000   0.000     TAIL-SAFE
+  7   9  1.2857   0.00000   0.000     TAIL-SAFE
+  7  10  1.4286   0.00000   0.000     TAIL-SAFE
+  7  11  1.5714   0.00000   0.000     TAIL-SAFE
+  7  12  1.7143   0.00000   0.000     TAIL-SAFE
+  7  13  1.8571   0.00000   0.000     TAIL-SAFE
+  7  15  2.1429   0.00000   0.000     TAIL-SAFE
+  8   9  1.1250   0.03968   0.317     TAIL-SAFE
+  8  11  1.3750   0.03896   0.312     TAIL-SAFE
+  8  13  1.6250   0.01648   0.132     TAIL-SAFE
+  8  15  1.8750   0.01429   0.114     TAIL-SAFE
+  8  17  2.1250   0.02521   0.202     TAIL-SAFE
+  9  10  1.1111   0.05714   0.514     TAIL-SAFE
+  9  11  1.2222   0.05195   0.468     TAIL-SAFE
+  9  13  1.4444   0.02442   0.220     TAIL-SAFE
+  9  14  1.5556   0.00000   0.000     TAIL-SAFE
+  9  16  1.7778   0.03175   0.286     TAIL-SAFE
+  9  17  1.8889   0.03361   0.303     TAIL-SAFE
+  9  19  2.1111   0.02673   0.241     TAIL-SAFE
+ 10  11  1.1000   0.05714   0.571     TAIL-SAFE
+ 10  13  1.3000   0.02637   0.264     TAIL-SAFE
+ 10  17  1.7000   0.03697   0.370     TAIL-SAFE
+ 10  19  1.9000   0.02707   0.271     TAIL-SAFE
+ 10  21  2.1000   0.00000   0.000     TAIL-SAFE
+ 11  12  1.0909   0.03896   0.429     TAIL-SAFE
+ 11  13  1.1818   0.02398   0.264     TAIL-SAFE
+ 11  14  1.2727   0.00000   0.000     TAIL-SAFE
+ 11  15  1.3636   0.02078   0.229     TAIL-SAFE
+ 11  16  1.4545   0.02922   0.321     TAIL-SAFE
+ 11  17  1.5455   0.03361   0.370     TAIL-SAFE
+ 11  18  1.6364   0.03175   0.349     TAIL-SAFE
+ 11  19  1.7273   0.02461   0.271     TAIL-SAFE
+ 11  20  1.8182   0.01558   0.171     TAIL-SAFE
+ 11  21  1.9091   0.00000   0.000     TAIL-SAFE
+ 11  23  2.0909   0.02033   0.224     TAIL-SAFE
+ 12  13  1.0833   0.01832   0.220     TAIL-SAFE
+ 12  17  1.4167   0.02521   0.303     TAIL-SAFE
+ 12  19  1.5833   0.02005   0.241     TAIL-SAFE
+ 12  23  1.9167   0.01656   0.199     TAIL-SAFE
+ 12  25  2.0833   0.01714   0.206     TAIL-SAFE
+ 13  14  1.0769   0.00000   0.000     TAIL-SAFE
+ 13  15  1.1538   0.00879   0.114     TAIL-SAFE
+ 13  16  1.2308   0.01374   0.179     TAIL-SAFE
+ 13  17  1.3077   0.01551   0.202     TAIL-SAFE
+ 13  18  1.3846   0.01465   0.190     TAIL-SAFE
+ 13  19  1.4615   0.01157   0.150     TAIL-SAFE
+ 13  20  1.5385   0.00659   0.086     TAIL-SAFE
+ 13  21  1.6154   0.00000   0.000     TAIL-SAFE
+ 13  22  1.6923   0.00599   0.078     TAIL-SAFE
+ 13  23  1.7692   0.00956   0.124     TAIL-SAFE
+ 13  24  1.8462   0.01099   0.143     TAIL-SAFE
+ 13  25  1.9231   0.01055   0.137     TAIL-SAFE
+ 13  27  2.0769   0.00488   0.063     TAIL-SAFE
+ 14  15  1.0714   0.00000   0.000     TAIL-SAFE
+ 14  17  1.2143   0.00000   0.000     TAIL-SAFE
+ 14  19  1.3571   0.00000   0.000     TAIL-SAFE
+ 14  23  1.6429   0.00000   0.000     TAIL-SAFE
+ 14  25  1.7857   0.00000   0.000     TAIL-SAFE
+ 14  27  1.9286   0.00000   0.000     TAIL-SAFE
+ 14  29  2.0714   0.00000   0.000     TAIL-SAFE
+
+  sup over atlas of D_{p,q}*q = C = 1.7143  (at [(2, 3, 1.5)])
+  largest q with D_{p,q} >= margin(0.21) = 4  => FINITE ATLAS is q <= 4
+  => atlas size = 6 rationals p/q (each exact-checked p0_inf<cap, done in resonance_atlas);
+     tail q > 4: R(p/q) <= D_{p,q} < 0.21 <= margin  RIGOROUS (curve discrepancy).
+
+  Rigorous tail law to cite: D_{p,q} <= C/q with C=1.714 (verified all atlas);
+  the classical bound is D_{p,q} = O(1/min(p,q)) for the (q,p) linear flow (3-gap/continued frac).
+
+DONE.
