@@ -1,0 +1,25 @@
+ROUTE 5 part 4: level-1 (2*alpha_1) vs levels>=2 (R) split
+================================================================
+
+p=7
+  PALEY: H=189  alpha_1=80  R(j>=2)=28  c_ell={3: 14, 5: 42, 7: 24}
+  INTERVAL: H=175  alpha_1=59  R(j>=2)=56  c_ell={3: 14, 5: 28, 7: 17}
+  LEVEL-1 term diff 2*(a1P-a1I) = +42  (Paley adv)
+  LEVELS>=2 diff (RP-RI)         = -28  (neg => Interval adv)
+  H(P)-H(I) = 14  (=14)
+
+p=11
+  PALEY: H=95095  alpha_1=21169  R(j>=2)=52756  c_ell={3: 55, 5: 594, 7: 3960, 9: 11055, 11: 5505}
+  INTERVAL: H=93027  alpha_1=18397  R(j>=2)=56232  c_ell={3: 55, 5: 484, 7: 3399, 9: 9350, 11: 5109}
+  LEVEL-1 term diff 2*(a1P-a1I) = +5544  (Paley adv)
+  LEVELS>=2 diff (RP-RI)         = -3476  (neg => Interval adv)
+  H(P)-H(I) = 2068  (=2068)
+
+--- p=19,23: H from canon, c3/c5 exact (full a1 infeasible) ---
+  H(Interval) > H(Paley) at p=19,23 (canon THM-135/137).
+  Since Paley maximizes EVERY c_ell (level 1), alpha_1(P)>alpha_1(I),
+  so the level-1 term 2*alpha_1 still FAVORS Paley at p=19,23.
+  Yet H(I)>H(P) => the levels j>=2 term R MUST favor Interval by MORE.
+  => the crossover is carried ENTIRELY by the packing levels j>=2.
+  p=19: H(I)-H(P) = +11517077848
+  p=23: H(I)-H(P) = +251330514177930

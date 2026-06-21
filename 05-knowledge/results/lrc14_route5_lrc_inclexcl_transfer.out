@@ -1,0 +1,45 @@
+##############################################################################
+# ROUTE 5 part 5: LRC inclusion-exclusion level-sum vs OCF transfer
+##############################################################################
+
+consec_8 = [0, 1, 2, 3, 4, 5, 6, 7]
+measS7(consec_8) = 481/1470 = 0.327211
+
+EXACT-empty level masses (measure with EXACTLY k sectors empty):
+  k=0: 481/1470 = 0.327211
+  k=1: 359/1470 = 0.244218
+  k=2: 47/294 = 0.159864
+  k=3: 37/490 = 0.075510
+  k=4: 59/1470 = 0.040136
+  k=5: 1/98 = 0.010204
+  (k=0 = measure fully covered = measS7 contribution)
+
+MISS_k = sum_{|S|=k} P(all of S empty):
+  MISS_0 = 6/7 = 0.857143
+  MISS_1 = 491/490 = 1.002041
+  MISS_2 = 536/735 = 0.729252
+  MISS_3 = 71/210 = 0.338095
+  MISS_4 = 67/735 = 0.091156
+  MISS_5 = 1/98 = 0.010204
+  MISS_6 = 0 = 0.000000
+
+inclusion-exclusion measS7 = sum_k (-1)^k MISS_k = 481/1470 = 0.327211
+matches measS7? True
+
+Walsh check: (M0/64) * sum_S qhat_S = 481/1470 vs measS7=481/1470  match=True
+all qhat_S >= 0 (Fourier-positive)? True
+
+--- level-mass comparison: consec vs other full-residue k=8 shapes ---
+                   shape       measS7 | MISS_1 MISS_2 MISS_3 MISS_4 MISS_5 MISS_6
+                  consec     0.327211 | 1.0020 0.7293 0.3381 0.0912 0.0102 0.0000
+                  0..6,8     0.208333 | 1.1036 0.7238 0.3619 0.1071 0.0143 0.0000
+                  0..6,9     0.188095 | 1.1127 0.6905 0.3238 0.0849 0.0079 0.0000
+                 0..6,13     0.184249 | 1.1399 0.6641 0.2465 0.0549 0.0055 0.0000
+       0,2,4,6,8,10,12,7     0.243878 | 1.1672 0.8600 0.4026 0.1083 0.0119 0.0000
+                0..5,7,8  NOT full-residue, skip
+
+  consec advantage per MISS level (consec - other), weighted by (-1)^k:
+  vs               0..6,8: per-level (-1)^k*(consec-other) = ['+0.1015', '+0.0054', '+0.0238', '-0.0160', '+0.0041', '+0.0000']  net=+0.118878 (measS7 diff=+0.118878)
+  vs               0..6,9: per-level (-1)^k*(consec-other) = ['+0.1107', '+0.0388', '-0.0143', '+0.0062', '-0.0023', '+0.0000']  net=+0.139116 (measS7 diff=+0.139116)
+  vs              0..6,13: per-level (-1)^k*(consec-other) = ['+0.1379', '+0.0651', '-0.0916', '+0.0362', '-0.0047', '+0.0000']  net=+0.142962 (measS7 diff=+0.142962)
+  vs    0,2,4,6,8,10,12,7: per-level (-1)^k*(consec-other) = ['+0.1651', '-0.1308', '+0.0645', '-0.0172', '+0.0017', '+0.0000']  net=+0.083333 (measS7 diff=+0.083333)

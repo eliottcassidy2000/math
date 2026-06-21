@@ -1,0 +1,44 @@
+====================================================================================
+ROUTE 3 v3: the HS SYMMETRISATION per-cell monotonicity (PORTS) + obstruction
+====================================================================================
+
+[1] EXHAUSTIVE: W_a(E) <= W_a(E ∪ -E) for every cell a, every E in stratum?
+    (The covered set of E is a SUBSET of the covered set of E∪-E, cell-wise.)
+====================================================================================
+  tested (E,a) pairs = 17507
+  monotonicity W_a(E) <= W_a(sym) violations = 0
+  strict increases = 17150
+  covered-set SUBSET violations (proof core) = 0
+  >>> VERIFIED EXHAUSTIVELY: symmetrisation never decreases W_a (cell-wise).
+      Reason is the trivial SUBSET coupling: E ⊆ E∪-E => hitset only grows
+      => covered set only grows => W_a only grows.  (Monotone in the clock set.)
+
+====================================================================================
+[2] THE HS REFLECTION proper: W_a(-E) = W_{7-a}(E)  (cell-reflection symmetry).
+    So W_a(E∪-E) >= max(W_a(E), W_a(-E)) = max(W_a(E), W_{7-a}(E)).
+    The symmetrised coverage dominates BOTH a config and its cell-mirror.
+====================================================================================
+  E=[0, 1, 2, 3, 4, 5, 6, 7]: W_a(-E)=W_(7-a)(E): True; sym dominates both mirrors: True
+  E=[0, 1, 2, 3, 4, 5, 6, 8]: W_a(-E)=W_(7-a)(E): True; sym dominates both mirrors: True
+  E=[0, 2, 3, 4, 5, 6, 7, 8]: W_a(-E)=W_(7-a)(E): True; sym dominates both mirrors: True
+
+====================================================================================
+[3] OBSTRUCTION to a per-cell wall proof: consec TRADES cells for the SUM.
+    For each rival that beats consec on some cell, show it LOSES on others,
+    so the win is purely AGGREGATE (no per-cell, no naive-reflection proof).
+====================================================================================
+  k=8 stratum 319, consec W_a=['13/294', '13/294', '89/1470', '17/294', '13/294', '8/105'] sum=0.327211
+  shapes beating consec on >=1 cell = 6
+  for each: (cells won, cells lost, total margin vs consec)
+     (0, 2, 3, 4, 5, 6, 7, 8): won cells [1], lost cells [2, 3, 4, 5, 6], total dmeasS7=-0.053571
+     (0, 2, 4, 6, 7, 8, 10, 12): won cells [1], lost cells [2, 3, 4, 5, 6], total dmeasS7=-0.083333
+     (0, 1, 2, 4, 5, 6, 7, 10): won cells [5], lost cells [1, 2, 3, 4, 6], total dmeasS7=-0.107143
+     (0, 3, 5, 6, 7, 8, 9, 11): won cells [1], lost cells [2, 3, 4, 5, 6], total dmeasS7=-0.132550
+     (0, 1, 2, 3, 11, 12, 13, 14): won cells [5], lost cells [1, 2, 3, 4, 6], total dmeasS7=-0.132762
+     (0, 1, 2, 3, 4, 6, 8, 12): won cells [2], lost cells [1, 3, 4, 5, 6], total dmeasS7=-0.190306
+
+  >>> EVERY cell-beater has total dmeasS7 < 0: consec's per-cell losses are
+      always OVER-COMPENSATED by its wins elsewhere.  The extremality is
+      AGGREGATE (bottleneck/harmonic), NOT per-cell -> no reflection lemma
+      acting on a SINGLE W_a can prove the wall.
+  all cell-beaters have negative total margin: True
