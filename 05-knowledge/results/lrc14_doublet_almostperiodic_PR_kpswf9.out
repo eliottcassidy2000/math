@@ -20,3 +20,14 @@ E_M = consec_{K-2} U {M,M+1}    g(M)=M*(p0(E_M)-Phi)=P(M)+R(M)   target margin 0
 
 [STEP 2/3] P/R split (period-avg) + decay of R; global sup g(M)=M*Delta_M
 --------------------------------------------------------------------------------------
+
+  K=8  P_per=7*lcm(base)=420  Mmax=4200
+    global sup_M g(M) over [15,4200] = 1.38207 at M=3786  (15*H_K=1.7311)  sup_g<15*H_K? True
+    period-max P(r): max=1.38202  min=-0.76330
+    R decay (tail from threshold M0):
+          M0     sup|R|    M0*sup|R|  sup M|R|(tail)     sup M^2|R|
+          15    0.02974       0.4461          0.9948        1926.24
+         100    0.00621       0.6211          0.9948        1926.24
+         300    0.00234       0.7035          0.8656        1926.24
+        1000    0.00065       0.6473          0.6693        1926.24
+        2000    0.00015       0.2903          0.4942        1926.24
