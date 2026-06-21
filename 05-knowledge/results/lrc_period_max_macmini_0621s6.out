@@ -1,0 +1,6 @@
+k=8: period P=420  periodic? True  period-max(Delta_w*w)=1.00000=1 at w=175
+      margin=0.18486  threshold 15*margin=2.77296  =>  max<thr? True  SINGLE-FAR CLOSED for all w>=15
+k=9: period P=2940  periodic? True  period-max(Delta_w*w)=0.87755=43/49 at w=1659
+      margin=0.13216  threshold 15*margin=1.98235  =>  max<thr? True  SINGLE-FAR CLOSED for all w>=15
+k=10: period P=5880  periodic? True  period-max(Delta_w*w)=1.02755=1007/980 at w=231
+      margin=0.12354  threshold 15*margin=1.85313  =>  max<thr? True  SINGLE-FAR CLOSED for all w>=15
