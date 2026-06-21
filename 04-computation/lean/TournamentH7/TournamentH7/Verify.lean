@@ -389,6 +389,42 @@ theorem lrc_factorial_delsarte_bound_k11_audit
   LonelyRunner.FactorialAtom.delsarte_bound_k11 q hq
 #print axioms lrc_factorial_delsarte_bound_k11_audit
 
+theorem lrc_factorial_gK8_all_binding_rows_audit :
+    ((2633 : Int) * 588 <= 2243 * 735) ∧
+      ((3259 : Int) * 2002 <= 9895 * 735) ∧
+      ((37 : Int) * 91 <= 550 * 7) ∧
+      ((26603 : Int) * 91 <= 660 * 4410) ∧
+      ((29287 : Int) * 7 <= 60 * 4410) ∧
+      ((61529 : Int) <= 10 * 8820) :=
+  LonelyRunner.FactorialAtom.capClear_gK8_all_binding_rows
+#print axioms lrc_factorial_gK8_all_binding_rows_audit
+
+/-! ### LRC14 q6 contraction arithmetic kernel -/
+
+theorem lrc_q6_consecK9_bound_exact_audit :
+    LonelyRunner.Q6Contraction.consecK9BoundNum * 5 =
+      3 * LonelyRunner.Q6Contraction.commonDen :=
+  LonelyRunner.Q6Contraction.consecK9_bound_exact
+#print axioms lrc_q6_consecK9_bound_exact_audit
+
+theorem lrc_q6_consecK10_bound_exact_audit :
+    LonelyRunner.Q6Contraction.consecK10BoundNum * 35 =
+      23 * LonelyRunner.Q6Contraction.commonDen :=
+  LonelyRunner.Q6Contraction.consecK10_bound_exact
+#print axioms lrc_q6_consecK10_bound_exact_audit
+
+theorem lrc_q6_consecK9_strict_contraction_audit : (3 : Nat) < 5 :=
+  LonelyRunner.Q6Contraction.consecK9_strict_contraction
+#print axioms lrc_q6_consecK9_strict_contraction_audit
+
+theorem lrc_q6_consecK10_strict_contraction_audit : (23 : Nat) < 35 :=
+  LonelyRunner.Q6Contraction.consecK10_strict_contraction
+#print axioms lrc_q6_consecK10_strict_contraction_audit
+
+theorem lrc_q6_generalScout_strict_contraction_audit : (33 : Nat) < 35 :=
+  LonelyRunner.Q6Contraction.generalScout_strict_contraction
+#print axioms lrc_q6_generalScout_strict_contraction_audit
+
 /-! ### LRC14 death-chain/live-depth quotient -/
 
 theorem lrc_cover_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :

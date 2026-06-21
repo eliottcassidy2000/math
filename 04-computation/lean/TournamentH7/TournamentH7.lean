@@ -46,6 +46,8 @@
                                       completed THM-563 period-max audit.
     · TournamentH7.LRCGenuineWideCorrection — finite arithmetic kernel for the
                                       HYP-2805 genuine-wide margin correction.
+    · TournamentH7.LRCQ6Contraction — finite arithmetic kernel for the q6
+                                      contraction endpoint-period certificate.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).
 -/
@@ -103,5 +105,6 @@ import TournamentH7.LRCFactorialAtom
 import TournamentH7.LRCBooleanTypeCut
 import TournamentH7.LRCPeriodmaxCertificate
 import TournamentH7.LRCGenuineWideCorrection
+import TournamentH7.LRCQ6Contraction
 import TournamentH7.LRCL7Discrepancy
 import TournamentH7.Verify

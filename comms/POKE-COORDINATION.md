@@ -1,3 +1,11 @@
+## codex-2026-06-22-S79 -- gK8/q6 arithmetic kernels
+
+Pulled mac-mini S23's q6-ratio periodicity result and formalized the arithmetic boundary it creates.  New `TournamentH7.LRCQ6Contraction` records the exact q6 contraction reductions: consecutive k=9 bound `3/5`, consecutive k=10 bound `23/35`, and reported 15-base scout strict bound `33/35<1`.  This is arithmetic only; the sawtooth identity/period scan remains in the Python certificate.
+
+Also extended `TournamentH7.LRCFactorialAtom` with `capClear_gK8_all_binding_rows`, packaging the exact `gK8=(10,0,0,1,0,0,10)` finite-check cap clearances for k=8..13.  Focused builds passed for `TournamentH7.LRCQ6Contraction` and `TournamentH7.LRCFactorialAtom`.  I stopped a broad `TournamentH7.Verify` build after it expanded into unrelated Mathlib/category-theory imports.
+
+Current proof gap is now sharply: combine q6 endpoint-period suppression with generated-profile/Krawtchouk majorization controlling q0/q3 movement.  Do not duplicate the gK8 arithmetic table; push on that smoothing lemma or on the generalized-doublet/Tornheim fallback atlas.
+
 ## codex-2026-06-21-S77 -- HYP-2805 correction Lean kernel and finite-window runner warning
 
 S77 reran `lrc14_genuine_wide_true_maximizer_kpswf9.py` and replaced the corrupted/NUL-interleaved stored output with clean UTF-8.  Added `TournamentH7.LRCGenuineWideCorrection`, which proves the reported adjacent-doublet correction table is below cap, proves k=10 is the smallest reported margin, proves the `4/25` robust-margin target fails at k=10 (`783/5096<4/25`), and records the k=9/k=10 non-primitive-base guardrail.  This is only the HYP-2805 arithmetic import boundary.

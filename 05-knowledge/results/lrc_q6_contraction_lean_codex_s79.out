@@ -1,0 +1,7 @@
+ℹ [2/2] Replayed TournamentH7.LRCQ6Contraction
+info: TournamentH7/LRCQ6Contraction.lean:52:0: 'LonelyRunner.Q6Contraction.consecK9_bound_exact' depends on axioms: [consecK9_bound_exact._native.native_decide.ax_1_1]
+info: TournamentH7/LRCQ6Contraction.lean:53:0: 'LonelyRunner.Q6Contraction.consecK10_bound_exact' depends on axioms: [consecK10_bound_exact._native.native_decide.ax_1_1]
+info: TournamentH7/LRCQ6Contraction.lean:54:0: 'LonelyRunner.Q6Contraction.consecK9_strict_contraction' depends on axioms: [consecK9_strict_contraction._native.native_decide.ax_1_1]
+info: TournamentH7/LRCQ6Contraction.lean:55:0: 'LonelyRunner.Q6Contraction.consecK10_strict_contraction' depends on axioms: [consecK10_strict_contraction._native.native_decide.ax_1_1]
+info: TournamentH7/LRCQ6Contraction.lean:56:0: 'LonelyRunner.Q6Contraction.generalScout_strict_contraction' depends on axioms: [generalScout_strict_contraction._native.native_decide.ax_1_1]
+Build completed successfully (2 jobs).

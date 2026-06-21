@@ -470,6 +470,10 @@ exact-rational enumeration in `lrc14_THREAD4_unified_gK8_all_rows_macmini.py`.  
 the per-row halves of the binding-row obligation (the per-shape half is `delsarte_bound_k8`).
 Stored as cross-multiplied integer inequalities so the module stays import-light. -/
 
+/-- `k=8` cap clearance: `max_E L_yK8 = 2633/735`, `10*cap_8 = 2243/588`, i.e.
+`2633*588 <= 2243*735`. -/
+theorem capClear_k8 : (2633 : Int) * 588 <= 2243 * 735 := by native_decide
+
 /-- `k=10` cap clearance: `max_E L_yK8 = 37/7`, `10*cap_10 = 550/91`, i.e. `37*91 <= 550*7`. -/
 theorem capClear_k10 : (37 : Int) * 91 <= 550 * 7 := by native_decide
 
@@ -481,6 +485,26 @@ theorem capClear_k12 : (29287 : Int) * 7 <= 60 * 4410 := by native_decide
 `10*cap_9 = 9895/2002`, i.e. `3259*2002 <= 9895*735` (margin `106901/210210`, ~37x the
 deg-3 `gK9` razor). -/
 theorem capClear_k9_sharp : (3259 : Int) * 2002 <= 9895 * 735 := by native_decide
+
+/-- `k=11` cap clearance: `max_E L_yK8 = 26603/4410`, `10*cap_11 = 660/91`, i.e.
+`26603*91 <= 660*4410`. -/
+theorem capClear_k11_sharp : (26603 : Int) * 91 <= 660 * 4410 := by native_decide
+
+/-- `k=13` cap clearance: `max_E L_yK8 = 61529/8820`, `10*cap_13 = 10`, i.e.
+`61529 <= 10*8820`. -/
+theorem capClear_k13_sharp : (61529 : Int) <= 10 * 8820 := by native_decide
+
+/-- The single `gK8` dual clears the exact finite-check table for every binding row
+`k=8..13`.  The individual inequalities are the cross-multiplied cap clearances above. -/
+theorem capClear_gK8_all_binding_rows :
+    ((2633 : Int) * 588 <= 2243 * 735) ∧
+      ((3259 : Int) * 2002 <= 9895 * 735) ∧
+      ((37 : Int) * 91 <= 550 * 7) ∧
+      ((26603 : Int) * 91 <= 660 * 4410) ∧
+      ((29287 : Int) * 7 <= 60 * 4410) ∧
+      ((61529 : Int) <= 10 * 8820) := by
+  exact ⟨capClear_k8, capClear_k9_sharp, capClear_k10,
+    capClear_k11_sharp, capClear_k12, capClear_k13_sharp⟩
 
 /-- Every scaled cheap direction is outside the generated tail45 strip.
 
@@ -534,9 +558,13 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms delsarte_bound_k12
 #print axioms gK12_values
 #print axioms gK12_dominates
+#print axioms capClear_k8
 #print axioms capClear_k10
 #print axioms capClear_k12
 #print axioms capClear_k9_sharp
+#print axioms capClear_k11_sharp
+#print axioms capClear_k13_sharp
+#print axioms capClear_gK8_all_binding_rows
 #print axioms cheapScaled_outside_tailStrip_bool
 #print axioms tailStrip_constants_order
 #print axioms cheapScaled_tailStripSide

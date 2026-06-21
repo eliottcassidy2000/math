@@ -135,6 +135,31 @@ So a complete proof should either:
 2. use the closed-form `12*zeta(3)` R-tail and finite-window atlas to isolate
    the low-`f` exceptions, then apply the asymptotic convolution lemma.
 
+### S79 formalization update
+
+S79 pulled mac-mini S23's direct q6-ratio periodicity certificate.  For fixed
+bounded base `B`,
+
+```text
+f*(q6(B u {f}) - q6(B)/7)
+```
+
+is a THM-563-style endpoint sawtooth sum with period `7*lcm(B)`.  The reported
+consecutive-base bounds are exact strict contractions: k=9 gives `3/5`, k=10
+gives `23/35`; the current 15-base scout reports worst bound `33/35<1`.
+
+Two Lean-facing arithmetic kernels now mark the import boundary:
+
+```text
+TournamentH7.LRCFactorialAtom.capClear_gK8_all_binding_rows
+TournamentH7.LRCQ6Contraction
+```
+
+The first packages the full bounded `gK8` finite-check table for k=8..13; the
+second records the exact q6-ratio reductions.  These do not prove the final
+concentration theorem: q0/q3 movement under generated-profile smoothing remains
+the live structural lemma.
+
 ## Exact S78 Evidence
 
 Script:

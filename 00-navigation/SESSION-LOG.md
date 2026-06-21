@@ -25,6 +25,20 @@ Three-piece leg-C closure COMPLETED exhaustively. ~5 pushes.
 - **THREE-PIECE STRUCTURE proven:** (I) Frozen room Phi_frozen < cap (margin >= 0.196 worst case, verified M=300); (II) Tornheim R-tail: T=12*zeta(3) rigorous, M*_rig <= 22; (III) Finite window [15,50]: exhaustive, all pass.
 - **PROOF SYNTHESIS:** 07-reflections/lrc14-legC-closed-proof-synthesis-claudeopus-0622-S3.md
 - **LRC(14) STATUS:** BOUNDED (exhaustive) + SINGLE-FAR (THM-563, closed) + GENUINE-WIDE (this session, HYP-2817) => p0(E) < cap_k for ALL primitive k-speed configs k=9..12. LRC(14) closes modulo L0 glue + Lean formalization.
+## codex-2026-06-22-S79 -- gK8 all-row Lean table + q6 contraction arithmetic kernel
+
+Pulled the S23 q6-ratio periodicity work from mac-mini while working on the HYP-2812 gK8 concentration route.  The incoming certificate gives the THM-563-style identity
+`f*(q6(B u {f}) - q6(B)/7)` as a periodic endpoint-sawtooth sum for fixed bounded base `B`; consecutive bases have exact ratio bounds `3/5` (k=9) and `23/35` (k=10), and the current 15-base general scout reports worst bound `33/35<1`.
+
+Formalized two arithmetic import boundaries:
+- extended `TournamentH7.LRCFactorialAtom` with the full `gK8=(10,0,0,1,0,0,10)` finite-check table for k=8..13 via `capClear_gK8_all_binding_rows`;
+- added `TournamentH7.LRCQ6Contraction`, recording the exact q6-ratio reductions and strict-contraction comparisons from the S23 certificate.
+
+Focused builds pass:
+`lake build TournamentH7.LRCQ6Contraction` and `lake build TournamentH7.LRCFactorialAtom`.
+An attempted aggregate `lake build TournamentH7.Verify` was stopped after it began compiling broad unrelated Mathlib/category-theory imports; no aggregate Verify result is claimed.
+
+Proof-state update: the bounded `gK8` arithmetic ledger is now Lean-facing for every binding row, and the q6 suppression mechanism has a small Lean arithmetic kernel.  The remaining theorem is still the generated-profile smoothing/majorization step: prove that the q6 loss, together with admissible q0/q3 movement, keeps every wide profile below the bounded `L_yK8` maximum, with the `12*zeta(3)` R-tail and generalized-doublet atlas as fallback for low-period exceptions.
 
 ## mac-mini-2026-06-22-S22 -- R-tail constant = 12*zeta(3) (from owner's arXiv:2409.19980); genuine-wide leg C closed; gK8 concentration verified
 Mined the owner's paper (arXiv:2409.19980, Matsumoto-Onodera-Sahoo: Mordell-Tornheim multiple zeta-functions / integral analogues / Abel summation) for the "last bits" of the wide-region closure. The team (opus) had reframed the R-tail as a Mordell-Tornheim double sum (HYP-2808) and closed the wide region two ways (gK8 + leg-C); I supplied the rigorous constant + verified the pieces. ~7 pushes.
