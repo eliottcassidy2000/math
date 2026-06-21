@@ -157,6 +157,21 @@ equidistribution of (Mφ,(M+1)φ) on the fixed base miss-arcs gives the `O(1/M)`
 > `p0(E_M) = Φ_2 + Δ_M + Δ_{M+1} + (C(M)−C_sat)`,  Φ_2<cap [codex D7 room], Δ THM-563 [closed],
 > `C(M)−C_sat` = double-Dedekind tail [the one remaining lemma, now concretely a reciprocity bound].
 
+## RECONCILIATION with kps HYP-2798 (same session, cleaner closure) — honest correction
+
+kps-S27 independently bounded the SAME doublet with the **exact** baseline `Φ_2 = bvd(base,2)`
+(moment-dual 2-far decorrelated cover, closed form; k=10: `14368/36015 ≈ 0.3989`), getting the
+DIRECT error `sup_M e(M) = sup|p0 − bvd| ≈ 0.044 < margin (cap−bvd) ≈ 0.205` — a **3–5× slack**
+bound with NO `M·error` needed. This is the cleaner proof path. Reconciliation (verified):
+my mean-plateau (0.4110) and kps's bvd (0.3989) **differ by exactly `C_sat ≈ 0.0121`** (the
+saturated curvature). So `e(M) = C_sat + ẽ(M)` with `ẽ → 0`; kps's `e → C_sat ≠ 0` (hence their
+`M·e` grows), while my `error = p0 − Φ_2 = ẽ → 0` so my `M·error` is genuinely STABLE at 1.34
+through M=800 (NOT a range artifact — my mean is the true plateau). **Both correct, different
+baselines.** Unified: `e(M) = C_sat + O(1/M)`, where `C_sat` = the double-Dedekind **diagonal**
+(my UPDATE-3 curvature characterization) and the `O(1/M)` tail = off-diagonal. **Net: the genuine-wide
+doublet closes COMFORTABLY (kps's direct `e<margin`, 3–5× slack); my role is the maximizer proof
+(54k configs) + the curvature's exact double-Dedekind structure feeding the `C_sat` value.**
+
 ## Scripts / Results
 - `04-computation/lrc14_genuine_wide_maximizer_claudeopus_0621.py` → `05-knowledge/results/lrc14_genuine_wide_maximizer_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_periodicity_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_periodicity_claudeopus_0621.out`
