@@ -53,9 +53,10 @@ The next sharp target is now narrow: prove the four live debts stay below the
 already-positive two-far decorrelated boundary margins, with k=8 allowed to
 use the cap dividend instead of the floor.
 
-After pulling KPS S23, the wide `p0` route localizes to a bounded-base
-single-far window.  The addendum ladder clarifies the relationship: direct
-`p0` with one far speed has only `t=1` live, while survival currency with one
-far has `t=1,5,6` live.  So S23 is not competing with HYP-2708; it is the lower
-rung of the same depth-kernel ladder.  The proof stack should now attack the
-pure `t=1` transfer operator first, then lift the method to `t=1,2,5,6`.
+After pulling KPS S23 and then HYP-2713, the wide `p0` route localizes to a
+bounded-base single-far window.  The addendum ladder clarifies the relationship:
+direct `p0` with one far speed has only `t=1` live, while survival currency with
+one far has `t=1,5,6` live.  So HYP-2713 is not competing with HYP-2708; it is
+the lower rung of the same depth-kernel ladder.  The proof stack should now
+attack the pure `t=1` transfer operator first, then lift the method to
+`t=1,2,5,6`.

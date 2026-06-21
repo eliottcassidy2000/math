@@ -165,7 +165,10 @@ obstruction.
 
 After pulling the KPS S23 OPEN-Q-108 localization, the global wide `p0`
 residual is now mostly a bounded-base single-far finite window, while this
-HYP-2708 route remains the two-far survival branch.  The addendum script
+HYP-2708 route remains the two-far survival branch.  The subsequent HYP-2713
+coordination update names that single-far window as the current closer, so the
+ladder below should be read as the interface between HYP-2713 and HYP-2708.
+The addendum script
 
 ```text
 04-computation/lrc14_survival_live_depth_ladder_codex_s67.py

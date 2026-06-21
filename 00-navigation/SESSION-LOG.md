@@ -52,8 +52,9 @@ Continued the HYP-2701 true-wide two-far branch after the start checkpoint commi
 
 **Proof target now:** a four-depth signed kernel inequality against the positive HYP-2701 boundary margins, with k=8 charged to the true cap dividend rather than the floor.
 
-**Post-S23 addendum:** incoming KPS S23 localizes OPEN-Q-108's wide `p0`
-residual to bounded-base single-far windows.  Added
+**Post-S23/HYP-2713 addendum:** incoming KPS S23 localizes OPEN-Q-108's wide
+`p0` residual to bounded-base single-far windows, and incoming HYP-2713 names
+that branch as the single-far closer.  Added
 `04-computation/lrc14_survival_live_depth_ladder_codex_s67.py` and stored
 `05-knowledge/results/lrc14_survival_live_depth_ladder_codex_s67.out`: direct
 `p0` with one far has only `t=1` live; survival with one far has `{1,5,6}`;
