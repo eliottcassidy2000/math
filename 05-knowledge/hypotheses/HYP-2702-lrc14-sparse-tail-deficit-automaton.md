@@ -33,6 +33,14 @@ Bonferroni `U4` in a survival basis; HYP-2702 should analogously diagonalize
 the sparse residual tail in a generated-context / miss-zeta basis before
 scalarizing.
 
+After the S64 scout, the actual HYP-2701 computation landed as
+`lrc14_truewide_survival_middle_mass_codex_s64.py`: it verifies the exact
+survival currency `p1+p2+p3+p4-4p6`, finds three k=8 floor failures but no cap
+failures in the true-wide box, and finds zero floor/cap failures for k=9 and
+above in the audited boxes.  This strengthens the analogy: the true-wide gate
+is controlled only after the survival basis change, while the sparse-tail gate
+is controlled only after the generated-context basis change.
+
 The expected repair is that those sparse-tail wins are absorbed by the
 generated context word:
 

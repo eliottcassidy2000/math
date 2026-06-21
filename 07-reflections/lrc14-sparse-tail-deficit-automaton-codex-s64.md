@@ -53,6 +53,13 @@ coordinates.  HYP-2702 should do the same thing for the sparse tail: raw
 residual coordinates are the losing quotient; miss-zeta generated words are the
 coordinate system that preserves the LRC predicate.
 
+The final pull made that analogy less speculative: HYP-2701's actual
+middle-mass scout landed and verifies the survival currency
+`p1+p2+p3+p4-4p6`.  It has three k=8 floor failures but no cap failures, and no
+audited k>=9 floor/cap failures.  That is the same proof lesson in a different
+sector ledger: change to the coordinate where the obstruction is monotone, then
+spend the remaining finite exceptions.
+
 Tournament Analysis reflects that choice.  The vertices are proof carriers, not
 runners or arcs, and the transitive order is:
 
