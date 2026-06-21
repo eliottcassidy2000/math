@@ -49,6 +49,34 @@ three-or-more far rows     -> separate margin lemma
 k=8 floor failures         -> finite dividend templates
 ```
 
+The two-far addendum makes the first line more precise.  If a bounded core `B`
+is followed by two decorrelated far runners, the missed-count profile evolves
+by a literal death chain: each far runner picks one of seven sector colors, and
+the residual count drops only when a currently missed inner sector is hit.  The
+resulting boundary currency is already safely above the floor for every bounded
+core in the audited universe.  The smallest margins are still positive:
+
+```text
+k=9: 569/3430
+k=10: 5717/36015
+k=11: 5317/24010
+k=12: 35543/123480
+```
+
+So the two-far proof is not "find the missing middle mass from scratch."  The
+boundary value already has it.  The real task is to bound how much a resonant
+far pair can subtract from that boundary value:
+
+```text
+actual currency = boundary currency + signed two-far deviation.
+```
+
+The tight rows all have small relation-distance far pairs, usually consecutive
+or near-consecutive.  That aligns perfectly with THM-548/HYP-2679: off
+resonance, signed Abel/BV should control the deviation; on resonance,
+Freiman/scale reduction should hand the pair to a finite atlas.  This is a more
+workable theorem target than a global scalar survival bound.
+
 This also clarifies how to use Tournament Analysis.  The vertices should not
 default to runners, arcs, gaps, colors, or far elements.  Those are all possible
 coordinates, but the quotient that preserves the current LRC predicate is a

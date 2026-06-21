@@ -9,12 +9,17 @@ audited boxes (k=8,9 B18; k=10,11,12 B17).  The only floor failures are three `k
 are cap-safe; worst `(0,3,6,9,12,14,15,18)` has floor debt `107/8820`, cap slack `295/3528`,
 `p6=1/126`, and `far_count=2`.  The far-count ledger is the new proof split: every tight audited
 leader is barely true-wide (`far_count=2`), while `far_count>=3` has larger margin in each layer.
-Sharp target: prove a two-far survival-currency lemma for `k>=9`, prove a separate easier
-`r>=3` far-count margin lemma using the multi-far/decorrelation machinery, and reserve finite
-THM-535 dividend templates for true-wide `k=8`.  Near-equality rows must be lifted back to
-state-word, transfer-tax, residual-profile, and relation-lattice coordinates before scalarizing.
--> HYP-2701, HYP-2695, HYP-2699, HYP-2700, HYP-2702, THM-556, THM-535, HYP-2696, HYP-2698,
-HYP-2684, HYP-2675, OPEN-Q-108.
+Two-far addendum: the fully decorrelated death-chain boundary currency is already floor-safe for
+every bounded core scanned, with margins k=9 `569/3430`, k=10 `5717/36015`, k=11 `5317/24010`,
+k=12 `35543/123480`.  Actual two-far rows spend this by a negative signed deviation; the k=9
+leader has boundary margin `18119/72030`, deviation `-6395/28812`, and remaining slack `29/980`.
+Sharp target: prove `boundary margin >= -signed two-far deviation` for `k>=9`, using
+Freiman/scale finite atlases for low relation-distance far pairs and signed Abel/BV bounds off
+resonance; then prove a separate easier `r>=3` far-count margin lemma and reserve finite THM-535
+dividend templates for true-wide `k=8`.  Near-equality rows must be lifted back to state-word,
+transfer-tax, residual-profile, and relation-lattice coordinates before scalarizing.
+-> HYP-2701, HYP-2695, HYP-2699, HYP-2700, HYP-2702, THM-548, THM-556, THM-535, HYP-2680,
+HYP-2679, HYP-2696, HYP-2698, HYP-2684, HYP-2675, OPEN-Q-108.
 
 **OPEN-Q-108 — RESIDUAL-PROFILE AUTOMATON CONE (codex-2026-06-20-S63, HYP-2698/T934).**
 HYP-2697's generated residual-profile cone now has an exact coordinate.  Actual decorrelated contexts are

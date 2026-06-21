@@ -10,6 +10,9 @@ depends_on:
   - THM-556
   - THM-535
 related:
+  - THM-548
+  - HYP-2680
+  - HYP-2679
   - HYP-2700
   - HYP-2698
   - HYP-2697
@@ -127,6 +130,75 @@ k=12, B17: far_count=2 best=85469/420420;    far_count=3 best=155489/720720
 Thus the risky true-wide rows are barely true-wide: exactly two speeds exceed
 `14` in every tight audited family.  Rows with at least three far speeds have
 a visibly larger survival-currency margin in the boxes scanned.
+
+## Two-Far Boundary Addendum
+
+The addendum scout
+`04-computation/lrc14_twofar_survival_currency_boundary_codex_s64.py` stores
+its output at
+`05-knowledge/results/lrc14_twofar_survival_currency_boundary_codex_s64.out`.
+It transports THM-548's boundary-value lens from `p0` to the HYP-2701 currency
+`C=p1+p2+p3+p4-4p6=1-U4`.
+
+For a bounded core `B` and two decorrelated far runners, the missed-count
+process is an exact death chain: if `B` misses `t` inner sectors, each far
+runner hits one of the seven sector colors uniformly and only hits to missed
+sectors reduce `t`.  The exact transition is
+
+```text
+Pr(t -> s after r hits)
+  = binom(t,s) * sum_{j=0}^{t-s} (-1)^j binom(t-s,j) ((7-s-j)/7)^r.
+```
+
+This gives a fully decorrelated boundary currency `C_boundary(B,2)`.  The
+bounded-core scan over `B subset {0,...,14}` found it floor-safe with explicit
+minimum margins:
+
+```text
+k=8:  min boundary margin=1879/10290,  core=(0,1,2,3,4,5)
+k=9:  min boundary margin=569/3430,    core=(0,1,2,3,4,5,6)
+k=10: min boundary margin=5717/36015,  core=(0,1,2,3,4,5,6,7)
+k=11: min boundary margin=5317/24010,  core=(0,1,2,3,4,5,6,7,8)
+k=12: min boundary margin=35543/123480, core=(0,1,2,3,4,5,6,7,8,9)
+```
+
+Actual two-far rows spend this positive boundary margin through a negative
+deviation
+
+```text
+C(B union {u,v}) - C_boundary(B,2).
+```
+
+For the `k>=9` tight leaders, the boundary-margin/deviation ledger is:
+
+```text
+k=9  leader (0,4,6,8,10,12,14,15,16):
+  boundary margin=18119/72030, deviation=-6395/28812, slack=29/980.
+
+k=10 leader (0,2,4,6,8,10,12,14,15,16):
+  boundary margin=5717/36015, deviation=-15763/144060, slack=29/588.
+
+k=11 leader (0,2,4,6,8,9,10,12,14,15,16):
+  boundary margin=28976/108045, deviation=-9599/72030, slack=17/126.
+
+k=12 leader (0,4,6,8,9,10,11,12,13,14,15,16):
+  boundary margin=5584429/13733720, deviation=-152315/749112,
+  slack=85469/420420.
+```
+
+Thus the two-far lemma has a sharper form:
+
+```text
+C_boundary(B,2) - (13-k)/7
+  >= -(C(B union {u,v}) - C_boundary(B,2)).
+```
+
+The left side is now an exact finite bounded-core margin.  The right side is a
+signed two-far deviation concentrated in low relation-distance pairs: in every
+audited layer the tight rows have relation distance `1`, `2`, or `3` for
+`u-v` at coefficient height `<=4`, usually consecutive or near-consecutive far
+pairs.  This is precisely where THM-548/HYP-2679 expects Freiman/scale finite
+atlases and signed Abel bounds, not a generic absolute discrepancy estimate.
 
 ## Proof Route
 

@@ -145,6 +145,11 @@ rows.  Its far-count ledger sharpens this hypothesis' proof route: prove a
 two-far survival-currency lemma first, then prove a separate `far_count>=3`
 margin lemma, while keeping k=8 on the finite dividend branch.
 
+The HYP-2701 two-far addendum further rewrites the first branch as a THM-548
+boundary-value problem: the decorrelated two-far death-chain currency is already
+floor-safe for every bounded core scanned, so the open inequality is exactly
+positive boundary margin versus negative signed two-far deviation.
+
 ## Proof Route
 
 1. **Floor gate for `k>=9` true-wide rows.**  Use THM-556 to work only with
