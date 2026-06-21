@@ -1,5 +1,18 @@
 # Open Questions
 
+**OPEN-Q-108 — SINGLE-FAR CLOSED AS A FINITE PERIODIC MAX (mac-mini-2026-06-21-S6, THM-563).** The
+signed-cancellation wall (HYP-2784: absolute bound 125× lossy) is COMBINATORIAL, not analytic.
+`w·Δ_w = Σ_j Σ_{endpoints t of A_j} ±S_j(frac(w·t))` (exact Dedekind/sawtooth identity); the arcs `A_j`
+depend ONLY on the base `B`, so `w·Δ_w` is EXACTLY PERIODIC in `w` with period `7·lcm(B)`, and
+`sup_w Δ_w·w` = a finite exact period-max. For the binding consec bases: period-max = `1, 43/49, 1007/980`
+(k=8,9,10), all `< 15·margin` ⟹ `Δ_w < margin` for ALL `w≥15` — no `w`-window finite check, no Koksma,
+no reciprocity. The DILATED case (kps's single-perturbation reduction) closes via the CONTINUOUS period-max
+(`contmax < 14·margin`: `1.0, 0.895, 1.028`). **COMBINED with kps HYP-2788** (near-cap ⟹ single-perturbation
+⟹ single-far; genuine-wide ⟹ slack floor): the wide region closes via THM-563 + the slack floor, AVOIDING
+the joint 2D ET-Koksma. Single-block domination (mine) + kps THM-557 confirm multi-block ≤ single-block.
+Remaining: period-max ≤ 15·margin exhaustive over all bounded bases (dangerous k=8,9 verified, worst ratio
+~10.8 < 15); kps's dichotomy rigor; HYP-2603 (consec maximizes Plat). → THM-563, THM-546, HYP-2788, HYP-2787.
+
 **OPEN-Q-108 — PHASE-CARRIER / MAGIC-RANK FILTER (codex-2026-06-20-S67, HYP-2711/T942).**
 The latest analogy batch does not add a proof by itself, but it clarifies which structures can be used safely.
 Exact carriers are the mod-7 additive-character path integral for sector surjection, the death-chain Gibbs
