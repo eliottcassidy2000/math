@@ -1,0 +1,205 @@
+========================================================================================
+HYP-2810 exact bounded-span generalized-doublet audit
+========================================================================================
+This is an exact finite-window audit, not an unbounded proof.
+Tournament: vertices=profile buckets; edge A->B iff max_p0(A)>=max_p0(B); Hamiltonian path is the displayed profile order.
+
+########################################################################################
+SPAN <= 18
+########################################################################################
+
+----------------------------------------------------------------------------------------
+k=10, span<=18: total=48620, primitive=48619, genuine_wide=27484, over_Q=0, seconds=28.92
+cap=55/91, Q(k-1)=1229/2744, cap-Q=5583/35672
+Best by far count:
+  r=2: E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+  r=3: E=(0, 3, 6, 7, 9, 12, 13, 15, 16, 18), p0=8143/21840, cap-p0=389/1680, p0-Q=-80303/1070160, far=(15, 16, 18), blocks=2, profile=('r3', 'not_r2', 'even5_odd5_farodd1')
+  r=4: E=(0, 1, 11, 12, 13, 14, 15, 16, 17, 18), p0=7709813/21441420, cap-p0=5249287/21441420, p0-Q=-26509073/300179880, far=(15, 16, 17, 18), blocks=1, profile=('r4', 'not_r2', 'even5_odd5_farodd2')
+GLOBAL BEST: E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+  2. E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18), p0=947/2205, cap-p0=5014/28665, p0-Q=-2273/123480, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd5_farodd1')
+  3. E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 18), p0=409/980, cap-p0=2383/12740, p0-Q=-419/13720, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even6_odd4_farodd0')
+  4. E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 17), p0=41669/99960, cap-p0=243703/1299480, p0-Q=-2714/87465, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even8_odd2_farodd2')
+  5. E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 17), p0=1021/2499, cap-p0=6362/32487, p0-Q=-5503/139944, far=(16, 17), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd5_farodd1')
+  6. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 18), p0=35449/90090, cap-p0=19001/90090, p0-Q=-960611/17657640, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even2_odd8_farodd1')
+  7. E=(0, 1, 2, 3, 4, 5, 6, 7, 15, 17), p0=19633/49980, cap-p0=137471/649740, p0-Q=-38533/699720, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even4_odd6_farodd2')
+  8. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 16), p0=488881/1261260, cap-p0=273419/1261260, p0-Q=-1064281/17657640, far=(15, 16), gap=1, blocks=1, profile=('r2', 'g1', 'even2_odd8_farodd1')
+Far-gap counts for r=2:
+  g=1:7456, g=2:5697, g=3:3101
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g2', 'even1_odd9_farodd2'): max_p0=52685/119119, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17)
+  2. ('r2', 'g1', 'even5_odd5_farodd1'): max_p0=947/2205, witness=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18)
+  3. ('r2', 'g2', 'even6_odd4_farodd0'): max_p0=409/980, witness=(0, 1, 2, 3, 4, 5, 6, 7, 16, 18)
+  4. ('r2', 'g2', 'even8_odd2_farodd2'): max_p0=41669/99960, witness=(0, 2, 4, 6, 8, 10, 12, 14, 15, 17)
+  5. ('r2', 'g3', 'even2_odd8_farodd1'): max_p0=35449/90090, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 18)
+  6. ('r2', 'g2', 'even4_odd6_farodd2'): max_p0=19633/49980, witness=(0, 1, 2, 3, 4, 5, 6, 7, 15, 17)
+  7. ('r2', 'g1', 'even2_odd8_farodd1'): max_p0=488881/1261260, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 16)
+  8. ('r2', 'g3', 'even5_odd5_farodd1'): max_p0=341/882, witness=(0, 1, 2, 3, 4, 5, 6, 7, 15, 18)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1, score46:1
+
+----------------------------------------------------------------------------------------
+k=11, span<=18: total=43758, primitive=43758, genuine_wide=29724, over_Q=0, seconds=47.69
+cap=66/91, Q(k-1)=65599/123480, cap-Q=311453/1605240
+Best by far count:
+  r=2: E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, cap-p0=12239/57330, p0-Q=-267/13720, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  r=3: E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16, 17), p0=98089/199920, cap-p0=609803/2598960, p0-Q=-170497/4198320, far=(15, 16, 17), blocks=1, profile=('r3', 'not_r2', 'even9_odd2_farodd2')
+  r=4: E=(0, 3, 10, 11, 12, 13, 14, 15, 16, 17, 18), p0=2248009/5045040, cap-p0=1411031/5045040, p0-Q=-336139/3923920, far=(15, 16, 17, 18), blocks=1, profile=('r4', 'not_r2', 'even6_odd5_farodd2')
+GLOBAL BEST: E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, cap-p0=12239/57330, p0-Q=-267/13720, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, cap-p0=12239/57330, p0-Q=-267/13720, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  2. E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 17, 18), p0=7625/14994, cap-p0=42247/194922, p0-Q=-47683/2099160, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd6_farodd1')
+  3. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 18), p0=2537/4998, cap-p0=14143/64974, p0-Q=-49643/2099160, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  4. E=(0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16), p0=373/735, cap-p0=2081/9555, p0-Q=-587/24696, far=(15, 16), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  5. E=(0, 2, 3, 4, 6, 8, 10, 12, 14, 17, 18), p0=12667/24990, cap-p0=70949/324870, p0-Q=-10231/419832, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  6. E=(0, 2, 3, 4, 6, 8, 10, 12, 14, 15, 18), p0=223/441, cap-p0=1259/5733, p0-Q=-351/13720, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  7. E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 18), p0=1273/2520, cap-p0=7211/32760, p0-Q=-179/6860, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even6_odd5_farodd0')
+  8. E=(0, 2, 4, 6, 8, 10, 11, 12, 14, 15, 18), p0=4661/9240, cap-p0=26527/120120, p0-Q=-18211/679140, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+Far-gap counts for r=2:
+  g=1:7062, g=2:5339, g=3:2838
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g3', 'even9_odd2_farodd1'): max_p0=2257/4410, witness=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18)
+  2. ('r2', 'g1', 'even5_odd6_farodd1'): max_p0=7625/14994, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 17, 18)
+  3. ('r2', 'g1', 'even9_odd2_farodd1'): max_p0=2537/4998, witness=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 18)
+  4. ('r2', 'g2', 'even6_odd5_farodd0'): max_p0=1273/2520, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 18)
+  5. ('r2', 'g2', 'even2_odd9_farodd2'): max_p0=2678696/5360355, witness=(0, 1, 3, 5, 7, 9, 10, 11, 13, 15, 17)
+  6. ('r3', 'not_r2', 'even9_odd2_farodd2'): max_p0=98089/199920, witness=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16, 17)
+  7. ('r2', 'g3', 'even8_odd3_farodd1'): max_p0=103/210, witness=(0, 2, 3, 6, 8, 9, 10, 12, 14, 15, 18)
+  8. ('r2', 'g2', 'even7_odd4_farodd0'): max_p0=3445/7056, witness=(0, 1, 2, 3, 4, 5, 6, 7, 8, 16, 18)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1, score46:1, score47:1, score48:1
+
+----------------------------------------------------------------------------------------
+k=12, span<=18: total=31824, primitive=31824, genuine_wide=24816, over_Q=4, seconds=41.10
+cap=6/7, Q(k-1)=14873/24696, cap-Q=6295/24696
+Best by far count:
+  r=2: E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  r=3: E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=5227/8820, cap-p0=2333/8820, p0-Q=-1187/123480, far=(15, 16, 18), blocks=2, profile=('r3', 'not_r2', 'even10_odd2_farodd1')
+  r=4: E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16, 17, 18), p0=112811/199920, cap-p0=58549/199920, p0-Q=-159379/4198320, far=(15, 16, 17, 18), blocks=1, profile=('r4', 'not_r2', 'even10_odd2_farodd2')
+GLOBAL BEST: E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  2. E=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18), p0=4301/7056, cap-p0=1747/7056, p0-Q=361/49392, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  3. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18), p0=10697/17640, cap-p0=4423/17640, p0-Q=257/61740, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd3_farodd1')
+  4. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18), p0=7129/11760, cap-p0=2951/11760, p0-Q=979/246960, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  5. E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=5227/8820, cap-p0=2333/8820, p0-Q=-1187/123480, far=(15, 16, 18), blocks=2, profile=('r3', 'not_r2', 'even10_odd2_farodd1')
+  6. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 18), p0=76579/129360, cap-p0=34301/129360, p0-Q=-27871/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  7. E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 18), p0=20821/35280, cap-p0=9419/35280, p0-Q=-2983/246960, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  8. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 15, 18), p0=114451/194040, cap-p0=51869/194040, p0-Q=-8429/679140, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd3_farodd1')
+Far-gap counts for r=2:
+  g=1:5016, g=2:3729, g=3:1947
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g2', 'even10_odd2_farodd0'): max_p0=238949/388080, witness=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+  2. ('r2', 'g3', 'even9_odd3_farodd1'): max_p0=10697/17640, witness=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18)
+  3. ('r3', 'not_r2', 'even10_odd2_farodd1'): max_p0=5227/8820, witness=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18)
+  4. ('r2', 'g1', 'even9_odd3_farodd1'): max_p0=88433/149940, witness=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 17)
+  5. ('r2', 'g2', 'even7_odd5_farodd0'): max_p0=20767/35280, witness=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16, 18)
+  6. ('r2', 'g1', 'even6_odd6_farodd1'): max_p0=8791/14994, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 17, 18)
+  7. ('r3', 'not_r2', 'even6_odd6_farodd1'): max_p0=43339/74970, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 17, 18)
+  8. ('r2', 'g2', 'even3_odd9_farodd2'): max_p0=74345/129948, witness=(0, 1, 3, 5, 7, 8, 9, 10, 11, 13, 15, 17)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1
+
+########################################################################################
+SPAN <= 20
+########################################################################################
+
+----------------------------------------------------------------------------------------
+k=10, span<=20: total=167960, primitive=167950, genuine_wide=134502, over_Q=0, seconds=182.60
+cap=55/91, Q(k-1)=1229/2744, cap-Q=5583/35672
+Best by far count:
+  r=2: E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+  r=3: E=(0, 3, 5, 7, 9, 11, 13, 15, 17, 19), p0=2839216/6789783, cap-p0=1264499/6789783, p0-Q=-11302747/380227848, far=(15, 17, 19), blocks=3, profile=('r3', 'not_r2', 'even1_odd9_farodd3')
+  r=4: E=(0, 3, 6, 9, 12, 13, 15, 16, 18, 19), p0=117319/311220, cap-p0=70781/311220, p0-Q=-2163073/30499560, far=(15, 16, 18, 19), blocks=2, profile=('r4', 'not_r2', 'even5_odd5_farodd2')
+  r=5: E=(0, 1, 12, 13, 14, 15, 16, 17, 18, 19), p0=5332867/14814072, cap-p0=3620693/14814072, p0-Q=-4557535/51849252, far=(15, 16, 17, 18, 19), blocks=1, profile=('r5', 'not_r2', 'even5_odd5_farodd3')
+  r=6: E=(0, 1, 13, 14, 15, 16, 17, 18, 19, 20), p0=26789171/74070360, cap-p0=17978629/74070360, p0-Q=-22350749/259246260, far=(15, 16, 17, 18, 19, 20), blocks=1, profile=('r6', 'not_r2', 'even5_odd5_farodd3')
+GLOBAL BEST: E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17), p0=52685/119119, cap-p0=19310/119119, p0-Q=-37339/6670664, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even1_odd9_farodd2')
+  2. E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18), p0=947/2205, cap-p0=5014/28665, p0-Q=-2273/123480, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd5_farodd1')
+  3. E=(0, 1, 2, 3, 4, 5, 6, 7, 18, 19), p0=241/570, cap-p0=9419/51870, p0-Q=-19613/782040, far=(18, 19), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd5_farodd1')
+  4. E=(0, 3, 5, 7, 9, 11, 13, 15, 17, 19), p0=2839216/6789783, cap-p0=1264499/6789783, p0-Q=-11302747/380227848, far=(15, 17, 19), blocks=3, profile=('r3', 'not_r2', 'even1_odd9_farodd3')
+  5. E=(0, 1, 2, 3, 4, 5, 6, 7, 16, 18), p0=409/980, cap-p0=2383/12740, p0-Q=-419/13720, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even6_odd4_farodd0')
+  6. E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 17), p0=41669/99960, cap-p0=243703/1299480, p0-Q=-2714/87465, far=(15, 17), gap=2, blocks=2, profile=('r2', 'g2', 'even8_odd2_farodd2')
+  7. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 19), p0=491285/1198197, cap-p0=232900/1198197, p0-Q=-2540777/67099032, far=(15, 19), gap=4, blocks=2, profile=('r2', 'g4_7', 'even1_odd9_farodd2')
+  8. E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 19), p0=97037/237405, cap-p0=603844/3086265, p0-Q=-520433/13294680, far=(17, 19), gap=2, blocks=2, profile=('r2', 'g2', 'even4_odd6_farodd2')
+Far-gap counts for r=2:
+  g=1:14162, g=2:12355, g=3:9807, g=4:6658, g=5:3395
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g2', 'even1_odd9_farodd2'): max_p0=52685/119119, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17)
+  2. ('r2', 'g1', 'even5_odd5_farodd1'): max_p0=947/2205, witness=(0, 1, 2, 3, 4, 5, 6, 7, 17, 18)
+  3. ('r3', 'not_r2', 'even1_odd9_farodd3'): max_p0=2839216/6789783, witness=(0, 3, 5, 7, 9, 11, 13, 15, 17, 19)
+  4. ('r2', 'g2', 'even6_odd4_farodd0'): max_p0=409/980, witness=(0, 1, 2, 3, 4, 5, 6, 7, 16, 18)
+  5. ('r2', 'g2', 'even8_odd2_farodd2'): max_p0=41669/99960, witness=(0, 2, 4, 6, 8, 10, 12, 14, 15, 17)
+  6. ('r2', 'g4_7', 'even1_odd9_farodd2'): max_p0=491285/1198197, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 19)
+  7. ('r2', 'g2', 'even4_odd6_farodd2'): max_p0=97037/237405, witness=(0, 1, 2, 3, 4, 5, 6, 7, 17, 19)
+  8. ('r2', 'g4_7', 'even8_odd2_farodd2'): max_p0=15069/37240, witness=(0, 2, 4, 6, 8, 10, 12, 14, 15, 19)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1, score46:1, score47:1, score48:1, score49:1, score50:1, score51:1, score52:1, score53:1, score54:1, score55:1, score56:1, score57:1, score58:1, score59:1, score60:1, score61:1, score62:1, score63:1, score64:1, score65:1, score66:1, score67:1, score68:1, score69:1, score70:1, score71:1, score72:1, score73:1, score74:1, score75:1, score76:1, score77:1, score78:1, score79:1, score80:1, score81:1, score82:1, score83:1, score84:1, score85:1, score86:1, score87:1, score88:1, score89:1, score90:1, score91:1, score92:1, score93:1, score94:1, score95:1, score96:1, score97:1, score98:1, score99:1, score100:1, score101:1, score102:1, score103:1, score104:1
+
+----------------------------------------------------------------------------------------
+k=11, span<=20: total=184756, primitive=184755, genuine_wide=162633, over_Q=0, seconds=260.56
+cap=66/91, Q(k-1)=65599/123480, cap-Q=311453/1605240
+Best by far count:
+  r=2: E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 20), p0=25909/49980, cap-p0=134423/649740, p0-Q=-5401/419832, far=(17, 20), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  r=3: E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19), p0=3437150/6789783, cap-p0=1487308/6789783, p0-Q=-142746211/5703417720, far=(15, 17, 19), blocks=3, profile=('r3', 'not_r2', 'even1_odd10_farodd3')
+  r=4: E=(0, 4, 8, 10, 12, 13, 14, 15, 16, 18, 20), p0=212603/458640, cap-p0=120037/458640, p0-Q=-72451/1070160, far=(15, 16, 18, 20), blocks=3, profile=('r4', 'not_r2', 'even9_odd2_farodd1')
+  r=5: E=(0, 4, 11, 12, 13, 14, 15, 16, 17, 18, 19), p0=737697013/1629547920, cap-p0=444172907/1629547920, p0-Q=-896025331/11406835440, far=(15, 16, 17, 18, 19), blocks=1, profile=('r5', 'not_r2', 'even6_odd5_farodd3')
+  r=6: E=(0, 1, 12, 13, 14, 15, 16, 17, 18, 19, 20), p0=4248539/9258795, cap-p0=2466631/9258795, p0-Q=-37532017/518492520, far=(15, 16, 17, 18, 19, 20), blocks=1, profile=('r6', 'not_r2', 'even6_odd5_farodd3')
+GLOBAL BEST: E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 20), p0=25909/49980, cap-p0=134423/649740, p0-Q=-5401/419832, far=(17, 20), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 20), p0=25909/49980, cap-p0=134423/649740, p0-Q=-5401/419832, far=(17, 20), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  2. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 18), p0=2257/4410, cap-p0=12239/57330, p0-Q=-267/13720, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd2_farodd1')
+  3. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 20), p0=3001/5880, cap-p0=16427/76440, p0-Q=-1289/61740, far=(15, 20), gap=5, blocks=2, profile=('r2', 'g4_7', 'even9_odd2_farodd1')
+  4. E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 17, 18), p0=7625/14994, cap-p0=42247/194922, p0-Q=-47683/2099160, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even5_odd6_farodd1')
+  5. E=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 18), p0=2537/4998, cap-p0=14143/64974, p0-Q=-49643/2099160, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  6. E=(0, 1, 2, 4, 6, 8, 10, 12, 14, 15, 16), p0=373/735, cap-p0=2081/9555, p0-Q=-587/24696, far=(15, 16), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  7. E=(0, 2, 3, 4, 6, 8, 10, 12, 14, 17, 18), p0=12667/24990, cap-p0=70949/324870, p0-Q=-10231/419832, far=(17, 18), gap=1, blocks=1, profile=('r2', 'g1', 'even9_odd2_farodd1')
+  8. E=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19), p0=3437150/6789783, cap-p0=1487308/6789783, p0-Q=-142746211/5703417720, far=(15, 17, 19), blocks=3, profile=('r3', 'not_r2', 'even1_odd10_farodd3')
+Far-gap counts for r=2:
+  g=1:13014, g=2:11284, g=3:8790, g=4:5945, g=5:2994
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g3', 'even9_odd2_farodd1'): max_p0=25909/49980, witness=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 20)
+  2. ('r2', 'g4_7', 'even9_odd2_farodd1'): max_p0=3001/5880, witness=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15, 20)
+  3. ('r2', 'g1', 'even5_odd6_farodd1'): max_p0=7625/14994, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 17, 18)
+  4. ('r2', 'g1', 'even9_odd2_farodd1'): max_p0=2537/4998, witness=(0, 2, 4, 6, 7, 8, 10, 12, 14, 17, 18)
+  5. ('r3', 'not_r2', 'even1_odd10_farodd3'): max_p0=3437150/6789783, witness=(0, 1, 3, 5, 7, 9, 11, 13, 15, 17, 19)
+  6. ('r2', 'g2', 'even6_odd5_farodd0'): max_p0=1273/2520, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 16, 18)
+  7. ('r2', 'g2', 'even2_odd9_farodd2'): max_p0=2678696/5360355, witness=(0, 1, 3, 5, 7, 9, 10, 11, 13, 15, 17)
+  8. ('r2', 'g1', 'even6_odd5_farodd1'): max_p0=2909/5880, witness=(0, 1, 2, 3, 4, 5, 6, 7, 8, 18, 19)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1, score46:1, score47:1, score48:1, score49:1, score50:1, score51:1, score52:1, score53:1, score54:1, score55:1, score56:1, score57:1, score58:1, score59:1, score60:1, score61:1, score62:1, score63:1, score64:1, score65:1, score66:1, score67:1, score68:1, score69:1, score70:1, score71:1, score72:1, score73:1, score74:1, score75:1, score76:1, score77:1, score78:1, score79:1, score80:1, score81:1, score82:1, score83:1, score84:1, score85:1, score86:1, score87:1, score88:1, score89:1, score90:1, score91:1, score92:1, score93:1, score94:1, score95:1, score96:1, score97:1, score98:1, score99:1, score100:1, score101:1, score102:1, score103:1, score104:1, score105:1, score106:1, score107:1, score108:1, score109:1, score110:1, score111:1, score112:1
+
+----------------------------------------------------------------------------------------
+k=12, span<=20: total=167960, primitive=167960, genuine_wide=156939, over_Q=7, seconds=297.99
+cap=6/7, Q(k-1)=14873/24696, cap-Q=6295/24696
+Best by far count:
+  r=2: E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  r=3: E=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18), p0=5227/8820, cap-p0=2333/8820, p0-Q=-1187/123480, far=(15, 16, 18), blocks=2, profile=('r3', 'not_r2', 'even10_odd2_farodd1')
+  r=4: E=(0, 4, 6, 8, 10, 12, 13, 14, 15, 16, 18, 20), p0=5399/9555, cap-p0=2791/9555, p0-Q=-59713/1605240, far=(15, 16, 18, 20), blocks=3, profile=('r4', 'not_r2', 'even10_odd2_farodd1')
+  r=5: E=(0, 3, 8, 10, 12, 13, 14, 15, 16, 17, 18, 20), p0=95583/173264, cap-p0=52929/173264, p0-Q=-552137/10915632, far=(15, 16, 17, 18, 20), blocks=2, profile=('r5', 'not_r2', 'even8_odd4_farodd2')
+  r=6: E=(0, 5, 10, 12, 13, 14, 15, 16, 17, 18, 19, 20), p0=4434617/8230040, cap-p0=2619703/8230040, p0-Q=-8219441/129623130, far=(15, 16, 17, 18, 19, 20), blocks=1, profile=('r6', 'not_r2', 'even7_odd5_farodd3')
+GLOBAL BEST: E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+generalized_doublet_best = True
+Top rows:
+  1. E=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18), p0=238949/388080, cap-p0=93691/388080, p0-Q=36613/2716560, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  2. E=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 18), p0=4301/7056, cap-p0=1747/7056, p0-Q=361/49392, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  3. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18), p0=10697/17640, cap-p0=4423/17640, p0-Q=257/61740, far=(15, 18), gap=3, blocks=2, profile=('r2', 'g3', 'even9_odd3_farodd1')
+  4. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20), p0=117647/194040, cap-p0=48673/194040, p0-Q=919/226380, far=(18, 20), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  5. E=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 16, 18), p0=7129/11760, cap-p0=2951/11760, p0-Q=979/246960, far=(16, 18), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+  6. E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20), p0=1423/2352, cap-p0=593/2352, p0-Q=137/49392, far=(16, 20), gap=4, blocks=2, profile=('r2', 'g4_7', 'even10_odd2_farodd0')
+  7. E=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 16, 20), p0=11141/18480, cap-p0=4699/18480, p0-Q=1697/2716560, far=(16, 20), gap=4, blocks=2, profile=('r2', 'g4_7', 'even10_odd2_farodd0')
+  8. E=(0, 2, 4, 5, 6, 8, 10, 11, 12, 14, 18, 20), p0=16637/27720, cap-p0=7123/27720, p0-Q=-467/226380, far=(18, 20), gap=2, blocks=2, profile=('r2', 'g2', 'even10_odd2_farodd0')
+Far-gap counts for r=2:
+  g=1:9009, g=2:7722, g=3:5940, g=4:3993, g=5:2001
+Profile tournament Hamiltonian path:
+  1. ('r2', 'g2', 'even10_odd2_farodd0'): max_p0=238949/388080, witness=(0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+  2. ('r2', 'g3', 'even9_odd3_farodd1'): max_p0=10697/17640, witness=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14, 15, 18)
+  3. ('r2', 'g4_7', 'even10_odd2_farodd0'): max_p0=1423/2352, witness=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20)
+  4. ('r3', 'not_r2', 'even10_odd2_farodd1'): max_p0=5227/8820, witness=(0, 2, 4, 6, 8, 9, 10, 12, 14, 15, 16, 18)
+  5. ('r2', 'g1', 'even9_odd3_farodd1'): max_p0=88433/149940, witness=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14, 16, 17)
+  6. ('r2', 'g2', 'even7_odd5_farodd0'): max_p0=20767/35280, witness=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16, 18)
+  7. ('r2', 'g1', 'even6_odd6_farodd1'): max_p0=8791/14994, witness=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 17, 18)
+  8. ('r2', 'g4_7', 'even9_odd3_farodd1'): max_p0=685/1176, witness=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 15, 20)
+Profile tournament score histogram: score0:1, score1:1, score2:1, score3:1, score4:1, score5:1, score6:1, score7:1, score8:1, score9:1, score10:1, score11:1, score12:1, score13:1, score14:1, score15:1, score16:1, score17:1, score18:1, score19:1, score20:1, score21:1, score22:1, score23:1, score24:1, score25:1, score26:1, score27:1, score28:1, score29:1, score30:1, score31:1, score32:1, score33:1, score34:1, score35:1, score36:1, score37:1, score38:1, score39:1, score40:1, score41:1, score42:1, score43:1, score44:1, score45:1, score46:1, score47:1, score48:1, score49:1, score50:1, score51:1, score52:1, score53:1, score54:1, score55:1, score56:1, score57:1, score58:1, score59:1, score60:1, score61:1, score62:1, score63:1, score64:1, score65:1, score66:1, score67:1, score68:1, score69:1, score70:1, score71:1, score72:1, score73:1, score74:1, score75:1, score76:1, score77:1, score78:1, score79:1, score80:1, score81:1, score82:1, score83:1, score84:1, score85:1, score86:1, score87:1, score88:1, score89:1, score90:1, score91:1, score92:1, score93:1, score94:1, score95:1, score96:1, score97:1, score98:1, score99:1, score100:1, score101:1, score102:1, score103:1, score104:1, score105:1, score106:1, score107:1, score108:1, score109:1, score110:1, score111:1
