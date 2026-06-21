@@ -142,6 +142,23 @@ def outsideTailStripBool (q : Atom) (scale : Int) : Bool :=
   (tail45 q * tailFloorDen < tailFloorNum * scale) ||
     (tailCeilNum * scale < tail45 q * tailCeilDen)
 
+/-- Signed side of the generated tail45 strip: `-1` below, `1` above, `0` inside. -/
+def tailStripSide (q : Atom) (scale : Int) : Int :=
+  if tail45 q * tailFloorDen < tailFloorNum * scale then
+    -1
+  else if tailCeilNum * scale < tail45 q * tailCeilDen then
+    1
+  else
+    0
+
+/-- Expected strip side of the five HYP-2721 cheap directions. -/
+def cheapTailSideTarget (r : Fin 5) : Int :=
+  match r.val with
+  | 0 => 1
+  | 1 => -1
+  | 2 => 1
+  | _ => -1
+
 /-- The finite-difference packets are exactly dual to the factorial moments. -/
 theorem basis_moment_delta :
     ∀ i j : Fin atomCount, moment (basis j) i = if i = j then 1 else 0 := by
@@ -273,7 +290,7 @@ theorem LyK9_readout (q : Atom) :
     LyK9 q = 18 * q ⟨0, by decide⟩ + 5 * q ⟨1, by decide⟩
       + 2 * q ⟨4, by decide⟩ + 3 * q ⟨5, by decide⟩ := by
   simp only [LyK9, moment, sum7, atomCount, yK9, chooseInt, choose,
-    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd]
   omega
 
 /-- Delsarte / moment-LP bound at `k=9,10`: `18 * q0 <= L_y(q)` for nonnegative `q`. -/
@@ -305,7 +322,7 @@ theorem LyK11_readout (q : Atom) :
     LyK11 q = 6 * q ⟨0, by decide⟩ + 3 * q ⟨1, by decide⟩
       + q ⟨2, by decide⟩ + q ⟨5, by decide⟩ + 3 * q ⟨6, by decide⟩ := by
   simp only [LyK11, moment, sum7, atomCount, yK11, chooseInt, choose,
-    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd]
   omega
 
 /-- Delsarte / moment-LP bound at `k=11,12,13`: `6 * q0 <= L_y(q)` for nonnegative `q`. -/
@@ -327,6 +344,17 @@ theorem cheapScaled_outside_tailStrip_bool :
     ∀ r : Fin 5, outsideTailStripBool (cheapScaled r) (cheapScale r) = true := by
   native_decide
 
+/-- The generated tail45 strip has a genuine floor below its ceiling. -/
+theorem tailStrip_constants_order :
+    tailFloorNum * tailCeilDen < tailCeilNum * tailFloorDen := by
+  native_decide
+
+/-- The five scaled cheap directions land on the declared side of the generated strip:
+`r=1,3` above and `r=2,4,5` below. -/
+theorem cheapScaled_tailStripSide :
+    ∀ r : Fin 5, tailStripSide (cheapScaled r) (cheapScale r) = cheapTailSideTarget r := by
+  native_decide
+
 /-! ### Axiom audit
 
 These are closed finite identities over seven coordinates.  In a working Lean
@@ -345,6 +373,8 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms LyK8_readout
 #print axioms delsarte_bound_k8
 #print axioms cheapScaled_outside_tailStrip_bool
+#print axioms tailStrip_constants_order
+#print axioms cheapScaled_tailStripSide
 
 end FactorialAtom
 end LonelyRunner

@@ -10,3 +10,5 @@
 'LonelyRunner.FactorialAtom.LyK8_readout' depends on axioms: [propext, Quot.sound]
 'LonelyRunner.FactorialAtom.delsarte_bound_k8' depends on axioms: [propext, Quot.sound]
 'LonelyRunner.FactorialAtom.cheapScaled_outside_tailStrip_bool' depends on axioms: [cheapScaled_outside_tailStrip_bool._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.tailStrip_constants_order' depends on axioms: [tailStrip_constants_order._native.native_decide.ax_1_1]
+'LonelyRunner.FactorialAtom.cheapScaled_tailStripSide' depends on axioms: [cheapScaled_tailStripSide._native.native_decide.ax_1_1]

@@ -87,6 +87,53 @@ lrc14_threadB_krawtchouk_saturation_opus_0621.py,
 lrc14_threadB_even_moment_extremality_opus_0621.py,
 lrc14_threadB_macwilliams_bridge_opus_0621.py,
 lrc14_threadB_M2_proof_probe_opus_0621.py (+ .out in 05-knowledge/results/).
+## codex-2026-06-21 -- HYP-2736: integer-grid discrepancy target for the L7 tail
+
+Continuation of the LRC14 overnight proof session after pushing HYP-2731.
+Pulled and rebased over incoming HYP-2730/KPS L7 closure work, HYP-2733's
+apex-prime zero law, HYP-2734's r=3 pairwise-tail closure, codex S72's
+HYP-2729 bounded-ratio scout, and Opus/KPS moment-extremality updates.  The
+incoming signal changed the status: L7 is no longer a broad balanced-wide
+mystery, and the usable torus-line tail is already elementary via
+`D_{p,q}<=14/p`.  This checkpoint pursues the sharper observed `D*q<=12/7`
+constant as an arithmetic refinement.
+
+Added `04-computation/lrc14_torus_line_discrepancy_integer_grid_codex_20260621.py`
+with stored output
+`05-knowledge/results/lrc14_torus_line_discrepancy_integer_grid_codex_20260621.out`.
+It converts the torus-line discrepancy
+`D_{p,q}` for `v -> (sector(qv), sector(pv))` into an exact common-grid formula:
+
+```text
+D_{p,q} = sum_ij |49*c_ij - 7*p*q| / (343*p*q),
+```
+
+where `c_ij` counts subintervals on the `7*p*q` breakpoint grid.  Therefore
+the KPS tail target `D_{p,q} <= 12/(7q)` is exactly
+
+```text
+sum_ij |49*c_ij - 7*p*q| <= 588*p.
+```
+
+The script cross-checks this integer formula against the older Fraction cell
+law on `52` q<=12 ratios, scans `8977` primitive bounded-ratio pairs through
+q<=160, and finds zero violations of `D<=12/(7q)`.  The maximum is the known
+`12/7` at `3/2`; the largest q with `D>=21/100` is `4`, and the worst q>=5
+row is `9/5` with `D=32/315`.
+
+Created hypothesis detail
+`05-knowledge/hypotheses/HYP-2736-lrc14-torus-line-discrepancy-integer-grid.md`
+and updated THM-562 so the non-resonant discrepancy lemma is now the integer
+defect inequality above rather than a vague ET-Koksma citation.  Extended
+`TournamentH7.LRCFactorialAtom` with `tailStrip_constants_order` and
+`cheapScaled_tailStripSide`, classifying the cheap HYP-2721 directions by side
+of the HYP-2731 strip.
+
+Next sharp refinement target: prove the integer defect inequality uniformly,
+probably by partitioning into `(p mod 7,q mod 7)` residue blocks or by
+translating each row conditional into a balanced Christoffel/Sturmian
+interval-count lemma.  This complements HYP-2730/HYP-2733; it is not required
+for the current coarse L7 closure.
 
 ## codex-2026-06-21 -- HYP-2728: formal factorial boundary plus generated witness hierarchy
 

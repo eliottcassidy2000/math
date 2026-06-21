@@ -10,6 +10,8 @@ depends_on:
   - HYP-2726  # Delsarte/Krawtchouk formulation
 related:
   - HYP-2729
+  - HYP-2730
+  - HYP-2736
   - HYP-2727
   - OPEN-Q-108
 ---
@@ -116,6 +118,31 @@ the conditional L1 discrepancy gives `D_{p,q} <= 24/(7q)`.
 This is weaker than KPS's proved `14/p` bound in some ranges and stronger in
 others; both reduce the analytic tail to elementary one-dimensional
 discrepancy plus finite checks.
+
+Update `codex-2026-06-21`: HYP-2736 sharpens this target but is no longer
+needed for the basic L7 closure, since incoming HYP-2730 supplies the usable
+elementary bound `D_{p,q} <= 14/p` and HYP-2733 supplies the apex-prime zero
+law.  For the torus-line
+cell law `v -> (sector(qv), sector(pv))`, all breakpoints lie on the common
+integer grid of size `7*p*q`.  If `c_ij` counts subintervals landing in cell
+`(i,j)`, then
+
+```text
+D_{p,q} = sum_ij |49*c_ij - 7*p*q| / (343*p*q).
+```
+
+Therefore the KPS tail constant `D_{p,q} <= 12/(7q)` is equivalent to the
+integer inequality
+
+```text
+sum_ij |49*c_ij - 7*p*q| <= 588*p.
+```
+
+The sharper formal proof target is to prove this integer-grid inequality for
+all coprime `1 < p/q <= 43/20`, plus exact finite checks for the small atlas.
+This would replace the current lossy tail constant by the observed sharp
+`D*q` constant and align the discrepancy proof with the mod-7 residue
+structure in HYP-2733.
 
 ## Honesty
 

@@ -108,6 +108,16 @@ exclusion test is true for every scaled HYP-2721 cheap direction.  This does
 not formalize the generated-side automaton inequality yet; it formalizes the
 exact cheap-side handoff once that inequality is proved.
 
+The follow-up audit theorem
+
+```text
+cheapScaled_tailStripSide
+```
+
+classifies the side as well: `r=1,3` land above the ceiling and `r=2,4,5`
+land below the floor.  `tailStrip_constants_order` checks the two rational
+endpoints are correctly ordered after cross-multiplication.
+
 ## Proof Target
 
 The hand proof should now split into two finite-generated statements:

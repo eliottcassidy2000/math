@@ -1,0 +1,60 @@
+======================================================================================
+HYP-2736 torus-line discrepancy integer-grid scout
+======================================================================================
+
+[A] integer-grid formula cross-check: 52 q<=12 ratios matched slow Fraction cells
+    D = sum |49*c_ij - 7pq| / (343pq)
+    sharp target D <= 12/(7q) is exactly defect_sum <= 588*p
+
+[B] exact scan window: q<= 160, pairs=8977
+    max D*q = 12/7 at p/q=3/2 (D=6/7)
+    D <= 12/(7q) violations in scan: 0
+    largest q with D >= 21/100 is 4; finite atlas through q=4 is enough in this scan
+    worst q>=5 row: p/q=9/5, D=32/315, D*q=32/63
+
+[C] worst exact discrepancy by denominator q<=14
+      q    p       D          D*q        defect <= 588*p slack
+      1    2       10/7       10/7      980 <= 1176     slack=196
+      2    3        6/7       12/7     1764 <= 1764     slack=0
+      3    4      11/21       11/7     2156 <= 2352     slack=196
+      4    5       9/35      36/35     1764 <= 2940     slack=1176
+      5    9     32/315      32/63     1568 <= 5292     slack=3724
+      6   11       4/77      24/77     1176 <= 6468     slack=5292
+      7    8          0          0        0 <= 4704     slack=4704
+      8    9      5/126      20/63      980 <= 5292     slack=4312
+      9   10       2/35      18/35     1764 <= 5880     slack=4116
+     10   11       2/35        4/7     2156 <= 6468     slack=4312
+     11   12       3/77        3/7     1764 <= 7056     slack=5292
+     12   17      3/119     36/119     1764 <= 9996     slack=8232
+     13   17    24/1547     24/119     1176 <= 9996     slack=8820
+     14   15          0          0        0 <= 8820     slack=8820
+
+[D] residue-pair tournament for q>=15
+    vertices are (p mod 7)/(q mod 7), ordered by worst observed D*q
+    vertices=48
+    top-12 path: 4/3 > 3/2 > 5/3 > 5/4 > 3/3 > 4/4 > 5/2 > 2/3 > 2/4 > 3/5 > 4/2 > 4/5
+    score_hist is the transitive histogram {0:1,...,47:1}
+    directed_3cycles=0 SCC_sizes=[1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1]...
+    Hamiltonian_path_count=1
+    top residue witnesses:
+      (4,3) witness 18/17: D=22/1071, D*q=22/63
+      (3,2) witness 17/16: D=9/476, D*q=36/119
+      (5,3) witness 19/17: D=36/2261, D*q=36/133
+      (5,4) witness 19/18: D=2/133, D*q=36/133
+      (3,3) witness 24/17: D=11/714, D*q=11/42
+      (4,4) witness 25/18: D=22/1575, D*q=44/175
+      (5,2) witness 19/16: D=2/133, D*q=32/133
+      (2,3) witness 23/17: D=36/2737, D*q=36/161
+      (2,4) witness 23/18: D=2/161, D*q=36/161
+      (3,5) witness 24/19: D=3/266, D*q=3/14
+      (4,2) witness 25/16: D=9/700, D*q=36/175
+      (4,5) witness 25/19: D=36/3325, D*q=36/175
+
+[E] proof target
+    Prove the integer defect inequality defect_sum(p,q) <= 588*p for all
+    coprime 1 < p/q <= 43/20.  Together with exact q<=8 atlas checks,
+    this supplies a sharper alternate HYP-2730 non-resonant L7 tail.
+    The zero rows when p==0 or q==0 mod 7 suggest a mod-7 block proof,
+    with the nonzero residue-pair tournament above as the finite guide.
+
+DONE.
