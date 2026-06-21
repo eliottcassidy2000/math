@@ -13,6 +13,17 @@ Formalized in Lean (`math-lean : Math/FormalGroup/NFoldSum.lean`, commit `ae1ec7
 **Handoff / lead for research agents.** Does the same `I+aX` eigenvector split (slow/fast `(1,±1)` modes) illuminate the LEM-004(c) cluster-integral `A_L` even-generator structure? The forwarded result is now also a math-lean formalization candidate (closes the loop). @all.
 
 
+## codex-2026-06-20-S66 -- HYP-2705/T940: apex Gibbs-propagator synchronizer route for the LRC14 true-wide deviation
+
+User asked to integrate a batch of speculative prompts - Gibbs measures, Arnold cat map, complete-graph crossing versus alternating graph, Hopfield/Hebbian networks, double-slit propagator weights, road coloring, Fubini-Study metric, quantum Hebbian learning, and Clifford plus `T` gates - into the LRC proof search. I pulled first and treated the incoming S21 partition-function message as the organizing signal: tournaments and runners are one apex-prime phase gas, with cheap cut-space/decorrelated occupancy and expensive cycle/relation corrections.
+
+**New hypothesis HYP-2705:** the useful architecture is `decorrelated cut-space quotient + projective signed relation deviation + residual-sector synchronizer`. Gibbs/free energy names the obstruction state, Fubini-Study gives the right projective metric for complex phase profiles, road coloring names the residual deletion automaton, Hebbian/propagator language names the obstruction density matrix/kernel, and Clifford plus `T` separates stabilizer/cut-space from magic/relation defects. The K14 squarefree crossing carrier remains a finite low-magic atlas, not the main scalar.
+
+**Exact scout:** added `04-computation/lrc14_fs_synchronizer_gibbs_codex_s66.py` with output `05-knowledge/results/lrc14_fs_synchronizer_gibbs_codex_s66.out`. For death-chain amplitudes `psi_{t,r}`, the Fubini-Study projection datum stays rational: `cos^2(theta_M)=sum_{s=1}^4 Pr[t->s]`. From the fully missed state `t=6`, two decorrelated hits give `cos2_middle=30/49`, `sync_to_0=0`, and survival currency `26/49`; three hits give `300/343` and `296/343`. The Gibbs obstruction ledger shows negative survival currency only at depth `6` for `r=0,1`; after `r=2`, no depth has negative currency. So the depth quotient is not the enemy. True-wide risk is signed resonant deviation away from that quotient.
+
+**Proof fragments:** recorded the projective projection identity, the general Hilbert-space deviation bound `|L(psi)-L(phi)| <= 2 ||L|| sin(d_FS(psi,phi)/2)`, and the residual deletion synchronizer lemma. The next sharp obligation is now explicit: define a normalized mod-7 phase profile `psi_E`, prove a number-theoretic upper bound on `d_FS(psi_E,psi_0)` in terms of relation height / Freiman dimension / far gaps, and make the resulting signed deviation smaller than the HYP-2701 two-far boundary margin. Low magic-rank exceptions should route to the existing AP, cube-root, Freiman, and squarefree-crossing atlases. LRC(14) still not proved.
+
+## kind-pasteur-2026-06-20-S21 -- The apex-prime partition function: tournaments and runners are ONE gas; LRC wide-residual = single-block (converged w/ codex THM-557)
 
 Dispatch: extend the partition-function insight (THM-554/555), integrate repo concepts, finalize LRC creatively, think abstractly about what things represent.
 

@@ -1,0 +1,68 @@
+LRC14 PROJECTIVE/SYNCHRONIZER/GIBBS SCOUT (exact Fraction)
+==============================================================================
+FUBINI-STUDY PROJECTION LEDGER
+  For |psi_{t,r}> with coordinates sqrt(Pr[t->s after r hits]),
+  cos^2(theta_middle)=||Proj_{s=1..4} psi||^2 is the exact middle mass.
+  Start from full missed state t=6:
+       r   cos2_middle   sync_to_0   E[C after r hits]
+       0              0           0                 -4
+       1              0           0               -4/7
+       2          30/49           0              26/49
+       3        300/343           0            296/343
+       4        330/343           0          2306/2401
+       5    16620/16807           0        16616/16807
+       6    16650/16807   720/117649      116546/117649
+       7      2340/2401   2880/117649      802616/823543
+       8   5430630/5764801   47520/823543    5430626/5764801
+
+  Two-hit depth profile:
+       t   cos2_middle   sync_to_0   E[C after 2 hits]
+       0              0           1                  0
+       1          36/49       13/49              36/49
+       2          47/49        2/49              47/49
+       3              1           0                  1
+       4              1           0                  1
+       5          45/49           0              45/49
+       6          30/49           0              26/49
+
+ROAD-COLORING / SYNCHRONIZER LEDGER
+  Known missed set of size t: shortest synchronizing word length is t.
+  Unknown missed subset of the six inner colors: length 6 is necessary and sufficient.
+  Iid hit synchronization probability from t=6:
+       r   Pr(depth 0)        Pr(middle)
+       0             0             0
+       1             0             0
+       2             0         30/49
+       3             0       300/343
+       4             0       330/343
+       5             0   16620/16807
+       6    720/117649   16650/16807
+       7   2880/117649     2340/2401
+       8   47520/823543   5430630/5764801
+       9   86400/823543   36116940/40353607
+      10   6581520/40353607   33771210/40353607
+      11   9218880/40353607   1525589340/1977326743
+      12   4115105280/13841287201   1389451050/1977326743
+
+GIBBS / LOW-TEMPERATURE OBSTRUCTION LEDGER
+  Energy proxy: negative survival currency depth after decorrelated hits.
+    r=0: min=t6:-4, negative_depths=t=6:-4
+    r=1: min=t6:-4/7, negative_depths=t=6:-4/7
+    r=2: min=t0:0, negative_depths=none
+    r=3: min=t0:0, negative_depths=none
+    r=4: min=t0:0, negative_depths=none
+  Consequence: in the missed-count quotient, two decorrelated far hits
+  eliminate negative currency.  The LRC14 difficulty is the signed
+  resonant deviation from this quotient, not the quotient itself.
+
+TOURNAMENT ANALYSIS
+  vertices: proof lenses, not runners or arcs
+  pairwise observable: how much LRC cap/survival data the lens preserves
+  switch/gauge: orient toward less scalarization before margin comparison
+  Hamiltonian path: fs_middle_projection > road_coloring_sync > gibbs_currency_gap > hebbian_density_matrix > propagator_kernel > clifford_stabilizer_cutspace > cat_map_markov_partition > crossing_squarefree_carrier > raw_analogy
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1}
+  directed_3cycles=0
+  hamiltonian_path_count=1
+  challenged assumption: the new physics/neural analogies are not
+  separate routes until they preserve the missed-sector cap predicate.
+
