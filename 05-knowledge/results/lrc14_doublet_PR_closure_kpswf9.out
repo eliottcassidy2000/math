@@ -29,3 +29,57 @@ K=9  P_per=420  Phi=0.261732  cap=0.494256  H_K=0.072524   [FULL period 420 exac
          800    0.57165   915.7851      0.000581
    CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.69363; M*=ceil(G/H_K)=24
    finite window [15,24]: worst p0=0.289765 <= cap-0.16=0.334256 ? True  (cap-sup_p0=0.20449)
+
+K=10  P_per=2940  Phi=0.411027  cap=0.604396  H_K=0.033369   [FULL period 2940 exact]
+   p0(base)=0.327211  a_inf=0.034888  d_inf(adjacent-pair corr)=0.014039
+   EXACT period-max(P) over [15,2955) = 1.24049 at M=2835  (min -1.24999)
+   sup g(M) over [15,3014] = 1.53400 at M=1071  (P+R==g exact? True)
+   R=M*(d2-d_inf): global sup M*|R| = 1549.67442  sup|R|=0.59076
+          M0     sup|R|   sup M|R|  sup|d2-dinf|
+          15    0.59076  1549.6744      0.013976
+         100    0.59076  1549.6744      0.002989
+         300    0.59076  1549.6744      0.001441
+        1500    0.54147  1549.6744      0.000317
+   CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.83125; M*=ceil(G/H_K)=55
+   finite window [15,55]: worst p0=0.442517 <= cap-0.16=0.444396 ? True  (cap-sup_p0=0.16188)
+
+K=11  P_per=5880  Phi=0.490566  cap=0.725275  H_K=0.074708   [period 5880; P-max over window; H_K large]
+   p0(base)=0.416156  a_inf=0.031730  d_inf(adjacent-pair corr)=0.010950
+   EXACT period-max(P) over [15,2415) = 1.20535 at M=1910  (min -1.42212)
+   sup g(M) over [15,2414] = 1.47707 at M=1316  (P+R==g exact? True)
+   R=M*(d2-d_inf): global sup M*|R| = 1148.60600  sup|R|=0.61480
+          M0     sup|R|   sup M|R|  sup|d2-dinf|
+          15    0.61480  1148.6060      0.013490
+         100    0.61480  1148.6060      0.003271
+         300    0.61480  1148.6060      0.001767
+        1200    0.51606  1148.6060      0.000334
+   CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.82015; M*=ceil(G/H_K)=25
+   finite window [15,25]: worst p0=0.521058 <= cap-0.16=0.565275 ? True  (cap-sup_p0=0.20422)
+
+K=12  P_per=17640  Phi=0.565844  cap=0.857143  H_K=0.131299   [period 17640; P-max over window; H_K large]
+   p0(base)=0.504478  a_inf=0.026774  d_inf(adjacent-pair corr)=0.007819
+   EXACT period-max(P) over [15,2415) = 1.19556 at M=67  (min -1.47281)
+   sup g(M) over [15,2414] = 1.36207 at M=1126  (P+R==g exact? True)
+   R=M*(d2-d_inf): global sup M*|R| = 796.24457  sup|R|=0.42886
+          M0     sup|R|   sup M|R|  sup|d2-dinf|
+          15    0.42886   796.2446      0.009160
+         100    0.42886   796.2446      0.003384
+         300    0.42886   796.2446      0.001182
+        1200    0.37874   796.2446      0.000268
+   CLOSURE: G_sup_bound = period-max(P)+sup|R| = 1.62441; M*=ceil(G/H_K)=13
+   finite window [15,15]: worst p0=0.574150 <= cap-0.16=0.697143 ? True  (cap-sup_p0=0.26749)
+
+============================================================================================
+SUMMARY -- does the EXACT almost-periodic P/R split CLOSE the doublet leg (margin 0.16)?
+============================================================================================
+    K  P_per       H_K period-max(P)  sup M|R|   sup|R|     M*  closes  cap-sup_p0
+    8    420   0.11541       0.74679 1084.59661  0.73482     13    True     0.23690
+    9    420   0.07252       1.12198 915.78513  0.57165     24    True     0.20449
+   10   2940   0.03337       1.24049 1549.67442  0.59076     55    True     0.16188
+   11   5880   0.07471       1.20535 1148.60600  0.61480     25    True     0.20422
+   12  17640   0.13130       1.19556 796.24457  0.42886     13    True     0.26749
+
+  ALL K close with margin 0.16 (p0<=cap-0.16, all M>=15)? True
+  period-max(P): EXACT finite (one period of exact rationals; THM-563 sawtooth).
+  R-tail: VERIFIED sup M|R|<=~1 decaying (O(1/M), Koksma on residual far phase).
+  finite window [15,M*]: EXACT. => doublet/genuine-wide leg VERIFIED-closed, margin 0.16.

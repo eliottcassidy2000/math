@@ -1,0 +1,67 @@
+============================================================================================
+THREAD C: FINITE-f CORRECTION c(f)=p0(E_f)-p0_inf for binding doublet (kps-wf9)
+E_f = consec_{k-1} U {f,f+1}.  Target: sup_f p0(E_f) < cap_k with margin >= 0.16
+============================================================================================
+
+k=8  cap=2243/5880=0.381463  p0_inf=92339/352800=0.261732  cap-p0_inf=+0.119731
+  (A) SIGN of c(f)=p0(E_f)-p0_inf over [15,900]: pos=400 zero=0 neg=486
+      most POSITIVE correction = +0.028033 at f=21  (if <=0 everywhere, p0_inf is an UPPER bound)
+  (B) DECAY: sup_f f*|c(f)| = 1.2623 (f=679); sup_f f^2*|c(f)| = 929.02 (f=847)
+      tail sup|c(f)| for f>=: 15:0.02803  50:0.01376  100:0.00858  200:0.00487  400:0.00257  700:0.00149
+  (C) ACTUAL sup_f p0(E_f) over [15,900] = 0.289765 at f=21
+      cap - sup_f = +0.091698   (>= 0.16? False)
+      UPPER BOUND = max(p0_inf, window-sup) = 0.289765; cap - that = +0.091698  (>=0.16? False)
+  (D) top-5 peak-region p0(E_f), f in 15..45: f=21:0.28976, f=41:0.28150, f=25:0.27744, f=35:0.27732, f=20:0.27619
+
+k=9  cap=1979/4004=0.494256  p0_inf=7895/19208=0.411027  cap-p0_inf=+0.083229
+  (A) SIGN of c(f)=p0(E_f)-p0_inf over [15,900]: pos=415 zero=0 neg=471
+      most POSITIVE correction = +0.031490 at f=21  (if <=0 everywhere, p0_inf is an UPPER bound)
+  (B) DECAY: sup_f f*|c(f)| = 1.3372 (f=91); sup_f f^2*|c(f)| = 873.25 (f=679)
+      tail sup|c(f)| for f>=: 15:0.03149  50:0.01519  100:0.00822  200:0.00392  400:0.00264  700:0.00141
+  (C) ACTUAL sup_f p0(E_f) over [15,900] = 0.442517 at f=21
+      cap - sup_f = +0.051739   (>= 0.16? False)
+      UPPER BOUND = max(p0_inf, window-sup) = 0.442517; cap - that = +0.051739  (>=0.16? False)
+  (D) top-5 peak-region p0(E_f), f in 15..45: f=21:0.44252, f=25:0.42983, f=17:0.42948, f=38:0.42690, f=29:0.42301
+
+k=10  cap=55/91=0.604396  p0_inf=23557/48020=0.490566  cap-p0_inf=+0.113829
+  (A) SIGN of c(f)=p0(E_f)-p0_inf over [15,900]: pos=432 zero=0 neg=454
+      most POSITIVE correction = +0.030491 at f=21  (if <=0 everywhere, p0_inf is an UPPER bound)
+  (B) DECAY: sup_f f*|c(f)| = 1.4157 (f=447); sup_f f^2*|c(f)| = 856.20 (f=742)
+      tail sup|c(f)| for f>=: 15:0.03049  50:0.01843  100:0.00879  200:0.00550  400:0.00317  700:0.00156
+  (C) ACTUAL sup_f p0(E_f) over [15,900] = 0.521058 at f=21
+      cap - sup_f = +0.083338   (>= 0.16? False)
+      UPPER BOUND = max(p0_inf, window-sup) = 0.521058; cap - that = +0.083338  (>=0.16? False)
+  (D) top-5 peak-region p0(E_f), f in 15..45: f=21:0.52106, f=37:0.50759, f=25:0.50069, f=38:0.49833, f=41:0.49822
+
+k=11  cap=66/91=0.725275  p0_inf=14085881/24893568=0.565844  cap-p0_inf=+0.159431
+  (A) SIGN of c(f)=p0(E_f)-p0_inf over [15,900]: pos=436 zero=0 neg=450
+      most POSITIVE correction = +0.023807 at f=21  (if <=0 everywhere, p0_inf is an UPPER bound)
+  (B) DECAY: sup_f f*|c(f)| = 1.4735 (f=69); sup_f f^2*|c(f)| = 911.19 (f=888)
+      tail sup|c(f)| for f>=: 15:0.04246  50:0.02136  100:0.00669  200:0.00482  400:0.00292  700:0.00148
+  (C) ACTUAL sup_f p0(E_f) over [15,900] = 0.589652 at f=21
+      cap - sup_f = +0.135623   (>= 0.16? False)
+      UPPER BOUND = max(p0_inf, window-sup) = 0.589652; cap - that = +0.135623  (>=0.16? False)
+  (D) top-5 peak-region p0(E_f), f in 15..45: f=21:0.58965, f=37:0.58110, f=26:0.57996, f=16:0.57816, f=38:0.57658
+
+k=12  cap=6/7=0.857143  p0_inf=55931399/88905600=0.629110  cap-p0_inf=+0.228033
+  (A) SIGN of c(f)=p0(E_f)-p0_inf over [15,900]: pos=443 zero=0 neg=443
+      most POSITIVE correction = +0.018452 at f=15  (if <=0 everywhere, p0_inf is an UPPER bound)
+  (B) DECAY: sup_f f*|c(f)| = 1.2532 (f=564); sup_f f^2*|c(f)| = 866.33 (f=736)
+      tail sup|c(f)| for f>=: 15:0.02381  50:0.01495  100:0.00577  200:0.00413  400:0.00222  700:0.00160
+  (C) ACTUAL sup_f p0(E_f) over [15,900] = 0.647562 at f=15
+      cap - sup_f = +0.209580   (>= 0.16? True)
+      UPPER BOUND = max(p0_inf, window-sup) = 0.647562; cap - that = +0.209580  (>=0.16? True)
+  (D) top-5 peak-region p0(E_f), f in 15..45: f=15:0.64756, f=16:0.64647, f=17:0.64627, f=26:0.64219, f=37:0.64176
+
+============================================================================================
+SUMMARY (the doublet upper bound and margin)
+============================================================================================
+   k        cap     p0_inf    win-sup    cap-sup     cap-UB  >=0.16?
+   8   0.381463   0.261732   0.289765   0.091698   0.091698    False
+   9   0.494256   0.411027   0.442517   0.051739   0.051739    False
+  10   0.604396   0.490566   0.521058   0.083338   0.083338    False
+  11   0.725275   0.565844   0.589652   0.135623   0.135623    False
+  12   0.857143   0.629110   0.647562   0.209580   0.209580     True
+
+READING: if c(f) <= 0 (p0_inf is an upper bound) OR window-sup+plateau both clear
+cap by >= 0.16, the binding doublet closes. The tight k is the binding margin.

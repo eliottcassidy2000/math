@@ -1,0 +1,15 @@
+============================================================================================
+THREAD C: structure of the doublet correction c(f)=p0(E_f)-p0_inf  (kps-wf9)
+============================================================================================
+
+k=8
+  P=7*lcm=420  p0_inf=92339/352800=0.261732
+  TEST1 f*c(f) exactly periodic? False  (worst 2nd-diff of f*p0 = 347/15925=0.021790)
+        slope == P*p0_inf exactly? False  (#distinct slopes=419)
+  TEST2 2nd-diff DECAY (window base_f, worst|2nd-diff|, base_f*worst):
+        f~15: |2nd-diff|=0.021790  f*that=0.3268
+        f~65: |2nd-diff|=0.007952  f*that=0.5169
+        f~115: |2nd-diff|=0.004847  f*that=0.5574
+        f~165: |2nd-diff|=0.003088  f*that=0.5095
+        f~215: |2nd-diff|=0.002031  f*that=0.4366
+        f~265: |2nd-diff|=0.001690  f*that=0.4479
