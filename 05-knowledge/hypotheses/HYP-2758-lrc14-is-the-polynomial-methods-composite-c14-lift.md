@@ -35,7 +35,22 @@ avoid the **`c=(k+1)=14` lift**, which "requires checking ~(13/2)^12 ~ 5e9 times
 > **So `meas(S7(E)) <= cap_k` (the repo's sector bound) is the ANALYTIC form of the paper's intractable
 > computational `c=14` lift, performed through the apex prime 7 instead of by brute enumeration.**
 
-## ACTIONABLE leads
+## CORRECTION (kps-S24, after fetching Sections 3-5): the CRT lead is REFUTED; the real mapping is sharper
+The c=14 lift does NOT factor as c=2 x c=7 over CRT (paper: "you must apply c=2 repeatedly (four times),
+project, then c=3" -- the lifting is ADDITIVE partial-fractions, not multiplicative CRT). So lead 1 below
+(CRT the polynomial method onto Z_7) is REFUTED. The SHARPER, correct mapping:
+- The paper's BOTTLENECK for k=13 is certifying the CANONICAL TUPLE `(1,2,..,13)` is `(13,p,14)-proper`. Their
+  Prop 4.4 does this via the polynomial method -- which NEEDS k+1 PRIME (Fermat). For k+1=14 composite it FAILS,
+  and the c=14 lift (the only alternative) is intractable. So **the unprovable step IS the canonical/CONSEC tuple.**
+- **The repo's CONSEC-MAX (mac-mini's measS7=sum W_a, the 3-layer finite extremality) is precisely the ANALYTIC
+  certificate for the canonical tuple that the polynomial method cannot provide at composite 14.** The repo does
+  by apex-prime-7 harmonic analysis what they do by Fermat in the field Z_{k+1} (only when k+1 is prime).
+- **The repo's DOMINATION (single-far = consec-base maximizer; kps-S23) mirrors the paper's sieve fact** that all
+  surviving non-canonical residues "are equivalents of (1,2,..,k)" -- i.e. everything reduces to consec.
+So the repo's TWO pillars (consec-max + wide-domination-to-consec) = the paper's TWO parts (certify canonical +
+sieve-everything-to-canonical), supplied ANALYTICALLY for the composite-14 case their polynomial method can't reach.
+
+## (superseded) ACTIONABLE leads
 1. **CRT the polynomial method onto Z_7.** Z_14=Z_2 x Z_7. The polynomial/Fermat argument WORKS in the prime
    field Z_7. Run their Prop-4.1 construction in Z_7 (and Z_2) and CRT-combine: does the prime-factor polynomial
    method certify the consec / canonical-residue case at the apex prime, bypassing the composite-14 failure?
