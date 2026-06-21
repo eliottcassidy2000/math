@@ -1,0 +1,26 @@
+THREAD C (kps-S25-wf8): the SLACK-REGIME floor for LRC(14)
+
+  k=8: cap=0.38146  Q(k-1)=0.19660  margin=0.18486
+  k=9: cap=0.49426  Q(k-1)=0.36210  margin=0.13216
+  k=10: cap=0.60440  Q(k-1)=0.44789  margin=0.15651
+  k=11: cap=0.72527  Q(k-1)=0.53125  margin=0.19402
+  k=12: cap=0.85714  Q(k-1)=0.60224  margin=0.25490
+
+====================================================================================
+PART 1: the c_t(t,r)=0 (t>r) plateau-killing identity (EXACT, the slack lever)
+====================================================================================
+c_t(t,r) = sum_i (-1)^i C(t,i)((7-i)/7)^r  = Pr[r iid far cover all t missing sectors]
+  Proven: c_t(t,r)=0 for t>r (r runners hit <= r sectors); c_t(0,r)=1; increasing in r.
+  exact check c_t(t,r)=0 for all t>r, r=0..6: PASS (0 violations)
+
+  Consequence: p0_decorr(B,r) = sum_{t=0}^{r} prof_t(B) c_t(t,r).
+  Mass of prof(B) at t>r is KILLED. A SPREAD/SMALL base puts mass at HIGH t,
+  so when r is moderate the decorrelated cover is far below the dense (consec) plateau.
+
+====================================================================================
+PART 2: sup p0_decorr over the SLACK family vs Q(k-1) vs cap  (EXACT)
+====================================================================================
+Slack = NOT(single-block base AND r<=2). We sup p0_decorr = boundary_value_direct(B,r)
+over all bounded bases B (0 in B, B subset [0,14]) and r=k-|B|, restricted to slack.
+
+ k   sup_slack p0_decorr        Q(k-1)            cap_k          gap_decorr=cap-sup

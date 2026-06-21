@@ -1,0 +1,16 @@
+THREAD B (kps-S26-wf8): localized err+ bound on the BINDING family via THM-546
+
+  k=8: cap=0.38146 Q(k-1)=0.19660 margin=0.18486
+  k=9: cap=0.49426 Q(k-1)=0.36210 margin=0.13216
+  k=10: cap=0.60440 Q(k-1)=0.44789 margin=0.15651
+  k=11: cap=0.72527 Q(k-1)=0.53125 margin=0.19402
+  k=12: cap=0.85714 Q(k-1)=0.60224 margin=0.25490
+================================================================================
+(0) ENGINE CROSS-CHECKS (exact)
+================================================================================
+  B=(0, 1, 2, 3, 4, 5, 6, 7) w=30: Delta_w=+0.001846  w*Delta_w(engine)=19/343  match=OK
+  B=(0, 1, 2, 3, 4, 5, 6, 7) w=15: Delta_w=-0.021283  w*Delta_w(engine)=-219/686  match=OK
+  B=(0, 1, 2, 3, 4, 5, 6, 7) w=16: Delta_w=+0.001761  w*Delta_w(engine)=29/1029  match=OK
+  B=(0, 2, 4, 6, 8, 10, 12, 14) w=15: Delta_w=+0.009500  w*Delta_w(engine)=391/2744  match=OK
+
+  THM-546 comb bound check  |Delta_w| <= (6/49) V(B) / w :
