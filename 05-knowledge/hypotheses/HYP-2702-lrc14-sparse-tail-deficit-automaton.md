@@ -1,7 +1,7 @@
 ---
 id: HYP-2702
 title: LRC14 sparse residual tails should be absorbed by a generated-context deficit automaton
-status: OPEN; namespace reserved for exact scout
+status: OPEN; exact sparse-tail scout supports singleton/coherent neutralization
 source: codex-2026-06-20-S64
 tangent: T937
 depends_on:
@@ -55,19 +55,99 @@ state transitions under adding singleton context carriers, merging singleton
 context carriers into coherent blocks, or lifting `|R|` toward the already-safe
 large-residual layers.
 
-## What Is Claimed Now
+## Evidence From The S64 Scout
 
-Only the namespace and route are claimed in this stub.  The immediate scout
-will:
+The exact scout
+`04-computation/lrc14_sparse_tail_deficit_automaton_codex_s64.py` stores its
+run in
+`05-knowledge/results/lrc14_sparse_tail_deficit_automaton_codex_s64.out`.
 
-1. enumerate the exact `|R|=3,4` violators from HYP-2700;
-2. decompose each violator by residual-sector geometry and hit-count gaps;
-3. test singleton-product context kernels `g_r` as a neutralizing automaton
-   step;
-4. compare singleton kernels against coherent generated contexts from
-   HYP-2698;
-5. report tournament fingerprints for the proof-state automaton: score
-   histogram, directed cycles, SCCs, edge flips, and Hamiltonian-path count.
+It uses exact Fraction arithmetic over the same `Z/7` sector-mask breakpoints
+as HYP-2698.  To keep the run finite and directly tied to the known
+obstruction, it takes a full bounded census for size `3` (`max(E)<=13`) and the
+HYP-2698 near-consecutive frontier for sizes `4..6`.
+
+Sparse coordinate wins are real and geometrically concentrated:
+
+```text
+size 3 full span<=13: 56 coordinate-violator shapes
+  |R|=2: max gain 5/588 at C=(0,1,4), R=(5,6)
+  |R|=3: max gain 5/294 at C=(0,1,3), R=(3,5,6)
+
+size 4 frontier: 7 violator shapes, including |R|=4 max gain 3/196
+size 5 frontier: 8 violator shapes, |R|=3,4 only
+size 6 frontier: 1 violator shape, C=(0,1,2,3,4,6)
+```
+
+The dominant residual geometries are low-layer and spread/collar packets, not
+full cover:
+
+```text
+|R|=3 gaps (1,2,4): 464 coordinates
+|R|=2 gaps (1,6):   295 coordinates
+|R|=3 gaps (1,1,5):  64 coordinates
+```
+
+Every tested sparse-tail coordinate violator is neutralized by the singleton
+product context at total size `7`:
+
+```text
+size 3, r=4: 56 tested, 0 failures, min delta 20/16807
+size 4, r=3:  7 tested, 0 failures, min delta 37/16807
+size 5, r=2:  8 tested, 0 failures, min delta 199/24010
+size 6, r=1:  1 tested, 0 failures, min delta 69/6860
+```
+
+The exact coherent generated-context scan also has zero failures:
+
+```text
+size 3, r=4, contexts=5: 280 tests, min 20/16807 at [1+1+1+1]
+size 4, r=3, contexts=3:  21 tests, min 37/16807 at [1+1+1]
+size 5, r=2, contexts=2:  16 tests, min 199/24010 at [1+1]
+size 6, r=1, contexts=1:   1 test,  min 69/6860 at [1]
+```
+
+Thus the weakest generated context in this scout is always the all-singleton
+context.  This sharpens HYP-2698's proof route: first prove the symmetric
+hit-count kernel inequality, then prove that merging singleton context carriers
+into coherent blocks cannot decrease the margin.
+
+The all-singleton context has a useful cellular-automaton interpretation.  On
+a residual packet of size `j`, one singleton carrier applies the monotone death
+rule
+
+```text
+j -> j-1 with probability j/7,
+j -> j   with probability (7-j)/7.
+```
+
+Equivalently, for a fixed `t`-sector requirement, the probability that `r`
+singletons cover it is the HYP-2698 kernel
+
+```text
+g_r(t)=7^-r sum_{a=0}^t (-1)^a binom(t,a)(7-a)^r.
+```
+
+So the first proof target is a finite one-dimensional death-chain inequality
+for hit-count laws.  The second proof target is a context-merging monotonicity
+lemma: coherent blocks should dominate the singleton death chain for the
+compression margin, as all exact minima in the scout occur at all-singletons.
+
+Tournament Analysis on proof carriers is transitive:
+
+```text
+miss_zeta_product_word
+> coherent_OR_contexts
+> singleton_hit_count_kernel
+> survival_basis_signal
+> large_R_stratification
+> raw_coordinate_weights
+```
+
+The fingerprint is `score_hist={0:1,1:1,2:1,3:1,4:1,5:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.  The quotient
+preserves generated-context pressure and rejects raw residual coordinates as
+the losing scalarization.
 
 ## Assumption Challenge
 
@@ -82,10 +162,10 @@ The session explicitly rejects the easy vertex choices:
 The quotient preserves the LRC predicate "context-generated residual pressure
 times cluster capacity" and destroys the individual carrier phases.  The
 challenged assumption is that sparse residual packets must be handled by a
-  separate ad hoc finite check; HYP-2702 tries to make them a finite automaton
+separate ad hoc finite check; HYP-2702 tries to make them a finite automaton
 frontier attached to HYP-2698's miss-zeta product word.
 
 ## Status
 
-No LRC14 proof is claimed.  This is a live stub reserved before running the
-exact sparse-tail scout.
+No LRC14 proof is claimed.  The scout supports the generated-context basis
+route and identifies the singleton death-chain kernel as the first proof target.

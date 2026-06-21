@@ -1,0 +1,76 @@
+HYP-2702 / T937 -- sparse-tail deficit automaton exact scout
+Arithmetic: exact Fractions over Z/7 sector-mask breakpoints.
+
+PART A -- exact sparse-tail coordinate violator census
+  shapes use 0 in E, primitive, K_s=(0,...,s-1)
+  size=3 is full span<=13; sizes 4..6 use the HYP-2698 near-consecutive frontier
+  only |R|<=4 is recomputed here; HYP-2700 supplies the large-layer anchor
+  size=3 (full span<=13): coordinate-violator shapes=56
+    |R|=2: coordinates=  280, max_gain=5/588 (0.008503401) at C=(0, 1, 4), R=(5, 6), gap_sig=(1, 6)
+    |R|=3: coordinates=  464, max_gain=5/294 (0.017006803) at C=(0, 1, 3), R=(3, 5, 6), gap_sig=(1, 2, 4)
+    scan complete
+  size=4 (frontier): coordinate-violator shapes=7
+    |R|=2: coordinates=   15, max_gain=2/147 (0.013605442) at C=(0, 1, 3, 4), R=(5, 6), gap_sig=(1, 6)
+    |R|=3: coordinates=   64, max_gain=13/735 (0.017687075) at C=(0, 1, 2, 5), R=(4, 5, 6), gap_sig=(1, 1, 5)
+    |R|=4: coordinates=   42, max_gain=3/196 (0.015306122) at C=(0, 1, 2, 4), R=(2, 4, 5, 6), gap_sig=(1, 1, 2, 3)
+    scan complete
+  size=5 (frontier): coordinate-violator shapes=8
+    |R|=3: coordinates=   28, max_gain=11/980 (0.011224490) at C=(0, 1, 2, 4, 5), R=(4, 5, 6), gap_sig=(1, 1, 5)
+    |R|=4: coordinates=   24, max_gain=4/245 (0.016326531) at C=(0, 1, 2, 4, 5), R=(3, 4, 5, 6), gap_sig=(1, 1, 1, 4)
+    scan complete
+  size=6 (frontier): coordinate-violator shapes=1
+    |R|=1: coordinates=    6, max_gain=1/294 (0.003401361) at C=(0, 1, 2, 3, 4, 6), R=(6,), gap_sig=(7,)
+    |R|=2: coordinates=    5, max_gain=23/2940 (0.007823129) at C=(0, 1, 2, 3, 4, 6), R=(4, 6), gap_sig=(2, 5)
+    |R|=3: coordinates=    4, max_gain=5/588 (0.008503401) at C=(0, 1, 2, 3, 4, 6), R=(2, 4, 6), gap_sig=(2, 2, 3)
+    scan complete
+
+  sparse residual geometry census (layer, cyclic gap signature):
+    |R|=3, gaps=(1, 2, 4): 464
+    |R|=2, gaps=(1, 6): 295
+    |R|=3, gaps=(1, 1, 5): 64
+    |R|=4, gaps=(1, 1, 1, 4): 36
+    |R|=4, gaps=(1, 1, 2, 3): 30
+    |R|=3, gaps=(1, 3, 3): 28
+    |R|=1, gaps=(7,): 6
+    |R|=2, gaps=(2, 5): 5
+    |R|=3, gaps=(2, 2, 3): 4
+
+PART B -- singleton-product context neutralization
+  r=7-size is the first total-size-7 context depth from HYP-2698.
+  size=3, r=4: tested=56, failures=0, min_delta=20/16807 (0.001189980) at C=(0, 1, 3)
+    first-positive singleton depth histogram: {3: 56}
+  size=4, r=3: tested=7, failures=0, min_delta=37/16807 (0.002201464) at C=(0, 1, 2, 4)
+    first-positive singleton depth histogram: {2: 7}
+  size=5, r=2: tested=8, failures=0, min_delta=199/24010 (0.008288213) at C=(0, 1, 2, 3, 5)
+    first-positive singleton depth histogram: {1: 8}
+  size=6, r=1: tested=1, failures=0, min_delta=69/6860 (0.010058309) at C=(0, 1, 2, 3, 4, 6)
+    first-positive singleton depth histogram: {0: 1}
+
+PART C -- coherent generated contexts of total size 7
+  Exact shared-x OR/deletion automaton; contexts are integer partitions of r=7-size.
+  size=3, r=4, contexts=5: tested=280, failures=0, min_delta=20/16807 (0.001189980) at ((0, 1, 3), '[1+1+1+1]')
+  size=4, r=3, contexts=3: tested=21, failures=0, min_delta=37/16807 (0.002201464) at ((0, 1, 2, 4), '[1+1+1]')
+  size=5, r=2, contexts=2: tested=16, failures=0, min_delta=199/24010 (0.008288213) at ((0, 1, 2, 3, 5), '[1+1]')
+  size=6, r=1, contexts=1: tested=1, failures=0, min_delta=69/6860 (0.010058309) at ((0, 1, 2, 3, 4, 6), '[1]')
+
+PART D -- Tournament Analysis on proof carriers
+  vertices are proof carriers; observable=(failures, min_margin, exactness, generated-fidelity)
+    miss_zeta_product_word: score=5, metric=(0, Fraction(20, 16807), 7, 5)
+    coherent_OR_contexts: score=4, metric=(0, Fraction(20, 16807), 6, 4)
+    singleton_hit_count_kernel: score=3, metric=(0, Fraction(20, 16807), 5, 3)
+    survival_basis_signal: score=2, metric=(0, Fraction(0, 1), 4, 4)
+    large_R_stratification: score=1, metric=(0, Fraction(0, 1), 4, 2)
+    raw_coordinate_weights: score=0, metric=(10000, Fraction(-1, 1), 0, 0)
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1}
+  directed_3cycles=0
+  SCCs=[['miss_zeta_product_word'], ['coherent_OR_contexts'], ['singleton_hit_count_kernel'], ['survival_basis_signal'], ['large_R_stratification'], ['raw_coordinate_weights']]
+  Hamiltonian_path_count=1
+  Read: sparse-tail deficits should be lifted into the generated-context basis;
+        raw residual coordinates are the losing quotient.
+
+SYNTHESIS
+  Sparse coordinate wins are real, but they are concentrated in low layers
+  and specific Z/7 gap geometries.  The next proof target is not a raw
+  coordinate inequality; it is a generated-context automaton inequality.
+  HYP-2701's survival-basis gate is parallel signal: choose the basis first,
+  then scalarize.
