@@ -47,3 +47,17 @@ We bound p0(E) DIRECTLY (no error decomposition needed). Over the slack family
  k    max_slack p0           cap_k          GAP = cap - max_p0      argmax E
   8   0.19764 (16187729/81904725)   0.38146    0.18382 (=120446873/655237800)   E=(0, 15, 17, 19, 21, 23, 25, 27)
   9   0.37160 (437/1176)   0.49426    0.12266 (=20627/168168)   E=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+ 10   0.45068 (265/588)   0.60440    0.15372 (=1175/7644)   E=(0, 2, 4, 6, 8, 10, 12, 14, 15, 16)
+ 11   0.51310 (431/840)   0.72527    0.21218 (=331/1560)   E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 24)
+ 12   0.60085 (3533/5880)   0.85714    0.25629 (=1507/5880)   E=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14, 28)
+
+READING: max_slack p0 <= cap_k - gap with the gaps above; SLACK REGIME SAFE.
+====================================================================================
+PART 4: THM-557 multi-cluster STRICTLY lowers the decorrelated cover (item 3)
+====================================================================================
+Base = {0}; m=k-1 nonzero runners partitioned into far coherent blocks.
+Single block [m] vs split [m-1,1], [m-2,2], ... -- decorr cover via boundary_value_direct({0}, .)
+is NOT the right call; THM-557 integrates the actual shared-x cover. We reproduce its D_m and
+the split GAPS by EXACT p0 on widely-separated coherent blocks (diagonal-freeze limit).
+
+ m   single-block D_m (p0, M-large)      best split          split p0           gap=single-split
