@@ -1,0 +1,10 @@
+##################################################################################
+# THREAD B stage 6 -- span bound from relation height (finiteness theorem)
+##################################################################################
+
+==================================================================================
+PART A -- verify lambda_max<=H0 => span<=bound, and measure SHARP max span
+==================================================================================
+  For each (k,H0): enumerate primitive E span<=SP, keep lambda_max<=H0,
+  report MAX span (sharp), Hadamard bound (k-2)!*H0^(k-2), linear bound (k-2)(k-1)/2*H0.
+  k=6 H0=1: #family=    45 MAXspan= 10 [OK(<SP)]  linear bound=10 Hadamard bound=24  argmax=[0, 1, 2, 3, 4, 10]

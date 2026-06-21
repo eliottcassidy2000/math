@@ -1,0 +1,43 @@
+##################################################################################
+# THREAD B stage 5b -- FAST exhaustive span-window finite check
+##################################################################################
+
+==================================================================================
+CROSS-CHECK: measS7_int == measS7_frac
+==================================================================================
+  int engine matches Fraction engine on 4 shapes: True
+
+==================================================================================
+EXHAUSTIVE measS7<=cap : all primitive E, |E|=8, span<=W=20
+==================================================================================
+  cap_8=2243/5880=0.38146; consec_8=0.32721
+  #primitive E (span<=W): 77400   (27s)
+  WORST measS7 = 481/1470 = 0.327211  at (0, 1, 2, 3, 4, 5, 6, 7)
+  consec is the worst? True
+  # over cap_8: 0   =>  measS7 <= cap_8 for ALL: True
+  margin cap - worst = 0.054252
+  # shapes within 0.02 of cap: 0
+
+==================================================================================
+EXHAUSTIVE measS7<=cap : all primitive E, |E|=9, span<=W=17
+==================================================================================
+  cap_9=1979/4004=0.49426; consec_9=0.41616
+  #primitive E (span<=W): 24309   (9s)
+  WORST measS7 = 2447/5880 = 0.416156  at (0, 1, 2, 3, 4, 5, 6, 7, 8)
+  consec is the worst? True
+  # over cap_9: 0   =>  measS7 <= cap_9 for ALL: True
+  margin cap - worst = 0.078099
+  # shapes within 0.02 of cap: 0
+
+==================================================================================
+EXHAUSTIVE measS7<=cap : all primitive E, |E|=10, span<=W=16
+==================================================================================
+  cap_10=55/91=0.60440; consec_10=0.50448
+  #primitive E (span<=W): 11440   (4s)
+  WORST measS7 = 8899/17640 = 0.504478  at (0, 1, 2, 3, 4, 5, 6, 7, 8, 9)
+  consec is the worst? True
+  # over cap_10: 0   =>  measS7 <= cap_10 for ALL: True
+  margin cap - worst = 0.099917
+  # shapes within 0.02 of cap: 0
+
+DONE (Thread B stage 5b).
