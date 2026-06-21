@@ -1,0 +1,79 @@
+HYP-2697 / T933 / S62 -- arbitrary bounded cluster-shape compression scout
+Goal: refine HYP-2694 beyond THM-557's coherent-block quotient.
+
+PART A -- exact failures of naive residual-vector dominance
+  size=3 consec=(0, 1, 2) challenger=(0, 1, 3)
+    full-cover: challenger-consec = 0
+    residual (3, 5, 6) gain = 5/294 (+0.017006803)
+    residual (1, 5, 6) gain = 5/294 (+0.017006803)
+    residual (3, 4, 6) gain = 5/294 (+0.017006803)
+    residual (1, 2, 6) gain = 5/294 (+0.017006803)
+    residual (2, 4, 5) gain = 5/294 (+0.017006803)
+  size=4 consec=(0, 1, 2, 3) challenger=(0, 1, 2, 4)
+    full-cover: challenger-consec = 0
+    residual (2, 4, 5, 6) gain = 73/4704 (+0.015518707)
+    residual (1, 4, 5, 6) gain = 73/4704 (+0.015518707)
+    residual (2, 3, 4, 6) gain = 73/4704 (+0.015518707)
+    residual (1, 2, 3, 6) gain = 73/4704 (+0.015518707)
+    residual (1, 3, 4, 5) gain = 73/4704 (+0.015518707)
+  size=5 consec=(0, 1, 2, 3, 4) challenger=(0, 1, 2, 3, 5)
+    full-cover: challenger-consec = 0
+    residual (3, 4, 5, 6) gain = 13/1050 (+0.012380952)
+    residual (2, 3, 4, 5) gain = 13/1050 (+0.012380952)
+    residual (1, 2, 3, 4) gain = 13/1050 (+0.012380952)
+    residual (4, 5, 6) gain = 23/2940 (+0.007823129)
+    residual (3, 4, 5) gain = 23/2940 (+0.007823129)
+  Conclusion: compression cannot be coordinatewise stochastic dominance.
+
+PART B -- grid scan: full-cover scalar compression
+  midpoint grid NX=42, Nphi=42; these rows are scouting evidence
+  size=6, span<=11, shapes=461: consec_full=0.032312925, best_full=(0, 1, 2, 3, 4, 5) 0.032312925, vector_violators=17, max_residual_gain=0.020408163 at (0, 2, 3, 4, 5, 6) for R=(1, 3, 5)
+  size=7, span<=12, shapes=923: consec_full=0.183106576, best_full=(0, 1, 2, 3, 4, 5, 6) 0.183106576, vector_violators=7, max_residual_gain=0.011904762 at (0, 2, 3, 4, 5, 6, 8) for R=(1, 3)
+  size=8, span<=11, shapes=330: consec_full=0.297052154, best_full=(0, 1, 2, 3, 4, 5, 6, 7) 0.297052154, vector_violators=8, max_residual_gain=0.011337868 at (0, 2, 3, 4, 5, 6, 8, 10) for R=(1,)
+  size=9, span<=11, shapes=165: consec_full=0.410430839, best_full=(0, 1, 2, 3, 4, 5, 6, 7, 8) 0.410430839, vector_violators=9, max_residual_gain=0.009070295 at (0, 2, 3, 4, 5, 6, 7, 8, 10) for R=(1, 5)
+  Read: full-cover scalar favors consecutive, but residual-vector gains persist.
+
+PART C -- grid beam: arbitrary split contexts vs one coherent block
+  Candidate shapes per size are top 8 by full-cover scalar in a small span box.
+  m=7: one-block=0.183106576, best split beam=0.074586978, gap=+0.108519598, arg=(1, 6, (0,), (0, 1, 2, 3, 4, 5))
+  m=8: one-block=0.297052154, best split beam=0.221412374, gap=+0.075639780, arg=(1, 7, (0,), (0, 1, 2, 3, 4, 5, 6))
+  m=9: one-block=0.410430839, best split beam=0.332199546, gap=+0.078231293, arg=(1, 8, (0,), (0, 1, 2, 3, 4, 5, 6, 7))
+  m=10: one-block=0.472222222, best split beam=0.439180434, gap=+0.033041788, arg=(1, 9, (0,), (0, 1, 2, 3, 4, 5, 6, 7, 8))
+  m=11: one-block=0.563492063, best split beam=0.511499838, gap=+0.051992225, arg=(1, 10, (0,), (0, 1, 2, 3, 4, 5, 6, 7, 8, 10))
+  Read: the dangerous split is singleton + large block, matching THM-557.
+
+PART D -- exact named context checks using the THM-557 engine
+  singleton + (0, 1, 2, 3, 4, 5, 6, 7, 8, 9): 226271/432180 (0.523557314)
+  singleton + (0, 1, 2, 3, 4, 5, 6, 7, 8, 10): 1744429/3361400 (0.518959065)
+  singleton + (0, 2, 3, 4, 5, 6, 7, 8, 9, 10): 149621/288120 (0.519300986)
+  one coherent size-11 block: 71111/123480 (0.575890833)
+  Exact read: nonconsecutive large-block perturbations do not beat the consecutive
+  large block in this singleton context, and the split stays below one block.
+
+PART E -- Tournament Analysis: what should be a vertex?
+  Shape tournament, size 8.  Vertices are cluster shapes, not runners.
+  Switch 1: full-cover scalar q_C(all six); larger wins.
+    scores={'K8': 5, '(0, 2, 3, 4, 5, 6, 8, 10)': 3, '(0, 1, 2, 3, 4, 5, 6, 8)': 4, '(0, 1, 2, 3, 4, 5, 7, 8)': 2, '(0, 1, 2, 3, 4, 6, 7, 8)': 1, '(0, 1, 2, 4, 5, 6, 7, 8)': 0}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian_path_count=1
+  Switch 2: residual-majority; larger number of residual masks won vs K8 proxy.
+    scores={'K8': 5, '(0, 2, 3, 4, 5, 6, 8, 10)': 3, '(0, 1, 2, 3, 4, 5, 6, 8)': 4, '(0, 1, 2, 3, 4, 5, 7, 8)': 2, '(0, 1, 2, 3, 4, 6, 7, 8)': 1, '(0, 1, 2, 4, 5, 6, 7, 8)': 0}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian_path_count=1
+  Lens tournament.  Vertices are proof obligations; larger tuple wins.
+    observable=(proved_or_supported, generality, proof_reach)
+    switch: lexicographic proof-usefulness; tie path is listed order
+    scores={'coordinatewise_residual_dominance': 0, 'full_cover_scalar': 2, 'context_weighted_cone': 3, 'split_vs_single_margin': 5, 'single_block_diagonal_freeze': 4, 'joint_multi_carrier_error': 1}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1} directed_3cycles=0
+    Hamiltonian_path_count=1
+
+SYNTHESIS
+  Naive coordinatewise residual dominance is false: spread shapes can cover
+  small specified residual sets better than the consecutive block.
+  The full-cover scalar and the HYP-2694 split-context beam still point to
+  consecutive/coherent blocks as the dangerous shapes.
+  New proof target: characterize the residual-profile cone generated by
+  decorrelated LRC contexts and prove consecutive maximizes the weighted
+  capacity functional on that cone.  Then combine with THM-557's split
+  gaps and the joint carrier error budget.
+  No LRC14 proof is claimed.

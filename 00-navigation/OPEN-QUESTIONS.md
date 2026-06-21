@@ -1,5 +1,20 @@
 # Open Questions
 
+**OPEN-Q-108 — ARBITRARY CLUSTER COMPRESSION CONE (codex-2026-06-20-S62, HYP-2697/T933).**
+The arbitrary-shape part of HYP-2694 cannot be solved by coordinatewise stochastic dominance.  For a cluster
+shape `C`, let `q_C(R)=Pr_{x,phi}(C covers residual sectors R)`.  Exact counterexamples: `(0,1,3)` beats
+`(0,1,2)` by `5/294` on several 3-sector residuals; `(0,1,2,4)` beats `(0,1,2,3)` by `73/4704` on several
+4-sector residuals; `(0,1,2,3,5)` beats `(0,1,2,3,4)` by `13/1050`, while full-cover difference is zero.
+Thus arbitrary positive residual weights are too strong.  The new target is a generated-cone theorem:
+characterize residual profiles `w_R` arising from actual decorrelated LRC contexts and prove
+`Σ_R w_R q_C(R) ≤ Σ_R w_R q_K(R)` on that cone, where `K` is the coherent consecutive block.  Grid scouts
+still put consecutive first for full-cover scalar in bounded sizes `6..9`, and split-context beams stay below
+the one-block branch; exact singleton+size10 checks also favor the consecutive large block.  After this cone
+compression, THM-557 split gaps and HYP-2684 joint carrier error become the remaining spendable margin ledger.
+Incoming HYP-2696/THM-558 supplies the complementary transfer-tax account for unpaid one-missed closures after
+sector-state insertion.
+-> HYP-2697, HYP-2696, HYP-2694, THM-558, THM-557, HYP-2684, HYP-2675, OPEN-Q-108.
+
 **OPEN-Q-108 — SINGLE-BLOCK EXTREMALITY: JOINT CARRIER GAP REMAINS (codex-2026-06-20-S61, HYP-2694/T931, THM-557).**
 The HYP-2694 single-block wide-cover route now has a closed coherent-block core.  THM-557 proves, by exact
 Fraction integration, that if anchor `0` is fixed and the `m=k-1` nonzero runners are partitioned into far
