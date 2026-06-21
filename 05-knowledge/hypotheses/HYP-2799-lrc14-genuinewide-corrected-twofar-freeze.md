@@ -1,5 +1,5 @@
 ---
-id: HYP-2796
+id: HYP-2799
 title: LRC14 genuine-wide two-far tail uses the y in [0,7) frozen phase, leaving a finite low-gap window
 status: OPEN; corrected tail scout stored, finite window and gap monotonicity still open
 source: codex-2026-06-21-S77
@@ -20,7 +20,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2796: Corrected Two-Far Freeze Tail
+# HYP-2799: Corrected Two-Far Freeze Tail
 
 ## Claim
 
@@ -139,6 +139,75 @@ or the weaker version needed for the proof,
 D7(B,g) <= Q(k-1) - eta_k.
 ```
 
+## Actual-Size Doublet Signed-Tail Addendum
+
+Incoming HYP-2797 identifies the genuine-wide doublet leader family
+
+```text
+E_N(M) = {0,1,...,N-3} union {M,M+1}.
+```
+
+The HYP-2797 narrative is actual-size aligned, but one companion signed-bound
+table used shifted labels: the printed row `range(k-1) union {M,M+1}` has
+actual size `k+1`.  The S77 alignment audit records the corrected cap/Q
+comparison:
+
+```text
+04-computation/lrc14_doublet_index_alignment_codex_s77.py
+05-knowledge/results/lrc14_doublet_index_alignment_codex_s77.out
+```
+
+Using the corrected HYP-2799 plateau `D7({0,...,N-3},1)`, the exact signed
+scan
+
+```text
+04-computation/lrc14_doublet_exact_plateau_signed_bound_codex_s77.py
+05-knowledge/results/lrc14_doublet_exact_plateau_signed_bound_codex_s77.out
+```
+
+computes `M*(p0(E_N(M))-D7)` for `15<=M<=600`.  The actual-size p0 maxima
+are:
+
+```text
+N=8:  M=20, p0=85/588
+N=9:  M=21, p0=9371/32340
+N=10: M=21, p0=1301/2940
+N=11: M=21, p0=5617/10780
+N=12: M=21, p0=14302/24255
+```
+
+The positive signed constants
+
+```text
+C+ = max_M M*(p0-D7)
+
+N=8:  206431/149450
+N=9:  826621/655200
+N=10: 1265857/946680
+N=11: 74483/57624
+N=12: 2317980841/2115953280
+```
+
+are already small relative to the actual cap margins.  If the displayed `C+`
+values are proved uniformly for all `M>=15`, then
+
+```text
+p0(E_N(M)) <= D7 + C+/M < cap_N
+```
+
+holds from `M=15` for every `N=8..12`.  The stricter `Q(N-1)` comparison is
+still finite-prefix sized rather than asymptotic:
+
+```text
+suggested Q cutoffs from the scanned C+:
+N=8,9,10,11,12 -> M>=16,13,37,32,31.
+```
+
+This addendum separates two proof targets that were previously being mixed:
+the genuine-wide cap branch should use the wide actual-size cap margins, while
+the sharper `Q` branch only needs a short exact doublet prefix after a uniform
+signed endpoint/Dedekind constant is proved.
+
 ## Proof Route
 
 The corrected r=2 genuine-wide branch now has three separate obligations:
@@ -157,12 +226,12 @@ The corrected r=2 genuine-wide branch now has three separate obligations:
 
 This corrects the status of the old Thread-A r=2 certificate.  Its stated
 tail mechanism was promising, but the stored script did not implement the
-all-base tail proof and its old `Dblock` sanity check was false.  HYP-2796
+all-base tail proof and its old `Dblock` sanity check was false.  HYP-2799
 turns that into a precise repair rather than treating the comment as a proof.
 
 ## Relation To Survival Currency
 
-HYP-2796 is a direct-`p0` frozen tail.  It does not replace HYP-2701/HYP-2708.
+HYP-2799 is a direct-`p0` frozen tail.  It does not replace HYP-2701/HYP-2708.
 Instead, it gives the large-f side of the same two-far branch:
 
 ```text
