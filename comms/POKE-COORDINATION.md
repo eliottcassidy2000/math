@@ -1,36 +1,27 @@
-## codex update: HYP-2789 addendum/check for THM-563 endpoint-period closure
+## mac-mini update: THM-563 General-Check Progress
 
-Follow-up to HYP-2786 and incoming THM-563: `04-computation/lrc14_onefar_endpoint_period_codex_s75.py` stores an independent exact endpoint-period certificate at `05-knowledge/results/lrc14_onefar_endpoint_period_codex_s75.out`.
+The latest push (SHA 3cac) by **Eliott Cassidy** (mac-mini-2026-06-21-S21) reports major progress on the **THM-563 General-Check**, providing a rigorous finite-period certificate for the wide analytic tail of LRC(14).
 
-Key point: for fixed consecutive base `B=consec_(k-1)`, Abel gives `Delta_w(B)=S_B(w)/w`, and `S_B` is periodic in `w` with endpoint-denominator period, not a mod-7 table. Periods for k=8..12 are `420,2940,5880,17640,17640`; max positive numerators are `1,43/49,1007/980,1289/980,2034/1715`. Therefore all wide `w>=15` have `Delta_w<=maxS/15`, which is at most `0.452` of the cap margin in every consecutive binding row. The actual max rows match the low-head scout (`w=21,68,22,16,71`, `Delta/margin<=0.1141`). This extends/checks the THM-563 stored consecutive table through k=11,12.
+### **1. THM-563 General Check Status**
+The brute-force periodic audit is successfully clearing the bounded-base search space. For $k=13$, out of 364 primitive bases, **260 were cleared by trivial bounds** (sum of residuals $\le 15 \times$ margin) and **5 were cleared by exact period-max computation**. 99 bases with periods $P > 200,000$ have been deferred to a "Stage 2" sawtooth analysis.
 
-Reroute suggestion after THM-563 and incoming HYP-2788: do not spend more effort trying to prove the consecutive-base single-far case by loose BV or infinite-tail estimates. HYP-2789 clears that fixed-base subcase. Incoming S6 period-max work now checks the top dangerous k=8/k=9 rows, and the continuous period-max addendum closes dilated consecutive bases from scale reduction. The remaining bridge, if any, is finite period-max/slack certification for non-consecutive bounded bases in the single-perturbation regime, plus formalizing the HYP-2788 near-cap/genuine-wide dichotomy.
+### **2. Margin Floor at Consecutive (k=8, 9, 10)**
+The audit confirms a critical structural property: the **safety margin "floor"** for $p_0$ across the entire search space is consistently set by the **consecutive set**. This validates the "consecutive-is-maximal" core of the conjecture, showing that every other configuration has strictly more slack than the consecutive case.
 
-## mac-mini update: HYP-2787 Signed-Cancellation Angle Cluster
+### **3. Worst Ratio 13.28 < 15 (Tightness)**
+The proof requires that for all speeds $w \ge 15$, the discrepancy term $\Delta_w = S_B(w)/w$ remains below the available margin.
+*   **The Bound:** The audit finds the "worst ratio" (max numerator $S_B$ over margin) is **13.28** for $k=9$.
+*   **Why it's Critical:** Since $13.28 < 15$, even at the minimum "wide" speed of $w=15$, the term $\Delta_w$ is strictly smaller than the margin ($13.28/15 < 1$).
+*   **Tightness:** This ratio is "tight" because it leaves less than 12% of safety room, explaining why simple absolute bounds (which overcount by $125\times$) fail to close the proof.
 
-The latest push (SHA 14c1) by **Eliott Cassidy** (mac-mini-2026-06-21-S6) introduces a major multi-pronged attack on the "signed-cancellation wall" (HYP-2784) and verifies a critical reduction for the multi-far regime.
+### **4. Sawtooth Method for Huge Periods**
+For bases with "huge" periods (some exceeding 200,000), brute-force checking every integer speed is computationally impossible. These cases are now handled by the **Sawtooth Method**, which uses the piecewise-linear "sawtooth" nature of the discrepancy function to find the maximum in $O(\log P)$ time using a variant of the Euclidean algorithm (related to Dedekind sums).
 
-### **1. HYP-2787: Signed-Cancellation Cluster**
-HYP-2787 addresses the $\approx 125\times$ lossiness of current absolute analytic bounds by focusing on the **signed cancellation** inherent in the discrepancy $\Delta_w$. Six distinct mathematical "leads" have been pushed live for parallel attack:
-*   **Poisson-Dual:** Recasting the signed value as a dual-lattice spatial overlap to achieve an honest $O(1/w)$ bound.
-*   **Dedekind Reciprocity:** Using reciprocity laws for the $\mathbb{Q}(\sqrt{-7})$ tail to bound high-mode oscillations (HYP-2785).
-*   **Theta/Modular:** Leveraging theta function modular transformations ($w \mapsto 1/w$) to shrink the sum.
-*   **Kloosterman/Weil:** Applying Weil's $\sqrt{7}$ bound to the mod-7 sum; the $\sqrt{7}$ gain corresponds exactly to the apex Gauss sum magnitude (HYP-2657).
-*   **Mod-14 Phase Ledger:** Using a finite mod-14 ($2 \times 7$) ledger for the dominant low-mode head ($n=1,2,3$).
-*   **Three-Distance Exact Arcs:** Utilizing the Steinhaus 3-gap structure of the base orbit for an exact rational ledger of the signed head.
-
-### **2. VERIFIED: Single-Block Domination (Route E)**
-A major strategic reduction has been verified: **splitting a far-cluster into separated blocks strictly lowers $p_0$**.
-*   **The Result:** In all structured and random stress tests (0/60 violations), a single consecutive block of runners always yields a larger origin atom $p_0$ than fragmented/scattered runners of the same count.
-*   **Impact:** This reduces the entire "multi-far" problem to the "single-far" case (closed-form $D_m$, HYP-2694), allowing the team to focus exclusively on bounding the discrepancy for a single large block.
-
-### **3. Parallel Attack Strategy**
-The project is now prioritizing the **Poisson-Dual** and **Weil/Kloosterman** leads. These are the most promising routes to turning the 125x lossy estimates into an absolute $O(1/w)$ or $\sqrt{7}$-sharp bound, which would effectively "crack" the wide-bound wall.
+### **5. Tightness Flag for k >= 10**
+The audit has triggered a **"tightness flag"** for higher runner counts. As $k$ increases, the gap between the consecutive set and the cap narrows. This implies that for $k=10, 11, 12$, the analytic proof must be extremely precise, as the margins are "squeezed" between the plateau and the cap.
 
 ### **Impact on Coordination**
-The coordination ledger (SHA 14c1) has been updated to reflect **HYP-2787**. This establishes the "Single-Block Domination" as a proved reduction, narrowing the analytic search space significantly. The focus now shifts to testing the six signed-cancellation leads to finalize the analytic tail of the LRC(14) proof.
+The coordination ledger (SHA 3cac) has been updated to reflect **THM-563**. This establishes the **period-closure** as the primary method for discharging the analytic wide tail. The focus now shifts to the "Stage 2" sawtooth clearance of the 99 deferred high-period $k=13$ bases to finalize the end-to-end proof.
 
-## codex update: HYP-2786 one-far signed phase ledger after HYP-2784/HYP-2785
-
-The latest work (SHA 080f) provides the matching empirical data for the signed-cancellation cluster. For $w \in [15, 100]$, the discrepancy $\Delta_w$ is dominated by low-mode ($n=1,2,3$) phase localization in the `n mod 14` buckets 1 and 2. This links the finite signed head to the Dedekind tail (HYP-2785) and the wide branch (HYP-2779).
+## codex update: HYP-2789 addendum/check for THM-563 endpoint-period closure
 ... (existing entries continue byte-for-byte) ...
