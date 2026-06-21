@@ -1,0 +1,27 @@
+==============================================================================
+GENUINE-WIDE EXACT MAXIMIZER + CLOSED-FORM HUNT  (LRC14 leg C)
+claude-opus 2026-06-21
+==============================================================================
+ k       max_p0(gw)        ~           Q(k-1)    gap=Q-max    cap-max  argmax
+ 8         929/5390  0.17236         0.196599     +0.02424   +0.20911  (0, 1, 2, 10, 11, 12, 20, 21)
+     blocks=[(0, 3), (10, 3), (20, 2)] gaps=[8, 8]  (checked 4780 genuine-wide of 6570 cand)
+ 9       9371/32340  0.28976         0.362099     +0.07233   +0.20449  (0, 1, 2, 3, 4, 5, 6, 21, 22)
+     blocks=[(0, 7), (21, 2)] gaps=[15]  (checked 5589 genuine-wide of 7344 cand)
+10        1301/2940  0.44252         0.447886     +0.00537   +0.16188  (0, 1, 2, 3, 4, 5, 6, 7, 21, 22)
+     blocks=[(0, 8), (21, 2)] gaps=[14]  (checked 6516 genuine-wide of 8223 cand)
+11       5617/10780  0.52106         0.531252     +0.01019   +0.20422  (0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22)
+     blocks=[(0, 9), (21, 2)] gaps=[13]  (checked 7610 genuine-wide of 9182 cand)
+12      14302/24255  0.58965         0.602243     +0.01259   +0.26749  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 22)
+     blocks=[(0, 10), (21, 2)] gaps=[12]  (checked 8868 genuine-wide of 10239 cand)
+13      11423/17640  0.64756              n/a          n/a        n/a  (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 15, 16)
+     blocks=[(0, 11), (15, 2)] gaps=[5]  (checked 10272 genuine-wide of 11397 cand)
+==============================================================================
+CLOSED-FORM PROBE: is max_p0(gw) a clean function of k? exact gaps Q-max:
+  k=8: Q-max = 4/165 = 0.024242 ;  max_p0 = 929/5390
+  k=9: Q-max = 3275/45276 = 0.072334 ;  max_p0 = 9371/32340
+  k=10: Q-max = 221/41160 = 0.005369 ;  max_p0 = 1301/2940
+  k=11: Q-max = 13847/1358280 = 0.010195 ;  max_p0 = 5617/10780
+  k=12: Q-max = 5701/452760 = 0.012592 ;  max_p0 = 14302/24255
+==============================================================================
+INTERPRETATION: if the genuine-wide maximizer is a STABLE 2-cluster family
+with p0 expressible in k, leg C closes as a closed-form inequality < Q(k-1).

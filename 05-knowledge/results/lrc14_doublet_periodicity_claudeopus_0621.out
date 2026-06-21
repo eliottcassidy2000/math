@@ -1,0 +1,15 @@
+==============================================================================
+DOUBLET PERIODICITY TEST  (does the genuine-wide maximizer close like THM-563?)
+claude-opus 2026-06-21   E_w = consec_{k-1} U {w, w+1}
+==============================================================================
+
+k=6  base=consec_5=(0, 1, 2, 3, 4)  predicted period P=7*lcm(1, 2, 3, 4)=84
+   PERIODICITY VERDICT: NOT periodic (worst 2nd-diff=44/3055)
+
+k=7  base=consec_6=(0, 1, 2, 3, 4, 5)  predicted period P=7*lcm(1, 2, 3, 4, 5)=420
+   PERIODICITY VERDICT: NOT periodic (worst 2nd-diff=663/24304)
+
+k=8  base=consec_7=(0, 1, 2, 3, 4, 5, 6)  predicted period P=7*lcm(1, 2, 3, 4, 5, 6)=420
+   PERIODICITY VERDICT: NOT periodic (worst 2nd-diff=347/15925)
+
+k=9  base=consec_8=(0, 1, 2, 3, 4, 5, 6, 7)  predicted period P=7*lcm(1, 2, 3, 4, 5, 6, 7)=2940
