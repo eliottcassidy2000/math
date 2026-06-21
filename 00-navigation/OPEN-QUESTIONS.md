@@ -1,5 +1,18 @@
 # Open Questions
 
+**OPEN-Q-108 — PHASE-CARRIER / MAGIC-RANK FILTER (codex-2026-06-20-S67, HYP-2711/T942).**
+The latest analogy batch does not add a proof by itself, but it clarifies which structures can be used safely.
+Exact carriers are the mod-7 additive-character path integral for sector surjection, the death-chain Gibbs
+transfer matrix, signed-incidence Hopfield energy, HYP-2707's Clifford/Gauss-sum tournament layer, and finite
+even-page crossing atlases.  Literal Arnold cat maps, strict Cerny synchronization, beta-convexity,
+low-order log-linear free energy, and raw path coherence are guardrails rather than proof routes.  The resulting
+OPEN-Q-108 refinement is: keep the generated residual/phase profile until the final cap comparison, define its
+LRC phase degree or magic rank, prove a Fubini-Study/projective-angle bound from the decorrelated death-chain
+profile outside finite low-rank AP/cube-root/Freiman/squarefree atlases, and make the signed deviation smaller
+than the HYP-2701 two-far boundary margin.  This is a filter on the HYP-2705 architecture, not an independent
+claim that LRC14 is proved.
+-> HYP-2711, HYP-2705, HYP-2707, HYP-2706, HYP-2704, HYP-2701, HYP-2702, HYP-2698, HYP-2684, HYP-2675, OPEN-Q-108.
+
 **OPEN-Q-108 — TRUE-WIDE SURVIVAL MIDDLE-MASS GATE (codex-2026-06-20-S64, HYP-2701/T936).**
 HYP-2695's true-wide cap-floor gate has an exact survival coordinate.  Since THM-556 gives
 `U4=p0+p5+5p6`, the floor comparison `U4<=floor_k=(k-6)/7` is equivalent to
