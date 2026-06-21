@@ -1,0 +1,13 @@
+====================================================================================================
+THREAD B PART C: CONFIGURATION-POLYTOPE INTEGRALITY TEST (CJJ Lem 3.1 / view d)
+====================================================================================================
+
+====================================================================================================
+(C3-i) SYMMETRIC even-Bonferroni on subset lattice = aggregated B_R = sum_{r<=R}(-1)^r S_r.
+       (a) valid upper bound for all E [TRUE by Bonferroni for even R],
+       (b) consec-extremal (min over window, since it's an UPPER bound we want consec to
+           give the LARGEST true measS7 with the SMALLEST bound -- test argmin/argmax),
+       (c) tight at consec (== measS7).
+====================================================================================================
+
+  k  R  B_R(consec)    measS7    gap=(c)  consec=argmax_measS7? consec=argmin_B_R?

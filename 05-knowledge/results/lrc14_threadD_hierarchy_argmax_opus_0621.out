@@ -1,0 +1,61 @@
+
+============================================================================================
+(A) COLLAPSE-vs-IMPROVES: nested LP bounds for CONSEC at each level
+============================================================================================
+  LP_sym(R)  fixes factorial moments S_1..S_R  (the Delsarte/THM-534 family).
+  LP_ind(l)  fixes ALL individual marginals P(A subset M), |A|<=l (relation-code).
+  Both -> measS7 at full level (R=6 / l=6).  IMPROVES iff each level strictly drops.
+
+--- k=8 consec, measS7=0.327211 ---
+  LP_sym(R): R1=0.73265  R2=0.49637  R3=0.41255  R4=0.35823  R5=0.33252  R6=0.32721
+  LP_ind(l): l1=0.66531  l2=0.47925  l3=0.34762  l4=0.32721  l5=0.32721  l6=0.32721
+  sym strictly improves R->R+1: [True, True, True, True, True]
+  ind strictly improves l->l+1: [True, True, True, False, False]
+  level l where LP_ind PINS consec (==measS7): 4
+  level R where LP_sym PINS consec (==measS7): 6
+
+--- k=9 consec, measS7=0.416156 ---
+  LP_sym(R): R1=0.76978  R2=0.56675  R3=0.49288  R4=0.44340  R5=0.42085  R6=0.41616
+  LP_ind(l): l1=0.70680  l2=0.55051  l3=0.43571  l4=0.41616  l5=0.41616  l6=0.41616
+  sym strictly improves R->R+1: [True, True, True, True, True]
+  ind strictly improves l->l+1: [True, True, True, False, False]
+  level l where LP_ind PINS consec (==measS7): 4
+  level R where LP_sym PINS consec (==measS7): 6
+
+--- k=10 consec, measS7=0.504478 ---
+  LP_sym(R): R1=0.80115  R2=0.63074  R3=0.57008  R4=0.52857  R5=0.50859  R6=0.50448
+  LP_ind(l): l1=0.74751  l2=0.60601  l3=0.52007  l4=0.50448  l5=0.50448  l6=0.50448
+  sym strictly improves R->R+1: [True, True, True, True, True]
+  ind strictly improves l->l+1: [True, True, True, False, False]
+  level l where LP_ind PINS consec (==measS7): 4
+  level R where LP_sym PINS consec (==measS7): 6
+
+
+============================================================================================
+(B) ARG-MAX TEST: is consec the maximizer of the level-l LP BOUND over shapes?
+============================================================================================
+  For each shape E the level-l LP bound is a self-upper-bound on measS7(E).
+  If consec maximizes the BOUND, a per-level inequality could pin consec.
+  We sweep bounded spread; report beaters (shapes whose level-l bound exceeds consec's).
+
+--- k=8 (maxE<=14, 3431 primitive shapes) ---
+  measS7(consec)=0.327211; #shapes with HIGHER measS7 = 0 (consec-max truth: True)
+  LP_sym(R=1) consec=0.73265  beaters=1  consec-max-of-bound: False
+  LP_sym(R=2) consec=0.49637  beaters=0  consec-max-of-bound: True
+  LP_sym(R=3) consec=0.41255  beaters=0  consec-max-of-bound: True
+  LP_ind(l=1) consec=0.66531  beaters=461  consec-max-of-bound: False
+  LP_ind(l=2) consec=0.47925  beaters=0  consec-max-of-bound: True
+  LP_ind(l=3) consec=0.34762  beaters=0  consec-max-of-bound: True
+  level-2 individual bound argmax: [0, 1, 2, 3, 4, 5, 6, 7] -> 0.47925
+
+--- k=9 (maxE<=12, 495 primitive shapes) ---
+  measS7(consec)=0.416156; #shapes with HIGHER measS7 = 0 (consec-max truth: True)
+  LP_sym(R=1) consec=0.76978  beaters=10  consec-max-of-bound: False
+  LP_sym(R=2) consec=0.56675  beaters=0  consec-max-of-bound: True
+  LP_sym(R=3) consec=0.49288  beaters=0  consec-max-of-bound: True
+  LP_ind(l=1) consec=0.70680  beaters=101  consec-max-of-bound: False
+  LP_ind(l=2) consec=0.55051  beaters=0  consec-max-of-bound: True
+  LP_ind(l=3) consec=0.43571  beaters=0  consec-max-of-bound: True
+  level-2 individual bound argmax: [0, 1, 2, 3, 4, 5, 6, 7, 8] -> 0.55051
+
+DONE.

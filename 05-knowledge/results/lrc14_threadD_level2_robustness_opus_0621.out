@@ -1,0 +1,44 @@
+
+============================================================================================
+LEVEL-2 ARG-MAX robustness: consec vs all primitive shapes (wider windows)
+============================================================================================
+  Bnd1 = LP_ind(1) (singleton-only).  Bnd2 = LP_ind(2) (pairs).  Sym2 = LP_sym(2) (S1,S2).
+  Report: #shapes beating consec on each bound, and on measS7 truth.
+
+k=8 (maxE<=16, 11432 shapes): measS7(consec)=0.327211
+   truth   beaters=   0  consec-max-meas:True
+   Bnd1    consec=0.66531 beaters=1073  consec-max:False
+   Sym2    consec=0.49637 beaters=   0  consec-max:True
+   Bnd2    consec=0.47925 beaters=   0  consec-max:True  argmax=[0, 1, 2, 3, 4, 5, 6, 7]
+
+k=9 (maxE<=14, 3003 shapes): measS7(consec)=0.416156
+   truth   beaters=   0  consec-max-meas:True
+   Bnd1    consec=0.70680 beaters= 766  consec-max:False
+   Sym2    consec=0.56675 beaters=   0  consec-max:True
+   Bnd2    consec=0.55051 beaters=   0  consec-max:True  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+
+k=10 (maxE<=13, 715 shapes): measS7(consec)=0.504478
+   truth   beaters=   0  consec-max-meas:True
+   Bnd1    consec=0.74751 beaters= 215  consec-max:False
+   Sym2    consec=0.63074 beaters=   0  consec-max:True
+   Bnd2    consec=0.60601 beaters=   0  consec-max:True  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+k=11 (maxE<=13, 286 shapes): measS7(consec)=0.581463
+   truth   beaters=   0  consec-max-meas:True
+   Bnd1    consec=0.76519 beaters= 161  consec-max:False
+   Sym2    consec=0.68305 beaters=   1  consec-max:False
+   Bnd2    consec=0.65329 beaters=   3  consec-max:False  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11]
+
+k=12 (maxE<=13, 78 shapes): measS7(consec)=0.624114
+   truth   beaters=   1  consec-max-meas:False
+   Bnd1    consec=0.79919 beaters=  37  consec-max:False
+   Sym2    consec=0.71417 beaters=   4  consec-max:False
+   Bnd2    consec=0.69780 beaters=   2  consec-max:False  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11, 13]
+
+k=13 (maxE<=13, 13 shapes): measS7(consec)=0.675928
+   truth   beaters=   1  consec-max-meas:False
+   Bnd1    consec=0.80908 beaters=  11  consec-max:False
+   Sym2    consec=0.74888 beaters=   1  consec-max:False
+   Bnd2    consec=0.72099 beaters=   6  consec-max:False  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 13]
+
+DONE.
