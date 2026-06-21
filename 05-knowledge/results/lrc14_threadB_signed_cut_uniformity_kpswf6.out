@@ -1,0 +1,33 @@
+====================================================================================================
+THREAD B FINAL: uniformity + type-basis reduction + validity-hardness
+====================================================================================================
+
+(U1) FROZEN SUPPORT uniformity: take k=8 R=2 support, reuse it at k=9,10
+  k=8 support S8 = [(1,), (1, 2), (1, 3), (6,), (3, 6), (4, 6), (5, 6)]  (|S8|=7)
+  k=9 with FROZEN S8: min slack s = 0.0526272  uniform_with_S8=False
+  k=10 with FROZEN S8: min slack s = 0.0634901  uniform_with_S8=False
+
+(U2) TYPE-BASIS cut: collapse a[A] into run-type atoms t[tau]=sum_{runtype(A)=tau} a[A]
+  #run-types (incl empty,full) = 12: [(), (1,), (1, 1), (2,), (1, 1, 1), (1, 2), (3,), (1, 3), (2, 2), (4,), (5,), (6,)]
+  k=8: type-basis min slack s = 0.0000000  cert=True  type-support=3 of 11
+      type (1,): coeff +0.06416
+      type (2,): coeff +0.12471
+      type (1, 1, 1): coeff +0.97771
+  k=9: type-basis min slack s = 0.0000000  cert=True  type-support=7 of 11
+      type (1,): coeff +0.04679
+      type (1, 1): coeff +0.28594
+      type (1, 1, 1): coeff +0.76782
+      type (1, 2): coeff +0.58985
+      type (3,): coeff -0.50937
+      type (2, 2): coeff +0.08020
+      type (6,): coeff -11.98691
+  k=10: type-basis min slack s = 0.0063936  cert=False  type-support=11 of 11
+
+====================================================================================================
+VERDICT logic:
+  (U1) frozen-S8 s=0 at k=9,10 => UNIFORM support; s>0 => support grows (non-uniform).
+  (U2) type-basis s=0 with few types => certificate is a RESIDUE/dihedral-type object
+       (HYP-2745 quasimodular); s>0 => type quotient too coarse, needs individual subsets.
+====================================================================================================
+
+DONE.

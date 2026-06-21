@@ -1,0 +1,11 @@
+====================================================================================================
+THREAD B: EXACT 3-type certificate at k=8 (full-residue stratum, #shapes=319)
+  types = [(1,), (2,), (1, 1, 1)];  measS7(consec)=481/1470
+====================================================================================================
+  consec type values: t[(1,)]=393/245, t[(2,)]=178/245, t[(1, 1, 1)]=67/490
+
+  float LP: slack s = 0.00000000  lam = ['0.06416', '0.12471', '0.97771']
+
+  No exact 3-type certificate from binding pairs (float slack may be >0).
+
+DONE.

@@ -229,10 +229,15 @@ def main():
     print(f"       The SoS/Mobius lift HAS a free direction here (it genuinely cuts).")
     # where does AP sit in this residual?
     ap_idx = 0
+    ap_rank = 1+sum(1 for r in resid2 if r>resid2[ap_idx])
     print(f"    AP residual (S2 - fit) = {resid2[ap_idx]:+.5f}  (rank in residual: "
-          f"{1+sum(1 for r in resid2 if r>resid2[ap_idx])} of {len(rows)})")
-    print(f"    => AP is NOT the extreme point of the free SoS direction (it's interior),")
-    print(f"       so the linear/subspace lift does not single AP out. COLLAPSE (matches HYP-2744).")
+          f"{ap_rank} of {len(rows)})")
+    print(f"    => AP is EXTREMAL in S2 (top residual), NOT determined by S1: a free SoS")
+    print(f"       direction exists, and AP sits at its boundary. The collapse (HYP-2744)")
+    print(f"       is NOT that AP is interior -- it is that in the LINEAR (per-difference-class")
+    print(f"       mod 14) basis this free direction SPLITS into many free atoms, on NONE of")
+    print(f"       which AP is a clean per-atom extremizer with one sign (HYP-2738 mixed-sign).")
+    print(f"       The AFFINE basis (part 2) re-fuses them into ONE atom AP maximizes.")
 
     # The AFFINE-orbit determinacy (the fix preview): restrict to dilates of AP.
     print("\n  AFFINE-ORBIT determinacy preview (the THREAD C fix):")

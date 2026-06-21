@@ -1,0 +1,18 @@
+====================================================================================================
+THREAD B: EXACT rational 3-type certificate at k=8  (#shapes=319, types=[(1,), (2,), (1, 1, 1)])
+====================================================================================================
+
+  EXACT 3-type certificate FOUND (rational vertex), verified over ALL stratum shapes:
+    lambda[(1,)] = 584995/9117927  = 0.064159
+    lambda[(2,)] = 9719/77931  = 0.124713
+    lambda[(1, 1, 1)] = 2971571/3039309  = 0.977713
+    C(consec) = 481/1470 ; measS7(consec) = 481/1470 ; TIGHT: True
+    (V) C(E)>=measS7(E) all E: True
+    (M) C(E)<=C(consec) all E: True
+
+    *** VERIFIED EXACT: measS7(E) <= C(E) <= C(consec)=measS7(consec) for all 319 stratum E.
+        C(E) = lam0*t[(1,)] + lam1*t[(2,)] + lam2*t[(1,1,1)],  t[tau]=sum_{runtype(A)=tau} a[A].
+        This is an explicit SIGNED AGGREGATE CUT in the dihedral run-type (Mobius) basis,
+        level 3 (largest type has 3 sectors), support 3, certifying consec-max at k=8.
+
+DONE.

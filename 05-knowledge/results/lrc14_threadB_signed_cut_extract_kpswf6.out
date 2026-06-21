@@ -1,0 +1,62 @@
+====================================================================================================
+THREAD B: EXTRACT explicit min-L1 signed cut + structural non-circularity test
+====================================================================================================
+
+============================================================================================
+k=8, level R=2: explicit min-L1 cut, support=7 atoms (of 21)
+  STRUCTURAL non-circularity: #atoms with beta_A=lambda_A-(-1)^|A| < 0 : 32 (of 64)
+    (beta>=0 for all => C-measS7 is a nonneg atom combo => validity STRUCTURAL/Bonferroni)
+  nonzero lambda_A (size | runtype | lambda | sign vs (-1)^|A|):
+    A=(1,) |A|=1 runtype=(1,): lambda=+0.19377  parity=-1  sign_follows_parity=False
+    A=(6,) |A|=1 runtype=(1,): lambda=+0.17484  parity=-1  sign_follows_parity=False
+    A=(1, 2) |A|=2 runtype=(2,): lambda=+0.62823  parity=+1  sign_follows_parity=True
+    A=(1, 3) |A|=2 runtype=(1, 1): lambda=+0.38735  parity=+1  sign_follows_parity=True
+    A=(3, 6) |A|=2 runtype=(1, 1): lambda=+0.26498  parity=+1  sign_follows_parity=True
+    A=(4, 6) |A|=2 runtype=(1, 1): lambda=+0.24788  parity=+1  sign_follows_parity=True
+    A=(5, 6) |A|=2 runtype=(2,): lambda=+0.11501  parity=+1  sign_follows_parity=True
+  sign-follows-parity: 5/7 nonzero coeffs
+
+============================================================================================
+k=9, level R=2: explicit min-L1 cut, support=11 atoms (of 21)
+  STRUCTURAL non-circularity: #atoms with beta_A=lambda_A-(-1)^|A| < 0 : 31 (of 64)
+    (beta>=0 for all => C-measS7 is a nonneg atom combo => validity STRUCTURAL/Bonferroni)
+  nonzero lambda_A (size | runtype | lambda | sign vs (-1)^|A|):
+    A=(2,) |A|=1 runtype=(1,): lambda=-0.00933  parity=-1  sign_follows_parity=True
+    A=(3,) |A|=1 runtype=(1,): lambda=+0.34712  parity=-1  sign_follows_parity=False
+    A=(6,) |A|=1 runtype=(1,): lambda=+0.02053  parity=-1  sign_follows_parity=False
+    A=(1, 2) |A|=2 runtype=(2,): lambda=+0.49573  parity=+1  sign_follows_parity=True
+    A=(1, 3) |A|=2 runtype=(1, 1): lambda=+1.52873  parity=+1  sign_follows_parity=True
+    A=(2, 3) |A|=2 runtype=(2,): lambda=-1.27355  parity=+1  sign_follows_parity=False
+    A=(1, 5) |A|=2 runtype=(1, 1): lambda=-0.20405  parity=+1  sign_follows_parity=False
+    A=(1, 6) |A|=2 runtype=(2,): lambda=+0.58619  parity=+1  sign_follows_parity=True
+    A=(3, 6) |A|=2 runtype=(1, 1): lambda=+0.48276  parity=+1  sign_follows_parity=True
+    A=(4, 6) |A|=2 runtype=(1, 1): lambda=+0.66894  parity=+1  sign_follows_parity=True
+    A=(5, 6) |A|=2 runtype=(2,): lambda=+0.60917  parity=+1  sign_follows_parity=True
+  sign-follows-parity: 7/11 nonzero coeffs
+
+============================================================================================
+k=10, level R=3: explicit min-L1 cut, support=12 atoms (of 41)
+  STRUCTURAL non-circularity: #atoms with beta_A=lambda_A-(-1)^|A| < 0 : 32 (of 64)
+    (beta>=0 for all => C-measS7 is a nonneg atom combo => validity STRUCTURAL/Bonferroni)
+  nonzero lambda_A (size | runtype | lambda | sign vs (-1)^|A|):
+    A=(1,) |A|=1 runtype=(1,): lambda=+0.26882  parity=-1  sign_follows_parity=False
+    A=(3,) |A|=1 runtype=(1,): lambda=+0.36386  parity=-1  sign_follows_parity=False
+    A=(6,) |A|=1 runtype=(1,): lambda=+0.35539  parity=-1  sign_follows_parity=False
+    A=(1, 3) |A|=2 runtype=(1, 1): lambda=+0.40852  parity=+1  sign_follows_parity=True
+    A=(2, 3) |A|=2 runtype=(2,): lambda=-0.40378  parity=+1  sign_follows_parity=False
+    A=(2, 4) |A|=2 runtype=(1, 1): lambda=+0.01410  parity=+1  sign_follows_parity=True
+    A=(1, 5) |A|=2 runtype=(1, 1): lambda=-0.53049  parity=+1  sign_follows_parity=False
+    A=(1, 6) |A|=2 runtype=(2,): lambda=+0.75271  parity=+1  sign_follows_parity=True
+    A=(3, 6) |A|=2 runtype=(1, 1): lambda=+0.15064  parity=+1  sign_follows_parity=True
+    A=(4, 6) |A|=2 runtype=(1, 1): lambda=+0.59317  parity=+1  sign_follows_parity=True
+    A=(1, 2, 4) |A|=3 runtype=(1, 2): lambda=+0.60693  parity=-1  sign_follows_parity=False
+    A=(3, 5, 6) |A|=3 runtype=(1, 2): lambda=+2.95891  parity=-1  sign_follows_parity=False
+  sign-follows-parity: 5/12 nonzero coeffs
+
+====================================================================================================
+READING: neg_beta=0 => the cut's validity is structural (manifestly-nonneg atom combo).
+  sign-follows-parity high => the signed cut is a TUNED even-Bonferroni (Mobius parity signs,
+  magnitudes adjusted).  support sparse + low level => the explicit signed cut answer.
+====================================================================================================
+
+DONE.

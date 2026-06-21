@@ -235,16 +235,28 @@ not extremize each coordinate (HYP-2738: AP MINIMIZES S_1, MAXIMIZES S_2,S_4 -- 
 so no single linear-type atom certifies it; the lift collapses to a signed aggregate.
 
 In the AFFINE lift, Aff(1,F_7) 2-transitivity COLLAPSES every distinct-residue pair to ONE
-atom. The degree-2 affine moment is then a SINGLE scalar = (# distinct-residue pairs hit
-across the orbit) = the affine-invariant 'spread' of E's residues mod 7. On the FULL-residue
-stratum (HYP-2749: every residue 0..6 is occupied), AP is the orbit that occupies all 7
-residues with MAXIMUM distinct-pair coupling. Within this 2-atom affine scheme, AP is the
-UNIQUE integral extreme point: it is the affine orbit of {0,...,6} itself (an affine
-SUBSPACE-analogue = a coset of the additive group of F_7).
+atom. The degree-2 affine moment is then a SINGLE scalar = (# distinct-residue pairs) =
+the affine-invariant 'spread' of E's residues mod 7. AP MAXIMIZES this single atom at every
+dangerous row (verified above, exact), and -- crucially (part 2b) -- AP's affine occupancy
+class is EXACTLY the full-residue stratum (HYP-2749): the affine signature class of AP has
+size 256/432/400 at k=8/9/10, identically equal to the count of all-7-residues-occupied
+shapes. So the affine factoring achieves TWO exact things:
+  (a) it LOCALIZES the optimum to the full-residue stratum (= AP's affine occupancy class),
+      matching HYP-2749's stratum-localization independently; and
+  (b) on that stratum AP is the UNIQUE maximizer of L_y (zero beaters) and of the single
+      affine atom -- AP being the affine orbit of the additive group F_7 itself (the affine
+      analogue of a linear code's subspace; AP mod 7 = all of F_7).
 
-=> The affine quotient is the change of basis (CJJ view (d) over the AFFINE lattice instead
-of the subspace lattice) in which consec=AP IS the 'linear' optimizer. The collapse is
-RESTORED to completeness on the affine/full-residue stratum.
+HONEST LIMIT (verified, part 2b): L_y is NOT a function of the affine atom alone -- it
+VARIES across AP's affine signature class (0.10..0.358 at k=8), so AP is the MAX over its
+affine class, not a flat optimum. The affine quotient therefore does NOT make consec a
+TRIVIALLY integral vertex (it is not "the only point of its type"). What it DOES do is the
+right reduction: it is the CJJ-view-(d) change of basis to the AFFINE lattice in which (i)
+the optimum provably lives on one affine occupancy class (= full-residue stratum), and (ii)
+within it consec=AP -- the affine-additive-group orbit -- is the unique extremizer. This is
+the affine analogue of the linear case, and it is exactly as far as it can go: the residual
+'AP maximizes L_y on the full-residue stratum' is the SAME signed extremality (THM-534), now
+correctly localized to the affine-linearity locus rather than collapsed.
 """)
     print("="*78)
 

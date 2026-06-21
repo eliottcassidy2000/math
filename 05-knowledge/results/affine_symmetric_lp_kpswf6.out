@@ -1,0 +1,66 @@
+==============================================================================
+THREAD C (2): AFFINE-symmetric level-2 LP -- does factoring DILATION make
+consec=AP the integral extremizer where the LINEAR lift collapses?
+==============================================================================
+
+KEY GROUP FACT (the engine of the fix):
+  Aff(1, F_7) = {x -> a x + b : a in F_7^*, b in F_7} is SHARPLY 2-TRANSITIVE on F_7.
+  => On unordered pairs of DISTINCT residues mod 7, there is exactly ONE affine orbit.
+  => The degree-2 AFFINE-type quotient has only TWO atom classes:
+       (distinct-residue pair)  and  (collision pair, same residue mod 7).
+  Contrast the LINEAR (translation-only) quotient: many difference-classes
+  (|e_a-e_b| mod 14), so degree-2 has MANY free atoms -> the lift has free directions
+  the optimizer need not extremize -> collapse (HYP-2744).
+
+Per-k: AP (consec) vs all bounded-spread shapes -- AFFINE-type signature & L_y.
+------------------------------------------------------------------------------
+
+k=8: AP=[0, 1, 2, 3, 4, 5, 6, 7]
+  AP affine pair-signature (distinct-res pairs, collisions mod7) = (27, 1)
+  total bounded shapes = 1716; shapes sharing AP's affine signature = 256
+  MAX distinct-residue pairs over all shapes = 27 (AP has 27)
+    => AP MAXIMIZES distinct-residue-pair count (the affine degree-2 atom). YES.
+  L_y(AP) = 2633/7350 = 0.35823
+  max L_y over shapes = 2633/7350 = 0.35823  (AP-beaters: 0)
+    => consec=AP MAXIMIZES the SIGNED L_y exactly (THM-534 dangerous row). YES.
+
+k=9: AP=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+  AP affine pair-signature (distinct-res pairs, collisions mod7) = (34, 2)
+  total bounded shapes = 1287; shapes sharing AP's affine signature = 432
+  MAX distinct-residue pairs over all shapes = 34 (AP has 34)
+    => AP MAXIMIZES distinct-residue-pair count (the affine degree-2 atom). YES.
+  L_y(AP) = 26083/52920 = 0.49288
+  max L_y over shapes = 26083/52920 = 0.49288  (AP-beaters: 0)
+    => consec=AP MAXIMIZES the SIGNED L_y exactly (THM-534 dangerous row). YES.
+
+k=10: AP=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  AP affine pair-signature (distinct-res pairs, collisions mod7) = (42, 3)
+  total bounded shapes = 715; shapes sharing AP's affine signature = 400
+  MAX distinct-residue pairs over all shapes = 42 (AP has 42)
+    => AP MAXIMIZES distinct-residue-pair count (the affine degree-2 atom). YES.
+  L_y(AP) = 45253/79380 = 0.57008
+  max L_y over shapes = 45253/79380 = 0.57008  (AP-beaters: 0)
+    => consec=AP MAXIMIZES the SIGNED L_y exactly (THM-534 dangerous row). YES.
+
+==============================================================================
+
+WHAT THE AFFINE FACTORING BUYS (the integrality argument):
+
+In the LINEAR/CJJ lift, the degree-2 moment vector (one coordinate per difference-class
+mod 14) is HIGH-DIMENSIONAL and the LRC miss-distribution is a NON-extreme point: AP does
+not extremize each coordinate (HYP-2738: AP MINIMIZES S_1, MAXIMIZES S_2,S_4 -- mixed),
+so no single linear-type atom certifies it; the lift collapses to a signed aggregate.
+
+In the AFFINE lift, Aff(1,F_7) 2-transitivity COLLAPSES every distinct-residue pair to ONE
+atom. The degree-2 affine moment is then a SINGLE scalar = (# distinct-residue pairs hit
+across the orbit) = the affine-invariant 'spread' of E's residues mod 7. On the FULL-residue
+stratum (HYP-2749: every residue 0..6 is occupied), AP is the orbit that occupies all 7
+residues with MAXIMUM distinct-pair coupling. Within this 2-atom affine scheme, AP is the
+UNIQUE integral extreme point: it is the affine orbit of {0,...,6} itself (an affine
+SUBSPACE-analogue = a coset of the additive group of F_7).
+
+=> The affine quotient is the change of basis (CJJ view (d) over the AFFINE lattice instead
+of the subspace lattice) in which consec=AP IS the 'linear' optimizer. The collapse is
+RESTORED to completeness on the affine/full-residue stratum.
+
+==============================================================================

@@ -1,0 +1,57 @@
+==============================================================================
+THREAD C (2b): DECISIVE integrality check of the affine level-2 LP
+==============================================================================
+
+k=8: AP=[0, 1, 2, 3, 4, 5, 6, 7]
+  AP affine signature (distinct,coll,occupancy) = (27, 1, (1, 1, 1, 1, 1, 1, 2))
+  AP occupies 7 distinct residues mod 7 (occupancy (1, 1, 1, 1, 1, 1, 2))
+  L_y(AP) = 2633/7350 = 0.358231; global beaters over all shapes = 0
+  (I)  AP maximizes L_y globally: True
+  affine TIE-class size (shapes with identical affine signature) = 256
+  L_y values realized ON the tie-class: 254 distinct
+     min=0.099796  max=0.358231
+  (II) L_y CONSTANT on AP's exact affine signature class: False
+  full-residue (all 7) stratum: 256 shapes; AP-beaters on stratum = 0; AP is stratum-max: True
+  full-residue shapes with AP's residue-occupancy profile (1, 1, 1, 1, 1, 1, 2): 256
+
+k=9: AP=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+  AP affine signature (distinct,coll,occupancy) = (34, 2, (1, 1, 1, 1, 1, 2, 2))
+  AP occupies 7 distinct residues mod 7 (occupancy (1, 1, 1, 1, 1, 2, 2))
+  L_y(AP) = 26083/52920 = 0.492876; global beaters over all shapes = 0
+  (I)  AP maximizes L_y globally: True
+  affine TIE-class size (shapes with identical affine signature) = 432
+  L_y values realized ON the tie-class: 432 distinct
+     min=0.242366  max=0.492876
+  (II) L_y CONSTANT on AP's exact affine signature class: False
+  full-residue (all 7) stratum: 432 shapes; AP-beaters on stratum = 0; AP is stratum-max: True
+  full-residue shapes with AP's residue-occupancy profile (1, 1, 1, 1, 1, 2, 2): 432
+
+k=10: AP=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+  AP affine signature (distinct,coll,occupancy) = (42, 3, (1, 1, 1, 1, 2, 2, 2))
+  AP occupies 7 distinct residues mod 7 (occupancy (1, 1, 1, 1, 2, 2, 2))
+  L_y(AP) = 45253/79380 = 0.570081; global beaters over all shapes = 0
+  (I)  AP maximizes L_y globally: True
+  affine TIE-class size (shapes with identical affine signature) = 400
+  L_y values realized ON the tie-class: 400 distinct
+     min=0.337731  max=0.570081
+  (II) L_y CONSTANT on AP's exact affine signature class: False
+  full-residue (all 7) stratum: 400 shapes; AP-beaters on stratum = 0; AP is stratum-max: True
+  full-residue shapes with AP's residue-occupancy profile (1, 1, 1, 1, 2, 2, 2): 400
+
+------------------------------------------------------------------------------
+CONTRAST: under the LINEAR (translation-only) degree-2 type = difference mod 14,
+AP does NOT uniquely extremize any single atom (the collapse, HYP-2738).
+  AP diff-profile (|e_i-e_j| mod 14): {1: 7, 2: 6, 3: 5, 4: 4, 5: 3, 6: 2, 7: 1}
+  over 1716 shapes, # beating AP on each difference-atom:
+     diff=1: 0 shapes have MORE pairs at this difference than AP
+     diff=2: 8 shapes have MORE pairs at this difference than AP
+     diff=3: 148 shapes have MORE pairs at this difference than AP
+     diff=4: 708 shapes have MORE pairs at this difference than AP
+     diff=5: 1408 shapes have MORE pairs at this difference than AP
+     diff=6: 1688 shapes have MORE pairs at this difference than AP
+     diff=7: 1460 shapes have MORE pairs at this difference than AP
+  => AP is NOT the per-atom maximizer in the linear basis: the linear lift has
+     many free directions AP fails to extremize -> no single-atom certificate
+     -> the linear/CJJ lift collapses to a signed aggregate (HYP-2744/2738).
+  In the AFFINE basis these collapse to ONE atom AP DOES maximize.
+==============================================================================
