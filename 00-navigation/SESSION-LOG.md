@@ -28,6 +28,44 @@ CONVERGENCE: codex 5edbf66 (same add-energy tie-break, AP-offset angle; independ
  inversion -- corroborates REFUTED). A concurrent kps session produced THREAD C sharp closed-form
  D=S(p%7,q%7)/(7pq)<=12/(7q) (strengthens my audited 14/p) + THREAD D AP-saturation -- its files
  (lrc_q108_threadC_*, lrc14_tight_maxelt_*) ride along this commit. Synced ~5x.
+## codex-2026-06-21 -- HYP-2738: Delsarte/Tanner carrier audit and half-arc sign rigidity
+
+User supplied Delsarte/Tanner/unit-distance/Doyle-Holt/modular-form prompts as
+inspiration for the LRC14 push.  Pulled current mainline, read the latest
+Delsarte and L7 artifacts, and used the external sources as a guardrail: global
+Delsarte dual positivity is real, but a local Tanner graph should not be
+assumed to be sparse or expander-like.
+
+Added `04-computation/lrc14_delsarte_tanner_carrier_codex_20260621.py` with
+stored output `05-knowledge/results/lrc14_delsarte_tanner_carrier_codex_20260621.out`.
+The script expands the THM-534 K8/K9/K11 dual polynomials in the binomial basis
+`g(t)=sum_r y_r binom(t,r)` and draws the exact check/atom carrier:
+
+```text
+check nodes = nonzero moment rows r
+variable nodes = missed-depth atoms t=0..6
+edge r--t iff r<=t, weighted by y_r binom(t,r).
+```
+
+Findings:
+
+```text
+K8 : edges=25, density=5/7,   girth=4, four-cycles=65, automorphisms=6,   mixed-sign edge orbits=0
+K9 : edges=22, density=11/14, girth=4, four-cycles=53, automorphisms=24,  mixed-sign edge orbits=0
+K11: edges=18, density=6/7,   girth=4, four-cycles=35, automorphisms=120, mixed-sign edge orbits=0
+```
+
+So the Tanner connection is a carrier audit, not an LDPC proof import: the
+carrier is a dense nested Ferrers graph with many 4-cycles.  The useful residue
+is Doyle-Holt-style half-arc rigidity: the undirected support has automorphisms,
+but no side-preserving automorphism orbit mixes positive and negative weighted
+edges.  This makes sign/orientation a real invariant of the Delsarte certificate.
+
+Created HYP-2738 and reflection
+`07-reflections/lrc14-delsarte-tanner-halfarc-carrier-codex-20260621.md`.
+Next sharp target: prove a Krawtchouk puncture/extend parity lemma explaining
+K8's even-only support versus K9/K11 mixed low-degree support, then splice that
+to HYP-2737's generated row-slice odometer proof target.
 
 ## kind-pasteur-2026-06-21 (overnight, RIGOR + FORMALIZATION) -- L7 D<=14/p paper-proof + Lean apex-law formalization (sorry-free, standard axioms)
 

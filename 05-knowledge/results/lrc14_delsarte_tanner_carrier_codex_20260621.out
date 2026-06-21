@@ -1,0 +1,124 @@
+LRC14 Delsarte/Tanner carrier audit (exact fractions)
+==============================================================================
+Vertex challenge:
+  considered vertices: missed-depth atoms, factorial checks, signed edges,
+  proof lenses, unit-distance edges, modular branch-address analogies.
+  chosen carrier vertices below: atom depths t=0..6 and moment rows r.
+  preserved predicate: the THM-534 Delsarte dominance g(t)>=1[t=0].
+  destroyed information: actual generated speed words, relation lattice,
+  and row-slice odometer geometry from HYP-2737.
+
+------------------------------------------------------------------------------
+K8 carrier (k=8)
+  g scale 10: [10, 0, 0, 1, 0, 0, 10]
+  y in binom basis, scale 10: [10, -10, 10, -9, 6, 0, 0]
+  Krawtchouk coeffs, scale 80: [5, 0, 2, 0, 3, 0, 0]
+  tight depths=[0, 1, 2, 4, 5]; positive-slack depths=[3, 6]
+  check rows=[0, 1, 2, 3, 4]; edges=25; density=5/7; sign_counts={'+': 15, '-': 10}
+  variable degree hist={1: 1, 2: 1, 3: 1, 4: 1, 5: 3}; row degree hist={3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+  Tanner girth=4; 4-cycles=65
+  sample 4-cycle witnesses=[(1, 2, [0, 1], 1), (1, 3, [0, 1], 1), (1, 4, [0, 1], 1), (1, 5, [0, 1], 1), (1, 6, [0, 1], 1)]
+  automorphisms preserving sides=6; edge orbits=15; mixed-sign orbits=False
+  first edge orbits:
+    orbit=[(0, 0)] signs=[1]
+    orbit=[(0, 1)] signs=[1]
+    orbit=[(0, 2)] signs=[1]
+    orbit=[(0, 3)] signs=[1]
+    orbit=[(0, 4), (0, 5), (0, 6)] signs=[1]
+    orbit=[(1, 1)] signs=[-1]
+    orbit=[(1, 2)] signs=[-1]
+    orbit=[(1, 3)] signs=[-1]
+  feasible single-edge sign flips=10/25
+    sample feasible flips (r,t,old_weight,new_g_t)=[(1, 1, '-1', '2'), (1, 2, '-2', '4'), (1, 3, '-3', '61/10'), (1, 4, '-4', '8'), (1, 5, '-5', '10'), (1, 6, '-6', '13')]
+    sample failing flips (r,t,old_weight,new_g_t)=[(0, 0, '1', '-1'), (0, 1, '1', '-2'), (0, 2, '1', '-2'), (0, 3, '1', '-19/10'), (0, 4, '1', '-2'), (0, 5, '1', '-2')]
+  whole-row sign flips preserving dominance:
+    row r=0, y=1 -> feasible=False, new_g=['-1', '-2', '-2', '-19/10', '-2', '-2', '-1']
+    row r=1, y=-1 -> feasible=True, new_g=['1', '2', '4', '61/10', '8', '10', '13']
+    row r=2, y=1 -> feasible=False, new_g=['1', '0', '-2', '-59/10', '-12', '-20', '-29']
+    row r=3, y=-9/10 -> feasible=True, new_g=['1', '0', '0', '19/10', '36/5', '18', '37']
+    row r=4, y=3/5 -> feasible=False, new_g=['1', '0', '0', '1/10', '-6/5', '-6', '-17']
+
+------------------------------------------------------------------------------
+K9 carrier (k=9,10)
+  g scale 18: [18, 5, 0, 0, 2, 3, 0]
+  y in binom basis, scale 18: [18, -13, 8, -3, 0, 0, 0]
+  Krawtchouk coeffs, scale 144: [12, 2, 4, 3, 0, 0, 0]
+  tight depths=[0, 2, 3, 6]; positive-slack depths=[1, 4, 5]
+  check rows=[0, 1, 2, 3]; edges=22; density=11/14; sign_counts={'+': 12, '-': 10}
+  variable degree hist={1: 1, 2: 1, 3: 1, 4: 4}; row degree hist={4: 1, 5: 1, 6: 1, 7: 1}
+  Tanner girth=4; 4-cycles=53
+  sample 4-cycle witnesses=[(1, 2, [0, 1], 1), (1, 3, [0, 1], 1), (1, 4, [0, 1], 1), (1, 5, [0, 1], 1), (1, 6, [0, 1], 1)]
+  automorphisms preserving sides=24; edge orbits=10; mixed-sign orbits=False
+  first edge orbits:
+    orbit=[(0, 0)] signs=[1]
+    orbit=[(0, 1)] signs=[1]
+    orbit=[(0, 2)] signs=[1]
+    orbit=[(0, 3), (0, 4), (0, 5), (0, 6)] signs=[1]
+    orbit=[(1, 1)] signs=[-1]
+    orbit=[(1, 2)] signs=[-1]
+    orbit=[(1, 3), (1, 4), (1, 5), (1, 6)] signs=[-1]
+    orbit=[(2, 2)] signs=[1]
+  feasible single-edge sign flips=10/22
+    sample feasible flips (r,t,old_weight,new_g_t)=[(1, 1, '-13/18', '31/18'), (1, 2, '-13/9', '26/9'), (1, 3, '-13/6', '13/3'), (1, 4, '-26/9', '53/9'), (1, 5, '-65/18', '133/18'), (1, 6, '-13/3', '26/3')]
+    sample failing flips (r,t,old_weight,new_g_t)=[(0, 0, '1', '-1'), (0, 1, '1', '-31/18'), (0, 2, '1', '-2'), (0, 3, '1', '-2'), (0, 4, '1', '-17/9'), (0, 5, '1', '-11/6')]
+  whole-row sign flips preserving dominance:
+    row r=0, y=1 -> feasible=False, new_g=['-1', '-31/18', '-2', '-2', '-17/9', '-11/6', '-2']
+    row r=1, y=-13/18 -> feasible=True, new_g=['1', '31/18', '26/9', '13/3', '53/9', '133/18', '26/3']
+    row r=2, y=4/9 -> feasible=False, new_g=['1', '5/18', '-8/9', '-8/3', '-47/9', '-157/18', '-40/3']
+    row r=3, y=-1/6 -> feasible=True, new_g=['1', '5/18', '0', '1/3', '13/9', '7/2', '20/3']
+
+------------------------------------------------------------------------------
+K11 carrier (k=11,12,13)
+  g scale 6: [6, 3, 1, 0, 0, 1, 3]
+  y in binom basis, scale 6: [6, -3, 1, 0, 0, 0, 0]
+  Krawtchouk coeffs, scale 24: [3, 1, 1, 0, 0, 0, 0]
+  tight depths=[0, 3, 4]; positive-slack depths=[1, 2, 5, 6]
+  check rows=[0, 1, 2]; edges=18; density=6/7; sign_counts={'+': 12, '-': 6}
+  variable degree hist={1: 1, 2: 1, 3: 5}; row degree hist={5: 1, 6: 1, 7: 1}
+  Tanner girth=4; 4-cycles=35
+  sample 4-cycle witnesses=[(1, 2, [0, 1], 1), (1, 3, [0, 1], 1), (1, 4, [0, 1], 1), (1, 5, [0, 1], 1), (1, 6, [0, 1], 1)]
+  automorphisms preserving sides=120; edge orbits=6; mixed-sign orbits=False
+  first edge orbits:
+    orbit=[(0, 0)] signs=[1]
+    orbit=[(0, 1)] signs=[1]
+    orbit=[(0, 2), (0, 3), (0, 4), (0, 5), (0, 6)] signs=[1]
+    orbit=[(1, 1)] signs=[-1]
+    orbit=[(1, 2), (1, 3), (1, 4), (1, 5), (1, 6)] signs=[-1]
+    orbit=[(2, 2), (2, 3), (2, 4), (2, 5), (2, 6)] signs=[1]
+  feasible single-edge sign flips=6/18
+    sample feasible flips (r,t,old_weight,new_g_t)=[(1, 1, '-1/2', '3/2'), (1, 2, '-1', '13/6'), (1, 3, '-3/2', '3'), (1, 4, '-2', '4'), (1, 5, '-5/2', '31/6'), (1, 6, '-3', '13/2')]
+    sample failing flips (r,t,old_weight,new_g_t)=[(0, 0, '1', '-1'), (0, 1, '1', '-3/2'), (0, 2, '1', '-11/6'), (0, 3, '1', '-2'), (0, 4, '1', '-2'), (0, 5, '1', '-11/6')]
+  whole-row sign flips preserving dominance:
+    row r=0, y=1 -> feasible=False, new_g=['-1', '-3/2', '-11/6', '-2', '-2', '-11/6', '-3/2']
+    row r=1, y=-1/2 -> feasible=True, new_g=['1', '3/2', '13/6', '3', '4', '31/6', '13/2']
+    row r=2, y=1/6 -> feasible=False, new_g=['1', '1/2', '-1/6', '-1', '-2', '-19/6', '-9/2']
+
+==============================================================================
+Interpretation
+  Tanner import test: negative.  The carrier is a nested Ferrers graph,
+  dense at this scale, with many 4-cycles and non-biregular degree gradients.
+  That is not an LDPC/Tanner expander mechanism; it is a global association
+  scheme certificate written as local incidence.
+  Doyle-Holt half-arc test: partly useful.  The undirected carrier has
+  automorphisms, but no edge orbit mixes positive and negative signs.  The
+  sign/orientation is rigid, like a half-arc split, and arbitrary arc flips
+  usually break Delsarte dominance.
+
+==============================================================================
+Tournament Analysis over proof lenses
+  Pairwise observable: lexicographic proof value
+    (preserves_bound, exact_audit, LRC_transfer, sign_structure, locality).
+  Switch/gauge: keep generated atom words before scalarizing; Tanner locality
+  is a tie-break, not the primary invariant.
+  score order=['global_delsarte_lp', 'krawtchouk_parity_puncture', 'halfarc_sign_orbit', 'tanner_local_carrier', 'unit_distance_delsarte_transfer', 'modular_belyi_address']
+  score histogram={'global_delsarte_lp': 5, 'krawtchouk_parity_puncture': 4, 'halfarc_sign_orbit': 3, 'tanner_local_carrier': 2, 'unit_distance_delsarte_transfer': 1, 'modular_belyi_address': 0}
+  directed_3cycles=0; Hamiltonian_paths=1; edge_flips_vs_list_order=0
+
+==============================================================================
+Next sharp target
+  Do not try to prove LRC14 by importing a sparse Tanner-expander theorem.
+  Use this audit as a guardrail: the Delsarte side is exact and globally
+  positive, while HYP-2737's row-slice odometer is the active local proof
+  obligation.  A productive hybrid target is a puncture/extend parity lemma:
+  explain why the K8 even-only rows and K9/K11 mixed rows are compatible
+  with the HYP-2737 single-row balance after quotienting by atom depth.
