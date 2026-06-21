@@ -62,3 +62,30 @@ Combined with:
 => GENUINE-WIDE LEG (Leg C) is EXHAUSTIVELY VERIFIED for k=9..12.
    Combined with BOUNDED (span<=14, exhaustive) + SINGLE-FAR (THM-563, closed):
    p0(E) < cap_k for ALL primitive k-speed configs, k=9..12. LRC(14) CLOSES.
+
+================================================================================
+k=9 EXHAUSTIVE ALL-BASES CHECK (claude-opus-2026-06-22-S4)
+================================================================================
+k=9  cap=0.494256  C(14,6)=3003 bases  M in [15,50]
+  k=9 g=1: 3003 bases, 104587 gw-configs, PASS  [56s]
+    worst p0=0.289765  margin=+0.204491  worst_E=(0,1,2,3,4,5,6,21,22)
+  k=9 g=2: 3003 bases, 105419 gw-configs, PASS  [57s]
+    worst p0=0.277820  margin=+0.216435  worst_E=(0,2,4,6,8,10,12,47,49)
+  k=9 g=3: 3003 bases, 107226 gw-configs, PASS  [58s]
+    worst p0=0.302123  margin=+0.192132  worst_E=(0,3,6,9,11,12,14,15,18)
+  k=9 g=4: 3003 bases, 106921 gw-configs, PASS  [59s]
+    worst p0=0.294339  margin=+0.199916  worst_E=(0,3,5,7,9,11,13,15,19)
+k=9 ALL GAPS: PASS  (~424k gw-configs, 0 violations)
+
+CORRECTED GRAND TOTAL (k=9..12 ALL EXHAUSTIVE):
+  k=9:  3003 bases x g=1..4, ~424k gw-configs, 0 violations
+  k=10: 3432 bases x g=1..4, ~449k gw-configs, 0 violations
+  k=11: 3003 bases x g=1..4, ~428k gw-configs, 0 violations
+  k=12: 2002 bases x g=1..4, ~287k gw-configs, 0 violations
+  GRAND TOTAL: ~1.59 MILLION genuine-wide doublet configs, 0 violations.
+
+Min margins:
+  k=9:  min margin = +0.192132  (g=3)
+  k=10: min margin = +0.162107  (g=2)
+  k=11: min margin = +0.200331  (g=3)
+  k=12: min margin = +0.241422  (g=2)
