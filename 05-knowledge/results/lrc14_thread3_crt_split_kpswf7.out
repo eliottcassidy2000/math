@@ -1,0 +1,22 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_thread3_crt_split_kpswf7.py:15: SyntaxWarning: invalid escape sequence '\ '
+  Concretely the cover is "hit all of Z/14 \ {0} = (Z/2 x Z/7) minus 0". By CRT a residue mod 14
+=== ANGLE 1: CRT 2-adic x 7-adic split of the LRC(14) cover ===
+
+(P3) PARITY cover measParity(E) (meas x hitting both even+odd sectors mod 2):
+  k=8: 0/40 configs have FULL parity cover; min=73/77 (0.9481)  max=27/28 (0.9643)
+  k=9: 0/40 configs have FULL parity cover; min=21/22 (0.9545)  max=27/28 (0.9643)
+  k=10: 0/40 configs have FULL parity cover; min=21/22 (0.9545)  max=27/28 (0.9643)
+
+(P1) PRODUCT LAW test: meas14 vs measParity*measS7 (CRT independence):
+  E=[0, 1, 3, 5, 8, 9, 12]: meas14=0.0000 measS7=0.0139 measPar=0.9583 prod=0.0133 diff=0.0133
+  E=[0, 1, 2, 6, 10, 11, 12]: meas14=0.0000 measS7=0.0874 measPar=0.9500 prod=0.0831 diff=0.0831
+  E=[0, 1, 2, 3, 6, 9, 12]: meas14=0.0000 measS7=0.0317 measPar=0.9583 prod=0.0304 diff=0.0304
+  k=7,8: 49/50 configs VIOLATE the product law; worst |diff|=0.18032
+  => if product law holds (worst~0), the cover FACTORS by CRT (2-adic indep of 7-adic).
+  => if it fails, the 2 and 7 parts are CORRELATED (resonance lives in the cross term).
+
+(P2) per-factor consec-max (bounded stratum, k=8): consec=(0..7)
+  k=8: consec measS7=0.3272 measPar=0.9286 meas14=0.0000 | random beats: S7=0/120 Par=120/120 14=0/120
+  k=9: consec measS7=0.4162 measPar=0.9375 meas14=0.0000 | random beats: S7=0/120 Par=120/120 14=0/120
+
+VERDICT depends on output above.

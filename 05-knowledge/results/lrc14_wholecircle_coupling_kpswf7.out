@@ -1,0 +1,39 @@
+========================================================================================
+WHOLE-CIRCLE coupling: active region [1/14,13/14] tiled by 6 cells
+========================================================================================
+k=8: measS7_active(consec)=481/1470=0.327211
+k=9: measS7_active(consec)=2447/5880=0.416156
+k=10: measS7_active(consec)=8899/17640=0.504478
+
+####################################################################################
+# k=8, box=[0,14]
+####################################################################################
+consec measS7_active=0.327211, total hole length=0.529932
+  consec uncovered-arc lengths (desc, floats) = [0.0986, 0.0986, 0.0619, 0.0612, 0.051, 0.0476, 0.0327, 0.0306, 0.0238, 0.0204, 0.0034]
+  stratum size = 319
+  distinct total-hole lengths over stratum = 308 (total hole NOT fixed => pure Schur on holes can't apply directly)
+  min total hole over stratum = 0.529932; consec total hole = 0.529932; consec is min? True
+  consec W-cell vector (sorted desc) = [0.0762, 0.0605, 0.0578, 0.0442, 0.0442, 0.0442]
+  consec W-vec majorizes rival: 318/318; rival majorizes consec: 0/318
+
+####################################################################################
+# k=9, box=[0,14]
+####################################################################################
+consec measS7_active=0.416156, total hole length=0.440986
+  consec uncovered-arc lengths (desc, floats) = [0.0867, 0.0612, 0.0578, 0.0357, 0.0333, 0.0332, 0.0327, 0.0238, 0.0204, 0.0179, 0.0179, 0.017, 0.0034]
+  stratum size = 688
+  distinct total-hole lengths over stratum = 680 (total hole NOT fixed => pure Schur on holes can't apply directly)
+  min total hole over stratum = 0.440986; consec total hole = 0.440986; consec is min? True
+  consec W-cell vector (sorted desc) = [0.0889, 0.0765, 0.0655, 0.0646, 0.0621, 0.0585]
+  consec W-vec majorizes rival: 686/687; rival majorizes consec: 0/687
+
+####################################################################################
+# k=10, box=[0,13]
+####################################################################################
+consec measS7_active=0.504478, total hole length=0.352664
+  consec uncovered-arc lengths (desc, floats) = [0.0754, 0.0499, 0.0431, 0.0332, 0.0298, 0.0238, 0.017, 0.0136, 0.0119, 0.0113, 0.0102, 0.0099, 0.0079, 0.0071, 0.0051, 0.0034]
+  stratum size = 400
+  distinct total-hole lengths over stratum = 398 (total hole NOT fixed => pure Schur on holes can't apply directly)
+  min total hole over stratum = 0.352664; consec total hole = 0.352664; consec is min? True
+  consec W-cell vector (sorted desc) = [0.1108, 0.0972, 0.0805, 0.076, 0.07, 0.07]
+  consec W-vec majorizes rival: 398/399; rival majorizes consec: 0/399

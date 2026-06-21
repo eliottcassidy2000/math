@@ -1,0 +1,19 @@
+=== c-vector domination & monotonicity (bounded full-residue stratum) ===
+
+PROBE 1: does consec coordinatewise-dominate c_r? c(consec)=(1,1/2,1/3,1/4,1/5,1/6)
+  k=8 consec c=[1.0, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666]: dominates 79/300, FAILS 221/300
+     example NOT dominated: E=[0, 1, 2, 4, 5, 6, 10, 12] c=[1.0, 0.5, 0.1, 0.25, 0.2833333333333333, 0.16666666666666666]
+  k=9 consec c=[1.125, 0.5, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666]: dominates 20/300, FAILS 280/300
+     example NOT dominated: E=[0, 1, 2, 3, 6, 8, 10, 11, 12] c=[1.125, 0.5, 0.43333333333333335, 0.09090909090909091, 0.08333333333333333, 0.16666666666666666]
+  k=10 consec c=[1.125, 0.6111111111111112, 0.3333333333333333, 0.25, 0.2, 0.16666666666666666]: dominates 10/300, FAILS 290/300
+     example NOT dominated: E=[0, 1, 2, 3, 5, 6, 7, 8, 11, 13] c=[1.125, 0.5, 0.3333333333333333, 0.09090909090909091, 0.2, 0.24358974358974358]
+  => if consec dominates ALL: coordinatewise extremal (clean). If fails: domination is partial.
+
+PROBE 2: monotonicity -- does INCREASING a c-coordinate (shrinking a |e|) never DECREASE measS7?
+  c-monotonicity: 197/606 violations (measS7 DECREASED when c increased); worst drop=0.08390
+  => 0 violations: measS7 is coordinatewise-monotone in c (the electrical-contraction law).
+     >0: monotone in c FAILS (resonance overrides conductance even in c-coords).
+
+PROBE 3: does the c-vector DETERMINE measS7? (collisions = same c, different measS7)
+  75 c-vector collisions with DIFFERENT measS7 out of 800 configs
+  => 0: c determines measS7 (sharp invariant). >0: c does not determine measS7.
