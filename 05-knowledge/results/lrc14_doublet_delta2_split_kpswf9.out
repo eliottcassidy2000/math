@@ -1,0 +1,11 @@
+========================================================================================
+DOUBLET delta2 P/R SPLIT (principled inclusion-exclusion)  (THREAD A, kps-Swf9)
+p0(E_M)=p0(base)+A(M)+A(M+1)+d2(M);  P=M*[(A(M)-a_inf)+(A(M+1)-a_inf)], R=M*(d2-d_inf)
+========================================================================================
+
+K=8  base=consec_6=(0, 1, 2, 3, 4, 5)  P_per=7*lcm(1, 2, 3, 4, 5)=420
+  p0(base)=0.000000  BV1=0.037415  BV2=0.083868
+  a_inf=0.037415  Phi=0.106054  d_inf=Phi-BV2=0.022187
+  d_inf(emp,large M)=0.031227  exact-match? False
+  cap_8=0.381463  headroom H_K=cap-0.16-Phi=0.115408
+  (2) P(M) single-far part exactly periodic (2nd-diff vanish, spot 60)? True

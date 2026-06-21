@@ -1,0 +1,13 @@
+========================================================================================
+THREAD C: ADJACENT-DOUBLET = SINGLE-FAR + DRIFT  (kps-wf9)
+E_M = consec_{k-1} U {M,M+1} = S_M U {M+1},  S_M = consec_{k-1} U {M} (single-far)
+D(M) = p0(E_M) - p0(S_M) = the DRIFT coupling from the locked partner M+1
+========================================================================================
+
+k=8  P=7*lcm=420  cap=2243/5880=0.381463
+  SINGLE-FAR (THM-563): periodic=True  Phi_1=289/1470=0.196599  period-max PM1=1=1.00000
+  DRIFT sign(s) of D(M)=['+']
+  sup_M |M*D(M)|   = 45.70177 at M=697   (D(M) bounded*M?)
+  sup_M |M^2*D(M)| = 31854.13632 at M=697  (D(M) ~ 1/M^2?)
+  ASSEMBLE: p0(E_M) <= Phi_1 + (PM1 + sup|M*D|)/M ; at M=15: 3.310050  vs cap 0.381463  margin -2.928588
+  (empirical sup p0(E_M) over [15,700] = 0.289765 at M=21)
