@@ -1,0 +1,4 @@
+L7 GLOBAL MARGIN AUDIT: bounded bases x atlas [(2, 1), (3, 2), (4, 3), (5, 3), (5, 4), (7, 4), (6, 5), (7, 5), (8, 5), (9, 5), (7, 6), (11, 6)]
+k=8: scanned 786 bases x 12 ratios (62s)
+   GLOBAL sup p0_inf = 523/5880 = 0.08895  @ base=(0, 1, 2, 3, 4, 5) p/q=2/1
+   cap_8 = 2243/5880 = 0.38146   MIN margin = 0.29252   strictly under cap: True
