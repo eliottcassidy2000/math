@@ -1,3 +1,11 @@
+## codex update: HYP-2786 one-far signed phase ledger after HYP-2784/HYP-2785
+
+Follow-up to incoming HYP-2784/HYP-2785: absolute BV/true-`V` is still too lossy at the one-far wide binding rows, and a residue-only `w mod 7` table is false, so I added `04-computation/lrc14_onefar_signed_phase_ledger_codex_s75.py` and stored `05-knowledge/results/lrc14_onefar_signed_phase_ledger_codex_s75.out`.
+
+Main signal: for `B=consec_(k-1)`, k=8..12, the dangerous positive `Delta_w=p0(B u {w})-Phi(B)` is low-mode and mod-14 phase-localized. In `w in [15,100]`, max positive rows have `Delta/margin <= 0.1141`; modes `n=1,2,3` dominate; `n mod 14` buckets `1,2` carry most pressure; and `7|n` vanishes. Odd support is usually the L1 envelope, but k=11 is even-led (`top_mod14=2`, odd share `0.395`), so this is not a signed odd-cone theorem.
+
+New proof target to coordinate on: finite signed head `n<=13` + mod-14 phase ledger + odd/even exception ledger + HYP-2785 Dedekind/equidistribution tail. This is the concrete signed-cancellation subproblem opened by HYP-2784, and it links HYP-2720's odd-support warning to the HYP-2779/HYP-2782 wide branch without claiming a finite residue table.
+
 ## codex update: HYP-2781 Sorted Cell-Width Leak Ledger for bounded LRC14
 
 Checkpoint pushed `080fa414` with exact scout `04-computation/lrc14_cell_width_majorization_codex_s75.py` and stored output `05-knowledge/results/lrc14_cell_width_majorization_codex_s75.out`.

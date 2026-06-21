@@ -1,0 +1,72 @@
+HYP-2786/S75 one-far signed phase ledger
+Binding rows: B=consec_(k-1), k=8..12, wide w in [15,100].
+Signed Fourier head cutoff for detailed rows: n<=80 (7-divisible modes vanish).
+Exact Delta_w uses the Abel endpoint identity from Thread B/HYP-2784.
+
+cap and plateau context:
+  k=8: cap=0.381463, Q(k-1)=0.196599, margin=0.184864
+  k=9: cap=0.494256, Q(k-1)=0.362099, margin=0.132157
+  k=10: cap=0.604396, Q(k-1)=0.447886, margin=0.156509
+  k=11: cap=0.725275, Q(k-1)=0.531252, margin=0.194023
+  k=12: cap=0.857143, Q(k-1)=0.602243, margin=0.254900
+
+============================================================================================
+MAX POSITIVE ONE-FAR DELTA IN THE SCANNED BINDING BAND
+  Reading: BV is the absolute THM-546 bound (6/49)V/w. The signed low modes explain the small exact Delta.
+ k   w*        Delta  Delta/margin    V  |Delta|/BV   head_err  odd_share top_mod14   low6_head
+ 8   21   0.02108844      0.114075   43    0.084109   1.78e-04   0.810518         1  0.01866055
+     top terms n: 1:+0.0197390, 2:-0.0047615, 3:+0.0031401, 5:+0.0013209, 4:-0.0007187
+     top mod14 buckets (L1, signed): 1:(0.0198982,+0.0198982), 2:(0.0048134,-0.0048134), 3:(0.0036045,+0.0036045), 5:(0.0014457,+0.0014457)
+ 9   68   0.01073001      0.081192   45    0.132416   1.94e-05   0.884733         1  0.01050456
+     top terms n: 1:+0.0098749, 2:+0.0006965, 5:-0.0004374, 4:+0.0004328, 12:+0.0000486
+     top mod14 buckets (L1, signed): 1:(0.0098945,+0.0098849), 2:(0.0007158,+0.0006799), 5:(0.0004572,-0.0004231), 4:(0.0004489,+0.0004431)
+10   22   0.01632211      0.104288   45    0.065168  -3.56e-07   0.622080         1  0.01693273
+     top terms n: 1:+0.0084598, 2:+0.0057549, 3:+0.0041020, 4:-0.0015996, 5:+0.0003420
+     top mod14 buckets (L1, signed): 1:(0.0085525,+0.0083701), 2:(0.0058897,+0.0057085), 3:(0.0042068,+0.0042068), 4:(0.0016544,-0.0016325)
+11   16   0.01628199      0.083918   43    0.049477   1.11e-04   0.395081         2  0.01564492
+     top terms n: 2:+0.0073276, 3:+0.0036414, 4:+0.0023329, 1:+0.0015052, 5:+0.0006352
+     top mod14 buckets (L1, signed): 2:(0.0074053,+0.0073809), 3:(0.0038927,+0.0038409), 4:(0.0025261,+0.0022650), 1:(0.0015555,+0.0015033)
+12   71   0.01090945      0.042799   39    0.162196   4.94e-07   0.735831         1  0.01106302
+     top terms n: 1:+0.0081461, 2:+0.0027798, 3:+0.0003299, 4:-0.0001158, 16:-0.0000792
+     top mod14 buckets (L1, signed): 1:(0.0081737,+0.0081195), 2:(0.0028706,+0.0027033), 3:(0.0003370,+0.0003266), 4:(0.0001270,-0.0001146)
+
+============================================================================================
+FINITE HEAD AUDIT
+  Worst |exact Delta_w - signed head_{n<=M}| over w in [15,80] for repeatable runtime.
+   M  k    worst_err   err/margin    w       exact        head
+   6  8   0.00242789     0.013133   21  0.02108844  0.01866055
+   6  9   0.00183699     0.013900   32 -0.00954810 -0.00771112
+   6 10   0.00173906     0.011112   56 -0.00706997 -0.00533091
+   6 11   0.00178401     0.009195   18  0.00468902  0.00290501
+   6 12   0.00187602     0.007360   24 -0.00422741 -0.00235139
+  13  8   0.00121226     0.006558   21  0.02108844  0.01987617
+  13  9   0.00101770     0.007701   32 -0.00954810 -0.00853041
+  13 10   0.00070244     0.004488   56 -0.00706997 -0.00636753
+  13 11   0.00061387     0.003164   21  0.00809038  0.00747651
+  13 12   0.00090213     0.003539   24 -0.00422741 -0.00332527
+
+============================================================================================
+SYNTHESIS
+  1. The dangerous positive one-far Delta rows are low-mode phenomena: n=1,2,3
+     dominate the visible head, and the mod-14 buckets 1 and 2 carry most pressure.
+  2. Odd support is a useful L1 envelope in most binding rows, but k=11 is an
+     even-led exception. This matches HYP-2720: odd support is not a signed cone.
+  3. The exact Delta is only about 5%-16% of the absolute BV bound in the risk rows;
+     HYP-2784's 125x gap is therefore a signed phase-cancellation gap, not a V gap.
+  4. A proof-shaped target is now finite-head plus tail:
+       signed low modes n<=13/mod14 ledger + odd/even exception ledger + Dedekind/equidistribution tail.
+     This is narrower than an absolute Koksma proof, and HYP-2785 rules out a finite residue-only table.
+
+============================================================================================
+TOURNAMENT ANALYSIS
+  vertices: binding one-far rows k=8..12 at their max positive Delta_w in the scanned band
+  pairwise observable: larger Delta_w/margin, then larger odd L1 share, then smaller BV ratio
+  switch/gauge: exact Abel endpoint value is scalarized only after the mod-14 Fourier split
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1}
+  directed_3cycles=0
+  Hamiltonian pressure path:
+    k=8 w=21: Delta/margin=0.114075, odd_share=0.810518, top n mod 14=1
+    k=10 w=22: Delta/margin=0.104288, odd_share=0.622080, top n mod 14=1
+    k=11 w=16: Delta/margin=0.083918, odd_share=0.395081, top n mod 14=2
+    k=9 w=68: Delta/margin=0.081192, odd_share=0.884733, top n mod 14=1
+    k=12 w=71: Delta/margin=0.042799, odd_share=0.735831, top n mod 14=1
