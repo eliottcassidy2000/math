@@ -4,12 +4,51 @@ User asked to see which residual profiles actual decorrelated LRC contexts can
 generate, to consider Rule 110 cellular automata as structural inspiration, and
 to keep pulling and treating incoming work as proof signal.  Pulled first;
 main was up to date except for session-state machinery.  Claimed HYP-2698/T934
-as the next HYP-2697 subtarget: residual profiles should be represented as
-generated words `x -> w_x(R)` over the 64 sector masks, updated at fixed `x` by
+as the next HYP-2697 subtarget, checkpointed, pulled again, then added
+`04-computation/lrc14_residual_profile_automaton_cone_codex_s63.py` and stored
+`05-knowledge/results/lrc14_residual_profile_automaton_cone_codex_s63.out`.
+
+Main structural finding: residual profiles should be represented as generated
+words `x -> w_x(R)` over the 64 sector masks, updated at fixed `x` by
 OR-convolution / residual deletion, not as arbitrary averaged vectors in the
-positive orthant.  The Rule-110 analogy is constrained-language generation by
-a simple finite local rule; it is not a claim that LRC is literally Rule 110.
-Exact scout still in progress.
+positive orthant.  The exact coordinate is the miss-zeta transform
+
+```text
+Z_x(A)=Pr(A is contained in the residual mask).
+```
+
+For independent context clusters, the scout verifies the pointwise product law
+
+```text
+Z_context,x(A)=prod_i Z_i,x(A)
+```
+
+before averaging over `x`.  Example context `(4,2,1)` at `x=5/37` gives
+`Pr({1} still missed)=131274/469567`, `Pr({1,2} still missed)=60000/469567`,
+and `Pr({4,5,6} still missed)=19436/469567`.
+
+Generated coherent contexts from integer partitions `r=0..8` form constrained
+profile families.  Supports grow from one mask to at most all 64 masks, but
+dominant residual layers and one-missed/full-missed ranges remain structured.
+The S62 coordinatewise counterexamples all lose against every coherent
+generated context scanned for total nonzero size `m=7..11`:
+
+```text
+K=(0,1,2),     C=(0,1,3):       worst margin 20/16807
+K=(0,1,2,3),   C=(0,1,2,4):     worst margin 37/16807
+K=(0,1,2,3,4), C=(0,1,2,3,5):   worst margin 199/24010
+```
+
+A near-consecutive frontier scan through size 6 also found zero failures; the
+size-6 worst margin is `12027/2352980`.  Weakest contexts are all-singleton or
+near-all-singleton products.  New sharp proof route: prove compression for the
+singleton-product miss-zeta word, then show coherent context-carrier merging
+does not reduce the margin, then combine with THM-557 and hand near-equality
+sector labels to HYP-2696/THM-558 transfer tax.
+
+Rule 110 web check used Cook's Complex Systems proof as a structural analogy:
+local finite update rules generate constrained languages.  Here the LRC update
+is monotone residual deletion, not literal Rule 110.
 
 ## codex-2026-06-20-S62 -- LRC14 arbitrary cluster compression cone -- HYP-2697/T933
 

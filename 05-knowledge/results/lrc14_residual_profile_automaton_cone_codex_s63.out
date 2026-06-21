@@ -1,0 +1,79 @@
+HYP-2698 / T934 / S63 -- residual-profile automaton cone scout
+Arithmetic: exact Fractions over shared-x sector-mask breakpoints.
+Rule-110 lens: local finite update generates a constrained language;
+do not replace the generated LRC context word by arbitrary weights.
+
+PART A -- coherent contexts generate a small family of residual profiles
+  context size r means r nonzero runners outside the candidate cluster
+  contexts are coherent-block partitions, as in THM-557
+ r  #ctx   support range                 dominant residual layers             one-missed range            full-missed range
+ 0     1          (1, 1)                                   {6: 1}                       (0, 0)                       (1, 1)
+ 1     1          (7, 7)                                   {5: 1}                       (0, 0)                   (1/7, 1/7)
+ 2     2        (22, 22)                                   {4: 2}                       (0, 0)                 (1/49, 1/49)
+ 3     3        (42, 42)                                   {4: 3}                       (0, 0)                (1/343, 1/98)
+ 4     5        (55, 57)                                   {3: 5}                       (0, 0)              (1/2401, 1/147)
+ 5     7        (59, 63)                             {2: 1, 3: 6}          (720/16807, 37/294)             (1/16807, 1/196)
+ 6    11        (60, 64)                            {1: 1, 2: 10}        (2160/16807, 232/735)            (1/117649, 1/245)
+ 7    15        (60, 64)                            {1: 2, 2: 13}    (27360/117649, 1814/5145)            (1/823543, 1/294)
+ 8    22        (60, 64)                     {0: 1, 1: 10, 2: 11}        (92/343, 13858/36015)           (1/5764801, 1/343)
+
+PART B -- pointwise miss-zeta coordinates factor multiplicatively
+  checked context (4, 2, 1) at x=5/37
+    Pr((1, 2, 3, 4, 5, 6) all still missed) = 0
+    Pr((1,) all still missed) = 131274/469567
+    Pr((1, 2) all still missed) = 60000/469567
+    Pr((1, 3, 5) all still missed) = 0
+    Pr((4, 5, 6) all still missed) = 19436/469567
+  This is the exact cone coordinate: z_x(A)=prod_i z_{i,x}(A).
+  Averaging over x happens only after this product word is formed.
+
+PART C -- S62 coordinatewise counterexamples against generated contexts
+  candidate size=3 K=(0, 1, 2) C=(0, 1, 3)
+    bad residual coordinates=13, max_bad_gain=5/294
+    total_m=7, context_r=4, contexts= 5: min actual=20/16807 (0.001189980) at [1+1+1+1]; min averaged-dot=20/16807 (0.001189980) at [1+1+1+1]; bad-mass max=93/343 (0.271137026) at [3+1]; actual_fail=0, averaged_fail=0
+    total_m=8, context_r=5, contexts= 7: min actual=220/117649 (0.001869969) at [1+1+1+1+1]; min averaged-dot=220/117649 (0.001869969) at [1+1+1+1+1]; bad-mass max=102/343 (0.297376093) at [3+1+1]; actual_fail=0, averaged_fail=0
+    total_m=9, context_r=6, contexts=11: min actual=40/16807 (0.002379961) at [1+1+1+1+1+1]; min averaged-dot=40/16807 (0.002379961) at [1+1+1+1+1+1]; bad-mass max=4800/16807 (0.285595288) at [2+1+1+1+1]; actual_fail=0, averaged_fail=0
+    total_m=10, context_r=7, contexts=15: min actual=15504/5764801 (0.002689425) at [1+1+1+1+1+1+1]; min averaged-dot=15504/5764801 (0.002689425) at [1+1+1+1+1+1+1]; bad-mass max=29664/117649 (0.252139840) at [2+1+1+1+1+1]; actual_fail=0, averaged_fail=0
+    total_m=11, context_r=8, contexts=22: min actual=16260/5764801 (0.002820566) at [1+1+1+1+1+1+1+1]; min averaged-dot=16260/5764801 (0.002820566) at [1+1+1+1+1+1+1+1]; bad-mass max=172440/823543 (0.209387974) at [2+1+1+1+1+1+1]; actual_fail=0, averaged_fail=0
+
+  candidate size=4 K=(0, 1, 2, 3) C=(0, 1, 2, 4)
+    bad residual coordinates=14, max_bad_gain=73/4704
+    total_m=7, context_r=3, contexts= 3: min actual=37/16807 (0.002201464) at [1+1+1]; min averaged-dot=157/67228 (0.002335336) at [1+1+1]; bad-mass max=120/343 (0.349854227) at [2+1]; actual_fail=0, averaged_fail=0
+    total_m=8, context_r=4, contexts= 5: min actual=685/235298 (0.002911202) at [1+1+1+1]; min averaged-dot=3971/1613472 (0.002461152) at [2+2]; bad-mass max=780/2401 (0.324864640) at [2+1+1]; actual_fail=0, averaged_fail=0
+    total_m=9, context_r=5, contexts= 7: min actual=365/117649 (0.003102449) at [1+1+1+1+1]; min averaged-dot=10929/3764768 (0.002902968) at [2+2+1]; bad-mass max=601/2401 (0.250312370) at [2+2+1]; actual_fail=0, averaged_fail=0
+    total_m=10, context_r=6, contexts=11: min actual=4815/1647086 (0.002923345) at [1+1+1+1+1+1]; min averaged-dot=1177/576240 (0.002042552) at [6]; bad-mass max=921/4802 (0.191795085) at [2+2+2]; actual_fail=0, averaged_fail=0
+    total_m=11, context_r=7, contexts=15: min actual=14691/5764801 (0.002548397) at [1+1+1+1+1+1+1]; min averaged-dot=1735/1075648 (0.001612981) at [4+3]; bad-mass max=323/2401 (0.134527280) at [3+2+2]; actual_fail=0, averaged_fail=0
+
+  candidate size=5 K=(0, 1, 2, 3, 4) C=(0, 1, 2, 3, 5)
+    bad residual coordinates=11, max_bad_gain=13/1050
+    total_m=7, context_r=2, contexts= 2: min actual=199/24010 (0.008288213) at [1+1]; min averaged-dot=514/60025 (0.008563099) at [1+1]; bad-mass max=18/49 (0.367346939) at [2]; actual_fail=0, averaged_fail=0
+    total_m=8, context_r=3, contexts= 3: min actual=5557/504210 (0.011021201) at [1+1+1]; min averaged-dot=28817/2521050 (0.011430555) at [1+1+1]; bad-mass max=88/343 (0.256559767) at [2+1]; actual_fail=0, averaged_fail=0
+    total_m=9, context_r=4, contexts= 5: min actual=59/4802 (0.012286547) at [1+1+1+1]; min averaged-dot=24713/2016840 (0.012253327) at [2+2]; bad-mass max=76/343 (0.221574344) at [2+2]; actual_fail=0, averaged_fail=0
+    total_m=10, context_r=5, contexts= 7: min actual=43879/3529470 (0.012432178) at [1+1+1+1+1]; min averaged-dot=13079/1080450 (0.012105141) at [5]; bad-mass max=221/1372 (0.161078717) at [3+2]; actual_fail=0, averaged_fail=0
+    total_m=11, context_r=6, contexts=11: min actual=97717/8235430 (0.011865440) at [1+1+1+1+1+1]; min averaged-dot=8731/864360 (0.010101115) at [6]; bad-mass max=185/1372 (0.134839650) at [3+3]; actual_fail=0, averaged_fail=0
+
+PART D -- exact frontier challenger scan against coherent contexts
+  Shapes of size 3..6 near the consecutive block, total_m=7..11.
+  A negative delta would be a real obstruction to the coherent-context cone.
+  size=3: challengers=4, tested=240, failures=0, worst_delta=20/16807 (0.001189980) challenger=(0, 1, 3) total_m=7 context=[1+1+1+1]
+  size=4: challengers=7, tested=287, failures=0, worst_delta=37/16807 (0.002201464) challenger=(0, 1, 2, 4) total_m=7 context=[1+1+1]
+  size=5: challengers=8, tested=224, failures=0, worst_delta=199/24010 (0.008288213) challenger=(0, 1, 2, 3, 5) total_m=7 context=[1+1]
+  size=6: challengers=8, tested=144, failures=0, worst_delta=12027/2352980 (0.005111391) challenger=(0, 1, 2, 3, 4, 6) total_m=11 context=[1+1+1+1+1]
+
+PART E -- Tournament Analysis: proof carriers after the automaton scout
+  vertices: proof-carrier quotients, not runners
+  observable=(exactness, generated-cone fidelity, proof reach, analogy)
+    scores={'raw_coordinate_weights': 0, 'averaged_residual_profile': 2, 'x_correlated_profile_word': 5, 'miss_zeta_product_word': 6, 'coherent_context_exact_scan': 3, 'transfer_tax_label_lift': 4, 'literal_rule110_analogy': 1}
+    score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1} directed_3cycles=0
+    Hamiltonian_path_count=1
+  Read: Rule 110 is useful only as a generated-language warning; the live
+  carrier is the miss-zeta product word plus transfer-tax labels.
+
+SYNTHESIS
+  Actual contexts are generated by a 64-state OR/deletion automaton.
+  In miss-zeta coordinates, the pointwise context word factors as a
+  product over clusters before x-averaging.
+  The S62 residual-coordinate counterexamples do not produce failures
+  against the coherent generated contexts scanned here; the x-correlated
+  word is stronger than the averaged profile dot averaged capacity gap.
+  No LRC14 proof is claimed; HYP-2698 sharpens the cone coordinates.

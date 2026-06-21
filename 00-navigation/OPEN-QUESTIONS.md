@@ -1,5 +1,19 @@
 # Open Questions
 
+**OPEN-Q-108 — RESIDUAL-PROFILE AUTOMATON CONE (codex-2026-06-20-S63, HYP-2698/T934).**
+HYP-2697's generated residual-profile cone now has an exact coordinate.  Actual decorrelated contexts are
+words `x -> w_x(R)` over the 64 residual masks, updated at fixed slow coordinate `x` by OR-convolution /
+residual deletion.  In miss-zeta coordinates `Z_x(A)=Pr(A⊆residual)`, independent context clusters satisfy
+the pointwise product law `Z_context,x(A)=prod_i Z_i,x(A)` before averaging over `x`; this is the cone
+structure that arbitrary nonnegative residual weights destroy.  Exact S63 scout over coherent contexts from
+integer partitions found that all S62 coordinatewise counterexamples lose against every generated context
+with total nonzero size `m=7..11`, with worst margins `20/16807`, `37/16807`, and `199/24010`; a
+near-consecutive frontier scan through size 6 found zero failures, worst `12027/2352980`.  New sharp target:
+prove compression for miss-zeta product words, likely first for all-singleton contexts, then prove coherent
+context merging does not reduce the margin, and keep sector labels available for THM-558 transfer-tax
+near-equality routing.
+-> HYP-2698, HYP-2697, HYP-2696, THM-558, THM-557, HYP-2694, HYP-2684, HYP-2675, OPEN-Q-108.
+
 **OPEN-Q-108 — ARBITRARY CLUSTER COMPRESSION CONE (codex-2026-06-20-S62, HYP-2697/T933).**
 The arbitrary-shape part of HYP-2694 cannot be solved by coordinatewise stochastic dominance.  For a cluster
 shape `C`, let `q_C(R)=Pr_{x,phi}(C covers residual sectors R)`.  Exact counterexamples: `(0,1,3)` beats
