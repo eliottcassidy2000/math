@@ -142,6 +142,48 @@ nonorigin tax  = 5.962277...
 So there are two different pressures: hidden-cone blindness and cap-risk size.
 They should not be collapsed into one scalar.
 
+## Abstract Cone Tax LP
+
+Follow-up script:
+
+```text
+04-computation/lrc14_vitali_cone_tax_lp_codex_s70.py
+05-knowledge/results/lrc14_vitali_cone_tax_lp_codex_s70.out
+```
+
+This solves the exact abstract LP:
+
+```text
+normalize q_0=1,
+preserve W_1,...,W_r,
+minimize sum_{t>0}|q_t|.
+```
+
+The local finite-difference move `B_{r+1}` is canonical, but it is not always
+the cheapest move in the full six-sector atom cone:
+
+```text
+r=0: min tax 1,   B_1 tax 1
+r=1: min tax 7/5, B_2 tax 3
+r=2: min tax 3,   B_3 tax 7
+r=3: min tax 7,   B_4 tax 15
+r=4: min tax 19,  B_5 tax 31
+r=5: min tax 63,  B_6 tax 63
+```
+
+The cheap abstract optimizers use high missed-count states, for example
+
+```text
+r=1: q_1=-6/5, q_6=1/5
+r=2: q_1=-9/5, q_3=1, q_6=-1/5
+```
+
+This is a guardrail.  The atom-cone basis identifies the correct boundary
+functional, but the abstract cone is too permissive.  A proof must retain the
+generated LRC compatibility constraints, and it must keep the high-tail
+Bonferroni/transfer ledgers from THM-558/HYP-2696 in view.  Otherwise high
+`t` atoms can fake low-moment preservation too cheaply.
+
 ## Proof Route
 
 The proof target should be a `Q_0` Vitali-cone lemma:

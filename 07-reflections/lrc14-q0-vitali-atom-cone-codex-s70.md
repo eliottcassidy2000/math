@@ -37,6 +37,14 @@ than `Q_0`, with `tail2_L1/sum|Q0|` about `15.93`, so a low-moment theorem is
 also too weak.  The proof has to retain the middle object: generated
 relation-supported factorial packets.
 
+The abstract LP makes the warning sharper.  If all signed atom moves on
+`t=0..6` are allowed, high missed-count states can hide a unit `q0` move more
+cheaply than the local finite-difference basis: preserving `W_1` costs only
+`7/5` by using `q_1=-6/5,q_6=1/5`, not the `3` units paid by `B_2`.  The
+canonical basis names the channel, but the generated LRC cone must exclude or
+tax these cheap high-state escapes.  That is where THM-558/HYP-2696 belongs in
+the q0/Vitali proof.
+
 The next plausible lemma is:
 
 ```text
