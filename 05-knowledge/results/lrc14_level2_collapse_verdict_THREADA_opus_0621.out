@@ -3,3 +3,17 @@ k=8  measS7(consec) = 481/1470 = 0.327211
 ============================================================================================
 CJJ LINEARITY MECHANISM (the structural payload)
 ============================================================================================
+  FACT 1 (full Z/7 = linearity): 861 full-residue shapes, max measS7=0.32721;
+           10571 non-full shapes, max measS7=0.12370.
+           => global optimum lives in the LINEAR (full-subgroup) stratum: True
+  FACT 2 (nonneg Walsh = lin-comb closure): consec min-Walsh=0.12517 (>=0);
+           13/861 full shapes have ALL-nonneg Walsh; consec has the MAX min-Walsh: True
+
+============================================================================================
+(L1) LEVEL-1 Delsarte LP  (number-only, even-moment ceilings)
+============================================================================================
+  L1 max p_0 = 2633/7350 = 0.358231   (= the Delsarte/L_y bound)
+
+============================================================================================
+(L2a) LEVEL-2 with ATLAS Fourier cone (realized Walsh intervals)
+============================================================================================
