@@ -1,0 +1,76 @@
+####################################################################################
+# THREAD 4 -- DELSARTE leg audit: does L_y clear the cap?
+####################################################################################
+
+(Q1) majorant validity: g_k(0)>=1 and g_k(t)>=0 for t=1..6
+  k= 8: g(t)=['1', '0', '0', '1/10', '0', '0', '1']  valid=YES
+  k= 9: g(t)=['1', '5/18', '0', '0', '1/9', '1/6', '0']  valid=YES
+  k=10: g(t)=['1', '5/18', '0', '0', '1/9', '1/6', '0']  valid=YES
+  k=11: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  valid=YES
+  k=12: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  valid=YES
+  k=13: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  valid=YES
+
+(Q2/Q3/Q4) exhaustive bounded-span: max measS7, max L_y, vs cap
+
+  k= 8 (span<=14, 3431 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.327211  at [0, 1, 2, 3, 4, 5, 6, 7]
+     max L_y    = 0.358231  at [0, 1, 2, 3, 4, 5, 6, 7]   (majorant)
+     cap_8     = 0.381463
+     cap - max measS7 = +0.054252   [TRUE cap margin]
+     cap - max L_y    = +0.023231   [Delsarte leg CLEARS cap]
+     consec: measS7=0.327211  L_y=0.358231  (majorant slack +0.031020)
+
+  k= 9 (span<=14, 3003 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.416156  at [0, 1, 2, 3, 4, 5, 6, 7, 8]
+     max L_y    = 0.492876  at [0, 1, 2, 3, 4, 5, 6, 7, 8]   (majorant)
+     cap_9     = 0.494256
+     cap - max measS7 = +0.078099   [TRUE cap margin]
+     cap - max L_y    = +0.001380   [Delsarte leg CLEARS cap]
+     consec: measS7=0.416156  L_y=0.492876  (majorant slack +0.076720)
+
+  k=10 (span<=14, 2002 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.504478  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     max L_y    = 0.570081  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]   (majorant)
+     cap_10     = 0.604396
+     cap - max measS7 = +0.099917   [TRUE cap margin]
+     cap - max L_y    = +0.034315   [Delsarte leg CLEARS cap]
+     consec: measS7=0.504478  L_y=0.570081  (majorant slack +0.065602)
+
+  k=11 (span<=14, 1001 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.581463  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     max L_y    = 0.691156  at [0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14]   (majorant)
+     cap_11     = 0.725275
+     cap - max measS7 = +0.143812   [TRUE cap margin]
+     cap - max L_y    = +0.034118   [Delsarte leg CLEARS cap]
+     consec: measS7=0.581463  L_y=0.683050  (majorant slack +0.101587)
+
+  k=12 (span<=15, 1365 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.645181  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+     max L_y    = 0.732984  at [0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 14]   (majorant)
+     cap_12     = 0.857143
+     cap - max measS7 = +0.211961   [TRUE cap margin]
+     cap - max L_y    = +0.124159   [Delsarte leg CLEARS cap]
+     consec: measS7=0.624114  L_y=0.714171  (majorant slack +0.090058)
+
+  k=13 (span<=16, 1820 shapes, Bonferroni L_y>=measS7 fails: 0)
+     max measS7 = 0.681916  at [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15]
+     max L_y    = 0.763663  at [0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14, 16]   (majorant)
+     cap_13     = 1.000000
+     cap - max measS7 = +0.318084   [TRUE cap margin]
+     cap - max L_y    = +0.236337   [Delsarte leg CLEARS cap]
+     consec: measS7=0.675928  L_y=0.748883  (majorant slack +0.072955)
+
+====================================================================================
+(Q4) BINDING ROW (smallest TRUE cap margin = cap - max measS7):
+====================================================================================
+  k= 8: cap-maxmeasS7=+0.054252   cap-maxL_y=+0.023231
+  k= 9: cap-maxmeasS7=+0.078099   cap-maxL_y=+0.001380
+  k=10: cap-maxmeasS7=+0.099917   cap-maxL_y=+0.034315
+  k=11: cap-maxmeasS7=+0.143812   cap-maxL_y=+0.034118
+  k=12: cap-maxmeasS7=+0.211961   cap-maxL_y=+0.124159
+  k=13: cap-maxmeasS7=+0.318084   cap-maxL_y=+0.236337
+
+  => TRUE binding row (cap) = k=8 (margin +0.054252)
+  => binding row for the DELSARTE leg (cap-maxL_y smallest) = k=9 (margin +0.001380)
+
+  REFRAME said binding k=10 (margin 0.0999). Check which is right above.

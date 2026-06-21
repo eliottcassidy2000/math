@@ -1,0 +1,85 @@
+==========================================================================================
+Delsarte dual readouts g(t) and feasibility (g(t) >= [t=0]):
+==========================================================================================
+  Bonferroni d=2  y=(1,-1,1,0,0,0,0)
+     g = [Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1), Fraction(3, 1), Fraction(6, 1), Fraction(10, 1)]   feasible=True
+  Bonferroni d=4  y=(1,-1,1,-1,1,0,0)
+     g = [Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(1, 1), Fraction(5, 1)]   feasible=True
+  THM-534 k9,10   y=(1,-13/18,4/9,-1/6,0,0,0)
+     g = [Fraction(1, 1), Fraction(5, 18), Fraction(0, 1), Fraction(0, 1), Fraction(1, 9), Fraction(1, 6), Fraction(0, 1)]   feasible=True
+  THM-534 k11..13 y=(1,-1/2,1/6,0,0,0,0)
+     g = [Fraction(1, 1), Fraction(1, 2), Fraction(1, 6), Fraction(0, 1), Fraction(0, 1), Fraction(1, 6), Fraction(1, 2)]   feasible=True
+  alternating d=6 y=(1,-1,1,-1,1,-1,1)  [=measS7 exactly]
+     g = [Fraction(1, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1), Fraction(0, 1)]   feasible=True
+
+==========================================================================================
+BINDING ROW k=10:  cap_10 = 55/91 = 0.604396
+  measS7(consec_10) = 8899/17640 = 0.504478
+  finite-check region: span <= 13  (715 shapes, 0 in E, rest in 1..13)
+==========================================================================================
+  Bonferroni d=2  y=(1,-1,1,0,0,0,0)
+     max_E L_y = 6883/5880 = 1.170578   EXCEEDS cap by +0.56618  <-- LOOSE
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     iid (wide-span) asymptote L_y = 0.227596 (ratio 0.377 of cap -> contraction safe)
+  Bonferroni d=4  y=(1,-1,1,-1,1,0,0)
+     max_E L_y = 10999/17640 = 0.623526   EXCEEDS cap by +0.01913  <-- LOOSE
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     iid (wide-span) asymptote L_y = 0.104989 (ratio 0.174 of cap -> contraction safe)
+  THM-534 k9,10   y=(1,-13/18,4/9,-1/6,0,0,0)
+     max_E L_y = 45253/79380 = 0.570081   <= cap (margin +0.03431)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     iid (wide-span) asymptote L_y = 0.218831 (ratio 0.362 of cap -> contraction safe)
+  THM-534 k11..13 y=(1,-1/2,1/6,0,0,0,0)
+     max_E L_y = 66757/105840 = 0.630735   EXCEEDS cap by +0.02634  <-- LOOSE
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     iid (wide-span) asymptote L_y = 0.371797 (ratio 0.615 of cap -> contraction safe)
+  alternating d=6 y=(1,-1,1,-1,1,-1,1)  [=measS7 exactly]
+     max_E L_y = 8899/17640 = 0.504478   <= cap (margin +0.09992)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     iid (wide-span) asymptote L_y = 0.104913 (ratio 0.174 of cap -> contraction safe)
+
+==========================================================================================
+BINDING ROW k=11:  cap_11 = 66/91 = 0.725275
+  measS7(consec_11) = 3419/5880 = 0.581463
+  finite-check region: span <= 13  (286 shapes, 0 in E, rest in 1..13)
+==========================================================================================
+  Bonferroni d=2  y=(1,-1,1,0,0,0,0)
+     max_E L_y = 10399/8820 = 1.179025   EXCEEDS cap by +0.45375  <-- LOOSE
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     iid (wide-span) asymptote L_y = 0.234224 (ratio 0.323 of cap -> contraction safe)
+  Bonferroni d=4  y=(1,-1,1,-1,1,0,0)
+     max_E L_y = 12161/17640 = 0.689399   <= cap (margin +0.03588)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     iid (wide-span) asymptote L_y = 0.163118 (ratio 0.225 of cap -> contraction safe)
+  THM-534 k9,10   y=(1,-13/18,4/9,-1/6,0,0,0)
+     max_E L_y = 14377/22680 = 0.633907   <= cap (margin +0.09137)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     iid (wide-span) asymptote L_y = 0.290518 (ratio 0.401 of cap -> contraction safe)
+  THM-534 k11..13 y=(1,-1/2,1/6,0,0,0,0)
+     max_E L_y = 12073/17640 = 0.684410   <= cap (margin +0.04086)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12]
+     iid (wide-span) asymptote L_y = 0.444254 (ratio 0.613 of cap -> contraction safe)
+  alternating d=6 y=(1,-1,1,-1,1,-1,1)  [=measS7 exactly]
+     max_E L_y = 3419/5880 = 0.581463   <= cap (margin +0.14381)
+     argmax E = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     iid (wide-span) asymptote L_y = 0.163096 (ratio 0.225 of cap -> contraction safe)
+
+==========================================================================================
+VERDICT (HONEST)
+==========================================================================================
+  * The Delsarte/moment-LP optimum over duals equals measS7(consec_k): the
+    alternating d=6 dual collapses L_y to measS7 EXACTLY (IE identity), so the LP is
+    TIGHT but degenerate (it just re-derives the consec-max it was meant to bypass).
+  * k=10 binding row is CLOSED by exactly ONE non-degenerate single certificate:
+    the THM-534 k=9,10 dual y=(1,-13/18,4/9,-1/6,0,0,0), g=(18,5,0,0,2,3,0)/18,
+    with max_E L_y = 45253/79380 <= cap_10 = 55/91 (margin +0.0343, argmax consec_10).
+  * The OBSTRUCTIONS at k=10 (honest negatives): the simpler integer duals are LOOSE.
+    Bonferroni d=4 g=(1,0,0,0,0,1,5) overshoots cap by +0.0191; the k=11..13 dual
+    overshoots by +0.0263; Bonferroni d=2 by +0.566. Only the degree-3 fractional
+    THM-534 k9 dual is tight enough.
+  * k=11 binding row is CLOSED by SEVERAL certificates: THM-534 k11..13 dual
+    (max 12073/17640 <= 66/91, margin +0.0409) AND Bonferroni d=4 (max 12161/17640,
+    margin +0.0359) -- the clean integer g=(1,0,0,0,0,1,5) suffices at k=11.
+  * Wide-span (span>13) is handled by the iid contraction: L_y -> sum_r y_r C(6,r)
+    ((7-r)/7)^(k-1), at ratio <=0.62 of cap, far below the cap. The finite-check region
+    span<=13 is the THM-536/B2 bounded-span reduction; this script certifies it exactly.

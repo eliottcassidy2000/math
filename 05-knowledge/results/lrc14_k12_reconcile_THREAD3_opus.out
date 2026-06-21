@@ -1,0 +1,50 @@
+==============================================================================
+THREAD 3: k=12 measS7 reconciliation
+==============================================================================
+
+--- STEP 1: reproduce A and B (must match prompt) ---
+  consec_12  A =    121103/194040 = 0.62411358
+             B =    119843/194040 = 0.61762008
+             A-B = 1/154 = 0.00649351
+  E*         A =      11381/17640 = 0.64518141
+             B =      11171/17640 = 0.63327664
+             A-B = 1/84 = 0.01190476
+
+--- STEP 2: localize discrepancy (A = B + a=0 window) ---
+  consec_12  six(a=1..6)=   119843/194040=0.617620  a=0 window=   1/154=0.006494
+             six == B? True   six+w0 == A? True
+  E*         six(a=1..6)=     11171/17640=0.633277  a=0 window=    1/84=0.011905
+             six == B? True   six+w0 == A? True
+
+--- STEP 3: three independent methods (C theta-strip, D N=0, E grid) ---
+  consec_12:
+     A (breakpoint)      =    121103/194040 = 0.62411358
+     C (theta-strip)     =    121103/194040 = 0.62411358   match A: True
+     D (N=0 occupancy)   =    121103/194040 = 0.62411358   match A: True
+  E*:
+     A (breakpoint)      =      11381/17640 = 0.64518141
+     C (theta-strip)     =      11381/17640 = 0.64518141   match A: True
+     D (N=0 occupancy)   =      11381/17640 = 0.64518141   match A: True
+
+--- STEP 3b: fine rational-grid bracket (method E) ---
+  consec_12  grid(mult= 10) = 0.62411358   |g-A|=0.000000  |g-B|=0.006494
+  consec_12  grid(mult= 40) = 0.62411358   |g-A|=0.000000  |g-B|=0.006494
+  consec_12  grid(mult=120) = 0.62411358   |g-A|=0.000000  |g-B|=0.006494
+  E*         grid(mult= 10) = 0.64518141   |g-A|=0.000000  |g-B|=0.011905
+  E*         grid(mult= 40) = 0.64518141   |g-A|=0.000000  |g-B|=0.011905
+  E*         grid(mult=120) = 0.64518141   |g-A|=0.000000  |g-B|=0.011905
+
+--- STEP 4: dilation-invariance discriminant ---
+  1*consec_8: A=0.32721088  B=0.32721088
+  2*consec_8: A=0.32721088  B=0.29659864
+  3*consec_8: A=0.32721088  B=0.28707483
+  5*consec_8: A=0.32721088  B=0.28544218
+  (canonical: measS7 is exactly dilation-invariant => A is correct, B is not)
+
+--- STEP 5: counterexample + cap survival (CORRECT method = A=C=D) ---
+  measS7(consec_12) = 121103/194040 = 0.62411358
+  measS7(E*)        = 11381/17640 = 0.64518141
+  E* STRICTLY beats consec? True   delta = 73/3465 = +0.02106782
+  cap_12 = 6/7 = 0.85714286
+  consec_12 <= cap_12? True  (margin 45217/194040 = 0.233029)
+  E*        <= cap_12? True  (margin 3739/17640 = 0.211961)

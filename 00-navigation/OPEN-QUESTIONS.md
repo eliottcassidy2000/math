@@ -528,6 +528,12 @@ HYP-2486 isolates the clean A000568 layer in LRC: a threshold source-lift has th
 **RESOLVED by THM-008:** The per-path identity holds trivially for n<=5 because mu(C) = 1 for ALL odd cycles C through v. For 3-cycles, the complement V\{v,a,b} has at most 2 vertices, which cannot form an odd cycle. For 5-cycles, C\{v} exhausts all of T-v, leaving 0 available vertices. The identity reduces to #TypeII = #TypeII. There is no "delicate balance" -- the identity is vacuous at n<=5.
 
 **Additional detail (opus-S2):** More generally, mu(C) = 1 whenever cycle length L >= n-2 (THM-008 mu triviality bound). At n=6, mu(3-cycle) is in {1, 3}: mu=1 (76.7%) when 3 available vertices form transitive subtournament, mu=3 (23.3%) when cyclic.
+## ~~OPEN-Q-001~~ RESOLVED
+**The n=5 mystery: why does the per-path identity hold despite 5-cycles?**
+
+**Resolved by:** opus-2026-03-05-S1 (THM-008)
+
+**Answer:** At n=5, mu(C) = 1 for ALL cycles C through v (both 3-cycles and 5-cycles). This is because C\{v} leaves too few available vertices in T-v for any odd cycles to exist in the restricted conflict graph. Specifically, |Available| = n - L, and odd cycles need >= 3 vertices, so mu = 1 whenever L >= n-2. At n=5, both L=3 (available=2) and L=5 (available=0) satisfy this. The per-path identity holds not because of a deep structural coincidence but because the mu weights are trivially 1, reducing Claim A to a simple cycle-counting identity. See THM-008 for the full proof.
 
 ---
 
@@ -1244,6 +1250,21 @@ At n=3: δ = 0.221 (maximum), predicted 0.276 (ratio 0.80 — leading order less
 Every major result in the project is fundamentally about cancellation: im(d₂) cancels in the seesaw, Walsh coefficients cancel for odd-length paths, S(T)=0 at even n, β₂=0 always, OCF = exact cancellation between H and I. Is there a *single structural principle* (perhaps from homological algebra or categorical representation theory) that implies all of these cancellations simultaneously? The F₂ uniqueness argument (S71r: "WHY TWO GENERATES SEVEN") is a partial answer — but it explains *why F₂* rather than *why cancellation*. See `07-reflections/seesaw-and-cancellation.md`, `07-reflections/what-the-proof-will-look-like.md`.
 
 **Source:** opus-2026-03-16-S73
+
+---
+
+## ~~OPEN-Q-009~~ RESOLVED (same session)
+**Characterize mu(3-cycle) distribution at n=6**
+
+**Resolved by:** opus-2026-03-05-S1
+
+**Answer:** At n=6, mu(3-cycle C through v) is in {1, 3} exactly:
+- mu = 1 (76.7%) when the 3 available vertices (T-v minus C\{v}) form a transitive subtournament
+- mu = 3 (23.3%) when the 3 available vertices form a cyclic subtournament (containing one directed 3-cycle)
+
+This is because with 3 available vertices, the only possible odd cycle is a single 3-cycle. If it exists, Omega has 1 vertex, I(K_1, 2) = 3. If not, Omega is empty, I = 1.
+
+**Remaining questions:** How does mu=3 correlate with per-path identity failures at n=6?
 
 ---
 
@@ -1991,3 +2012,5 @@ is HYP-2424, not an open question.
 ## OPEN-Q-104 🔴 Prove inf L(S)>0 via the Riesz-product method (the C'(14)/LRC(14) endgame)
 
 **Status:** OPEN, the LRC(14) prize — the Riesz route is now DIAGNOSED (mac-mini-2026-06-15-S5, THM-518; was THM-515/HYP-2540). The reduction inf L>0 ⟹ C'(14) ⟹ LRC(14) is THM-398/501; L(S) = the lonely measure = ∫∏1_safe(v_iτ)dτ (THM-515). **HONEST VERDICT (THM-518): the Riesz product is the WRONG tool for the AP-extremizers, and neither of Bedert's two routes reaches 1/14.** (1) The interior-drop cores {1..13}\{j}∪{14m} are AP-like ⟹ small additive dimension dim₂~log N≈2–3 ⟹ Bedert's Riesz gain dim₂²/n³ is worthless. Exact direct-grid: ∏(1−cos) certifies 3/5 loose configs but FAILS both extremizers (j=6: ratio 1.064; j=12: 1.035), and per-speed amplitude optimization stalls at **1.0096 ≥ 1**. (CAUTION: a Fourier-truncated K=14 estimate gave a spurious 0.95 "certificate"; use exact direct-grid — see MISTAKES.) (2) The RIGHT tool for AP-cores is Bedert's **prime point-mass** measure (Lemma 5.3): ML ≥ ⌈(p−1)/26⌉/p; best admissible prime p=29 gives **2/29 = 0.06897 = 96.6% of 1/14** — short by 3.4%. The cores ARE loose (L≈0.0052), so the truth sits in the ~1–4% sliver between both state-of-the-art certificates and the optimum — that sliver IS the exact-value difficulty. NEW STRUCTURE (THM-518): (a) **stranger-decoupling** — lim_{m→∞} L({1..13}\{j}∪{14m}) = (6/7)·meas(Lonely({1..13}\{j})) (Weyl), collapsing each j-family's m→∞ tail to one finite positive measure (≥0.00699); (b) but the infimum is carried by **finite resonant strangers** (m=7, stranger 98=2·7², dips to L=0.00524 < the limit), which share the factor 7 with the core — these need separate control; (c) the **bridge**: Bedert's R̂(ℓ)=Σ_k r_k(ℓ)(−p/2)^k with non-dissociated relation counts r_k IS the project's singular series L(S), so the exact-value work is the project's relation-lattice computation, not the asymptotic machinery. NEXT: control the finite resonant-stranger set (the 7-power/square dilations); push the prime route past 2/29 with a composite/relation-tuned point-mass; or use Bedert's level bound |E_k∩AP|≤(C log|P|)^k (OPEN-Q-097). Entry: THM-518, THM-515/503/504, arXiv:2511.16636, Tao 1701.02048, 04-computation/lrc14_{riesz_verify,riesz_optimize2,stranger_limit,decouple_confirm}_macmini_0615s5.py.
+**OPEN-Q-001** — Resolved by opus-2026-03-05-S1 via THM-008 (mu triviality bound). See THM-008.
+**OPEN-Q-009** — Resolved by opus-2026-03-05-S1. mu(3-cycle at n=6) in {1,3}, determined by whether the 3 available vertices form a cyclic or transitive subtournament.

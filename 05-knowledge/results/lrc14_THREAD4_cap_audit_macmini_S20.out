@@ -1,0 +1,76 @@
+####################################################################################
+# THREAD 4 -- ADVERSARIAL AUDIT of the corrected LRC(14) cap obligation
+####################################################################################
+
+====================================================================================
+(a) RANGE of cluster sizes k for n=14
+====================================================================================
+  Model: 0 in E, |P|+|E|=13, P subset {1..13}.  k=|E| in 3..13; |P|=13-k in 0..10.
+  => k NEVER exceeds 13 (only 13 speeds). The reframe's 'k>=16' discussion is about
+     the abstract measS7 extremal problem, NOT realizable cluster sizes for LRC(14).
+  Relevant cap rows for LRC(14): k=8..13 (k<=7 closed unconditionally by pigeonhole,
+     THM-530 branch k<=7: 6 points => maxgap>1/7 always => mu_{1/7}=1).
+
+====================================================================================
+(b) RE-DERIVE cap_k = min_{|P|=13-k} meas(G_P)  (covering reduction)
+====================================================================================
+  k= 8 (|P|=5): min meas(G_P)=2243/5880 = 0.381463  argmin P=(1, 5, 7, 8, 9)
+        vs CANON cap_8=2243/5880  [OK];  vs THM-530 minGP[5]=2243/5880 [OK]
+  k= 9 (|P|=4): min meas(G_P)=1979/4004 = 0.494256  argmin P=(1, 11, 12, 13)
+        vs CANON cap_9=1979/4004  [OK];  vs THM-530 minGP[4]=1979/4004 [OK]
+  k=10 (|P|=3): min meas(G_P)=55/91 = 0.604396  argmin P=(1, 12, 13)
+        vs CANON cap_10=55/91  [OK];  vs THM-530 minGP[3]=55/91 [OK]
+  k=11 (|P|=2): min meas(G_P)=66/91 = 0.725275  argmin P=(1, 13)
+        vs CANON cap_11=66/91  [OK];  vs THM-530 minGP[2]=66/91 [OK]
+  k=12 (|P|=1): min meas(G_P)=6/7 = 0.857143  argmin P=(1,)
+        vs CANON cap_12=6/7  [OK];  vs THM-530 minGP[1]=6/7 [OK]
+  k=13 (|P|=0): min meas(G_P)=1 = 1.000000  argmin P=()
+        vs CANON cap_13=1  [OK];  vs THM-530 minGP[0]=1 [OK]
+
+====================================================================================
+(c) EXHAUSTIVE max measS7(E) vs cap_k, primitive E, 0 in E, bounded span
+====================================================================================
+  Span = max(E). For each k we enumerate ALL primitive E={0}+subset of {1..SPAN}.
+  measS7 is SCALE-INVARIANT, so primitive bounded-span covers each dilation class once.
+  (A margin<=0 here is a genuine counterexample / cap error -- the key adversarial test.)
+
+  k= 8 span<=14 (3431 primitive shapes):
+     max measS7 = 481/1470 = 0.327211   argmax E=[0, 1, 2, 3, 4, 5, 6, 7]
+     measS7(consec) = 481/1470 = 0.327211   (consec is argmax: True)
+     cap_8 = 2243/5880 = 0.381463   margin = +0.054252   -> CONSEC-MAX
+  k= 9 span<=14 (3003 primitive shapes):
+     max measS7 = 2447/5880 = 0.416156   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+     measS7(consec) = 2447/5880 = 0.416156   (consec is argmax: True)
+     cap_9 = 1979/4004 = 0.494256   margin = +0.078099   -> CONSEC-MAX
+  k=10 span<=14 (2002 primitive shapes):
+     max measS7 = 8899/17640 = 0.504478   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
+     measS7(consec) = 8899/17640 = 0.504478   (consec is argmax: True)
+     cap_10 = 55/91 = 0.604396   margin = +0.099917   -> CONSEC-MAX
+  k=11 span<=14 (1001 primitive shapes):
+     max measS7 = 3419/5880 = 0.581463   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+     measS7(consec) = 3419/5880 = 0.581463   (consec is argmax: True)
+     cap_11 = 66/91 = 0.725275   margin = +0.143812   -> CONSEC-MAX
+  k=12 span<=15 (1365 primitive shapes):
+     max measS7 = 11381/17640 = 0.645181   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+     measS7(consec) = 121103/194040 = 0.624114   (consec is argmax: False)
+     cap_12 = 6/7 = 0.857143   margin = +0.211961   -> non-consec argmax
+  k=13 span<=16 (1820 primitive shapes):
+     max measS7 = 12029/17640 = 0.681916   argmax E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12, 15]
+     measS7(consec) = 14573/21560 = 0.675928   (consec is argmax: False)
+     cap_13 = 1 = 1.000000   margin = +0.318084   -> non-consec argmax
+
+====================================================================================
+(d) k=12: consec-max FALSE (E*=[0..10,12] beats consec) but cap INTACT
+====================================================================================
+  consec_12 = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+     measS7(consec_12) = 121103/194040 = 0.624114
+  E* = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12]
+     measS7(E*)       = 11381/17640 = 0.645181
+  E* beats consec: True   (consec-max is FALSE at k=12)
+  cap_12 = 6/7 = 0.857143
+  BOTH under cap: consec margin +0.233029, E* margin +0.211961
+  => consec-max false at k=12, cap holds with large margin (>=0.21). Reframe confirmed.
+
+####################################################################################
+# DONE. Margins are the load-bearing output: any margin<=0 is a real problem.
+####################################################################################

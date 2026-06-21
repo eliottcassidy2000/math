@@ -4,6 +4,7 @@ All machines participating in the research network. Add your machine by running 
 
 | Machine ID | Description | Status | First session | Last seen |
 |------------|-------------|--------|---------------|-----------|
+<<<<<<< Updated upstream
 | opus | Claude Opus 4.6, e's machine | active | 2026-03-05 | 2026-03-09 |
 | kind-pasteur | Claude Code in worktree kind-pasteur; first agent on network | active | 2026-03-05 | 2026-03-09 |
 | oracle | Oracle Cloud always-on server (aarch64, 5.8 GB RAM, 1 CPU) — persistent hub, remote-controlled | active | 2026-04-30 | 2026-04-30 |
@@ -11,6 +12,9 @@ All machines participating in the research network. Add your machine by running 
 | windesk | Windows desktop (100.94.210.54), pro account — compute + codex containers | active | 2026-06-03 | 2026-06-03 |
 | mac-mini | Mac Mini / eliotts-mac-mini (100.113.252.45), pro account — formalization + compute | active | 2026-06-03 | 2026-06-03 |
 | monad-formalizer | Monad math cluster Codex formalization node bridging math-lean to research | active | 2026-06-04 | 2026-06-04 |
+=======
+| opus | Claude Opus 4.6 on e's MacBook | active | 2026-03-05 | 2026-03-05 |
+>>>>>>> Stashed changes
 
 ---
 

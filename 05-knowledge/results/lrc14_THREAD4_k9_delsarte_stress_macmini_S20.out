@@ -1,0 +1,23 @@
+####################################################################################
+# THREAD 4 -- k=9 DELSARTE STRESS (the razor-thin Delsarte-leg row, margin +0.00138)
+####################################################################################
+
+  cap_9 = 1979/4004 = 0.49425574
+
+  per-span max L_y over k=9 primitive shapes, span up to 20:
+   span= 8: max L_y at span = 0.492876  running max L_y = 0.492876
+   span= 9: max L_y at span = 0.487289  running max L_y = 0.492876
+   span=10: max L_y at span = 0.469350  running max L_y = 0.492876
+   span=11: max L_y at span = 0.434976  running max L_y = 0.492876
+   span=12: max L_y at span = 0.457011  running max L_y = 0.492876
+   span=13: max L_y at span = 0.444892  running max L_y = 0.492876
+   span=14: max L_y at span = 0.482464  running max L_y = 0.492876
+   span=15: max L_y at span = 0.451020  running max L_y = 0.492876
+   span=16: max L_y at span = 0.439021  running max L_y = 0.492876
+   span=17: max L_y at span = 0.446341  running max L_y = 0.492876
+   span=18: max L_y at span = 0.453036  running max L_y = 0.492876
+
+  RUNNING MAX L_y(k=9) = 26083/52920 = 0.49287604  (consec_9, robust to span 18+)
+  cap_9 - max L_y = 10441/7567560 = +0.00137970
+  Delsarte-leg cap clearance at k=9: HOLDS (>0), razor-thin
+  L_y > cap_9 violations found (span<=18): 0

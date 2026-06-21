@@ -11830,6 +11830,38 @@ We're between PNG and JPEG-LS in the codec hierarchy. Further gains require:
 **New scripts:** tournament_attention_analysis.py, cartan_attention_theorem.py, phase_transition_universality.py, tournament_probe_design.py
 **New analysis:** napolitano-gauge-theory-analysis-S12.md
 **New reflection:** tournament-gauge-bridge.md
+## opus-2026-03-05-S1 — 2026-03-05
+**Account:** Claude Opus 4.6 (e's MacBook)
+**Continuation of:** fresh start — first non-system agent
+**Files read:** MISTAKES.md, definitions.md, OPEN-QUESTIONS.md, SESSION-LOG.md, TANGENTS.md, CONJ-001, THM-002, THM-003, DISC-001, LaTeX paper (claim_strategies section)
+**Summary of work:** Registered as agent `opus`. Wrote clean mu verification script (DISC-001). Proved THM-008 (mu triviality bound), resolving OPEN-Q-001 (n=5 mystery). Verified Claim A at n=4 (256 pairs, 0 failures) and n=5 (5120 pairs, 0 failures) with correct mu implementation. Characterized mu distribution at n=6: mu(3-cycle) in {1,3}, determined by cyclic/transitive structure of available vertices.
+**New contributions:**
+- THM-008 in 01-canon/theorems/ (mu triviality bound — resolves OPEN-Q-001)
+- 04-computation/verify_claim_a.py (clean Claim A verification, addresses DISC-001)
+- 04-computation/n5_mu_analysis.py (n=5 mystery investigation)
+- 04-computation/n5_mystery_deep.py (exploratory analysis)
+- 04-computation/n6_mu_distribution.py (mu distribution at n=6)
+- OPEN-Q-001 resolved, OPEN-Q-009 opened and resolved
+- Agent opus registered
+**Unresolved threads:**
+- DISC-001 partially addressed (clean verification passes at n=4,5; n=6 full run not yet done due to time)
+- Claim A proof for n>=6 still open (OPEN-Q-002)
+- Need to investigate correlation between mu=3 and per-path failures at n=6
+- Proof strategies for Claim A not yet extracted to standalone document
+
+---
+
+## SYSTEM-2026-03-05-S1 — 2026-03-05
+**Account:** System (initial setup)
+**Continuation of:** fresh start — first Cowork session
+**Files read:** MASTER_FINDINGS.md (uploaded), parity_tournaments_fixed.tex (uploaded)
+**Summary of work:** Built the full research directory system. Processed two uploaded source files as the first contributions. Extracted theorems F1–F5 and Claim A to canon. Logged MISTAKE-001. Opened DISC-001 as a potential court case seed (μ computation bug vs. paper's 0-failure verification claim).
+**New contributions:**
+- THM-001 through THM-007, CONJ-001 in 01-canon/theorems/
+- MISTAKES.md: MISTAKE-001 (μ computation bug in scripts 6-9)
+- 00-navigation/TANGENTS.md, OPEN-QUESTIONS.md populated from source files
+- 03-artifacts/drafts/parity_tournaments_fixed.tex archived
+- 02-court/active/DISC-001-mu-bug-vs-verification.md opened
 **Unresolved threads:**
 - Run TournamentProbe on actual LLM to test if training shifts Cartan balance
 - Build soft OCF theory

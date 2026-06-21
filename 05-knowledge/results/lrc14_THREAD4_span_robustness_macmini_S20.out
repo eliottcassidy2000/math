@@ -1,0 +1,66 @@
+####################################################################################
+# THREAD 4 -- SPAN-ROBUSTNESS of max measS7 (does the worst shape escape the box?)
+####################################################################################
+
+=== k=8, cap=2243/5880=0.381463, span up to 18 ===
+   span= 7: best-at-this-span measS7=0.327211  running max=0.327211 (span 7)  <-- NEW GLOBAL MAX
+   span= 8: best-at-this-span measS7=0.273639  running max=0.327211 (span 7)
+   span= 9: best-at-this-span measS7=0.237075  running max=0.327211 (span 7)
+   span=10: best-at-this-span measS7=0.220068  running max=0.327211 (span 7)
+   span=11: best-at-this-span measS7=0.209153  running max=0.327211 (span 7)
+   span=12: best-at-this-span measS7=0.255782  running max=0.327211 (span 7)
+   span=13: best-at-this-span measS7=0.237956  running max=0.327211 (span 7)
+   span=14: best-at-this-span measS7=0.232313  running max=0.327211 (span 7)
+   span=15: best-at-this-span measS7=0.226697  running max=0.327211 (span 7)
+   span=16: best-at-this-span measS7=0.207226  running max=0.327211 (span 7)
+   span=17: best-at-this-span measS7=0.207703  running max=0.327211 (span 7)
+   span=18: best-at-this-span measS7=0.221655  running max=0.327211 (span 7)
+   --> running max measS7 = 481/1470 = 0.327211 at E=[0, 1, 2, 3, 4, 5, 6, 7] (span 7)
+       cap - max = +0.054252  OK
+       argmax span == consec span (k-1=7)? True
+
+=== k=9, cap=1979/4004=0.494256, span up to 18 ===
+   span= 8: best-at-this-span measS7=0.416156  running max=0.416156 (span 8)  <-- NEW GLOBAL MAX
+   span= 9: best-at-this-span measS7=0.401701  running max=0.416156 (span 8)
+   span=10: best-at-this-span measS7=0.380952  running max=0.416156 (span 8)
+   span=11: best-at-this-span measS7=0.335374  running max=0.416156 (span 8)
+   span=12: best-at-this-span measS7=0.371769  running max=0.416156 (span 8)
+   span=13: best-at-this-span measS7=0.357561  running max=0.416156 (span 8)
+   span=14: best-at-this-span measS7=0.404082  running max=0.416156 (span 8)
+   span=15: best-at-this-span measS7=0.371599  running max=0.416156 (span 8)
+   span=16: best-at-this-span measS7=0.363861  running max=0.416156 (span 8)
+   span=17: best-at-this-span measS7=0.369288  running max=0.416156 (span 8)
+   span=18: best-at-this-span measS7=0.369388  running max=0.416156 (span 8)
+   --> running max measS7 = 2447/5880 = 0.416156 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8] (span 8)
+       cap - max = +0.078099  OK
+       argmax span == consec span (k-1=8)? True
+
+=== k=10, cap=55/91=0.604396, span up to 16 ===
+   span= 9: best-at-this-span measS7=0.504478  running max=0.504478 (span 9)  <-- NEW GLOBAL MAX
+   span=10: best-at-this-span measS7=0.493878  running max=0.504478 (span 9)
+   span=11: best-at-this-span measS7=0.446506  running max=0.504478 (span 9)
+   span=12: best-at-this-span measS7=0.464626  running max=0.504478 (span 9)
+   span=13: best-at-this-span measS7=0.442002  running max=0.504478 (span 9)
+   span=14: best-at-this-span measS7=0.479762  running max=0.504478 (span 9)
+   span=15: best-at-this-span measS7=0.440986  running max=0.504478 (span 9)
+   span=16: best-at-this-span measS7=0.468027  running max=0.504478 (span 9)
+   --> running max measS7 = 8899/17640 = 0.504478 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9] (span 9)
+       cap - max = +0.099917  OK
+       argmax span == consec span (k-1=9)? True
+
+=== k=11, cap=66/91=0.725275, span up to 15 ===
+   span=10: best-at-this-span measS7=0.581463  running max=0.581463 (span 10)  <-- NEW GLOBAL MAX
+   span=11: best-at-this-span measS7=0.551964  running max=0.581463 (span 10)
+   span=12: best-at-this-span measS7=0.567517  running max=0.581463 (span 10)
+   span=13: best-at-this-span measS7=0.536115  running max=0.581463 (span 10)
+   span=14: best-at-this-span measS7=0.566327  running max=0.581463 (span 10)
+   span=15: best-at-this-span measS7=0.526190  running max=0.581463 (span 10)
+   --> running max measS7 = 3419/5880 = 0.581463 at E=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10] (span 10)
+       cap - max = +0.143812  OK
+       argmax span == consec span (k-1=10)? True
+
+####################################################################################
+# If running max plateaus at the consec span and never approaches cap as span grows,
+# the bounded-span exhaustion is empirically the global max. (Not a proof of the
+# unbounded sup -- that is THM-557 single-block decorrelated extremality territory.)
+####################################################################################
