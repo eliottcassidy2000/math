@@ -1,0 +1,48 @@
+========================================================================================
+AP stratum: forced-zero dilation equality and positive-offset tie-break
+========================================================================================
+k=8 forced-zero consecutive (0, 1, 2, 3, 4, 5, 6, 7): p0=481/1470 (0.327211), AE=344
+  dilation d=2  p0=481/1470 (0.327211) AE=344 equal_p0=True
+  dilation d=3  p0=481/1470 (0.327211) AE=344 equal_p0=True
+  dilation d=5  p0=481/1470 (0.327211) AE=344 equal_p0=True
+k=9 forced-zero consecutive (0, 1, 2, 3, 4, 5, 6, 7, 8): p0=2447/5880 (0.416156), AE=489
+  dilation d=2  p0=2447/5880 (0.416156) AE=489 equal_p0=True
+  dilation d=3  p0=2447/5880 (0.416156) AE=489 equal_p0=True
+  dilation d=5  p0=2447/5880 (0.416156) AE=489 equal_p0=True
+k=10 forced-zero consecutive (0, 1, 2, 3, 4, 5, 6, 7, 8, 9): p0=8899/17640 (0.504478), AE=670
+  dilation d=2  p0=8899/17640 (0.504478) AE=670 equal_p0=True
+  dilation d=3  p0=8899/17640 (0.504478) AE=670 equal_p0=True
+  dilation d=5  p0=8899/17640 (0.504478) AE=670 equal_p0=True
+
+Positive APs with k=8 and equal additive energy:
+  anchored [1..8]        p0=169/490 (0.344898) AE=344 same_AE_as_anchor=True
+  dilation [2,4,..,16]   p0=169/490 (0.344898) AE=344 same_AE_as_anchor=True
+  shifted odd [1,3,..,15] p0=97376/315315 (0.308821) AE=344 same_AE_as_anchor=True
+  shifted [3,5,..,17]    p0=1510358/5360355 (0.281765) AE=344 same_AE_as_anchor=True
+  conclusion: additive energy finds the AP stratum; offset/dilation data is still needed.
+
+Strict additive-energy inversion from the current HYP-2735 landscape:
+  higher AE / lower p0   row=(14, 15, 23, 27, 28, 32, 33, 34) p0=422815/15173928 (0.027865) AE=180
+  lower AE / higher p0   row=(12, 14, 15, 20, 24, 28, 30, 32) p0=407/5880 (0.069218) AE=176
+
+========================================================================================
+Curated exact row bank
+========================================================================================
+  positive C8        p0=0.344898 AE= 344 sumset= 15 span=  7 schur= 28 ap3= 12
+  positive AP d2     p0=0.344898 AE= 344 sumset= 15 span= 14 schur= 28 ap3= 12
+  forced C8          p0=0.327211 AE= 344 sumset= 15 span=  7 schur= 36 ap3= 12
+  shifted odd AP     p0=0.308821 AE= 344 sumset= 15 span= 14 schur=  0 ap3= 12
+  two-block          p0=0.115099 AE= 264 sumset= 21 span= 43 schur= 30 ap3=  4
+  HYP-2735 inv low   p0=0.069218 AE= 176 sumset= 28 span= 20 schur=  5 ap3=  4
+  dyadic             p0=0.069196 AE= 144 sumset= 30 span= 64 schur= 21 ap3=  6
+  HYP-2735 inv high  p0=0.027865 AE= 180 sumset= 27 span= 20 schur=  1 ap3=  3
+  Mian-Chowla        p0=0.012121 AE= 120 sumset= 36 span= 44 schur= 15 ap3=  0
+
+Tournament Analysis over scalar lenses:
+  energy     inversions= 2 tied_pairs= 6
+  neg_sumset inversions= 2 tied_pairs= 6
+  ap3        inversions= 2 tied_pairs= 7
+  neg_span   inversions= 6 tied_pairs= 3
+  schur      inversions=12 tied_pairs= 1
+  directed_3_cycles=0  hamiltonian_path_count=1
+  tie Hamiltonian path: energy > neg_sumset > ap3 > neg_span > schur

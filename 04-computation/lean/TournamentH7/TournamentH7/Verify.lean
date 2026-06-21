@@ -119,6 +119,90 @@ theorem lrc_factorial_cheapScaled_tailStripSide_audit :
   LonelyRunner.FactorialAtom.cheapScaled_tailStripSide
 #print axioms lrc_factorial_cheapScaled_tailStripSide_audit
 
+theorem lrc_factorial_gK8_values_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.gK8 t =
+        (if t.val = 0 then 10 else if t.val = 3 then 1
+          else if t.val = 6 then 10 else 0) :=
+  LonelyRunner.FactorialAtom.gK8_values
+#print axioms lrc_factorial_gK8_values_audit
+
+theorem lrc_factorial_gK8_dominates_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      (if t.val = 0 then (10 : Int) else 0) <= LonelyRunner.FactorialAtom.gK8 t :=
+  LonelyRunner.FactorialAtom.gK8_dominates
+#print axioms lrc_factorial_gK8_dominates_audit
+
+theorem lrc_factorial_LyK8_readout_audit (q : LonelyRunner.FactorialAtom.Atom) :
+    LonelyRunner.FactorialAtom.LyK8 q =
+      10 * q ⟨0, by decide⟩ + q ⟨3, by decide⟩ + 10 * q ⟨6, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK8_readout q
+#print axioms lrc_factorial_LyK8_readout_audit
+
+theorem lrc_factorial_delsarte_bound_k8_audit
+    (q : LonelyRunner.FactorialAtom.Atom)
+    (hq : ∀ t : Fin LonelyRunner.FactorialAtom.atomCount, 0 <= q t) :
+    10 * LonelyRunner.FactorialAtom.q0 q <= LonelyRunner.FactorialAtom.LyK8 q :=
+  LonelyRunner.FactorialAtom.delsarte_bound_k8 q hq
+#print axioms lrc_factorial_delsarte_bound_k8_audit
+
+theorem lrc_factorial_LyK9_readout_audit (q : LonelyRunner.FactorialAtom.Atom) :
+    LonelyRunner.FactorialAtom.LyK9 q =
+      18 * q ⟨0, by decide⟩ + 5 * q ⟨1, by decide⟩
+        + 2 * q ⟨4, by decide⟩ + 3 * q ⟨5, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK9_readout q
+#print axioms lrc_factorial_LyK9_readout_audit
+
+theorem lrc_factorial_gK9_values_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.gK9 t =
+        (if t.val = 0 then 18 else if t.val = 1 then 5
+          else if t.val = 4 then 2 else if t.val = 5 then 3 else 0) :=
+  LonelyRunner.FactorialAtom.gK9_values
+#print axioms lrc_factorial_gK9_values_audit
+
+theorem lrc_factorial_gK9_dominates_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      (if t.val = 0 then (18 : Int) else 0) <= LonelyRunner.FactorialAtom.gK9 t :=
+  LonelyRunner.FactorialAtom.gK9_dominates
+#print axioms lrc_factorial_gK9_dominates_audit
+
+theorem lrc_factorial_delsarte_bound_k9_audit
+    (q : LonelyRunner.FactorialAtom.Atom)
+    (hq : ∀ t : Fin LonelyRunner.FactorialAtom.atomCount, 0 <= q t) :
+    18 * LonelyRunner.FactorialAtom.q0 q <= LonelyRunner.FactorialAtom.LyK9 q :=
+  LonelyRunner.FactorialAtom.delsarte_bound_k9 q hq
+#print axioms lrc_factorial_delsarte_bound_k9_audit
+
+theorem lrc_factorial_LyK11_readout_audit (q : LonelyRunner.FactorialAtom.Atom) :
+    LonelyRunner.FactorialAtom.LyK11 q =
+      6 * q ⟨0, by decide⟩ + 3 * q ⟨1, by decide⟩
+        + q ⟨2, by decide⟩ + q ⟨5, by decide⟩ + 3 * q ⟨6, by decide⟩ :=
+  LonelyRunner.FactorialAtom.LyK11_readout q
+#print axioms lrc_factorial_LyK11_readout_audit
+
+theorem lrc_factorial_gK11_values_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      LonelyRunner.FactorialAtom.gK11 t =
+        (if t.val = 0 then 6 else if t.val = 1 then 3
+          else if t.val = 2 then 1 else if t.val = 5 then 1
+          else if t.val = 6 then 3 else 0) :=
+  LonelyRunner.FactorialAtom.gK11_values
+#print axioms lrc_factorial_gK11_values_audit
+
+theorem lrc_factorial_gK11_dominates_audit :
+    ∀ t : Fin LonelyRunner.FactorialAtom.atomCount,
+      (if t.val = 0 then (6 : Int) else 0) <= LonelyRunner.FactorialAtom.gK11 t :=
+  LonelyRunner.FactorialAtom.gK11_dominates
+#print axioms lrc_factorial_gK11_dominates_audit
+
+theorem lrc_factorial_delsarte_bound_k11_audit
+    (q : LonelyRunner.FactorialAtom.Atom)
+    (hq : ∀ t : Fin LonelyRunner.FactorialAtom.atomCount, 0 <= q t) :
+    6 * LonelyRunner.FactorialAtom.q0 q <= LonelyRunner.FactorialAtom.LyK11 q :=
+  LonelyRunner.FactorialAtom.delsarte_bound_k11 q hq
+#print axioms lrc_factorial_delsarte_bound_k11_audit
+
 /-! ### LRC14 death-chain/live-depth quotient -/
 
 theorem lrc_cover_oneFar_live_iff_audit (t : Nat) (ht : t <= 6) :

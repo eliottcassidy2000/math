@@ -351,6 +351,13 @@ def gK9 (t : Fin atomCount) : Int :=
     else 0
 
 /-- The `k=9,10` dual is `(18,5,0,0,2,3,0)` -- Krawtchouk-nonnegative, dominating `18*[t=0]`. -/
+theorem gK9_values :
+    ∀ t : Fin atomCount,
+      gK9 t =
+        (if t.val = 0 then 18 else if t.val = 1 then 5
+          else if t.val = 4 then 2 else if t.val = 5 then 3 else 0) := by
+  native_decide
+
 theorem gK9_dominates :
     ∀ t : Fin atomCount, (if t.val = 0 then (18 : Int) else 0) <= gK9 t := by
   native_decide
@@ -363,6 +370,14 @@ def gK11 (t : Fin atomCount) : Int :=
     else 0
 
 /-- The `k=11,12,13` dual is `(6,3,1,0,0,1,3)` -- Krawtchouk-nonnegative, dominating `6*[t=0]`. -/
+theorem gK11_values :
+    ∀ t : Fin atomCount,
+      gK11 t =
+        (if t.val = 0 then 6 else if t.val = 1 then 3
+          else if t.val = 2 then 1 else if t.val = 5 then 1
+          else if t.val = 6 then 3 else 0) := by
+  native_decide
+
 theorem gK11_dominates :
     ∀ t : Fin atomCount, (if t.val = 0 then (6 : Int) else 0) <= gK11 t := by
   native_decide
@@ -403,6 +418,14 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms gK8_dominates
 #print axioms LyK8_readout
 #print axioms delsarte_bound_k8
+#print axioms LyK9_readout
+#print axioms delsarte_bound_k9
+#print axioms gK9_values
+#print axioms gK9_dominates
+#print axioms LyK11_readout
+#print axioms delsarte_bound_k11
+#print axioms gK11_values
+#print axioms gK11_dominates
 #print axioms cheapScaled_outside_tailStrip_bool
 #print axioms tailStrip_constants_order
 #print axioms cheapScaled_tailStripSide

@@ -141,8 +141,8 @@ Lean source:
 `04-computation/lean/TournamentH7/TournamentH7/LRCFactorialAtom.lean`.
 
 The module is deliberately self-contained: it defines a local seven-coordinate
-binomial table and checks the finite packet identities by `native_decide`.
-Theorems currently audited:
+binomial table and checks the finite packet identities, cheap-side strip
+certificates, and binding-row Delsarte readouts.  Theorems currently audited:
 
 ```text
 basis_moment_delta
@@ -152,11 +152,21 @@ U4_basis
 low12_basis
 cheapScaled_q0
 cheapScaled_tail45
+gK8_values / gK8_dominates
+LyK8_readout / delsarte_bound_k8
+LyK9_readout / delsarte_bound_k9
+gK9_values / gK9_dominates
+LyK11_readout / delsarte_bound_k11
+gK11_values / gK11_dominates
+cheapScaled_outside_tailStrip_bool
+tailStrip_constants_order
+cheapScaled_tailStripSide
 ```
 
-Direct `lean` checking succeeds in this shell.  `lake build` is still blocked
-by an external mathlib clone failure, so the stored lake output is a
-source-handoff rather than a full project build.
+Direct `lean` checking succeeds in this shell, and the narrow package check
+`lake build TournamentH7.LRCFactorialAtom` succeeds.  The stored outputs are
+`05-knowledge/results/lrc_factorial_atom_lean_direct_codex_20260621.out` and
+`05-knowledge/results/lrc_factorial_atom_lake_codex_20260621.out`.
 
 ## Connection To Incoming HYP-2726/HYP-2727
 
