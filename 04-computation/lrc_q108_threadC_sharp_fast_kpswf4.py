@@ -30,7 +30,7 @@ def evec_fast(p, q):
 def main():
     print("THREAD C fast: sharp faces  sum|e| <= 12p  and  sum|e| <= 20q")
     print("=" * 72)
-    QMAX = 200
+    QMAX = 300  # saved .out is the q<=300 run (31506 ratios, 0 violations); ~80s
     viol_p = []
     viol_q = []
     achieve_p = []

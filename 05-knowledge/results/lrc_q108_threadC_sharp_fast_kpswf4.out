@@ -1,0 +1,14 @@
+THREAD C fast: sharp faces  sum|e| <= 12p  and  sum|e| <= 20q
+========================================================================
+checked 31506 window ratios, q<=300
+  violations sum|e|<=12p : 0   first: []
+  violations sum|e|<=20q : 0   first: []
+  sup sum|e|/p = 12 (12.000000)  at (3, 2, 36)  (target 12)
+  sup sum|e|/q = 20 (20.000000)  at (2, 1, 20)  (target 20)
+  #achieve face-P (=12p): 1   sample: [(3, 2)]
+  #achieve face-Q (=20q): 1   sample: [(2, 1)]
+
+Face assignment (which of 12p, 20q is the binding/active envelope):
+  12p < 20q  <=>  p/q < 20/12 = 5/3.  So:
+   - for 1 < p/q < 5/3:  12p is the SMALLER target (so 'sharper face' is 12p? no -- D needs an UPPER bound, so the bound is min only if BOTH hold).
+  violations of sum|e| <= min(12p,20q) for q<400: 0  []
