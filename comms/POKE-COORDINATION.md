@@ -1,3 +1,32 @@
+## mac-mini update: HYP-2719 Support-Size Lever & Multi-Block Reduction
+
+The latest push (SHA eaf1) by **Eliott Cassidy** (mac-mini-S9) introduces the **Support-Size Lever**, a major refinement to the multi-block proof strategy. It simplifies the analysis of gapped runner sets by reducing the "multi-block" risk to the already-localized "single-block" bounds.
+
+### **1. The Support-Size Lever (HYP-2719)**
+The **Support-Size Lever** is a structural re-classification of coverage error based on the number of runners involved in an integer relation (the "support size"). This mapping aligns the project's tournament cycle-space with the arithmetical relation lattice of runner speeds.
+
+*   **Mathematical Formulation:** The coverage error $\text{corr}(E) = \text{meas } S_7 - \text{iid}$ is expressed as a signed Fourier sum over the relation lattice $\Lambda(E)$. The lever splits this along a "support-size seam":
+    -   **Support-2 (2-body cut):** Corresponds to the tournament cut space ($c_3$ Ising model). These terms are typically non-negative, small, and classically tractable.
+    -   **Support-3 (3-body cycle):** Corresponds to the "many-body" cycle space. The leading cross-block error is identified as **support-3 additive triangles** (Schur triples $a+b=c$).
+*   **Correction to Symmetry Assumptions:** Importantly, it proves that the **odd-cycle reverse-cancellation** (THM-560) does *not* apply to the relation lattice. Because the relation kernel satisfies $K(-n) = \text{conj}(K(n))$, a relation and its reverse **reinforce** (2 Re K) rather than cancel. This forces a shift in the signed Erdős–Turán strategy: terms must be organized by **support size**, not parity or reverse-pairs.
+
+### **2. Multi-Block to Single-Block Reduction**
+The lever provides a "free" reduction that significantly simplifies the proof for separated multi-block configurations.
+
+*   **The Bound:** It demonstrates that separating blocks systematically kills cross-block Schur triples (requiring $M \le 2w-2$). By flooring the cross-block positive error contribution, it proves that the coverage of a separated multi-block row stays well below the consecutive block value.
+*   -   Touching consecutive (e.g., $k=8$) = 0.303
+    -   Any gap $\ge 1$ drops coverage to $\le 0.093$
+    -   Fully dissociated = 0.013
+*   **Result:** The multi-block "atom risk" (HYP-2718) is effectively **bounded by the single-block value** once the blocks are sufficiently separated. This localizes the remaining difficulty to the single-block bound already being targeted.
+
+### **3. Strategic Message to Codex**
+The push includes a strategic directive (**MSG-135**) to the **codex** agent (monad-explorer), refining the approach for the **Signed Erdős–Turán estimate** (HYP-2715d).
+-   **Implication:** It instructs the agent to abandon reverse-pair cancellation logic in favor of a support-size hierarchy, where the **support-3 Schur triples** are the leading-order terms.
+-   **Impact:** This ensures the analytic lemma stays grounded in the actual reinforcement/cancellation physics of the relation lattice, preventing the proof from chasing a false symmetry.
+
+### **Impact on Coordination**
+This update closes a major conceptual loop by proving that the "multi-block" case is not a new source of danger, but a dissipated version of the single-block case once arithmetical resonance is broken by distance. The coordination ledger now reflects that the **LRC(14) Sector Route** is unified under the single-block analytic lemma, with the multi-block regime handled by the support-size lever.
+
 ## codex update: HYP-2718 Analogy Atlas for the Factorial-Origin Atom
 
 Searched broadly across the repo for analogies to the current proof obligation
@@ -85,7 +114,7 @@ The filter provides the missing mechanism to handle the "moderate-span balanced"
 *   **Convergence:** By proving that the sum of the exact-relation tail and the nonresonant oscillation stays below the available 0.18 budget, the project can close the multi-block gap without needing an impossibly sharp bound.
 
 ### **Impact on Coordination**
-This update shifts the "Multi-Block Carrier Margin" from an opaque assumption to a **filtered Fourier problem**. It identifies that the difficulty of the lonely runner problem at $n=14$ is not in the aggregate cover itself, but in the specific **low-height integer relations** between the block speeds. The coordination ledger now reflects that the final proof step is a **signed tail estimate** on the carrier relation lattice.
+This update shifts the "Multi-Block Carrier Margin" from an opaque assumption to a **filtered Fourier problem**. It identifies that the difficulty of the lonely runner problem at $n=14$ is not in the aggregate cover itself, but in the specific **low-height integer relations** between the block speeds. The coordination ledger now reflects that the final proof step is a **signed tail estimate on the carrier relation lattice**.
 
 ## Eliott Cassidy update: LRC(14) Sector Route Assembled
 
