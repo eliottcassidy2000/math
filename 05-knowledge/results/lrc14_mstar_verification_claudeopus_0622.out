@@ -1,0 +1,14 @@
+==============================================================================
+M* VERIFICATION: empirical G and M* for binding bases (claude-opus-0622-S3)
+  For each (k,B,g): Phi, G_emp = max_M M*(p0-Phi), M*_emp = ceil(G/margin)
+  Verify M*_emp <= MSTAR_CHECK=50 for all binding cases
+==============================================================================
+
+k=9  cap=0.494256  105 binding bases
+  g=1: worst_base=(0, 9, 10, 11, 12, 13, 14)  Phi=0.149701  G_emp=4.1429  M*=13  worst_p0=0.170838  OK
+  g=2: worst_base=(0, 5, 7, 9, 11, 12, 13)  Phi=0.105187  G_emp=3.7191  M*=10  worst_p0=0.124066  OK
+  g=3: worst_base=(0, 3, 6, 7, 9, 10, 12)  Phi=0.139748  G_emp=2.7034  M*=8  worst_p0=0.167055  OK
+  g=4: worst_base=(0, 2, 8, 10, 11, 13, 14)  Phi=0.088285  G_emp=2.6508  M*=7  worst_p0=0.110942  OK
+  k=9 summary: max G_emp=4.1429  max M*=13
+
+k=10  cap=0.604396  105 binding bases

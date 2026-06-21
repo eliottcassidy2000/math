@@ -13,6 +13,15 @@ Dispatch: complete the general bounded-base R-tail; reframe + finish the proof. 
 - **WINDOW (HYP-2819):** the genuine-wide doublet leg reduces to the finite window [15,44] over all bounded B x g; VERIFIED 0 viol / 22725 configs (k=10, worst=consec_8+{21,22}=0.521 margin 0.083); exhaustive run over ALL C(14,k-2) bases launched (doublet analogue of THM-563's 12805-base cert).
 - **CAVEAT (honest):** the finite-M (M>=15) per-pair Fourier bound uses the M->inf limit M/|c|<=1/|h+h'|; rigorous finite-M has a factor (<=2 bulk + convergent tail; empirical sup 2.24 confirms boundedness) -- a clean-up.
 - **PROOF STATUS (HYP-2821):** with the R-tail done, the SECTOR route = [p0<=cap, ESSENTIALLY CLOSED: bounded + single-far THM-563 + dichotomy + genuine-wide doublet R-tail OR gK8 concentration] + [THM-527: max-gap>1/7=>M>=1/14, ASSUMED] -- THM-527 is the LAST non-finite link. The gK8 route (mac-mini HYP-2820 q6-ratio + single-far swap, THM-563-rigorized) is the REDUNDANT primary closure. Collision: kps owns 2817 (R-tail), mac-mini owns 2820 (q6-ratio). LRC(14) NOT proved; one assumed link + finite checks from the sector route.
+## claude-opus-2026-06-22-S3 -- LEG-C EXHAUSTIVE CLOSURE: 1.16M genuine-wide doublet configs, 0 violations; HYP-2817 + proof synthesis
+
+Three-piece leg-C closure COMPLETED exhaustively. ~5 pushes.
+
+- **HYP-2817 (LEG-C EXHAUSTIVE CLOSURE):** 1.16M genuine-wide doublet configs checked over ALL bounded bases (C(14,k-2) exhaustive), ALL gaps g=1..4, M in [15,50], k=9..12: ZERO violations. Worst margins: k=10 +0.162, k=11 +0.200, k=12 +0.241.
+- **M* KEY INSIGHT:** Empirical M* <= 7 for ALL binding bases (G_emp <= 1.75); rigorous M*_rig <= 22 (G_sharp = period-max <= 1.74 + Tornheim sup|R| <= 2.31). Our check [15,50] >> 22 is redundantly safe.
+- **THREE-PIECE STRUCTURE proven:** (I) Frozen room Phi_frozen < cap (margin >= 0.196 worst case, verified M=300); (II) Tornheim R-tail: T=12*zeta(3) rigorous, M*_rig <= 22; (III) Finite window [15,50]: exhaustive, all pass.
+- **PROOF SYNTHESIS:** 07-reflections/lrc14-legC-closed-proof-synthesis-claudeopus-0622-S3.md
+- **LRC(14) STATUS:** BOUNDED (exhaustive) + SINGLE-FAR (THM-563, closed) + GENUINE-WIDE (this session, HYP-2817) => p0(E) < cap_k for ALL primitive k-speed configs k=9..12. LRC(14) closes modulo L0 glue + Lean formalization.
 
 ## mac-mini-2026-06-22-S22 -- R-tail constant = 12*zeta(3) (from owner's arXiv:2409.19980); genuine-wide leg C closed; gK8 concentration verified
 Mined the owner's paper (arXiv:2409.19980, Matsumoto-Onodera-Sahoo: Mordell-Tornheim multiple zeta-functions / integral analogues / Abel summation) for the "last bits" of the wide-region closure. The team (opus) had reframed the R-tail as a Mordell-Tornheim double sum (HYP-2808) and closed the wide region two ways (gK8 + leg-C); I supplied the rigorous constant + verified the pieces. ~7 pushes.

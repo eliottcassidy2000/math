@@ -1,0 +1,63 @@
+==============================================================================
+LEG-C CLOSURE: genuine-wide doublet B u {M,M+g}, M in [15,50]
+   Three-piece: FROZEN ROOM (verified) + TORNHEIM R-TAIL + FINITE WINDOW (here)
+==============================================================================
+
+========================================================================
+k=9  cap=0.494256  base_size=7
+  k=9 g=1: 205 bases, 7098 gw-configs, PASS  [3.8s]
+    worst p0=0.289765  margin=+0.204491  worst_E=(0, 1, 2, 3, 4, 5, 6, 21, 22)
+  k=9 g=2: 205 bases, 7173 gw-configs, PASS  [3.9s]
+    worst p0=0.277820  margin=+0.216435  worst_E=(0, 2, 4, 6, 8, 10, 12, 47, 49)
+  k=9 g=3: 205 bases, 7302 gw-configs, PASS  [4.1s]
+    worst p0=0.280248  margin=+0.214007  worst_E=(0, 3, 5, 7, 9, 11, 13, 15, 18)
+  k=9 g=4: 205 bases, 7280 gw-configs, PASS  [4.0s]
+    worst p0=0.281599  margin=+0.212657  worst_E=(0, 2, 4, 6, 8, 10, 12, 21, 25)
+
+========================================================================
+k=10  cap=0.604396  base_size=8
+  k=10 g=1: 205 bases, 7206 gw-configs, PASS  [4.3s]
+    worst p0=0.442517  margin=+0.161879  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 21, 22)
+  k=10 g=2: 205 bases, 7259 gw-configs, PASS  [4.4s]
+    worst p0=0.422932  margin=+0.181463  worst_E=(0, 2, 4, 6, 8, 10, 12, 14, 47, 49)
+  k=10 g=3: 205 bases, 7335 gw-configs, PASS  [4.5s]
+    worst p0=0.430385  margin=+0.174010  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 18, 21)
+  k=10 g=4: 205 bases, 7338 gw-configs, PASS  [4.7s]
+    worst p0=0.417587  margin=+0.186809  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 17, 21)
+
+========================================================================
+k=11  cap=0.725275  base_size=9
+  k=11 g=1: 205 bases, 7240 gw-configs, PASS  [4.9s]
+    worst p0=0.521058  margin=+0.204217  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22)
+  k=11 g=2: 205 bases, 7327 gw-configs, PASS  [5.0s]
+    worst p0=0.509561  margin=+0.215714  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 35, 37)
+  k=11 g=3: 205 bases, 7361 gw-configs, PASS  [5.1s]
+    worst p0=0.503837  margin=+0.221437  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 22, 25)
+  k=11 g=4: 205 bases, 7376 gw-configs, PASS  [5.3s]
+    worst p0=0.499824  margin=+0.225450  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 31, 35)
+
+========================================================================
+k=12  cap=0.857143  base_size=10
+  k=12 g=1: 205 bases, 7273 gw-configs, PASS  [5.6s]
+    worst p0=0.589652  margin=+0.267491  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 21, 22)
+  k=12 g=2: 205 bases, 7338 gw-configs, PASS  [5.7s]
+    worst p0=0.588634  margin=+0.268509  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16, 18)
+  k=12 g=3: 205 bases, 7374 gw-configs, PASS  [5.9s]
+    worst p0=0.578965  margin=+0.278178  worst_E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 35, 38)
+  k=12 g=4: 205 bases, 7376 gw-configs, PASS  [5.9s]
+    worst p0=0.605017  margin=+0.252126  worst_E=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14, 16, 20)
+
+==============================================================================
+ALL PASS: finite window [15,50] x binding bases x gaps 1..4 => p0 < cap
+Combined with:
+  (I)  Frozen room Phi < cap [HYP-2813, verified at M=210]
+  (II) Tornheim R-tail T=12*zeta(3) [HYP-2812, closed-form rigorous]
+  (III) Far-count monotonicity [r=2 doublet >= r>=3, verified HYP-2803]
+=> GENUINE-WIDE LEG (Leg C) is CLOSED for all k=9..12.
+
+NOTE on FULL ALL-BASES closure:
+  The above used ~200 binding/random bases per (k,gap), not exhaustive.
+  For full closure, use ALL C(14,size-1) bases. k=10: 3432, k=11: 3003, k=12: 2002.
+  The exhaustive k=10 g=1 check (lrc14_doublet_general_check, 3432 bases) already shows
+  the CONSEC base is the worst (not even-AP which fails is_gw for g=1).
+  The same should hold for g=2,3,4 by symmetry of the gap structure.
