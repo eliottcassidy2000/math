@@ -1,0 +1,25 @@
+==============================================================================
+THM-527 Thread A: THE COMPACT MINIMUM of rho*(P,E)  [optimized]
+==============================================================================
+
+--- (3a) spread monotonicity: pushing an outlier RAISES mu ---
+    M=    9: mu = 0.28730
+    M=   10: mu = 0.26054
+    M=   12: mu = 0.30816
+    M=   16: mu = 0.33265
+    M=   24: mu = 0.32425
+    M=   40: mu = 0.30306
+    M=   80: mu = 0.31470
+    M=  200: mu = 0.31332
+    M= 1000: mu = 0.31465
+    => far outliers RAISE mu; minimizer has BOUNDED spread.
+
+--- precomputing G_P arcs per |P| (keep smallest-measure shortlist) ---
+    |P|=0: 1 sets; min meas(G_P)=1.00000 at P=(); max meas=1.00000
+    |P|=1: 13 sets; min meas(G_P)=0.85714 at P=(1,); max meas=0.85714
+    |P|=2: 78 sets; min meas(G_P)=0.72527 at P=(1, 13); max meas=0.78571
+    |P|=3: 286 sets; min meas(G_P)=0.60440 at P=(1, 12, 13); max meas=0.71429
+    |P|=4: 715 sets; min meas(G_P)=0.49426 at P=(1, 11, 12, 13); max meas=0.65476
+    |P|=5: 1287 sets; min meas(G_P)=0.38146 at P=(1, 5, 7, 8, 9); max meas=0.59524
+    |P|=6: 1716 sets; min meas(G_P)=0.28098 at P=(1, 5, 7, 8, 9, 11); max meas=0.52381
+    |P|=7: 1716 sets; min meas(G_P)=0.19670 at P=(1, 5, 7, 8, 9, 11, 13); max meas=0.45238
