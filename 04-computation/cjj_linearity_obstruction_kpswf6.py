@@ -263,8 +263,10 @@ def main():
     print("lift vacuous AROUND a subspace). Paley/QR = the QR cyclic code HAS it (an ideal,")
     print("an F_p-subspace). Consec/AP LACKS it: Freiman dim 1, a coset/translate, an")
     print("AFFINE-linear object, not an additive subgroup; its higher LRC moments are FREE")
-    print("and AP is INTERIOR to the free SoS direction. THIS is why the lift certifies the")
-    print("tournament Paley extremality (in principle) but COLLAPSES for the LRC AP one.")
+    print("and the free SoS direction SPLITS across many linear (difference-mod-14) atoms on")
+    print("none of which AP is a single-sign per-atom extremizer (HYP-2738). THIS is why the")
+    print("lift certifies the tournament Paley extremality (in principle, QR=subspace) but")
+    print("COLLAPSES for the LRC AP one. The AFFINE basis (part 2) re-fuses the split atoms.")
     print("="*78)
 
 if __name__ == "__main__":

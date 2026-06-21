@@ -40,8 +40,12 @@ NOT select AP as the linear extreme point.
     -> NONZERO residual => S2 is NOT determined by S1 over arbitrary sets.
        The SoS/Mobius lift HAS a free direction here (it genuinely cuts).
     AP residual (S2 - fit) = +0.25062  (rank in residual: 1 of 25)
-    => AP is NOT the extreme point of the free SoS direction (it's interior),
-       so the linear/subspace lift does not single AP out. COLLAPSE (matches HYP-2744).
+    => AP is EXTREMAL in S2 (top residual), NOT determined by S1: a free SoS
+       direction exists, and AP sits at its boundary. The collapse (HYP-2744)
+       is NOT that AP is interior -- it is that in the LINEAR (per-difference-class
+       mod 14) basis this free direction SPLITS into many free atoms, on NONE of
+       which AP is a clean per-atom extremizer with one sign (HYP-2738 mixed-sign).
+       The AFFINE basis (part 2) re-fuses them into ONE atom AP maximizes.
 
   AFFINE-ORBIT determinacy preview (the THREAD C fix):
   Take the dilation orbit {a*AP mod ...} -- by THM-531 these all share mu_theta.
@@ -54,6 +58,8 @@ closed under linear combination; views a,d: higher moments determined => SoS
 lift vacuous AROUND a subspace). Paley/QR = the QR cyclic code HAS it (an ideal,
 an F_p-subspace). Consec/AP LACKS it: Freiman dim 1, a coset/translate, an
 AFFINE-linear object, not an additive subgroup; its higher LRC moments are FREE
-and AP is INTERIOR to the free SoS direction. THIS is why the lift certifies the
-tournament Paley extremality (in principle) but COLLAPSES for the LRC AP one.
+and the free SoS direction SPLITS across many linear (difference-mod-14) atoms on
+none of which AP is a single-sign per-atom extremizer (HYP-2738). THIS is why the
+lift certifies the tournament Paley extremality (in principle, QR=subspace) but
+COLLAPSES for the LRC AP one. The AFFINE basis (part 2) re-fuses the split atoms.
 ==============================================================================
