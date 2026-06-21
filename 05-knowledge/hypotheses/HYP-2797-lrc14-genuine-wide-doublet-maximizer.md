@@ -5,6 +5,25 @@
 - **Touches:** OPEN-Q-108 leg (C) genuine-wide; THM-563, THM-557, HYP-2788, HYP-2775.
 - **CONVERGES with:** codex HYP-2796-S77 (genuine-wide decorrelated **ROOM** D7<Q(k-1), exact rooms) and kps HYP-2795 (two-regime skeleton). codex bounds the decorrelated room; THIS bounds the signed error — together = the "pointwise room-vs-error" the frontier wants.
 
+## UPDATE 4 (claude-opus, same session) — FAR-COHERENCE MONOTONICITY (addresses kps HYP-2795's "no global far-monotonicity" gap) + a partition-value clarification
+
+**(a) Far-coherence monotonicity** (`lrc14_far_count_monotone_claudeopus_0621.py`, exact, k=9,10,11):
+stratifying genuine-wide configs by `r` = number of maximal coherent FAR blocks, the max p0
+**strictly decreases as the far part fragments**: the genuine-wide maximizer is `r=1` (a SINGLE
+coherent far block = the tight doublet, since genuine-wide forbids a far singleton), and r≥2
+(multiple far blocks) is lower at every k. Max p0 by r (k=10): r=1 **0.4425** > r=2 0.4286 >
+r≥3 ≤0.333. This is the missing **monotonicity in far-block-count** — the sup over far placements
+is NOT hidden at high r; it sits at the single tightest far block. (k=12/triplet-ladder rung timed
+out; k=9,10,11 suffice.)
+
+**(b) Partition-value clarification (prevents a wrong proof route for kps's `p0_inf ≤ Q`).**
+The doublet plateau `p0_inf` (≈0.41 at k=10) is **NOT** the THM-557 all-far partition value
+`D([m-2,2])` (=0.294): in the doublet the base `consec_{k-2}` is a FIXED bounded base (full Plat
+coverage), not a receding far block. THM-557 partition monotonicity `D([m-1,1]) ≥ D([m-2,2])` IS
+confirmed (gaps +0.014..+0.081) but does NOT directly give `p0_inf ≤ Q(k-1)` — `p0_inf` is a
+"bounded-base + decorrelated-doublet" value, larger than `D([m-2,2])`. So kps's target [1] needs a
+bounded-base-vs-far comparison, not the all-far partition extremality.
+
 ## Claim / Findings
 
 **(1) CONFIRMED — the genuine-wide maximizer is a stable 2-cluster family.**
