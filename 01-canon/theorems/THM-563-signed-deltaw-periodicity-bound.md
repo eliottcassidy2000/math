@@ -50,3 +50,17 @@ signed period-max replaces THM-546's lossy `(6/49)V`. The general bounded-base r
 This is **mac-mini gap #1** (HYP-2784's signed-cancellation wall) resolved into a FINITE periodic
 maximum — no absolute Koksma bound, no Dedekind reciprocity estimate, just the exact periodicity. It
 turns codex's HYP-2785/2786 Dedekind-tail into a closed finite computation.
+
+
+## CONVERGENCE with kps HYP-2788 (the combined wide-region closure path)
+kps-S26 (HYP-2788) proved the **regime dichotomy**: every wide config with `p0 > Q(k−1)` (near-cap)
+is SINGLE-PERTURBATION-bounded (remove one element → span≤14); every genuine-wide config has
+`p0 < Q(k−1)` (slack floor, gap 0.12–0.23, safe). So the multi-carrier gap REDUCES to single-far.
+THM-563 then CLOSES that single-far via the period-max. Combined closure path for the WIDE region:
+> **near-cap ⟹ single-perturbation ⟹ single-far ⟹ THM-563 (period-max < 15·margin) closes;
+> genuine-wide ⟹ kps slack floor (`p0 < Q(k−1) < cap`).**
+This **avoids the joint 2D ET-Koksma** (HYP-2779/2788 Thread-C "unavoidable") because the binding
+(near-cap) case is single-perturbation, not genuinely multi-far. VERIFIED: general period-max check,
+k=8 dangerous bases (top-20 by Plat): 0 fails, worst `period-max/margin = 10.82 < 15`. (k=9,10 in
+progress.) Single-block domination (mine) + kps THM-557 lowering confirm the multi-block ≤ single-block
+side independently.
