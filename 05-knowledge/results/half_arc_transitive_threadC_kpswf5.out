@@ -1,0 +1,42 @@
+
+========================================================================
+  (A) BASELINE: Doyle-Holt graph (must be HALF-ARC-TRANSITIVE)
+========================================================================
+  networkx has no built-in Holt graph; building from metacirculant spec.
+  (Will rebuild Doyle-Holt explicitly in part A2 below.)
+
+========================================================================
+  (A2) Doyle-Holt via House-of-Graphs edge list
+========================================================================
+  Holt (HoG-1310)              |V|=27   |E|=54    deg=irreg    |Aut|=1       VT=n ET=n AT=n edge-orb=54 arc-orb=108
+  WARNING: hardcoded edge list did not yield 27-vertex 4-regular graph;
+           degrees: [3, 4, 5]
+
+========================================================================
+  (B) Wiggly metagraph (single-tile flip) = hypercube Q_m
+========================================================================
+  Q_3 (n=4 wiggly)             |V|=8    |E|=12    deg=reg=3    |Aut|=48      VT=Y ET=Y AT=Y edge-orb=1 arc-orb=1  (arc-transitive / symmetric)
+  Q_6 (n=5 wiggly)             |V|=64   |E|=192   deg=reg=6    |Aut|=46080   VT=Y ET=Y AT=Y edge-orb=1 arc-orb=1  (arc-transitive / symmetric)
+  NOTE: the hypercube is ARC-transitive (distance-transitive); too symmetric.
+
+========================================================================
+  (C) Paley structures on Z_p
+========================================================================
+  p=5: QR=[1, 4]  symmetric(=> Paley GRAPH)=True
+  Paley graph P_5              |V|=5    |E|=5     deg=reg=2    |Aut|=10      VT=Y ET=Y AT=Y edge-orb=1 arc-orb=1  (arc-transitive / symmetric)
+  p=7: QR=[1, 2, 4]  symmetric(=> Paley GRAPH)=False
+  Paley tournament T_7: out-deg=3 (a DIGRAPH/orientation).
+  p=11: QR=[1, 3, 4, 5, 9]  symmetric(=> Paley GRAPH)=False
+  Paley tournament T_11: out-deg=5 (a DIGRAPH/orientation).
+  p=13: QR=[1, 3, 4, 9, 10, 12]  symmetric(=> Paley GRAPH)=True
+  Paley graph P_13             |V|=13   |E|=39    deg=reg=6    |Aut|=78      VT=Y ET=Y AT=Y edge-orb=1 arc-orb=1  (arc-transitive / symmetric)
+
+  KEY POINT (C): a Paley TOURNAMENT is itself an ARC-TRANSITIVE digraph
+  (vertex- and arc-transitive as a digraph: Z_p translations + QR-multiplication
+  act transitively on its arcs). Its UNDERLYING undirected graph is K_p, also
+  arc-transitive. So Paley is *too* symmetric -- the opposite of half-arc.
+  Doyle-Holt's defining feature is the FAILURE of full arc-transitivity, which
+  is exactly what a vertex-transitive tournament (like Paley) does NOT exhibit
+  at the underlying-graph level.
+
+Done part 1. kind-pasteur-2026-06-21-kpswf5

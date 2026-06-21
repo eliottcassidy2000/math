@@ -16,6 +16,46 @@ User: keep pushing the LRC proof via the CJJ complete LP hierarchy (arXiv:2211.0
 **SMALLER GAIN (moment-matching, not SoS):** the per-E moment/marginal-MATCHING LP tightens; at level 3 consec is the (finite-verified) bound-argmax with uniform bound just under cap (k=9: 0.4929<0.4943 razor-thin; k=8: 0.348<0.381). Reframes gap #4 as a lower-dim moment-only extremality -- cleaner but finite-verified, NOT proved.
 **FORMALIZATION:** kept the Lean Delsarte instances clean (all binding rows, sorry-free); attempted a general abstract Delsarte lemma but deferred it (core-Lean Fin-proof matching too finicky for omega) -- honest, removed it rather than leave it broken.
 HONEST STATUS: gap #4 (consec-max = Delsarte saturation) remains open and genuinely aggregate; the LP hierarchy does not close it. NEW: HYP-2747; reflection two-extremalities-one-theta-ceiling; threads' scripts (sos_lasserre_lift, hierarchy_argmax, tournament_code_bridge). @kps: theta'(H_E)=L_y exactly; the relation-code/Tanner angle (your HYP-2746) is the same theta' object; the hierarchy collapses (Prop 1.2) -- the extremality won't come from the relaxation.
+## kind-pasteur-2026-06-21 -- THREAD C (Doyle-Holt): HYP-2748, half-arc-transitivity = the converse Z_2 made rigid; tournament-side incarnation = vertex-transitive NON-self-converse tournament (smallest at n=21, F_21)
+
+Worked the owner's explicit Doyle-Holt arc-flip lead, LITERALLY (graph-theoretic, the
+tournament side -- distinct from codex HYP-2740's sign-rigidity METAPHOR on the LRC
+Delsarte Tanner graph, and from mac-mini's "Thread C" LRC-conflict-graph/theta work).
+
+CORE FINDING: half-arc-transitivity IS "the converse Z_2 is not realized by Aut."
+By Tutte, a half-arc graph carries an Aut-invariant ORIENTATION D (a partial tournament);
+the two arc-orbits are {D},{D^op}; no automorphism reverses D. That D<->D^op is the
+tournament converse T<->T^op (THM-549/550), one categorical level up.
+
+(I) Inversion i->-i ALWAYS realizes the converse on a circulant tournament => every
+    circulant/Paley tournament is SELF-CONVERSE (verified p=7,11,19,23). So circulants
+    are NEVER half-arc carriers = the classical theorem "no half-arc Cayley graph on an
+    abelian group" (Chen-Quimpo). Confirmed: wiggly metagraph = hypercube Q_m and Paley
+    graphs are ARC-transitive (arc-orbits=1, too symmetric).
+(II) Built the Holt graph EXACTLY (metacirculant M(3,9)): 27v, 54e, 4-reg, girth 5,
+     |Aut|=54, VT, ET, arc-orbits=2. Its invariant orientation D = a 2-in/2-out Eulerian
+     oriented graph; exact orbit count: 54 autos PRESERVE D, 0 REVERSE it => converse Z_2
+     provably unrealizable. Exact dictionary D<->T, D^op<->T^op, "can't reverse"<->NS,
+     two arc-orbits<->the HALF (THM-549).
+(III) Genuine tournament analog = vertex-transitive NS tournament; needs a NON-ABELIAN
+      carrier (as Holt needs metacyclic 27, not cyclic). Built explicit F_21=Z_7 rtimes Z_3
+      Cayley tournament: VT, is_isomorphic(T,T^op)=False => NON-self-converse, verified.
+      Matches canon (THM-052, MISTAKE-013: n=21 has 88 circulant VT=SC + 22 F_21 VT=NS).
+      n=21 = smallest VT NS tournament = digraph cousin of "Holt at 27."
+
+TIGHT: half-arc = NS = SEA of G_n/Z_2; both need non-abelian carrier; both split into the
+half. LOOSE: the metagraphs G_n/E_n/G_n/Z_2 are NOT vertex-transitive, so they are not
+half-arc; the structure lives on the CARRIER, not the quotient.
+
+Files: 04-computation/{holt_metacirculant,holt_builder,half_arc_transitive_threadC,
+half_arc_converse_z2,f21_ns_tournament}_kpswf5.py; outputs + holt edge list in
+05-knowledge/results/. HYP-2748 (renumbered from 2747 after mac-mini-S14 collision) + detail
+file. Topic-distinct from codex/mac-mini "Thread C" (the LRC coding side). NEXT: is the Holt
+invariant orientation D a known "regular partial
+tournament" whose OCF/H is computable, and does the n=21 F_21 NS pair have a half-tiling-
+style fundamental domain for its (unrealized) converse?
+
+---
 
 ## kind-pasteur-2026-06-21 -- THREAD B-Tanner: HYP-2746, the Tanner graph of the relation code Λ(E) gives NO expansion bound on corr (girth degenerate, spectral gap inverted, absolute enumerator vacuous)
 

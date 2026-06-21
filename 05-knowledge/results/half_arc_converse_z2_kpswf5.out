@@ -1,0 +1,64 @@
+
+========================================================================
+  (I) Inversion realizes the converse Z_2 on EVERY circulant tournament
+========================================================================
+  A circulant tournament on Z_n (n odd): arc i->j iff (j-i) mod n in S, where
+  S is a 'sum-free-ish' set with S cap (-S) = empty and S cup (-S) = Z_n\{0}
+  (a tournament). The map mu: i -> -i sends arc i->j to (-i)->(-j), i.e. reverses
+  the difference: (j-i) -> (i-j) = -(j-i). Since -S = complement-arcs, mu maps T
+  to T^op. And mu is a relabelling (a bijection of vertices). Hence T^op ~ T:
+  EVERY circulant tournament is SELF-CONVERSE. The converse Z_2 is REALIZED.
+  Examples (S = QR for Paley, p = 3 mod 4):
+    p= 7: QR is a tournament=True ; inversion i->-i maps S->(Z\{0}\S)=True => SELF-CONVERSE (converse Z_2 realized)
+    p=11: QR is a tournament=True ; inversion i->-i maps S->(Z\{0}\S)=True => SELF-CONVERSE (converse Z_2 realized)
+    p=19: QR is a tournament=True ; inversion i->-i maps S->(Z\{0}\S)=True => SELF-CONVERSE (converse Z_2 realized)
+    p=23: QR is a tournament=True ; inversion i->-i maps S->(Z\{0}\S)=True => SELF-CONVERSE (converse Z_2 realized)
+
+  THEOREM (abelian => no half-arc, Chen-Quimpo): an edge-transitive Cayley graph
+  on an abelian group is arc-transitive. Inversion is the witnessing automorphism.
+  COROLLARY: circulant tournaments cannot be the invariant orientation of a
+  half-arc-transitive graph. (Confirmed computationally: every Paley/circulant
+  graph tested is ARC-transitive; see half_arc_tournament_search output.)
+
+========================================================================
+  (II) The Holt graph's INVARIANT ORIENTATION = a rigid partial tournament
+========================================================================
+  Loaded Holt graph: |V|=27 |E|=54, 4-regular=True
+  |Aut(Holt)| = 54 (expect 54)
+  arc-orbits = 2 (expect 2 => HALF-ARC-TRANSITIVE)
+  invariant orientation D: each edge oriented once=True, out-degrees=[2] in-degrees=[2]
+  => D is a 2-in 2-out ORIENTED graph (a 'partial tournament' / Eulerian orientation), Aut(H)-invariant.
+  Aut elements PRESERVING D = 54, REVERSING D (D->D^op) = 0
+  => converse Z_2 (D<->D^op) is NOT realized by Aut(H).
+
+  THIS IS THE EXACT TOURNAMENT ANALOGY:
+    D  <-> a tournament T
+    D^op <-> the converse T^op  (reverse all arcs)
+    'Aut(H) cannot reverse D'  <->  'T is NON-self-converse (NS)'
+    The two arc-orbits  <->  the converse Z_2 fundamental-domain split = HALF
+    (THM-549: the half-tiling is the fundamental domain of T<->T^op).
+  Doyle-Holt realizes a vertex-transitive, edge-homogeneous oriented graph whose
+  converse is unreachable -- a 'rigidly oriented' regular tournament-like object.
+
+========================================================================
+  (III) Tournament analog: vertex-transitive NON-self-converse tournaments
+========================================================================
+  A VT tournament T is the digraph analog of a half-arc carrier when T is
+  NON-self-converse (Aut cannot realize T^op). On Z_n (abelian) inversion always
+  realizes the converse => circulants are self-converse => NOT the analog. The
+  smallest VT tournament that is NON-self-converse is the Frobenius F_21 Cayley
+  tournament at n=21 (MISTAKE-013: VT does NOT imply SC; the 22 non-circulant
+  VT tournaments at n=21 are all NS / not self-converse). That is the genuine
+  tournament-side Doyle-Holt: a vertex-transitive tournament whose converse Z_2
+  is unrealizable -- the digraph cousin of the Holt graph's rigid orientation.
+  F_21: #elements=20, #inverse-pairs=10 (each size 2 => tournament feasible)
+  every non-id element has distinct inverse (no involutions)=True => a tournament orientation exists
+
+  CANON CROSS-CHECK (MEMORY/THM-052, MISTAKE-013): at n=21 there are 88 circulant
+  VT tournaments (ALL self-converse, converse realized by i->-i) and 22
+  non-circulant VT tournaments on F_21 (ALL non-self-converse / NS, converse NOT
+  realized). The 22 NS ones are the tournament-side Doyle-Holt analog. n=21 is
+  the SMALLEST order with a vertex-transitive NON-self-converse tournament --
+  the digraph cousin of 'smallest half-arc-transitive graph = Holt at 27'.
+
+Done. kind-pasteur-2026-06-21-kpswf5

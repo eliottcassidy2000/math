@@ -1,0 +1,21 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\f21_ns_tournament_kpswf5.py:13: SyntaxWarning: invalid escape sequence '\{'
+  - is it a tournament? (S disjoint from S^{-1}, union = G\{id})
+F_21 conjugacy classes (non-identity):
+  class size 7, element orders [3]
+  class size 7, element orders [3]
+  class size 3, element orders [7]
+  class size 3, element orders [7]
+
+#inverse-pairs: 10 (=10 expected)
+
+Cayley tournament on F_21 with transversal S:
+  is a tournament: True
+  left translation by (1,0) is an automorphism: True => VERTEX-TRANSITIVE (the 21 left translations act regularly)
+  T isomorphic to T^op (self-converse)?: False
+  => this Cayley tournament is NON-SELF-CONVERSE (NS) -- the Doyle-Holt analog!
+
+Circulant baseline on Z_21:
+  Any circulant tournament on Z_21 is SELF-CONVERSE via i->-i (inversion
+  realizes the converse). This is the abelian obstruction to half-arc.
+
+Done. kind-pasteur-2026-06-21-kpswf5

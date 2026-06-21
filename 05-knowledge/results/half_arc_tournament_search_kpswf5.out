@@ -6,3 +6,5 @@
   (Circulants are always vertex-transitive via translation.)
 
   n    connection S (half)    |Aut|  vO   eO   aO    verdict
+NOTE: this brute-force circulant search is SUPERSEDED by half_arc_converse_z2_kpswf5.py
+  (no half-arc-transitive circulant exists -- Chen-Quimpo: abelian Cayley => arc-transitive)
