@@ -1,0 +1,23 @@
+
+k=8: top-20 highest-Plat bounded bases, period-max(B) vs 15*margin(B):
+  B=(0, 2, 4, 6, 8, 10, 12)    Plat=0.1966 margin=0.1849 P=840 period-max=2.0000 15m=2.7730 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6)      Plat=0.1966 margin=0.1849 P=420 period-max=1.0000 15m=2.7730 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 8)      Plat=0.1634 margin=0.2180 P=840 period-max=0.9643 15m=3.2704 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10)     Plat=0.1435 margin=0.2379 P=840 period-max=1.0571 15m=3.5689 CLOSE
+  B=(0, 1, 3, 4, 5, 6, 9)      Plat=0.1383 margin=0.2431 P=1260 period-max=0.9802 15m=3.6471 CLOSE
+  B=(0, 1, 2, 3, 4, 6, 12)     Plat=0.1378 margin=0.2437 P=84 period-max=0.7381 15m=3.6556 CLOSE
+  B=(0, 2, 3, 4, 6, 8, 12)     Plat=0.1361 margin=0.2454 P=168 period-max=0.9405 15m=3.6811 CLOSE
+  B=(0, 1, 2, 4, 5, 6, 10)     Plat=0.1344 margin=0.2471 P=420 period-max=1.0381 15m=3.7066 CLOSE
+  B=(0, 1, 4, 5, 6, 9, 10)     Plat=0.1286 margin=0.2529 P=1260 period-max=1.2286 15m=3.7934 CLOSE
+  B=(0, 2, 3, 5, 6, 8, 11)     Plat=0.1275 margin=0.2540 P=9240 period-max=1.3626 15m=3.8101 CLOSE
+  B=(0, 3, 4, 5, 6, 8, 9)      Plat=0.1270 margin=0.2545 P=2520 period-max=0.9048 15m=3.8172 CLOSE
+  B=(0, 3, 5, 6, 8, 9, 11)     Plat=0.1264 margin=0.2551 P=27720 period-max=1.7604 15m=3.8260 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 13)     Plat=0.1253 margin=0.2562 P=5460 period-max=1.1648 15m=3.8428 CLOSE
+  B=(0, 4, 5, 6, 8, 9, 10)     Plat=0.1247 margin=0.2567 P=2520 period-max=1.1571 15m=3.8512 CLOSE
+  B=(0, 1, 3, 4, 6, 9, 12)     Plat=0.1241 margin=0.2573 P=252 period-max=0.9365 15m=3.8597 CLOSE
+  B=(0, 4, 6, 8, 9, 10, 12)    Plat=0.1209 margin=0.2606 P=2520 period-max=1.2027 15m=3.9090 CLOSE
+  B=(0, 3, 4, 6, 8, 9, 12)     Plat=0.1205 margin=0.2610 P=504 period-max=1.1409 15m=3.9150 CLOSE
+  B=(0, 1, 3, 6, 9, 11, 12)    Plat=0.1190 margin=0.2624 P=2772 period-max=1.2929 15m=3.9362 CLOSE
+  B=(0, 1, 3, 5, 6, 9, 11)     Plat=0.1188 margin=0.2626 P=6930 period-max=1.3586 15m=3.9393 CLOSE
+  B=(0, 1, 2, 3, 5, 6, 11)     Plat=0.1188 margin=0.2627 P=2310 period-max=1.2342 15m=3.9399 CLOSE
+  => checked 20, fails=0, worst period-max/margin = 10.819 (need <15)
