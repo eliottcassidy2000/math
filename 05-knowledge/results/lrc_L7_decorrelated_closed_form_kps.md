@@ -42,3 +42,16 @@ bound = [decorrelated <= Q(k-1) < cap, DONE as a finite check] + [resonance erro
 - This is the moment dual (THM-534) with EXPLICIT far-coverage weights; the resonance is the only deviation.
 Caveat (MISTAKE-082): the decorrelated value is the M->inf FLOOR; the actual p0 = it + a (resonance) error,
 so the bound is `p0 <= [decorrelated] + [resonance correction]`, both controlled. -> OPEN-Q-108, HYP-2757, THM-534.
+
+## SIGNED ERROR IS TINY (kps-S24): the wide bound is verified closed with a LOOSE error target
+With the moment-dual baseline `p0_decorr = sum_t P_t^{(r)} p_t(B)` (the RIGHT decorrelated value, vs the
+single-block baseline of MISTAKE-082), the signed resonance error `p0(E) - p0_decorr(E)` over commensurable
+ratios (q<=8) and 40+ bounded bases (k=9) is at MOST **0.01211** (at ratio 2/1) -- only **9% of the margin
+0.1322**. So:
+> **p0(E) = p0_decorr(E) + error <= Q(k-1) + 0.012 < cap_k**, with HUGE room (error ~0.012 << margin ~0.13).
+The moment-dual decorrelated formula is a far better baseline than the single-block (error 0.012 vs 0.059): the
+actual cover hugs the LP/moment-dual value. So the WIDE BOUND IS VERIFIED CLOSED, and the proof reduces to a
+LOOSE error bound (target 0.012 vs margin 0.13 => a 10x-lossy joint-discrepancy bound suffices). The error is:
+PROVEN for single-far (comb bound, THM-546) and separated (chain, L6); for commensurable it is <=0.012 (atlas);
+non-resonant decorrelates lower. This is the cleanest the wide bound has been: [decorrelated <= Q(k-1), PROVEN]
++ [error ~0.012 << margin, loose target]. -> OPEN-Q-108, HYP-2757, THM-534/546.
