@@ -1,0 +1,22 @@
+THREAD C: per-arc deviation total variation tv_k = sum_j |7 h^k_j - p|
+========================================================================
+  sup over all arcs of tv_k / p = 1426/120 = 11.88333
+     at p/q=120/119 arc hist=[119, 1, 0, 0, 0, 0, 0] tv=1426
+  Note: bound sum_j|e_j| <= sum_k tv_k <= q * sup(tv) is TOO LOSSY (cancellation).
+
+Cancellation factor: sum_j|e_j|  vs  sum_k sum_j|d^k_j|  (ratio):
+  p/q=3/2   sum|e|=36  sum_k tv_k=60  ratio=0.6000  sum|e|/p=12.0000
+  p/q=5/3   sum|e|=36  sum_k tv_k=140  ratio=0.2571  sum|e|/p=7.2000
+  p/q=9/5   sum|e|=32  sum_k tv_k=404  ratio=0.0792  sum|e|/p=3.5556
+  p/q=5/4   sum|e|=36  sum_k tv_k=200  ratio=0.1800  sum|e|/p=7.2000
+  p/q=11/10  sum|e|=44  sum_k tv_k=1116  ratio=0.0394  sum|e|/p=4.0000
+  p/q=43/20  sum|e|=12  sum_k tv_k=7152  ratio=0.0017  sum|e|/p=0.2791
+  p/q=40/19  sum|e|=32  sum_k tv_k=6380  ratio=0.0050  sum|e|/p=0.8000
+  p/q=23/13  sum|e|=20  sum_k tv_k=2684  ratio=0.0075  sum|e|/p=0.8696
+
+Support pattern of per-arc deviation d^k (which bins nonzero), p/q=9/5:
+  arc 0: h=[5, 4, 0, 0, 0, 0, 0] d=[26, 19, -9, -9, -9, -9, -9] support bins=[0, 1] (contiguous mod 7)
+  arc 1: h=[2, 0, 0, 0, 0, 2, 5] d=[5, -9, -9, -9, -9, 5, 26] support bins=[0, 5, 6] (contiguous mod 7)
+  arc 2: h=[0, 0, 0, 0, 4, 5, 0] d=[-9, -9, -9, -9, 19, 26, -9] support bins=[4, 5] (contiguous mod 7)
+  arc 3: h=[0, 0, 1, 5, 3, 0, 0] d=[-9, -9, -2, 26, 12, -9, -9] support bins=[2, 3, 4] (contiguous mod 7)
+  arc 4: h=[0, 3, 5, 1, 0, 0, 0] d=[-9, 12, 26, -2, -9, -9, -9] support bins=[1, 2, 3] (contiguous mod 7)

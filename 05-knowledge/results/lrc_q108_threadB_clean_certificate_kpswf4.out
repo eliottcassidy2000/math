@@ -1,0 +1,53 @@
+####################################################################################
+# THREAD B crux: is consec-max reducible to a CLEAN monotone certificate?
+####################################################################################
+
+====================================================================================
+k=8
+====================================================================================
+  C_1=E[(N-1)_+]: consec=0.93129  -> 1139 exceed
+  C_2=E[(N-2)_+]: consec=0.50272  -> 5 exceed
+  C_3=E[(N-3)_+]: consec=0.24422  -> consec-MAX
+  C_4=E[(N-4)_+]: consec=0.09184  -> consec-MAX
+  C_5=E[(N-5)_+]: consec=0.02041  -> consec-MAX
+  (T2) phi_clean = p_0 + C_3+C_4+C_5: consec value=0.68367, cap=0.38146
+       #shapes with LARGER phi_clean than consec = 0 (consec is the MAX -> bound is WEAKEST at consec (wrong direction))
+       NOTE: since this bound (p_0+nonneg) is >= p_0 and maximized at consec,
+       it CANNOT certify consec maximizes p_0.  The +corners must be SUBTRACTED.
+  (T4) measS7(consec)=p_0(consec)=0.32721 < cap=0.38146 (margin 0.05425).
+       The minimal nonneg phi(0)=1 certificate is the indicator -> the bound
+       IS p_0; closing the cap on the WORST shape still needs consec to be
+       the global p_0-argmax, which is the ORIGINAL claim.  No clean reduction.
+
+====================================================================================
+k=9
+====================================================================================
+  C_1=E[(N-1)_+]: consec=0.79745  -> 481 exceed
+  C_2=E[(N-2)_+]: consec=0.43571  -> consec-MAX
+  C_3=E[(N-3)_+]: consec=0.21173  -> consec-MAX
+  C_4=E[(N-4)_+]: consec=0.08163  -> consec-MAX
+  C_5=E[(N-5)_+]: consec=0.01786  -> consec-MAX
+  (T2) phi_clean = p_0 + C_3+C_4+C_5: consec value=0.72738, cap=0.49426
+       #shapes with LARGER phi_clean than consec = 0 (consec is the MAX -> bound is WEAKEST at consec (wrong direction))
+       NOTE: since this bound (p_0+nonneg) is >= p_0 and maximized at consec,
+       it CANNOT certify consec maximizes p_0.  The +corners must be SUBTRACTED.
+  (T4) measS7(consec)=p_0(consec)=0.41616 < cap=0.49426 (margin 0.07810).
+       The minimal nonneg phi(0)=1 certificate is the indicator -> the bound
+       IS p_0; closing the cap on the WORST shape still needs consec to be
+       the global p_0-argmax, which is the ORIGINAL claim.  No clean reduction.
+
+====================================================================================
+k=10
+====================================================================================
+  C_1=E[(N-1)_+]: consec=0.69756  -> 102 exceed
+k=10 (bank span<= 13, 715 sets):
+  C_1: consec=0.69756 -> 15 exceed
+  C_2: consec=0.38946 -> consec-MAX
+  C_3: consec=0.18934 -> consec-MAX
+  C_4: consec=0.07143 -> consec-MAX
+  C_5: consec=0.01587 -> consec-MAX
+
+T3: L_y phi nonneg check (valid Bonferroni/test-fn) + mixed corner-weight signs:
+  k=8: phi(0)=1, all phi>=0? True; corner wts w_a={1: '1', 2: '1/10', 3: '-1/5', 4: '1/10', 5: '1'}; NEG-weight corners=[3]
+  k=9: phi(0)=1, all phi>=0? True; corner wts w_a={1: '4/9', 2: '5/18', 3: '1/9', 4: '-1/18', 5: '-2/9'}; NEG-weight corners=[4, 5]
+  k=10: phi(0)=1, all phi>=0? True; corner wts w_a={1: '4/9', 2: '5/18', 3: '1/9', 4: '-1/18', 5: '-2/9'}; NEG-weight corners=[4, 5]

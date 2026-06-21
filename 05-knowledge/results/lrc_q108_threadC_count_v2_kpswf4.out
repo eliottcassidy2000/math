@@ -1,0 +1,16 @@
+THREAD C: EXACT coverage formula, residue-only proof (window p < 3q)
+========================================================================
+window ratios checked (p<3q): 2223
+  cov(z) == floor(p/7)+[z%7<p%7]  (in window): YES
+  r_formula == r_direct (in window):           YES
+
+  r_j = (p//7)*q + #{z in [qj,q(j+1)) : z%7 < p%7}
+  The cnt term: a length-q window has floor(q/7) full periods + a tail; the count
+  of residues < (p%7) is q*(p%7)/7 + boundary, all functions of (q%7, qj%7, p%7).
+  => r_j and d_j=7r_j-pq depend ONLY on (p mod 7, q mod 7).  RESIDUE-ONLY PROVED.
+
+  cnt(L,q,rem) = #{z in [L,L+q): z%7<rem}: verify = q*rem//7 + correction(L%7,q%7,rem)
+   cnt closed form correct: YES  (=> r_j fully explicit in residues)
+
+FULL RESIDUE-ONLY CLOSED FORM ESTABLISHED. The deviation vector e=7r-pq, the slope
+shift (Lemma B), and S=sum_{i,j}|e_ij|=7 sum_j|e_j|=4 f(||p||,||q||) are all PROVED.

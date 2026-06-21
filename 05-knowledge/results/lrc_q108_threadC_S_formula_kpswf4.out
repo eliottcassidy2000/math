@@ -1,0 +1,62 @@
+THREAD C: closed form of S(p mod 7, q mod 7)
+========================================================================
+S matrix (rows a=p%7=0..6, cols b=q%7=0..6); '.' = no window rep:
+      b=0   1   2   3   4   5   6
+  a=0:   .   0   0   0   0   0   0
+  a=1:   0  12  20  24  24  20  12
+  a=2:   0  20  32  36  36  32  20
+  a=3:   0  24  36  44  44  36  24
+  a=4:   0  24  36  44  44  36  24
+  a=5:   0  20  32  36  36  32  20
+  a=6:   0  12  20  24  24  20  12
+
+Symmetry S(a,b) =? S(b,a): True
+Symmetry S(a,b) =? S(-a,-b) (mod7): True
+S(a,b)=? S(7-a? ...) check S(a,b)=S(a,7-b): True
+
+Closed-form via slope s = (p mod7)*(q^{-1} mod 7) mod 7:
+  (a,b) -> s, S, S/4
+   a=1 b=1: s=1 S=12 S/4=3
+   a=2 b=1: s=2 S=20 S/4=5
+   a=3 b=1: s=3 S=24 S/4=6
+   a=4 b=1: s=4 S=24 S/4=6
+   a=5 b=1: s=5 S=20 S/4=5
+   a=6 b=1: s=6 S=12 S/4=3
+   a=1 b=2: s=4 S=20 S/4=5
+   a=2 b=2: s=1 S=32 S/4=8
+   a=3 b=2: s=5 S=36 S/4=9
+   a=4 b=2: s=2 S=36 S/4=9
+   a=5 b=2: s=6 S=32 S/4=8
+   a=6 b=2: s=3 S=20 S/4=5
+   a=1 b=3: s=5 S=24 S/4=6
+   a=2 b=3: s=3 S=36 S/4=9
+   a=3 b=3: s=1 S=44 S/4=11
+   a=4 b=3: s=6 S=44 S/4=11
+   a=5 b=3: s=4 S=36 S/4=9
+   a=6 b=3: s=2 S=24 S/4=6
+   a=1 b=4: s=2 S=24 S/4=6
+   a=2 b=4: s=4 S=36 S/4=9
+   a=3 b=4: s=6 S=44 S/4=11
+   a=4 b=4: s=1 S=44 S/4=11
+   a=5 b=4: s=3 S=36 S/4=9
+   a=6 b=4: s=5 S=24 S/4=6
+   a=1 b=5: s=3 S=20 S/4=5
+   a=2 b=5: s=6 S=32 S/4=8
+   a=3 b=5: s=2 S=36 S/4=9
+   a=4 b=5: s=5 S=36 S/4=9
+   a=5 b=5: s=1 S=32 S/4=8
+   a=6 b=5: s=4 S=20 S/4=5
+   a=1 b=6: s=6 S=12 S/4=3
+   a=2 b=6: s=5 S=20 S/4=5
+   a=3 b=6: s=4 S=24 S/4=6
+   a=4 b=6: s=3 S=24 S/4=6
+   a=5 b=6: s=2 S=20 S/4=5
+   a=6 b=6: s=1 S=12 S/4=3
+
+Does S depend only on slope s=a b^{-1} mod 7? group:
+   s=1: S values [12, 32, 44]
+   s=2: S values [20, 24, 36]
+   s=3: S values [20, 24, 36]
+   s=4: S values [20, 24, 36]
+   s=5: S values [20, 24, 36]
+   s=6: S values [12, 32, 44]

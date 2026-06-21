@@ -1,0 +1,23 @@
+THREAD C: residue-only law -- robust finite certificate (3 full periods)
+========================================================================
+  pairs checked: 1207; residue classes with >1 distinct e: 0
+  => e is CONSTANT on each (p%7,q%7) class over 3+ periods. Residue-only CERTIFIED.
+
+  Minimal period in p (fix q=5): e(p,5) for p=1..15 (coprime):
+    p= 1 (p%7=1): e=(2, 2, 2, -5, 2, 2, -5)
+    p= 2 (p%7=2): e=(4, 4, -3, -3, 4, 4, -10)
+    p= 3 (p%7=3): e=(6, 6, -8, -1, 6, -1, -8)
+    p= 4 (p%7=4): e=(8, 1, -6, 1, 8, -6, -6)
+    p= 6 (p%7=6): e=(5, -2, -2, 5, -2, -2, -2)
+    p= 7 (p%7=0): e=(0, 0, 0, 0, 0, 0, 0)
+    p= 8 (p%7=1): e=(2, 2, 2, -5, 2, 2, -5)
+    p= 9 (p%7=2): e=(4, 4, -3, -3, 4, 4, -10)
+    p=11 (p%7=4): e=(8, 1, -6, 1, 8, -6, -6)
+    p=12 (p%7=5): e=(10, -4, -4, 3, 3, -4, -4)
+    p=13 (p%7=6): e=(5, -2, -2, 5, -2, -2, -2)
+    p=14 (p%7=0): e=(0, 0, 0, 0, 0, 0, 0)
+    period-7 in p: True;  non-constant (genuine mod-7): True
+
+CONCLUSION: e_j = E_j(p mod 7, q mod 7) is a CERTIFIED residue-only invariant.
+Hence S=sum|e| = 4 f(||p||_7,||q||_7) is a FINITE 7x7 table; the sharp window
+faces 12p (at 3/2) and 20q (at 2/1) are forced by the smallest-denominator members.

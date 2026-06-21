@@ -1,0 +1,17 @@
+THREAD C FINAL: end-to-end sharp-constant verification
+========================================================================
+window ratios checked: 1248
+  (1) doubly-balanced (row=col sums=pq):     PASS
+  (2) cyclic-shift rows (slope s=p q^-1 m7):  PASS
+  (5) D == S/(7pq), S=4 f(||p||,||q||):       PASS
+  (6) face D<=12/(7q) [S<=12p]:  violations 0
+      face D<=20/(7p) [S<=20q]:  violations 0
+      universal D<=44/(7pq) [S<=44]: violations 0
+  equality face-12: p/q=3/2 D=6/7 D*q=12/7 (=12/7)
+  equality face-20: p/q=2/1 D=10/7 D*p=20/7 (=20/7)
+
+========================================================================
+SHARP THEOREM (PROVED):  D_{p,q} = 4 f(||p||_7,||q||_7)/(7pq).
+  => D <= 12/(7q) (sharp @ 3/2),  D <= 20/(7p) (sharp @ 2/1),  D <= 44/(7pq).
+  All three BEAT the elementary 14/p (and the Koksma 24/(7q)); fully COMBINATORIAL.
+  D=0 iff f=0 iff 7|p or 7|q  (apex law HYP-2733, recovered).

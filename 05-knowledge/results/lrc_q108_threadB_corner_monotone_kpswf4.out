@@ -1,0 +1,70 @@
+####################################################################################
+# THREAD B part(c): the survival-basis CORNER decomposition of L_y
+####################################################################################
+  L_y(E) = 1 - E[N] + sum_a w_a C_a(E),  C_a = E[(N-a)_+].
+  Question: is consec-max of L_y reducible to clean per-corner monotone lemmas?
+
+====================================================================================
+k = 8
+====================================================================================
+  consec[0..7]: measS7=0.32721  E[N]=1.60408
+    corners C_a: C_1=0.93129, C_2=0.50272, C_3=0.24422, C_4=0.09184, C_5=0.02041
+  (1) E[N]: #shapes with LOWER E[N] than consec = 0  (consec is UNIQUE min)  global-min E[N]=1.6040816326530611
+  (2) C_1=E[(N-1)_+]: #shapes EXCEEDING consec = 193  (NOT max)  top set [0, 1, 2, 3, 7, 8, 9, 10] C=1.18946
+  (2) C_2=E[(N-2)_+]: #shapes EXCEEDING consec = 2  (NOT max)  top set [0, 1, 2, 3, 7, 8, 9, 10] C=0.53373
+  (2) C_3=E[(N-3)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_4=E[(N-4)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_5=E[(N-5)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (4) Pareto on (-E[N], C_3,C_4,C_5): #shapes weakly-dominating consec & strict somewhere = 0  (consec PARETO-OPTIMAL on these 4 coords)
+
+====================================================================================
+k = 9
+====================================================================================
+  consec[0..8]: measS7=0.41616  E[N]=1.38129
+    corners C_a: C_1=0.79745, C_2=0.43571, C_3=0.21173, C_4=0.08163, C_5=0.01786
+  (1) E[N]: #shapes with LOWER E[N] than consec = 10  (NOT min)  global-min E[N]=1.3210884353741497
+      lowest-E[N] set = [0, 2, 4, 5, 6, 7, 8, 10, 12]
+  (2) C_1=E[(N-1)_+]: #shapes EXCEEDING consec = 75  (NOT max)  top set [0, 1, 2, 3, 4, 8, 9, 10, 11] C=0.94145
+  (2) C_2=E[(N-2)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_3=E[(N-3)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_4=E[(N-4)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_5=E[(N-5)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (4) Pareto on (-E[N], C_3,C_4,C_5): #shapes weakly-dominating consec & strict somewhere = 0  (consec PARETO-OPTIMAL on these 4 coords)
+
+====================================================================================
+k = 10
+====================================================================================
+  consec[0..9]: measS7=0.50448  E[N]=1.19308
+    corners C_a: C_1=0.69756, C_2=0.38946, C_3=0.18934, C_4=0.07143, C_5=0.01587
+  (1) E[N]: #shapes with LOWER E[N] than consec = 30  (NOT min)  global-min E[N]=1.1316413744985174
+      lowest-E[N] set = [0, 1, 2, 3, 4, 5, 6, 7, 9, 13]
+  (2) C_1=E[(N-1)_+]: #shapes EXCEEDING consec = 15  (NOT max)  top set [0, 1, 2, 3, 4, 7, 8, 9, 10, 11] C=0.75480
+  (2) C_2=E[(N-2)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_3=E[(N-3)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_4=E[(N-4)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (2) C_5=E[(N-5)_+]: #shapes EXCEEDING consec = 0  (consec UNIQUE max)
+  (4) Pareto on (-E[N], C_3,C_4,C_5): #shapes weakly-dominating consec & strict somewhere = 0  (consec PARETO-OPTIMAL on these 4 coords)
+
+====================================================================================
+INTERPRETATION
+====================================================================================
+  If for every k: E[N] consec-MIN (unique) AND C_a (a>=3) consec-MAX (unique),
+  AND consec is Pareto-optimal on (-E[N],C_3,C_4,C_5), then EVERY nonneg-weighted
+  combination  -alpha*E[N] + sum_{a>=3} w_a C_a  (alpha,w_a >= 0) is consec-max.
+  The ONLY obstruction to a clean monotone proof is the LOW corner C_1 (and the
+  +C_2 term at k=8): L_y puts weight w_1>0 on C_1 where consec is NOT max. So the
+  consec-max of L_y is NOT coordinatewise -- it needs the C_1 deficit to be
+  OUTWEIGHED by the (-E[N]) + high-corner surplus.  Quantify that net below.
+
+  --- net-balance audit at k=8 (the binding even-band case) ---
+      max-C_1 shape [0, 1, 2, 3, 7, 8, 9, 10]: C_1 surplus over consec = 0.25816
+      term ledger (L_y term = weight * functional), shape minus consec:
+        d(-E[N]) contribution: -0.494274  (beta=-1)
+        w_1=    1 * dC_1=+0.258163  -> +0.258163
+        w_2= 1/10 * dC_2=+0.031009  -> +0.003101
+        w_3= -1/5 * dC_3=-0.065930  -> +0.013186
+        w_4= 1/10 * dC_4=-0.024717  -> -0.002472
+        w_5=    1 * dC_5=-0.006122  -> -0.006122
+      total L_y(shape)-L_y(consec) = -0.228418  (<0 confirms consec still wins despite C_1 deficit)
+
+DONE.

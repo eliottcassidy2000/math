@@ -1,0 +1,12 @@
+THREAD C: row-0 super-block count (proof scaffold)
+========================================================================
+r_blocks == r_direct (a over Z/q reindex): YES
+
+Clean form: r_j = #{(a,t): 0<=a<q, 0<=t<p, 7a+t mod 7q in [qj, q(j+1))}.
+r_clean == r_direct: YES
+
+7a+t mod 7q, window [qj,q(j+1)) length q: counts r_j. d_j=7r_j-pq residue-only.
+  p/q=3/2: r=[2, 1, 0, 1, 2, 0, 0] d=7r-pq=[8, 1, -6, 1, 8, -6, -6] (matches earlier e? (8, 1, -6, 1, 8, -6, -6))
+  p/q=10/9: r=[14, 13, 12, 13, 14, 12, 12] d=7r-pq=[8, 1, -6, 1, 8, -6, -6] (matches earlier e? (8, 1, -6, 1, 8, -6, -6))
+  p/q=4/3: r=[3, 1, 2, 2, 1, 3, 0] d=7r-pq=[9, -5, 2, 2, -5, 9, -12] (matches earlier e? (9, -5, 2, 2, -5, 9, -12))
+  p/q=11/10: r=[17, 15, 16, 16, 15, 17, 14] d=7r-pq=[9, -5, 2, 2, -5, 9, -12] (matches earlier e? (9, -5, 2, 2, -5, 9, -12))

@@ -1,3 +1,34 @@
+## kind-pasteur-2026-06-21 (overnight, THREAD B + L7 rigor re-audit) -- HYP-2738: consec-max is IRREDUCIBLY AGGREGATE; L7 Var=2/7 re-verified
+
+User: LRC(14) overnight, RIGOR + new leads. THREAD B = rigorize the consec-maximality crux (HYP-2735):
+is measS7 monotone in additive energy?
+
+THREAD B VERDICT (HYP-2738): NO clean monotone reduction; consec-max is irreducibly aggregate.
+ - (a) single-step compression REFUTED: 3201/12165 add-energy-INCREASING moves STRICTLY drop measS7.
+ - (b) within-fixed-span monotone REFUTED: 6300 inversions, k=8 sets of {1..15}, 7/8 spans.
+ - (c) Kendall-tau(measS7, add-energy) = +0.43 -- moderate, not a total order.
+ STRUCTURAL (new): the cap-closing functional is L_y (THM-534 dual), decomposing as
+ L_y = 1 - E[N] + sum_a w_a C_a, C_a=E[(N-a)_+]. EXHAUSTIVE k=8..10: consec UNIQUELY maximizes the
+ DEEP corners C_a (a>=3; a>=2 at k=9,10) -- 0 exceeders -- and is Pareto-optimal on (-E[N],C_3,C_4,C_5);
+ but E[N] is NOT consec-min and C_1 NOT consec-max (1139/481/102 exceeders). L_y has MIXED corner-weight
+ signs (k=8 w_3=-1/5; k=9,10 w_4=-1/18,w_5=-2/9) + weight on anti-consec C_1, so consec-max of L_y is a
+ SIGNED net balance (worst-C_1 shape: +0.258 surplus outweighed by -0.494 from -E[N], total -0.228<0).
+ IMPOSSIBILITY (decisive): the clean all-good-corner nonneg test fn phi=p_0+sum_{a>=3}C_a is itself
+ maximized at consec (loosest there) so CANNOT certify consec-max -- forcing the alternating Bonferroni
+ signs. The mixed signs are STRUCTURALLY FORCED = the Delsarte-LP-saturation fact (HYP-2726). PARTIAL
+ clean rung retained: consec uniquely maximizes deep corners C_a (a>=3). Files lrc_q108_threadB_*_kpswf4.
+
+L7 RIGOR RE-AUDIT (confirms the existing D<=14/p proof): independently re-verified the two load-bearing
+ facts. Var(h_j)=2/7 EXACTLY for all j (lrc_q108_L7_var_audit_kpswf4 -- corrected a naive-grid wrap bug
+ that had spuriously shown <2/7 for one sector; the breakpoint-exact TV is clean 2/7). D<=14/p over ALL
+ 2260 coprime p/q in (1,43/20], q<=80: 0 violations; sup D*p=20/7 (at 2/1), sup D*q=12/7 (at 3/2), apex
+ law D=0<=>7|pq with 0 failures (lrc_q108_L7_Dpq_wide_verify_kpswf4). Proof is solid.
+
+CONVERGENCE: codex 5edbf66 (same add-energy tie-break, AP-offset angle; independently found an AE
+ inversion -- corroborates REFUTED). A concurrent kps session produced THREAD C sharp closed-form
+ D=S(p%7,q%7)/(7pq)<=12/(7q) (strengthens my audited 14/p) + THREAD D AP-saturation -- its files
+ (lrc_q108_threadC_*, lrc14_tight_maxelt_*) ride along this commit. Synced ~5x.
+
 ## kind-pasteur-2026-06-21 (overnight, RIGOR + FORMALIZATION) -- L7 D<=14/p paper-proof + Lean apex-law formalization (sorry-free, standard axioms)
 
 User: long overnight, wide array of ideas, aim to prove LRC, and "make everything rigorous and formalized".

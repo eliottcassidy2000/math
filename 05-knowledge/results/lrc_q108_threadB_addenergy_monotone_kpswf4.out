@@ -1,0 +1,51 @@
+####################################################################################
+# THREAD B -- is measS7 MONOTONE in additive energy?  (consec-max crux LEMMA-1)
+####################################################################################
+
+=== honest gap reproduced ===
+  consec[1..8]       measS7=0.34490  add_energy=344  span=7
+  oddAP(1,3..15)     measS7=0.30882  add_energy=344  span=14
+  SAME energy 344, DIFFERENT measS7 -> energy is NOT a total order; span tie-breaks.
+
+=== (translation invariance check: is 'min=0' WLOG?) ===
+    TRANSLATION CHANGES measS7: A=[2, 3, 4, 5, 8, 9, 10, 12] -> +1: 0.06746 vs 0.04025
+    TRANSLATION CHANGES measS7: A=[2, 3, 4, 5, 8, 9, 10, 12] -> +2: 0.06746 vs 0.04385
+    TRANSLATION CHANGES measS7: A=[2, 3, 4, 5, 8, 9, 10, 12] -> +3: 0.06746 vs 0.06373
+    TRANSLATION CHANGES measS7: A=[1, 2, 4, 7, 8, 11, 12, 13] -> +1: 0.03839 vs 0.05159
+    TRANSLATION CHANGES measS7: A=[1, 2, 4, 7, 8, 11, 12, 13] -> +2: 0.03839 vs 0.05501
+  translation changes measS7 in 600 cases out of 200 sets -> NOT translation-invariant (span grouping is the right frame)
+
+=== (b) WITHIN-FIXED-SPAN MONOTONICITY (k=8, sets of {1..15}) ===
+  Claim under test: within a fixed span, E(A)>E(B) => measS7(A)>=measS7(B).
+    enumerated 6435 k=8 subsets of {1..15}, 8 distinct spans
+    span=8: >=28 inversion(s); worst: E=320 set=(6, 7, 8, 9, 10, 11, 12, 14) m=0.21617  <  E=(7, 8, 9, 10, 11, 12, 14, 15) set=267/2156 m=304.00000  (gap 303.78383)
+    span=9: >=150 inversion(s); worst: E=304 set=(3, 5, 6, 7, 8, 9, 10, 12) m=0.13311  <  E=(1, 2, 3, 4, 5, 6, 7, 10) set=419/1470 m=300.00000  (gap 299.86689)
+    span=10: >=410 inversion(s); worst: E=284 set=(1, 4, 5, 6, 7, 8, 9, 11) m=0.07262  <  E=(1, 3, 4, 5, 6, 7, 9, 11) set=430/1617 m=280.00000  (gap 279.92738)
+    span=11: >=796 inversion(s); worst: E=272 set=(2, 5, 6, 7, 8, 9, 10, 13) m=0.07234  <  E=(2, 4, 5, 6, 7, 8, 9, 13) set=8779/114660 m=268.00000  (gap 267.92766)
+    span=12: >=1368 inversion(s); worst: E=272 set=(3, 5, 7, 9, 10, 11, 13, 15) m=0.22590  <  E=(2, 4, 6, 8, 10, 11, 12, 14) set=2318/8085 m=268.00000  (gap 267.77410)
+    span=13: >=1840 inversion(s); worst: E=264 set=(2, 3, 6, 7, 10, 11, 14, 15) m=0.08905  <  E=(1, 2, 3, 4, 5, 6, 7, 14) set=73/245 m=260.00000  (gap 259.91095)
+    span=14: >=1708 inversion(s); worst: E=344 set=(1, 3, 5, 7, 9, 11, 13, 15) m=0.30882  <  E=(1, 4, 6, 7, 9, 10, 12, 15) set=109/490 m=264.00000  (gap 263.69118)
+    => spans with >=1 inversion: 7/8; (envelope-counted) inversions: 6300
+    => WORST inversion (span 8): higher-energy (6, 7, 8, 9, 10, 11, 12, 14) (E=320) m=0.21617 < lower-energy 267/2156 (E=(7, 8, 9, 10, 11, 12, 14, 15)) m=304.00000, gap 303.78383
+  VERDICT (b): within-span monotone = REFUTED
+
+=== (a) SINGLE-STEP COMPRESSION MONOTONICITY ===
+  Claim under test: an add_energy-INCREASING single-element move never
+  STRICTLY decreases measS7.
+    examined 4000 sets; energy-increasing single moves: 12165; of those, measS7 STRICTLY DECREASED: 3201
+      A=[1, 2, 4, 7, 8, 9, 12, 14] (E=216,m=0.05499) -> B=[1, 2, 3, 7, 8, 9, 12, 14] (E=224,m=0.05102)  energy UP 8, measS7 DOWN 0.00397
+      A=[1, 2, 4, 7, 8, 9, 12, 14] (E=216,m=0.05499) -> B=[1, 2, 4, 7, 8, 9, 13, 14] (E=220,m=0.04788)  energy UP 4, measS7 DOWN 0.00711
+      A=[1, 2, 4, 7, 8, 9, 12, 14] (E=216,m=0.05499) -> B=[1, 2, 4, 7, 8, 9, 12, 13] (E=220,m=0.02516)  energy UP 4, measS7 DOWN 0.02983
+      A=[1, 2, 7, 10, 11, 12, 13, 14] (E=212,m=0.17060) -> B=[1, 2, 8, 10, 11, 12, 13, 14] (E=220,m=0.16447)  energy UP 8, measS7 DOWN 0.00613
+      A=[1, 2, 4, 6, 8, 9, 10, 12] (E=240,m=0.08571) -> B=[1, 3, 4, 6, 8, 9, 10, 12] (E=244,m=0.04603)  energy UP 4, measS7 DOWN 0.03968
+      A=[1, 2, 4, 6, 8, 9, 10, 12] (E=240,m=0.08571) -> B=[1, 2, 5, 6, 8, 9, 10, 12] (E=244,m=0.06587)  energy UP 4, measS7 DOWN 0.01984
+      A=[1, 2, 4, 6, 8, 9, 10, 12] (E=240,m=0.08571) -> B=[1, 2, 4, 6, 8, 9, 10, 11] (E=244,m=0.08319)  energy UP 4, measS7 DOWN 0.00253
+      A=[2, 3, 4, 5, 8, 12, 13, 14] (E=220,m=0.18289) -> B=[2, 3, 4, 5, 7, 12, 13, 14] (E=228,m=0.07206)  energy UP 8, measS7 DOWN 0.11083
+  VERDICT (a): energy-up-never-measS7-down = REFUTED
+
+=== (c) RANK CORRELATIONS (all primitive k=8, min=1, in {1..15}) ===
+    3432 primitive k=8 sets (min=1) in {1..15}
+    add_energy vs measS7: concordant 3915963, discordant 1551682, ties(energy) 418553  ->  Kendall-tau-b(ish) = +0.4324
+    LEX(add_energy,-span) vs measS7: concordant 4006202, discordant 1685214  ->  agreement = +0.4078
+
+DONE.

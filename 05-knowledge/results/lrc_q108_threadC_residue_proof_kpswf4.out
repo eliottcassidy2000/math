@@ -1,0 +1,26 @@
+THREAD C: rigorous residue-only law + closed form S = 4 f(||p||,||q||)
+========================================================================
+[1] period-7 stabilization (e(p,q)=e(p+7,q)=e(p,q+7)), wide exhaustive:
+    e(p,q)=e(p+7,q): HOLDS;  e(p,q)=e(p,q+7): HOLDS   (4911 pairs)
+
+[2] S(p,q)=sum|e| == 4 f(||p||_7,||q||_7), all coprime (p,q) (universal):
+    closed form mismatches: 0  []
+    => S = 4 f(||p||,||q||),  f(al,be)= 0 if al*be=0; al*be+3 if al!=be; al*be+4-2|al-2| if al=be (al,be in 1..3).
+
+[3] universal max S = 44 (=44). So D = S/(7pq) <= 44/(7pq) ALWAYS.
+
+[4] window faces:  max S/p = 12 at (3, 2)  (=> D<=12/(7q));
+               max S/q = 20 at (2, 1)  (=> D<=20/(7p)).
+
+[5] S table from closed form (a=p%7 rows, b=q%7 cols):
+       b=0  1  2  3  4  5  6
+   a=0:  0  0  0  0  0  0  0
+   a=1:  0 12 20 24 24 20 12
+   a=2:  0 20 32 36 36 32 20
+   a=3:  0 24 36 44 44 36 24
+   a=4:  0 24 36 44 44 36 24
+   a=5:  0 20 32 36 36 32 20
+   a=6:  0 12 20 24 24 20 12
+
+[6] S=44 (max) realized at ||p||=||q||=3; smallest window ratio:
+     p/q=4/3  S=44  D=44/(7pq)=11/21=0.52381

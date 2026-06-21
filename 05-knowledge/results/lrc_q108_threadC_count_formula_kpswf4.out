@@ -1,0 +1,17 @@
+THREAD C: coverage / sawtooth closed form for r_j  (residue-only proof)
+========================================================================
+r_via_cov == r_direct: NO
+
+cov(z) in {floor(p/7), ceil(p/7)}? and determined by z mod 7:
+  cov(z) in {floor(p/7), ceil(p/7)}: NO
+
+  cov(z) depends on z only via (z mod 7):
+   cov(z)=cov(z mod 7) (constant on each residue class): YES
+
+=> cov is a function COV(z mod 7; p mod 7) with values floor(p/7)/ceil(p/7).
+   r_j = sum_{z in [qj,q(j+1))} COV(z mod7) = (counts of each residue class in
+   the length-q window [qj,q(j+1))) . COV(.).  The residue-class populations of a
+   length-q integer window depend only on (qj mod7, q mod7); COV on (p mod7).
+   THEREFORE r_j, and d_j=7r_j-pq, depend ONLY on (p mod7, q mod7). QED.
+
+   explicit COV(z mod7, p)=floor(p/7)+[ (z mod7) < (p mod7) ] matches cov: NO

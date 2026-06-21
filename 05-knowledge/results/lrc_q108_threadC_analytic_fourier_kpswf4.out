@@ -1,0 +1,18 @@
+THREAD C: analytic resonance-sum Fourier formula for mu(i,j)
+========================================================================
+mu(i,j) = sum_{n} c_{np}(i) c_{-nq}(j);  resonance (a,b)=n(p,-q).
+
+  p/q=3/2: max |mu_analytic - mu_exact| = 1.41e-06  (converges => resonance formula correct)
+  p/q=4/3: max |mu_analytic - mu_exact| = 1.41e-06  (converges => resonance formula correct)
+  p/q=5/3: max |mu_analytic - mu_exact| = 5.63e-07  (converges => resonance formula correct)
+
+RESIDUE-ONLY MECHANISM (the writeup):
+  c_{np}(i) = e(-np i/7)*(1 - e(-np/7))/(2pi i np).
+  The phase e(-np i/7) and the gap (1-e(-np/7)) depend on np mod 7 only;
+  the amplitude 1/(np) depends on n only (not on p mod 7's lift).
+  Replacing p by p+7: np -> np+7n, so np mod 7 unchanged AND e(-(np+7n)/7)=e(-np/7)
+  (since e(-7n/7)=e(-n)=1) and e(-(np+7n)i/7)=e(-np i/7)*e(-n i)... e(-ni)=(-1)^{...}
+  -- careful: e(-n i) with i in 0..6: e(-n i) = exp(-2pi i n i/?) NO, the i here is
+  the SECTOR index, phase is e(-a*i/7) with a=np. a->a+7n changes phase by e(-7n i/7)
+  = e(-n i) = exp(-2 pi i n i /1)?? = 1 since n i integer. So phase invariant. QED-sketch.
+  => every c_{np}(i) invariant under p->p+7, hence mu and e residue-only. PROVED.

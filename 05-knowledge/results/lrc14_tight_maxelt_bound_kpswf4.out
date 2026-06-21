@@ -1,0 +1,2 @@
+C:\Users\Eliott\Documents\GitHub\math\04-computation\lrc14_tight_maxelt_bound_kpswf4.py:14: SyntaxWarning: invalid escape sequence '\ '
+  Let V = max(S), and S' = S \ {V} (12 speeds).  The danger set danger(V) is a union of

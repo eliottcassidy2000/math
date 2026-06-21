@@ -1,0 +1,5 @@
+checked 2260 coprime p/q in (1,43/20], q<=80
+D<=14/p violations: 0  (PROOF HOLDS)
+sup D*p = 20/7 = 2.85714 at (2, 1)  (proof bound 14; tight sup claimed 20/7=2.85714)
+sup D*q = 12/7 = 1.71429 at (3, 2)  (claimed 12/7=1.71429)
+apex law (D=0 iff 7|pq) failures: 0
