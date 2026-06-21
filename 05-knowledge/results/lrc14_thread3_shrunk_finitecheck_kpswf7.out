@@ -1,0 +1,31 @@
+=== ANGLE 3: feasibility of the n=14 finite check after repo reductions ===
+
+Rosenfeld raw bound n^(2n) = 14^28 ~ 1e32  (hopeless)
+
+AFTER WIDE reduction: only span(E) <= 14 matters. Speeds in a window of width W<=14.
+Count = #{ size-k subsets of {1..W} } (the bounded-span stratum):
+  W=14, k=12: C(14,12) = 9.100e+01  (log10=2.0)
+  W=14, k=13: C(14,13) = 1.400e+01  (log10=1.1)
+  W=21, k=12: C(21,12) = 2.939e+05  (log10=5.5)
+  W=21, k=13: C(21,13) = 2.035e+05  (log10=5.3)
+  W=28, k=12: C(28,12) = 3.042e+07  (log10=7.5)
+  W=28, k=13: C(28,13) = 3.744e+07  (log10=7.6)
+
+AFTER full-residue + dilation-quotient + consec-locality:
+  - dilation quotient: /6 (Z/7* orbits)
+  - full-residue: only ~ (fraction hitting all 6 residues) survive
+  - consec-locality (LAYERS 1-2): optimum within Hamming distance d of consec
+  configs within edit-distance d of consec_13 (swap d of the 13 speeds to window {1..14}):
+    d=1 (window W=20): ~9.10e+01 configs
+    d=2 (window W=20): ~1.64e+03 configs
+    d=3 (window W=20): ~1.00e+04 configs
+    d=4 (window W=20): ~2.50e+04 configs
+
+VERDICT REASONING:
+  Even the FULL bounded-span stratum C(20,13)~7.8e4 to C(28,13)~3.7e7 is TINY and feasible.
+  The real cost is the PER-CONFIG measS7 (exact rational) + the WIDE-glue + commensurable
+  far-pair atlas. The bounded-span finite check at n=14 is ENUMERABLE (<1e8 configs).
+  BUT: it only closes the FINITE/bounded piece -- still needs the WIDE analytic bound +
+  the consec-max PROOF (not just check) to glue. So this is an ENGINEERING-feasible
+  verification of the bounded piece, NOT a standalone proof. Rating depends on whether
+  the bounded enumeration + interval-arithmetic over the resonant atlas is rigorous.

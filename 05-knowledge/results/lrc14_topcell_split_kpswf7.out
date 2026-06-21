@@ -3,3 +3,35 @@ TOP-CELL SPLIT: cumulative sorted W-cell dominance for t>=2 (joint certificate)
 ========================================================================================
 
 # k=8 box=[0,18] | consec sorted W=[0.07619, 0.06054, 0.05782, 0.04422, 0.04422, 0.04422] measS7=0.327211 | stratum=2260
+  TAIL cumulative dominance failures (t=2..6): {2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  bottleneck min_a W_a(consec)=0.044218; #rivals beating bottleneck=0 
+  #t=1 beaters (single cell beats consec top cell) = 0
+
+# k=9 box=[0,16] | consec sorted W=[0.08895, 0.07653, 0.06548, 0.06463, 0.06207, 0.0585] measS7=0.416156 | stratum=2327
+  TAIL cumulative dominance failures (t=2..6): {2: 1, 3: 1, 4: 1, 5: 0, 6: 0}
+     t=2 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 9), 0.16547619047619047, 0.17482993197278912)
+     t=3 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 9), 0.23095238095238096, 0.2393424036281179)
+     t=4 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 9), 0.295578231292517, 0.3005668934240363)
+  bottleneck min_a W_a(consec)=0.058503; #rivals beating bottleneck=0 
+  #t=1 beaters (single cell beats consec top cell) = 1
+     t1-beater (0, 1, 2, 3, 4, 5, 6, 7, 9) delta_topcell=+0.01276 added=[9] removed=[8]
+
+# k=10 box=[0,15] | consec sorted W=[0.11077, 0.09722, 0.0805, 0.07596, 0.07001, 0.07001] measS7=0.504478 | stratum=1800
+  TAIL cumulative dominance failures (t=2..6): {2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  bottleneck min_a W_a(consec)=0.070011; #rivals beating bottleneck=0 
+  #t=1 beaters (single cell beats consec top cell) = 1
+     t1-beater (0, 1, 2, 3, 4, 5, 6, 7, 9, 10) delta_topcell=+0.00601 added=[10] removed=[8]
+
+# k=11 box=[0,14] | consec sorted W=[0.12585, 0.11389, 0.09785, 0.08617, 0.08294, 0.07477] measS7=0.581463 | stratum=620
+  TAIL cumulative dominance failures (t=2..6): {2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  bottleneck min_a W_a(consec)=0.074773; #rivals beating bottleneck=4  ex=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12), 0.0782312925170068, 0.07477324263038548)
+  #t=1 beaters (single cell beats consec top cell) = 0
+
+# k=12 box=[0,13] | consec sorted W=[0.13018, 0.12428, 0.09785, 0.09555, 0.08683, 0.08294] measS7=0.617620 | stratum=72
+  TAIL cumulative dominance failures (t=2..6): {2: 0, 3: 1, 4: 1, 5: 1, 6: 1}
+     t=3 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 0.35230364873222014, 0.3644557823129252)
+     t=4 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 0.44785095856524426, 0.45731292517006805)
+     t=5 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 0.5346835703978561, 0.5485827664399093)
+     t=6 FAIL example: ((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 0.617620078334364, 0.6332766439909298)
+  bottleneck min_a W_a(consec)=0.082937; #rivals beating bottleneck=5  ex=((0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), 0.08469387755102041, 0.08293650793650793)
+  #t=1 beaters (single cell beats consec top cell) = 0
