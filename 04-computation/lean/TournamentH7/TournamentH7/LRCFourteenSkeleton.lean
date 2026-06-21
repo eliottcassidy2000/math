@@ -172,9 +172,9 @@ def capRat : ℕ → ℚ
 
 /-- The caps are genuine probabilities `0 < cap_k < 1` for the binding rows
 (finite, decidable). -/
-theorem capRat_lt_one : ∀ k ∈ [8,9,10,11,12], capRat k < 1 := by decide
+theorem capRat_lt_one : ∀ k ∈ [8,9,10,11,12], capRat k < 1 := by native_decide
 
-theorem capRat_pos : ∀ k ∈ [8,9,10,11,12], 0 < capRat k := by decide
+theorem capRat_pos : ∀ k ∈ [8,9,10,11,12], 0 < capRat k := by native_decide
 
 /-- **The wide bound (the L0 target of the sector route).**  For every covering
 configuration `E` with `|E| = k`, the cover atom is at most the cap.  This is the

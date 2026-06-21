@@ -151,3 +151,30 @@ differences e_b−e_a). Spread is NOT bounded for net>0 (e.g. {0,…,6,29} nets 
 concentrates at small q (98% of random k=8 sets never net; q∈{8,15} dominate).
 Script: `04-computation/lrc14_final17_three-gap-consecutive-minimizes_kps-S6-wf.py`;
 output `05-knowledge/results/lrc14_final17_three-gap-consecutive-minimizes_kps-S6-wf.out`.
+
+## INDEPENDENT CONFIRMATION + finite-Vmax witness validation (kind-pasteur-2026-06-22-S30, THREAD B)
+A fresh set of exact-rational engines (built from the THM-527 definitions, independent of the S5/S6
+`Bk` scripts) reproduces this theorem's structure and supplies the one piece left "assumed upstream"
+(the global-witness reformulation `gap>1/7 ⟹ M≥1/14` at FINITE `Vmax`).
+- **The exact dictionary (verified pointwise, all configs):** `w_θ(x) = 6/7 − circ_width({frac(e_i x)})
+  = maxgap{frac(e_i x)} − 1/7` EXACTLY. Hence global-witness `⟺ maxgap>1/7`; via-max criterion
+  `⟺ maxgap>2/7`. The factor-2 between the two LRC sufficient thresholds is this `+1/7` shift.
+- **Direction-of-inequality (why the sector cap does not transfer):** containment
+  `{maxgap>2/7}⊆{maxgap>1/7}⊆{≥1 sector missed}` ⟹ `ρ*_{2/7} ≤ ρ*_{1/7} ≤ 1−p0` (exact, all on `G_P`).
+  `p0≤cap` lower-bounds `1−p0` but the floors sit BELOW `1−p0`, so `p0≤cap` does NOT lower-bound either
+  floor — the sector closure and this G_P-floor are PARALLEL (consistent with HYP-2823 zero-slack).
+- **Floors reproduced EXACTLY:** admissible (|P|+k=13) consec min `ρ*_{1/7}=14249/252252≈0.0565` @k=3
+  (= `m_P`); admissible consec min `ρ*_{2/7}=1/84` @k=9,P={1,2,3,12} (= THM-527-E). `μ_{2/7}` anchors
+  reproduced: `μ_3=1, μ_4=19/21, μ_5=9/14, μ_13=829/4620`; and this theorem's correction
+  `μ_{2/7}(consec_7)=83/210` (vs perforated `13/35`). Grid certified exact (10×-denser grid identical).
+- **NEW — finite-Vmax witness soundness:** built integer covering-type sets `S={V₀−e_i}∪P` for
+  `V₀=200..1001`, computed EXACT `M(S)=max_τ min_v‖vτ‖`, and verified the explicit witness point
+  (slow-cell with `maxgap>1/7`, fast phase `θ` = center of the widest cluster gap) is GENUINELY safe:
+  `min_v‖vτ*‖ ≈ 0.073–0.084 ≥ 1/14` in every case (and `M(S)≥1/14` throughout). So `gap>1/7 ⟹ M≥1/14`
+  is not a slow-limit artifact — it holds with a real finite-`Vmax` witness. This discharges the
+  "upstream assumed" caveat for the cases tested (the integer-vs-real passage at the 1/7 threshold).
+Scripts (all exact): `04-computation/lrc14_p0_vs_rhostar_bridge_kpswf10.py`,
+`…_threshold_factor2_resolve_kpswf10.py`, `…_witness_vs_criterion_threshold_kpswf10.py`,
+`…_rhostar_zero_probe_kpswf10.py`, `…_witness_finite_vmax_check_kpswf10.py`,
+`…_p0_implies_floor_synthesis_kpswf10.py`, `…_grid_exactness_audit_kpswf10.py`;
+outputs in `05-knowledge/results/lrc14_*_kpswf10.out`.

@@ -1,0 +1,66 @@
+========================================================================================================
+THREAD B SYNTHESIS: does p0<=cap_k force a positive LRC floor? (sector closure vs THM-527 crux)
+========================================================================================================
+Admissible consec configs |P|+k=13.  For each k, the worst (min-rho*) P from the prior probe.
+
+  kP (worst)                   cap_k       p0  p0<=cap?     rho*  witness    1-p0  slack=1-p0-wit
+-------------------------------------------------------------------------------------------------
+  3[1, 2, 3, 5, 7, 8, 9, 11, 12, 13]   1.0000   0.0000      True   0.0565   0.0565  1.0000          0.9435
+  4[1, 2, 3, 5, 7, 8, 9, 11, 13]   1.0000   0.0000      True   0.0719   0.0925  1.0000          0.9075
+  5[1, 2, 3, 6, 7, 9, 11, 13]   1.0000   0.0000      True   0.0553   0.2417  1.0000          0.7583
+  6[1, 2, 3, 7, 9, 11, 13]    1.0000   0.0000      True   0.0553   0.2737  1.0000          0.7263
+  7[1, 2, 3, 9, 11, 13]       1.0000   0.1476      True   0.0155   0.3747  0.8524          0.4776
+  8[1, 2, 3, 11, 13]          0.3815   0.3272      True   0.0133   0.3953  0.6728          0.2774
+  9[1, 2, 3, 12]              0.4943   0.4162      True   0.0119   0.4354  0.5838          0.1485
+ 10[1, 2, 3]                  0.6044   0.5045      True   0.0159   0.4660  0.4955          0.0295
+ 11[1, 6]                     0.7253   0.5815      True   0.0238   0.3787  0.4185          0.0399
+ 12[1]                        0.8571   0.6241      True   0.0731   0.4270  0.3759         -0.0512
+ 13[]                         1.0000   0.6759      True   0.1794   0.4425  0.3241         -0.1184
+-------------------------------------------------------------------------------------------------
+
+DIRECTION ANALYSIS (the prompt's Q2):
+  * p0 <= cap_k holds (the sector route's closure).  But the floors rho*, witness are
+    UPPER-bounded by 1-p0 (since {gap>thresh} subset {sector missed}).  p0<=cap gives
+    1-p0 >= 1-cap (a LOWER bound on 1-p0), which does NOT lower-bound the floors.
+  * => The closed sector route p0<=cap does NOT, by itself, give rho*>0 or witness>0.
+    The sector route certifies survival THROUGH p0<=cap by a DIFFERENT mechanism (the
+    measS7 union-cover argument), not by exhibiting a gap.  THM-527's crux (a positive gap
+    floor) is a SEPARATE statement.  They are PARALLEL.
+
+========================================================================================================
+REVERSE Q: can a p0 UPPER bound give a witness LOWER bound via small slack? (1-p0 - witness)
+========================================================================================================
+  max slack (1-p0 - witness) over worst configs = 0.9435
+  If slack were < 1-cap, then witness >= (1-p0)-slack >= (1-cap)-slack > 0 would TRANSFER.
+   k= 3: 1-cap=0.0000, slack=0.9435, (1-cap)-slack=-0.9435  transfer-bound>0: False
+   k= 4: 1-cap=0.0000, slack=0.9075, (1-cap)-slack=-0.9075  transfer-bound>0: False
+   k= 5: 1-cap=0.0000, slack=0.7583, (1-cap)-slack=-0.7583  transfer-bound>0: False
+   k= 6: 1-cap=0.0000, slack=0.7263, (1-cap)-slack=-0.7263  transfer-bound>0: False
+   k= 7: 1-cap=0.0000, slack=0.4776, (1-cap)-slack=-0.4776  transfer-bound>0: False
+   k= 8: 1-cap=0.6185, slack=0.2774, (1-cap)-slack=+0.3411  transfer-bound>0: True
+   k= 9: 1-cap=0.5057, slack=0.1485, (1-cap)-slack=+0.3573  transfer-bound>0: True
+   k=10: 1-cap=0.3956, slack=0.0295, (1-cap)-slack=+0.3661  transfer-bound>0: True
+   k=11: 1-cap=0.2747, slack=0.0399, (1-cap)-slack=+0.2349  transfer-bound>0: True
+   k=12: 1-cap=0.1429, slack=-0.0512, (1-cap)-slack=+0.1940  transfer-bound>0: True
+   k=13: 1-cap=0.0000, slack=-0.1184, (1-cap)-slack=+0.1184  transfer-bound>0: True
+
+  READING: where (1-cap)-slack > 0, the chain  witness >= (1-p0)-slack >= (1-cap)-slack > 0
+  would give a POSITIVE witness floor FROM the sector cap p0<=cap PLUS a slack bound.
+  This is the ONLY way the sector route could feed the gap route: not directly, but if one
+  ALSO bounds the slack (= the measure of x where a sector is missed but no >1/7 gap forms,
+  i.e. the missed sectors are SCATTERED not contiguous).  That slack bound is a NEW lemma,
+  not implied by p0<=cap alone.
+
+========================================================================================================
+BOTTOM LINE (THREAD B):
+========================================================================================================
+  p0 (sector, 1/7 cover) and rho* (THM-527, 2/7 gap) are the SAME phi-phase object at
+  DIFFERENT thresholds.  Exact dictionary: w_theta = maxgap - 1/7, so
+      sector-missed (1/7 cover gap)  <->  maxgap > 1/7  = WITNESS floor (global witness)
+      THM-527 criterion              <->  maxgap > 2/7  = rho* (via-max criterion).
+  Containment: rho* <= witness <= 1-p0 (all on G_P).  The inequality points the WRONG way
+  for the sector CAP (p0<=cap upper-bounds p0, lower-bounds 1-p0, but the floors sit BELOW
+  1-p0).  So the closed sector route does NOT close THM-527; they are PARALLEL.
+  HOWEVER: the WITNESS floor (maxgap>1/7) is itself LRC-sufficient (global witness, finite-
+  Vmax-verified) and is STRICTLY LARGER than rho* (floor 0.0565 vs 1/84).  So THM-527's 2/7
+  object is sufficient-but-not-minimal; the easier 1/7 witness floor is the weaker target.

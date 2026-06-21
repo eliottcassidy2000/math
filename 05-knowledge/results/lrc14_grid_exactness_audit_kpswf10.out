@@ -1,0 +1,14 @@
+================================================================================
+EXACTNESS AUDIT: THREAD-B grid vs 10x-denser grid for {maxgap>1/7},{maxgap>2/7}
+================================================================================
+config             G1(B)   G1(dense)     G2(B)   G2(dense)  MATCH
+consec k=5       1.00000     1.00000   0.64286     0.64286   True
+consec k=7       1.00000     1.00000   0.39524     0.39524   True
+consec k=9       0.84014     0.84014   0.28265     0.28265   True
+perf k=7         1.00000     1.00000   0.37143     0.37143   True
+Sidon k=5        1.00000     1.00000   0.99629     0.99629   True
+two-block        1.00000     1.00000   0.69982     0.69982   True
+-----------------------------------------------------------------
+
+ALL grids agree exactly: True
+=> THREAD-B maxgap-threshold measures are CERTIFIED EXACT (grid captures all transitions).
