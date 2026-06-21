@@ -42,12 +42,12 @@ def lcm_list(xs):
 
 
 def doublet_config(k, w):
-    base = list(range(k - 1))  # 0..k-2
+    base = list(range(k - 2))  # 0..k-3 (k-2 elems; +doublet = k speeds)
     return tuple(sorted(set(base + [w, w + 1])))
 
 
 def test_periodicity(k, w0=15, verbose=True):
-    base = list(range(1, k - 1))  # nonzero base speeds 1..k-2
+    base = list(range(1, k - 2))  # nonzero base speeds 1..k-3
     P = 7 * lcm_list(base)
     # plateau: p0 at a large position; doublet far away -> decorrelated limit.
     # Use several large w to confirm stabilization of the PERIODIC pattern's mean.
