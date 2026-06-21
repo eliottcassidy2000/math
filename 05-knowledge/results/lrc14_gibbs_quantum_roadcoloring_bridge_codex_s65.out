@@ -1,0 +1,92 @@
+HYP-2702/HYP-2706 -- Gibbs/quantum/road-coloring bridge atlas
+Input: S65 sparse-tail death-chain band frontier.
+
+Loaded 72 sparse-coordinate frontier rows.
+
+PART A -- Gibbs which-band reweighting
+  beta=0 is the uniform seven-band theorem candidate.
+  beta>0 adversarially upweights negative-band debt.
+  rows=72, rows with negative bands=72
+    smallest beta*: 183.619629  size=3 C=(0, 5, 11) word=-++-++- delta=68/26411 (0.002574685)
+  most which-path fragile rows by negative/positive mass:
+    ratio=0.677 size=3 C=(0, 5, 12) word=-++-++- delta=300/117649 (0.002549958)
+    ratio=0.677 size=3 C=(0, 7, 12) word=-++-++- delta=300/117649 (0.002549958)
+    ratio=0.673 size=3 C=(0, 5, 11) word=-++-++- delta=68/26411 (0.002574685)
+    ratio=0.673 size=3 C=(0, 6, 11) word=-++-++- delta=68/26411 (0.002574685)
+    ratio=0.671 size=3 C=(0, 3, 8) word=-++-++- delta=44/16807 (0.002617957)
+  read: observing/reweighting the losing bands kills the proof; the
+        usable object is the uniform signed aggregate, not a Gibbs ground state.
+
+PART B -- Arnold cat map projective orbit
+  cat map A=[[2,1],[1,1]] over F7 torus cycle lengths={1: 1, 8: 6}
+  projective slope cycles: [[0, 4, 2, 6], [1, 3, 5, 'inf']]
+  rows with a negative cat-cycle sum=31/72
+  rows with a negative cat-cycle prefix=72/72
+  worst prefix=-6/2401 (-0.002498959) after index=0 at size=5 C=(0, 1, 3, 4, 6) word=-++-++- cycle=[0, 4, 2, 6]
+  worst cycle sum=-18780/9058973 (-0.002073083) at size=3 C=(0, 4, 11) cycle=[0, 4, 2, 6]
+  read: the cat map supplies a rigid hyperbolic cycle decomposition, but
+        cycle and prefix positivity are false; only the completed aggregate survives.
+
+PART C -- road-coloring deletion automaton
+  States are residual masks R subset {1,...,6}; letter a removes a from R.
+  This monotone automaton is not strongly connected, but its reset-word
+  counts are exactly the singleton death-chain kernel g_r(t).
+       t  shortest_reset  g_0      g_1      g_2      g_3      g_4
+       0        0              1       1       1       1       1
+       1        1              0     1/7   13/49 127/343 1105/2401
+       2        2              0       0    2/49  36/343  62/343
+       3        3              0       0       0   6/343 132/2401
+       4        4              0       0       0       0 24/2401
+       5        5              0       0       0       0       0
+       6        6              0       0       0       0       0
+  one global reset word for all 64 masks has length 6: (1, 2, 3, 4, 5, 6)
+  read: the road-coloring shadow is already the death-chain proof object;
+        it just lacks strong connectivity because deficit only decreases.
+
+PART D -- Hopfield/Hebbian band-sign memory
+  observed binary sign patterns=2, fixed observed patterns=1
+  observed pattern counts:
+    -++-++-: 48
+    -+++++-: 24
+  largest Hopfield basins over all 2^7 states:
+    attractor=+--+--+ basin=44
+    attractor=-++-++- basin=44
+    attractor=-----+- basin=1
+    attractor=----+-- basin=1
+    attractor=----+++ basin=1
+    attractor=---+-+- basin=1
+  read: the band debts have a small attractor alphabet, mainly -++-++-
+        and -+++++-, but attractor storage is descriptive, not a proof.
+
+PART E -- Fubini-Study distance on hit-count laws
+  FS distance range: min=0.036151 at size=3 C=(0, 1, 3); max=0.140723 at size=5 C=(0, 1, 2, 5, 6)
+  corr(FS distance, death-chain margin)=0.675197
+  read: projective distance is signal, but it does not encode the
+        signed kernel order; it cannot replace the death-chain inequality.
+
+PART F -- proof-quotient tournament
+  Vertices are proof carriers, not runners or arcs.
+  Observable=(frontier_failures, min_margin/proxy, predicate_fidelity, inspiration_signal).
+    miss_zeta_generated_magic: score=6, metric=(0, Fraction(20, 16807), 7, 8), note=keeps generated context phase before scalarizing
+    road_coloring_death_chain: score=5, metric=(0, Fraction(20, 16807), 6, 7), note=reset-word counts equal the singleton kernel exactly
+    Gibbs_uniform_band_sum: score=4, metric=(0, Fraction(20, 16807), 5, 7), note=beta=0 aggregate passes; beta>0 which-band bias can fail
+    Hopfield_band_attractor: score=3, metric=(71, Fraction(0, 1), 3, 7), note=stores the debt alphabet, does not prove the margin
+    hitcount_Fubini_Study_geometry: score=2, metric=(72, Fraction(0, 1), 2, 5), note=projective distance is useful signal but not an order
+    cat_map_prefix_orbit: score=1, metric=(72, Fraction(-6, 2401), 3, 6), note=hyperbolic projective cycles exist, but cycle/prefix positivity fails
+    which_path_abs_band_measure: score=0, metric=(192, Fraction(-33, 12005), 1, 5), note=double-slit measurement destroys interference by isolating bands
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  SCCs=[['miss_zeta_generated_magic'], ['road_coloring_death_chain'], ['Gibbs_uniform_band_sum'], ['Hopfield_band_attractor'], ['hitcount_Fubini_Study_geometry'], ['cat_map_prefix_orbit'], ['which_path_abs_band_measure']]
+  Hamiltonian_path_count=1
+  Clifford/magic read: coarse stabilizer-like quotients are tractable but
+  insufficient; the LRC sparse tail needs the generated signed context,
+  analogous to keeping the non-Clifford phase resource.
+
+SYNTHESIS
+  The external lenses are productive when they are used as quotient tests.
+  Gibbs and double-slit language says why measuring individual bands breaks
+  the proof. Road coloring exactly recovers the singleton death chain.
+  Cat-map and Hopfield structure expose the signed debt alphabet but do not
+  give prefix/local monotonicity. Fubini-Study geometry is a diagnostic, not
+  an order. The proof carrier remains miss-zeta generated context plus the
+  signed seven-band death-chain aggregate.

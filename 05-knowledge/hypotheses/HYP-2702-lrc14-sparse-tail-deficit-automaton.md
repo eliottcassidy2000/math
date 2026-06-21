@@ -177,3 +177,124 @@ frontier attached to HYP-2698's miss-zeta product word.
 
 No LRC14 proof is claimed.  The scout supports the generated-context basis
 route and identifies the singleton death-chain kernel as the first proof target.
+
+## S65 Death-Chain Band Addendum
+
+The follow-up scout
+`04-computation/lrc14_death_chain_band_automaton_codex_s65.py` stores its run
+in
+`05-knowledge/results/lrc14_death_chain_band_automaton_codex_s65.out`.
+It uses the S64 engine and decomposes the singleton death-chain margin into the
+seven HYP-2703 slope bands.
+
+The exact frontier result is sharper than the original target:
+
+```text
+72 sparse-coordinate frontier rows tested
+aggregate singleton death-chain failures: 0
+first-order hit-count stochastic-dominance failures: 72
+negative per-band cells: 192 / 504
+minimum aggregate margin: 20/16807 at size 3, C=(0,1,3)
+coherent context tests, including bounded-worst extras: 329, failures 0
+```
+
+So the first proof target is not first-order stochastic dominance of hit-count
+laws and not per-band monotonicity.  Both are false on every audited frontier
+row or on many band cells.  The correct statement is a signed seven-band
+death-chain inequality:
+
+```text
+sum_s band_delta_s(C) > 0,
+```
+
+followed by generated-context monotonicity.  The weakest coherent context is
+still the all-singleton partition, with equality only at `[1+1+...+1]`.
+
+The S65 bounded singleton slices also found no failures beyond the coordinate
+frontier:
+
+```text
+size 3 span<=13: 56 shapes, 0 failures
+size 4 span<=13: 261 shapes, 0 failures
+size 5 span<=9:  124 shapes, 0 failures
+size 6 span<=9:  125 shapes, 0 failures
+```
+
+The cellular-automaton sign examples make the obstruction legible.  The worst
+aggregate row has band word `-0+0+0-`: two slow negative bands are outweighed by
+two positive bands.  The most negative single band row has word `-++-++-`.
+Thus HYP-2702 now matches HYP-2703/HYP-2704: local proof routes fail, while the
+completed signed aggregate survives.
+
+## S65 Cross-Domain Quotient Atlas
+
+The second S65 scout
+`04-computation/lrc14_gibbs_quantum_roadcoloring_bridge_codex_s65.py` stores
+its run in
+`05-knowledge/results/lrc14_gibbs_quantum_roadcoloring_bridge_codex_s65.out`.
+It treats the user's Gibbs, Arnold cat map, road-coloring, Hopfield, double-slit
+amplitude, Fubini-Study, and Clifford/T-gate suggestions as quotient tests.
+
+The productive exact lemma is the road-coloring shadow.  Let states be residual
+masks `R subset {1,...,6}` and let letter `a` delete `a` from `R` when present.
+This monotone deletion automaton is not strongly connected, but its reset-word
+counts are exactly the singleton death-chain kernel:
+
+```text
+#{words of length r resetting a fixed t-mask}
+  = sum_{j=0}^t (-1)^j binom(t,j)(7-j)^r
+g_r(t) = 7^-r times this count.
+```
+
+This gives a short proof sketch for why the all-singleton context is the right
+first object: it is the random road-coloring reset probability of the deficit
+automaton.
+
+The other external lenses are useful mostly as guardrails:
+
+```text
+Gibbs which-band reweighting:
+  every row has negative bands; smallest beta* = 183.619629.
+  Any adversarial bias toward observed losing bands can kill positivity.
+
+Arnold cat map over F_7:
+  torus cycles {1:1, 8:6}; projective cycles [[0,4,2,6],[1,3,5,inf]].
+  31/72 rows have a negative cat-cycle sum, and 72/72 have a negative prefix.
+
+Hopfield/Hebbian memory:
+  only two binary band-sign patterns occur, `-++-++-` and `-+++++-`.
+  This is a descriptive attractor alphabet, not a proof.
+
+Fubini-Study hit-count geometry:
+  projective distance correlates with margin (corr 0.675197), but does not
+  encode the signed kernel order.
+
+Double-slit / Clifford-magic reading:
+  measuring individual bands destroys interference; HYP-2707's Clifford/magic
+  split says coarse stabilizer-like quotients are tractable but too lossy.
+  HYP-2702 needs the generated signed context, the analogue of retaining the
+  non-Clifford phase resource before scalarization.
+```
+
+Tournament Analysis after the cross-domain atlas again ranks proof quotients,
+not runners:
+
+```text
+miss_zeta_generated_magic
+> road_coloring_death_chain
+> Gibbs_uniform_band_sum
+> Hopfield_band_attractor
+> hitcount_Fubini_Study_geometry
+> cat_map_prefix_orbit
+> which_path_abs_band_measure
+```
+
+Fingerprint: `score_hist={0:1,1:1,2:1,3:1,4:1,5:1,6:1}`,
+`directed_3cycles=0`, singleton SCCs, and one Hamiltonian path.
+
+This addendum also resolves the "what are edges and vertices?" assumption
+challenge for this phase: vertices are not runners, arcs, bands alone, Gibbs
+states, or neural classes.  They are proof quotients of the generated deficit
+language.  The quotient must preserve the LRC predicate "generated context
+resets residual deficits before final scalar comparison" and must not measure
+which band carried the intermediate debt.
