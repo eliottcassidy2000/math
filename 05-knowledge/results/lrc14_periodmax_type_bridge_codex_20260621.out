@@ -1,0 +1,274 @@
+HYP-2790 period-max / Boolean-type bridge scout
+Exact fractions are used for Plat, margin, periodmax, and ratio.
+Diagnostic correlations are float summaries only.
+
+================================================================================================
+k=8: top_n_by_Plat=40, checked=36, skipped_period>30000=4
+consec_base=(0, 1, 2, 3, 4, 5, 6); Phi_low(consec_base)=6211/420; KPS3cut(consec_base)=305293925/765905868
+period inequality failures among checked: 0
+worst ratio: ratio=10.818767249 periodmax=2 margin=1087/5880 P=840 best_w=350 B=(0, 2, 4, 6, 8, 10, 12)
+
+Top checked rows by Plat:
+  B=(0, 1, 2, 3, 4, 5, 6)            Plat=0.196598639 margin=0.184863946 P=420    pm=1.000000000 ratio=5.409383625 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 2, 4, 6, 8, 10, 12)          Plat=0.196598639 margin=0.184863946 P=840    pm=2.000000000 ratio=10.818767249 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 8)            Plat=0.163435374 margin=0.218027211 P=840    pm=0.964285714 ratio=4.422776911 PhiSlack=3.738095238 KPS3def=0.041647347 Wtop2=-0.001190476 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10)           Plat=0.143537415 margin=0.237925170 P=840    pm=1.057142857 ratio=4.443173695 PhiSlack=6.290476190 KPS3def=0.076464092 Wtop2=-0.011904762 CLOSE
+  B=(0, 1, 3, 4, 5, 6, 9)            Plat=0.138321995 margin=0.243140590 P=1260   pm=0.980158730 ratio=4.031242714 PhiSlack=4.269047619 KPS3def=0.045387642 Wtop2=-0.012698413 CLOSE
+  B=(0, 1, 2, 3, 4, 6, 12)           Plat=0.137755102 margin=0.243707483 P=84     pm=0.738095238 ratio=3.028611305 PhiSlack=3.235714286 KPS3def=0.038081346 Wtop2=-0.004761905 CLOSE
+  B=(0, 2, 3, 4, 6, 8, 12)           Plat=0.136054422 margin=0.245408163 P=168    pm=0.940476190 ratio=3.832293832 PhiSlack=4.830952381 KPS3def=0.056707649 Wtop2=-0.010714286 CLOSE
+  B=(0, 1, 2, 4, 5, 6, 10)           Plat=0.134353741 margin=0.247108844 P=420    pm=1.038095238 ratio=4.200963524 PhiSlack=-0.673809524 KPS3def=0.044324714 Wtop2=-0.014285714 CLOSE
+  B=(0, 1, 4, 5, 6, 9, 10)           Plat=0.128571429 margin=0.252891156 P=1260   pm=1.228571429 ratio=4.858103564 PhiSlack=0.927777778 KPS3def=0.006165385 Wtop2=-0.015079365 CLOSE
+  B=(0, 2, 3, 5, 6, 8, 11)           Plat=0.127458256 margin=0.254004329 P=9240   pm=1.362554113 ratio=5.364294844 PhiSlack=-1.348376623 KPS3def=0.036835357 Wtop2=-0.012878788 CLOSE
+  B=(0, 3, 4, 5, 6, 8, 9)            Plat=0.126984127 margin=0.254478458 P=2520   pm=0.904761905 ratio=3.555357541 PhiSlack=1.743253968 KPS3def=0.031624927 Wtop2=-0.018650794 CLOSE
+  B=(0, 3, 5, 6, 8, 9, 11)           Plat=0.126396619 margin=0.255065966 P=27720  pm=1.760389610 ratio=6.901703271 PhiSlack=0.808297258 KPS3def=0.031602275 Wtop2=-0.013239538 CLOSE
+
+Top checked rows by period pressure ratio:
+  ratio=10.818767249 B=(0, 2, 4, 6, 8, 10, 12)          Plat=0.196598639 margin=0.184863946 pm=2.000000000 best_w=350 PhiSlack=0.000000000 KPS3def=0.000000000 W1=-0.002380952 W2=0.000000000 arcs=46
+  ratio=6.901703271 B=(0, 3, 5, 6, 8, 9, 11)           Plat=0.126396619 margin=0.255065966 pm=1.760389610 best_w=3633 PhiSlack=0.808297258 KPS3def=0.031602275 W1=-0.005988456 W2=-0.013239538 arcs=39
+  ratio=6.371336013 B=(0, 6, 8, 9, 10, 11, 12)         Plat=0.117383014 margin=0.264079571 pm=1.682539683 best_w=22120 PhiSlack=5.384920635 KPS3def=0.072861437 W1=-0.009740260 W2=-0.017676768 arcs=48
+  ratio=6.182416838 B=(0, 1, 2, 3, 11, 12, 13)         Plat=0.110924789 margin=0.270537796 pm=1.672577423 best_w=9387 PhiSlack=-0.135248085 KPS3def=0.009418348 W1=-0.012171162 W2=-0.022244422 arcs=43
+  ratio=5.830937894 B=(0, 5, 6, 8, 9, 10, 11)          Plat=0.107874665 margin=0.273587920 pm=1.595274170 best_w=4487 PhiSlack=1.296284271 KPS3def=0.052491420 W1=-0.014285714 W2=-0.025108225 arcs=37
+  ratio=5.606110797 B=(0, 3, 6, 8, 9, 11, 12)          Plat=0.116986188 margin=0.264476397 pm=1.482683983 best_w=5404 PhiSlack=4.197113997 KPS3def=0.034705189 W1=-0.012337662 W2=-0.020274170 arcs=41
+  ratio=5.470864184 B=(0, 2, 6, 8, 10, 11, 12)         Plat=0.107915894 margin=0.273546691 pm=1.496536797 best_w=5642 PhiSlack=3.042316017 KPS3def=0.058589539 W1=-0.015584416 W2=-0.027489177 arcs=38
+  ratio=5.410590264 B=(0, 1, 3, 4, 5, 9, 13)           Plat=0.115873016 margin=0.265589569 pm=1.436996337 best_w=14133 PhiSlack=1.797252747 KPS3def=0.081938425 W1=-0.009340659 W2=-0.016666667 arcs=33
+  ratio=5.409383625 B=(0, 1, 2, 3, 4, 5, 6)            Plat=0.196598639 margin=0.184863946 pm=1.000000000 best_w=175 PhiSlack=0.000000000 KPS3def=0.000000000 W1=0.000000000 W2=0.000000000 arcs=23
+  ratio=5.364294844 B=(0, 2, 3, 5, 6, 8, 11)           Plat=0.127458256 margin=0.254004329 pm=1.362554113 best_w=2786 PhiSlack=-1.348376623 KPS3def=0.036835357 W1=-0.006926407 W2=-0.012878788 arcs=34
+  ratio=5.337831212 B=(0, 1, 5, 6, 9, 10, 11)          Plat=0.118697176 margin=0.262765409 pm=1.402597403 best_w=2940 PhiSlack=1.325324675 KPS3def=0.033362772 W1=-0.008369408 W2=-0.014718615 arcs=35
+  ratio=5.268021279 B=(0, 1, 4, 5, 9, 10, 13)          Plat=0.113413571 margin=0.268049014 pm=1.412087912 best_w=378 PhiSlack=2.897802198 KPS3def=0.047621341 W1=-0.014285714 W2=-0.024358974 arcs=38
+
+Diagnostic Pearson correlations with ratio(B)=periodmax/margin:
+  plat         : +0.3610
+  margin       : -0.3610
+  phi_slack    : -0.2936
+  kps3_deficit : -0.3512
+  w_leak_top1  : +0.0041
+  w_leak_top2  : +0.1833
+  w_leak_total : +0.2907
+  arc_count    : +0.6556
+  period       : +0.3973
+  least-squares ratio ~ -0.168526*PhiSlack + +5.406389
+
+Tournament Analysis over explanatory lenses
+  vertices: periodmax_ratio, plat_margin, boolean_type_slack, kps_containment_cut, sorted_cell_leak, endpoint_arc_count, raw_endpoint_period
+  pairwise observable: stronger absolute correlation/pressure with ratio(B); tie by name
+  order=['periodmax_ratio', 'endpoint_arc_count', 'raw_endpoint_period', 'kps_containment_cut', 'boolean_type_slack', 'plat_margin', 'sorted_cell_leak']
+  score_hist={6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}; directed_3cycles=0; Hamiltonian_paths=1
+
+================================================================================================
+k=9: top_n_by_Plat=40, checked=32, skipped_period>30000=8
+consec_base=(0, 1, 2, 3, 4, 5, 6, 7); Phi_low(consec_base)=5503/490; KPS3cut(consec_base)=481/1470
+period inequality failures among checked: 0
+worst ratio: ratio=13.280470214 periodmax=86/49 margin=129643/980980 P=5880 best_w=3318 B=(0, 2, 4, 6, 8, 10, 12, 14)
+
+Top checked rows by Plat:
+  B=(0, 1, 2, 3, 4, 5, 6, 7)         Plat=0.362099125 margin=0.132156619 P=2940   pm=0.877551020 ratio=6.640235107 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 2, 4, 6, 8, 10, 12, 14)      Plat=0.362099125 margin=0.132156619 P=5880   pm=1.755102041 ratio=13.280470214 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=-0.025850340 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8)         Plat=0.311564626 margin=0.182691118 P=5880   pm=1.237244898 ratio=6.772331949 PhiSlack=1.916666667 KPS3def=0.018654760 Wtop2=-0.023129252 CLOSE
+  B=(0, 2, 4, 6, 7, 8, 10, 12)       Plat=0.299319728 margin=0.194936016 P=5880   pm=1.523809524 ratio=7.816972729 PhiSlack=4.207823129 KPS3def=0.051480025 Wtop2=-0.031972789 CLOSE
+  B=(0, 1, 3, 4, 5, 6, 7, 9)         Plat=0.280336897 margin=0.213918848 P=8820   pm=1.444557823 ratio=6.752830989 PhiSlack=6.072902494 KPS3def=0.036379211 Wtop2=-0.037414966 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 14)        Plat=0.275024295 margin=0.219231449 P=2940   pm=1.189455782 ratio=5.425570960 PhiSlack=2.815986395 KPS3def=0.045392612 Wtop2=-0.050340136 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 8)         Plat=0.263265306 margin=0.230990438 P=840    pm=1.155952381 ratio=5.004330007 PhiSlack=2.394387755 KPS3def=0.000000000 Wtop2=-0.054591837 CLOSE
+  B=(0, 2, 4, 5, 6, 7, 8, 10)        Plat=0.262998056 margin=0.231257688 P=5880   pm=1.716618076 ratio=7.422966525 PhiSlack=5.660204082 KPS3def=0.052277506 Wtop2=-0.051530612 CLOSE
+  B=(0, 1, 2, 4, 5, 6, 7, 10)        Plat=0.262827988 margin=0.231427756 P=2940   pm=1.039067055 ratio=4.489811740 PhiSlack=1.916666667 KPS3def=0.029424521 Wtop2=-0.040136054 CLOSE
+  B=(0, 3, 4, 5, 6, 7, 8, 9)         Plat=0.262358277 margin=0.231897468 P=17640  pm=1.514285714 ratio=6.529979520 PhiSlack=4.520748299 KPS3def=0.026600324 Wtop2=-0.055839002 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10, 12)       Plat=0.254081633 margin=0.240174112 P=840    pm=1.721428571 ratio=7.167419336 PhiSlack=4.667006803 KPS3def=0.054093660 Wtop2=-0.056972789 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 12)        Plat=0.253401361 margin=0.240854384 P=420    pm=1.007142857 ratio=4.181542564 PhiSlack=3.086054422 KPS3def=0.017233482 Wtop2=-0.048639456 CLOSE
+
+Top checked rows by period pressure ratio:
+  ratio=13.280470214 B=(0, 2, 4, 6, 8, 10, 12, 14)      Plat=0.362099125 margin=0.132156619 pm=1.755102041 best_w=3318 PhiSlack=0.000000000 KPS3def=0.000000000 W1=-0.017687075 W2=-0.025850340 arcs=56
+  ratio=9.482823139 B=(0, 4, 6, 7, 8, 9, 10, 12)       Plat=0.244541626 margin=0.249714118 pm=2.367994817 best_w=5122 PhiSlack=6.783219955 KPS3def=0.057651316 W1=-0.035941043 W2=-0.062471655 arcs=56
+  ratio=8.709531830 B=(0, 2, 4, 6, 8, 10, 11, 12)      Plat=0.238651824 margin=0.255603920 pm=2.226190476 best_w=1358 PhiSlack=3.991141002 KPS3def=0.035733554 W1=-0.043722944 W2=-0.072340754 arcs=56
+  ratio=7.816972729 B=(0, 2, 4, 6, 7, 8, 10, 12)       Plat=0.299319728 margin=0.194936016 pm=1.523809524 best_w=1190 PhiSlack=4.207823129 KPS3def=0.051480025 W1=-0.022619048 W2=-0.031972789 arcs=46
+  ratio=7.678897226 B=(0, 2, 4, 6, 8, 9, 10, 12)       Plat=0.241553288 margin=0.252702456 pm=1.940476190 best_w=1190 PhiSlack=3.956689342 KPS3def=0.046054965 W1=-0.034523810 W2=-0.054988662 arcs=52
+  ratio=7.518972581 B=(0, 4, 6, 8, 9, 10, 12, 14)      Plat=0.234620991 margin=0.259634753 pm=1.952186589 best_w=4328 PhiSlack=5.229138322 KPS3def=0.062736322 W1=-0.040306122 W2=-0.067290249 arcs=61
+  ratio=7.471300345 B=(0, 2, 3, 4, 6, 8, 10, 12)       Plat=0.247278912 margin=0.246976833 pm=1.845238095 best_w=350 PhiSlack=3.680102041 KPS3def=0.036319843 W1=-0.036904762 W2=-0.060544218 arcs=46
+  ratio=7.422966525 B=(0, 2, 4, 5, 6, 7, 8, 10)        Plat=0.262998056 margin=0.231257688 pm=1.716618076 best_w=66 PhiSlack=5.660204082 KPS3def=0.052277506 W1=-0.030272109 W2=-0.051530612 arcs=43
+  ratio=7.167419336 B=(0, 2, 4, 5, 6, 8, 10, 12)       Plat=0.254081633 margin=0.240174112 pm=1.721428571 best_w=798 PhiSlack=4.667006803 KPS3def=0.054093660 W1=-0.034523810 W2=-0.056972789 arcs=46
+  ratio=7.152147271 B=(0, 2, 4, 5, 6, 8, 10, 14)       Plat=0.249295432 margin=0.244960312 pm=1.751992225 best_w=4912 PhiSlack=6.278571429 KPS3def=0.073603293 W1=-0.034353741 W2=-0.057142857 arcs=52
+  ratio=6.783355268 B=(0, 1, 2, 4, 6, 8, 10, 12)       Plat=0.245748299 margin=0.248507445 pm=1.685714286 best_w=518 PhiSlack=3.699149660 KPS3def=0.032033617 W1=-0.038095238 W2=-0.062925170 arcs=45
+  ratio=6.772331949 B=(0, 2, 3, 4, 5, 6, 7, 8)         Plat=0.311564626 margin=0.182691118 pm=1.237244898 best_w=5265 PhiSlack=1.916666667 KPS3def=0.018654760 W1=-0.013265306 W2=-0.023129252 arcs=34
+
+Diagnostic Pearson correlations with ratio(B)=periodmax/margin:
+  plat         : +0.4965
+  margin       : -0.4965
+  phi_slack    : -0.2605
+  kps3_deficit : -0.0576
+  w_leak_top1  : +0.1872
+  w_leak_top2  : +0.2276
+  w_leak_total : +0.3616
+  arc_count    : +0.7331
+  period       : +0.3459
+  least-squares ratio ~ -0.282047*PhiSlack + +7.481178
+
+Tournament Analysis over explanatory lenses
+  vertices: periodmax_ratio, plat_margin, boolean_type_slack, kps_containment_cut, sorted_cell_leak, endpoint_arc_count, raw_endpoint_period
+  pairwise observable: stronger absolute correlation/pressure with ratio(B); tie by name
+  order=['periodmax_ratio', 'endpoint_arc_count', 'plat_margin', 'raw_endpoint_period', 'boolean_type_slack', 'sorted_cell_leak', 'kps_containment_cut']
+  score_hist={6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}; directed_3cycles=0; Hamiltonian_paths=1
+
+================================================================================================
+k=10: top_n_by_Plat=40, checked=30, skipped_period>30000=10
+consec_base=(0, 1, 2, 3, 4, 5, 6, 7, 8); Phi_low(consec_base)=17657/1960; KPS3cut(consec_base)=15256612321/53613410760
+period inequality failures among checked: 0
+worst ratio: ratio=9.780629637 periodmax=67/35 margin=4987/25480 P=5880 best_w=1638 B=(0, 2, 4, 5, 6, 8, 10, 12, 14)
+
+Top checked rows by Plat:
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8)      Plat=0.447886297 margin=0.156509307 P=5880   pm=1.027551020 ratio=6.565430772 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 2, 4, 6, 7, 8, 10, 12, 14)   Plat=0.438386783 margin=0.166008821 P=5880   pm=1.442176871 ratio=8.687350835 PhiSlack=3.031632653 KPS3def=0.063307858 Wtop2=-0.015136054 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 9)      Plat=0.438208617 margin=0.166186988 P=8820   pm=1.076190476 ratio=6.475780635 PhiSlack=1.848129252 KPS3def=0.015776105 Wtop2=0.009353741 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 10)     Plat=0.419825073 margin=0.184570532 P=2940   pm=1.080466472 ratio=5.853948967 PhiSlack=2.083843537 KPS3def=0.025885467 Wtop2=-0.005272109 CLOSE
+  B=(0, 2, 3, 4, 6, 8, 10, 12, 14)   Plat=0.409742468 margin=0.194653136 P=5880   pm=1.534013605 ratio=7.880754645 PhiSlack=2.011054422 KPS3def=0.044936085 Wtop2=-0.041836735 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 12)     Plat=0.409426628 margin=0.194968977 P=2940   pm=0.942662779 ratio=4.834937311 PhiSlack=3.479761905 KPS3def=0.033199071 Wtop2=-0.013435374 CLOSE
+  B=(0, 2, 4, 5, 6, 8, 10, 12, 14)   Plat=0.408673469 margin=0.195722135 P=5880   pm=1.914285714 ratio=9.780629637 PhiSlack=2.657653061 KPS3def=0.055366599 Wtop2=-0.036394558 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 14)     Plat=0.403352770 margin=0.201042835 P=2940   pm=1.282993197 ratio=6.381690743 PhiSlack=2.177380952 KPS3def=0.046087606 Wtop2=-0.016836735 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 10)     Plat=0.399052478 margin=0.205343126 P=5880   pm=1.338313897 ratio=6.517451650 PhiSlack=2.739455782 KPS3def=0.028886365 Wtop2=-0.012585034 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 9)      Plat=0.398129252 margin=0.206266353 P=17640  pm=1.317460317 ratio=6.387179975 PhiSlack=2.181859410 KPS3def=0.015901310 Wtop2=-0.007936508 CLOSE
+  B=(0, 2, 4, 6, 8, 9, 10, 12, 14)   Plat=0.397683835 margin=0.206711769 P=17640  pm=2.013605442 ratio=9.741126266 PhiSlack=2.825510204 KPS3def=0.053388089 Wtop2=-0.037244898 CLOSE
+  B=(0, 1, 2, 4, 6, 8, 10, 12, 14)   Plat=0.392395530 margin=0.212000075 P=5880   pm=1.624489796 ratio=7.662685015 PhiSlack=2.426020408 KPS3def=0.037939139 Wtop2=-0.041836735 CLOSE
+
+Top checked rows by period pressure ratio:
+  ratio=9.780629637 B=(0, 2, 4, 5, 6, 8, 10, 12, 14)   Plat=0.408673469 margin=0.195722135 pm=1.914285714 best_w=1638 PhiSlack=2.657653061 KPS3def=0.055366599 W1=-0.022789116 W2=-0.036394558 arcs=55
+  ratio=9.741126266 B=(0, 2, 4, 6, 8, 9, 10, 12, 14)   Plat=0.397683835 margin=0.206711769 pm=2.013605442 best_w=17430 PhiSlack=2.825510204 KPS3def=0.053388089 W1=-0.021768707 W2=-0.037244898 arcs=58
+  ratio=8.687350835 B=(0, 2, 4, 6, 7, 8, 10, 12, 14)   Plat=0.438386783 margin=0.166008821 pm=1.442176871 best_w=3710 PhiSlack=3.031632653 KPS3def=0.063307858 W1=-0.010544218 W2=-0.015136054 arcs=53
+  ratio=8.684826941 B=(0, 2, 4, 6, 7, 8, 9, 10, 12)    Plat=0.371315193 margin=0.233080412 pm=2.024263039 best_w=2602 PhiSlack=4.338095238 KPS3def=0.048995018 W1=-0.014342404 W2=-0.021031746 arcs=54
+  ratio=7.928027960 B=(0, 1, 3, 4, 5, 6, 7, 9, 10)     Plat=0.368756074 margin=0.235639531 pm=1.868156787 best_w=5350 PhiSlack=5.690873016 KPS3def=0.030469687 W1=-0.016156463 W2=-0.022619048 arcs=42
+  ratio=7.880754645 B=(0, 2, 3, 4, 6, 8, 10, 12, 14)   Plat=0.409742468 margin=0.194653136 pm=1.534013605 best_w=3710 PhiSlack=2.011054422 KPS3def=0.044936085 W1=-0.026020408 W2=-0.041836735 arcs=53
+  ratio=7.662685015 B=(0, 1, 2, 4, 6, 8, 10, 12, 14)   Plat=0.392395530 margin=0.212000075 pm=1.624489796 best_w=3318 PhiSlack=2.426020408 KPS3def=0.037939139 W1=-0.023639456 W2=-0.041836735 arcs=53
+  ratio=7.519810368 B=(0, 2, 4, 5, 6, 7, 8, 10, 12)    Plat=0.391520894 margin=0.212874710 pm=1.600777454 best_w=5176 PhiSlack=4.090306122 KPS3def=0.052808445 W1=-0.025850340 W2=-0.039285714 arcs=47
+  ratio=7.275195411 B=(0, 2, 4, 5, 6, 7, 8, 10, 14)    Plat=0.348323615 margin=0.256071989 pm=1.862973761 best_w=2952 PhiSlack=5.380612245 KPS3def=0.070652905 W1=-0.027721088 W2=-0.046258503 arcs=57
+  ratio=6.910366577 B=(0, 2, 4, 5, 6, 7, 8, 9, 10)     Plat=0.349570781 margin=0.254824824 pm=1.760932945 best_w=5472 PhiSlack=4.018140590 KPS3def=0.032112023 W1=-0.017346939 W2=-0.032936508 arcs=47
+  ratio=6.787755461 B=(0, 2, 3, 4, 5, 6, 8, 12, 14)    Plat=0.349076774 margin=0.255318831 pm=1.733041788 best_w=3076 PhiSlack=5.392517007 KPS3def=0.059821264 W1=-0.029421769 W2=-0.050170068 arcs=51
+  ratio=6.694925091 B=(0, 2, 3, 4, 5, 6, 7, 8, 12)     Plat=0.378984451 margin=0.225411153 pm=1.509110787 best_w=3585 PhiSlack=4.591836735 KPS3def=0.048218023 W1=-0.026020408 W2=-0.041326531 arcs=39
+
+Diagnostic Pearson correlations with ratio(B)=periodmax/margin:
+  plat         : +0.3675
+  margin       : -0.3675
+  phi_slack    : -0.0335
+  kps3_deficit : +0.4088
+  w_leak_top1  : -0.0579
+  w_leak_top2  : +0.0041
+  w_leak_total : +0.1339
+  arc_count    : +0.6924
+  period       : +0.2792
+  least-squares ratio ~ -0.033671*PhiSlack + +6.772990
+
+Tournament Analysis over explanatory lenses
+  vertices: periodmax_ratio, plat_margin, boolean_type_slack, kps_containment_cut, sorted_cell_leak, endpoint_arc_count, raw_endpoint_period
+  pairwise observable: stronger absolute correlation/pressure with ratio(B); tie by name
+  order=['periodmax_ratio', 'endpoint_arc_count', 'plat_margin', 'kps_containment_cut', 'raw_endpoint_period', 'boolean_type_slack', 'sorted_cell_leak']
+  score_hist={6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}; directed_3cycles=0; Hamiltonian_paths=1
+
+================================================================================================
+k=11: top_n_by_Plat=30, checked=22, skipped_period>30000=8
+consec_base=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9); Phi_low(consec_base)=141161/17640; KPS3cut(consec_base)=4002378241/16084023228
+period inequality failures among checked: 0
+worst ratio: ratio=8.540749517 periodmax=439/245 margin=2291/10920 P=5880 best_w=136 B=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14)
+
+Top checked rows by Plat:
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)   Plat=0.531252025 margin=0.194022701 P=17640  pm=1.315306122 ratio=6.779135215 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10)  Plat=0.522740525 margin=0.202534200 P=5880   pm=1.059766764 ratio=5.232532388 PhiSlack=-0.289399093 KPS3def=0.009462449 Wtop2=-0.005782313 CLOSE
+  B=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.515476190 margin=0.209798535 P=5880   pm=1.791836735 ratio=8.540749517 PhiSlack=1.756689342 KPS3def=0.053485800 Wtop2=-0.034183673 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10)  Plat=0.511321672 margin=0.213953054 P=8820   pm=1.317201166 ratio=6.156496218 PhiSlack=0.939285714 KPS3def=0.010692606 Wtop2=-0.001417234 CLOSE
+  B=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14) Plat=0.504081633 margin=0.221193093 P=17640  pm=1.712244898 ratio=7.740951029 PhiSlack=1.981349206 KPS3def=0.053540892 Wtop2=-0.033503401 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12)  Plat=0.499878523 margin=0.225396202 P=5880   pm=0.862827988 ratio=3.828050247 PhiSlack=2.039512472 KPS3def=0.026890260 Wtop2=-0.027210884 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12) Plat=0.498615160 margin=0.226659565 P=5880   pm=1.460058309 ratio=6.441635541 PhiSlack=1.813151927 KPS3def=0.032276841 Wtop2=-0.033163265 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12)  Plat=0.496436670 margin=0.228838055 P=8820   pm=1.265370910 ratio=5.529547558 PhiSlack=2.602777778 KPS3def=0.027447594 Wtop2=-0.019671202 CLOSE
+  B=(0, 2, 3, 4, 6, 7, 8, 10, 12, 14) Plat=0.491569485 margin=0.233705240 P=5880   pm=1.689261419 ratio=7.228170906 PhiSlack=1.312131519 KPS3def=0.044724605 Wtop2=-0.044727891 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14)  Plat=0.489990282 margin=0.235284443 P=5880   pm=1.367857143 ratio=5.813631887 PhiSlack=1.053287982 KPS3def=0.034791295 Wtop2=-0.029761905 CLOSE
+  B=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12) Plat=0.489674441 margin=0.235600284 P=17640  pm=1.193148688 ratio=5.064292230 PhiSlack=1.834580499 KPS3def=0.034442101 Wtop2=-0.012528345 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)  Plat=0.488459670 margin=0.236815056 P=17640  pm=1.328279883 ratio=5.608933433 PhiSlack=1.179421769 KPS3def=0.013602657 Wtop2=-0.015532880 CLOSE
+
+Top checked rows by period pressure ratio:
+  ratio=8.540749517 B=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.515476190 margin=0.209798535 pm=1.791836735 best_w=136 PhiSlack=1.756689342 KPS3def=0.053485800 W1=-0.022165533 W2=-0.034183673 arcs=48
+  ratio=7.740951029 B=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14) Plat=0.504081633 margin=0.221193093 pm=1.712244898 best_w=8482 PhiSlack=1.981349206 KPS3def=0.053540892 W1=-0.016893424 W2=-0.033503401 arcs=52
+  ratio=7.228170906 B=(0, 2, 3, 4, 6, 7, 8, 10, 12, 14) Plat=0.491569485 margin=0.233705240 pm=1.689261419 best_w=2770 PhiSlack=1.312131519 KPS3def=0.044724605 W1=-0.027947846 W2=-0.044727891 arcs=46
+  ratio=6.974235982 B=(0, 2, 3, 4, 6, 8, 9, 10, 12, 14) Plat=0.470205701 margin=0.255069024 pm=1.778911565 best_w=3710 PhiSlack=3.182879819 KPS3def=0.052987721 W1=-0.038605442 W2=-0.065249433 arcs=54
+  ratio=6.779135215 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)   Plat=0.531252025 margin=0.194022701 pm=1.315306122 best_w=11991 PhiSlack=0.000000000 KPS3def=0.000000000 W1=0.000000000 W2=0.000000000 arcs=29
+  ratio=6.441635541 B=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12) Plat=0.498615160 margin=0.226659565 pm=1.460058309 best_w=1233 PhiSlack=1.813151927 KPS3def=0.032276841 W1=-0.018083900 W2=-0.033163265 arcs=35
+  ratio=6.156496218 B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10)  Plat=0.511321672 margin=0.213953054 pm=1.317201166 best_w=5976 PhiSlack=0.939285714 KPS3def=0.010692606 W1=0.006009070 W2=-0.001417234 arcs=31
+  ratio=5.894972574 B=(0, 1, 2, 4, 6, 7, 8, 10, 12, 14) Plat=0.478255588 margin=0.247019137 pm=1.456171040 best_w=4772 PhiSlack=3.678117914 KPS3def=0.050306794 W1=-0.025907029 W2=-0.049319728 arcs=47
+  ratio=5.813631887 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 14)  Plat=0.489990282 margin=0.235284443 pm=1.367857143 best_w=1911 PhiSlack=1.053287982 KPS3def=0.034791295 W1=-0.015022676 W2=-0.029761905 arcs=32
+  ratio=5.608933433 B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10)  Plat=0.488459670 margin=0.236815056 pm=1.328279883 best_w=4212 PhiSlack=1.179421769 KPS3def=0.013602657 W1=-0.006235828 W2=-0.015532880 arcs=35
+  ratio=5.596953138 B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 12)  Plat=0.488265306 margin=0.237009419 pm=1.326530612 best_w=15345 PhiSlack=2.709467120 KPS3def=0.032158222 W1=-0.012131519 W2=-0.019274376 arcs=37
+  ratio=5.529547558 B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 12)  Plat=0.496436670 margin=0.228838055 pm=1.265370910 best_w=5242 PhiSlack=2.602777778 KPS3def=0.027447594 W1=-0.007369615 W2=-0.019671202 arcs=35
+
+Diagnostic Pearson correlations with ratio(B)=periodmax/margin:
+  plat         : +0.4676
+  margin       : -0.4676
+  phi_slack    : -0.2728
+  kps3_deficit : +0.2700
+  w_leak_top1  : -0.0745
+  w_leak_top2  : -0.0689
+  w_leak_total : +0.0792
+  arc_count    : +0.4971
+  period       : +0.2541
+  least-squares ratio ~ -0.306801*PhiSlack + +6.340391
+
+Tournament Analysis over explanatory lenses
+  vertices: periodmax_ratio, plat_margin, boolean_type_slack, kps_containment_cut, sorted_cell_leak, endpoint_arc_count, raw_endpoint_period
+  pairwise observable: stronger absolute correlation/pressure with ratio(B); tie by name
+  order=['periodmax_ratio', 'plat_margin', 'endpoint_arc_count', 'boolean_type_slack', 'kps_containment_cut', 'raw_endpoint_period', 'sorted_cell_leak']
+  score_hist={6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}; directed_3cycles=0; Hamiltonian_paths=1
+
+================================================================================================
+k=12: top_n_by_Plat=30, checked=15, skipped_period>30000=15
+consec_base=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10); Phi_low(consec_base)=55217/8820; KPS3cut(consec_base)=35723820469/160840232280
+period inequality failures among checked: 0
+worst ratio: ratio=5.882824906 periodmax=17597/10290 margin=2393/8232 P=17640 best_w=5122 B=(0, 2, 3, 4, 6, 7, 8, 9, 10, 12, 14)
+
+Top checked rows by Plat:
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) Plat=0.602243278 margin=0.254899579 P=17640  pm=1.186005831 ratio=4.652835584 PhiSlack=0.000000000 KPS3def=0.000000000 Wtop2=0.000000000 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.594727891 margin=0.262414966 P=5880   pm=1.146938776 ratio=4.370706416 PhiSlack=1.137188209 KPS3def=0.037954203 Wtop2=-0.025793651 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12) Plat=0.593415938 margin=0.263726919 P=5880   pm=0.942857143 ratio=3.575126670 PhiSlack=0.734126984 KPS3def=0.014941809 Wtop2=-0.027324263 CLOSE
+  B=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14) Plat=0.592217363 margin=0.264925494 P=17640  pm=1.540071267 ratio=5.813224101 PhiSlack=1.094331066 KPS3def=0.039641747 Wtop2=-0.015362812 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) Plat=0.590937804 margin=0.266205053 P=17640  pm=0.962585034 ratio=3.615953272 PhiSlack=1.408616780 KPS3def=0.020864574 Wtop2=-0.008163265 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12) Plat=0.587941367 margin=0.269201490 P=17640  pm=0.973048267 ratio=3.614572365 PhiSlack=1.420181406 KPS3def=0.016907747 Wtop2=-0.026077098 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 12) Plat=0.572594752 margin=0.284548105 P=8820   pm=1.069322967 ratio=3.757969035 PhiSlack=1.568140590 KPS3def=0.012770937 Wtop2=-0.021825397 CLOSE
+  B=(0, 2, 3, 4, 6, 7, 8, 9, 10, 12, 14) Plat=0.566448008 margin=0.290694849 P=17640  pm=1.710106900 ratio=5.882824906 PhiSlack=1.855555556 KPS3def=0.039563036 Wtop2=-0.053684807 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) Plat=0.566156463 margin=0.290986395 P=17640  pm=1.371428571 ratio=4.713033314 PhiSlack=2.043480726 KPS3def=0.032190819 Wtop2=-0.029478458 CLOSE
+  B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 14) Plat=0.561516035 margin=0.295626822 P=5880   pm=1.084256560 ratio=3.667652860 PhiSlack=1.668310658 KPS3def=0.034095018 Wtop2=-0.022222222 CLOSE
+  B=(0, 1, 2, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.560349854 margin=0.296793003 P=5880   pm=1.345821186 ratio=4.534544859 PhiSlack=1.908446712 KPS3def=0.035517415 Wtop2=-0.053344671 CLOSE
+  B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14) Plat=0.557183350 margin=0.299959508 P=17640  pm=1.389504373 ratio=4.632306488 PhiSlack=2.251984127 KPS3def=0.036248097 Wtop2=-0.041383220 CLOSE
+
+Top checked rows by period pressure ratio:
+  ratio=5.882824906 B=(0, 2, 3, 4, 6, 7, 8, 9, 10, 12, 14) Plat=0.566448008 margin=0.290694849 pm=1.710106900 best_w=5122 PhiSlack=1.855555556 KPS3def=0.039563036 W1=-0.028571429 W2=-0.053684807 arcs=42
+  ratio=5.813224101 B=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14) Plat=0.592217363 margin=0.264925494 pm=1.540071267 best_w=136 PhiSlack=1.094331066 KPS3def=0.039641747 W1=-0.011451247 W2=-0.015362812 arcs=41
+  ratio=5.002046185 B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 14) Plat=0.552389051 margin=0.304753806 pm=1.524392614 best_w=2112 PhiSlack=2.517630385 KPS3def=0.038147297 W1=-0.016496599 W2=-0.029705215 arcs=42
+  ratio=4.713033314 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 14) Plat=0.566156463 margin=0.290986395 pm=1.371428571 best_w=1911 PhiSlack=2.043480726 KPS3def=0.032190819 W1=-0.015079365 W2=-0.029478458 arcs=33
+  ratio=4.652835584 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) Plat=0.602243278 margin=0.254899579 pm=1.186005831 best_w=14796 PhiSlack=0.000000000 KPS3def=0.000000000 W1=0.000000000 W2=0.000000000 arcs=26
+  ratio=4.632306488 B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 12, 14) Plat=0.557183350 margin=0.299959508 pm=1.389504373 best_w=8956 PhiSlack=2.251984127 KPS3def=0.036248097 W1=-0.022392290 W2=-0.041383220 arcs=42
+  ratio=4.534544859 B=(0, 1, 2, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.560349854 margin=0.296793003 pm=1.345821186 best_w=4546 PhiSlack=1.908446712 KPS3def=0.035517415 W1=-0.029421769 W2=-0.053344671 arcs=38
+  ratio=4.370706416 B=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.594727891 margin=0.262414966 pm=1.146938776 best_w=2073 PhiSlack=1.137188209 KPS3def=0.037954203 W1=-0.013605442 W2=-0.025793651 arcs=37
+  ratio=3.757969035 B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 12) Plat=0.572594752 margin=0.284548105 pm=1.069322967 best_w=2410 PhiSlack=1.568140590 KPS3def=0.012770937 W1=-0.007369615 W2=-0.021825397 arcs=28
+  ratio=3.668552036 B=(0, 1, 2, 4, 5, 6, 7, 8, 9, 10, 12) Plat=0.556462585 margin=0.300680272 pm=1.103061224 best_w=918 PhiSlack=1.777664399 KPS3def=0.018489618 W1=-0.013378685 W2=-0.022505669 arcs=35
+  ratio=3.667652860 B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 14) Plat=0.561516035 margin=0.295626822 pm=1.084256560 best_w=516 PhiSlack=1.668310658 KPS3def=0.034095018 W1=-0.008673469 W2=-0.022222222 arcs=33
+  ratio=3.615953272 B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) Plat=0.590937804 margin=0.266205053 pm=0.962585034 best_w=2415 PhiSlack=1.408616780 KPS3def=0.020864574 W1=-0.002607710 W2=-0.008163265 arcs=29
+
+Diagnostic Pearson correlations with ratio(B)=periodmax/margin:
+  plat         : +0.0198
+  margin       : -0.0198
+  phi_slack    : +0.0742
+  kps3_deficit : +0.4963
+  w_leak_top1  : -0.2195
+  w_leak_top2  : -0.1748
+  w_leak_total : -0.2358
+  arc_count    : +0.7114
+  period       : +0.4656
+  least-squares ratio ~ +0.096691*PhiSlack + +4.163843
+
+Tournament Analysis over explanatory lenses
+  vertices: periodmax_ratio, plat_margin, boolean_type_slack, kps_containment_cut, sorted_cell_leak, endpoint_arc_count, raw_endpoint_period
+  pairwise observable: stronger absolute correlation/pressure with ratio(B); tie by name
+  order=['periodmax_ratio', 'endpoint_arc_count', 'plat_margin', 'kps_containment_cut', 'raw_endpoint_period', 'sorted_cell_leak', 'boolean_type_slack']
+  score_hist={6: 1, 5: 1, 4: 1, 3: 1, 2: 1, 1: 1, 0: 1}; directed_3cycles=0; Hamiltonian_paths=1
+
+================================================================================================
+Cross-k synthesis
+checked rows total=135
+period inequality failures total=0
+global worst checked ratio=13.280470214 B=(0, 2, 4, 6, 8, 10, 12, 14) k=9 periodmax=86/49 margin=129643/980980
+
+Working verdict:
+  If boolean_type_slack has strong negative correlation with pressure, HYP-2790
+  gets a plausible finite-ledger route. If not, the endpoint-period numerator
+  should be treated as its own coordinate rather than forced through HYP-2751.

@@ -1,3 +1,11 @@
+## codex-2026-06-21 -- HYP-2790 period-max / Boolean-type bridge tested; reroutes to endpoint/Dedekind coordinate
+
+Continued the LRC14 proof session after incoming THM-563/HYP-2788/HYP-2792.  Built and ran `04-computation/lrc14_periodmax_type_bridge_codex_20260621.py`, which evaluates the THM-563 endpoint-period maximum using exact integer numerators on the common `7*period` grid (centering constants cancel in every arc difference).  Used the canonical cap table `2243/5880,1979/4004,55/91,66/91,6/7,1`; noted that some incoming helper scans still used old `cap_10=4/7`, conservative but stale.
+
+Result: among `135` checked high-plateau bounded bases k=8..12, `0` failures of `periodmax(B)<15*(cap_k-Plat(B))`.  Global checked worst is the k=9 AP dilation `(0,2,4,6,8,10,12,14)`, with `periodmax=86/49`, `margin=129643/980980`, ratio `13.280470214<15`.  Worst ratios by k: `10.8188,13.2805,9.7806,8.5407,5.8828`.
+
+Verdict: HYP-2790's attractive scalar bridge is weak/refuted.  Boolean/type and KPS containment deficits vanish on AP dilations and have unstable correlations on non-AP rows; endpoint arc count is the stable pressure coordinate (`corr` roughly `0.50..0.73`).  The next proof carrier should be the endpoint-period numerator / signed generalized Dedekind sum of HYP-2792, not another Boolean/type scalar.  Added result index entry and reflection `07-reflections/lrc14-periodmax-boolean-type-bridge-codex-20260621.md`.  Assumption challenge recorded: vertices tested included bases, type atoms, containment atoms, sorted cells, endpoint arcs, and proof-lens tournaments; the quotient that preserves the single-far predicate is the endpoint-arc orbit under multiplication by `w`.
+
 ## mac-mini-2026-06-21-S6 — THM-563: the signed single-far bound is a FINITE PERIODIC MAX (sidesteps HYP-2784's 125× absolute wall); combines with kps HYP-2788 → wide-region closure path
 Dispatch: push hard on the LRC proof, generate creative angles, push hypotheses LIVE, integrate other agents in real time, reroute. High-velocity session (~12 pushes).
 **THE WALL (team, HYP-2784):** the wide/single-far bound is ~125× lossy via ANY absolute (BV/Koksma/V) bound; the obstruction is SIGNED CANCELLATION ("mac-mini gap #1").

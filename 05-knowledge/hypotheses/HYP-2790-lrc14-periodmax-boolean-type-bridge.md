@@ -1,7 +1,7 @@
 ---
 id: HYP-2790
 title: THM-563 bounded-base period maxima should be explainable by Boolean/type cut slack
-status: OPEN; claimed synthesis target, computation underway
+status: TESTED; Boolean/type scalar bridge weak, endpoint-period coordinate survives
 source: codex-2026-06-21
 depends_on:
   - THM-563
@@ -12,6 +12,7 @@ depends_on:
 related:
   - HYP-2780
   - HYP-2781
+  - HYP-2792
   - HYP-2770
   - HYP-2744
   - THM-534
@@ -59,6 +60,66 @@ The first goal is not to prove the inequality.  It is to determine whether the
 top period-max pressure rows form a small family already visible to the
 Boolean/type quotient, sorted-cell leak quotient, or affine gap-word quotient.
 
+## Result: Scalar Bridge Refuted, Endpoint Coordinate Promoted
+
+The exact scout
+`04-computation/lrc14_periodmax_type_bridge_codex_20260621.py` uses the
+`THM-563` endpoint identity but evaluates the period scan by integer numerators
+on the common `7*period` grid, since the centering constants cancel in every
+arc difference.  It uses the canonical cap table
+
+```text
+cap_8..13 = 2243/5880, 1979/4004, 55/91, 66/91, 6/7, 1.
+```
+
+The checked high-plateau bounded bases gave:
+
+```text
+k=8: 36 checked, 0 failures, worst ratio 10.818767 at (0,2,4,6,8,10,12)
+k=9: 32 checked, 0 failures, worst ratio 13.280470 at (0,2,4,6,8,10,12,14)
+k=10: 30 checked, 0 failures, worst ratio 9.780630 at (0,2,4,5,6,8,10,12,14)
+k=11: 22 checked, 0 failures, worst ratio 8.540750 at (0,2,4,5,6,7,8,10,12,14)
+k=12: 15 checked, 0 failures, worst ratio 5.882825 at (0,2,3,4,6,7,8,9,10,12,14)
+```
+
+Total: `135` checked rows, `0` failures of
+`periodmax(B)<15*(cap_k-Plat(B))`.  The global checked pressure is the k=9 AP
+dilation, where Boolean/type and containment deficits are exactly zero.  This
+is correct behavior for a dilation-invariant quotient, but it also means these
+quotients cannot by themselves explain the period numerator.
+
+For non-AP rows, the diagnostic correlations point away from the
+Boolean/type scalar:
+
+```text
+k=8:  corr(ratio,arc_count)=+0.6556, corr(ratio,KPS3def)=-0.3512
+k=9:  corr(ratio,arc_count)=+0.7331, corr(ratio,KPS3def)=-0.0576
+k=10: corr(ratio,arc_count)=+0.6924, corr(ratio,KPS3def)=+0.4088
+k=11: corr(ratio,arc_count)=+0.4971, corr(ratio,KPS3def)=+0.2700
+k=12: corr(ratio,arc_count)=+0.7114, corr(ratio,KPS3def)=+0.4963
+```
+
+The signs and strengths are not stable enough for a finite Boolean/type slack
+certificate.  The surviving coordinate is the endpoint-period numerator itself:
+arc count, endpoint period, and the signed sawtooth/Dedekind sum in `HYP-2792`.
+
+## Proof Consequence
+
+This does not close the single-far bounded-base finite check.  It narrows the
+right proof object.  A plausible proof should not try to force
+`periodmax(B)` through the HYP-2791/HYP-2752 Boolean/type cut.  Instead, prove a
+uniform signed endpoint-period estimate, likely a generalized Dedekind
+reciprocity bound of the form
+
+```text
+periodmax(B) <= C(B)
+```
+
+where `C(B)` is controlled by the signed endpoint orbit, arc pairing, or
+reciprocity data and then compare `C(B)` with `15*(cap_k-Plat(B))`.  The
+Boolean/type quotient remains useful for bounded plateau/cap certification; it
+is not the natural carrier for the single-far oscillatory numerator.
+
 ## Why This Is Not A Duplicate
 
 `HYP-2791` is a full k=8 bounded-row atom-run-type certificate.  `HYP-2752`
@@ -84,3 +145,9 @@ runner arcs.  The quotient preserves missed-sector cyclic shape and endpoint
 period pressure; it destroys speed ownership inside wall atoms and the full
 Fourier phase distribution.  If the test fails, the likely missing coordinate
 is the endpoint-period numerator itself, not another scalar energy statistic.
+
+This is now exactly what the scout indicates.  Alternate vertices considered:
+bounded bases, endpoint arcs, missing-sector type atoms, containment atoms,
+sorted cell widths, and explanatory-lens tournament nodes.  The quotient
+preserved enough to recognize AP/dilation extremals but destroyed the phase
+ordering of endpoints under multiplication by `w`.
