@@ -23,6 +23,8 @@ User asked to integrate a batch of speculative prompts - Gibbs measures, Arnold 
 
 **Proof fragments:** recorded the projective projection identity, the general Hilbert-space deviation bound `|L(psi)-L(phi)| <= 2 ||L|| sin(d_FS(psi,phi)/2)`, and the residual deletion synchronizer lemma. The next sharp obligation is now explicit: define a normalized mod-7 phase profile `psi_E`, prove a number-theoretic upper bound on `d_FS(psi_E,psi_0)` in terms of relation height / Freiman dimension / far gaps, and make the resulting signed deviation smaller than the HYP-2701 two-far boundary margin. Low magic-rank exceptions should route to the existing AP, cube-root, Freiman, and squarefree-crossing atlases. LRC(14) still not proved.
 
+**Post-rebase signal integrated:** incoming HYP-2706 strengthens the basis warning: signed seven-band death-chain aggregates pass on the sparse frontier while per-band and FOSD quotients fail. Incoming HYP-2707 makes the Clifford/T analogy precise for tournaments: score is degree 1, `c3` is degree 2 and Clifford/Gauss-sum tractable, while `c5`, higher OCF layers, and `H` are higher-degree magic. The LRC analogue should be a phase-degree or stabilizer-rank measure of mod-7 relation corrections, not raw relation count. The formal-group n-fold sum result adds a useful diagonalization/pole-caveat template for repeated update kernels.
+
 ## kind-pasteur-2026-06-20-S21 -- The apex-prime partition function: tournaments and runners are ONE gas; LRC wide-residual = single-block (converged w/ codex THM-557)
 
 Dispatch: extend the partition-function insight (THM-554/555), integrate repo concepts, finalize LRC creatively, think abstractly about what things represent.

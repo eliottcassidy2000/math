@@ -243,6 +243,32 @@ phase errors that keep the true row from behaving like the free quotient.
    THM-557 supplies the single-block floor; OPEN-Q-108 is exactly the remaining
    correction aggregation.
 
+## Incoming Mainline Signal After Rebase
+
+While this note was being committed, three relevant mainline additions landed.
+They sharpen the route rather than competing with it.
+
+* **HYP-2706 / death-chain band automaton:** singleton death-chain margins stay
+  positive on the sparse-coordinate frontier, but first-order hit-count
+  dominance and per-band monotonicity fail.  This is exactly the warning
+  HYP-2705 needs: the projective phase profile must preserve signed band data
+  until the final aggregate comparison.
+
+* **HYP-2707 / tournament Clifford-magic hierarchy:** the Clifford/T analogy is
+  now precise on the tournament side.  Score data is degree `1` in tile bits,
+  `c3` is degree `2` and Gauss-sum/Clifford tractable, while `c5`, higher OCF
+  layers, and `H` are higher-degree magic.  HYP-2705 imports this as a template
+  for LRC: the decorrelated cut-space quotient is stabilizer data; signed
+  relation/cycle corrections are the magic resource.  The LRC "magic rank"
+  should therefore measure polynomial/phase degree or stabilizer rank of the
+  mod-7 relation profile, not raw relation count.
+
+* **Formal-group n-fold sum:** the machine-checked Cayley transform identity
+  `Q(Fsum)=prod Q(a_i)` and unconditional `E+-O=prod(1+-a_i)` split offer a
+  clean algebraic model for diagonalizing repeated update kernels.  The
+  interior-pole caveat is a useful guardrail for LRC: a global denominator
+  condition is not enough if a suffix/partial transfer hits a pole.
+
 ## Tournament Analysis
 
 Vertices are proof lenses, not runners or arcs:

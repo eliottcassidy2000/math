@@ -46,6 +46,15 @@ or projective-angle bound: high magic rank should decorrelate, low magic rank
 should be finite and routed to AP, cube-root, Freiman, and squarefree-crossing
 atlases.
 
+The post-rebase HYP-2707 makes that paragraph much less speculative: on the
+tournament side, score is degree `1`, `c3` is degree `2` and Clifford/Gauss-sum
+tractable, while `c5`, higher OCF layers, and `H` are higher-degree magic.  The
+right LRC analogue of magic rank should therefore measure degree/support of the
+mod-7 phase correction, not raw relation count.  HYP-2706 gives the matching
+death-chain warning: signed seven-band aggregate margins pass, while per-band
+and FOSD quotients fail.  HYP-2705 should keep signed band and phase data until
+the last margin comparison.
+
 The next sharp statement is therefore:
 
 ```text
