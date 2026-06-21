@@ -1,0 +1,124 @@
+LRC14 cell-width majorization scout (codex S75)
+
+== k=8, span<=15, full-residue shapes=528 ==
+consec W sorted = ['8/105', '89/1470', '17/294', '13/294', '13/294', '13/294']
+consec measS7 = 481/1470 (0.327210884)
+fixed cyclic cell-window violations (not dilation-invariant):
+  L=1: count=10, worst_gain=11/588, start=1, E=(0, 2, 3, 4, 5, 6, 7, 8), dtotal=-3/56
+  L=2: count=3, worst_gain=11/735, start=1, E=(0, 2, 4, 6, 8, 10, 12, 14), dtotal=-3/98
+  L=3: count=1, worst_gain=13/2940, start=1, E=(0, 2, 4, 6, 8, 10, 12, 14), dtotal=-3/98
+  L=4: count=1, worst_gain=4/735, start=5, E=(0, 2, 4, 6, 8, 10, 12, 14), dtotal=-3/98
+  L=5: none
+sorted top-L width violations (dilation-safe multiset quotient):
+  top1: none
+  top2: none
+  top3: none
+  top4: none
+  top5: none
+
+== k=9, span<=14, full-residue shapes=688 ==
+consec W sorted = ['523/5880', '15/196', '11/168', '19/294', '73/1176', '43/735']
+consec measS7 = 2447/5880 (0.416156463)
+fixed cyclic cell-window violations (not dilation-invariant):
+  L=1: count=25, worst_gain=79/3528, start=1, E=(0, 2, 3, 4, 5, 6, 7, 8, 9), dtotal=-493/8820
+  L=2: count=6, worst_gain=1/49, start=6, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  L=3: count=3, worst_gain=31/2205, start=5, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  L=4: count=2, worst_gain=47/4410, start=4, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  L=5: none
+sorted top-L width violations (dilation-safe multiset quotient):
+  top1: count=1, worst_gain=5/392, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  top2: count=1, worst_gain=11/1176, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  top3: count=1, worst_gain=37/4410, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  top4: count=1, worst_gain=11/2205, E=(0, 1, 2, 3, 4, 5, 6, 7, 9), dtotal=-17/1176
+  top5: none
+  leak detail E=(0, 1, 2, 3, 4, 5, 6, 7, 9): W=['43/588', '12/245', '569/8820', '3/49', '23/441', '299/2940']
+    sorted index 1: point_delta=5/392, prefix_delta=5/392
+    sorted index 2: point_delta=-1/294, prefix_delta=11/1176
+    sorted index 3: point_delta=-17/17640, prefix_delta=37/4410
+    sorted index 4: point_delta=-1/294, prefix_delta=11/2205
+    sorted index 5: point_delta=-5/504, prefix_delta=-29/5880
+    sorted index 6: point_delta=-1/105, prefix_delta=-17/1176
+
+== k=10, span<=14, full-residue shapes=832 ==
+consec W sorted = ['977/8820', '7/72', '71/882', '67/882', '247/3528', '247/3528']
+consec measS7 = 8899/17640 (0.504478458)
+fixed cyclic cell-window violations (not dilation-invariant):
+  L=1: count=59, worst_gain=229/17640, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 12, 14), dtotal=-1357/17640
+  L=2: count=14, worst_gain=23/1176, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12), dtotal=-703/17640
+  L=3: count=5, worst_gain=47/3528, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12), dtotal=-703/17640
+  L=4: count=4, worst_gain=53/4410, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12), dtotal=-703/17640
+  L=5: count=1, worst_gain=29/8820, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10), dtotal=-187/17640
+sorted top-L width violations (dilation-safe multiset quotient):
+  top1: count=1, worst_gain=53/8820, E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10), dtotal=-151/5880
+  top2: none
+  top3: none
+  top4: none
+  top5: none
+  leak detail E=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10): W=['22/245', '79/1470', '139/1764', '47/630', '41/630', '103/882']
+    sorted index 1: point_delta=53/8820, prefix_delta=53/8820
+    sorted index 2: point_delta=-131/17640, prefix_delta=-5/3528
+    sorted index 3: point_delta=-1/588, prefix_delta=-11/3528
+    sorted index 4: point_delta=-1/735, prefix_delta=-79/17640
+    sorted index 5: point_delta=-29/5880, prefix_delta=-83/8820
+    sorted index 6: point_delta=-41/2520, prefix_delta=-151/5880
+
+== k=11, span<=14, full-residue shapes=620 ==
+consec W sorted = ['37/294', '41/360', '863/8820', '38/441', '209/2520', '1319/17640']
+consec measS7 = 3419/5880 (0.581462585)
+fixed cyclic cell-window violations (not dilation-invariant):
+  L=1: count=102, worst_gain=391/17640, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 14), dtotal=-389/5880
+  L=2: count=19, worst_gain=23/1176, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 14), dtotal=-389/5880
+  L=3: count=8, worst_gain=499/38808, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12), dtotal=-171/2695
+  L=4: count=3, worst_gain=41/4410, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 13), dtotal=-682/9555
+  L=5: none
+sorted top-L width violations (dilation-safe multiset quotient):
+  top1: none
+  top2: none
+  top3: none
+  top4: none
+  top5: none
+
+== k=12, span<=14, full-residue shapes=292 ==
+consec W sorted = ['421/3234', '689/5544', '863/8820', '103/1078', '2407/27720', '209/2520']
+consec measS7 = 119843/194040 (0.617620078)
+fixed cyclic cell-window violations (not dilation-invariant):
+  L=1: count=144, worst_gain=3727/229320, start=5, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14), dtotal=-2183/48510
+  L=2: count=58, worst_gain=43/1848, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11, 12, 14), dtotal=-691/13860
+  L=3: count=33, worst_gain=459/21560, start=3, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 12, 13), dtotal=-19729/840840
+  L=4: count=24, worst_gain=16763/630630, start=2, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 12, 13, 14), dtotal=-2183/48510
+  L=5: count=10, worst_gain=967/48510, start=5, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), dtotal=31/1980
+sorted top-L width violations (dilation-safe multiset quotient):
+  top1: none
+  top2: count=1, worst_gain=409/194040, E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14), dtotal=-247/21560
+  top3: count=1, worst_gain=131/10780, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), dtotal=31/1980
+  top4: count=1, worst_gain=51/5390, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), dtotal=31/1980
+  top5: count=1, worst_gain=899/64680, E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12), dtotal=31/1980
+  leak detail E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12): W=['317/2520', '83/980', '1/9', '23/252', '13/140', '25/196']
+    sorted index 1: point_delta=-17/6468, prefix_delta=-17/6468
+    sorted index 2: point_delta=1/660, prefix_delta=-3/2695
+    sorted index 3: point_delta=13/980, prefix_delta=131/10780
+    sorted index 4: point_delta=-29/10780, prefix_delta=51/5390
+    sorted index 5: point_delta=41/9240, prefix_delta=899/64680
+    sorted index 6: point_delta=31/17640, prefix_delta=31/1980
+  leak detail E=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12, 14): W=['6253/48510', '58/735', '999/10780', '29/330', '53/588', '563/4410']
+    sorted index 1: point_delta=-31/24255, prefix_delta=-31/24255
+    sorted index 2: point_delta=73/21560, prefix_delta=409/194040
+    sorted index 3: point_delta=-251/48510, prefix_delta=-17/5544
+    sorted index 4: point_delta=-5/924, prefix_delta=-47/5544
+    sorted index 5: point_delta=29/27720, prefix_delta=-103/13860
+    sorted index 6: point_delta=-71/17640, prefix_delta=-247/21560
+
+Tournament Analysis over proof lenses
+pair observable = (affine_safe, pins_ap, finite_leaks, formal_ready, composes_with_wide)
+ranking:
+  relation_marginal_bound: score=7, observable=(3, 3, 2, 2, 3)
+  one_sink_compensation: score=6, observable=(3, 2, 3, 1, 3)
+  sorted_cell_majorization: score=5, observable=(3, 2, 2, 2, 3)
+  conductance_bottleneck: score=4, observable=(3, 2, 1, 2, 2)
+  residue_affine_moments: score=3, observable=(3, 0, 0, 2, 1)
+  win_disconnected_split: score=2, observable=(2, 1, 1, 2, 1)
+  fixed_cyclic_windows: score=1, observable=(1, 1, 1, 2, 1)
+  per_cell_reflection: score=0, observable=(1, 0, 0, 3, 0)
+score histogram = {0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1}
+directed 3-cycles = 0
+Hamiltonian path count = 1
