@@ -1,0 +1,133 @@
+
+================================================================================================
+(0) The duals: g(t), factorial y, Krawtchouk c.  Verify c>=0 (Delsarte) & L_y forms agree.
+================================================================================================
+  k=8: g(t)=['1', '0', '0', '1/10', '0', '0', '1']
+       c_j=['1/16', '0', '1/40', '0', '3/80', '0', '0']  all c>=0:True  nonzero-j:[0, 2, 4]
+       g-roots (t with g(t)=0): [1, 2, 4, 5]   tight cells (g=1[t=0]): [0, 1, 2, 4, 5]
+  k=9: g(t)=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+       c_j=['1/12', '1/72', '1/36', '1/48', '0', '0', '0']  all c>=0:True  nonzero-j:[0, 1, 2, 3]
+       g-roots (t with g(t)=0): [2, 3, 6]   tight cells (g=1[t=0]): [0, 2, 3, 6]
+  k=10: g(t)=['1', '5/18', '0', '0', '1/9', '1/6', '0']
+       c_j=['1/12', '1/72', '1/36', '1/48', '0', '0', '0']  all c>=0:True  nonzero-j:[0, 1, 2, 3]
+       g-roots (t with g(t)=0): [2, 3, 6]   tight cells (g=1[t=0]): [0, 2, 3, 6]
+  k=11: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+       c_j=['1/8', '1/24', '1/24', '0', '0', '0', '0']  all c>=0:True  nonzero-j:[0, 1, 2]
+       g-roots (t with g(t)=0): [3, 4]   tight cells (g=1[t=0]): [0, 3, 4]
+  k=12: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+       c_j=['1/8', '1/24', '1/24', '0', '0', '0', '0']  all c>=0:True  nonzero-j:[0, 1, 2]
+       g-roots (t with g(t)=0): [3, 4]   tight cells (g=1[t=0]): [0, 3, 4]
+  k=13: g(t)=['1', '1/2', '1/6', '0', '0', '1/6', '1/2']
+       c_j=['1/8', '1/24', '1/24', '0', '0', '0', '0']  all c>=0:True  nonzero-j:[0, 1, 2]
+       g-roots (t with g(t)=0): [3, 4]   tight cells (g=1[t=0]): [0, 3, 4]
+
+================================================================================================
+(1) KRAWTCHOUK-MOMENT EXTREMALITY: does consec maximize each binding M_j(E)?
+================================================================================================
+  For each k, the binding moments are j with c_j>0.  We sweep bounded spread and
+  report, per binding j, whether consec is the max of M_j (and the # of beaters).
+
+  k=8  (maxE<=16, 11440 sets):  binding j=[2, 4]
+    M_2: consec=6.12109  windowmax=6.12109  consec_is_max=True  beaters=0  (argmax=consec)
+    M_4: consec=3.80544  windowmax=3.80544  consec_is_max=True  beaters=0  (argmax=consec)
+    L_y: consec=0.35823  windowmax=0.35823  consec_is_max=True  beaters=0  cap=0.38146  L_y(consec)<=cap:True
+
+  k=9  (maxE<=15, 6435 sets):  binding j=[1, 2, 3]
+    M_1: consec=3.23741  windowmax=3.41122  consec_is_max=False  beaters=29  (argmax=[0, 2, 4, 6, 7, 8, 10, 12, 14])
+    M_2: consec=7.36463  windowmax=7.36463  consec_is_max=True  beaters=0  (argmax=consec)
+    M_3: consec=7.68027  windowmax=7.68027  consec_is_max=True  beaters=0  (argmax=consec)
+    L_y: consec=0.49288  windowmax=0.49288  consec_is_max=True  beaters=0  cap=0.49426  L_y(consec)<=cap:True
+
+  k=10  (maxE<=14, 2002 sets):  binding j=[1, 2, 3]
+    M_1: consec=3.61383  windowmax=3.83946  consec_is_max=False  beaters=75  (argmax=[0, 2, 4, 5, 6, 7, 8, 10, 12, 14])
+    M_2: consec=8.52381  windowmax=8.52381  consec_is_max=True  beaters=0  (argmax=consec)
+    M_3: consec=9.58957  windowmax=9.58957  consec_is_max=True  beaters=0  (argmax=consec)
+    L_y: consec=0.57008  windowmax=0.57008  consec_is_max=True  beaters=0  cap=0.60440  L_y(consec)<=cap:True
+
+  k=11  (maxE<=13, 286 sets):  binding j=[1, 2]
+    M_1: consec=3.91927  windowmax=4.01310  consec_is_max=False  beaters=27  (argmax=[0, 1, 2, 3, 4, 5, 6, 7, 9, 12, 13])
+    M_2: consec=9.47392  windowmax=9.47392  consec_is_max=True  beaters=0  (argmax=consec)
+    L_y: consec=0.68305  windowmax=0.68441  consec_is_max=False  beaters=1  cap=0.72527  L_y(consec)<=cap:True
+
+================================================================================================
+(2) COMPLEMENTARY SLACKNESS: consec's occupancy p_t vs the dual binding set.
+================================================================================================
+  Dual tight cells = {t: g(t)=1[t=0]}.  LP-optimal primal supported there.
+  We list consec p_t, mark which cells are slack (g(t)>1[t=0]), and the mass consec
+  puts on slack cells (= why L_y(consec) exceeds measS7(consec)).
+
+  k=8: consec p_t = ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+       float p_t   = [0.3272, 0.2442, 0.1701, 0.1061, 0.081, 0.051, 0.0204]
+       tight cells=[0, 1, 2, 4, 5]  slack cells=[3, 6]
+       consec mass on slack cells = 0.12653  (p_t on slack: [(3, 0.1061), (6, 0.0204)])
+       => consec saturates LP support? (zero mass on slack): False
+
+  k=9: consec p_t = ['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+       float p_t   = [0.4162, 0.2221, 0.1378, 0.0939, 0.0663, 0.0459, 0.0179]
+       tight cells=[0, 2, 3, 6]  slack cells=[1, 4, 5]
+       consec mass on slack cells = 0.33435  (p_t on slack: [(1, 0.2221), (4, 0.0663), (5, 0.0459)])
+       => consec saturates LP support? (zero mass on slack): False
+
+  k=10: consec p_t = ['8899/17640', '551/2940', '127/1176', '145/1764', '55/882', '5/126', '1/63']
+       float p_t   = [0.5045, 0.1874, 0.108, 0.0822, 0.0624, 0.0397, 0.0159]
+       tight cells=[0, 2, 3, 6]  slack cells=[1, 4, 5]
+       consec mass on slack cells = 0.28946  (p_t on slack: [(1, 0.1874), (4, 0.0624), (5, 0.0397)])
+       => consec saturates LP support? (zero mass on slack): False
+
+  k=11: consec p_t = ['3419/5880', '1283/8820', '827/8820', '661/8820', '3/56', '23/630', '1/70']
+       float p_t   = [0.5815, 0.1455, 0.0938, 0.0749, 0.0536, 0.0365, 0.0143]
+       tight cells=[0, 3, 4]  slack cells=[1, 2, 5, 6]
+       consec mass on slack cells = 0.29002  (p_t on slack: [(1, 0.1455), (2, 0.0938), (5, 0.0365), (6, 0.0143)])
+       => consec saturates LP support? (zero mass on slack): False
+
+  k=12: consec p_t = ['121103/194040', '2039/16170', '3517/38808', '223/3465', '19/385', '5/154', '1/77']
+       float p_t   = [0.6241, 0.1261, 0.0906, 0.0644, 0.0494, 0.0325, 0.013]
+       tight cells=[0, 3, 4]  slack cells=[1, 2, 5, 6]
+       consec mass on slack cells = 0.26218  (p_t on slack: [(1, 0.1261), (2, 0.0906), (5, 0.0325), (6, 0.013)])
+       => consec saturates LP support? (zero mass on slack): False
+
+  k=13: consec p_t = ['14573/21560', '1061/10780', '2119/27720', '431/6930', '69/1540', '1/33', '1/84']
+       float p_t   = [0.6759, 0.0984, 0.0764, 0.0622, 0.0448, 0.0303, 0.0119]
+       tight cells=[0, 3, 4]  slack cells=[1, 2, 5, 6]
+       consec mass on slack cells = 0.21707  (p_t on slack: [(1, 0.0984), (2, 0.0764), (5, 0.0303), (6, 0.0119)])
+       => consec saturates LP support? (zero mass on slack): False
+
+================================================================================================
+(3) LP TIGHTNESS: gap L_y(consec) - measS7(consec), decomposed over slack cells.
+================================================================================================
+  L_y - measS7 = sum_t g(t)p_t - p_0 = sum_{t>=1} g(t)p_t  (since g(0)=1).
+  This is the EXACT non-tightness.  measS7=L_y iff p_t=0 for all t>=1 with g(t)>0.
+
+  k=8: measS7=0.32721  L_y=0.35823  gap=0.03102=38/1225
+       gap contributions g(t)p_t (t>=1): [(3, '13/1225'), (6, '1/49')]
+       tight at consec (gap=0)? False
+
+  k=9: measS7=0.41616  L_y=0.49288  gap=0.07672=29/378
+       gap contributions g(t)p_t (t>=1): [(1, '653/10584'), (4, '13/1764'), (5, '3/392')]
+       tight at consec (gap=0)? False
+
+  k=10: measS7=0.50448  L_y=0.57008  gap=0.06560=2083/31752
+       gap contributions g(t)p_t (t>=1): [(1, '551/10584'), (4, '55/7938'), (5, '5/756')]
+       tight at consec (gap=0)? False
+
+  k=11: measS7=0.58146  L_y=0.68305  gap=0.10159=32/315
+       gap contributions g(t)p_t (t>=1): [(1, '1283/17640'), (2, '827/52920'), (5, '23/3780'), (6, '1/140')]
+       tight at consec (gap=0)? False
+
+  k=12: measS7=0.62411  L_y=0.71417  gap=0.09006=104849/1164240
+       gap contributions g(t)p_t (t>=1): [(1, '2039/32340'), (2, '3517/232848'), (5, '5/924'), (6, '1/154')]
+       tight at consec (gap=0)? False
+
+  k=13: measS7=0.67593  L_y=0.74888  gap=0.07295=84937/1164240
+       gap contributions g(t)p_t (t>=1): [(1, '1061/21560'), (2, '2119/166320'), (5, '1/198'), (6, '1/168')]
+       tight at consec (gap=0)? False
+
+================================================================================================
+(4) ANTI-MDS: relation min-distance d(E) vs L_y(E) -- does d=2 (anti-MDS) max L_y?
+================================================================================================
+
+  k=8: consec d=2  L_y(consec)=0.35823
+       d=2: max L_y=0.35823 at [0, 1, 2, 3, 4, 5, 6, 7]
+       d=3: max L_y=0.12162 at [0, 1, 4, 7, 9, 10, 13, 16]
+
+  k=9: consec d=2  L_y(consec)=0.49288

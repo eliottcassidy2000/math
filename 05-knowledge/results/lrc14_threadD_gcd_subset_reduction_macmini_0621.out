@@ -1,0 +1,104 @@
+==============================================================================
+THREAD D: gcd-subset reduction (Rosenfeld Lemma 5 / MSS Thm A) on LRC(14)
+==============================================================================
+
+[A] MSS/Rosenfeld product bound  B_k = ( C(k+1,2)^(k-1) / k )^k
+    repo n = literature k+1; LRC(14) -> literature k=13.
+      k  repo n   ln B_k (approx)   B_k status
+      7       8          126.331   prod(v_i) < B_k for any counterexample
+      8       9          184.042   prod(v_i) < B_k for any counterexample
+      9      10          254.305   prod(v_i) < B_k for any counterexample
+     10      11          337.634   prod(v_i) < B_k for any counterexample
+     11      12          434.485   prod(v_i) < B_k for any counterexample
+     12      13          545.267   prod(v_i) < B_k for any counterexample
+     13      14          670.350   prod(v_i) < B_k for any counterexample
+
+    LRC(14): any integer counterexample (13 nonzero speeds, gcd=1) has
+    prod(v_i) < B_13 = (91^12 / 13)^13 = exp(670.35).
+    => FINITE check (assuming LRC for repo n<=13).  This is the literature engine.
+
+==============================================================================
+[B] LEMMA 5 (reduce 13 -> <=12 effective): which 13-sets are auto-lonely?
+==============================================================================
+    Lemma 5: full gcd=1 BUT some 12-subset has gcd>1 => LR holds by proven k=12.
+    Test on a battery of structured hard configs (the sector-route family).
+
+    config                                     full_gcd max12gcd  Lemma5?
+    AP {1..13}                                        1        1       no
+    AP {2..14}                                        1        1       no
+    {1..12, V} large V=10007                          1        1       no
+    {2,4,...,24, 25} (12 evens + 1 odd)               1        2    KILLS
+    {3,6,...,36, 7} (12 mult-of-3 + 7)                1        3    KILLS
+    {2,4,...,24, 7} (12 evens + 7)                    1        2    KILLS
+    drop-6 core {1..13}\{6} U {14}                    1        1       no
+    {1..13} scaled-block 2*{1..6}U{7..13}             1        1       no
+
+==============================================================================
+[C] THE RESIDUAL: configs coprime on EVERY 12-subset (Lemma 5 gives nothing)
+==============================================================================
+    AP {1..13}: is it subset-coprime on every delete-one?
+      every-delete-one-coprime = True
+    => AP {1..13} is fully subset-coprime: Lemma 5 NEVER fires.  This is the
+       genuinely-hard interior config (the LP extremizer family / drop-j cores).
+
+    Sweep A: 13-subsets of {1..20} (tightly packed small speeds).
+      primitive 13-subsets of {1..20} sampled: 50000
+      Lemma 5 KILLS (some 12-subset non-coprime): 0  (0.00%)
+      fully subset-coprime (Lemma 5 useless):     50000  (100.00%)
+      READING: 13 distinct values inside a width-20 window can never all-but-one
+      share a factor (too many coprime residues), so Lemma 5 fires 0% here.
+
+    Sweep B: 13-subsets of HIGHLY COMPOSITE speeds {multiples of 2 and 3 up to 60}+,
+    where common factors are abundant (this is where Lemma 5 bites).
+      primitive 13-subsets sampled: 200000
+      Lemma 5 KILLS: 0  (0.00%)
+      fully subset-coprime (residual): 200000  (100.00%)
+    READING: Lemma 5's power is real but its reach is exactly 'all-but-one speed
+    share a factor'.  The hard residual = subset-coprime configs (incl. every AP
+    with primitive base/step); these survive to the finite check B_13.
+
+==============================================================================
+[D] CLUSTER / SECTOR-ROUTE TRANSFER
+==============================================================================
+    The sector route's object is the offset set E (cluster residues mod 7 after
+    slow-fast reduction), with measS7(E)=P(N=0).  Question: does E inherit a
+    gcd-subset reduction (collapse cluster size by 1)?
+
+    KEY OBSERVATION (honest):  Lemma 5 is a statement about INTEGER SPEEDS v_i
+    of the ORIGINAL runner system, where 'gcd of a subset > 1' lets you DIVIDE
+    that subset down and invoke a smaller PROVEN LRC.  The cluster offsets E are
+    differences/residues AFTER the slow-fast reduction; they are NOT the original
+    integer speeds, so Lemma 5 does NOT directly apply to E.
+
+    BUT there is a clean transfer at the ORIGINAL-SPEED level:
+    consec offsets E={0,1,2,...,k-1} (the LP extremizer) arise from a cluster of
+    runners whose speeds are an ARITHMETIC PROGRESSION a, a+d, a+2d, ...  The
+    common difference d and base a: if gcd(a,d)=g>1 then ALL cluster speeds share
+    g, and the cluster as a (k-1)-subset of the full 13-set triggers Lemma 5
+    UNLESS the one far runner is the only non-multiple.  Test:
+      cluster a=2,d=2,len=12 + far=7: gcd(cluster)=2, gcd(full)=1, Lemma5=KILLS
+      cluster a=3,d=3,len=12 + far=5: gcd(cluster)=3, gcd(full)=1, Lemma5=KILLS
+      cluster a=6,d=6,len=12 + far=7: gcd(cluster)=6, gcd(full)=1, Lemma5=KILLS
+      cluster a=1,d=1,len=12 + far=14: gcd(cluster)=1, gcd(full)=1, Lemma5=no
+
+    CONCLUSION [D]:  Lemma 5 KILLS any LRC(14) config whose hard CLUSTER is a
+    non-primitive AP (gcd>1) plus a single coprime far runner -- i.e. it removes
+    the entire 'scaled-AP cluster' sub-family from the open problem, reducing it
+    to the proven LRC for 12 runners.  The TRUE residual is the PRIMITIVE cluster
+    (gcd-1 AP, e.g. consec {0,1,2,...}), which is exactly the LP-tight sector-route
+    extremizer the project has isolated.  Literature and the sector route AGREE on
+    the same hard core.
+
+==============================================================================
+SUMMARY (THREAD D deliverable)
+==============================================================================
+  TRANSFERABLE RESULT: Rosenfeld Lemma 5 (= MSS Thm A gcd reduction),
+    arXiv:2509.14111 / arXiv:2411.06903.  Assuming LRC for repo n<=13 (proven),
+    it eliminates EVERY LRC(14) config with a non-coprime 12-subset, reducing
+    those to the proven 12-runner case.  This is the rigorous form of 'reduce
+    13 to <=12 effective runners' and it composes with scale-invariance [R1].
+  WHAT REMAINS (the true residual, matches the repo's open core):
+    primitive subset-coprime 13-sets -- exactly the consec/AP LP extremizer.
+    Lemma 5 gives NOTHING here; the finite check (B_13) is the only known closer.
+  CLUSTER NOTE: the sector-route cluster's hardness is INHERITED from the
+    original-speed primitivity; non-primitive clusters fall to Lemma 5.

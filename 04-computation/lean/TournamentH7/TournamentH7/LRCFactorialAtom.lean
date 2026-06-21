@@ -154,6 +154,74 @@ theorem cheapScaled_tail45 :
     ∀ r : Fin 5, tail45 (cheapScaled r) = cheapTailTarget r := by
   native_decide
 
+/-! ### The Delsarte / moment-LP bound (THM-534, HYP-2726)
+
+The LRC(14) cover `p0 = q0` is bounded per-shape by a **Delsarte linear program**:
+`q0 <= L_y` whenever the dual `g(t) = sum_r y_r * C(t,r)` dominates `[t=0]` and the
+missed-count atom `q` is a genuine (nonnegative) distribution.  Here we formalize the
+`k=8` case, whose THM-534 dual `y = (1,-1,1,-9/10,3/5,0,0)` cleared by `*10` gives the
+integer covector `yK8 = (10,-10,10,-9,6,0,0)`.  Its dual readout collapses to the clean
+vector `g = (10,0,0,1,0,0,10)`, i.e. `L_y(q) = 10*q0 + q3 + 10*q6`. -/
+
+/-- Scaled (`*10`) integer moment-LP dual coefficients for `k=8` (THM-534). -/
+def yK8 : Fin atomCount -> Int := fun r =>
+  match r.val with
+  | 0 => 10
+  | 1 => -10
+  | 2 => 10
+  | 3 => -9
+  | 4 => 6
+  | _ => 0
+
+/-- The scaled Delsarte functional `L_y(q) = sum_r y_r * W_r(q)` (`= 10 *` THM-534's `L_y`). -/
+def LyK8 (q : Atom) : Int :=
+  (yK8 ⟨0, by decide⟩) * moment q ⟨0, by decide⟩
+  + (yK8 ⟨1, by decide⟩) * moment q ⟨1, by decide⟩
+  + (yK8 ⟨2, by decide⟩) * moment q ⟨2, by decide⟩
+  + (yK8 ⟨3, by decide⟩) * moment q ⟨3, by decide⟩
+  + (yK8 ⟨4, by decide⟩) * moment q ⟨4, by decide⟩
+  + (yK8 ⟨5, by decide⟩) * moment q ⟨5, by decide⟩
+  + (yK8 ⟨6, by decide⟩) * moment q ⟨6, by decide⟩
+
+/-- The dual readout `g(t) = sum_{r<=t} y_r * C(t,r)`; for the `k=8` dual it is the
+Krawtchouk-nonnegative vector `(10,0,0,1,0,0,10)` (HYP-2726a). -/
+def gK8 (t : Fin atomCount) : Int :=
+  sum7 fun r =>
+    if h : r < atomCount then
+      (if r <= t.val then yK8 ⟨r, h⟩ * chooseInt t.val r else 0)
+    else 0
+
+/-- The dual `g` is exactly `(10,0,0,1,0,0,10)` -- Delsarte dual feasibility,
+Krawtchouk-nonnegative, dominating `10*[t=0]`. -/
+theorem gK8_values :
+    ∀ t : Fin atomCount,
+      gK8 t = (if t.val = 0 then 10 else if t.val = 3 then 1 else if t.val = 6 then 10 else 0) := by
+  native_decide
+
+/-- Delsarte dual feasibility: `g(t) >= 10*[t=0]` for every depth `t`. -/
+theorem gK8_dominates :
+    ∀ t : Fin atomCount, (if t.val = 0 then (10 : Int) else 0) <= gK8 t := by
+  native_decide
+
+/-- **The Delsarte readout identity.**  The scaled moment-LP functional collapses to
+the dual covector: `L_y(q) = 10*q0 + q3 + 10*q6`. -/
+theorem LyK8_readout (q : Atom) :
+    LyK8 q = 10 * q ⟨0, by decide⟩ + q ⟨3, by decide⟩ + 10 * q ⟨6, by decide⟩ := by
+  simp only [LyK8, moment, sum7, atomCount, yK8, chooseInt, choose,
+    Nat.reduceLT, Nat.reduceLeDiff, reduceDIte, reduceIte, Nat.reduceAdd, Nat.reduceMul]
+  omega
+
+/-- **The per-shape Delsarte / moment-LP bound (THM-534, HYP-2726).**  For any
+nonnegative missed-count atom `q` (a genuine row distribution), the origin/cover atom
+satisfies `10 * q0 <= L_y(q)`. -/
+theorem delsarte_bound_k8 (q : Atom) (hq : ∀ t : Fin atomCount, 0 <= q t) :
+    10 * q0 q <= LyK8 q := by
+  rw [LyK8_readout]
+  have h3 : 0 <= q ⟨3, by decide⟩ := hq _
+  have h6 : 0 <= q ⟨6, by decide⟩ := hq _
+  unfold q0
+  omega
+
 /-! ### Axiom audit
 
 These are closed finite identities over seven coordinates.  In a working Lean
@@ -167,6 +235,10 @@ environment, the axiom output should be empty or contain only Lean foundations.
 #print axioms low12_basis
 #print axioms cheapScaled_q0
 #print axioms cheapScaled_tail45
+#print axioms gK8_values
+#print axioms gK8_dominates
+#print axioms LyK8_readout
+#print axioms delsarte_bound_k8
 
 end FactorialAtom
 end LonelyRunner
