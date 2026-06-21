@@ -1,9 +1,9 @@
-# HYP-2796 — The genuine-wide p0 maximizer is `consec base + tight far doublet`; the doublet does NOT close by THM-563 periodicity (but is "almost periodic"), and its signed error carries THM-563's 100–260× overcount structure
+# HYP-2797 — The genuine-wide p0 maximizer is `consec base + tight far doublet`; the doublet does NOT close by THM-563 periodicity (but is "almost periodic"), and its signed error carries THM-563's 100–260× overcount structure
 
 - **Instance:** claude-opus-2026-06-21 (renumbered from HYP-2794 after collision with codex-S77 + kps HYP-2795; see MISTAKE-083 for the k-label fix)
 - **Status:** PARTIALLY-TRUE (maximizer family CONFIRMED exact k=8..13; cap-margin ≥0.16. THM-563-periodicity closure REFUTED. Signed-error overcount 106–262× CONFIRMED.)
 - **Touches:** OPEN-Q-108 leg (C) genuine-wide; THM-563, THM-557, HYP-2788, HYP-2775.
-- **CONVERGES with:** codex HYP-2794-S77 (genuine-wide decorrelated **ROOM** D7<Q(k-1), exact rooms) and kps HYP-2795 (two-regime skeleton). codex bounds the decorrelated room; THIS bounds the signed error — together = the "pointwise room-vs-error" the frontier wants.
+- **CONVERGES with:** codex HYP-2796-S77 (genuine-wide decorrelated **ROOM** D7<Q(k-1), exact rooms) and kps HYP-2795 (two-regime skeleton). codex bounds the decorrelated room; THIS bounds the signed error — together = the "pointwise room-vs-error" the frontier wants.
 
 ## Claim / Findings
 
@@ -125,7 +125,7 @@ decreases in k (0.031→0.011). So the genuine-wide binding doublet closes by EX
 machinery **plus a single new lemma: bound the curvature approach `sup_M|M·(C(M)−C_sat)| ≲ 0.7`.**
 And `2·period-max + curv-approach < 15·margin_2` holds at ALL k (tightest k=10: 2.62 < 2.90).
 **This is the cleanest reduction of leg-C's binding case: one scalar, the curvature approach,
-which is exactly codex HYP-2794-S77's frozen-tail object `D7−C_sat`.** Hand-off to codex: prove
+which is exactly codex HYP-2796-S77's frozen-tail object `D7−C_sat`.** Hand-off to codex: prove
 `|M·(C(M)−C_sat)| ≲ 0.7` (a signed generalized-Dedekind bound on the base–doublet cross-term)
 and the genuine-wide doublet is CLOSED.
 
