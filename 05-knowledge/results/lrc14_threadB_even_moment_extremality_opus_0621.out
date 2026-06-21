@@ -1,0 +1,46 @@
+
+================================================================================================
+(A) Exact M_j in factorial-moment basis (E[N^a] via Stirling -> S_r).
+================================================================================================
+  M_1 = 6*S_0 + -2*S_1
+  M_2 = 15*S_0 + -10*S_1 + 4*S_2
+  M_3 = 20*S_0 + -20*S_1 + 16*S_2 + -8*S_3
+  M_4 = 15*S_0 + -20*S_1 + 24*S_2 + -24*S_3 + 16*S_4
+
+================================================================================================
+(B) Does consec maximize M_2, M_4 over WIDE/adversarial families? (k=8,9,10)
+================================================================================================
+  k=8: M_2(consec)=6.12109  M_4(consec)=3.80544
+        families with M_2 > consec: NONE
+        families with M_4 > consec: NONE
+  k=9: M_2(consec)=7.36463  M_4(consec)=5.24762
+        families with M_2 > consec: NONE
+        families with M_4 > consec: NONE
+  k=10: M_2(consec)=8.52381  M_4(consec)=6.74603
+        families with M_2 > consec: NONE
+        families with M_4 > consec: NONE
+
+================================================================================================
+(D) M_1 = 6 - 2 S_1 (odd).  M_1-beaters == S_1-beaters (consec NOT S_1-min).
+================================================================================================
+  k=9: M_1(consec)=6-2*4061/2940=4759/1470=3.2374; M_1-beaters=12, S_1-beaters(S1<consec)=12, agreement=1287/1287
+  k=10: M_1(consec)=6-2*10523/8820=15937/4410=3.6138; M_1-beaters=75, S_1-beaters(S1<consec)=75, agreement=2002/2002
+
+================================================================================================
+(E) k=9,10 JOINT: L_y(consec)-L_y(E) = sum_j c_j (M_j(c)-M_j(E)); even covers odd.
+================================================================================================
+
+  k=9 (12870 sets, maxE<=16):  L_y-beaters (L_y(E)>consec): 0
+    consec is the strict max; min surplus over window:
+      tightest: surplus=0.000000 at [0, 2, 4, 6, 8, 10, 12, 14, 16]
+
+  k=10 (5005 sets, maxE<=15):  L_y-beaters (L_y(E)>consec): 0
+    consec is the strict max; min surplus over window:
+      tightest: surplus=0.007666 at [0, 1, 2, 3, 4, 5, 6, 7, 8, 10]
+
+  k=11 (1001 sets, maxE<=14):  L_y-beaters (L_y(E)>consec): 3
+    worst (most negative total=-0.008107) at [0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14]
+      per-j c_j*(Mc-M): [0.0, -0.00814, 3e-05, 0.0, 0.0, 0.0, 0.0]
+      ODD part (j=1,3,5)=-0.00814  EVEN part (j=2,4,6)=0.00003
+
+DONE.
