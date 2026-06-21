@@ -89,15 +89,28 @@ def Sc_vec(u,j):  # u = frac(w*t) array, returns Sc_j(u) float
     out[m3]=-a/7.0+(6.0/7.0)*(b-a)-(1.0/7.0)*(u[m3]-b)
     return out-MEANf[j]
 
+def term_period_array(t,j,P):
+    """Sc_j(frac(w*t)) for w=0..P-1, computed on the q-residue cycle then tiled to length P.
+    t=p/q in lowest terms with q | P (since q | 7e and P=7*lcm(B))."""
+    q=t.denominator
+    p=t.numerator % q
+    r=np.arange(q,dtype=np.int64)
+    u=((r*p) % q).astype(np.float64)/q   # frac(w*t) for w=0..q-1
+    base=Sc_vec(u,j)                      # length-q period
+    reps=P//q
+    return np.tile(base,reps)
+
 def period_max_float_argmax(arcs,P):
-    """Vectorized float f(w) for all w in [0,P). Return (float_max, list of candidate residues
-    within tol of the max)."""
-    w=np.arange(P,dtype=np.float64)
+    """Vectorized float f(w) for all w in [0,P) using per-endpoint period tiling.
+    Return (float_max, candidate residues within tol)."""
     tot=np.zeros(P,dtype=np.float64)
     for (j,a,bb) in arcs:
-        ta=float(a); tb=float(bb)
-        ub=(w*tb)%1.0; ua=(w*ta)%1.0
-        tot+=Sc_vec(ub,j)-Sc_vec(ua,j)
+        tot+=term_period_array(bb,j,P)
+        if a!=0:
+            tot-=term_period_array(a,j,P)
+        # if a==0: Sc_j(0) is a constant (w-independent) -> shifts all entries equally, drop it
+        else:
+            tot-=float(Sc(F(0),j))
     mx=tot.max()
     tol=1e-9
     cand=np.where(tot>=mx-tol)[0]
@@ -108,58 +121,59 @@ ABS=F(6,49)
 
 def process_k(k, Pcap):
     cap=caps[k]; t0=time.time()
-    n=0; passed=0; fails=[]; worst_ratio=F(0); worst_B=None; n_trivial=0; n_scan=0; n_skip_big=0
+    n=0; passed=0; fails=[]; n_trivial=0; n_scan=0; n_skip_big=0
+    worst_ex=F(-10); worst_ex_B=None        # worst EXACT period-max ratio (scanned bases)
+    worst_tr=F(0); worst_tr_B=None          # worst a-priori sumR ratio (trivial bases)
+    skipped_bases=[]
     for combo in itertools.combinations(range(1,15),k-2):
         B=(0,)+combo; n+=1
         plat,arcs,V,sumR=setup(B)
         margin=cap-plat
         if margin<=0:
-            # over-cap base: Plat>=cap. Not a valid plateau under the cap; report (should be none).
             fails.append(('OVERCAP',B,float(plat),float(margin)))
             continue
         thr=15*margin
-        # cheap a-priori
-        if sumR<=thr:
+        # cheap a-priori: period-max <= sumR (THM-563 range bound). If sumR<thr, PASS (no scan).
+        if sumR<thr:
             n_trivial+=1; passed+=1
             r=sumR/margin
-            if r>worst_ratio: worst_ratio=r; worst_B=B
+            if r>worst_tr: worst_tr=r; worst_tr_B=B
             continue
         L=1
         for e in B:
             if e>0: L=lcm(L,e)
         P=7*L
         if P>Pcap:
-            n_skip_big+=1
-            continue
+            n_skip_big+=1; skipped_bases.append((B,plat,margin,P,sumR)); continue
         n_scan+=1
         mxf,cands=period_max_float_argmax(arcs,P)
-        # exact-verify candidates
         pm=F(-10)
         for w0 in cands:
             v=f_exact(arcs,int(w0))
             if v>pm: pm=v
         r=pm/margin
-        if r>worst_ratio: worst_ratio=r; worst_B=B
+        if r>worst_ex: worst_ex=r; worst_ex_B=B
         if pm>=thr:
             fails.append(('PERIODMAX',B,float(plat),float(margin),float(pm),str(pm),float(r)))
         else:
             passed+=1
     dt=time.time()-t0
     print(f"\n=== k={k} cap={cap}={float(cap):.5f}  {n} bases  ({dt:.1f}s) ===")
-    print(f"  trivial(sumR<=15m): {n_trivial}   scanned(exact pm): {n_scan}   skipped(P>{Pcap}): {n_skip_big}")
+    print(f"  trivial(sumR<15m, no scan): {n_trivial}   scanned(exact pm): {n_scan}   skipped(P>{Pcap}): {n_skip_big}")
     print(f"  PASS: {passed}   FAIL: {len([x for x in fails])}")
-    print(f"  worst period-max/margin among CHECKED = {float(worst_ratio):.4f} at B={worst_B} (need <15)")
+    print(f"  worst EXACT period-max/margin (scanned bases) = {float(worst_ex):.4f} at B={worst_ex_B} (need <15)")
+    print(f"  worst a-priori sumR/margin (trivial bases)    = {float(worst_tr):.4f} at B={worst_tr_B} (these PASS since sumR<15m => pm<=sumR<15m)")
     if fails:
         print("  FAILS:")
         for x in fails[:40]: print("    ",x)
-    return n_skip_big, fails
+    return n_skip_big, fails, skipped_bases
 
 if __name__=="__main__":
     import sys
     ks=[int(x) for x in sys.argv[1:2]] if len(sys.argv)>1 else [9,10,11,12,13]
     Pcap=int(sys.argv[2]) if len(sys.argv)>2 else 200000
-    allskip=0
+    allskip=0; allfail=0
     for k in ks:
-        sk,fl=process_k(k,Pcap)
-        allskip+=sk
-    print(f"\nTOTAL skipped (P>{Pcap}, deferred to stage 2): {allskip}")
+        sk,fl,skb=process_k(k,Pcap)
+        allskip+=sk; allfail+=len(fl)
+    print(f"\nTOTAL skipped (P>{Pcap}, deferred to stage 2): {allskip}   TOTAL fails: {allfail}")

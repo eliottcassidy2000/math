@@ -1,0 +1,6 @@
+VALIDATION vs THM-563 table (consec bases):
+  k=8 consec: period-max=1=1.00000 expect 1  OK
+  k=9 consec: period-max=43/49=0.87755 expect 43/49  OK
+  k=10 consec: period-max=1007/980=1.02755 expect 1007/980  OK
+
+GENERAL CHECK -- max period-max/margin over dangerous (margin<0.20) bounded bases:

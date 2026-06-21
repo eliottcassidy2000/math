@@ -1,0 +1,2 @@
+THREAD 5 independent BOUNDED span<=14 recheck (whole-circle breakpoint p0):
+  k=8: primitive sets=3431 cap=0.38146 maxp0=0.32721@(0, 1, 2, 3, 4, 5, 6, 7) VIOL=0 | binding margin=0.054252@(0, 1, 2, 3, 4, 5, 6, 7) consec_k p0=0.32721 (consec is max? True)
