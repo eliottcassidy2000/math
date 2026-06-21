@@ -1,0 +1,81 @@
+HYP-2721/S70 q0 origin atom versus Vitali atom cone
+Exact arithmetic inherited from the S69 miss-zeta engine; no proof claimed.
+
+UNIVERSAL FACTORIAL-ATOM VITALI MOVES
+  B_j is the atom profile created by unit W_j; it preserves W_i for i<j.
+  columns are atom coordinates Q_0..Q_6
+  B_0: (1, 0, 0, 0, 0, 0, 0)  q0=1
+  B_1: (-1, 1, 0, 0, 0, 0, 0)  q0=-1
+  B_2: (1, -2, 1, 0, 0, 0, 0)  q0=1
+  B_3: (-1, 3, -3, 1, 0, 0, 0)  q0=-1
+  B_4: (1, -4, 6, -4, 1, 0, 0)  q0=1
+  B_5: (-1, 5, -10, 10, -5, 1, 0)  q0=-1
+  B_6: (1, -6, 15, -20, 15, -6, 1)  q0=1
+
+ROW-LEVEL Q0 / VITALI-CONE DIAGNOSTICS
+  row                                  Q0          origin%  nonorigin/|Q0| tail2L1/|Q0| tail3L1/|Q0| cross+
+  two 4-blocks, ratio 2:1             -0.0131569   0.2129          3.6980       16.3376        7.8722     10
+      low2_eval=-186154/2536485 (-0.073390538); tail2_eval=6314981/104841380 (0.060233669); cone_margin=930401/26210345 (0.035497472)
+  two 4-blocks, moderate gap          -0.0073245   0.0829         11.0572       32.0253       15.0645     12
+      low2_eval=-17659307/238604520 (-0.074010782); tail2_eval=6364663/95441808 (0.066686321); cone_margin=5858823/79534840 (0.073663605)
+  two 4-blocks, wider gap             -0.0104766   0.2788          2.5871        5.2205        2.2889      0
+      low2_eval=-147571424113/5158405153440 (-0.028607955); tail2_eval=46764366059/2579202576720 (0.018131327); cone_margin=1045963579/62907379920 (0.016627041)
+  two 4-blocks, high relation phase   -0.0148915   0.2038          3.9061       14.7857        7.0414     12
+      low2_eval=-54275371/715813560 (-0.075823335); tail2_eval=10903967/178953390 (0.060931883); cone_margin=30978041/715813560 (0.043276689)
+  two 4-blocks, positive Q0           +0.0045652   0.1710          4.8492       25.2658       12.6260      0
+      low2_eval=-3878816917/164664679536 (-0.023555853); tail2_eval=92610973621/3293293590720 (0.028121080); cone_margin=14467976479/823323397680 (0.017572653)
+  two 4-blocks, positive Q0 high      +0.0040318   0.1434          5.9738       27.0303       13.5689      0
+      low2_eval=-3675537241895/173064492897912 (-0.021237963); tail2_eval=14577648874169/576881642993040 (0.025269740); cone_margin=17352396710153/865322464489560 (0.020053099)
+  5+3 split                           -0.0030300   0.0856         10.6872       14.3818        7.8464      0
+      low2_eval=-1079119/79142448 (-0.013635148); tail2_eval=59951/5653032 (0.010605105); cone_margin=5807579/197856120 (0.029352537)
+  3+3+2 split                         -0.0008948   0.0314         30.8958      129.3940       54.7750      3
+      low2_eval=-2293221157/57697542630 (-0.039745560); tail2_eval=373598534/9616257105 (0.038850722); cone_margin=474928781/17753090040 (0.026751894)
+  five 2-blocks                       -0.0262884   0.1436          5.9623        9.1596        3.7033     11
+      low2_eval=-113195012285963/1047452868569520 (-0.108066927); tail2_eval=342636761031947/4189811474278080 (0.081778563); cone_margin=273280772866669/2094905737139040 (0.130450152)
+  seven singleton carriers            -0.0109641   0.1879          4.3220       15.8783        5.6702      2
+      low2_eval=-17782067207895679/213128233648184932 (-0.083433654); tail2_eval=15445310906038779/213128233648184932 (0.072469567); cone_margin=554479248004481/15223445260584638 (0.036422718)
+
+AGGREGATE
+  sum |Q0|=7902537510507091708793647026197/82641999633065823508128380529720 (0.095623745)
+  sum atom_L1=130616655543759118896337126534073/210361453611440278020690423166560 (0.620915350)
+  sum nonorigin_L1=1215512160687151740013486275141287/2313975989725843058227594654832160 (0.525291605)
+  aggregate origin share=221271050294198567846222116733516/1436783210981350307859708391874803 (0.154004479)
+  aggregate nonorigin tax ratio=1215512160687151740013486275141287/221271050294198567846222116733516 (5.493317626)
+  sum tail2_L1=24668702872470706996011339051234187/16197831928080901407593162583825120 (1.522963257); tail2_L1/sum|Q0|=24668702872470706996011339051234187/1548897352059389974923554817134612 (15.926622148)
+  sum tail3_L1=65114045266938354778365166284811/94724163322110534547328436162720 (0.687406919); tail3_L1/sum|Q0|=11134501740646458667100443434702681/1548897352059389974923554817134612 (7.188663423)
+  sum |low2_eval|=8771250932865172844827885408407437/16197831928080901407593162583825120 (0.541507714)
+  sum |tail2_eval|=3750429626363577638271540623136533/8098915964040450703796581291912560 (0.463077978)
+  cone_margin positive rows=10/10
+
+CORRELATIONS (small exact bank)
+  corr(|Q0|, cross_positive_schur)       = +0.632631
+  corr(origin_share, cross_positive)     = -0.023950
+  corr(tail2_pressure, cross_positive)   = -0.112462
+
+TOURNAMENT ANALYSIS
+  vertices: split rows
+  pairwise observable: tail2_L1/|Q0|, then nonorigin atom tax, then support-3 Schur proxy
+  switch/gauge: low-factorial observer -> full atom cone -> relation-support proxy
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3cycles=0
+  Hamiltonian pressure path:
+    3+3+2 split: tail2_pressure=6680607449/51629953 (129.394025383) tax=6380593965/206519812 (30.895795920) cross+=3 Q0=-51629953/57697542630 (-0.000894838)
+    two 4-blocks, moderate gap: tail2_pressure=111937928/3495299 (32.025279668) tax=38648237/3495299 (11.057204834) cross+=12 Q0=-3495299/477209040 (-0.007324461)
+    two 4-blocks, positive Q0 high: tail2_pressure=188606246740687/6977574203557 (27.030346255) tax=41682367623863/6977574203557 (5.973761999) cross+=0 Q0=84067159079/20851143722640 (0.004031777)
+    two 4-blocks, positive Q0: tail2_pressure=379862808613/15034635281 (25.265847925) tax=72906541197/15034635281 (4.849239096) cross+=0 Q0=15034635281/3293293590720 (0.004565228)
+    two 4-blocks, ratio 2:1: tail2_pressure=135215161/8276306 (16.337622244) tax=15302965/4138153 (3.698018174) cross+=10 Q0=-4138153/314524140 (-0.013156869)
+    seven singleton carriers: tail2_pressure=37103615355075887/2336756301856900 (15.878256250) tax=721390412422831/166911164418350 (4.322002156) cross+=2 Q0=-7586871109925/691974784572029 (-0.010964086)
+    two 4-blocks, high relation phase: tail2_pressure=157608485/10659503 (14.785725470) tax=41637544/10659503 (3.906143091) cross+=12 Q0=-10659503/715813560 (-0.014891452)
+    5+3 split: tail2_pressure=17244182/1199025 (14.381836909) tax=12814183/1199025 (10.687169158) cross+=0 Q0=-79935/26380816 (-0.003030043)
+    five 2-blocks: tail2_pressure=1008865091859061/110143288111905 (9.159569404) tax=656704833845243/110143288111905 (5.962277367) cross+=11 Q0=-2447628624709/93106921650624 (-0.026288364)
+    two 4-blocks, wider gap: tail2_pressure=282127949756/54042691995 (5.220464402) tax=139811705473/54042691995 (2.587060346) cross+=0 Q0=-12913427/1232593824 (-0.010476628)
+
+SYNTHESIS
+  The q0 origin atom is Vitali-like only after the factorial transform.
+  Low factorial moments are the analogue of the lambda/c3/c5-visible
+  data: they can be held fixed by higher finite-difference moves B_j,
+  while Q0 still changes.  The observed split rows all have positive
+  nonorigin atom-cone margin, so bounding the whole missed-count law is
+  stronger than necessary.  HYP-2719 should choose the support-size
+  carrier packets; HYP-2720/HYP-2721 should tax those packets in the
+  factorial-origin basis before scalarizing to Q0.
