@@ -1,5 +1,5 @@
 ---
-id: HYP-2794
+id: HYP-2796
 title: LRC14 genuine-wide two-far tail uses the y in [0,7) frozen phase, leaving a finite low-gap window
 status: OPEN; corrected tail scout stored, finite window and gap monotonicity still open
 source: codex-2026-06-21-S77
@@ -20,7 +20,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2794: Corrected Two-Far Freeze Tail
+# HYP-2796: Corrected Two-Far Freeze Tail
 
 ## Claim
 
@@ -157,12 +157,12 @@ The corrected r=2 genuine-wide branch now has three separate obligations:
 
 This corrects the status of the old Thread-A r=2 certificate.  Its stated
 tail mechanism was promising, but the stored script did not implement the
-all-base tail proof and its old `Dblock` sanity check was false.  HYP-2794
+all-base tail proof and its old `Dblock` sanity check was false.  HYP-2796
 turns that into a precise repair rather than treating the comment as a proof.
 
 ## Relation To Survival Currency
 
-HYP-2794 is a direct-`p0` frozen tail.  It does not replace HYP-2701/HYP-2708.
+HYP-2796 is a direct-`p0` frozen tail.  It does not replace HYP-2701/HYP-2708.
 Instead, it gives the large-f side of the same two-far branch:
 
 ```text
