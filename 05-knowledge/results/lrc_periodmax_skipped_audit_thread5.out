@@ -1,0 +1,95 @@
+
+=== k=8: 3003 bases, 1076 skipped(P>30000), 1927 small-period ===
+  cap=0.38146
+  SMALLEST-margin SKIPPED bases (the dangerous-if-any among huge-period):
+    B=(0, 8, 9, 10, 11, 12, 13)    Plat=0.11619 margin=0.26528 P=360360
+    B=(0, 1, 2, 10, 11, 12, 13)    Plat=0.11169 margin=0.26978 P=60060
+    B=(0, 1, 3, 5, 9, 11, 13)      Plat=0.10966 margin=0.27180 P=45045
+    B=(0, 1, 9, 10, 11, 12, 13)    Plat=0.10772 margin=0.27374 P=180180
+    B=(0, 4, 5, 8, 9, 10, 13)      Plat=0.10730 margin=0.27417 P=32760
+    B=(0, 1, 3, 9, 11, 12, 13)     Plat=0.10431 margin=0.27715 P=36036
+    B=(0, 2, 3, 5, 8, 11, 13)      Plat=0.10382 margin=0.27764 P=120120
+    B=(0, 3, 4, 5, 8, 9, 13)       Plat=0.10347 margin=0.27800 P=32760
+  SMALLEST-margin SMALL-period bases (these WERE checked if in top-20):
+    B=(0, 1, 2, 3, 4, 5, 6)        Plat=0.19660 margin=0.18486 P=420
+    B=(0, 2, 4, 6, 8, 10, 12)      Plat=0.19660 margin=0.18486 P=840
+    B=(0, 2, 3, 4, 5, 6, 8)        Plat=0.16344 margin=0.21803 P=840
+    B=(0, 2, 4, 5, 6, 8, 10)       Plat=0.14354 margin=0.23793 P=840
+    B=(0, 1, 3, 4, 5, 6, 9)        Plat=0.13832 margin=0.24314 P=1260
+  GLOBAL smallest-margin base: B=(0, 1, 2, 3, 4, 5, 6) margin=0.184864 P=420 (checked-region)
+
+=== k=9: 3432 bases, 1895 skipped(P>30000), 1537 small-period ===
+  cap=0.49426
+  SMALLEST-margin SKIPPED bases (the dangerous-if-any among huge-period):
+    B=(0, 1, 3, 5, 7, 9, 11, 13)   Plat=0.27521 margin=0.21904 P=315315
+    B=(0, 1, 3, 5, 6, 7, 9, 11)    Plat=0.24864 margin=0.24562 P=48510
+    B=(0, 6, 7, 8, 9, 10, 11, 12)  Plat=0.23551 margin=0.25874 P=194040
+    B=(0, 3, 5, 6, 7, 8, 9, 11)    Plat=0.23434 margin=0.25992 P=194040
+    B=(0, 8, 9, 10, 11, 12, 13, 14) Plat=0.23393 margin=0.26033 P=2522520
+    B=(0, 2, 3, 5, 6, 8, 11, 14)   Plat=0.23330 margin=0.26095 P=64680
+    B=(0, 5, 6, 7, 8, 9, 10, 11)   Plat=0.23216 margin=0.26210 P=194040
+    B=(0, 1, 3, 4, 5, 7, 9, 13)    Plat=0.23120 margin=0.26306 P=114660
+  SMALLEST-margin SMALL-period bases (these WERE checked if in top-20):
+    B=(0, 1, 2, 3, 4, 5, 6, 7)     Plat=0.36210 margin=0.13216 P=2940
+    B=(0, 2, 4, 6, 8, 10, 12, 14)  Plat=0.36210 margin=0.13216 P=5880
+    B=(0, 2, 3, 4, 5, 6, 7, 8)     Plat=0.31156 margin=0.18269 P=5880
+    B=(0, 2, 4, 6, 7, 8, 10, 12)   Plat=0.29932 margin=0.19494 P=5880
+    B=(0, 1, 3, 4, 5, 6, 7, 9)     Plat=0.28034 margin=0.21392 P=8820
+  GLOBAL smallest-margin base: B=(0, 1, 2, 3, 4, 5, 6, 7) margin=0.132157 P=2940 (checked-region)
+
+=== k=10: 3003 bases, 2155 skipped(P>30000), 848 small-period ===
+  cap=0.57143
+  SMALLEST-margin SKIPPED bases (the dangerous-if-any among huge-period):
+    B=(0, 2, 4, 6, 8, 10, 11, 12, 14) Plat=0.39687 margin=0.17456 P=64680
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 13) Plat=0.39685 margin=0.17458 P=38220
+    B=(0, 2, 4, 6, 8, 10, 12, 13, 14) Plat=0.38783 margin=0.18360 P=76440
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 11) Plat=0.38048 margin=0.19095 P=32340
+    B=(0, 1, 3, 5, 6, 7, 9, 11, 13) Plat=0.35507 margin=0.21636 P=630630
+    B=(0, 1, 3, 4, 5, 6, 7, 9, 11) Plat=0.35379 margin=0.21763 P=97020
+    B=(0, 2, 3, 4, 5, 6, 7, 8, 11) Plat=0.35045 margin=0.22097 P=64680
+    B=(0, 1, 3, 4, 5, 6, 7, 9, 13) Plat=0.34834 margin=0.22309 P=114660
+  SMALLEST-margin SMALL-period bases (these WERE checked if in top-20):
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8)  Plat=0.44789 margin=0.12354 P=5880
+    B=(0, 2, 4, 6, 7, 8, 10, 12, 14) Plat=0.43839 margin=0.13304 P=5880
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9)  Plat=0.43821 margin=0.13322 P=8820
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 10) Plat=0.41983 margin=0.15160 P=2940
+    B=(0, 2, 3, 4, 6, 8, 10, 12, 14) Plat=0.40974 margin=0.16169 P=5880
+  GLOBAL smallest-margin base: B=(0, 1, 2, 3, 4, 5, 6, 7, 8) margin=0.123542 P=5880 (checked-region)
+
+=== k=11: 2002 bases, 1680 skipped(P>30000), 322 small-period ===
+  cap=0.72527
+  SMALLEST-margin SKIPPED bases (the dangerous-if-any among huge-period):
+    B=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14) Plat=0.48442 margin=0.24086 P=64680
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 11) Plat=0.48333 margin=0.24194 P=64680
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 13) Plat=0.48280 margin=0.24247 P=114660
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 11) Plat=0.48155 margin=0.24372 P=97020
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 13) Plat=0.47438 margin=0.25090 P=76440
+    B=(0, 2, 4, 6, 7, 8, 10, 12, 13, 14) Plat=0.47376 margin=0.25152 P=76440
+    B=(0, 2, 4, 5, 6, 8, 10, 11, 12, 14) Plat=0.46856 margin=0.25672 P=64680
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 12, 13) Plat=0.46811 margin=0.25717 P=38220
+  SMALLEST-margin SMALL-period bases (these WERE checked if in top-20):
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) Plat=0.53125 margin=0.19402 P=17640
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) Plat=0.52274 margin=0.20253 P=5880
+    B=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.51548 margin=0.20980 P=5880
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10) Plat=0.51132 margin=0.21395 P=8820
+    B=(0, 2, 4, 6, 7, 8, 9, 10, 12, 14) Plat=0.50408 margin=0.22119 P=17640
+  GLOBAL smallest-margin base: B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9) margin=0.194023 P=17640 (checked-region)
+
+=== k=12: 1001 bases, 919 skipped(P>30000), 82 small-period ===
+  cap=0.85714
+  SMALLEST-margin SKIPPED bases (the dangerous-if-any among huge-period):
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 11) Plat=0.57809 margin=0.27905 P=194040
+    B=(0, 2, 4, 5, 6, 7, 8, 10, 11, 12, 14) Plat=0.57504 margin=0.28211 P=64680
+    B=(0, 2, 4, 6, 7, 8, 9, 10, 11, 12, 14) Plat=0.57045 margin=0.28669 P=194040
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 13) Plat=0.56655 margin=0.29059 P=229320
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11) Plat=0.56566 margin=0.29149 P=64680
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 9, 10, 13) Plat=0.56481 margin=0.29234 P=114660
+    B=(0, 2, 4, 5, 6, 7, 8, 9, 10, 11, 12) Plat=0.56476 margin=0.29238 P=194040
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 13) Plat=0.55735 margin=0.29979 P=76440
+  SMALLEST-margin SMALL-period bases (these WERE checked if in top-20):
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) Plat=0.60224 margin=0.25490 P=17640
+    B=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14) Plat=0.59473 margin=0.26241 P=5880
+    B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12) Plat=0.59342 margin=0.26373 P=5880
+    B=(0, 2, 4, 5, 6, 7, 8, 9, 10, 12, 14) Plat=0.59222 margin=0.26493 P=17640
+    B=(0, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12) Plat=0.59094 margin=0.26621 P=17640
+  GLOBAL smallest-margin base: B=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10) margin=0.254900 P=17640 (checked-region)

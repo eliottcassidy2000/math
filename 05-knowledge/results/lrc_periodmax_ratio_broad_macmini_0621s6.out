@@ -1,0 +1,3 @@
+broad period-max/margin check: 133 bounded bases (skipped 267 huge-period)
+  WORST ratio period-max/margin = 10.160  at B=(0, 4, 6, 8, 10, 12, 14) (period-max=2.819, margin=0.2775)
+  => need ratio < 15 (so Delta_w<margin for all w>=15). ALL CLOSE (THM-563 universal)
