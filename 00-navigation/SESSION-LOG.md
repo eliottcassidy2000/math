@@ -115,10 +115,18 @@ FORMALIZATION (Lean, mathlib-free, builds sorry-free): 04-computation/lean/Tourn
  marginal balance row/colsums=pq by decide. Complements mac-mini's Delsarte Lean (S12/S13).
 
 OTHER: confirmed the apex law does NOT tighten the tail constant (worst D*q=12/7 at 3/2, non-apex).
-A rigor workflow (L1-L6 end-to-end audit; consec-max additive-energy lemma -- WITHIN-SPAN MONOTONICITY
-REFUTED, 1368+ inversions, so HYP-2735 LEMMA-1 is false as stated; sharp constant D<=12/(7q); lonely
-AP-saturation finiteness) ran concurrently; results pending integration. Convergence: codex HYP-2736/2737
-(sharp tail, two-odometer row-slice), mac-mini Lean Delsarte. Synced ~10x.
+RIGOR WORKFLOW (integrated): (A) SHARP RESIDUE CLOSED FORM (HYP-2739, PROVED combinatorially + INDEP
+VERIFIED by me 0 mismatches/2223 ratios): D_{p,q}=4f(||p||_7,||q||_7)/(7pq) -- RESIDUE-ONLY; sup D*q=12/7
+@3/2, sup D*p=20/7 @2/1, universal D<=44/(7pq); apex D=0<=>7|pq falls out. SUPERSEDES my 14/p (and proves
+codex HYP-2736/2737). I extended the Lean module to native_decide Ddef=7*Sres on both sharp faces+apex.
+(B) HONEST L1-L6 END-TO-END AUDIT (lrc14_S3_honest_end_to_end_status_kps.md): L2/L5/L6/S1 PROVED; L3
+VERIFIED; L1 PROVED-reduction MODULO HYP-2602 (consec minimizes mu_{1/7}, verified not symbolic); L4
+PROVED-reduction + UNRUN check; L7 tail PROVED+sharp but CLOSURE VERIFIED-not-symbolic. TWO parallel
+stacks: sector-cover (L7, valid sufficient) vs lonely (OPEN-Q-108 proper); L7 advances sector NOT
+OPEN-Q-108 (HYP-2732). SHARED bottleneck = HYP-2602. LRC(14) NOT proved. HIGHEST-LEVERAGE next = prove
+HYP-2602 symbolically using the L7 torus-discrepancy machinery on its multi-block tail. (C) consec-max
+additive-energy within-span monotonicity REFUTED (1368+ inversions; HYP-2735 LEMMA-1 false as stated).
+Convergence: codex HYP-2736/2737 (now proved as HYP-2739), mac-mini Lean Delsarte. Synced ~12x.
 ## mac-mini-2026-06-21-S13 -- LRC(14) sector route CLOSED + AUDITED (ALL PASS) + Delsarte core FORMALIZED in Lean -- HYP-2738
 User: long overnight session, rigor-first, formalize, generate leads, push/pull, work concurrently. Pulled/pushed ~16x; concurrent with kps (L7 closure) + codex (integer-grid L7).
 **FORMALIZATION (Lean, sorry-free, 0 errors):** completed the Delsarte/moment-LP formalization in TournamentH7/LRCFactorialAtom.lean for ALL binding rows -- per-shape bounds delsarte_bound_k8/k9/k11 (q0<=L_y) + dual feasibility gK8_values/gK8_dominates + gK9_dominates + gK11_dominates (Krawtchouk-nonnegative duals). Deps [propext, Quot.sound].
