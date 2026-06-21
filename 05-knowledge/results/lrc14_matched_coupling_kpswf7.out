@@ -1,0 +1,39 @@
+========================================================================================
+MATCHED COUPLING + t-PROFILE of W-cell partial-sum deficits
+========================================================================================
+
+####################################################################################
+# k=8, box=[0,16]
+####################################################################################
+  wall holds (no measS7 rival > consec)? True
+  weak-maj first-negative-t histogram: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  among t=1 failures (0): partial-sums recover for t>=2? 0/0
+  matched dilation coupling: EXISTS some c in Z_7* with W_a(C)>=W_(ca)(E) for all a: 859/860
+     per-c success counts: {1: 853, 2: 851, 3: 843, 4: 849, 5: 851, 6: 848}
+
+####################################################################################
+# k=9, box=[0,15]
+####################################################################################
+  wall holds (no measS7 rival > consec)? True
+  weak-maj first-negative-t histogram: {1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  among t=1 failures (1): partial-sums recover for t>=2? 0/1
+  matched dilation coupling: EXISTS some c in Z_7* with W_a(C)>=W_(ca)(E) for all a: 1270/1279
+     per-c success counts: {1: 1256, 2: 1245, 3: 1213, 4: 1214, 5: 1248, 6: 1250}
+
+####################################################################################
+# k=10, box=[0,14]
+####################################################################################
+  wall holds (no measS7 rival > consec)? True
+  weak-maj first-negative-t histogram: {1: 1, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  among t=1 failures (1): partial-sums recover for t>=2? 1/1
+  matched dilation coupling: EXISTS some c in Z_7* with W_a(C)>=W_(ca)(E) for all a: 805/831
+     per-c success counts: {1: 782, 2: 713, 3: 642, 4: 641, 5: 711, 6: 779}
+
+####################################################################################
+# k=11, box=[0,13]
+####################################################################################
+  wall holds (no measS7 rival > consec)? True
+  weak-maj first-negative-t histogram: {1: 0, 2: 0, 3: 0, 4: 0, 5: 0, 6: 0}
+  among t=1 failures (0): partial-sums recover for t>=2? 0/0
+  matched dilation coupling: EXISTS some c in Z_7* with W_a(C)>=W_(ca)(E) for all a: 201/219
+     per-c success counts: {1: 184, 2: 125, 3: 61, 4: 81, 5: 110, 6: 177}
