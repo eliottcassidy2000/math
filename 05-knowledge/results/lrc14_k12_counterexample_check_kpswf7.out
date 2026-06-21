@@ -1,0 +1,26 @@
+=== (a)(b) k=12 candidate counterexample ===
+E* = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)
+  full-residue mod7? True  primitive? True  min=0 span=12
+  consec_12 = (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11)  span=11
+  measS7(E*)     = 11171/17640 = 0.63327664
+  measS7(consec) = 119843/194040 = 0.61762008
+  E* beats consec? True   delta=+0.01565657
+  residue multiset E*: [0, 0, 1, 1, 2, 2, 3, 3, 4, 5, 5, 6]
+  residue multiset C : [0, 0, 1, 1, 2, 2, 3, 3, 4, 4, 5, 6]
+
+=== (d) GLOBAL argmax of measS7 over full-residue, primitive, min=0, span<=B ===
+  k=8 span<=B=7: stratum=    1  argmax=CONSEC  max=0.327211  consec=0.327211  #rivals>consec=0
+  k=8 span<=B=13: stratum=  256  argmax=CONSEC  max=0.327211  consec=0.327211  #rivals>consec=0
+  k=8 span<=B=14: stratum=  319  argmax=CONSEC  max=0.327211  consec=0.327211  #rivals>consec=0
+  k=9 span<=B=8: stratum=    1  argmax=CONSEC  max=0.416156  consec=0.416156  #rivals>consec=0
+  k=9 span<=B=13: stratum=  432  argmax=CONSEC  max=0.416156  consec=0.416156  #rivals>consec=0
+  k=9 span<=B=14: stratum=  688  argmax=CONSEC  max=0.416156  consec=0.416156  #rivals>consec=0
+  k=10 span<=B=9: stratum=    1  argmax=CONSEC  max=0.504478  consec=0.504478  #rivals>consec=0
+  k=10 span<=B=13: stratum=  400  argmax=CONSEC  max=0.504478  consec=0.504478  #rivals>consec=0
+  k=10 span<=B=14: stratum=  832  argmax=CONSEC  max=0.504478  consec=0.504478  #rivals>consec=0
+  k=11 span<=B=10: stratum=    1  argmax=CONSEC  max=0.581463  consec=0.581463  #rivals>consec=0
+  k=11 span<=B=13: stratum=  220  argmax=CONSEC  max=0.581463  consec=0.581463  #rivals>consec=0
+  k=11 span<=B=14: stratum=  620  argmax=CONSEC  max=0.581463  consec=0.581463  #rivals>consec=0
+  k=12 span<=B=11: stratum=    1  argmax=CONSEC  max=0.617620  consec=0.617620  #rivals>consec=0
+  k=12 span<=B=13: stratum=   72  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  max=0.633277  consec=0.617620  #rivals>consec=1
+  k=12 span<=B=14: stratum=  292  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  max=0.633277  consec=0.617620  #rivals>consec=1
