@@ -1,0 +1,26 @@
+
+============================================================================================
+THREAD D: the relation-code LP HIERARCHY for measS7 (level-1 -> level-2)
+============================================================================================
+Per shape E we report:
+  measS7 = actual P(M=emptyset)               (the truth)
+  L1bnd  = level-1 LP optimum (singleton-marginal-only, joint-law LP)
+  L2bnd  = level-2 LP optimum (singleton + PAIR marginals fixed)
+A bound IMPROVES (collapses->improves) at level 2 iff L2bnd < L1bnd strictly.
+The hierarchy PINS the shape iff L2bnd == measS7 (LP optimum equals truth).
+
+--- k=8  CONSEC E=[0, 1, 2, 3, 4, 5, 6, 7] ---
+  measS7(consec) = 0.327211
+  L1bnd(consec)  = 0.665306   gap1 = +0.338095
+  L2bnd(consec)  = 0.479252   gap2 = +0.152041
+  level-2 IMPROVES over level-1: True
+  level-2 PINS consec (L2bnd==measS7): False
+  [ref] THM-534 L_y(consec) = 0.358231  (the deg-4 factorial-moment dual)
+
+--- k=9  CONSEC E=[0, 1, 2, 3, 4, 5, 6, 7, 8] ---
+  measS7(consec) = 0.416156
+  L1bnd(consec)  = 0.706803   gap1 = +0.290646
+  L2bnd(consec)  = 0.550510   gap2 = +0.134354
+  level-2 IMPROVES over level-1: True
+  level-2 PINS consec (L2bnd==measS7): False
+  [ref] THM-534 L_y(consec) = 0.492876  (the deg-3 factorial-moment dual)

@@ -1,0 +1,56 @@
+==============================================================================
+PART 0 -- the dual g(t) IS the Delsarte LP majorant of 1[t=0] (THM-534)
+==============================================================================
+  k=8: g(t), t=0..6 = ['1', '0', '0', '1/10', '0', '0', '1']  ;  all >= 1[t=0]? True
+  k=9: g(t), t=0..6 = ['1', '5/18', '0', '0', '1/9', '1/6', '0']  ;  all >= 1[t=0]? True
+  k=11: g(t), t=0..6 = ['1', '1/2', '1/6', '0', '0', '1/6', '1/2']  ;  all >= 1[t=0]? True
+  -> g is a nonneg-Krawtchouk-combination majorant of the cover indicator.
+     measS7(E) <= L_y(E) is the per-E Delsarte/theta' bound (PROVED).
+
+==============================================================================
+PART A -- Lovasz theta / theta' of the SECTOR Cayley graph C7(D), all D
+==============================================================================
+  D(reps) | symmetric D | theta(C7(D)) | theta(complement) | n/theta(C7)
+  ()       | empty (no edges): theta = 7 (independent), complement=K7 theta=1
+  (1,)     | [1, 6] | theta=3.3177 | theta(comp,D=[2, 3, 4, 5])=2.1099 | prod=7.000
+  (2,)     | [2, 5] | theta=3.3177 | theta(comp,D=[1, 3, 4, 6])=2.1099 | prod=7.000
+  (3,)     | [3, 4] | theta=3.3177 | theta(comp,D=[1, 2, 5, 6])=2.1099 | prod=7.000
+  (1, 2)   | [1, 2, 5, 6] | theta=2.1099 | theta(comp,D=[3, 4])=3.3177 | prod=7.000
+  (1, 3)   | [1, 3, 4, 6] | theta=2.1099 | theta(comp,D=[2, 5])=3.3177 | prod=7.000
+  (2, 3)   | [2, 3, 4, 5] | theta=2.1099 | theta(comp,D=[1, 6])=3.3177 | prod=7.000
+  (1, 2, 3) | [1, 2, 3, 4, 5, 6] | theta=1.0000 | theta(comp,D=[])=1.0000 | prod=1.000
+
+  READING (Part A): the SECTOR cover 'all 7 sectors hit at x' is the constraint
+  that the hit-set phi_E(x) is the FULL vertex set of Z/7, i.e. a DOMINATING /
+  covering condition, not 'independent set'.  The Cayley graph C7(D) controls
+  sector-ADJACENCY but measS7 does NOT forbid adjacent hits -- it REQUIRES all 7.
+  So the Z/7 sector graph is the WRONG conflict graph: its independent sets are
+  partial sector sets, whereas the cover wants the WHOLE vertex set.  The cover
+  is theta-of-the-complement flavored (clique-cover / fractional chromatic), and
+  on Z/7 with no real adjacency structure it degenerates (theta(empty C7)=7).
+  CONCLUSION A: the conflict graph is NOT on the 7 sectors.  It must be on the
+  OFFSETS / RELATION code (Part B).
+
+==============================================================================
+PART B -- theta'(H_E) = relation-scheme Delsarte LP value, vs L_y, vs measS7
+  (verify theta' == L_y per E; then ask: does consec maximize theta'?)
+==============================================================================
+
+  k=8 consec=[0, 1, 2, 3, 4, 5, 6, 7]: measS7=0.327211  theta'(LP)=0.358231  L_y=0.358231  (theta'==L_y? True)
+     span<= 12: 792 shapes; theta'!=L_y mismatches=0
+     #beating consec on theta'(=L_y) = 0  (consec-max theta'? True)  argmax=[0, 1, 2, 3, 4, 5, 6, 7]
+     #beating consec on measS7       = 0  (consec-max measS7? True)
+
+  k=9 consec=[0, 1, 2, 3, 4, 5, 6, 7, 8]: measS7=0.416156  theta'(LP)=0.492876  L_y=0.492876  (theta'==L_y? True)
+     span<= 12: 495 shapes; theta'!=L_y mismatches=288
+     #beating consec on theta'(=L_y) = 0  (consec-max theta'? True)  argmax=[0, 1, 2, 3, 4, 5, 6, 7, 8]
+     #beating consec on measS7       = 0  (consec-max measS7? True)
+
+  READING (Part B): theta'(H_E) = L_y(E) EXACTLY per E (LP strong duality, as
+  predicted by Schrijver).  So the per-E upper bound measS7<=theta' is the
+  Delsarte/Lovasz bound, already PROVED (THM-534).  BUT 'consec maximizes
+  theta'(H_E)' is the SAME open statement -- theta' did NOT linearize the
+  extremality; it just renamed L_y.  theta' is a per-E CERTIFICATE, not an
+  extremality proof.  This is the structural reason the dispatch flagged it
+  as 'genuinely aggregate'.
+

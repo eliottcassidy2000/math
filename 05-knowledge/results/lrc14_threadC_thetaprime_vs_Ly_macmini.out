@@ -1,0 +1,10 @@
+==============================================================================
+ORDERING  measS7 <= theta'(H_E) <= L_y, and the two extremality questions
+==============================================================================
+
+  k=8: consec measS7=0.327211  theta'=0.358231  L_y=0.358231
+     span<= 13: 1716 shapes; ordering measS7<=theta'<=L_y holds on 1716/1716
+     #shapes where theta' STRICTLY tighter than L_y = 0
+     (Q2) consec maximizes L_y?      beaters=0  -> YES  (max=0.358231)
+     (Q1) consec maximizes theta'?   beaters=0  -> YES  (max=0.358231)
+          consec maximizes measS7?   beaters=0   -> YES
