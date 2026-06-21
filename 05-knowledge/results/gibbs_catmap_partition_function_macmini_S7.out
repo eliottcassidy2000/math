@@ -1,0 +1,62 @@
+==============================================================================
+H1 (CONTROL): cut-space free energy IS a sum of local terms (Z_n factorizes)
+==============================================================================
+  n=5, beta=3.0: log Z (direct) = -11.11254915
+           log Z (sum of LOCAL tile terms) = -11.11254915
+           additive residual = 0.00e+00  -> EXACTLY local (control)
+  ground state energy/tile (beta->inf) = min(h_a,h_b) per tile, fully LOCAL.
+  CONCLUSION H1: cut-space (score) gas free energy = SUM of local terms => CHEAP. CONTROL holds.
+
+==============================================================================
+H2 (CRUX): LRC free energy -log measS7 is NOT a sum of local terms
+==============================================================================
+  universe U=[0, 1, 2, 3, 4, 5, 6, 7, 8, 9], k=8: 36 subsets (0 in E); 36 with measS7>0
+  ADDITIVE (1-body) log-linear model: R^2 = 0.66379, residual SS = 2.6166e+00
+  PAIRWISE (2-body) log-linear model:  R^2 = 1.00000, residual SS = 2.6189e-18
+  -> additive R^2<1 means -log measS7 is NOT a sum of local terms (genuinely aggregate).
+  -> even 2-body residual 2.62e-18: higher-order interaction needed iff >~1e-6.
+
+==============================================================================
+H3 (VARIATIONAL): Gibbs family p_beta ~ exp(beta*measS7); ground state = consec
+==============================================================================
+  k=8, window 11: 120 subsets. argmax measS7 = (0, 1, 2, 3, 4, 5, 6, 7), val=0.327211
+  consec block (0, 1, 2, 3, 4, 5, 6, 7): val=0.327211; is argmax consec? True
+  beta      Phi(beta)     <measS7>_beta   P(consec)_beta
+      0.0      4.78749   0.092994      0.008333
+      1.0      4.88184   0.095756      0.010518
+      5.0      5.29172   0.110170      0.025844
+     20.0      7.69656   0.222861      0.315897
+    100.0     32.72599   0.326940      0.995110
+   1000.0    327.21088   0.327211      1.000000
+  Phi''(beta) >= 0 at beta=1: 2.9080e-03 (variance, must be >=0) -> convex free energy.
+  GROUND STATE (beta->inf) selects argmax measS7 = consec: True
+
+  Tournament twin: p_beta(T) ~ exp(beta*c3); ground state = regular (THM-027/555)
+  n=5: max c3=5; score(s) at max c3 = {(2, 2, 2, 2, 2)}; regular (2, 2, 2, 2, 2) present? True
+  n=5: max H=15 (H-max ground state of exp(beta*H)); count at max = 8
+  -> exp(beta*c3) beta->inf = regular score; exp(beta*H) beta->inf = H-max. Ground-state extremality.
+
+==============================================================================
+H4 (ARNOLD CAT MAP): band twist e->s*e mod 7 as a toral automorphism
+==============================================================================
+  (a) multiplier e->s*e on Z/7: it is in (Z/7)^* (cyclic order 6).
+      multiplier orders mod 7: {1: 1, 2: 3, 3: 6, 4: 3, 5: 6, 6: 2}  (all finite => ELLIPTIC, periodic, NOT hyperbolic)
+      => the band twist is a TORSION rotation, not an Anosov cat map. (analogy-killer)
+  (b) golden-slope CF renormalization matrix (period [1,1]) = [[2, 1], [1, 1]]
+      trace=3, det=1, discriminant=5; |trace|>2 => HYPERBOLIC (this IS Arnold's cat map).
+  (c) LRC cover breakpoints are RATIONAL (x=(7j+k)/(7e)); the band-mixing renormalization
+      is x->7x mod 1: EXPANDING Bernoulli (entropy log 7), det 7 != +-1 => NOT a toral
+      automorphism. The cat map requires a unimodular (det=+-1) gluing; the apex prime
+      gives an expanding endomorphism instead. So: SHIFT/Bernoulli yes, CAT MAP no.
+
+  H4 VERDICT: the renormalization is an EXPANDING base-7 endomorphism (a Bernoulli shift on
+  7 symbols = the 7 bands), NOT a hyperbolic toral automorphism. Arnold's cat map is the
+  WRONG dynamical analogy; the right one is the full 7-shift (subshift of finite type).
+
+==============================================================================
+SYNTHESIS / FALSIFIABLE SCORECARD
+==============================================================================
+  H1 cut-space local: additive residual 0.0e+00 ~ 0  -> CONFIRMED (control)
+  H2 LRC aggregate: additive R^2=0.6638<1, pairwise R^2=1.0000  -> CONFIRMED non-local
+  H3 variational ground state = consec: True; tournament regular at max c3: True
+  H4 Arnold cat map: REFUTED (multiplier elliptic order-6; band map expanding det7, not det+-1)

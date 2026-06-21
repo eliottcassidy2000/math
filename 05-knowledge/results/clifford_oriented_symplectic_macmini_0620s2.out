@@ -1,0 +1,32 @@
+======================================================================
+  TEST A: cut/cycle MacWilliams duality (exact, nonzero support)
+          and cycle space == even-subgraph (even-graph) enumerator
+======================================================================
+
+ n=3 E=3
+   MacWilliams(W_cut) == W_cycle (nonzero)?   True
+   W_cycle == even-subgraph enumerator?       True
+   (cycle space dim = 1 = C(n,2)-n+1 = 1)
+
+ n=4 E=6
+   MacWilliams(W_cut) == W_cycle (nonzero)?   True
+   W_cycle == even-subgraph enumerator?       True
+   (cycle space dim = 3 = C(n,2)-n+1 = 3)
+
+ n=5 E=10
+   MacWilliams(W_cut) == W_cycle (nonzero)?   True
+   W_cycle == even-subgraph enumerator?       True
+   (cycle space dim = 6 = C(n,2)-n+1 = 6)
+
+ n=6 E=15
+   MacWilliams(W_cut) == W_cycle (nonzero)?   True
+   W_cycle == even-subgraph enumerator?       True
+   (cycle space dim = 10 = C(n,2)-n+1 = 10)
+
+======================================================================
+  TEST B: oriented directed-3-cycle intersection form -- symplectic?
+======================================================================
+ n=3: cycle-basis size=1, symmetric=True, alternating(diag=0)=True, gram_rank=0, nondegenerate=False
+ n=4: cycle-basis size=3, symmetric=True, alternating(diag=0)=True, gram_rank=2, nondegenerate=False
+ n=5: cycle-basis size=6, symmetric=True, alternating(diag=0)=True, gram_rank=4, nondegenerate=False
+ n=6: cycle-basis size=10, symmetric=True, alternating(diag=0)=True, gram_rank=6, nondegenerate=False

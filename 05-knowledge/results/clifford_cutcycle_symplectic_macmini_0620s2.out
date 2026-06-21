@@ -1,0 +1,105 @@
+========================================================================
+  PART (i): IS CUT/CYCLE GENUINELY SYMPLECTIC (Lagrangian pair)?
+========================================================================
+
+ n=3  |E|=C(n,2)=3
+   dim CUT = 2 (=n-1),  dim CYCLE = 1 (=C(n,2)-n+1)
+   dim sum = E ?               True
+   CUT _|_ CYCLE (std form)?   True
+   CUT = CYCLE^perp ?          True
+   CUT isotropic (self-orth)?  False
+   CYCLE isotropic?            False
+   CUT is LAGRANGIAN?          False
+   CYCLE is LAGRANGIAN?        False
+   CUT self-dual (=cut^perp)?  False
+   CYCLE self-dual?            False
+
+ n=4  |E|=C(n,2)=6
+   dim CUT = 3 (=n-1),  dim CYCLE = 3 (=C(n,2)-n+1)
+   dim sum = E ?               True
+   CUT _|_ CYCLE (std form)?   True
+   CUT = CYCLE^perp ?          True
+   CUT isotropic (self-orth)?  False
+   CYCLE isotropic?            False
+   CUT is LAGRANGIAN?          False
+   CYCLE is LAGRANGIAN?        False
+   CUT self-dual (=cut^perp)?  False
+   CYCLE self-dual?            False
+
+ n=5  |E|=C(n,2)=10
+   dim CUT = 4 (=n-1),  dim CYCLE = 6 (=C(n,2)-n+1)
+   dim sum = E ?               True
+   CUT _|_ CYCLE (std form)?   True
+   CUT = CYCLE^perp ?          True
+   CUT isotropic (self-orth)?  False
+   CYCLE isotropic?            False
+   CUT is LAGRANGIAN?          False
+   CYCLE is LAGRANGIAN?        False
+   CUT self-dual (=cut^perp)?  False
+   CYCLE self-dual?            False
+
+ n=6  |E|=C(n,2)=15
+   dim CUT = 5 (=n-1),  dim CYCLE = 10 (=C(n,2)-n+1)
+   dim sum = E ?               True
+   CUT _|_ CYCLE (std form)?   True
+   CUT = CYCLE^perp ?          True
+   CUT isotropic (self-orth)?  False
+   CYCLE isotropic?            False
+   CUT is LAGRANGIAN?          False
+   CYCLE is LAGRANGIAN?        False
+   CUT self-dual (=cut^perp)?  False
+   CYCLE self-dual?            False
+
+ n=7  |E|=C(n,2)=21
+   dim CUT = 6 (=n-1),  dim CYCLE = 15 (=C(n,2)-n+1)
+   dim sum = E ?               True
+   CUT _|_ CYCLE (std form)?   True
+   CUT = CYCLE^perp ?          True
+   CUT isotropic (self-orth)?  False
+   CYCLE isotropic?            False
+   CUT is LAGRANGIAN?          False
+   CYCLE is LAGRANGIAN?        False
+   CUT self-dual (=cut^perp)?  False
+   CYCLE self-dual?            False
+
+========================================================================
+  PART (ii): MacWilliams duality  cut-space <-> cycle-space
+========================================================================
+
+ n=3  E=3
+   W_cut   = {0: 1, 2: 3}
+   W_cycle = {0: 1, 3: 1}
+   MacWilliams(W_cut) = {0: 1, 1: 0, 2: 0, 3: 1}
+   MacWilliams(cut) == W_cycle ?   False
+
+ n=4  E=6
+   W_cut   = {0: 1, 3: 4, 4: 3}
+   W_cycle = {0: 1, 3: 4, 4: 3}
+   MacWilliams(W_cut) = {0: 1, 1: 0, 2: 0, 3: 4, 4: 3, 5: 0, 6: 0}
+   MacWilliams(cut) == W_cycle ?   False
+
+ n=5  E=10
+   W_cut   = {0: 1, 4: 5, 6: 10}
+   W_cycle = {0: 1, 3: 10, 4: 15, 5: 12, 6: 15, 7: 10, 10: 1}
+   MacWilliams(W_cut) = {0: 1, 1: 0, 2: 0, 3: 10, 4: 15, 5: 12, 6: 15, 7: 10, 8: 0, 9: 0, 10: 1}
+   MacWilliams(cut) == W_cycle ?   False
+
+ n=6  E=15
+   W_cut   = {0: 1, 5: 6, 8: 15, 9: 10}
+   W_cycle = {0: 1, 3: 20, 4: 45, 5: 72, 6: 160, 7: 240, 8: 195, 9: 120, 10: 96, 11: 60, 12: 15}
+   MacWilliams(W_cut) = {0: 1, 1: 0, 2: 0, 3: 20, 4: 45, 5: 72, 6: 160, 7: 240, 8: 195, 9: 120, 10: 96, 11: 60, 12: 15, 13: 0, 14: 0, 15: 0}
+   MacWilliams(cut) == W_cycle ?   False
+
+ n=7  E=21
+   W_cut   = {0: 1, 6: 7, 10: 21, 12: 35}
+   W_cycle = {0: 1, 3: 35, 4: 105, 5: 252, 6: 805, 7: 1935, 8: 3255, 9: 4515, 10: 5481, 11: 5481, 12: 4515, 13: 3255, 14: 1935, 15: 805, 16: 252, 17: 105, 18: 35, 21: 1}
+   MacWilliams(W_cut) = {0: 1, 1: 0, 2: 0, 3: 35, 4: 105, 5: 252, 6: 805, 7: 1935, 8: 3255, 9: 4515, 10: 5481, 11: 5481, 12: 4515, 13: 3255, 14: 1935, 15: 805, 16: 252, 17: 105, 18: 35, 19: 0, 20: 0, 21: 1}
+   MacWilliams(cut) == W_cycle ?   False
+
+========================================================================
+  PART (iii): cut = score (Clifford/simulable), c3 = last cut datum
+========================================================================
+ n=3: #score classes=2, c3 score-determined? True (max c3-spread within a score = 1)
+ n=4: #score classes=4, c3 score-determined? True (max c3-spread within a score = 1)
+ n=5: #score classes=9, c3 score-determined? True (max c3-spread within a score = 1)
+ n=6: #score classes=22, c3 score-determined? True (max c3-spread within a score = 1)

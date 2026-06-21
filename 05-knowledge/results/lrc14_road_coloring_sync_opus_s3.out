@@ -1,0 +1,75 @@
+LRC(14) ROAD COLORING <-> Z/7 clock automaton  (opus-2026-06-20-S3)
+
+==========================================================================
+STEP 0: per-step advance a(e)=(sector(e+1)-sector(e)) mod 7 in {q,q+1}
+==========================================================================
+   trials=400: advance set NOT subset of {q,q+1} in 0 cases.
+   => deterministic 2-letter (L=+q, H=+q+1) rotation automaton on Z/7.
+
+==========================================================================
+H-SYNC: 'cover Z/7' == full visited-state set; rotation reset lengths
+==========================================================================
+   cover_event == (visited set == Z/7): mismatches = 0  (expected 0, definitional)
+
+   Pure-rotation road coloring reset (rho=0 limit), q=floor(7x) mod 7:
+     q=0: generates Z/7=False  rotation_reset_len t*=None
+     q=1: generates Z/7=True  rotation_reset_len t*=7
+     q=2: generates Z/7=True  rotation_reset_len t*=7
+     q=3: generates Z/7=True  rotation_reset_len t*=7
+     q=4: generates Z/7=True  rotation_reset_len t*=7
+     q=5: generates Z/7=True  rotation_reset_len t*=7
+     q=6: generates Z/7=True  rotation_reset_len t*=7
+   NOTE: rotations are PERMUTATIONS -> never synchronizing in the strict
+   Cerny sense (image never shrinks). The LRC notion is COVERAGE/
+   reachability, not state-collapse. This is the first honest correction.
+
+==========================================================================
+H-CERNY(a): consec = 'fastest synchronizer'? first-cover-time of the
+            full prefix vs. coverage by sparse subsets
+==========================================================================
+   span-domination measS7(E) <= measS7(consec_{max(E)+1}): tested 957, violations = 0
+   => PROVED-style fact (this run): the FULL PREFIX 0..W covers for
+      the WIDEST x-measure among all subsets of {0..W}; equality iff
+      E already contains a covering sub-collection for a.e. covered x.
+
+==========================================================================
+H-CERNY(b): 'reset cost' = span the prefix needs to match a sparse E's
+            cover; does consec win at EQUAL CARDINALITY by paying less?
+==========================================================================
+   first-cover-time CDF  F(t)=measS7(consec_{t+1}) (consec needs t+1 indices):
+     t= 6: F(t)=measS7(consec_7)=0.147619  increment=0.147619
+     t= 7: F(t)=measS7(consec_8)=0.327211  increment=0.179592
+     t= 8: F(t)=measS7(consec_9)=0.416156  increment=0.088946
+     t= 9: F(t)=measS7(consec_10)=0.504478  increment=0.088322
+     t=10: F(t)=measS7(consec_11)=0.581463  increment=0.076984
+     t=11: F(t)=measS7(consec_12)=0.624114  increment=0.042651
+     t=12: F(t)=measS7(consec_13)=0.675928  increment=0.051814
+     t=13: F(t)=measS7(consec_14)=0.704745  increment=0.028818
+   For a sparse E with cardinality k and span W>k: it 'spreads' k probes
+   over a window of W+1 slots. Cover prob <= F(W) but it uses only k slots.
+   consec_k uses k slots over window k-1: cover prob = F(k-1).
+   CRUX restated: is F(k-1) [pay k, span k] >= best sparse cover [pay k, span>k]?
+   This is the genuine reset/Cerny TRADE: SPAN buys coverage, CARDINALITY
+   is the budget. consec spends its whole budget on the SHORTEST covering
+   window. The open inequality = 'cheapest reset wins'.
+
+==========================================================================
+H-ROAD: q-twist (state relabel e->q*e) and the slope-band link to HYP-2703
+==========================================================================
+   s | rotation reset t*(s) | bandcover_s(consec_8)
+   0 |        None          |   0.14286
+   1 |           7          |   0.30952
+   2 |           7          |   0.42381
+   3 |           7          |   0.30952
+   4 |           7          |   0.40476
+   5 |           7          |   0.41429
+   6 |           7          |   0.28571
+   OBSERVATION: 'slow' bands s=0,1 (smallest rotation step) are where
+   consec LOSES (HYP-2703 R1) -- the +s rotation explores Z/7 SLOWEST
+   there, so coverage is hardest and the spread adversary can exploit it.
+   The twist is exactly the road-coloring state relabel; coverage SPEED
+   (reset length) is the q-invariant explaining the per-band failure.
+
+==========================================================================
+VERDICT printed in final structured assessment.
+==========================================================================

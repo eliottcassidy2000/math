@@ -1,0 +1,93 @@
+==============================================================================
+PART 0: integer-part decomposition of the partial-sum walk (the 7-band split)
+==============================================================================
+S_e = floor(e*theta) mod 7 with theta=j+a  ==>  S_e = (e*j + floor(e*a)) mod 7.
+AP part (step j mod 7) twisted by Sturmian defect floor(e*a). Cover is 7-periodic in j.
+  a=1/3: cover by j=0..6 [0, 0, 0, 0, 1, 0, 0]  7-periodic in j? True
+  a=1/5: cover by j=0..6 [0, 0, 0, 0, 0, 0, 1]  7-periodic in j? True
+  a=2/5: cover by j=0..6 [0, 0, 0, 0, 1, 0, 0]  7-periodic in j? True
+  a=3/7: cover by j=0..6 [0, 0, 0, 0, 0, 0, 0]  7-periodic in j? True
+  a=2/9: cover by j=0..6 [0, 0, 0, 0, 0, 0, 1]  7-periodic in j? True
+  ==> cover EXACTLY 7-periodic in integer part j? True  (each band = Z/7 twist, HYP-2703)
+
+==============================================================================
+PART 1 (H1): Gauss-map / continued-fraction self-similarity of the cover set
+==============================================================================
+  k=7 band j=1: cover-meas-in-a=0.16667  #ivs=1
+  k=7 band j=2: cover-meas-in-a=0.16667  #ivs=1
+  k=7 band j=3: cover-meas-in-a=0.16667  #ivs=1
+  k=8 band j=1: cover-meas-in-a=0.30952  #ivs=2
+  k=8 band j=2: cover-meas-in-a=0.42381  #ivs=3
+  k=8 band j=3: cover-meas-in-a=0.30952  #ivs=2
+  k=9 band j=1: cover-meas-in-a=0.47619  #ivs=4
+  k=9 band j=2: cover-meas-in-a=0.45238  #ivs=3
+  k=9 band j=3: cover-meas-in-a=0.39286  #ivs=2
+
+  Gauss-induction probe (k=8, band j=1): cover near a in (0,1) and its G-renormalization
+   cover intervals with a<1/4: [(0.0, 0.16666666666666666)]
+   Gauss windows (1/(n+1),1/n): cover fraction within each window (should stabilize if self-similar):
+     window (1/2,1/1) len=0.5000: cover-fraction=0.28571
+     window (1/3,1/2) len=0.1667: cover-fraction=0.00000
+     window (1/4,1/3) len=0.0833: cover-fraction=0.00000
+     window (1/5,1/4) len=0.0500: cover-fraction=0.00000
+     window (1/6,1/5) len=0.0333: cover-fraction=0.00000
+     window (1/7,1/6) len=0.0238: cover-fraction=1.00000
+     window (1/8,1/7) len=0.0179: cover-fraction=1.00000
+
+==============================================================================
+PART 2 (H2): is consec a RENORMALIZATION fixed/periodic point?
+==============================================================================
+  (R1) compression orbit toward consec; track measS7 (should rise to the consec fixed pt)
+   seed (0, 1, 2, 3, 4, 5, 6, 9): orbit len=3, ends at consec? True, measS7 monotone-up? True
+      measS7 chain: [0.1880952380952381, 0.20833333333333334, 0.3272108843537415]
+   seed (0, 2, 4, 6, 8, 10, 12, 14): orbit len=2, ends at consec? True, measS7 monotone-up? True
+      measS7 chain: [0.3272108843537415, 0.3272108843537415]
+   seed (0, 1, 2, 3, 4, 5, 6, 7, 12): orbit len=5, ends at consec? True, measS7 monotone-up? False
+      measS7 chain: [0.3717687074829932, 0.33537414965986395, 0.38095238095238093, 0.40170068027210887, 0.416156462585034]
+
+  (R2) scale orbit E -> c*E (the dilation that PRESERVES measS7 -- scale invariance):
+   E=(0, 1, 2, 3, 4, 5, 6, 7): measS7 over scalings c=1..5: [0.3272108843537415]  invariant? True
+   E=(0, 2, 4, 6): measS7 over scalings c=1..5: [0.0]  invariant? True
+
+==============================================================================
+PART 3 (H3): Lyapunov/contraction -- does spread -> iid surjection at the Gauss rate?
+==============================================================================
+  iid surjection baseline p_iid(k)=7!*S(k,7)/7^k vs measS7(consec) and a WIDE spread:
+  (Gauss-map Lyapunov exponent lambda = pi^2/(6 ln2) = 2.37314)
+  k=7: measS7(consec)=0.14762  measS7(gap3 wide)=0.14762  p_iid=0.00612
+        consec/p_iid ratio=24.1212  wide/p_iid=24.1212  (wide should -> 1)
+  k=8: measS7(consec)=0.32721  measS7(gap3 wide)=0.32721  p_iid=0.02448
+        consec/p_iid ratio=13.3667  wide/p_iid=13.3667  (wide should -> 1)
+  k=9: measS7(consec)=0.41616  measS7(gap3 wide)=0.41616  p_iid=0.05770
+        consec/p_iid ratio=7.2122  wide/p_iid=7.2122  (wide should -> 1)
+  k=10: measS7(consec)=0.50448  measS7(gap3 wide)=0.50448  p_iid=0.10491
+        consec/p_iid ratio=4.8086  wide/p_iid=4.8086  (wide should -> 1)
+
+  Decay of |measS7(spread_t) - p_iid| as we widen (slope orbit equidistributes):
+  k=8, p_iid=0.02448
+   gap=1 span=7: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=nan
+   gap=2 span=14: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=3 span=21: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=4 span=28: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=5 span=35: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=6 span=42: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=7 span=49: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+   gap=8 span=56: measS7=0.32721  |meas-p_iid|=0.30273  ratio_to_prev=1.0000
+
+DONE.
+
+==============================================================================
+ADDENDUM (verification of refutations)
+==============================================================================
+SCALE INVARIANCE: measS7(c*E)=measS7(E) exactly for all c (confirmed) => uniform widening is
+  a MEASURE-PRESERVING SYMMETRY, not a mixing contraction. H3 (Lyapunov/cat-map decoupling) DEAD.
+COMPRESSION MONOTONICITY (k=8, 5446 single-gap compressions): 2145 VIOLATIONS. Compressing a gap
+  can LOWER measS7 (e.g. {0..6,10}->{0..6,9}). So consec is the global max but NOT reachable by a
+  monotone compression gradient flow. H2 (consec=renorm fixed pt) is only true as 'minimal span',
+  not as a hyperbolic dynamical fixed point.
+THREE-GAP / STEINHAUS: breakpoint set {m/(7e): e in E} has 6/9/11 distinct gaps at k=7/8/9 (>3),
+  so the classical three-distance law does NOT apply. The cover is a SUPERPOSITION of many
+  rotation orbits (one per e), NOT a single CF-renormalizable orbit => no cat-map. This is the
+  dynamical face of HYP-2704 (irreducibly aggregate).
+SURVIVING POSITIVE RESULT: PART 0 -- exact 7-band integer-part split S_e=(e*j+floor(e*a)) mod 7,
+  cover EXACTLY 7-periodic in j (a clean derivation of the HYP-2703 7-band structure).

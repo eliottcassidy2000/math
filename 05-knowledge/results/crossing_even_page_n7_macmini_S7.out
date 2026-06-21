@@ -1,0 +1,11 @@
+n=7: edges=21  Guy Z=9  cycle-space dim=15 (expect 15)
+Enumerating all 2^15=32768 even page-0 graphs...
+
+MIN crossings over EVEN page-0 drawings: 9
+Guy Z(7) = 9   ->  H2 at n=7: HOLDS
+page-0 degree sequences achieving the even-optimum (a few): [(0, 0, 2, 2, 2, 4, 4), (0, 0, 4, 4, 4, 4, 4), (0, 2, 2, 2, 2, 4, 4), (0, 2, 2, 4, 4, 4, 4), (2, 2, 2, 2, 2, 4, 4), (2, 2, 2, 2, 2, 6, 6)]
+
+Free 2-page optimum (local search): 9  (Z=9, match=True)
+
+SUMMARY: even-constrained optimum 9 vs free optimum 9 vs Guy 9
+=> The crossing optimum IS attainable with an EVEN-GRAPH page at n=7.

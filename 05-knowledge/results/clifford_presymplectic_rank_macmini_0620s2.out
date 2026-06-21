@@ -1,0 +1,8 @@
+directed-cycle alternating form: dim(cycle) vs rank vs radical
+  n  dimCyc=C(n-1,2)   rank   2(n-2)  radical  rank=2(n-2)?
+  3                1      0        2        1         False
+  4                3      2        4        1         False
+  5                6      4        6        2         False
+  6               10      6        8        4         False
+  7               15      8       10        7         False
+  8               21     10       12       11         False
