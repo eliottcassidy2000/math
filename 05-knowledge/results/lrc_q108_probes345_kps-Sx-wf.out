@@ -42,3 +42,4 @@ PROBE 4.  Resonant far scales: p0 - P_r(B) (excess over Fatou FLOOR).
 ==============================================================================
 PROBE 5.  TRULY exhaustive window k=8, span<=24 (test family-completeness).
 ==============================================================================
+k=8 EXHAUSTIVE span 15..18: 16359 wide sets, max p0=0.221655 at (0, 3, 6, 9, 12, 14, 15, 18), cap=0.38146, margin=0.15981, viol=0

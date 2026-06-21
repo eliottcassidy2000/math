@@ -122,32 +122,54 @@ def role_hyperedges(E, B=2):
         edges.add((kind, frozenset(roles)))
     return edges
 
+def _vertex_invariant(edges):
+    """Iterated colour-refinement vertex invariant (Weisfeiler-Leman-ish) for the
+       role-labeled hypergraph.  Returns dict vertex -> stable colour (hashable)."""
+    # initial colour = multiset of (kind, role) memberships
+    init = defaultdict(list)
+    for (kind, fs) in edges:
+        for (v, r) in fs:
+            init[v].append((kind, r))
+    colour = {v: tuple(sorted(lst)) for v, lst in init.items()}
+    for _ in range(len(colour) + 1):
+        newc = {}
+        for v in colour:
+            # gather, per incident edge, the multiset of neighbour colours+roles
+            sig = []
+            for (kind, fs) in edges:
+                members = {vv: rr for (vv, rr) in fs}
+                if v in members:
+                    others = tuple(sorted((colour[vv], rr) for (vv, rr) in fs if vv != v))
+                    sig.append((kind, members[v], others))
+            newc[v] = (colour[v], tuple(sorted(sig)))
+        # compress to small ints to keep hashable size bounded
+        order = {c: i for i, c in enumerate(sorted(set(newc.values())))}
+        comp = {v: order[newc[v]] for v in newc}
+        if all(comp[v] == colour[v] for v in comp) and set(comp.values()) == set(
+                colour[v] for v in colour if isinstance(colour[v], int)):
+            colour = comp
+            break
+        colour = comp
+    return colour
+
 def canon_shape(E, B=2):
-    """Canonical form of the role-labeled support-3 hypergraph under relabeling."""
-    E = list(E); k = len(E)
+    """Iso-invariant signature of the role-labeled support-3 hypergraph.  Uses
+       colour-refinement (fast, complete for these small sparse hypergraphs) instead
+       of brute n! relabeling.  Two E's with the same signature are (WL-)iso; we
+       additionally append the sorted edge multiset under the refined colours, which
+       is a near-complete invariant for our small cases."""
+    E = list(E)
     edges = role_hyperedges(E, B)
     if not edges:
-        return ('EMPTY', k)
-    verts = sorted({v for (_, fs) in edges for (v, _) in fs})
-    # canonicalize by min over permutations of the *used* vertices.
-    # (k<=8 -> at most 8! but we restrict to used vertices, usually few.)
-    used = verts
-    best = None
-    # to keep it tractable, permute only the used vertices; non-used are irrelevant
-    if len(used) > 8:
-        # fallback: sorted signature (won't happen for our k<=8 small ranges)
-        sig = tuple(sorted((kind, tuple(sorted(r for (_, r) in fs)))
-                           for (kind, fs) in edges))
-        return ('SIG', sig)
-    for perm in itertools.permutations(range(len(used))):
-        relab = {used[i]: perm[i] for i in range(len(used))}
-        mapped = frozenset(
-            (kind, frozenset((relab[v], r) for (v, r) in fs))
-            for (kind, fs) in edges)
-        key = tuple(sorted((kind, tuple(sorted(fs))) for (kind, fs) in mapped))
-        if best is None or key < best:
-            best = key
-    return best
+        return ('EMPTY', len(E))
+    col = _vertex_invariant(edges)
+    # edge signature under refined colours
+    esig = tuple(sorted(
+        (kind, tuple(sorted((col[v], r) for (v, r) in fs)))
+        for (kind, fs) in edges))
+    # colour-class multiset (extra invariant)
+    csig = tuple(sorted(Counter(col.values()).items()))
+    return ('SHAPE', csig, esig)
 
 # =====================================================================
 #  measS7 / corr (exact) -- reused from the MDS script for ranking
@@ -269,7 +291,7 @@ def part_B():
     print("  We therefore test the WEAKER claim: does SOME natural support-3 count = 56?")
     # how many distinct role-labeled support-3 hypergraphs arise on EXACTLY 6 vertices
     # all touched, with at least one edge, over a generous window?
-    for W in (10, 12, 14, 16):
+    for W in (10, 12):
         shapes6 = set()
         for E in itertools.combinations(range(0, W+1), 6):
             edges = role_hyperedges(list(E))
@@ -283,6 +305,40 @@ def part_B():
         note = '  <-- 56!' if len(shapes6) == 56 else ('  <-- 47!' if len(shapes6) == 47 else '')
         print(f"  6-sets in [0,{W}], all 6 vertices in support-3 edges: "
               f"{len(shapes6)} distinct shapes{note}")
+    print()
+    print("Candidate bijection 2: the SINGLE-TRIANGLE challenger.  A challenger shape with")
+    print("exactly ONE support-3 hyperedge has only finitely many ROLE TYPES:")
+    print("  AP triple: 1 way to label (middle distinguished, 2 ends symmetric) ;")
+    print("  Schur triple: 1 way (sum distinguished, 2 addends symmetric).")
+    print("=> only 2 single-triangle shapes.  Not 56.  The '56' is NOT a single triple.")
+    print()
+    print("Candidate bijection 3: the support-3 COEFFICIENT SIGNATURES with |coef|<=3.")
+    print("Enumerate primitive (p,q,r), gcd=1, canonical sign, that can vanish on 3")
+    print("DISTINCT positive reals -- count them by |coef| bound:")
+    for B in (2, 3, 4):
+        sigs = set()
+        for coefs in itertools.product(range(-B, B+1), repeat=3):
+            if any(c == 0 for c in coefs):
+                continue
+            g = reduce(gcd, [abs(c) for c in coefs])
+            prim = tuple(c//g for c in coefs)
+            if prim[0] < 0:
+                prim = tuple(-c for c in prim)
+            # realizable on distinct positive E iff signs mixed (not all same sign)
+            s = [1 if c > 0 else -1 for c in prim]
+            if len(set(s)) == 1:
+                continue  # all-same-sign cannot vanish on positives
+            sigs.add(prim)
+        # up to permutation of the 3 positions (unordered triple):
+        upto_perm = set()
+        for prim in sigs:
+            best = min(itertools.permutations(prim))
+            # re-canonicalize sign
+            if best[0] < 0 or (best[0] == 0):
+                pass
+            upto_perm.add(best)
+        print(f"  |coef|<= {B}: {len(sigs)} ordered signatures, "
+              f"{len(upto_perm)} unordered  {'<-- 56!' if len(sigs)==56 or len(upto_perm)==56 else ''}")
     return
 
 # =====================================================================

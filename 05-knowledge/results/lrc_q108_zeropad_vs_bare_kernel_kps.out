@@ -1,0 +1,17 @@
+==============================================================================
+ADJUDICATION: bare (active-coord Q) vs zero-padded (measure K) -- support-3 relations
+==============================================================================
+Canon THM-538 (CORRECTED): K(1,1,-1,0,0,0,0)=+0.00066 != 0  (a support-3 relation, k=8).
+
+  Schur (1,1,-1) : bare=-0.000000  +3zeros(len6)=+0.000332  +4zeros(len7)=+0.000664  +5zeros(len8)=+0.000830
+  3-AP  (1,-2,1) : bare=+0.000000  +3zeros(len6)=+0.000332  +4zeros(len7)=+0.000830  +5zeros(len8)=+0.001305
+  supp2 (1,-1)x  : bare=+0.000000  +3zeros(len5)=+0.000000  +4zeros(len6)=-0.000953  +5zeros(len7)=-0.002860
+
+VERDICT:
+ * BARE vector  -> K=0 for support<=5  == the active-coord sum Q (HAS the support-6 floor).
+ * ZERO-PADDED  -> K!=0 once total length>=6  == the MEASURE kernel (NO floor; canon THM-538).
+ * corr(E)=Sum over Lambda°(E) uses ZERO-PADDED length-k vectors, so support-3 relations
+   DO contribute (~+0.0007..0.0013 each at k=8). The AP, rich in support-3 relations
+   (3-APs+Schur=additive energy A3), is support-3-dominated -> corr~0.30. HYP-2724 (A3 the
+   driver, Pearson(A3,corr)=+0.93) STANDS; the workflow's 'support-6 carrier' is the
+   conceded Q-vs-K conflation (THM-538 / MISTAKE-078).

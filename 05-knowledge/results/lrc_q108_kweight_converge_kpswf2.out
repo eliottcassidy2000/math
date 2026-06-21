@@ -1,0 +1,9 @@
+LRC(14) OPEN-Q-108 THREAD 2 -- K-weighted support>=6 CONVERGENCE to exact corr
+
+Relation lattice has rank k-1; we enumerate via an integer kernel basis, growing the
+basis-coefficient box R (each R reaches Linf radius ~ R*max|basis entry|).
+
+
+=== consec [1..7] = [1, 2, 3, 4, 5, 6, 7]   exact corr = 0.257826
+     R   Linf      sup<=5  sup>=6 (->corr)  gap to corr
+     2     54   -1.24e-16         0.011725    -0.246100

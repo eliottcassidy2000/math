@@ -15,3 +15,55 @@ up to relabeling.  |coef|<=2 (additive box).  Roles: AP{mid,end}, Schur{sum,add}
  6  12      1716     1321       1321  
  7   9       120      120        120  
  7  11       792      778        778  
+ 8  10       165      165        165  
+ 8  12      1287     1284       1284  
+
+==============================================================================
+PART B -- the tournament-on-6 bijection test
+==============================================================================
+A000568(6) = 56 = # iso classes of tournaments on 6 vertices.
+  brute tournament iso classes n=3: 2  (A000568=2) OK
+  brute tournament iso classes n=4: 4  (A000568=4) OK
+  brute tournament iso classes n=5: 12  (A000568=12) OK
+
+Candidate bijection 1: '6 elements, support-3 structure = a tournament'.
+  For a 6-set E, orient each pair {a,b} by an additive rule and ask whether
+  the resulting structures, up to iso, number 56.
+  PROBLEM (honest): a tournament needs a DEFINED orientation on ALL C(6,2)=15
+  pairs, but support-3 relations only touch SOME triples -- E's support-3
+  hypergraph is NOT a tournament (it is a 3-uniform partial hypergraph).
+  So a literal 'shape <-> tournament' map cannot be a bijection by type alone.
+
+  We therefore test the WEAKER claim: does SOME natural support-3 count = 56?
+  6-sets in [0,10], all 6 vertices in support-3 edges: 372 distinct shapes
+  6-sets in [0,12], all 6 vertices in support-3 edges: 1165 distinct shapes
+
+Candidate bijection 2: the SINGLE-TRIANGLE challenger.  A challenger shape with
+exactly ONE support-3 hyperedge has only finitely many ROLE TYPES:
+  AP triple: 1 way to label (middle distinguished, 2 ends symmetric) ;
+  Schur triple: 1 way (sum distinguished, 2 addends symmetric).
+=> only 2 single-triangle shapes.  Not 56.  The '56' is NOT a single triple.
+
+Candidate bijection 3: the support-3 COEFFICIENT SIGNATURES with |coef|<=3.
+Enumerate primitive (p,q,r), gcd=1, canonical sign, that can vanish on 3
+DISTINCT positive reals -- count them by |coef| bound:
+  |coef|<= 2: 21 ordered signatures, 10 unordered  
+  |coef|<= 3: 75 ordered signatures, 32 unordered  
+  |coef|<= 4: 165 ordered signatures, 66 unordered  
+
+==============================================================================
+PART C -- the prior coarse (A2,A3,dmin) signature counts: robust or artifact?
+==============================================================================
+Prior MDS script reported, over k-subsets of [0,k+2]:
+  k=7 -> 47 distinct (A2,A3,dmin) shapes; k=8 -> 55.  Are 47/56 meaningful
+  or signature coincidences?  We recompute AND give the FULL role-hypergraph
+  iso-shape count for the SAME window to compare resolutions.
+
+ k     window   #sub  #(A2,A3,dmin)  #full-iso-shape
+ 4 [0, 6]        35             13               20
+ 5 [0, 7]        56             20               50
+ 6 [0, 8]        84             32               83
+ 7 [0, 9]       120             47              120  <-- 47/56
+ 8 [0,10]       165             55              165
+
+DONE.

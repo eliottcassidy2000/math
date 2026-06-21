@@ -1,0 +1,63 @@
+LRC(14) OPEN-Q-108 THREAD 3 follow-up: 56/47 robustness + reconciliation
+
+==============================================================================
+(1) ROBUSTNESS of the coarse (A2,A3,dmin) shape counts vs window width
+==============================================================================
+The prior MDS script used the SINGLE window [0,k+2].  We widen it and watch
+the coarse-signature count.  If 47/55 were meaningful they'd persist; they
+do NOT -- the number drifts with the window, i.e. it is a window artifact.
+
+ k    W=k+2   W=k+3   W=k+4   W=k+5   W=k+6 
+ 6        32      48      62      67      74
+ 7        47      66      86     102     111   <-- contains 47 or 56
+ 8        55      83     118     138     157
+
+READING: the coarse count is monotone-increasing in window width and hits
+47 (k=7) / 55 (k=8) only at one width.  NOT a stable invariant -> the prior
+'47 challenger shapes' was a COINCIDENCE of the window, not a tournament count.
+
+==============================================================================
+(2) EXACT numbers that equal 56, and the honest 'size-3 -> 56' reading
+==============================================================================
+  C(8,3) = 56   <- a genuine '3 -> 56' (3-subsets of an 8-set)
+  A000568(6) = 56        <- tournaments on 6 vertices
+  C(8,5) = 56, C(8,3)=C(8,5).  Also 56 = 8*7*6/6.
+
+  HONEST VERDICT on the user's hint:
+  * The literal 'support-3 relation hypergraph shapes = 56 tournaments on 6'
+    is REFUTED: the support-3 shape count is unbounded (419,1321,... per
+    widening window), and the single-triple reading gives only 2 shapes.
+  * No natural support-3 invariant of a k-set lands on 56 as a stable count.
+  * The number 56 in this project most plausibly enters as C(8,3) (the 3-subset
+    count of a k=8 challenger, the smallest WIDE case) -- a counting coincidence
+    with A000568(6), NOT a structural bijection to tournaments.
+
+==============================================================================
+(3) RECONCILE support-3 (offset lattice) vs support-6 floor (frequency lattice)
+==============================================================================
+  There are TWO distinct relation lattices and the 'support' counts live on
+  DIFFERENT objects -- they do NOT contradict:
+
+   * Lambda(E) = { n in Z^k : sum_i n_i e_i = 0 }  (the OFFSET relation lattice =
+     speed relation lattice L(V), HYP-2154).  Its support-3 vectors are EXACTLY the
+     additive triples: 3-APs (1,-2,1) and Schur triples (1,1,-1).  These are the
+     LEADING binding layer for corr(E): Pearson(A3,corr)=+0.93 (HYP-2723).  More
+     support-3 relations  <=>  more additive energy  <=>  larger corr  <=>  harder.
+
+   * The FREQUENCY lattice in the SEVEN-SECTOR signed identity
+     corr(E)=sum_n K(n),  K(n)=sum_T (-1)^|T| prod chat_T(n_j).  Here Lemma A
+     (HYP-2606 SUPPORT-6 FLOOR) says K(n)=0 unless n has >=6 nonzero non-7 coords.
+
+  These are NOT the same n!  In the offset lattice a support-3 RELATION among the
+  e_i's (e.g. e_a+e_b=e_c) is a CONSTRAINT on E; it makes the frequency-lattice
+  Lambda(E) RICHER (more vectors n), which in turn populates the >=6-support
+  frequency vectors that survive Lemma A.  So:
+        many support-3 OFFSET relations (additive energy, AP)
+            => dense frequency lattice
+            => many surviving support-6 FREQUENCY vectors
+            => large |corr|.
+  The support-3 (offset) and support-6 (frequency) statements are CONSISTENT: the
+  offset-side support-3 count is the DRIVER, the frequency-side support-6 floor is
+  the FILTER on which frequency vectors contribute.  No contradiction.
+
+DONE.
