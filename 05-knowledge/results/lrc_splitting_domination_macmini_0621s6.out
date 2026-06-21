@@ -1,0 +1,26 @@
+Single coherent block vs split blocks (core B=(0,1,2,3,4)), p0:
+config                                               p0          note
+m=15 block(m..m+3)            -> 0.20490
+m=15,G=10 split (m,m+1)+(m+G,m+G+1)  -> 0.09291  single>=split OK
+m=15 block(m..m+3)            -> 0.20490
+m=15,G=30 split (m,m+1)+(m+G,m+G+1)  -> 0.11863  single>=split OK
+m=15 block(m..m+3)            -> 0.20490
+m=15,G=100 split (m,m+1)+(m+G,m+G+1)  -> 0.12319  single>=split OK
+m=30 block(m..m+3)            -> 0.19940
+m=30,G=10 split (m,m+1)+(m+G,m+G+1)  -> 0.14379  single>=split OK
+m=30 block(m..m+3)            -> 0.19940
+m=30,G=30 split (m,m+1)+(m+G,m+G+1)  -> 0.14282  single>=split OK
+m=30 block(m..m+3)            -> 0.19940
+m=30,G=100 split (m,m+1)+(m+G,m+G+1)  -> 0.14125  single>=split OK
+m=60 block(m..m+3)            -> 0.22182
+m=60,G=10 split (m,m+1)+(m+G,m+G+1)  -> 0.13305  single>=split OK
+m=60 block(m..m+3)            -> 0.22182
+m=60,G=30 split (m,m+1)+(m+G,m+G+1)  -> 0.15539  single>=split OK
+m=60 block(m..m+3)            -> 0.22182
+m=60,G=100 split (m,m+1)+(m+G,m+G+1)  -> 0.13527  single>=split OK
+
+Random stress (single consec block vs scattered, same far-count):
+  scattered p0 > block p0 in 0/60 (if 0: single block dominates scattered)
+
+Split>single in 0/9 structured tests.
+If single block dominates => multi-far reduces to single-block closed form (OPEN-Q-108 route).
