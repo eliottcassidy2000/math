@@ -1,0 +1,8 @@
+
+========================================================================
+  (1) Circulant search for HALF-ARC-TRANSITIVE graphs on Z_n
+========================================================================
+  Cay(Z_n,S), S=-S, no 0. Half-arc = VT & ET & arc-orbits=2.
+  (Circulants are always vertex-transitive via translation.)
+
+  n    connection S (half)    |Aut|  vO   eO   aO    verdict
