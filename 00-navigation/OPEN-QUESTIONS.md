@@ -9,16 +9,18 @@ structure that arbitrary nonnegative residual weights destroy.  Exact S63 scout 
 integer partitions found that all S62 coordinatewise counterexamples lose against every generated context
 with total nonzero size `m=7..11`, with worst margins `20/16807`, `37/16807`, and `199/24010`; a
 near-consecutive frontier scan through size 6 found zero failures, worst `12027/2352980`.  New sharp target:
-prove compression for miss-zeta product words, likely first for all-singleton contexts, then prove coherent
-context merging does not reduce the margin, and keep sector labels available for THM-558 transfer-tax
-near-equality routing.
+prove compression for miss-zeta product words.  The all-singleton context base case now reduces exactly to
+the hit-count kernel `g_r(t)=7^-r sum_j (-1)^j binom(t,j)(7-j)^r`; prove that hit-count majorization first,
+then prove coherent context merging does not reduce the margin, and keep sector labels available for THM-558
+transfer-tax near-equality routing.
 -> HYP-2698, HYP-2697, HYP-2696, THM-558, THM-557, HYP-2694, HYP-2684, HYP-2675, OPEN-Q-108.
 
 **OPEN-Q-108 — ARBITRARY CLUSTER COMPRESSION CONE (codex-2026-06-20-S62, HYP-2697/T933).**
 The arbitrary-shape part of HYP-2694 cannot be solved by coordinatewise stochastic dominance.  For a cluster
-shape `C`, let `q_C(R)=Pr_{x,phi}(C covers residual sectors R)`.  Exact counterexamples: `(0,1,3)` beats
-`(0,1,2)` by `5/294` on several 3-sector residuals; `(0,1,2,4)` beats `(0,1,2,3)` by `73/4704` on several
-4-sector residuals; `(0,1,2,3,5)` beats `(0,1,2,3,4)` by `13/1050`, while full-cover difference is zero.
+shape `C`, let `q_C(R)=Pr_{x,phi}(C covers residual sectors R)`.  Exact counterexamples, after S63's
+pairwise-difference wall refinement: `(0,1,3)` beats `(0,1,2)` by `5/294` on several 3-sector residuals;
+`(0,1,2,4)` beats `(0,1,2,3)` by `3/196` on several 4-sector residuals; `(0,1,2,3,5)` beats
+`(0,1,2,3,4)` by `37/2940`, while full-cover difference is zero.
 Thus arbitrary positive residual weights are too strong.  The new target is a generated-cone theorem:
 characterize residual profiles `w_R` arising from actual decorrelated LRC contexts and prove
 `Σ_R w_R q_C(R) ≤ Σ_R w_R q_K(R)` on that cone, where `K` is the coherent consecutive block.  Grid scouts

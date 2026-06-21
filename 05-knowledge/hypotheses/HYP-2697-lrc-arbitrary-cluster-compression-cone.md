@@ -92,13 +92,20 @@ size 3:
 size 4:
   K=(0,1,2,3), C=(0,1,2,4)
   full-cover difference = 0
-  residual gains include 73/4704 on several 4-sector residuals.
+  residual gains include 3/196 on several 4-sector residuals.
 
 size 5:
   K=(0,1,2,3,4), C=(0,1,2,3,5)
   full-cover difference = 0
-  residual gains include 13/1050 on several 4-sector residuals.
+  residual gains include 37/2940 on several 4-sector residuals.
 ```
+
+S63 corrected the exact wall refinement for arbitrary nonconsecutive carrier
+shapes: the carrier law changes when pairwise offset-difference sector cuts
+cross, so the exact breakpoint set must include denominators
+`7*|a-b|` as well as `7*|a|`.  Coherent blocks were already safe because their
+pairwise differences are present among the offsets; the arbitrary-shape
+counterexample constants above are the corrected values.
 
 Thus any proof that treats all residual coordinates as arbitrary positive
 weights is too strong.
@@ -136,7 +143,7 @@ singleton + (0,1,2,3,4,5,6,7,8,9):
   226271/432180 = 0.523557314
 
 singleton + (0,1,2,3,4,5,6,7,8,10):
-  1744429/3361400 = 0.518959065
+  149621/288120 = 0.519300986
 
 singleton + (0,2,3,4,5,6,7,8,9,10):
   149621/288120 = 0.519300986

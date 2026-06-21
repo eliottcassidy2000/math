@@ -55,11 +55,11 @@ def fmt(q: F) -> str:
 @lru_cache(maxsize=None)
 def breakpoints(row: tuple[int, ...]) -> tuple[F, ...]:
     bps = {F(0), F(1)}
-    for e in row:
-        if e == 0:
-            continue
-        for a in range(7 * e + 1):
-            bps.add(F(a, 7 * e))
+    diffs = {abs(a - b) for a, b in combinations(row, 2) if a != b}
+    diffs.update(abs(e) for e in row if e)
+    for d in diffs:
+        for a in range(7 * d + 1):
+            bps.add(F(a, 7 * d))
     return tuple(sorted(b for b in bps if 0 <= b <= 1))
 
 

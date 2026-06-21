@@ -37,20 +37,20 @@ PART C -- S62 coordinatewise counterexamples against generated contexts
     total_m=11, context_r=8, contexts=22: min actual=16260/5764801 (0.002820566) at [1+1+1+1+1+1+1+1]; min averaged-dot=16260/5764801 (0.002820566) at [1+1+1+1+1+1+1+1]; bad-mass max=172440/823543 (0.209387974) at [2+1+1+1+1+1+1]; actual_fail=0, averaged_fail=0
 
   candidate size=4 K=(0, 1, 2, 3) C=(0, 1, 2, 4)
-    bad residual coordinates=14, max_bad_gain=73/4704
-    total_m=7, context_r=3, contexts= 3: min actual=37/16807 (0.002201464) at [1+1+1]; min averaged-dot=157/67228 (0.002335336) at [1+1+1]; bad-mass max=120/343 (0.349854227) at [2+1]; actual_fail=0, averaged_fail=0
-    total_m=8, context_r=4, contexts= 5: min actual=685/235298 (0.002911202) at [1+1+1+1]; min averaged-dot=3971/1613472 (0.002461152) at [2+2]; bad-mass max=780/2401 (0.324864640) at [2+1+1]; actual_fail=0, averaged_fail=0
-    total_m=9, context_r=5, contexts= 7: min actual=365/117649 (0.003102449) at [1+1+1+1+1]; min averaged-dot=10929/3764768 (0.002902968) at [2+2+1]; bad-mass max=601/2401 (0.250312370) at [2+2+1]; actual_fail=0, averaged_fail=0
-    total_m=10, context_r=6, contexts=11: min actual=4815/1647086 (0.002923345) at [1+1+1+1+1+1]; min averaged-dot=1177/576240 (0.002042552) at [6]; bad-mass max=921/4802 (0.191795085) at [2+2+2]; actual_fail=0, averaged_fail=0
-    total_m=11, context_r=7, contexts=15: min actual=14691/5764801 (0.002548397) at [1+1+1+1+1+1+1]; min averaged-dot=1735/1075648 (0.001612981) at [4+3]; bad-mass max=323/2401 (0.134527280) at [3+2+2]; actual_fail=0, averaged_fail=0
+    bad residual coordinates=14, max_bad_gain=3/196
+    total_m=7, context_r=3, contexts= 3: min actual=37/16807 (0.002201464) at [1+1+1]; min averaged-dot=37/16807 (0.002201464) at [1+1+1]; bad-mass max=120/343 (0.349854227) at [2+1]; actual_fail=0, averaged_fail=0
+    total_m=8, context_r=4, contexts= 5: min actual=685/235298 (0.002911202) at [1+1+1+1]; min averaged-dot=115/50421 (0.002280796) at [2+2]; bad-mass max=780/2401 (0.324864640) at [2+1+1]; actual_fail=0, averaged_fail=0
+    total_m=9, context_r=5, contexts= 7: min actual=365/117649 (0.003102449) at [1+1+1+1+1]; min averaged-dot=1865/705894 (0.002642040) at [2+2+1]; bad-mass max=601/2401 (0.250312370) at [2+2+1]; actual_fail=0, averaged_fail=0
+    total_m=10, context_r=6, contexts=11: min actual=4815/1647086 (0.002923345) at [1+1+1+1+1+1]; min averaged-dot=25/14406 (0.001735388) at [6]; bad-mass max=921/4802 (0.191795085) at [2+2+2]; actual_fail=0, averaged_fail=0
+    total_m=11, context_r=7, contexts=15: min actual=14691/5764801 (0.002548397) at [1+1+1+1+1+1+1]; min averaged-dot=1369/1037232 (0.001319859) at [4+3]; bad-mass max=323/2401 (0.134527280) at [3+2+2]; actual_fail=0, averaged_fail=0
 
   candidate size=5 K=(0, 1, 2, 3, 4) C=(0, 1, 2, 3, 5)
-    bad residual coordinates=11, max_bad_gain=13/1050
-    total_m=7, context_r=2, contexts= 2: min actual=199/24010 (0.008288213) at [1+1]; min averaged-dot=514/60025 (0.008563099) at [1+1]; bad-mass max=18/49 (0.367346939) at [2]; actual_fail=0, averaged_fail=0
-    total_m=8, context_r=3, contexts= 3: min actual=5557/504210 (0.011021201) at [1+1+1]; min averaged-dot=28817/2521050 (0.011430555) at [1+1+1]; bad-mass max=88/343 (0.256559767) at [2+1]; actual_fail=0, averaged_fail=0
-    total_m=9, context_r=4, contexts= 5: min actual=59/4802 (0.012286547) at [1+1+1+1]; min averaged-dot=24713/2016840 (0.012253327) at [2+2]; bad-mass max=76/343 (0.221574344) at [2+2]; actual_fail=0, averaged_fail=0
-    total_m=10, context_r=5, contexts= 7: min actual=43879/3529470 (0.012432178) at [1+1+1+1+1]; min averaged-dot=13079/1080450 (0.012105141) at [5]; bad-mass max=221/1372 (0.161078717) at [3+2]; actual_fail=0, averaged_fail=0
-    total_m=11, context_r=6, contexts=11: min actual=97717/8235430 (0.011865440) at [1+1+1+1+1+1]; min averaged-dot=8731/864360 (0.010101115) at [6]; bad-mass max=185/1372 (0.134839650) at [3+3]; actual_fail=0, averaged_fail=0
+    bad residual coordinates=11, max_bad_gain=37/2940
+    total_m=7, context_r=2, contexts= 2: min actual=199/24010 (0.008288213) at [1+1]; min averaged-dot=199/24010 (0.008288213) at [1+1]; bad-mass max=18/49 (0.367346939) at [2]; actual_fail=0, averaged_fail=0
+    total_m=8, context_r=3, contexts= 3: min actual=5557/504210 (0.011021201) at [1+1+1]; min averaged-dot=5557/504210 (0.011021201) at [1+1+1]; bad-mass max=88/343 (0.256559767) at [2+1]; actual_fail=0, averaged_fail=0
+    total_m=9, context_r=4, contexts= 5: min actual=59/4802 (0.012286547) at [1+1+1+1]; min averaged-dot=3389/288120 (0.011762460) at [2+2]; bad-mass max=76/343 (0.221574344) at [2+2]; actual_fail=0, averaged_fail=0
+    total_m=10, context_r=5, contexts= 7: min actual=43879/3529470 (0.012432178) at [1+1+1+1+1]; min averaged-dot=20123/1728720 (0.011640404) at [5]; bad-mass max=221/1372 (0.161078717) at [3+2]; actual_fail=0, averaged_fail=0
+    total_m=11, context_r=6, contexts=11: min actual=97717/8235430 (0.011865440) at [1+1+1+1+1+1]; min averaged-dot=8347/864360 (0.009656856) at [6]; bad-mass max=185/1372 (0.134839650) at [3+3]; actual_fail=0, averaged_fail=0
 
 PART D -- exact frontier challenger scan against coherent contexts
   Shapes of size 3..6 near the consecutive block, total_m=7..11.
@@ -60,7 +60,28 @@ PART D -- exact frontier challenger scan against coherent contexts
   size=5: challengers=8, tested=224, failures=0, worst_delta=199/24010 (0.008288213) challenger=(0, 1, 2, 3, 5) total_m=7 context=[1+1]
   size=6: challengers=8, tested=144, failures=0, worst_delta=12027/2352980 (0.005111391) challenger=(0, 1, 2, 3, 4, 6) total_m=11 context=[1+1+1+1+1]
 
-PART E -- Tournament Analysis: proof carriers after the automaton scout
+PART E -- all-singleton contexts collapse to a hit-count kernel
+  If the context is r independent singleton carriers, residual weights are
+  symmetric over sectors.  The candidate only sees its hit-count law.
+  g_r(t)=Pr(r singleton throws cover a fixed t-sector requirement).
+  kernel rows list g_r(t) for t=0..6.
+    r=2: (1, 13/49, 2/49, 0, 0, 0, 0)
+    r=3: (1, 127/343, 36/343, 6/343, 0, 0, 0)
+    r=4: (1, 1105/2401, 62/343, 132/2401, 24/2401, 0, 0)
+    r=5: (1, 9031/16807, 4380/16807, 1830/16807, 600/16807, 120/16807, 0)
+    r=6: (1, 70993/117649, 39962/117649, 20460/117649, 9120/117649, 3240/117649, 720/117649)
+    r=7: (1, 543607/823543, 48828/117649, 28818/117649, 15600/117649, 7440/117649, 2880/117649)
+    r=8: (1, 4085185/5764801, 2796194/5764801, 261756/823543, 162072/823543, 92880/823543, 47520/823543)
+
+  r=4, K=(0, 1, 2), C=(0, 1, 3): delta=20/16807 (0.001189980) hit_count_gap=(1/294, 0, -3/98, 4/147, 0, 0, 0)
+  r=3, K=(0, 1, 2, 3), C=(0, 1, 2, 4): delta=37/16807 (0.002201464) hit_count_gap=(1/588, 1/49, -1/49, -4/147, 5/196, 0, 0)
+  r=2, K=(0, 1, 2, 3, 4), C=(0, 1, 2, 3, 5): delta=199/24010 (0.008288213) hit_count_gap=(1/980, 2/245, 3/196, -1/15, 19/1470, 43/1470, 0)
+  r=5, K=(0, 1, 2, 3, 4, 5), C=(0, 1, 2, 3, 4, 6): delta=12027/2352980 (0.005111391) hit_count_gap=(1/1470, 1/147, 1/84, 2/245, -27/490, 1/49, 1/140)
+  Proof lens: singleton contexts reduce the cone inequality to weighted
+  hit-count majorization.  The S62 coordinate gains are orientation-level
+  effects that disappear under this symmetric generated context.
+
+PART F -- Tournament Analysis: proof carriers after the automaton scout
   vertices: proof-carrier quotients, not runners
   observable=(exactness, generated-cone fidelity, proof reach, analogy)
     scores={'raw_coordinate_weights': 0, 'averaged_residual_profile': 2, 'x_correlated_profile_word': 5, 'miss_zeta_product_word': 6, 'coherent_context_exact_scan': 3, 'transfer_tax_label_lift': 4, 'literal_rule110_analogy': 1}

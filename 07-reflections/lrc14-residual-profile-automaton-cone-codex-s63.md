@@ -52,6 +52,26 @@ prove compression for singleton-product context words
   -> hand near-equality labelled cases to THM-558 transfer tax.
 ```
 
+There was one important correction during the run.  The original arbitrary
+shape code refined `x` only at individual offset-sector walls.  For a
+random-phase cluster, the hit-mask law also changes when pairwise offset cuts
+cross, so the correct exact wall set includes denominators `7*|a-b|`.  Coherent
+blocks were already fine because their difference set is contiguous; arbitrary
+nonconsecutive constants shifted slightly.  The qualitative result survived,
+and the corrected S62 output is now stored.
+
+The all-singleton context now has a clean exact base lemma.  With `r`
+singleton carriers, the context is sector-symmetric and the candidate only sees
+its hit-count law through
+
+```text
+g_r(t)=7^-r sum_{j=0}^t (-1)^j binom(t,j)(7-j)^r.
+```
+
+The script asserts the hit-count formula against the direct 64-mask computation
+on the weakest cases.  So the next proof attempt should first prove a
+hit-count majorization for consecutive blocks under these kernels.
+
 Rule 110 is not doing mathematical work inside the proof.  Cook's universality
 theorem is useful as a discipline: a local rule can generate a constrained
 space-time language that is much smaller than the set of all arrays.  Here the

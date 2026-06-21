@@ -16,9 +16,13 @@ independent context.  But S62 found exact failures:
 
 ```text
 (0,1,3) beats (0,1,2) by 5/294 on several 3-sector residuals.
-(0,1,2,4) beats (0,1,2,3) by 73/4704 on several 4-sector residuals.
-(0,1,2,3,5) beats (0,1,2,3,4) by 13/1050 on several 4-sector residuals.
+(0,1,2,4) beats (0,1,2,3) by 3/196 on several 4-sector residuals.
+(0,1,2,3,5) beats (0,1,2,3,4) by 37/2940 on several 4-sector residuals.
 ```
+
+S63 later refined the exact breakpoint set for arbitrary nonconsecutive
+carriers by adding pairwise offset-difference walls.  That changed the size-4
+and size-5 constants above but not the qualitative conclusion.
 
 These challengers do not improve full cover; for sizes below 6 full cover is
 zero anyway.  The lesson is that spread shapes can be better at covering a

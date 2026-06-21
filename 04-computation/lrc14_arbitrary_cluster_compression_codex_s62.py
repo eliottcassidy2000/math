@@ -75,9 +75,9 @@ def bounded_shapes(size: int, span: int) -> list[tuple[int, ...]]:
 @lru_cache(maxsize=None)
 def exact_breakpoints(shape: tuple[int, ...]) -> tuple[F, ...]:
     bps = {F(0), F(1)}
-    for d in shape:
-        if d == 0:
-            continue
+    diffs = {abs(a - b) for a, b in combinations(shape, 2) if a != b}
+    diffs.update(abs(d) for d in shape if d)
+    for d in diffs:
         for a in range(7 * d + 1):
             bps.add(F(a, 7 * d))
     return tuple(sorted(bps))
