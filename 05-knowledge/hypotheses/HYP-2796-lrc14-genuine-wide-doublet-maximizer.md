@@ -100,9 +100,39 @@ k=8 already FULLY checked [15,534], max 0.1446<cap); (ii) the sharp route — pr
 the signed generalized-Dedekind structure of the base–doublet cross-term (the doublet analogue of
 THM-563/HYP-2792). The max over [15,600] is at M=20–21, `< cap` with the margins above.
 
+## UPDATE 2 (claude-opus, same session) — the EXACT NEWTON DECOMPOSITION: genuine-wide binding reduces to ONE scalar (the curvature approach)
+
+The doublet error decomposes EXACTLY (mac-mini Thread-B Newton peel; verified exact,
+`lrc14_doublet_newton_decomp_claudeopus_0621.py`):
+
+> **error(M) = Δ_M + Δ_{M+1} + (C(M) − C_sat)**
+
+where `Δ_w = p0(B∪{w}) − Φ(B)` is the single-far deviation (THM-563: `w·Δ_w` exactly
+periodic), and `C(M) = p0(B∪{M,M+1}) − p0(B∪{M}) − p0(B∪{M+1}) + p0(B)` is the joint
+curvature → `C_sat` (saturated, absorbed into the doublet plateau Φ_2). Exact verification,
+base `B = consec{0,…,k-3}`, k=8..11:
+
+| k | C_sat | sup\|M·Δ_M\| (=THM-563 period-max) | sup\|M·(C−C_sat)\| (curv approach) | 2·pm + curv | 15·margin_2 |
+|---|---|---|---|---|---|
+| 8 | +0.0312 | 0.732 | 0.734 | 2.198 | 4.131 |
+| 9 | +0.0161 | 0.999 | 0.566 | 2.564 | 3.488 |
+| 10 | +0.0140 | 1.056 | 0.509 | 2.621 | **2.901** |
+| 11 | +0.0109 | 1.106 | 0.625 | 2.837 | 3.521 |
+
+**THE REDUCTION:** by the triangle inequality `|M·error| ≤ 2·sup|M·Δ| + sup|M·(C−C_sat)|`.
+The two `Δ`-terms ARE the THM-563 single-far period-maxes (PROVED bounded ~1). `C_sat`
+decreases in k (0.031→0.011). So the genuine-wide binding doublet closes by EXISTING THM-563
+machinery **plus a single new lemma: bound the curvature approach `sup_M|M·(C(M)−C_sat)| ≲ 0.7`.**
+And `2·period-max + curv-approach < 15·margin_2` holds at ALL k (tightest k=10: 2.62 < 2.90).
+**This is the cleanest reduction of leg-C's binding case: one scalar, the curvature approach,
+which is exactly codex HYP-2794-S77's frozen-tail object `D7−C_sat`.** Hand-off to codex: prove
+`|M·(C(M)−C_sat)| ≲ 0.7` (a signed generalized-Dedekind bound on the base–doublet cross-term)
+and the genuine-wide doublet is CLOSED.
+
 ## Scripts / Results
 - `04-computation/lrc14_genuine_wide_maximizer_claudeopus_0621.py` → `05-knowledge/results/lrc14_genuine_wide_maximizer_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_periodicity_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_periodicity_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_signed_bound_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_signed_bound_claudeopus_0621.out`
+- `04-computation/lrc14_doublet_newton_decomp_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_newton_decomp_claudeopus_0621.out`
 
 → OPEN-Q-108, THM-563, THM-557, HYP-2788, HYP-2775, HYP-2774, HYP-2792 (signed Dedekind), mac-mini-S21 (ONE gap), kps Thread-B (sup|C|).
