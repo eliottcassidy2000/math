@@ -56,6 +56,25 @@ form `14/p` is what closes the tail without citing classical discrepancy theory.
 `(6/49)V/f1` (THM-546 PROVED), verified `(p0-p0_inf)*f1` bounded (`<=0.72` at `gamma=2`). So for
 `f1 > W*` the finite value is within margin of `p0_inf`; `f1 <= W*` is the existing finite window.
 
+## Exhaustive atlas verification (k=8..12)
+
+Per-`k` tail threshold `p* = 14/(cap_k - P2(B))` (proven tail `D<=14/p` makes `p>p*` safe):
+
+| k | base | P2 (plateau) | cap_k | margin cap-P2 | p* | atlas p<=p* |
+|---|---|---|---|---|---|---|
+| 8 | [0,2..10] | 0.0839 | 2243/5880 | 0.298 | 47 | 0 violations (sup p0_inf 0.089) |
+| 9 | [0,2..12] | 0.2465 | 1979/4004 | 0.248 | 57 | 0 violations (sup 0.247) |
+| 10| [0,2..14] | 0.3989 | 55/91     | **0.205** | 68 | 0 violations (sup 0.401, checked p<=72) |
+| 11| [0,2..16] | 0.4807 | 66/91     | 0.245 | 57 | 0 violations (sup 0.482) |
+| 12| [0,2..18] | 0.5586 | 6/7       | 0.298 | 47 | 0 violations (sup 0.559) |
+
+**Binding case is k=10 (margin 0.205); the margin DIPS at k=10 then RECOVERS** (not monotone -- no
+blow-up at large k). All `p<=p*` exact-checked (0 violations); `p>p*` covered by the proven `D<=14/p`.
+
+**CAP CORRECTION (flag for the team):** correct caps are `cap_11=66/91`, `cap_12=6/7`. Some repo files
+carry `cap_11=25/91`, `cap_12=2243/5880` (=cap_8, a copy-paste) -- those are WRONG (below the plateau
+`P2`: `P2(k=11)=0.481 > 25/91=0.275`). With the correct caps L7 is comfortable at every k.
+
 ## Status
 
 L7 = **[finite atlas, exact] + [tail `p>=67`: elementary torus-line discrepancy
