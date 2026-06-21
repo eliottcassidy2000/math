@@ -57,7 +57,26 @@ It does **not** close LAYER 3 — the genuinely-aggregate step that the *most* m
 point maximizes the dilation-invariant `Σ_a W_a`. Pure symmetrization cannot, because `measS7` is
 *constant* on dilation orbits, not Schur-concave under them: the symmetry **narrows** the maximizer to
 the dilation-symmetric family (LAYERS 1-2, now both rigorous) but the residual cross-phase trade-off
-survives. What is new is that the wall is now a clean statement in invariant-theory language —
-*the `Z_7*`-fixed configuration extremizes a `Z_7*`-invariant sum of cycle-graph survival widths* —
-and that it is literally the same `Z_7*` story as the tournament Paley extremality. The remaining
-content on both sides is the single Gauss-sum-twisted aggregate gap.
+survives.
+
+## CORRECTION (S20, harvested from the creative-lead trawl) — the unifier is the ADDITIVE AP, not Paley
+
+The thesis above leaned on "Paley = the tournament extremizer," and that is **wrong for large p** — a
+small-`p` coincidence I should not have generalized. The canon already records it (HYP-479 / THM-135,
+the **Paley Crossover**; HYP-455): Paley/QR maximizes circulant `H` only at `p = 3, 7, 11`; at `p = 19`
+the **cyclic Interval** (the *additive* AP / consecutive block) strictly beats it
+(`H_Interval = 1.184e12 > H_Paley = 1.173e12`), and the Interval is the unique H-maximizer thereafter.
+The trawl's ANGLE 6 re-derived this independently (Schur-concavity of `H` in `|λ|²` holds at p=7,11 and
+**fails at p=19**, exactly where Interval majorizes Paley but has higher `H`).
+
+So the honest unification is **stronger and simpler than the multiplicative one**: the extremizer on
+*both* sides is the **additive arithmetic progression** — `consec = {0,…,k-1}` for the LRC cover and the
+cyclic **Interval** `{⌈p/2⌉,…,p-1}` for tournament `H`. "Whatever proves one proves the other"
+(HYP-2747) becomes literal: both are *"the AP Schur-maximizes."* The `Z_7*` multiplicative/dilation
+symmetry is a genuine **feature** of `consec` (it forces LAYER 2 — double the identity residue —
+verified and Lean-formalized) but it is **not the source of extremality**: the pure-multiplicative
+object (Paley/QR) is *not* extremal once `p ≥ 19`, while the pure-additive object (the AP) is. The
+"Gauss-sum twist" framing is therefore demoted: it explains why the two *coincide* at small `p`, not why
+either is extremal. The driver is additive (AP / minimal-conductance), and the proof tools that match
+the data are the conductance vector `c_r = Σ_{e≡r} 1/|e|` and the windows/binding-speed harmonic sum
+(S20 trawl ANGLEs 1–2), not multiplicative symmetry.

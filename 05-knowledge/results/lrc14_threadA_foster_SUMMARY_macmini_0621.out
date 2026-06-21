@@ -1,0 +1,6 @@
+ANGLE 2 SUMMARY: electrical model of the LRC(14) wall
+  D2 Foster conservation sum_t g(t) = 112 (=112)
+  D1 g(t)/14 = R_eff(0,t) on C_7: [(1, Fraction(6, 7)), (2, Fraction(10, 7)), (3, Fraction(12, 7)), (4, Fraction(12, 7)), (5, Fraction(10, 7)), (6, Fraction(6, 7))]
+  consec sumW = 481/1470 = 0.327211
+  D5 perfect short: sumW(consec)=0.3272 vs drop e=0 -> 0.2639
+  See docstring for full CONFIRMED / FAILED verdict.
