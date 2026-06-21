@@ -7,9 +7,9 @@ depends_on:
   - THM-563   # the single-far exact periodicity this extends to the far DOUBLET
   - THM-557   # the BV/TV finite-cutoff this collapses (M_BV~2000 / f0~148 -> M*~13-55)
 related:
-  - HYP-2804  # this theorem's hypothesis-log entry (the frozen-plateau centering + exact P/R)
-  - HYP-2799  # kps S27 CONVERGENT: frozen-phase p0_inf == Φ_frozen (independent double integral)
+  - HYP-2799  # kps S27 CONVERGENT: frozen-phase p0_inf == Φ_frozen (independent double integral); the frozen-plateau-centering insight
   - HYP-2803  # kps S27 CONVERGENT: binding doublet closed (cites this script's P/R numbers)
+  - HYP-2804  # kps S27: all-bounded-bases doublet WINDOW sweep (0 viol/~3000 bases/k, margin>=0.16)
   - HYP-2797  # opus: doublet maximizer = consec+{M,M+1}; "sup|M·error|~1.4 bounded"
   - HYP-2798  # kps S27: "M·e grows to 7" (WRONG center bvd(base,2)); resolved here
   - HYP-2796  # codex: genuine-wide two-far freeze tail (frozen-phase law, converges)
