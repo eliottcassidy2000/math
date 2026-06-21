@@ -4,6 +4,8 @@ title: LRC14 generalized-doublet audit as a gK8 concentration guardrail
 status: OPEN guardrail; exact bounded-span evidence supports gK8 concentration and generalized-doublet fallback; proof not claimed
 source: codex-2026-06-22-S78
 depends_on:
+  - HYP-2822
+  - HYP-2820
   - HYP-2817
   - HYP-2816
   - HYP-2815
@@ -121,7 +123,7 @@ far smoothing is dominated in L_yK8 by a bounded/concentrated profile.
 
 The honest small-`f` refinement matters.  The clean `1/7` factor is an
 asymptotic law; at the binding boundary `f>=15` the ratio can be larger.
-S79/HYP-2817 makes this quantitative: the exact single-far boundary maximum is
+S79/HYP-2822 makes this quantitative: the exact single-far boundary maximum is
 `14/15` in exhaustive k=10,11,12 scans through `f<=60`, and adjacent two-far
 frontier packets reach `7/8`.  These rows still have positive gK8 margin, so
 the right theorem is a boundary envelope plus margin ledger, not a uniform

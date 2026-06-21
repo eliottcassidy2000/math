@@ -1,9 +1,10 @@
 ---
-id: HYP-2817
+id: HYP-2822
 title: LRC14 q6 boundary-contraction envelope for the gK8 route
 status: OPEN theorem target; exact finite evidence and boundary correction
 source: codex-2026-06-22-S79
 depends_on:
+  - HYP-2820
   - HYP-2816
   - HYP-2815
   - HYP-2814
@@ -17,7 +18,7 @@ related:
   - THM-564
 ---
 
-# HYP-2817: q6 Boundary-Contraction Envelope
+# HYP-2822: q6 Boundary-Contraction Envelope
 
 ## Claim
 
@@ -36,8 +37,9 @@ gK8 proof:
   then hand large f to the asymptotic/Krawtchouk/R-tail route.
 ```
 
-This refines HYP-2816.  The small-`f` correction is real and large, but it is
-not a counterexample to gK8.  It says the proof must keep the endpoint-period /
+This refines HYP-2816 and complements HYP-2820's endpoint-period q6-ratio
+bound.  The small-`f` correction is real and large, but it is not a
+counterexample to gK8.  It says the proof must keep the endpoint-period /
 finite-window address at the boundary and only use the `1/7` law after the far
 coordinate is genuinely decorrelated.
 
@@ -156,7 +158,7 @@ single scalar predicate "q6 ratio close to 1/7".
 
 ## Status
 
-No LRC14 proof is claimed.  HYP-2817 contributes a concrete finite correction
+No LRC14 proof is claimed.  HYP-2822 contributes a concrete finite correction
 to the gK8 concentration proof order:
 
 1. prove the boundary q6 envelope (`14/15`, `7/8`, and its finite-atlas
