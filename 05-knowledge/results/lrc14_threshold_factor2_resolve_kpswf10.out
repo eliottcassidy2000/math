@@ -1,0 +1,43 @@
+====================================================================================================
+FACTOR-2 RESOLUTION: which clean 'sector-style' event equals g* = {maxgap > 2/7} (THM-527)?
+====================================================================================================
+EV1_emptycell = a fully empty 1/7-sector        (>= 1/7 hole, the route's natural scale)
+EV2_arc>2/7   = an empty OPEN 2/7 arc = {maxgap > 2/7} EXACTLY (def of circular maxgap)
+EV3_adj       = two cyclically-adjacent empty 1/7-sectors
+G2            = maxgap > 2/7  (THM-527 good).   G1 = maxgap > 1/7.
+
+EXPECTED IDENTITIES:
+  G2 == EV2_emptyarc2_7_gt   (tautology: maxgap>2/7 <=> an open empty 2/7 arc exists)
+  G2  => EV1_emptycell       (open >2/7 interval contains a full closed 1/7 cell)
+  G1 == EV1-ish but at 1/7   (one missed sector ~ a >1/7 hole)
+
+E                           p0  EV1cell  EV2>2/7   EV3adj      G2      G1  G2==EV2?  G2<=EV1?
+---------------------------------------------------------------------------------------------
+consec k=4              0.0000   1.0000   0.9048   0.7857  0.9048  1.0000      True      True
+consec k=5              0.0000   1.0000   0.6429   0.4643  0.6429  1.0000      True      True
+consec k=6              0.0000   1.0000   0.5714   0.3571  0.5714  1.0000      True      True
+consec k=7              0.1476   0.8524   0.3952   0.3024  0.3952  1.0000      True      True
+consec k=8              0.3272   0.6728   0.3327   0.2544  0.3327  0.9401      True      True
+consec k=9              0.4162   0.5838   0.2827   0.2219  0.2827  0.8401      True      True
+consec k=11             0.5815   0.4185   0.2160   0.1774  0.2160  0.6263      True      True
+consec k=13             0.6759   0.3241   0.1794   0.1476  0.1794  0.4425      True      True
+perf k=7 {0..8}\{1,7}   0.1226   0.8774   0.3714   0.2571  0.3714  1.0000      True      True
+Sidon k=5               0.0000   1.0000   0.9963   0.8010  0.9963  1.0000      True      True
+---------------------------------------------------------------------------------------------
+
+G2 == EV2(open 2/7 empty arc) for ALL:  True   (tautological identity, sanity)
+G2 <= EV1(one empty 1/7 cell) for ALL:  True   (the 2/7 event is RARER than 1 empty cell)
+
+CONCLUSION on the factor-2:
+  * g* = G2 = {an OPEN empty 2/7 arc exists}.  This is a 2/7-scale event, NOT the
+    1/7-scale event EV1 (one empty sector).  EV1 (>= one empty 1/7 cell) is the dual of
+    the sector-route p0 only at the 1/7 scale: 1-p0 = meas{>=1 sector missed}.  But
+    'sector missed' (no phase in a 1/7 cell) is EV1, not G2.  So 1-p0 = EV1 >= G2, strictly.
+  * THEREFORE: a sector route AT THE 1/7 SCALE controls 1-p0 = EV1, which OVER-counts g*.
+    A route that EQUALS g* must be at the 2/7 scale (EV2).  The natural '2/7 sector route'
+    is p0' = 1 - meas(EV2) = 1 - g*, and 'all 2/7-windows hit' = NOT g*.  So closing g*>0
+    is the SAME as a 2/7-scale 'not-all-windows-covered' statement -- a DIFFERENT cap than
+    the 1/7 cap_k.  The 1/7 sector route (p0<=cap_k) and THM-527 (g*>0) are PARALLEL: same
+    phi-phase, DIFFERENT threshold (1/7 vs 2/7), and the 1/7 route's inequality direction
+    does not transfer to the 2/7 object.
+

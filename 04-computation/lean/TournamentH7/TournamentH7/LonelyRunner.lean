@@ -23,7 +23,6 @@
   oracle-2026-05-31-S18.
 -/
 import Mathlib.Tactic
-import Mathlib.Algebra.BigOperators.Ring
 
 namespace LonelyRunner
 
