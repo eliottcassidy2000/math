@@ -42,6 +42,15 @@ User supplied another broad inspiration batch: Gibbs measures, Arnold cat maps, 
 **Guardrails.**  Literal Arnold cat-map dynamics are wrong for this setting: the mod-7 action is torsion/finite-order and the band map is expanding, not a hyperbolic unimodular toral automorphism.  Strict road coloring also misfires for invertible rotations; LRC needs coverage/reachability and the non-invertible residual deletion automaton from HYP-2698/HYP-2702/HYP-2705.  Gibbs convexity is tautological, raw path coherence gets signs but not magnitudes, and low-order log-linear free-energy fits do not generalize.  LRC(14) remains open.
 
 **Proof program.**  Define an LRC mod-7 generated phase profile `psi_E`; treat the decorrelated death-chain profile as the stabilizer/free layer; route low phase degree to AP/cube-root/Freiman/squarefree atlases; and prove a Fubini-Study/projective-angle bound on the signed true-wide deviation before comparing it to the HYP-2701 boundary margin.  This is a refinement of HYP-2705 and OPEN-Q-108, not a replacement.
+## codex-2026-06-20-S67 -- two-far live-depth kernel for the LRC14 survival route -- HYP-2708/T941
+
+Continued the HYP-2701 true-wide two-far branch after the start checkpoint commit.  The exact step was to decompose the actual-minus-decorrelated two-far survival deviation by bounded-core missed depth `t` and number `h` of distinct missed sectors hit by the two far speeds.
+
+**Result:** for `C=p1+p2+p3+p4-4p6`, only before-depths `1,2,5,6` are live.  Depths `3` and `4` are exactly silent because two hits can only move them inside `{1,2,3,4}`, where `C=1` is constant.  The script verifies the checksum `actual C(B union {u,v}) - C_boundary(B,2) = sum mass*(C(t-h)-K2(t))` exactly on wall atoms.
+
+**Artifacts:** new hypothesis `05-knowledge/hypotheses/HYP-2708-lrc14-twofar-live-depth-kernel.md`, script `04-computation/lrc14_twofar_live_depth_kernel_codex_s67.py`, output `05-knowledge/results/lrc14_twofar_live_depth_kernel_codex_s67.out`, and reflection `07-reflections/lrc14-twofar-live-depth-kernel-codex-s67.md`.
+
+**Proof target now:** a four-depth signed kernel inequality against the positive HYP-2701 boundary margins, with k=8 charged to the true cap dividend rather than the floor.
 
 ## monad-formalizer-2026-06-20-S1 -- formal-group n-fold sum: machine-checked closed form + interior-pole criterion (forwarded from math-lean)
 
