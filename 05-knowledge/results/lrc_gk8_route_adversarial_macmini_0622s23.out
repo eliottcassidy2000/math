@@ -1,0 +1,11 @@
+(2) L_yK8(consec_k) vs 10*cap_k:
+  k=8: L_yK8(consec)=3.5823  10*cap=3.8146  margin=0.2323  OK
+  k=9: L_yK8(consec)=4.4340  10*cap=4.9426  margin=0.5085  OK
+  k=10: L_yK8(consec)=5.2857  10*cap=5.7143  margin=0.4286  OK
+  k=11: L_yK8(consec)=6.0324  10*cap=7.1429  margin=1.1104  OK
+  k=12: L_yK8(consec)=6.4354  10*cap=8.5714  margin=2.1361  OK
+
+(3) adversarial: any config with L_yK8 > L_yK8(consec_k)?
+  k=8: consec L_yK8=3.5823; 0/71 configs exceed it; max found=3.5823 (consec is MAX, gK8 route sound)
+  k=9: consec L_yK8=4.4340; 0/71 configs exceed it; max found=4.4340 (consec is MAX, gK8 route sound)
+  k=10: consec L_yK8=5.2857; 0/71 configs exceed it; max found=5.2857 (consec is MAX, gK8 route sound)
