@@ -1,0 +1,61 @@
+LRC(14) OPEN-Q-108  THREAD C: the EXACT meaning of 56 (opus2)
+
+==============================================================================
+READING 1 -- C(8,3)=56 : the 56 three-subsets of the k=8 offset set {0..7}
+==============================================================================
+  3-subsets of {0..7}: 56 total (= 56 = A000568(6))
+  classified by support-3 relation status:
+    ('AP',): 10
+    ('AP', 'Schur'): 2
+    ('Schur',): 7
+    ('none',): 37
+
+  This is a labeling of the 56 triples by {none,AP,Schur,both}. It is a
+  4-COLORING of C(8,3), NOT a tournament.  56=56 here is the trivial identity
+  C(8,3)=A000568(6) -- a numerical coincidence, no orientation structure.
+  # AP triples in {0..7} = 12; # Schur triples = 9
+
+==============================================================================
+READING 3 -- the 56 triangles of K_8 (project core: 3-cycles of a tournament)
+==============================================================================
+  K_8 has C(8,3) = 56 triangles.  A tournament on 8 vertices assigns
+  each triangle a type (cyclic 3-cycle / transitive).  The OCF counts 3-cycles.
+
+  consec {0..7}: 19 of the 56 triangles carry a support-3 relation
+    (the 'active' cells of the relation code = the binding challengers).
+      ('AP',): 10
+      ('AP', 'Schur'): 2
+      ('Schur',): 7
+      ('none',): 37
+
+  KEY DISTINCTION: the 56 here is the # of CELLS (triangles), the SAME 56
+  for ANY 8-coordinate offset set.  The DATA that varies with E is WHICH
+  cells are active (carry a relation) -- analogous to which triangles of a
+  tournament are 3-cycles.  A000568(6)=56 is a RED HERRING; the structural
+  56 is C(8,3) = # triangles of the k=8 relation code (independent of E).
+
+==============================================================================
+DECISIVE -- active-triangle patterns of k=8 offset sets (up to S_8 relabel)
+==============================================================================
+For each 8-set E in a window, form the set of active triangles (those with a
+support-3 relation), canonicalize the 3-uniform hypergraph under S_8, count
+distinct patterns.  If a tournament bijection were real we'd hope for 56.
+  8-sets in [0,10]: 137 distinct active-triangle patterns
+  8-sets in [0,12]: 510 distinct active-triangle patterns
+  8-sets in [0,14]: 1144 distinct active-triangle patterns
+
+VERDICT printed in main().
+
+==============================================================================
+VERDICT
+==============================================================================
+56 = C(8,3) = # triangles (support-3 cells) of the k=8 relation code Lambda(E),
+which numerically equals A000568(6)=56.  This is a COINCIDENCE of C(8,3)=56=
+A000568(6), NOT a structural bijection: support-3 challengers are 3-UNIFORM
+(unoriented) hypergraph cells, while tournaments are ORIENTED graphs; the
+abstract support-3 shape count (358..2537) and active-pattern count are not 56.
+The project-native reading: the 56 cells = the 56 triangles of K_8, the EXACT
+analogue of a tournament's 56 triangles -- THIS is the real tournament link
+(triangle = potential 3-cycle), but it is C(8,3), not A000568.
+
+DONE.

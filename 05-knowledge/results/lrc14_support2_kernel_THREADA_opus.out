@@ -1,0 +1,34 @@
+==============================================================================
+Fourier cross-check of P(sector missed) on small k
+==============================================================================
+  E=[0, 1, 2] s=0: exact=0.00000 fourier=0.38451 (im=-3.5e-19) match=False
+  E=[0, 1, 2] s=1: exact=0.71429 fourier=0.72156 (im=2.5e-18) match=False
+  E=[0, 1, 2] s=2: exact=0.71429 fourier=0.71972 (im=3.4e-18) match=False
+  E=[0, 1, 2] s=3: exact=0.71429 fourier=0.70627 (im=-2.9e-33) match=False
+  E=[0, 1, 2] s=4: exact=0.71429 fourier=0.71972 (im=2.9e-18) match=False
+  E=[0, 1, 2] s=5: exact=0.71429 fourier=0.72156 (im=-8.6e-18) match=False
+  E=[0, 1, 2] s=6: exact=0.78571 fourier=0.38451 (im=-3.8e-17) match=False
+
+  E=[0, 1, 3] s=0: exact=0.00000 fourier=0.37279 (im=2.1e-17) match=False
+  E=[0, 1, 3] s=1: exact=0.71429 fourier=0.71949 (im=1.9e-18) match=False
+  E=[0, 1, 3] s=2: exact=0.71429 fourier=0.72181 (im=6.9e-18) match=False
+  E=[0, 1, 3] s=3: exact=0.76190 fourier=0.75344 (im=3.3e-32) match=False
+  E=[0, 1, 3] s=4: exact=0.71429 fourier=0.72181 (im=7.6e-18) match=False
+  E=[0, 1, 3] s=5: exact=0.71429 fourier=0.71949 (im=-1.9e-18) match=False
+  E=[0, 1, 3] s=6: exact=0.76190 fourier=0.37279 (im=-4.8e-18) match=False
+
+==============================================================================
+Support-2 weight enumerator A_2 and the anti-MDS signature
+==============================================================================
+ Every pair of nonzero offsets admits a support-2 relation over Q, but the
+ CODE-relevant coefficient is #pairs with a SHORT primitive relation
+ min(|a|,|b|)<=R (these carry the largest Fourier kernel ~1/(ab)).
+
+ k=8 R=1: consec short-A_2=9; #shapes with more=190; max=15 by [0, 1, 2, 3, 4, 6, 8, 12]  consec-max:False
+ k=8 R=2: consec short-A_2=13; #shapes with more=119; max=18 by [0, 1, 2, 3, 4, 6, 8, 12]  consec-max:False
+ k=8 R=3: consec short-A_2=16; #shapes with more=97; max=21 by [0, 1, 2, 3, 4, 6, 8, 12]  consec-max:False
+
+ k=9 R=1: consec short-A_2=12; #shapes with more=94; max=17 by [0, 1, 2, 3, 4, 6, 8, 9, 12]  consec-max:False
+ k=9 R=2: consec short-A_2=16; #shapes with more=103; max=22 by [0, 1, 2, 3, 4, 6, 8, 9, 12]  consec-max:False
+ k=9 R=3: consec short-A_2=21; #shapes with more=49; max=26 by [0, 1, 2, 3, 4, 6, 8, 9, 12]  consec-max:False
+

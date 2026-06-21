@@ -1,0 +1,15 @@
+==============================================================================
+CLEAN RUNG: consec maximizes B_2 = E[(N-1)(N-2)/2]  (fast exact)
+==============================================================================
+ k=8 span<= 13: 1716 shapes; B_2(consec)=1.1863946
+    beaters=0  (CONSEC MAX)  runner-up=[0, 2, 3, 4, 5, 6, 7, 8] B_2=1.0627551
+    EXACT margin B_2(consec)-B_2(runnerup) = 727/5880 = 1.24e-01
+ k=8 span<= 15: 6434 shapes; B_2(consec)=1.1863946
+    beaters=0  (CONSEC MAX)  runner-up=[0, 2, 3, 4, 5, 6, 7, 8] B_2=1.0627551
+    EXACT margin B_2(consec)-B_2(runnerup) = 727/5880 = 1.24e-01
+ k=9 span<= 13: 1287 shapes; B_2(consec)=1.1630952
+    beaters=0  (CONSEC MAX)  runner-up=[0, 1, 2, 3, 4, 5, 6, 7, 9] B_2=1.1003401
+    EXACT margin B_2(consec)-B_2(runnerup) = 123/1960 = 6.28e-02
+ k=10 span<= 12: 220 shapes; B_2(consec)=1.1705782
+    beaters=0  (CONSEC MAX)  runner-up=[0, 1, 2, 3, 4, 5, 6, 7, 8, 10] B_2=1.1107143
+    EXACT margin B_2(consec)-B_2(runnerup) = 44/735 = 5.99e-02
