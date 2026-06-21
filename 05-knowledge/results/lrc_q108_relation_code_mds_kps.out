@@ -1,0 +1,31 @@
+==============================================================================
+HYP-2723: the relation code Lambda(E) and the LRC carrier error corr(E)
+==============================================================================
+iid_k (k=8,9,10) = [0.02447959608666457, 0.05770190506142363, 0.10491255465713387]
+
+set                           measS7      corr  dmin   A2   A3   A4  Sidon?
+consec/AP {0..7}              0.3272    0.3027     2    3   48  262   False
+AP step2 {0,2..14}            0.3272    0.3027     2    3   48  262   False
+dyadic {0,1,2,4,8,..}         0.0692    0.0447     2    6   29   44    True
+Sidon/arc (Mian-Chowla)       0.0121   -0.0124     3    0    6   49    True
+wide near-consec              0.1905    0.1660     2    3   36  157   False
+two-block                     0.1151    0.0906     2    1   19  112   False
+random wide                   0.0382    0.0138     3    0    4   35   False
+
+READING: hardness ~ corr (want corr small for the wide bound). HYP-2723 predicts
+  AP/consec: small dmin, large A3 (additive energy), LARGEST corr (hardest).
+  Sidon/arc: large dmin, A3=0, corr ~ 0 (easiest).
+
+  Pearson(A3 support-3 count, corr) = +0.930  (predict positive: more 3-relations => larger error)
+
+==============================================================================
+'56' PROBE: count distinct support-3 relation-HYPERGRAPHS over k-sets
+(the user's hint: 3 -> 56 challenger shapes = A000568(6)=56 tournaments on 6)
+==============================================================================
+  k=4: 35 k-subsets of [0,6] -> 13 distinct (A2,A3,dmin) shapes  [A000568(4)=4; A000568(6)=56]
+  k=5: 56 k-subsets of [0,7] -> 20 distinct (A2,A3,dmin) shapes  [A000568(5)=12; A000568(6)=56]
+  k=6: 84 k-subsets of [0,8] -> 32 distinct (A2,A3,dmin) shapes  [A000568(6)=56; A000568(6)=56]
+  k=7: 120 k-subsets of [0,9] -> 47 distinct (A2,A3,dmin) shapes  [A000568(7)=456; A000568(6)=56]
+  k=8: 165 k-subsets of [0,10] -> 55 distinct (A2,A3,dmin) shapes  [A000568(8)=?; A000568(6)=56]
+
+DONE.
