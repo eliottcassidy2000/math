@@ -1,0 +1,3 @@
+k=8: consec_k L_yK8=3.5823; sup single-far(consec_7) [15,120]=2.3704@far=21; below bounded? True (gap 1.212); below 10cap? True (margin 1.444)
+k=9: consec_k L_yK8=4.4340; sup single-far(consec_8) [15,120]=3.9129@far=21; below bounded? True (gap 0.521); below 10cap? True (margin 1.030)
+k=10: consec_k L_yK8=5.2857; sup single-far(consec_9) [15,120]=4.8135@far=22; below bounded? True (gap 0.472); below 10cap? True (margin 0.901)

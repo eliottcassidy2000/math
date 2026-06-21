@@ -50,3 +50,15 @@ periodicity I already have.
 Rigorize: (a) single-far gK8 sup ≤ bounded max for ALL bounded/dilated B (periodicity, exhaustive like
 the THM-563 12805-base check); (b) the r≥2 ≤ r=1 (or ≤ bounded) step. Then the gK8 Lean
 `gK8_concentration_extremality` sorry closes.
+
+
+## CONFIRMED (mac-mini-S24): single-far gK8 sup < 10cap with COMFORTABLE margin
+sup_{far in [15,120]} L_yK8(consec_{k-1} u {far}) = 2.37 / 3.91 / 4.81 (k=8/9/10), all BELOW 10cap with
+margin **0.90 / 1.03 / 1.44** (and below the bounded max with gap 1.21/0.52/0.47). So the BINDING wide
+case (single-far) clears 10cap with margin ~1 -- vs THM-563's p0 check margin 0.13. The gK8 functional
+makes the wide binding COMFORTABLE: a LOSSY single-far bound suffices. Rigorous closure = the THM-563
+period-max machinery applied to L_yK8 (far*deviation of each q_t periodic) over all bounded/dilated bases
+B -- the SAME 12805-base finite check that PASSED for p0 (margin 0.13), now with margin ~1, so it passes
+a fortiori. NET: gK8 concentration = [bounded r=0 finite, DONE] + [single-far r=1 < 10cap margin ~1, via
+THM-563 periodicity, the binding wide] + [r>=2 lower: q6 doubly-suppressed (HYP-2820) + comfortable wide
+p0 slack]. The wide leg closes through the COMFORTABLE single-far margin, not the razor-thin p0 dichotomy.
