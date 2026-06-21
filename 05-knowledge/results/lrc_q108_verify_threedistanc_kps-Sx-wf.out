@@ -1,0 +1,20 @@
+==============================================================================
+V0: CROSS-CHECK the two engines (prompt bp() vs author bps) -- must agree
+==============================================================================
+  tested 400 sets; engine mismatches = 0
+  => engines agree: True
+
+==============================================================================
+V1: one-far comb bound  |p0(E)-Plat(E')| <= (6/49)V(E')/w  AND  2c1/(7w)
+==============================================================================
+  V-bound (6/49)V/w holds: True  max|d|/bound = 0.0484
+  comb-bound 2c1/(7w) holds: True  max|d|/bound = 0.1453
+  (both <1 => bounds are valid majorants on these samples)
+
+==============================================================================
+V2: HUNT for a WIDE primitive k-set (span>14, k=8..12) with p0 > cap_k
+==============================================================================
+  (a) far_count=2 boundary span 15-30 ...
+  (b) resonant gcd-structured / multi-scale ...
+  (c) stretched AP (step>1) + near-pinned ...
+  (d) two consec blocks at varying offset ...

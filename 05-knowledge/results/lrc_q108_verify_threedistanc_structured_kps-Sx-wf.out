@@ -1,0 +1,29 @@
+(c) stretched AP step>1:
+(d) two consec blocks offset:
+(f) wide base + single far (the binding single-far family):
+  -> after c,d,f: checked 582, violations 0
+(V5) finite window k=8 span 8..14 (the PROVED base):
+  span(max)=8: 7 primitive k=8 sets
+  span(max)=9: 28 primitive k=8 sets
+  span(max)=10: 84 primitive k=8 sets
+  span(max)=11: 210 primitive k=8 sets
+  span(max)=12: 462 primitive k=8 sets
+  span(max)=13: 924 primitive k=8 sets
+  span(max)=14: 1715 primitive k=8 sets
+FINITE WINDOW k=8 (max elt 8..14): checked 3430, violations=0
+  argmax p0=0.27364 at (0, 2, 3, 4, 5, 6, 7, 8); cap_8=0.38146; (consec=0,..,7 expected max)
+
+================================================================================
+ADVERSARIAL VERDICT (independent verification of three-distance-coloring angle)
+================================================================================
+V0 engines agree 0/400; V1 one-far bounds (6/49)V/w and 2c1/(7w) both valid majorants;
+V2 boundary/resonant + structured (c,d,f) 582 wide sets 0 violations;
+direct structured: single-far is the binding wide case, slack +0.16..+0.26;
+V5 finite window k=8 (3430 primitive sets) 0 violations.
+NO wide counterexample p0>cap found anywhere.
+=> Claim HOLDS as PARTIAL. The empirical theorem (p0<=cap for wide sets) survives every
+   probe, but the proof is NOT closed: the joint multi-block ET-Koksma error term that
+   would upgrade 'p0 <= ProductCover + error < cap' to a THEOREM is unpinned for r>=2.
+   ProductCover is only the decorrelated LIMIT (p0 can exceed it by O(1/gap), confirmed
+   by the angle itself at borderline gaps). The cap margin (>=0.08) absorbs it but the
+   error bound feeding that margin is unproven. This is the single surviving gap.

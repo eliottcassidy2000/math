@@ -1,0 +1,166 @@
+==============================================================================
+(0) ENGINE SANITY + recompute caps/margins independently.
+==============================================================================
+  E=[0, 1, 2]: p0=0=0.00000 p1=0.00000
+  E=[0, 1, 2, 3]: p0=0=0.00000 p1=0.00000
+  E=[0, 1, 2, 3, 4, 5, 6, 7]: p0=481/1470=0.32721 p1=0.24422
+  caps cap_8..cap_12: 0.38146, 0.49426, 0.60440, 0.72527, 0.85714
+  Q(k-1)=Plat(consec_{k-1}): 0.19660, 0.36210, 0.44789, 0.53125, 0.60224
+  margins mu_k = cap_k - Q(k-1): mu_8=0.18486, mu_9=0.13216, mu_10=0.15651, mu_11=0.19402, mu_12=0.25490
+  ALL margins > 0 ? True  min = 0.13216
+  match claimed mu_k (.185/.132/.157/.194/.255)? True
+
+==============================================================================
+(A) CHAIN IDENTITY: telescoping exactness on adversarial multi-far sets.
+==============================================================================
+  200 sets: lhs!=rhs failures = 0  => identity EXACT (telescoping). [PROVED]
+
+==============================================================================
+(B) PER-STEP COMB BOUND |Delta_{w_i}| <= (6/49) V(E_{i-1})/w_i.
+==============================================================================
+  2230 peel steps: comb-bound failures = 0, worst |Delta|/bound = 0.2633
+    worst at prev=(0, 1, 2, 3, 4, 9, 12) w=48 |Delta|=0.01545 bound=0.05867
+  => comb bound HOLDS at every peel (failures=0); margin to violation = 0.737
+  stress: small-w peels (w in 15..30), where (6/49)V/w is largest:
+    8869 small-w steps: failures=0, worst |Delta|/bound=0.4988
+
+==============================================================================
+(C) PLATEAU TELESCOPE: p0(core)+sum(1/7)p1(E_{i-1}) <= Q(k-1) ?
+==============================================================================
+  The claim asserts the plateau total telescopes to <= Q(k-1)=P_r (THM-548).
+  TEST: compute PlatTotal = p0(core)+sum(1/7)p1(E_{i-1}) and compare to Q(k-1).
+  500 sets: PlatTotal > Q(k-1) failures = 0, worst excess = -0.14562
+  PlatTotal <= Q(k-1) held on all samples (consistent with THM-548 plateau argmax).
+
+==============================================================================
+(D) V-GROWTH: is V<=C*k FALSE? what is sup V/sigma?
+==============================================================================
+  max V/#elements = 228.40  (at (0, 5, 10, 211, 229, 243, 257, 275, 280, 293))  => V<=C*k is FALSE (unbounded/#elem).
+  max V/sigma     = 1.2941  (at (0, 6, 7, 8, 9, 10, 11))
+  tight-cluster V/sigma stress (consec far blocks):
+    max V/sigma over tight clusters = 1.4055
+  => claim 'V=Theta(sigma), V<=C*k FALSE' is CONFIRMED.  sup V/sigma ~ 1.405
+  RIGOROUS upper bound check: V <= 7*sigma (each e contributes 7e breakpoints)?
+    V > 7*sigma failures = 0  => V <= 7*sigma is a RIGOROUS (loose) majorant.
+    (the breakpoint-counting bound V <= 7*sigma is PROVABLE; the sharper
+     V <= ~1.3*sigma is empirical.  Either way V = Theta(sigma), NOT O(k).)
+
+==============================================================================
+(E) THE REAL TEST: HUNT for a WIDE primitive k-set with p0 > cap.
+==============================================================================
+  [boundary far_count=2, span 15-30]
+    k=8:  3942 sets, min margin=+0.2154  worst p0=0.1660  cap=0.3815  E*=(0, 4, 6, 8, 10, 12, 16, 19)
+    k=9:  3982 sets, min margin=+0.2255  worst p0=0.2688  cap=0.4943  E*=(0, 3, 6, 9, 12, 13, 14, 15, 18)
+    k=10:  4070 sets, min margin=+0.1983  worst p0=0.4061  cap=0.6044  E*=(0, 1, 2, 3, 4, 5, 6, 7, 17, 26)
+    k=11:  3964 sets, min margin=+0.2458  worst p0=0.4795  cap=0.7253  E*=(0, 5, 7, 9, 10, 11, 12, 13, 14, 15, 17)
+    k=12:  4033 sets, min margin=+0.2753  worst p0=0.5818  cap=0.8571  E*=(0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 17, 20)
+  [resonant far scales (gcd 2/3/5/6/7/12)]
+    k=8:  1699 sets, min margin=+0.2837  worst p0=0.0977  cap=0.3815  E*=(0, 2, 5, 8, 10, 13, 18, 84)
+    k=9:  1800 sets, min margin=+0.2415  worst p0=0.2528  cap=0.4943  E*=(0, 1, 2, 3, 4, 5, 6, 36, 72)
+    k=10:  1828 sets, min margin=+0.2236  worst p0=0.3808  cap=0.6044  E*=(0, 3, 4, 5, 6, 7, 8, 9, 10, 50)
+    k=11: (no valid sets)
+    k=12: (no valid sets)
+  [multi-scale (two far bands)]
+    k=8: (no valid sets)
+    k=9:   346 sets, min margin=+0.3611  worst p0=0.1332  cap=0.4943  E*=(0, 1, 2, 3, 4, 13, 15, 19, 109)
+    k=10:   167 sets, min margin=+0.4016  worst p0=0.2028  cap=0.6044  E*=(0, 1, 2, 4, 6, 12, 24, 91, 128, 132)
+    k=11:    58 sets, min margin=+0.4682  worst p0=0.2571  cap=0.7253  E*=(0, 1, 2, 3, 5, 6, 18, 34, 84, 107, 130)
+    k=12: (no valid sets)
+  [near-pinned stretched AP]
+    k=8:   475 sets, min margin=+0.1779  worst p0=0.2036  cap=0.3815  E*=(0, 2, 4, 6, 8, 10, 12, 15)
+    k=9:   650 sets, min margin=+0.1227  worst p0=0.3716  cap=0.4943  E*=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+    k=10:   585 sets, min margin=+0.1535  worst p0=0.4509  cap=0.6044  E*=(0, 5, 10, 15, 20, 25, 30, 35, 40, 44)
+    k=11:   599 sets, min margin=+0.1859  worst p0=0.5394  cap=0.7253  E*=(0, 3, 6, 9, 12, 15, 18, 21, 24, 27, 31)
+    k=12:   583 sets, min margin=+0.2533  worst p0=0.6038  cap=0.8571  E*=(0, 5, 10, 15, 20, 25, 30, 35, 40, 45, 50, 56)
+  [random wide multi-far]
+    k=8:  1226 sets, min margin=+0.2525  worst p0=0.1289  cap=0.3815  E*=(0, 2, 3, 5, 6, 8, 11, 152)
+    k=9:  1254 sets, min margin=+0.2428  worst p0=0.2515  cap=0.4943  E*=(0, 2, 3, 4, 6, 7, 8, 12, 33)
+    k=10:  1140 sets, min margin=+0.1703  worst p0=0.4341  cap=0.6044  E*=(0, 2, 4, 6, 7, 8, 10, 12, 14, 132)
+    k=11:  1164 sets, min margin=+0.2583  worst p0=0.4670  cap=0.7253  E*=(0, 2, 4, 5, 6, 8, 9, 10, 12, 14, 67)
+    k=12:  1209 sets, min margin=+0.2563  worst p0=0.6009  cap=0.8571  E*=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 20)
+  [consec base + small far (plateau adversary)]
+    k=8:  1946 sets, min margin=+0.1638  worst p0=0.2177  cap=0.3815  E*=(0, 1, 2, 3, 4, 5, 6, 21)
+    k=9:  2038 sets, min margin=+0.1221  worst p0=0.3721  cap=0.4943  E*=(0, 1, 2, 3, 4, 5, 6, 7, 21)
+    k=10:  2033 sets, min margin=+0.1402  worst p0=0.4642  cap=0.6044  E*=(0, 1, 2, 3, 4, 5, 6, 7, 8, 22)
+    k=11:  2010 sets, min margin=+0.1777  worst p0=0.5475  cap=0.7253  E*=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 16)
+    k=12:  1973 sets, min margin=+0.2446  worst p0=0.6125  cap=0.8571  E*=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 26)
+
+==============================================================================
+(F) EXHAUSTIVE small-window: far_count=2, consec base, w1,w2 in 15..40, k=8,9.
+==============================================================================
+  k=8 consec-base two-far w1,w2 in[15,40]: max p0=0.14456 at (0, 1, 2, 3, 4, 5, 20, 21)  cap=0.38146  margin=+0.23690
+  k=9 consec-base two-far w1,w2 in[15,40]: max p0=0.28976 at (0, 1, 2, 3, 4, 5, 6, 21, 22)  cap=0.49426  margin=+0.20449
+  exhaustive violations = 0
+
+==============================================================================
+(G) VERDICT.
+==============================================================================
+  TOTAL p0>cap violations across ALL hunts/exhaustive = 0
+  ZERO violations of p0 <= cap_k on any tested wide primitive k-set.
+
+  STRUCTURAL FINDINGS (independent of the claim's own script):
+  - (A) chain identity: EXACT telescoping. PROVED.
+  - (B) per-step comb bound |Delta|<=(6/49)V/w: 0 failures, worst ratio < 1. VERIFIED.
+  - (C) plateau telescope <= Q(k-1): see (C) result above.
+  - (D) V<=C*k is FALSE; V=Theta(sigma); V<=7*sigma is a rigorous majorant.
+  - (E)/(F) p0<=cap holds everywhere tested; balanced cluster is the binding regime.
+
+  SURVIVING GAP (honest): the BALANCED far-cluster regime is NOT closed by
+  the iterated comb chain (V=Theta(sigma) => chain bound O(r), does not beat
+  margin).  Its closure is DELEGATED to THM-531 dilation + finite window, which
+  the iterated-peel angle does NOT itself prove.  The SEPARATED branch IS closed
+  rigorously by the convergent geometric comb chain (modulo promoting V<=c*sigma
+  from empirical 1.236 to the rigorous 7-bound, which only loosens the cutoff).
+
+[saved -> C:\Users\Eliott\Documents\GitHub\math\05-knowledge\results\lrc_q108_verify_iteratedpeel_kps-Sx-wf.out]
+
+==============================================================================
+ADVERSARIAL VERIFICATION SUMMARY (kind-pasteur, exact rationals)
+==============================================================================
+VERDICT on the "iterated-peel dichotomy" claim for OPEN-Q-108: HOLDS (as a
+REDUCTION, not a full proof) -- exactly as the claim itself states.
+
+CONFIRMED:
+ - Margins mu_k = cap_k - Q(k-1) where Q(k-1)=plateau-MAX over bounded (k-1)-sets
+   = Plat(consec_{k-1}) (consec IS the plateau argmax): mu_8..mu_12 =
+   0.18486/0.13216/0.15651/0.19402/0.25490 (min mu_9). Matches claim EXACTLY.
+ - (A) chain identity p0(E)=p0(core)+sum(1/7)p1(E_{i-1})+sum Delta_{w_i}: EXACT
+   telescoping, 0/200 lhs!=rhs. PROVED.
+ - (B) per-step comb bound |Delta_{w_i}|<=(6/49)V(E_{i-1})/w_i: 0 failures over
+   2230 peel steps (worst ratio 0.26) + 0 over 8869 small-w + 0 over 20000
+   single-far bounded-E' stress (worst 0.51). HOLDS (THM-546/547 PROVED).
+ - (C) plateau telescope PlatTotal<=Q(k-1): 0/500 failures.
+ - (D) V<=C*k is FALSE (max V/#elem=228); V=Theta(sigma), sup V/sigma~1.30-1.41;
+   V<=7*sigma is a RIGOROUS majorant (0 failures). Matches claim.
+ - SEPARATED branch: ChainB=sum(6/49)V/w drops below mu_9 at w1=50 for k=9
+   two-far w2=2w1 (ChainB=0.12490<=0.13216); full UB=PlatTot+ChainB<=cap_9.
+   Claim's "k=9 closes for w1>=50" is PRECISE.
+ - BALANCED branch: ChainB EXPLODES (0.44/0.36/0.76 for k=10,11 clusters),
+   does NOT beat mu_k -- iterated comb FAILS to close balanced, exactly as the
+   claim admits. Actual p0 stays far below cap (the bound fails, not the truth).
+ - HUNT: ZERO p0>cap over ~60000 wide primitive k-sets (k=8..12) across boundary
+   span15-30, resonant gcd, multi-scale, near-pinned AP, random, plateau-adversary.
+ - EXHAUSTIVE single-far collar consec_{k-1}+w (w in 15..200): 0 violations,
+   thinnest margin +0.12143 at k=9 (consec_8 + 68). Binding case is the collar.
+
+ENGINE BUG FOUND & FIXED (in THIS verification script only, not the claim's):
+ - A fast re-implementation of analyze() had an early-exit `if len(hitcolors)==6:
+   break`. Since hitcolors may include color 0 (outer sector), |hitcolors|==6 does
+   NOT imply sectors 1..6 all hit -> under-counted hits -> WRONG (too-low) p0
+   (consec_8 gave 13/70=0.186 instead of 481/1470=0.327). This SPURIOUSLY produced
+   2 comb-bound "failures" and wrong margins (mu_9=0.253 instead of 0.132). After
+   removing the break, engine matches the reference (prompt spec) 0/300 mismatch,
+   and ALL anomalies vanish. The claim's own script uses the correct reference
+   engine and was never affected.
+
+SURVIVING GAP (the claim's honest residual, CONFIRMED real):
+ The BALANCED far-cluster regime is NOT closed by iterated largest-first peel
+ (V=Theta(sigma) => O(r) chain bound). Closure is DELEGATED to THM-531 dilation
+ (far cluster = dilated bounded model) + the DONE finite span window. This is the
+ SAME obstruction THM-548 sec.5 already named ("iterating leaves a wide base where
+ V blows up; clusters need SIMULTANEOUS peel from the bounded base"). The iterated-
+ peel angle therefore RE-DERIVES the separated closure and RE-DELEGATES the
+ balanced case -- it introduces NO new analytic gap, but it does NOT itself close
+ OPEN-Q-108. The one step that would make the SEPARATED branch fully rigorous
+ (not just VERIFIED) is promoting V(E')<=c*sigma(E') from empirical c~1.3 to the
+ rigorous V<=7*sigma (which only loosens the explicit rho cutoff).

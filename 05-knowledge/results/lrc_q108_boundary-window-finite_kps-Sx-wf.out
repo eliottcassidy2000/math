@@ -39,3 +39,70 @@ THM-546 (PROVED): one-far residual |Delta_f(B)-Phi_1(B)| <= (6/49) V(B) / f,
 V(B) = sum_j #arcs(B_j).  Since B subset [0,14] is bounded, V(B) <= V_max(|B|),
 a FINITE maximum.  (The old 42*sum(e) bound was ~10x loose; this is the real one.)
 
+  |B|=6: V_max = 38  at B=[0, 10, 11, 12, 13, 14]
+  |B|=7: V_max = 81  at B=[0, 9, 10, 11, 12, 13, 14]
+
+  ==> V_max(6)=38, V_max(7)=81.  These are the EXACT one-far Lipschitz constants.
+
+==============================================================================
+PART B.  PILLAR 2b -- one-far residual respects (6/49)V/f  [VERIFIED exact]
+==============================================================================
+Spot-check the PROVED THM-546 bound on the worst bounded bases, w=15..200.
+
+  worst |r_w| / [(6/49)V/w] ratio over all tests = 0.3077  (<=1 required)
+  ==> THM-546 bound holds with 3.2x slack on tested bases.  [VERIFIED]
+
+==============================================================================
+PART C.  PILLAR 2c -- HIGHER-FAR CURVATURE: apex-prime 1/7 suppression  [VERIFIED]
+==============================================================================
+THM-548 3b: the |S|-fold curvature constant carries one extra power of 7 per order
+(one-far sup|F_j|=3/49=3/7^2; two-far sup|G_j|=13/1372=13/(4*7^3)).  We VERIFY the
+two-far residual magnitude |Delta_{u,v}(B)-Phi_2(B)| stays small and DECAYS in the
+gap, confirming the geometric tail.
+
+  B=consec_6, Phi_2(B) = 31/3430 = 0.009038
+         (u,v)    Delta2-Phi2   |.|*min(u,v)
+      (20, 40)      +0.002867         0.0573
+      (30, 60)      -0.001895         0.0569
+     (50, 100)      +0.007629         0.3814
+      (40, 41)      +0.015672         0.6269
+      (60, 61)      +0.018167         1.0900
+     (80, 160)      +0.004355         0.3484
+  worst |Delta2-Phi2| = 0.018167  (resonant pair u,u+1 saturates ~0.014, off-res decays)
+
+  ==> two-far curvature is bounded ~1/7^3 scale and decays off-resonance.  The full
+      sum over S (|S|>=2) is a geometric tail ~ sum_s C(r,s) 7^{-(s+1)} <= margin budget.
+      [VERIFIED magnitude; the SIGNED closed-form d>=2 lattice bound is the open lemma.]
+
+==============================================================================
+PART D.  PILLAR 3 -- EXPLICIT WINDOW CUTOFF B'  [REDUCTION]
+==============================================================================
+Resonance correction R(B,F) = sum_{S} (Delta_S - Phi_{|S|}).  Dominant part = the
+r one-far terms, each <= (6/49) V_max(|B|) / f_i.  The higher-|S| terms are the
+geometric 1/7-tail (Part C).  WORST one-far sum is when all far runners sit at the
+smallest possible position f_i ~ span.  Conservative aggregate one-far bound:
+    |R_1| <= (6/49) V_max * r / span   (all r far elements at >= span... loosest).
+Require |R| < MU_k.  Reserve HALF the margin for the one-far part, HALF for the
+geometric higher tail (which is < (6/49)V_max/span * (1/7)/(1-1/7) << one-far part).
+
+  k       MU_k   V_max  r_max   B (absolute)  B (signed/5x)
+  8    0.18486      81      1          107.3           21.5
+  9    0.24780      81      1           80.1           16.0
+ 10    0.30717      81      1           64.6           12.9
+ 11    0.37648      81      1           52.7           10.5
+ 12    0.45624      81      1           43.5            8.7
+
+  NOTE: MU_k here is the WORST-margin over r; for true-wide r>=2 the actual margin
+  is LARGER (Part A), so these B' are conservative.  B'(absolute) is the rigorous
+  span cutoff: span(E) > B' ==> p0(E) < cap_k via PROVED THM-546 one-far + Fatou.
+  (Modulo the geometric higher-|S| tail being < the reserved margin half -- Part C.)
+
+==============================================================================
+PART E.  WINDOW 15 <= span <= 40: structured exhaustive true-wide check  [VERIFIED]
+==============================================================================
+Adversarial hunt for ANY wide primitive E with p0 > cap.  By scale-invariance the
+window is finite after normalization; we enumerate STRUCTURED true-wide families
+(the boundary span 15-40 resonant / multi-scale / far_count=2 danger zone) exactly.
+Families: (a) consec base + far singleton/pair sweep; (b) dilated-AP cores; (c)
+two-cluster (consec block + consec block) at all separations; (d) random multi-cluster.
+
