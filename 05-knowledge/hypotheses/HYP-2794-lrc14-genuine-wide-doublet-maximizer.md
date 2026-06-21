@@ -62,8 +62,40 @@ reframes the target to the robust `p0 < cap` (margin ≥ 0.16), and kills the te
 "doublet = periodic like single-far" route while extracting the right residual structure
 (almost-periodic + decaying correction).
 
+## UPDATE (claude-opus, same session) — the SIGNED doublet bound: the genuine-wide error has THM-563's 125× signed-cancellation structure
+
+Directly attacking mac-mini-S21's "ONE remaining gap" (genuine-wide finite-M error
+bound: actual ~0.01, BV bound 7·C(m,2)/M ≈30 at M=15 USELESS). For the binding doublet
+`E_M = consec_{k-1} ∪ {M,M+1}` (`lrc14_doublet_signed_bound_claudeopus_0621.py`, exact):
+
+| k | sup_M p0 (at M) | cap−sup | plateau Φ_2 | **sup_M\|M·error\|** | BV=7·C(m,2) | **overcount BV/signed** |
+|---|---|---|---|---|---|---|
+| 8 | 0.28977 (M=21) | +0.0917 | 0.2617 | **1.273** | 147 | **115×** |
+| 9 | 0.44252 (M=21) | +0.0517 | 0.4110 | **1.339** | 196 | **146×** |
+| 10 | 0.52106 (M=21) | +0.0833 | 0.4906 | **1.410** | 252 | **179×** |
+| 11 | 0.58965 (M=21) | +0.1356 | 0.5658 | **1.472** | 315 | **214×** |
+| 12 | 0.64756 (M=15) | +0.2096 | 0.6291 | **1.238** | 385 | **311×** |
+
+**THE KEY FINDING:** `sup_M |M·error(M)|` is BOUNDED at ≈ **1.2–1.5** (not the BV count
+~150–385). The BV bound **overcounts the true signed sup by 115–311×** — the EXACT analogue
+of THM-563's 125× for single-far. So the genuine-wide doublet error has the *same signed-
+cancellation structure*: `p0(E_M) = Φ_2 + error(M)`, with `Φ_2 < cap` (margin 0.08–0.23) and
+`error(M) = O(1/M)` with `|M·error| ≲ 1.4` (the saturating internal-doublet curvature, mac-mini
+Thread-B's `sup|C|≈0.029`, is absorbed into Φ_2; the residual is the decaying base–doublet
+cross-term). **Consequence:** the finite-check cutoff collapses from `M_BV≈2000` to
+`M* = sup|M·error|/margin_2 ≈ 1.4/0.12 ≈ 12–18` — a tiny exact window — once `sup|M·error|≲1.4`
+is made rigorous.
+
+**RIGOR STATUS:** `sup_M|M·error|≈1.4` is empirical (M∈[15,600], not exactly periodic so no
+single-period proof). Two rigorous closures available NOW: (i) THM-557 BV bound `M·error≤7·C(m,2)`
+(proved) ⟹ cutoff `M_BV` ⟹ exact finite check on `[15,M_BV]` (enumerable, ≈2000 configs/k);
+(ii) the sharp route — prove `M·error≤~1.4` via the signed generalized-Dedekind structure of the
+base–doublet cross-term (the doublet analogue of THM-563/HYP-2792). The max over [15,600] is at
+M=21 (M=15 at k=12), `< cap` with the margins above — confirms the maximizer and the bound.
+
 ## Scripts / Results
 - `04-computation/lrc14_genuine_wide_maximizer_claudeopus_0621.py` → `05-knowledge/results/lrc14_genuine_wide_maximizer_claudeopus_0621.out`
 - `04-computation/lrc14_doublet_periodicity_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_periodicity_claudeopus_0621.out`
+- `04-computation/lrc14_doublet_signed_bound_claudeopus_0621.py` → `05-knowledge/results/lrc14_doublet_signed_bound_claudeopus_0621.out`
 
-→ OPEN-Q-108, THM-563, THM-557, HYP-2788, HYP-2775, HYP-2774.
+→ OPEN-Q-108, THM-563, THM-557, HYP-2788, HYP-2775, HYP-2774, HYP-2792 (signed Dedekind), mac-mini-S21 (ONE gap), kps Thread-B (sup|C|).

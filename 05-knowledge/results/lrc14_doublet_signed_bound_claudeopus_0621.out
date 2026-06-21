@@ -1,0 +1,54 @@
+================================================================================
+BINDING GENUINE-WIDE DOUBLET: SIGNED BOUND + FINITE CUTOFF  (the ONE remaining gap)
+claude-opus 2026-06-21   E_M = consec_{k-1} U {M, M+1}
+================================================================================
+
+k=8  m=7  cap=2243/5880=0.38146
+  (1) sup_M p0 = 0.289765 at M=21  (p0 at M=21: 0.289765);  cap-sup = +0.091698
+  (2) plateau Phi_2 ~ 0.261700  margin_2=cap-Phi_2 ~ 0.119763
+      SIGNED doublet bound: sup_M |M*error(M)| = 1.2725 at M=511
+      closes if < 15*margin_2 = 1.7964  -> YES
+  (3) BV cutoff M_BV = ceil(7*C(7,2)/margin_2) = 1228  (BV const 7*C(m,2)=147)
+      exact max p0 over [15,600] = 0.289765 < cap? YES
+  (4) OVERCOUNT ratio BV / sup_M(M*err) = 115.5x  (THM-563 single-far analogue was ~125x)
+
+k=9  m=8  cap=1979/4004=0.49426
+  (1) sup_M p0 = 0.442517 at M=21  (p0 at M=21: 0.442517);  cap-sup = +0.051739
+  (2) plateau Phi_2 ~ 0.411009  margin_2=cap-Phi_2 ~ 0.083247
+      SIGNED doublet bound: sup_M |M*error(M)| = 1.3387 at M=91
+      closes if < 15*margin_2 = 1.2487  -> NO
+  (3) BV cutoff M_BV = ceil(7*C(8,2)/margin_2) = 2355  (BV const 7*C(m,2)=196)
+      exact max p0 over [15,600] = 0.442517 < cap? YES
+  (4) OVERCOUNT ratio BV / sup_M(M*err) = 146.4x  (THM-563 single-far analogue was ~125x)
+
+k=10  m=9  cap=55/91=0.60440
+  (1) sup_M p0 = 0.521058 at M=21  (p0 at M=21: 0.521058);  cap-sup = +0.083338
+  (2) plateau Phi_2 ~ 0.490553  margin_2=cap-Phi_2 ~ 0.113843
+      SIGNED doublet bound: sup_M |M*error(M)| = 1.4096 at M=447
+      closes if < 15*margin_2 = 1.7076  -> YES
+  (3) BV cutoff M_BV = ceil(7*C(9,2)/margin_2) = 2214  (BV const 7*C(m,2)=252)
+      exact max p0 over [15,600] = 0.521058 < cap? YES
+  (4) OVERCOUNT ratio BV / sup_M(M*err) = 178.8x  (THM-563 single-far analogue was ~125x)
+
+k=11  m=10  cap=66/91=0.72527
+  (1) sup_M p0 = 0.589652 at M=21  (p0 at M=21: 0.589652);  cap-sup = +0.135623
+  (2) plateau Phi_2 ~ 0.565827  margin_2=cap-Phi_2 ~ 0.159448
+      SIGNED doublet bound: sup_M |M*error(M)| = 1.4723 at M=69
+      closes if < 15*margin_2 = 2.3917  -> YES
+  (3) BV cutoff M_BV = ceil(7*C(10,2)/margin_2) = 1976  (BV const 7*C(m,2)=315)
+      exact max p0 over [15,600] = 0.589652 < cap? YES
+  (4) OVERCOUNT ratio BV / sup_M(M*err) = 213.9x  (THM-563 single-far analogue was ~125x)
+
+k=12  m=11  cap=6/7=0.85714
+  (1) sup_M p0 = 0.647562 at M=15  (p0 at M=21: 0.633344);  cap-sup = +0.209580
+  (2) plateau Phi_2 ~ 0.629083  margin_2=cap-Phi_2 ~ 0.228060
+      SIGNED doublet bound: sup_M |M*error(M)| = 1.2382 at M=564
+      closes if < 15*margin_2 = 3.4209  -> YES
+  (3) BV cutoff M_BV = ceil(7*C(11,2)/margin_2) = 1689  (BV const 7*C(m,2)=385)
+      exact max p0 over [15,600] = 0.647562 < cap? YES
+  (4) OVERCOUNT ratio BV / sup_M(M*err) = 310.9x  (THM-563 single-far analogue was ~125x)
+
+================================================================================
+READING: if (2) 'YES' everywhere, the binding doublet closes by a SIGNED bounded-
+deviation bound (THM-563 analogue) with cutoff collapsed from ~1500 to ~tens.
+Combined with 'maximizer = consec+doublet' (HYP-2794), this closes leg-C binding case.
