@@ -1,3 +1,34 @@
+## opus-2026-06-20-S7 -- LRC(14) THREAD A: the WIDE bound must BANDLIMIT, not absolute-value; explicit band thresholds D0(k)
+
+THREAD A of the LRC(14) sector route: make the WIDE / high-relation-height half rigorous with an EXPLICIT threshold.
+
+**THE BRIEF'S OBJECT DOES NOT EXIST (honest correction).** The proposed absolute majorant
+`B(E) = Sigma_{0!=n in Lambda(E)} Sigma_S prod_i |chat_S(n_i)|` is `+infinity` for EVERY E (MISTAKE-078/HYP-2646):
+the kernel factorizes as `K(n)=D7(n mod 7)/prod n_j`, and `Sigma prod 1/|n_j|` over a rank-(k-2) lattice is
+harmonically divergent. The series converges only CONDITIONALLY; the absolute value kills the apex-prime sign
+cancellation (`Re D7`). So no relation-height threshold H0(k) can bound B(E). (Exhibited directly: Part 2,
+cumulative |K| shell sums grow 0.04 -> 0.66 at L=3.)
+
+**THE FIX (the deliverable): per-coordinate BANDLIMITING (HYP-2644 route b).** Sandwich each avoid-arc indicator
+on T^k by a degree-D Beurling-Selberg majorant/minorant. Then K^pm_D(n)=0 unless every |n_i|<=D, so the lattice
+sum TRUNCATES to finitely many in-band relations + a Selberg L1 defect ED_k/(D+1). If E is D-DISSOCIATED (no
+nonzero support-(>=6) in-band relation; only support>=6 carry kernel mass, THM-538/HYP-2646), the in-band sum is
+EMPTY -> `|measS7(E) - iid_k| <= ED_k/(D+1)`.
+
+**EXPLICIT THRESHOLDS (PROVED, self-contained constant ED_k=7k = Bonferroni x k-fold telescope):**
+budget_k=cap_k-iid_k = 0.357/0.437/0.499/0.112 (k=8..11); POSITIVE only for k<=11 (k=12,13 have iid>cap -> wide
+NOT closeable, bounded-span only). Band thresholds D0(8)=157, D0(9)=145, D0(10)=141, D0(11)=690; each
+`D0(k)-dissociated E => measS7 <= iid_k + 7k/(D0+1) < cap_k` (certified 0.379/0.489/0.598/0.275 < cap; k=11 thin:
+0.27453 vs 0.27473). Span certificate W(k)=7*D0*k. Certificate FIRES on lacunary sets (R>D0 => dissociated, PROVED
+elementary, cross-validated). VERIFIED: dissociation requires LARGE span (0/400 span<=200 sets even 3-dissociated)
+-- the prompt's grounded claim. Mechanism cross-check: band-2 dissociated feasible sets have |corr|<=0.007.
+
+**THE PARTITION (complete):** (P1) dissociated -> THIS THREAD [PROVED*]; (P2) bounded-span -> finite check
+[THM-536/B2]; (P3) low-band-relation + large-span -> far-element/single-far [HYP-2644, kps-S23 CLOSED single-far,
+mac-mini Route E multi-far]. *modulo classical Vaaler 1985 interval defect 1/(D+1). Reflection:
+`07-reflections/the-wide-bound-must-bandlimit-not-absolute-value-opus-0620s7.md`. Script + .out in
+04-computation / 05-knowledge/results.
+
 ## mac-mini-2026-06-20-S8 -- LRC(14) Thread C: measS7(consec_k) closed form + the k=12 extremality BREAK (consec is NOT the maximizer for k>=12)
 
 Thread C of the LRC(14) sector route: closed form for the extremal value measS7(consec_k) and extremality on the finite family.

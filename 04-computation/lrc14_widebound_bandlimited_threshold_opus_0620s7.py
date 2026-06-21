@@ -379,22 +379,31 @@ def part6_certificate_fires(D0, ED):
   support>=6 relation -- proof below), and separately cross-check the bandlimited MECHANISM
   (corr collapses to the in-band truncation) on moderate sets at a smaller test band.
 """)
-    # (A) lacunary firing: ratio R>D0*k => provably D0-dissociated (no in-band relation at all).
-    print("  (A) LACUNARY FIRING TEST  (E = {0,1,R,R^2,...,R^{k-2}}, R = D0*k+1):")
-    print(f"  {'k':>2} {'R':>4} {'span=R^(k-2)':>16} {'D0':>4} {'in-band sup>=6 rel?':>20} {'FIRES?':>7} {'cert<cap':>9}")
-    for k in (8, 9, 10):
-        d0 = D0[k]; R = d0 * k + 1
-        E = [0] + [R ** i for i in range(k - 1)]
-        h = shortest_inband_relation_height(E, d0, min_support=6)
-        fires = (h is None)
+    # (A) lacunary firing: ratio R>D0 => PROVABLY D0-dissociated (analytic; no enumeration --
+    #     at D0~150 a brute meet-in-the-middle is infeasible, so we certify by the PROOF).
+    print("  (A) LACUNARY FIRING (E={0,1,R,R^2,...,R^{k-2}}, R=D0+1): dissociation by PROOF, not search")
+    print(f"  {'k':>2} {'D0':>5} {'R=D0+1':>7} {'span=R^(k-2)':>18} {'D0-diss?(proof)':>16} {'FIRES':>6} {'cert<cap':>9}")
+    for k in (8, 9, 10, 11):
+        d0 = D0[k]; R = d0 + 1
+        span = R ** (k - 2)
+        # PROOF below: R>D0 => no nonzero in-band relation of ANY support => D0-dissociated.
+        diss = (R > d0)
         cert = float(M7(k)) + ED[k] / (d0 + 1)
-        print(f"  {k:>2} {R:>4} {R ** (k - 2):>16} {d0:>4} "
-              f"{('NONE' if h is None else str(h)):>20} {str(fires):>7} {str(cert < float(CAPS[k])):>9}")
+        print(f"  {k:>2} {d0:>5} {R:>7} {span:>18} {str(diss):>16} {str(diss):>6} "
+              f"{str(cert < float(CAPS[k])):>9}")
+    # cross-validate the PROOF on a SMALL lacunary instance (feasible enumeration, R>D0small):
+    print("  cross-validate the proof on a small lacunary set (R=10>any small test-D0=6):")
+    for k in (8,):
+        Etest = [0] + [10 ** i for i in range(k - 1)]
+        h = shortest_inband_relation_height(Etest, 6, min_support=6)  # band 6 search (feasible)
+        print(f"    k={k} E={Etest[:4]}...  band-6 in-band support>=6 relation: "
+              f"{'NONE (matches proof: R=10>6)' if h is None else h}")
     print(r"""
-      PROOF that R>D0*k forces D0-dissociation: a relation n (|n_i|<=D0) with top index t
-      has |n_t| R^t = |sum_{i<t} n_i R^i| <= D0 (R^{t-1}+...+1) < D0 R^t/(R-1).  For
-      |n_t|>=1 this needs R-1 < D0, i.e. R<=D0.  So R>D0 => no nonzero in-band relation at
-      all (any support).  R=D0*k+1>D0 certifies it. (PROVED, elementary.)
+      PROOF that R>D0 forces D0-dissociation (any support): a relation n (|n_i|<=D0,
+      sum_i n_i R^i = 0) with top nonzero index t has |n_t| R^t = |sum_{i<t} n_i R^i|
+      <= D0 (R^{t-1}+...+1) < D0 R^t/(R-1).  For |n_t|>=1 this needs R-1 < D0, i.e. R<=D0.
+      So R>D0 => the ONLY in-band relation is 0 => E is D0-dissociated. (PROVED, elementary;
+      cross-validated above on R=10, D0test=6.)  Hence the certificate FIRES with cert<cap.
 
   (B) DENSITY OF SMALL-SPAN SETS  (why dissociation needs large span -- the prompt's claim):""")
     import random
@@ -449,8 +458,9 @@ def part7_partition_and_status(D0, W, ED):
     (P3) NOT D0-dissociated, large span (a real low-band relation but spread out):
             far-element plateau measS7 <= Q(k-1) + C/w < cap.      [HYP-2644, partial: C measured]
 
-  *PROVED modulo the classical Beurling-Selberg defect constant (ED_k<=2, pinned), which is
-   standard analysis (Vaaler 1985); the band truncation and dissociation collapse are exact.
+  *PROVED modulo the classical Beurling-Selberg interval defect 1/(D+1) (Vaaler 1985); the
+   per-coordinate constant ED_k=7k (Bonferroni + telescope) and the band truncation +
+   dissociation collapse are exact and self-contained here.
 
   WHAT IS RIGOROUSLY CLOSED BY THIS THREAD (the wide/dissociated half, P1):
     * The absolute-majorant B(E) is correctly identified as DIVERGENT (Part 2) -- the brief's

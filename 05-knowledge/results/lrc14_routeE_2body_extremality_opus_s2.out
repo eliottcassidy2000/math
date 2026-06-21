@@ -1,0 +1,23 @@
+######################################################################################
+# 2-BODY-layer extremality of consec via resonant pair-coupling sum
+######################################################################################
+
+k=8: consec corr_2=+0.00000000
+  over 1716 span<=13 shapes: corr_2-MAX=+0.00000000 at [0, 1, 2, 3, 4, 5, 6, 7]
+  #shapes corr_2==0 (7-gap-free) = 64   #beating consec = 0
+  consec is 2-body MAX (extremal): True
+  => consec IS 2-body-extremal at k=8 (ties at the max corr_2=+0.0000).
+
+k=9: consec corr_2=-0.00415279
+  over 1287 span<=13 shapes: corr_2-MAX=-0.00042593 at [0, 1, 2, 3, 4, 5, 6, 7, 13]
+  #shapes corr_2==0 (7-gap-free) = 0   #beating consec = 598
+  consec is 2-body MAX (extremal): False
+  => consec is NOT 2-body-extremal at k=9: it carries resonant penalties;
+     the least-penalized 2-body shape is [0, 1, 2, 3, 4, 5, 6, 7, 13] (NOT consec).
+
+k=10: consec corr_2=-0.01027269
+  over 715 span<=13 shapes: corr_2-MAX=-0.00191667 at [0, 1, 2, 3, 4, 5, 6, 7, 12, 13]
+  #shapes corr_2==0 (7-gap-free) = 0   #beating consec = 529
+  consec is 2-body MAX (extremal): False
+  => consec is NOT 2-body-extremal at k=10: it carries resonant penalties;
+     the least-penalized 2-body shape is [0, 1, 2, 3, 4, 5, 6, 7, 12, 13] (NOT consec).
