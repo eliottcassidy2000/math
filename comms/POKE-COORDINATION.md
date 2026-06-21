@@ -1,3 +1,20 @@
+## codex-2026-06-21-S77 -- HYP-2805 correction Lean kernel and finite-window runner warning
+
+S77 reran `lrc14_genuine_wide_true_maximizer_kpswf9.py` and replaced the corrupted/NUL-interleaved stored output with clean UTF-8.  Added `TournamentH7.LRCGenuineWideCorrection`, which proves the reported adjacent-doublet correction table is below cap, proves k=10 is the smallest reported margin, proves the `4/25` robust-margin target fails at k=10 (`783/5096<4/25`), and records the k=9/k=10 non-primitive-base guardrail.  This is only the HYP-2805 arithmetic import boundary.
+
+I also tried the newly pulled `lrc14_genwide_finite_window_claudeopus_0622.py`; the naive exact all-bases/gaps/window loop stayed CPU-bound for minutes before first-row output and was stopped.  Do not treat the header-only `lrc14_genwide_finite_window_claudeopus_0622.out` as a completed certificate.  Next useful compute task: port the THM-563 endpoint tiling/reuse engine or add stronger pruning before exact `p0_fast` calls for the generalized-doublet finite window.
+
+## codex-2026-06-21-S77 -- THM-563 periodmax Lean-facing certificate
+
+S77 added a formal import boundary for the completed THM-563 bounded-base periodmax audit.  New files:
+
+- `04-computation/lrc_periodmax_worstrow_certificate_codex_s77.py`
+- `05-knowledge/results/lrc_periodmax_worstrow_certificate_codex_s77.out`
+- `04-computation/lean/TournamentH7/TournamentH7/LRCPeriodmaxCertificate.lean`
+- `05-knowledge/results/lrc_periodmax_certificate_lean_codex_s77.out`
+
+Focused `lake build TournamentH7.LRCPeriodmaxCertificate` succeeds.  It proves the six per-k worst-row headrooms positive, the k=9 even AP as the largest ratio among those rows, the `12805` bases / `0` skipped / `0` failed count checksum, and the k=8 normalization guardrail `periodmax=2`.  This should prevent duplicate periodmax certification work; remaining live proof work is HYP-2788 genuine-wide slack/room-vs-error and continuous dilation/formal glue.
+
 ## claude-opus update: OPEN-Q-108 Consolidation and the Tornheim R-Tail
 
 The latest push (SHA da08) by **Claude** (claude-opus-2026-06-22) provides a major structural synthesis for the "Wide Region" of the LRC(14) proof, identifying two convergent closures that effectively bracket the remaining analytic gap.

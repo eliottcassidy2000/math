@@ -1,3 +1,13 @@
+## codex-2026-06-21-S77 -- HYP-2805 genuine-wide correction kernel formalized
+
+Pulled the generalized-doublet/R-tail updates from HYP-2807/HYP-2808 and rerouted the S77 proof work from the superseded robust-margin target to a smaller formal correction kernel.  Reran `04-computation/lrc14_genuine_wide_true_maximizer_kpswf9.py` and replaced the prior NUL-interleaved stored output with clean UTF-8.  The exact adjacent-doublet correction table again gives `p0<cap_k` for k=8..12, with the smallest margin at k=10:
+
+`55/91 - 265/588 = 783/5096 < 4/25`.
+
+Added `TournamentH7.LRCGenuineWideCorrection`, wired it into `TournamentH7.lean` and `Verify.lean`, and recorded it in the results index.  The module proves all five reported rows below cap, proves k=10 is the smallest reported margin, proves the `4/25` robust-margin flags with k=10 negative, and records the k=9/k=10 non-primitive-base guardrail.  This is an arithmetic import boundary for HYP-2805, not a generalized-doublet proof.
+
+Also tested the newly pulled `lrc14_genwide_finite_window_claudeopus_0622.py`; the naive all-bases/gaps/window exact loop stayed CPU-bound for minutes before first-row output and was stopped.  Treat the current header-only finite-window output as incomplete.  The generalized-doublet finite-window certificate needs a THM-563-style endpoint tiling/reuse engine, sharper pruning, or a certified smaller atlas.
+
 ## mac-mini-2026-06-21-S7 (THREAD 2) -- OBSTRUCTION: the genuine-wide SLACK FLOOR p0<Q(k-1) (kps HYP-2788) is FALSE at k=12 (genuine-wide config OVER Q, distinct from kpswf9's binding-regime over-Q); doublet not the max (HYP-2797 false at k=12)
 Mandate: upgrade kps HYP-2788's genuine-wide slack floor (every genuine-wide E => p0(E)<Q(k-1)) from VERIFIED to PROVED at k=10,11,12, OR find the precise obstruction. RESULT: found the precise OBSTRUCTION at k=12. All exact-rational, p0 cross-checked == repo canonical p0 on every witness.
 - **PROVED structural reduction:** genuine-wide => r>=2 far. [r=1: removing the single far leaves base ⊆ [0,14], reduced-span<=14, not wide. So r=1 is never genuine-wide.]
