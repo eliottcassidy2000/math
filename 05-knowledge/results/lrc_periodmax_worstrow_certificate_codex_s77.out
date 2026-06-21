@@ -1,0 +1,93 @@
+S77 THM-563 period-max worst-row certificate kernel
+==============================================================================
+Input full audit: lrc_periodmax_THM563_general_check_COMPLETE_macmini_0621s7.out
+Scope: per-k worst-row arithmetic plus k=8/k=9 brute exact rechecks
+
+Full-audit count checksum:
+  bases=12805 trivial=3995 scanned=8810 skipped=0
+  pass=12805 fail=0
+
+Worst-row exact arithmetic:
+k=8 base=(0, 2, 4, 6, 8, 10, 12)
+  Plat=289/1470 (0.196598639456)
+  margin=1087/5880 (0.184863945578)
+  period=840 arcs=46 periodmax=2 (2.000000000000)
+  15*margin=1087/392 (2.772959183673)
+  headroom=303/392 (0.772959183673) ratio=10.818767249310
+  source=brute exact, P=840; brute=2 witnesses=[350, 518] count=2
+k=9 base=(0, 2, 4, 6, 8, 10, 12, 14)
+  Plat=621/1715 (0.362099125364)
+  margin=129643/980980 (0.132156618891)
+  period=5880 arcs=56 periodmax=86/49 (1.755102040816)
+  15*margin=388929/196196 (1.982349283370)
+  headroom=44585/196196 (0.227247242553) ratio=13.280470214358
+  source=brute exact, P=5880; brute=86/49 witnesses=[3318, 5670] count=2
+k=10 base=(0, 2, 4, 6, 8, 10, 11, 12, 14)
+  Plat=1089/2744 (0.396865889213)
+  margin=7403/35672 (0.207529715183)
+  period=64680 arcs=66 periodmax=3299/1470 (2.244217687075)
+  15*margin=111045/35672 (3.112945727742)
+  headroom=464839/535080 (0.868728040667) ratio=10.813958305192
+  source=incoming full scan; not rerun
+k=11 base=(0, 3, 7, 8, 9, 10, 11, 12, 13, 14)
+  Plat=6601333/17657640 (0.373851375382)
+  margin=6205307/17657640 (0.351423349893)
+  period=2522520 arcs=92 periodmax=6730439/1961960 (3.430466981998)
+  15*margin=6205307/1177176 (5.271350248391)
+  headroom=5417609/2942940 (1.840883266393) ratio=9.761636450864
+  source=incoming full scan; not rerun
+k=12 base=(0, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  Plat=9252037/17657640 (0.523967925499)
+  margin=5883083/17657640 (0.333174931644)
+  period=2522520 arcs=73 periodmax=536399/196196 (2.733995596240)
+  15*margin=5883083/1177176 (4.997623974665)
+  headroom=2664689/1177176 (2.263628378424) ratio=8.205886267455
+  source=incoming full scan; not rerun
+k=13 base=(0, 3, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14)
+  Plat=1031399/1765764 (0.584109201456)
+  margin=734365/1765764 (0.415890798544)
+  period=2522520 arcs=63 periodmax=122064/49049 (2.488613427389)
+  15*margin=3671825/588588 (6.238361978158)
+  headroom=2207057/588588 (3.749748550769) ratio=5.983814588114
+  source=incoming full scan; not rerun
+
+Global worst among per-k certificates:
+  k=9 base=(0, 2, 4, 6, 8, 10, 12, 14)
+  ratio=13.280470214358 headroom=44585/196196
+
+Lean constants:
+  k8: pm=2/1, margin=1087/5880, headroom=303/392
+  k9: pm=86/49, margin=129643/980980, headroom=44585/196196
+  k10: pm=3299/1470, margin=7403/35672, headroom=464839/535080
+  k11: pm=6730439/1961960, margin=6205307/17657640, headroom=5417609/2942940
+  k12: pm=536399/196196, margin=5883083/17657640, headroom=2664689/1177176
+  k13: pm=122064/49049, margin=734365/1765764, headroom=2207057/588588
+
+Normalization guardrail:
+  The completed summary's k=8 worst-row certificate line prints pm=1,
+  but the row ratio 10.8188 and the brute P=840 scan both require pm=2.
+  Treat that literal as a summary typo; the inequality has headroom 303/392.
+
+Tournament analysis over proof carriers:
+  pairwise observable: which carrier preserves the current LRC14 proof predicate
+  switch/gauge: HYP-2793 proof-leg usefulness after bounded/single-far closure
+  tie Hamiltonian path: the listed transitive score order
+  7: full_periodmax_scan
+  6: worstrow_arithmetic_kernel
+  5: endpoint_orbit_dedekind_packet
+  4: genuine_wide_survival_currency
+  3: q0_boolean_guardrail
+  2: Phi_low_boolean_transfer
+  1: raw_sumR_or_ETK_abs_bound
+  0: runner_vertex_tournament
+  score histogram: 7,6,5,4,3,2,1,0; directed 3-cycles=0; SCCs=8 singletons
+
+Assumption challenge:
+  Tested vertex sets: bases, endpoint arcs, proof obligations, q0 atoms,
+  Boolean low-depth atoms, scale clusters, live-depth packets, and runners.
+  Endpoint orbits preserve the single-far inequality; runner vertices and
+  raw absolute discrepancy destroy the signed phase that makes THM-563 close.
+
+Conclusion: the integer single-far bounded-base leg is now a finite
+arithmetic/formalization target.  The remaining mathematical pressure has
+moved to genuine-wide survival/room-vs-error and continuous dilation glue.

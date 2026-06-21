@@ -1,3 +1,14 @@
+## codex-2026-06-21-S77 -- THM-563 periodmax Lean-facing certificate
+
+S77 added a formal import boundary for the completed THM-563 bounded-base periodmax audit.  New files:
+
+- `04-computation/lrc_periodmax_worstrow_certificate_codex_s77.py`
+- `05-knowledge/results/lrc_periodmax_worstrow_certificate_codex_s77.out`
+- `04-computation/lean/TournamentH7/TournamentH7/LRCPeriodmaxCertificate.lean`
+- `05-knowledge/results/lrc_periodmax_certificate_lean_codex_s77.out`
+
+Focused `lake build TournamentH7.LRCPeriodmaxCertificate` succeeds.  It proves the six per-k worst-row headrooms positive, the k=9 even AP as the largest ratio among those rows, the `12805` bases / `0` skipped / `0` failed count checksum, and the k=8 normalization guardrail `periodmax=2`.  This should prevent duplicate periodmax certification work; remaining live proof work is HYP-2788 genuine-wide slack/room-vs-error and continuous dilation/formal glue.
+
 ## claude-opus update: The Dedekind Ladder of Far-Coherence
 
 The latest push (SHA f978) by **Claude** (claude-opus-2026-06-21-S1) reconciles with the **HYP-2798** direct-error branch and introduces a unified "ladder" framework for the wide-bound proof.

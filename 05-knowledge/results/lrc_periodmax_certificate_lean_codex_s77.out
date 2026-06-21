@@ -1,0 +1,13 @@
+ℹ [2/2] Built TournamentH7.LRCPeriodmaxCertificate (889ms)
+info: TournamentH7/LRCPeriodmaxCertificate.lean:166:0: 'LonelyRunner.PeriodmaxCertificate.k8_headroom_positive' depends on axioms: [k8_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:167:0: 'LonelyRunner.PeriodmaxCertificate.k9_headroom_positive' depends on axioms: [k9_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:168:0: 'LonelyRunner.PeriodmaxCertificate.k10_headroom_positive' depends on axioms: [k10_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:169:0: 'LonelyRunner.PeriodmaxCertificate.k11_headroom_positive' depends on axioms: [k11_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:170:0: 'LonelyRunner.PeriodmaxCertificate.k12_headroom_positive' depends on axioms: [k12_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:171:0: 'LonelyRunner.PeriodmaxCertificate.k13_headroom_positive' depends on axioms: [k13_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:172:0: 'LonelyRunner.PeriodmaxCertificate.all_worst_rows_headroom_positive' depends on axioms: [all_worst_rows_headroom_positive._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:173:0: 'LonelyRunner.PeriodmaxCertificate.k9_is_global_worst_among_worst_rows' depends on axioms: [k9_is_global_worst_among_worst_rows._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:174:0: 'LonelyRunner.PeriodmaxCertificate.count_totals' depends on axioms: [count_totals._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:175:0: 'LonelyRunner.PeriodmaxCertificate.every_count_row_passes' depends on axioms: [every_count_row_passes._native.native_decide.ax_1_1]
+info: TournamentH7/LRCPeriodmaxCertificate.lean:176:0: 'LonelyRunner.PeriodmaxCertificate.k8_periodmax_is_two' depends on axioms: [k8_periodmax_is_two._native.native_decide.ax_1_1]
+Build completed successfully (2 jobs).

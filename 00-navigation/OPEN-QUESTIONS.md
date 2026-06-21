@@ -35,9 +35,13 @@ relation-lattice / survival-middle-mass currency, because independent
 `decorr_sup+err_sup` is false: room and resonance error anti-correlate.  Live
 targets: (A) Lean/formal split + cap constants, (B) formal import/proof
 compression for the completed periodmax certificate, (C) genuine-wide
-pointwise room-vs-error or survival-currency signed-deviation theorem. ->
-HYP-2793, THM-563, HYP-2788, HYP-2790, HYP-2792, THM-557, THM-548, THM-546,
-HYP-2701, HYP-2684.
+pointwise room-vs-error or survival-currency signed-deviation theorem.  S77
+now supplies the first periodmax formal kernel:
+`LRCPeriodmaxCertificate.lean` proves the six per-k worst-row headrooms, the
+k=9 worst-row comparison, the `12805`-base count checksum, and the k=8
+`periodmax=2` normalization guardrail; full row enumeration remains the
+Python/mac-mini audit. -> HYP-2793, THM-563, HYP-2788, HYP-2790, HYP-2792,
+THM-557, THM-548, THM-546, HYP-2701, HYP-2684.
 
 **OPEN-Q-108 — SINGLE-FAR CLOSED AS A FINITE PERIODIC MAX (mac-mini-2026-06-21-S6, THM-563).** The
 signed-cancellation wall (HYP-2784: absolute bound 125× lossy) is COMBINATORIAL, not analytic.
