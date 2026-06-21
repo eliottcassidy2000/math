@@ -1,0 +1,107 @@
+HYP-2722/S71 miss-zeta word compatibility scout
+Exact Fraction arithmetic via HYP-2702 sector-mask automaton.
+
+  loading coordinate frontier for size=3...
+    size=3 context=[4]: added=56 cumulative=56
+    size=3 context=[3+1]: added=56 cumulative=112
+    size=3 context=[2+2]: added=56 cumulative=168
+    size=3 context=[2+1+1]: added=56 cumulative=224
+    size=3 context=[1+1+1+1]: added=56 cumulative=280
+  loading coordinate frontier for size=4...
+    size=4 context=[3]: added=7 cumulative=287
+    size=4 context=[2+1]: added=7 cumulative=294
+    size=4 context=[1+1+1]: added=7 cumulative=301
+  loading coordinate frontier for size=5...
+    size=5 context=[2]: added=8 cumulative=309
+    size=5 context=[1+1]: added=8 cumulative=317
+  loading coordinate frontier for size=6...
+    size=6 context=[1]: added=1 cumulative=318
+PART A -- generated word compatibility frontier
+  size=3: tests=280 q0_failures=0 contexts=5
+    min q0=20/16807 (0.001189980)
+    min nonorigin tax=852/307 (2.775244300)
+    min W1 leak=14617620/2821184683 (0.005181376)
+    min W1+W2 leak=2199/614 (3.581433225)
+    min U4/q0=2187/2005 (1.090773067)
+  size=4: tests=21 q0_failures=0 contexts=3
+    min q0=37/16807 (0.002201464)
+    min nonorigin tax=24251/10331 (2.347401026)
+    min W1 leak=0 (0.000000000)
+    min W1+W2 leak=21349/6739 (3.167977445)
+    min U4/q0=209/188 (1.111702128)
+  size=5: tests=16 q0_failures=0 contexts=2
+    min q0=199/24010 (0.008288213)
+    min nonorigin tax=136551/61661 (2.214544039)
+    min W1 leak=44016/76213 (0.577539265)
+    min W1+W2 leak=144154/63487 (2.270606581)
+    min U4/q0=69930/61661 (1.134104215)
+  size=6: tests=1 q0_failures=0 contexts=1
+    min q0=69/6860 (0.010058309)
+    min nonorigin tax=141/23 (6.130434783)
+    min W1 leak=40/23 (1.739130435)
+    min W1+W2 leak=2110/207 (10.193236715)
+    min U4/q0=269/207 (1.299516908)
+
+AGGREGATE
+  tests=318
+  q0_failures=0
+  global min q0=20/16807 (0.001189980)
+  global min nonorigin tax=136551/61661 (2.214544039)
+  global min W1 leak=0 (0.000000000)
+  global min W1+W2 leak=144154/63487 (2.270606581)
+  global min W1+W2+W3 leak=284898/63487 (4.487501378)
+  U4/q0 nonpositive=0
+  tail45/q0 negative=0
+
+PART B -- extremal compatibility witnesses
+  smallest q0 margin:
+    size=3 shape=(0, 1, 3) context=[1+1+1+1] q0=20/16807 (0.001189980) tax=139/15 (9.266666667) W12=5717/280 (20.417857143) U4/q0=187/168 (1.113095238) d1=1493/140 (10.664285714) d2=184/15 (12.266666667)
+    normalized atoms q_t/q0=1, 4, -3/2, -109/30, 1/40, 3/28, 1/840
+  smallest nonorigin tax:
+    size=5 shape=(0, 1, 2, 3, 5) context=[2] q0=61661/2469600 (0.024968011) tax=136551/61661 (2.214544039) W12=163599/61661 (2.653200564) U4/q0=69930/61661 (1.134104215) d1=918112/308305 (2.977934189) d2=282838/61661 (4.586983669)
+    normalized atoms q_t/q0=1, -19348/61661, -46786/61661, -32972/61661, 30292/61661, 6874/61661, 279/61661
+  smallest W1 leak:
+    size=4 shape=(0, 1, 2, 4) context=[1+1+1] q0=37/16807 (0.002201464) tax=2359/222 (10.626126126) W12=625/74 (8.445945946) U4/q0=587/444 (1.322072072) d1=2224/185 (12.021621622) d2=3025/222 (13.626126126)
+    normalized atoms q_t/q0=1, 167/74, -687/148, -130/111, 83/37, 23/74, 1/444
+  smallest W1+W2 leak:
+    size=5 shape=(0, 1, 2, 4, 5) context=[2] q0=63487/2469600 (0.025707402) tax=153035/63487 (2.410493487) W12=144154/63487 (2.270606581) U4/q0=72956/63487 (1.149148645) d1=1206794/317435 (3.801704286) d2=343496/63487 (5.410493487)
+    normalized atoms q_t/q0=1, 11430/63487, -62721/63487, -45540/63487, 24991/63487, 8074/63487, 279/63487
+  closest cheap r=1 direction:
+    size=5 shape=(0, 1, 2, 3, 5) context=[2] q0=61661/2469600 (0.024968011) tax=136551/61661 (2.214544039) W12=163599/61661 (2.653200564) U4/q0=69930/61661 (1.134104215) d1=918112/308305 (2.977934189) d2=282838/61661 (4.586983669)
+    normalized atoms q_t/q0=1, -19348/61661, -46786/61661, -32972/61661, 30292/61661, 6874/61661, 279/61661
+  closest cheap r=2 direction:
+    size=4 shape=(0, 1, 2, 4) context=[3] q0=2479/98784 (0.025095157) tax=7533/2479 (3.038725292) W12=10274/2479 (4.144413070) U4/q0=2865/2479 (1.155707947) d1=40238/12395 (3.246308996) d2=9682/2479 (3.905607100)
+    normalized atoms q_t/q0=1, -1468/2479, -3538/2479, 1176/2479, 15/37, 336/2479, 10/2479
+  smallest U4/q0:
+    size=3 shape=(0, 1, 3) context=[3+1] q0=2005/172872 (0.011598177) tax=12787/2005 (6.377556110) W12=10164/2005 (5.069326683) U4/q0=2187/2005 (1.090773067) d1=3118/401 (7.775561097) d2=17338/2005 (8.647381546)
+    normalized atoms q_t/q0=1, 472/401, -7396/2005, 732/2005, 425/401, 172/2005, 2/2005
+
+TOURNAMENT ANALYSIS
+  vertices: coherent generated context partitions
+  pairwise observable: stronger compatibility barrier = larger min W1+W2 leak,
+  then larger min nonorigin tax, then larger min q0 margin.
+  vertices=11
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1, 10: 1}
+  directed_3cycles=0
+  Hamiltonian pressure path:
+    [1+1+1+1]: min_W12=5717/280 (20.417857143) min_tax=139/15 (9.266666667) min_q0=20/16807 (0.001189980)
+    [1]: min_W12=2110/207 (10.193236715) min_tax=141/23 (6.130434783) min_q0=69/6860 (0.010058309)
+    [1+1+1]: min_W12=9651/1748 (5.521167048) min_tax=6475/684 (9.466374269) min_q0=37/16807 (0.002201464)
+    [3+1]: min_W12=59900/12011 (4.987095163) min_tax=70693/12011 (5.885688119) min_q0=2005/172872 (0.011598177)
+    [2+1+1]: min_W12=397064/90201 (4.401991109) min_tax=3833/513 (7.471734893) min_q0=171/33614 (0.005087166)
+    [2+2]: min_W12=25448/5889 (4.321276957) min_tax=49009/11778 (4.161062999) min_q0=30943/4148928 (0.007458071)
+    [4]: min_W12=2199/614 (3.581433225) min_tax=852/307 (2.775244300) min_q0=14899/617400 (0.024131843)
+    [1+1]: min_W12=4013/1194 (3.360971524) min_tax=4601/597 (7.706867672) min_q0=199/24010 (0.008288213)
+    [3]: min_W12=5551/1733 (3.203115984) min_tax=24251/10331 (2.347401026) min_q0=2479/98784 (0.025095157)
+    [2+1]: min_W12=21349/6739 (3.167977445) min_tax=35365/6739 (5.247811248) min_q0=6037/691488 (0.008730448)
+    [2]: min_W12=144154/63487 (2.270606581) min_tax=136551/61661 (2.214544039) min_q0=18541/1234800 (0.015015387)
+
+SYNTHESIS
+  The generated-word frontier has no q0 failures in this scout: every
+  sparse-coordinate challenger that survives in the arbitrary cone is
+  beaten after actual coherent miss-zeta contexts are applied.
+  The normalized generated atom moves stay visibly far from the cheap
+  abstract LP directions: low factorial leakage is never near zero, so
+  the low observers are not silently preserved.  This supports the
+  HYP-2721 guardrail: abstract q0-hiding moves must be checked against
+  generated product words before they are treated as real LRC packets.
