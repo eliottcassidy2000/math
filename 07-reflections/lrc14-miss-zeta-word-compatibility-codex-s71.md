@@ -36,3 +36,24 @@ The proof route should be:
 The lesson is the same as the Vitali atom lesson in tournament language:
 low-observer data is allowed only after the compatibility/completion channel
 has been retained long enough to pay for the target functional.
+
+## Pull Integration: Depth Law Versus Generated Word
+
+The mac-mini S10 pull reframes the full actual-row crux as depth-law
+convex-order occupancy.  That is the right global row-level object.  It should
+not be collapsed with the generated-context compression object.
+
+After adding `B2` to the S71 scout, the distinction is concrete:
+
+```text
+decorrelated generated contexts:
+  B2/q0 nonpositive = 59/318
+  min B2/q0 = -1135/282
+  U4/q0 nonpositive = 0/318
+```
+
+So full-row even `B2` cleanliness is not a product-word compression theorem.
+For generated words, the usable witnesses are low-factorial leakage and
+`B4=U4`, plus relation-support handoff.  For full rows, the depth-law
+convex-order program can still pursue even Krawtchouk extremality.  These are
+two layers of the proof stack, not competing explanations.

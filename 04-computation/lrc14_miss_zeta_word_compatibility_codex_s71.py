@@ -122,6 +122,11 @@ def u4_delta(q: tuple[F, ...]) -> F:
     return q[0] + q[5] + 5 * q[6]
 
 
+def bonferroni2_delta(W: tuple[F, ...]) -> F:
+    """Delta of B2=1-S1+S2; constants cancel for signed moves."""
+    return -W[1] + W[2]
+
+
 def tail45(q: tuple[F, ...]) -> F:
     return q[5] + 5 * q[6]
 
@@ -136,6 +141,7 @@ class Metric:
     low_leak_1: F | None
     low_leak_2: F | None
     low_leak_3: F | None
+    b2_norm: F | None
     u4_norm: F | None
     tail45_norm: F | None
     cheap_dist_1: F | None
@@ -173,6 +179,7 @@ def metric_for(
             None,
             None,
             None,
+            None,
             W,
         )
     nW = tuple(v / q[0] for v in W)
@@ -185,6 +192,7 @@ def metric_for(
         low_leak_1=sum(abs(nW[j]) for j in range(1, 2)),
         low_leak_2=sum(abs(nW[j]) for j in range(1, 3)),
         low_leak_3=sum(abs(nW[j]) for j in range(1, 4)),
+        b2_norm=bonferroni2_delta(W) / q[0],
         u4_norm=u4_delta(q) / q[0],
         tail45_norm=tail45(q) / q[0],
         cheap_dist_1=l1_distance(nq, cheap_lp_direction(1)),
@@ -229,6 +237,7 @@ def print_summary(metrics: list[Metric]) -> None:
             print(f"    min nonorigin tax={fmt(min(m.normalized_tax for m in positive if m.normalized_tax is not None))}")
             print(f"    min W1 leak={fmt(min(m.low_leak_1 for m in positive if m.low_leak_1 is not None))}")
             print(f"    min W1+W2 leak={fmt(min(m.low_leak_2 for m in positive if m.low_leak_2 is not None))}")
+            print(f"    min B2/q0={fmt(min(m.b2_norm for m in positive if m.b2_norm is not None))}")
             print(f"    min U4/q0={fmt(min(m.u4_norm for m in positive if m.u4_norm is not None))}")
 
     positive_all = [m for m in metrics if m.q0 > 0]
@@ -240,6 +249,8 @@ def print_summary(metrics: list[Metric]) -> None:
     print(f"  global min W1 leak={fmt(min(m.low_leak_1 for m in positive_all if m.low_leak_1 is not None))}")
     print(f"  global min W1+W2 leak={fmt(min(m.low_leak_2 for m in positive_all if m.low_leak_2 is not None))}")
     print(f"  global min W1+W2+W3 leak={fmt(min(m.low_leak_3 for m in positive_all if m.low_leak_3 is not None))}")
+    print(f"  B2/q0 nonpositive={sum(1 for m in positive_all if m.b2_norm is not None and m.b2_norm <= 0)}")
+    print(f"  global min B2/q0={fmt(min(m.b2_norm for m in positive_all if m.b2_norm is not None))}")
     print(f"  U4/q0 nonpositive={sum(1 for m in positive_all if m.u4_norm is not None and m.u4_norm <= 0)}")
     print(f"  tail45/q0 negative={sum(1 for m in positive_all if m.tail45_norm is not None and m.tail45_norm < 0)}")
 
@@ -255,6 +266,7 @@ def print_extremes(metrics: list[Metric]) -> None:
         ("smallest nonorigin tax", lambda m: val(m.normalized_tax)),
         ("smallest W1 leak", lambda m: val(m.low_leak_1)),
         ("smallest W1+W2 leak", lambda m: val(m.low_leak_2)),
+        ("smallest B2/q0", lambda m: val(m.b2_norm)),
         ("closest cheap r=1 direction", lambda m: val(m.cheap_dist_1)),
         ("closest cheap r=2 direction", lambda m: val(m.cheap_dist_2)),
         ("smallest U4/q0", lambda m: val(m.u4_norm)),
@@ -265,7 +277,7 @@ def print_extremes(metrics: list[Metric]) -> None:
         print(
             f"    size={m.size} shape={m.shape} context={m.context_name} "
             f"q0={fmt(m.q0)} tax={fmt(m.normalized_tax)} "
-            f"W12={fmt(m.low_leak_2)} U4/q0={fmt(m.u4_norm)} "
+            f"W12={fmt(m.low_leak_2)} B2/q0={fmt(m.b2_norm)} U4/q0={fmt(m.u4_norm)} "
             f"d1={fmt(m.cheap_dist_1)} d2={fmt(m.cheap_dist_2)}"
         )
         if m.norm_atoms is not None:

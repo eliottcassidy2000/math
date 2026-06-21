@@ -90,6 +90,8 @@ global min atom tax   = 136551/61661 ~= 2.214544039
 global min W1 leak    = 0
 global min W1+W2 leak = 144154/63487 ~= 2.270606581
 global min W1+W2+W3   = 284898/63487 ~= 4.487501378
+B2/q0 nonpositive     = 59
+global min B2/q0      = -1135/282 ~= -4.024822695
 U4/q0 nonpositive     = 0
 tail45/q0 negative    = 0
 ```
@@ -98,6 +100,26 @@ So `W_1` alone can be silent in a generated row, but `W_1+W_2` is not silent
 on this frontier.  This matters because the cheapest abstract `r=1` and `r=2`
 LP directions rely on low-factorial invisibility.  The generated word keeps
 enough low-order leakage to expose them.
+
+The incoming mac-mini S10 convex-order/Krawtchouk work is compatible but
+requires a distinction.  In the full-row depth-law problem, the even
+Krawtchouk bands are the clean occupancy face.  In this decorrelated
+generated-context compression scout, the signed `B_2` difference can be
+negative:
+
+```text
+B2/q0 nonpositive = 59/318.
+```
+
+However `B_4=U4` stays positive:
+
+```text
+U4/q0 nonpositive = 0/318.
+```
+
+Thus the generated-word compatibility filter should use low-factorial
+**leakage** plus the Bonferroni4/`U4` readout, not a blanket `B_2` positivity
+claim for decorrelated product words.
 
 The closest cheap `r=1` direction is still not close:
 
@@ -161,6 +183,9 @@ Concrete next lemmas:
 4. **Bonferroni split.**  Use THM-558 for the `U4`-visible cheap moves, but do
    not rely on `U4` alone because HYP-2721 found cheap abstract moves with
    `U4_delta=0`.
+5. **Depth-law handoff.**  Keep the mac-mini S10 full-row convex-order program
+   separate from decorrelated generated-context compression: `B_2` can be dirty
+   here even when the full-row even Krawtchouk rung is clean.
 
 ## Tournament Analysis
 
