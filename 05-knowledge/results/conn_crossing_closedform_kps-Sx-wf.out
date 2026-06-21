@@ -1,0 +1,28 @@
+=== closed form of circular parallel-crossing count P ===
+convex crossing = C(n,4); Guy optimal cr(K_n) = {4: 0, 5: 1, 6: 3, 7: 9, 8: 18}
+--- n=4, C(n,4)=1, Guy cr=0 ---
+   (B) P determined by ORDERED score seq? True
+   (D) P - c3 determined by score seq? True
+   (D') P affine in c3? P=0*c3+1  exact:False
+   P range: [0,1], #distinct=2
+--- n=5, C(n,4)=5, Guy cr=1 ---
+   (B) P determined by ORDERED score seq? False
+   (D) P - c3 determined by score seq? False
+   (D') P affine in c3? P=-2/5*c3+5  exact:False
+   P range: [1,5], #distinct=3
+--- n=6, C(n,4)=15, Guy cr=3 ---
+   (B) P determined by ORDERED score seq? False
+   (D) P - c3 determined by score seq? False
+   (D') P affine in c3? P=-1/2*c3+15  exact:False
+   P range: [3,15], #distinct=11
+--- n=7, C(n,4)=35, Guy cr=9 ---
+   (B) P determined by ORDERED score seq? False
+   (D) P - c3 determined by score seq? False
+   (D') P affine in c3? P=-12/13*c3+415/13  exact:False
+   P range: [9,35], #distinct=13
+
+INTERPRETATION:
+ - raw circular crossing number = C(n,4) (orientation-free) -- TRIVIAL. PROVED.
+ - parallel-crossing P is a QUADRATIC form in tile bits (Clifford level), same
+   tier as c3 (THM-554 / HYP-2707 quadratic/Gauss-sum side of the wall).
+ - Whether P is score-determined is the decisive test above.

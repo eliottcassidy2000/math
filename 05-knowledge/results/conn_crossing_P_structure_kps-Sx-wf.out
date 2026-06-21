@@ -1,0 +1,24 @@
+=== P structure + synchronization (final) ===
+TEST1 n=5: 3rd-diff vanishes everywhere=True ; nonzero 2nd-diff exists=True  => P is EXACTLY QUADRATIC (Clifford tier)  PROVED-by-exhaustion
+TEST1 n=6: 3rd-diff vanishes everywhere=True ; nonzero 2nd-diff exists=True  => P is EXACTLY QUADRATIC (Clifford tier)  PROVED-by-exhaustion
+TEST2 n=5: WITNESS same score (1, 1, 2, 3, 3): (c3,P)=(3, 5) vs (3, 1)  => P NOT score-determined; note c3 SAME, P DIFFERS => P is a NON-score quadratic.
+TEST2 n=6: WITNESS same score (1, 1, 3, 3, 3, 4): (c3,P)=(5, 12) vs (5, 10)  => P NOT score-determined; note c3 SAME, P DIFFERS => P is a NON-score quadratic.
+TEST2 n=7: WITNESS same score (1, 3, 4, 4, 4, 2, 3): (c3,P)=(10, 17) vs (10, 13)  => P NOT score-determined; note c3 SAME, P DIFFERS => P is a NON-score quadratic.
+TEST3 n=5: #distinct c3=6, #distinct (c3,P)=11  => P adds 5 new separations.
+TEST3 n=6: #distinct c3=9, #distinct (c3,P)=60  => P adds 51 new separations.
+TEST4: Road-coloring honest verdict
+  Wiggly/bit-toggle automaton: every letter a bijection => PERMUTATION automaton
+  => NO synchronizing word (PROVED, classical). Literal road-coloring FAILS.
+  Repair (Redei descent): repeatedly route a vertex out via a Hamiltonian-path
+  prefix collapses ANY tournament to transitive in <= C(n,2) arc reversals.
+  n=3: arc-reversal reset bound C(n,2)=3; Cerny bound (2^F-1)^2=1  => reset is EXPONENTIALLY shorter; not a Cerny instance.
+  n=4: arc-reversal reset bound C(n,2)=6; Cerny bound (2^F-1)^2=49  => reset is EXPONENTIALLY shorter; not a Cerny instance.
+  n=5: arc-reversal reset bound C(n,2)=10; Cerny bound (2^F-1)^2=3969  => reset is EXPONENTIALLY shorter; not a Cerny instance.
+  n=6: arc-reversal reset bound C(n,2)=15; Cerny bound (2^F-1)^2=1046529  => reset is EXPONENTIALLY shorter; not a Cerny instance.
+  n=7: arc-reversal reset bound C(n,2)=21; Cerny bound (2^F-1)^2=1073676289  => reset is EXPONENTIALLY shorter; not a Cerny instance.
+
+CONCLUSION: real connection = (1) crossing number gives a NEW Clifford-tier
+quadratic invariant P (circular parallel-crossing count), independent of c3 and
+NOT score-determined -- it reads cycle/winding info that scores discard, the
+first quadratic OCF-adjacent datum beyond the score wall (THM-555).
+Road-coloring is a NEGATIVE result (permutation automaton => no reset word).

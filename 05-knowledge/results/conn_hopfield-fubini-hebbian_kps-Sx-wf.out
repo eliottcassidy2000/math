@@ -1,0 +1,60 @@
+======================================================================
+CONNECTION: hopfield-fubini-hebbian  <->  parity-in-tournaments
+======================================================================
+
+--- TEST 1: c3 (=alpha_1) IS an exact Hopfield/Ising quadratic energy ---
+H1: c3(bits) = const + lin.b + b^T Quad b, built EXACTLY from THM-554
+    (score s_v affine in tile bits; c3 = C(n,3) - sum_v C(s_v,2)).
+  n=3: F=1 bits, 2 tilings, quadratic-vs-brute mismatches=0  [EXACT MATCH]  max c3=1
+        c3-maximizer score multiset(s) (sorted out-deg): [[1, 1, 1]]
+  n=4: F=3 bits, 8 tilings, quadratic-vs-brute mismatches=0  [EXACT MATCH]  max c3=2
+        c3-maximizer score multiset(s) (sorted out-deg): [[1, 1, 2, 2]]
+  n=5: F=6 bits, 64 tilings, quadratic-vs-brute mismatches=0  [EXACT MATCH]  max c3=5
+        c3-maximizer score multiset(s) (sorted out-deg): [[2, 2, 2, 2, 2]]
+  n=6: F=10 bits, 1024 tilings, quadratic-vs-brute mismatches=0  [EXACT MATCH]  max c3=8
+        c3-maximizer score multiset(s) (sorted out-deg): [[2, 2, 2, 3, 3, 3]]
+  n=7: F=15 bits, 32768 tilings, quadratic-vs-brute mismatches=0  [EXACT MATCH]  max c3=14
+        c3-maximizer score multiset(s) (sorted out-deg): [[3, 3, 3, 3, 3, 3, 3]]
+
+--- TEST 2: Hopfield async descent => ground state = c3-maximizer (regular)? ---
+H1b (Q2): greedy single-bit Hopfield dynamics on energy=-c3 reaches global c3-max?
+  n=4: global c3-max=2; greedy reached it 300/300 = 1.000 of random starts; final-c3 histogram={2: 300}
+  n=5: global c3-max=5; greedy reached it 204/300 = 0.680 of random starts; final-c3 histogram={4: 96, 5: 204}
+  n=6: global c3-max=8; greedy reached it 300/300 = 1.000 of random starts; final-c3 histogram={8: 300}
+  n=7: global c3-max=14; greedy reached it 168/300 = 0.560 of random starts; final-c3 histogram={13: 132, 14: 168}
+
+--- TEST 3: is H (full OCF) quadratic? residual = Clifford->magic gap (HYP-2707) ---
+H1c (Q3): fit best quadratic to H over hypercube; residual>0 confirms degree>2.
+  n=4: F=3, #quad-features=7, rank=7, max|H-Qfit|=0.0000  => H IS quadratic (residual 0)
+  n=5: F=6, #quad-features=22, rank=22, max|H-Qfit|=1.8750  => H NOT quadratic (degree>2) => magic gap
+  n=6: F=10, #quad-features=56, rank=56, max|H-Qfit|=11.0000  => H NOT quadratic (degree>2) => magic gap
+
+--- TEST 4 (Fubini-Study): FS metric on OCF ray (1,c3,H) vs H alone ---
+H2: does FS see structure beyond H? (same-H, different-c3 rays get FS-separated)
+  n=4: 3 distinct (c3,H) data; 3 distinct H values; 0 H-values with >1 c3 (FS separates these). examples (H,c3s,FSdist)=[]
+  n=5: 8 distinct (c3,H) data; 7 distinct H values; 1 H-values with >1 c3 (FS separates these). examples (H,c3s,FSdist)=[(15, [4, 5], 0.061)]
+  n=6: 24 distinct (c3,H) data; 19 distinct H values; 5 H-values with >1 c3 (FS separates these). examples (H,c3s,FSdist)=[(9, [2, 3], 0.1025), (15, [4, 5], 0.061), (23, [5, 6], 0.0411), (33, [6, 7], 0.0292), (37, [6, 7], 0.0262)]
+  n=7: 126 distinct (c3,H) data; 77 distinct H values; 39 H-values with >1 c3 (FS separates these). examples (H,c3s,FSdist)=[(9, [2, 3], 0.1025), (15, [3, 4, 5], 0.1241), (23, [5, 6], 0.0411), (25, [5, 6], 0.0381), (29, [5, 6], 0.0333)]
+
+--- TEST 5 (Hebbian): vertex insertion n->n+1 weight update is outer-product? ---
+H3: new neuron (vertex n+1) couples to old vertices via tile incidences = Hebb rule.
+    THM-554 beta-clock: Z_{n+1}=Z_n * x_{n+1} * prod_{b=1}^{n-1}(x_{n+1}+x_b).
+    => the n-1 new tiles (n+1,b) each add ONE quadratic coupling term between the
+       new neuron and an old one. In the c3 quadratic form, inserting vertex n+1
+       adds exactly a rank-controlled block to W coupling new bit-set to old scores.
+  n->4: 2 new tiles (= birth strip beta=4, expect n-1=2); new quadratic couplings introduced=3
+  n->5: 3 new tiles (= birth strip beta=5, expect n-1=3); new quadratic couplings introduced=12
+  n->6: 4 new tiles (= birth strip beta=6, expect n-1=4); new quadratic couplings introduced=30
+  n->7: 5 new tiles (= birth strip beta=7, expect n-1=5); new quadratic couplings introduced=60
+
+======================================================================
+SUMMARY
+======================================================================
+H1 (BEST): c3=alpha_1 is LITERALLY a Hopfield/Ising quadratic energy on the tiling
+  hypercube, built exactly from THM-554. Its ground state (max c3) is the regular
+  tournament (THM-027). Hopfield dynamics = c3-maximization = OCF leading term.
+H1c: H (full OCF) is NOT quadratic (residual>0) => the Clifford->magic wall (HYP-2707)
+  is exactly the Hopfield(2-local)->beyond-Hopfield(k-local) boundary.
+H2 (FS): FS ray metric on (1,c3,H) adds little beyond H (mostly degenerate at small n).
+H3 (Hebb): vertex insertion adds exactly (n-1) new tile-couplings = a structured
+  outer-product-like block; real but weaker as a 'learning rule' claim.

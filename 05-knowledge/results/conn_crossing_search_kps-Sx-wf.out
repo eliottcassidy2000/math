@@ -1,0 +1,36 @@
+=== crossing functional search ===
+n=4 F=3 sample=8
+   count_s1ne s2 (alt)         : exact==c3? False  NOT affine in c3
+   count_s1eq s2 (parallel)    : exact==c3? False  NOT affine in c3
+   count_(1,0)                 : exact==c3? False  NOT affine in c3
+   count_(0,1)                 : exact==c3? False  NOT affine in c3
+   count_(1,1)                 : exact==c3? False  NOT affine in c3
+   count_(0,0)                 : exact==c3? False  NOT affine in c3
+n=5 F=6 sample=64
+   count_s1ne s2 (alt)         : exact==c3? False  NOT affine in c3
+   count_s1eq s2 (parallel)    : exact==c3? False  NOT affine in c3
+   count_(1,0)                 : exact==c3? False  NOT affine in c3
+   count_(0,1)                 : exact==c3? False  NOT affine in c3
+   count_(1,1)                 : exact==c3? False  NOT affine in c3
+   count_(0,0)                 : exact==c3? False  NOT affine in c3
+n=6 F=10 sample=1024
+   count_s1ne s2 (alt)         : exact==c3? False  NOT affine in c3
+   count_s1eq s2 (parallel)    : exact==c3? False  NOT affine in c3
+   count_(1,0)                 : exact==c3? False  NOT affine in c3
+   count_(0,1)                 : exact==c3? False  NOT affine in c3
+   count_(1,1)                 : exact==c3? False  NOT affine in c3
+   count_(0,0)                 : exact==c3? False  NOT affine in c3
+n=7 F=15 sample=3000
+   count_s1ne s2 (alt)         : exact==c3? False  NOT affine in c3
+   count_s1eq s2 (parallel)    : exact==c3? False  NOT affine in c3
+   count_(1,0)                 : exact==c3? False  NOT affine in c3
+   count_(0,1)                 : exact==c3? False  NOT affine in c3
+   count_(1,1)                 : exact==c3? False  NOT affine in c3
+   count_(0,0)                 : exact==c3? False  NOT affine in c3
+
+Now test the DEGREE / quadratic-form structure of the best crossing count.
+c3 is a quadratic form in tile bits (THM-554/HYP-2707). We test whether
+the 'parallel crossing' count P (s1==s2) is ALSO a quadratic form, i.e.
+P(bits) - P(0) is degree<=2 in bits, by finite differences.
+   n=5: parallel-crossing 3rd-difference always 0? YES (deg<=2, QUADRATIC like c3)
+   n=6: parallel-crossing 3rd-difference always 0? YES (deg<=2, QUADRATIC like c3)

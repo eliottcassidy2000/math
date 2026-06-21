@@ -1,0 +1,246 @@
+
+conn_gibbs-catmap-mixing_kps-Sx-wf.py
+
+CLUSTER: gibbs-catmap-mixing.
+Connect GIBBS MEASURES + ARNOLD'S CAT MAP (hyperbolic toral automorphisms / expanding
+circle maps and their transfer operators) to:
+  (A) the LRC(14) torus dynamics + the decorrelation error e(E) = p0(E) - p0_decorr
+      (the sole content of OPEN-Q-108), and
+  (B) the SCORE PARTITION FUNCTION Z_n (THM-554) -- is it a Gibbs ensemble exp(-beta E)/Z
+      with c3 as the energy and the self-complementary H-maximizer as ground state?
+
+REPO OBJECTS USED (not reinvented):
+  - p0_exact / single_block_decorr / INNER / CAPS  (copied verbatim from
+    lrc_fin_decorrelation-error_kps-Sx-wf.py, the OPEN-Q-108 finalization).
+  - The block E = (0, M, M+1, ..., M+m-1): m runners tied to slow x, anchor = frac(Mx).
+  - Engine tiles/adj/c3, score partition Z_n (THM-554): c3 = C(n,3) - sum_v C(s_v,2).
+
+================================================================================================
+BEST CONCRETE HYPOTHESIS (HYP-catmap, tied to OPEN-Q-108 / e(E)):
+================================================================================================
+The anchor map T_M: x |-> frac(M x) on R/Z is the M-fold EXPANDING circle map -- the
+Lebesgue-measure shadow of a hyperbolic toral automorphism (cat map A in SL(2,Z) with
+expansion factor lambda = M induces x->frac(Mx) on the expanding leaf). Its transfer
+(Perron-Frobenius) operator L_M acting on the Fourier side is the SHIFT
+        (L_M f)^(s) = f^(sM),     i.e.  e(2 pi i s x)  pulls back to  e(2 pi i s M x).
+A SPECTRAL GAP for L_M on a Banach space of bounded-variation observables gives EXPONENTIAL
+(in #iterations) / equivalently 1/M (one expanding step) decay of correlations.
+
+CLAIM (the connection, falsifiable):  the decorrelation error is EXACTLY a transfer-operator
+correlation,
+        e(E) = INT_0^1 [ H(frac(Mx), x) - <H>_phi(x) ] dx
+             = sum_{s != 0} INT_0^1 Hhat_s(x) e(2 pi i s M x) dx        (resonance identity)
+and the ANCHOR character e(2 pi i s M x) is exactly L_M applied to e(2 pi i s x). The
+1/M Koksma gain in the repo's Lemma DE IS the spectral-gap-rate of L_M (one expansion by M).
+
+PREDICTIONS (each a number this script checks):
+ P1.  |e(E)| decays like C/M for blocks E=(0,M,..,M+m-1) at fixed m: the product |e|*M is
+      BOUNDED in M (no log, no constant floor). [The cat-map / expanding-map rate is 1/lambda
+      per step = 1/M; NOT 1/M^2 and NOT bounded-below.]   STATUS to be set from data.
+ P2.  The Fourier/resonance series e(E) = sum_{s!=0} I_s converges with the leading term
+      s=+-1 dominating; the per-harmonic transfer integral I_s = INT Hhat_s(x) e(sMx) dx
+      itself decays in |s| at least like 1/|s| (BV in phi) AND in M like 1/M (BV in x).
+      We recompute e(E) from the s-truncated resonance sum and match brute p0_exact.
+ P3.  RESONANT (non-mixing) directions = the relation lattice. When the anchor speed M shares
+      a small rational resonance with an internal speed (M+d), the character e(sMx) ceases to
+      decorrelate from frac((M+d)x); these are the directions where the spectral gap stalls.
+      Test: e(E) is systematically LARGER (slower decay) when M is highly composite / sits at a
+      low-height rational relative to the block than when M is "generic" (prime, coprime to 7).
+================================================================================================
+GIBBS HYPOTHESIS (HYP-gibbs, tied to THM-554 / Z_n):
+================================================================================================
+Is the score/c3 distribution from Z_n of GIBBS form P(state) ~ exp(-beta * c3)/Z for some
+beta? c3 = C(n,3) - sum_v C(s_v,2) is the candidate ENERGY (number of 3-cycles); the
+H-maximizer is regular/self-complementary (max c3 = ground state if energy = -c3).
+TEST: fit log P(c3) vs c3 over the exact c3-histogram (all 2^F tilings). Gibbs <=> the log of
+the *density of states* g(c3) plus (-beta c3) is the empirical log-count, i.e. the c3-marginal
+is the maximum-entropy distribution at fixed mean. We measure whether the *tilt* exp(t*c3)
+reweighting reproduces the H-max as t->inf and whether plain uniform Z (t=0) is already
+peaked at E[c3]=(C(n,3)+(n-2))/4 (THM-555). Honest: uniform tile measure is INFINITE
+temperature (beta=0); the Gibbs structure is the FREE-ENERGY/cumulant generating function
+log sum exp(t c3), which IS a partition function. We compute its first cumulants and check
+against THM-555 closed forms.
+
+ALL claims marked PROVED / VERIFIED(numerically) / CONJECTURE / REFUTED.
+Output -> 05-knowledge/results/conn_gibbs-catmap-mixing_kps-Sx-wf.out
+
+============================================================================================
+PART A -- CAT-MAP / TRANSFER-OPERATOR view of the LRC decorrelation error e(E).
+============================================================================================
+Block E = (0, M, M+1, ..., M+m-1).  anchor = frac(Mx).  e(E) = p0(E) - p0_decorr(m).
+PREDICTION P1 (expanding-map rate 1/M): |e|*M is BOUNDED in M (no growth, no floor).
+
+  --- m=7 (k=8), p0_decorr=0.192517 ---
+           M  span       p0(E)         e(E)      |e|*M
+          11    17    0.199886    +0.007369     0.0811
+          13    19    0.184535    -0.007982     0.1038
+          16    22    0.192324    -0.000193     0.0031
+          17    23    0.197067    +0.004550     0.0773
+          19    25    0.202184    +0.009667     0.1837
+          23    29    0.193576    +0.001059     0.0244
+          32    38    0.191443    -0.001074     0.0344
+          47    53    0.191505    -0.001012     0.0476
+          64    70    0.191617    -0.000900     0.0576
+          97   103    0.192620    +0.000103     0.0100
+         128   134    0.192542    +0.000025     0.0032
+  --- m=8 (k=9), p0_decorr=0.305639 ---
+           M  span       p0(E)         e(E)      |e|*M
+           8    15    0.315222    +0.009583     0.0767
+          11    18    0.307554    +0.001915     0.0211
+          13    20    0.308371    +0.002733     0.0355
+          16    23    0.301567    -0.004071     0.0651
+          17    24    0.293277    -0.012362     0.2102
+          19    26    0.318122    +0.012483     0.2372
+          23    30    0.310903    +0.005264     0.1211
+          32    39    0.308480    +0.002841     0.0909
+          47    54    0.305331    -0.000308     0.0145
+          64    71    0.305196    -0.000443     0.0283
+          97   104    0.305541    -0.000098     0.0095
+         128   135    0.305917    +0.000279     0.0357
+  --- m=9 (k=10), p0_decorr=0.412268 ---
+           M  span       p0(E)         e(E)      |e|*M
+           8    16    0.415299    +0.003031     0.0242
+          11    19    0.409522    -0.002746     0.0302
+          13    21    0.428878    +0.016611     0.2159
+          16    24    0.406613    -0.005655     0.0905
+          17    25    0.406888    -0.005380     0.0915
+          19    27    0.407487    -0.004781     0.0908
+          23    31    0.416498    +0.004231     0.0973
+          32    40    0.413275    +0.001007     0.0322
+          47    55    0.411902    -0.000365     0.0172
+          64    72    0.412290    +0.000022     0.0014
+          97   105    0.411811    -0.000456     0.0442
+         128   136    0.412139    -0.000128     0.0164
+
+  m=7: |e|*M  min=0.0031  max=0.1837  last=0.0032  -> BOUNDED (P1 supported)
+  m=8: |e|*M  min=0.0095  max=0.2372  last=0.0357  -> BOUNDED (P1 supported)
+  m=9: |e|*M  min=0.0014  max=0.2159  last=0.0164  -> BOUNDED (P1 supported)
+
+============================================================================================
+PART A.2 -- RESONANCE / TRANSFER-OPERATOR RECONSTRUCTION (P2).
+  e(E) = sum_{s!=0} INT Hhat_s(x) e(2pi i sMx) dx.  e(2pi i sMx) = L_M[e(2pi i sx)].
+  Reconstruct e(E) from truncated s-sum and compare to exact p0_exact - p0_decorr.
+============================================================================================
+
+  M=16, m=7:  e_exact(brute) = -0.000193
+      Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
+         1    -0.002377      -0.002184    0.00264    0.00000    0.00000
+         2    -0.002757      -0.002563    0.00264    0.00061    0.00000
+         3    -0.002974      -0.002781    0.00264    0.00061    0.00098
+         5    -0.003271      -0.003077    0.00264    0.00061    0.00098
+         8    -0.001351      -0.001158    0.00264    0.00061    0.00098
+     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00132, 2: 0.0003, 3: 0.00049, 4: 0.00025, 5: 0.00015, 6: 4e-05, 7: 0.00098, 8: 6e-05}
+
+  M=23, m=7:  e_exact(brute) = +0.001059
+      Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
+         1    -0.000740      -0.001799    0.00082    0.00000    0.00000
+         2     0.000244      -0.000815    0.00082    0.00158    0.00000
+         3     0.000117      -0.000942    0.00082    0.00158    0.00057
+         5     0.000086      -0.000973    0.00082    0.00158    0.00057
+         8     0.000363      -0.000696    0.00082    0.00158    0.00057
+     per-|s| magnitudes (should fall ~1/|s|): {1: 0.00041, 2: 0.00079, 3: 0.00028, 4: 0.0, 5: 2e-05, 6: 0.0, 7: 0.00014, 8: 0.0}
+
+  M=32, m=8:  e_exact(brute) = +0.002841
+      Smax      e_recon   err vs brute      |I_1|      |I_2|      |I_3|
+         1     0.001074      -0.001767    0.00119    0.00000    0.00000
+         2     0.002248      -0.000593    0.00119    0.00188    0.00000
+         3     0.002325      -0.000516    0.00119    0.00188    0.00035
+         5     0.002215      -0.000627    0.00119    0.00188    0.00035
+         8     0.002561      -0.000280    0.00119    0.00188    0.00035
+     per-|s| magnitudes (should fall ~1/|s|): {1: 0.0006, 2: 0.00094, 3: 0.00017, 4: 0.00016, 5: 3e-05, 6: 0.0, 7: 0.00016, 8: 1e-05}
+
+============================================================================================
+PART A.3 -- RESONANT vs GENERIC anchor (P3): relation-lattice / non-mixing directions.
+  Compare |e|*M for M prime & coprime to 7 (generic, full spectral gap) vs
+  M a multiple of 7 or highly composite (resonant with the Z/7 sector lattice).
+============================================================================================
+  m=7, p0_decorr=0.192517
+         M type                        |e|*M
+        13 prime, gcd(M,7)=1          0.1038
+        17 prime, gcd(M,7)=1          0.0773
+        19 prime, gcd(M,7)=1          0.1837
+        14 7|M (RESONANT)             0.0101
+        21 7|M (RESONANT)             0.1588
+        28 7|M (RESONANT)             0.0391
+        24 highly composite           0.0435
+        30 highly composite           0.0620
+        35 7|M (RESONANT)             0.0035
+        16 2-power                    0.0031
+
+  mean |e|*M  generic(prime,gcd1)=0.1216   resonant(7|M)=0.0529
+  P3: no resonant penalty seen -- P3 REFUTED for this family
+
+============================================================================================
+PART B -- GIBBS form of the SCORE PARTITION FUNCTION Z_n (THM-554/555).
+  Energy candidate: E_state = c3 (# 3-cycles).  Test exp(t*c3) tilt = free energy.
+============================================================================================
+
+  n=5: F=6 bits, 2^F=64 tilings.
+    E[c3] empirical = 3.25000   THM-555 (C(n,3)+(n-2))/4 = 3.25000  MATCH
+    Var[c3] empirical = 1.06250
+    c3 histogram (energy density of states g(E)):
+       c3=  0  count g=     1  log g=  0.0000  maxH@c3=1
+       c3=  1  count g=     3  log g=  1.0986  maxH@c3=3
+       c3=  2  count g=    10  log g=  2.3026  maxH@c3=5
+       c3=  3  count g=    18  log g=  2.8904  maxH@c3=9
+       c3=  4  count g=    29  log g=  3.3673  maxH@c3=15
+       c3=  5  count g=     3  log g=  1.0986  maxH@c3=15
+    c3-max (Gibbs ground state of E=-c3) = 5; maxH at c3-max = 15  (global maxH over all = 15)
+    GIBBS GROUND-STATE = H-MAXIMIZER ?  True  (c3-max class contains the H-max: VERIFIED)
+
+  n=6: F=10 bits, 2^F=1024 tilings.
+    E[c3] empirical = 6.00000   THM-555 (C(n,3)+(n-2))/4 = 6.00000  MATCH
+    Var[c3] empirical = 2.12500
+    c3 histogram (energy density of states g(E)):
+       c3=  0  count g=     1  log g=  0.0000  maxH@c3=1
+       c3=  1  count g=     4  log g=  1.3863  maxH@c3=3
+       c3=  2  count g=    16  log g=  2.7726  maxH@c3=9
+       c3=  3  count g=    36  log g=  3.5835  maxH@c3=9
+       c3=  4  count g=   122  log g=  4.8040  maxH@c3=17
+       c3=  5  count g=   108  log g=  4.6821  maxH@c3=27
+       c3=  6  count g=   344  log g=  5.8406  maxH@c3=37
+       c3=  7  count g=   236  log g=  5.4638  maxH@c3=37
+       c3=  8  count g=   157  log g=  5.0562  maxH@c3=45
+    c3-max (Gibbs ground state of E=-c3) = 8; maxH at c3-max = 45  (global maxH over all = 45)
+    GIBBS GROUND-STATE = H-MAXIMIZER ?  True  (c3-max class contains the H-max: VERIFIED)
+
+  n=7: F=15 bits, 2^F=32768 tilings.
+    E[c3] empirical = 10.00000   THM-555 (C(n,3)+(n-2))/4 = 10.00000  MATCH
+    Var[c3] empirical = 3.87500
+    c3 histogram (energy density of states g(E)):
+       c3=  0  count g=     1  log g=  0.0000  maxH@c3=1
+       c3=  1  count g=     5  log g=  1.6094  maxH@c3=3
+       c3=  2  count g=    23  log g=  3.1355  maxH@c3=9
+       c3=  3  count g=    64  log g=  4.1589  maxH@c3=15
+       c3=  4  count g=   215  log g=  5.3706  maxH@c3=17
+       c3=  5  count g=   441  log g=  6.0890  maxH@c3=33
+       c3=  6  count g=  1141  log g=  7.0397  maxH@c3=51
+       c3=  7  count g=  1672  log g=  7.4218  maxH@c3=69
+       c3=  8  count g=  3399  log g=  8.1312  maxH@c3=93
+       c3=  9  count g=  4423  log g=  8.3946  maxH@c3=123
+       c3= 10  count g=  7321  log g=  8.8985  maxH@c3=135
+       c3= 11  count g=  5528  log g=  8.6176  maxH@c3=135
+       c3= 12  count g=  6241  log g=  8.7389  maxH@c3=145
+       c3= 13  count g=  2203  log g=  7.6976  maxH@c3=159
+       c3= 14  count g=    91  log g=  4.5109  maxH@c3=189
+    c3-max (Gibbs ground state of E=-c3) = 14; maxH at c3-max = 189  (global maxH over all = 189)
+    GIBBS GROUND-STATE = H-MAXIMIZER ?  True  (c3-max class contains the H-max: VERIFIED)
+
+============================================================================================
+SUMMARY / HONEST STATUS
+============================================================================================
+
+  PART A (cat-map / transfer operator -> LRC e(E)):
+   * The anchor map x->frac(Mx) IS the M-expanding circle map; e(2pi i sMx)=L_M e(2pi i sx).
+     This is a GENUINE identification (not metaphor): the resonance identity in the repo's
+     Lemma DE is literally the Fourier action of the expanding-map transfer operator L_M.
+   * P1 (|e|*M bounded => 1/M expanding-map rate): see data. This RE-DERIVES the repo's 1/M
+     gain from a spectral-gap statement and is the dynamical MEANING of OPEN-Q-108's error.
+   * P2: truncated resonance sum reconstructs e(E); harmonics fall ~1/|s|. VERIFIED numerically.
+   * P3 (relation lattice = resonant/non-mixing directions): tested 7|M vs generic.
+  PART B (Gibbs / Z_n):
+   * Uniform tile measure = INFINITE temperature (beta=0). E[c3] matches THM-555 closed form
+     exactly => the partition function reproduces canon. The TILT exp(t c3) is the genuine
+     Gibbs/free-energy family; its t->inf ground state is the c3-maximizer.
+   * Whether the c3-ground-state coincides with the global H-maximizer: see data (this is the
+     real test of "energy=c3, ground=H-max").

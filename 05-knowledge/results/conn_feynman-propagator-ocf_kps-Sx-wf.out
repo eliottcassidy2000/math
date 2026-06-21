@@ -1,0 +1,51 @@
+CLUSTER feynman-propagator-ocf : propagator dictionary for OCF/H and LRC 7-slit
+
+======================================================================
+TEST A: W(1/2)=H (Redei path count); W(i/2) two ways agree.
+  Dictionary: paths=Ham paths, amplitude=prod(r+s_i), classical r=1/2.
+  n=3: F=1, sampled 2 tilings. W(1/2)=H and W(i/2) direct==polar, parity ok: VERIFIED
+  n=4: F=3, sampled 8 tilings. W(1/2)=H and W(i/2) direct==polar, parity ok: VERIFIED
+  n=5: F=6, sampled 64 tilings. W(1/2)=H and W(i/2) direct==polar, parity ok: VERIFIED
+======================================================================
+TEST B: Sweep r=(1/2)e^{i theta}. Is theta=pi/2 (r=i/2) the interference
+  null for H-maximizers? (THM-064(v): W(i/2)=0 iff H-max at n=3,5,7.)
+  HONEST CAVEAT (this script's finding): the W(i/2)=0 <=> H-max characterization
+  is over the FULL ARC MODEL / all relabelings. In the single-base-path TILE model
+  (2^F fiber reps) only a SUBSET of maximizers have W(i/2)=0 (at n=5: 3 of 8 max-H
+  tilings vanish; bits 12 is a maximizer with W(i/2)=6 != 0). The tiling model has
+  LOWER symmetry than the arc model (cf CLAUDE.md 'wiggly classes not all equiv').
+  So below we (a) confirm W(i/2)=0 ONLY among maximizers (zeros subset of maxset),
+  and (b) sweep a TRUE vanishing maximizer to show theta=pi/2 is the interference null.
+  n=5: maxH=15 (using vanishing maximizer bits 26), minH=1 (bits 0)
+  MAXIMIZER (H=15): |W| sweep over theta=0..pi (12 steps):
+     15.000   14.489   12.990   10.607    7.500    3.882    0.000    3.882    7.500   10.607   12.990   14.489   15.000
+    -> |W| MINIMIZED at theta=1.5708 (pi/2=1.5708); |W(i/2)|=0.0000
+  min-H (H=1): |W| sweep over theta=0..pi (12 steps):
+      1.000    3.253    6.500    9.925   13.029   15.212   16.000   15.212   13.029    9.925    6.500    3.253    1.000
+    -> |W| MINIMIZED at theta=0.0000 (pi/2=1.5708); |W(i/2)|=16.0000
+======================================================================
+TEST C: DOUBLE SLIT.  Slit1=T, Slit2=T^op (complement).
+  Claim to test: W_{T^op}(i/2) relates to W_T(i/2) by a fixed phase (slit offset).
+  Then |W_T + W_Top|^2 (coherent) vs |W_T|^2+|W_Top|^2 (incoherent) = interference.
+  n=3: distinct W_Top/W_T ratios over sample: [(Fraction(1, 1), Fraction(0, 1))]
+  n=4: distinct W_Top/W_T ratios over sample: [(Fraction(1, 1), Fraction(0, 1))]
+  n=5: distinct W_Top/W_T ratios over sample: [(Fraction(1, 1), Fraction(0, 1))]
+  INTERPRETATION: H(T)=H(T^op) (reverse each Ham path) is the r=1/2 slit-symmetry [PROVED, Redei].
+  At r=i/2 the ratio is the 'slit phase'. A single fixed ratio => coherent double slit.
+======================================================================
+TEST D: LRC(14) apex prime 7 as a 7-SLIT experiment.
+  The inner-sector indicator chi(x) of Z/7 has a 7th-root-of-unity Fourier expansion;
+  p0(E)=meas{x: all 6 inner sectors hit by {frac(e_i x)}} is an inclusion-exclusion over slits.
+  E=[1, 2, 3, 4, 5, 6, 7, 8] (k=8): p0(direct)=0.41701  p0(incl-excl 7-slit)=0.41701  MATCH=True
+  E=[1, 2, 3, 4, 5, 6, 7, 13] (k=8): p0(direct)=0.35850  p0(incl-excl 7-slit)=0.35850  MATCH=True
+  => p0 IS an exact signed slit-sum (inclusion-exclusion over the 6 inner sectors).
+     This is the 7-slit 'interference' form: each subset-of-missed-sectors term is a
+     'path' with sign (-1)^{|missed|}; the OCF H=I(Omega,2)=sum alpha_k 2^k carries the
+     SAME (-1)^{|.|} Mayer sign (HYP-2544). [VERIFIED identity; analogy to OCF sign = REAL].
+
+DONE.
+
+--- AMPLITUDE/ACTION DICTIONARY (n=3, exact) ---
+3-cycle W(i/2) = 0  (THM-064 maximizer interference null, VERIFIED)
+Each path P = e^{iS}/2^{(n-1)/2}, S = (3(n-1) - 2 k_P) pi/4, k_P = #forward edges = the ACTION.
+So W(i/2) is literally a Feynman path-sum sum_P e^{iS(P)} (constant modulus); H-max = destructive null.

@@ -1,0 +1,85 @@
+======================================================================
+CLIFFORD-MAGIC cluster: HYP-2707 concrete tests
+======================================================================
+
+--- TEST 1+2: c3 is an EXACT integer quadratic form in tile bits ---
+n=4: F=3 tiles, c0=c3(0)=0
+   full 2^F match (quadform==score-formula): VERIFIED
+   degree-3 mixed differences vanish: VERIFIED (450 random triple/base trials)
+   #nonzero off-diag Q_ij = 2, GF(2)-rank(Q)=2, rational-rank(Q)=2, signature(pos,neg,zer)=(1, 1, 1)
+   c3-distribution quadform==Z_n: VERIFIED (support 0..2, 3 values)
+n=5: F=6 tiles, c0=c3(0)=0
+   full 2^F match (quadform==score-formula): VERIFIED
+   degree-3 mixed differences vanish: VERIFIED (1800 random triple/base trials)
+   #nonzero off-diag Q_ij = 9, GF(2)-rank(Q)=4, rational-rank(Q)=6, signature(pos,neg,zer)=(3, 3, 0)
+   c3-distribution quadform==Z_n: VERIFIED (support 0..5, 6 values)
+n=6: F=10 tiles, c0=c3(0)=0
+   full 2^F match (quadform==score-formula): VERIFIED
+   degree-3 mixed differences vanish: VERIFIED (2000 random triple/base trials)
+   #nonzero off-diag Q_ij = 24, GF(2)-rank(Q)=4, rational-rank(Q)=10, signature(pos,neg,zer)=(5, 5, 0)
+   c3-distribution quadform==Z_n: VERIFIED (support 0..8, 9 values)
+n=7: F=15 tiles, c0=c3(0)=0
+   full 2^F match (quadform==score-formula): VERIFIED
+   degree-3 mixed differences vanish: VERIFIED (2000 random triple/base trials)
+   #nonzero off-diag Q_ij = 50, GF(2)-rank(Q)=6, rational-rank(Q)=15, signature(pos,neg,zer)=(9, 6, 0)
+   c3-distribution quadform==Z_n: VERIFIED (support 0..14, 15 values)
+n=8: F=21 tiles, c0=c3(0)=0
+   full 2^F match (quadform==score-formula): skipped(F large)
+   degree-3 mixed differences vanish: VERIFIED (2000 random triple/base trials)
+   #nonzero off-diag Q_ij = 90, GF(2)-rank(Q)=6, rational-rank(Q)=21, signature(pos,neg,zer)=(14, 7, 0)
+
+--- TEST 4: imaginary Gauss sum  G(n) = sum_b i^{c3(b)}  (Clifford amplitude) ---
+   (THM-064-style imaginary evaluation as a literal GF(2)/integer Gauss sum)
+n=4: G=-4.0+2.0i  |G|=4.4721  |G|/sqrt(2^F)=1.5811  brute==dist:VERIFIED
+n=5: G=20.0-12.0i  |G|=23.3238  |G|/sqrt(2^F)=2.9155  brute==dist:VERIFIED
+n=6: G=-80.0-160.0i  |G|=178.8854  |G|/sqrt(2^F)=5.5902  brute==dist:VERIFIED
+n=7: G=1280.0-192.0i  |G|=1294.3199  |G|/sqrt(2^F)=7.1502  brute==dist:VERIFIED
+
+--- TEST 4b: |G|^2 = 2^{v2} * (odd part). Clifford Gauss sum would have odd part = 1 ---
+n=4: |G|^2=20 = 2^2 * 5   (full factorization {2: 2, 5: 1}); odd-part>1 => c3-mod-4 phase is NOT a pure GF(2) Gauss sum
+n=5: |G|^2=544 = 2^5 * 17   (full factorization {2: 5, 17: 1}); odd-part>1 => c3-mod-4 phase is NOT a pure GF(2) Gauss sum
+n=6: |G|^2=32000 = 2^8 * 125   (full factorization {2: 8, 5: 3}); odd-part>1 => c3-mod-4 phase is NOT a pure GF(2) Gauss sum
+n=7: |G|^2=1675264 = 2^12 * 409   (full factorization {2: 12, 409: 1}); odd-part>1 => c3-mod-4 phase is NOT a pure GF(2) Gauss sum
+
+--- TEST 3: GLOBAL magic content of H = degree>=3 Fourier energy of H(b) over F-cube ---
+   deg<=2 energy = Clifford/quadratic part; deg>=3 = magic (T-gate) part. EXACT.
+n=4 F=3: deg-energy {0: 1, 1: 24, 2: 8}
+      max-degree(H in tile bits) = 2  (= top odd-cycle length contribution)
+      MAGIC fraction (deg>=3)/total = 0 = 0.0000
+n=5 F=6: deg-energy {0: 1, 1: 108, 2: 88, 3: 56, 4: 28}
+      max-degree(H in tile bits) = 4  (= top odd-cycle length contribution)
+      MAGIC fraction (deg>=3)/total = 84/281 = 0.2989
+n=6 F=10: deg-energy {0: 1, 1: 448, 2: 1296, 3: 1264, 4: 552}
+      max-degree(H in tile bits) = 4  (= top odd-cycle length contribution)
+      MAGIC fraction (deg>=3)/total = 1816/3561 = 0.5100
+n=7 F=15: deg-energy {0: 1, 1: 1812, 2: 16144, 3: 18120, 4: 9084, 5: 2720, 6: 1292}
+      max-degree(H in tile bits) = 6  (= top odd-cycle length contribution)
+      MAGIC fraction (deg>=3)/total = 31216/49173 = 0.6348
+
+--- TEST 3b: per-tournament LOCAL magic (avg |3rd diff of H|), transitive vs regular ---
+   HONEST: the naive 'regular = more local magic' is REFUTED (avg is LOWER for regular).
+n=5 transitive   : H=       1  max|d3 H|=     4  avg|d3 H|=   1.30
+n=5 near-regular : H=      15  max|d3 H|=     4  avg|d3 H|=   0.90
+n=6 transitive   : H=       1  max|d3 H|=     8  avg|d3 H|=   2.23
+n=6 near-regular : H=      41  max|d3 H|=     8  avg|d3 H|=   1.97
+n=7 transitive   : H=       1  max|d3 H|=    20  avg|d3 H|=   4.60
+n=7 near-regular : H=     159  max|d3 H|=    12  avg|d3 H|=   3.20
+
+======================================================================
+STATUS SUMMARY
+======================================================================
+PROVED  : c3 = C(n,3) - sum_v C(s_v,2) is an INTEGER QUADRATIC FORM in the F=C(n-1,2)
+          tile bits (degree exactly 2: all 3rd mixed differences vanish; full 2^F match).
+          => the c3 / score layer is the 'Clifford' (Gauss-sum/quadratic) tractable level.
+VERIFIED: extracted (c0,L,Q) reproduces c3 bit-for-bit; reproduces THM-554 Z_n c3-dist;
+          imaginary Gauss sum sum_b i^{c3(b)} computed two ways agree.
+VERIFIED: H is EXACTLY quadratic (magic fraction 0) at n=4; magic (deg>=3 Fourier energy
+          fraction) = 0, 0.299, 0.510, 0.635 at n=4,5,6,7 -- monotone rise = magic onset.
+          max-degree(H) tracks the longest odd cycle (n=7 reaches degree 6 = c_7).
+CONJECTURE: the deg>=3 Fourier energy of H is the tournament 'stabilizer-rank/magic'
+          monotone; it is 0 exactly when H is a pure Gauss sum (n=4).
+REFUTED : naive 'regular/Paley has more LOCAL magic (avg 3rd diff)' -- avg is LOWER for
+          regular than transitive at every n tested. Local d3 is the WRONG monotone;
+          the global degree>=3 Fourier energy is the right one.
+ARITHMETIC: odd part of |G|^2 (5,17,125,409 at n=4..7) > 1 => the c3-mod-4 phase is a
+          DEGENERATE/non-stabilizer Gauss sum -- a quantitative arithmetic magic signature.
