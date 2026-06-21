@@ -298,3 +298,27 @@ states, or neural classes.  They are proof quotients of the generated deficit
 language.  The quotient must preserve the LRC predicate "generated context
 resets residual deficits before final scalar comparison" and must not measure
 which band carried the intermediate debt.
+
+## Post-Rebase HYP-2705/HYP-2707 Signal
+
+After the S65 atlas checkpoint, `origin/main` added HYP-2705 and strengthened
+HYP-2707.  HYP-2705 owns the true-wide projective synchronizer formulation:
+
+```text
+actual survival currency
+  = death-chain boundary + signed projective deviation.
+```
+
+It proves the Fubini-Study projection identity for the missed-depth
+death-chain and records that the depth quotient has no negative Gibbs
+obstruction after two decorrelated hits.  HYP-2702 should not duplicate that
+true-wide route.  Its distinct contribution is the sparse-tail frontier:
+band-level/FOSD quotients fail on raw sparse residuals, while singleton
+road-coloring resets and generated miss-zeta context still neutralize them.
+
+HYP-2707 now has a proved tournament-side Clifford core: `c3 mod 2` is a
+GF(2) quadratic form, and its bilinear rank gives THM-555's parity expectation
+by the Boolean Gauss-sum formula.  The transfer lesson for HYP-2702 is that
+raw hit-count and band quotients are stabilizer-like coarse shadows; the
+generated signed residual language is the sparse-tail analogue of the magic
+phase resource.
