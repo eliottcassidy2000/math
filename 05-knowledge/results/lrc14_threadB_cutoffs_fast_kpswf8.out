@@ -1,0 +1,19 @@
+THREAD B FAST: per-base single-far combined cutoffs W'(B) (no wide-p0 sweep)
+================================================================================
+  k=8: cap=0.38146 Q=0.19660 margin=0.18486
+  k=9: cap=0.49426 Q=0.36210 margin=0.13216
+  k=10: cap=0.60440 Q=0.44789 margin=0.15651
+  k=11: cap=0.72527 Q=0.53125 margin=0.19402
+  k=12: cap=0.85714 Q=0.60224 margin=0.25490
+
+  W'(B) = (6/49) V(B) / (cap_k - Phi(B));  for w > W'(B):  p0(Bu{w}) < cap_k  (THM-546).
+  Single-far residual = FINITE band 15 <= w <= max_B W'(B), over bounded bases B.
+
+   k  #bases  maxW (uniform cutoff)                        argmax base      Phi     V
+   8    2996                     78          (0, 8, 9, 10, 11, 12, 13)   0.1162   167
+   9    3431                     78      (0, 8, 9, 10, 11, 12, 13, 14)   0.2339   164
+  10    3003                     63   (0, 7, 8, 9, 10, 11, 12, 13, 14)   0.3386   136
+
+  => single-far reduces to a finite band w in [15, maxW]; maxW finite & explicit per k.
+     (slack bases (small Phi, big V) drive maxW; their actual p0 is small -- band is safe,
+      verified by the wide atlas 0/94181 over cap.)

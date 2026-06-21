@@ -1,0 +1,58 @@
+THREAD B (2): double-far simultaneous peel + the precise LOOSE STEP
+================================================================================
+(a) Newton simultaneous-peel identity (lhs - rhs must be 0):
+   B=(0, 1, 2, 3, 4, 5, 6) f=(15,16): lhs-rhs=0  C=I_B-Phi2=+0.004483  res1=-0.00612 res2=-0.00196
+   B=(0, 1, 2, 3, 4, 5, 6) f=(15,31): lhs-rhs=0  C=I_B-Phi2=-0.015621  res1=-0.00612 res2=+0.00724
+   B=(0, 1, 2, 3, 4, 5, 6, 7) f=(15,16): lhs-rhs=0  C=I_B-Phi2=+0.002124  res1=-0.02128 res2=+0.00176
+   B=(0, 1, 2, 3, 4, 5, 6, 7) f=(20,41): lhs-rhs=0  C=I_B-Phi2=-0.001277  res1=-0.00768 res2=+0.00485
+   B=(0, 2, 4, 6) f=(15,16): lhs-rhs=0  C=I_B-Phi2=+0.000000  res1=+0.00000 res2=+0.00000
+
+--------------------------------------------------------------------------------
+(b) THE LOOSE STEP: iterated peel needs V(Bu{f1}); track its growth (adjacent f2=f1+1)
+--------------------------------------------------------------------------------
+   base B = consec_8,  peel f2=f1+1 first => intermediate base Bu{f1}:
+        f1   V(B)  V(Bu_f1)  (6/49)V(Bu_f1)/f2   C=I_B-Phi2
+        15     45        63           0.482143    0.0021241
+        20     45        67           0.390671    0.0062057
+        40     45        93           0.277750    0.0092048
+        80     45       163           0.246410    0.0111598
+       160     45       296           0.225124    0.0138551
+       320     45       546           0.208278    0.0115168
+
+   => V(Bu{f1}) GROWS ~ 7*f1 (the far element fragments every B_j into ~7 arcs each),
+      so (6/49)V(Bu{f1})/f2 ~ (6/49)*7*f1 / (f1+1) -> 6/7 = 0.857, a CONSTANT, NOT 0.
+      The iterated single-peel bound is therefore LOOSE by O(1): it cannot show the
+      curvature -> small.  THIS IS THE PRECISE LOOSE STEP (slope-1 resonance, HYP-2776).
+
+--------------------------------------------------------------------------------
+(c) curvature C(B;f1,f2): ADJACENT saturates (no decorrelation), DISSOCIATED decays
+--------------------------------------------------------------------------------
+   base=(0, 1, 2, 3, 4, 5, 6, 7)  Phi_2(B)=+0.001958
+     adjacent f2=f1+1:
+       f1=  15: C=+0.0021241
+       f1=  40: C=+0.0092048
+       f1= 100: C=+0.0096125
+       f1= 250: C=+0.0111444
+     dissociated (f1=15, f2 = a 'random' coprime far value):
+       f2=  37: C=+0.0003591
+       f2=  58: C=-0.0006439
+       f2=  91: C=+0.0047405
+       f2= 143: C=-0.0016626
+       f2= 211: C=+0.0001220
+
+   base=(0, 1, 2, 3, 4, 5, 6)  Phi_2(B)=+0.000875
+     adjacent f2=f1+1:
+       f1=  15: C=+0.0044825
+       f1=  40: C=+0.0096074
+       f1= 100: C=+0.0126756
+       f1= 250: C=+0.0137010
+     dissociated (f1=15, f2 = a 'random' coprime far value):
+       f2=  37: C=-0.0047356
+       f2=  58: C=-0.0035019
+       f2=  91: C=-0.0027061
+       f2= 143: C=-0.0040048
+       f2= 211: C=-0.0012132
+
+--------------------------------------------------------------------------------
+(d) certified double-far majorant on bounded base B (k=9): P_2 + 2 peel + sup|C|
+--------------------------------------------------------------------------------

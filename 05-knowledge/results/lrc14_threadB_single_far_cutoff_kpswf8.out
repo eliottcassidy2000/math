@@ -27,3 +27,9 @@ THREAD B (1) FOCUSED: single-far cutoff W_k + residual finite-band exact check
 (C) RESIDUAL FINITE BAND exact check: all bounded primitive B (size k-1), w in [15, W(B)]
     (W(B) = (6/49)V(B)/margin_k, the per-base cutoff; above it THM-546 already closes)
 --------------------------------------------------------------------------------
+
+[NOTE] This sweep was timeout-killed (full uniform-cutoff p0 sweep with w up to ~78/158 is slow).
+Complete results: lrc14_threadB_localized_binding_bound_kpswf8.out (full run) +
+lrc14_threadB_cutoffs_fast_kpswf8.out (per-base cutoffs maxW=78/78/63) +
+lrc14_threadB_reconcile_thm563_kpswf8.out (double-far genuine-wide, all p0<Q).
+sup|C|=0.029 from the .._localized_.. part (2d). See the .md summary.

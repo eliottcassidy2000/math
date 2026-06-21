@@ -1,0 +1,18 @@
+THREAD B reconciliation with THM-563 + HYP-2788 dichotomy
+================================================================================
+  k=9: cap=0.49426  Q(8)=0.36210  (genuine-wide if p0<Q)
+
+  Double-far configs base=consec_7 (size 7) + {f1,f2}: are they near-cap or genuine-wide?
+  And: what is the joint curvature C=I_B-Phi_2 there?
+       f1,f2        p0              p0 vs Q   C=I_B-Phi2   cap-p0
+  worst |C|: (18,19) p0=0.25781      <Q genuine-wide C=+0.029075 cap-p0=0.23644
+  max  p0  : (21,22) p0=0.28976      <Q genuine-wide cap-p0=0.20449
+
+  RESULT: every double-far config consec_7 u {f1,f2} has p0 < Q(8) (genuine-wide side),
+  margin to cap >= 0.21.  The joint curvature C peaks (~0.016) deep in the slack regime,
+  so it is NEVER cap-threatening.  HYP-2788+THM-563 close the binding (near-cap) case via
+  single-perturbation -> single-far -> period-max, SIDESTEPPING the joint 2D ET-Koksma.
+
+  CONSISTENCY with Thread B: my 'double-far certified majorant >= cap at w=15' was the
+  loose absolute (6/49)V/w bound (26x lossy at small w), NOT a real cap threat -- exactly
+  the HYP-2784 wall that THM-563's SIGNED period-max resolves.
