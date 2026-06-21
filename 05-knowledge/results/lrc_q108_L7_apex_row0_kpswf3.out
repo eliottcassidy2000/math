@@ -1,0 +1,11 @@
+row0 band-decomposition matches mu_full row 0: YES
+row0 flat <=> 7|p (given 7 nmid q): HOLDS
+
+49 * row0(j) for sample (p,q):
+  p= 7 q=3: ['1', '1', '1', '1', '1', '1', '1']  (7|p=True; flat=True)
+  p= 2 q=3: ['7/3', '0', '7/3', '0', '7/6', '7/6', '0']  (7|p=False; flat=False)
+  p= 3 q=5: ['7/5', '7/5', '7/15', '14/15', '7/5', '14/15', '7/15']  (7|p=False; flat=False)
+  p= 1 q=4: ['7/4', '7/4', '0', '7/4', '0', '7/4', '0']  (7|p=False; flat=False)
+  p=14 q=5: ['1', '1', '1', '1', '1', '1', '1']  (7|p=True; flat=True)
+  p= 5 q=3: ['7/5', '14/15', '14/15', '7/5', '7/15', '7/5', '7/15']  (7|p=False; flat=False)
+  p= 8 q=3: ['7/6', '7/8', '7/6', '7/8', '7/6', '7/8', '7/8']  (7|p=False; flat=False)

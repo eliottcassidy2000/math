@@ -1,0 +1,45 @@
+==================================================================================
+THREAD C BRIDGE 4: sharpen the surviving leads
+==================================================================================
+
+[LEAD-A] depression carried by small-T (low-order) relations? sum support-3 terms by Tmax:
+   {1,2,3,4,5}:
+      Tmax=1: support-3 contribution = -0.015483
+      Tmax=2: support-3 contribution = -0.063789
+      Tmax=3: support-3 contribution = -0.108283
+      Tmax=4: support-3 contribution = -0.148820
+      Tmax=6: support-3 contribution = -0.180176
+      Tmax=8: support-3 contribution = -0.172819
+      => contribution stabilizes as Tmax grows (small-denom relations dominate).
+   {1,2,3,4,5,6}:
+      Tmax=1: support-3 contribution = -0.019907
+      Tmax=2: support-3 contribution = -0.085906
+      Tmax=3: support-3 contribution = -0.150306
+      Tmax=4: support-3 contribution = -0.215004
+      Tmax=6: support-3 contribution = -0.261189
+      Tmax=8: support-3 contribution = -0.249551
+      => contribution stabilizes as Tmax grows (small-denom relations dominate).
+
+[LEAD-B] support-3 AP-relation count: tight (L=0) vs loose configs:
+   config                           |C| #AP-trip       L(C)
+   AP{1..13} (TIGHT)                 13       36    0.00000
+   sporadic{1..11,13,24}(TIGHT)      13       31    0.00000
+   {1..11,13,36}(L=1/1260)           13       30    0.00079
+   {1..11,13}(core,L=.012)           12       30    0.01216
+   {1,3,4,5,7,9}(loose)               6        6    0.32732
+   random{1,4,6,9,11,13,17}           7        4    0.28180
+   => tight configs are MAXIMALLY AP-saturated (dense support-3 relation web).
+      'tight locus finite' ~ 'maximal AP-saturation patterns finite' = a Freiman/AP-
+      density question, the DUAL of the L7 small-denom atlas being finite.
+
+[LEAD-C] p0_sectorcover(E) vs meas(union danger)(E) vs 1-L(E): same or bound?
+   E                            p0_sect  unionDgr    1-L(E)          note
+   [1, 2, 3, 4, 5, 6, 7]        0.26395   0.66531   0.66531     p0<unionD
+   AP1-13                       0.66389   1.00000   1.00000     p0<unionD
+   1-11,13,36                   0.63556   0.99921   0.99921     p0<unionD
+   1-11,13,24                   0.63396   1.00000   1.00000     p0<unionD
+   [1, 2, 3, 4, 5, 6, 7, 8]     0.34490   0.73418   0.73418     p0<unionD
+   => union-danger == 1-L exactly (definition). p0_sectorcover is SMALLER (subset event):
+      sector-cover (all 7 hit) IMPLIES union-danger-cover? NO -- they're independent events.
+      CONCLUSION: p0<=cap does NOT bound L from below. The transfer must go through the
+      shared MACHINERY (resonance atlas/torus discrepancy), not a direct inequality.

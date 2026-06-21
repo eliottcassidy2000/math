@@ -1,0 +1,31 @@
+################################################################################
+# THREAD D FINAL: scaling(wide), genuine Bonferroni, consecutive-maximizer
+################################################################################
+
+=== (A') SCALING INVARIANCE on wide sets (p0>0) ===
+  E(k=8) base=0.34490  inv(all c coprime7)=True   measS7(7E)=0.34490 (same)
+  E(k=9) base=0.43821  inv(all c coprime7)=True   measS7(7E)=0.43821 (same)
+  E(k=8) base=0.01878  inv(all c coprime7)=True   measS7(7E)=0.01878 (same)
+  E(k=9) base=0.11286  inv(all c coprime7)=True   measS7(7E)=0.11286 (same)
+  VERDICT scaling-invariance for gcd(c,7)=1: HOLDS (all wide tests)
+
+=== (B') GENUINE Bonferroni truncations P_t = sum_{j<=t}(-1)^j S_j ===
+  classical: P_0>=P_2>=...>=p0>=...>=P_3>=P_1 ? (does bracketing hold here?)
+  k8[1..8]: p0=0.34490 cap=0.3815
+    even-trunc (upper?) [(0, 1.0), (2, 1.3796), (4, 0.5796), (6, 0.3449)]  bracket-upper=True
+    odd-trunc  (lower?) [(1, -0.6745), (3, -0.3133), (5, 0.3092)]  bracket-lower=True
+    best genuine even-trunc UPPER (t<7) = 0.3449  <=cap
+  k9[1..9]: p0=0.43821 cap=0.4943
+    even-trunc (upper?) [(0, 1.0), (2, 1.36), (4, 0.6446), (6, 0.4382)]  bracket-upper=True
+    odd-trunc  (lower?) [(1, -0.4456), (3, -0.1468), (5, 0.4065)]  bracket-lower=True
+    best genuine even-trunc UPPER (t<7) = 0.4382  <=cap
+
+=== (C') CONSECUTIVE-MAXIMIZER: is [1..k] the max-p0 k-subset? ===
+  k=8,N=12: consec p0=0.34490  searched 330 subsets
+     max found = 0.34490 at [1, 2, 3, 4, 5, 6, 7, 8]   CONSEC IS MAX
+     runner-up (strictly below consec) = 0.32857 at (1, 2, 3, 4, 5, 6, 7, 9)   GAP=0.01633
+  k=9,N=13: consec p0=0.43821  searched 495 subsets
+     max found = 0.43821 at [1, 2, 3, 4, 5, 6, 7, 8, 9]   CONSEC IS MAX
+     runner-up (strictly below consec) = 0.40782 at (1, 2, 3, 4, 5, 6, 7, 8, 10)   GAP=0.03039
+
+DONE.
