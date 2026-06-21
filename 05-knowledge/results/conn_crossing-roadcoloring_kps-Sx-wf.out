@@ -1,0 +1,30 @@
+=== conn_crossing-roadcoloring  (cluster: crossing-roadcoloring) ===
+
+(1) CROSSING NUMBER of circular tournament drawing
+------------------------------------------------------------
+Underlying chord set is always K_n in convex position:
+  => raw crossing number = C(n,4) for EVERY tournament (orientation-free). PROVED.
+Guy/rectilinear cr(K_n) is SMALLER (optimal placement); convex placement
+  gives the maximum, C(n,4). So circular drawing is the 2-page/convex max.
+
+  n   F  C(n,4)   X_alt     c3  X_cyc4        H  test
+  3   1       0       0      0       0        1  X_alt != c3 (refuted) (sample)
+  4   3       1       0      0       0        1  X_alt != c3 (refuted) (sample)
+  5   6       5       0      0       0        1  X_alt != c3 (refuted) (sample)
+  6  10      15       0      0       0        1  X_alt != c3 (refuted) (sample)
+  7  15      35      12     11      17      117  X_alt != c3 (refuted) (sample)
+
+(2) ROAD COLORING / SYNCHRONIZATION on tiling hypercube
+------------------------------------------------------------
+Wiggly automaton: 2^F states, F letters, each letter = toggle one bit.
+Each letter is a BIJECTION (involution) of states => permutation automaton.
+PROVED: a permutation automaton with >1 state has NO synchronizing word.
+=> NO reset word collapses all tilings to transitive. Road-coloring FAILS literally.
+  n=3: F=1, Q_F diameter = F = 1 (hypercube).
+  n=4: F=3, Q_F diameter = F = 3 (hypercube).
+  n=5: F=6, Q_F diameter = F = 6 (hypercube).
+  n=6: F=10, Q_F diameter = F = 10 (hypercube).
+  n=7: F=15, Q_F diameter = F = 15 (hypercube).
+  n=8: F=21, Q_F diameter = F = 21 (hypercube).
+
+VERDICT: the REAL connection is (1) crossing number. Best hypothesis below.

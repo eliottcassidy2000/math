@@ -41,6 +41,16 @@ cell-affine") is the EXACT reason "Clifford is classically simulable but T-augme
 **degree-2 (quadratic/Gauss-sum/stabilizer) is the tractable ceiling; degree-3+ is magic.** The
 "magic degree" of a tournament invariant := its polynomial degree in the tile bits.
 
+## PROVED CORE (kps-S22, exact n=4..8) — the c3-parity IS a Clifford Gauss sum
+
+The c3-parity `q(b) = c3(b) mod 2` is a GF(2) quadratic (Boolean degree-2) function of the F tile bits.
+Its associated bilinear form `B(x,y)=q(x+y)+q(x)+q(y)` has GF(2) **rank `r = 2*floor((n-1)/2)`** (= n-1 for
+odd n, n-2 for even n): r = 2,4,4,6,6 for n=4..8. The standard Boolean Gauss sum then gives
+`E[(-1)^c3] = (1/2^F) sum_b (-1)^{q(b)} = 2^{-r/2} = 2^{-floor((n-1)/2)}` — which is EXACTLY THM-555's
+c3-parity formula. So THM-555's `E[(-1)^c3]` is the **Gottesman-Knill rank formula** for the Clifford
+amplitude of the c3-quadratic-form, and the c3-parity is computable in poly(F) by GF(2) rank (no
+2^F enumeration). The "symplectic rank" of the c3 magic-free core is n-1 (odd) / n-2 (even).
+
 ## Why this is more than analogy (precise hooks)
 
 - `Z_n = (prod x_v) prod_{tiles}(x_a+x_b)` is literally a **partition function / Gauss sum**; setting
