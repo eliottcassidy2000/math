@@ -19,7 +19,7 @@ from collections import Counter, defaultdict
 from fractions import Fraction as F
 from functools import lru_cache
 from itertools import combinations
-from math import gcd
+from math import comb, gcd
 
 
 FULL = (1 << 6) - 1
@@ -101,6 +101,26 @@ def cover_from_zeta(z: tuple[F, ...]) -> F:
     return sum(((-1) ** mask_size(mask)) * z[mask] for mask in range(64))
 
 
+def krawtchouk(n: int, h: int, j: int) -> int:
+    """Binary Krawtchouk value K_h(j) on the n-cube."""
+    return sum(
+        (-1) ** t * comb(j, t) * comb(n - j, h - t)
+        for t in range(max(0, h - (n - j)), min(h, j) + 1)
+    )
+
+
+def krawtchouk_shadow(delta: tuple[F, ...]) -> tuple[tuple[F, ...], tuple[F, ...]]:
+    """Radial weight enumerator and its Krawtchouk/MacWilliams shadow."""
+    weight = [F(0) for _ in range(7)]
+    for mask, value in enumerate(delta):
+        weight[mask_size(mask)] += value
+    shadow = [
+        sum(weight[j] * krawtchouk(6, h, j) for j in range(7))
+        for h in range(7)
+    ]
+    return tuple(weight), tuple(shadow)
+
+
 @lru_cache(maxsize=None)
 def block_x_breakpoints(block: tuple[int, ...]) -> tuple[F, ...]:
     """Internal slow-x breakpoints for a coherent block shape."""
@@ -180,13 +200,16 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
 
     by_size = defaultdict(F)
     unsigned = defaultdict(F)
+    delta = tuple(product_z[mask] - actual_z[mask] for mask in range(64))
+    radial_weight, shadow = krawtchouk_shadow(delta)
     worst = (F(0), 0)
     for mask in range(64):
-        term = ((-1) ** mask_size(mask)) * (product_z[mask] - actual_z[mask])
+        term = ((-1) ** mask_size(mask)) * delta[mask]
         by_size[mask_size(mask)] += term
         unsigned[mask_size(mask)] += abs(term)
         if abs(term) > worst[0]:
             worst = (abs(term), mask)
+    assert shadow[6] == product - actual
 
     cap = CAP.get(len(row))
     print("=" * 92)
@@ -207,6 +230,21 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
                 f"    |R|={size}: signed={fmt(by_size[size])} "
                 f"unsigned_L1={fmt(unsigned[size])}"
             )
+    radial_l1 = sum(abs(x) for x in radial_weight)
+    coord_l1 = sum(abs(x) for x in delta)
+    print("  radial discrepancy weights W_j=sum_{|R|=j}(z_product-z_actual):")
+    for size, value in enumerate(radial_weight):
+        if value:
+            print(f"    W_{size}={fmt(value)}")
+    print("  Krawtchouk/MacWilliams shadow M_h=sum_j W_j K_h(j):")
+    for h, value in enumerate(shadow):
+        if value:
+            marker = "  <-- Product-actual" if h == 6 else ""
+            print(f"    M_{h}={fmt(value)}{marker}")
+    if radial_l1:
+        print(f"  |M_6|/sum_j|W_j|={fmt(abs(shadow[6]) / radial_l1)}")
+    if coord_l1:
+        print(f"  |M_6|/coordinate_L1={fmt(abs(shadow[6]) / coord_l1)}")
     print(
         "  largest coordinate term: "
         f"R={mask_to_tuple(worst[1])}, |term|={fmt(worst[0])}"
@@ -221,6 +259,9 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
         "gap": product - actual,
         "upper": product >= actual,
         "cap_slack_product": (cap - product) if cap is not None else None,
+        "shadow": shadow,
+        "radial_l1": radial_l1,
+        "coord_l1": coord_l1,
         "worst_size": mask_size(worst[1]),
     }
 
@@ -267,6 +308,40 @@ def tournament(rows: list[dict[str, object]]) -> None:
     print()
 
 
+def character_tournament(rows: list[dict[str, object]]) -> None:
+    print("=" * 92)
+    print("KRAWTCHOUK CHARACTER TOURNAMENT")
+    print("  vertices: residual-character weights h=0..6 in the Boolean cube")
+    print("  observable: larger aggregate |M_h| across tested split rows")
+    print("  quotient: preserves the cover correction at h=6; destroys sector labels")
+    risk = []
+    for h in range(7):
+        total = sum(abs(row["shadow"][h]) for row in rows)  # type: ignore[index]
+        risk.append(total)
+    scores = [0] * 7
+    edges = set()
+    for i, j in combinations(range(7), 2):
+        if (risk[i], -i) >= (risk[j], -j):
+            edges.add((i, j))
+            scores[i] += 1
+        else:
+            edges.add((j, i))
+            scores[j] += 1
+    cycles = 0
+    for a, b, c in combinations(range(7), 3):
+        if (a, b) in edges and (b, c) in edges and (c, a) in edges:
+            cycles += 1
+        if (a, c) in edges and (c, b) in edges and (b, a) in edges:
+            cycles += 1
+    print(f"  score_hist={dict(sorted(Counter(scores).items()))}")
+    print(f"  directed_3cycles={cycles}")
+    print("  aggregate-risk path:")
+    for h in sorted(range(7), key=lambda idx: (risk[idx], -idx), reverse=True):
+        marker = "  <-- cover-error character" if h == 6 else ""
+        print(f"    h={h}: sum|M_h|={fmt(risk[h])}{marker}")
+    print()
+
+
 def main() -> None:
     print("LRC14 multi-block miss-zeta layer scout")
     print("Exact arithmetic: actual row vs shared-slow-x independent carrier product.\n")
@@ -300,6 +375,7 @@ def main() -> None:
     ]
     reports = [layer_report(name, blocks) for name, blocks in cases]
     tournament(reports)
+    character_tournament(reports)
     print("SYNTHESIS")
     print("  The carrier-product comparison is naturally a miss-zeta statement:")
     print("    product cover - actual p0 = sum_R (-1)^|R|(z_product(R)-z_actual(R)).")
@@ -311,6 +387,10 @@ def main() -> None:
     print("  The useful proof currency is residual-size layers, not raw pointwise")
     print("  residual-coordinate dominance.  This avoids the false small-R cone route")
     print("  while preserving the exact product structure Route E needs.")
+    print("  Boolean-cube reading: the same error is the h=6 Krawtchouk/MacWilliams")
+    print("  coordinate M_6 of the radial miss-zeta discrepancy.  The proof target")
+    print("  should bound this signed top character after routing low-height")
+    print("  resonances, not the full residual-coordinate L1 norm.")
     print("  Next target: prove a signed Erdos-Turan/Koksma bound for the zeta layers")
     print("  whose unsigned mass is large, and use the product cap slack for the rest.")
 

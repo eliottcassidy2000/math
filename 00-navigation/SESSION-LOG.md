@@ -1,3 +1,52 @@
+## codex-2026-06-21 -- HYP-2716: miss-zeta product error is the top Krawtchouk character, not residual L1
+
+Continued the HYP-2715 multi-block carrier-product route after more repo
+archaeology through Boolean-cube balance (THM-351/352), Krawtchouk/MacWilliams
+threads, HYP-2676 signed packets, and the cut/cycle Clifford split.  The useful
+new synthesis: the HYP-2715 signed miss-zeta layer sum is exactly a
+Krawtchouk/MacWilliams top-character evaluation.
+
+Updated `04-computation/lrc14_multiblock_miss_zeta_layers_codex_20260621.py`
+and its stored output to compute, for
+`d_R=z_prod(R)-z_actual(R)`, the radial weights
+`W_j=sum_{|R|=j}d_R` and the Krawtchouk shadows
+`M_h=sum_j W_j K_h(j)`.  The script asserts the exact identity
+
+```text
+Product(E)-p0(E)=M_6
+```
+
+because `K_6(j)=(-1)^j`.  This is the Boolean-cube version of the signed packet
+lesson: take the proof-bearing quotient before absolute values.  The new
+HYP-2716 target is therefore `|M_6| <= cap_k-Product(E)` for the HYP-2714
+moderate-span branch, not a coordinatewise residual-cone or full `64`-coordinate
+`L1` estimate.
+
+Exact evidence: moderate two-4-block has `|M_6|/coordinate_L1 ~= 0.0157`;
+`3+3+2` has `~=0.00345`; five 2-blocks has `~=0.0631`.  Across the tested
+split bank the Krawtchouk-character tournament orders
+
+```text
+h=2 > h=0 > h=4 > h=1 > h=3 > h=5 > h=6.
+```
+
+Thus the cover-error character `h=6` is the smallest aggregate shadow in the
+bank, while the lower shadows carry most of the raw discrepancy.  This explains
+why the cap budget is comfortable even though coordinate errors look large.
+
+Assumption challenge: vertices need not be runners, arcs, or residual masks.
+This addendum tried runners, carrier blocks, masks, layers, proof obligations,
+and Boolean characters; the productive quotient is character weight `h=0..6`,
+which preserves the scalar cover correction at `h=6` and destroys sector labels.
+Tournament fingerprint is transitive with score histogram `{0:1,...,6:1}` and
+zero directed 3-cycles.
+
+New detail file: `05-knowledge/hypotheses/HYP-2716-lrc14-miss-zeta-krawtchouk-shadow.md`.
+Also amended HYP-2715 and the result/hypothesis indices.  LRC(14) remains open;
+the next proof obligation is now a signed Erdos-Turan/Koksma packet estimate
+directly for `M_6`, with low-height resonances routed to the HYP-2714 finite
+ledger.
+
 ## codex-2026-06-21 -- HYP-2715: miss-zeta layer budget for the remaining multi-block carrier-product gap
 
 User asked for a creative proof session and repo archaeology.  Pulled incoming

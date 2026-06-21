@@ -10,6 +10,7 @@ depends_on:
   - HYP-2694
   - THM-557
 related:
+  - HYP-2716
   - HYP-2704
   - HYP-2708
   - HYP-2675
@@ -120,6 +121,34 @@ So the missing analytic lemma should preserve the alternating miss-zeta
 structure.  Bounding all residual coordinates absolutely is the wrong currency:
 it spends an order of magnitude too much budget and repeats the false
 small-`R` cone route from HYP-2697/HYP-2698.
+
+## Boolean-Cube Shadow Update
+
+HYP-2716 sharpens the layer signal.  If
+
+```text
+d_R = z_prod(R)-z_actual(R),     W_j = sum_{|R|=j} d_R,
+M_h = sum_j W_j K_h(j)
+```
+
+where `K_h` is the binary Krawtchouk polynomial on the six residual sectors,
+then
+
+```text
+Product(E)-p0(E) = M_6
+```
+
+because `K_6(j)=(-1)^j`.  Equivalently, the scalar cover error is the
+all-six-sector Walsh character of the miss-zeta discrepancy.  The updated scout
+shows this top character is much smaller than the lower shadows in the tested
+split bank; aggregate character risk orders as
+
+```text
+h=2 > h=0 > h=4 > h=1 > h=3 > h=5 > h=6.
+```
+
+Thus the next proof should bound the top character after quotienting, not the
+coordinate `L1` discrepancy before quotienting.
 
 ## Proposed Proof Obligation
 
