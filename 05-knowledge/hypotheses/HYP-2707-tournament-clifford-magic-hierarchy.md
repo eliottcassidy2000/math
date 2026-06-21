@@ -1,7 +1,7 @@
 ---
 id: HYP-2707
 title: The tournament tractability hierarchy IS the Clifford-magic (Gottesman-Knill) hierarchy — c3 is a GF(2) quadratic form (Clifford), H is magic
-status: OPEN; the degree facts VERIFIED (c3 deg 2, c5 deg 4); the Gauss-sum/stabilizer-rank tooling proposed
+status: LADDER PROVED (THM-560); c3-parity Clifford Gauss sum PROVED; magic-fraction monotone VERIFIED; arithmetic signature CONJECTURE
 source: kind-pasteur-2026-06-20-S22
 depends_on:
   - THM-554   # score partition function Z_n
@@ -69,6 +69,20 @@ amplitude of the c3-quadratic-form, and the c3-parity is computable in poly(F) b
    tournament's magic content; conjecture `chi` is small for near-transitive, maximal for Paley.
 3. **Magic monotone:** is there a tournament invariant (a "mana"/stabilizer-Renyi analogue) that lower-
    bounds H-hardness and is itself score/c3-computable?
+
+## S22 OUTCOME (connection-mining workflow, adversarially verified)
+- **THM-560 PROVES the ladder** `deg(c_{2k+1})=2k` (odd-cycle reverse-cancellation; deg c3,c5,c7 = 2,4,6 exact n=7).
+- **Magic-fraction monotone (VERIFIED):** deg>=3 Fourier mass of H = 0,0.299,0.510,0.635 (n=4..7); =0 at n=4 (H a pure
+  Gauss sum), magic onset n=5. `maxdeg(H)=L_max-1`. This is a concrete computable tournament magic monotone.
+- **Magic measure (VERIFIED):** H-spread within a score class; magic onsets n=5; H-maximizer (Paley) is NOT max-magic.
+- **THM-559 (another agent):** c3 = a 2-body frustrated Ising energy = the degree-2 (Clifford) rung in spin-glass language.
+- **ARITHMETIC MAGIC SIGNATURE (CONJECTURE):** `|sum_b i^{c3(b)}|^2 = 2^{2,5,8,12} * {5,17,125,409}` (n=4..7); the
+  odd-part>1 proves the c3-mod-4 phase is a DEGENERATE (non-stabilizer) Gauss sum — an arithmetic magic invariant;
+  pattern of 5,17,125,409 unexplained (connect to |Aut|/QR/THM-064).
+- **Sibling lens for LRC (cat-map, surviving piece):** the LRC anchor map x->frac(Mx) IS the M-fold expanding circle
+  map; its transfer operator gives the O(1/M) decorrelation (Lemma DE) a spectral-gap meaning -> a route at OPEN-Q-108.
+- **REFUTED-as-useful:** Feynman propagator dictionary correct but non-incremental (null<=>maximizer FALSE n>=9);
+  crossing P(T) not an iso-invariant; road-coloring trivial on the bijective tiling hypercube; Gibbs/cat-map P2/P3 weak.
 
 ## Tests / next
 - VERIFY the c3 Gauss-sum formula (quadratic-form rank => exact c3-distribution, poly time) vs `Z_n`.
