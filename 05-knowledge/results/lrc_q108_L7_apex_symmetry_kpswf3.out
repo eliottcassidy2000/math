@@ -1,0 +1,11 @@
+Transpose symmetry D_{p,q}=D_{q,p}: HOLDS
+D depends only on (p mod7, q mod7)? 12/48 residue classes have a single D value
+  => NO; the integer size of p,q matters (D ~ 1/q). residue sets the cell PATTERN's support.
+
+Which m in (Z/7)* satisfy spec[s]=spec[m*s mod7] for ALL s? (a multiplicative symmetry of |D|)
+  m=1 (QR): SYMMETRY
+  m=2 (QR): no
+  m=3 (NQR): no
+  m=4 (QR): no
+  m=5 (NQR): no
+  m=6 (NQR): no

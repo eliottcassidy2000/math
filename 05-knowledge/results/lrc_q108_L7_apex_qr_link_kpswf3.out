@@ -1,0 +1,29 @@
+==========================================================================
+(1) Does D depend only on the reduced slope s = p q^{-1} mod 7?  (and is it QR-graded?)
+==========================================================================
+    s class   #distinct D values      min D      max D
+    1    QR                   98    0.00104    1.71429
+    2    QR                  121    0.00193    1.42857
+    3   NQR                  124    0.00193    1.14286
+    4    QR                  124    0.00200    1.42857
+    5   NQR                  118    0.00182    1.14286
+    6   NQR                   99    0.00107    0.52381
+  => D is NOT a function of s alone (depends on q too); s sets the SHIFT, not the size.
+
+==========================================================================
+(2) s -> -s reflection (HYP-2657 x->-x): is the D-spectrum of s equal to that of -s mod 7?
+==========================================================================
+  s=1 (-s=6): D-spectra equal? False   [s in QR, -s in NQR]
+  s=2 (-s=5): D-spectra equal? False   [s in QR, -s in NQR]
+  s=3 (-s=4): D-spectra equal? False   [s in NQR, -s in QR]
+  s=4 (-s=3): D-spectra equal? False   [s in QR, -s in NQR]
+  s=5 (-s=2): D-spectra equal? False   [s in NQR, -s in QR]
+  s=6 (-s=1): D-spectra equal? False   [s in NQR, -s in QR]
+
+==========================================================================
+(3) THE EXACT DECORRELATION STATEMENT: apex-aligned <=> far pair is EXACTLY iid
+==========================================================================
+  mu factorizes (far pair EXACTLY independent) <=> D=0 <=> 7|pq:  CONFIRMED
+  CONSEQUENCE: on the apex-aligned locus the death-chain two-far hit law is EXACTLY the
+  iid law K2(t) (HYP-2708) -> R_2 residual = 0 there, NO resonance debt. The apex prime's
+  own multiples are the exact zeros of the two-far correction.
