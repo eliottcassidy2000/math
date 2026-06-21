@@ -1,0 +1,34 @@
+SAME-SIZE swap: consec_k vs consec_{k-1} u {far}; does L_yK8 (and q0+q6) decrease?
+
+ k=8: consec_k=(0, 1, 2, 3, 4, 5, 6, 7)  L_yK8=3.5823 q0+q6=0.3476
+    swap k-1->far=  15: L_yK8=2.1452 (d=-1.4371) q0+q6=0.2000 (d=-0.1476) 
+    swap k-1->far=  16: L_yK8=2.1964 (d=-1.3859) q0+q6=0.2036 (d=-0.1440) 
+    swap k-1->far=  18: L_yK8=2.1595 (d=-1.4228) q0+q6=0.2016 (d=-0.1460) 
+    swap k-1->far=  21: L_yK8=2.3704 (d=-1.2119) q0+q6=0.2245 (d=-0.1231) 
+    swap k-1->far=  30: L_yK8=2.1238 (d=-1.4585) q0+q6=0.2000 (d=-0.1476) 
+    swap k-1->far=  50: L_yK8=2.1638 (d=-1.4185) q0+q6=0.2033 (d=-0.1443) 
+    swap k-1->far= 100: L_yK8=2.1514 (d=-1.4309) q0+q6=0.2014 (d=-0.1462) 
+    => swap raised L_yK8 in 0/7, raised q0+q6 in 0/7 (want 0/0: bounded is max)
+
+ k=9: consec_k=(0, 1, 2, 3, 4, 5, 6, 7, 8)  L_yK8=4.4340 q0+q6=0.4340
+    swap k-1->far=  15: L_yK8=3.6109 (d=-0.8231) q0+q6=0.3503 (d=-0.0837) 
+    swap k-1->far=  16: L_yK8=3.8479 (d=-0.5861) q0+q6=0.3728 (d=-0.0612) 
+    swap k-1->far=  18: L_yK8=3.8937 (d=-0.5404) q0+q6=0.3773 (d=-0.0567) 
+    swap k-1->far=  21: L_yK8=3.9129 (d=-0.5211) q0+q6=0.3789 (d=-0.0551) 
+    swap k-1->far=  30: L_yK8=3.7796 (d=-0.6544) q0+q6=0.3687 (d=-0.0653) 
+    swap k-1->far=  50: L_yK8=3.6728 (d=-0.7612) q0+q6=0.3567 (d=-0.0773) 
+    swap k-1->far= 100: L_yK8=3.7595 (d=-0.6746) q0+q6=0.3652 (d=-0.0688) 
+    => swap raised L_yK8 in 0/7, raised q0+q6 in 0/7 (want 0/0: bounded is max)
+
+ k=10: consec_k=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  L_yK8=5.2857 q0+q6=0.5204
+    swap k-1->far=  15: L_yK8=4.5452 (d=-0.7405) q0+q6=0.4464 (d=-0.0739) 
+    swap k-1->far=  16: L_yK8=4.6300 (d=-0.6557) q0+q6=0.4543 (d=-0.0661) 
+    swap k-1->far=  18: L_yK8=4.6718 (d=-0.6139) q0+q6=0.4574 (d=-0.0630) 
+    swap k-1->far=  21: L_yK8=4.7406 (d=-0.5451) q0+q6=0.4638 (d=-0.0566) 
+    swap k-1->far=  30: L_yK8=4.5372 (d=-0.7485) q0+q6=0.4461 (d=-0.0743) 
+    swap k-1->far=  50: L_yK8=4.5119 (d=-0.7738) q0+q6=0.4419 (d=-0.0785) 
+    swap k-1->far= 100: L_yK8=4.5821 (d=-0.7036) q0+q6=0.4493 (d=-0.0711) 
+    => swap raised L_yK8 in 0/7, raised q0+q6 in 0/7 (want 0/0: bounded is max)
+
+random same-size base->far swaps (does L_yK8 ever increase above consec?):
+  L_yK8(wide) > L_yK8(consec_k) in 0/80 random wide configs (0 => consec is the L_yK8-max)
