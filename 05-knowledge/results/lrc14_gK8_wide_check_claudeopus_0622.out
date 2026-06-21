@@ -1,0 +1,36 @@
+================================================================================
+Does gK8 (10,0,0,1,0,0,10) close the WIDE region? L_yK8 <= 10*cap on binding wide configs
+claude-opus 2026-06-22
+================================================================================
+
+[A] genuine-wide maximizers (HYP-2807):
+   gw-max k=10                  (0, 1, 3, 5, 7, 9, 11, 13, 15, 17)
+      p0=0.44229  L_yK8=4.62076  10cap=6.04396  margin=+1.42320  OK
+   gw-max k=11                  (0, 1, 2, 3, 4, 5, 6, 7, 8, 21, 22)
+      p0=0.52106  L_yK8=5.36596  10cap=7.25275  margin=+1.88679  OK
+   gw-max k=12                  (0, 2, 4, 6, 7, 8, 10, 11, 12, 14, 18, 20)
+      p0=0.60630  L_yK8=6.18758  10cap=8.57143  margin=+2.38385  OK
+
+[B] mac-mini k=12 breaker E*:
+   E* (k=12)                    (0, 2, 4, 6, 8, 9, 10, 11, 12, 14, 16, 18)
+      p0=0.61572  L_yK8=6.28613  10cap=8.57143  margin=+2.28530  OK
+
+[C] single-far near-cap plateau (consec_{k-1} + far, THM-563 binding):
+   single-far k=10              (0, 1, 2, 3, 4, 5, 6, 7, 8, 30)
+      p0=0.44133  L_yK8=4.53724  10cap=6.04396  margin=+1.50671  OK
+   single-far k=11              (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 33)
+      p0=0.53945  L_yK8=5.51724  10cap=7.25275  margin=+1.73551  OK
+   single-far k=12              (0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 36)
+      p0=0.59138  L_yK8=6.02092  10cap=8.57143  margin=+2.55051  OK
+
+[D] dilated even-AP families:
+   even-AP+far k=10             (0, 2, 4, 6, 8, 10, 12, 14, 16, 22)
+      p0=0.44651  L_yK8=4.66817  10cap=6.04396  margin=+1.37579  OK
+   even-AP+far k=12             (0, 2, 4, 6, 8, 10, 12, 14, 16, 18, 20, 26)
+      p0=0.61817  L_yK8=6.35160  10cap=8.57143  margin=+2.21982  OK
+
+================================================================================
+VERDICT: gK8 L_yK8<=10cap on all tested binding wide configs: HOLDS
+If HOLDS with margin: gK8 may close the WHOLE wide region via the miss-distribution moment
+bound -- a cleaner completion than dichotomy+doublet+R-tail. Needs: max_E L_yK8<=10cap over
+ALL wide E (the Delsarte LP feasibility for wide q-moments).
