@@ -1,0 +1,13 @@
+##############################################################################
+# ANGLE 5: THREE-GAP / CF MARKOFF EXTREMALITY (POINTWISE TEST)
+##############################################################################
+
+consec(8): measS7 = 44/735 = 0.059864
+
+TEST 2 (POINTWISE three-gap optimum): does consec minimize maxgap(x) for all x?
+  testing 256 full-res shapes against consec, pointwise on fine grid...
+  shapes where consec maxgap(x) <= E maxgap(x) for all sampled x: 1/256
+  => POINTWISE optimum holds: False
+  REFUTED pointwise. Example violator: [0, 1, 2, 3, 4, 5, 6, 8]
+    at x=1/98: maxgap_consec=13/14=0.9286 > maxgap_E=45/49=0.9184
+    measS7(consec)=0.059864  measS7(violator)=0.000000  consec still bigger: True

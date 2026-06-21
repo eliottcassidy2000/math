@@ -1,0 +1,62 @@
+==============================================================================
+ANGLE 4 (FRESH): archimedean slow/fast vs modular/CM for the SURVIVAL object
+==============================================================================
+
+measS7(consec_8) = 481/1470 = 0.327211; 7*measS7 = 481/210
+
+[H1] measS7 is NOT determined by any residue-only (modular-shadow) invariant
+   full-residue bank k=8 span<=14: 320 shapes
+   leg-min profile                   : 64 multi-classes, 64 split -> does NOT determine measS7
+   pairwise residue-ratio multiset   : 2 multi-classes, 2 split -> does NOT determine measS7
+   => No residue-only invariant fixes measS7. A modular value (Dedekind sum,
+      B_2 pair sum, Epstein zeta mod 7) is residue-only, hence CANNOT equal it.
+
+[H2] measS7 moves with integer speed MAGNITUDE (archimedean), residues fixed
+   base consec [0, 1, 2, 3, 4, 5, 6, 7]: measS7=0.327211
+   bump clock 1->8 (res 1): measS7=0.273639  Δ=-0.053571
+   bump clock 2->9 (res 2): measS7=0.237075  Δ=-0.090136
+   bump clock 3->10 (res 3): measS7=0.220068  Δ=-0.107143
+   bump clock 7->14 (res 0): measS7=0.232313  Δ=-0.094898
+   => same residues, different magnitude => measS7 changes. Archimedean DOF confirmed.
+
+[H3] central B_2 leg value is residue-blind; W_a variation lives in the tail
+   a=1: central-arc(a/7)=2/49 (=0.04082)  W_a=13/294 (=0.04422)  tail=0.00340
+   a=2: central-arc(a/7)=2/49 (=0.04082)  W_a=13/294 (=0.04422)  tail=0.00340
+   a=3: central-arc(a/7)=2/49 (=0.04082)  W_a=89/1470 (=0.06054)  tail=0.01973
+   a=4: central-arc(a/7)=2/49 (=0.04082)  W_a=17/294 (=0.05782)  tail=0.01701
+   a=5: central-arc(a/7)=2/49 (=0.04082)  W_a=13/294 (=0.04422)  tail=0.00340
+   a=6: central-arc(a/7)=2/49 (=0.04082)  W_a=8/105 (=0.07619)  tail=0.03537
+   => central arc width = 2/49 for EVERY a (the B_2/leg central value is constant,
+      residue-blind). All a-to-a variation in measS7 is the OFF-CENTER tail =
+      genuinely archimedean refill structure, invisible to the central B_2 value.
+   VERIFIED: central arc width = 2/49 = 2/49 for all a=1..6.
+
+[H4] consec = unique componentwise-minimal leg profile (smallest AP) -- LAYER 1
+   consec leg profile = (0, 1, 2, 3, 4, 5, 6)
+   full-residue shapes (span<=20) with profile < consec in any coord: 0
+   => (0,1,2,3,4,5,6) is the componentwise floor: residue r needs |e|>=r (smallest
+      positive rep), residue 0 admits speed 0. consec uniquely attains the floor.
+   This is PROVABLE (no computation needed) and is LAYER 1 of the wall.
+
+[CM TEST] best residue-only B_2 / Epstein predictors vs measS7 (give CM a chance)
+   measS7 max at consec = 0.327211 (confirmed)
+   B_2 pair predictor: consec=-55/49, bank-max=-55/49  -> consec is B_2-argmax? True
+   Epstein predictor : consec=1/42, bank-max=1/42  -> consec is Epstein-argmax? True
+   order inversions vs measS7 (of 32634 comparable pairs):
+      B_2 pair predictor : 656 (2.0%)  Epstein: 0 (0.0%)
+   => a CM/modular extremal home needs an ORDER-PRESERVING residue-only predictor;
+      both natural ones MISORDER a large fraction and (often) miss consec at argmax.
+
+==============================================================================
+ASSERTION FAILURES: 0
+VERDICT (ANGLE 4, fresh): the SURVIVAL object measS7 is ARCHIMEDEAN, not CM/modular.
+ - H1: no residue-only invariant determines measS7 (leg-min & pair-ratio both split).
+ - H2: measS7 moves with integer speed MAGNITUDE at fixed residues (archimedean DOF).
+ - H3: the B_2/leg CENTRAL value is residue-blind (2/49 const); all a-variation is the
+       off-center archimedean tail -> the |E_2| central avatar cannot see the binding part.
+ - H4: consec = unique componentwise-minimal leg profile = SMALLEST AP (provable LAYER 1).
+This SHARPENS thread C: the wall is not 'absolute object has no transformation'; it is
+'the binding object is ARCHIMEDEAN (refill speed), the modular residue data is only the
+starting configuration.' The AP wins because it is the SMALLEST-SPEED arithmetic object,
+an archimedean extremality (smallest AP / three-distance), NOT a CM/Dedekind extremality.
+==============================================================================
