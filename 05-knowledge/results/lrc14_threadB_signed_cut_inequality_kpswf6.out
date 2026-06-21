@@ -1,0 +1,25 @@
+====================================================================================================
+THREAD B: SIGNED-CUT INEQUALITY certificate -- the non-circularity diagnostic
+  KEY TEST (B1): can (V)valid + (T)tight + (M)consec-max hold with NO constant atom a[empty]?
+  YES => genuine proper-atom signed cut.  NO => constant forced => circular cap restatement.
+====================================================================================================
+
+k=8: #shapes=319 measS7(consec)=481/1470=0.32721
+  (B0) FULL atoms incl a[empty]: min slack s = 0.0000000  cert_exists=True
+  (B1) PROPER atoms only (NO constant a[empty]): min slack s = 0.0000000  genuine_proper_cert=True
+
+k=9: #shapes=688 measS7(consec)=2447/5880=0.41616
+  (B0) FULL atoms incl a[empty]: min slack s = 0.0000000  cert_exists=True
+  (B1) PROPER atoms only (NO constant a[empty]): min slack s = 0.0000000  genuine_proper_cert=True
+
+k=10: #shapes=832 measS7(consec)=8899/17640=0.50448
+  (B0) FULL atoms incl a[empty]: min slack s = 0.0000000  cert_exists=True
+  (B1) PROPER atoms only (NO constant a[empty]): min slack s = 0.0000000  genuine_proper_cert=True
+
+====================================================================================================
+B0 vs B1 verdict: if B0 gives s=0 but B1 gives s>0, the constant a[empty] is ESSENTIAL
+  => the per-subset 'certificate' is the circular cap-value restatement, NOT a proper cut.
+  if B1 also gives s=0 => a genuine proper-atom signed cut exists (route succeeds).
+====================================================================================================
+
+DONE B0/B1.

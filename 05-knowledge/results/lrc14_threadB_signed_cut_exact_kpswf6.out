@@ -1,0 +1,20 @@
+====================================================================================================
+THREAD B: EXPLICIT SIGNED CUT in the Boolean-Mobius (a[A]) basis -- consec-max dual certificate
+  Atoms a[A](E)=meas{A subset missed}. measS7=q[empty]=sum_A (-1)^|A| a[A].
+  Target: sparsest SIGNED lambda with  C(E)=sum_A lambda_A a[A](E) = measS7(consec)-measS7(E),
+          C(E)>=0 structurally => consec-max.  Honest check vs circular (constant/measS7-atom).
+====================================================================================================
+
+============================================================================================
+k=8: full-residue stratum window [1..14], #shapes=319, measS7(consec)=481/1470=0.32721
+  LP-A (deficit in span of PROPER atoms, A!=empty): feasible=False
+
+============================================================================================
+k=9: full-residue stratum window [1..14], #shapes=688, measS7(consec)=2447/5880=0.41616
+  LP-A (deficit in span of PROPER atoms, A!=empty): feasible=False
+
+============================================================================================
+k=10: full-residue stratum window [1..14], #shapes=832, measS7(consec)=8899/17640=0.50448
+  LP-A (deficit in span of PROPER atoms, A!=empty): feasible=False
+
+DONE LP-A pass.

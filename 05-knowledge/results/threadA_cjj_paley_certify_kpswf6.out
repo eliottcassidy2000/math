@@ -1,0 +1,9 @@
+==============================================================================
+PART 1: EXACT H = I(Omega,2) FOR ALL CIRCULANT TOURNAMENTS -- THE MAXIMIZER
+==============================================================================
+
+  p=7  (m=3, #valid circulants=8)  QR=[1, 2, 4]  INT=[1, 2, 3]
+    H_max = 175   (# circulants achieving max = 1)
+    H(Paley) = 167   Paley rank among circulants = 2   *** NOT the maximizer ***
+    H(Interval) = 175   Interval WINS
+    top circulants: S=[1, 2, 3]:H=175(Int), S=[1, 2, 4]:H=167(Paley), S=[1, 3, 5]:H=125

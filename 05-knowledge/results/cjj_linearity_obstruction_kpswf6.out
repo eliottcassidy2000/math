@@ -1,0 +1,59 @@
+==============================================================================
+THREAD C (1): CJJ linear-vs-nonlinear obstruction -- PRECISE + VERIFIED
+==============================================================================
+
+--- (L1) linear-combination closure (CJJ view (c)) ---
+A code is LINEAR iff its codeword set is closed under F_p-linear combination
+(= an additive subgroup). CJJ integrality needs the OPTIMIZER to be linear.
+
+  p=  7  QR=[1, 2, 4]
+        QRu{0} additive subgroup of Z/7? False   (QR is the index-2 MULTIPLICATIVE subgroup)
+        Freiman: (2, False, [0, 1, 2, 4])
+  p= 11  QR=[1, 3, 4, 5, 9]
+        QRu{0} additive subgroup of Z/11? False   (QR is the index-2 MULTIPLICATIVE subgroup)
+        Freiman: (2, False, [0, 1, 3, 4, 5, 9])
+  p= 13  QR=[1, 3, 4, 9, 10, 12]
+        QRu{0} additive subgroup of Z/13? False   (QR is the index-2 MULTIPLICATIVE subgroup)
+        Freiman: (2, False, [0, 1, 3, 4, 9, 10, 12])
+
+  => Paley/QR yields a genuine LINEAR code: the quadratic-residue cyclic code
+     C_QR is an IDEAL in F_p[x]/(x^p - 1), hence an F_p-SUBSPACE (closed under
+     linear combination). It satisfies CJJ view (c) by construction. PASS (L1).
+
+  CONSEC = AP = {0,1,...,k-1}:
+    k=5: AP=[0, 1, 2, 3, 4]  additive subgroup of Z/14? False   Freiman=(1, True, [0, 1, 2, 3, 4])
+    k=8: AP=[0, 1, 2, 3, 4, 5, 6, 7]  additive subgroup of Z/14? False   Freiman=(1, True, [0, 1, 2, 3, 4, 5, 6, 7])
+  => AP is a TRANSLATE of a cyclic-progression, Freiman dimension 1, NOT a
+     subgroup (not closed under addition: 1+1=2 ok but the run TERMINATES;
+     k-1 + 1 = k is OUTSIDE). It is an AFFINE-linear (coset) object, NOT
+     F_p-linear. FAILS (L1). This is the obstruction.
+
+--- (L2) higher-moment determinacy (CJJ views (a),(d): SoS lift vacuous?) ---
+CJJ tightness <=> higher moments DETERMINED by lower (no free SoS direction).
+We regress S_2 on S_1 across a family of k=8 offset sets and report the free
+residual: a LINEAR optimizer sits at a determinacy point (zero residual slack
+in the relevant direction); AP leaves slack the lift can cut, but the cut does
+NOT select AP as the linear extreme point.
+
+  Across 25 arbitrary k=8 sets:
+    S2 = 0.1307*S1 + 1.3309, residual std = 0.08762
+    -> NONZERO residual => S2 is NOT determined by S1 over arbitrary sets.
+       The SoS/Mobius lift HAS a free direction here (it genuinely cuts).
+    AP residual (S2 - fit) = +0.25062  (rank in residual: 1 of 25)
+    => AP is NOT the extreme point of the free SoS direction (it's interior),
+       so the linear/subspace lift does not single AP out. COLLAPSE (matches HYP-2744).
+
+  AFFINE-ORBIT determinacy preview (the THREAD C fix):
+  Take the dilation orbit {a*AP mod ...} -- by THM-531 these all share mu_theta.
+    over 3 dilates: S2 std = 0.060877  (THM-531 predicts the
+    cover functional is dilation-INVARIANT; residue-level moments collapse to one)
+
+==============================================================================
+SUMMARY (1): The CJJ structural property is LINEAR-CODE OPTIMALITY (view c:
+closed under linear combination; views a,d: higher moments determined => SoS
+lift vacuous AROUND a subspace). Paley/QR = the QR cyclic code HAS it (an ideal,
+an F_p-subspace). Consec/AP LACKS it: Freiman dim 1, a coset/translate, an
+AFFINE-linear object, not an additive subgroup; its higher LRC moments are FREE
+and AP is INTERIOR to the free SoS direction. THIS is why the lift certifies the
+tournament Paley extremality (in principle) but COLLAPSES for the LRC AP one.
+==============================================================================

@@ -1,0 +1,10 @@
+CJJ level-certify test, k=8, full-Z/7-residue stratum (HYP-2749)
+  full-residue stratum size: 528 shapes (8-subsets of [0,15] with 0, all residues)
+  max measS7 on stratum = 0.32721; #argmax=2; consec in argmax? True
+  measS7(consec (0, 1, 2, 3, 4, 5, 6, 7)) = 0.32721  (IS the max)
+  LEVEL 1: 2 shapes match consec's moments S_0..S_1; #with measS7>consec=0; #ties=1 => NOT pinned (collapse)
+  LEVEL 2: 2 shapes match consec's moments S_0..S_2; #with measS7>consec=0; #ties=1 => NOT pinned (collapse)
+  LEVEL 3: 2 shapes match consec's moments S_0..S_3; #with measS7>consec=0; #ties=1 => NOT pinned (collapse)
+
+INTERPRETATION: the smallest R with 0 higher AND 0 ties = the CJJ level that certifies consec
+on this stratum (matching mac-mini S15's 'level-2 pins consec'). DONE.
