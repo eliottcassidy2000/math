@@ -1,53 +1,37 @@
-## Eliott Cassidy update: kps-S20 Tiling Score Partition Function & Cycle-Moment Hierarchy
+## monad-explorer update: HYP-2695 Truewide Cap-Floor Gate
 
-The latest push (SHA d079) by **Eliott Cassidy** delivers a unified structural theory for the tournament tiling metagraphs through the **Score Partition Function** ($Z_n$) and the **Cycle-Moment Hierarchy**, marking the completion of the "Score Layer" for the metagraph part of the LRC(14) proof.
+The latest push (SHA efdb) by **monad-explorer** introduces the **Truewide Cap-Floor Gate** (HYP-2695), a critical sharpening of the Bonferroni high-tail proof route. This gate partitions the proof obligation for True-Wide configurations by splitting the **Sector Cap** ($cap_k$) into a universal **Floor** ($floor_k$) and a **Cap-Dividend**.
 
-### **1. THM-554: The Score Partition Function and the Three Recurrences**
-The theorem unifies prior structural results into a single polynomial representation of the tiling score space:
-$$Z_n(x) = \left(\prod_{v=2}^n x_v\right) \prod_{\text{tiles } (a,b)} (x_a + x_b)$$
-This function encapsulates the three fundamental "motions" of tournament tiling growth:
-- **GROW (The Beta-Clock):** Incremental $n \to n+1$ growth, achieved by multiplying $Z_n$ by the "birth strip" of new tiles.
-- **FOLD (The Tau-Clock):** The **Address Quotient** ($Z_2$ complement reflection). It halves the computation by folding the tiling space over the fundamental domain identified in **THM-549**.
-- **PARITY:** The even/odd distinction of the fold's fixed line (the SC-spine), which determines the secondary recurrence behavior for even $n$.
+- **Mathematical Formulation:**
+    - The **Floor** is defined as $floor_k = (k-6)/7$, representing a universal subadditive lower bound.
+    - The **Cap-Dividend** is the remaining margin: $dividend_k = cap_k - floor_k$.
+    - The **Cap-Floor Gate** asserts that for all True-Wide configurations with $k \ge 9$, the Bonferroni4 expression $U_4$ (the upper bound for $p_0$) stays below the universal floor:
+      $U_4(E) = p_0(E) + p_5(E) + 5p_6(E) \le (k-6)/7$
 
-### **2. THM-555: The Cycle-Moment Hierarchy**
-**THM-555** uses the partition function to derive the exact statistical distribution of cycles within the tiling ensemble without $2^m$ enumeration.
-- **3-Cycle Expectation:** $E[c_3] = \frac{\binom{n}{3} + (n-2)}{4}$. Crucially, the fixed Hamiltonian path "primes" cycles; consecutive triples have a $1/2$ cycle probability instead of $1/4$, acting as a cycle primer rather than a suppressant.
-- **Higher Moments:** Provides exact closed-form expressions for $Var[c_3]$, $E[c_5]$, and the general leading order for $E[c_k]$. 
-- **Parity Bias:** Proves $E[(-1)^{c_3}] = 1/2^{\lfloor (n-1)/2 \rfloor}$, showing a persistent "even-bias" in the tiling ensemble that tracks with the metagraph's $Z_2$ symmetry.
+- **Measure Containment and Leakage Prevention:**
+    - **Universal Coverage:** Since $cap_k \ge floor_k$ (by THM-535), any row satisfying the Floor Gate automatically satisfies the Sector Cap. This ensures that the "lonely" measure $p_0$ is rigorously contained without needing to calculate exact cap minimizers for every configuration.
+    - **k=9 Stability:** Exhaustive scans of over 27,000 True-Wide configurations for $k=9$ showed **zero violations** of the Floor Gate. This confirms that the True-Wide regime is "naturally safe" and does not even consume the available Cap-Dividend.
+    - **The k=8 Exception:** The gate identifies $k=8$ as a genuine exception where some True-Wide rows (e.g., $E=[0,3,6,9,12,14,15,18]$) slightly exceed the floor. These rows are now isolated for specialized "Cap-Dividend Template" treatment, preventing their anomalous behavior from leaking into the general analytic proof for $k \ge 9$.
 
-### **3. The 'Score->OCF' Wall**
-This represents a fundamental limit in the proof's ability to simplify tournament properties using only vertex scores.
-- **The Limit:** The 3-cycle count ($c_3$) is the **last** Odd-Cycle Function (OCF) datum that is strictly score-determined. 
-- **The Wall:** Starting at $c_5$ and $\alpha_2$ (crossing-count), these values are **not** determined by vertex scores alone (refuted at $n=6$). 
-- **Impact:** While the *means* of higher cycle counts can be computed via $Z_n$, their *distributions* require the full $2^F$ state space. This confirms that the tournament metagraph "Hamiltonian-path count" lives in the cycle space, "off the menu" of the simpler score-layer partition function.
+- **Proof Architecture Impact:**
+    - The gate provides a sharp tri-fold branch for the LRC(14) finalization:
+        1. **k \ge 9 True-Wide:** Prove the universal Floor Gate using high-tail suppression and decorrelation.
+        2. **k=8 True-Wide:** Discharge via finite Cap-Dividend templates.
+        3. **Boundary/AP Rows:** Route to the **HYP-2691** finite-address and transfer-DP branch.
 
-### **4. Impact on LRC(14) Coordination**
-This update "closes" the score layer by providing a 2^half-tiling speedup for all score-based searches. It directs the remaining metagraph work toward the richer-than-score state required for Hamiltonian path (H) and crossing ($\alpha_2$) invariants.
+This update significantly simplifies the global proof by demonstrating that for $k \ge 9$, True-Wide rows have so much arithmetical slack that they stay below the universal floor, leaving the entire Cap-Dividend as a "safety buffer" for the final certificate.
 
 ## monad-explorer update: THM-556 & HYP-2693 Truewide Bonferroni High-Tail Gate
 
-The latest push (SHA 4f99) by **monad-explorer** introduces a major structural closer for the "True-Wide" regime of the LRC(14) proof: the **Bonferroni High-Tail Gate**. This gate leverages the inclusion-exclusion principle to provide a rigorous, computationally tractable upper bound for the all-covered measure ($p_0$).
+The latest push (SHA 4f99) by **monad-explorer** introduces a major structural closer for the "True-Wide" regime of the LRC(14) proof: the **Bonferroni High-Tail Gate**. This gate provides a rigorous, computationally tractable upper bound for the all-covered measure ($p_0$) using the inclusion-exclusion principle.
 
 - **THM-556: The Bonferroni4 Tail Collapse:**
-    - The theorem establishes a sharp identity for the fourth-level Bonferroni upper expression ($U_4$) in the six-sector model:
-      $U_4 = 1 - S_1 + S_2 - S_3 + S_4 = p_0 + p_5 + 5p_6$
-    - This identity ensures that $p_0 \le U_4$ with an exact, non-negative slack of $p_5 + 5p_6$.
-    - The "collapse" means that all middle-state measures ($p_1, p_2, p_3, p_4$) are perfectly cancelled out by the inclusion-exclusion terms, leaving only the target $p_0$ and the deep "high-tail" states where 5 or 6 sectors are missed.
+    - The theorem establishes a sharp mathematical identity for the fourth-level Bonferroni upper expression ($U_4$) within the six-sector model: $U_4 = 1 - S_1 + S_2 - S_3 + S_4 = p_0 + p_5 + 5p_6$.
+    - By taking the sum through the fourth inclusion-exclusion term ($S_4$), all middle-state measures ($p_1$ through $p_4$) are perfectly cancelled, leaving only the target $p_0$ and the deep "high-tail" states where 5 or 6 sectors are missed.
 
-- **HYP-2693: The Truewide Gate Operation:**
-    - The **High-Tail Gate** asserts that for all true-wide configurations ($\text{second\_largest} > 14$), the level-4 Bonferroni bound satisfies the sector cap:
-      $p_0(E) + p_5(E) + 5p_6(E) \le cap_k$
-    - **Analytic Slack:** This gate explicitly leverages the **5x margin increase** gained from the shift from $Q$-level to $cap$-level targets (kps-S19). Because the $cap_k$ ceiling is much higher than the decorrelated limit $Q(k-1)$, the proof can afford to "over-estimate" $p_0$ by including the $p_5 + 5p_6$ tail.
-    - **Separation of Concerns:** The gate provides a clear branch point in the proof:
-        1. **True-Wide Branch:** High-entropy/decorrelated rows are discharged via the $U_4 \le cap$ gate using Weyl/BV decorrelation (HYP-2684).
-        2. **Boundary/AP Branch:** Configurations with structured, low-state templates ($\text{second\_largest} \le 14$) that might fail the $U_4$ gate are routed to the **HYP-2691 finite-address templates**.
-
-- **Computational Verification:**
-    - Scans of over 46,000 true-wide configurations for $k=8, 9, 10$ show **zero violations** of the $U_4 \le cap$ gate.
-    - The gate remains safe even for the "tightest" true-wide leader ($E=[0,4,6,8,10,12,14,15,16]$), which has a $U_4$ margin of $\approx 0.095$ below $cap_9$.
-
-This "Bonferroni Gate" effectively turns the True-Wide proof into a high-tail suppression problem, allowing the proof to ignore the complex middle-interference states in favor of a clean, upper-bound inclusion-exclusion sum.
+- **Operation of the True-Wide High-Tail Gate (HYP-2693):**
+    - Asserted that for all true-wide configurations ($second\_largest > 14$), the level-4 Bonferroni bound satisfies the sector cap: $p_0(E) + p_5(E) + 5p_6(E) \le cap_k$.
+    - **Leveraging Arithmetical Slack:** Explicitly leverages the **5x margin increase** gained from the shift to $cap$-level targets (kps-S19). Because the $cap_k$ ceiling is much higher than the decorrelated limit $Q(k-1)$, the proof can afford the "over-estimation" of $p_0$ by including the $p_5 + 5p_6$ tail.
 
 ## monad-explorer update: THM-555 LRC sector-state insertion DP
 
