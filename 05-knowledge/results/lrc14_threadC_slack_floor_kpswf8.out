@@ -24,3 +24,26 @@ Slack = NOT(single-block base AND r<=2). We sup p0_decorr = boundary_value_direc
 over all bounded bases B (0 in B, B subset [0,14]) and r=k-|B|, restricted to slack.
 
  k   sup_slack p0_decorr        Q(k-1)            cap_k          gap_decorr=cap-sup
+  8        289/1470 0.19660   0.19660        0.38146      0.18486  (=1087/5880)
+       argmax base=(0, 2, 4, 6, 8, 10, 12) r=1  block=False run=1
+  9        621/1715 0.36210   0.36210        0.49426      0.13216  (=129643/980980)
+       argmax base=(0, 2, 4, 6, 8, 10, 12, 14) r=1  block=False run=1
+ 10      4511/10290 0.43839   0.44789        0.60440      0.16601  (=22207/133770)
+       argmax base=(0, 2, 4, 6, 7, 8, 10, 12, 14) r=1  block=False run=3
+ 11       1793/3430 0.52274   0.53125        0.72527      0.20253  (=9031/44590)
+       argmax base=(0, 1, 2, 3, 4, 5, 6, 7, 8, 10) r=1  block=False run=9
+ 12       3497/5880 0.59473   0.60224        0.85714      0.26241  (=1543/5880)
+       argmax base=(0, 2, 3, 4, 5, 6, 7, 8, 10, 12, 14) r=1  block=False run=7
+
+READING: the slack-family decorrelated sup is itself already < cap (decorr is a cut-space floor).
+But decorr is NOT a majorant of p0 (MISTAKE-082); we still must add the error -> PART 3.
+
+====================================================================================
+PART 3: DIRECT max actual p0 over the SLACK family -> explicit gap  (EXACT p0)
+====================================================================================
+We bound p0(E) DIRECTLY (no error decomposition needed). Over the slack family
+(>=3 far OR multi-cluster/spread base), exact-rational max p0 vs cap_k.
+
+ k    max_slack p0           cap_k          GAP = cap - max_p0      argmax E
+  8   0.19764 (16187729/81904725)   0.38146    0.18382 (=120446873/655237800)   E=(0, 15, 17, 19, 21, 23, 25, 27)
+  9   0.37160 (437/1176)   0.49426    0.12266 (=20627/168168)   E=(0, 2, 4, 6, 8, 10, 12, 14, 15)

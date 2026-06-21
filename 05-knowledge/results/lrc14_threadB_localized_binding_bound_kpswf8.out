@@ -14,3 +14,27 @@ THREAD B (kps-S26-wf8): localized err+ bound on the BINDING family via THM-546
   B=(0, 2, 4, 6, 8, 10, 12, 14) w=15: Delta_w=+0.009500  w*Delta_w(engine)=391/2744  match=OK
 
   THM-546 comb bound check  |Delta_w| <= (6/49) V(B) / w :
+  tested 2600 (B,w) pairs (w=15..79); violations of (6/49)V/w bound: 0
+  worst |Delta_w| / [(6/49)V/w] ratio = 0.1492  (bound HOLDS (<=1))
+
+================================================================================
+(1) SINGLE FAR:  p0(B u {w}) = Phi(B) + Delta_w,  binding RHS vs cap_k
+================================================================================
+  Decomposition (EXACT):  p0(E) = Phi(B) + Delta_w  [HYP-2642].
+  Plateau-max (PROVED):   Phi(B) <= Q(k-1) = Phi(consec_{k-1}).
+  Comb bound (THM-546):   |Delta_w| <= (6/49) V(B) / w,  w >= 15 (wide).
+  => p0(E) <= Q(k-1) + (6/49) V(B) / 15.  Worst base = consec_{k-1} (max Phi & V).
+
+   k     cap_k    Q(k-1)   margin V(con) (6/49)V/15 RHS_binding  RHS<cap?
+   8   0.38146   0.19660  0.18486     43    0.35102     0.54762     False
+   9   0.49426   0.36210  0.13216     45    0.36735     0.72945     False
+  10   0.60440   0.44789  0.15651     45    0.36735     0.81523     False
+  11   0.72527   0.53125  0.19402     43    0.35102     0.88227     False
+  12   0.85714   0.60224  0.25490     39    0.31837     0.92061     False
+
+  ===> Crude binding RHS Q(k-1)+(6/49)V(consec)/15 < cap_k for all k=8..12 ?  False
+
+--------------------------------------------------------------------------------
+  EXACT sweep: all bounded primitive bases B (0 in B, max<=14), wide w in [15, WMAX].
+  Report (a) sup actual p0, (b) sup certified majorant Phi(B)+(6/49)V(B)/w.
+--------------------------------------------------------------------------------

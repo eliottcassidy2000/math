@@ -92,7 +92,8 @@ def n_far(E):
 
 
 # ---- adversarial generators for bounded bases of a given size (subset of [0,14], contains 0) ----
-def bounded_bases(size, n_random=80, seed=0):
+@lru_cache(maxsize=None)
+def bounded_bases(size, n_random=45, seed=0):
     """Yield bounded primitive-ish bases of given size in [0,14] containing 0.
     Always includes consec, even-AP, and structured + random samples."""
     out = []
@@ -129,22 +130,21 @@ def bounded_bases(size, n_random=80, seed=0):
 
 
 # ---- far-block generators: place r far elements to MAXIMISE resonance ----
-def far_blocks(r, base_max, n_random=40, seed=1):
-    """Yield r-element far blocks (all > 14, > base_max enforced by caller offset).
-    We generate offset patterns relative to a start point f0; the caller sweeps f0.
-    Adjacent blocks (consecutive) = small-denominator ratios = peak resonance."""
+def far_blocks(r, n_random=24, seed=1):
+    """Yield r-element far OFFSET patterns (start at 0). Adjacent/AP = peak resonance.
+    Per the decay law (lrc14_wide_resonance_sup_kpswf7 PART 2), resonance peaks for
+    adjacent far elements (small-denominator ratios), so we concentrate on tight blocks."""
+    if r == 1:
+        return [(0,)]
     pats = []
-    # consecutive block (peak resonance per decay law)
-    pats.append(tuple(range(r)))
-    # AP blocks with small gap
-    for g in (2, 3, 5, 7):
+    pats.append(tuple(range(r)))  # consecutive block (peak resonance)
+    for g in (2, 3, 4, 5, 7):  # small-gap APs
         pats.append(tuple(i * g for i in range(r)))
     rng = random.Random(seed)
-    for _ in range(n_random):
-        pats.append(tuple(sorted({0} | set(rng.sample(range(1, 40), r - 1)))) if r > 1 else (0,))
-    # dedup
-    uniq = []
-    seen = set()
+    while len(pats) < 6 + n_random:
+        spread = rng.choice([r + 1, r + 3, r + 6, 2 * r, 3 * r])
+        pats.append(tuple(sorted({0} | set(rng.sample(range(1, spread + 1), r - 1)))))
+    uniq, seen = [], set()
     for p in pats:
         if len(set(p)) == r and p not in seen:
             seen.add(p)
@@ -152,38 +152,38 @@ def far_blocks(r, base_max, n_random=40, seed=1):
     return uniq
 
 
-def scan_kr(k, r, far_start_lo=15, far_start_hi=60, verbose=False):
-    """Adversarial scan of all wide configs with exactly r far elements at size k.
-    Returns (max_p0, argmax_E, near_cap_list) where near_cap_list = configs with p0>Q(k-1)."""
+@lru_cache(maxsize=None)
+def _p0_cached(E):
+    return p0_fast(E)
+
+
+def scan_kr(k, r, far_start_hi=34):
+    """Adversarial scan of wide configs with exactly r far elements at size k.
+    Far positions kept tight (peak-resonance regime); large-far is provably lower-p0
+    by the resonance decay law, so the sup lives in this window.
+    Returns (max_p0, argmax_E, near_cap_list)."""
     size = k - r
     if size < 1:
         return None
     bases = bounded_bases(size)
     best_p0 = F(-1)
     best_E = None
-    near = []  # (p0, E)
-    cap = CAP[k]
+    near = []
     q = QVAL[k]
+    patterns = far_blocks(r)
     for B in bases:
         bmax = max(B)
-        patterns = far_blocks(r, bmax)
         for pat in patterns:
-            # sweep the far block start so the block sits just past the window and beyond
             for f0 in range(max(15, bmax + 1), far_start_hi + 1):
                 far = tuple(f0 + p for p in pat)
                 if min(far) <= 14:
                     continue
                 E = tuple(sorted(set(B) | set(far)))
-                if len(E) != k:
+                if len(E) != k or n_far(E) != r or not primitive(E):
                     continue
-                if not primitive(E):
-                    continue
-                if n_far(E) != r:
-                    continue
-                pv = p0_fast(E)
+                pv = _p0_cached(E)
                 if pv > best_p0:
-                    best_p0 = pv
-                    best_E = E
+                    best_p0, best_E = pv, E
                 if pv > q:
                     near.append((pv, E))
     near.sort(reverse=True)
