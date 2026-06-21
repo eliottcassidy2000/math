@@ -68,6 +68,27 @@ taught) is to verify the load-bearing claim, not the elegant one. The LRC(14) se
 than the consec-max framing made it look: a finite Delsarte obligation at k≤11 plus a slack bound
 above, not an infinite Schur-maximization.
 
-(Caveat to reconcile: the drill's WIN-decomposition code and my breakpoint code give k=12 measS7 values
-differing by ~0.006 — a boundary-handling discrepancy. The qualitative E*>consec and all cap-margins
-are robust under both.)
+(Caveat reconciled: the drill's WIN-decomposition code and my breakpoint code give k=12 measS7 values
+differing by ~0.006. An independent audit (5 methods, incl. boundary-free prime grids) confirmed **my
+breakpoint values are correct**; the WIN code silently drops the j=0/sector-0 strip (length 1/7,
+mass-zero for consec at k≤11, positive from k=12) and breaks dilation-invariance. E*>consec and all
+cap-margins stand.)
+
+## AUDITED CORRECTION (same session) — the binding row is k=8, the load-bearing point is k=9 Delsarte
+
+An adversarial audit of this very reframe corrected the title's "k10" (and my HYP-2778) on two counts;
+recorded honestly per the L7-audit discipline:
+
+1. **The binding cap row is k=8, not k=10.** Cap-margins (cap − max measS7), exhaustive + span-robust:
+   +0.054 (k=8), +0.078 (k=9), +0.100 (k=10), +0.144 (k=11), +0.212 (k=12), +0.318 (k=13). k=8 is
+   tightest. My "k=10" came from conflating this with the audit's earlier cap-vs-plateau margin.
+2. **The genuinely load-bearing obligation is the Delsarte leg, tightest at k=9** — margin
+   cap_9 − L_y(consec_9) = 10441/7567560 ≈ **0.00138**, razor-thin. That, not k=10 and not consec-max,
+   is the delicate point.
+3. **The k-range is finite {8,…,13}** for LRC(14) (|P|+|E|=13, so k≤13; k≤7 pigeonhole; k=13 trivial).
+   The "k≥16 beater-growth" was about the abstract measS7 problem, not LRC(14).
+
+So the corrected architecture stands and is sound (no cap violation, all cap values re-derived), but
+its weakest links are the **k=9 Delsarte razor margin** and the **unbounded-span sup** (the multi-carrier
+joint-decorrelation, HYP-2684/2694 — the real open analytic residual), not the consec-max wall. See
+HYP-2781 for the full audited map.

@@ -72,6 +72,15 @@ decorrelated product = finite-n Riesz product (arXiv:2511.16636).
 error]. All hugs Q(k-1) = the consec plateau. 15+ pushes; all leads shared. Files: lrc_L7_{decorrelated_closed_
 form,resonant_atlas}_kps, lrc_web_literature_map_kps-S24; HYP-2757/2758.
 
+## mac-mini-2026-06-21-S20c -- AUDITED capstone: corrected proof-status map (consec-max dissolved; real gap = multi-carrier decorrelation)
+The corrected-architecture workflow (wuag82fuj) closed the loop with an adversarial audit that CORRECTED my own reframe (recorded honestly). Definitive map -> HYP-2781.
+- **Binding cap row is k=8** (margin +0.054), NOT k=10 (I erred in HYP-2778). Margins +0.054/+0.078/+0.100/+0.144/+0.212/+0.318 for k=8..13, exhaustive + span-robust to 18. NO cap violation.
+- **Load-bearing obligation = the DELSARTE leg, tightest at k=9 (margin 0.00138, razor-thin)** -- not k=10, not consec-max. The Delsarte leg max_E L_y<=cap clears every row k=8..13. Binding rows k=10,11 closed by the THM-534 duals (=Lean gK9/gK11).
+- **k-range FINITE {8..13}** (|P|+|E|=13; k<=7 pigeonhole; k=13 trivial). cap values re-derived exactly = min_{|P|=13-k} meas(G_P).
+- **k=12 values CONFIRMED correct** (5 methods incl prime grids): consec_12=121103/194040, E*=11381/17640, E* beats by 73/3465, both<=cap_12. The drill's WIN-code was BUGGY (drops the j=0 strip) -- flagged via spawn_task.
+- **REAL OPEN GAPS (NOT consec-max):** (1) UNBOUNDED-SPAN sup_E measS7<=cap_k -- bounded-span exhaustively verified, but the unbounded statement needs THM-557 (single-block, DONE) + the multi-carrier JOINT-DECORRELATION (HYP-2684/2694, OPEN) = the headline analytic residual; (2) the k=9 Delsarte razor margin 0.00138; (3) Lean-formalize L_y<=cap at k=10,12. consec-max (gap #4 / LAYER 3) is DISSOLVED -- false at k=12, unnecessary everywhere.
+NET: the LRC(14) sector route is now a FINITE per-row cap obligation (k=8..12) + the multi-carrier unbounded-span decorrelation, NOT an aggregate Schur-max. Much clearer + more tractable. NEW: HYP-2781.
+
 ## mac-mini-2026-06-21-S20b -- CAPSTONE: the consec-max wall DISSOLVES (drill harvest + reframe)
 The LAYER-3 drill (wkkl2szpf) delivered a pivotal reframe (HYP-2778), independently verified + broadcast to the team:
 - **consec is NOT the measS7 maximizer for k>=12** (counterexample E*=[0..10,12] beats consec at k=12, verified). consec-max holds k=8..11, fails k=12, recovers 13-15, fails k>=16. So the long-hunted gap #4 / LAYER 3 'consec uniquely maximizes measS7' is FALSE as a universal claim.
