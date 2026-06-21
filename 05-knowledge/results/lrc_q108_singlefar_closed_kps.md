@@ -11,8 +11,15 @@ Peel `w`: `p0(E)=Plat(E')+Delta_w`, `Plat(E')=p0(E')+(1/7)p1(E')`, and the PROVE
 8,17,20,22,25,24 for m=6..11, ~2.5m — NOT sigma~m^2/2). So with the per-base cutoff
 `W*(E') = 2*c1(E')/(7*(cap_k - Plat(E')))` (max W*=48 over bounded bases, k=9):
 - **w > W*(E'):** `p0(E) <= Plat(E') + 2c1/(7w) < Plat(E') + (cap-Plat(E')) = cap`. RIGOROUS (comb bound).
-- **w <= W*(E'):** FINITE window. VERIFIED (float, margin >0.12 so safe): k=9 = 43364 sets, **0 violations**,
-  max p0=0.37241 at [0,2,4,6,8,10,12,14,29].
+- **w <= W*(E'):** FINITE window. VERIFIED (float, margin >0.12 so safe): ALL k=8..12 (0 violations):
+```text
+  k= 8:  26807 sets, max p0=0.2267, cap=0.3815, margin=0.155
+  k= 9:  43364 sets, max p0=0.3724, cap=0.4943, margin=0.122
+  k=10:  33313 sets, max p0=0.4755, cap=0.6044, margin=0.129
+  k=11:  12240 sets, max p0=0.5474, cap=0.7253, margin=0.178
+  k=12:   1343 sets, max p0=0.6054, cap=0.8571, margin=0.252
+```
+(float, margin>=0.12 >> 1e-12 float error, so safe; exact re-check is a formality.) Binding base e.g. {0,2,..,14}+29.
 
 So the SINGLE-FAR case (bounded base + 1 far) — the BINDING case of OPEN-Q-108 — is CLOSED:
 [comb bound w>W*, THM-547 PROVED] + [finite window w<=W*, 0 violations, ~4e4 sets/k].

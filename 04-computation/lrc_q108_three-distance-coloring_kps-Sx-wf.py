@@ -631,16 +631,24 @@ print(f"""
 
  BOTTOM LINE (this angle):  PARTIAL.  PROVES the coloring/three-gap structure (A1), the
    hit-count kernel (A2), the one-far deviation (C1b).  VERIFIES that consec maximizes the
-   ACTUAL single-cluster p0 (A3a), the multi-cluster product upper bound and its < cap ceiling
-   over the per-size MAX law (C1/C2/C2b).  IMPORTANTLY REFUTES the tempting "consec is the
-   carrier-averaged / cone maximizer" route (A3b, B2): the decorrelated product must use the
-   per-size max law, not consec.  It REDUCES OPEN-Q-108 to the SAME single input as every
-   other angle: the explicit joint ET-Koksma multi-block discrepancy constant taking
-   p0(E) -> ProductCover.  Genuine new contributions:
-     (i)  the correct envelope is the per-size MAX carrier-averaged law (NOT consec), and it
-          stays < cap with margin >= 0.08 for all r>=2 partitions (C2);
-     (ii) the three-gap *mechanism*: spreading a cluster trades full-cover for spread-out-R
-          cover, which is why consec wins the un-averaged p0 but loses the carrier-averaged q;
-     (iii) the per-block TV constant <= 14 (=2*7 sector edges) that feeds the joint ET-Koksma
-          bound, and the PROVED 1-D instance (C1b) at constant (6/49)V/w.
+   ACTUAL single-cluster p0 (A3a), and that p0 <= ProductCover(ACTUAL cluster laws) < cap on
+   wide sets (C1/C2b).  IMPORTANTLY REFUTES two tempting shortcuts:
+     - "consec is the carrier-averaged / cone maximizer" (A3b, B2): FALSE; the decorrelated
+       product is cluster-specific, no universal extremal shape exists.
+     - "per-size MAX-full-cover-law product upper-bounds p0" (C2b): FALSE; only each cluster's
+       ACTUAL law gives the valid product bound.
+   It REDUCES OPEN-Q-108 to the SAME single input as every other angle: the explicit joint
+   ET-Koksma multi-block discrepancy bound taking the TRUE p0(E) -> ProductCover(actual laws)
+   with explicit rate.  Genuine new contributions of THIS angle:
+     (i)   the three-gap *mechanism*: spreading a cluster trades full-cover for spread-out-R
+           cover, which is exactly why consec wins the un-averaged p0 (A3a) but loses the
+           carrier-averaged q (A3b) -- this resolves the apparent codex tension (S62/S63);
+     (ii)  the hit-count kernel g_r(rho) (A2) is the exact all-singleton decorrelated base
+           case, and cover6(r) << cap_k gives the floor the multi-block bound rests on;
+     (iii) the per-block TV constant <= 14 (=2*7 sector edges, three-gap: <=3 gap lengths each
+           crossing 7 sector boundaries) that feeds the joint ET-Koksma bound, with the PROVED
+           1-D instance (C1b) at constant (6/49)V/w.
+   HONEST: this angle does NOT close OPEN-Q-108.  It clarifies the correct bounding object
+   (per-cluster actual law product, NOT a universal shape) and supplies the per-block TV input
+   to the joint discrepancy step, which remains the one unproven multi-cluster constant.
 """)
