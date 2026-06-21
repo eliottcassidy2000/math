@@ -233,6 +233,30 @@ direct HYP-2798 error; the sharper `Q` branch needs the short exact doublet
 prefix suggested by `C+`; and arbitrary two-far gaps still require HYP-2799's
 frozen gap extremality/no-large-gap-beater theorem.
 
+## Post-Rebase HYP-2805 Scope Correction
+
+Incoming HYP-2805 is now the guardrail for interpreting this addendum.  The
+consecutive-base audit above is not the full genuine-wide maximizer once
+dilated bounded bases are allowed.  The exact HYP-2805 sweep filters on
+`primitive(FULL E)`, not `primitive(base)`, and finds the k=10 genuine-wide
+maximum
+
+```text
+E = {0,2,4,6,8,10,12,14,15,16},
+p0(E)=265/588,
+cap_10-p0(E)=783/5096 ~= 0.1537.
+```
+
+Thus the robust `0.16` margin is false at k=10 even though the actual LRC cap
+inequality `p0<cap` remains verified in the sweep.  The HYP-2799/HYP-2798
+consecutive-doublet constants should therefore be used as a coordinate and
+centering audit, not as a claim that the consecutive doublet is the global
+genuine-wide maximizer.  The next theorem must be base-uniform over bounded
+bases, include dilated bases, and preserve the `primitive(FULL E)` filter.
+KPS HYP-2806 is compatible with this: the same corrected slow coordinate
+`y in [0,7)` and frozen doublet law apply to arbitrary bounded bases, including
+the dilated-base rows from HYP-2805.
+
 ## Proof Route
 
 The corrected r=2 genuine-wide branch now has three separate obligations:
@@ -316,5 +340,8 @@ No proof of LRC(14) is claimed here.  The concrete progress is:
   below `Q(k-1)`;
 - aligned the actual-size doublet with HYP-2798's direct-error cap route, where
   scanned room/error ratios are all greater than six;
+- incorporated HYP-2805's scope correction: consecutive doublet is a component,
+  while the full genuine-wide proof must be base-uniform and include dilated
+  `primitive(FULL E)` rows;
 - reduced the remaining r=2 proof to frozen gap extremality plus a finite
   low-f exact window.
