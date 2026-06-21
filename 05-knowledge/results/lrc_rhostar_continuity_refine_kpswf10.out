@@ -1,0 +1,36 @@
+==============================================================================
+THM-527 Thread A: continuity REFINEMENT (no-jump test)
+==============================================================================
+
+--- zoom [7.7,7.9] (the steep region) ---
+  grid step dt = 1/600 = 0.00167
+  MAX |rho* one-step jump| = 0.002023
+    worst step: t 7.7700->7.7717  rho* 0.033518->0.031495
+    implied local Lipschitz L ~ maxjump/dt = 1.214
+
+--- zoom [6.9,7.1] (through collision t=7) ---
+  grid step dt = 1/600 = 0.00167
+  MAX |rho* one-step jump| = 0.000220
+    worst step: t 6.9033->6.9050  rho* 0.039127->0.039346
+    implied local Lipschitz L ~ maxjump/dt = 0.132
+
+--- zoom [7.9,8.1] (through collision t=8) ---
+  grid step dt = 1/600 = 0.00167
+  MAX |rho* one-step jump| = 0.000295
+    worst step: t 8.0783->8.0800  rho* 0.020828->0.021124
+    implied local Lipschitz L ~ maxjump/dt = 0.177
+
+--- symmetric-difference test: meas(GOOD(t) Delta GOOD(t+dt)) -> 0 ---
+    |rho*(t)-rho*(t+dt)| <= meas(GOOD(t) Delta GOOD(t+dt)); the bound
+    -> 0 proves continuity (squeeze).  t0 = 7.80 (steep), shrink dt:
+    dt=1/   10: meas(GOOD Delta GOOD) = 0.017538  (<= bound on |drho*|)
+    dt=1/   50: meas(GOOD Delta GOOD) = 0.002623  (<= bound on |drho*|)
+    dt=1/  200: meas(GOOD Delta GOOD) = 0.000657  (<= bound on |drho*|)
+    dt=1/ 1000: meas(GOOD Delta GOOD) = 0.000131  (<= bound on |drho*|)
+    dt=1/ 5000: meas(GOOD Delta GOOD) = 0.000026  (<= bound on |drho*|)
+    => symmetric difference -> 0 as dt -> 0  ==> rho* continuous.
+
+Net: rho*(P, .) is continuous (locally Lipschitz) in the real
+offsets, INCLUDING across phase collisions. No jumps.
+
+DONE.

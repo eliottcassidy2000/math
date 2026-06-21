@@ -375,7 +375,7 @@ theorem fold_triangle (va vb : ℤ) (t : ℝ) (ma mb : ℤ) :
   have e : ((va + vb : ℤ) : ℝ) * t - ((ma + mb : ℤ) : ℝ)
          = ((va : ℝ) * t - (ma : ℝ)) + ((vb : ℝ) * t - (mb : ℝ)) := by
     push_cast; ring
-  rw [e]; exact abs_add _ _
+  rw [e]; exact abs_add_le _ _
 
 /-- **A fold cannot be cleared independently.**  If `v_c = v_a + v_b` and `v_c · t`
 is `θ`-far from the integer `ma + mb`, then the summand distances cannot both be

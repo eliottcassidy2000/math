@@ -1,0 +1,46 @@
+==============================================================================
+THM-527 Thread A: CONTINUITY + DEGENERACY of rho*(P,E)
+==============================================================================
+
+--- CLAIM 1: continuity of rho*(P,E) along a real path ---
+    Path: E(t) = (0, 1, 2, 3, 4, 5, 6, 7, t),  t: 7.0 -> 9.0
+    (the 9th offset SWEEPS, COLLIDING with 7 and 8 en route)
+  t= 7.00: rho* = 0.051701  <-- COLLISION (t=7 or 8)
+  t= 7.10: rho* = 0.050263  d=-0.00144
+  t= 7.20: rho* = 0.048866  d=-0.00140
+  t= 7.30: rho* = 0.047507  d=-0.00136
+  t= 7.40: rho* = 0.046185  d=-0.00132
+  t= 7.50: rho* = 0.044898  d=-0.00129
+  t= 7.60: rho* = 0.036502  d=-0.00840
+  t= 7.70: rho* = 0.035281  d=-0.00122
+  t= 7.80: rho* = 0.015385  d=-0.01990
+  t= 7.90: rho* = 0.015623  d=+0.00024
+  t= 8.00: rho* = 0.011905  d=-0.00372  <-- COLLISION (t=7 or 8)
+  t= 8.10: rho* = 0.024657  d=+0.01275
+  t= 8.20: rho* = 0.031803  d=+0.00715
+  t= 8.30: rho* = 0.031803  d=+0.00000
+  t= 8.40: rho* = 0.038946  d=+0.00714
+  t= 8.50: rho* = 0.038946  d=+0.00000
+  t= 8.60: rho* = 0.038946  d=+0.00000
+  t= 8.70: rho* = 0.038946  d=+0.00000
+  t= 8.80: rho* = 0.038946  d=+0.00000
+  t= 8.90: rho* = 0.024535  d=-0.01441
+  t= 9.00: rho* = 0.026190  d=+0.00166
+  MAX |rho* jump| over the path (step 0.1) = 0.019897
+  => continuous (small Lipschitz); no discontinuity at collisions.
+
+--- CLAIM 2: collisions RAISE rho* (maxgap monotone under removal) ---
+    At t=7 the cluster {0..7,7} has 8 distinct phases (k_eff=8);
+    nearby distinct t splits it back to 9. Compare rho*:
+  distinct k=9 [0, 1, 2, 3, 4, 5, 6, 7, 8]: rho* = 0.011905 = 1/84
+  degenerate   [0, 1, 2, 3, 4, 5, 6, 7, 7] (8 eff):   rho* = 0.051701 = 38/735
+  degenerate >= distinct ? True   (canon: fewer points => bigger gaps => larger rho*)
+
+    pointwise maxgap monotone (remove a point => gap grows):
+      violations (g_8 < g_9) over 199 sample x: 0  (expect 0: removing a phase never shrinks maxgap)
+
+--- systematic: for random distinct E, does merging two offsets
+    ever DECREASE rho*? (testing the monotonicity claim broadly) ---
+  merges tested: 400; mu DECREASED on merge: 0  (expect 0 => collisions raise mu, inf at distinct shapes)
+
+DONE.

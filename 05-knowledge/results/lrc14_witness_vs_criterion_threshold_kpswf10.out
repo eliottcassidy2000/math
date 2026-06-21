@@ -1,0 +1,51 @@
+========================================================================================================
+THREAD B: WITNESS (maxgap>1/7) vs CRITERION (maxgap>2/7) — the two LRC sufficient thresholds.
+========================================================================================================
+Dictionary (THM-526 kps-S4):  w_theta = 6/7 - circ_width = maxgap - 1/7.
+  GLOBAL WITNESS  needs maxgap > 1/7  (=G1)  => M>=1/14   [WEAKER event, EASIER]
+  VIA-MAX CRITERION needs maxgap > 2/7 (=G2=rho*) => M>=1/14  [THM-527's object]
+  G_P = {x: ||p x||>=1/14 all p in P}.  rho*(P,E) = meas(G2 cap G_P).
+
+Each row: P = small part, E = cluster co-offsets.  ALL EXACT rational.
+
+P             E               meas G_P      G1  G2=rho*  G1capGP   rho*GP      p0   D1
+--------------------------------------------------------------------------------------
+P={1,2,3}     consec k=5        0.6905  1.0000   0.6429   0.6905   0.3333  0.0000 True
+P={1,2,3}     consec k=7        0.6905  1.0000   0.3952   0.6905   0.1095  0.1476 True
+P={1,2,3}     consec k=9        0.6905  0.8401   0.2827   0.5306   0.0357  0.4162 True
+P={1,2,3,12}  consec k=9        0.5952  0.8401   0.2827   0.4354   0.0119  0.4162 True
+P={1,2,3,12}  consec k=13       0.5952  0.4425   0.1794   0.1088   0.0000  0.6759 True
+P={1..5}      consec k=8        0.5048  0.9401   0.3327   0.4449   0.0755  0.3272 True
+P={1,2,3}     perf k=7          0.6905  1.0000   0.3714   0.6905   0.0857  0.1226 True
+P={1,2,3}     Sidon k=5         0.6905  1.0000   0.9963   0.6905   0.6868  0.0000 True
+--------------------------------------------------------------------------------------
+
+(D1) dictionary w_theta = maxgap - 1/7 holds pointwise for ALL: True
+
+========================================================================================================
+THE PAYOFF: is the WEAKER 1/7 witness floor (meas G1 cap G_P) positive AND >= the 2/7 floor?
+========================================================================================================
+P             E               rho*=G2capGP  G1capGP(witness)  witness>=rho*?  witness>0?
+P={1,2,3}     consec k=5            0.3333            0.6905            True        True
+P={1,2,3}     consec k=7            0.1095            0.6905            True        True
+P={1,2,3}     consec k=9            0.0357            0.5306            True        True
+P={1,2,3,12}  consec k=9            0.0119            0.4354            True        True
+P={1,2,3,12}  consec k=13           0.0000            0.1088            True        True
+P={1..5}      consec k=8            0.0755            0.4449            True        True
+P={1,2,3}     perf k=7              0.0857            0.6905            True        True
+P={1,2,3}     Sidon k=5             0.6868            0.6905            True        True
+
+witness floor >= rho* (criterion floor) for ALL: True
+witness floor > 0 for ALL:                       True
+
+RESOLUTION OF THE FACTOR-2 (the prompt's Q3):
+  * The sector route's missed-1/7-sector corresponds to the maxgap>1/7 (G1) = GLOBAL-WITNESS
+    threshold, which ALREADY certifies M>=1/14 directly (THM-526 LEMMA 1 / global witness).
+  * THM-527's rho* uses the STRICTER maxgap>2/7 (G2) = VIA-MAX-CRITERION threshold.
+  * So the two are GENUINELY a factor 2 apart in the cluster-gap (1/7 vs 2/7), BOTH sufficient.
+  * G2 subset G1: the criterion is a SUBSET (smaller, rarer) of the witness event. THM-527
+    chose the harder (criterion) object; the witness object (G1 cap G_P) is LARGER and ALSO
+    certifies LRC. So THM-527's 2/7 floor is SUFFICIENT but NOT MINIMAL: the 1/7 witness floor
+    is the weaker sufficient condition.
+  * Whether the witness floor is positive everywhere (its own crux) is tested above.
+
