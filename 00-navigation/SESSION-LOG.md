@@ -1,3 +1,48 @@
+## codex-2026-06-21 -- HYP-2742: Boolean-Möbius hierarchy for LRC sector atoms
+
+User prompted with the complete LP hierarchy for linear codes (higher-order
+Delsarte/MacWilliams, theta-prime view, symmetry quotient views, and Möbius
+pseudoprobabilities).  Web read: CJJ's hierarchy generalizes Delsarte by
+higher-order Krawtchouk/MacWilliams constraints over interactions of `ell`
+words; the exact-completeness paper rewrites hierarchy variables as
+pseudoprobabilities and uses Möbius inversion on a subspace lattice to recover
+exact atoms.
+
+LRC transfer: the analogous lattice is the Boolean lattice of missed inner
+sectors, not a linear subspace lattice.  Added
+`04-computation/lrc14_boolean_mobius_hierarchy_codex_20260621.py` with stored
+output `05-knowledge/results/lrc14_boolean_mobius_hierarchy_codex_20260621.out`.
+For `U={1,...,6}` it computes
+
+```text
+q[M] = meas{x : exact missed-sector mask is M}
+a[A] = meas{x : A subset M(x)}
+q[M] = sum_{A superset M} (-1)^(|A|-|M|) a[A].
+```
+
+The THM-534 Delsarte depth law is the size quotient
+`p_t=sum_{|M|=t}q[M]`.  The full Boolean lift has `64` states and is complete
+for the sector atom law.
+
+Exact findings:
+
+```text
+k=8..13 AP rows: Möbius inversion ok; mask_support=32/64; dihedral type states=12.
+k=8 bounded bank {0}+7-subsets of [1,14]: 3432 rows scanned.
+AP is maximal only for type atoms (0,()), (5,(5)), (6,(6)).
+Most type atoms have many AP-beaters:
+  (1,(1))     3354 beaters
+  (2,(1,1))   3427 beaters
+  (3,(1,2))   3339 beaters
+```
+
+Conclusion: the hierarchy gives the right way to cut the Delsarte polytope, but
+not by finding one positive monotone type atom.  It reinforces HYP-2738 and
+HYP-2740: the next proof target is a small signed aggregate cut in the
+Boolean/type Möbius basis, nonnegative on generated LRC sector laws and compact
+enough to certify symbolically.  Created HYP-2742 and reflection
+`07-reflections/lrc14-boolean-mobius-hierarchy-codex-20260621.md`.
+
 ## mac-mini-2026-06-21-S13b -- CORRECTION: L7 'CLOSED' was OVERSTATED; gap #1 (finite-f1 rate) now FIXED rigorously -- HYP-2741, MISTAKE logged
 The S13 rigor-audit workflow (Thread A, completed after the S13 close-out) found that S13's "L7 CLOSED / sector route closed / audit ALL PASS" was OVERSTATED. HONEST CORRECTION:
 **The real gap (L7 Step 4):** the closure cited finite-f1 |p0(B u {f1,f2})-p0_inf|=O(1/f1) as "THM-546 (PROVED)" -- INVALID. THM-546 peels ONE far element with the remainder BOUNDED; in the L7 limit BOTH f1,f2 grow (f2=gamma f1), so a single peel of f2 leaves E'=B u {f1} UNBOUNDED => O(1) bound, not O(1/f1). D<=14/p bounds the LIMIT-LAW discrepancy (a DIFFERENT object), not the convergence RATE. Logged in MISTAKES.md.

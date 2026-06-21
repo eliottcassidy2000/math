@@ -1,0 +1,143 @@
+LRC14 Boolean-Mobius hierarchy scout (exact fractions)
+==============================================================================
+Boolean containment/Mobius identity:
+  a[A] = meas(A subset missed sectors)
+  q[M] = sum_{A superset M} (-1)^(|A|-|M|) a[A]
+  Size quotient sum_{|M|=t} q[M] is the THM-534 depth law.
+  Full mask quotient has 64 states and is complete for sector atoms.
+
+==============================================================================
+Consecutive/AP rows k=8..13: exact inversion and quotient sizes
+
+k=8: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49']
+  dihedral run-type profile:
+    (0, ()): 481/1470
+    (1, (1,)): 359/1470
+    (2, (1, 1)): 11/105
+    (2, (2,)): 16/245
+    (3, (1, 1, 1)): 1/35
+    (3, (1, 2)): 9/245
+    (3, (3,)): 2/49
+    (4, (1, 3)): 4/245
+    (4, (2, 2)): 1/98
+    (4, (4,)): 8/147
+    (5, (5,)): 5/98
+    (6, (6,)): 1/49
+
+k=9: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56']
+  dihedral run-type profile:
+    (0, ()): 2447/5880
+    (1, (1,)): 653/2940
+    (2, (1, 1)): 29/392
+    (2, (2,)): 25/392
+    (3, (1, 1, 1)): 1/40
+    (3, (1, 2)): 13/392
+    (3, (3,)): 1/28
+    (4, (1, 3)): 5/392
+    (4, (2, 2)): 1/98
+    (4, (4,)): 17/392
+    (5, (5,)): 9/196
+    (6, (6,)): 1/56
+
+k=10: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['8899/17640', '551/2940', '127/1176', '145/1764', '55/882', '5/126', '1/63']
+  dihedral run-type profile:
+    (0, ()): 8899/17640
+    (1, (1,)): 551/2940
+    (2, (1, 1)): 247/3528
+    (2, (2,)): 67/1764
+    (3, (1, 1, 1)): 11/504
+    (3, (1, 2)): 101/3528
+    (3, (3,)): 2/63
+    (4, (1, 3)): 5/392
+    (4, (2, 2)): 1/126
+    (4, (4,)): 1/24
+    (5, (5,)): 5/126
+    (6, (6,)): 1/63
+
+k=11: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['3419/5880', '1283/8820', '827/8820', '661/8820', '3/56', '23/630', '1/70']
+  dihedral run-type profile:
+    (0, ()): 3419/5880
+    (1, (1,)): 1283/8820
+    (2, (1, 1)): 121/2205
+    (2, (2,)): 7/180
+    (3, (1, 1, 1)): 349/17640
+    (3, (1, 2)): 67/2520
+    (3, (3,)): 1/35
+    (4, (1, 3)): 3/280
+    (4, (2, 2)): 1/126
+    (4, (4,)): 11/315
+    (5, (5,)): 23/630
+    (6, (6,)): 1/70
+
+k=12: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['121103/194040', '2039/16170', '3517/38808', '223/3465', '19/385', '5/154', '1/77']
+  dihedral run-type profile:
+    (0, ()): 121103/194040
+    (1, (1,)): 2039/16170
+    (2, (1, 1)): 9913/194040
+    (2, (2,)): 137/3465
+    (3, (1, 1, 1)): 113/6930
+    (3, (1, 2)): 17/770
+    (3, (3,)): 2/77
+    (4, (1, 3)): 1/110
+    (4, (2, 2)): 1/154
+    (4, (4,)): 13/385
+    (5, (5,)): 5/154
+    (6, (6,)): 1/77
+
+k=13: mobius_inversion_ok=True; mask_support=32; type_states=12
+  size profile=['14573/21560', '1061/10780', '2119/27720', '431/6930', '69/1540', '1/33', '1/84']
+  dihedral run-type profile:
+    (0, ()): 14573/21560
+    (1, (1,)): 1061/10780
+    (2, (1, 1)): 1303/27720
+    (2, (2,)): 34/1155
+    (3, (1, 1, 1)): 113/6930
+    (3, (1, 2)): 17/770
+    (3, (3,)): 1/42
+    (4, (1, 3)): 1/110
+    (4, (2, 2)): 1/154
+    (4, (4,)): 9/308
+    (5, (5,)): 1/33
+    (6, (6,)): 1/84
+
+==============================================================================
+k=8 bounded-bank scan: do individual dihedral-type atoms certify consec?
+  Bank: E={0}+7-subsets of [1,14].  Observable: type atom mass.
+  scanned_rows=3432
+  feature | ap | is_AP_max | beat_AP_max | argmax | is_AP_min | beat_AP_min | argmin
+  (0, ()): ap=481/1470; max=481/1470; is_AP_max=True; beat_AP_max=0; argmax=(0, 1, 2, 3, 4, 5, 6, 7); min=31/9009; is_AP_min=False; beat_AP_min=3430; argmin=(0, 1, 2, 6, 8, 9, 11, 13)
+  (1, (1,)): ap=359/1470; max=1109/2205; is_AP_max=False; beat_AP_max=3354; argmax=(0, 1, 2, 3, 5, 6, 7, 9); min=6883/35035; is_AP_min=False; beat_AP_min=76; argmin=(0, 1, 2, 5, 10, 11, 13, 14)
+  (2, (1, 1)): ap=11/105; max=2953/7644; is_AP_max=False; beat_AP_max=3427; argmax=(0, 1, 4, 7, 8, 9, 13, 14); min=163/1960; is_AP_min=False; beat_AP_min=3; argmin=(0, 1, 2, 3, 5, 6, 7, 8)
+  (2, (2,)): ap=16/245; max=109169/420420; is_AP_max=False; beat_AP_max=3361; argmax=(0, 1, 4, 6, 10, 11, 13, 14); min=2/63; is_AP_min=False; beat_AP_min=68; argmin=(0, 1, 2, 3, 4, 5, 6, 9)
+  (3, (1, 1, 1)): ap=1/35; max=2213/32340; is_AP_max=False; beat_AP_max=587; argmax=(0, 1, 4, 5, 8, 11, 12, 14); min=0; is_AP_min=False; beat_AP_min=2819; argmin=(0, 2, 4, 7, 8, 10, 11, 14)
+  (3, (1, 2)): ap=9/245; max=871/4851; is_AP_max=False; beat_AP_max=3339; argmax=(0, 1, 2, 4, 7, 9, 11, 14); min=10/441; is_AP_min=False; beat_AP_min=90; argmin=(0, 1, 2, 3, 6, 7, 9, 12)
+  (3, (3,)): ap=2/49; max=2943/25480; is_AP_max=False; beat_AP_max=1250; argmax=(0, 4, 5, 8, 9, 10, 13, 14); min=3/196; is_AP_min=False; beat_AP_min=2169; argmin=(0, 1, 2, 3, 4, 7, 8, 14)
+  (4, (1, 3)): ap=4/245; max=11/280; is_AP_max=False; beat_AP_max=719; argmax=(0, 1, 2, 4, 5, 6, 8, 12); min=9/1274; is_AP_min=False; beat_AP_min=2679; argmin=(0, 1, 2, 3, 4, 9, 13, 14)
+  (4, (2, 2)): ap=1/98; max=479/15015; is_AP_max=False; beat_AP_max=1229; argmax=(0, 3, 5, 6, 8, 10, 11, 13); min=1/231; is_AP_min=False; beat_AP_min=2020; argmin=(0, 1, 3, 5, 7, 9, 11, 13)
+  (4, (4,)): ap=8/147; max=1613/21021; is_AP_max=False; beat_AP_max=11; argmax=(0, 1, 2, 3, 11, 12, 13, 14); min=5/294; is_AP_min=False; beat_AP_min=3419; argmin=(0, 1, 2, 3, 4, 5, 6, 14)
+  (5, (5,)): ap=5/98; max=5/98; is_AP_max=True; beat_AP_max=0; argmax=(0, 1, 2, 3, 4, 5, 6, 7); min=33/1274; is_AP_min=False; beat_AP_min=3430; argmin=(0, 1, 2, 3, 4, 7, 13, 14)
+  (6, (6,)): ap=1/49; max=1/49; is_AP_max=True; beat_AP_max=0; argmax=(0, 1, 2, 3, 4, 5, 6, 7); min=1/98; is_AP_min=False; beat_AP_min=3430; argmin=(0, 1, 2, 3, 4, 5, 6, 14)
+
+==============================================================================
+Interpretation
+  The full Boolean-Mobius lift is complete for the sector atom law, exactly
+  mirroring the pseudoprobability/Mobius view of higher-order Delsarte LPs.
+  But individual dihedral-type atoms do not give a clean monotone proof:
+  in the k=8 bank, AP is maximal only for depth 0 and the deepest tail
+  types (5) and (6).  Most type atoms have many AP beaters.
+  This agrees with HYP-2738: the cap-closing certificate must be a signed
+  aggregate cut, not a single positive monotone atom.
+
+==============================================================================
+Tournament Analysis over hierarchy views
+  Pairwise observable: (completeness, preserves_generated_masks, tractability, proof_signal).
+  order=['full_boolean_mobius', 'dihedral_type_quotient', 'size_delsarte_depth', 'single_type_atom', 'raw_tanner_carrier']
+  wins={'full_boolean_mobius': 4, 'dihedral_type_quotient': 3, 'size_delsarte_depth': 2, 'single_type_atom': 1, 'raw_tanner_carrier': 0}
+  directed_3cycles=0; Hamiltonian_paths=1
+  Next target: construct a small signed nonnegative-on-generated-laws cut
+  in the type or full Boolean-Mobius basis, then certify it symbolically.
