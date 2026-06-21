@@ -2,43 +2,60 @@
 
 ## Task Chosen
 
-I chose one small Hamiltonian-path-count sanity check from the tournament
-thread: exhaustively re-verify, for labelled tournaments on `n <= 6` vertices,
-that the forbidden ambiguity values `H(T)=7` and `H(T)=21` do not occur.
+I chose one small formal-group sanity check from the repository's main
+algebraic thread: re-verify the closed form for the `n`-fold sum under
+
+```text
+F(x,y) = (x+y)/(1+xy).
+```
+
+The stated identity is
+
+```text
+[n](x) = tanh(n arctanh(x))
+       = ((1+x)^n - (1-x)^n) / ((1+x)^n + (1-x)^n).
+```
 
 ## What I Did
 
-I ran a transient dynamic-programming enumeration over all `2^(n choose 2)`
-labelled tournaments for `n=1..6`. For each orientation, the DP counted directed
-Hamiltonian paths by subsets and terminal vertex:
+I ran a transient exact integer-polynomial computation for `n=1..12`.
+Starting from `[1](x)=x`, the recurrence used
 
 ```text
-dp[{v}, v] = 1
-dp[S union {w}, w] += dp[S, v] when v -> w
+F(A/B, x) = (A + xB)/(B + xA).
 ```
 
-No retained computation script was added; this was a bounded verification run.
+For each `n`, I compared the recursive rational function against the binomial
+closed form by cross-multiplying numerator and denominator polynomials. No
+floating-point arithmetic was used, and no retained computation script was
+added.
 
 ## Concrete Result
 
-The exhaustive spectra were:
+All cross-products were identically zero for `n=1..12`.
+
+Selected checked forms:
 
 ```text
-n=1 tournaments=1     H-spectrum=[1]
-n=2 tournaments=2     H-spectrum=[1]
-n=3 tournaments=8     H-spectrum=[1, 3]
-n=4 tournaments=64    H-spectrum=[1, 3, 5]
-n=5 tournaments=1024  H-spectrum=[1, 3, 5, 9, 11, 13, 15]
-n=6 tournaments=32768 H-spectrum=[1, 3, 5, 9, 11, 13, 15, 17, 19, 23, 25, 27, 29, 31, 33, 37, 41, 43, 45]
+[1](x)  = x
+[2](x)  = 2x / (1 + x^2)
+[3](x)  = (3x + x^3) / (1 + 3x^2)
+[4](x)  = (4x + 4x^3) / (1 + 6x^2 + x^4)
+[5](x)  = (5x + 10x^3 + x^5) / (1 + 10x^2 + 5x^4)
+[6](x)  = (6x + 20x^3 + 6x^5) / (1 + 15x^2 + 15x^4 + x^6)
+[7](x)  = (7x + 35x^3 + 21x^5 + x^7) / (1 + 21x^2 + 35x^4 + 7x^6)
+[8](x)  = (8x + 56x^3 + 56x^5 + 8x^7) / (1 + 28x^2 + 70x^4 + 28x^6 + x^8)
+[10](x) = (10x + 120x^3 + 252x^5 + 120x^7 + 10x^9) / (1 + 45x^2 + 210x^4 + 210x^6 + 45x^8 + x^10)
+[12](x) = (12x + 220x^3 + 792x^5 + 792x^7 + 220x^9 + 12x^11) / (1 + 66x^2 + 495x^4 + 924x^6 + 495x^8 + 66x^10 + x^12)
 ```
 
-Thus `H=7` and `H=21` are absent for every labelled tournament with `n <= 6`.
-This re-checks the first nontrivial finite range behind the repository's
-forbidden-H claim.
+Thus this finite exact check supports the repository's use of `arctanh` as the
+linearizing logarithm for the Cayley formal group, at least through the tested
+range.
 
 ## Confidence Note
 
-Confidence is high for this narrow check. The run is exhaustive through `n=6`,
-uses a direct Hamiltonian-path DP, and the largest case is only `32768`
-labelled tournaments. I did not claim anything new about all `n`; the result is
-only the finite sanity check stated above.
+Confidence is high for this narrow verification. The computation was exact over
+integer polynomial coefficients and checked rational-function equality by
+cross-multiplication. I did not claim a new proof of the general identity; this
+session only re-verified the stated finite range.
