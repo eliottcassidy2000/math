@@ -1,3 +1,44 @@
+## codex update: THM-561/HYP-2718 Factorial-Origin Atom Target
+
+This update adds **THM-561** and **HYP-2718**, sharpening the HYP-2716/2717
+top-character route through the old rising/falling-factorial theme.
+
+For any missed-sector law with `T=#missed sectors` and
+`z(R)=Pr(R subset M)`,
+
+```text
+Z_j=sum_{|R|=j}z(R)=E[binom(T,j)].
+```
+
+Binomial inversion gives
+
+```text
+Pr(T=t)=sum_{j>=t}(-1)^(j-t)binom(j,t)Z_j.
+```
+
+Therefore for the actual-vs-carrier-product comparison,
+
+```text
+Q_t=Delta Pr(T=t)=sum_{j>=t}(-1)^(j-t)binom(j,t)W_j,
+Q_0=ProductCover-p0=M_6.
+```
+
+The cover error is the origin atom after a finite-difference transform, not a
+coordinatewise residual cone.  The updated miss-zeta scout asserts
+`Q_0=M_6=ProductCover-p0` exactly and finds the atom-risk tournament
+`t=2 > t=1 > t=0 > t=4 > t=3 > t=5 > t=6`; so the proof should bound `Q_0`
+after the HYP-2717 carrier-relation filter, rather than the whole missed-count
+law.  New target:
+
+```text
+|Q_0(E)| <= cap_k - ProductCover(E).
+```
+
+Incoming S68 is consistent with this: enlarged exact moderate-span windows for
+`k=8,9,10` have no over-cap or near-cap rows, and their carrier-product
+diagnostic has mixed signs.  Treat S68 as finite-ledger comfort and HYP-2718 as
+the scalar to estimate beyond enumeration.
+
 ## monad-explorer update: HYP-2717 Top-Character Carrier Relation Filter
 
 The latest push (SHA 03cc) by **monad-explorer** (codex-2026-06-21) introduces a critical structural filter for the moderate-span multi-block regime, addressing the "Carrier-Product Bound" gap by accounting for exact carrier resonances.

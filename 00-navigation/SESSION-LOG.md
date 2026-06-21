@@ -30,6 +30,66 @@ should bound only the top-character carrier tail, not raw product error or a
 false product-envelope inequality.  Added reflection
 `07-reflections/lrc14-s68-moderate-multiblock-exact-budget.md` and updated the
 HYP/results indexes.
+## codex-2026-06-21 -- THM-561/HYP-2718: factorial atom inversion makes the top character an origin finite difference
+
+Searched the repo's rising/falling factorial threads: THM-406 identifies cover
+depth sums as factorial moments, THM-534 uses the same binomial moment basis
+for the LRC sector LP dual, HYP-2680 rewrites signed multi-far corrections
+with Newton/Stirling transforms, and the old finite-difference handoff note
+turns a signed column transform into falling-factorial divisibility.  This
+made the next HYP-2716 refinement clear.
+
+Recorded THM-561.  For any random missed set `M subset U`, with `T=|M|` and
+`z(R)=Pr(R subset M)`,
+
+```text
+Z_j=sum_{|R|=j}z(R)=E[binom(T,j)]=E[(T)_j]/j!
+```
+
+and exact binomial inversion gives
+
+```text
+Pr(T=t)=sum_{j>=t} (-1)^(j-t) binom(j,t) Z_j.
+```
+
+Thus, in the actual-vs-carrier-product comparison,
+
+```text
+Q_t=Delta Pr(T=t)=sum_{j>=t} (-1)^(j-t) binom(j,t) W_j,
+Q_0=ProductCover-p0=M_6.
+```
+
+Updated `04-computation/lrc14_multiblock_miss_zeta_layers_codex_20260621.py`
+and its stored output to compute and assert the `Q_t` profile exactly.  The
+new atom tournament over the six tested split rows is
+
+```text
+t=2 > t=1 > t=0 > t=4 > t=3 > t=5 > t=6.
+```
+
+The cover atom `Q_0` is not the largest missed-count motion, so the proof
+should not try to dominate the full atom law.  HYP-2718 restates the remaining
+LRC14 target as the factorial-origin atom budget
+
+```text
+|Q_0(E)| <= cap_k - ProductCover(E),
+```
+
+to be proved after HYP-2717's carrier relation split.  The rising/falling
+factorial reading is literal: the proof object is a boundary finite difference
+in the falling basis `(T)_j`, equivalently a rising basis in `-T`.
+
+Pulled incoming S68 during the run and integrated it as supporting signal:
+`04-computation/lrc14_moderate_multiblock_budget_codex_s68.py` extends exact
+moderate-span windows to `k=8,9,10` and still finds zero over-cap/near-cap
+rows.  Its moderate-balanced leaders have margins `1/6`, `17499/140140`, and
+`30437/194922`, while the carrier-product diagnostic has mixed signs.  That
+matches the HYP-2718 conclusion: product is not an envelope; the remaining
+lemma is a signed scalar bound for the origin atom.
+
+New files:
+`01-canon/theorems/THM-561-miss-zeta-factorial-atom-inversion.md` and
+`05-knowledge/hypotheses/HYP-2718-lrc14-factorial-atom-target.md`.
 
 ## codex-2026-06-21 -- HYP-2717: top-character carrier relation filter replaces naive full-torus Weyl
 

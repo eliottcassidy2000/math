@@ -32,6 +32,14 @@ two 4-blocks, moderate gap
     M_4=-24858959/119302260 (-0.208369556)
     M_5=-2084739/22724240 (-0.091740758)
     M_6=-3495299/477209040 (-0.007324461)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-3495299/477209040 (-0.007324461)  <-- cover atom
+    Q_1=-1520515/63627872 (-0.023896996)
+    Q_2=33516137/954418080 (0.035116830)
+    Q_3=784309/86765280 (0.009039434)
+    Q_4=-1829881/318139360 (-0.005751822)
+    Q_5=-106255/31813936 (-0.003339889)
+    Q_6=-29/7546 (-0.003843096)
   |M_6|/sum_j|W_j|=3495299/147256542 (0.023736120)
   |M_6|/coordinate_L1=10485897/667494196 (0.015709346)
   largest coordinate term: R=(1, 2, 4), |term|=3610819/178953390 (0.020177427)
@@ -67,6 +75,14 @@ two 4-blocks, wider gap
     M_4=-34540772243/343893676896 (-0.100440266)
     M_5=-4408058437/73691502192 (-0.059817731)
     M_6=-12913427/1232593824 (-0.010476628)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-12913427/1232593824 (-0.010476628)  <-- cover atom
+    Q_1=784603069/515840515344 (0.001521019)
+    Q_2=10703424469/1031681030688 (0.010374742)
+    Q_3=5346224887/1031681030688 (0.005182052)
+    Q_4=-890549419/125814759840 (-0.007078259)
+    Q_5=16087/9394770 (0.001712336)
+    Q_6=-211/170814 (-0.001235262)
   |M_6|/sum_j|W_j|=18014230665/143233124623 (0.125768608)
   |M_6|/coordinate_L1=1200948711/15202962391 (0.078994388)
   largest coordinate term: R=(3,), |term|=4309994237/644800644180 (0.006684228)
@@ -102,6 +118,14 @@ two 4-blocks, wider gap
     M_4=23604079/1187136720 (0.019883202)
     M_5=-547027/593568360 (-0.000921591)
     M_6=-79935/26380816 (-0.003030043)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-79935/26380816 (-0.003030043)  <-- cover atom
+    Q_1=5122099/593568360 (0.008629333)
+    Q_2=-1555111/296784180 (-0.005239872)
+    Q_3=303913/65952040 (0.004608091)
+    Q_4=-90571/12113640 (-0.007476778)
+    Q_5=607/135828 (0.004468887)
+    Q_6=-613/312816 (-0.001959618)
   |M_6|/sum_j|W_j|=1199025/28453997 (0.042139071)
   |M_6|/coordinate_L1=3597075/156438983 (0.022993470)
   largest coordinate term: R=(3,), |term|=5216863/593568360 (0.008788984)
@@ -137,6 +161,14 @@ two 4-blocks, wider gap
     M_4=-433685306/28848771315 (-0.015033060)
     M_5=-150719/11860940 (-0.012707172)
     M_6=-51629953/57697542630 (-0.000894838)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-51629953/57697542630 (-0.000894838)  <-- cover atom
+    Q_1=-56452381/15386011368 (-0.003669072)
+    Q_2=4048085941/461580341040 (0.008770057)
+    Q_3=3712029/674825060 (0.005500728)
+    Q_4=-305517959/46158034104 (-0.006618955)
+    Q_5=-93663/58680440 (-0.001596154)
+    Q_6=-745/499408 (-0.001491766)
   |M_6|/sum_j|W_j|=51629953/10477883616 (0.004927517)
   |M_6|/coordinate_L1=51629953/14981418779 (0.003446266)
   largest coordinate term: R=(6,), |term|=1608651977/57697542630 (0.027880771)
@@ -172,6 +204,14 @@ five 2-blocks
     M_4=-451264367791675/837962294855616 (-0.538525863)
     M_5=-504026872147007/2094905737139040 (-0.240596445)
     M_6=-2447628624709/93106921650624 (-0.026288364)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-2447628624709/93106921650624 (-0.026288364)  <-- cover atom
+    Q_1=-43399251952823/1047452868569520 (-0.041433131)
+    Q_2=102517895003/1518047635608 (0.067532726)
+    Q_3=50237335385147/2094905737139040 (0.023980714)
+    Q_4=-14045569117/958547580480 (-0.014652970)
+    Q_5=-92487497/12502794528 (-0.007397346)
+    Q_6=-134415/77177744 (-0.001741629)
   |M_6|/sum_j|W_j|=36714429370635/487215047000971 (0.075355697)
   |M_6|/coordinate_L1=110143288111905/1746946990659967 (0.063049016)
   largest coordinate term: R=(3,), |term|=992059189153/45541429068240 (0.021783664)
@@ -207,6 +247,14 @@ seven singleton carriers
     M_4=732376564743699/15223445260584638 (0.048108464)
     M_5=-514986694064571/15223445260584638 (-0.033828525)
     M_6=-7586871109925/691974784572029 (-0.010964086)  <-- Product-actual
+  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], where T=#missed sectors:
+    Q_0=-7586871109925/691974784572029 (-0.010964086)  <-- cover atom
+    Q_1=486480292445529/30446890521169276 (0.015977996)
+    Q_2=9132301918083/691974784572029 (0.013197449)
+    Q_3=-21708951449565/30446890521169276 (-0.000713010)
+    Q_4=-97987003537704/7611722630292319 (-0.012873171)
+    Q_5=-738719567/225309835198 (-0.003278683)
+    Q_6=-117543/87295558 (-0.001346495)
   |M_6|/sum_j|W_j|=1168378150928450/35058169535573287 (0.033326844)
   |M_6|/coordinate_L1=233675630185690/7442571335826967 (0.031397164)
   largest coordinate term: R=(1, 2), |term|=889643120622064/53282058412046233 (0.016696861)
@@ -242,6 +290,22 @@ KRAWTCHOUK CHARACTER TOURNAMENT
     h=5: sum|M_h|=3917374746931807649970010481/8910977829094771805849554080 (0.439612220)
     h=6: sum|M_h|=50052894230293048041895417/848664555151883029128528960 (0.058978420)  <-- cover-error character
 
+============================================================================================
+FACTORIAL ATOM TOURNAMENT
+  vertices: missed-count atoms t=0..6 after binomial/factorial inversion
+  observable: larger aggregate |Q_t| across tested split rows
+  quotient: preserves exact cover error at t=0; destroys sector labels
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1}
+  directed_3cycles=0
+  aggregate-risk path:
+    t=2: sum|Q_t|=562320606612227931813012043/4009940023092647312632299336 (0.140231675)
+    t=1: sum|Q_t|=7629115110593997819746160041/80198800461852946252645986720 (0.095127546)
+    t=0: sum|Q_t|=50052894230293048041895417/848664555151883029128528960 (0.058978420)  <-- cover atom
+    t=4: sum|Q_t|=1746792587924313863961250505/32079520184741178501058394688 (0.054451955)
+    t=3: sum|Q_t|=3931668334154184280605092899/80198800461852946252645986720 (0.049024029)
+    t=5: sum|Q_t|=383516891891894129563937/17597931200682443301731040 (0.021793294)
+    t=6: sum|Q_t|=225051198106529/19371130842855792 (0.011617866)
+
 SYNTHESIS
   The carrier-product comparison is naturally a miss-zeta statement:
     product cover - actual p0 = sum_R (-1)^|R|(z_product(R)-z_actual(R)).
@@ -257,5 +321,11 @@ SYNTHESIS
   coordinate M_6 of the radial miss-zeta discrepancy.  The proof target
   should bound this signed top character after routing low-height
   resonances, not the full residual-coordinate L1 norm.
+  Falling-factorial reading: W_j is exactly the discrepancy of the
+  factorial moment E[binom(T,j)], where T is the number of missed inner
+  sectors.  Binomial inversion gives Q_t, the missed-count atom
+  discrepancy, and Q_0=M_6=product cover-actual p0.  Thus the cover gap
+  is an origin atom after a finite-difference transform, matching
+  THM-406/THM-534 and the old handoff divisibility lesson.
   Next target: prove a signed Erdos-Turan/Koksma bound for the zeta layers
   whose unsigned mass is large, and use the product cap slack for the rest.

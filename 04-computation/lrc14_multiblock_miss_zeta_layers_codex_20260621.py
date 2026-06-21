@@ -121,6 +121,16 @@ def krawtchouk_shadow(delta: tuple[F, ...]) -> tuple[tuple[F, ...], tuple[F, ...
     return tuple(weight), tuple(shadow)
 
 
+def atom_profile_from_factorial(weight: tuple[F, ...]) -> tuple[F, ...]:
+    """Invert factorial moments W_j=Delta E[binom(T,j)] to atom deltas."""
+    atoms = []
+    for t in range(7):
+        atoms.append(
+            sum(((-1) ** (j - t)) * comb(j, t) * weight[j] for j in range(t, 7))
+        )
+    return tuple(atoms)
+
+
 @lru_cache(maxsize=None)
 def block_x_breakpoints(block: tuple[int, ...]) -> tuple[F, ...]:
     """Internal slow-x breakpoints for a coherent block shape."""
@@ -202,6 +212,7 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
     unsigned = defaultdict(F)
     delta = tuple(product_z[mask] - actual_z[mask] for mask in range(64))
     radial_weight, shadow = krawtchouk_shadow(delta)
+    atom_delta = atom_profile_from_factorial(radial_weight)
     worst = (F(0), 0)
     for mask in range(64):
         term = ((-1) ** mask_size(mask)) * delta[mask]
@@ -210,6 +221,8 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
         if abs(term) > worst[0]:
             worst = (abs(term), mask)
     assert shadow[6] == product - actual
+    assert atom_delta[0] == product - actual
+    assert sum(atom_delta, F(0)) == 0
 
     cap = CAP.get(len(row))
     print("=" * 92)
@@ -241,6 +254,14 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
         if value:
             marker = "  <-- Product-actual" if h == 6 else ""
             print(f"    M_{h}={fmt(value)}{marker}")
+    print(
+        "  factorial-basis atom deltas Q_t=Pr_product[T=t]-Pr_actual[T=t], "
+        "where T=#missed sectors:"
+    )
+    for t, value in enumerate(atom_delta):
+        if value:
+            marker = "  <-- cover atom" if t == 0 else ""
+            print(f"    Q_{t}={fmt(value)}{marker}")
     if radial_l1:
         print(f"  |M_6|/sum_j|W_j|={fmt(abs(shadow[6]) / radial_l1)}")
     if coord_l1:
@@ -260,6 +281,7 @@ def layer_report(name: str, offset_blocks: tuple[tuple[int, tuple[int, ...]], ..
         "upper": product >= actual,
         "cap_slack_product": (cap - product) if cap is not None else None,
         "shadow": shadow,
+        "atom_delta": atom_delta,
         "radial_l1": radial_l1,
         "coord_l1": coord_l1,
         "worst_size": mask_size(worst[1]),
@@ -342,6 +364,40 @@ def character_tournament(rows: list[dict[str, object]]) -> None:
     print()
 
 
+def atom_tournament(rows: list[dict[str, object]]) -> None:
+    print("=" * 92)
+    print("FACTORIAL ATOM TOURNAMENT")
+    print("  vertices: missed-count atoms t=0..6 after binomial/factorial inversion")
+    print("  observable: larger aggregate |Q_t| across tested split rows")
+    print("  quotient: preserves exact cover error at t=0; destroys sector labels")
+    risk = []
+    for t in range(7):
+        total = sum(abs(row["atom_delta"][t]) for row in rows)  # type: ignore[index]
+        risk.append(total)
+    scores = [0] * 7
+    edges = set()
+    for i, j in combinations(range(7), 2):
+        if (risk[i], -i) >= (risk[j], -j):
+            edges.add((i, j))
+            scores[i] += 1
+        else:
+            edges.add((j, i))
+            scores[j] += 1
+    cycles = 0
+    for a, b, c in combinations(range(7), 3):
+        if (a, b) in edges and (b, c) in edges and (c, a) in edges:
+            cycles += 1
+        if (a, c) in edges and (c, b) in edges and (b, a) in edges:
+            cycles += 1
+    print(f"  score_hist={dict(sorted(Counter(scores).items()))}")
+    print(f"  directed_3cycles={cycles}")
+    print("  aggregate-risk path:")
+    for t in sorted(range(7), key=lambda idx: (risk[idx], -idx), reverse=True):
+        marker = "  <-- cover atom" if t == 0 else ""
+        print(f"    t={t}: sum|Q_t|={fmt(risk[t])}{marker}")
+    print()
+
+
 def main() -> None:
     print("LRC14 multi-block miss-zeta layer scout")
     print("Exact arithmetic: actual row vs shared-slow-x independent carrier product.\n")
@@ -376,6 +432,7 @@ def main() -> None:
     reports = [layer_report(name, blocks) for name, blocks in cases]
     tournament(reports)
     character_tournament(reports)
+    atom_tournament(reports)
     print("SYNTHESIS")
     print("  The carrier-product comparison is naturally a miss-zeta statement:")
     print("    product cover - actual p0 = sum_R (-1)^|R|(z_product(R)-z_actual(R)).")
@@ -391,6 +448,12 @@ def main() -> None:
     print("  coordinate M_6 of the radial miss-zeta discrepancy.  The proof target")
     print("  should bound this signed top character after routing low-height")
     print("  resonances, not the full residual-coordinate L1 norm.")
+    print("  Falling-factorial reading: W_j is exactly the discrepancy of the")
+    print("  factorial moment E[binom(T,j)], where T is the number of missed inner")
+    print("  sectors.  Binomial inversion gives Q_t, the missed-count atom")
+    print("  discrepancy, and Q_0=M_6=product cover-actual p0.  Thus the cover gap")
+    print("  is an origin atom after a finite-difference transform, matching")
+    print("  THM-406/THM-534 and the old handoff divisibility lesson.")
     print("  Next target: prove a signed Erdos-Turan/Koksma bound for the zeta layers")
     print("  whose unsigned mass is large, and use the product cap slack for the rest.")
 
