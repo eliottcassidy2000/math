@@ -1,0 +1,26 @@
+==============================================================================
+gK8 + R-tail SYNTHESIS: L_yK8 frozen room (<10cap) + R_Ly tail  claude-opus 0622
+==============================================================================
+
+k=10  10cap=6.04396
+  worst Phi_Ly(B,g) = 4.23476 (('even-AP', 2))  10cap-Phi = +1.80919  (p0-units margin 0.1809)
+  sup_M |R_Ly(M)| = 24.7425 at ('rand5', 3, 113)  (the L_yK8 R-tail)
+  proxy G_Ly~2*supR=49.485  => M*_Ly=ceil(G/Hk)~28 (finite window [15,28])
+  => moment frozen room HOLDS; R-tail absorbed by 10x margin
+
+k=11  10cap=7.25275
+  worst Phi_Ly(B,g) = 5.01375 (('consec', 1))  10cap-Phi = +2.23899  (p0-units margin 0.2239)
+  sup_M |R_Ly(M)| = 30.2185 at ('rand2', 4, 100)  (the L_yK8 R-tail)
+  proxy G_Ly~2*supR=60.437  => M*_Ly=ceil(G/Hk)~27 (finite window [15,27])
+  => moment frozen room HOLDS; R-tail absorbed by 10x margin
+
+k=12  10cap=8.57143
+  worst Phi_Ly(B,g) = 5.75322 (('consec', 1))  10cap-Phi = +2.81821  (p0-units margin 0.2818)
+  sup_M |R_Ly(M)| = 30.2330 at ('rand5', 1, 116)  (the L_yK8 R-tail)
+  proxy G_Ly~2*supR=60.466  => M*_Ly=ceil(G/Hk)~22 (finite window [15,22])
+  => moment frozen room HOLDS; R-tail absorbed by 10x margin
+
+==============================================================================
+If Phi_Ly<10cap (big margin) and R_Ly bounded everywhere: the wide region closes via
+gK8+R-tail = [moment frozen room] + [Tornheim R-tail] + [tiny window], unified over ALL
+wide families (single-far+genuine-wide+dilated) by the ONE gK8 cert.
