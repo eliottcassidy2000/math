@@ -1,3 +1,31 @@
+## kind-pasteur-2026-06-21 (overnight) -- L7 (the SOLE open LRC(14)-S3 lemma) COMPUTATIONALLY CLOSED via an elementary 2D torus-line discrepancy -- HYP-2730
+
+User: long overnight LRC session, wide array of ideas, formalize, generate leads, pull/push concurrently.
+Centerpiece: closed L7, the sole open lemma of the kps-S23 ledger (balanced multi-cluster, bounded ratio
+window f2/f1 in (1,2.15)).
+
+THE CLOSURE (HYP-2730, converges w/ codex HYP-2729, mac-mini HYP-2726 Delsarte-LP, opus Thread-A):
+ - In the f1->inf limit the balanced 2-far cover p0_inf(B,gamma) factors as sum_{i,j in Z/7} mu_{p,q}(i,j)
+   g_B(i,j); the resonance correction R(p/q)=p0_inf-P2 satisfies |R| <= D_{p,q} = the (q,p) torus-curve L1
+   cell-discrepancy (g_B<=1).
+ - **D_{p,q} <= 14/p, PROVED ELEMENTARILY** (no three-gap citation): gcd(p,q)=1 forces the q sub-arc starts
+   {pm/q mod 1} = {0,1/q,..,(q-1)/q} EXACTLY equally spaced, then Koksma vs a trapezoid (Var 2/7) gives it.
+   0 violations / 1248 ratios; true sup D*p=20/7.
+ - EXHAUSTIVE ATLAS k=8..12, p<=p*(per-k, <=72): 0 violations; binding k=10 (margin 0.205, dips then
+   RECOVERS). Worst base = dense even AP (validated over 400+ bounded bases). r=2 dominates r>=3.
+ - Finite-f1: p0(finite)->p0_inf at O(1/f1) = the THM-546 comb rate (PROVED), verified.
+ So L7 = [finite atlas, exact] + [tail D<=14/p, elementary] + [THM-546] + [base domination]. The analytic
+ MYSTERY of the LRC sector route is resolved; not a full LRC(14) proof (needs L1-L6 + S1/S2 + end-to-end
+ audit), but the last hard analytic input is now elementary.
+
+CAP CORRECTION (flag): correct caps are cap_11=66/91, cap_12=6/7; some files carry cap_11=25/91,
+cap_12=2243/5880 (=cap_8 copy-paste) which are BELOW the plateau P2 -> wrong.
+COLLISIONS handled: codex took HYP-2723 (depth-law) and HYP-2729 (same L7 reduction -- convergence!);
+renumbered mine 2723->2724, 2729->2730. Reflection: the-lrc14-endgame-four-agents-one-elementary-discrepancy.
+Scripts: lrc_q108_L7_{resonance_atlas,finite_convergence,tail_discrepancy,discrepancy_proof,r3_domination,
+atlas_exhaustive}_kps.py. A breadth workflow (apex-prime D=0 law, r=3 3D atlas, lonely-measure leads, diverse
+new angles) ran concurrently; leads in 04-computation/*_kpswf3.py.
+
 ## opus-2026-06-21-S1 -- THREAD B: Delsarte-LP saturation via Krawtchouk moments (HYP-2726)
 
 Worked THREAD B: prove "consec maximizes L_y = the Delsarte LP optimum" for the
