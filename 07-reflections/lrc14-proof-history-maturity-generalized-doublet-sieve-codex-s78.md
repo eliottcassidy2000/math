@@ -36,6 +36,16 @@ The current mature address looks like
  frozen slow coordinate y, finite bridge window).
 ```
 
+After rebasing over HYP-2814/HYP-2815/HYP-2816, the concentration mechanism is
+sharper: the wide move should be viewed first as `q6` suppression.  On the
+all-missed atom, a far speed is almost an independent clock, so it asks for the
+new speed to land in the one surviving sector, costing roughly a `1/7` factor
+per far coordinate.  At small boundary speeds this ratio is not literally
+`1/7`, but the new work says it remains a strict contraction.  The proof
+target is therefore a generated-profile majorization lemma: the admissible
+gain in `q0` from spreading cannot compensate for the gK8-weighted loss in
+`q6`, with endpoint-period/R-tail machinery handling the low-`f` boundary.
+
 This address explains why mac-mini S7's k=12 over-`Q(11)` obstruction did not
 break the cap route.  It is not a new unstructured regime; it is a generalized
 doublet with an even-AP base and two odd bridges.  S78's exact span audit
@@ -58,7 +68,8 @@ public improper ansatz survivor
 So the bold finish is not "make Weyl error uniformly small."  It is:
 
 1. Prove gK8 concentration extremality: wide decorrelation cannot increase
-   `10q0+q3+10q6` beyond the bounded maximum.
+   `10q0+q3+10q6` beyond the bounded maximum, ideally by the new `q6`
+   contraction/Krawtchouk majorization route.
 2. Use the bounded gK8 certificate to compare that maximum with `10cap_k`.
 3. If the concentration proof is only asymptotic, use the HYP-2811/HYP-2808
    R-tail route; the Mordell-Tornheim constant now has closed form

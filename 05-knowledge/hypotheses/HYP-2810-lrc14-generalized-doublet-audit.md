@@ -4,6 +4,9 @@ title: LRC14 generalized-doublet audit as a gK8 concentration guardrail
 status: OPEN guardrail; exact bounded-span evidence supports gK8 concentration and generalized-doublet fallback; proof not claimed
 source: codex-2026-06-22-S78
 depends_on:
+  - HYP-2816
+  - HYP-2815
+  - HYP-2814
   - HYP-2812
   - HYP-2811
   - HYP-2807
@@ -90,6 +93,39 @@ sum_{h,h' != 0, h+h' != 0} 1/(|h| |h'| |h+h'|) = 12*zeta(3).
 
 Thus the R-tail route is now a rigorous fallback with a closed-form constant,
 while gK8 concentration is the clean route if the monotonicity lemma is proved.
+
+## Post-Rebase q6 Suppression Update
+
+After rebasing over the latest HYP-2814/HYP-2815/HYP-2816 work, the sharp
+concentration statement is more specific than "decorrelation moves mass to the
+middle."  The current route is:
+
+```text
+far insertion on the all-missed atom q6 acts like convolution by Unif(Z/7),
+so q6 is multiplied by approximately 1/7 per independent far coordinate;
+small far speeds f>=15 have a worse but still strict ratio C(f)<1;
+the gK8 weight 10q6 makes this lost all-missed mass pay for any q0 gain.
+```
+
+This explains the exact S78 overlay: the k=12 row `E*` can increase `q0=p0`
+above the old `Q(11)` floor, but it has already spent enough `q6` that
+`L_yK8(E*)` remains below the bounded maximum.  Thus the proof obligation is
+now narrower:
+
+```text
+Prove a generated-row Krawtchouk/majorization lemma:
+for every wide row address (B, far data), the admissible q-profile after
+far smoothing is dominated in L_yK8 by a bounded/concentrated profile.
+```
+
+The honest small-`f` refinement matters.  The clean `1/7` factor is an
+asymptotic law; at the binding boundary `f>=15` the ratio can be larger.
+So a complete proof should either:
+
+1. prove the worst-case `q6` contraction ratio for `f>=15` inside the same
+   endpoint-period/Dedekind machinery as THM-563; or
+2. use the closed-form `12*zeta(3)` R-tail and finite-window atlas to isolate
+   the low-`f` exceptions, then apply the asymptotic convolution lemma.
 
 ## Exact S78 Evidence
 
@@ -280,10 +316,12 @@ families already visible in the cap audit.
 The shortest plausible finish has changed:
 
 1. **Concentration extremality for gK8.**  Prove that far spreading and wide
-   decorrelation cannot increase `L_yK8=10q0+q3+10q6`.  This is a convex-order
-   or Schur-type statement on the missed-sector distribution, but it cannot
-   forget generated-word compatibility; arbitrary probability vectors on
-   `q_0,...,q_6` are too coarse.
+   decorrelation cannot increase `L_yK8=10q0+q3+10q6`.  The strongest current
+   form is a `q6`-suppression theorem: far coordinates convolve the all-missed
+   atom toward a `1/7` factor, while generated-word/Krawtchouk constraints keep
+   the possible `q0` gain from overtaking the lost `10q6` mass.  This is a
+   convex-order or Schur-type statement on generated missed-sector profiles,
+   not on arbitrary probability vectors on `q_0,...,q_6`.
 2. **Bounded maximum certificate.**  Use the existing bounded gK8 finite check
    and Lean-facing Delsarte certificate: the bounded maximum `MB` is already
    below `10cap_k`.
@@ -358,6 +396,9 @@ No LRC14 proof is claimed.  HYP-2810 contributes:
   `span<=18` and `span<=20`;
 - an exact `span<=18` gK8 overlay showing the same genuine-wide window has
   zero `L_yK8` cap violations, with r=2 leaders;
+- a post-rebase proof-order refinement: the live concentration lemma should
+  prove `q6` contraction under far smoothing, with a small-`f` endpoint-period
+  guard and the `12*zeta(3)` R-tail as fallback;
 - a proof-history synthesis explaining why the current route should retain
   both the gK8 missed-sector moment and `(B,g,M)` addresses;
 - a bridge from the 2026 below-frontier lifting/backward-projection literature
