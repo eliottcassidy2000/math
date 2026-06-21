@@ -1,3 +1,36 @@
+## codex-2026-06-21-S68 -- HYP-2714 finite-ledger addendum for moderate multi-block budget
+
+Continued the LRC(14) sector-route proof session after HYP-2715--HYP-2717
+arrived.  Pulled/rebased through the carrier relation filter work and treated
+it as signal: product cover is not an upper envelope; the remaining analytic
+target is the HYP-2716 top Krawtchouk character after HYP-2717 carrier
+relation filtering.
+
+Added `04-computation/lrc14_moderate_multiblock_budget_codex_s68.py` and stored
+`05-knowledge/results/lrc14_moderate_multiblock_budget_codex_s68.out`.  The
+script uses exact integer boundary-sweep arithmetic and raw rational
+comparisons, with deeper windows available through `LRC14_S68_WINDOWS`.  The
+stable default extends the prior finite windows one step:
+
+```text
+k=8,  span<=21
+k=9,  span<=18
+k=10, span<=17
+```
+
+Result: 0 over-cap rows and 0 near-cap rows in all three windows.  Consecutive
+blocks remain the global exact leaders.  Newly beyond-window
+moderate-balanced leaders have large margins: k=8 margin `1/6`, k=9 margin
+`17499/140140`, and k=10 margin `30437/194922`.
+
+Interpretation: S68 does not prove LRC(14), but it strengthens the finite
+ledger side of the HYP-2717 split.  Low-gap / low-height carrier resonances can
+be routed to exact finite checks with comfortable margin; the remaining proof
+should bound only the top-character carrier tail, not raw product error or a
+false product-envelope inequality.  Added reflection
+`07-reflections/lrc14-s68-moderate-multiblock-exact-budget.md` and updated the
+HYP/results indexes.
+
 ## codex-2026-06-21 -- HYP-2717: top-character carrier relation filter replaces naive full-torus Weyl
 
 Followed the HYP-2716 Krawtchouk top-character reformulation into the analytic
