@@ -1,0 +1,2 @@
+q6-ratio bound over 15 bounded bases: WORST <= 0.9429  <1 OK (far strictly lowers q6 universally)
+  worst base=(2, 3, 4, 5, 6, 7, 9, 10, 14) q6=0.0102 #arcs=1 periodmax=0.122

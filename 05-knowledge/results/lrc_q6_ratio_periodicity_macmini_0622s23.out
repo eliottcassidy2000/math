@@ -1,0 +1,13 @@
+VERIFY q6 identity + ratio for B=consec_{k-1}:
+
+ k=9 B(1..8): q6(B)=1/56=0.01786  #arcs(Q6)=1 period P=5880
+   f=15: q6(Bu f)=0.00952 ratio=0.5333 | f*delta=0.10459 sawtooth=0.10459 OK
+   f=20: q6(Bu f)=0.00714 ratio=0.4000 | f*delta=0.09184 sawtooth=0.09184 OK
+   f=50: q6(Bu f)=0.00286 ratio=0.1600 | f*delta=0.01531 sawtooth=0.01531 OK
+   period-max(f*delta)=0.1224 (min 0.0000); worst q6-ratio at f>=15 <= 1/7+0.122/(15*0.0179) = 0.6000  <1 OK (q6 strictly decreases)
+
+ k=10 B(1..9): q6(B)=1/63=0.01587  #arcs(Q6)=1 period P=17640
+   f=15: q6(Bu f)=0.00952 ratio=0.6000 | f*delta=0.10884 sawtooth=0.10884 OK
+   f=20: q6(Bu f)=0.00714 ratio=0.4500 | f*delta=0.09751 sawtooth=0.09751 OK
+   f=50: q6(Bu f)=0.00286 ratio=0.1800 | f*delta=0.02948 sawtooth=0.02948 OK
+   period-max(f*delta)=0.1224 (min 0.0000); worst q6-ratio at f>=15 <= 1/7+0.122/(15*0.0159) = 0.6571  <1 OK (q6 strictly decreases)
