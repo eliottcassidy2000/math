@@ -1,0 +1,7 @@
+exit: 0
+=== results ===
+k=9: 2996 bases, 167776 configs, window[15,42], cap=0.4943 | violations=0 | worst p0=0.32266 margin=0.17160 at ((0, 3, 5, 7, 9, 11, 13), 2, 15)
+k=10: 3431 bases, 205860 configs, window[15,44], cap=0.6044 | violations=0 | worst p0=0.44252 margin=0.16188 at ((0, 1, 2, 3, 4, 5, 6, 7), 1, 21)
+k=11: 3003 bases, 144144 configs, window[15,38], cap=0.7253 | violations=0 | worst p0=0.55074 margin=0.17454 at ((0, 2, 4, 6, 8, 9, 10, 12, 14), 2, 16)
+k=12: 2002 bases, 64064 configs, window[15,30], cap=0.8571 | violations=0 | worst p0=0.61572 margin=0.24142 at ((0, 2, 4, 6, 8, 9, 10, 11, 12, 14), 2, 16)
+DONE: exhaustive doublet window certificate.
