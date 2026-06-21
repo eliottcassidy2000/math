@@ -1,3 +1,27 @@
+## kind-pasteur-2026-06-21 (overnight, RIGOR + FORMALIZATION) -- L7 D<=14/p paper-proof + Lean apex-law formalization (sorry-free, standard axioms)
+
+User: long overnight, wide array of ideas, aim to prove LRC, and "make everything rigorous and formalized".
+Built on my prior L7 closure (the sole open LRC(14)-S3 lemma). Two deliverables + a rigor workflow.
+
+RIGOR: full paper-quality proof of the L7 analytic heart, `D_{p,q} <= 14/p`
+(05-knowledge/results/lrc_q108_L7_rigorous_proof_kps.md). Elementary, only external input = Koksma:
+ Lemma 1 (uniform 1D marginals: qv sweeps q periods) + Lemma 2 (gcd(p,q)=1 => the q sub-arc starts
+ {pm/q mod1}={0,1/q,..,(q-1)/q} EXACTLY equally spaced) + trapezoid Var(h_j)=2/7, integral=L/7 (all
+ verified) + Koksma (err<=Var/q) => |mu_ij-1/49|<=2/(7p) => D=sum_49 <= 14/p. Integer-grid apex remark.
+
+FORMALIZATION (Lean, mathlib-free, builds sorry-free): 04-computation/lean/TournamentH7/.../LRCL7Discrepancy.lean.
+ `matrix_apex_necessity` (Ddef c S=0 => 7|S for ANY 7x7 occupancy matrix = the easy half of the apex law
+ HYP-2733) proved with ONLY [propext,Quot.sound] (standard axioms, NO native_decide/sorry) -- via
+ cell_le_sum49 bounding one cell by the zero total to dodge the 49-term natAbs omega blowup. Plus
+ native_decide instances on real atlas ratios: (q,p)=(7,8) apex-aligned Ddef=0, (2,3) 252, (1,2) 140;
+ marginal balance row/colsums=pq by decide. Complements mac-mini's Delsarte Lean (S12/S13).
+
+OTHER: confirmed the apex law does NOT tighten the tail constant (worst D*q=12/7 at 3/2, non-apex).
+A rigor workflow (L1-L6 end-to-end audit; consec-max additive-energy lemma -- WITHIN-SPAN MONOTONICITY
+REFUTED, 1368+ inversions, so HYP-2735 LEMMA-1 is false as stated; sharp constant D<=12/(7q); lonely
+AP-saturation finiteness) ran concurrently; results pending integration. Convergence: codex HYP-2736/2737
+(sharp tail, two-odometer row-slice), mac-mini Lean Delsarte. Synced ~10x.
+
 ## codex-2026-06-21-S73 -- HYP-2737: L7 sharp tail reduced to a two-odometer row-slice lemma
 
 User asked for another long LRC proof/formalization session with frequent
