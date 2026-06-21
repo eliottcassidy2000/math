@@ -1,14 +1,15 @@
 ---
-id: HYP-2701
+id: HYP-2702
 title: LRC14 sparse residual tails should be absorbed by a generated-context deficit automaton
 status: OPEN; namespace reserved for exact scout
 source: codex-2026-06-20-S64
-tangent: T936
+tangent: T937
 depends_on:
   - HYP-2697
   - HYP-2698
   - HYP-2700
 related:
+  - HYP-2701
   - HYP-2699
   - HYP-2694
   - THM-557
@@ -16,7 +17,7 @@ related:
   - THM-555
 ---
 
-# HYP-2701 - Sparse Tail Deficit Automaton
+# HYP-2702 - Sparse Tail Deficit Automaton
 
 ## Claim
 
@@ -25,6 +26,12 @@ shapes on the top residual layers `|R| >= 5` and on the true full-cover
 functional `p_0`.  The remaining HYP-2697/HYP-2698 obstruction is the sparse
 tail `|R| <= 3`, where nonconsecutive shapes can beat the consecutive block on
 named residual packets.
+
+The concurrent HYP-2701 survival middle-mass gate is signal for this route:
+the right coordinate changes when the basis changes.  HYP-2699 diagonalizes
+Bonferroni `U4` in a survival basis; HYP-2702 should analogously diagonalize
+the sparse residual tail in a generated-context / miss-zeta basis before
+scalarizing.
 
 The expected repair is that those sparse-tail wins are absorbed by the
 generated context word:
@@ -75,7 +82,7 @@ The session explicitly rejects the easy vertex choices:
 The quotient preserves the LRC predicate "context-generated residual pressure
 times cluster capacity" and destroys the individual carrier phases.  The
 challenged assumption is that sparse residual packets must be handled by a
-separate ad hoc finite check; HYP-2701 tries to make them a finite automaton
+  separate ad hoc finite check; HYP-2702 tries to make them a finite automaton
 frontier attached to HYP-2698's miss-zeta product word.
 
 ## Status
