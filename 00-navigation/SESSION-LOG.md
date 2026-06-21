@@ -91,6 +91,15 @@ New files:
 `01-canon/theorems/THM-561-miss-zeta-factorial-atom-inversion.md` and
 `05-knowledge/hypotheses/HYP-2718-lrc14-factorial-atom-target.md`.
 
+Addendum: added `04-computation/lrc14_top_character_relation_height_codex_s68.py`
+with stored output `05-knowledge/results/lrc14_top_character_relation_height_codex_s68.out`.
+It reuses the exact miss-zeta engine on two coherent 4-block carriers and
+confirms the HYP-2717 guardrail that raw gap is not relation height: offsets
+`(30,60)` have raw gap `27` but primitive exact relation `(2,-1)` and height
+`3`.  Tested cap-budget ratios remain small (`0.0118` to `0.0445`), supporting
+finite routing of low-height exact relations before the high-height
+top-character Fourier tail.
+
 ## codex-2026-06-21 -- HYP-2717: top-character carrier relation filter replaces naive full-torus Weyl
 
 Followed the HYP-2716 Krawtchouk top-character reformulation into the analytic

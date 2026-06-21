@@ -84,6 +84,52 @@ The exact relation modes are unavoidable for integer carriers.  Therefore the
 right target is not full-torus equidistribution, but a relation-height tail
 bound after the top-character quotient.
 
+## Relation-Height Addendum
+
+Script:
+
+```text
+04-computation/lrc14_top_character_relation_height_codex_s68.py
+```
+
+Stored output:
+
+```text
+05-knowledge/results/lrc14_top_character_relation_height_codex_s68.out
+```
+
+This scout reuses the HYP-2715/HYP-2716 exact miss-zeta engine on two coherent
+4-block carriers.  For offsets `(M1,M2)` it records the primitive exact carrier
+relation
+
+```text
+(M2/g, -M1/g),    g=gcd(M1,M2),
+```
+
+and its height `H=|M2/g|+|M1/g|`.
+
+The main signal is a guardrail:
+
+```text
+raw gap != relation height.
+```
+
+For example, offsets `(30,60)` have raw gap `27` between the two 4-blocks but
+relation `(2,-1)` and height `3`.  So a proof based only on raw carrier
+separation would miss a low-height exact relation that survives the line
+integral.  Across the tested bank the cap-budget ratios stay small:
+
+```text
+min |Product-actual|/(cap-product) = 0.01178...
+max |Product-actual|/(cap-product) = 0.04440...
+```
+
+The pressure tournament is transitive, but its leader is an arithmetic-phase
+row `(15,31)` rather than the largest raw-gap row.  This reinforces the
+HYP-2717 split: first isolate low-height exact relation modes in the finite
+ledger, then prove a Fourier/BV tail for high-height relation modes and
+high-denominator nonrelations.
+
 ## Tournament Analysis
 
 The vertices are proof obligations, not runners or raw arcs:
@@ -146,4 +192,3 @@ Challenged assumption: the multi-block branch can be closed by proving
 `Product(E) >= p0(E)` or by a scalar gap-monotonicity theorem.  HYP-2715
 already refutes the product-envelope form, and S68 shows raw gap monotonicity
 is weaker than the finite-ledger plus top-character-tail split.
-

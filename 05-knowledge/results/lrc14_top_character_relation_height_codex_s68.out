@@ -1,0 +1,110 @@
+HYP-2717 relation-height scout for two 4-block carriers
+Exact arithmetic via the HYP-2715/HYP-2716 miss-zeta engine.
+
+offsets=(14, 28) row=(0, 14, 15, 16, 17, 28, 29, 30, 31)
+  raw_gap=11 relation=(2, -1) height=3 primitive=True
+  actual=7730509/44932020 (0.172048998)
+  product=109/686 (0.158892128)
+  product-actual=-4138153/314524140 (-0.013156869)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=591755879/15083633265 (0.039231654)
+  height*|error|=4138153/104841380 (0.039470608)
+offsets=(14, 30) row=(0, 14, 15, 16, 17, 30, 31, 32, 33)
+  raw_gap=13 relation=(15, -7) height=22 primitive=True
+  actual=11331437/68172720 (0.166216589)
+  product=109/686 (0.158892128)
+  product-actual=-3495299/477209040 (-0.007324461)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=45438887/2080501140 (0.021840357)
+  height*|error|=3495299/21691320 (0.161138142)
+offsets=(30, 60) row=(0, 30, 31, 32, 33, 60, 61, 62, 63)
+  raw_gap=27 relation=(2, -1) height=3 primitive=True
+  actual=240217181/1467718560 (0.163667060)
+  product=109/686 (0.158892128)
+  product-actual=-49057787/10274029920 (-0.004774931)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=637751231/44791965720 (0.014238072)
+  height*|error|=49057787/3424676640 (0.014324794)
+offsets=(30, 80) row=(0, 30, 31, 32, 33, 80, 81, 82, 83)
+  raw_gap=47 relation=(8, -3) height=11 primitive=True
+  actual=4260467/25154976 (0.169368756)
+  product=109/686 (0.158892128)
+  product-actual=-12913427/1232593824 (-0.010476628)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=167874551/5373772584 (0.031239608)
+  height*|error|=12913427/112053984 (0.115242908)
+offsets=(15, 31) row=(0, 15, 16, 17, 18, 31, 32, 33, 34)
+  raw_gap=13 relation=(31, -15) height=46 primitive=True
+  actual=2538707/14608440 (0.173783580)
+  product=109/686 (0.158892128)
+  product-actual=-10659503/715813560 (-0.014891452)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=138573539/3120751710 (0.044403897)
+  height*|error|=245168569/357906780 (0.685006775)
+offsets=(20, 43) row=(0, 20, 21, 22, 23, 43, 44, 45, 46)
+  raw_gap=20 relation=(43, -20) height=63 primitive=True
+  actual=434037/2665355 (0.162843974)
+  product=109/686 (0.158892128)
+  product-actual=-147463/37314970 (-0.003951846)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=3834038/325366165 (0.011783764)
+  height*|error|=1327167/5330710 (0.248966273)
+offsets=(30, 47) row=(0, 30, 31, 32, 33, 47, 48, 49, 50)
+  raw_gap=14 relation=(47, -30) height=77 primitive=True
+  actual=183642839/1099452200 (0.167031217)
+  product=109/686 (0.158892128)
+  product-actual=-8948539/1099452200 (-0.008139089)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=116331007/4793311450 (0.024269445)
+  height*|error|=8948539/14278600 (0.626709831)
+offsets=(40, 61) row=(0, 40, 41, 42, 43, 61, 62, 63, 64)
+  raw_gap=18 relation=(61, -40) height=101 primitive=True
+  actual=72606256057/470470512960 (0.154326901)
+  product=109/686 (0.158892128)
+  product-actual=15034635281/3293293590720 (0.004565228)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=2149952845183/157936471128720 (0.013612770)
+  height*|error|=1518498163381/3293293590720 (0.461088002)
+offsets=(60, 89) row=(0, 60, 61, 62, 63, 89, 90, 91, 92)
+  raw_gap=26 relation=(89, -60) height=149 primitive=True
+  actual=72903842213/443834756820 (0.164258975)
+  product=109/686 (0.158892128)
+  product-actual=-16673951681/3106843297740 (-0.005366847)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=183413468491/11461144228605 (0.016003068)
+  height*|error|=2484418800469/3106843297740 (0.799660157)
+offsets=(80, 121) row=(0, 80, 81, 82, 83, 121, 122, 123, 124)
+  raw_gap=38 relation=(121, -80) height=201 primitive=True
+  actual=65898274369/425533545360 (0.154860351)
+  product=109/686 (0.158892128)
+  product-actual=84067159079/20851143722640 (0.004031777)
+  cap-product=65797/196196 (0.335363616)
+  |error|/(cap-product)=1092873068027/90905294428740 (0.012022106)
+  height*|error|=5632499658293/6950381240880 (0.810387152)
+
+TOURNAMENT ANALYSIS
+  vertices: tested two-carrier rows
+  pairwise observable: larger slack-error ratio is more dangerous;
+    ties broken by lower relation height, then lower raw gap
+  switch/gauge: relation-height carrier basis after top-character quotient
+  score_hist={0: 1, 1: 1, 2: 1, 3: 1, 4: 1, 5: 1, 6: 1, 7: 1, 8: 1, 9: 1}
+  directed_3cycles=0
+  proof-pressure path:
+    offsets=(15, 31) H=46 raw_gap=13 ratio=138573539/3120751710 (0.044403897) error=-10659503/715813560 (-0.014891452)
+    offsets=(14, 28) H=3 raw_gap=11 ratio=591755879/15083633265 (0.039231654) error=-4138153/314524140 (-0.013156869)
+    offsets=(30, 80) H=11 raw_gap=47 ratio=167874551/5373772584 (0.031239608) error=-12913427/1232593824 (-0.010476628)
+    offsets=(30, 47) H=77 raw_gap=14 ratio=116331007/4793311450 (0.024269445) error=-8948539/1099452200 (-0.008139089)
+    offsets=(14, 30) H=22 raw_gap=13 ratio=45438887/2080501140 (0.021840357) error=-3495299/477209040 (-0.007324461)
+    offsets=(60, 89) H=149 raw_gap=26 ratio=183413468491/11461144228605 (0.016003068) error=-16673951681/3106843297740 (-0.005366847)
+    offsets=(30, 60) H=3 raw_gap=27 ratio=637751231/44791965720 (0.014238072) error=-49057787/10274029920 (-0.004774931)
+    offsets=(40, 61) H=101 raw_gap=18 ratio=2149952845183/157936471128720 (0.013612770) error=15034635281/3293293590720 (0.004565228)
+    offsets=(80, 121) H=201 raw_gap=38 ratio=1092873068027/90905294428740 (0.012022106) error=84067159079/20851143722640 (0.004031777)
+    offsets=(20, 43) H=63 raw_gap=20 ratio=3834038/325366165 (0.011783764) error=-147463/37314970 (-0.003951846)
+
+SYNTHESIS
+  Raw separation is not the right carrier variable: rows with large gaps
+  can still have very low exact relation height, e.g. offsets (30,60).
+  The cap-budget ratios remain small in this bank, but they organize by
+  relation-height and arithmetic phase more naturally than by raw gap.
+  This supports the HYP-2717 proof split: finite-ledger low-height exact
+  relations first, then a top-character Fourier tail for high-height rows.
