@@ -1,0 +1,45 @@
+==============================================================================
+THREAD C: menu of probabilistic orderings of the empty-count law N
+==============================================================================
+
+--- k=8, span<=13, primitive shapes=1716 ---
+  consec N-law (P(N=n), n=0..7): ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49', '0']
+  measS7=P(N=0)=0.327211   entropy(occ)=1.683895
+  (p0) beaters of consec on P(N=0): 0   (CONSEC MAX)
+  (A) consec stochastically SMALLEST N: fails on 1715 shapes
+  (B) consec stochastically LARGEST  N: fails on 1715 shapes
+  (E) consec MAX pgf E[z^N] all z in [0,1]: fails on 1 shapes
+      pgf fails at z-values: [0.99]
+  (D) consec MIN entropy(occ): fails on 1714 shapes
+
+--- k=8, span<=15, primitive shapes=6434 ---
+  consec N-law (P(N=n), n=0..7): ['481/1470', '359/1470', '25/147', '26/245', '17/210', '5/98', '1/49', '0']
+  measS7=P(N=0)=0.327211   entropy(occ)=1.683895
+  (p0) beaters of consec on P(N=0): 0   (CONSEC MAX)
+  (A) consec stochastically SMALLEST N: fails on 6433 shapes
+  (B) consec stochastically LARGEST  N: fails on 6433 shapes
+  (E) consec MAX pgf E[z^N] all z in [0,1]: fails on 1 shapes
+      pgf fails at z-values: [0.99]
+  (D) consec MIN entropy(occ): fails on 6431 shapes
+
+--- k=9, span<=13, primitive shapes=1287 ---
+  consec N-law (P(N=n), n=0..7): ['2447/5880', '653/2940', '27/196', '23/245', '13/196', '9/196', '1/56', '0']
+  measS7=P(N=0)=0.416156   entropy(occ)=1.587491
+  (p0) beaters of consec on P(N=0): 0   (CONSEC MAX)
+  (A) consec stochastically SMALLEST N: fails on 1286 shapes
+  (B) consec stochastically LARGEST  N: fails on 1286 shapes
+  (E) consec MAX pgf E[z^N] all z in [0,1]: fails on 12 shapes
+      pgf fails at z-values: [0.6, 0.7, 0.8, 0.9, 0.99]
+  (D) consec MIN entropy(occ): fails on 1237 shapes
+
+--- k=10, span<=12, primitive shapes=220 ---
+  consec N-law (P(N=n), n=0..7): ['8899/17640', '551/2940', '127/1176', '145/1764', '55/882', '5/126', '1/63', '0']
+  measS7=P(N=0)=0.504478   entropy(occ)=1.471585
+  (p0) beaters of consec on P(N=0): 0   (CONSEC MAX)
+  (A) consec stochastically SMALLEST N: fails on 219 shapes
+  (B) consec stochastically LARGEST  N: fails on 219 shapes
+  (E) consec MAX pgf E[z^N] all z in [0,1]: fails on 16 shapes
+      pgf fails at z-values: [0.7, 0.8, 0.9, 0.99]
+  (D) consec MIN entropy(occ): fails on 65 shapes
+
+DONE.

@@ -1,0 +1,52 @@
+==============================================================================
+(1) BALANCED 2-CLUSTER: two consecutive blocks, ratio sweep, vs cap
+==============================================================================
+    E = {a1..a1+s-1} U {a2..a2+s-1};  k=2s; rho=a2/a1 (block-base ratio)
+
+  --- block size s=4, k=8, cap_8=0.38146 (2243/5880) ---
+    scanned 212 balanced shapes. TOP 8 by measS7:
+      measS7=0.34490  rho~5.000  a1=1,a2=5  E=[1, 2, 3, 4, 5, 6, 7, 8]
+      measS7=0.31610  rho~3.000  a1=2,a2=6  E=[2, 3, 4, 5, 6, 7, 8, 9]
+      measS7=0.29184  rho~2.333  a1=3,a2=7  E=[3, 4, 5, 6, 7, 8, 9, 10]
+      measS7=0.28599  rho~1.500  a1=8,a2=12  E=[8, 9, 10, 11, 12, 13, 14, 15]
+      measS7=0.28241  rho~2.000  a1=4,a2=8  E=[4, 5, 6, 7, 8, 9, 10, 11]
+      measS7=0.27691  rho~1.571  a1=7,a2=11  E=[7, 8, 9, 10, 11, 12, 13, 14]
+      measS7=0.26947  rho~1.667  a1=6,a2=10  E=[6, 7, 8, 9, 10, 11, 12, 13]
+      measS7=0.26464  rho~1.800  a1=5,a2=9  E=[5, 6, 7, 8, 9, 10, 11, 12]
+    [trend at a1=1] (rho=a2):
+        rho=5: measS7=0.34490  margin_to_cap=+0.03656  [ok]
+        rho=6: measS7=0.09580  margin_to_cap=+0.28566  [ok]
+        rho=7: measS7=0.09615  margin_to_cap=+0.28532  [ok]
+        rho=8: measS7=0.11025  margin_to_cap=+0.27122  [ok]
+        rho=9: measS7=0.12410  margin_to_cap=+0.25736  [ok]
+        rho=10: measS7=0.12041  margin_to_cap=+0.26105  [ok]
+        rho=11: measS7=0.19495  margin_to_cap=+0.18651  [ok]
+        rho=12: measS7=0.20262  margin_to_cap=+0.17885  [ok]
+        rho=13: measS7=0.11944  margin_to_cap=+0.26202  [ok]
+    >>> WORST (max measS7) balanced 2-cluster: measS7=0.344898 (169/490)
+        rho=5~5.0000  a1=1,a2=5  E=[1, 2, 3, 4, 5, 6, 7, 8]
+        cap_8=0.381463  MARGIN=+0.036565 (43/1176)  OK (under cap)
+
+  --- block size s=5, k=10, cap_10=0.60440 (55/91) ---
+    scanned 212 balanced shapes. TOP 8 by measS7:
+      measS7=0.50828  rho~6.000  a1=1,a2=6  E=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+      measS7=0.48448  rho~1.833  a1=6,a2=11  E=[6, 7, 8, 9, 10, 11, 12, 13, 14, 15]
+      measS7=0.47823  rho~1.714  a1=7,a2=12  E=[7, 8, 9, 10, 11, 12, 13, 14, 15, 16]
+      measS7=0.47489  rho~2.667  a1=3,a2=8  E=[3, 4, 5, 6, 7, 8, 9, 10, 11, 12]
+      measS7=0.47372  rho~1.625  a1=8,a2=13  E=[8, 9, 10, 11, 12, 13, 14, 15, 16, 17]
+      measS7=0.46840  rho~3.500  a1=2,a2=7  E=[2, 3, 4, 5, 6, 7, 8, 9, 10, 11]
+      measS7=0.46203  rho~2.000  a1=5,a2=10  E=[5, 6, 7, 8, 9, 10, 11, 12, 13, 14]
+      measS7=0.45704  rho~2.250  a1=4,a2=9  E=[4, 5, 6, 7, 8, 9, 10, 11, 12, 13]
+    [trend at a1=1] (rho=a2):
+        rho=6: measS7=0.50828  margin_to_cap=+0.09612  [ok]
+        rho=7: measS7=0.27532  margin_to_cap=+0.32907  [ok]
+        rho=8: measS7=0.25945  margin_to_cap=+0.34494  [ok]
+        rho=9: measS7=0.25613  margin_to_cap=+0.34826  [ok]
+        rho=10: measS7=0.34564  margin_to_cap=+0.25876  [ok]
+        rho=11: measS7=0.34476  margin_to_cap=+0.25964  [ok]
+        rho=12: measS7=0.36153  margin_to_cap=+0.24287  [ok]
+        rho=13: measS7=0.35850  margin_to_cap=+0.24589  [ok]
+    >>> WORST (max measS7) balanced 2-cluster: measS7=0.508277 (4483/8820)
+        rho=6~6.0000  a1=1,a2=6  E=[1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+        cap_10=0.604396  MARGIN=+0.096119 (11021/114660)  OK (under cap)
+
