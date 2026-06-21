@@ -96,6 +96,13 @@ the most reduced LRC(14) has been: one elementary discrepancy lemma + finite exa
   verified). So the worst balanced multi-cluster config is pinned and comfortable.
 - **Finite-f1**: `p0(finite) -> p0_inf` at `O(1/f1)` = THM-546 (PROVED), verified.
 
+- **r>=3 tail reduces to the r=2 bound (no new input)**: the r=3 resonance correction satisfies
+  `|R3| <= sum of the three PAIRWISE discrepancies` (verified on all 112 atlas directions q<=8;
+  `sup|R3|=0.055`), and each pair obeys the PROVED `D<=14/p`. So `|R3| <= 3*14/q = O(1/q)` -- the
+  general-r balanced tail closes via THREE instances of the elementary r=2 Koksma bound, with NO
+  3-torus discrepancy input. (Breadth-workflow thread, lrc_q108_L7_r3_pairwise_tail_kpswf3.py.) So the
+  closure is uniform in r.
+
 L7 (the sole open lemma of the kps-S23 LRC(14)-S3 ledger) is therefore CLOSED modulo (i) the standard
 far-element equidistribution limit (the basis of THM-546) and (ii) the previously-established L1-L6
 and the S1/S2 cases / end-to-end audit. The analytic content of L7 -- the joint discrepancy constant
