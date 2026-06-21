@@ -1,9 +1,10 @@
 ---
-id: HYP-2726
+id: HYP-2727
 title: LRC14 generated-word compatibility hands off to relation-code packets
-status: OPEN; exact bridge scout; renumbered from colliding HYP-2725
+status: OPEN; exact bridge scout; renumbered from colliding HYP-2725/HYP-2726
 source: codex-2026-06-21-S71
 depends_on:
+  - HYP-2726
   - HYP-2725
   - HYP-2724
   - HYP-2723
@@ -18,12 +19,13 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2726 - Generated-Word / Relation-Code Bridge
+# HYP-2727 - Generated-Word / Relation-Code Bridge
 
 Namespace note: this bridge was first drafted as HYP-2725, but origin/main
-already used HYP-2725 for the two-support-axis Weyl proof order.  This note is
-therefore HYP-2726 and should be read as a refinement of that proof-order
-wrapper.
+already used HYP-2725 for the two-support-axis Weyl proof order and then used
+HYP-2726 for the Delsarte/MacWilliams moment-LP unification.  This note is
+therefore HYP-2727 and should be read as a refinement of those proof-order
+wrappers.
 
 ## Claim
 
@@ -59,6 +61,13 @@ R^2 = 0.572814
 of exact `corr(E)` on its battery, with max residual `0.14488`.  That is enough
 to make `A3/dmin/MDS` a useful packet selector, but not enough to throw away
 the tail or generated-word compatibility.
+
+The incoming mac-mini HYP-2726 Delsarte/MacWilliams unification also fits this
+stack.  It says the THM-534 moment-LP dual is a Krawtchouk-nonnegative Delsarte
+LP, tying together row-level moment duals, even Krawtchouk bands, and relation
+codes.  That is a full-row certificate umbrella.  It does not remove the
+decorrelated generated-product layer where HYP-2722 already found dirty `B2`
+and where this bridge finds many relation-proxy flips.
 
 ## Exact Scout
 
@@ -160,9 +169,9 @@ U4/q0 = 69930/61661
 distance to cheap r=1 = 918112/308305
 ```
 
-This is exactly the type of packet KPS HYP-2724 and the HYP-2725
-two-support-axis order can organize after HYP-2722 has already shown it is not
-a silent generated q0-hiding move.
+This is exactly the type of packet KPS HYP-2724, HYP-2725, and the row-level
+HYP-2726 Delsarte order can organize after HYP-2722 has already shown it is
+not a silent generated q0-hiding move.
 
 ## Tournament Analysis
 
@@ -201,15 +210,15 @@ not the same quotient.
 
 ## Proof Target
 
-Use HYP-2726 as a guardrail for the LRC14 proof:
+Use HYP-2727 as a guardrail for the LRC14 proof:
 
 1. Prove the singleton generated-word exclusion using the HYP-2702 death-chain
    kernel.
 2. Prove coherent context merging cannot erase the relevant q0, `W1+W2`, and
    `U4` witnesses.
-3. Only then apply KPS HYP-2724 and the HYP-2725 two-support-axis proof order
-   to classify surviving low-support relation packets by `dmin`, `A3`,
-   MDS/arc structure, and finite tournament-like types.
+3. Only then apply KPS HYP-2724, HYP-2725, and the row-level HYP-2726 Delsarte
+   proof order to classify surviving low-support relation packets by `dmin`,
+   `A3`, MDS/arc structure, and finite tournament-like types.
 4. Evaluate the HYP-2721 q0/Vitali atom boundary after both compatibility and
    relation-support selection have been retained.
 

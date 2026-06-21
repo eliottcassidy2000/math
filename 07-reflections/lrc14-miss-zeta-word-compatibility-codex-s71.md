@@ -76,13 +76,17 @@ the signs are mixed, and the size-3 death-chain frontier has the worst q0/U4
 witnesses while the simple `|coef|<=2` relation spectrum is flat.  KPS's
 pattern-linearity probe points the same way from another angle: low-support
 pattern counts explain only `R^2=0.572814` of exact `corr(E)`, so the tail and
-the generated-word compatibility layer cannot be discarded.
+the generated-word compatibility layer cannot be discarded.  The later
+HYP-2726 Delsarte/MacWilliams unification is compatible with this: it gives a
+row-level LP umbrella for moment/Krawtchouk/relation-code certificates, but it
+does not identify the decorrelated product-word cone where `B2` is dirty and
+relation-proxy order flips generated-risk order.
 
 So the proof order should be:
 
 1. generated miss-zeta singleton/death-chain compatibility;
 2. coherent context merging;
-3. relation-code `A3/dmin/MDS` finite-packet classification;
+3. relation-code/Delsarte `A3/dmin/MDS` finite-packet classification;
 4. q0/Vitali atom boundary evaluation.
 
 The useful theorem is not `A3 implies compatibility`.  It is that
