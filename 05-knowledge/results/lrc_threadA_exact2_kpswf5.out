@@ -1,0 +1,32 @@
+CLOSED FORM (fixed scale):
+   f_P(a,b) = [ 2 a b (P-a)(P-b) + 2*||ab||*(P-||ab||) ] / P     (||x||=min(x%P,P-x%P))
+================================================================================
+   P= 3: MATCH
+   P= 5: MATCH
+   P= 7: MATCH
+   P=11: MATCH
+   P=13: MATCH
+   P=17: MATCH
+   P=19: MATCH
+   P=23: MATCH
+   P=29: MATCH
+   P=31: MATCH
+   P=37: MATCH
+
+==> UNIFORM CLOSED FORM CONFIRMED (all primes 3..37)
+
+Full discrepancy:  D_{p,q} = S_P(p%P,q%P)/(P p q),  S_P = P*f_P = 2ab(P-a)(P-b)+2||ab||(P-||ab||).
+Sharp window constants for general P (window 1<p/q<P):
+   P= 3: maxS_P=12  at (||a||,||b||,||ab||)=(1, 1, 1)  (S/4=3)
+   P= 5: maxS_P=80  at (||a||,||b||,||ab||)=(2, 2, 1)  (S/4=20)
+   P= 7: maxS_P=308  at (||a||,||b||,||ab||)=(3, 3, 2)  (S/4=77)
+   P=11: maxS_P=1848  at (||a||,||b||,||ab||)=(5, 5, 3)  (S/4=462)
+   P=13: maxS_P=3588  at (||a||,||b||,||ab||)=(6, 6, 3)  (S/4=897)
+   P=17: maxS_P=10472  at (||a||,||b||,||ab||)=(8, 8, 4)  (S/4=2618)
+   P=19: maxS_P=16340  at (||a||,||b||,||ab||)=(9, 9, 5)  (S/4=4085)
+   P=23: maxS_P=35052  at (||a||,||b||,||ab||)=(11, 11, 6)  (S/4=8763)
+   P=29: maxS_P=88508  at (||a||,||b||,||ab||)=(14, 14, 7)  (S/4=22127)
+   P=31: maxS_P=115568  at (||a||,||b||,||ab||)=(15, 15, 8)  (S/4=28892)
+   P=37: maxS_P=234432  at (||a||,||b||,||ab||)=(18, 18, 9)  (S/4=58608)
+
+   (published general_prime maxS: P=3->4, 5->16, 7->44, 11->168, 13->276)

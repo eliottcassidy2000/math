@@ -1,0 +1,28 @@
+======================================================================================
+THREAD B: the Tanner graph of the relation code Lambda(E) and its expansion vs corr(E)
+======================================================================================
+VARIABLES = k offsets; CHECKS = primitive relations (support>=2, |coef|<=2, support<=4)
+Tanner expansion = (girth, sigma_2 of normalized biadjacency); want corr small <=> good exp?
+
+set                            corr  dmin  #chk  girth     sig2   A2   A3   A4  biReg?
+consec/AP {0..7}             0.3027     2   313      4   0.4406    3   48  262       n
+AP step2                     0.3027     2   313      4   0.4406    3   48  262       n
+AP step3                     0.3027     2   313      4   0.4406    3   48  262       n
+dyadic {0,1,2,4,..64}        0.0447     2    79      4   0.6825    6   29   44       n
+Sidon (Mian-Chowla)         -0.0124     3    55      4   0.5334    0    6   49       n
+Sidon b=2 perfectdiff        0.0103     3    39      4   0.6027    0    5   34       n
+wide near-consec             0.1660     2   196      4        -    3   36  157       n
+two-block consec             0.0906     2   132      4   0.4599    1   19  112       n
+random wide                  0.0138     3    39      4   0.5744    0    4   35       n
+QR7-lift {0,1,2,4}+block     0.0337     2   185      4   0.4520    3   31  151       n
+
+READING:
+  HYP-2723/2724 predicts AP/consec = anti-MDS = small dmin, many low-weight checks,
+  DENSE Tanner, low girth (=4), LARGE sigma_2 (poor expansion), LARGEST corr.
+  Sidon/arc = MDS = large dmin, FEW checks, sparse Tanner, large girth, sigma_2 small
+  (good expansion), corr ~ 0.
+
+  Pearson(corr, sigma_2)      = -0.654   (HYP: + ; poor expansion => large corr)
+  Pearson(corr, #checks)      = +0.950   (HYP: + ; dense relation set => hard)
+  Pearson(corr, A3)           = +0.898   (canon HYP-2724: +0.93)
+  Pearson(corr, dmin)         = -0.636   (HYP: - ; large min distance => easy)

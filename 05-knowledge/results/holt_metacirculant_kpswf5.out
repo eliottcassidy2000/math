@@ -1,0 +1,10 @@
+Brute-forcing metacirculant symbols for the Holt graph...
+  candidates found: 36
+    S0=[1] S1=[1] -> |Aut|=54 edge-orb=1 arc-orb=2
+    S0=[1] S1=[2] -> |Aut|=54 edge-orb=1 arc-orb=2
+    S0=[1] S1=[4] -> |Aut|=54 edge-orb=1 arc-orb=2
+    S0=[1] S1=[5] -> |Aut|=54 edge-orb=1 arc-orb=2
+    S0=[1] S1=[7] -> |Aut|=54 edge-orb=1 arc-orb=2
+  HOLT GRAPH CONFIRMED. Saved edge list -> 05-knowledge/results/holt_graph_edges_kpswf5.txt
+  Properties: 27 vertices, 54 edges, 4-regular, girth 5, |Aut|=54,
+  vertex-transitive YES, edge-transitive YES, arc-transitive NO (arc-orbits=2)

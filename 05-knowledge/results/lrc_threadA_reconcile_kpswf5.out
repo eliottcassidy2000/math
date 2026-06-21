@@ -1,0 +1,32 @@
+Reproduce literal HYP-2742 7x7 S-table from the uniform closed form:
+     0   0   0   0   0   0   0
+     0  12  20  24  24  20  12
+     0  20  32  36  36  32  20
+     0  24  36  44  44  36  24
+     0  24  36  44  44  36  24
+     0  20  32  36  36  32  20
+     0  12  20  24  24  20  12
+   identical to canon HYP-2742 table: True
+
+  published f = S/4 (a,b in 0..3):
+      0    0    0    0
+      0    3    5    6
+      0    5    8    9
+      0    6    9   11
+   should be f(a,b): 0;  3,5,6; 5,8,9; 6,9,11 (the ab+3 / ab+4-2|a-2| values)
+
+General-P: the apex law and max are clean:
+   canon-S(a,b)=0  <=>  P|p or P|q   (a=0 or b=0): the APEX law, all P.
+   P= 3: max canon-S = 4  (S/4=1); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P= 5: max canon-S = 16  (S/4=4); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P= 7: max canon-S = 44  (S/4=11); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=11: max canon-S = 168  (S/4=42); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=13: max canon-S = 276  (S/4=69); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=17: max canon-S = 616  (S/4=154); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=19: max canon-S = 860  (S/4=215); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=23: max canon-S = 1524  (S/4=381); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=29: max canon-S = 3052  (S/4=763); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=31: max canon-S = 3728  (S/4=932); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=37: max canon-S = 6336  (S/4=1584); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=41: max canon-S = 8620  (S/4=2155); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P
+   P=43: max canon-S = 9944  (S/4=2486); = [2h^2(P-h)^2 + 2||h^2||(P-||h^2||)]/P

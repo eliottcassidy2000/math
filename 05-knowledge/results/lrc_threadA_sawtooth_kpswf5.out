@@ -1,0 +1,48 @@
+Build f_P and test Dedekind double-sawtooth closed forms
+======================================================================
+Ratio  f_P(a,b) / [ sum_k ((ka/P))((kb/P)) ]  (look for constant = -2P?):
+   P= 3: ratios=[Fraction(72, 1)]  (want single value)
+   P= 5: ratios=[Fraction(40, 1), Fraction(80, 1)]  (want single value)  [has zero denom]
+   P= 7: ratios=[Fraction(-504, 1), Fraction(-336, 1), Fraction(168, 5), Fraction(448, 5), Fraction(616, 5), Fraction(280, 1)]  (want single value)
+   P=11: ratios=[Fraction(-2200, 3), Fraction(-616, 1), Fraction(-2992, 5), Fraction(-2728, 5), Fraction(-264, 1), Fraction(88, 3), Fraction(1408, 15), Fraction(792, 5), Fraction(3256, 15), Fraction(1232, 5), Fraction(352, 1), Fraction(1232, 3), Fraction(2112, 5), Fraction(1144, 1)]  (want single value)
+   P=13: ratios=[Fraction(-2184, 1), Fraction(-936, 1), Fraction(-741, 1), Fraction(-611, 1), Fraction(-273, 1), Fraction(312, 11), Fraction(1040, 11), Fraction(143, 1), Fraction(1872, 11), Fraction(2652, 11), Fraction(3224, 11), Fraction(3588, 11), Fraction(416, 1), Fraction(650, 1), Fraction(780, 1), Fraction(1820, 1), Fraction(1872, 1), Fraction(3432, 1)]  (want single value)  [has zero denom]
+   P=17: ratios=[Fraction(-7004, 1), Fraction(-4284, 1), Fraction(-2652, 1), Fraction(-6324, 5), Fraction(-6188, 5), Fraction(-1054, 1), Fraction(-1003, 1), Fraction(-748, 1), Fraction(-306, 1), Fraction(136, 5), Fraction(476, 5), Fraction(255, 2), Fraction(918, 5), Fraction(272, 1), Fraction(1428, 5), Fraction(1836, 5), Fraction(408, 1), Fraction(2193, 5), Fraction(2244, 5), Fraction(493, 1), Fraction(2618, 5), Fraction(697, 1), Fraction(816, 1), Fraction(1887, 2), Fraction(7412, 5), Fraction(2040, 1), Fraction(2380, 1), Fraction(4488, 1), Fraction(8772, 1), Fraction(9588, 1)]  (want single value)  [has zero denom]
+   P=19: ratios=[Fraction(-9880, 1), Fraction(-4560, 1), Fraction(-9880, 3), Fraction(-27816, 11), Fraction(-2280, 1), Fraction(-6688, 3), Fraction(-5624, 3), Fraction(-16264, 11), Fraction(-8816, 7), Fraction(-1216, 1), Fraction(-7904, 7), Fraction(-12312, 11), Fraction(-11856, 11), Fraction(-17176, 21), Fraction(-1976, 3), Fraction(-2280, 7), Fraction(456, 17), Fraction(4864, 51), Fraction(2584, 21), Fraction(3192, 17), Fraction(4864, 17), Fraction(19912, 51), Fraction(1216, 3), Fraction(4560, 11), Fraction(24472, 51), Fraction(5320, 11), Fraction(28576, 51), Fraction(31312, 51), Fraction(32680, 51), Fraction(5016, 7), Fraction(7144, 7), Fraction(12160, 11), Fraction(1216, 1), Fraction(11704, 9), Fraction(17632, 9), Fraction(22192, 11), Fraction(2128, 1), Fraction(2280, 1), Fraction(24776, 9), Fraction(30552, 11), Fraction(10640, 3), Fraction(19000, 3), Fraction(21736, 3), Fraction(9424, 1)]  (want single value)
+
+Direct test  f_P(a,b) == -2P * sum_k ((ka/P))((kb/P)):
+   P= 3: NO
+   P= 5: NO
+   P= 7: NO
+   P=11: NO
+   P=13: NO
+   P=17: NO
+   P=19: NO
+   ==> Dedekind form fails
+
+Full-range (a,b in 1..P-1) Dedekind check for P=7 to see exact relation:
+   a=1:    -5    -1     1    -1     1     5
+   a=2:    -1    -5     1    -1     5     1
+   a=3:     1     1    -5     5    -1    -1
+   a=4:    -1    -1     5    -5     1     1
+   a=5:     1     5    -1     1    -5    -1
+   a=6:     5     1    -1     1    -1    -5
+   (compare to reduced f via ||.|| symmetry)
+
+Area term A=2ab(P-a)(P-b)/P and defect f-A (P=7,11):
+  P=7:
+    a=1: defects = ['12/7', '20/7', '24/7']
+    a=2: defects = ['20/7', '24/7', '12/7']
+    a=3: defects = ['24/7', '12/7', '20/7']
+  P=11:
+    a=1: defects = ['20/11', '36/11', '48/11', '56/11', '60/11']
+    a=2: defects = ['36/11', '56/11', '60/11', '48/11', '20/11']
+    a=3: defects = ['48/11', '60/11', '36/11', '20/11', '56/11']
+    a=4: defects = ['56/11', '48/11', '20/11', '60/11', '36/11']
+    a=5: defects = ['60/11', '20/11', '56/11', '36/11', '48/11']
+  P=13:
+    a=1: defects = ['24/13', '44/13', '60/13', '72/13', '80/13', '84/13']
+    a=2: defects = ['44/13', '72/13', '84/13', '80/13', '60/13', '24/13']
+    a=3: defects = ['60/13', '84/13', '72/13', '24/13', '44/13', '80/13']
+    a=4: defects = ['72/13', '80/13', '24/13', '60/13', '84/13', '44/13']
+    a=5: defects = ['80/13', '60/13', '44/13', '84/13', '24/13', '72/13']
+    a=6: defects = ['84/13', '24/13', '80/13', '44/13', '72/13', '60/13']

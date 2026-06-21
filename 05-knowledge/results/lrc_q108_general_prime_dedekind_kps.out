@@ -1,0 +1,22 @@
+==========================================================================
+GENERAL-PRIME residue-only discrepancy law  D_P = G_P(||p||,||q||)/(P p q)
+==========================================================================
+P=3: residue-only=True; transpose-sym=True; first-row=4(T(M)-T(M-b))? True; max G=4, G/(=4): max g=1
+P=5: residue-only=True; transpose-sym=True; first-row=4(T(M)-T(M-b))? True; max G=16, G/(=4): max g=4
+P=7: residue-only=True; transpose-sym=True; first-row=4(T(M)-T(M-b))? True; max G=44, G/(=4): max g=11
+P=11: residue-only=True; transpose-sym=True; first-row=4(T(M)-T(M-b))? True; max G=168, G/(=4): max g=42
+P=13: residue-only=True; transpose-sym=True; first-row=4(T(M)-T(M-b))? True; max G=276, G/(=4): max g=69
+
+==========================================================================
+DEDEKIND: signed s(slope,P) is the Fourier-1 shadow; G_P is the L1 version (distinct)
+==========================================================================
+ P=7: sample (p/q, G_P, slope=p q^-1 mod P, classical s(slope,P)):
+   2/1: G= 20  slope=2  s(slope,7)=1/14
+   3/2: G= 36  slope=5  s(slope,7)=-1/14
+   4/3: G= 44  slope=6  s(slope,7)=-5/14
+   5/4: G= 36  slope=3  s(slope,7)=-1/14
+   6/5: G= 20  slope=4  s(slope,7)=1/14
+   11/6: G= 24  slope=3  s(slope,7)=-1/14
+
+  => G_P (absolute/L1) != |s| (signed); same residue-only+reciprocity HOME, different functional.
+DONE.

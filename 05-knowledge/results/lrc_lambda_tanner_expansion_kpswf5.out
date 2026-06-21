@@ -1,0 +1,46 @@
+======================================================================================
+THREAD B (refined): the REAL Tanner-expansion story for Lambda(E) vs corr(E)
+======================================================================================
+
+(A) GIRTH DEGENERACY: any two relations sharing 2 variables => 4-cycle.
+    Check whether girth=4 universally for B=2, support<=4 (k=8).
+    4-cycle present (consec, Sidon-MC, Sidon-pd, random) = [True, True, True, True]
+    => girth is a DEGENERATE invariant here (always 4). Girth does NOT separate
+       AP from Sidon. The discriminating Tanner statistic is RELATION DENSITY,
+       not girth or spectral mixing. (First-pass sigma_2 even went backwards:
+       denser AP Tanner MIXES BETTER, so the naive expander hypothesis is FALSE.)
+
+(C/D) Does the height-weighted relation enumerator W (Tanner-derived) UPPER-BOUND |corr|?
+      Random k=8 sets, offsets in [0,40], 0 pinned. W=Sum_{relations}1/prod|coef|, support>=3.
+      battery size=180; argmax corr=[0, 1, 2, 3, 4, 5, 6, 7] (corr=0.3027)
+      max |corr|/W3p ratio = 0.0005; mean=0.0001
+      => with C=0.001, |corr| <= C*W3p holds on ALL 180 sets.
+      Binding (max-ratio) set: argmax-ratio set=[0, 1, 2, 3, 4, 5, 6, 7] (AP? True)
+
+(D) ROBUST correlations (random battery, n=180):
+      Pearson(corr, #checks)        = +0.751
+      Pearson(corr, A3)             = +0.671
+      Pearson(corr, W3p enumerator) = +0.779
+      Pearson(corr, dmin)           = -0.134
+      Pearson(corr, vertex-exp h)   = -0.140  (h small=poor exp)
+
+  INTERPRETATION: the binding Tanner statistic is the RELATION-DENSITY / weight
+  enumerator W (#checks, A3, W3p), NOT girth or spectral gap. 'Good expansion'
+  in the classical (sparse-graph sigma_2) sense is the WRONG frame: the hard case
+  (AP) has a DENSE relation set that mixes WELL spectrally; hardness = MANY
+  low-weight codewords = low MIN-DISTANCE (anti-MDS), exactly HYP-2723/2724.
+
+======================================================================================
+(E) Paley / QR_7 circulant relation code -- weakly regular?
+======================================================================================
+set                        corr  #chk   biReg(v,c)?          vdeg          cdeg
+QR7 {1,2,4}              0.0000     5(False, False)        [4, 5]        [2, 3]
+QR7+0 {0,1,2,4}          0.0000    35(False, False)  [28, 30, 35]     [2, 3, 4]
+full Z7* {1..6}          0.0000  1136(False, False)[937, 955, 965, 971, 976, 977][2, 3, 4, 5, 6]
+Z7 {0..6} consec         0.1415  8088(False, False)[6639, 6765, 6843, 6885, 6927, 6928, 6952][2, 3, 4, 5, 6, 7]
+QR7 doubled {2,4,1}      0.0000     5(False, False)        [4, 5]        [2, 3]
+
+  Weakly-regular (biregular Tanner) <=> all variables in same #relations AND
+  all relations same support. QR7 is a difference set; its relation code inherits
+  the circulant symmetry (Z/7 cyclic auto), so vertex degrees are EQUAL under the
+  cyclic group action -- variable-regular. Check-regular fails when support varies.

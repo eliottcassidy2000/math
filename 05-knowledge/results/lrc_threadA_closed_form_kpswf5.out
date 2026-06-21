@@ -1,0 +1,103 @@
+Searching for the UNIFORM closed form f_P(a,b), a,b in 1..(P-1)/2
+==========================================================================
+
+P=3 (h=1): f-table
+      4
+
+P=5 (h=2): f-table
+      8   12
+     12   16
+
+P=7 (h=3): f-table
+     12   20   24
+     20   32   36
+     24   36   44
+
+P=11 (h=5): f-table
+     20   36   48   56   60
+     36   64   84   96  100
+     48   84  108  124  136
+     56   96  124  148  156
+     60  100  136  156  168
+
+P=13 (h=6): f-table
+     24   44   60   72   80   84
+     44   80  108  128  140  144
+     60  108  144  168  188  200
+     72  128  168  204  228  236
+     80  140  188  228  248  264
+     84  144  200  236  264  276
+
+P=17 (h=8): f-table
+     32   60   84  104  120  132  140  144
+     60  112  156  192  220  240  252  256
+     84  156  216  264  300  328  352  364
+    104  192  264  320  372  412  436  444
+    120  220  300  372  432  472  496  516
+    132  240  328  412  472  516  552  564
+    140  252  352  436  496  552  580  600
+    144  256  364  444  516  564  600  616
+
+P=19 (h=9): f-table
+     36   68   96  120  140  156  168  176  180
+     68  128  180  224  260  288  308  320  324
+     96  180  252  312  360  396  428  452  464
+    120  224  312  384  444  500  540  564  572
+    140  260  360  444  524  584  624  652  672
+    156  288  396  500  584  644  696  732  744
+    168  308  428  540  624  696  752  780  804
+    176  320  452  564  652  732  780  824  840
+    180  324  464  572  672  744  804  840  860
+
+==========================================================================
+Testing closed-form hypotheses (exact rational, must match ALL entries):
+   H1: 2ab(P-a)(P-b)/P^2                                P= 3: no
+   H1: 2ab(P-a)(P-b)/P^2                                P= 5: no
+   H1: 2ab(P-a)(P-b)/P^2                                P= 7: no
+   H1: 2ab(P-a)(P-b)/P^2                                P=11: no
+   H1: 2ab(P-a)(P-b)/P^2                                P=13: no
+   H1: 2ab(P-a)(P-b)/P^2                                P=17: no
+   H1: 2ab(P-a)(P-b)/P^2                                P=19: no
+   --> H1: 2ab(P-a)(P-b)/P^2: fails
+   H2: 4ab(P-a)(P-b)/P^2                                P= 3: no
+   H2: 4ab(P-a)(P-b)/P^2                                P= 5: no
+   H2: 4ab(P-a)(P-b)/P^2                                P= 7: no
+   H2: 4ab(P-a)(P-b)/P^2                                P=11: no
+   H2: 4ab(P-a)(P-b)/P^2                                P=13: no
+   H2: 4ab(P-a)(P-b)/P^2                                P=17: no
+   H2: 4ab(P-a)(P-b)/P^2                                P=19: no
+   --> H2: 4ab(P-a)(P-b)/P^2: fails
+
+  ratio f(a,b) / [a b (P-a)(P-b)] (look for constant):
+   P= 3: distinct ratios = [Fraction(1, 1)]
+   P= 5: distinct ratios = [Fraction(4, 9), Fraction(1, 2)]
+   P= 7: distinct ratios = [Fraction(3, 10), Fraction(11, 36), Fraction(8, 25), Fraction(1, 3)]
+   P=11: distinct ratios = [Fraction(31, 168), Fraction(5, 27), Fraction(13, 70), Fraction(14, 75), Fraction(3, 16), Fraction(37, 196), Fraction(17, 90), Fraction(4, 21), Fraction(7, 36), Fraction(16, 81), Fraction(1, 5)]
+   P=13: distinct ratios = [Fraction(31, 200), Fraction(7, 45), Fraction(12, 77), Fraction(59, 378), Fraction(23, 147), Fraction(47, 300), Fraction(11, 70), Fraction(17, 108), Fraction(19, 120), Fraction(10, 63), Fraction(7, 44), Fraction(4, 25), Fraction(16, 99), Fraction(9, 55), Fraction(20, 121), Fraction(1, 6)]
+   P=17: distinct ratios = [Fraction(62, 525), Fraction(82, 693), Fraction(20, 169), Fraction(29, 245), Fraction(43, 363), Fraction(16, 135), Fraction(37, 312), Fraction(47, 396), Fraction(77, 648), Fraction(5, 42), Fraction(59, 495), Fraction(31, 260), Fraction(43, 360), Fraction(46, 385), Fraction(88, 735), Fraction(109, 910), Fraction(3, 25), Fraction(103, 858), Fraction(13, 108), Fraction(11, 91), Fraction(4, 33), Fraction(11, 90), Fraction(6, 49), Fraction(8, 65), Fraction(13, 105), Fraction(28, 225), Fraction(1, 8)]
+   P=19: distinct ratios = [Fraction(65, 616), Fraction(37, 350), Fraction(11, 104), Fraction(163, 1540), Fraction(161, 1521), Fraction(9, 85), Fraction(143, 1350), Fraction(62, 585), Fraction(7, 66), Fraction(26, 245), Fraction(107, 1008), Fraction(43, 405), Fraction(29, 273), Fraction(67, 630), Fraction(103, 968), Fraction(47, 441), Fraction(61, 572), Fraction(8, 75), Fraction(47, 440), Fraction(25, 234), Fraction(131, 1225), Fraction(20, 187), Fraction(146, 1365), Fraction(113, 1056), Fraction(3, 28), Fraction(29, 270), Fraction(11, 102), Fraction(13, 120), Fraction(24, 221), Fraction(13, 119), Fraction(7, 64), Fraction(28, 255), Fraction(15, 136), Fraction(32, 289), Fraction(1, 9)]
+
+  is f(a,b) rank-1 (separable) as a matrix?  check f(a,b)*f(1,1) vs f(a,1)*f(1,b):
+   P= 3: separable(rank-1)=True
+   P= 5: separable(rank-1)=False
+   P= 7: separable(rank-1)=False
+   P=11: separable(rank-1)=False
+   P=13: separable(rank-1)=False
+   P=17: separable(rank-1)=False
+   P=19: separable(rank-1)=False
+
+  edge marginal f(a,1) vs a (the b=1 column):
+   P= 3: f(a,1)= [4]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1)]
+   P= 5: f(a,1)= [8, 12]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1)]
+   P= 7: f(a,1)= [12, 20, 24]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)]
+   P=11: f(a,1)= [20, 36, 48, 56, 60]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)]
+   P=13: f(a,1)= [24, 44, 60, 72, 80, 84]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)]
+   P=17: f(a,1)= [32, 60, 84, 104, 120, 132, 140, 144]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)]
+   P=19: f(a,1)= [36, 68, 96, 120, 140, 156, 168, 176, 180]
+        f(a,1)/[a(P-a)] = [Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1), Fraction(2, 1)]
