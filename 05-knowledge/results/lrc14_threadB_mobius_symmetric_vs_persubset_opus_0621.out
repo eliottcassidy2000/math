@@ -1,0 +1,33 @@
+====================================================================================================
+THREAD B CRUX: SYMMETRIC (moment / level-1 Delsarte) vs PER-SUBSET (Mobius) consec-max certificate.
+  s_sym = slack of best degree-R MOMENT functional;  s_sub = slack of best per-subset functional.
+  s=0 => certificate exists.  s_sym=0 => level-1 Delsarte already certifies (COLLAPSE).
+====================================================================================================
+
+  k=8  (#shapes=11432)
+    R=2: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+        symmetric y_r (degree-2 moment cert): ['481/1470', '0', '0']  (even-Bonferroni would be [1,-1,1])
+    R=3: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+    R=4: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+
+  k=9  (#shapes=6435)
+    R=2: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+        symmetric y_r (degree-2 moment cert): ['2447/5880', '0', '0']  (even-Bonferroni would be [1,-1,1])
+    R=3: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+    R=4: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+
+  k=10  (#shapes=2002)
+    R=2: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+        symmetric y_r (degree-2 moment cert): ['1746/3461', '0', '0']  (even-Bonferroni would be [1,-1,1])
+    R=3: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+    R=4: s_sym=  0.000000  s_persubset=  0.000000   -> BOTH certify -> COLLAPSE to level-1 (moment suffices)
+
+====================================================================================================
+VERDICT: if s_sym=0 at low R for all k, consec-max is a LEVEL-1 (moment/Delsarte) certificate;
+  the per-subset Mobius lattice adds NOTHING to the extremality => Prop-1.2 COLLAPSE confirmed.
+  (Note: a degree-2 MOMENT certificate that is valid+tight+consec-maximal = a clean, finite,
+   single-inequality proof of consec-max on the bounded window -- modulo proving the moment
+   inequalities S_r(E) feed it, which is the HYP-2726 Delsarte-dual already on file.)
+====================================================================================================
+
+DONE.

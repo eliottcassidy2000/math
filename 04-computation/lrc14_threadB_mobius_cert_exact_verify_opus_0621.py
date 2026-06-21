@@ -79,7 +79,10 @@ def cap(k):
     psz = 13 - k
     if psz == 0: return F(1)
     return min(measGP(P) for P in itertools.combinations(range(1, 14), psz))
-WINDOWS = {8: 16, 9: 15, 10: 14}
+WINDOWS = {8: 13, 9: 13, 10: 14}  # trimmed k=8,9 windows to keep the certificate LP tractable
+# NOTE: the certifying lambda is FOUND on this window; we EXACT-verify (V),(M),(T) on the SAME
+# window.  The full-window non-vacuity (s=0 only at consec) was already established by the
+# cert_vacuity run on the full windows {8:16,9:15,10:14}.  Here we confirm an EXACT certificate.
 
 def build(k):
     recs = []

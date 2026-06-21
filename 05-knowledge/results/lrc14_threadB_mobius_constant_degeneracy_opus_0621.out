@@ -1,0 +1,29 @@
+====================================================================================================
+HONEST CLOSE: the slack-LP 'certificate' is the TRIVIAL CONSTANT F=measS7(consec) (circular).
+Real question: is consec the ARGMAX over the window of a PER-E-VALID Delsarte-cone functional
+  F = sum_j c_j M_j, c_j>=0 (g(t)=sum c_j K_j(t)>=1[t=0] => F>=measS7 per-E, no constant trick)?
+====================================================================================================
+
+  k=8 (#shapes=11432): min slack over Delsarte cone (g(t)>=1[t=0], F(consec)=measS7) = 0.000000
+        => consec IS the argmax of a per-E-valid Delsarte functional. g(t)~[np.float64(1.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0)]
+           CLEAN consec-max via ONE Delsarte inequality (not circular).
+
+  k=9 (#shapes=6435): min slack over Delsarte cone (g(t)>=1[t=0], F(consec)=measS7) = 0.000000
+        => consec IS the argmax of a per-E-valid Delsarte functional. g(t)~[np.float64(1.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0)]
+           CLEAN consec-max via ONE Delsarte inequality (not circular).
+
+  k=10 (#shapes=2002): min slack over Delsarte cone (g(t)>=1[t=0], F(consec)=measS7) = 0.000000
+        => consec IS the argmax of a per-E-valid Delsarte functional. g(t)~[np.float64(1.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0), np.float64(-0.0)]
+           CLEAN consec-max via ONE Delsarte inequality (not circular).
+
+====================================================================================================
+FINAL THREAD B VERDICT
+  - The per-subset (Mobius) BOUND strictly improves the level-1 moment bound (Part B), but
+  - the per-subset Mobius EXTREMALITY 'certificate' the slack-LP returns is the TRIVIAL
+    constant F=measS7(consec) -- CIRCULAR (validity = the claim).  The genuinely per-subset
+    weights collapse to symmetric/constant (Prop 1.2 COLLAPSE for the extremizer).
+  - The only NON-circular degree-1 object, the per-E-valid Delsarte cone, is tested here:
+    its consec-tight slack tells whether consec-max is ONE Delsarte inequality or aggregate.
+====================================================================================================
+
+DONE.

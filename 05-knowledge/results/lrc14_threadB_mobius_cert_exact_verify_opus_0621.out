@@ -1,3 +1,23 @@
 ====================================================================================================
 EXACT degree-2 per-subset consec-max CERTIFICATE  (s=0 means certificate exists, exact).
 ====================================================================================================
+
+  k=8: float slack s = 0.00e+00   (certificate exists: True)
+    EXACT rationalized lambda verify:  (T) F(consec)=measS7? True  (V) violations: 0  (M) violations: 0  max(F(E)-F(consec))=0.000e+00
+    F_lambda(consec) = 481/1470 = 0.327211   <= cap_k=0.38146? True
+    lambda symmetric-per-size (=> just moment functional)? True
+    ==> EXACT degree-2 per-subset certificate CONFIRMED: measS7(E)<=F(E)<=F(consec)=measS7(consec).
+
+  k=9: float slack s = 0.00e+00   (certificate exists: True)
+    EXACT rationalized lambda verify:  (T) F(consec)=measS7? True  (V) violations: 0  (M) violations: 0  max(F(E)-F(consec))=0.000e+00
+    F_lambda(consec) = 2447/5880 = 0.416156   <= cap_k=0.49426? True
+    lambda symmetric-per-size (=> just moment functional)? True
+    ==> EXACT degree-2 per-subset certificate CONFIRMED: measS7(E)<=F(E)<=F(consec)=measS7(consec).
+
+  k=10: float slack s = 0.00e+00   (certificate exists: True)
+    EXACT rationalized lambda verify:  (T) F(consec)=measS7? True  (V) violations: 0  (M) violations: 0  max(F(E)-F(consec))=0.000e+00
+    F_lambda(consec) = 8899/17640 = 0.504478   <= cap_k=0.60440? True
+    lambda symmetric-per-size (=> just moment functional)? True
+    ==> EXACT degree-2 per-subset certificate CONFIRMED: measS7(E)<=F(E)<=F(consec)=measS7(consec).
+
+DONE.

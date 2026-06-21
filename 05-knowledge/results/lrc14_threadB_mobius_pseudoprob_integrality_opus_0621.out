@@ -1,0 +1,40 @@
+====================================================================================================
+THREAD B: MOBIUS / PSEUDOPROBABILITY INTEGRALITY ROUTE  (arXiv:2211.01248 Lem 3.1)
+====================================================================================================
+
+====================================================================================================
+(A) MOBIUS DICTIONARY: q_A (UPPER, =zeta) <-> p_B (EXACT, =mobius) on subset lattice of {1..6}
+    measS7 = p_emptyset = sum_A (-1)^|A| q_A  (full inclusion-exclusion = Mobius at bottom).
+====================================================================================================
+  consec_8:  measS7 = 481/1470 = 0.32721
+  sum_A (-1)^|A| q_A = 481/1470   matches p_emptyset: True
+  q_A by size r (these are the per-subset pseudoprobabilities, NOT just S_r):
+    r=0: distinct q_A values = ['1']  (count of distinct = 1)  S_0=1
+    r=1: distinct q_A values = ['117/490', '179/735', '799/2940', '82/245']  (count of distinct = 4)  S_1=393/245
+    r=2: distinct q_A values = ['149/1470', '5/49', '311/2940', '117/980', '89/735', '37/294', '31/245', '32/245', '20/147', '73/490']  (count of distinct = 10)  S_2=188/105
+    r=3: distinct q_A values = ['3/98', '2/49', '13/294', '13/245', '89/1470', '3/49', '31/490', '1/14', '18/245', '11/147', '19/245', '4/49', '9/98']  (count of distinct = 13)  S_3=991/735
+
+====================================================================================================
+(B) COLLAPSE TEST: subset-LP (per-subset q_A, |A|<=R, + Mobius p_B>=0) vs moment-LP (level sums).
+    Fix consec's exact data up to level R; maximize measS7 over feasible pseudo-laws.
+====================================================================================================
+
+  k  R    moment-LP    subset-LP     measS7        cap  verdict
+  8  1      0.73265      0.66531    0.32721    0.38146  subset IMPROVES
+  8  2      0.49637      0.47925    0.32721    0.38146  subset IMPROVES
+  8  3      0.41255      0.40578    0.32721    0.38146  subset IMPROVES
+
+  9  1      0.76978      0.70680    0.41616    0.49426  subset IMPROVES
+  9  2      0.56675      0.55051    0.41616    0.49426  subset IMPROVES
+  9  3      0.49288      0.46718    0.41616    0.49426  subset IMPROVES
+
+ 10  1      0.80115      0.74751    0.50448    0.60440  subset IMPROVES
+ 10  2      0.63074      0.60601    0.50448    0.60440  subset IMPROVES
+ 10  3      0.57008      0.54875    0.50448    0.60440  subset IMPROVES
+
+ 11  1      0.82661      0.76519    0.58146    0.72527  subset IMPROVES
+ 11  2      0.68305      0.65329    0.58146    0.72527  subset IMPROVES
+ 11  3      0.63391      0.61667    0.58146    0.72527  subset IMPROVES
+
+
+DONE (Part B). See (C) for the configuration-polytope integrality test.
