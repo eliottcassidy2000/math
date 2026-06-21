@@ -1,5 +1,5 @@
 ---
-id: HYP-2750
+id: HYP-2751
 title: LRC14 Delsarte/Tanner carriers are signed dessins with Ferrers quotients, not weakly regular LDPC-like graphs
 status: OPEN guardrail; exact finite audit
 source: codex-2026-06-21-S73
@@ -19,7 +19,7 @@ related:
   - OPEN-Q-108
 ---
 
-# HYP-2750: Signed Tanner/Dessin Weak-Regularity Audit
+# HYP-2751: Signed Tanner/Dessin Weak-Regularity Audit
 
 ## Claim
 
@@ -113,9 +113,9 @@ are not interchangeable.
 - Incoming HYP-2746 tests Tanner graphs on the relation code `Lambda(E)` and
   finds the same warning from a different carrier: girth, expansion, and
   absolute enumerators do not give the LRC cap; signed weight distribution
-  does.  HYP-2750 is the parallel audit for the THM-534 Delsarte dual carrier.
+  does.  HYP-2751 is the parallel audit for the THM-534 Delsarte dual carrier.
 - Incoming HYP-2745 completes the general-prime residue discrepancy program;
-  HYP-2750 therefore keeps Belyi/dessin language as an address layer rather
+  HYP-2751 therefore keeps Belyi/dessin language as an address layer rather
   than a replacement for the signed Delsarte proof stack.
 
 ## Proof Order
@@ -125,7 +125,7 @@ the exact residue numerator, and HYP-2741 repairs the finite-`f1` convergence
 rate.  The honest remaining gaps are the r>=3 pairwise lift, base-size
 domination, and the upstream consec-max / generated-depth extremality problem.
 
-HYP-2750 therefore points to this proof order:
+HYP-2751 therefore points to this proof order:
 
 ```text
 generated depth word
