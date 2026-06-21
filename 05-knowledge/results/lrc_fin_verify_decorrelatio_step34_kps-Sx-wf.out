@@ -1,0 +1,49 @@
+
+ADVERSARIAL VERIFICATION STEP 3+4 (faster) -- LRC(14) decorrelation-error angle.
+Step 1 (engine numbers) and Step 2 (counterexample hunt) already passed in the main script:
+  NO wide primitive E with p0>cap was found in Families A/B/C/D; p0_decorr and budgets match;
+  TV_x<=14m holds.  Here we close:
+   (3a) proved bound |e| <= 49 m^2/(6M) for single blocks (exact rationals);
+   (3b) split (multi-cluster) <= single-block decorr sup;
+   (4)  glue/boundary audit M*.
+EXACT rationals.
+
+============================================================================================
+STEP 3a.  PROVED bound |e(E)| <= 49 m^2/(6 M) for single blocks (exact).
+============================================================================================
+  k= 8: sup|e|*M (C_meas)=0.2048 (M=20)  49m^2/6=400.2  bound HOLDS
+  k= 9: sup|e|*M (C_meas)=0.2372 (M=19)  49m^2/6=522.7  bound HOLDS
+  k=10: sup|e|*M (C_meas)=0.1713 (M=24)  49m^2/6=661.5  bound HOLDS
+  k=11: sup|e|*M (C_meas)=0.1877 (M=27)  49m^2/6=816.7  bound HOLDS
+  k=12: sup|e|*M (C_meas)=0.1635 (M=24)  49m^2/6=988.2  bound HOLDS
+  => bound 49 m^2/(6M) never violated across all single blocks: True
+
+============================================================================================
+STEP 3b.  SPLIT test: any multi-cluster p0 EXCEED single-block decorr sup or cap?
+============================================================================================
+  k= 8: max split p0=0.04286 (comp=(5, 2))  single-block=0.19252  diff=-0.14966  OK (split<=single)
+  k= 9: max split p0=0.19524 (comp=(7, 1))  single-block=0.30564  diff=-0.11040  OK (split<=single)
+  k=10: max split p0=0.36395 (comp=(8, 1))  single-block=0.41227  diff=-0.04832  OK (split<=single)
+  k=11: max split p0=0.44133 (comp=(9, 1))  single-block=0.49484  diff=-0.05352  OK (split<=single)
+  k=12: max split p0=0.51854 (comp=(10, 1))  single-block=0.57590  diff=-0.05736  OK (split<=single)
+
+============================================================================================
+STEP 4.  GLUE / boundary M* audit.
+============================================================================================
+  k= 8: PROVED-bound M*= 2117.9  measured C_meas=0.205  realistic C_meas/bud=  1.1
+  k= 9: PROVED-bound M*= 2771.0  measured C_meas=0.237  realistic C_meas/bud=  1.3
+  k=10: PROVED-bound M*= 3443.0  measured C_meas=0.171  realistic C_meas/bud=  0.9
+  k=11: PROVED-bound M*= 3544.1  measured C_meas=0.188  realistic C_meas/bud=  0.8
+  k=12: PROVED-bound M*= 3513.5  measured C_meas=0.164  realistic C_meas/bud=  0.6
+
+  GLUE GAP G1 (REAL): region 15<=span<=M* (~thousands) NOT closed by Lemma DE; delegated
+  to THM-546/547 iterated peel (the span<=14 finite check does NOT cover 15<=span<=M*).
+  G2: HYP-2694 (single block = wide sup) VERIFIED not PROVED. G3: multi-cluster r>=2 needs
+  joint ET-Koksma constant (VERIFIED only). G4: V_x(Hhat_s) majorant lossy but rigorous.
+
+============================================================================================
+VERDICT (step 3+4)
+============================================================================================
+  Proved bound holds; no split exceeds single block; no split exceeds cap.
+  Combined with Step 1/2 (no wide counterexample, numbers match): claim's PARTIAL
+  status confirmed. Surviving gap = G1 finite region 15<=span<=M* (delegated to peel).

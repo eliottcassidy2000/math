@@ -1,0 +1,44 @@
+
+Follow-up adversarial checks for the single-block-cover-bound angle.
+ (A) TASK 2c: does any decorrelated SPLIT exceed the single block?
+ (B) The decorrelation-error budget: the prompt claims error ~0.01; measure it exactly.
+ (C) Critical: is the single-block decorr p0_decorr even an UPPER BOUND for finite wide p0(E)?
+     If finite p0 > p0_decorr by a margin comparable to / exceeding the cap-margin, the
+     whole "wide cover <= single-block-decorr < cap" logic is BROKEN (it is not a majorant).
+ (D) Wider/denser counterexample hunt: span up to ~60, many AP differences, two-scale, random.
+
+==============================================================================
+(A) TASK 2c: decorrelated SPLITS vs single block (grid). Does any split exceed?
+==============================================================================
+  k=8 m=7: single-block(exact)=0.19252
+      max split (<=4 blocks) = 0.09001 at [6, 1]  <= single
+  k=9 m=8: single-block(exact)=0.30564
+      max split (<=4 blocks) = 0.23166 at [7, 1]  <= single
+  k=10 m=9: single-block(exact)=0.41227
+      max split (<=4 blocks) = 0.33139 at [8, 1]  <= single
+  k=11 m=10: single-block(exact)=0.49483
+      max split (<=4 blocks) = 0.44011 at [9, 1]  <= single
+  k=12 m=11: single-block(exact)=0.57589
+      max split (<=4 blocks) = 0.51397 at [10, 1]  <= single
+
+==============================================================================
+(C) CRITICAL: is single-block-decorr an UPPER BOUND for finite wide p0(E)?
+    Compare exact finite p0 of wide AP-d=1 (consec) blocks vs decorr limit.
+==============================================================================
+    If finite p0 >> decorr, then 'p0(E) <= p0_decorr < cap' is NOT the proof;
+    the real safety is p0(E) < cap DIRECTLY (decorr is a red herring as a majorant).
+  k=8: max finite consec p0(wide)=0.31812  decorr_limit=0.19252  finite-MINUS-decorr=+0.12560  cap=0.38146  decorr is NOT an upper bound (finite>decorr)
+  k=9: max finite consec p0(wide)=0.41941  decorr_limit=0.30564  finite-MINUS-decorr=+0.11377  cap=0.49426  decorr is NOT an upper bound (finite>decorr)
+  k=10: max finite consec p0(wide)=0.50180  decorr_limit=0.41227  finite-MINUS-decorr=+0.08953  cap=0.60440  decorr is NOT an upper bound (finite>decorr)
+  k=11: max finite consec p0(wide)=0.58149  decorr_limit=0.49483  finite-MINUS-decorr=+0.08666  cap=0.72527  decorr is NOT an upper bound (finite>decorr)
+  k=12: max finite consec p0(wide)=0.62766  decorr_limit=0.57589  finite-MINUS-decorr=+0.05176  cap=0.85714  decorr is NOT an upper bound (finite>decorr)
+
+==============================================================================
+(D) EXTENDED counterexample hunt: span up to ~60, AP-d up to 9, two-scale, random.
+==============================================================================
+  tested 10574 wide primitive sets; counterexample found = False
+  k=8: max wide p0=0.320386  cap=0.381463  margin=0.061077  E=(1, 4, 7, 10, 13, 16, 19, 22)
+  k=9: max wide p0=0.442289  cap=0.494256  margin=0.051967  E=(1, 3, 5, 7, 9, 11, 13, 15, 17)
+  k=10: max wide p0=0.508430  cap=0.604396  margin=0.095966  E=(1, 4, 7, 10, 13, 16, 19, 22, 25, 28)
+  k=11: max wide p0=0.591549  cap=0.725275  margin=0.133725  E=(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21)
+  k=12: max wide p0=0.630379  cap=0.857143  margin=0.226763  E=(1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34)

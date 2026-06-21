@@ -1,0 +1,6 @@
+(C) finite wide consec p0 vs single-block decorr limit (is decorr an upper bound?)
+k=8 max finite consec p0=0.31812 decorr=0.19252 finite-decorr=+0.12560 cap=0.38146 DECORR NOT UPPER BOUND
+k=9 max finite consec p0=0.41941 decorr=0.30564 finite-decorr=+0.11377 cap=0.49426 DECORR NOT UPPER BOUND
+k=10 max finite consec p0=0.50180 decorr=0.41227 finite-decorr=+0.08953 cap=0.60440 DECORR NOT UPPER BOUND
+k=11 max finite consec p0=0.58149 decorr=0.49483 finite-decorr=+0.08666 cap=0.72527 DECORR NOT UPPER BOUND
+k=12 max finite consec p0=0.62766 decorr=0.57589 finite-decorr=+0.05176 cap=0.85714 DECORR NOT UPPER BOUND

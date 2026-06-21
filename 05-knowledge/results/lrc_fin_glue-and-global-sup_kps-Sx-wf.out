@@ -1,0 +1,77 @@
+
+lrc_fin_glue-and-global-sup_kps-Sx-wf.py   (kps-2026-06-20, angle = GLUE-AND-GLOBAL-SUP)
+=======================================================================================
+FINALIZING the LRC(14) SECTOR ROUTE.  The route is
+
+   LRC(14)-S3  <=>  p0(E) = meas(S7(E)) <= cap_k   for every primitive k-set E
+                    (0 in E, |E| = k, k = 8..12),
+
+caps  cap_8..cap_12 = 2243/5880, 1979/4004, 55/91, 66/91, 6/7.
+
+This angle does FOUR jobs and then TABULATES the whole chain with an HONEST per-link status:
+
+ (G1) GLOBAL-SUP / UNIFICATION.  Verify that the GLOBAL sup over ALL primitive E (k fixed) of
+      p0(E) is attained by the PINNED consec_k block (the finite-check argmax), and that every
+      WIDE E sits strictly below.  We verify two facts that make "sweeping = phi-average of the
+      pinned pattern <= pinned" precise:
+        (a) consec_k is the argmax of p0 over all bounded E (span<=14), EXACTLY (re-confirm).
+        (b) the single-block decorrelated cover (the M->inf sweeping limit of a coherent block)
+            is BELOW p0(consec_k), and BELOW cap_k, with a large margin.
+      => sweeping limit < pinned finite max.  (The shift-average smears the sector pattern,
+         strictly lowering coverage.)
+
+ (G2) BOUNDARY GLUE.  Confirm there is NO GAP at the transition span = 15..16 (where pinned
+      becomes sweeping).  The boundary collar (one far element w, residual E' bounded) reduces
+      via THM-546/547 to a FINITE check 14 < w <= w*(k).  We re-run that check EXHAUSTIVELY
+      over E' (NOT risk-ranked-sampled) for the dangerous low-span band, and EXACTLY (rationals),
+      for k = 8,9,10,11,12, w in (14, W] for a chosen window W that covers the geometric
+      transition.  We also sweep ALL primitive E of small span 15..SPAN_MAX exhaustively.
+
+ (G3) ASSEMBLY LEDGER.  Tabulate every link of the route with PROVED / VERIFIED / OPEN.
+
+ (G4) ADVERSARIAL HUNT.  Search hard for ANY wide primitive E with p0(E) > cap_k:
+        - all consec/AP-like and dilated-AP rows (scale invariance test),
+        - 2-far and 3-far "collar" rows with bounded core + far spikes,
+        - resonant multi-scale cores (geometric ratios 2,3),
+        - random primitive wide rows.
+      Report the global champion p0/cap ratio actually observed.
+
+EXACT rationals throughout (fractions.Fraction).  Outputs saved alongside.
+
+==============================================================================
+G1  GLOBAL-SUP / UNIFICATION:  pinned consec_k  vs  sweeping single-block limit
+==============================================================================
+  k :  p0(consec_k)   single-block-decorr(M->inf)   cap_k       sweep<pinned? sweep<cap?
+   8:  0.32721        0.19252              0.38146     YES         YES
+   9:  0.41616        0.30564              0.49426     YES         YES
+  10:  0.50448        0.41227              0.60440     YES         YES
+  11:  0.58146        0.49484              0.72527     YES         YES
+  12:  0.62411        0.57590              0.85714     YES         YES
+
+  READING: the sweeping (wide single-block) limit is the phi-SHIFT-AVERAGE of the
+  pinned consec sector pattern.  It is STRICTLY BELOW the pinned value AND below cap_k.
+  So among coherent (single-cluster) shapes, pinned consec is the sup and wide is lower.
+
+==============================================================================
+G1b  consec_k is the argmax of p0 over ALL bounded E (max(E) <= 14), EXACT
+==============================================================================
+  (re-confirmation of the DONE finite half; consec must be the unique top.)
+  k= 8: #sets= 3431  max p0=0.32721  argmax=(0, 1, 2, 3, 4, 5, 6, 7)  consec? True  cap-viol=0  (p0(consec)=0.32721)
+  k= 9: #sets= 3003  max p0=0.41616  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8)  consec? True  cap-viol=0  (p0(consec)=0.41616)
+  k=10: #sets= 2002  max p0=0.50448  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9)  consec? True  cap-viol=0  (p0(consec)=0.50448)
+  k=11: #sets= 1001  max p0=0.58146  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10)  consec? True  cap-viol=0  (p0(consec)=0.58146)
+  k=12: #sets=  364  max p0=0.64518  argmax=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 12)  consec? False  cap-viol=0  (p0(consec)=0.62411)
+  NOTE k=12: argmax is NOT consec (small base), but max p0 still << cap_12 (huge margin).
+
+==============================================================================
+G2  BOUNDARY GLUE — EXHAUSTIVE exact check of the span=15..SPAN_MAX transition band
+==============================================================================
+
+  --- ALL primitive E, 0 in E, max(E)=15 (span exactly 15), k=8..10 ---
+    k= 8: #prim=   3003  worst margin=+0.15477  viol=0  argworst=(0, 3, 5, 7, 9, 11, 13, 15)
+    k= 9: #prim=   3432  worst margin=+0.12266  viol=0  argworst=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+    k=10: #prim=   3003  worst margin=+0.16341  viol=0  argworst=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15)
+
+  --- ALL primitive E, 0 in E, max(E)=16 (span exactly 16), k=8..10 ---
+    k= 8: #prim=   4998  worst margin=+0.17424  viol=0  argworst=(0, 10, 11, 12, 13, 14, 15, 16)
+    k= 9: #prim=   6434  worst margin=+0.13040  viol=0  argworst=(0, 1, 2, 3, 4, 5, 6, 7, 16)

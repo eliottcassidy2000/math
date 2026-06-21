@@ -1,0 +1,82 @@
+================================================================================
+ADVERSARIAL VERIFICATION SUMMARY — LRC(14) "glue-and-global-sup" advance
+kps-2026-06-20 (verify angle). EXACT rationals (fractions.Fraction) throughout.
+Scripts: 04-computation/lrc_fin_verify_glueandgloba_kps-Sx-wf.py
+         04-computation/lrc_fin_verify_hunt_only_kps-Sx-wf.py
+================================================================================
+
+(V1) RE-DERIVE KEY INEQUALITIES — ALL EXACT MATCHES TO THE ADVANCE
+  p0(consec_8)           = 481/1470            = 0.32721  (claim 0.32721)  OK
+  single_block_decorr(7) = 283/1470            = 0.19252  (claim 0.19252)  OK
+  p0([0,19..25])         = 9524621/47108600    = 0.20218  (claim 0.20218)  OK
+  k :  p0(consec_k)  sweep(M->inf)  cap_k     sweep<pinned  pinned<cap  claim
+   8:  0.32721       0.19252        0.38146   YES           YES         OK
+   9:  0.41616       0.30564        0.49426   YES           YES         OK
+  10:  0.50448       0.41227        0.60440   YES           YES         OK
+  11:  0.58146       0.49484        0.72527   YES           YES         OK
+  12:  0.62411       0.57590        0.85714   YES           YES         OK
+  => All claimed constants reproduced EXACTLY. sweep<pinned<cap holds at every k.
+
+(V3) CLOSED-FORM / CONSTANT CHECKS — all exact
+  caps 2243/5880, 1979/4004, 55/91, 66/91, 6/7 confirmed as decimals.
+  Qb(k-1) true-wide plateau < cap_k for all k: YES.
+  ROUTE margin cap_k - p0(consec_k): +0.05425/+0.07810/+0.09992/+0.14381/+0.23303 (all > 0).
+
+(V4) BOUNDARY GLUE — exhaustive exact, span s=14..17, k=8,9,10 — NO GAP
+  k=8 : span14 +0.14915 / span15 +0.15477 / span16 +0.17424 / span17 +0.17376  (0 viol)
+  k=9 : span14 +0.09017 / span15 +0.12266 / span16 +0.13040 / span17 +0.12497  (0 viol)
+  k=10: span14 +0.12463 / span15 +0.16341 (0 viol; span16/17 not reached, heavier)
+  => Worst margin does NOT collapse at the 14->15 transition; it stays >= +0.09. No gap.
+
+(V2b) SPLIT vs SINGLE BLOCK — splitting always LOWERS the cover
+  k=8 : pinned 0.32721 ; best 2-cluster split 0.23231 ; split < pinned  YES
+  k=9 : pinned 0.41616 ; best 2-cluster split 0.38095 ; split < pinned  YES
+  k=10: pinned 0.50448 ; best 2-cluster split 0.49388 ; split < pinned  YES
+  (the "best splits" are near-consec with one element nudged out; all strictly below pinned.)
+
+(V2) ADVERSARIAL HUNT — in-scope vs out-of-scope
+  IN-SCOPE (0 in E, primitive, span>14):
+    * 0-containing dilated APs {0,d,2d,...}: == consec_k EXACTLY (scale invariance p0(dE)=p0(E)).
+    * 0 + shifted active block (genuinely wide): worst ratio 0.59/0.71/0.73 (k=8/9/10); 0 cap viol.
+    * EXHAUSTIVE 0-containing k=8 span 18: max p0 0.2217 (ratio 0.58), 0 above consec, 0 viol.
+    * EXHAUSTIVE 0-containing k=8 span 19 (18564 sets): max p0 0.2202 (ratio 0.577), 0 viol.
+    => NO in-scope wide set found above cap; none even above p0(consec_k).
+
+  ********** KEY FINDING — the 0-in-E constraint is LOAD-BEARING **********
+  The hunt's high-ratio "champions" were all NO-ZERO sets:
+    * {1,2,3,4,5,6,7,8}  p0 = 0.41616 > cap_8 = 0.38146   (EXCEEDS cap_8)
+    * {2,3,6,9,12,15,18,21} p0 = 0.37381  (ratio 0.980; > p0(consec_8)=0.32721)
+  Explanation: e=0 is a DEAD runner (frac(0*x)=0 sits in outer sector 0 forever, never
+  hits an inner sector). So a k-set WITH 0 has only k-1 ACTIVE runners; a k-set WITHOUT 0
+  has k active runners. {1..8} is an 8-active consec == p0({0..8}) == p0(consec_9) = 0.41616.
+  cap_8 is calibrated for 7 active runners, so an 8-active set legitimately overshoots it.
+  This is NOT a counterexample to the route: the route correctly RESTRICTS to 0 in E
+  (the LRC normalization). It does confirm the 0-membership hypothesis is ESSENTIAL — drop
+  it and the cap fails immediately. The route's scope statement is therefore tight, not loose.
+
+================================================================================
+VERDICT
+================================================================================
+  In-scope (0 in E, primitive, k=8..12) cap violations found: 0
+  Splits exceeding single block: 0
+  Global-sup claim (pinned consec is the sup over 0-containing E): CONSISTENT
+    - every wide 0-containing set tested sits at or below p0(consec_k) < cap_k
+    - dilated APs equal consec exactly (scale invariance), not above it
+  Boundary glue: NO GAP at span 14->15->...->17 (margins stay >= +0.09)
+  Decorrelation error positive but small: p0([0,19..25])=0.20218 vs sweep 0.19252
+    (error ~0.01 << margin ~0.19 at cap level).
+
+  HOLDS = TRUE for everything that was actually CLAIMED as PROVED/VERIFIED.
+
+  SURVIVING GAP (named, as the advance itself concedes):
+    The SOLE OPEN link — true-wide (>=2 far) closed-form error-aggregation lemma
+        p0(E) <= p0_inf + sum_far (6/49) * V_i / g_i
+    — remains only NUMERICALLY supported, NOT proved in closed form. Every computational
+    probe is consistent with it (0 violations, margins >= 0.18), but the joint multi-cluster
+    Erdos-Turan-Koksma discrepancy constant is not derived. LRC(14) is REDUCED to this one
+    standard quantitative-equidistribution lemma by this route, not fully closed.
+  SECONDARY (honesty) GAP: the case-2 collar (14<w<=w*) and the full G4 adversarial sweep
+    are exhaustive-feasible but were not run to completion here (CPU-bound exact-rational
+    measure; concurrent-agent contention). Completed bands are clean; this is a finite
+    computation, not new mathematics.
+================================================================================

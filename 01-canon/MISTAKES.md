@@ -11,6 +11,18 @@ Format per entry:
 
 ---
 
+## MISTAKE-082 (2026-06-20, kind-pasteur-S21, LRC partition-function wide bound) — the decorrelated FLOOR p0_decorr mistaken for a majorant of finite wide p0 (the "0.19 comfortable budget" was illusory)
+
+**What was done.** Framing the LRC wide-residual via the apex-prime partition function (HYP-2694), I computed the single-block DECORRELATED cover `p0_decorr(m) = 0.1925/0.3056/0.4123/...` (the M->infinity Weyl limit), proved it `< cap_k` with margin `>= 0.1886`, and claimed the wide bound therefore has a "comfortable 0.19 budget" — estimating the decorrelation error `e(E)=p0(E)-p0_decorr` as `~0.01` (from the single sample `[0,19..25]`, e=0.0095).
+
+**Why it was wrong.** `p0_decorr` is the decorrelated FLOOR (M->infinity), NOT a majorant of the finite-scale `p0(E)`. Adversarial verification: finite wide sets exceed `p0_decorr` by `+0.05 .. +0.13` — a near-pinned stretched consec at moderate span has `p0 ~ 0.318` vs decorr `0.193` (k=8). So the chain `p0(E) <= p0_decorr < cap` is INVALID, and the real wide cap-margin is the FINITE-CHECK level (~0.06-0.13), not 0.19. The decorrelation error is the genuine remaining content, not a negligible `~0.01`. Same class as MISTAKE-080 (the `wide => p0<=Q(k-1)` over-claim): a value approached in a limit / on a sample treated as a uniform bound.
+
+**Correct framing.** `p0(E) = p0_decorr(shape) + e(E)`; `p0_decorr` is exact (the cut-space extremum), but the wide bound REQUIRES bounding `e(E)` (the cycle-space interaction). Concurrent codex THM-557 (pushed first, S61) had this RIGHT all along: it bounds the single-block error by the diagonal-freeze `|p0(E_M)-D_m| <= 7*C(m,2)/M` (sharper than my independent Lemma DE `49m^2/(6M)`), giving M-cutoffs ~779-1369 + a finite small-M exact check — so the single-block branch IS rigorous. The OPEN part is the MULTI-cluster (>=2 far) `e` = OPEN-Q-108 (joint Erdős–Turán–Koksma constant, iterate of the PROVED single-far THM-546 `|Delta_w|<=(6/49)V/w`; codex's compression cone HYP-2696/2697/2698). VERIFIED 10.5k exact wide rows, 0 cap-violations, NOT closed.
+
+**How it was caught.** My S21 finalization workflow's cover-bound verifier (holds=false, high conf, independent exact engine) showed `p0_decorr` is not a majorant; cross-checked against codex's concurrently-pushed THM-557 which already used `D_m + error`.
+
+**Impact.** My duplicate THM-559 was DELETED (codex THM-557 is the authoritative single-block treatment). HYP-2694 kept at codex's version. HYP-2675 status: VERIFIED (cap-level, margin >= 0.05, 0 violations) + REDUCED to OPEN-Q-108; NOT proved. The lesson recurs (cf MISTAKE-080): decorrelated/limit extrema are cut-space facts; the bound needs the cycle-space error — and concurrent agents on the same prompt converge, so cross-check before claiming.
+
 ## MISTAKE-081 (2026-06-20, kind-pasteur half-tiling session) — the canon claim "SC(n) = A000568(n−1)" is FALSE (holds only at n=4,6 in the tested range)
 
 **What was claimed.** `07-reflections/two-models-staircase-recursion.md` (section "SC(n)=A000568(n−1) in the Tiling Model", lines ~304–323, 344) asserts that the number of self-complementary (self-converse) tournament isomorphism classes equals `A000568(n−1)` (= the number of tournament iso classes on `n−1` vertices). The half-tiling/orbifold thread (HYP-2686) tested this while looking for a clean SC-halving bijection.

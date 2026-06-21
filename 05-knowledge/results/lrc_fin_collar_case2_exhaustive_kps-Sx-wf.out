@@ -1,0 +1,19 @@
+
+lrc_fin_collar_case2_exhaustive_kps-Sx-wf.py   (kps-2026-06-20, glue support)
+=============================================================================
+THM-547 case-2 EXHAUSTIVE finite check (NOT risk-ranked sampling).
+
+Boundary collar: E = E' u {w}, E' subset {0,...,14} primitive-admissible with 0 in E',
+|E'| = k-1, and 14 < w <= w*(k).  THM-547 case-1 (w > w*) is PROVED.  Case-2 was only
+SPOT-checked upstream (k=8 risk-ranked sample, mac-mini).  Here we run case-2 EXHAUSTIVELY
+and EXACTLY for k=8 (w* = 54): ALL C(14,7) choices of E' x ALL w in {15,...,54}.
+
+If 0 violations: THM-547's case-2 is CLOSED EXACTLY for k=8 -> the entire boundary collar
+(one far element) is PROVED for k=8 (case-1 + case-2 both done).  k=9,10 (w*=90/103) are the
+same structure but heavier; we run a deterministic stride over E' for them and report.
+
+EXACT rationals (fractions.Fraction).
+
+==============================================================================
+THM-547 CASE-2 EXHAUSTIVE FINITE CHECK
+==============================================================================

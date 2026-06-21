@@ -1,0 +1,99 @@
+
+ADVERSARIAL VERIFICATION of the "single-block-cover-bound" angle for LRC(14).
+============================================================================
+Claim under test (angle "single-block-cover-bound", RESULT PROVED):
+  The single-block decorrelated cover p0_decorr(m) equals an exact finite
+  inclusion-exclusion, and p0_decorr(m) < cap_{m+1} for all needed k=m+1 in {8..12},
+  with claimed exact rationals
+     p0_decorr = 283/1470, 629/2058, 16969/41160, 30551/61740, 71111/123480  (m=7..11)
+  against caps 2243/5880, 1979/4004, 55/91, 66/91, 6/7, minimum margin 111019/588588 > 0.18.
+  Single-arc closed form A_single(w,m)=(7-w)^2/(49(m-1)) for w in {4,5,6}.
+  Pinned-consec dominance: p0_decorr(m) = E_phi[coverage_phi(consec_m)] <= sup_phi.
+
+Tasks:
+ (1) re-derive p0_decorr with the prompt engine AND an independent exact engine; compare to claimed rationals.
+ (2) HUNT for a wide primitive k-set (span>14) with p0(E) > cap_k, or p0_decorr exceeding single-block,
+     or split exceeding single block, or decorrelation error exceeding margin.
+ (3) check the single-arc closed form exactly vs the engine.
+ (4) check the glue / boundary.
+
+==============================================================================
+TASK 1: re-derive p0_decorr exactly; compare prompt-engine, exact-x, exact-IE, claim
+==============================================================================
+  m   k   prompt(1260)                exact-x               exact-IE            claim  all-agree
+  7   8       283/1470               283/1470             -1187/1470         283/1470      False
+  8   9    10109/33075               629/2058             -1429/2058         629/2058      False
+  9  10    18181/44100            16969/41160           -24191/41160      16969/41160      False
+ 10  11  392807/793800            30551/61740           -31189/61740      30551/61740      False
+ 11  12  457147/793800           71111/123480          -52369/123480     71111/123480      False
+
+  -> prompt-engine(1260) vs exact:
+     m=7: prompt=0.19251701  exact=0.19251701  equal=True  prompt-was-EXACT
+     m=8: prompt=0.30563870  exact=0.30563654  equal=False  prompt-was-APPROX
+     m=9: prompt=0.41226757  exact=0.41226919  equal=False  prompt-was-APPROX
+     m=10: prompt=0.49484379  exact=0.49483317  equal=False  prompt-was-APPROX
+     m=11: prompt=0.57589695  exact=0.57589083  equal=False  prompt-was-APPROX
+
+==============================================================================
+TASK 1b: margins p0_decorr_exact vs cap_k
+==============================================================================
+  k=8: p0_decorr=            283/1470 = 0.192517  cap=0.381463  margin=           1111/5880 = 0.188946  OK
+  k=9: p0_decorr=            629/2058 = 0.305637  cap=0.494256  margin=       111019/588588 = 0.188619  OK
+  k=10: p0_decorr=         16969/41160 = 0.412269  cap=0.604396  margin=       102803/535080 = 0.192126  OK
+  k=11: p0_decorr=         30551/61740 = 0.494833  cap=0.725275  margin=       184957/802620 = 0.230442  OK
+  k=12: p0_decorr=        71111/123480 = 0.575891  cap=0.857143  margin=        34729/123480 = 0.281252  OK
+  MIN margin = 111019/588588 = 0.188619  at k=9  claimed 111019/588588=0.188619  match=True
+
+==============================================================================
+TASK 3: single-arc closed form A_single(w,m) = (7-w)^2/(49(m-1)) for w in {4,5,6}
+==============================================================================
+  m=7 w=4: exact A_S=          3/98=0.030612  closed=(7-w)^2/(49(m-1))=          3/98=0.030612  match=True
+  m=7 w=5: exact A_S=         2/147=0.013605  closed=(7-w)^2/(49(m-1))=         2/147=0.013605  match=True
+  m=7 w=6: exact A_S=         1/294=0.003401  closed=(7-w)^2/(49(m-1))=         1/294=0.003401  match=True
+  m=8 w=4: exact A_S=         9/343=0.026239  closed=(7-w)^2/(49(m-1))=         9/343=0.026239  match=True
+  m=8 w=5: exact A_S=         4/343=0.011662  closed=(7-w)^2/(49(m-1))=         4/343=0.011662  match=True
+  m=8 w=6: exact A_S=         1/343=0.002915  closed=(7-w)^2/(49(m-1))=         1/343=0.002915  match=True
+  m=9 w=4: exact A_S=         9/392=0.022959  closed=(7-w)^2/(49(m-1))=         9/392=0.022959  match=True
+  m=9 w=5: exact A_S=          1/98=0.010204  closed=(7-w)^2/(49(m-1))=          1/98=0.010204  match=True
+  m=9 w=6: exact A_S=         1/392=0.002551  closed=(7-w)^2/(49(m-1))=         1/392=0.002551  match=True
+  m=10 w=4: exact A_S=          1/49=0.020408  closed=(7-w)^2/(49(m-1))=          1/49=0.020408  match=True
+  m=10 w=5: exact A_S=         4/441=0.009070  closed=(7-w)^2/(49(m-1))=         4/441=0.009070  match=True
+  m=10 w=6: exact A_S=         1/441=0.002268  closed=(7-w)^2/(49(m-1))=         1/441=0.002268  match=True
+  m=11 w=4: exact A_S=         9/490=0.018367  closed=(7-w)^2/(49(m-1))=         9/490=0.018367  match=True
+  m=11 w=5: exact A_S=         2/245=0.008163  closed=(7-w)^2/(49(m-1))=         2/245=0.008163  match=True
+  m=11 w=6: exact A_S=         1/490=0.002041  closed=(7-w)^2/(49(m-1))=         1/490=0.002041  match=True
+  (note: closed form should be necklace-invariant; testing the contiguous block.)
+  non-contiguous w=2 (sectors {1,3}) vs contiguous {1,2}: (should differ -> not single arc)
+     m=7: contiguous{1,2}=0.107143  noncontiguous{1,3}=0.116667  differ=True
+     m=8: contiguous{1,2}=0.091448  noncontiguous{1,3}=0.096599  differ=True
+
+==============================================================================
+TASK 2: HUNT for a wide primitive k-set with p0(E) > cap_k (direct cover)
+==============================================================================
+  tested 333 wide primitive sets
+  k=8: max wide p0=0.320386 (cap=0.381463, margin 0.061077) at E=(1, 4, 7, 10, 13, 16, 19, 22) span=21
+  k=9: max wide p0=0.442289 (cap=0.494256, margin 0.051967) at E=(1, 3, 5, 7, 9, 11, 13, 15, 17) span=16
+  k=10: max wide p0=0.508430 (cap=0.604396, margin 0.095966) at E=(1, 4, 7, 10, 13, 16, 19, 22, 25, 28) span=27
+  k=11: max wide p0=0.591549 (cap=0.725275, margin 0.133725) at E=(1, 3, 5, 7, 9, 11, 13, 15, 17, 19, 21) span=20
+  k=12: max wide p0=0.630379 (cap=0.857143, margin 0.226763) at E=(1, 4, 7, 10, 13, 16, 19, 22, 25, 28, 31, 34) span=33
+
+==============================================================================
+TASK 2b: decorrelation error = direct_p0(wide consec) vs single-block-decorr limit
+==============================================================================
+  k=8 M=19: direct p0(consec)=0.318122  decorr_limit=0.192517  error=+0.125605  cap=0.381463  STILL OK
+  k=8 M=50: direct p0(consec)=0.307610  decorr_limit=0.192517  error=+0.115093  cap=0.381463  STILL OK
+  k=8 M=200: direct p0(consec)=0.305700  decorr_limit=0.192517  error=+0.113183  cap=0.381463  STILL OK
+  k=9 M=19: direct p0(consec)=0.407487  decorr_limit=0.305637  error=+0.101850  cap=0.494256  STILL OK
+  k=9 M=50: direct p0(consec)=0.412304  decorr_limit=0.305637  error=+0.106668  cap=0.494256  STILL OK
+  k=9 M=200: direct p0(consec)=0.412245  decorr_limit=0.305637  error=+0.106609  cap=0.494256  STILL OK
+  k=10 M=19: direct p0(consec)=0.491700  decorr_limit=0.412269  error=+0.079430  cap=0.604396  STILL OK
+  k=10 M=50: direct p0(consec)=0.493536  decorr_limit=0.412269  error=+0.081267  cap=0.604396  STILL OK
+  k=10 M=200: direct p0(consec)=0.494808  decorr_limit=0.412269  error=+0.082538  cap=0.604396  STILL OK
+  k=11 M=19: direct p0(consec)=0.578571  decorr_limit=0.494833  error=+0.083738  cap=0.725275  STILL OK
+  k=11 M=50: direct p0(consec)=0.575333  decorr_limit=0.494833  error=+0.080500  cap=0.725275  STILL OK
+  k=11 M=200: direct p0(consec)=0.575944  decorr_limit=0.494833  error=+0.081111  cap=0.725275  STILL OK
+  k=12 M=19: direct p0(consec)=0.624214  decorr_limit=0.575891  error=+0.048323  cap=0.857143  STILL OK
+  k=12 M=50: direct p0(consec)=0.621091  decorr_limit=0.575891  error=+0.045200  cap=0.857143  STILL OK
+  k=12 M=200: direct p0(consec)=0.620429  decorr_limit=0.575891  error=+0.044538  cap=0.857143  STILL OK
+
+==============================================================================

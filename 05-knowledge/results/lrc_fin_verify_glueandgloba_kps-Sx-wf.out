@@ -1,0 +1,80 @@
+
+lrc_fin_verify_glueandgloba_kps-Sx-wf.py  (kps-2026-06-20, ADVERSARIAL VERIFY)
+==============================================================================
+ADVERSARIAL verification of the "glue-and-global-sup" advance for LRC(14)-S3.
+
+The advance CLAIMS:
+  LRC(14)-S3 <=> p0(E)=meas(S7(E)) <= cap_k for all primitive k-sets E (0 in E, k=8..12),
+  cap_8..cap_12 = 2243/5880, 1979/4004, 55/91, 66/91, 6/7.
+  GLOBAL-SUP: pinned consec_k is the sup over all E; wide shapes sit strictly below
+  because the M->inf single-block sweeping cover is the phi-shift-average of the consec
+  sector pattern.  SOLE OPEN link: true-wide (>=2 far) error-aggregation lemma.
+
+This script DEFAULTS SKEPTICAL.  Four jobs:
+  (V1) Re-derive the key reference inequalities EXACTLY with the engine.
+  (V2) HUNT for a primitive WIDE k-set (span>14) with p0(E) > cap_k, OR
+       a split exceeding single block, OR a decorrelation error exceeding the margin.
+       Directions: boundary span 15-30 exhaustive bands, dilated APs (d!=1),
+       AP+far-spike, geometric ratio-2/3 resonant cores, 2-far/3-far collars,
+       multi-scale two-cluster resonance, large random wide rows.
+  (V3) Check the claimed closed forms / constants exactly vs the engine.
+  (V4) Check the boundary glue has NO gap (span 14->15->...).
+
+ONE counterexample (p0 > cap) => holds=false WITH WITNESS.
+EXACT rationals throughout.  Output saved to results/.
+
+==============================================================================
+V1  RE-DERIVE the key reference inequalities EXACTLY
+==============================================================================
+  p0(consec_8)          = 481/1470 = 0.32721  (claim 0.32721)  OK
+  single_block_decorr(7)= 283/1470 = 0.19252  (claim 0.19252)  OK
+  p0([0,19..25])        = 9524621/47108600 = 0.20218  (claim 0.20218)  OK
+
+  k :  p0(consec_k)  sweep(M->inf)   cap_k       sweep<pinned  pinned<cap  sweep<cap
+   8:  0.32721      0.19252        0.38146   True         True       True   claimOK
+   9:  0.41616      0.30564        0.49426   True         True       True   claimOK
+  10:  0.50448      0.41227        0.60440   True         True       True   claimOK
+  11:  0.58146      0.49484        0.72527   True         True       True   claimOK
+  12:  0.62411      0.57590        0.85714   True         True       True   claimOK
+
+  pinned<cap for ALL k?  True
+
+==============================================================================
+V3  CLOSED-FORM / CONSTANT CHECKS (exact)
+==============================================================================
+  cap_8 = 2243/5880 = 0.38146
+  cap_9 = 1979/4004 = 0.49426
+  cap_10 = 55/91 = 0.60440
+  cap_11 = 66/91 = 0.72527
+  cap_12 = 6/7 = 0.85714
+
+  claimed true-wide plateau Qb(k-1) < cap_k ?
+   k=8: Qb=0.19660  cap=0.38146  Qb<cap? True
+   k=9: Qb=0.36210  cap=0.49426  Qb<cap? True
+   k=10: Qb=0.44789  cap=0.60440  Qb<cap? True
+   k=11: Qb=0.53125  cap=0.72527  Qb<cap? True
+   k=12: Qb=0.60224  cap=0.85714  Qb<cap? True
+
+  ROUTE margin cap_k - p0(consec_k) (must be > 0 for the pinned argmax to clear):
+   k=8: cap-pinned = +0.05425
+   k=9: cap-pinned = +0.07810
+   k=10: cap-pinned = +0.09992
+   k=11: cap-pinned = +0.14381
+   k=12: cap-pinned = +0.23303
+
+==============================================================================
+V4  BOUNDARY GLUE — exhaustive exact, span s=14..17, k=8,9,10 (no-gap test)
+==============================================================================
+  k=8:
+     span=14: #prim=   1715  worst margin=+0.14915  viol=0  argworst=(0, 1, 2, 3, 4, 5, 6, 14)
+     span=15: #prim=   3003  worst margin=+0.15477  viol=0  argworst=(0, 3, 5, 7, 9, 11, 13, 15)
+     span=16: #prim=   4998  worst margin=+0.17424  viol=0  argworst=(0, 10, 11, 12, 13, 14, 15, 16)
+     span=17: #prim=   8008  worst margin=+0.17376  viol=0  argworst=(0, 1, 2, 3, 4, 5, 6, 17)
+  k=9:
+     span=14: #prim=   1716  worst margin=+0.09017  viol=0  argworst=(0, 2, 4, 6, 7, 8, 10, 12, 14)
+     span=15: #prim=   3432  worst margin=+0.12266  viol=0  argworst=(0, 2, 4, 6, 8, 10, 12, 14, 15)
+     span=16: #prim=   6434  worst margin=+0.13040  viol=0  argworst=(0, 1, 2, 3, 4, 5, 6, 7, 16)
+     span=17: #prim=  11440  worst margin=+0.12497  viol=0  argworst=(0, 1, 2, 3, 4, 5, 6, 7, 17)
+  k=10:
+     span=14: #prim=   1287  worst margin=+0.12463  viol=0  argworst=(0, 2, 4, 5, 6, 7, 8, 10, 12, 14)
+     span=15: #prim=   3003  worst margin=+0.16341  viol=0  argworst=(0, 2, 4, 6, 7, 8, 10, 12, 14, 15)

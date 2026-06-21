@@ -1,0 +1,67 @@
+
+ADVERSARIAL VERIFICATION -- LRC(14) decorrelation-error angle (Lemma DE).  kps-2026-06-20-Sx-wf
+================================================================================================
+Targets (default skeptical):
+  (1) re-derive the key engine numbers (p0_exact, single_block_decorr, TV_x, e(E), proved bound);
+  (2) HUNT a primitive WIDE k-set (span>14, k=8..12) with
+        p0(E) > cap_k   OR   p0_decorr exceeding the single-block bound
+        OR a split exceeding the single block   OR  |e(E)| exceeding the budget;
+      try span 15-30, resonant w, multi-scale, AP-with-difference d != 1 blocks;
+  (3) check the closed-form |e| <= 49 m^2/(6M) exactly vs measured;
+  (4) check the four-pillar glue has no boundary gap (15 <= span <= M*).
+Witness any failure.  EXACT rationals throughout.
+
+================================================================================================
+STEP 1.  Re-derive engine numbers independently (caps, p0_decorr, TV_x).
+================================================================================================
+  k= 8 m= 7: cap=0.38146  p0_decorr=0.19252  budget cap-p0=+0.18895
+  k= 9 m= 8: cap=0.49426  p0_decorr=0.30564  budget cap-p0=+0.18862
+  k=10 m= 9: cap=0.60440  p0_decorr=0.41227  budget cap-p0=+0.19213
+  k=11 m=10: cap=0.72527  p0_decorr=0.49484  budget cap-p0=+0.23043
+  k=12 m=11: cap=0.85714  p0_decorr=0.57590  budget cap-p0=+0.28125
+
+  Claimed budgets 0.18895/0.18862/0.19213/0.23043/0.28125 (k=8..12).
+  Recomputed:     0.18895/0.18862/0.19213/0.23043/0.28125
+  min budget = 0.18862  (claim: 0.18862)
+    k=8: p0_decorr claim 0.1925 vs recomputed 0.19252  OK
+    k=9: p0_decorr claim 0.3056 vs recomputed 0.30564  OK
+    k=10: p0_decorr claim 0.4123 vs recomputed 0.41227  OK
+    k=11: p0_decorr claim 0.4948 vs recomputed 0.49484  OK
+    k=12: p0_decorr claim 0.5759 vs recomputed 0.57590  OK
+
+  TV_x verification (claim TV_x <= 14m, actual max 22/40/48/52/62 for m=7..11):
+    m= 7: max TV_x= 22  bound 14m= 98  OK
+    m= 8: max TV_x= 40  bound 14m=112  OK
+    m= 9: max TV_x= 48  bound 14m=126  OK
+    m=10: max TV_x= 52  bound 14m=140  OK
+    m=11: max TV_x= 62  bound 14m=154  OK
+
+================================================================================================
+STEP 2.  HUNT for a wide primitive counterexample (span>14): p0(E) > cap_k.
+================================================================================================
+  Family A: single coherent consecutive blocks {0}u{M..M+m-1}, M=8..60 (the claimed extremal).
+    k= 8: sup p0 over wide consec = 0.21703 (M=9)  cap=0.38146  margin=+0.16443
+    k= 9: sup p0 over wide consec = 0.31866 (M=10)  cap=0.49426  margin=+0.17559
+    k=10: sup p0 over wide consec = 0.42888 (M=13)  cap=0.60440  margin=+0.17552
+    k=11: sup p0 over wide consec = 0.50769 (M=12)  cap=0.72527  margin=+0.21759
+    k=12: sup p0 over wide consec = 0.58616 (M=5)  cap=0.85714  margin=+0.27099
+
+  Family B: AP-with-difference-d blocks {0}u{M, M+d, ..., M+(m-1)d}, d=2,3,5,7; M small..
+    k= 8: sup p0 over AP-d wide = 0.22670 (d,M=(2, 3))  cap=0.38146  margin=+0.15477
+    k= 9: sup p0 over AP-d wide = 0.32266 (d,M=(2, 3))  cap=0.49426  margin=+0.17160
+    k=10: sup p0 over AP-d wide = 0.43041 (d,M=(7, 9))  cap=0.60440  margin=+0.17399
+    k=11: sup p0 over AP-d wide = 0.51139 (d,M=(7, 11))  cap=0.72527  margin=+0.21388
+    k=12: sup p0 over AP-d wide = 0.59379 (d,M=(7, 22))  cap=0.85714  margin=+0.26335
+
+  Family C: resonant w -- include a speed that hits sector walls (multiples of 7 +/-1).
+    k= 8: sup p0 resonant = 0.11413 (E=(0, 1, 2, 3, 35, 36, 37, 38))  margin=+0.26734
+    k= 9: sup p0 resonant = 0.20984 (E=(0, 1, 2, 3, 4, 28, 29, 30, 31))  margin=+0.28442
+    k=10: sup p0 resonant = 0.32331 (E=(0, 1, 2, 35, 36, 37, 38, 39, 40, 41))  margin=+0.28108
+    k=11: sup p0 resonant = 0.43992 (E=(0, 1, 2, 14, 15, 16, 17, 18, 19, 20, 21))  margin=+0.28535
+    k=12: sup p0 resonant = 0.53032 (E=(0, 1, 2, 14, 15, 16, 17, 18, 19, 20, 21, 22))  margin=+0.32682
+
+  Family D: RANDOM primitive wide k-sets, span in [15,40], many samples per k.
+    k= 8: sup p0 random wide (4000 samp) = 0.16460 (E=(0, 13, 17, 19, 21, 23, 25, 29))  margin=+0.21686
+    k= 9: sup p0 random wide (4000 samp) = 0.26890 (E=(0, 3, 5, 6, 7, 9, 11, 13, 15))  margin=+0.22536
+    k=10: sup p0 random wide (4000 samp) = 0.41910 (E=(0, 4, 6, 8, 10, 12, 13, 14, 16, 20))  margin=+0.18530
+    k=11: sup p0 random wide (4000 samp) = 0.51412 (E=(0, 1, 2, 3, 4, 5, 6, 7, 8, 9, 15))  margin=+0.21116

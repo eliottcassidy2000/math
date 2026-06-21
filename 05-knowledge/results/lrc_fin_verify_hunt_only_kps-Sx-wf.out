@@ -1,0 +1,7 @@
+== V2b SPLIT vs SINGLE BLOCK (does splitting raise the cover?) ==
+  k=8: pinned single-block p0=0.32721  best 2-cluster split p0=0.23231  split<pinned? True  arg=(14, 7, (0, 1, 2, 3, 4, 5, 6, 14))
+  k=9: pinned single-block p0=0.41616  best 2-cluster split p0=0.38095  split<pinned? True  arg=(10, 8, (0, 1, 2, 3, 4, 5, 6, 7, 10))
+  k=10: pinned single-block p0=0.50448  best 2-cluster split p0=0.49388  split<pinned? True  arg=(10, 9, (0, 1, 2, 3, 4, 5, 6, 7, 8, 10))
+
+== V2 HUNT ==
+  (a) exhaustive span bands ...
