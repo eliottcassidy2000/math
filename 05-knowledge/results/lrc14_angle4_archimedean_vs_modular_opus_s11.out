@@ -47,6 +47,13 @@ measS7(consec_8) = 481/1470 = 0.327211; 7*measS7 = 481/210
    => a CM/modular extremal home needs an ORDER-PRESERVING residue-only predictor;
       both natural ones MISORDER a large fraction and (often) miss consec at argmax.
 
+[H5] measS7 is SCALE-INVARIANT (projective archimedean object); AP wins the tiebreak
+   measS7(c*consec) = measS7(consec) for c in {1,2,3,5,6,8} (gcd(c,7)=1): VERIFIED
+   non-scalar residue-preserving bump [0, 1, 2, 3, 4, 5, 6, 7]->[0, 8, 2, 3, 4, 5, 6, 7]: same legmin residues,
+      measS7 0.32721 -> 0.27364 (STRICTLY lower).
+   => modular residue data fixes the WINNING residue-config (smallest-AP residues);
+      the ARCHIMEDEAN projective speed-shape breaks ties, and the AP is the winner.
+
 ==============================================================================
 ASSERTION FAILURES: 0
 VERDICT (ANGLE 4, fresh): the SURVIVAL object measS7 is ARCHIMEDEAN, not CM/modular.

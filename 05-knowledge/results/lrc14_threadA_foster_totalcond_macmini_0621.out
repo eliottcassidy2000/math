@@ -1,0 +1,22 @@
+##############################################################################
+# FOSTER TOTAL-CONDUCTANCE: is sumW-max == T-max (harmonic-sum)?
+##############################################################################
+
+consec=[0, 1, 2, 3, 4, 5, 6, 7]  T(consec)=sum 1/|e| = 363/140 = 2.592857
+   measS7(consec)=481/1470=0.327211, sumW=481/1470 (== measS7: True)
+
+=== span<= 12: 792 primitive shapes (112 full-residue) ===
+  (T1) argmax T over ALL k=8 shapes: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+  (T2) argmax sumW over FULL-residue: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+       argmax measS7 over ALL shapes: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+  (T3) sumW vs T concordance over full-res: 3175/6209 concordant = 0.511  (1.0 => sumW monotone in T)
+
+=== span<= 14: 3431 primitive shapes (319 full-residue) ===
+  (T1) argmax T over ALL k=8 shapes: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+  (T2) argmax sumW over FULL-residue: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+       argmax measS7 over ALL shapes: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+  (T3) sumW vs T concordance over full-res: 22443/44840 concordant = 0.501  (1.0 => sumW monotone in T)
+
+=== span<= 16: 11432 primitive shapes (861 full-residue) ===
+  (T1) argmax T over ALL k=8 shapes: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)
+  (T2) argmax sumW over FULL-residue: [0, 1, 2, 3, 4, 5, 6, 7] (==consec: True)

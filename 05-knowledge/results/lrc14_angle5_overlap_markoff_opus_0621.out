@@ -1,0 +1,41 @@
+##############################################################################
+# ANGLE 5: OVERLAP AS A MARKOFF/FROBENIUS FORM-VALUE COUNT
+##############################################################################
+
+T1: meas(G_{p,q}) == 5/7 + overlap (interval-intersection) ?
+   all 78 pairs match: True
+
+T2: pairs sorted by meas(G) ascending (binding first): overlap & form-resonance count
+   {1,13}: meas=0.72527 overlap=1/91=0.01099 arc-resonances=2 small-form-count=2
+   {1,12}: meas=0.72619 overlap=1/84=0.01190 arc-resonances=2 small-form-count=2
+   {1,11}: meas=0.72727 overlap=1/77=0.01299 arc-resonances=2 small-form-count=2
+   {2,11}: meas=0.72727 overlap=1/77=0.01299 arc-resonances=2 small-form-count=2
+   {3,11}: meas=0.72727 overlap=1/77=0.01299 arc-resonances=2 small-form-count=2
+   {1,10}: meas=0.72857 overlap=1/70=0.01429 arc-resonances=2 small-form-count=2
+   {3,10}: meas=0.72857 overlap=1/70=0.01429 arc-resonances=2 small-form-count=2
+   {1,9}: meas=0.73016 overlap=1/63=0.01587 arc-resonances=2 small-form-count=2
+   {2,9}: meas=0.73016 overlap=1/63=0.01587 arc-resonances=2 small-form-count=2
+   {4,9}: meas=0.73016 overlap=1/63=0.01587 arc-resonances=2 small-form-count=2
+   ...
+   BINDING {1,13}: overlap=1/91 (MIN overlap = MIN meas = binding)
+   global min overlap = 1/91; achieved by meas-min pair: True
+
+T3: overlap({1,q}) = 1/(7q) -- the DEGENERATE (single-resonance) Markoff endpoint:
+   {1,2}: overlap=1/14 (=1/(7q)? True) arc-resonances=2
+   {1,3}: overlap=1/21 (=1/(7q)? True) arc-resonances=2
+   {1,4}: overlap=1/28 (=1/(7q)? True) arc-resonances=2
+   {1,5}: overlap=1/35 (=1/(7q)? True) arc-resonances=2
+   {1,6}: overlap=1/42 (=1/(7q)? True) arc-resonances=2
+   {1,7}: overlap=1/49 (=1/(7q)? True) arc-resonances=2
+   {1,8}: overlap=1/56 (=1/(7q)? True) arc-resonances=2
+   {1,9}: overlap=1/63 (=1/(7q)? True) arc-resonances=2
+   {1,10}: overlap=1/70 (=1/(7q)? True) arc-resonances=2
+   {1,11}: overlap=1/77 (=1/(7q)? True) arc-resonances=2
+   {1,12}: overlap=1/84 (=1/(7q)? True) arc-resonances=2
+   {1,13}: overlap=1/91 (=1/(7q)? True) arc-resonances=2
+
+   => binding pair {1,13}: the form a*13 - b*1 has the FEWEST small values
+      (degenerate rank-1 / simplest CF [13]); overlap = single resonance 1/91.
+      MARKOFF READING: {1,q} sits at the RATIONAL/degenerate end of the form
+      spectrum (one partial quotient); larger q pushes the single resonance
+      narrower (1/(7q)), so q=13 minimizes overlap => minimizes meas(G_P) => binds.

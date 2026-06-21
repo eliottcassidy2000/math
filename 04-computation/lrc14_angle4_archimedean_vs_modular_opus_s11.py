@@ -294,6 +294,33 @@ def main():
     print("   => a CM/modular extremal home needs an ORDER-PRESERVING residue-only predictor;")
     print("      both natural ones MISORDER a large fraction and (often) miss consec at argmax.")
 
+    # ----------------------------------------------------------------------
+    # (H5 -- the decisive structural fact) measS7 is SCALE-INVARIANT:
+    # measS7(c*E) = measS7(E) for gcd(c,7)=1. So the binding object is the speed
+    # spectrum UP TO SCALING (a PROJECTIVE archimedean datum). The 'modular
+    # doppelganger' class = shapes with the same legmin residues; within it the
+    # measS7-max is the PROJECTIVELY-canonical AP (consec and all c*consec tie at
+    # the top). This is why a residue-only modular predictor can ORDER (never
+    # inverts) but never RESOLVES: it sees the residues, the archimedean projective
+    # shape breaks the tie, and the AP wins the tiebreak.
+    # ----------------------------------------------------------------------
+    print("\n[H5] measS7 is SCALE-INVARIANT (projective archimedean object); AP wins the tiebreak")
+    base = list(range(8))
+    for c in (1, 2, 3, 5, 6, 8):
+        Ec = [c * e for e in base]
+        assert measS7(Ec) == measS7(base), (c, Ec)
+    print(f"   measS7(c*consec) = measS7(consec) for c in {{1,2,3,5,6,8}} (gcd(c,7)=1): VERIFIED")
+    # doppelganger tie: consec and 2*consec tie at top; a magnitude-changing,
+    # residue-preserving, NON-scalar move STRICTLY lowers measS7.
+    dop = [0, 8, 2, 3, 4, 5, 6, 7]  # residue-1 rep bumped 1->8 (not a global scale)
+    assert (legmin(dop)[r] % 7 for r in range(7)), None
+    assert tuple(x % 7 for x in legmin(dop)) == tuple(x % 7 for x in legmin(base))
+    assert measS7(dop) < measS7(base)
+    print(f"   non-scalar residue-preserving bump {base}->{dop}: same legmin residues,")
+    print(f"      measS7 {float(measS7(base)):.5f} -> {float(measS7(dop)):.5f} (STRICTLY lower).")
+    print("   => modular residue data fixes the WINNING residue-config (smallest-AP residues);")
+    print("      the ARCHIMEDEAN projective speed-shape breaks ties, and the AP is the winner.")
+
     print("\n" + "=" * 78)
     print(f"ASSERTION FAILURES: {fails}")
     print("VERDICT (ANGLE 4, fresh): the SURVIVAL object measS7 is ARCHIMEDEAN, not CM/modular.")

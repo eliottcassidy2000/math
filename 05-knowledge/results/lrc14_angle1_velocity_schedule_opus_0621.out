@@ -1,0 +1,27 @@
+================================================================================
+VELOCITY-ASSIGNMENT SCHEDULING MODEL  (full-residue stratum)
+================================================================================
+
+[H-A] consec maximizes sum_a W_a over full-residue stratum, span scan:
+  span<= 11:    48 shapes  consec=0.327211  #strictly-beat-consec=0  #tie=1  argmax=consec
+  span<= 13:   256 shapes  consec=0.327211  #strictly-beat-consec=0  #tie=1  argmax=consec
+  span<= 14:   320 shapes  consec=0.327211  #strictly-beat-consec=0  #tie=1  argmax=consec
+  span<= 16:   864 shapes  consec=0.327211  #strictly-beat-consec=0  #tie=1  argmax=consec
+
+[H-B] LEG-VECTOR monotonicity (leg(r)=min|e| over e==r mod 7):
+      Does leg(E') >= leg(E) componentwise  =>  sum W_a(E') <= sum W_a(E)?
+      comparable pairs checked=16286  violations=6616
+      worst: leg(0, 1, 2, 10, 4, 12, 6) (W=0.092674) dominated-by leg(0, 8, 2, 10, 4, 12, 6) but W=0.296599 BIGGER
+             E_small_leg=(0, 1, 2, 4, 6, 10, 12, 13)  E_big_leg=(0, 2, 4, 6, 8, 10, 12, 14)
+
+      consec leg vector = (0, 1, 2, 3, 4, 5, 6)
+      every full-residue shape has leg >= consec leg componentwise? True
+
+[H-C] scalar velocity predictors of the ranking (corr with sum W_a):
+  sum|e|    : corr(feature, W)=-0.1759   argmin-feature is consec? True
+  max|e|    : corr(feature, W)=-0.1631   argmin-feature is consec? True
+  sum e^2   : corr(feature, W)=-0.1930   argmin-feature is consec? True
+  var(e)    : corr(feature, W)=-0.2606   argmin-feature is consec? True
+  sum leg   : corr(feature, W)=-0.1723   argmin-feature is consec? True
+  max leg   : corr(feature, W)=-0.3926   argmin-feature is consec? True
+  sum leg^2 : corr(feature, W)=-0.2201   argmin-feature is consec? True

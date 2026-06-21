@@ -1,0 +1,37 @@
+##############################################################################
+# ANGLE 5: MARKOFF TRIPLE / CF STRUCTURE OF THE BINDING G_P
+##############################################################################
+
+H_A: meas(G_{p,q}) over pairs 1<=p<q<=13, sorted ascending (binding first):
+   P={1,13}: meas=66/91=0.72527  q/p CF=[13]  q-p=12  p+q=14  pq=13
+   P={1,12}: meas=61/84=0.72619  q/p CF=[12]  q-p=11  p+q=13  pq=12
+   P={1,11}: meas=8/11=0.72727  q/p CF=[11]  q-p=10  p+q=12  pq=11
+   P={2,11}: meas=8/11=0.72727  q/p CF=[5, 2]  q-p=9  p+q=13  pq=22
+   P={3,11}: meas=8/11=0.72727  q/p CF=[3, 1, 2]  q-p=8  p+q=14  pq=33
+   P={1,10}: meas=51/70=0.72857  q/p CF=[10]  q-p=9  p+q=11  pq=10
+   P={3,10}: meas=51/70=0.72857  q/p CF=[3, 3]  q-p=7  p+q=13  pq=30
+   P={1,9}: meas=46/63=0.73016  q/p CF=[9]  q-p=8  p+q=10  pq=9
+   ...
+   MINIMAL pair = {1,13}, meas=66/91=0.72527
+   Does {1,13} (the k=11 binder) achieve the global pair-min? True
+
+H_C: ADDITIVE/MEDIANT structure of binding P at each k:
+   k=8 P=[1, 5, 7, 8, 9]: sum-relations=['1+7=8', '1+8=9']  consec-diffs=[1, 2, 4]  contains 1:True  contains 13:False
+   k=9 P=[1, 11, 12, 13]: sum-relations=['1+11=12', '1+12=13']  consec-diffs=[1, 10]  contains 1:True  contains 13:True
+   k=10 P=[1, 12, 13]: sum-relations=['1+12=13']  consec-diffs=[1, 11]  contains 1:True  contains 13:True
+   k=11 P=[1, 13]: sum-relations=[]  consec-diffs=[12]  contains 1:True  contains 13:True
+   k=12 P=[1]: sum-relations=[]  consec-diffs=[]  contains 1:True  contains 13:False
+
+H_B: meas(G_{1,q}) for q=2..13 (the '1 + large' binding family):
+   q=2: meas=11/14=0.78571  6/7-? -1/14  num*den=11,14
+   q=3: meas=16/21=0.76190  6/7-? -2/21  num*den=16,21
+   q=4: meas=3/4=0.75000  6/7-? -3/28  num*den=3,4
+   q=5: meas=26/35=0.74286  6/7-? -4/35  num*den=26,35
+   q=6: meas=31/42=0.73810  6/7-? -5/42  num*den=31,42
+   q=7: meas=36/49=0.73469  6/7-? -6/49  num*den=36,49
+   q=8: meas=41/56=0.73214  6/7-? -1/8  num*den=41,56
+   q=9: meas=46/63=0.73016  6/7-? -8/63  num*den=46,63
+   q=10: meas=51/70=0.72857  6/7-? -9/70  num*den=51,70
+   q=11: meas=8/11=0.72727  6/7-? -10/77  num*den=8,11
+   q=12: meas=61/84=0.72619  6/7-? -11/84  num*den=61,84
+   q=13: meas=66/91=0.72527  6/7-? -12/91  num*den=66,91

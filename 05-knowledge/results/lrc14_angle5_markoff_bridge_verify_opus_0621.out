@@ -1,0 +1,27 @@
+##############################################################################
+# ANGLE 5: MARKOFF/CF EXTREMALITY -- BRIDGE & ROBUSTNESS
+##############################################################################
+
+(1) Binding P at each size; CF & additive structure:
+   |P|=1: binder=[1] meas=0.85714  contains{1,13}=False  mediant-rels=[]  CFterms=0
+   |P|=2: binder=[1, 13] meas=0.72527  contains{1,13}=True  mediant-rels=[]  CFterms=1
+        min possible CFterms at this size=1; binder achieves min: True
+   |P|=3: binder=[1, 12, 13] meas=0.60440  contains{1,13}=True  mediant-rels=['1+12=13']  CFterms=4
+        min possible CFterms at this size=3; binder achieves min: False
+   |P|=4: binder=[1, 11, 12, 13] meas=0.49426  contains{1,13}=True  mediant-rels=['1+11=12', '1+12=13']  CFterms=10
+        min possible CFterms at this size=6; binder achieves min: False
+   |P|=5: binder=[1, 5, 7, 8, 9] meas=0.38146  contains{1,13}=False  mediant-rels=['1+7=8', '1+8=9']  CFterms=21
+        min possible CFterms at this size=11; binder achieves min: False
+
+(2) Additive (pairwise inclusion-exclusion) approximation to meas(G_P):
+   P=[1, 12, 13]: pairwise-IE approx=0.61538 act=0.60440 exact-match=False diff=-0.010989
+   P=[1, 11, 12, 13]: pairwise-IE approx=0.52814 act=0.49426 exact-match=False diff=-0.033883
+   P=[1, 5, 7, 8, 9]: pairwise-IE approx=0.48520 act=0.38146 exact-match=False diff=-0.103741
+   P=[1, 2, 3]: pairwise-IE approx=0.73810 act=0.69048 exact-match=False diff=-0.047619
+   P=[1, 13]: pairwise-IE approx=0.72527 act=0.72527 exact-match=True diff=0.000000
+
+(3) HONEST BRIDGE STATUS:
+   The Markoff/CF reading gives an EXACT, structurally-explained binder
+   (simplest CF, max denominator) and the closed form meas(G_{1,q})=5/7+1/(7q).
+   It explains WHY the binder is {1,..,13}-extremal but is a re-description of
+   thr_k, NOT yet a proof that consec (measS7-max) clears thr_k.

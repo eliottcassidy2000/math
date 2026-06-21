@@ -1,0 +1,48 @@
+##############################################################################
+# ANGLE 5: EXACT meas(G_{p,q}) & MARKOFF/CF EXTREMALITY
+##############################################################################
+
+C1: meas(G_{1,q}) == 5/7 + 1/(7q) ?
+   q=2: pred=11/14 act=11/14 match=True
+   q=3: pred=16/21 act=16/21 match=True
+   q=4: pred=3/4 act=3/4 match=True
+   q=5: pred=26/35 act=26/35 match=True
+   q=6: pred=31/42 act=31/42 match=True
+   q=7: pred=36/49 act=36/49 match=True
+   q=8: pred=41/56 act=41/56 match=True
+   q=9: pred=46/63 act=46/63 match=True
+   q=10: pred=51/70 act=51/70 match=True
+   q=11: pred=8/11 act=8/11 match=True
+   q=12: pred=61/84 act=61/84 match=True
+   q=13: pred=66/91 act=66/91 match=True
+   ALL match: True
+
+C1b: meas(G_{p,q}) = 5/7 + (overlap of the two bad-arc systems). Check deficit:
+   {1,13}: meas=66/91=0.72527  overlap=meas-5/7=1/91=0.01099
+   {1,12}: meas=61/84=0.72619  overlap=meas-5/7=1/84=0.01190
+   {2,13}: meas=19/26=0.73077  overlap=meas-5/7=3/182=0.01648
+   {3,13}: meas=200/273=0.73260  overlap=meas-5/7=5/273=0.01832
+   {5,8}: meas=41/56=0.73214  overlap=meas-5/7=1/56=0.01786
+   {2,11}: meas=8/11=0.72727  overlap=meas-5/7=1/77=0.01299
+   {3,11}: meas=8/11=0.72727  overlap=meas-5/7=1/77=0.01299
+
+C2: monotonicity -- meas(G_{p,q}) vs p (fixed q=13) and vs q (fixed p=1):
+   fixed q=13, vary p:
+     p=1: meas=0.72527
+     p=2: meas=0.73077
+     p=3: meas=0.73260
+     p=4: meas=0.73352
+     p=5: meas=0.73407
+     p=6: meas=0.73443
+     p=7: meas=0.73469
+     p=8: meas=0.73489
+     p=9: meas=0.73504
+     p=10: meas=0.73516
+     p=11: meas=0.73526
+     p=12: meas=0.73535
+
+C3: FROBENIUS/CF reading of the {1,q} family.
+   meas(G_{1,q}) = 5/7 + 1/(7q). deficit from 6/7 = (q-1)/(7q) = (1/7)(1-1/q).
+   (1-1/q) = density of <1,q>-overlap; q->inf gives the pure 1/7 deficit (lonely-runner floor).
+   The binding q=13 is the LARGEST q in P={1..13}: the extremal CF endpoint.
+   => binding G_P = the single-partial-quotient (simplest CF) pair at max denominator.

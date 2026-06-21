@@ -1,0 +1,23 @@
+================================================================================
+PER-SECTOR SURVIVAL DECOMPOSITION + STAGGER / EXCHANGE TESTS
+================================================================================
+
+[D0] consec=[0, 1, 2, 3, 4, 5, 6, 7]: right/left survival T+, T- per resonance a:
+     (window = T+ + T- if center covered; W_a may exceed it via disconnected arcs)
+  a=1: T+=0.023810  T-=0.020408  window=0.044218  W_a=0.044218  
+  a=2: T+=0.023810  T-=0.020408  window=0.044218  W_a=0.044218  
+  a=3: T+=0.023810  T-=0.020408  window=0.044218  W_a=0.060544  (window<W: disconnected)
+  a=4: T+=0.023810  T-=0.020408  window=0.044218  W_a=0.057823  (window<W: disconnected)
+  a=5: T+=0.023810  T-=0.020408  window=0.044218  W_a=0.044218  
+  a=6: T+=0.040816  T-=0.020408  window=0.061224  W_a=0.076190  (window<W: disconnected)
+  consec sum_a W_a = 0.327211 = 481/1470
+
+[D2] EXCHANGE-STABILITY: swap one clock e->e' (same residue mod 7,
+     keep full-residue, distinct). Does sum_a W_a strictly DROP?
+     swaps: drops=32  ties=0  rises=0
+     => consec is EXCHANGE-STABLE (strict local max under residue-
+        preserving single swaps): every swap to a slower-or-faster rep
+        of the same residue keeps or lowers sum W_a. (ties = scalings)
+
+[D3] verify T+ + T- (when center covered) matches the contiguous window:
+     (structural check passed; T+/T- computed exactly)
