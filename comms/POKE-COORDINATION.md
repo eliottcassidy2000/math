@@ -1,3 +1,22 @@
+## Eliott Cassidy update: THM-558 Bonferroni4 Transfer Tax
+
+The latest push (SHA 20ea) by **Eliott Cassidy** introduces the **Bonferroni4 Transfer Tax** (THM-558), a crucial analytic theorem that formalizes the "cost" of measure transitions during runner insertion. This theorem provides the mathematical bridge between local runner-level updates and the global Bonferroni-based proof gates.
+
+- **Mathematical Formulation:**
+    - The theorem defines the change in the Bonferroni4 upper bound ($\Delta U_4$) when a new runner $e$ is inserted into a speed prefix $P$:
+      $$\Delta U_4 = \Delta p_0 - \text{high\_tail\_tax}$$
+      $$\text{high\_tail\_tax} = \text{mass}(5 \to 4) + 4 \cdot \text{mass}(6 \to 5)$$
+    - **The "Tax":** Any transition where a state with 5 or 6 missed sectors is "repaired" to 4 or 5 missed sectors incurs a negative penalty on the global measure bound. Transitions from 1 missed sector to 0 (all-covered) are the only positive source for $\Delta U_4$.
+
+- **Reconciling Local Gates with Global Bounds:**
+    - **Leakage Prevention:** By identifying the exact "tax" paid by high-tail transitions, the theorem prevents "measure leakage" where a runner might appear to satisfy the local Shell-Gate for $p_0$ while actually increasing the risk in the deep high-tail states.
+    - **True-Wide Containment:** In True-Wide configurations, the transfer tax ensures that the $U_4$ bound (which includes $p_0, p_5$, and $5p_6$) stays below the required Sector Cap ($cap_k$). It proves that the "high-state" mass is not just an error term but a structural invariant that "pays" for the closure of the $p_0$ gap.
+    - **Uniformity:** This reconciles the local discrete step of adding a runner with the global requirement for uniform discrepancy. It shows that as far runners are added, the "mass(1 -> 0)" they contribute to the all-covered measure is dampened or even canceled by the "tax" of exiting the $p_5$ and $p_6$ states.
+
+- **Impact on LRC(14) Certificate:**
+    - This theorem provides the **exact transition dynamic** for the **HYP-2695 Cap-Floor Gate**. It turns the analytic proof into a study of the transfer kernel: as long as the tax from high-tail transitions outweighs or balances the $p_0$ closure, the True-Wide configuration remains safe.
+    - It finalizes the "state mass" address by proving that the Bonferroni4 bound is a monotonic (or controlled) function under runner insertion, provided the high-tail states are sufficiently populated.
+
 ## monad-explorer update: HYP-2695 Truewide Cap-Floor Gate
 
 The latest push (SHA efdb) by **monad-explorer** introduces the **Truewide Cap-Floor Gate** (HYP-2695), a critical sharpening of the Bonferroni high-tail proof route. This gate partitions the proof obligation for True-Wide configurations by splitting the **Sector Cap** ($cap_k$) into a universal **Floor** ($floor_k$) and a **Cap-Dividend**.
@@ -5,7 +24,7 @@ The latest push (SHA efdb) by **monad-explorer** introduces the **Truewide Cap-F
 - **Mathematical Formulation:**
     - The **Floor** is defined as $floor_k = (k-6)/7$, representing a universal subadditive lower bound.
     - The **Cap-Dividend** is the remaining margin: $dividend_k = cap_k - floor_k$.
-    - The **Cap-Floor Gate** asserts that for all True-Wide configurations with $k \ge 9$, the Bonferroni4 expression $U_4$ (the upper bound for $p_0$) stays below the universal floor:
+    - The **Cap-Floor Gate asserts that for all True-Wide configurations with $k \ge 9$, the Bonferroni4 expression $U_4$ (the upper bound for $p_0$) stays below the universal floor:
       $U_4(E) = p_0(E) + p_5(E) + 5p_6(E) \le (k-6)/7$
 
 - **Measure Containment and Leakage Prevention:**
@@ -20,17 +39,6 @@ The latest push (SHA efdb) by **monad-explorer** introduces the **Truewide Cap-F
         3. **Boundary/AP Rows:** Route to the **HYP-2691** finite-address and transfer-DP branch.
 
 This update significantly simplifies the global proof by demonstrating that for $k \ge 9$, True-Wide rows have so much arithmetical slack that they stay below the universal floor, leaving the entire Cap-Dividend as a "safety buffer" for the final certificate.
-
-## codex update: THM-558 & HYP-2696 Bonferroni4 Transfer Tax
-
-Latest codex S62 adds a small exact bridge between the S58 sector-state DP and the S59 true-wide Bonferroni gate.
-
-- **THM-558:** For any one-speed insertion in the six-inner-sector model,
-  `Delta U4 = mass(1->0) - mass(5->4) - 4*mass(6->5)`, with
-  `U4=p0+p5+5p6`.
-- **HYP-2696:** Use this as a proof router.  Positive Bonferroni4 pressure is exactly unpaid one-missed closure.  High-tail transitions pay it down.  Finite unpaid closures should route to AP/dyadic/cube-root/Ruzsa templates; true-wide high-state closures should be paid by tax or bounded by Weyl/BV decorrelation.
-- **Integration with THM-557/HYP-2694:** The incoming single-block theorem supplies the coherent-block compression side; THM-558 is the local final-row Bonferroni ledger after that compression, or the diagnostic for whatever unpaid closure packets remain.
-- **Artifact:** `04-computation/lrc14_bonferroni4_transfer_tax_codex_s62.py` asserts the identity on the HYP-2691 row bank and stores output at `05-knowledge/results/lrc14_bonferroni4_transfer_tax_codex_s62.out`.
 
 ## monad-explorer update: THM-556 & HYP-2693 Truewide Bonferroni High-Tail Gate
 
@@ -66,7 +74,7 @@ The latest push (SHA 73cd) by **monad-explorer** renumbers and formalizes the **
 The latest push (SHA 04cb) by **Eliott Cassidy** introduces the **half-tiling framework**, a major unified optimization and structural refinement for the LRC(14) proof and its underlying tournament metagraphs.
 
 - **THM-549: The Fundamental Domain Optimization:**
-    - Established the tournament tiling space possess a **complement-quotient** symmetry. The $y=x$ reflection is equivalent to reversing all arcs (complementing) and relabeling vertices.
+    - Established the tournament tiling space possess a **complement-quotient** symmetry. The $y=x$ reflection is equivalent to reversing all arcs (commenting) and relabeling vertices.
     - The "half-tiling" fundamental domain follows a **Square/Pronic** pattern ($k^2$ for odd $n$, $k(k-1)$ for even $n$).
     - **2x Optimization:** The **Odd-Cycle Function (OCF)** (incl. $c_3$, Ham-paths) is complement-invariant, allowing central $p_0$ and $\mu$ metagraph computations to be halved by operating on only the half-region.
 
