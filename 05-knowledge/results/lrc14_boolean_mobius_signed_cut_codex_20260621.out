@@ -1,0 +1,68 @@
+LRC14 Boolean-Mobius signed low-depth cut (exact fractions)
+================================================================================
+Bank: E={0}+7-subsets of [1,14]
+  rows=3432; non_AP_type_orbit_rows=3430
+  AP type orbit:
+    (0, 1, 2, 3, 4, 5, 6, 7)
+    (0, 2, 4, 6, 8, 10, 12, 14)
+  dihedral run-type features=12: [(0, ()), (1, (1,)), (2, (1, 1)), (2, (2,)), (3, (1, 1, 1)), (3, (1, 2)), (3, (3,)), (4, (1, 3)), (4, (2, 2)), (4, (4,)), (5, (5,)), (6, (6,))]
+
+================================================================================
+LP separators in the 12-state dihedral quotient
+  all features: success=True; gamma=0.05357142857142857
+    nonzero weights=[((0, ()), np.float64(1.0))]
+    q0-only exact min gap modulo AP orbit = 3/56 at (0, 2, 3, 4, 5, 6, 7, 8)
+
+  exclude q0: success=True; gamma=0.023957121855619573
+    nonzero signed weights=[((1, (1,)), np.float64(-0.2622863548424793)), ((2, (1, 1)), np.float64(-0.712545823613173)), ((2, (2,)), np.float64(-0.025167821544347713))]
+    sign reading: AP maximizes the negative of a positive low-depth miss functional.
+
+================================================================================
+Three-atom positive low-depth functional
+  positive LP success=True; gamma=0.02395712185561958
+  float coeffs sum=1: [np.float64(0.2622863548424793), np.float64(0.7125458236131729), np.float64(0.025167821544347824)]; active_count=3
+    active E=(0, 1, 2, 4, 5, 6, 7, 10); diffs=['27/490', '11/980', '44/735']
+    active E=(0, 2, 3, 4, 5, 6, 7, 8); diffs=['25/1176', '149/5880', '19/1470']
+    active E=(0, 4, 5, 6, 8, 9, 10, 14); diffs=['157/8820', '23/980', '899/8820']
+
+  exact optimum recovered from active rows:
+    coeffs=['60601/231049', '23519/33007', '5815/231049']; gamma=2324813/97040580
+    integer coeffs=[60601, 164633, 5815] over denominator 231049
+    integer-margin=2324813/420
+    exact validation min=2324813/97040580; all_positive=True
+    This is the sharp L1-normalized cut on the three low-depth atoms in this bank.
+
+  compact integer certificate
+  coefficients on ((1, (1,)), (2, (1, 1)), (2, (2,))): ['21', '57', '2']
+  L1/sum normalization: 80
+  exact_min_margin = 8447/4410
+  normalized_margin = 8447/352800
+  active/tight rows:
+         8447/4410  E=(0, 4, 5, 6, 8, 9, 10, 14)  diffs=['157/8820', '23/980', '899/8820']
+             23/12  E=(0, 1, 2, 4, 5, 6, 7, 10)  diffs=['27/490', '11/980', '44/735']
+             23/12  E=(0, 2, 3, 4, 5, 6, 7, 8)  diffs=['25/1176', '149/5880', '19/1470']
+         5174/2695  E=(0, 1, 2, 5, 6, 7, 10, 11)  diffs=['-23/735', '344/8085', '409/5390']
+         4693/1960  E=(0, 1, 2, 3, 4, 5, 6, 8)  diffs=['55/392', '-1/105', '-9/1960']
+         5347/2205  E=(0, 1, 2, 4, 5, 6, 9, 10)  diffs=['821/8820', '1/180', '677/8820']
+       39727/16170  E=(0, 1, 3, 5, 7, 9, 11, 13)  diffs=['317/19110', '1636/45045', '2012/105105']
+          1819/660  E=(0, 2, 3, 5, 6, 7, 8, 11)  diffs=['10/539', '102/2695', '6763/64680']
+  In signed-max form, use coefficients (-21,-57,-2); AP beats every non-orbit row
+  by at least 8447/4410 before normalization.
+
+================================================================================
+64-state Boolean reading
+  T1, T2sep, T2adj are sums of exact q[M] over 64 Boolean missed-sector atoms.
+  The quotient preserves cyclic adjacency of the missed sectors and destroys:
+    speed ownership, relation height, and the x-location of the atoms.
+  Challenged assumption: vertices need not be runners or arcs; here the useful
+    vertices are low-depth Boolean atom types, i.e. missed-sector shapes.
+  What is proved here is finite bounded-bank separation modulo AP dilation,
+    not a global LRC14 cap theorem.
+
+================================================================================
+Tournament Analysis over proof lenses
+  Pairwise observable: (separation, preserves_mask_shape, tractability,
+    compatibility_with_incoming_hierarchy_work, formalizability).
+  order=['full_64_boolean_law', 'compact_low_depth_cut', 'sharp_three_atom_LP', 'relation_level2_pin', 'q0_trivial_cut', 'generic_CJJ_level2']
+  wins={'compact_low_depth_cut': 4, 'sharp_three_atom_LP': 3, 'q0_trivial_cut': 1, 'relation_level2_pin': 2, 'generic_CJJ_level2': 0, 'full_64_boolean_law': 5}
+  directed_3cycles=0; Hamiltonian_paths=1

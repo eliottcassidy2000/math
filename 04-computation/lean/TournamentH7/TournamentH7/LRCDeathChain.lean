@@ -25,49 +25,59 @@ def survivalCurrency : Currency :=
 /-- A hit count reachable from depth `t` after `r` far hits. -/
 def ReachableHit (r t : Nat) := Fin (Nat.min r t + 1)
 
+/-- Boolean live-depth witness search. -/
+def liveDepthBool (C : Currency) (r t : Nat) : Bool :=
+  (List.range (Nat.min r t + 1)).any (fun h => decide (C (t - h) ≠ C t))
+
+/-- Boolean silent-depth witness search. -/
+def silentDepthBool (C : Currency) (r t : Nat) : Bool :=
+  (List.range (Nat.min r t + 1)).all (fun h => decide (C (t - h) = C t))
+
 /-- A depth is live when some reachable hit count changes the currency. -/
-def LiveDepth (C : Currency) (r t : Nat) : Prop :=
-  Exists fun h : ReachableHit r t => C (t - h.val) ≠ C t
+abbrev LiveDepth (C : Currency) (r t : Nat) : Prop :=
+  liveDepthBool C r t = true
 
 /-- A depth is silent when every reachable hit count preserves the currency. -/
-def SilentDepth (C : Currency) (r t : Nat) : Prop :=
-  forall h : ReachableHit r t, C (t - h.val) = C t
+abbrev SilentDepth (C : Currency) (r t : Nat) : Prop :=
+  silentDepthBool C r t = true
 
 /-- Live depths are monotone in the number of far hits. -/
 theorem liveDepth_mono {C : Currency} {r s t : Nat} (hrs : r <= s) :
     LiveDepth C r t -> LiveDepth C s t := by
-  rintro ⟨h, hchange⟩
-  refine ⟨⟨h.val, ?_⟩, hchange⟩
-  have hle_min : h.val <= Nat.min r t := Nat.lt_succ_iff.mp h.isLt
-  have hle_r : h.val <= r := le_trans hle_min (Nat.min_le_left r t)
-  have hle_t : h.val <= t := le_trans hle_min (Nat.min_le_right r t)
-  have hle_s : h.val <= s := le_trans hle_r hrs
-  exact Nat.lt_succ_iff.mpr (le_min hle_s hle_t)
+  unfold LiveDepth liveDepthBool
+  intro h
+  rw [List.any_eq_true] at h ⊢
+  rcases h with ⟨a, ha_mem, ha_change⟩
+  refine ⟨a, ?_, ha_change⟩
+  have hmin : Nat.min r t <= Nat.min s t :=
+    le_min (le_trans (min_le_left r t) hrs) (min_le_right r t)
+  exact List.mem_range.mpr (lt_of_lt_of_le (List.mem_range.mp ha_mem)
+    (Nat.succ_le_succ hmin))
 
 /-- Direct `p0`, one far hit: only one missed sector can change the row. -/
 theorem cover_oneFar_live_iff (t : Nat) (ht : t <= 6) :
     LiveDepth coverCurrency 1 t <-> t = 1 := by
-  interval_cases t <; native_decide
+  interval_cases t <;> native_decide
 
 /-- Survival currency, one far hit: shallow closure plus the two high-tail depths. -/
 theorem survival_oneFar_live_iff (t : Nat) (ht : t <= 6) :
     LiveDepth survivalCurrency 1 t <-> t = 1 \/ t = 5 \/ t = 6 := by
-  interval_cases t <; native_decide
+  interval_cases t <;> native_decide
 
 /-- Survival currency, two far hits: HYP-2708 has exactly four live depths. -/
 theorem survival_twoFar_live_iff (t : Nat) (ht : t <= 6) :
     LiveDepth survivalCurrency 2 t <-> t = 1 \/ t = 2 \/ t = 5 \/ t = 6 := by
-  interval_cases t <; native_decide
+  interval_cases t <;> native_decide
 
 /-- Survival currency, three far hits: only depth four remains silent above zero. -/
 theorem survival_threeFar_live_iff (t : Nat) (ht : t <= 6) :
     LiveDepth survivalCurrency 3 t <-> t = 1 \/ t = 2 \/ t = 3 \/ t = 5 \/ t = 6 := by
-  interval_cases t <; native_decide
+  interval_cases t <;> native_decide
 
 /-- Survival currency, four far hits: every positive depth through six is live. -/
 theorem survival_fourFar_live_iff (t : Nat) (ht : t <= 6) :
     LiveDepth survivalCurrency 4 t <-> 1 <= t := by
-  interval_cases t <; native_decide
+  interval_cases t <;> native_decide
 
 /-- The two-far middle plateau is exactly silent. -/
 theorem survival_twoFar_middle_silent :

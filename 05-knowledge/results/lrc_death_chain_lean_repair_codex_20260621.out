@@ -1,0 +1,44 @@
+ℹ [2942/2942] Built TournamentH7.LRCDeathChain (3.6s)
+info: TournamentH7/LRCDeathChain.lean:94:0: 'LonelyRunner.liveDepth_mono' depends on axioms: [propext, Quot.sound]
+info: TournamentH7/LRCDeathChain.lean:95:0: 'LonelyRunner.cover_oneFar_live_iff' depends on axioms: [propext,
+ cover_oneFar_live_iff._native.native_decide.ax_1_1,
+ cover_oneFar_live_iff._native.native_decide.ax_1_2,
+ cover_oneFar_live_iff._native.native_decide.ax_1_3,
+ cover_oneFar_live_iff._native.native_decide.ax_1_4,
+ cover_oneFar_live_iff._native.native_decide.ax_1_5,
+ cover_oneFar_live_iff._native.native_decide.ax_1_6,
+ cover_oneFar_live_iff._native.native_decide.ax_1_7]
+info: TournamentH7/LRCDeathChain.lean:96:0: 'LonelyRunner.survival_oneFar_live_iff' depends on axioms: [propext,
+ survival_oneFar_live_iff._native.native_decide.ax_1_1,
+ survival_oneFar_live_iff._native.native_decide.ax_1_2,
+ survival_oneFar_live_iff._native.native_decide.ax_1_3,
+ survival_oneFar_live_iff._native.native_decide.ax_1_4,
+ survival_oneFar_live_iff._native.native_decide.ax_1_5,
+ survival_oneFar_live_iff._native.native_decide.ax_1_6,
+ survival_oneFar_live_iff._native.native_decide.ax_1_7]
+info: TournamentH7/LRCDeathChain.lean:97:0: 'LonelyRunner.survival_twoFar_live_iff' depends on axioms: [propext,
+ survival_twoFar_live_iff._native.native_decide.ax_1_1,
+ survival_twoFar_live_iff._native.native_decide.ax_1_2,
+ survival_twoFar_live_iff._native.native_decide.ax_1_3,
+ survival_twoFar_live_iff._native.native_decide.ax_1_4,
+ survival_twoFar_live_iff._native.native_decide.ax_1_5,
+ survival_twoFar_live_iff._native.native_decide.ax_1_6,
+ survival_twoFar_live_iff._native.native_decide.ax_1_7]
+info: TournamentH7/LRCDeathChain.lean:98:0: 'LonelyRunner.survival_threeFar_live_iff' depends on axioms: [propext,
+ survival_threeFar_live_iff._native.native_decide.ax_1_1,
+ survival_threeFar_live_iff._native.native_decide.ax_1_2,
+ survival_threeFar_live_iff._native.native_decide.ax_1_3,
+ survival_threeFar_live_iff._native.native_decide.ax_1_4,
+ survival_threeFar_live_iff._native.native_decide.ax_1_5,
+ survival_threeFar_live_iff._native.native_decide.ax_1_6,
+ survival_threeFar_live_iff._native.native_decide.ax_1_7]
+info: TournamentH7/LRCDeathChain.lean:99:0: 'LonelyRunner.survival_fourFar_live_iff' depends on axioms: [propext,
+ survival_fourFar_live_iff._native.native_decide.ax_1_1,
+ survival_fourFar_live_iff._native.native_decide.ax_1_2,
+ survival_fourFar_live_iff._native.native_decide.ax_1_3,
+ survival_fourFar_live_iff._native.native_decide.ax_1_4,
+ survival_fourFar_live_iff._native.native_decide.ax_1_5,
+ survival_fourFar_live_iff._native.native_decide.ax_1_6,
+ survival_fourFar_live_iff._native.native_decide.ax_1_7]
+info: TournamentH7/LRCDeathChain.lean:100:0: 'LonelyRunner.survival_twoFar_middle_silent' depends on axioms: [survival_twoFar_middle_silent._native.native_decide.ax_1_1]
+Build completed successfully (2942 jobs).

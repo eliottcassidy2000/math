@@ -43,9 +43,59 @@ import TournamentH7.TransitiveH
 import TournamentH7.ProductSum
 import TournamentH7.LRCDeathChain
 import TournamentH7.LRCFactorialAtom
+import TournamentH7.LRCBooleanTypeCut
 import TournamentH7.LRCL7Discrepancy
 
 open Tournament
+
+/-! ### LRC14 Boolean/type signed aggregate cut -/
+
+theorem lrc_boolean_type_cut_optimalCoeff_sum_audit :
+    LonelyRunner.BooleanTypeCut.coeffSum LonelyRunner.BooleanTypeCut.optimalCoeff = 231049 :=
+  LonelyRunner.BooleanTypeCut.optimalCoeff_sum
+#print axioms lrc_boolean_type_cut_optimalCoeff_sum_audit
+
+theorem lrc_boolean_type_cut_compactCoeff_sum_audit :
+    LonelyRunner.BooleanTypeCut.coeffSum LonelyRunner.BooleanTypeCut.compactCoeff = 80 :=
+  LonelyRunner.BooleanTypeCut.compactCoeff_sum
+#print axioms lrc_boolean_type_cut_compactCoeff_sum_audit
+
+theorem lrc_boolean_type_cut_optimal_active_rows_equal_audit :
+    ∀ r : Fin 3,
+      LonelyRunner.BooleanTypeCut.optimalMarginDen *
+          LonelyRunner.BooleanTypeCut.evalNum LonelyRunner.BooleanTypeCut.optimalCoeff
+            (LonelyRunner.BooleanTypeCut.active r) =
+        LonelyRunner.BooleanTypeCut.optimalMarginNum *
+          (LonelyRunner.BooleanTypeCut.active r).den :=
+  LonelyRunner.BooleanTypeCut.optimal_active_rows_equal
+#print axioms lrc_boolean_type_cut_optimal_active_rows_equal_audit
+
+theorem lrc_boolean_type_cut_compact_active_rows_above_audit :
+    ∀ r : Fin 3,
+      LonelyRunner.BooleanTypeCut.compactMarginDen *
+          LonelyRunner.BooleanTypeCut.evalNum LonelyRunner.BooleanTypeCut.compactCoeff
+            (LonelyRunner.BooleanTypeCut.active r) >=
+        LonelyRunner.BooleanTypeCut.compactMarginNum *
+          (LonelyRunner.BooleanTypeCut.active r).den :=
+  LonelyRunner.BooleanTypeCut.compact_active_rows_above
+#print axioms lrc_boolean_type_cut_compact_active_rows_above_audit
+
+theorem lrc_boolean_type_cut_compact_active2_equal_audit :
+    LonelyRunner.BooleanTypeCut.compactMarginDen *
+        LonelyRunner.BooleanTypeCut.evalNum LonelyRunner.BooleanTypeCut.compactCoeff
+          LonelyRunner.BooleanTypeCut.active2 =
+      LonelyRunner.BooleanTypeCut.compactMarginNum *
+        LonelyRunner.BooleanTypeCut.active2.den :=
+  LonelyRunner.BooleanTypeCut.compact_active2_equal
+#print axioms lrc_boolean_type_cut_compact_active2_equal_audit
+
+theorem lrc_boolean_type_cut_margins_positive_audit :
+    0 < LonelyRunner.BooleanTypeCut.optimalMarginNum ∧
+      0 < LonelyRunner.BooleanTypeCut.optimalMarginDen ∧
+      0 < LonelyRunner.BooleanTypeCut.compactMarginNum ∧
+      0 < LonelyRunner.BooleanTypeCut.compactMarginDen :=
+  LonelyRunner.BooleanTypeCut.margins_positive
+#print axioms lrc_boolean_type_cut_margins_positive_audit
 
 /-! ### LRC14 L7 discrepancy integer core -/
 
