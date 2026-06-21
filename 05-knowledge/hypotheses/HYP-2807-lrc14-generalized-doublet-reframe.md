@@ -43,6 +43,16 @@ machinery extends to all g**, and the genuine-wide leg reduces to:
 This is the doublet analogue of THM-563's 12805-base check, now over `(base, gap, position)`. The
 k=12 obstruction is NOT a new regime — it is the `g=2` slice of the same family.
 
+## CRITICAL hygiene (dilated configs are BINDING, not genuine-wide)
+
+When testing the generalized doublet `B∪{M,M+g}`, the `is_gw` filter is essential. Example: even-AP
+base `(0,2,…,14)` + `{M,M+2}` with `M` EVEN is all-even ⟹ `gcd=2` ⟹ reduces (dilated) to a single-far
+config ⟹ **BINDING (THM-563's job), NOT genuine-wide.** These dilated configs reach HIGHER p0 (k=10:
+0.5045 at even M) but are single-perturbation-reducible. With `M` ODD the config is genuine-wide and
+maxes at 0.4229 < the true genuine-wide max 0.4423. So: **R-tail / frozen-room / finite-window checks
+must apply `is_gw`** — the dichotomy is binding (incl. all dilated/even-AP) = THM-563 ⊔ genuine-wide
+(irreducible generalized doublet) = HYP-2807/2808. The high-p0 dilated configs live on the THM-563 side.
+
 ## Next
 - Verify the R-tail (II) is uniform over `(B,g)` (the user's "general bounded-base R-tail").
 - Confirm the max gap is small (g≤2 or g≤3) so the finite check is tractable.

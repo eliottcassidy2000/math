@@ -29,7 +29,14 @@ Therefore
 
 **Per-arc bound `(1/π³)·T ≈ 0.46`; with ≤ ~12 active sector-arcs, `|R_g| ≲ 5.5` — an ABSOLUTE
 constant, UNIFORM over every bounded base and gap** (the base only selects WHICH finitely-many
-sector-pairs/arcs appear; `T` is base-independent). The `sin(πh/7)` factors shrink it further.
+sector-pairs/arcs appear; `T` is base-independent).
+
+**SHARP constant (with the `sin(πh/7)` Fourier factors).** Using the exact `|a_{p,h}| =
+|sin(πh/7)|/(π|h|)` (which VANISHES when `7|h`):
+> `|R_g| ≤ (1/π³)·(#active sector-pairs)·S`,  `S = Σ_{h+h'≠0} |sin(πh/7)sin(πh'/7)|/(|h||h'||h+h'|) ≈ 5.95`.
+Per-arc `(1/π³)·S ≈ 0.192`; with 10–15 active sector-pairs, **`|R_g| ≲ 1.9–2.9`** — which TIGHTLY
+matches the empirical sup `2.244`. So `S ≈ 5.95` is the explicit absolute constant of the general
+bounded-base R-tail. ⟹ `G = period-max(P)+sup|R| ≲ 1.5+2.9 = 4.4`, margin ≥ 0.16, `M* = ⌈G/margin⌉ ≈ 28`.
 
 ## Empirical confirmation (`lrc14_Rtail_uniform_claudeopus_0622.py`, exact)
 
