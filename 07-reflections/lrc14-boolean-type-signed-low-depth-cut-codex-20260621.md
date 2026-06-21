@@ -57,6 +57,6 @@ longer controls the row.
 
 The incoming THM-563 periodicity result is the same kind of reduction in a
 different coordinate: `w*Delta_w` looked analytic until the fixed endpoints made
-it a finite periodic maximum.  HYP-2790 says the Boolean lift should be read the
+it a finite periodic maximum.  HYP-2791 says the Boolean lift should be read the
 same way: do not estimate all 64 atoms separately; find the finite signed
 ledger that the generated law actually uses.

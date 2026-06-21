@@ -40,7 +40,7 @@
     · TournamentH7.ProductSum   — Product-sum defect normal form.
     · TournamentH7.LRCDeathChain — Finite LRC death-chain/live-depth quotient.
     · TournamentH7.LRCFactorialAtom — Finite factorial atom identities for Q₀.
-    · TournamentH7.LRCBooleanTypeCut — finite arithmetic for the HYP-2790
+    · TournamentH7.LRCBooleanTypeCut — finite arithmetic for the HYP-2791
                                       Boolean/type signed cut.
     · TournamentH7.LRCL7Discrepancy — Finite integer core of the L7 discrepancy.
     · TournamentH7.Verify       — Axiom audit (#print axioms).

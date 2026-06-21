@@ -6,7 +6,7 @@ source: codex-2026-06-21
 depends_on:
   - THM-563
   - HYP-2788
-  - HYP-2751
+  - HYP-2791
   - HYP-2752
   - HYP-2789
 related:
@@ -32,7 +32,7 @@ periodmax(B) < 15 * (cap_k - Plat(B)).
 ```
 
 This hypothesis tests whether the same Boolean/type slack discovered in
-`HYP-2751` and the containment-cut refinements of `HYP-2752` explain why the
+`HYP-2791` and the containment-cut refinements of `HYP-2752` explain why the
 dangerous bounded bases satisfy the period-max inequality.
 
 ## Planned Finite Ledger
@@ -61,7 +61,7 @@ Boolean/type quotient, sorted-cell leak quotient, or affine gap-word quotient.
 
 ## Why This Is Not A Duplicate
 
-`HYP-2751` is a full k=8 bounded-row atom-run-type certificate.  `HYP-2752`
+`HYP-2791` is a full k=8 bounded-row atom-run-type certificate.  `HYP-2752`
 shows fixed-k low-level Mobius/containment cuts exist but are non-uniform and
 not structurally free.  `HYP-2790` asks a different question: after the wide
 branch has been reduced to single-far bounded scaffolds, can the finite
